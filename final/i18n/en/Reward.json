@@ -9578,7 +9578,7 @@
         "id": 20069,
         "t": "Title",
         "c": 1,
-        "n": "Berenica"
+        "n": " Berenica"
       }
     ]
   },
@@ -9596,7 +9596,7 @@
         "id": 20070,
         "t": "Title",
         "c": 1,
-        "n": "Phantasio"
+        "n": " Phantasio"
       }
     ]
   },
@@ -9614,7 +9614,7 @@
         "id": 20071,
         "t": "Title",
         "c": 1,
-        "n": "Lisbell"
+        "n": " Lisbell"
       }
     ]
   },
@@ -9632,7 +9632,7 @@
         "id": 20072,
         "t": "Title",
         "c": 1,
-        "n": "Lady Nifle"
+        "n": " Lady Nifle"
       }
     ]
   },
@@ -9650,7 +9650,7 @@
         "id": 20073,
         "t": "Title",
         "c": 1,
-        "n": "Kezhou"
+        "n": " Kezhou"
       }
     ]
   },
@@ -12523,7 +12523,7 @@
         "id": 10030,
         "t": "WeaponAccessory",
         "c": 1,
-        "n": "龙渊穗·锈红"
+        "n": "Loongyuan Tassel: Rust Red"
       }
     ]
   },
@@ -13309,7 +13309,7 @@
         "id": 10023,
         "t": "HeadFrame",
         "c": 1,
-        "n": "神行贺春来"
+        "n": "Jubilant Arrival"
       }
     ]
   },
@@ -13327,7 +13327,7 @@
         "id": 12124,
         "t": "CharAccessory",
         "c": 1,
-        "n": "奇妙纸袋·本色"
+        "n": "The Liberator"
       }
     ]
   },
@@ -53115,7 +53115,7 @@
         "id": 10020,
         "t": "HeadFrame",
         "c": 1,
-        "n": "迷卦"
+        "n": "Gilded Divinition"
       }
     ]
   },
@@ -53127,7 +53127,7 @@
         "id": 10021,
         "t": "HeadFrame",
         "c": 1,
-        "n": "阴翳"
+        "n": "Shadowy"
       }
     ]
   },
@@ -53139,7 +53139,7 @@
         "id": 10022,
         "t": "HeadFrame",
         "c": 1,
-        "n": "糖福禄"
+        "n": "Sweet Fortune"
       }
     ]
   },
@@ -53151,7 +53151,7 @@
         "id": 10023,
         "t": "HeadFrame",
         "c": 1,
-        "n": "神行贺春来"
+        "n": "Jubilant Arrival"
       }
     ]
   },
@@ -53163,7 +53163,7 @@
         "id": 10024,
         "t": "HeadFrame",
         "c": 1,
-        "n": "以笔尖铭记·墨玉"
+        "n": "Inscribed Tip: Dark Jade"
       }
     ]
   },
@@ -53175,7 +53175,7 @@
         "id": 10025,
         "t": "HeadFrame",
         "c": 1,
-        "n": "以笔尖铭记·铅灰"
+        "n": "Inscribed Tip: Leaden Grey"
       }
     ]
   },
@@ -53187,7 +53187,7 @@
         "id": 10026,
         "t": "HeadFrame",
         "c": 1,
-        "n": "以笔尖铭记·黛蓝"
+        "n": "Inscribed Tip: Azure"
       }
     ]
   },
@@ -55099,7 +55099,7 @@
         "id": 30113,
         "t": "Resource",
         "c": 1,
-        "n": "中级染剂·棕色-浅【待包装】"
+        "n": "Intermediate Dye: Maple Syrup"
       }
     ]
   },
@@ -55159,7 +55159,7 @@
         "id": 30114,
         "t": "Resource",
         "c": 1,
-        "n": "中级染剂·棕色-深【待包装】"
+        "n": "Intermediate Dye: Cocoa"
       }
     ]
   },
@@ -55219,7 +55219,7 @@
         "id": 30115,
         "t": "Resource",
         "c": 1,
-        "n": "中级染剂·绿色-浅【待包装】"
+        "n": "Intermediate Dye: Verdant Wave"
       }
     ]
   },
@@ -55255,7 +55255,7 @@
         "id": 30116,
         "t": "Resource",
         "c": 1,
-        "n": "中级染剂·绿色-深【待包装】"
+        "n": "Intermediate Dye: Weathered Pine"
       }
     ]
   },
@@ -55741,13 +55741,13 @@
         "id": 301,
         "t": "Resource",
         "c": 1,
-        "n": "Reputation Perks: Icelake"
+        "n": "Reputation Perk: Icelake"
       },
       {
         "id": 30105,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "大军团长的肖像·俯瞰"
+        "n": "Portrait: Legion's Chief – Commanding View"
       }
     ]
   },
@@ -55843,7 +55843,7 @@
         "id": 30106,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "粮秣专员的肖像·慌乱"
+        "n": "Portrait: The Commissary – Flustered"
       }
     ]
   },
@@ -55939,7 +55939,7 @@
         "id": 30104,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "逐灯者的肖像·眺望"
+        "n": "Portrait: The Light Chaser – Distant Gaze"
       }
     ]
   },
@@ -56035,7 +56035,7 @@
         "id": 30103,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "夜莺小姐的肖像·绿荫"
+        "n": "Portrait: Miss Nightingale – Dappled Shade"
       }
     ]
   },
@@ -56131,7 +56131,7 @@
         "id": 30102,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "回忆中的肖像·决意"
+        "n": "Portrait: Memory – Resolve"
       }
     ]
   },
@@ -56317,13 +56317,13 @@
         "id": 302,
         "t": "Resource",
         "c": 1,
-        "n": "Reputation Perks: Mistwharf"
+        "n": "Reputation Perk: Mistwharf"
       },
       {
         "id": 30097,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "负罪者的肖像·小憩"
+        "n": "Portrait: The Guilty – Repose"
       }
     ]
   },
@@ -56419,7 +56419,7 @@
         "id": 30101,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "华胥药师的肖像·专注"
+        "n": "Portrait: The Huaxu Apothecary – Focus"
       }
     ]
   },
@@ -56515,7 +56515,7 @@
         "id": 30098,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "飘零剑客的肖像·雨夜"
+        "n": "Portrait: The Drifter – Rainy Night"
       }
     ]
   },
@@ -56611,7 +56611,7 @@
         "id": 30100,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "黑与白·烛阴"
+        "n": "Sable and Argent – Zhuyin"
       }
     ]
   },
@@ -56707,7 +56707,7 @@
         "id": 30099,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "黑与白·太皓"
+        "n": "Sable and Argent – Taihao"
       }
     ]
   },
@@ -70733,7 +70733,7 @@
         "id": 10013,
         "t": "TitleFrame",
         "c": 1,
-        "n": "SSS级狩月人——1.2版本【待包装】"
+        "n": "SSS-Rank Phoxhunter Ⅱ"
       },
       {
         "id": 220,
@@ -70763,7 +70763,7 @@
         "id": 10014,
         "t": "TitleFrame",
         "c": 1,
-        "n": "SS级狩月人——1.2版本【待包装】"
+        "n": "SS-Rank Phoxhunter Ⅱ"
       },
       {
         "id": 220,
@@ -70793,7 +70793,7 @@
         "id": 10015,
         "t": "TitleFrame",
         "c": 1,
-        "n": "S级狩月人——1.2版本【待包装】"
+        "n": "S-Rank Phoxhunter Ⅱ"
       },
       {
         "id": 220,
@@ -70823,7 +70823,7 @@
         "id": 10016,
         "t": "TitleFrame",
         "c": 1,
-        "n": "B级狩月人——1.2版本【待包装】"
+        "n": "A-Rank Phoxhunter Ⅱ"
       },
       {
         "id": 220,
@@ -70853,7 +70853,7 @@
         "id": 10017,
         "t": "TitleFrame",
         "c": 1,
-        "n": "A级狩月人——1.2版本【待包装】"
+        "n": "B-Rank Phoxhunter Ⅱ"
       },
       {
         "id": 220,
@@ -71123,7 +71123,7 @@
         "id": 6100120,
         "t": "Resource",
         "c": 1,
-        "n": "野蜂暗箭机傀I"
+        "n": "Wildswarm's Arrow Mechapuppet Ⅰ"
       },
       {
         "id": 6100009,
@@ -71141,7 +71141,7 @@
         "id": 6100108,
         "t": "Resource",
         "c": 1,
-        "n": "狙击列兵机傀I"
+        "n": "Sniper Private Mechapuppet Ⅰ"
       },
       {
         "id": 6100007,
@@ -71159,7 +71159,7 @@
         "id": 6100121,
         "t": "Resource",
         "c": 1,
-        "n": "野蜂密探机傀I"
+        "n": "Wildswarm's Agent Mechapuppet Ⅰ"
       },
       {
         "id": 6100006,
@@ -71189,7 +71189,7 @@
         "id": 6100105,
         "t": "Resource",
         "c": 1,
-        "n": "笼草秽兽机傀I"
+        "n": "Nepenthe Filthoid Mechapuppet Ⅰ"
       },
       {
         "id": 6100011,
@@ -71219,7 +71219,7 @@
         "id": 6100107,
         "t": "Resource",
         "c": 1,
-        "n": "游击秽兽机傀II"
+        "n": "Guerrilla Filthoid Mechapuppet Ⅱ"
       },
       {
         "id": 6100036,
@@ -71237,7 +71237,7 @@
         "id": 6100113,
         "t": "Resource",
         "c": 1,
-        "n": "远征列兵机傀II"
+        "n": "Expedition Private Mechapuppet Ⅱ"
       }
     ]
   },
@@ -71249,7 +71249,7 @@
         "id": 6100118,
         "t": "Resource",
         "c": 1,
-        "n": "蒙恩的神甫机傀I"
+        "n": "Blessed Priest Mechapuppet Ⅰ"
       },
       {
         "id": 6100028,
@@ -71267,7 +71267,7 @@
         "id": 6100106,
         "t": "Resource",
         "c": 1,
-        "n": "疾冲秽兽机傀II"
+        "n": "Veloci Filthoid Mechapuppet Ⅱ"
       },
       {
         "id": 6100034,
@@ -71285,7 +71285,7 @@
         "id": 6100112,
         "t": "Resource",
         "c": 1,
-        "n": "帝皇之仁机傀I"
+        "n": "Benevolent Tyrant Mechapuppet Ⅰ"
       },
       {
         "id": 6100025,
@@ -71303,7 +71303,7 @@
         "id": 6100115,
         "t": "Resource",
         "c": 1,
-        "n": "警戒机机傀I"
+        "n": "Patrol Drone Mechapuppet Ⅰ"
       },
       {
         "id": 6100031,
@@ -71321,7 +71321,7 @@
         "id": 6100111,
         "t": "Resource",
         "c": 1,
-        "n": "精锐士官机傀I"
+        "n": "Elite Sergeant Mechapuppet Ⅰ"
       },
       {
         "id": 6100026,
@@ -71351,7 +71351,7 @@
         "id": 10113,
         "t": "Title",
         "c": 1,
-        "n": "机枢派的"
+        "n": "Jishu Sect's"
       }
     ]
   },
@@ -71363,7 +71363,7 @@
         "id": 219,
         "t": "Resource",
         "c": 50,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -71381,7 +71381,7 @@
         "id": 219,
         "t": "Resource",
         "c": 50,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -71393,7 +71393,7 @@
         "id": 6100119,
         "t": "Resource",
         "c": 1,
-        "n": "野蜂利刃机傀I"
+        "n": "Wildswarm's Sword Mechapuppet Ⅰ"
       },
       {
         "id": 6100005,
@@ -71411,7 +71411,7 @@
         "id": 219,
         "t": "Resource",
         "c": 50,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -71423,7 +71423,7 @@
         "id": 6100103,
         "t": "Resource",
         "c": 1,
-        "n": "漂浮秽兽机傀I"
+        "n": "Floating Filthoid Mechapuppet Ⅰ"
       },
       {
         "id": 6100014,
@@ -71441,7 +71441,7 @@
         "id": 219,
         "t": "Resource",
         "c": 60,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -71465,7 +71465,7 @@
         "id": 219,
         "t": "Resource",
         "c": 60,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -71477,7 +71477,7 @@
         "id": 6100104,
         "t": "Resource",
         "c": 1,
-        "n": "暴徒秽兽机傀I"
+        "n": "Savage Filthoid Mechapuppet Ⅰ"
       },
       {
         "id": 6100019,
@@ -71495,7 +71495,7 @@
         "id": 219,
         "t": "Resource",
         "c": 60,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -71507,7 +71507,7 @@
         "id": 6100114,
         "t": "Resource",
         "c": 1,
-        "n": "突击列兵机傀II"
+        "n": "Assault Private Mechapuppet Ⅱ"
       }
     ]
   },
@@ -71519,7 +71519,7 @@
         "id": 219,
         "t": "Resource",
         "c": 80,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -71543,7 +71543,7 @@
         "id": 219,
         "t": "Resource",
         "c": 100,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -71555,7 +71555,7 @@
         "id": 20097,
         "t": "Title",
         "c": 1,
-        "n": "神之一手"
+        "n": " Genius Move"
       }
     ]
   },
@@ -71567,7 +71567,7 @@
         "id": 219,
         "t": "Resource",
         "c": 60,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -71585,7 +71585,7 @@
         "id": 219,
         "t": "Resource",
         "c": 100,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -71603,7 +71603,7 @@
         "id": 219,
         "t": "Resource",
         "c": 60,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -71621,7 +71621,7 @@
         "id": 219,
         "t": "Resource",
         "c": 100,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -71639,7 +71639,7 @@
         "id": 219,
         "t": "Resource",
         "c": 80,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -71657,7 +71657,7 @@
         "id": 219,
         "t": "Resource",
         "c": 80,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -71675,7 +71675,7 @@
         "id": 219,
         "t": "Resource",
         "c": 60,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -71693,7 +71693,7 @@
         "id": 219,
         "t": "Resource",
         "c": 60,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -71711,7 +71711,7 @@
         "id": 219,
         "t": "Resource",
         "c": 100,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -71729,7 +71729,7 @@
         "id": 219,
         "t": "Resource",
         "c": 60,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -71747,7 +71747,7 @@
         "id": 219,
         "t": "Resource",
         "c": 60,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -71765,7 +71765,7 @@
         "id": 219,
         "t": "Resource",
         "c": 100,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -71783,7 +71783,7 @@
         "id": 219,
         "t": "Resource",
         "c": 20,
-        "n": "齿轮"
+        "n": "Cog"
       }
     ]
   },
@@ -71795,7 +71795,7 @@
         "id": 219,
         "t": "Resource",
         "c": 25,
-        "n": "齿轮"
+        "n": "Cog"
       }
     ]
   },
@@ -71807,7 +71807,7 @@
         "id": 219,
         "t": "Resource",
         "c": 10,
-        "n": "齿轮"
+        "n": "Cog"
       }
     ]
   },
@@ -71819,7 +71819,7 @@
         "id": 219,
         "t": "Resource",
         "c": 15,
-        "n": "齿轮"
+        "n": "Cog"
       }
     ]
   },
@@ -71831,7 +71831,7 @@
         "id": 219,
         "t": "Resource",
         "c": 30,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -71849,7 +71849,7 @@
         "id": 219,
         "t": "Resource",
         "c": 30,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -71867,7 +71867,7 @@
         "id": 219,
         "t": "Resource",
         "c": 30,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -71885,7 +71885,7 @@
         "id": 219,
         "t": "Resource",
         "c": 30,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -71903,7 +71903,7 @@
         "id": 219,
         "t": "Resource",
         "c": 30,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -71921,7 +71921,7 @@
         "id": 219,
         "t": "Resource",
         "c": 30,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -71939,7 +71939,7 @@
         "id": 219,
         "t": "Resource",
         "c": 30,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -71957,7 +71957,7 @@
         "id": 219,
         "t": "Resource",
         "c": 30,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -71975,7 +71975,7 @@
         "id": 219,
         "t": "Resource",
         "c": 30,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -71993,7 +71993,7 @@
         "id": 219,
         "t": "Resource",
         "c": 30,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -72011,7 +72011,7 @@
         "id": 219,
         "t": "Resource",
         "c": 40,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -72029,7 +72029,7 @@
         "id": 219,
         "t": "Resource",
         "c": 40,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -72047,7 +72047,7 @@
         "id": 219,
         "t": "Resource",
         "c": 40,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -72065,7 +72065,7 @@
         "id": 219,
         "t": "Resource",
         "c": 40,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -72083,7 +72083,7 @@
         "id": 219,
         "t": "Resource",
         "c": 40,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -72101,7 +72101,7 @@
         "id": 219,
         "t": "Resource",
         "c": 80,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -72119,7 +72119,7 @@
         "id": 219,
         "t": "Resource",
         "c": 80,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -72137,7 +72137,7 @@
         "id": 219,
         "t": "Resource",
         "c": 80,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -72155,7 +72155,7 @@
         "id": 219,
         "t": "Resource",
         "c": 80,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -72173,7 +72173,7 @@
         "id": 219,
         "t": "Resource",
         "c": 100,
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
@@ -72191,7 +72191,7 @@
         "id": 219,
         "t": "Resource",
         "c": 10,
-        "n": "齿轮"
+        "n": "Cog"
       }
     ]
   },
@@ -72203,7 +72203,7 @@
         "id": 30107,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "机傀大乱斗"
+        "n": "Great Chaos of Mechapuppets"
       }
     ]
   },
@@ -73232,21 +73232,21 @@
         "t": "Walnut",
         "c": 3,
         "p": 10000,
-        "n": "Secret Letter: Dove of Tomorrow"
+        "n": "Secret Letter: Skyfall Duality"
       },
       {
         "id": 2053,
         "t": "Walnut",
         "c": 1,
         "p": 8000,
-        "n": "Secret Letter: Dove of Tomorrow"
+        "n": "Secret Letter: Skyfall Duality"
       },
       {
         "id": 2053,
         "t": "Walnut",
         "c": 1,
         "p": 2000,
-        "n": "Secret Letter: Dove of Tomorrow"
+        "n": "Secret Letter: Skyfall Duality"
       },
       {
         "id": 10101,
@@ -73355,21 +73355,21 @@
         "t": "Walnut",
         "c": 3,
         "p": 10000,
-        "n": "Secret Letter: Obsidian Heart-Reaper"
+        "n": "Secret Letter: Trigon Muse"
       },
       {
         "id": 2054,
         "t": "Walnut",
         "c": 1,
         "p": 8000,
-        "n": "Secret Letter: Obsidian Heart-Reaper"
+        "n": "Secret Letter: Trigon Muse"
       },
       {
         "id": 2054,
         "t": "Walnut",
         "c": 1,
         "p": 2000,
-        "n": "Secret Letter: Obsidian Heart-Reaper"
+        "n": "Secret Letter: Trigon Muse"
       },
       {
         "id": 10101,
@@ -79222,7 +79222,7 @@
         "id": 30109,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "呐喊"
+        "n": "The Scream"
       },
       {
         "id": 100,
@@ -79240,7 +79240,7 @@
         "id": 30096,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "快乐起飞"
+        "n": "Sky-High Spirits"
       },
       {
         "id": 100,

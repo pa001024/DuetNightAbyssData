@@ -29,6 +29,10 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "Abyss_SeasonRewardProgress",
     WildcardClassification = "Story"
   },
+  Access_Dungeon = {
+    TextMapId = "Access_Dungeon",
+    WildcardClassification = "Story"
+  },
   AnnouncementTimeFormatLong = {
     TextMapId = "AnnouncementTimeFormatLong",
     WildcardClassification = "Story"
@@ -233,6 +237,10 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "HomePianoDes_1005009",
     WildcardClassification = "Story"
   },
+  HomePianoDes_1008003 = {
+    TextMapId = "HomePianoDes_1008003",
+    WildcardClassification = "Story"
+  },
   MESSAGE_LOADING_35_PC = {
     TextMapId = "MESSAGE_LOADING_35_PC",
     WildcardClassification = "Story"
@@ -425,6 +433,14 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "PlayerLevel_FirstObtain_Char",
     WildcardClassification = "Story"
   },
+  PlayerLevel_FirstObtain_Mod = {
+    TextMapId = "PlayerLevel_FirstObtain_Mod",
+    WildcardClassification = "Story"
+  },
+  PlayerLevel_FirstObtain_Pet = {
+    TextMapId = "PlayerLevel_FirstObtain_Pet",
+    WildcardClassification = "Story"
+  },
   PlayerLevel_FirstObtain_Weapon = {
     TextMapId = "PlayerLevel_FirstObtain_Weapon",
     WildcardClassification = "Story"
@@ -537,6 +553,14 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "RLArchive_ID",
     WildcardClassification = "Story"
   },
+  RegionReputation_EntrustContent_17 = {
+    TextMapId = "RegionReputation_EntrustContent_17",
+    WildcardClassification = "Story"
+  },
+  RegionReputation_RefreshTime = {
+    TextMapId = "RegionReputation_RefreshTime",
+    WildcardClassification = "Story"
+  },
   System_Des_Play = {
     TextMapId = "System_Des_Play",
     WildcardClassification = "Story"
@@ -571,6 +595,26 @@ return ReadOnly("TextMapWildcard", {
   },
   TitleFrame_10012 = {
     TextMapId = "TitleFrame_10012",
+    WildcardClassification = "Story"
+  },
+  TitleFrame_10013 = {
+    TextMapId = "TitleFrame_10013",
+    WildcardClassification = "Story"
+  },
+  TitleFrame_10014 = {
+    TextMapId = "TitleFrame_10014",
+    WildcardClassification = "Story"
+  },
+  TitleFrame_10015 = {
+    TextMapId = "TitleFrame_10015",
+    WildcardClassification = "Story"
+  },
+  TitleFrame_10016 = {
+    TextMapId = "TitleFrame_10016",
+    WildcardClassification = "Story"
+  },
+  TitleFrame_10017 = {
+    TextMapId = "TitleFrame_10017",
     WildcardClassification = "Story"
   },
   Title_10001 = {
@@ -945,6 +989,10 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "UI_ActionPoint_RemainPurchaseTimes",
     WildcardClassification = "Story"
   },
+  UI_Bag_Sellconfirm_Hold = {
+    TextMapId = "UI_Bag_Sellconfirm_Hold",
+    WildcardClassification = "Story"
+  },
   UI_Banner_Remain_Buy = {
     TextMapId = "UI_Banner_Remain_Buy",
     WildcardClassification = "Story"
@@ -1113,6 +1161,10 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "UI_Chardata_Witness",
     WildcardClassification = "Story"
   },
+  UI_Consumable_HasGot = {
+    TextMapId = "UI_Consumable_HasGot",
+    WildcardClassification = "Story"
+  },
   UI_DailyGoal_RemainTime = {
     TextMapId = "UI_DailyGoal_RemainTime",
     WildcardClassification = "Story"
@@ -1153,6 +1205,14 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "UI_FNNpc_Name_AnimalNvzhu",
     WildcardClassification = "Story"
   },
+  UI_FORGING_BLUEPRINT = {
+    TextMapId = "UI_FORGING_BLUEPRINT",
+    WildcardClassification = "Story"
+  },
+  UI_FORGING_CURRENT = {
+    TextMapId = "UI_FORGING_CURRENT",
+    WildcardClassification = "Story"
+  },
   UI_Fishing_FishingBookTotal = {
     TextMapId = "UI_Fishing_FishingBookTotal",
     WildcardClassification = "Story"
@@ -1175,6 +1235,10 @@ return ReadOnly("TextMapWildcard", {
   },
   UI_HardBoss_ChancesRemain = {
     TextMapId = "UI_HardBoss_ChancesRemain",
+    WildcardClassification = "Story"
+  },
+  UI_ImpressionShop_ItemLimit = {
+    TextMapId = "UI_ImpressionShop_ItemLimit",
     WildcardClassification = "Story"
   },
   UI_LOGO_DIALOGUE_10018201 = {
@@ -1257,6 +1321,10 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "UI_PlayerHead_Name_30074",
     WildcardClassification = "Story"
   },
+  UI_RLArchive_Progress = {
+    TextMapId = "UI_RLArchive_Progress",
+    WildcardClassification = "Story"
+  },
   UI_RL_LevelLimit = {
     TextMapId = "UI_RL_LevelLimit",
     WildcardClassification = "Story"
@@ -1303,6 +1371,10 @@ return ReadOnly("TextMapWildcard", {
   },
   UI_SkillTree_Attr_Add = {
     TextMapId = "UI_SkillTree_Attr_Add",
+    WildcardClassification = "Story"
+  },
+  UI_SkinGacha_Cumulative_Progress = {
+    TextMapId = "UI_SkinGacha_Cumulative_Progress",
     WildcardClassification = "Story"
   },
   UI_Skin_Name_1601 = {
@@ -1357,8 +1429,32 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "UI_Time_Second_NotHighlight",
     WildcardClassification = "Story"
   },
+  UI_Tips_ModApplicationType = {
+    TextMapId = "UI_Tips_ModApplicationType",
+    WildcardClassification = "Story"
+  },
+  UI_Voice_Actor_CN = {
+    TextMapId = "UI_Voice_Actor_CN",
+    WildcardClassification = "Story"
+  },
+  UI_Voice_Actor_EN = {
+    TextMapId = "UI_Voice_Actor_EN",
+    WildcardClassification = "Story"
+  },
+  UI_Voice_Actor_JP = {
+    TextMapId = "UI_Voice_Actor_JP",
+    WildcardClassification = "Story"
+  },
+  UI_Voice_Actor_KR = {
+    TextMapId = "UI_Voice_Actor_KR",
+    WildcardClassification = "Story"
+  },
   UI_Walnut_Dungeon_Available = {
     TextMapId = "UI_Walnut_Dungeon_Available",
+    WildcardClassification = "Story"
+  },
+  UI_WeeklyDungeon_ChancesRemain = {
+    TextMapId = "UI_WeeklyDungeon_ChancesRemain",
     WildcardClassification = "Story"
   },
   VoiceDes001 = {
@@ -1409,8 +1505,24 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "VoiceDes040",
     WildcardClassification = "Story"
   },
+  VoiceDes111 = {
+    TextMapId = "VoiceDes111",
+    WildcardClassification = "Story"
+  },
   VoiceDes136 = {
     TextMapId = "VoiceDes136",
+    WildcardClassification = "Story"
+  },
+  VoiceDes147 = {
+    TextMapId = "VoiceDes147",
+    WildcardClassification = "Story"
+  },
+  VoiceDes148 = {
+    TextMapId = "VoiceDes148",
+    WildcardClassification = "Story"
+  },
+  VoiceDes149 = {
+    TextMapId = "VoiceDes149",
     WildcardClassification = "Story"
   },
   WikiText_10101001 = {
@@ -1575,6 +1687,10 @@ return ReadOnly("TextMapWildcard", {
   },
   Wiki_RewardList_Content = {
     TextMapId = "Wiki_RewardList_Content",
+    WildcardClassification = "Story"
+  },
+  Wiki_RewardProgress = {
+    TextMapId = "Wiki_RewardProgress",
     WildcardClassification = "Story"
   },
   ZhiLiuEntrust_Lock_Time1 = {
@@ -1823,6 +1939,10 @@ return ReadOnly("TextMapWildcard", {
   },
   voice_ch_char_Zhangyu_vo_topic_02_3 = {
     TextMapId = "voice_ch_char_Zhangyu_vo_topic_02_3",
+    WildcardClassification = "Story"
+  },
+  voice_ch_char_Zhiliu01_vo_appear = {
+    TextMapId = "voice_ch_char_Zhiliu01_vo_appear",
     WildcardClassification = "Story"
   },
   voice_ch_char_Zhiliu_vo_birthday = {

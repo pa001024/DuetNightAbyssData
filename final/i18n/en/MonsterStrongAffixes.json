@@ -9,7 +9,7 @@
       "最大召唤数量": 3,
       "每次召唤数量": 3,
       "召唤延迟": 2,
-      "BUFF延迟": 0.5,
+      "BUFF持续": 0.5,
       "DOT伤害": 0.3,
       "DOT间隔": 2,
       "伤害类型": [
@@ -97,7 +97,7 @@
       "伤害类型": [
         "PhantomAvoid"
       ],
-      "BUFF延迟": 3,
+      "BUFF持续": 3,
       "时间膨胀倍率": 0.96,
       "最大层数": 5
     }
@@ -112,7 +112,7 @@
       "持续时间": 4,
       "最大召唤数量": 8,
       "每次召唤数量": 1,
-      "BUFF延迟": 0.5,
+      "BUFF持续": 0.5,
       "时间膨胀倍率": 0.5,
       "伤害倍率": 0.65,
       "伤害类型": [
@@ -148,7 +148,7 @@
       "最大召唤数量": 15,
       "每次召唤数量": 1,
       "召唤延迟": 3,
-      "BUFF延迟": 0.5,
+      "BUFF持续": 0.5,
       "加成": {
         "防御": -0.9
       },
@@ -171,7 +171,7 @@
       "最大召唤数量": 15,
       "每次召唤数量": 1,
       "召唤延迟": 3,
-      "BUFF延迟": 0.5,
+      "BUFF持续": 0.5,
       "加成": {
         "防御": -0.9
       },
@@ -194,7 +194,7 @@
       "最大召唤数量": 15,
       "每次召唤数量": 1,
       "召唤延迟": 3,
-      "BUFF延迟": 0.5,
+      "BUFF持续": 0.5,
       "加成": {
         "防御": -0.9
       },
@@ -213,7 +213,7 @@
     "desc": "Primanders are powerful entities among the hostile forces that wield unique Primander abilities.\nPrimander – Glimmer periodically applies [Glimmer] to itself.\n[Glimmer]: Lasts for 2.5s. During this time, taking damage will trigger an explosion that deals AoE damage to hostile targets within range.",
     "vars": {
       "间隔时间": 7,
-      "BUFF延迟": 2.5,
+      "BUFF持续": 2.5,
       "伤害倍率": 0.65,
       "伤害类型": [
         "PhantomAvoid",
@@ -229,7 +229,7 @@
     "desc": "Primanders are powerful entities among the hostile forces that wield unique Primander abilities.\nPrimander – Glimmer periodically applies [Glimmer] to itself.\n[Glimmer]: Lasts for 2.5s. During this time, taking damage will trigger an explosion that deals AoE damage to hostile targets within range.",
     "vars": {
       "间隔时间": 6,
-      "BUFF延迟": 2.5,
+      "BUFF持续": 2.5,
       "伤害倍率": 0.65,
       "伤害类型": [
         "PhantomAvoid",
@@ -245,7 +245,7 @@
     "desc": "Primanders are powerful entities among the hostile forces that wield unique Primander abilities.\nPrimander – Glimmer periodically applies [Glimmer] to itself.\n[Glimmer]: Lasts for 2.5s. During this time, taking damage will trigger an explosion that deals AoE damage to hostile targets within range.",
     "vars": {
       "间隔时间": 6,
-      "BUFF延迟": 2.5,
+      "BUFF持续": 2.5,
       "伤害倍率": 0.65,
       "伤害类型": [
         "PhantomAvoid",
@@ -260,7 +260,7 @@
     "name": "Primander - Revenge",
     "desc": "Primanders are powerful entities among the hostile forces that wield unique Primander abilities.\nPrimander – Revenge empowers nearby allies when defeated.\n[Empowered]: Increases ATK, DEF, Movement Speed, and Attack Speed for 20s.",
     "vars": {
-      "BUFF延迟": 20,
+      "BUFF持续": 20,
       "最大层数": 3,
       "加成": {
         "防御": 0.5,
@@ -287,7 +287,7 @@
     "desc": "Primanders are powerful entities among the hostile forces that wield unique Primander abilities.\nPrimander – Phantom summons 2 [Phantom(s)] at the start of battle.\n[Phantom]: Takes increased damage but mirrors its summoner's combat abilities.",
     "vars": {
       "伤害加成倍率": 1.5,
-      "BUFF延迟": -1
+      "BUFF持续": -1
     }
   },
   {

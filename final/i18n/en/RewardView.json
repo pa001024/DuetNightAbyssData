@@ -17081,7 +17081,7 @@
     "id": 92004,
     "child": [
       {
-        "id": 218,
+        "id": 220,
         "t": "Resource",
         "c": 30,
         "n": "Phoxcoin"
@@ -17092,7 +17092,7 @@
     "id": 92005,
     "child": [
       {
-        "id": 218,
+        "id": 220,
         "t": "Resource",
         "c": 40,
         "n": "Phoxcoin"
@@ -17103,7 +17103,7 @@
     "id": 92006,
     "child": [
       {
-        "id": 218,
+        "id": 220,
         "t": "Resource",
         "c": 50,
         "n": "Phoxcoin"
@@ -17399,25 +17399,25 @@
         "id": 30113,
         "t": "Resource",
         "c": 1,
-        "n": "中级染剂·棕色-浅【待包装】"
+        "n": "Intermediate Dye: Maple Syrup"
       },
       {
         "id": 30114,
         "t": "Resource",
         "c": 1,
-        "n": "中级染剂·棕色-深【待包装】"
+        "n": "Intermediate Dye: Cocoa"
       },
       {
         "id": 30115,
         "t": "Resource",
         "c": 1,
-        "n": "中级染剂·绿色-浅【待包装】"
+        "n": "Intermediate Dye: Verdant Wave"
       },
       {
         "id": 30116,
         "t": "Resource",
         "c": 1,
-        "n": "中级染剂·绿色-深【待包装】"
+        "n": "Intermediate Dye: Weathered Pine"
       }
     ]
   },
@@ -20575,7 +20575,7 @@
         "id": 6100122,
         "t": "Resource",
         "c": 10,
-        "n": "对局积分"
+        "n": "Match Points"
       }
     ]
   },
@@ -20586,7 +20586,7 @@
         "id": 6100122,
         "t": "Resource",
         "c": 15,
-        "n": "对局积分"
+        "n": "Match Points"
       }
     ]
   },
@@ -20597,7 +20597,7 @@
         "id": 6100122,
         "t": "Resource",
         "c": 20,
-        "n": "对局积分"
+        "n": "Match Points"
       }
     ]
   },
@@ -20608,7 +20608,7 @@
         "id": 6100122,
         "t": "Resource",
         "c": 25,
-        "n": "对局积分"
+        "n": "Match Points"
       }
     ]
   },
@@ -20619,7 +20619,7 @@
         "id": 6100122,
         "t": "Resource",
         "c": 30,
-        "n": "对局积分"
+        "n": "Match Points"
       }
     ]
   },
@@ -20658,7 +20658,7 @@
         "id": 6100122,
         "t": "Resource",
         "c": 35,
-        "n": "对局积分"
+        "n": "Match Points"
       }
     ]
   },
@@ -20669,7 +20669,7 @@
         "id": 6100122,
         "t": "Resource",
         "c": 40,
-        "n": "对局积分"
+        "n": "Match Points"
       }
     ]
   },
@@ -20680,7 +20680,7 @@
         "id": 6100122,
         "t": "Resource",
         "c": 50,
-        "n": "对局积分"
+        "n": "Match Points"
       }
     ]
   },
@@ -20691,7 +20691,7 @@
         "id": 12123,
         "t": "CharAccessory",
         "c": 1,
-        "n": "UI_Accessory_Name_12123"
+        "n": "Demon King Hatpiece"
       },
       {
         "id": 10011,
@@ -20725,12 +20725,37 @@
       {
         "id": 219,
         "t": "Resource",
-        "n": "齿轮"
+        "n": "Cog"
       },
       {
         "id": 211,
         "t": "Resource",
         "n": "Secret Letter Clue"
+      }
+    ]
+  },
+  {
+    "id": 1030112,
+    "child": [
+      {
+        "id": 209,
+        "t": "Resource",
+        "n": "Commission Manual: Volume Ⅳ"
+      },
+      {
+        "id": 211,
+        "t": "Resource",
+        "n": "Secret Letter Clue"
+      },
+      {
+        "id": 208,
+        "t": "Resource",
+        "n": "Commission Manual: Volume Ⅲ"
+      },
+      {
+        "id": 207,
+        "t": "Resource",
+        "n": "Commission Manual: Volume Ⅱ"
       }
     ]
   },
@@ -20794,13 +20819,13 @@
         "id": 301,
         "t": "Resource",
         "c": 1,
-        "n": "Reputation Perks: Icelake"
+        "n": "Reputation Perk: Icelake"
       },
       {
         "id": 30105,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "大军团长的肖像·俯瞰"
+        "n": "Portrait: Legion's Chief – Commanding View"
       },
       {
         "id": 211,
@@ -20853,7 +20878,7 @@
         "id": 30106,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "粮秣专员的肖像·慌乱"
+        "n": "Portrait: The Commissary – Flustered"
       },
       {
         "id": 211,
@@ -20906,7 +20931,7 @@
         "id": 30104,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "逐灯者的肖像·眺望"
+        "n": "Portrait: The Light Chaser – Distant Gaze"
       },
       {
         "id": 211,
@@ -20959,7 +20984,7 @@
         "id": 30103,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "夜莺小姐的肖像·绿荫"
+        "n": "Portrait: Miss Nightingale – Dappled Shade"
       },
       {
         "id": 211,
@@ -21012,7 +21037,7 @@
         "id": 30102,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "回忆中的肖像·决意"
+        "n": "Portrait: Memory – Resolve"
       },
       {
         "id": 211,
@@ -21112,13 +21137,13 @@
         "id": 302,
         "t": "Resource",
         "c": 1,
-        "n": "Reputation Perks: Mistwharf"
+        "n": "Reputation Perk: Mistwharf"
       },
       {
         "id": 30097,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "负罪者的肖像·小憩"
+        "n": "Portrait: The Guilty – Repose"
       },
       {
         "id": 211,
@@ -21171,7 +21196,7 @@
         "id": 30101,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "华胥药师的肖像·专注"
+        "n": "Portrait: The Huaxu Apothecary – Focus"
       },
       {
         "id": 211,
@@ -21224,7 +21249,7 @@
         "id": 30098,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "飘零剑客的肖像·雨夜"
+        "n": "Portrait: The Drifter – Rainy Night"
       },
       {
         "id": 211,
@@ -21277,7 +21302,7 @@
         "id": 30100,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "黑与白·烛阴"
+        "n": "Sable and Argent – Zhuyin"
       },
       {
         "id": 211,
@@ -21330,7 +21355,7 @@
         "id": 30099,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "黑与白·太皓"
+        "n": "Sable and Argent – Taihao"
       },
       {
         "id": 211,
@@ -21573,7 +21598,7 @@
         "id": 2053,
         "t": "Walnut",
         "c": 3,
-        "n": "Secret Letter: Dove of Tomorrow"
+        "n": "Secret Letter: Skyfall Duality"
       }
     ]
   },
@@ -21642,7 +21667,7 @@
         "id": 2054,
         "t": "Walnut",
         "c": 3,
-        "n": "Secret Letter: Obsidian Heart-Reaper"
+        "n": "Secret Letter: Trigon Muse"
       }
     ]
   },
@@ -21848,9 +21873,9 @@
         "n": "Twilight Tread"
       },
       {
-        "id": 30095,
+        "id": 30109,
         "t": "HeadSculpture",
-        "n": "诡异的光"
+        "n": "The Scream"
       },
       {
         "id": 41046,
@@ -21931,7 +21956,7 @@
       {
         "id": 30096,
         "t": "HeadSculpture",
-        "n": "快乐起飞"
+        "n": "Sky-High Spirits"
       },
       {
         "id": 41047,

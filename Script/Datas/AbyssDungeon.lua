@@ -755,62 +755,53 @@ T.RT_100 = {
   211
 }
 T.RT_101 = {
-  6000011,
-  6000021,
-  6000041,
-  6000051
-}
-T.RT_102 = {
-  BuffList = T.RT_101
-}
-T.RT_103 = {
   212411,
   212412,
   212413,
   212414,
   212415
 }
-T.RT_104 = {
+T.RT_102 = {
   212421,
   212422,
   212423,
   212424,
   212425
 }
-T.RT_105 = {
+T.RT_103 = {
   100,
   12211,
   207,
   511
 }
-T.RT_106 = {
+T.RT_104 = {
   212511,
   212512,
   212513,
   212514,
   212515
 }
-T.RT_107 = {
+T.RT_105 = {
   100,
   12221,
   211,
   511
 }
-T.RT_108 = {
+T.RT_106 = {
   212521,
   212522,
   212523,
   212524,
   212525
 }
-T.RT_109 = {
+T.RT_107 = {
   212611,
   212612,
   212613,
   212614,
   212615
 }
-T.RT_110 = {
+T.RT_108 = {
   8512602,
   7001001,
   7011001,
@@ -824,14 +815,14 @@ T.RT_110 = {
   7009001,
   7010001
 }
-T.RT_111 = {
+T.RT_109 = {
   212621,
   212622,
   212623,
   212624,
   212625
 }
-T.RT_112 = {
+T.RT_110 = {
   101,
   100,
   12211,
@@ -839,15 +830,6 @@ T.RT_112 = {
   207,
   211,
   511
-}
-T.RT_113 = {
-  6000011,
-  6000041,
-  6000051,
-  6000061
-}
-T.RT_114 = {
-  BuffList = T.RT_113
 }
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
@@ -1619,7 +1601,6 @@ return ReadOnly("AbyssDungeon", {
     AbyssDungeonId = 2122011,
     DungeonId = 20201,
     DungeonMonsters = T.RT_53,
-    MonsterBuff = T.RT_102,
     RoomId = T.RT_87
   },
   [2122021] = {
@@ -1627,7 +1608,6 @@ return ReadOnly("AbyssDungeon", {
     AbyssDungeonId = 2122021,
     DungeonId = 20101,
     DungeonMonsters = T.RT_88,
-    MonsterBuff = T.RT_102,
     RoomId = T.RT_91
   },
   [2122031] = {
@@ -1635,7 +1615,6 @@ return ReadOnly("AbyssDungeon", {
     AbyssDungeonId = 2122031,
     DungeonId = 20202,
     DungeonMonsters = T.RT_63,
-    MonsterBuff = T.RT_102,
     RoomId = T.RT_93
   },
   [2122041] = {
@@ -1643,7 +1622,6 @@ return ReadOnly("AbyssDungeon", {
     AbyssDungeonId = 2122041,
     DungeonId = 20102,
     DungeonMonsters = T.RT_60,
-    MonsterBuff = T.RT_102,
     RoomId = T.RT_95
   },
   [2122051] = {
@@ -1651,7 +1629,6 @@ return ReadOnly("AbyssDungeon", {
     AbyssDungeonId = 2122051,
     DungeonId = 20203,
     DungeonMonsters = T.RT_96,
-    MonsterBuff = T.RT_102,
     RoomId = T.RT_97
   },
   [2122061] = {
@@ -1659,7 +1636,6 @@ return ReadOnly("AbyssDungeon", {
     AbyssDungeonId = 2122061,
     DungeonId = 20103,
     DungeonMonsters = T.RT_98,
-    MonsterBuff = T.RT_102,
     RoomId = T.RT_99
   },
   [2123011] = {
@@ -1672,7 +1648,7 @@ return ReadOnly("AbyssDungeon", {
     DungeonId = 20201,
     DungeonMonsters = T.RT_55,
     MonsterBuff = T.RT_90,
-    RoomId = T.RT_103
+    RoomId = T.RT_101
   },
   [2123012] = {
     AbyssBuffID = {
@@ -1684,86 +1660,80 @@ return ReadOnly("AbyssDungeon", {
     DungeonId = 20101,
     DungeonMonsters = T.RT_88,
     MonsterBuff = T.RT_14,
-    RoomId = T.RT_104
+    RoomId = T.RT_102
   },
   [2123021] = {
-    AbyssBuffID = T.RT_105,
+    AbyssBuffID = T.RT_103,
     AbyssDungeonId = 2123021,
     DungeonId = 20202,
     DungeonMonsters = T.RT_60,
     MonsterBuff = T.RT_90,
-    RoomId = T.RT_106
+    RoomId = T.RT_104
   },
   [2123022] = {
-    AbyssBuffID = T.RT_107,
+    AbyssBuffID = T.RT_105,
     AbyssDungeonId = 2123022,
     DungeonId = 20102,
     DungeonMonsters = T.RT_63,
     MonsterBuff = T.RT_14,
-    RoomId = T.RT_108
+    RoomId = T.RT_106
   },
   [2123031] = {
-    AbyssBuffID = T.RT_105,
+    AbyssBuffID = T.RT_103,
     AbyssDungeonId = 2123031,
     DungeonId = 20203,
     DungeonMonsters = T.RT_96,
     MonsterBuff = T.RT_90,
-    RoomId = T.RT_109
+    RoomId = T.RT_107
   },
   [2123032] = {
-    AbyssBuffID = T.RT_107,
+    AbyssBuffID = T.RT_105,
     AbyssDungeonId = 2123032,
     DungeonId = 20103,
-    DungeonMonsters = T.RT_110,
+    DungeonMonsters = T.RT_108,
     MonsterBuff = T.RT_14,
-    RoomId = T.RT_111
+    RoomId = T.RT_109
   },
   [2124011] = {
-    AbyssBuffID = T.RT_112,
+    AbyssBuffID = T.RT_110,
     AbyssDungeonId = 2124011,
     DungeonId = 20201,
     DungeonMonsters = T.RT_55,
-    MonsterBuff = T.RT_114,
-    RoomId = T.RT_103
+    RoomId = T.RT_101
   },
   [2124021] = {
-    AbyssBuffID = T.RT_112,
+    AbyssBuffID = T.RT_110,
     AbyssDungeonId = 2124021,
     DungeonId = 20101,
     DungeonMonsters = T.RT_88,
-    MonsterBuff = T.RT_114,
-    RoomId = T.RT_104
+    RoomId = T.RT_102
   },
   [2124031] = {
-    AbyssBuffID = T.RT_112,
+    AbyssBuffID = T.RT_110,
     AbyssDungeonId = 2124031,
     DungeonId = 20202,
     DungeonMonsters = T.RT_60,
-    MonsterBuff = T.RT_114,
-    RoomId = T.RT_106
+    RoomId = T.RT_104
   },
   [2124041] = {
-    AbyssBuffID = T.RT_112,
+    AbyssBuffID = T.RT_110,
     AbyssDungeonId = 2124041,
     DungeonId = 20102,
     DungeonMonsters = T.RT_63,
-    MonsterBuff = T.RT_114,
-    RoomId = T.RT_108
+    RoomId = T.RT_106
   },
   [2124051] = {
-    AbyssBuffID = T.RT_112,
+    AbyssBuffID = T.RT_110,
     AbyssDungeonId = 2124051,
     DungeonId = 20203,
     DungeonMonsters = T.RT_96,
-    MonsterBuff = T.RT_114,
-    RoomId = T.RT_109
+    RoomId = T.RT_107
   },
   [2124061] = {
-    AbyssBuffID = T.RT_112,
+    AbyssBuffID = T.RT_110,
     AbyssDungeonId = 2124061,
     DungeonId = 20103,
-    DungeonMonsters = T.RT_110,
-    MonsterBuff = T.RT_114,
-    RoomId = T.RT_111
+    DungeonMonsters = T.RT_108,
+    RoomId = T.RT_109
   }
 })

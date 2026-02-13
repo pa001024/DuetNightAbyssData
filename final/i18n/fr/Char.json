@@ -4090,7 +4090,7 @@
     ],
     "溯源": [
       "Augmente la Chance d’activation de l’effet de [Lamentation entrelacée] de 15%, et sa limite passe à 65%.",
-      "Lorsqu’une [Chasse lunaire] inflige des dégâts, les dégâts d’[Éclipse solaire] contre la cible augmentent de +75% pendant 3 s.\nInversement, lorsqu’une [Éclipse solaire] inflige des dégâts, [Chasse lunaire] gagne +75% DGT contre cette cible pendant 3 s.",
+      "Lorsqu’une [Chasse lunaire] inflige des dégâts, la cible subit +75% de dégâts d’[Éclipse solaire] pendant 3 s.\nInversement, lorsqu’une [Éclipse solaire] inflige des dégâts, la cible subit +75% de dégâts de [Chasse lunaire] pendant 3 s.",
       "Niveau de [Chasse lunaire] +2, niveau de [Lamentation entrelacée] +1.",
       "Augmente les soins reçus par Dame Nifle de 50% et sa Régénération de Lucidité de 25%.",
       "[Requiem de la Mer du Silence] niveau +2 ; [Lamentation entrelacée] niveau +1.",
@@ -5231,7 +5231,7 @@
       "[Errance juvénile] niveau +2 ; [La vie dérive, les forces s’inversent] niveau +1.",
       "Après avoir utilisé sa compétence ultime, obtient [Vent caressant, lune voilée] : immunité aux interruptions et réduction des dégâts subis de 25% pendant 25 s.",
       "[Ciel tranché par la lumière] niveau +2 ; [La vie dérive, les forces s’inversent] niveau +1.",
-      "Lorsqu’un Effet supplémentaire est déclenché, obtient 1 cumul de Pénétration +3% pendant 12 s, jusqu’à 6 cumuls."
+      "Lorsqu’un Effet supplémentaire est déclenché, obtient 1 cumul de Pénétration +3% pendant 12 s, jusqu’à 18 cumuls."
     ],
     "同律武器": [
       {
@@ -9135,7 +9135,7 @@
       "[Soutien céleste] niveau +2 ; [Rythme de l’âme] niveau +1.",
       "Le nombre maximal de cumuls de [Rythme de l’âme] passe à 3, et chaque cumul confère une augmentation de Vigueur de 12%.",
       "[Symbiose parfaite] niveau +2 ; [Rythme de l’âme] niveau +1.",
-      "Pendant toute la durée de l’augmentation de la Vitesse d’attaque conféré par [Symbiose parfaite], Fushu inflige 220% de Dégâts Hydro supplémentaires."
+      "Pendant toute la durée de l’augmentation de la Vitesse d’attaque conférée par [Symbiose parfaite], les attaques normales de mêlée de Fushu infligent 220% de Dégâts Hydro supplémentaires."
     ]
   },
   {
@@ -12036,7 +12036,7 @@
       "[Enfer ardent] niveau +2 ; [Détermination purgatrice] niveau +1.",
       "[Châtiment transperçant] peut désormais se déclencher toutes les 1,4 s.",
       "[Cage du désespoir] niveau +2 ; [Détermination purgatrice] niveau +1.",
-      "Chaque fois que les alliés dépensent 5 de Lucidité pour utiliser une compétence, déclenche automatiquement [Cage du Désespoir].\nPeut s’activer une fois toutes les 5 s."
+      "Chaque fois que les alliés utilisent des compétences consommant de la Lucidité un total de 5 fois, déclenche automatiquement [Cage du Désespoir]. Cet effet peut se déclencher une fois toutes les 5 s."
     ]
   },
   {
@@ -12098,7 +12098,7 @@
         "id": 320201,
         "名称": "Rafale pourpre",
         "类型": "Dégâts",
-        "描述": "Projette toutes les [Lames tournoyantes], inflige des Dégâts Pyro aux ennemis devant et confère 1 cumul d’[Ébriété].\nAppuyer ou maintenir l’attaque permet d’enchaîner des attaques successives.",
+        "描述": "Projette toutes les [Lames tournoyantes], inflige des Dégâts Pyro aux ennemis devant et confère 1 cumul d’[Ébriété].\nMaintenir l’attaque ou utiliser une compétence normale ou une attaque de mêlée permet d'enchaîner des attaques successives.",
         "icon": "Haier01",
         "e": [
           {
@@ -12215,7 +12215,7 @@
           }
         ],
         "术语解释": {
-          "Ébriété": "La Vitesse de compétence est augmentée. Les [Lames tournoyantes] volent plus vite et leur durée est suspendue. Confère une immunité aux interruptions. Tous les cumuls d’[Ébriété] sont dissipés lorsque [Rafale pourpre] se termine."
+          "Ébriété": "La Vitesse de compétence est augmentée. La durée de [Lames tournoyantes] est suspendue. Vous devenez immunisé aux interruptions. Tous les cumuls d’[Ébriété] sont dissipés lorsque [Rafale pourpre] se termine."
         },
         "子技能": [
           {
@@ -12230,7 +12230,7 @@
         "id": 320202,
         "名称": "Valse écarlate",
         "类型": "Invocation",
-        "描述": "Inflige des Dégâts Pyro aux ennemis devant et invoque 8 [Lames tournoyantes] qui orbitent autour du personnage et infligent des dégâts sur leur trajectoire.",
+        "描述": "Invoque 8 [Lames tournoyantes] qui orbitent autour du personnage.",
         "icon": "Haier02",
         "e": [
           {
@@ -12337,7 +12337,7 @@
           }
         ],
         "术语解释": {
-          "Lames tournoyantes": "Chaque [Lame tournoyante] effectue une rotation complète autour du personnage toutes les 2 s. Lorsqu’elle est projetée, elle parcourt jusqu’à 30 m avant de revenir.\nSi elle est touchée par une attaque de [Rafale pourpre] durant son retour, elle est de nouveau projetée vers un ennemi aléatoire dans un rayon de 20 m. Chaque projection actualise sa vitesse en fonction des cumuls d’[Ébriété].\nJusqu’à 8 [Lames tournoyantes] peuvent être actives simultanément."
+          "Lames tournoyantes": "Chaque [Lames tournoyantes] inflige des dégâts aux ennemis tous les 2 s pendant qu’elle orbite autour du personnage.\nLorsqu’elle est projetée, elle vole sur une certaine distance avant de revenir. Si elle est touchée par [Rafale pourpre] durant son retour, elle est projetée à nouveau vers un ennemi aléatoire dans la portée.\nÀ chaque projection, sa vitesse est mise à jour en fonction des cumuls de [Ébriété].\nElle inflige des dégâts 1 fois sur son passage, et jusqu'à 8 [Lames tournoyantes] peuvent être présentes à la fois."
         }
       },
       {
@@ -12359,7 +12359,7 @@
         ],
         "字段": [
           {
-            "名称": "Bonus de DGT de [Lacération]",
+            "名称": "Bonus de dégâts de détonation de [Lacération]",
             "影响": "技能威力",
             "值": 0.1
           }
@@ -12419,7 +12419,7 @@
           }
         ],
         "术语解释": {
-          "Lacération": "Tous les DGT d’arme et tous les Dégâts de compétence (hors [Lames tournoyantes] et [Lacération]) détonent 1 [Lacération] et infligent des dégâts supplémentaires de l’attribut correspondant. Jusqu’à 20 détonations par seconde."
+          "Lacération": "Tous les DGT d’arme et les Dégâts de compétence (à l’exception de [Lames tournoyantes] et [Lacération]) détonent 1 [Lacération] et infligent des dégâts supplémentaires de l’attribut Pyro. Jusqu’à 40 détonations par seconde."
         }
       },
       {
@@ -12498,9 +12498,9 @@
     ],
     "溯源": [
       "Les dégâts des [Lames tournoyantes] ont 30% % de chances d’appliquer 1 [Lacération] supplémentaire.",
-      "Les attaques de [Rafale pourpre] bloquent les projectiles ennemis. Chaque cumul d’[Ébriété] réduit les dégâts subis de 30%.",
+      "Lorsque vous êtes équipé de [Lames tournoyantes], les dégâts subis sont réduits de 30% et les dégâts infligés augmentent de 30%.",
       "[Rafale pourpre] niveau +2 ; [Valse écarlate] niveau +1.",
-      "Dégâts de détonation de [Lacération] +30% %.",
+      "Les dégâts causés par la détonation de [Lacération] sont augmentés de 30%, et la vitesse de vol de [Lames tournoyantes] est augmentée à 25.",
       "[Valse écarlate] niveau +2 ; [Rafale pourpre] niveau +1.",
       "Tous les DGT d’arme et tous les Dégâts de compétence (hors [Lames tournoyantes] et [Lacération]) détonent 2 [Lacérations]."
     ]
@@ -14933,7 +14933,7 @@
       "[Révélation céleste] niveau +2 ; [Rituel jumelé] niveau +1.",
       "Utiliser [Révélation céleste] augmente l’ATQ de Zhiliu et des alliés proches de 16% pendant 16 s.",
       "[Divination cosmique] niveau +2 ; [Rituel jumelé] niveau +1.",
-      "Lorsque Zhiliu se trouve dans la zone d’[Harmonie des Quatre Royaumes], sa Pénétration (tous attributs) augmente de 40%."
+      "Lorsque Zhiliu se trouve dans la zone d’[Harmonie des Quatre Royaumes], sa Pénétration (tous attributs) augmente de 40% et elle bénéficie en continu de l’augmentation des Dégâts de compétence conférée par [Clarté du destin]."
     ]
   },
   {
@@ -15282,14 +15282,14 @@
           "Fracas étoilé": "Tombe en piqué à grande vitesse et inflige des Dégâts Électro de zone à l’impact.\nCette attaque est considérée comme une Attaque plongeante d’arme de mêlée.\nSous l’état [Éveil de Xuanjiao], déclenche également [Nuées du dragon].",
           "Écaille inversée": "Effet permanent pouvant atteindre 6 cumuls. Tous les cumuls d’[Écaille inversée] sont dissipés à la fin de l’état [Éveil de Xuanjiao].",
           "Nuées du dragon": "Fait apparaître des [Tonnerres impétueux] sur les cibles touchées par [Fracas étoilé] ou [Fracas astral], infligeant des DGT Électro de zone.\nMaximum : 5 cibles affectées.",
-          "Fracas astral": "Consomme toutes les [Écailles inversées], octroyant un bonus de dégâts infligés à soi-même et aux alliés.\nPuis s’abat à grande vitesse, infligeant des DGT Électro de zone à l’impact.\nCette attaque est considérée comme une Attaque plongeante d’arme de mêlée.\nPendant l’état [Éveil de Xuanjiao], déclenche également [Nuées du dragon]."
+          "Fracas astral": "Consomme toutes les [Écailles inversées] et augmente les dégâts infligés par le personnage.\nSe projette ensuite au sol à grande vitesse, infligeant des Dégâts Électro de zone à l’impact.\nCette attaque est considérée comme une Attaque plongeante d’arme de mêlée.\nSous l’état [Éveil de Xuanjiao], déclenche également [Nuées du dragon]."
         }
       },
       {
         "id": 420102,
         "名称": "Écailles sinistres",
         "类型": "Bonus",
-        "描述": "Inflige des DGT Électro de zone aux ennemis en face, puis entre en état [Éveil de Xuanjiao]. Tant que cet état est actif, vous et vos alliés Électro bénéficiez de [Danse des dragons].",
+        "描述": "Inflige des Dégâts Électro de zone aux ennemis en face, puis entre en état [Éveil de Xuanjiao]. Tant que cet état est actif, [Fureur foudroyante] est appliqué de façon continue aux ennemis proches.",
         "icon": "Yuming02",
         "cd": 3,
         "e": [
@@ -15474,13 +15474,13 @@
             "格式": "{%}PV max"
           },
           {
-            "名称": "[酣战]效果半径",
+            "名称": "Rayon d’effet de [Fureur foudroyante]",
             "影响": "技能范围",
             "值": 20,
             "格式": "{}m"
           },
           {
-            "名称": "Dégâts de [Danse des dragons]",
+            "名称": "Dégâts de [Fureur foudroyante]",
             "影响": "技能威力",
             "值": [
               9.71,
@@ -15553,15 +15553,15 @@
           }
         ],
         "术语解释": {
-          "Éveil de Xuanjiao": "Ne subit pas d’interruption lors des dégâts reçus. Xuanjiao gravite autour de [Yuming], infligeant des Dégâts Électro aux ennemis qu’il touche (une fois toutes les 2 s par cible).\nXuanjiao absorbe les dégâts infligés aux PV de [Yuming]. Lorsque l’absorption atteint un certain pourcentage des PV max de [Yuming], l’état [Éveil de Xuanjiao] prend fin.",
-          "Danse des dragons": "Infliger des Dégâts de compétence à une cible affectée par [Fureur foudroyante] inflige des Dégâts Électro supplémentaires. Cet effet ne peut se produire qu’une fois toutes les 3 s sur la même cible."
+          "Éveil de Xuanjiao": "Ne subit pas d’interruption lors des dégâts reçus. Xuanjiao gravite autour de [Yuming].\nLorsque [Yuming] subit des dégâts affectant ses PV, Xuanjiao absorbe ces dégâts.\nUne fois qu’un certain pourcentage des PV max de [Yuming] a été absorbé, l’état [Éveil de Xuanjiao] prend fin.",
+          "Fureur foudroyante": "Lorsqu’une cible affectée par [Fureur foudroyante] subit des dégâts infligés par [Yuming] ou par un allié Électro, elle subit une instance supplémentaire de Dégâts Électro provenant de [Yuming].\nCet effet peut être déclenché au maximum une fois toutes les 2 s par cible."
         }
       },
       {
         "id": 420103,
         "名称": "Effleurer les cieux",
         "类型": "Passive",
-        "描述": "Lorsque vous infligez des dégâts avec une arme de mêlée, applique [Fureur foudroyante] à l’ennemi, réduisant sa Résistance Électro.\nPendant l’état [Éveil de Xuanjiao], [Fureur foudroyante] est appliqué automatiquement à tous les ennemis.",
+        "描述": "Pendant l’état [Éveil de Xuanjiao], vous et vos alliés Électro bénéficiez d’une augmentation des dégâts infligés.",
         "icon": "Yuming03",
         "b": [
           {
@@ -15730,11 +15730,11 @@
     ],
     "溯源": [
       "Pendant l’état [Éveil de Xuanjiao], chaque [Chute foudroyante] octroie une [Écaille inversée] supplémentaire.\nL’utilisation de [Fracas astral] augmente la Portée d’attaque d’arme de 0.6 et la Portée de compétence de 30% pour vous et vos alliés, pendant 8 s.",
-      "[Danse des dragons] inflige désormais 160% de ses dégâts de base.",
+      "[Fureur foudroyante] inflige désormais 160% de ses dégâts de base.",
       "[Chute foudroyante] niveau +2 ; [Effleurer les cieux] niveau +1.",
       "Les Attaques plongeantes au corps à corps infligent des Dégâts Électro supplémentaires équivalents à 12% de la Puissance de compétence de Yuming, jusqu’à un maximum de 36%.",
       "[Écailles sinistres] niveau +2 ; [Effleurer les cieux] niveau +1.",
-      "[Fracas étoilé] et [Fracas astral] infligent +25% de dégâts aux cibles affectées par [Fureur foudroyante].\nL’utilisation de [Fracas astral] restaure 6 de la capacité d’absorption de Xuanjiao."
+      "Sous l’état [Éveil de Xuanjiao], la Pénétration de tous les Attributs augmente de 25%.\nAprès avoir déclenché cumulativement 6 effets de dégâts de [Fureur foudroyante], une instance supplémentaire de dégâts de [Fureur foudroyante], équivalente à son multiplicateur initial de 130%, est infligée à toutes les cibles affectées. Cet effet ne peut être déclenché qu’une fois toutes les 0.60 s."
     ]
   },
   {

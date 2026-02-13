@@ -2,7 +2,7 @@
   {
     "id": 1000,
     "name": "Mecha-Sable Bi'an",
-    "des": "A mechanical mount developed by Master Gongshang, lifelike enough to pass for a real Sable Bi'an. Still, riding a divine beast — even a counterfeit — feels a little irreverent.\"",
+    "des": "A mechanical mount developed by Master Gongshang, lifelike enough to pass for a real Sable Bi'an. Ride it through Mistwharf, and you are sure to turn a few heads.",
     "icon": "Mounts_0002",
     "resourceIcon": "Icon_Mounts_0002",
     "rarity": 4,
@@ -16,7 +16,7 @@
   {
     "id": 1001,
     "name": "Mecha-Taihao",
-    "des": "A mechanised aerial craft built by Master Gongshang, modelled after Lord Argent. There's only one in all Huaxu, kept as a prized showpiece in Gongshang's workshop. Thankfully, he only built one. If replicas of Taihao ever filled the skies, the Ministry of Rites would come knocking in outrage. Yet Master Gongshang remains unmoved, set on mass-producing it all the same. Good luck to him.\nNo Reputation Perk is required to pilot this vehicle.",
+    "des": "A mechanised aerial craft built by Master Gongshang, modelled after Lord Argent. There's only one in all Huaxu, kept as a prized showpiece in Gongshang's workshop. Thankfully, he only built one. If replicas of Taihao ever filled the skies, the Ministry of Rites would come knocking in outrage. Yet Master Gongshang remains unmoved, set on mass-producing it all the same. Good luck to him.\nFly Speed ＋50%. No Reputation Perk is required to pilot this vehicle.",
     "icon": "Mounts_0001",
     "resourceIcon": "Icon_Mounts_0001",
     "rarity": 6,

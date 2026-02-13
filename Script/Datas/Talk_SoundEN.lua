@@ -1130,7 +1130,7 @@ local Data = {
         voice_en_char_Dafu_vo_topic_02_2 = {
           ProgrammerSoundPath = "event:/voice/en/char/Dafu/vo",
           SelectKey = "voice_en_char_Dafu_vo_topic_02_2",
-          SoundLength = 10570
+          SoundLength = 14380
         },
         voice_en_char_Dafu_vo_topic_02_3 = {
           ProgrammerSoundPath = "event:/voice/en/char/Dafu/vo",
@@ -8496,7 +8496,7 @@ local Data = {
         voice_en_char_Zhiliu_vo_appear = {
           ProgrammerSoundPath = "event:/voice/en/char/Zhiliu/vo",
           SelectKey = "voice_en_char_Zhiliu_vo_appear",
-          SoundLength = 1750
+          SoundLength = 5570
         },
         voice_en_char_Zhiliu_vo_battleidle = {
           ProgrammerSoundPath = "event:/voice/en/char/Zhiliu/vo",

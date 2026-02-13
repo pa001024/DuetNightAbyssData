@@ -181,7 +181,7 @@
   },
   {
     "id": 219,
-    "name": "齿轮",
+    "name": "ギア",
     "icon": "T_Activity_Autochess_Coin01",
     "rarity": 5
   },
@@ -2221,43 +2221,43 @@
   },
   {
     "id": 30113,
-    "name": "中级染剂·棕色-浅【待包装】",
+    "name": "中級染料・メープルシロップ",
     "icon": "T_Dye_15",
     "rarity": 5
   },
   {
     "id": 30114,
-    "name": "中级染剂·棕色-深【待包装】",
+    "name": "中級染料・ココア",
     "icon": "T_Dye_15",
     "rarity": 5
   },
   {
     "id": 30115,
-    "name": "中级染剂·绿色-浅【待包装】",
+    "name": "中級染料・碧い波",
     "icon": "T_Dye_14",
     "rarity": 5
   },
   {
     "id": 30116,
-    "name": "中级染剂·绿色-深【待包装】",
+    "name": "中級染料・蒼い松",
     "icon": "T_Dye_15",
     "rarity": 5
   },
   {
     "id": 30117,
-    "name": "高级染剂·粉色【待包装】",
+    "name": "上級染料・桃華",
     "icon": "T_Dye_13",
     "rarity": 5
   },
   {
     "id": 30118,
-    "name": "发型染剂·基础【待包装】",
+    "name": "基本ヘアカラー染料",
     "icon": "T_Dye_12",
     "rarity": 4
   },
   {
     "id": 30119,
-    "name": "发型染剂·黑白棕粉绿【待包装】",
+    "name": "高級ヘアカラー染料",
     "icon": "T_Dye_12",
     "rarity": 5
   },
@@ -2563,7 +2563,7 @@
   },
   {
     "id": 41045,
-    "name": "垂天の彩帘",
+    "name": "虹色の滝",
     "icon": "T_Resource_Gesture_03",
     "rarity": 4
   },
@@ -4549,349 +4549,349 @@
   },
   {
     "id": 6100001,
-    "name": "生命符石",
+    "name": "生命のルーン石",
     "icon": "T_Activity_Autochess_Item02",
     "rarity": 3
   },
   {
     "id": 6100002,
-    "name": "防御のルーン",
+    "name": "防御のルーン石",
     "icon": "T_Activity_Autochess_Item02",
     "rarity": 3
   },
   {
     "id": 6100003,
-    "name": "攻撃のルーン",
+    "name": "攻撃のルーン石",
     "icon": "T_Activity_Autochess_Item01",
     "rarity": 3
   },
   {
     "id": 6100004,
-    "name": "シールドのルーン",
+    "name": "シールドのルーン石",
     "icon": "T_Activity_Autochess_Item02",
     "rarity": 3
   },
   {
     "id": 6100005,
-    "name": "HP・防御のルーン",
+    "name": "HP・防御のルーン石",
     "icon": "T_Activity_Autochess_Item02",
     "rarity": 3
   },
   {
     "id": 6100006,
-    "name": "攻撃・防御のルーン",
+    "name": "攻撃・防御のルーン石",
     "icon": "T_Activity_Autochess_Item01",
     "rarity": 3
   },
   {
     "id": 6100007,
-    "name": "攻撃・HPのルーン",
+    "name": "攻撃・HPのルーン石",
     "icon": "T_Activity_Autochess_Item01",
     "rarity": 3
   },
   {
     "id": 6100008,
-    "name": "シールド・HPのルーン",
+    "name": "シールド・HPのルーン石",
     "icon": "T_Activity_Autochess_Item02",
     "rarity": 3
   },
   {
     "id": 6100009,
-    "name": "攻撃・シールドのルーン",
+    "name": "攻撃・シールドのルーン石",
     "icon": "T_Activity_Autochess_Item01",
     "rarity": 3
   },
   {
     "id": 6100010,
-    "name": "撃破のルーン",
+    "name": "撃破のルーン石",
     "icon": "T_Activity_Autochess_Item03",
     "rarity": 4
   },
   {
     "id": 6100011,
-    "name": "崩壊のルーン",
+    "name": "崩壊のルーン石",
     "icon": "T_Activity_Autochess_Item03",
     "rarity": 4
   },
   {
     "id": 6100012,
-    "name": "鍛錬のルーン",
+    "name": "鍛錬のルーン石",
     "icon": "T_Activity_Autochess_Item03",
     "rarity": 4
   },
   {
     "id": 6100013,
-    "name": "激怒符石",
+    "name": "激怒のルーン石",
     "icon": "T_Activity_Autochess_Item03",
     "rarity": 4
   },
   {
     "id": 6100014,
-    "name": "治療のルーン",
+    "name": "治療のルーン石",
     "icon": "T_Activity_Autochess_Item04",
     "rarity": 4
   },
   {
     "id": 6100015,
-    "name": "鼓舞のルーン",
+    "name": "鼓舞のルーン石",
     "icon": "T_Activity_Autochess_Item04",
     "rarity": 4
   },
   {
     "id": 6100016,
-    "name": "共鳴のルーン",
+    "name": "共鳴のルーン石",
     "icon": "T_Activity_Autochess_Item04",
     "rarity": 4
   },
   {
     "id": 6100017,
-    "name": "興奮のルーン",
+    "name": "興奮のルーン石",
     "icon": "T_Activity_Autochess_Item04",
     "rarity": 4
   },
   {
     "id": 6100018,
-    "name": "怒涛のルーン",
+    "name": "怒涛のルーン石",
     "icon": "T_Activity_Autochess_Item03",
     "rarity": 4
   },
   {
     "id": 6100019,
-    "name": "仁心のルーン",
+    "name": "仁心のルーン石",
     "icon": "T_Activity_Autochess_Item04",
     "rarity": 4
   },
   {
     "id": 6100020,
-    "name": "決死のルーン",
+    "name": "決死のルーン石",
     "icon": "T_Activity_Autochess_Item03",
     "rarity": 4
   },
   {
     "id": 6100021,
-    "name": "底力のルーン",
+    "name": "底力のルーン石",
     "icon": "T_Activity_Autochess_Item04",
     "rarity": 4
   },
   {
     "id": 6100022,
-    "name": "貫通のルーン",
+    "name": "貫通のルーン石",
     "icon": "T_Activity_Autochess_Item03",
     "rarity": 4
   },
   {
     "id": 6100023,
-    "name": "致命のルーン",
+    "name": "致命のルーン石",
     "icon": "T_Activity_Autochess_Item03",
     "rarity": 4
   },
   {
     "id": 6100024,
-    "name": "フロストのルーン",
+    "name": "フロストのルーン石",
     "icon": "T_Activity_Autochess_Item06",
     "rarity": 5
   },
   {
     "id": 6100025,
-    "name": "ボムのルーン",
+    "name": "ボムのルーン石",
     "icon": "T_Activity_Autochess_Item05",
     "rarity": 5
   },
   {
     "id": 6100026,
-    "name": "ベノムのルーン",
+    "name": "ベノムのルーン石",
     "icon": "T_Activity_Autochess_Item06",
     "rarity": 5
   },
   {
     "id": 6100027,
-    "name": "エレキのルーン",
+    "name": "エレキのルーン石",
     "icon": "T_Activity_Autochess_Item05",
     "rarity": 5
   },
   {
     "id": 6100028,
-    "name": "ブラッドのルーン",
+    "name": "ブラッドのルーン石",
     "icon": "T_Activity_Autochess_Item05",
     "rarity": 5
   },
   {
     "id": 6100029,
-    "name": "ウィザーのルーン",
+    "name": "ウィザーのルーン石",
     "icon": "T_Activity_Autochess_Item05",
     "rarity": 5
   },
   {
     "id": 6100030,
-    "name": "ガーディアンのルーン",
+    "name": "ガーディアンのルーン石",
     "icon": "T_Activity_Autochess_Item06",
     "rarity": 5
   },
   {
     "id": 6100031,
-    "name": "リベンジャーのルーン",
+    "name": "リベンジャーのルーン石",
     "icon": "T_Activity_Autochess_Item06",
     "rarity": 5
   },
   {
     "id": 6100032,
-    "name": "ブリザードのルーン",
+    "name": "ブリザードのルーン石",
     "icon": "T_Activity_Autochess_Item06",
     "rarity": 5
   },
   {
     "id": 6100033,
-    "name": "フレイムのルーン",
+    "name": "フレイムのルーン石",
     "icon": "T_Activity_Autochess_Item05",
     "rarity": 5
   },
   {
     "id": 6100034,
-    "name": "バーサークのルーン",
+    "name": "バーサークのルーン石",
     "icon": "T_Activity_Autochess_Item05",
     "rarity": 5
   },
   {
     "id": 6100035,
-    "name": "サンダーのルーン",
+    "name": "サンダーのルーン石",
     "icon": "T_Activity_Autochess_Item05",
     "rarity": 5
   },
   {
     "id": 6100036,
-    "name": "レイズのルーン",
+    "name": "レイズのルーン石",
     "icon": "T_Activity_Autochess_Item05",
     "rarity": 5
   },
   {
     "id": 6100101,
-    "name": "疾冲秽兽机傀I",
+    "name": "からくり人形・疾駆の穢獣 Ⅰ",
     "icon": "T_Head_Gr_Jichong",
     "rarity": 1
   },
   {
     "id": 6100102,
-    "name": "游击秽兽机傀I",
+    "name": "からくり人形・遊撃の穢獣 Ⅰ",
     "icon": "T_Head_Gr_Youji",
     "rarity": 1
   },
   {
     "id": 6100103,
-    "name": "漂浮秽兽机傀I",
+    "name": "からくり人形・浮遊する穢獣 Ⅰ",
     "icon": "T_Head_Gr_Piaofu",
     "rarity": 1
   },
   {
     "id": 6100104,
-    "name": "暴徒秽兽机傀I",
+    "name": "からくり人形・凶暴な穢獣 Ⅰ",
     "icon": "T_Head_Gr_Baotu",
     "rarity": 1
   },
   {
     "id": 6100105,
-    "name": "笼草秽兽机傀I",
+    "name": "からくり人形・ウツボカズラの穢獣 Ⅰ",
     "icon": "T_Head_GR_Longcao",
     "rarity": 1
   },
   {
     "id": 6100106,
-    "name": "疾冲秽兽机傀II",
+    "name": "からくり人形・疾駆の穢獣 Ⅱ",
     "icon": "T_Head_Gr_Jichong_C01",
     "rarity": 1
   },
   {
     "id": 6100107,
-    "name": "游击秽兽机傀II",
+    "name": "からくり人形・遊撃の穢獣 Ⅱ",
     "icon": "T_Head_Gr_Youji_C01",
     "rarity": 1
   },
   {
     "id": 6100108,
-    "name": "狙击列兵机傀I",
+    "name": "からくり人形・狙撃兵 Ⅰ",
     "icon": "T_Head_Jt_Juji",
     "rarity": 1
   },
   {
     "id": 6100109,
-    "name": "劈斩列兵机傀I",
+    "name": "からくり人形・切込兵 Ⅰ",
     "icon": "T_Head_Jt_Pizhuo",
     "rarity": 1
   },
   {
     "id": 6100110,
-    "name": "远征列兵机傀I",
+    "name": "からくり人形・遠征兵 Ⅰ",
     "icon": "T_Head_Jt_Ranger",
     "rarity": 1
   },
   {
     "id": 6100111,
-    "name": "精锐士官机傀I",
+    "name": "からくり人形・エリート士官 Ⅰ",
     "icon": "T_Head_Jt_Zhihui",
     "rarity": 1
   },
   {
     "id": 6100112,
-    "name": "帝皇之仁机傀I",
+    "name": "からくり人形・暴帝の慈悲 Ⅰ",
     "icon": "T_Head_Jt_Zhiren",
     "rarity": 1
   },
   {
     "id": 6100113,
-    "name": "远征列兵机傀II",
+    "name": "からくり人形・遠征兵 Ⅱ",
     "icon": "T_Head_Jt_Ranger_C01",
     "rarity": 1
   },
   {
     "id": 6100114,
-    "name": "突击列兵机傀II",
+    "name": "からくり人形・突撃兵 Ⅱ",
     "icon": "T_Head_Jt_Tuji_C01",
     "rarity": 1
   },
   {
     "id": 6100115,
-    "name": "警戒机机傀I",
+    "name": "からくり人形・警戒機 Ⅰ",
     "icon": "T_Jingjie",
     "rarity": 1
   },
   {
     "id": 6100116,
-    "name": "蒙恩的执事机傀I",
+    "name": "からくり人形・恩寵の執事 Ⅰ",
     "icon": "T_Head_Jh_Zhishi",
     "rarity": 1
   },
   {
     "id": 6100117,
-    "name": "蒙恩的先锋机傀I",
+    "name": "からくり人形・恩寵の前衛 Ⅰ",
     "icon": "T_Head_Jh_Xianfeng",
     "rarity": 1
   },
   {
     "id": 6100118,
-    "name": "蒙恩的神甫机傀I",
+    "name": "からくり人形・恩寵の神父 Ⅰ",
     "icon": "T_Head_Jh_Shenfu",
     "rarity": 1
   },
   {
     "id": 6100119,
-    "name": "野蜂利刃机傀I",
+    "name": "からくり人形・スティンソード Ⅰ",
     "icon": "T_Head_SQ_Yinxie",
     "rarity": 1
   },
   {
     "id": 6100120,
-    "name": "野蜂暗箭机傀I",
+    "name": "からくり人形・スティンアロー Ⅰ",
     "icon": "T_Head_SQ_Dufeng",
     "rarity": 1
   },
   {
     "id": 6100121,
-    "name": "野蜂密探机傀I",
+    "name": "からくり人形・スティンスパイ Ⅰ",
     "icon": "T_Head_SQ_Niaopao",
     "rarity": 1
   },
   {
     "id": 6100122,
-    "name": "对局积分",
+    "name": "対局ポイント",
     "icon": "T_Activity_Autochess_Coin02",
     "rarity": 5
   },

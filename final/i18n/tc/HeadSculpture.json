@@ -169,7 +169,7 @@
   },
   {
     "id": 10030,
-    "name": "Portrait : Zhiliu",
+    "name": "執棋者的肖像",
     "desc": "可將頭像更換為止流的形象。",
     "icon": "T_Head_Zhiliu"
   },
@@ -769,91 +769,91 @@
   },
   {
     "id": 30095,
-    "name": "诡异的光",
+    "name": "詭異的光",
     "desc": "適用於頭像。",
     "icon": "T_Head_Art_0012"
   },
   {
     "id": 30096,
-    "name": "快乐起飞",
+    "name": "快樂起飛",
     "desc": "適用於頭像。",
     "icon": "T_Head_Art_0001"
   },
   {
     "id": 30097,
-    "name": "负罪者的肖像·小憩",
+    "name": "負罪者的肖像·小憩",
     "desc": "適用於頭像。",
     "icon": "T_Head_Other0018"
   },
   {
     "id": 30098,
-    "name": "飘零剑客的肖像·雨夜",
+    "name": "飄零劍客的肖像·雨夜",
     "desc": "適用於頭像。",
     "icon": "T_Head_Other0019"
   },
   {
     "id": 30099,
-    "name": "黑与白·太皓",
+    "name": "黑與白·太皓",
     "desc": "適用於頭像。",
     "icon": "T_Head_Other0034"
   },
   {
     "id": 30100,
-    "name": "黑与白·烛阴",
+    "name": "黑與白·燭陰",
     "desc": "適用於頭像。",
     "icon": "T_Head_Other0035"
   },
   {
     "id": 30101,
-    "name": "华胥药师的肖像·专注",
+    "name": "華胥藥師的肖像·專注",
     "desc": "適用於頭像。",
     "icon": "T_Head_Other0033"
   },
   {
     "id": 30102,
-    "name": "回忆中的肖像·决意",
+    "name": "回憶中的肖像·決意",
     "desc": "適用於頭像。",
     "icon": "T_Head_Other0029"
   },
   {
     "id": 30103,
-    "name": "夜莺小姐的肖像·绿荫",
+    "name": "夜鶯小姐的肖像·綠蔭",
     "desc": "適用於頭像。",
     "icon": "T_Head_Other0014"
   },
   {
     "id": 30104,
-    "name": "逐灯者的肖像·眺望",
+    "name": "逐燈者的肖像·眺望",
     "desc": "適用於頭像。",
     "icon": "T_Head_Other0016"
   },
   {
     "id": 30105,
-    "name": "大军团长的肖像·俯瞰",
+    "name": "大軍團長的肖像·俯瞰",
     "desc": "適用於頭像。",
     "icon": "T_Head_Other0030"
   },
   {
     "id": 30106,
-    "name": "粮秣专员的肖像·慌乱",
+    "name": "糧秣專員的肖像·慌亂",
     "desc": "適用於頭像。",
     "icon": "T_Head_Other0031"
   },
   {
     "id": 30107,
-    "name": "机傀大乱斗",
+    "name": "機傀大亂鬥",
     "desc": "適用於頭像。",
     "icon": "T_Head_Art_0011"
   },
   {
     "id": 30108,
-    "name": "惊鱼",
+    "name": "驚魚",
     "desc": "適用於頭像。",
     "icon": "T_Head_Art_0013"
   },
   {
     "id": 30109,
-    "name": "呐喊",
+    "name": "吶喊",
     "desc": "適用於頭像。",
     "icon": "T_Head_Art_0002"
   }

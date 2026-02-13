@@ -9,7 +9,7 @@
       "最大召唤数量": 3,
       "每次召唤数量": 3,
       "召唤延迟": 2,
-      "BUFF延迟": 0.5,
+      "BUFF持续": 0.5,
       "DOT伤害": 0.3,
       "DOT间隔": 2,
       "伤害类型": [
@@ -97,7 +97,7 @@
       "伤害类型": [
         "PhantomAvoid"
       ],
-      "BUFF延迟": 3,
+      "BUFF持续": 3,
       "时间膨胀倍率": 0.96,
       "最大层数": 5
     }
@@ -112,7 +112,7 @@
       "持续时间": 4,
       "最大召唤数量": 8,
       "每次召唤数量": 1,
-      "BUFF延迟": 0.5,
+      "BUFF持续": 0.5,
       "时间膨胀倍率": 0.5,
       "伤害倍率": 0.65,
       "伤害类型": [
@@ -148,7 +148,7 @@
       "最大召唤数量": 15,
       "每次召唤数量": 1,
       "召唤延迟": 3,
-      "BUFF延迟": 0.5,
+      "BUFF持续": 0.5,
       "加成": {
         "防御": -0.9
       },
@@ -171,7 +171,7 @@
       "最大召唤数量": 15,
       "每次召唤数量": 1,
       "召唤延迟": 3,
-      "BUFF延迟": 0.5,
+      "BUFF持续": 0.5,
       "加成": {
         "防御": -0.9
       },
@@ -194,7 +194,7 @@
       "最大召唤数量": 15,
       "每次召唤数量": 1,
       "召唤延迟": 3,
-      "BUFF延迟": 0.5,
+      "BUFF持续": 0.5,
       "加成": {
         "防御": -0.9
       },
@@ -213,7 +213,7 @@
     "desc": "Les Ordonnateurs sont des ennemis d’élite dotés de capacités d’Ordonnateur.\nL’Ordonnateur — Feu résiduel s’imprègne périodiquement d’un [État de Feu résiduel] qui dure 2.5 s. S’il subit des dégâts durant cette période, l’état se dissipe immédiatement et déclenche une explosion infligeant des dégâts aux ennemis proches.",
     "vars": {
       "间隔时间": 7,
-      "BUFF延迟": 2.5,
+      "BUFF持续": 2.5,
       "伤害倍率": 0.65,
       "伤害类型": [
         "PhantomAvoid",
@@ -229,7 +229,7 @@
     "desc": "Les Ordonnateurs sont des ennemis d’élite dotés de capacités d’Ordonnateur.\nL’Ordonnateur — Feu résiduel s’imprègne périodiquement d’un [État de Feu résiduel] qui dure 2.5 s. S’il subit des dégâts durant cette période, l’état se dissipe immédiatement et déclenche une explosion infligeant des dégâts aux ennemis proches.",
     "vars": {
       "间隔时间": 6,
-      "BUFF延迟": 2.5,
+      "BUFF持续": 2.5,
       "伤害倍率": 0.65,
       "伤害类型": [
         "PhantomAvoid",
@@ -245,7 +245,7 @@
     "desc": "Les Ordonnateurs sont des ennemis d’élite dotés de capacités d’Ordonnateur.\nL’Ordonnateur — Feu résiduel s’imprègne périodiquement d’un [État de Feu résiduel] qui dure 2.5 s. S’il subit des dégâts durant cette période, l’état se dissipe immédiatement et déclenche une explosion infligeant des dégâts aux ennemis proches.",
     "vars": {
       "间隔时间": 6,
-      "BUFF延迟": 2.5,
+      "BUFF持续": 2.5,
       "伤害倍率": 0.65,
       "伤害类型": [
         "PhantomAvoid",
@@ -260,7 +260,7 @@
     "name": "Ordonnateur — Représailles",
     "desc": "Les Ordonnateurs sont des ennemis d’élite dotés de capacités d’Ordonnateur.\nLorsqu’un Ordonnateur — Représailles est vaincu, les alliés proches gagnent [Renforcé].\n[Renforcé] : augmente l’Attaque, la Défense, la Vitesse d’attaque et la Vitesse de déplacement pendant 20 s.",
     "vars": {
-      "BUFF延迟": 20,
+      "BUFF持续": 20,
       "最大层数": 3,
       "加成": {
         "防御": 0.5,
@@ -287,7 +287,7 @@
     "desc": "Les Ordonnateurs sont des ennemis d’élite dotés de capacités d’Ordonnateur.\nAu début du combat, l’Ordonnateur — Spectre invoque 2 [Spectre]. Ces entités subissent davantage de dégâts, mais reproduisent exactement les techniques de combat de leur invocateur.",
     "vars": {
       "伤害加成倍率": 1.5,
-      "BUFF延迟": -1
+      "BUFF持续": -1
     }
   },
   {

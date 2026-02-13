@@ -233,48 +233,48 @@
   },
   {
     "id": 10030,
-    "name": "龙渊穗·锈红",
-    "desc": "穗为缰，缚神君。",
+    "name": "용연 태슬·\n러스트 레드",
+    "desc": "이 태슬로 신군과 한 몸이 되리라.",
     "icon": "T_Fashion_Weapon34_01",
     "rarity": 5,
     "unlock": "프리즘 교환으로 획득"
   },
   {
     "id": 10031,
-    "name": "龙渊穗·绛紫",
-    "desc": "穗为缰，缚神君。",
+    "name": "용연 태슬·보라",
+    "desc": "이 태슬로 신군과 한 몸이 되리라.",
     "icon": "T_Fashion_Weapon34_02",
     "rarity": 5,
     "unlock": "프리즘 교환으로 획득"
   },
   {
     "id": 10032,
-    "name": "龙渊穗·涅白",
-    "desc": "穗为缰，缚神君。",
+    "name": "용연 태슬·아이보리",
+    "desc": "이 태슬로 신군과 한 몸이 되리라.",
     "icon": "T_Fashion_Weapon34",
     "rarity": 5,
     "unlock": "프리즘 교환으로 획득"
   },
   {
     "id": 10033,
-    "name": "龙纹坠·锈红",
-    "desc": "蟠龙栖玄玉。",
+    "name": "용무늬 펜던트·러스트 레드",
+    "desc": "똬리를 튼 용이 옥에 내려앉노라.",
     "icon": "T_Fashion_Weapon35_01",
     "rarity": 5,
     "unlock": "프리즘 교환으로 획득"
   },
   {
     "id": 10034,
-    "name": "龙纹坠·绛紫",
-    "desc": "蟠龙栖玄玉。",
+    "name": "용무늬 펜던트·보라",
+    "desc": "똬리를 튼 용이 옥에 내려앉노라.",
     "icon": "T_Fashion_Weapon35_02",
     "rarity": 5,
     "unlock": "프리즘 교환으로 획득"
   },
   {
     "id": 10035,
-    "name": "龙纹坠·涅白",
-    "desc": "蟠龙栖玄玉。",
+    "name": "용무늬 펜던트·아이보리",
+    "desc": "똬리를 튼 용이 옥에 내려앉노라.",
     "icon": "T_Fashion_Weapon35",
     "rarity": 5,
     "unlock": "프리즘 교환으로 획득"

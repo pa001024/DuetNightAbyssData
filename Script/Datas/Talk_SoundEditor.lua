@@ -79377,7 +79377,7 @@ return ReadOnly("Talk_SoundEditor", {
   voice_en_char_Dafu_vo_topic_02_2 = {
     ProgrammerSoundPath = "event:/voice/en/char/Dafu/vo",
     SelectKey = "voice_en_char_Dafu_vo_topic_02_2",
-    SoundLength = 10570
+    SoundLength = 14380
   },
   voice_en_char_Dafu_vo_topic_02_3 = {
     ProgrammerSoundPath = "event:/voice/en/char/Dafu/vo",
@@ -86687,7 +86687,7 @@ return ReadOnly("Talk_SoundEditor", {
   voice_en_char_Zhiliu_vo_appear = {
     ProgrammerSoundPath = "event:/voice/en/char/Zhiliu/vo",
     SelectKey = "voice_en_char_Zhiliu_vo_appear",
-    SoundLength = 1750
+    SoundLength = 5570
   },
   voice_en_char_Zhiliu_vo_battleidle = {
     ProgrammerSoundPath = "event:/voice/en/char/Zhiliu/vo",
@@ -223451,7 +223451,7 @@ return ReadOnly("Talk_SoundEditor", {
   voice_kr_char_Yuming_vo_companio_01 = {
     ProgrammerSoundPath = "event:/voice/kr/char/Yuming/vo",
     SelectKey = "voice_kr_char_Yuming_vo_companio_01",
-    SoundLength = 10800
+    SoundLength = 11190
   },
   voice_kr_char_Yuming_vo_companio_02 = {
     ProgrammerSoundPath = "event:/voice/kr/char/Yuming/vo",
@@ -223461,7 +223461,7 @@ return ReadOnly("Talk_SoundEditor", {
   voice_kr_char_Yuming_vo_companio_03 = {
     ProgrammerSoundPath = "event:/voice/kr/char/Yuming/vo",
     SelectKey = "voice_kr_char_Yuming_vo_companio_03",
-    SoundLength = 8020
+    SoundLength = 8740
   },
   voice_kr_char_Yuming_vo_emotion_amaze_01 = {
     ProgrammerSoundPath = "event:/voice/kr/char/Yuming/vo",
@@ -224036,7 +224036,7 @@ return ReadOnly("Talk_SoundEditor", {
   voice_kr_char_Zhiliu_vo_birthday = {
     ProgrammerSoundPath = "event:/voice/kr/char/Zhiliu/vo",
     SelectKey = "voice_kr_char_Zhiliu_vo_birthday",
-    SoundLength = 33670
+    SoundLength = 36990
   },
   voice_kr_char_Zhiliu_vo_companio_01 = {
     ProgrammerSoundPath = "event:/voice/kr/char/Zhiliu/vo",
@@ -224296,7 +224296,7 @@ return ReadOnly("Talk_SoundEditor", {
   voice_kr_char_Zhiliu_vo_topic_03_2 = {
     ProgrammerSoundPath = "event:/voice/kr/char/Zhiliu/vo",
     SelectKey = "voice_kr_char_Zhiliu_vo_topic_03_2",
-    SoundLength = 19050
+    SoundLength = 19950
   },
   voice_kr_char_Zhiliu_vo_topic_03_3 = {
     ProgrammerSoundPath = "event:/voice/kr/char/Zhiliu/vo",
@@ -224311,7 +224311,7 @@ return ReadOnly("Talk_SoundEditor", {
   voice_kr_char_Zhiliu_vo_topic_04_1 = {
     ProgrammerSoundPath = "event:/voice/kr/char/Zhiliu/vo",
     SelectKey = "voice_kr_char_Zhiliu_vo_topic_04_1",
-    SoundLength = 7450
+    SoundLength = 7580
   },
   voice_kr_char_Zhiliu_vo_topic_04_2 = {
     ProgrammerSoundPath = "event:/voice/kr/char/Zhiliu/vo",

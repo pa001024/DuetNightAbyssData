@@ -130,7 +130,7 @@
   {
     "id": 10017,
     "name": "Petit Pioupiou",
-    "desc": "Héros du célèbre conte « <I>L’Étrange Aventure de Pioupiou</> », répandu sur tout le continent d’Atlasia. Chaque jour, le petit poussin s’éveille dans un lieu différent, rencontre de nouveaux compagnons et s’élance dans une odyssée singulière pour découvrir le sens de sa vie — et déjouer les complots des méchants.",
+    "desc": "Héros du célèbre conte « L’Étrange Aventure de Pioupiou », répandu sur tout le continent d’Atlasia. Chaque jour, le petit poussin s’éveille dans un lieu différent, rencontre de nouveaux compagnons et s’élance dans une odyssée singulière pour découvrir le sens de sa vie — et déjouer les complots des méchants.",
     "icon": "T_Fashion_Weapon21",
     "rarity": 4,
     "unlock": "Disponible dans la boutique"
@@ -138,7 +138,7 @@
   {
     "id": 10018,
     "name": "Petit Pioupiou – Blanc ivoire",
-    "desc": "Héros du célèbre conte « <I>L’Étrange Aventure de Pioupiou</> », répandu sur tout le continent d’Atlasia. Chaque jour, le petit poussin s’éveille dans un lieu différent, rencontre de nouveaux compagnons et s’élance dans une odyssée singulière pour découvrir le sens de sa vie — et déjouer les complots des méchants.",
+    "desc": "Héros du célèbre conte « L’Étrange Aventure de Pioupiou », répandu sur tout le continent d’Atlasia. Chaque jour, le petit poussin s’éveille dans un lieu différent, rencontre de nouveaux compagnons et s’élance dans une odyssée singulière pour découvrir le sens de sa vie — et déjouer les complots des méchants.",
     "icon": "T_Fashion_Weapon25",
     "rarity": 4,
     "unlock": "Disponible dans la boutique"
@@ -146,7 +146,7 @@
   {
     "id": 10019,
     "name": "Petit Pioupiou – Caramel",
-    "desc": "Héros du célèbre conte « <I>L’Étrange Aventure de Pioupiou</> », répandu sur tout le continent d’Atlasia. Chaque jour, le petit poussin s’éveille dans un lieu différent, rencontre de nouveaux compagnons et s’élance dans une odyssée singulière pour découvrir le sens de sa vie — et déjouer les complots des méchants.",
+    "desc": "Héros du célèbre conte « L’Étrange Aventure de Pioupiou », répandu sur tout le continent d’Atlasia. Chaque jour, le petit poussin s’éveille dans un lieu différent, rencontre de nouveaux compagnons et s’élance dans une odyssée singulière pour découvrir le sens de sa vie — et déjouer les complots des méchants.",
     "icon": "T_Fashion_Weapon24",
     "rarity": 4,
     "unlock": "Disponible dans la boutique"
@@ -154,7 +154,7 @@
   {
     "id": 10020,
     "name": "Petit Pioupiou – Bleu indigo",
-    "desc": "Héros du célèbre conte « <I>L’Étrange Aventure de Pioupiou</> », répandu sur tout le continent d’Atlasia. Chaque jour, le petit poussin s’éveille dans un lieu différent, rencontre de nouveaux compagnons et s’élance dans une odyssée singulière pour découvrir le sens de sa vie — et déjouer les complots des méchants.",
+    "desc": "Héros du célèbre conte « L’Étrange Aventure de Pioupiou », répandu sur tout le continent d’Atlasia. Chaque jour, le petit poussin s’éveille dans un lieu différent, rencontre de nouveaux compagnons et s’élance dans une odyssée singulière pour découvrir le sens de sa vie — et déjouer les complots des méchants.",
     "icon": "T_Fashion_Weapon26",
     "rarity": 4,
     "unlock": "Disponible dans la boutique"
@@ -233,48 +233,48 @@
   },
   {
     "id": 10030,
-    "name": "龙渊穗·锈红",
-    "desc": "穗为缰，缚神君。",
+    "name": "Pampille de l’Abîme draconique – Rouille",
+    "desc": "Une pampille changée en rênes, capable d’entraver le divin.",
     "icon": "T_Fashion_Weapon34_01",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 10031,
-    "name": "龙渊穗·绛紫",
-    "desc": "穗为缰，缚神君。",
+    "name": "Pampille de l’Abîme draconique – Pourpre profond",
+    "desc": "Une pampille changée en rênes, capable d’entraver le divin.",
     "icon": "T_Fashion_Weapon34_02",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 10032,
-    "name": "龙渊穗·涅白",
-    "desc": "穗为缰，缚神君。",
+    "name": "Pampille de l’Abîme draconique – Blanc ivoire",
+    "desc": "Une pampille changée en rênes, capable d’entraver le divin.",
     "icon": "T_Fashion_Weapon34",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 10033,
-    "name": "龙纹坠·锈红",
-    "desc": "蟠龙栖玄玉。",
+    "name": "Breloque draconique – Rouille",
+    "desc": "Un dragon gravé sur un jade mystique.",
     "icon": "T_Fashion_Weapon35_01",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 10034,
-    "name": "龙纹坠·绛紫",
-    "desc": "蟠龙栖玄玉。",
+    "name": "Breloque draconique – Pourpre profond",
+    "desc": "Un dragon gravé sur un jade mystique.",
     "icon": "T_Fashion_Weapon35_02",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 10035,
-    "name": "龙纹坠·涅白",
-    "desc": "蟠龙栖玄玉。",
+    "name": "Breloque draconique – Blanc ivoire",
+    "desc": "Un dragon gravé sur un jade mystique.",
     "icon": "T_Fashion_Weapon35",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"

@@ -25,7 +25,8 @@ return ReadOnly("AutoChessMission", {
     RandomBuffCount = 0,
     RegularBuffId = 4020702,
     SettlementID = 103016,
-    UnlockRankID = 2
+    UnlockRankID = 2,
+    UnlockText = "UI_AutoChess_UnlockText1"
   },
   [1002] = {
     ACFormationId = 1004,
@@ -36,7 +37,8 @@ return ReadOnly("AutoChessMission", {
     RandomBuffCount = 0,
     RegularBuffId = 4020702,
     SettlementID = 103016,
-    UnlockMissionId = 1001
+    UnlockMissionId = 1001,
+    UnlockText = "UI_AutoChess_UnlockText1"
   },
   [1003] = {
     ACFormationId = 1007,
@@ -47,7 +49,8 @@ return ReadOnly("AutoChessMission", {
     RandomBuffCount = 0,
     RegularBuffId = 4020702,
     SettlementID = 103016,
-    UnlockMissionId = 1002
+    UnlockMissionId = 1002,
+    UnlockText = "UI_AutoChess_UnlockText1"
   },
   [1004] = {
     ACFormationId = 2001,
@@ -59,7 +62,8 @@ return ReadOnly("AutoChessMission", {
     RegularBuffId = 4020702,
     SettlementID = 103016,
     UnlockMissionId = 1003,
-    UnlockRankID = 4
+    UnlockRankID = 4,
+    UnlockText = "UI_AutoChess_UnlockText1"
   },
   [1005] = {
     ACFormationId = 2006,
@@ -70,7 +74,8 @@ return ReadOnly("AutoChessMission", {
     RandomBuffCount = 0,
     RegularBuffId = 4020702,
     SettlementID = 103016,
-    UnlockMissionId = 1004
+    UnlockMissionId = 1004,
+    UnlockText = "UI_AutoChess_UnlockText1"
   },
   [1006] = {
     ACFormationId = 2011,
@@ -81,7 +86,8 @@ return ReadOnly("AutoChessMission", {
     RandomBuffCount = 0,
     RegularBuffId = 4020702,
     SettlementID = 103016,
-    UnlockMissionId = 1005
+    UnlockMissionId = 1005,
+    UnlockText = "UI_AutoChess_UnlockText1"
   },
   [1007] = {
     ACFormationId = 1002,

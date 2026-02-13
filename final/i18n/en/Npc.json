@@ -3078,7 +3078,7 @@
       },
       {
         "id": 90230301,
-        "content": "I am often entangled in the minutiae of business, rarely afforded the luxury of leisure.",
+        "content": "I am often entangled in the minutiae of business and rarely afforded the luxury of leisure.",
         "npc": 84102,
         "next": 90230302
       },
@@ -3108,7 +3108,7 @@
       },
       {
         "id": 90230402,
-        "content": "When I was little, an accident left me stranded in a pitch-black ravine for three days and nights. It was then that this... tendency took root.",
+        "content": "When I was little, an accident left me stranded in a pitch-black ravine for three days and nights. It was then this... tendency took root.",
         "npc": 84102,
         "next": 90230403
       },
@@ -3198,13 +3198,13 @@
       },
       {
         "id": 90230405,
-        "content": "Heh... You're right. Weakness can be a merchant's undoing.",
+        "content": "Heh... Correct. Weakness can be a merchant's undoing.",
         "npc": 84102,
         "next": 90230406
       },
       {
         "id": 90230406,
-        "content": "I underwent rigorous training to suppress this fear. At the negotiating table, I can cast it aside with ease. But in your presence, there is no need for such pretences.",
+        "content": "I underwent rigorous trainings to suppress this fear. At the negotiating table, I can cast it aside with ease. But in your presence, there's no need for such pretences.",
         "npc": 84102,
         "options": [
           {
@@ -18577,7 +18577,7 @@
     "talks": [
       {
         "id": 51105129,
-        "content": "Should I go pick some Sky Lilies to put in the vase?",
+        "content": "Should I go pick some Skylilies to put in the vase?",
         "npc": 700361
       }
     ]
@@ -23175,7 +23175,7 @@
       },
       {
         "id": 51125518,
-        "content": "And some of the key incense materials — they've got strict limits. Take Sky Lilies, for instance: folks here burn a lot of it. If the Starweavers ship it all overseas, what are we supposed to do when we run short?",
+        "content": "And some of the key incense materials — they've got strict limits. Take Skylilies, for instance: folks here burn a lot of it. If the Starweavers ship it all overseas, what are we supposed to do when we run short?",
         "npc": 701039,
         "next": 51125519
       },

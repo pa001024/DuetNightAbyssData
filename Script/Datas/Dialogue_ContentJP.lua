@@ -13349,15 +13349,11 @@ CameraMoveTo{_delay{0},TargetPosition{"-68.912094,-67.938797,184.066406,0.000075
           VoiceName = "voice/$Locale$/story/1003/100322/191D55C8"
         },
         [10032214] = {
-          ContentJP = "ガレア劇団の道具リスト\n\n多くの裏方スタッフが記録した準備リスト。過去半月分の小道具の出入りが詳細に記録されている。\n\n10月8日：衣装、寝袋の準備完了。担当者：モンドリ。備考：食料が不足しているため、<H>次の集中リハーサル用に追加の食料を用意する必要あり。</>\n…………\n11月12日：新しいマイク3本の交換完了。担当者：グリンド。備考：1本は音が非常に大きいと座長に指摘されたが、そのまま使用を続行すること。\n11月14日：赤い幕布の交換完了。金色の幕布は倉庫に保管。担当者：ベル。\n…………\n11月24日：紛失した5つのかつらを回収完了。担当者：ベル。備考：更衣室の隅は物が溜まりやすい。本日清掃を行うことにする。\n11月25日：花冠15個、乗馬靴9足の準備完了。担当者：モンドリ",
+          ContentJP = "10月8日：衣装、寝袋の準備完了。担当者：モンドリ。備考：食料が不足しているため、<H>次の集中リハーサル用に追加の食料を用意する必要あり。</>\n…………\n11月12日：新しいマイク3本の交換完了。担当者：グリンド。備考：1本は音が非常に大きいと座長に指摘されたが、そのまま使用を続行すること。\n11月14日：赤い幕布の交換完了。金色の幕布は倉庫に保管。担当者：ベル。\n…………\n11月24日：紛失した5つのかつらを回収完了。担当者：ベル。備考：更衣室の隅は物が溜まりやすい。本日清掃を行うことにする。\n11月25日：花冠15個、乗馬靴9足の準備完了。担当者：モンドリ",
           DialogueId = 10032214,
           DialoguePanelType = "{type:showtext;topic:READ_NAME_2000046;content:READ_TEXT_2000046}",
           GUID = "191D55F2",
           Subtitle = [[
-Galea Theatre Props Inventory
-
-A detailed log maintained by the backstage crew, documenting the management of props at Galea Theatre over the past two weeks.
-
 8-Oct
 Organized: Costumes and sleeping bags.
 Logged by: Mondry
@@ -18935,7 +18931,7 @@ LookAt{_delay{2.1},LookAtDescription{"100360:n(100001)"}},
           VoiceName = "voice/$Locale$/story/1003/100340/191E7BC8"
         },
         [10034005] = {
-          ContentJP = "車や配管の中を好む輩が多いのもそれだ。ここを選んだのも納得はできるな。",
+          ContentJP = "車や配管の中を好む輩が多いのもそれだ。ここを選んだのも納得はできるな。 ",
           DialogueId = 10034005,
           GUID = "191E7BF2",
           NextDialogue = 10034006,
@@ -19020,18 +19016,16 @@ LookAt{_delay{2.1},LookAtDescription{"100360:n(100001)"}},
           VoiceName = "voice/$Locale$/story/1003/100341/191E8C06"
         },
         [10034104] = {
-          ContentJP = "皇帝威光勲章。純金で作られた極めて貴重な勲章であり、帝国に卓越した貢献を果たした軍人のみに授与される。\n\nコキュートス領アイスレイク城第六軍団附属警備部隊、<H>リズム・フィッシャー</>。\n彼女は幾度にもわたる<H>穢獣掃討作戦</>において、果断な決断力を発揮し、勇猛果敢に戦い、迅速かつ的確に戦局を収めた。\nまた、地域の治安維持においても比類なき功績を残し、その存在は不可欠なものとなった。\nよって、軍団の厳正なる評価のもと、皇帝ジュリアスの名のもとに、リズム・フィッシャーに皇帝威光勲章および准尉の軍階を授与する。すべての軍人が彼女を範とし、さらなる精進と成長を遂げることを願う。\n皇帝に栄光あれ。",
+          ContentJP = "コキュートス領アイスレイク城第六軍団附属警備部隊、<H>リズム・フィッシャー</>。\n彼女は幾度にもわたる<H><Default note=\"text:エジュウ\">穢獣</>掃討作戦</>において、果断な決断力を発揮し、勇猛果敢に戦い、迅速かつ的確に戦局を収めた。\nまた、地域の治安維持においても比類なき功績を残し、その存在は不可欠なものとなった。\nよって、軍団の厳正なる評価のもと、帝皇ジュリアスの名のもとに、リズム・フィッシャーに皇帝威光勲章および准尉の軍階を授与する。すべての軍人が彼女を範とし、さらなる精進と成長を遂げることを願う。\n皇帝に栄光あれ。",
           DialogueId = 10034104,
           DialoguePanelType = "{type:showtext;topic:READ_NAME_2000047;content:READ_TEXT_2000047}",
           GUID = "191E8C30",
           Subtitle = [[
-The Emperor's signet ring. Crafted entirely from pure gold, this prestigious honour is bestowed exclusively upon those who have made extraordinary contributions to the Empire.
-
 Recipient: Rhythm Fischer, serving in the Icelake Escort under the 6th Legion in the Cocytus Region.
 For demonstrating decisive leadership, exemplary bravery, and exceptional efficiency in multiple Filthoid-clearing operations over the years.
 For playing an irreplaceable role in maintaining public order and ensuring the safety of the region.
 Upon the assessment of the Legion, and by the decree of His Majesty Julius, Rhythm Fischer is hereby awarded the Emperor's signet ring and the rank of Warrant Officer. Let her serve as an inspiration to all soldiers, urging them to strive ever higher for the Empire's glory.
-All glory to His Majesty.]],
+All glory to our Emperor.]],
           VoiceName = "voice/$Locale$/story/1003/100341/191E8C30"
         },
         [10034105] = {
@@ -19042,11 +19036,11 @@ All glory to His Majesty.]],
           VoiceName = "voice/$Locale$/story/1003/100341/191E8C5A"
         },
         [10034106] = {
-          ContentJP = "ガラクタの下に埋もれていた一枚の古びた新聞――そこには、かつて起きた悲劇的な事件が記されていた。\n\n<H>穢蝕者は極めて危険！見た目に惑わされるな！</>\n9月24日、本市にて極めて凶悪な「穢蝕」事件が発生した。第六軍団衛戍部隊の調査により、以下の結論が下されている。\n9月13日、アイスレイク城在住のフィッシャー夫妻が、ダクリ湖のほとりにある公道沿いで瀕死の青年ロビー・ブラウンを発見。夫妻は彼を自宅へ連れ帰り、手厚く看病した。しかし、この行為が想像を絶する惨劇へと繋がることとなる。調査によると、ロビー・ブラウンは穢蝕者であり、帝国による定期検査を逃れ、城外へと潜伏していたことが判明。フィッシャー夫妻の厚意を受ける際も、自らの穢蝕の兆候を巧妙に隠していたという。事件は10日後に発生。ブラウンは突如として<Default note=\"text:エジュウ\">穢獣</>へと変異し、フィッシャー夫妻を含むアイスレイク城南区の住民数十名を襲撃。第六軍団衛戍部隊が緊急出動し、鎮圧作戦を実施。混乱はようやく収束したものの、被害は甚大であった。\n\nこの事件による被害者数は死亡者が18名、うち3名がソーラー族と判明。負傷者は34名にまでのぼった。今回の事件を受け、市民に向けた注意喚起が改めて発表された。\n「正体不明のカロン族を安易に受け入れてはならない。もし『穢蝕者』と思われる者を発見した場合、直ちに保安署へ通報せよ」\nまた、政府関係者によると、穢蝕者を意図的に匿い、報告を怠った者は「ヒュペリア刑法第54条」に基づき、死刑が適用されるとのこと。\n「奴らは例外なく人類の敵である。これを肝に銘じよ。」\n今後、帝国軍は定期検査の強化と、穢蝕者発見時の対応策を改めて検討していくとしている。",
+          ContentJP = "<H>穢蝕者は極めて危険！見た目に惑わされるな！</>\n9月24日、本市にて極めて凶悪な「穢蝕」事件が発生した。第六軍団衛戍部隊の調査により、以下の結論が下されている。\n9月13日、アイスレイク城在住のフィッシャー夫妻が、ダクリ湖のほとりにある公道沿いで瀕死の青年ロビー・ブラウンを発見。夫妻は彼を自宅へ連れ帰り、手厚く看病した。しかし、この行為が想像を絶する惨劇へと繋がることとなる。調査によると、ロビー・ブラウンは穢蝕者であり、帝国による定期検査を逃れ、城外へと潜伏していたことが判明。フィッシャー夫妻の厚意を受ける際も、自らの穢蝕の兆候を巧妙に隠していたという。事件は10日後に発生。ブラウンは突如として<Default note=\"text:エジュウ\">穢獣</>へと変異し、フィッシャー夫妻を含むアイスレイク城南区の住民数十名を襲撃。第六軍団衛戍部隊が緊急出動し、鎮圧作戦を実施。混乱はようやく収束したものの、被害は甚大であった。\n\nこの事件による被害者数は死亡者が18名、うち3名がソーラー族と判明。負傷者は34名にまでのぼった。今回の事件を受け、市民に向けた注意喚起が改めて発表された。\n「正体不明のカロン族を安易に受け入れてはならない。もし『穢蝕者』と思われる者を発見した場合、直ちに保安署へ通報せよ」\nまた、政府関係者によると、穢蝕者を意図的に匿い、報告を怠った者は「ヒュペリア刑法第54条」に基づき、死刑が適用されるとのこと。\n「奴らは例外なく人類の敵である。これを肝に銘じよ。」\n今後、帝国軍は定期検査の強化と、穢蝕者発見時の対応策を改めて検討していくとしている。",
           DialogueId = 10034106,
           DialoguePanelType = "{type:showtext;topic:READ_NAME_2000048;content:READ_TEXT_2000048}",
           GUID = "191E8C84",
-          Subtitle = "Buried beneath a pile of old clutter, this yellowed newspaper recounts a tragic incident from years ago.\n\nFilthoids Are Exceptionally Dangerous — Do Not Be Fooled by Their Appearances!\nOn September 24th, an egregious Filthoid incident occurred in Icelake. Following an extensive investigation conducted by the 6th Legion's Escort Unit, the details of the tragedy have been confirmed:\nOn September 13th, local residents Mr and Mrs Fischer encountered a gravely injured young man named Robie Brown along the roadside at Lamenting Lake. Out of compassion, the Fischers took him into their home and cared for him.\nHowever, Robie Brown was a Deteriorator who had evaded the Empire's routine screenings and fled to the outskirts of the city. While receiving aid from the Fischers, he deliberately concealed his condition. Ten days later, Brown succumbed to his transformation, becoming a Filthoid and massacring dozens of citizens in Icelake's southern district, including Mr and Mrs Fischer. The 6th Legion's Escort intervened swiftly to suppress the chaos, but the damage was already done.\nThe incident left 18 dead (including 3 Solarians) and 34 others injured. Citizens are hereby reminded: Do not provide shelter to unidentified Charon individuals under any circumstances. If you suspect someone is a Deteriorator, report them to the Security Bureau immediately. They are and will always remain humanity's enemies. No exceptions. Be advised that harbouring Deteriorators or concealing their presence is a capital offence punishable by death under Article 54 of the Hyperborean Criminal Code.",
+          Subtitle = "Deteriorators Are Exceptionally Dangerous — Do Not Be Fooled by Their Appearance!\nOn September 24th, an egregious case of Deterioration occurred in Icelake, with devastating consequences. Following an comprehensive investigation by the 6th Legion's Escort Unit, the details of the tragedy have now been confirmed:\nOn September 13th, local residents Mr and Mrs Fischer encountered a gravely injured young man, Robie Brown, collapsed by the roadside near Lamenting Lake. Acting out of compassion, they brought him into their home and cared for him.\nHowever, Robie Brown was a Deteriorator — one who had evaded the Empire's routine screenings and fled to the outskirts of the city. While receiving aid from the Fischers, Brown deliberately concealed his condition. Ten days later, he succumbed to the transformation, becoming a Filthoid. The resulting massacre in Icelake's southern district claimed the lives of dozens, including Mr and Mrs Fischer. The 6th Legion's Escort responded swiftly and succeeded in subduing the threat — but not before the damage was done.\n\nThe incident resulted in 18 deaths (including 3 Solarian citizens) and 34 injuries. Citizens are reminded: under no circumstances should you provide shelter to unidentified Charon individuals. If you suspect someone of being a Deteriorator, report them to the Security Bureau immediately. Deteriorators are — and will remain — humanity's enemies. No exceptions. Harbouring Deteriorators or concealing their condition is a capital offence under Article 54 of the Hyperborean Criminal Code, punishable by death.",
           VoiceName = "voice/$Locale$/story/1003/100341/191E8C84"
         },
         [10034107] = {
@@ -19127,7 +19121,7 @@ All glory to His Majesty.]],
         },
         [10034201] = {
           Camera = "219.984375,651.333008,126.039062,0.000189,-0.595449,-128.390549,35.000008,527.224426,false,Manual,2.038203",
-          ContentJP = "お前が意識を失ってた時、あんな馬鹿高い鎮痛剤、どこのお人好しがとは思ってたんだが……なるほどな、リズムみたいなどこか抜けてるやつがやりそうなことだ。",
+          ContentJP = "お前が意識を失ってた時、あんな馬鹿高い鎮痛剤、どこのお人好しがとは思ってたんだが……なるほどな、リズムみたいなどこか抜けてるやつがやりそうなことだ。 ",
           DialogueId = 10034201,
           FacialId = {
             [1] = "200021:Doubt01"
@@ -20806,7 +20800,7 @@ PlayAnimation{ActorId{100304},AnimationId{"Explain01_Start"},Duration{1}}
         },
         [10034509] = {
           Camera = "580.115173,-44.900101,190.030762,0.000313,-6.592983,-161.198181,40.000011,562.195374,false,Manual,3.5",
-          ContentJP = "へぇ、田舎者にしちゃ、目が肥えてるじゃないか。",
+          ContentJP = "へぇ、田舎者にしちゃ、目が肥えてるじゃないか。 ",
           DialogueId = 10034509,
           FinalCamera = "580.115173,-44.900101,175.405518,0.000311,-4.192862,-160.99794,40.000011,562.195374,false,Manual,3.5",
           GUID = "191ECEA2",
@@ -25020,27 +25014,12 @@ PlayAnimation{ActorId{200021},AnimationId{"Talk02_Start"},Duration{1}}
           VoiceName = "voice/$Locale$/story/1003/100353/191F5554"
         },
         [10035331] = {
-          ContentJP = "ガレア劇場乱闘事件\n\n日時： 10月9日 午後8時30分\n\n通報者： レティツィア・プッチ（「マジックフルート」劇団座長）\n\n事件当事者：パシファル・スノーフィルド（主演）、スザンナ・ルーシー（主演）、マシュー・バーナード（観客）、フィリ・フランシスコ（観客）……\n\n事件概要：\n劇団メンバーと前列観客が演目を巡って口論？観客が俳優を殴打？（一部の記録が破り取られている。）\n\n結論：証拠不十分のため不起訴\n\n備考：『雪国の幼子』は一時的に公演中止、再演時期未定。\nブルースと一緒に昔観られなかった舞台を埋め合わせたいと思っていたけど、どうやらそれも当分先の話になりそうだ。\n",
+          ContentJP = "ガレア劇場乱闘事件\n\n日時： 10月9日 午後8時30分\n\n通報者： レティツィア・プッチ（「マジックフルート」劇団座長）\n\n事件当事者：パシファル・スノーフィルド（主演）、スザンナ・ルーシー（主演）、マシュー・バーナード（観客）、フィリ・フランシスコ（観客）……\n\n事件概要：\n劇団メンバーと前列観客が演目を巡って口論？観客が俳優を殴打？（一部の記録が破り取られている。）\n\n結論：証拠不十分のため不起訴\n\n備考：『雪国の幼子』は一時的に公演中止、再演時期未定。\nブルースと一緒に昔観られなかった舞台を埋め合わせたいと思っていたけど、どうやらそれも当分先の話になりそうだ。",
           DialogueId = 10035331,
           DialoguePanelType = "{type:showtext;topic:READ_NAME_2000049;content:READ_TEXT_2000049}",
           GUID = "191F557E",
           NextDialogue = 10035332,
-          Subtitle = [[
-Brawl at Galea Theatre
-
-Date: October 9th, 8:30 PM
-
-Reported By: Letizia Putsch, Director of the Magic Flute Troupe
-
-Parties Involved: Parsifal Snowfield (Lead Performer), Susanna Rossi (Lead Performer), Matthew Bernard (Audience), Phillipe Francisco (Audience)
-...
-
-Incident Details: Alleged conflict between troupe members and front-row audience members. Alleged assault on performers by certain audience members. (Several pages of the incident report appear to have been torn out.)
-
-Conclusion: Evidence deemed insufficient. Case dismissed.
-
-Remarks: Performances of Children From the Snowfield have been temporarily suspended. Resumption dates remain unspecified.
-I had hoped to watch this play with Blues and make up for the one we missed years ago, but it seems unlikely to happen anytime soon.]],
+          Subtitle = "Brawl at Galea Theatre\n\nDate: October 9th, 8:30 PM\n\nFiled by: Letizia Putsch, Director of the Magic Flute Troupe\n\nInvolved Parties: Parsifal Snowfield (Lead Performer), Susanna Rossie (Lead Performer), Mathew Bernard (Audience), Feeley Francisco (Audience)\n...\n\nIncident Summary: A physical altercation reportedly broke out between troupe members and two front-row audience members. Alleged assault of performers by said audience members. (Several pages of the incident report appear to have been torn out.)\n\nConclusion: Evidence found to be insufficient. Case dismissed.\n\nRemarks: Performances of Children From the Snowfield have been suspended until further notice. No resumption date announced.\nI'd hoped to watch this one with Blues — to finally make up for the show we missed all those years ago. But I guess... that won't be happening any time soon.",
           VoiceName = "voice/$Locale$/story/1003/100353/191F557E"
         },
         [10035332] = {
@@ -30868,7 +30847,7 @@ CameraMoveTo{TargetPosition{"252.603516,-1139.067505,153.863281,0.000024,-1.3470
           ContentJP = "「もしも この凍えた心が少しでも溶けたなら……」",
           DialogueId = 10037106,
           GUID = "192078B4",
-          Subtitle = "\"My frozen heart, it's been cold for my lifetime. How I wish I could feel the warmth inside.\"",
+          Subtitle = "\"My frozen heart, it's been cold for my lifetime. How I wish I could feel the warmth inside.\" ",
           VoiceName = "voice/$Locale$/story/1003/100371/192078B4"
         },
         [10037201] = {
@@ -49555,7 +49534,7 @@ PlayAnimation{ActorId{200006},AnimationId{"Explain01_Start"},Duration{2}}
         },
         [10109407] = {
           Camera = "-281.054688,-237.414062,82.333008,0.0,-2.99999,39.999969,20.0,100000.0,false,DoNotOverride,22.0",
-          ContentJP = "サイキは……いつから目が見えなくなったんだの？",
+          ContentJP = "サイキは……いつから目が見えなくなったんだ？",
           DialogueId = 10109407,
           ExStoryInfo = "Player",
           FacialId = {
@@ -53538,7 +53517,7 @@ PlayAnimation{_delay{4},ActorId{200006},AnimationId{"Explain02_End"},Duration{1}
           ExStoryInfo = "Player",
           GUID = "1950AA0A",
           SpeakNpcId = 100001,
-          Subtitle = "Stand up... Don't yield to this cold, unfeeling world!",
+          Subtitle = "Don't yield to this cold, unfeeling world!",
           VoiceName = "voice/$Locale$/story/1002/101123/1950AA0A"
         },
         [10112306] = {
@@ -55922,6 +55901,7 @@ MoveTo{_delay{3.5},ActorId{200019},TargetPoint{"P_101107Boy"},MoveSpeed{75},Visi
           ContentJP = "（アウトサイダーとスノウに今日の出来事は全部話したし……）",
           DialogueId = 10115801,
           DisableMouth = 1,
+          Duration = 3,
           ExStoryInfo = "Player",
           GUID = "1952E79A",
           IsBlack = 1,
@@ -55934,6 +55914,7 @@ MoveTo{_delay{3.5},ActorId{200019},TargetPoint{"P_101107Boy"},MoveSpeed{75},Visi
           ContentJP = "（{性别:僕|私}にできることは約束の場所で……サイキを待つだけ）",
           DialogueId = 10115802,
           DisableMouth = 1,
+          Duration = 3,
           ExStoryInfo = "Player",
           GUID = "1952E7C4",
           IsBlack = 1,
@@ -60604,7 +60585,7 @@ SetLocation{ActorId{200076},TargetPoint{"P_101259Nifu2"},Visibility{"Hide"}}
           GUID = "195B3E0E",
           NextDialogue = 10128812,
           SpeakNpcId = 200095,
-          Subtitle = "Cause if I sober up, I'll have to work. And if I actually did my job right... well, most of you wouldn't last the week. So really — you ought to thank me. I'm slowly poisoning myself, just so the rest of you get to live a little longer.",
+          Subtitle = "'Cause if I sober up, I'll have to work. And if I actually did my job right... well, most of you wouldn't last the week. So really — you ought to thank me. I'm slowly poisoning myself, just so the rest of you get to live a little longer.",
           VoiceName = "voice/$Locale$/story/1002/101288/195B3E0E"
         },
         [10128812] = {
@@ -84567,7 +84548,7 @@ CameraMoveTo{TargetPosition{"161.69458,-128.191467,60.331787,0.000012,6.199059,1
         },
         [12001734] = {
           Camera = "-49.303223,-343.204956,74.226807,0.000171,8.000842,110.802505,54.999653,503.135712,false,Manual,10.0",
-          ContentJP = "はいはい、どこからルーナ族なのかしら？どっかに行って。",
+          ContentJP = "はいはい、どこからのルーナ族なのかしら？どっかに行って。",
           DefaultLookAt = "TalkNpc",
           DialogueId = 12001734,
           GUID = "1E0B8A7C",
@@ -87858,7 +87839,7 @@ PlayAnimation{ActorId{210004},AnimationId{"Explain01_Start"},Duration{1}}
           VoiceName = "voice/$Locale$/story/1201/120105/1E112B48"
         },
         [12010517] = {
-          ContentJP = "慌てないで。<Default note=\"text:ビーアン\">狴犴</>と見た目こそ似ているけど、<Default note=\"text:ゲンビー\">玄狴</>は<Default note=\"text:カショ\">華胥</>の<Default note=\"text:法の番人\">執法者</>じゃないの。アレは<H note=\"text:しょくいん\">燭陰</>の禍</>によって生まれた混沌の落とし子よ。",
+          ContentJP = "慌てないで。<Default note=\"text:ビーアン\">狴犴</>と見た目こそ似ているけど、<Default note=\"text:ゲンビー\">玄狴</>は<Default note=\"text:カショ\">華胥</>の<Default note=\"text:法の番人\">執法者</>じゃないの。アレは<W note=\"text:しょくいん\">燭陰</>の禍によって生まれた混沌の落とし子よ。",
           DialogueId = 12010517,
           GUID = "1E112B72",
           NextDialogue = 12010518,
@@ -98460,7 +98441,7 @@ CameraMoveTo{_delay{4.1},TargetPosition{"-306.286438,2143.177002,1099.884155,0.0
         },
         [12018611] = {
           Camera = "-92.525726,134.76416,116.622314,0.000168,23.376129,15.452583,25.000002,141.235916,false,Manual,22.0",
-          ContentJP = "最終的に交戦した両軍はこの地で朽ち、これを境に機枢派は精力を失った。",
+          ContentJP = "最終的に交戦した両軍はこの地で朽ち、これを境に機枢派は勢力を失った。",
           DialogueId = 12018611,
           GUID = "1E165B5E",
           LookAt = {
@@ -120564,7 +120545,7 @@ I've witnessed deeds that daylight never sees, and not all are the work of "demo
           VoiceName = "voice/$Locale$/env/Ver0101/7D6F42FA"
         },
         [50105901] = {
-          ContentJP = "おやおや、リュウさんじゃないか。ご無沙汰だねぇ。ちょうど新しい茶が入ったところなんだ、香りが抜群で……一杯どうだい？",
+          ContentJP = "おやおや、龍さんじゃないか。ご無沙汰だねぇ。ちょうど新しい茶が入ったところなんだ、香りが抜群で……一杯どうだい？",
           DialogueId = 50105901,
           GUID = "7D6F5362",
           SpeakNpcId = 701055,
@@ -120576,7 +120557,7 @@ I've witnessed deeds that daylight never sees, and not all are the work of "demo
           DialogueId = 50106001,
           GUID = "7D6F63CA",
           SpeakNpcId = 701062,
-          Subtitle = "Hmm... I wonder how long this tree's been standing here.",
+          Subtitle = "Hmm... I wonder how long this tree has been standing here.",
           VoiceName = "voice/$Locale$/env/Ver0101/7D6F63CA"
         },
         [50106101] = {
@@ -121477,7 +121458,7 @@ I've witnessed deeds that daylight never sees, and not all are the work of "demo
           ContentJP = "言ったでしょ、新鮮の告蒼はすぐに干さなきゃいけないのに、どうして毎回忘れちゃうのよ？",
           DialogueId = 50107146,
           GUID = "7D701FA4",
-          Subtitle = "I've told you — fresh Sky Lilies go straight out to dry as soon as you bring them back. How do you forget every time?"
+          Subtitle = "I've told you — fresh Skylilies go straight out to dry as soon as you bring them back. How do you forget every time?"
         },
         [50107147] = {
           ContentJP = "落生香の原料は、研磨のとき、細かさが何より大事だ。一度やって、まだこんな大きな粒が残っていたら、最初からやり直さなきゃいけない。",
@@ -121710,9 +121691,10 @@ I've witnessed deeds that daylight never sees, and not all are the work of "demo
           Subtitle = "The more I look, the stranger it feels..."
         },
         [50107225] = {
-          Content = "想当初咱这湖边多清净？",
+          ContentJP = "昔はこの湖、ほんとに静かでのう。",
           DialogueId = 50107225,
-          GUID = "7D702C9A"
+          GUID = "7D702C9A",
+          Subtitle = "Remember when it used to be quiet round here?"
         },
         [50107226] = {
           ContentJP = "もしこの五禽戯（ごきんぎ）をうまく習得できれば……",
@@ -122432,7 +122414,7 @@ I've witnessed deeds that daylight never sees, and not all are the work of "demo
           ContentJP = "どうして毎回忘れちゃうのよ？",
           DialogueId = 50107346,
           GUID = "7D704074",
-          Subtitle = "Fresh Sky Lilies go straight out to dry as soon as you bring them back."
+          Subtitle = "Fresh Skylilies go straight out to dry as soon as you bring them back."
         },
         [50107347] = {
           ContentJP = "落生香（らっせいか）の原料は、研磨のとき、細かさが何より大事だ。",
@@ -133512,7 +133494,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           }
         },
         [51005946] = {
-          ContentJP = "大兄貴！",
+          ContentJP = "ちっす！おやじ！",
           DialogueId = 51005946,
           GUID = "7FB02304",
           LookAt = {
@@ -157167,7 +157149,7 @@ MoveTo{_delay{3},ActorId{700324},TargetPoint{"P51104118White"},MoveSpeed{80},Vis
           GUID = "7FEF1CF2",
           NextDialogue = 51105014,
           SpeakNpcId = 700329,
-          Subtitle = "And — and! Mum and Dad haven't been home lately, but I keep finding Sky Lilies on the windowsill! I asked around, but nobody said they brought them..."
+          Subtitle = "And — and! Mum and Dad haven't been home lately, but I keep finding Skylilies on the windowsill! I asked around, but nobody said they brought them..."
         },
         [51105014] = {
           ContentJP = "それにね！",
@@ -157232,7 +157214,7 @@ MoveTo{_delay{3},ActorId{700324},TargetPoint{"P51104118White"},MoveSpeed{80},Vis
           Subtitle = "But... I still miss her so much. I'd rather have her here with me... not way up in the sky..."
         },
         [51105021] = {
-          ContentJP = "リンリンのおばあちゃんは、恐らく既に亡くなっているのだろう。",
+          ContentJP = "（リンリンのおばあちゃんは、恐らくもう…）",
           DialogueId = 51105021,
           GUID = "7FEF1E42",
           NextDialogue = 51105022,
@@ -157255,7 +157237,7 @@ MoveTo{_delay{3},ActorId{700324},TargetPoint{"P51104118White"},MoveSpeed{80},Vis
           Subtitle = "Waah... waaaahhh!"
         },
         [51105023] = {
-          ContentJP = "泣きじゃくるリンリンを見て、あなたは思った。彼女を守ること、それはムユウセイはへと変わり得るほど強い「執念」なのかもしれない。",
+          ContentJP = "泣きじゃくるリンリンを見て、あなたは思った。彼女を守ること、それはムユウセイへと変わり得るほど強い「執念」なのかもしれない。",
           DialogueId = 51105023,
           FailDialogue = 51105024,
           GUID = "7FEF1E96",
@@ -157448,7 +157430,7 @@ MoveTo{_delay{3},ActorId{700324},TargetPoint{"P51104118White"},MoveSpeed{80},Vis
         },
         [51105044] = {
           Camera = "-74.585938,-129.239258,143.611328,0.000002,-2.000057,58.197319,35.0,143.663574,false,Manual,2.8",
-          ContentJP = "そういえば、虞淵でフーシュがムユウセイを見せてくれたことがあったな。",
+          ContentJP = "そういえば、<Default note=\"text:ぐえん\">虞淵</>でフーシュがムユウセイを見せてくれたことがあった{性别:な|ね}。",
           DialogueId = 51105044,
           GUID = "7FEF2C5E",
           NextDialogue = 51105045,
@@ -157828,12 +157810,12 @@ MoveTo{_delay{3},ActorId{700324},TargetPoint{"P51104118White"},MoveSpeed{80},Vis
         },
         [51105080] = {
           Camera = "-229.480469,380.837891,167.714844,0.000062,-7.000151,-60.003906,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentJP = "ずぅっと……待ってたんだよ。いい朝ね。さぁ、告蒼の花を探しに行こうかね。",
+          ContentJP = "ずぅっと……待ってたんだよ。いい朝ね。さぁ、\n<Default note=\"text:こくそう\">吿蒼</>の花を探しに行こうかね。",
           DialogueId = 51105080,
           GUID = "7FEF5FB8",
           NextDialogue = 51105081,
           SpeakNpcId = 700331,
-          Subtitle = "I... I've been waiting so long... Pingping, the sun's come out — let's pick some Sky Lilies to put in the vase."
+          Subtitle = "I... I've been waiting so long... Pingping, the sun's come out — let's pick some Skylilies to put in the vase."
         },
         [51105081] = {
           Camera = "-132.632812,-149.719727,173.525391,0.00008,-14.200147,49.79491,35.0,100000.0,false,DoNotOverride,2.8",
@@ -157951,12 +157933,12 @@ MoveTo{_delay{3},ActorId{700324},TargetPoint{"P51104118White"},MoveSpeed{80},Vis
         },
         [51105091] = {
           Camera = "-93.003906,-42.301758,148.769531,0.000082,-13.200105,37.594505,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentJP = "ずぅっと……待ってたんだよ。いい朝ね。さぁ、告蒼の花を探しに行こうかね。",
+          ContentJP = "ずぅっと……待ってたんだよ。いい朝ね。さぁ、\n<Default note=\"text:こくそう\">吿蒼</>の花を探しに行こうかね。",
           DialogueId = 51105091,
           GUID = "7FEF6186",
           NextDialogue = 51105092,
           SpeakNpcId = 700331,
-          Subtitle = "I... I've been waiting so long... Pingping, the sun's come out — let's pick some Sky Lilies to put in the vase."
+          Subtitle = "I... I've been waiting so long... Pingping, the sun's come out — let's pick some Skylilies to put in the vase."
         },
         [51105092] = {
           Camera = "-93.003906,-42.301758,148.769531,0.000082,-13.200105,37.594505,35.0,100000.0,false,DoNotOverride,2.8",
@@ -158028,7 +158010,7 @@ MoveTo{_delay{3},ActorId{700324},TargetPoint{"P51104118White"},MoveSpeed{80},Vis
           GUID = "7FEF6282",
           NextDialogue = 51105098,
           SpeakNpcId = 700329,
-          Subtitle = "I never met him... Nana said he passed away when she was young, when they'd just moved to Haojing. She didn't get the news in time because of the move... so she never got to say goodbye..."
+          Subtitle = "I never met him... Nana said he passed away when she was young, when she just moved to Haojing. She didn't get the news in time because of the move... so she never got to say goodbye..."
         },
         [51105098] = {
           Camera = "-8.46875,144.892578,124.898438,0.000009,2.799899,-77.20108,35.0,100000.0,false,DoNotOverride,2.8",
@@ -158174,7 +158156,7 @@ PlayAnimation{ActorId{700329},AnimationId{"Give"},Duration{2}},
           GUID = "7FEF6D80",
           NextDialogue = 51105111,
           SpeakNpcId = 700329,
-          Subtitle = "From now on, you won't have to catch Loomhoppers all by yourself! I'll pick Sky Lilies with you, read with you — we'll do all sorts of things together!"
+          Subtitle = "From now on, you won't have to catch Loomhoppers all by yourself! I'll pick Skylilies with you, read with you — we'll do all sorts of things together!"
         },
         [51105111] = {
           Camera = "-333.121094,-499.869141,192.47168,0.000051,-9.400239,56.996445,35.0,100000.0,false,DoNotOverride,2.8",
@@ -158375,7 +158357,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
           DialogueId = 51105129,
           GUID = "7FEF709E",
           SpeakNpcId = 700361,
-          Subtitle = "Should I go pick some Sky Lilies to put in the vase?"
+          Subtitle = "Should I go pick some Skylilies to put in the vase?"
         },
         [51105201] = {
           ContentJP = "年に一度の「銀燭祭り」は幕を閉じ、街にはいつもの賑わいが戻る——はずだった。",
@@ -163187,7 +163169,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
           Subtitle = "Oh? He's paying..."
         },
         [51114003] = {
-          ContentJP = "（お礼があっても面倒だな……）",
+          ContentJP = "（お礼があっても面倒だよ……）",
           DialogueId = 51114003,
           GUID = "7FF5631E",
           LookAt = {
@@ -165127,7 +165109,7 @@ MoveTo{ActorId{701023},TargetPoint{"YuXian_Leave_Target"},MoveSpeed{100},Visibil
           Subtitle = "(Eyes half-closed, the little girl mumbles under the eaves. As you walk past, she suddenly slumps forward.)"
         },
         [51118002] = {
-          ContentJP = "わっ！？",
+          ContentJP = "えっ！？",
           DialogueId = 51118002,
           GUID = "7FF7F334",
           NextDialogue = 51118003,
@@ -165230,7 +165212,7 @@ MoveTo{ActorId{701023},TargetPoint{"YuXian_Leave_Target"},MoveSpeed{100},Visibil
           }
         },
         [51118013] = {
-          ContentJP = "（なんとかしてあげたいな。）",
+          ContentJP = "（なんとかしてあげたい。）",
           DialogueId = 51118013,
           FailDialogue = 51118014,
           GUID = "7FF7F502",
@@ -165291,7 +165273,7 @@ MoveTo{ActorId{701023},TargetPoint{"YuXian_Leave_Target"},MoveSpeed{100},Visibil
           Subtitle = "Then I've got an idea."
         },
         [51118020] = {
-          ContentJP = "君はおうちに戻って、寝たふりをするんだ。僕がここで見張ってる。お兄さんが来たら、引き留めるからさ。/君はおうちに戻って、寝たふりをするんだ。私がここで見張ってる。お兄さんが来たら、引き留めるからさ。",
+          ContentJP = "{性别:君はおうちに戻って、寝たふりをするんだ。僕がここで見張ってる。お兄さんが来たら、引き留めるからさ。|君はおうちに戻って、寝たふりをするんだ。私がここで見張ってる。お兄さんが来たら、引き留めるからさ。}",
           DialogueId = 51118020,
           GUID = "7FF7F628",
           NextDialogue = 51118021,
@@ -167494,7 +167476,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           Subtitle = "I'm one of a kind, right?"
         },
         [51125000] = {
-          ContentJP = "なんだって！？ミヤのやつ、今日も来られないだと？もう何日も体調崩してるじゃないか……くそっ、<H><Default note=\"text:えんしんと\">煙津渡</></>のシーンがまだ残ってるのに……",
+          ContentJP = "なんだって！？ミヤのやつ、今日も来られないだと？もう何日も体調崩してるじゃないか……くそっ、<Default note=\"text:えんしんと\">煙津渡</>のシーンがまだ残ってるのに……",
           DialogueId = 51125000,
           GUID = "7FFC6F50",
           NextOptions = {
@@ -167502,7 +167484,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
             [2] = 51125002
           },
           SpeakNpcId = 700365,
-          Subtitle = "What?! Miaoqu’s still out? How many days has he had the trots? Ugh... How are we supposed to shoot all those Mistwharf scenes...",
+          Subtitle = "What?! Miaoqu's still out? How many days has he had the trots? Ugh... How are we supposed to shoot all those Mistwharf scenes...",
           TalkActionId = {
             [1] = "700365:Angry01_Start"
           }
@@ -167539,11 +167521,11 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           DialogueId = 51125004,
           GUID = "7FFC6FF8",
           SpeakNpcId = 700365,
-          Subtitle = "We're putting on a show — well, a pretty new kind actually. It’s called \"Muovie\". Interested?"
+          Subtitle = "We're putting on a show — well, a pretty new kind actually. It's called \"Muovie\". Interested?"
         },
         [51125005] = {DialogueId = 51125005, GUID = "7FFC7022"},
         [51125006] = {
-          ContentJP = "よしよし、では改めて紹介させてくれ。この作品のタイトルは『応天尉VS流れ者3：最後の戦い』だ。今日は<H><Default note=\"text:えんしんと\">煙津渡</></>での決戦シーンを撮らないといけなくてな。",
+          ContentJP = "よしよし、では改めて紹介させてくれ。この作品のタイトルは『応天尉VS流れ者3：最後の戦い』だ。今日は<Default note=\"text:えんしんと\">煙津渡</>での決戦シーンを撮らないといけなくてな。",
           DialogueId = 51125006,
           GUID = "7FFC704C",
           NextDialogue = 51125007,
@@ -167668,7 +167650,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
         },
         [51125018] = {
           Camera = "12.683594,-11.320312,144.433594,0.017532,-2.598996,1.708115,45.0,100000.0,false,DoNotOverride,2.8",
-          ContentJP = "これは……まさか……縛仙鎖か！？貴様ら、なんと非常な！",
+          ContentJP = "これは……まさか……<Default note=\"text:あまのくさり\">縛仙鎖</>か！？貴様ら、なんと卑怯な！",
           DialogueId = 51125018,
           FacialId = {
             [1] = "100001:Shock02"
@@ -167683,7 +167665,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
         },
         [51125019] = {
           Camera = "7.867188,-1148.030273,172.847656,0.017538,-3.199889,90.504539,35.000008,100000.0,false,DoNotOverride,2.8",
-          ContentJP = "フン！これさえあれば、応天尉だろうが、<H><Default note=\"text:ビーアン\">狴犴</></>だろうが、白龍様だろうが、イチコロだ！",
+          ContentJP = "フン！これさえあれば、応天尉だろうが、<Default note=\"text:ビーアン\">狴犴</>だろうが、白龍様だろうが、イチコロだ！",
           DialogueId = 51125019,
           GUID = "7FFC726E",
           NextDialogue = 51125020,
@@ -167691,7 +167673,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           Subtitle = "Heh. With this, it matters not if you're Bi'an or the Magistrate — even the exalted Lord Argent shall fall by my hand!"
         },
         [51125020] = {
-          ContentJP = "たとえここで倒れようと、貴様らのような外道に、神を侮辱する資格などない！",
+          ContentJP = "くっ、たとえここで殺されようと、貴様らのような外道に、神を侮辱する資格などない！",
           DialogueId = 51125020,
           GUID = "7FFC7298",
           NextDialogue = 51125021,
@@ -167785,7 +167767,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
         [51125033] = {DialogueId = 51125033, GUID = "7FFC74BA"},
         [51125034] = {
           Camera = "-352.015625,-106.05957,152.610352,0.017523,-3.999574,17.508425,35.000008,100000.0,false,DoNotOverride,2.8",
-          ContentJP = "フン、応天尉サマ……いかに神武あろうと、不意打ちには適うまい！",
+          ContentJP = "フン、応天尉サマ……いかに武勇があろうと、不意打ちには敵うまい！",
           DialogueId = 51125034,
           GUID = "7FFC74E4",
           NextDialogue = 51125035,
@@ -167886,7 +167868,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
         },
         [51125043] = {
           Camera = "12.683594,-11.320312,144.433594,0.017532,-2.598996,1.708115,45.0,100000.0,false,DoNotOverride,2.8",
-          ContentJP = "次こそ間違えないでよね。{性别:僕|私}の「き、貴様の一族は代々……懸衡派の香官として忠義を貫いてきた。なぜ貴様のような外道が！」って言い終わってから、あなたのセリフだから。",
+          ContentJP = "次こそ間違えないでよね。{性别:僕|私}の「き、貴様の一族は代々……<Default note=\"text:けんこうは\">懸衡派</>の香官として忠義を貫いてきた。なぜ貴様のような外道が！」って言い終わってから、あなたのセリフだから。",
           DialogueId = 51125043,
           GUID = "7FFC765E",
           NextDialogue = 51125044,
@@ -167912,7 +167894,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           NextDialogue = 51125046
         },
         [51125046] = {
-          ContentJP = "フン、応天尉サマ……いかに神武あろうと、不意打ちには適うまい！",
+          ContentJP = "フン、応天尉サマ……いかに武勇があろうと、不意打ちには敵うまい！",
           DialogueId = 51125046,
           GUID = "7FFC76DC",
           NextDialogue = 51125047,
@@ -167999,7 +167981,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
         },
         [51125055] = {
           Camera = "-183.84375,271.606445,161.805664,0.017533,-4.59964,-29.49268,35.000008,100000.0,false,DoNotOverride,2.8",
-          ContentJP = "監督！今のは絶対違うでしょ！",
+          ContentJP = "監督さん！今のは絶対違うでしょ！",
           DialogueId = 51125055,
           GUID = "7FFC7856",
           SpeakNpcId = 100001,
@@ -168133,7 +168115,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
             [2] = 51125069
           },
           SpeakNpcId = 700365,
-          Subtitle = "...What do you think, {性别：brother丨lass}? This isn't working. How about... we swap your roles?",
+          Subtitle = "...What do you think? This isn't working. How about... we swap your roles?",
           TalkActionId = {
             [1] = "100001:Think_Start"
           }
@@ -168344,7 +168326,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
         },
         [51125095] = {
           Camera = "493.785156,-135.24707,12.011719,0.017552,14.799428,162.905365,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentJP = "応天尉サマ……いかに神武あろうと、不意打ちには適うまい！",
+          ContentJP = "フン、応天尉サマ……いかに武勇があろうと、不意打ちには敵うまい！",
           DialogueId = 51125095,
           GUID = "7FFC7EE6",
           NextDialogue = 51125096,
@@ -168380,7 +168362,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
         },
         [51125099] = {
           Camera = "-40.277344,-15.838867,165.15625,0.017561,-8.200645,2.511383,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentJP = "「貴様の一族は代々……<H><Default note=\"text:けんこうは\">懸衡派</></>の香官として忠義を貫いてきた。なぜ貴様のような外道が！」",
+          ContentJP = "「貴様の一族は代々……<Default note=\"text:けんこうは\">懸衡派</>の香官として忠義を貫いてきた。なぜ貴様のような外道が！」",
           DialogueId = 51125099,
           GUID = "7FFC7F8E",
           NextDialogue = 51125100,
@@ -168465,7 +168447,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           },
           NextDialogue = 51125109,
           SpeakNpcId = 700365,
-          Subtitle = "Here {性别：brother丨lass}, your pay for today. You've earned it."
+          Subtitle = "Here {性别:brother|lass}, your pay for today. You've earned it."
         },
         [51125109] = {
           ContentJP = "こうして、騒がしくも滑稽な茶番劇は、一応の幕を下ろした――オウセイも念願の見せ場をフィルムの片端にねじ込んだ……のかもしれない。",
@@ -168570,7 +168552,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           Subtitle = "What was it for?"
         },
         [51125403] = {
-          ContentJP = "昔はな、機枢派が星織人のために建てた「卜天楼」ってやつだ。けど今となっちゃ、ただの錆びた鉄くずさ。",
+          ContentJP = "昔はな、機枢派が星織人のために建てた「<Default note=\"text:ぼくてんろう\">卜天楼</>」ってやつだ。けど今となっちゃ、ただの錆びた鉄くずさ。",
           DialogueId = 51125403,
           GUID = "7FFCB16E",
           NextOptions = {
@@ -168782,7 +168764,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           GUID = "7FFCC44C",
           NextDialogue = 51125519,
           SpeakNpcId = 701039,
-          Subtitle = "And some of the key incense materials — they've got strict limits. Take Sky Lilies, for instance: folks here burn a lot of it. If the Starweavers ship it all overseas, what are we supposed to do when we run short?"
+          Subtitle = "And some of the key incense materials — they've got strict limits. Take Skylilies, for instance: folks here burn a lot of it. If the Starweavers ship it all overseas, what are we supposed to do when we run short?"
         },
         [51125519] = {
           ContentJP = "逆に、外から入ってくる品も気が抜けない。たとえば、あのヒュペリアから刀やら銃やら持ち込まれてごらんよ──華胥の中がどうなるか、想像しただけでも背筋が寒くなるってもんだ。",
@@ -172318,7 +172300,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           Subtitle = "What's it to you?"
         },
         [51127506] = {
-          ContentJP = "へっ！親切で言ってやってんだぜ？お前、知らねぇだろうが、百年ほど前、このあたりには蛟人って怪物が出没してな。人を食うんだ。中でも一番好物なのが――お前みたいな若い奴さ！",
+          ContentJP = "へっ！親切で言ってやってんだぜ？お前、知らねぇだろうが、百年ほど前、このあたりには<Default note=\"text:こうじん\">蛟人</>って怪物が出没してな。人を食うんだ。中でも一番好物なのが――お前みたいな若い奴さ！",
           DialogueId = 51127506,
           GUID = "7FFE0A74",
           NextDialogue = 51127507,
@@ -172342,7 +172324,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           Subtitle = "You're drunk."
         },
         [51127509] = {
-          ContentJP = "俺様が酔ってる？酔ってねぇよ！お前が酔ってんだ！戻って来いよ、俺様がな……ゲッ……蛟人の話をしてやる……ゲッ！",
+          ContentJP = "俺様が酔ってる？酔ってねぇよ！お前が酔ってんだ！戻って来いよ、俺様がな……ゲッ……<Default note=\"text:こうじん\">蛟人</>の話をしてやる……ゲッ！",
           DialogueId = 51127509,
           GUID = "7FFE0AF2",
           SpeakNpcId = 701066,
@@ -172357,7 +172339,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           Subtitle = "Oi, kid — Haze Market isn't the sort of place you just stroll into for fun."
         },
         [51127511] = {
-          ContentJP = "またお前か、ちっ……微茫市でそんな白くて柔な顔を見るのは珍しいな。また来たのか？蛟人に食われるのが怖くねぇのか？",
+          ContentJP = "またお前か、ちっ……微茫市でそんな白くて柔な顔を見るのは珍しいな。また来たのか？<Default note=\"text:こうじん\">蛟人</>に食われるのが怖くねぇのか？",
           DialogueId = 51127511,
           GUID = "7FFE0B46",
           NextDialogue = 51127512,
@@ -172399,7 +172381,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           Subtitle = "You knew who I was all along? Then why pick a fight with me on purpose last time?"
         },
         [51127516] = {
-          ContentJP = "面白ぇじゃねぇか！言っただろ？微茫市を行き来する奴らの中で、お前みたいな顔を見る機会なんざ滅多にない。なぁ、小僧、俺の言う蛟人の話、聞きたくねぇか？酒を一壺くれたら教えてやる。",
+          ContentJP = "面白ぇじゃねぇか！言っただろ？微茫市を行き来する奴らの中で、お前みたいな顔を見る機会なんざ滅多にない。なぁ、小僧、俺の言う<Default note=\"text:こうじん\">蛟人</>の話、聞きたくねぇか？酒を一壺くれたら教えてやる。",
           DialogueId = 51127516,
           GUID = "7FFE0C18",
           NextOptions = {
@@ -172417,7 +172399,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           Subtitle = "Make it a good one, and I might."
         },
         [51127518] = {
-          ContentJP = "へへっ、そうこなくっちゃな。いいか？噂によると、華胥にいた龍の民が、もし神話の黒蛟に魅入られたら、恐ろしい化け物になるんだ。それが――蛟人。",
+          ContentJP = "へへっ、そうこなくっちゃな。いいか？噂によると、華胥にいた龍の民が、もし神話の黒蛟に魅入られたら、恐ろしい化け物になるんだ。それが――<Default note=\"text:こうじん\">蛟人</>。",
           DialogueId = 51127518,
           GUID = "7FFE0C6C",
           NextDialogue = 51127519,
@@ -172425,7 +172407,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           Subtitle = "Heh-heh, knew you'd bite. In Huaxu's old lore, they say when the Loongscions fall under the Dark Loong's spell, they become dreadful creatures — the Jiao."
         },
         [51127519] = {
-          ContentJP = "蛟人は声を出せなく、光を恐れ、年中じめじめした暗い洞穴に棲んで、人を食う。だが、無知な獲物を誘い出すために、偽りの声で洞窟の奥から歌うのさ。",
+          ContentJP = "<Default note=\"text:こうじん\">蛟人</>は声を出せなく、光を恐れ、年中じめじめした暗い洞穴に棲んで、人を食う。だが、無知な獲物を誘い出すために、偽りの声で洞窟の奥から歌うのさ。",
           DialogueId = 51127519,
           GUID = "7FFE0C96",
           NextDialogue = 51127520,
@@ -172433,7 +172415,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           Subtitle = "The Jiao have no voices of their own, and they fear the light. They dwell in damp, shadowed caverns, feeding on the flesh of men. To draw their prey closer, they steal other voices — singing from deep within the dark."
         },
         [51127520] = {
-          ContentJP = "通りがかった人間は、その美しい歌声に惹かれて奥へ奥へと入り……最後には蛟人の腹の中ってわけだ。さて、蛟人が一番よく集まる場所がどこだと思う？",
+          ContentJP = "通りがかった人間は、その美しい歌声に惹かれて奥へ奥へと入り……最後には<Default note=\"text:こうじん\">蛟人</>の腹の中ってわけだ。さて、<Default note=\"text:こうじん\">蛟人</>が一番よく集まる場所がどこだと思う？",
           DialogueId = 51127520,
           GUID = "7FFE0CC0",
           NextDialogue = 51127521,
@@ -172489,7 +172471,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           Subtitle = "It means what it means. Wouldn't be half as fun if I told you outright, eh? You're a sharp one — go on then, have a guess."
         },
         [51127527] = {
-          ContentJP = "どうして長い間、蛟人は噂だけで姿を見せなくなったのか。そしてなぜキョウンが来てから、潮騒の洞窟には蛟人がいなくなったのか。",
+          ContentJP = "どうして長い間、<Default note=\"text:こうじん\">蛟人</>は噂だけで姿を見せなくなったのか。そしてなぜキョウンが来てから、潮騒の洞窟には<Default note=\"text:こうじん\">蛟人</>がいなくなったのか。",
           DialogueId = 51127527,
           GUID = "7FFE0DE6",
           SpeakNpcId = 701066,
@@ -172525,7 +172507,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           Subtitle = "You ever stop talking?"
         },
         [51127531] = {
-          ContentJP = "おおっと、ずいぶん気が短ぇな。そんな口きく奴、前にもいたがな、そいつはもう……蛟人のエサになったっけ。\n ",
+          ContentJP = "おおっと、ずいぶん気が短ぇな。そんな口きく奴、前にもいたがな、そいつはもう……<Default note=\"text:こうじん\">蛟人</>のエサになったっけ。\n",
           DialogueId = 51127531,
           GUID = "7FFE0E8E",
           NextDialogue = 51127532,
@@ -175824,7 +175806,7 @@ SEQ{ TurnTo{TurnToDescription{"701075:p(-20)"}}, LookAt{LookAtDescription{"70107
         },
         [51151039] = {
           Camera = "-416.273438,78.617188,184.048828,0.000083,-8.999136,0.601226,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentJP = "……チッ、わかったよ。お前らがビビってるなら──他を当たるまでだ！この<Default note=\"text:カショ\">華胥</>で、肝の据わった奴が一人もいないなんてこと、あるまいよ！",
+          ContentJP = "……チッ、わかったよ。お前らがビビってるなら──他を当たるまでだ！この華胥で、肝の据わった奴が一人もいないなんてこと、あるまいよ！",
           DialogueId = 51151039,
           GUID = "800D1F56",
           NextDialogue = 51151040,
@@ -175950,7 +175932,7 @@ SEQ{ TurnTo{TurnToDescription{"701075:p(-20)"}}, LookAt{LookAtDescription{"70107
         },
         [51151047] = {
           Camera = "595.386719,637.626953,151.045898,0.000026,-1.464959,-133.471008,35.0,100000.0,false,DoNotOverride,22.0",
-          ContentJP = "ニシキの情報が正しければ──幽霊騒ぎの倉庫ってここだよね！",
+          ContentJP = "この前、ボウシュンたちの話を聞いてから、ニシキにもいろいろ聞いてみたんだ！彼女の情報が正しければ──幽霊騒ぎの倉庫ってここだよね！",
           DialogueId = 51151047,
           FacialId = {
             [1] = "200002:Confident01"
@@ -175959,7 +175941,7 @@ SEQ{ TurnTo{TurnToDescription{"701075:p(-20)"}}, LookAt{LookAtDescription{"70107
           GUID = "800D20A6",
           NextDialogue = 51151048,
           SpeakNpcId = 200002,
-          Subtitle = "If Lunocarp got her facts straight... this should be the haunted warehouse!",
+          Subtitle = "After listening to Wangchun and the others last time, I went and asked Lunocarp. If she got her facts straight... this should be the haunted warehouse!",
           TalkActionId = {
             [1] = "200002:Confident_Start"
           },
@@ -176315,7 +176297,7 @@ SEQ{ TurnTo{TurnToDescription{"701075:p(-20)"}}, LookAt{LookAtDescription{"70107
         },
         [51151072] = {
           Camera = "90.658203,-126.199219,65.186523,0.000053,10.554213,85.36705,35.0,100000.0,false,DoNotOverride,22.0",
-          ContentJP = "……ここでひとつ、多分<Default note=\"text:カショ\">華胥</>のことわざを紹介するよ──「来たからには、入るしかない」",
+          ContentJP = "……ここでひとつ、多分華胥のことわざを紹介するよ──「来たからには、入るしかない」",
           DialogueId = 51151072,
           FacialId = {
             [1] = "100001:Smile01"
@@ -176353,13 +176335,13 @@ SEQ{ TurnTo{TurnToDescription{"701075:p(-20)"}}, LookAt{LookAtDescription{"70107
           GUID = "800D2514",
           NextDialogue = 51151075,
           SpeakNpcId = 200002,
-          Subtitle = "These marks on the floor... sniff, sniff... smells nice. Is this incense? Why's it spilled everywhere — did the Wishen do this?",
+          Subtitle = "These marks on the floor... (sniff sniff)... smells nice. Is this incense? Why's it spilled everywhere — did the Wishen do this?",
           TalkActionId = {
             [1] = "200002:PointF_End"
           }
         },
         [51151075] = {
-          ContentJP = "あいつらに見つかったら、延々と同じとこを彷徨い続けて、最後には外に放り出される……って感じかな。スノウ、慎重に進もう。",
+          ContentJP = "この状況だと、あいつらに見つかったらヤバいかも……スノウ、慎重に進もう。",
           DialogueId = 51151075,
           FacialId = {
             [1] = "100001:Think01"
@@ -176369,7 +176351,7 @@ SEQ{ TurnTo{TurnToDescription{"701075:p(-20)"}}, LookAt{LookAtDescription{"70107
             [1] = "100001:n(200002)"
           },
           SpeakNpcId = 100001,
-          Subtitle = "If they notice us, we'll end up just like the dockhands — walking in circles until we wander straight back outside. We should move carefully."
+          Subtitle = "Given how cautious they are, getting spotted likely leads to serious trouble. We should move carefully."
         },
         [51151076] = {
           ContentJP = "スノウ、しゃがんで！",
@@ -176422,13 +176404,13 @@ SEQ{ TurnTo{TurnToDescription{"701075:p(-20)"}}, LookAt{LookAtDescription{"70107
         },
         [51151081] = {
           Camera = "-595.896667,244.201172,274.973206,0.000002,-17.388731,-24.245804,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentJP = "驚いた動作",
+          ContentJP = "ニャ、ンニャ？！",
           DialogueId = 51151081,
           GUID = "800D263A",
           NextDialogue = 51151125,
           Scripts = "PlayNormalSound{EventPath{\"event:/sfx/common/story/east/vo_hello\"},PlayAs2D{true}}",
           SpeakNpcId = 700377,
-          Subtitle = "(startled)"
+          Subtitle = "Chirp?"
         },
         [51151082] = {
           ContentJP = "霊神さまーっ！アショウが参りましたぞ！この者ども、なんと霊神さまを欺いてまで近づこうとはっ！",
@@ -176456,13 +176438,13 @@ SetVisibility{ActorId{700376},Visibility{"Show"}}
           Subtitle = "Ha Shen shall stand with you as well!"
         },
         [51151084] = {
-          ContentJP = "得意げな動作",
+          ContentJP = "ニャ、ンニャ！",
           DialogueId = 51151084,
           GUID = "800D26B8",
           NextDialogue = 51151126,
           Scripts = "PlayNormalSound{EventPath{\"event:/sfx/common/story/east/vo_happy\"},PlayAs2D{true}}",
           SpeakNpcId = 700377,
-          Subtitle = "(preens smugly)",
+          Subtitle = "Chirp, chirp~",
           TalkActionId = {
             [1] = "200002:Confident_End"
           }
@@ -176519,7 +176501,7 @@ SetVisibility{ActorId{700376},Visibility{"Show"}}
         },
         [51151089] = {
           Camera = "-595.896667,244.201172,274.973206,0.000002,-17.388731,-24.245804,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentJP = "黙ってもじもじ",
+          ContentJP = "ニャ、ンニャ、チュー！",
           DialogueId = 51151089,
           FacialId = {
             [1] = "200002:None"
@@ -176533,7 +176515,7 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
 PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true}}
 }]],
           SpeakNpcId = 700377,
-          Subtitle = "(idle animation)",
+          Subtitle = "Chirp, chirp! Peep, peep!",
           TalkActionId = {
             [1] = "200002:Helpless01_End"
           }
@@ -176573,13 +176555,13 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
         },
         [51151093] = {
           Camera = "-595.896667,244.201172,274.973206,0.000002,-17.388731,-24.245804,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentJP = "怯えた動作",
+          ContentJP = "ンニャ…ニャ",
           DialogueId = 51151093,
           GUID = "800D2832",
           NextDialogue = 51151128,
           Scripts = "PlayNormalSound{EventPath{\"event:/sfx/common/story/east/vo_upset\"},PlayAs2D{true}}",
           SpeakNpcId = 700377,
-          Subtitle = "(recoils in fright)",
+          Subtitle = "Peep...",
           TalkActionId = {
             [1] = "100001:Talk03ToTalkL_End"
           }
@@ -176625,7 +176607,7 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
           Subtitle = "So how did you end up in Huaxu?"
         },
         [51151098] = {
-          ContentJP = "黙ってもじもじ",
+          ContentJP = "チュ、チュッッ…。",
           DialogueId = 51151098,
           GUID = "800D2904",
           NextDialogue = 51151099,
@@ -176635,7 +176617,7 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
 PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_happy"},PlayAs2D{true}}
 }]],
           SpeakNpcId = 700377,
-          Subtitle = "(idle animation)"
+          Subtitle = "Chirp, chirp~"
         },
         [51151099] = {
           ContentJP = "「どこからかいい匂いがしてきたから、ふら～っと船に乗ってたどり着いちゃった」とのことです！",
@@ -176657,14 +176639,14 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_happy"},PlayAs2D{true
           Subtitle = "So this little thing stowed away on one of the Starweavers' ships and snuck into Huaxu!"
         },
         [51151101] = {
-          ContentJP = "それでどうして倉庫を占拠してるの？",
+          ContentJP = "それでどうして倉庫を占拠してるの{性别:か|}？",
           DialogueId = 51151101,
           GUID = "800D2982",
           NextDialogue = 51151102,
           Subtitle = "Then why hog this place?"
         },
         [51151102] = {
-          ContentJP = "黙ってもじもじ",
+          ContentJP = "……ンニャニャ！",
           DialogueId = 51151102,
           GUID = "800D29AC",
           NextDialogue = 51151103,
@@ -176675,7 +176657,7 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
 PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true}}
 }]],
           SpeakNpcId = 700377,
-          Subtitle = "(idle animation)"
+          Subtitle = "Chirp... Peep, peep, peep!"
         },
         [51151103] = {
           ContentJP = "「ここは香りがいっぱいで誰も来ないし、怖いジェネモンハンターもいない。ムユウセイたちも一緒にいてくれるし、居心地バツグン！」とのことです！",
@@ -176721,7 +176703,7 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
         },
         [51151107] = {
           Camera = "23.355988,-69.482788,172.744568,0.000006,-14.788239,163.1539,30.0,100000.0,false,DoNotOverride,2.8",
-          ContentJP = "でもね、この件はもう<Default note=\"text:ももとき\">百年春</>の人たちの耳にも入ってる。そう遠くないうちに本格的に捕まえに来るよ？",
+          ContentJP = "でもね、この件はもう百年春の人たちの耳にも入ってる。そう遠くないうちに本格的に捕まえに来るよ？",
           DialogueId = 51151107,
           FacialId = {
             [1] = "100001:Angry01",
@@ -176745,7 +176727,7 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
       return {
         [51151108] = {
           Camera = "-595.896667,244.201172,274.973206,0.000002,-17.388731,-24.245804,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentJP = "怯えた動作",
+          ContentJP = "ニョ…。",
           DialogueId = 51151108,
           FacialId = {
             [1] = "100001:None"
@@ -176754,7 +176736,7 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
           NextDialogue = 51151109,
           Scripts = "PlayNormalSound{EventPath{\"event:/sfx/common/story/east/vo_upset\"},PlayAs2D{true}}",
           SpeakNpcId = 700377,
-          Subtitle = "(recoils in fright)",
+          Subtitle = "Chirp... Peep...",
           TalkActionId = {
             [1] = "100001:Talk03ToTalkL_End"
           }
@@ -176798,13 +176780,13 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
         },
         [51151112] = {
           Camera = "-595.896667,244.201172,274.973206,0.000002,-17.388731,-24.245804,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentJP = "黙ってもじもじ",
+          ContentJP = "チュ！",
           DialogueId = 51151112,
           GUID = "800D2B50",
           NextDialogue = 51151113,
           Scripts = "PlayNormalSound{EventPath{\"event:/sfx/common/story/east/vo_hello\"},PlayAs2D{true}}",
           SpeakNpcId = 700377,
-          Subtitle = "(idle animation)",
+          Subtitle = "Chirp~",
           TalkActionId = {
             [1] = "200002:Helpless01_End"
           }
@@ -176822,7 +176804,7 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
         },
         [51151114] = {
           Camera = "23.355988,-69.482788,172.744568,0.000006,-14.788239,163.1539,30.0,100000.0,false,DoNotOverride,2.8",
-          ContentJP = "このまま<Default note=\"text:カショ\">華胥</>で放浪を続けるか、いつかまた船に紛れて帰るか。選んで――",
+          ContentJP = "このまま華胥で放浪を続けるか、いつかまた船に紛れて帰るか。選んで――",
           DialogueId = 51151114,
           FacialId = {
             [1] = "100001:Think01"
@@ -176848,22 +176830,22 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
         },
         [51151116] = {
           Camera = "-257.016357,106.369873,179.233536,0.000001,-9.588553,-21.443916,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentJP = "ハテ",
+          ContentJP = "チュ…。",
           DialogueId = 51151116,
           GUID = "800D2BF8",
           NextDialogue = 51151117,
           Scripts = "PlayNormalSound{EventPath{\"event:/sfx/common/story/east/vo_upset\"},PlayAs2D{true}}",
           SpeakNpcId = 700377,
-          Subtitle = "(hesitant)"
+          Subtitle = "Peep..."
         },
         [51151117] = {
-          ContentJP = "嬉しそう",
+          ContentJP = "チュチュチュ！",
           DialogueId = 51151117,
           GUID = "800D2C22",
           NextDialogue = 51151118,
           Scripts = "PlayNormalSound{EventPath{\"event:/sfx/common/story/east/vo_happy\"},PlayAs2D{true}}",
           SpeakNpcId = 700377,
-          Subtitle = "(perks up)"
+          Subtitle = "Peep!"
         },
         [51151118] = {
           ContentJP = "決まりだね！この子、ついてくるってさ。",
@@ -176905,12 +176887,12 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
           }
         },
         [51151121] = {
-          ContentJP = "悲しい",
+          ContentJP = "ンニャニャ……",
           DialogueId = 51151121,
           GUID = "800D2CCA",
           Scripts = "PlayNormalSound{EventPath{\"event:/sfx/common/story/east/vo_upset\"},PlayAs2D{true}}",
           SpeakNpcId = 700377,
-          Subtitle = "(droops sadly)"
+          Subtitle = "Peep, peep..."
         },
         [51151122] = {
           ContentJP = "そんな3人がハグしながら見えない涙をぬぐい合い、あなたは黙ってその別れを見届けた。やがてアショウとウンショウを見送ると――",
@@ -176934,34 +176916,39 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
           Subtitle = "Little Minion, did you bring any Yum Treats? Go on — try feeding this Geniemon!"
         },
         [51151125] = {
-          Content = "（这只魔灵似乎对你们的到来看起来有些疑惑。）",
+          ContentJP = "このジェネモンは、あなたたちが来たことに少し戸惑っているようだ。",
           DialogueId = 51151125,
           GUID = "800D263B",
-          NextDialogue = 51151082
+          NextDialogue = 51151082,
+          Subtitle = "(This Geniemon seems somewhat puzzled by your arrival.)"
         },
         [51151126] = {
-          Content = "（这只魔灵明显意识到了你们的来意，但因有无由生相助而显得十分得意。）",
+          ContentJP = "このジェネモンはあなたたちの目的を察したようだが、ムユウセイの助けがあるせいか、やけに得意げだ。",
           DialogueId = 51151126,
           GUID = "800D26B9",
-          NextDialogue = 51151085
+          NextDialogue = 51151085,
+          Subtitle = "(The Geniemon clearly understands your intentions but appears quite smug with the Wishen by its side.)"
         },
         [51151127] = {
-          Content = "（咿咿呀呀说了一大堆，完全听不懂……）",
+          ContentJP = "延々と何かをしゃべっているが、まったく聞き取れない……",
           DialogueId = 51151127,
           GUID = "800D278B",
-          NextDialogue = 51151090
+          NextDialogue = 51151090,
+          Subtitle = "(It babbles a great deal... completely incomprehensible...)"
         },
         [51151128] = {
-          Content = "(它似乎有些害怕？）",
+          ContentJP = "少し怖がっているようだ？",
           DialogueId = 51151128,
           GUID = "800D2833",
-          NextDialogue = 51151094
+          NextDialogue = 51151094,
+          Subtitle = "(It seems a bit frightened?)"
         },
         [51151129] = {
-          Content = "是说百年春角落那间仓库吗？那里不是早就租给天岚先生做供货仓库了吗？为何现在过来提起？",
+          ContentJP = "<Default note=\"text:ももとき\">百年春</>の角の、あの古い倉庫のこと？あそこならテンランさんに貸しているはずだが……どうかしたの？",
           DialogueId = 51151129,
           GUID = "800D2D49",
-          SpeakNpcId = 700370
+          SpeakNpcId = 700370,
+          Subtitle = "You mean that warehouse over in the corner of EverSpring? Mr Tianlan rented it as a storehouse some time ago. Why bring it up now?"
         },
         [51151201] = {
           Camera = "368.707031,55.0,181.27832,0.0001,-12.598782,-171.164566,25.0,100000.0,false,DoNotOverride,2.8",
@@ -177407,7 +177394,7 @@ LookAt{_delay{1},LookAtDescription{"900012:n(100001)"}}
           Subtitle = "Right! Let's go!"
         },
         [51152008] = {
-          ContentJP = "うわぁ、<Default note=\"text:エジュウ\">穢獣</>がいっぱい！くっらえー！",
+          ContentJP = "うわぁ、穢獣がいっぱい！くっらえー！",
           DialogueId = 51152008,
           GUID = "800DBE50",
           SpeakNpcId = 200002,
@@ -177489,7 +177476,7 @@ LookAt{_delay{1},LookAtDescription{"900012:n(100001)"}}
         },
         [51152016] = {
           Camera = "467.330078,35.046875,173.258789,0.000107,-19.939507,-168.080215,35.0,283.195221,false,Manual,1.482159",
-          ContentJP = "あっ、思い出した！あの時、シリュウに<Default note=\"text:ももとき\">百年春</>から追い出された奴だ！",
+          ContentJP = "あっ、思い出した！あの時、シリュウに百年春から追い出された奴だ！",
           DialogueId = 51152016,
           FacialId = {
             [1] = "200002:Shock01"
@@ -177503,7 +177490,7 @@ LookAt{_delay{1},LookAtDescription{"900012:n(100001)"}}
         },
         [51152017] = {
           Camera = "414.412109,-49.105469,121.125977,0.000048,1.599821,152.399612,35.0,290.856323,false,Manual,2.056568",
-          ContentJP = "（男性の額から血が滴り、地面へと流れていく。その血溜まりの傍らには、死んで間もない<Default note=\"text:えじゅう\">穢獣</>が一匹倒れている。辺りには線香の煙が立ち込めているが、<Default note=\"text:ビーアン\">狴犴</>の姿は見当たらない。どうやら彼は、襲撃を受けてから今まで、白龍様の加護を授かることはなかったようだ。）",
+          ContentJP = "（男性の額から血が滴り、地面へと流れていく。その血溜まりの傍らには、死んで間もない穢獣が一匹倒れている。辺りには線香の煙が立ち込めているが、<Default note=\"text:ビーアン\">狴犴</>の姿は見当たらない。どうやら彼は、襲撃を受けてから今まで、白龍様の加護を授かることはなかったようだ。）",
           DialogueId = 51152017,
           GUID = "800DBFCA",
           SpeakNpcId = 0,
@@ -177514,7 +177501,7 @@ LookAt{_delay{1},LookAtDescription{"900012:n(100001)"}}
           }
         },
         [51152018] = {
-          ContentJP = "この<Default note=\"text:えじゅう\">穢獣</>を殺したのは、あなただ。",
+          ContentJP = "この穢獣を殺したのは、あなただ。",
           DialogueId = 51152018,
           GUID = "800DBFF4",
           ImprPlusId = 1208,
@@ -177536,7 +177523,7 @@ LookAt{_delay{1},LookAtDescription{"900012:n(100001)"}}
         },
         [51152024] = {
           Camera = "360.478516,-106.482422,91.936523,0.000124,0.0,159.903,16.91279,275.194305,false,Manual,2.8",
-          ContentJP = "はは……君たちか。<Default note=\"text:ももとき\">百年春</>でで見たことがある。",
+          ContentJP = "はは……君たちか。百年春で見たことがある。",
           DialogueId = 51152024,
           FacialId = {
             [1] = "100001:Smile01"
@@ -177592,7 +177579,7 @@ PlayAnimation{ActorId{100001},AnimationId{"Wave02_End"}}
         },
         [51152028] = {
           Camera = "467.330078,35.046875,173.258789,0.000107,-19.939507,-168.080215,35.0,283.195221,false,Manual,1.482159",
-          ContentJP = "我が下僕から聞いたが、白龍様は人に手を出すなって言っただけ。<Default note=\"text:えじゅう\">穢獣</>相手なら、別にいいんじゃないか？",
+          ContentJP = "我が下僕から聞いたが、白龍様は人に手を出すなって言っただけ。穢獣相手なら、別にいいんじゃないか？",
           DialogueId = 51152028,
           GUID = "800DC198",
           SpeakNpcId = 200002,
@@ -177603,7 +177590,7 @@ PlayAnimation{ActorId{100001},AnimationId{"Wave02_End"}}
         },
         [51152029] = {
           Camera = "-44.644531,-128.060547,109.717773,0.000053,4.460147,35.51128,35.000008,395.555206,false,Manual,2.8",
-          ContentJP = "わ、わからない……戒律に<Default note=\"text:えじゅう\">穢獣</>のことは書かれていなかった……ただ、争ってはならない、武力を使ってはならない……それが私の、幼い頃からの信仰だった。",
+          ContentJP = "わ、わからない……戒律に穢獣のことは書かれていなかった……ただ、争ってはならない、武力を使ってはならない……それが私の、幼い頃からの信仰だった。",
           DialogueId = 51152029,
           FacialId = {
             [1] = "701088:Grief"
@@ -177617,7 +177604,7 @@ PlayAnimation{ActorId{100001},AnimationId{"Wave02_End"}}
         },
         [51152030] = {
           Camera = "-44.644531,-128.060547,109.717773,0.000053,4.460147,35.51128,35.000008,395.555206,false,Manual,2.8",
-          ContentJP = "だが、さっき……あの<Default note=\"text:えじゅう\">穢獣</>が飛びかかってきて、その大きな口が目の前に迫った時……どうしても死にたくない、死にたくないと思ったのだ！それで、持っていた薪割り用の鉈を、無我夢中で——",
+          ContentJP = "だが、さっき……あの穢獣が飛びかかってきて、その大きな口が目の前に迫った時……どうしても死にたくない、死にたくないと思ったのだ！それで、持っていた薪割り用の鉈を、無我夢中で——",
           DialogueId = 51152030,
           GUID = "800DC1EC",
           SpeakNpcId = 701088,
@@ -177650,7 +177637,7 @@ PlayAnimation{ActorId{100001},AnimationId{"Wave02_End"}}
         },
         [51152033] = {
           Camera = "338.265625,19.038086,179.210938,0.000076,-10.340483,176.105225,35.0,210.359772,false,Manual,2.8",
-          ContentJP = "そんなにボロボロじゃ、もう笑う気にもなれないよ。生きたいと願うことに、何の罪がある？<Default note=\"text:ももとき\">百年春</>まで送っていこう。",
+          ContentJP = "そんなにボロボロじゃ、もう笑う気にもなれないよ。生きたいと願うことに、何の罪がある？百年春まで送っていこう。",
           DialogueId = 51152033,
           FacialId = {
             [1] = "100001:Smile02"
@@ -177914,7 +177901,7 @@ PlayAnimation{ActorId{100001},AnimationId{"Wave02_End"}}
         },
         [51153009] = {
           Camera = "-273.785156,39.746094,126.045898,0.000046,1.999934,16.852501,50.0,348.791229,false,Manual,2.8",
-          ContentJP = "君は知らないだろうが、私は<Default note=\"text:ほしおりびと\">星織人</>でな。年中見知らぬ土地を旅しており、久しく故郷には戻っていなかった。今回、砂漠を越えて喉がからからだった時、ふと幼い頃に味わった花茶の甘い香りが口の中に蘇ってきたのだ。",
+          ContentJP = "君は知らないだろうが、私は星織人でな。年中見知らぬ土地を旅しており、久しく故郷には戻っていなかった。今回、砂漠を越えて喉がからからだった時、ふと幼い頃に味わった花茶の甘い香りが口の中に蘇ってきたのだ。",
           DialogueId = 51153009,
           GUID = "800E628A",
           LookAt = {
@@ -178017,7 +178004,7 @@ PlayAnimation{ActorId{100001},AnimationId{"Wave02_End"}}
         },
         [51153016] = {
           Camera = "-273.785156,39.746094,126.045898,0.000046,1.999934,16.852501,50.0,348.791229,false,Manual,2.8",
-          ContentJP = "私は今日こそ、あの懐かしい茶の味を見つけ出したい。<Default note=\"text:ももとき\">百年春</>は商人が集まり、天下の品が集まる場所だ。あそこなら、店主が以前使っていた茶葉も必ず見つかるはず。",
+          ContentJP = "私は今日こそ、あの懐かしい茶の味を見つけ出したい。百年春は商人が集まり、天下の品が集まる場所だ。あそこなら、店主が以前使っていた茶葉も必ず見つかるはず。",
           DialogueId = 51153016,
           GUID = "800E63B0",
           NextDialogue = 51153017,
@@ -178049,7 +178036,7 @@ PlayAnimation{ActorId{100001},AnimationId{"Wave02_End"}}
         },
         [51153019] = {
           Camera = "-273.785156,39.746094,126.045898,0.000046,1.999934,16.852501,50.0,348.791229,false,Manual,2.8",
-          ContentJP = "道中は<Default note=\"text:ゲンビー\">玄狴</>が災いとなっている。もし私を無事に<Default note=\"text:ももとき\">百年春</>まで送り届けてくれたなら、相応の礼を約束しよう！",
+          ContentJP = "道中は玄狴が災いとなっている。もし私を無事に百年春まで送り届けてくれたなら、相応の礼を約束しよう！",
           DialogueId = 51153019,
           GUID = "800E642E",
           SpeakNpcId = 701091,
@@ -178059,7 +178046,7 @@ PlayAnimation{ActorId{100001},AnimationId{"Wave02_End"}}
           }
         },
         [51153020] = {
-          ContentJP = "道中に<Default note=\"text:ゲンビー\">玄狴</>が溢れている。もしかして己の身の安全を心配している？",
+          ContentJP = "道中に玄狴が溢れている。もしかして己の身の安全を心配している？",
           DialogueId = 51153020,
           GUID = "800E6458",
           ImprPlusId = 1204,
@@ -178068,7 +178055,7 @@ PlayAnimation{ActorId{100001},AnimationId{"Wave02_End"}}
         },
         [51153021] = {
           Camera = "-273.785156,39.746094,126.045898,0.000046,1.999934,16.852501,50.0,348.791229,false,Manual,2.8",
-          ContentJP = "その通りだ。近頃は<Default note=\"text:しょくいん\">燭陰</>が災いを成している。長らく帰っていなかった故、かつての道が今も通れるか分からなくてな。無事に送り届けてくれたなら、厚く謝礼をさせてもらう！",
+          ContentJP = "その通りだ。近頃は燭陰が災いを成している。長らく帰っていなかった故、かつての道が今も通れるか分からなくてな。無事に送り届けてくれたなら、厚く謝礼をさせてもらう！",
           DialogueId = 51153021,
           GUID = "800E6482",
           SpeakNpcId = 701091,
@@ -178097,7 +178084,7 @@ PlayAnimation{ActorId{100001},AnimationId{"Wave02_End"}}
           Subtitle = "How times have changed. And the world with them."
         },
         [51153024] = {
-          ContentJP = "先を急ごう。<Default note=\"text:ももとき\">百年春</>はもうすぐそこだ。",
+          ContentJP = "先を急ごう。百年春はもうすぐそこだ。",
           DialogueId = 51153024,
           GUID = "800E6500",
           SpeakNpcId = 701091,
@@ -178222,7 +178209,7 @@ PlayAnimation{ActorId{100001},AnimationId{"Wave02_End"}}
           }
         },
         [51153034] = {
-          ContentJP = "（ハクサはその蓮花茶を味わった。）",
+          ContentJP = "（ハクサはそのハス茶を味わった。）",
           DialogueId = 51153034,
           GUID = "800E66A4",
           IsBlack = 1,
@@ -178376,7 +178363,7 @@ PlayAnimation{ActorId{100001},AnimationId{"Wave02_End"}}
         },
         [51153047] = {
           Camera = "419.035156,-105.711426,187.561523,0.000082,-9.999806,-178.116913,50.0,398.468353,false,Manual,5.0",
-          ContentJP = "{性别:僕|私}が代わりに説明するよ。実は、二十年前に<Default note=\"text:うきほしのはとば\">浮星の埠</>の茶屋で売られていた茶のカスを探している。",
+          ContentJP = "{性别:僕|私}が代わりに説明するよ。実は、二十年前に浮星の埠の茶屋で売られていた茶のカスを探している。",
           DialogueId = 51153047,
           FacialId = {
             [1] = "100001:Happy02"
@@ -178705,7 +178692,7 @@ PlayAnimation{ActorId{100001},AnimationId{"Wave02_End"}}
         },
         [51153075] = {
           Camera = "-105.767578,-54.1875,3088.036133,0.0,12.999988,42.650269,11.0,362.946472,false,DoNotOverride,2.8",
-          ContentJP = "十数年前、この<Default note=\"text:けんか\">蒹葭</>の浦がまだ<Default note=\"text:しょくいん\">燭陰</>の禍に見舞われていなかった頃のことだ。仲間たちと一緒に河原で泥遊びをしたり、貝殻を磨いたりしていた。",
+          ContentJP = "十数年前、この<Default note=\"text:けんか\">蒹葭</>の浦がまだ燭陰の禍に見舞われていなかった頃のことだ。仲間たちと一緒に河原で泥遊びをしたり、貝殻を磨いたりしていた。",
           DialogueId = 51153075,
           FinalCamera = "-2100.933594,-1892.0625,2461.760742,0.0,12.999988,42.650452,11.000002,362.946472,false,DoNotOverride,2.8",
           GUID = "800E6D5E",
@@ -178960,7 +178947,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Subtitle = "Come. Let me show you a piece from my collection."
         },
         [51154006] = {
-          ContentJP = "<Default note=\"text:ビーアン\">狴犴</>！",
+          ContentJP = "<Default note=\"text:ビーアン\">狴犴</>！？",
           DialogueId = 51154006,
           GUID = "800F061C",
           NextDialogue = 51154007,
@@ -178976,7 +178963,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
     Loader = function()
       return {
         [51154007] = {
-          ContentJP = "はははは！案ずるな。私は万事に通じているつもりだが、それでも力の及ばぬことがある。例えば、私のコレクションには常に<H>本物の<Default note=\"text:ビーアン\">狴犴</></>が欠けている、といったことだよ。",
+          ContentJP = "はははは！案ずるな。私は万事に通じているつもりだが、それでも力の及ばぬことがある。例えば、私のコレクションには常に<H>本物の狴犴</>が欠けている、といったことだよ。",
           DialogueId = 51154007,
           GUID = "800F0646",
           NextDialogue = 51154008,
@@ -179000,7 +178987,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Subtitle = "So it's a fake."
         },
         [51154010] = {
-          ContentJP = "おっと、そんな言い方をすればコウショウ師匠が血相を変えて怒り出すかもしれんな。「紛い物」と呼ぶのは、いささかこいつへの侮辱になる。これは<Default note=\"text:きすうは\">機枢派</>の知恵の結晶と言っても差し支えないものだからな。",
+          ContentJP = "おっと、そんな言い方をすればコウショウが血相を変えて怒り出すかもしれんな。紛い物と呼ぶのは、いささかこいつへの侮辱になる。これは<Default note=\"text:きすうは\">機枢派</>の知恵の結晶と言っても差し支えないものだからな。",
           DialogueId = 51154010,
           GUID = "800F06C4",
           NextDialogue = 51154011,
@@ -179008,7 +178995,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Subtitle = "Heh. Say that in front of Master Gongshang and he'll have a fit. And it's not quite fair, either. \"Fake\" sells it short. For all that, it's still a product of Jishu ingenuity."
         },
         [51154011] = {
-          ContentJP = "作動原理を長々と説明しても退屈だろう。コウショウ師匠が長年磨き上げたことで、ようやく本物の<Default note=\"text:ビーアン\">狴犴</>のように動くようになった、ということを理解できれば十分だ。",
+          ContentJP = "作動原理を長々と説明しても退屈だろう。コウショウが長年磨き上げたことで、ようやく本物の<Default note=\"text:ビーアン\">狴犴</>のように動くようになった、ということを理解できれば十分だ。",
           DialogueId = 51154011,
           GUID = "800F06EE",
           NextDialogue = 51154012,
@@ -179016,12 +179003,12 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Subtitle = "The inner workings are... involved. I doubt you care for the finer points. Suffice it to say: Master Gongshang refined it for years, until it could move like a real Bi'an."
         },
         [51154012] = {
-          ContentJP = "本物ほどの威力はないが、その小さな欠点こそが、これに独特の美しさを与えているのだよ。",
+          ContentJP = "ただ残念なことに、コウショウが最初に作った数体の擬似狴犴は、懸衡派の年寄りの頑固者どもを呼び寄せてしまってね。「神を冒涜している」「不敬だ」だのと小言を並べ立てた挙げ句、没収していった。まったくつまらない話だよ。",
           DialogueId = 51154012,
           GUID = "800F06EF",
           NextDialogue = 51154024,
           SpeakNpcId = 701096,
-          Subtitle = "It doesn't have a true Bi'an's power, of course. Yet that very limitation gives it a charm of its own."
+          Subtitle = "Pity. The first few Mecha-Bi'an crafted by Master Gongshang attracted a gaggle of tedious old sticks from Xuanheng Sect. They droned on about \"blasphemy\" and \"disrespect\" before confiscating the lot. How dreary."
         },
         [51154013] = {
           ContentJP = "一度、乗ってみてはいかがかな？この広大な<Default note=\"text:カショ\">華胥</>を、その足だけで歩き通すのは酷というもの。たとえ他地へ赴く際にも、天を翔け地を駆ける良き相棒となろう。",
@@ -179060,12 +179047,12 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Subtitle = "You're not handing over something this good for nothing, are you?"
         },
         [51154017] = {
-          ContentJP = "その通り。タダより高いものはない。私が無償で差し出したとしても、君は懸念して受け取れないだろう？",
+          ContentJP = "ふっ…タダより高いものはない。私が無償で差し出したとしても、君は懸念して受け取れないだろう？",
           DialogueId = 51154017,
           GUID = "800F07EA",
           NextDialogue = 51154018,
           SpeakNpcId = 701096,
-          Subtitle = "Naturally not. Nothing comes without a price. If I simply gave it to you, you would distrust it. And you'd be right to."
+          Subtitle = "Heh, nothing comes without a price. If I simply gave it to you, you would distrust it. And you'd be right to."
         },
         [51154018] = {
           ContentJP = "ええーっ！？じゃあ、この魔王様があげたものって、そんなに貴重だったのか！？",
@@ -179092,7 +179079,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Subtitle = "Waaah! Little Minion, help! He's looking at me like I'm dessert!"
         },
         [51154021] = {
-          ContentJP = "はははは、よろしい。私を笑わせてくれた報酬として、この「偽の<Default note=\"text:ビーアン\">狴犴</>」の代金は不要としよう。",
+          ContentJP = "はははは、よろしい。私を笑わせてくれた報酬として、この「偽の狴犴」の代金は不要としよう。",
           DialogueId = 51154021,
           GUID = "800F0892",
           NextDialogue = 51154022,
@@ -179115,12 +179102,12 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Subtitle = "The gates of Haze Market will remain open to you."
         },
         [51154024] = {
-          ContentJP = "本物ほどの威力はないが、その小さな欠点こそが、これに独特の美しさを与えているのだよ。",
+          ContentJP = "けれど、あのコウショウが「擬似狴犴」を手放すと思うか？そんなに甘い話じゃない。あれからの「擬似狴犴」は、「玄狴」の外観を模して作り上げた。香官たちも、非難のしようがなくなったはずだ。",
           DialogueId = 51154024,
           GUID = "800F0718",
           NextDialogue = 51154013,
           SpeakNpcId = 701096,
-          Subtitle = "It doesn't have a true Bi'an's power, of course. Yet that very limitation gives it a charm of its own."
+          Subtitle = "Not that it stopped him, of course. Gongshang doted on his Mecha-Bi'an far too much to quit. So he simply made every new one look like a Sable Bi'an after that — left those incense wardens with nothing to gripe about."
         },
         [51155001] = {
           ContentJP = "我が下僕よ、今の聞いたか？",
@@ -179473,7 +179460,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Subtitle = "Phew... Good. He's not a total lunatic. So — what's the problem? I'll see what I can do."
         },
         [51155233] = {
-          ContentJP = "手元にまだ数十発の「グレートグローリー」が残ってるんだが、「<Default note=\"text:ほうこうたいてん\">奉香の儀</>」を過ぎると売れにくくなっちまう。今日で全部買い取ってくれよ。",
+          ContentJP = "手元にまだ数十発の「グレートグローリー」が残ってるんだが、「<Default note=\"text:ほうこうのぎ\">奉香の儀</>」を過ぎると売れにくくなっちまう。今日で全部買い取ってくれよ。",
           DialogueId = 51155233,
           GUID = "800FCF6A",
           NextDialogue = 51155234,
@@ -179544,7 +179531,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Subtitle = "O—Okay... be careful, Little Minion..."
         },
         [51155305] = {
-          ContentJP = "すっごく、すっごく緊急事態だが、絶対に怪我させたらダメだぞ。もしうっかり<Default note=\"text:ビーアン\">狴犴</>を呼んだら、スノウたちもおしまいだからな。",
+          ContentJP = "すっごく、すっごく緊急事態だが、絶対に怪我させたらダメだぞ。もしうっかり<Default note=\"text:ビーアン\">狴犴</>を呼んだら、スノウもおしまいだからな。",
           DialogueId = 51155305,
           GUID = "800FDB3A",
           NextDialogue = 51155306,
@@ -179692,7 +179679,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Subtitle = "Mm... you're right..."
         },
         [51155613] = {
-          ContentJP = "今度あんなデタラメを言ったら、<Default note=\"text:カショ\">華胥</>に置いていくから。代わりにニシキちゃんと一緒にアイスレイク城に戻る。",
+          ContentJP = "今度あんなデタラメを言ったら、華胥に置いていくから。代わりにニシキちゃんと一緒にアイスレイク城に戻る。",
           DialogueId = 51155613,
           GUID = "80100DC2",
           ImprPlusId = 1210,
@@ -181270,39 +181257,51 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           VoiceName = "sfx/boss/Tuosi/vo_$Locale$_Skill08"
         },
         [60180001] = {
-          Content = "近吾者，必罹天劫！",
+          ContentJP = "我に近づく者、ことごとく天罰を受けよ！",
           DialogueId = 60180001,
           Duration = 3,
+          GUID = "9834E965",
+          Subtitle = "Draw nigh, and be smitten by divine ire!",
           VoiceName = "sfx/boss/Heilong/vo_$Locale$_BattleStart"
         },
         [60180002] = {
-          Content = "吼————",
+          ContentJP = "ガオォーーッ！",
           DialogueId = 60180002,
           Duration = 3,
+          GUID = "9834E966",
+          Subtitle = "GRRRAAAUGH!",
           VoiceName = "sfx/boss/Heilong/vo_$Locale$_Condemn"
         },
         [60180003] = {
-          Content = "俱往矣……",
+          ContentJP = "……すべては、過ぎ去ったのか。",
           DialogueId = 60180003,
           Duration = 3,
+          GUID = "9834E967",
+          Subtitle = "All... is naught.",
           VoiceName = "sfx/boss/Heilong/vo_$Locale$_BattleEnd"
         },
         [60180004] = {
-          Content = "晦暝临世。",
+          ContentJP = "真の暗闇、いざや降臨！",
           DialogueId = 60180004,
           Duration = 4,
+          GUID = "9834E968",
+          Subtitle = "Behold... the world's eve falleth.",
           VoiceName = "sfx/boss/Heilong/vo_$Locale$_Skill05"
         },
         [60180005] = {
-          Content = "吼————",
+          ContentJP = "我が影は世界を覆い尽し、我が雷は天地を震わす！",
           DialogueId = 60180005,
           Duration = 5,
+          GUID = "9834E969",
+          Subtitle = "Heavens doth blacken, thunder rolls damnation!",
           VoiceName = "sfx/boss/Heilong/vo_$Locale$_Skill06"
         },
         [60180006] = {
-          Content = "曀曀其阴，虺虺其雷——",
+          ContentJP = "ガアオオオ――ッ！",
           DialogueId = 60180006,
           Duration = 3,
+          GUID = "9834E970",
+          Subtitle = "ROOOAAAR—!",
           VoiceName = "sfx/boss/Heilong/vo_$Locale$_Skill07"
         },
         [60200101] = {
@@ -182415,7 +182414,7 @@ As a result, while Phoxene ore was mined to exhaustion, shattered, and refined i
           Subtitle = "The remains of an ancient automaton have long been stripped of their original function by the passage of time. Its parts now lie scattered across Mistwharf, many of them half-buried beneath overgrown vegetation."
         },
         [70016001] = {
-          ContentJP = "<H>銀燭祭り</>は予定通り、ガレア劇場で開催されます。参加者はお好きな衣装を用意し、ご自分の演じたい役を選んでください。\nさあ、職業や種族、争いごとを忘れ、ここに集いましょう。皇帝の恩寵を浴び、皇帝の仁徳をたたえるために！皇帝に栄光あれ！",
+          ContentJP = "<H>銀燭祭り</>は予定通り、ガレア劇場で開催されます。参加者はお好きな衣装を用意し、ご自分の演じたい役を選んでください。さあ、職業や種族、争いごとを忘れ、ここに集いましょう。\n皇帝の恩寵を浴び、皇帝の仁徳をたたえるために！皇帝に栄光あれ！",
           DialogueId = 70016001,
           GUID = "AF47182A",
           Subtitle = [[
@@ -182437,10 +182436,10 @@ It's hard to tell whether the director is ruthlessly "imprisoning" everyone in t
           Subtitle = "A medal forged entirely of pure gold. According to the accompanying commendation letter, this honour is reserved for soldiers whose contributions to the Empire are deemed exceptional beyond measure."
         },
         [70016004] = {
-          ContentJP = "ガラクタの下に埋もれていた一枚の古びた新聞――そこには、かつて起きた悲劇的な事件が記されていた。\n\n<H>穢蝕者は極めて危険！見た目に惑わされるな！</>\n9月24日、本市にて極めて凶悪な「穢蝕」事件が発生した。第六軍団衛戍部隊の調査により、以下の結論が下されている。\n9月13日、アイスレイク城在住のフィッシャー夫妻が、ダクリ湖のほとりにある公道沿いで瀕死の青年ロビー・ブラウンを発見。夫妻は彼を自宅へ連れ帰り、手厚く看病した。しかし、この行為が想像を絶する惨劇へと繋がることとなる。調査によると、ロビー・ブラウンは穢蝕者であり、帝国による定期検査を逃れ、城外へと潜伏していたことが判明。フィッシャー夫妻の厚意を受ける際も、自らの穢蝕の兆候を巧妙に隠していたという。事件は10日後に発生。ブラウンは突如として<Default note=\"text:エジュウ\">穢獣</>へと変異し、フィッシャー夫妻を含むアイスレイク城南区の住民数十名を襲撃。第六軍団衛戍部隊が緊急出動し、鎮圧作戦を実施。混乱はようやく収束したものの、被害は甚大であった。\n\nこの事件による被害者数は死亡者が18名、うち3名がソーラー族と判明。負傷者は34名にまでのぼった。今回の事件を受け、市民に向けた注意喚起が改めて発表された。\n「正体不明のカロン族を安易に受け入れてはならない。もし『穢蝕者』と思われる者を発見した場合、直ちに保安署へ通報せよ」\nまた、政府関係者によると、穢蝕者を意図的に匿い、報告を怠った者は「ヒュペリア刑法第54条」に基づき、死刑が適用されるとのこと。\n「奴らは例外なく人類の敵である。これを肝に銘じよ。」\n今後、帝国軍は定期検査の強化と、穢蝕者発見時の対応策を改めて検討していくとしている。",
+          ContentJP = "ガラクタの下に埋もれていた一枚の古びた新聞――そこには、かつて起きた悲劇的な事件が記されていた。",
           DialogueId = 70016004,
           GUID = "AF4718A8",
-          Subtitle = "Buried beneath a pile of old clutter, this yellowed newspaper recounts a tragic incident from years ago.\n\nFilthoids Are Exceptionally Dangerous — Do Not Be Fooled by Their Appearances!\nOn September 24th, an egregious Filthoid incident occurred in Icelake. Following an extensive investigation conducted by the 6th Legion's Escort Unit, the details of the tragedy have been confirmed:\nOn September 13th, local residents Mr and Mrs Fischer encountered a gravely injured young man named Robie Brown along the roadside at Lamenting Lake. Out of compassion, the Fischers took him into their home and cared for him.\nHowever, Robie Brown was a Deteriorator who had evaded the Empire's routine screenings and fled to the outskirts of the city. While receiving aid from the Fischers, he deliberately concealed his condition. Ten days later, Brown succumbed to his transformation, becoming a Filthoid and massacring dozens of citizens in Icelake's southern district, including Mr and Mrs Fischer. The 6th Legion's Escort intervened swiftly to suppress the chaos, but the damage was already done.\nThe incident left 18 dead (including 3 Solarians) and 34 others injured. Citizens are hereby reminded: Do not provide shelter to unidentified Charon individuals under any circumstances. If you suspect someone is a Deteriorator, report them to the Security Bureau immediately. They are and will always remain humanity's enemies. No exceptions. Be advised that harbouring Deteriorators or concealing their presence is a capital offence punishable by death under Article 54 of the Hyperborean Criminal Code."
+          Subtitle = "Buried beneath a pile of old clutter, this yellowed newspaper recounts a tragic incident from years ago."
         },
         [70016005] = {
           ContentJP = "リボンの結び目が少し歪んだ、質素な贈り物の箱。そのすぐ隣には、帝国最高級の鎮痛剤の瓶が置かれている。\nそして、箱の中に入れられなかった一枚の紙片。そこには、こう綴られていた――「早く元気になりますように」",
@@ -182453,7 +182452,7 @@ It's hard to tell whether the director is ruthlessly "imprisoning" everyone in t
           ContentJP = "内城の城壁の下で撮られた、姉弟の記念写真。写真の右上には「リズム・フィッシャー」と「ブルース・フィッシャー」の名が記され、弟・ブルースが第六軍団の試験に合格したことを祝う言葉が添えられている。",
           DialogueId = 70016006,
           GUID = "AF4718FC",
-          Subtitle = "(A photo of a brother and sister standing under the inner city wall. Scribbled in the top-right corner are the names \"Rhythm Fischer\" and \"Blues Fischer,\" along with a congratulatory note celebrating Blues passing the 6th Legion's entrance tests.)"
+          Subtitle = "(A photo of a brother and sister standing under the inner city wall. Scribbled in the top-right corner are the names \"Rhythm Fischer\" and \"Blues Fischer,\" along with a congratulatory note celebrating Blues' passing the 6th Legion's entrance tests.)"
         },
         [70016007] = {
           Camera = "36.316406,112.411133,226.279297,0.00002,-31.198172,-98.592926,35.0,100000.0,false,Manual,22.0",
@@ -182463,7 +182462,7 @@ It's hard to tell whether the director is ruthlessly "imprisoning" everyone in t
           Subtitle = "(A harmonica that looks like it hasn't been used in a long time. Its condition suggests it's more of a cherished gift than a personal hobby of Rhythm's.)"
         },
         [70016008] = {
-          ContentJP = "石灰の壁の一角には、小刀でびっしりと刻まれた言葉が並んでいる。歪んだ字もあれば、幼い子どもの筆跡のようなものもある。一方で、しっかりとした大人の手による文字も見受けられる。だが、刻まれている内容は全て同じだ――\n「もう二度と、<Default note=\"text:エジュウ\">穢獣</>に殺される人を見過ごしたりしない」",
+          ContentJP = "石灰の壁の一角には、小刀でびっしりと刻まれた言葉が並んでいる。歪んだ字もあれば、幼い子どもの筆跡のようなものもある。一方で、しっかりとした大人の手による文字も見受けられる。だが、刻まれている内容は全て同じだ――\nもう二度と、<Default note=\"text:エジュウ\">穢獣</>に殺される人を見過ごしたりしない",
           DialogueId = 70016008,
           GUID = "AF471950",
           Subtitle = "One corner of the limewashed wall is covered in countless etched words. Some are crooked and childlike, while others are firm and deliberate, clearly written by an adult hand. All of them repeat the same sentence: \"I'll never let anyone die to Filthoids again.\""
@@ -182507,16 +182506,16 @@ A piece of fabric resembling theatre curtain material. Though old and worn, it i
 Upon closer inspection, it matches the fabric found at the crime scene.]]
         },
         [70016011] = {
-          ContentJP = "古びたマネキン。その着こなしやポーズには明らかに工夫が施されており、端正で優雅な印象を与えている。",
+          ContentJP = "古びたマネキン。その着こなしやポーズには明らかに細やかな意図が込められており、まるで舞台上で情熱的に演じる優雅な俳優のように見える。",
           DialogueId = 70016011,
           GUID = "AF4719CE",
-          Subtitle = "The mannequin, though worn with age, is posed and styled with care, exuding a graceful elegance."
+          Subtitle = "Though worn with age, the mannequin has clearly been posed and styled with care, exuding a graceful elegance, — like a performer lost in the moment on stage."
         },
         [70016012] = {
-          ContentJP = "周囲には巨大で無数の爪痕が残されており、怪物の巣でなくとも頻繁に活動していた痕跡が伺える。この地が第十三軍団によって封鎖区域に指定された理由の一つと考えられる。",
+          ContentJP = "周囲には巨大な爪痕がびっしりと刻まれており、その密度と乱れ具合から、極限の苦痛と狂気の中で刻まれたものだとわかる。",
           DialogueId = 70016012,
           GUID = "AF4719F8",
-          Subtitle = "The walls are covered in massive, chaotic claw marks. Even if this isn't the monster's lair, it's certainly a place it frequents. This might explain why the 13th Legion sealed off the area."
+          Subtitle = "Huge claw marks slash across the walls — dense, erratic, as if left in a frenzy of agony and madness."
         },
         [70016013] = {
           ContentJP = "アイスレイク城・地下水路の一部のレイアウト図。迷路のように入り組んだ配管が各区域を結んでおり、多くの場所に「警備部隊の許可なく立ち入り禁止」と記された標識が描かれている。",
@@ -187642,46 +187641,53 @@ Upon closer inspection, it matches the fabric found at the crime scene.]]
           SpeakNpcId = 818090
         },
         [71008201] = {
-          Content = "（附近生长着不少山瑚，若是有空，不妨收集一些吧。）",
+          ContentJP = "近くに山瑚がたくさん生えている。時間があるなら、いくつか採集しておこう。",
           DialogueId = 71008201,
           GUID = "B1C2F6FA",
-          SpeakNpcId = 800006
+          SpeakNpcId = 800006,
+          Subtitle = "(Plenty of Coralstones grows nearby. You might gather some if you have a moment.)"
         },
         [71008202] = {
-          Content = "（收集山瑚的响动将周围的敌人吸引了过来，击退它们吧。）",
+          ContentJP = "山瑚を採集する音で周囲の敵が引き寄せられた。撃退しよう。",
           DialogueId = 71008202,
           GUID = "B1C2F724",
-          SpeakNpcId = 800006
+          SpeakNpcId = 800006,
+          Subtitle = "(The commotion from gathering the Coralstone has drawn nearby enemies. Drive them off.)"
         },
         [71008203] = {
-          Content = "（虽然出现了一点小意外，但最后总算是顺利收集完了附近的所有山瑚。）",
+          ContentJP = "ちょっとしたアクシデントはあったが、最後には近くの山瑚をすべて無事に採集できた。",
           DialogueId = 71008203,
           GUID = "B1C2F74E",
-          SpeakNpcId = 800006
+          SpeakNpcId = 800006,
+          Subtitle = "(Though a minor mishap occurred, you've managed to collect all the nearby Coralstones in the end.)"
         },
         [71008204] = {
-          Content = "（成功收集完了附近的所有山瑚，是时候离开了。）",
+          ContentJP = "近くの山瑚の採集が完了した。そろそろ離れよう。",
           DialogueId = 71008204,
           GUID = "B1C2F778",
-          SpeakNpcId = 800006
+          SpeakNpcId = 800006,
+          Subtitle = "(You've successfully gathered all the nearby Coralstones. Time to move on.)"
         },
         [71008301] = {
-          Content = "（坍塌的碎石挡住了前路，将它们清理掉吧。）",
+          ContentJP = "崩れ落ちた瓦礫が道を塞いでいる。片づけて道を開こう。",
           DialogueId = 71008301,
           GUID = "B1C30762",
-          SpeakNpcId = 800006
+          SpeakNpcId = 800006,
+          Subtitle = "(Collapsed rubble blocks the path ahead. Clear it away.)"
         },
         [71008302] = {
-          Content = "（清理碎石的响动将周围的敌人吸引了过来，击退它们吧。）",
+          ContentJP = "瓦礫を片付ける音で周囲の敵が引き寄せられた。撃退しよう。",
           DialogueId = 71008302,
           GUID = "B1C3078C",
-          SpeakNpcId = 800006
+          SpeakNpcId = 800006,
+          Subtitle = "(The noise from clearing the rubble has attracted nearby enemies. Drive them off.)"
         },
         [71008303] = {
-          Content = "（一番战斗后，你在周围找到了些能用的物资，将它们收好吧。）",
+          ContentJP = "戦闘のあと、周囲で使えそうな物資を見つけた。回収しておこう。",
           DialogueId = 71008303,
           GUID = "B1C307B6",
-          SpeakNpcId = 800006
+          SpeakNpcId = 800006,
+          Subtitle = "(After the skirmish, you've found some usable supplies in the area. Take them with you.)"
         },
         [72000000] = {
           ContentJP = "ニャー……",
@@ -189934,7 +189940,7 @@ Untouched by worldly dust, its original clarity remains.]]
           GUID = "B47EEC34",
           NextDialogue = 72100403,
           SpeakNpcId = 830001,
-          Subtitle = "What's that scent drifting on the air? Sky Lily? Or perhaps Vernal Prime?"
+          Subtitle = "What's that scent drifting on the air? Skylily? Or perhaps Vernal Prime?"
         },
         [72100403] = {
           ContentJP = "私の手作り薫物には及びませんな……もう二度と作れないのが本当に残念だ。",
@@ -190661,7 +190667,7 @@ Untouched by worldly dust, its original clarity remains.]]
           Subtitle = "(The machine hums softly. A crude dial sits atop it, etched with three labels: Easy, Hard, and Extremely Hard. Looks like the handiwork of that overly chatty soldier.)"
         },
         [73000601] = {
-          ContentJP = "（物資輸送用のエレベーターか……補給が手に入るかもしれない。でも、待ち伏せには警戒しておいた方がよさそうだ。）",
+          ContentJP = "（物資輸送用のエレベーターか……補給が手に入るかもしれない。でも、待ち伏せには警戒しておいた方がよさそう{性别2:だ|}。）",
           DialogueId = 73000601,
           ExStoryInfo = "EXPlayer",
           GUID = "B6BFD51A",
@@ -236635,7 +236641,7 @@ Hey, what's up with you, getting all riled up? Haha, you're a proper laugh!]],
           VoiceName = "voice/$Locale$/char/Yuming/vo_idle"
         },
         [90070001] = {
-          ContentJP = "やりたいことがあれば、今のうちにやっておくことだ。あんたが自由の身でいられるうちに。",
+          ContentJP = "やりたいことがあれば、今のうちにやっておくことだ。あんたの身が自由でいられるうちに。",
           DialogueId = 90070001,
           GUID = "E17B158A",
           LookAt = {
@@ -236687,7 +236693,7 @@ Hey, what's up with you, getting all riled up? Haha, you're a proper laugh!]],
           VoiceName = "voice/$Locale$/char/Yuming/vo_topic_01_1"
         },
         [90070102] = {
-          ContentJP = "世界の見え方は人それぞれだろ。僕はユーミンの意見が聞きたいんだ。/世界の見え方は人それぞれでしょ。私はユーミンの意見が聞きたいな。",
+          ContentJP = "{性别:世界の見え方は人それぞれだろ。僕はユーミンの意見が聞きたいんだ。|世界の見え方は人それぞれでしょ。私はユーミンの意見が聞きたいな。}",
           DialogueId = 90070102,
           GUID = "E17B25F3",
           NextDialogue = 90070103,
@@ -236770,7 +236776,7 @@ Hey, what's up with you, getting all riled up? Haha, you're a proper laugh!]],
           VoiceName = "voice/$Locale$/char/Yuming/vo_topic_03_1"
         },
         [90070302] = {
-          ContentJP = "悩みがあるなら、僕が聞いてあげられるかも。/悩みがあるなら、私が聞いてあげられるかも。",
+          ContentJP = "{性别:悩みがあるなら、僕が聞いてあげられるかも。|悩みがあるなら、私が聞いてあげられるかも。}",
           DialogueId = 90070302,
           GUID = "E17B46C3",
           NextDialogue = 90070303,
@@ -236810,7 +236816,7 @@ Hey, what's up with you, getting all riled up? Haha, you're a proper laugh!]],
           VoiceName = "voice/$Locale$/char/Yuming/vo_topic_04_1"
         },
         [90070402] = {
-          ContentJP = "昔のことを思い出しているのか？/昔のことを思い出しているの？",
+          ContentJP = "{性别:昔のことを思い出しているのか？|昔のことを思い出しているの？}",
           DialogueId = 90070402,
           GUID = "E17B572B",
           NextDialogue = 90070403,
@@ -241834,11 +241840,11 @@ How have you been lately?
           },
           NextDialogue = 90230302,
           SpeakNpcId = 84102,
-          Subtitle = "I am often entangled in the minutiae of business, rarely afforded the luxury of leisure.",
+          Subtitle = "I am often entangled in the minutiae of business and rarely afforded the luxury of leisure.",
           VoiceName = "voice/$Locale$/char/Zhiliu/vo_topic_03_1"
         },
         [90230302] = {
-          ContentJP = "もし運良く束の間の自由が手に入ったなら……そうね、たぶん劇を観に行くわ。<Default note=\"text:カショ\">華胥</>の語りや評弾、帝国のオペラや演劇、それに最近遠洋で流行している連鎖劇――どれも興味があるのよ。",
+          ContentJP = "もし運良く束の間の自由が手に入ったなら……そうね、たぶん劇を観に行くわ。華胥の語りや評弾、帝国のオペラや演劇、それに最近遠洋で流行している連鎖劇――どれも興味があるのよ。",
           DialogueId = 90230302,
           GUID = "E1E1D0EC",
           NextDialogue = 90230303,
@@ -241895,7 +241901,7 @@ How have you been lately?
           GUID = "E1E1E154",
           NextDialogue = 90230403,
           SpeakNpcId = 84102,
-          Subtitle = "When I was little, an accident left me stranded in a pitch-black ravine for three days and nights. It was then that this... tendency took root.",
+          Subtitle = "When I was little, an accident left me stranded in a pitch-black ravine for three days and nights. It was then this... tendency took root.",
           VoiceName = "voice/$Locale$/char/Zhiliu/vo_topic_04_2"
         },
         [90230403] = {
@@ -241921,7 +241927,7 @@ How have you been lately?
           GUID = "E1E1E1D2",
           NextDialogue = 90230406,
           SpeakNpcId = 84102,
-          Subtitle = "Heh... You're right. Weakness can be a merchant's undoing.",
+          Subtitle = "Heh... Correct. Weakness can be a merchant's undoing.",
           VoiceName = "voice/$Locale$/char/Zhiliu/vo_topic_04_4"
         },
         [90230406] = {
@@ -241933,7 +241939,7 @@ How have you been lately?
             [2] = 90230003
           },
           SpeakNpcId = 84102,
-          Subtitle = "I underwent rigorous training to suppress this fear. At the negotiating table, I can cast it aside with ease. But in your presence, there is no need for such pretences.",
+          Subtitle = "I underwent rigorous trainings to suppress this fear. At the negotiating table, I can cast it aside with ease. But in your presence, there's no need for such pretences.",
           VoiceName = "voice/$Locale$/char/Zhiliu/vo_topic_04_5",
           bForbidSkipOptions = true
         },
@@ -262565,14 +262571,14 @@ However, her teacher is displeased with her momentary distraction.]]
           Subtitle = "What do you do in your spare time?"
         },
         [900700011] = {
-          ContentJP = "ユーミンは<Default note=\"text:カショ\">華胥</>から来たんだよな？華胥ってどんな場所なんだ？/ユーミンは<Default note=\"text:カショ\">華胥</>から来たんだよね？華胥ってどんな場所なの？",
+          ContentJP = "{性别:ユーミンは華胥から来たんだよな？華胥ってどんな場所なんだ？|ユーミンは華胥から来たんだよね？華胥ってどんな場所なの？}",
           DialogueId = 900700011,
           GUID = "900700011.0",
           NextDialogue = 90070101,
           Subtitle = "You said you're from Huaxu. What is the place like?"
         },
         [900700012] = {
-          ContentJP = "あなたは『大風九章』を守る者だって言ってたけど……あれってどういう意味なんだ？/あなたは『大風九章』を守る者だって言ってたけど……あれってどういう意味なの？",
+          ContentJP = "{性别:あなたは『大風九章』を守る者だって言ってたけど……あれってどういう意味なんだ？|あなたは『大風九章』を守る者だって言ってたけど……あれってどういう意味なの？}",
           DialogueId = 900700012,
           GUID = "900700012.0",
           NextDialogue = 90070201,
@@ -262586,7 +262592,7 @@ However, her teacher is displeased with her momentary distraction.]]
           Subtitle = "You always seem so sombre. Has something happened recently?"
         },
         [900700014] = {
-          ContentJP = "夜に月を見るのが好きなのか？/夜に月を見るのが好きなの？",
+          ContentJP = "{性别:夜に月を見るのが好きなのか？|夜に月を見るのが好きなの？}",
           DialogueId = 900700014,
           GUID = "900700014.0",
           NextDialogue = 90070401,

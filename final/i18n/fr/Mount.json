@@ -10,20 +10,20 @@
     "resourceId": 49999,
     "fly": 1,
     "access": [
-      "完成任务「虬先生的投资」获取"
+      "Source : terminer la quête « L’Investissement de Maître Qiu »"
     ]
   },
   {
     "id": 1001,
     "name": "Taihao mécanisé",
-    "des": "Monture mécanisée développée par Gongshang, à l’effigie du Seigneur Dragon d’Argent Taihao. Pièce unique conservée dans son atelier — heureusement, car voir Taihao sillonner le ciel en escadrille attirerait sans doute l’attention courroucée du Bureau des Rites. Gongshang, pour sa part, ne semble nullement décidé à renoncer à une production en série.\nAucun avantage de réputation n’est requis pour le vol.",
+    "des": "Monture mécanisée développée par Gongshang, à l’effigie du Seigneur Dragon d’Argent Taihao. Pièce unique conservée dans son atelier — heureusement, car voir Taihao sillonner le ciel en escadrille attirerait sans doute l’attention courroucée du Bureau des Rites. Gongshang, pour sa part, ne semble nullement décidé à renoncer à une production en série.\nVitesse de vol +50 %. Aucun avantage de réputation n’est requis pour le vol.",
     "icon": "Mounts_0001",
     "resourceIcon": "Icon_Mounts_0001",
     "rarity": 6,
     "sort": 100,
     "resourceId": 49998,
     "access": [
-      "棱镜商店限时兑换"
+      "Échange à durée limitée dans Boutique > Prismes"
     ]
   },
   {

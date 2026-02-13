@@ -57,8 +57,8 @@
   },
   {
     "id": 3010108,
-    "name": "糖福禄·重剑",
-    "desc": "冰糖葫芦竹签儿串。",
+    "name": "Bonheur sucré – Espadon",
+    "desc": "Une brochette de douceurs cristallisées.",
     "icon": "T_Head_Claymore_Tangfu",
     "rarity": 5,
     "unlock": "Disponible dans la boutique"
@@ -97,8 +97,8 @@
   },
   {
     "id": 3010205,
-    "name": "糖福禄·单手剑",
-    "desc": "冰糖葫芦竹签儿串。",
+    "name": "Bonheur sucré – Épée",
+    "desc": "Une brochette de douceurs cristallisées.",
     "icon": "T_Head_Sword_Tangfu",
     "rarity": 4,
     "unlock": "Disponible dans la boutique"
@@ -169,16 +169,16 @@
   },
   {
     "id": 3010406,
-    "name": "糖福禄·长柄",
-    "desc": "冰糖葫芦竹签儿串。",
+    "name": "Bonheur sucré – Arme d’hast",
+    "desc": "Une brochette de douceurs cristallisées.",
     "icon": "T_Head_Polearm_Tangfu",
     "rarity": 4,
     "unlock": "Disponible dans la boutique"
   },
   {
     "id": 3010407,
-    "name": "碧霄吟·长柄",
-    "desc": "尘嚣无染，碧波破浪。",
+    "name": "Chant du Firmament – Arme d’hast",
+    "desc": "Indemne de la poussière du monde, elle fend les flots d’azur sans jamais faiblir.",
     "icon": "T_Head_Polearm_Bixiao",
     "rarity": 5,
     "unlock": "Disponible dans la boutique"
@@ -201,8 +201,8 @@
   },
   {
     "id": 3010503,
-    "name": "碧霄吟·突击枪",
-    "desc": "尘嚣无染，碧波破浪。",
+    "name": "Chant du Firmament – Fusil d’assaut",
+    "desc": "Indemne de la poussière du monde, elle fend les flots d’azur sans jamais faiblir.",
     "icon": "T_Head_Machinegun_Bixiao",
     "rarity": 5,
     "unlock": "Disponible dans la boutique"
@@ -233,8 +233,8 @@
   },
   {
     "id": 3010607,
-    "name": "糖福禄·双刀",
-    "desc": "冰糖葫芦竹签儿串。",
+    "name": "Bonheur sucré – Doubles lames",
+    "desc": "Une brochette de douceurs cristallisées.",
     "icon": "T_Head_Dualblade_Tangfu",
     "rarity": 4,
     "unlock": "Disponible dans la boutique"
@@ -265,8 +265,8 @@
   },
   {
     "id": 3010707,
-    "name": "糖福禄·太刀",
-    "desc": "冰糖葫芦竹签儿串。",
+    "name": "Bonheur sucré – Katana",
+    "desc": "Une brochette de douceurs cristallisées.",
     "icon": "T_Head_Katana_Tangfu",
     "rarity": 4,
     "unlock": "Disponible dans la boutique"
@@ -297,16 +297,16 @@
   },
   {
     "id": 3010804,
-    "name": "糖福禄·鞭刃",
-    "desc": "冰糖葫芦竹签儿串。",
+    "name": "Bonheur sucré – Épée-fouet",
+    "desc": "Une brochette de douceurs cristallisées.",
     "icon": "T_Head_Swordwhip_Tangfu",
     "rarity": 4,
     "unlock": "Disponible dans la boutique"
   },
   {
     "id": 3010805,
-    "name": "碧霄吟·鞭刃",
-    "desc": "尘嚣无染，碧波破浪。",
+    "name": "Chant du Firmament – Épée-fouet",
+    "desc": "Indemne de la poussière du monde, elle fend les flots d’azur sans jamais faiblir.",
     "icon": "T_Head_Swordwhip_Bixiao",
     "rarity": 5,
     "unlock": "Disponible dans la boutique"

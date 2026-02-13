@@ -3346,10 +3346,10 @@
   {
     "id": 150301,
     "charId": 1503,
-    "name": "L’enfant à l’épée, caché dans les bois profonds",
-    "desc": "Là où les forêts sont épaisses ou les roseaux entremêlés, circulent toujours des récits de rôdeurs solitaires. La plupart parlent de haines et de passions. Mais ceux qui se sont réellement affranchis ne laissent aucune trace derrière eux.",
-    "memoryName": "Pampille d’épée du reclus",
-    "memoryDesc": "Une épée peut ôter la vie — mais elle peut aussi servir d’autres desseins.",
+    "name": "L’enfant et l’épée, au cœur des bois",
+    "desc": "Là où les forêts sont épaisses et les roseaux entremêlés, circulent toujours des récits de vagabonds retirés du monde. La plupart parlent de haines et de serments. Mais ceux qui se sont réellement détachés ne laissent derrière eux aucune trace.",
+    "memoryName": "La dragonne de l’errant caché",
+    "memoryDesc": "Une épée peut ôter la vie — mais elle peut aussi servir à d’autres usages.",
     "reward": 7050,
     "consume": {
       "19006": 2
@@ -3358,221 +3358,221 @@
     "dialogues": [
       {
         "id": 80210101,
-        "content": "侠自然是快意恩仇的，他们手提三尺剑，专爱打抱不平。",
+        "content": "Les héros, dit-on, vivent pour régler haines et injustices. L’épée à la main, ils se plaisent à redresser les torts.",
         "next": 80210102
       },
       {
         "id": 80210102,
-        "content": "浪迹天涯，四海飘零，不受任何羁绊。要按时回家的人，武艺再高，也更像是镖师，这听起来就比侠客不潇洒得多了。",
+        "content": "Ils errent aux confins du monde, libres de toute attache. Celui qui doit rentrer chez lui à heure fixe, fût-il maître dans l’art du sabre, ressemble bien davantage à un garde d’escorte — et cela sonne infiniment moins héroïque.",
         "next": 80210103
       },
       {
         "id": 80210103,
-        "content": "你要走了。",
+        "content": "Tu pars.",
         "npc": 790065,
         "next": 80210104
       },
       {
         "id": 80210104,
-        "content": "我要走了。",
+        "content": "Je pars.",
         "npc": 790066,
         "next": 80210105
       },
       {
         "id": 80210105,
-        "content": "你毕竟还是要走。",
+        "content": "Donc... tu pars vraiment.",
         "npc": 790065,
         "next": 80210106
       },
       {
         "id": 80210106,
-        "content": "我毕竟还是要走。",
+        "content": "Oui. Je pars vraiment.",
         "npc": 790066,
         "next": 80210107
       },
       {
         "id": 80210107,
-        "content": "你本不该走的。",
+        "content": "Tu n’aurais pas dû partir.",
         "npc": 790065,
         "next": 80210108
       },
       {
         "id": 80210108,
-        "content": "可我已经要走了。",
+        "content": "Mais je pars quand même.",
         "npc": 790066,
         "next": 80210109
       },
       {
         "id": 80210109,
-        "content": "你为什么要走？",
+        "content": "Pourquoi tu dois partir ?",
         "npc": 790065,
         "next": 80210110
       },
       {
         "id": 80210110,
-        "content": "因为要留人的性命。",
+        "content": "Pour épargner une vie.",
         "npc": 790066,
         "next": 80210111
       },
       {
         "id": 80210111,
-        "content": "留谁的性命？",
+        "content": "La vie de qui ?",
         "npc": 790065,
         "next": 80210112
       },
       {
         "id": 80210112,
-        "content": "留你的性命！",
+        "content": "La tienne !",
         "npc": 790066,
         "next": 80210113
       },
       {
         "id": 80210113,
-        "content": "哎呀，果然帅气，这次我们交换，让我来说：“留你的性命！”",
+        "content": "Oh ! Trop classe ! Cette fois on échange — laisse-moi dire : « La tienne ! »",
         "npc": 790065,
         "next": 80210114
       },
       {
         "id": 80210114,
-        "content": "蠢死啦，我只答应你演一遍的。",
+        "content": "T’es bête... J’avais dit une seule fois.",
         "npc": 790066,
         "next": 80210115
       },
       {
         "id": 80210115,
-        "content": "你们……这是在干什么。",
+        "content": "... Hé, vous deux. Qu’est-ce que vous fabriquez ?",
         "npc": 790067,
         "next": 80210116
       },
       {
         "id": 80210116,
-        "content": "这都不知道，我们这是在模仿飘零人对话呀。",
+        "content": "Quoi ? Tu connais pas ? On rejoue un dialogue des <I>Vagabonds</> !",
         "npc": 790065,
         "next": 80210117
       },
       {
         "id": 80210117,
-        "content": "这场对话是之前最流行的飘零人小说里，最有名的一段台词了，每当读到这里的时候，我都恨不得钻进书里去。",
+        "content": "C’est la réplique la plus célèbre du roman des Vagabonds le plus populaire en ce moment. À chaque fois que j’arrive à ce passage, j’ai envie de sauter dans le livre.",
         "npc": 790065,
         "next": 80210118
       },
       {
         "id": 80210118,
-        "content": "要不是每天被阿妈揪着耳朵读书，我肯定去奔赴那山外山学得一身好本领，快意恩仇！",
+        "content": "Si Maman ne me tirait pas l’oreille tous les jours pour que j’étudie, je serais déjà parti aux Pics Extérieurs apprendre le sabre et vivre librement, moi aussi !",
         "npc": 790065,
         "next": 80210119
       },
       {
         "id": 80210119,
-        "content": "你要是和我一样早早做完功课，阿妈才懒得管你呢。",
+        "content": "Si tu faisais tes devoirs aussi vite que moi, elle te laisserait tranquille.",
         "npc": 790066,
         "next": 80210120
       },
       {
         "id": 80210120,
-        "content": "阿妈是偏心，她的那把佩剑，你拿来砍柴杀鱼她都不会说什么。而我想要拿起来舞一个剑花，她都要说我是玩物丧志呢。",
+        "content": "C’est injuste ! Elle te laisse utiliser son épée pour couper du bois ou tuer des poissons, mais si moi je la fais tournoyer un peu, elle dit que je perds mon temps !",
         "npc": 790065,
         "next": 80210121
       },
       {
         "id": 80210121,
-        "content": "那当然了，我这可都干得是正事，给阿妈帮忙的。你拿起剑来舞来舞去，不伤到自己都算是好的。",
+        "content": "Parce que moi, je fais quelque chose d’utile. J’aide Maman. Toi, à force de la faire tournoyer, tu vas surtout finir par te couper.",
         "npc": 790066,
         "next": 80210122
       },
       {
         "id": 80210122,
-        "content": "要我说啊，阿妈就是没读过飘零人小说，否则才不会由着你拿着这把剑干杂活。",
+        "content": "Je te dis que si elle avait lu des romans de Vagabonds, elle ne te laisserait jamais faire des corvées avec une épée pareille.",
         "npc": 790065,
         "next": 80210123
       },
       {
         "id": 80210123,
-        "content": "应该给我才是，让我练习剑谱，等我长大了就可以保护阿姐你和阿妈。",
+        "content": "Elle aurait dû me la donner ! Comme ça je pourrais m’entraîner, et quand je serai grand, je vous protégerai, toi et Maman.",
         "npc": 790065,
         "next": 80210124
       },
       {
         "id": 80210124,
-        "content": "你就是小说看多啦，现在有大风九章，根本不需要飘零人保护大家的。",
+        "content": "Tu lis trop de romans. Avec les Neuf Chapitres de Dafeng, on n’a plus besoin de Vagabonds pour protéger les gens.",
         "npc": 790066,
         "next": 80210125
       },
       {
         "id": 80210125,
-        "content": "说得是啊，现在这个时日，确实已经没多少个飘零人了。",
+        "content": "C’est vrai. De nos jours... les Vagabonds se font rares.",
         "npc": 790067,
         "next": 80210126
       },
       {
         "id": 80210126,
-        "content": "啊，不好意思，大哥哥，刚刚我只顾着和弟弟说话了，忘了你还在边上。",
+        "content": "Oh ! Pardon, monsieur. J’étais trop occupée à parler avec mon frère, j’avais oublié que tu étais encore là.",
         "npc": 790066,
         "next": 80210127
       },
       {
         "id": 80210127,
-        "content": "请问你来这里是……找阿妈吗？她吩咐过，不见来客的。",
+        "content": "Tu venais voir Maman ? Elle a dit qu’elle ne recevait personne.",
         "npc": 790066,
         "next": 80210128
       },
       {
         "id": 80210128,
-        "content": "嗯，看得出来，她之前佩剑不离身，现在这把佩剑却在你们手上，那我自然明白她是什么意思。",
+        "content": "Mm. Je m’en doute. Avant, elle ne se séparait jamais de son épée. Si elle est entre vos mains aujourd’hui... j’ai compris le message.",
         "npc": 790067,
         "next": 80210129
       },
       {
         "id": 80210129,
-        "content": "你认识阿妈？能和我讲讲她年轻时候的事情吗？我总怀疑她是一位大侠，否则怎么会有这么一把好剑。",
+        "content": "Tu connais Maman ? Tu pourrais nous raconter comment elle était quand elle était jeune ? Je suis sûr qu’elle a été une grande héroïne. Sinon, comment elle aurait une épée aussi incroyable ?",
         "npc": 790065,
         "next": 80210130
       },
       {
         "id": 80210130,
-        "content": "每次我缠着她，她却又什么都不肯说。",
+        "content": "À chaque fois que je lui demande, elle ne dit rien.",
         "npc": 790065,
         "next": 80210131
       },
       {
         "id": 80210131,
-        "content": "那，我也是受人所托来找她，但既然她无意相见，那么我也不便多说。",
+        "content": "Je suis venu à la demande de quelqu’un. Mais puisqu’elle ne souhaite pas me voir... je n’en dirai pas davantage.",
         "npc": 790067,
         "next": 80210132
       },
       {
         "id": 80210132,
-        "content": "什么嘛，没劲。我看你这副行头，又背着剑，还以为能看到阿妈出手呢。",
+        "content": "<I>Pff...</> quel ennui. Avec ton accoutrement et ton épée, je pensais qu’on verrait Maman se battre à nouveau.",
         "npc": 790065,
         "next": 80210133
       },
       {
         "id": 80210133,
-        "content": "哈哈，假以时日，会见到的。那么，在下告辞。",
+        "content": "Ha ha. Un jour, peut-être. Sur ce... je vais y aller.",
         "npc": 790067,
         "next": 80210134
       },
       {
         "id": 80210134,
-        "content": "真的假的。喂，阿姐，听见了没，快别用阿妈的剑杀鸡了，以后还会用的，锈了怎么办。",
+        "content": "Sérieux ? Hé, grande sœur ! T’as entendu ? Arrête d’utiliser l’épée de Maman pour les poules ! Si elle doit resservir un jour, elle va rouiller !",
         "npc": 790065,
         "next": 80210135
       },
       {
         "id": 80210135,
-        "content": "一惊一乍的，以后的事，以后再说。",
+        "content": "Toujours à t’emballer pour rien. On verra ça plus tard.",
         "npc": 790066,
         "next": 80210136
       },
       {
         "id": 80210136,
-        "content": "倒是这位大哥哥，不妨坐下来歇息一会儿再走？",
+        "content": "Mais toi, monsieur... Pourquoi ne pas t’asseoir un moment avant de partir ?",
         "npc": 790066,
         "next": 80210137
       },
       {
         "id": 80210137,
-        "content": "这可不行，我身后可是一直有一群小狗在追着，停留不得，就不打扰你们了。",
+        "content": "Impossible. J’ai toute une meute de petits chiens qui me court après. Je ne peux pas m’attarder. Je ne vous dérangerai pas davantage.",
         "npc": 790067
       }
     ]
@@ -3583,7 +3583,7 @@
     "name": "Le vagabond aux regrets, par-delà monts et rivières",
     "desc": "Derrière chaque montagne naît un espoir, avant de s’éteindre à son tour. Pourtant, en se retournant, le plus beau paysage reste toujours celui du départ.",
     "memoryName": "Art intérieur du vagabond",
-    "memoryDesc": "À demi rêve, à demi souvenir, l’errance demeure libre ; entre joie et tristesse, un sourire mélancolique face au monde.",
+    "memoryDesc": "À demi éveillé, à demi en songe, demeure le souvenir d’une liberté passée. À demi joie, à demi tristesse, un sourire amer adressé au monde des hommes.",
     "reward": 7051,
     "consume": {
       "19005": 5
@@ -3591,341 +3591,341 @@
     "dialogues": [
       {
         "id": 80210201,
-        "content": "侠客爱憎分明，情天恨海，是非多多。更有好事者把这些纠缠写成书册，人人爱看。",
+        "content": "Les Vagabonds ont le cœur tranchant : ils aiment et haïssent avec la même intensité. Leurs passions, leurs rancunes, leurs dilemmes nourrissent mille récits — et il se trouve toujours des curieux pour les coucher sur le papier, avidement lus par tous.",
         "next": 80210202
       },
       {
         "id": 80210202,
-        "content": "人人皆向往能策马红尘，但身在其中者，往往是另外一番愁滋味。",
+        "content": "Tous rêvent de chevaucher librement à travers le monde. Mais ceux qui foulent réellement ces chemins ne goûtent bien souvent qu’une autre forme de solitude.",
         "next": 80210203
       },
       {
         "id": 80210203,
-        "content": "你回来了，鸣鸾。",
+        "content": "Te voilà de retour, Mingluan.",
         "npc": 790067,
         "next": 80210204
       },
       {
         "id": 80210204,
-        "content": "我回来了，刻舟。",
+        "content": "Je suis revenu, Kezhou.",
         "npc": 790068,
         "next": 80210205
       },
       {
         "id": 80210205,
-        "content": "那么结果呢？",
+        "content": "Et alors ? Quels résultats ?",
         "npc": 790067,
         "next": 80210206
       },
       {
         "id": 80210206,
-        "content": "自然是有一些的。",
+        "content": "Il y en a eu, naturellement.",
         "npc": 790068,
         "next": 80210207
       },
       {
         "id": 80210207,
-        "content": "我踏足了五个国家，悟出了五门新功夫。",
+        "content": "J’ai traversé cinq royaumes... et acquis cinq nouveaux arts.",
         "npc": 790068,
         "next": 80210208
       },
       {
         "id": 80210208,
-        "content": "我先是西出了华胥，踏入了赫墨的瀚海。",
+        "content": "Je suis d’abord sorti de Huaxu par l’ouest, pour entrer dans la mer de sable de Khemet.",
         "npc": 790068,
         "next": 80210209
       },
       {
         "id": 80210209,
-        "content": "之前我听人说赫墨的瀚海是万里黄沙，酷热无比。于是便拿定主意，夜半披星赶路。",
+        "content": "On m’avait dit que ce désert n’était que dunes brûlantes à perte de vue. J’avais donc décidé de voyager de nuit, sous les étoiles.",
         "npc": 790068,
         "next": 80210210
       },
       {
         "id": 80210210,
-        "content": "但我没料到夜半的沙漠却又奇寒无比，如果不做些什么必将冻毙其中，成为一具无名的白骨。",
+        "content": "Mais je n’avais pas prévu que le froid nocturne y serait si mordant. Sans agir, j’y serais mort gelé — simple squelette anonyme parmi les sables.",
         "npc": 790068,
         "next": 80210211
       },
       {
         "id": 80210211,
-        "content": "正当我烦恼该如何自救之时，我看到远处的地平上有几颗绿星忽闪忽闪，却又渐渐变大。",
+        "content": "Alors que je cherchais comment survivre, j’aperçus à l’horizon quelques lueurs vertes, vacillantes... qui grossissaient peu à peu.",
         "npc": 790068,
         "next": 80210212
       },
       {
         "id": 80210212,
-        "content": "那些绿星都是成对的，并且远远地也能透着股肃杀之气，像是典籍上提到的贪狼星。我突然醒悟过来，这并非是什么星星，而是狼的眼睛。",
+        "content": "Elles allaient par paires, dégageaient une aura meurtrière — comme l’Étoile du Loup Cupide décrite dans les anciens textes. J’ai compris alors : ce n’étaient pas des étoiles... mais des yeux.",
         "npc": 790068,
         "next": 80210213
       },
       {
         "id": 80210213,
-        "content": "可怜。",
+        "content": "Pauvre chose.",
         "npc": 790067,
         "next": 80210214
       },
       {
         "id": 80210214,
-        "content": "谁可怜。",
+        "content": "Qui donc ?",
         "npc": 790068,
         "next": 80210215
       },
       {
         "id": 80210215,
-        "content": "自然不是你可怜。",
+        "content": "Certainement pas toi.",
         "npc": 790067,
         "next": 80210216
       },
       {
         "id": 80210216,
-        "content": "那你错怪我了，那些小狗崽子安然无恙，我只是拍晕了几只，把它们拖到沙丘的背风处，当做垫背，靠着它们的体温囫囵了一个晚上。",
+        "content": "Alors tu me juges mal. Ces louveteaux s’en sont sortis sans mal. J’en ai simplement assommé quelques-uns, traînés à l’abri d’une dune et utilisés comme couvertures vivantes. Leur chaleur m’a permis de tenir jusqu’à l’aube.",
         "npc": 790068,
         "next": 80210217
       },
       {
         "id": 80210217,
-        "content": "了结它们倒也不难，但真要如此的话，我活不过第一个晚上。",
+        "content": "Les tuer aurait été facile. Mais dans ce cas, je n’aurais pas survécu à la première nuit.",
         "npc": 790068,
         "next": 80210218
       },
       {
         "id": 80210218,
-        "content": "于你来说，几只野狼自然不是对手，但是我记得你的掌风素来刚猛凌厉，号称降龙，没想到居然能控制到恰好击晕活物而留其性命的地步。",
+        "content": "Des loups ne sont rien pour toi. Pourtant, tes paumes ont toujours été réputées pour leur violence — on te surnommait le Domptedragon. Je ne pensais pas que tu saurais frapper avec assez de précision pour épargner une vie.",
         "npc": 790067,
         "next": 80210219
       },
       {
         "id": 80210219,
-        "content": "这应该便是你悟出的第一门功夫吧。",
+        "content": "Voilà donc ton premier art.",
         "npc": 790067,
         "next": 80210220
       },
       {
         "id": 80210220,
-        "content": "不愧是刻舟刻大侠，立刻意识到关节所在。在那过后每晚我都是如此过夜，击晕野狼取暖。从而悟出了一套新的掌法，我称之为狼眠掌。",
+        "content": "Bien vu, Maître Kezhou. Chaque nuit suivante, j’ai recommencé. Et de là est née une nouvelle technique de paume, que j’ai baptisée : Paume du Sommeil du Loup.",
         "npc": 790068,
         "next": 80210221
       },
       {
         "id": 80210221,
-        "content": "好，好个狼眠掌，当浮一大白。",
+        "content": "Magnifique nom. Voilà qui mérite une grande rasade.",
         "npc": 790067,
         "next": 80210222
       },
       {
         "id": 80210222,
-        "content": "那么第二门功夫，应当就是在海伯利亚帝国了。让我猜猜你悟出了什么……有类迅捷剑术的快剑？还是如同冰湖城坚冰一样厚重的长拳？",
+        "content": "Quant au second art... il doit venir de l’Empire Hyperboréen. Laisse-moi deviner : une escrime fulgurante ? Ou un poing lourd comme la glace de Givrelac ?",
         "npc": 790067,
         "next": 80210223
       },
       {
         "id": 80210223,
-        "content": "想不到你人一直在华胥，却还知道海伯利亚还有个冰湖城。",
+        "content": "Je suis surpris que tu connaisses Givrelac, toi qui n’as jamais quitté Huaxu.",
         "npc": 790068,
         "next": 80210224
       },
       {
         "id": 80210224,
-        "content": "最近交了个朋友，在冰湖城居住，所以多少知道一些。",
+        "content": "{性别:Un ami|Une amie} y vit. J’en ai entendu parler.",
         "npc": 790067,
         "next": 80210225
       },
       {
         "id": 80210225,
-        "content": "原来如此，不过你猜错了，我着急赶路，直接去了卢卡。",
+        "content": "Je vois. Mais tu te trompes. J’étais pressé. Je suis allé directement à Luca.",
         "npc": 790068,
         "next": 80210226
       },
       {
         "id": 80210226,
-        "content": "在前往卢卡的路上，我遭遇了传说中的海中精怪，被称作塞壬的异兽。它们貌似婵娟，但是却能以歌声摄人心魄。",
+        "content": "En mer, j’ai rencontré une créature légendaire : une Sirène. D’une beauté lunaire... mais dont le chant vole l’âme.",
         "npc": 790068,
         "next": 80210227
       },
       {
         "id": 80210227,
-        "content": "那岂不是和百年前的前辈莫抱琴一般，能以传音入密的功夫乱人心神？",
+        "content": "Comme les anciens maîtres capables de troubler l’esprit par le son, tel Mo Baoqin ?",
         "npc": 790067,
         "next": 80210228
       },
       {
         "id": 80210228,
-        "content": "确实如出一辙。只是我当时没有想到这些，只顾着跳入水中，闭息凝神，又抓住了路过的巨鲸，才堪堪逃得性命。",
+        "content": "Exactement. Mais sur l’instant, je n’ai pas réfléchi. J’ai plongé, retenu mon souffle, agrippé une baleine de passage... et sauvé ma peau de justesse.",
         "npc": 790068,
         "next": 80210229
       },
       {
         "id": 80210229,
-        "content": "但也因此，我的闭气功夫见长不少，几乎不再惧怕毒雾之类的雕虫小技。而我将这套法门唤作长鲸心法。",
+        "content": "Depuis, mon contrôle de la respiration s’est considérablement affiné. Les poisons et les brumes ne me font plus grand-chose. J’ai nommé cet art : Cœur de la Baleine.",
         "npc": 790068,
         "next": 80210230
       },
       {
         "id": 80210230,
-        "content": "然后呢？",
+        "content": "Et ensuite ?",
         "npc": 790067,
         "next": 80210231
       },
       {
         "id": 80210231,
-        "content": "我在卢卡也没有停留太久，于是去了传颂会的雅什尼亚，在那里我……",
+        "content": "Je n’ai pas traîné à Luca. Puis je suis parti pour Yashnia, terre de l’Église... et là—",
         "npc": 790068,
         "next": 80210232
       },
       {
         "id": 80210232,
-        "content": "稍等，我打断一下。",
+        "content": "Un instant. Je t’interromps.",
         "npc": 790067,
         "next": 80210233
       },
       {
         "id": 80210233,
-        "content": "你可以打断，但需要自罚一杯。",
+        "content": "Fort bien. Mais tu me devras une coupe.",
         "npc": 790068,
         "next": 80210234
       },
       {
         "id": 80210234,
-        "content": "罚就罚，没问题，我只是想问你，她呢？你最终找到她了吗？",
+        "content": "Soit. Dis-moi seulement... elle. L’as-tu trouvée ?",
         "npc": 790067,
         "next": 80210235
       },
       {
         "id": 80210235,
-        "content": "……",
+        "content": "...",
         "npc": 790068,
         "next": 80210236
       },
       {
         "id": 80210236,
-        "content": "你说过，不找到她是不会回华胥的。",
+        "content": "Tu avais juré de ne pas revenir sans elle.",
         "npc": 790067,
         "next": 80210237
       },
       {
         "id": 80210237,
-        "content": "我累了。",
+        "content": "Je suis fatigué.",
         "npc": 790068,
         "next": 80210238
       },
       {
         "id": 80210238,
-        "content": "我无时无刻不在想着她。沙砾里，海浪里，森林里，圣塔旁，絮语河上，我都寻觅过她，但是却又寻她不见。",
+        "content": "Je pense à elle sans cesse. Dans le sable, les vagues, les forêts, près de la Tour Sacrée, le long de la Rivière des Murmures... Je l’ai cherchée partout. En vain.",
         "npc": 790068,
         "next": 80210239
       },
       {
         "id": 80210239,
-        "content": "于是我在想，她会不会是回到了华胥这个伤心地。但，依旧没有人见过她。",
+        "content": "Alors j’ai cru qu’elle était peut-être revenue à Huaxu, ce lieu de chagrin. Mais personne ne l’a revue.",
         "npc": 790068,
         "next": 80210240
       },
       {
         "id": 80210240,
-        "content": "可怜。",
+        "content": "Pauvre chose.",
         "npc": 790067,
         "next": 80210241
       },
       {
         "id": 80210241,
-        "content": "谁可怜。",
+        "content": "Qui donc ?",
         "npc": 790068,
         "next": 80210242
       },
       {
         "id": 80210242,
-        "content": "天下有情人。",
+        "content": "Tous ceux qui aiment.",
         "npc": 790067,
         "next": 80210243
       },
       {
         "id": 80210243,
-        "content": "哈哈。",
+        "content": "Ha...",
         "npc": 790068,
         "next": 80210244
       },
       {
         "id": 80210244,
-        "content": "要说可怜，你也同样，我远离华胥不受大风九章羁绊，而你的话，恐怕在来见我之前，刚刚和应天尉交过手吧。",
+        "content": "À bien y penser, tu n’es guère mieux loti. Moi, j’erre hors de portée des Neuf Chapitres. Toi... tu as sans doute affronté les Magistrats de Yingtian juste avant de venir.",
         "npc": 790068,
         "next": 80210245
       },
       {
         "id": 80210245,
-        "content": "那是自然，但也早就习惯如此了，正如你习惯了漂泊异乡一样。",
+        "content": "Sans doute. Et je m’y suis fait. Comme toi à l’exil.",
         "npc": 790067,
         "next": 80210246
       },
       {
         "id": 80210246,
-        "content": "刚刚你打断我的话，罚酒一杯，该喝了。等你喝完我就上路继续找她，这次我反其道行之，先从海路到伊瑟尔。",
+        "content": "Tu m’as interrompu. Bois donc. Une fois fait, je repars. Cette fois, je prendrai la mer jusqu’à Aethyrie.",
         "npc": 790068,
         "next": 80210247
       },
       {
         "id": 80210247,
-        "content": "我刚刚已经罚完了。",
+        "content": "C’est déjà fait.",
         "npc": 790067,
         "next": 80210248
       },
       {
         "id": 80210248,
-        "content": "什么时候？我怎么没瞧见。",
+        "content": "Quand ça ? Je n’ai rien vu.",
         "npc": 790068,
         "next": 80210249
       },
       {
         "id": 80210249,
-        "content": "在你说到圣塔旁，絮语河上的时候。",
+        "content": "Quand tu parlais de la Tour Sacrée et de la Rivière des Murmures.",
         "npc": 790067,
         "next": 80210250
       },
       {
         "id": 80210250,
-        "content": "真的假的？唉，可能是我太想见她了。",
+        "content": "Vraiment ? Peut-être pensais-je trop à elle...",
         "npc": 790068,
         "next": 80210251
       },
       {
         "id": 80210251,
-        "content": "骗你的，我还没喝。",
+        "content": "Je plaisante. Je n’ai pas encore bu.",
         "npc": 790067,
         "next": 80210252
       },
       {
         "id": 80210252,
-        "content": "你小子，从小就喜欢骗人，一直没变。",
+        "content": "Toujours aussi menteur. Tu n’as pas changé.",
         "npc": 790068,
         "next": 80210253
       },
       {
         "id": 80210253,
-        "content": "而你就没有识破的时候。",
+        "content": "Et toi, toujours aussi crédule.",
         "npc": 790067,
         "next": 80210254
       },
       {
         "id": 80210254,
-        "content": "哈哈哈哈。",
+        "content": "Hahaha...",
         "npc": 790067,
         "next": 80210255
       },
       {
         "id": 80210255,
-        "content": "那么，我出发了，后会有期。",
+        "content": "Alors je pars. À la prochaine.",
         "npc": 790068,
         "next": 80210256
       },
       {
         "id": 80210256,
-        "content": "后会有期。",
+        "content": "À la prochaine.",
         "npc": 790067,
         "next": 80210257
       },
       {
         "id": 80210257,
-        "content": "这第二位也就此离去……那么接下来是第三位。",
+        "content": "Ainsi s’en est allé le second... Passons maintenant au troisième.",
         "npc": 790067
       }
     ]
@@ -3933,10 +3933,10 @@
   {
     "id": 150303,
     "charId": 1503,
-    "name": "Flûte de jade et vin trouble sous la lune",
-    "desc": "Les parfums réveillent les souvenirs. Peut-être est-ce pour cela que chacun chérit des mets différents : nos chemins d’origine ne sont jamais les mêmes.",
-    "memoryName": "Couteau du chevalier gourmet",
-    "memoryDesc": "Le menu jauni de cette échoppe regorge pourtant de plats d’un savoir-faire rare, introuvables ailleurs.",
+    "name": "La flûte de jade et le breuvage trouble",
+    "desc": "Les odeurs réveillent la mémoire. Peut-être est-ce pour cela que chacun a ses mets de prédilection : nos chemins d’origine ne se ressemblent jamais.",
+    "memoryName": "Le couteau du Vagabond des fourneaux",
+    "memoryDesc": "Un couteau usé par les années, dont la lame a servi autant la cuisine que le combat. Entre ses entailles sommeillent encore des gestes d’arts martiaux devenus saveurs.",
     "reward": 7052,
     "consume": {
       "19001": 8
@@ -3944,286 +3944,286 @@
     "dialogues": [
       {
         "id": 80210326,
-        "content": "啊……烫，但……好好吃。",
+        "content": "Ah— ! C’est brûlant... mais... délicieux.",
         "npc": 790071,
         "next": 80210327
       },
       {
         "id": 80210327,
-        "content": "嘶哈——",
+        "content": "<I>Tss—ha...</>",
         "npc": 790071,
         "next": 80210328
       },
       {
         "id": 80210328,
-        "content": "表皮被炸得酥脆，咬下去嘎吱作响，而里面的豆腐却软嫩绵滑，却又不至于立刻散掉，得要相当的力道和巧劲才能做到这个地步。",
+        "content": "La croûte est croustillante, elle craque sous la dent. À l’intérieur, le tofu est souple, soyeux, sans se déliter. Il faut une force précise et un contrôle parfait pour obtenir ça.",
         "npc": 790071,
         "next": 80210329
       },
       {
         "id": 80210329,
-        "content": "算你识货，我们卯金叔做得油豆腐可是远近闻名，想来啊，不比那什么“若木无觅衔烛龙”差。",
+        "content": "Tu t’y connais. Les tofu d’Oncle Maojin sont réputés dans toute la région. Pas moins bons que ton fameux «<I> Dragon-Flamme inaccessible »</>.",
         "npc": 790069,
         "next": 80210330
       },
       {
         "id": 80210330,
-        "content": "等等……莫非……",
+        "content": "Attends... ne me dis pas que...",
         "npc": 790071,
         "next": 80210331
       },
       {
         "id": 80210331,
-        "content": "就你个瓜娃儿话多，莫要和客人摆龙门阵了，又有油豆腐弄好了，上菜。",
+        "content": "Espèce de bavard ! Arrête de raconter des histoires au client. Les tofu sont prêts, sers.",
         "npc": 790070,
         "next": 80210332
       },
       {
         "id": 80210332,
-        "content": "得嘞。",
+        "content": "Oui !",
         "npc": 790069,
         "next": 80210333
       },
       {
         "id": 80210333,
-        "content": "尝出来了？",
+        "content": "Alors ? Tu as reconnu ?",
         "npc": 790070,
         "next": 80210334
       },
       {
         "id": 80210334,
-        "content": "尝出来了，前辈的手艺果然名不虚传，难怪我师父这么多年一直念念不忘。",
+        "content": "Oui. Votre savoir-faire est intact. Je comprends pourquoi mon maître ne vous a jamais oublié.",
         "npc": 790071,
         "next": 80210335
       },
       {
         "id": 80210335,
-        "content": "净讲这些虚的干啥子嘞，你吃东西是为自己吃的还是为你师父吃的？讲你自己的想法。",
+        "content": "Arrête les belles paroles. Tu manges pour toi ou pour ton maître ? Dis ce que tu en penses, toi.",
         "npc": 790070,
         "next": 80210336
       },
       {
         "id": 80210336,
-        "content": "好吃！",
+        "content": "C’est excellent !",
         "npc": 790071,
         "next": 80210337
       },
       {
         "id": 80210337,
-        "content": "对头，那好吃的话应该怎么做啊？",
+        "content": "Voilà. Et quand c’est bon, on fait quoi ?",
         "npc": 790070,
         "next": 80210338
       },
       {
         "id": 80210338,
-        "content": "再来七块！",
+        "content": "On en reprend sept !",
         "npc": 790071,
         "next": 80210339
       },
       {
         "id": 80210339,
-        "content": "嘞就对嘛。",
+        "content": "Voilà qui est parlé.",
         "npc": 790070,
         "next": 80210340
       },
       {
         "id": 80210340,
-        "content": "好，吃的问题解决了，现在你告诉我，你师父是哪一个？",
+        "content": "Bien. Maintenant que tu as mangé, dis-moi : qui est ton maître ?",
         "npc": 790070,
         "next": 80210341
       },
       {
         "id": 80210341,
-        "content": "宴山亭。",
+        "content": "Yan Shanting.",
         "npc": 790067,
         "next": 80210342
       },
       {
         "id": 80210342,
-        "content": "喔，原来是他，是为了论剑而来的吧？没想到他还记得这个事。",
+        "content": "Ah... lui. Tu viens pour l’épreuve de l’épée, alors ? Je ne pensais pas qu’il s’en souviendrait encore.",
         "npc": 790070,
         "next": 80210343
       },
       {
         "id": 80210343,
-        "content": "师父念念不忘，敢问刘前辈会参加吗？",
+        "content": "Il ne l’a jamais oubliée. Puis-je vous demander si vous y participerez, Maître Liu ?",
         "npc": 790071,
         "next": 80210344
       },
       {
         "id": 80210344,
-        "content": "这里没有刘前辈，我早已放下刀，这里只有卯金叔。",
+        "content": "Il n’y a plus de Maître Liu ici. J’ai posé la lame depuis longtemps. Il n’y a que Oncle Maojin.",
         "npc": 790070,
         "next": 80210345
       },
       {
         "id": 80210345,
-        "content": "好了，莫要再问了，再要七个油豆腐是吧，我这就继续。",
+        "content": "Assez parlé. Encore sept tofu, c’est ça ? Je m’y remets.",
         "npc": 790070,
         "next": 80210346
       },
       {
         "id": 80210346,
-        "content": "……再来七个，打包带走，我也让我朋友尝一尝。",
+        "content": "... Sept de plus. À emporter. Je veux que mes amis y goûtent.",
         "npc": 790071,
         "next": 80210347
       },
       {
         "id": 80210347,
-        "content": "要得，但切记，只许和朋友说这是卯金叔做的，要是多说一句，我把你舌头割下来做成卤菜。",
+        "content": "Très bien. Mais souviens-toi : dis seulement que c’est Oncle Maojin qui les a faits. Un mot de trop, et je te coupe la langue pour la faire braiser.",
         "npc": 790070,
         "next": 80210348
       },
       {
         "id": 80210348,
-        "content": "那是自然，那么后生拜别前辈。",
+        "content": "Naturellement. Alors, le cadet prend congé.",
         "npc": 790071
       },
       {
         "id": 80210301,
-        "content": "侠客大多是吃主，玩主。想来也是正常的，好马，好剑，好衣裳，总是大侠的标配。",
+        "content": "Les Vagabonds sont souvent fins gourmets, amateurs de plaisirs. Rien d’étonnant, au fond : un bon cheval, une bonne lame, de beaux habits — voilà l’attirail classique d’un héros errant.",
         "next": 80210302
       },
       {
         "id": 80210302,
-        "content": "至于酒食，更是极为精细。以至于提起侠客，总是感觉他们好酒，大块吃肉。而如果一个侠客明言不喝酒，就多少觉得他的剑意少了三分老辣。",
+        "content": "Quant à la nourriture et aux breuvages, l’exigence est d’autant plus grande. À tel point que l’image du Vagabond se confond souvent avec celle d’un homme buvant à grandes rasades et mangeant à pleines bouchées. Et lorsqu’un héros proclame ne pas toucher à l’alcool, on a presque l’impression que son sabre manque d’un peu de maturité.",
         "next": 80210303
       },
       {
         "id": 80210303,
-        "content": "小二，一斤黄酒，七个油豆腐，辣酱要多！",
+        "content": "Garçon, une livre de breuvage jaune, sept tofu frits, et mets-moi une bonne dose de pâte pimentée !",
         "npc": 790071,
         "next": 80210304
       },
       {
         "id": 80210304,
-        "content": "好嘞，我这就吩咐给您做。",
+        "content": "Bien reçu ! Je transmets en cuisine.",
         "npc": 790069,
         "next": 80210305
       },
       {
         "id": 80210305,
-        "content": "一斤黄酒，七个油豆腐，辣酱要多！",
+        "content": "Une livre de breuvage jaune, sept tofu frits, piment en extra !",
         "npc": 790069,
         "next": 80210306
       },
       {
         "id": 80210306,
-        "content": "谢了。顺便问下，你可听说过一位飘零人，名唤铁掌移山刘纬甫，年纪应该有六七十了。",
+        "content": "Merci. Dis-moi, tu aurais entendu parler d’un Vagabond nommé Liu Weifu, surnommé Paume de Fer qui déplace les montagnes ? Il devrait avoir soixante-dix ans passés.",
         "npc": 790071,
         "next": 80210307
       },
       {
         "id": 80210307,
-        "content": "没听说过。我这辈子都没见过飘零人呢。",
+        "content": "Jamais entendu ce nom. À vrai dire, je n’ai jamais vu de Vagabond de ma vie.",
         "npc": 790069,
         "next": 80210308
       },
       {
         "id": 80210308,
-        "content": "那你现在见过了。",
+        "content": "Alors voilà, c’est chose faite.",
         "npc": 790071,
         "next": 80210309
       },
       {
         "id": 80210309,
-        "content": "您是飘零人？",
+        "content": "Vous êtes... un Vagabond ?",
         "npc": 790069,
         "next": 80210310
       },
       {
         "id": 80210310,
-        "content": "我是啊，怎么，看着不像？",
+        "content": "Oui. Ça ne se voit pas ?",
         "npc": 790071,
         "next": 80210311
       },
       {
         "id": 80210311,
-        "content": "是不像，我听说飘零人啊都是喜欢大口喝酒大口吃肉的，没见过点油豆腐的。",
+        "content": "Pas vraiment. On dit que les Vagabonds boivent à grandes lampées et mangent de la viande à pleines dents. Jamais vu quelqu’un commander des tofu frits.",
         "npc": 790069,
         "next": 80210312
       },
       {
         "id": 80210312,
-        "content": "这叫什么话，飘零人又不是野狼野狗就爱吃肉，那吃得精细起来也是自有一套讲究的。",
+        "content": "Quelle idée ! Les Vagabonds ne sont pas des bêtes sauvages qui ne savent que mordre dans la chair. Quand on mange finement, on a aussi nos règles.",
         "npc": 790071,
         "next": 80210313
       },
       {
         "id": 80210313,
-        "content": "那野狼野狗也不止吃肉，还吃其他东西呢……",
+        "content": "Enfin... même les chiens mangent autre chose que de la viande...",
         "npc": 790069,
         "next": 80210314
       },
       {
         "id": 80210314,
-        "content": "打住，打住，我油豆腐好没？帮我催一催。",
+        "content": "Stop. Ça suffit. Mes tofu, c’est pour quand ? Va presser un peu.",
         "npc": 790071,
         "next": 80210315
       },
       {
         "id": 80210315,
-        "content": "得嘞，卯金叔，油豆腐快点。",
+        "content": "Entendu ! Oncle Maojin, accélère pour les tofu !",
         "npc": 790069,
         "next": 80210316
       },
       {
         "id": 80210316,
-        "content": "莫催莫催，就好了。",
+        "content": "Arrête de presser, ça arrive.",
         "npc": 790070,
         "next": 80210317
       },
       {
         "id": 80210317,
-        "content": "行。客官您再等等。不过，刚刚您说飘零人吃起来自有一套，要不多讲讲呗，反正现在店里也没人，想听。",
+        "content": "Très bien. Patientez encore un instant, cher client. Mais au fait... vous disiez que les Vagabonds mangent selon leurs propres règles. Racontez donc. La salle est vide, j’aimerais bien écouter.",
         "npc": 790069,
         "next": 80210318
       },
       {
         "id": 80210318,
-        "content": "也罢，我今天来找的这位飘零人前辈，当年也以做得一手好菜闻名，被称作庖侠。",
+        "content": "Soit. Le Vagabond que je cherche aujourd’hui était autrefois célèbre pour sa cuisine. On le surnommait le Vagabond des Fourneaux.",
         "npc": 790071,
         "next": 80210319
       },
       {
         "id": 80210319,
-        "content": "他老人家最知名的一手是“若木无觅衔烛龙”，号称是能把维系大风九章的那白龙斩了做宴席。",
+        "content": "Son plat le plus fameux s’appelait « <I>Le Dragon-Flamme inaccessible </>». On racontait qu’il avait abattu le Dragon d’Argent qui soutenait les Neuf Chapitres de Dafeng pour en faire un banquet.",
         "npc": 790071,
         "next": 80210320
       },
       {
         "id": 80210320,
-        "content": "实际上呢，是用各种飞禽走兽的肉分别以掌力击碎，再绞制成型。这样一来，一口下去可以尝出百般滋味，所以敢自称是龙肉。",
+        "content": "En réalité, il écrasait des viandes de bêtes et d’oiseaux variés à coups de paume, puis les façonnait ensemble. Une bouchée, cent saveurs — d’où le nom de « chair de dragon ».",
         "npc": 790071,
         "next": 80210321
       },
       {
         "id": 80210321,
-        "content": "然后再又以极其滑嫩的豆腐作为基底，与诸多畜类的脊髓骨髓一同炒制，让它们的香味渗入豆腐中，号称龙髓。",
+        "content": "Ensuite, il utilisait du tofu d’une douceur extrême comme base, sauté avec des moelles animales, afin que les parfums pénètrent la chair blanche. Il appelait cela la « moelle de dragon ».",
         "npc": 790071,
         "next": 80210322
       },
       {
         "id": 80210322,
-        "content": "客官您说笑了，豆腐就是豆腐，怎么能号称是龙髓呢。要这么说，我们店卖的油豆腐，也能叫炸龙髓了。",
+        "content": "Allons donc ! Du tofu reste du tofu. Comment appeler ça de la moelle de dragon ? À ce compte-là, nos tofu frits seraient de la « moelle de dragon frit ».",
         "npc": 790069,
         "next": 80210323
       },
       {
         "id": 80210323,
-        "content": "哎，我也是听师父说过而已。那位铁掌移山刘纬甫早早金盆洗手，如今没人知道他身在何方。",
+        "content": "Je ne fais que répéter ce que mon maître racontait. Liu Weifu a quitté le monde martial depuis longtemps. Nul ne sait où il vit aujourd’hui.",
         "npc": 790071,
         "next": 80210324
       },
       {
         "id": 80210324,
-        "content": "说半天说得我都流口水了，原来您没吃过啊。行了那别说这些虚无缥缈的了，来尝尝这个吧，我们店招牌的油豆腐。",
+        "content": "Tout ce discours me donne faim... et tu n’as même jamais goûté ? Assez rêvé. Goûte plutôt ça — la spécialité de la maison.",
         "npc": 790069,
         "next": 80210325
       },
       {
         "id": 80210325,
-        "content": "……我来尝尝。",
+        "content": "... Très bien, je goûte.",
         "npc": 790071
       }
     ]
@@ -4231,8 +4231,8 @@
   {
     "id": 150304,
     "charId": 1503,
-    "name": "Jeunesse fanée sous la neige du temps",
-    "desc": "Dans sa jeunesse, l’épée guide toujours vers les sommets. Plus on avance, moins il reste de compagnons. Au faîte du monde, seule la neige s’accumule sur les épaules.",
+    "name": "Jeunesse aux tempes fanées",
+    "desc": "Dans la jeunesse, on apprend l’épée en visant toujours plus haut. On marche, on marche encore — les compagnons se font rares. Parvenu au sommet, il ne reste plus personne. Seule la neige demeure, s’accumulant sur la tête.",
     "memoryName": "Chroniques d’un errant",
     "memoryDesc": "Un recueil de récits à demi vrais, jadis en vogue. Combien de passés tourmentés et de lames croisées y sommeillent, nul ne saurait le dire.",
     "reward": 7053,
@@ -4242,392 +4242,392 @@
     "dialogues": [
       {
         "id": 80210407,
-        "content": "跟着刻舟到了一处相当荒僻的山间，想来这就是他们此前比武论剑之地了。",
+        "content": "Vous suivez Kezhou jusqu’au cœur d’une région montagneuse reculée. C’est sans doute ici que se tenait autrefois l’épreuve de l’épée.",
         "next": 80210408
       },
       {
         "id": 80210408,
-        "content": "但见满目新绿，飞泉直下。是适合比试的场地，只是，似乎有些过于冷清……",
+        "content": "Partout, une verdure nouvelle s’étend à perte de vue ; des cascades dévalent la roche en nappes argentées. Le lieu se prêterait idéalement à un affrontement... Et pourtant, un silence étrange y règne.",
         "next": 80210409
       },
       {
         "id": 80210409,
-        "content": "怎么只有我们俩，不是说有头有脸的飘零人都会来吗？",
+        "content": "Pourquoi on est que tous les deux ? Tu disais que tous les Vagabonds importants viendraient.",
         "npc": 790008,
         "next": 80210410
       },
       {
         "id": 80210410,
-        "content": "说来惭愧，现在有头有脸的飘零人也不剩几位了，正所谓江湖儿女日渐少。",
+        "content": "À vrai dire... il ne reste plus beaucoup de Vagabonds dignes de ce nom. Les gens du Jianghu se font de plus en plus rares.",
         "npc": 790067,
         "next": 80210411
       },
       {
         "id": 80210411,
-        "content": "且不说这次，就是上一次参加比武论剑的飘零人，仅有四位而已。",
+        "content": "Et ce n’est pas seulement cette fois-ci. La dernière fois déjà, il n’y avait que quatre Vagabonds.",
         "npc": 790067,
         "next": 80210412
       },
       {
         "id": 80210412,
-        "content": "第一位呢，便是我的师父宴山亭。虽然他已经离世，但是在离世前对这比武论剑念念不忘，让我代他出战。",
+        "content": "Le premier, c’était mon maître, Yan Shanting. Il est mort depuis, mais jusqu’à la fin il n’a jamais cessé de penser à cette épreuve. Il m’a demandé de combattre à sa place.",
         "npc": 790067,
         "next": 80210413
       },
       {
         "id": 80210413,
-        "content": "于是我就走访了各处，找到了另外三位当年参加了比武论剑的高手。",
+        "content": "Alors je suis allé retrouver les trois autres qui avaient participé autrefois.",
         "npc": 790067,
         "next": 80210414
       },
       {
         "id": 80210414,
-        "content": "我先找了其中一位善于用剑的女侠，也是上次论剑时夺得魁首的天下第一。但却连面也没见到。",
+        "content": "La première était une grande épéiste — celle qui avait remporté la victoire la dernière fois, la véritable « Première sous le Ciel ». Mais je ne l’ai même pas vue.",
         "npc": 790067,
         "next": 80210415
       },
       {
         "id": 80210415,
-        "content": "我师父一直说她爱剑成痴，大部分时候甚至不愿意拔剑，只以剑鞘伤人，又早早归隐，远离江湖，所以并没有被大风九章盯上。",
+        "content": "Mon maître disait qu’elle aimait l’épée à l’excès. Souvent, elle refusait même de la dégainer, se contentant de frapper avec le fourreau. Elle s’est retirée très tôt du monde, loin des conflits — et ainsi, elle n’a jamais attiré l’attention des Neuf Chapitres de Dafeng.",
         "npc": 790067,
         "next": 80210416
       },
       {
         "id": 80210416,
-        "content": "现如今，却把自己的佩剑拿去当孩子的玩物，想必是不愿踏足江湖，只想躲进小楼，远离纷扰，那么我也没有多打扰她。",
+        "content": "Aujourd’hui, elle laisse même ses enfants jouer avec son arme. Elle ne veut plus remettre les pieds dans le Jianghu. Alors je ne l’ai pas dérangée.",
         "npc": 790067,
         "next": 80210417
       },
       {
         "id": 80210417,
-        "content": "师父一直说她有大智慧，我此前都不明白，这次见了……不，这次没见到她，但是也已经明白师父为什么会这么说了。",
+        "content": "Mon maître disait toujours qu’elle possédait une grande sagesse. Je ne comprenais pas... Mais cette fois, même sans la voir, j’ai compris pourquoi.",
         "npc": 790067,
         "next": 80210418
       },
       {
         "id": 80210418,
-        "content": "嗯，换做是我的话，我应该也会这么做。",
+        "content": "À sa place... j’aurais sans doute fait pareil.",
         "npc": 790008,
         "next": 80210419
       },
       {
         "id": 80210419,
-        "content": "再一位呢，唤作鸣鸾，比我年长一点，自幼就被认定是习武的天才，年少成名，以弱冠之龄便能参加比武论剑。",
+        "content": "Le deuxième s’appelle Mingluan. Un peu plus âgé que moi. Un prodige reconnu dès l’enfance, célèbre très jeune, capable de participer à l’épreuve avant même l’âge adulte.",
         "npc": 790067,
         "next": 80210420
       },
       {
         "id": 80210420,
-        "content": "他本有一位红颜知己，剑法同样精微，一直与他快意恩仇，人人都觉得他们是一对璧人，天作之合。",
+        "content": "Il avait une compagne, une femme qu’il aimait. Son épée était aussi fine que la sienne. Ils parcouraient le monde ensemble, vivant leurs rancunes et leurs justices. Tout le monde pensait qu’ils étaient faits l’un pour l’autre.",
         "npc": 790067,
         "next": 80210421
       },
       {
         "id": 80210421,
-        "content": "但是再多的快意恩仇也会让人厌倦，那位红颜知己厌倦了终日飘零，不得不躲避应天尉追杀的生活。",
+        "content": "Mais à force d’errance, même la liberté lasse. Elle s’est fatiguée de fuir sans cesse,\nde vivre sous la menace des Magistrats de Yingtian.",
         "npc": 790067,
         "next": 80210422
       },
       {
         "id": 80210422,
-        "content": "于是他们相约，在某日一起离开华胥，去大陆的其他地方，过安稳日子。",
+        "content": "Ils s’étaient promis de quitter Huaxu ensemble, pour mener ailleurs une vie paisible.",
         "npc": 790067,
         "next": 80210423
       },
       {
         "id": 80210423,
-        "content": "只是他们许约的那一日，偏偏又是论剑的日子。而鸣鸾被年少盛名所累，想要等到比武结束后，夺了第一的名号后与那位知己再一同离开华胥。",
+        "content": "Mais le jour convenu tombait... le jour même de l’épreuve. Mingluan, prisonnier de sa réputation, a voulu combattre une dernière fois, remporter le titre... puis partir avec elle.",
         "npc": 790067,
         "next": 80210424
       },
       {
         "id": 80210424,
-        "content": "但高手对决，又怎么会几招内分出胜负，他们斗了三个日夜。等鸣鸾比试结束，前去赴约时，眼前所见只有江上数峰青山，不见人影。",
+        "content": "Les combats entre maîtres ne se décident pas en quelques échanges. Ils se sont battus trois jours et trois nuits. Quand il est allé au rendez-vous, il n’a vu que des montagnes bleutées au bord du fleuve. Personne ne l’attendait.",
         "npc": 790067,
         "next": 80210425
       },
       {
         "id": 80210425,
-        "content": "应当是那位红颜知己见他仍然是放不下名声，感到失望而独自离开。",
+        "content": "Elle a dû comprendre qu’il n’abandonnerait jamais vraiment sa renommée... et elle est partie seule.",
         "npc": 790067,
         "next": 80210426
       },
       {
         "id": 80210426,
-        "content": "鸣鸾最初不以为意，但是很快便思念成疾，察觉到这世界上有比所谓的“天下第一”更重要的事物。",
+        "content": "Au début, il n’y a pas prêté attention. Puis le manque est devenu une maladie. Il a compris qu’il existait quelque chose de plus important que le titre de « Premier sous le Ciel ».",
         "npc": 790067,
         "next": 80210427
       },
       {
         "id": 80210427,
-        "content": "于是他也离开了华胥，寻觅至今，却还是没有寻到。",
+        "content": "Il a quitté Huaxu à son tour. Il la cherche encore. Sans jamais la retrouver.",
         "npc": 790067,
         "next": 80210428
       },
       {
         "id": 80210428,
-        "content": "所以这一次比武论剑，他不参加。",
+        "content": "Alors cette épreuve... il n’y participera pas.",
         "npc": 790067,
         "next": 80210429
       },
       {
         "id": 80210429,
-        "content": "至于最后一位，被称作庖侠，妙手调羹的本领是一绝，所制作的“若木无觅衔烛龙”更是举世无双。",
+        "content": "Quant au dernier, on l’appelait le Vagabond des Fourneaux. Un maître cuisinier hors pair. Son plat «<I> Le Dragon-Flamme inaccessible</> » était sans égal.",
         "npc": 790067,
         "next": 80210430
       },
       {
         "id": 80210430,
-        "content": "但在他某次设宴招待客人时，却被歹人在饭菜中下了毒，青花的瓷盘本来盛的是珍果佳肴，却沾染了血。",
+        "content": "Un jour, lors d’un banquet, quelqu’un a empoisonné les mets. Les porcelaines bleues et blanches, censées porter des délices, ont été souillées de sang.",
         "npc": 790067,
         "next": 80210431
       },
       {
         "id": 80210431,
-        "content": "这毒虽然不是他下的，但毕竟饭菜都经过他手，于是也被大风九章认定为有罪。",
+        "content": "Même s’il n’était pas responsable, les plats étaient passés par ses mains. Les Neuf Chapitres l’ont déclaré coupable.",
         "npc": 790067,
         "next": 80210432
       },
       {
         "id": 80210432,
-        "content": "他的武艺，要应对应天尉倒也不难。但一旦反抗，那简直如同是自认有罪，所以他就束手就擒，受到惩罚，跛了一足。",
+        "content": "Il aurait pu repousser les Magistrats de Yingtian. Mais résister, c’était reconnaître sa faute. Alors il s’est laissé arrêter. On l’a puni. Il en est sorti boiteux.",
         "npc": 790067,
         "next": 80210433
       },
       {
         "id": 80210433,
-        "content": "等他重回自由身时，也是心灰意冷，不再以飘零人自居，专心磨练厨艺去了，炸油豆腐是一绝。",
+        "content": "Une fois libre, il n’avait plus goût à rien. Il a renoncé au titre de Vagabond, et s’est consacré à la cuisine. Ses tofu frits... sont inégalables.",
         "npc": 790067,
         "next": 80210434
       },
       {
         "id": 80210434,
-        "content": "难道说前几天你带给我的油豆腐就是……",
+        "content": "Attends... Les tofu que tu m’as apportés l’autre jour...",
         "npc": 790008,
         "next": 80210435
       },
       {
         "id": 80210435,
-        "content": "不，不是，我什么都没说，你什么都没听见。",
+        "content": "Non. Je n’ai rien dit. Tu n’as rien entendu.",
         "npc": 790067,
         "next": 80210436
       },
       {
         "id": 80210436,
-        "content": "噢……我懂了。",
+        "content": "... D’accord.",
         "npc": 790008,
         "next": 80210437
       },
       {
         "id": 80210437,
-        "content": "不过这么一来……岂不是来参加比武的，只有代表宴山亭师父的你？",
+        "content": "Donc, en résumé... Il n’y a que toi pour représenter ton maître ?",
         "npc": 790008,
         "next": 80210438
       },
       {
         "id": 80210438,
-        "content": "没错，这次比武论剑，只有我代表师父参加。",
+        "content": "Oui. Cette fois-ci, je suis le seul à représenter mon maître.",
         "npc": 790067,
         "next": 80210439
       },
       {
         "id": 80210439,
-        "content": "这就是现在飘零人的现状啊，曾几何时他们聚啸山林，没有什么特意需要遵从的法条，只需要遵从内心与手中剑。",
+        "content": "Voilà où en sont les Vagabonds, aujourd’hui. Autrefois, ils hurlaient dans les montagnes, ne suivant que leur cœur et leur épée.",
         "npc": 790067,
         "next": 80210440
       },
       {
         "id": 80210440,
-        "content": "刀光剑影里有着一个又一个快意恩仇的故事。",
+        "content": "Chaque éclair de lame portait une histoire.",
         "npc": 790067,
         "next": 80210441
       },
       {
         "id": 80210441,
-        "content": "在大风九章之下，没有所谓的路见不平拔刀相助，大家都畏惧触发法条，被应天尉盯上。",
+        "content": "Mais sous les Neuf Chapitres, plus personne n’ose dégainer pour autrui. Tout le monde craint d’attirer l’attention des Magistrats de Yingtian.",
         "npc": 790067,
         "next": 80210442
       },
       {
         "id": 80210442,
-        "content": "即便是号称自由自在的飘零人，也无法免于受到大风九章的羁绊。",
+        "content": "Même ceux qui se prétendent libres, les Vagabonds, ne peuvent échapper aux entraves des Neuf Chapitres de Dafeng.",
         "npc": 790067,
         "next": 80210443
       },
       {
         "id": 80210443,
-        "content": "所以，你才会想要推翻大风九章？",
+        "content": "C’est pour ça que tu veux renverser les Neuf Chapitres ?",
         "npc": 790008,
         "next": 80210444
       },
       {
         "id": 80210444,
-        "content": "只能说是原因之一吧，还有其他的新仇旧恨。",
+        "content": "Disons que c’est l’une des raisons. Il y a aussi d’anciennes rancunes... et de nouvelles.",
         "npc": 790067,
         "next": 80210445
       },
       {
         "id": 80210445,
-        "content": "有时候我也在想，有大风九章在，至少大部分人能够安居，去反对它是不是真的有意义。",
+        "content": "Parfois je me demande si m’y opposer a un sens, puisque tant de gens vivent en paix grâce à eux.",
         "npc": 790067,
         "next": 80210446
       },
       {
         "id": 80210446,
-        "content": "但这次为了准备论剑拜访了诸位前辈，看他们也都过得不尽如人意，那么在一片祥和之下，到底有多少不平之事，又有谁知道。",
+        "content": "Mais après avoir vu le sort de ces anciens... je me demande combien d’injustices se cachent sous cette harmonie.",
         "npc": 790067,
         "next": 80210447
       },
       {
         "id": 80210447,
-        "content": "我作为飘零人，就不应该袖手旁观。虽说江湖儿女日渐少，但也有句话说得好嘛，天下风云出我辈。",
+        "content": "En tant que Vagabond, je ne peux pas détourner le regard. Même si nous sommes peu nombreux, on dit bien que les tempêtes naissent toujours d’une génération nouvelle.",
         "npc": 790067,
         "next": 80210448
       },
       {
         "id": 80210448,
-        "content": "长剑在手，人在江湖，即便如孤鹜飘零，也能为天下之先，一览他人未见之景，是好事。",
+        "content": "Une épée à la main, le cœur dans le monde — même seul, on peut ouvrir la voie et voir ce que les autres n’ont jamais vu.",
         "npc": 790067,
         "next": 80210449
       },
       {
         "id": 80210449,
-        "content": "行应行之路，竟未竟之志。我想，我大概明白所谓的飘零人为什么能延续至今了。",
+        "content": "Marcher sur la route qu’on doit suivre. Achever les volontés laissées en suspens. Je crois comprendre, maintenant, pourquoi les Vagabonds n’ont jamais disparu.",
         "npc": 790008,
         "next": 80210450
       },
       {
         "id": 80210450,
-        "content": "并且我也相信，此后比武论剑之人，肯定不会像今天这样，只有你孤身一人的。",
+        "content": "Et je suis sûr que la prochaine épreuve ne se déroulera pas avec toi seul.",
         "npc": 790008,
         "next": 80210451
       },
       {
         "id": 80210451,
-        "content": "哈哈哈哈，好，好，好，说得好。",
+        "content": "Hahaha ! Bien dit. Très bien dit.",
         "npc": 790067,
         "next": 80210452
       },
       {
         "id": 80210452,
-        "content": "不过嘛，我可没有为没有人论剑感到难过，不如说，这可是大好事——",
+        "content": "Mais ne crois pas que l’absence des autres m’attriste. Au contraire — c’est parfait.",
         "npc": 790067,
         "next": 80210453
       },
       {
         "id": 80210453,
-        "content": "我宣布，因为其他三位比武者的缺席，宴山亭的弟子刻舟，正式成为华胥第一飘零人。",
+        "content": "Je déclare donc qu’en raison de l’absence des autres combattants, moi, Kezhou, disciple de Yan Shanting, deviens officiellement le Premier Vagabond de Huaxu.",
         "npc": 790067,
         "next": 80210454
       },
       {
         "id": 80210454,
-        "content": "就这么宣布了？",
+        "content": "Tu annonces ça comme ça ?",
         "npc": 790008,
         "next": 80210455
       },
       {
         "id": 80210455,
-        "content": "那不然呢？我师父就让我这么做的。我记得清清楚楚，当时他和我说，如果上一届的参加者们不想参加比武，那么也不用强行劝说。",
+        "content": "Et pourquoi pas ? C’est mon maître qui me l’a demandé. Je me souviens très bien de ses mots : si les participants de la précédente épreuve ne souhaitent pas revenir, inutile de les forcer.",
         "npc": 790067,
         "next": 80210456
       },
       {
         "id": 80210456,
-        "content": "毕竟，如果参加人数少了，那么赢到最后的可能性也会跟着变大，说不定只要比试一场就能夺冠了。",
+        "content": "Moins il y a de participants, plus les chances de gagner sont grandes. Peut-être même qu’un seul combat suffit !",
         "npc": 790067,
         "next": 80210457
       },
       {
         "id": 80210457,
-        "content": "师父还是太保守了，实际上一场都没比试，这才叫真正的天下无敌！",
+        "content": "Mais il était trop prudent. Moi, je n’ai même pas eu besoin de combattre. Ça, c’est la vraie invincibilité.",
         "npc": 790067,
         "next": 80210458
       },
       {
         "id": 80210458,
-        "content": "我还以为你会再低落一会儿。",
+        "content": "Je pensais que tu serais plus abattu.",
         "npc": 790008,
         "next": 80210459
       },
       {
         "id": 80210459,
-        "content": "黯然神伤刻舟求剑这种事情，不适合我，有其他人做就行了。",
+        "content": "La mélancolie et les soupirs, ça convient mieux à d’autres que moi.",
         "npc": 790067,
         "next": 80210460
       },
       {
         "id": 80210460,
-        "content": "我要做的，是斩落师父，师兄，以及诸位前辈们为之郁结的大风九章。",
+        "content": "Ce que je dois faire, c’est trancher ce qui a enchaîné mon maître, mes aînés, et tant de Vagabonds : les Neuf Chapitres de Dafeng.",
         "npc": 790067,
         "next": 80210461
       },
       {
         "id": 80210461,
-        "content": "等到这件事告一段落后，我大概才能和那些飘零人小说中描写的一样，退隐山林了。",
+        "content": "Après ça... peut-être que je me retirerai dans les montagnes, comme dans les romans.",
         "npc": 790067,
         "next": 80210462
       },
       {
         "id": 80210462,
-        "content": "依你的性格，我感觉你闲不下来。",
+        "content": "Te connaissant, tu ne tiendras pas en place.",
         "npc": 790008,
         "next": 80210463
       },
       {
         "id": 80210463,
-        "content": "确实，那就等那时再说吧。",
+        "content": "C’est vrai. On verra bien le moment venu.",
         "npc": 790067,
         "next": 80210464
       },
       {
         "id": 80210464,
-        "content": "今日拔得头筹成为第一飘零人，应该开心过活，不去管那以后的事。来吧，朋友，且歌且醉，且醉且歌！",
+        "content": "Aujourd’hui, je suis devenu le Premier Vagabond. Il faut vivre dans la joie. Allons, mon {性别:ami|amie} — chantons et buvons ! Buvons en chantant, chantons en buvant !",
         "npc": 790067,
         "next": 80210465
       },
       {
         "id": 80210465,
-        "content": "那些曾经锋芒毕露的，生死相许的，快意恩仇的，都早已成为风中一缕轻尘。",
+        "content": "Les lames éclatantes, les serments de vie et de mort, les passions ardentes... tout cela s’est dissipé dans le vent.",
         "next": 80210466
       },
       {
         "id": 80210466,
-        "content": "最终都只剩下满头霜雪与轻叹一声，少年子弟江湖老。"
+        "content": "Il ne reste plus que des cheveux blanchis par le givre du temps, et un soupir léger : les enfants du Jianghu ont vieilli."
       },
       {
         "id": 80210401,
-        "content": "一大早的，还没睡醒呢就把人吵起来，是要去哪儿？",
+        "content": "De si bon matin... Tu réveilles les gens sans prévenir. On va où, au juste ?",
         "npc": 790008,
         "next": 80210402
       },
       {
         "id": 80210402,
-        "content": "比武论剑，二十年一次。",
+        "content": "À l’épreuve de l’épée. Elle n’a lieu qu’une fois tous les vingt ans.",
         "npc": 790067,
         "next": 80210403
       },
       {
         "id": 80210403,
-        "content": "说这个我就不困了，谁和谁啊？",
+        "content": "Ah, là je suis {性别:réveillé|réveillée}. Qui contre qui ?",
         "npc": 790008,
         "next": 80210404
       },
       {
         "id": 80210404,
-        "content": "华胥有头有脸的飘零人理应都会来，之前已经举行过七八次了，大家会在山巅互相比试，直到分出胜负。",
+        "content": "Tous les Vagabonds de Huaxu un tant soit peu renommés sont censés venir. Ça a déjà eu lieu sept ou huit fois. On se retrouve au sommet, on se mesure... jusqu’à ce qu’il n’en reste qu’un.",
         "npc": 790067,
         "next": 80210405
       },
       {
         "id": 80210405,
-        "content": "那么这次，会有多少人参加？",
+        "content": "Et cette fois, combien seront-ils ?",
         "npc": 790008,
         "next": 80210406
       },
       {
         "id": 80210406,
-        "content": "等到了你就知道了。",
+        "content": "Tu verras bien en arrivant.",
         "npc": 790067
       }
     ]

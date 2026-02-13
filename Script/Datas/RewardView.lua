@@ -1717,6 +1717,9 @@ T.RT_192 = {
   [16] = 43003,
   [17] = 43006
 }
+T.RT_193 = {
+  [1] = 220
+}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -4092,21 +4095,21 @@ return ReadOnly("RewardView", {
   },
   [92004] = {
     DropType = T.RT_34,
-    Id = T.RT_57,
+    Id = T.RT_193,
     Quantity = T.RT_58,
     RewardViewId = 92004,
     Type = T.RT_36
   },
   [92005] = {
     DropType = T.RT_34,
-    Id = T.RT_57,
+    Id = T.RT_193,
     Quantity = T.RT_59,
     RewardViewId = 92005,
     Type = T.RT_36
   },
   [92006] = {
     DropType = T.RT_34,
-    Id = T.RT_57,
+    Id = T.RT_193,
     Quantity = T.RT_61,
     RewardViewId = 92006,
     Type = T.RT_36
@@ -5537,6 +5540,16 @@ return ReadOnly("RewardView", {
     RewardViewId = 1030111,
     Type = T.RT_12
   },
+  [1030112] = {
+    Id = {
+      [1] = 209,
+      [2] = 211,
+      [3] = 208,
+      [4] = 207
+    },
+    RewardViewId = 1030112,
+    Type = T.RT_9
+  },
   [1040001] = {
     Id = {
       [1] = 41007,
@@ -5899,7 +5912,7 @@ return ReadOnly("RewardView", {
       [4] = 201,
       [5] = 202,
       [6] = 10100,
-      [7] = 30095,
+      [7] = 30109,
       [8] = 41046,
       [9] = 102,
       [10] = 208,

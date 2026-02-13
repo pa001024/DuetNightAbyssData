@@ -2,6 +2,7 @@ local ReturnUtils = require("BluePrints.UI.WBP.Activity.Widget.Return.ReturnUtil
 local GuildWarUtils = require("BluePrints.UI.WBP.Activity.Widget.GuildWar.GuildWarUtils")
 local AprilFoolDayUtils = require("BluePrints.UI.WBP.Activity.Widget.Fool.AprilFoolDayUtils")
 local AutoChessRewardModel = require("BluePrints.UI.AutoChess.WBP_AutoChess_Reward_Model")
+local ActivityUtils = require("BluePrints.UI.WBP.Activity.ActivityUtils")
 local Component = {}
 
 function Component:EnterWorld()
@@ -116,11 +117,21 @@ function Component:_OnPropChangeCommonQuestActivity(EventIDs, OldValue)
   GuildWarUtils.RefreshQuestReddot()
   AprilFoolDayUtils.RefreshQuestReddot()
   ReturnUtils.RefreshComeBackTaskQuestReddot()
-  AutoChessRewardModel:RefreshReddotInfo()
+  if ActivityUtils.CheckEventIsOpen(CommonConst.AutoChessEventId, nil, false) then
+    AutoChessRewardModel:RefreshReddotInfo()
+  end
+  for _, EventId in pairs(EventIDs) do
+    if EventId == CommonConst.AutoChessEventId then
+      EventManager:FireEvent(EventID.RefreshAcvitityRewardPanel)
+    end
+  end
 end
 
 function Component:OnLoginSuccess()
   AprilFoolDayUtils.RefreshQuestReddot(true)
+  if ActivityUtils.CheckEventIsOpen(CommonConst.AutoChessEventId, nil, false) then
+    AutoChessRewardModel:RefreshReddotInfo(true)
+  end
 end
 
 return Component

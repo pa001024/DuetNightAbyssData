@@ -5381,11 +5381,11 @@
   },
   {
     "id": 200313,
-    "name": "花茶的味道",
+    "name": "Le goût du thé d’autrefois",
     "chapterName": "Chroniques du Monde",
-    "episode": "花茶的味道",
-    "desc": "无",
-    "detail": "浮星埠不远处的茶馆旁传来了阵阵人声，听起来像是在争执些什么。想来又有热闹可以凑了，不如去看看。",
+    "episode": "Le goût du thé d’autrefois",
+    "desc": "Aucune",
+    "detail": "Près du Quai-aux-Étoiles, des voix s’élèvent du côté d’une maison de thé. On dirait une dispute... Voilà une scène qui mérite un détour. Allons voir.",
     "type": 3,
     "reward": [
       50609
@@ -5434,11 +5434,11 @@
   },
   {
     "id": 200314,
-    "name": "虬先生的投资",
+    "name": "L’investissement de Maître Qiu",
     "chapterName": "Chroniques du Monde",
-    "episode": "虬先生的投资",
-    "desc": "与虬先生聊聊",
-    "detail": "虬先生意味深长地看着你微笑，似乎还有什么话想说，去看看他葫芦里卖的什么药吧。",
+    "episode": "L’investissement de Maître Qiu",
+    "desc": "Parler à Maître Qiu",
+    "detail": "Maître Qiu vous observe partir avec un sourire énigmatique. On dirait qu’il a encore quelque chose en tête... Allez donc voir ce qu’il mijote.",
     "type": 4,
     "reward": [
       50610
@@ -5455,7 +5455,7 @@
     "name": "La plus grande crise qu’ait connue Port-des-Brumes !",
     "chapterName": "Chroniques du Monde",
     "episode": "La plus grande crise qu’ait connue Port-des-Brumes !",
-    "desc": "与白聊聊",
+    "desc": "Parler à Snow",
     "detail": "Qui aurait cru que le Marché Voilé vendrait en plein jour quelque chose d’aussi dangereux que des « Coups de Grâce » ? Il faut les arrêter avant que la situation ne s’aggrave.",
     "type": 3,
     "reward": [

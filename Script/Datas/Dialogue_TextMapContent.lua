@@ -13353,10 +13353,6 @@ CameraMoveTo{_delay{0},TargetPosition{"-68.912094,-67.938797,184.066406,0.000075
           DialoguePanelType = "{type:showtext;topic:READ_NAME_2000046;content:READ_TEXT_2000046}",
           GUID = "191D55F2",
           Subtitle = [[
-Galea Theatre Props Inventory
-
-A detailed log maintained by the backstage crew, documenting the management of props at Galea Theatre over the past two weeks.
-
 8-Oct
 Organized: Costumes and sleeping bags.
 Logged by: Mondry
@@ -19024,13 +19020,11 @@ LookAt{_delay{2.1},LookAtDescription{"100360:n(100001)"}},
           DialoguePanelType = "{type:showtext;topic:READ_NAME_2000047;content:READ_TEXT_2000047}",
           GUID = "191E8C30",
           Subtitle = [[
-The Emperor's signet ring. Crafted entirely from pure gold, this prestigious honour is bestowed exclusively upon those who have made extraordinary contributions to the Empire.
-
 Recipient: Rhythm Fischer, serving in the Icelake Escort under the 6th Legion in the Cocytus Region.
 For demonstrating decisive leadership, exemplary bravery, and exceptional efficiency in multiple Filthoid-clearing operations over the years.
 For playing an irreplaceable role in maintaining public order and ensuring the safety of the region.
 Upon the assessment of the Legion, and by the decree of His Majesty Julius, Rhythm Fischer is hereby awarded the Emperor's signet ring and the rank of Warrant Officer. Let her serve as an inspiration to all soldiers, urging them to strive ever higher for the Empire's glory.
-All glory to His Majesty.]],
+All glory to our Emperor.]],
           VoiceName = "voice/$Locale$/story/1003/100341/191E8C30"
         },
         [10034105] = {
@@ -19045,7 +19039,7 @@ All glory to His Majesty.]],
           DialogueId = 10034106,
           DialoguePanelType = "{type:showtext;topic:READ_NAME_2000048;content:READ_TEXT_2000048}",
           GUID = "191E8C84",
-          Subtitle = "Buried beneath a pile of old clutter, this yellowed newspaper recounts a tragic incident from years ago.\n\nFilthoids Are Exceptionally Dangerous — Do Not Be Fooled by Their Appearances!\nOn September 24th, an egregious Filthoid incident occurred in Icelake. Following an extensive investigation conducted by the 6th Legion's Escort Unit, the details of the tragedy have been confirmed:\nOn September 13th, local residents Mr and Mrs Fischer encountered a gravely injured young man named Robie Brown along the roadside at Lamenting Lake. Out of compassion, the Fischers took him into their home and cared for him.\nHowever, Robie Brown was a Deteriorator who had evaded the Empire's routine screenings and fled to the outskirts of the city. While receiving aid from the Fischers, he deliberately concealed his condition. Ten days later, Brown succumbed to his transformation, becoming a Filthoid and massacring dozens of citizens in Icelake's southern district, including Mr and Mrs Fischer. The 6th Legion's Escort intervened swiftly to suppress the chaos, but the damage was already done.\nThe incident left 18 dead (including 3 Solarians) and 34 others injured. Citizens are hereby reminded: Do not provide shelter to unidentified Charon individuals under any circumstances. If you suspect someone is a Deteriorator, report them to the Security Bureau immediately. They are and will always remain humanity's enemies. No exceptions. Be advised that harbouring Deteriorators or concealing their presence is a capital offence punishable by death under Article 54 of the Hyperborean Criminal Code.",
+          Subtitle = "Deteriorators Are Exceptionally Dangerous — Do Not Be Fooled by Their Appearance!\nOn September 24th, an egregious case of Deterioration occurred in Icelake, with devastating consequences. Following an comprehensive investigation by the 6th Legion's Escort Unit, the details of the tragedy have now been confirmed:\nOn September 13th, local residents Mr and Mrs Fischer encountered a gravely injured young man, Robie Brown, collapsed by the roadside near Lamenting Lake. Acting out of compassion, they brought him into their home and cared for him.\nHowever, Robie Brown was a Deteriorator — one who had evaded the Empire's routine screenings and fled to the outskirts of the city. While receiving aid from the Fischers, Brown deliberately concealed his condition. Ten days later, he succumbed to the transformation, becoming a Filthoid. The resulting massacre in Icelake's southern district claimed the lives of dozens, including Mr and Mrs Fischer. The 6th Legion's Escort responded swiftly and succeeded in subduing the threat — but not before the damage was done.\n\nThe incident resulted in 18 deaths (including 3 Solarian citizens) and 34 injuries. Citizens are reminded: under no circumstances should you provide shelter to unidentified Charon individuals. If you suspect someone of being a Deteriorator, report them to the Security Bureau immediately. Deteriorators are — and will remain — humanity's enemies. No exceptions. Harbouring Deteriorators or concealing their condition is a capital offence under Article 54 of the Hyperborean Criminal Code, punishable by death.",
           VoiceName = "voice/$Locale$/story/1003/100341/191E8C84"
         },
         [10034107] = {
@@ -25024,22 +25018,7 @@ PlayAnimation{ActorId{200021},AnimationId{"Talk02_Start"},Duration{1}}
           DialoguePanelType = "{type:showtext;topic:READ_NAME_2000049;content:READ_TEXT_2000049}",
           GUID = "191F557E",
           NextDialogue = 10035332,
-          Subtitle = [[
-Brawl at Galea Theatre
-
-Date: October 9th, 8:30 PM
-
-Reported By: Letizia Putsch, Director of the Magic Flute Troupe
-
-Parties Involved: Parsifal Snowfield (Lead Performer), Susanna Rossi (Lead Performer), Matthew Bernard (Audience), Phillipe Francisco (Audience)
-...
-
-Incident Details: Alleged conflict between troupe members and front-row audience members. Alleged assault on performers by certain audience members. (Several pages of the incident report appear to have been torn out.)
-
-Conclusion: Evidence deemed insufficient. Case dismissed.
-
-Remarks: Performances of Children From the Snowfield have been temporarily suspended. Resumption dates remain unspecified.
-I had hoped to watch this play with Blues and make up for the one we missed years ago, but it seems unlikely to happen anytime soon.]],
+          Subtitle = "Brawl at Galea Theatre\n\nDate: October 9th, 8:30 PM\n\nFiled by: Letizia Putsch, Director of the Magic Flute Troupe\n\nInvolved Parties: Parsifal Snowfield (Lead Performer), Susanna Rossie (Lead Performer), Mathew Bernard (Audience), Feeley Francisco (Audience)\n...\n\nIncident Summary: A physical altercation reportedly broke out between troupe members and two front-row audience members. Alleged assault of performers by said audience members. (Several pages of the incident report appear to have been torn out.)\n\nConclusion: Evidence found to be insufficient. Case dismissed.\n\nRemarks: Performances of Children From the Snowfield have been suspended until further notice. No resumption date announced.\nI'd hoped to watch this one with Blues — to finally make up for the show we missed all those years ago. But I guess... that won't be happening any time soon.",
           VoiceName = "voice/$Locale$/story/1003/100353/191F557E"
         },
         [10035332] = {
@@ -30867,7 +30846,7 @@ CameraMoveTo{TargetPosition{"252.603516,-1139.067505,153.863281,0.000024,-1.3470
           Content = "“如果我那颗寒冰的心，也能变暖些就好了。”",
           DialogueId = 10037106,
           GUID = "192078B4",
-          Subtitle = "\"My frozen heart, it's been cold for my lifetime. How I wish I could feel the warmth inside.\"",
+          Subtitle = "\"My frozen heart, it's been cold for my lifetime. How I wish I could feel the warmth inside.\" ",
           VoiceName = "voice/$Locale$/story/1003/100371/192078B4"
         },
         [10037201] = {
@@ -53527,13 +53506,13 @@ PlayAnimation{_delay{4},ActorId{200006},AnimationId{"Explain02_End"},Duration{1}
           VoiceName = "voice/$Locale$/story/1002/101123/1950A9E0"
         },
         [10112305] = {
-          Content = "不要向这个冷冰冰的世界投降！",
+          Content = "站起来……不要向这个冷冰冰的世界投降！",
           DialogueId = 10112305,
           Duration = 2,
           ExStoryInfo = "Player",
           GUID = "1950AA0A",
           SpeakNpcId = 100001,
-          Subtitle = "Stand up... Don't yield to this cold, unfeeling world!",
+          Subtitle = "Don't yield to this cold, unfeeling world!",
           VoiceName = "voice/$Locale$/story/1002/101123/1950AA0A"
         },
         [10112306] = {
@@ -55917,6 +55896,7 @@ MoveTo{_delay{3.5},ActorId{200019},TargetPoint{"P_101107Boy"},MoveSpeed{75},Visi
           Content = "（已经和奥特赛德和白交代好了今天发生的所有事。）",
           DialogueId = 10115801,
           DisableMouth = 1,
+          Duration = 3,
           ExStoryInfo = "Player",
           GUID = "1952E79A",
           IsBlack = 1,
@@ -55929,6 +55909,7 @@ MoveTo{_delay{3.5},ActorId{200019},TargetPoint{"P_101107Boy"},MoveSpeed{75},Visi
           Content = "（接下来能做的，就只有在说好的地方……耐心等待。）",
           DialogueId = 10115802,
           DisableMouth = 1,
+          Duration = 3,
           ExStoryInfo = "Player",
           GUID = "1952E7C4",
           IsBlack = 1,
@@ -60599,7 +60580,7 @@ SetLocation{ActorId{200076},TargetPoint{"P_101259Nifu2"},Visibility{"Hide"}}
           GUID = "195B3E0E",
           NextDialogue = 10128812,
           SpeakNpcId = 200095,
-          Subtitle = "Cause if I sober up, I'll have to work. And if I actually did my job right... well, most of you wouldn't last the week. So really — you ought to thank me. I'm slowly poisoning myself, just so the rest of you get to live a little longer.",
+          Subtitle = "'Cause if I sober up, I'll have to work. And if I actually did my job right... well, most of you wouldn't last the week. So really — you ought to thank me. I'm slowly poisoning myself, just so the rest of you get to live a little longer.",
           VoiceName = "voice/$Locale$/story/1002/101288/195B3E0E"
         },
         [10128812] = {
@@ -120569,7 +120550,7 @@ I've witnessed deeds that daylight never sees, and not all are the work of "demo
           DialogueId = 50106001,
           GUID = "7D6F63CA",
           SpeakNpcId = 701062,
-          Subtitle = "Hmm... I wonder how long this tree's been standing here.",
+          Subtitle = "Hmm... I wonder how long this tree has been standing here.",
           VoiceName = "voice/$Locale$/env/Ver0101/7D6F63CA"
         },
         [50106101] = {
@@ -121470,7 +121451,7 @@ I've witnessed deeds that daylight never sees, and not all are the work of "demo
           Content = "早跟你说了，收回来的新鲜吿苍要立即拿去晾晒，为何回回都能忘了呢？",
           DialogueId = 50107146,
           GUID = "7D701FA4",
-          Subtitle = "I've told you — fresh Sky Lilies go straight out to dry as soon as you bring them back. How do you forget every time?"
+          Subtitle = "I've told you — fresh Skylilies go straight out to dry as soon as you bring them back. How do you forget every time?"
         },
         [50107147] = {
           Content = "落生香的原料研磨最讲究精细，一遍下来若是还有这种大颗粒，你得重新再来一遍。",
@@ -121705,7 +121686,8 @@ I've witnessed deeds that daylight never sees, and not all are the work of "demo
         [50107225] = {
           Content = "想当初咱这湖边多清净？",
           DialogueId = 50107225,
-          GUID = "7D702C9A"
+          GUID = "7D702C9A",
+          Subtitle = "Remember when it used to be quiet round here?"
         },
         [50107226] = {
           Content = "若是能把这五禽戏练好……",
@@ -122425,7 +122407,7 @@ I've witnessed deeds that daylight never sees, and not all are the work of "demo
           Content = "收回来的新鲜吿苍要立即拿去晾晒。",
           DialogueId = 50107346,
           GUID = "7D704074",
-          Subtitle = "Fresh Sky Lilies go straight out to dry as soon as you bring them back."
+          Subtitle = "Fresh Skylilies go straight out to dry as soon as you bring them back."
         },
         [50107347] = {
           Content = "落生香的原料研磨最讲究精细。",
@@ -157159,7 +157141,7 @@ MoveTo{_delay{3},ActorId{700324},TargetPoint{"P51104118White"},MoveSpeed{80},Vis
           GUID = "7FEF1CF2",
           NextDialogue = 51105014,
           SpeakNpcId = 700329,
-          Subtitle = "And — and! Mum and Dad haven't been home lately, but I keep finding Sky Lilies on the windowsill! I asked around, but nobody said they brought them..."
+          Subtitle = "And — and! Mum and Dad haven't been home lately, but I keep finding Skylilies on the windowsill! I asked around, but nobody said they brought them..."
         },
         [51105014] = {
           Content = "这样的怪事还有不少呢！",
@@ -157825,7 +157807,7 @@ MoveTo{_delay{3},ActorId{700324},TargetPoint{"P51104118White"},MoveSpeed{80},Vis
           GUID = "7FEF5FB8",
           NextDialogue = 51105081,
           SpeakNpcId = 700331,
-          Subtitle = "I... I've been waiting so long... Pingping, the sun's come out — let's pick some Sky Lilies to put in the vase."
+          Subtitle = "I... I've been waiting so long... Pingping, the sun's come out — let's pick some Skylilies to put in the vase."
         },
         [51105081] = {
           Camera = "-132.632812,-149.719727,173.525391,0.00008,-14.200147,49.79491,35.0,100000.0,false,DoNotOverride,2.8",
@@ -157948,7 +157930,7 @@ MoveTo{_delay{3},ActorId{700324},TargetPoint{"P51104118White"},MoveSpeed{80},Vis
           GUID = "7FEF6186",
           NextDialogue = 51105092,
           SpeakNpcId = 700331,
-          Subtitle = "I... I've been waiting so long... Pingping, the sun's come out — let's pick some Sky Lilies to put in the vase."
+          Subtitle = "I... I've been waiting so long... Pingping, the sun's come out — let's pick some Skylilies to put in the vase."
         },
         [51105092] = {
           Camera = "-93.003906,-42.301758,148.769531,0.000082,-13.200105,37.594505,35.0,100000.0,false,DoNotOverride,2.8",
@@ -158020,7 +158002,7 @@ MoveTo{_delay{3},ActorId{700324},TargetPoint{"P51104118White"},MoveSpeed{80},Vis
           GUID = "7FEF6282",
           NextDialogue = 51105098,
           SpeakNpcId = 700329,
-          Subtitle = "I never met him... Nana said he passed away when she was young, when they'd just moved to Haojing. She didn't get the news in time because of the move... so she never got to say goodbye..."
+          Subtitle = "I never met him... Nana said he passed away when she was young, when she just moved to Haojing. She didn't get the news in time because of the move... so she never got to say goodbye..."
         },
         [51105098] = {
           Camera = "-8.46875,144.892578,124.898438,0.000009,2.799899,-77.20108,35.0,100000.0,false,DoNotOverride,2.8",
@@ -158166,7 +158148,7 @@ PlayAnimation{ActorId{700329},AnimationId{"Give"},Duration{2}},
           GUID = "7FEF6D80",
           NextDialogue = 51105111,
           SpeakNpcId = 700329,
-          Subtitle = "From now on, you won't have to catch Loomhoppers all by yourself! I'll pick Sky Lilies with you, read with you — we'll do all sorts of things together!"
+          Subtitle = "From now on, you won't have to catch Loomhoppers all by yourself! I'll pick Skylilies with you, read with you — we'll do all sorts of things together!"
         },
         [51105111] = {
           Camera = "-333.121094,-499.869141,192.47168,0.000051,-9.400239,56.996445,35.0,100000.0,false,DoNotOverride,2.8",
@@ -158367,7 +158349,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
           DialogueId = 51105129,
           GUID = "7FEF709E",
           SpeakNpcId = 700361,
-          Subtitle = "Should I go pick some Sky Lilies to put in the vase?"
+          Subtitle = "Should I go pick some Skylilies to put in the vase?"
         },
         [51105201] = {
           Content = "一年一度的银烛狂欢节结束了，一切似乎都回复平静。水仙平原也理应恢复到一如既往的喧嚣气氛。",
@@ -167494,7 +167476,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
             [2] = 51125002
           },
           SpeakNpcId = 700365,
-          Subtitle = "What?! Miaoqu’s still out? How many days has he had the trots? Ugh... How are we supposed to shoot all those Mistwharf scenes...",
+          Subtitle = "What?! Miaoqu's still out? How many days has he had the trots? Ugh... How are we supposed to shoot all those Mistwharf scenes...",
           TalkActionId = {
             [1] = "700365:Angry01_Start"
           }
@@ -167531,7 +167513,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           DialogueId = 51125004,
           GUID = "7FFC6FF8",
           SpeakNpcId = 700365,
-          Subtitle = "We're putting on a show — well, a pretty new kind actually. It’s called \"Muovie\". Interested?"
+          Subtitle = "We're putting on a show — well, a pretty new kind actually. It's called \"Muovie\". Interested?"
         },
         [51125005] = {DialogueId = 51125005, GUID = "7FFC7022"},
         [51125006] = {
@@ -168125,7 +168107,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
             [2] = 51125069
           },
           SpeakNpcId = 700365,
-          Subtitle = "...What do you think, {性别：brother丨lass}? This isn't working. How about... we swap your roles?",
+          Subtitle = "...What do you think? This isn't working. How about... we swap your roles?",
           TalkActionId = {
             [1] = "100001:Think_Start"
           }
@@ -168457,7 +168439,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           },
           NextDialogue = 51125109,
           SpeakNpcId = 700365,
-          Subtitle = "Here {性别：brother丨lass}, your pay for today. You've earned it."
+          Subtitle = "Here {性别:brother|lass}, your pay for today. You've earned it."
         },
         [51125109] = {
           Content = "（这一场荒唐的闹剧总算是落下了帷幕。横生如愿以偿地留下了他的高光时刻……或许。）",
@@ -168774,7 +168756,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           GUID = "7FFCC44C",
           NextDialogue = 51125519,
           SpeakNpcId = 701039,
-          Subtitle = "And some of the key incense materials — they've got strict limits. Take Sky Lilies, for instance: folks here burn a lot of it. If the Starweavers ship it all overseas, what are we supposed to do when we run short?"
+          Subtitle = "And some of the key incense materials — they've got strict limits. Take Skylilies, for instance: folks here burn a lot of it. If the Starweavers ship it all overseas, what are we supposed to do when we run short?"
         },
         [51125519] = {
           Content = "这进来的东西自然更是需要登记，就说那什么海伯利亚，刀啊枪啊的，要是都进了华胥岂不是乱了套！",
@@ -175951,7 +175933,7 @@ SEQ{ TurnTo{TurnToDescription{"701075:p(-20)"}}, LookAt{LookAtDescription{"70107
           GUID = "800D20A6",
           NextDialogue = 51151048,
           SpeakNpcId = 200002,
-          Subtitle = "If Lunocarp got her facts straight... this should be the haunted warehouse!",
+          Subtitle = "After listening to Wangchun and the others last time, I went and asked Lunocarp. If she got her facts straight... this should be the haunted warehouse!",
           TalkActionId = {
             [1] = "200002:Confident_Start"
           },
@@ -176345,7 +176327,7 @@ SEQ{ TurnTo{TurnToDescription{"701075:p(-20)"}}, LookAt{LookAtDescription{"70107
           GUID = "800D2514",
           NextDialogue = 51151075,
           SpeakNpcId = 200002,
-          Subtitle = "These marks on the floor... sniff, sniff... smells nice. Is this incense? Why's it spilled everywhere — did the Wishen do this?",
+          Subtitle = "These marks on the floor... (sniff sniff)... smells nice. Is this incense? Why's it spilled everywhere — did the Wishen do this?",
           TalkActionId = {
             [1] = "200002:PointF_End"
           }
@@ -176361,7 +176343,7 @@ SEQ{ TurnTo{TurnToDescription{"701075:p(-20)"}}, LookAt{LookAtDescription{"70107
             [1] = "100001:n(200002)"
           },
           SpeakNpcId = 100001,
-          Subtitle = "If they notice us, we'll end up just like the dockhands — walking in circles until we wander straight back outside. We should move carefully."
+          Subtitle = "Given how cautious they are, getting spotted likely leads to serious trouble. We should move carefully."
         },
         [51151076] = {
           Content = "白，快蹲下来。",
@@ -176420,7 +176402,7 @@ SEQ{ TurnTo{TurnToDescription{"701075:p(-20)"}}, LookAt{LookAtDescription{"70107
           NextDialogue = 51151125,
           Scripts = "PlayNormalSound{EventPath{\"event:/sfx/common/story/east/vo_hello\"},PlayAs2D{true}}",
           SpeakNpcId = 700377,
-          Subtitle = "(startled)"
+          Subtitle = "Chirp?"
         },
         [51151082] = {
           Content = "灵神大人，哼生这便来为你护驾！何方鼠贼，瞒天过海只为靠近我们灵神大人！",
@@ -176454,7 +176436,7 @@ SetVisibility{ActorId{700376},Visibility{"Show"}}
           NextDialogue = 51151126,
           Scripts = "PlayNormalSound{EventPath{\"event:/sfx/common/story/east/vo_happy\"},PlayAs2D{true}}",
           SpeakNpcId = 700377,
-          Subtitle = "(preens smugly)",
+          Subtitle = "Chirp, chirp~",
           TalkActionId = {
             [1] = "200002:Confident_End"
           }
@@ -176525,7 +176507,7 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
 PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true}}
 }]],
           SpeakNpcId = 700377,
-          Subtitle = "(idle animation)",
+          Subtitle = "Chirp, chirp! Peep, peep!",
           TalkActionId = {
             [1] = "200002:Helpless01_End"
           }
@@ -176571,7 +176553,7 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
           NextDialogue = 51151128,
           Scripts = "PlayNormalSound{EventPath{\"event:/sfx/common/story/east/vo_upset\"},PlayAs2D{true}}",
           SpeakNpcId = 700377,
-          Subtitle = "(recoils in fright)",
+          Subtitle = "Peep...",
           TalkActionId = {
             [1] = "100001:Talk03ToTalkL_End"
           }
@@ -176627,7 +176609,7 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
 PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_happy"},PlayAs2D{true}}
 }]],
           SpeakNpcId = 700377,
-          Subtitle = "(idle animation)"
+          Subtitle = "Chirp, chirp~"
         },
         [51151099] = {
           Content = "灵神大人说，它在原来的地方闻到了很香的味道，十分喜欢，就跟着味道一路来到了船上……",
@@ -176667,7 +176649,7 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
 PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true}}
 }]],
           SpeakNpcId = 700377,
-          Subtitle = "(idle animation)"
+          Subtitle = "Chirp... Peep, peep, peep!"
         },
         [51151103] = {
           Content = "灵神大人说，这里有好闻的香料，没有不认识的面孔，没有凶巴巴的魔灵猎人，还有好兄弟无由生相随保护。",
@@ -176746,7 +176728,7 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
           NextDialogue = 51151109,
           Scripts = "PlayNormalSound{EventPath{\"event:/sfx/common/story/east/vo_upset\"},PlayAs2D{true}}",
           SpeakNpcId = 700377,
-          Subtitle = "(recoils in fright)",
+          Subtitle = "Chirp... Peep...",
           TalkActionId = {
             [1] = "100001:Talk03ToTalkL_End"
           }
@@ -176796,7 +176778,7 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
           NextDialogue = 51151113,
           Scripts = "PlayNormalSound{EventPath{\"event:/sfx/common/story/east/vo_hello\"},PlayAs2D{true}}",
           SpeakNpcId = 700377,
-          Subtitle = "(idle animation)",
+          Subtitle = "Chirp~",
           TalkActionId = {
             [1] = "200002:Helpless01_End"
           }
@@ -176846,7 +176828,7 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
           NextDialogue = 51151117,
           Scripts = "PlayNormalSound{EventPath{\"event:/sfx/common/story/east/vo_upset\"},PlayAs2D{true}}",
           SpeakNpcId = 700377,
-          Subtitle = "(hesitant)"
+          Subtitle = "Peep..."
         },
         [51151117] = {
           Content = "吖！",
@@ -176855,7 +176837,7 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
           NextDialogue = 51151118,
           Scripts = "PlayNormalSound{EventPath{\"event:/sfx/common/story/east/vo_happy\"},PlayAs2D{true}}",
           SpeakNpcId = 700377,
-          Subtitle = "(perks up)"
+          Subtitle = "Peep!"
         },
         [51151118] = {
           Content = "看起来它同意跟我们走啦~",
@@ -176902,7 +176884,7 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
           GUID = "800D2CCA",
           Scripts = "PlayNormalSound{EventPath{\"event:/sfx/common/story/east/vo_upset\"},PlayAs2D{true}}",
           SpeakNpcId = 700377,
-          Subtitle = "(droops sadly)"
+          Subtitle = "Peep, peep..."
         },
         [51151122] = {
           Content = "（你就这么看着一个魔灵和两个无由生相拥而泣，互相把不存在的眼泪抹在对方身上，等了好久，直到将哼哈二将送至门外……）",
@@ -176929,31 +176911,36 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
           Content = "（这只魔灵似乎对你们的到来看起来有些疑惑。）",
           DialogueId = 51151125,
           GUID = "800D263B",
-          NextDialogue = 51151082
+          NextDialogue = 51151082,
+          Subtitle = "(This Geniemon seems somewhat puzzled by your arrival.)"
         },
         [51151126] = {
           Content = "（这只魔灵明显意识到了你们的来意，但因有无由生相助而显得十分得意。）",
           DialogueId = 51151126,
           GUID = "800D26B9",
-          NextDialogue = 51151085
+          NextDialogue = 51151085,
+          Subtitle = "(The Geniemon clearly understands your intentions but appears quite smug with the Wishen by its side.)"
         },
         [51151127] = {
           Content = "（咿咿呀呀说了一大堆，完全听不懂……）",
           DialogueId = 51151127,
           GUID = "800D278B",
-          NextDialogue = 51151090
+          NextDialogue = 51151090,
+          Subtitle = "(It babbles a great deal... completely incomprehensible...)"
         },
         [51151128] = {
           Content = "(它似乎有些害怕？）",
           DialogueId = 51151128,
           GUID = "800D2833",
-          NextDialogue = 51151094
+          NextDialogue = 51151094,
+          Subtitle = "(It seems a bit frightened?)"
         },
         [51151129] = {
           Content = "是说百年春角落那间仓库吗？那里不是早就租给天岚先生做供货仓库了吗？为何现在过来提起？",
           DialogueId = 51151129,
           GUID = "800D2D49",
-          SpeakNpcId = 700370
+          SpeakNpcId = 700370,
+          Subtitle = "You mean that warehouse over in the corner of EverSpring? Mr Tianlan rented it as a storehouse some time ago. Why bring it up now?"
         },
         [51151201] = {
           Camera = "368.707031,55.0,181.27832,0.0001,-12.598782,-171.164566,25.0,100000.0,false,DoNotOverride,2.8",
@@ -179013,7 +179000,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "800F06EF",
           NextDialogue = 51154024,
           SpeakNpcId = 701096,
-          Subtitle = "It doesn't have a true Bi'an's power, of course. Yet that very limitation gives it a charm of its own."
+          Subtitle = "Pity. The first few Mecha-Bi'an crafted by Master Gongshang attracted a gaggle of tedious old sticks from Xuanheng Sect. They droned on about \"blasphemy\" and \"disrespect\" before confiscating the lot. How dreary."
         },
         [51154013] = {
           Content = "要不要骑上它试上一试？华胥幅员辽阔，小友全凭一双脚又能走到何处。就算日后去了其他地方，它也能充当你上天入地、纵情奔走的不错助力。",
@@ -179057,7 +179044,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "800F07EA",
           NextDialogue = 51154018,
           SpeakNpcId = 701096,
-          Subtitle = "Naturally not. Nothing comes without a price. If I simply gave it to you, you would distrust it. And you'd be right to."
+          Subtitle = "Heh, nothing comes without a price. If I simply gave it to you, you would distrust it. And you'd be right to."
         },
         [51154018] = {
           Content = "诶诶？原来本魔王大人送出去的东西这么珍贵吗！",
@@ -179112,7 +179099,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "800F0718",
           NextDialogue = 51154013,
           SpeakNpcId = 701096,
-          Subtitle = "It doesn't have a true Bi'an's power, of course. Yet that very limitation gives it a charm of its own."
+          Subtitle = "Not that it stopped him, of course. Gongshang doted on his Mecha-Bi'an far too much to quit. So he simply made every new one look like a Sable Bi'an after that — left those incense wardens with nothing to gripe about."
         },
         [51155001] = {
           Content = "小仆从小仆从，你刚刚听到没有！",
@@ -181262,36 +181249,48 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "近吾者，必罹天劫！",
           DialogueId = 60180001,
           Duration = 3,
+          GUID = "9834E965",
+          Subtitle = "Draw nigh, and be smitten by divine ire!",
           VoiceName = "sfx/boss/Heilong/vo_$Locale$_BattleStart"
         },
         [60180002] = {
           Content = "吼————",
           DialogueId = 60180002,
           Duration = 3,
+          GUID = "9834E966",
+          Subtitle = "GRRRAAAUGH!",
           VoiceName = "sfx/boss/Heilong/vo_$Locale$_Condemn"
         },
         [60180003] = {
           Content = "俱往矣……",
           DialogueId = 60180003,
           Duration = 3,
+          GUID = "9834E967",
+          Subtitle = "All... is naught.",
           VoiceName = "sfx/boss/Heilong/vo_$Locale$_BattleEnd"
         },
         [60180004] = {
           Content = "晦暝临世。",
           DialogueId = 60180004,
           Duration = 4,
+          GUID = "9834E968",
+          Subtitle = "Behold... the world's eve falleth.",
           VoiceName = "sfx/boss/Heilong/vo_$Locale$_Skill05"
         },
         [60180005] = {
           Content = "吼————",
           DialogueId = 60180005,
           Duration = 5,
+          GUID = "9834E969",
+          Subtitle = "Heavens doth blacken, thunder rolls damnation!",
           VoiceName = "sfx/boss/Heilong/vo_$Locale$_Skill06"
         },
         [60180006] = {
           Content = "曀曀其阴，虺虺其雷——",
           DialogueId = 60180006,
           Duration = 3,
+          GUID = "9834E970",
+          Subtitle = "ROOOAAAR—!",
           VoiceName = "sfx/boss/Heilong/vo_$Locale$_Skill07"
         },
         [60200101] = {
@@ -182429,7 +182428,7 @@ It's hard to tell whether the director is ruthlessly "imprisoning" everyone in t
           Content = "压在一堆杂物下的老旧报纸，记录着很久以前的悲惨事故。\n\n<H>秽蚀者异常凶险，不要被表象欺骗！</>\n9月24日，本市发生一起极为恶劣的“秽蚀”事件，经第六军团卫戍部队调查后，得出以下结论：\n冰湖城市民费西尔夫妇于9月13日在泪湖畔公路边上偶遇一名叫做罗比·布朗的青年。因其身受重伤，费西尔夫妇将其带回家中照料。\n然而，罗比·布朗是一名秽蚀者，他躲过了帝国对潜在秽蚀者的例行盘查并潜逃至城外，且在接受费西尔夫妇帮助时，刻意掩盖了自己的秽蚀痕迹。十日后，悲剧发生：布朗蜕变成为秽兽，杀死了包括费西尔夫妇在内数十名居住在冰湖城南区的市民。第六军团下属冰湖城卫戍部队紧急出动才平息此次骚乱。\n骚乱共造成18人死亡，其中包含3名索拉之民；另有34人受伤。在此提醒各位市民谨记，不要轻易收留身份不明的卡戎之民，一旦发现秽蚀者，立即上报治安署。它们永远只是人类的敌人，无一例外。如有刻意包庇秽蚀者、隐瞒不报者，一律按照《海伯利亚刑事法典》第54条规定，处以死刑。",
           DialogueId = 70016004,
           GUID = "AF4718A8",
-          Subtitle = "Buried beneath a pile of old clutter, this yellowed newspaper recounts a tragic incident from years ago.\n\nFilthoids Are Exceptionally Dangerous — Do Not Be Fooled by Their Appearances!\nOn September 24th, an egregious Filthoid incident occurred in Icelake. Following an extensive investigation conducted by the 6th Legion's Escort Unit, the details of the tragedy have been confirmed:\nOn September 13th, local residents Mr and Mrs Fischer encountered a gravely injured young man named Robie Brown along the roadside at Lamenting Lake. Out of compassion, the Fischers took him into their home and cared for him.\nHowever, Robie Brown was a Deteriorator who had evaded the Empire's routine screenings and fled to the outskirts of the city. While receiving aid from the Fischers, he deliberately concealed his condition. Ten days later, Brown succumbed to his transformation, becoming a Filthoid and massacring dozens of citizens in Icelake's southern district, including Mr and Mrs Fischer. The 6th Legion's Escort intervened swiftly to suppress the chaos, but the damage was already done.\nThe incident left 18 dead (including 3 Solarians) and 34 others injured. Citizens are hereby reminded: Do not provide shelter to unidentified Charon individuals under any circumstances. If you suspect someone is a Deteriorator, report them to the Security Bureau immediately. They are and will always remain humanity's enemies. No exceptions. Be advised that harbouring Deteriorators or concealing their presence is a capital offence punishable by death under Article 54 of the Hyperborean Criminal Code."
+          Subtitle = "Buried beneath a pile of old clutter, this yellowed newspaper recounts a tragic incident from years ago."
         },
         [70016005] = {
           Content = "系着歪扭蝴蝶结的朴素礼盒，礼盒边是一瓶帝国最顶尖的止痛剂，和一封不知是什么原因没被塞入礼盒的纸条，上面写着“希望你能早日康复”。",
@@ -182442,7 +182441,7 @@ It's hard to tell whether the director is ruthlessly "imprisoning" everyone in t
           Content = "（内城城墙下姐弟的合照，照片的右上角写着“黎瑟·费西尔”与“布鲁斯·费西尔”两个名字，还有庆祝弟弟布鲁斯通过第六军团考核的祝语。）",
           DialogueId = 70016006,
           GUID = "AF4718FC",
-          Subtitle = "(A photo of a brother and sister standing under the inner city wall. Scribbled in the top-right corner are the names \"Rhythm Fischer\" and \"Blues Fischer,\" along with a congratulatory note celebrating Blues passing the 6th Legion's entrance tests.)"
+          Subtitle = "(A photo of a brother and sister standing under the inner city wall. Scribbled in the top-right corner are the names \"Rhythm Fischer\" and \"Blues Fischer,\" along with a congratulatory note celebrating Blues' passing the 6th Legion's entrance tests.)"
         },
         [70016007] = {
           Camera = "36.316406,112.411133,226.279297,0.00002,-31.198172,-98.592926,35.0,100000.0,false,Manual,22.0",
@@ -182499,13 +182498,13 @@ Upon closer inspection, it matches the fabric found at the crime scene.]]
           Content = "假人模型虽然很旧，但造型和姿势明显经过了精心设计，看起来端庄而优雅。",
           DialogueId = 70016011,
           GUID = "AF4719CE",
-          Subtitle = "The mannequin, though worn with age, is posed and styled with care, exuding a graceful elegance."
+          Subtitle = "Though worn with age, the mannequin has clearly been posed and styled with care, exuding a graceful elegance, — like a performer lost in the moment on stage."
         },
         [70016012] = {
           Content = "四周遍布着巨大而凌乱的爪痕，就算这里不是怪物的藏身处，也一定是怪物经常活动的地方。想必这就是十三军团将此处列为封锁区域的原因之一。",
           DialogueId = 70016012,
           GUID = "AF4719F8",
-          Subtitle = "The walls are covered in massive, chaotic claw marks. Even if this isn't the monster's lair, it's certainly a place it frequents. This might explain why the 13th Legion sealed off the area."
+          Subtitle = "Huge claw marks slash across the walls — dense, erratic, as if left in a frenzy of agony and madness."
         },
         [70016013] = {
           Content = "冰湖城下水道的部分布局图，错综复杂的管道连接着各个区域，图上大量区域还标注着“未经军团许可，常时禁止进入”的标语。",
@@ -187634,43 +187633,50 @@ Upon closer inspection, it matches the fabric found at the crime scene.]]
           Content = "（附近生长着不少山瑚，若是有空，不妨收集一些吧。）",
           DialogueId = 71008201,
           GUID = "B1C2F6FA",
-          SpeakNpcId = 800006
+          SpeakNpcId = 800006,
+          Subtitle = "(Plenty of Coralstones grows nearby. You might gather some if you have a moment.)"
         },
         [71008202] = {
           Content = "（收集山瑚的响动将周围的敌人吸引了过来，击退它们吧。）",
           DialogueId = 71008202,
           GUID = "B1C2F724",
-          SpeakNpcId = 800006
+          SpeakNpcId = 800006,
+          Subtitle = "(The commotion from gathering the Coralstone has drawn nearby enemies. Drive them off.)"
         },
         [71008203] = {
           Content = "（虽然出现了一点小意外，但最后总算是顺利收集完了附近的所有山瑚。）",
           DialogueId = 71008203,
           GUID = "B1C2F74E",
-          SpeakNpcId = 800006
+          SpeakNpcId = 800006,
+          Subtitle = "(Though a minor mishap occurred, you've managed to collect all the nearby Coralstones in the end.)"
         },
         [71008204] = {
           Content = "（成功收集完了附近的所有山瑚，是时候离开了。）",
           DialogueId = 71008204,
           GUID = "B1C2F778",
-          SpeakNpcId = 800006
+          SpeakNpcId = 800006,
+          Subtitle = "(You've successfully gathered all the nearby Coralstones. Time to move on.)"
         },
         [71008301] = {
           Content = "（坍塌的碎石挡住了前路，将它们清理掉吧。）",
           DialogueId = 71008301,
           GUID = "B1C30762",
-          SpeakNpcId = 800006
+          SpeakNpcId = 800006,
+          Subtitle = "(Collapsed rubble blocks the path ahead. Clear it away.)"
         },
         [71008302] = {
           Content = "（清理碎石的响动将周围的敌人吸引了过来，击退它们吧。）",
           DialogueId = 71008302,
           GUID = "B1C3078C",
-          SpeakNpcId = 800006
+          SpeakNpcId = 800006,
+          Subtitle = "(The noise from clearing the rubble has attracted nearby enemies. Drive them off.)"
         },
         [71008303] = {
           Content = "（一番战斗后，你在周围找到了些能用的物资，将它们收好吧。）",
           DialogueId = 71008303,
           GUID = "B1C307B6",
-          SpeakNpcId = 800006
+          SpeakNpcId = 800006,
+          Subtitle = "(After the skirmish, you've found some usable supplies in the area. Take them with you.)"
         },
         [72000000] = {
           Content = "喵……",
@@ -189923,7 +189929,7 @@ Untouched by worldly dust, its original clarity remains.]]
           GUID = "B47EEC34",
           NextDialogue = 72100403,
           SpeakNpcId = 830001,
-          Subtitle = "What's that scent drifting on the air? Sky Lily? Or perhaps Vernal Prime?"
+          Subtitle = "What's that scent drifting on the air? Skylily? Or perhaps Vernal Prime?"
         },
         [72100403] = {
           Content = "不如我自制的香方，可惜，我再也做不出了。",
@@ -241818,7 +241824,7 @@ How have you been lately?
           },
           NextDialogue = 90230302,
           SpeakNpcId = 84102,
-          Subtitle = "I am often entangled in the minutiae of business, rarely afforded the luxury of leisure.",
+          Subtitle = "I am often entangled in the minutiae of business and rarely afforded the luxury of leisure.",
           VoiceName = "voice/$Locale$/char/Zhiliu/vo_topic_03_1"
         },
         [90230302] = {
@@ -241879,7 +241885,7 @@ How have you been lately?
           GUID = "E1E1E154",
           NextDialogue = 90230403,
           SpeakNpcId = 84102,
-          Subtitle = "When I was little, an accident left me stranded in a pitch-black ravine for three days and nights. It was then that this... tendency took root.",
+          Subtitle = "When I was little, an accident left me stranded in a pitch-black ravine for three days and nights. It was then this... tendency took root.",
           VoiceName = "voice/$Locale$/char/Zhiliu/vo_topic_04_2"
         },
         [90230403] = {
@@ -241905,7 +241911,7 @@ How have you been lately?
           GUID = "E1E1E1D2",
           NextDialogue = 90230406,
           SpeakNpcId = 84102,
-          Subtitle = "Heh... You're right. Weakness can be a merchant's undoing.",
+          Subtitle = "Heh... Correct. Weakness can be a merchant's undoing.",
           VoiceName = "voice/$Locale$/char/Zhiliu/vo_topic_04_4"
         },
         [90230406] = {
@@ -241917,7 +241923,7 @@ How have you been lately?
             [2] = 90230003
           },
           SpeakNpcId = 84102,
-          Subtitle = "I underwent rigorous training to suppress this fear. At the negotiating table, I can cast it aside with ease. But in your presence, there is no need for such pretences.",
+          Subtitle = "I underwent rigorous trainings to suppress this fear. At the negotiating table, I can cast it aside with ease. But in your presence, there's no need for such pretences.",
           VoiceName = "voice/$Locale$/char/Zhiliu/vo_topic_04_5",
           bForbidSkipOptions = true
         },

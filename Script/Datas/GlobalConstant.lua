@@ -91,7 +91,7 @@ return ReadOnly("GlobalConstant", {
   },
   AutoRoundsCheckTime = {
     ConstantName = "AutoRoundsCheckTime",
-    ConstantValue = 10
+    ConstantValue = 3
   },
   BackToHomeBaseCondition = {
     ConstantName = "BackToHomeBaseCondition",
@@ -706,7 +706,7 @@ return ReadOnly("GlobalConstant", {
   },
   NewPlayerTagTime = {
     ConstantName = "NewPlayerTagTime",
-    ConstantValue = 1767924000
+    ConstantValue = 1770652800
   },
   NicknameMaxLen = {
     ConstantName = "NicknameMaxLen",
@@ -999,7 +999,7 @@ return ReadOnly("GlobalConstant", {
   },
   TalkWaitForNewPage = {
     ConstantName = "TalkWaitForNewPage",
-    ConstantValue = 2
+    ConstantValue = 1.3
   },
   TaskWarningLevel = {
     ConstantName = "TaskWarningLevel",

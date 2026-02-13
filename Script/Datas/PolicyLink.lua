@@ -14,13 +14,13 @@ return ReadOnly("PolicyLink", {
     ChinaCN = "https://dna.yingxiong.com/cloud/download?source=game"
   },
   InviteCode = {
-    AbroadCN = "https://duetnightabyss.dna-panstudio.com/atlasiacalling/",
-    AbroadEN = "https://duetnightabyss.dna-panstudio.com/atlasiacalling/en",
-    AbroadJP = "https://duetnightabyss.dna-panstudio.com/atlasiacalling/jp",
-    AbroadKR = "https://duetnightabyss.dna-panstudio.com/atlasiacalling/ko",
-    AbroadTC = "https://duetnightabyss.dna-panstudio.com/atlasiacalling/zh-tw",
+    AbroadCN = "https://duetnightabyss.dna-panstudio.com/atlasiacalling/?source=game",
+    AbroadEN = "https://duetnightabyss.dna-panstudio.com/atlasiacalling/en?source=game",
+    AbroadJP = "https://duetnightabyss.dna-panstudio.com/atlasiacalling/ja?source=game",
+    AbroadKR = "https://duetnightabyss.dna-panstudio.com/atlasiacalling/ko?source=game",
+    AbroadTC = "https://duetnightabyss.dna-panstudio.com/atlasiacalling/zh-tw?source=game",
     Cache = "InviteCode",
-    ChinaCN = "https://dna.yingxiong.com/gyatlxy?source=game"
+    ChinaCN = "https://dna.yingxiong.com/atlasiacalling?source=game"
   },
   PaymentPolicyJP = {
     AbroadCN = "https://duetnightabyss.dna-panstudio.com/ja/#/news/content?id=8567",

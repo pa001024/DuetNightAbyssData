@@ -156,7 +156,7 @@ class MonsterStrongAffixesProcessor(BaseProcessor):
                 )
 
             if function_name == "AddBuff":
-                self._set_var_if_not_none(var_item, "BUFF延迟", effect.get("LastTime"))
+                self._set_var_if_not_none(var_item, "BUFF持续", effect.get("LastTime"))
                 self._extract_dot_semantics_from_buff(var_item, effect.get("buff"))
 
             if var_item:

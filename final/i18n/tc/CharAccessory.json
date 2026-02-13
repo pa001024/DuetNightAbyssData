@@ -513,7 +513,7 @@
   },
   {
     "id": 10071,
-    "name": "諸天月相·晴藍",
+    "name": "諸天月相·黛藍",
     "desc": "予天理以終結。",
     "icon": "T_Fashion_Head39_02",
     "rarity": 5,
@@ -737,24 +737,24 @@
   },
   {
     "id": 12122,
-    "name": "乌乌头套",
-    "desc": "现在，谁是真的乌乌？",
+    "name": "烏烏頭套",
+    "desc": "現在，誰是真的烏烏？",
     "icon": "T_Fashion_Head48",
     "rarity": 4,
     "unlock": "通過商店獲得"
   },
   {
     "id": 12123,
-    "name": "魔王头套",
-    "desc": "现在，谁是真的光之魔王大人？",
+    "name": "魔王頭套",
+    "desc": "現在，誰是真的光之魔王大人？",
     "icon": "T_Fashion_Head49",
     "rarity": 4,
     "unlock": "透過活動獲得"
   },
   {
     "id": 12124,
-    "name": "奇妙纸袋·本色",
-    "desc": "套上纸袋以后仿佛有种神奇的魔力，让人不再压抑自己的天性。",
+    "name": "奇妙紙袋·本色",
+    "desc": "套上紙袋以後仿佛有種神奇的魔力，讓人不再壓抑自己的天性。",
     "icon": "T_Fashion_Head50",
     "rarity": 4,
     "unlock": "通過商店獲得"
@@ -1257,7 +1257,7 @@
   },
   {
     "id": 20043,
-    "name": "龍紋墨鏡",
+    "name": "龍紋墨鏡·墨玉",
     "desc": "遮光蔽塵，窺破虛實。",
     "icon": "T_Fashion_Face21_02",
     "rarity": 5,
@@ -1569,7 +1569,7 @@
   },
   {
     "id": 30020,
-    "name": "伏龍節",
+    "name": "伏龍節·鎏金",
     "desc": "將天的權柄握於手中。",
     "icon": "T_Fashion_Waist15",
     "rarity": 5,
@@ -1665,16 +1665,16 @@
   },
   {
     "id": 31001,
-    "name": "胜利动作·悠游水岸",
-    "desc": "可变更胜利动作。",
+    "name": "勝利動作·悠遊水岸",
+    "desc": "可變更勝利動作。",
     "icon": "T_Fashion_SettlementAction_01",
     "rarity": 5,
     "unlock": ""
   },
   {
     "id": 31002,
-    "name": "胜利动作·睥睨山河",
-    "desc": "可变更胜利动作。",
+    "name": "勝利動作·睥睨山河",
+    "desc": "可變更勝利動作。",
     "icon": "T_Fashion_SettlementAction_02",
     "rarity": 5,
     "unlock": ""
@@ -2041,7 +2041,7 @@
   },
   {
     "id": 50003,
-    "name": "银烛玩偶",
+    "name": "銀燭玩偶",
     "desc": "{空格}",
     "icon": "T_Fashion_Fx11",
     "rarity": 4,

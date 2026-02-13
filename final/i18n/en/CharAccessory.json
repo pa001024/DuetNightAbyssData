@@ -5,7 +5,7 @@
     "desc": "The protagonist of the well-known fairy tale \"JoeJoe's Bizarre Adventure\" across the Atlasia Continent. This chickie named JoeJoe awakens in new places each day, befriends interesting characters, and embarks on bizarre quests to discover the meaning of life and thwart villainous plots.",
     "icon": "T_Fashion_Head_YellowChick",
     "rarity": 4,
-    "unlock": "Available though Myriad"
+    "unlock": "Available through Myriad"
   },
   {
     "id": 10002,
@@ -13,7 +13,7 @@
     "desc": "The protagonist of the well-known fairy tale \"JoeJoe's Bizarre Adventure\" across the Atlasia Continent. This chickie named JoeJoe awakens in new places each day, befriends interesting characters, and embarks on bizarre quests to discover the meaning of life and thwart villainous plots.",
     "icon": "T_Fashion_Head_WhiteChick",
     "rarity": 4,
-    "unlock": "Available though Myriad"
+    "unlock": "Available through Myriad"
   },
   {
     "id": 10003,
@@ -21,7 +21,7 @@
     "desc": "The protagonist of the well-known fairy tale \"JoeJoe's Bizarre Adventure\" across the Atlasia Continent. This chickie named JoeJoe awakens in new places each day, befriends interesting characters, and embarks on bizarre quests to discover the meaning of life and thwart villainous plots.",
     "icon": "T_Fashion_Head_BrownChick",
     "rarity": 4,
-    "unlock": "Available though Myriad"
+    "unlock": "Available through Myriad"
   },
   {
     "id": 10004,
@@ -29,7 +29,7 @@
     "desc": "The protagonist of the well-known fairy tale \"JoeJoe's Bizarre Adventure\" across the Atlasia Continent. This chickie named JoeJoe awakens in new places each day, befriends interesting characters, and embarks on bizarre quests to discover the meaning of life and thwart villainous plots.",
     "icon": "T_Fashion_Head_BlackChick",
     "rarity": 4,
-    "unlock": "Available though Myriad"
+    "unlock": "Available through Myriad"
   },
   {
     "id": 10005,
@@ -37,7 +37,7 @@
     "desc": "WARNING: NON-EDIBLE!",
     "icon": "T_Fashion_Head_Sprout",
     "rarity": 3,
-    "unlock": "Available though Myriad"
+    "unlock": "Available through Myriad"
   },
   {
     "id": 10006,
@@ -45,7 +45,7 @@
     "desc": "WARNING: NON-EDIBLE!",
     "icon": "T_Fashion_Head_YellowSprout",
     "rarity": 3,
-    "unlock": "Available though Myriad"
+    "unlock": "Available through Myriad"
   },
   {
     "id": 10007,
@@ -53,7 +53,7 @@
     "desc": "WARNING: NON-EDIBLE!",
     "icon": "T_Fashion_Head_BlueSprout",
     "rarity": 3,
-    "unlock": "Available though Myriad"
+    "unlock": "Available through Myriad"
   },
   {
     "id": 10008,
@@ -61,7 +61,7 @@
     "desc": "WARNING: NON-EDIBLE!",
     "icon": "T_Fashion_Head_RedSprout",
     "rarity": 3,
-    "unlock": "Available though Myriad"
+    "unlock": "Available through Myriad"
   },
   {
     "id": 10009,
@@ -69,7 +69,7 @@
     "desc": "Filled with the boundless inspiration and fervour of Lunosmith, this portable Cinder always reminds you of the vibrant forge flames fanned by it.",
     "icon": "T_Fashion_Head_Wuwu",
     "rarity": 4,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10010,
@@ -93,7 +93,7 @@
     "desc": "An emblem of elegance, the embodiment of grace — or perhaps, just a butterfly unable to flutter its wings.",
     "icon": "T_Fashion_Head_RedBow",
     "rarity": 4,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10013,
@@ -101,7 +101,7 @@
     "desc": "An emblem of elegance, the embodiment of grace — or perhaps, just a butterfly unable to flutter its wings.",
     "icon": "T_Fashion_Head_PinkBow",
     "rarity": 4,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10015,
@@ -157,7 +157,7 @@
     "desc": "A mask that honours the forebears of Huaxu. Wearing it evokes an epic vision of innumerable warriors arrayed in armour, their faces veiled, sculpting the cosmos for a realm of everlasting peace.",
     "icon": "T_Fashion_Head_GoldenMask",
     "rarity": 4,
-    "unlock": "Available though Myriad"
+    "unlock": "Available through Myriad"
   },
   {
     "id": 10022,
@@ -165,7 +165,7 @@
     "desc": "A mask that honours the forebears of Huaxu. Wearing it evokes an epic vision of innumerable warriors arrayed in armour, their faces veiled, sculpting the cosmos for a realm of everlasting peace.",
     "icon": "T_Fashion_Head_SilverMask",
     "rarity": 4,
-    "unlock": "Available though Myriad"
+    "unlock": "Available through Myriad"
   },
   {
     "id": 10023,
@@ -173,7 +173,7 @@
     "desc": "In the past, this mask was used as a medium for divine communication. Today, those who seek the grace of the divine turn their prayers towards the lofty towers of Elysium from afar.",
     "icon": "T_Fashion_Head_FoxMask",
     "rarity": 4,
-    "unlock": "Available though Myriad"
+    "unlock": "Available through Myriad"
   },
   {
     "id": 10024,
@@ -237,7 +237,7 @@
     "desc": "A flutter of silk, dancing on the breeze — waiting to grace its next lucky strand of hair.",
     "icon": "T_Fashion_Head07",
     "rarity": 4,
-    "unlock": "Available though Myriad"
+    "unlock": "Available through Myriad"
   },
   {
     "id": 10035,
@@ -333,7 +333,7 @@
     "desc": "Vivacious, adorable, lively, beautiful... No words in the world do justice to the magical allure of these feline ears.",
     "icon": "T_Fashion_Head_PinkCatEar",
     "rarity": 4,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10048,
@@ -341,7 +341,7 @@
     "desc": "Vivacious, adorable, lively, beautiful... No words in the world do justice to the magical allure of these feline ears.",
     "icon": "T_Fashion_Head_GreyCatEar",
     "rarity": 4,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10049,
@@ -373,7 +373,7 @@
     "desc": "No blaze of sun can keep us from carrying an entire summer within our gaze.",
     "icon": "T_Fashion_Head28",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10054,
@@ -381,7 +381,7 @@
     "desc": "No blaze of sun can keep us from carrying an entire summer within our gaze.",
     "icon": "T_Fashion_Head30",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10055,
@@ -389,7 +389,7 @@
     "desc": "No blaze of sun can keep us from carrying an entire summer within our gaze.",
     "icon": "T_Fashion_Head29",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10056,
@@ -461,7 +461,7 @@
     "desc": "No blaze of sun can keep us from carrying an entire summer within our gaze.",
     "icon": "T_Fashion_Head31",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10065,
@@ -493,7 +493,7 @@
     "desc": "Let Heaven's law come to an end.",
     "icon": "T_Fashion_Head39",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10069,
@@ -501,7 +501,7 @@
     "desc": "Let Heaven's law come to an end.",
     "icon": "T_Fashion_Head39_03",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10070,
@@ -509,15 +509,15 @@
     "desc": "Let Heaven's law come to an end.",
     "icon": "T_Fashion_Head39_01",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10071,
-    "name": "Cosmic Lunacy: Celeste",
+    "name": "Cosmic Lunacy: Azure",
     "desc": "Let Heaven's law come to an end.",
     "icon": "T_Fashion_Head39_02",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10072,
@@ -633,7 +633,7 @@
   },
   {
     "id": 10086,
-    "name": "Fluffy Bunny Headpiece: Dark Blue",
+    "name": "Fluffy Bunny Headpiece: Azure",
     "desc": "Fancy a little bunny fluff?",
     "icon": "T_Fashion_Head37_03",
     "rarity": 5,
@@ -685,7 +685,7 @@
     "desc": "A seed of summer drops from the clouds, where spray and searing sand bloom into a fleeting eternity.",
     "icon": "T_Fashion_Fx08_01",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 11004,
@@ -693,12 +693,12 @@
     "desc": "A crimson loong soars with a spark between its jaws, spilling star-rain across the mortal world.",
     "icon": "",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 12001,
-    "name": "Indigo Whisper",
-    "desc": "A celadon teacup, brimful of half a life's bitters and sweets — yet a whole landscape rests in your hands.",
+    "name": "Glazed Whisper",
+    "desc": "A glazed cup, brimful of half a life's bitters and sweets — yet a whole landscape rests in your hands.",
     "icon": "T_Fashion_Hat03",
     "rarity": 4,
     "unlock": ""
@@ -737,24 +737,24 @@
   },
   {
     "id": 12122,
-    "name": "乌乌头套",
-    "desc": "现在，谁是真的乌乌？",
+    "name": "Cinder Hatpiece",
+    "desc": "Now, who's the real Cinder?",
     "icon": "T_Fashion_Head48",
     "rarity": 4,
     "unlock": "Available at Shop"
   },
   {
     "id": 12123,
-    "name": "魔王头套",
-    "desc": "现在，谁是真的光之魔王大人？",
+    "name": "Demon King Hatpiece",
+    "desc": "Now, who's the real Demon King of Light?",
     "icon": "T_Fashion_Head49",
     "rarity": 4,
     "unlock": "Available from events"
   },
   {
     "id": 12124,
-    "name": "奇妙纸袋·本色",
-    "desc": "套上纸袋以后仿佛有种神奇的魔力，让人不再压抑自己的天性。",
+    "name": "The Liberator",
+    "desc": "Put it on, and feel a strange magic take hold — as if it's finally okay to let your true self out to play.",
     "icon": "T_Fashion_Head50",
     "rarity": 4,
     "unlock": "Available at Shop"
@@ -817,7 +817,7 @@
   },
   {
     "id": 13008,
-    "name": "Mist-veiled Parasol: Dark Blue",
+    "name": "Mist-veiled Parasol: Azure",
     "desc": "Woven from the night's shadow, it gathers the world's rain and haze, folding them into a hush.",
     "icon": "T_Fashion_Waist17_02",
     "rarity": 5,
@@ -913,7 +913,7 @@
   },
   {
     "id": 13020,
-    "name": "Fluffy Bunny Waistpiece: Dark Blue",
+    "name": "Fluffy Bunny Waistpiece: Azure",
     "desc": "Fancy a little bunny fluff?",
     "icon": "T_Fashion_Waist14_02",
     "rarity": 5,
@@ -933,7 +933,7 @@
     "desc": "Wisdom precisely encircled in those round frames, greatly magnifying the wearer's aura of sagacity.",
     "icon": "T_Fashion_Face_RedGlasses",
     "rarity": 4,
-    "unlock": "Available though Myriad"
+    "unlock": "Available through Myriad"
   },
   {
     "id": 20003,
@@ -941,7 +941,7 @@
     "desc": "Wisdom precisely encircled in those round frames, greatly magnifying the wearer's aura of sagacity.",
     "icon": "T_Fashion_Face_TransparentGlasses",
     "rarity": 4,
-    "unlock": "Available though Myriad"
+    "unlock": "Available through Myriad"
   },
   {
     "id": 20004,
@@ -949,7 +949,7 @@
     "desc": "Wisdom precisely encircled in those round frames, greatly magnifying the wearer's aura of sagacity.",
     "icon": "T_Fashion_Face_HawksbillGlasses",
     "rarity": 4,
-    "unlock": "Available though Myriad"
+    "unlock": "Available through Myriad"
   },
   {
     "id": 20005,
@@ -973,7 +973,7 @@
     "desc": "Eyes are but obstacles to truly observing and perceiving the world.",
     "icon": "T_Fashion_Face_RedBandage",
     "rarity": 4,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 20008,
@@ -981,7 +981,7 @@
     "desc": "A butterfly that waltzes through tempests, providing a silent vigil for those unsettled by the roar of thunder, until the storm quiets and the fear subsides.",
     "icon": "T_Fashion_Face_Butterfly01",
     "rarity": 4,
-    "unlock": "Available though Myriad"
+    "unlock": "Available through Myriad"
   },
   {
     "id": 20009,
@@ -989,7 +989,7 @@
     "desc": "A butterfly that waltzes through tempests, providing a silent vigil for those unsettled by the roar of thunder, until the storm quiets and the fear subsides.",
     "icon": "T_Fashion_Face_WhiteButterfly01",
     "rarity": 4,
-    "unlock": "Available though Myriad"
+    "unlock": "Available through Myriad"
   },
   {
     "id": 20010,
@@ -997,7 +997,7 @@
     "desc": "A butterfly that waltzes through tempests, providing a silent vigil for those unsettled by the roar of thunder, until the storm quiets and the fear subsides.",
     "icon": "T_Fashion_Face_PinkButterfly01",
     "rarity": 4,
-    "unlock": "Available though Myriad"
+    "unlock": "Available through Myriad"
   },
   {
     "id": 20011,
@@ -1005,7 +1005,7 @@
     "desc": "A butterfly that waltzes through tempests, providing a silent vigil for those unsettled by the roar of thunder, until the storm quiets and the fear subsides.",
     "icon": "T_Fashion_Face_BlackButterfly01",
     "rarity": 4,
-    "unlock": "Available though Myriad"
+    "unlock": "Available through Myriad"
   },
   {
     "id": 20012,
@@ -1013,7 +1013,7 @@
     "desc": "According to the lore of certain Charon tribes, this ethereal butterfly emerges each day from the white blossoms of Mother Embla, only to fade into the dusky mists of Father Ask.",
     "icon": "T_Fashion_Face_Butterfly02",
     "rarity": 4,
-    "unlock": "Available though Myriad"
+    "unlock": "Available through Myriad"
   },
   {
     "id": 20013,
@@ -1021,7 +1021,7 @@
     "desc": "According to the lore of certain Charon tribes, this ethereal butterfly emerges each day from the white blossoms of Mother Embla, only to fade into the dusky mists of Father Ask.",
     "icon": "T_Fashion_Face_CyanButterfly02",
     "rarity": 4,
-    "unlock": "Available though Myriad"
+    "unlock": "Available through Myriad"
   },
   {
     "id": 20014,
@@ -1029,7 +1029,7 @@
     "desc": "According to the lore of certain Charon tribes, this ethereal butterfly emerges each day from the white blossoms of Mother Embla, only to fade into the dusky mists of Father Ask.",
     "icon": "T_Fashion_Face_RedButterfly02",
     "rarity": 4,
-    "unlock": "Available though Myriad"
+    "unlock": "Available through Myriad"
   },
   {
     "id": 20015,
@@ -1037,7 +1037,7 @@
     "desc": "According to the lore of certain Charon tribes, this ethereal butterfly emerges each day from the white blossoms of Mother Embla, only to fade into the dusky mists of Father Ask.",
     "icon": "T_Fashion_Face_GreyButterfly02",
     "rarity": 4,
-    "unlock": "Available though Myriad"
+    "unlock": "Available through Myriad"
   },
   {
     "id": 20016,
@@ -1061,7 +1061,7 @@
     "desc": "A swift solution for sudden discomfort.",
     "icon": "T_Fashion_Face_PinkBandage",
     "rarity": 4,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 20019,
@@ -1069,7 +1069,7 @@
     "desc": "A swift solution for sudden discomfort.",
     "icon": "T_Fashion_Face_BlueBandage",
     "rarity": 4,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 20020,
@@ -1085,7 +1085,7 @@
     "desc": "Yearnings for the sky could not transcend earthly bounds. The outstretched wings speak volumes of the longing for freedom.",
     "icon": "T_Fashion_Face_Wing",
     "rarity": 4,
-    "unlock": "Available though Myriad"
+    "unlock": "Available through Myriad"
   },
   {
     "id": 20022,
@@ -1093,7 +1093,7 @@
     "desc": "Always keeps the audience wondering whether the next moment will reveal a dove or a rose.",
     "icon": "T_Fashion_Face_RedFlower",
     "rarity": 4,
-    "unlock": "Available though Myriad"
+    "unlock": "Available through Myriad"
   },
   {
     "id": 20023,
@@ -1101,7 +1101,7 @@
     "desc": "Always keeps the audience wondering whether the next moment will reveal a dove or a rose.",
     "icon": "T_Fashion_Face_WhiteFlower",
     "rarity": 4,
-    "unlock": "Available though Myriad"
+    "unlock": "Available through Myriad"
   },
   {
     "id": 20024,
@@ -1109,7 +1109,7 @@
     "desc": "This fake moustache lends its wearer an air of gravitas and wisdom, though it demands occasional adjustments to ensure it stays firmly in place.",
     "icon": "T_Fashion_Face_Beard",
     "rarity": 4,
-    "unlock": "Available though Myriad"
+    "unlock": "Available through Myriad"
   },
   {
     "id": 20025,
@@ -1133,7 +1133,7 @@
     "desc": "A crimson charm sways beside the monocle, catching the breeze — as if some scholar, somewhere, just flipped a page and murmured, \"...hm.\"",
     "icon": "T_Fashion_Face03",
     "rarity": 4,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 20028,
@@ -1141,7 +1141,7 @@
     "desc": "Bubbly, bright, and impossible to ignore.",
     "icon": "T_Fashion_Face01",
     "rarity": 4,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 20029,
@@ -1165,7 +1165,7 @@
     "desc": "Oink~ Oink~ Oiiiiink~",
     "icon": "T_Fashion_Face02",
     "rarity": 4,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 20032,
@@ -1173,7 +1173,7 @@
     "desc": "Eyes are but obstacles to truly observing and perceiving the world.",
     "icon": "T_Fashion_Face09",
     "rarity": 4,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 20033,
@@ -1189,7 +1189,7 @@
     "desc": "For those who'd like to avoid any eye contact.",
     "icon": "T_Fashion_Face07",
     "rarity": 4,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 20035,
@@ -1197,7 +1197,7 @@
     "desc": "Yearnings for the sky could not transcend earthly bounds. The outstretched wings speak volumes of the longing for freedom.",
     "icon": "T_Fashion_Face10",
     "rarity": 4,
-    "unlock": "Available though Myriad"
+    "unlock": "Available through Myriad"
   },
   {
     "id": 20036,
@@ -1205,7 +1205,7 @@
     "desc": "Even through veiled sight, the world's splendour may still be felt.",
     "icon": "T_Fashion_Face13",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 20037,
@@ -1213,7 +1213,7 @@
     "desc": "Even through veiled sight, the world's splendour may still be felt.",
     "icon": "T_Fashion_Face11",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 20038,
@@ -1221,7 +1221,7 @@
     "desc": "Even through veiled sight, the world's splendour may still be felt.",
     "icon": "T_Fashion_Face14",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 20039,
@@ -1229,7 +1229,7 @@
     "desc": "Wisdom, framed to perfection. These reflective specs greatly magnify an air of intelligence... or at least, make you look incredibly reflective.",
     "icon": "T_Fashion_Face12",
     "rarity": 4,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 20040,
@@ -1257,7 +1257,7 @@
   },
   {
     "id": 20043,
-    "name": "Loongscale Shades",
+    "name": "Loongscale Shades: Dark Jade",
     "desc": "Shielding you from glare and dust, they lay bare what is real and what is not.",
     "icon": "T_Fashion_Face21_02",
     "rarity": 5,
@@ -1453,7 +1453,7 @@
     "desc": "Skim the waves and streak forward atop the surf.",
     "icon": "T_Fashion_Fx08_02",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 21004,
@@ -1461,7 +1461,7 @@
     "desc": "Firelight gives chase through swaying starlight; the river of stars stirs, and a loong drifts overhead.",
     "icon": "",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 30001,
@@ -1493,7 +1493,7 @@
     "desc": "An Aeolipile-designed container for safely holding Phoxichor. Still wildly collectible — even when empty.",
     "icon": "T_Fashion_Waist06",
     "rarity": 3,
-    "unlock": "Available though Myriad"
+    "unlock": "Available through Myriad"
   },
   {
     "id": 30005,
@@ -1569,7 +1569,7 @@
   },
   {
     "id": 30020,
-    "name": "Celestial Scepter",
+    "name": "Celestial Scepter: Glit",
     "desc": "Hold the authority of the heavens in your very hand.",
     "icon": "T_Fashion_Waist15",
     "rarity": 5,
@@ -1665,16 +1665,16 @@
   },
   {
     "id": 31001,
-    "name": "胜利动作·悠游水岸",
-    "desc": "可变更胜利动作。",
+    "name": "Victory Posture: Shore Leisure",
+    "desc": "Changes your Victory Posture.",
     "icon": "T_Fashion_SettlementAction_01",
     "rarity": 5,
     "unlock": ""
   },
   {
     "id": 31002,
-    "name": "胜利动作·睥睨山河",
-    "desc": "可变更胜利动作。",
+    "name": "Victory Posture: Throne Above All",
+    "desc": "Changes your Victory Posture.",
     "icon": "T_Fashion_SettlementAction_02",
     "rarity": 5,
     "unlock": ""
@@ -1709,7 +1709,7 @@
     "desc": "Sink into the darkness and hunt for the light.",
     "icon": "T_Fashion_Back05",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 40007,
@@ -1889,7 +1889,7 @@
   },
   {
     "id": 40038,
-    "name": "Lightborne Plume Backpiece: Dark Blue",
+    "name": "Lightborne Plume Backpiece: Azure",
     "desc": "O wings, soft as a fledgling's, carry my longing and fly towards the horizon where the light awaits.",
     "icon": "T_Fashion_Back30_02",
     "rarity": 5,
@@ -1913,7 +1913,7 @@
   },
   {
     "id": 40041,
-    "name": "Lightborne Plume Waistpiece: Dark Blue",
+    "name": "Lightborne Plume Waistpiece: Azure",
     "desc": "O wings, soft as a fledgling's, carry my longing and fly towards the horizon where the light awaits.",
     "icon": "T_Fashion_Back31_02",
     "rarity": 5,
@@ -2037,11 +2037,11 @@
     "desc": "{空格}",
     "icon": "T_Fashion_Fx03",
     "rarity": 4,
-    "unlock": "Available though Myriad"
+    "unlock": "Available through Myriad"
   },
   {
     "id": 50003,
-    "name": "银烛玩偶",
+    "name": "Silvercandle Doll",
     "desc": "{空格}",
     "icon": "T_Fashion_Fx11",
     "rarity": 4,
@@ -2061,7 +2061,7 @@
     "desc": "Wave goodbye and bid the stars farewell.",
     "icon": "T_Fashion_Fx04",
     "rarity": 4,
-    "unlock": "Available though Myriad"
+    "unlock": "Available through Myriad"
   },
   {
     "id": 70001,
@@ -2069,7 +2069,7 @@
     "desc": "A butterfly flutters, stirring midsummer from its slumber.",
     "icon": "T_Fashion_Fx01",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 70002,
@@ -2077,7 +2077,7 @@
     "desc": "The road ahead is looking quackingly bright.",
     "icon": "T_Fashion_Fx05_03",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 70003,
@@ -2085,7 +2085,7 @@
     "desc": "A loong soars and breathes fire; our songs carry on through the night.",
     "icon": "T_Fashion_Head_YellowChick",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 70011,
@@ -2093,7 +2093,7 @@
     "desc": "A butterfly flutters, stirring midsummer from its slumber.",
     "icon": "T_Fashion_Fx01_02",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 70012,
@@ -2101,7 +2101,7 @@
     "desc": "A butterfly flutters, stirring midsummer from its slumber.",
     "icon": "T_Fashion_Fx01_04",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 70013,
@@ -2109,7 +2109,7 @@
     "desc": "A butterfly flutters, stirring midsummer from its slumber.",
     "icon": "T_Fashion_Fx01_01",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 70021,
@@ -2117,7 +2117,7 @@
     "desc": "The road ahead is looking quackingly bright.",
     "icon": "T_Fashion_Fx05_01",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 70022,
@@ -2125,7 +2125,7 @@
     "desc": "The road ahead is looking quackingly bright.",
     "icon": "T_Fashion_Fx05_04",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 70023,
@@ -2133,7 +2133,7 @@
     "desc": "The road ahead is looking quackingly bright.",
     "icon": "T_Fashion_Fx05_02",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 70031,
@@ -2141,7 +2141,7 @@
     "desc": "A loong soars and breathes fire; our songs carry on through the night.",
     "icon": "T_Fashion_Head_YellowChick",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 70032,
@@ -2149,15 +2149,15 @@
     "desc": "A loong soars and breathes fire; our songs carry on through the night.",
     "icon": "T_Fashion_Head_YellowChick",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 70033,
-    "name": "Flare Blossom: Dark Blue",
+    "name": "Flare Blossom: Azure",
     "desc": "A loong soars and breathes fire; our songs carry on through the night.",
     "icon": "T_Fashion_Head_YellowChick",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 80001,
@@ -2165,7 +2165,7 @@
     "desc": "Bearing pansies, butterflies await the star's arrival to begin the ball's grand overture.",
     "icon": "T_Fashion_Fx02",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 80002,
@@ -2173,7 +2173,7 @@
     "desc": "Bubbles bloom as the shoals surge forth to join the ocean's jubilant song.",
     "icon": "T_Fashion_Fx06_03",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 80003,
@@ -2181,7 +2181,7 @@
     "desc": "Blood for the bond, gold for the covenant; a blessing sworn to endure through the ages.",
     "icon": "T_Fashion_Fx09_02",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 80011,
@@ -2189,7 +2189,7 @@
     "desc": "Bearing pansies, butterflies await the star's arrival to begin the ball's grand overture.",
     "icon": "T_Fashion_Fx02_02",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 80012,
@@ -2197,7 +2197,7 @@
     "desc": "Bearing pansies, butterflies await the star's arrival to begin the ball's grand overture.",
     "icon": "T_Fashion_Fx02_04",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 80013,
@@ -2205,7 +2205,7 @@
     "desc": "Bearing pansies, butterflies await the star's arrival to begin the ball's grand overture.",
     "icon": "T_Fashion_Fx02_01",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 80021,
@@ -2213,7 +2213,7 @@
     "desc": "Bubbles bloom as the shoals surge forth to join the ocean's jubilant song.",
     "icon": "T_Fashion_Fx06_01",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 80022,
@@ -2221,7 +2221,7 @@
     "desc": "Bubbles bloom as the shoals surge forth to join the ocean's jubilant song.",
     "icon": "T_Fashion_Fx06_02",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 80023,
@@ -2229,7 +2229,7 @@
     "desc": "Bubbles bloom as the shoals surge forth to join the ocean's jubilant song.",
     "icon": "T_Fashion_Fx06_04",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 80031,
@@ -2237,7 +2237,7 @@
     "desc": "Blood for the bond, gold for the covenant; a blessing sworn to endure through the ages.",
     "icon": "T_Fashion_Fx09_01",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 80032,
@@ -2245,7 +2245,7 @@
     "desc": "Blood for the bond, gold for the covenant; a blessing sworn to endure through the ages.",
     "icon": "T_Fashion_Fx09_03",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 80033,
@@ -2253,6 +2253,6 @@
     "desc": "Blood for the bond, gold for the covenant; a blessing sworn to endure through the ages.",
     "icon": "T_Fashion_Fx09",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   }
 ]

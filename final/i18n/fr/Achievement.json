@@ -29,7 +29,7 @@
     "描述": "Se connecter pendant 30 jours",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -40,7 +40,7 @@
     "描述": "Se connecter pendant 100 jours",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -51,8 +51,8 @@
     "描述": "Se connecter pendant 365 jours",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
-      "Title: Assidu": 1
+      "Indice de Mandat scellé": 2,
+      "Title: assidu": 1
     }
   },
   {
@@ -74,7 +74,7 @@
     "描述": "Restaurer 15000 PV",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -85,8 +85,8 @@
     "描述": "Restaurer 30000 PV",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
-      "Title: Miséricordieux": 1
+      "Indice de Mandat scellé": 2,
+      "Title: miséricordieux": 1
     }
   },
   {
@@ -108,7 +108,7 @@
     "描述": "Infliger 1500000 Dégâts Lumino",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -119,7 +119,7 @@
     "描述": "Infliger 6000000 Dégâts Lumino",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -141,7 +141,7 @@
     "描述": "Infliger 1500000 Dégâts Umbro",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -152,7 +152,7 @@
     "描述": "Infliger 6000000 Dégâts Umbro",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -174,7 +174,7 @@
     "描述": "Infliger 1500000 Dégâts Hydro",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -185,7 +185,7 @@
     "描述": "Infliger 6000000 Dégâts Hydro",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -207,7 +207,7 @@
     "描述": "Infliger 1500000 Dégâts Pyro",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -218,7 +218,7 @@
     "描述": "Infliger 6000000 Dégâts Pyro",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -240,7 +240,7 @@
     "描述": "Infliger 1500000 Dégâts Électro",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -251,7 +251,7 @@
     "描述": "Infliger 6000000 Dégâts Électro",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -273,7 +273,7 @@
     "描述": "Infliger 1500000 Dégâts Anémo",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -284,7 +284,7 @@
     "描述": "Infliger 6000000 Dégâts Anémo",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -306,7 +306,7 @@
     "描述": "Infliger 600000 Dégâts tranchants",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -317,7 +317,7 @@
     "描述": "Infliger 3000000 Dégâts tranchants",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -339,7 +339,7 @@
     "描述": "Infliger 600000 Dégâts perforants",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -350,7 +350,7 @@
     "描述": "Infliger 3000000 Dégâts perforants",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -372,7 +372,7 @@
     "描述": "Infliger 600000 Dégâts contondants",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -383,7 +383,7 @@
     "描述": "Infliger 3000000 Dégâts contondants",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -405,7 +405,7 @@
     "描述": "Restaurer 50 PV en une seule action",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -416,7 +416,7 @@
     "描述": "Restaurer 100 PV en une seule action",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -438,7 +438,7 @@
     "描述": "Infliger 5000 dégâts en une seule action avec une arme",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -449,7 +449,7 @@
     "描述": "Infliger 10000 dégâts en une seule action avec une arme",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -471,7 +471,7 @@
     "描述": "Infliger 3000 dégâts en une seule action avec une compétence",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -482,7 +482,7 @@
     "描述": "Infliger 6000 dégâts en une seule action avec une compétence",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -504,7 +504,7 @@
     "描述": "Vaincre 1500 Souillés",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -515,7 +515,7 @@
     "描述": "Vaincre 3000 Souillés",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -537,7 +537,7 @@
     "描述": "Vaincre 1500 ennemis de la Légion Hyperboréenne",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -548,7 +548,7 @@
     "描述": "Vaincre 3000 ennemis de la Légion Hyperboréenne",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -570,7 +570,7 @@
     "描述": "Vaincre 1500 ennemis de l’Église Élyséenne",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -581,7 +581,7 @@
     "描述": "Vaincre 3000 ennemis de l’Église Élyséenne",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -603,7 +603,7 @@
     "描述": "Vaincre 15 Ordonnateurs",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -614,7 +614,7 @@
     "描述": "Vaincre 30 Ordonnateurs",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -636,7 +636,7 @@
     "描述": "Vaincre 1500 ennemis des Déchus",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -647,7 +647,7 @@
     "描述": "Vaincre 3000 ennemis des Déchus",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -669,7 +669,7 @@
     "描述": "Vaincre au total 15 Ordonnateurs possédant deux aptitudes",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -680,7 +680,7 @@
     "描述": "Vaincre au total 30 Ordonnateurs possédant deux aptitudes",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -702,7 +702,7 @@
     "描述": "Vaincre au total 15 Ordonnateurs possédant trois aptitudes",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -713,7 +713,7 @@
     "描述": "Vaincre au total 30 Ordonnateurs possédant trois aptitudes",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
+      "Indice de Mandat scellé": 2,
       "Title: Maître": 1
     }
   },
@@ -736,7 +736,7 @@
     "描述": "Vaincre au total 15 fois Lulu, pilleuse de loot",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -747,8 +747,8 @@
     "描述": "Vaincre au total 30 fois Lulu, pilleuse de loot",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
-      "Title: Hésitant": 1,
+      "Indice de Mandat scellé": 2,
+      "Title: hésitant": 1,
       "Title: Bourreau": 1
     }
   },
@@ -771,7 +771,7 @@
     "描述": "Vaincre un total de 1500 ennemis à Huaxu",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -782,7 +782,7 @@
     "描述": "Vaincre un total de 3000 ennemis à Huaxu",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -804,7 +804,7 @@
     "描述": "Vaincre un total de 1500 Souillés affectés par l’Encens",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -815,7 +815,7 @@
     "描述": "Vaincre un total de 3000 Souillés affectés par l’Encens",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -837,7 +837,7 @@
     "描述": "Achever un ennemi avec une arme de mêlée à 1500 reprises",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -848,7 +848,7 @@
     "描述": "Achever un ennemi avec une arme de mêlée à 3000 reprises",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -870,7 +870,7 @@
     "描述": "Achever un ennemi avec une arme à distance à 1500 reprises",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -881,7 +881,7 @@
     "描述": "Achever un ennemi avec une arme à distance à 3000 reprises",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -903,7 +903,7 @@
     "描述": "Achever un ennemi avec une Attaque plongeante à 150 reprises",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -914,7 +914,7 @@
     "描述": "Achever un ennemi avec une Attaque plongeante à 300 reprises",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -936,7 +936,7 @@
     "描述": "Achever un ennemi avec une Attaque chargée à 150 reprises",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -947,7 +947,7 @@
     "描述": "Achever un ennemi avec une Attaque chargée à 300 reprises",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -969,7 +969,7 @@
     "描述": "Achever un ennemi avec une Attaque en glissade à 150 reprises",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -980,7 +980,7 @@
     "描述": "Achever un ennemi avec une Attaque en glissade à 300 reprises",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -1002,7 +1002,7 @@
     "描述": "Achever un ennemi avec une Attaque de rayon à 150 reprises",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -1013,7 +1013,7 @@
     "描述": "Achever un ennemi avec une Attaque de rayon à 300 reprises",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -1035,7 +1035,7 @@
     "描述": "Achever un ennemi avec un projectile explosif à 150 reprises",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -1046,7 +1046,7 @@
     "描述": "Achever un ennemi avec un projectile explosif à 300 reprises",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -1057,7 +1057,7 @@
     "描述": "Vaincre un Ordonnateur – Morsure de givre en mission solo avant qu’il ne lance ses pics de glace",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -1068,7 +1068,7 @@
     "描述": "Vaincre un Ordonnateur – Déflagration en mission solo sans subir de dégâts d’explosion",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -1079,7 +1079,7 @@
     "描述": "Détruire un total de 60 [Orbes électriques] invoquées par un Ordonnateur – Éclair foudroyant en mission solo",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -1090,7 +1090,7 @@
     "描述": "Vaincre un Ordonnateur – Pourriture cramoisie en mission solo sans subir de dégâts de son [Marais putride]",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -1101,7 +1101,7 @@
     "描述": "Vaincre un Ordonnateur – Flétrissure en mission solo sans subir de dégâts de son [Rayon flétrissant]",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -1112,7 +1112,7 @@
     "描述": "Vaincre un Ordonnateur – Gardien en mission solo sans qu’aucun projectile ne soit bloqué par sa [Barrière protectrice]",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -1123,7 +1123,7 @@
     "描述": "Vaincre un Ordonnateur – Représailles en mission solo alors que moins de 5 de ses alliés sont sous l’effet [Renforcé]",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -1134,7 +1134,7 @@
     "描述": "Vaincre un Ordonnateur – Geôle de givre en mission solo sans subir de dégâts de sa [Geôle de givre]",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -1145,7 +1145,7 @@
     "描述": "Vaincre un Ordonnateur – Sacrifice en mission solo sans subir les dégâts de son explosion à la mort",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -1156,7 +1156,7 @@
     "描述": "Vaincre un Ordonnateur – Corrosion en mission solo sans subir de dégâts de son [Venin]",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -1167,7 +1167,7 @@
     "描述": "Vaincre un Ordonnateur – Tempête électrique en mission solo sans subir de dégâts de son [Cataclysme foudroyant]",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -1178,7 +1178,7 @@
     "描述": "Vaincre un Ordonnateur – Bain de sang en mission solo sans subir de dégâts de sa part",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -1189,7 +1189,7 @@
     "描述": "Vaincre un Ordonnateur – Feu résiduel en mission solo sans subir les dégâts de l’explosion de fin de [Feu résiduel]",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -1200,7 +1200,7 @@
     "描述": "Vaincre un Ordonnateur – Spectre en mission solo sans qu’aucune [Illusion] qu’il a invoquée ne reste sur le terrain",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -1211,7 +1211,7 @@
     "描述": "Vaincre un total de 15 leurres de Soldat sniper – Camouflage en mission solo",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -1222,7 +1222,7 @@
     "描述": "Vaincre un Soldat expéditionnaire – Assaut armé en mission solo sans subir de dégâts de ses [Mines terrestres]",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -1233,7 +1233,7 @@
     "描述": "Infliger l’état [Paralysie] 20 fois à un ennemi lors d’une mission solo <Highlight>[Capture]",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -1255,7 +1255,7 @@
     "描述": "Accomplir une fois : vaincre 6 ennemis en 3 s",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -1266,7 +1266,7 @@
     "描述": "Accomplir une fois : vaincre 10 ennemis en 3 s",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -1288,7 +1288,7 @@
     "描述": "Accomplir une fois : utiliser une Compétence de combat 4 fois en 3 s",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -1299,7 +1299,7 @@
     "描述": "Accomplir une fois : utiliser une Compétence de combat 6 fois en 3 s",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -1321,7 +1321,7 @@
     "描述": "Accomplir une fois : utiliser une Compétence ultime 3 fois en 6 s",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -1332,12 +1332,12 @@
     "描述": "Accomplir une fois : utiliser une Compétence ultime 4 fois en 6 s",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
     "id": 202401,
-    "名称": "Fulgurance légendaire : Effet supplémentaire élémentaire I",
+    "名称": "Fulgurance légendaire : Effet élémentaire I",
     "分类": "Bien plus que des chiffres",
     "品质": 3,
     "描述": "Réussir à infliger 5 Effets supplémentaires élémentaires à un ennemi en moins de 3 s",
@@ -1348,24 +1348,24 @@
   },
   {
     "id": 202402,
-    "名称": "Fulgurance légendaire : Effet supplémentaire élémentaire II",
+    "名称": "Fulgurance légendaire : Effet élémentaire II",
     "分类": "Bien plus que des chiffres",
     "品质": 2,
     "描述": "Réussir à infliger 10 Effets supplémentaires élémentaires à un ennemi en moins de 3 s",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
     "id": 202403,
-    "名称": "Fulgurance légendaire : Effet supplémentaire élémentaire III",
+    "名称": "Fulgurance légendaire : Effet élémentaire III",
     "分类": "Bien plus que des chiffres",
     "品质": 1,
     "描述": "Réussir à infliger 20 Effets supplémentaires élémentaires à un ennemi en moins de 3 s",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -1387,7 +1387,7 @@
     "描述": "Utiliser une Compétence de combat 100 fois",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -1398,7 +1398,7 @@
     "描述": "Utiliser une Compétence de combat 200 fois",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -1420,7 +1420,7 @@
     "描述": "Utiliser une Compétence ultime 100 fois",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -1431,7 +1431,7 @@
     "描述": "Utiliser une Compétence ultime 200 fois",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -1453,7 +1453,7 @@
     "描述": "Utiliser le Soutien de Géniemon au total 100 fois",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -1464,7 +1464,7 @@
     "描述": "Utiliser le Soutien de Géniemon au total 200 fois",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -1486,7 +1486,7 @@
     "描述": "Infliger 15000 dégâts à un Boss durant une seule phase de faiblesse exposée",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -1497,8 +1497,8 @@
     "描述": "Infliger 60000 dégâts à un Boss durant une seule phase de faiblesse exposée",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
-      "Title: Méprisable": 1
+      "Indice de Mandat scellé": 2,
+      "Title: méprisable": 1
     }
   },
   {
@@ -1520,7 +1520,7 @@
     "描述": "Accorder un total de 500 points d’Ultra-bouclier à des coéquipiers",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -1531,7 +1531,7 @@
     "描述": "Accorder un total de 1000 points d’Ultra-bouclier à des coéquipiers",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -1543,7 +1543,7 @@
     "版本": "1.0",
     "奖励": {
       "Pièce": 5000,
-      "Title: Renaissant": 1
+      "Title: renaissant": 1
     }
   },
   {
@@ -1554,7 +1554,7 @@
     "描述": "Porter secours à un allié à 20 reprises",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -1565,7 +1565,7 @@
     "描述": "Porter secours à un allié à 30 reprises",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -1587,7 +1587,7 @@
     "描述": "Parcourir au total 15000 m avec le Bond Cyclonique",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -1598,7 +1598,7 @@
     "描述": "Parcourir au total 30000 m avec le Bond Cyclonique",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -1620,7 +1620,7 @@
     "描述": "Cumuler un total de 1800 s d’Effet supplémentaire : Hydro",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -1631,7 +1631,7 @@
     "描述": "Cumuler un total de 3600 s d’Effet supplémentaire : Hydro",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -1653,7 +1653,7 @@
     "描述": "Cumuler un total de 1800 s d’Effet supplémentaire : Pyro",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -1664,7 +1664,7 @@
     "描述": "Cumuler un total de 3600 s d’Effet supplémentaire : Pyro",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -1686,7 +1686,7 @@
     "描述": "Cumuler un total de 1800 s d’Effet supplémentaire : Électro",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -1697,7 +1697,7 @@
     "描述": "Cumuler un total de 3600 s d’Effet supplémentaire : Électro",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -1719,7 +1719,7 @@
     "描述": "Cumuler un total de 1800 s d’Effet supplémentaire : Anémo",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -1730,7 +1730,7 @@
     "描述": "Cumuler un total de 3600 s d’Effet supplémentaire : Anémo",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -1752,7 +1752,7 @@
     "描述": "Cumuler un total de 1800 s d’Effet supplémentaire : Umbro",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -1763,7 +1763,7 @@
     "描述": "Cumuler un total de 3600 s d’Effet supplémentaire : Umbro",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -1785,7 +1785,7 @@
     "描述": "Cumuler un total de 1800 s d’Effet supplémentaire : Lumino",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -1796,7 +1796,7 @@
     "描述": "Cumuler un total de 3600 s d’Effet supplémentaire : Lumino",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -1818,7 +1818,7 @@
     "描述": "Invoquer un Partenaire de combat à 30 reprises",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -1829,7 +1829,7 @@
     "描述": "Invoquer un Partenaire de combat à 60 reprises",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
+      "Indice de Mandat scellé": 2,
       "Title: Capitaine": 1
     }
   },
@@ -1852,7 +1852,7 @@
     "描述": "Infliger 300000 dégâts avec les Partenaires de combat",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -1863,7 +1863,7 @@
     "描述": "Infliger 1000000 dégâts avec les Partenaires de combat",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -1885,7 +1885,7 @@
     "描述": "Restaurer 3000 PV avec les Partenaires de combat",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -1896,7 +1896,7 @@
     "描述": "Restaurer 10000 PV avec les Partenaires de combat",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -1918,7 +1918,7 @@
     "描述": "Remporter en moins de 180 s, en mode solo, le défi [Échos nocturnes : Sibylle] en difficulté maximale",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -1929,7 +1929,7 @@
     "描述": "Remporter en moins de 90 s, en mode solo, le défi [Échos nocturnes : Sibylle] en difficulté maximale",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
+      "Indice de Mandat scellé": 2,
       "Title: Fléau": 1
     }
   },
@@ -1952,7 +1952,7 @@
     "描述": "Remporter en moins de 180 s, en mode solo, le défi [Échos nocturnes : Cristallophage] en difficulté maximale",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -1963,8 +1963,8 @@
     "描述": "Remporter en moins de 90 s, en mode solo, le défi [Échos nocturnes : Cristallophage] en difficulté maximale",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
-      "Title: Bestial": 1
+      "Indice de Mandat scellé": 2,
+      "Title: bestial": 1
     }
   },
   {
@@ -1986,7 +1986,7 @@
     "描述": "Remporter en moins de 180 s, en mode solo, le défi [Échos nocturnes : L’Éclose] en difficulté maximale",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -1997,7 +1997,7 @@
     "描述": "Remporter en moins de 90 s, en mode solo, le défi [Échos nocturnes : L’Éclose] en difficulté maximale",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -2019,7 +2019,7 @@
     "描述": "Dans [Échos nocturnes : Geôlière de la fournaise], remporter le combat en mode solo et en difficulté maximale en moins de 180 s",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -2030,7 +2030,7 @@
     "描述": "Dans [Échos nocturnes : Geôlière de la fournaise], remporter le combat en mode solo et en difficulté maximale en moins de 90 s",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -2052,7 +2052,7 @@
     "描述": "Dans [Échos nocturnes : La Bête née du blizzard], remporter le combat en mode solo et en difficulté maximale en moins de 180 s",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -2063,7 +2063,7 @@
     "描述": "Dans [Échos nocturnes : La Bête née du blizzard], remporter le combat en mode solo et en difficulté maximale en moins de 90 s",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -2074,7 +2074,7 @@
     "描述": "Remporter [Échos nocturnes : Sibylle] en difficulté maximale, sans invoquer de Partenaires de combat",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -2085,7 +2085,7 @@
     "描述": "Remporter [Échos nocturnes : Cristallophage] en difficulté maximale, sans invoquer de Partenaires de combat",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -2096,7 +2096,7 @@
     "描述": "Remporter [Échos nocturnes : L’Éclose] en difficulté maximale, sans invoquer de Partenaires de combat",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -2107,7 +2107,7 @@
     "描述": "Dans [Échos nocturnes : Geôlière de la fournaise], remporter le combat en difficulté maximale sans invoquer de Partenaires de combat",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -2118,7 +2118,7 @@
     "描述": "Dans [Échos nocturnes : La Bête née du blizzard], remporter le combat en difficulté maximale sans invoquer de Partenaires de combat",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -2129,7 +2129,7 @@
     "描述": "Remporter la mission [Médiation] en mode solo et en difficulté maximale, sans invoquer de Partenaires de combat",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -2140,7 +2140,7 @@
     "描述": "Remporter la mission [Extermination] en mode solo et en difficulté maximale, sans invoquer de Partenaires de combat",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -2151,7 +2151,7 @@
     "描述": "Remporter la mission [Escorte] en mode solo et en difficulté maximale, sans invoquer de Partenaires de combat",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -2162,7 +2162,7 @@
     "描述": "Remporter la mission [Transfert] en mode solo et en difficulté maximale, sans invoquer de Partenaires de combat",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -2184,7 +2184,7 @@
     "描述": "Remporter la mission [Exploration ∞] en mode solo et en difficulté maximale, après avoir vaincu au moins 150 ennemis",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -2195,7 +2195,7 @@
     "描述": "Remporter la mission [Exploration ∞] en mode solo et en difficulté maximale, après avoir vaincu au moins 300 ennemis",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -2217,7 +2217,7 @@
     "描述": "Remporter la mission [Défense ∞] en mode solo et en difficulté maximale, après avoir vaincu au moins 150 ennemis",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -2228,7 +2228,7 @@
     "描述": "Remporter la mission [Défense ∞] en mode solo et en difficulté maximale, après avoir vaincu au moins 300 ennemis",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -2239,7 +2239,7 @@
     "描述": "Remporter une fois [Échos nocturnes : Sibylle]",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
+      "Indice de Mandat scellé": 2,
       "Title: Concurrent": 1
     }
   },
@@ -2251,7 +2251,7 @@
     "描述": "Remporter une fois [Échos nocturnes : Cristallophage]",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -2262,7 +2262,7 @@
     "描述": "Remporter une fois [Échos nocturnes : L’Éclose]",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -2273,7 +2273,7 @@
     "描述": "Remporter une fois [Échos nocturnes : Geôlière de la fournaise]",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -2284,7 +2284,7 @@
     "描述": "Remporter une fois [Échos nocturnes : La Bête née du blizzard]",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -2295,7 +2295,7 @@
     "描述": "Remporter [Échos nocturnes : Sibylle] en difficulté maximale, sans perdre de PV ni invoquer de Partenaires de combat",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
+      "Indice de Mandat scellé": 2,
       "Title: Commandant de Légion": 1
     }
   },
@@ -2307,8 +2307,8 @@
     "描述": "Remporter [Échos nocturnes : Cristallophage] en difficulté maximale, sans perdre de PV ni invoquer de Partenaires de combat",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
-      "Title: Endeuillé": 1
+      "Indice de Mandat scellé": 2,
+      "Title: endeuillé": 1
     }
   },
   {
@@ -2319,8 +2319,8 @@
     "描述": "Remporter [Échos nocturnes : L’Éclose] en difficulté maximale, sans perdre de PV ni invoquer de Partenaires de combat",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
-      "Title: Ailé": 1
+      "Indice de Mandat scellé": 2,
+      "Title: ailé": 1
     }
   },
   {
@@ -2331,7 +2331,7 @@
     "描述": "Dans [Échos nocturnes : Geôlière de la fournaise] en difficulté maximale, remporter le combat sans perdre de PV ni invoquer de Partenaires de combat",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
+      "Indice de Mandat scellé": 2,
       "Title: Geôlier": 1
     }
   },
@@ -2343,7 +2343,7 @@
     "描述": "Dans [Échos nocturnes : La Bête née du blizzard] en difficulté maximale, remporter le combat sans perdre de PV ni invoquer de Partenaires de combat",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -2365,7 +2365,7 @@
     "描述": "Remporter la mission [Médiation] en mode solo et en difficulté maximale en moins de 180 s",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -2376,7 +2376,7 @@
     "描述": "Remporter la mission [Médiation] en mode solo et en difficulté maximale en moins de 90 s",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -2398,7 +2398,7 @@
     "描述": "Remporter la mission [Extermination] en mode solo et en difficulté maximale en moins de 300 s",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -2409,7 +2409,7 @@
     "描述": "Remporter la mission [Extermination] en mode solo et en difficulté maximale en moins de 180 s",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -2431,7 +2431,7 @@
     "描述": "Remporter la mission [Escorte] en mode solo et en difficulté maximale en moins de 300 s",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -2442,7 +2442,7 @@
     "描述": "Remporter la mission [Escorte] en mode solo et en difficulté maximale en moins de 180 s",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -2453,7 +2453,7 @@
     "描述": "Neutraliser un total de 300 projectiles dans [Échos nocturnes : Sibylle] en difficulté maximale",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -2464,7 +2464,7 @@
     "描述": "Dans [Échos nocturnes : Cristallophage] en difficulté maximale, faire percuter un pilier au Cristallophage 3 fois",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -2475,7 +2475,7 @@
     "描述": "Détruire toutes les ailes de l’Éclose dans [Échos nocturnes : L’Éclose] en difficulté maximale et en moins de 8 secondes",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -2487,7 +2487,7 @@
     "版本": "1.0",
     "奖励": {
       "Pièce": 5000,
-      "Title: Marcheur nocturne": 1
+      "Title: marcheur nocturne": 1
     }
   },
   {
@@ -2509,8 +2509,8 @@
     "描述": "Terminer Dédale mystique — Difficulté III",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: Sombre": 1
+      "Indice de Mandat scellé": 1,
+      "Title: sombre": 1
     }
   },
   {
@@ -2521,7 +2521,7 @@
     "描述": "Terminer Dédale mystique — Difficulté IV",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -2532,7 +2532,7 @@
     "描述": "Terminer Dédale mystique — Difficulté V",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
+      "Indice de Mandat scellé": 2,
       "Title: Rôdeur": 1
     }
   },
@@ -2566,7 +2566,7 @@
     "描述": "Éveiller 24 nœuds de [Couvercle : Bénédiction d’honneur]",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -2588,7 +2588,7 @@
     "描述": "Éveiller 24 nœuds de [Poignée : Bénédiction de lumière]",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -2610,7 +2610,7 @@
     "描述": "Éveiller 24 nœuds de [Corps : Bénédiction de courage]",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -2632,7 +2632,7 @@
     "描述": "Éveiller 24 nœuds de [Socle : Bénédiction de justice]",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -2654,7 +2654,7 @@
     "描述": "Entrer 12 fois dans [Combat — Umbré dispersé] dans le Dédale mystique",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -2676,7 +2676,7 @@
     "描述": "Entrer 12 fois dans [Rencontre] dans le Dédale mystique",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -2687,7 +2687,7 @@
     "描述": "Obtenir 20000 [Braises] dans le Dédale mystique",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -2698,7 +2698,7 @@
     "描述": "Lors d’une exploration du Dédale mystique, posséder au moins 3000 [Braises]",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -2709,7 +2709,7 @@
     "描述": "Terminer le Dédale mystique en possédant au moins 1500 [Braises]",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -2731,7 +2731,7 @@
     "描述": "Obtenir 15 types de Lucimèches [Cœur de feu] dans le Dédale mystique",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -2753,7 +2753,7 @@
     "描述": "Obtenir 15 types de Lucimèches [Lune marine] dans le Dédale mystique",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -2775,7 +2775,7 @@
     "描述": "Obtenir 15 types de Lucimèches [Luménite] dans le Dédale mystique",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -2797,7 +2797,7 @@
     "描述": "Obtenir 15 types de Lucimèches [Rameau lumineux] dans le Dédale mystique",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -2819,7 +2819,7 @@
     "描述": "Obtenir 15 types de Lucimèches [Papillon nocturne] dans le Dédale mystique",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -2841,7 +2841,7 @@
     "描述": "Obtenir 15 types de Lucimèches [Luciole brillante] dans le Dédale mystique",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -2863,7 +2863,7 @@
     "描述": "Obtenir 15 types de Lucimèches [Fleur vampirique] dans le Dédale mystique",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -2885,7 +2885,7 @@
     "描述": "Obtenir 25 types d’Artéfacts dans le Dédale mystique",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -2896,7 +2896,7 @@
     "描述": "Restaurer un total de 50000 PV dans le Dédale mystique",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -2907,7 +2907,7 @@
     "描述": "Infliger 30000 dégâts en une seule action avec une arme de mêlée dans le Dédale mystique",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -2918,7 +2918,7 @@
     "描述": "Infliger 10000 dégâts en une seule action avec une arme à distance dans le Dédale mystique",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -2929,7 +2929,7 @@
     "描述": "Infliger un total de 2000000 dégâts avec les Lucimèches [Papillon nocturne]",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -2937,10 +2937,10 @@
     "名称": "Gardien de la lanterne — Luciole brillante",
     "分类": "Jardin labyrinthique",
     "品质": 1,
-    "描述": "Infliger 12000</highlight> dégâts en une seule action avec une Lucimèche [Luciole brillante]",
+    "描述": "Infliger 12000 dégâts en une seule action avec une Lucimèche [Luciole brillante]",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -2951,7 +2951,7 @@
     "描述": "Infliger un total de 2000000 dégâts avec les Lucimèches [Rameau lumineux]",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -2962,7 +2962,7 @@
     "描述": "Infliger 10000 dégâts en une seule action avec une compétence dans le Dédale mystique",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -2973,7 +2973,7 @@
     "描述": "Infliger 20000 Dégâts Lumino en une action dans le Dédale mystique",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -2984,7 +2984,7 @@
     "描述": "Infliger 20000 Dégâts Umbro en une action dans le Dédale mystique",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -2995,7 +2995,7 @@
     "描述": "Infliger 20000 Dégâts Hydro en une action dans le Dédale mystique",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -3006,7 +3006,7 @@
     "描述": "Infliger 20000 Dégâts Pyro en une action dans le Dédale mystique",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -3017,7 +3017,7 @@
     "描述": "Infliger 20000 Dégâts Électro en une action dans le Dédale mystique",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -3028,7 +3028,7 @@
     "描述": "Infliger 20000 Dégâts Anémo en une action dans le Dédale mystique",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -3039,7 +3039,7 @@
     "描述": "Vaincre 2000 ennemis dans le Dédale mystique",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -3050,7 +3050,7 @@
     "描述": "Vaincre 60 Ordonnateurs dans le Dédale mystique",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -3072,7 +3072,7 @@
     "描述": "Obtenir 5000000 pièces",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -3083,8 +3083,8 @@
     "描述": "Obtenir 10000000 pièces",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
-      "Title: Opulent": 1
+      "Indice de Mandat scellé": 2,
+      "Title: opulent": 1
     }
   },
   {
@@ -3106,7 +3106,7 @@
     "描述": "Obtenir 50000 Globules cramoisis",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -3117,8 +3117,8 @@
     "描述": "Obtenir 500000 Globules cramoisis",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
-      "Title: Écarlate": 1
+      "Indice de Mandat scellé": 2,
+      "Title: écarlate": 1
     }
   },
   {
@@ -3140,7 +3140,7 @@
     "描述": "Rassembler toutes les Notes de terrain de Theo",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -3151,7 +3151,7 @@
     "描述": "Rassembler toutes les histoires des Dégradés de la Maison d’Hypnos",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -3162,7 +3162,7 @@
     "描述": "Rassembler toutes les Feuilles perdues de l’Île du Purgatoire",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -3173,7 +3173,7 @@
     "描述": "Rassembler toutes les Feuilles perdues des Environs de Givrelac",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -3184,7 +3184,7 @@
     "描述": "Rassembler toutes les Feuilles perdues de la Forteresse de Lonza",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -3192,10 +3192,10 @@
     "名称": "Archive mémorielle",
     "分类": "Liste de souhaits",
     "品质": 2,
-    "描述": "集齐冰湖城周边所有银烛狂欢颂歌的十个章节",
+    "描述": "Rassembler les dix chapitres d’Hymne de la Chandelle d’Argent dans les Environs de Givrelac",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -3203,10 +3203,10 @@
     "名称": "Contes de Momiji",
     "分类": "Liste de souhaits",
     "品质": 2,
-    "描述": "集齐盖雷亚剧院所有《红叶反讨秘话》的四个章节",
+    "描述": "Rassembler les quatre chapitres de Momiji : Récits du soulèvement au Théâtre Galea",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -3217,7 +3217,7 @@
     "描述": "Rassembler toutes les Feuilles perdues du Marché Voilé",
     "版本": "1.1",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -3228,7 +3228,7 @@
     "描述": "Rassembler toutes les Feuilles perdues du Port-des-Brumes",
     "版本": "1.1",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -3250,7 +3250,7 @@
     "描述": "Dépenser 5000000 pièces",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -3261,7 +3261,7 @@
     "描述": "Dépenser 10000000 pièces",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
+      "Indice de Mandat scellé": 2,
       "Title: Consommateur": 1
     }
   },
@@ -3306,7 +3306,7 @@
     "描述": "Utiliser 10 Marteaux-jouets",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
+      "Indice de Mandat scellé": 2,
       "Title: Voyageur du temps": 1
     }
   },
@@ -3318,7 +3318,7 @@
     "描述": "Utiliser 50 Marteaux-jouets",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -3329,7 +3329,7 @@
     "描述": "Obtenir 10 espèces de poissons",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -3340,7 +3340,7 @@
     "描述": "Obtenir 30 espèces de poissons",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -3351,7 +3351,7 @@
     "描述": "Obtenir 70 espèces de poissons",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
+      "Indice de Mandat scellé": 2,
       "Title: Pêcheur": 1
     }
   },
@@ -3385,7 +3385,7 @@
     "描述": "Obtenir au total 50 documents à lire",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
+      "Indice de Mandat scellé": 1,
       "Title: Érudit": 1
     }
   },
@@ -3398,7 +3398,7 @@
     "版本": "1.0",
     "奖励": {
       "Pièce": 5000,
-      "Title: Aux touches d’ivoire": 1,
+      "Title: aux touches d’ivoire": 1,
       "Title Frame: Mouvement I Style": 1
     }
   },
@@ -3410,7 +3410,7 @@
     "描述": "Obtenir 20 partitions",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
+      "Indice de Mandat scellé": 1,
       "Title Frame: Mouvement II Style": 1
     }
   },
@@ -3422,8 +3422,8 @@
     "描述": "Obtenir 50 partitions",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
-      "Title: Lyrique": 1,
+      "Indice de Mandat scellé": 2,
+      "Title: lyrique": 1,
       "Title Frame: Mouvement III Style": 1
     }
   },
@@ -3457,7 +3457,7 @@
     "描述": "Obtenir 100 Sceaux démoniaques",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -3468,7 +3468,7 @@
     "描述": "Obtenir 200 Sceaux démoniaques",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -3479,7 +3479,7 @@
     "描述": "Obtenir 500 Sceaux démoniaques",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
+      "Indice de Mandat scellé": 2,
       "Title: Force": 1
     }
   },
@@ -3502,7 +3502,7 @@
     "描述": "Obtenir un Sceau démoniaque épique pour la première fois",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -3513,8 +3513,8 @@
     "描述": "Obtenir un Sceau démoniaque légendaire pour la première fois",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
-      "Title: Puissant": 1
+      "Indice de Mandat scellé": 2,
+      "Title: puissant": 1
     }
   },
   {
@@ -3525,8 +3525,8 @@
     "描述": "Obtenir 1 Sceau démoniaque légendaire Niv. 10",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
-      "Title: Invincible": 1
+      "Indice de Mandat scellé": 2,
+      "Title: invincible": 1
     }
   },
   {
@@ -3548,8 +3548,8 @@
     "描述": "Équiper n’importe quel personnage de 9 Sceaux démoniaques",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
-      "Title: Armé": 1
+      "Indice de Mandat scellé": 2,
+      "Title: armé": 1
     }
   },
   {
@@ -3593,7 +3593,7 @@
     "描述": "Obtenir 10 armes",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -3604,7 +3604,7 @@
     "描述": "Obtenir 15 armes",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
+      "Indice de Mandat scellé": 2,
       "Title: Maître d’armes": 1
     }
   },
@@ -3627,7 +3627,7 @@
     "描述": "Atteindre le Niv. 60 avec 5 armes différentes",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -3638,7 +3638,7 @@
     "描述": "Atteindre le Niv. 60 avec 10 armes différentes",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -3660,7 +3660,7 @@
     "描述": "Atteindre la phase 6 d’ascension avec 5 armes différentes",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -3671,8 +3671,8 @@
     "描述": "Atteindre la phase 6 d’ascension avec 10 armes différentes",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
-      "Title: Ardent": 1
+      "Indice de Mandat scellé": 2,
+      "Title: ardent": 1
     }
   },
   {
@@ -3694,7 +3694,7 @@
     "描述": "Porter le Niveau de fusion de 5 armes au Niv. 5",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -3705,7 +3705,7 @@
     "描述": "Porter le Niveau de fusion de 10 armes au Niv. 5",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -3716,7 +3716,7 @@
     "描述": "Obtenir 100 Lumites",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -3727,7 +3727,7 @@
     "描述": "Briser au total 100 Noix à coque de fer",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -3738,7 +3738,7 @@
     "描述": "Briser au total 100 Pierres Plop Plop",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -3760,7 +3760,7 @@
     "描述": "Récolter des objets 100 fois au total",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -3771,7 +3771,7 @@
     "描述": "Récolter des objets 1000 fois au total",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -3782,7 +3782,7 @@
     "描述": "Détruire un total de 100 Coralithes",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -3793,7 +3793,7 @@
     "描述": "Terminer 3 vagues dans n’importe quelle mission en mode ∞",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -3914,7 +3914,7 @@
     "描述": "Terminer la mission [Défense ∞] un total de 20 fois",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -3925,7 +3925,7 @@
     "描述": "Terminer la mission [Défense] un total de 20 fois",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -3936,7 +3936,7 @@
     "描述": "Terminer la mission [Excavation ∞] un total de 20 fois",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -3947,7 +3947,7 @@
     "描述": "Terminer la mission [Capture] un total de 20 fois",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -3958,7 +3958,7 @@
     "描述": "Terminer la mission [Exploration ∞] un total de 20 fois",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -3969,7 +3969,7 @@
     "描述": "Terminer la mission [Précaution] un total de 20 fois",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -3980,7 +3980,7 @@
     "描述": "Terminer la mission [Médiation] un total de 20 fois",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -3991,7 +3991,7 @@
     "描述": "Terminer la mission [Transfert] un total de 20 fois",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -4002,7 +4002,7 @@
     "描述": "Terminer la mission [Extermination] un total de 20 fois",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -4013,7 +4013,7 @@
     "描述": "Terminer la mission [Escorte] un total de 20 fois",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -4024,8 +4024,8 @@
     "描述": "Terminer 50 missions au total",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
-      "Title: Apprenti": 1
+      "Indice de Mandat scellé": 2,
+      "Title: apprenti": 1
     }
   },
   {
@@ -4036,8 +4036,8 @@
     "描述": "Terminer 20 missions au total en mode coop",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
-      "Title: Bien entouré": 1
+      "Indice de Mandat scellé": 2,
+      "Title: bien entouré": 1
     }
   },
   {
@@ -4048,7 +4048,7 @@
     "描述": "Terminer une mission [Médiation] sans déclencher de Piège rebondissant",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -4059,7 +4059,7 @@
     "描述": "Terminer une mission [Escorte] sans déclencher le décompte d’exécution",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -4070,7 +4070,7 @@
     "描述": "Dans une mission [Escorte], libérer la cible après avoir forcé une seule cellule",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -4081,7 +4081,7 @@
     "描述": "Dans une mission [Escorte], libérer la cible alors qu’il reste moins de 5 s au décompte",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -4092,7 +4092,7 @@
     "描述": "Dans une mission [Escorte], vaincre toutes les patrouilles",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -4103,7 +4103,7 @@
     "描述": "Terminer une mission [Transfert] sans qu’aucun Drone magnétique n’explose",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -4114,7 +4114,7 @@
     "描述": "Terminer une mission [Défense] sans que le Noyau défensif ne subisse de dégâts",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -4125,7 +4125,7 @@
     "描述": "Terminer une mission [Défense ∞] sans que le Noyau défensif ne subisse de dégâts",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -4136,7 +4136,7 @@
     "描述": "Terminer une mission [Exploration ∞] sans utiliser de Réservoir de sérum",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -4147,7 +4147,7 @@
     "描述": "Dans une mission [Escorte], libérer la cible à la 4ᵉ tentative de résolution du mécanisme après trois échecs consécutifs",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -4158,7 +4158,7 @@
     "描述": "Remporter une mission [Médiation] sans vaincre aucun chef des Déchus",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -4169,7 +4169,7 @@
     "描述": "Remporter une mission [Médiation] après avoir vaincu tous les chefs des Déchus",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -4180,7 +4180,7 @@
     "描述": "Remporter n’importe quelle mission sans vaincre un seul ennemi",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -4192,7 +4192,7 @@
     "版本": "1.0",
     "奖励": {
       "Pièce": 5000,
-      "Title: Éclairé": 1
+      "Title: éclairé": 1
     }
   },
   {
@@ -4203,7 +4203,7 @@
     "描述": "Posséder 5 personnages Niv. 60",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -4214,7 +4214,7 @@
     "描述": "Posséder 10 personnages Niv. 60",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -4236,7 +4236,7 @@
     "描述": "Posséder 5 personnages ayant atteint la phase 6 d’ascension",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -4247,8 +4247,8 @@
     "描述": "Posséder 10 personnages ayant atteint la phase 6 d’ascension",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
-      "Title: Aguerri": 1
+      "Indice de Mandat scellé": 2,
+      "Title: aguerri": 1
     }
   },
   {
@@ -4260,7 +4260,7 @@
     "版本": "1.0",
     "奖励": {
       "Pièce": 5000,
-      "Title: Approprié": 1
+      "Title: approprié": 1
     }
   },
   {
@@ -4271,7 +4271,7 @@
     "描述": "Ajuster l’affinité d’un emplacement de Sceau démoniaque 10 fois",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -4282,7 +4282,7 @@
     "描述": "Ajuster l’affinité d’un emplacement de Sceau démoniaque 20 fois",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -4315,7 +4315,7 @@
     "描述": "Atteindre le niveau 6 d’Intron pour 5 personnages",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -4326,8 +4326,8 @@
     "描述": "Atteindre le niveau 6 d’Intron pour 10 personnages",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
-      "Title: Éveillé": 1
+      "Indice de Mandat scellé": 2,
+      "Title: éveillé": 1
     }
   },
   {
@@ -4360,7 +4360,7 @@
     "描述": "Obtenir 10 personnages",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -4371,8 +4371,8 @@
     "描述": "Obtenir 20 personnages",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
-      "Title: Fatidique": 1
+      "Indice de Mandat scellé": 2,
+      "Title: fatidique": 1
     }
   },
   {
@@ -4383,8 +4383,8 @@
     "描述": "Terminer la quête : « Murmures des sables »",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: Au-delà du Royaume des Sables": 1,
+      "Indice de Mandat scellé": 1,
+      "Title: au-delà du Royaume des Sables": 1,
       "Title: Être de songes": 1
     }
   },
@@ -4407,8 +4407,8 @@
     "描述": "Terminer la quête : « Renaissance »",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: Impérial": 1,
+      "Indice de Mandat scellé": 1,
+      "Title: impérial": 1,
       "Title: Vagabond": 1
     }
   },
@@ -4420,7 +4420,7 @@
     "描述": "Terminer la quête : « L’art de survivre »",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
+      "Indice de Mandat scellé": 1,
       "Title: Chasseur de Phoxène": 1
     }
   },
@@ -4432,7 +4432,7 @@
     "描述": "Terminer la quête : « Le secret derrière la porte »",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
+      "Indice de Mandat scellé": 1,
       "Title: Étranger": 1
     }
   },
@@ -4444,8 +4444,8 @@
     "描述": "Terminer la quête : « Porté par la brise »",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: Honoré par la fleur blanche": 1
+      "Indice de Mandat scellé": 1,
+      "Title: honoré par la fleur blanche": 1
     }
   },
   {
@@ -4456,7 +4456,7 @@
     "描述": "Terminer la quête : « Les Observateurs »",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
+      "Indice de Mandat scellé": 1,
       "Title: Insensé": 1
     }
   },
@@ -4468,8 +4468,8 @@
     "描述": "Terminer la quête : « Le jour du jugement »",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: Injustement accusé": 1
+      "Indice de Mandat scellé": 1,
+      "Title: injustement accusé": 1
     }
   },
   {
@@ -4491,7 +4491,7 @@
     "描述": "Au fil des tours du temps, les souvenirs défilent comme des ombres dans une lanterne.",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -4513,8 +4513,8 @@
     "描述": "S’installer au Sanctuaire.",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: Comme de la famille": 1
+      "Indice de Mandat scellé": 1,
+      "Title: comme de la famille": 1
     }
   },
   {
@@ -4525,7 +4525,7 @@
     "描述": "« Si je ne peux vivre comme un être humain, alors laissez-moi mourir comme tel. »",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -4536,7 +4536,7 @@
     "描述": "Cette photo se souvient de votre nom, comme de l’écho de ma voix.",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -4547,7 +4547,7 @@
     "描述": "Survivre à l’entraînement infernal de l’Étranger.",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -4569,8 +4569,8 @@
     "描述": "Un nouveau monde, un nouveau départ.",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
-      "Title: Rompu à la ville": 1
+      "Indice de Mandat scellé": 2,
+      "Title: rompu à la ville": 1
     }
   },
   {
@@ -4581,7 +4581,7 @@
     "描述": "« Je suis venu te ramener à la maison. »",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -4592,7 +4592,7 @@
     "描述": "Surcharger le réservoir Phoxichor pour détruire la salle des machines.",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -4603,7 +4603,7 @@
     "描述": "Utiliser la tourelle pour ouvrir la voie vers la Salle de commande centrale.",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -4648,7 +4648,7 @@
     "描述": "Renaître de la prison des flammes.",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -4670,7 +4670,7 @@
     "描述": "Terminer la quête secondaire : « Moment de gloire »",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
+      "Indice de Mandat scellé": 1,
       "Title: Antagoniste": 1
     }
   },
@@ -4682,7 +4682,7 @@
     "描述": "Source : Terminer la quête « Temps de l’innocence »",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -4693,7 +4693,7 @@
     "描述": "Source : Terminer la quête « La terre écarlate »",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
+      "Indice de Mandat scellé": 1,
       "Title: Démon": 1
     }
   },
@@ -4705,7 +4705,7 @@
     "描述": "Source : Terminer la quête « Requiem pour les sans-nom »",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -4717,7 +4717,7 @@
     "版本": "1.0",
     "奖励": {
       "Pièce": 5000,
-      "Title: Sagace": 1
+      "Title: sagace": 1
     }
   },
   {
@@ -4728,8 +4728,8 @@
     "描述": "Faire face aux monstres qui vous ont jadis blessé.",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
-      "Title: Dément": 1
+      "Indice de Mandat scellé": 2,
+      "Title: dément": 1
     }
   },
   {
@@ -4740,7 +4740,7 @@
     "描述": "« Je ne regarderai plus jamais quelqu’un mourir à cause d’un Souillé. »",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -4773,7 +4773,7 @@
     "描述": "J’ai imaginé nos retrouvailles mille fois — jamais ainsi.",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -4784,7 +4784,7 @@
     "描述": "Déchirer la cage, même s’il ne reste que vos mains en lambeaux.",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -4795,8 +4795,8 @@
     "描述": "« À la seule représentation réussie de ma vie. »",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
-      "Title: Sous les étoiles": 1,
+      "Indice de Mandat scellé": 2,
+      "Title: sous les étoiles": 1,
       "Title: Comédien": 1
     }
   },
@@ -4821,7 +4821,7 @@
     "版本": "1.0",
     "奖励": {
       "Pièce": 5000,
-      "Title: Festif": 1,
+      "Title: festif": 1,
       "Title: Ami": 1
     }
   },
@@ -4844,7 +4844,7 @@
     "描述": "Forger un total de 5 plans d’arme",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -4855,7 +4855,7 @@
     "描述": "Forger un total de 10 plans d’arme",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
+      "Indice de Mandat scellé": 2,
       "Title: Aîné": 1
     }
   },
@@ -4879,7 +4879,7 @@
     "描述": "Forger 5 objets",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -4890,7 +4890,7 @@
     "描述": "Forger 10 objets",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -4923,7 +4923,7 @@
     "描述": "Atteindre le Niveau d’Aventure 30",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -4934,7 +4934,7 @@
     "描述": "Atteindre le Niveau d’Aventure 40",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -4945,7 +4945,7 @@
     "描述": "Atteindre le Niveau d’Aventure 50",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -4956,7 +4956,7 @@
     "描述": "Atteindre le Niveau d’Aventure 60",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
+      "Indice de Mandat scellé": 2,
       "Title: Héros": 1
     }
   },
@@ -4969,7 +4969,7 @@
     "版本": "1.0",
     "奖励": {
       "Pièce": 5000,
-      "Title: Éblouissant": 1
+      "Title: éblouissant": 1
     }
   },
   {
@@ -4980,7 +4980,7 @@
     "描述": "Effectuer un total de 50 évocations",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -4991,8 +4991,8 @@
     "描述": "Effectuer un total de 100 évocations",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
-      "Title: Mignon et irrésistible": 1,
+      "Indice de Mandat scellé": 2,
+      "Title: mignon et irrésistible": 1,
       "Title: Mère": 1,
       "Title: Père": 1
     }
@@ -5005,7 +5005,7 @@
     "描述": "Trouver au total 8 Sphères d’exploration laissées par Luno, l’exploratrice sur l’Île du Purgatoire",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -5016,7 +5016,7 @@
     "描述": "Trouver au total 20 Sphères d’exploration laissées par Luno, l’exploratrice dans les Environs de Givrelac",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -5027,7 +5027,7 @@
     "描述": "Trouver au total 10 Sphères d’exploration laissées par Luno, l’exploratrice à la Forteresse de Lonza",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -5038,7 +5038,7 @@
     "描述": "Trouver au total 8 Sphères d’exploration laissées par Luno, l’exploratrice à Port-des-Brumes",
     "版本": "1.1",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -5049,7 +5049,7 @@
     "描述": "Obtenir un total de 10 Runes de Taixu",
     "版本": "1.1",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -5060,7 +5060,7 @@
     "描述": "Obtenir un total de 80 Runes de Taixu",
     "版本": "1.1",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -5071,7 +5071,7 @@
     "描述": "Obtenir un total de 160 Runes de Taixu",
     "版本": "1.1",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -5082,503 +5082,503 @@
     "描述": "Obtenir un total de 220 Runes de Taixu",
     "版本": "1.1",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
     "id": 17002001,
-    "名称": "停驻光阴·贝蕾妮卡",
+    "名称": "Instants figés : Berenica",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "于休憩之所“点滴”处完整阅读贝蕾妮卡的光阴集故事",
+    "描述": "Lire intégralement l’Anthologie du temps de Berenica dans les Fragments de mémoire du Sanctuaire.",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 贝蕾妮卡的": 1
+      "Indice de Mandat scellé": 1,
+      "Title: de Berenica": 1
     }
   },
   {
     "id": 17002002,
-    "名称": "停驻光阴·幻景",
+    "名称": "Instants figés : Phantasio",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "于休憩之所“点滴”处完整阅读幻景的光阴集故事",
+    "描述": "Lire intégralement l’Anthologie du temps de Phantasio dans les Fragments de mémoire du Sanctuaire.",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 幻景的": 1
+      "Indice de Mandat scellé": 1,
+      "Title: de Phantasio": 1
     }
   },
   {
     "id": 17002004,
-    "名称": "停驻光阴·妮弗尔夫人",
+    "名称": "Instants figés : Dame Nifle",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "于休憩之所“点滴”处完整阅读妮弗尔夫人的光阴集故事",
+    "描述": "Lire intégralement l’Anthologie du temps de Dame Nifle dans les Fragments de mémoire du Sanctuaire.",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 妮弗尔夫人的": 1
+      "Indice de Mandat scellé": 1,
+      "Title: de Dame Nifle": 1
     }
   },
   {
     "id": 17002005,
-    "名称": "停驻光阴·刻舟",
+    "名称": "Instants figés : Kezhou",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "于休憩之所“点滴”处完整阅读刻舟的光阴集故事",
+    "描述": "Lire intégralement l’Anthologie du temps de Kezhou dans les Fragments de mémoire du Sanctuaire.",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 刻舟的": 1
+      "Indice de Mandat scellé": 1,
+      "Title: de Kezhou": 1
     }
   },
   {
     "id": 17002007,
-    "名称": "停驻光阴·菲娜",
+    "名称": "Instants figés : Fina",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "于休憩之所“点滴”处完整阅读菲娜的光阴集故事",
+    "描述": "Lire intégralement l’Anthologie du temps de Fina dans les Fragments de mémoire du Sanctuaire.",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 菲娜的": 1
+      "Indice de Mandat scellé": 1,
+      "Title: de Fina": 1
     }
   },
   {
     "id": 17002008,
-    "名称": "停驻光阴·丽蓓卡",
+    "名称": "Instants figés : Rebecca",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "于休憩之所“点滴”处完整阅读丽蓓卡的光阴集故事",
+    "描述": "Lire intégralement l’Anthologie du temps de Rebecca dans les Fragments de mémoire du Sanctuaire.",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 丽蓓卡的": 1
+      "Indice de Mandat scellé": 1,
+      "Title: de Rebecca": 1
     }
   },
   {
     "id": 17002010,
-    "名称": "停驻光阴·塔比瑟",
+    "名称": "Instants figés : Tabethe",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "于休憩之所“点滴”处完整阅读塔比瑟的光阴集故事",
+    "描述": "Lire intégralement l’Anthologie du temps de Tabethe dans les Fragments de mémoire du Sanctuaire.",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 塔比瑟的": 1
+      "Indice de Mandat scellé": 1,
+      "Title: de Tabethe": 1
     }
   },
   {
     "id": 17002011,
-    "名称": "停驻光阴·扶疏",
+    "名称": "Instants figés : Fushu",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "于休憩之所“点滴”处完整阅读扶疏的光阴集故事",
+    "描述": "Lire intégralement l’Anthologie du temps de Fushu dans les Fragments de mémoire du Sanctuaire.",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 扶疏的": 1
+      "Indice de Mandat scellé": 1,
+      "Title: de Fushu": 1
     }
   },
   {
     "id": 17002012,
-    "名称": "停驻光阴·琳恩",
+    "名称": "Instants figés : Lynn",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "于休憩之所“点滴”处完整阅读琳恩的光阴集故事",
+    "描述": "Lire intégralement l’Anthologie du temps de Lynn dans les Fragments de mémoire du Sanctuaire.",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 琳恩的": 1
+      "Indice de Mandat scellé": 1,
+      "Title: de Lynn": 1
     }
   },
   {
     "id": 17002014,
-    "名称": "停驻光阴·耶尔与奥利弗",
+    "名称": "Instants figés : Yale et Oliver",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "于休憩之所“点滴”处完整阅读耶尔与奥利弗的光阴集故事",
+    "描述": "Lire intégralement l’Anthologie du temps de Yale et Oliver dans les Fragments de mémoire du Sanctuaire.",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 耶尔的": 1,
-      "Title: 奥利弗的": 1
+      "Indice de Mandat scellé": 1,
+      "Title: de Yale": 1,
+      "Title: d’Oliver": 1
     }
   },
   {
     "id": 17002015,
-    "名称": "停驻光阴·海尔法",
+    "名称": "Instants figés : Vulcera",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "于休憩之所“点滴”处完整阅读海尔法的光阴集故事",
+    "描述": "Lire intégralement l’Anthologie du temps de Vulcera dans les Fragments de mémoire du Sanctuaire.",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 海尔法的": 1
+      "Indice de Mandat scellé": 1,
+      "Title: de Vulcera": 1
     }
   },
   {
     "id": 17002017,
-    "名称": "停驻光阴·玛尔洁",
+    "名称": "Instants figés : Margie",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "于休憩之所“点滴”处完整阅读玛尔洁的光阴集故事",
+    "描述": "Lire intégralement l’Anthologie du temps de Margie dans les Fragments de mémoire du Sanctuaire.",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 玛尔洁的": 1
+      "Indice de Mandat scellé": 1,
+      "Title: de Margie": 1
     }
   },
   {
     "id": 17002018,
-    "名称": "停驻光阴·黎瑟",
+    "名称": "Instants figés : Rhythm",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "于休憩之所“点滴”处完整阅读黎瑟的光阴集故事",
+    "描述": "Lire intégralement l’Anthologie du temps de Rhythm dans les Fragments de mémoire du Sanctuaire.",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 黎瑟的": 1
+      "Indice de Mandat scellé": 1,
+      "Title: de Rhythm": 1
     }
   },
   {
     "id": 17002021,
-    "名称": "停驻光阴·兰迪",
+    "名称": "Instants figés : Randy",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "于休憩之所“点滴”处完整阅读兰迪的光阴集故事",
+    "描述": "Lire intégralement l’Anthologie du temps de Randy dans les Fragments de mémoire du Sanctuaire.",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 兰迪的": 1
+      "Indice de Mandat scellé": 1,
+      "Title: de Randy": 1
     }
   },
   {
     "id": 17002022,
-    "名称": "停驻光阴·西比尔",
+    "名称": "Instants figés : Sibylle",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "于休憩之所“点滴”处完整阅读西比尔的光阴集故事",
+    "描述": "Lire intégralement l’Anthologie du temps de Sibylle dans les Fragments de mémoire du Sanctuaire.",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 西比尔的": 1
+      "Indice de Mandat scellé": 1,
+      "Title: de Sibylle": 1
     }
   },
   {
     "id": 17002023,
-    "名称": "停驻光阴·松露与榛子",
+    "名称": "Instants figés : Truffle et Filbert",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "于休憩之所“点滴”处完整阅读松露与榛子的光阴集故事",
+    "描述": "Lire intégralement l’Anthologie du temps de Truffle et Filbert dans les Fragments de mémoire du Sanctuaire.",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 松露的": 1,
-      "Title: 榛子的": 1
+      "Indice de Mandat scellé": 1,
+      "Title: de Truffle": 1,
+      "Title: de Filbert": 1
     }
   },
   {
     "id": 17002024,
-    "名称": "停驻光阴·奥特赛德",
+    "名称": "Instants figés : L’Étranger",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "于休憩之所“点滴”处完整阅读奥特赛德的光阴集故事",
+    "描述": "Lire intégralement l’Anthologie du temps de l’Étranger dans les Fragments de mémoire du Sanctuaire.",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 奥特赛德的": 1
+      "Indice de Mandat scellé": 1,
+      "Title: de l’Étranger": 1
     }
   },
   {
     "id": 17002025,
-    "名称": "停驻光阴·赛琪",
+    "名称": "Instants figés : Psyche",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "于休憩之所“点滴”处完整阅读赛琪的光阴集故事",
+    "描述": "Lire intégralement l’Anthologie du temps de Psyche dans les Fragments de mémoire du Sanctuaire.",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 赛琪的": 1
+      "Indice de Mandat scellé": 1,
+      "Title: de Psyche": 1
     }
   },
   {
     "id": 17002026,
-    "名称": "停驻光阴·达芙涅",
+    "名称": "Instants figés : Daphne",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "于休憩之所“点滴”处完整阅读达芙涅的光阴集故事",
+    "描述": "Lire intégralement l’Anthologie du temps de Daphne dans les Fragments de mémoire du Sanctuaire.",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 达芙涅的": 1
+      "Indice de Mandat scellé": 1,
+      "Title: de Daphne": 1
     }
   },
   {
     "id": 17003001,
-    "名称": "休憩一刻·贝蕾妮卡",
+    "名称": "Un moment de répit : Berenica",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "于休憩之所邀请贝蕾妮卡入驻并对话一次",
+    "描述": "Inviter Berenica au Sanctuaire et lui parler une fois",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 贝蕾妮卡": 1
+      "Indice de Mandat scellé": 1,
+      "Title: Berenica": 1
     }
   },
   {
     "id": 17003002,
-    "名称": "休憩一刻·幻景",
+    "名称": "Un moment de répit : Phantasio",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "于休憩之所邀请幻景入驻并对话一次",
+    "描述": "Inviter Phantasio au Sanctuaire et lui parler une fois",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 幻景": 1
+      "Indice de Mandat scellé": 1,
+      "Title: Phantasio": 1
     }
   },
   {
     "id": 17003003,
-    "名称": "休憩一刻·莉兹贝尔",
+    "名称": "Un moment de répit : Lisbell",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "于休憩之所邀请莉兹贝尔入驻并对话一次",
+    "描述": "Inviter Lisbell au Sanctuaire et lui parler une fois",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 莉兹贝尔": 1
+      "Indice de Mandat scellé": 1,
+      "Title: Lisbell": 1
     }
   },
   {
     "id": 17003004,
-    "名称": "休憩一刻·妮弗尔夫人",
+    "名称": "Un moment de répit : Dame Nifle",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "于休憩之所邀请妮弗尔夫人入驻并对话一次",
+    "描述": "Inviter Dame Nifle au Sanctuaire et lui parler une fois",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 妮弗尔夫人": 1
+      "Indice de Mandat scellé": 1,
+      "Title: Dame Nifle": 1
     }
   },
   {
     "id": 17003005,
-    "名称": "休憩一刻·刻舟",
+    "名称": "Un moment de répit : Kezhou",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "于休憩之所邀请刻舟入驻并对话一次",
+    "描述": "Inviter Kezhou au Sanctuaire et lui parler une fois",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 刻舟": 1
+      "Indice de Mandat scellé": 1,
+      "Title: Kezhou": 1
     }
   },
   {
     "id": 17003007,
-    "名称": "休憩一刻·菲娜",
+    "名称": "Un moment de répit : Fina",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "于休憩之所邀请菲娜入驻并对话一次",
+    "描述": "Inviter Fina au Sanctuaire et lui parler une fois",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 菲娜": 1
+      "Indice de Mandat scellé": 1,
+      "Title: Fina": 1
     }
   },
   {
     "id": 17003008,
-    "名称": "休憩一刻·丽蓓卡",
+    "名称": "Un moment de répit : Rebecca",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "于休憩之所邀请丽蓓卡入驻并对话一次",
+    "描述": "Inviter Rebecca au Sanctuaire et lui parler une fois",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 丽蓓卡": 1
+      "Indice de Mandat scellé": 1,
+      "Title: Rebecca": 1
     }
   },
   {
     "id": 17003010,
-    "名称": "休憩一刻·塔比瑟",
+    "名称": "Un moment de répit : Tabethe",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "于休憩之所邀请塔比瑟入驻并对话一次",
+    "描述": "Inviter Tabethe au Sanctuaire et lui parler une fois",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 塔比瑟": 1
+      "Indice de Mandat scellé": 1,
+      "Title: Tabethe": 1
     }
   },
   {
     "id": 17003011,
-    "名称": "休憩一刻·扶疏",
+    "名称": "Un moment de répit : Fushu",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "于休憩之所邀请扶疏入驻并对话一次",
+    "描述": "Inviter Fushu au Sanctuaire et lui parler une fois",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 扶疏": 1
+      "Indice de Mandat scellé": 1,
+      "Title: Fushu": 1
     }
   },
   {
     "id": 17003012,
-    "名称": "休憩一刻·琳恩",
+    "名称": "Un moment de répit : Lynn",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "于休憩之所邀请琳恩入驻并对话一次",
+    "描述": "Inviter Lynn au Sanctuaire et lui parler une fois",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 琳恩": 1
+      "Indice de Mandat scellé": 1,
+      "Title: Lynn": 1
     }
   },
   {
     "id": 17003014,
-    "名称": "休憩一刻·耶尔与奥利弗",
+    "名称": "Un moment de répit : Yale et Oliver",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "于休憩之所邀请耶尔与奥利弗入驻并对话一次",
+    "描述": "Inviter Yale et Oliver au Sanctuaire et lui parler une fois",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 耶尔": 1,
-      "Title: 奥利弗": 1
+      "Indice de Mandat scellé": 1,
+      "Title: Yale": 1,
+      "Title: Oliver": 1
     }
   },
   {
     "id": 17003015,
-    "名称": "休憩一刻·海尔法",
+    "名称": "Un moment de répit : Vulcera",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "于休憩之所邀请海尔法入驻并对话一次",
+    "描述": "Inviter Vulcera au Sanctuaire et lui parler une fois",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 海尔法": 1
+      "Indice de Mandat scellé": 1,
+      "Title: Vulcera": 1
     }
   },
   {
     "id": 17003017,
-    "名称": "休憩一刻·玛尔洁",
+    "名称": "Un moment de répit : Margie",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "于休憩之所邀请玛尔洁入驻并对话一次",
+    "描述": "Inviter Margie au Sanctuaire et lui parler une fois",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 玛尔洁": 1
+      "Indice de Mandat scellé": 1,
+      "Title: Margie": 1
     }
   },
   {
     "id": 17003018,
-    "名称": "休憩一刻·黎瑟",
+    "名称": "Un moment de répit : Rhythm",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "于休憩之所邀请黎瑟入驻并对话一次",
+    "描述": "Inviter Rhythm au Sanctuaire et lui parler une fois",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 黎瑟": 1
+      "Indice de Mandat scellé": 1,
+      "Title: Rhythm": 1
     }
   },
   {
     "id": 17003019,
-    "名称": "休憩一刻·止流",
+    "名称": "Un moment de répit : Zhiliu",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "于休憩之所邀请止流入驻并对话一次",
+    "描述": "Inviter Zhiliu au Sanctuaire et lui parler une fois",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 止流": 1
+      "Indice de Mandat scellé": 1,
+      "Title: Zhiliu": 1
     }
   },
   {
     "id": 17003020,
-    "名称": "休憩一刻·煜明",
+    "名称": "Un moment de répit : Yuming",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "于休憩之所邀请煜明入驻并对话一次",
+    "描述": "Inviter Yuming au Sanctuaire et lui parler une fois",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 煜明": 1
+      "Indice de Mandat scellé": 1,
+      "Title: Yuming": 1
     }
   },
   {
     "id": 17003021,
-    "名称": "休憩一刻·兰迪",
+    "名称": "Un moment de répit : Randy",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "于休憩之所邀请兰迪入驻并对话一次",
+    "描述": "Inviter Randy au Sanctuaire et lui parler une fois",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 兰迪": 1
+      "Indice de Mandat scellé": 1,
+      "Title: Randy": 1
     }
   },
   {
     "id": 17003022,
-    "名称": "休憩一刻·西比尔",
+    "名称": "Un moment de répit : Sibylle",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "于休憩之所邀请西比尔入驻并对话一次",
+    "描述": "Inviter Sibylle au Sanctuaire et lui parler une fois",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 西比尔": 1
+      "Indice de Mandat scellé": 1,
+      "Title: Sibylle": 1
     }
   },
   {
     "id": 17003023,
-    "名称": "休憩一刻·松露与榛子",
+    "名称": "Un moment de répit : Truffle et Filbert",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "于休憩之所邀请松露与榛子入驻并对话一次",
+    "描述": "Inviter Truffle et Filbert au Sanctuaire et lui parler une fois",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 松露": 1,
-      "Title: 榛子": 1
+      "Indice de Mandat scellé": 1,
+      "Title: Truffle": 1,
+      "Title: Filbert": 1
     }
   },
   {
     "id": 17003024,
-    "名称": "休憩一刻·奥特赛德",
+    "名称": "Un moment de répit : L’Étranger",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "于休憩之所邀请奥特赛德入驻并对话一次",
+    "描述": "Inviter l’Étranger au Sanctuaire et lui parler une fois",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 奥特赛德": 1
+      "Indice de Mandat scellé": 1,
+      "Title: L’Étranger": 1
     }
   },
   {
     "id": 17003025,
-    "名称": "休憩一刻·赛琪",
+    "名称": "Un moment de répit : Psyche",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "于休憩之所邀请赛琪入驻并对话一次",
+    "描述": "Inviter Psyche au Sanctuaire et lui parler une fois",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 赛琪": 1
+      "Indice de Mandat scellé": 1,
+      "Title: Psyche": 1
     }
   },
   {
     "id": 17003026,
-    "名称": "休憩一刻·达芙涅",
+    "名称": "Un moment de répit : Daphne",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "于休憩之所邀请达芙涅入驻并对话一次",
+    "描述": "Inviter Daphne au Sanctuaire et lui parler une fois",
     "版本": "1.2",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: 达芙涅": 1
+      "Indice de Mandat scellé": 1,
+      "Title: Daphne": 1
     }
   },
   {
@@ -5600,7 +5600,7 @@
     "描述": "Réussir 10 Tests d’Impression (hors Boutique d’Impressions)",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -5611,7 +5611,7 @@
     "描述": "Réussir 50 Tests d’Impression (hors Boutique d’Impressions)",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
+      "Indice de Mandat scellé": 2,
       "Title: Œuf": 1
     }
   },
@@ -5634,8 +5634,8 @@
     "描述": "Porter l’Impression [Sagesse] dans l’Empire Hyperboréen à 100",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
-      "Title: Ingénieux": 1
+      "Indice de Mandat scellé": 2,
+      "Title: ingénieux": 1
     }
   },
   {
@@ -5646,8 +5646,8 @@
     "描述": "Porter l’Impression [Morale] dans l’Empire Hyperboréen à 100",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
-      "Title: Vertueux": 1
+      "Indice de Mandat scellé": 2,
+      "Title: vertueux": 1
     }
   },
   {
@@ -5658,8 +5658,8 @@
     "描述": "Porter l’Impression [Empathie] dans l’Empire Hyperboréen à 100",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
-      "Title: Attentionné": 1
+      "Indice de Mandat scellé": 2,
+      "Title: attentionné": 1
     }
   },
   {
@@ -5670,8 +5670,8 @@
     "描述": "Porter l’Impression [Chaos] dans l’Empire Hyperboréen à 100",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
-      "Title: Chaotique mauvais": 1
+      "Indice de Mandat scellé": 2,
+      "Title: chaotique mauvais": 1
     }
   },
   {
@@ -5682,8 +5682,8 @@
     "描述": "Porter n’importe quelle Impression dans l’Empire Hyperboréen à 100",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
-      "Title: Célèbre": 1
+      "Indice de Mandat scellé": 2,
+      "Title: célèbre": 1
     }
   },
   {
@@ -5694,8 +5694,8 @@
     "描述": "Porter l’Impression [Avantage] dans l’Empire Hyperboréen à 100",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
-      "Title: Pragmatique": 1
+      "Indice de Mandat scellé": 2,
+      "Title: pragmatique": 1
     }
   },
   {
@@ -5717,7 +5717,7 @@
     "描述": "Obtenir 25 accessoires",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -5728,8 +5728,8 @@
     "描述": "Obtenir 50 accessoires",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
-      "Title: Rayonnant": 1
+      "Indice de Mandat scellé": 2,
+      "Title: rayonnant": 1
     }
   },
   {
@@ -5740,7 +5740,7 @@
     "描述": "S’asseoir sur le \"Trône du Pouvoir\"",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -5751,7 +5751,7 @@
     "描述": "Laisser derrière soi toute hésitation, plonger dans la botte de foin et goûter à la liberté d’un aigle",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -5762,7 +5762,7 @@
     "描述": "Gravir le « sommet » de Givrelac, simplement parce que la « montagne » est là",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -5773,7 +5773,7 @@
     "描述": "Sauter d’une plaque de glace à l’autre dans le bon ordre",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -5806,7 +5806,7 @@
     "描述": "Ouvrir au total 50 coffres hors mission",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -5817,7 +5817,7 @@
     "描述": "Ouvrir au total 100 coffres hors mission",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
+      "Indice de Mandat scellé": 2,
       "Title: Chasseur de trésors": 1
     }
   },
@@ -5840,7 +5840,7 @@
     "描述": "Accomplir 5 Défis de Luno, l’exploratrice",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -5851,7 +5851,7 @@
     "描述": "Accomplir 10 Défis de Luno, l’exploratrice",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
+      "Indice de Mandat scellé": 1,
       "Title: Explorateur": 1
     }
   },
@@ -5885,7 +5885,7 @@
     "描述": "Trouver 10 trésors indiqués sur les Feuilles perdues",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -5896,7 +5896,7 @@
     "描述": "Recevoir 1 fois des cadeaux de Paniemon",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -5907,7 +5907,7 @@
     "描述": "Recevoir 5 fois des cadeaux de Paniemon",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -5918,7 +5918,7 @@
     "描述": "Recevoir 10 fois des cadeaux de Paniemon",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -5929,7 +5929,7 @@
     "描述": "Découvrir 1 Wishen parmi les pétales dansants",
     "版本": "1.1",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -5940,7 +5940,7 @@
     "描述": "Découvrir 5 Wishen parmi les pétales dansants",
     "版本": "1.1",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -5951,7 +5951,7 @@
     "描述": "Découvrir 10 Wishen parmi les pétales dansants",
     "版本": "1.1",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -5962,7 +5962,7 @@
     "描述": "Enregistrer 3 positions de l’Île du Purgatoire grâce à l’Oiseau onirique",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -5973,7 +5973,7 @@
     "描述": "Enregistrer 9 positions de Givrelac grâce à l’Oiseau onirique",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -5984,7 +5984,7 @@
     "描述": "Enregistrer 4 positions des Égouts de Givrelac grâce à l’Oiseau onirique",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -5995,7 +5995,7 @@
     "描述": "Enregistrer 2 positions de la Fosse de Glevum grâce à l’Oiseau onirique",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -6006,7 +6006,7 @@
     "描述": "Enregistrer 6 positions de la Forteresse de Lonza grâce à l’Oiseau onirique",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -6017,7 +6017,7 @@
     "描述": "Enregistrer 13 positions à Port-des-Brumes grâce à l’Oiseau onirique",
     "版本": "1.1",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -6028,7 +6028,7 @@
     "描述": "Prendre le contrôle des trois ascenseurs de la Forteresse de Lonza",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -6039,7 +6039,7 @@
     "描述": "Résoudre 5 mécanismes de la Secte Jishu et récupérer les récompenses associées",
     "版本": "1.1",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -6050,8 +6050,8 @@
     "描述": "Terminer toutes les quêtes secondaires de Givrelac — Empire Hyperboréen",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
-      "Title: Glacial": 1
+      "Indice de Mandat scellé": 2,
+      "Title: glacial": 1
     }
   },
   {
@@ -6073,7 +6073,7 @@
     "描述": "Se lier d’amitié avec 10 Géniemon au total",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -6084,7 +6084,7 @@
     "描述": "Se lier d’amitié avec 50 Géniemon au total",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
+      "Indice de Mandat scellé": 2,
       "Title: Géniemon": 1
     }
   },
@@ -6107,7 +6107,7 @@
     "描述": "Effectuer 10 ascensions de Géniemon",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -6118,7 +6118,7 @@
     "描述": "Effectuer 50 ascensions de Géniemon",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -6140,7 +6140,7 @@
     "描述": "Posséder 5 Géniemon ayant atteint la phase 3 d’ascension ",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -6151,7 +6151,7 @@
     "描述": "Posséder 10 Géniemon ayant atteint la phase 3 d’ascension ",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
+      "Indice de Mandat scellé": 2,
       "Title: Maître Géniemon": 1
     }
   },
@@ -6164,7 +6164,7 @@
     "版本": "1.0",
     "奖励": {
       "Pièce": 5000,
-      "Title: Classique": 1
+      "Title: classique": 1
     }
   },
   {
@@ -6186,7 +6186,7 @@
     "描述": "Terminer 5 fois toutes les « Représentations à l’affiche » de la période en cours du Théâtre immersif",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -6197,7 +6197,7 @@
     "描述": "Terminer 10 fois toutes les « Représentations à l’affiche » de la période en cours du Théâtre immersif",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -6219,7 +6219,7 @@
     "描述": "Terminer toutes les « Représentations à l’affiche » du Théâtre immersif pendant 3 périodes consécutives",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -6230,7 +6230,7 @@
     "描述": "Terminer toutes les « Représentations à l’affiche » du Théâtre immersif pendant 5 périodes consécutives",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -6252,7 +6252,7 @@
     "描述": "Terminer « Représentation immortelle » Acte V du Théâtre immersif",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -6263,8 +6263,8 @@
     "描述": "Terminer « Représentation immortelle » Acte X du Théâtre immersif",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
-      "Title: Épique": 1
+      "Indice de Mandat scellé": 2,
+      "Title: épique": 1
     }
   },
   {
@@ -6286,7 +6286,7 @@
     "描述": "Débloquer 50 entrées de l’Atlasium",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -6298,7 +6298,7 @@
     "版本": "1.0",
     "奖励": {
       "Pièce": 5000,
-      "Title: Érudit": 1
+      "Title: érudit": 1
     }
   },
   {
@@ -6310,7 +6310,7 @@
     "版本": "1.0",
     "奖励": {
       "Pièce": 5000,
-      "Title: Hors du temps": 1
+      "Title: hors du temps": 1
     }
   },
   {
@@ -6321,7 +6321,7 @@
     "描述": "Débloquer 10 Fragments de mémoire dans Anthologie du temps",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -6332,7 +6332,7 @@
     "描述": "Débloquer 20 Fragments de mémoire dans Anthologie du temps",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
+      "Indice de Mandat scellé": 2,
       "Title: Souvenir": 1
     }
   },
@@ -6345,7 +6345,7 @@
     "版本": "1.0",
     "奖励": {
       "Pièce": 5000,
-      "Title: Tapageur": 1
+      "Title: tapageur": 1
     }
   },
   {
@@ -6356,7 +6356,7 @@
     "描述": "Effectuer 5 teintures",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -6367,7 +6367,7 @@
     "描述": "Effectuer 10 teintures",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   },
   {
@@ -6378,7 +6378,7 @@
     "描述": "Prendre 5 photos",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
+      "Indice de Mandat scellé": 1,
       "Title: Photographe": 1
     }
   },
@@ -6401,7 +6401,7 @@
     "描述": "Effectuer un total de 100 Expéditions",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -6412,7 +6412,7 @@
     "描述": "Effectuer un total de 1000 Expéditions",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2,
+      "Indice de Mandat scellé": 2,
       "Title: Supérieur": 1
     }
   },
@@ -6458,7 +6458,7 @@
     "版本": "1.0",
     "奖励": {
       "Pièce": 5000,
-      "Title: Avisé": 1
+      "Title: avisé": 1
     }
   },
   {
@@ -6469,7 +6469,7 @@
     "描述": "Accomplir 1 Quêtes dynamiques",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -6480,7 +6480,7 @@
     "描述": "Accomplir 10 Quêtes dynamiques",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -6491,7 +6491,7 @@
     "描述": "Accomplir 50 Quêtes dynamiques",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -6502,8 +6502,8 @@
     "描述": "Accomplir 100 Quêtes dynamiques",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1,
-      "Title: Inattendu": 1
+      "Indice de Mandat scellé": 1,
+      "Title: inattendu": 1
     }
   },
   {
@@ -6514,7 +6514,7 @@
     "描述": "Réussir 30 Épreuves de l’Oiseau onirique",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 1
+      "Indice de Mandat scellé": 1
     }
   },
   {
@@ -6525,7 +6525,7 @@
     "描述": "Obtenir une note de 3★ dans 20 Épreuves de l’Oiseau onirique",
     "版本": "1.0",
     "奖励": {
-      "Indice du Mandat scellé : Loyal": 2
+      "Indice de Mandat scellé": 2
     }
   }
 ]

@@ -16,7 +16,6 @@ T.RT_14 = {10816}
 T.RT_15 = {55, 60}
 T.RT_16 = {26, 30}
 T.RT_17 = {10809}
-T.RT_18 = {108141}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -563,37 +562,37 @@ return ReadOnly("ExtermPro", {
   },
   [91124] = {
     DungeonId = 91124,
-    EliteRange = T.RT_15,
+    EliteRange = T.RT_1,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 91124,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 108141,
-    OnInitSpawnRule = T.RT_18,
+    OnInitSpawnRule = {108141, 91124},
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
   [91126] = {
     DungeonId = 91126,
-    EliteRange = T.RT_15,
+    EliteRange = T.RT_1,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 91126,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 108141,
-    OnInitSpawnRule = T.RT_18,
+    OnInitSpawnRule = {108141, 91126},
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
   [91127] = {
     DungeonId = 91127,
-    EliteRange = T.RT_15,
+    EliteRange = T.RT_1,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 91127,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 108141,
-    OnInitSpawnRule = T.RT_18,
+    OnInitSpawnRule = {108141, 91127},
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
@@ -605,7 +604,7 @@ return ReadOnly("ExtermPro", {
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 108141,
-    OnInitSpawnRule = T.RT_18,
+    OnInitSpawnRule = {108141},
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },

@@ -1,73 +1,73 @@
 [
   {
     "id": 10001,
-    "name": "Opulent",
+    "name": "opulent",
     "suf": false,
     "src": "成就「Carillon d’allégresse III」"
   },
   {
     "id": 10002,
-    "name": "Écarlate",
+    "name": "écarlate",
     "suf": false,
     "src": "成就「Ton nom est Rouge III」"
   },
   {
     "id": 10003,
-    "name": "Ardent",
+    "name": "ardent",
     "suf": false,
     "src": "成就「Forgé par l’épreuve III」"
   },
   {
     "id": 10004,
-    "name": "Aguerri",
+    "name": "aguerri",
     "suf": false,
     "src": "成就「À trois, c’est mieux III」"
   },
   {
     "id": 10005,
-    "name": "Festif",
+    "name": "festif",
     "suf": false,
     "src": "成就「Nouvelle rencontre II」"
   },
   {
     "id": 10006,
-    "name": "Ailé",
+    "name": "ailé",
     "suf": false,
     "src": "成就「Silence nocturne — Hors pair : L’Éclose」"
   },
   {
     "id": 10007,
-    "name": "Endeuillé",
+    "name": "endeuillé",
     "suf": false,
     "src": "成就「Silence nocturne — Hors pair : Cristallophage」"
   },
   {
     "id": 10008,
-    "name": "Éveillé",
+    "name": "éveillé",
     "suf": false,
     "src": "成就「Mon ADN s’active III」"
   },
   {
     "id": 10009,
-    "name": "Assidu",
+    "name": "assidu",
     "suf": false,
     "src": "成就「Spirale du destin V」"
   },
   {
     "id": 10010,
-    "name": "Bestial",
+    "name": "bestial",
     "suf": false,
     "src": "成就「Silence nocturne : Cristallophage III」"
   },
   {
     "id": 10011,
-    "name": "Fatidique",
+    "name": "fatidique",
     "suf": false,
     "src": "成就「Un regard en arrière III」"
   },
   {
     "id": 10012,
-    "name": "Rayonnant",
+    "name": "rayonnant",
     "suf": false,
     "src": "成就「Briller grâce à toi III」"
   },
@@ -79,565 +79,565 @@
   },
   {
     "id": 10014,
-    "name": "Avisé",
+    "name": "avisé",
     "suf": false,
     "src": "成就「Chef d’équipe légendaire」"
   },
   {
     "id": 10015,
-    "name": "Classique",
+    "name": "classique",
     "suf": false,
     "src": "成就「Chef-d’œuvre intemporel」"
   },
   {
     "id": 10016,
-    "name": "Épique",
+    "name": "épique",
     "suf": false,
     "src": "成就「Nuit étoilée III」"
   },
   {
     "id": 10017,
-    "name": "Sombre",
+    "name": "sombre",
     "suf": false,
     "src": "成就「Explorateur du Dédale — Regard dans les abysses III」"
   },
   {
     "id": 10018,
-    "name": "Miséricordieux",
+    "name": "miséricordieux",
     "suf": false,
     "src": "成就「La Faucheuse attendra III」"
   },
   {
     "id": 10019,
-    "name": "Méprisable",
+    "name": "méprisable",
     "suf": false,
     "src": "成就「Assaut instantané III」"
   },
   {
     "id": 10020,
-    "name": "Hésitant",
+    "name": "hésitant",
     "suf": false,
     "src": "成就「Un monde sans voleurs III」"
   },
   {
     "id": 10021,
-    "name": "Inattendu",
+    "name": "inattendu",
     "suf": false,
     "src": "成就「Je ne fais que passer IV」"
   },
   {
     "id": 10022,
-    "name": "Les mains vides",
+    "name": "les mains vides",
     "suf": false
   },
   {
     "id": 10023,
-    "name": "Mignon et irrésistible",
+    "name": "mignon et irrésistible",
     "suf": false,
     "src": "成就「Mille fois, je t’ai cherché III」"
   },
   {
     "id": 10024,
-    "name": "Apprenti",
+    "name": "apprenti",
     "suf": false,
     "src": "成就「Aux origines de la légende」"
   },
   {
     "id": 10025,
-    "name": "Érudit",
+    "name": "érudit",
     "suf": false,
     "src": "成就「Encyclopédiste d’Atlasia III」"
   },
   {
     "id": 10026,
-    "name": "D’une nuit d’été",
+    "name": "d’une nuit d’été",
     "suf": false
   },
   {
     "id": 10027,
-    "name": "Maladroit",
+    "name": "maladroit",
     "suf": false
   },
   {
     "id": 10028,
-    "name": "Éblouissant",
+    "name": "éblouissant",
     "suf": false,
     "src": "成就「Mille fois, je t’ai cherché I」"
   },
   {
     "id": 10029,
-    "name": "Hors du temps",
+    "name": "hors du temps",
     "suf": false,
     "src": "成就「Chronique du temps I」"
   },
   {
     "id": 10030,
-    "name": "Bavard",
+    "name": "bavard",
     "suf": false
   },
   {
     "id": 10031,
-    "name": "Approprié",
+    "name": "approprié",
     "suf": false,
     "src": "成就「Limite du pouvoir I」"
   },
   {
     "id": 10032,
-    "name": "Compétent",
+    "name": "compétent",
     "suf": false
   },
   {
     "id": 10033,
-    "name": "Chevronné",
+    "name": "chevronné",
     "suf": false
   },
   {
     "id": 10034,
-    "name": "Chanceux",
+    "name": "chanceux",
     "suf": false
   },
   {
     "id": 10035,
-    "name": "Aux touches d’ivoire",
+    "name": "aux touches d’ivoire",
     "suf": false,
     "src": "成就「Cité mélodieuse I」"
   },
   {
     "id": 10036,
-    "name": "Puissant",
+    "name": "puissant",
     "suf": false,
     "src": "成就「Collectionneur de sceaux III」"
   },
   {
     "id": 10037,
-    "name": "Tapageur",
+    "name": "tapageur",
     "suf": false,
     "src": "成就「Noir irisé I」"
   },
   {
     "id": 10038,
-    "name": "Éclairé",
+    "name": "éclairé",
     "suf": false,
     "src": "成就「Un futur prometteur I」"
   },
   {
     "id": 10039,
-    "name": "Bien entouré",
+    "name": "bien entouré",
     "suf": false,
     "src": "成就「Confrérie des Chasseurs de Phoxène」"
   },
   {
     "id": 10040,
-    "name": "Renaissant",
+    "name": "renaissant",
     "suf": false,
     "src": "成就「Miséricorde infinie I」"
   },
   {
     "id": 10041,
-    "name": "En voyage",
+    "name": "en voyage",
     "suf": false
   },
   {
     "id": 10042,
-    "name": "Parfait",
+    "name": "parfait",
     "suf": false
   },
   {
     "id": 10043,
-    "name": "Glacial",
+    "name": "glacial",
     "suf": false,
     "src": "成就「Pérégrinations — Givrelac」"
   },
   {
     "id": 10044,
-    "name": "Lyrique",
+    "name": "lyrique",
     "suf": false,
     "src": "成就「Cité mélodieuse III」"
   },
   {
     "id": 10045,
-    "name": "Armé",
+    "name": "armé",
     "suf": false,
     "src": "成就「Le dernier espoir du village」"
   },
   {
     "id": 10046,
-    "name": "Ingénieux",
+    "name": "ingénieux",
     "suf": false,
     "src": "成就「Sagesse prodigieuse — Hyperborea」"
   },
   {
     "id": 10047,
-    "name": "Vertueux",
+    "name": "vertueux",
     "suf": false,
     "src": "成就「Justice à l’œuvre — Hyperborea」"
   },
   {
     "id": 10048,
-    "name": "Attentionné",
+    "name": "attentionné",
     "suf": false,
     "src": "成就「Guide de vie — Hyperborea」"
   },
   {
     "id": 10049,
-    "name": "Chaotique mauvais",
+    "name": "chaotique mauvais",
     "suf": false,
     "src": "成就「Berceau du chaos — Hyperborea」"
   },
   {
     "id": 10050,
-    "name": "Célèbre",
+    "name": "célèbre",
     "suf": false,
     "src": "成就「Mignon et irrésistible — Hyperborea II」"
   },
   {
     "id": 10051,
-    "name": "Pragmatique",
+    "name": "pragmatique",
     "suf": false,
     "src": "成就「Philosophie de survie — Hyperborea」"
   },
   {
     "id": 10052,
-    "name": "Marcheur nocturne",
+    "name": "marcheur nocturne",
     "suf": false,
     "src": "成就「Explorateur du Dédale — Regard dans les abysses I」"
   },
   {
     "id": 10053,
-    "name": "Onirique",
+    "name": "onirique",
     "suf": false
   },
   {
     "id": 10054,
-    "name": "Invincible",
+    "name": "invincible",
     "suf": false,
     "src": "成就「Limite du pouvoir」"
   },
   {
     "id": 10055,
-    "name": "Surréaliste",
+    "name": "surréaliste",
     "suf": false
   },
   {
     "id": 10056,
-    "name": "Rompu à la ville",
+    "name": "rompu à la ville",
     "suf": false,
     "src": "成就「Bonjour, Givrelac」"
   },
   {
     "id": 10057,
-    "name": "Comme de la famille",
+    "name": "comme de la famille",
     "suf": false,
     "src": "成就「Home, Sweet Home」"
   },
   {
     "id": 10058,
-    "name": "Injustement accusé",
+    "name": "injustement accusé",
     "suf": false,
     "src": "成就「Transcendance」"
   },
   {
     "id": 10059,
-    "name": "Au-delà du Royaume des Sables",
+    "name": "au-delà du Royaume des Sables",
     "suf": false,
     "src": "成就「L’inoubliable」"
   },
   {
     "id": 10060,
-    "name": "Honoré par la fleur blanche",
+    "name": "honoré par la fleur blanche",
     "suf": false,
     "src": "成就「Terre aux fleurs épanouies」"
   },
   {
     "id": 10061,
-    "name": "Miraculé",
+    "name": "miraculé",
     "suf": false
   },
   {
     "id": 10062,
-    "name": "Sous les étoiles",
+    "name": "sous les étoiles",
     "suf": false,
     "src": "成就「Une révérence parfaite」"
   },
   {
     "id": 10063,
-    "name": "Impérial",
+    "name": "impérial",
     "suf": false,
     "src": "成就「Nouveau monde」"
   },
   {
     "id": 10064,
-    "name": "Sagace",
+    "name": "sagace",
     "suf": false,
     "src": "成就「Une seule vérité」"
   },
   {
     "id": 10065,
-    "name": "Proie facile",
+    "name": "proie facile",
     "suf": false
   },
   {
     "id": 10066,
-    "name": "Dément",
+    "name": "dément",
     "suf": false,
     "src": "成就「Les Vengeurs」"
   },
   {
     "id": 10067,
-    "name": "Masqué",
+    "name": "masqué",
     "suf": false
   },
   {
     "id": 10068,
-    "name": "Grandiose",
+    "name": "grandiose",
     "suf": false
   },
   {
     "id": 10069,
-    "name": "Insignifiant",
+    "name": "insignifiant",
     "suf": false
   },
   {
     "id": 10070,
-    "name": "Mortel",
+    "name": "mortel",
     "suf": false
   },
   {
     "id": 10071,
-    "name": "Bienveillant",
+    "name": "bienveillant",
     "suf": false
   },
   {
     "id": 10072,
-    "name": "Optimiste",
+    "name": "optimiste",
     "suf": false
   },
   {
     "id": 10073,
-    "name": "Élégant",
+    "name": "élégant",
     "suf": false
   },
   {
     "id": 10074,
-    "name": "Malchanceux",
+    "name": "malchanceux",
     "suf": false
   },
   {
     "id": 10075,
-    "name": "Remarquable",
+    "name": "remarquable",
     "suf": false
   },
   {
     "id": 10076,
-    "name": "Légendaire",
+    "name": "légendaire",
     "suf": false
   },
   {
     "id": 10077,
-    "name": "Au sommet",
+    "name": "au sommet",
     "suf": false
   },
   {
     "id": 10078,
-    "name": "Tourmenté",
+    "name": "tourmenté",
     "suf": false,
     "src": "Livrer un total de <H>300</> matériaux communs durant l’événement"
   },
   {
     "id": 10079,
-    "name": "Immaculé",
+    "name": "immaculé",
     "suf": false,
     "src": "Livrer un total de <H>100</> matériaux rares durant l’événement"
   },
   {
     "id": 10080,
-    "name": "Forgé par les combats",
+    "name": "forgé par les combats",
     "suf": false
   },
   {
     "id": 10081,
-    "name": "À demi assoupi",
+    "name": "à demi assoupi",
     "suf": false
   },
   {
     "id": 10082,
-    "name": "Apocalyptique",
+    "name": "apocalyptique",
     "suf": false
   },
   {
     "id": 10083,
-    "name": "Acrobate",
+    "name": "acrobate",
     "suf": false
   },
   {
     "id": 10084,
-    "name": "Courtois",
+    "name": "courtois",
     "suf": false
   },
   {
     "id": 10085,
-    "name": "贝蕾妮卡的",
+    "name": "de Berenica",
     "suf": false,
-    "src": "成就「停驻光阴·贝蕾妮卡」"
+    "src": "成就「Instants figés : Berenica」"
   },
   {
     "id": 10086,
-    "name": "幻景的",
+    "name": "de Phantasio",
     "suf": false,
-    "src": "成就「停驻光阴·幻景」"
+    "src": "成就「Instants figés : Phantasio」"
   },
   {
     "id": 10087,
-    "name": "莉兹贝尔的",
+    "name": "de Lisbell",
     "suf": false
   },
   {
     "id": 10088,
-    "name": "妮弗尔夫人的",
+    "name": "de Dame Nifle",
     "suf": false,
-    "src": "成就「停驻光阴·妮弗尔夫人」"
+    "src": "成就「Instants figés : Dame Nifle」"
   },
   {
     "id": 10089,
-    "name": "刻舟的",
+    "name": "de Kezhou",
     "suf": false,
-    "src": "成就「停驻光阴·刻舟」"
+    "src": "成就「Instants figés : Kezhou」"
   },
   {
     "id": 10090,
-    "name": "苏乙的",
+    "name": "de Su Yi",
     "suf": false
   },
   {
     "id": 10091,
-    "name": "菲娜的",
+    "name": "de Fina",
     "suf": false,
-    "src": "成就「停驻光阴·菲娜」"
+    "src": "成就「Instants figés : Fina」"
   },
   {
     "id": 10092,
-    "name": "丽蓓卡的",
+    "name": "de Rebecca",
     "suf": false,
-    "src": "成就「停驻光阴·丽蓓卡」"
+    "src": "成就「Instants figés : Rebecca」"
   },
   {
     "id": 10093,
-    "name": "伊薇的",
+    "name": "d’Yvaine",
     "suf": false
   },
   {
     "id": 10094,
-    "name": "塔比瑟的",
+    "name": "de Tabethe",
     "suf": false,
-    "src": "成就「停驻光阴·塔比瑟」"
+    "src": "成就「Instants figés : Tabethe」"
   },
   {
     "id": 10095,
-    "name": "扶疏的",
+    "name": "de Fushu",
     "suf": false,
-    "src": "成就「停驻光阴·扶疏」"
+    "src": "成就「Instants figés : Fushu」"
   },
   {
     "id": 10096,
-    "name": "琳恩的",
+    "name": "de Lynn",
     "suf": false,
-    "src": "成就「停驻光阴·琳恩」"
+    "src": "成就「Instants figés : Lynn」"
   },
   {
     "id": 10097,
-    "name": "希尔妲的",
+    "name": "d’Hilda",
     "suf": false
   },
   {
     "id": 10098,
-    "name": "耶尔的",
+    "name": "de Yale",
     "suf": false,
-    "src": "成就「停驻光阴·耶尔与奥利弗」"
+    "src": "成就「Instants figés : Yale et Oliver」"
   },
   {
     "id": 10099,
-    "name": "奥利弗的",
+    "name": "d’Oliver",
     "suf": false,
-    "src": "成就「停驻光阴·耶尔与奥利弗」"
+    "src": "成就「Instants figés : Yale et Oliver」"
   },
   {
     "id": 10100,
-    "name": "海尔法的",
+    "name": "de Vulcera",
     "suf": false,
-    "src": "成就「停驻光阴·海尔法」"
+    "src": "成就「Instants figés : Vulcera」"
   },
   {
     "id": 10101,
-    "name": "卡米拉的",
+    "name": "de Camilla",
     "suf": false
   },
   {
     "id": 10102,
-    "name": "玛尔洁的",
+    "name": "de Margie",
     "suf": false,
-    "src": "成就「停驻光阴·玛尔洁」"
+    "src": "成就「Instants figés : Margie」"
   },
   {
     "id": 10103,
-    "name": "黎瑟的",
+    "name": "de Rhythm",
     "suf": false,
-    "src": "成就「停驻光阴·黎瑟」"
+    "src": "成就「Instants figés : Rhythm」"
   },
   {
     "id": 10104,
-    "name": "止流的",
+    "name": "de Zhiliu",
     "suf": false
   },
   {
     "id": 10105,
-    "name": "煜明的",
+    "name": "de Yuming",
     "suf": false
   },
   {
     "id": 10106,
-    "name": "兰迪的",
+    "name": "de Randy",
     "suf": false,
-    "src": "成就「停驻光阴·兰迪」"
+    "src": "成就「Instants figés : Randy」"
   },
   {
     "id": 10107,
-    "name": "西比尔的",
+    "name": "de Sibylle",
     "suf": false,
-    "src": "成就「停驻光阴·西比尔」"
+    "src": "成就「Instants figés : Sibylle」"
   },
   {
     "id": 10108,
-    "name": "松露的",
+    "name": "de Truffle",
     "suf": false,
-    "src": "成就「停驻光阴·松露与榛子」"
+    "src": "成就「Instants figés : Truffle et Filbert」"
   },
   {
     "id": 10109,
-    "name": "榛子的",
+    "name": "de Filbert",
     "suf": false,
-    "src": "成就「停驻光阴·松露与榛子」"
+    "src": "成就「Instants figés : Truffle et Filbert」"
   },
   {
     "id": 10110,
-    "name": "奥特赛德的",
+    "name": "de l’Étranger",
     "suf": false,
-    "src": "成就「停驻光阴·奥特赛德」"
+    "src": "成就「Instants figés : L’Étranger」"
   },
   {
     "id": 10111,
-    "name": "赛琪的",
+    "name": "de Psyche",
     "suf": false,
-    "src": "成就「停驻光阴·赛琪」"
+    "src": "成就「Instants figés : Psyche」"
   },
   {
     "id": 10112,
-    "name": "达芙涅的",
+    "name": "de Daphne",
     "suf": false,
-    "src": "成就「停驻光阴·达芙涅」"
+    "src": "成就「Instants figés : Daphne」"
   },
   {
     "id": 10113,
-    "name": "机枢派的",
+    "name": "de la Secte Jishu",
     "suf": false
   },
   {
@@ -1025,171 +1025,171 @@
   },
   {
     "id": 20069,
-    "name": "贝蕾妮卡",
+    "name": "Berenica",
     "suf": true,
-    "src": "成就「休憩一刻·贝蕾妮卡」"
+    "src": "成就「Un moment de répit : Berenica」"
   },
   {
     "id": 20070,
-    "name": "幻景",
+    "name": "Phantasio",
     "suf": true,
-    "src": "成就「休憩一刻·幻景」"
+    "src": "成就「Un moment de répit : Phantasio」"
   },
   {
     "id": 20071,
-    "name": "莉兹贝尔",
+    "name": "Lisbell",
     "suf": true,
-    "src": "成就「休憩一刻·莉兹贝尔」"
+    "src": "成就「Un moment de répit : Lisbell」"
   },
   {
     "id": 20072,
-    "name": "妮弗尔夫人",
+    "name": "Dame Nifle",
     "suf": true,
-    "src": "成就「休憩一刻·妮弗尔夫人」"
+    "src": "成就「Un moment de répit : Dame Nifle」"
   },
   {
     "id": 20073,
-    "name": "刻舟",
+    "name": "Kezhou",
     "suf": true,
-    "src": "成就「休憩一刻·刻舟」"
+    "src": "成就「Un moment de répit : Kezhou」"
   },
   {
     "id": 20074,
-    "name": "苏乙",
+    "name": "Su Yi",
     "suf": true
   },
   {
     "id": 20075,
-    "name": "菲娜",
+    "name": "Fina",
     "suf": true,
-    "src": "成就「休憩一刻·菲娜」"
+    "src": "成就「Un moment de répit : Fina」"
   },
   {
     "id": 20076,
-    "name": "丽蓓卡",
+    "name": "Rebecca",
     "suf": true,
-    "src": "成就「休憩一刻·丽蓓卡」"
+    "src": "成就「Un moment de répit : Rebecca」"
   },
   {
     "id": 20077,
-    "name": "伊薇",
+    "name": "Yvaine",
     "suf": true
   },
   {
     "id": 20078,
-    "name": "塔比瑟",
+    "name": "Tabethe",
     "suf": true,
-    "src": "成就「休憩一刻·塔比瑟」"
+    "src": "成就「Un moment de répit : Tabethe」"
   },
   {
     "id": 20079,
-    "name": "扶疏",
+    "name": "Fushu",
     "suf": true,
-    "src": "成就「休憩一刻·扶疏」"
+    "src": "成就「Un moment de répit : Fushu」"
   },
   {
     "id": 20080,
-    "name": "琳恩",
+    "name": "Lynn",
     "suf": true,
-    "src": "成就「休憩一刻·琳恩」"
+    "src": "成就「Un moment de répit : Lynn」"
   },
   {
     "id": 20081,
-    "name": "希尔妲",
+    "name": "Hilda",
     "suf": true
   },
   {
     "id": 20082,
-    "name": "耶尔",
+    "name": "Yale",
     "suf": true,
-    "src": "成就「休憩一刻·耶尔与奥利弗」"
+    "src": "成就「Un moment de répit : Yale et Oliver」"
   },
   {
     "id": 20083,
-    "name": "奥利弗",
+    "name": "Oliver",
     "suf": true,
-    "src": "成就「休憩一刻·耶尔与奥利弗」"
+    "src": "成就「Un moment de répit : Yale et Oliver」"
   },
   {
     "id": 20084,
-    "name": "海尔法",
+    "name": "Vulcera",
     "suf": true,
-    "src": "成就「休憩一刻·海尔法」"
+    "src": "成就「Un moment de répit : Vulcera」"
   },
   {
     "id": 20085,
-    "name": "卡米拉",
+    "name": "Camilla",
     "suf": true
   },
   {
     "id": 20086,
-    "name": "玛尔洁",
+    "name": "Margie",
     "suf": true,
-    "src": "成就「休憩一刻·玛尔洁」"
+    "src": "成就「Un moment de répit : Margie」"
   },
   {
     "id": 20087,
-    "name": "黎瑟",
+    "name": "Rhythm",
     "suf": true,
-    "src": "成就「休憩一刻·黎瑟」"
+    "src": "成就「Un moment de répit : Rhythm」"
   },
   {
     "id": 20088,
-    "name": "止流",
+    "name": "Zhiliu",
     "suf": true,
-    "src": "成就「休憩一刻·止流」"
+    "src": "成就「Un moment de répit : Zhiliu」"
   },
   {
     "id": 20089,
-    "name": "煜明",
+    "name": "Yuming",
     "suf": true,
-    "src": "成就「休憩一刻·煜明」"
+    "src": "成就「Un moment de répit : Yuming」"
   },
   {
     "id": 20090,
-    "name": "兰迪",
+    "name": "Randy",
     "suf": true,
-    "src": "成就「休憩一刻·兰迪」"
+    "src": "成就「Un moment de répit : Randy」"
   },
   {
     "id": 20091,
-    "name": "西比尔",
+    "name": "Sibylle",
     "suf": true,
-    "src": "成就「休憩一刻·西比尔」"
+    "src": "成就「Un moment de répit : Sibylle」"
   },
   {
     "id": 20092,
-    "name": "松露",
+    "name": "Truffle",
     "suf": true,
-    "src": "成就「休憩一刻·松露与榛子」"
+    "src": "成就「Un moment de répit : Truffle et Filbert」"
   },
   {
     "id": 20093,
-    "name": "榛子",
+    "name": "Filbert",
     "suf": true,
-    "src": "成就「休憩一刻·松露与榛子」"
+    "src": "成就「Un moment de répit : Truffle et Filbert」"
   },
   {
     "id": 20094,
-    "name": "奥特赛德",
+    "name": "L’Étranger",
     "suf": true,
-    "src": "成就「休憩一刻·奥特赛德」"
+    "src": "成就「Un moment de répit : L’Étranger」"
   },
   {
     "id": 20095,
-    "name": "赛琪",
+    "name": "Psyche",
     "suf": true,
-    "src": "成就「休憩一刻·赛琪」"
+    "src": "成就「Un moment de répit : Psyche」"
   },
   {
     "id": 20096,
-    "name": "达芙涅",
+    "name": "Daphne",
     "suf": true,
-    "src": "成就「休憩一刻·达芙涅」"
+    "src": "成就「Un moment de répit : Daphne」"
   },
   {
     "id": 20097,
-    "name": "神之一手",
+    "name": "Coup divin",
     "suf": true
   }
 ]

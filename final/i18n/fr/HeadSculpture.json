@@ -31,13 +31,13 @@
   },
   {
     "id": 10007,
-    "name": "Portrait : Le renonçant",
+    "name": "Portrait : La renonçante",
     "desc": "Permet de remplacer l’icône d’avatar par celle de Lynn.",
     "icon": "T_Head_Linen"
   },
   {
     "id": 10008,
-    "name": "Portrait : Le semeur",
+    "name": "Portrait : La semeuse",
     "desc": "Permet de remplacer l’icône d’avatar par celle de Psyche.",
     "icon": "T_Head_Saiqi"
   },
@@ -85,7 +85,7 @@
   },
   {
     "id": 10016,
-    "name": "Portrait : Chasseur de lumière",
+    "name": "Portrait : Chasseuse de lumière",
     "desc": "Permet de remplacer l’icône d’avatar par celle de Rhythm.",
     "icon": "T_Head_Lise"
   },
@@ -169,13 +169,13 @@
   },
   {
     "id": 10030,
-    "name": "Portrait : Zhiliu",
+    "name": "Portrait : La stratège",
     "desc": "Permet de remplacer l’icône d’avatar par celle de Zhiliu.",
     "icon": "T_Head_Zhiliu"
   },
   {
     "id": 20001,
-    "name": "Portrait : Le semeur – Nuit d’été",
+    "name": "Portrait : La semeuse – Nuit d’été",
     "desc": "Permet de remplacer l’icône d’avatar par celle de « Bal du songe ».",
     "icon": "T_Head_Saiqi01"
   },
@@ -205,25 +205,25 @@
   },
   {
     "id": 30001,
-    "name": "Hébétude",
+    "name": "Hébétude I",
     "desc": "Utilisable comme avatar.",
     "icon": "T_Head_Other_0012"
   },
   {
     "id": 30002,
-    "name": "Hébétude",
+    "name": "Hébétude II",
     "desc": "Utilisable comme avatar.",
     "icon": "T_Head_Other_0013"
   },
   {
     "id": 30003,
-    "name": "Frisson",
+    "name": "Frisson I",
     "desc": "Utilisable comme avatar.",
     "icon": "T_Head_Other_0002"
   },
   {
     "id": 30004,
-    "name": "Frisson",
+    "name": "Frisson II",
     "desc": "Utilisable comme avatar.",
     "icon": "T_Head_Other_0003"
   },
@@ -235,7 +235,7 @@
   },
   {
     "id": 30006,
-    "name": "Faucheur",
+    "name": "Faucheuse",
     "desc": "Utilisable comme avatar.",
     "icon": "T_Head_Other_0006"
   },
@@ -769,91 +769,91 @@
   },
   {
     "id": 30095,
-    "name": "诡异的光",
+    "name": "Lueur inquiétante",
     "desc": "Utilisable comme avatar.",
     "icon": "T_Head_Art_0012"
   },
   {
     "id": 30096,
-    "name": "快乐起飞",
+    "name": "Envol euphorique",
     "desc": "Utilisable comme avatar.",
     "icon": "T_Head_Art_0001"
   },
   {
     "id": 30097,
-    "name": "负罪者的肖像·小憩",
+    "name": "Portrait : Le coupable – Répit",
     "desc": "Utilisable comme avatar.",
     "icon": "T_Head_Other0018"
   },
   {
     "id": 30098,
-    "name": "飘零剑客的肖像·雨夜",
+    "name": "Portrait : Bretteur errant – Nuit pluvieuse",
     "desc": "Utilisable comme avatar.",
     "icon": "T_Head_Other0019"
   },
   {
     "id": 30099,
-    "name": "黑与白·太皓",
+    "name": "Obscur et Argent – Taihao",
     "desc": "Utilisable comme avatar.",
     "icon": "T_Head_Other0034"
   },
   {
     "id": 30100,
-    "name": "黑与白·烛阴",
+    "name": "Obscur et Argent – Zhuyin",
     "desc": "Utilisable comme avatar.",
     "icon": "T_Head_Other0035"
   },
   {
     "id": 30101,
-    "name": "华胥药师的肖像·专注",
+    "name": "Portrait : Apothicaire de Huaxu – Concentration",
     "desc": "Utilisable comme avatar.",
     "icon": "T_Head_Other0033"
   },
   {
     "id": 30102,
-    "name": "回忆中的肖像·决意",
+    "name": "Portrait : Souvenir – Résolution",
     "desc": "Utilisable comme avatar.",
     "icon": "T_Head_Other0029"
   },
   {
     "id": 30103,
-    "name": "夜莺小姐的肖像·绿荫",
+    "name": "Portrait : Mademoiselle Rossignol – Ombre feuillue",
     "desc": "Utilisable comme avatar.",
     "icon": "T_Head_Other0014"
   },
   {
     "id": 30104,
-    "name": "逐灯者的肖像·眺望",
+    "name": "Portrait : Chasseuse de lumière – Regard lointain",
     "desc": "Utilisable comme avatar.",
     "icon": "T_Head_Other0016"
   },
   {
     "id": 30105,
-    "name": "大军团长的肖像·俯瞰",
+    "name": "Portrait : Commandante de la Légion – Vue dominante",
     "desc": "Utilisable comme avatar.",
     "icon": "T_Head_Other0030"
   },
   {
     "id": 30106,
-    "name": "粮秣专员的肖像·慌乱",
+    "name": "Portrait : Commissaire – Panique",
     "desc": "Utilisable comme avatar.",
     "icon": "T_Head_Other0031"
   },
   {
     "id": 30107,
-    "name": "机傀大乱斗",
+    "name": "Grand chaos des Méchapoupées",
     "desc": "Utilisable comme avatar.",
     "icon": "T_Head_Art_0011"
   },
   {
     "id": 30108,
-    "name": "惊鱼",
+    "name": "Poisson stupéfait",
     "desc": "Utilisable comme avatar.",
     "icon": "T_Head_Art_0013"
   },
   {
     "id": 30109,
-    "name": "呐喊",
+    "name": "Le Cri",
     "desc": "Utilisable comme avatar.",
     "icon": "T_Head_Art_0002"
   }

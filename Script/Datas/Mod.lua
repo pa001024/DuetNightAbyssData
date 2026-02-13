@@ -409,377 +409,380 @@ T.RT_133 = {
 }
 T.RT_134 = {3016}
 T.RT_135 = {
-  AttrName = "AttackSpeed_Normal",
-  Rate = 0.3
-}
-T.RT_136 = {
-  [1] = T.RT_135
-}
-T.RT_137 = {
   AllowModMultiplier = "Normal",
   AttrName = "MaxSp",
   Rate = "#2"
 }
-T.RT_138 = {
+T.RT_136 = {
   [1] = T.RT_55,
-  [2] = T.RT_137
+  [2] = T.RT_135
 }
-T.RT_139 = {
+T.RT_137 = {
   [1] = "Tag_ATK",
   [2] = "Tag_SP"
 }
-T.RT_140 = {1005}
-T.RT_141 = {
+T.RT_138 = {1005}
+T.RT_139 = {
   AllowModMultiplier = "Normal",
   AttrName = "MaxES",
   Rate = "#2"
 }
-T.RT_142 = {
+T.RT_140 = {
   [1] = T.RT_58,
-  [2] = T.RT_141
+  [2] = T.RT_139
 }
-T.RT_143 = {
+T.RT_141 = {
   [1] = "Tag_Hp",
   [2] = "Tag_ES"
 }
-T.RT_144 = {1006}
-T.RT_145 = {AttrName = "CRI", Rate = "#2"}
-T.RT_146 = {
+T.RT_142 = {1006}
+T.RT_143 = {AttrName = "CRI", Rate = "#2"}
+T.RT_144 = {
   [1] = T.RT_14,
-  [2] = T.RT_145
+  [2] = T.RT_143
 }
-T.RT_147 = {
+T.RT_145 = {
   [1] = "Tag_ATK",
   [2] = "Tag_CRI"
 }
-T.RT_148 = {2007}
-T.RT_149 = {
+T.RT_146 = {2007}
+T.RT_147 = {
   AttrName = "TriggerProbability",
   Rate = "#2"
 }
-T.RT_150 = {
+T.RT_148 = {
   [1] = T.RT_21,
-  [2] = T.RT_149
+  [2] = T.RT_147
 }
-T.RT_151 = {
+T.RT_149 = {
   [1] = "Tag_CRD",
   [2] = "Tag_TriggerProbability"
 }
-T.RT_152 = {2008}
-T.RT_153 = {
+T.RT_150 = {2008}
+T.RT_151 = {
   [1] = T.RT_107,
-  [2] = T.RT_149
+  [2] = T.RT_147
 }
-T.RT_154 = {
+T.RT_152 = {
   [1] = "Tag_ATK_Attr",
   [2] = "Tag_TriggerProbability"
 }
-T.RT_155 = {2110}
-T.RT_156 = {
+T.RT_153 = {2110}
+T.RT_154 = {
   [1] = T.RT_111,
-  [2] = T.RT_149
+  [2] = T.RT_147
 }
-T.RT_157 = {
+T.RT_155 = {
   [1] = T.RT_113,
-  [2] = T.RT_149
+  [2] = T.RT_147
 }
-T.RT_158 = {3007}
-T.RT_159 = {3008}
-T.RT_160 = {3110}
-T.RT_161 = {
+T.RT_156 = {3007}
+T.RT_157 = {3008}
+T.RT_158 = {3110}
+T.RT_159 = {
   [1] = "Tag_AttackRange"
 }
-T.RT_162 = {4005}
-T.RT_163 = {4100}
-T.RT_164 = {
+T.RT_160 = {4005}
+T.RT_161 = {4100}
+T.RT_162 = {
   [1] = "Tag_MultiShoot"
 }
-T.RT_165 = {5005}
-T.RT_166 = {5100}
-T.RT_167 = {AttrName = "ATK", Rate = 0.06}
+T.RT_163 = {5005}
+T.RT_164 = {5100}
+T.RT_165 = {AttrName = "ATK", Rate = 0.06}
+T.RT_166 = {
+  [1] = T.RT_165
+}
+T.RT_167 = {AttrName = "CRI", Rate = 0.048}
 T.RT_168 = {
   [1] = T.RT_167
 }
-T.RT_169 = {AttrName = "CRI", Rate = 0.048}
+T.RT_169 = {AttrName = "CRD", Rate = 0.06}
 T.RT_170 = {
   [1] = T.RT_169
 }
-T.RT_171 = {AttrName = "CRD", Rate = 0.06}
-T.RT_172 = {
-  [1] = T.RT_171
-}
-T.RT_173 = {
+T.RT_171 = {
   AttrName = "TriggerProbability",
   Rate = 0.12
 }
-T.RT_174 = {
-  [1] = T.RT_173
+T.RT_172 = {
+  [1] = T.RT_171
 }
-T.RT_175 = {AttrName = "ATK_Slash", Rate = 0.03}
-T.RT_176 = {AttrName = "ATK_Spike", Rate = 0.03}
-T.RT_177 = {AttrName = "ATK_Smash", Rate = 0.03}
-T.RT_178 = {
-  [1] = T.RT_175,
-  [2] = T.RT_176,
-  [3] = T.RT_177
+T.RT_173 = {AttrName = "ATK_Slash", Rate = 0.03}
+T.RT_174 = {AttrName = "ATK_Spike", Rate = 0.03}
+T.RT_175 = {AttrName = "ATK_Smash", Rate = 0.03}
+T.RT_176 = {
+  [1] = T.RT_173,
+  [2] = T.RT_174,
+  [3] = T.RT_175
 }
-T.RT_179 = {
+T.RT_177 = {
   AttrName = "AttackSpeed_Normal",
   Rate = 0.12
 }
+T.RT_178 = {
+  [1] = T.RT_177
+}
+T.RT_179 = {AttrName = "CRI", Rate = 0.096}
 T.RT_180 = {
   [1] = T.RT_179
 }
-T.RT_181 = {AttrName = "CRI", Rate = 0.096}
+T.RT_181 = {AttrName = "CRD", Rate = 0.12}
 T.RT_182 = {
   [1] = T.RT_181
 }
-T.RT_183 = {AttrName = "CRD", Rate = 0.12}
-T.RT_184 = {
-  [1] = T.RT_183
-}
-T.RT_185 = {
+T.RT_183 = {
   "Shop_Main",
   "Forging",
   "MonsterStrong",
   "Dungeon_ModTab_30"
 }
-T.RT_186 = {
+T.RT_184 = {
   [102] = 10
 }
-T.RT_187 = {
+T.RT_185 = {
   [2] = 100
 }
-T.RT_188 = {
+T.RT_186 = {
   "Shop_Main",
   "Forging",
   "MonsterStrong",
   "Dungeon_ModTab_40"
 }
-T.RT_189 = {
+T.RT_187 = {
   [1] = "Tag_ATK",
   [2] = "Tag_Hp"
 }
-T.RT_190 = {
+T.RT_188 = {
   AllowModMultiplier = "Normal",
   AttrName = "DEF",
   Rate = "#2"
 }
-T.RT_191 = {
+T.RT_189 = {
   [1] = "Tag_ATK",
   [2] = "Tag_DEF"
 }
-T.RT_192 = {
+T.RT_190 = {
   [1] = "Tag_SkillIntensity"
 }
-T.RT_193 = {
+T.RT_191 = {
   [1] = "Tag_SkillEfficiency"
 }
-T.RT_194 = {
+T.RT_192 = {
   [1] = "Tag_SkillRange"
 }
-T.RT_195 = {
+T.RT_193 = {
   [1] = "Tag_SkillSustain"
 }
-T.RT_196 = {AttrName = "MaxHp", Rate = "#2"}
-T.RT_197 = {AttrName = "MaxES", Rate = "#2"}
-T.RT_198 = {
+T.RT_194 = {AttrName = "MaxHp", Rate = "#2"}
+T.RT_195 = {AttrName = "MaxES", Rate = "#2"}
+T.RT_196 = {
   AttrName = "SkillEfficiency",
   Rate = "#2"
 }
-T.RT_199 = {
+T.RT_197 = {
   [1] = T.RT_34,
-  [2] = T.RT_198
+  [2] = T.RT_196
 }
-T.RT_200 = {
+T.RT_198 = {
   [1] = "Tag_SP",
   [2] = "Tag_SkillEfficiency"
 }
-T.RT_201 = {1300}
-T.RT_202 = {
+T.RT_199 = {1300}
+T.RT_200 = {
   AllowModMultiplier = "Dark",
   AttrName = "ATK_Dark",
   Rate = "#1"
 }
-T.RT_203 = {
+T.RT_201 = {
   AllowModMultiplier = "Dark",
   AttrName = "SkillIntensity",
   Rate = "#2"
 }
-T.RT_204 = {
+T.RT_202 = {
   [1] = "Tag_ATK",
   [2] = "Tag_SkillIntensity"
 }
-T.RT_205 = {1320}
-T.RT_206 = {
+T.RT_203 = {1320}
+T.RT_204 = {
   AllowModMultiplier = "Water",
   AttrName = "ATK_Water",
   Rate = "#1"
 }
-T.RT_207 = {
+T.RT_205 = {
   AllowModMultiplier = "Water",
   AttrName = "SkillIntensity",
   Rate = "#2"
 }
-T.RT_208 = {
+T.RT_206 = {
   AllowModMultiplier = "Fire",
   AttrName = "ATK_Fire",
   Rate = "#1"
 }
-T.RT_209 = {
+T.RT_207 = {
   AllowModMultiplier = "Fire",
   AttrName = "SkillIntensity",
   Rate = "#2"
 }
-T.RT_210 = {
+T.RT_208 = {
   AllowModMultiplier = "Thunder",
   AttrName = "ATK_Thunder",
   Rate = "#1"
 }
-T.RT_211 = {
+T.RT_209 = {
   AllowModMultiplier = "Thunder",
   AttrName = "SkillIntensity",
   Rate = "#2"
 }
-T.RT_212 = {
+T.RT_210 = {
   AllowModMultiplier = "Wind",
   AttrName = "ATK_Wind",
   Rate = "#1"
 }
-T.RT_213 = {
+T.RT_211 = {
   AllowModMultiplier = "Wind",
   AttrName = "SkillIntensity",
   Rate = "#2"
 }
-T.RT_214 = {
+T.RT_212 = {
   AllowModMultiplier = "Light",
   AttrName = "ATK_Light",
   Rate = "#1"
 }
-T.RT_215 = {
+T.RT_213 = {
   AllowModMultiplier = "Light",
   AttrName = "SkillIntensity",
   Rate = "#2"
 }
-T.RT_216 = {
+T.RT_214 = {
   "Shop_ExploreBadge",
   "Shop_Main",
   "Forging",
   "MonsterStrong"
 }
-T.RT_217 = {9}
-T.RT_218 = {
+T.RT_215 = {9}
+T.RT_216 = {
   [1] = "Tag_SpecialEffect"
 }
-T.RT_219 = {1500}
-T.RT_220 = {2004}
-T.RT_221 = {2005}
-T.RT_222 = {
+T.RT_217 = {1500}
+T.RT_218 = {2004}
+T.RT_219 = {2005}
+T.RT_220 = {
   AttrName = "ComboHoldTime",
   Value = "#1"
 }
-T.RT_223 = {2301}
-T.RT_224 = {2302}
-T.RT_225 = {3004}
-T.RT_226 = {3005}
-T.RT_227 = {AttrName = "BulletMax", Rate = "#1"}
-T.RT_228 = {
+T.RT_221 = {2301}
+T.RT_222 = {2302}
+T.RT_223 = {3004}
+T.RT_224 = {3005}
+T.RT_225 = {AttrName = "BulletMax", Rate = "#1"}
+T.RT_226 = {
   [1] = "Tag_BulletMax"
 }
-T.RT_229 = {3311}
-T.RT_230 = {3321}
-T.RT_231 = {3322}
-T.RT_232 = {3331}
-T.RT_233 = {3332}
-T.RT_234 = {
+T.RT_227 = {3311}
+T.RT_228 = {3321}
+T.RT_229 = {3322}
+T.RT_230 = {3331}
+T.RT_231 = {3332}
+T.RT_232 = {
   "Shop_Main",
   "Forging",
   "MonsterStrong",
   "Dungeon_ModTab_50"
 }
-T.RT_235 = {
+T.RT_233 = {
   [102] = 50
 }
-T.RT_236 = {
+T.RT_234 = {
   [1] = 100
 }
-T.RT_237 = {
+T.RT_235 = {
   [1] = "$-#Buff[1311001].BuffDamagedRate.Value*100$%",
   [2] = "$#Buff[1311].AddAttrs[1].Rate*100$%",
   [3] = "$#PassiveEffect[1311].Vars.LastTime$",
   [4] = "$math.floor(#Buff[1311].MaxLayer)$"
 }
-T.RT_238 = {
+T.RT_236 = {
   [1] = "Tag_ATK",
   [2] = "Tag_DmgReducion",
   [3] = "Tag_SpecialEffect"
 }
-T.RT_239 = {1311}
-T.RT_240 = {
+T.RT_237 = {1311}
+T.RT_238 = {
   [1] = T.RT_42,
-  [2] = T.RT_197
+  [2] = T.RT_195
 }
-T.RT_241 = {
+T.RT_239 = {
   [1] = "$#Buff[1312].AddAttrs[1].Rate*100$%",
   [2] = "$#PassiveEffect[1312].Vars.LastTime$"
 }
-T.RT_242 = {
+T.RT_240 = {
   [1] = "Tag_SkillIntensity",
   [2] = "Tag_SpecialEffect"
 }
-T.RT_243 = {1312}
-T.RT_244 = {
+T.RT_241 = {1312}
+T.RT_242 = {
   [1] = "$#Buff[1313].AddAttrs[1].Value*100$%"
 }
-T.RT_245 = {
+T.RT_243 = {
   [1] = "Tag_Dmg",
   [2] = "Tag_SpecialEffect"
 }
-T.RT_246 = {1313}
-T.RT_247 = {
+T.RT_244 = {1313}
+T.RT_245 = {
   [1] = "$#Buff[1314].AddAttrs[1].Value*100$%",
   [2] = "$#Buff[1314].MaxLayer*#Buff[1314].AddAttrs[1].Value*100$%"
 }
-T.RT_248 = {1314}
-T.RT_249 = {
+T.RT_246 = {1314}
+T.RT_247 = {
   [1] = "$#Buff[1315].AddAttrs[1].Value*100$%"
 }
-T.RT_250 = {1315}
-T.RT_251 = {
+T.RT_248 = {1315}
+T.RT_249 = {
   [1] = "$#Buff[1316].AddAttrs[1].Rate*100$%",
   [2] = "$#Buff[1316].AddAttrs[1].Rate*#Buff[1316].MaxLayer*100$%"
 }
-T.RT_252 = {
+T.RT_250 = {
   [1] = "Tag_ATK",
   [2] = "Tag_SpecialEffect"
 }
-T.RT_253 = {1316}
-T.RT_254 = {
+T.RT_251 = {1316}
+T.RT_252 = {
   "Shop_Main",
   "Forging",
   "MonsterStrong",
   "Dungeon_ModTab_60"
 }
-T.RT_255 = {
+T.RT_253 = {
   AllowModMultiplier = "Dark",
   AttrName = "SkillRange",
   Rate = "#3"
 }
-T.RT_256 = {
-  [1] = T.RT_202,
-  [2] = T.RT_203,
-  [3] = T.RT_255
+T.RT_254 = {
+  [1] = T.RT_200,
+  [2] = T.RT_201,
+  [3] = T.RT_253
 }
-T.RT_257 = {
+T.RT_255 = {
   [1] = "Tag_ATK",
   [2] = "Tag_SkillIntensity",
   [3] = "Tag_SkillRange"
 }
-T.RT_258 = {
+T.RT_256 = {
   [1] = 50
 }
-T.RT_259 = {
+T.RT_257 = {
   AllowModMultiplier = "Water",
+  AttrName = "SkillRange",
+  Rate = "#3"
+}
+T.RT_258 = {
+  [1] = T.RT_204,
+  [2] = T.RT_205,
+  [3] = T.RT_257
+}
+T.RT_259 = {
+  AllowModMultiplier = "Fire",
   AttrName = "SkillRange",
   Rate = "#3"
 }
@@ -789,7 +792,7 @@ T.RT_260 = {
   [3] = T.RT_259
 }
 T.RT_261 = {
-  AllowModMultiplier = "Fire",
+  AllowModMultiplier = "Thunder",
   AttrName = "SkillRange",
   Rate = "#3"
 }
@@ -799,7 +802,7 @@ T.RT_262 = {
   [3] = T.RT_261
 }
 T.RT_263 = {
-  AllowModMultiplier = "Thunder",
+  AllowModMultiplier = "Wind",
   AttrName = "SkillRange",
   Rate = "#3"
 }
@@ -809,7 +812,7 @@ T.RT_264 = {
   [3] = T.RT_263
 }
 T.RT_265 = {
-  AllowModMultiplier = "Wind",
+  AllowModMultiplier = "Light",
   AttrName = "SkillRange",
   Rate = "#3"
 }
@@ -819,32 +822,32 @@ T.RT_266 = {
   [3] = T.RT_265
 }
 T.RT_267 = {
-  AllowModMultiplier = "Light",
-  AttrName = "SkillRange",
-  Rate = "#3"
-}
-T.RT_268 = {
-  [1] = T.RT_214,
-  [2] = T.RT_215,
-  [3] = T.RT_267
-}
-T.RT_269 = {
   AllowModMultiplier = "Dark",
   AttrName = "SkillSustain",
   Rate = "#3"
 }
-T.RT_270 = {
-  [1] = T.RT_202,
-  [2] = T.RT_203,
-  [3] = T.RT_269
+T.RT_268 = {
+  [1] = T.RT_200,
+  [2] = T.RT_201,
+  [3] = T.RT_267
 }
-T.RT_271 = {
+T.RT_269 = {
   [1] = "Tag_ATK",
   [2] = "Tag_SkillIntensity",
   [3] = "Tag_SkillSustain"
 }
-T.RT_272 = {
+T.RT_270 = {
   AllowModMultiplier = "Water",
+  AttrName = "SkillSustain",
+  Rate = "#3"
+}
+T.RT_271 = {
+  [1] = T.RT_204,
+  [2] = T.RT_205,
+  [3] = T.RT_270
+}
+T.RT_272 = {
+  AllowModMultiplier = "Fire",
   AttrName = "SkillSustain",
   Rate = "#3"
 }
@@ -854,7 +857,7 @@ T.RT_273 = {
   [3] = T.RT_272
 }
 T.RT_274 = {
-  AllowModMultiplier = "Fire",
+  AllowModMultiplier = "Thunder",
   AttrName = "SkillSustain",
   Rate = "#3"
 }
@@ -864,7 +867,7 @@ T.RT_275 = {
   [3] = T.RT_274
 }
 T.RT_276 = {
-  AllowModMultiplier = "Thunder",
+  AllowModMultiplier = "Wind",
   AttrName = "SkillSustain",
   Rate = "#3"
 }
@@ -874,7 +877,7 @@ T.RT_277 = {
   [3] = T.RT_276
 }
 T.RT_278 = {
-  AllowModMultiplier = "Wind",
+  AllowModMultiplier = "Light",
   AttrName = "SkillSustain",
   Rate = "#3"
 }
@@ -884,93 +887,94 @@ T.RT_279 = {
   [3] = T.RT_278
 }
 T.RT_280 = {
-  AllowModMultiplier = "Light",
-  AttrName = "SkillSustain",
-  Rate = "#3"
-}
-T.RT_281 = {
-  [1] = T.RT_214,
-  [2] = T.RT_215,
-  [3] = T.RT_280
-}
-T.RT_282 = {
   AllowModMultiplier = "Dark",
   AttrName = "StrongValue",
   Value = "#4"
 }
-T.RT_283 = {
+T.RT_281 = {
   [1] = T.RT_74,
   [2] = T.RT_75,
   [3] = T.RT_76,
-  [4] = T.RT_282
+  [4] = T.RT_280
 }
-T.RT_284 = {
+T.RT_282 = {
   [1] = "Tag_ATK",
   [2] = "Tag_Hp",
   [3] = "Tag_DEF",
   [4] = "Tag_StrongValue"
 }
-T.RT_285 = {
+T.RT_283 = {
   AllowModMultiplier = "Dark",
   AttrName = "EnmityValue",
   Value = "#4"
 }
-T.RT_286 = {
+T.RT_284 = {
   [1] = T.RT_74,
   [2] = T.RT_75,
   [3] = T.RT_76,
-  [4] = T.RT_285
+  [4] = T.RT_283
 }
-T.RT_287 = {
+T.RT_285 = {
   [1] = "Tag_ATK",
   [2] = "Tag_Hp",
   [3] = "Tag_DEF",
   [4] = "Tag_EnmityValue"
 }
-T.RT_288 = {
+T.RT_286 = {
   AllowModMultiplier = "Dark",
   AttrName = "BonusDamage_Dark",
   Value = "#4"
 }
-T.RT_289 = {
+T.RT_287 = {
   [1] = T.RT_74,
   [2] = T.RT_75,
   [3] = T.RT_76,
-  [4] = T.RT_288
+  [4] = T.RT_286
 }
-T.RT_290 = {
+T.RT_288 = {
   [1] = "Tag_ATK",
   [2] = "Tag_Hp",
   [3] = "Tag_DEF",
   [4] = "Tag_BonusDmg",
   [5] = "Tag_SpecialEffect"
 }
-T.RT_291 = {1420, 201}
-T.RT_292 = {
+T.RT_289 = {1420, 201}
+T.RT_290 = {
   [1] = "$#Buff[1430001].AddAttrs[1].Value$"
 }
-T.RT_293 = {
+T.RT_291 = {
   [1] = "Tag_ATK",
   [2] = "Tag_Hp",
   [3] = "Tag_DEF",
   [4] = "Tag_SPReduce",
   [5] = "Tag_SpecialEffect"
 }
-T.RT_294 = {1430}
-T.RT_295 = {
+T.RT_292 = {1430}
+T.RT_293 = {
   [1] = "$#Buff[1440001].AddAttrs[1].Value*100$%"
 }
-T.RT_296 = {
+T.RT_294 = {
   [1] = "Tag_ATK",
   [2] = "Tag_Hp",
   [3] = "Tag_DEF",
   [4] = "Tag_Dmg",
   [5] = "Tag_SpecialEffect"
 }
-T.RT_297 = {1440}
-T.RT_298 = {
+T.RT_295 = {1440}
+T.RT_296 = {
   AllowModMultiplier = "Water",
   AttrName = "StrongValue",
+  Value = "#4"
+}
+T.RT_297 = {
+  [1] = T.RT_80,
+  [2] = T.RT_81,
+  [3] = T.RT_82,
+  [4] = T.RT_296
+}
+T.RT_298 = {
+  AllowModMultiplier = "Water",
+  AttrName = "EnmityValue",
   Value = "#4"
 }
 T.RT_299 = {
@@ -981,7 +985,7 @@ T.RT_299 = {
 }
 T.RT_300 = {
   AllowModMultiplier = "Water",
-  AttrName = "EnmityValue",
+  AttrName = "BonusDamage_Water",
   Value = "#4"
 }
 T.RT_301 = {
@@ -990,21 +994,21 @@ T.RT_301 = {
   [3] = T.RT_82,
   [4] = T.RT_300
 }
-T.RT_302 = {
-  AllowModMultiplier = "Water",
-  AttrName = "BonusDamage_Water",
-  Value = "#4"
-}
+T.RT_302 = {1420, 202}
 T.RT_303 = {
-  [1] = T.RT_80,
-  [2] = T.RT_81,
-  [3] = T.RT_82,
-  [4] = T.RT_302
-}
-T.RT_304 = {1420, 202}
-T.RT_305 = {
   AllowModMultiplier = "Fire",
   AttrName = "StrongValue",
+  Value = "#4"
+}
+T.RT_304 = {
+  [1] = T.RT_84,
+  [2] = T.RT_85,
+  [3] = T.RT_86,
+  [4] = T.RT_303
+}
+T.RT_305 = {
+  AllowModMultiplier = "Fire",
+  AttrName = "EnmityValue",
   Value = "#4"
 }
 T.RT_306 = {
@@ -1015,7 +1019,7 @@ T.RT_306 = {
 }
 T.RT_307 = {
   AllowModMultiplier = "Fire",
-  AttrName = "EnmityValue",
+  AttrName = "BonusDamage_Fire",
   Value = "#4"
 }
 T.RT_308 = {
@@ -1024,21 +1028,21 @@ T.RT_308 = {
   [3] = T.RT_86,
   [4] = T.RT_307
 }
-T.RT_309 = {
-  AllowModMultiplier = "Fire",
-  AttrName = "BonusDamage_Fire",
-  Value = "#4"
-}
+T.RT_309 = {1420, 203}
 T.RT_310 = {
-  [1] = T.RT_84,
-  [2] = T.RT_85,
-  [3] = T.RT_86,
-  [4] = T.RT_309
-}
-T.RT_311 = {1420, 203}
-T.RT_312 = {
   AllowModMultiplier = "Thunder",
   AttrName = "StrongValue",
+  Value = "#4"
+}
+T.RT_311 = {
+  [1] = T.RT_88,
+  [2] = T.RT_89,
+  [3] = T.RT_90,
+  [4] = T.RT_310
+}
+T.RT_312 = {
+  AllowModMultiplier = "Thunder",
+  AttrName = "EnmityValue",
   Value = "#4"
 }
 T.RT_313 = {
@@ -1049,7 +1053,7 @@ T.RT_313 = {
 }
 T.RT_314 = {
   AllowModMultiplier = "Thunder",
-  AttrName = "EnmityValue",
+  AttrName = "BonusDamage_Thunder",
   Value = "#4"
 }
 T.RT_315 = {
@@ -1058,21 +1062,21 @@ T.RT_315 = {
   [3] = T.RT_90,
   [4] = T.RT_314
 }
-T.RT_316 = {
-  AllowModMultiplier = "Thunder",
-  AttrName = "BonusDamage_Thunder",
-  Value = "#4"
-}
+T.RT_316 = {1420, 204}
 T.RT_317 = {
-  [1] = T.RT_88,
-  [2] = T.RT_89,
-  [3] = T.RT_90,
-  [4] = T.RT_316
-}
-T.RT_318 = {1420, 204}
-T.RT_319 = {
   AllowModMultiplier = "Wind",
   AttrName = "StrongValue",
+  Value = "#4"
+}
+T.RT_318 = {
+  [1] = T.RT_92,
+  [2] = T.RT_93,
+  [3] = T.RT_94,
+  [4] = T.RT_317
+}
+T.RT_319 = {
+  AllowModMultiplier = "Wind",
+  AttrName = "EnmityValue",
   Value = "#4"
 }
 T.RT_320 = {
@@ -1083,7 +1087,7 @@ T.RT_320 = {
 }
 T.RT_321 = {
   AllowModMultiplier = "Wind",
-  AttrName = "EnmityValue",
+  AttrName = "BonusDamage_Wind",
   Value = "#4"
 }
 T.RT_322 = {
@@ -1092,21 +1096,21 @@ T.RT_322 = {
   [3] = T.RT_94,
   [4] = T.RT_321
 }
-T.RT_323 = {
-  AllowModMultiplier = "Wind",
-  AttrName = "BonusDamage_Wind",
-  Value = "#4"
-}
+T.RT_323 = {1420, 205}
 T.RT_324 = {
-  [1] = T.RT_92,
-  [2] = T.RT_93,
-  [3] = T.RT_94,
-  [4] = T.RT_323
-}
-T.RT_325 = {1420, 205}
-T.RT_326 = {
   AllowModMultiplier = "Light",
   AttrName = "StrongValue",
+  Value = "#4"
+}
+T.RT_325 = {
+  [1] = T.RT_96,
+  [2] = T.RT_97,
+  [3] = T.RT_98,
+  [4] = T.RT_324
+}
+T.RT_326 = {
+  AllowModMultiplier = "Light",
+  AttrName = "EnmityValue",
   Value = "#4"
 }
 T.RT_327 = {
@@ -1117,7 +1121,7 @@ T.RT_327 = {
 }
 T.RT_328 = {
   AllowModMultiplier = "Light",
-  AttrName = "EnmityValue",
+  AttrName = "BonusDamage_Light",
   Value = "#4"
 }
 T.RT_329 = {
@@ -1126,705 +1130,693 @@ T.RT_329 = {
   [3] = T.RT_98,
   [4] = T.RT_328
 }
-T.RT_330 = {
-  AllowModMultiplier = "Light",
-  AttrName = "BonusDamage_Light",
-  Value = "#4"
-}
+T.RT_330 = {1420, 206}
 T.RT_331 = {
-  [1] = T.RT_96,
-  [2] = T.RT_97,
-  [3] = T.RT_98,
-  [4] = T.RT_330
-}
-T.RT_332 = {1420, 206}
-T.RT_333 = {
   "Shop_Main",
   "Forging",
   "MonsterStrong",
   "Dungeon_ModTab_65"
 }
-T.RT_334 = {
+T.RT_332 = {
   [1] = T.RT_74
 }
-T.RT_335 = {1711}
-T.RT_336 = {
+T.RT_333 = {1711}
+T.RT_334 = {
   AllowModMultiplier = "Dark",
   AttrName = "StrongValue",
   Value = "#2"
 }
-T.RT_337 = {
+T.RT_335 = {
   [1] = T.RT_74,
-  [2] = T.RT_336
+  [2] = T.RT_334
 }
-T.RT_338 = {
+T.RT_336 = {
   [1] = "Tag_ATK",
   [2] = "Tag_StrongValue"
 }
-T.RT_339 = {1712}
-T.RT_340 = {
+T.RT_337 = {1712}
+T.RT_338 = {
   AllowModMultiplier = "Dark",
   AttrName = "SkillRange",
   Rate = "#2"
 }
-T.RT_341 = {
+T.RT_339 = {
   [1] = T.RT_74,
-  [2] = T.RT_340
+  [2] = T.RT_338
 }
-T.RT_342 = {
+T.RT_340 = {
   [1] = "Tag_ATK",
   [2] = "Tag_SkillRange"
 }
-T.RT_343 = {1713}
-T.RT_344 = {
+T.RT_341 = {1713}
+T.RT_342 = {
   AllowModMultiplier = "Dark",
   AttrName = "DEF",
   Rate = "#1"
 }
-T.RT_345 = {
+T.RT_343 = {
   AllowModMultiplier = "Dark",
   AttrName = "SkillEfficiency",
   Rate = "#2"
 }
-T.RT_346 = {
-  [1] = T.RT_344,
-  [2] = T.RT_345
+T.RT_344 = {
+  [1] = T.RT_342,
+  [2] = T.RT_343
 }
-T.RT_347 = {
+T.RT_345 = {
   [1] = "Tag_DEF",
   [2] = "Tag_SkillEfficiency"
 }
-T.RT_348 = {1714}
-T.RT_349 = {
+T.RT_346 = {1714}
+T.RT_347 = {
   AttrName = "SkillSustain",
   Rate = 1
 }
-T.RT_350 = {
-  [1] = T.RT_349
+T.RT_348 = {
+  [1] = T.RT_347
 }
-T.RT_351 = {
+T.RT_349 = {
   [2] = 4
 }
-T.RT_352 = {1715}
-T.RT_353 = {
+T.RT_350 = {1715}
+T.RT_351 = {
   AttrName = "StrongValue",
   Value = 1
 }
-T.RT_354 = {
-  [1] = T.RT_353
+T.RT_352 = {
+  [1] = T.RT_351
 }
-T.RT_355 = {
+T.RT_353 = {
   [1] = "Tag_StrongValue"
 }
-T.RT_356 = {
+T.RT_354 = {
   [3] = 4
 }
-T.RT_357 = {1716}
-T.RT_358 = {
+T.RT_355 = {1716}
+T.RT_356 = {
   [1] = T.RT_80,
   [2] = T.RT_81
 }
-T.RT_359 = {1721}
-T.RT_360 = {
+T.RT_357 = {1721}
+T.RT_358 = {
   AllowModMultiplier = "Water",
   AttrName = "SkillRange",
   Rate = "#2"
 }
-T.RT_361 = {
+T.RT_359 = {
   [1] = T.RT_80,
-  [2] = T.RT_360
+  [2] = T.RT_358
 }
-T.RT_362 = {1722}
-T.RT_363 = {
+T.RT_360 = {1722}
+T.RT_361 = {
   AllowModMultiplier = "Water",
   AttrName = "SkillEfficiency",
   Rate = "#2"
 }
-T.RT_364 = {
+T.RT_362 = {
   [1] = T.RT_80,
-  [2] = T.RT_363
+  [2] = T.RT_361
 }
-T.RT_365 = {
+T.RT_363 = {
   [1] = "Tag_ATK",
   [2] = "Tag_SkillEfficiency"
 }
-T.RT_366 = {1723}
-T.RT_367 = {
+T.RT_364 = {1723}
+T.RT_365 = {
   AllowModMultiplier = "Water",
   AttrName = "MaxSp",
   Rate = "#1"
 }
-T.RT_368 = {
-  [1] = T.RT_367,
-  [2] = T.RT_207
+T.RT_366 = {
+  [1] = T.RT_365,
+  [2] = T.RT_205
 }
-T.RT_369 = {
+T.RT_367 = {
   [1] = "Tag_SP",
   [2] = "Tag_SkillIntensity"
 }
-T.RT_370 = {1724}
-T.RT_371 = {
+T.RT_368 = {1724}
+T.RT_369 = {
   [1] = 4
 }
-T.RT_372 = {1725}
-T.RT_373 = {
+T.RT_370 = {1725}
+T.RT_371 = {
   AttrName = "SkillIntensity",
   Rate = 1
 }
-T.RT_374 = {
-  [1] = T.RT_373
+T.RT_372 = {
+  [1] = T.RT_371
 }
-T.RT_375 = {1726}
-T.RT_376 = {
+T.RT_373 = {1726}
+T.RT_374 = {
   AllowModMultiplier = "Fire",
   AttrName = "DEF",
   Rate = "#2"
 }
-T.RT_377 = {
+T.RT_375 = {
   [1] = T.RT_84,
-  [2] = T.RT_376
+  [2] = T.RT_374
 }
-T.RT_378 = {1731}
-T.RT_379 = {
+T.RT_376 = {1731}
+T.RT_377 = {
   AllowModMultiplier = "Fire",
   AttrName = "SkillSustain",
   Rate = "#2"
 }
-T.RT_380 = {
+T.RT_378 = {
   [1] = T.RT_84,
-  [2] = T.RT_379
+  [2] = T.RT_377
 }
-T.RT_381 = {
+T.RT_379 = {
   [1] = "Tag_ATK",
   [2] = "Tag_SkillSustain"
 }
-T.RT_382 = {1732}
-T.RT_383 = {
+T.RT_380 = {1732}
+T.RT_381 = {
   AllowModMultiplier = "Fire",
   AttrName = "SkillEfficiency",
   Rate = "#2"
 }
-T.RT_384 = {
+T.RT_382 = {
   [1] = T.RT_84,
-  [2] = T.RT_383
+  [2] = T.RT_381
 }
-T.RT_385 = {1733}
-T.RT_386 = {
+T.RT_383 = {1733}
+T.RT_384 = {
   AllowModMultiplier = "Fire",
   AttrName = "MaxHp",
   Rate = "#1"
 }
-T.RT_387 = {
+T.RT_385 = {
   AllowModMultiplier = "Fire",
   AttrName = "SkillRange",
   Rate = "#2"
 }
-T.RT_388 = {
-  [1] = T.RT_386,
-  [2] = T.RT_387
+T.RT_386 = {
+  [1] = T.RT_384,
+  [2] = T.RT_385
 }
-T.RT_389 = {
+T.RT_387 = {
   [1] = "Tag_Hp",
   [2] = "Tag_SkillRange"
 }
-T.RT_390 = {1734}
-T.RT_391 = {1735}
-T.RT_392 = {AttrName = "SkillRange", Rate = 1}
-T.RT_393 = {
-  [1] = T.RT_392
+T.RT_388 = {1734}
+T.RT_389 = {1735}
+T.RT_390 = {AttrName = "SkillRange", Rate = 1}
+T.RT_391 = {
+  [1] = T.RT_390
 }
-T.RT_394 = {
+T.RT_392 = {
   [4] = 4
 }
-T.RT_395 = {1736}
-T.RT_396 = {
+T.RT_393 = {1736}
+T.RT_394 = {
   [1] = T.RT_88,
   [2] = T.RT_89
 }
-T.RT_397 = {1741}
-T.RT_398 = {
+T.RT_395 = {1741}
+T.RT_396 = {
   AllowModMultiplier = "Thunder",
   AttrName = "StrongValue",
   Value = "#2"
 }
+T.RT_397 = {
+  [1] = T.RT_88,
+  [2] = T.RT_396
+}
+T.RT_398 = {1742}
 T.RT_399 = {
   [1] = T.RT_88,
-  [2] = T.RT_398
+  [2] = T.RT_209
 }
-T.RT_400 = {1742}
+T.RT_400 = {1743}
 T.RT_401 = {
-  [1] = T.RT_88,
-  [2] = T.RT_211
-}
-T.RT_402 = {1743}
-T.RT_403 = {
   AllowModMultiplier = "Thunder",
   AttrName = "DEF",
   Rate = "#1"
 }
-T.RT_404 = {
+T.RT_402 = {
   AllowModMultiplier = "Thunder",
   AttrName = "SkillSustain",
   Rate = "#2"
 }
-T.RT_405 = {
-  [1] = T.RT_403,
-  [2] = T.RT_404
+T.RT_403 = {
+  [1] = T.RT_401,
+  [2] = T.RT_402
 }
-T.RT_406 = {
+T.RT_404 = {
   [1] = "Tag_DEF",
   [2] = "Tag_SkillSustain"
 }
-T.RT_407 = {1744}
-T.RT_408 = {1745}
-T.RT_409 = {1746}
-T.RT_410 = {
+T.RT_405 = {1744}
+T.RT_406 = {1745}
+T.RT_407 = {1746}
+T.RT_408 = {
   AllowModMultiplier = "Wind",
   AttrName = "DEF",
   Rate = "#2"
 }
-T.RT_411 = {
+T.RT_409 = {
   [1] = T.RT_92,
-  [2] = T.RT_410
+  [2] = T.RT_408
 }
-T.RT_412 = {1751}
-T.RT_413 = {
+T.RT_410 = {1751}
+T.RT_411 = {
   AllowModMultiplier = "Wind",
   AttrName = "EnmityValue",
   Value = "#2"
 }
-T.RT_414 = {
+T.RT_412 = {
   [1] = T.RT_92,
-  [2] = T.RT_413
+  [2] = T.RT_411
 }
-T.RT_415 = {
+T.RT_413 = {
   [1] = "Tag_ATK",
   [2] = "Tag_EnmityValue"
 }
-T.RT_416 = {1752}
-T.RT_417 = {
+T.RT_414 = {1752}
+T.RT_415 = {
   [1] = T.RT_92,
-  [2] = T.RT_213
+  [2] = T.RT_211
 }
-T.RT_418 = {1753}
-T.RT_419 = {
+T.RT_416 = {1753}
+T.RT_417 = {
   AllowModMultiplier = "Wind",
   AttrName = "MaxSp",
   Rate = "#1"
 }
-T.RT_420 = {
+T.RT_418 = {
   AllowModMultiplier = "Wind",
   AttrName = "SkillSustain",
   Rate = "#2"
 }
-T.RT_421 = {
-  [1] = T.RT_419,
-  [2] = T.RT_420
+T.RT_419 = {
+  [1] = T.RT_417,
+  [2] = T.RT_418
 }
-T.RT_422 = {
+T.RT_420 = {
   [1] = "Tag_SP",
   [2] = "Tag_SkillSustain"
 }
-T.RT_423 = {1754}
-T.RT_424 = {
+T.RT_421 = {1754}
+T.RT_422 = {
   AttrName = "EnmityValue",
   Value = "#1"
 }
-T.RT_425 = {
-  [1] = T.RT_424
+T.RT_423 = {
+  [1] = T.RT_422
 }
-T.RT_426 = {
+T.RT_424 = {
   [1] = "Tag_EnmityValue"
 }
-T.RT_427 = {1755}
-T.RT_428 = {1756}
-T.RT_429 = {
+T.RT_425 = {1755}
+T.RT_426 = {1756}
+T.RT_427 = {
   [1] = T.RT_96
 }
-T.RT_430 = {1761}
-T.RT_431 = {
+T.RT_428 = {1761}
+T.RT_429 = {
   AllowModMultiplier = "Light",
   AttrName = "EnmityValue",
   Value = "#2"
 }
-T.RT_432 = {
+T.RT_430 = {
   [1] = T.RT_96,
-  [2] = T.RT_431
+  [2] = T.RT_429
 }
-T.RT_433 = {1762}
-T.RT_434 = {
+T.RT_431 = {1762}
+T.RT_432 = {
   AllowModMultiplier = "Light",
   AttrName = "SkillSustain",
   Rate = "#2"
 }
-T.RT_435 = {
+T.RT_433 = {
   [1] = T.RT_96,
-  [2] = T.RT_434
+  [2] = T.RT_432
 }
-T.RT_436 = {1763}
-T.RT_437 = {
+T.RT_434 = {1763}
+T.RT_435 = {
   AllowModMultiplier = "Light",
   AttrName = "MaxHp",
   Rate = "#1"
 }
-T.RT_438 = {
-  [1] = T.RT_437,
-  [2] = T.RT_215
+T.RT_436 = {
+  [1] = T.RT_435,
+  [2] = T.RT_213
 }
-T.RT_439 = {
+T.RT_437 = {
   [1] = "Tag_Hp",
   [2] = "Tag_SkillIntensity"
 }
-T.RT_440 = {1764}
-T.RT_441 = {1765}
-T.RT_442 = {
+T.RT_438 = {1764}
+T.RT_439 = {1765}
+T.RT_440 = {
   AttrName = "BonusDamage_Light",
   Value = 1
 }
-T.RT_443 = {
-  [1] = T.RT_442
+T.RT_441 = {
+  [1] = T.RT_440
 }
-T.RT_444 = {
+T.RT_442 = {
   [1] = "Tag_BonusDmg"
 }
-T.RT_445 = {206}
-T.RT_446 = {1766}
-T.RT_447 = {
+T.RT_443 = {206}
+T.RT_444 = {1766}
+T.RT_445 = {
   [1] = "$#Buff[1800].AddAttrs[1].Value*100$%",
   [2] = "$#Buff[1800].AddAttrs[1].Value*300$%"
 }
-T.RT_448 = {1801}
-T.RT_449 = {1800}
-T.RT_450 = {1802}
-T.RT_451 = {1803}
-T.RT_452 = {1804}
-T.RT_453 = {1805}
-T.RT_454 = {1806}
-T.RT_455 = {1807}
-T.RT_456 = {1808}
-T.RT_457 = {1809}
-T.RT_458 = {1810}
-T.RT_459 = {1811}
-T.RT_460 = {1812}
-T.RT_461 = {
+T.RT_446 = {1801}
+T.RT_447 = {1800}
+T.RT_448 = {1802}
+T.RT_449 = {1803}
+T.RT_450 = {1804}
+T.RT_451 = {1805}
+T.RT_452 = {1806}
+T.RT_453 = {1807}
+T.RT_454 = {1808}
+T.RT_455 = {1809}
+T.RT_456 = {1810}
+T.RT_457 = {1811}
+T.RT_458 = {1812}
+T.RT_459 = {
   [1] = "$#PassiveEffect[1911].Vars.LastTime$",
   [2] = "$#Buff[1911].AddAttrs[1].Value*100$%",
   [3] = "$math.floor(#Buff[1911].MaxLayer)$"
 }
-T.RT_462 = {
+T.RT_460 = {
   [1] = "Tag_SkillIntensity",
   [2] = "Tag_CRI",
   [3] = "Tag_SpecialEffect"
 }
-T.RT_463 = {1911}
-T.RT_464 = {1900}
-T.RT_465 = {
+T.RT_461 = {1911}
+T.RT_462 = {1900}
+T.RT_463 = {
   [1] = "$#PassiveEffect[1921].Vars.SkillSpeedRate*100$%",
   [2] = "$#PassiveEffect[1921].Vars.SkillRangeRate*100$%"
 }
-T.RT_466 = {
+T.RT_464 = {
   [1] = "Tag_SkillIntensity",
   [2] = "Tag_SkillRange",
   [3] = "Tag_SpecialEffect"
 }
-T.RT_467 = {1921}
-T.RT_468 = {
+T.RT_465 = {1921}
+T.RT_466 = {
   [1] = "$#SkillEffects[1922].TaskEffects[1].LastTime$",
   [2] = "$#Buff[1922].AddAttrs[1].Rate*100$%"
 }
-T.RT_469 = {
+T.RT_467 = {
   [1] = "Tag_SkillIntensity",
   [2] = "Tag_ATK",
   [3] = "Tag_SpecialEffect"
 }
-T.RT_470 = {1922}
-T.RT_471 = {
+T.RT_468 = {1922}
+T.RT_469 = {
   [1] = "$#PassiveEffect[1931].Vars.LastTime$",
   [2] = "$#Buff[1931].AddAttrs[1].Rate*100$%",
   [3] = "$math.floor(#Buff[1931].MaxLayer)$"
 }
-T.RT_472 = {1931}
-T.RT_473 = {
+T.RT_470 = {1931}
+T.RT_471 = {
   [1] = "$#PassiveEffect[1941].Vars.LastTime$",
   [2] = "$#Buff[1941].AddAttrs[1].Value*100$%",
   [3] = "$math.floor(#Buff[1941].MaxLayer)$"
 }
-T.RT_474 = {
+T.RT_472 = {
   [1] = "Tag_SkillIntensity",
   [2] = "Tag_Dmg",
   [3] = "Tag_SpecialEffect"
 }
-T.RT_475 = {1941}
-T.RT_476 = {
+T.RT_473 = {1941}
+T.RT_474 = {
   [1] = "$#PassiveEffect[1951].Vars.LastTime$",
   [2] = "$#Buff[1951].AddAttrs[1].Rate*100$%"
 }
-T.RT_477 = {
+T.RT_475 = {
   [1] = "Tag_SkillIntensity",
   [2] = "Tag_SkillIntensity",
   [3] = "Tag_SpecialEffect"
 }
-T.RT_478 = {1951}
-T.RT_479 = {
+T.RT_476 = {1951}
+T.RT_477 = {
   [1] = "$#SkillEffects[1952].TaskEffects[1].LastTime$",
   [2] = "$#Buff[1952].AddAttrs[1].Value*100$%"
 }
-T.RT_480 = {
+T.RT_478 = {
   [1] = "Tag_SkillSustain",
   [2] = "Tag_EnmityValue",
   [3] = "Tag_SpecialEffect"
 }
-T.RT_481 = {1952}
-T.RT_482 = {
+T.RT_479 = {1952}
+T.RT_480 = {
   [1] = "$#PassiveEffect[1961001].Vars.BuffRate*100$%",
   [2] = "$#PassiveEffect[1961001].Vars.BuffRateExtra*100$%"
 }
-T.RT_483 = {
+T.RT_481 = {
   [1] = "Tag_SkillSustain",
   [2] = "Tag_CRI",
   [3] = "Tag_SpecialEffect"
 }
-T.RT_484 = {1961}
-T.RT_485 = {
+T.RT_482 = {1961}
+T.RT_483 = {
   [1] = "$#PassiveEffect[1962].Vars.BuffRate*100$%",
   [2] = "$#Buff[1962].AddAttrs[1].SupLimitRate*100$%"
 }
-T.RT_486 = {
+T.RT_484 = {
   [1] = "Tag_SkillSustain",
   [2] = "Tag_ATK",
   [3] = "Tag_SpecialEffect"
 }
-T.RT_487 = {1962}
-T.RT_488 = {
+T.RT_485 = {1962}
+T.RT_486 = {
   [1] = "Tag_AttackSpeed",
   [2] = "Tag_SpecialEffect"
 }
-T.RT_489 = {2311}
-T.RT_490 = {2312}
-T.RT_491 = {
+T.RT_487 = {2311}
+T.RT_488 = {2312}
+T.RT_489 = {
   [1] = "Tag_CRD",
   [2] = "Tag_SpecialEffect"
 }
-T.RT_492 = {2321}
-T.RT_493 = {2322}
-T.RT_494 = {
+T.RT_490 = {2321}
+T.RT_491 = {2322}
+T.RT_492 = {
   AttrName = "FallAttackRate",
   Value = "#1"
 }
-T.RT_495 = {
+T.RT_493 = {
   [1] = "Tag_FallAttack"
 }
-T.RT_496 = {
+T.RT_494 = {
   AttrName = "SlideAttackRate",
   Value = "#1"
 }
-T.RT_497 = {
+T.RT_495 = {
   [1] = "Tag_SlideAttack"
 }
-T.RT_498 = {2403}
-T.RT_499 = {
+T.RT_496 = {2403}
+T.RT_497 = {
   [1] = "Tag_HeavyAttack"
 }
-T.RT_500 = {2421}
-T.RT_501 = {AttrName = "GrRate", Value = "#1"}
-T.RT_502 = {
-  [1] = T.RT_501
+T.RT_498 = {2421}
+T.RT_499 = {AttrName = "GrRate", Value = "#1"}
+T.RT_500 = {
+  [1] = T.RT_499
 }
-T.RT_503 = {
+T.RT_501 = {
   [1] = "Tag_Dmg"
 }
-T.RT_504 = {2501}
-T.RT_505 = {AttrName = "JtRate", Value = "#1"}
-T.RT_506 = {
-  [1] = T.RT_505
+T.RT_502 = {2501}
+T.RT_503 = {AttrName = "JtRate", Value = "#1"}
+T.RT_504 = {
+  [1] = T.RT_503
 }
-T.RT_507 = {2502}
-T.RT_508 = {AttrName = "JhRate", Value = "#1"}
-T.RT_509 = {
-  [1] = T.RT_508
+T.RT_505 = {2502}
+T.RT_506 = {AttrName = "JhRate", Value = "#1"}
+T.RT_507 = {
+  [1] = T.RT_506
 }
-T.RT_510 = {2503}
-T.RT_511 = {AttrName = "SqRate", Value = "#1"}
+T.RT_508 = {2503}
+T.RT_509 = {AttrName = "SqRate", Value = "#1"}
+T.RT_510 = {
+  [1] = T.RT_509
+}
+T.RT_511 = {2504}
 T.RT_512 = {
-  [1] = T.RT_511
-}
-T.RT_513 = {2504}
-T.RT_514 = {
   AttrName = "TriggerHpRate",
+  Value = "#1"
+}
+T.RT_513 = {
+  [1] = T.RT_512
+}
+T.RT_514 = {
+  AttrName = "TriggerEsRate",
   Value = "#1"
 }
 T.RT_515 = {
   [1] = T.RT_514
 }
 T.RT_516 = {
-  AttrName = "TriggerEsRate",
-  Value = "#1"
-}
-T.RT_517 = {
-  [1] = T.RT_516
-}
-T.RT_518 = {
   AttrName = "MagazineCapacity",
   Rate = "#2"
 }
-T.RT_519 = {3301}
-T.RT_520 = {3312}
-T.RT_521 = {3341}
-T.RT_522 = {
+T.RT_517 = {3301}
+T.RT_518 = {3312}
+T.RT_519 = {3341}
+T.RT_520 = {
   [1] = "Tag_SpecialEffect",
   [2] = "Tag_Dmg"
 }
-T.RT_523 = {3342}
-T.RT_524 = {3343}
-T.RT_525 = {3401}
-T.RT_526 = {3402}
-T.RT_527 = {
+T.RT_521 = {3342}
+T.RT_522 = {3343}
+T.RT_523 = {3401}
+T.RT_524 = {3402}
+T.RT_525 = {
   AttrName = "BulletSpeed",
   Rate = "#1"
 }
-T.RT_528 = {
-  [1] = T.RT_527
+T.RT_526 = {
+  [1] = T.RT_525
 }
-T.RT_529 = {3501}
-T.RT_530 = {3502}
-T.RT_531 = {3503}
-T.RT_532 = {3504}
-T.RT_533 = {
+T.RT_527 = {3501}
+T.RT_528 = {3502}
+T.RT_529 = {3503}
+T.RT_530 = {3504}
+T.RT_531 = {
   AttrName = "AttackSpeed_Reload",
   Rate = "#2"
 }
-T.RT_534 = {3604}
-T.RT_535 = {3701}
-T.RT_536 = {3702}
-T.RT_537 = {3703}
-T.RT_538 = {
+T.RT_532 = {3604}
+T.RT_533 = {3701}
+T.RT_534 = {3702}
+T.RT_535 = {3703}
+T.RT_536 = {
   [102] = 100
 }
-T.RT_539 = {54001}
-T.RT_540 = {4204}
-T.RT_541 = {4205}
-T.RT_542 = {
+T.RT_537 = {4204}
+T.RT_538 = {4205}
+T.RT_539 = {
   AttrName = "DamagedRate",
   IndividualRateZone = 1,
   Value = -0.3
 }
-T.RT_543 = {
-  [1] = T.RT_542
+T.RT_540 = {
+  [1] = T.RT_539
 }
-T.RT_544 = {
+T.RT_541 = {
   [1] = "$#PassiveEffect[6111].Vars.CompareBase*100$%",
   [2] = "$#Buff[6111].AddAttrs[1].Value*100$%"
 }
-T.RT_545 = {6111}
-T.RT_546 = {6100}
-T.RT_547 = {AttrName = "MaxSp", Rate = 1}
-T.RT_548 = {
+T.RT_542 = {6111}
+T.RT_543 = {6100}
+T.RT_544 = {AttrName = "MaxSp", Rate = 1}
+T.RT_545 = {
   AttrName = "SkillEfficiency",
   Rate = 1
 }
-T.RT_549 = {
-  [1] = T.RT_547,
-  [2] = T.RT_548,
-  [3] = T.RT_542
+T.RT_546 = {
+  [1] = T.RT_544,
+  [2] = T.RT_545,
+  [3] = T.RT_539
 }
-T.RT_550 = {1300, 6100}
-T.RT_551 = {
+T.RT_547 = {1300, 6100}
+T.RT_548 = {
   [1] = "$#PassiveEffect[6113].Vars.CompareBase*100$%",
   [2] = "$#Buff[6114].AddAttrs[1].Value*100$%"
 }
-T.RT_552 = {
+T.RT_549 = {
   [1] = "Tag_CRI",
   [2] = "Tag_SpecialEffect"
 }
-T.RT_553 = {6113}
-T.RT_554 = {
+T.RT_550 = {6113}
+T.RT_551 = {
   [1] = "Tag_CRI",
   [2] = "Tag_SpecialEffect",
   [3] = "Tag_SP",
   [4] = "Tag_SkillEfficiency"
 }
-T.RT_555 = {
+T.RT_552 = {
   [1] = "$#PassiveEffect[6121].Vars.CompareBase*100$%",
   [2] = "$#Buff[6121].AddAttrs[1].Rate*100$%"
 }
-T.RT_556 = {6121}
-T.RT_557 = {
+T.RT_553 = {6121}
+T.RT_554 = {
   [1] = "Tag_ATK",
   [2] = "Tag_SpecialEffect",
   [3] = "Tag_SP",
   [4] = "Tag_SkillEfficiency"
 }
-T.RT_558 = {
+T.RT_555 = {
   [1] = "$#PassiveEffect[6123].Vars.CompareBase*100$%",
   [2] = "$#Buff[6124].AddAttrs[1].Rate*100$%"
 }
-T.RT_559 = {6123}
-T.RT_560 = {
+T.RT_556 = {6123}
+T.RT_557 = {
   [1] = "Tag_SkillIntensity",
   [2] = "Tag_SpecialEffect",
   [3] = "Tag_SP",
   [4] = "Tag_SkillEfficiency"
 }
-T.RT_561 = {
+T.RT_558 = {
   [1] = "$#PassiveEffect[6131].Vars.CompareBase*100$%",
   [2] = "$#Buff[6131].AddAttrs[1].Rate*100$%"
 }
-T.RT_562 = {6131}
-T.RT_563 = {
+T.RT_559 = {6131}
+T.RT_560 = {
   [1] = "$#PassiveEffect[6133].Vars.CompareBase*100$%",
   [2] = "$#Buff[6134].AddAttrs[1].Rate*100$%"
 }
-T.RT_564 = {6133}
-T.RT_565 = {
+T.RT_561 = {6133}
+T.RT_562 = {
   [1] = "$#PassiveEffect[6141].Vars.CompareBase*100$%",
   [2] = "$#Buff[6141].AddAttrs[1].Rate*100$%"
 }
-T.RT_566 = {6141}
-T.RT_567 = {
+T.RT_563 = {6141}
+T.RT_564 = {
   AttrName = "DamagedRate",
   IndividualRateZone = 1,
   Value = -0.5
 }
-T.RT_568 = {
+T.RT_565 = {
   [1] = T.RT_34,
-  [2] = T.RT_198,
-  [3] = T.RT_567
+  [2] = T.RT_196,
+  [3] = T.RT_564
 }
-T.RT_569 = {
+T.RT_566 = {
   [1] = "$#PassiveEffect[6143].Vars.CompareBase$",
   [2] = "$#Buff[6144].AddAttrs[1].Value*100$%"
 }
-T.RT_570 = {
+T.RT_567 = {
   [1] = "Tag_StrongValue",
   [2] = "Tag_SpecialEffect"
 }
-T.RT_571 = {6143}
-T.RT_572 = {
+T.RT_568 = {6143}
+T.RT_569 = {
   [1] = "Tag_StrongValue",
   [2] = "Tag_SpecialEffect",
   [3] = "Tag_SP",
   [4] = "Tag_SkillEfficiency"
 }
-T.RT_573 = {
+T.RT_570 = {
   [1] = "$#PassiveEffect[6151].Vars.CompareBase*100$%",
   [2] = "$#Buff[6151].AddAttrs[1].Rate*100$%"
 }
-T.RT_574 = {6151}
-T.RT_575 = {
+T.RT_571 = {6151}
+T.RT_572 = {
   [1] = "$#PassiveEffect[6153].Vars.CompareBase$",
   [2] = "$#Buff[6154].AddAttrs[1].Value*100$%"
 }
-T.RT_576 = {6153}
-T.RT_577 = {
+T.RT_573 = {6153}
+T.RT_574 = {
   [1] = "$#PassiveEffect[6161].Vars.CompareBase*100$%",
   [2] = "$#Buff[6161].AddAttrs[1].Value*100$%"
 }
-T.RT_578 = {6161}
-T.RT_579 = {
+T.RT_575 = {6161}
+T.RT_576 = {
   [1] = "$#PassiveEffect[6163].Vars.CompareBase*100$%",
   [2] = "$#Buff[6164].AddAttrs[1].Value*100$%"
 }
-T.RT_580 = {6163}
+T.RT_577 = {6163}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -2675,14 +2667,14 @@ return ReadOnly("Mod", {
   },
   [21005] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_138,
+    AddAttrs = T.RT_136,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
     BreakDown = T.RT_3,
     CollectRewardExp = 40,
     Cost = 8,
     CostChange = 1,
-    FilterTag = T.RT_139,
+    FilterTag = T.RT_137,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Phoenix01.T_Mod_Phoenix01",
     Id = 21005,
@@ -2693,20 +2685,20 @@ return ReadOnly("Mod", {
     Polarity = -1,
     Rarity = 2,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_140,
+    RepeatGroup = T.RT_138,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Phoenix01"
   },
   [21006] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_142,
+    AddAttrs = T.RT_140,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
     BreakDown = T.RT_3,
     CollectRewardExp = 40,
     Cost = 6,
     CostChange = 1,
-    FilterTag = T.RT_143,
+    FilterTag = T.RT_141,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Phoenix01.T_Mod_Phoenix01",
     Id = 21006,
@@ -2717,7 +2709,7 @@ return ReadOnly("Mod", {
     Polarity = -1,
     Rarity = 2,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_144,
+    RepeatGroup = T.RT_142,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Phoenix01"
   },
@@ -2867,13 +2859,13 @@ return ReadOnly("Mod", {
   },
   [22007] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_146,
+    AddAttrs = T.RT_144,
     ApplicationType = 2,
     BreakDown = T.RT_3,
     CollectRewardExp = 40,
     Cost = 8,
     CostChange = 1,
-    FilterTag = T.RT_147,
+    FilterTag = T.RT_145,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Cerberus01.T_Mod_Cerberus01",
     Id = 22007,
@@ -2884,19 +2876,19 @@ return ReadOnly("Mod", {
     Polarity = -1,
     Rarity = 2,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_148,
+    RepeatGroup = T.RT_146,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Cerberus01"
   },
   [22008] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_150,
+    AddAttrs = T.RT_148,
     ApplicationType = 2,
     BreakDown = T.RT_3,
     CollectRewardExp = 40,
     Cost = 7,
     CostChange = 1,
-    FilterTag = T.RT_151,
+    FilterTag = T.RT_149,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Cerberus01.T_Mod_Cerberus01",
     Id = 22008,
@@ -2907,19 +2899,19 @@ return ReadOnly("Mod", {
     Polarity = -1,
     Rarity = 2,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_152,
+    RepeatGroup = T.RT_150,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Cerberus01"
   },
   [22111] = {
     AccessKey = T.RT_1,
-    AddAttrs = T.RT_153,
+    AddAttrs = T.RT_151,
     ApplicationType = 21,
     BreakDown = T.RT_3,
     CollectRewardExp = 40,
     Cost = 6,
     CostChange = 1,
-    FilterTag = T.RT_154,
+    FilterTag = T.RT_152,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Cerberus01.T_Mod_Cerberus01",
     Id = 22111,
@@ -2930,19 +2922,19 @@ return ReadOnly("Mod", {
     Polarity = -1,
     Rarity = 2,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_155,
+    RepeatGroup = T.RT_153,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Cerberus01"
   },
   [22112] = {
     AccessKey = T.RT_1,
-    AddAttrs = T.RT_156,
+    AddAttrs = T.RT_154,
     ApplicationType = 22,
     BreakDown = T.RT_3,
     CollectRewardExp = 40,
     Cost = 6,
     CostChange = 1,
-    FilterTag = T.RT_154,
+    FilterTag = T.RT_152,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Cerberus01.T_Mod_Cerberus01",
     Id = 22112,
@@ -2953,19 +2945,19 @@ return ReadOnly("Mod", {
     Polarity = -1,
     Rarity = 2,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_155,
+    RepeatGroup = T.RT_153,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Cerberus01"
   },
   [22113] = {
     AccessKey = T.RT_1,
-    AddAttrs = T.RT_157,
+    AddAttrs = T.RT_155,
     ApplicationType = 23,
     BreakDown = T.RT_3,
     CollectRewardExp = 40,
     Cost = 6,
     CostChange = 1,
-    FilterTag = T.RT_154,
+    FilterTag = T.RT_152,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Cerberus01.T_Mod_Cerberus01",
     Id = 22113,
@@ -2976,19 +2968,19 @@ return ReadOnly("Mod", {
     Polarity = -1,
     Rarity = 2,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_155,
+    RepeatGroup = T.RT_153,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Cerberus01"
   },
   [23007] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_146,
+    AddAttrs = T.RT_144,
     ApplicationType = 3,
     BreakDown = T.RT_3,
     CollectRewardExp = 40,
     Cost = 8,
     CostChange = 1,
-    FilterTag = T.RT_147,
+    FilterTag = T.RT_145,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Lilith01.T_Mod_Lilith01",
     Id = 23007,
@@ -2999,19 +2991,19 @@ return ReadOnly("Mod", {
     Polarity = -1,
     Rarity = 2,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_158,
+    RepeatGroup = T.RT_156,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Lilith01"
   },
   [23008] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_150,
+    AddAttrs = T.RT_148,
     ApplicationType = 3,
     BreakDown = T.RT_3,
     CollectRewardExp = 40,
     Cost = 7,
     CostChange = 1,
-    FilterTag = T.RT_151,
+    FilterTag = T.RT_149,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Lilith01.T_Mod_Lilith01",
     Id = 23008,
@@ -3022,19 +3014,19 @@ return ReadOnly("Mod", {
     Polarity = -1,
     Rarity = 2,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_159,
+    RepeatGroup = T.RT_157,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Lilith01"
   },
   [23111] = {
     AccessKey = T.RT_1,
-    AddAttrs = T.RT_153,
+    AddAttrs = T.RT_151,
     ApplicationType = 31,
     BreakDown = T.RT_3,
     CollectRewardExp = 40,
     Cost = 6,
     CostChange = 1,
-    FilterTag = T.RT_154,
+    FilterTag = T.RT_152,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Lilith01.T_Mod_Lilith01",
     Id = 23111,
@@ -3045,19 +3037,19 @@ return ReadOnly("Mod", {
     Polarity = -1,
     Rarity = 2,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_160,
+    RepeatGroup = T.RT_158,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Lilith01"
   },
   [23112] = {
     AccessKey = T.RT_1,
-    AddAttrs = T.RT_156,
+    AddAttrs = T.RT_154,
     ApplicationType = 32,
     BreakDown = T.RT_3,
     CollectRewardExp = 40,
     Cost = 6,
     CostChange = 1,
-    FilterTag = T.RT_154,
+    FilterTag = T.RT_152,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Lilith01.T_Mod_Lilith01",
     Id = 23112,
@@ -3068,19 +3060,19 @@ return ReadOnly("Mod", {
     Polarity = -1,
     Rarity = 2,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_160,
+    RepeatGroup = T.RT_158,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Lilith01"
   },
   [23113] = {
     AccessKey = T.RT_1,
-    AddAttrs = T.RT_157,
+    AddAttrs = T.RT_155,
     ApplicationType = 33,
     BreakDown = T.RT_3,
     CollectRewardExp = 40,
     Cost = 6,
     CostChange = 1,
-    FilterTag = T.RT_154,
+    FilterTag = T.RT_152,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Lilith01.T_Mod_Lilith01",
     Id = 23113,
@@ -3091,7 +3083,7 @@ return ReadOnly("Mod", {
     Polarity = -1,
     Rarity = 2,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_160,
+    RepeatGroup = T.RT_158,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Lilith01"
   },
@@ -3195,7 +3187,7 @@ return ReadOnly("Mod", {
     CollectRewardExp = 40,
     Cost = 12,
     CostChange = 1,
-    FilterTag = T.RT_161,
+    FilterTag = T.RT_159,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Cerberus02.T_Mod_Cerberus02",
     Id = 24005,
@@ -3206,7 +3198,7 @@ return ReadOnly("Mod", {
     Polarity = -1,
     Rarity = 2,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_162,
+    RepeatGroup = T.RT_160,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Cerberus02"
   },
@@ -3252,7 +3244,7 @@ return ReadOnly("Mod", {
     Polarity = -1,
     Rarity = 2,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_163,
+    RepeatGroup = T.RT_161,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Cerberus02"
   },
@@ -3275,7 +3267,7 @@ return ReadOnly("Mod", {
     Polarity = -1,
     Rarity = 2,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_163,
+    RepeatGroup = T.RT_161,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Cerberus02"
   },
@@ -3298,7 +3290,7 @@ return ReadOnly("Mod", {
     Polarity = -1,
     Rarity = 2,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_163,
+    RepeatGroup = T.RT_161,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Cerberus02"
   },
@@ -3402,7 +3394,7 @@ return ReadOnly("Mod", {
     CollectRewardExp = 40,
     Cost = 12,
     CostChange = 1,
-    FilterTag = T.RT_164,
+    FilterTag = T.RT_162,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Lilith02.T_Mod_Lilith02",
     Id = 25005,
@@ -3413,7 +3405,7 @@ return ReadOnly("Mod", {
     Polarity = -1,
     Rarity = 2,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_165,
+    RepeatGroup = T.RT_163,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Lilith02"
   },
@@ -3459,7 +3451,7 @@ return ReadOnly("Mod", {
     Polarity = -1,
     Rarity = 2,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_166,
+    RepeatGroup = T.RT_164,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Lilith02"
   },
@@ -3482,7 +3474,7 @@ return ReadOnly("Mod", {
     Polarity = -1,
     Rarity = 2,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_166,
+    RepeatGroup = T.RT_164,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Lilith02"
   },
@@ -3505,16 +3497,16 @@ return ReadOnly("Mod", {
     Polarity = -1,
     Rarity = 2,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_166,
+    RepeatGroup = T.RT_164,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Lilith02"
   },
   [31001] = {
-    AccessKey = T.RT_185,
+    AccessKey = T.RT_183,
     AddAttrs = T.RT_56,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 5,
     CostChange = 1,
@@ -3523,7 +3515,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Phoenix01.T_Mod_Phoenix01",
     Id = 31001,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1001",
     OpenVersion = 10,
@@ -3535,11 +3527,11 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Phoenix01"
   },
   [31002] = {
-    AccessKey = T.RT_185,
+    AccessKey = T.RT_183,
     AddAttrs = T.RT_59,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 5,
     CostChange = 1,
@@ -3548,7 +3540,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Phoenix01.T_Mod_Phoenix01",
     Id = 31002,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1002",
     OpenVersion = 10,
@@ -3560,11 +3552,11 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Phoenix01"
   },
   [31003] = {
-    AccessKey = T.RT_185,
+    AccessKey = T.RT_183,
     AddAttrs = T.RT_63,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 5,
     CostChange = 1,
@@ -3573,7 +3565,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Phoenix01.T_Mod_Phoenix01",
     Id = 31003,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1003",
     OpenVersion = 10,
@@ -3585,11 +3577,11 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Phoenix01"
   },
   [31004] = {
-    AccessKey = T.RT_185,
+    AccessKey = T.RT_183,
     AddAttrs = T.RT_67,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 5,
     CostChange = 1,
@@ -3598,7 +3590,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Phoenix01.T_Mod_Phoenix01",
     Id = 31004,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1004",
     OpenVersion = 10,
@@ -3610,61 +3602,61 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Phoenix01"
   },
   [31005] = {
-    AccessKey = T.RT_188,
-    AddAttrs = T.RT_138,
+    AccessKey = T.RT_186,
+    AddAttrs = T.RT_136,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 8,
     CostChange = 1,
-    FilterTag = T.RT_139,
+    FilterTag = T.RT_137,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Phoenix01.T_Mod_Phoenix01",
     Id = 31005,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1005",
     OpenVersion = 10,
     Polarity = -1,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_140,
+    RepeatGroup = T.RT_138,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Phoenix01"
   },
   [31006] = {
-    AccessKey = T.RT_188,
-    AddAttrs = T.RT_142,
+    AccessKey = T.RT_186,
+    AddAttrs = T.RT_140,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 5,
     CostChange = 1,
-    FilterTag = T.RT_143,
+    FilterTag = T.RT_141,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Phoenix01.T_Mod_Phoenix01",
     Id = 31006,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1006",
     OpenVersion = 10,
     Polarity = -1,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_144,
+    RepeatGroup = T.RT_142,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Phoenix01"
   },
   [31007] = {
-    AccessKey = T.RT_185,
+    AccessKey = T.RT_183,
     AddAttrs = T.RT_71,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 5,
     CostChange = 1,
@@ -3673,7 +3665,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Phoenix01.T_Mod_Phoenix01",
     Id = 31007,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1007",
     OpenVersion = 10,
@@ -3685,7 +3677,7 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Phoenix01"
   },
   [31008] = {
-    AccessKey = T.RT_188,
+    AccessKey = T.RT_186,
     AddAttrs = {
       [1] = T.RT_55,
       [2] = {
@@ -3696,16 +3688,16 @@ return ReadOnly("Mod", {
     },
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 5,
     CostChange = 1,
-    FilterTag = T.RT_189,
+    FilterTag = T.RT_187,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Phoenix01.T_Mod_Phoenix01",
     Id = 31008,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1008",
     OpenVersion = 10,
@@ -3717,14 +3709,14 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Phoenix01"
   },
   [31009] = {
-    AccessKey = T.RT_188,
+    AccessKey = T.RT_186,
     AddAttrs = {
       [1] = T.RT_55,
-      [2] = T.RT_141
+      [2] = T.RT_139
     },
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 5,
     CostChange = 1,
@@ -3736,7 +3728,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Phoenix01.T_Mod_Phoenix01",
     Id = 31009,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1009",
     OpenVersion = 10,
@@ -3748,23 +3740,23 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Phoenix01"
   },
   [31010] = {
-    AccessKey = T.RT_188,
+    AccessKey = T.RT_186,
     AddAttrs = {
       [1] = T.RT_55,
-      [2] = T.RT_190
+      [2] = T.RT_188
     },
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 5,
     CostChange = 1,
-    FilterTag = T.RT_191,
+    FilterTag = T.RT_189,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Phoenix01.T_Mod_Phoenix01",
     Id = 31010,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1010",
     OpenVersion = 10,
@@ -3776,14 +3768,14 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Phoenix01"
   },
   [31011] = {
-    AccessKey = T.RT_188,
+    AccessKey = T.RT_186,
     AddAttrs = {
       [1] = T.RT_58,
-      [2] = T.RT_137
+      [2] = T.RT_135
     },
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 8,
     CostChange = 1,
@@ -3795,7 +3787,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Phoenix01.T_Mod_Phoenix01",
     Id = 31011,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1011",
     OpenVersion = 10,
@@ -3807,14 +3799,14 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Phoenix01"
   },
   [31012] = {
-    AccessKey = T.RT_188,
+    AccessKey = T.RT_186,
     AddAttrs = {
       [1] = T.RT_58,
-      [2] = T.RT_190
+      [2] = T.RT_188
     },
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 5,
     CostChange = 1,
@@ -3826,7 +3818,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Phoenix01.T_Mod_Phoenix01",
     Id = 31012,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1012",
     OpenVersion = 10,
@@ -3838,14 +3830,14 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Phoenix01"
   },
   [31013] = {
-    AccessKey = T.RT_188,
+    AccessKey = T.RT_186,
     AddAttrs = {
       [1] = T.RT_62,
-      [2] = T.RT_137
+      [2] = T.RT_135
     },
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 8,
     CostChange = 1,
@@ -3857,7 +3849,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Phoenix01.T_Mod_Phoenix01",
     Id = 31013,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1013",
     OpenVersion = 10,
@@ -3869,14 +3861,14 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Phoenix01"
   },
   [31014] = {
-    AccessKey = T.RT_188,
+    AccessKey = T.RT_186,
     AddAttrs = {
       [1] = T.RT_62,
-      [2] = T.RT_190
+      [2] = T.RT_188
     },
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 5,
     CostChange = 1,
@@ -3888,7 +3880,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Phoenix01.T_Mod_Phoenix01",
     Id = 31014,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1014",
     OpenVersion = 10,
@@ -3900,14 +3892,14 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Phoenix01"
   },
   [31015] = {
-    AccessKey = T.RT_188,
+    AccessKey = T.RT_186,
     AddAttrs = {
       [1] = T.RT_66,
-      [2] = T.RT_190
+      [2] = T.RT_188
     },
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 8,
     CostChange = 1,
@@ -3919,7 +3911,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Phoenix01.T_Mod_Phoenix01",
     Id = 31015,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1015",
     OpenVersion = 10,
@@ -3935,16 +3927,16 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_37,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 4,
     CostChange = 1,
-    FilterTag = T.RT_192,
+    FilterTag = T.RT_190,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Pan01.T_Mod_Pan01",
     Id = 31201,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1201",
     OpenVersion = 10,
@@ -3960,16 +3952,16 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_33,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 5,
     CostChange = 1,
-    FilterTag = T.RT_193,
+    FilterTag = T.RT_191,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Pan01.T_Mod_Pan01",
     Id = 31202,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1202",
     OpenVersion = 10,
@@ -3985,16 +3977,16 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_29,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 3,
     CostChange = 1,
-    FilterTag = T.RT_194,
+    FilterTag = T.RT_192,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Pan01.T_Mod_Pan01",
     Id = 31203,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1203",
     OpenVersion = 10,
@@ -4010,16 +4002,16 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_31,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 6,
     CostChange = 1,
-    FilterTag = T.RT_195,
+    FilterTag = T.RT_193,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Pan01.T_Mod_Pan01",
     Id = 31204,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1204",
     OpenVersion = 10,
@@ -4034,20 +4026,20 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     AddAttrs = {
       [1] = T.RT_32,
-      [2] = T.RT_196
+      [2] = T.RT_194
     },
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 10,
     CostChange = 1,
-    FilterTag = T.RT_193,
+    FilterTag = T.RT_191,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Pan01.T_Mod_Pan01",
     Id = 31215,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1215",
     OpenVersion = 10,
@@ -4062,20 +4054,20 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     AddAttrs = {
       [1] = T.RT_32,
-      [2] = T.RT_197
+      [2] = T.RT_195
     },
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 10,
     CostChange = 1,
-    FilterTag = T.RT_193,
+    FilterTag = T.RT_191,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Pan01.T_Mod_Pan01",
     Id = 31216,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1216",
     OpenVersion = 10,
@@ -4090,11 +4082,11 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     AddAttrs = {
       [1] = T.RT_34,
-      [2] = T.RT_196
+      [2] = T.RT_194
     },
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 10,
     CostChange = 1,
@@ -4103,7 +4095,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Pan01.T_Mod_Pan01",
     Id = 31217,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1217",
     OpenVersion = 10,
@@ -4118,11 +4110,11 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     AddAttrs = {
       [1] = T.RT_34,
-      [2] = T.RT_197
+      [2] = T.RT_195
     },
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 10,
     CostChange = 1,
@@ -4131,7 +4123,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Pan01.T_Mod_Pan01",
     Id = 31218,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1218",
     OpenVersion = 10,
@@ -4144,203 +4136,203 @@ return ReadOnly("Mod", {
   },
   [31301] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_199,
+    AddAttrs = T.RT_197,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 11,
     CostChange = 1,
-    FilterTag = T.RT_200,
+    FilterTag = T.RT_198,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Siren01.T_Mod_Siren01",
     Id = 31301,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1301",
     OpenVersion = 10,
     Polarity = -1,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_201,
+    RepeatGroup = T.RT_199,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Siren01"
   },
   [31321] = {
-    AccessKey = T.RT_185,
+    AccessKey = T.RT_183,
     AddAttrs = {
-      [1] = T.RT_202,
-      [2] = T.RT_203
+      [1] = T.RT_200,
+      [2] = T.RT_201
     },
     ApplicationType = 11,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 10,
     CostChange = 1,
-    FilterTag = T.RT_204,
+    FilterTag = T.RT_202,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Griffin01_Black.T_Mod_Griffin01_Black",
     Id = 31321,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_31321",
     OpenVersion = 10,
     Polarity = -1,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_205,
+    RepeatGroup = T.RT_203,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Griffin01"
   },
   [31322] = {
-    AccessKey = T.RT_185,
+    AccessKey = T.RT_183,
     AddAttrs = {
-      [1] = T.RT_206,
-      [2] = T.RT_207
+      [1] = T.RT_204,
+      [2] = T.RT_205
     },
     ApplicationType = 12,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 10,
     CostChange = 1,
-    FilterTag = T.RT_204,
+    FilterTag = T.RT_202,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Griffin01_Blue.T_Mod_Griffin01_Blue",
     Id = 31322,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_31322",
     OpenVersion = 10,
     Polarity = -1,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_205,
+    RepeatGroup = T.RT_203,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Griffin01"
   },
   [31323] = {
-    AccessKey = T.RT_185,
+    AccessKey = T.RT_183,
     AddAttrs = {
-      [1] = T.RT_208,
-      [2] = T.RT_209
+      [1] = T.RT_206,
+      [2] = T.RT_207
     },
     ApplicationType = 13,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 10,
     CostChange = 1,
-    FilterTag = T.RT_204,
+    FilterTag = T.RT_202,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Griffin01_Red.T_Mod_Griffin01_Red",
     Id = 31323,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_31323",
     OpenVersion = 10,
     Polarity = -1,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_205,
+    RepeatGroup = T.RT_203,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Griffin01"
   },
   [31324] = {
-    AccessKey = T.RT_185,
+    AccessKey = T.RT_183,
     AddAttrs = {
-      [1] = T.RT_210,
-      [2] = T.RT_211
+      [1] = T.RT_208,
+      [2] = T.RT_209
     },
     ApplicationType = 14,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 10,
     CostChange = 1,
-    FilterTag = T.RT_204,
+    FilterTag = T.RT_202,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Griffin01_Purple.T_Mod_Griffin01_Purple",
     Id = 31324,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_31324",
     OpenVersion = 10,
     Polarity = -1,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_205,
+    RepeatGroup = T.RT_203,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Griffin01"
   },
   [31325] = {
-    AccessKey = T.RT_185,
+    AccessKey = T.RT_183,
     AddAttrs = {
-      [1] = T.RT_212,
-      [2] = T.RT_213
+      [1] = T.RT_210,
+      [2] = T.RT_211
     },
     ApplicationType = 15,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 10,
     CostChange = 1,
-    FilterTag = T.RT_204,
+    FilterTag = T.RT_202,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Griffin01_Green.T_Mod_Griffin01_Green",
     Id = 31325,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_31325",
     OpenVersion = 10,
     Polarity = -1,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_205,
+    RepeatGroup = T.RT_203,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Griffin01"
   },
   [31326] = {
-    AccessKey = T.RT_185,
+    AccessKey = T.RT_183,
     AddAttrs = {
-      [1] = T.RT_214,
-      [2] = T.RT_215
+      [1] = T.RT_212,
+      [2] = T.RT_213
     },
     ApplicationType = 16,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 10,
     CostChange = 1,
-    FilterTag = T.RT_204,
+    FilterTag = T.RT_202,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Griffin01_Orange.T_Mod_Griffin01_Orange",
     Id = 31326,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_31326",
     OpenVersion = 10,
     Polarity = -1,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_205,
+    RepeatGroup = T.RT_203,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Griffin01"
   },
   [31401] = {
-    AccessKey = T.RT_185,
+    AccessKey = T.RT_183,
     AddAttrs = T.RT_77,
     ApplicationType = 11,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 10,
     CostChange = 1,
@@ -4349,7 +4341,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Black.T_Mod_Typhon01_Black",
     Id = 31401,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1400",
     OpenVersion = 10,
@@ -4361,11 +4353,11 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Typhon01"
   },
   [31402] = {
-    AccessKey = T.RT_185,
+    AccessKey = T.RT_183,
     AddAttrs = T.RT_83,
     ApplicationType = 12,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 10,
     CostChange = 1,
@@ -4374,7 +4366,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Blue.T_Mod_Typhon01_Blue",
     Id = 31402,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1400",
     OpenVersion = 10,
@@ -4386,11 +4378,11 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Typhon01"
   },
   [31403] = {
-    AccessKey = T.RT_185,
+    AccessKey = T.RT_183,
     AddAttrs = T.RT_87,
     ApplicationType = 13,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 10,
     CostChange = 1,
@@ -4399,7 +4391,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Red.T_Mod_Typhon01_Red",
     Id = 31403,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1400",
     OpenVersion = 10,
@@ -4411,11 +4403,11 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Typhon01"
   },
   [31404] = {
-    AccessKey = T.RT_185,
+    AccessKey = T.RT_183,
     AddAttrs = T.RT_91,
     ApplicationType = 14,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 10,
     CostChange = 1,
@@ -4424,7 +4416,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Purple.T_Mod_Typhon01_Purple",
     Id = 31404,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1400",
     OpenVersion = 10,
@@ -4436,11 +4428,11 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Typhon01"
   },
   [31405] = {
-    AccessKey = T.RT_185,
+    AccessKey = T.RT_183,
     AddAttrs = T.RT_95,
     ApplicationType = 15,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 10,
     CostChange = 1,
@@ -4449,7 +4441,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Green.T_Mod_Typhon01_Green",
     Id = 31405,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1400",
     OpenVersion = 10,
@@ -4461,11 +4453,11 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Typhon01"
   },
   [31406] = {
-    AccessKey = T.RT_185,
+    AccessKey = T.RT_183,
     AddAttrs = T.RT_99,
     ApplicationType = 16,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 10,
     CostChange = 1,
@@ -4474,7 +4466,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Orange.T_Mod_Typhon01_Orange",
     Id = 31406,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1400",
     OpenVersion = 10,
@@ -4486,17 +4478,17 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Typhon01"
   },
   [31502] = {
-    AccessKey = T.RT_216,
+    AccessKey = T.RT_214,
     AddCharModCost = 2.5,
     ApplicationType = 1,
-    ApplySlot = T.RT_217,
+    ApplySlot = T.RT_215,
     CollectRewardExp = 50,
     Cost = 2,
     CostChange = 1,
     DescValues = {
       [1] = "$#SkillEffects[1502].TaskEffects[1].Rate*100$%"
     },
-    FilterTag = T.RT_218,
+    FilterTag = T.RT_216,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_FeatheredSnake01.T_Mod_FeatheredSnake01",
     Id = 31502,
@@ -4509,7 +4501,7 @@ return ReadOnly("Mod", {
     Polarity = 1,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_219,
+    RepeatGroup = T.RT_217,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_FeatheredSnake01"
   },
@@ -4517,14 +4509,14 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     AddCharModCost = 2.5,
     ApplicationType = 1,
-    ApplySlot = T.RT_217,
+    ApplySlot = T.RT_215,
     CollectRewardExp = 50,
     Cost = 2,
     CostChange = 1,
     DescValues = {
       [1] = "$math.ceil(#PassiveEffect[1512].Vars.MaxCount)$"
     },
-    FilterTag = T.RT_218,
+    FilterTag = T.RT_216,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_FeatheredSnake01.T_Mod_FeatheredSnake01",
     Id = 31512,
@@ -4537,22 +4529,22 @@ return ReadOnly("Mod", {
     Polarity = 3,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_219,
+    RepeatGroup = T.RT_217,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_FeatheredSnake01"
   },
   [31513] = {
-    AccessKey = T.RT_216,
+    AccessKey = T.RT_214,
     AddCharModCost = 2.5,
     ApplicationType = 1,
-    ApplySlot = T.RT_217,
+    ApplySlot = T.RT_215,
     CollectRewardExp = 50,
     Cost = 2,
     CostChange = 1,
     DescValues = {
       [1] = "$#SkillEffects[1513].TaskEffects[1].Rate*100$%"
     },
-    FilterTag = T.RT_218,
+    FilterTag = T.RT_216,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_FeatheredSnake01.T_Mod_FeatheredSnake01",
     Id = 31513,
@@ -4565,12 +4557,12 @@ return ReadOnly("Mod", {
     Polarity = 1,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_219,
+    RepeatGroup = T.RT_217,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_FeatheredSnake01"
   },
   [31521] = {
-    AccessKey = T.RT_216,
+    AccessKey = T.RT_214,
     AddAttrs = {
       [1] = {
         AttrName = "HitMontageRate",
@@ -4579,11 +4571,11 @@ return ReadOnly("Mod", {
     },
     AddCharModCost = 2.5,
     ApplicationType = 1,
-    ApplySlot = T.RT_217,
+    ApplySlot = T.RT_215,
     CollectRewardExp = 50,
     Cost = 2,
     CostChange = 1,
-    FilterTag = T.RT_218,
+    FilterTag = T.RT_216,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_FeatheredSnake01.T_Mod_FeatheredSnake01",
     Id = 31521,
@@ -4594,22 +4586,22 @@ return ReadOnly("Mod", {
     Polarity = 4,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_219,
+    RepeatGroup = T.RT_217,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_FeatheredSnake01"
   },
   [31522] = {
-    AccessKey = T.RT_216,
+    AccessKey = T.RT_214,
     AddCharModCost = 2.5,
     ApplicationType = 1,
-    ApplySlot = T.RT_217,
+    ApplySlot = T.RT_215,
     CollectRewardExp = 50,
     Cost = 2,
     CostChange = 1,
     DescValues = {
       [1] = "$-#PassiveEffect[1522].Vars.BuffRate*100$%"
     },
-    FilterTag = T.RT_218,
+    FilterTag = T.RT_216,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_FeatheredSnake01.T_Mod_FeatheredSnake01",
     Id = 31522,
@@ -4622,22 +4614,22 @@ return ReadOnly("Mod", {
     Polarity = 2,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_219,
+    RepeatGroup = T.RT_217,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_FeatheredSnake01"
   },
   [31523] = {
-    AccessKey = T.RT_216,
+    AccessKey = T.RT_214,
     AddCharModCost = 2.5,
     ApplicationType = 1,
-    ApplySlot = T.RT_217,
+    ApplySlot = T.RT_215,
     CollectRewardExp = 50,
     Cost = 2,
     CostChange = 1,
     DescValues = {
       [1] = "$#PassiveEffect[1523].Vars.CoolDown$"
     },
-    FilterTag = T.RT_218,
+    FilterTag = T.RT_216,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_FeatheredSnake01.T_Mod_FeatheredSnake01",
     Id = 31523,
@@ -4650,15 +4642,15 @@ return ReadOnly("Mod", {
     Polarity = 2,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_219,
+    RepeatGroup = T.RT_217,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_FeatheredSnake01"
   },
   [31524] = {
-    AccessKey = T.RT_216,
+    AccessKey = T.RT_214,
     AddCharModCost = 2.5,
     ApplicationType = 1,
-    ApplySlot = T.RT_217,
+    ApplySlot = T.RT_215,
     CollectRewardExp = 50,
     Cost = 2,
     CostChange = 1,
@@ -4666,7 +4658,7 @@ return ReadOnly("Mod", {
       [1] = "$-#PassiveEffect[1524].Vars.TriggerProb*100$%",
       [2] = "$-#PassiveEffect[1524].Vars.BuffRate*100$%"
     },
-    FilterTag = T.RT_218,
+    FilterTag = T.RT_216,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_FeatheredSnake01.T_Mod_FeatheredSnake01",
     Id = 31524,
@@ -4679,15 +4671,15 @@ return ReadOnly("Mod", {
     Polarity = 2,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_219,
+    RepeatGroup = T.RT_217,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_FeatheredSnake01"
   },
   [31525] = {
-    AccessKey = T.RT_216,
+    AccessKey = T.RT_214,
     AddCharModCost = 2.5,
     ApplicationType = 1,
-    ApplySlot = T.RT_217,
+    ApplySlot = T.RT_215,
     CollectRewardExp = 50,
     Cost = 2,
     CostChange = 1,
@@ -4695,7 +4687,7 @@ return ReadOnly("Mod", {
       [1] = "$#SkillEffects[1525].TaskEffects[1].Rate*100$%",
       [2] = "$#PassiveEffect[1525].Vars.CoolDown$"
     },
-    FilterTag = T.RT_218,
+    FilterTag = T.RT_216,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_FeatheredSnake01.T_Mod_FeatheredSnake01",
     Id = 31525,
@@ -4708,22 +4700,22 @@ return ReadOnly("Mod", {
     Polarity = 2,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_219,
+    RepeatGroup = T.RT_217,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_FeatheredSnake01"
   },
   [31526] = {
-    AccessKey = T.RT_216,
+    AccessKey = T.RT_214,
     AddCharModCost = 2.5,
     ApplicationType = 1,
-    ApplySlot = T.RT_217,
+    ApplySlot = T.RT_215,
     CollectRewardExp = 50,
     Cost = 2,
     CostChange = 1,
     DescValues = {
       [1] = "$-#Buff[1526].AddAttrs[1].Value*100$%"
     },
-    FilterTag = T.RT_218,
+    FilterTag = T.RT_216,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_FeatheredSnake01.T_Mod_FeatheredSnake01",
     Id = 31526,
@@ -4736,12 +4728,12 @@ return ReadOnly("Mod", {
     Polarity = 1,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_219,
+    RepeatGroup = T.RT_217,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_FeatheredSnake01"
   },
   [31531] = {
-    AccessKey = T.RT_216,
+    AccessKey = T.RT_214,
     AddAttrs = {
       [1] = {
         AttrName = "MaxAvoidExecuteTimes",
@@ -4750,11 +4742,11 @@ return ReadOnly("Mod", {
     },
     AddCharModCost = 2.5,
     ApplicationType = 1,
-    ApplySlot = T.RT_217,
+    ApplySlot = T.RT_215,
     CollectRewardExp = 50,
     Cost = 2,
     CostChange = 1,
-    FilterTag = T.RT_218,
+    FilterTag = T.RT_216,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_FeatheredSnake01.T_Mod_FeatheredSnake01",
     Id = 31531,
@@ -4765,22 +4757,22 @@ return ReadOnly("Mod", {
     Polarity = 4,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_219,
+    RepeatGroup = T.RT_217,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_FeatheredSnake01"
   },
   [31532] = {
-    AccessKey = T.RT_216,
+    AccessKey = T.RT_214,
     AddCharModCost = 2.5,
     ApplicationType = 1,
-    ApplySlot = T.RT_217,
+    ApplySlot = T.RT_215,
     CollectRewardExp = 50,
     Cost = 2,
     CostChange = 1,
     DescValues = {
       [1] = "$#SkillEffects[1532001].TaskEffects[1].Rate*100$%"
     },
-    FilterTag = T.RT_218,
+    FilterTag = T.RT_216,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_FeatheredSnake01.T_Mod_FeatheredSnake01",
     Id = 31532,
@@ -4793,7 +4785,7 @@ return ReadOnly("Mod", {
     Polarity = 1,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_219,
+    RepeatGroup = T.RT_217,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_FeatheredSnake01"
   },
@@ -4801,7 +4793,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     AddAttrs = T.RT_27,
     ApplicationType = 2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 7,
     CostChange = 1,
@@ -4810,14 +4802,14 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Cerberus01.T_Mod_Cerberus01",
     Id = 32004,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_2004",
     OpenVersion = 10,
     Polarity = -1,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_220,
+    RepeatGroup = T.RT_218,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Cerberus01"
   },
@@ -4825,31 +4817,31 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     AddAttrs = T.RT_39,
     ApplicationType = 2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 4,
     CostChange = 1,
-    FilterTag = T.RT_161,
+    FilterTag = T.RT_159,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Cerberus01.T_Mod_Cerberus01",
     Id = 32005,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_2005",
     OpenVersion = 10,
     Polarity = -1,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_221,
+    RepeatGroup = T.RT_219,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Cerberus01"
   },
   [32101] = {
-    AccessKey = T.RT_185,
+    AccessKey = T.RT_183,
     AddAttrs = T.RT_108,
     ApplicationType = 21,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 7,
     CostChange = 1,
@@ -4858,7 +4850,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Cerberus01.T_Mod_Cerberus01",
     Id = 32101,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_2101",
     OpenVersion = 10,
@@ -4870,10 +4862,10 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Cerberus01"
   },
   [32102] = {
-    AccessKey = T.RT_185,
+    AccessKey = T.RT_183,
     AddAttrs = T.RT_112,
     ApplicationType = 22,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 7,
     CostChange = 1,
@@ -4882,7 +4874,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Cerberus01.T_Mod_Cerberus01",
     Id = 32102,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_2102",
     OpenVersion = 10,
@@ -4894,10 +4886,10 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Cerberus01"
   },
   [32103] = {
-    AccessKey = T.RT_185,
+    AccessKey = T.RT_183,
     AddAttrs = T.RT_114,
     ApplicationType = 23,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 7,
     CostChange = 1,
@@ -4906,7 +4898,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Cerberus01.T_Mod_Cerberus01",
     Id = 32103,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_2103",
     OpenVersion = 10,
@@ -4918,12 +4910,12 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Cerberus01"
   },
   [32201] = {
-    AccessKey = T.RT_185,
+    AccessKey = T.RT_183,
     AddAttrs = {
-      [1] = T.RT_222
+      [1] = T.RT_220
     },
     ApplicationType = 2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 5,
     CostChange = 1,
@@ -4934,7 +4926,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fenrir01.T_Mod_Fenrir01",
     Id = 32201,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_2201",
     OpenVersion = 10,
@@ -4946,7 +4938,7 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Fenrir01"
   },
   [32202] = {
-    AccessKey = T.RT_185,
+    AccessKey = T.RT_183,
     AddAttrs = {
       [1] = {
         AttrName = "ExtraComboProb",
@@ -4954,7 +4946,7 @@ return ReadOnly("Mod", {
       }
     },
     ApplicationType = 2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 7,
     CostChange = 1,
@@ -4969,7 +4961,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fenrir01.T_Mod_Fenrir01",
     Id = 32202,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_2202",
     OpenVersion = 10,
@@ -4984,7 +4976,7 @@ return ReadOnly("Mod", {
   [32301] = {
     AccessKey = T.RT_54,
     ApplicationType = 2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 8,
     CostChange = 1,
@@ -5000,23 +4992,23 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fenrir01.T_Mod_Fenrir01",
     Id = 32301,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_2301",
     OpenVersion = 10,
-    PassiveEffects = T.RT_223,
+    PassiveEffects = T.RT_221,
     PassiveEffectsDesc = "MOD_DESC_2301",
     Polarity = -1,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_223,
+    RepeatGroup = T.RT_221,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Fenrir01"
   },
   [32302] = {
     AccessKey = T.RT_54,
     ApplicationType = 2,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 5,
     CostChange = 1,
@@ -5032,16 +5024,16 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fenrir01.T_Mod_Fenrir01",
     Id = 32302,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_2302",
     OpenVersion = 10,
-    PassiveEffects = T.RT_224,
+    PassiveEffects = T.RT_222,
     PassiveEffectsDesc = "MOD_DESC_2302",
     Polarity = -1,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_224,
+    RepeatGroup = T.RT_222,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Fenrir01"
   },
@@ -5049,7 +5041,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     AddAttrs = T.RT_27,
     ApplicationType = 3,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 5,
     CostChange = 1,
@@ -5058,14 +5050,14 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Lilith01.T_Mod_Lilith01",
     Id = 33004,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3004",
     OpenVersion = 10,
     Polarity = -1,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_225,
+    RepeatGroup = T.RT_223,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Lilith01"
   },
@@ -5073,31 +5065,31 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     AddAttrs = T.RT_26,
     ApplicationType = 3,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 9,
     CostChange = 1,
-    FilterTag = T.RT_164,
+    FilterTag = T.RT_162,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Lilith01.T_Mod_Lilith01",
     Id = 33005,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3005",
     OpenVersion = 10,
     Polarity = -1,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_226,
+    RepeatGroup = T.RT_224,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Lilith01"
   },
   [33101] = {
-    AccessKey = T.RT_185,
+    AccessKey = T.RT_183,
     AddAttrs = T.RT_108,
     ApplicationType = 31,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 7,
     CostChange = 1,
@@ -5106,7 +5098,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Lilith01.T_Mod_Lilith01",
     Id = 33101,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3101",
     OpenVersion = 10,
@@ -5118,10 +5110,10 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Lilith01"
   },
   [33102] = {
-    AccessKey = T.RT_185,
+    AccessKey = T.RT_183,
     AddAttrs = T.RT_112,
     ApplicationType = 32,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 7,
     CostChange = 1,
@@ -5130,7 +5122,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Lilith01.T_Mod_Lilith01",
     Id = 33102,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3102",
     OpenVersion = 10,
@@ -5142,10 +5134,10 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Lilith01"
   },
   [33103] = {
-    AccessKey = T.RT_185,
+    AccessKey = T.RT_183,
     AddAttrs = T.RT_114,
     ApplicationType = 33,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 7,
     CostChange = 1,
@@ -5154,7 +5146,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Lilith01.T_Mod_Lilith01",
     Id = 33103,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3103",
     OpenVersion = 10,
@@ -5166,7 +5158,7 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Lilith01"
   },
   [33201] = {
-    AccessKey = T.RT_185,
+    AccessKey = T.RT_183,
     AddAttrs = {
       [1] = {
         AttrName = "MagazineCapacity",
@@ -5174,7 +5166,7 @@ return ReadOnly("Mod", {
       }
     },
     ApplicationType = 3,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 4,
     CostChange = 1,
@@ -5185,7 +5177,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fafnir01.T_Mod_Fafnir01",
     Id = 33201,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3201",
     OpenVersion = 10,
@@ -5197,21 +5189,21 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Fafnir01"
   },
   [33202] = {
-    AccessKey = T.RT_185,
+    AccessKey = T.RT_183,
     AddAttrs = {
-      [1] = T.RT_227
+      [1] = T.RT_225
     },
     ApplicationType = 3,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 4,
     CostChange = 1,
-    FilterTag = T.RT_228,
+    FilterTag = T.RT_226,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fafnir01.T_Mod_Fafnir01",
     Id = 33202,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3202",
     OpenVersion = 10,
@@ -5223,7 +5215,7 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Fafnir01"
   },
   [33203] = {
-    AccessKey = T.RT_185,
+    AccessKey = T.RT_183,
     AddAttrs = {
       [1] = {
         AttrName = "AttackSpeed_Reload",
@@ -5231,7 +5223,7 @@ return ReadOnly("Mod", {
       }
     },
     ApplicationType = 3,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 4,
     CostChange = 1,
@@ -5242,7 +5234,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fafnir01.T_Mod_Fafnir01",
     Id = 33203,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3203",
     OpenVersion = 10,
@@ -5254,7 +5246,7 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Fafnir01"
   },
   [33204] = {
-    AccessKey = T.RT_185,
+    AccessKey = T.RT_183,
     AddAttrs = {
       [1] = {
         AttrName = "BulletConver",
@@ -5262,7 +5254,7 @@ return ReadOnly("Mod", {
       }
     },
     ApplicationType = 3,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 5,
     CostChange = 1,
@@ -5273,7 +5265,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fafnir01.T_Mod_Fafnir01",
     Id = 33204,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3204",
     OpenVersion = 10,
@@ -5287,7 +5279,7 @@ return ReadOnly("Mod", {
   [33311] = {
     AccessKey = T.RT_54,
     ApplicationType = 3,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 5,
     CostChange = 1,
@@ -5295,28 +5287,28 @@ return ReadOnly("Mod", {
       [1] = "$#SkillEffects[3311].TaskEffects[1].Rate*100$%",
       [2] = "$#TargetFilter[#SkillEffects[3311].TargetFilter].LuaFilterParaments.Radius/100$"
     },
-    FilterTag = T.RT_218,
+    FilterTag = T.RT_216,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fafnir01.T_Mod_Fafnir01",
     Id = 33311,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3311",
     OpenVersion = 10,
-    PassiveEffects = T.RT_229,
+    PassiveEffects = T.RT_227,
     PassiveEffectsDesc = "MOD_DESC_3311",
     Polarity = -1,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_229,
+    RepeatGroup = T.RT_227,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Fafnir01"
   },
   [33321] = {
     AccessKey = T.RT_54,
     ApplicationType = 3,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 5,
     CostChange = 1,
@@ -5333,51 +5325,51 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fafnir01.T_Mod_Fafnir01",
     Id = 33321,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3321",
     OpenVersion = 10,
-    PassiveEffects = T.RT_230,
+    PassiveEffects = T.RT_228,
     PassiveEffectsDesc = "MOD_DESC_3321",
     Polarity = -1,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_230,
+    RepeatGroup = T.RT_228,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Fafnir01"
   },
   [33322] = {
     AccessKey = T.RT_54,
     ApplicationType = 3,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 3,
     CostChange = 1,
     DescValues = {
       [1] = "$#PassiveEffect[3322].Vars.TriggerProb*100$%"
     },
-    FilterTag = T.RT_218,
+    FilterTag = T.RT_216,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fafnir01.T_Mod_Fafnir01",
     Id = 33322,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3322",
     OpenVersion = 10,
-    PassiveEffects = T.RT_231,
+    PassiveEffects = T.RT_229,
     PassiveEffectsDesc = "MOD_DESC_3322",
     Polarity = -1,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_231,
+    RepeatGroup = T.RT_229,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Fafnir01"
   },
   [33331] = {
     AccessKey = T.RT_54,
     ApplicationType = 3,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 7,
     CostChange = 1,
@@ -5394,44 +5386,44 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fafnir01.T_Mod_Fafnir01",
     Id = 33331,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3331",
     OpenVersion = 10,
-    PassiveEffects = T.RT_232,
+    PassiveEffects = T.RT_230,
     PassiveEffectsDesc = "MOD_DESC_3331",
     Polarity = -1,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_232,
+    RepeatGroup = T.RT_230,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Fafnir01"
   },
   [33332] = {
     AccessKey = T.RT_54,
     ApplicationType = 3,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 5,
     CostChange = 1,
     DescValues = {
       [1] = "$#PassiveEffect[3332].Vars.TriggerProb*100$%"
     },
-    FilterTag = T.RT_218,
+    FilterTag = T.RT_216,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fafnir01.T_Mod_Fafnir01",
     Id = 33332,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3332",
     OpenVersion = 10,
-    PassiveEffects = T.RT_233,
+    PassiveEffects = T.RT_231,
     PassiveEffectsDesc = "MOD_DESC_3332",
     Polarity = -1,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_233,
+    RepeatGroup = T.RT_231,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Fafnir01"
   },
@@ -5444,7 +5436,7 @@ return ReadOnly("Mod", {
       }
     },
     ApplicationType = 34,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 10,
     CostChange = 1,
@@ -5455,7 +5447,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fafnir01.T_Mod_Fafnir01",
     Id = 33411,
     MaxLevel = 5,
-    ModConvert = T.RT_187,
+    ModConvert = T.RT_185,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3411",
     OpenVersion = 10,
@@ -5470,7 +5462,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_15,
     ApplicationType = 4,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 8,
     CostChange = 1,
@@ -5493,7 +5485,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_20,
     ApplicationType = 4,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 9,
     CostChange = 1,
@@ -5516,7 +5508,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_22,
     ApplicationType = 4,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 9,
     CostChange = 1,
@@ -5539,7 +5531,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_27,
     ApplicationType = 4,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 13,
     CostChange = 1,
@@ -5562,11 +5554,11 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_39,
     ApplicationType = 4,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 13,
     CostChange = 1,
-    FilterTag = T.RT_161,
+    FilterTag = T.RT_159,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Cerberus02.T_Mod_Cerberus02",
     Id = 34005,
@@ -5577,7 +5569,7 @@ return ReadOnly("Mod", {
     Polarity = -1,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_162,
+    RepeatGroup = T.RT_160,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Cerberus02"
   },
@@ -5585,7 +5577,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_18,
     ApplicationType = 4,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 13,
     CostChange = 1,
@@ -5608,7 +5600,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_108,
     ApplicationType = 41,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 8,
     CostChange = 1,
@@ -5623,7 +5615,7 @@ return ReadOnly("Mod", {
     Polarity = -1,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_163,
+    RepeatGroup = T.RT_161,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Cerberus02"
   },
@@ -5631,7 +5623,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_112,
     ApplicationType = 42,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 8,
     CostChange = 1,
@@ -5646,7 +5638,7 @@ return ReadOnly("Mod", {
     Polarity = -1,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_163,
+    RepeatGroup = T.RT_161,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Cerberus02"
   },
@@ -5654,7 +5646,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_114,
     ApplicationType = 43,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 8,
     CostChange = 1,
@@ -5669,7 +5661,7 @@ return ReadOnly("Mod", {
     Polarity = -1,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_163,
+    RepeatGroup = T.RT_161,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Cerberus02"
   },
@@ -5677,7 +5669,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_15,
     ApplicationType = 5,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 8,
     CostChange = 1,
@@ -5700,7 +5692,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_20,
     ApplicationType = 5,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 9,
     CostChange = 1,
@@ -5723,7 +5715,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_22,
     ApplicationType = 5,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 9,
     CostChange = 1,
@@ -5746,7 +5738,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_27,
     ApplicationType = 5,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 13,
     CostChange = 1,
@@ -5769,11 +5761,11 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_26,
     ApplicationType = 5,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 13,
     CostChange = 1,
-    FilterTag = T.RT_164,
+    FilterTag = T.RT_162,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Lilith02.T_Mod_Lilith02",
     Id = 35005,
@@ -5784,7 +5776,7 @@ return ReadOnly("Mod", {
     Polarity = -1,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_165,
+    RepeatGroup = T.RT_163,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Lilith02"
   },
@@ -5792,7 +5784,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_18,
     ApplicationType = 5,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 13,
     CostChange = 1,
@@ -5815,7 +5807,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_108,
     ApplicationType = 51,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 8,
     CostChange = 1,
@@ -5830,7 +5822,7 @@ return ReadOnly("Mod", {
     Polarity = -1,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_166,
+    RepeatGroup = T.RT_164,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Lilith02"
   },
@@ -5838,7 +5830,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_112,
     ApplicationType = 52,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 8,
     CostChange = 1,
@@ -5853,7 +5845,7 @@ return ReadOnly("Mod", {
     Polarity = -1,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_166,
+    RepeatGroup = T.RT_164,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Lilith02"
   },
@@ -5861,7 +5853,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_114,
     ApplicationType = 53,
-    BreakDown = T.RT_186,
+    BreakDown = T.RT_184,
     CollectRewardExp = 50,
     Cost = 8,
     CostChange = 1,
@@ -5876,16 +5868,16 @@ return ReadOnly("Mod", {
     Polarity = -1,
     Rarity = 3,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_166,
+    RepeatGroup = T.RT_164,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Lilith02"
   },
   [41001] = {
-    AccessKey = T.RT_234,
+    AccessKey = T.RT_232,
     AddAttrs = T.RT_56,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 8,
     CostChange = 1,
@@ -5894,7 +5886,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Phoenix01.T_Mod_Phoenix01",
     Id = 41001,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1001",
     OpenVersion = 10,
@@ -5906,11 +5898,11 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Phoenix01"
   },
   [41002] = {
-    AccessKey = T.RT_234,
+    AccessKey = T.RT_232,
     AddAttrs = T.RT_59,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 8,
     CostChange = 1,
@@ -5919,7 +5911,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Phoenix01.T_Mod_Phoenix01",
     Id = 41002,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1002",
     OpenVersion = 10,
@@ -5931,11 +5923,11 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Phoenix01"
   },
   [41003] = {
-    AccessKey = T.RT_234,
+    AccessKey = T.RT_232,
     AddAttrs = T.RT_63,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 8,
     CostChange = 1,
@@ -5944,7 +5936,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Phoenix01.T_Mod_Phoenix01",
     Id = 41003,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1003",
     OpenVersion = 10,
@@ -5956,11 +5948,11 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Phoenix01"
   },
   [41004] = {
-    AccessKey = T.RT_234,
+    AccessKey = T.RT_232,
     AddAttrs = T.RT_67,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 8,
     CostChange = 1,
@@ -5969,7 +5961,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Phoenix01.T_Mod_Phoenix01",
     Id = 41004,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1004",
     OpenVersion = 10,
@@ -5981,11 +5973,11 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Phoenix01"
   },
   [41007] = {
-    AccessKey = T.RT_234,
+    AccessKey = T.RT_232,
     AddAttrs = T.RT_71,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 8,
     CostChange = 1,
@@ -5994,7 +5986,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Phoenix01.T_Mod_Phoenix01",
     Id = 41007,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1007",
     OpenVersion = 10,
@@ -6013,16 +6005,16 @@ return ReadOnly("Mod", {
     },
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 11,
     CostChange = 1,
-    FilterTag = T.RT_195,
+    FilterTag = T.RT_193,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Pan01.T_Mod_Pan01",
     Id = 41213,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1213",
     OpenVersion = 10,
@@ -6044,16 +6036,16 @@ return ReadOnly("Mod", {
     },
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 7,
     CostChange = 1,
-    FilterTag = T.RT_194,
+    FilterTag = T.RT_192,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Pan01.T_Mod_Pan01",
     Id = 41214,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1214",
     OpenVersion = 10,
@@ -6068,54 +6060,54 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 12,
     CostChange = 1,
-    DescValues = T.RT_237,
-    FilterTag = T.RT_238,
+    DescValues = T.RT_235,
+    FilterTag = T.RT_236,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Sphinx01.T_Mod_Sphinx01",
     Id = 41311,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1311",
     OpenVersion = 10,
-    PassiveEffects = T.RT_239,
+    PassiveEffects = T.RT_237,
     PassiveEffectsDesc = "MOD_DESC_1311",
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_239,
+    RepeatGroup = T.RT_237,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Sphinx01"
   },
   [41312] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_240,
+    AddAttrs = T.RT_238,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 9,
     CostChange = 1,
-    DescValues = T.RT_241,
-    FilterTag = T.RT_242,
+    DescValues = T.RT_239,
+    FilterTag = T.RT_240,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Sphinx01.T_Mod_Sphinx01",
     Id = 41312,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1312",
     OpenVersion = 10,
-    PassiveEffects = T.RT_243,
+    PassiveEffects = T.RT_241,
     PassiveEffectsDesc = "MOD_DESC_1312",
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_243,
+    RepeatGroup = T.RT_241,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Sphinx01"
   },
@@ -6123,26 +6115,26 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 11,
     CostChange = 1,
-    DescValues = T.RT_244,
-    FilterTag = T.RT_245,
+    DescValues = T.RT_242,
+    FilterTag = T.RT_243,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Sphinx01.T_Mod_Sphinx01",
     Id = 41313,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1313",
     OpenVersion = 10,
-    PassiveEffects = T.RT_246,
+    PassiveEffects = T.RT_244,
     PassiveEffectsDesc = "MOD_DESC_1313",
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_246,
+    RepeatGroup = T.RT_244,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Sphinx01"
   },
@@ -6150,26 +6142,26 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 11,
     CostChange = 1,
-    DescValues = T.RT_247,
-    FilterTag = T.RT_245,
+    DescValues = T.RT_245,
+    FilterTag = T.RT_243,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Sphinx01.T_Mod_Sphinx01",
     Id = 41314,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1314",
     OpenVersion = 10,
-    PassiveEffects = T.RT_248,
+    PassiveEffects = T.RT_246,
     PassiveEffectsDesc = "MOD_DESC_1314",
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_248,
+    RepeatGroup = T.RT_246,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Sphinx01"
   },
@@ -6177,26 +6169,26 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 11,
     CostChange = 1,
-    DescValues = T.RT_249,
-    FilterTag = T.RT_245,
+    DescValues = T.RT_247,
+    FilterTag = T.RT_243,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Sphinx01.T_Mod_Sphinx01",
     Id = 41315,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1315",
     OpenVersion = 10,
-    PassiveEffects = T.RT_250,
+    PassiveEffects = T.RT_248,
     PassiveEffectsDesc = "MOD_DESC_1315",
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_250,
+    RepeatGroup = T.RT_248,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Sphinx01"
   },
@@ -6204,344 +6196,344 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
-    DescValues = T.RT_251,
-    FilterTag = T.RT_252,
+    DescValues = T.RT_249,
+    FilterTag = T.RT_250,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Sphinx01.T_Mod_Sphinx01",
     Id = 41316,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1316",
     OpenVersion = 10,
-    PassiveEffects = T.RT_253,
+    PassiveEffects = T.RT_251,
     PassiveEffectsDesc = "MOD_DESC_1316",
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_253,
+    RepeatGroup = T.RT_251,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Sphinx01"
   },
   [41321] = {
-    AccessKey = T.RT_254,
-    AddAttrs = T.RT_256,
+    AccessKey = T.RT_252,
+    AddAttrs = T.RT_254,
     ApplicationType = 11,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 17,
     CostChange = 1,
-    FilterTag = T.RT_257,
+    FilterTag = T.RT_255,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Griffin01_Black.T_Mod_Griffin01_Black",
     Id = 41321,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1321",
     OpenVersion = 10,
     Polarity = 3,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_205,
+    RepeatGroup = T.RT_203,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Griffin01"
   },
   [41322] = {
-    AccessKey = T.RT_254,
-    AddAttrs = T.RT_260,
+    AccessKey = T.RT_252,
+    AddAttrs = T.RT_258,
     ApplicationType = 12,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 17,
     CostChange = 1,
-    FilterTag = T.RT_257,
+    FilterTag = T.RT_255,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Griffin01_Blue.T_Mod_Griffin01_Blue",
     Id = 41322,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1322",
     OpenVersion = 10,
     Polarity = 3,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_205,
+    RepeatGroup = T.RT_203,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Griffin01"
   },
   [41323] = {
-    AccessKey = T.RT_254,
-    AddAttrs = T.RT_262,
+    AccessKey = T.RT_252,
+    AddAttrs = T.RT_260,
     ApplicationType = 13,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 17,
     CostChange = 1,
-    FilterTag = T.RT_257,
+    FilterTag = T.RT_255,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Griffin01_Red.T_Mod_Griffin01_Red",
     Id = 41323,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1323",
     OpenVersion = 10,
     Polarity = 3,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_205,
+    RepeatGroup = T.RT_203,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Griffin01"
   },
   [41324] = {
-    AccessKey = T.RT_254,
-    AddAttrs = T.RT_264,
+    AccessKey = T.RT_252,
+    AddAttrs = T.RT_262,
     ApplicationType = 14,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 17,
     CostChange = 1,
-    FilterTag = T.RT_257,
+    FilterTag = T.RT_255,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Griffin01_Purple.T_Mod_Griffin01_Purple",
     Id = 41324,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1324",
     OpenVersion = 10,
     Polarity = 3,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_205,
+    RepeatGroup = T.RT_203,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Griffin01"
   },
   [41325] = {
-    AccessKey = T.RT_254,
-    AddAttrs = T.RT_266,
+    AccessKey = T.RT_252,
+    AddAttrs = T.RT_264,
     ApplicationType = 15,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 17,
     CostChange = 1,
-    FilterTag = T.RT_257,
+    FilterTag = T.RT_255,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Griffin01_Green.T_Mod_Griffin01_Green",
     Id = 41325,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1325",
     OpenVersion = 10,
     Polarity = 3,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_205,
+    RepeatGroup = T.RT_203,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Griffin01"
   },
   [41326] = {
-    AccessKey = T.RT_254,
-    AddAttrs = T.RT_268,
+    AccessKey = T.RT_252,
+    AddAttrs = T.RT_266,
     ApplicationType = 16,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 17,
     CostChange = 1,
-    FilterTag = T.RT_257,
+    FilterTag = T.RT_255,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Griffin01_Orange.T_Mod_Griffin01_Orange",
     Id = 41326,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1326",
     OpenVersion = 10,
     Polarity = 3,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_205,
+    RepeatGroup = T.RT_203,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Griffin01"
   },
   [41331] = {
-    AccessKey = T.RT_254,
-    AddAttrs = T.RT_270,
+    AccessKey = T.RT_252,
+    AddAttrs = T.RT_268,
     ApplicationType = 11,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 18,
     CostChange = 1,
-    FilterTag = T.RT_271,
+    FilterTag = T.RT_269,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Griffin01_Black.T_Mod_Griffin01_Black",
     Id = 41331,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1331",
     OpenVersion = 10,
     Polarity = 3,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_205,
+    RepeatGroup = T.RT_203,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Griffin01"
   },
   [41332] = {
-    AccessKey = T.RT_254,
-    AddAttrs = T.RT_273,
+    AccessKey = T.RT_252,
+    AddAttrs = T.RT_271,
     ApplicationType = 12,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 18,
     CostChange = 1,
-    FilterTag = T.RT_271,
+    FilterTag = T.RT_269,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Griffin01_Blue.T_Mod_Griffin01_Blue",
     Id = 41332,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1332",
     OpenVersion = 10,
     Polarity = 3,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_205,
+    RepeatGroup = T.RT_203,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Griffin01"
   },
   [41333] = {
-    AccessKey = T.RT_254,
-    AddAttrs = T.RT_275,
+    AccessKey = T.RT_252,
+    AddAttrs = T.RT_273,
     ApplicationType = 13,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 18,
     CostChange = 1,
-    FilterTag = T.RT_271,
+    FilterTag = T.RT_269,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Griffin01_Red.T_Mod_Griffin01_Red",
     Id = 41333,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1333",
     OpenVersion = 10,
     Polarity = 3,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_205,
+    RepeatGroup = T.RT_203,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Griffin01"
   },
   [41334] = {
-    AccessKey = T.RT_254,
-    AddAttrs = T.RT_277,
+    AccessKey = T.RT_252,
+    AddAttrs = T.RT_275,
     ApplicationType = 14,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 18,
     CostChange = 1,
-    FilterTag = T.RT_271,
+    FilterTag = T.RT_269,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Griffin01_Purple.T_Mod_Griffin01_Purple",
     Id = 41334,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1334",
     OpenVersion = 10,
     Polarity = 3,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_205,
+    RepeatGroup = T.RT_203,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Griffin01"
   },
   [41335] = {
-    AccessKey = T.RT_254,
-    AddAttrs = T.RT_279,
+    AccessKey = T.RT_252,
+    AddAttrs = T.RT_277,
     ApplicationType = 15,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 18,
     CostChange = 1,
-    FilterTag = T.RT_271,
+    FilterTag = T.RT_269,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Griffin01_Green.T_Mod_Griffin01_Green",
     Id = 41335,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1335",
     OpenVersion = 10,
     Polarity = 3,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_205,
+    RepeatGroup = T.RT_203,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Griffin01"
   },
   [41336] = {
-    AccessKey = T.RT_254,
-    AddAttrs = T.RT_281,
+    AccessKey = T.RT_252,
+    AddAttrs = T.RT_279,
     ApplicationType = 16,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 18,
     CostChange = 1,
-    FilterTag = T.RT_271,
+    FilterTag = T.RT_269,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Griffin01_Orange.T_Mod_Griffin01_Orange",
     Id = 41336,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1336",
     OpenVersion = 10,
     Polarity = 3,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_205,
+    RepeatGroup = T.RT_203,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Griffin01"
   },
   [41411] = {
-    AccessKey = T.RT_234,
-    AddAttrs = T.RT_283,
+    AccessKey = T.RT_232,
+    AddAttrs = T.RT_281,
     ApplicationType = 11,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
-    FilterTag = T.RT_284,
+    FilterTag = T.RT_282,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Black.T_Mod_Typhon01_Black",
     Id = 41411,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1401",
     OpenVersion = 10,
@@ -6553,20 +6545,20 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Typhon01"
   },
   [41412] = {
-    AccessKey = T.RT_234,
-    AddAttrs = T.RT_286,
+    AccessKey = T.RT_232,
+    AddAttrs = T.RT_284,
     ApplicationType = 11,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
-    FilterTag = T.RT_287,
+    FilterTag = T.RT_285,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Black.T_Mod_Typhon01_Black",
     Id = 41412,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1402",
     OpenVersion = 10,
@@ -6578,11 +6570,11 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Typhon01"
   },
   [41413] = {
-    AccessKey = T.RT_234,
-    AddAttrs = T.RT_289,
+    AccessKey = T.RT_232,
+    AddAttrs = T.RT_287,
     ApplicationType = 11,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
@@ -6590,16 +6582,16 @@ return ReadOnly("Mod", {
       [1] = "$-#PassiveEffect[1420].Vars.BuffRate*100$%",
       [2] = "$GetModValue(41413,4)*100$%"
     },
-    FilterTag = T.RT_290,
+    FilterTag = T.RT_288,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Black.T_Mod_Typhon01_Black",
     Id = 41413,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1403",
     OpenVersion = 10,
-    PassiveEffects = T.RT_291,
+    PassiveEffects = T.RT_289,
     PassiveEffectsDesc = "MOD_DESC_1420",
     Polarity = 1,
     Rarity = 4,
@@ -6609,25 +6601,25 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Typhon01"
   },
   [41414] = {
-    AccessKey = T.RT_234,
+    AccessKey = T.RT_232,
     AddAttrs = T.RT_77,
     ApplicationType = 11,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
-    DescValues = T.RT_292,
-    FilterTag = T.RT_293,
+    DescValues = T.RT_290,
+    FilterTag = T.RT_291,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Black.T_Mod_Typhon01_Black",
     Id = 41414,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1404",
     OpenVersion = 10,
-    PassiveEffects = T.RT_294,
+    PassiveEffects = T.RT_292,
     PassiveEffectsDesc = "MOD_DESC_1430",
     Polarity = 1,
     Rarity = 4,
@@ -6637,25 +6629,25 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Typhon01"
   },
   [41415] = {
-    AccessKey = T.RT_234,
+    AccessKey = T.RT_232,
     AddAttrs = T.RT_77,
     ApplicationType = 11,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
-    DescValues = T.RT_295,
-    FilterTag = T.RT_296,
+    DescValues = T.RT_293,
+    FilterTag = T.RT_294,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Black.T_Mod_Typhon01_Black",
     Id = 41415,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1405",
     OpenVersion = 10,
-    PassiveEffects = T.RT_297,
+    PassiveEffects = T.RT_295,
     PassiveEffectsDesc = "MOD_DESC_1440",
     Polarity = 1,
     Rarity = 4,
@@ -6665,20 +6657,20 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Typhon01"
   },
   [41421] = {
-    AccessKey = T.RT_234,
-    AddAttrs = T.RT_299,
+    AccessKey = T.RT_232,
+    AddAttrs = T.RT_297,
     ApplicationType = 12,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
-    FilterTag = T.RT_284,
+    FilterTag = T.RT_282,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Blue.T_Mod_Typhon01_Blue",
     Id = 41421,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1401",
     OpenVersion = 10,
@@ -6690,20 +6682,20 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Typhon01"
   },
   [41422] = {
-    AccessKey = T.RT_234,
-    AddAttrs = T.RT_301,
+    AccessKey = T.RT_232,
+    AddAttrs = T.RT_299,
     ApplicationType = 12,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
-    FilterTag = T.RT_287,
+    FilterTag = T.RT_285,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Blue.T_Mod_Typhon01_Blue",
     Id = 41422,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1402",
     OpenVersion = 10,
@@ -6715,11 +6707,11 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Typhon01"
   },
   [41423] = {
-    AccessKey = T.RT_234,
-    AddAttrs = T.RT_303,
+    AccessKey = T.RT_232,
+    AddAttrs = T.RT_301,
     ApplicationType = 12,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
@@ -6727,16 +6719,16 @@ return ReadOnly("Mod", {
       [1] = "$-#PassiveEffect[1420].Vars.BuffRate*100$%",
       [2] = "$GetModValue(41423,4)*100$%"
     },
-    FilterTag = T.RT_290,
+    FilterTag = T.RT_288,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Blue.T_Mod_Typhon01_Blue",
     Id = 41423,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1403",
     OpenVersion = 10,
-    PassiveEffects = T.RT_304,
+    PassiveEffects = T.RT_302,
     PassiveEffectsDesc = "MOD_DESC_1420",
     Polarity = 1,
     Rarity = 4,
@@ -6746,25 +6738,25 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Typhon01"
   },
   [41424] = {
-    AccessKey = T.RT_234,
+    AccessKey = T.RT_232,
     AddAttrs = T.RT_83,
     ApplicationType = 12,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
-    DescValues = T.RT_292,
-    FilterTag = T.RT_293,
+    DescValues = T.RT_290,
+    FilterTag = T.RT_291,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Blue.T_Mod_Typhon01_Blue",
     Id = 41424,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1404",
     OpenVersion = 10,
-    PassiveEffects = T.RT_294,
+    PassiveEffects = T.RT_292,
     PassiveEffectsDesc = "MOD_DESC_1430",
     Polarity = 1,
     Rarity = 4,
@@ -6774,25 +6766,25 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Typhon01"
   },
   [41425] = {
-    AccessKey = T.RT_234,
+    AccessKey = T.RT_232,
     AddAttrs = T.RT_83,
     ApplicationType = 12,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
-    DescValues = T.RT_295,
-    FilterTag = T.RT_296,
+    DescValues = T.RT_293,
+    FilterTag = T.RT_294,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Blue.T_Mod_Typhon01_Blue",
     Id = 41425,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1405",
     OpenVersion = 10,
-    PassiveEffects = T.RT_297,
+    PassiveEffects = T.RT_295,
     PassiveEffectsDesc = "MOD_DESC_1440",
     Polarity = 1,
     Rarity = 4,
@@ -6802,20 +6794,20 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Typhon01"
   },
   [41431] = {
-    AccessKey = T.RT_234,
-    AddAttrs = T.RT_306,
+    AccessKey = T.RT_232,
+    AddAttrs = T.RT_304,
     ApplicationType = 13,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
-    FilterTag = T.RT_284,
+    FilterTag = T.RT_282,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Red.T_Mod_Typhon01_Red",
     Id = 41431,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1401",
     OpenVersion = 10,
@@ -6827,20 +6819,20 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Typhon01"
   },
   [41432] = {
-    AccessKey = T.RT_234,
-    AddAttrs = T.RT_308,
+    AccessKey = T.RT_232,
+    AddAttrs = T.RT_306,
     ApplicationType = 13,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
-    FilterTag = T.RT_287,
+    FilterTag = T.RT_285,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Red.T_Mod_Typhon01_Red",
     Id = 41432,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1402",
     OpenVersion = 10,
@@ -6852,11 +6844,11 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Typhon01"
   },
   [41433] = {
-    AccessKey = T.RT_234,
-    AddAttrs = T.RT_310,
+    AccessKey = T.RT_232,
+    AddAttrs = T.RT_308,
     ApplicationType = 13,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
@@ -6864,16 +6856,16 @@ return ReadOnly("Mod", {
       [1] = "$-#PassiveEffect[1420].Vars.BuffRate*100$%",
       [2] = "$GetModValue(41433,4)*100$%"
     },
-    FilterTag = T.RT_290,
+    FilterTag = T.RT_288,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Red.T_Mod_Typhon01_Red",
     Id = 41433,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1403",
     OpenVersion = 10,
-    PassiveEffects = T.RT_311,
+    PassiveEffects = T.RT_309,
     PassiveEffectsDesc = "MOD_DESC_1420",
     Polarity = 1,
     Rarity = 4,
@@ -6883,25 +6875,25 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Typhon01"
   },
   [41434] = {
-    AccessKey = T.RT_234,
+    AccessKey = T.RT_232,
     AddAttrs = T.RT_87,
     ApplicationType = 13,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
-    DescValues = T.RT_292,
-    FilterTag = T.RT_293,
+    DescValues = T.RT_290,
+    FilterTag = T.RT_291,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Red.T_Mod_Typhon01_Red",
     Id = 41434,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1404",
     OpenVersion = 10,
-    PassiveEffects = T.RT_294,
+    PassiveEffects = T.RT_292,
     PassiveEffectsDesc = "MOD_DESC_1430",
     Polarity = 1,
     Rarity = 4,
@@ -6911,25 +6903,25 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Typhon01"
   },
   [41435] = {
-    AccessKey = T.RT_234,
+    AccessKey = T.RT_232,
     AddAttrs = T.RT_87,
     ApplicationType = 13,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
-    DescValues = T.RT_295,
-    FilterTag = T.RT_296,
+    DescValues = T.RT_293,
+    FilterTag = T.RT_294,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Red.T_Mod_Typhon01_Red",
     Id = 41435,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1405",
     OpenVersion = 10,
-    PassiveEffects = T.RT_297,
+    PassiveEffects = T.RT_295,
     PassiveEffectsDesc = "MOD_DESC_1440",
     Polarity = 1,
     Rarity = 4,
@@ -6939,20 +6931,20 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Typhon01"
   },
   [41441] = {
-    AccessKey = T.RT_234,
-    AddAttrs = T.RT_313,
+    AccessKey = T.RT_232,
+    AddAttrs = T.RT_311,
     ApplicationType = 14,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
-    FilterTag = T.RT_284,
+    FilterTag = T.RT_282,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Purple.T_Mod_Typhon01_Purple",
     Id = 41441,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1401",
     OpenVersion = 10,
@@ -6964,20 +6956,20 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Typhon01"
   },
   [41442] = {
-    AccessKey = T.RT_234,
-    AddAttrs = T.RT_315,
+    AccessKey = T.RT_232,
+    AddAttrs = T.RT_313,
     ApplicationType = 14,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
-    FilterTag = T.RT_287,
+    FilterTag = T.RT_285,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Purple.T_Mod_Typhon01_Purple",
     Id = 41442,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1402",
     OpenVersion = 10,
@@ -6989,11 +6981,11 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Typhon01"
   },
   [41443] = {
-    AccessKey = T.RT_234,
-    AddAttrs = T.RT_317,
+    AccessKey = T.RT_232,
+    AddAttrs = T.RT_315,
     ApplicationType = 14,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
@@ -7001,16 +6993,16 @@ return ReadOnly("Mod", {
       [1] = "$-#PassiveEffect[1420].Vars.BuffRate*100$%",
       [2] = "$GetModValue(41443,4)*100$%"
     },
-    FilterTag = T.RT_290,
+    FilterTag = T.RT_288,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Purple.T_Mod_Typhon01_Purple",
     Id = 41443,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1403",
     OpenVersion = 10,
-    PassiveEffects = T.RT_318,
+    PassiveEffects = T.RT_316,
     PassiveEffectsDesc = "MOD_DESC_1420",
     Polarity = 1,
     Rarity = 4,
@@ -7020,25 +7012,25 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Typhon01"
   },
   [41444] = {
-    AccessKey = T.RT_234,
+    AccessKey = T.RT_232,
     AddAttrs = T.RT_91,
     ApplicationType = 14,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
-    DescValues = T.RT_292,
-    FilterTag = T.RT_293,
+    DescValues = T.RT_290,
+    FilterTag = T.RT_291,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Purple.T_Mod_Typhon01_Purple",
     Id = 41444,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1404",
     OpenVersion = 10,
-    PassiveEffects = T.RT_294,
+    PassiveEffects = T.RT_292,
     PassiveEffectsDesc = "MOD_DESC_1430",
     Polarity = 1,
     Rarity = 4,
@@ -7048,25 +7040,25 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Typhon01"
   },
   [41445] = {
-    AccessKey = T.RT_234,
+    AccessKey = T.RT_232,
     AddAttrs = T.RT_91,
     ApplicationType = 14,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
-    DescValues = T.RT_295,
-    FilterTag = T.RT_296,
+    DescValues = T.RT_293,
+    FilterTag = T.RT_294,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Purple.T_Mod_Typhon01_Purple",
     Id = 41445,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1405",
     OpenVersion = 10,
-    PassiveEffects = T.RT_297,
+    PassiveEffects = T.RT_295,
     PassiveEffectsDesc = "MOD_DESC_1440",
     Polarity = 1,
     Rarity = 4,
@@ -7076,20 +7068,20 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Typhon01"
   },
   [41451] = {
-    AccessKey = T.RT_234,
-    AddAttrs = T.RT_320,
+    AccessKey = T.RT_232,
+    AddAttrs = T.RT_318,
     ApplicationType = 15,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
-    FilterTag = T.RT_284,
+    FilterTag = T.RT_282,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Green.T_Mod_Typhon01_Green",
     Id = 41451,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1401",
     OpenVersion = 10,
@@ -7101,20 +7093,20 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Typhon01"
   },
   [41452] = {
-    AccessKey = T.RT_234,
-    AddAttrs = T.RT_322,
+    AccessKey = T.RT_232,
+    AddAttrs = T.RT_320,
     ApplicationType = 15,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
-    FilterTag = T.RT_287,
+    FilterTag = T.RT_285,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Green.T_Mod_Typhon01_Green",
     Id = 41452,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1402",
     OpenVersion = 10,
@@ -7126,11 +7118,11 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Typhon01"
   },
   [41453] = {
-    AccessKey = T.RT_234,
-    AddAttrs = T.RT_324,
+    AccessKey = T.RT_232,
+    AddAttrs = T.RT_322,
     ApplicationType = 15,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
@@ -7138,16 +7130,16 @@ return ReadOnly("Mod", {
       [1] = "$-#PassiveEffect[1420].Vars.BuffRate*100$%",
       [2] = "$GetModValue(41453,4)*100$%"
     },
-    FilterTag = T.RT_290,
+    FilterTag = T.RT_288,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Green.T_Mod_Typhon01_Green",
     Id = 41453,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1403",
     OpenVersion = 10,
-    PassiveEffects = T.RT_325,
+    PassiveEffects = T.RT_323,
     PassiveEffectsDesc = "MOD_DESC_1420",
     Polarity = 1,
     Rarity = 4,
@@ -7157,25 +7149,25 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Typhon01"
   },
   [41454] = {
-    AccessKey = T.RT_234,
+    AccessKey = T.RT_232,
     AddAttrs = T.RT_95,
     ApplicationType = 15,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
-    DescValues = T.RT_292,
-    FilterTag = T.RT_293,
+    DescValues = T.RT_290,
+    FilterTag = T.RT_291,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Green.T_Mod_Typhon01_Green",
     Id = 41454,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1404",
     OpenVersion = 10,
-    PassiveEffects = T.RT_294,
+    PassiveEffects = T.RT_292,
     PassiveEffectsDesc = "MOD_DESC_1430",
     Polarity = 1,
     Rarity = 4,
@@ -7185,25 +7177,25 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Typhon01"
   },
   [41455] = {
-    AccessKey = T.RT_234,
+    AccessKey = T.RT_232,
     AddAttrs = T.RT_95,
     ApplicationType = 15,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
-    DescValues = T.RT_295,
-    FilterTag = T.RT_296,
+    DescValues = T.RT_293,
+    FilterTag = T.RT_294,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Green.T_Mod_Typhon01_Green",
     Id = 41455,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1405",
     OpenVersion = 10,
-    PassiveEffects = T.RT_297,
+    PassiveEffects = T.RT_295,
     PassiveEffectsDesc = "MOD_DESC_1440",
     Polarity = 1,
     Rarity = 4,
@@ -7213,20 +7205,20 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Typhon01"
   },
   [41461] = {
-    AccessKey = T.RT_234,
-    AddAttrs = T.RT_327,
+    AccessKey = T.RT_232,
+    AddAttrs = T.RT_325,
     ApplicationType = 16,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
-    FilterTag = T.RT_284,
+    FilterTag = T.RT_282,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Orange.T_Mod_Typhon01_Orange",
     Id = 41461,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1401",
     OpenVersion = 10,
@@ -7238,20 +7230,20 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Typhon01"
   },
   [41462] = {
-    AccessKey = T.RT_234,
-    AddAttrs = T.RT_329,
+    AccessKey = T.RT_232,
+    AddAttrs = T.RT_327,
     ApplicationType = 16,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
-    FilterTag = T.RT_287,
+    FilterTag = T.RT_285,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Orange.T_Mod_Typhon01_Orange",
     Id = 41462,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1402",
     OpenVersion = 10,
@@ -7263,11 +7255,11 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Typhon01"
   },
   [41463] = {
-    AccessKey = T.RT_234,
-    AddAttrs = T.RT_331,
+    AccessKey = T.RT_232,
+    AddAttrs = T.RT_329,
     ApplicationType = 16,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
@@ -7275,16 +7267,16 @@ return ReadOnly("Mod", {
       [1] = "$-#PassiveEffect[1420].Vars.BuffRate*100$%",
       [2] = "$GetModValue(41463,4)*100$%"
     },
-    FilterTag = T.RT_290,
+    FilterTag = T.RT_288,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Orange.T_Mod_Typhon01_Orange",
     Id = 41463,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1403",
     OpenVersion = 10,
-    PassiveEffects = T.RT_332,
+    PassiveEffects = T.RT_330,
     PassiveEffectsDesc = "MOD_DESC_1420",
     Polarity = 1,
     Rarity = 4,
@@ -7294,25 +7286,25 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Typhon01"
   },
   [41464] = {
-    AccessKey = T.RT_234,
+    AccessKey = T.RT_232,
     AddAttrs = T.RT_99,
     ApplicationType = 16,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
-    DescValues = T.RT_292,
-    FilterTag = T.RT_293,
+    DescValues = T.RT_290,
+    FilterTag = T.RT_291,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Orange.T_Mod_Typhon01_Orange",
     Id = 41464,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1404",
     OpenVersion = 10,
-    PassiveEffects = T.RT_294,
+    PassiveEffects = T.RT_292,
     PassiveEffectsDesc = "MOD_DESC_1430",
     Polarity = 1,
     Rarity = 4,
@@ -7322,25 +7314,25 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Typhon01"
   },
   [41465] = {
-    AccessKey = T.RT_234,
+    AccessKey = T.RT_232,
     AddAttrs = T.RT_99,
     ApplicationType = 16,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
-    DescValues = T.RT_295,
-    FilterTag = T.RT_296,
+    DescValues = T.RT_293,
+    FilterTag = T.RT_294,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Orange.T_Mod_Typhon01_Orange",
     Id = 41465,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1405",
     OpenVersion = 10,
-    PassiveEffects = T.RT_297,
+    PassiveEffects = T.RT_295,
     PassiveEffectsDesc = "MOD_DESC_1440",
     Polarity = 1,
     Rarity = 4,
@@ -7350,11 +7342,11 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Typhon01"
   },
   [41711] = {
-    AccessKey = T.RT_333,
-    AddAttrs = T.RT_334,
+    AccessKey = T.RT_331,
+    AddAttrs = T.RT_332,
     ApplicationType = 11,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 11,
     CostChange = 1,
@@ -7366,7 +7358,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Black.T_Mod_Mephisto01_Black",
     Id = 41711,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1711",
     OpenVersion = 10,
@@ -7374,29 +7366,29 @@ return ReadOnly("Mod", {
     Polarity = 1,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_335,
+    RepeatGroup = T.RT_333,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [41712] = {
-    AccessKey = T.RT_333,
-    AddAttrs = T.RT_337,
+    AccessKey = T.RT_331,
+    AddAttrs = T.RT_335,
     ApplicationType = 11,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
     DescValues = {
       [1] = "$math.floor(#Mod[41712].RepeatModLevel)$"
     },
-    FilterTag = T.RT_338,
+    FilterTag = T.RT_336,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Black.T_Mod_Mephisto01_Black",
     Id = 41712,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1712",
     OpenVersion = 10,
@@ -7404,29 +7396,29 @@ return ReadOnly("Mod", {
     Polarity = 2,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_339,
+    RepeatGroup = T.RT_337,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [41713] = {
-    AccessKey = T.RT_333,
-    AddAttrs = T.RT_341,
+    AccessKey = T.RT_331,
+    AddAttrs = T.RT_339,
     ApplicationType = 11,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 12,
     CostChange = 1,
     DescValues = {
       [1] = "$math.floor(#Mod[41713].RepeatModLevel)$"
     },
-    FilterTag = T.RT_342,
+    FilterTag = T.RT_340,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Black.T_Mod_Mephisto01_Black",
     Id = 41713,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1713",
     OpenVersion = 10,
@@ -7434,29 +7426,29 @@ return ReadOnly("Mod", {
     Polarity = 3,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_343,
+    RepeatGroup = T.RT_341,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [41714] = {
-    AccessKey = T.RT_333,
-    AddAttrs = T.RT_346,
+    AccessKey = T.RT_331,
+    AddAttrs = T.RT_344,
     ApplicationType = 11,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 11,
     CostChange = 1,
     DescValues = {
       [1] = "$math.floor(#Mod[41714].RepeatModLevel)$"
     },
-    FilterTag = T.RT_347,
+    FilterTag = T.RT_345,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Black.T_Mod_Mephisto01_Black",
     Id = 41714,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1714",
     OpenVersion = 10,
@@ -7464,91 +7456,91 @@ return ReadOnly("Mod", {
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_348,
+    RepeatGroup = T.RT_346,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [41715] = {
-    AccessKey = T.RT_333,
-    AddAttrs = T.RT_350,
+    AccessKey = T.RT_331,
+    AddAttrs = T.RT_348,
     AddCharModCost = 2.5,
     ApplicationType = 11,
-    ApplySlot = T.RT_217,
-    BreakDown = T.RT_235,
+    ApplySlot = T.RT_215,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
     DescValues = {
       [1] = "$GetModPolarity(41715)$"
     },
-    FilterTag = T.RT_195,
+    FilterTag = T.RT_193,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_FeatheredSnake01_Black.T_Mod_FeatheredSnake01_Black",
     Id = 41715,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1715",
     OpenVersion = 999,
     PassiveEffectsDesc = "MOD_DESC_1710",
     Polarity = 2,
-    PolarityNeedNum = T.RT_351,
+    PolarityNeedNum = T.RT_349,
     Rarity = 4,
     ReleaseVersion = 9990,
-    RepeatGroup = T.RT_352,
+    RepeatGroup = T.RT_350,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_FeatheredSnake01"
   },
   [41716] = {
-    AccessKey = T.RT_333,
-    AddAttrs = T.RT_354,
+    AccessKey = T.RT_331,
+    AddAttrs = T.RT_352,
     AddCharModCost = 2.5,
     ApplicationType = 11,
-    ApplySlot = T.RT_217,
-    BreakDown = T.RT_235,
+    ApplySlot = T.RT_215,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
     DescValues = {
       [1] = "$GetModPolarity(41716)$"
     },
-    FilterTag = T.RT_355,
+    FilterTag = T.RT_353,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_FeatheredSnake01_Black.T_Mod_FeatheredSnake01_Black",
     Id = 41716,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1716",
     OpenVersion = 999,
     PassiveEffectsDesc = "MOD_DESC_1710",
     Polarity = 3,
-    PolarityNeedNum = T.RT_356,
+    PolarityNeedNum = T.RT_354,
     Rarity = 4,
     ReleaseVersion = 9990,
-    RepeatGroup = T.RT_357,
+    RepeatGroup = T.RT_355,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_FeatheredSnake01"
   },
   [41721] = {
-    AccessKey = T.RT_333,
-    AddAttrs = T.RT_358,
+    AccessKey = T.RT_331,
+    AddAttrs = T.RT_356,
     ApplicationType = 12,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 11,
     CostChange = 1,
     DescValues = {
       [1] = "$math.floor(#Mod[41721].RepeatModLevel)$"
     },
-    FilterTag = T.RT_189,
+    FilterTag = T.RT_187,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Blue.T_Mod_Mephisto01_Blue",
     Id = 41721,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1721",
     OpenVersion = 10,
@@ -7556,29 +7548,29 @@ return ReadOnly("Mod", {
     Polarity = 1,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_359,
+    RepeatGroup = T.RT_357,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [41722] = {
-    AccessKey = T.RT_333,
-    AddAttrs = T.RT_361,
+    AccessKey = T.RT_331,
+    AddAttrs = T.RT_359,
     ApplicationType = 12,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 12,
     CostChange = 1,
     DescValues = {
       [1] = "$math.floor(#Mod[41722].RepeatModLevel)$"
     },
-    FilterTag = T.RT_342,
+    FilterTag = T.RT_340,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Blue.T_Mod_Mephisto01_Blue",
     Id = 41722,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1722",
     OpenVersion = 10,
@@ -7586,29 +7578,29 @@ return ReadOnly("Mod", {
     Polarity = 2,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_362,
+    RepeatGroup = T.RT_360,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [41723] = {
-    AccessKey = T.RT_333,
-    AddAttrs = T.RT_364,
+    AccessKey = T.RT_331,
+    AddAttrs = T.RT_362,
     ApplicationType = 12,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 11,
     CostChange = 1,
     DescValues = {
       [1] = "$math.floor(#Mod[41723].RepeatModLevel)$"
     },
-    FilterTag = T.RT_365,
+    FilterTag = T.RT_363,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Blue.T_Mod_Mephisto01_Blue",
     Id = 41723,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1723",
     OpenVersion = 10,
@@ -7616,29 +7608,29 @@ return ReadOnly("Mod", {
     Polarity = 3,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_366,
+    RepeatGroup = T.RT_364,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [41724] = {
-    AccessKey = T.RT_333,
-    AddAttrs = T.RT_368,
+    AccessKey = T.RT_331,
+    AddAttrs = T.RT_366,
     ApplicationType = 12,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 11,
     CostChange = 1,
     DescValues = {
       [1] = "$math.floor(#Mod[41724].RepeatModLevel)$"
     },
-    FilterTag = T.RT_369,
+    FilterTag = T.RT_367,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Blue.T_Mod_Mephisto01_Blue",
     Id = 41724,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1724",
     OpenVersion = 10,
@@ -7646,91 +7638,91 @@ return ReadOnly("Mod", {
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_370,
+    RepeatGroup = T.RT_368,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [41725] = {
-    AccessKey = T.RT_333,
-    AddAttrs = T.RT_354,
+    AccessKey = T.RT_331,
+    AddAttrs = T.RT_352,
     AddCharModCost = 2.5,
     ApplicationType = 12,
-    ApplySlot = T.RT_217,
-    BreakDown = T.RT_235,
+    ApplySlot = T.RT_215,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
     DescValues = {
       [1] = "$GetModPolarity(41725)$"
     },
-    FilterTag = T.RT_355,
+    FilterTag = T.RT_353,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_FeatheredSnake01_Blue.T_Mod_FeatheredSnake01_Blue",
     Id = 41725,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1725",
     OpenVersion = 999,
     PassiveEffectsDesc = "MOD_DESC_1710",
     Polarity = 1,
-    PolarityNeedNum = T.RT_371,
+    PolarityNeedNum = T.RT_369,
     Rarity = 4,
     ReleaseVersion = 9990,
-    RepeatGroup = T.RT_372,
+    RepeatGroup = T.RT_370,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_FeatheredSnake01"
   },
   [41726] = {
-    AccessKey = T.RT_333,
-    AddAttrs = T.RT_374,
+    AccessKey = T.RT_331,
+    AddAttrs = T.RT_372,
     AddCharModCost = 2.5,
     ApplicationType = 12,
-    ApplySlot = T.RT_217,
-    BreakDown = T.RT_235,
+    ApplySlot = T.RT_215,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
     DescValues = {
       [1] = "$GetModPolarity(41726)$"
     },
-    FilterTag = T.RT_192,
+    FilterTag = T.RT_190,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_FeatheredSnake01_Blue.T_Mod_FeatheredSnake01_Blue",
     Id = 41726,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1726",
     OpenVersion = 999,
     PassiveEffectsDesc = "MOD_DESC_1710",
     Polarity = 3,
-    PolarityNeedNum = T.RT_356,
+    PolarityNeedNum = T.RT_354,
     Rarity = 4,
     ReleaseVersion = 9990,
-    RepeatGroup = T.RT_375,
+    RepeatGroup = T.RT_373,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_FeatheredSnake01"
   },
   [41731] = {
-    AccessKey = T.RT_333,
-    AddAttrs = T.RT_377,
+    AccessKey = T.RT_331,
+    AddAttrs = T.RT_375,
     ApplicationType = 13,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 11,
     CostChange = 1,
     DescValues = {
       [1] = "$math.floor(#Mod[41731].RepeatModLevel)$"
     },
-    FilterTag = T.RT_191,
+    FilterTag = T.RT_189,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Red.T_Mod_Mephisto01_Red",
     Id = 41731,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1731",
     OpenVersion = 10,
@@ -7738,29 +7730,29 @@ return ReadOnly("Mod", {
     Polarity = 1,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_378,
+    RepeatGroup = T.RT_376,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [41732] = {
-    AccessKey = T.RT_333,
-    AddAttrs = T.RT_380,
+    AccessKey = T.RT_331,
+    AddAttrs = T.RT_378,
     ApplicationType = 13,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 13,
     CostChange = 1,
     DescValues = {
       [1] = "$math.floor(#Mod[41732].RepeatModLevel)$"
     },
-    FilterTag = T.RT_381,
+    FilterTag = T.RT_379,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Red.T_Mod_Mephisto01_Red",
     Id = 41732,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1732",
     OpenVersion = 10,
@@ -7768,29 +7760,29 @@ return ReadOnly("Mod", {
     Polarity = 2,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_382,
+    RepeatGroup = T.RT_380,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [41733] = {
-    AccessKey = T.RT_333,
-    AddAttrs = T.RT_384,
+    AccessKey = T.RT_331,
+    AddAttrs = T.RT_382,
     ApplicationType = 13,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 11,
     CostChange = 1,
     DescValues = {
       [1] = "$math.floor(#Mod[41733].RepeatModLevel)$"
     },
-    FilterTag = T.RT_365,
+    FilterTag = T.RT_363,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Red.T_Mod_Mephisto01_Red",
     Id = 41733,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1733",
     OpenVersion = 10,
@@ -7798,29 +7790,29 @@ return ReadOnly("Mod", {
     Polarity = 3,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_385,
+    RepeatGroup = T.RT_383,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [41734] = {
-    AccessKey = T.RT_333,
-    AddAttrs = T.RT_388,
+    AccessKey = T.RT_331,
+    AddAttrs = T.RT_386,
     ApplicationType = 13,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 12,
     CostChange = 1,
     DescValues = {
       [1] = "$math.floor(#Mod[41734].RepeatModLevel)$"
     },
-    FilterTag = T.RT_389,
+    FilterTag = T.RT_387,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Red.T_Mod_Mephisto01_Red",
     Id = 41734,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1734",
     OpenVersion = 10,
@@ -7828,91 +7820,91 @@ return ReadOnly("Mod", {
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_390,
+    RepeatGroup = T.RT_388,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [41735] = {
-    AccessKey = T.RT_333,
-    AddAttrs = T.RT_374,
+    AccessKey = T.RT_331,
+    AddAttrs = T.RT_372,
     AddCharModCost = 2.5,
     ApplicationType = 13,
-    ApplySlot = T.RT_217,
-    BreakDown = T.RT_235,
+    ApplySlot = T.RT_215,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
     DescValues = {
       [1] = "$GetModPolarity(41735)$"
     },
-    FilterTag = T.RT_192,
+    FilterTag = T.RT_190,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_FeatheredSnake01_Red.T_Mod_FeatheredSnake01_Red",
     Id = 41735,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1735",
     OpenVersion = 999,
     PassiveEffectsDesc = "MOD_DESC_1710",
     Polarity = 2,
-    PolarityNeedNum = T.RT_351,
+    PolarityNeedNum = T.RT_349,
     Rarity = 4,
     ReleaseVersion = 9990,
-    RepeatGroup = T.RT_391,
+    RepeatGroup = T.RT_389,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_FeatheredSnake01"
   },
   [41736] = {
-    AccessKey = T.RT_333,
-    AddAttrs = T.RT_393,
+    AccessKey = T.RT_331,
+    AddAttrs = T.RT_391,
     AddCharModCost = 2.5,
     ApplicationType = 13,
-    ApplySlot = T.RT_217,
-    BreakDown = T.RT_235,
+    ApplySlot = T.RT_215,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
     DescValues = {
       [1] = "$GetModPolarity(41736)$"
     },
-    FilterTag = T.RT_194,
+    FilterTag = T.RT_192,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_FeatheredSnake01_Red.T_Mod_FeatheredSnake01_Red",
     Id = 41736,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1736",
     OpenVersion = 999,
     PassiveEffectsDesc = "MOD_DESC_1710",
     Polarity = 4,
-    PolarityNeedNum = T.RT_394,
+    PolarityNeedNum = T.RT_392,
     Rarity = 4,
     ReleaseVersion = 9990,
-    RepeatGroup = T.RT_395,
+    RepeatGroup = T.RT_393,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_FeatheredSnake01"
   },
   [41741] = {
-    AccessKey = T.RT_333,
-    AddAttrs = T.RT_396,
+    AccessKey = T.RT_331,
+    AddAttrs = T.RT_394,
     ApplicationType = 14,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 11,
     CostChange = 1,
     DescValues = {
       [1] = "$math.floor(#Mod[41741].RepeatModLevel)$"
     },
-    FilterTag = T.RT_189,
+    FilterTag = T.RT_187,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Purple.T_Mod_Mephisto01_Purple",
     Id = 41741,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1741",
     OpenVersion = 10,
@@ -7920,29 +7912,29 @@ return ReadOnly("Mod", {
     Polarity = 1,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_397,
+    RepeatGroup = T.RT_395,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [41742] = {
-    AccessKey = T.RT_333,
-    AddAttrs = T.RT_399,
+    AccessKey = T.RT_331,
+    AddAttrs = T.RT_397,
     ApplicationType = 14,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
     DescValues = {
       [1] = "$math.floor(#Mod[41742].RepeatModLevel)$"
     },
-    FilterTag = T.RT_338,
+    FilterTag = T.RT_336,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Purple.T_Mod_Mephisto01_Purple",
     Id = 41742,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1742",
     OpenVersion = 10,
@@ -7950,29 +7942,29 @@ return ReadOnly("Mod", {
     Polarity = 2,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_400,
+    RepeatGroup = T.RT_398,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [41743] = {
-    AccessKey = T.RT_333,
-    AddAttrs = T.RT_401,
+    AccessKey = T.RT_331,
+    AddAttrs = T.RT_399,
     ApplicationType = 14,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 13,
     CostChange = 1,
     DescValues = {
       [1] = "$math.floor(#Mod[41743].RepeatModLevel)$"
     },
-    FilterTag = T.RT_204,
+    FilterTag = T.RT_202,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Purple.T_Mod_Mephisto01_Purple",
     Id = 41743,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1743",
     OpenVersion = 10,
@@ -7980,29 +7972,29 @@ return ReadOnly("Mod", {
     Polarity = 3,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_402,
+    RepeatGroup = T.RT_400,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [41744] = {
-    AccessKey = T.RT_333,
-    AddAttrs = T.RT_405,
+    AccessKey = T.RT_331,
+    AddAttrs = T.RT_403,
     ApplicationType = 14,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 13,
     CostChange = 1,
     DescValues = {
       [1] = "$math.floor(#Mod[41744].RepeatModLevel)$"
     },
-    FilterTag = T.RT_406,
+    FilterTag = T.RT_404,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Purple.T_Mod_Mephisto01_Purple",
     Id = 41744,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1744",
     OpenVersion = 10,
@@ -8010,91 +8002,91 @@ return ReadOnly("Mod", {
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_407,
+    RepeatGroup = T.RT_405,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [41745] = {
-    AccessKey = T.RT_333,
+    AccessKey = T.RT_54,
     AddAttrs = T.RT_29,
     AddCharModCost = 2.5,
     ApplicationType = 14,
-    ApplySlot = T.RT_217,
-    BreakDown = T.RT_235,
+    ApplySlot = T.RT_215,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
     DescValues = {
       [1] = "$GetModPolarity(41745)$"
     },
-    FilterTag = T.RT_194,
+    FilterTag = T.RT_192,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_FeatheredSnake01_Purple.T_Mod_FeatheredSnake01_Purple",
     Id = 41745,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1745",
     OpenVersion = 12,
     PassiveEffectsDesc = "MOD_DESC_1710",
     Polarity = 1,
-    PolarityNeedNum = T.RT_371,
+    PolarityNeedNum = T.RT_369,
     Rarity = 4,
     ReleaseVersion = 120,
-    RepeatGroup = T.RT_408,
+    RepeatGroup = T.RT_406,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_FeatheredSnake01"
   },
   [41746] = {
-    AccessKey = T.RT_333,
+    AccessKey = T.RT_54,
     AddAttrs = T.RT_37,
     AddCharModCost = 2.5,
     ApplicationType = 14,
-    ApplySlot = T.RT_217,
-    BreakDown = T.RT_235,
+    ApplySlot = T.RT_215,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
     DescValues = {
       [1] = "$GetModPolarity(41746)$"
     },
-    FilterTag = T.RT_192,
+    FilterTag = T.RT_190,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_FeatheredSnake01_Purple.T_Mod_FeatheredSnake01_Purple",
     Id = 41746,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1746",
     OpenVersion = 12,
     PassiveEffectsDesc = "MOD_DESC_1710",
     Polarity = 2,
-    PolarityNeedNum = T.RT_351,
+    PolarityNeedNum = T.RT_349,
     Rarity = 4,
     ReleaseVersion = 120,
-    RepeatGroup = T.RT_409,
+    RepeatGroup = T.RT_407,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_FeatheredSnake01"
   },
   [41751] = {
-    AccessKey = T.RT_333,
-    AddAttrs = T.RT_411,
+    AccessKey = T.RT_331,
+    AddAttrs = T.RT_409,
     ApplicationType = 15,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 11,
     CostChange = 1,
     DescValues = {
       [1] = "$math.floor(#Mod[41751].RepeatModLevel)$"
     },
-    FilterTag = T.RT_191,
+    FilterTag = T.RT_189,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Green.T_Mod_Mephisto01_Green",
     Id = 41751,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1751",
     OpenVersion = 10,
@@ -8102,29 +8094,29 @@ return ReadOnly("Mod", {
     Polarity = 1,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_412,
+    RepeatGroup = T.RT_410,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [41752] = {
-    AccessKey = T.RT_333,
-    AddAttrs = T.RT_414,
+    AccessKey = T.RT_331,
+    AddAttrs = T.RT_412,
     ApplicationType = 15,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
     DescValues = {
       [1] = "$math.floor(#Mod[41752].RepeatModLevel)$"
     },
-    FilterTag = T.RT_415,
+    FilterTag = T.RT_413,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Green.T_Mod_Mephisto01_Green",
     Id = 41752,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1752",
     OpenVersion = 10,
@@ -8132,29 +8124,29 @@ return ReadOnly("Mod", {
     Polarity = 2,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_416,
+    RepeatGroup = T.RT_414,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [41753] = {
-    AccessKey = T.RT_333,
-    AddAttrs = T.RT_417,
+    AccessKey = T.RT_331,
+    AddAttrs = T.RT_415,
     ApplicationType = 15,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 13,
     CostChange = 1,
     DescValues = {
       [1] = "$math.floor(#Mod[41753].RepeatModLevel)$"
     },
-    FilterTag = T.RT_204,
+    FilterTag = T.RT_202,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Green.T_Mod_Mephisto01_Green",
     Id = 41753,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1753",
     OpenVersion = 10,
@@ -8162,29 +8154,29 @@ return ReadOnly("Mod", {
     Polarity = 3,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_418,
+    RepeatGroup = T.RT_416,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [41754] = {
-    AccessKey = T.RT_333,
-    AddAttrs = T.RT_421,
+    AccessKey = T.RT_331,
+    AddAttrs = T.RT_419,
     ApplicationType = 15,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 11,
     CostChange = 1,
     DescValues = {
       [1] = "$math.floor(#Mod[41754].RepeatModLevel)$"
     },
-    FilterTag = T.RT_422,
+    FilterTag = T.RT_420,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Green.T_Mod_Mephisto01_Green",
     Id = 41754,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1754",
     OpenVersion = 10,
@@ -8192,79 +8184,79 @@ return ReadOnly("Mod", {
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_423,
+    RepeatGroup = T.RT_421,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [41755] = {
-    AccessKey = T.RT_333,
-    AddAttrs = T.RT_425,
+    AccessKey = T.RT_54,
+    AddAttrs = T.RT_423,
     AddCharModCost = 2.5,
     ApplicationType = 15,
-    ApplySlot = T.RT_217,
-    BreakDown = T.RT_235,
+    ApplySlot = T.RT_215,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 7,
     CostChange = 1,
     DescValues = {
       [1] = "$GetModPolarity(41755)$"
     },
-    FilterTag = T.RT_426,
+    FilterTag = T.RT_424,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_FeatheredSnake01_Green.T_Mod_FeatheredSnake01_Green",
     Id = 41755,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1755",
     OpenVersion = 11,
     PassiveEffectsDesc = "MOD_DESC_1710",
     Polarity = 3,
-    PolarityNeedNum = T.RT_356,
+    PolarityNeedNum = T.RT_354,
     Rarity = 4,
     ReleaseVersion = 110,
-    RepeatGroup = T.RT_427,
+    RepeatGroup = T.RT_425,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_FeatheredSnake01"
   },
   [41756] = {
-    AccessKey = T.RT_333,
+    AccessKey = T.RT_54,
     AddAttrs = T.RT_31,
     AddCharModCost = 2.5,
     ApplicationType = 15,
-    ApplySlot = T.RT_217,
-    BreakDown = T.RT_235,
+    ApplySlot = T.RT_215,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 7,
     CostChange = 1,
     DescValues = {
       [1] = "$GetModPolarity(41756)$"
     },
-    FilterTag = T.RT_195,
+    FilterTag = T.RT_193,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_FeatheredSnake01_Green.T_Mod_FeatheredSnake01_Green",
     Id = 41756,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1756",
     OpenVersion = 11,
     PassiveEffectsDesc = "MOD_DESC_1710",
     Polarity = 4,
-    PolarityNeedNum = T.RT_394,
+    PolarityNeedNum = T.RT_392,
     Rarity = 4,
     ReleaseVersion = 110,
-    RepeatGroup = T.RT_428,
+    RepeatGroup = T.RT_426,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_FeatheredSnake01"
   },
   [41761] = {
-    AccessKey = T.RT_333,
-    AddAttrs = T.RT_429,
+    AccessKey = T.RT_331,
+    AddAttrs = T.RT_427,
     ApplicationType = 16,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 11,
     CostChange = 1,
@@ -8276,7 +8268,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Orange.T_Mod_Mephisto01_Orange",
     Id = 41761,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1761",
     OpenVersion = 10,
@@ -8284,29 +8276,29 @@ return ReadOnly("Mod", {
     Polarity = 1,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_430,
+    RepeatGroup = T.RT_428,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [41762] = {
-    AccessKey = T.RT_333,
-    AddAttrs = T.RT_432,
+    AccessKey = T.RT_331,
+    AddAttrs = T.RT_430,
     ApplicationType = 16,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
     DescValues = {
       [1] = "$math.floor(#Mod[41762].RepeatModLevel)$"
     },
-    FilterTag = T.RT_415,
+    FilterTag = T.RT_413,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Orange.T_Mod_Mephisto01_Orange",
     Id = 41762,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1762",
     OpenVersion = 10,
@@ -8314,29 +8306,29 @@ return ReadOnly("Mod", {
     Polarity = 2,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_433,
+    RepeatGroup = T.RT_431,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [41763] = {
-    AccessKey = T.RT_333,
-    AddAttrs = T.RT_435,
+    AccessKey = T.RT_331,
+    AddAttrs = T.RT_433,
     ApplicationType = 16,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 13,
     CostChange = 1,
     DescValues = {
       [1] = "$math.floor(#Mod[41763].RepeatModLevel)$"
     },
-    FilterTag = T.RT_381,
+    FilterTag = T.RT_379,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Orange.T_Mod_Mephisto01_Orange",
     Id = 41763,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1763",
     OpenVersion = 10,
@@ -8344,29 +8336,29 @@ return ReadOnly("Mod", {
     Polarity = 3,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_436,
+    RepeatGroup = T.RT_434,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [41764] = {
-    AccessKey = T.RT_333,
-    AddAttrs = T.RT_438,
+    AccessKey = T.RT_331,
+    AddAttrs = T.RT_436,
     ApplicationType = 16,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 13,
     CostChange = 1,
     DescValues = {
       [1] = "$math.floor(#Mod[41764].RepeatModLevel)$"
     },
-    FilterTag = T.RT_439,
+    FilterTag = T.RT_437,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Orange.T_Mod_Mephisto01_Orange",
     Id = 41764,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1764",
     OpenVersion = 10,
@@ -8374,49 +8366,49 @@ return ReadOnly("Mod", {
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_440,
+    RepeatGroup = T.RT_438,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [41765] = {
-    AccessKey = T.RT_333,
-    AddAttrs = T.RT_354,
+    AccessKey = T.RT_331,
+    AddAttrs = T.RT_352,
     AddCharModCost = 2.5,
     ApplicationType = 16,
-    ApplySlot = T.RT_217,
-    BreakDown = T.RT_235,
+    ApplySlot = T.RT_215,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
     DescValues = {
       [1] = "$GetModPolarity(41765)$"
     },
-    FilterTag = T.RT_355,
+    FilterTag = T.RT_353,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_FeatheredSnake01.T_Mod_FeatheredSnake01",
     Id = 41765,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1765",
     OpenVersion = 13,
     PassiveEffectsDesc = "MOD_DESC_1710",
     Polarity = 1,
-    PolarityNeedNum = T.RT_371,
+    PolarityNeedNum = T.RT_369,
     Rarity = 4,
     ReleaseVersion = 130,
-    RepeatGroup = T.RT_441,
+    RepeatGroup = T.RT_439,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_FeatheredSnake01"
   },
   [41766] = {
-    AccessKey = T.RT_333,
-    AddAttrs = T.RT_443,
+    AccessKey = T.RT_331,
+    AddAttrs = T.RT_441,
     AddCharModCost = 2.5,
     ApplicationType = 16,
-    ApplySlot = T.RT_217,
-    BreakDown = T.RT_235,
+    ApplySlot = T.RT_215,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
@@ -8424,22 +8416,22 @@ return ReadOnly("Mod", {
       [1] = "$GetModPolarity(41766)$",
       [2] = "$#Mod[41766].AddAttrs[1].Value*100$%"
     },
-    FilterTag = T.RT_444,
+    FilterTag = T.RT_442,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_FeatheredSnake01.T_Mod_FeatheredSnake01",
     Id = 41766,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1766",
     OpenVersion = 13,
-    PassiveEffects = T.RT_445,
+    PassiveEffects = T.RT_443,
     PassiveEffectsDesc = "MOD_DESC_1720",
     Polarity = 3,
-    PolarityNeedNum = T.RT_356,
+    PolarityNeedNum = T.RT_354,
     Rarity = 4,
     ReleaseVersion = 130,
-    RepeatGroup = T.RT_446,
+    RepeatGroup = T.RT_444,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_FeatheredSnake01"
   },
@@ -8447,26 +8439,26 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
-    DescValues = T.RT_447,
-    FilterTag = T.RT_245,
+    DescValues = T.RT_445,
+    FilterTag = T.RT_243,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Jormungand01.T_Mod_Jormungand01",
     Id = 41801,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1801",
     OpenVersion = 10,
-    PassiveEffects = T.RT_448,
+    PassiveEffects = T.RT_446,
     PassiveEffectsDesc = "MOD_DESC_1801",
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_449,
+    RepeatGroup = T.RT_447,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Jormungand01"
   },
@@ -8474,26 +8466,26 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
-    DescValues = T.RT_447,
-    FilterTag = T.RT_245,
+    DescValues = T.RT_445,
+    FilterTag = T.RT_243,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Jormungand01.T_Mod_Jormungand01",
     Id = 41802,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1802",
     OpenVersion = 10,
-    PassiveEffects = T.RT_450,
+    PassiveEffects = T.RT_448,
     PassiveEffectsDesc = "MOD_DESC_1802",
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_449,
+    RepeatGroup = T.RT_447,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Jormungand01"
   },
@@ -8501,26 +8493,26 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
-    DescValues = T.RT_447,
-    FilterTag = T.RT_245,
+    DescValues = T.RT_445,
+    FilterTag = T.RT_243,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Jormungand01.T_Mod_Jormungand01",
     Id = 41803,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1803",
     OpenVersion = 10,
-    PassiveEffects = T.RT_451,
+    PassiveEffects = T.RT_449,
     PassiveEffectsDesc = "MOD_DESC_1803",
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_449,
+    RepeatGroup = T.RT_447,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Jormungand01"
   },
@@ -8528,26 +8520,26 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
-    DescValues = T.RT_447,
-    FilterTag = T.RT_245,
+    DescValues = T.RT_445,
+    FilterTag = T.RT_243,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Jormungand01.T_Mod_Jormungand01",
     Id = 41804,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1804",
     OpenVersion = 10,
-    PassiveEffects = T.RT_452,
+    PassiveEffects = T.RT_450,
     PassiveEffectsDesc = "MOD_DESC_1804",
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_449,
+    RepeatGroup = T.RT_447,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Jormungand01"
   },
@@ -8555,26 +8547,26 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
-    DescValues = T.RT_447,
-    FilterTag = T.RT_245,
+    DescValues = T.RT_445,
+    FilterTag = T.RT_243,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Jormungand01.T_Mod_Jormungand01",
     Id = 41805,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1805",
     OpenVersion = 10,
-    PassiveEffects = T.RT_453,
+    PassiveEffects = T.RT_451,
     PassiveEffectsDesc = "MOD_DESC_1805",
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_449,
+    RepeatGroup = T.RT_447,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Jormungand01"
   },
@@ -8582,26 +8574,26 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
-    DescValues = T.RT_447,
-    FilterTag = T.RT_245,
+    DescValues = T.RT_445,
+    FilterTag = T.RT_243,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Jormungand01.T_Mod_Jormungand01",
     Id = 41806,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1806",
     OpenVersion = 10,
-    PassiveEffects = T.RT_454,
+    PassiveEffects = T.RT_452,
     PassiveEffectsDesc = "MOD_DESC_1806",
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_449,
+    RepeatGroup = T.RT_447,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Jormungand01"
   },
@@ -8609,26 +8601,26 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
-    DescValues = T.RT_447,
-    FilterTag = T.RT_245,
+    DescValues = T.RT_445,
+    FilterTag = T.RT_243,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Jormungand01.T_Mod_Jormungand01",
     Id = 41807,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1807",
     OpenVersion = 10,
-    PassiveEffects = T.RT_455,
+    PassiveEffects = T.RT_453,
     PassiveEffectsDesc = "MOD_DESC_1807",
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_449,
+    RepeatGroup = T.RT_447,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Jormungand01"
   },
@@ -8636,26 +8628,26 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
-    DescValues = T.RT_447,
-    FilterTag = T.RT_245,
+    DescValues = T.RT_445,
+    FilterTag = T.RT_243,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Jormungand01.T_Mod_Jormungand01",
     Id = 41808,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1808",
     OpenVersion = 10,
-    PassiveEffects = T.RT_456,
+    PassiveEffects = T.RT_454,
     PassiveEffectsDesc = "MOD_DESC_1808",
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_449,
+    RepeatGroup = T.RT_447,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Jormungand01"
   },
@@ -8663,26 +8655,26 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
-    DescValues = T.RT_447,
-    FilterTag = T.RT_245,
+    DescValues = T.RT_445,
+    FilterTag = T.RT_243,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Jormungand01.T_Mod_Jormungand01",
     Id = 41809,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1809",
     OpenVersion = 10,
-    PassiveEffects = T.RT_457,
+    PassiveEffects = T.RT_455,
     PassiveEffectsDesc = "MOD_DESC_1809",
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_449,
+    RepeatGroup = T.RT_447,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Jormungand01"
   },
@@ -8690,26 +8682,26 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
-    DescValues = T.RT_447,
-    FilterTag = T.RT_245,
+    DescValues = T.RT_445,
+    FilterTag = T.RT_243,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Jormungand01.T_Mod_Jormungand01",
     Id = 41810,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1810",
     OpenVersion = 10,
-    PassiveEffects = T.RT_458,
+    PassiveEffects = T.RT_456,
     PassiveEffectsDesc = "MOD_DESC_1810",
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_449,
+    RepeatGroup = T.RT_447,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Jormungand01"
   },
@@ -8717,26 +8709,26 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
-    DescValues = T.RT_447,
-    FilterTag = T.RT_245,
+    DescValues = T.RT_445,
+    FilterTag = T.RT_243,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Jormungand01.T_Mod_Jormungand01",
     Id = 41811,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1811",
     OpenVersion = 10,
-    PassiveEffects = T.RT_459,
+    PassiveEffects = T.RT_457,
     PassiveEffectsDesc = "MOD_DESC_1811",
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_449,
+    RepeatGroup = T.RT_447,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Jormungand01"
   },
@@ -8744,26 +8736,26 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
-    DescValues = T.RT_447,
-    FilterTag = T.RT_245,
+    DescValues = T.RT_445,
+    FilterTag = T.RT_243,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Jormungand01.T_Mod_Jormungand01",
     Id = 41812,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1812",
     OpenVersion = 10,
-    PassiveEffects = T.RT_460,
+    PassiveEffects = T.RT_458,
     PassiveEffectsDesc = "MOD_DESC_1812",
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_449,
+    RepeatGroup = T.RT_447,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Jormungand01"
   },
@@ -8772,26 +8764,26 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_37,
     ApplicationType = 11,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
-    DescValues = T.RT_461,
-    FilterTag = T.RT_462,
+    DescValues = T.RT_459,
+    FilterTag = T.RT_460,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Anubis01_Purple.T_Mod_Anubis01_Purple",
     Id = 41911,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1911",
     OpenVersion = 10,
-    PassiveEffects = T.RT_463,
+    PassiveEffects = T.RT_461,
     PassiveEffectsDesc = "MOD_DESC_1911",
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_464,
+    RepeatGroup = T.RT_462,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Anubis01"
   },
@@ -8800,26 +8792,26 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_37,
     ApplicationType = 12,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
-    DescValues = T.RT_465,
-    FilterTag = T.RT_466,
+    DescValues = T.RT_463,
+    FilterTag = T.RT_464,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Bahamut01.T_Mod_Bahamut01",
     Id = 41921,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1921",
     OpenVersion = 10,
-    PassiveEffects = T.RT_467,
+    PassiveEffects = T.RT_465,
     PassiveEffectsDesc = "MOD_DESC_1921",
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_464,
+    RepeatGroup = T.RT_462,
     Sound = "SOUND_ITEM_MOD",
     SummonInherit = 1,
     TypeName = "MOD_Type_Name_Bahamut01"
@@ -8829,26 +8821,26 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_37,
     ApplicationType = 12,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
-    DescValues = T.RT_468,
-    FilterTag = T.RT_469,
+    DescValues = T.RT_466,
+    FilterTag = T.RT_467,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Bahamut01.T_Mod_Bahamut01",
     Id = 41922,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1922",
     OpenVersion = 10,
-    PassiveEffects = T.RT_470,
+    PassiveEffects = T.RT_468,
     PassiveEffectsDesc = "MOD_DESC_1922",
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_464,
+    RepeatGroup = T.RT_462,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Bahamut01"
   },
@@ -8857,26 +8849,26 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_37,
     ApplicationType = 13,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
-    DescValues = T.RT_471,
-    FilterTag = T.RT_469,
+    DescValues = T.RT_469,
+    FilterTag = T.RT_467,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Ifrit01.T_Mod_Ifrit01",
     Id = 41931,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1931",
     OpenVersion = 10,
-    PassiveEffects = T.RT_472,
+    PassiveEffects = T.RT_470,
     PassiveEffectsDesc = "MOD_DESC_1931",
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_464,
+    RepeatGroup = T.RT_462,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Ifrit01"
   },
@@ -8885,26 +8877,26 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_37,
     ApplicationType = 14,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
-    DescValues = T.RT_473,
-    FilterTag = T.RT_474,
+    DescValues = T.RT_471,
+    FilterTag = T.RT_472,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Summanus01.T_Mod_Summanus01",
     Id = 41941,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1941",
     OpenVersion = 10,
-    PassiveEffects = T.RT_475,
+    PassiveEffects = T.RT_473,
     PassiveEffectsDesc = "MOD_DESC_1941",
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_464,
+    RepeatGroup = T.RT_462,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Summanus01"
   },
@@ -8913,26 +8905,26 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_37,
     ApplicationType = 15,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
-    DescValues = T.RT_476,
-    FilterTag = T.RT_477,
+    DescValues = T.RT_474,
+    FilterTag = T.RT_475,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Hastur01.T_Mod_Hastur01",
     Id = 41951,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1951",
     OpenVersion = 10,
-    PassiveEffects = T.RT_478,
+    PassiveEffects = T.RT_476,
     PassiveEffectsDesc = "MOD_DESC_1951",
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_464,
+    RepeatGroup = T.RT_462,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Hastur01"
   },
@@ -8941,26 +8933,26 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_31,
     ApplicationType = 15,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
-    DescValues = T.RT_479,
-    FilterTag = T.RT_480,
+    DescValues = T.RT_477,
+    FilterTag = T.RT_478,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Hastur01.T_Mod_Hastur01",
     Id = 41952,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1952",
     OpenVersion = 10,
-    PassiveEffects = T.RT_481,
+    PassiveEffects = T.RT_479,
     PassiveEffectsDesc = "MOD_DESC_1952",
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_464,
+    RepeatGroup = T.RT_462,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Hastur01"
   },
@@ -8969,26 +8961,26 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_31,
     ApplicationType = 16,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
-    DescValues = T.RT_482,
-    FilterTag = T.RT_483,
+    DescValues = T.RT_480,
+    FilterTag = T.RT_481,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Yatagarasu01.T_Mod_Yatagarasu01",
     Id = 41961,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1961",
     OpenVersion = 10,
-    PassiveEffects = T.RT_484,
+    PassiveEffects = T.RT_482,
     PassiveEffectsDesc = "MOD_DESC_1961",
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_464,
+    RepeatGroup = T.RT_462,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Yatagarasu01"
   },
@@ -8997,34 +8989,34 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_31,
     ApplicationType = 16,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 19,
     CostChange = 1,
-    DescValues = T.RT_485,
-    FilterTag = T.RT_486,
+    DescValues = T.RT_483,
+    FilterTag = T.RT_484,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Yatagarasu01.T_Mod_Yatagarasu01",
     Id = 41962,
     MaxLevel = 5,
-    ModConvert = T.RT_258,
+    ModConvert = T.RT_256,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1962",
     OpenVersion = 10,
-    PassiveEffects = T.RT_487,
+    PassiveEffects = T.RT_485,
     PassiveEffectsDesc = "MOD_DESC_1962",
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_464,
+    RepeatGroup = T.RT_462,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Yatagarasu01"
   },
   [42001] = {
-    AccessKey = T.RT_188,
+    AccessKey = T.RT_186,
     AddAttrs = T.RT_15,
     ApplicationType = 2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 5,
     CostChange = 1,
@@ -9033,7 +9025,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Cerberus01.T_Mod_Cerberus01",
     Id = 42001,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_2001",
     OpenVersion = 10,
@@ -9045,10 +9037,10 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Cerberus01"
   },
   [42002] = {
-    AccessKey = T.RT_188,
+    AccessKey = T.RT_186,
     AddAttrs = T.RT_20,
     ApplicationType = 2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 12,
     CostChange = 1,
@@ -9057,7 +9049,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Cerberus01.T_Mod_Cerberus01",
     Id = 42002,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_2002",
     OpenVersion = 10,
@@ -9069,10 +9061,10 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Cerberus01"
   },
   [42003] = {
-    AccessKey = T.RT_188,
+    AccessKey = T.RT_186,
     AddAttrs = T.RT_22,
     ApplicationType = 2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 9,
     CostChange = 1,
@@ -9081,7 +9073,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Cerberus01.T_Mod_Cerberus01",
     Id = 42003,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_2003",
     OpenVersion = 10,
@@ -9093,10 +9085,10 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Cerberus01"
   },
   [42006] = {
-    AccessKey = T.RT_188,
+    AccessKey = T.RT_186,
     AddAttrs = T.RT_18,
     ApplicationType = 2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 7,
     CostChange = 1,
@@ -9105,7 +9097,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Cerberus01.T_Mod_Cerberus01",
     Id = 42006,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_2006",
     OpenVersion = 10,
@@ -9119,11 +9111,11 @@ return ReadOnly("Mod", {
   [42203] = {
     AccessKey = T.RT_54,
     AddAttrs = {
-      [1] = T.RT_222,
-      [2] = T.RT_149
+      [1] = T.RT_220,
+      [2] = T.RT_147
     },
     ApplicationType = 2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 14,
     CostChange = 1,
@@ -9135,7 +9127,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fenrir01.T_Mod_Fenrir01",
     Id = 42203,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_2203",
     OpenVersion = 10,
@@ -9149,7 +9141,7 @@ return ReadOnly("Mod", {
   [42311] = {
     AccessKey = T.RT_54,
     ApplicationType = 2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 15,
     CostChange = 1,
@@ -9158,28 +9150,28 @@ return ReadOnly("Mod", {
       [2] = "$#Buff[2311].AddAttrs[1].Value*100$%",
       [3] = "$math.floor(#Buff[2311].MaxLayer)$"
     },
-    FilterTag = T.RT_488,
+    FilterTag = T.RT_486,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fenrir01.T_Mod_Fenrir01",
     Id = 42311,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_2311",
     OpenVersion = 10,
-    PassiveEffects = T.RT_489,
+    PassiveEffects = T.RT_487,
     PassiveEffectsDesc = "MOD_DESC_2311",
     Polarity = 3,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_489,
+    RepeatGroup = T.RT_487,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Fenrir01"
   },
   [42312] = {
     AccessKey = T.RT_54,
     ApplicationType = 2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
@@ -9195,23 +9187,23 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fenrir01.T_Mod_Fenrir01",
     Id = 42312,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_2312",
     OpenVersion = 10,
-    PassiveEffects = T.RT_490,
+    PassiveEffects = T.RT_488,
     PassiveEffectsDesc = "MOD_DESC_2312",
     Polarity = 3,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_490,
+    RepeatGroup = T.RT_488,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Fenrir01"
   },
   [42321] = {
     AccessKey = T.RT_54,
     ApplicationType = 2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 9,
     CostChange = 1,
@@ -9220,28 +9212,28 @@ return ReadOnly("Mod", {
       [2] = "$#Buff[2321].AddAttrs[1].Value*100$%",
       [3] = "$math.floor(#Buff[2321].MaxLayer)$"
     },
-    FilterTag = T.RT_491,
+    FilterTag = T.RT_489,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fenrir01.T_Mod_Fenrir01",
     Id = 42321,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_2321",
     OpenVersion = 10,
-    PassiveEffects = T.RT_492,
+    PassiveEffects = T.RT_490,
     PassiveEffectsDesc = "MOD_DESC_2321",
     Polarity = 3,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_492,
+    RepeatGroup = T.RT_490,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Fenrir01"
   },
   [42322] = {
     AccessKey = T.RT_54,
     ApplicationType = 2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 6,
     CostChange = 1,
@@ -9258,35 +9250,35 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fenrir01.T_Mod_Fenrir01",
     Id = 42322,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_2322",
     OpenVersion = 10,
-    PassiveEffects = T.RT_493,
+    PassiveEffects = T.RT_491,
     PassiveEffectsDesc = "MOD_DESC_2322",
     Polarity = 3,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_493,
+    RepeatGroup = T.RT_491,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Fenrir01"
   },
   [42401] = {
     AccessKey = T.RT_54,
     AddAttrs = {
-      [1] = T.RT_494
+      [1] = T.RT_492
     },
     ApplicationType = 2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 12,
     CostChange = 1,
-    FilterTag = T.RT_495,
+    FilterTag = T.RT_493,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fenrir01.T_Mod_Fenrir01",
     Id = 42401,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_2401",
     OpenVersion = 10,
@@ -9301,27 +9293,27 @@ return ReadOnly("Mod", {
   [42403] = {
     AccessKey = T.RT_54,
     AddAttrs = {
-      [1] = T.RT_496
+      [1] = T.RT_494
     },
     ApplicationType = 2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 12,
     CostChange = 1,
-    FilterTag = T.RT_497,
+    FilterTag = T.RT_495,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fenrir01.T_Mod_Fenrir01",
     Id = 42403,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_2403",
     OpenVersion = 10,
-    PassiveEffects = T.RT_498,
+    PassiveEffects = T.RT_496,
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_498,
+    RepeatGroup = T.RT_496,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Fenrir01"
   },
@@ -9334,16 +9326,16 @@ return ReadOnly("Mod", {
       }
     },
     ApplicationType = 2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 12,
     CostChange = 1,
-    FilterTag = T.RT_495,
+    FilterTag = T.RT_493,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fenrir01.T_Mod_Fenrir01",
     Id = 42411,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_2411",
     OpenVersion = 10,
@@ -9363,16 +9355,16 @@ return ReadOnly("Mod", {
       }
     },
     ApplicationType = 2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 12,
     CostChange = 1,
-    FilterTag = T.RT_499,
+    FilterTag = T.RT_497,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fenrir01.T_Mod_Fenrir01",
     Id = 42412,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_2412",
     OpenVersion = 10,
@@ -9392,16 +9384,16 @@ return ReadOnly("Mod", {
       }
     },
     ApplicationType = 2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 12,
     CostChange = 1,
-    FilterTag = T.RT_497,
+    FilterTag = T.RT_495,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fenrir01.T_Mod_Fenrir01",
     Id = 42413,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_2413",
     OpenVersion = 10,
@@ -9415,7 +9407,7 @@ return ReadOnly("Mod", {
   [42421] = {
     AccessKey = T.RT_54,
     ApplicationType = 2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
@@ -9431,149 +9423,149 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fenrir01.T_Mod_Fenrir01",
     Id = 42421,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_2421",
     OpenVersion = 10,
-    PassiveEffects = T.RT_500,
+    PassiveEffects = T.RT_498,
     PassiveEffectsDesc = "MOD_DESC_2421",
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_500,
+    RepeatGroup = T.RT_498,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Fenrir01"
   },
   [42501] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_502,
+    AddAttrs = T.RT_500,
     ApplicationType = 2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 9,
     CostChange = 1,
     DescValues = {
       [1] = "$GetModValue(42501,1)*100$%"
     },
-    FilterTag = T.RT_503,
+    FilterTag = T.RT_501,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fenrir01.T_Mod_Fenrir01",
     Id = 42501,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_2501",
     OpenVersion = 10,
-    PassiveEffects = T.RT_504,
+    PassiveEffects = T.RT_502,
     PassiveEffectsDesc = "MOD_DESC_2501",
     Polarity = 1,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_504,
+    RepeatGroup = T.RT_502,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Fenrir01"
   },
   [42502] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_506,
+    AddAttrs = T.RT_504,
     ApplicationType = 2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 9,
     CostChange = 1,
     DescValues = {
       [1] = "$GetModValue(42502,1)*100$%"
     },
-    FilterTag = T.RT_503,
+    FilterTag = T.RT_501,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fenrir01.T_Mod_Fenrir01",
     Id = 42502,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_2502",
     OpenVersion = 10,
-    PassiveEffects = T.RT_507,
+    PassiveEffects = T.RT_505,
     PassiveEffectsDesc = "MOD_DESC_2502",
     Polarity = 1,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_507,
+    RepeatGroup = T.RT_505,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Fenrir01"
   },
   [42503] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_509,
+    AddAttrs = T.RT_507,
     ApplicationType = 2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 9,
     CostChange = 1,
     DescValues = {
       [1] = "$GetModValue(42503,1)*100$%"
     },
-    FilterTag = T.RT_503,
+    FilterTag = T.RT_501,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fenrir01.T_Mod_Fenrir01",
     Id = 42503,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_2503",
     OpenVersion = 10,
-    PassiveEffects = T.RT_510,
+    PassiveEffects = T.RT_508,
     PassiveEffectsDesc = "MOD_DESC_2503",
     Polarity = 1,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_510,
+    RepeatGroup = T.RT_508,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Fenrir01"
   },
   [42504] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_512,
+    AddAttrs = T.RT_510,
     ApplicationType = 2,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 9,
     CostChange = 1,
     DescValues = {
       [1] = "$GetModValue(42504,1)*100$%"
     },
-    FilterTag = T.RT_503,
+    FilterTag = T.RT_501,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fenrir01.T_Mod_Fenrir01",
     Id = 42504,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_2504",
     OpenVersion = 10,
-    PassiveEffects = T.RT_513,
+    PassiveEffects = T.RT_511,
     PassiveEffectsDesc = "MOD_DESC_2504",
     Polarity = 1,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_513,
+    RepeatGroup = T.RT_511,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Fenrir01"
   },
   [42511] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_515,
+    AddAttrs = T.RT_513,
     ApplicationType = 22,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 9,
     CostChange = 1,
-    FilterTag = T.RT_503,
+    FilterTag = T.RT_501,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fenrir01.T_Mod_Fenrir01",
     Id = 42511,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_2511",
     OpenVersion = 10,
@@ -9586,18 +9578,18 @@ return ReadOnly("Mod", {
   },
   [42512] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_517,
+    AddAttrs = T.RT_515,
     ApplicationType = 21,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 9,
     CostChange = 1,
-    FilterTag = T.RT_503,
+    FilterTag = T.RT_501,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fenrir01.T_Mod_Fenrir01",
     Id = 42512,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_2512",
     OpenVersion = 10,
@@ -9609,10 +9601,10 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Fenrir01"
   },
   [43001] = {
-    AccessKey = T.RT_188,
+    AccessKey = T.RT_186,
     AddAttrs = T.RT_15,
     ApplicationType = 3,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 5,
     CostChange = 1,
@@ -9621,7 +9613,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Lilith01.T_Mod_Lilith01",
     Id = 43001,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3001",
     OpenVersion = 10,
@@ -9633,10 +9625,10 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Lilith01"
   },
   [43002] = {
-    AccessKey = T.RT_188,
+    AccessKey = T.RT_186,
     AddAttrs = T.RT_20,
     ApplicationType = 3,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 12,
     CostChange = 1,
@@ -9645,7 +9637,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Lilith01.T_Mod_Lilith01",
     Id = 43002,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3002",
     OpenVersion = 10,
@@ -9657,10 +9649,10 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Lilith01"
   },
   [43003] = {
-    AccessKey = T.RT_188,
+    AccessKey = T.RT_186,
     AddAttrs = T.RT_22,
     ApplicationType = 3,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 9,
     CostChange = 1,
@@ -9669,7 +9661,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Lilith01.T_Mod_Lilith01",
     Id = 43003,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3003",
     OpenVersion = 10,
@@ -9681,10 +9673,10 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Lilith01"
   },
   [43006] = {
-    AccessKey = T.RT_188,
+    AccessKey = T.RT_186,
     AddAttrs = T.RT_18,
     ApplicationType = 3,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 7,
     CostChange = 1,
@@ -9693,7 +9685,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Lilith01.T_Mod_Lilith01",
     Id = 43006,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3006",
     OpenVersion = 10,
@@ -9706,25 +9698,25 @@ return ReadOnly("Mod", {
   },
   [43008] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_150,
+    AddAttrs = T.RT_148,
     ApplicationType = 3,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 14,
     CostChange = 1,
-    FilterTag = T.RT_151,
+    FilterTag = T.RT_149,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Lilith01.T_Mod_Lilith01",
     Id = 43008,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3008",
     OpenVersion = 10,
     Polarity = 2,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_159,
+    RepeatGroup = T.RT_157,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Lilith01"
   },
@@ -9732,10 +9724,10 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     AddAttrs = {
       [1] = T.RT_113,
-      [2] = T.RT_518
+      [2] = T.RT_516
     },
     ApplicationType = 33,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 9,
     CostChange = 1,
@@ -9747,7 +9739,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Lilith01.T_Mod_Lilith01",
     Id = 43123,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3123",
     OpenVersion = 10,
@@ -9761,7 +9753,7 @@ return ReadOnly("Mod", {
   [43301] = {
     AccessKey = T.RT_54,
     ApplicationType = 3,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
@@ -9769,28 +9761,28 @@ return ReadOnly("Mod", {
       [1] = "$#Buff[3301].AddAttrs[1].Value*100$%",
       [2] = "$#PassiveEffect[3301].Vars.LastTime$"
     },
-    FilterTag = T.RT_488,
+    FilterTag = T.RT_486,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fafnir01.T_Mod_Fafnir01",
     Id = 43301,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3301",
     OpenVersion = 10,
-    PassiveEffects = T.RT_519,
+    PassiveEffects = T.RT_517,
     PassiveEffectsDesc = "MOD_DESC_3301",
     Polarity = 3,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_519,
+    RepeatGroup = T.RT_517,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Fafnir01"
   },
   [43312] = {
     AccessKey = T.RT_54,
     ApplicationType = 3,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
@@ -9808,51 +9800,51 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fafnir01.T_Mod_Fafnir01",
     Id = 43312,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3312",
     OpenVersion = 12,
-    PassiveEffects = T.RT_520,
+    PassiveEffects = T.RT_518,
     PassiveEffectsDesc = "MOD_DESC_3312",
     Polarity = 3,
     Rarity = 4,
     ReleaseVersion = 120,
-    RepeatGroup = T.RT_520,
+    RepeatGroup = T.RT_518,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Fafnir01"
   },
   [43341] = {
     AccessKey = T.RT_54,
     ApplicationType = 3,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 12,
     CostChange = 1,
     DescValues = {
       [1] = "$#PassiveEffect[3341].Vars.BuffRate*100$%"
     },
-    FilterTag = T.RT_245,
+    FilterTag = T.RT_243,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fafnir01.T_Mod_Fafnir01",
     Id = 43341,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3341",
     OpenVersion = 10,
-    PassiveEffects = T.RT_521,
+    PassiveEffects = T.RT_519,
     PassiveEffectsDesc = "MOD_DESC_3341",
     Polarity = 3,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_521,
+    RepeatGroup = T.RT_519,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Fafnir01"
   },
   [43342] = {
     AccessKey = T.RT_54,
     ApplicationType = 3,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
@@ -9861,49 +9853,49 @@ return ReadOnly("Mod", {
       [2] = "$#Buff[3342].AddAttrs[1].Value*100$%",
       [3] = "$#PassiveEffect[3342].Vars.LastTime$"
     },
-    FilterTag = T.RT_522,
+    FilterTag = T.RT_520,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fafnir01.T_Mod_Fafnir01",
     Id = 43342,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3342",
     OpenVersion = 12,
-    PassiveEffects = T.RT_523,
+    PassiveEffects = T.RT_521,
     PassiveEffectsDesc = "MOD_DESC_3342",
     Polarity = 3,
     Rarity = 4,
     ReleaseVersion = 120,
-    RepeatGroup = T.RT_523,
+    RepeatGroup = T.RT_521,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Fafnir01"
   },
   [43343] = {
     AccessKey = T.RT_54,
     ApplicationType = 3,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
     DescValues = {
       [1] = "$#PassiveEffect[3343].Vars.CoolDown$"
     },
-    FilterTag = T.RT_218,
+    FilterTag = T.RT_216,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fafnir01.T_Mod_Fafnir01",
     Id = 43343,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3343",
     OpenVersion = 12,
-    PassiveEffects = T.RT_524,
+    PassiveEffects = T.RT_522,
     PassiveEffectsDesc = "MOD_DESC_3343",
     Polarity = 3,
     Rarity = 4,
     ReleaseVersion = 120,
-    RepeatGroup = T.RT_524,
+    RepeatGroup = T.RT_522,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Fafnir01"
   },
@@ -9916,28 +9908,28 @@ return ReadOnly("Mod", {
       }
     },
     ApplicationType = 34,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 15,
     CostChange = 1,
     DescValues = {
       [1] = "$GetModValue(43401,1)*100$%"
     },
-    FilterTag = T.RT_503,
+    FilterTag = T.RT_501,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fafnir01.T_Mod_Fafnir01",
     Id = 43401,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3401",
     OpenVersion = 10,
-    PassiveEffects = T.RT_525,
+    PassiveEffects = T.RT_523,
     PassiveEffectsDesc = "MOD_DESC_3401",
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_525,
+    RepeatGroup = T.RT_523,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Fafnir01"
   },
@@ -9950,28 +9942,28 @@ return ReadOnly("Mod", {
       }
     },
     ApplicationType = 35,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 15,
     CostChange = 1,
     DescValues = {
       [1] = "$GetModValue(43402,1)*100$%"
     },
-    FilterTag = T.RT_503,
+    FilterTag = T.RT_501,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fafnir01.T_Mod_Fafnir01",
     Id = 43402,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3402",
     OpenVersion = 10,
-    PassiveEffects = T.RT_526,
+    PassiveEffects = T.RT_524,
     PassiveEffectsDesc = "MOD_DESC_3402",
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_526,
+    RepeatGroup = T.RT_524,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Fafnir01"
   },
@@ -9981,16 +9973,16 @@ return ReadOnly("Mod", {
       [1] = {AttrName = "RayLength", Rate = "#1"}
     },
     ApplicationType = 35,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 12,
     CostChange = 1,
-    FilterTag = T.RT_218,
+    FilterTag = T.RT_216,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fafnir01.T_Mod_Fafnir01",
     Id = 43403,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3403",
     OpenVersion = 10,
@@ -10003,18 +9995,18 @@ return ReadOnly("Mod", {
   },
   [43404] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_528,
+    AddAttrs = T.RT_526,
     ApplicationType = 3,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
-    FilterTag = T.RT_218,
+    FilterTag = T.RT_216,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fafnir01.T_Mod_Fafnir01",
     Id = 43404,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3404",
     OpenVersion = 10,
@@ -10027,18 +10019,18 @@ return ReadOnly("Mod", {
   },
   [43405] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_528,
+    AddAttrs = T.RT_526,
     ApplicationType = 3,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
-    FilterTag = T.RT_218,
+    FilterTag = T.RT_216,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fafnir01.T_Mod_Fafnir01",
     Id = 43405,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3405",
     OpenVersion = 10,
@@ -10051,26 +10043,84 @@ return ReadOnly("Mod", {
   },
   [43501] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_502,
+    AddAttrs = T.RT_500,
     ApplicationType = 3,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 9,
     CostChange = 1,
     DescValues = {
       [1] = "$GetModValue(43501,1)*100$%"
     },
-    FilterTag = T.RT_503,
+    FilterTag = T.RT_501,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fafnir01.T_Mod_Fafnir01",
     Id = 43501,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3501",
     OpenVersion = 10,
-    PassiveEffects = T.RT_529,
+    PassiveEffects = T.RT_527,
     PassiveEffectsDesc = "MOD_DESC_2501",
+    Polarity = 1,
+    Rarity = 4,
+    ReleaseVersion = 100,
+    RepeatGroup = T.RT_527,
+    Sound = "SOUND_ITEM_MOD",
+    TypeName = "MOD_Type_Name_Fafnir01"
+  },
+  [43502] = {
+    AccessKey = T.RT_54,
+    AddAttrs = T.RT_504,
+    ApplicationType = 3,
+    BreakDown = T.RT_233,
+    CollectRewardExp = 100,
+    Cost = 9,
+    CostChange = 1,
+    DescValues = {
+      [1] = "$GetModValue(43502,1)*100$%"
+    },
+    FilterTag = T.RT_501,
+    FunctionDes = "UI_Armory_Mod",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fafnir01.T_Mod_Fafnir01",
+    Id = 43502,
+    MaxLevel = 5,
+    ModConvert = T.RT_234,
+    ModDescribe = "MOD_DES_1001",
+    Name = "MOD_NAME_3502",
+    OpenVersion = 10,
+    PassiveEffects = T.RT_528,
+    PassiveEffectsDesc = "MOD_DESC_2502",
+    Polarity = 1,
+    Rarity = 4,
+    ReleaseVersion = 100,
+    RepeatGroup = T.RT_528,
+    Sound = "SOUND_ITEM_MOD",
+    TypeName = "MOD_Type_Name_Fafnir01"
+  },
+  [43503] = {
+    AccessKey = T.RT_54,
+    AddAttrs = T.RT_507,
+    ApplicationType = 3,
+    BreakDown = T.RT_233,
+    CollectRewardExp = 100,
+    Cost = 9,
+    CostChange = 1,
+    DescValues = {
+      [1] = "$GetModValue(43503,1)*100$%"
+    },
+    FilterTag = T.RT_501,
+    FunctionDes = "UI_Armory_Mod",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fafnir01.T_Mod_Fafnir01",
+    Id = 43503,
+    MaxLevel = 5,
+    ModConvert = T.RT_234,
+    ModDescribe = "MOD_DES_1001",
+    Name = "MOD_NAME_3503",
+    OpenVersion = 10,
+    PassiveEffects = T.RT_529,
+    PassiveEffectsDesc = "MOD_DESC_2503",
     Polarity = 1,
     Rarity = 4,
     ReleaseVersion = 100,
@@ -10078,28 +10128,28 @@ return ReadOnly("Mod", {
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Fafnir01"
   },
-  [43502] = {
+  [43504] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_506,
+    AddAttrs = T.RT_510,
     ApplicationType = 3,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 9,
     CostChange = 1,
     DescValues = {
-      [1] = "$GetModValue(43502,1)*100$%"
+      [1] = "$GetModValue(43504,1)*100$%"
     },
-    FilterTag = T.RT_503,
+    FilterTag = T.RT_501,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fafnir01.T_Mod_Fafnir01",
-    Id = 43502,
+    Id = 43504,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
-    Name = "MOD_NAME_3502",
+    Name = "MOD_NAME_3504",
     OpenVersion = 10,
     PassiveEffects = T.RT_530,
-    PassiveEffectsDesc = "MOD_DESC_2502",
+    PassiveEffectsDesc = "MOD_DESC_2504",
     Polarity = 1,
     Rarity = 4,
     ReleaseVersion = 100,
@@ -10107,78 +10157,20 @@ return ReadOnly("Mod", {
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Fafnir01"
   },
-  [43503] = {
-    AccessKey = T.RT_54,
-    AddAttrs = T.RT_509,
-    ApplicationType = 3,
-    BreakDown = T.RT_235,
-    CollectRewardExp = 100,
-    Cost = 9,
-    CostChange = 1,
-    DescValues = {
-      [1] = "$GetModValue(43503,1)*100$%"
-    },
-    FilterTag = T.RT_503,
-    FunctionDes = "UI_Armory_Mod",
-    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fafnir01.T_Mod_Fafnir01",
-    Id = 43503,
-    MaxLevel = 5,
-    ModConvert = T.RT_236,
-    ModDescribe = "MOD_DES_1001",
-    Name = "MOD_NAME_3503",
-    OpenVersion = 10,
-    PassiveEffects = T.RT_531,
-    PassiveEffectsDesc = "MOD_DESC_2503",
-    Polarity = 1,
-    Rarity = 4,
-    ReleaseVersion = 100,
-    RepeatGroup = T.RT_531,
-    Sound = "SOUND_ITEM_MOD",
-    TypeName = "MOD_Type_Name_Fafnir01"
-  },
-  [43504] = {
-    AccessKey = T.RT_54,
-    AddAttrs = T.RT_512,
-    ApplicationType = 3,
-    BreakDown = T.RT_235,
-    CollectRewardExp = 100,
-    Cost = 9,
-    CostChange = 1,
-    DescValues = {
-      [1] = "$GetModValue(43504,1)*100$%"
-    },
-    FilterTag = T.RT_503,
-    FunctionDes = "UI_Armory_Mod",
-    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fafnir01.T_Mod_Fafnir01",
-    Id = 43504,
-    MaxLevel = 5,
-    ModConvert = T.RT_236,
-    ModDescribe = "MOD_DES_1001",
-    Name = "MOD_NAME_3504",
-    OpenVersion = 10,
-    PassiveEffects = T.RT_532,
-    PassiveEffectsDesc = "MOD_DESC_2504",
-    Polarity = 1,
-    Rarity = 4,
-    ReleaseVersion = 100,
-    RepeatGroup = T.RT_532,
-    Sound = "SOUND_ITEM_MOD",
-    TypeName = "MOD_Type_Name_Fafnir01"
-  },
   [43511] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_515,
+    AddAttrs = T.RT_513,
     ApplicationType = 32,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 9,
     CostChange = 1,
-    FilterTag = T.RT_503,
+    FilterTag = T.RT_501,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fafnir01.T_Mod_Fafnir01",
     Id = 43511,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3511",
     OpenVersion = 10,
@@ -10191,18 +10183,18 @@ return ReadOnly("Mod", {
   },
   [43512] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_517,
+    AddAttrs = T.RT_515,
     ApplicationType = 31,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 9,
     CostChange = 1,
-    FilterTag = T.RT_503,
+    FilterTag = T.RT_501,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fafnir01.T_Mod_Fafnir01",
     Id = 43512,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3512",
     OpenVersion = 10,
@@ -10223,7 +10215,7 @@ return ReadOnly("Mod", {
       }
     },
     ApplicationType = 3,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 8,
     CostChange = 1,
@@ -10232,7 +10224,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Lilith01.T_Mod_Lilith01",
     Id = 43601,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3601",
     OpenVersion = 10,
@@ -10250,7 +10242,7 @@ return ReadOnly("Mod", {
       [2] = {AttrName = "ATK", Rate = "#2"}
     },
     ApplicationType = 3,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
@@ -10259,7 +10251,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Lilith01.T_Mod_Lilith01",
     Id = 43602,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3602",
     OpenVersion = 10,
@@ -10273,20 +10265,20 @@ return ReadOnly("Mod", {
   [43603] = {
     AccessKey = T.RT_54,
     AddAttrs = {
-      [1] = T.RT_227,
-      [2] = T.RT_533
+      [1] = T.RT_225,
+      [2] = T.RT_531
     },
     ApplicationType = 3,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
-    FilterTag = T.RT_228,
+    FilterTag = T.RT_226,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Lilith01.T_Mod_Lilith01",
     Id = 43603,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3603",
     OpenVersion = 10,
@@ -10301,91 +10293,91 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     AddAttrs = T.RT_26,
     ApplicationType = 3,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
     DescValues = {
       [1] = "$-#PassiveEffect[3604].Vars.BuffRate*100$%"
     },
-    FilterTag = T.RT_164,
+    FilterTag = T.RT_162,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Lilith01.T_Mod_Lilith01",
     Id = 43604,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3604",
     OpenVersion = 10,
-    PassiveEffects = T.RT_534,
+    PassiveEffects = T.RT_532,
     PassiveEffectsDesc = "MOD_DESC_3604",
     Polarity = 2,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_534,
+    RepeatGroup = T.RT_532,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Lilith01"
   },
   [43701] = {
     AccessKey = T.RT_54,
     ApplicationType = 3,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
     DescValues = {
       [1] = "$#SkillEffects[3701].TaskEffects[1].SpChange$"
     },
-    FilterTag = T.RT_218,
+    FilterTag = T.RT_216,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fafnir01.T_Mod_Fafnir01",
     Id = 43701,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3701",
     OpenVersion = 12,
-    PassiveEffects = T.RT_535,
+    PassiveEffects = T.RT_533,
     PassiveEffectsDesc = "MOD_DESC_3701",
     Polarity = 3,
     Rarity = 4,
     ReleaseVersion = 120,
-    RepeatGroup = T.RT_535,
+    RepeatGroup = T.RT_533,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Fafnir01"
   },
   [43702] = {
     AccessKey = T.RT_54,
     ApplicationType = 3,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
     DescValues = {
       [1] = "$#PassiveEffect[3702].Vars.BuffRate*100$%"
     },
-    FilterTag = T.RT_522,
+    FilterTag = T.RT_520,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fafnir01.T_Mod_Fafnir01",
     Id = 43702,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3702",
     OpenVersion = 12,
-    PassiveEffects = T.RT_536,
+    PassiveEffects = T.RT_534,
     PassiveEffectsDesc = "MOD_DESC_3702",
     Polarity = 3,
     Rarity = 4,
     ReleaseVersion = 120,
-    RepeatGroup = T.RT_536,
+    RepeatGroup = T.RT_534,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Fafnir01"
   },
   [43703] = {
     AccessKey = T.RT_54,
     ApplicationType = 3,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 10,
     CostChange = 1,
@@ -10393,21 +10385,21 @@ return ReadOnly("Mod", {
       [1] = "$#PassiveEffect[3703].Vars.TriggerProb*100$%",
       [2] = "$#SkillEffects[3703].TaskEffects[1].Rate*100$%"
     },
-    FilterTag = T.RT_218,
+    FilterTag = T.RT_216,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Fafnir01.T_Mod_Fafnir01",
     Id = 43703,
     MaxLevel = 5,
-    ModConvert = T.RT_236,
+    ModConvert = T.RT_234,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_3703",
     OpenVersion = 12,
-    PassiveEffects = T.RT_537,
+    PassiveEffects = T.RT_535,
     PassiveEffectsDesc = "MOD_DESC_3703",
     Polarity = 3,
     Rarity = 4,
     ReleaseVersion = 120,
-    RepeatGroup = T.RT_537,
+    RepeatGroup = T.RT_535,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Fafnir01"
   },
@@ -10415,7 +10407,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_15,
     ApplicationType = 4,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 11,
     CostChange = 1,
@@ -10438,7 +10430,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_20,
     ApplicationType = 4,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 12,
     CostChange = 1,
@@ -10461,7 +10453,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_22,
     ApplicationType = 4,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 12,
     CostChange = 1,
@@ -10484,7 +10476,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_27,
     ApplicationType = 4,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 16,
     CostChange = 1,
@@ -10507,11 +10499,11 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_39,
     ApplicationType = 4,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 16,
     CostChange = 1,
-    FilterTag = T.RT_161,
+    FilterTag = T.RT_159,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Cerberus02.T_Mod_Cerberus02",
     Id = 44005,
@@ -10522,7 +10514,7 @@ return ReadOnly("Mod", {
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_162,
+    RepeatGroup = T.RT_160,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Cerberus02"
   },
@@ -10530,7 +10522,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_18,
     ApplicationType = 4,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 16,
     CostChange = 1,
@@ -10553,7 +10545,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_108,
     ApplicationType = 41,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 11,
     CostChange = 1,
@@ -10568,7 +10560,7 @@ return ReadOnly("Mod", {
     Polarity = 1,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_163,
+    RepeatGroup = T.RT_161,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Cerberus02"
   },
@@ -10576,7 +10568,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_112,
     ApplicationType = 42,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 11,
     CostChange = 1,
@@ -10591,7 +10583,7 @@ return ReadOnly("Mod", {
     Polarity = 1,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_163,
+    RepeatGroup = T.RT_161,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Cerberus02"
   },
@@ -10599,7 +10591,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_114,
     ApplicationType = 43,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 11,
     CostChange = 1,
@@ -10614,7 +10606,7 @@ return ReadOnly("Mod", {
     Polarity = 1,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_163,
+    RepeatGroup = T.RT_161,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Cerberus02"
   },
@@ -10622,7 +10614,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_15,
     ApplicationType = 5,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 11,
     CostChange = 1,
@@ -10645,7 +10637,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_20,
     ApplicationType = 5,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 12,
     CostChange = 1,
@@ -10668,7 +10660,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_22,
     ApplicationType = 5,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 12,
     CostChange = 1,
@@ -10691,7 +10683,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_27,
     ApplicationType = 5,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 16,
     CostChange = 1,
@@ -10714,11 +10706,11 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_26,
     ApplicationType = 5,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 16,
     CostChange = 1,
-    FilterTag = T.RT_164,
+    FilterTag = T.RT_162,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Lilith02.T_Mod_Lilith02",
     Id = 45005,
@@ -10729,7 +10721,7 @@ return ReadOnly("Mod", {
     Polarity = 4,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_165,
+    RepeatGroup = T.RT_163,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Lilith02"
   },
@@ -10737,7 +10729,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_18,
     ApplicationType = 5,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 16,
     CostChange = 1,
@@ -10760,7 +10752,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_108,
     ApplicationType = 51,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 11,
     CostChange = 1,
@@ -10775,7 +10767,7 @@ return ReadOnly("Mod", {
     Polarity = 1,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_166,
+    RepeatGroup = T.RT_164,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Lilith02"
   },
@@ -10783,7 +10775,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_112,
     ApplicationType = 52,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 11,
     CostChange = 1,
@@ -10798,7 +10790,7 @@ return ReadOnly("Mod", {
     Polarity = 1,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_166,
+    RepeatGroup = T.RT_164,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Lilith02"
   },
@@ -10806,7 +10798,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_114,
     ApplicationType = 53,
-    BreakDown = T.RT_235,
+    BreakDown = T.RT_233,
     CollectRewardExp = 100,
     Cost = 11,
     CostChange = 1,
@@ -10821,7 +10813,7 @@ return ReadOnly("Mod", {
     Polarity = 1,
     Rarity = 4,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_166,
+    RepeatGroup = T.RT_164,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Lilith02"
   },
@@ -10830,7 +10822,7 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_59,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51002},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -10858,7 +10850,7 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_63,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51003},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -10886,7 +10878,7 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_71,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51007},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -10911,17 +10903,17 @@ return ReadOnly("Mod", {
   },
   [51301] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_199,
+    AddAttrs = T.RT_197,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51301},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 14,
     CostChange = 1,
-    FilterTag = T.RT_200,
+    FilterTag = T.RT_198,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Siren01.T_Mod_Siren01",
     Id = 51301,
@@ -10933,7 +10925,7 @@ return ReadOnly("Mod", {
     Polarity = 2,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_201,
+    RepeatGroup = T.RT_199,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Siren01"
   },
@@ -10941,15 +10933,15 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51311},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 9,
     CostChange = 1,
-    DescValues = T.RT_237,
-    FilterTag = T.RT_238,
+    DescValues = T.RT_235,
+    FilterTag = T.RT_236,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Sphinx01.T_Mod_Sphinx01",
     Id = 51311,
@@ -10958,29 +10950,29 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1311",
     OpenVersion = 10,
-    PassiveEffects = T.RT_239,
+    PassiveEffects = T.RT_237,
     PassiveEffectsDesc = "MOD_DESC_1311",
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_239,
+    RepeatGroup = T.RT_237,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Sphinx01"
   },
   [51312] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_240,
+    AddAttrs = T.RT_238,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51312},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 7,
     CostChange = 1,
-    DescValues = T.RT_241,
-    FilterTag = T.RT_242,
+    DescValues = T.RT_239,
+    FilterTag = T.RT_240,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Sphinx01.T_Mod_Sphinx01",
     Id = 51312,
@@ -10989,12 +10981,12 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1312",
     OpenVersion = 10,
-    PassiveEffects = T.RT_243,
+    PassiveEffects = T.RT_241,
     PassiveEffectsDesc = "MOD_DESC_1312",
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_243,
+    RepeatGroup = T.RT_241,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Sphinx01"
   },
@@ -11002,15 +10994,15 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51313},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 8,
     CostChange = 1,
-    DescValues = T.RT_244,
-    FilterTag = T.RT_245,
+    DescValues = T.RT_242,
+    FilterTag = T.RT_243,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Sphinx01.T_Mod_Sphinx01",
     Id = 51313,
@@ -11019,12 +11011,12 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1313",
     OpenVersion = 10,
-    PassiveEffects = T.RT_246,
+    PassiveEffects = T.RT_244,
     PassiveEffectsDesc = "MOD_DESC_1313",
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_246,
+    RepeatGroup = T.RT_244,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Sphinx01"
   },
@@ -11032,15 +11024,15 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51314},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 8,
     CostChange = 1,
-    DescValues = T.RT_247,
-    FilterTag = T.RT_245,
+    DescValues = T.RT_245,
+    FilterTag = T.RT_243,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Sphinx01.T_Mod_Sphinx01",
     Id = 51314,
@@ -11049,12 +11041,12 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1314",
     OpenVersion = 10,
-    PassiveEffects = T.RT_248,
+    PassiveEffects = T.RT_246,
     PassiveEffectsDesc = "MOD_DESC_1314",
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_248,
+    RepeatGroup = T.RT_246,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Sphinx01"
   },
@@ -11062,15 +11054,15 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51315},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 8,
     CostChange = 1,
-    DescValues = T.RT_249,
-    FilterTag = T.RT_245,
+    DescValues = T.RT_247,
+    FilterTag = T.RT_243,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Sphinx01.T_Mod_Sphinx01",
     Id = 51315,
@@ -11079,12 +11071,12 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1315",
     OpenVersion = 10,
-    PassiveEffects = T.RT_250,
+    PassiveEffects = T.RT_248,
     PassiveEffectsDesc = "MOD_DESC_1315",
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_250,
+    RepeatGroup = T.RT_248,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Sphinx01"
   },
@@ -11092,15 +11084,15 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51316},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 6,
     CostChange = 1,
-    DescValues = T.RT_251,
-    FilterTag = T.RT_252,
+    DescValues = T.RT_249,
+    FilterTag = T.RT_250,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Sphinx01.T_Mod_Sphinx01",
     Id = 51316,
@@ -11109,28 +11101,28 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1316",
     OpenVersion = 10,
-    PassiveEffects = T.RT_253,
+    PassiveEffects = T.RT_251,
     PassiveEffectsDesc = "MOD_DESC_1316",
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_253,
+    RepeatGroup = T.RT_251,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Sphinx01"
   },
   [51321] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_256,
+    AddAttrs = T.RT_254,
     ApplicationType = 11,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51321},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 15,
     CostChange = 1,
-    FilterTag = T.RT_257,
+    FilterTag = T.RT_255,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Griffin01_Black.T_Mod_Griffin01_Black",
     Id = 51321,
@@ -11142,23 +11134,23 @@ return ReadOnly("Mod", {
     Polarity = 3,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_205,
+    RepeatGroup = T.RT_203,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Griffin01"
   },
   [51322] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_260,
+    AddAttrs = T.RT_258,
     ApplicationType = 12,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51322},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 15,
     CostChange = 1,
-    FilterTag = T.RT_257,
+    FilterTag = T.RT_255,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Griffin01_Blue.T_Mod_Griffin01_Blue",
     Id = 51322,
@@ -11170,23 +11162,23 @@ return ReadOnly("Mod", {
     Polarity = 3,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_205,
+    RepeatGroup = T.RT_203,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Griffin01"
   },
   [51323] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_262,
+    AddAttrs = T.RT_260,
     ApplicationType = 13,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51323},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 15,
     CostChange = 1,
-    FilterTag = T.RT_257,
+    FilterTag = T.RT_255,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Griffin01_Red.T_Mod_Griffin01_Red",
     Id = 51323,
@@ -11198,23 +11190,23 @@ return ReadOnly("Mod", {
     Polarity = 3,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_205,
+    RepeatGroup = T.RT_203,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Griffin01"
   },
   [51324] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_264,
+    AddAttrs = T.RT_262,
     ApplicationType = 14,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51324},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 15,
     CostChange = 1,
-    FilterTag = T.RT_257,
+    FilterTag = T.RT_255,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Griffin01_Purple.T_Mod_Griffin01_Purple",
     Id = 51324,
@@ -11226,23 +11218,23 @@ return ReadOnly("Mod", {
     Polarity = 3,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_205,
+    RepeatGroup = T.RT_203,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Griffin01"
   },
   [51325] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_266,
+    AddAttrs = T.RT_264,
     ApplicationType = 15,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51325},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 15,
     CostChange = 1,
-    FilterTag = T.RT_257,
+    FilterTag = T.RT_255,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Griffin01_Green.T_Mod_Griffin01_Green",
     Id = 51325,
@@ -11254,23 +11246,23 @@ return ReadOnly("Mod", {
     Polarity = 3,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_205,
+    RepeatGroup = T.RT_203,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Griffin01"
   },
   [51326] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_268,
+    AddAttrs = T.RT_266,
     ApplicationType = 16,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51326},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 15,
     CostChange = 1,
-    FilterTag = T.RT_257,
+    FilterTag = T.RT_255,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Griffin01_Orange.T_Mod_Griffin01_Orange",
     Id = 51326,
@@ -11282,23 +11274,23 @@ return ReadOnly("Mod", {
     Polarity = 3,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_205,
+    RepeatGroup = T.RT_203,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Griffin01"
   },
   [51331] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_270,
+    AddAttrs = T.RT_268,
     ApplicationType = 11,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51331},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 17,
     CostChange = 1,
-    FilterTag = T.RT_271,
+    FilterTag = T.RT_269,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Griffin01_Black.T_Mod_Griffin01_Black",
     Id = 51331,
@@ -11310,23 +11302,23 @@ return ReadOnly("Mod", {
     Polarity = 3,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_205,
+    RepeatGroup = T.RT_203,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Griffin01"
   },
   [51332] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_273,
+    AddAttrs = T.RT_271,
     ApplicationType = 12,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51332},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 17,
     CostChange = 1,
-    FilterTag = T.RT_271,
+    FilterTag = T.RT_269,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Griffin01_Blue.T_Mod_Griffin01_Blue",
     Id = 51332,
@@ -11338,23 +11330,23 @@ return ReadOnly("Mod", {
     Polarity = 3,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_205,
+    RepeatGroup = T.RT_203,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Griffin01"
   },
   [51333] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_275,
+    AddAttrs = T.RT_273,
     ApplicationType = 13,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51333},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 17,
     CostChange = 1,
-    FilterTag = T.RT_271,
+    FilterTag = T.RT_269,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Griffin01_Red.T_Mod_Griffin01_Red",
     Id = 51333,
@@ -11366,23 +11358,23 @@ return ReadOnly("Mod", {
     Polarity = 3,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_205,
+    RepeatGroup = T.RT_203,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Griffin01"
   },
   [51334] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_277,
+    AddAttrs = T.RT_275,
     ApplicationType = 14,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51334},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 17,
     CostChange = 1,
-    FilterTag = T.RT_271,
+    FilterTag = T.RT_269,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Griffin01_Purple.T_Mod_Griffin01_Purple",
     Id = 51334,
@@ -11394,23 +11386,23 @@ return ReadOnly("Mod", {
     Polarity = 3,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_205,
+    RepeatGroup = T.RT_203,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Griffin01"
   },
   [51335] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_279,
+    AddAttrs = T.RT_277,
     ApplicationType = 15,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51335},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 17,
     CostChange = 1,
-    FilterTag = T.RT_271,
+    FilterTag = T.RT_269,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Griffin01_Green.T_Mod_Griffin01_Green",
     Id = 51335,
@@ -11422,23 +11414,23 @@ return ReadOnly("Mod", {
     Polarity = 3,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_205,
+    RepeatGroup = T.RT_203,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Griffin01"
   },
   [51336] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_281,
+    AddAttrs = T.RT_279,
     ApplicationType = 16,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51336},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 17,
     CostChange = 1,
-    FilterTag = T.RT_271,
+    FilterTag = T.RT_269,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Griffin01_Orange.T_Mod_Griffin01_Orange",
     Id = 51336,
@@ -11450,23 +11442,23 @@ return ReadOnly("Mod", {
     Polarity = 3,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_205,
+    RepeatGroup = T.RT_203,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Griffin01"
   },
   [51411] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_283,
+    AddAttrs = T.RT_281,
     ApplicationType = 11,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51411},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 18,
     CostChange = 1,
-    FilterTag = T.RT_284,
+    FilterTag = T.RT_282,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Black.T_Mod_Typhon01_Black",
     Id = 51411,
@@ -11484,17 +11476,17 @@ return ReadOnly("Mod", {
   },
   [51412] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_286,
+    AddAttrs = T.RT_284,
     ApplicationType = 11,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51412},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 18,
     CostChange = 1,
-    FilterTag = T.RT_287,
+    FilterTag = T.RT_285,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Black.T_Mod_Typhon01_Black",
     Id = 51412,
@@ -11512,10 +11504,10 @@ return ReadOnly("Mod", {
   },
   [51413] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_289,
+    AddAttrs = T.RT_287,
     ApplicationType = 11,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51413},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -11526,7 +11518,7 @@ return ReadOnly("Mod", {
       [1] = "$-#PassiveEffect[1420].Vars.BuffRate*100$%",
       [2] = "$GetModValue(51413,4)*100$%"
     },
-    FilterTag = T.RT_290,
+    FilterTag = T.RT_288,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Black.T_Mod_Typhon01_Black",
     Id = 51413,
@@ -11535,7 +11527,7 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1403",
     OpenVersion = 10,
-    PassiveEffects = T.RT_291,
+    PassiveEffects = T.RT_289,
     PassiveEffectsDesc = "MOD_DESC_1420",
     Polarity = 1,
     Rarity = 5,
@@ -11549,15 +11541,15 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_77,
     ApplicationType = 11,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51414},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 18,
     CostChange = 1,
-    DescValues = T.RT_292,
-    FilterTag = T.RT_293,
+    DescValues = T.RT_290,
+    FilterTag = T.RT_291,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Black.T_Mod_Typhon01_Black",
     Id = 51414,
@@ -11566,7 +11558,7 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1404",
     OpenVersion = 10,
-    PassiveEffects = T.RT_294,
+    PassiveEffects = T.RT_292,
     PassiveEffectsDesc = "MOD_DESC_1430",
     Polarity = 1,
     Rarity = 5,
@@ -11580,15 +11572,15 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_77,
     ApplicationType = 11,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51415},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 18,
     CostChange = 1,
-    DescValues = T.RT_295,
-    FilterTag = T.RT_296,
+    DescValues = T.RT_293,
+    FilterTag = T.RT_294,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Black.T_Mod_Typhon01_Black",
     Id = 51415,
@@ -11597,7 +11589,7 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1405",
     OpenVersion = 10,
-    PassiveEffects = T.RT_297,
+    PassiveEffects = T.RT_295,
     PassiveEffectsDesc = "MOD_DESC_1440",
     Polarity = 1,
     Rarity = 5,
@@ -11608,17 +11600,17 @@ return ReadOnly("Mod", {
   },
   [51421] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_299,
+    AddAttrs = T.RT_297,
     ApplicationType = 12,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51421},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 18,
     CostChange = 1,
-    FilterTag = T.RT_284,
+    FilterTag = T.RT_282,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Blue.T_Mod_Typhon01_Blue",
     Id = 51421,
@@ -11636,17 +11628,17 @@ return ReadOnly("Mod", {
   },
   [51422] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_301,
+    AddAttrs = T.RT_299,
     ApplicationType = 12,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51422},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 18,
     CostChange = 1,
-    FilterTag = T.RT_287,
+    FilterTag = T.RT_285,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Blue.T_Mod_Typhon01_Blue",
     Id = 51422,
@@ -11664,10 +11656,10 @@ return ReadOnly("Mod", {
   },
   [51423] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_303,
+    AddAttrs = T.RT_301,
     ApplicationType = 12,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51423},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -11678,7 +11670,7 @@ return ReadOnly("Mod", {
       [1] = "$-#PassiveEffect[1420].Vars.BuffRate*100$%",
       [2] = "$GetModValue(51423,4)*100$%"
     },
-    FilterTag = T.RT_290,
+    FilterTag = T.RT_288,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Blue.T_Mod_Typhon01_Blue",
     Id = 51423,
@@ -11687,7 +11679,7 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1403",
     OpenVersion = 10,
-    PassiveEffects = T.RT_304,
+    PassiveEffects = T.RT_302,
     PassiveEffectsDesc = "MOD_DESC_1420",
     Polarity = 1,
     Rarity = 5,
@@ -11701,15 +11693,15 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_83,
     ApplicationType = 12,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51424},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 18,
     CostChange = 1,
-    DescValues = T.RT_292,
-    FilterTag = T.RT_293,
+    DescValues = T.RT_290,
+    FilterTag = T.RT_291,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Blue.T_Mod_Typhon01_Blue",
     Id = 51424,
@@ -11718,7 +11710,7 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1404",
     OpenVersion = 10,
-    PassiveEffects = T.RT_294,
+    PassiveEffects = T.RT_292,
     PassiveEffectsDesc = "MOD_DESC_1430",
     Polarity = 1,
     Rarity = 5,
@@ -11732,15 +11724,15 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_83,
     ApplicationType = 12,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51425},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 18,
     CostChange = 1,
-    DescValues = T.RT_295,
-    FilterTag = T.RT_296,
+    DescValues = T.RT_293,
+    FilterTag = T.RT_294,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Blue.T_Mod_Typhon01_Blue",
     Id = 51425,
@@ -11749,7 +11741,7 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1405",
     OpenVersion = 10,
-    PassiveEffects = T.RT_297,
+    PassiveEffects = T.RT_295,
     PassiveEffectsDesc = "MOD_DESC_1440",
     Polarity = 1,
     Rarity = 5,
@@ -11760,17 +11752,17 @@ return ReadOnly("Mod", {
   },
   [51431] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_306,
+    AddAttrs = T.RT_304,
     ApplicationType = 13,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51431},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 18,
     CostChange = 1,
-    FilterTag = T.RT_284,
+    FilterTag = T.RT_282,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Red.T_Mod_Typhon01_Red",
     Id = 51431,
@@ -11788,17 +11780,17 @@ return ReadOnly("Mod", {
   },
   [51432] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_308,
+    AddAttrs = T.RT_306,
     ApplicationType = 13,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51432},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 18,
     CostChange = 1,
-    FilterTag = T.RT_287,
+    FilterTag = T.RT_285,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Red.T_Mod_Typhon01_Red",
     Id = 51432,
@@ -11816,10 +11808,10 @@ return ReadOnly("Mod", {
   },
   [51433] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_310,
+    AddAttrs = T.RT_308,
     ApplicationType = 13,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51433},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -11830,7 +11822,7 @@ return ReadOnly("Mod", {
       [1] = "$-#PassiveEffect[1420].Vars.BuffRate*100$%",
       [2] = "$GetModValue(51433,4)*100$%"
     },
-    FilterTag = T.RT_290,
+    FilterTag = T.RT_288,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Red.T_Mod_Typhon01_Red",
     Id = 51433,
@@ -11839,7 +11831,7 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1403",
     OpenVersion = 10,
-    PassiveEffects = T.RT_311,
+    PassiveEffects = T.RT_309,
     PassiveEffectsDesc = "MOD_DESC_1420",
     Polarity = 1,
     Rarity = 5,
@@ -11853,15 +11845,15 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_87,
     ApplicationType = 13,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51434},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 18,
     CostChange = 1,
-    DescValues = T.RT_292,
-    FilterTag = T.RT_293,
+    DescValues = T.RT_290,
+    FilterTag = T.RT_291,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Red.T_Mod_Typhon01_Red",
     Id = 51434,
@@ -11870,7 +11862,7 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1404",
     OpenVersion = 10,
-    PassiveEffects = T.RT_294,
+    PassiveEffects = T.RT_292,
     PassiveEffectsDesc = "MOD_DESC_1430",
     Polarity = 1,
     Rarity = 5,
@@ -11884,15 +11876,15 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_87,
     ApplicationType = 13,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51435},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 18,
     CostChange = 1,
-    DescValues = T.RT_295,
-    FilterTag = T.RT_296,
+    DescValues = T.RT_293,
+    FilterTag = T.RT_294,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Red.T_Mod_Typhon01_Red",
     Id = 51435,
@@ -11901,7 +11893,7 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1405",
     OpenVersion = 10,
-    PassiveEffects = T.RT_297,
+    PassiveEffects = T.RT_295,
     PassiveEffectsDesc = "MOD_DESC_1440",
     Polarity = 1,
     Rarity = 5,
@@ -11912,17 +11904,17 @@ return ReadOnly("Mod", {
   },
   [51441] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_313,
+    AddAttrs = T.RT_311,
     ApplicationType = 14,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51441},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 18,
     CostChange = 1,
-    FilterTag = T.RT_284,
+    FilterTag = T.RT_282,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Purple.T_Mod_Typhon01_Purple",
     Id = 51441,
@@ -11940,17 +11932,17 @@ return ReadOnly("Mod", {
   },
   [51442] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_315,
+    AddAttrs = T.RT_313,
     ApplicationType = 14,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51442},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 18,
     CostChange = 1,
-    FilterTag = T.RT_287,
+    FilterTag = T.RT_285,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Purple.T_Mod_Typhon01_Purple",
     Id = 51442,
@@ -11968,10 +11960,10 @@ return ReadOnly("Mod", {
   },
   [51443] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_317,
+    AddAttrs = T.RT_315,
     ApplicationType = 14,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51443},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -11982,7 +11974,7 @@ return ReadOnly("Mod", {
       [1] = "$-#PassiveEffect[1420].Vars.BuffRate*100$%",
       [2] = "$GetModValue(51443,4)*100$%"
     },
-    FilterTag = T.RT_290,
+    FilterTag = T.RT_288,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Purple.T_Mod_Typhon01_Purple",
     Id = 51443,
@@ -11991,7 +11983,7 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1403",
     OpenVersion = 10,
-    PassiveEffects = T.RT_318,
+    PassiveEffects = T.RT_316,
     PassiveEffectsDesc = "MOD_DESC_1420",
     Polarity = 1,
     Rarity = 5,
@@ -12005,15 +11997,15 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_91,
     ApplicationType = 14,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51444},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 18,
     CostChange = 1,
-    DescValues = T.RT_292,
-    FilterTag = T.RT_293,
+    DescValues = T.RT_290,
+    FilterTag = T.RT_291,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Purple.T_Mod_Typhon01_Purple",
     Id = 51444,
@@ -12022,7 +12014,7 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1404",
     OpenVersion = 10,
-    PassiveEffects = T.RT_294,
+    PassiveEffects = T.RT_292,
     PassiveEffectsDesc = "MOD_DESC_1430",
     Polarity = 1,
     Rarity = 5,
@@ -12036,15 +12028,15 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_91,
     ApplicationType = 14,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51445},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 18,
     CostChange = 1,
-    DescValues = T.RT_295,
-    FilterTag = T.RT_296,
+    DescValues = T.RT_293,
+    FilterTag = T.RT_294,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Purple.T_Mod_Typhon01_Purple",
     Id = 51445,
@@ -12053,7 +12045,7 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1405",
     OpenVersion = 10,
-    PassiveEffects = T.RT_297,
+    PassiveEffects = T.RT_295,
     PassiveEffectsDesc = "MOD_DESC_1440",
     Polarity = 1,
     Rarity = 5,
@@ -12064,17 +12056,17 @@ return ReadOnly("Mod", {
   },
   [51451] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_320,
+    AddAttrs = T.RT_318,
     ApplicationType = 15,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51451},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 18,
     CostChange = 1,
-    FilterTag = T.RT_284,
+    FilterTag = T.RT_282,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Green.T_Mod_Typhon01_Green",
     Id = 51451,
@@ -12092,17 +12084,17 @@ return ReadOnly("Mod", {
   },
   [51452] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_322,
+    AddAttrs = T.RT_320,
     ApplicationType = 15,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51452},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 18,
     CostChange = 1,
-    FilterTag = T.RT_287,
+    FilterTag = T.RT_285,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Green.T_Mod_Typhon01_Green",
     Id = 51452,
@@ -12120,10 +12112,10 @@ return ReadOnly("Mod", {
   },
   [51453] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_324,
+    AddAttrs = T.RT_322,
     ApplicationType = 15,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51453},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -12134,7 +12126,7 @@ return ReadOnly("Mod", {
       [1] = "$-#PassiveEffect[1420].Vars.BuffRate*100$%",
       [2] = "$GetModValue(51453,4)*100$%"
     },
-    FilterTag = T.RT_290,
+    FilterTag = T.RT_288,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Green.T_Mod_Typhon01_Green",
     Id = 51453,
@@ -12143,7 +12135,7 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1403",
     OpenVersion = 10,
-    PassiveEffects = T.RT_325,
+    PassiveEffects = T.RT_323,
     PassiveEffectsDesc = "MOD_DESC_1420",
     Polarity = 1,
     Rarity = 5,
@@ -12157,15 +12149,15 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_95,
     ApplicationType = 15,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51454},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 18,
     CostChange = 1,
-    DescValues = T.RT_292,
-    FilterTag = T.RT_293,
+    DescValues = T.RT_290,
+    FilterTag = T.RT_291,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Green.T_Mod_Typhon01_Green",
     Id = 51454,
@@ -12174,7 +12166,7 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1404",
     OpenVersion = 10,
-    PassiveEffects = T.RT_294,
+    PassiveEffects = T.RT_292,
     PassiveEffectsDesc = "MOD_DESC_1430",
     Polarity = 1,
     Rarity = 5,
@@ -12188,15 +12180,15 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_95,
     ApplicationType = 15,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51455},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 18,
     CostChange = 1,
-    DescValues = T.RT_295,
-    FilterTag = T.RT_296,
+    DescValues = T.RT_293,
+    FilterTag = T.RT_294,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Green.T_Mod_Typhon01_Green",
     Id = 51455,
@@ -12205,7 +12197,7 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1405",
     OpenVersion = 10,
-    PassiveEffects = T.RT_297,
+    PassiveEffects = T.RT_295,
     PassiveEffectsDesc = "MOD_DESC_1440",
     Polarity = 1,
     Rarity = 5,
@@ -12216,17 +12208,17 @@ return ReadOnly("Mod", {
   },
   [51461] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_327,
+    AddAttrs = T.RT_325,
     ApplicationType = 16,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51461},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 18,
     CostChange = 1,
-    FilterTag = T.RT_284,
+    FilterTag = T.RT_282,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Orange.T_Mod_Typhon01_Orange",
     Id = 51461,
@@ -12244,17 +12236,17 @@ return ReadOnly("Mod", {
   },
   [51462] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_329,
+    AddAttrs = T.RT_327,
     ApplicationType = 16,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51462},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 18,
     CostChange = 1,
-    FilterTag = T.RT_287,
+    FilterTag = T.RT_285,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Orange.T_Mod_Typhon01_Orange",
     Id = 51462,
@@ -12272,10 +12264,10 @@ return ReadOnly("Mod", {
   },
   [51463] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_331,
+    AddAttrs = T.RT_329,
     ApplicationType = 16,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51463},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -12286,7 +12278,7 @@ return ReadOnly("Mod", {
       [1] = "$-#PassiveEffect[1420].Vars.BuffRate*100$%",
       [2] = "$GetModValue(51463,4)*100$%"
     },
-    FilterTag = T.RT_290,
+    FilterTag = T.RT_288,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Orange.T_Mod_Typhon01_Orange",
     Id = 51463,
@@ -12295,7 +12287,7 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1403",
     OpenVersion = 10,
-    PassiveEffects = T.RT_332,
+    PassiveEffects = T.RT_330,
     PassiveEffectsDesc = "MOD_DESC_1420",
     Polarity = 1,
     Rarity = 5,
@@ -12309,15 +12301,15 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_99,
     ApplicationType = 16,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51464},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 18,
     CostChange = 1,
-    DescValues = T.RT_292,
-    FilterTag = T.RT_293,
+    DescValues = T.RT_290,
+    FilterTag = T.RT_291,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Orange.T_Mod_Typhon01_Orange",
     Id = 51464,
@@ -12326,7 +12318,7 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1404",
     OpenVersion = 10,
-    PassiveEffects = T.RT_294,
+    PassiveEffects = T.RT_292,
     PassiveEffectsDesc = "MOD_DESC_1430",
     Polarity = 1,
     Rarity = 5,
@@ -12340,15 +12332,15 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_99,
     ApplicationType = 16,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51465},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 18,
     CostChange = 1,
-    DescValues = T.RT_295,
-    FilterTag = T.RT_296,
+    DescValues = T.RT_293,
+    FilterTag = T.RT_294,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Typhon01_Orange.T_Mod_Typhon01_Orange",
     Id = 51465,
@@ -12357,7 +12349,7 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1405",
     OpenVersion = 10,
-    PassiveEffects = T.RT_297,
+    PassiveEffects = T.RT_295,
     PassiveEffectsDesc = "MOD_DESC_1440",
     Polarity = 1,
     Rarity = 5,
@@ -12368,10 +12360,10 @@ return ReadOnly("Mod", {
   },
   [51711] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_334,
+    AddAttrs = T.RT_332,
     ApplicationType = 11,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51711},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -12394,17 +12386,17 @@ return ReadOnly("Mod", {
     Polarity = 1,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_335,
+    RepeatGroup = T.RT_333,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [51712] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_337,
+    AddAttrs = T.RT_335,
     ApplicationType = 11,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51712},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -12414,7 +12406,7 @@ return ReadOnly("Mod", {
     DescValues = {
       [1] = "$math.floor(#Mod[51712].RepeatModLevel)$"
     },
-    FilterTag = T.RT_338,
+    FilterTag = T.RT_336,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Black.T_Mod_Mephisto01_Black",
     Id = 51712,
@@ -12427,17 +12419,17 @@ return ReadOnly("Mod", {
     Polarity = 2,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_339,
+    RepeatGroup = T.RT_337,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [51713] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_341,
+    AddAttrs = T.RT_339,
     ApplicationType = 11,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51713},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -12447,7 +12439,7 @@ return ReadOnly("Mod", {
     DescValues = {
       [1] = "$math.floor(#Mod[51713].RepeatModLevel)$"
     },
-    FilterTag = T.RT_342,
+    FilterTag = T.RT_340,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Black.T_Mod_Mephisto01_Black",
     Id = 51713,
@@ -12460,17 +12452,17 @@ return ReadOnly("Mod", {
     Polarity = 3,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_343,
+    RepeatGroup = T.RT_341,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [51714] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_346,
+    AddAttrs = T.RT_344,
     ApplicationType = 11,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51714},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -12480,7 +12472,7 @@ return ReadOnly("Mod", {
     DescValues = {
       [1] = "$math.floor(#Mod[51714].RepeatModLevel)$"
     },
-    FilterTag = T.RT_347,
+    FilterTag = T.RT_345,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Black.T_Mod_Mephisto01_Black",
     Id = 51714,
@@ -12493,25 +12485,25 @@ return ReadOnly("Mod", {
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_348,
+    RepeatGroup = T.RT_346,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [51715] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_350,
+    AddAttrs = T.RT_348,
     AddCharModCost = 2.5,
     ApplicationType = 11,
-    ApplySlot = T.RT_217,
-    BreakDown = T.RT_538,
+    ApplySlot = T.RT_215,
+    BreakDown = T.RT_536,
     CollectRewardExp = 200,
     Cost = 10,
     CostChange = 1,
     DescValues = {
       [1] = "$GetModPolarity(51715)$"
     },
-    FilterTag = T.RT_195,
+    FilterTag = T.RT_193,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_FeatheredSnake01_Black.T_Mod_FeatheredSnake01_Black",
     Id = 51715,
@@ -12521,27 +12513,27 @@ return ReadOnly("Mod", {
     OpenVersion = 999,
     PassiveEffectsDesc = "MOD_DESC_1710",
     Polarity = 2,
-    PolarityNeedNum = T.RT_351,
+    PolarityNeedNum = T.RT_349,
     Rarity = 5,
     ReleaseVersion = 9990,
-    RepeatGroup = T.RT_352,
+    RepeatGroup = T.RT_350,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_FeatheredSnake01"
   },
   [51716] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_354,
+    AddAttrs = T.RT_352,
     AddCharModCost = 2.5,
     ApplicationType = 11,
-    ApplySlot = T.RT_217,
-    BreakDown = T.RT_538,
+    ApplySlot = T.RT_215,
+    BreakDown = T.RT_536,
     CollectRewardExp = 200,
     Cost = 10,
     CostChange = 1,
     DescValues = {
       [1] = "$GetModPolarity(51716)$"
     },
-    FilterTag = T.RT_355,
+    FilterTag = T.RT_353,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_FeatheredSnake01_Black.T_Mod_FeatheredSnake01_Black",
     Id = 51716,
@@ -12551,19 +12543,19 @@ return ReadOnly("Mod", {
     OpenVersion = 999,
     PassiveEffectsDesc = "MOD_DESC_1710",
     Polarity = 3,
-    PolarityNeedNum = T.RT_356,
+    PolarityNeedNum = T.RT_354,
     Rarity = 5,
     ReleaseVersion = 9990,
-    RepeatGroup = T.RT_357,
+    RepeatGroup = T.RT_355,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_FeatheredSnake01"
   },
   [51721] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_358,
+    AddAttrs = T.RT_356,
     ApplicationType = 12,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51721},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -12573,7 +12565,7 @@ return ReadOnly("Mod", {
     DescValues = {
       [1] = "$math.floor(#Mod[51721].RepeatModLevel)$"
     },
-    FilterTag = T.RT_189,
+    FilterTag = T.RT_187,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Blue.T_Mod_Mephisto01_Blue",
     Id = 51721,
@@ -12586,17 +12578,17 @@ return ReadOnly("Mod", {
     Polarity = 1,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_359,
+    RepeatGroup = T.RT_357,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [51722] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_361,
+    AddAttrs = T.RT_359,
     ApplicationType = 12,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51722},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -12606,7 +12598,7 @@ return ReadOnly("Mod", {
     DescValues = {
       [1] = "$math.floor(#Mod[51722].RepeatModLevel)$"
     },
-    FilterTag = T.RT_342,
+    FilterTag = T.RT_340,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Blue.T_Mod_Mephisto01_Blue",
     Id = 51722,
@@ -12619,17 +12611,17 @@ return ReadOnly("Mod", {
     Polarity = 2,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_362,
+    RepeatGroup = T.RT_360,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [51723] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_364,
+    AddAttrs = T.RT_362,
     ApplicationType = 12,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51723},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -12639,7 +12631,7 @@ return ReadOnly("Mod", {
     DescValues = {
       [1] = "$math.floor(#Mod[51723].RepeatModLevel)$"
     },
-    FilterTag = T.RT_365,
+    FilterTag = T.RT_363,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Blue.T_Mod_Mephisto01_Blue",
     Id = 51723,
@@ -12652,17 +12644,17 @@ return ReadOnly("Mod", {
     Polarity = 3,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_366,
+    RepeatGroup = T.RT_364,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [51724] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_368,
+    AddAttrs = T.RT_366,
     ApplicationType = 12,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51724},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -12672,7 +12664,7 @@ return ReadOnly("Mod", {
     DescValues = {
       [1] = "$math.floor(#Mod[51724].RepeatModLevel)$"
     },
-    FilterTag = T.RT_369,
+    FilterTag = T.RT_367,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Blue.T_Mod_Mephisto01_Blue",
     Id = 51724,
@@ -12685,25 +12677,25 @@ return ReadOnly("Mod", {
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_370,
+    RepeatGroup = T.RT_368,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [51725] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_354,
+    AddAttrs = T.RT_352,
     AddCharModCost = 2.5,
     ApplicationType = 12,
-    ApplySlot = T.RT_217,
-    BreakDown = T.RT_538,
+    ApplySlot = T.RT_215,
+    BreakDown = T.RT_536,
     CollectRewardExp = 200,
     Cost = 10,
     CostChange = 1,
     DescValues = {
       [1] = "$GetModPolarity(51725)$"
     },
-    FilterTag = T.RT_355,
+    FilterTag = T.RT_353,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_FeatheredSnake01_Blue.T_Mod_FeatheredSnake01_Blue",
     Id = 51725,
@@ -12713,27 +12705,27 @@ return ReadOnly("Mod", {
     OpenVersion = 999,
     PassiveEffectsDesc = "MOD_DESC_1710",
     Polarity = 1,
-    PolarityNeedNum = T.RT_371,
+    PolarityNeedNum = T.RT_369,
     Rarity = 5,
     ReleaseVersion = 9990,
-    RepeatGroup = T.RT_372,
+    RepeatGroup = T.RT_370,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_FeatheredSnake01"
   },
   [51726] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_374,
+    AddAttrs = T.RT_372,
     AddCharModCost = 2.5,
     ApplicationType = 12,
-    ApplySlot = T.RT_217,
-    BreakDown = T.RT_538,
+    ApplySlot = T.RT_215,
+    BreakDown = T.RT_536,
     CollectRewardExp = 200,
     Cost = 10,
     CostChange = 1,
     DescValues = {
       [1] = "$GetModPolarity(51726)$"
     },
-    FilterTag = T.RT_192,
+    FilterTag = T.RT_190,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_FeatheredSnake01_Blue.T_Mod_FeatheredSnake01_Blue",
     Id = 51726,
@@ -12743,19 +12735,19 @@ return ReadOnly("Mod", {
     OpenVersion = 999,
     PassiveEffectsDesc = "MOD_DESC_1710",
     Polarity = 3,
-    PolarityNeedNum = T.RT_356,
+    PolarityNeedNum = T.RT_354,
     Rarity = 5,
     ReleaseVersion = 9990,
-    RepeatGroup = T.RT_375,
+    RepeatGroup = T.RT_373,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_FeatheredSnake01"
   },
   [51731] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_377,
+    AddAttrs = T.RT_375,
     ApplicationType = 13,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51731},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -12765,7 +12757,7 @@ return ReadOnly("Mod", {
     DescValues = {
       [1] = "$math.floor(#Mod[51731].RepeatModLevel)$"
     },
-    FilterTag = T.RT_191,
+    FilterTag = T.RT_189,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Red.T_Mod_Mephisto01_Red",
     Id = 51731,
@@ -12778,17 +12770,17 @@ return ReadOnly("Mod", {
     Polarity = 1,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_378,
+    RepeatGroup = T.RT_376,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [51732] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_380,
+    AddAttrs = T.RT_378,
     ApplicationType = 13,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51732},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -12798,7 +12790,7 @@ return ReadOnly("Mod", {
     DescValues = {
       [1] = "$math.floor(#Mod[51732].RepeatModLevel)$"
     },
-    FilterTag = T.RT_381,
+    FilterTag = T.RT_379,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Red.T_Mod_Mephisto01_Red",
     Id = 51732,
@@ -12811,17 +12803,17 @@ return ReadOnly("Mod", {
     Polarity = 2,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_382,
+    RepeatGroup = T.RT_380,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [51733] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_384,
+    AddAttrs = T.RT_382,
     ApplicationType = 13,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51733},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -12831,7 +12823,7 @@ return ReadOnly("Mod", {
     DescValues = {
       [1] = "$math.floor(#Mod[51733].RepeatModLevel)$"
     },
-    FilterTag = T.RT_365,
+    FilterTag = T.RT_363,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Red.T_Mod_Mephisto01_Red",
     Id = 51733,
@@ -12844,17 +12836,17 @@ return ReadOnly("Mod", {
     Polarity = 3,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_385,
+    RepeatGroup = T.RT_383,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [51734] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_388,
+    AddAttrs = T.RT_386,
     ApplicationType = 13,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51734},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -12864,7 +12856,7 @@ return ReadOnly("Mod", {
     DescValues = {
       [1] = "$math.floor(#Mod[51734].RepeatModLevel)$"
     },
-    FilterTag = T.RT_389,
+    FilterTag = T.RT_387,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Red.T_Mod_Mephisto01_Red",
     Id = 51734,
@@ -12877,25 +12869,25 @@ return ReadOnly("Mod", {
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_390,
+    RepeatGroup = T.RT_388,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [51735] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_374,
+    AddAttrs = T.RT_372,
     AddCharModCost = 2.5,
     ApplicationType = 13,
-    ApplySlot = T.RT_217,
-    BreakDown = T.RT_538,
+    ApplySlot = T.RT_215,
+    BreakDown = T.RT_536,
     CollectRewardExp = 200,
     Cost = 10,
     CostChange = 1,
     DescValues = {
       [1] = "$GetModPolarity(51735)$"
     },
-    FilterTag = T.RT_192,
+    FilterTag = T.RT_190,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_FeatheredSnake01_Red.T_Mod_FeatheredSnake01_Red",
     Id = 51735,
@@ -12905,27 +12897,27 @@ return ReadOnly("Mod", {
     OpenVersion = 999,
     PassiveEffectsDesc = "MOD_DESC_1710",
     Polarity = 2,
-    PolarityNeedNum = T.RT_351,
+    PolarityNeedNum = T.RT_349,
     Rarity = 5,
     ReleaseVersion = 9990,
-    RepeatGroup = T.RT_391,
+    RepeatGroup = T.RT_389,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_FeatheredSnake01"
   },
   [51736] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_393,
+    AddAttrs = T.RT_391,
     AddCharModCost = 2.5,
     ApplicationType = 13,
-    ApplySlot = T.RT_217,
-    BreakDown = T.RT_538,
+    ApplySlot = T.RT_215,
+    BreakDown = T.RT_536,
     CollectRewardExp = 200,
     Cost = 10,
     CostChange = 1,
     DescValues = {
       [1] = "$GetModPolarity(51736)$"
     },
-    FilterTag = T.RT_194,
+    FilterTag = T.RT_192,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_FeatheredSnake01_Red.T_Mod_FeatheredSnake01_Red",
     Id = 51736,
@@ -12935,19 +12927,19 @@ return ReadOnly("Mod", {
     OpenVersion = 999,
     PassiveEffectsDesc = "MOD_DESC_1710",
     Polarity = 4,
-    PolarityNeedNum = T.RT_394,
+    PolarityNeedNum = T.RT_392,
     Rarity = 5,
     ReleaseVersion = 9990,
-    RepeatGroup = T.RT_395,
+    RepeatGroup = T.RT_393,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_FeatheredSnake01"
   },
   [51741] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_396,
+    AddAttrs = T.RT_394,
     ApplicationType = 14,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51741},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -12957,7 +12949,7 @@ return ReadOnly("Mod", {
     DescValues = {
       [1] = "$math.floor(#Mod[51741].RepeatModLevel)$"
     },
-    FilterTag = T.RT_189,
+    FilterTag = T.RT_187,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Purple.T_Mod_Mephisto01_Purple",
     Id = 51741,
@@ -12970,17 +12962,17 @@ return ReadOnly("Mod", {
     Polarity = 1,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_397,
+    RepeatGroup = T.RT_395,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [51742] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_399,
+    AddAttrs = T.RT_397,
     ApplicationType = 14,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51742},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -12990,7 +12982,7 @@ return ReadOnly("Mod", {
     DescValues = {
       [1] = "$math.floor(#Mod[51742].RepeatModLevel)$"
     },
-    FilterTag = T.RT_338,
+    FilterTag = T.RT_336,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Purple.T_Mod_Mephisto01_Purple",
     Id = 51742,
@@ -13003,17 +12995,17 @@ return ReadOnly("Mod", {
     Polarity = 2,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_400,
+    RepeatGroup = T.RT_398,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [51743] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_401,
+    AddAttrs = T.RT_399,
     ApplicationType = 14,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51743},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -13023,7 +13015,7 @@ return ReadOnly("Mod", {
     DescValues = {
       [1] = "$math.floor(#Mod[51743].RepeatModLevel)$"
     },
-    FilterTag = T.RT_204,
+    FilterTag = T.RT_202,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Purple.T_Mod_Mephisto01_Purple",
     Id = 51743,
@@ -13036,17 +13028,17 @@ return ReadOnly("Mod", {
     Polarity = 3,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_402,
+    RepeatGroup = T.RT_400,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [51744] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_405,
+    AddAttrs = T.RT_403,
     ApplicationType = 14,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51744},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -13056,7 +13048,7 @@ return ReadOnly("Mod", {
     DescValues = {
       [1] = "$math.floor(#Mod[51744].RepeatModLevel)$"
     },
-    FilterTag = T.RT_406,
+    FilterTag = T.RT_404,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Purple.T_Mod_Mephisto01_Purple",
     Id = 51744,
@@ -13069,7 +13061,7 @@ return ReadOnly("Mod", {
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_407,
+    RepeatGroup = T.RT_405,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
@@ -13079,8 +13071,8 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_29,
     AddCharModCost = 2.5,
     ApplicationType = 14,
-    ApplySlot = T.RT_217,
-    BreakDown = T.RT_538,
+    ApplySlot = T.RT_215,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51745},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -13090,7 +13082,7 @@ return ReadOnly("Mod", {
     DescValues = {
       [1] = "$GetModPolarity(51745)$"
     },
-    FilterTag = T.RT_194,
+    FilterTag = T.RT_192,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_FeatheredSnake01_Purple.T_Mod_FeatheredSnake01_Purple",
     Id = 51745,
@@ -13101,10 +13093,10 @@ return ReadOnly("Mod", {
     OpenVersion = 12,
     PassiveEffectsDesc = "MOD_DESC_1710",
     Polarity = 1,
-    PolarityNeedNum = T.RT_371,
+    PolarityNeedNum = T.RT_369,
     Rarity = 5,
     ReleaseVersion = 120,
-    RepeatGroup = T.RT_408,
+    RepeatGroup = T.RT_406,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_FeatheredSnake01"
   },
@@ -13113,8 +13105,8 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_37,
     AddCharModCost = 2.5,
     ApplicationType = 14,
-    ApplySlot = T.RT_217,
-    BreakDown = T.RT_538,
+    ApplySlot = T.RT_215,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51746},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -13124,7 +13116,7 @@ return ReadOnly("Mod", {
     DescValues = {
       [1] = "$GetModPolarity(51746)$"
     },
-    FilterTag = T.RT_192,
+    FilterTag = T.RT_190,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_FeatheredSnake01_Purple.T_Mod_FeatheredSnake01_Purple",
     Id = 51746,
@@ -13135,19 +13127,19 @@ return ReadOnly("Mod", {
     OpenVersion = 12,
     PassiveEffectsDesc = "MOD_DESC_1710",
     Polarity = 2,
-    PolarityNeedNum = T.RT_351,
+    PolarityNeedNum = T.RT_349,
     Rarity = 5,
     ReleaseVersion = 120,
-    RepeatGroup = T.RT_409,
+    RepeatGroup = T.RT_407,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_FeatheredSnake01"
   },
   [51751] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_411,
+    AddAttrs = T.RT_409,
     ApplicationType = 15,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51751},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -13157,7 +13149,7 @@ return ReadOnly("Mod", {
     DescValues = {
       [1] = "$math.floor(#Mod[51751].RepeatModLevel)$"
     },
-    FilterTag = T.RT_191,
+    FilterTag = T.RT_189,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Green.T_Mod_Mephisto01_Green",
     Id = 51751,
@@ -13170,17 +13162,17 @@ return ReadOnly("Mod", {
     Polarity = 1,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_412,
+    RepeatGroup = T.RT_410,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [51752] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_414,
+    AddAttrs = T.RT_412,
     ApplicationType = 15,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51752},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -13190,7 +13182,7 @@ return ReadOnly("Mod", {
     DescValues = {
       [1] = "$math.floor(#Mod[51752].RepeatModLevel)$"
     },
-    FilterTag = T.RT_415,
+    FilterTag = T.RT_413,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Green.T_Mod_Mephisto01_Green",
     Id = 51752,
@@ -13203,17 +13195,17 @@ return ReadOnly("Mod", {
     Polarity = 2,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_416,
+    RepeatGroup = T.RT_414,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [51753] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_417,
+    AddAttrs = T.RT_415,
     ApplicationType = 15,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51753},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -13223,7 +13215,7 @@ return ReadOnly("Mod", {
     DescValues = {
       [1] = "$math.floor(#Mod[51753].RepeatModLevel)$"
     },
-    FilterTag = T.RT_204,
+    FilterTag = T.RT_202,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Green.T_Mod_Mephisto01_Green",
     Id = 51753,
@@ -13236,17 +13228,17 @@ return ReadOnly("Mod", {
     Polarity = 3,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_418,
+    RepeatGroup = T.RT_416,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [51754] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_421,
+    AddAttrs = T.RT_419,
     ApplicationType = 15,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51754},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -13256,7 +13248,7 @@ return ReadOnly("Mod", {
     DescValues = {
       [1] = "$math.floor(#Mod[51754].RepeatModLevel)$"
     },
-    FilterTag = T.RT_422,
+    FilterTag = T.RT_420,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Green.T_Mod_Mephisto01_Green",
     Id = 51754,
@@ -13269,18 +13261,18 @@ return ReadOnly("Mod", {
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_423,
+    RepeatGroup = T.RT_421,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [51755] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_425,
+    AddAttrs = T.RT_423,
     AddCharModCost = 2.5,
     ApplicationType = 15,
-    ApplySlot = T.RT_217,
-    BreakDown = T.RT_538,
+    ApplySlot = T.RT_215,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51755},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -13290,7 +13282,7 @@ return ReadOnly("Mod", {
     DescValues = {
       [1] = "$GetModPolarity(51755)$"
     },
-    FilterTag = T.RT_426,
+    FilterTag = T.RT_424,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_FeatheredSnake01_Green.T_Mod_FeatheredSnake01_Green",
     Id = 51755,
@@ -13301,10 +13293,10 @@ return ReadOnly("Mod", {
     OpenVersion = 11,
     PassiveEffectsDesc = "MOD_DESC_1710",
     Polarity = 3,
-    PolarityNeedNum = T.RT_356,
+    PolarityNeedNum = T.RT_354,
     Rarity = 5,
     ReleaseVersion = 110,
-    RepeatGroup = T.RT_427,
+    RepeatGroup = T.RT_425,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_FeatheredSnake01"
   },
@@ -13313,8 +13305,8 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_31,
     AddCharModCost = 2.5,
     ApplicationType = 15,
-    ApplySlot = T.RT_217,
-    BreakDown = T.RT_538,
+    ApplySlot = T.RT_215,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51756},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -13324,7 +13316,7 @@ return ReadOnly("Mod", {
     DescValues = {
       [1] = "$GetModPolarity(51756)$"
     },
-    FilterTag = T.RT_195,
+    FilterTag = T.RT_193,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_FeatheredSnake01_Green.T_Mod_FeatheredSnake01_Green",
     Id = 51756,
@@ -13335,19 +13327,19 @@ return ReadOnly("Mod", {
     OpenVersion = 11,
     PassiveEffectsDesc = "MOD_DESC_1710",
     Polarity = 4,
-    PolarityNeedNum = T.RT_394,
+    PolarityNeedNum = T.RT_392,
     Rarity = 5,
     ReleaseVersion = 110,
-    RepeatGroup = T.RT_428,
+    RepeatGroup = T.RT_426,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_FeatheredSnake01"
   },
   [51761] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_429,
+    AddAttrs = T.RT_427,
     ApplicationType = 16,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51761},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -13370,17 +13362,17 @@ return ReadOnly("Mod", {
     Polarity = 1,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_430,
+    RepeatGroup = T.RT_428,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [51762] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_432,
+    AddAttrs = T.RT_430,
     ApplicationType = 16,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51762},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -13390,7 +13382,7 @@ return ReadOnly("Mod", {
     DescValues = {
       [1] = "$math.floor(#Mod[51762].RepeatModLevel)$"
     },
-    FilterTag = T.RT_415,
+    FilterTag = T.RT_413,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Orange.T_Mod_Mephisto01_Orange",
     Id = 51762,
@@ -13403,17 +13395,17 @@ return ReadOnly("Mod", {
     Polarity = 2,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_433,
+    RepeatGroup = T.RT_431,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [51763] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_435,
+    AddAttrs = T.RT_433,
     ApplicationType = 16,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51763},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -13423,7 +13415,7 @@ return ReadOnly("Mod", {
     DescValues = {
       [1] = "$math.floor(#Mod[51763].RepeatModLevel)$"
     },
-    FilterTag = T.RT_381,
+    FilterTag = T.RT_379,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Orange.T_Mod_Mephisto01_Orange",
     Id = 51763,
@@ -13436,17 +13428,17 @@ return ReadOnly("Mod", {
     Polarity = 3,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_436,
+    RepeatGroup = T.RT_434,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [51764] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_438,
+    AddAttrs = T.RT_436,
     ApplicationType = 16,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51764},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -13456,7 +13448,7 @@ return ReadOnly("Mod", {
     DescValues = {
       [1] = "$math.floor(#Mod[51764].RepeatModLevel)$"
     },
-    FilterTag = T.RT_439,
+    FilterTag = T.RT_437,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Mephisto01_Orange.T_Mod_Mephisto01_Orange",
     Id = 51764,
@@ -13469,25 +13461,25 @@ return ReadOnly("Mod", {
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_440,
+    RepeatGroup = T.RT_438,
     RepeatModLevel = 5,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Mephisto01"
   },
   [51765] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_354,
+    AddAttrs = T.RT_352,
     AddCharModCost = 2.5,
     ApplicationType = 16,
-    ApplySlot = T.RT_217,
-    BreakDown = T.RT_538,
+    ApplySlot = T.RT_215,
+    BreakDown = T.RT_536,
     CollectRewardExp = 200,
     Cost = 10,
     CostChange = 1,
     DescValues = {
       [1] = "$GetModPolarity(51765)$"
     },
-    FilterTag = T.RT_355,
+    FilterTag = T.RT_353,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_FeatheredSnake01.T_Mod_FeatheredSnake01",
     Id = 51765,
@@ -13497,20 +13489,20 @@ return ReadOnly("Mod", {
     OpenVersion = 13,
     PassiveEffectsDesc = "MOD_DESC_1710",
     Polarity = 1,
-    PolarityNeedNum = T.RT_371,
+    PolarityNeedNum = T.RT_369,
     Rarity = 5,
     ReleaseVersion = 130,
-    RepeatGroup = T.RT_441,
+    RepeatGroup = T.RT_439,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_FeatheredSnake01"
   },
   [51766] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_443,
+    AddAttrs = T.RT_441,
     AddCharModCost = 2.5,
     ApplicationType = 16,
-    ApplySlot = T.RT_217,
-    BreakDown = T.RT_538,
+    ApplySlot = T.RT_215,
+    BreakDown = T.RT_536,
     CollectRewardExp = 200,
     Cost = 10,
     CostChange = 1,
@@ -13518,7 +13510,7 @@ return ReadOnly("Mod", {
       [1] = "$GetModPolarity(51766)$",
       [2] = "$#Mod[51766].AddAttrs[1].Value*100$%"
     },
-    FilterTag = T.RT_444,
+    FilterTag = T.RT_442,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_FeatheredSnake01.T_Mod_FeatheredSnake01",
     Id = 51766,
@@ -13526,13 +13518,13 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1766",
     OpenVersion = 13,
-    PassiveEffects = T.RT_445,
+    PassiveEffects = T.RT_443,
     PassiveEffectsDesc = "MOD_DESC_1720",
     Polarity = 3,
-    PolarityNeedNum = T.RT_356,
+    PolarityNeedNum = T.RT_354,
     Rarity = 5,
     ReleaseVersion = 130,
-    RepeatGroup = T.RT_446,
+    RepeatGroup = T.RT_444,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_FeatheredSnake01"
   },
@@ -13540,15 +13532,15 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51801},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 4,
     CostChange = 1,
-    DescValues = T.RT_447,
-    FilterTag = T.RT_245,
+    DescValues = T.RT_445,
+    FilterTag = T.RT_243,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Jormungand01.T_Mod_Jormungand01",
     Id = 51801,
@@ -13557,12 +13549,12 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1801",
     OpenVersion = 10,
-    PassiveEffects = T.RT_448,
+    PassiveEffects = T.RT_446,
     PassiveEffectsDesc = "MOD_DESC_1801",
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_449,
+    RepeatGroup = T.RT_447,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Jormungand01"
   },
@@ -13570,15 +13562,15 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51802},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 4,
     CostChange = 1,
-    DescValues = T.RT_447,
-    FilterTag = T.RT_245,
+    DescValues = T.RT_445,
+    FilterTag = T.RT_243,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Jormungand01.T_Mod_Jormungand01",
     Id = 51802,
@@ -13587,12 +13579,12 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1802",
     OpenVersion = 10,
-    PassiveEffects = T.RT_450,
+    PassiveEffects = T.RT_448,
     PassiveEffectsDesc = "MOD_DESC_1802",
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_449,
+    RepeatGroup = T.RT_447,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Jormungand01"
   },
@@ -13600,15 +13592,15 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51803},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 4,
     CostChange = 1,
-    DescValues = T.RT_447,
-    FilterTag = T.RT_245,
+    DescValues = T.RT_445,
+    FilterTag = T.RT_243,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Jormungand01.T_Mod_Jormungand01",
     Id = 51803,
@@ -13617,12 +13609,12 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1803",
     OpenVersion = 10,
-    PassiveEffects = T.RT_451,
+    PassiveEffects = T.RT_449,
     PassiveEffectsDesc = "MOD_DESC_1803",
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_449,
+    RepeatGroup = T.RT_447,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Jormungand01"
   },
@@ -13630,15 +13622,15 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51804},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 4,
     CostChange = 1,
-    DescValues = T.RT_447,
-    FilterTag = T.RT_245,
+    DescValues = T.RT_445,
+    FilterTag = T.RT_243,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Jormungand01.T_Mod_Jormungand01",
     Id = 51804,
@@ -13647,12 +13639,12 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1804",
     OpenVersion = 10,
-    PassiveEffects = T.RT_452,
+    PassiveEffects = T.RT_450,
     PassiveEffectsDesc = "MOD_DESC_1804",
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_449,
+    RepeatGroup = T.RT_447,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Jormungand01"
   },
@@ -13660,15 +13652,15 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51805},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 4,
     CostChange = 1,
-    DescValues = T.RT_447,
-    FilterTag = T.RT_245,
+    DescValues = T.RT_445,
+    FilterTag = T.RT_243,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Jormungand01.T_Mod_Jormungand01",
     Id = 51805,
@@ -13677,12 +13669,12 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1805",
     OpenVersion = 10,
-    PassiveEffects = T.RT_453,
+    PassiveEffects = T.RT_451,
     PassiveEffectsDesc = "MOD_DESC_1805",
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_449,
+    RepeatGroup = T.RT_447,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Jormungand01"
   },
@@ -13690,15 +13682,15 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51806},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 4,
     CostChange = 1,
-    DescValues = T.RT_447,
-    FilterTag = T.RT_245,
+    DescValues = T.RT_445,
+    FilterTag = T.RT_243,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Jormungand01.T_Mod_Jormungand01",
     Id = 51806,
@@ -13707,12 +13699,12 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1806",
     OpenVersion = 10,
-    PassiveEffects = T.RT_454,
+    PassiveEffects = T.RT_452,
     PassiveEffectsDesc = "MOD_DESC_1806",
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_449,
+    RepeatGroup = T.RT_447,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Jormungand01"
   },
@@ -13720,15 +13712,15 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51807},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 4,
     CostChange = 1,
-    DescValues = T.RT_447,
-    FilterTag = T.RT_245,
+    DescValues = T.RT_445,
+    FilterTag = T.RT_243,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Jormungand01.T_Mod_Jormungand01",
     Id = 51807,
@@ -13737,12 +13729,12 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1807",
     OpenVersion = 10,
-    PassiveEffects = T.RT_455,
+    PassiveEffects = T.RT_453,
     PassiveEffectsDesc = "MOD_DESC_1807",
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_449,
+    RepeatGroup = T.RT_447,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Jormungand01"
   },
@@ -13750,15 +13742,15 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51808},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 4,
     CostChange = 1,
-    DescValues = T.RT_447,
-    FilterTag = T.RT_245,
+    DescValues = T.RT_445,
+    FilterTag = T.RT_243,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Jormungand01.T_Mod_Jormungand01",
     Id = 51808,
@@ -13767,12 +13759,12 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1808",
     OpenVersion = 10,
-    PassiveEffects = T.RT_456,
+    PassiveEffects = T.RT_454,
     PassiveEffectsDesc = "MOD_DESC_1808",
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_449,
+    RepeatGroup = T.RT_447,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Jormungand01"
   },
@@ -13780,15 +13772,15 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51809},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 4,
     CostChange = 1,
-    DescValues = T.RT_447,
-    FilterTag = T.RT_245,
+    DescValues = T.RT_445,
+    FilterTag = T.RT_243,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Jormungand01.T_Mod_Jormungand01",
     Id = 51809,
@@ -13797,12 +13789,12 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1809",
     OpenVersion = 10,
-    PassiveEffects = T.RT_457,
+    PassiveEffects = T.RT_455,
     PassiveEffectsDesc = "MOD_DESC_1809",
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_449,
+    RepeatGroup = T.RT_447,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Jormungand01"
   },
@@ -13810,15 +13802,15 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51810},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 4,
     CostChange = 1,
-    DescValues = T.RT_447,
-    FilterTag = T.RT_245,
+    DescValues = T.RT_445,
+    FilterTag = T.RT_243,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Jormungand01.T_Mod_Jormungand01",
     Id = 51810,
@@ -13827,12 +13819,12 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1810",
     OpenVersion = 10,
-    PassiveEffects = T.RT_458,
+    PassiveEffects = T.RT_456,
     PassiveEffectsDesc = "MOD_DESC_1810",
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_449,
+    RepeatGroup = T.RT_447,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Jormungand01"
   },
@@ -13840,15 +13832,15 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51811},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 4,
     CostChange = 1,
-    DescValues = T.RT_447,
-    FilterTag = T.RT_245,
+    DescValues = T.RT_445,
+    FilterTag = T.RT_243,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Jormungand01.T_Mod_Jormungand01",
     Id = 51811,
@@ -13857,12 +13849,12 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1811",
     OpenVersion = 10,
-    PassiveEffects = T.RT_459,
+    PassiveEffects = T.RT_457,
     PassiveEffectsDesc = "MOD_DESC_1811",
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_449,
+    RepeatGroup = T.RT_447,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Jormungand01"
   },
@@ -13870,15 +13862,15 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     ApplicationType = 1,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51812},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 4,
     CostChange = 1,
-    DescValues = T.RT_447,
-    FilterTag = T.RT_245,
+    DescValues = T.RT_445,
+    FilterTag = T.RT_243,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Jormungand01.T_Mod_Jormungand01",
     Id = 51812,
@@ -13887,12 +13879,12 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1812",
     OpenVersion = 10,
-    PassiveEffects = T.RT_460,
+    PassiveEffects = T.RT_458,
     PassiveEffectsDesc = "MOD_DESC_1812",
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_449,
+    RepeatGroup = T.RT_447,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Jormungand01"
   },
@@ -13901,15 +13893,15 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_37,
     ApplicationType = 11,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51911},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 17,
     CostChange = 1,
-    DescValues = T.RT_461,
-    FilterTag = T.RT_462,
+    DescValues = T.RT_459,
+    FilterTag = T.RT_460,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Anubis01_Purple.T_Mod_Anubis01_Purple",
     Id = 51911,
@@ -13918,12 +13910,12 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1911",
     OpenVersion = 10,
-    PassiveEffects = T.RT_463,
+    PassiveEffects = T.RT_461,
     PassiveEffectsDesc = "MOD_DESC_1911",
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_464,
+    RepeatGroup = T.RT_462,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Anubis01"
   },
@@ -13932,15 +13924,15 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_37,
     ApplicationType = 12,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51921},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 17,
     CostChange = 1,
-    DescValues = T.RT_465,
-    FilterTag = T.RT_466,
+    DescValues = T.RT_463,
+    FilterTag = T.RT_464,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Bahamut01.T_Mod_Bahamut01",
     Id = 51921,
@@ -13949,12 +13941,12 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1921",
     OpenVersion = 10,
-    PassiveEffects = T.RT_467,
+    PassiveEffects = T.RT_465,
     PassiveEffectsDesc = "MOD_DESC_1921",
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_464,
+    RepeatGroup = T.RT_462,
     Sound = "SOUND_ITEM_MOD",
     SummonInherit = 1,
     TypeName = "MOD_Type_Name_Bahamut01"
@@ -13964,15 +13956,15 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_37,
     ApplicationType = 12,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51922},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 17,
     CostChange = 1,
-    DescValues = T.RT_468,
-    FilterTag = T.RT_469,
+    DescValues = T.RT_466,
+    FilterTag = T.RT_467,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Bahamut01.T_Mod_Bahamut01",
     Id = 51922,
@@ -13981,12 +13973,12 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1922",
     OpenVersion = 10,
-    PassiveEffects = T.RT_470,
+    PassiveEffects = T.RT_468,
     PassiveEffectsDesc = "MOD_DESC_1922",
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_464,
+    RepeatGroup = T.RT_462,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Bahamut01"
   },
@@ -13995,15 +13987,15 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_37,
     ApplicationType = 13,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51931},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 17,
     CostChange = 1,
-    DescValues = T.RT_471,
-    FilterTag = T.RT_469,
+    DescValues = T.RT_469,
+    FilterTag = T.RT_467,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Ifrit01.T_Mod_Ifrit01",
     Id = 51931,
@@ -14012,12 +14004,12 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1931",
     OpenVersion = 10,
-    PassiveEffects = T.RT_472,
+    PassiveEffects = T.RT_470,
     PassiveEffectsDesc = "MOD_DESC_1931",
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_464,
+    RepeatGroup = T.RT_462,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Ifrit01"
   },
@@ -14026,15 +14018,15 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_37,
     ApplicationType = 14,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51941},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 17,
     CostChange = 1,
-    DescValues = T.RT_473,
-    FilterTag = T.RT_474,
+    DescValues = T.RT_471,
+    FilterTag = T.RT_472,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Summanus01.T_Mod_Summanus01",
     Id = 51941,
@@ -14043,12 +14035,12 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1941",
     OpenVersion = 10,
-    PassiveEffects = T.RT_475,
+    PassiveEffects = T.RT_473,
     PassiveEffectsDesc = "MOD_DESC_1941",
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_464,
+    RepeatGroup = T.RT_462,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Summanus01"
   },
@@ -14057,15 +14049,15 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_37,
     ApplicationType = 15,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51951},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 17,
     CostChange = 1,
-    DescValues = T.RT_476,
-    FilterTag = T.RT_477,
+    DescValues = T.RT_474,
+    FilterTag = T.RT_475,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Hastur01.T_Mod_Hastur01",
     Id = 51951,
@@ -14074,12 +14066,12 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1951",
     OpenVersion = 10,
-    PassiveEffects = T.RT_478,
+    PassiveEffects = T.RT_476,
     PassiveEffectsDesc = "MOD_DESC_1951",
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_464,
+    RepeatGroup = T.RT_462,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Hastur01"
   },
@@ -14088,15 +14080,15 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_31,
     ApplicationType = 15,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51952},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 17,
     CostChange = 1,
-    DescValues = T.RT_479,
-    FilterTag = T.RT_480,
+    DescValues = T.RT_477,
+    FilterTag = T.RT_478,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Hastur01.T_Mod_Hastur01",
     Id = 51952,
@@ -14105,12 +14097,12 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1952",
     OpenVersion = 10,
-    PassiveEffects = T.RT_481,
+    PassiveEffects = T.RT_479,
     PassiveEffectsDesc = "MOD_DESC_1952",
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_464,
+    RepeatGroup = T.RT_462,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Hastur01"
   },
@@ -14119,15 +14111,15 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_31,
     ApplicationType = 16,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51961},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 17,
     CostChange = 1,
-    DescValues = T.RT_482,
-    FilterTag = T.RT_483,
+    DescValues = T.RT_480,
+    FilterTag = T.RT_481,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Yatagarasu01.T_Mod_Yatagarasu01",
     Id = 51961,
@@ -14136,12 +14128,12 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1961",
     OpenVersion = 10,
-    PassiveEffects = T.RT_484,
+    PassiveEffects = T.RT_482,
     PassiveEffectsDesc = "MOD_DESC_1961",
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_464,
+    RepeatGroup = T.RT_462,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Yatagarasu01"
   },
@@ -14150,15 +14142,15 @@ return ReadOnly("Mod", {
     AddAttrs = T.RT_31,
     ApplicationType = 16,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {51962},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 17,
     CostChange = 1,
-    DescValues = T.RT_485,
-    FilterTag = T.RT_486,
+    DescValues = T.RT_483,
+    FilterTag = T.RT_484,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Yatagarasu01.T_Mod_Yatagarasu01",
     Id = 51962,
@@ -14167,12 +14159,12 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1962",
     OpenVersion = 10,
-    PassiveEffects = T.RT_487,
+    PassiveEffects = T.RT_485,
     PassiveEffectsDesc = "MOD_DESC_1962",
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_464,
+    RepeatGroup = T.RT_462,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Yatagarasu01"
   },
@@ -14180,7 +14172,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     AddAttrs = T.RT_15,
     ApplicationType = 2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {52001},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -14207,7 +14199,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     AddAttrs = T.RT_27,
     ApplicationType = 2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {52004},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -14226,7 +14218,7 @@ return ReadOnly("Mod", {
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_220,
+    RepeatGroup = T.RT_218,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Cerberus01"
   },
@@ -14234,14 +14226,14 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     AddAttrs = T.RT_39,
     ApplicationType = 2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {52005},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 5,
     CostChange = 1,
-    FilterTag = T.RT_161,
+    FilterTag = T.RT_159,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Cerberus01.T_Mod_Cerberus01",
     Id = 52005,
@@ -14253,22 +14245,22 @@ return ReadOnly("Mod", {
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_221,
+    RepeatGroup = T.RT_219,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Cerberus01"
   },
   [52007] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_146,
+    AddAttrs = T.RT_144,
     ApplicationType = 2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {52007},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 7,
     CostChange = 1,
-    FilterTag = T.RT_147,
+    FilterTag = T.RT_145,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Cerberus01.T_Mod_Cerberus01",
     Id = 52007,
@@ -14280,22 +14272,22 @@ return ReadOnly("Mod", {
     Polarity = 1,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_148,
+    RepeatGroup = T.RT_146,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Cerberus01"
   },
   [52008] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_150,
+    AddAttrs = T.RT_148,
     ApplicationType = 2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {52008},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 6,
     CostChange = 1,
-    FilterTag = T.RT_151,
+    FilterTag = T.RT_149,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Cerberus01.T_Mod_Cerberus01",
     Id = 52008,
@@ -14307,7 +14299,7 @@ return ReadOnly("Mod", {
     Polarity = 2,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_152,
+    RepeatGroup = T.RT_150,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Cerberus01"
   },
@@ -14315,7 +14307,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     AddAttrs = T.RT_108,
     ApplicationType = 21,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {52101},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -14342,7 +14334,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     AddAttrs = T.RT_112,
     ApplicationType = 22,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {52102},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -14369,7 +14361,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     AddAttrs = T.RT_114,
     ApplicationType = 23,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {52103},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -14396,7 +14388,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     AddAttrs = T.RT_15,
     ApplicationType = 3,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {53001},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -14423,7 +14415,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     AddAttrs = T.RT_27,
     ApplicationType = 3,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {53004},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -14442,7 +14434,7 @@ return ReadOnly("Mod", {
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_225,
+    RepeatGroup = T.RT_223,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Lilith01"
   },
@@ -14450,14 +14442,14 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     AddAttrs = T.RT_26,
     ApplicationType = 3,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {53005},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 10,
     CostChange = 1,
-    FilterTag = T.RT_164,
+    FilterTag = T.RT_162,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Lilith01.T_Mod_Lilith01",
     Id = 53005,
@@ -14469,22 +14461,22 @@ return ReadOnly("Mod", {
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_226,
+    RepeatGroup = T.RT_224,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Lilith01"
   },
   [53007] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_146,
+    AddAttrs = T.RT_144,
     ApplicationType = 3,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {53007},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 7,
     CostChange = 1,
-    FilterTag = T.RT_147,
+    FilterTag = T.RT_145,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Lilith01.T_Mod_Lilith01",
     Id = 53007,
@@ -14496,22 +14488,22 @@ return ReadOnly("Mod", {
     Polarity = 1,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_158,
+    RepeatGroup = T.RT_156,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Lilith01"
   },
   [53008] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_150,
+    AddAttrs = T.RT_148,
     ApplicationType = 3,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {53008},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 6,
     CostChange = 1,
-    FilterTag = T.RT_151,
+    FilterTag = T.RT_149,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Lilith01.T_Mod_Lilith01",
     Id = 53008,
@@ -14523,7 +14515,7 @@ return ReadOnly("Mod", {
     Polarity = 2,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_159,
+    RepeatGroup = T.RT_157,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Lilith01"
   },
@@ -14537,7 +14529,7 @@ return ReadOnly("Mod", {
       }
     },
     ApplicationType = 3,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {53009},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -14570,14 +14562,14 @@ return ReadOnly("Mod", {
       [2] = {AttrName = "RayLength", Rate = "#2"}
     },
     ApplicationType = 3,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {53010},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 16,
     CostChange = 1,
-    FilterTag = T.RT_491,
+    FilterTag = T.RT_489,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Lilith01.T_Mod_Lilith01",
     Id = 53010,
@@ -14597,10 +14589,10 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     AddAttrs = {
       [1] = T.RT_25,
-      [2] = T.RT_533
+      [2] = T.RT_531
     },
     ApplicationType = 3,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {53011},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -14630,10 +14622,10 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     AddAttrs = {
       [1] = T.RT_23,
-      [2] = T.RT_518
+      [2] = T.RT_516
     },
     ApplicationType = 3,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {53012},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -14662,14 +14654,14 @@ return ReadOnly("Mod", {
   [53013] = {
     AccessKey = T.RT_54,
     AddAttrs = {
-      [1] = T.RT_227,
+      [1] = T.RT_225,
       [2] = {
         AttrName = "BulletConver",
         Rate = "#2"
       }
     },
     ApplicationType = 3,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {53013},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -14699,7 +14691,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     AddAttrs = T.RT_108,
     ApplicationType = 31,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {53101},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -14726,7 +14718,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     AddAttrs = T.RT_112,
     ApplicationType = 32,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {53102},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -14753,7 +14745,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_54,
     AddAttrs = T.RT_114,
     ApplicationType = 33,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {53103},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -14780,8 +14772,8 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_15,
     ApplicationType = 4,
-    BreakDown = T.RT_538,
-    CardLevelNeedModId = T.RT_539,
+    BreakDown = T.RT_536,
+    CardLevelNeedModId = {54001},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
@@ -14807,7 +14799,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_20,
     ApplicationType = 4,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {54002},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -14834,7 +14826,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_22,
     ApplicationType = 4,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {54003},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -14861,7 +14853,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_27,
     ApplicationType = 4,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {54004},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -14888,14 +14880,14 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_39,
     ApplicationType = 4,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {54005},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 16,
     CostChange = 2,
-    FilterTag = T.RT_161,
+    FilterTag = T.RT_159,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Cerberus02.T_Mod_Cerberus02",
     Id = 54005,
@@ -14907,7 +14899,7 @@ return ReadOnly("Mod", {
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_162,
+    RepeatGroup = T.RT_160,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Cerberus02"
   },
@@ -14915,7 +14907,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_18,
     ApplicationType = 4,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {54006},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -14942,11 +14934,11 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = {
       [1] = T.RT_14,
-      [2] = T.RT_149
+      [2] = T.RT_147
     },
     ApplicationType = 4,
-    BreakDown = T.RT_538,
-    CardLevelNeedModId = T.RT_539,
+    BreakDown = T.RT_536,
+    CardLevelNeedModId = {54009},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
@@ -14975,7 +14967,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_108,
     ApplicationType = 41,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {54101},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -14994,7 +14986,7 @@ return ReadOnly("Mod", {
     Polarity = 1,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_163,
+    RepeatGroup = T.RT_161,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Cerberus02"
   },
@@ -15002,7 +14994,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_112,
     ApplicationType = 42,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {54102},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -15021,7 +15013,7 @@ return ReadOnly("Mod", {
     Polarity = 1,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_163,
+    RepeatGroup = T.RT_161,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Cerberus02"
   },
@@ -15029,7 +15021,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_114,
     ApplicationType = 43,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {54103},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -15048,7 +15040,7 @@ return ReadOnly("Mod", {
     Polarity = 1,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_163,
+    RepeatGroup = T.RT_161,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Cerberus02"
   },
@@ -15062,14 +15054,14 @@ return ReadOnly("Mod", {
       [2] = T.RT_24
     },
     ApplicationType = 4,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {54201},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 18,
     CostChange = 2,
-    FilterTag = T.RT_161,
+    FilterTag = T.RT_159,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Cerberus02.T_Mod_Cerberus02",
     Id = 54201,
@@ -15089,21 +15081,21 @@ return ReadOnly("Mod", {
   [54202] = {
     AccessKey = T.RT_120,
     AddAttrs = {
-      [1] = T.RT_494,
+      [1] = T.RT_492,
       [2] = {
         AttrName = "AttackSpeed_FallAttack",
         Rate = "#2"
       }
     },
     ApplicationType = 4,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {54202},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 18,
     CostChange = 2,
-    FilterTag = T.RT_495,
+    FilterTag = T.RT_493,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Cerberus02.T_Mod_Cerberus02",
     Id = 54202,
@@ -15123,21 +15115,21 @@ return ReadOnly("Mod", {
   [54203] = {
     AccessKey = T.RT_120,
     AddAttrs = {
-      [1] = T.RT_496,
+      [1] = T.RT_494,
       [2] = {
         AttrName = "AttackSpeed_SlideAttack",
         Rate = "#2"
       }
     },
     ApplicationType = 4,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {54203},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 18,
     CostChange = 2,
-    FilterTag = T.RT_497,
+    FilterTag = T.RT_495,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Cerberus02.T_Mod_Cerberus02",
     Id = 54203,
@@ -15146,7 +15138,7 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_4203",
     OpenVersion = 12,
-    PassiveEffects = T.RT_498,
+    PassiveEffects = T.RT_496,
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 120,
@@ -15157,7 +15149,7 @@ return ReadOnly("Mod", {
   [54204] = {
     AccessKey = T.RT_120,
     ApplicationType = 4,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {54204},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -15169,7 +15161,7 @@ return ReadOnly("Mod", {
       [2] = "$#SkillEffects[4204].TaskEffects[1].SpChange$",
       [3] = "$#PassiveEffect[4204].Vars.CoolDown$"
     },
-    FilterTag = T.RT_499,
+    FilterTag = T.RT_497,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Cerberus02.T_Mod_Cerberus02",
     Id = 54204,
@@ -15178,19 +15170,19 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_4204",
     OpenVersion = 12,
-    PassiveEffects = T.RT_540,
+    PassiveEffects = T.RT_537,
     PassiveEffectsDesc = "MOD_DESC_4204",
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 120,
-    RepeatGroup = T.RT_540,
+    RepeatGroup = T.RT_537,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Cerberus02"
   },
   [54205] = {
     AccessKey = T.RT_120,
     ApplicationType = 4,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {54205},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -15210,12 +15202,12 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_4205",
     OpenVersion = 12,
-    PassiveEffects = T.RT_541,
+    PassiveEffects = T.RT_538,
     PassiveEffectsDesc = "MOD_DESC_4205",
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 120,
-    RepeatGroup = T.RT_541,
+    RepeatGroup = T.RT_538,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Cerberus02"
   },
@@ -15223,7 +15215,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_15,
     ApplicationType = 5,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {55001},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -15250,7 +15242,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_20,
     ApplicationType = 5,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {55002},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -15277,7 +15269,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_22,
     ApplicationType = 5,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {55003},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -15304,7 +15296,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_27,
     ApplicationType = 5,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {55004},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -15331,14 +15323,14 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_26,
     ApplicationType = 5,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {55005},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 16,
     CostChange = 2,
-    FilterTag = T.RT_164,
+    FilterTag = T.RT_162,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Lilith02.T_Mod_Lilith02",
     Id = 55005,
@@ -15350,7 +15342,7 @@ return ReadOnly("Mod", {
     Polarity = 4,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_165,
+    RepeatGroup = T.RT_163,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Lilith02"
   },
@@ -15358,7 +15350,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_18,
     ApplicationType = 5,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {55006},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -15385,7 +15377,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_108,
     ApplicationType = 51,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {55101},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -15404,7 +15396,7 @@ return ReadOnly("Mod", {
     Polarity = 1,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_166,
+    RepeatGroup = T.RT_164,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Lilith02"
   },
@@ -15412,7 +15404,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_112,
     ApplicationType = 52,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {55102},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -15431,7 +15423,7 @@ return ReadOnly("Mod", {
     Polarity = 1,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_166,
+    RepeatGroup = T.RT_164,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Lilith02"
   },
@@ -15439,7 +15431,7 @@ return ReadOnly("Mod", {
     AccessKey = T.RT_120,
     AddAttrs = T.RT_114,
     ApplicationType = 53,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {55103},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
@@ -15458,23 +15450,23 @@ return ReadOnly("Mod", {
     Polarity = 1,
     Rarity = 5,
     ReleaseVersion = 100,
-    RepeatGroup = T.RT_166,
+    RepeatGroup = T.RT_164,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Lilith02"
   },
   [56111] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_543,
+    AddAttrs = T.RT_540,
     ApplicationType = 11,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {56111},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 19,
     CostChange = 1,
-    DescValues = T.RT_544,
+    DescValues = T.RT_541,
     FilterTag = {
       [1] = "Tag_BonusDmg",
       [2] = "Tag_SpecialEffect"
@@ -15487,28 +15479,28 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_6111",
     OpenVersion = 999,
-    PassiveEffects = T.RT_545,
+    PassiveEffects = T.RT_542,
     PassiveEffectsDesc = "MOD_DESC_6111",
     Polarity = 2,
     Rarity = 5,
     ReleaseVersion = 9990,
-    RepeatGroup = T.RT_546,
+    RepeatGroup = T.RT_543,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Changeling01"
   },
   [56112] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_549,
+    AddAttrs = T.RT_546,
     ApplicationType = 11,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {56112},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 19,
     CostChange = 1,
-    DescValues = T.RT_544,
+    DescValues = T.RT_541,
     FilterTag = {
       [1] = "Tag_BonusDmg",
       [2] = "Tag_SpecialEffect",
@@ -15523,29 +15515,29 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_6112",
     OpenVersion = 999,
-    PassiveEffects = T.RT_545,
+    PassiveEffects = T.RT_542,
     PassiveEffectsDesc = "MOD_DESC_6111",
     Polarity = 2,
     Rarity = 5,
     ReleaseVersion = 9990,
-    RepeatGroup = T.RT_550,
+    RepeatGroup = T.RT_547,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Siren01"
   },
   [56113] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_543,
+    AddAttrs = T.RT_540,
     ApplicationType = 11,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {56113},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 19,
     CostChange = 1,
-    DescValues = T.RT_551,
-    FilterTag = T.RT_552,
+    DescValues = T.RT_548,
+    FilterTag = T.RT_549,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Changeling01_Black.T_Mod_Changeling01_Black",
     Id = 56113,
@@ -15554,29 +15546,29 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_6113",
     OpenVersion = 999,
-    PassiveEffects = T.RT_553,
+    PassiveEffects = T.RT_550,
     PassiveEffectsDesc = "MOD_DESC_6113",
     Polarity = 2,
     Rarity = 5,
     ReleaseVersion = 9990,
-    RepeatGroup = T.RT_546,
+    RepeatGroup = T.RT_543,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Changeling01"
   },
   [56114] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_549,
+    AddAttrs = T.RT_546,
     ApplicationType = 11,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {56114},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 19,
     CostChange = 1,
-    DescValues = T.RT_551,
-    FilterTag = T.RT_554,
+    DescValues = T.RT_548,
+    FilterTag = T.RT_551,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Siren01_Black.T_Mod_Siren01_Black",
     Id = 56114,
@@ -15585,29 +15577,29 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_6114",
     OpenVersion = 999,
-    PassiveEffects = T.RT_553,
+    PassiveEffects = T.RT_550,
     PassiveEffectsDesc = "MOD_DESC_6113",
     Polarity = 2,
     Rarity = 5,
     ReleaseVersion = 9990,
-    RepeatGroup = T.RT_550,
+    RepeatGroup = T.RT_547,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Siren01"
   },
   [56121] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_543,
+    AddAttrs = T.RT_540,
     ApplicationType = 12,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {56121},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 19,
     CostChange = 1,
-    DescValues = T.RT_555,
-    FilterTag = T.RT_252,
+    DescValues = T.RT_552,
+    FilterTag = T.RT_250,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Changeling01_Blue.T_Mod_Changeling01_Blue",
     Id = 56121,
@@ -15616,22 +15608,84 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_6121",
     OpenVersion = 999,
-    PassiveEffects = T.RT_556,
+    PassiveEffects = T.RT_553,
     PassiveEffectsDesc = "MOD_DESC_6121",
     Polarity = 2,
     Rarity = 5,
     ReleaseVersion = 9990,
-    RepeatGroup = T.RT_546,
+    RepeatGroup = T.RT_543,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Changeling01"
   },
   [56122] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_549,
+    AddAttrs = T.RT_546,
     ApplicationType = 12,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {56122},
+    CardLevelNeedNum = T.RT_133,
+    CardLevelNeedResourceId = T.RT_134,
+    CollectRewardExp = 200,
+    Cost = 19,
+    CostChange = 1,
+    DescValues = T.RT_552,
+    FilterTag = T.RT_554,
+    FunctionDes = "UI_Armory_Mod",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Siren01_Blue.T_Mod_Siren01_Blue",
+    Id = 56122,
+    MaxLevel = 5,
+    ModCardLevelMax = 5,
+    ModDescribe = "MOD_DES_1001",
+    Name = "MOD_NAME_6122",
+    OpenVersion = 999,
+    PassiveEffects = T.RT_553,
+    PassiveEffectsDesc = "MOD_DESC_6121",
+    Polarity = 2,
+    Rarity = 5,
+    ReleaseVersion = 9990,
+    RepeatGroup = T.RT_547,
+    Sound = "SOUND_ITEM_MOD",
+    TypeName = "MOD_Type_Name_Siren01"
+  },
+  [56123] = {
+    AccessKey = T.RT_54,
+    AddAttrs = T.RT_540,
+    ApplicationType = 12,
+    ApplySlot = T.RT_2,
+    BreakDown = T.RT_536,
+    CardLevelNeedModId = {56123},
+    CardLevelNeedNum = T.RT_133,
+    CardLevelNeedResourceId = T.RT_134,
+    CollectRewardExp = 200,
+    Cost = 19,
+    CostChange = 1,
+    DescValues = T.RT_555,
+    FilterTag = T.RT_240,
+    FunctionDes = "UI_Armory_Mod",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Changeling01_Blue.T_Mod_Changeling01_Blue",
+    Id = 56123,
+    MaxLevel = 5,
+    ModCardLevelMax = 5,
+    ModDescribe = "MOD_DES_1001",
+    Name = "MOD_NAME_6123",
+    OpenVersion = 999,
+    PassiveEffects = T.RT_556,
+    PassiveEffectsDesc = "MOD_DESC_6123",
+    Polarity = 2,
+    Rarity = 5,
+    ReleaseVersion = 9990,
+    RepeatGroup = T.RT_543,
+    Sound = "SOUND_ITEM_MOD",
+    TypeName = "MOD_Type_Name_Changeling01"
+  },
+  [56124] = {
+    AccessKey = T.RT_54,
+    AddAttrs = T.RT_546,
+    ApplicationType = 12,
+    ApplySlot = T.RT_2,
+    BreakDown = T.RT_536,
+    CardLevelNeedModId = {56124},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
@@ -15641,97 +15695,35 @@ return ReadOnly("Mod", {
     FilterTag = T.RT_557,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Siren01_Blue.T_Mod_Siren01_Blue",
-    Id = 56122,
-    MaxLevel = 5,
-    ModCardLevelMax = 5,
-    ModDescribe = "MOD_DES_1001",
-    Name = "MOD_NAME_6122",
-    OpenVersion = 999,
-    PassiveEffects = T.RT_556,
-    PassiveEffectsDesc = "MOD_DESC_6121",
-    Polarity = 2,
-    Rarity = 5,
-    ReleaseVersion = 9990,
-    RepeatGroup = T.RT_550,
-    Sound = "SOUND_ITEM_MOD",
-    TypeName = "MOD_Type_Name_Siren01"
-  },
-  [56123] = {
-    AccessKey = T.RT_54,
-    AddAttrs = T.RT_543,
-    ApplicationType = 12,
-    ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
-    CardLevelNeedModId = {56123},
-    CardLevelNeedNum = T.RT_133,
-    CardLevelNeedResourceId = T.RT_134,
-    CollectRewardExp = 200,
-    Cost = 19,
-    CostChange = 1,
-    DescValues = T.RT_558,
-    FilterTag = T.RT_242,
-    FunctionDes = "UI_Armory_Mod",
-    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Changeling01_Blue.T_Mod_Changeling01_Blue",
-    Id = 56123,
-    MaxLevel = 5,
-    ModCardLevelMax = 5,
-    ModDescribe = "MOD_DES_1001",
-    Name = "MOD_NAME_6123",
-    OpenVersion = 999,
-    PassiveEffects = T.RT_559,
-    PassiveEffectsDesc = "MOD_DESC_6123",
-    Polarity = 2,
-    Rarity = 5,
-    ReleaseVersion = 9990,
-    RepeatGroup = T.RT_546,
-    Sound = "SOUND_ITEM_MOD",
-    TypeName = "MOD_Type_Name_Changeling01"
-  },
-  [56124] = {
-    AccessKey = T.RT_54,
-    AddAttrs = T.RT_549,
-    ApplicationType = 12,
-    ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
-    CardLevelNeedModId = {56124},
-    CardLevelNeedNum = T.RT_133,
-    CardLevelNeedResourceId = T.RT_134,
-    CollectRewardExp = 200,
-    Cost = 19,
-    CostChange = 1,
-    DescValues = T.RT_558,
-    FilterTag = T.RT_560,
-    FunctionDes = "UI_Armory_Mod",
-    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Siren01_Blue.T_Mod_Siren01_Blue",
     Id = 56124,
     MaxLevel = 5,
     ModCardLevelMax = 5,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_6124",
     OpenVersion = 999,
-    PassiveEffects = T.RT_559,
+    PassiveEffects = T.RT_556,
     PassiveEffectsDesc = "MOD_DESC_6123",
     Polarity = 2,
     Rarity = 5,
     ReleaseVersion = 9990,
-    RepeatGroup = T.RT_550,
+    RepeatGroup = T.RT_547,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Siren01"
   },
   [56131] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_543,
+    AddAttrs = T.RT_540,
     ApplicationType = 13,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {56131},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 19,
     CostChange = 1,
-    DescValues = T.RT_561,
-    FilterTag = T.RT_252,
+    DescValues = T.RT_558,
+    FilterTag = T.RT_250,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Changeling01_Red.T_Mod_Changeling01_Red",
     Id = 56131,
@@ -15740,29 +15732,29 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_6131",
     OpenVersion = 999,
-    PassiveEffects = T.RT_562,
+    PassiveEffects = T.RT_559,
     PassiveEffectsDesc = "MOD_DESC_6131",
     Polarity = 2,
     Rarity = 5,
     ReleaseVersion = 9990,
-    RepeatGroup = T.RT_546,
+    RepeatGroup = T.RT_543,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Changeling01"
   },
   [56132] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_549,
+    AddAttrs = T.RT_546,
     ApplicationType = 13,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {56132},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 19,
     CostChange = 1,
-    DescValues = T.RT_561,
-    FilterTag = T.RT_557,
+    DescValues = T.RT_558,
+    FilterTag = T.RT_554,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Siren01_Red.T_Mod_Siren01_Red",
     Id = 56132,
@@ -15771,29 +15763,29 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_6132",
     OpenVersion = 999,
-    PassiveEffects = T.RT_562,
+    PassiveEffects = T.RT_559,
     PassiveEffectsDesc = "MOD_DESC_6131",
     Polarity = 2,
     Rarity = 5,
     ReleaseVersion = 9990,
-    RepeatGroup = T.RT_550,
+    RepeatGroup = T.RT_547,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Siren01"
   },
   [56133] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_543,
+    AddAttrs = T.RT_540,
     ApplicationType = 13,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {56133},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 19,
     CostChange = 1,
-    DescValues = T.RT_563,
-    FilterTag = T.RT_242,
+    DescValues = T.RT_560,
+    FilterTag = T.RT_240,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Changeling01_Red.T_Mod_Changeling01_Red",
     Id = 56133,
@@ -15802,29 +15794,29 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_6133",
     OpenVersion = 999,
-    PassiveEffects = T.RT_564,
+    PassiveEffects = T.RT_561,
     PassiveEffectsDesc = "MOD_DESC_6133",
     Polarity = 2,
     Rarity = 5,
     ReleaseVersion = 9990,
-    RepeatGroup = T.RT_546,
+    RepeatGroup = T.RT_543,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Changeling01"
   },
   [56134] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_549,
+    AddAttrs = T.RT_546,
     ApplicationType = 13,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {56134},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 19,
     CostChange = 1,
-    DescValues = T.RT_563,
-    FilterTag = T.RT_560,
+    DescValues = T.RT_560,
+    FilterTag = T.RT_557,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Siren01_Red.T_Mod_Siren01_Red",
     Id = 56134,
@@ -15833,29 +15825,29 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_6134",
     OpenVersion = 999,
-    PassiveEffects = T.RT_564,
+    PassiveEffects = T.RT_561,
     PassiveEffectsDesc = "MOD_DESC_6133",
     Polarity = 2,
     Rarity = 5,
     ReleaseVersion = 9990,
-    RepeatGroup = T.RT_550,
+    RepeatGroup = T.RT_547,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Siren01"
   },
   [56141] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_543,
+    AddAttrs = T.RT_540,
     ApplicationType = 14,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {56141},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 15,
     CostChange = 1,
-    DescValues = T.RT_565,
-    FilterTag = T.RT_242,
+    DescValues = T.RT_562,
+    FilterTag = T.RT_240,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Changeling01_Purple.T_Mod_Changeling01_Purple",
     Id = 56141,
@@ -15864,29 +15856,29 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_6141",
     OpenVersion = 12,
-    PassiveEffects = T.RT_566,
+    PassiveEffects = T.RT_563,
     PassiveEffectsDesc = "MOD_DESC_6141",
     Polarity = 2,
     Rarity = 5,
     ReleaseVersion = 120,
-    RepeatGroup = T.RT_546,
+    RepeatGroup = T.RT_543,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Changeling01"
   },
   [56142] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_568,
+    AddAttrs = T.RT_565,
     ApplicationType = 14,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {56142},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 35,
     CostChange = 1,
-    DescValues = T.RT_565,
-    FilterTag = T.RT_560,
+    DescValues = T.RT_562,
+    FilterTag = T.RT_557,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Siren01_Purple.T_Mod_Siren01_Purple",
     Id = 56142,
@@ -15895,29 +15887,29 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_6142",
     OpenVersion = 12,
-    PassiveEffects = T.RT_566,
+    PassiveEffects = T.RT_563,
     PassiveEffectsDesc = "MOD_DESC_6141",
     Polarity = 2,
     Rarity = 5,
     ReleaseVersion = 120,
-    RepeatGroup = T.RT_550,
+    RepeatGroup = T.RT_547,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Siren01"
   },
   [56143] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_543,
+    AddAttrs = T.RT_540,
     ApplicationType = 14,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {56143},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 15,
     CostChange = 1,
-    DescValues = T.RT_569,
-    FilterTag = T.RT_570,
+    DescValues = T.RT_566,
+    FilterTag = T.RT_567,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Changeling01_Purple.T_Mod_Changeling01_Purple",
     Id = 56143,
@@ -15926,29 +15918,29 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_6143",
     OpenVersion = 12,
-    PassiveEffects = T.RT_571,
+    PassiveEffects = T.RT_568,
     PassiveEffectsDesc = "MOD_DESC_6143",
     Polarity = 2,
     Rarity = 5,
     ReleaseVersion = 120,
-    RepeatGroup = T.RT_546,
+    RepeatGroup = T.RT_543,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Changeling01"
   },
   [56144] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_568,
+    AddAttrs = T.RT_565,
     ApplicationType = 14,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {56144},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 35,
     CostChange = 1,
-    DescValues = T.RT_569,
-    FilterTag = T.RT_572,
+    DescValues = T.RT_566,
+    FilterTag = T.RT_569,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Siren01_Purple.T_Mod_Siren01_Purple",
     Id = 56144,
@@ -15957,29 +15949,29 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_6144",
     OpenVersion = 12,
-    PassiveEffects = T.RT_571,
+    PassiveEffects = T.RT_568,
     PassiveEffectsDesc = "MOD_DESC_6143",
     Polarity = 2,
     Rarity = 5,
     ReleaseVersion = 120,
-    RepeatGroup = T.RT_550,
+    RepeatGroup = T.RT_547,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Siren01"
   },
   [56151] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_543,
+    AddAttrs = T.RT_540,
     ApplicationType = 15,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {56151},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 15,
     CostChange = 1,
-    DescValues = T.RT_573,
-    FilterTag = T.RT_242,
+    DescValues = T.RT_570,
+    FilterTag = T.RT_240,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Changeling01_Green.T_Mod_Changeling01_Green",
     Id = 56151,
@@ -15988,29 +15980,29 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_6151",
     OpenVersion = 11,
-    PassiveEffects = T.RT_574,
+    PassiveEffects = T.RT_571,
     PassiveEffectsDesc = "MOD_DESC_6151",
     Polarity = 2,
     Rarity = 5,
     ReleaseVersion = 110,
-    RepeatGroup = T.RT_546,
+    RepeatGroup = T.RT_543,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Changeling01"
   },
   [56152] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_568,
+    AddAttrs = T.RT_565,
     ApplicationType = 15,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {56152},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 35,
     CostChange = 1,
-    DescValues = T.RT_573,
-    FilterTag = T.RT_560,
+    DescValues = T.RT_570,
+    FilterTag = T.RT_557,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Siren01_Green.T_Mod_Siren01_Green",
     Id = 56152,
@@ -16019,28 +16011,28 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_6152",
     OpenVersion = 11,
-    PassiveEffects = T.RT_574,
+    PassiveEffects = T.RT_571,
     PassiveEffectsDesc = "MOD_DESC_6151",
     Polarity = 2,
     Rarity = 5,
     ReleaseVersion = 110,
-    RepeatGroup = T.RT_550,
+    RepeatGroup = T.RT_547,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Siren01"
   },
   [56153] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_543,
+    AddAttrs = T.RT_540,
     ApplicationType = 15,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {56153},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 15,
     CostChange = 1,
-    DescValues = T.RT_575,
+    DescValues = T.RT_572,
     FilterTag = {
       [1] = "Tag_EnmityValue",
       [2] = "Tag_SpecialEffect"
@@ -16053,28 +16045,28 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_6153",
     OpenVersion = 11,
-    PassiveEffects = T.RT_576,
+    PassiveEffects = T.RT_573,
     PassiveEffectsDesc = "MOD_DESC_6153",
     Polarity = 2,
     Rarity = 5,
     ReleaseVersion = 110,
-    RepeatGroup = T.RT_546,
+    RepeatGroup = T.RT_543,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Changeling01"
   },
   [56154] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_568,
+    AddAttrs = T.RT_565,
     ApplicationType = 15,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {56154},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 35,
     CostChange = 1,
-    DescValues = T.RT_575,
+    DescValues = T.RT_572,
     FilterTag = {
       [1] = "Tag_EnmityValue",
       [2] = "Tag_SpecialEffect",
@@ -16089,29 +16081,29 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_6154",
     OpenVersion = 11,
-    PassiveEffects = T.RT_576,
+    PassiveEffects = T.RT_573,
     PassiveEffectsDesc = "MOD_DESC_6153",
     Polarity = 2,
     Rarity = 5,
     ReleaseVersion = 110,
-    RepeatGroup = T.RT_550,
+    RepeatGroup = T.RT_547,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Siren01"
   },
   [56161] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_543,
+    AddAttrs = T.RT_540,
     ApplicationType = 16,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {56161},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 19,
     CostChange = 1,
-    DescValues = T.RT_577,
-    FilterTag = T.RT_570,
+    DescValues = T.RT_574,
+    FilterTag = T.RT_567,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Changeling01.T_Mod_Changeling01",
     Id = 56161,
@@ -16120,29 +16112,29 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_6161",
     OpenVersion = 13,
-    PassiveEffects = T.RT_578,
+    PassiveEffects = T.RT_575,
     PassiveEffectsDesc = "MOD_DESC_6161",
     Polarity = 2,
     Rarity = 5,
     ReleaseVersion = 130,
-    RepeatGroup = T.RT_546,
+    RepeatGroup = T.RT_543,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Changeling01"
   },
   [56162] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_549,
+    AddAttrs = T.RT_546,
     ApplicationType = 16,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {56162},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 19,
     CostChange = 1,
-    DescValues = T.RT_577,
-    FilterTag = T.RT_572,
+    DescValues = T.RT_574,
+    FilterTag = T.RT_569,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Siren01.T_Mod_Siren01",
     Id = 56162,
@@ -16151,29 +16143,29 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_6162",
     OpenVersion = 13,
-    PassiveEffects = T.RT_578,
+    PassiveEffects = T.RT_575,
     PassiveEffectsDesc = "MOD_DESC_6161",
     Polarity = 2,
     Rarity = 5,
     ReleaseVersion = 130,
-    RepeatGroup = T.RT_550,
+    RepeatGroup = T.RT_547,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Siren01"
   },
   [56163] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_543,
+    AddAttrs = T.RT_540,
     ApplicationType = 16,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {56163},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 19,
     CostChange = 1,
-    DescValues = T.RT_579,
-    FilterTag = T.RT_552,
+    DescValues = T.RT_576,
+    FilterTag = T.RT_549,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Changeling01.T_Mod_Changeling01",
     Id = 56163,
@@ -16182,29 +16174,29 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_6163",
     OpenVersion = 13,
-    PassiveEffects = T.RT_580,
+    PassiveEffects = T.RT_577,
     PassiveEffectsDesc = "MOD_DESC_6163",
     Polarity = 2,
     Rarity = 5,
     ReleaseVersion = 130,
-    RepeatGroup = T.RT_546,
+    RepeatGroup = T.RT_543,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Changeling01"
   },
   [56164] = {
     AccessKey = T.RT_54,
-    AddAttrs = T.RT_549,
+    AddAttrs = T.RT_546,
     ApplicationType = 16,
     ApplySlot = T.RT_2,
-    BreakDown = T.RT_538,
+    BreakDown = T.RT_536,
     CardLevelNeedModId = {56164},
     CardLevelNeedNum = T.RT_133,
     CardLevelNeedResourceId = T.RT_134,
     CollectRewardExp = 200,
     Cost = 19,
     CostChange = 1,
-    DescValues = T.RT_579,
-    FilterTag = T.RT_554,
+    DescValues = T.RT_576,
+    FilterTag = T.RT_551,
     FunctionDes = "UI_Armory_Mod",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_Siren01.T_Mod_Siren01",
     Id = 56164,
@@ -16213,12 +16205,12 @@ return ReadOnly("Mod", {
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_6164",
     OpenVersion = 13,
-    PassiveEffects = T.RT_580,
+    PassiveEffects = T.RT_577,
     PassiveEffectsDesc = "MOD_DESC_6163",
     Polarity = 2,
     Rarity = 5,
     ReleaseVersion = 130,
-    RepeatGroup = T.RT_550,
+    RepeatGroup = T.RT_547,
     Sound = "SOUND_ITEM_MOD",
     TypeName = "MOD_Type_Name_Siren01"
   },
@@ -16624,12 +16616,7 @@ return ReadOnly("Mod", {
   },
   [202003] = {
     ActivateInRouge = true,
-    AddAttrs = {
-      [1] = {
-        AttrName = "AttackRange_Normal",
-        Value = 120
-      }
-    },
+    AddAttrs = T.RT_48,
     ApplicationType = 102,
     CardLevelNeedModId = T.RT_132,
     CardLevelNeedNum = T.RT_133,
@@ -16662,7 +16649,7 @@ return ReadOnly("Mod", {
   },
   [203001] = {
     ActivateInRouge = true,
-    AddAttrs = T.RT_136,
+    AddAttrs = T.RT_8,
     ApplicationType = 103,
     CardLevelNeedModId = T.RT_132,
     CardLevelNeedNum = T.RT_133,
@@ -16695,7 +16682,7 @@ return ReadOnly("Mod", {
   },
   [204001] = {
     ActivateInRouge = true,
-    AddAttrs = T.RT_136,
+    AddAttrs = T.RT_8,
     ApplicationType = 104,
     CardLevelNeedModId = T.RT_132,
     CardLevelNeedNum = T.RT_133,
@@ -20265,7 +20252,7 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Phoenix01"
   },
   [30103011] = {
-    AddAttrs = T.RT_168,
+    AddAttrs = T.RT_166,
     ApplicationType = 2,
     BreakDown = T.RT_16,
     Cost = 1,
@@ -20284,7 +20271,7 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Cerberus01"
   },
   [30103021] = {
-    AddAttrs = T.RT_170,
+    AddAttrs = T.RT_168,
     ApplicationType = 2,
     BreakDown = T.RT_16,
     Cost = 1,
@@ -20303,7 +20290,7 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Cerberus01"
   },
   [30103031] = {
-    AddAttrs = T.RT_172,
+    AddAttrs = T.RT_170,
     ApplicationType = 2,
     BreakDown = T.RT_16,
     Cost = 1,
@@ -20322,7 +20309,7 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Cerberus01"
   },
   [30103041] = {
-    AddAttrs = T.RT_174,
+    AddAttrs = T.RT_172,
     ApplicationType = 2,
     BreakDown = T.RT_16,
     Cost = 1,
@@ -20341,7 +20328,7 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Cerberus01"
   },
   [30103051] = {
-    AddAttrs = T.RT_178,
+    AddAttrs = T.RT_176,
     ApplicationType = 2,
     BreakDown = T.RT_16,
     Cost = 1,
@@ -20379,7 +20366,7 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Cerberus01"
   },
   [30103072] = {
-    AddAttrs = T.RT_180,
+    AddAttrs = T.RT_178,
     ApplicationType = 2,
     BreakDown = T.RT_16,
     Cost = 1,
@@ -20398,7 +20385,7 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Cerberus01"
   },
   [30103082] = {
-    AddAttrs = T.RT_182,
+    AddAttrs = T.RT_180,
     ApplicationType = 2,
     BreakDown = T.RT_16,
     Cost = 1,
@@ -20417,7 +20404,7 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Cerberus01"
   },
   [30103092] = {
-    AddAttrs = T.RT_184,
+    AddAttrs = T.RT_182,
     ApplicationType = 2,
     BreakDown = T.RT_16,
     Cost = 1,
@@ -20436,7 +20423,7 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Cerberus01"
   },
   [30104011] = {
-    AddAttrs = T.RT_168,
+    AddAttrs = T.RT_166,
     ApplicationType = 3,
     BreakDown = T.RT_16,
     Cost = 1,
@@ -20455,7 +20442,7 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Lilith01"
   },
   [30104021] = {
-    AddAttrs = T.RT_170,
+    AddAttrs = T.RT_168,
     ApplicationType = 3,
     BreakDown = T.RT_16,
     Cost = 1,
@@ -20474,7 +20461,7 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Lilith01"
   },
   [30104031] = {
-    AddAttrs = T.RT_172,
+    AddAttrs = T.RT_170,
     ApplicationType = 3,
     BreakDown = T.RT_16,
     Cost = 1,
@@ -20493,7 +20480,7 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Lilith01"
   },
   [30104041] = {
-    AddAttrs = T.RT_174,
+    AddAttrs = T.RT_172,
     ApplicationType = 3,
     BreakDown = T.RT_16,
     Cost = 1,
@@ -20512,7 +20499,7 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Lilith01"
   },
   [30104051] = {
-    AddAttrs = T.RT_178,
+    AddAttrs = T.RT_176,
     ApplicationType = 3,
     BreakDown = T.RT_16,
     Cost = 1,
@@ -20531,7 +20518,7 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Barbatos01"
   },
   [30104062] = {
-    AddAttrs = T.RT_180,
+    AddAttrs = T.RT_178,
     ApplicationType = 3,
     BreakDown = T.RT_16,
     Cost = 1,
@@ -20571,7 +20558,7 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Lilith01"
   },
   [30104082] = {
-    AddAttrs = T.RT_182,
+    AddAttrs = T.RT_180,
     ApplicationType = 3,
     BreakDown = T.RT_16,
     Cost = 1,
@@ -20590,7 +20577,7 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Lilith01"
   },
   [30104092] = {
-    AddAttrs = T.RT_184,
+    AddAttrs = T.RT_182,
     ApplicationType = 3,
     BreakDown = T.RT_16,
     Cost = 1,

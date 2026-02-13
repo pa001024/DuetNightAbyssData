@@ -524,7 +524,7 @@
   },
   {
     "id": 6017013,
-    "n": "侵蚀 魁蕊秽兽",
+    "n": "Souillé stigmate — Corrosion",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 11,
@@ -1519,7 +1519,7 @@
   },
   {
     "id": 8513701,
-    "n": "转雷 蒙恩的苦修士",
+    "n": "Ascète béni — Tempête électrique",
     "t": "Boss",
     "atk": 60,
     "def": 300,
@@ -2066,7 +2066,7 @@
   },
   {
     "id": 9810001,
-    "n": "Oiseau marin",
+    "n": "Mouette nuageuse",
     "atk": 10,
     "def": 130,
     "hp": 1,
@@ -2155,7 +2155,7 @@
   },
   {
     "id": 10005013,
-    "n": "侵蚀 失序的应天侍",
+    "n": "Garde de Yingtian frénétique — Corrosion",
     "t": "Elite_Monster",
     "f": 5,
     "atk": 20,

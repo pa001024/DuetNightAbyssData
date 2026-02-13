@@ -337,7 +337,7 @@
                 "itemType": "Mod",
                 "typeId": 102001,
                 "typeName": "フェンリルの多重貫通",
-                "price": 2000,
+                "price": 5000,
                 "priceType": 214,
                 "priceName": "演目の半券",
                 "num": 1,
@@ -352,7 +352,7 @@
                 "itemType": "Mod",
                 "typeId": 101002,
                 "typeName": "フェンリルの裂変の剣域",
-                "price": 2000,
+                "price": 5000,
                 "priceType": 214,
                 "priceName": "演目の半券",
                 "num": 1,
@@ -367,7 +367,7 @@
                 "itemType": "Mod",
                 "typeId": 106001,
                 "typeName": "フェンリルの乱花斬月",
-                "price": 2000,
+                "price": 5000,
                 "priceType": 214,
                 "priceName": "演目の半券",
                 "num": 1,
@@ -382,7 +382,7 @@
                 "itemType": "Mod",
                 "typeId": 102004,
                 "typeName": "フェンリルの破空の共鳴",
-                "price": 2000,
+                "price": 5000,
                 "priceType": 214,
                 "priceName": "演目の半券",
                 "num": 1,
@@ -472,7 +472,7 @@
                 "itemType": "Resource",
                 "typeId": 3007,
                 "typeName": "ウマウマミルク",
-                "price": 2500,
+                "price": 5000,
                 "priceType": 214,
                 "priceName": "演目の半券",
                 "num": 1,
@@ -602,7 +602,7 @@
                 "itemType": "Resource",
                 "typeId": 3007,
                 "typeName": "ウマウマミルク",
-                "price": 2500,
+                "price": 5000,
                 "priceType": 214,
                 "priceName": "演目の半券",
                 "num": 1,
@@ -675,15 +675,16 @@
                 "id": 10006102,
                 "itemType": "CharAccessory",
                 "typeId": 12123,
-                "typeName": "魔王头套",
+                "typeName": "魔王様の頭",
                 "price": 200,
                 "priceType": 219,
-                "priceName": "齿轮",
+                "priceName": "ギア",
                 "num": 1,
                 "limit": 1,
                 "subTabId": 100061,
                 "sequence": 100,
-                "startTime": 1672545600
+                "startTime": 1672545600,
+                "endTime": 1775466000
               },
               {
                 "id": 10006103,
@@ -692,12 +693,13 @@
                 "typeName": "リボン-アイボリー",
                 "price": 200,
                 "priceType": 219,
-                "priceName": "齿轮",
+                "priceName": "ギア",
                 "num": 1,
                 "limit": 1,
                 "subTabId": 100061,
                 "sequence": 99,
-                "startTime": 1672545600
+                "startTime": 1672545600,
+                "endTime": 1775466000
               },
               {
                 "id": 10006104,
@@ -706,12 +708,13 @@
                 "typeName": "猫の尻尾（ショート）・チタニウムホワイト",
                 "price": 200,
                 "priceType": 219,
-                "priceName": "齿轮",
+                "priceName": "ギア",
                 "num": 1,
                 "limit": 1,
                 "subTabId": 100061,
                 "sequence": 98,
-                "startTime": 1672545600
+                "startTime": 1672545600,
+                "endTime": 1775466000
               },
               {
                 "id": 10006105,
@@ -720,12 +723,13 @@
                 "typeName": "たまやー・マリーゴールド",
                 "price": 5,
                 "priceType": 219,
-                "priceName": "齿轮",
+                "priceName": "ギア",
                 "num": 1,
                 "limit": 20,
                 "subTabId": 100061,
                 "sequence": 97,
-                "startTime": 1672545600
+                "startTime": 1672545600,
+                "endTime": 1775466000
               },
               {
                 "id": 10006106,
@@ -734,12 +738,13 @@
                 "typeName": "たまやー・アンズ",
                 "price": 5,
                 "priceType": 219,
-                "priceName": "齿轮",
+                "priceName": "ギア",
                 "num": 1,
                 "limit": 20,
                 "subTabId": 100061,
                 "sequence": 96,
-                "startTime": 1672545600
+                "startTime": 1672545600,
+                "endTime": 1775466000
               },
               {
                 "id": 10006107,
@@ -748,12 +753,13 @@
                 "typeName": "たまやー・インディゴ",
                 "price": 5,
                 "priceType": 219,
-                "priceName": "齿轮",
+                "priceName": "ギア",
                 "num": 1,
                 "limit": 20,
                 "subTabId": 100061,
                 "sequence": 95,
-                "startTime": 1672545600
+                "startTime": 1672545600,
+                "endTime": 1775466000
               },
               {
                 "id": 10006108,
@@ -762,12 +768,13 @@
                 "typeName": "花火より君・マリーゴールド",
                 "price": 5,
                 "priceType": 219,
-                "priceName": "齿轮",
+                "priceName": "ギア",
                 "num": 1,
                 "limit": 20,
                 "subTabId": 100061,
                 "sequence": 94,
-                "startTime": 1672545600
+                "startTime": 1672545600,
+                "endTime": 1775466000
               },
               {
                 "id": 10006109,
@@ -776,12 +783,13 @@
                 "typeName": "花火より君・インディゴ",
                 "price": 5,
                 "priceType": 219,
-                "priceName": "齿轮",
+                "priceName": "ギア",
                 "num": 1,
                 "limit": 20,
                 "subTabId": 100061,
                 "sequence": 93,
-                "startTime": 1672545600
+                "startTime": 1672545600,
+                "endTime": 1775466000
               },
               {
                 "id": 10006110,
@@ -790,12 +798,13 @@
                 "typeName": "花火より君・チェリーホワイト",
                 "price": 5,
                 "priceType": 219,
-                "priceName": "齿轮",
+                "priceName": "ギア",
                 "num": 1,
                 "limit": 20,
                 "subTabId": 100061,
                 "sequence": 92,
-                "startTime": 1672545600
+                "startTime": 1672545600,
+                "endTime": 1775466000
               },
               {
                 "id": 10006111,
@@ -804,12 +813,13 @@
                 "typeName": "暮夜の足跡",
                 "price": 150,
                 "priceType": 219,
-                "priceName": "齿轮",
+                "priceName": "ギア",
                 "num": 1,
                 "limit": 1,
                 "subTabId": 100061,
                 "sequence": 91,
-                "startTime": 1672545600
+                "startTime": 1672545600,
+                "endTime": 1775466000
               },
               {
                 "id": 10006112,
@@ -818,12 +828,13 @@
                 "typeName": "移転モジュール",
                 "price": 100,
                 "priceType": 219,
-                "priceName": "齿轮",
+                "priceName": "ギア",
                 "num": 1,
                 "limit": 2,
                 "subTabId": 100061,
                 "sequence": 90,
-                "startTime": 1672545600
+                "startTime": 1672545600,
+                "endTime": 1775466000
               },
               {
                 "id": 10006113,
@@ -832,12 +843,13 @@
                 "typeName": "武器移転モジュール",
                 "price": 75,
                 "priceType": 219,
-                "priceName": "齿轮",
+                "priceName": "ギア",
                 "num": 1,
                 "limit": 2,
                 "subTabId": 100061,
                 "sequence": 89,
-                "startTime": 1672545600
+                "startTime": 1672545600,
+                "endTime": 1775466000
               },
               {
                 "id": 10006114,
@@ -846,12 +858,13 @@
                 "typeName": "虹色の染料",
                 "price": 40,
                 "priceType": 219,
-                "priceName": "齿轮",
+                "priceName": "ギア",
                 "num": 1,
                 "limit": 5,
                 "subTabId": 100061,
                 "sequence": 88,
-                "startTime": 1672545600
+                "startTime": 1672545600,
+                "endTime": 1775466000
               },
               {
                 "id": 10006115,
@@ -860,12 +873,13 @@
                 "typeName": "銅貨",
                 "price": 10,
                 "priceType": 219,
-                "priceName": "齿轮",
+                "priceName": "ギア",
                 "num": 50000,
                 "limit": 30,
                 "subTabId": 100061,
                 "sequence": 86,
-                "startTime": 1672545600
+                "startTime": 1672545600,
+                "endTime": 1775466000
               },
               {
                 "id": 10006116,
@@ -874,12 +888,13 @@
                 "typeName": "戦闘の調べ 4",
                 "price": 10,
                 "priceType": 219,
-                "priceName": "齿轮",
+                "priceName": "ギア",
                 "num": 2,
                 "limit": 20,
                 "subTabId": 100061,
                 "sequence": 85,
-                "startTime": 1672545600
+                "startTime": 1672545600,
+                "endTime": 1775466000
               },
               {
                 "id": 10006117,
@@ -888,12 +903,13 @@
                 "typeName": "武器取扱説明書 4",
                 "price": 10,
                 "priceType": 219,
-                "priceName": "齿轮",
+                "priceName": "ギア",
                 "num": 2,
                 "limit": 20,
                 "subTabId": 100061,
                 "sequence": 84,
-                "startTime": 1672545600
+                "startTime": 1672545600,
+                "endTime": 1775466000
               },
               {
                 "id": 10006118,
@@ -902,12 +918,13 @@
                 "typeName": "深紅のビーズ",
                 "price": 10,
                 "priceType": 219,
-                "priceName": "齿轮",
+                "priceName": "ギア",
                 "num": 800,
                 "limit": 30,
                 "subTabId": 100061,
                 "sequence": 83,
-                "startTime": 1672545600
+                "startTime": 1672545600,
+                "endTime": 1775466000
               },
               {
                 "id": 10006119,
@@ -916,12 +933,13 @@
                 "typeName": "ルーナ族の印",
                 "price": 10,
                 "priceType": 219,
-                "priceName": "齿轮",
+                "priceName": "ギア",
                 "num": 20,
                 "limit": 20,
                 "subTabId": 100061,
                 "sequence": 87,
-                "startTime": 1672545600
+                "startTime": 1672545600,
+                "endTime": 1775466000
               },
               {
                 "id": 10006120,
@@ -930,11 +948,12 @@
                 "typeName": "銅貨",
                 "price": 10,
                 "priceType": 219,
-                "priceName": "齿轮",
+                "priceName": "ギア",
                 "num": 20000,
                 "subTabId": 100061,
                 "sequence": 82,
                 "startTime": 1672545600,
+                "endTime": 1775466000,
                 "require": 10006115
               },
               {
@@ -944,11 +963,12 @@
                 "typeName": "戦闘の調べ 3",
                 "price": 10,
                 "priceType": 219,
-                "priceName": "齿轮",
+                "priceName": "ギア",
                 "num": 2,
                 "subTabId": 100061,
                 "sequence": 81,
                 "startTime": 1672545600,
+                "endTime": 1775466000,
                 "require": 10006116
               },
               {
@@ -958,11 +978,12 @@
                 "typeName": "武器取扱説明書 3",
                 "price": 10,
                 "priceType": 219,
-                "priceName": "齿轮",
+                "priceName": "ギア",
                 "num": 2,
                 "subTabId": 100061,
                 "sequence": 80,
                 "startTime": 1672545600,
+                "endTime": 1775466000,
                 "require": 10006117
               },
               {
@@ -972,11 +993,12 @@
                 "typeName": "深紅のビーズ",
                 "price": 10,
                 "priceType": 219,
-                "priceName": "齿轮",
+                "priceName": "ギア",
                 "num": 350,
                 "subTabId": 100061,
                 "sequence": 79,
                 "startTime": 1672545600,
+                "endTime": 1775466000,
                 "require": 10006118
               }
             ]
@@ -2954,7 +2976,7 @@
                 "id": 802130,
                 "itemType": "HeadSculpture",
                 "typeId": 30095,
-                "typeName": "诡异的光",
+                "typeName": "死んだ魚の目",
                 "price": 5000,
                 "priceType": 210,
                 "priceName": "大漁の証",
@@ -2969,7 +2991,7 @@
                 "id": 802131,
                 "itemType": "HeadSculpture",
                 "typeId": 30108,
-                "typeName": "惊鱼",
+                "typeName": "驚く魚",
                 "price": 5000,
                 "priceType": 210,
                 "priceName": "大漁の証",
@@ -3814,7 +3836,7 @@
                 "subTabId": 100041,
                 "sequence": 79,
                 "startTime": 1672545600,
-                "require": 10004107
+                "require": 10004135
               },
               {
                 "id": 10004144,
@@ -3828,7 +3850,7 @@
                 "subTabId": 100041,
                 "sequence": 82,
                 "startTime": 1672545600,
-                "require": 10004108
+                "require": 10004136
               },
               {
                 "id": 10004145,
@@ -3842,7 +3864,7 @@
                 "subTabId": 100041,
                 "sequence": 81,
                 "startTime": 1672545600,
-                "require": 10004109
+                "require": 10004137
               },
               {
                 "id": 10004146,
@@ -3856,7 +3878,7 @@
                 "subTabId": 100041,
                 "sequence": 80,
                 "startTime": 1672545600,
-                "require": 10004110
+                "require": 10004138
               },
               {
                 "id": 10004147,
@@ -3947,6 +3969,65 @@
                 "sequence": 100,
                 "startTime": 1672545600,
                 "unlockRaidPoint": 1200000
+              },
+              {
+                "id": 10004153,
+                "itemType": "Resource",
+                "typeId": 220,
+                "typeName": "月狩記念コイン",
+                "price": 1,
+                "priceType": 217,
+                "priceName": "チームの招待状",
+                "num": 10,
+                "subTabId": 100041,
+                "sequence": 67,
+                "startTime": 1672545600,
+                "unlockRaidPoint": 1
+              },
+              {
+                "id": 10004154,
+                "itemType": "Resource",
+                "typeId": 220,
+                "typeName": "月狩記念コイン",
+                "price": 40,
+                "priceType": 217,
+                "priceName": "チームの招待状",
+                "num": 800,
+                "limit": 5,
+                "subTabId": 100041,
+                "sequence": 68,
+                "startTime": 1672545600,
+                "unlockRaidPoint": 40000
+              },
+              {
+                "id": 10004155,
+                "itemType": "Resource",
+                "typeId": 220,
+                "typeName": "月狩記念コイン",
+                "price": 40,
+                "priceType": 217,
+                "priceName": "チームの招待状",
+                "num": 2000,
+                "limit": 5,
+                "subTabId": 100041,
+                "sequence": 69,
+                "startTime": 1672545600,
+                "unlockRaidPoint": 160000
+              },
+              {
+                "id": 10004156,
+                "itemType": "Resource",
+                "typeId": 220,
+                "typeName": "月狩記念コイン",
+                "price": 40,
+                "priceType": 217,
+                "priceName": "チームの招待状",
+                "num": 3600,
+                "limit": 5,
+                "subTabId": 100041,
+                "sequence": 70,
+                "startTime": 1672545600,
+                "unlockRaidPoint": 400000
               }
             ]
           }
@@ -5021,7 +5102,7 @@
                 "id": 10002375,
                 "itemType": "Draft",
                 "typeId": 154202,
-                "typeName": "異化ケルベロスの瞬撃・迅速閃撃",
+                "typeName": "異化ケルベロスの墜撃・迅速墜撃",
                 "price": 7500,
                 "priceType": 215,
                 "priceName": "時の紡ぎ糸",
@@ -5036,7 +5117,7 @@
                 "id": 10002376,
                 "itemType": "Draft",
                 "typeId": 154203,
-                "typeName": "異化ケルベロスの墜撃・迅速墜撃",
+                "typeName": "異化ケルベロスの瞬撃・迅速閃撃",
                 "price": 7500,
                 "priceType": 215,
                 "priceName": "時の紡ぎ糸",
@@ -6431,7 +6512,7 @@
                 "limit": 1,
                 "subTabId": 1601,
                 "sequence": 244,
-                "startTime": 1770602400,
+                "startTime": 1772503200,
                 "endTime": 1775466000,
                 "isSpPopup": 1
               },
@@ -6722,7 +6803,7 @@
                 "id": 160218,
                 "itemType": "Reward",
                 "typeId": 12061,
-                "typeName": "增幅补给礼箱",
+                "typeName": "増幅補給ボックス",
                 "price": 2680,
                 "priceType": 99,
                 "priceName": "月ノ核",
@@ -6737,7 +6818,7 @@
                 "id": 160219,
                 "itemType": "Reward",
                 "typeId": 12062,
-                "typeName": "豪华铜币补给礼箱",
+                "typeName": "豪華な銅貨補給ボックス",
                 "price": 1280,
                 "priceType": 99,
                 "priceName": "月ノ核",
@@ -6752,7 +6833,7 @@
                 "id": 160220,
                 "itemType": "Reward",
                 "typeId": 12063,
-                "typeName": "豪华深红凝珠补给礼箱",
+                "typeName": "豪華な深紅のビーズ補給ボックス",
                 "price": 1280,
                 "priceType": 99,
                 "priceName": "月ノ核",
@@ -6767,7 +6848,7 @@
                 "id": 160221,
                 "itemType": "Reward",
                 "typeId": 12064,
-                "typeName": "豪华皎皎信物礼箱",
+                "typeName": "豪華なルーナ族の印ボックス",
                 "price": 1280,
                 "priceType": 99,
                 "priceName": "月ノ核",
@@ -7469,7 +7550,7 @@
                 "priceName": "月ノ石",
                 "num": 1,
                 "subTabId": 1501,
-                "sequence": 84,
+                "sequence": 77,
                 "startTime": 1672545600
               },
               {
@@ -7482,7 +7563,7 @@
                 "priceName": "月ノ石",
                 "num": 1,
                 "subTabId": 1501,
-                "sequence": 83,
+                "sequence": 76,
                 "startTime": 1672545600
               },
               {
@@ -7495,7 +7576,7 @@
                 "priceName": "月ノ石",
                 "num": 1,
                 "subTabId": 1501,
-                "sequence": 82,
+                "sequence": 75,
                 "startTime": 1672545600
               },
               {
@@ -7508,7 +7589,7 @@
                 "priceName": "月ノ石",
                 "num": 1,
                 "subTabId": 1501,
-                "sequence": 81,
+                "sequence": 74,
                 "startTime": 1672545600
               },
               {
@@ -7521,7 +7602,7 @@
                 "priceName": "月ノ石",
                 "num": 1,
                 "subTabId": 1501,
-                "sequence": 80,
+                "sequence": 73,
                 "startTime": 1672545600
               },
               {
@@ -7534,7 +7615,7 @@
                 "priceName": "月ノ石",
                 "num": 1,
                 "subTabId": 1501,
-                "sequence": 79,
+                "sequence": 72,
                 "startTime": 1672545600
               },
               {
@@ -7547,7 +7628,7 @@
                 "priceName": "月ノ石",
                 "num": 1,
                 "subTabId": 1501,
-                "sequence": 78,
+                "sequence": 71,
                 "startTime": 1672545600
               },
               {
@@ -7587,7 +7668,7 @@
                 "priceName": "月ノ石",
                 "num": 1,
                 "subTabId": 1501,
-                "sequence": 90,
+                "sequence": 88,
                 "startTime": 1770948000
               },
               {
@@ -7600,7 +7681,7 @@
                 "priceName": "月ノ石",
                 "num": 1,
                 "subTabId": 1501,
-                "sequence": 89,
+                "sequence": 87,
                 "startTime": 1770948000
               },
               {
@@ -7613,20 +7694,20 @@
                 "priceName": "月ノ石",
                 "num": 1,
                 "subTabId": 1501,
-                "sequence": 88,
+                "sequence": 86,
                 "startTime": 1770948000
               },
               {
                 "id": 150308,
                 "itemType": "Resource",
                 "typeId": 41045,
-                "typeName": "垂天の彩帘",
+                "typeName": "虹色の滝",
                 "price": 120,
                 "priceType": 100,
                 "priceName": "月ノ石",
                 "num": 1,
                 "subTabId": 1501,
-                "sequence": 91,
+                "sequence": 89,
                 "startTime": 1770948000
               },
               {
@@ -7639,7 +7720,7 @@
                 "priceName": "月ノ石",
                 "num": 1,
                 "subTabId": 1501,
-                "sequence": 87,
+                "sequence": 85,
                 "startTime": 1770948000
               },
               {
@@ -7652,7 +7733,7 @@
                 "priceName": "月ノ石",
                 "num": 1,
                 "subTabId": 1501,
-                "sequence": 86,
+                "sequence": 84,
                 "startTime": 1770948000
               },
               {
@@ -7665,8 +7746,88 @@
                 "priceName": "月ノ石",
                 "num": 1,
                 "subTabId": 1501,
-                "sequence": 85,
+                "sequence": 83,
                 "startTime": 1770948000
+              },
+              {
+                "id": 150312,
+                "itemType": "Resource",
+                "typeId": 30113,
+                "typeName": "中級染料・メープルシロップ",
+                "price": 60,
+                "priceType": 100,
+                "priceName": "月ノ石",
+                "num": 1,
+                "subTabId": 1501,
+                "sequence": 81,
+                "startTime": 1770602400
+              },
+              {
+                "id": 150313,
+                "itemType": "Resource",
+                "typeId": 30114,
+                "typeName": "中級染料・ココア",
+                "price": 60,
+                "priceType": 100,
+                "priceName": "月ノ石",
+                "num": 1,
+                "subTabId": 1501,
+                "sequence": 80,
+                "startTime": 1770602400
+              },
+              {
+                "id": 150314,
+                "itemType": "Resource",
+                "typeId": 30115,
+                "typeName": "中級染料・碧い波",
+                "price": 60,
+                "priceType": 100,
+                "priceName": "月ノ石",
+                "num": 1,
+                "subTabId": 1501,
+                "sequence": 79,
+                "startTime": 1770602400
+              },
+              {
+                "id": 150315,
+                "itemType": "Resource",
+                "typeId": 30116,
+                "typeName": "中級染料・蒼い松",
+                "price": 60,
+                "priceType": 100,
+                "priceName": "月ノ石",
+                "num": 1,
+                "subTabId": 1501,
+                "sequence": 78,
+                "startTime": 1770602400
+              },
+              {
+                "id": 150316,
+                "itemType": "Resource",
+                "typeId": 30118,
+                "typeName": "基本ヘアカラー染料",
+                "price": 100,
+                "priceType": 100,
+                "priceName": "月ノ石",
+                "num": 1,
+                "subTabId": 1501,
+                "sequence": 82,
+                "startTime": 1770602400
+              },
+              {
+                "id": 150317,
+                "itemType": "HeadSculpture",
+                "typeId": 30116,
+                "typeName": "",
+                "price": 60,
+                "priceType": 100,
+                "priceName": "月ノ石",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1501,
+                "sequence": 90,
+                "startTime": 1770602400,
+                "endTime": 1775466000
               }
             ]
           },
@@ -7867,7 +8028,7 @@
                 "num": 1,
                 "subTabId": 1502,
                 "sequence": 77,
-                "startTime": 1770688800
+                "startTime": 1770602400
               },
               {
                 "id": 150134,
@@ -8146,7 +8307,7 @@
                 "num": 1,
                 "subTabId": 1503,
                 "sequence": 72,
-                "startTime": 1770688800
+                "startTime": 1770602400
               },
               {
                 "id": 159119,
@@ -8762,7 +8923,7 @@
                 "num": 1,
                 "subTabId": 1801,
                 "sequence": 88,
-                "startTime": 1770688800,
+                "startTime": 1770602400,
                 "lv": 35
               },
               {
@@ -9258,7 +9419,7 @@
                 "num": 1,
                 "subTabId": 1802,
                 "sequence": 71,
-                "startTime": 1770688800,
+                "startTime": 1770602400,
                 "lv": 35
               },
               {
@@ -9272,7 +9433,7 @@
                 "num": 1,
                 "subTabId": 1802,
                 "sequence": 70,
-                "startTime": 1770688800,
+                "startTime": 1770602400,
                 "lv": 45
               },
               {
@@ -10994,7 +11155,7 @@
                 "num": 1,
                 "limit": 1,
                 "subTabId": 1401,
-                "sequence": 297,
+                "sequence": 298,
                 "startTime": 1770602400,
                 "endTime": 1776027600,
                 "isSpPopup": 1
@@ -11019,7 +11180,7 @@
                 "id": 140261,
                 "itemType": "WeaponAccessory",
                 "typeId": 10030,
-                "typeName": "龙渊穗·锈红",
+                "typeName": "龍淵のペンダント・ペルシアンレッド",
                 "price": 20,
                 "priceType": 110,
                 "priceName": "水色のプリズム",
@@ -11035,7 +11196,7 @@
                 "id": 140262,
                 "itemType": "WeaponAccessory",
                 "typeId": 10031,
-                "typeName": "龙渊穗·绛紫",
+                "typeName": "龍淵のペンダント・レッドパープル",
                 "price": 20,
                 "priceType": 110,
                 "priceName": "水色のプリズム",
@@ -11051,7 +11212,7 @@
                 "id": 140263,
                 "itemType": "WeaponAccessory",
                 "typeId": 10032,
-                "typeName": "龙渊穗·涅白",
+                "typeName": "龍淵のペンダント・アイボリー",
                 "price": 20,
                 "priceType": 110,
                 "priceName": "水色のプリズム",
@@ -11067,7 +11228,7 @@
                 "id": 140264,
                 "itemType": "WeaponAccessory",
                 "typeId": 10033,
-                "typeName": "龙纹坠·锈红",
+                "typeName": "龍紋のペンダント・ペルシアンレッド",
                 "price": 20,
                 "priceType": 110,
                 "priceName": "水色のプリズム",
@@ -11083,7 +11244,7 @@
                 "id": 140265,
                 "itemType": "WeaponAccessory",
                 "typeId": 10034,
-                "typeName": "龙纹坠·绛紫",
+                "typeName": "龍紋のペンダント・レッドパープル",
                 "price": 20,
                 "priceType": 110,
                 "priceName": "水色のプリズム",
@@ -11099,7 +11260,7 @@
                 "id": 140266,
                 "itemType": "WeaponAccessory",
                 "typeId": 10035,
-                "typeName": "龙纹坠·涅白",
+                "typeName": "龍紋のペンダント・アイボリー",
                 "price": 20,
                 "priceType": 110,
                 "priceName": "水色のプリズム",
@@ -11115,7 +11276,7 @@
                 "id": 140267,
                 "itemType": "CharAccessory",
                 "typeId": 31001,
-                "typeName": "胜利动作·悠游水岸",
+                "typeName": "勝利ポーズ・海辺の戯れ",
                 "price": 6,
                 "priceType": 111,
                 "priceName": "虹色のプリズム",
@@ -11131,7 +11292,7 @@
                 "id": 140268,
                 "itemType": "CharAccessory",
                 "typeId": 31002,
-                "typeName": "胜利动作·睥睨山河",
+                "typeName": "勝利ポーズ・支配者の玉座",
                 "price": 6,
                 "priceType": 111,
                 "priceName": "虹色のプリズム",
@@ -11154,10 +11315,10 @@
                 "num": 1,
                 "limit": 1,
                 "subTabId": 1401,
-                "sequence": 296,
+                "sequence": 297,
                 "startTime": 1770602400,
                 "endTime": 1776027600,
-                "cond": "获得携金宴夜解锁",
+                "cond": "「宴夜の駆引」を獲得するとアンロック",
                 "isSpPopup": 1
               },
               {
@@ -11171,7 +11332,7 @@
                 "num": 1,
                 "limit": 1,
                 "subTabId": 1401,
-                "sequence": 300,
+                "sequence": 301,
                 "startTime": 1770602400,
                 "endTime": 1776027600,
                 "isSpPopup": 1
@@ -11187,7 +11348,7 @@
                 "num": 1,
                 "limit": 1,
                 "subTabId": 1401,
-                "sequence": 298,
+                "sequence": 299,
                 "startTime": 1770602400,
                 "endTime": 1776027600,
                 "isSpPopup": 1
@@ -11203,7 +11364,7 @@
                 "num": 1,
                 "limit": 1,
                 "subTabId": 1401,
-                "sequence": 299,
+                "sequence": 300,
                 "startTime": 1770602400,
                 "endTime": 1776027600,
                 "isSpPopup": 1
@@ -11276,7 +11437,7 @@
                 "id": 140277,
                 "itemType": "CharAccessory",
                 "typeId": 10071,
-                "typeName": "諸天月相・スカイブルー",
+                "typeName": "諸天月相・インディゴ",
                 "price": 4,
                 "priceType": 111,
                 "priceName": "虹色のプリズム",
@@ -11449,10 +11610,42 @@
                 "isSpPopup": 1
               },
               {
-                "id": 140291,
-                "itemType": "TitleFrame",
-                "typeId": 10018,
-                "typeName": "龙称号框【待包装】",
+                "id": 140288,
+                "itemType": "HeadSculpture",
+                "typeId": 30112,
+                "typeName": "",
+                "price": 0,
+                "priceType": 111,
+                "priceName": "虹色のプリズム",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1401,
+                "sequence": 10002,
+                "startTime": 1770602400,
+                "require": 140270,
+                "isSpPopup": 1
+              },
+              {
+                "id": 140289,
+                "itemType": "HeadSculpture",
+                "typeId": 30111,
+                "typeName": "",
+                "price": 0,
+                "priceType": 111,
+                "priceName": "虹色のプリズム",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1401,
+                "sequence": 10000,
+                "startTime": 1770602400,
+                "require": 140271,
+                "isSpPopup": 1
+              },
+              {
+                "id": 140290,
+                "itemType": "HeadSculpture",
+                "typeId": 30110,
+                "typeName": "",
                 "price": 0,
                 "priceType": 111,
                 "priceName": "虹色のプリズム",
@@ -11461,8 +11654,51 @@
                 "subTabId": 1401,
                 "sequence": 10001,
                 "startTime": 1770602400,
+                "require": 140272,
+                "isSpPopup": 1
+              },
+              {
+                "id": 140291,
+                "itemType": "TitleFrame",
+                "typeId": 10018,
+                "typeName": "神君の祝福",
+                "price": 0,
+                "priceType": 111,
+                "priceName": "虹色のプリズム",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1401,
+                "sequence": 296,
+                "startTime": 1770602400,
+                "endTime": 1776027600,
                 "isSpPopup": 1,
                 "require": 140269
+              },
+              {
+                "id": 140292,
+                "itemType": "Resource",
+                "typeId": 30117,
+                "typeName": "上級染料・桃華",
+                "price": 1,
+                "priceType": 111,
+                "priceName": "虹色のプリズム",
+                "num": 3,
+                "subTabId": 1401,
+                "sequence": 80,
+                "startTime": 1770602400
+              },
+              {
+                "id": 140293,
+                "itemType": "Resource",
+                "typeId": 30119,
+                "typeName": "高級ヘアカラー染料",
+                "price": 1,
+                "priceType": 111,
+                "priceName": "虹色のプリズム",
+                "num": 1,
+                "subTabId": 1401,
+                "sequence": 81,
+                "startTime": 1770602400
               }
             ]
           },
@@ -12950,7 +13186,7 @@
                 "limit": 1,
                 "subTabId": 1208,
                 "sequence": 5003,
-                "startTime": 1773108000,
+                "startTime": 1772503200,
                 "isSpPopup": 1
               },
               {
@@ -12965,7 +13201,7 @@
                 "limit": 1,
                 "subTabId": 1208,
                 "sequence": 5003,
-                "startTime": 1773108000,
+                "startTime": 1772503200,
                 "require": 120148,
                 "isSpPopup": 1
               },
@@ -12980,7 +13216,7 @@
                 "num": 1,
                 "subTabId": 1208,
                 "sequence": 5003,
-                "startTime": 1773108000,
+                "startTime": 1772503200,
                 "require": 120149,
                 "isSpPopup": 1
               }
@@ -13538,7 +13774,7 @@
                 "id": 120235,
                 "itemType": "CharAccessory",
                 "typeId": 10073,
-                "typeName": "神速の首飾り・アンズ",
+                "typeName": "神速の髪飾り・アンズ",
                 "price": 300,
                 "priceType": 99,
                 "priceName": "月ノ核",
@@ -13554,7 +13790,7 @@
                 "id": 120236,
                 "itemType": "CharAccessory",
                 "typeId": 10074,
-                "typeName": "神速の首飾り・キャラメル",
+                "typeName": "神速の髪飾り・キャラメル",
                 "price": 300,
                 "priceType": 99,
                 "priceName": "月ノ核",
@@ -13570,7 +13806,7 @@
                 "id": 120237,
                 "itemType": "CharAccessory",
                 "typeId": 10075,
-                "typeName": "神速の首飾り・エメラルドグリーン",
+                "typeName": "神速の髪飾り・エメラルドグリーン",
                 "price": 300,
                 "priceType": 99,
                 "priceName": "月ノ核",
@@ -13932,7 +14168,7 @@
                 "id": 120317,
                 "itemType": "CharAccessory",
                 "typeId": 20043,
-                "typeName": "龍紋のサングラス",
+                "typeName": "龍紋のサングラス・エメラルドグリーン",
                 "price": 480,
                 "priceType": 99,
                 "priceName": "月ノ核",
@@ -14188,7 +14424,7 @@
                 "id": 120333,
                 "itemType": "CharAccessory",
                 "typeId": 10076,
-                "typeName": "クジャクの首飾り・ミント",
+                "typeName": "クジャクの髪飾り・ミント",
                 "price": 300,
                 "priceType": 99,
                 "priceName": "月ノ核",
@@ -14236,7 +14472,7 @@
                 "id": 1209001,
                 "itemType": "CharAccessory",
                 "typeId": 12122,
-                "typeName": "乌乌头套",
+                "typeName": "すみっコの頭",
                 "price": 480,
                 "priceType": 99,
                 "priceName": "月ノ核",
@@ -14245,14 +14481,13 @@
                 "subTabId": 1210,
                 "sequence": 3300,
                 "startTime": 1771898400,
-                "endTime": 1775466000,
                 "isSpPopup": 1
               },
               {
                 "id": 1209002,
                 "itemType": "CharAccessory",
                 "typeId": 12124,
-                "typeName": "奇妙纸袋·本色",
+                "typeName": "不思議な紙袋・オリジナル",
                 "price": 480,
                 "priceType": 99,
                 "priceName": "月ノ核",
@@ -14331,7 +14566,7 @@
           },
           {
             "id": 1211,
-            "name": "躯体装饰",
+            "name": "ボディ",
             "items": [
               {
                 "id": 120401,
@@ -14542,7 +14777,7 @@
                 "id": 120414,
                 "itemType": "CharAccessory",
                 "typeId": 30020,
-                "typeName": "龍神の杖",
+                "typeName": "龍神の杖・マリーゴールド",
                 "price": 680,
                 "priceType": 99,
                 "priceName": "月ノ核",
@@ -15106,7 +15341,7 @@
                 "id": 120528,
                 "itemType": "CharAccessory",
                 "typeId": 40046,
-                "typeName": "クジャクの腰飾り・レッドパープル",
+                "typeName": "クジャクの背飾り・レッドパープル",
                 "price": 980,
                 "priceType": 99,
                 "priceName": "月ノ核",
@@ -15122,7 +15357,7 @@
                 "id": 120529,
                 "itemType": "CharAccessory",
                 "typeId": 40045,
-                "typeName": "クジャクの腰飾り・アイボリー",
+                "typeName": "クジャクの背飾り・アイボリー",
                 "price": 980,
                 "priceType": 99,
                 "priceName": "月ノ核",
@@ -15138,7 +15373,7 @@
                 "id": 120530,
                 "itemType": "CharAccessory",
                 "typeId": 40047,
-                "typeName": "クジャクの腰飾り・ペルシアンレッド",
+                "typeName": "クジャクの背飾り・ペルシアンレッド",
                 "price": 980,
                 "priceType": 99,
                 "priceName": "月ノ核",
@@ -15260,7 +15495,7 @@
                 "id": 120538,
                 "itemType": "CharAccessory",
                 "typeId": 40044,
-                "typeName": "クジャクの腰飾り・ミント",
+                "typeName": "クジャクの背飾り・ミント",
                 "price": 980,
                 "priceType": 99,
                 "priceName": "月ノ核",
@@ -15283,7 +15518,7 @@
                 "num": 1,
                 "limit": 1,
                 "subTabId": 1211,
-                "sequence": 3493,
+                "sequence": 3491,
                 "startTime": 1770602400,
                 "endTime": 1775466000,
                 "isSpPopup": 1
@@ -15299,7 +15534,7 @@
                 "num": 1,
                 "limit": 1,
                 "subTabId": 1211,
-                "sequence": 3494,
+                "sequence": 3492,
                 "startTime": 1770602400,
                 "endTime": 1775466000,
                 "isSpPopup": 1
@@ -15315,7 +15550,7 @@
                 "num": 1,
                 "limit": 1,
                 "subTabId": 1211,
-                "sequence": 3492,
+                "sequence": 3490,
                 "startTime": 1770602400,
                 "endTime": 1775466000,
                 "isSpPopup": 1

@@ -1999,7 +1999,7 @@ The man plunges into the water, and the surface vanishes without a trace.
 The lantern sits undisturbed at your feet, yet it burns brighter.]]
         },
         [6101801] = {
-          ContentTC = "你在篝火旁坐下休息。\n \n 忽然間，你注意到了一種奇怪的響聲。一開始它好像就在你耳畔，然後漸漸遠了一點，移到了頭頂。\n \n 聲音越來越響，窸窸窣窣，似乎是某種柔軟的東西在互相摩擦。",
+          ContentTC = "你在篝火旁坐下休息。\n忽然間，你注意到了一種奇怪的響聲。一開始它好像就在你耳畔，然後漸漸遠了一點，移到了頭頂。\n聲音越來越響，窸窸窣窣，似乎是某種柔軟的東西在互相摩擦。",
           DialogueId = 6101801,
           GUID = "0F4674BA",
           NextDialogue = 6101802,
@@ -2017,7 +2017,7 @@ The lantern sits undisturbed at your feet, yet it burns brighter.]]
           Subtitle = "\"Hey there! Lucky traveller!\""
         },
         [6101803] = {
-          ContentTC = "色彩斑斕的羽毛從頭頂落下來。你從來沒有一次在深淵裡同時看到這麼多顏色。\n \n 現在，你被包圍在一地羽毛中間，好像被街頭玩整蠱遊戲的小傢伙們偶然選中的倒黴路人，尷尬中還透著一絲微妙的可悲。",
+          ContentTC = "色彩斑斕的羽毛從頭頂落下來。你從來沒有一次在深淵裡同時看到這麼多顏色。\n現在，你被包圍在一地羽毛中間，好像被街頭玩整蠱遊戲的小傢伙們偶然選中的倒黴路人，尷尬中還透著一絲微妙的可悲。",
           DialogueId = 6101803,
           GUID = "0F46750E",
           NextDialogue = 6101804,
@@ -2025,7 +2025,7 @@ The lantern sits undisturbed at your feet, yet it burns brighter.]]
           Subtitle = "A flurry of vibrant feathers rains down from above — more colours than you've ever seen in the Abyssum.\nYou find yourself knee-deep in absurd fluff, like the butt of a street prank caught between comedy and pity."
         },
         [6101804] = {
-          ContentTC = "「我說，你怎麼一點反應也沒有？你在深淵裡待這麼久了，不覺得無聊嗎？」\n \n 戴著滑稽的鳥頭面具的人從上方倒立著緩緩降落下來，讓自己的視線與你齊平。\n \n 你不知道他是怎麼保持這個動作的，但這不重要，重要的是他面具上的尖嘴快要戳到你的臉了。",
+          ContentTC = "「我說，你怎麼一點反應也沒有？你在深淵裡待這麼久了，不覺得無聊嗎？」\n戴著滑稽的鳥頭面具的人從上方倒立著緩緩降落下來，讓自己的視線與你齊平。\n你不知道他是怎麼保持這個動作的，但這不重要，重要的是他面具上的尖嘴快要戳到你的臉了。",
           DialogueId = 6101804,
           GUID = "0F467538",
           NextOptions = {
@@ -2048,7 +2048,7 @@ How he's holding that pose, you can't begin to guess.]]
           Subtitle = "I don't have time for this."
         },
         [6101806] = {
-          ContentTC = "「別這麼冷淡嘛，傳頌會的老傢伙們應該教過你吧，日行一善會有好報的。」\n \n 「跟我<H>玩個遊戲</>，贏了就給你獎勵，輸了也沒有懲罰。穩賺不賠，怎麼樣？」",
+          ContentTC = "「別這麼冷淡嘛，傳頌會的老傢伙們應該教過你吧，日行一善會有好報的。」\n「跟我<H>玩個遊戲</>，贏了就給你獎勵，輸了也沒有懲罰。穩賺不賠，怎麼樣？」",
           DialogueId = 6101806,
           GUID = "0F46758C",
           NextOptions = {
@@ -13349,15 +13349,11 @@ CameraMoveTo{_delay{0},TargetPosition{"-68.912094,-67.938797,184.066406,0.000075
           VoiceName = "voice/$Locale$/story/1003/100322/191D55C8"
         },
         [10032214] = {
-          ContentTC = "蓋雷亞劇院道具清單\n\n多位幕後人員記錄的道具籌備單，詳細記錄著蓋雷亞劇院近半個月所有道具的出入情況。\n\n10月08日，服裝、睡袋籌備完成，確認人：蒙德里（批註：食物儲備不足，<H>為了接下來為期一個月的集中排練，得託人再送一批進來</>）\n…………\n11月12日，新麥克風3隻替換完成，確認人：格林德（批註：有一隻麥克風聲音巨響，普奇劇團長說這樣就好，不做更換。）\n11月14日，紅色幕布替換完成，金色幕布已收回倉庫。確認人：貝爾\n…………\n11月24日，遺失的5頂假髮回收完成，確認人：貝爾（批註：更衣室的角落容易藏東西，我今天去把那清空一下。）\n11月25日，花冠15頂籌備完成，馬靴9雙籌備完成，確認人：蒙德里",
+          ContentTC = "10月08日，服裝、睡袋籌備完成，確認人：蒙德里（批註：食物儲備不足，<H>為了接下來為期一個月的集中排練，得託人再送一批進來。</>）\n …………\n 11月12日，新麥克風3隻替換完成，確認人：格林德（批註：有一隻麥克風聲音巨響，普奇劇團長說這樣就好，不做更換。）\n 11月14日，紅色幕布替換完成，金色幕布已收回倉庫。確認人：貝爾\n …………\n 11月24日，遺失的5頂假髮回收完成，確認人：貝爾（批註：更衣室的角落容易藏東西，我今天去把那清空一下。）\n 11月25日，花冠15頂籌備完成，馬靴9雙籌備完成，確認人：蒙德里\"",
           DialogueId = 10032214,
           DialoguePanelType = "{type:showtext;topic:READ_NAME_2000046;content:READ_TEXT_2000046}",
           GUID = "191D55F2",
           Subtitle = [[
-Galea Theatre Props Inventory
-
-A detailed log maintained by the backstage crew, documenting the management of props at Galea Theatre over the past two weeks.
-
 8-Oct
 Organized: Costumes and sleeping bags.
 Logged by: Mondry
@@ -19020,18 +19016,16 @@ LookAt{_delay{2.1},LookAtDescription{"100360:n(100001)"}},
           VoiceName = "voice/$Locale$/story/1003/100341/191E8C06"
         },
         [10034104] = {
-          ContentTC = "皇帝尾戒勳章，完全由純金打造，只會頒發給為帝國做出卓越貢獻的軍人。\n\n科賽托斯行省冰湖城第六軍團下屬衛戍部隊，<H>黎瑟·費西爾</>。\n在連年、數次<H>清繳穢獸作戰</>中，決策果斷，作戰英勇，收尾迅速。\n在維護地區治安的過程中起到了無可比擬的關鍵作用。\n現經軍團評估，以吾皇尤里烏斯之名，授予黎瑟·費西爾帝皇尾戒勳章及準尉軍銜，望廣大軍人以其為榜樣，奮發上進，共同成長。\n榮耀盡歸吾皇。",
+          ContentTC = "科賽托斯行省冰湖城第六軍團下屬衛戍部隊，<H>黎瑟·費西爾</>。\n 在連年、數次<H>清繳穢獸作戰</>中，決策果斷，作戰英勇，收尾迅速。\n 在維護地區治安的過程中起到了無可比擬的關鍵作用。\n 現經軍團評估，以吾皇尤里烏斯之名，授予黎瑟·費西爾帝皇尾戒勳章及準尉軍銜，望廣大軍人以其為榜樣，奮發上進，共同成長。\n 榮耀盡歸吾皇。",
           DialogueId = 10034104,
           DialoguePanelType = "{type:showtext;topic:READ_NAME_2000047;content:READ_TEXT_2000047}",
           GUID = "191E8C30",
           Subtitle = [[
-The Emperor's signet ring. Crafted entirely from pure gold, this prestigious honour is bestowed exclusively upon those who have made extraordinary contributions to the Empire.
-
 Recipient: Rhythm Fischer, serving in the Icelake Escort under the 6th Legion in the Cocytus Region.
 For demonstrating decisive leadership, exemplary bravery, and exceptional efficiency in multiple Filthoid-clearing operations over the years.
 For playing an irreplaceable role in maintaining public order and ensuring the safety of the region.
 Upon the assessment of the Legion, and by the decree of His Majesty Julius, Rhythm Fischer is hereby awarded the Emperor's signet ring and the rank of Warrant Officer. Let her serve as an inspiration to all soldiers, urging them to strive ever higher for the Empire's glory.
-All glory to His Majesty.]],
+All glory to our Emperor.]],
           VoiceName = "voice/$Locale$/story/1003/100341/191E8C30"
         },
         [10034105] = {
@@ -19042,11 +19036,11 @@ All glory to His Majesty.]],
           VoiceName = "voice/$Locale$/story/1003/100341/191E8C5A"
         },
         [10034106] = {
-          ContentTC = "壓在一堆雜物下的老舊報紙，記錄著很久以前的悲慘事故。\n\n<H>穢蝕者異常兇險，不要被表象欺騙！</>\n9月24日，本市發生一起極為惡劣的「穢蝕」事件，經第六軍團衛戍部隊調查後，得出以下結論：\n冰湖城市民費西爾夫婦於9月13日在淚湖畔公路邊上偶遇一名叫做羅比·布朗的青年。因其身受重傷，費西爾夫婦將其帶回家中照料。\n然而，羅比·布朗是一名穢蝕者，他躲過了帝國對潛在穢蝕者的例行盤查並潛逃至城外，且在接受費西爾夫婦幫助時，刻意掩蓋了自己的穢蝕痕跡。十日後，悲劇發生：布朗蛻變成為穢獸，殺死了包括費西爾夫婦在內數十名居住在冰湖城南區的市民。第六軍團下屬冰湖城衛戍部隊緊急出動才平息此次騷亂。\n騷亂共造成18人死亡，其中包含3名索拉之民；另有34人受傷。在此提醒各位市民謹記，不要輕易收留身份不明的卡戎之民，一旦發現穢蝕者，立即上報治安署。它們永遠只是人類的敵人，無一例外。如有刻意包庇穢蝕者、隱瞞不報者，一律依照《海伯利亞刑事法典》第54條規定，處以死刑。",
+          ContentTC = "<H>穢蝕者異常兇險，不要被表象欺騙！</>\n 9月24日，本市發生一起極為惡劣的「穢蝕」事件，經第六軍團衛戍部隊調查後，得出以下結論：\n 冰湖城市民費西爾夫婦於9月13日在淚湖畔公路邊上偶遇一名叫做羅比·布朗的青年。因其身受重傷，費西爾夫婦將其帶回家中照料。\n 然而，羅比·布朗是一名穢蝕者，他躲過了帝國對潛在穢蝕者的例行盤查並潛逃至城外，且在接受費西爾夫婦幫助時，刻意掩蓋了自己的穢蝕痕跡。十日後，悲劇發生：布朗蛻變成為穢獸，殺死了包括費西爾夫婦在內數十名居住在冰湖城南區的市民。第六軍團下屬冰湖城衛戍部隊緊急出動才平息此次騷亂。\n 騷亂共造成18人死亡，其中包含3名索拉之民；另有34人受傷。在此提醒各位市民謹記，不要輕易收留身份不明的卡戎之民，一旦發現穢蝕者，立即上報治安署。它們永遠只是人類的敵人，無一例外。如有刻意包庇穢蝕者、隱瞞不報者，一律依照《海伯利亞刑事法典》第54條規定，處以死刑。",
           DialogueId = 10034106,
           DialoguePanelType = "{type:showtext;topic:READ_NAME_2000048;content:READ_TEXT_2000048}",
           GUID = "191E8C84",
-          Subtitle = "Buried beneath a pile of old clutter, this yellowed newspaper recounts a tragic incident from years ago.\n\nFilthoids Are Exceptionally Dangerous — Do Not Be Fooled by Their Appearances!\nOn September 24th, an egregious Filthoid incident occurred in Icelake. Following an extensive investigation conducted by the 6th Legion's Escort Unit, the details of the tragedy have been confirmed:\nOn September 13th, local residents Mr and Mrs Fischer encountered a gravely injured young man named Robie Brown along the roadside at Lamenting Lake. Out of compassion, the Fischers took him into their home and cared for him.\nHowever, Robie Brown was a Deteriorator who had evaded the Empire's routine screenings and fled to the outskirts of the city. While receiving aid from the Fischers, he deliberately concealed his condition. Ten days later, Brown succumbed to his transformation, becoming a Filthoid and massacring dozens of citizens in Icelake's southern district, including Mr and Mrs Fischer. The 6th Legion's Escort intervened swiftly to suppress the chaos, but the damage was already done.\nThe incident left 18 dead (including 3 Solarians) and 34 others injured. Citizens are hereby reminded: Do not provide shelter to unidentified Charon individuals under any circumstances. If you suspect someone is a Deteriorator, report them to the Security Bureau immediately. They are and will always remain humanity's enemies. No exceptions. Be advised that harbouring Deteriorators or concealing their presence is a capital offence punishable by death under Article 54 of the Hyperborean Criminal Code.",
+          Subtitle = "Deteriorators Are Exceptionally Dangerous — Do Not Be Fooled by Their Appearance!\nOn September 24th, an egregious case of Deterioration occurred in Icelake, with devastating consequences. Following an comprehensive investigation by the 6th Legion's Escort Unit, the details of the tragedy have now been confirmed:\nOn September 13th, local residents Mr and Mrs Fischer encountered a gravely injured young man, Robie Brown, collapsed by the roadside near Lamenting Lake. Acting out of compassion, they brought him into their home and cared for him.\nHowever, Robie Brown was a Deteriorator — one who had evaded the Empire's routine screenings and fled to the outskirts of the city. While receiving aid from the Fischers, Brown deliberately concealed his condition. Ten days later, he succumbed to the transformation, becoming a Filthoid. The resulting massacre in Icelake's southern district claimed the lives of dozens, including Mr and Mrs Fischer. The 6th Legion's Escort responded swiftly and succeeded in subduing the threat — but not before the damage was done.\n\nThe incident resulted in 18 deaths (including 3 Solarian citizens) and 34 injuries. Citizens are reminded: under no circumstances should you provide shelter to unidentified Charon individuals. If you suspect someone of being a Deteriorator, report them to the Security Bureau immediately. Deteriorators are — and will remain — humanity's enemies. No exceptions. Harbouring Deteriorators or concealing their condition is a capital offence under Article 54 of the Hyperborean Criminal Code, punishable by death.",
           VoiceName = "voice/$Locale$/story/1003/100341/191E8C84"
         },
         [10034107] = {
@@ -25020,27 +25014,12 @@ PlayAnimation{ActorId{200021},AnimationId{"Talk02_Start"},Duration{1}}
           VoiceName = "voice/$Locale$/story/1003/100353/191F5554"
         },
         [10035331] = {
-          ContentTC = "蓋雷亞劇院鬥毆事件\n\n時間：10月9日晚8:30\n\n報案人：萊蒂齊亞·普奇（「魔笛」劇團團長）\n\n參與鬥毆雙方：帕西法爾·斯諾菲爾德（主演）、蘇珊娜·羅西（主演）……\n馬修·伯納德（觀眾）、菲莉·弗蘭西斯科（觀眾）……\n\n事件：疑似劇團成員與前排觀眾就劇目發生衝突？疑似觀眾毆打演員？（部分筆錄內頁被撕掉了）\n\n結論：證據不足，不予立案\n\n備註：《雪國的孩子》暫時停演，演出時間不定。\n很想和布魯斯彌補一下當年看不成劇的遺憾，但似乎短時間內沒有機會了。",
+          ContentTC = "蓋雷亞劇院鬥毆事件\n \n 時間：10月9日晚8:30\n \n 報案人：萊蒂齊亞·普奇（「魔笛」劇團團長）\n \n 參與鬥毆雙方：帕西法爾·斯諾菲爾德（主演）、蘇珊娜·羅西（主演）……\n 馬修·伯納德（觀眾）、菲莉·弗蘭西斯科（觀眾）……\n \n 事件：疑似劇團成員與前排觀眾就劇目發生衝突？疑似觀眾毆打演員？（部分筆錄內頁被撕掉了）\n \n 結論：證據不足，不予立案\n \n 備註：《雪國的孩子》暫時停演，演出時間不定。\n 很想和布魯斯彌補一下當年看不成劇的遺憾，但似乎短時間內沒有機會了。",
           DialogueId = 10035331,
           DialoguePanelType = "{type:showtext;topic:READ_NAME_2000049;content:READ_TEXT_2000049}",
           GUID = "191F557E",
           NextDialogue = 10035332,
-          Subtitle = [[
-Brawl at Galea Theatre
-
-Date: October 9th, 8:30 PM
-
-Reported By: Letizia Putsch, Director of the Magic Flute Troupe
-
-Parties Involved: Parsifal Snowfield (Lead Performer), Susanna Rossi (Lead Performer), Matthew Bernard (Audience), Phillipe Francisco (Audience)
-...
-
-Incident Details: Alleged conflict between troupe members and front-row audience members. Alleged assault on performers by certain audience members. (Several pages of the incident report appear to have been torn out.)
-
-Conclusion: Evidence deemed insufficient. Case dismissed.
-
-Remarks: Performances of Children From the Snowfield have been temporarily suspended. Resumption dates remain unspecified.
-I had hoped to watch this play with Blues and make up for the one we missed years ago, but it seems unlikely to happen anytime soon.]],
+          Subtitle = "Brawl at Galea Theatre\n\nDate: October 9th, 8:30 PM\n\nFiled by: Letizia Putsch, Director of the Magic Flute Troupe\n\nInvolved Parties: Parsifal Snowfield (Lead Performer), Susanna Rossie (Lead Performer), Mathew Bernard (Audience), Feeley Francisco (Audience)\n...\n\nIncident Summary: A physical altercation reportedly broke out between troupe members and two front-row audience members. Alleged assault of performers by said audience members. (Several pages of the incident report appear to have been torn out.)\n\nConclusion: Evidence found to be insufficient. Case dismissed.\n\nRemarks: Performances of Children From the Snowfield have been suspended until further notice. No resumption date announced.\nI'd hoped to watch this one with Blues — to finally make up for the show we missed all those years ago. But I guess... that won't be happening any time soon.",
           VoiceName = "voice/$Locale$/story/1003/100353/191F557E"
         },
         [10035332] = {
@@ -26611,7 +26590,7 @@ CameraMoveTo{_delay{0.6},TargetPosition{"284.339844,-294.831055,217.898376,10.81
           VoiceName = "voice/$Locale$/story/1003/100360/191FC36A"
         },
         [10036002] = {
-          ContentTC = "……",
+          ContentTC = " ……",
           DialogueId = 10036002,
           GUID = "191FC394",
           LookAt = {
@@ -26638,7 +26617,7 @@ CameraMoveTo{_delay{0.6},TargetPosition{"284.339844,-294.831055,217.898376,10.81
         },
         [10036004] = {
           Camera = "-43.522461,-123.954102,225.915833,0.000146,-7.596761,-21.001686,20.000008,100000.0,false,Manual,22.0",
-          ContentTC = "……",
+          ContentTC = " ……",
           DialogueId = 10036004,
           GUID = "191FC3E8",
           NextDialogue = 10036005,
@@ -30868,7 +30847,7 @@ CameraMoveTo{TargetPosition{"252.603516,-1139.067505,153.863281,0.000024,-1.3470
           ContentTC = "「如果我那顆寒冰的心，也能變暖些就好了。」",
           DialogueId = 10037106,
           GUID = "192078B4",
-          Subtitle = "\"My frozen heart, it's been cold for my lifetime. How I wish I could feel the warmth inside.\"",
+          Subtitle = "\"My frozen heart, it's been cold for my lifetime. How I wish I could feel the warmth inside.\" ",
           VoiceName = "voice/$Locale$/story/1003/100371/192078B4"
         },
         [10037201] = {
@@ -51341,7 +51320,7 @@ PlayAnimation{_delay{4.2},ActorId{100001},AnimationId{"Talk03_Start"},Duration{1
         },
         [10110246] = {
           Camera = "182.132812,391.785156,140.132812,0.00013,-3.201432,-116.019501,35.000008,100000.0,false,Disable,2.8",
-          ContentTC = "這個啊……我想想，十幾年前來著？大概十四、五年前吧，恩里克·埃塞爾萊德在弗萊格桑省的<H>紅溪城</>犯下了一起謀殺案。",
+          ContentTC = "這個啊……我想想，十幾年前來著？大概十四、五年前吧，恩里克·埃塞爾萊德在弗萊格桑省的<H>丹流城</>犯下了一起謀殺案。",
           DialogueId = 10110246,
           GUID = "194F5740",
           NextDialogue = 10110247,
@@ -51452,7 +51431,7 @@ PlayAnimation{_delay{4.2},ActorId{100001},AnimationId{"Talk03_Start"},Duration{1
         [10110253] = {
           Camera = "62.0,13.855469,151.842773,0.000098,1.998315,-117.01268,35.000008,143.588394,false,Manual,5.149117",
           CameraBlendCurve = "easeInOutQuad",
-          ContentTC = "哦，仔細想想，好像剛好就是他在紅溪城犯事前後那兩年……",
+          ContentTC = "哦，仔細想想，好像剛好就是他在丹流城犯事前後那兩年……",
           DialogueId = 10110253,
           FinalCamera = "100.847656,-14.870117,151.862305,0.000107,6.598201,-135.012131,35.000011,143.588394,false,Manual,5.149117",
           GUID = "194F5866",
@@ -51478,7 +51457,7 @@ PlayAnimation{_delay{4.2},ActorId{100001},AnimationId{"Talk03_Start"},Duration{1
         },
         [10110255] = {
           Camera = "67.521484,-246.492188,192.460938,0.000153,-11.802217,107.784149,35.000011,445.644928,false,Manual,4.0",
-          ContentTC = "至於他女兒……叫什麽來著？海蒂？海莉？記不清了——總之那姑娘當年和恩里克一起去了紅溪城旅行，但並沒有跟他一起回來。",
+          ContentTC = "至於他女兒……叫什麽來著？海蒂？海莉？記不清了——總之那姑娘當年和恩里克一起去了丹流城旅行，但並沒有跟他一起回來。",
           DialogueId = 10110255,
           GUID = "194F58BA",
           NextDialogue = 10110256,
@@ -51815,7 +51794,7 @@ PlayAnimation{ActorId{100001},AnimationId{"Explain02_Start"},Duration{2}}
         [10110513] = {
           Camera = "960.668701,-341.848633,606.558594,0.000024,-38.601192,121.190224,30.000002,362.012939,false,Manual,22.0",
           CameraBlendCurve = "easeInOutQuad",
-          ContentTC = "……恩里克曾是一名醫生，但出於某種原因關閉了醫館；恩里克有一個女兒，但她在紅溪城下落不明；恩里克在紅溪城謀害了一名穢蝕者……",
+          ContentTC = "……恩里克曾是一名醫生，但出於某種原因關閉了醫館；恩里克有一個女兒，但她在丹流城下落不明；恩里克在丹流城謀害了一名穢蝕者……",
           DialogueId = 10110513,
           FacialId = {
             [1] = "200021:Think01"
@@ -51863,7 +51842,7 @@ PlayAnimation{ActorId{100001},AnimationId{"Explain02_Start"},Duration{2}}
         },
         [10110516] = {
           Camera = "684.15155,260.363281,147.201416,0.000142,-1.401261,-120.639412,30.000002,200.0,false,Manual,3.0",
-          ContentTC = "恩里克的女兒大概率在紅溪城遭遇了不測，這件事很可能同穢蝕者有關，從而激起了恩里克對穢蝕者的仇恨，即使多年後仍然無法消解……",
+          ContentTC = "恩里克的女兒大概率在丹流城遭遇了不測，這件事很可能同穢蝕者有關，從而激起了恩里克對穢蝕者的仇恨，即使多年後仍然無法消解……",
           DialogueId = 10110516,
           GUID = "194F8434",
           NextDialogue = 10110517,
@@ -52475,7 +52454,7 @@ CameraMoveTo{_delay{4.4},TargetPosition{"275.3125,955.277466,245.894531,0.0,0.0,
         },
         [10110814] = {
           Camera = "146.675781,107.209351,63.904297,0.000043,10.599551,-114.99369,30.000008,58.469177,false,Manual,22.0",
-          ContentTC = "……難道……當年紅溪城的案子，那個「遇害」的穢蝕者……是恩里克先生的女兒，海莉？",
+          ContentTC = "……難道……當年丹流城的案子，那個「遇害」的穢蝕者……是恩里克先生的女兒，海莉？",
           DialogueId = 10110814,
           ExStoryInfo = "Player",
           FacialId = {
@@ -53537,7 +53516,7 @@ PlayAnimation{_delay{4},ActorId{200006},AnimationId{"Explain02_End"},Duration{1}
           ExStoryInfo = "Player",
           GUID = "1950AA0A",
           SpeakNpcId = 100001,
-          Subtitle = "Stand up... Don't yield to this cold, unfeeling world!",
+          Subtitle = "Don't yield to this cold, unfeeling world!",
           VoiceName = "voice/$Locale$/story/1002/101123/1950AA0A"
         },
         [10112306] = {
@@ -55921,6 +55900,7 @@ MoveTo{_delay{3.5},ActorId{200019},TargetPoint{"P_101107Boy"},MoveSpeed{75},Visi
           ContentTC = "（已經和奧特賽德和白交代好了今天發生的所有事。）",
           DialogueId = 10115801,
           DisableMouth = 1,
+          Duration = 3,
           ExStoryInfo = "Player",
           GUID = "1952E79A",
           IsBlack = 1,
@@ -55933,6 +55913,7 @@ MoveTo{_delay{3.5},ActorId{200019},TargetPoint{"P_101107Boy"},MoveSpeed{75},Visi
           ContentTC = "（接下來能做的，就只有在說好的地方……耐心等待。）",
           DialogueId = 10115802,
           DisableMouth = 1,
+          Duration = 3,
           ExStoryInfo = "Player",
           GUID = "1952E7C4",
           IsBlack = 1,
@@ -60603,7 +60584,7 @@ SetLocation{ActorId{200076},TargetPoint{"P_101259Nifu2"},Visibility{"Hide"}}
           GUID = "195B3E0E",
           NextDialogue = 10128812,
           SpeakNpcId = 200095,
-          Subtitle = "Cause if I sober up, I'll have to work. And if I actually did my job right... well, most of you wouldn't last the week. So really — you ought to thank me. I'm slowly poisoning myself, just so the rest of you get to live a little longer.",
+          Subtitle = "'Cause if I sober up, I'll have to work. And if I actually did my job right... well, most of you wouldn't last the week. So really — you ought to thank me. I'm slowly poisoning myself, just so the rest of you get to live a little longer.",
           VoiceName = "voice/$Locale$/story/1002/101288/195B3E0E"
         },
         [10128812] = {
@@ -78362,7 +78343,7 @@ Reply: Perfect. If our own engineers can't get in, neither can those slippery Fo
           Subtitle = "View the Second Document"
         },
         [11018815] = {
-          ContentTC = "龍莎要塞位於瑪瑙河谷畔高地，一度是扼守皇都與紅溪城的水路交通要道。帝國根基尚未穩固之時，初代皇帝蓋雷亞在此設伏，擊敗了敵對的聯軍，奠定了他一統帝國全境的基礎。",
+          ContentTC = "龍莎要塞位於瑪瑙河谷畔高地，一度是扼守皇都與丹流城的水路交通要道。帝國根基尚未穩固之時，初代皇帝蓋雷亞在此設伏，擊敗了敵對的聯軍，奠定了他一統帝國全境的基礎。",
           DialogueId = 11018815,
           GUID = "1B959E56",
           NextDialogue = 11018816,
@@ -78370,7 +78351,7 @@ Reply: Perfect. If our own engineers can't get in, neither can those slippery Fo
           VoiceName = "voice/$Locale$/story/1002/110188/1B959E56"
         },
         [11018816] = {
-          ContentTC = "但是隨著迪斯瑪尼亞與紅溪城之間鐵路的開通，距離鐵路尚有一段距離的龍莎要塞地位有所下降，從重要的交通關口變成了單純的軍事要塞。",
+          ContentTC = "但是隨著迪斯瑪尼亞與丹流城之間鐵路的開通，距離鐵路尚有一段距離的龍莎要塞地位有所下降，從重要的交通關口變成了單純的軍事要塞。",
           DialogueId = 11018816,
           GUID = "1B959E80",
           NextDialogue = 11018817,
@@ -79344,7 +79325,7 @@ PlayAnimation{_delay{6.5},ActorId{110022},AnimationId{"Fist02_Start"},Duration{1
         },
         [11019113] = {
           Camera = "150.314453,114.749023,93.257812,0.000076,12.398924,-146.393463,31.194523,265.276245,false,Manual,2.500234",
-          ContentTC = "我正打算今天跟你聊這個。接下來我要去一趟弗萊格桑省的紅溪城，大概半年的時間。這半年就由你來擔任我的近衛。",
+          ContentTC = "我正打算今天跟你聊這個。接下來我要去一趟弗萊格桑省的丹流城，大概半年的時間。這半年就由你來擔任我的近衛。",
           DialogueId = 11019113,
           FacialId = {
             [1] = "110022:None"
@@ -79371,7 +79352,7 @@ PlayAnimation{_delay{9.01},ActorId{110018},AnimationId{"Confident_End"},Duration
         },
         [11019115] = {
           Camera = "27.921875,-356.951172,536.433594,0.000073,-35.199646,124.770035,45.0,100000.0,false,Manual,22.0",
-          ContentTC = "五天前皇兄召我會面，就是要我以皇室的名義去紅溪城訪問。我便和他說，想將你做為近衛帶在身邊，他同意了。",
+          ContentTC = "五天前皇兄召我會面，就是要我以皇室的名義去丹流城訪問。我便和他說，想將你做為近衛帶在身邊，他同意了。",
           DialogueId = 11019115,
           FinalCamera = "-9.732422,-383.087891,536.433594,0.000073,-35.199646,124.770035,45.0,100000.0,false,Manual,22.0",
           GUID = "1B95CF8E",
@@ -79391,7 +79372,7 @@ CameraMoveTo{TargetPosition{"144.664062,19.453125,118.726562,0.000105,12.600271,
         },
         [11019116] = {
           Camera = "154.613281,113.302734,105.09375,0.000112,9.199677,106.796791,31.194523,100000.0,false,DoNotOverride,22.0",
-          ContentTC = "你要我離開帝都，去紅溪城？",
+          ContentTC = "你要我離開帝都，去丹流城？",
           DialogueId = 11019116,
           ExStoryInfo = "EXPlayer",
           GUID = "1B95CFB8",
@@ -96639,7 +96620,7 @@ PlayAnimation{_delay{2.5},ActorId{100001},AnimationId{"AgreeHead"},Duration{1}}
           VoiceName = "voice/$Locale$/story/1201/120165/1E15015C"
         },
         [12016601] = {
-          Content = "{nickname}，是你吗？",
+          ContentTC = "{nickname}，是你嗎？",
           DialogueId = 12016601,
           Duration = 2,
           GUID = "1E15119A",
@@ -96669,7 +96650,7 @@ PlayAnimation{_delay{2.5},ActorId{100001},AnimationId{"AgreeHead"},Duration{1}}
           VoiceName = "voice/$Locale$/story/1201/120166/1E1511C4"
         },
         [12016603] = {
-          Content = "我们一定能够再次相逢的。在那之前，照顾好自己，不要受伤。",
+          ContentTC = "我們一定能夠再次相逢的。在那之前，照顧好自己，不要受傷。",
           DialogueId = 12016603,
           Duration = 3,
           GUID = "1E1511EE",
@@ -96683,7 +96664,7 @@ PlayAnimation{_delay{2.5},ActorId{100001},AnimationId{"AgreeHead"},Duration{1}}
           VoiceName = "voice/$Locale$/story/1201/120166/1E1511EE"
         },
         [12016604] = {
-          Content = "现在往前走吧，不要停下脚步。我会一直守望你的背影。",
+          ContentTC = "現在往前走吧，不要停下腳步。我會一直守望你的背影。",
           DialogueId = 12016604,
           Duration = 3,
           GUID = "1E151218",
@@ -96766,7 +96747,7 @@ PlayAnimation{_delay{2.5},ActorId{100001},AnimationId{"AgreeHead"},Duration{1}}
     Loader = function()
       return {
         [12016901] = {
-          Content = "好久不见，{nickname}。",
+          ContentTC = "好久不見，{nickname}。",
           DialogueId = 12016901,
           Duration = 2,
           GUID = "1E1542D2",
@@ -96783,7 +96764,7 @@ PlayAnimation{_delay{2.5},ActorId{100001},AnimationId{"AgreeHead"},Duration{1}}
           VoiceName = "voice/$Locale$/story/1201/120169/1E1542D2"
         },
         [12016902] = {
-          Content = "你是不是去了什么地方……一个我从未听过的、陌生又新鲜的地方？",
+          ContentTC = "你是不是去了什麼地方……一個我從未聽過的、陌生又新鮮的地方？",
           DialogueId = 12016902,
           Duration = 3,
           GUID = "1E1542FC",
@@ -96797,7 +96778,7 @@ PlayAnimation{_delay{2.5},ActorId{100001},AnimationId{"AgreeHead"},Duration{1}}
           VoiceName = "voice/$Locale$/story/1201/120169/1E1542FC"
         },
         [12016903] = {
-          Content = "如果可以的话，等你什么时候回来冰湖城，可以讲给我听听吗？",
+          ContentTC = "如果可以的話，等你什麼時候回來冰湖城，可以講給我聽聽嗎？",
           DialogueId = 12016903,
           Duration = 3,
           GUID = "1E154326",
@@ -96811,7 +96792,7 @@ PlayAnimation{_delay{2.5},ActorId{100001},AnimationId{"AgreeHead"},Duration{1}}
           VoiceName = "voice/$Locale$/story/1201/120169/1E154326"
         },
         [12016904] = {
-          Content = "虽然这个愿望有点奢侈……可以的话，请不要忘记我。",
+          ContentTC = "雖然這個願望有點奢侈……可以的話，請不要忘記我。",
           DialogueId = 12016904,
           GUID = "1E154350",
           SnapShot = "ECHO",
@@ -96832,7 +96813,7 @@ PlayAnimation{_delay{2.5},ActorId{100001},AnimationId{"AgreeHead"},Duration{1}}
           VoiceName = "voice/$Locale$/story/1201/120170/1E15533A"
         },
         [12017002] = {
-          Content = "到底去哪儿了，让我好找。快回来吧，菲娜还想听你给她讲故事。",
+          ContentTC = "到底去哪兒了，讓我好找。快回來吧，菲娜還想聽你給她講故事。",
           DialogueId = 12017002,
           GUID = "1E155364",
           SnapShot = "MEMORY",
@@ -96842,7 +96823,7 @@ PlayAnimation{_delay{2.5},ActorId{100001},AnimationId{"AgreeHead"},Duration{1}}
           VoiceName = "voice/$Locale$/story/1201/120170/1E155364"
         },
         [12017003] = {
-          Content = "别在外面折断腿了。干完了活计就回水仙平原吧，我为你留了杯热饮，放凉了可就不好了。",
+          ContentTC = "別在外面折斷腿了。乾完了活計就回水仙平原吧，我為你留了杯熱飲，放涼了可就不好了。",
           DialogueId = 12017003,
           Duration = 3,
           GUID = "1E15538E",
@@ -96854,7 +96835,7 @@ PlayAnimation{_delay{2.5},ActorId{100001},AnimationId{"AgreeHead"},Duration{1}}
           VoiceName = "voice/$Locale$/story/1201/120170/1E15538E"
         },
         [12017004] = {
-          Content = "挣钱固然重要。要是有命赚钱没命花，可就得不偿失了。",
+          ContentTC = "掙錢固然重要。要是有命賺錢沒命花，可就得不償失了。",
           DialogueId = 12017004,
           Duration = 3,
           GUID = "1E1553B8",
@@ -120574,7 +120555,7 @@ I've witnessed deeds that daylight never sees, and not all are the work of "demo
           DialogueId = 50106001,
           GUID = "7D6F63CA",
           SpeakNpcId = 701062,
-          Subtitle = "Hmm... I wonder how long this tree's been standing here.",
+          Subtitle = "Hmm... I wonder how long this tree has been standing here.",
           VoiceName = "voice/$Locale$/env/Ver0101/7D6F63CA"
         },
         [50106101] = {
@@ -121475,7 +121456,7 @@ I've witnessed deeds that daylight never sees, and not all are the work of "demo
           ContentTC = "早跟你說了，收回來的新鮮吿蒼要立即拿去晾曬，為何回回都能忘了呢？",
           DialogueId = 50107146,
           GUID = "7D701FA4",
-          Subtitle = "I've told you — fresh Sky Lilies go straight out to dry as soon as you bring them back. How do you forget every time?"
+          Subtitle = "I've told you — fresh Skylilies go straight out to dry as soon as you bring them back. How do you forget every time?"
         },
         [50107147] = {
           ContentTC = "落生香的原料研磨最講究精細，一遍下來若是還有這種大顆粒，你得重新再來一遍。",
@@ -121708,9 +121689,10 @@ I've witnessed deeds that daylight never sees, and not all are the work of "demo
           Subtitle = "The more I look, the stranger it feels..."
         },
         [50107225] = {
-          Content = "想当初咱这湖边多清净？",
+          ContentTC = "想當初咱這湖邊多清淨？",
           DialogueId = 50107225,
-          GUID = "7D702C9A"
+          GUID = "7D702C9A",
+          Subtitle = "Remember when it used to be quiet round here?"
         },
         [50107226] = {
           ContentTC = "若是能把這五禽戲練好……",
@@ -122430,7 +122412,7 @@ I've witnessed deeds that daylight never sees, and not all are the work of "demo
           ContentTC = "收回來的新鮮吿蒼要立即拿去晾曬。",
           DialogueId = 50107346,
           GUID = "7D704074",
-          Subtitle = "Fresh Sky Lilies go straight out to dry as soon as you bring them back."
+          Subtitle = "Fresh Skylilies go straight out to dry as soon as you bring them back."
         },
         [50107347] = {
           ContentTC = "落生香的原料研磨最講究精細。",
@@ -122540,7 +122522,7 @@ I've witnessed deeds that daylight never sees, and not all are the work of "demo
           Subtitle = "(The elderly woman gives your head a hearty pat with her large hand and then pinches your cheek. Her overwhelming enthusiasm leaves you a bit flustered.)"
         },
         [51000103] = {
-          ContentTC = "來，喝了這碗奶油蘑菇湯！嬸嬸這是紅溪城帶來的手藝，你肯定沒見識過。",
+          ContentTC = "來，喝了這碗奶油蘑菇湯！嬸嬸這是丹流城帶來的手藝，你肯定沒見識過。",
           DialogueId = 51000103,
           GUID = "7FAC6466",
           NextDialogue = 51000104,
@@ -122607,7 +122589,7 @@ I've witnessed deeds that daylight never sees, and not all are the work of "demo
           Subtitle = "(The smile slowly fades from the old woman's eyes, replaced by glistening tears.)"
         },
         [51000111] = {
-          ContentTC = "是啊，一天不如一天……唉，可她放著紅溪城不呆，非得跑到這種冰天雪地的地方來，我怎麽也攔不住。",
+          ContentTC = "是啊，一天不如一天……唉，可她放著丹流城不呆，非得跑到這種冰天雪地的地方來，我怎麽也攔不住。",
           DialogueId = 51000111,
           GUID = "7FAC65B6",
           NextDialogue = 51000112,
@@ -122660,7 +122642,7 @@ I've witnessed deeds that daylight never sees, and not all are the work of "demo
           Subtitle = "(The elderly woman gives your head a hearty pat with her large hand and then pinches your cheek. Her overwhelming enthusiasm leaves you a bit flustered.)"
         },
         [51000203] = {
-          ContentTC = "來，喝了這碗奶油蘑菇湯！嬸嬸這是紅溪城帶來的手藝，你肯定沒見識過。",
+          ContentTC = "來，喝了這碗奶油蘑菇湯！嬸嬸這是丹流城帶來的手藝，你肯定沒見識過。",
           DialogueId = 51000203,
           GUID = "7FAC74CE",
           NextDialogue = 51000204,
@@ -133306,7 +133288,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
         },
         [51005931] = {
           Camera = "-691.196594,-40.563477,185.212402,0.000427,-10.603089,11.55783,35.0,1.5,false,Disable,1.2",
-          ContentTC = "我們是從紅溪城過來討生活的。誰知道這一路又是穢獸又是雪狼，甚至還有神棄者同盟跟軍團打架的。但是，咱們也得吃飯的嘛，所以……",
+          ContentTC = "我們是從丹流城過來討生活的。誰知道這一路又是穢獸又是雪狼，甚至還有神棄者同盟跟軍團打架的。但是，咱們也得吃飯的嘛，所以……",
           DialogueId = 51005931,
           FinalCamera = "-688.296509,-54.745117,185.212402,0.000428,-10.603083,11.557263,35.0,1.5,false,Disable,1.2",
           GUID = "7FB0208E",
@@ -135516,7 +135498,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           Subtitle = "(A woman in uniform... Could she have something to do with one of the items Margie gave me?)"
         },
         [51006931] = {
-          ContentTC = "成為售票員的第一年零八個月，我終於攢夠了可以從冰湖城坐到南方紅溪城的車票錢。",
+          ContentTC = "成為售票員的第一年零八個月，我終於攢夠了可以從冰湖城坐到南方丹流城的車票錢。",
           DialogueId = 51006931,
           GUID = "7FB0C49E",
           NextDialogue = 51006932,
@@ -135846,7 +135828,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           Subtitle = "\"May 21st. Mrs Catherine tossed silver coins at my feet and told me to pick them up one by one from the ground. She said I didn't deserve to take the money directly from her hand. Ah, if only I had endless coins too...\""
         },
         [51007120] = {
-          ContentTC = "「9月13日。昨晚再次夢見自己終於攢夠了錢，買下車票。這次夢裡的終點站是紅溪城……」",
+          ContentTC = "「9月13日。昨晚再次夢見自己終於攢夠了錢，買下車票。這次夢裡的終點站是丹流城……」",
           DialogueId = 51007120,
           GUID = "7FB0E3A0",
           NextDialogue = 51007121,
@@ -157165,7 +157147,7 @@ MoveTo{_delay{3},ActorId{700324},TargetPoint{"P51104118White"},MoveSpeed{80},Vis
           GUID = "7FEF1CF2",
           NextDialogue = 51105014,
           SpeakNpcId = 700329,
-          Subtitle = "And — and! Mum and Dad haven't been home lately, but I keep finding Sky Lilies on the windowsill! I asked around, but nobody said they brought them..."
+          Subtitle = "And — and! Mum and Dad haven't been home lately, but I keep finding Skylilies on the windowsill! I asked around, but nobody said they brought them..."
         },
         [51105014] = {
           ContentTC = "這樣的怪事還有不少呢！",
@@ -157831,7 +157813,7 @@ MoveTo{_delay{3},ActorId{700324},TargetPoint{"P51104118White"},MoveSpeed{80},Vis
           GUID = "7FEF5FB8",
           NextDialogue = 51105081,
           SpeakNpcId = 700331,
-          Subtitle = "I... I've been waiting so long... Pingping, the sun's come out — let's pick some Sky Lilies to put in the vase."
+          Subtitle = "I... I've been waiting so long... Pingping, the sun's come out — let's pick some Skylilies to put in the vase."
         },
         [51105081] = {
           Camera = "-132.632812,-149.719727,173.525391,0.00008,-14.200147,49.79491,35.0,100000.0,false,DoNotOverride,2.8",
@@ -157954,7 +157936,7 @@ MoveTo{_delay{3},ActorId{700324},TargetPoint{"P51104118White"},MoveSpeed{80},Vis
           GUID = "7FEF6186",
           NextDialogue = 51105092,
           SpeakNpcId = 700331,
-          Subtitle = "I... I've been waiting so long... Pingping, the sun's come out — let's pick some Sky Lilies to put in the vase."
+          Subtitle = "I... I've been waiting so long... Pingping, the sun's come out — let's pick some Skylilies to put in the vase."
         },
         [51105092] = {
           Camera = "-93.003906,-42.301758,148.769531,0.000082,-13.200105,37.594505,35.0,100000.0,false,DoNotOverride,2.8",
@@ -158026,7 +158008,7 @@ MoveTo{_delay{3},ActorId{700324},TargetPoint{"P51104118White"},MoveSpeed{80},Vis
           GUID = "7FEF6282",
           NextDialogue = 51105098,
           SpeakNpcId = 700329,
-          Subtitle = "I never met him... Nana said he passed away when she was young, when they'd just moved to Haojing. She didn't get the news in time because of the move... so she never got to say goodbye..."
+          Subtitle = "I never met him... Nana said he passed away when she was young, when she just moved to Haojing. She didn't get the news in time because of the move... so she never got to say goodbye..."
         },
         [51105098] = {
           Camera = "-8.46875,144.892578,124.898438,0.000009,2.799899,-77.20108,35.0,100000.0,false,DoNotOverride,2.8",
@@ -158172,7 +158154,7 @@ PlayAnimation{ActorId{700329},AnimationId{"Give"},Duration{2}},
           GUID = "7FEF6D80",
           NextDialogue = 51105111,
           SpeakNpcId = 700329,
-          Subtitle = "From now on, you won't have to catch Loomhoppers all by yourself! I'll pick Sky Lilies with you, read with you — we'll do all sorts of things together!"
+          Subtitle = "From now on, you won't have to catch Loomhoppers all by yourself! I'll pick Skylilies with you, read with you — we'll do all sorts of things together!"
         },
         [51105111] = {
           Camera = "-333.121094,-499.869141,192.47168,0.000051,-9.400239,56.996445,35.0,100000.0,false,DoNotOverride,2.8",
@@ -158373,7 +158355,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
           DialogueId = 51105129,
           GUID = "7FEF709E",
           SpeakNpcId = 700361,
-          Subtitle = "Should I go pick some Sky Lilies to put in the vase?"
+          Subtitle = "Should I go pick some Skylilies to put in the vase?"
         },
         [51105201] = {
           ContentTC = "一年一度的銀燭狂歡節結束了，一切似乎都回復平靜。水仙平原也理應恢復到一如既往的喧囂氣氛。",
@@ -158701,7 +158683,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         },
         [51105310] = {
           Camera = "618.50708,-678.68042,180.93396,0.000092,-5.799923,127.191681,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentTC = "鍛造！_x000D_\n經商！_x000D_\n冒險！",
+          ContentTC = "鍛造！\n經商！\n冒險！",
           DialogueId = 51105310,
           FacialId = {
             [1] = "700353:Smile02"
@@ -167500,7 +167482,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
             [2] = 51125002
           },
           SpeakNpcId = 700365,
-          Subtitle = "What?! Miaoqu’s still out? How many days has he had the trots? Ugh... How are we supposed to shoot all those Mistwharf scenes...",
+          Subtitle = "What?! Miaoqu's still out? How many days has he had the trots? Ugh... How are we supposed to shoot all those Mistwharf scenes...",
           TalkActionId = {
             [1] = "700365:Angry01_Start"
           }
@@ -167537,7 +167519,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           DialogueId = 51125004,
           GUID = "7FFC6FF8",
           SpeakNpcId = 700365,
-          Subtitle = "We're putting on a show — well, a pretty new kind actually. It’s called \"Muovie\". Interested?"
+          Subtitle = "We're putting on a show — well, a pretty new kind actually. It's called \"Muovie\". Interested?"
         },
         [51125005] = {DialogueId = 51125005, GUID = "7FFC7022"},
         [51125006] = {
@@ -168120,7 +168102,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
         },
         [51125067] = {
           Camera = "-40.277344,-15.838867,165.15625,0.017561,-8.200645,2.511383,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentTC = "…………{性别：兄弟丨姑娘}你怎麼看，現在這樣拍下去確實不太行，要不，你倆換一下試試？",
+          ContentTC = "………… {性别:兄弟|姑娘}，現在這樣拍下去確實不太行，要不，你倆換一下試試？",
           DialogueId = 51125067,
           GUID = "7FFC7A4E",
           LookAt = {
@@ -168131,7 +168113,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
             [2] = 51125069
           },
           SpeakNpcId = 700365,
-          Subtitle = "...What do you think, {性别：brother丨lass}? This isn't working. How about... we swap your roles?",
+          Subtitle = "...What do you think? This isn't working. How about... we swap your roles?",
           TalkActionId = {
             [1] = "100001:Think_Start"
           }
@@ -168455,7 +168437,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           Subtitle = "That's a wrap! We're done here! I'll just have to save the Mistwharf scenes in the editing room."
         },
         [51125108] = {
-          ContentTC = "{性别：兄弟丨姑娘}，這是你今天拍戲的報酬，拿好了。",
+          ContentTC = "{性别:兄弟|姑娘}，這是你今天拍戲的報酬，拿好了。",
           DialogueId = 51125108,
           GUID = "7FFC8108",
           LookAt = {
@@ -168463,7 +168445,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           },
           NextDialogue = 51125109,
           SpeakNpcId = 700365,
-          Subtitle = "Here {性别：brother丨lass}, your pay for today. You've earned it."
+          Subtitle = "Here {性别:brother|lass}, your pay for today. You've earned it."
         },
         [51125109] = {
           ContentTC = "（這一場荒唐的鬧劇總算是落下了帷幕。橫生如願以償地留下了他的高光時刻……或許。）",
@@ -168780,7 +168762,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           GUID = "7FFCC44C",
           NextDialogue = 51125519,
           SpeakNpcId = 701039,
-          Subtitle = "And some of the key incense materials — they've got strict limits. Take Sky Lilies, for instance: folks here burn a lot of it. If the Starweavers ship it all overseas, what are we supposed to do when we run short?"
+          Subtitle = "And some of the key incense materials — they've got strict limits. Take Skylilies, for instance: folks here burn a lot of it. If the Starweavers ship it all overseas, what are we supposed to do when we run short?"
         },
         [51125519] = {
           ContentTC = "這進來的東西自然更是需要登記，就說那什麼海伯利亞，刀啊槍啊的，要是都進了華胥豈不是亂了套！",
@@ -175948,7 +175930,7 @@ SEQ{ TurnTo{TurnToDescription{"701075:p(-20)"}}, LookAt{LookAtDescription{"70107
         },
         [51151047] = {
           Camera = "595.386719,637.626953,151.045898,0.000026,-1.464959,-133.471008,35.0,100000.0,false,DoNotOverride,22.0",
-          ContentTC = "如果錦鯉皎皎的訊息沒有出錯……鬧鬼的倉庫就是這裡了！",
+          ContentTC = "之前咱們聽了望春他們聊過後，我就去跟錦鯉皎皎打聽了一下，如果她的消息沒有出錯……鬧鬼的倉庫就是這裡了！",
           DialogueId = 51151047,
           FacialId = {
             [1] = "200002:Confident01"
@@ -175957,7 +175939,7 @@ SEQ{ TurnTo{TurnToDescription{"701075:p(-20)"}}, LookAt{LookAtDescription{"70107
           GUID = "800D20A6",
           NextDialogue = 51151048,
           SpeakNpcId = 200002,
-          Subtitle = "If Lunocarp got her facts straight... this should be the haunted warehouse!",
+          Subtitle = "After listening to Wangchun and the others last time, I went and asked Lunocarp. If she got her facts straight... this should be the haunted warehouse!",
           TalkActionId = {
             [1] = "200002:Confident_Start"
           },
@@ -176351,13 +176333,13 @@ SEQ{ TurnTo{TurnToDescription{"701075:p(-20)"}}, LookAt{LookAtDescription{"70107
           GUID = "800D2514",
           NextDialogue = 51151075,
           SpeakNpcId = 200002,
-          Subtitle = "These marks on the floor... sniff, sniff... smells nice. Is this incense? Why's it spilled everywhere — did the Wishen do this?",
+          Subtitle = "These marks on the floor... (sniff sniff)... smells nice. Is this incense? Why's it spilled everywhere — did the Wishen do this?",
           TalkActionId = {
             [1] = "200002:PointF_End"
           }
         },
         [51151075] = {
-          ContentTC = "想必被這些無由生發現就會進入船工口中的「鬼打牆」狀態，然後被丟出去吧，白，我們要謹慎前進了。",
+          ContentTC = "看它們如此謹慎，想必被發現了會遭遇什麼不好的事情吧，白，我們要謹慎前進了。",
           DialogueId = 51151075,
           FacialId = {
             [1] = "100001:Think01"
@@ -176367,7 +176349,7 @@ SEQ{ TurnTo{TurnToDescription{"701075:p(-20)"}}, LookAt{LookAtDescription{"70107
             [1] = "100001:n(200002)"
           },
           SpeakNpcId = 100001,
-          Subtitle = "If they notice us, we'll end up just like the dockhands — walking in circles until we wander straight back outside. We should move carefully."
+          Subtitle = "Given how cautious they are, getting spotted likely leads to serious trouble. We should move carefully."
         },
         [51151076] = {
           ContentTC = "白，快蹲下來。",
@@ -176426,7 +176408,7 @@ SEQ{ TurnTo{TurnToDescription{"701075:p(-20)"}}, LookAt{LookAtDescription{"70107
           NextDialogue = 51151125,
           Scripts = "PlayNormalSound{EventPath{\"event:/sfx/common/story/east/vo_hello\"},PlayAs2D{true}}",
           SpeakNpcId = 700377,
-          Subtitle = "(startled)"
+          Subtitle = "Chirp?"
         },
         [51151082] = {
           ContentTC = "靈神大人，哼生這便來為你護駕！何方鼠賊，瞞天過海只為靠近我們靈神大人！",
@@ -176460,7 +176442,7 @@ SetVisibility{ActorId{700376},Visibility{"Show"}}
           NextDialogue = 51151126,
           Scripts = "PlayNormalSound{EventPath{\"event:/sfx/common/story/east/vo_happy\"},PlayAs2D{true}}",
           SpeakNpcId = 700377,
-          Subtitle = "(preens smugly)",
+          Subtitle = "Chirp, chirp~",
           TalkActionId = {
             [1] = "200002:Confident_End"
           }
@@ -176517,7 +176499,7 @@ SetVisibility{ActorId{700376},Visibility{"Show"}}
         },
         [51151089] = {
           Camera = "-595.896667,244.201172,274.973206,0.000002,-17.388731,-24.245804,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentTC = "（待機動作）",
+          ContentTC = "啾啾！吖~吖吖！",
           DialogueId = 51151089,
           FacialId = {
             [1] = "200002:None"
@@ -176531,7 +176513,7 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
 PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true}}
 }]],
           SpeakNpcId = 700377,
-          Subtitle = "(idle animation)",
+          Subtitle = "Chirp, chirp! Peep, peep!",
           TalkActionId = {
             [1] = "200002:Helpless01_End"
           }
@@ -176571,13 +176553,13 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
         },
         [51151093] = {
           Camera = "-595.896667,244.201172,274.973206,0.000002,-17.388731,-24.245804,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentTC = "（害怕的動作）",
+          ContentTC = "吖吖……",
           DialogueId = 51151093,
           GUID = "800D2832",
           NextDialogue = 51151128,
           Scripts = "PlayNormalSound{EventPath{\"event:/sfx/common/story/east/vo_upset\"},PlayAs2D{true}}",
           SpeakNpcId = 700377,
-          Subtitle = "(recoils in fright)",
+          Subtitle = "Peep...",
           TalkActionId = {
             [1] = "100001:Talk03ToTalkL_End"
           }
@@ -176633,7 +176615,7 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
 PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_happy"},PlayAs2D{true}}
 }]],
           SpeakNpcId = 700377,
-          Subtitle = "(idle animation)"
+          Subtitle = "Chirp, chirp~"
         },
         [51151099] = {
           ContentTC = "靈神大人說，它在原來的地方聞到了很香的味道，十分喜歡，就跟著味道一路來到了船上……",
@@ -176662,7 +176644,7 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_happy"},PlayAs2D{true
           Subtitle = "Then why hog this place?"
         },
         [51151102] = {
-          ContentTC = "（待機動作）",
+          ContentTC = "吖吖……啾！啾啾~",
           DialogueId = 51151102,
           GUID = "800D29AC",
           NextDialogue = 51151103,
@@ -176673,7 +176655,7 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
 PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true}}
 }]],
           SpeakNpcId = 700377,
-          Subtitle = "(idle animation)"
+          Subtitle = "Chirp... Peep, peep, peep!"
         },
         [51151103] = {
           ContentTC = "靈神大人說，這裡有好聞的香料，沒有不認識的面孔，沒有兇巴巴的魔靈獵人，還有好兄弟無由生相隨保護。",
@@ -176743,7 +176725,7 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
       return {
         [51151108] = {
           Camera = "-595.896667,244.201172,274.973206,0.000002,-17.388731,-24.245804,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentTC = "（害怕的動作）",
+          ContentTC = "啾……吖……",
           DialogueId = 51151108,
           FacialId = {
             [1] = "100001:None"
@@ -176752,7 +176734,7 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
           NextDialogue = 51151109,
           Scripts = "PlayNormalSound{EventPath{\"event:/sfx/common/story/east/vo_upset\"},PlayAs2D{true}}",
           SpeakNpcId = 700377,
-          Subtitle = "(recoils in fright)",
+          Subtitle = "Chirp... Peep...",
           TalkActionId = {
             [1] = "100001:Talk03ToTalkL_End"
           }
@@ -176796,13 +176778,13 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
         },
         [51151112] = {
           Camera = "-595.896667,244.201172,274.973206,0.000002,-17.388731,-24.245804,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentTC = "（待機動作）",
+          ContentTC = "啾~",
           DialogueId = 51151112,
           GUID = "800D2B50",
           NextDialogue = 51151113,
           Scripts = "PlayNormalSound{EventPath{\"event:/sfx/common/story/east/vo_hello\"},PlayAs2D{true}}",
           SpeakNpcId = 700377,
-          Subtitle = "(idle animation)",
+          Subtitle = "Chirp~",
           TalkActionId = {
             [1] = "200002:Helpless01_End"
           }
@@ -176852,16 +176834,16 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
           NextDialogue = 51151117,
           Scripts = "PlayNormalSound{EventPath{\"event:/sfx/common/story/east/vo_upset\"},PlayAs2D{true}}",
           SpeakNpcId = 700377,
-          Subtitle = "(hesitant)"
+          Subtitle = "Peep..."
         },
         [51151117] = {
-          ContentTC = "（開心的動作）",
+          ContentTC = "吖！",
           DialogueId = 51151117,
           GUID = "800D2C22",
           NextDialogue = 51151118,
           Scripts = "PlayNormalSound{EventPath{\"event:/sfx/common/story/east/vo_happy\"},PlayAs2D{true}}",
           SpeakNpcId = 700377,
-          Subtitle = "(perks up)"
+          Subtitle = "Peep!"
         },
         [51151118] = {
           ContentTC = "看起來它同意跟我們走啦~",
@@ -176903,12 +176885,12 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
           }
         },
         [51151121] = {
-          ContentTC = "（悲傷的動作）",
+          ContentTC = "吖吖……",
           DialogueId = 51151121,
           GUID = "800D2CCA",
           Scripts = "PlayNormalSound{EventPath{\"event:/sfx/common/story/east/vo_upset\"},PlayAs2D{true}}",
           SpeakNpcId = 700377,
-          Subtitle = "(droops sadly)"
+          Subtitle = "Peep, peep..."
         },
         [51151122] = {
           ContentTC = "（你就這麼看著一個魔靈和兩個無由生相擁而泣，互相把不存在的眼淚抹在對方身上，等了好久，直到將哼哈二將送至門外……）",
@@ -176932,34 +176914,39 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
           Subtitle = "Little Minion, did you bring any Yum Treats? Go on — try feeding this Geniemon!"
         },
         [51151125] = {
-          Content = "（这只魔灵似乎对你们的到来看起来有些疑惑。）",
+          ContentTC = "（這隻魔靈似乎對你們的到來看起來有些疑惑。）",
           DialogueId = 51151125,
           GUID = "800D263B",
-          NextDialogue = 51151082
+          NextDialogue = 51151082,
+          Subtitle = "(This Geniemon seems somewhat puzzled by your arrival.)"
         },
         [51151126] = {
-          Content = "（这只魔灵明显意识到了你们的来意，但因有无由生相助而显得十分得意。）",
+          ContentTC = "（這隻魔靈明顯意識到了你們的來意，但因有無由生相助而顯得十分得意。）",
           DialogueId = 51151126,
           GUID = "800D26B9",
-          NextDialogue = 51151085
+          NextDialogue = 51151085,
+          Subtitle = "(The Geniemon clearly understands your intentions but appears quite smug with the Wishen by its side.)"
         },
         [51151127] = {
-          Content = "（咿咿呀呀说了一大堆，完全听不懂……）",
+          ContentTC = "（咿咿呀呀說了一大堆，完全聽不懂……）",
           DialogueId = 51151127,
           GUID = "800D278B",
-          NextDialogue = 51151090
+          NextDialogue = 51151090,
+          Subtitle = "(It babbles a great deal... completely incomprehensible...)"
         },
         [51151128] = {
-          Content = "(它似乎有些害怕？）",
+          ContentTC = "(它似乎有些害怕？）",
           DialogueId = 51151128,
           GUID = "800D2833",
-          NextDialogue = 51151094
+          NextDialogue = 51151094,
+          Subtitle = "(It seems a bit frightened?)"
         },
         [51151129] = {
-          Content = "是说百年春角落那间仓库吗？那里不是早就租给天岚先生做供货仓库了吗？为何现在过来提起？",
+          ContentTC = "是說百年春角落那間倉庫嗎？那裡不是早就租給天嵐先生做供貨倉庫了嗎？為何現在過來提起？",
           DialogueId = 51151129,
           GUID = "800D2D49",
-          SpeakNpcId = 700370
+          SpeakNpcId = 700370,
+          Subtitle = "You mean that warehouse over in the corner of EverSpring? Mr Tianlan rented it as a storehouse some time ago. Why bring it up now?"
         },
         [51151201] = {
           Camera = "368.707031,55.0,181.27832,0.0001,-12.598782,-171.164566,25.0,100000.0,false,DoNotOverride,2.8",
@@ -179014,12 +179001,12 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Subtitle = "The inner workings are... involved. I doubt you care for the finer points. Suffice it to say: Master Gongshang refined it for years, until it could move like a real Bi'an."
         },
         [51154012] = {
-          ContentTC = "雖說沒有狴犴的威力，但這點小瑕疵也造就了它獨特的美感。",
+          ContentTC = "只可惜，公尚師傅一開始造的那幾隻擬真狴犴，引來了懸衡派一群無聊的老頑固，念叨著什麼「瀆神」、「不敬」之類的，給他沒收了，無趣。",
           DialogueId = 51154012,
           GUID = "800F06EF",
           NextDialogue = 51154024,
           SpeakNpcId = 701096,
-          Subtitle = "It doesn't have a true Bi'an's power, of course. Yet that very limitation gives it a charm of its own."
+          Subtitle = "Pity. The first few Mecha-Bi'an crafted by Master Gongshang attracted a gaggle of tedious old sticks from Xuanheng Sect. They droned on about \"blasphemy\" and \"disrespect\" before confiscating the lot. How dreary."
         },
         [51154013] = {
           ContentTC = "要不要騎上它試上一試？華胥幅員遼闊，小友全憑一雙腳又能走到何處。就算日後去了其他地方，它也能充當你上天入地、縱情奔走的不錯助力。",
@@ -179063,7 +179050,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "800F07EA",
           NextDialogue = 51154018,
           SpeakNpcId = 701096,
-          Subtitle = "Naturally not. Nothing comes without a price. If I simply gave it to you, you would distrust it. And you'd be right to."
+          Subtitle = "Heh, nothing comes without a price. If I simply gave it to you, you would distrust it. And you'd be right to."
         },
         [51154018] = {
           ContentTC = "誒誒？原來本魔王大人送出去的東西這麼珍貴嗎！",
@@ -179118,7 +179105,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "800F0718",
           NextDialogue = 51154013,
           SpeakNpcId = 701096,
-          Subtitle = "It doesn't have a true Bi'an's power, of course. Yet that very limitation gives it a charm of its own."
+          Subtitle = "Not that it stopped him, of course. Gongshang doted on his Mecha-Bi'an far too much to quit. So he simply made every new one look like a Sable Bi'an after that — left those incense wardens with nothing to gripe about."
         },
         [51155001] = {
           ContentTC = "小僕從小僕從，你剛剛聽到沒有！",
@@ -181268,39 +181255,51 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           VoiceName = "sfx/boss/Tuosi/vo_$Locale$_Skill08"
         },
         [60180001] = {
-          Content = "近吾者，必罹天劫！",
+          ContentTC = "近吾者，必罹天劫！",
           DialogueId = 60180001,
           Duration = 3,
+          GUID = "9834E965",
+          Subtitle = "Draw nigh, and be smitten by divine ire!",
           VoiceName = "sfx/boss/Heilong/vo_$Locale$_BattleStart"
         },
         [60180002] = {
-          Content = "吼————",
+          ContentTC = "吼————",
           DialogueId = 60180002,
           Duration = 3,
+          GUID = "9834E966",
+          Subtitle = "GRRRAAAUGH!",
           VoiceName = "sfx/boss/Heilong/vo_$Locale$_Condemn"
         },
         [60180003] = {
-          Content = "俱往矣……",
+          ContentTC = "俱往矣……",
           DialogueId = 60180003,
           Duration = 3,
+          GUID = "9834E967",
+          Subtitle = "All... is naught.",
           VoiceName = "sfx/boss/Heilong/vo_$Locale$_BattleEnd"
         },
         [60180004] = {
-          Content = "晦暝临世。",
+          ContentTC = "晦暝臨世。",
           DialogueId = 60180004,
           Duration = 4,
+          GUID = "9834E968",
+          Subtitle = "Behold... the world's eve falleth.",
           VoiceName = "sfx/boss/Heilong/vo_$Locale$_Skill05"
         },
         [60180005] = {
-          Content = "吼————",
+          ContentTC = "曀曀其陰，虺虺其雷——",
           DialogueId = 60180005,
           Duration = 5,
+          GUID = "9834E969",
+          Subtitle = "Heavens doth blacken, thunder rolls damnation!",
           VoiceName = "sfx/boss/Heilong/vo_$Locale$_Skill06"
         },
         [60180006] = {
-          Content = "曀曀其阴，虺虺其雷——",
+          ContentTC = "吼————",
           DialogueId = 60180006,
           Duration = 3,
+          GUID = "9834E970",
+          Subtitle = "ROOOAAAR—!",
           VoiceName = "sfx/boss/Heilong/vo_$Locale$_Skill07"
         },
         [60200101] = {
@@ -181830,7 +181829,7 @@ Although I wish to remain here, the island is barren, so I don't think I can sta
         },
         [70011001] = {
           Camera = "-1014.009033,-38.646729,437.392578,0.000006,-1.999756,-2.801728,20.0,100000.0,false,Manual,2.8",
-          ContentTC = "一張拍攝於十幾年的照片，相框玻璃有著清晰的摩挲痕跡。照片中的卡戎少女恬淡地微笑著，任由微風拂過她的發尾。\n 照片背後用鋼筆寫著一行字：「我的女兒——海莉，攝於紅溪城」。雖然樣貌並不十分相像，但少女澄澈無瑕的笑臉讓你莫名想起了賽琪。",
+          ContentTC = "一張拍攝於十幾年的照片，相框玻璃有著清晰的摩挲痕跡。照片中的卡戎少女恬淡地微笑著，任由微風拂過她的發尾。\n 照片背後用鋼筆寫著一行字：「我的女兒——海莉，攝於丹流城」。雖然樣貌並不十分相像，但少女澄澈無瑕的笑臉讓你莫名想起了賽琪。",
           DialogueId = 70011001,
           Duration = 5,
           GUID = "AF43E3DA",
@@ -182348,7 +182347,7 @@ Popcorn
         },
         [70015501] = {
           Camera = "382.455078,-10.461182,127.896484,0.000083,-5.801112,-108.595062,30.0,96.67099,false,Manual,4.0",
-          ContentTC = "一張拍攝於十幾年的照片，相框玻璃有著清晰的摩挲痕跡。照片中的卡戎少女恬淡地微笑著，任由微風拂過她的發尾。\n 照片背後用鋼筆寫著一行字：「我的女兒——海莉，攝於紅溪城」。雖然樣貌並不十分相像，但少女澄澈無瑕的笑臉讓你莫名想起了賽琪。",
+          ContentTC = "一張拍攝於十幾年的照片，相框玻璃有著清晰的摩挲痕跡。照片中的卡戎少女恬淡地微笑著，任由微風拂過她的發尾。\n 照片背後用鋼筆寫著一行字：「我的女兒——海莉，攝於丹流城」。雖然樣貌並不十分相像，但少女澄澈無瑕的笑臉讓你莫名想起了賽琪。",
           DialogueId = 70015501,
           Duration = 5,
           GUID = "AF46C622",
@@ -182429,16 +182428,16 @@ A thick attendance log that meticulously records every staff member's daily sche
 It's hard to tell whether the director is ruthlessly "imprisoning" everyone in the theatre or simply keeping a vigilant watch to protect her performers.]]
         },
         [70016003] = {
-          ContentTC = "一枚完全由純金打造的勳章，從旁白嘉獎信上的內容來看，這種勳章隻會頒發給為帝國做出卓越貢獻的軍人。",
+          ContentTC = "一枚完全由純金打造的勳章，從旁白嘉獎信上的內容來看，這種勳章面會頒發給為帝國做出卓越貢獻的軍人。",
           DialogueId = 70016003,
           GUID = "AF47187E",
           Subtitle = "A medal forged entirely of pure gold. According to the accompanying commendation letter, this honour is reserved for soldiers whose contributions to the Empire are deemed exceptional beyond measure."
         },
         [70016004] = {
-          ContentTC = "壓在一堆雜物下的老舊報紙，記錄著很久以前的悲慘事故。\n\n<H>穢蝕者異常兇險，不要被表象欺騙！</>\n9月24日，本市發生一起極為惡劣的「穢蝕」事件，經第六軍團衛戍部隊調查後，得出以下結論：\n冰湖城市民費西爾夫婦於9月13日在淚湖畔公路邊上偶遇一名叫做羅比·布朗的青年。因其身受重傷，費西爾夫婦將其帶回家中照料。\n然而，羅比·布朗是一名穢蝕者，他躲過了帝國對潛在穢蝕者的例行盤查並潛逃至城外，且在接受費西爾夫婦幫助時，刻意掩蓋了自己的穢蝕痕跡。十日後，悲劇發生：布朗蛻變成為穢獸，殺死了包括費西爾夫婦在內數十名居住在冰湖城南區的市民。第六軍團下屬冰湖城衛戍部隊緊急出動才平息此次騷亂。\n騷亂共造成18人死亡，其中包含3名索拉之民；另有34人受傷。在此提醒各位市民謹記，不要輕易收留身份不明的卡戎之民，一旦發現穢蝕者，立即上報治安署。它們永遠只是人類的敵人，無一例外。如有刻意包庇穢蝕者、隱瞞不報者，一律依照《海伯利亞刑事法典》第54條規定，處以死刑。",
+          ContentTC = "壓在一堆雜物下的老舊報紙，記錄著很久以前的悲慘事故。",
           DialogueId = 70016004,
           GUID = "AF4718A8",
-          Subtitle = "Buried beneath a pile of old clutter, this yellowed newspaper recounts a tragic incident from years ago.\n\nFilthoids Are Exceptionally Dangerous — Do Not Be Fooled by Their Appearances!\nOn September 24th, an egregious Filthoid incident occurred in Icelake. Following an extensive investigation conducted by the 6th Legion's Escort Unit, the details of the tragedy have been confirmed:\nOn September 13th, local residents Mr and Mrs Fischer encountered a gravely injured young man named Robie Brown along the roadside at Lamenting Lake. Out of compassion, the Fischers took him into their home and cared for him.\nHowever, Robie Brown was a Deteriorator who had evaded the Empire's routine screenings and fled to the outskirts of the city. While receiving aid from the Fischers, he deliberately concealed his condition. Ten days later, Brown succumbed to his transformation, becoming a Filthoid and massacring dozens of citizens in Icelake's southern district, including Mr and Mrs Fischer. The 6th Legion's Escort intervened swiftly to suppress the chaos, but the damage was already done.\nThe incident left 18 dead (including 3 Solarians) and 34 others injured. Citizens are hereby reminded: Do not provide shelter to unidentified Charon individuals under any circumstances. If you suspect someone is a Deteriorator, report them to the Security Bureau immediately. They are and will always remain humanity's enemies. No exceptions. Be advised that harbouring Deteriorators or concealing their presence is a capital offence punishable by death under Article 54 of the Hyperborean Criminal Code."
+          Subtitle = "Buried beneath a pile of old clutter, this yellowed newspaper recounts a tragic incident from years ago."
         },
         [70016005] = {
           ContentTC = "繫著歪扭蝴蝶結的樸素禮盒，禮盒邊是一瓶帝國最頂尖的止痛劑，和一封不知是什麼原因沒被塞入禮盒的紙條，上面寫著「希望你能早日康復」。",
@@ -182451,7 +182450,7 @@ It's hard to tell whether the director is ruthlessly "imprisoning" everyone in t
           ContentTC = "（內城城牆下姐弟的合照，照片的右上角寫著「黎瑟·費西爾」與「布魯斯·費西爾」兩個名字，還有慶祝弟弟布魯斯通過第六軍團考核的祝語。）",
           DialogueId = 70016006,
           GUID = "AF4718FC",
-          Subtitle = "(A photo of a brother and sister standing under the inner city wall. Scribbled in the top-right corner are the names \"Rhythm Fischer\" and \"Blues Fischer,\" along with a congratulatory note celebrating Blues passing the 6th Legion's entrance tests.)"
+          Subtitle = "(A photo of a brother and sister standing under the inner city wall. Scribbled in the top-right corner are the names \"Rhythm Fischer\" and \"Blues Fischer,\" along with a congratulatory note celebrating Blues' passing the 6th Legion's entrance tests.)"
         },
         [70016007] = {
           Camera = "36.316406,112.411133,226.279297,0.00002,-31.198172,-98.592926,35.0,100000.0,false,Manual,22.0",
@@ -182467,7 +182466,7 @@ It's hard to tell whether the director is ruthlessly "imprisoning" everyone in t
           Subtitle = "One corner of the limewashed wall is covered in countless etched words. Some are crooked and childlike, while others are firm and deliberate, clearly written by an adult hand. All of them repeat the same sentence: \"I'll never let anyone die to Filthoids again.\""
         },
         [70016009] = {
-          ContentTC = "蓋雷亞劇院道具清單\n\n多位幕後人員記錄的道具籌備單，詳細記錄著蓋雷亞劇院近半個月所有道具的出入情況。\n\n10月08日，服裝、睡袋籌備完成，確認人：蒙德里（批註：食物儲備不足，<H>為了接下來為期一個月的集中排練，得託人再送一批進來</>）\n…………\n11月12日，新麥克風3只替換完成，確認人：格林德（批註：有一隻麥克風聲音巨響，普奇劇團長說這樣就好，不做更換。）\n11月14日，紅色幕布替換完成，金色幕布已收回倉庫。確認人：貝爾\n…………\n11月24日，遺失的5頂假髮回收完成，確認人：貝爾（批註：更衣室的角落容易藏東西，我今天去把那清空一下。）\n11月25日，花冠15頂籌備完成，馬靴9雙籌備完成，確認人：蒙德里",
+          ContentTC = "蓋雷亞劇院道具清單\n\n多位幕後人員記錄的道具籌備單，詳細記錄著蓋雷亞劇院近半個月所有道具的出入情況。\n\n10月08日，服裝、睡袋籌備完成，確認人：蒙德里（批註：食物儲備不足，<H>為了接下來為期一個月的集中排練，得託人再送一批進來</>）\n…………\n11月12日，新麥克風3隻替換完成，確認人：格林德（批註：有一隻麥克風聲音巨響，普奇劇團長說這樣就好，不做更換。）\n11月14日，紅色幕布替換完成，金色幕布已收回倉庫。確認人：貝爾\n…………\n11月24日，遺失的5頂假髮回收完成，確認人：貝爾（批註：更衣室的角落容易藏東西，我今天去把那清空一下。）\n11月25日，花冠15頂籌備完成，馬靴9雙籌備完成，確認人：蒙德里",
           DialogueId = 70016009,
           GUID = "AF47197A",
           Subtitle = [[
@@ -182505,16 +182504,16 @@ A piece of fabric resembling theatre curtain material. Though old and worn, it i
 Upon closer inspection, it matches the fabric found at the crime scene.]]
         },
         [70016011] = {
-          ContentTC = "假人模型雖然很舊，但造型和姿勢明顯經過了精心設計，看起來端莊而優雅。",
+          ContentTC = "假人模型雖然很舊，但造型和姿勢明顯經過了精心設計，看起來端莊而優雅，如同在舞台上縱情表演的演員。",
           DialogueId = 70016011,
           GUID = "AF4719CE",
-          Subtitle = "The mannequin, though worn with age, is posed and styled with care, exuding a graceful elegance."
+          Subtitle = "Though worn with age, the mannequin has clearly been posed and styled with care, exuding a graceful elegance, — like a performer lost in the moment on stage."
         },
         [70016012] = {
-          ContentTC = "四周遍佈著巨大而凌亂的爪痕，就算這裡不是怪物的藏身處，也一定是怪物經常活動的地方。想必這就是十三軍團將此處列為封鎖區域的原因之一。",
+          ContentTC = "四周遍布著巨大的爪痕，密集而淩亂，似是在極度的痛苦和瘋狂中留下的。",
           DialogueId = 70016012,
           GUID = "AF4719F8",
-          Subtitle = "The walls are covered in massive, chaotic claw marks. Even if this isn't the monster's lair, it's certainly a place it frequents. This might explain why the 13th Legion sealed off the area."
+          Subtitle = "Huge claw marks slash across the walls — dense, erratic, as if left in a frenzy of agony and madness."
         },
         [70016013] = {
           ContentTC = "冰湖城下水道的部分布局圖，錯綜複雜的管道連接著各個區域，圖上大量區域還標注著「未經衛戍部隊許可禁止進入」的標語。",
@@ -182524,7 +182523,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]]
         },
         [70016101] = {
           Camera = "-15.959961,1605.265137,1322.948242,0.000059,-29.399687,-89.596825,20.875948,100000.0,false,Manual,22.0",
-          ContentTC = "（恢複炮台運輸裝置的供能，需要連通四根纜線。）",
+          ContentTC = "（恢復炮台運輸裝置的供能，需要連通四根纜線。）",
           DialogueId = 70016101,
           GUID = "AF472892",
           NextDialogue = 70016102,
@@ -187643,43 +187642,50 @@ Upon closer inspection, it matches the fabric found at the crime scene.]]
           Content = "（附近生长着不少山瑚，若是有空，不妨收集一些吧。）",
           DialogueId = 71008201,
           GUID = "B1C2F6FA",
-          SpeakNpcId = 800006
+          SpeakNpcId = 800006,
+          Subtitle = "(Plenty of Coralstones grows nearby. You might gather some if you have a moment.)"
         },
         [71008202] = {
           Content = "（收集山瑚的响动将周围的敌人吸引了过来，击退它们吧。）",
           DialogueId = 71008202,
           GUID = "B1C2F724",
-          SpeakNpcId = 800006
+          SpeakNpcId = 800006,
+          Subtitle = "(The commotion from gathering the Coralstone has drawn nearby enemies. Drive them off.)"
         },
         [71008203] = {
           Content = "（虽然出现了一点小意外，但最后总算是顺利收集完了附近的所有山瑚。）",
           DialogueId = 71008203,
           GUID = "B1C2F74E",
-          SpeakNpcId = 800006
+          SpeakNpcId = 800006,
+          Subtitle = "(Though a minor mishap occurred, you've managed to collect all the nearby Coralstones in the end.)"
         },
         [71008204] = {
           Content = "（成功收集完了附近的所有山瑚，是时候离开了。）",
           DialogueId = 71008204,
           GUID = "B1C2F778",
-          SpeakNpcId = 800006
+          SpeakNpcId = 800006,
+          Subtitle = "(You've successfully gathered all the nearby Coralstones. Time to move on.)"
         },
         [71008301] = {
           Content = "（坍塌的碎石挡住了前路，将它们清理掉吧。）",
           DialogueId = 71008301,
           GUID = "B1C30762",
-          SpeakNpcId = 800006
+          SpeakNpcId = 800006,
+          Subtitle = "(Collapsed rubble blocks the path ahead. Clear it away.)"
         },
         [71008302] = {
           Content = "（清理碎石的响动将周围的敌人吸引了过来，击退它们吧。）",
           DialogueId = 71008302,
           GUID = "B1C3078C",
-          SpeakNpcId = 800006
+          SpeakNpcId = 800006,
+          Subtitle = "(The noise from clearing the rubble has attracted nearby enemies. Drive them off.)"
         },
         [71008303] = {
           Content = "（一番战斗后，你在周围找到了些能用的物资，将它们收好吧。）",
           DialogueId = 71008303,
           GUID = "B1C307B6",
-          SpeakNpcId = 800006
+          SpeakNpcId = 800006,
+          Subtitle = "(After the skirmish, you've found some usable supplies in the area. Take them with you.)"
         },
         [72000000] = {
           ContentTC = "喵……",
@@ -189932,7 +189938,7 @@ Untouched by worldly dust, its original clarity remains.]]
           GUID = "B47EEC34",
           NextDialogue = 72100403,
           SpeakNpcId = 830001,
-          Subtitle = "What's that scent drifting on the air? Sky Lily? Or perhaps Vernal Prime?"
+          Subtitle = "What's that scent drifting on the air? Skylily? Or perhaps Vernal Prime?"
         },
         [72100403] = {
           ContentTC = "不如我自製的香方，可惜，我再也做不出了。",
@@ -241832,7 +241838,7 @@ How have you been lately?
           },
           NextDialogue = 90230302,
           SpeakNpcId = 84102,
-          Subtitle = "I am often entangled in the minutiae of business, rarely afforded the luxury of leisure.",
+          Subtitle = "I am often entangled in the minutiae of business and rarely afforded the luxury of leisure.",
           VoiceName = "voice/$Locale$/char/Zhiliu/vo_topic_03_1"
         },
         [90230302] = {
@@ -241893,7 +241899,7 @@ How have you been lately?
           GUID = "E1E1E154",
           NextDialogue = 90230403,
           SpeakNpcId = 84102,
-          Subtitle = "When I was little, an accident left me stranded in a pitch-black ravine for three days and nights. It was then that this... tendency took root.",
+          Subtitle = "When I was little, an accident left me stranded in a pitch-black ravine for three days and nights. It was then this... tendency took root.",
           VoiceName = "voice/$Locale$/char/Zhiliu/vo_topic_04_2"
         },
         [90230403] = {
@@ -241919,7 +241925,7 @@ How have you been lately?
           GUID = "E1E1E1D2",
           NextDialogue = 90230406,
           SpeakNpcId = 84102,
-          Subtitle = "Heh... You're right. Weakness can be a merchant's undoing.",
+          Subtitle = "Heh... Correct. Weakness can be a merchant's undoing.",
           VoiceName = "voice/$Locale$/char/Zhiliu/vo_topic_04_4"
         },
         [90230406] = {
@@ -241931,7 +241937,7 @@ How have you been lately?
             [2] = 90230003
           },
           SpeakNpcId = 84102,
-          Subtitle = "I underwent rigorous training to suppress this fear. At the negotiating table, I can cast it aside with ease. But in your presence, there is no need for such pretences.",
+          Subtitle = "I underwent rigorous trainings to suppress this fear. At the negotiating table, I can cast it aside with ease. But in your presence, there's no need for such pretences.",
           VoiceName = "voice/$Locale$/char/Zhiliu/vo_topic_04_5",
           bForbidSkipOptions = true
         },

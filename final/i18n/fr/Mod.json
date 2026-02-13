@@ -1292,43 +1292,43 @@
     "icon": "FeatheredSnake01",
     "名称": "Vrille",
     "版本": "1.0",
-    "系列": "de Quetzalcoatl{空格}",
+    "系列": "de Quetzalcoatl",
     "品质": "蓝",
     "极性": "A",
     "耐受": 7,
     "类型": "Personnages",
-    "效果": "Lors d’un Bond Cyclonique, inflige 256.0% de Dégâts Anémo basés sur l’ATQ aux ennemis proches. Augmente la Tolérance max du personnage d’une valeur égale à 2,5 × la Tolérance requise par ce Sceau démoniaque."
+    "效果": "Lors d’un Bond Cyclonique, inflige 256.0% de Dégâts Anémo basés sur l’ATQ aux ennemis proches."
   },
   {
     "id": 31512,
     "icon": "FeatheredSnake01",
     "名称": "Essor",
     "版本": "1.0",
-    "系列": "de Quetzalcoatl{空格}",
+    "系列": "de Quetzalcoatl",
     "品质": "蓝",
     "极性": "V",
     "耐受": 7,
     "类型": "Personnages",
-    "效果": "Après avoir vaincu un ennemi en plein vol, réinitialise le nombre de sauts aériens (jusqu’à 6.0 fois). Augmente la Tolérance max du personnage d’une valeur égale à 2,5 × la Tolérance requise par ce Sceau démoniaque."
+    "效果": "Après avoir vaincu un ennemi en plein vol, réinitialise le nombre de sauts aériens (jusqu’à 6.0 fois)."
   },
   {
     "id": 31513,
     "icon": "FeatheredSnake01",
     "名称": "Tumulte",
     "版本": "1.0",
-    "系列": "de Quetzalcoatl{空格}",
+    "系列": "de Quetzalcoatl",
     "品质": "蓝",
     "极性": "A",
     "耐受": 7,
     "类型": "Personnages",
-    "效果": "À l’atterrissage après une chute, inflige 128.0% de Dégâts contondants basés sur l’ATQ aux ennemis proches. Augmente la Tolérance max du personnage d’une valeur égale à 2,5 × la Tolérance requise par ce Sceau démoniaque."
+    "效果": "À l’atterrissage après une chute, inflige 128.0% de Dégâts contondants basés sur l’ATQ aux ennemis proches."
   },
   {
     "id": 31521,
     "icon": "FeatheredSnake01",
     "名称": "Guérison",
     "版本": "1.0",
-    "系列": "de Quetzalcoatl{空格}",
+    "系列": "de Quetzalcoatl",
     "品质": "蓝",
     "极性": "O",
     "耐受": 7,
@@ -1340,67 +1340,67 @@
     "icon": "FeatheredSnake01",
     "名称": "Rupture",
     "版本": "1.0",
-    "系列": "de Quetzalcoatl{空格}",
+    "系列": "de Quetzalcoatl",
     "品质": "蓝",
     "极性": "D",
     "耐受": 7,
     "类型": "Personnages",
-    "效果": "En plein vol, réduit les dégâts subis de 10.0%. Augmente la Tolérance max du personnage d’une valeur égale à 2,5 × la Tolérance requise par ce Sceau démoniaque."
+    "效果": "En plein vol, réduit les dégâts subis de 10.0%."
   },
   {
     "id": 31523,
     "icon": "FeatheredSnake01",
     "名称": "Inflexible",
     "版本": "1.0",
-    "系列": "de Quetzalcoatl{空格}",
+    "系列": "de Quetzalcoatl",
     "品质": "蓝",
     "极性": "D",
     "耐受": 7,
     "类型": "Personnages",
-    "效果": "En cas de dégâts fatals, le personnage survit et reste à 1 PV. Cet effet peut se déclencher au maximum une fois toutes les 300.0 s. Augmente la Tolérance max du personnage d’une valeur égale à 2,5 × la Tolérance requise par ce Sceau démoniaque."
+    "效果": "En cas de dégâts fatals, le personnage survit et reste à 1 PV. Cet effet peut se déclencher au maximum une fois toutes les 300.0 s."
   },
   {
     "id": 31524,
     "icon": "FeatheredSnake01",
     "名称": "Vigilance",
     "版本": "1.0",
-    "系列": "de Quetzalcoatl{空格}",
+    "系列": "de Quetzalcoatl",
     "品质": "蓝",
     "极性": "D",
     "耐受": 7,
     "类型": "Personnages",
-    "效果": "Lorsqu’il subit des dégâts, a -50.0% de chance de réduire ces dégâts de 20.0%. Augmente la Tolérance max du personnage d’une valeur égale à 2,5 × la Tolérance requise par ce Sceau démoniaque."
+    "效果": "Lorsqu’il subit des dégâts, a -50.0% de chance de réduire ces dégâts de 20.0%."
   },
   {
     "id": 31525,
     "icon": "FeatheredSnake01",
     "名称": "Soutien",
     "版本": "1.0",
-    "系列": "de Quetzalcoatl{空格}",
+    "系列": "de Quetzalcoatl",
     "品质": "蓝",
     "极性": "D",
     "耐受": 7,
     "类型": "Personnages",
-    "效果": "Lors de l’utilisation d’une compétence ultime, soigne le personnage et les coéquipiers dans un rayon de 10 m à hauteur de 3.0% des PV max de la cible. Cet effet peut se déclencher au maximum une fois toutes les 5.0 s. Augmente la Tolérance max du personnage d’une valeur égale à 2,5 × la Tolérance requise par ce Sceau démoniaque."
+    "效果": "Lors de l’utilisation d’une compétence ultime, soigne le personnage et les coéquipiers dans un rayon de 10 m à hauteur de 3.0% des PV max de la cible. Cet effet peut se déclencher au maximum une fois toutes les 5.0 s."
   },
   {
     "id": 31526,
     "icon": "FeatheredSnake01",
     "名称": "Roc",
     "版本": "1.0",
-    "系列": "de Quetzalcoatl{空格}",
+    "系列": "de Quetzalcoatl",
     "品质": "蓝",
     "极性": "A",
     "耐受": 7,
     "类型": "Personnages",
-    "效果": "Confère l’immunité aux interruptions, mais réduit les dégâts infligés de 15.0% (indépendamment des autres modificateurs). Augmente la Tolérance max du personnage d’une valeur égale à 2,5 × la Tolérance requise par ce Sceau démoniaque."
+    "效果": "Confère l’immunité aux interruptions, mais réduit les dégâts infligés de 15.0% (indépendamment des autres modificateurs)."
   },
   {
     "id": 31531,
     "icon": "FeatheredSnake01",
     "名称": "Esquive",
     "版本": "1.0",
-    "系列": "de Quetzalcoatl{空格}",
+    "系列": "de Quetzalcoatl",
     "品质": "蓝",
     "极性": "O",
     "耐受": 7,
@@ -1412,12 +1412,12 @@
     "icon": "FeatheredSnake01",
     "名称": "Ignition",
     "版本": "1.0",
-    "系列": "de Quetzalcoatl{空格}",
+    "系列": "de Quetzalcoatl",
     "品质": "蓝",
     "极性": "A",
     "耐受": 7,
     "类型": "Personnages",
-    "效果": "Lors d’une esquive, inflige 256.0% de Dégâts Pyro basés sur l’ATQ aux ennemis proches du point de départ. Augmente la Tolérance max du personnage d’une valeur égale à 2,5 × la Tolérance requise par ce Sceau démoniaque."
+    "效果": "Lors d’une esquive, inflige 256.0% de Dégâts Pyro basés sur l’ATQ aux ennemis proches du point de départ."
   },
   {
     "id": 32004,
@@ -2784,28 +2784,28 @@
     "icon": "FeatheredSnake01_Black",
     "名称": "Éternité",
     "版本": "99.9",
-    "系列": "de Quetzalcoatl{空格}",
+    "系列": "de Quetzalcoatl",
     "品质": "紫",
     "极性": "D",
     "属性": "Umbro",
     "耐受": 15,
     "类型": "Personnages",
     "技能耐久": 1.0,
-    "效果": "S’active uniquement lorsqu’au moins 4 Sceaux démoniaques d’affinité D sont équipés."
+    "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité D sont équipés."
   },
   {
     "id": 41716,
     "icon": "FeatheredSnake01_Black",
     "名称": "Vigueur",
     "版本": "99.9",
-    "系列": "de Quetzalcoatl{空格}",
+    "系列": "de Quetzalcoatl",
     "品质": "紫",
     "极性": "V",
     "属性": "Umbro",
     "耐受": 15,
     "类型": "Personnages",
     "昂扬": 1.0,
-    "效果": "S’active uniquement lorsqu’au moins 4 Sceaux démoniaques d’affinité V sont équipés."
+    "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité V sont équipés."
   },
   {
     "id": 41721,
@@ -2872,28 +2872,28 @@
     "icon": "FeatheredSnake01_Blue",
     "名称": "Vigueur",
     "版本": "99.9",
-    "系列": "de Quetzalcoatl{空格}",
+    "系列": "de Quetzalcoatl",
     "品质": "紫",
     "极性": "A",
     "属性": "Hydro",
     "耐受": 15,
     "类型": "Personnages",
     "昂扬": 1.0,
-    "效果": "S’active uniquement lorsqu’au moins 4 Sceaux démoniaques d’affinité A sont équipés."
+    "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité A sont équipés."
   },
   {
     "id": 41726,
     "icon": "FeatheredSnake01_Blue",
     "名称": "Décision",
     "版本": "99.9",
-    "系列": "de Quetzalcoatl{空格}",
+    "系列": "de Quetzalcoatl",
     "品质": "紫",
     "极性": "V",
     "属性": "Hydro",
     "耐受": 15,
     "类型": "Personnages",
     "技能威力": 1.0,
-    "效果": "S’active uniquement lorsqu’au moins 4 Sceaux démoniaques d’affinité V sont équipés."
+    "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité V sont équipés."
   },
   {
     "id": 41731,
@@ -2960,28 +2960,28 @@
     "icon": "FeatheredSnake01_Red",
     "名称": "Décision",
     "版本": "99.9",
-    "系列": "de Quetzalcoatl{空格}",
+    "系列": "de Quetzalcoatl",
     "品质": "紫",
     "极性": "D",
     "属性": "Pyro",
     "耐受": 15,
     "类型": "Personnages",
     "技能威力": 1.0,
-    "效果": "S’active uniquement lorsqu’au moins 4 Sceaux démoniaques d’affinité D sont équipés."
+    "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité D sont équipés."
   },
   {
     "id": 41736,
     "icon": "FeatheredSnake01_Red",
     "名称": "Pouvoir",
     "版本": "99.9",
-    "系列": "de Quetzalcoatl{空格}",
+    "系列": "de Quetzalcoatl",
     "品质": "紫",
     "极性": "O",
     "属性": "Pyro",
     "耐受": 15,
     "类型": "Personnages",
     "技能范围": 1.0,
-    "效果": "S’active uniquement lorsqu’au moins 4 Sceaux démoniaques d’affinité O sont équipés."
+    "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité O sont équipés."
   },
   {
     "id": 41741,
@@ -3048,28 +3048,28 @@
     "icon": "FeatheredSnake01_Purple",
     "名称": "Pouvoir",
     "版本": "1.2",
-    "系列": "de Quetzalcoatl{空格}",
+    "系列": "de Quetzalcoatl",
     "品质": "紫",
     "极性": "A",
     "属性": "Électro",
     "耐受": 15,
     "类型": "Personnages",
     "技能范围": 0.72,
-    "效果": "S’active uniquement lorsqu’au moins 4 Sceaux démoniaques d’affinité A sont équipés."
+    "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité A sont équipés."
   },
   {
     "id": 41746,
     "icon": "FeatheredSnake01_Purple",
     "名称": "Décision",
     "版本": "1.2",
-    "系列": "de Quetzalcoatl{空格}",
+    "系列": "de Quetzalcoatl",
     "品质": "紫",
     "极性": "D",
     "属性": "Électro",
     "耐受": 15,
     "类型": "Personnages",
     "技能威力": 0.48,
-    "效果": "S’active uniquement lorsqu’au moins 4 Sceaux démoniaques d’affinité D sont équipés."
+    "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité D sont équipés."
   },
   {
     "id": 41751,
@@ -3136,28 +3136,28 @@
     "icon": "FeatheredSnake01_Green",
     "名称": "Ténacité",
     "版本": "1.1",
-    "系列": "de Quetzalcoatl{空格}",
+    "系列": "de Quetzalcoatl",
     "品质": "紫",
     "极性": "V",
     "属性": "Anémo",
     "耐受": 12,
     "类型": "Personnages",
     "背水": 0.12,
-    "效果": "S’active uniquement lorsqu’au moins 4 Sceaux démoniaques d’affinité V sont équipés."
+    "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité V sont équipés."
   },
   {
     "id": 41756,
     "icon": "FeatheredSnake01_Green",
     "名称": "Éternité",
     "版本": "1.1",
-    "系列": "de Quetzalcoatl{空格}",
+    "系列": "de Quetzalcoatl",
     "品质": "紫",
     "极性": "O",
     "属性": "Anémo",
     "耐受": 12,
     "类型": "Personnages",
     "技能耐久": 0.36,
-    "效果": "S’active uniquement lorsqu’au moins 4 Sceaux démoniaques d’affinité O sont équipés."
+    "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité O sont équipés."
   },
   {
     "id": 41761,
@@ -3223,21 +3223,21 @@
     "icon": "FeatheredSnake01",
     "名称": "Vigueur",
     "版本": "1.3",
-    "系列": "de Quetzalcoatl{空格}",
+    "系列": "de Quetzalcoatl",
     "品质": "紫",
     "极性": "A",
     "属性": "Lumino",
     "耐受": 15,
     "类型": "Personnages",
     "昂扬": 1.0,
-    "效果": "S’active uniquement lorsqu’au moins 4 Sceaux démoniaques d’affinité A sont équipés."
+    "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité A sont équipés."
   },
   {
     "id": 41766,
     "icon": "FeatheredSnake01",
-    "名称": "Éternité",
+    "名称": "Poursuite",
     "版本": "1.3",
-    "系列": "de Quetzalcoatl{空格}",
+    "系列": "de Quetzalcoatl",
     "品质": "紫",
     "极性": "V",
     "属性": "Lumino",
@@ -3870,7 +3870,7 @@
     "极性": "V",
     "耐受": 15,
     "类型": "Armes à distance",
-    "效果": "Après avoir vaincu un ennemi, augmente la Vitesse de déplacement de 48.0%, la Vitesse de glissade de 48.0% et la Vitesse de Bond Cyclonique de 48.0% pendant 15.0 s."
+    "效果": "Après avoir vaincu un ennemi, augmente la Vitesse de déplacement de 48.0%, la Vitesse de glissade de 48.0% et la Vitesse de bond cyclonique de 48.0% pendant 15.0 s."
   },
   {
     "id": 43341,
@@ -3887,7 +3887,7 @@
   {
     "id": 43342,
     "icon": "Fafnir01",
-    "名称": "反转",
+    "名称": "Renversement",
     "版本": "1.2",
     "系列": "de Fáfnir",
     "品质": "紫",
@@ -3899,14 +3899,14 @@
   {
     "id": 43343,
     "icon": "Fafnir01",
-    "名称": "衰朽",
+    "名称": "Déchéance",
     "版本": "1.2",
     "系列": "de Fáfnir",
     "品质": "紫",
     "极性": "V",
     "耐受": 15,
     "类型": "Armes à distance",
-    "效果": "Infliger des DGT d’arme à distance avec n’importe quelle arme lorsque les PV sont à 35 % ou plus fait perdre 10 % de PV. Effet limité à une fois toutes les 1.0 s."
+    "效果": "Infliger des DGT d’arme à distance avec n’importe quelle arme fait perdre 10 % de PV lorsque les PV sont à 35 % ou plus. Effet limité à une fois toutes les 1.0 s."
   },
   {
     "id": 43401,
@@ -4101,38 +4101,38 @@
   {
     "id": 43701,
     "icon": "Fafnir01",
-    "名称": "摄魂",
+    "名称": "Siphon d’âme",
     "版本": "1.2",
     "系列": "de Fáfnir",
     "品质": "紫",
     "极性": "V",
     "耐受": 15,
     "类型": "Armes à distance",
-    "效果": "Vaincre un ennemi d’un niveau inférieur ou égal au sien restaure 6.0 de Lucidité."
+    "效果": "Vaincre un ennemi d’un niveau inférieur ou égal au vôtre restaure 6.0 de Lucidité."
   },
   {
     "id": 43702,
     "icon": "Fafnir01",
-    "名称": "变幻",
+    "名称": "Mutation",
     "版本": "1.2",
     "系列": "de Fáfnir",
     "品质": "紫",
     "极性": "V",
     "耐受": 15,
     "类型": "Armes à distance",
-    "效果": "Infliger des dégâts à un ennemi d’un niveau inférieur ou égal au sien fait fluctuer les dégâts finaux de 1 % à 1200.0% de leur valeur initiale."
+    "效果": "Infliger des dégâts à un ennemi d’un niveau inférieur ou égal au vôtre fait fluctuer les dégâts finaux entre 1 % et 1200.0% de leur valeur initiale."
   },
   {
     "id": 43703,
     "icon": "Fafnir01",
-    "名称": "诅咒",
+    "名称": "Malédiction",
     "版本": "1.2",
     "系列": "de Fáfnir",
     "品质": "紫",
     "极性": "V",
     "耐受": 15,
     "类型": "Armes à distance",
-    "效果": "Infliger des dégâts à un ennemi d’un niveau inférieur ou égal au sien a 50.0% de chances de le transformer en baril de pétrole immobile. Lorsqu’il subit à nouveau des dégâts, il est immédiatement vaincu et inflige des Dégâts contondants équivalents à 720.0% de l’ATQ du personnage aux ennemis dans un rayon de 10 m."
+    "效果": "Infliger des dégâts à un ennemi d’un niveau inférieur ou égal au vôtre a 50.0% de chances de le transformer en baril inerte. Lorsqu’il subit à nouveau des dégâts, il est immédiatement vaincu et inflige des Dégâts contondants équivalents à 720.0% de l’ATQ du personnage aux ennemis dans un rayon de 10 m."
   },
   {
     "id": 44001,
@@ -5377,28 +5377,28 @@
     "icon": "FeatheredSnake01_Black",
     "名称": "Éternité",
     "版本": "99.9",
-    "系列": "de Quetzalcoatl{空格}",
+    "系列": "de Quetzalcoatl",
     "品质": "金",
     "极性": "D",
     "属性": "Umbro",
     "耐受": 15,
     "类型": "Personnages",
     "技能耐久": 1.0,
-    "效果": "S’active uniquement lorsqu’au moins 4 Sceaux démoniaques d’affinité D sont équipés."
+    "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité D sont équipés."
   },
   {
     "id": 51716,
     "icon": "FeatheredSnake01_Black",
     "名称": "Vigueur",
     "版本": "99.9",
-    "系列": "de Quetzalcoatl{空格}",
+    "系列": "de Quetzalcoatl",
     "品质": "金",
     "极性": "V",
     "属性": "Umbro",
     "耐受": 15,
     "类型": "Personnages",
     "昂扬": 1.0,
-    "效果": "S’active uniquement lorsqu’au moins 4 Sceaux démoniaques d’affinité V sont équipés."
+    "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité V sont équipés."
   },
   {
     "id": 51721,
@@ -5477,28 +5477,28 @@
     "icon": "FeatheredSnake01_Blue",
     "名称": "Vigueur",
     "版本": "99.9",
-    "系列": "de Quetzalcoatl{空格}",
+    "系列": "de Quetzalcoatl",
     "品质": "金",
     "极性": "A",
     "属性": "Hydro",
     "耐受": 15,
     "类型": "Personnages",
     "昂扬": 1.0,
-    "效果": "S’active uniquement lorsqu’au moins 4 Sceaux démoniaques d’affinité A sont équipés."
+    "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité A sont équipés."
   },
   {
     "id": 51726,
     "icon": "FeatheredSnake01_Blue",
     "名称": "Décision",
     "版本": "99.9",
-    "系列": "de Quetzalcoatl{空格}",
+    "系列": "de Quetzalcoatl",
     "品质": "金",
     "极性": "V",
     "属性": "Hydro",
     "耐受": 15,
     "类型": "Personnages",
     "技能威力": 1.0,
-    "效果": "S’active uniquement lorsqu’au moins 4 Sceaux démoniaques d’affinité V sont équipés."
+    "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité V sont équipés."
   },
   {
     "id": 51731,
@@ -5577,28 +5577,28 @@
     "icon": "FeatheredSnake01_Red",
     "名称": "Décision",
     "版本": "99.9",
-    "系列": "de Quetzalcoatl{空格}",
+    "系列": "de Quetzalcoatl",
     "品质": "金",
     "极性": "D",
     "属性": "Pyro",
     "耐受": 15,
     "类型": "Personnages",
     "技能威力": 1.0,
-    "效果": "S’active uniquement lorsqu’au moins 4 Sceaux démoniaques d’affinité D sont équipés."
+    "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité D sont équipés."
   },
   {
     "id": 51736,
     "icon": "FeatheredSnake01_Red",
     "名称": "Pouvoir",
     "版本": "99.9",
-    "系列": "de Quetzalcoatl{空格}",
+    "系列": "de Quetzalcoatl",
     "品质": "金",
     "极性": "O",
     "属性": "Pyro",
     "耐受": 15,
     "类型": "Personnages",
     "技能范围": 1.0,
-    "效果": "S’active uniquement lorsqu’au moins 4 Sceaux démoniaques d’affinité O sont équipés."
+    "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité O sont équipés."
   },
   {
     "id": 51741,
@@ -5677,7 +5677,7 @@
     "icon": "FeatheredSnake01_Purple",
     "名称": "Pouvoir",
     "版本": "1.2",
-    "系列": "de Quetzalcoatl{空格}",
+    "系列": "de Quetzalcoatl",
     "品质": "金",
     "极性": "A",
     "属性": "Électro",
@@ -5687,14 +5687,14 @@
       51745
     ],
     "技能范围": 1.32,
-    "效果": "S’active uniquement lorsqu’au moins 4 Sceaux démoniaques d’affinité A sont équipés."
+    "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité A sont équipés."
   },
   {
     "id": 51746,
     "icon": "FeatheredSnake01_Purple",
     "名称": "Décision",
     "版本": "1.2",
-    "系列": "de Quetzalcoatl{空格}",
+    "系列": "de Quetzalcoatl",
     "品质": "金",
     "极性": "D",
     "属性": "Électro",
@@ -5704,7 +5704,7 @@
       51746
     ],
     "技能威力": 0.88,
-    "效果": "S’active uniquement lorsqu’au moins 4 Sceaux démoniaques d’affinité D sont équipés."
+    "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité D sont équipés."
   },
   {
     "id": 51751,
@@ -5783,7 +5783,7 @@
     "icon": "FeatheredSnake01_Green",
     "名称": "Ténacité",
     "版本": "1.1",
-    "系列": "de Quetzalcoatl{空格}",
+    "系列": "de Quetzalcoatl",
     "品质": "金",
     "极性": "V",
     "属性": "Anémo",
@@ -5793,14 +5793,14 @@
       51755
     ],
     "背水": 0.22,
-    "效果": "S’active uniquement lorsqu’au moins 4 Sceaux démoniaques d’affinité V sont équipés."
+    "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité V sont équipés."
   },
   {
     "id": 51756,
     "icon": "FeatheredSnake01_Green",
     "名称": "Éternité",
     "版本": "1.1",
-    "系列": "de Quetzalcoatl{空格}",
+    "系列": "de Quetzalcoatl",
     "品质": "金",
     "极性": "O",
     "属性": "Anémo",
@@ -5810,7 +5810,7 @@
       51756
     ],
     "技能耐久": 0.66,
-    "效果": "S’active uniquement lorsqu’au moins 4 Sceaux démoniaques d’affinité O sont équipés."
+    "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité O sont équipés."
   },
   {
     "id": 51761,
@@ -5888,21 +5888,21 @@
     "icon": "FeatheredSnake01",
     "名称": "Vigueur",
     "版本": "1.3",
-    "系列": "de Quetzalcoatl{空格}",
+    "系列": "de Quetzalcoatl",
     "品质": "金",
     "极性": "A",
     "属性": "Lumino",
     "耐受": 15,
     "类型": "Personnages",
     "昂扬": 1.0,
-    "效果": "S’active uniquement lorsqu’au moins 4 Sceaux démoniaques d’affinité A sont équipés."
+    "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité A sont équipés."
   },
   {
     "id": 51766,
     "icon": "FeatheredSnake01",
-    "名称": "Éternité",
+    "名称": "Poursuite",
     "版本": "1.3",
-    "系列": "de Quetzalcoatl{空格}",
+    "系列": "de Quetzalcoatl",
     "品质": "金",
     "极性": "V",
     "属性": "Lumino",
@@ -6675,7 +6675,7 @@
     "耐受": 38,
     "类型": "Arme de Consonance de mêlée",
     "消耗": [
-      54001
+      54009
     ],
     "攻击": 1.2,
     "触发": 0.8
@@ -6731,7 +6731,7 @@
   {
     "id": 54201,
     "icon": "Cerberus02",
-    "名称": "强击·领界",
+    "名称": "Frappe brutale · Limite",
     "版本": "1.2",
     "系列": "du Cerbère occulte",
     "品质": "金",
@@ -6747,7 +6747,7 @@
   {
     "id": 54202,
     "icon": "Cerberus02",
-    "名称": "Éclair · Frappe-lumière",
+    "名称": "Impact · Impact rapide",
     "版本": "1.2",
     "系列": "du Cerbère occulte",
     "品质": "金",
@@ -6763,7 +6763,7 @@
   {
     "id": 54203,
     "icon": "Cerberus02",
-    "名称": "Impact · Impact rapide",
+    "名称": "Éclair · Frappe-lumière",
     "版本": "1.2",
     "系列": "du Cerbère occulte",
     "品质": "金",
@@ -6779,7 +6779,7 @@
   {
     "id": 54204,
     "icon": "Cerberus02",
-    "名称": "喘息",
+    "名称": "Répit",
     "版本": "1.2",
     "系列": "du Cerbère occulte",
     "品质": "金",
@@ -6794,7 +6794,7 @@
   {
     "id": 54205,
     "icon": "Cerberus02",
-    "名称": "狂热",
+    "名称": "Ferveur",
     "版本": "1.2",
     "系列": "du Cerbère occulte",
     "品质": "金",
@@ -7199,7 +7199,7 @@
   {
     "id": 56143,
     "icon": "Changeling01_Purple",
-    "名称": "Ténacité",
+    "名称": "Vigueur",
     "版本": "1.2",
     "系列": "du Métamorphe",
     "品质": "金",
@@ -7216,7 +7216,7 @@
   {
     "id": 56144,
     "icon": "Siren01_Purple",
-    "名称": "Ailes · Inspiration · Ténacité",
+    "名称": "Ailes · Inspiration · Vigueur",
     "版本": "1.2",
     "系列": "de la Sirène",
     "品质": "金",
@@ -7307,7 +7307,7 @@
   {
     "id": 56161,
     "icon": "Changeling01",
-    "名称": "Poursuite",
+    "名称": "Vigueur",
     "版本": "1.3",
     "系列": "du Métamorphe",
     "品质": "金",
@@ -7324,7 +7324,7 @@
   {
     "id": 56162,
     "icon": "Siren01",
-    "名称": "Ailes · Inspiration · Poursuite",
+    "名称": "Ailes · Inspiration · Vigueur",
     "版本": "1.3",
     "系列": "de la Sirène",
     "品质": "金",
@@ -7561,7 +7561,7 @@
     "耐受": 25,
     "类型": "Armes de mêlée",
     "攻击范围": 0.8,
-    "效果": "Modifie l’Attaque normale de l’Arme d’hast : invoque des lances spectrales qui frappent la cible. Inflige 100 % de dégâts supplémentaires par rapport à l’attaque de base.",
+    "效果": "Modifie l’Attaque normale de l’Arme d’hast : invoque des lances spectrales pour attaquer. Inflige 100 % de dégâts supplémentaires par rapport à l’attaque de base.",
     "技能替换": {
       "1020101": {
         "id": 1020201,
@@ -7648,7 +7648,7 @@
     "耐受": 25,
     "类型": "Armes de mêlée",
     "攻速": 0.2,
-    "效果": "Modifie l’Attaque normale de l’Espadon : la dernière frappe libère trois lames d’énergie, tranchant les ennemis sur votre trajectoire. Les dégâts sont augmentés de 100 % par rapport à l’attaque de base.",
+    "效果": "Modifie l’Attaque normale de l’Espadon : la dernière frappe libère trois lames d’énergie qui frappent les ennemis sur leur trajectoire. Les dégâts sont augmentés de 100 % par rapport à l’attaque de base.",
     "技能替换": {
       "1030101": {
         "id": 1030201,
@@ -7924,7 +7924,7 @@
   {
     "id": 202003,
     "icon": "Fenrir01",
-    "名称": "统御穿刺",
+    "名称": "Percée dominante",
     "版本": "1.2",
     "系列": "de Fenrir",
     "品质": "金",
@@ -7935,8 +7935,8 @@
       52004,
       52005
     ],
-    "攻击范围": 1.2,
-    "效果": "改变长柄的普通攻击招式和威力。召唤枪影攻击。对比默认招式，综合威力提高200.0%。",
+    "攻击范围": 0.8,
+    "效果": "Modifie l’Attaque normale de l’Arme d’hast : invoque des lances spectrales pour attaquer. Inflige 200.0% de dégâts supplémentaires par rapport à l’attaque de base.",
     "技能替换": {
       "1020101": {
         "id": 1020201,
@@ -7987,7 +7987,7 @@
   {
     "id": 203001,
     "icon": "Fenrir01",
-    "名称": "无锋剑意",
+    "名称": "Âme tranchante",
     "版本": "1.2",
     "系列": "de Fenrir",
     "品质": "金",
@@ -7998,8 +7998,8 @@
       52004,
       52005
     ],
-    "攻速": 0.3,
-    "效果": "改变重剑的普通攻击招式和威力，普通攻击的最后一击可创造3道剑气，攻击沿途的敌人。对比默认招式，综合威力提高200.0%。",
+    "攻速": 0.2,
+    "效果": "Modifie l’Attaque normale de l’Espadon : la dernière frappe libère trois ondes tranchantes qui frappent les ennemis sur leur trajectoire. Les dégâts sont augmentés de 200.0% par rapport à l’attaque de base.",
     "技能替换": {
       "1030101": {
         "id": 1030201,
@@ -8044,7 +8044,7 @@
   {
     "id": 204001,
     "icon": "Fenrir01",
-    "名称": "穿花刺骨",
+    "名称": "Floraison incisive",
     "版本": "1.2",
     "系列": "de Fenrir",
     "品质": "金",
@@ -8055,8 +8055,8 @@
       52004,
       52005
     ],
-    "攻速": 0.3,
-    "效果": "改变双刀的滑铲攻击招式和威力，向前冲刺并对沿途的所有敌人造成伤害。对比默认招式，综合威力提高200.0%。",
+    "攻速": 0.2,
+    "效果": "Modifie l’Attaque de glissade des Doubles lames : vous foncez en avant, infligeant des dégâts à tous les ennemis sur votre trajectoire. Les dégâts sont augmentés de 200.0% par rapport à l’attaque de base.",
     "技能替换": {
       "1040104": {
         "id": 1040204,

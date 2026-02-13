@@ -181,7 +181,7 @@
   },
   {
     "id": 219,
-    "name": "齿轮",
+    "name": "齒輪",
     "icon": "T_Activity_Autochess_Coin01",
     "rarity": 5
   },
@@ -2221,43 +2221,43 @@
   },
   {
     "id": 30113,
-    "name": "中级染剂·棕色-浅【待包装】",
+    "name": "中級染劑·楓糖",
     "icon": "T_Dye_15",
     "rarity": 5
   },
   {
     "id": 30114,
-    "name": "中级染剂·棕色-深【待包装】",
+    "name": "中級染劑·可可",
     "icon": "T_Dye_15",
     "rarity": 5
   },
   {
     "id": 30115,
-    "name": "中级染剂·绿色-浅【待包装】",
+    "name": "中級染劑·碧波",
     "icon": "T_Dye_14",
     "rarity": 5
   },
   {
     "id": 30116,
-    "name": "中级染剂·绿色-深【待包装】",
+    "name": "中級染劑·蒼松",
     "icon": "T_Dye_15",
     "rarity": 5
   },
   {
     "id": 30117,
-    "name": "高级染剂·粉色【待包装】",
+    "name": "高級染劑·桃華",
     "icon": "T_Dye_13",
     "rarity": 5
   },
   {
     "id": 30118,
-    "name": "发型染剂·基础【待包装】",
+    "name": "基礎發色染劑",
     "icon": "T_Dye_12",
     "rarity": 4
   },
   {
     "id": 30119,
-    "name": "发型染剂·黑白棕粉绿【待包装】",
+    "name": "高級發色染劑",
     "icon": "T_Dye_12",
     "rarity": 5
   },
@@ -2593,7 +2593,7 @@
   },
   {
     "id": 49996,
-    "name": "榛子沖沖沖",
+    "name": "榛子衝衝衝",
     "icon": "T_Mounts_Gesture_0401",
     "rarity": 4
   },
@@ -4765,133 +4765,133 @@
   },
   {
     "id": 6100101,
-    "name": "疾冲秽兽机傀I",
+    "name": "疾衝穢獸機傀I",
     "icon": "T_Head_Gr_Jichong",
     "rarity": 1
   },
   {
     "id": 6100102,
-    "name": "游击秽兽机傀I",
+    "name": "遊擊穢獸機傀I",
     "icon": "T_Head_Gr_Youji",
     "rarity": 1
   },
   {
     "id": 6100103,
-    "name": "漂浮秽兽机傀I",
+    "name": "漂浮穢獸機傀I",
     "icon": "T_Head_Gr_Piaofu",
     "rarity": 1
   },
   {
     "id": 6100104,
-    "name": "暴徒秽兽机傀I",
+    "name": "暴徒穢獸機傀I",
     "icon": "T_Head_Gr_Baotu",
     "rarity": 1
   },
   {
     "id": 6100105,
-    "name": "笼草秽兽机傀I",
+    "name": "籠草穢獸機傀I",
     "icon": "T_Head_GR_Longcao",
     "rarity": 1
   },
   {
     "id": 6100106,
-    "name": "疾冲秽兽机傀II",
+    "name": "疾衝穢獸機傀II",
     "icon": "T_Head_Gr_Jichong_C01",
     "rarity": 1
   },
   {
     "id": 6100107,
-    "name": "游击秽兽机傀II",
+    "name": "遊擊穢獸機傀II",
     "icon": "T_Head_Gr_Youji_C01",
     "rarity": 1
   },
   {
     "id": 6100108,
-    "name": "狙击列兵机傀I",
+    "name": "狙擊列兵機傀I",
     "icon": "T_Head_Jt_Juji",
     "rarity": 1
   },
   {
     "id": 6100109,
-    "name": "劈斩列兵机傀I",
+    "name": "劈斬列兵機傀I",
     "icon": "T_Head_Jt_Pizhuo",
     "rarity": 1
   },
   {
     "id": 6100110,
-    "name": "远征列兵机傀I",
+    "name": "遠征列兵機傀I",
     "icon": "T_Head_Jt_Ranger",
     "rarity": 1
   },
   {
     "id": 6100111,
-    "name": "精锐士官机傀I",
+    "name": "精銳士官機傀I",
     "icon": "T_Head_Jt_Zhihui",
     "rarity": 1
   },
   {
     "id": 6100112,
-    "name": "帝皇之仁机傀I",
+    "name": "帝皇之仁機傀I",
     "icon": "T_Head_Jt_Zhiren",
     "rarity": 1
   },
   {
     "id": 6100113,
-    "name": "远征列兵机傀II",
+    "name": "遠征列兵機傀II",
     "icon": "T_Head_Jt_Ranger_C01",
     "rarity": 1
   },
   {
     "id": 6100114,
-    "name": "突击列兵机傀II",
+    "name": "突擊列兵機傀II",
     "icon": "T_Head_Jt_Tuji_C01",
     "rarity": 1
   },
   {
     "id": 6100115,
-    "name": "警戒机机傀I",
+    "name": "警戒機機傀I",
     "icon": "T_Jingjie",
     "rarity": 1
   },
   {
     "id": 6100116,
-    "name": "蒙恩的执事机傀I",
+    "name": "蒙恩的執事機傀I",
     "icon": "T_Head_Jh_Zhishi",
     "rarity": 1
   },
   {
     "id": 6100117,
-    "name": "蒙恩的先锋机傀I",
+    "name": "蒙恩的先鋒機傀I",
     "icon": "T_Head_Jh_Xianfeng",
     "rarity": 1
   },
   {
     "id": 6100118,
-    "name": "蒙恩的神甫机傀I",
+    "name": "蒙恩的神甫機傀I",
     "icon": "T_Head_Jh_Shenfu",
     "rarity": 1
   },
   {
     "id": 6100119,
-    "name": "野蜂利刃机傀I",
+    "name": "野蜂利刃機傀I",
     "icon": "T_Head_SQ_Yinxie",
     "rarity": 1
   },
   {
     "id": 6100120,
-    "name": "野蜂暗箭机傀I",
+    "name": "野蜂暗箭機傀I",
     "icon": "T_Head_SQ_Dufeng",
     "rarity": 1
   },
   {
     "id": 6100121,
-    "name": "野蜂密探机傀I",
+    "name": "野蜂密探機傀I",
     "icon": "T_Head_SQ_Niaopao",
     "rarity": 1
   },
   {
     "id": 6100122,
-    "name": "对局积分",
+    "name": "對局積分",
     "icon": "T_Activity_Autochess_Coin02",
     "rarity": 5
   },

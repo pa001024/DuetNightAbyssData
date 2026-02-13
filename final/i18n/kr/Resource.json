@@ -181,7 +181,7 @@
   },
   {
     "id": 219,
-    "name": "齿轮",
+    "name": "톱니바퀴",
     "icon": "T_Activity_Autochess_Coin01",
     "rarity": 5
   },
@@ -193,13 +193,13 @@
   },
   {
     "id": 301,
-    "name": "명성 허가·아이스레이크 시티",
+    "name": "명성 허가·\n아이스레이크 시티",
     "icon": "T_Fame_0101",
     "rarity": 4
   },
   {
     "id": 302,
-    "name": "명성 허가·연진 나루터",
+    "name": "명성 허가·\n연진 나루터",
     "icon": "T_Fame_0201",
     "rarity": 4
   },
@@ -2221,43 +2221,43 @@
   },
   {
     "id": 30113,
-    "name": "中级染剂·棕色-浅【待包装】",
+    "name": "중급 염료·메이플 캔디",
     "icon": "T_Dye_15",
     "rarity": 5
   },
   {
     "id": 30114,
-    "name": "中级染剂·棕色-深【待包装】",
+    "name": "중급 염료·코코아",
     "icon": "T_Dye_15",
     "rarity": 5
   },
   {
     "id": 30115,
-    "name": "中级染剂·绿色-浅【待包装】",
+    "name": "중급 염료·푸른 파도",
     "icon": "T_Dye_14",
     "rarity": 5
   },
   {
     "id": 30116,
-    "name": "中级染剂·绿色-深【待包装】",
+    "name": "중급 염료·푸른 소나무",
     "icon": "T_Dye_15",
     "rarity": 5
   },
   {
     "id": 30117,
-    "name": "高级染剂·粉色【待包装】",
+    "name": "고급 염료·복사꽃",
     "icon": "T_Dye_13",
     "rarity": 5
   },
   {
     "id": 30118,
-    "name": "发型染剂·基础【待包装】",
+    "name": "기본 헤어 염료",
     "icon": "T_Dye_12",
     "rarity": 4
   },
   {
     "id": 30119,
-    "name": "发型染剂·黑白棕粉绿【待包装】",
+    "name": "고급 헤어 염료",
     "icon": "T_Dye_12",
     "rarity": 5
   },
@@ -4549,7 +4549,7 @@
   },
   {
     "id": 6100001,
-    "name": "生命符石",
+    "name": "HP 룬스톤",
     "icon": "T_Activity_Autochess_Item02",
     "rarity": 3
   },
@@ -4621,7 +4621,7 @@
   },
   {
     "id": 6100013,
-    "name": "激怒符石",
+    "name": "분노 룬스톤",
     "icon": "T_Activity_Autochess_Item03",
     "rarity": 4
   },
@@ -4765,133 +4765,133 @@
   },
   {
     "id": 6100101,
-    "name": "疾冲秽兽机傀I",
+    "name": "벨로시 필토이드 기계 꼭두각시 Ⅰ",
     "icon": "T_Head_Gr_Jichong",
     "rarity": 1
   },
   {
     "id": 6100102,
-    "name": "游击秽兽机傀I",
+    "name": "게릴라 필토이드 기계 꼭두각시 Ⅰ",
     "icon": "T_Head_Gr_Youji",
     "rarity": 1
   },
   {
     "id": 6100103,
-    "name": "漂浮秽兽机傀I",
+    "name": "플로팅 필토이드 기계 꼭두각시 Ⅰ",
     "icon": "T_Head_Gr_Piaofu",
     "rarity": 1
   },
   {
     "id": 6100104,
-    "name": "暴徒秽兽机傀I",
+    "name": "새비지 필토이드 기계 꼭두각시 Ⅰ",
     "icon": "T_Head_Gr_Baotu",
     "rarity": 1
   },
   {
     "id": 6100105,
-    "name": "笼草秽兽机傀I",
+    "name": "네펜데스 필토이드 기계 꼭두각시 Ⅰ",
     "icon": "T_Head_GR_Longcao",
     "rarity": 1
   },
   {
     "id": 6100106,
-    "name": "疾冲秽兽机傀II",
+    "name": "벨로시 필토이드 기계 꼭두각시 Ⅱ",
     "icon": "T_Head_Gr_Jichong_C01",
     "rarity": 1
   },
   {
     "id": 6100107,
-    "name": "游击秽兽机傀II",
+    "name": "게릴라 필토이드 기계 꼭두각시 Ⅱ",
     "icon": "T_Head_Gr_Youji_C01",
     "rarity": 1
   },
   {
     "id": 6100108,
-    "name": "狙击列兵机傀I",
+    "name": "저격병 기계 꼭두각시 Ⅰ",
     "icon": "T_Head_Jt_Juji",
     "rarity": 1
   },
   {
     "id": 6100109,
-    "name": "劈斩列兵机傀I",
+    "name": "검병 기계 꼭두각시 Ⅰ",
     "icon": "T_Head_Jt_Pizhuo",
     "rarity": 1
   },
   {
     "id": 6100110,
-    "name": "远征列兵机傀I",
+    "name": "원정대 병사 기계 꼭두각시 Ⅰ",
     "icon": "T_Head_Jt_Ranger",
     "rarity": 1
   },
   {
     "id": 6100111,
-    "name": "精锐士官机傀I",
+    "name": "정예 부사관 기계 꼭두각시 Ⅰ",
     "icon": "T_Head_Jt_Zhihui",
     "rarity": 1
   },
   {
     "id": 6100112,
-    "name": "帝皇之仁机傀I",
+    "name": "제황의 자비 기계 꼭두각시 Ⅰ",
     "icon": "T_Head_Jt_Zhiren",
     "rarity": 1
   },
   {
     "id": 6100113,
-    "name": "远征列兵机傀II",
+    "name": "원정대 병사 기계 꼭두각시 Ⅱ",
     "icon": "T_Head_Jt_Ranger_C01",
     "rarity": 1
   },
   {
     "id": 6100114,
-    "name": "突击列兵机傀II",
+    "name": "돌격병 기계 꼭두각시 Ⅱ",
     "icon": "T_Head_Jt_Tuji_C01",
     "rarity": 1
   },
   {
     "id": 6100115,
-    "name": "警戒机机傀I",
+    "name": "경계기 기계 꼭두각시 Ⅰ",
     "icon": "T_Jingjie",
     "rarity": 1
   },
   {
     "id": 6100116,
-    "name": "蒙恩的执事机傀I",
+    "name": "몽은의 집사 기계 꼭두각시 Ⅰ",
     "icon": "T_Head_Jh_Zhishi",
     "rarity": 1
   },
   {
     "id": 6100117,
-    "name": "蒙恩的先锋机傀I",
+    "name": "몽은의 선교사 기계 꼭두각시 Ⅰ",
     "icon": "T_Head_Jh_Xianfeng",
     "rarity": 1
   },
   {
     "id": 6100118,
-    "name": "蒙恩的神甫机傀I",
+    "name": "몽은의 신부 기계 꼭두각시 Ⅰ",
     "icon": "T_Head_Jh_Shenfu",
     "rarity": 1
   },
   {
     "id": 6100119,
-    "name": "野蜂利刃机傀I",
+    "name": "와일드비 칼날 기계 꼭두각시 Ⅰ",
     "icon": "T_Head_SQ_Yinxie",
     "rarity": 1
   },
   {
     "id": 6100120,
-    "name": "野蜂暗箭机傀I",
+    "name": "와일드비 불의의 화살 기계 꼭두각시 Ⅰ",
     "icon": "T_Head_SQ_Dufeng",
     "rarity": 1
   },
   {
     "id": 6100121,
-    "name": "野蜂密探机傀I",
+    "name": "와일드비 요원 기계 꼭두각시 Ⅰ",
     "icon": "T_Head_SQ_Niaopao",
     "rarity": 1
   },
   {
     "id": 6100122,
-    "name": "对局积分",
+    "name": "대국 포인트",
     "icon": "T_Activity_Autochess_Coin02",
     "rarity": 5
   },

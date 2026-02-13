@@ -688,7 +688,7 @@
       {
         "id": 211,
         "t": "Resource",
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 2001,
@@ -729,7 +729,7 @@
       {
         "id": 211,
         "t": "Resource",
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 2001,
@@ -779,7 +779,7 @@
         "id": 211,
         "t": "Resource",
         "c": 5,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 2009,
@@ -17081,7 +17081,7 @@
     "id": 92004,
     "child": [
       {
-        "id": 218,
+        "id": 220,
         "t": "Resource",
         "c": 30,
         "n": "Jeton de Phoxène"
@@ -17092,7 +17092,7 @@
     "id": 92005,
     "child": [
       {
-        "id": 218,
+        "id": 220,
         "t": "Resource",
         "c": 40,
         "n": "Jeton de Phoxène"
@@ -17103,7 +17103,7 @@
     "id": 92006,
     "child": [
       {
-        "id": 218,
+        "id": 220,
         "t": "Resource",
         "c": 50,
         "n": "Jeton de Phoxène"
@@ -17343,7 +17343,7 @@
       {
         "id": 110015,
         "t": "Resource",
-        "n": "流年自选形象礼箱·匆匆"
+        "n": "Coffret d’apparence (Sélection) – En fuite"
       },
       {
         "id": 208,
@@ -17366,7 +17366,7 @@
         "id": 1001501,
         "t": "Resource",
         "c": 60,
-        "n": "Fragment de pensée : Courroux"
+        "n": "Fragment de pensée : Lisbell"
       },
       {
         "id": 1002,
@@ -17382,7 +17382,7 @@
       {
         "id": 211,
         "t": "Resource",
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       }
     ]
   },
@@ -17393,31 +17393,31 @@
         "id": 211,
         "t": "Resource",
         "c": 420,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 30113,
         "t": "Resource",
         "c": 1,
-        "n": "中级染剂·棕色-浅【待包装】"
+        "n": "Teinture intermédiaire : Sirop d’érable"
       },
       {
         "id": 30114,
         "t": "Resource",
         "c": 1,
-        "n": "中级染剂·棕色-深【待包装】"
+        "n": "Teinture intermédiaire : Cacao"
       },
       {
         "id": 30115,
         "t": "Resource",
         "c": 1,
-        "n": "中级染剂·绿色-浅【待包装】"
+        "n": "Teinture intermédiaire : Vague azurée"
       },
       {
         "id": 30116,
         "t": "Resource",
         "c": 1,
-        "n": "中级染剂·绿色-深【待包装】"
+        "n": "Teinture intermédiaire : Pin ancien"
       }
     ]
   },
@@ -17807,17 +17807,17 @@
       {
         "id": 43701,
         "t": "Mod",
-        "n": "摄魂"
+        "n": "Siphon d’âme"
       },
       {
         "id": 43702,
         "t": "Mod",
-        "n": "变幻"
+        "n": "Mutation"
       },
       {
         "id": 43703,
         "t": "Mod",
-        "n": "诅咒"
+        "n": "Malédiction"
       }
     ]
   },
@@ -17832,12 +17832,12 @@
       {
         "id": 43342,
         "t": "Mod",
-        "n": "反转"
+        "n": "Renversement"
       },
       {
         "id": 43343,
         "t": "Mod",
-        "n": "衰朽"
+        "n": "Déchéance"
       }
     ]
   },
@@ -18683,7 +18683,7 @@
         "id": 56143,
         "t": "Mod",
         "d": 1,
-        "n": "Ténacité"
+        "n": "Vigueur"
       },
       {
         "id": 51002,
@@ -18741,7 +18741,7 @@
         "id": 56144,
         "t": "Mod",
         "d": 1,
-        "n": "Ailes · Inspiration · Ténacité"
+        "n": "Ailes · Inspiration · Vigueur"
       },
       {
         "id": 51002,
@@ -19472,7 +19472,7 @@
       {
         "id": 211,
         "t": "Resource",
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       }
     ]
   },
@@ -19487,7 +19487,7 @@
       {
         "id": 211,
         "t": "Resource",
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 215,
@@ -19525,7 +19525,7 @@
         "id": 211,
         "t": "Resource",
         "c": 280,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 214,
@@ -19573,7 +19573,7 @@
         "id": 211,
         "t": "Resource",
         "c": 280,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 214,
@@ -19621,7 +19621,7 @@
         "id": 211,
         "t": "Resource",
         "c": 280,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 214,
@@ -19669,7 +19669,7 @@
         "id": 211,
         "t": "Resource",
         "c": 280,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 214,
@@ -19717,7 +19717,7 @@
         "id": 211,
         "t": "Resource",
         "c": 280,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 214,
@@ -19765,7 +19765,7 @@
         "id": 211,
         "t": "Resource",
         "c": 280,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 214,
@@ -19801,7 +19801,7 @@
         "id": 211,
         "t": "Resource",
         "c": 280,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 10100,
@@ -19844,7 +19844,7 @@
         "id": 211,
         "t": "Resource",
         "c": 20,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       }
     ]
   },
@@ -19855,7 +19855,7 @@
         "id": 211,
         "t": "Resource",
         "c": 240,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 101,
@@ -19882,7 +19882,7 @@
         "id": 211,
         "t": "Resource",
         "c": 1000,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 10100,
@@ -19967,7 +19967,7 @@
         "id": 211,
         "t": "Resource",
         "c": 240,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 101,
@@ -20042,7 +20042,7 @@
         "id": 211,
         "t": "Resource",
         "c": 410,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 10100,
@@ -20071,7 +20071,7 @@
         "id": 211,
         "t": "Resource",
         "c": 245,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 101,
@@ -20107,7 +20107,7 @@
         "id": 211,
         "t": "Resource",
         "c": 260,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 101,
@@ -20144,7 +20144,7 @@
         "id": 211,
         "t": "Resource",
         "c": 40,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 101,
@@ -20179,7 +20179,7 @@
         "id": 211,
         "t": "Resource",
         "c": 60,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 101,
@@ -20214,7 +20214,7 @@
         "id": 211,
         "t": "Resource",
         "c": 100,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 101,
@@ -20448,7 +20448,7 @@
         "id": 10078,
         "t": "Title",
         "c": 1,
-        "n": "Tourmenté"
+        "n": "tourmenté"
       }
     ]
   },
@@ -20477,7 +20477,7 @@
         "id": 10079,
         "t": "Title",
         "c": 1,
-        "n": "Immaculé"
+        "n": "immaculé"
       }
     ]
   },
@@ -20546,7 +20546,7 @@
         "id": 211,
         "t": "Resource",
         "c": 200,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 10100,
@@ -20575,7 +20575,7 @@
         "id": 6100122,
         "t": "Resource",
         "c": 10,
-        "n": "对局积分"
+        "n": "Points de partie"
       }
     ]
   },
@@ -20586,7 +20586,7 @@
         "id": 6100122,
         "t": "Resource",
         "c": 15,
-        "n": "对局积分"
+        "n": "Points de partie"
       }
     ]
   },
@@ -20597,7 +20597,7 @@
         "id": 6100122,
         "t": "Resource",
         "c": 20,
-        "n": "对局积分"
+        "n": "Points de partie"
       }
     ]
   },
@@ -20608,7 +20608,7 @@
         "id": 6100122,
         "t": "Resource",
         "c": 25,
-        "n": "对局积分"
+        "n": "Points de partie"
       }
     ]
   },
@@ -20619,7 +20619,7 @@
         "id": 6100122,
         "t": "Resource",
         "c": 30,
-        "n": "对局积分"
+        "n": "Points de partie"
       }
     ]
   },
@@ -20630,19 +20630,19 @@
         "id": 10088,
         "t": "CharAccessory",
         "c": 1,
-        "n": "死鱗鱼"
+        "n": "Écaille morte"
       },
       {
         "id": 10087,
         "t": "CharAccessory",
         "c": 1,
-        "n": "银鳞鱼"
+        "n": "Écaille d’argent"
       },
       {
         "id": 211,
         "t": "Resource",
         "c": 360,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 20013,
@@ -20658,7 +20658,7 @@
         "id": 6100122,
         "t": "Resource",
         "c": 35,
-        "n": "对局积分"
+        "n": "Points de partie"
       }
     ]
   },
@@ -20669,7 +20669,7 @@
         "id": 6100122,
         "t": "Resource",
         "c": 40,
-        "n": "对局积分"
+        "n": "Points de partie"
       }
     ]
   },
@@ -20680,7 +20680,7 @@
         "id": 6100122,
         "t": "Resource",
         "c": 50,
-        "n": "对局积分"
+        "n": "Points de partie"
       }
     ]
   },
@@ -20691,7 +20691,7 @@
         "id": 12123,
         "t": "CharAccessory",
         "c": 1,
-        "n": "UI_Accessory_Name_12123"
+        "n": "Ornement du Roi Démon"
       },
       {
         "id": 10011,
@@ -20703,13 +20703,13 @@
         "id": 13012,
         "t": "CharAccessory",
         "c": 1,
-        "n": "短喵喵腰饰·铅灰"
+        "n": "Queue miaou courte – Gris plomb"
       },
       {
         "id": 211,
         "t": "Resource",
         "c": 1200,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 10100,
@@ -20725,12 +20725,37 @@
       {
         "id": 219,
         "t": "Resource",
-        "n": "齿轮"
+        "n": "Engrenage"
       },
       {
         "id": 211,
         "t": "Resource",
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
+      }
+    ]
+  },
+  {
+    "id": 1030112,
+    "child": [
+      {
+        "id": 209,
+        "t": "Resource",
+        "n": "Carnet de mission — Tome IV"
+      },
+      {
+        "id": 211,
+        "t": "Resource",
+        "n": "Indice de Mandat scellé"
+      },
+      {
+        "id": 208,
+        "t": "Resource",
+        "n": "Carnet de mission — Tome III"
+      },
+      {
+        "id": 207,
+        "t": "Resource",
+        "n": "Carnet de mission — Tome II"
       }
     ]
   },
@@ -20741,7 +20766,7 @@
         "id": 41007,
         "t": "Resource",
         "c": 1,
-        "n": "Posture : Arme de mêlée"
+        "n": "Posture tactique : Arme de mêlée"
       },
       {
         "id": 30112,
@@ -20753,7 +20778,7 @@
         "id": 211,
         "t": "Resource",
         "c": 60,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 101,
@@ -20800,13 +20825,13 @@
         "id": 30105,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "大军团长的肖像·俯瞰"
+        "n": "Portrait : Commandante de la Légion – Vue dominante"
       },
       {
         "id": 211,
         "t": "Resource",
         "c": 80,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 101,
@@ -20853,13 +20878,13 @@
         "id": 30106,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "粮秣专员的肖像·慌乱"
+        "n": "Portrait : Commissaire – Panique"
       },
       {
         "id": 211,
         "t": "Resource",
         "c": 100,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 101,
@@ -20906,13 +20931,13 @@
         "id": 30104,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "逐灯者的肖像·眺望"
+        "n": "Portrait : Chasseuse de lumière – Regard lointain"
       },
       {
         "id": 211,
         "t": "Resource",
         "c": 120,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 101,
@@ -20959,13 +20984,13 @@
         "id": 30103,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "夜莺小姐的肖像·绿荫"
+        "n": "Portrait : Mademoiselle Rossignol – Ombre feuillue"
       },
       {
         "id": 211,
         "t": "Resource",
         "c": 120,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 101,
@@ -21012,13 +21037,13 @@
         "id": 30102,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "回忆中的肖像·决意"
+        "n": "Portrait : Souvenir – Résolution"
       },
       {
         "id": 211,
         "t": "Resource",
         "c": 120,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 101,
@@ -21059,7 +21084,7 @@
         "id": 41008,
         "t": "Resource",
         "c": 1,
-        "n": "Posture : Arme à distance"
+        "n": "Posture tactique : Arme à distance"
       },
       {
         "id": 30112,
@@ -21071,7 +21096,7 @@
         "id": 211,
         "t": "Resource",
         "c": 60,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 101,
@@ -21118,13 +21143,13 @@
         "id": 30097,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "负罪者的肖像·小憩"
+        "n": "Portrait : Le coupable – Répit"
       },
       {
         "id": 211,
         "t": "Resource",
         "c": 80,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 101,
@@ -21171,13 +21196,13 @@
         "id": 30101,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "华胥药师的肖像·专注"
+        "n": "Portrait : Apothicaire de Huaxu – Concentration"
       },
       {
         "id": 211,
         "t": "Resource",
         "c": 100,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 101,
@@ -21224,13 +21249,13 @@
         "id": 30098,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "飘零剑客的肖像·雨夜"
+        "n": "Portrait : Bretteur errant – Nuit pluvieuse"
       },
       {
         "id": 211,
         "t": "Resource",
         "c": 120,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 101,
@@ -21277,13 +21302,13 @@
         "id": 30100,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "黑与白·烛阴"
+        "n": "Obscur et Argent – Zhuyin"
       },
       {
         "id": 211,
         "t": "Resource",
         "c": 120,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 101,
@@ -21330,13 +21355,13 @@
         "id": 30099,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "黑与白·太皓"
+        "n": "Obscur et Argent – Taihao"
       },
       {
         "id": 211,
         "t": "Resource",
         "c": 120,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 101,
@@ -21412,7 +21437,7 @@
         "id": 2052,
         "t": "Walnut",
         "c": 3,
-        "n": "Mandat scellé : Royaume azuré"
+        "n": "Mandat scellé : Voile nuageux"
       }
     ]
   },
@@ -21573,7 +21598,7 @@
         "id": 2053,
         "t": "Walnut",
         "c": 3,
-        "n": "Mandat scellé : Messagère de l’avenir"
+        "n": "Mandat scellé : Sentence des vents"
       }
     ]
   },
@@ -21642,7 +21667,7 @@
         "id": 2054,
         "t": "Walnut",
         "c": 3,
-        "n": "Mandat scellé : Faucheuse d’obsidienne"
+        "n": "Mandat scellé : Muse trigonale"
       }
     ]
   },
@@ -21848,9 +21873,9 @@
         "n": "Trace du crépuscule"
       },
       {
-        "id": 30095,
+        "id": 30109,
         "t": "HeadSculpture",
-        "n": "诡异的光"
+        "n": "Le Cri"
       },
       {
         "id": 41046,
@@ -21931,7 +21956,7 @@
       {
         "id": 30096,
         "t": "HeadSculpture",
-        "n": "快乐起飞"
+        "n": "Envol euphorique"
       },
       {
         "id": 41047,
@@ -21977,7 +22002,7 @@
         "id": 211,
         "t": "Resource",
         "c": 5,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 1001,
@@ -22018,7 +22043,7 @@
         "id": 211,
         "t": "Resource",
         "c": 5,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 30103,
@@ -22053,7 +22078,7 @@
         "id": 211,
         "t": "Resource",
         "c": 5,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 30104,
@@ -22088,7 +22113,7 @@
         "id": 211,
         "t": "Resource",
         "c": 6,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 30105,
@@ -22135,7 +22160,7 @@
         "id": 211,
         "t": "Resource",
         "c": 12,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 102,
@@ -22182,7 +22207,7 @@
         "id": 211,
         "t": "Resource",
         "c": 10,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 1001,
@@ -22223,7 +22248,7 @@
         "id": 211,
         "t": "Resource",
         "c": 18,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 102,
@@ -22270,7 +22295,7 @@
         "id": 211,
         "t": "Resource",
         "c": 15,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 1001,
@@ -22311,7 +22336,7 @@
         "id": 211,
         "t": "Resource",
         "c": 18,
-        "n": "Indice du Mandat scellé : Loyal"
+        "n": "Indice de Mandat scellé"
       },
       {
         "id": 1001,

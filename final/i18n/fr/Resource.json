@@ -145,7 +145,7 @@
   },
   {
     "id": 211,
-    "name": "Indice du Mandat scellé : Loyal",
+    "name": "Indice de Mandat scellé",
     "icon": "T_Icon_Random_Box_Part_01",
     "rarity": 5
   },
@@ -181,7 +181,7 @@
   },
   {
     "id": 219,
-    "name": "齿轮",
+    "name": "Engrenage",
     "icon": "T_Activity_Autochess_Coin01",
     "rarity": 5
   },
@@ -235,13 +235,13 @@
   },
   {
     "id": 1007,
-    "name": "重铸回收器I",
+    "name": "Recycleur de Reforge I",
     "icon": "T_Icon_ModRandomPurple",
     "rarity": 4
   },
   {
     "id": 1008,
-    "name": "重铸回收器II",
+    "name": "Recycleur de Reforge II",
     "icon": "T_Icon_ModRandomBlue",
     "rarity": 3
   },
@@ -421,7 +421,7 @@
   },
   {
     "id": 3015,
-    "name": "天工竿·薄荷",
+    "name": "Canne d’artifice – Menthe",
     "icon": "T_FishingRod_East02",
     "rarity": 5
   },
@@ -2221,43 +2221,43 @@
   },
   {
     "id": 30113,
-    "name": "中级染剂·棕色-浅【待包装】",
+    "name": "Teinture intermédiaire : Sirop d’érable",
     "icon": "T_Dye_15",
     "rarity": 5
   },
   {
     "id": 30114,
-    "name": "中级染剂·棕色-深【待包装】",
+    "name": "Teinture intermédiaire : Cacao",
     "icon": "T_Dye_15",
     "rarity": 5
   },
   {
     "id": 30115,
-    "name": "中级染剂·绿色-浅【待包装】",
+    "name": "Teinture intermédiaire : Vague azurée",
     "icon": "T_Dye_14",
     "rarity": 5
   },
   {
     "id": 30116,
-    "name": "中级染剂·绿色-深【待包装】",
+    "name": "Teinture intermédiaire : Pin ancien",
     "icon": "T_Dye_15",
     "rarity": 5
   },
   {
     "id": 30117,
-    "name": "高级染剂·粉色【待包装】",
+    "name": "Teinture avancée : Fleur de pêcher",
     "icon": "T_Dye_13",
     "rarity": 5
   },
   {
     "id": 30118,
-    "name": "发型染剂·基础【待包装】",
+    "name": "Teinture capillaire de base",
     "icon": "T_Dye_12",
     "rarity": 4
   },
   {
     "id": 30119,
-    "name": "发型染剂·黑白棕粉绿【待包装】",
+    "name": "Teinture capillaire avancée",
     "icon": "T_Dye_12",
     "rarity": 5
   },
@@ -2335,19 +2335,19 @@
   },
   {
     "id": 41007,
-    "name": "Posture : Arme de mêlée",
+    "name": "Posture tactique : Arme de mêlée",
     "icon": "T_Resource_Gesture_MeleeWeapon",
     "rarity": 4
   },
   {
     "id": 41008,
-    "name": "Posture : Arme à distance",
+    "name": "Posture tactique : Arme à distance",
     "icon": "T_Resource_Gesture_RangeWeapon",
     "rarity": 4
   },
   {
     "id": 41009,
-    "name": "Posture",
+    "name": "Posture tactique",
     "icon": "T_Resource_Gesture_Idle",
     "rarity": 4
   },
@@ -2653,13 +2653,13 @@
   },
   {
     "id": 110015,
-    "name": "流年自选形象礼箱·匆匆",
+    "name": "Coffret d’apparence (Sélection) – En fuite",
     "icon": "T_Pack_JKSkin",
     "rarity": 5
   },
   {
     "id": 110016,
-    "name": "流年自选形象礼箱·冬日",
+    "name": "Coffret d’apparence (Sélection) – Hivernal",
     "icon": "T_Pack_SnowmanSkin",
     "rarity": 5
   },
@@ -2677,7 +2677,7 @@
   },
   {
     "id": 1001501,
-    "name": "Fragment de pensée : Courroux",
+    "name": "Fragment de pensée : Lisbell",
     "icon": "T_CharPiece_Baonu",
     "rarity": 5
   },
@@ -4495,13 +4495,13 @@
   },
   {
     "id": 5110601,
-    "name": "天工竿·锈红",
+    "name": "Canne d’artifice – Rouille",
     "icon": "T_FishingRod_East01",
     "rarity": 5
   },
   {
     "id": 5110602,
-    "name": "天工竿·绛紫",
+    "name": "Canne d’artifice – Pourpre profond",
     "icon": "T_FishingRod_East03",
     "rarity": 5
   },
@@ -4543,895 +4543,895 @@
   },
   {
     "id": 6000003,
-    "name": "红鳞鱼",
+    "name": "Écaille rouge",
     "icon": "T_Fashion_Head41",
     "rarity": 4
   },
   {
     "id": 6100001,
-    "name": "生命符石",
+    "name": "Rune de PV",
     "icon": "T_Activity_Autochess_Item02",
     "rarity": 3
   },
   {
     "id": 6100002,
-    "name": "防御符石",
+    "name": "Rune de DÉF",
     "icon": "T_Activity_Autochess_Item02",
     "rarity": 3
   },
   {
     "id": 6100003,
-    "name": "攻击符石",
+    "name": "Rune d’ATQ",
     "icon": "T_Activity_Autochess_Item01",
     "rarity": 3
   },
   {
     "id": 6100004,
-    "name": "护盾符石",
+    "name": "Rune de Bouclier",
     "icon": "T_Activity_Autochess_Item02",
     "rarity": 3
   },
   {
     "id": 6100005,
-    "name": "生命·防御符石",
+    "name": "Rune PV·DÉF",
     "icon": "T_Activity_Autochess_Item02",
     "rarity": 3
   },
   {
     "id": 6100006,
-    "name": "攻击·防御符石",
+    "name": "Rune ATQ·DÉF",
     "icon": "T_Activity_Autochess_Item01",
     "rarity": 3
   },
   {
     "id": 6100007,
-    "name": "攻击·生命符石",
+    "name": "Rune ATQ·PV",
     "icon": "T_Activity_Autochess_Item01",
     "rarity": 3
   },
   {
     "id": 6100008,
-    "name": "护盾·生命符石",
+    "name": "Rune Bouclier·PV",
     "icon": "T_Activity_Autochess_Item02",
     "rarity": 3
   },
   {
     "id": 6100009,
-    "name": "攻击·护盾符石",
+    "name": "Rune ATQ·Bouclier",
     "icon": "T_Activity_Autochess_Item01",
     "rarity": 3
   },
   {
     "id": 6100010,
-    "name": "击溃符石",
+    "name": "Rune de rupture",
     "icon": "T_Activity_Autochess_Item03",
     "rarity": 4
   },
   {
     "id": 6100011,
-    "name": "瓦解符石",
+    "name": "Rune de désagrégation",
     "icon": "T_Activity_Autochess_Item03",
     "rarity": 4
   },
   {
     "id": 6100012,
-    "name": "淬炼符石",
+    "name": "Rune de trempe",
     "icon": "T_Activity_Autochess_Item03",
     "rarity": 4
   },
   {
     "id": 6100013,
-    "name": "激怒符石",
+    "name": "Rune d’enragement",
     "icon": "T_Activity_Autochess_Item03",
     "rarity": 4
   },
   {
     "id": 6100014,
-    "name": "疗愈符石",
+    "name": "Rune de restauration",
     "icon": "T_Activity_Autochess_Item04",
     "rarity": 4
   },
   {
     "id": 6100015,
-    "name": "鼓舞符石",
+    "name": "Rune d’inspiration",
     "icon": "T_Activity_Autochess_Item04",
     "rarity": 4
   },
   {
     "id": 6100016,
-    "name": "共鸣符石",
+    "name": "Rune de résonance",
     "icon": "T_Activity_Autochess_Item04",
     "rarity": 4
   },
   {
     "id": 6100017,
-    "name": "亢奋符石",
+    "name": "Rune de frénésie",
     "icon": "T_Activity_Autochess_Item04",
     "rarity": 4
   },
   {
     "id": 6100018,
-    "name": "怒涛符石",
+    "name": "Rune de raz-de-marée",
     "icon": "T_Activity_Autochess_Item03",
     "rarity": 4
   },
   {
     "id": 6100019,
-    "name": "仁心符石",
+    "name": "Rune de bienveillance",
     "icon": "T_Activity_Autochess_Item04",
     "rarity": 4
   },
   {
     "id": 6100020,
-    "name": "破釜符石",
+    "name": "Rune du dernier sursaut",
     "icon": "T_Activity_Autochess_Item03",
     "rarity": 4
   },
   {
     "id": 6100021,
-    "name": "底力符石",
+    "name": "Rune de ténacité",
     "icon": "T_Activity_Autochess_Item04",
     "rarity": 4
   },
   {
     "id": 6100022,
-    "name": "穿透符石",
+    "name": "Rune de perforation",
     "icon": "T_Activity_Autochess_Item03",
     "rarity": 4
   },
   {
     "id": 6100023,
-    "name": "致命符石",
+    "name": "Rune fatale",
     "icon": "T_Activity_Autochess_Item03",
     "rarity": 4
   },
   {
     "id": 6100024,
-    "name": "凛霜符石",
+    "name": "Rune de morsure de givre",
     "icon": "T_Activity_Autochess_Item06",
     "rarity": 5
   },
   {
     "id": 6100025,
-    "name": "爆破符石",
+    "name": "Rune de déflagration",
     "icon": "T_Activity_Autochess_Item05",
     "rarity": 5
   },
   {
     "id": 6100026,
-    "name": "侵蚀符石",
+    "name": "Rune de corrosion",
     "icon": "T_Activity_Autochess_Item06",
     "rarity": 5
   },
   {
     "id": 6100027,
-    "name": "霹雳符石",
+    "name": "Rune d’éclair foudroyant",
     "icon": "T_Activity_Autochess_Item05",
     "rarity": 5
   },
   {
     "id": 6100028,
-    "name": "猩红符石",
+    "name": "Rune de pourriture cramoisie",
     "icon": "T_Activity_Autochess_Item05",
     "rarity": 5
   },
   {
     "id": 6100029,
-    "name": "枯萎符石",
+    "name": "Rune de flétrissure",
     "icon": "T_Activity_Autochess_Item05",
     "rarity": 5
   },
   {
     "id": 6100030,
-    "name": "守护符石",
+    "name": "Rune de gardien",
     "icon": "T_Activity_Autochess_Item06",
     "rarity": 5
   },
   {
     "id": 6100031,
-    "name": "复仇符石",
+    "name": "Rune de représailles",
     "icon": "T_Activity_Autochess_Item06",
     "rarity": 5
   },
   {
     "id": 6100032,
-    "name": "霜狱符石",
+    "name": "Rune de geôle de givre",
     "icon": "T_Activity_Autochess_Item06",
     "rarity": 5
   },
   {
     "id": 6100033,
-    "name": "残火符石",
+    "name": "Rune de feu résiduel",
     "icon": "T_Activity_Autochess_Item05",
     "rarity": 5
   },
   {
     "id": 6100034,
-    "name": "舍身符石",
+    "name": "Rune de sacrifice",
     "icon": "T_Activity_Autochess_Item05",
     "rarity": 5
   },
   {
     "id": 6100035,
-    "name": "转雷符石",
+    "name": "Rune de tempête électrique",
     "icon": "T_Activity_Autochess_Item05",
     "rarity": 5
   },
   {
     "id": 6100036,
-    "name": "浴血符石",
+    "name": "Rune de bain de sang",
     "icon": "T_Activity_Autochess_Item05",
     "rarity": 5
   },
   {
     "id": 6100101,
-    "name": "疾冲秽兽机傀I",
+    "name": "Méchapoupée Souillé fulgurant I",
     "icon": "T_Head_Gr_Jichong",
     "rarity": 1
   },
   {
     "id": 6100102,
-    "name": "游击秽兽机傀I",
+    "name": "Méchapoupée Souillé errant I",
     "icon": "T_Head_Gr_Youji",
     "rarity": 1
   },
   {
     "id": 6100103,
-    "name": "漂浮秽兽机傀I",
+    "name": "Méchapoupée Souillé flottant I",
     "icon": "T_Head_Gr_Piaofu",
     "rarity": 1
   },
   {
     "id": 6100104,
-    "name": "暴徒秽兽机傀I",
+    "name": "Méchapoupée Souillé déchaîné I",
     "icon": "T_Head_Gr_Baotu",
     "rarity": 1
   },
   {
     "id": 6100105,
-    "name": "笼草秽兽机傀I",
+    "name": "Méchapoupée Souillé Népenthé I",
     "icon": "T_Head_GR_Longcao",
     "rarity": 1
   },
   {
     "id": 6100106,
-    "name": "疾冲秽兽机傀II",
+    "name": "Méchapoupée Souillé fulgurant II",
     "icon": "T_Head_Gr_Jichong_C01",
     "rarity": 1
   },
   {
     "id": 6100107,
-    "name": "游击秽兽机傀II",
+    "name": "Méchapoupée Souillé errant II",
     "icon": "T_Head_Gr_Youji_C01",
     "rarity": 1
   },
   {
     "id": 6100108,
-    "name": "狙击列兵机傀I",
+    "name": "Méchapoupée Soldat sniper I",
     "icon": "T_Head_Jt_Juji",
     "rarity": 1
   },
   {
     "id": 6100109,
-    "name": "劈斩列兵机傀I",
+    "name": "Méchapoupée Soldat brise-lames I",
     "icon": "T_Head_Jt_Pizhuo",
     "rarity": 1
   },
   {
     "id": 6100110,
-    "name": "远征列兵机傀I",
+    "name": "Méchapoupée Soldat expéditionnaire I",
     "icon": "T_Head_Jt_Ranger",
     "rarity": 1
   },
   {
     "id": 6100111,
-    "name": "精锐士官机傀I",
+    "name": "Méchapoupée Sergent d’élite I",
     "icon": "T_Head_Jt_Zhihui",
     "rarity": 1
   },
   {
     "id": 6100112,
-    "name": "帝皇之仁机傀I",
+    "name": "Méchapoupée Tyran miséricordieux I",
     "icon": "T_Head_Jt_Zhiren",
     "rarity": 1
   },
   {
     "id": 6100113,
-    "name": "远征列兵机傀II",
+    "name": "Méchapoupée Soldat expéditionnaire II",
     "icon": "T_Head_Jt_Ranger_C01",
     "rarity": 1
   },
   {
     "id": 6100114,
-    "name": "突击列兵机傀II",
+    "name": "Méchapoupée Soldat d’assaut II",
     "icon": "T_Head_Jt_Tuji_C01",
     "rarity": 1
   },
   {
     "id": 6100115,
-    "name": "警戒机机傀I",
+    "name": "Méchapoupée Drone de patrouille I",
     "icon": "T_Jingjie",
     "rarity": 1
   },
   {
     "id": 6100116,
-    "name": "蒙恩的执事机傀I",
+    "name": "Méchapoupée Diacre béni I",
     "icon": "T_Head_Jh_Zhishi",
     "rarity": 1
   },
   {
     "id": 6100117,
-    "name": "蒙恩的先锋机傀I",
+    "name": "Méchapoupée Sentinelle bénie I",
     "icon": "T_Head_Jh_Xianfeng",
     "rarity": 1
   },
   {
     "id": 6100118,
-    "name": "蒙恩的神甫机傀I",
+    "name": "Méchapoupée Prêtre béni I",
     "icon": "T_Head_Jh_Shenfu",
     "rarity": 1
   },
   {
     "id": 6100119,
-    "name": "野蜂利刃机傀I",
+    "name": "Méchapoupée Lame de l’Essaim I",
     "icon": "T_Head_SQ_Yinxie",
     "rarity": 1
   },
   {
     "id": 6100120,
-    "name": "野蜂暗箭机傀I",
+    "name": "Méchapoupée Flèche de l’Essaim I",
     "icon": "T_Head_SQ_Dufeng",
     "rarity": 1
   },
   {
     "id": 6100121,
-    "name": "野蜂密探机傀I",
+    "name": "Méchapoupée Espion de l’Essaim I",
     "icon": "T_Head_SQ_Niaopao",
     "rarity": 1
   },
   {
     "id": 6100122,
-    "name": "对局积分",
+    "name": "Points de partie",
     "icon": "T_Activity_Autochess_Coin02",
     "rarity": 5
   },
   {
     "id": 31001001,
-    "name": "Duet Night Abyss Main Theme — Thème principal",
+    "name": "Thème principal",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31001002,
-    "name": "Across the Sandrealm — Toi qui traversas le Royaume des Sables",
+    "name": "Toi qui traversas le Royaume des Sables",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31001003,
-    "name": "Tranquility of My Yesterdays — Tranquillité d’hier",
+    "name": "Tranquillité d’hier",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31001004,
-    "name": "The Deserted Village — Village abandonné",
+    "name": "Village abandonné",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31001005,
-    "name": "Morning Mist — Brume matinale",
+    "name": "Brume matinale",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31001006,
-    "name": "A Long Farewell — Un long adieu",
+    "name": "Un long adieu",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31002001,
-    "name": "The Fategazer — Sous l’œil du Destin",
+    "name": "Sous l’œil du Destin",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31002002,
-    "name": "Our Sacred Destiny I — Notre destin sacré I",
+    "name": "Notre destin sacré I",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31002003,
-    "name": "Our Sacred Destiny II — Notre destin sacré II",
+    "name": "Notre destin sacré II",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31003001,
-    "name": "At Stake — Au bord du gouffre",
+    "name": "Au bord du gouffre",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31003002,
-    "name": "The Wrong Way — Le mauvais chemin",
+    "name": "Le mauvais chemin",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31003003,
-    "name": "Fight, or Die I — Combattre ou périr I",
+    "name": "Combattre ou périr I",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31003004,
-    "name": "Fight, or Die II — Combattre ou périr II",
+    "name": "Combattre ou périr II",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31004001,
-    "name": "The Closed Door — La porte fermée",
+    "name": "La porte fermée",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31004002,
-    "name": "The Iron Cage — La cage de fer",
+    "name": "La cage de fer",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31004003,
-    "name": "Lullaby for a Voyager — Berceuse pour le voyageur",
+    "name": "Berceuse pour le voyageur",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31004004,
-    "name": "Bad Jokes — Mauvaises blagues",
+    "name": "Mauvaises blagues",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31004005,
-    "name": "Joys of Life — Les jours d’insouciance",
+    "name": "Les jours d’insouciance",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31004006,
-    "name": "The Asphodel — Les Asphodèles",
+    "name": "Les Asphodèles",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31004007,
-    "name": "Hypnos' House — Maison d’Hypnos",
+    "name": "Maison d’Hypnos",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31004008,
-    "name": "My Sweet Little Home — Doux foyer",
+    "name": "Doux foyer",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31005001,
-    "name": "Glevum Pit — Fosse de Glevum",
+    "name": "Fosse de Glevum",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31005002,
-    "name": "Over the Frozen Land — Par-delà les terres gelées",
+    "name": "Par-delà les terres gelées",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31005003,
-    "name": "Snowstorm — Tempête de neige",
+    "name": "Tempête de neige",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31005004,
-    "name": "The Crystal Devourer — Le Cristallophage",
+    "name": "Le Cristallophage",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31005005,
-    "name": "The Lurkers — Les Rôdeurs",
+    "name": "Les Rôdeurs",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31005006,
-    "name": "Under Arbitrary Authority — Sous le joug des puissants",
+    "name": "Sous le joug des puissants",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31005007,
-    "name": "The Awful Truth — La terrible vérité",
+    "name": "La terrible vérité",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31005008,
-    "name": "Avian Spirit Trials I — Épreuves de l’Oiseau onirique I",
+    "name": "Épreuves de l’Oiseau onirique I",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31005009,
-    "name": "Avian Spirit Trials II — Épreuves de l’Oiseau onirique II",
+    "name": "Épreuves de l’Oiseau onirique II",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31005010,
-    "name": "《莉莉蔻的歌谣·黑铁摇篮》",
+    "name": "Chants de Lirico – Le berceau de fer noir",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31006001,
-    "name": "First Met With Psyche — Première rencontre avec Psyche",
+    "name": "Première rencontre avec Psyche",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31006002,
-    "name": "Psyche: Daydream in a Chrysalis — Psyche : Rêve éphémère en chrysalide",
+    "name": "Psyche : Rêve éphémère en chrysalide",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31006003,
-    "name": "Florescence Unmet — Floraison inachevée",
+    "name": "Floraison inachevée",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31006004,
-    "name": "Memories that We Take — Les souvenirs que nous emportons",
+    "name": "Les souvenirs que nous emportons",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31006005,
-    "name": "Destined End — Fin prédestinée",
+    "name": "Fin prédestinée",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31006006,
-    "name": "Footsteps of Her Lifetime — Les traces de sa vie",
+    "name": "Les traces de sa vie",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31006007,
-    "name": "For What Dream Does Chrysalis Weave — Pour quel rêve se tisse la chrysalide ?",
+    "name": "Pour quel rêve se tisse la chrysalide ?",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31006008,
-    "name": "On What Breeze Do Wings Rise — Sous quel vent naissent les ailes ?",
+    "name": "Sous quel vent naissent les ailes ?",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31006009,
-    "name": "Cause I Was Born Here — Parce que je suis d’ici",
+    "name": "Parce que je suis d’ici",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31006010,
-    "name": "Amaranth — Amarante",
+    "name": "Amarante",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31007001,
-    "name": "Before the War — Avant la guerre",
+    "name": "Avant la guerre",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31007002,
-    "name": "Emergency Action — Intervention d’urgence",
+    "name": "Intervention d’urgence",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31007003,
-    "name": "A Vibrant Heart — Le cœur vibrant",
+    "name": "Le cœur vibrant",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31007004,
-    "name": "In Danger — En péril",
+    "name": "En péril",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31007005,
-    "name": "Escape — Fuite",
+    "name": "Fuite",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31007006,
-    "name": "Katya: Guns and Vines — Katya : De poudre et de vigne",
+    "name": "Katya : De poudre et de vigne",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31007007,
-    "name": "Daphne: It's Raining in Dismania — Daphne : Il pleut sur Dismania",
+    "name": "Daphne : Il pleut sur Dismania",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31007008,
-    "name": "After Rain — Après la pluie",
+    "name": "Après la pluie",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31007009,
-    "name": "Burning Abyss — Abîme ardent",
+    "name": "Abîme ardent",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31007010,
-    "name": "《维吉尔：荣耀以何物筑基？》",
+    "name": "Vergilius – Sur quoi se bâtit la gloire ?",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31008001,
-    "name": "The Wandering Lunosmith — Luno, la forgeronne errante",
+    "name": "Luno, la forgeronne errante",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31008002,
-    "name": "《侍者皎皎的好梦》",
+    "name": "Le doux rêve de Luno, la servante",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31008003,
-    "name": "《蛋蛋皎皎的友谊》",
+    "name": "L’amitié de Lunoeggy",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31008004,
-    "name": "《探险家皎皎的大冒险》",
+    "name": "La grande aventure de Luno, l’exploratrice",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31009001,
-    "name": "Web of Logic — Toile de logique",
+    "name": "Toile de logique",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31009002,
-    "name": "The Fischers: Our Bygone Days —Les Fischer : Le temps de l’innocence",
+    "name": "Les Fischer : Le temps de l’innocence",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31009003,
-    "name": "Galea Theatre — Théâtre Galea",
+    "name": "Théâtre Galea",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31009004,
-    "name": "Stars Shining Over the Gutter — Les étoiles au-dessus du caniveau",
+    "name": "Les étoiles au-dessus du caniveau",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31009005,
-    "name": "A Light Like a Beacon — Tel un phare dans la nuit",
+    "name": "Tel un phare dans la nuit",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31009006,
-    "name": "Redemption — Rédemption",
+    "name": "Rédemption",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31009007,
-    "name": "Heart of Innocence — Un cœur pur",
+    "name": "Un cœur pur",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31009008,
-    "name": "Requiem for the Nameless — Requiem pour les sans-nom",
+    "name": "Requiem pour les sans-nom",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31010001,
-    "name": "《风起烟津》",
+    "name": "Quand le vent s’élève sur le Port-des-Brumes",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31010002,
-    "name": "《山海的彼端》",
+    "name": "Au-delà des monts et des mers",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31010003,
-    "name": "《烟津渡》",
+    "name": "Port-des-Brumes",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31010004,
-    "name": "《浮星埠》",
+    "name": "Quai-aux-Étoiles",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31010005,
-    "name": "《清波唱晚》",
+    "name": "Ondes au crépuscule",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31010006,
-    "name": "《谒神》",
+    "name": "Audience divine",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31010007,
-    "name": "《清平乐》",
+    "name": "Joie sereine",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31010008,
-    "name": "《潮声岩穴》",
+    "name": "Chant-des-Marées",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31010009,
-    "name": "《杏花天影》",
+    "name": "Sous les pétales d’abricotier",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31010010,
-    "name": "《百年枯荣》",
+    "name": "Cent ans d’éphémère",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31010011,
-    "name": "《狡兔》",
+    "name": "Le lièvre rusé",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31010012,
-    "name": "《劫灰》",
+    "name": "Cendres du Destin",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31010013,
-    "name": "《尘漠石海》",
+    "name": "Mer de Poussière",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31010014,
-    "name": "《虞渊幽明》",
+    "name": "Crépuscule sur l’Abîme de Yu",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31010015,
-    "name": "《忘川溯影》",
+    "name": "Remonter le Fleuve de l’Oubli",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31010016,
-    "name": "《听鸦原》",
+    "name": "Plaine des Corbeaux",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31010017,
-    "name": "《千枢狩阵》",
+    "name": "Formation des Mille-Serrures",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31010018,
-    "name": "《机傀苏醒》",
+    "name": "L’éveil des méchapoupées",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31010019,
-    "name": "《焚心》",
+    "name": "Cœur en cendres",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31010020,
-    "name": "《倾天》",
+    "name": "Le Ciel renversé",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31011001,
-    "name": "《夜莺漫游奇境记 I》",
+    "name": "Le Rossignol au pays des merveilles I",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31011002,
-    "name": "《夜莺漫游奇境记 II》",
+    "name": "Le Rossignol au pays des merveilles II",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31011003,
-    "name": "《绮梦入夜》",
+    "name": "Quand les rêves se parent de nuit",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31011004,
-    "name": "《沙海之思》",
+    "name": "Pensées du Royaume des Sables",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31011005,
-    "name": "《全速前进！》",
+    "name": "Pleine vitesse !",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31011006,
-    "name": "《箭在弦上》",
+    "name": "La flèche sur la corde",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },
   {
     "id": 31011007,
-    "name": "《悠闲水岸》",
+    "name": "Rive paisible",
     "icon": "T_Piano_Shop2",
     "rarity": 2
   },

@@ -637,7 +637,7 @@
   },
   {
     "id": 10113,
-    "name": "机枢派的",
+    "name": "Jishu Sect's",
     "suf": false
   },
   {
@@ -1025,31 +1025,31 @@
   },
   {
     "id": 20069,
-    "name": "Berenica",
+    "name": " Berenica",
     "suf": true,
     "src": "成就「A Little Get-Together: Berenica」"
   },
   {
     "id": 20070,
-    "name": "Phantasio",
+    "name": " Phantasio",
     "suf": true,
     "src": "成就「A Little Get-Together: Phantasio」"
   },
   {
     "id": 20071,
-    "name": "Lisbell",
+    "name": " Lisbell",
     "suf": true,
     "src": "成就「A Little Get-Together: Lisbell」"
   },
   {
     "id": 20072,
-    "name": "Lady Nifle",
+    "name": " Lady Nifle",
     "suf": true,
     "src": "成就「A Little Get-Together: Lady Nifle」"
   },
   {
     "id": 20073,
-    "name": "Kezhou",
+    "name": " Kezhou",
     "suf": true,
     "src": "成就「A Little Get-Together: Kezhou」"
   },
@@ -1189,7 +1189,7 @@
   },
   {
     "id": 20097,
-    "name": "神之一手",
+    "name": " Genius Move",
     "suf": true
   }
 ]

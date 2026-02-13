@@ -189,7 +189,7 @@ def parse_lua_file(file_path):
         lua_instance = LuaRuntime(unpack_returned_tuples=True)
 
         # 1. 优先尝试获取返回值
-        print(f"在文件 {file_path} 中优先尝试获取返回值")
+        # print(f"在文件 {file_path} 中优先尝试获取返回值")
 
         # 尝试1: 使用pcall执行整个文件，捕获返回值
         try:
@@ -213,10 +213,11 @@ def parse_lua_file(file_path):
             )
             success, result = execute_func(lua_code)
             if success and result is not None:
-                print(f"在文件 {file_path} 中通过pcall执行获取到返回值")
+                # print(f"在文件 {file_path} 中通过pcall执行获取到返回值")
                 return convert_lua_data(result)
         except Exception as e:
-            print(f"通过pcall执行文件 {file_path} 时出错: {e}")
+            # print(f"通过pcall执行文件 {file_path} 时出错: {e}")
+            pass
 
         # 尝试2: 提取并执行return语句
         try:
@@ -246,10 +247,11 @@ def parse_lua_file(file_path):
                 # 执行return语句，获取返回值
                 result = new_lua.eval(return_statement)
                 if result is not None:
-                    print(f"在文件 {file_path} 中通过直接执行return语句获取到返回值")
+                    # print(f"在文件 {file_path} 中通过直接执行return语句获取到返回值")
                     return convert_lua_data(result)
         except Exception as e:
-            print(f"通过直接执行return语句获取文件 {file_path} 数据时出错: {e}")
+            # print(f"通过直接执行return语句获取文件 {file_path} 数据时出错: {e}")
+            pass
 
         # 尝试3: 修改代码，将return语句替换为赋值给全局变量
         try:
@@ -266,13 +268,14 @@ def parse_lua_file(file_path):
             # 获取结果
             result = new_lua.globals().__lua_result
             if result is not None:
-                print(f"在文件 {file_path} 中通过修改return语句获取到返回值")
+                # print(f"在文件 {file_path} 中通过修改return语句获取到返回值")
                 return convert_lua_data(result)
         except Exception as e:
-            print(f"通过修改return语句执行文件 {file_path} 时出错: {e}")
+            # print(f"通过修改return语句执行文件 {file_path} 时出错: {e}")
+            pass
 
         # 2. 尝试获取Data变量
-        print(f"在文件 {file_path} 中尝试获取Data变量")
+        # print(f"在文件 {file_path} 中尝试获取Data变量")
         try:
             # 创建一个新的Lua运行时实例
             new_lua = LuaRuntime(unpack_returned_tuples=True)
@@ -282,13 +285,14 @@ def parse_lua_file(file_path):
             new_lua.execute(lua_code)
             data = new_lua.globals().Data
             if data is not None:
-                print(f"在文件 {file_path} 中找到Data变量")
+                # print(f"在文件 {file_path} 中找到Data变量")
                 return convert_lua_data(data)
         except Exception as e:
-            print(f"访问文件 {file_path} 中的Data变量时出错: {e}")
+            # print(f"访问文件 {file_path} 中的Data变量时出错: {e}")
+            pass
 
         # 3. 尝试直接执行整个文件，检查全局变量
-        print(f"在文件 {file_path} 中尝试直接执行并检查全局变量")
+        # print(f"在文件 {file_path} 中尝试直接执行并检查全局变量")
         try:
             # 创建一个新的Lua运行时实例
             new_lua = LuaRuntime(unpack_returned_tuples=True)
@@ -300,13 +304,14 @@ def parse_lua_file(file_path):
             for global_name in ["Data", "__result", "return_value"]:
                 data = new_lua.globals().get(global_name)
                 if data is not None:
-                    print(f"在文件 {file_path} 中找到全局变量 {global_name}")
+                    # print(f"在文件 {file_path} 中找到全局变量 {global_name}")
                     return convert_lua_data(data)
         except Exception as e:
-            print(f"直接执行文件 {file_path} 时出错: {e}")
+            # print(f"直接执行文件 {file_path} 时出错: {e}")
+            pass
 
         # 4. 尝试处理局部变量T（如Reward.lua中的格式）
-        print(f"在文件 {file_path} 中尝试处理局部变量T")
+        # print(f"在文件 {file_path} 中尝试处理局部变量T")
         try:
             # 创建一个新的Lua运行时实例
             new_lua = LuaRuntime(unpack_returned_tuples=True)
@@ -319,13 +324,14 @@ def parse_lua_file(file_path):
             # 获取全局变量T
             data = new_lua.globals().T
             if data is not None:
-                print(f"在文件 {file_path} 中找到全局变量T")
+                # print(f"在文件 {file_path} 中找到全局变量T")
                 return convert_lua_data(data)
         except Exception as e:
-            print(f"处理文件 {file_path} 中的局部变量T时出错: {e}")
+            # print(f"处理文件 {file_path} 中的局部变量T时出错: {e}")
+            pass
 
         # 5. 尝试处理局部变量Data（如Dialogue_TextMapContent.lua中的格式）
-        print(f"在文件 {file_path} 中尝试处理局部变量Data")
+        # print(f"在文件 {file_path} 中尝试处理局部变量Data")
         try:
             # 创建一个新的Lua运行时实例
             new_lua = LuaRuntime(unpack_returned_tuples=True)
@@ -340,13 +346,14 @@ def parse_lua_file(file_path):
             # 获取全局变量Data
             data = new_lua.globals().Data
             if data is not None:
-                print(f"在文件 {file_path} 中找到全局变量Data")
+                # print(f"在文件 {file_path} 中找到全局变量Data")
                 return convert_lua_data(data)
         except Exception as e:
-            print(f"处理文件 {file_path} 中的局部变量Data时出错: {e}")
+            # print(f"处理文件 {file_path} 中的局部变量Data时出错: {e}")
+            pass
 
         # 6. 尝试直接提取Data表定义，避免执行Loader函数
-        print(f"在文件 {file_path} 中尝试直接提取Data表定义")
+        # print(f"在文件 {file_path} 中尝试直接提取Data表定义")
         try:
             import re
 
@@ -366,13 +373,14 @@ def parse_lua_file(file_path):
                 # 获取Data变量
                 data = new_lua.globals().Data
                 if data is not None:
-                    print(f"在文件 {file_path} 中直接提取到Data表")
+                    # print(f"在文件 {file_path} 中直接提取到Data表")
                     return convert_lua_data(data)
         except Exception as e:
-            print(f"直接提取文件 {file_path} 中的Data表时出错: {e}")
+            # print(f"直接提取文件 {file_path} 中的Data表时出错: {e}")
+            pass
 
         # 7. 尝试专门处理Dialogue_TextMapContent.lua格式的文件
-        print(f"在文件 {file_path} 中尝试专门处理Dialogue_TextMapContent格式")
+        # print(f"在文件 {file_path} 中尝试专门处理Dialogue_TextMapContent格式")
         try:
             # 创建一个新的Lua运行时实例
             new_lua = LuaRuntime(unpack_returned_tuples=True)
@@ -408,10 +416,11 @@ def parse_lua_file(file_path):
             # 获取全局变量Data
             data = new_lua.globals().Data
             if data is not None:
-                print(f"在文件 {file_path} 中找到全局变量Data")
+                # print(f"在文件 {file_path} 中找到全局变量Data")
                 return convert_lua_data(data)
         except Exception as e:
-            print(f"处理文件 {file_path} 中的Dialogue_TextMapContent格式时出错: {e}")
+            # print(f"处理文件 {file_path} 中的Dialogue_TextMapContent格式时出错: {e}")
+            pass
 
         # 如果所有方法都失败
         print(f"在文件 {file_path} 中未找到可解析的数据")

@@ -28,7 +28,7 @@
   },
   {
     "RaidBuffID": 12,
-    "RaidBuffDes": "Lorsque les Dégâts de compétence d’un personnage d’Attribut Électro dépassent 100 %, chaque tranche supplémentaire de 30% permet aux Dégâts de compétence d’ignorer 3.5% de la DÉF de la cible, jusqu’à un maximum de 42.0% ignorés.",
+    "RaidBuffDes": "Lorsque la Puissance de compétence d’un personnage d’Attribut Électro dépasse 100 %, chaque tranche supplémentaire de 30% permet aux Dégâts de compétence d’ignorer 3.5% de la DÉF de la cible, jusqu’à un maximum de 42.0% ignorés.",
     "RaidBuffParameter": [
       "30%",
       "3.5%",

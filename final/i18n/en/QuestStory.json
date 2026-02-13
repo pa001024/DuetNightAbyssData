@@ -10391,7 +10391,7 @@
             "dialogues": [
               {
                 "id": 10032214,
-                "content": "Galea Theatre Props Inventory\n\nA detailed log maintained by the backstage crew, documenting the management of props at Galea Theatre over the past two weeks.\n\n8-Oct\nOrganized: Costumes and sleeping bags.\nLogged by: Mondry\n(Note: Food supplies are running low. <H>We'll need to bring in another batch soon to prepare for the upcoming month-long intensive rehearsals.</>)\n...\n12-Nov\nReplaced: Three new microphones.\nLogged by: Grinde\n(Note: One microphone produces an unusually loud sound, but Director Putsch insisted that it remain as is.)\n14-Nov\nUpdated: Red curtain installed; gold curtain returned to storage.\nLogged by: Bell\n...\n24-Nov\nRetrieved: Five missing wigs.\nLogged by: Bell\n(Note: The dressing room corners are cluttered and seem to hide all sorts of things. I'll clean them out today.)\n25-Nov\nOrganized: Fifteen flower crowns; nine pairs of riding boots.\nLogged by: Mondry"
+                "content": "8-Oct\nOrganized: Costumes and sleeping bags.\nLogged by: Mondry\n(Note: Food supplies are running low. <H>We'll need to bring in another batch soon to prepare for the upcoming month-long intensive rehearsals.</>)\n...\n12-Nov\nReplaced: Three new microphones.\nLogged by: Grinde\n(Note: One microphone produces an unusually loud sound, but Director Putsch insisted that it remain as is.)\n14-Nov\nUpdated: Red curtain installed; gold curtain returned to storage.\nLogged by: Bell\n...\n24-Nov\nRetrieved: Five missing wigs.\nLogged by: Bell\n(Note: The dressing room corners are cluttered and seem to hide all sorts of things. I'll clean them out today.)\n25-Nov\nOrganized: Fifteen flower crowns; nine pairs of riding boots.\nLogged by: Mondry"
               }
             ]
           }
@@ -12769,7 +12769,7 @@
             "dialogues": [
               {
                 "id": 10034104,
-                "content": "The Emperor's signet ring. Crafted entirely from pure gold, this prestigious honour is bestowed exclusively upon those who have made extraordinary contributions to the Empire.\n\nRecipient: <H>Rhythm Fischer</>, serving in the Icelake Escort under the 6th Legion in the Cocytus Region.\nFor demonstrating decisive leadership, exemplary bravery, and exceptional efficiency in multiple <H>Filthoid-clearing</> operations over the years.\nFor playing an irreplaceable role in maintaining public order and ensuring the safety of the region.\nUpon the assessment of the Legion, and by the decree of His Majesty Julius, Rhythm Fischer is hereby awarded the Emperor's signet ring and the rank of Warrant Officer. Let her serve as an inspiration to all soldiers, urging them to strive ever higher for the Empire's glory.\nAll glory to His Majesty."
+                "content": "Recipient: <H>Rhythm Fischer</>, serving in the Icelake Escort under the 6th Legion in the Cocytus Region.\nFor demonstrating decisive leadership, exemplary bravery, and exceptional efficiency in multiple <H>Filthoid-clearing</> operations over the years.\nFor playing an irreplaceable role in maintaining public order and ensuring the safety of the region.\nUpon the assessment of the Legion, and by the decree of His Majesty Julius, Rhythm Fischer is hereby awarded the Emperor's signet ring and the rank of Warrant Officer. Let her serve as an inspiration to all soldiers, urging them to strive ever higher for the Empire's glory.\nAll glory to our Emperor."
               }
             ]
           },
@@ -12780,7 +12780,7 @@
             "dialogues": [
               {
                 "id": 10034106,
-                "content": "Buried beneath a pile of old clutter, this yellowed newspaper recounts a tragic incident from years ago.\n\n<H>Filthoids Are Exceptionally Dangerous — Do Not Be Fooled by Their Appearances!</>\nOn September 24th, an egregious Filthoid incident occurred in Icelake. Following an extensive investigation conducted by the 6th Legion's Escort Unit, the details of the tragedy have been confirmed:\nOn September 13th, local residents Mr and Mrs Fischer encountered a gravely injured young man named Robie Brown along the roadside at Lamenting Lake. Out of compassion, the Fischers took him into their home and cared for him.\nHowever, Robie Brown was a Deteriorator who had evaded the Empire's routine screenings and fled to the outskirts of the city. While receiving aid from the Fischers, he deliberately concealed his condition. Ten days later, Brown succumbed to his transformation, becoming a Filthoid and massacring dozens of citizens in Icelake's southern district, including Mr and Mrs Fischer. The 6th Legion's Escort intervened swiftly to suppress the chaos, but the damage was already done.\nThe incident left 18 dead (including 3 Solarians) and 34 others injured. Citizens are hereby reminded: Do not provide shelter to unidentified Charon individuals under any circumstances. If you suspect someone is a Deteriorator, report them to the Security Bureau immediately. They are and will always remain humanity's enemies. No exceptions. Be advised that harbouring Deteriorators or concealing their presence is a capital offence punishable by death under Article 54 of the Hyperborean Criminal Code."
+                "content": "<H>Deteriorators Are Exceptionally Dangerous — Do Not Be Fooled by Their Appearance!</>\nOn September 24th, an egregious case of Deterioration occurred in Icelake, with devastating consequences. Following an comprehensive investigation by the 6th Legion's Escort Unit, the details of the tragedy have now been confirmed:\nOn September 13th, local residents Mr and Mrs Fischer encountered a gravely injured young man, Robie Brown, collapsed by the roadside near Lamenting Lake. Acting out of compassion, they brought him into their home and cared for him.\nHowever, Robie Brown was a Deteriorator — one who had evaded the Empire's routine screenings and fled to the outskirts of the city. While receiving aid from the Fischers, Brown deliberately concealed his condition. Ten days later, he succumbed to the transformation, becoming a Filthoid. The resulting massacre in Icelake's southern district claimed the lives of dozens, including Mr and Mrs Fischer. The 6th Legion's Escort responded swiftly and succeeded in subduing the threat — but not before the damage was done.\n\nThe incident resulted in 18 deaths (including 3 Solarian citizens) and 34 injuries. Citizens are reminded: under no circumstances should you provide shelter to unidentified Charon individuals. If you suspect someone of being a Deteriorator, report them to the Security Bureau immediately. Deteriorators are — and will remain — humanity's enemies. No exceptions. Harbouring Deteriorators or concealing their condition is a capital offence under Article 54 of the Hyperborean Criminal Code, punishable by death."
               }
             ]
           }
@@ -14129,7 +14129,7 @@
               },
               {
                 "id": 10035331,
-                "content": "Brawl at Galea Theatre\n\nDate: October 9th, 8:30 PM\n\nReported By: Letizia Putsch, Director of the Magic Flute Troupe\n\nParties Involved: Parsifal Snowfield (Lead Performer), Susanna Rossi (Lead Performer), Matthew Bernard (Audience), Phillipe Francisco (Audience)\n...\n\nIncident Details: Alleged conflict between troupe members and front-row audience members. Alleged assault on performers by certain audience members. (Several pages of the incident report appear to have been torn out.)\n\nConclusion: Evidence deemed insufficient. Case dismissed.\n\nRemarks: Performances of Children From the Snowfield have been temporarily suspended. Resumption dates remain unspecified.\nI had hoped to watch this play with Blues and make up for the one we missed years ago, but it seems unlikely to happen anytime soon.",
+                "content": "Brawl at Galea Theatre\n\nDate: October 9th, 8:30 PM\n\nFiled by: Letizia Putsch, Director of the Magic Flute Troupe\n\nInvolved Parties: Parsifal Snowfield (Lead Performer), Susanna Rossie (Lead Performer), Mathew Bernard (Audience), Feeley Francisco (Audience)\n...\n\nIncident Summary: A physical altercation reportedly broke out between troupe members and two front-row audience members. Alleged assault of performers by said audience members. (Several pages of the incident report appear to have been torn out.)\n\nConclusion: Evidence found to be insufficient. Case dismissed.\n\nRemarks: Performances of Children From the Snowfield have been suspended until further notice. No resumption date announced.\nI'd hoped to watch this one with Blues — to finally make up for the show we missed all those years ago. But I guess... that won't be happening any time soon.",
                 "next": 10035332
               },
               {
@@ -51801,7 +51801,7 @@
               },
               {
                 "id": 51105013,
-                "content": "And — and! Mum and Dad haven't been home lately, but I keep finding Sky Lilies on the windowsill! I asked around, but nobody said they brought them...",
+                "content": "And — and! Mum and Dad haven't been home lately, but I keep finding Skylilies on the windowsill! I asked around, but nobody said they brought them...",
                 "npc": 700329,
                 "next": 51105014
               },
@@ -51988,7 +51988,7 @@
                 "id": 200301,
                 "qid": 2003,
                 "name": "A Bouquet of Flowers",
-                "desc": "A cluster of Sky Lilies rests on the windowsill, their petals still damp with morning dew — someone must have placed them there recently.",
+                "desc": "A cluster of Skylilies rests on the windowsill, their petals still damp with morning dew — someone must have placed them there recently.",
                 "icon": "InformtIcon"
               }
             ]
@@ -52016,7 +52016,7 @@
                 "id": 200303,
                 "qid": 2003,
                 "name": "Family Photo Album",
-                "desc": "Found near the doorway, the album is filled with family snapshots. In one, a younger Lingling holds a bunch of Sky Lilies, smiling beside Nana — right outside this very home.",
+                "desc": "Found near the doorway, the album is filled with family snapshots. In one, a younger Lingling holds a bunch of Skylilies, smiling beside Nana — right outside this very home.",
                 "icon": "InformtIcon"
               }
             ]
@@ -52346,7 +52346,7 @@
               },
               {
                 "id": 51105080,
-                "content": "I... I've been waiting so long... Pingping, the sun's come out — let's pick some Sky Lilies to put in the vase.",
+                "content": "I... I've been waiting so long... Pingping, the sun's come out — let's pick some Skylilies to put in the vase.",
                 "npc": 700331,
                 "next": 51105081
               },
@@ -52412,7 +52412,7 @@
               },
               {
                 "id": 51105091,
-                "content": "I... I've been waiting so long... Pingping, the sun's come out — let's pick some Sky Lilies to put in the vase.",
+                "content": "I... I've been waiting so long... Pingping, the sun's come out — let's pick some Skylilies to put in the vase.",
                 "npc": 700331,
                 "next": 51105092
               },
@@ -52448,7 +52448,7 @@
               },
               {
                 "id": 51105097,
-                "content": "I never met him... Nana said he passed away when she was young, when they'd just moved to Haojing. She didn't get the news in time because of the move... so she never got to say goodbye...",
+                "content": "I never met him... Nana said he passed away when she was young, when she just moved to Haojing. She didn't get the news in time because of the move... so she never got to say goodbye...",
                 "npc": 700329,
                 "next": 51105098
               },
@@ -52550,7 +52550,7 @@
               },
               {
                 "id": 51105110,
-                "content": "From now on, you won't have to catch Loomhoppers all by yourself! I'll pick Sky Lilies with you, read with you — we'll do all sorts of things together!",
+                "content": "From now on, you won't have to catch Loomhoppers all by yourself! I'll pick Skylilies with you, read with you — we'll do all sorts of things together!",
                 "npc": 700329,
                 "next": 51105111
               },
@@ -52965,7 +52965,7 @@
             "dialogues": [
               {
                 "id": 51125000,
-                "content": "What?! Miaoqu’s still out? How many days has he had the trots? Ugh... How are we supposed to shoot all those Mistwharf scenes...",
+                "content": "What?! Miaoqu's still out? How many days has he had the trots? Ugh... How are we supposed to shoot all those Mistwharf scenes...",
                 "npc": 700365,
                 "options": [
                   {
@@ -52998,7 +52998,7 @@
               },
               {
                 "id": 51125004,
-                "content": "We're putting on a show — well, a pretty new kind actually. It’s called \"Muovie\". Interested?",
+                "content": "We're putting on a show — well, a pretty new kind actually. It's called \"Muovie\". Interested?",
                 "npc": 700365
               }
             ]
@@ -53355,7 +53355,7 @@
               },
               {
                 "id": 51125067,
-                "content": "...What do you think, {性别：brother丨lass}? This isn't working. How about... we swap your roles?",
+                "content": "...What do you think? This isn't working. How about... we swap your roles?",
                 "npc": 700365,
                 "options": [
                   {
@@ -53632,7 +53632,7 @@
               },
               {
                 "id": 51125108,
-                "content": "Here {性别：brother丨lass}, your pay for today. You've earned it.",
+                "content": "Here {性别:brother|lass}, your pay for today. You've earned it.",
                 "npc": 700365,
                 "next": 51125109
               },
@@ -53933,7 +53933,7 @@
             "dialogues": [
               {
                 "id": 51151047,
-                "content": "If Lunocarp got her facts straight... this should be the haunted warehouse!",
+                "content": "After listening to Wangchun and the others last time, I went and asked Lunocarp. If she got her facts straight... this should be the haunted warehouse!",
                 "npc": 200002,
                 "next": 51151048
               },
@@ -56551,13 +56551,13 @@
               },
               {
                 "id": 51154012,
-                "content": "It doesn't have a true Bi'an's power, of course. Yet that very limitation gives it a charm of its own.",
+                "content": "Pity. The first few Mecha-Bi'an crafted by Master Gongshang attracted a gaggle of tedious old sticks from Xuanheng Sect. They droned on about \"blasphemy\" and \"disrespect\" before confiscating the lot. How dreary.",
                 "npc": 701096,
                 "next": 51154024
               },
               {
                 "id": 51154024,
-                "content": "It doesn't have a true Bi'an's power, of course. Yet that very limitation gives it a charm of its own.",
+                "content": "Not that it stopped him, of course. Gongshang doted on his Mecha-Bi'an far too much to quit. So he simply made every new one look like a Sable Bi'an after that — left those incense wardens with nothing to gripe about.",
                 "npc": 701096,
                 "next": 51154013
               },
@@ -56600,7 +56600,7 @@
               },
               {
                 "id": 51154017,
-                "content": "Naturally not. Nothing comes without a price. If I simply gave it to you, you would distrust it. And you'd be right to.",
+                "content": "Heh, nothing comes without a price. If I simply gave it to you, you would distrust it. And you'd be right to.",
                 "npc": 701096,
                 "next": 51154018
               },

@@ -11144,7 +11144,7 @@ SEQ{CameraMoveTo{_delay{5},TargetPosition{"24.785156,58.79248,123.002441,-0.0001
         },
         [10031005] = {
           Camera = "-64.777344,-47.655518,128.217285,0.000165,-0.000854,-48.591522,40.0,941.904541,false,DoNotOverride,1.2",
-          ContentKR = "기억 안 나요. 그땐... 기분이 좀 별로여서 집에 돌아가도 잠들기 힘들겠다 싶어서 바람 좀 쐬려고 했죠.",
+          ContentKR = "기억 안 나요. 그땐... 기분이 좀 별로여서 집에 돌아가도 잠들기 힘들겠다 싶어서 바람 좀 쐬려고 했죠. ",
           DetectiveQuestionId = 1001,
           DialogueId = 10031005,
           FacialId = {
@@ -11987,7 +11987,7 @@ SEQ{CameraMoveTo{_delay{5},TargetPosition{"24.785156,58.79248,123.002441,-0.0001
           VoiceName = "voice/$Locale$/story/1003/100313/191CC1F6"
         },
         [10031401] = {
-          ContentKR = "바로 이겁니다. 부러진 부위가 완전히 일치해요. 받침대의 구부러진 흔적은 바람에 부러졌다기보단 인위적인 충돌로 인한 것으로 보이는군요.",
+          ContentKR = "바로 이겁니다. 부러진 부위가 완전히 일치해요. 받침대의 구부러진 흔적은 바람에 부러졌다기보단 인위적인 충돌로 인한 것으로 보이는군요. ",
           DetectiveQuestionId = 1002,
           DialogueId = 10031401,
           DialoguePanelType = "{type:showpic;dir:Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/T_Guide_Chapter_VaneBottom.T_Guide_Chapter_VaneBottom'}",
@@ -13349,15 +13349,11 @@ CameraMoveTo{_delay{0},TargetPosition{"-68.912094,-67.938797,184.066406,0.000075
           VoiceName = "voice/$Locale$/story/1003/100322/191D55C8"
         },
         [10032214] = {
-          ContentKR = "갈레아 극장 소품 목록\n\n여러 스태프들이 기록한 소품 준비 목록, 갈레가 극장에서 지난 반달 동안 사용한 모든 소품의 출입이 상세하게 기록 되어있다.\n\n10월 08일, 의상, 침낭 준비 완료. 확인자: 몬델리 (참고: 식량 비축이 부족하여, <H>남은 한 달간의 집중 리허설을 준비하기 위해선 누군가에게 부탁해서 한 번 더 들여야 한다</>)\n......\n11월 12일, 새로운 마이크 3개 교체 완료. 확인자: 그린델 (참고: 마이크 하나가 소리가 엄청 크다. 푸치 단장님이 그대로 괜찮다고, 바꾸지 말라고 하셨다.)\n11월 14일, 빨간 무대 커튼 교체 완료, 금빛 무대 커튼 창고로 반환 완료. 확인자: 벨\n......\n11월 24일, 잃어버렸던 가발 5개 회수 완료. 확인자: 벨 (참고: 탈의실 구석에 물건이 들어가면 찾기 어렵다. 오늘 가서 한번 치워야겠다.)\n11월 25일, 화관 15개 준비 완료, 승마화 9켤레 준비 완료. 확인자: 몬델리",
+          ContentKR = "10월 08일, 의상, 침낭 준비 완료. 확인자: 몬델리 (참고: 식량 비축이 부족하여, <H>남은 한 달간의 집중 리허설을 준비하기 위해선 누군가에게 부탁해서 한 번 더 들여야 한다.</>)\n...\n11월 12일, 새로운 마이크 3개 교체 완료. 확인자: 그린델 (참고: 마이크 하나가 소리가 엄청 크다. 푸치 단장님이 그대로 괜찮다고, 바꾸지 말라고 하셨다.)\n11월 14일, 빨간 무대 커튼 교체 완료, 금빛 무대 커튼 창고로 반환 완료. 확인자: 벨\n...\n11월 24일, 잃어버렸던 가발 5개 회수 완료. 확인자: 벨 (참고: 탈의실 구석에 물건이 들어가면 찾기 어렵다. 오늘 가서 한번 치워야겠다.)\n11월 25일, 화관 15개 준비 완료, 승마화 9켤레 준비 완료. 확인자: 몬델리",
           DialogueId = 10032214,
           DialoguePanelType = "{type:showtext;topic:READ_NAME_2000046;content:READ_TEXT_2000046}",
           GUID = "191D55F2",
           Subtitle = [[
-Galea Theatre Props Inventory
-
-A detailed log maintained by the backstage crew, documenting the management of props at Galea Theatre over the past two weeks.
-
 8-Oct
 Organized: Costumes and sleeping bags.
 Logged by: Mondry
@@ -13418,7 +13414,7 @@ Logged by: Mondry]],
         },
         [10032303] = {
           Camera = "-27.283203,5.417847,146.285156,0.000012,-1.000759,-169.428741,30.0,507.051575,false,DoNotOverride,1.888818",
-          ContentKR = "투어를 이렇게나 오래 다녀왔는데, 이 아이는 여전히 발전이 없어... 역시 파르지팔처럼 좋은 목소리를 타고나는 사람은 드무네.",
+          ContentKR = "투어를 이렇게나 오래 다녀왔는데, 이 아이는 여전히 발전이 없어... 역시 파르지팔처럼 좋은 목소리를 타고나는 사람은 드무네. ",
           DialogueId = 10032303,
           FinalCamera = "-28.900391,13.89624,146.285156,0.000012,-1.000759,-165.827866,30.0,507.051575,false,DoNotOverride,1.888818",
           GUID = "191D64B6",
@@ -14697,7 +14693,7 @@ PlayAnimation{ActorId{200021},AnimationId{"ConfidentRToTalk_Start"},Duration{2}}
         },
         [10032711] = {
           Camera = "14.354206,1028.479492,406.70459,0.000061,-6.795895,97.987106,24.0,100000.0,false,Manual,22.0",
-          ContentKR = "그냥, 공장에서 근무 교대하는 틈에 몰래 들어가서 액체 폭시코르 두 병을 주웠습니다요...",
+          ContentKR = "그냥, 공장에서 근무 교대하는 틈에 몰래 들어가서 액체 폭시코르 두 병을 주웠습니다요... ",
           DialogueId = 10032711,
           FinalCamera = "14.354206,1028.479492,407.35498,0.000061,-6.795895,97.987106,24.0,100000.0,false,Manual,22.0",
           GUID = "191DA7A6",
@@ -15676,7 +15672,7 @@ PlayAnimation{_delay{4.5},ActorId{100304},AnimationId{"Talk03ToTalkL_Start"},Dur
         },
         [10032822] = {
           Camera = "120.826347,-1.616959,114.983398,0.007418,8.980496,-81.996254,35.0,100000.0,false,DoNotOverride,22.0",
-          ContentKR = "아...",
+          ContentKR = "아... ",
           DialogueId = 10032822,
           FacialId = {
             [1] = "100304:Shock01"
@@ -16145,7 +16141,7 @@ PlayAnimation{_delay{4},ActorId{200002},AnimationId{"Think_End"},Duration{1}},
           VoiceName = "voice/$Locale$/story/1003/100331/191DE820"
         },
         [10033105] = {
-          ContentKR = "쯧, 이 작은 배수관은 얼마나 많은 물건이 채워져 있는 거야!",
+          ContentKR = "쯧, 이 작은 배수관은 얼마나 많은 물건이 채워져 있는 거야! ",
           DialogueId = 10033105,
           GUID = "191DE84A",
           NextDialogue = 10033106,
@@ -18320,7 +18316,7 @@ CameraMoveTo{_delay{0},TargetPosition{"-150.234375,-8.808838,0.62915,0.002212,35
         },
         [10033943] = {
           Camera = "111.371094,-113.845703,177.456787,0.002008,-26.280388,156.343842,30.000013,7420.709473,false,DoNotOverride,2.157511",
-          ContentKR = "하지만 지금의 난 달라, 난 '계관카론'이 됐어! 과거의 수많은 소망, 공연, 연주와 같은 것들은 더 이상 꿈이 아니야!",
+          ContentKR = "하지만 지금의 난 달라, 난 '계관카론'이 됐어! 과거의 수많은 소망, 공연, 연주와 같은 것들은 더 이상 꿈이 아니야! ",
           DialogueId = 10033943,
           FinalCamera = "108.759766,-119.812256,177.456787,0.002008,-26.28038,151.74408,30.000013,7420.709473,false,DoNotOverride,2.157511",
           GUID = "191E71C6",
@@ -19020,18 +19016,16 @@ LookAt{_delay{2.1},LookAtDescription{"100360:n(100001)"}},
           VoiceName = "voice/$Locale$/story/1003/100341/191E8C06"
         },
         [10034104] = {
-          ContentKR = "황제의 새끼손가락 반지 훈장, 100% 순금으로 만들어졌다. 제국에 탁월한 공헌을 한 군인에게만 수여된다.\n\n코퀴투스 주 아이스레이크 시티 제6군단 소속 방위대, <H>리듬 페실</>은 수년간, 여러 차례의 <H>필토이드 토벌 작전</>을 현명한 판단과 용맹한 전투로 신속하게 마무리 지었다.\n지역 치안을 유지하는 과정에서 더할 나위 없이 핵심적인 작용을 발휘했다.\n군단의 평가를 거쳐, 황제 폐하 율리우스의 이름으로 리듬 페실에게 황제 새끼손가락 반지 훈장과 함께 준위의 계급을 수여하니 모든 군인은 이를 모범으로 삼아 정진하고 성장하기를 바란다.\n황제 폐하께 영광을.",
+          ContentKR = "코퀴투스 주 아이스레이크 시티 제6군단 소속 방위대, <H>리듬 페실</>은 수년간, 여러 차례의 <H>필토이드 토벌 작전</>을 현명한 판단과 용맹한 전투로 신속하게 마무리 지음.\n지역 치안을 유지하는 과정에서 더할 나위 없이 핵심적인 작용을 발휘함.\n군단의 평가를 거쳐, 황제 폐하 율리우스의 이름으로 리듬 페실에게 황제 새끼손가락 반지 훈장과 함께 준위의 계급을 수여하니 모든 군인은 이를 모범으로 삼아 정진하고 성장하기를 바람.\n황제 폐하께 영광을.",
           DialogueId = 10034104,
           DialoguePanelType = "{type:showtext;topic:READ_NAME_2000047;content:READ_TEXT_2000047}",
           GUID = "191E8C30",
           Subtitle = [[
-The Emperor's signet ring. Crafted entirely from pure gold, this prestigious honour is bestowed exclusively upon those who have made extraordinary contributions to the Empire.
-
 Recipient: Rhythm Fischer, serving in the Icelake Escort under the 6th Legion in the Cocytus Region.
 For demonstrating decisive leadership, exemplary bravery, and exceptional efficiency in multiple Filthoid-clearing operations over the years.
 For playing an irreplaceable role in maintaining public order and ensuring the safety of the region.
 Upon the assessment of the Legion, and by the decree of His Majesty Julius, Rhythm Fischer is hereby awarded the Emperor's signet ring and the rank of Warrant Officer. Let her serve as an inspiration to all soldiers, urging them to strive ever higher for the Empire's glory.
-All glory to His Majesty.]],
+All glory to our Emperor.]],
           VoiceName = "voice/$Locale$/story/1003/100341/191E8C30"
         },
         [10034105] = {
@@ -19042,11 +19036,11 @@ All glory to His Majesty.]],
           VoiceName = "voice/$Locale$/story/1003/100341/191E8C5A"
         },
         [10034106] = {
-          ContentKR = "잡동사니들 밑에 깔린 낡은 신문에는 오래 전의 비참한 사고가 기록되어 있다.\n\n<H>침식자는 매우 위험하니 겉모습에 속지 마세요!</>\n9월 24일, 본 시에서 매우 끔찍한 '침식' 사건이 발생했습니다. 제6군단 방위대의 조사를 거쳐 얻어낸 결론은 다음과 같습니다.\n아이스레이크 시티 주민 페실 부부는 9월 13일 눈물의 호수 옆 도로변에서 로비 브라운이라는 청년을 우연히 만났습니다. 페실 부부는 중상을 입은 그를 집으로 데려가 돌보았습니다.\n그러나 로비 브라운은 제국의 잠재적 침식자에 대한 조사를 피해 도시 밖으로 도피한 침식자였고, 페실 부부의 도움을 받을 때 자신의 침식 흔적을 의도적으로 숨겼습니다. 10일 후, 비극이 발생했습니다. 브라운은 필토이드로 변하여 페실 부부를 포함한 아이스레이크 남쪽 구역 시민 수십 명을 살해했습니다. 제6군단 소속 아이스레이크 시티 방위대가 긴급 출동하여 이번 소란을 진압했습니다.\n이번 사태로 총 18명이 사망했고, 그중 3명은 솔라인 것으로 밝혀졌습니다. 그 외 34명이 다쳤습니다. 시민 여러분들, 명심해 주십시오. 신원불명의 카론을 함부로 수용해서는 안 됩니다. 침식자를 발견하게 되면 즉시 치안서에 신고해 주십시오. 그들은 하나도 빠짐없이, 영원히 인간의 적입니다. 의도적으로 침식자에게 협력하거나 침식자를 은폐하는 자는\n〈휘페르보레아 형사 법전〉제 54조에 따라 사형에 처합니다.",
+          ContentKR = "<H>침식자는 매우 위험하니 겉모습에 속지 마세요!</>\n9월 24일, 본 시에서 매우 끔찍한 '침식' 사건이 발생했습니다. 제6군단 방위대의 조사를 거쳐 얻어낸 결론은 다음과 같습니다.\n아이스레이크 시티 주민 페실 부부는 9월 13일 눈물의 호수 옆 도로변에서 로비 브라운이라는 청년을 우연히 만났습니다. 페실 부부는 중상을 입은 그를 집으로 데려가 돌보았습니다.\n그러나 로비 브라운은 제국의 잠재적 침식자에 대한 조사를 피해 도시 밖으로 도피한 침식자였고, 페실 부부의 도움을 받을 때 자신의 침식 흔적을 의도적으로 숨겼습니다. 10일 후, 비극이 발생했습니다. 브라운은 필토이드로 변하여 페실 부부를 포함한 아이스레이크 남쪽 구역 시민 수십 명을 살해했습니다. 제6군단 소속 아이스레이크 시티 방위대가 긴급 출동하여 이번 소란을 진압했습니다.\n이번 사태로 총 18명이 사망했고, 그중 3명은 솔라인 것으로 밝혀졌습니다. 그 외 34명이 다쳤습니다. 시민 여러분들, 명심해 주십시오. 신원불명의 카론을 함부로 수용해서는 안 됩니다. 침식자를 발견하게 되면 즉시 치안서에 신고해 주십시오. 그들은 하나도 빠짐없이, 영원히 인간의 적입니다. 의도적으로 침식자에게 협력하거나 침식자를 은폐하는 자는 <휘페르보레아 형사 법전>제 54조에 따라 사형에 처합니다.",
           DialogueId = 10034106,
           DialoguePanelType = "{type:showtext;topic:READ_NAME_2000048;content:READ_TEXT_2000048}",
           GUID = "191E8C84",
-          Subtitle = "Buried beneath a pile of old clutter, this yellowed newspaper recounts a tragic incident from years ago.\n\nFilthoids Are Exceptionally Dangerous — Do Not Be Fooled by Their Appearances!\nOn September 24th, an egregious Filthoid incident occurred in Icelake. Following an extensive investigation conducted by the 6th Legion's Escort Unit, the details of the tragedy have been confirmed:\nOn September 13th, local residents Mr and Mrs Fischer encountered a gravely injured young man named Robie Brown along the roadside at Lamenting Lake. Out of compassion, the Fischers took him into their home and cared for him.\nHowever, Robie Brown was a Deteriorator who had evaded the Empire's routine screenings and fled to the outskirts of the city. While receiving aid from the Fischers, he deliberately concealed his condition. Ten days later, Brown succumbed to his transformation, becoming a Filthoid and massacring dozens of citizens in Icelake's southern district, including Mr and Mrs Fischer. The 6th Legion's Escort intervened swiftly to suppress the chaos, but the damage was already done.\nThe incident left 18 dead (including 3 Solarians) and 34 others injured. Citizens are hereby reminded: Do not provide shelter to unidentified Charon individuals under any circumstances. If you suspect someone is a Deteriorator, report them to the Security Bureau immediately. They are and will always remain humanity's enemies. No exceptions. Be advised that harbouring Deteriorators or concealing their presence is a capital offence punishable by death under Article 54 of the Hyperborean Criminal Code.",
+          Subtitle = "Deteriorators Are Exceptionally Dangerous — Do Not Be Fooled by Their Appearance!\nOn September 24th, an egregious case of Deterioration occurred in Icelake, with devastating consequences. Following an comprehensive investigation by the 6th Legion's Escort Unit, the details of the tragedy have now been confirmed:\nOn September 13th, local residents Mr and Mrs Fischer encountered a gravely injured young man, Robie Brown, collapsed by the roadside near Lamenting Lake. Acting out of compassion, they brought him into their home and cared for him.\nHowever, Robie Brown was a Deteriorator — one who had evaded the Empire's routine screenings and fled to the outskirts of the city. While receiving aid from the Fischers, Brown deliberately concealed his condition. Ten days later, he succumbed to the transformation, becoming a Filthoid. The resulting massacre in Icelake's southern district claimed the lives of dozens, including Mr and Mrs Fischer. The 6th Legion's Escort responded swiftly and succeeded in subduing the threat — but not before the damage was done.\n\nThe incident resulted in 18 deaths (including 3 Solarian citizens) and 34 injuries. Citizens are reminded: under no circumstances should you provide shelter to unidentified Charon individuals. If you suspect someone of being a Deteriorator, report them to the Security Bureau immediately. Deteriorators are — and will remain — humanity's enemies. No exceptions. Harbouring Deteriorators or concealing their condition is a capital offence under Article 54 of the Hyperborean Criminal Code, punishable by death.",
           VoiceName = "voice/$Locale$/story/1003/100341/191E8C84"
         },
         [10034107] = {
@@ -20978,7 +20972,7 @@ PlayAnimation{ActorId{200002},AnimationId{"Sigh_Start"},Duration{1}},
         },
         [10034515] = {
           Camera = "233.564697,18.109272,134.374268,0.000092,9.606441,-136.785706,45.0,243.950089,false,Manual,22.0",
-          ContentKR = "빈정거릴 시간에 차라리 빨리 일이나 시작해. 흠, 제6군단이 실직만 하지 않았다면, 제13군단이 이 무능한 놈들 뒤치다꺼리를 할 일도 없었겠지.",
+          ContentKR = "빈정거릴 시간에 차라리 빨리 일이나 시작해. 흠, 제6군단이 실직만 하지 않았다면, 제13군단이 이 무능한 놈들 뒤치다꺼리를 할 일도 없었겠지. ",
           DialogueId = 10034515,
           FacialId = {
             [1] = "200021:None"
@@ -25020,27 +25014,12 @@ PlayAnimation{ActorId{200021},AnimationId{"Talk02_Start"},Duration{1}}
           VoiceName = "voice/$Locale$/story/1003/100353/191F5554"
         },
         [10035331] = {
-          ContentKR = "갈레아 극장 폭행 사건\n\n시간: 10월 9일 밤 8시 30분\n신고자: 레티치아 푸치 ('마법의 피리' 극단장)\n폭행 가담자:\n파르지팔 스노필드(주연)\n수잔나 로시(주연)\n......\n매튜 버나드(관객)\n필리 프란시스코(관객)\n......\n사건 개요: 극단 멤버와 앞줄 관객 간의 공연 내용과 관련된 충돌로 의심됨. 관객이 배우를 폭행한 사건으로 추정. (일부 진술서 내지가 찢겨 있음)\n\n결론: 증거 불충분으로 사건 불성립\n\n비고: 〈설국의 아이〉는 잠정적으로 공연 중단, 재공연 일정 미정.\n\n블루스와 함께 그때 보지 못했던 극의 아쉬움을 달래고 싶지만, 단기간 내에 다시 볼 기회는 없을 것 같다.",
+          ContentKR = "갈레아 극장 폭행 사건\n\n시간: 10월 9일 밤 8시 30분\n신고자: 레티치아 푸치 ('마법의 피리' 극단장)\n폭행 가담자:\n파르지팔 스노필드(주연)\n수잔나 로시(주연)\n...\n매튜 버나드(관객)\n필리 프란시스코(관객)\n...\n사건 개요: 극단 멤버와 앞줄 관객 간의 공연 내용과 관련된 충돌로 의심됨. 관객이 배우를 폭행한 사건으로 추정. (일부 진술서 내지가 찢겨 있음)\n\n결론: 증거 불충분으로 사건 불성립\n\n비고: <설국의 아이>는 잠정적으로 공연 중단, 재공연 일정 미정.\n\n블루스와 함께 그때 보지 못했던 극의 아쉬움을 달래고 싶지만, 단기간 내에 다시 볼 기회는 없을 것 같다.",
           DialogueId = 10035331,
           DialoguePanelType = "{type:showtext;topic:READ_NAME_2000049;content:READ_TEXT_2000049}",
           GUID = "191F557E",
           NextDialogue = 10035332,
-          Subtitle = [[
-Brawl at Galea Theatre
-
-Date: October 9th, 8:30 PM
-
-Reported By: Letizia Putsch, Director of the Magic Flute Troupe
-
-Parties Involved: Parsifal Snowfield (Lead Performer), Susanna Rossi (Lead Performer), Matthew Bernard (Audience), Phillipe Francisco (Audience)
-...
-
-Incident Details: Alleged conflict between troupe members and front-row audience members. Alleged assault on performers by certain audience members. (Several pages of the incident report appear to have been torn out.)
-
-Conclusion: Evidence deemed insufficient. Case dismissed.
-
-Remarks: Performances of Children From the Snowfield have been temporarily suspended. Resumption dates remain unspecified.
-I had hoped to watch this play with Blues and make up for the one we missed years ago, but it seems unlikely to happen anytime soon.]],
+          Subtitle = "Brawl at Galea Theatre\n\nDate: October 9th, 8:30 PM\n\nFiled by: Letizia Putsch, Director of the Magic Flute Troupe\n\nInvolved Parties: Parsifal Snowfield (Lead Performer), Susanna Rossie (Lead Performer), Mathew Bernard (Audience), Feeley Francisco (Audience)\n...\n\nIncident Summary: A physical altercation reportedly broke out between troupe members and two front-row audience members. Alleged assault of performers by said audience members. (Several pages of the incident report appear to have been torn out.)\n\nConclusion: Evidence found to be insufficient. Case dismissed.\n\nRemarks: Performances of Children From the Snowfield have been suspended until further notice. No resumption date announced.\nI'd hoped to watch this one with Blues — to finally make up for the show we missed all those years ago. But I guess... that won't be happening any time soon.",
           VoiceName = "voice/$Locale$/story/1003/100353/191F557E"
         },
         [10035332] = {
@@ -29434,7 +29413,7 @@ SetLocation{ActorId{100304},TargetPoint{"lise_61_01"},Visibility{"Show"}}
         },
         [10036557] = {
           Camera = "129.630859,-634.838989,126.636719,0.000079,7.986567,19.837446,35.000011,100000.0,false,DoNotOverride,22",
-          ContentKR = "리듬이 말했었지, 블루스는 그 노래 가사가 싫어서, 자기 마음대로 행복한 결말로 가사를 바꿨다고. 그런데 네가 부른 '얼음 땅 아래, 깊이 잠들었네'라는 건, 원래의 슬픈 결말이겠지.",
+          ContentKR = "리듬이 말했었지, 블루스는 그 노래 가사가 싫어서, 자기 마음대로 행복한 결말로 가사를 바꿨다고.  그런데 네가 부른 '얼음 땅 아래, 깊이 잠들었네'라는 건, 원래의 슬픈 결말이겠지.",
           DialogueId = 10036557,
           GUID = "19201EA2",
           LookAt = {
@@ -29449,7 +29428,7 @@ SetLocation{ActorId{100304},TargetPoint{"lise_61_01"},Visibility{"Show"}}
         },
         [10036558] = {
           Camera = "-53.980469,-733.359253,143.015625,0.000226,5.980021,155.884628,35.000011,160.454437,false,Manual,4.0",
-          ContentKR = "......!!",
+          ContentKR = "......!! ",
           DialogueId = 10036558,
           FacialId = {
             [1] = "200021:Shock01"
@@ -30868,7 +30847,7 @@ CameraMoveTo{TargetPosition{"252.603516,-1139.067505,153.863281,0.000024,-1.3470
           ContentKR = "“내 얼어붙은 마음도 조금이라도 따뜻해질 수 있다면.”",
           DialogueId = 10037106,
           GUID = "192078B4",
-          Subtitle = "\"My frozen heart, it's been cold for my lifetime. How I wish I could feel the warmth inside.\"",
+          Subtitle = "\"My frozen heart, it's been cold for my lifetime. How I wish I could feel the warmth inside.\" ",
           VoiceName = "voice/$Locale$/story/1003/100371/192078B4"
         },
         [10037201] = {
@@ -36532,7 +36511,7 @@ PlayAnimation{ActorId{200006},AnimationId{"DisagreeHead"},Duration{2}}
         },
         [10102404] = {
           Camera = "26.566467,133.231201,126.789307,0.000167,0.0,-91.788811,45.0,213.715622,false,Manual,5.0",
-          ContentKR = "솔라'? 뿔 없는 사람들 말하는 거야...? 그들에게 뭐 특별한 점이라도 있는 거야?",
+          ContentKR = "'솔라'? 뿔 없는 사람들 말하는 거야...? 그들에게 뭐 특별한 점이라도 있는 거야?",
           DialogueId = 10102404,
           ExStoryInfo = "Player",
           FacialId = {
@@ -36593,7 +36572,7 @@ PlayAnimation{ActorId{200006},AnimationId{"DisagreeHead"},Duration{2}}
         },
         [10102407] = {
           Camera = "22.246689,31.70752,151.955322,0.00001,-9.799866,139.008255,50.000011,75.26149,false,Manual,12.0",
-          ContentKR = "<W>악마의 아이</>'라고 해.",
+          ContentKR = "'<W>악마의 아이</>'라고 해.",
           DialogueId = 10102407,
           Duration = 1.5,
           FacialId = {
@@ -36634,7 +36613,7 @@ PlayAnimation{ActorId{200006},AnimationId{"DisagreeHead"},Duration{2}}
         },
         [10102409] = {
           Camera = "-14.468414,81.662598,129.249512,0.000327,-18.799925,-115.579826,30.000013,168.324387,false,Manual,1.920142",
-          ContentKR = "인간'들은 '악마의 아이'와 '마법'을 말할 때면... 꼭 카밀라가 아스포델에서 싸우는 사람을 볼 때와 같은 표정을 지어! 하지만 그렇게 치면 이건 인간이 '악마'를 괴롭히는 거잖아!",
+          ContentKR = "'인간'들은 '악마의 아이'와 '마법'을 말할 때면... 꼭 카밀라가 아스포델에서 싸우는 사람을 볼 때와 같은 표정을 지어! 하지만 그렇게 치면 이건 인간이 '악마'를 괴롭히는 거잖아!",
           DialogueId = 10102409,
           FacialId = {
             [1] = "200002:Unhappy01"
@@ -37199,7 +37178,7 @@ PlayAnimation{_delay{5.5},ActorId{200011},AnimationId{"Think_Start"},Duration{2}
         },
         [10102508] = {
           Camera = "-200.542847,-222.323242,136.585938,0.000182,1.001258,46.588379,70.000015,435.191498,false,Manual,6.0",
-          ContentKR = "정보가 곧 돈이다!'라는 말도 있잖아요! 그래요, 그래. 아이스레이크 시티의 쓰레기통은 다 제가 손 안에 있으니 뭔가 재미있는 정보라도 발견하면 제일 먼저 알려드릴 수 있지 않겠어요?",
+          ContentKR = "'정보가 곧 돈이다!'라는 말도 있잖아요! 그래요, 그래. 아이스레이크 시티의 쓰레기통은 다 제가 손 안에 있으니 뭔가 재미있는 정보라도 발견하면 제일 먼저 알려드릴 수 있지 않겠어요?",
           DialogueId = 10102508,
           FacialId = {
             [1] = "200003:Smile01"
@@ -37641,7 +37620,7 @@ LookAt{_delay{2},LookAtDescription{"100001:n(200011)"}}
           VoiceName = "voice/$Locale$/story/1002/101030/194AB3EE"
         },
         [10103005] = {
-          ContentKR = "용맹한 외눈박이 용사, 냉혹한 아이스레이크의 주인, 초대 하수도 공작'으로 임명하겠어!",
+          ContentKR = "'용맹한 외눈박이 용사, 냉혹한 아이스레이크의 주인, 초대 하수도 공작'으로 임명하겠어!",
           DialogueId = 10103005,
           GUID = "194AB418",
           GuideFacialId = "Idle",
@@ -38606,7 +38585,7 @@ LookAt{LookAtDescription{"200003:n(100001)"}}
           VoiceName = "voice/$Locale$/story/1002/101034/194AF575"
         },
         [10103601] = {
-          ContentKR = "아스포델'은 남쪽에 있어.",
+          ContentKR = "'아스포델'은 남쪽에 있어.",
           DialogueId = 10103601,
           Duration = 3,
           GUID = "194B160A",
@@ -40429,7 +40408,7 @@ PlayAnimation{ActorId{100001},AnimationId{"Think_End"},Duration{1}}
           VoiceName = "voice/$Locale$/story/1002/101047/194BCBA8"
         },
         [10104709] = {
-          ContentKR = "온화한 녹색 옷의 마법사, 현명한 월석의 주재자, 초대 글로스터 광갱 대공'으로 임명하겠어!",
+          ContentKR = "'온화한 녹색 옷의 마법사, 현명한 월석의 주재자, 초대 글로스터 광갱 대공'으로 임명하겠어!",
           DialogueId = 10104709,
           Duration = 3,
           GUID = "194BCBD2",
@@ -40492,7 +40471,7 @@ PlayAnimation{ActorId{100001},AnimationId{"Think_End"},Duration{1}}
           VoiceName = "voice/$Locale$/story/1002/101048/194BDB14"
         },
         [10104803] = {
-          ContentKR = "월석 사냥꾼'이라... 꽤나 독특한 이름이네... 월석을 사냥하는 사람이라는 뜻인 건가?",
+          ContentKR = "'월석 사냥꾼'이라... 꽤나 독특한 이름이네... 월석을 사냥하는 사람이라는 뜻인 건가?",
           DialogueId = 10104803,
           Duration = 3,
           ExStoryInfo = "Player",
@@ -41760,7 +41739,7 @@ LookAt{_delay{0.5},LookAtDescription{"200006:n(200002)"}},
         },
         [10105441] = {
           Camera = "-245.439453,-114.015625,61.24707,0.001315,7.199019,57.799244,25.000002,100000.0,false,DoNotOverride,2.8",
-          ContentKR = "다이몬'은 아주 드물어. 그러니까 너희는 타고난 행운아인 셈이지!",
+          ContentKR = "'다이몬'은 아주 드물어. 그러니까 너희는 타고난 행운아인 셈이지!",
           DialogueId = 10105441,
           FinalCamera = "-242.505859,-115.867188,61.24707,0.001315,7.199019,57.799244,25.000002,100000.0,false,DoNotOverride,2.8",
           GUID = "194C4318",
@@ -44181,7 +44160,7 @@ PlayAnimation{_delay{0.5},ActorId{200021},AnimationId{"Explain01_Start"},Duratio
         [10106329] = {
           Camera = "123.56665,72.790039,133.77002,0.000115,0.599902,-138.799866,30.0,88.840363,false,Manual,2.0",
           CameraBlendCurve = "easeOutQuad",
-          ContentKR = "신분'. 휘페르보레아 제국에서 마음대로 다닐 수 있는 신분. 물론 보초탑 뒤 높은 내성은 제외야. 그 성문은 대단하신 분들만을 위한 거거든.",
+          ContentKR = "'신분'. 휘페르보레아 제국에서 마음대로 다닐 수 있는 신분. 물론 보초탑 뒤 높은 내성은 제외야. 그 성문은 대단하신 분들만을 위한 거거든.",
           DialogueId = 10106329,
           FacialId = {
             [1] = "200021:Confident01"
@@ -46866,7 +46845,7 @@ PlayAnimation{_delay{4},ActorId{100006},AnimationId{"Explain02_Start"},Duration{
         [10108019] = {
           Camera = "-44.418457,-154.999023,169.058594,0.000032,-19.399868,-78.186974,30.000002,78.537529,false,Manual,4.0",
           CameraBlendCurve = "easeInOutQuad",
-          ContentKR = "이틀 전'이라...",
+          ContentKR = "'이틀 전'이라...",
           DialogueId = 10108019,
           FinalCamera = "-40.415039,-174.143066,162.169922,0.00003,-19.399921,-78.187599,30.000002,58.681007,false,Manual,4.0",
           GUID = "194DEADE",
@@ -48390,7 +48369,7 @@ CameraMoveTo{_click{false},TargetPosition{"-135.689453,440.974365,100.123047,0.0
         },
         [10108905] = {
           Camera = "343.283203,18.456787,163.507812,0.000153,-2.399889,146.181274,50.0,197.162933,false,Manual,8.0",
-          ContentKR = "영면 프로젝트'... 이게 뭐야?",
+          ContentKR = "'영면 프로젝트'... 이게 뭐야?",
           DialogueId = 10108905,
           FinalCamera = "343.283203,18.456787,163.507812,0.000153,-2.199826,146.780563,53.0,197.162933,false,Manual,8.0",
           GUID = "194E7C3A",
@@ -48406,7 +48385,7 @@ CameraMoveTo{_click{false},TargetPosition{"-135.689453,440.974365,100.123047,0.0
         [10108906] = {
           Camera = "-52.710938,-804.46936,220.482422,0.000004,3.399733,0.199775,35.0,202.959305,false,Manual,2.8",
           CameraBlendCurve = "easeInQuad",
-          ContentKR = "...9월 3일, 캐롤리나 브라운... 10월 29일, 헌트 클라크...'",
+          ContentKR = "'...9월 3일, 캐롤리나 브라운... 10월 29일, 헌트 클라크...'",
           DialogueId = 10108906,
           FinalCamera = "-60.400391,-804.493286,220.005859,0.000004,3.399733,0.199775,35.0,202.959305,false,Manual,2.8",
           GUID = "194E7C64",
@@ -48427,7 +48406,7 @@ CameraMoveTo{_delay{3.2},TargetPosition{"-274.945312,-805.239624,232.541016,0.00
         [10108907] = {
           Camera = "-364.708984,-516.328125,8.154297,-5.000004,4.799792,57.199402,35.0,107.469704,false,Manual,5.0",
           CameraBlendCurve = "easeInOutQuad",
-          ContentKR = "...11월 25일, <W>프시케 프레이</>'",
+          ContentKR = "'...11월 25일, <W>프시케 프레이</>'",
           DialogueId = 10108907,
           FacialId = {
             [1] = "200021:Doubt01"
@@ -48470,7 +48449,7 @@ CameraMoveTo{_delay{3.2},TargetPosition{"-274.945312,-805.239624,232.541016,0.00
         },
         [10108910] = {
           Camera = "343.283203,18.456787,163.507812,0.000153,-2.399889,146.181274,50.0,197.162933,false,Manual,8.0",
-          ContentKR = "영면 프로젝트'... 이게 뭐야?",
+          ContentKR = "'영면 프로젝트'... 이게 뭐야?",
           DialogueId = 10108910,
           FinalCamera = "343.283203,18.456787,163.507812,0.000153,-2.199826,146.780563,53.0,197.162933,false,Manual,8.0",
           GUID = "10108910",
@@ -48486,7 +48465,7 @@ CameraMoveTo{_delay{3.2},TargetPosition{"-274.945312,-805.239624,232.541016,0.00
         [10108911] = {
           Camera = "-52.710938,-804.46936,220.482422,0.000004,3.399733,0.199775,35.0,202.959305,false,Manual,2.8",
           CameraBlendCurve = "easeInQuad",
-          ContentKR = "...9월 3일, 캐롤리나 브라운... 10월 29일, 헌트 클라크...'",
+          ContentKR = "'...9월 3일, 캐롤리나 브라운... 10월 29일, 헌트 클라크...'",
           DialogueId = 10108911,
           FinalCamera = "-60.400391,-804.493286,220.005859,0.000004,3.399733,0.199775,35.0,202.959305,false,Manual,2.8",
           GUID = "10108911",
@@ -48507,7 +48486,7 @@ CameraMoveTo{_delay{3.2},TargetPosition{"-274.945312,-805.239624,232.541016,0.00
         [10108912] = {
           Camera = "-364.708984,-516.328125,8.154297,-5.000004,4.799792,57.199402,35.0,107.469704,false,Manual,5.0",
           CameraBlendCurve = "easeInOutQuad",
-          ContentKR = "...11월 25일, <W>프시케 프레이</>'",
+          ContentKR = "'...11월 25일, <W>프시케 프레이</>'",
           DialogueId = 10108912,
           FacialId = {
             [1] = "200021:Doubt01"
@@ -48816,7 +48795,7 @@ PlayAnimation{_delay{6},ActorId{200021},AnimationId{"Angry01_Start"},Duration{0.
         },
         [10109009] = {
           Camera = "46.280029,5.457031,149.058594,0.000183,0.999714,-140.175919,45.0,163.680023,false,Manual,8.0",
-          ContentKR = "누군가를 잃었지만, 아무것도 할 수 없었다'는 건가?",
+          ContentKR = "'누군가를 잃었지만, 아무것도 할 수 없었다'는 건가?",
           DefaultLookAt = "TalkNpc",
           DialogueId = 10109009,
           FacialId = {
@@ -49731,7 +49710,7 @@ PlayAnimation{ActorId{200006},AnimationId{"Explain01_Start"},Duration{1}},
         [10109705] = {
           Camera = "330.355469,-963.607422,7.018555,-5.000005,1.19807,109.312668,50.0,1184.560059,false,Manual,3.0",
           CameraBlendCurve = "easeInOutQuad",
-          ContentKR = "사진기'라고 하는 거야. 엄청나게 귀한 물건이지.",
+          ContentKR = "'사진기'라고 하는 거야. 엄청나게 귀한 물건이지.",
           DialogueId = 10109705,
           FacialId = {
             [1] = "200006:Smile02",
@@ -51320,21 +51299,21 @@ PlayAnimation{_delay{4.2},ActorId{100001},AnimationId{"Talk03_Start"},Duration{1
           VoiceName = "voice/$Locale$/story/1002/101102/194F5716"
         },
         [10110243] = {
-          ContentKR = "전과'라고요?",
+          ContentKR = "'전과'라고요?",
           DialogueId = 10110243,
           GUID = "10110243",
           NextDialogue = 10110246,
           Subtitle = "Please elaborate on his \"history.\""
         },
         [10110244] = {
-          ContentKR = "본업'이요?",
+          ContentKR = "'본업'이요?",
           DialogueId = 10110244,
           GUID = "10110244.0",
           NextDialogue = 10110251,
           Subtitle = "Please elaborate on his \"proper job.\""
         },
         [10110245] = {
-          ContentKR = "그의 가족'은요?",
+          ContentKR = "'그의 가족'은요?",
           DialogueId = 10110245,
           GUID = "10110245.0",
           NextDialogue = 10110254,
@@ -53538,7 +53517,7 @@ PlayAnimation{_delay{4},ActorId{200006},AnimationId{"Explain02_End"},Duration{1}
           ExStoryInfo = "Player",
           GUID = "1950AA0A",
           SpeakNpcId = 100001,
-          Subtitle = "Stand up... Don't yield to this cold, unfeeling world!",
+          Subtitle = "Don't yield to this cold, unfeeling world!",
           VoiceName = "voice/$Locale$/story/1002/101123/1950AA0A"
         },
         [10112306] = {
@@ -54787,7 +54766,7 @@ PlayAnimation{ActorId{100001},AnimationId{"Angry01_Start"},Duration{1}}
         },
         [10113039] = {
           Camera = "-195.787109,-176.09375,124.895508,0.00054,1.402545,-144.774109,25.0,115.146286,false,Manual,22.0",
-          ContentKR = "해결했다'고요?",
+          ContentKR = "'해결했다'고요?",
           DialogueId = 10113039,
           FacialId = {
             [1] = "100304:None"
@@ -55922,6 +55901,7 @@ MoveTo{_delay{3.5},ActorId{200019},TargetPoint{"P_101107Boy"},MoveSpeed{75},Visi
           ContentKR = "(이미 아웃사이더와 스노우에게 오늘 있었던 일을 다 얘기했는데.)",
           DialogueId = 10115801,
           DisableMouth = 1,
+          Duration = 3,
           ExStoryInfo = "Player",
           GUID = "1952E79A",
           IsBlack = 1,
@@ -55934,6 +55914,7 @@ MoveTo{_delay{3.5},ActorId{200019},TargetPoint{"P_101107Boy"},MoveSpeed{75},Visi
           ContentKR = "(이제 할 수 있는 건, 약속 장소에서... 기다리는 것뿐이야.)",
           DialogueId = 10115802,
           DisableMouth = 1,
+          Duration = 3,
           ExStoryInfo = "Player",
           GUID = "1952E7C4",
           IsBlack = 1,
@@ -56358,7 +56339,7 @@ PlayFacial{_delay{6},ActorId{200011},FacialId{"Happy01"}}
           VoiceName = "voice/$Locale$/story/1002/101177/19541FD0"
         },
         [10117801] = {
-          ContentKR = "침묵의 탐정'이 마르제의 별명이었구나. 꽤 멋진데... 좀 짧아서 뭔가 아쉬운 느낌이야!",
+          ContentKR = "'침묵의 탐정'이 마르제의 별명이었구나. 꽤 멋진데... 좀 짧아서 뭔가 아쉬운 느낌이야!",
           DialogueId = 10117801,
           Duration = 3,
           GUID = "19542FBA",
@@ -60604,7 +60585,7 @@ SetLocation{ActorId{200076},TargetPoint{"P_101259Nifu2"},Visibility{"Hide"}}
           GUID = "195B3E0E",
           NextDialogue = 10128812,
           SpeakNpcId = 200095,
-          Subtitle = "Cause if I sober up, I'll have to work. And if I actually did my job right... well, most of you wouldn't last the week. So really — you ought to thank me. I'm slowly poisoning myself, just so the rest of you get to live a little longer.",
+          Subtitle = "'Cause if I sober up, I'll have to work. And if I actually did my job right... well, most of you wouldn't last the week. So really — you ought to thank me. I'm slowly poisoning myself, just so the rest of you get to live a little longer.",
           VoiceName = "voice/$Locale$/story/1002/101288/195B3E0E"
         },
         [10128812] = {
@@ -61175,7 +61156,7 @@ PlayAnimation{_delay{3.5},ActorId{200006},AnimationId{"Special_Start"},Duration{
           VoiceName = "voice/$Locale$/story/1002/101301/195BD020"
         },
         [10130201] = {
-          ContentKR = "그리움의 꽃'... 꽃집이잖아! 어?! 설마 데이트라도 하나?",
+          ContentKR = "'그리움의 꽃'... 꽃집이잖아! 어?! 설마 데이트라도 하나?",
           DialogueId = 10130201,
           GUID = "195BD021",
           NextDialogue = 10130202,
@@ -61712,7 +61693,7 @@ CameraMoveTo{TargetPosition{"50.077148,-329.630371,240.10498,0.000181,-16.799314
           VoiceName = "voice/$Locale$/story/1002/101313/195BD059"
         },
         [10131302] = {
-          ContentKR = "콰광'은 됐어. 필토이드는 이미 사라졌는걸.",
+          ContentKR = "'콰광'은 됐어. 필토이드는 이미 사라졌는걸.",
           DialogueId = 10131302,
           GUID = "195BD060",
           NextDialogue = 10131303,
@@ -120576,7 +120557,7 @@ I've witnessed deeds that daylight never sees, and not all are the work of "demo
           DialogueId = 50106001,
           GUID = "7D6F63CA",
           SpeakNpcId = 701062,
-          Subtitle = "Hmm... I wonder how long this tree's been standing here.",
+          Subtitle = "Hmm... I wonder how long this tree has been standing here.",
           VoiceName = "voice/$Locale$/env/Ver0101/7D6F63CA"
         },
         [50106101] = {
@@ -121069,7 +121050,7 @@ I've witnessed deeds that daylight never sees, and not all are the work of "demo
           Subtitle = "Boat rides! Ten coins a trip! Tickets here — line up! Once the boat's full, we're off!"
         },
         [50107078] = {
-          ContentKR = "차, 참시만요우... 초, 초큼 저네 산 〈화서 인사말 대백과〉를 차자 볼께요우.",
+          ContentKR = "자, 잠시만요... 조, 조금 전에 산... 〈화서 인사말 대백과〉를 차자 볼게요.",
           DialogueId = 50107078,
           GUID = "7D70147C",
           SpecialConversation = "外国人",
@@ -121477,7 +121458,7 @@ I've witnessed deeds that daylight never sees, and not all are the work of "demo
           ContentKR = "몇 번을 말해. 싱싱한 고창은 가져오자마자 말리라니까. 왜 매번 잊어버리는 거야?",
           DialogueId = 50107146,
           GUID = "7D701FA4",
-          Subtitle = "I've told you — fresh Sky Lilies go straight out to dry as soon as you bring them back. How do you forget every time?"
+          Subtitle = "I've told you — fresh Skylilies go straight out to dry as soon as you bring them back. How do you forget every time?"
         },
         [50107147] = {
           ContentKR = "낙생향을 만들 때는 재료를 곱게 갈아야 해. 혹시 이렇게 굵은 게 섞여 있으면, 한 번 더 갈아.",
@@ -121710,9 +121691,10 @@ I've witnessed deeds that daylight never sees, and not all are the work of "demo
           Subtitle = "The more I look, the stranger it feels..."
         },
         [50107225] = {
-          Content = "想当初咱这湖边多清净？",
+          ContentKR = "여긴 옛날이 한적하고 좋았는데!",
           DialogueId = 50107225,
-          GUID = "7D702C9A"
+          GUID = "7D702C9A",
+          Subtitle = "Remember when it used to be quiet round here?"
         },
         [50107226] = {
           ContentKR = "이 건강 체조만 제대로 따라하면...",
@@ -122027,7 +122009,7 @@ I've witnessed deeds that daylight never sees, and not all are the work of "demo
           Subtitle = "Boat rides! Ten coins a trip!"
         },
         [50107278] = {
-          ContentKR = "초큼 저네 산 〈화서 인사말 대백과〉를 차자 볼께요우.",
+          ContentKR = "조, 조금 전에 산... 〈화서 인사말 대백과〉를 찾아 볼게요.",
           DialogueId = 50107278,
           GUID = "7D70354C",
           Subtitle = "Let me check this guide to Huaxu greetings I just bought..."
@@ -122432,7 +122414,7 @@ I've witnessed deeds that daylight never sees, and not all are the work of "demo
           ContentKR = "싱싱한 고창은 가져오자마자 말리라니까.",
           DialogueId = 50107346,
           GUID = "7D704074",
-          Subtitle = "Fresh Sky Lilies go straight out to dry as soon as you bring them back."
+          Subtitle = "Fresh Skylilies go straight out to dry as soon as you bring them back."
         },
         [50107347] = {
           ContentKR = "낙생향을 만들 때는 재료를 곱게 갈아야 해.",
@@ -123233,7 +123215,7 @@ I've witnessed deeds that daylight never sees, and not all are the work of "demo
           bForbidSkipOptions = true
         },
         [51000501] = {
-          ContentKR = "부탁이에요……",
+          ContentKR = "제발 부탁할게...",
           DialogueId = 51000501,
           GUID = "7FACA5B2",
           NextOptions = {
@@ -126774,7 +126756,7 @@ PlayAnimation{ActorId{100001},AnimationId{"Explain02_Start"},Duration{2}}
           Subtitle = "(She turns away, her frail, stooped back towards you.)"
         },
         [51002311] = {
-          ContentKR = "...",
+          ContentKR = "......",
           DialogueId = 51002311,
           GUID = "7FADCEA6",
           SpeakNpcId = 700019,
@@ -157167,7 +157149,7 @@ MoveTo{_delay{3},ActorId{700324},TargetPoint{"P51104118White"},MoveSpeed{80},Vis
           GUID = "7FEF1CF2",
           NextDialogue = 51105014,
           SpeakNpcId = 700329,
-          Subtitle = "And — and! Mum and Dad haven't been home lately, but I keep finding Sky Lilies on the windowsill! I asked around, but nobody said they brought them..."
+          Subtitle = "And — and! Mum and Dad haven't been home lately, but I keep finding Skylilies on the windowsill! I asked around, but nobody said they brought them..."
         },
         [51105014] = {
           ContentKR = "이게 끝이 아니에요!",
@@ -157186,7 +157168,7 @@ MoveTo{_delay{3},ActorId{700324},TargetPoint{"P51104118White"},MoveSpeed{80},Vis
           Subtitle = "Like one time, I scraped my knee, and in the middle of the night I heard this soft \"fwooo, fwooo\" like the wind... Then when I woke up — someone had already put herb paste on my knee!"
         },
         [51105016] = {
-          ContentKR = "그리고 또 한 번은요. 아무 이유도 없이 갑자기 제 방에 귀뚜라미가 우글거렸던 적도 있어요. 전 벌레를 엄청 싫어하는데, 대체 누가 그런 장난을 친 걸까요...",
+          ContentKR = "그리고 또 한 번은요. 아무 이유도 없이 갑자기 제 방에 베짱이가 우글거렸던 적도 있어요. 전 벌레를 엄청 싫어하는데, 대체 누가 그런 장난을 친 걸까요...",
           DialogueId = 51105016,
           GUID = "7FEF1D70",
           NextDialogue = 51105017,
@@ -157833,7 +157815,7 @@ MoveTo{_delay{3},ActorId{700324},TargetPoint{"P51104118White"},MoveSpeed{80},Vis
           GUID = "7FEF5FB8",
           NextDialogue = 51105081,
           SpeakNpcId = 700331,
-          Subtitle = "I... I've been waiting so long... Pingping, the sun's come out — let's pick some Sky Lilies to put in the vase."
+          Subtitle = "I... I've been waiting so long... Pingping, the sun's come out — let's pick some Skylilies to put in the vase."
         },
         [51105081] = {
           Camera = "-132.632812,-149.719727,173.525391,0.00008,-14.200147,49.79491,35.0,100000.0,false,DoNotOverride,2.8",
@@ -157855,7 +157837,7 @@ MoveTo{_delay{3},ActorId{700324},TargetPoint{"P51104118White"},MoveSpeed{80},Vis
         },
         [51105083] = {
           Camera = "81.421875,127.240234,138.922852,0.000058,-3.399966,-141.004761,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentKR = "평아, 해가 뉘엿뉘엿 지는구나. 네가 좋아하는 귀뚜라미도 잡을 겸, 산책은 어떻니?",
+          ContentKR = "평아, 해가 뉘엿뉘엿 지는구나. 네가 좋아하는 베짱이도 잡을 겸, 산책은 어떻니?",
           DialogueId = 51105083,
           GUID = "7FEF6036",
           NextDialogue = 51105084,
@@ -157873,7 +157855,7 @@ MoveTo{_delay{3},ActorId{700324},TargetPoint{"P51104118White"},MoveSpeed{80},Vis
         },
         [51105085] = {
           Camera = "-49.523438,-67.03125,140.350586,0.000003,-9.599905,56.198746,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentKR = "이분은... 우리 할머니가 아니에요... 그리고 전 귀뚜라미 싫어한단 말이에요...",
+          ContentKR = "이분은... 우리 할머니가 아니에요... 그리고 전 베짱이 싫어한단 말이에요...",
           DialogueId = 51105085,
           FacialId = {
             [1] = "700329:Shy"
@@ -157888,7 +157870,7 @@ MoveTo{_delay{3},ActorId{700324},TargetPoint{"P51104118White"},MoveSpeed{80},Vis
         },
         [51105086] = {
           Camera = "-749.443359,813.657715,264.467773,0.000045,-6.800218,-50.603058,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentKR = "잠깐만, 그럼 너희 할머니는 귀뚜라미를 좋아하셨니?",
+          ContentKR = "잠깐만, 그럼 너희 할머니는 베짱이를 좋아하셨니?",
           DialogueId = 51105086,
           FacialId = {
             [1] = "100001:None"
@@ -157903,7 +157885,7 @@ MoveTo{_delay{3},ActorId{700324},TargetPoint{"P51104118White"},MoveSpeed{80},Vis
         },
         [51105087] = {
           Camera = "-1365.160156,-105.44873,321.923828,0.000059,-6.199885,0.00011,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentKR = "예전에 할머니가 귀뚜라미를 잡아서 절 놀리셨던 적은 있어요. 근데 제가 꺅꺅 소리 지르면서 무서워하니까, 그 뒤론 안 그러셨는데... 좋아하셨던 것 같긴 해요.",
+          ContentKR = "예전에 할머니가 베짱이를 잡아서 절 놀리셨던 적은 있어요. 근데 제가 꺅꺅 소리 지르면서 무서워하니까, 그 뒤론 안 그러셨는데... 좋아하셨던 것 같긴 해요.",
           DialogueId = 51105087,
           GUID = "7FEF60DE",
           NextDialogue = 51105088,
@@ -157956,7 +157938,7 @@ MoveTo{_delay{3},ActorId{700324},TargetPoint{"P51104118White"},MoveSpeed{80},Vis
           GUID = "7FEF6186",
           NextDialogue = 51105092,
           SpeakNpcId = 700331,
-          Subtitle = "I... I've been waiting so long... Pingping, the sun's come out — let's pick some Sky Lilies to put in the vase."
+          Subtitle = "I... I've been waiting so long... Pingping, the sun's come out — let's pick some Skylilies to put in the vase."
         },
         [51105092] = {
           Camera = "-93.003906,-42.301758,148.769531,0.000082,-13.200105,37.594505,35.0,100000.0,false,DoNotOverride,2.8",
@@ -158020,7 +158002,7 @@ MoveTo{_delay{3},ActorId{700324},TargetPoint{"P51104118White"},MoveSpeed{80},Vis
         },
         [51105097] = {
           Camera = "-49.523438,-67.03125,140.350586,0.000003,-9.599905,56.198746,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentKR = "...전 한 번도 뵌 적이 없지만, 고조할아버지는 할머니가 젊었을 때 돌아가셨다고 했어요. 그때 우리 가족은 호경으로 이사 간 지 얼마 안 돼서, 소식을 늦게 받는 바람에, 할머니는 고조할아버지의 마지막을 지키지 못하셨대요...",
+          ContentKR = "...전 한 번도 뵌 적이 없지만, 고조할아버지는 할머니가 젊었을 때 돌아가셨다고 했어요. 그때 할머니께선 호경으로 이사 간 지 얼마 안 돼서, 소식을 늦게 받는 바람에, 고조할아버지의 마지막을 지키지 못하셨대요...",
           DialogueId = 51105097,
           FacialId = {
             [1] = "700329:Sad01"
@@ -158028,7 +158010,7 @@ MoveTo{_delay{3},ActorId{700324},TargetPoint{"P51104118White"},MoveSpeed{80},Vis
           GUID = "7FEF6282",
           NextDialogue = 51105098,
           SpeakNpcId = 700329,
-          Subtitle = "I never met him... Nana said he passed away when she was young, when they'd just moved to Haojing. She didn't get the news in time because of the move... so she never got to say goodbye..."
+          Subtitle = "I never met him... Nana said he passed away when she was young, when she just moved to Haojing. She didn't get the news in time because of the move... so she never got to say goodbye..."
         },
         [51105098] = {
           Camera = "-8.46875,144.892578,124.898438,0.000009,2.799899,-77.20108,35.0,100000.0,false,DoNotOverride,2.8",
@@ -158096,7 +158078,7 @@ MoveTo{_delay{3},ActorId{700324},TargetPoint{"P51104118White"},MoveSpeed{80},Vis
         },
         [51105104] = {
           Camera = "-333.121094,-499.869141,192.47168,0.000051,-9.400239,56.996445,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentKR = "어쩌면 할머니는 별이 되어 고조할아버지와 만나서, 같이 귀뚜라미를 잡을 수 있길 바라셨을지도 몰라요. 그치만, 지금 두 분은 서로 닿을 수 없는 곳에 계시네요.",
+          ContentKR = "어쩌면 할머니는 별이 되어 고조할아버지와 만나서, 같이 베짱이를 잡을 수 있길 바라셨을지도 몰라요. 그치만, 지금 두 분은 서로 닿을 수 없는 곳에 계시네요.",
           DialogueId = 51105104,
           GUID = "7FEF63A8",
           NextDialogue = 51105105,
@@ -158134,7 +158116,7 @@ MoveTo{_delay{3},ActorId{700324},TargetPoint{"P51104118White"},MoveSpeed{80},Vis
         },
         [51105107] = {
           Camera = "-229.480469,380.837891,167.714844,0.000062,-7.000151,-60.003906,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentKR = "할아버지, 이거 보세요! 제가 귀뚜라미 잡아 왔어요!",
+          ContentKR = "할아버지, 이거 보세요! 제가 베짱이 잡아 왔어요!",
           DialogueId = 51105107,
           GUID = "7FEF6D02",
           NextDialogue = 51105108,
@@ -158169,12 +158151,12 @@ PlayAnimation{ActorId{700329},AnimationId{"Give"},Duration{2}},
         },
         [51105110] = {
           Camera = "-265.007812,-512.92627,1311.914062,0.000054,-24.599936,45.398846,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentKR = "앞으로는요, 혼자 귀뚜라미 안 잡으러 가셔도 돼요! 제가 할아버지랑 같이 고창꽃도 따러 가고, 같이 책도 읽고, 다른 재미있는 일들도 잔뜩 할게요...",
+          ContentKR = "앞으로는요, 혼자 베짱이 안 잡으러 가셔도 돼요! 제가 할아버지랑 같이 고창꽃도 따러 가고, 같이 책도 읽고, 다른 재미있는 일들도 잔뜩 할게요...",
           DialogueId = 51105110,
           GUID = "7FEF6D80",
           NextDialogue = 51105111,
           SpeakNpcId = 700329,
-          Subtitle = "From now on, you won't have to catch Loomhoppers all by yourself! I'll pick Sky Lilies with you, read with you — we'll do all sorts of things together!"
+          Subtitle = "From now on, you won't have to catch Loomhoppers all by yourself! I'll pick Skylilies with you, read with you — we'll do all sorts of things together!"
         },
         [51105111] = {
           Camera = "-333.121094,-499.869141,192.47168,0.000051,-9.400239,56.996445,35.0,100000.0,false,DoNotOverride,2.8",
@@ -158267,7 +158249,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
           Subtitle = "Thank you... both of you..."
         },
         [51105119] = {
-          ContentKR = "너 귀뚜라미 무서워하지 않았어?",
+          ContentKR = "너 베짱이 무서워하지 않았어?",
           DialogueId = 51105119,
           GUID = "7FEF6EFA",
           ImprPlusId = 1208,
@@ -158375,7 +158357,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
           DialogueId = 51105129,
           GUID = "7FEF709E",
           SpeakNpcId = 700361,
-          Subtitle = "Should I go pick some Sky Lilies to put in the vase?"
+          Subtitle = "Should I go pick some Skylilies to put in the vase?"
         },
         [51105201] = {
           ContentKR = "일 년에 딱 한 번뿐인 은촛불 축제가 막을 내리고, 들떴던 분위기도 다시 가라앉았다. 아스포델 역시 여느 때와 같은 활기를 되찾아야 했다.",
@@ -165491,7 +165473,7 @@ MoveTo{ActorId{701023},TargetPoint{"YuXian_Leave_Target"},MoveSpeed{100},Visibil
         },
         [51118043] = {
           Camera = "-82.615234,229.359375,122.754883,0.0,-0.800191,-69.000504,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentKR = "(나는 잠시 생각에 잠긴 후, 방문을 두드린다.)",
+          ContentKR = "(나는 잠시 생각에 잠긴 후, 방문을 두드렸다.)",
           DialogueId = 51118043,
           GUID = "7FF7F9EE",
           IsBlack = 1,
@@ -165693,7 +165675,7 @@ MoveTo{ActorId{701023},TargetPoint{"YuXian_Leave_Target"},MoveSpeed{100},Visibil
           Subtitle = "(When she learns the truth one day... may it not take that smile from her...)"
         },
         [51118062] = {
-          ContentKR = "(청아가 하품을 하며 걸어 나온다.)",
+          ContentKR = "(청아가 하품을 하며 걸어 나왔다.)",
           DialogueId = 51118062,
           GUID = "7FF7FD0C",
           IsBlack = 1,
@@ -167502,7 +167484,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
             [2] = 51125002
           },
           SpeakNpcId = 700365,
-          Subtitle = "What?! Miaoqu’s still out? How many days has he had the trots? Ugh... How are we supposed to shoot all those Mistwharf scenes...",
+          Subtitle = "What?! Miaoqu's still out? How many days has he had the trots? Ugh... How are we supposed to shoot all those Mistwharf scenes...",
           TalkActionId = {
             [1] = "700365:Angry01_Start"
           }
@@ -167539,7 +167521,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           DialogueId = 51125004,
           GUID = "7FFC6FF8",
           SpeakNpcId = 700365,
-          Subtitle = "We're putting on a show — well, a pretty new kind actually. It’s called \"Muovie\". Interested?"
+          Subtitle = "We're putting on a show — well, a pretty new kind actually. It's called \"Muovie\". Interested?"
         },
         [51125005] = {DialogueId = 51125005, GUID = "7FFC7022"},
         [51125006] = {
@@ -168133,7 +168115,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
             [2] = 51125069
           },
           SpeakNpcId = 700365,
-          Subtitle = "...What do you think, {性别：brother丨lass}? This isn't working. How about... we swap your roles?",
+          Subtitle = "...What do you think? This isn't working. How about... we swap your roles?",
           TalkActionId = {
             [1] = "100001:Think_Start"
           }
@@ -168465,7 +168447,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           },
           NextDialogue = 51125109,
           SpeakNpcId = 700365,
-          Subtitle = "Here {性别：brother丨lass}, your pay for today. You've earned it."
+          Subtitle = "Here {性别:brother|lass}, your pay for today. You've earned it."
         },
         [51125109] = {
           ContentKR = "(이 황당한 소동도 드디어 막을 내렸다. 진상은 바라던 대로 관객의 시선을 사로잡을 수 있을 것이다... 아마도.)",
@@ -168782,7 +168764,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           GUID = "7FFCC44C",
           NextDialogue = 51125519,
           SpeakNpcId = 701039,
-          Subtitle = "And some of the key incense materials — they've got strict limits. Take Sky Lilies, for instance: folks here burn a lot of it. If the Starweavers ship it all overseas, what are we supposed to do when we run short?"
+          Subtitle = "And some of the key incense materials — they've got strict limits. Take Skylilies, for instance: folks here burn a lot of it. If the Starweavers ship it all overseas, what are we supposed to do when we run short?"
         },
         [51125519] = {
           ContentKR = "들어오는 물건은 더 철저히 신고해야지. 그 휘페르보레아 제국인가 뭔가 하는 데서 칼이나 총 같은 게 화서에 마구 들어오면 난리 날 거 아냐!",
@@ -175950,7 +175932,7 @@ SEQ{ TurnTo{TurnToDescription{"701075:p(-20)"}}, LookAt{LookAtDescription{"70107
         },
         [51151047] = {
           Camera = "595.386719,637.626953,151.045898,0.000026,-1.464959,-133.471008,35.0,100000.0,false,DoNotOverride,22.0",
-          ContentKR = "행운아 루나가 준 정보대로라면... 여기가 바로 귀신이 나온다는 그 창고야!",
+          ContentKR = "전에 춘망이 한 이야기를 듣고, 행운아 루나한테 물어봤어. 행운아 루나 말이 맞다면... 귀신이 나오는 창고는 바로 여기일 거야!",
           DialogueId = 51151047,
           FacialId = {
             [1] = "200002:Confident01"
@@ -175959,7 +175941,7 @@ SEQ{ TurnTo{TurnToDescription{"701075:p(-20)"}}, LookAt{LookAtDescription{"70107
           GUID = "800D20A6",
           NextDialogue = 51151048,
           SpeakNpcId = 200002,
-          Subtitle = "If Lunocarp got her facts straight... this should be the haunted warehouse!",
+          Subtitle = "After listening to Wangchun and the others last time, I went and asked Lunocarp. If she got her facts straight... this should be the haunted warehouse!",
           TalkActionId = {
             [1] = "200002:Confident_Start"
           },
@@ -176257,7 +176239,7 @@ SEQ{ TurnTo{TurnToDescription{"701075:p(-20)"}}, LookAt{LookAtDescription{"70107
           }
         },
         [51151068] = {
-          ContentKR = "(안강한은 걸음아 날 살려라 하고 달아나더니, 순식간에 눈앞에서 사라져 버렸다...)",
+          ContentKR = "(장태산은 걸음아 날 살려라 하고 달아나더니, 순식간에 눈앞에서 사라져 버렸다...)",
           DialogueId = 51151068,
           GUID = "800D2418",
           IsBlack = 1,
@@ -176353,13 +176335,13 @@ SEQ{ TurnTo{TurnToDescription{"701075:p(-20)"}}, LookAt{LookAtDescription{"70107
           GUID = "800D2514",
           NextDialogue = 51151075,
           SpeakNpcId = 200002,
-          Subtitle = "These marks on the floor... sniff, sniff... smells nice. Is this incense? Why's it spilled everywhere — did the Wishen do this?",
+          Subtitle = "These marks on the floor... (sniff sniff)... smells nice. Is this incense? Why's it spilled everywhere — did the Wishen do this?",
           TalkActionId = {
             [1] = "200002:PointF_End"
           }
         },
         [51151075] = {
-          ContentKR = "이 무유생들한테 들키면, 아까 일꾼들 말대로 '귀신의 장난'에 휘말려서 정신 차려 보면 밖일 거야. 스노우, 조심해서 움직이자.",
+          ContentKR = "무유생들이 엄청 조심스러운 걸 보니까, 들키면 아주 곤란해지겠어. 스노우, 우리 조심해서 움직이자.",
           DialogueId = 51151075,
           FacialId = {
             [1] = "100001:Think01"
@@ -176369,7 +176351,7 @@ SEQ{ TurnTo{TurnToDescription{"701075:p(-20)"}}, LookAt{LookAtDescription{"70107
             [1] = "100001:n(200002)"
           },
           SpeakNpcId = 100001,
-          Subtitle = "If they notice us, we'll end up just like the dockhands — walking in circles until we wander straight back outside. We should move carefully."
+          Subtitle = "Given how cautious they are, getting spotted likely leads to serious trouble. We should move carefully."
         },
         [51151076] = {
           ContentKR = "스노우, 얼른 숙여.",
@@ -176422,13 +176404,13 @@ SEQ{ TurnTo{TurnToDescription{"701075:p(-20)"}}, LookAt{LookAtDescription{"70107
         },
         [51151081] = {
           Camera = "-595.896667,244.201172,274.973206,0.000002,-17.388731,-24.245804,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentKR = "(깜짝 놀라는 동작)",
+          ContentKR = "쮸?!",
           DialogueId = 51151081,
           GUID = "800D263A",
           NextDialogue = 51151125,
           Scripts = "PlayNormalSound{EventPath{\"event:/sfx/common/story/east/vo_hello\"},PlayAs2D{true}}",
           SpeakNpcId = 700377,
-          Subtitle = "(startled)"
+          Subtitle = "Chirp?"
         },
         [51151082] = {
           ContentKR = "신령님, 이 금강생이 호위하러 왔나이다! 어떤 쥐새끼 같은 놈들이 우리 신령님을 노리는 게냐!",
@@ -176456,13 +176438,13 @@ SetVisibility{ActorId{700376},Visibility{"Show"}}
           Subtitle = "Ha Shen shall stand with you as well!"
         },
         [51151084] = {
-          ContentKR = "(우쭐대는 놀라는 동작)",
+          ContentKR = "쮸쮸쮸~~~",
           DialogueId = 51151084,
           GUID = "800D26B8",
           NextDialogue = 51151126,
           Scripts = "PlayNormalSound{EventPath{\"event:/sfx/common/story/east/vo_happy\"},PlayAs2D{true}}",
           SpeakNpcId = 700377,
-          Subtitle = "(preens smugly)",
+          Subtitle = "Chirp, chirp~",
           TalkActionId = {
             [1] = "200002:Confident_End"
           }
@@ -176519,7 +176501,7 @@ SetVisibility{ActorId{700376},Visibility{"Show"}}
         },
         [51151089] = {
           Camera = "-595.896667,244.201172,274.973206,0.000002,-17.388731,-24.245804,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentKR = "(대기 동작)",
+          ContentKR = "쮸우~!",
           DialogueId = 51151089,
           FacialId = {
             [1] = "200002:None"
@@ -176533,7 +176515,7 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
 PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true}}
 }]],
           SpeakNpcId = 700377,
-          Subtitle = "(idle animation)",
+          Subtitle = "Chirp, chirp! Peep, peep!",
           TalkActionId = {
             [1] = "200002:Helpless01_End"
           }
@@ -176573,13 +176555,13 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
         },
         [51151093] = {
           Camera = "-595.896667,244.201172,274.973206,0.000002,-17.388731,-24.245804,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentKR = "(겁에 질린 동작)",
+          ContentKR = "츄우...",
           DialogueId = 51151093,
           GUID = "800D2832",
           NextDialogue = 51151128,
           Scripts = "PlayNormalSound{EventPath{\"event:/sfx/common/story/east/vo_upset\"},PlayAs2D{true}}",
           SpeakNpcId = 700377,
-          Subtitle = "(recoils in fright)",
+          Subtitle = "Peep...",
           TalkActionId = {
             [1] = "100001:Talk03ToTalkL_End"
           }
@@ -176625,7 +176607,7 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
           Subtitle = "So how did you end up in Huaxu?"
         },
         [51151098] = {
-          ContentKR = "(대기 동작)",
+          ContentKR = "쮸쮸~ 쮸쮸~~~",
           DialogueId = 51151098,
           GUID = "800D2904",
           NextDialogue = 51151099,
@@ -176635,7 +176617,7 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
 PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_happy"},PlayAs2D{true}}
 }]],
           SpeakNpcId = 700377,
-          Subtitle = "(idle animation)"
+          Subtitle = "Chirp, chirp~"
         },
         [51151099] = {
           ContentKR = "신령님께서, 원래 계시던 곳에서 좋은 향이 나길래 따라가 봤더니, 어느새 배를 타고 여기까지 오게 되셨다고 하신다...",
@@ -176664,7 +176646,7 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_happy"},PlayAs2D{true
           Subtitle = "Then why hog this place?"
         },
         [51151102] = {
-          ContentKR = "(대기 동작)",
+          ContentKR = "쮸우우우~!",
           DialogueId = 51151102,
           GUID = "800D29AC",
           NextDialogue = 51151103,
@@ -176675,7 +176657,7 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
 PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true}}
 }]],
           SpeakNpcId = 700377,
-          Subtitle = "(idle animation)"
+          Subtitle = "Chirp... Peep, peep, peep!"
         },
         [51151103] = {
           ContentKR = "신령님께서, 이곳에는 향긋한 향료가 있는 데다가, 낯선 이와 무시무시한 마령 사냥꾼도 없고, 무유생들이 신령님을 지켜 드리기 때문이라고 하신다.",
@@ -176745,7 +176727,7 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
       return {
         [51151108] = {
           Camera = "-595.896667,244.201172,274.973206,0.000002,-17.388731,-24.245804,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentKR = "(겁에 질린 동작) ......",
+          ContentKR = "냐... 냐...",
           DialogueId = 51151108,
           FacialId = {
             [1] = "100001:None"
@@ -176754,7 +176736,7 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
           NextDialogue = 51151109,
           Scripts = "PlayNormalSound{EventPath{\"event:/sfx/common/story/east/vo_upset\"},PlayAs2D{true}}",
           SpeakNpcId = 700377,
-          Subtitle = "(recoils in fright)",
+          Subtitle = "Chirp... Peep...",
           TalkActionId = {
             [1] = "100001:Talk03ToTalkL_End"
           }
@@ -176798,13 +176780,13 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
         },
         [51151112] = {
           Camera = "-595.896667,244.201172,274.973206,0.000002,-17.388731,-24.245804,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentKR = "(대기 동작)",
+          ContentKR = "냐하~",
           DialogueId = 51151112,
           GUID = "800D2B50",
           NextDialogue = 51151113,
           Scripts = "PlayNormalSound{EventPath{\"event:/sfx/common/story/east/vo_hello\"},PlayAs2D{true}}",
           SpeakNpcId = 700377,
-          Subtitle = "(idle animation)",
+          Subtitle = "Chirp~",
           TalkActionId = {
             [1] = "200002:Helpless01_End"
           }
@@ -176848,22 +176830,22 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
         },
         [51151116] = {
           Camera = "-257.016357,106.369873,179.233536,0.000001,-9.588553,-21.443916,35.0,100000.0,false,DoNotOverride,2.8",
-          ContentKR = "(망설이는 동작)",
+          ContentKR = "잉...",
           DialogueId = 51151116,
           GUID = "800D2BF8",
           NextDialogue = 51151117,
           Scripts = "PlayNormalSound{EventPath{\"event:/sfx/common/story/east/vo_upset\"},PlayAs2D{true}}",
           SpeakNpcId = 700377,
-          Subtitle = "(hesitant)"
+          Subtitle = "Peep..."
         },
         [51151117] = {
-          ContentKR = "(기뻐하는 동작)",
+          ContentKR = "나냐하!",
           DialogueId = 51151117,
           GUID = "800D2C22",
           NextDialogue = 51151118,
           Scripts = "PlayNormalSound{EventPath{\"event:/sfx/common/story/east/vo_happy\"},PlayAs2D{true}}",
           SpeakNpcId = 700377,
-          Subtitle = "(perks up)"
+          Subtitle = "Peep!"
         },
         [51151118] = {
           ContentKR = "우리랑 같이 갈 건가 봐~",
@@ -176905,12 +176887,12 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
           }
         },
         [51151121] = {
-          ContentKR = "(슬퍼하는 동작)",
+          ContentKR = "츄우...",
           DialogueId = 51151121,
           GUID = "800D2CCA",
           Scripts = "PlayNormalSound{EventPath{\"event:/sfx/common/story/east/vo_upset\"},PlayAs2D{true}}",
           SpeakNpcId = 700377,
-          Subtitle = "(droops sadly)"
+          Subtitle = "Peep, peep..."
         },
         [51151122] = {
           ContentKR = "(마령과 두 무유생은 서로 얼싸안고 울며, 흐를 리 없는 눈물을 닦아 주느라 바쁘다. 나는 한참 기다린 후에야, 두 무유생을 문밖으로 배웅해 줄 수 있었다...)",
@@ -176934,34 +176916,39 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
           Subtitle = "Little Minion, did you bring any Yum Treats? Go on — try feeding this Geniemon!"
         },
         [51151125] = {
-          Content = "（这只魔灵似乎对你们的到来看起来有些疑惑。）",
+          ContentKR = "(이 마령은 일행의 등장에 상당히 의아해하는 것 같다.)",
           DialogueId = 51151125,
           GUID = "800D263B",
-          NextDialogue = 51151082
+          NextDialogue = 51151082,
+          Subtitle = "(This Geniemon seems somewhat puzzled by your arrival.)"
         },
         [51151126] = {
-          Content = "（这只魔灵明显意识到了你们的来意，但因有无由生相助而显得十分得意。）",
+          ContentKR = "(마령은 일행이 찾아온 이유를 눈치챈 것 같지만, 무유생의 도움을 받고 있어 의기양양해 보인다.)",
           DialogueId = 51151126,
           GUID = "800D26B9",
-          NextDialogue = 51151085
+          NextDialogue = 51151085,
+          Subtitle = "(The Geniemon clearly understands your intentions but appears quite smug with the Wishen by its side.)"
         },
         [51151127] = {
-          Content = "（咿咿呀呀说了一大堆，完全听不懂……）",
+          ContentKR = "(마령이 한참을 웅얼거렸지만, 전혀 이해가 되지 않는다...)",
           DialogueId = 51151127,
           GUID = "800D278B",
-          NextDialogue = 51151090
+          NextDialogue = 51151090,
+          Subtitle = "(It babbles a great deal... completely incomprehensible...)"
         },
         [51151128] = {
-          Content = "(它似乎有些害怕？）",
+          ContentKR = "(뭔가를 두려워하는 것 같은데...)",
           DialogueId = 51151128,
           GUID = "800D2833",
-          NextDialogue = 51151094
+          NextDialogue = 51151094,
+          Subtitle = "(It seems a bit frightened?)"
         },
         [51151129] = {
-          Content = "是说百年春角落那间仓库吗？那里不是早就租给天岚先生做供货仓库了吗？为何现在过来提起？",
+          ContentKR = "백년춘 구석에 있는 그 창고? 거긴 예전부터 천람 씨한테 창고로 임대해 준 곳이잖아? 거기가 왜?",
           DialogueId = 51151129,
           GUID = "800D2D49",
-          SpeakNpcId = 700370
+          SpeakNpcId = 700370,
+          Subtitle = "You mean that warehouse over in the corner of EverSpring? Mr Tianlan rented it as a storehouse some time ago. Why bring it up now?"
         },
         [51151201] = {
           Camera = "368.707031,55.0,181.27832,0.0001,-12.598782,-171.164566,25.0,100000.0,false,DoNotOverride,2.8",
@@ -179016,12 +179003,12 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Subtitle = "The inner workings are... involved. I doubt you care for the finer points. Suffice it to say: Master Gongshang refined it for years, until it could move like a real Bi'an."
         },
         [51154012] = {
-          ContentKR = "폐안 같은 힘은 가지고 있지 않지만, 바로 그 부족함 때문에 독특한 아름다움이 있지.",
+          ContentKR = "\n\n아쉽게도, 공상 사부가 만든 '실사 폐안'들은 현형파의 고리타분한 이들을 불러들였지. 그들은 '불경'이니 '신성 모독'이니 하면서, 실사 폐안을 모조리 압수해갔네. 참으로 재미라곤 눈곱만치도 찾아볼 수 없는 자들이지.",
           DialogueId = 51154012,
           GUID = "800F06EF",
           NextDialogue = 51154024,
           SpeakNpcId = 701096,
-          Subtitle = "It doesn't have a true Bi'an's power, of course. Yet that very limitation gives it a charm of its own."
+          Subtitle = "Pity. The first few Mecha-Bi'an crafted by Master Gongshang attracted a gaggle of tedious old sticks from Xuanheng Sect. They droned on about \"blasphemy\" and \"disrespect\" before confiscating the lot. How dreary."
         },
         [51154013] = {
           ContentKR = "직접 타 보는 건 어떻겠나? 드넓은 화서를 두 다리로 걸어만 다니기엔 벅찰 테지. 앞으로 어딜 가든, 이 녀석이 든든한 이동 수단이 되어 줄 걸세.",
@@ -179060,15 +179047,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Subtitle = "You're not handing over something this good for nothing, are you?"
         },
         [51154017] = {
-          ContentKR = "내가 공짜로 준다고 하면, 냉큼 받을 생각인가? 세상에 공짜만큼 비싼 게 없다는 것쯤은 알고 있을 텐데.",
+          ContentKR = "후후, 내가 공짜로 준다고 하면, 냉큼 받을 생각인가? 세상에 공짜만큼 비싼 게 없다는 것쯤은 알고 있을 텐데.",
           DialogueId = 51154017,
           GUID = "800F07EA",
           NextDialogue = 51154018,
           SpeakNpcId = 701096,
-          Subtitle = "Naturally not. Nothing comes without a price. If I simply gave it to you, you would distrust it. And you'd be right to."
+          Subtitle = "Heh, nothing comes without a price. If I simply gave it to you, you would distrust it. And you'd be right to."
         },
         [51154018] = {
-          ContentKR = "안 돼, 시종! 공짜로 받으면 큰일 나! 저 사람한테 뭔가를 공짜로 받았다간 시종 이마가 홀딱 벗겨지고 말 거야!",
+          ContentKR = "응? 공짜에도 값을 매겨 팔다니, 역시 규선생은 쩨쩨한 사람이었구나. 역시 첫인상 그대로야!",
           DialogueId = 51154018,
           GUID = "800F0814",
           NextDialogue = 51154019,
@@ -179115,12 +179102,12 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Subtitle = "The gates of Haze Market will remain open to you."
         },
         [51154024] = {
-          ContentKR = "폐안 같은 힘은 가지고 있지 않지만, 바로 그 부족함 때문에 독특한 아름다움이 있지.",
+          ContentKR = "하지만 공상 사부는 실사 폐안을 각별히 아껴서, 거기서 포기하지 않고, 아예 검은 폐안의 모습으로 만들어 버렸다네. 향관들도 어쩔 수 없도록 말이지.",
           DialogueId = 51154024,
           GUID = "800F0718",
           NextDialogue = 51154013,
           SpeakNpcId = 701096,
-          Subtitle = "It doesn't have a true Bi'an's power, of course. Yet that very limitation gives it a charm of its own."
+          Subtitle = "Not that it stopped him, of course. Gongshang doted on his Mecha-Bi'an far too much to quit. So he simply made every new one look like a Sable Bi'an after that — left those incense wardens with nothing to gripe about."
         },
         [51155001] = {
           ContentKR = "시종! 시종! 방금 그거 들었어?!",
@@ -179139,7 +179126,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Subtitle = "Hear what?"
         },
         [51155003] = {
-          ContentKR = "초강력 폭죽'이라잖아!",
+          ContentKR = "'초강력 폭죽' 말이야!",
           DialogueId = 51155003,
           GUID = "800FA9AE",
           NextDialogue = 51155004,
@@ -179155,7 +179142,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Subtitle = "I just heard that black-market dealer on his comms. He told his lot they've brought in a whole batch of Finale Flare from Hyperborea. A whole batch!"
         },
         [51155005] = {
-          ContentKR = "기억 안 나? 월석 사냥꾼 의뢰 랭킹에서 제일 위험하고, 어렵고, 힘들기로 유명한 의뢰 중 하나가 포세이큰 동맹이 설치한 초위험 폭탄 '글로리' 해체하는 거잖아!",
+          ContentKR = "기억 안 나? 월석 사냥꾼 의뢰 랭킹에서 제일 위험하고, 어렵고, 힘들기로 유명한 의뢰 중 하나가 포세이큰 동맹이 설치한 초강력 폭탄 '글로리' 해체하는 거잖아!",
           DialogueId = 51155005,
           GUID = "800FAA02",
           NextDialogue = 51155006,
@@ -181270,39 +181257,51 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           VoiceName = "sfx/boss/Tuosi/vo_$Locale$_Skill08"
         },
         [60180001] = {
-          Content = "近吾者，必罹天劫！",
+          ContentKR = "가까이 오는 자는 천벌을 받을지어다!",
           DialogueId = 60180001,
           Duration = 3,
+          GUID = "9834E965",
+          Subtitle = "Draw nigh, and be smitten by divine ire!",
           VoiceName = "sfx/boss/Heilong/vo_$Locale$_BattleStart"
         },
         [60180002] = {
-          Content = "吼————",
+          ContentKR = "크억————!",
           DialogueId = 60180002,
           Duration = 3,
+          GUID = "9834E966",
+          Subtitle = "GRRRAAAUGH!",
           VoiceName = "sfx/boss/Heilong/vo_$Locale$_Condemn"
         },
         [60180003] = {
-          Content = "俱往矣……",
+          ContentKR = "끝나버렸구나...",
           DialogueId = 60180003,
           Duration = 3,
+          GUID = "9834E967",
+          Subtitle = "All... is naught.",
           VoiceName = "sfx/boss/Heilong/vo_$Locale$_BattleEnd"
         },
         [60180004] = {
-          Content = "晦暝临世。",
+          ContentKR = "진정한 암흑이 깨어난다.",
           DialogueId = 60180004,
           Duration = 4,
+          GUID = "9834E968",
+          Subtitle = "Behold... the world's eve falleth.",
           VoiceName = "sfx/boss/Heilong/vo_$Locale$_Skill05"
         },
         [60180005] = {
-          Content = "吼————",
+          ContentKR = "어둠 속 번개여 내리쳐라——!",
           DialogueId = 60180005,
           Duration = 5,
+          GUID = "9834E969",
+          Subtitle = "Heavens doth blacken, thunder rolls damnation!",
           VoiceName = "sfx/boss/Heilong/vo_$Locale$_Skill06"
         },
         [60180006] = {
-          Content = "曀曀其阴，虺虺其雷——",
+          ContentKR = "크아악————!",
           DialogueId = 60180006,
           Duration = 3,
+          GUID = "9834E970",
+          Subtitle = "ROOOAAAR—!",
           VoiceName = "sfx/boss/Heilong/vo_$Locale$_Skill07"
         },
         [60200101] = {
@@ -182415,7 +182414,7 @@ As a result, while Phoxene ore was mined to exhaustion, shattered, and refined i
           Subtitle = "The remains of an ancient automaton have long been stripped of their original function by the passage of time. Its parts now lie scattered across Mistwharf, many of them half-buried beneath overgrown vegetation."
         },
         [70016001] = {
-          ContentKR = "<H>은촛불 축제</>가 예정대로 갈레아 극장에서 열립니다. 참가자분들은 자신이 원하는 분장을 준비하시고 연기할 신분을 선택해 주세요.\n우리 함께 직업도, 종족도, 갈등도 내려놓고 여기에 모여 황제 폐하의 은총에 몸을 담그고 황제 폐하의 자비로움을 찬양합시다. 황제 폐하께 영광을!",
+          ContentKR = "<H>은촛불 축제</>가 예정대로 갈레아 극장에서 열립니다. 참가자분들은 자신이 원하는 분장을 준비하시고 연기할 신분을 선택해 주세요.\n\n우리 함께 직업도, 종족도, 갈등도 내려놓고 여기에 모여 황제 폐하의 은총에 몸을 담그고\n황제 폐하의 자비로움을 찬양합시다. 황제 폐하께 영광을!",
           DialogueId = 70016001,
           GUID = "AF47182A",
           Subtitle = [[
@@ -182423,7 +182422,7 @@ The Silvercandle Carnival will proceed as scheduled at Galea Theatre. Participan
 Let us set aside professions, races, and conflicts, and gather under the Emperor's grace. Together, we shall bask in His Majesty's benevolence and proclaim: All glory to our Emperor!]]
         },
         [70016002] = {
-          ContentKR = "두툼한 출석부, 스태프들마다의 하루 일과가 상세하게 기록되어 있다. 리허설 외, 식사와 취침, 심지어 화장실에 다녀온 것까지 전부 기록되어 있다.\n극단장이 독한 마음을 먹고 사람들을 극장 속에 ‘가둔’ 것인지, 아니면 극단장이 자신의 배우들을 보호하기 위해 어쩔 수 없이 그들의 일거수일투족을 지켜보는 것인지 알 수 없다.",
+          ContentKR = "두툼한 출석부, 스태프들마다의 하루 일과가 상세하게 기록되어 있다. 리허설 외, 식사와 취침, 심지어 화장실에 다녀온 것까지 전부 기록되어 있다.\n극단장이 독한 마음을 먹고 사람들을 극장 속에 '가둔' 것인지, 아니면 극단장이 자신의 배우들을 보호하기 위해 \n어쩔 수 없이 그들의 일거수일투족을 지켜보는 것인지 알 수 없다. ",
           DialogueId = 70016002,
           GUID = "AF471854",
           Subtitle = [[
@@ -182437,39 +182436,39 @@ It's hard to tell whether the director is ruthlessly "imprisoning" everyone in t
           Subtitle = "A medal forged entirely of pure gold. According to the accompanying commendation letter, this honour is reserved for soldiers whose contributions to the Empire are deemed exceptional beyond measure."
         },
         [70016004] = {
-          ContentKR = "잡동사니들 밑에 깔린 낡은 신문에는 오래 전의 비참한 사고가 기록되어 있다.\n\n<H>침식자는 매우 위험하니 겉모습에 속지 마세요!</>\n9월 24일, 본 시에서 매우 끔찍한 ‘침식’ 사건이 발생했습니다. 제6군단 방위대의 조사를 거쳐 얻어낸 결론은 다음과 같습니다.\n아이스레이크 시티 주민 페실 부부는 9월 13일 눈물의 호수 옆 도로변에서 로비 브라운이라는 청년을 우연히 만났습니다. 페실 부부는 중상을 입은 그를 집으로 데려가 돌보았습니다.\n그러나 로비 브라운은 제국의 잠재적 침식자에 대한 조사를 피해 도시 밖으로 도피한 침식자였고, 페실 부부의 도움을 받을 때 자신의 침식 흔적을 의도적으로 숨겼습니다. 10일 후, 비극이 발생했습니다. 브라운은 필토이드로 변하여 페실 부부를 포함한 아이스레이크 남쪽 구역 시민 수십 명을 살해했습니다. 제6군단 소속 아이스레이크 시티 방위대가 긴급 출동하여 이번 소란을 진압했습니다.\n이번 사태로 총 18명이 사망했고, 그중 3명은 솔라인 것으로 밝혀졌습니다. 그 외 34명이 다쳤습니다. 시민 여러분들, 명심해 주십시오. 신원불명의 카론을 함부로 수용해서는 안 됩니다. 침식자를 발견하게 되면 즉시 치안서에 신고해 주십시오. 그들은 하나도 빠짐없이, 영원히 인간의 적입니다. 의도적으로 침식자에게 협력하거나 침식자를 은폐하는 자는 <휘페르보레아 형사 법전>제 54조에 따라 사형에 처합니다.\n",
+          ContentKR = "잡동사니들 밑에 깔린 낡은 신문에는 오래 전의 비참한 사고가 기록되어 있다.",
           DialogueId = 70016004,
           GUID = "AF4718A8",
-          Subtitle = "Buried beneath a pile of old clutter, this yellowed newspaper recounts a tragic incident from years ago.\n\nFilthoids Are Exceptionally Dangerous — Do Not Be Fooled by Their Appearances!\nOn September 24th, an egregious Filthoid incident occurred in Icelake. Following an extensive investigation conducted by the 6th Legion's Escort Unit, the details of the tragedy have been confirmed:\nOn September 13th, local residents Mr and Mrs Fischer encountered a gravely injured young man named Robie Brown along the roadside at Lamenting Lake. Out of compassion, the Fischers took him into their home and cared for him.\nHowever, Robie Brown was a Deteriorator who had evaded the Empire's routine screenings and fled to the outskirts of the city. While receiving aid from the Fischers, he deliberately concealed his condition. Ten days later, Brown succumbed to his transformation, becoming a Filthoid and massacring dozens of citizens in Icelake's southern district, including Mr and Mrs Fischer. The 6th Legion's Escort intervened swiftly to suppress the chaos, but the damage was already done.\nThe incident left 18 dead (including 3 Solarians) and 34 others injured. Citizens are hereby reminded: Do not provide shelter to unidentified Charon individuals under any circumstances. If you suspect someone is a Deteriorator, report them to the Security Bureau immediately. They are and will always remain humanity's enemies. No exceptions. Be advised that harbouring Deteriorators or concealing their presence is a capital offence punishable by death under Article 54 of the Hyperborean Criminal Code."
+          Subtitle = "Buried beneath a pile of old clutter, this yellowed newspaper recounts a tragic incident from years ago."
         },
         [70016005] = {
-          ContentKR = "삐뚤어진 리본이 달린 소박한 선물 상자, 선물 상자 옆에는 제국 최고의 진통제 한 병, 그리고 무슨 이유에서인지 선물 상자에 넣지 못한 쪽지가 있다. 쪽지에는 ‘쾌유하시길 바랍니다.’라는 글귀가 적혀있다.",
+          ContentKR = "삐뚤어진 리본이 달린 소박한 선물 상자. 선물 상자 옆에는 제국 최고의 진통제 한 병, 그리고 무슨 이유에서인지 선물 상자에 넣지 못한 쪽지가 있다. 쪽지에는 \"쾌유하시길 바랍니다.\"라는 글귀가 적혀있다.",
           DialogueId = 70016005,
           GUID = "AF4718D2",
           Subtitle = "A plain gift box with a clumsily made ribbon bow, accompanied by a bottle of the Empire's finest painkiller. Next to it is an unsent note that reads: \"Get well soon.\""
         },
         [70016006] = {
           Camera = "-35.015625,151.625,225.035156,0.000034,-14.798724,-71.592674,35.0,100000.0,false,Manual,22.0",
-          ContentKR = "(내성 성벽 아래 남매가 함께 찍은 사진, 오른쪽 상단에는 ‘리듬 페실’과 ‘블루스 페실’ 두 이름이 적혀 있으며, 동생 블루스의 제6군단 합격을 축하하는 축사도 적혀 있다.)",
+          ContentKR = "(내성 성벽 아래 남매가 함께 찍은 사진. 오른쪽 상단에는 '리듬 페실'과 '블루스 페실' 두 이름이 적혀 있으며, 동생 블루스의 제6군단 합격을 축하하는 축사도 적혀 있다.)",
           DialogueId = 70016006,
           GUID = "AF4718FC",
-          Subtitle = "(A photo of a brother and sister standing under the inner city wall. Scribbled in the top-right corner are the names \"Rhythm Fischer\" and \"Blues Fischer,\" along with a congratulatory note celebrating Blues passing the 6th Legion's entrance tests.)"
+          Subtitle = "(A photo of a brother and sister standing under the inner city wall. Scribbled in the top-right corner are the names \"Rhythm Fischer\" and \"Blues Fischer,\" along with a congratulatory note celebrating Blues' passing the 6th Legion's entrance tests.)"
         },
         [70016007] = {
           Camera = "36.316406,112.411133,226.279297,0.00002,-31.198172,-98.592926,35.0,100000.0,false,Manual,22.0",
-          ContentKR = "(오랫동안 사용하지 않은 듯한 하모니카, 리듬의 취미라기보다는 어떤 선물에 가깝다.)",
+          ContentKR = "(오랫동안 사용하지 않은 듯한 하모니카. 리듬의 취미라기보다는 어떤 선물에 가깝다.)",
           DialogueId = 70016007,
           GUID = "AF471926",
           Subtitle = "(A harmonica that looks like it hasn't been used in a long time. Its condition suggests it's more of a cherished gift than a personal hobby of Rhythm's.)"
         },
         [70016008] = {
-          ContentKR = "석회벽의 한쪽 구석에는 나이프로 새겨진 글자가 빽빽하게 덮여있다. 어떤 글자는 아이의 필체처럼 삐뚤삐뚤하고, 어떤 글자는 어른의 필체처럼 성숙되어 있다. 글자들은 전부 같은 말이다:\n’더 이상 그 누구도 필토이드에게 죽는 걸 보고만 있지 않겠다.’",
+          ContentKR = "석회벽의 한쪽 구석에는 나이프로 새겨진 글자가 빽빽하게 덮여있다. 어떤 글자는 아이의 필체처럼 삐뚤삐뚤하고, 어떤 글자는 어른처럼 성숙한 필체로 쓰여 있다. 글자들은 전부 같은 말이다.\n\"더 이상 그 누구도 필토이드에게 죽는 걸 보고만 있지 않겠다.\"",
           DialogueId = 70016008,
           GUID = "AF471950",
           Subtitle = "One corner of the limewashed wall is covered in countless etched words. Some are crooked and childlike, while others are firm and deliberate, clearly written by an adult hand. All of them repeat the same sentence: \"I'll never let anyone die to Filthoids again.\""
         },
         [70016009] = {
-          ContentKR = "갈레아 극장 소품 목록\n\n여러 스태프들이 기록한 소품 준비 목록, 갈레가 극장에서 지난 반달 동안 사용한 모든 소품의 출입이 상세하게 기록 되어있다.\n\n10월 08일, 의상, 침낭 준비 완료. 확인자: 몬델리 (참고: 식량 비축이 부족하여, <H>남은 한 달간의 집중 리허설을 준비하기 위해선 누군가에게 부탁해서 한 번 더 들여야 한다</>)\n...\n11월 12일, 새로운 마이크 3개 교체 완료. 확인자: 그린델 (참고: 마이크 하나가 소리가 엄청 크다. 푸치 단장님이 그대로 괜찮다고, 바꾸지 말라고 하셨다.)\n11월 14일, 빨간 무대 커튼 교체 완료, 금빛 무대 커튼 창고로 반환 완료. 확인자: 벨\n...\n11월 24일, 잃어버렸던 가발 5개 회수 완료. 확인자: 벨 (참고: 탈의실 구석에 물건이 들어가면 찾기 어렵다. 오늘 가서 한번 치워야겠다.)\n11월 25일, 화관 15개 준비 완료, 승마화 9켤레 준비 완료. 확인자: 몬델리",
+          ContentKR = "갈레아 극장 소품 목록\n\n여러 스태프들이 기록한 소품 준비 목록, 갈레가 극장에서 지난 반달 동안 사용한 모든 소품의 출입이 상세하게 기록 되어있다.\n\n10월 08일, 의상, 침낭 준비 완료. 확인자: 몬델리 (참고: 식량 비축이 부족하여, <H>남은 한 달간의 집중 리허설을 준비하기 위해선 누군가에게 부탁해서 한 번 더 들여야 한다</>)\n......\n11월 12일, 새로운 마이크 3개 교체 완료. 확인자: 그린델 (참고: 마이크 하나가 소리가 엄청 크다. 푸치 단장님이 그대로 괜찮다고, 바꾸지 말라고 하셨다.)\n11월 14일, 빨간 무대 커튼 교체 완료, 금빛 무대 커튼 창고로 반환 완료. 확인자: 벨\n......\n11월 24일, 잃어버렸던 가발 5개 회수 완료. 확인자: 벨 (참고: 탈의실 구석에 물건이 들어가면 찾기 어렵다. 오늘 가서 한번 치워야겠다.)\n11월 25일, 화관 15개 준비 완료, 승마화 9켤레 준비 완료. 확인자: 몬델리",
           DialogueId = 70016009,
           GUID = "AF47197A",
           Subtitle = [[
@@ -182507,16 +182506,16 @@ A piece of fabric resembling theatre curtain material. Though old and worn, it i
 Upon closer inspection, it matches the fabric found at the crime scene.]]
         },
         [70016011] = {
-          ContentKR = "마네킹 모델은 비록 오래되었지만, 형태와 자세가 정성스럽게 디자인되어 단정하면서도 우아한 느낌을 풍긴다.",
+          ContentKR = "마네킹 모형은 비록 오래되었지만, 형태와 자세가 정성스럽게 디자인되어, 무대에서 한껏 연기를 펼치는 배우처럼 단정하면서도 우아한 느낌을 풍긴다.",
           DialogueId = 70016011,
           GUID = "AF4719CE",
-          Subtitle = "The mannequin, though worn with age, is posed and styled with care, exuding a graceful elegance."
+          Subtitle = "Though worn with age, the mannequin has clearly been posed and styled with care, exuding a graceful elegance, — like a performer lost in the moment on stage."
         },
         [70016012] = {
-          ContentKR = "주변에는 거대하고 어지러운 발톱 자국들이 가득하다. 설령 여기가 괴물의 은신처가 아니더라도, 분명 괴물이 자주 활동하는 장소임은 틀림없다. 13군단이 이곳을 봉쇄 구역으로 지정한 이유 중 하나일 것이다.",
+          ContentKR = "사방이 거대한 발톱 자국으로 가득하다. 극심한 고통과 광기 속에서 미친 듯이 할퀴며 남긴 흔적 같다.",
           DialogueId = 70016012,
           GUID = "AF4719F8",
-          Subtitle = "The walls are covered in massive, chaotic claw marks. Even if this isn't the monster's lair, it's certainly a place it frequents. This might explain why the 13th Legion sealed off the area."
+          Subtitle = "Huge claw marks slash across the walls — dense, erratic, as if left in a frenzy of agony and madness."
         },
         [70016013] = {
           ContentKR = "아이스레이크 시티 하수도 배치도의 일부로, 복잡하게 얽힌 관들이 각 구역을 연결하고 있다. 지도의 많은 구역에 \"방위대 허가 없이 출입 금지\"라는 표시가 돼 있다.",
@@ -182526,7 +182525,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]]
         },
         [70016101] = {
           Camera = "-15.959961,1605.265137,1322.948242,0.000059,-29.399687,-89.596825,20.875948,100000.0,false,Manual,22.0",
-          ContentKR = "(포탑 운송 장치의 전원을 복구하려면 네 개의 케이블을 연결해야 한다.)",
+          ContentKR = "(포대 운송 장치의 전원을 복구하려면 네 개의 케이블을 연결해야 한다.)",
           DialogueId = 70016101,
           GUID = "AF472892",
           NextDialogue = 70016102,
@@ -187642,46 +187641,53 @@ Upon closer inspection, it matches the fabric found at the crime scene.]]
           SpeakNpcId = 818090
         },
         [71008201] = {
-          Content = "（附近生长着不少山瑚，若是有空，不妨收集一些吧。）",
+          ContentKR = "(주변에 뫼산호가 꽤 많다. 시간 있을 때 수집해 두자.)",
           DialogueId = 71008201,
           GUID = "B1C2F6FA",
-          SpeakNpcId = 800006
+          SpeakNpcId = 800006,
+          Subtitle = "(Plenty of Coralstones grows nearby. You might gather some if you have a moment.)"
         },
         [71008202] = {
-          Content = "（收集山瑚的响动将周围的敌人吸引了过来，击退它们吧。）",
+          ContentKR = "(뫼산호를 수집할 때 기척을 내는 바람에 적들이 몰려들고 있다. 얼른 물리치자.)",
           DialogueId = 71008202,
           GUID = "B1C2F724",
-          SpeakNpcId = 800006
+          SpeakNpcId = 800006,
+          Subtitle = "(The commotion from gathering the Coralstone has drawn nearby enemies. Drive them off.)"
         },
         [71008203] = {
-          Content = "（虽然出现了一点小意外，但最后总算是顺利收集完了附近的所有山瑚。）",
+          ContentKR = "(돌발 상황이 있었지만, 어찌 됐든 주변의 뫼산호를 전부 수집했다.)",
           DialogueId = 71008203,
           GUID = "B1C2F74E",
-          SpeakNpcId = 800006
+          SpeakNpcId = 800006,
+          Subtitle = "(Though a minor mishap occurred, you've managed to collect all the nearby Coralstones in the end.)"
         },
         [71008204] = {
-          Content = "（成功收集完了附近的所有山瑚，是时候离开了。）",
+          ContentKR = "(주변의 뫼산호를 전부 수집했다. 이제 슬슬 돌아가자.)",
           DialogueId = 71008204,
           GUID = "B1C2F778",
-          SpeakNpcId = 800006
+          SpeakNpcId = 800006,
+          Subtitle = "(You've successfully gathered all the nearby Coralstones. Time to move on.)"
         },
         [71008301] = {
-          Content = "（坍塌的碎石挡住了前路，将它们清理掉吧。）",
+          ContentKR = "(무너진 돌무더기가 길을 막고 있다. 치워서 길을 열자.)",
           DialogueId = 71008301,
           GUID = "B1C30762",
-          SpeakNpcId = 800006
+          SpeakNpcId = 800006,
+          Subtitle = "(Collapsed rubble blocks the path ahead. Clear it away.)"
         },
         [71008302] = {
-          Content = "（清理碎石的响动将周围的敌人吸引了过来，击退它们吧。）",
+          ContentKR = "(돌무더기를 치울 때 기척을 내는 바람에 적들이 몰려들고 있다. 얼른 물리치자.)",
           DialogueId = 71008302,
           GUID = "B1C3078C",
-          SpeakNpcId = 800006
+          SpeakNpcId = 800006,
+          Subtitle = "(The noise from clearing the rubble has attracted nearby enemies. Drive them off.)"
         },
         [71008303] = {
-          Content = "（一番战斗后，你在周围找到了些能用的物资，将它们收好吧。）",
+          ContentKR = "(전투가 끝난 후, 주변에서 쓸만한 물자를 더 찾아냈다. 물자를 잘 챙겨두자.)",
           DialogueId = 71008303,
           GUID = "B1C307B6",
-          SpeakNpcId = 800006
+          SpeakNpcId = 800006,
+          Subtitle = "(After the skirmish, you've found some usable supplies in the area. Take them with you.)"
         },
         [72000000] = {
           ContentKR = "야옹...",
@@ -189934,7 +189940,7 @@ Untouched by worldly dust, its original clarity remains.]]
           GUID = "B47EEC34",
           NextDialogue = 72100403,
           SpeakNpcId = 830001,
-          Subtitle = "What's that scent drifting on the air? Sky Lily? Or perhaps Vernal Prime?"
+          Subtitle = "What's that scent drifting on the air? Skylily? Or perhaps Vernal Prime?"
         },
         [72100403] = {
           ContentKR = "내가 만든 향이 훨씬 나은데! 하지만 이젠 만들 수가 없으니 아쉽네.",
@@ -236834,7 +236840,7 @@ Hey, what's up with you, getting all riled up? Haha, you're a proper laugh!]],
           bForbidSkipOptions = true
         },
         [90070501] = {
-          ContentKR = "네가 어떤 과거와 결별했는지는 모르겠지만, 우리의 기운은 비슷해. 거리를 두는 게 좋아. 난 동류가 싫거든.",
+          ContentKR = "네가 어떤 과거와 결별했는지는 모르겠지만, 우린 비슷한 기운이 느껴져. 서로 거리를 두자, 난 동류가 싫거든.",
           DialogueId = 90070501,
           GUID = "E17B6792",
           SpeakNpcId = 84201,
@@ -236850,7 +236856,7 @@ Hey, what's up with you, getting all riled up? Haha, you're a proper laugh!]],
           VoiceName = "voice/$Locale$/char/Yuming/vo_companio_02"
         },
         [90070701] = {
-          ContentKR = "네 의지와 그만큼 견고한 법이 부럽군. 혹시 너도 자신을 의심했던 순간이 있었나?",
+          ContentKR = "네 의지와 그만큼 확고한 법이 부럽군. 혹시 너도 자신을 의심했던 순간이 있었나?",
           DialogueId = 90070701,
           GUID = "E17B8862",
           SpeakNpcId = 84201,
@@ -237682,7 +237688,7 @@ Good. Then let's also finalise the external campaign slogans, domestic case anal
           bForbidSkipOptions = true
         },
         [90100601] = {
-          Content = "我听说奥特赛德先生为菲娜的生日精心准备了很久。虽然嘴上不饶人，但你其实是个很体贴的人吧？下一次菲娜生日，我可以和你们一起为她准备惊喜吗？",
+          ContentKR = "아웃사이더 씨가 피나의 생일 준비에 신경을 많이 쓰셨다고 들었어요. 평소 말은 그렇게 해도 사실 배려심이 많으신 분인 거죠? 다음 피나 생일은 저도 함께 서프라이즈를 준비해도 될까요?",
           DialogueId = 90100601,
           GUID = "E18EB1DA",
           SpeakNpcId = 85301,
@@ -239195,7 +239201,7 @@ While a healer may ease affliction, defying fate is beyond us. I can offer a rem
           bForbidSkipOptions = true
         },
         [90160601] = {
-          Content = "你怎么也在这儿？身体不要紧吗，病没问题吗，饭吃过了吗？哎……有什么想要的给我说就好，没事还是不要瞎跑了。",
+          ContentKR = "왜 여기 있어? 몸은 괜찮아? 병은 나았고? 밥은? 휴... 필요한 거 있으면 나한테 말해. 아무 데나 돌아다니지 말고.",
           DialogueId = 90160601,
           GUID = "E1B5259A",
           SpeakNpcId = 85102,
@@ -241834,11 +241840,11 @@ How have you been lately?
           },
           NextDialogue = 90230302,
           SpeakNpcId = 84102,
-          Subtitle = "I am often entangled in the minutiae of business, rarely afforded the luxury of leisure.",
+          Subtitle = "I am often entangled in the minutiae of business and rarely afforded the luxury of leisure.",
           VoiceName = "voice/$Locale$/char/Zhiliu/vo_topic_03_1"
         },
         [90230302] = {
-          ContentKR = "만약 뜻밖에 반나절의 여유가 생긴다면... 아마 극을 보러 갈 것 같아. 화서의 설서나 평담, 제국의 오페라나 연극, 혹은 해외에서 새롭게 유행하는 영상극까지 모두 흥미가 있어.",
+          ContentKR = "만약 뜻밖에 반나절의 여유가 생긴다면... 아마 극을 보러 갈 것 같아. 화서의 이야기 공연, 제국의 오페라나 연극, 혹은 해외에서 새롭게 유행하는 영상극까지 모두 흥미가 있어.",
           DialogueId = 90230302,
           GUID = "E1E1D0EC",
           NextDialogue = 90230303,
@@ -241877,7 +241883,7 @@ How have you been lately?
           bForbidSkipOptions = true
         },
         [90230401] = {
-          ContentKR = "어? 이걸 눈치챘네. 그냥 오래된 버릇일 뿐이지.",
+          ContentKR = "어? 눈치챘네. 그냥 오래된 버릇일 뿐이야.",
           DialogueId = 90230401,
           GUID = "E1E1E12A",
           LookAt = {
@@ -241895,7 +241901,7 @@ How have you been lately?
           GUID = "E1E1E154",
           NextDialogue = 90230403,
           SpeakNpcId = 84102,
-          Subtitle = "When I was little, an accident left me stranded in a pitch-black ravine for three days and nights. It was then that this... tendency took root.",
+          Subtitle = "When I was little, an accident left me stranded in a pitch-black ravine for three days and nights. It was then this... tendency took root.",
           VoiceName = "voice/$Locale$/char/Zhiliu/vo_topic_04_2"
         },
         [90230403] = {
@@ -241921,7 +241927,7 @@ How have you been lately?
           GUID = "E1E1E1D2",
           NextDialogue = 90230406,
           SpeakNpcId = 84102,
-          Subtitle = "Heh... You're right. Weakness can be a merchant's undoing.",
+          Subtitle = "Heh... Correct. Weakness can be a merchant's undoing.",
           VoiceName = "voice/$Locale$/char/Zhiliu/vo_topic_04_4"
         },
         [90230406] = {
@@ -241933,7 +241939,7 @@ How have you been lately?
             [2] = 90230003
           },
           SpeakNpcId = 84102,
-          Subtitle = "I underwent rigorous training to suppress this fear. At the negotiating table, I can cast it aside with ease. But in your presence, there is no need for such pretences.",
+          Subtitle = "I underwent rigorous trainings to suppress this fear. At the negotiating table, I can cast it aside with ease. But in your presence, there's no need for such pretences.",
           VoiceName = "voice/$Locale$/char/Zhiliu/vo_topic_04_5",
           bForbidSkipOptions = true
         },
@@ -242901,7 +242907,7 @@ I can't take it anymore! Don't imitate me dwarf in the name of the Nine Gods I'l
           Subtitle = "?"
         },
         [101040051] = {
-          ContentKR = "그 일'이라뇨?",
+          ContentKR = "'그 일'이라뇨?",
           DialogueId = 101040051,
           GUID = "101040051.0",
           NextDialogue = 10104006,
@@ -243217,7 +243223,7 @@ I can't take it anymore! Don't imitate me dwarf in the name of the Nine Gods I'l
           Subtitle = "It's more than enough. Those are certainly meaningful habits."
         },
         [101073021] = {
-          ContentKR = "헌트'라고?",
+          ContentKR = "'헌트'라고?",
           DialogueId = 101073021,
           GUID = "101073021.0",
           NextDialogue = 10107303,
@@ -243231,7 +243237,7 @@ I can't take it anymore! Don't imitate me dwarf in the name of the Nine Gods I'l
           Subtitle = "I didn't mean to, you were loud..."
         },
         [101073051] = {
-          ContentKR = "헌트' 얘기를 하자. 그는 어디로 갔지?",
+          ContentKR = "'헌트' 얘기를 하자. 그는 어디로 갔지?",
           DialogueId = 101073051,
           GUID = "101073051",
           NextDialogue = 10107306,
@@ -243353,7 +243359,7 @@ I can't take it anymore! Don't imitate me dwarf in the name of the Nine Gods I'l
           Subtitle = "I refuse to accept this ending."
         },
         [101259211] = {
-          ContentKR = "안개의 바다'는 대체 어떤 곳이죠?",
+          ContentKR = "'안개의 바다'는 대체 어떤 곳이죠?",
           DialogueId = 101259211,
           GUID = "101259211",
           NextDialogue = 10125922,
@@ -245594,7 +245600,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           Subtitle = "(Hand over the journal retrieved from the pit)"
         },
         [510023042] = {
-          ContentKR = "(광산에서 발견한 일기 내용을 숨기다)",
+          ContentKR = "(광산에서 발견한 일기 내용을 숨긴다)",
           DialogueId = 510023042,
           GUID = "510023042.0",
           ImprPlusId = 1016,

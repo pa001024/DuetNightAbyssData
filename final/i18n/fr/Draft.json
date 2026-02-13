@@ -4369,7 +4369,7 @@
   },
   {
     "id": 154201,
-    "n": "强击·领界",
+    "n": "Frappe brutale · Limite",
     "r": 5,
     "v": "1.2",
     "t": "Mod",
@@ -4396,7 +4396,7 @@
   },
   {
     "id": 154202,
-    "n": "Éclair · Frappe-lumière",
+    "n": "Impact · Impact rapide",
     "r": 5,
     "v": "1.2",
     "t": "Mod",
@@ -4423,7 +4423,7 @@
   },
   {
     "id": 154203,
-    "n": "Impact · Impact rapide",
+    "n": "Éclair · Frappe-lumière",
     "r": 5,
     "v": "1.2",
     "t": "Mod",
@@ -4450,7 +4450,7 @@
   },
   {
     "id": 154204,
-    "n": "喘息",
+    "n": "Répit",
     "r": 5,
     "v": "1.2",
     "t": "Mod",
@@ -4477,7 +4477,7 @@
   },
   {
     "id": 154205,
-    "n": "狂热",
+    "n": "Ferveur",
     "r": 5,
     "v": "1.2",
     "t": "Mod",
@@ -4747,7 +4747,7 @@
   },
   {
     "id": 156143,
-    "n": "Ténacité",
+    "n": "Vigueur",
     "r": 5,
     "v": "1.2",
     "t": "Mod",
@@ -4768,7 +4768,7 @@
   },
   {
     "id": 156144,
-    "n": "Ailes · Inspiration · Ténacité",
+    "n": "Ailes · Inspiration · Vigueur",
     "r": 5,
     "v": "1.2",
     "t": "Mod",
@@ -4780,7 +4780,7 @@
     "x": [
       {
         "id": 56143,
-        "n": "Ténacité",
+        "n": "Vigueur",
         "c": 1,
         "t": "Mod"
       },
@@ -6944,7 +6944,7 @@
   },
   {
     "id": 320027,
-    "n": "Baiser de Filbert",
+    "n": "Œil de bouton – Menthe",
     "r": 4,
     "v": "1.0",
     "t": "CharAccessory",
@@ -6963,7 +6963,7 @@
   },
   {
     "id": 320028,
-    "n": "Masque d’Oni déchu",
+    "n": "Œil de bouton – Blanc sakura",
     "r": 4,
     "v": "1.0",
     "t": "CharAccessory",
@@ -7019,7 +7019,7 @@
   },
   {
     "id": 320030,
-    "n": "Bandeau de l’ascète – Caramel",
+    "n": "Masque d’Oni déchu",
     "r": 3,
     "v": "1.0",
     "t": "CharAccessory",
@@ -9337,7 +9337,7 @@
   },
   {
     "id": 1202003,
-    "n": "统御穿刺",
+    "n": "Percée dominante",
     "r": 5,
     "v": "1.2",
     "t": "Mod",
@@ -9364,7 +9364,7 @@
   },
   {
     "id": 1203001,
-    "n": "无锋剑意",
+    "n": "Âme tranchante",
     "r": 5,
     "v": "1.2",
     "t": "Mod",
@@ -9391,7 +9391,7 @@
   },
   {
     "id": 1204001,
-    "n": "穿花刺骨",
+    "n": "Floraison incisive",
     "r": 5,
     "v": "1.2",
     "t": "Mod",

@@ -181,7 +181,7 @@
   },
   {
     "id": 219,
-    "name": "齿轮",
+    "name": "Cog",
     "icon": "T_Activity_Autochess_Coin01",
     "rarity": 5
   },
@@ -193,13 +193,13 @@
   },
   {
     "id": 301,
-    "name": "Reputation Perks: Icelake",
+    "name": "Reputation Perk: Icelake",
     "icon": "T_Fame_0101",
     "rarity": 4
   },
   {
     "id": 302,
-    "name": "Reputation Perks: Mistwharf",
+    "name": "Reputation Perk: Mistwharf",
     "icon": "T_Fame_0201",
     "rarity": 4
   },
@@ -2221,43 +2221,43 @@
   },
   {
     "id": 30113,
-    "name": "中级染剂·棕色-浅【待包装】",
+    "name": "Intermediate Dye: Maple Syrup",
     "icon": "T_Dye_15",
     "rarity": 5
   },
   {
     "id": 30114,
-    "name": "中级染剂·棕色-深【待包装】",
+    "name": "Intermediate Dye: Cocoa",
     "icon": "T_Dye_15",
     "rarity": 5
   },
   {
     "id": 30115,
-    "name": "中级染剂·绿色-浅【待包装】",
+    "name": "Intermediate Dye: Verdant Wave",
     "icon": "T_Dye_14",
     "rarity": 5
   },
   {
     "id": 30116,
-    "name": "中级染剂·绿色-深【待包装】",
+    "name": "Intermediate Dye: Weathered Pine",
     "icon": "T_Dye_15",
     "rarity": 5
   },
   {
     "id": 30117,
-    "name": "高级染剂·粉色【待包装】",
+    "name": "Premium Dye: Peachglow",
     "icon": "T_Dye_13",
     "rarity": 5
   },
   {
     "id": 30118,
-    "name": "发型染剂·基础【待包装】",
+    "name": "Standard Hair Dye",
     "icon": "T_Dye_12",
     "rarity": 4
   },
   {
     "id": 30119,
-    "name": "发型染剂·黑白棕粉绿【待包装】",
+    "name": "Premium Hair Dye",
     "icon": "T_Dye_12",
     "rarity": 5
   },
@@ -4549,7 +4549,7 @@
   },
   {
     "id": 6100001,
-    "name": "生命符石",
+    "name": "HP Rune",
     "icon": "T_Activity_Autochess_Item02",
     "rarity": 3
   },
@@ -4621,7 +4621,7 @@
   },
   {
     "id": 6100013,
-    "name": "激怒符石",
+    "name": "Rune: Enrage",
     "icon": "T_Activity_Autochess_Item03",
     "rarity": 4
   },
@@ -4765,133 +4765,133 @@
   },
   {
     "id": 6100101,
-    "name": "疾冲秽兽机傀I",
+    "name": "Veloci Filthoid Mechapuppet Ⅰ",
     "icon": "T_Head_Gr_Jichong",
     "rarity": 1
   },
   {
     "id": 6100102,
-    "name": "游击秽兽机傀I",
+    "name": "Guerrilla Filthoid Mechapuppet Ⅰ",
     "icon": "T_Head_Gr_Youji",
     "rarity": 1
   },
   {
     "id": 6100103,
-    "name": "漂浮秽兽机傀I",
+    "name": "Floating Filthoid Mechapuppet Ⅰ",
     "icon": "T_Head_Gr_Piaofu",
     "rarity": 1
   },
   {
     "id": 6100104,
-    "name": "暴徒秽兽机傀I",
+    "name": "Savage Filthoid Mechapuppet Ⅰ",
     "icon": "T_Head_Gr_Baotu",
     "rarity": 1
   },
   {
     "id": 6100105,
-    "name": "笼草秽兽机傀I",
+    "name": "Nepenthe Filthoid Mechapuppet Ⅰ",
     "icon": "T_Head_GR_Longcao",
     "rarity": 1
   },
   {
     "id": 6100106,
-    "name": "疾冲秽兽机傀II",
+    "name": "Veloci Filthoid Mechapuppet Ⅱ",
     "icon": "T_Head_Gr_Jichong_C01",
     "rarity": 1
   },
   {
     "id": 6100107,
-    "name": "游击秽兽机傀II",
+    "name": "Guerrilla Filthoid Mechapuppet Ⅱ",
     "icon": "T_Head_Gr_Youji_C01",
     "rarity": 1
   },
   {
     "id": 6100108,
-    "name": "狙击列兵机傀I",
+    "name": "Sniper Private Mechapuppet Ⅰ",
     "icon": "T_Head_Jt_Juji",
     "rarity": 1
   },
   {
     "id": 6100109,
-    "name": "劈斩列兵机傀I",
+    "name": "Cleaver Private Mechapuppet Ⅰ",
     "icon": "T_Head_Jt_Pizhuo",
     "rarity": 1
   },
   {
     "id": 6100110,
-    "name": "远征列兵机傀I",
+    "name": "Expedition Private Mechapuppet Ⅰ",
     "icon": "T_Head_Jt_Ranger",
     "rarity": 1
   },
   {
     "id": 6100111,
-    "name": "精锐士官机傀I",
+    "name": "Elite Sergeant Mechapuppet Ⅰ",
     "icon": "T_Head_Jt_Zhihui",
     "rarity": 1
   },
   {
     "id": 6100112,
-    "name": "帝皇之仁机傀I",
+    "name": "Benevolent Tyrant Mechapuppet Ⅰ",
     "icon": "T_Head_Jt_Zhiren",
     "rarity": 1
   },
   {
     "id": 6100113,
-    "name": "远征列兵机傀II",
+    "name": "Expedition Private Mechapuppet Ⅱ",
     "icon": "T_Head_Jt_Ranger_C01",
     "rarity": 1
   },
   {
     "id": 6100114,
-    "name": "突击列兵机傀II",
+    "name": "Assault Private Mechapuppet Ⅱ",
     "icon": "T_Head_Jt_Tuji_C01",
     "rarity": 1
   },
   {
     "id": 6100115,
-    "name": "警戒机机傀I",
+    "name": "Patrol Drone Mechapuppet Ⅰ",
     "icon": "T_Jingjie",
     "rarity": 1
   },
   {
     "id": 6100116,
-    "name": "蒙恩的执事机傀I",
+    "name": "Blessed Deacon Mechapuppet Ⅰ",
     "icon": "T_Head_Jh_Zhishi",
     "rarity": 1
   },
   {
     "id": 6100117,
-    "name": "蒙恩的先锋机傀I",
+    "name": "Blessed Vanguard Mechapuppet Ⅰ",
     "icon": "T_Head_Jh_Xianfeng",
     "rarity": 1
   },
   {
     "id": 6100118,
-    "name": "蒙恩的神甫机傀I",
+    "name": "Blessed Priest Mechapuppet Ⅰ",
     "icon": "T_Head_Jh_Shenfu",
     "rarity": 1
   },
   {
     "id": 6100119,
-    "name": "野蜂利刃机傀I",
+    "name": "Wildswarm's Sword Mechapuppet Ⅰ",
     "icon": "T_Head_SQ_Yinxie",
     "rarity": 1
   },
   {
     "id": 6100120,
-    "name": "野蜂暗箭机傀I",
+    "name": "Wildswarm's Arrow Mechapuppet Ⅰ",
     "icon": "T_Head_SQ_Dufeng",
     "rarity": 1
   },
   {
     "id": 6100121,
-    "name": "野蜂密探机傀I",
+    "name": "Wildswarm's Agent Mechapuppet Ⅰ",
     "icon": "T_Head_SQ_Niaopao",
     "rarity": 1
   },
   {
     "id": 6100122,
-    "name": "对局积分",
+    "name": "Match Points",
     "icon": "T_Activity_Autochess_Coin02",
     "rarity": 5
   },

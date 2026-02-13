@@ -19,6 +19,8 @@ def decompile_file(unluac_path, input_file: str, output_file: str, relative_path
         output_file: 输出Lua文件路径
         relative_path: 相对路径，用于显示进度
     """
+    # if input_file.find("Datas") == -1:
+    #     return False
     try:
         cmd = [
             "java",

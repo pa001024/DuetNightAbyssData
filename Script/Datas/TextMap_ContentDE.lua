@@ -1978,7 +1978,7 @@ local Data = {
           TextMapId = "CharTrialEvent_Des_Saiqi"
         },
         CharTrialEvent_Des_Songlu = {
-          ContentDE = "Tapp-tapp-tapp – ein riesiges Tier, schwer beladen mit Nahrung, erscheint! Hab keine Angst: Sie wird dich nicht fressen, und du solltest auch nicht auf sie aus sein. Denn Truffel teilt ihre Gaben gerecht mit allen. Nimm dieses mit Marmelade bestrichene Brot an – heute stellt sich die kleine Kommissarin erneut gegen den Hunger der Welt.",
+          ContentDE = "Tapp-tapp-tapp – ein riesiges Tier, schwer beladen mit Nahrung, erscheint! Hab keine Angst: Sie wird dich nicht fressen, und du solltest auch nicht auf sie aus sein. Denn Truffle teilt ihre Gaben gerecht mit allen. Nimm dieses mit Marmelade bestrichene Brot an – heute stellt sich die kleine Kommissarin erneut gegen den Hunger der Welt.",
           TextMapId = "CharTrialEvent_Des_Songlu"
         },
         CharTrialEvent_Title = {
@@ -11130,7 +11130,7 @@ Mit der Luno-Abenteurerin als Richterin beginnt die zweite Runde!
   },
   {
     MinKey = "Event_Des_101005",
-    MaxKey = "GACHA_TYPE_WEAPON_UP",
+    MaxKey = "GACHA_TYPE_UP",
     Loader = function()
       return {
         Event_Des_101005 = {
@@ -11192,6 +11192,10 @@ Mit der Luno-Abenteurerin als Richterin beginnt die zweite Runde!
         Event_Des_103013 = {
           ContentDE = "Schließe die speziellen Nebenaufträge „Oh, Geniemon!“ und „Einführung: Verdeckte Mission“ ab, um Belohnungen zu erhalten, einschließlich „Gedankenfragment: Truffle und Filbert“.",
           TextMapId = "Event_Des_103013"
+        },
+        Event_Des_103016 = {
+          ContentDE = "1) Dans le Grand chaos des Méchapoupées, équipez les méchapoupées de runes de manière stratégique et déployez-les avec discernement afin de terminer les plateaux. En accomplissant les Réflexions stratégiques, vous obtiendrez de généreuses récompenses.\n2) Les Plateaux de Maître Gongshang se débloquent progressivement. Terminer un plateau permet de débloquer de nouvelles méchapoupées et runes dans les Réflexions stratégiques. Certains plateaux augmentent également la limite de rang une fois terminés.\n3) En terminant les Parties sans fin, vous obtenez des points de partie. L’accumulation de ces points permet d’augmenter votre rang. Chaque montée de rang octroie des récompenses via les Réflexions stratégiques et débloque des Parties sans fin plus exigeantes, offrant de meilleures récompenses de réussite. Vous disposez de 5 tentatives quotidiennes pour actualiser les Parties sans fin.\n4) En complétant les Réflexions de plateau, vous débloquez des méchapoupées et des runes plus puissantes, facilitant la progression dans des plateaux de difficulté supérieure. Pour consulter l’ensemble des objectifs disponibles, rendez-vous dans les Réflexions stratégiques.\n5) Cette saison du Grand chaos des Méchapoupées comprend 9 rangs, listés ci-dessous :\n- Initiation au jeu\n- Coups mesurés\n- Quête d’ouverture\n- Duel au milieu de partie\n- Coups inspirés\n- Assaut irrésistible\n- Maîtrise absolue\n- Au-delà du plateau\n- Grand maître",
+          TextMapId = "Event_Des_103016"
         },
         Event_Des_105102011 = {
           ContentDE = "In einer Mittsommernacht, unter funkelnden Sternen, ein Wald, in dem Stiefmütterchen und Schmetterlingsflügel einen zarten Reigen tanzten – ein Anblick, den sie nie zuvor gesehen hatte.",
@@ -11919,19 +11923,19 @@ Mit der Luno-Abenteurerin als Richterin beginnt die zweite Runde!
         GACHA_TYPE_UP = {
           ContentDE = "Figuren-Aktionschrono",
           TextMapId = "GACHA_TYPE_UP"
-        },
-        GACHA_TYPE_WEAPON_UP = {
-          ContentDE = "Waffen-Aktionschrono",
-          TextMapId = "GACHA_TYPE_WEAPON_UP"
         }
       }
     end
   },
   {
-    MinKey = "GACHA_Toast_Nona",
-    MaxKey = "Guide_Message_ModArchiveUI_3_Pad",
+    MinKey = "GACHA_TYPE_WEAPON_UP",
+    MaxKey = "Guide_Message_ModArchiveUI_3_PHONE",
     Loader = function()
       return {
+        GACHA_TYPE_WEAPON_UP = {
+          ContentDE = "Waffen-Aktionschrono",
+          TextMapId = "GACHA_TYPE_WEAPON_UP"
+        },
         GACHA_Toast_Nona = {
           ContentDE = "Keine verfügbaren Banner",
           TextMapId = "GACHA_Toast_Nona"
@@ -12729,19 +12733,19 @@ Stufe von [Sternenstreifendes Frostschwert] +2;
         Guide_Message_ModArchiveUI_3_PHONE = {
           ContentDE = "Tippe auf <H>Dämonenkeil-Kiste</>, um das entsprechende Menü zu öffnen.",
           TextMapId = "Guide_Message_ModArchiveUI_3_PHONE"
-        },
-        Guide_Message_ModArchiveUI_3_Pad = {
-          ContentDE = "Drücke, um das Menü <H>Dämonenkeil-Kiste</> zu öffnen.",
-          TextMapId = "Guide_Message_ModArchiveUI_3_Pad"
         }
       }
     end
   },
   {
-    MinKey = "Guide_Message_ModArchiveUI_4",
-    MaxKey = "HomePiano_GoBack",
+    MinKey = "Guide_Message_ModArchiveUI_3_Pad",
+    MaxKey = "HomePiano_AlreadySet",
     Loader = function()
       return {
+        Guide_Message_ModArchiveUI_3_Pad = {
+          ContentDE = "Drücke, um das Menü <H>Dämonenkeil-Kiste</> zu öffnen.",
+          TextMapId = "Guide_Message_ModArchiveUI_3_Pad"
+        },
         Guide_Message_ModArchiveUI_4 = {
           ContentDE = "<H>Dämonenkeil-Aufträge</> bieten verschiedene Sammelaufgaben.",
           TextMapId = "Guide_Message_ModArchiveUI_4"
@@ -13534,19 +13538,19 @@ Stufe von [Sternenstreifendes Frostschwert] +2;
         HomePiano_AlreadySet = {
           ContentDE = "Bereits verwendet",
           TextMapId = "HomePiano_AlreadySet"
-        },
-        HomePiano_GoBack = {
-          ContentDE = "Zurück",
-          TextMapId = "HomePiano_GoBack"
         }
       }
     end
   },
   {
-    MinKey = "HomePiano_HandlePlayback",
-    MaxKey = "MAINUIGUIDE_TITLE_SpecialSideStoryUI",
+    MinKey = "HomePiano_GoBack",
+    MaxKey = "MAINUIGUIDE_TITLE_ShanYe_1",
     Loader = function()
       return {
+        HomePiano_GoBack = {
+          ContentDE = "Zurück",
+          TextMapId = "HomePiano_GoBack"
+        },
         HomePiano_HandlePlayback = {
           ContentDE = "Abspielen",
           TextMapId = "HomePiano_HandlePlayback"
@@ -14327,19 +14331,19 @@ Stufe von [Sternenstreifendes Frostschwert] +2;
         MAINUIGUIDE_TITLE_ShanYe_1 = {
           ContentDE = "Doppelpropeller",
           TextMapId = "MAINUIGUIDE_TITLE_ShanYe_1"
-        },
-        MAINUIGUIDE_TITLE_SpecialSideStoryUI = {
-          ContentDE = "Besondere Nebenaufträge",
-          TextMapId = "MAINUIGUIDE_TITLE_SpecialSideStoryUI"
         }
       }
     end
   },
   {
-    MinKey = "MAINUIGUIDE_TITLE_SurvivalMini",
-    MaxKey = "MESSAGE_LOADING_48_PC",
+    MinKey = "MAINUIGUIDE_TITLE_SpecialSideStoryUI",
+    MaxKey = "MESSAGE_LOADING_47_PC",
     Loader = function()
       return {
+        MAINUIGUIDE_TITLE_SpecialSideStoryUI = {
+          ContentDE = "Besondere Nebenaufträge",
+          TextMapId = "MAINUIGUIDE_TITLE_SpecialSideStoryUI"
+        },
         MAINUIGUIDE_TITLE_SurvivalMini = {
           ContentDE = "Mission: Erkundung ∞",
           TextMapId = "MAINUIGUIDE_TITLE_SurvivalMini"
@@ -15132,19 +15136,19 @@ Stufe von [Sternenstreifendes Frostschwert] +2;
         MESSAGE_LOADING_47_PC = {
           ContentDE = "Denke über einen oder mehrere Hinweise nach, um neue Spuren zu entdecken. ",
           TextMapId = "MESSAGE_LOADING_47_PC"
-        },
-        MESSAGE_LOADING_48_PC = {
-          ContentDE = "Von Zeit zu Zeit gibt es dynamische Aufträge überall in der Welt. Wenn du dich einbringst, kann das die Ergebnisse beeinflussen. ",
-          TextMapId = "MESSAGE_LOADING_48_PC"
         }
       }
     end
   },
   {
-    MinKey = "MESSAGE_LOADING_49_PC",
-    MaxKey = "MOD_DESC_1922",
+    MinKey = "MESSAGE_LOADING_48_PC",
+    MaxKey = "MOD_DESC_1921",
     Loader = function()
       return {
+        MESSAGE_LOADING_48_PC = {
+          ContentDE = "Von Zeit zu Zeit gibt es dynamische Aufträge überall in der Welt. Wenn du dich einbringst, kann das die Ergebnisse beeinflussen. ",
+          TextMapId = "MESSAGE_LOADING_48_PC"
+        },
         MESSAGE_LOADING_49_PC = {
           ContentDE = "In Lunoeggys Shop gibt es eine große Auswahl an wertvollen Gegenständen. Schließe Lunoeggys Eindrucksprüfungen ab, um großzügige Belohnungen zu erhalten.",
           TextMapId = "MESSAGE_LOADING_49_PC"
@@ -15940,19 +15944,19 @@ Stufe von [Sternenstreifendes Frostschwert] +2;
         MOD_DESC_1921 = {
           ContentDE = "Die Angriffs-GES der beschworenen Objekte von Hydro-Figuren wird um #1 der Angriffs-GES der Nahkampfwaffe der Figur sowie die Fähigkeitsreichweite um #2 der Fähigkeitsreichweite der Figur erhöht.",
           TextMapId = "MOD_DESC_1921"
-        },
-        MOD_DESC_1922 = {
-          ContentDE = "Bei Einsatz der Fähigkeiten einer Hydro-Figur erhöht sich der ANG der Figur und ihrer Verbündeten für #1 Sek. um #2 des eigenen ANG (max. 275).",
-          TextMapId = "MOD_DESC_1922"
         }
       }
     end
   },
   {
-    MinKey = "MOD_DESC_1931",
-    MaxKey = "MOD_NAME_2301",
+    MinKey = "MOD_DESC_1922",
+    MaxKey = "MOD_NAME_2203",
     Loader = function()
       return {
+        MOD_DESC_1922 = {
+          ContentDE = "Bei Einsatz der Fähigkeiten einer Hydro-Figur erhöht sich der ANG der Figur und ihrer Verbündeten für #1 Sek. um #2 des eigenen ANG (max. 275).",
+          TextMapId = "MOD_DESC_1922"
+        },
         MOD_DESC_1931 = {
           ContentDE = "Wenn eine Pyro-Figur SCH verursacht, wird der ANG um #2 für #1 Sek. erhöht, bis zu #3-mal stapelbar.",
           TextMapId = "MOD_DESC_1931"
@@ -16748,19 +16752,19 @@ Stufe von [Sternenstreifendes Frostschwert] +2;
         MOD_NAME_2203 = {
           ContentDE = "Kontinuität · Fessel",
           TextMapId = "MOD_NAME_2203"
-        },
-        MOD_NAME_2301 = {
-          ContentDE = "Hingabe",
-          TextMapId = "MOD_NAME_2301"
         }
       }
     end
   },
   {
-    MinKey = "MOD_NAME_2302",
-    MaxKey = "Mail_Title_10036",
+    MinKey = "MOD_NAME_2301",
+    MaxKey = "Mail_Title_10034",
     Loader = function()
       return {
+        MOD_NAME_2301 = {
+          ContentDE = "Hingabe",
+          TextMapId = "MOD_NAME_2301"
+        },
         MOD_NAME_2302 = {
           ContentDE = "Schicksal",
           TextMapId = "MOD_NAME_2302"
@@ -17333,6 +17337,12 @@ Stufe von [Sternenstreifendes Frostschwert] +2;
           ContentDE = "{性别:Lieber Phoxjäger|Liebe Phoxjägerin}:\n Deine nicht abgeholten Aktionsbelohnungen wurden an dein Postfach gesendet. Viel Erfolg bei deinen zukünftigen Leveln.",
           TextMapId = "Mail_Content_100005"
         },
+        Mail_Content_10005 = {
+          ContentDE = [[
+
+ ]],
+          TextMapId = "Mail_Content_10005"
+        },
         Mail_Content_10007 = {
           ContentDE = "{性别:Lieber Phoxjäger|Liebe Phoxjägerin},\n \n Hier findest du die Details deiner Rückerstattung aus dem zweiten geschlossenen Betatest:\n • Gesamte Aufladung:<H>{TotalRechargeMoney} CNY</> → erstattet als <H>{Phoxene} Phoxenekeime</>\n • Rückerstattung für den Monatspass: <H>{MonthlyCard} Pass(e)</>\n \n Wir danken dir herzlich für deine Unterstützung von Duet Night Abyss.",
           TextMapId = "Mail_Content_10007"
@@ -17552,7 +17562,15 @@ Stufe von [Sternenstreifendes Frostschwert] +2;
         Mail_Title_10034 = {
           ContentDE = "Festlicher Dank (Ⅰ)",
           TextMapId = "Mail_Title_10034"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Mail_Title_10035",
+    MaxKey = "Message_Guide_HardBoss_5_Pad",
+    Loader = function()
+      return {
         Mail_Title_10035 = {
           ContentDE = "Festlicher Dank (Ⅱ)",
           TextMapId = "Mail_Title_10035"
@@ -17560,15 +17578,7 @@ Stufe von [Sternenstreifendes Frostschwert] +2;
         Mail_Title_10036 = {
           ContentDE = "Festlicher Dank (Ⅲ)",
           TextMapId = "Mail_Title_10036"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Mail_Title_10037",
-    MaxKey = "Message_Guide_Impression_3",
-    Loader = function()
-      return {
+        },
         Mail_Title_10037 = {
           ContentDE = "Tägliche Belohnungen der Verflochtenen Gedanken",
           TextMapId = "Mail_Title_10037"
@@ -17628,6 +17638,10 @@ Stufe von [Sternenstreifendes Frostschwert] +2;
         Mail_Title_10066 = {
           ContentDE = "Festlicher Dank: Eine kleine Aufmerksamkeit als Dank",
           TextMapId = "Mail_Title_10066"
+        },
+        Mail_Title_10067 = {
+          ContentDE = "Cadeau d’un ami",
+          TextMapId = "Mail_Title_10067"
         },
         Mail_Title_101001 = {
           ContentDE = "Nicht abgeholte Belohnungen für „%s“ nachträglich ausgegeben",
@@ -18353,7 +18367,15 @@ Stufe von [Sternenstreifendes Frostschwert] +2;
         Message_Guide_HardBoss_5_Pad = {
           ContentDE = "Drücke, um <H>Herausforderung starten</> auszuwählen, um dir Details über die Level anzusehen, und schnell zum Kampfplatz zu reisen.",
           TextMapId = "Message_Guide_HardBoss_5_Pad"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Message_Guide_Impression_1",
+    MaxKey = "Message_Guide_Treasure_2",
+    Loader = function()
+      return {
         Message_Guide_Impression_1 = {
           ContentDE = "Neugierig, wie uns der Rest von Atlasia wahrnimmt? Wirf einen Blick auf die „Eindrücke”, die wir aus verschiedenen Regionen erhalten!",
           TextMapId = "Message_Guide_Impression_1"
@@ -18365,15 +18387,7 @@ Stufe von [Sternenstreifendes Frostschwert] +2;
         Message_Guide_Impression_3 = {
           ContentDE = "Durch Erhöhungen verschiedener Eindrücke kannst du bei Interaktionen mehr Informationen erhalten oder Nebenaufträge aktivieren, die dir bei deinem Abenteuer helfen.",
           TextMapId = "Message_Guide_Impression_3"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Message_Guide_Impression_4",
-    MaxKey = "Message_Guide_WalnutShop_3_Pad",
-    Loader = function()
-      return {
+        },
         Message_Guide_Impression_4 = {
           ContentDE = "<H>Lunoeggy</> bewundert Figuren mit Persönlichkeit. Sobald du dir einen guten Ruf mit einer ausreichenden Eindruck-Punktzahl aufgebaut hast, kannst du <H>Lunoeggy</> in der Stadt zu einem Würfelspiel herausfordern, um vielleicht <H>Lunoeggys Belohnungen</> zu gewinnen!",
           TextMapId = "Message_Guide_Impression_4"
@@ -19161,7 +19175,15 @@ Stufe von [Sternenstreifendes Frostschwert] +2;
         Message_Guide_Treasure_2 = {
           ContentDE = "Folge den Hinweisen auf der Seite zum richtigen Ort – und ein versteckter Schatz kann dir gehören.",
           TextMapId = "Message_Guide_Treasure_2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Message_Guide_WalnutShop_1",
+    MaxKey = "ModArchive_Name_Char_1630",
+    Loader = function()
+      return {
         Message_Guide_WalnutShop_1 = {
           ContentDE = "Du kannst <H>Geheimbriefe</> im <H>Shop</> gegen <H>Geheimbrief-Hinweise</> tauschen.",
           TextMapId = "Message_Guide_WalnutShop_1"
@@ -19173,15 +19195,7 @@ Stufe von [Sternenstreifendes Frostschwert] +2;
         Message_Guide_WalnutShop_3_Pad = {
           ContentDE = "Drücke, um den <H>Shop</> zu öffnen.",
           TextMapId = "Message_Guide_WalnutShop_3_Pad"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Message_Guide_WalnutShop_4",
-    MaxKey = "ModArchive_Name_Char_1680",
-    Loader = function()
-      return {
+        },
         Message_Guide_WalnutShop_4 = {
           ContentDE = "Klicke auf <H>Gegenstände</>.",
           TextMapId = "Message_Guide_WalnutShop_4"
@@ -19969,7 +19983,15 @@ Stufe von [Sternenstreifendes Frostschwert] +2;
         ModArchive_Name_Char_1630 = {
           ContentDE = "Richter",
           TextMapId = "ModArchive_Name_Char_1630"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "ModArchive_Name_Char_1640",
+    MaxKey = "Mon_Guide_Strong_Thunder_01",
+    Loader = function()
+      return {
         ModArchive_Name_Char_1640 = {
           ContentDE = "Kukulkan: Anemo",
           TextMapId = "ModArchive_Name_Char_1640"
@@ -19981,15 +20003,7 @@ Stufe von [Sternenstreifendes Frostschwert] +2;
         ModArchive_Name_Char_1680 = {
           ContentDE = "Siren: Anemo",
           TextMapId = "ModArchive_Name_Char_1680"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "ModArchive_Name_Melee_2010",
-    MaxKey = "Mon_Guide_Title_6006001",
-    Loader = function()
-      return {
+        },
         ModArchive_Name_Melee_2010 = {
           ContentDE = "Zerberus Ⅰ",
           TextMapId = "ModArchive_Name_Melee_2010"
@@ -20777,7 +20791,15 @@ Stufe von [Sternenstreifendes Frostschwert] +2;
         Mon_Guide_Strong_Thunder_01 = {
           ContentDE = "Primarchen sind mächtige Wesen unter den feindlichen Kräften, die über einzigartige <Highlight>Primarchen-Fähigkeiten</> verfügen.\n <Highlight>Primarch – Donnerschlag</> entlässt periodisch [Elektro-Kugeln], die nach außen strahlen. [Elektro-Kugel]: Entlädt alle #1 s, Elektrizität und verursacht Schaden an nahe gelegenen feindlichen Zielen. Verschwindet, nachdem es getroffen wurde.",
           TextMapId = "Mon_Guide_Strong_Thunder_01"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Mon_Guide_Strong_Vampire_01",
+    MaxKey = "Mon_Name_6013024",
+    Loader = function()
+      return {
         Mon_Guide_Strong_Vampire_01 = {
           ContentDE = "Primarchen sind mächtige Wesen unter den feindlichen Kräften, die über einzigartige <Highlight>Primarchen-Fähigkeiten</> verfügen.\n <Highlight>Primarch – Blutbad</> stellt seine eigene LP wieder her, wenn es Schaden verursacht.",
           TextMapId = "Mon_Guide_Strong_Vampire_01"
@@ -20789,15 +20811,7 @@ Stufe von [Sternenstreifendes Frostschwert] +2;
         Mon_Guide_Title_6006001 = {
           ContentDE = "Träger-Filthoid",
           TextMapId = "Mon_Guide_Title_6006001"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Mon_Guide_Title_6007001",
-    MaxKey = "Mon_Name_6014001",
-    Loader = function()
-      return {
+        },
         Mon_Guide_Title_6007001 = {
           ContentDE = "Seelenbrennender Filthoid",
           TextMapId = "Mon_Guide_Title_6007001"
@@ -21585,7 +21599,15 @@ Stufe von [Sternenstreifendes Frostschwert] +2;
         Mon_Name_6013024 = {
           ContentDE = "Schwebe-Filthoid II – Phantom",
           TextMapId = "Mon_Name_6013024"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Mon_Name_6013201",
+    MaxKey = "Mon_Name_7012011",
+    Loader = function()
+      return {
         Mon_Name_6013201 = {
           ContentDE = "Schwebe-Filthoid II – Frostbiss & Schutz",
           TextMapId = "Mon_Name_6013201"
@@ -21597,15 +21619,7 @@ Stufe von [Sternenstreifendes Frostschwert] +2;
         Mon_Name_6014001 = {
           ContentDE = "Brutal-Filthoid II",
           TextMapId = "Mon_Name_6014001"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Mon_Name_6014011",
-    MaxKey = "Mon_Name_7012014",
-    Loader = function()
-      return {
+        },
         Mon_Name_6014011 = {
           ContentDE = "Brutal-Filthoid II – Frostbiss",
           TextMapId = "Mon_Name_6014011"
@@ -22393,7 +22407,15 @@ Stufe von [Sternenstreifendes Frostschwert] +2;
         Mon_Name_7012011 = {
           ContentDE = "Hackbeil-Soldat II – Frostbiss",
           TextMapId = "Mon_Name_7012011"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Mon_Name_7012012",
+    MaxKey = "Mon_Name_9001013",
+    Loader = function()
+      return {
         Mon_Name_7012012 = {
           ContentDE = "Hackbeil-Soldat II – Explosion",
           TextMapId = "Mon_Name_7012012"
@@ -22405,15 +22427,7 @@ Stufe von [Sternenstreifendes Frostschwert] +2;
         Mon_Name_7012014 = {
           ContentDE = "Hackbeil-Soldat II – Donnerschlag",
           TextMapId = "Mon_Name_7012014"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Mon_Name_7012015",
-    MaxKey = "Mon_Name_9001016",
-    Loader = function()
-      return {
+        },
         Mon_Name_7012015 = {
           ContentDE = "Hackbeil-Soldat II – Verfall",
           TextMapId = "Mon_Name_7012015"
@@ -23201,7 +23215,15 @@ Stufe von [Sternenstreifendes Frostschwert] +2;
         Mon_Name_9001013 = {
           ContentDE = "Wildschwarm-Schwert – Korrosion",
           TextMapId = "Mon_Name_9001013"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Mon_Name_9001014",
+    MaxKey = "Name_200203",
+    Loader = function()
+      return {
         Mon_Name_9001014 = {
           ContentDE = "Wildschwarm-Schwert – Donnerschlag",
           TextMapId = "Mon_Name_9001014"
@@ -23213,15 +23235,7 @@ Stufe von [Sternenstreifendes Frostschwert] +2;
         Mon_Name_9001016 = {
           ContentDE = "Wildschwarm-Schwert – Verwelkung",
           TextMapId = "Mon_Name_9001016"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Mon_Name_9001017",
-    MaxKey = "Name_200206",
-    Loader = function()
-      return {
+        },
         Mon_Name_9001017 = {
           ContentDE = "Wildschwarm-Schwert – Schutz",
           TextMapId = "Mon_Name_9001017"
@@ -24006,7 +24020,15 @@ Stufe von [Sternenstreifendes Frostschwert] +2;
         Name_200203 = {
           ContentDE = "Das verschwundene Mädchen",
           TextMapId = "Name_200203"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Name_200204",
+    MaxKey = "Pack_Des_Shop_Accessory_02",
+    Loader = function()
+      return {
         Name_200204 = {
           ContentDE = "Die Uhr tickt nicht mehr",
           TextMapId = "Name_200204"
@@ -24018,15 +24040,7 @@ Stufe von [Sternenstreifendes Frostschwert] +2;
         Name_200206 = {
           ContentDE = "Dieb der Inspiration",
           TextMapId = "Name_200206"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Name_200207",
-    MaxKey = "Pack_Des_Shop_Exp_02",
-    Loader = function()
-      return {
+        },
         Name_200207 = {
           ContentDE = "Für die, die du vermisst",
           TextMapId = "Name_200207"
@@ -24796,7 +24810,15 @@ Die Hauptfigur und die Kampfbegleiter erhalten:
         Pack_Des_Shop_Accessory_02 = {
           ContentDE = "Bundle „Verse auf der Saite: Karamell“/Bundle „Sonnenbeschienene Mühle: Karamell“ – nur ein Bundle ist zum Kauf verfügbar.",
           TextMapId = "Pack_Des_Shop_Accessory_02"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Pack_Des_Shop_Accessory_03",
+    MaxKey = "PaotaiGame_WeaponDes_4",
+    Loader = function()
+      return {
         Pack_Des_Shop_Accessory_03 = {
           ContentDE = "Bundle „Verse auf der Saite: Opakes Weiß“/Bundle „Verse auf der Saite: Opakes Weiß“ – nur ein Bundle ist zum Kauf verfügbar.",
           TextMapId = "Pack_Des_Shop_Accessory_03"
@@ -24808,15 +24830,7 @@ Die Hauptfigur und die Kampfbegleiter erhalten:
         Pack_Des_Shop_Exp_02 = {
           ContentDE = "Ein reguläres Versorgungspaket, das eine große Anzahl von Kampfutensilien enthält",
           TextMapId = "Pack_Des_Shop_Exp_02"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Pack_Des_Shop_Mod",
-    MaxKey = "PaotaiGame_WeaponName_3",
-    Loader = function()
-      return {
+        },
         Pack_Des_Shop_Mod = {
           ContentDE = "Ein reguläres Versorgungspaket, das eine große Anzahl von Karminkügelchen enthält",
           TextMapId = "Pack_Des_Shop_Mod"
@@ -25611,7 +25625,15 @@ Das Paket kann enthalten:
         PaotaiGame_WeaponDes_4 = {
           ContentDE = "Verändert die Angriffswirkung der Hochexplosivgeschosse, sodass sie einen Frosteffekt verursachen.",
           TextMapId = "PaotaiGame_WeaponDes_4"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "PaotaiGame_WeaponName_1",
+    MaxKey = "PartyTopic_Description_310203",
+    Loader = function()
+      return {
         PaotaiGame_WeaponName_1 = {
           ContentDE = "Abprallmodus",
           TextMapId = "PaotaiGame_WeaponName_1"
@@ -25623,15 +25645,7 @@ Das Paket kann enthalten:
         PaotaiGame_WeaponName_3 = {
           ContentDE = "Flammenmodus",
           TextMapId = "PaotaiGame_WeaponName_3"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "PaotaiGame_WeaponName_4",
-    MaxKey = "PartyTopic_Description_310302",
-    Loader = function()
-      return {
+        },
         PaotaiGame_WeaponName_4 = {
           ContentDE = "Frostmodus",
           TextMapId = "PaotaiGame_WeaponName_4"
@@ -26419,7 +26433,15 @@ Das Paket kann enthalten:
         PartyTopic_Description_310203 = {
           ContentDE = "*Schnipp, schnapp* Beschneide die Pflanzen – und mit ihnen auch die Sorgen.",
           TextMapId = "PartyTopic_Description_310203"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "PartyTopic_Description_310204",
+    MaxKey = "Pet_Name_4053",
+    Loader = function()
+      return {
         PartyTopic_Description_310204 = {
           ContentDE = "Ganz egal, wie geschickt du dich versteckst, das „Erwachsenwerden“ findet immer einen Weg, dich zu erwischen.",
           TextMapId = "PartyTopic_Description_310204"
@@ -26431,15 +26453,7 @@ Das Paket kann enthalten:
         PartyTopic_Description_310302 = {
           ContentDE = "Ein unerwarteter Besuch, ein konfliktreiches Gespräch.",
           TextMapId = "PartyTopic_Description_310302"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "PartyTopic_Description_310303",
-    MaxKey = "Pet_Name_4062",
-    Loader = function()
-      return {
+        },
         PartyTopic_Description_310303 = {
           ContentDE = "Sie sind vielleicht Erzfeinde, aber auch untrennbare Hälften desselben Ganzen.",
           TextMapId = "PartyTopic_Description_310303"
@@ -27221,7 +27235,15 @@ Das Paket kann enthalten:
         Pet_Name_4053 = {
           ContentDE = "Glänzender Wankelpilz",
           TextMapId = "Pet_Name_4053"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Pet_Name_406",
+    MaxKey = "QuestDesc_10020109",
+    Loader = function()
+      return {
         Pet_Name_406 = {
           ContentDE = "Lumi",
           TextMapId = "Pet_Name_406"
@@ -27233,15 +27255,7 @@ Das Paket kann enthalten:
         Pet_Name_4062 = {
           ContentDE = "Leidenschaftliches Lumi",
           TextMapId = "Pet_Name_4062"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Pet_Name_4063",
-    MaxKey = "QuestDesc_10020112",
-    Loader = function()
-      return {
+        },
         Pet_Name_4063 = {
           ContentDE = "Glänzendes Lumi",
           TextMapId = "Pet_Name_4063"
@@ -27579,11 +27593,11 @@ Das Paket kann enthalten:
           TextMapId = "PhantomTalk_1503_Chest"
         },
         PhantomTalk_160101_Chest = {
-          ContentDE = "Nun, was für eine angenehme Überraschung.",
+          ContentDE = "Nicht schlecht, eine unerwartete Freude entdeckt.",
           TextMapId = "PhantomTalk_160101_Chest"
         },
         PhantomTalk_1601_Chest = {
-          ContentDE = "Nun, was für eine angenehme Überraschung.",
+          ContentDE = "Nicht schlecht, eine unerwartete Freude entdeckt.",
           TextMapId = "PhantomTalk_1601_Chest"
         },
         PhantomTalk_1801_Chest = {
@@ -28029,7 +28043,15 @@ Das Paket kann enthalten:
         QuestDesc_10020109 = {
           ContentDE = "Henrik, der Besitzer von Hypnos’ Haus, ist ein nachdenklicher und zurückhaltender Mann.\n Nachdem ihn ein beherztes junges Mädchen überredet hat, bietet er dir widerwillig eine Bleibe für die Nacht an.\n Es wird Zeit, das Haus aufzusuchen, von dem das Mädchen erzählt hat.",
           TextMapId = "QuestDesc_10020109"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "QuestDesc_10020110",
+    MaxKey = "QuestDesc_1003plus32",
+    Loader = function()
+      return {
         QuestDesc_10020110 = {
           ContentDE = "Ein seltener Moment der Ruhe. Es ist Zeit, deine drängenden Fragen zu klären und einen Überblick über die aktuelle Situation zu bekommen.",
           TextMapId = "QuestDesc_10020110"
@@ -28041,15 +28063,7 @@ Das Paket kann enthalten:
         QuestDesc_10020112 = {
           ContentDE = "Bevor du den Auftrag, Berenica zu finden, antrittst, musst du etwas Geld besorgen und einen Reisepass erwerben.\n Psyche verrät dir, dass du in der von Camilla betriebenen Taverne „Die Asphodel“ Bargeld durch Aufträge verdienen kannst – ganz ohne Reisepass.",
           TextMapId = "QuestDesc_10020112"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "QuestDesc_10020201",
-    MaxKey = "QuestDesc_1003plus35",
-    Loader = function()
-      return {
+        },
         QuestDesc_10020201 = {
           ContentDE = "Bevor du den Auftrag, Berenica zu finden, antrittst, musst du etwas Geld besorgen und einen Reisepass erwerben.\n Psyche verrät dir, dass du in der von Camilla betriebenen Taverne „Die Asphodel“ Bargeld durch Aufträge verdienen kannst – ganz ohne Reisepass.",
           TextMapId = "QuestDesc_10020201"
@@ -28849,7 +28863,15 @@ Unter dem furchterregenden Leichnam des riesigen Filthoid liegt ein Edelstein, d
         QuestDesc_1003plus32 = {
           ContentDE = "Nach einer kurzen Suche findest du in der Nähe des Eingangsbereichs nichts Auffälliges. Geh weiter hinein und sprich mit dem Personal des Galea-Theaters.",
           TextMapId = "QuestDesc_1003plus32"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "QuestDesc_1003plus33",
+    MaxKey = "QuestName_10030602",
+    Loader = function()
+      return {
         QuestDesc_1003plus33 = {
           ContentDE = "Den Hilferufen folgend findest du den zweiten Eingeschlossenen. Finde einen Weg, ihn zu befreien.",
           TextMapId = "QuestDesc_1003plus33"
@@ -28861,15 +28883,7 @@ Unter dem furchterregenden Leichnam des riesigen Filthoid liegt ein Edelstein, d
         QuestDesc_1003plus35 = {
           ContentDE = "Als du Clive triffst, vertreibt er bereits Schneewölfe in der Nähe des Abgabepunkts. Hilf ihm, das Gebiet zu sichern, und warte gemeinsam auf das Lieferteam.",
           TextMapId = "QuestDesc_1003plus35"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "QuestDesc_400101",
-    MaxKey = "QuestName_1003plus01",
-    Loader = function()
-      return {
+        },
         QuestDesc_400101 = {
           ContentDE = "Sammle Filthoid-Panzer für Zhiliu",
           TextMapId = "QuestDesc_400101"
@@ -29657,7 +29671,15 @@ Unter dem furchterregenden Leichnam des riesigen Filthoid liegt ein Edelstein, d
         QuestName_10030602 = {
           ContentDE = "Gehe zum Galea-Theater",
           TextMapId = "QuestName_10030602"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "QuestName_10030603",
+    MaxKey = "READ_NAME_2000038",
+    Loader = function()
+      return {
         QuestName_10030603 = {
           ContentDE = "Sprich mit Rhythm",
           TextMapId = "QuestName_10030603"
@@ -29669,15 +29691,7 @@ Unter dem furchterregenden Leichnam des riesigen Filthoid liegt ein Edelstein, d
         QuestName_1003plus01 = {
           ContentDE = "Der Schlaf will dir nicht kommen. Mach einen Spaziergang draußen.",
           TextMapId = "QuestName_1003plus01"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "QuestName_1003plus02",
-    MaxKey = "READ_NAME_2000041",
-    Loader = function()
-      return {
+        },
         QuestName_1003plus02 = {
           ContentDE = "Sprich mit Rhythm",
           TextMapId = "QuestName_1003plus02"
@@ -30465,7 +30479,15 @@ Unter dem furchterregenden Leichnam des riesigen Filthoid liegt ein Edelstein, d
         READ_NAME_2000038 = {
           ContentDE = "Mahnung",
           TextMapId = "READ_NAME_2000038"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "READ_NAME_2000039",
+    MaxKey = "READ_TEXT_20620",
+    Loader = function()
+      return {
         READ_NAME_2000039 = {
           ContentDE = "Tranketikett",
           TextMapId = "READ_NAME_2000039"
@@ -30477,15 +30499,7 @@ Unter dem furchterregenden Leichnam des riesigen Filthoid liegt ein Edelstein, d
         READ_NAME_2000041 = {
           ContentDE = "Psyches Akte",
           TextMapId = "READ_NAME_2000041"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "READ_NAME_2000042",
-    MaxKey = "READ_TEXT_20630",
-    Loader = function()
-      return {
+        },
         READ_NAME_2000042 = {
           ContentDE = "Elisa Taylors Akte",
           TextMapId = "READ_NAME_2000042"
@@ -31273,7 +31287,15 @@ Unter dem furchterregenden Leichnam des riesigen Filthoid liegt ein Edelstein, d
         READ_TEXT_20620 = {
           ContentDE = "„Die Festung ist nicht mehr zu halten ... Hört nicht blind auf den Befehl und bleibt nicht dumm am Platz, nur um hier zu sterben. Ihr seid keine offiziell registrierten Soldaten, euer Verschwinden fällt niemandem auf.\n <H>In der Nähe des Luftschiffs</> liegen Ersatzvorräte bereit. Nehmt euch, was ihr braucht, und dann geht nach Hause.\n \n (Die untere Hälfte des Blattes ist von großflächigen dunkelroten Flecken verschmiert und kaum noch zu entziffern.)“",
           TextMapId = "READ_TEXT_20620"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "READ_TEXT_20621",
+    MaxKey = "RESOURCE_DESC_12114",
+    Loader = function()
+      return {
         READ_TEXT_20621 = {
           ContentDE = "Provisorische Entnahmestelle für Vorräte:\n \n <H>unter der Steuerkonsole am Überwachungsfenster außerhalb des Maschinenraums</>.",
           TextMapId = "READ_TEXT_20621"
@@ -31285,15 +31307,7 @@ Unter dem furchterregenden Leichnam des riesigen Filthoid liegt ein Edelstein, d
         READ_TEXT_20630 = {
           ContentDE = "Uff ... Vor einigen Tagen wollte ich vor meinen Freunden prahlen und kletterte ganz nach oben auf den Kopf der Bi’an-Statue<H> hinter der Stele der Ermahnung</>. Heruntergekommen bin ich mit einer fiesen Erkältung und bin dabei auch noch schwer gestürzt. Fühlt sich an, als würde mich die Strafe ereilen ...\n Ich habe mein ganzes Taschengeld dieses Monats <H>zu Lord Bi’ans Füßen</> liegen lassen. Ich hoffe sehr, dass Lord Bi’an mir das nicht übel nimmt ...",
           TextMapId = "READ_TEXT_20630"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "READ_TEXT_20631",
-    MaxKey = "RESOURCE_DESC_12117",
-    Loader = function()
-      return {
+        },
         READ_TEXT_20631 = {
           ContentDE = "...\n \n 21. September\n Ich hatte heute das Gefühl, ich müsse mein Glück auf die Probe stellen, also habe ich fünf Glückseier aufgemacht. In den ersten vier war nichts Besonderes drin: eine Schachtel Zahnstocher, ein Putzlappen, eine Packung Himmelslilie-Samen und ein paar Halsbonbons. Aber im letzten war dann tatsächlich eine Packung feiner Nebelkai-Grüntee!\n Karp-Luno meinte, ich hätte ziemliches Glück gehabt ... Bin ich vielleicht doch von der Glücksgöttin gesegnet?\n Vielleicht versuche ich es noch ein paar Mal, wenn sich mir die Gelegenheit dazu bietet.\n \n ...\n \n 27. September\n Heute habe ich zehn Glückseier geöffnet. Ich erhielt drei Tütchen, einen Gutschein für Osmanthus-Kuchen, zwei Coupons mit jeweils sieben Silber Rabatt auf einen besseren Theaterplatz (nicht kombinierbar!), eine Holzbürste, hundert Gramm getrockneten Pfauenkot – laut Zettel ein Heilmittel, aber ehrlich gesagt ist er einfach nur eklig, also werde ich ihn wahrscheinlich zu Hause im Garten vergraben – sowie einen Block Tinte und eine Schachtel Streichhölzer.\n Mist ... Kein einziges seltenes Fundstück in den letzten Tagen! Wenn Karp-Luno nicht so süß wäre, würde ich mir wohl kaum die Mühe machen, noch eines zu öffnen.\n \n 28. September\n Heute hat mich Karp-Luno dazu überredet, mehr als zwanzig Glückseier zu öffnen. Sie meinte, ich würde die Garantie knacken und könnte ein „super seltenes“ Ei bekommen. Und was war darin? Zwei Zettel, Tierfutter und ein paar Spielsachen!\n Was für eine Abzocke! Was für eine Abzocke! Warum schreitet Bi’an da nicht ein und tut was dagegen!?\n Ich habe genug. Ich werde nie wieder ein Glücksei öffnen!\n \n Ich werfe den Müll gleich <H>in den Lotosteich</>, um die Fische zu füttern!",
           TextMapId = "READ_TEXT_20631"
@@ -32081,7 +32095,15 @@ Unter dem furchterregenden Leichnam des riesigen Filthoid liegt ein Edelstein, d
         RESOURCE_DESC_12114 = {
           ContentDE = "Eine Komponente von Fesselpeitsche, streng nach Plan gefertigt. Als der Teil, der dem Griff der Hand am nächsten ist, verfolgt es vor allem einen Zweck: gut in der Hand zu liegen.",
           TextMapId = "RESOURCE_DESC_12114"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_DESC_12115",
+    MaxKey = "RESOURCE_DESC_41015",
+    Loader = function()
+      return {
         RESOURCE_DESC_12115 = {
           ContentDE = "Eine Komponente von Fesselpeitsche, streng nach Plan gefertigt. Ob die Klinge gebogen oder gerade ist, leicht oder schwer, ist ihre Schärfe einzig für den Kampf geboren.",
           TextMapId = "RESOURCE_DESC_12115"
@@ -32093,15 +32115,7 @@ Unter dem furchterregenden Leichnam des riesigen Filthoid liegt ein Edelstein, d
         RESOURCE_DESC_12117 = {
           ContentDE = "Eine Komponente von Verwelkenschatten, streng nach Plan gefertigt. Ob die Klinge gebogen oder gerade ist, leicht oder schwer, ist ihre Schärfe einzig für den Kampf geboren.",
           TextMapId = "RESOURCE_DESC_12117"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_DESC_12118",
-    MaxKey = "RESOURCE_DESC_41018",
-    Loader = function()
-      return {
+        },
         RESOURCE_DESC_12118 = {
           ContentDE = "Eine Komponente von Verwelkenschatten, streng nach Plan gefertigt. Es trägt den Willen seines Trägers in sich. Doch nur wer stark ist, darf diese einzigartige Eigenart auf dem Schlachtfeld behaupten.",
           TextMapId = "RESOURCE_DESC_12118"
@@ -32889,7 +32903,15 @@ Unter dem furchterregenden Leichnam des riesigen Filthoid liegt ein Edelstein, d
         RESOURCE_DESC_41015 = {
           ContentDE = "Spiele ein Lied, eine kleine Ode an den Mittsommer und das Stiefmütterchen.",
           TextMapId = "RESOURCE_DESC_41015"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_DESC_41016",
+    MaxKey = "RESOURCE_NAME_1001601",
+    Loader = function()
+      return {
         RESOURCE_DESC_41016 = {
           ContentDE = "Spiele ein Lied, eine kleine Ode an den Mittsommer und das Stiefmütterchen.",
           TextMapId = "RESOURCE_DESC_41016"
@@ -32901,15 +32923,7 @@ Unter dem furchterregenden Leichnam des riesigen Filthoid liegt ein Edelstein, d
         RESOURCE_DESC_41018 = {
           ContentDE = "Nach einem Sprint wie der Wind: Genieß einen Moment der Stille.",
           TextMapId = "RESOURCE_DESC_41018"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_DESC_41019",
-    MaxKey = "RESOURCE_NAME_10018",
-    Loader = function()
-      return {
+        },
         RESOURCE_DESC_41019 = {
           ContentDE = "Quak-quak, ein Lachen, das Sonnenlicht in Regenbögen bricht.",
           TextMapId = "RESOURCE_DESC_41019"
@@ -33697,7 +33711,15 @@ Unter dem furchterregenden Leichnam des riesigen Filthoid liegt ein Edelstein, d
         RESOURCE_NAME_1001601 = {
           ContentDE = "Gedanke: {性别:Phoxjäger|Phoxjägerin} – Lumino",
           TextMapId = "RESOURCE_NAME_1001601"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_NAME_100160101",
+    MaxKey = "RESOURCE_NAME_12089",
+    Loader = function()
+      return {
         RESOURCE_NAME_100160101 = {
           ContentDE = "Gedanke: {性别:Phoxjäger|Phoxjägerin} – Lumino",
           TextMapId = "RESOURCE_NAME_100160101"
@@ -33709,15 +33731,7 @@ Unter dem furchterregenden Leichnam des riesigen Filthoid liegt ein Edelstein, d
         RESOURCE_NAME_10018 = {
           ContentDE = "Goldenes Florales Diadem",
           TextMapId = "RESOURCE_NAME_10018"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_NAME_1001801",
-    MaxKey = "RESOURCE_NAME_12092",
-    Loader = function()
-      return {
+        },
         RESOURCE_NAME_1001801 = {
           ContentDE = "Gedanke: Fina",
           TextMapId = "RESOURCE_NAME_1001801"
@@ -34505,7 +34519,15 @@ Unter dem furchterregenden Leichnam des riesigen Filthoid liegt ein Edelstein, d
         RESOURCE_NAME_12089 = {
           ContentDE = "Rechte Klinge: Tiefenloser Haiblick",
           TextMapId = "RESOURCE_NAME_12089"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_NAME_12090",
+    MaxKey = "RESOURCE_NAME_31004005",
+    Loader = function()
+      return {
         RESOURCE_NAME_12090 = {
           ContentDE = "Griff: Smaragdriffe",
           TextMapId = "RESOURCE_NAME_12090"
@@ -34517,15 +34539,7 @@ Unter dem furchterregenden Leichnam des riesigen Filthoid liegt ein Edelstein, d
         RESOURCE_NAME_12092 = {
           ContentDE = "Griff: Heilige Gunst",
           TextMapId = "RESOURCE_NAME_12092"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_NAME_12093",
-    MaxKey = "RESOURCE_NAME_31004008",
-    Loader = function()
-      return {
+        },
         RESOURCE_NAME_12093 = {
           ContentDE = "Klinge: Heilige Gunst",
           TextMapId = "RESOURCE_NAME_12093"
@@ -35313,7 +35327,15 @@ Unter dem furchterregenden Leichnam des riesigen Filthoid liegt ein Edelstein, d
         RESOURCE_NAME_31004005 = {
           ContentDE = "Freuden des Lebens",
           TextMapId = "RESOURCE_NAME_31004005"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_NAME_31004006",
+    MaxKey = "RESOURCE_NAME_5027041",
+    Loader = function()
+      return {
         RESOURCE_NAME_31004006 = {
           ContentDE = "Die Asphodel",
           TextMapId = "RESOURCE_NAME_31004006"
@@ -35325,15 +35347,7 @@ Unter dem furchterregenden Leichnam des riesigen Filthoid liegt ein Edelstein, d
         RESOURCE_NAME_31004008 = {
           ContentDE = "Mein süßes kleines Zuhause",
           TextMapId = "RESOURCE_NAME_31004008"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_NAME_31005001",
-    MaxKey = "RESOURCE_NAME_5028010",
-    Loader = function()
-      return {
+        },
         RESOURCE_NAME_31005001 = {
           ContentDE = "Glevum-Grube",
           TextMapId = "RESOURCE_NAME_31005001"
@@ -36121,7 +36135,15 @@ Unter dem furchterregenden Leichnam des riesigen Filthoid liegt ein Edelstein, d
         RESOURCE_NAME_5027041 = {
           ContentDE = "Phönix-Buntbarsch-Variante",
           TextMapId = "RESOURCE_NAME_5027041"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_NAME_5027050",
+    MaxKey = "RESOURCE_TEXT_4010011",
+    Loader = function()
+      return {
         RESOURCE_NAME_5027050 = {
           ContentDE = "Imperatorfisch",
           TextMapId = "RESOURCE_NAME_5027050"
@@ -36133,15 +36155,7 @@ Unter dem furchterregenden Leichnam des riesigen Filthoid liegt ein Edelstein, d
         RESOURCE_NAME_5028010 = {
           ContentDE = "Tintenblick",
           TextMapId = "RESOURCE_NAME_5028010"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_NAME_5028011",
-    MaxKey = "RESOURCE_TEXT_4010014",
-    Loader = function()
-      return {
+        },
         RESOURCE_NAME_5028011 = {
           ContentDE = "Tintenblick-Variante",
           TextMapId = "RESOURCE_NAME_5028011"
@@ -36929,7 +36943,15 @@ Unter dem furchterregenden Leichnam des riesigen Filthoid liegt ein Edelstein, d
         RESOURCE_TEXT_4010011 = {
           ContentDE = "„Die Sakrale Glockenblume lässt immer ihr Köpfchen hängen. In Form kleiner Trompeten ist sie weder eine Rarität noch schwer zu züchten.“ „In Elysium symbolisiert sie Demut und gilt als Botschafterin des Göttlichen, die allen Wesen behutsam heilige Lehren zuflüstert.“ „Glaubt man dem Volksmund, wird man von den Großen Neun gesegnet, wenn man einen ganzen Tag und eine ganze Nacht lang unter ihren Blüten lauscht.“ „Dennoch würde ich nicht empfehlen, dies auszuprobieren – ihr Pollen setzt sich in der Kleidung fest und lässt sich nur schwer wieder auswaschen.“\n \n – Mendir, Meistergärtner, Flora, Fluss und Schicksal",
           TextMapId = "RESOURCE_TEXT_4010011"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_TEXT_4010012",
+    MaxKey = "RLBlessing_Desc_314",
+    Loader = function()
+      return {
         RESOURCE_TEXT_4010012 = {
           ContentDE = "„SKRRAAAK!!!!!“\n \n – Eine wütende Vogelmutter, die gerade einem Eierdieb die Augen aushacken will",
           TextMapId = "RESOURCE_TEXT_4010012"
@@ -36941,15 +36963,7 @@ Unter dem furchterregenden Leichnam des riesigen Filthoid liegt ein Edelstein, d
         RESOURCE_TEXT_4010014 = {
           ContentDE = "„Das ist das erste Kraut, das ich in „Grundlagen der Heilkräuter“ aufgenommen habe. Die Himmelslilie ist zwar kaum von medizinischem Wert, besitzt aber eine unbestreitbare Bedeutung.“ „Die Menschen verspotten immer meine Tätigkeit, doch jeder genießt die wohltuende Wirkung von Kräutern.“ „Diese Sturköpfe. Wenn die Menschen aus Pflanzen Weihrauch gewinnen können, um die Neun Kapitel von Dafeng zu ehren, sollte es dann nicht genauso einfach sein, sie zur Heilung und Rettung von Leben einzusetzen?“\n \n – Notizen der Arztin Fufeng",
           TextMapId = "RESOURCE_TEXT_4010014"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_TEXT_4010015",
-    MaxKey = "RLBlessing_Desc_402",
-    Loader = function()
-      return {
+        },
         RESOURCE_TEXT_4010015 = {
           ContentDE = "„Mein Herz ist kein Wegstein, und doch kann es sich nicht wenden.“ „Ein Farbstoff kann verblassen; danach gibt es kein Zurück mehr.“\n \n Anmerkung: Vor Kurzem habe ich herausgefunden, dass ich diese bekannte Ballade nicht ganz richtig verstanden hatte – dieser „Wegstein“ ist eigentlich eine bestimmte Art von Stein. Und die Zeile bedeutet: Meine Entschlossenheit ist wie der Wegstein unumkehrbar. Was gefärbt ist, kann zwar mit der Zeit verblassen, aber sobald es mit dem Wegstein in Berührung kommt, behält es auch nach Jahren seine Farbe.\n \n – Wangchun, Sekretär von Zhiliu, „Verzeichnis gängiger Farbstoffe“",
           TextMapId = "RESOURCE_TEXT_4010015"
@@ -37737,7 +37751,15 @@ Unter dem furchterregenden Leichnam des riesigen Filthoid liegt ein Edelstein, d
         RLBlessing_Desc_314 = {
           ContentDE = "Die Erhöhung des Fähigkeits-SCH durch [Strahlung] wurde auf <Highlight>$1</> erhöht.",
           TextMapId = "RLBlessing_Desc_314"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RLBlessing_Desc_315",
+    MaxKey = "RLBlessing_SimpleDesc_303",
+    Loader = function()
+      return {
         RLBlessing_Desc_315 = {
           ContentDE = "Verringert die Abklingzeit von [Emission] auf <Highlight>$1</> s.",
           TextMapId = "RLBlessing_Desc_315"
@@ -37749,15 +37771,7 @@ Unter dem furchterregenden Leichnam des riesigen Filthoid liegt ein Edelstein, d
         RLBlessing_Desc_402 = {
           ContentDE = "Die Beschwörung erhöht den Fähigkeits-SCH um <Highlight>$1</> für <Highlight>$2</> s, bis zu <Highlight>$3</>-mal stapelbar.",
           TextMapId = "RLBlessing_Desc_402"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RLBlessing_Desc_403",
-    MaxKey = "RLBlessing_SimpleDesc_306",
-    Loader = function()
-      return {
+        },
         RLBlessing_Desc_403 = {
           ContentDE = "Die Beschwörung erhöht den ANG um <Highlight>$1</> für <Highlight>$2</> s, bis zu <Highlight>$3</>-mal stapelbar.",
           TextMapId = "RLBlessing_Desc_403"
@@ -38545,7 +38559,15 @@ Unter dem furchterregenden Leichnam des riesigen Filthoid liegt ein Edelstein, d
         RLBlessing_SimpleDesc_303 = {
           ContentDE = "Erhöht die Fähigkeitseffizienz beim Einsatz der Fähigkeiten.",
           TextMapId = "RLBlessing_SimpleDesc_303"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RLBlessing_SimpleDesc_304",
+    MaxKey = "RLTalent_Desc_206",
+    Loader = function()
+      return {
         RLBlessing_SimpleDesc_304 = {
           ContentDE = "Stellt Geist wieder her, wenn du Fähigkeiten einsetzt.",
           TextMapId = "RLBlessing_SimpleDesc_304"
@@ -38557,15 +38579,7 @@ Unter dem furchterregenden Leichnam des riesigen Filthoid liegt ein Edelstein, d
         RLBlessing_SimpleDesc_306 = {
           ContentDE = "Erhöht die Fähigkeits-GES.",
           TextMapId = "RLBlessing_SimpleDesc_306"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RLBlessing_SimpleDesc_307",
-    MaxKey = "RLTalent_Desc_301",
-    Loader = function()
-      return {
+        },
         RLBlessing_SimpleDesc_307 = {
           ContentDE = "Erhöht max. Geist.",
           TextMapId = "RLBlessing_SimpleDesc_307"
@@ -39353,7 +39367,15 @@ Unter dem furchterregenden Leichnam des riesigen Filthoid liegt ein Edelstein, d
         RLTalent_Desc_206 = {
           ContentDE = "Erhöht den Erhalt von Glut beim Kampf um <Highlight>@1</>.",
           TextMapId = "RLTalent_Desc_206"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RLTalent_Desc_207",
+    MaxKey = "RLTreasure_Name_10106",
+    Loader = function()
+      return {
         RLTalent_Desc_207 = {
           ContentDE = "Beginne mit <Highlight>Glut ×@1</>",
           TextMapId = "RLTalent_Desc_207"
@@ -39365,15 +39387,7 @@ Unter dem furchterregenden Leichnam des riesigen Filthoid liegt ein Edelstein, d
         RLTalent_Desc_301 = {
           ContentDE = "Erhöht den ANG um <Highlight>#1</>.",
           TextMapId = "RLTalent_Desc_301"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RLTalent_Desc_302",
-    MaxKey = "RLTreasure_Name_10109",
-    Loader = function()
-      return {
+        },
         RLTalent_Desc_302 = {
           ContentDE = "Erhöht den KRIT-SCH um <Highlight>#1</>.",
           TextMapId = "RLTalent_Desc_302"
@@ -40163,7 +40177,15 @@ Kein Flackern des Lichts, kein Funke in der Dunkelheit.
         RLTreasure_Name_10106 = {
           ContentDE = "Schlüssel des Heilpriesters",
           TextMapId = "RLTreasure_Name_10106"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RLTreasure_Name_10107",
+    MaxKey = "RL_Event318_Select_3",
+    Loader = function()
+      return {
         RLTreasure_Name_10107 = {
           ContentDE = "Fußfesseln des Asketen",
           TextMapId = "RLTreasure_Name_10107"
@@ -40175,15 +40197,7 @@ Kein Flackern des Lichts, kein Funke in der Dunkelheit.
         RLTreasure_Name_10109 = {
           ContentDE = "Spielzeug des vogelmaskierten Freaks (Ⅱ)",
           TextMapId = "RLTreasure_Name_10109"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RLTreasure_Name_10110",
-    MaxKey = "RL_Event320_Select_1",
-    Loader = function()
-      return {
+        },
         RLTreasure_Name_10110 = {
           ContentDE = "Spielzeug des vogelmaskierten Freaks (Ⅲ)",
           TextMapId = "RLTreasure_Name_10110"
@@ -40971,7 +40985,15 @@ Kein Flackern des Lichts, kein Funke in der Dunkelheit.
         RL_Event318_Select_3 = {
           ContentDE = "Wähle einen <Highlight>Nachtschmetterling</>-[Docht].",
           TextMapId = "RL_Event318_Select_3"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RL_Event319_Select_1",
+    MaxKey = "SKILL_10502_DESC",
+    Loader = function()
+      return {
         RL_Event319_Select_1 = {
           ContentDE = "Wähle einen <Highlight>Lumi-Zweig</>-[Docht].",
           TextMapId = "RL_Event319_Select_1"
@@ -40983,15 +41005,7 @@ Kein Flackern des Lichts, kein Funke in der Dunkelheit.
         RL_Event320_Select_1 = {
           ContentDE = "Gewährt Glut ×<Highlight>250</>.",
           TextMapId = "RL_Event320_Select_1"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RL_Event320_Select_2",
-    MaxKey = "SKILL_10601_DESC",
-    Loader = function()
-      return {
+        },
         RL_Event320_Select_2 = {
           ContentDE = "Gewährt einen zufälligen [Docht] von <Highlight>blauer</> oder <Highlight>lila</> Qualität.",
           TextMapId = "RL_Event320_Select_2"
@@ -41767,7 +41781,15 @@ Kein Flackern des Lichts, kein Funke in der Dunkelheit.
         SKILL_10502_DESC = {
           ContentDE = "Fähigkeits-SCH +<H>#1</>. Wenn ein Hydro-Figur mit dieser Waffe einen KRIT-SCH verursacht, erhöht sich der Fähigkeits-SCH für Verbündete um <H>#2</> für <H>#3</> Sek.",
           TextMapId = "SKILL_10502_DESC"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "SKILL_10503_DESC",
+    MaxKey = "SKILL_410104_NAME",
+    Loader = function()
+      return {
         SKILL_10503_DESC = {
           ContentDE = "Fähigkeitsdauer +<H>#1</>.",
           TextMapId = "SKILL_10503_DESC"
@@ -41779,15 +41801,7 @@ Kein Flackern des Lichts, kein Funke in der Dunkelheit.
         SKILL_10601_DESC = {
           ContentDE = "KRIT-SCH +<H>#1</>. Wenn mit dieser Waffe Schaden verursacht wird, erhöht sich der verursachte SCH um <H>#2</>, zusätzlich um <H>#2</> pro Kombostufe.",
           TextMapId = "SKILL_10601_DESC"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "SKILL_10602_DESC",
-    MaxKey = "SKILL_410202_DESC",
-    Loader = function()
-      return {
+        },
         SKILL_10602_DESC = {
           ContentDE = "Fähigkeitsreichweite +<H>#1</>.",
           TextMapId = "SKILL_10602_DESC"
@@ -42575,7 +42589,15 @@ Kein Flackern des Lichts, kein Funke in der Dunkelheit.
         SKILL_410104_NAME = {
           ContentDE = "Akkusorgen",
           TextMapId = "SKILL_410104_NAME"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "SKILL_410201_DESC",
+    MaxKey = "SKILL_DESC_3201Skill01Sustain",
+    Loader = function()
+      return {
         SKILL_410201_DESC = {
           ContentDE = "Drücken:\n Zhiliu setzt [Himmlische Offenbarung: Zhen] ein, verursacht Elektro-SCH an Gegnern in Reichweite vor sich und erhält 1 [Talisman: Zhen].\n Gedrückt halten:\n Zhiliu setzt [Himmlische Offenbarung: Xun] ein, verursacht Elektro-SCH an Gegnern in Reichweite vor sich und erhält Ultra-Schild sowie 1 [Talisman: Xun].",
           TextMapId = "SKILL_410201_DESC"
@@ -42587,15 +42609,7 @@ Kein Flackern des Lichts, kein Funke in der Dunkelheit.
         SKILL_410202_DESC = {
           ContentDE = "Wenn die Figur weniger als 2 [Talismane] hält, wird Elektro-SCH an Gegnern in der Nähe verursacht.\n Wenn die Figur 2 oder mehr [Talismane] hält, wird diese Fähigkeit entsprechend der Kombination. durch eine andere Fähigkeit ersetzt.",
           TextMapId = "SKILL_410202_DESC"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "SKILL_410202_NAME",
-    MaxKey = "SKILL_DESC_3202Skill01Buff01",
-    Loader = function()
-      return {
+        },
         SKILL_410202_NAME = {
           ContentDE = "Himmel-Erde-Divination",
           TextMapId = "SKILL_410202_NAME"
@@ -43383,7 +43397,15 @@ Kein Flackern des Lichts, kein Funke in der Dunkelheit.
         SKILL_DESC_3201Skill01Sustain = {
           ContentDE = "Dauerverlängerung",
           TextMapId = "SKILL_DESC_3201Skill01Sustain"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "SKILL_DESC_3201Skill01Time",
+    MaxKey = "SKILL_DESC_ShootingRate",
+    Loader = function()
+      return {
         SKILL_DESC_3201Skill01Time = {
           ContentDE = "Dauer",
           TextMapId = "SKILL_DESC_3201Skill01Time"
@@ -43395,15 +43417,7 @@ Kein Flackern des Lichts, kein Funke in der Dunkelheit.
         SKILL_DESC_3202Skill01Buff01 = {
           ContentDE = "Erhöhung der Fähigkeits-GES pro Stapelung [Rausch]",
           TextMapId = "SKILL_DESC_3202Skill01Buff01"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "SKILL_DESC_3202Skill01Buff02",
-    MaxKey = "SKILL_DESC_ShootingRate4",
-    Loader = function()
-      return {
+        },
         SKILL_DESC_3202Skill01Buff02 = {
           ContentDE = "Erhöhung der Startgeschwindigkeit der [Drehklinge] pro Stapelung [Rausch]",
           TextMapId = "SKILL_DESC_3202Skill01Buff02"
@@ -44191,7 +44205,15 @@ Kein Flackern des Lichts, kein Funke in der Dunkelheit.
         SKILL_DESC_ShootingRate = {
           ContentDE = "Feuerintervall",
           TextMapId = "SKILL_DESC_ShootingRate"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "SKILL_DESC_ShootingRate2",
+    MaxKey = "Story_SERIES_200006",
+    Loader = function()
+      return {
         SKILL_DESC_ShootingRate2 = {
           ContentDE = "Feuerintervall – Phase 2",
           TextMapId = "SKILL_DESC_ShootingRate2"
@@ -44203,15 +44225,7 @@ Kein Flackern des Lichts, kein Funke in der Dunkelheit.
         SKILL_DESC_ShootingRate4 = {
           ContentDE = "Feuerintervall – Phase 4",
           TextMapId = "SKILL_DESC_ShootingRate4"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "SKILL_DESC_Skill02_Damage01",
-    MaxKey = "Story_SERIES_200009",
-    Loader = function()
-      return {
+        },
         SKILL_DESC_Skill02_Damage01 = {
           ContentDE = "SCH des [Kunstwerker-Großschwerts]",
           TextMapId = "SKILL_DESC_Skill02_Damage01"
@@ -44981,7 +44995,15 @@ Kein Flackern des Lichts, kein Funke in der Dunkelheit.
         Story_SERIES_200006 = {
           ContentDE = "Wo das Waisenkind das Brachland betritt",
           TextMapId = "Story_SERIES_200006"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Story_SERIES_200007",
+    MaxKey = "TERMEXP_4301_Skill02",
+    Loader = function()
+      return {
         Story_SERIES_200007 = {
           ContentDE = "Schreie in Richtung Morgengrauen",
           TextMapId = "Story_SERIES_200007"
@@ -44993,15 +45015,7 @@ Kein Flackern des Lichts, kein Funke in der Dunkelheit.
         Story_SERIES_200009 = {
           ContentDE = "Möge der Wind deine Flügel leiten",
           TextMapId = "Story_SERIES_200009"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "SubType_1_Ailixian",
-    MaxKey = "TERMEXP_5101_Skill02_Value",
-    Loader = function()
-      return {
+        },
         SubType_1_Ailixian = {
           ContentDE = "Elysium",
           TextMapId = "SubType_1_Ailixian"
@@ -45790,7 +45804,15 @@ Immun gegen Trefferstarre. Xuanjiao schwebt um [Yuming] herum und verursacht bei
         TERMEXP_4301_Skill02 = {
           ContentDE = "Erbt einen Prozentsatz von Sibylles max. LP, hat 0 VTD und wird als gegnerische Einheit behandelt.\n [Beschworenes Objekt: Chaotische Donnerkugel] ruft alle 3 Sek. einen [Vernichtenden Sturm] herbei.\n Nach der Beschwörung verbindet sich die [Beschworenes Objekt: Chaotische Donnerkugel] zunächst mit den 5 am weitesten entfernten Gegnern im Wirkungsbereich und anschließend jede Sekunde mit einem weiteren Gegner, bis zu insgesamt 10. Die [Beschworenes Objekt: Chaotische Donnerkugel] verursacht einmal pro Sekunde Elektro-SCH bei allen verbundenen Zielen.\n Wenn [Beschworenes Objekt: Chaotische Donnerkugel] SCH erleidet, wird ein gewisser Prozentsatz auf die verbundenen Gegner übertragen.",
           TextMapId = "TERMEXP_4301_Skill02"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "TERMEXP_4301_Skill02Damage",
+    MaxKey = "TextMap_AnswerDetail_100501",
+    Loader = function()
+      return {
         TERMEXP_4301_Skill02Damage = {
           ContentDE = "Verursacht Elektro-SCH an Gegnern in der Nähe.",
           TextMapId = "TERMEXP_4301_Skill02Damage"
@@ -45802,15 +45824,7 @@ Immun gegen Trefferstarre. Xuanjiao schwebt um [Yuming] herum und verursacht bei
         TERMEXP_5101_Skill02_Value = {
           ContentDE = "[Arbeitsleidenschaft] verliert 5 Punkte pro Sekunde und stellt 1 Punkt wieder her, wenn beim Bewegungsschub Schaden verursacht wird. Während [Huf-Stampede] verliert [Arbeitsleidenschaft] keine Punkte. Wenn [Arbeitsleidenschaft] auf 0 sinkt, steigt Truffle ab und setzt einmal [Huf-Getrappel] ein.",
           TextMapId = "TERMEXP_5101_Skill02_Value"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "TERMEXP_5102_Skill01",
-    MaxKey = "TextMap_AnswerDetail_200101",
-    Loader = function()
-      return {
+        },
         TERMEXP_5102_Skill01 = {
           ContentDE = "Im Zustand [Tarnung] kann Outsider von Gegnern nicht entdeckt werden, und er verlässt diesen Zustand auch nicht, wenn er Schaden erleidet. Beim Starten eines Angriffs oder beim Einsatz von [Jägers Sprungangriff] verlässt er den Zustand [Tarnung].",
           TextMapId = "TERMEXP_5102_Skill01"
@@ -46571,7 +46585,15 @@ Immun gegen Trefferstarre. Xuanjiao schwebt um [Yuming] herum und verursacht bei
         TextMap_AnswerDetail_100501 = {
           ContentDE = "In der Kanalisation fandest du Samtvorhänge und Schaufensterpuppen, die wie Schauspieler mitten in einer Aufführung posierten. Wer immer diese Szene arrangierte, sieht sich selbst womöglich als Teil der Vorstellung. Abgleich mit anderen Hinweisen – vielleicht offenbart es die wahre Identität dieser Person.",
           TextMapId = "TextMap_AnswerDetail_100501"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "TextMap_AnswerDetail_100502",
+    MaxKey = "Title_10054",
+    Loader = function()
+      return {
         TextMap_AnswerDetail_100502 = {
           ContentDE = "In dieser Nacht summte der Täter mit rauer Stimme eine Opernmelodie. Könnte es sich um einen Sänger oder einfach nur um einen Musikliebhaber handeln?",
           TextMapId = "TextMap_AnswerDetail_100502"
@@ -46583,15 +46605,7 @@ Immun gegen Trefferstarre. Xuanjiao schwebt um [Yuming] herum und verursacht bei
         TextMap_AnswerDetail_200101 = {
           ContentDE = "Herr Buck trinkt in der Asphodel nur Saft und Milch. Er verträgt keinen Alkohol – schon ein einziger Schluck reicht aus, um ihn bewusstlos zu machen.",
           TextMapId = "TextMap_AnswerDetail_200101"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "TextMap_AnswerDetail_200102",
-    MaxKey = "Title_10057",
-    Loader = function()
-      return {
+        },
         TextMap_AnswerDetail_200102 = {
           ContentDE = "Jemand hat heimlich Alkohol in Herr Bucks Milch gemischt – eindeutig mit der Absicht, ihn bewusstlos zu machen. Auf dem Krug ist noch ein klebriger Handabdruck in Kindergröße zu sehen.",
           TextMapId = "TextMap_AnswerDetail_200102"
@@ -47373,7 +47387,15 @@ Immun gegen Trefferstarre. Xuanjiao schwebt um [Yuming] herum und verursacht bei
         Title_10054 = {
           ContentDE = "Unbesiegbar",
           TextMapId = "Title_10054"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Title_10055",
+    MaxKey = "UIGuide_Feina_10",
+    Loader = function()
+      return {
         Title_10055 = {
           ContentDE = "Surreal",
           TextMapId = "Title_10055"
@@ -47385,15 +47407,7 @@ Immun gegen Trefferstarre. Xuanjiao schwebt um [Yuming] herum und verursacht bei
         Title_10057 = {
           ContentDE = "Wesensgleich",
           TextMapId = "Title_10057"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Title_10058",
-    MaxKey = "UIGuide_Feina_1_Phone",
-    Loader = function()
-      return {
+        },
         Title_10058 = {
           ContentDE = "Geschädigt",
           TextMapId = "Title_10058"
@@ -48180,7 +48194,15 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UIGuide_Feina_10 = {
           ContentDE = "Beobachte die <H>Umgebung</> jedes Edelsteins und bemale ihn in der richtigen Farbe, um sein Licht zu entfachen und den Nebel zu vertreiben.",
           TextMapId = "UIGuide_Feina_10"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UIGuide_Feina_11",
+    MaxKey = "UIGuide_Title_ModTendency_5",
+    Loader = function()
+      return {
         UIGuide_Feina_11 = {
           ContentDE = "Das Aufnehmen der Edelsteinenergie erzeugt eine schützende Aura um die kleine Nachtigall, die sie vor dem Nebel bewahrt. Die Aura verblasst mit der Zeit – entzünde schnell weitere Edelsteine, um ihre Stärke zu erneuern.",
           TextMapId = "UIGuide_Feina_11"
@@ -48192,15 +48214,7 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UIGuide_Feina_1_Phone = {
           ContentDE = "In diesem unvollendeten Märchen liegt alles in Graustufen. Tippe, um die Welt mit <H>Traumgewebe-Pigment</> zu bemalen und ihr Farbe zu verleihen.",
           TextMapId = "UIGuide_Feina_1_Phone"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UIGuide_Feina_2",
-    MaxKey = "UIGuide_Title_Online_2",
-    Loader = function()
-      return {
+        },
         UIGuide_Feina_2 = {
           ContentDE = "<H>Weiße Federn</> sind im gesamten Märchenreich verstreut. Sammle genug davon, um Bonusbelohnungen zu erhalten.",
           TextMapId = "UIGuide_Feina_2"
@@ -48988,7 +49002,15 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UIGuide_Title_ModTendency_5 = {
           ContentDE = "Unterschiedliche Spuren",
           TextMapId = "UIGuide_Title_ModTendency_5"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UIGuide_Title_MonsterExitMechanism",
+    MaxKey = "UI_Accessory_Desc_91005",
+    Loader = function()
+      return {
         UIGuide_Title_MonsterExitMechanism = {
           ContentDE = "Gefahrenzone",
           TextMapId = "UIGuide_Title_MonsterExitMechanism"
@@ -49000,15 +49022,7 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UIGuide_Title_Online_2 = {
           ContentDE = "Team: Private Mission",
           TextMapId = "UIGuide_Title_Online_2"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UIGuide_Title_Online_3",
-    MaxKey = "UI_Accessory_Desc_91008",
-    Loader = function()
-      return {
+        },
         UIGuide_Title_Online_3 = {
           ContentDE = "Team: Öffentliche Mission",
           TextMapId = "UIGuide_Title_Online_3"
@@ -49793,7 +49807,15 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Accessory_Desc_91005 = {
           ContentDE = "Kopfschmuck von Yuming\n „Bittest du mich um Hilfe als Freund? Oder siehst du mich nur als Waffe, die du nach Belieben einsetzen kannst?“",
           TextMapId = "UI_Accessory_Desc_91005"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Accessory_Desc_91006",
+    MaxKey = "UI_Accessory_Name_90012",
+    Loader = function()
+      return {
         UI_Accessory_Desc_91006 = {
           ContentDE = "Kopfschmuck von Psyche\n „In der Welt dort draußen wachsen bestimmt viele wundersame Blumen und Kräuter, die ich noch nie gesehen habe ... und echte Schmetterlinge werden zwischen ihnen tanzen, nicht wahr?“",
           TextMapId = "UI_Accessory_Desc_91006"
@@ -49805,15 +49827,7 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Accessory_Desc_91008 = {
           ContentDE = "Kopfschmuck von Truffle und Filbert\n „Nur satt wird man stark! Mit leerem Bauch kann man nicht kämpfen!“",
           TextMapId = "UI_Accessory_Desc_91008"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Accessory_Desc_91009",
-    MaxKey = "UI_Accessory_Name_91003",
-    Loader = function()
-      return {
+        },
         UI_Accessory_Desc_91009 = {
           ContentDE = "Kopfschmuck von Lynn\n „Sie ist meine Vorgesetzte. Sie gibt Befehle, ich führe sie aus. Mehr braucht es nicht.“",
           TextMapId = "UI_Accessory_Desc_91009"
@@ -50601,7 +50615,15 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Accessory_Name_90012 = {
           ContentDE = "Echo des weißen Sands",
           TextMapId = "UI_Accessory_Name_90012"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Accessory_Name_91001",
+    MaxKey = "UI_Achievement_Des_501003",
+    Loader = function()
+      return {
         UI_Accessory_Name_91001 = {
           ContentDE = "Die Andere Seite",
           TextMapId = "UI_Accessory_Name_91001"
@@ -50613,15 +50635,7 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Accessory_Name_91003 = {
           ContentDE = "Dienst der Magd",
           TextMapId = "UI_Accessory_Name_91003"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Accessory_Name_91004",
-    MaxKey = "UI_Achievement_Des_5011",
-    Loader = function()
-      return {
+        },
         UI_Accessory_Name_91004 = {
           ContentDE = "Spärliche Sterne Oben",
           TextMapId = "UI_Accessory_Name_91004"
@@ -51409,7 +51423,15 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Achievement_Des_501003 = {
           ContentDE = "Erklimme den „höchsten Gipfel“ von Icelake, einfach weil der „Berg“ da ist",
           TextMapId = "UI_Achievement_Des_501003"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Des_501004",
+    MaxKey = "UI_Achievement_Des_9413",
+    Loader = function()
+      return {
         UI_Achievement_Des_501004 = {
           ContentDE = "Springe über Eisflächen in der richtigen Reihenfolge",
           TextMapId = "UI_Achievement_Des_501004"
@@ -51421,15 +51443,7 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Achievement_Des_5011 = {
           ContentDE = "Sichere in [Nocturne-Echos: Sibylle] auf höchster Schwierigkeit einen Sieg <highlight>ohne Kampfbegleiter zu beschwören</>.",
           TextMapId = "UI_Achievement_Des_5011"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Des_50119",
-    MaxKey = "UI_Achievement_Des_9416",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Des_50119 = {
           ContentDE = "Erhalte insgesamt <highlight>#1</> Lumite",
           TextMapId = "UI_Achievement_Des_50119"
@@ -52217,7 +52231,15 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Achievement_Des_9413 = {
           ContentDE = "Verursache in einer Aktion <H>#1</> Punkte Hydro-SCH im Mystischen Labyrinth",
           TextMapId = "UI_Achievement_Des_9413"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Des_9414",
+    MaxKey = "UI_Achievement_Name_201502",
+    Loader = function()
+      return {
         UI_Achievement_Des_9414 = {
           ContentDE = "Verursache in einer Aktion <H>#1</> Punkte Pyro-SCH im Mystischen Labyrinth",
           TextMapId = "UI_Achievement_Des_9414"
@@ -52229,15 +52251,7 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Achievement_Des_9416 = {
           ContentDE = "Verursache in einer Aktion <H>#1</> Punkte Anemo-SCH im Mystischen Labyrinth",
           TextMapId = "UI_Achievement_Des_9416"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Des_9421",
-    MaxKey = "UI_Achievement_Name_201602",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Des_9421 = {
           ContentDE = "Besiege insgesamt <H>#1</> Gegner im Mystischen Labyrinth",
           TextMapId = "UI_Achievement_Des_9421"
@@ -53025,7 +53039,15 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Achievement_Name_201502 = {
           ContentDE = "Saugroboter Ⅱ",
           TextMapId = "UI_Achievement_Name_201502"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Name_201503",
+    MaxKey = "UI_Achievement_Name_505301",
+    Loader = function()
+      return {
         UI_Achievement_Name_201503 = {
           ContentDE = "Saugroboter Ⅲ",
           TextMapId = "UI_Achievement_Name_201503"
@@ -53037,15 +53059,7 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Achievement_Name_201602 = {
           ContentDE = "Zisch, Knack, Boom! Ⅱ",
           TextMapId = "UI_Achievement_Name_201602"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Name_201603",
-    MaxKey = "UI_Achievement_Name_506101",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Name_201603 = {
           ContentDE = "Zisch, Knack, Boom! Ⅲ",
           TextMapId = "UI_Achievement_Name_201603"
@@ -53833,7 +53847,15 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Achievement_Name_505301 = {
           ContentDE = "Nocturnales Finale – Einzigartig: Die Schlüpfende",
           TextMapId = "UI_Achievement_Name_505301"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Name_505401",
+    MaxKey = "UI_Achievement_Type_CBT3",
+    Loader = function()
+      return {
         UI_Achievement_Name_505401 = {
           ContentDE = "Nocturnales Finale – Einzigartig: Die Wächterin des Infernos",
           TextMapId = "UI_Achievement_Name_505401"
@@ -53845,15 +53867,7 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Achievement_Name_506101 = {
           ContentDE = "Du kannst rennen, aber nicht verstecken – Speedrun Ⅰ",
           TextMapId = "UI_Achievement_Name_506101"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Name_506102",
-    MaxKey = "UI_Achievement_Type_GuanQiaTiaoZhan",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Name_506102 = {
           ContentDE = "Du kannst rennen, aber nicht verstecken – Speedrun Ⅱ",
           TextMapId = "UI_Achievement_Name_506102"
@@ -54641,7 +54655,15 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Achievement_Type_CBT3 = {
           ContentDE = "Zur zweiten Begegnung",
           TextMapId = "UI_Achievement_Type_CBT3"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Type_GuanQiaChuFa",
+    MaxKey = "UI_Bag_Equipped",
+    Loader = function()
+      return {
         UI_Achievement_Type_GuanQiaChuFa = {
           ContentDE = "Ein Moment des Staunens",
           TextMapId = "UI_Achievement_Type_GuanQiaChuFa"
@@ -54653,15 +54675,7 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Achievement_Type_GuanQiaTiaoZhan = {
           ContentDE = "Der Perfektionist",
           TextMapId = "UI_Achievement_Type_GuanQiaTiaoZhan"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Type_HaoGanDu",
-    MaxKey = "UI_Bag_MODSapacity",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Type_HaoGanDu = {
           ContentDE = "Fröhliche Tage",
           TextMapId = "UI_Achievement_Type_HaoGanDu"
@@ -55443,7 +55457,15 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Bag_Equipped = {
           ContentDE = "Ausgerüstet",
           TextMapId = "UI_Bag_Equipped"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Bag_Fish_Weight",
+    MaxKey = "UI_CHAR_DATA_TEXT_15010103",
+    Loader = function()
+      return {
         UI_Bag_Fish_Weight = {
           ContentDE = "Größe:",
           TextMapId = "UI_Bag_Fish_Weight"
@@ -55455,15 +55477,7 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Bag_MODSapacity = {
           ContentDE = "Dämonenkeil-Toleranz",
           TextMapId = "UI_Bag_MODSapacity"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Bag_ModExtract",
-    MaxKey = "UI_CHAR_FORCE_4102",
-    Loader = function()
-      return {
+        },
         UI_Bag_ModExtract = {
           ContentDE = "Extrahieren",
           TextMapId = "UI_Bag_ModExtract"
@@ -56077,6 +56091,170 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
           ContentDE = "Freischaltbedingungen der Erinnerung Ⅰ",
           TextMapId = "UI_CHAR_DATA_DES_10010401"
         },
+        UI_CHAR_DATA_TEXT_11010101 = {
+          ContentDE = "Soweit du dich zurückerinnern kannst, war Berenica immer an deiner Seite.\n Du hast vielleicht mehr Zeit mit ihr verbracht als mit irgendjemandem sonst auf der Welt, und trotzdem ist sie für dich in manchen Bereichen immer noch ein Rätsel – genauso wie du bestimmte Seiten an dir selbst nicht ganz verstehst.\n Wer bist du? Wer ist sie? Woher kommst du und wie habt ihr euch kennengelernt? Wann immer du diese Fragen stellst, zögert Berenica, ihr versagen die Worte, bis sie schließlich in langes Schweigen verfällt. Irgendwann hast du aufgehört zu fragen.\n Es gibt vieles, was du nicht weißt, aber eines ist gewiss:\n Du kannst ihr immer vertrauen, was auch passiert.",
+          TextMapId = "UI_CHAR_DATA_TEXT_11010101"
+        },
+        UI_CHAR_DATA_TEXT_11010102 = {
+          ContentDE = "Berenica ist kompromisslos direkt und aufrichtig. Im Gegensatz zu den meisten anderen lügt sie nie und kämpft oft mit den Nuancen unausgesprochener Worte. In einer harschen Welt, in der die Menschen ihre wahren Absichten oft hinter Täuschungen und Schmeicheleien verstecken, durchbricht Berenicas offene Art diese Fassaden und sorgt immer wieder für unangenehmes Schweigen. Als sie noch ein Kind war, wurde ihre unverblümte Ehrlichkeit oft als jugendliche Unschuld abgetan. Doch mit zunehmendem Alter entfremdete sie diese Eigenart immer mehr von den anderen Dorfbewohnern.\n So hast du schon früh gelernt, andere richtig einzuschätzen und deine Worte geschickt zu wählen, um mit den verschiedensten Menschen klarzukommen. Wenn sie etwas nicht mochte oder Probleme damit hatte, hast du eingegriffen. Du hattest beschlossen, ihre Maske und ihre Stimme zu sein.",
+          TextMapId = "UI_CHAR_DATA_TEXT_11010102"
+        },
+        UI_CHAR_DATA_TEXT_11010103 = {
+          ContentDE = "Ganz im Gegensatz zu ihrer akribischen Fürsorge dir gegenüber ist Berenica gnadenlos streng zu sich selbst. Wird sie von wilden Tieren oder Filthoiden angegriffen, wehrt sie sich mit einer Art selbstzerstörerischer Leidenschaft, schreckt vor keiner Gefahr zurück und stürmt mit unbeugsamer Entschlossenheit vorwärts. Obwohl sie ohne Vorbehalte die empfindlichsten Schwachstellen ihres Körpers offenbart, schreitet sie mit unerschütterlichem Blick voran. Der Ausgang ist immer derselbe: Ihre dunkle Klinge findet ihr Ziel und erledigt die Kreatur mit einem einzigen Hieb. Natürlich muss sie dafür oft schwere Verletzungen in Kauf nehmen.\n Und jedes Mal verbindest du ihre Wunden und flehst sie an, weniger rücksichtslos zu sein. Dennoch beharrt sie hartnäckig darauf, dass diese Art zu kämpfen für sie die effizienteste ist. „Ist schon gut – der Schmerz ist mir egal“, antwortet sie stets.",
+          TextMapId = "UI_CHAR_DATA_TEXT_11010103"
+        },
+        UI_CHAR_DATA_TEXT_11010104 = {
+          ContentDE = "Viele Leute, auch jene im hohen Alter, erinnern sich gern an ihre frühesten Tage zurück, die sie liebevoll als ihre „Kindheit“ bezeichnen.\n Für sie ist Kindheit gleichbedeutend mit Freude – schon die bloße Erwähnung dieser Zeit zaubert ein Lächeln auf ihre Gesichter und lässt ihre Augen vor Glück strahlen. Ebenso zaubert dir die Erinnerung an deine Zeit mit Berenica auf der Purgatorio-Insel unweigerlich ein Lächeln ins Gesicht.\n Vermeidet jemand aber konsequent, über seine Kindheit zu sprechen, lässt das auf eine Vergangenheit mit traumatischen Erlebnissen und seelischen Narben schließen.\n Diese Erkenntnis dämmerte dir eines Tages. Seitdem hast du es unterlassen, in Berenicas Vergangenheit zu graben, die vor euren gemeinsamen Erinnerungen liegt. Du hast ein Versprechen abgelegt: Wenn sie nicht darüber sprechen möchte, wirst du sie nicht dazu drängen; aber wenn sie jemals bereit sein sollte, darüber zu reden, wirst du für sie da sein.",
+          TextMapId = "UI_CHAR_DATA_TEXT_11010104"
+        },
+        UI_CHAR_DATA_TEXT_11010105 = {
+          ContentDE = "Seit deiner Ankunft im Imperium hast du alle möglichen Mittel – legale und weniger legitime – ausgeschöpft, um auch nur die geringste Spur von Berenica zu finden, leider ohne Erfolg. Gelegentlich erhieltst du in der Asphodel Missionen, bei denen du anhand anonymer Hinweise eine mysteriöse Person aus einem imperialen Gefängnis befreien solltest. Jedes Mal hegtest du die leise Hoffnung, diese vertraute Stimme hinter einer der Zellentüren zu hören, die du eingetreten hast ... Doch dazu kam es nie. Nicht ein einziges Mal.\n Und doch hast du, wann immer du dieses makellose weiße Schwert schwingst, den Eindruck, als wäre sie noch an deiner Seite. Du klammerst dich fest an den Glauben, dass ihr eines Tages wieder vereint sein werdet – schließlich wirst du dein Versprechen niemals brechen, und ebenso wenig Berenica.",
+          TextMapId = "UI_CHAR_DATA_TEXT_11010105"
+        },
+        UI_CHAR_DATA_TEXT_11010201 = {
+          ContentDE = "Die Menschen haben oft idyllische Vorstellungen von abgelegenen Orten, jedoch ist nicht jeder abgeschiedene Ort eine Oase der Ruhe. Die Purgatorio-Insel, inmitten des trostlosen Meeres treibend, ist alles andere als ein Paradies. Auf dieser schönen kleinen Insel ist die Niedertracht, die in Not und Isolation gedeiht, nur allzu wohlbekannt. Die Starken beuten die Schwachen aus, und die Schwachen wiederum richten sich gegen die noch Schwächeren – ein Naturgesetz, das die Dorfbewohner der Purgatorio-Insel verinnerlicht haben und strikt befolgen.\n Dieses brutale „Gesetz des Überlebens“ sah sich jedoch einer unerwarteten Herausforderung in Form eines kleinen Mädchens namens Berenica gegenüber.\n Berenica war zwar eine Waise und hatte niemanden, auf den sie sich hätte verlassen können, aber die Widrigkeiten des Lebens hatten ihr weder die Bereitschaft zu Kompromissen noch die Neigung zum Nachgeben eingeimpft. Hatte sie sich einmal etwas in den Kopf gesetzt, war sie weder durch grobe Einschüchterung noch durch freundliche Überredungskunst davon abzubringen. Selbst die stämmigsten Fischer der Insel konnten sie nicht bändigen – einerseits, weil sie für ein Kind erschreckend kräftig war, aber vor allem, weil sie mit einer Grausamkeit kämpfte, die ihrer Größe spottete, wie das Jungtier einer wilden Bestie, das seine kleinen Reißzähne fletscht. Dennoch konnte sie nicht viel aus der Ruhe bringen – sie war nicht gierig, weder in Bezug auf Essen noch auf Reichtum. Das Einzige, wofür sie mit all ihrer Entschlossenheit kämpfte, waren Angelegenheiten, die ein anderes Kind namens {nickname} betrafen.\n Aber das liegt schon lange zurück. Als Berenica schon halb so groß wie ein volljähriger Mann geworden war, konnten ihr nicht mal mehr alle Erwachsenen auf der Purgatorio-Insel gemeinsam Paroli bieten. Die Art, wie sie sie ansahen, hatte sich verändert – in ihren Blicken lag nun ein Hauch von Besorgnis. „Sie ist vielleicht ein Monster“, dachten sie.\n Aber sind Monster nicht von Natur aus selbstsüchtig? Würde ein Monster eine andere Seele so sehr schätzen wie sie?",
+          TextMapId = "UI_CHAR_DATA_TEXT_11010201"
+        },
+        UI_CHAR_DATA_TEXT_11010202 = {
+          ContentDE = "Es war an einem Mittsommermorgen, ein ansonsten unspektakulärer Tag auf der Purgatorio-Insel. Die Fischer standen früh auf, schnappten sich die von ihren Frauen frisch geflickten Netze und Segel und gingen dann zu dem kleinen Pier, wo ihre Boote auf sie warteten. Sie hatten sich darauf eingestellt, tagelang der salzigen Meeresbrise zu trotzen, in der Hoffnung, mit einem reichen Fang zurückzukehren, damit sie ihre Familien in den kommenden Wochen ernähren konnten.\n \n Es herrschte ein reges Treiben bei den Abschiedszeremonien am Hafen, und niemand bemerkte das junge Mädchen Abigail, das sich in die entgegengesetzte Richtung schlich, den schlammigen Bergpfad hinauf. Hinter ihr verstummte der Lärm des Dorfes, und der Wind, der durch die versengten Äste pfiff, erfüllte die Luft mit einem traurigen Heulen. Abigail versicherte sich, dass es nicht die Filthoiden waren und legte sich eine Hand auf die Brust, um ihr rasendes Herz zu beruhigen, erst dann ging sie weiter.\n Die Dorfbewohner mieden die Berge in diesen Tagen. Erst vor zwei Tagen war ein ohrenbetäubendes Dröhnen aus dem verlassenen Tempel in den Bergen gedrungen, gefolgt von einem Feuersturm, der jedoch glücklicherweise von einem plötzlichen Wolkenbruch gelöscht wurde. Einige waren der Meinung, die Göttin würde sie für ihre Ungläubigkeit bestraften; andere flüsterten hinter vorgehaltener Hand, es sei das Werk der Frau, die in den Bergen lebte, oder dass die Filthoiden sich erhoben hätten. Ungeachtet der verschiedenen Theorien waren sich alle in einem Punkt einig: Niemand sollte sich dem Berg nähern, zumindest vorerst.\n \n Aber Abigail blieb keine Wahl. Die Gicht ihrer Mutter hatte sich verschlimmert, und das schmerzerfüllte Stöhnen ihrer Mutter hatte Abigail die ganze Nacht hindurch wachgehalten. Sie wusste, dass ganz in der Nähe des Tempels ein Heilkraut wuchs, das ihr Linderung verschaffen könnte. Trotz der Risiken fasste sie den Entschluss, die Reise anzutreten.\n Völlig auf ihr Ziel konzentriert fiel ihr nicht auf, was sich im Unterholz verbarg, und sie strauchelte über etwas Weiches unter ihren Füßen. Sie hatte sich so sehr darauf konzentriert, auf den Tempel zuzulaufen, dass sie überhaupt nicht bemerkt hatte, was sich dort im Gras befand. Sie rieb sich ihr verletztes Knie und wagte einen Blick in das Dickicht. Als sie sah, worum es sich handelte, schnappte sie nach Luft und stolperte erschrocken zurück.\n „Eine ... Leiche ...!“\n \n Es war ein Kind, im zarten Alter von etwa fünf oder sechs Jahren, mit feinen Gesichtszügen, die vermuten ließen, dass es sich um ein Mädchen handelte. Das kleine Mädchen war von Kopf bis Fuß mit Ruß und Schmutz besudelt, ihr einst so wunderschönes silbernes Haar war vom Schlamm verklebt. Sie lag zusammengekauert wie ein Neugeborenes, umsäumt von den leblosen Körpern mehrerer Filthoiden, und neben ihr lag ein geschwärztes Messer.\n War sie von den Filthoiden angefallen worden? Und wenn ja, wer hatte diese Bestien getötet?\n „Du ...“ Nachdem sie ihren anfänglichen Schock überwunden hatte, gewann Abigails Besorgnis die Oberhand. Sie presste sich die Hand auf die pochende Brust und berührte zögerlich die Schulter des kleinen Mädchens. „Hey, bist du noch ... Am Leben?“\n \n Vielleicht lag es daran, dass Abigail versehentlich auf sie getreten war, möglicherweise hatte Abigails Stimme sie geweckt – jedenfalls zuckte die „Leiche“ plötzlich zusammen, begleitet von heftigem Zittern. Sie lebt! Erleichterung durchströmte Abigail. „Gott sei Dank! Lass mich dir beim Aufstehen helfen!“\n Als Abigail die Hand des kleinen Mädchens ergreifen wollte, musste sie feststellen, dass dieses die Arme fest vor der Brust verschränkt hielt. So sehr Abigail auch zerrte, das Mädchen wollte nicht loslassen. „Du musst mir deine Hand geben.“ Abigail seufzte und kniete sich vor das Kind. „Es ist schon gut, ich bin hier, um dir zu helfen.“\n Das kleine Mädchen öffnete mühsam die Augen und sah Abigail argwöhnisch an. Ihr Blick traf Abigails aufrichtige, gütige Augen. Sie biss sich auf ihre spröden Lippen, als würde sie mit einer schwierigen Entscheidung ringen. Schließlich nickte sie entschlossen, als hätte sie sich dazu durchgerungen, und entspannte widerwillig ihre Arme.\n \n Als das Licht der Morgendämmerung durch die Bäume sickerte, sah Abigail, was das Mädchen so verzweifelt beschützt hatte ...\n Es war ein weiteres Kind, noch viel jünger als sie.",
+          TextMapId = "UI_CHAR_DATA_TEXT_11010202"
+        },
+        UI_CHAR_DATA_TEXT_11010203 = {
+          ContentDE = "Am ersten Abend lagen die beiden Kinder zusammengekauert im Gras. Ihr schwacher, gequälter Atem war das einzige Lebenszeichen. In ihrer Kindheit hatte Abigail bei Jagdausflügen mit ihrem Vater ähnliche Szenarien erlebt, als sie auf verwaiste Jungtiere gestoßen war, die ohne ihre Mütter hilflos im Gebüsch kauerten.\n Abigail stellte einen Krug mit frischem Wasser neben das Mädchen, zusammen mit etwas getrocknetem Fisch und altbackenem Brot, das sie auf ein Stück Stoff gelegt hatte. Mehr konnte sie nicht tun. Als sie die Dorfbewohner gebeten hatte, ihr bei der Rettung der Kinder zu helfen, war sie auf schroffe Gleichgültigkeit gestoßen. Die mitfühlenderen Dorfbewohner sagten, die Gemeinde sei zu arm, um zwei weitere hungrige Mäuler zu stopfen, und die weniger wohlwollenden machten ihr sogar Vorwürfe, dass sie sich überhaupt auf den Berg gewagt hatte. Einige von ihnen bemerkten die Hörner auf den Köpfen der Kinder – ein Merkmal, das in ihrer Heimat Hyperborea nicht gerade wohlwollend aufgenommen wurde. Selbst ihre sonst so herzensgute Mutter runzelte die Stirn und sagte, die Familie komme gerade so über die Runden und könne keine zusätzliche Bürde tragen.\n „Ich hoffe, hier seid ihr beide sicher“, murmelte Abigail, als sie ihnen das Essen zurechtlegte, und warf einen letzten besorgten Blick zurück, bevor sie sich entfernte.\n \n Bis zur zweiten Nacht war das ältere Mädchen wieder etwas zu Kräften gekommen. Sie rappelte sich auf, nahm das jüngere Kind auf den Arm und stolperte zu einer kleinen Höhle in der Nähe, um dort Schutz vor dem nächtlichen Regen zu suchen. Zwar gab es in der Höhle nichts zu essen, aber sie bot ihnen einen trockenen Unterschlupf, um sich etwas auszuruhen. Nachdem sie das jüngere Kind hineingelegt hatte, sackte sie völlig erschöpft zu Boden. Nach einer kurzen Verschnaufpause stolperte sie zurück zu der Stelle, an der Abigail die Vorräte zurückgelassen hatte. Sie entfernte den Korken vom Krug und trank einen großen Schluck, bevor sie innehielt. Schnell verschloss sie den Krug wieder und stapfte zurück zur Höhle – wohl wissend, wie kostbar dieses frische Wasser war, sparte sie den größten Teil davon für das jüngere Kind auf.\n \n Am dritten Morgen, als sich Abigail erneut den Berg hinaufschlich, sah sie das Mädchen an der Höhlenwand sitzen, sich die Wunden mit dem Stück Stoff verbindend, das sie dort zurückgelassen hatte. Trotz der zahlreichen Verletzungen wirkte das Mädchen irgendwie erfrischt, und ein schwacher Glanz war in ihre blutroten Augen zurückgekehrt. Abigail fiel auf, dass die Lippen des Mädchens sich bewegten, als wollte sie etwas sagen, aber stattdessen blieb sie still und starrte wie gebannt auf den leeren Krug.\n Als Abigail klar wurde, dass das Mädchen Durst haben musste, nahm sie den Krug, mit der Absicht, ihn am Bach wieder aufzufüllen. Plötzlich fasste das Mädchen sie am Arm und schüttelte entschieden den Kopf. „Ich ... komme mit dir“, krächzte sie mit heiserer Stimme.\n Abigail führte das Mädchen zum Bach und sah zu, wie es sich mühsam bückte, um den Krug mit Wasser zu füllen. Das Mädchen weigerte sich, Hilfe von anderen anzunehmen, und versuchte trotz ihrer Verletzungen, sich selbst zu helfen. Abigail verspürte einen Anflug von Mitgefühl. Obwohl die Kinder im Dorf schon von klein auf lernten, ihren Eltern im Haushalt zur Hand zu gehen, schmerzte es sie, ein so kleines Kind mit so schweren Verletzungen zu sehen, das sich bemühte, all die Anstrengungen alleine zu bewältigen.\n \n Am vierten Nachmittag kehrte eine Gruppe von Fischern ins Dorf zurück. Sie hatten einen guten Fang gemacht, den sie im Hafen des Imperiums zu einem guten Preis verkaufen konnten, um feine Stoffe und Proviant vom Festland mit nach Hause zu bringen. Ein solcher Tag war für die Kinder im Dorf normalerweise ein Grund zur Freude, aber Abigail war mit ihren Gedanken immer noch bei den Kindern in den Bergen. Sie wickelte ihren Anteil an den Backwaren sorgfältig ein und verstaute ihn in ihrem Korb.\n Als sie den Berg erreichte, sah Abigail, dass sich das Mädchen im Bach das Gesicht gewaschen hatte. Da der Schmutz jetzt abgewaschen war, erkannte Abigail, dass sie ein ziemlich hübsches Kind war.\n „D-Danke.“ Die Stimme des Mädchens war nicht mehr ganz so heiser wie am Tag zuvor. Es klang, als hätte sie schon ewig nicht mehr gesprochen und würde jede Silbe mit Bedacht artikulieren. „Danke.“ Feierlich nahm sie den Korb von Abigail entgegen. „Damit ... wird es {性别:ihm|ihr} bald besser gehen.“\n Abigail konnte ihre Neugier nicht zügeln und fragte: „Woher kommt ihr zwei eigentlich? Ich habe euch noch nie zuvor gesehen. Oh, und ...“ Ihre Neugierde war stärker als ihre Zurückhaltung und sie fragte: „Ich habe gehört, dass da eine Frau auf dem Berg lebt. Ist sie eure Mutter? Was ist mit ihr geschehen? Wisst ihr etwas über den Lärm vor ein paar Tagen?“\n Als die Frau auf dem Berg zur Sprache kam, verkrampfte sich der Körper des Mädchens sichtbar. „Ich ... kann darüber nicht sprechen“, murmelte sie und biss sich auf die Unterlippe.\n „Na gut, vergiss es.“ Abigail winkte ab, war aber irgendwie enttäuscht. „Im Dorf ist in letzter Zeit ziemlich viel los, ich kann mich vielleicht nicht mehr so oft zu euch schleichen. Passt gut auf euch auf, in Ordnung?“\n \n Am Abend des zehnten Tages sah Abigail die beiden Kinder am Meer.\n Sie schienen sich vollständig erholt zu haben. Die beiden kleinen Gestalten standen am Strand, wo die Flut sich zurückgezogen hatte, und die untergehende Sonne tauchte ihr wunderschönes silbernes Haar und den weitläufigen weißen Sand in einen goldenen Schein.\n Als das ältere Mädchen Abigail sah, nahm es das jüngere Kind an der Hand und ging langsam zu ihr hinüber. Sie trug den Korb, den Abigail für sie zurückgelassen hatte, nun gefüllt mit kleinen Fischen, Garnelen und Krabben. „Das ist für dich“, sagte sie. „Als Dankeschön.“\n Abigail wollte das Angebot gerade mit einer Handbewegung ablehnen, aber als sie die Entschlossenheit in den Augen des Mädchens sah, überlegte sie es sich noch einmal. Als sie den Korb entgegennahm, schlich sich ein Lächeln auf das Gesicht des Mädchens.\n Abigail lächelte ebenfalls. Sie war zuversichtlich, dass die beiden nun alleine überleben konnten.\n \n Jahre später, in einem Interview mit „Tägliche Gezeiten“, reflektierte Abigail Morley, mittlerweile eine erfolgreiche Magnatin der Fischereiindustrie, auf die Frage des Reporters über einige prägende Erinnerungen: „Frau Morley, ich möchte Ihnen noch eine letzte Frage stellen. Ich habe gehört, Sie haben Ihr Vermögen von Grund auf selbst aufgebaut. Was war der Wendepunkt in Ihrem Leben? Ich möchte es anders formulieren: Was sind die drei wichtigsten Ereignisse, die es geprägt haben?\n „Zum einen, dass meine Heimatinsel von Filthoiden überfallen wurde. Meine Eltern und ich konnten dem Massaker entkommen, aber sie waren schon gesundheitlich angeschlagen und erlitten auf der Flucht weitere Verletzungen. Kurz danach sind sie verstorben. Da war ich auf mich allein gestellt. Zum zweiten ... Es könnte für die Welt wichtiger gewesen sein als für mich.\n Abigail hielt inne, als ihre Gedanken zu jenem scheinbar ganz normalen Morgen vor so vielen Jahren zurückschweiften. Als die Dorfbewohner die Fischer verabschiedeten und sich die junge Abigail alleine in die Berge aufmachte, um Kräuter für ihre kranke Mutter zu sammeln.\n „An diesem Tag habe ich zwei Kinder, die jünger waren als ich, auf dem Berg gerettet“, erzählte sie weiter. „Zu diesem Zeitpunkt war mir nicht klar, dass ich die Räder der Geschichte in Bewegung gesetzt hatte.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_11010203"
+        },
+        UI_CHAR_DATA_TEXT_11010204 = {
+          ContentDE = "Während ihrer Zeit in der Legion wurde Berenica oft als „Die neue Klinge des Imperiums“ bezeichnet. Dieser Titel löste die unterschiedlichsten Emotionen aus – manchmal war es Bewunderung, manchmal Angst und manchmal ein Hauch von Spott. Das waren eindeutig nicht die Blicke, die man einem normalen Menschen zuwirft. Folglich entwickelte Berenica eine tiefe Abneigung gegen diesen Titel.",
+          TextMapId = "UI_CHAR_DATA_TEXT_11010204"
+        },
+        UI_CHAR_DATA_TEXT_11010205 = {
+          ContentDE = "„Sie lächelt jetzt öfter, fast wie ein normales Kind. Und sie ist viel stärker und mutiger, als ich es mir je zu träumen gewagt hätte ... Mit diesem Wissen kann ich {nickname} getrost ihrer Obhut anvertrauen. Mit jedem Tag wuchs meine Gewissheit, dass es die richtige Entscheidung war, sie von der Legion fernzuhalten. Jetzt muss ich den Preis für diese Entscheidung bezahlen ... Es tut mir leid, Berenica. Bitte verzeih mir, dass ich gehen muss.“\n „Und ... Ich liebe dich. Ich liebe euch beide.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_11010205"
+        },
+        UI_CHAR_DATA_TEXT_11010301 = {
+          ContentDE = "Berenica hat eine Schwäche für alles, was flauschig und kuschelig ist, wie zum Beispiel das seidige Fell von kleinen Tieren.\n Leider beruht diese Zuneigung nicht auf Gegenseitigkeit. Wann immer sie ihr in die Augen schauen, wölben selbst die sanftesten Katzen plötzlich ihren Rücken und stürmen davon wie aufgeschreckte, pelzige Geschosse.\n Berenica bleibt frustriert zurück und hat keine andere Wahl, als den Arm um deinen Kopf zu legen und verspielt durch dein weiches Haar zu wuscheln, bis es völlig zerzaust ist.",
+          TextMapId = "UI_CHAR_DATA_TEXT_11010301"
+        },
+        UI_CHAR_DATA_TEXT_11010302 = {
+          ContentDE = "Berenica hatte schon immer einen leichten Schlaf, eine Folge alter, tief verwurzelter Gewohnheiten. Doch gelegentlich wird sie von beunruhigenden Träumen heimgesucht – manchmal findet sie sich in früheren Gefängnissen wieder, dann wieder verläuft sie sich in einem trostlosen Wald oder treibt allein auf einem endlosen Meer. Meistens befindet sie sich jedoch in einer riesigen Glaskammer. Unheilvolle Fluten brechen aus allen Richtungen über sie herein, umspülen ihre Gliedmaßen, Brust, Ohren und Augen und tauchen alle ihre Sinne in eine erstickende Angst.\n Aus diesen Träumen erwacht sie häufig schweißgebadet, überwältigt von blanker Furcht und unendlicher Einsamkeit. Das Gefühl der Panik legt sich erst, wenn sie deinen gleichmäßigen Atem neben sich hört, der ihr sanft signalisiert, dass sie nicht allein ist.",
+          TextMapId = "UI_CHAR_DATA_TEXT_11010302"
+        },
+        UI_CHAR_DATA_TEXT_11010303 = {
+          ContentDE = "Berenica weint nie. Unabhängig davon, wie intensiv ihre Schmerzen auch sein mögen oder in welch tiefster Verzweiflung sie sich befindet, sie beißt einfach die Zähne zusammen und erträgt ihr Leid, ohne eine einzige Träne zu vergießen. Für ein Kind ist Weinen ein Ausdruck von Ungemach und eine Bitte um Trost. Für eine Waffe sind Tränen jedoch ein Zeichen von Schwäche, nichts weiter als Feuchtigkeit, die das Metall rosten lässt. Lange bevor sie eine Familie fand, die sich wirklich um sie kümmerte, hatte Berenica die Fähigkeit zu weinen schon verloren.",
+          TextMapId = "UI_CHAR_DATA_TEXT_11010303"
+        },
+        UI_CHAR_DATA_TEXT_11010304 = {
+          ContentDE = "Berenica war sich schon immer vage der außergewöhnlichen Kräfte bewusst, die in ihr stecken. In den Geschichten der Minnesänger und Barden erfüllen Figuren mit besonderer Kraft oft große Aufgaben – wie die Welt zu retten oder den Thron zu besteigen. Doch Berenica hat kein Interesse an solchen Schicksalen. Falls sie ihre Kräfte jemals voll ausschöpfen kann, will sie diese ausschließlich zum Schutz ihrer Liebsten einsetzen. Andere mögen es vielleicht als Verschwendung sehen, aber für Berenica ist der Schutz ihrer Familie das Allerwichtigste.",
+          TextMapId = "UI_CHAR_DATA_TEXT_11010304"
+        },
+        UI_CHAR_DATA_TEXT_11010305 = {
+          ContentDE = "Berenica betrachtet es seit jeher als ihre höchste Aufgabe, dich zu beschützen. Sie betrachtet dich als ein jüngeres, weniger widerstandsfähiges Kind, das ohne sie unmöglich überleben könnte. Und doch, an jenem Tag auf der Klippe, als sie dich zum ersten Mal dieses Zeichen geben sah, erkannte sie plötzlich, dass sie es war, die ohne dich nicht leben konnte.",
+          TextMapId = "UI_CHAR_DATA_TEXT_11010305"
+        },
+        UI_CHAR_DATA_TEXT_11010401 = {
+          ContentDE = "Die Dorfbewohner der Purgatorio-Insel spannen oft Fischernetze über den Strand und nutzen die Gezeiten, um Fische zu fangen. Nachdem sie alle auffindbaren Fische eingeholt hatten, blieben ein paar kleinere Fischchen und Garnelen übrig. Diese Reste waren die wichtigste Nahrungsquelle für Berenica und {nickname}, bevor sie alt genug waren, um zu arbeiten. Den Sand durchwühlend, der von den Fängen der anderen Fischer zurückgeblieben war, stöberten die beiden Kinder im trüben Wasser nach noch übrig gebliebenen kleinen Fischen und Garnelen. Diese Aufgabe war nicht nur mühsam und kräftezehrend, sondern brachte auch kaum einen Ertrag. Dennoch gelang es ihnen, das Ganze unterhaltsam zu gestalten, denn sie machten daraus einen Wettbewerb, bei dem es darum ging, wer die meisten „Schätze“ sammeln konnte.\n \n „Schau, Berry! Ich habe einen großen gefangen!“ {nickname} jubelte aus einiger Entfernung und hielt stolz einen faustgroßen Fisch in die Höhe. Die Fischer hätten sich niemals die Mühe gemacht, sich nach Fischen dieser Größe zu bücken, aber für sie war es ein großartiger Fang.\n „Das ist echt beeindruckend!“ Berenica lächelte daraufhin.\n Erfreut über diese Anerkennung legte {nickname} den Fisch nicht sofort in den Korb. Stattdessen stemmte {性别:er|sie} den Fang noch eine Weile gen Himmel und kostete diesen Augenblick des Triumphs aus – bis die scharfe Flosse des Fisches {性别:ihm|ihr} in die Handfläche schnitt und eine „Kampfwunde“ hinterließ. Als es darum ging, ihren Fang auszuwerten, stand schnell fest, dass Berenica den Sieg davongetragen hatte. Nicht bereit, sich geschlagen zu geben, protestierte {nickname}. Wenn ich nicht diese schwere Verletzung davongetragen hätte, hätte ich ganz sicher gewonnen! Dieser Fisch ist daran schuld ... Heute Abend machen wir daraus einen Eintopf.\n Sei kein schlechter Verlierer. Sei das nächste Mal einfach vorsichtiger, mahnte Berenica, doch da hatte sich {nickname} {性别:seinen|ihren} Korb bereits geschnappt und war auf dem Heimweg.\n \n „Wir machen ein Wettrennen bis nach Hause“, schrie {性别:er|sie} aus einiger Entfernung und winkte Berenica zu.\n Mit einem gequälten Lächeln schulterte Berenica ihren eigenen Korb und schloss sich diesem unfairen Rennen an. Kaum war sie losgelaufen, schlug das Wetter plötzlich um, Sturzfluten ergossen sich vom Himmel und durchnässten sie bis auf die Haut. „Typisch für mich“, dachte Berenica missmutig, aber bevor sie weiter darüber sinnieren konnte, drang die fröhliche Stimme von {nickname} durch den Regen zu ihr. Schau mal, Berry, es regnet! {性别:Er|Sie} streckte die Hand aus, um die Regentropfen zu fangen, und kicherte leise. „Jetzt müssen wir nicht mehr den Berg hinaufsteigen, um Wasser zu holen. Das ist wohl ein Geschenk der Götter ... Wir haben so ein Glück! Mehr Glück als die Prinzen und Prinzessinnen im Palast!“\n Berenica konnte sich ein Lächeln nicht verkneifen. Sie glaubte nicht an Götter. Für sie war Regen einfach nur ein weiteres Naturereignis. Aber zumindest in diesem letzten Punkt konnte sie zustimmen – die Zeit mit {nickname} war wirklich unbezahlbar.\n \n Morgen sollte ich {性别:ihn|sie} gewinnen lassen. Berenica überlegte und beschleunigte ihre Schritte, um aufzuholen. Berenica überlegte und beschleunigte ihre Schritte, um aufzuholen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_11010401"
+        },
+        UI_CHAR_DATA_TEXT_11010402 = {
+          ContentDE = "Um mehr Abwechslung in ihre Mahlzeiten zu bringen, machten sich Berenica und {nickname} manchmal in die Berge auf, um Obst und Gemüse zu sammeln. Das bergige Terrain war gefährlich – und es gab dort jede Menge wilde Tiere. Um diese Tiere nicht aufzuschrecken, vor allem in Notfällen, hatte Berenica ein System mit geräuschlosen Signalen entwickelt: Zwei Klopfer auf die rechte Schulter bedeuteten „Hinter dir“ und zwei Klopfer über dem Herzen hießen „Komm näher“.\n „Lass uns noch ein Signal hinzufügen – einen Nasenstupser, um zu sagen, dass alles in Ordnung ist.“ Berenica erklärte es {nickname}. „Das sollte vorerst reichen. Vergiss sie bloß nicht.“\n \n Dank dieser Signale überlebten die beiden Kinder viele gefährliche Situationen, bis sie eines Tages auf eine noch größere Bedrohung stießen – die Filthoiden. Es war das erste Mal, dass {nickname} diesen Kreaturen begegnete, aber Berenica wusste, wie tödlich sie waren. Sie handelte sofort, stellte sich schützend vor {nickname} und lieferte sich einen Kampf mit den furchterregenden Monstern, bei dem sie sich mehrere Verletzungen zuzog. Sie konnte die Bestien letztendlich überwältigen, merkte aber schnell, dass sie durch ihre Angriffe vergiftet worden war.\n Kurz bevor sie das Bewusstsein verlor, sah Berenica noch einmal kurz das panische Gesicht von {nickname}. Sie wollte etwas sagen, aber dazu fehlte ihr die Kraft.\n \n Als Berenica schließlich wieder das Bewusstsein erlangte, lag sie wohlbehalten zu Hause in ihrem Bett.\n \n „Berry ...? Berry! Du bist wach!“ {nickname} stieß einen Freudenschrei aus, stürzte zu ihr hinüber und ergriff fest ihre Hand, als könnte sie jeden Augenblick wieder entschwinden.\n „Keine Sorge, jetzt geht es mir gut.“ Berenica beruhigte {性别:ihn|sie}, richtete sich auf und sah sich im Raum um. Überrascht stellte sie fest, dass sich ihr Zuhause in ein schreckliches Chaos verwandelt hatte – Töpfe und Schüsseln standen aufgetürmt neben dem Herd, einige davon mit seltsam aussehenden Flüssigkeiten gefüllt. Das Sparschwein lag in Scherben, ausgeplündert bis auf die letzte Münze. {nickname} war immer ein besonnenes, ausgeglichenes Kind gewesen – vielleicht ein bisschen zu ruhig für {性别:sein|ihr} Alter – und {性别:er|sie} würde niemals so ein Chaos anrichten. Erstaunt fragte Berenica nach. Da erfuhr sie, dass {nickname} das ganze Geld für Medikamente ausgegeben hatte.\n \n „Ich war total in Panik und habe dem Verkäufer einfach den Preis bezahlt, den er für die Medizin verlangt hat. Als ich ihm sagte, dass die Münzen in unserem Sparschwein nicht zum Bezahlen reichen, gab er mir einen Rabatt ... Aber als ich nach Hause kam und die Zutaten zusammenmischen wollte, merkte ich, dass es nur gemahlenes Gemüse war und kein echtes Heilmittel“, flüsterte {nickname} bedrückt. „Tut mir leid, Berry. Ich weiß, dass du diese Münzen schon ewig sparst ...“\n Das silberhaarige Kind stand bedrückt da, den Kopf gesenkt, mit zitternden Händen und Schweißperlen auf {性别:der|der} Nase. Berenica bemerkte {性别:sein|ihr} zerzaustes Haar und die schmutzigen Klamotten und erkannte, dass {性别:er|sie} wahrscheinlich weder geschlafen noch richtig gegessen hatte, während sie bewusstlos war. Wie auf Kommando knurrte der Magen von {nickname} laut wie ein Bär.\n \n „... Ehrlich“, seufzte Berenica mit einer Mischung aus Amüsement und Verärgerung, während sie die Haare von {nickname} zurechtzupfte. „Scheinbar brauchen wir noch ein Signal. Mmm ... In einem echten Notfall haben wir vielleicht keine Zeit für Handbewegungen ... Lass uns dreimal blinzeln. Dreimal blinzeln, das ist unser neues Signal.“\n „Was? Was bedeutet das?“\n „Es bedeutet, dass du auf dich aufpassen und weiterleben musst, auch wenn ich nicht mehr bei dir bin“, antwortete Berenica.\n „Nein! Das will ich nicht!“ {nickname} schüttelte energisch {性别:den|den} Kopf, wie eine silberne Rasseltrommel. „Wir sind eine Familie, nicht wahr? Die Familie hält immer zusammen.“ Die Familie hält immer zusammen.“\n \n Eine entfernte, schemenhafte Gestalt aus Berenicas Vergangenheit huschte durch ihre Gedanken. Selbst Familienmitglieder können sich unerwartet verlieren – das hatte sie selbst erlebt.\n \n „{nickname}, hör mich an ... Dieses Signal bedeutet keine Trennung. Es geht darum, was du tun musst, wenn wir uns jemals aus den Augen verlieren ... Du musst auf dich aufpassen und weiterleben, damit wir uns wiederfinden können.“ Berenica sah {nickname} direkt in die Augen, ihre Stimme klang ernster als je zuvor. „Also, merk dir dieses Signal – dreimal zwinkern bedeutet: ‚Auch wenn du ganz allein bist, solltest du mutig sein und weiterleben ... Bis wir uns eines Tages wiedersehen.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_11010402"
+        },
+        UI_CHAR_DATA_TEXT_11010403 = {
+          ContentDE = "„Steh auf und kämpfe weiter.“\n Die kalte, emotionslose Stimme schnitt von hinter der gläsernen Trennwand durch die Luft, als eine weitere Staffel Kampfdrohnen in die beengte Trainingsarena geschickt wurde. Ihre bedrohlichen roten Lampen flackerten, als sie auf das junge Mädchen zusteuerten, das im Zentrum stand.\n Sie umklammerte ihr Schwert und raffte sich mühsam aus den Überresten ihrer bisherigen Gegner auf. Ungeachtet der stechenden Schmerzen, die ihren Körper durchzuckten, und der lähmenden Erschöpfung in ihren Armen passte sie ihre Kampfhaltung blitzschnell an. Sie reckte die rote Klinge, länger als sie selbst, in die Höhe und wiederholte immer wieder routinemäßig ihre Schlagbewegungen. Die Erwachsenen in den dunkelgrauen Uniformen hatten ihr eingetrichtert, wenn sie das nicht täte, würde sie es sein, die zerschmettert auf dem Boden zurückbliebe.\n \n Die heutigen Gegner waren hartnäckiger, und das Training dauerte länger als je zuvor. Eine solch zermürbende Prüfung ging weit über das hinaus, was ein Kind ertragen sollte, doch dieses Mädchen kannte keine Normalität. Sie ahnte nicht einmal, dass die Erwachsenen hinter dem einseitig verspiegelten Glas sie mit fiebriger Begeisterung beobachteten, und die einzige Rückmeldung, die sie jemals bekam, war ein ständiges „Das war nicht gut genug“. Seit ihrer Geburt wurde ihr ein einziges Ziel indoktriniert: das schärfste aller Schwerter zu werden. Daher ertrug sie ohne Widerrede jede noch so grausame Trainingseinheit, ignorierte den Schmerz und betrachtete jede noch harte Herausforderung als Bestätigung ihres Selbstwerts.\n \n „Das reicht für heute. Gut gemacht, Nr. 0.“\n Das heutige Training endete mit einem leichten, fast schon herablassenden Lob. Entkräftet schleppte sich das Mädchen zurück in ihr Zimmer, zu erschöpft, um auch nur einen Bissen zu sich zu nehmen. Sie sank erschöpft auf ihr Bett, aber ihre Wunden bereiteten ihr solche Schmerzen, dass sie am Rande der Schlaflosigkeit dämmerte. Sie lag dort und zählte die Minuten, in der Hoffnung, der Schmerz würde schneller abklingen.\n \n „Kind ... Kind?“\n Um Punkt Mitternacht erklang eine flüsternde Stimme, während das Mädchen weiter die Minuten zählte. Sie war so sanft wie der Mondschein, der durch das schmale Fenster in ihr Zimmer fiel. „Ich muss träumen“, dachte sie, denn in diesem Gefängnis aus Stahl hatte noch nie jemand in diesem sanften Ton mit ihr gesprochen. Aber die Stimme erklang erneut, diesmal näher, fast so, als stünde sie direkt neben ihrem Bett. In der Dunkelheit konnte nicht erkennen, wem die Stimme gehörte. Sie setzte sich in ihrem kalten Bett auf und flüsterte: „Sprichst du ... mit mir?“\n Ihre Stimme zitterte. Die Besucherin schien ebenfalls nervös zu sein. „Ja. Hab keine Angst, mein Kind ... Hier, nimm ein Stück Obst!“\n Die Gestalt reichte ihr behutsam eine kleine, tiefrote Frucht. Erst viel später erfuhr Berenica, wie diese Frucht hieß: Granatapfel.\n \n „Mein Name ist ‚Nr. 0‘“, murmelte das Mädchen und wusste nicht so recht, was sie mit der Frucht anfangen sollte.\n „Das ist kein guter Name“, antwortete die Gestalt und streckte ihr die Hand entgegen. „Komm, ich bringe dich von hier weg. Ich gebe dir einen besseren Namen.“\n „Verschwinden ... Wohin?“ Die Stimme des kleinen Mädchens, sonst kalt und emotionslos, klang nun ungewöhnlich verwirrt und unschuldig.\n „An einen Ort ohne Krieg und Schmerz.“\n \n Das war unmöglich. Krieg und Schmerz waren allgegenwärtig und unausweichlich, da ihr Schicksal bereits besiegelt war – dies hatte man ihr von klein auf eingeimpft. Sie wurde sich bewusst, dass diese Gestalt sie zu etwas verleiten wollte, das gegen die Regeln verstieß, ihr Schicksal herausforderte, und das sie sofort zurückweisen und den Erwachsenen in den dunkelgrauen Uniformen melden sollte. Doch der Mondschein, der mittlerweile durch das Fenster drang, erhellte die aufrichtigen, ehrlichen Augen der Besucherin. In dem Mädchen entflammte eine tiefe Sehnsucht, an einen Ort zu entfliehen, an dem sie vielleicht den Mond selbst berühren könnte.\n \n Sie nickte, ergriff die ausgestreckte Hand und flüsterte: „Einverstanden.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_11010403"
+        },
+        UI_CHAR_DATA_TEXT_11010404 = {
+          ContentDE = "„Berenica, meine Liebe, hör mir gut zu.“ Die Frau beugte sich vor, umarmte Berenica fest und schob sie dann von sich weg. Ihre Stimme, die zuvor so sanft geklungen hatte, verriet nun Nervosität und Besorgnis. „Schnell, bring {nickname} hinunter ins Dorf am Fuße des Berges.“ Sie hielt kurz inne, kramte in einer Schublade, holte mehrere edle Schmuckstücke und eine Taschenuhr hervor. „Nimm die hier mit. Die Dorfbewohner nehmen euch vielleicht auf. Sag ihnen einfach, ihr wärt Waisenkinder, die an Land gespült worden sind, und dass ihr nichts über die Welt da draußen wisst, und dass dies die Habseligkeiten eurer Mutter sind.“\n „Kommst du nicht mit uns?“, fragte Berenica.\n „Ich kann nicht.“\n Berenica erstarrte, ihr Geist war wie leergefegt. Sie blinzelte ungläubig. „Du ... verlässt uns?“\n „In meiner Gegenwart wirst du nie ein ruhiges Leben haben. Geh einfach, beschütze {nickname}. Lebt euer eigenes Leben. Vergiss das Hyperboreische Imperium, die 13. Legion und die Nr. 0. Vergiss nicht, du bist nur ein ganz normales Kind. Du bist Berenica. Einfach Berenica.“\n \n Sie spulte schnell ihre Anweisungen ab und streichelte dann noch einmal zärtlich über Berenicas Haar. Nach einem kurzen Zögern, als wollte sie sich nicht von ihr trennen, spürte Berenica eine tiefe Zuneigung in ihrer Berührung. Doch die Frau zog ihre Hand schnell zurück, als hätte sie sich verbrannt, wandte sich ab und sprach mit fester Stimme. „Du darfst keine Zeit verlieren. Erinnerst du dich noch an dein Sprinttraining? Du hast zehn Minuten. Verlasse den Tempel – innerhalb von zehn Minuten musst du die Dorfstraße erreichen. Das ist ein Befehl.“\n Der befehlende Ton der Frau weckte in Berenica ihre frühesten Erinnerungen – jeden Befehl widerspruchslos zu befolgen. Das hatte man ihr seit ihrer Kindheit eingebläut. Sie antwortete instinktiv: „Ja, Madam.“ Aber dann stockte sie, schüttelte den Kopf und sah die Frau verzweifelt an, als würde sie sie anflehen, den Befehl zurückzunehmen. „Warum? Ich verstehe das nicht ...“\n „Berenica, vergiss mich und alles, was in der Vergangenheit war. Komm niemals wieder hierher.“\n Berenica wich instinktiv zurück, als sich die Tempeltür vor ihr mit einem Donnern schloss. Sie hatte nicht einmal gesehen, wie die Frau den Knopf gedrückt hatte, um den Mechanismus auszulösen. {nickname}, durch das plötzliche Geräusch aufgeschreckt, klammerte sich ängstlich an ihren Arm.\n Berenica blickte noch einmal zurück auf die geschlossene Tür, hob {nickname} hoch und machte sich auf den Weg, ohne sich noch einmal umzudrehen.\n „Ich habe zehn Minuten Zeit“, wiederholte sie den Befehl. „Ich muss {nickname} beschützen und weiterleben ...“ Leise flüsterte sie: „Ich kann das schaffen.“\n \n Als Berenica zehn Minuten später den Bergpfad entlangging, ertönte hinter ihr eine ohrenbetäubende Explosion. Sie wusste nicht genau, was vorgefallen war, aber sie konnte es sich ziemlich gut vorstellen. Sie kniff die Augen zusammen, aber sie blieben trocken – denn Tränen kannte sie schon lange nicht mehr. Doch etwas in ihr schien hervorzubrechen, wie die Trümmer, die hinter ihr den Berg hinunterstürzten.\n In dieser Nacht kam es zu einem Feuer in den Bergen und einer Flutkatastrophe. Und für Berenica hörte der Regen dieser Nacht niemals auf.\n Anschließend entkamen Berenica und {nickname} nur knapp dem Tod durch die Filthoiden und wurden von einem gütigen Mädchen aus dem Dorf gerettet. Sie überlebten trotz aller Widrigkeiten.\n \n Danach kehrte Berenica mehrmals zum Eingang des Tempels zurück. Auch wenn sie es nie wagte, ihr Versprechen zu brechen und den „Schlüssel“ umzudrehen. Stattdessen stand sie still davor und wartete. Sie hoffte, eines Tages würde sich die Tür plötzlich öffnen, die Frau würde mit einem sanften Lächeln heraustreten, sich zu ihr hinunterbeugen, ihr über den Kopf streicheln und sagen: „Jetzt ist alles gut. Ich bin wieder da.“\n \n Die Jahreszeiten vergingen, aber die Tür blieb verschlossen, und das Warten wurde zur Gewohnheit. Doch als eines Tages ein vertrockneter Granatapfel herabfiel und Berenica am Kopf traf, wurde sie abrupt in die Realität zurückgerissen. Sie hob den Granatapfel auf und dachte daran zurück, wie diese Frau jedes Jahr, wenn die Früchte zur Reife kamen, einige davon pflückte, sie mit nach Hause brachte, sie wusch und dann ihr und {nickname} zum Essen gab.\n Berenica drückte die verschrumpelte, längst ungenießbare Frucht fest an sich – und da begriff sie endlich, dass die Frau niemals wieder zurückkommen würde. Von da an gab es nur noch sie und {nickname}.\n \n Ich werde mein Versprechen halten, schwor sie sich insgeheim. „Ich werden gut auf {性别:ihn|sie} aufpassen – und dich nicht enttäuschen.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_11010404"
+        },
+        UI_CHAR_DATA_TEXT_11010405 = {
+          ContentDE = "Vielleicht war es ein glücklicher Zufall, dass Berenicas rigoroses Training in ihrer Kindheit ihr die Eingewöhnung in das nomadische Leben so leicht machte. In den Anfangstagen nach ihrer Flucht aus der Legion folgte sie der Frau, die sie gerettet hatte, ertrug Nächte in feuchten, dunklen Höhlen, trotzte Stürmen auf tosenden Meeren und entkam imperialen Verfolgern entlang steiler Klippen. Egal wie beschwerlich oder bedrohlich die Verhältnisse waren, sie klagte nie und machte keine Pause, um sich auszuruhen.\n \n Schwieriger als den Schmerz zu ertragen war es aber, ihn zu vergessen.\n \n Selbst nach ihrer Flucht aus diesem Gefängnis und der erfolgreichen Flucht vor der endlosen Verfolgung blieben die Schatten ihrer Vergangenheit präsent. Auch nachdem sie sich auf der Purgatorio-Insel niedergelassen hatte, holten sie die Erinnerungen an ihr altes Leben immer wieder ein: Sie erwachte vor Sonnenaufgang und saß lange Zeit mit leerem Blick da, bis ihr klar wurde, dass sie nicht mehr zum morgendlichen Training antreten musste. Obwohl die Lebensmittel immer in greifbarer Nähe waren, wartete sie immer bis zur festgelegten Essenszeit, um sich zu stärken. War sie krank oder gar verletzt, ertrug sie das Unbehagen still und suchte nie nach Hilfe. Kam sie versehentlich mit jemandem in Körperkontakt, zuckte sie instinktiv zurück und nahm mitunter sogar eine Kampfhaltung ein. Gelegentlich reichte schon ein kleiner Vogel, der fröhlich am Fenster vorbeiflatterte, um sie in höchste Alarmbereitschaft zu versetzen.\n \n Dann traf sie dich ... klein, zart, voller Unschuld, in den Armen dieser Frau, dein Lächeln von der Welt noch unbefleckt. Zögernd berührte sie deine Wange, und du umklammertest ihren Finger fest mit deiner kleinen Hand. Du wirktest so zerbrechlich, als könnte die kleinste Gefahr dein Leben auslöschen.\n Zum ersten Mal verspürte Berenica das starke Verlangen, jemanden zu beschützen. Um ein gutes Vorbild für dich zu sein, disziplinierte sie sich selbst, regelmäßige Schlaf- und Wachroutinen einzuhalten. Um dein gesundes Wachstum zu gewährleisten, experimentierte sie mit verschiedenen Lebensmitteln und sammelte unbeholfen alle möglichen Zutaten, von denen die Leute behaupteten, sie seien lecker. Um gut auf deine Gesundheit zu achten, lernte sie, bereits die ersten Anzeichen von Krankheiten zu erkennen – beispielsweise, dass Husten eine Erkältung ankündigen kann und Schwindel einen Hitzschlag. Um dich nicht zu verängstigen, übte sie sich darin, ihre instinktiven Abwehrreaktionen zu unterdrücken, und fing an, öfter zu lächeln. Als sie dich aufwachsen sah, fand sie nach und nach wieder zu sich selbst, erlangte die menschlichen Erfahrungen und Gefühle zurück, die sie längst verloren geglaubt hatte.\n \n Es war an einem ganz normalen Nachmittag, nachdem sie das Haus geputzt hatte, da setzte sich Berenica müde in ihren Stuhl und schlief versehentlich ein. Während sie im Halbschlaf vor sich hindämmerte, spürte sie eine vertraute Berührung auf ihrem Gesicht. Als sie die Augen aufschlug, saßt du da, warst auf den Tisch geklettert und berührtest sanft ihre Wange mit deinen kleinen Fingern. Dies war das erste Mal, dass sie jemanden so nah an sich heranließ, dass er ihr potenziell Schaden zufügen konnte. Berenica lächelte und stupste dir im Gegenzug sanft gegen die Wange. In diesem Moment fühlte sie ein unbestreitbares Gefühl, in dieser Welt tatsächlich am Leben zu sein.\n \n Würde jemand Berenica fragen, warum du ihr so viel bedeutest, wäre die Antwort wahrscheinlich ganz einfach: Durch deine Präsenz gelang es ihr schließlich, sich von der Waffe „Nr. 0“ des Imperiums in das Mädchen namens „Berenica“ zu verwandeln.",
+          TextMapId = "UI_CHAR_DATA_TEXT_11010405"
+        },
+        UI_CHAR_DATA_TEXT_11030101 = {
+          ContentDE = "Du standest auf dem Balkon, auf dem Parsifal einst das Singen übte.\n Bevor es Theater, Publikum und den alles trennenden Vorhang gab, war dies seine Bühne – das Morgenlicht war der Scheinwerfer, die Straße das Bühnenbild, der schneebeladene Wind das Orchester, der Vogelgesang der Chorsatz.\n Der Boden war zwar sauber gefegt, doch zwischen den Fugen der Fliesen hatte sich ein wildes Pflänzchen emporgekämpft – vielleicht hatte derjenige, der das Haus pflegte, nicht das Herz, es auszureißen., Du strichst sanft über seine Blätter und wünschtest ihm still, es möge anstelle des Gegangenen kräftig weiterwachsen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_11030101"
+        },
+        UI_CHAR_DATA_TEXT_11030102 = {
+          ContentDE = "Beim Durchblättern des Sammelalbums eines passionierten Opernliebhabers entdeckst du ein altes Plakat. Dort, wo der Name des Hauptdarstellers stehen sollte, bedeckt ein Streifen kunstvoll gemusterten Klebebands sorgfältig den Namen „Parsifal Snowfield“.\n Das Bild zeigt keinen frostigen Feengeist; dieser befindet sich außerhalb des Rahmens und blickt auf die Welt der Kinder. Die Perspektive erinnert an den Raum hinter der Bühne: Wenn das Licht angeht, sickert ein schmaler Streifen Helligkeit unter dem schweren Vorhang hervor. Für Parsifal war die „Bühne“ genau das – eine ferne Welt, die er nur durch diesen Spalt erahnen konnte.\n Und so gab er, wie die Fee aus der Geschichte, freiwillig alles auf, um jene ferne Welt zu erreichen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_11030102"
+        },
+        UI_CHAR_DATA_TEXT_11030103 = {
+          ContentDE = "An einem abgelegenen schwarzen Brett in Icelake findest du den verblassten Rekrutierungsaufruf der 6. Legion.\n Die Bedingungen und Prüfungsinhalte sind von Wind und Wetter unleserlich geworden, doch die letzte Zeile springt noch immer klar ins Auge: „Hervorragenden Kandidaten wird der Titel des Lorbeerkranz-Charons verliehen.“ Mit solch schönen, glänzenden Lügen lockte man einen träumenden Jugendlichen nach dem anderen bereitwillig in die Hölle.\n Soldat und Schauspieler – beides sind Berufe, und wer sich anstrengt, soll dafür entlohnt werden. Als Parsifal diese Anzeige las, stellte er sich vielleicht genau eine solche gerechte und vernünftige Welt vor – eine, in der Träume verdient werden können.",
+          TextMapId = "UI_CHAR_DATA_TEXT_11030103"
+        },
+        UI_CHAR_DATA_TEXT_11030104 = {
+          ContentDE = "Du kehrtest erneut in die Kanalisation zurück und fandest den Ort, an dem Parsifal einst Zuflucht gesucht hatte.\n Selbst in dieser dunklen, feuchten Ecke hatte er mit seinen deformierten Händen eine Bühne errichtet.\n Tat er dies aus ungebrochener Sehnsucht nach einer Bühne, die für ihn unerreichbar geblieben war? Oder wollte er sich damit lediglich beweisen, dass er noch immer ein fühlender, lebendiger Mensch war?",
+          TextMapId = "UI_CHAR_DATA_TEXT_11030104"
+        },
+        UI_CHAR_DATA_TEXT_11030105 = {
+          ContentDE = "Das Galea-Theater hat wieder eröffnet.\n Boden und Wände der Bühne sind vollständig erneuert worden – keine Risse, keine Einschusslöcher, keine Blutspuren sind geblieben. Du gehst von einem Ende der Bühne zum anderen und findest keinerlei Spuren von ihm, als wäre alles, was hier einst geschah, ebenso flüchtig gewesen wie sein Name – nichts weiter als eine vorübergehende Illusion.\n Doch du erinnerst dich an seinen letzten Abschied. Hinter jener grotesken Maske hast du deutlich einen selbstbewussten Schauspieler gesehen, voller Stolz und Tatendrang, bereit, die Bühne zu betreten und dem Publikum eine vollkommene Darbietung zu schenken.\n Er hat es geschafft.",
+          TextMapId = "UI_CHAR_DATA_TEXT_11030105"
+        },
+        UI_CHAR_DATA_TEXT_11030201 = {
+          ContentDE = "Auf einer ruhigen Straße im südlichen Außenbezirk von Icelake wartet eine Frau, die eine Bäckerei betreibt, noch immer auf die Rückkehr eines ihrer Stammkunden.\n \n Vor mehr als zehn Jahren besaß sie noch kein Ladenlokal, sondern nur einen kleinen Stand an genau dieser Straße. Jeden Morgen, wenn sie ihre Vorbereitungen traf, hörte sie aus einem der oberen Stockwerke den klaren, hellen Gesang eines Kindes. Obwohl sie den Sänger nie zu Gesicht bekam, begann sie unbewusst, ihn als einen Gefährten zu betrachten – jemanden, der wie sie jeden Tag mit Mühe und Hoffnung begrüßte. Wann immer sie müde wurde oder ans Aufgeben dachte, reichte allein diese Stimme aus, um ihr neue Kraft zu geben.\n \n Eines Tages bemerkte die Frau, dass der Gesang anders klang als sonst. Obwohl sie keinerlei musikalische Ausbildung besaß, hörte sie es deutlich: Die Stimme wirkte zerstreut, fahrig, als laste eine schwere Sorge auf dem Herzen des Kindes. Dieser Zustand hielt mehrere Tage an. Dann, an einem Morgen, brach der Gesang plötzlich mitten im Ton ab, gefolgt von einem erschrockenen Aufschrei. Die Frau fuhr zusammen und eilte die Treppe hinauf, wo sie mit einem aufgelösten jungen Charon zusammenstieß.\n „Gnädige Frau, meine Mutter ... meine Mutter ist ohnmächtig geworden. Bitte, helfen Sie mir!“ stammelte der Junge.\n Für einen Moment hielt die Frau inne. Diese Stimme – sie erkannte sie sofort. Ohne jeden Zweifel stand der Besitzer der morgendlichen Gesänge vor ihr, ihr unsichtbarer „Gefährte“.\n Sie fasste sich schnell und half dem Jungen, seine Mutter in eine nahegelegene Klinik zu bringen.\n \n Nach der Behandlung war die Mutter vorerst außer Lebensgefahr, doch der Junge wich nicht von ihrer Seite. Als die Frau bemerkte, dass er den ganzen Tag nichts gegessen hatte, kehrte sie zu ihrem Stand zurück, füllte einen Korb mit Brot und brachte ihn in die Klinik.\n „Vielen Dank ... tausend Dank, gnädige Frau“, bedankte sich der Junge immer wieder. „Ich weiß gar nicht, wie ich Ihnen das vergelten soll.“\n „Nenn mich einfach Horrel“, erwiderte sie lächelnd. „Und danke mir nicht – du hast mir ebenso geholfen.“\n Der Junge blickte sie verwirrt an.\n „Dank dir“, erklärte sie, „habe ich jeden Morgen eine kostenlose Opernaufführung genossen. Ich wollte es dir schon lange sagen: Junge, du singst wunderschön!“\n „D... Danke ...!“ Überraschung und ein Anflug von Schüchternheit huschten über sein Gesicht. „Aber meine Mutter sagt immer, man darf fremde Güte nicht einfach annehmen – man muss sie vergelten.“\n „Dann komm das nächste Mal einfach an meinen Stand und kauf ein Brot“, lachte die Frau.\n \n Es war nur eine beiläufige Bemerkung gewesen, doch von diesem Tag an kam der Junge tatsächlich alle paar Tage herab, um ein Brot zu kaufen. In ihren Gesprächen erfuhr die Frau mehr über ihn: Er hatte seinen Vater nie gekannt, lebte seit jeher allein mit seiner Mutter, die schon lange kränklich war und deren Zustand sich zuletzt deutlich verschlechtert hatte.\n Die Frau betete für die beiden, doch der Gesang des Jungen gewann seine frühere Klarheit nie zurück – stets lag nun ein Hauch von Traurigkeit darin. Dieser Klang stimmte auch sie traurig, und so blieb ihr nichts anderes, als ihm jeden Tag das weichste, üppigste Brot zurückzulegen, in der Hoffnung, dass dessen Wärme und Duft seinen Schmerz ein wenig lindern könnten.\n \n Dann verstummte der Gesang. Und der Junge kam nicht mehr, um Brot zu kaufen.\n \n Viele Tage später sah die Frau ihn zufällig die Straße entlanggehen, mit leerem Blick und unsicherem Schritt. Sie rief ihn sofort zu sich.\n „Warum singst du nicht mehr?“ fragte sie.\n „Meine Mutter ist gestorben“, antwortete er, seine Stimme trocken und brüchig. „Ich habe früher gesungen, um sie glücklich zu machen. Aber jetzt ist sie nicht mehr da.“\n Die Frau schwieg einen Moment, dann reichte sie ihm eine warme Tüte Brot. „Deine Mutter hat mir einmal gesagt“, begann sie sanft, „dass sie sich wünscht, du würdest immer besser singen, eines Tages auf einer strahlenden Bühne stehen, damit alle deine Stimme hören können. Auch wenn sie nicht mehr bei dir ist – du kannst diesen Wunsch noch immer erfüllen.“\n Der Junge hob den Blick, und für einen Augenblick flackerte Licht in seinen Augen auf.\n In Wahrheit hatte die Frau seine Mutter nur wenige Male gesehen – stets verborgen unter Hut und Schleier, kaum ein Wort sprechend. Doch nun blieb ihr nichts anderes, als dem Jungen mit einer gut gemeinten Lüge Trost zu spenden.\n Am nächsten Morgen erklang der Gesang erneut. Vielleicht gerade weil er so lange verstummt gewesen war, klang er nun kraftvoller und bewegender als je zuvor.\n \n Jahr um Jahr verging, der Schnee von Icelake fiel und schmolz wieder. Aus dem Jungen wurde ein junger Mann, aus dem kleinen Stand eine richtige Bäckerei. An einem gewöhnlichen Morgen, eine halbe Viertelstunde vor Ladenöffnung, klopfte es an der Tür.\n \n „Frau Horrel, ich werde für eine Weile fortgehen und im Legiondienst stehen“, sagte der junge Mann und reichte ihr einen Schlüssel sowie einen kleinen Beutel mit Münzen. „Kannst du in meiner Abwesenheit ein wenig nach meinem Zuhause sehen?“\n „Natürlich. Aber dein Geld nehme ich nicht“, erwiderte sie und schob ihm den Beutel zurück. „Allein zu leben ist schwer genug. Aber warum zur Legion? Willst du nicht mehr singen?“\n „Ich will den Titel des Lorbeerkranz-Charons erlangen. Nur so kann ich wirklich auf der Bühne stehen“, erklärte er und schob den Beutel erneut zu ihr. „Ich kann deine Hilfe nicht umsonst annehmen ...“\n „Dann bezahl mich, wenn du zurückkommst“, sagte sie und reichte ihm wie immer das bereits zurückgelegte Brot., „Wenn du einmal Schauspieler bist, wirst du dann das Gesicht meiner Bäckerei?“\n „Wenn du mich willst ...“\n „Abgemacht“, sagte sie lächelnd und winkte ihm nach. „Möge dein Wunsch in Erfüllung gehen, Parsifal.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_11030201"
+        },
+        UI_CHAR_DATA_TEXT_11030202 = {
+          ContentDE = "Nicht jedes Theaterstück ist gut, und selbst in einem gelungenen Stück ist nicht jede Szene fesselnd. Das Publikum lässt sich meist von spannungsgeladenen, dramatischen Momenten mitreißen, während es bei jenen unscheinbaren Übergängen, die die Handlung nur verbinden sollen, allzu leicht den Faden verliert. Entsprechend legen auch viele Schauspieler mehr Wert auf ihre Auftritte in den „großen“ Szenen.\n Parsifal jedoch war anders. Lehrkräfte der Truppe erinnerten sich daran, dass er selbst die schlichtesten, von anderen kaum beachteten Passagen mit größter Ernsthaftigkeit spielte. Das lag zum einen an seinem außergewöhnlichen Fleiß, doch zum anderen auch daran, dass selbst diese „alltäglichen“ Szenen für ihn ein anderes Leben berührten – eines, das für ihn unerreichbar blieb.\n \n „Für die meisten Schauspieler ist das Spielen ein Beruf, ein Hobby oder vielleicht ein Traum“, so beschrieb es sein Lehrer. „Für Parsifal jedoch war es wohl etwas, das dem Leben selbst gleichkam – oder vielmehr etwas, das bereits vollständig in seinem Leben aufgegangen war.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_11030202"
+        },
+        UI_CHAR_DATA_TEXT_11030203 = {
+          ContentDE = "Das Bankett hatte begonnen.\n \n Im gleißenden Licht funkelten die Gläser in den Händen der Gäste und die Edelsteine an ihren Gewändern wie unzählige kleine Lampen, sodass goldener Schein jeden Winkel des Saales erfüllte. Wie bei allen Veranstaltungen dieser Art herrschten hier Verehrung für Ruhm und Reichtum, Gier nach Ansehen, hohle Förmlichkeiten und wohlpolierte Schmeicheleien. Und doch sollte sich gerade an diesem Ort eine märchenhaft-romantische Begegnung anbahnen – zwischen einem Mann und einer Frau.\n \n Für den Mann war es das erste Mal auf einem derart hochrangigen Fest. Zwar trug er eine prächtige Garderobe und gab sich korrekt, doch die Unruhe in seinem Blick und die leichte Steifheit seiner Bewegungen verrieten ihn. Er war ein junger, erfolgreicher Kaufmann, klug und vermögend geworden durch den Handel mit Stahl, der ihm den Eintritt in die feine Gesellschaft erkauft hatte. Doch nichts davon konnte seine niedrige Herkunft auslöschen – und alle Anwesenden, er selbst eingeschlossen, wussten das. Mit spielerischer Neugier musterte man ihn, erwiderte seine Grüße mit herablassenden Lächeln und verspottete hinter seinem Rücken seinen altmodischen Geschmack und seine unbeholfenen Worte. Nachdem ihn ein bissiger Adliger dazu gebracht hatte, drei Gläser bitteren Alkohols zu trinken, zog er sich leise in eine Ecke des Saales zurück, bat einen Diener um ein Glas Wasser und trank es in kleinen Schlucken.\n \n Die Frau hingegen war eine gefeierte Erscheinung der innerstädtischen Gesellschaft, Stammgast solcher Bankette. Mit geübter Leichtigkeit ging sie auf die unablässigen Avancen ein, ließ jeden Verehrer glauben, er sei etwas Besonderes, und brachte sogar zwei junge Männer davon ab, ihretwegen handgreiflich zu werden. Aus dem Augenwinkel bemerkte sie einen Baron, der ihr erst vor wenigen Tagen kostbaren Schmuck geschenkt hatte – an seiner Seite eine fremde, schöne Frau. Es überraschte sie nicht. In den Augen dieser Adligen war sie kaum mehr als ein Besitz, wie eine teure Porzellanvase: zerbricht sie, wird sie beschmutzt oder langweilt sie, ersetzt man sie ohne Zögern. Doch anders als eine Vase konnte sie sprechen und lächeln, und mit Anmut und Wortgewandtheit stets neue Zuneigung wecken. In diesem Spiel war sie jedes Mal die Siegerin. Gerade als sie den Rock hob, um erneut ihre Kunst einzusetzen, überkam sie ein leichter Schwindel – vielleicht war der Wein zu stark gewesen. Sie wandte sich dem Buffettisch zu, entdeckte einen Teller frisch geschnittener Zitronen und nahm ein Stück. Rohe Zitrone zu essen war eine kleine Angewohnheit von ihr。 Die Säure half ihr, klar zu werden.\n \n Um ihr weißes Kleid nicht zu beschmutzen, schob sie sich ein großes Stück Zitrone auf einmal in den Mund. Als sie aufsah, bemerkte sie den Mann, der sie mit einem Glas Wasser in der Hand fassungslos anstarrte.\n \n „... Ist das nicht sauer?“ fragte er.\n Sie konnte nicht sprechen, nickte nur und brachte ein undeutliches „Sauer“ hervor.\n „Warum essen Sie es dann?“ Sie deutete auf ihren Kopf,\n um zu zeigen, dass sie wach werden wollte.\n Der Mann betrachtete sie einen Moment lang, offenbar unsicher, ob er sie verstanden hatte. Dann nahm auch er ein Zitronenstück und steckte es sich nach ihrem Vorbild in den Mund – im nächsten Augenblick verzog sich sein Gesicht zu einer einzigen Grimasse.\n Die Frau lachte, bedeckte den Mund mit einem Taschentuch, spuckte elegant die Schale aus und fragte gelassen: „Fühlen Sie sich jetzt etwas wacher, mein Herr?“\n „J... Ja ... danke Ihnen, schöne Dame“, antwortete er verlegen zwischen zwei großen Schlucken Wasser. Diese Worte klangen weniger nach Schmeichelei als nach unbeholfener Aufrichtigkeit – und genau deshalb waren sie die ehrlichsten, die sie an diesem Abend gehört hatte.\n \n „Ich heiße Herzeleide Snowfield“, sagte sie. „Wir sind uns bisher nicht begegnet. Und Sie?“\n „Morris Glenville. Kaufmann.“\n „Kaufmann?“ In ihren Augen lag echte Neugier, kein Hauch von Geringschätzung. „Womit handeln Sie?“\n Er lächelte. „Mit vielem. Als Nächstes denke ich darüber nach, Früchte zu importieren – vielleicht Zitronen, die nicht ganz so sauer sind.“\n Sie lachte, und er lachte mit ihr.\n \n So begegneten sich zwei einsame Seelen in einer Welt aus Glanz und Blendwerk, in einer kleinen, schattigen Ecke – wie eine Zitrone, die ins Wasser fällt und deren Säure sich gerade so weit verdünnt, dass sie erträglich wird.\n Doch Märchen sind Märchen, weil sie stets am „richtigen“ Punkt enden und die größtmögliche Würde bewahren. Sobald das Märchen vorüber ist, bleibt nur noch die unbequeme, kalte Wirklichkeit zurück.",
+          TextMapId = "UI_CHAR_DATA_TEXT_11030203"
+        },
+        UI_CHAR_DATA_TEXT_11030204 = {
+          ContentDE = "Vor einigen Jahren war der Name Herzeleide in der gehobene Gesellschaft von Icelake nahezu jedem bekannt. Sie war die Muse unzähliger Fantasien, Wegweiserin der Mode, strahlender Stern auf jedem Ball. Manche vergötterten sie – hoffnungslos hingerissen, bereit, sie auf ein Podest zu heben und als die vollkommenste Frau der Welt zu preisen. Andere verabscheuten sie – spotteten, sie sei nur eine niedergeborene Verführerin, die sich durch das Umgarnen mächtiger Männer hochgeschlichen habe, und wünschten sich, sie möge wieder in den Dreck gezogen werden.\n \n Aber wer war sie wirklich?\n \n Sie wurde in eine gewöhnliche Charon-Familie geboren. Früh verwaist, nahm sie Arbeit als Dienstmädchen in einem Gasthaus an, um sich über Wasser zu halten. Sie war klug, sorgfältig, fleißig – bis ihre Schönheit in der falschen Nacht die falsche Aufmerksamkeit eines adeligen Gastes auf sich zog.\n Die Herzen der Icelaker waren so kalt wie der zugefrorene See. Niemand empfand Mitleid für das niedergeborene Charon-Mädchen, selbst als man genau wusste, dass sie Opfer war. Sie wurde in Schande hinausgeworfen, gebrandmarkt, und musste sich in den Slums durchschlagen.\n \n Sie dachte, sie würde dort verrotten, vergessen von der Welt. Doch das Schicksal hatte noch nicht fertig mit ihr gespielt. Jahre später kehrte derselbe Adlige zurück – krank, dem Tod nahe – und vielleicht um sein Gewissen vor dem Ende zu beruhigen, überhäufte er sie mit Geschenken: Reichtum, ein Zuhause in der Innenstadt, sogar die hohle Ehre eines Lorbeerkranz-Charon-Titels.\n Für die Welt sah es aus, als habe sie über Nacht das große Los gezogen. Für sie jedoch war es nur ein krankes Spiel. Keine Entschuldigung, kein Vermögen konnte die Leere füllen, die ihr innerlich zerrissen hatte. Niemand konnte sich vorstellen, welches Leben sie hatte ertragen müssen – welchen Schmerz sie wie eine zweite Haut begleitet hatte. Sie begann Spiegel und alles, was ihr Gesicht reflektierte, zu hassen. Sie verabscheute ihre Schönheit, ihre Naivität. Die Welt hatte ihr beigebracht: Es war deine Schuld. Warum warst du nicht unauffälliger? Warum hattest du nicht klüger gehandelt?\n \n Dann kehrte sich über Nacht alles um. Ihre Schönheit – einst Fluch und Grund für Schande – wurde zum begehrten Schatz der Noblen. Nach kurzem, verblüfftem Zögern fasste sie einen Entschluss: Rache. Sie würde ihre Spiele lernen, ihre Sprache sprechen und sie dort verletzen, wo es am meisten schmerzte. Sie wählte sich einen eleganten Nachnamen. Sie tauchte ein in Etikette, Literatur, Kunst und aktuelle Nachrichten. Schon bald machten ihr Aussehen und ihr scharfer Verstand sie zur begehrtesten Kurtisane der Innenstadt.\n \n Von Gala zu Gala zog sie umher, genoss die stille Befriedigung, die Adligen zu Marionetten ihrer eigenen Sehnsucht zu machen – und zog an ihren Fäden mit spielerischer Leichtigkeit. Tag für Tag wurde ihr Herz kälter, bis sie das Mädchen, das sie einst gewesen war, beinahe vergessen hatte.\n Bis sie ihn traf. Er war kein Adeliger. Auch er trug auf jedem glitzernden Empfang eine Maske. Und gerade deshalb erkannte er ihre – sah die Einsamkeit hinter dem Glanz. Sie glaubte, dies sei die letzte Gnade des Schicksals – eine Chance, sich selbst zurückzugewinnen. Unter dem sanften Schein einer liebevollen Nacht legte sie ihr Herz offen. In seiner Gegenwart konnte ihr Herz, selbst zwischen glitzernden Sälen und hohlem Prunk, wieder warm und lebendig schlagen.\n Monate später, als sie entdeckte, dass sie sein Kind erwartete, überströmte Freude ihr Herz. Doch der Mann zögerte. Sein Geschäft war bereits erblüht; Reichtum allein reichte ihm nicht mehr. Was er nun begehrte, war Ansehen – Privileg, Akzeptanz. Sie, eine Charon-Frau, konnte ihm nichts davon bieten. Sie war wie ein Fisch, aus dem Tank geworfen, auf dem kalten Boden ringend. Sie flehte. Sie argumentierte. Sie sagte, sie habe Kontakte, könne sein Geschäft voranbringen. Sie weinte. Sie demütigte sich. Schließlich gab er nach – und machte ein einziges, bedingtes Versprechen: Sollte das Kind Solarian werden, würde er sie heiraten.\n \n In einer herbstlichen Nacht unter dem silbernen Mond wurde ihr Kind geboren. Ein wunderschöner Junge, hellhäutig, zart, lieblich, und auf seiner Stirn wuchs ein kleines Paar schwarzer Hörner. Sie waren schön, an den Spitzen leicht glänzend – selten selbst unter den Charons. Man glaubte, Kinder mit solchen Hörnern seien bestimmt, als Daimons zu erwachen.\n Sie starrte diese kleinen Hörner an, ihr Herz sank in Verzweiflung. Mit zitternden Händen griff sie nach einem Messer. Wären die Hörner nur verschwunden. Alles nur wegen ihnen. Würde sie sie abschneiden ... könnte sie noch ihr glückliches Ende haben.\n Doch gerade als die Klinge das kalte Mondlicht reflektierte, öffnete das Kind die Augen und sah sie an. In diesen klaren, hellen Augen erkannte sie ihr eigenes Spiegelbild.\n Auch sie trug Hörner. Hörner wie seine. Erst da begriff sie: Nach all den Jahren hatte sie sich selbst nie wirklich aufgehört zu hassen – oder zu leugnen, wer sie war.\n Langsam legte sie das Messer nieder.\n Sie nahm das Kind in die Arme und flüsterte: „Komm, mein Kleiner. Lass uns diesen Ort verlassen.“\n \n So endete die Geschichte von Herzeleide – einst die Schönheit in den glitzernden Hallen der Innenstadt.",
+          TextMapId = "UI_CHAR_DATA_TEXT_11030204"
+        },
+        UI_CHAR_DATA_TEXT_11030205 = {
+          ContentDE = "Einige Bewohner von Icelake bemerkten, dass das Grab der Familie Fischer in letzter Zeit offenbar aufgewühlt worden war.\n Die Tochter der Familie kam jedes Jahr, um das Grab zu pflegen – doch diesmal konnte sie es nicht gewesen sein. Der Grabstein zeigte keine Spuren des Abwischens, es lagen keine frischen Blumen davor. Nur die Erde wirkte verändert: aufgewühlt und anschließend sorgfältig wieder geglättet.\n Wäre es ein Grabräuber oder ein Feind mit zerstörerischer Absicht gewesen, hätten die Spuren gewiss grober ausgesehen. Hätte man ein neues Familienmitglied beigesetzt, hätte man dessen Namen in den Stein gemeißelt. Doch nichts dergleichen war geschehen.\n War es ein Name, zu unbedeutend, um festgehalten zu werden? Ein Name, den man nicht auszusprechen wagte? Oder einer, den die Welt bereits vergessen hatte?\n \n Einige Winter schneiten vorüber, einige Frühlingswinde zogen über das Land. Der Boden fror und taute, fror erneut – und das Grab der Fischers sah schließlich wieder aus wie zuvor. Die Menschen vergaßen allmählich, dass sich hier je etwas verändert hatte. Nur die jungen Triebe, die die Erde durchbrachen, wussten es noch – ihre Wurzeln berührten das Leben, das hier zur Ruhe gekommen war.\n Und derjenige, der ihn dort begraben hatte, kehrte nie zurück.",
+          TextMapId = "UI_CHAR_DATA_TEXT_11030205"
+        },
+        UI_CHAR_DATA_TEXT_11030301 = {
+          ContentDE = "Schon als kleines Kind begriff Parsifal, dass er ein uneheliches Kind war – in der Außenstadt nichts Ungewöhnliches. Doch er empfand deswegen weder Scham noch Minderwertigkeit. Im Gegenteil: Er war still glücklich darüber, denselben Nachnamen wie seine Mutter tragen zu dürfen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_11030301"
+        },
+        UI_CHAR_DATA_TEXT_11030302 = {
+          ContentDE = "Von Näharbeiten verstand Parsifal so gut wie nichts, denn seine Mutter hatte ihn nie mit Nadel und Faden in Berührung kommen lassen.\n So sanft und warmherzig sie auch war – gerade in Fragen seiner Erziehung zeigte sie eine Hartnäckigkeit, die Außenstehende kaum nachvollziehen konnten. Obwohl die Familie alles andere als wohlhabend war, wünschte sie sich, ihr Sohn solle die Bildung und die Haltung eines jungen Herrn aus gutem Hause besitzen. Sie verbrachte unzählige Stunden damit, ihm Literatur, Musik und sogar Tischmanieren beizubringen – Dinge, die viele einfache Leute für nutzlos oder gar lächerlich hielten. Kochen, Wäschewaschen oder Nähen hingegen, all die kleinen, alltäglichen Arbeiten, ließ sie ihn kaum je erlernen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_11030302"
+        },
+        UI_CHAR_DATA_TEXT_11030303 = {
+          ContentDE = "Parsifal war kein warmherziger Mensch. Er tat sich schwer damit, Gefühle auszudrücken, und noch schwerer damit, sie anzunehmen. Oft wich er instinktiv zurück, wenn andere ihm näherkommen wollten.\n Zum Glück waren die Gleichaltrigen im Theaterensemble freundlich und aufgeschlossen. Zwischen Unterricht und Proben zogen sie ihn zum Plaudern, zu Spielen oder zum Teilen von Süßigkeiten heran. Ihre Herzlichkeit brachte Parsifal bisweilen in Verlegenheit, und selbst die Lehrerin tadelte sie gelegentlich: „Lasst ihn doch in Ruhe.“\n Was er ihnen nie sagen konnte, war, dass er das alles gar nicht unangenehm fand. Auch wenn er tief in seinem Inneren stets das Gefühl hatte, durch einen unüberwindbaren Vorhang von ihrer Welt getrennt zu sein, war er dem Theater dankbar – dafür, dass es ihm eine Möglichkeit gab, die Außenwelt zu berühren. Doch jedes Mal, wenn ihm die Worte auf die Lippen kamen, versagten sie ihm den Dienst.\n \n Wenn er es doch nur in Gesang ausdrücken könnte. Wenn sie eines Tages ein Stück über die Freundschaft unter Gleichaltrigen aufführten, dann würde er sich, getragen vom Mut der Bühne, gewiss trauen, diesen einen Satz ehrlich auszusprechen:\n „Danke, dass ihr mich als Freund betrachtet.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_11030303"
+        },
+        UI_CHAR_DATA_TEXT_11030304 = {
+          ContentDE = "Parsifal hatte einst einen Wunsch: Sobald er Schauspieler geworden wäre, die Bühne betreten und dem Ensemble mit seinem Erfolg all die Jahre der Fürsorge zurückgezahlt hätte, wollte er gemeinsam mit seiner Mutter das Imperium verlassen und sich in Luca niederlassen. Dort hatte seine Lehrerin Violetta Musik studiert. Man sagte, dass die Charons dort keine Diskriminierung erfuhren und dass die Theaterkunst blühte – mit größeren Bühnen und mehr Möglichkeiten.",
+          TextMapId = "UI_CHAR_DATA_TEXT_11030304"
+        },
+        UI_CHAR_DATA_TEXT_11030305 = {
+          ContentDE = "Parsifal war nahezu jeder Rollenart gewachsen, doch am überzeugendsten spielte er jene Figuren, deren Herkunft von Leid geprägt war und deren Lebensweg von Prüfungen durchzogen wurde – auch wenn er sich das selbst nicht eingestehen wollte.\n Das Theater eröffnete ihm die Möglichkeit eines anderen Lebens. Doch selbst nachdem er seine Kunst zur Vollendung gebracht hatte, vermochte er sich nie ganz von sich selbst zu lösen. In jenen Augenblicken, in denen sich die Gefühle einer Rolle mit seinen eigenen überschnitten, begann der im Innersten verankerte Schmerz mit dem fiktiven Text zu resonieren und entfaltete eine erschütternde Wirkung. Es war ein Talent, das nur ihm gehörte – schön und grausam zugleich.",
+          TextMapId = "UI_CHAR_DATA_TEXT_11030305"
+        },
+        UI_CHAR_DATA_TEXT_11030401 = {
+          ContentDE = "Ich wurde in der Außenstadt geboren, in eine gewöhnliche Familie – wobei sie eigentlich gar nicht so „gewöhnlich“ war. Ich habe meinen Vater nie kennengelernt。 Es war meine Mutter allein, die mich großgezogen hat.\n \n Bevor ihre Krankheit so schwer wurde, dass sie das Bett nicht mehr verlassen konnte, erinnere ich mich an sie als einen sehr lebensfrohen Menschen. Sie arbeitete im Galea-Theater als Reinigungskraft. Zu ihren täglichen Aufgaben gehörten das Ordnen der Bühnenkulissen, das Säubern der Zuschauerreihen und die Kontrolle der Einrichtungen des Theaters. Durch ihre Arbeit hörte sie die verschiedensten Opern. Wenn sie nach Hause kam, sang sie sie nach – sie liebte das Singen. Ob sie sich ausruhte oder Hausarbeit verrichtete, stets summte oder sang sie vor sich hin. Ich hörte ihr zu, lernte unbewusst mit und begann nach und nach, gemeinsam mit ihr zu singen.\n \n Unser Leben war zwar ärmlich, doch solange uns Gesang begleitete, empfand ich es nicht als bedrückend. Das änderte sich erst, als meine Mutter erkrankte. Ich kann mich nicht mehr genau erinnern, wann es begann. Nur ein besonders kalter Winter ist mir im Gedächtnis geblieben. In dieser Zeit verschlechterte sich ihr Zustand plötzlich stark. Früher reichte ein paar Tage Ruhe aus, damit es ihr besser ging, doch diesmal blieb sie selbst nach dem Ende des Winters und dem Einzug des Frühlings ans Bett gefesselt. Der Arzt erklärte, ihre Krankheit sei die Folge einer ohnehin schwachen Konstitution und jahrelanger Überarbeitung. Es gebe keine Heilung – sie könne sich nur schonen und ihr Schicksal abwarten.\n \n Als das Einkommen wegfiel, wurde das Leben zunehmend schwierig. Eines Tages rief mich meine Mutter mit ungewöhnlich ernstem Ton an ihr Bett und bat mich, eine Kiste hervorzuholen, die sie unter dem Bett verborgen hatte. Ich hatte sie noch nie zuvor gesehen. Sie wirkte fein gearbeitet – zu kostbar für unser Zuhause. Als ich sie öffnete, erschrak ich:\n Im Inneren lagen mehrere prachtvolle Schmuckstücke, offensichtlich von hohem Wert. Doch am meisten überraschte mich das, was mitten zwischen ihnen lag – ein Abzeichen von „Lorbeerkranz-Charon“, in das der Name meiner Mutter eingraviert war. In diesem Moment begriff ich, dass ihre Vergangenheit weit komplexer sein musste, als ich je geahnt hatte.\n \n „Verkaufe diesen Schmuck“, sagte sie zu mir. „Das sollte uns eine Zeit lang durchbringen. Aber geh nicht allein – bitte jemanden aus dem Theater um Hilfe, sonst bekommst du keinen fairen Preis.“\n Ich nickte und nahm den Schmuck heraus. Dabei bemerkte ich, dass sich in der Kiste auch viele Briefe befanden. Meine Mutter warf nur einen kurzen Blick darauf und bat mich, die Kiste wieder wegzustellen.\n Ich stellte keine Fragen, doch offenbar erkannte sie meine Verwirrung und sagte leise: „Das sind nur alte Dinge. Aus der Zeit, als ich noch in der Innerstadt lebte.“\n „Warst du früher ... reich?“, fragte ich.\n „Wenn man es nur am Geld misst, dann ja“, antwortete sie ruhig. „Mein Kleiderschrank war immer voller schöner Ballkleider. Wurde eines schmutzig oder riss es, kümmerte mich das kaum. Schmuck hatte ich so viel, dass ich jeden Tag etwas anderes hätte tragen können. Wollte ich etwas Neues, musste ich es nicht selbst bezahlen – es genügte, es bei einem Ball zu erwähnen, und wenige Tage später brachte es mir jemand vorbei. Ich musste nur ein oder zwei Tänze mit ihm tanzen. Wäre ich nicht aus der Innerstadt fortgegangen, wäre unser Haus heute wohl voller Blumen und kostbarer Stärkungsmittel.“\n Während sie sprach, lag das Licht der untergehenden Sonne auf ihrem ausgezehrten Gesicht und verlieh ihm eine eigentümlich herbe Schönheit. Ich konnte ihre Miene nicht deuten. War es Wehmut? Bedauern?\n \n „Bereust du es, die Innerstadt verlassen zu haben?“, fragte ich.\n \n „Bereuen?“ Sie lächelte. Dieses Lächeln ließ sie zugleich zerbrechlicher und schöner erscheinen. „Die zehn Jahre dort sind für mich wie Seifenblasen im Sonnenlicht – auf den ersten Blick schillernd und prachtvoll, doch bei der leisesten Berührung zerplatzen sie. Manchmal frage ich mich sogar, ob das alles wirklich mir widerfahren ist.“\n „Aber die Zeit danach – das Leben hier – jede einzelne Sekunde war real. Ich erinnere mich daran, wie ich zum ersten Mal den Aufbau des Theaters verstand, wie ich mir die Plätze aller Werkzeuge einprägte, wie ich zum ersten Mal allein den ganzen Zuschauerraum vorbereitete. Ich erinnere mich an die erste Schwiele an meinen Fingern, an die ersten Schmerzen in den Knien, an die erste Falte an meinen Augen. Und an dich, Parsifal.“ Sie streckte die Hand aus und strich mir sanft über die Wange. Ihre Handfläche war rau von den Spuren der Jahre, doch voller Wärme. „Ich erinnere mich daran, wie du zum ersten Mal mit mir gesungen hast, wie du zum ersten Mal alle Zeichen einer Partitur auswendig konntest, wie du zum ersten Mal einen ganzen Akt fehlerfrei gesungen hast.“\n „Ich habe es nie bereut“, sagte sie ernst und sah mir in die Augen. „Die Innerstadt zu verlassen war die richtigste Entscheidung meines Lebens.“\n \n Ich kenne die Innerstadt nicht und kann mir ihr Leben kaum vorstellen, doch ich glaube meiner Mutter. Selbst wenn sie vieles verloren hat – es waren Opfer, die sie bewusst für ihre eigene Entscheidung gebracht hat. Ich möchte so leben wie sie: aufrichtig mir selbst gegenüber, ohne Reue.",
+          TextMapId = "UI_CHAR_DATA_TEXT_11030401"
+        },
+        UI_CHAR_DATA_TEXT_11030402 = {
+          ContentDE = "Ich erinnere mich auch an den ersten Tag, an dem ich meine Mutter ins Theater begleitete. Es war früher Frühling, ein seltener klarer Tag in Icelake. Der Schnee war geschmolzen, die Straßen frisch und sauber. Sie hielt meine Hand, während wir gingen.\n \n „Mama, was ist ein Theater?“, fragte ich.\n „Ein Ort, an dem Opern aufgeführt werden. Opern sind ... Geschichten, die gesungen werden, während man die Rollen spielt.“\n „So wie wir zu Hause zusammen singen?“\n „Ein bisschen – aber doch ganz anders. Du wirst es sehen“, sagte sie lächelnd.\n \n Es war das prachtvollste Gebäude, das ich je gesehen hatte. Vor dem hohen Eingang stiegen Herren und Damen in Samtgewändern aus ihren Kutschen. Ich fühlte mich wie ein Hirtenjunge, der sich in einen Palast verirrt hatte.\n Meine Mutter führte mich durch einen Seiteneingang und stellte mich Frau Putsch vor, der Leiterin des Ensembles „Die Zauberflöte“. Die beiden schienen sich schon lange zu kennen; durch ihre Empfehlung hatte meine Mutter diese Arbeit erhalten. Während sie sprachen, steckte eine schöne Dame den Kopf aus der Tür zur Bühne – und im nächsten Augenblick stand sie vor mir und zerzauste mir kräftig das Haar.\n „Ach, was für ein reizender kleiner Herr! Du bist sicher Herzeleides Sohn – diese Augen, ganz wie bei deiner Mutter!“\n So lauteten die ersten Worte, die Frau Violetta – meine spätere Lehrerin – jemals zu mir sprach. Offen gesagt war mein erster Eindruck nicht besonders gut. Sie war mir zu theatralisch, und dass sie mir ohne Vorwarnung über den Kopf strich, empfand ich als ausgesprochen unhöflich. Auch die anderen Mitglieder des Ensembles wirkten auf mich seltsam, sodass ich mich unwohl fühlte. Nachdem meine Mutter ihre Arbeit aufgenommen hatte, verzog ich mich in eine Ecke des Aufenthaltsraums und saß dort allein.\n \n Irgendwann wurde ich von Frau Putsch geweckt. Sie sagte mir, die Aufführung sei beendet und nur noch das Ensemble im Theater. Ich dürfe nun Bühne und Zuschauerraum besichtigen. Eigentlich wollte ich nur weiterschlafen, doch ich wagte es nicht, ihr Angebot auszuschlagen, und ging in Richtung Bühne.\n \n Plötzlich hörte ich einen fernen Gesang. Ich erinnerte mich an die Worte meiner Mutter – war das also eine Oper? Ich folgte der Stimme, bis nur noch ein Stück Stoff zwischen uns lag. Später erfuhr ich, dass es der Bühnenvorhang war. Neugierig zog ich ihn einen Spalt auf. Gleißendes Licht blendete mich, und ich sah Frau Violetta im Scheinwerferlicht stehen – doch war sie es wirklich?\n \n Mit leichten Schritten bewegte sie sich über die Bühne, und obwohl sie leer war, sah ich vor meinem inneren Auge einen lebendigen Wald: Sie hob den Rock und setzte vorsichtig einen Schritt, als überquere sie einen Bach; sie duckte sich und strich sich über das Haar, als hätte sich ein Ast darin verfangen; sie führte zwei Finger an die Lippen und verzog das Gesicht, als koste sie eine saure Beere; sie streckte zärtlich die Hand aus, als begegne sie einem Rehkitz.\n Alles an ihr war unverändert, und doch war sie jemand anderes. Hätte man mir gesagt, sie sei nur eine Frau, die Violetta täuschend ähnlich sah, ich hätte es sofort geglaubt.\n \n „Oh?“\n Sie bemerkte mich, trat leichtfüßig näher und zog den Vorhang weiter auf. „Hast du dich verirrt, Kleiner? Der Wald ist gefährlich. Ich bringe dich hinaus.“\n „Sind Sie ... Frau Violetta?“, fragte ich vorsichtig.\n Sie schüttelte verwirrt den Kopf. „Du hast dich geirrt. Ich heiße Weiße Rose und wohne in einem Windmühlenhaus – östlich des Waldes, westlich des Sees.“\n \n Meine Mutter hatte mir schon lange das Singen beigebracht. Doch erst in diesem Augenblick, verborgen hinter dem Vorhang, fasste ich einen Entschluss: Ich wollte Schauspieler werden.",
+          TextMapId = "UI_CHAR_DATA_TEXT_11030402"
+        },
+        UI_CHAR_DATA_TEXT_11030403 = {
+          ContentDE = "Nachdem mir verboten worden war, weiter aufzutreten, bat ich meine Lehrerin um Hilfe, mich ein einziges Mal in die Innerstadt zu begleiten, um meinen leiblichen Vater zu suchen – Morris Glenville.\n \n Seinen Namen hatte ich unter den Hinterlassenschaften meiner Mutter entdeckt. Zu ihren Lebzeiten hatte sie nie ein Wort über ihn verloren. Natürlich hatte ich als Kind einmal nach meinem Vater gefragt, doch sie hatte mich nur teilnahmslos angesehen und gesagt: „Ich weiß es nicht.“ Ich vermute, dass sich dahinter etwas verbarg, worüber sie nicht sprechen konnte. Wäre ich nicht wirklich am Ende gewesen, hätte ich niemals versucht, diesen Mann um Hilfe zu bitten.\n Aber ich war es. Wir alle wünschen uns, dass Kunst einfach nur Kunst sein darf, losgelöst von den Niederungen der Welt. Doch in Icelake ist das letztlich nichts weiter als eine Illusion – zerbrechlich wie eine Schneeflocke.\n \n Lange stand ich vor dem prächtigen Anwesen, sammelte meinen Mut, bevor ich schließlich die Klingel drückte. Eine Dienstmagd öffnete mir und erklärte kühl, dass Herr Glenville nicht zu Hause sei und heute auch nicht mehr zurückkehren würde. Dann schloss sie die Tür. Ich blieb noch einen Moment stehen, während der Winterwind mir wie Messer über die Wangen fuhr. Gerade als ich mich abwenden wollte, hörte ich die Stimme eines Mädchens.\n „Gib mir Herrn Weißvogel zurück ... bitte ...!“\n \n Ihre Stimme klang nicht glücklich – ich kannte diesen Ton nur zu gut. Ich musste sie nicht sehen, um zu wissen, wie hilflos sie sich fühlte. Ohne weiter nachzudenken, lief ich hastig um das Haus herum, der Stimme nach. Plötzlich fiel etwas Weißes von oben herab. Instinktiv fing ich es auf – weich, warm, als hätte ich etwas Sanftes in die Arme geschlossen. Es war ein fast halb so großer Plüschvogel, rundlich und etwas unbeholfen, wie eine Figur aus einem Märchen. Das musste wohl „Herr Weißvogel“ sein.\n „Oh je, er ist wohl entwischt. Sieht so aus, als würde er dich nicht mögen“, tönte eine schrille, spöttische Stimme von oben. Es war dieselbe Dienstmagd.\n Ich hörte hastige, kleine Schritte. Irgendwo wurde eine Tür heftig zugeschlagen. Dann Stille. Vom Balkon her klang leises Schluchzen.\n „... Herr Weißvogel ...“\n \n Ich trat aus dem Schatten, den Plüschvogel im Arm, und ging so weit nach vorn, dass ich das Mädchen sehen konnte. Sie war vielleicht zwölf oder dreizehn Jahre alt, mit schneeweißem Haar und tiefblauen Augen – wie die kleine Heldin aus einem Märchen. Zu meiner Überraschung war sie, genau wie ich, ein Charon. Da Herr Glenville ein Solarianer war, musste er eine Charon-Frau geheiratet haben. Dieser Gedanke ließ mich unwillkürlich aufatmen. Wenn er bereits ein Charon-Kind hatte, würde ihn meine Herkunft vielleicht nicht stören.\n \n Als das Mädchen mich bemerkte, erstarrte sie. Ich bedeutete ihr, still zu sein, holte Schwung und warf den Plüschvogel zurück auf den Balkon. In Gedanken dankte ich Dennis, der mich immer wieder gezwungen hatte, mit seinen jüngeren Geschwistern Fangspiele zu spielen – ohne das hätte ich mir diesen Wurf nicht zugetraut.\n Sie fing Herrn Weißvogel auf. Obwohl er weich und leicht war, brachte der Schwung sie ins Taumeln, und sie fiel zu Boden. Doch als sie sich wieder aufrappelte, lag unverkennbar Freude auf ihrem Gesicht.\n „Danke“, formte sie lautlos mit den Lippen.\n Ich nickte und wollte gerade gehen, als sie plötzlich eine Reihe von hastigen Gesten machte, die ich nicht verstand, und dann zurück ins Haus lief.\n Verwirrt wartete ich einen Moment. Kurz darauf erschien sie erneut auf dem Balkon und warf mir ein ordentlich gefaltetes Blatt Papier hinunter.\n Ich öffnete es. Darauf war eine einfache Zeichnung zu sehen. Erst nach einigen Sekunden erkannte ich mich selbst – eine kleine Figur, die einen weißen Vogel hochhielt. Unten stand in schöner Handschrift: „Danke, lieber großer Bruder!“\n \n „Großer Bruder.“ In diesem Moment wurde mir klar, dass sie tatsächlich meine Schwester hätte sein können.\n Ich steckte die Zeichnung behutsam ein, verbeugte mich tief und theatralisch vor ihr – wie ein Märchengeist, der dem Helden einen Wunsch erfüllt.\n \n Sie lächelte.\n \n Für einen Augenblick dachte ich, ich könnte ein guter Bruder sein. Ich würde ihr Märchen vorlesen, mit ihr mit Puppen spielen, ihre Zeichnungen loben, ihr Schlaflieder singen. Wenn sie wollte, würde ich ihr sogar das Singen beibringen.\n \n Doch all diese Fantasien zerfielen, als ich Herrn Glenville schließlich persönlich begegnete – schneller noch als Schnee, der in der warmen Hand schmilzt. Erst da begriff ich, was ich längst hätte erkennen müssen: Wäre das Mädchen wirklich geliebt worden, hätte sich keine Dienstmagd je getraut, sie so zu behandeln. Ich konnte nicht ihr Bruder sein.\n Ich konnte nichts für sie tun. Wie sie war auch ich gefangen – jeder von uns in seinem eigenen Käfig.",
+          TextMapId = "UI_CHAR_DATA_TEXT_11030403"
+        },
+        UI_CHAR_DATA_TEXT_11030404 = {
+          ContentDE = "In den Tagen, in denen wir im Abwasserkanal Zuflucht suchten, sprach Blues oft von einer Lampe. Er sagte, sie stehe ganz oben auf dem Wachturm, am höchsten Punkt von Icelake; er stellte sich immer vor, wie er unter diesem Licht stünde und die ganze Stadt zu seinen Füßen läge.\n Ich selbst war früher kaum draußen, blickte selten zum Himmel und hatte den Lichtern Icelakes nie besondere Beachtung geschenkt. Wenn er davon erzählte, stellte ich mir diese Lampe dennoch golden vor, warm, als würde ihr Licht sanft auf den Kopf fallen.\n \n Nach seinem Tod begab ich mich eigens in die Innerstadt. Wenn ich schon in seine Rolle schlüpfen musste, dachte ich, könnte ich wenigstens diesen unerfüllten Traum an seiner Stelle vollenden.\n In einer mondlosen Nacht wich ich den Wachen aus und erklomm lautlos den Wachturm, Stufe um Stufe. Ganz oben sah ich sie schließlich – die Lampe, von der er immer gesprochen hatte.\n In diesem Moment war ich zutiefst enttäuscht.\n \n Es war nichts weiter als eine gewöhnliche Leuchte. Abgesehen von ihrer enormen Größe hatte sie nichts Besonderes an sich. Ihr Licht war farblos, leblos, ein trostloses Weiß. Das Gehäuse war von einer dicken Staubschicht bedeckt, und das Dröhnen der Mechanik im Inneren war kaum zu ertragen.\n Was für ein Narr, dachte ich. Alles für so etwas Belangloses aufs Spiel zu setzen – sogar das eigene Leben.\n \n Unten angekommen, blickte ich noch einmal zu der Lampe hinauf.\n Am Nachthimmel leuchtete sie hell. Da wurde mir klar, dass sie als Suchscheinwerfer vielleicht doch nicht so verächtlich war, wie ich sie eben beurteilt hatte. Vom Boden aus hörte niemand ihr Dröhnen, niemand sah das staubige Gehäuse, und das fahle Licht, vom Dunkel der Nacht geschluckt, wirkte plötzlich gar nicht mehr hässlich. Sie ersetzte den Mond und erfüllte ihre Aufgabe, die Stadt zu erhellen, tadellos.\n Warum also hatte ich mich enttäuscht gefühlt?\n \n Als ich mir noch einmal vor Augen führte, wie Blues von dieser Lampe gesprochen hatte, begriff ich es.\n Meine Enttäuschung rührte daher, dass ich mir bereits beim ersten Mal, als er von einem unerreichbaren Licht erzählte, unbewusst ein Bild davon geschaffen hatte – golden, warm, tröstlich. Doch was ich mir vorgestellt hatte, war nie ein Suchscheinwerfer gewesen. Eigentlich hatte ich mir gar keine Lampe vorgestellt.\n In meinem Kopf war es immer der Scheinwerfer über der Bühne des Galea-Theaters gewesen.\n \n Also war ich letztlich genauso töricht wie er. Alles, was ich getan hatte, diente nur einem Zweck: der Jagd nach einem Licht.",
+          TextMapId = "UI_CHAR_DATA_TEXT_11030404"
+        },
+        UI_CHAR_DATA_TEXT_11030405 = {
+          ContentDE = "So ist die Geschichte schließlich an ihrem Endpunkt angelangt – an dem Moment, in dem wir einander begegnen. Wenn ich es mir hätte wünschen dürfen, hätte ich dich gern unter anderen Umständen kennengelernt, mit einem weniger entstellten Gesicht.\n \n Ich war überzeugt, meine Verkleidung sei vollkommen. Doch du hast sie durchschaut – und ich muss gestehen, deine Begründung ließ keinen Raum für Widerspruch.\n Ich konnte seine Haltung, seine Gesten, sogar seinen Tonfall nachahmen, doch ich war niemals er. Seine Begeisterung für das Leben, sein Vertrauen in die Zukunft, seine aufrichtige Anteilnahme an anderen – all das ließ sich nicht spielen, ganz gleich, wie sehr ich es auch versuchte. Nie hätte ich gedacht, dass jemand bereit wäre, die ursprünglich so stimmigen Zeilen von Das Kind aus dem Schneeland umzuschreiben, den fein austarierten dramatischen Konflikt zu zerstören und die innere Logik der Handlung zu opfern – nur um dem frostigen Wesen ein warmes, glückliches Ende zu schenken.\n \n Es ist merkwürdig: Ich hielt es immer für furchtbar, vor den Augen des Publikums entlarvt zu werden. Doch als du meine Maske erkannt hast, verspürte ich eine Leichtigkeit, wie ich sie nie zuvor gekannt hatte.\n Vielleicht ... Vielleicht habe ich all die Zeit versucht, jemand anderes zu spielen, und doch insgeheim gehofft, dass irgendwer eines Tages mein wahres Selbst sehen würde.\n \n Du sagtest, du wolltest meine Geschichte hören. Ich weiß nicht, ob diese verstreuten Erinnerungen ausreichen, um dich zufriedenzustellen.\n Mein Leben war nicht außergewöhnlich. Jede Geschichte endete, noch ehe sie sich entfalten konnte – wie die Entwürfe eines mittelmäßigen Dramatikers, der immer wieder einen neuen Akt beginnen will und doch jedes Mal unvermittelt zum Schluss kommt.\n \n Beim ersten Abgang verlor ich die Bühne. Beim zweiten verlor ich mein Gesicht. Beim dritten verlor ich meinen Namen.\n \n Ich bin froh, dass du diesen letzten Abgang miterlebt hast. Denn nur dieses eine Mal habe ich ihn aus freiem Willen gewählt. Ich habe mir nichts vorzuwerfen – ich habe es vollbracht.\n Es ist ein würdiger Abschied. Bitte trauere nicht um mich.",
+          TextMapId = "UI_CHAR_DATA_TEXT_11030405"
+        },
+        UI_CHAR_DATA_TEXT_15010101 = {
+          ContentDE = "In einer kleinen Schenke stößt du zufällig auf eine alte Zeitung, deren Schlagzeile aus dem fernen Ort namens Elysium im Süden stammt. Auf der gesamten Seite prangt ein riesiges Foto eines Mädchens namens „Lisbell“.\n Die Presse des Imperiums spart nicht mit Verachtung für dieses uralte Südreich – seht nur, Elysium ist nun so tief gesunken, dass ein minderjähriges Mädchen das höchste Amt der „Sieben Tugenden“ bekleidet; das Reich der Götter ist wahrlich in Verfall geraten!\n Doch all diese Schmähungen vermögen den Glanz des Mädchens auf dem Foto kein bisschen zu mindern. Das zierliche Mädchen hält ein heiliges Schwert hoch, länger als sie selbst. Überströmendes Licht erhellt ihr Gesicht, ihre Augen brennen offen und ehrlich, und aus jeder Bewegung strahlt eine unerschütterliche Überzeugung aus. Die Mittagssonne steht genau über ihrem Scheitel, als würde sie ihr eine Krone verleihen, die niemand anzublicken wagt.\n Eine solche Lisbell wirkt ungewohnt fremd, und doch begreifst du zum ersten Mal, dass die „Sieben Tugenden“ kein bloßer Titel sind, den das Mädchen beiläufig erwähnt hat, sondern die wahren „Lieblinge der Götter“, die den gesamten Glauben von Elysium verkörpern.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15010101"
+        },
         UI_CHAR_DATA_TEXT_15010102 = {
           ContentDE = "Demnächst",
           TextMapId = "UI_CHAR_DATA_TEXT_15010102"
@@ -56084,7 +56262,15 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_CHAR_DATA_TEXT_15010103 = {
           ContentDE = "Demnächst",
           TextMapId = "UI_CHAR_DATA_TEXT_15010103"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CHAR_DATA_TEXT_15010104",
+    MaxKey = "UI_CHAR_DATA_TEXT_33010101",
+    Loader = function()
+      return {
         UI_CHAR_DATA_TEXT_15010104 = {
           ContentDE = "Demnächst",
           TextMapId = "UI_CHAR_DATA_TEXT_15010104"
@@ -56092,6 +56278,10 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_CHAR_DATA_TEXT_15010105 = {
           ContentDE = "Demnächst",
           TextMapId = "UI_CHAR_DATA_TEXT_15010105"
+        },
+        UI_CHAR_DATA_TEXT_15010201 = {
+          ContentDE = "Überall auf den Straßen und Gassen des Kontinents Atlasia, wenn die Rede auf die Elysische Kirche kommt, sprechen die Menschen weder von den wie Sonne und Mond erhabenen Neun Großen, noch von den sternenübersäten Reihen der Priester – der Himmel der Götter liegt weit über der Reichweite der einfachen Leute, und die Gebete, Debatten und finanziellen Kleinigkeiten der Priester sind für sie allzu langweilig.\n Die Gruppe, die den Menschen stets auf den Lippen liegt, nennt sich „die Sieben Tugenden“ – ein Bund, der zusammen mit Elysium, dem ältesten Menschenreich, entstand und von Legenden umwoben ist. Den Aufzeichnungen der Kirche zufolge stiegen die Götter vor zweitausend Jahren vom Hohen Turm herab, beendeten das „Dunkle Zeitalter“ – eine Zeit voller Blutvergießen und Streit, gossen ihre göttliche Macht in heilige Reliquien, und übergaben sie dem Patriarchen sowie sieben Auserwählten. Diese sieben wurden zu den ersten „Sieben Tugenden“.\n Im heiligen Licht getaucht, vollstreckten sie den Willen der Götter und schützten Frieden und Wohlergehen des gesegneten Landes. Kampfbereit gerüstet vertrieben sie die Filthoids und die gefallenen Ketzer von der Erde. Wenn das sterbliche Gefäß einer der „Sieben Tugenden“ vergeht, verstummt die entsprechende Reliquie und wartet auf die Geburt ihres nächsten Trägers. So fließen Barmherzigkeit und Macht der Götter seit Jahrtausenden unaufhörlich durch die Morgen und Abende von Elysium.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15010201"
         },
         UI_CHAR_DATA_TEXT_15010202 = {
           ContentDE = "Demnächst",
@@ -56109,6 +56299,10 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
           ContentDE = "Demnächst",
           TextMapId = "UI_CHAR_DATA_TEXT_15010205"
         },
+        UI_CHAR_DATA_TEXT_15010301 = {
+          ContentDE = "Die junge Lisbell zog das heilige Schwert „Samael“ aus seinem Ruheort und wurde folgerichtig zur Kandidatin für „Geduld“ unter den Sieben Tugenden von der Elysischen Kirche.\n Trotzdem nahm sie den vakanten Sitz der „Geduld“ nicht sogleich ein – nicht nur, weil sie noch zu zart für eine so große Bürde war, sondern mehr noch, weil Samael ihr seit dem Ziehen des Schwertes niemals mehr Antwort gab.\n Um den im heiligen Schwert schlummernden Schwertgeist zu erwecken, brach Lisbell zu einer Trainingsreise auf.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15010301"
+        },
         UI_CHAR_DATA_TEXT_15010302 = {
           ContentDE = "Demnächst",
           TextMapId = "UI_CHAR_DATA_TEXT_15010302"
@@ -56125,6 +56319,10 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
           ContentDE = "Demnächst",
           TextMapId = "UI_CHAR_DATA_TEXT_15010305"
         },
+        UI_CHAR_DATA_TEXT_15010401 = {
+          ContentDE = "Lisbell löste eine Sensation aus, die ganz Elysium erschütterte – mit nur zwölf Jahren zog sie das herrenlose heilige Schwert Samael. Wie eine Perle aus der Muschel oder Gold aus Sand gesiebt, war Lisbell nicht länger nur eine gewöhnliche Adelige. Stattdessen besaß sie nun die Qualifikation, eine der „Sieben Tugenden“ zu werden. Sie würde die Macht ergreifen und an die Spitze dieses uralten Götterreiches treten.\n \n Für die Erwachsenen um Lisbell war dies jedoch nichts Besonderes. Die Krone der „Geduld“ war seit Generationen im Besitz der alten und ruhmreichen Familie Evangelinos. Früher oder später würde sie ohnehin an Lisbell, die einzige Erbin, fallen. Doch die junge Lisbell verstand das alles noch nicht. Am Tag nach dem Ziehen des heiligen Schwertes saß sie wie immer mit schläfrigen Augen am Tisch und klopfte mit dem Löffel gegen den Schüsselrand. Wie viele Kinder war sie wählerisch. Sie mochte keinen Quinoa, keine Fleischpasteten, keinen Stör und keinen Hecht. Doch der alte Butler bestand aus Sorge um ihre Gesundheit hartnäckig darauf, ihr all das trotzdem auf den Teller zu legen.\n \n Sie konnte ihm nicht böse sein und zeigte ihren Unmut nur mit diesem unhöflichen Verhalten. Es war wahrlich kein schöner Morgen ... sie quälte das Frühstück hinunter, und wie von ihren Eltern angeordnet, folgte danach unweigerlich die Lesezeit. Auf Zehenspitzen zog sie aus einem Bücherregal, viermal so hoch wie sie selbst, einen Stapel Zeitungen namens „Die Morgenglocke des Heiligen Turms“ hervor – ein neuer Import aus dem Norden und vergleichsweise weniger einschläfernd. Lisbell rieb sich die Augen und entfaltete das Papier. So zierlich war sie, dass ihre Füße über dem Boden baumelten, und das ausgebreitete Papier spannte sich beinahe über die gesamte Spannweite ihrer Arme..\n \n Mühsam faltete das Mädchen die vergilbten, langweiligen Papierblätter auseinander. Mit einem Rascheln stand sie plötzlich sich selbst gegenüber.\n \n „Ach ...?!“ Sie stieß einen lauten, verwirrten, für eine junge Dame völlig unpassenden Schrei aus. Es dauerte einen Moment, bis sie begriff, was sie da sah. Dann hallte ihre Stimme durch die Flure des Herrenhauses: „Herr Butler! Herr Butler! Warum bin ich in der Zeitung?!“ Völlig erschrocken rannte sie mit einer Ecke der Zeitung durch das Haus. Sie verstand noch nicht, was geschehen war, doch der allwissende alte Herr mit dem Bart würde es ihr erklären.\n \n Der Butler hingegen hatte fast die ganze Nacht nicht geschlafen.\n \n Als treuer Diener der Familie Evangelinos und Bürger von Elysium war er überzeugt, dass dieses von den Göttern begünstigte Mädchen die lange vakante „Geduld“ sein musste. Und doch betete er zu den Neun Großen, dass die Zeit zurückgedreht werden möge – dass er irgendwie seine eigensinnige junge Herrin zurückhalten könnte. Hätte es ... hätte es nur ein paar Jahre später geschehen können! Götter oder Familienoberhaupt hin oder her – wenn sie wollten, dass sie eine der „Sieben Tugenden“ wurde, warum konnten sie dann nicht mehr Großmut, mehr Geduld zeigen? Zumindest so lange, bis sie die Fülle ihrer Kindheit erlebt hatte; bis sie die Wege der Welt verstand; bis sie lernte, Verwirrung mit Zurückhaltung, Unzufriedenheit mit Disziplin zu mäßigen; bis sie ihre widerspenstige Anteilnahme und Mitgefühl überwunden hatte ... und bis sie endlich lernte, das Schicksal zu akzeptieren und zu ertragen, das allen von den Neun Großen auferlegt wird.\n \n Lisbells Rufe und Schritte kamen immer näher. Der Butler wusste, dass sie gleich die Tür zum Empfangssaal aufstoßen würde.\n \n Gerade erst hatte er den Boten des Patriarchen verabschiedet. In seinen Händen hielt er nun die von der Kirche verliehene Goldene Blumenkrone, zusammen mit dem Edikt, das Lisbell zu einer Audienz rief. Dieses scheinbar leichte Gewicht war für ihn schwerer als tausend Pfund. Er konnte sich kaum vorstellen, der kleinen Lisbell eine solche Bürde zu überreichen.\n \n Ach, die Schritte der jungen Herrin waren wie immer leicht – das Privileg der Unbelasteten. Er lauschte, bis Lisbell die Tür aufstieß und mit der zerknitterten Zeitung fragte: „Herr Butler, was hast du da in der Hand?“\n \n Er wusste, dass von diesem Moment an die unbeschwerten Tage seiner jungen Herrin vorbei waren.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15010401"
+        },
         UI_CHAR_DATA_TEXT_15010402 = {
           ContentDE = "Demnächst",
           TextMapId = "UI_CHAR_DATA_TEXT_15010402"
@@ -56140,6 +56338,1322 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_CHAR_DATA_TEXT_15010405 = {
           ContentDE = "Demnächst",
           TextMapId = "UI_CHAR_DATA_TEXT_15010405"
+        },
+        UI_CHAR_DATA_TEXT_15020101 = {
+          ContentDE = "Der erste Eindruck, den Frau Nifle hinterlässt, ist der einer überaus sanften, vollkommen gefassten Person – als gäbe es nichts auf der Welt, das in ihr heftige Regungen auslösen könnte.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15020101"
+        },
+        UI_CHAR_DATA_TEXT_15020102 = {
+          ContentDE = "Wenn sie Seelen auf ihrem letzten Weg geleitet, wählt Nifle meist abgeschiedene Orte, fern von jeder Störung. Doch du hattest das seltene Glück, sie dabei zu beobachten, wie sie Abschied nahm. Ihr leises, sanftes Murmeln schien von Mitgefühl für das vergehende Leben zu erzählen, von der Klage über die Unbeständigkeit des Schicksals, von einer stillen Wehmut angesichts der verrinnenden Zeit ... und doch sagte es vielleicht nichts von alledem – vielleicht war es nur wie ein milder Windhauch, der über die Erde strich.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15020102"
+        },
+        UI_CHAR_DATA_TEXT_15020103 = {
+          ContentDE = "Wenn Frau Nifle mit dir spricht, liegt in ihrem Ton stets die Milde und Nachsicht einer Älteren.\n Und wenn dein Herz unruhig ist, schenkt sie dir lediglich ein sanftes Lächeln und betrachtet dich mit jenen Augen, die durch viele Jahre hindurch alles gesehen haben und nun in ruhiger Gelassenheit verweilen. Ohne ein Wort zu verlieren, scheint sie so die Unruhe in deinem Inneren zu glätten.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15020103"
+        },
+        UI_CHAR_DATA_TEXT_15020104 = {
+          ContentDE = "Frau Nifle kennt keinen Zorn – doch sie vermag es, deinen Zorn in sich aufzunehmen.\n „Zorn ist der Beweis für die Glut des Lebens“, sagte sie einst. „Er bedeutet, dass dein Feuer noch brennt. Das meine ... ist längst erloschen.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_15020104"
+        },
+        UI_CHAR_DATA_TEXT_15020105 = {
+          ContentDE = "Nur ein einziges Mal hast du in Frau Nifles Blick einen Anflug von etwas anderem wahrgenommen – als sie von einem Ort namens Smaragdwald sprach. Doch selbst das war kaum mehr als eine flüchtige Kräuselung, so schnell vergangen, dass sie fast wie eine Einbildung wirkte.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15020105"
+        },
+        UI_CHAR_DATA_TEXT_15020201 = {
+          ContentDE = "In den alten Überlieferungen der Charon heißt es, dass die Seelen der Verstorbenen letztlich in das Nebelmeer zurückkehren. Aus diesem Glauben heraus hat sich unter den Charon seit jeher die Tradition der Wasserbestattung erhalten.\n Im Licht des Mondes legt man die Gebeine oder persönlichen Hinterlassenschaften der Toten auf kleine Boote. Der oder die „Überführende“ beginnt daraufhin den Tanz des Abschieds – ein stilles Ritual, das die Seelen der Verstorbenen zurück ins Nebelmeer geleiten soll.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15020201"
+        },
+        UI_CHAR_DATA_TEXT_15020202 = {
+          ContentDE = "Im Herzen des Freistaates Aethyrie, hoch oben in der gewaltigen Baumkrone der Akademie von Arcadia, steht im Licht der Morgendämmerung ein Grabstein. Er markiert die letzte Ruhestätte von Frau Aletheia, der Gründerin der Akademie. Alle zehn Jahre, an ihrem Geburtstag, wird ihr zu Ehren eine Gedenkzeremonie abgehalten. Frau Aletheia war mehr als nur eine Lehrerin – sie war eine Anführerin und Visionärin. Mit Weisheit und Entschlossenheit führte sie den Freistaat immer wieder am schmalen Grat zwischen Imperium und Kirche entlang und bewahrte seine Neutralität in einer Zeit der Wirren.\n Unter den Trauernden findet sich mitunter eine Gestalt, die abseits steht – eine Frau, in schwarzem Schleier gehüllt. Anders als die anderen bringt sie keine Blumen dar und spricht kein Wort. Sie steht lediglich in der Ferne, schweigend, den Blick auf den in Stein gemeißelten Namen gerichtet.\n Jahre vergehen. Generationen kommen und gehen. Die Trauernden wechseln. Doch die verschleierte Frau bleibt. Ungealtert. Als hätte die Zeit selbst sie vergessen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15020202"
+        },
+        UI_CHAR_DATA_TEXT_15020203 = {
+          ContentDE = "Heiligturm-Ära, Jahr 998 – zugleich als Jahr Eins der Neuen Ära bekannt – markiert eine Zäsur, an der kein Historiker vorbeikommt. Manche Gelehrte teilen die Geschichte des Kontinents gar in zwei Abschnitte: die Zeit vor 998 und die Zeit danach. Denn in jenem Jahr wandten sich die Enttäuschten von den Göttern ab, stürzten die einst verehrten Heiligenbilder, griffen zu Klingen und verließen die Heimat, die sie lange ihr Eigen genannt hatten. Sie zogen nach Norden, hinein in Entbehrung und Ungewissheit, und begannen damit das, was später als die „Große Migration“ in die Annalen eingehen sollte – ein Ereignis, das untrennbar mit dem Namen Erika verbunden ist.\n Als Tochter des Herrn der Großzügigkeit hätte Erika ein Leben in Wohlstand und Vorrechten führen können. Stattdessen entschied sie sich für den Kampf – für Freiheit und Gleichheit – selbst um den Preis, sich gegen den eigenen Vater zu stellen. Die Aufzeichnungen schildern sie als leidenschaftlich und furchtlos, als eine Kriegerin, die mit der Lanze in der Hand stets an vorderster Front stand; ihr unbeugsamer Rücken wurde zum Banner, an dem sich andere aufrichteten.\n Was Erikas engste Gefährten betrifft, nennen die Chroniken meist nur einen Namen: Alexis – den Weisen, der später den Freistaat Aethyrie gründen sollte. Doch in den Erzählungen jener, die die Große Migration selbst mitgemacht hatten und ihre Erinnerungen an die Nachkommen weitergaben, taucht stets noch eine weitere Gestalt auf: eine junge Frau, kaum je von Erika getrennt. Die beiden waren wie Schwestern, unzertrennlich in Schritt und Geist. Und doch hätten ihre Wesensarten unterschiedlicher kaum sein können: Erika strahlte wie die glühende Sonne des Tages, während die andere still und zurückhaltend war – eine sanfte Seele, eher vergleichbar mit dem Polarlicht, das die Nacht in leiser Schönheit erhellt.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15020203"
+        },
+        UI_CHAR_DATA_TEXT_15020204 = {
+          ContentDE = "In den langen Annalen von Elysium wird erzählt, dass ein einstiger Träger des Titels Herr der Großzügigkeit ein wundersames junges Mädchen weihte und sie zur Auserwählten des Gottes des Lebens erklärte. Man sagte, goldenes Blut fließe durch ihre Adern, von einer Macht, die jede Krankheit zu heilen vermöge. Sie wurde unter die Sterblichen gesandt, um ihr Blut zu vergießen und göttliche Gnade über das Land zu verbreiten – um die Menschen vor Krankheit und Alter zu bewahren.\n Doch ...\n dieser Segen hatte seinen Preis. Ihr Blut wurde in Kristallphiolen abgefüllt und für ungeheure Summen verkauft. Für den Adel war es ein Zeichen von Reichtum, für das einfache Volk eine letzte Hoffnung, die es nicht selten ins Verderben trieb.\n Denn der Segen war nicht ewig. Ihr Blut konnte den Tod nur aufschieben – heilen konnte es ihn nicht. Und dennoch strömten die Menschen zum Heiligtum, Gold und Silber fest umklammert, flehend um ein paar weitere, geliehene Augenblicke eines verblassenden Wunders.\n Vor den fiebrigen Gebeten, der atemlosen Dankbarkeit, der Verehrung, die an Wahnsinn grenzte, blieb das Mädchen stets stumm. Hoch auf dem Altar sitzend, sprach sie kein einziges Wort.\n Niemand wusste, dass sich unter dem reinweißen Schleier ein blasses, schönes Antlitz verbarg, nicht von Gnade erstarrt, sondern von langen Jahren der Gefangenschaft. Ihre Lippen, unberührt von Sprache, waren nicht aus freiem Willen verstummt, sondern durch Einsamkeit.\n Niemand wusste, dass sich unter dem bestickten Gewand ein Körper von makelloser Gestalt befand, durchzogen von unsichtbaren Wunden und ein Herz, vom Leiden so erschöpft, dass es längst vergessen hatte, wie man schlägt.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15020204"
+        },
+        UI_CHAR_DATA_TEXT_15020205 = {
+          ContentDE = "Vor tausend Jahren, tief in den Grenzwäldern von Elysium, lebte ein Ehepaar. Die Frau war eine Fährfrau – eine, die die Seelen der Verstorbenen durch ein heiliges Wasserbestattungsritual geleitete. Dieses Ritual, verwurzelt in den uralten Traditionen des Volkes der Charon, stand im offenen Widerspruch zu den Lehren der Orthodoxen Kirche von Elysium. Und so war es streng verboten. Nur durch geflüsterte Gespräche unter Vertrauten konnte man von den Fährleuten erfahren – und davon, wo man sie finden konnte.\n Zunächst waren es nur wenige Charon, die noch an den alten Wegen festhielten und den Mut aufbrachten, zu Fuß durch den Wald zu reisen, um die Fährfrau zu bitten, einen verlorenen Angehörigen zu verabschieden. Doch als der Groll gegen die Patrizier der Kirche wuchs, wurde dieses stille Begräbnisritual zu etwas Größerem: zu einem lautlosen Akt des Widerstands. Einer nach dem anderen entschieden sich die Menschen, diese Welt in den Armen des Nebelmeeres zu verlassen – statt in der geweihten Umklammerung der Kirche.\n Schließlich drangen die Gerüchte an die Ohren der Spitzel der Kirche. Und in einer mondlosen Nacht kamen die Scharfrichter – mit Fackeln in den Händen – und stürmten den Wald. Die beiden Ketzer wurden aus ihrem Heim gezerrt und auf dem Scheiterhaufen verbrannt. Ihre Überreste warf man jenseits der Grenze in ein Armengrab – einen Ort, an dem kein Stein der Toten gedachte, damit sie den heiligen Boden von Elysium nicht entweihten.\n So endete die Legende der Fährfrau. Doch eine Zeit lang danach machte ein anderes Gerücht unter dem einfachen Volk die Runde. Man sagte, am Morgen nach der Hinrichtung habe jemand gesehen, wie ein Kind aus jenem Grab kroch. Ihre Brust trug eine Wunde, die den Körper sauber durchbohrte. Ihre kleine Gestalt war von Blut und Asche getränkt, ihr Gesicht vom Ruß geschwärzt. Und doch waren ihre Augen klar, scharf und unverkennbar lebendig – nicht die Augen eines Wesens, das an der Schwelle des Todes stand.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15020205"
+        },
+        UI_CHAR_DATA_TEXT_15020301 = {
+          ContentDE = "In ihren langen, stillen Jahren hatte Frau Nifle den Kontinent Atlasia immer wieder durchquert. Ihre Schritte hatten weiter geführt als die jedes Abenteurers, von dem die Lieder erzählen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15020301"
+        },
+        UI_CHAR_DATA_TEXT_15020302 = {
+          ContentDE = "Nifle altert nicht. Sie stirbt nicht. Keine Wunde – so schwer sie auch sei – hinterlässt bleibende Spuren.\n Es gab eine Zeit, in der sie diese Gabe für einen Segen hielt. Und eine Zeit, in der sie sie als Fluch begriff. Doch mit der Zeit verstand sie: Die Macht selbst trägt kein Urteil in sich. Bedeutung ist etwas, das sie ihr verlieh – geformt von Umständen, gehärtet von den Jahren. Heute plagt sie sich nicht mehr mit solchen Gedanken. Sie beobachtet schweigend, wie sich die Welt um sie herum wandelt und vergeht – und nimmt an, was auch immer die Ewigkeit ihr in die Hände legt.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15020302"
+        },
+        UI_CHAR_DATA_TEXT_15020303 = {
+          ContentDE = "Bei Abschiedsriten vollzieht Nifle den Tanz des Fortgangs – ein Ritual, das nur den Fährfrauen bekannt ist.\n Es war ein Tanz, den ihre Mutter sich einst geweigert hatte, sie zu lehren. „Dieser Tanz“, hatte sie gesagt, „ist für jene bestimmt, die niemals zurückkehren.“ Und so geschah es erst viele Jahre später als Nifle an einem stillen Fluss in ihrer Heimat stand, unter fahlem Mondlicht, dass die Erinnerung an den Tanz in ihr erwachte. In jener Nacht, als sie von ihrer liebsten Freundin Abschied nahm, erhob sie sich auf die Zehenspitzen und bewegte sich so, wie sie ihre Mutter einst hatte tanzen sehen.\n In diesem Moment verstand sie endlich, warum ihre Mutter ihr den Tanz nie beigebracht hatte. Doch da war niemand mehr, der es hätte hören können.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15020303"
+        },
+        UI_CHAR_DATA_TEXT_15020304 = {
+          ContentDE = "Obwohl Nifles Blut die Macht besitzt, das Leben eines anderen zu verlängern, hat sie in all den langen Jahren ihres Daseins nur ein einziges Mal ein wahres Wunder gewirkt.\n Es geschah für ein Kind, das entlang des Pfades der Großen Migration geboren worden war. Die Gruppe, mit der sie zog, war vollständig von einem Sumpf verschlungen worden – und als man sie schließlich fand, hatte nur ein einziges Säugling überlebt. Er war hoch über dem Morast gehalten worden von den zitternden Armen jener, die bereits unter ihm begraben lagen. Dieses Kind überstand wider alle Wahrscheinlichkeit die Kriege und die Jahre des Umherziehens und erreichte schließlich eine Zeit des Friedens – nur um dann der Seuche zu erliegen.\n Die Ärzte waren machtlos. Doch Nifle weigerte sich, loszulassen. In der Nacht, in der das Kind zwischen Leben und Tod schwebte, öffnete sie ihre eigenen Adern immer wieder und bot ihr Blut anstelle des ihren dar, verlor mehr als einmal das Bewusstsein durch den Blutverlust. Und vielleicht – wenn die Götter tatsächlich existieren – ließ sich selbst ihr Herz von dieser Verzweiflung bewegen. Denn mit dem Morgengrauen war das Fieber des Kindes verschwunden, ihre Wunden hatten sich auf wundersame Weise geschlossen, und Hörner, denjenigen Nifles ähnlich, begannen zu wachsen.\n Nifle zog das Kind wie ihr eigenes groß, in der Hoffnung, die langen Jahre mit ihr teilen zu können. Doch das Kind alterte – wie alle Sterblichen. Und mit der Zeit wirkte sie nicht mehr wie Nifles Tochter, sondern wie ihre Schwester, ihre Mutter, ihre Großmutter.\n Und so verstand Nifle schließlich: Die Wunder, die sie in die Welt bringen konnte, waren endlich. Der Weg zur Unsterblichkeit ist schmal. Die Götter hatten ihr den Durchgang gewährt – doch sie hatten ihr keine Gefährten geschenkt.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15020304"
+        },
+        UI_CHAR_DATA_TEXT_15020305 = {
+          ContentDE = "Man sagt, Träume entstünden aus den tief verborgenen Sehnsüchten des Geistes. Vielleicht ist es gerade deshalb, dass Nifle nur selten träumt – denn in dieser Welt gibt es nichts mehr, das nach ihr ruft.\n Und doch träumt sie von Zeit zu Zeit von ihren Eltern. Ihre Gesichter sind im Lauf der Jahre verblasst, doch das Gefühl ist geblieben – wie es war, die schwielige Hand ihres Vaters zu halten, in die sanft halb geschlossenen Augen ihrer Mutter zu blicken. Dieses Gefühl, weiß sie, trug einst den Namen „Wärme“.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15020305"
+        },
+        UI_CHAR_DATA_TEXT_15020401 = {
+          ContentDE = "Flüstern der Verstorbenen erfüllte ihre Ohren – Zorn, Groll, Trauer, Reue ... alles wirbelte durcheinander wie ein dichter Nebel, der selbst das Sonnenlicht verschlang. Und doch verstummten die Stimmen jedes Mal unter dem leisen Wiegen ihres Gesangs, lösten sich mit jedem tänzerischen Schritt auf und verloren sich in den nachhallenden Falten ihres Gewandes.\n Tief im Schlummerwald irrten noch immer viele Seelen umher. Das Ritual hatte länger gedauert als gewöhnlich. Als Nifle schließlich innehielt, regte ein sanfter Wind ihren Schleier. Monate waren seit der Schlacht vergangen. Der Geruch von Blut war längst verflogen – nun erfüllte nur noch der erdige Atem von Laub und Erde ihre Lungen. Sie schloss die Augen und wandte ihr Gesicht dem Wind zu, ließ zu, dass sie das Land erneut spürte.\n „Jedes Land hat seinen eigenen Atem.“ Ein Satz, den sie einst gelesen hatte. Jetzt, da sie nach Jahrzehnten wieder auf diesem Boden stand, verstand sie endlich seine Bedeutung. In diesem friedlichen Augenblick, umhüllt vom Duft der Erinnerung, schweiften ihre Gedanken in eine ferne Vergangenheit – stille Spaziergänge durch den Wald, stets ein paar Schritte hinter jener strahlenden Gestalt, deren Lachen hell und silbern klang wie Windspiele.\n \n Das Rascheln von Schritten durchbrach die Stille. Nifle öffnete die Augen. Zwischen den Bäumen ein Hauch von Farbe. Ein Mädchen stand vor ihr und hielt ein Bündel wilder Blumen im Arm. Für einen Herzschlag verschwamm das Bild, überlagerte sich mit einer Gestalt, die längst der Erinnerung angehörte. In den Zügen des Mädchens lag eine Ähnlichkeit, die Nifle seit vielen Jahren nicht mehr gesehen hatte. Und für einen flüchtigen Moment glaubte sie, ihren Namen zu hören – sanft, freudig, wie eine Stimme aus einem Traum.\n \n Dann verging die Erscheinung. Das Mädchen blinzelte neugierig.\n „Guten Tag, gnädige Frau“, sagte sie höflich. „Ich glaube nicht, dass ich Sie hier schon einmal gesehen habe. Kommen Sie von weit her?“\n Ihre Stimme zog wie ein Kiesel, der ins stille Wasser fällt, durch Nifles Gedanken und führte sie behutsam in die Gegenwart zurück. Nifle lächelte sanft. „Ja, mein Kind. Von sehr weit her.“\n „Aber ... Sie klingen, als kämen Sie von hier.“\n „Als ich sagte ‚sehr weit‘“, erwiderte Nifle und wies mit der Hand zum Horizont, „meinte ich keine Entfernung.“\n \n Das Mädchen legte den Kopf schief, verwirrt – doch ihr Blick fiel bald auf die Laterne in Nifles Hand, deren fahles Licht wie ein Atem pulsierte.\n „Sind Sie eine Fährfrau?“, fragte sie. „Sind Sie wegen der ... Verstorbenen hier?“\n Nifle nickte. „Ich habe die wandernden Seelen dieses Waldes zur Nebelmeer geführt.“\n \n Das Mädchen senkte den Blick, und ein leiser Schmerz schlich sich in ihre Stimme.\n „... Es waren meine Leute“, murmelte sie. „Die Menschen von Aethyrie konnten sich Hyperboreas Herrschaft nicht beugen. Und zu den Göttern, die uns den Rücken gekehrt hatten, konnten wir nicht zurückkehren. Also standen wir Schulter an Schulter und kämpften für Freiheit und Würde, nur mit unserem Fleisch und Blut. Manche nannten es töricht, leichtsinnig, sinnlos. Aber ich glaube das nicht. Sie doch auch nicht, gnädige Frau? Wenn wir den Krieg verloren haben ... bedeutet das, dass ihr Opfer umsonst war?“\n „Alles Leben endet“, sagte Nifle leise. „Doch Gedanken bleiben. Die Gefallenen gleichen unvollendeten Denkmälern – eines Tages wird die Freiheit kommen und ihre Namen dort eingravieren, wo sie hingehören.“ Sie hielt inne, als erinnere sie sich an jemanden. „Das waren die Worte einer alten Freundin. Ich hoffe, sie spenden dir etwas Trost.“\n „Ihre Freundin muss sehr mutig gewesen sein“, sagte das Mädchen mit einem Lächeln. „Danke, dass Sie sie nach Hause geleitet haben. Nun können sie endlich in Frieden ruhen.“\n \n Sie kniete nieder und legte die Wildblumen an die Wurzeln eines alten Baumes. Nach einem stillen Moment erhob sie sich und wandte sich zum Gehen, hielt jedoch inne und blickte noch einmal zurück.\n „Meine Großmutter hat mir einmal eine Geschichte erzählt“, sagte sie. „Von einer Fährfrau mit schwarzem Schleier, die eine Laterne trug ... so sanft wie die Nacht selbst. Sie erinnern mich an sie.“\n Auch du erinnerst mich an deine Großmutter, dachte Nifle. Doch sie behielt die Worte für sich.\n \n Stattdessen schenkte sie dem Mädchen ein mildes Lächeln und neigte den Kopf. „Es ist Zeit, weiterzuziehen. Möge Mutter Embla dich segnen, mein Kind.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_15020401"
+        },
+        UI_CHAR_DATA_TEXT_15020402 = {
+          ContentDE = "„Wer ist diese Fährfrau?“\n „Sie ist die Mutter von Frau Aletheia.“\n „Was ...?! Aber sie sieht so jung aus ...“\n „Sie besitzt die Magie der Langlebigkeit. Sie altert nicht.“\n „So etwas gibt es wirklich? Das ist ja beneidenswert.“\n „Aber ... ihr eigenes Kind zu überleben, es mit den eigenen Händen zu verabschieden ... das muss unerträglicher sein als alles andere.“\n \n Obwohl die Stimmen gedämpft waren, trug der Abendwind das leise Gemurmel bis an Nifles Ohren. Doch die Worte vermochten nichts in ihr zu bewegen. Staunen, Bewunderung, Neid oder auch nur ein stiller Seufzer, all das war ihr längst vertraut.\n \n „Es ist so weit. Bitte beginnen Sie mit dem Ritus“, erinnerte sie der junge Mann an ihrer Seite.\n Nifle neigte leicht den Kopf, nahm die Laterne auf und trat auf den Fluss zu, der im Dunkel der Nacht schwach schimmerte. Am Ufer lag ein schmales Boot vertäut, darauf ruhte ein kunstvoll gefertigter Sarg.\n \n Die Frau darin war von Blumen umgeben, die Augen friedlich geschlossen, als hielte sie nur einen kurzen Mittagsschlaf in einem Schaukelstuhl. Die Jahre hatten deutliche Spuren hinterlassen: feine Falten an Augen und Mund, eine stumpf gewordene, raue Haut, einige dürre weiße Strähnen an den Schläfen. Für jeden anderen war sie eine Frau im hohen Alter. Doch für Nifle war sie noch immer ein Kind. Durch das gealterte Gesicht hindurch sah Nifle all ihre früheren Gestalten: das unschuldige Lächeln der Kindheit, hell und voller Neugier; das stille Profil der Jugendlichen, versunken zwischen Büchern; den schmalen Rücken der Erwachsenen, die rastlos für das Überleben dieses Landes kämpfte; und schließlich den Blick der Greisin, gezeichnet von Wind und Wetter, doch noch immer von klarem Glanz erfüllt, wenn sie lehrte.\n \n Nifle hatte geglaubt, sie würde von tiefer Trauer überwältigt werden – so wie damals, als sie alte Freunde verabschiedet hatte. Doch in diesem Augenblick stieg etwas anderes in ihr auf: eine seltsame Ruhe, ein stilles Loslassen.\n Sie entzündete eine Kerze nach der anderen rund um den Sarg. Dann zog sie aus den Falten ihres Gewandes einen kleinen Stein hervor, zerfurcht, von Adern durchzogen, und legte ihn auf die Brust ihrer Pflegetochter.\n \n Es war ein Bruchstück eines Meteoriten, gebunden an ein längst vergangenes Versprechen. An jenem Tag hatte Nifle seltene Muße gefunden, den Markt zu besuchen, und das Kind gefragt, ob es sich etwas wünsche. Das Mädchen – damals tatsächlich kaum mehr als ein Kleinkind – hatte die Augen aufgerissen, vor Aufregung an Nifles Ärmel gezerrt und gerufen: „Ich möchte einen Stern, der sprechen kann!“\n Natürlich gab es auf keinem Markt Sterne zu kaufen, geschweige denn solche, die sprechen konnten. Das Kind hatte schon immer einen Kopf voller wunderlicher Gedanken gehabt. Also hatte Nifle versprochen, ihr eines Tages einen zu finden.\n Kinder vergessen die Einfälle ihrer frühen Jahre schnell. Doch Nifle hatte dieses Versprechen nie vergessen.\n \n „Ich habe dir den sprechenden Stern gebracht, Aletheia“, flüsterte sie.\n \n Nifle hatte später Aletheias Aufzeichnungen gelesen. Das Kind hatte eigenwillige Vorstellungen gehabt: Sie glaubte weder den Priestern von Elysium, die sagten, die Sterne seien wie Edelsteine in eine gläserne Kuppel namens „Himmel“ eingelassen, noch den Erzählungen der Charon, nach denen sie goldene Blätter an den Ästen eines gewaltigen Weltenbaums seien. Sie vermutete, dass jeder Stern eine eigene Welt sei – so wie Atlasia – nur unvorstellbar weit entfernt. Und dass Atlasia für jene Sterne vielleicht ebenfalls nur ein Lichtpunkt sei.\n Wenn dem so war, dann erzählte dieses Bruchstück eines Meteoriten mit jeder seiner Rillen und Adern vielleicht noch immer die Geschichte einer fernen Welt.\n \n Ein letztes Mal betrachtete Nifle das Gesicht der Frau, die einst ihr Kind gewesen war. Dann schloss sie den Sarg behutsam, schob das Boot ins Wasser und überließ es der Strömung. Schließlich richtete sie sich auf und begann den Tanz des Abschieds – einen Tanz, den sie besser kannte als jeden anderen.\n Leises Schluchzen erhob sich hinter ihr. Im Augenwinkel sah sie, wie die Menschen am Ufer reglos standen und dem Boot nachblickten. Das Kerzenlicht spiegelte sich in ihren Augen, wie ein kleines Sternenfeld auf der Erde.\n \n In diesem Moment verstand Nifle endlich: Das Kind hatte aufgehört, nach Sternen zu fragen. Nicht, weil es den Wunsch vergessen hatte, sondern weil es selbst zu einem geworden war. Ein Licht wie ein Stern, das lange in der Geschichte von Iser schimmern würde, um den Menschen den Weg zu weisen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15020402"
+        },
+        UI_CHAR_DATA_TEXT_15020403 = {
+          ContentDE = "„Trink auch einen Schluck, mein Liebes.“ Die ältere Frau an Nifles Seite reichte ihr mit einem freundlichen Lächeln einen Wasserschlauch.\n „Danke.“ Nifle nahm ihn entgegen und trank einen Schluck, um sich im nächsten Moment hustend zu krümmen, als das Brennen ihr die Kehle hinabfuhr.\n „Haha, hätte ich dir sagen sollen, das ist Wein.“ Die Frau lachte leise. „Bei dieser Kälte wärmt ein Schluck ganz gut. Aber wenn du den Geschmack nicht gewohnt bist, übertreib es lieber nicht. Sonst wird dir am Ende noch schwindelig.“\n Nifle lächelte verlegen und reichte den Schlauch zurück. Die Frau klopfte ihr sanft auf die Schulter und wandte sich dann wieder den anderen zu.\n \n Unter den Flüchtenden wusste, abgesehen von Erika und Alexis, niemand, dass das stille, zierliche Mädchen in ihrer Mitte einst das „gesegnete Kind“ gewesen war, das man auf einem Altar verehrt hatte. Zum ersten Mal in ihrem Leben lebte Nifle wie ein gewöhnlicher Mensch – mit Gefährten, mit Freunden.\n Ihre Reise begann im Schatten des Heiligen Turms, führte durch den Smaragdwald und setzte sich immer weiter nach Norden fort. Hier verloren die Bäume ihre gelben Blätter schon beim ersten Hauch von Kälte. Der Norden war nichts wie die sonnenverwöhnten Länder des Südens, die so lange unter dem Wohlwollen der Götter gestanden hatten. Und doch spürte Nifle, wie etwas in ihr langsam auftaute. Ihr sehnlichster Wunsch war nun, das Versprechen einzulösen, das sie Erika gegeben hatte: einen Ort zu finden, an dem sie frei leben und ein neues Zuhause errichten konnten.\n \n Doch diese Zeit ließ keine solchen Wünsche zu. Die Ritter von Elysium verfolgten die Flüchtenden unerbittlich – zahlenmäßig weit überlegen und mit weit überlegenen Waffen ausgestattet. Angriff folgte auf Angriff. Und jedes Mal kehrte Erika mit neuen Wunden vom Schlachtfeld zurück.\n \n „Lass mich an deiner Stelle gehen“, sagte Nifle. „Ich werde nicht verletzt.“\n Doch Erika lächelte nur und schüttelte den Kopf. „Ich muss gehen“, sagte sie ruhig. „Niemand kann mich ersetzen.“\n \n Erikas letzte Schlacht galt weder Königen noch Göttern, sondern ihrem eigenen Vater. An jenem Tag führte Herr der Großzügigkeit selbst den Angriff an und rief im Namen der Ketzerverfolgung zum Kreuzzug gegen seine Tochter. Der tragische Zusammenstoß endete damit, dass beide auf dem Schlachtfeld fielen: In dem Moment, in dem sein geweihter Bogen Mammon einen Pfeil durch Erikas Brust jagte, durchbohrte ihre Lanze sein Herz.\n Als Nifle Erika zwischen den Trümmern fand, war ihr Atem bereits flach, das Leben wich ihr mit jedem Augenblick. Verzweifelt griff Nifle nach ihrem Dolch, bereit, sich die eigene Hand aufzuschneiden. Das Blut in ihren Adern, das sogenannte „goldene Blut“, hatte einst selbst den Tod zurückgedrängt. Doch Erika, kaum noch bei Bewusstsein, hob zitternd die Hand und hielt sie auf.\n \n „Diese Wunde ist tödlich“, flüsterte sie, leise, aber bestimmt. „Selbst wenn du mich am Leben hieltest ... ich würde nie wirklich genesen.“\n „Ich kann dich für immer am Leben halten!“ rief Nifle.\n Doch Erika schüttelte den Kopf. „Das wäre kein Leben. Ich will als Kriegerin sterben – hier, auf dem Schlachtfeld. Es tut mir leid ... aber ich werde nicht mit dir gehen können ... in das Land der Freiheit, von dem wir geträumt haben.“\n „Warum ...?“ Nifle senkte den Kopf, Tränen strömten unaufhaltsam, während ihr ganzer Körper bebte. „Dieses Blut in meinen Adern, es soll Leben retten, nicht wahr? Warum kann ich dann ausgerechnet dich nicht retten? Wenn ich dich nicht retten kann ... was ist dann der Sinn meines Lebens?“\n „Nifle ...“ Erika streckte die Hand aus und legte sie sanft an die tränenüberströmte Wange ihrer Freundin – eine Hand, hart geworden durch Jahre des Kampfes. „Dieser Bastard von einem Vater ... vielleicht hatte er in einem Punkt recht. Du bist wirklich ein Kind, das von den Göttern gesegnet wurde. Dein Leben ... muss einen ganz besonderen Zweck haben. Und ich glaube ... eines Tages wirst du ihn finden.“\n \n Doch Nifle verstand es nicht. Nicht damals. Alles, was sie konnte, war, den Körper ihrer Freundin im Arm zu halten, der bereits kalt wurde, und die Tränen frei fließen zu lassen.\n \n Nach Erikas Tod zogen die Flüchtenden weiter nach Norden. Der Weg war lang genug, um die Ritter von Elysium abzuschütteln, und länger noch, bis sie schließlich frei waren. Doch am Ende wurden aus Armen, die sich einst umschlungen hatten, Klingen, die sich gegeneinander erhoben; und Wein, den man geteilt hatte, sickerte in blutgetränkte Erde. Der Weg zur Freiheit war von Dornen gesäumt und übersät mit gebrochenen Eiden. Nifle erlebte weiteren Verlust, weitere Abschiede. Doch sie begann auch zu begreifen: So unsicher das Leben auch war und so unausweichlich der Tod – den Mutigen blieb dennoch ein Recht. Die Wahl, wofür sie leben und wofür sie sterben wollten. Der Tod hatte keine Bedeutung, bis sie ihm selbst eine gaben. Das war das Vorrecht der Sterblichen.\n \n Doch dieses Vorrecht war Nifle verwehrt. Sie konnte den Tod nicht wählen. Sie konnte nur leben, und weiterleben, während alles, was sie liebte, eines nach dem anderen vor ihren Augen verblasste.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15020403"
+        },
+        UI_CHAR_DATA_TEXT_15020404 = {
+          ContentDE = "Sie fühlte sich, als befände sie sich in einem endlosen Kreislauf.\n \n Jeden Morgen, zur gleichen Stunde, öffneten die Mägde von Herrn der Großzügigkeit die Tür zu ihrer Kammer, lösten die Ketten an Hand- und Fußgelenken und legten ihr einen weißen Schleier über das Gesicht. Schritt für Schritt ging sie zum Thron des Heiligtums – umhüllt von ehrfürchtigen Blicken, die Füße auf weichen Blütenblättern, die auf ihrem Weg verstreut lagen – so, wie es einer wahren Göttlichen Botin gebührte.\n Dann trat Herr der Großzügigkeit selbst vor, präsentierte eine Truhe voller Glasfläschchen – klar, makellos und leer. Und das Segensritual begann.\n \n Sie war die Auserwählte der Götter. Und als solche wurde von ihr erwartet, dass sie den Schmerz der Sterblichen überwand. Deshalb musste das Blut auf die älteste Weise entnommen werden – keine feinen Nadeln, keine betäubenden Kräuter. Solche Hilfsmittel hätten das Ritual entweiht, es zu etwas Klinischem, zu etwas Grausamem gemacht.\n Die Klinge musste schön sein. Silber, vergoldet, mit dem Wappen der goldenen Iris graviert. Kalt wie der Stein des Heiligtums, scharf genug, um Fleisch mit der sanftesten Berührung zu trennen. Das Blut, tiefrot, floss in die Phiole und mit ihm dieser süßlich-metallische Geruch. Alles andere als göttlich, doch der schwere Weihrauch des Heiligtums überdeckte ihn schnell.\n Eine Phiole füllte sich. Dann eine weitere. Und noch eine. Bis die dankbaren Lobpreisungen der Gläubigen zu einem fernen Murmeln verschwammen und die Klinge ihr aus der Hand glitt.\n \n Die Tore des Heiligtums schlossen sich mit einem donnernden Schlag, versperrten den verzweifelten Blicken draußen den Zugang. Sie – kaum mehr als ein leerer Körper – wurde von den Mägden zurück in ihre Kammer getragen, der Schleier vom Gesicht genommen. Dann folgten Stunden der Stille. Mit weit geöffneten Augen konnte sie nur zusehen, wie die Wunden an ihrem Arm langsam heilten, wie blasse Haut wieder leicht rosig wurde, wie sich die Risse in ihren Fingern mit unmöglicher Präzision schlossen.\n \n So wurde sie wieder vollständig – kein Stück anders als am Tag zuvor oder am davor. Wartend, erneut verhüllt zu werden. Wartend auf die nächste Truhe voller glänzender, leerer Phiole. Wartend.\n \n An diesem Tag erklangen die Schritte vor ihrer Kammer früher als üblich. Nicht ungewöhnlich – wann immer wichtige Gäste kamen, wies Herr der Großzügigkeit die Mägde an, eine extra Portion „goldenen Blutes“ bereitzustellen.\n Doch diesmal war nur ein einzelner Schritt zu hören und eine Stimme, die sie noch nie zuvor gehört hatte. Hell, fremd, voller Leben. Sanft drang sie hinter dem Vorhang hervor. „Hallo? Äh ... bist du die Göttliche Botin?“\n \n Sie setzte sich auf, antwortete jedoch nicht.\n „Hey! Du bist wach!“ Die Stimme wurde noch heller. „Ich bin Erika. Mein Vater meinte, ich dürfe hier nicht reinkommen, aber ... na ja, ich dachte, dir muss ja langweilig sein. Immer nur in diesem Zimmer eingesperrt zu sein? Das klingt furchtbar. Willst du nicht ein bisschen nach draußen? Nur für ein Weilchen? Es ist noch früh. Es wird niemand merken.“\n Sie öffnete den Mund, versuchte zu antworten, doch die seit Langem stummen Saiten hatten vergessen, wie man Töne erzeugt.\n „Hmm? Jetzt nicht gut?“ Die Stimme zögerte kurz, hellte sich dann wieder auf. „Schon gut! Dann komm ich ein anderes Mal wieder!“\n \n Nein. Geh nicht.\n Sie schleppte ihren geschwächten Körper vorwärts, die Ketten, die ihre Glieder banden, kratzten am Bettrahmen und erzeugten ein kreischendes, metallisches Geräusch. Ihr Hals bebte vor Anstrengung. Ein Ton entwich – rau, heiser, kaum menschlich. „Hi...“\n „Fräulein Botin ...? Hast du etwas gesagt?“\n „Hi... Hilf ... mir ...“ Sie zwang die Worte heraus, einen zersplitterten Atemzug nach dem anderen.\n „Hm?“\n Es folgte eine Pause. Dann wurde der Vorhang aufgerissen. Und sie trat ein – brachte Sonnenlicht, Wind und den Duft einer Welt voller Leben mit.\n \n Später erfuhr Nifle, dass Erika die Tochter von Herrn der Großzügigkeit selbst war. Nachdem Erika die Wahrheit über das sogenannte „goldene Blut“ entdeckt hatte, begann sie, Nifle heimlich bei Sonnenaufgang zu besuchen. Sie brachte Essen, lehrte sie sprechen und erzählte von der Welt jenseits der verschlossenen Türen.\n „Fräulein Botin ... Nein, Nifle. Ich bringe dich hier raus. Ich verspreche es.“\n Eines Tages sagte sie es, sah Nifle unerschrocken in die Augen, die Stimme fest und aufrichtig. Nifle hielt es für eine freundliche Lüge, einen Moment der Wärme, um ihren Schmerz zu lindern. Doch Erika hielt ihr Versprechen.\n \n Am Tag ihrer Flucht löste Erika Nifles Ketten und hob sie auf ihren Rücken. Obwohl sie gleichaltrig waren, war Nifles Körper so leicht, so zerbrechlich, dass sie kaum schwerer war als ein Kind.\n „Du bist leicht wie eine Feder ...“ murmelte Erika. „Wenn wir im Norden ankommen, sorge ich dafür, dass du gut isst. Du wirst stärker werden. Wir werden zusammen reiten. Wir lernen, Pfeile zu schießen.“\n „Okay ...“ flüsterte Nifle, nickte und ein schwaches Lächeln spielte um ihre Lippen.\n \n Viele Jahre später, wann immer Nifle in den Geschichtsbüchern von Atlasia blätterte, kehrte ihr Geist in die Nacht zurück, als sie aus dem Heiligtum von Herrn der Großzügigkeit floh. Sie war auf Erikas Pferd geritten, die Arme fest um die Taille ihrer Retterin geschlungen. Anders als Nifles papierdünne Haut fühlte sich Erikas Taille – durch jahrelanges Training fest und sicher – stabil an. Sie gab Nifle das Gefühl von Geborgenheit. Sie galoppierten durch die Nacht, der Wind rauschte in ihren Ohren, die Stadt verschwand hinter ihnen. Das Pferd hielt schließlich an einem Lager an, wo Nifle zum ersten Mal Erikas Gefährten begegnete. Sie sah in die Gesichter um das Feuer – geprägt von dem kühnen Lachen von Kriegern, den sonnengegerbten Furchen von Bauern, den tiefen Stirnfalten von Gelehrten und den rissigen Lippen von Barden. Das Feuer tanzte in ihren Augen. Für Nifle waren sie nichts wie die Gesichter, die sie hoch über dem Altar gesehen hatte.\n Ihre Augen brannten ebenso hell, aber nicht mit verzweifelten Gebeten um göttliche Gnade. Nein, das Feuer in ihren Augen sprach von Sehnsucht. Einer Sehnsucht, nicht gerettet zu werden, sondern eine neue Heimat zu bauen, mit eigenen Händen und Füßen fest auf der Erde.\n \n Gemeinsam mit Erikas Gefährten wurde Nifle Teil einer weit größeren Flucht – später als die Große Migration in die Geschichte eingegangen. Ein Kapitel von solcher Tragweite, dass kein Nacherzählen jemals seine volle Bedeutung erfassen konnte. Eine Bewegung der Auflehnung. Die Menschen der unteren Kasten von Elysium, nicht länger bereit, sich unter die Herrschaft der Theokratie zu beugen, vertrauten auf eine weise Anführerin und marschierten gen Norden – in die unerforschten Wildnisse, auf der Suche nach etwas, das sie endlich ihr Eigen nennen konnten.\n \n Und für Nifle war es dasselbe. Sie hatte das Heiligtum hinter sich gelassen und war ins Leben getreten — nicht als Symbol, nicht als Gefäß, sondern als sie selbst.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15020404"
+        },
+        UI_CHAR_DATA_TEXT_15020405 = {
+          ContentDE = "Tief im Wald erwachte ein junges Mädchen unter geflecktem Sonnenlicht. Zwei leuchtend rote Beeren baumelten vor ihren Augen und wiegten sich sanft. Ein Tautropfen glitt über ihre pralle Haut und fiel herab.\n \n „Wa ...?!“\n Das Mädchen schrak hoch und rappelte sich hastig aus dem Gras auf. „Hat die Jagd etwa schon begonnen?!“\n Ihr Vater lachte leise und hielt die Beeren zwischen den Fingern. „Du hast heute früh unbedingt mitkommen wollen und bist mir dann auf halbem Weg auf dem Rücken eingeschlafen. Die Jagd ist vorbei, mein Schatz. Zeit, nach Hause zu gehen.“\n „Och nein, ich hab alles verpasst!“ Sie schmollte, die Wangen aufgeblasen. „Warum hast du mich nicht geweckt?“\n „Schon gut, schon gut. Nächstes Mal, versprochen“, sagte er und schüttelte die Beeren leicht. „Hier. Die sind süß. Probier eine, vielleicht muntert dich das auf.“\n Noch etwas skeptisch nahm das Mädchen eine, steckte sie sich in den Mund. Eine feine Säure mischte sich mit der Süße, der Saft breitete sich auf ihrer Zunge aus, und die Trübsal wich aus ihrem Gesicht.\n „Wie heißen diese Beeren?“ fragte sie.\n „Das sind Himbeeren. Der Wald ist voller Wildfrüchte, aber nur wenige davon kann man essen. Und Himbeeren? Die süßesten von allen.“\n Das Mädchen schnappte sich eine weitere Handvoll aus seiner Handfläche und zog an seiner Hand, bereit, nach Hause zu gehen.\n \n „Papa, ich will mehr …“\n „Na gut, zwei noch ... Okay, drei. Aber der Rest ist für deine Mama, ja?“\n „Warum sind Himbeeren so klein? Wäre es nicht besser, wenn sie größer wären?“\n „Nun ja, dann musst du einfach warten, bis sie erwachsen werden. Erst werden sie zu Stachelbeeren, dann zu Äpfeln. Und wenn dieser Apfel weiter wächst ... bumm, eine Melone.“\n „Wow! Und was werde ich, wenn ich groß bin?“\n Ihr Vater lachte leise, strich ihr sanft durchs Haar, sagte aber nichts. Am Ende des Pfades kam ein kleines Holzhaus in Sicht. Das war das Zuhause des Mädchens. Ihre Mutter stand in der Tür und winkte ihnen von Weitem zu. Mit einem freudigen Quieken ließ das Mädchen die Hand ihres Vaters los und rannte in die offenen Arme ihrer Mutter.\n \n „Ach du meine Güte, sieh dich nur an“, sagte ihre Mutter, fing sie auf und wischte ihr den Saft vom Mund. „Du hast dir doch nicht heimlich etwas im Wald in den Bauch gesteckt?“\n „Hat sie nicht, dafür bürge ich“, sagte ihr Vater lachend, als er zu ihnen trat. Er zog ein Bündel Himbeeren hervor, in ein Taschentuch gewickelt, und reichte es seiner Frau. „Wir haben dir auch welche mitgebracht.“\n „Wow. Sie sind so schön, dass man sie kaum essen mag“, sagte sie lächelnd.\n Lachend und plaudernd gingen der Mann und die Frau Richtung Küche, um das Mittagessen vorzubereiten. Das Mädchen hingegen schlich sich erneut davon und wanderte zu einem nahen Bach. Während sie die Früchte aufzählte, die ihr Vater genannt hatte – Himbeeren, Stachelbeeren, Äpfel und Melonen – wuchsen sie in ihrer Vorstellung zu kleinen Hügeln heran, einer nach dem anderen.\n \n Dann plötzlich —\n „Oh ...!“\n Das Mädchen erstarrte, die Augen weit geöffnet. Ganz in ihrer Nähe spiralte eine Libelle aus der Luft herab und setzte sich leicht auf die Spitze einer fest geschlossenen Seerosenknospe. Ihre zarten Flügel fingen das Sonnenlicht ein und zerstreuten es in schillernden Farben. Sie hielt den Atem an, reglos – aus Angst, selbst die kleinste Bewegung könnte das winzige, wunderschöne Wesen wieder davonfliegen lassen.\n \n Damals sehnte sie sich danach, erwachsen zu werden. Alles war neu in ihren Augen, und die Welt vor ihr – weit und unbekannt – war voller Wunder.\n Damals wusste sie noch nicht, dass sie eines Tages jedes Erblühen und jedes Verwelken sehen würde, jedes Wiedersehen und jeden Abschied, jeden Anfang – und jedes Ende.\n Damals war sie einfach ein ganz gewöhnliches Kind, das zusah, wie sich eine Libelle auf die Spitze einer Seerosenknospe setzte, die Augen hell vor Freude und Staunen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15020405"
+        },
+        UI_CHAR_DATA_TEXT_15030101 = {
+          ContentDE = "Für die meisten Wanderer gibt es keinen festen Wohnsitz. Solange die Neun Kapitel von Dafeng bestehen, lebt das Bi’an ihnen für immer im Nacken. Doch es gibt einen verborgenen Zufluchtsort, den sie ihr Eigen nennen können – Außenberge. Wann immer sie müde werden, oder einfach des Tötens überdrüssig sind, können sie sich dorthin zurückziehen und für eine Weile verschwinden.\n Kezhou ist noch häufiger unterwegs als die meisten Wanderer. Manche scherzen sogar, er sei so etwas wie ein Magistrat von Yingtian unter den Wanderern – stets auf Achse, kaum je einen Moment der Ruhe findend.\n Die Menschen von Huaxu, denen er auf seinen Reisen begegnet, reagieren höchst unterschiedlich auf ihn. Ihre Haltung ihm gegenüber gleicht ihrer Einstellung zu stark riechenden Speisen: Wer ihn mag, liebt ihn abgöttisch; wer ihn nicht mag, kann ihn nicht einmal ansehen. Ein Mittelding gibt es nicht.\n Diejenigen, die Kezhou mit Wärme begegnen, sind meist Menschen, die einst von der Hilfe eines Wanderers profitiert haben – aus Gefahr gerettet, sei es mit Absicht oder durch reinen Zufall. Solche Menschen wissen, dass Wanderer keine Schurken sind.\n Weitaus häufiger jedoch wird Kezhou, als einziger Reisender mit einer Waffe in der Hand, mit kalten, misstrauischen Blicken empfangen. Er lächelt nur und nimmt es niemandem übel. Er weiß, dass Menschen, die ihre Gefühle so unverblümt zeigen, Dankbarkeit oft umso tiefer empfinden, sobald man ihnen geholfen hat.\n So sind die Menschen nun einmal – sie messen die Welt an dem, was sie bereits kennen und woran sie sich gewöhnt haben. Kezhou missfällt diese Tatsache, doch ändern kann er wenig. Also beschließt er: Sollte jemals der Tag kommen, an dem diese alten Vorurteile und ordentlich gezimmerten Schubladen endlich zerschlagen werden können, dann wird er der Erste sein, der ausholt.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15030101"
+        },
+        UI_CHAR_DATA_TEXT_15030102 = {
+          ContentDE = "Die meisten Wanderer werden sogar gern als Geächtete bezeichnet. Ursprünglich war das keineswegs als Lob gedacht, doch das Wort trägt einen gewissen verwegenen Klang. Schon bald begannen die Leute, sie in alle möglichen Kategorien einzuteilen: nach Waffen – Schwert-Gesetzlose, Speer-Gesetzlose, Klingen-Gesetzlose; nach Erscheinung – junge Gesetzlose, weibliche Gesetzlose, einarmige Gesetzlose; und nach Temperament – trunkene Gesetzlose, Gelehrten-Gesetzlose und zahllose andere.\n Kurz gesagt: Die Menschen lieben es, Wanderer nach ihren Eigenheiten oder Schulen zu sortieren und ihnen irgendein Etikett vom Typ „dies-oder-jenes-Gesetzlose“ aufzukleben.\n Eine Zeit lang war auch Kezhou als Schwert-Gesetzloser oder als junger Gesetzloser bekannt, doch diese Bezeichnungen verblassten rasch.\n Zwar ist er mit dem Schwert besonders versiert, doch führt er beinahe jede Waffe mit derselben sicheren Hand.\n Und längst ist er aus dem Alter heraus, in dem man ihn einen Jungen nennen könnte – auch wenn sein Wesen kühn, gradlinig und großherzig geblieben ist: viel Offenheit, gemischt mit einem Hauch schlichter Naivität.\n So einigte man sich mit der Zeit auf den schlichtesten und treffendsten Titel: Meister Kezhou.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15030102"
+        },
+        UI_CHAR_DATA_TEXT_15030103 = {
+          ContentDE = "Die Geschichten über die Wanderer klingen oft wie Legenden – doch allzu häufig bleiben sie genau das: Geschichten. In Wahrheit ist das Leben eines Wanderers in Huaxu selten so unbeschwert, wie es die Erzählungen vermuten lassen. Wer sich gegen die Neun Kapitel von Dafeng stellt, verurteilt sich selbst zu einem Leben auf der Flucht, gejagt vom Bi’an und den Magistraten von Yingtian.\n Erst vor fünf Jahren errichteten die wenigen verbliebenen Wanderer eine verborgene Bastion namens Außenberge – ein Ort, der angeblich jenseits jeder Reichweite liegt. Niemand außer den Wanderern selbst weiß, wo er sich befindet. Manche sagen, er liege auf einer fernen Insel im Meer, wo Unsterbliche wohnen sollen. Andere behaupten, er verberge sich in einer von Schatten verschluckten Höhle. Die kühnsten Gerüchte wollen gar wissen, er liege nicht einmal in Huaxu, sondern in Aethyrie.\n Kezhou jedoch verbringt die meiste Zeit weiterhin auf den Straßen. Die Außenberge erscheinen ihm zu beengt – nicht offen genug, nicht annähernd lebendig genug. Und vor allem: Draußen in der Welt wartet noch Unerledigtes auf ihn.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15030103"
+        },
+        UI_CHAR_DATA_TEXT_15030201 = {
+          ContentDE = "Am äußersten östlichen Rand von Atlasia liegt das Land Huaxu – eine Region mit eigenen Bräuchen, regiert von einer Rechtsordnung, die als die Neun Kapitel von Dafeng bekannt ist. Ihr Justizsystem funktioniert mit unerbittlicher Präzision: Wer gegen den Kodex verstößt, wird von Vollstreckerbestien namens Bi’an oder von den Magistraten von Yingtian, einer elitären Truppe von Gesetzeshütern, verfolgt. Unbewaffnete Zivilisten haben gegen sie keinerlei Chance, und selbst ausgebildete Kampfexperten überleben eine Begegnung nur selten. Entsprechend ist offene Gewalt innerhalb Huaxus äußerst selten.\n Dennoch gibt es eine kleine Zahl von Menschen, die die Neun Kapitel von Dafeng vollständig ablehnen. Manche verweigern sich der Gefangenschaft, andere werden von angeborenem Trotz getrieben, wieder andere können ein Leben unter auferlegter Ordnung schlicht nicht akzeptieren. Sie haben keinen festen Wohnsitz, ziehen von Region zu Region und kennen keine Loyalität außer der zu sich selbst. Man nennt sie zusammenfassend Wanderer – eine schwindende Erscheinung in einem System, das kaum Toleranz für jene zeigt, die außerhalb seines Entwurfs existieren.\n Kezhou ist einer von ihnen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15030201"
+        },
+        UI_CHAR_DATA_TEXT_15030202 = {
+          ContentDE = "Als die Vorfahren Huaxus einst die Neun Kapitel von Dafeng ausarbeiteten, hielten sie sie für vollkommen: abgeschlossen, makellos und dazu bestimmt, unverändert durch alle Zeitalter zu bestehen.\n Doch nichts auf dieser Welt ist wahrhaft fehlerlos. Die Entstehung der Wanderer etwa war ganz offensichtlich nie Teil ihres Plans.\n Dem ursprünglichen Entwurf zufolge sollte jeder, der ohne Erlaubnis Gewalt ausübte, gemieden und verachtet werden. In der Praxis jedoch geschah das Gegenteil: Die Wanderer schrieben sich einen festen Platz in die Geschichte Huaxus ein.\n Manche begannen, einen alten Satz aus den Klassikern zu zitieren: „Die Gerechten ziehen die Klinge – selbst wenn sie dabei ein paar Regeln beugen müssen.“ Und schon bald wurden all diese hitzköpfigen Gesetzesbrecher unter einem Namen zusammengefasst: die frei umherziehenden Gesetzlosen.\n Anfangs mied man diese Gesetzlosen, die jenseits der Reichweite der Neun Kapitel lebten und kühn genug waren, sich den Bi’an und den Magistraten von Yingtian entgegenzustellen. Die Menschen fürchteten, ein falsches Wort könne ihnen ein Schwert in den Leib einbringen. Doch unter den Wanderern befanden sich auch jene, die die Schikanen gegen Unschuldige nicht ertragen konnten – und ihre Klingen gegen die brutalen Schläger richteten, die die Schwachen ausnutzten.\n So begannen sich selbst unter der wachsamen Ordnung der Neun Kapitel Strömungen und Fehden zu regen. Und mit jeder weiteren gekreuzten Klinge wuchs die Zahl derer, die schnell handelten, wenn es dem Gemeinwohl diente, und deren Hass auf Ungerechtigkeit brannte – bis sie die gewöhnlichen Raufbolde übertrafen.\n Außerhalb des Blicks der Neun Kapitel richteten diese rechtschaffenen Wanderer jene zugrunde, die das Gesetz zu persönlichem Gewinn verdrehten und die Rechte anderer mit Füßen traten. Kalter Stahl war ihre Antwort auf solche Schurken.\n Heute runzeln die meisten Menschen noch immer die Stirn, wenn von Wanderern oder „frei umherziehenden Gesetzlosen“ die Rede ist. Doch diese freigeistigen Wanderer haben sich längst daran gewöhnt, durch die Welt der Kampfkunst zu ziehen und dort ihre Klingen zu ziehen, wo sie auf Unrecht stoßen. Für sie ist es ein Leben – so ungebunden, wie man es sich nur erhoffen kann.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15030202"
+        },
+        UI_CHAR_DATA_TEXT_15030203 = {
+          ContentDE = "Man sagt, dass Yan Shanting – der „Meister der Tausend Gipfel“ – in seiner Jugend gemeinsam mit drei weiteren Meistern die Gruppe bildete, die als die Vier Wanderer bekannt wurde. Im Laufe der Jahre nahm Yan Shanting drei Schüler an: den ersten, Yuming; den zweiten, Kezhou; und einen dritten – ein Mädchen, das aus Gründen, die niemand so recht kennt, früh verstarb.\n Manche haben Kezhou nach den Einzelheiten dieser Geschichte gefragt, doch er zeigt sich selten gesprächig. Stattdessen erzählt er, dass er, bevor er offiziell zum Schüler seines Lehrers wurde, ein ganzes Jahr lang halb mit dem alten Mann kämpfte und halb mit ihm stritt – ein kleines Zeugnis dafür, wie wenig Wanderer auf Anstand oder Regeln geben. Was jedoch jenem unglückseligen dritten Schüler wirklich widerfuhr – wer danach fragt, vergisst meist bald, dass er die Frage je gestellt hat.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15030203"
+        },
+        UI_CHAR_DATA_TEXT_15030204 = {
+          ContentDE = "Kezhou besitzt eine außergewöhnliche Begabung für die Kampfkunst: Jede Art von Waffe gehorcht seiner Hand so natürlich, als wäre sie ein Teil seines eigenen Arms. Daher heißt es im Gerücht, selbst ein Grashalm oder ein Zweig werde in seiner Hand tödlich. Kezhou selbst hat tatsächlich einige recht ungewöhnliche Trainingsmethoden ausprobiert – etwa beim Essen fliegende Insekten mit den Essstäbchen zu fangen, um Fingerfertigkeit und Zielgenauigkeit zu schulen. Er machte durchaus Fortschritte, doch sein Lehrer und seine Mitschüler setzten dem bald ein Ende.\n Der Lehrer argumentierte, Essstäbchen eigneten sich höchstens als Wurfwaffen im Verborgenen und seien bei Weitem nicht so praktisch wie ein Schwert. Sein älterer Mitschüler Yuming beharrte darauf, dass alles, was nichts mit dem Essen zu tun habe, bei Tisch schlechte Manieren seien. Und seine jüngere Mitschülerin Buxia verbot ihm kategorisch, mit Essstäbchen, die gerade eine Fliege gefangen hatten, erneut die Speisen zu berühren.\n Schade – hätte er Erfolg gehabt, wäre der Kampfkunstwelt womöglich eine neue Legende beschert worden: der Essstäbchen-Gesetzlose.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15030204"
+        },
+        UI_CHAR_DATA_TEXT_15030301 = {
+          ContentDE = "Kezhou ist mit Waffen aller Art vertraut, doch diejenige, die er am meisten schätzt, ist ein leichtes Holzschwert. Seine Klinge ist mit Silberfolie umwickelt, sodass es für Unkundige wie ein kaltes, glänzendes Eisenschwert wirkt – in jeder Hinsicht echt. In Wahrheit jedoch ist es nichts weiter als ein Übungsschwert, wie man es Anfängern gibt.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15030301"
+        },
+        UI_CHAR_DATA_TEXT_15030302 = {
+          ContentDE = "Kezhou hatte einst innig nach dem Titel des „betrunkenen Gesetzlosen“ verlangt. Ihm haftete etwas Nebelhaftes, Ungebundenes an, das perfekt zu seinem Alter und seinem Temperament passte. Angesichts aller Wendungen und Wirrnisse des Lebens beteuerte er stets, es kümmere ihn nicht – er lebe nur für Freiheit und Leichtigkeit. Doch in Wahrheit konnte er sich nie ganz von alten Bindungen und Groll lösen. Das war kein schwerwiegender Makel – kaum jemand lebt völlig frei von solchen Lasten –, aber es bedeutete, dass er sich selbst nicht vollkommen ehrlich gegenüberstand.\n Bald jedoch ließ Kezhou diese Selbsttäuschung hinter sich und gab die Fauststellungen und Schwertformen auf, die er für sein erträumtes „betrunkener Gesetzloser“-Ich erdacht hatte. Nicht, weil ihn plötzlich eine große Erleuchtung überkommen wäre, sondern weil er allmählich erkannte, dass er schlicht keinen Alkohol vertrug. Ein paar Becher Reiswein machten seinen Lehrer lediglich leicht benommen, ließen seine Schritte ein wenig schwanken. Kezhou hingegen vernebelten sie den Verstand – jeder Kampfgeist, jedes Feuer in ihm zerfloss, und alles, wonach ihm dann noch war, bestand darin, sich zusammenzurollen und bis zum Morgengrauen zu schlafen. Kein Zustand für irgendeine Technik eines „betrunkenen Gesetzlosen“.\n Eine geringe Trinkfestigkeit ist für die meisten Menschen kein großes Unglück. Für Kezhou jedoch, der davon träumte, ein betrunkener Gesetzloser zu werden, war sie ein schwerer Schlag.\n Eine Zeit lang trank er dennoch weiter, in der Hoffnung, jenes perfekte Gleichgewicht zwischen Trunkenheit und Klarheit zu finden – doch jeder Versuch endete nur in einem langen, traumlosen Schlaf. Sein Lehrer begann sogar zu vermuten, sein geschätzter Schüler müsse hoffnungslos verliebt sein.\n Am Ende, nachdem Kezhou jeden Wein gekostet hatte, den Huaxu zu bieten hatte, fügte er sich schließlich der Wahrheit. Seine Trinkfestigkeit hatte sich nicht im Geringsten verbessert – auch wenn viele andere Sorgen sich unterwegs verflüchtigt hatten. Während sein Traum vom betrunkener Gesetzlosen verblasste, wurde sein Wesen gelassener und freier. Und was die Kränkungen und Mühen anging, die das Leben ihm entgegenwarf – ein guter Drink genügte, um sie davontreiben zu lassen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15030302"
+        },
+        UI_CHAR_DATA_TEXT_15030303 = {
+          ContentDE = "Obwohl Kezhou sich längst einen Namen in der Welt der Kampfkünste gemacht hatte, nahm er nie einen eigenen Schüler an. Wie er selbst sagte, streife er ständig durch Huaxu und habe kein Verlangen danach, sich binden zu lassen.\n Doch mit seinem Rat geizte er nie, wenn ein junger Mensch ernsthaft Interesse an den Kampfkünsten zeigte. Selbst wenn es ein völlig Unbekannter war, der ihn um Hinweise bat, erklärte Kezhou jeden einzelnen Bewegungsablauf geduldig und sorgfältig.\n Eines Tages fragte ihn nach ein paar Gläsern Wein ein neugieriger Zeitgenosse, warum er keine Schüler annahm und dennoch so bereitwillig weitergab, was er wusste.\n Kezhou antwortete, er nehme keine Schüler, weil er gesehen habe, wie ein wahrhaft außergewöhnlicher, hingebungsvoller Lehrer sein könne – und weil er wisse, dass er diesem Vorbild niemals gerecht werden würde.\n Dann fügte er hinzu, er teile sein Wissen gerade deshalb, weil er auch einem geradezu erbärmlichen Lehrer begegnet sei, der großes Vergnügen daran gehabt habe, ihn zu necken und zu quälen, und er es nicht ertragen könne, mitanzusehen, wie andere in ihrer Ausbildung unnötige Umwege machten.\n Der neugierige Mann war verwirrt. „Wie kann es sein, dass du sowohl einen hervorragenden als auch einen schrecklichen Lehrer hattest? Warum bist du nicht einfach dem Guten gefolgt und hast den Schlechten gemieden?“\n Kezhou lächelte nur und sagte nichts weiter.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15030303"
+        },
+        UI_CHAR_DATA_TEXT_15030304 = {
+          ContentDE = "Innerlich war Kezhou mehr als ein wenig neidisch auf seinen älteren Mitschüler Yuming – auf die Art, wie dieser sich ohne den geringsten ablenkenden Gedanken in alles hineinwerfen konnte, so ruhig und präzise wie die Speertechniken, in denen er brillierte; sparsam mit Worten und niemals bereit, nutzlose Emotionen zwischen sich und sein Ziel treten zu lassen.\n Kezhou hingegen war völlig anders. Er probierte unentwegt die verschiedensten Kampfkünste aus. Man konnte sagen, dass er in fast allem, was er anfasste, recht geschickt war, doch im Umgang mit dem Speer konnte er Yuming niemals übertreffen.\n Also ging er zu seinem Lehrer und fragte ihn, wie er lernen könne, den Speer mit derselben ungeteilten Konzentration zu führen wie Yuming.\n Yan Shantings Antwort war trügerisch einfach: „Du bist, wer du bist, und er ist, wer er ist. Ihr beide wurdet mit entgegengesetzten Temperamenten geboren. Zwischen euch gleicht der eine einem hohen Berg – gewissenhaft, aber nicht schnell im Improvisieren. Der andere gleicht fließendem Wasser – geistreich und flexibel, doch nicht ganz so beständig. Solange ihr euch beide treu bleibt, ergänzt jeder von euch, was dem anderen fehlt.“\n \n Kezhou entgegnete sofort: „Und was, wenn wir beide uns nicht verstehen?“\n Yan Shanting antwortete mit einer Gegenfrage, ein wissendes Lächeln im Gesicht: „Hast du Yuming jemals lächeln sehen?“\n Kezhou schüttelte den Kopf. Nein, das hatte er nicht.\n \n Yan Shanting erklärte ihm, dass Yuming das letzte Mal an jenem Wintertag wirklich gelächelt habe, an dem Kezhou sich verbeugt und Yan Shanting als seinen Lehrer angenommen hatte.\n „Nein“, sagte er, „ich mache mir nicht im Geringsten Sorgen, dass ihr beide euch je gegeneinander wenden könntet. Ich kenne meine Jungen – ich verschätze mich nie.“\n Viele Jahre später hatte Kezhou den Großteil der Lehren seines Lehrers vergessen. Doch diese Worte vergaß er niemals.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15030304"
+        },
+        UI_CHAR_DATA_TEXT_15030401 = {
+          ContentDE = "Kezhou hatte einen Vater. Das war ungewöhnlich.\n Mit „ungewöhnlich“ ist dabei nicht gemeint, dass Kezhou wie ein Affe aus einer Legende aus einem Felsen geschlüpft wäre, noch dass er ein Dämonenfürst gewesen wäre, der sich aus einem uralten Siegel befreit hatte. Es bedeutete lediglich, dass es in seinen Erinnerungen tatsächlich einen Vater gab.\n Und genau das war unter den Wanderern eine Seltenheit, denn ihre Geschichten beginnen meist mit toten Eltern, einem Sturz von einer Klippe und jahrelangem Einsiedlertraining in einer unvergleichlichen Kampfkunst, die sie irgendwie „zufällig“ gemeistert haben.\n In Kezhous frühesten Erinnerungen war sein Vater wie jeder andere sanfte, belesene Mann – geduldig brachte er ihm Tag für Tag Lesen und Schreiben bei. Ihr Haushalt unterschied sich kaum von dem gewöhnlicher Familien in ganz Huaxu. Mit etwas Glück hätte ein solcher Mann es eines Tages sogar zu einem niederen Beamten bringen können.\n \n Dieser Eindruck zerbrach jedoch während einer bestimmten Unterrichtsstunde.\n „Das Helle dort oben am Himmel ist die Sonne. Ihr Schriftzeichen schreibt man so. Und nachts kommt das schwächere heraus, das ist der Mond.“\n „Ich bin doch nicht dumm, Vater. Das hast du mir schon tausendmal gesagt. Natürlich weiß ich, was Sonne und Mond sind. Und ich weiß auch, dass die Sonne eine riesige Feuerkugel ist und dass auf dem Mond ein Mondhase Kräuter zerstampft!“\n „Schon gut, schon gut ... mein Junge ist wirklich klug. Sonne und Mond sind die wichtigsten Dinge der Welt. Aber es gibt noch etwas anderes – man kann es weder sehen noch anfassen, und es ist fast genauso wichtig wie Sonne und Mond. Wenn du mir sagen kannst, was es ist, bekommst du vor dem Schlafengehen ein Stück Osmanthus-Kuchen.“\n „Ich will den Kuchen zuerst! Antworten kann ich danach!“\n „Es ist nicht richtig, etwas umsonst zu erwarten. Antworte richtig, dann bekommst du deinen Kuchen.“\n „Na gut. Es ist der Wind, genannt Dafeng. Man kann ihn nicht sehen und nicht anfassen, aber wir alle müssen nach den Neun Kapiteln vpn Dafeng leben.“\n „Richtig. Und wenn du noch ein zweites Stück Osmanthus-Kuchen willst, dann lass uns heute die Neun Kapitel noch ein paar Mal aufsagen und versuchen, uns wenigstens die Hälfte zu merken, einverstanden?“\n „Auf keinen Fall. Vater, ich glaube, du ziehst keinen Sohn groß – du dressierst einen Mühlgaul. Hältst ihm eine Karotte vor die Nase, und er läuft brav im Kreis. Klar, im Moment mag ich Osmanthus-Kuchen, also spiele ich mit. Aber was ist, wenn ich irgendwann genug davon habe, keine Lust mehr aufs Lesen habe und lieber Kampfkünste lernen will? Ich bin gespannt, wie du das dann lösen willst.“\n „Ha! Mach dir keine Sorgen, mein Junge. Dein alter Herr hat mehr Tricks auf Lager, als du denkst.“\n \n Damit ging Kezhou mit den Augen seinem Vater nach, der zum Holzschuppen ging und hinter dem Stapel Brennholz ein Schwert hervorholte, es ergriff, als wäre es das Natürlichste der Welt. Noch ehe Kezhou fragen konnte, warum so etwas überhaupt in ihrem Haus existierte, blitzte Silber vor seinen Augen auf. Sein Vater setzte sich in Bewegung, ließ das Schwert tanzen, fließend wie Wasser, jeder Schwung wirbelte einen leichten Windhauch auf. Die Darbietung war so unerwartet anmutig, dass Kezhou ihn nur mit offenem Mund anstarren konnte, bevor er schließlich herausplatzte:\n „Ich bin schon acht! Acht Jahre! Wie konntest du mir nie sagen, dass du so etwas kannst?“\n „Es gibt vieles, das du noch nicht über mich weißt.“ Sein Vater strahlte, sichtlich erfreut über das Erstaunen seines Sohnes. „Wenn du die Neun Kapitel von Dafeng auswendig kannst, bringe ich dir ein oder zwei Bewegungen bei.“\n Doch dieser Plan zerfiel schon am nächsten Tag. Kezhou war wieder derselbe unbändige Junge wie immer – über den Büchern dösend und voller Energie, sobald es Zeit zum Spielen war. Das Versprechen, von seinem Vater das Schwert zu lernen, war ihm längst aus dem Sinn geraten.\n \n Erst viele Jahre später, nachdem Kezhou selbst alle möglichen Schwertkünste gemeistert hatte und versucht hatte, den Stil seines Vaters einer bestimmten Schule zuzuordnen, erkannte er die Wahrheit: Diese wilden, um sich schlagenden Bewegungen waren voller Fehler und gehörten keiner Schule an. Vermutlich waren sie nichts weiter als ein Trick gewesen, um seinen Sohn zum Lernen zu bewegen.\n Doch etwas passte nicht zusammen. Wenn sein alter Herr wirklich nichts vom Schwertkampf verstanden und nur herumgefuchtelt hatte, wie hatte er das Schwert dann so mühelos führen können?\n So kehrte Kezhou nach langer Zeit erstmals wieder ins Dorf Jiaolan zurück. Nachdem er erst seinen Vater verloren und Jahre später auch seine Mutter begraben hatte, war dies sein erster Besuch an dem Ort, den er einst Zuhause genannt hatte. Er ging direkt zum Holzschuppen, der ihm nun niedrig und beengt vorkam, da er so viel größer geworden war. Nach einigem Suchen fand er schließlich das Schwert.\n Es war weit leichter, als er es in Erinnerung hatte, und klapperte leise in seiner Hand. Die helle, metallische Klinge, an die er sich erinnerte, war nichts weiter als eine Schicht Silberfolie gewesen, inzwischen matt und vom Alter abblätternd. Unter der eingerissenen Folie kam eine Klinge aus Pfirsichholz zum Vorschein.\n Kezhou konnte sich ein lautloses Lachen nicht verkneifen. Eine Zeit lang hatte er ernsthaft vermutet, sein Vater sei ein verborgener Schwertmeister gewesen, der unter falschem Namen lebte, und er hatte es sogar bereut, ihn zu Lebzeiten nicht um Unterricht angefleht zu haben. Dass die ganze Darbietung nur gespielt gewesen war, war ihm nie in den Sinn gekommen.\n Vielleicht hatte sein Vater insgeheim die Wanderer und ihr ungebundenes Leben beneidet und sich dieses Holzschwert gefertigt, um es zu schwingen, wenn niemand hinsah. Oder vielleicht war es einfach ein Spielzeug aus seiner eigenen Kindheit gewesen.\n Wie auch immer die Wahrheit aussah – Kezhou würde sie nie erfahren. Was er jedoch verstand, war, dass sein Vater vollkommen gewöhnlich gewesen war: kein Kämpfer, kein Held, sondern nur ein Mann, der seinen Sohn zum Lernen anhielt und dennoch den Mut fand, einzuschreiten, wenn andere Hilfe brauchten.\n \n Kezhou trat aus dem Holzschuppen hinaus. Das Mondlicht draußen war klar und hell und überzog den Hof mit einem blassen, vertrauten Schimmer. Als er zu der fernen Scheibe aufblickte, stiegen Erinnerungen an seine Kindheit unwillkürlich wieder in ihm auf. \n Er konnte sich nicht mehr erinnern, ob der Mond damals zu- oder abnahm, nur daran, dass es ein Halbmond gewesen war und dass das Gesicht seines Vaters in diesem Licht verschwommen und weich gewesen war, mit den Jahren immer undeutlicher werdend, während die Zeit leise an ihm vorüberzog.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15030401"
+        },
+        UI_CHAR_DATA_TEXT_15030402 = {
+          ContentDE = "Yan Shanting war wieder einmal betrunken. Seit er die Fünfzig überschritten hatte, schien das sein Normalzustand geworden zu sein.\n „Die jungen Leute heutzutage – ihr Talent ist einfach nicht mehr das, was es einmal war. Jede Generation schlimmer als die vorige!“ Diesen Gedanken begleitete er mit einem rülpsenden Aufstoßen, das nach scharfem Schnaps stank. Tief in seinem Inneren wusste er nur zu gut, dass das schon seit Langem so war.\n Für die meisten Menschen in Huaxu waren die Wanderer kaum mehr als ein lärmender Haufen hitzköpfiger Jünglinge und störrischer alter Männer, die zu verknöchert waren, um sich noch zu ändern – ganz sicher kein Lebensweg, den man als ehrenhaft bezeichnen würde. Wirklich begabte Nachwuchskämpfer waren selten geworden. Und so standen die Wanderer längst nicht mehr ständig kurz davor, sich gegenseitig an die Kehle zu gehen. Stattdessen bemühten sie sich auffällig um Höflichkeit, hielten die Reihen geschlossen und pflegten den Schein von Eintracht. Deshalb blieb Yan Shanting oft nichts anderes übrig, als ein Festbankett nach dem anderen zu besuchen – ausgerichtet zu Ehren irgendeines frisch aufgenommenen Schülers. Dort lächelte er, trank, zeigte sich von seiner besten Seite, damit die jungen Novizen sich geehrt fühlten und überzeugt waren, den richtigen Lehrer gewählt zu haben, und dass das Leben eines Wanderers doch ein respektabler Weg sei. Was das Talent der Schüler anging ... schon überhaupt einen zu bekommen, war Glück genug. Wählerisch konnte sich kaum noch jemand leisten zu sein.\n So sehr sein eigener Schüler ihn auch immer wieder bat, aus Gesundheitsgründen weniger zu trinken – Yan Shanting ließ sich nicht umstimmen. Seit er sich unter den Wanderern einen Namen gemacht und den Beinamen „Meister der Tausend Gipfel“ erhalten hatte, schien zwischen alten Freunden und einstigen Rivalen ein stilles Übereinkommen zu herrschen: Alle begegneten ihm mit ausgesuchter Höflichkeit. Übungskämpfe wurden zu förmlichen Wortgefechten, Komplimente hallten ihm entgegen, und er saß ein Fest nach dem anderen aus – nur um am Ende jedes Mal schwer betrunken davonzutaumeln.\n „Blumen blühen und welken, Jahr für Jahr. Junge Klingen ziehen hinaus in die Welt und altern auf ihren Wegen. Wenn ich wirklich alt bin ... welches Gesicht wird diese Kampfkunstwelt dann tragen?“\n \n Vielleicht lag es an der fettigen Bratgans vom heutigen Fest. Oder an dem Fisch, der nicht ganz lange genug gegart worden war und noch roch. Wie auch immer – kaum hatte Yan Shanting diesen wehmütigen Gedanken beendet, da krampfte sich sein Magen zusammen. Eine heiße, saure Welle stieg ihm die Kehle hinauf, und er entleerte den gesamten Festschmaus auf einen Haufen welker Blätter am Bergpfad.\n So berühmt Yan Shanting auch für seine Leichtigkeit und Eleganz in der Kampfkunstwelt war – beim Erbrechen unterschied er sich nicht im Geringsten von einem einfachen Landarbeiter. Weder der Anblick noch der Geruch waren besonders erquicklich. Noch während er sich übergab, schoss plötzlich eine Gestalt aus dem Laubhaufen hervor, überschlug sich einmal in der Luft, schüttelte den Schmutz aus den Kleidern und ließ ein Schwert blitzend herabfahren.\n Yan Shanting zuckte erschrocken zusammen. Doch sein Magen rebellierte noch immer, und ihm fehlte die Kraft, sich zu wehren. Er konnte nur zur Seite stolpern. Dennoch streifte die Klinge seinen Ärmel und schnitt einen Streifen aus seiner Robe.\n Sein schwarz gekleideter Schüler sog scharf die Luft ein, sprang mit dem Speer dazwischen und stellte den Schaft schützend vor seinen Lehrer. „Wer bist du?! Warum hast du dich dort versteckt, um meinen Lehrer zu überfallen?!“, fuhr er den Angreifer an.\n Die Gestalt aus den Blättern klang völlig unbeeindruckt. „Ich kämpfe nicht gegen dich – du hast mir nichts getan. Der alte Kerl da hat mich vollgekotzt. Gegen ihn kämpfe ich.“\n Der Schüler runzelte die Stirn und musterte den Eindringling genauer. Es war ein Junge von zwölf oder dreizehn Jahren, etwa in seinem eigenen Alter. Das Haar war völlig zerzaust, die Kleidung schmutzig, offensichtlich jemand, der ein raues Leben gewohnt war – und von Manieren keine Spur. Also fauchte er erneut: „Wag es nicht, meinen Lehrer so respektlos zu behandeln!“\n \n Inzwischen hatte Yan Shanting wieder zu Atem gefunden. Er hielt seinen Schüler zurück und sagte zu dem Jungen: „Ich habe deine Kleidung beschmutzt. Das war mein Fehler. Ich entschuldige mich.“\n Der Junge zögerte keine Sekunde. „Also kennst du doch Manieren. Gut. Und nun – was gibst du mir als Entschädigung für deine Entschuldigung?“\n Mit einem Lächeln erwiderte Yan Shanting: „Du hast selbst einiges an Können. Wie wäre es, wenn ich dir ein paar Schwerttechniken beibringe?“\n Der Junge zeigte sich unbeeindruckt. „So großartig sind deine Fähigkeiten nicht. Ich habe dir die Kleidung zerschnitten, ohne mich auch nur anzustrengen. Von dir will ich nichts lernen.“\n Yan Shanting war sprachlos. Sein Schüler jedoch hatte genug gehört. Mit einer scharfen Drehung wirbelte er den Speer, stieß sich vom Boden ab und schoss vor wie ein schwarzer Blitz mit violettem Schimmer.\n Der Junge lachte nur und wich ohne jede Hast zurück. Die Speerspitze kam ihm so nahe, dass sie ihn hätte durchbohren müssen – verfehlte ihn jedoch um Haaresbreite, als er sie mit seinem Schwert beiseiteschlug und die Mitte des Schülers völlig offenlegte. Doch dieser geriet nicht in Panik. Er nahm den Schwung auf, zog den Speerschaft hoch und ging in die Deckung. Die Klinge des Jungen krachte mit einem Funkenregen dagegen – und glitt wirkungslos ab.\n Er hatte nicht erwartet, dass es nur eine Finte gewesen war. Während er zurückwich, war der Junge bereits an eine Felswand geraten. In einer fließenden Bewegung rannte er daran hinauf, setzte darüber hinweg und stieß mit dem Schwert direkt auf Yan Shanting zu.\n Bewunderung flackerte in Yan Shantings Augen auf, doch Nachlässigkeit konnte er sich nicht leisten. Er zog sein eigenes Schwert und sprang dem Stoß frontal entgegen – der einzig richtige Konter für diese Technik. Ein Schritt nach links, rechts oder zurück, und der folgende Angriff hätte ihn aufgespießt. Genau deshalb nannte man diesen Zug die „Kette der drei Gefahren“.\n Als der Junge sah, wie sauber Yan Shanting konterte, stieß er ein leises, überrascht klingendes Geräusch aus, zog die Klinge mitten in der Luft zurück und landete sicher auf dem Boden.\n \n Yan Shanting fragte: „Gar nicht schlecht, Junge. Wer ist dein Lehrer?“\n Der Junge klang ungeduldig. „Ich hab einfach die Affen in den Bergen nachgeahmt. Wenn du es unbedingt wissen willst – der Affenkönig mit dem rötesten Hintern dort oben ist mein Lehrer.“\n Yan Shanting war erneut sprachlos, während sein Schüler Yuming sichtlich kurz davor war, diesem frechen Bengel eine weitere Lektion zu erteilen.\n Yan Shanting jedoch nahm keinen Anstoß. Er setzte einfach wieder sein gelassenes Lächeln auf. „Du bist ein scharfer Kopf, Junge. Wie wäre es, wenn du mein Schüler wirst?“\n „Nein. Ich hab’s dir gesagt – deine Fähigkeiten sind nicht besonders gut.“ Damit hob Kezhou sein Schwert auf und wollte gehen.\n Yan Shanting blieb vollkommen ruhig. „Wir haben gerade unentschieden gekämpft, nicht wahr? Wie wäre es mit einer Wette? Noch ein paar Runden – so viele du willst. Wenn du mich triffst, dann lasse ich dich sogar mein Lehrer sein.“\n Daraufhin drehte sich Kezhou schließlich um, musterte den grinsenden alten Mann mit offenem Misstrauen – und willigte ein.\n Später, wenn er an diesen Tag zurückdachte, sollte Kezhou das Gefühl haben, von Yan Shanting gründlich hereingelegt worden zu sein. Doch in diesem Moment ahnte er noch nichts von dem Weg, der vor ihm lag.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15030402"
+        },
+        UI_CHAR_DATA_TEXT_15030403 = {
+          ContentDE = "Kezhou verstand sich anfangs überhaupt nicht mit seinem Lehrer – aus Gründen, die kaum einer Erklärung bedurften. Junges Blut gleicht einer lodernden Flamme oder frisch sprießenden Bambusschösslingen: Es drängt stets nach oben, will die Baumkronen durchbrechen und ein Loch in den Himmel stoßen. Als dieser ungestüme Vorwärtsdrang frontal auf Yan Shanting traf, sträubte sich Kezhou in jeder nur erdenklichen Hinsicht.\n Nachdem er mit Yan Shanting die Wette geschlossen hatte, dass der Verlierer den anderen Lehrer nennen müsse, folgte Kezhou ihm in die Berge. Dort erklärte er – niemandem außer sich selbst –, dass dieser dürre alte Mann sein schicksalhafter Erzfeind sei, den er in diesem Leben unbedingt besiegen müsse. Er schwor sich sogar, eines Tages dem Alten den Bart abzuschneiden und ihn als Quaste an den Griff seines Schwertes zu binden.\n \n Kezhou begann sogleich, Yuming in seinen groß angelegten Plan einzuweihen, in der Hoffnung, ihn zu einem gemeinsamen Angriff auf Yan Shanting zu bewegen. Yuming lächelte lediglich. Kezhou deutete dieses Lächeln als Anerkennung seines genialen Plans. Yuming hingegen hielt ihn schlicht für laut und lächerlich – wie einen der Affen aus den Bergen.\n \n Von jenem Frühling an waren die Spatzen vor Yan Shantings strohgedeckter Hütte nicht länger die einzigen Lärmverursacher – fortan hallte dort auch ständig das Klirren von Metall wider. Unwissende meinten, der „Meister der Tausend Gipfel“ müsse nebenbei Schwerter schmieden und eine kleine Schmiede betreiben. Manche fantasierten sogar, dass eine so außergewöhnliche Schwertkunst nur mit ebenso außergewöhnlichen Klingen einhergehen könne. Doch wer sich durch den Bambushain zur Hütte vorwagte, sah stets dasselbe Bild: eine junge Gestalt, deren Zwillingsklingen aufblitzten, wie sie einen hageren Alten umkreiste, der sich kaum bewegte. An einem so hellen Frühlingstag hätte dieses kleine „Duell“ fast wie ein Schmetterling gewirkt, der um eine Blume tanzt – wären die Angriffe des jungen Mannes nicht viel zu wild und tödlich gewesen, eher wie das Stechen einer Wespe. Und die hagere Gestalt im Zentrum war ohnehin keine Blume, sondern glich eher einem uralten, wettergegerbten Baum.\n Es versteht sich von selbst, dass es sich bei diesen beiden – dem einen in ständiger Bewegung und dem anderen kaum rührend – um Kezhou und Yan Shanting handelte. Mal stürmte Kezhou heran, seine Zwillingsklingen wirbelten wie ein jäher Sturm, so scharf, dass selbst fallende Blüten sauber in drei Teile geschnitten wurden. Dann wieder sprang er zurück und schoss vor wie ein abgeschossener Pfeil, als wolle er all seine Kraft in einen einzigen entscheidenden Schlag legen. Yan Shanting jedoch verließ nie einen Fleck von kaum einem Meter Durchmesser; er drehte sich lediglich und verlagerte sein Gewicht.\n Wenn Kezhous Klingen in rasender Folge heranflogen, erkannte Yan Shanting auf den ersten Blick, dass ihnen Geschwindigkeit, nicht aber Durchschlagskraft innewohnte, und lenkte sie mühelos ab. Und wenn Kezhou all seine Kraft für einen vollen Angriff sammelte, las Yan Shanting den Verlauf dieses Schlages – und des nächsten gleich mit – und trat gelassen aus der Gefahrenzone. Jeden Tag gab es vier oder fünf Augenblicke, in denen Kezhou glaubte, Yan Shanting nur um Haaresbreite zu Fall zu bringen. Doch der entscheidende Treffer blieb stets außer Reichweite – nah genug, um ihn zu erahnen, aber nie nah genug, um ihn zu landen.\n Bei Einbruch der Dämmerung streckte sich Kezhou auf einer glatten Steinplatte vor dem Zaun der Hütte aus und schlief unter freiem Himmel, nur um am nächsten Morgen aufzuwachen und die Herausforderung von Neuem zu beginnen.\n Warum Kezhou sein Schwert beiseitegelegt und stattdessen Zwillingsklingen gewählt hatte, war leicht erklärt. So einfältig er bisweilen wirken mochte – dumm war er nicht. Nach nur wenigen Kreuzungen der Klingen erkannte er, dass Yan Shanting ein Meister war, der seine wahre Schärfe verbarg. In reiner Schwertkunst war Kezhou ihm völlig unterlegen. Seine einzige Chance bestand darin, die Waffe zu wechseln und sich so einen Vorteil zu verschaffen. Seine einzige Sorge war, den Alten womöglich doch zu hart zu treffen – und dann den kalten Blick von dessen Schüler auf sich zu ziehen.\n \n Diese Sorge war jedoch unbegründet. Als der Sommer kam, war Kezhou Yan Shanting noch immer keinen Schritt näher gekommen, obwohl er mit den Zwillingsklingen deutlich geschickter geworden war. Irgendwie fehlte ihm stets genau dieses eine Quäntchen.\n Auf der Steinplatte liegend, ließ er jede Bewegung der täglichen Gefechte vor seinem inneren Auge Revue passieren – nur um immer wieder von dem Summen der Mücken zerstreut zu werden. Schließlich sprang er auf und begann, die Insekten eine nach der anderen aus der Luft zu schneiden. Je mehr Mücken fielen, desto tiefer seufzte er. Wenn er schnell genug war, eine Mücke im Flug zu treffen – warum gelang es ihm dann nicht einmal, den Alten auch nur zu streifen? Die Nacht war dicht und tintenschwarz, und in dieser Dunkelheit wirkte Kezhou halb wahnsinnig, als trüge er einen tiefen Groll gegen die Sommernacht selbst.\n Erschöpft ließ er sich schließlich zu Boden fallen und starrte in die Sterne. Das Zirpen der Insekten führte ihn zurück in eine Nacht seiner Kindheit, als er mit seinem Vater gemeinsam den Mond betrachtet hatte.\n „Vater, was ist weiter entfernt – dieses Hyperborea aus den Büchern oder der Mond?“\n „Natürlich der Mond. Von Hyperborea haben wir Menschen gesehen, vom Mond noch nie.“\n „Aber ich kann den Mond sehen, Hyperborea aber nicht. Dann muss es doch weiter weg sein, oder?“\n Sein Vater lachte laut und erklärte ihm, dass der Mond tatsächlich weiter entfernt sei – nur so weit, dass er von überall aus stets gleich fern erscheine.\n Diese Worte hatten Kezhou tief beeindruckt. Er starrte den Mond an, ohne zu blinzeln, und fragte sich, ob er eines Tages wohl jemanden von dort oben treffen würde, um ihn nach den seltsamen Mustern auf seiner Oberfläche zu fragen. Während er so blickte, begannen sich die Formen auf dem Mond zu verändern – bis sie sich langsam in Yan Shantings altes Gesicht verwandelten ...\n \n „Beim Himmel! Das hat mich fast zu Tode erschreckt …“ keuchte Kezhou, als er hochschreckte und erkannte, dass er nur geträumt hatte. Die Sonne war bereits aufgegangen. Rauch stieg aus der Hütte auf, und der alte Mann aus seinem Traum stand in der Ferne und beobachtete ihn mit demselben feinen Lächeln. Der Anblick ließ Kezhou jucken, nach seinen Klingen zu greifen und dem Alten noch ein paar Hiebe zu verpassen.\n Doch er wusste nur zu gut, dass seine Klingen auch jetzt nicht näher als diesen einen Zoll an Yan Shantings Nase herankommen würden. Diese Distanz hatte nichts mit ihm zu tun – sie lag allein in den Händen dieses listigen alten Fuchses. Genauso wie sich die Entfernung zum Mond niemals verringerte, ganz gleich, wie viele Berge und Flüsse man überquerte.\n Der Gedanke ließ ihn kurz innehalten – dann brach er in Gelächter aus. Bis zu diesem Moment hatte er geglaubt, das Ende des Weges bereits sehen zu können; dass jeder, der ihm überlegen war, schlicht schneller oder roher in der Kraft sei. Nun begriff er, dass der Gipfel, den er anstrebte, nur einer von vielen war – und dass dahinter stets noch höhere Berge lagen.\n \n Schließlich fasste er einen Entschluss. Er trat vor Yan Shanting, verbeugte sich so respektvoll, wie er es vermochte, und sagte: „Lehrer, bitte nehmt den Gruß eures Schülers an.“\n Yan Shanting blinzelte überrascht – und lächelte dann. Leider war es nicht das warme, gütige Lächeln eines Meisters, der einen würdigen Schüler annimmt, sondern das verschmitzte Grinsen eines unverbesserlichen alten Schelms.\n „Zu spät. Ich habe im Moment keine Lust, dich als Schüler aufzunehmen – es sei denn, du meisterst erst jede Waffe unter dem Himmel.“\n Damit griff Yan Shanting nach dem sieben Fuß langen Speer, den Yuming gewöhnlich führte, und warf ihn Kezhou zu.\n Kezhou erstarrte einen Herzschlag lang, dann flammte sein Temperament auf. Er fing den Speer in einer fließenden Bewegung auf und brüllte: „Dann nimm das, du alter Fuchs!“ – und sprang vor, die Spitze direkt auf Yan Shantings Gesicht gerichtet.\n Yan Shantings Lächeln zuckte nicht einmal. Einen Zoll vor seinem Gesicht fing er die heranrasende Speerspitze zwischen zwei Fingern.\n Für Außenstehende war die strohgedeckte Hütte an diesem Tag so lebhaft und laut wie eh und je.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15030403"
+        },
+        UI_CHAR_DATA_TEXT_15030404 = {
+          ContentDE = "Der Frühling war längst vergangen, doch der Wettstreit zwischen Kezhou und Yan Shanting hatte noch immer keinen klaren Sieger – weder in Können noch in bloßer Hartnäckigkeit. Anfangs, als Yan Shanting ihm anbot, sein Schüler zu werden, lehnte Kezhou entschieden ab. Später, nachdem ihre Duelle ihn in ehrfürchtiges Staunen über Yan Shantings Fertigkeiten versetzt hatten und er endlich beim alten Mann trainieren wollte, wies Yan Shanting ihn – halb aus Schalk, halb aus reiner Eigensinnigkeit – direkt ab.\n So tauschten die beiden weiterhin Hiebe und scharfe Worte aus. Als der Winter kam und der Schnee dick auf dem Boden lag, hatte Kezhou inzwischen ein ganzes Arsenal an Waffen gemeistert. Und wenn er nun zuschlug, kam die Schneide seiner Klinge nicht mehr als einen halben Zoll an Yan Shanting heran, statt wie zuvor einen vollen Zoll.\n Er rechnete sich aus, dass er in etwa einem halben Jahr endlich einen ordentlichen Treffer landen würde. Mit diesem Gedanken machte er sich auf den Weg zurück zu dem Platz vor dem strohgedeckten Haus.\n Nach der glühenden Hitze des Sommers war die alte Steinplatte, die ihm nachts als Bett diente, stetig kälter geworden. So breitete Kezhou im späten Herbst, als die Wildgänse gen Süden zogen, eine Schicht Schilf über den Stein, tauschte sie gegen etwas Ölzeug und stellte mit Bambusstangen einen provisorischen Unterstand auf. Er konnte den Wind nicht abhalten, aber der Regen blieb immerhin draußen. Mittlerweile war tiefer Winter eingekehrt. Schnee hatte sich auf dem Ölzeug gesammelt, die Bambusstangen fast bis zum Doppelten gebogen. Kezhou eilte, um den Schnee abzuschütteln, doch er drückte ein wenig zu stark, und der ganze Unterstand brach zusammen – weiße Haufen aus Ölzeug und Bambus türmten sich chaotisch auf.\n \n Wind und Schnee fegten an ihm vorbei, begleitet vom langsamen, fernen Läuten einer Glocke. Plötzlich wurde Kezhou klar, dass Silvester war.\n Er wusste nicht warum, doch plötzlich sehnte er sich nach einer Schafssuppe – richtig guter Art, mit winzigen Fettperlen auf der Oberfläche wie verstreuter Schnee, punktiert hier und da mit gehacktem Frühlingszwiebelgrün. Kezhou schüttelte den Kopf, wischte den Gedanken beiseite. Er war seit Jahren von zu Hause weg und hatte sich zuvor nie um solche Dinge gekümmert. Wahrscheinlich war es nur die seltsam beißende Kälte, die ihn wehmütig stimmte.\n Er seufzte, sein Atem stieg als Nebel in die Luft. Er bückte sich, um den Unterstand wieder aufzurichten – nur um eine Hand auf seiner Schulter zu spüren. Als er sich umdrehte, stand Yuming, Yan Shantings Schüler, vor ihm.\n Sein Tonfall war wie immer kühl, doch die Worte waren eine Einladung: „Lehrer hat einen Topf Yuanxiao gekocht. Er hat mich geschickt, dich zu holen, damit du mitisst.“\n Kezhou erstarrte einen Moment, lehnte dann ebenso kühl ab: „Danke für die Einladung, aber ich verzichte. Ich bin schließlich nur ein Außenstehender.“\n Yumings Gesichtsausdruck änderte sich keinen Millimeter. Es war, als hätte er genau diese Antwort erwartet. Er sagte nichts weiter und ging direkt zurück zum Haus.\n \n Kezhou tat derweil, als sei nichts geschehen, und kümmerte sich wieder um seinen bescheidenen Unterstand. Doch als er sich erneut bückte, roch er den Hauch von Wein.\n Er drehte sich um und sah einen weißen Porzellanweinbecher, aus dessen Ausguss noch ein Faden Dampf stieg, daneben ein Päckchen Essen, in ein Lotusblatt gewickelt, aus dem ein leichter Wärmeschimmer drang.\n „Mitleidsschmankerl, was?“ dachte er empört und wandte sich wieder seinem Unterstand zu.\n Auch nach der Reparatur blieb der Unterstand schlicht. Als Kezhou ihn schließlich wieder aufgebaut hatte, ging er hinein und setzte sich, mit Wein und Essen, die Yuming gebracht hatte, vor sich ausgebreitet. Er nahm eine Handvoll Schnee und hielt sie im Mund, um den Hunger zu vertreiben, doch das ließ ihn nur noch kälter fühlen.\n Er seufzte erneut, so kalt, dass der Atem nicht einmal mehr Nebel bildete. Schließlich konnte er nicht länger warten – er griff nach dem Lotusblattpaket und riss es auf. Darin befand sich ein ganzes geschmortes Huhn, so lange gegart, dass das Fleisch beim leisesten Druck von den Knochen fiel. Kezhou machte es vollständig leer, kein einziges Stück blieb übrig.\n Der Wein, obwohl inzwischen etwas abgekühlt, verbreitete dennoch eine kleine, gleichmäßige Wärme in seiner Brust.\n \n Am nächsten Tag hörte der Schnee auf und der Himmel klarte auf. Kezhou bat Yan Shanting erneut, ihn als Schüler aufzunehmen – und diesmal nahm Yan Shanting lächelnd an.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15030404"
+        },
+        UI_CHAR_DATA_TEXT_18010101 = {
+          ContentDE = "Aus „Das Lied der schneeweißen Nachtigall“, Seite 2:\n \n Es war einmal eine kleine Nachtigall, die in einem warmen Nest mit ihren Eltern lebte. Papa Nachtigall hatte breite Schwingen, die sein Kleines stets vor Wind und Wetter schützten, während Mama Nachtigall sanfte Wiegenlieder sang, die es in süße Träume hinübergleiten ließen. Unter ihrer liebevollen Fürsorge gedieh die kleine Nachtigall prächtig, verlor ihr flaumiges Dunen und bekam makellos schneeweiße Federn. Voller Sehnsucht erwartete sie den Tag, an dem sie flügge werden würde, um gemeinsam mit ihren Eltern durch den azurblauen Himmel zu gleiten ...\n \n „Die Zeit mit Mama und Papa waren der kleinen Nachtigall seligste und kostbarste Tage.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_18010101"
+        },
+        UI_CHAR_DATA_TEXT_18010102 = {
+          ContentDE = "Aus „Das Lied der schneeweißen Nachtigall“, Seite 6:\n Unerwartet wurde der Wald eines Tages von einer Gruppe Jäger heimgesucht. Sie verwüsteten das behagliche Nest, in dem die Nachtigallenfamilie einst geblüht hatte, und nahmen Papa Nachtigall gefangen, dessen einst dichtes Gefieder seine Brut stets geschützt hatte. Ohne Zuflucht floh Mama Nachtigall mit ihrem kaum flüggen Küken in das Reich der Bestien. Doch dort fanden sie keine Güte, nur eisige Blicke. Die kleine Nachtigall verbrachte ihre Tage in Angst und fand Trost einzig in der flüchtigen Wärme unter den Flügeln ihrer Mutter – eine zarte Erinnerung an das Heim, das sie einst geschätzt hatten.\n \n „Wie in jedem ergreifenden Märchen, ist das am Anfang gewährte Glück dazu bestimmt, am Ende zu zerbrechen.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_18010102"
+        },
+        UI_CHAR_DATA_TEXT_18010103 = {
+          ContentDE = "Aus „Das Lied der schneeweißen Nachtigall“, Seite 16:\n In einer schicksalhaften Nacht fegte ein wilder Sturm über das Nest hinweg, in dem Mama Nachtigall und ihr Junges Zuflucht gesucht hatten. Die finsteren Bestien, die sie bereits gierig beobachtet hatten, fletschten endlich ihre Zähne und heulten auf, als sie die fliehenden Vögel verfolgten. In einem verzweifelten Versuch, ihr Küken zu schützen, stellte sich Mama Nachtigall den Räubern entgegen – ein tapferes, doch tragisches Opfer, das sie das Leben kostete. Ganz allein blieb die junge Nachtigall in den trostlosen Wildnissen zurück, ihr kleiner Körper im Schlamm wimmernd, die gebrochenen Flügel hilflos unter ihr. Keuchend lag sie da, ihre einst schneeweißen Federn nun mit Schlamm und Blut besudelt, abgeschnitten vom Wind, der sie einst getragen hatte.\n \n „Regen ist gnadenlos. Er durchnässt die Federn eines Vogels, drückt ihn zu Boden und raubt ihm den Himmel.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_18010103"
+        },
+        UI_CHAR_DATA_TEXT_18010104 = {
+          ContentDE = "Aus „Das Lied der schneeweißen Nachtigall“, Seite 19:\n \n So begann das Leben der kleinen Nachtigall an der Seite des Großen Magiers. Ihr kleines, gemütliches Zuhause war zwar spärlich mit Spielzeug ausgestattet, doch es wimmelte von allen möglichen wunderbaren Dingen: eine Uhr, die Wiegenlieder sang, um die Nachtigall um Punkt neun Uhr in den Schlaf zu wiegen, ein Kamin, der an kalten Nächten warme Flammen hervorrief, und eine magische Blechdose, die immer geheimnisvoll ihre Süßigkeiten nachfüllte, wenn niemand hinsah ... Doch die wundervollste Magie kam vom Großen Magier selbst. Er war der mächtigste Jäger und Abenteurer der Welt, bewahrte den Frieden ihres Zuhauses und brachte Nahrung, Geschenke und Geschichten von seinen außergewöhnlichen Heldentaten zurück.\n \n „Wie glücklich die kleine Nachtigall war, den Großen Magier getroffen zu haben.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_18010104"
+        },
+        UI_CHAR_DATA_TEXT_18010105 = {
+          ContentDE = "Aus „Das Lied der schneeweißen Nachtigall“, Seite 23:\n ... Am warmen Herdfeuer fand die kleine Nachtigall viele neue Freunde. Eines Tages kam ein Besucher vorbei – es war {性别:Herr|Frau} Einhorn, so reinweiß wie die Nachtigall selbst. {性别:Der|Die} freundliche und zuverlässige {性别:Herr|Frau} Einhorn hatte sich mit dem großen Magier verbündet, um die finsteren Zauberer zurückzuschlagen und den Frieden ihres Zuhauses zu schützen.\n \n Fina schlug das Märchenbuch zu. In ihren klaren blauen Augen spiegelten sich dein weißes Haar und dein rubinrotes Horn.\n Du weißt, dass dieses Märchen noch lange nicht beendet ist. Du wirst seine Kapitel weiter miterleben, durch die unendliche Weite der Zeit.",
+          TextMapId = "UI_CHAR_DATA_TEXT_18010105"
+        },
+        UI_CHAR_DATA_TEXT_18010201 = {
+          ContentDE = "In einem Alter, in dem die meisten Kinder ihre Märchenbücher längst weggelegt haben, hält Fina noch immer an der Gewohnheit fest, sie zu lesen. Ihre Sprache ist durchzogen von märchenhaften Wendungen und Rhythmen. Wer ihr begegnet, ertappt sich oft dabei, auf ähnliche Weise zu antworten – sei es aus Spott über ein Charon-Mädchen, aus Mitleid mit ihrer Zerbrechlichkeit oder vielleicht, weil ihre wunderlichen Worte einen eigenen Zauber besitzen, der die Menschen in ihre fantastische Welt hineinzieht.",
+          TextMapId = "UI_CHAR_DATA_TEXT_18010201"
+        },
+        UI_CHAR_DATA_TEXT_18010202 = {
+          ContentDE = "Zwischen dem Duft von Alkohol und heimlich geflüsterten Gesprächen wanderte ein Gerücht von Taverne zu Taverne: Herr Morris Glenville, der wohlhabende Industrielle aus Icelake, würde heiraten.\n Trotz seiner einfachen Herkunft war Glenville dank seiner florierenden Stahlwerke zu großem Reichtum gelangt und galt als einer der begehrtesten Junggesellen der Stadt. Die feine Gesellschaft überschlug sich in Spekulationen darüber, welche Dame von Rang er wohl erwählen würde. Doch entgegen jeder Erwartung entschied er sich für eine mittellose Witwe.\n Die Familie dieser Witwe hatte einst zu den ältesten und angesehensten Geschlechtern Icelakes gehört, doch ihr Glanz war längst verblasst, und außer einem noblen Titel war kaum etwas geblieben. Schlimmer noch: Ihr verstorbener Ehemann war wegen seiner Treue zum verbotenen elysischen Glauben als Verbrecher gebrandmarkt worden, und ihre Tochter war ein einfacher Charon.\n Die Gerüchteküchen arbeiteten fieberhaft, um Glenvilles überraschende Brautwahl zu erklären. Manche Romantiker glaubten, die Wahl sei gefallen, weil die Schönheit der Witwe jener einer gefeierten Operndiva ebenbürtig sei; geschäftstüchtige Männer spekulierten über ein gewaltiges, verborgenes Vermögen; und Klatschreporter behaupteten, Glenville – von der hochmütigen alten Aristokratie aufgrund seiner schlichten Herkunft verachtet – habe sich gezielt mit einer gefallenen, aber adeligen Familie verbündet. Andere wiederum, die düstere Geschichten bevorzugten, raunten von Hexerei und behaupteten, die Charon-Tochter der Witwe habe den reichen Industriellen mit dunkler Magie verführt, um sich seines Vermögens zu bemächtigen.\n Die Wahrheit jedoch blieb im Dunkeln. Nur eines war bekannt: Innerhalb von zwei Jahren nach der Hochzeit brachte die Witwe Glenvilles Kind zur Welt. Und Serafina, das Mädchen aus ihrer ersten Ehe, war seither aus der Öffentlichkeit verschwunden.",
+          TextMapId = "UI_CHAR_DATA_TEXT_18010202"
+        },
+        UI_CHAR_DATA_TEXT_18010203 = {
+          ContentDE = "Die Verachtung, die Herr Morris Glenville seiner Stieftochter, Serafina, entgegenbrachte, war im Glenville-Anwesen ein offenes Geheimnis.\n Der Butler, der um die verborgenen Angelegenheiten der Familie wusste, verstand die wahren Beweggründe hinter der Heirat seines Herrn. Zwar hatten die Schönheit und Anmut der Witwe tatsächlich Herr Glenvilles Aufmerksamkeit geweckt, doch letztlich waren es ihr adeliger Status und eine geheimnisvolle Schatulle, ein über Generationen vererbtes Familienerbstück, die seine Entscheidung besiegelten.\n Die Geschichten, die sich um die Schatulle rankten, waren ebenso vielfältig wie fantastisch: Manche flüsterten von einem Edelstein von unschätzbarem Wert, andere spekulierten über eine Karte zu unermesslichen Schätzen, und wieder andere glaubten, die Schatulle enthalte einen magischen Stab, der alles in Gold verwandeln könne. Trotz all dieser wilden Spekulationen blieb ihr wahrer Inhalt allen verborgen, die nicht der Blutlinie entstammten. Das Hauspersonal wusste nur, dass sie kunstvoll verschlossen war und ausschließlich durch einen geheimen Code geöffnet werden konnte – einen Code, der nur an direkte Nachkommen weitergegeben wurde. Jede falsche Eingabe oder gewaltsame Öffnung würde einen Sprengmechanismus auslösen, der ihren Inhalt für immer vernichten sollte. Nun diente diese rätselhafte Schatulle Frau Glenville als einziges Druckmittel in ihren heiklen Verhandlungen mit ihrem Ehemann.",
+          TextMapId = "UI_CHAR_DATA_TEXT_18010203"
+        },
+        UI_CHAR_DATA_TEXT_18010204 = {
+          ContentDE = "Später machten Gerüchte die Runde, dass Frau Glenville, die Witwe, die vor Jahren einen wohlhabenden Mann geheiratet hatte, plötzlich den Verstand verloren habe. In einer Nacht verlor sie die Kontrolle über sich selbst und versuchte, ihr Herrenhaus in Brand zu setzen. Zum Glück wurde das Feuer schnell gelöscht. Die Wahnsinnige floh daraufhin mit ihrer Charon-Tochter, nur um tragischerweise in einer Prügelei unter Landstreicherinnen und Landstreichern im Icelake-Vorort getroffen zu werden, wobei sie von einer umherfliegenden Kugel tödlich verletzt wurde.\n In der Taverne spekulierten die Gäste eifrig über die Details und malten lebhafte Bilder davon, wie die Wahnsinnige irrationale Versuche unternahm, Reichtümer zu zerstören, von denen die meisten nur träumen konnten, während ihr gutaussehender, erfolgreicher Ehemann auf den Straßen umherwanderte.\n Während sie geschickt Sirup in die Basis-Spirituosen rührte, murmelte die Chefin ohne aufzuschauen: „Aber hat es nicht die ganze Nacht geregnet? Wie soll man bei so einem Platzregen überhaupt ein Feuer anzünden?“\n Doch der Reiz einer sensationellen Geschichte triumphiert stets über kleine Ungereimtheiten. Mit jeder Nacherzählung verwandelte sich die Geschichte, und schließlich wurde die gesamte Schuld für das Unglück der Familie der Charon-Mädchen zugeschrieben. Ihr angeblicher Hass auf ihren Stiefvater und die Sola-Geschwister soll sie dazu getrieben haben, endloses Unheil über ihre Familie mit ihrer bösen Magie zu bringen.\n „Aber wo ist das Mädchen denn jetzt gelandet?“ wunderte sich jemand.\n „Wer weiß? Wahrscheinlich lebt sie inzwischen mit den Ratten in den Kanälen. Passt nur auf bei euren nächtlichen Spaziergängen – sie könnte euch als Mitternachtssnack schnappen!“\n Lachen erfüllte die Taverne und hallte fröhlich gegen das Klirren der Gläser.",
+          TextMapId = "UI_CHAR_DATA_TEXT_18010204"
+        },
+        UI_CHAR_DATA_TEXT_18010205 = {
+          ContentDE = "Der Fluch, der auf der Familie Glenville lastete, hielt weiter an. Am Ende konnte selbst Morris Glenville seinem Griff nicht entkommen. In einer verschneiten Nacht verschwand er spurlos, ohne jemandem zu verraten, wohin er aufbrechen würde.\n Viele glaubten, die Reihe von Unglücken, die die Glenvilles heimgesucht hatte, sei der Fluch der Charon-Stieftochter gewesen – der Preis dafür, ein Kind des Dämons im Haus beherbergt zu haben. Andere spekulierten, der Fluch stamme von einem Familienerbstück von Frau Glenville, das sowohl sie als auch ihren Mann in den Wahnsinn getrieben und Morris schließlich in eine geheimnisvolle Anderswelt gelockt habe.\n Seine Verwandten trauerten nur kurz, bevor sie rasch seinen gewaltigen Nachlass unter sich aufteilten. So endete die Legende des einfachen Bürgers, der zu einem der reichsten Männer von Icelake geworden war, in stiller Vergessenheit.\n Als der ehemalige Butler die nun leeren Stufen des Anwesens ein letztes Mal fegte, entwich ihm ein leiser Seufzer.\n Nur er allein wusste, wohin Morris Glenville in jener verschneiten Nacht gegangen war – und warum. Doch er behielt dieses Geheimnis für sich. Er mochte kein gütiger Mann gewesen sein, doch dieses Geheimnis zu wahren war die letzte Freundlichkeit, die er dem vom Schicksal gezeichneten Mädchen erweisen konnte.",
+          TextMapId = "UI_CHAR_DATA_TEXT_18010205"
+        },
+        UI_CHAR_DATA_TEXT_18010301 = {
+          ContentDE = "Wenn Krankheit oder Erschöpfung ihren Geist trüben, nennt Fina die Menschen um sich herum oft unbewusst „Mama“. Als sie dich das erste Mal so nannte, konntest du nicht anders, als zusammenzuzucken. Doch als du ihr engelhaftes Gesicht betrachtetest, die Stirn selbst im Schlaf von Unruhe gezeichnet, fandest du dich schließlich nickend wieder und akzeptiertest es.",
+          TextMapId = "UI_CHAR_DATA_TEXT_18010301"
+        },
+        UI_CHAR_DATA_TEXT_18010302 = {
+          ContentDE = "Fina wurde in eine ungewöhnliche Familie hineingeboren, mit einem Charon-Vater und einer Sola-Mutter – eine in Hyperborea seltene Verbindung, aus naheliegenden Gründen.\n Ihre Eltern waren heimliche Anhänger der Neun Großen von Elysium und praktizierten einen Glauben, der völlige Gleichwertigkeit zwischen Solas und Charons predigte, ungeachtet ihrer unterschiedlichen Erscheinung und Fähigkeiten. Ein solcher Glaube jedoch war in Hyperborea streng verboten. Finas Vater wurde schließlich wegen seiner Überzeugungen verhaftet und hingerichtet. In einem letzten Akt der Fürsorge übernahm er allein die Verantwortung für die verbotenen elysischen Schriften, die im Haus gefunden worden waren, in der Hoffnung, seine Frau und seine Tochter vor Verfolgung zu schützen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_18010302"
+        },
+        UI_CHAR_DATA_TEXT_18010303 = {
+          ContentDE = "Fina besitzt eine besondere Wunschschatulle, in der sie ihre gefalteten Papiersterne aufbewahrt. Die Schatulle ist kunstvoll gefertigt und voller raffinierter Mechanismen. Immer wenn Fina ihre Eltern vermisst oder etwas Bedeutsames erlebt, schreibt sie ihre Gedanken – all das, was sie Mama und Papa so gern erzählen würde – auf einen winzigen Zettel. Sorgfältig faltet sie ihn zu einem Stern und legt ihn in die Schatulle.",
+          TextMapId = "UI_CHAR_DATA_TEXT_18010303"
+        },
+        UI_CHAR_DATA_TEXT_18010304 = {
+          ContentDE = "In jener stürmischen Nacht voller Verzweiflung fand sich Fina in den Kanälen von Icelake wieder. Nachdem sie ihren letzten geliebten Menschen verloren hatte, schwand ihr Lebenswille. Sie ließ sich vom eisigen Regenwasser tiefer in die Dunkelheit treiben.\n Doch das Schicksal hatte schließlich Mitleid mit dem armen Mädchen. Noch in derselben Nacht wagte sich Outsider auf einen Auftrag in die Kanäle und fand Fina, die kaum noch am Leben klammerte. Zunächst war er nicht geneigt einzugreifen – schließlich waren Tragödien in Icelake alltäglich – doch etwas in ihren fieberhaften Murmeln hielt ihn zurück. Sanft hüllte er sie in seinen Mantel und brachte sie nach Hause, pflegte sie, als wäre sie Familie.",
+          TextMapId = "UI_CHAR_DATA_TEXT_18010304"
+        },
+        UI_CHAR_DATA_TEXT_18010305 = {
+          ContentDE = "Obwohl Fina Outsider als ihren Bruder betrachtete, nannte sie ihn nie anders als bei seinem Namen. Vielleicht, weil die Angst, erneut von ihrer Familie allein zurückgelassen zu werden, in ihr nie ganz verklungen war. Sie fürchtete, dass das Wort „Bruder“ die finsteren Kräfte im Schatten auf ihn aufmerksam machen könnte – jene, die kommen würden, um ihn mitzunehmen, sei es mit einer Kugel oder in der Deckung einer stürmischen Nacht.",
+          TextMapId = "UI_CHAR_DATA_TEXT_18010305"
+        },
+        UI_CHAR_DATA_TEXT_18010401 = {
+          ContentDE = "Aus den nebligen Erinnerungen ihrer frühen Kindheit ruft sich Fina einen Ausdruck ins Gedächtnis, den ihre Eltern oft mit tiefer Ehrfurcht erwähnten – Der Elysische Kanon.\n Ohne dessen Bedeutung zu kennen, fragte sie mit dem Lispeln eines Kleinkindes: „Mama, was ist das?“\n „Das ist es, woran Mama und Papa glauben“, erklärte ihre Mutter. „Wir alle – sowohl Solas als auch Charons – wurden von den frühesten Göttern aus dem heiligen Baum geformt. Die Äste wurden zu unseren Körpern, die Blätter zu unserem Haar, und sein Saft wurde zu unseren Seelen. Jede empfindsame Kreatur in dieser Welt besitzt eine Seele von gleichem Wert.“\n Die kleine Fina, deren junges Gesicht von Verwirrung überschattet war, mühte sich mit den Begriffen „Solas“, „Charons“ und „Seelen“ ab – Worten, die für eine Dreijährige viel zu schwer zu begreifen waren. Als ihre Mutter Finas Ratlosigkeit bemerkte, strich sie ihr sanft über das Haar und nahm ein Bilderbuch vom Regal. Sie skizzierte zwei Gestalten: eine mit einem normalen Kopf und eine andere mit zwei Hörnern auf der Stirn.\n „Schau, das hier ist ein Sola, und das ist ein Kobold. Sie kommen aus verschiedenen Familien. Und ihre Familien sagten ihnen, sie seien dazu geboren, Feinde zu sein, weil sie unterschiedlich aussehen.“\n „Aber ... warum können sie nicht Freunde sein?“, fragte Fina leise und kaute auf ihrer Unterlippe.\n „Das konnten sie nicht – zumindest anfangs nicht. Doch eines Tages schenkte eine Fee ihnen beiden ein Buch, den Elysischen Kanon. Dadurch erkannten sie, dass ihre Seelen sich in nichts unterschieden und dass sie einander wertschätzen und lieben sollten, statt zu kämpfen.“\n „Ah, also so wie Mama und Papa!“, rief Fina aus, langsam begreifend. „Papa hat Hörner, und Mama nicht. Aber ihr liebt euch trotzdem, und dann gab’s mich.“\n „Ja, mein Schatz“, sagte ihre Mutter mit einem Lächeln und küsste Fina sanft auf die Stirn. „So wie Mama Papa liebt, und wir dich.“\n \n Finas Märchen begann mit dem Elysischen Kanon. Doch am Ende war es auch genau der Grund, warum alles zerbrach.\n Eines Nachts stürmten die Wachen von Icelake unangekündigt in Finas Zuhause und durchsuchten alles mit brutaler Gründlichkeit. Finas Mutter versteckte sich mit ihr in einem engen Hohlraum unter dem Keller, während über ihnen die Stiefel der Soldaten wie ein unaufhörlicher Sturm donnerten. Fina hörte ihren Vater verzweifelt mit den Wachen streiten, Wortfetzen drangen zu ihr hinab – etwas über „illegalen Besitz elysischer Schriften“ und „Verehrung falscher elysischer Götter“... Dann folgten Kampfgeräusche und der dumpfe Aufprall eines Körpers auf dem Boden. Ihre Mutter presste ihr eine Hand auf den Mund, um ihre Schreie zu ersticken, während Fina zitternd den Atem anhielt.\n „Papa ist an einen fernen Ort gegangen. Er kommt nicht zurück“, flüsterte Finas Mutter, ihre Stimme bebend, als sie das nach der Durchsuchung verwüstete Haus musterte.\n Da begriff Fina – Papa Nachtigall war gefallen. Ihr Märchen war zu Ende.",
+          TextMapId = "UI_CHAR_DATA_TEXT_18010401"
+        },
+        UI_CHAR_DATA_TEXT_18010402 = {
+          ContentDE = "„Zisch ...“\n Finas Mutter rieb ein Streichholz an, und eine kleine, fröhlich flackernde Flamme entzündete die blaue Kerze und tauchte den kleinen Kuchen in sanftes Licht. Es war Finas erster Geburtstag, der innerhalb der prächtigen Mauern dieser Villa gefeiert wurde.\n Fina und ihre Mutter lebten nun schon seit einigen Jahren in diesem prunkvollen Haus. Es wirkte wie ein Gebäude aus einem Märchenbuch, mit goldenen Kristalllüstern, die traumhafte Muster auf die kostbaren Tapeten warfen. Jedes Mal, wenn die Lüster erstrahlten, erinnerte sich Fina an den Zirkus aus ihrer Kindheit – besonders an die eisernen Käfige, in denen die Tiere vor ihren Auftritten warten mussten. Das schwere Messingschloss jener Käfige, das im Sonnenlicht schimmerte, hatte beinahe denselben Ton wie die Lüster.\n In diesem wunderschönen Anwesen waren Geburtstage ein Privileg, das nur ihren jüngeren Halbgeschwistern zustand. Für gewöhnlich schlich sich Fina erst nach den ausgelassenen Feiern in den Salon, in der Hoffnung, den Dienstmädchen ein schlichtes Stück Kuchen zu entlocken – eines, dem sämtliche Schokoladen- und Fruchtverzierungen entfernt worden waren. Doch heute, da der Hausherr geschäftlich verreist war, hatte Fina endlich eine Geburtstagsfeier ganz für sich allein.\n „Alles Gute zum Geburtstag, Fina!“, sagte ihre Mutter lächelnd.\n Finas Lider flatterten, während sie versuchte, ein ebenso fröhliches Lächeln wie das ihrer Mutter aufzubringen. Doch ihre Augen glitten unwillkürlich zu den blauen Flecken an den Armen ihrer Mutter. Das waren keine Missgeschicke – es waren die Spuren, die der Stock ihres Stiefvaters hinterlassen hatte. Die Launen dieses Mannes waren unberechenbar: ein Anstieg der Phoxene-Preise, ein missglücktes Geschäft, eine verlorene Kartenrunde oder sogar etwas so Belangloses wie ungenießbarer Tee, alles konnte seinen Zorn entfachen. Und dann traf dieser Zorn meist seine Charon-Stieftochter, ganz gleich, ob sie mit seinen Frustrationen etwas zu tun hatte oder nicht. Wenn Finas Mutter sich schützend vor sie stellte, musste auch sie die Schläge ertragen, wie die harten Spuren des Stocks bezeugten.\n Diese mutige Mutter, die zwar in feine Stoffe gehüllt war, aber dennoch einer Kanarienvogelhenne in einem goldenen Käfig glich, kämpfte vergeblich darum, ihr eigenes Junges zu beschützen. Doch trotz allem hatte Fina keine Angst. Denn so sehr ihre Mutter am Tag dem Haus gehörte – dem Hausherrn, Finas Halbgeschwistern, dem Klimpern der Gläser im Salon und dem Rascheln der Seide im Ballsaal – so sehr gehörte sie nachts Fina. Nacht für Nacht schlich sie sich in das kleine Zimmer unterm Dach, setzte sich an Finas Bett und erzählte ihr wundervolle Gutenachtgeschichten, sang leise Wiegenlieder, bis Fina in die Träume glitt.\n Anders als Fina, die oft in Tränen ausbrach, weinte ihre Mutter fast nie. Sie weinte nicht, als sie ihre Eltern und ihren Ehemann verlor, auch nicht während der Beerdigungen, die sie allein organisieren musste. Sie weinte nicht, als habgierige Verwandte sie zu einer erneuten, strategischen Heirat drängten, stattdessen handelte sie mit ihrem neuen Mann und tauschte die Erbstücke ihrer Familie gegen die Erlaubnis ein, Fina an ihrer Seite behalten zu dürfen. Und sie weinte nicht, als der Zorn ihres neuen Ehemannes auf sie niederprasselte, selbst wenn ihr Widerstand nur neue Beschimpfungen und Schläge provozierte. Sie lächelte Fina einfach an und flüsterte: „Mach dir keine Sorgen, der Schmerz vergeht bald.“\n Als sie Finas Blick bemerkte, zog sie unauffällig ihren Schal zurecht, um die blauen Flecken zu verdecken, und strich Fina sanft durchs Haar. „Wünsch dir etwas, Liebling“, flüsterte sie. Fina nickte, schloss die Augen und wünschte in Gedanken: „Lieber Gott, bitte lass mich so stark und mutig werden wie meine Mama.“\n Als sie die Augen wieder öffnete, war ihre Mutter verschwunden, und an ihrer Stelle stand ein großes, weißes Stofftier. Seine langen, weichen Federn waren so weiß wie Finas schneeiges Haar, und seine Flügel spannten sich weiter als ihre Arme.\n „Piep, piep! Freut mich, Fina. Ich bin dein Geburtstagsgeschenk!“, erklang die Stimme ihrer Mutter hinter dem Plüschvogel. „Lass uns Freunde sein!“\n „Wow ... hallo, Herr Weißvogel!“, rief Fina begeistert und breitete die Arme aus, um das große Stofftier fest zu umarmen. Die weichen Federn kitzelten ihre Wange und hüllten sie in wohltuende Wärme.\n „Er ist wie Papa“, murmelte Fina leise. „Papa hatte auch große, starke Arme, die Mama und mich beide halten konnten.“\n Beide wussten genau, welchen Papa sie meinte, doch sie sprachen es nicht aus. Nach einem kurzen Moment hörte Fina plötzlich leises Schluchzen. Sie ließ das Stofftier hastig los und lugte dahinter, um nach ihrer Mutter zu sehen. Zum ersten Mal sah sie Tränen in den Augen ihrer Mutter.\n „Es tut mir leid, Fina ...“, schluchzte sie und vergrub ihr Gesicht in den Händen. „Ich hätte dich von hier wegbringen müssen ... Ich war so töricht zu glauben, dass es dir in einer vollständigen Familie besser gehen würde.“\n Als Fina in das ausgemergelte Gesicht ihrer Mutter blickte, sah sie sich selbst – jenes kleine Mädchen, das sich so sehr bemühte, die Tränen zurückzuhalten und stark zu wirken, um ihrer Mutter keine Sorge zu bereiten. In diesem Augenblick begriff Fina, dass auch ihre Mutter einst ein kleines Mädchen gewesen war, mit kindlichen Kichereien und schwachen Tränen, und dass sie all die Jahre ihre Tränen nur unterdrückt und Stärke vorgetäuscht hatte, nur um ihres Kindes willen.\n „Schon gut, Mama“, sagte Fina leise und zog die breiten Flügel des Stofftiers um ihre Mutter. „Wenn ich groß bin, werde ich auch große, starke Flügel haben. Ich werde dich beschützen.“\n Fest entschlossen, schnell erwachsen zu werden, stellte sich Fina vor, eine Ritterin aus ihren Gutenachtgeschichten zu sein – stark genug, um alle Bösewichte zu vertreiben. Und es war nach diesem Geburtstag, dass Fina zum ersten Mal ein zartes Glimmen von Magie an ihren Fingerspitzen bemerkte.",
+          TextMapId = "UI_CHAR_DATA_TEXT_18010402"
+        },
+        UI_CHAR_DATA_TEXT_18010403 = {
+          ContentDE = "„Ich habe die Vereinbarungen mit der 6. Legion abgeschlossen. Nächste Woche lasse ich jemanden kommen, um sie dorthin zu bringen. Da sie im Haus ohnehin keinen Nutzen hat, bekommt sie dort vielleicht die Chance, sich hervorzutun und ein paar Orden für uns zu verdienen.“\n „Was redest du da, Morris? Sie ist erst dreizehn! Wie kannst du nur daran denken, sie ins Militär zu schicken? Sie ist ein kränkliches Kind, sie könnte dort sterben!“\n „Es ist schon gut. Die Legion interessiert sich für ihre Magie. Ein Einsatz könnte sie abhärten. Und du hättest eine Sorge weniger und könntest dich besser um unsere Kinder kümmern.“\n „Aber ...!“\n Ihr heftiger Streit hallte durch den Salon. Oben, verborgen hinter einer Ecke des Flurs, klammerte Fina sich an ihren weißen Vogelplüsch, das Herz rasend, während sie lauschte, verwirrt und verängstigt.\n Als Fina ihre magischen Kräfte zum ersten Mal entdeckt hatte, war sie voller Begeisterung aus dem Dachboden hinuntergestürzt, um ihre Mutter zu umarmen und ihr die wunderbare Neuigkeit mitzuteilen. Doch ihre Mutter war nicht erfreut gewesen. Sorge lag in ihren Zügen, und sie hatte Fina streng ermahnt, ihre Fähigkeiten vor anderen zu verbergen.\n Fina dachte, es liege daran, dass sie noch nicht stark genug sei und ihre Mutter Angst um sie habe. Deshalb übte sie heimlich in ihrem Zimmer, wann immer sich eine Gelegenheit bot. Ohne Lehrbücher oder Lehrer suchte sie in ihren Märchenbüchern nach Rat, stellte sich die Feen als ihre Mentoren vor und lernte nach und nach, die fantastischen Freunde aus den Geschichten in die Wirklichkeit zu weben.\n Eines Nachmittags, als ihre Mutter und ihr Stiefvater außer Haus waren, sah Fina ihren kleinen Bruder weinend im Garten sitzen, ohne einen einzigen Diener weit und breit. „Er ist bestimmt ganz einsam und hat Angst“, dachte sie. Nach kurzem Zögern fasste sie sich ein Herz, ging hinüber und nahm seine kleine Hand.\n „Psst ...“, flüsterte Fina und hauchte sanft über seinen Handrücken. „Ist schon gut. Ich hab eine kleine Überraschung für dich, hier.“\n Als Fina ihre Hand öffnete, flatterten mehrere Schmetterlinge daraus hervor, tanzten anmutig durch den winterlich kahlen Garten. Der kleine Junge folgte ihnen tapsig, sein Weinen wich einem hellen Lachen. Magie kann wirklich glücklich machen, dachte Fina, während sie ihm lächelnd zusah, ohne den kalten Blick der Dienerin zu bemerken, der aus dem Schatten auf sie fiel.\n Fina verstand nicht, warum die Dienerin ihre magischen Fähigkeiten bei ihrem Stiefvater meldete. Ebenso wenig verstand sie, warum eine Organisation namens Legion begabte Charon-Kinder gewaltsam aus ihren Familien riss.\n Zwischen dem lauten Streit und dem Klirren zerspringenden Glases im Salon begriff Fina nur eines: Magie – die Gabe, die ihr gegeben worden war, um ihre Mutter zu beschützen – sollte nun zur Ursache ihrer Trennung werden.\n „Warum musste alles so enden?“, fragte sie Herrn Weißvogel.\n Herr Weißvogel schwieg, sah sie nur mit seinen runden schwarzen Knopfaugen an.\n „Wenn du fliegen könntest, würdest du Mama und mich von diesem Haus voller Schmerz wegtragen?“\n Der Weißvogel antwortete nicht. Doch seine flauschigen Flügel umschlossen Fina, warm und tröstend.\n Tief in der Nacht wurde Fina von ihrer Mutter geweckt. Kein Wort fiel, nur das aggressive Trommeln des Regens gegen das Dachfenster erfüllte die Dunkelheit. Verschlafen bemerkte Fina, dass ihre Mutter einen dunklen, weiten Mantel trug.\n „Mama ... was ist los?“, murmelte sie. „Gehen wir irgendwohin?“\n „Ja, Liebling. Ich bringe dich in ein neues Zuhause“, antwortete ihre Mutter sanft, zog sie hoch und legte ihr einen Mantel um. „Es wird wie das gemütliche kleine Häuschen aus deinen Lieblingsgeschichten.“\n „Kommt Herr Weißvogel mit uns?“, fragte Fina.\n Ihre Mutter zögerte. Ein Schatten von Traurigkeit huschte über ihr Gesicht. „Wir müssen leicht reisen. Es tut mir leid, mein Schatz.“\n Da begriff Fina: Dies war kein gewöhnlicher Ausflug. Es war eine Flucht.\n „Dann lassen wir Herrn Weißvogel hier. Er kann auf meinen Bruder und meine Schwester aufpassen“, sagte sie und band sich den Schal fest, den ihre Mutter ihr reichte. „Solange ich bei Mama bin, ist alles gut.“\n „Mein süßes Kind“, flüsterte ihre Mutter und strich ihr sanft durchs Haar. „Wenn wir angekommen sind, wird Mama hart arbeiten, um dir viele neue Freunde zu bringen, nicht nur Herrn Weißvogel, sondern auch Hunde, Ponys, Schmetterlinge ... all die Freunde, die du magst.“\n Fina nickte und ging zur Tür. Dann drehte sie sich plötzlich um, rückte den Plüschvogel zurecht, zog ihm die Decke hoch, damit er nicht fror.\n „Auf Wiedersehen, Herr Weißvogel“, flüsterte sie zärtlich. „Mach dir keine Sorgen. Ich bin bei Mama. Pass gut auf dich auf.“\n Für einen Moment glaubte sie, dass der Weißvogel ihr zugezwinkert hatte, seine Flügel sanft bebend, als würde er ihr eine sichere Reise wünschen: „Piep, piep, kleine Nachtigall, Gott befohlen.“\n Auf Zehenspitzen folgte Fina ihrer Mutter die Wendeltreppe hinunter. Ein letztes Mal blickte sie zum Kristalllüster hinauf. Im Halbdunkel schimmerte er golden, als würden unzählige Augen über sie wachen.\n Als sie die Tür öffneten, spaltete ein Blitz den Himmel, und der kalte Regen peitschte ihnen entgegen. Fina zuckte zusammen. Doch ihre Mutter spannte den Schirm auf, schuf eine kleine Oase der Stille im Sturm. „Komm, Fina.“\n Dieser Ruf vertrieb all ihre Furcht und Sorge. Die Hand ihrer Mutter fest umklammert, stellte Fina sich dem Regen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_18010403"
+        },
+        UI_CHAR_DATA_TEXT_18010404 = {
+          ContentDE = "„Fina, ich bin zu Hause.“\n Als die Nacht hereinbrach, der Wind heulte und der Schnee draußen wirbelte, öffnete Outsider die hölzerne Tür mit dem kleinen Vogelmotiv, eine Tüte reduzierter Lebensmittel in der Hand, die er sorgfältig bei einem Straßenhändler ausgesucht hatte.\n Dieses kleine, bescheidene Haus war Finas neues Zuhause.\n In diesem einfachen Heim gab es keine schönen Kleider, kein feines Porzellan, kein funkelndes Gold ... Doch es war ein Ort, an dem sie nicht länger darüber nachdenken musste, über den Saum ihres langen Kleides zu stolpern, während sie sich verbeugte, kalte Reste auf eleganten Tellern zu ertragen oder Schläge mit einem prächtigen goldenen Stock zu fürchten. Stattdessen gab es grob genähte Leinenkleider, warme Suppe in abgenutzten Holzschalen und ein hübsches Nachtlicht aus Scherben von Glas.\n Als der Schnee auf seinem Mantel zu Tropfen schmolz, wischte Outsider sie achtlos mit einem Handtuch ab und ging zum Herd, um das Abendessen zuzubereiten. Bald erfüllte der verlockende Duft des Essens die Luft. Fina schloss das halb fertige Bilderbuch, das sie gerade zeichnete, und legte es vorsichtig auf ihren Schoß, um Platz für die warme Suppe zu machen, die Outsider brachte.\n Es war nur ein gewöhnlicher Abend, bis ein hartes Klopfen die alte Holztür erzittern ließ. Draußen stand ein gut gekleideter Herr und hielt einen vertrauten goldenen Stock in der Hand. Beim Anblick des Stocks fielen Finas Besteck, das Bilderbuch und die Stifte auf ihrem Schoß zu Boden.\n „Herr Outsider, nehme ich an?“ Der Herr zog höflich den Hut. „Ich bin Morris Glenville. Danke, dass Sie sich um Serafina, meine entflohene Tochter, gekümmert haben. Ich bin gekommen, um sie nach Hause zu holen.“\n \n Outsider drehte sich um und sah Fina, die sich ängstlich in einer Ecke zusammenkauerte. Ihre Augen waren weit aufgerissen vor Angst, Tränen standen ihr in den Lidern. Worte waren nicht nötig. Outsider verstand, was zu tun war.\n Er trat vor und stellte seinen Körper schützend vor Fina. „Geh weg. Sie ist meine Schwester, nicht deine Tochter.“\n „Vielleicht liegt ein Missverständnis vor,“ erwiderte Morris mit einem eisigen Lächeln, seine Augen wurden noch kälter. „Ihr Status ist nichts, was jemand wie du bestimmen dürfte.“ Er zog eine Pistole aus dem Mantel und richtete sie ruhig auf Outsider. „Vielleicht hast du schon von mir gehört. Ich habe wenig Geduld für sinnlose Verhandlungen. Sei versichert, ich werde keinen Schaden anrichten, wenn du deinen Platz kennen. Tatsächlich bin ich sogar bereit, dir für deine Mühen bei der Betreuung meiner Tochter eine großzügige Belohnung anzubieten.“\n Dann wandte er sich Fina zu, die immer noch zitternd in der Ecke hockte. „Komm, meine Liebe. Sei ein braves Mädchen. Gib Papa nur die Box, die dir deine Mama gegeben hat, und komm nach Hause.“\n Weder Outsider noch Fina reagierten. Morris’ Geduld begann zu schwinden. Er drückte die Waffe an Outsiders Stirn und hob die Stimme: „Teste nicht meine Geduld. Ich zähle jetzt von zehn runter. Wenn du nicht kooperierst, muss ich zu weniger zivilen Mitteln greifen.“\n \n „Zehn.“\n Fina fixierte die Pistole. Sie erinnerte sich an jene stürmische Nacht vor zwei Wochen – dieselbe Waffe hatte das Leben ihrer Mutter genommen. Die Kugel war für sie bestimmt gewesen, doch ihre Mutter hatte sie geschützt. Sie war zu Boden gefallen, Blut spritzte aus der Wunde wie eine blutrote Blume im Regen.\n Sie hatte immer wieder gesagt: „Fina, renn! Schau nicht zurück!“\n \n „Neun.“\n Fina blickte zu Outsider. Seine Hand war hinter seinem Rücken verborgen, griff diskret nach dem Griff eines Dolches, zitterte jedoch leicht. Selbst Fina, die selten das Haus verließ, hatte von den Dienern gehört, welches Schicksal einem Charon drohte, der es wagte, einem Sola Schaden zuzufügen.\n \n „Acht.“\n Fina erinnerte sich an jene regnerische Nacht. Sie war mit aller Kraft gerannt, Stiefvater und Diener dicht hinter ihr. Sie hatte Herr Weißvogel aus ihren Märchen gerufen, der sie kurzzeitig aufhielt. Doch gerade als sie erleichtert nach Luft schnappte, rutschte ihr Fuß aus, und sie stürzte in den eiskalten Strom.\n In der Dunkelheit spürte sie das kalte Wasser, das sie tiefer in einen Abgrund zog, dunkler als die stürmische Nacht. Sie kämpfte verzweifelt, griff nach zersplitterten Brettern, die kaum trugen. Sie spürte auch verrottetes Gemüse und scharfe, schleimige Fischgräten. Schließlich verlor sie die Kraft, sich festzuhalten, und ließ sich von der Strömung ins Unbekannte treiben.\n \n „Sieben.“\n Fina dachte an die regnerische Nacht. Als das Wasser sie verschlang, dachte sie: „Vielleicht trete ich Mama und Papa in einer anderen Welt bei.“ Sie spürte, wie ihr Bewusstsein, ihre Erinnerungen und ihr Wesen schwanden. „Mama,“ flüsterte sie schwach, „Mama ...“\n Vielleicht erreichte ihr Ruf die Himmel – sie meinte, Schritte neben sich zu hören. Dann spürte sie sanfte Arme, die sie aus der kalten Dunkelheit zogen. Es musste Mama sein, dachte sie, und sie schlief endlich ein.\n \n „Sechs.“\n Fina erinnerte sich daran, in einem unbekannten Raum aufzuwachen. Der Raum war winzig, noch kleiner als der Dachboden, auf dem sie früher gelebt hatte; das Bett war hart, härter als jedes Dienerbett. Doch ein Sonnenstrahl fand seinen Weg durch einen Riss im Dach. Staubkörner tanzten fröhlich in den Strahlen, bevor sie sich auf dem Rücken eines Fremden niederließen, doch sie hatte keine Angst. Das Bild erinnerte sie an ihre Mutter – als sie sehr klein war und noch ein Zuhause hatte, wachte sie immer auf, um die Silhouette ihrer Mutter im Morgenlicht zu sehen.\n „Mama ...“ flüsterte sie heiser zu der Gestalt. „Mama ...“\n \n „Fünf.“\n Fina erinnerte sich an den Tag, an dem sie Outsider Mama nannte. Er hatte die Arme verschränkt, völlig ratlos. „Meinst nicht ‚Papa‘? ... Nein, warte, ich bin doch nicht so alt. ‚Bruder‘ wäre der richtige Titel.“\n Doch ihr Geist war benebelt, und sie konnte die Situation nicht erfassen. „Mama,“ murmelte sie immer wieder. Outsider zuckte schließlich resigniert mit den Schultern. „Na gut, wie du willst.“\n \n „Vier.“\n Finas Hand tastete diskret umher. Da sie schwer verletzt aus dem Abwasserfall kam, hatten sich ihre schwachen magischen Kräfte noch nicht erholt. Sie griff verzweifelt nach etwas, das helfen könnte.\n Plötzlich streiften ihre Finger etwas Kaltes und Hartes – es war eine Pistole. Outsiders Pistole.\n \n „Drei.“\n Fina erinnerte sich, wie Outsider ratlos war, als sie erstmals kam und umsorgt werden musste. Sie vermisste ihre Mutter sehr und war immer weinerlich. Als er sie nicht trösten konnte, strich er frustriert durch sein Haar. Dann kam ihm ein Geistesblitz – er kramte in einem Schrank, holte eine Pistole, entfernte sorgfältig die Patronen und reichte sie ihr. „Hier, nimm das. Als Kind war das mein Lieblingsspielzeug.“\n Doch der Anblick der Waffe – derselbe Metalltyp, der das Leben ihrer Mutter genommen hatte – verstärkte nur ihr Schluchzen.\n \n „Zwei.“\n Fina erinnerte sich, wie Outsider still wurde, als sie die Waffe wegwarf. Doch schließlich hob er sie auf und legte sie ihr wieder in die Hände. Mit einer Mischung aus Ernst und Zärtlichkeit sagte er zu Fina: „Fürchte dich nicht vor diesem Ding,“ er instruierte sanft. „Ich werde dir beibringen, wie du damit umgehst. Es ist gefährlich, doch das Einzige, worauf du dich verlassen kannst, um dich und die Menschen, die dir wichtig sind, zu schützen.“\n \n „Eins.“\n Fina erinnerte sich an ihre kleine Geburtstagsfeier. An diesem Tag hatte sie ihre Mutter in die Flügel ihres weißen Vogelplüschs gehüllt.\n „Fina wird Mama beschützen.“\n \n „Null.“\n Die Federn des Vogelplüschs fielen wie Schnee und trübten ihre Sicht.\n \n „Peng ...!“\n Der Schuss hallte wider.\n Morris Glenville taumelte rückwärts, sein Körper fiel schwer zu Boden. Unglaube zeichnete sein Gesicht, als er zusammenbrach. Ein Dolch durchbohrte sein Herz, ein Kugelloch seinen Oberkörper.\n Die Pistole fiel aus Finas Hand, Rauch stieg aus dem Lauf empor. Sie sah zu Outsider, ihr süßes Lächeln war von Traurigkeit durchzogen. „Outsider, jetzt sind wir beide ‚böse Zauberer‘, nicht wahr?“",
+          TextMapId = "UI_CHAR_DATA_TEXT_18010404"
+        },
+        UI_CHAR_DATA_TEXT_18010405 = {
+          ContentDE = "Fina und Outsider begruben gemeinsam ihren Stiefvater und seinen goldenen Stock unter einer Kiefer am Ufer des Klagenden Sees.\n Sie schloss die Augen. Einst war sie von tiefer Hassliebe und Angst gegenüber dem Mann erfüllt gewesen, der so viel Unglück in ihr Leben gebracht hatte. Doch nun waren die Erinnerungen an ihn wie Schneeflocken in ihrem Haar zerschmolzen und in ferne Vergessenheit entschwunden.\n Ihr Haar war länger geworden, und Outsider hatte geholfen, ihre silbernen Locken in ein wunderschönes Azurblau zu färben, wie die Gewässer des Klagenden Sees oder die Farbe ihrer Augen. Dieses neue Erscheinungsbild ermöglichte es ihr, unerkannt unter Menschen zu gehen. Der Name „Serafina Glenville“ war über Icelake vom Wind hinweggetragen worden, zurück blieb nur Fina, Outsiders Schwester. Ein neues Kapitel ihrer Geschichte war bereit, sich zu entfalten.\n \n An einem klaren Nachmittag öffnete Fina ein leeres Notizbuch, nahm eine Feder zur Hand und schrieb sorgfältig den Titel ihrer neuen Geschichte: Das Lied der schneeweißen Nachtigall.\n \n Plötzlich unterbrach ein klapperndes Geräusch ihre Gedanken. Sie legte den Stift nieder, um ihren Bruder zu bitten, ein wenig leiser zu sein, und sah ihn dabei mit einem Karton in den Händen auf sie zukommen.\n „Du solltest dir das vielleicht ansehen“, sagte Outsider, als er den Karton auf den Tisch stellte. „Ich hab’s in den Abwasserkanälen in deiner Nähe gefunden. Dachte, es könnte dir gehören.“\n „Das ist ...“ Fina keuchte, als sie eine kleine Schatulle aus dem Karton hob. Obwohl sie mit Schlamm und Staub bedeckt war, war die kunstvolle Verarbeitung deutlich zu erkennen. „Das Familienerbstück, das Mama mir hinterlassen hat.“\n \n „Wow, das klingt ja großartig! Mal sehen, was drin ist. Vielleicht macht es uns reich, sodass wir uns ein größeres Haus kaufen können“, scherzte Outsider, während er den Schmutz abwischte. „Hmm, da ist ein Zahlenschloss dran ...“\n „Warte!“ Fina erinnerte sich plötzlich an die Warnung ihrer Mutter. „Öffne es nicht! Mama hat gesagt, es könnte explodieren, wenn man den falschen Code eingibt!“\n Sie sprang auf, um die Schatulle zu greifen, doch bevor sie es tun konnte, klickte es leise.\n „Es ist nicht explodiert“, sagte Outsider verwundert. „Ich habe einfach eine zufällige Zahl ausprobiert, und es ging auf. Aber es ist nicht viel drin, nur ein Zettel.“ Als er die mögliche Bedeutung des Gegenstands erkannte, reichte er die Schatulle sofort an Fina weiter. „Vielleicht solltest du selbst nachsehen.“\n \n Was könnte das sein?\n „Könnte es ... eine Schatzkarte sein?“ Fina fragte sich, während sie den Zettel entfaltete und den Kopf neigte. Plötzlich verschlug es ihr die Sprache, und ihre Hände begannen zu zittern. Outsider beugte sich herüber und entdeckte einen dünnen Brief mit nur einer einzigen Zeile eleganter Handschrift:\n <H>Mein liebstes Kind, mögest du dein eigenes Glück finden.</>\n \n Finas Gedanken drifteten zurück in eine Nacht vor vielen Jahren, als sie von einem Albtraum aus dem Schlaf gerissen worden war. Panisch war sie die Treppe hinuntergerannt, um ihre Mutter zu suchen, und blieb vor dem Schlafzimmer stehen, um ein Gespräch zwischen ihrer Mutter und ihrem Stiefvater zu belauschen.\n „Morris, ich habe dir versprochen, dass ich dir eines Tages den Schatz in der Schatulle geben werde. Aber heute ist es noch nicht so weit – es wird der Tag sein, an dem Serafina volljährig wird“, sagte ihre Mutter ruhig und bestimmt. „Im Gegenzug brauche ich deine Zusicherung – du musst sicherstellen, dass Serafina sicher und wohlbehalten aufwächst.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_18010405"
+        },
+        UI_CHAR_DATA_TEXT_21010101 = {
+          ContentDE = "Unter den zahllosen Düften, die Rebecca anbietet, gibt es einen, der sich als wahrhaft einzigartig abhebt. Sie nannte ihn „Der Auserwählte“.\n Dieser Duft, anders als ihre übrigen Kreationen, ist mit einem Gift versetzt, das ganz natürlich aus ihren Fingerspitzen rinnt. Zwar ist die Konzentration nicht tödlich, doch Rebecca scheut sich nicht, ihre Kunden offen vor der möglichen Gefahr zu warnen. „Er ist gefährlich“, gibt sie freimütig zu, „und doch unwiderstehlich – geschaffen, um das Herz desjenigen zu fesseln, den ihr begehren wollt. Schließlich ist die Liebe selbst ein Gift, das wir bereitwillig trinken, obwohl wir um sein Risiko wissen, nicht wahr?“",
+          TextMapId = "UI_CHAR_DATA_TEXT_21010101"
+        },
+        UI_CHAR_DATA_TEXT_21010102 = {
+          ContentDE = "Streift man unabsichtlich Rebeccas Haut, spürt man eine feuchte, glatte Empfindung wie Regenwasser. Dann breitet sich ein leichtes Kribbeln in der Hand aus. Und dennoch lächelt sie nur sanft und blickt einen ruhig an – fast so, als würde sie auf etwas warten.",
+          TextMapId = "UI_CHAR_DATA_TEXT_21010102"
+        },
+        UI_CHAR_DATA_TEXT_21010103 = {
+          ContentDE = "Du ertappst Rebecca dabei, wie sie zärtlich ein kleines, schneeweißes, flauschiges Wesen streichelt – ein Perlhäschen. Du fährst mit der Hand über sein Fell, doch es reagiert nicht, schlaff in Rebeccas Handfläche.\n „Vielleicht hat auch dieses die Prüfungen des Gottes der Liebe durchlaufen“, sagt Rebecca mit lebhafter Stimme zu dir. Dieser Kontinent ist voller seltsamer Kreaturen, so wie dieses Perlhäschen. Es ist wunderschön, aber mit einem angeborenen Herzfehler geschlagen – und deshalb selbst von den Seinen verstoßen.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_21010103"
+        },
+        UI_CHAR_DATA_TEXT_21010104 = {
+          ContentDE = "Aus dem Augenwinkel bemerk­test du, wie Rebecca jene Hand zurückzog, die sie zuvor nach dir ausgestreckt hatte.\n Auf ihrem Gesicht lag ein Ausdruck, den du kaum von ihr kanntest – nicht ihr gewohnt strahlendes Lächeln, sondern eine Mischung aus Verwirrung und Unentschlossenheit.",
+          TextMapId = "UI_CHAR_DATA_TEXT_21010104"
+        },
+        UI_CHAR_DATA_TEXT_21010105 = {
+          ContentDE = "Rebecca erzählte dir ein bewegendes Märchen aus ihrer Heimat.\n Es handelte von einer Meeresprinzessin, die sich in einen Menschen verliebte. Um bei ihrem Geliebten sein zu können, trank sie einen giftigen Trank, der ihre Fischschwanzflosse in menschliche Beine verwandelte. Doch die Verwandlung forderte einen schrecklichen Preis – jeder einzelne Schritt war eine Qual, als würde sie auf scharfen Klingen tanzen.\n „Diese Geschichte ist so grausam“, meintest du. „Wie endet sie? Erwiderte der Mensch ihr Opfer? Hat sich all dieser Schmerz gelohnt?“\n Rebecca lächelte sanft. „Das Ende der Geschichte ist nicht das Entscheidende, und auch nicht, wie der Mensch reagiert“, sagte sie, ihre Augen tief und geheimnisvoll wie das Meer. „Was wirklich zählt, ist, dass die Meeresprinzessin den Teil von sich schätzte, der mutig genug war, die Liebe zu suchen.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_21010105"
+        },
+        UI_CHAR_DATA_TEXT_21010201 = {
+          ContentDE = "„Wenn ich mit Fräulein Rebecca ausgehen könnte, würde ich morgen gern sterben.“\n „Wann verlässt dieses Monster endlich unsere Stadt?“\n „Ich will etwas von ihrem Parfüm. Damit läuft mein nächstes Date garantiert besser!“\n Die Bemerkungen über die Parfümeurin Rebecca sind zutiefst polarisiert. Die Bruchstücke der Erzählungen über sie schwanken zwischen zwei Extremen – Rebecca, die grausamste Bestie, und Rebecca, der schönste Engel.",
+          TextMapId = "UI_CHAR_DATA_TEXT_21010201"
+        },
+        UI_CHAR_DATA_TEXT_21010202 = {
+          ContentDE = "Manche Menschen halten Rebecca für eine Sonderbare.\n Wenn man sie sieht, weichen die Leute zurück. Der Ursprung liegt in geheimnisvollen Gerüchten – man hält sie für eine betörende Zauberin, die die Seelen all jener rauben kann, die ihr zu nahe kommen.\n Diese Gerüchte klingen unglaubwürdig, doch die verschwundenen Männer, die ihrer atemberaubenden Schönheit erlegen waren, scheinen ihre Wahrheit zu bestätigen.\n Fragt man Rebecca nach ihnen, sagt sie stets: „Sie sind ins Königreich der Liebe gegangen.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_21010202"
+        },
+        UI_CHAR_DATA_TEXT_21010203 = {
+          ContentDE = "Wie sieht das „Land der Liebe“ aus? Nur jene, die wahrhaft dort gewesen sind, können überhaupt versuchen, es zu beschreiben. Doch die wenigen Glücklichen, die diesen Ort betreten hatten, wurden später gelähmt aufgefunden, Opfer eines unbekannten Giftes, für immer zum Schweigen gebracht, ehe sie die wahre Natur des Landes der Liebe enthüllen konnten.",
+          TextMapId = "UI_CHAR_DATA_TEXT_21010203"
+        },
+        UI_CHAR_DATA_TEXT_21010301 = {
+          ContentDE = "Rebecca kümmert sich nicht darum, wie andere sie sehen. Sie interessiert sich nur für zwei Dinge.\n Erstens: den bezauberndsten, von Liebe erfüllten Duft zu erschaffen und ihn an Verliebte zu verkaufen, damit sie ihr Glück finden.\n Zweitens: ihren eigenen Auserwählten zu finden.",
+          TextMapId = "UI_CHAR_DATA_TEXT_21010301"
+        },
+        UI_CHAR_DATA_TEXT_21010302 = {
+          ContentDE = "Rebeccas Körper sondert auf natürliche Weise Gifte ab, die aus jeder Pore sickern.",
+          TextMapId = "UI_CHAR_DATA_TEXT_21010302"
+        },
+        UI_CHAR_DATA_TEXT_21010303 = {
+          ContentDE = "Rebecca bevorzugt kleine Geschöpfe, die ungewöhnlich wirken und nirgendwo so recht dazugehören.",
+          TextMapId = "UI_CHAR_DATA_TEXT_21010303"
+        },
+        UI_CHAR_DATA_TEXT_21010304 = {
+          ContentDE = "Rebeccas Vorstellung von einem „Auserwählten“ reicht weit über das bloße Überleben ihres natürlichen Gifts hinaus. Sie sucht jemanden, der in den Tiefen seiner Seele die Liebe eines Monsters zu erwidern vermag – eine Liebe, so tödlich wie ihr eigener Giftstrom.",
+          TextMapId = "UI_CHAR_DATA_TEXT_21010304"
+        },
+        UI_CHAR_DATA_TEXT_21010305 = {
+          ContentDE = "Rebecca glaubt, dass sie ihren Auserwählten gefunden hat.",
+          TextMapId = "UI_CHAR_DATA_TEXT_21010305"
+        },
+        UI_CHAR_DATA_TEXT_21010401 = {
+          ContentDE = "Es war ein herrlicher Sommertag. Sonnenlicht rieselte durch das dichte Blätterdach und zeichnete ein Mosaik aus Schatten auf den Boden. Kinder hockten unter einem großen Baum, bildeten vorsichtig einen Kreis, ihre Stimmen mischten sich zu Geplapper und Gelächter.\n Die kleine Rebecca drängte sich neugierig näher heran, um zu sehen, was die Aufmerksamkeit der Kinder gefesselt hatte. Inmitten der Gruppe saß ein Perlhäschen. Anders als gewöhnliche Häschen trug es ein reinweißes Fell – ein makelloser Ton, wie die Kinder ihn noch nie bei einem Tier gesehen hatten.\n „Darf ich es streicheln?“, fragte Rebecca leise. Die anderen Kinder zögerten und machten ihr Platz. Rebecca hob das Häschen hoch und strich sanft über sein Fell. Sein weiches Haar glitzerte im Sonnenschein. Doch plötzlich quietschte es auf, sprang aus Rebeccas Armen und flitzte in panischer Hast davon, bevor es reglos zu Boden fiel, sein Fell seiner seidigen Reinheit beraubt.\n „Sie hat das Häschen getötet!“\n „Ja, sie hat es getötet! Leute mit solchen Hörnern wie sie sind gefährlich. Man nennt sie im Imperium jenseits des Meeres Dämonen.“\n „Sie ist ein ... Monster!“\n Die anderen Kinder wichen in panischer Angst zurück und ließen die kleine Rebecca allein zurück. Das Sonnenlicht war an jenem Tag grell, stach in ihre Augen. Sie spürte, wie auch ihr Herz verbrannte – als sei darin ein Loch entstanden, das nichts je würde füllen können.",
+          TextMapId = "UI_CHAR_DATA_TEXT_21010401"
+        },
+        UI_CHAR_DATA_TEXT_21010402 = {
+          ContentDE = "Dunkle Wolken verschlangen die letzten Schimmer des Tageslichts, und der Regen prasselte gnadenlos herab. Inmitten eines grellen Blitzes erschien Rebeccas Gesicht – verzerrt vor Erregung, das Gesicht eines Raubtiers.\n Ihre „Beute“ starrte sie mit weit aufgerissenen Augen an, der Mund vor Schock geöffnet – derselbe Mund, der noch vor wenigen Momenten die süßesten Liebesworte geflochten hatte. Doch nachdem Rebecca ihren Umhang abgelegt und ihre Geheimnisse ruhig offenbart hatte, war eben dieser Mund zu einem Abflussrohr geworden, aus dem nur noch hässliche Beschimpfungen quollen.\n „Du dreckige Lügnerin ... du widerliches Monster! W... Was willst du von mir?“\n „Nur einen letzten Tanz mit dir“, antwortete Rebecca und zog sich mit ihrem strahlenden Lächeln die Handschuhe aus. „Betrachte es als Abschiedsgeschenk. Ich hoffe, es gefällt dir.“\n Die enge, regenverhangene Gasse verwandelte sich in einen perfekten Ballsaal. Rebeccas Zehenspitzen strichen sanft über die Pfützen, und als sie Haltung annahm, legten sich ihre von Gift durchtränkten Hände um die ihres Tanzpartners und forderten ihn zu einem munteren Walzer auf. Der gefangene Partner, wie gelähmt und zitternd, brachte nur ein tiefes, heiseres, disharmonisches Röcheln hervor. Doch für Rebecca klang es wie die schönste Melodie. Ihr Tanz wurde schwungvoller, ihre Schritte ließen die Pfützen erzittern.\n Ein letztes Platschen markierte den Fall des letzten Regentropfens und hallte zusammen mit dem dumpfen Aufprall eines Körpers auf dem Boden.\n Ihr Tanzpartner hatte seinen letzten Vorhang hinter sich. Rebecca wusste, dass das Gift längst in seine Glieder geströmt war.\n Während sie auf ihren nun leblosen Partner herabblickte, beendete Rebecca ihren einsamen Tanz in melancholischer Stille.\n „Nicht einmal bis zum Ende durchgehalten ... Du warst wohl auch nicht mein Auserwählter“, murmelte sie, öffnete den Schirm und verschwand im gesprenkelten Licht.",
+          TextMapId = "UI_CHAR_DATA_TEXT_21010402"
+        },
+        UI_CHAR_DATA_TEXT_21010403 = {
+          ContentDE = "Rebecca war einst jemandem begegnet, der sie vielleicht hätte akzeptieren können – eine Art Leidensgenossin, wenn man so will.\n Diese seltsame Frau, an die Rebecca sich noch lebhaft erinnerte, besaß eine Haut so heiß wie flüssige Lava und zugleich eine Ausstrahlung, kalt wie Eis.\n Rebecca musste kaum etwas tun, um ihr Herz zu gewinnen. Sie wartete lediglich ab, bis diese Frau den tiefsten Punkt ihres Lebens erreichte, und trat dann im richtigen Moment an sie heran. Mit einer einzigen helfenden Geste und ein paar scheinbar aufrichtigen, süßen Worten brachte Rebecca die strenge, wortkarge kaiserliche Beamtin dazu, ihren Eid auf die Gerechtigkeit zu brechen und jene eiserne Disziplin zu verraten, die sie jahrzehntelang verkörpert hatte – sie half Rebecca dabei, belastende Beweise verschwinden zu lassen.\n So viel also zum angeblichen Vorbild der Rechtschaffenheit Hyperboreas – ihre frühere Integrität war offenbar nicht das Resultat eines unerschütterlichen moralischen Kompasses, sondern lediglich dem Umstand geschuldet, dass die richtige Versuchung bislang ausgeblieben war. Mit einem verächtlichen Lächeln verließ Rebecca bald darauf die Stadt und verbannte die Frau aus ihren Gedanken.\n Doch in der stillen Ruhe vieler darauf folgender Nächte, wenn Rebecca mit größter Sorgfalt eine perfekte Parfümflasche kreierte und ihre giftgetränkten Fingerspitzen behutsam in die Mischung tauchte, kehrten die Erinnerungen an jene Frau mit der feurigen Haut ungerufen zurück. Sie erinnerte sich an ihre Worte: „Es stellt sich heraus, dass wir beide Monster derselben Art sind.“ In solchen Momenten zitterten Rebeccas Hände, und die Flasche voller sanft verführerischen Dufts glitt ihr fast aus den Fingern.\n „Hast du dir nicht immer jemanden gewünscht, der dich so akzeptiert, wie du wirklich bist?“ murmelte Rebecca zu ihrem eigenen Spiegelbild im Fenster. „Warum bist du also fortgegangen, als diese Person endlich erschienen ist?“\n Es dauerte lange, bis Rebecca die Antwort fand:\n Ein Monster kann sich niemals in ein anderes Monster verlieben – so wie ein gestrandeter Fisch sich nicht in einen anderen gestrandeten Fisch verliebt, selbst wenn sie einander beim Feuchthalten helfen. Stattdessen sehnt sich der Fisch nach den Seevögeln am Himmel, in der Hoffnung, dass diese eines Tages ihre Schwingen ausbreiten und ihn zurück ins Meer tragen.\n Sie wollte nicht als Monster gefürchtet werden, noch suchte sie Trost in den Armen eines anderen Monsters. Alles, was sie sich jemals gewünscht hatte, war, einfach wie ein gewöhnlicher Mensch behandelt zu werden.",
+          TextMapId = "UI_CHAR_DATA_TEXT_21010403"
+        },
+        UI_CHAR_DATA_TEXT_21010404 = {
+          ContentDE = "Es war ein Traum im frühen Sommer.\n In diesem Traum war alles feucht und klebrig, begleitet von jenen Sonnenschauern, die Rebecca am meisten liebte. Sie sah die seltsamen Kreaturen, die sie seit ihrer Kindheit verehrte, doch überraschenderweise interessierten sie kaum. Stattdessen wurde ihr Blick von einem herzlosen Perlhäschen angezogen.\n Das herzlose Perlhäschen lud sie zu einem „Liebesmahl“ ein, bestehend aus gegrillten Fröschen, Schlangenfleisch und geröstetem Perlhäschen.\n „Du hast deinesgleichen geröstet“, sagte Rebecca, während sie das köstliche Häschen genussvoll probierte.\n „Weil sie dich nicht mochten.“\n „Also ... heißt das, du magst mich?“\n Das Perlhäschen schwieg, und Rebecca legte sanft ihre Arme um es. Das Gift strömte liebevoll durch seinen Körper und füllte die Leere, an der eigentlich ein Herz sein sollte.\n Gemeinsam umschlangen sie einander im sanften, sonnigen Regen.\n „Jetzt sind wir endlich vollständig.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_21010404"
+        },
+        UI_CHAR_DATA_TEXT_23010101 = {
+          ContentDE = "Nachdem Tabethe etwas gestohlen hat, schleicht sie sich an ihr Ziel heran und schlägt mit ihren Tentakeln dem Opfer absichtlich ins Gesicht, um sich zu verraten. Sobald sie entdeckt wird, bereiten ihr die lauten oder leisen Ausrufe, die hohen oder zurückhaltenden Wutausbrüche sowie die hektischen Gesten beim Suchen nach Waffen Vergnügen. Sie kann ihr Lachen nicht unterdrücken und setzt ihren wendigen Körper ein, um die Reaktionen nachzuahmen, bevor sie in triumphierender Freude davonzieht.",
+          TextMapId = "UI_CHAR_DATA_TEXT_23010101"
+        },
+        UI_CHAR_DATA_TEXT_23010102 = {
+          ContentDE = "Tabethe kann sich in alles verwandeln, und es ist für gewöhnliche Menschen äußerst schwer, ihre Verkleidungen zu durchschauen. Sie nutzt ihre besondere Nachahmungsfähigkeit und verbirgt sich in jeder beliebigen Umgebung, wann immer sie es wünscht. Dieses Talent hat sie zu einer genialen Diebin gemacht.",
+          TextMapId = "UI_CHAR_DATA_TEXT_23010102"
+        },
+        UI_CHAR_DATA_TEXT_23010103 = {
+          ContentDE = "Tabethe hat eine besondere Vorliebe für frischen Seefisch, von dem sie behauptet, er erinnere sie an einige kostbare Erinnerungen.\n Diese Erinnerungen führten sie an die Westküste des Imperiums, in eine kleine Stadt, deren Namen selbst Tabethe nicht mehr weiß. In diesen Erinnerungen gab es immer frischen Fisch, schummrig gelbes Licht, salzige, fischige Luft, und ... ein tiefblaues Kleid.",
+          TextMapId = "UI_CHAR_DATA_TEXT_23010103"
+        },
+        UI_CHAR_DATA_TEXT_23010104 = {
+          ContentDE = "Tabethe verfügt über hervorragende Schleichfähigkeiten. Früher schlich sie sich an Händler heran, doch heute setzt sie diese nur noch gegen Diebe ein. Die Diebe, die sie verfolgt, merken ihre Anwesenheit oft gar nicht, weil sie zu sehr mit der Jagd nach ihren eigenen Zielen beschäftigt sind.",
+          TextMapId = "UI_CHAR_DATA_TEXT_23010104"
+        },
+        UI_CHAR_DATA_TEXT_23010105 = {
+          ContentDE = "An sonnigen Nachmittagen sitzt Tabethe oft am Straßenrand, neigt faul den Kopf und blinzelt zum blauen Himmel hinauf. Der Himmel ist von weißen Wolken durchzogen, die wie Fischschuppen und schneeweiße Wellen aussehen. Im Sonnenlicht badend, senkt Tabethe den Kopf und schüttelt ihn sanft ein paar Mal mit geschlossenen Augen. Wenn sie die Augen wieder öffnet, sieht sie die Menschen auf der Straße im warmen Tageslicht erleuchtet.\n In diesem Moment legt Tabethe sich oft den Kopf in die Hände, schaltet ihr Gehirn ab und starrt gedankenverloren auf die vorbeigehenden Passanten. Sie betrachtet alte Händler, ernste Soldaten, streitende Väter und Söhne sowie ein paar kichernde Schwestern. Tabethes Pupillen ziehen sich plötzlich zusammen, und sie starrt eine Weile schweigend auf sie. Wenn die Wolken feuerrot werden, kehren die Schwestern ins warme Heim im Schein der untergehenden Sonne zurück. Auch für Tabethe ist es Zeit zu gehen, und so geht sie die Straße in die entgegengesetzte Richtung entlang, wo kein Sonnenlicht hinfällt.",
+          TextMapId = "UI_CHAR_DATA_TEXT_23010105"
+        },
+        UI_CHAR_DATA_TEXT_23010201 = {
+          ContentDE = "Die Legende von Dämon Tabethe, der Roten Hand, verbreitet sich in einer kleinen Stadt am Meer von Hyperborea.\n Sie ist ein kleines, wendiges Mädchen, das sich jeden Schatz, den sie begehrt, aneignen kann.\n Sie kommt und geht, hinterlässt keine Spuren und hat kein festes Zuhause, sodass niemand weiß, wo man sie finden kann.\n Sie verwandelt sich in tausend Gestalten, und niemand kann ihre Verkleidungen durchschauen.\n Doch diese Gerüchte verbreiten sich nur unter den örtlichen Dieben, die ihre Schätze stets vor dem Schlafen verstecken, um einen Besuch von Dämon Tabethe, der Roten Hand zu vermeiden.",
+          TextMapId = "UI_CHAR_DATA_TEXT_23010201"
+        },
+        UI_CHAR_DATA_TEXT_23010202 = {
+          ContentDE = "Ein Dieb sollte gestohlene Schätze nicht an ihren ursprünglichen Besitzer zurückgeben. Doch einmal wurde eine Puppe in einem blauen Kleid zurückgebracht.\n Es war das einzige Mal, dass Tabethe etwas zurückgab. Dämon Tabethe, der Roten Hand, stellte die gestohlene Puppe behutsam ans Fußende des Bettes des Mädchens und zögerte zu gehen. Sie sprach lange mit der Puppe, stand auf, setzte sich wieder, nahm sie hoch und legte sie zurück, bis die Sonne aufging und ihr zeigte, dass es Zeit war zu gehen.\n Das Mädchen, das sich schlafend stellte, bemerkte an ihren leisen Murmeln, dass etwas vor sich ging. Die wichtigste Person für Dämon Tabethe, der Roten Hand, ist ein Mädchen in einem blauen Kleid. Es war die Sehnsucht in ihrem Herzen, die sie hierher führte und sie dazu brachte, selbstlos die Puppe zurückzugeben, obwohl sie diesem Mädchen ähnelte.",
+          TextMapId = "UI_CHAR_DATA_TEXT_23010202"
+        },
+        UI_CHAR_DATA_TEXT_23010203 = {
+          ContentDE = "Bevor Tabethe zu Dämon Tabethe, der Roten Hand, wurde, war sie nur eine einfache Diebin, die von den örtlichen Händlern verachtet wurde.\n Wenn sie von Tabethe sprachen, schüttelten sie frustriert den Kopf. Obwohl sie nur Lebensmittel stahl, brachten die Streiche, die sie nach jedem Diebstahl verübte, die Händler zur Weißglut. Mit der Zeit nannten sie sie aus reiner Verärgerung nur noch den Dämon.\n Später wurde aus dem Dämon schließlich Dämon Tabethe, der Roten Hand, und die Händler verspürten keinen Ärger mehr über sie. Manche vermuteten, Tabethe habe das Interesse am Stehlen verloren, oder vielleicht habe sie sich aus irgendeinem Grund verändert. Wie dem auch sei – sie hörten einfach auf, sie Dämon zu nennen. Doch dieser Name verbreitete sich nun unter den Dieben, und zwar mit einer völlig neuen Bedeutung.",
+          TextMapId = "UI_CHAR_DATA_TEXT_23010203"
+        },
+        UI_CHAR_DATA_TEXT_23010301 = {
+          ContentDE = "Tabethe stiehlt nur von Dieben. Von gewöhnlichen Menschen stiehlt sie niemals.",
+          TextMapId = "UI_CHAR_DATA_TEXT_23010301"
+        },
+        UI_CHAR_DATA_TEXT_23010302 = {
+          ContentDE = "Tabethe stammt nicht aus Hyperborea. Ihre Heimat ist die weit entfernte Republik Luca.\n An ihre Kindheit erinnert sie sich kaum – nur an dunkle, aufgewühlte Meere, die sich in ihr Gedächtnis eingebrannt haben. Damals erlitt ihre Familie Schiffbruch.\n Vielleicht zeigte das Meer ihr Gnade und trug sie an die Küste Hyperboreas. Als sie wieder zu sich kam, war sie nicht mehr der Augapfel ihrer Eltern, sondern ein Waisenkind in einem Waisenhaus.",
+          TextMapId = "UI_CHAR_DATA_TEXT_23010302"
+        },
+        UI_CHAR_DATA_TEXT_23010303 = {
+          ContentDE = "Eines Tages erhielt das Waisenhaus mehrere Gäste in weißen Kitteln. Um diese angeblich hochgeschätzten Besucher aus einem Ort namens Akademie willkommen zu heißen, begannen die Vorbereitungen bereits früh am Morgen. In diesem Moment dachte Tabethe, dass ihre Gelegenheit gekommen sei.\n Der Nachthimmel am Abend ihrer Flucht ähnelte den turbulenten Tiefen des Meeres aus ihren Erinnerungen. Obwohl sie nicht vollständig vorbereitet war, beschloss sie, die Ablenkung der Erwachsenen zu nutzen und in die benachbarte Stadt zu fliehen. Sie fürchtete, dass sie, wenn sie auch nur einen Moment länger zögerte, das erdrückende Gefühl des Ertrinkens verschlingen würde.\n Im Laufe der Zeit wurde ihre Fähigkeit zur Tarnung immer besser. Niemand bemerkte sie während ihrer waghalsigen Flucht. Zum ersten Mal erkannte Tabethe, wie weit und schön der Nachthimmel war. Die Sterne funkelten über ihrem Kopf, als lächelten sie sie an. Von diesem Moment an war der Nachthimmel nicht mehr das tiefe Meer, das sie fürchtete, sondern ein schützender Schleier, der ihre geschmeidigen Bewegungen bewachte.\n Von diesem Moment an verschwand ein Waisenkind namens Tabethe aus dem Waisenhaus in der kleinen Stadt an der Westküste, und eine dunkelhäutige Diebin mit wehenden Tentakeln tauchte in der benachbarten Stadt auf.",
+          TextMapId = "UI_CHAR_DATA_TEXT_23010303"
+        },
+        UI_CHAR_DATA_TEXT_23010304 = {
+          ContentDE = "Wäre es nicht das Mädchen am Fischstand gewesen, wäre Tabethe für immer eine gewöhnliche Diebin geblieben und nicht „Dämon Tabethe, der Roten Hand“ geworden.",
+          TextMapId = "UI_CHAR_DATA_TEXT_23010304"
+        },
+        UI_CHAR_DATA_TEXT_23010305 = {
+          ContentDE = "„Ich weiß, das Leben ist hart, aber wir sollten doch keine netten Menschen bestehlen, oder?“\n Tabethe gab zu, dass die Frage des Mädchens sie erkennen ließ, dass freundliche Erwachsene nicht für die Taten böser Erwachsener bezahlen sollten. „Wenn ich weiterhin von netten Menschen stehle, werde ich eines Tages selbst zu einem bösen Erwachsenen“, sagte Tabethe.",
+          TextMapId = "UI_CHAR_DATA_TEXT_23010305"
+        },
+        UI_CHAR_DATA_TEXT_23010401 = {
+          ContentDE = "Die Dunkelheit der Nacht hüllte das kleine Waisenhaus ein, während Tabethe vorsichtig durch seine Gänge schlich. Die engen Korridore fühlten sich an, als würden sie sie verschlingen – wie die Gedärme eines gewaltigen Ungeheuers. Noch schlimmer war, dass Tabethe seit Langem keine richtige Mahlzeit mehr gehabt hatte.\n Geh in die Küche, geh in die Küche, in der Küche gibt es Essen.\n Der Mut, den der Hunger hervorbringt, ist schwer zu begreifen. Sie zögerte, ob sie nicht einen anderen Weg nehmen sollte, denn dieser Pfad konnte sie zu den „bösen Erwachsenen“ des Waisenhauses führen. Für Tabethe waren alle Angestellten solche bösen Erwachsenen. Sie ließen sie nie satt werden, und oft erhoben sie die Fäuste oder schleuderten ihr verletzende Worte entgegen.\n Doch Tabethe fasste einen Entschluss. Ihr leerer Magen verdrängte die Angst. An die Wand gepresst und in die Dunkelheit gehüllt, bewegte sie sich vorwärts. Einen Moment lang fühlte sie sich, als schwämme sie über ein Meer aus Beton, während sie sich ihrem Jagdgebiet näherte.\n Als sie jedoch ankam, erwartete sie keine wohlschmeckende Beute, sondern ein patrouillierender böser Erwachsener. Schlag um Schlag prasselte eine Eisenpfanne auf sie herab, und in ihr haftete noch der Duft von geschmortem Fisch, ein Geschmack, den sie nie hatte kosten dürfen, ganz gleich, wie artig sie sich tagsüber auch verhielt oder wie sehr sie darum bat.\n Jeden schweren Hieb und jedes grausame Wort brannte sie sich ins Herz, kaute gedanklich immer wieder darauf herum, als müsse sie damit ihren verhungerten Magen füllen. Eines Tages, das glaubte sie fest, würde sie diesen Ort hinter sich lassen und diesem erstickenden, tiefseeartigen Nachthimmel entkommen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_23010401"
+        },
+        UI_CHAR_DATA_TEXT_23010402 = {
+          ContentDE = "Als Tabethe zum ersten Mal hörte, dass ihr Spitzname nun „Dämon“ sei, überfluteten Erinnerungen an das Waisenhaus ihr Gedächtnis. Genau wie sie es sich gedacht hatte, waren die Händler genauso, und alle Erwachsenen waren fies.\n Ein kleiner Wunsch nach Rache wuchs in ihr. Tabethe, die bisher immer nur Nahrung gestohlen hatte, war fest entschlossen, etwas wahrhaft Dämonisches zu tun.\n Im Mondlicht schlich sie sich heimlich in einen Fischstand, den sie oft besuchte. Dort lag eine kleine Menge Fisch ordentlich ausgebreitet, und dahinter stand ein kleines Gebäude aus billigen Ziegeln. Im Inneren gab es kaum brauchbare Möbel, außer einem Kochtopf und einem alten Holzbett. Das einzige verbleibende Objekt war eine verschlossene Schublade – Tabethes Ziel.\n Ein schwaches Licht schwankte im fischigen Wind. Tabethe zögerte kurz, bevor sie den Griff der Schublade ergriff. Dann dachte sie bei sich: „Wenn ich diese Schublade öffne, werde ich ein echter ‚Dämon‘ sein.“\n „Weg da!“\n Tabethe zog ihre Hand von der Schublade zurück und drehte sich um. Dabei fiel ihr Blick auf ein tiefblaues Kleid. Das Kleid hatte die Farbe des Meerwassers und wehte im Wind wie die Wellen auf dem Meer.\n Die Besitzerin des Kleides war ein Mädchen mit kindlichem Gesicht. Sie drehte sich um, griff zwei Fische und erzählte Tabethe von der Krankheit ihrer Mutter, dem Kleingeld in der Schublade und davon, dass sie Tabethe gelegentlich sabbernd über die Fische hatte stehen sehen. Tabethe starrte mit weit aufgerissenen Augen, immer noch überrascht, während das Mädchen die Fische in ihre Hände drückte. Die beiden Fische waren schwer, und je fester Tabethe sie umklammerte, desto mehr rutschten sie ihr wieder aus den Händen.\n „Du gibst mir diese beiden Fische? Aber hast du selbst nichts zu essen?“\n „Mir geht es gut. Und ich denke ... du brauchst die Fische mehr als ich.“\n Die Stimme des Mädchens war sanft und freundlich, und sie schlug leise Wellen in Tabethes Herz.",
+          TextMapId = "UI_CHAR_DATA_TEXT_23010402"
+        },
+        UI_CHAR_DATA_TEXT_23010403 = {
+          ContentDE = "Der Fisch, den das Mädchen in jener Nacht überreichte, war unglaublich lecker, doch der Fischstand erlebte Tabethes Anwesenheit nicht mehr. Schuldgefühle und Wohlwollen vermischten sich in ihr, Bitterkeit durchströmte ihr Herz. Tabethe genoss alles aus der Ferne und störte das Mädchen nicht erneut. Erst als ihre Neugier auf den Fischstand die Komplexität ihrer Gefühle überwog, entschied sie sich, vorsichtig näher zu treten.\n Doch das blaue Kleid war nicht da. Der Vollmond schien hell über dem leblosen Stand, und die Fische waren nicht mehr frisch. Das Haus war still, die Wände glichen riesigen Grabsteinen. Als sie die leere Schublade in der Ecke betrachtete, war Tabethe fest entschlossen herauszufinden, was geschehen war.\n Tag für Tag verfaulten die Fische am Stand, doch Tabethe ließ keinen Dieb in die Nähe, obwohl dort nichts Wertvolles war. Sie bewachte den Stand, als handelte es sich um einen physischen Schatz oder eine kostbare Erinnerung.\n Eines Tages tauchte das blaue Kleid wieder auf. Doch inzwischen war es grau geworden, die Farbe von verschmutztem Meerwasser.\n „Tut mir leid, ich habe diesmal und künftig nichts für dich zu essen. Meine Mutter ist kürzlich gestorben.“\n Als Tabethe das schmutzige Gesicht des Mädchens sah, wusste sie nicht, wie sie es trösten sollte. Tränen wusch den Staub weg und hinterließen zwei Spuren auf ihrem Gesicht. Ihre einst strahlenden Augen waren trüb geworden, wie die Tiefen des dunklen Meeres. Tabethes Tentakel krümmten sich unruhig, und sie tippte ihre Taschen ab, zog langsam ein kleines Stück sorgfältig verpackten Fisches hervor und reichte es dem Mädchen.\n „Du gibst mir diesen Fisch? Hast du selbst nichts zu essen?“\n „Mir geht es gut. Und ich denke ... du brauchst den Fisch mehr als ich.“\n Als das Mädchen den Fisch annahm, liefen ihr Tränen die Wangen entlang der Spuren herab. Diese Tränen waren gut, dachte Tabethe. Sie zeigten zumindest die Verwundbarkeit des Mädchens und brachten einen Funken Sternenlicht in ihre tiefen, dunklen Augen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_23010403"
+        },
+        UI_CHAR_DATA_TEXT_23010404 = {
+          ContentDE = "Tabethe hatte einst etwas und verlor es dann. Sie erlebte dies zweimal.\n Das erste Mal hatte sie die reine Liebe ihrer Eltern, doch sie wurde vom gnadenlosen tiefen Meer verschlungen.\n Das zweite Mal hatte sie eine Freundin, doch diese wurde ihr von dem Vater des Mädchens weggenommen.\n Wurde sie ihr wirklich genommen? Nein. Ihr Vater, der gerade aus der Armee zurückgekehrt war, wollte sie weit wegbringen. Vielleicht war es das Beste für sie. Tabethe sagte sich: „Ich sollte erleichtert sein. Sie sollte nicht in den düsteren Straßen leben wie ich. Sie kann im Sonnenlicht stehen und das Leben genießen, wie es jetzt sein sollte.“\n Tabethe bemühte sich, beim Abschied ein Lächeln aufzusetzen, doch ihr Herz wurde dennoch von einem seltsamen Gefühl überwältigt, brennend und juckend. Es breitete sich über die Spitze ihrer Nase und den Augenwinkel aus. Ihre Nase kribbelte, und ihre Augen wurden feucht.\n „Danke, Tabethe.“\n Der Abschied ihrer Freundin rührte Tabethe, und sie wollte in diesem Moment noch mehr von ihren Gefühlen teilen.\n Wenn möglich, hätte sie gern respektable Kleidung getragen, hätte Hand in Hand mit ihrer Freundin die Straße entlanggeschlendert, die neuesten Süßigkeiten probiert, über die Schule gesprochen und wäre dann heimlich über eine Mauer zurückgeschlichen. Sie hätte vor ihren Eltern so getan, als sei sie die ganze Zeit zu Hause gewesen, nur um spielerisch auf frischer Tat ertappt zu werden.\n „Ich will deine richtige Schwester sein“, schrie Tabethe in Gedanken.\n Doch ihre Lippen öffneten sich leicht und schlossen sich dann langsam, fest.\n „Pass auf dich auf.“ Vielleicht war dies der beste Weg, Abschied zu nehmen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_23010404"
+        },
+        UI_CHAR_DATA_TEXT_24010101 = {
+          ContentDE = "Für dich, der du gerade erst nach Huaxu gekommen bist, ist Fushu eine völlig Fremde.\n Mit einer Mission kommst du in dieses geheimnisvolle Land. Bevor du Fushu begegnet bist, hast du den überwältigenden Reichtum von Zhiliu aus EverSpring gesehen, die Selbstdisziplin von Yuming aus Magistrate von Yingtian, und auch die windigen Kniffe von Herr Qiu aus dem Schwarzmarkt.\n Auf dieser Reise hast du deinen Horizont erweitert, Land und Leute von Nebelkai kennengelernt, doch von Fushu hast du nie ein Gerücht gehört. Wer ist sie? Woher kommt sie? Warum ist ihre Kraft so eigenartig, und doch erwähnt sie niemand?\n Ohne jede Vorwarnung steht sie plötzlich vor dir, nur weil hier jemand liegt, der dringend behandelt werden muss.\n \n An Kleidung und Sprache erkennst du: Sie ist ohne Zweifel eine Huaxu-Bewohnerin. Und doch liegt in ihren Bewegungen etwas, das nicht ganz passt, ein feiner, schwer zu benennender Bruch.\n Du siehst, wie sie im weißen Gewand durch die Menge geht, als gäbe es links und rechts nichts. Aller Trubel prallt an ihr ab; schon indem sie einfach nur dasteht, hat sie eine Stille an sich, als sei sie von der Welt getrennt.\n \n Du bist dir sofort sicher: Jemand wie sie gehört nicht zum Schwarzmarkt. Sie kommt von woanders.",
+          TextMapId = "UI_CHAR_DATA_TEXT_24010101"
+        },
+        UI_CHAR_DATA_TEXT_24010102 = {
+          ContentDE = "Mehr als einmal hat Fushu deine Wunden geheilt.\n Abgesehen von jener unsichtbaren Verbindung zwischen Fushu und den Neun Kapiteln von Dafeng braucht diese Magie keinerlei äußere Mittel – eine Handbewegung, und das Leid weicht.\n Fushu zufolge sind Wirkung und Prinzip im Grunde ähnlich, doch die Magie der Zhuyou zeigt sich bei jedem anders.\n Der Tau, den Fushu herbeiruft, ist kristallklar und kann alle Leiden wegspülen. Bei anderen gleicht er einem Wind, der Schnee zurückwirbelt: Funkelnde Tropfen fallen herab, und die Wunde ist wie neu.\n Du vermutest, das klinge nach einer Zhuyou, mit der sie vor hundert Jahren zusammengearbeitet hat. Sie zögert kurz, dann antwortet sie: „Es war meine ältere Schwester.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_24010102"
+        },
+        UI_CHAR_DATA_TEXT_24010103 = {
+          ContentDE = "Der Aprikosenhain der Halle der Vergänglichkeit gedeiht prächtig. Doch Anpflanzen ist eine tiefe Kunst; wer nur ab und zu vorbeikommt, könnte diese Bäume niemals so lange und so gut behüten.\n Während du mit Fushu zwischen den Bäumen gehst, fragst du nach ihrem Geheimnis.\n Fushu schüttelt den Kopf: „Wir retten Leben, mit Gärtnerei kennen wir uns nicht aus. Meine Mutter mochte zwar Topfpflanzen, aber das Ergebnis ... war selten so, wie sie es sich wünschte. Als ich klein war, habe ich mit meiner Schwester einmal einen Baum gepflanzt. Am Ende haben wir ihn sogar schiefgesetzt.“\n Neben ihr nimmt ein Fischdrachen-Wolkenchi eine Aprikosenblüte ins Maul und reicht sie dir. Du nimmst den Zweig und hebst ihn an die Nase. Der Duft ist süß und langanhaltend.\n Ihr geht weiter. In der Mitte des Hains bemerkst du eine Aprikose, die höher zu wachsen scheint als alle anderen. Du willst gerade fragen, da siehst du, wie Fushu einen Moment lang ins Leere blickt, als hätte sie etwas verloren.\n Du schaust genauer hin. Es ist ein schief gewachsener Baum. Die Krone hängt herab, und die Aprikosenblüten liegen wie Schnee, wie das weiße Haar eines Greises.",
+          TextMapId = "UI_CHAR_DATA_TEXT_24010103"
+        },
+        UI_CHAR_DATA_TEXT_24010104 = {
+          ContentDE = "Jeder in der Zesheng-Apotheke weiß: Im hinteren Garten steht ein Steinsarg, aus dem den ganzen Tag über Kälte dringt.\n \n Darin schläft die Zwillingsschwester der Gründerin, die letzte Zhuyou der Halle der Vergänglichkeit. In einer Seuche rannte sie ohne Rast von Ort zu Ort; am Ende brachte sie die Gegenwirkung der Kunst der Vergänglichkeit beinahe um. Ein Schicksal, das Mitleid weckt. Doch selbst eine Gründerin wie sie fand damals keinen Weg, diese Gegenwirkung umzukehren. Was sie tun konnte, war nur dies: einen Steinsarg, eine Eiskammer vorzubereiten, und kurz vor dem Erlöschen der Schwester gewaltsam alle Körperfunktionen anzuhalten, in der Hoffnung auf eine Zukunft.\n \n „Die Gründerin setzte all ihre Hoffnung auf das Morgen.“ Der derzeitige Vorsteher der Zesheng-Apotheke fächelt sich Luft zu und sagt das zu den frisch aufgenommenen Lehrlingen: „In diesem Morgen bin ich. Ihr seid darin – eure älteren Geschwister aus der Schule, ihr selbst, und auch eure künftigen Nachfolger.“\n Die jungen Lehrlinge verstehen nicht unbedingt, was er meint. Neugierig recken sie die Hälse, sie wollen diese Heilerin von vor hundert Jahren sehen. Der Vorsteher erfüllt ihnen den Wunsch. Die Person im Sarg ist bleich wie Gips, atmet kaum, die Gelenke starr wie eine Eisskulptur. Wie man es auch dreht: Sie wirkt längst nicht mehr wie jemand aus dieser Welt. Manche Lehrlinge bekommen schon nach kurzer Zeit Angst.\n Sie starren misstrauisch auf diese lebensechte Eisfigur, und werfen dann dem Vorsteher fragende Blicke zu, der völlig ungerührt bleibt.\n Er kennt solche Blicke. Mit ernster Stimme sagt er: „Ihr denkt, sie lässt sich nicht retten, stimmt’s?“ Sonst wirkt er im Umgang mit Menschen oft lässig, fast spielerisch. So ernst sieht man ihn selten. Die Lehrlinge sind eingeschüchtert und verstummen.\n Der Vorsteher lässt den Blick über die Menge schweifen und sagt: „In den Neun Kapiteln von Dafeng heißt es: ‚Leere Worte, die die Menge täuschen, darf man nicht äußern.‘ Also will ich an eurem ersten Tag die Dinge klar aussprechen. Die Gründerin Fufeng widmete sich schon in jungen Jahren der Heilkunst. Sie verfasste die ‚Essenz des Kräuterwerks‘ und gründete die Zesheng-Apotheke. In hundert Jahren hat die Zesheng-Apotheke unzählige Menschen gerettet. Auch in euren Familien ist man gewiss schon hier gewesen: zur Diagnose und für Arznei. Darum haben viele, die Gutes erfuhren, es auch vergolten. Sie halfen unserem Stand, Makel zu verbergen und Verdienste zu heben. Doch eine Tatsache bleibt: Die Gründerin stammte aus den Zhuyou, brachte diesen Weg aber nicht zu Ende. In Wahrheit war sie eine Sünderin – schuldig eines Aktes der Respektlosigkeit.“\n Die Lehrlinge ziehen scharf die Luft ein, viele blicken voller Ratlosigkeit drein.\n Der Vorsteher denkt an die Vergangenheit der Zesheng-Apotheke und seufzt innerlich. Er lässt allen einen Moment, um das Gesagte zu verarbeiten, und fährt dann fort: „Heilkunde ist von Natur aus ein Aufbegehren gegen den Lauf des Schicksals. Sie wendet das Los der Unschuldigen, die nur Pech hatten und starben, weil sie nicht rechtzeitig von den Zhuyou behandelt werden konnten. Auch die Neun Kapitel von Dafeng sagen: ‚Die große Tugend von Himmel und Erde trägt den Namen Leben.‘ Wenn Himmel und Erde so handeln, und der Mensch diesen Willen vollzieht, worin läge dann der Fehler? Doch wie steinig und mühsam dieser Weg ist – das lässt sich Außenstehenden kaum in Worte fassen. Jede Arznei, die ihr je zu euch genommen habt, ist das Ergebnis unermüdlicher Versuche und Forschung – oftmals erst nach Prüfungen an der Grenze zwischen Leben und Tod als wirksam bestätigt.“\n Im Garten ist es nun vollkommen still. Kein Laut ist mehr zu hören. Eine Brise trägt ein blasses Blütenblatt heran; es fällt in den Sarg. Der Vorsteher wischt es behutsam beiseite. Sein Blick geht über jedes Gesicht – nachdenklich, zögernd, bewegt. Dann sagt er mit schwerer Stimme: „Hundert Jahre sind vergangen, ein Weg voller Irrfahrten und Stürze. Die Zesheng-Apotheke ist von jeher ein Ort, der heilt und rettet, selbst wenn er dafür den Neun Kapiteln von Dafeng trotzen muss. So haben unsere Vorfahren, mit genau diesem Willen, Hindernis um Hindernis überwunden und zahllose ausweglos scheinende Lagen gewendet. Und genau deshalb hat die Gründerin uns ihre einzige Angehörige anvertraut, weil sie glaubte, dass ihre Nachkommen jene ausweglose Situation, der sie einst ohnmächtig gegenüberstand, überwinden würden; dass wir weiter gehen würden, als ihre Finger je reichen konnten; dass der Schatten der Krankheit durch unser Dasein vertrieben würde; und dass abgebrochene Leben durch uns neu beginnen würden.“\n Die Frau im Sarg schläft weiter. Ihr Gesicht hat sich seit hundert Jahren nicht verändert. Doch in den Augen dieser Kinder ist sie nicht länger nur eine kalte Sehenswürdigkeit wie vor wenigen Minuten. Sie ist ein Gebirge, das eines Tages überwunden werden wird, ein stiller Zeuge eines Jahrhunderts des Wandels der Heilkunst.\n \n Der Vorsteher sagt: „Die Zesheng-Apotheke gibt keinen einzigen Patienten auf.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_24010104"
+        },
+        UI_CHAR_DATA_TEXT_24010105 = {
+          ContentDE = "Auf dieser Reise durch Huaxu hast du eine ungefähre Ahnung, womit Fushu sich beschäftigt.\n Doch du fragst nicht weiter nach. Du und Fushu – ihr beide habt jemanden, den ihr nicht loslassen könnt. So wie du für die Wiederbegegnung mit Berry keinen Preis scheuen würdest, hast du auch kein Recht, sie aufzuhalten.\n Du hast daran gedacht, dass ein solches Festhalten an einem einzigen Weg zu einem schlechten Ende führen könnte. Zum Glück ist es nicht dazu gekommen.\n ",
+          TextMapId = "UI_CHAR_DATA_TEXT_24010105"
+        },
+        UI_CHAR_DATA_TEXT_24010201 = {
+          ContentDE = "In den Neun Kapiteln von Dafeng heißt es: „Die große Tugend von Himmel und Erde trägt den Namen Leben.“ Geburt, Altern, Krankheit und Tod sind ein höchstes Vorrecht, das allein dem Lord Argent zusteht. Aus Barmherzigkeit gab Taihao den Menschen eine Chance, erneut zu leben. Um dem „Leben“ seinen Wert zu erweisen, erwählte er einige der Loongscions und verlieh ihnen die Magie, Krankheiten zu reinigen – so entstand der Stamm der Zhuyou.\n \n Der Lauf des Himmels folgt seinem Maß: Anspannung und Entspannung, Entstehen und Vergehen, Verdorren und Erblühen. In Huaxu gilt seit jeher das Prinzip des Gleichgewichts.\n Ihre Magie verkörpert das Prinzip der Heilung: Gleich welche Krankheit oder Verletzung, sie wird dadurch geheilt. Doch der Preis ist hoch: Die Krankheit geht auf den Körper der Loongscions über. Auch wenn sie über Methoden verfügen, Unreines auszuleiten und Reines zu bewahren, entkommen sie dennoch nicht dem Schicksal eines kurzen Lebens. Diese „Leben-für-Leben“-Magie wird als Kunst der Vergänglichkeit bezeichnet.\n Doch all das liegt bereits hundert Jahre zurück.\n \n Im heutigen Nebelkai ist der Stamm der Zhuyou mit dem Niedergang der Halle der Vergänglichkeit längst zur Fußnote der Geschichte geworden. Ohne eine besondere Begegnung wird ein gewöhnlicher Mensch wohl nie wieder mit den Zhuyou in Berührung kommen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_24010201"
+        },
+        UI_CHAR_DATA_TEXT_24010202 = {
+          ContentDE = "In Haojing ist der Name der Zesheng-Apotheke längst in aller Munde. Die Verdienste der Gründerin Fufeng werden oft erzählt: Sie kostete selbst unzählige Kräuter, verfasste Schriften und führte die Menschen Schritt für Schritt dahin, sodass sich „Heilung“ von dem einstigen magischen Wunder der Zhuyou, der „Kunst der Vergänglichkeit“, zu einer greifbaren Arzneikunde wandelte.\n Und doch war diese Arzneimeisterin Fufeng, die fast hundert Jahre lebte und den Niedergang der Kunst der Vergänglichkeit mit eigenen Augen sah, einst die Erbin einer berühmten Zhuyou-Familie – des Hauses Fu.",
+          TextMapId = "UI_CHAR_DATA_TEXT_24010202"
+        },
+        UI_CHAR_DATA_TEXT_24010203 = {
+          ContentDE = "Im Nordosten von Nebelkai liegt ein Anwesen namens „Halle der Vergänglichkeit“, seit Langem verlassen, offenbar die alte Residenz einer Familie. Zwar wird es regelmäßig instand gehalten, doch ein Haus ist letztlich ein Ort für Menschen. Sobald niemand dort lebt, verliert es die Wärme des Alltags und wird still und leer. Der frühere Besitzer war eine hoch angesehene Persönlichkeit. Name und Rang sind den meisten längst entfallen, doch die Kinder jeder Familie werden ermahnt, mit etwas Ehrfurcht nicht leichtsinnig in die Nähe des Anwesens zu gehen.\n Die Erntezeit jedoch war eine Ausnahme.\n Zwei bis drei Monate nach dem Verblühen der Aprikosenblüten hängen die Bäume voller Früchte. Viele Kinder zogen in kleinen Gruppen los und pflückten sie als erfrischenden Imbiss. In diesen Momenten vergaßen sie die Mahnungen ihrer Eltern, kannten nur die Freude am Klettern und die Süße der Aprikosen, bis die Rufe der Erwachsenen sie zurückholten und sie widerwillig gingen.\n \n Doch in diesem Jahr erstrahlte Licht im verlassenen Hof. Das bedeutete: Das Anwesen hatte wieder einen Besitzer. Die Kinder konnten die scheinbar unerschöpflichen Aprikosen nun nicht mehr einfach an sich nehmen.\n \n Ein wichtiges Stück ihrer glücklichen Zeit fehlte. Sie wagten nicht, gegen die Lehren der Neun Kapitel von Dafeng zu verstoßen und über die Mauer zu klettern. So blieb ihnen nur, sehnsüchtig aus der Ferne zu schauen und sich an vergangene Zeiten zu erinnern.\n Bis eines Tages ein Loongscion aus dem Anwesen trat. Sie stellte einen großen Korb Aprikosen ab, sah die kleinen „Äffchen“ an, die in den Bäumen hingen, zeigte auf den Aprikosenhain hinter dem Garten, und sagte: „Geh spielen.“\n An jenem Tag war der Aprikosenhain erfüllt von Jubel und Lachen. Erst bei Einbruch der Dunkelheit kehrten alle nach Hause zurück.\n Das letzte Kind, das aus der Baumkrone hinabkletterte, sah aus der Ferne, wie der Loongscion im weißen Gewand mit einer Laterne am Fenster stand und jeden, der den Hof verließ, still verabschiedete.\n \n Es erstarrte für einen Moment und traf unversehens ihren Blick. Der Loongscion zwinkerte ihm zu und formte lautlos mit den Lippen: „Geh nach Hause.“\n Noch bevor das Kind aus dem Hain hinauslief, blickte es ein letztes Mal zurück auf das Anwesen. Der Abendwind wehte sacht, das Licht flackerte, und der Loongscion lehnte mit einem sanften Lächeln allein am Geländer, den Blick in die Ferne gerichtet, dorthin, wo der Rauch der Kochfeuer aufstieg.",
+          TextMapId = "UI_CHAR_DATA_TEXT_24010203"
+        },
+        UI_CHAR_DATA_TEXT_24010204 = {
+          ContentDE = "Einst wütete in Huaxu eine Seuche.\n Die Katastrophe zog sich über lange Zeit hin. Unzählige Menschen verloren ihr Leben, darunter auch die letzte verbliebene Zhuyou der Halle der Vergänglichkeit.\n Sie eilte von Mensch zu Mensch. Ihre Fingerspitzen wurden steif, weil sie die Magie zu häufig wirkte. Mit jedem geretteten Leben kam sie ihrem vorherbestimmten Tod einen Schritt näher.\n Die Menschen priesen den selbstlosen Einsatz der Zhuyou, doch kaum jemand wusste, welches Ende sie erwartete.\n Und alle, die geheilt wurden, sagten ihr aus Dankbarkeit denselben Satz: „Gute Menschen werden belohnt.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_24010204"
+        },
+        UI_CHAR_DATA_TEXT_24010205 = {
+          ContentDE = "Der derzeitige Vorsteher der Zesheng-Apotheke traf Fushu noch einmal.\n Mit Freude bemerkte er, dass nichts mehr von jener einstigen Leere und Ziellosigkeit in ihr zu spüren war. Vielleicht hatten sich all jene inneren Knoten gelöst.\n Und mit der Haltung, dass man sich bei wirklich unlösbaren Leiden auch weiterhin an diese „junge alte Vorgängerin“ wenden könne, fragte er Fushu nach ihren Plänen für die Zukunft. Doch die Antwort war, dass sie ins Hyperboreische Imperium aufbrechen wolle.\n Sein Lächeln erlosch allmählich. Unangenehm, sehr unangenehm. Denn er wusste: Auf jenem fremden, gefrorenen Land gab es Menschen, die der Zesheng-Apotheke eine Erklärung schuldeten, und der Frau vor ihm, die ihnen im Blut verbunden war, schuldeten sie erst recht eine.\n Aber der Strudel Hyperboreas war ein gewaltiger Fleischwolf, besonders wenn es um das Massaker vor zwanzig Jahren in der Provinz Flagson ging. Die Schwierigkeiten lagen klar vor Augen; im schlimmsten Fall wären alte Schulden der Zesheng-Apotheke nicht beglichen und neue kämen hinzu.\n Sollte er Fushu aufhalten ...?\n ...\n Nein. Das konnte er nicht.\n Er sah ihr in die Augen. In den wasserfarbenen Pupillen lag nun unerschütterliche Entschlossenheit. Was für ein Blick. In den Augen seines einstigen Lehrmeisters hatte er dieselbe Entschiedenheit schon einmal gesehen. Er wusste: Er würde diese Frau nicht davon abbringen, in jenes fremde Land zu gehen und eine Gerechtigkeit einzufordern, die zwanzig Jahre zu spät gekommen war.\n „Dann sorgt bitte dafür, dass Ihr vollkommen vorbereitet aufbrecht“, sagte der Vorsteher. „Die Zesheng-Apotheke wird tun, was in ihrer Macht steht, um Euch zu unterstützen.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_24010205"
+        },
+        UI_CHAR_DATA_TEXT_24010301 = {
+          ContentDE = "Die Halle der Vergänglichkeit in Nebelkai ist Fushus Heimat.\n \n In Haojing endete ihr hundertjähriger Schlaf. Die Schülerinnen und Schüler ihrer Schwester behandelten sie außerordentlich gut. Sie erzählten ihr von den Veränderungen dieser hundert Jahre, erklärten ihr Krankheitsbilder, kümmerten sich nach Kräften um ihren Körper, und begleiteten sie dabei, Haojing neu kennenzulernen.\n Als Fushu erwachte, war es unvermeidlich, dass sie sich über ihre Zukunft verlor. Niemand verlangte etwas von ihr. Niemand drängte sie, irgendeine „Mission“ zu erfüllen.\n Es dauerte lange, bis sie begriff: Zhuyou war kein Beruf mehr, den die Welt dringend brauchte. Alles nach hundert Jahren war fremd; sie lernte langsam. Als sie schließlich halbwegs „fertig“ war, traf sie ihre erste Entscheidung: Sie würde nach Nebelkai zurückkehren, zur Halle der Vergänglichkeit.\n \n Vielleicht war es die Unruhe eines zweiten Lebens. Vielleicht der Wunsch, das Ende des Zhuyou-Hauses Fu mit eigenen Augen zu sehen. Vielleicht nur die schlichteste Wahrheit: Man löst sich nicht von der Heimat. Sie hatte tausend Gründe, zurückzugehen, und ebenso viele, in Haojing zu bleiben. Und doch: Ihre Füße wählten ihren eigenen Ort.\n \n Als wäre sie von einer Besessenheit umschlungen, als zöge das Gesetz von Ursache und Wirkung an ihr, trat Fushu unaufhaltsam den Heimweg an.",
+          TextMapId = "UI_CHAR_DATA_TEXT_24010301"
+        },
+        UI_CHAR_DATA_TEXT_24010302 = {
+          ContentDE = "Die Beziehung zwischen Fushu und Fufeng war voller Widersprüche. Doch ihre endgültige Entzweiung kam, als Fufeng die Identität der Zhuyou abstreifte und einen anderen Weg suchte, der heilen und retten konnte, ohne den Preis eines Zhuyou-Lebens zu fordern.\n Es war ein unbekannter Weg, und skandalös genug, um die Welt zu erschüttern. Denn es bedeutete: Sie verriet die Halle der Vergänglichkeit. Sie verriet ihre Familie. Und sie verriet die Kraft, die der Lord Argent verliehen hatte.\n \n Heute ist das Leben der Menschen längst untrennbar mit Fufengs Lehre verknüpft. Sie wissen es im Innersten: Um den Schmerz zu vertreiben, haben sie ihren Verrat an Taihaos Autorität stillschweigend hingenommen.\n Man mag Fufeng noch so gelehrt als „Medizinheilige, die Taihaos Offenbarung empfing“ ausschmücken, streift man alle Zier ab, bleibt tief im Bewusstsein der Menschen ein feiner Riss: Die Allwissenheit und Allmacht des Lord Argent hat unmerklich einen kleinen Abzug bekommen.\n Weil diese Frau es tatsächlich geschafft hatte, außerhalb göttlicher Gnade das Vorrecht über Leben und Tod zu stehlen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_24010302"
+        },
+        UI_CHAR_DATA_TEXT_24010303 = {
+          ContentDE = "Fufeng und Fushu hatten einst im Hof der Halle der Vergänglichkeit gemeinsam einen Aprikosenbaum gepflanzt.\n Damals war ein Loongscion, den Fushus Mutter geheilt hatte, der Halle der Vergänglichkeit dankbar. Er besaß nicht viel, also wirkte er im Hof eine Kunst, die dem Boden Fruchtbarkeit schenkte. Man sagte: Von da an blühten und trugen Pflanzen, die man in diesem Garten setzte, zweimal im Jahr Früchte und blieben ewig voller Lebenskraft.\n Die junge Fufeng war neugierig auf diese Fruchtbarkeitskunst. Sie bat die Mutter, einen Aprikosensetzling zu kaufen, suchte im hinteren Garten eine freie Stelle und zog Fushu mit sich, um ihn dort einzupflanzen. Fufeng war verspielt und voller Bewegung. Mit einem leichten Schubs brachte sie den Setzling, den Fushu gerade vergraben hatte, wieder ein Stück aus dem Lot. Als sie sah, wie ihre Schwester die Lippen zusammenpresste und die Tränen hochstiegen, rannte sie hastig ins Haus, kramte ihre gehütete Blechdose hervor und schüttete klirrend eine kleine Handvoll kandierter Früchte aus, als Entschädigung. Erst da lächelte Fushu wieder.\n Am Ende wurde der Baum eben schief und krumm gepflanzt.\n „Wünscht euch etwas“, sagte die Mutter und lächelte die Schwestern sanft an. „Eure Wünsche werden in Erfüllung gehen, so wie dieser Baum süße Aprikosen tragen wird.“\n \n Fushu wusste bis heute nicht, welchen Wunsch Fufeng damals ausgesprochen hatte.\n Doch ihren eigenen erinnerte sie noch: „Wenn mein Leben ohnehin kurz sein soll, dann soll dieser Aprikosenbaum an meiner Stelle weiterleben – Generationen kommen und gehen sehen, und die Welt sich wandeln wie Meer und Land.“\n \n Fliehendes Licht, fliehendes Licht, du verzehrst meine Lebenszeit,\n Möge der Alte nicht sterben, möge der Junge nicht weinen.\n Dürre Gebeine lassen hundert Kräuter erblühen, kranke Stämme zehntausend Bäumen ergrünen.\n Der erhabene Gottfürst sei Zeuge; niemals werde ich das mir Anvertraute enttäuschen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_24010303"
+        },
+        UI_CHAR_DATA_TEXT_24010304 = {
+          ContentDE = "Fushu erlebte nie das Erlöschen, das jedem Zhuyou bestimmt war.\n \n Noch bevor sie sich zu wandeln begann, war Fufeng an ihrer Seite angekommen. Sie war immer noch so laut und lärmend, redete unaufhörlich Unsinn, so stolz und überheblich. Sie bestand darauf, dass sie sie retten würde, dass sie sie retten könne. Wenn ein Jahr nicht ausreichen würde, dann zehn – und wenn zehn scheiterten, dann hundert. Irgendwann werde der Tag kommen, an dem sie sie wieder wecken könne. Deshalb umklammerte Fufeng fest ihre Hand: „Egal, was passiert ... Du musst bis zu jenem Tag ausharren.“\n \n „Mit Taihao um jemanden zu ringen, ist zu schwer ... zu schwer ...“ Fushus Bewusstsein wurde allmählich trüber; sie hatte keine Kraft mehr, die restlichen Worte auszusprechen, aber vielleicht würde Fufeng verstehen –\n Ihre Angst und ihr unwilliges Herz, weil sie noch nicht bereit war, ihr Leben zu Ende gehen zu lassen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_24010304"
+        },
+        UI_CHAR_DATA_TEXT_24010305 = {
+          ContentDE = "Alle etwas älteren Apotheker der Zesheng-Apotheke wussten, dass die Ahnmeisterin Fufeng seit Jahrzehnten Tag für Tag dieselbe Gewohnheit hatte.\n Obwohl Fufeng der Zhuyou-Kunst längst abgeschworen, die Halle der Vergänglichkeit verlassen und mit der Zesheng-Apotheke ein eigenes Haus gegründet hatte, bezahlte sie dennoch stets jemanden dafür, die Halle der Vergänglichkeit zu betreuen. Seit Jahrzehnten war dort jedes Stück – ein Tisch, ein Stuhl, jedes Arrangement – genau wie in ihrer Jugend, als hätte sich nichts verändert, obwohl dort längst niemand von ihren alten Vertrauten mehr wohnte.\n Sie wussten auch, dass diese Ahnmeisterin jedes Jahr im hinteren Garten von der Halle der Vergänglichkeit eigenhändig einen Aprikosenbaum pflanzte – vom schwarzen Haar bis zum grauen, bis sie beim Gehen gestützt werden musste, bis sie die Schrift auf den Rezepten nicht mehr erkennen konnte; dennoch hielt sie an dieser Gewohnheit fest.\n Der amtierende Vorsteher hat seine verehrte Meisterin einst gefragt, was dieses Tun denn eigentlich bedeute.\n Die weißhaarige Apothekerin lächelte: „Möge sie, wenn sie eines Tages erwacht, im Garten die Aprikosenbäume sehen, die endlich zu einem ganzen Hain herangewachsen sind.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_24010305"
+        },
+        UI_CHAR_DATA_TEXT_24010401 = {
+          ContentDE = "Fushu saß auf dem Schiff, das sie in die Heimat zurückbrachte.\n \n Die Kleidung der vorbeigehenden Menschen war nicht mehr die gleiche wie vor hundert Jahren, und der Aufbau des Schiffes war weitaus komplexer und präziser als zu ihrer Zeit. An Bord waren einige Fremde hinzugekommen; sie tauschten sich leise aus und sagten, sie wollten Waren aus Luca nach Nebelkai bringen, um sie dort zu verkaufen.\n Sie schienen oft nach Huaxu zu kommen; nachdem sie das Geschäftliche besprochen hatten, erzählten sie von ihren Erlebnissen unterwegs. Sie sagten, die Landschaft von Nebelkai sei schöner als die von Haojing; sobald sie Zeit hätten, wollten sie gemeinsam zum Frühlingsausflug ins Grüne. Dann kamen sie darauf zu sprechen, dass sie neulich Smaragdfink über ein Tal hatten fliegen sehen – doch da korrigierte sie jemand und sagte, das sei nur Gleiten gewesen; die Schwanzfedern von Smaragdfink seien so schwer, wie sollte er denn lange Zeit fliegen können? Dann kamen sie darauf zu sprechen, dass EverSpring zum Jahresfest seinen Geschäftspartnern Geschenkboxen zuschickt; Chefin Zhiliu war dabei äußerst großzügig – darin befand sich eine Gedenkmünze aus reinem Gold. Da lachte ein Mann und sagte, ihm gefallen die gepökelten Jungwildschwein-Streifen darin noch besser – das eigne sich am besten, um sich unterwegs die Zeit zu vertreiben.\n \n Fushu hörte gebannt zu. Die Heimat, von der sie sprachen, war ihr zugleich fremd und vertraut. Ihre Gedanken trieben in Erinnerungen davon, und sie fragte sich: Habe ich vor hundert Jahren vielleicht auch einmal gesehen, wie ein Smaragdfink am Himmel entlang glitt? Bin ich damals vielleicht jeden Winkel von Nebelkai gegangen und habe die Schönheit jeder Jahreszeit gesehen? Und war der Lieblingssnack meiner Kindheit vielleicht genau so einer, wie sie ihn erwähnt hatten – schmeckte er scharf, oder eher salzig-süß?\n \n Vielleicht ja ... vielleicht nein. Nicht mehr genau in der Erinnerung, aber vermutlich?\n \n Zu viele Erinnerungen waren verschwommen und ungewiss; sie konnte sich selbst keine eindeutige Antwort mehr geben. Wie eine Wanderin, die über unzählige Jahre am Strand entlanggegangen ist: So tief ihre Fußspuren auch gewesen sein mögen – sobald die Brandung der Zeit heranrollt, wird alles wieder zu einer glatten, spurenlosen Sandfläche, und am Ende vergisst man sogar den eigenen Weg hierher.\n Sie saß da. Benommen, und doch nachdenklich, kam ihr der Gedanke: Vielleicht ist es der Grund für ihre Rückkehr nach Nebelkai, und zur Halle der Vergänglichkeit.\n Sie hatte ihren Blick zu lange auf die Händler gerichtet; da sahen sie zu ihr hinüber und musterten sie. Schließlich lächelte eine Händlerin sie an, hob ihren Rock im fremdländischen Schnitt an und kam auf sie zu. Mit überschäumender Herzlichkeit und ohne mit Lob zu sparen, sagte sie: „Sie sehen wunderschön aus! Solche Kleidung habe ich nur in den Geschichtsbüchern von Huaxu gesehen – eben haben Sie uns alle ganz sprachlos gemacht! Mit einer so schönen Dame wie Ihnen zusammenzureisen, ist wirklich unser Glück. Ich hoffe, Sie nehmen es uns nicht übel, wenn wir nach Ihrem Ziel fragen – reisen Sie auch nach Nebelkai?“\n \n Fushu schwieg einen Moment, dann sagte sie: „Ich habe dort einst gelebt.“\n \n Die Händlerin tat erstaunt und sagte fröhlich: „Ach wirklich?! Wie wunderbar – wir sind gerade auf dem Weg nach Nebelkai, um Geschäfte zu machen! Neben Wein und Glaswaren haben wir auch ein paar Kleinigkeiten dabei –“\n Sie öffnete ihre Handfläche und zeigte eine fein gearbeitete Taschenuhr. In das Uhrgehäuse war mit feiner Handwerkskunst ein gewaltiger Baum graviert, der den hellen Mond umschlang. Sie spürte einen Anflug von Freude – das war genau jene Landschaft, die sie kannte; doch die hochgeschwungenen Dachtraufen und die Wandelbrücke unter dem Riesenbaum hatte sie noch nie gesehen. Das gehörte zu den hundert Jahren, die sie nicht kannte.\n Die Händlerin drückte den Knopf; das Gehäuse sprang auf und gab die laufende Zeit frei – Sekundenzeiger, Minutenzeiger, Stundenzeiger, ordentlich geordnet, unaufhörlich tickend. Geschickt drehte sie am Rädchen und stellte Fushu grinsend diese besondere Machart vor: „... Die Kunden sagen immer, das Einstellen der Zeit sei so umständlich. Darum haben wir diese Taschenuhr speziell verbessert. Werden die Leute in Nebelkai sie mögen? Ach du meine Güte!“\n Aus irgendeinem Grund begannen die Zeiger der Taschenuhr plötzlich rückwärts zu laufen. „Verzeihung, Verzeihung“, lächelte die Händlerin verlegen, der Schweiß stand ihr auf der Stirn. Diese Taschenuhr hat wohl einen Defekt. Aber die anderen sind alle in Ordnung. Ich hole Ihnen gleich noch eine ...“\n „Nicht nötig.“\n Fushus Blick blieb auf den rückwärts laufenden Zeigern haften.\n „Ich mag diese Uhr, die rückwärts läuft. Können Sie sie mir verkaufen?“\n ",
+          TextMapId = "UI_CHAR_DATA_TEXT_24010401"
+        },
+        UI_CHAR_DATA_TEXT_24010402 = {
+          ContentDE = "Fufeng und ich sind Zwillinge – wir sehen einander wie ein Ei dem anderen.\n Und ich ... hasse das immer zutiefst. Selbst wenn eines Tages die Flüsse rückwärts flössen, Himmel und Erde sich umstürzten und Lord Argent die Welt verließe – ich glaube, ich könnte mich dennoch nicht damit abfinden.\n Warum das so ist ... das ist eine lange Geschichte.\n Fufeng hat schon immer ein besonderes Talent, mich auf die Palme zu bringen – daran hat sich von klein auf bis heute kein bisschen geändert.\n Bevor sie überhaupt auf abwegige, regelbrechende Gedanken kam, war sie am besten darin, meine Worte und mein Verhalten nachzuahmen: Was immer ich tat, tat sie auch. Wenn sie wollte, konnte sie es täuschend echt nachmachen – selbst Vater und Mutter konnten uns nicht auseinanderhalten.\n Dies alleine hätte mich eigentlich nicht wütend gemacht – im Gegenteil, es hätte mich sogar gefreut. Um die trüben Miasmen aus Kranken ertragen zu können, führen die Zhuyou einen streng geregelten Tagesablauf und halten Maß beim Essen. Ich war schon immer jemand, der sich an die Regeln hielt; Fufeng dagegen feilschte ständig mit den Älteren – nur um noch einen Happen Gebäck mehr zu bekommen, einen Moment weniger zu üben und morgens ein kleines bisschen länger schlafen zu dürfen.\n Ich dachte oft, dass es für alle eine Erleichterung wäre, wenn sie mich wirklich so täuschend echt nachahmen und eine andere pflichtbewusste, ordentliche Zhuyou werden könnte.\n Ich habe diese Gedanken nie ausgesprochen, aber ich vermutete, dass Fufeng sie trotz der Verbindung zwischen Zwillingen dennoch durchschauen konnte. Wie sonst ließe sich erklären, dass sie Spuren beim Nachahmen von mir immer absichtlich hinterließ – und Dinge spielte, die es in der Wirklichkeit nie gegeben hatte: „Fushu hat einen Patzer gemacht“, „Fushu hält sich nicht an die Regeln“, „Fushu ist ein tollpatschiger Dummkopf“ – alles war völlig grundlose Verleumdung.\n Ich habe einmal gehört, Zwillinge nebeneinander seien wie ein Blick in den Spiegel; aber meiner war ein Zerrspiegel: Er zeigte nur einseitig mein jämmerliches Bild – selbst dann, wenn ich in Wahrheit nie die Fassung verloren hatte.\n Als Gegenangriff versuchte ich ebenfalls, ihr Verhalten nachzuahmen: wie sie beim Üben der Kampfkunst den Spagat nicht schaffte und vom Meister mit Gewalt hinuntergedrückt wurde – Tränen in den Augen, voller Verlegenheit; oder wie sie beim Ausschlafen ganz unvernünftig war, sich im Bett herumwälzte wie ein kleiner Taugenichts; oder wie sie sich beim Üben der Kunst der Vergänglichkeit lange abmühte, am Ende doch nur ein paar dünne Schneeflocken zustande brachte, den Kopf hängen ließ und niedergeschlagen dreinsah.\n Wie merkwürdig: Obwohl mir diese Szenen bis heute bis ins Feinste vor Augen stehen, gelang es mir doch um nichts in der Welt, so zu sein wie sie – mich hemmungslos hineinzustürzen, laut zu schreien, mit aller Kraft zu weinen und zu lachen. Jeder meiner Versuche blieb lediglich bei: „Fushu, die sich ein wenig unwohl fühlt“, „Fushu, die ein wenig steif wirkt“, „Fushu, die zu streng mit sich selbst ist“.\n Vater und Mutter konnten Fufeng nicht von mir unterscheiden, wenn sie mich spielte – aber sie erkannten mich sofort, sobald ich Fufeng nachahmte.\n Einmal fragte ich sie nach dem Grund und sie antworteten: „Fushu, du bist eine viel zu vorbildliche Zhuyou. Aber deine ältere Schwester ... ach, sie ist eben noch ganz und gar ein Kind.“\n Damals hielt ich diesen Satz für ein ganz selbstverständliches Lob: Ich war diejenige von uns Schwestern, die am ehesten einer Zhuyou glich – diejenige, die dieser Ehre und dieser Last am nächsten stand.\n Meine Schwester, die noch wie ein Kind war, konnte diese Verantwortung nicht tragen – aber ich konnte es. Ich konnte sogar auch ihre Last mit übernehmen; sie glich keiner Zhuyou, also konnte man die Aufgabe, die allen Wesen zugutekommt, mir vollständig überlassen.\n \n Jetzt denke ich jedoch, vielleicht lag es einfach daran, dass ich im „Spiel des Nachahmens“ so vollständig verloren hatte und dass ich diese Niederlage in dem Bereich ausgleichen wollte, in dem ich unangefochten war – eine tadellose Zhuyou zu sein.\n Doch der Gedanke „Ich allein genüge“ war wie ein ausgestreuter Samen: An dem Tag, an dem ich mit Fufeng endgültig brach, stieß er durch die Erde, umschlang mich und ließ nicht mehr los – bis zu dem Tag, an dem ich starb.",
+          TextMapId = "UI_CHAR_DATA_TEXT_24010402"
+        },
+        UI_CHAR_DATA_TEXT_24010403 = {
+          ContentDE = "Als Mutter erlosch, hielt Fushu gerade ihren Mittagsschlaf.\n \n Gerade wegen kurzer Lebenszeit legen die Zhuyou besonderen Wert auf die Pflege ihrer Gesundheit. Sie arbeiten bei Sonnenaufgang und ruhen bei Sonnenuntergang; in Wort und Tat sollen sie stets maßvoll sein, den Umständen und der Zeit gemäß handeln und ein ruhiges, ausgeglichenes Herz bewahren.\n Ein kurzer Mittagsschlaf von einer halben Stunde ist für sie ein fester, im Tagesplan vorgeschriebener Abschnitt.\n Fushu war stets pflichtbewusst und regelkonform, Fufeng hingegen frei und ungebunden. Doch von der Autorität der Mutter eingeschüchtert, beschränkte sich die zehnjährige Fufeng darauf, zur Essenszeit am Essen herumzumäkeln, zur Schlafenszeit unruhig im Bett hin und her zu wälzen oder gleich aufzustehen und sich an Orte zu verkriechen, wo Mutter und ich sie nicht finden konnten, um überall herumzustreifen und zu spielen.\n An diesem Tag war es auch so.\n Als Fushu wachgerüttelt wurde, war sie unweigerlich verärgert – doch Zorn schadet dem Geist und verstößt gegen die „Dreizehn Maximen zur Lebenspflege der Familie Fu“, sie zügelte ihr Temperament und fragte Fufeng, was geschehen sei.\n Fufeng war zu diesem Zeitpunkt kreidebleich, kalter Schweiß perlte ihr von der Stirn. Sie sagte kein Wort, sondern zog Fushu am Arm und führte sie durch den Wandelgang.\n Fushu durchschaute ihre Angst und erkannte darin sogar einen Hauch von Verstörung. Wie ein von Jägern gehetzter Fuchs: Vor ihm die Falle, hinter ihm der Jagdhund. Im Maul hält er noch ein zappelndes Federvieh, und in Gedanken sieht er die Jungen, zusammengerollt im Bau. Zwischen allen Fronten bleibt ihm kein Ausweg; in den wenigen Sekunden vor dem Kampf um Leben und Tod muss er ebenso ängstlich und beklommen sein wie Fufeng damals.\n Was konnte geschehen sein, das Fufeng – die selbst nach einem Klaps mit dem Lineal noch grinsend davonkam – in einen solchen Zustand versetzte?\n Fushu biss sich auf die Lippe.\n \n Fushu hatte geglaubt, sie würde ganz gefasst bleiben.\n Seit sie denken konnte, wusste sie, wie das Ende einer Zhuyou aussieht.\n Sie lebte stets Schritt für Schritt nach Vorschrift und hatte nie daran gedacht, sich der Fügung des Lord Argent zu widersetzen. Wenn man mit ruhigem Gewissen geboren wird, dann gibt es natürlich auch einen Tag, an dem man mit ruhigem Gewissen sterben muss.\n Blumen erblühen und verwelken, der Mond nimmt zu und ab; wenn jemand durch die Hand einer Zhuyou am Leben bleibt, muss die Zhuyou dafür einen Preis zahlen. Das ist göttlicher Wille, so ist es seit allen Zeiten. Was sollte daran schwer zu akzeptieren sein?\n Als sie fünf Jahre alt war, starb der Vater, wie eine Lampe, deren Öl aufgebraucht war – vor ihren Augen.\n Sie glaubte, sich vor nichts zu fürchten – doch in Wahrheit fühlte es sich an, als hätte man ihr die Seele geraubt. Sie riss die Augen weit auf und zwang sich zur Ruhe. Sie zählte die Linien in Vaters Handfläche und hörte seinem leisen, endlosen Reden zu – als würde er nur die alltäglichsten Kleinigkeiten anordnen: „Ich bin eben ein Feinschmecker. Von nun an, an jedem Jahrestag, denk daran, mir am Grab einen Krug guten Weins zu gießen.“\n Sein Ton war selbstironisch und leichtfertig. Erst viel zu spät dachte Fushu: „Also ist Fufeng vom Wesen her eher wie Vater.“\n Dunkles, trübes Blut quoll aus Öffnungen seines Gesichts. Obwohl sie wusste, dass es sinnlos war, wischte sie mit aller Kraft – doch es ließ sich nicht sauber wischen. Grelles Sonnenlicht goss sich durch das Fenster herein und ließ selbst das schmutzige Blut in blendendem Gold erstrahlen – als wäre es das höchste Lob für einen großen Zhuyou.\n \n Fushu hatte geglaubt, sie würde ganz gefasst bleiben.\n Mutter war sonst stets streng; doch an diesem Tag saß sie zur Mittagsruhe schief im grellen Sonnenschein und nippte an einer Tasse starken Tees. Neben ihr lag ein aufgefaltetes Papierpäckchen; darin lagen dicht an dicht an die zehn oder zwölf verschiedene Gebäcksorten. Mutter kostete jede Sorte gewissenhaft einmal, und an ihrem Mundwinkel klebten noch ein paar Sesamkörner.\n Fushu hatte Mutter noch nie so entspannt erlebt, noch nie gesehen, wie sie – wie ein Kind, das bei einer Schandtat ertappt worden war – sie sagte lächelnd zu ihr: „Ach herrje – beim Naschen erwischt.“\n Fushu sah, wie Mutters Blick allmählich trüber wurde, doch sie schien es nicht zu bemerken und redete weiter, leise und unaufhörlich: „Das Walnussgebäck ist ein bisschen trocken ... es kratzt im Hals. Den Mandelkuchen habe ich mich nie wirklich anfreunden können. Das Lotusgebäck ist zwar knusprig, aber letztlich mehr Schein als Sein. Am Ende esse ich nach all den Jahren doch am liebsten mag ich doch Zuckerschaumkuchen. Schmeckt noch genauso wie in meiner Kindheit.“\n Mutter klopfte die Krümel von ihren Händen, hob die beiden Kinder auf ihren Schoß und blickte hinaus auf die fernen Berge und die Vögel am Himmel.\n Fufeng starrte in die Mittagssonne und hielt stur die Augen offen; bald musste sie ununterbrochen niesen.\n Und Fushu – sie knetete den Saum ihres Ärmels in der Faust und sagte der Mutter, deren Nägel immer schärfer wurden, Wort für Wort: „Mutter, sei unbesorgt. Ich werde künftig auch so gehorsam sein wie bisher. Ich werde für dich und Vater auf Fufeng achten. Wir werden gemeinsam hier wachen – so wie Vater und du einst über die Halle der Vergänglichkeit gewacht haben.“\n Dieses Mal hatte sie weder Tränen noch Furcht. Anders als ihre ältere Schwester, die nur fliehen wollte, wünschte sie, dass ihre Mutter in Frieden gehen möge.\n Doch die Mutter lächelte nur, antwortete nicht und fragte stattdessen: „Schätzchen, welches Gebäck magst du am liebsten?“\n Fushu stockte; sie wusste nicht, wo sie anfangen sollte – sie hatte sich stets beherrscht und gezügelt, von dem Gebäck auf dem Tisch hatte sie nur an wenigen Sorten überhaupt gekostet.\n Mutter hakte nicht nach. Ihre Stimme wurde allmählich brüchig, als wären dies die letzten Worte, die sie noch hervorbringen konnte.\n \n Sie sagte: „Lass das alles gut sein. Lebt dieses Leben auf die Weise, die ihr mögt.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_24010403"
+        },
+        UI_CHAR_DATA_TEXT_24010404 = {
+          ContentDE = "In Halle der Vergänglichkeit war einst ein Mädchen aufgenommen worden. Sie litt an einer seltsamen Krankheit: Selbst wenn man sie mit der Kunst der Vergänglichkeit heilte, kehrte sie jeden Frühling unweigerlich zurück. Im schlimmsten Fall bekam dieses Mädchen am ganzen Körper rote Ausschläge, hohes Fieber, und ihr Hals schwoll so stark an, dass sie beinahe erstickte.\n Die Eltern des Mädchens waren mit der ganzen Familie hierhergezogen, damit das Mädchen jederzeit von Zhuyou versorgt werden konnte und nicht zu früh starb. Doch selbst die erfahrenste Zhuyou konnte in solchen Fällen nur den Kopf schütteln und seufzen.\n Fushus Eltern reservierten ihr jedes Frühjahr ein festes Bett und blieben so oft wie möglich an ihrer Seite, um Unfälle zu verhindern – mehr konnten Zhuyou nicht tun, darüber hinaus waren auch sie machtlos.\n Nach und nach wurde das Mädchen zur Patientin, die am längsten in der Halle der Vergänglichkeit blieb. Sie erlebte, wie Fushus Eltern nacheinander fortgingen, erlebte auch die wiederholten Zwistigkeiten und Streitereien zwischen Fushu und Fufeng – bis Fufeng am Ende doch verließ, immer wieder über die Schulter zurückblickend.\n In jenem Frühling war in Halle der Vergänglichkeit nur noch Fushu übrig, die bei ihr wachte – und so sah das Mädchen erneut Fushus schwerste Zeit.\n In Halle der Vergänglichkeit riss der Strom der Kranken das ganze Jahr über nicht ab. Damals hielt Fushu allein alles zusammen, lief unablässig hin und her und kam doch kaum hinterher. Selbst die Methode, das Trübe auszuleiten und das Reine zu klären, gelang ihr nicht mehr mit voller Kraft; die Rückwirkung in ihrem Körper wurde von Tag zu Tag schwerer, und ihr Gesicht wirkte beinahe täglich grauer.\n Unter solchen Umständen konnte die Kunst der Vergänglichkeit jeden Tag nur noch immer weniger Menschen retten. Die Halle der Vergänglichkeit verlor nach und nach ihre frühere Ordnung; immer mehr Menschen blieben ringsum zurück, ohne voranzukommen. Das Stöhnen der Notfallkranken, das Flehen und Schimpfen ihrer Angehörigen – getragen vom Wind – zogen durch jede Ecke der Halle der Vergänglichkeit. Die vertrauten Pavillons und Gänge schienen ihr plötzlich keinen Zufluchtsort mehr zu bieten.\n Selbst in dieser heillosen Überlastung sorgte sie sich noch um das Mädchen mit der seltsamen Krankheit; jede Nacht ging sie nachsehen, ob die Beschwerden wieder ausgebrochen waren. Doch als das Mädchen erneut in hohem Fieber bewusstlos wurde, hatte Fushus Körper die Grenze erreicht.\n Sie zögerte keinen Augenblick und setzte die Kunst der Vergänglichkeit mit aller restlichen Kraft ein. Zweimal scheiterte sie dabei. Ihr wurde schwindlig, es rauschte in den Ohren. Blut trat aus Mund und Nase, und vor ihren Augen wurde es schwarz. Tatsächlich war Fushu bis heute nicht sicher, ob ihr dritter Versuch gelungen war – denn noch bevor sie das Ergebnis sehen konnte, verlor sie jedes Bewusstsein. Bevor sie in eine tiefe Dunkelheit sank, hörte sie, als würde jemand etwas sagen; doch ein heftiges Dröhnen überdeckte alles, und sie verstand kein Wort.\n Als sie die Augen wieder öffnete, konnte sie sich nicht rühren, doch sie spürte, dass das Mädchen ihre Hand hielt – und diese Hand war nicht kalt, sondern noch warm.\n Sie war nicht gestorben.\n Als hätte vielmehr Fushu selbst dem Tod entrinnen dürfen. Sie packte mit all ihrer Kraft die Hand des Mädchens, als klammere sie sich an einen rettenden Strohhalm.\n In diesem Moment erwachte das Mädchen. Da Fushu kaum noch Kraft hatte, war es schon ein Wunder, dass die Kunst der Vergänglichkeit überhaupt wirkte. Das Mädchen sah noch krank aus, lächelte jedoch, als wäre nichts geschehen.\n Sie sagte: „Fushu, weißt du – eben hattest auch du schreckliches Fieber. Ich wusste nicht, wer von uns beiden es am Ende nicht schaffen würde. Du hast die ganze Zeit im Fieberwahn geredet. Du hast gesagt: ,Bitte nimm sie nicht weg‘.“\n Das Mädchen sah ihr aschfahles Gesicht an und sagte: „Ich bin keine Zhuyou, und ich bin auch keine deiner Familienmitglieder – ich bin nur eine deiner Patienten. Wenn ich eben gestorben wäre, würde ich dir nicht die Schuld geben. Auch ich würde zu Taihao beten, dich nicht fortzunehmen. Selbst wenn in der Halle der Vergänglichkeit nur noch du allein übrig wärst, würde ich den Lord Argent anflehen, dich nicht mitzunehmen.“\n „Also – zwing dich nicht länger, ja?“ Sie blickte Fushu beharrlich an, als gäbe es das Weinen und die Klagelaute draußen überhaupt nicht: „Nenn mich meinetwegen egoistisch – aber ich ... ich möchte wirklich so gern die Aprikosenblüten im nächsten Jahr sehen.“\n Fushu schloss die Augen, von Schmerz erfüllt.\n \n Niemand wusste, mit welcher Haltung Fushu diese Entscheidung traf – doch am Ende hielt sie jenes Jahr tatsächlich durch.\n Und das Mädchen bekam, was sie sich erbeten hatte: Sie sah noch viele Jahre lang Aprikosenblüten. Selbst nachdem Fushu in jener Seuche für immer einschlief, lebte sie unter Fufengs Behandlung weiter – bis ihr Haar schneeweiß war.\n Jeden Frühling reiste sie nach Haojing, legte am Sarg einen Zweig Aprikosenblüten nieder, den sie aus Nebelkai mitgebracht hatte, und betete dann fromm zu Taihao: „Lord Argent, Lord Argent ... bitte nimm sie nicht fort. Bitte gib sie mir zurück.“\n \n ",
+          TextMapId = "UI_CHAR_DATA_TEXT_24010404"
+        },
+        UI_CHAR_DATA_TEXT_24010405 = {
+          ContentDE = "Fufeng würde nicht, wie in meiner Erinnerung, ewig jung bleiben. Sie ist die erste langlebige Zhuyou. Ich versuche mir oft auszumalen, wie sie alt aussehen würde – und kann es doch beim besten Willen nicht.\n Unser Haar hat nie die Gelegenheit, weiß zu werden – doch bei ihr würden sich an den Augenwinkeln nach und nach Falten bilden, ihr Gesicht würde runzlig wie die Schale einer Mandarine werden. Vielleicht würden ihre Gelenke Jahr um Jahr weniger gehorchen, ihr Rücken sich nicht mehr ganz aufrichten lassen, und sie könnte nicht mehr wie in der Kindheit überall hinaufklettern und losspringen ...\n Ich stellte mir alles bis ins Kleinste vor – und brachte doch kein klares Bild zustande. Aber ich habe es nicht eilig ... Wenn ich eines Tages wirklich alt bin, brauche ich nur den Spiegel schauen: Dann werde ich über hundert Jahre hinweg Fufengs Gesicht sehen – und auch das Gesicht, das sie hofft, ich würde werden.\n \n An jedem Tag nach meinem Erwachen denke ich über Mutters Worte nach: „Lebt dieses Leben auf die Weise, die ihr mögt.“\n Doch für mich – was für ein Leben ist überhaupt ein Leben, das ich „mag“?\n Lange Zeit hatte ich keine eindeutige Antwort. Aber ich denke: Vielleicht kann Fufengs Leben mir als Spiegel dienen.\n \n Heute, da die Menschen die Zhuyou nicht mehr brauchen, werde ich lange, ganz mir gehörende Zeit haben, um nachzudenken ... Entspringt meine Verbissenheit als Zhuyou dem Versprechen an meine Eltern und die Halle der Vergänglichkeit – oder einem bis ins Mark reichenden Glauben an die Neun Kapitel von Dafeng? Wenn ich einfach Fushu bin, nicht länger Zhuyou im Namen oder in der Rolle, was mag ich, was liebe ich, wofür bin ich bereit, ein ganzes Leben einzusetzen?\n \n In vielen Nächten gehe ich Fufengs Forschungen durch, die sie über Jahrzehnte unermüdlich fortgeführt hat. Früher dachte ich, sie sei nicht sehr geduldig – doch in ihren Notizheften finden sich die Aufzeichnungen über Arzneien und Krankheiten bis ins kleinste Detail, präzise und umfassend. So trocken es auch wirken mochte – sie fand Freude daran und ließ keinen einzigen Tag nach. Ihre Schrift ist beim Protokollieren noch ordentlich; doch sobald dort steht: „Der Patient ist genesen“, wird sie wild und schwungvoll. Und ich – hier und jetzt, nach über dreißigtausend langen Nächten – gerate gemeinsam mit ihr über den vergilbten Papierstapeln in Aufruhr.\n \n Bei dieser Gelegenheit öffne ich meine eigenen Erinnerungen und zähle all die aufrichtigen, glücklichen Augenblicke. So kann ich sicher sein: Die Freude, Patienten zu heilen, ist echt – warm und lebendig. Für mich, als eine zum kurzen Leben bestimmte Zhuyou, lebt eine Zukunft, die mir selbst verwehrt bleibt, in den geheilten Patienten weiter. Und für mich, die hundert Jahre geschlafen hat, sind es vor allem jene Momente, die mich zu Tränen rühren: zu sehen, wie Menschen nach der Heilung mit einem gesunden Körper ihr Leben weiterführen können. Denn ich habe den Schmerz erlebt, dass ein Leben abbricht – noch ehe es wirklich begann, endete es gegen den eigenen Willen: wie eine Seidenraupe, die im Kokon erstickt; wie eine Knospe, die ein Schneesturm herunterschlägt; wie eine Eintagsfliege, die niemals den Morgen sieht.\n \n Diese Art von Angst habe ich gekostet, und ich werde sie in diesem Leben kaum je vergessen. Von Herzen wünsche ich, dass niemand auf der Welt in eine solche Ausweglosigkeit gerät – alleine aus meinem eigenen Willen, nicht aus der Pflicht der Zhuyou-Familie Fu.\n Darum werde ich mein Leben weiterhin als Ärztin verbringen. Doch diesmal erlaube ich mir eine Zukunft, in der ich siebzig, sogar achtzig werden darf. Mit eigenen Augen will ich bezeugen, wie weit die Heilkunde in meiner Lebenszeit noch in die Ferne reichen kann.",
+          TextMapId = "UI_CHAR_DATA_TEXT_24010405"
+        },
+        UI_CHAR_DATA_TEXT_31010101 = {
+          ContentDE = "Lynn spricht am liebsten mit den Fäusten. Ganz gleich, mit wem sie es zu tun hat. Für sie gilt immer das gleiche Prinzip: „Du bist nicht meiner Meinung? Dann rede mit meinen Fäusten.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_31010101"
+        },
+        UI_CHAR_DATA_TEXT_31010102 = {
+          ContentDE = "Lynn folgt nur einem einzigen Grundsatz – niemandem zu schaden, der nicht Ziel einer Mission ist. Sie behauptete, sie habe sich diese Regel stillschweigend in den harten Jahren der Slums von Icelake auferlegt. Doch seit ihrem Eintritt in die Legion wusste sie nicht, wie lange sie daran festhalten konnte.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31010102"
+        },
+        UI_CHAR_DATA_TEXT_31010103 = {
+          ContentDE = "Lynn mag keine Kinder. Sie sagte einmal: „Wären diese lästigen Kinder nicht gewesen, würde ich heute nicht ich selbst sein.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_31010103"
+        },
+        UI_CHAR_DATA_TEXT_31010104 = {
+          ContentDE = "Lynn verlässt ihre Kameraden während Missionen nie, nicht weil sie freundlich oder mitfühlend ist, sondern weil es die Vorschriften verlangen. Sie muss dies tun, um sich einen besseren Ruf zu erarbeiten und ihren Weg für Beförderungen zu ebnen. Die Erschöpfung durch die Einsätze beschäftigt Lynns Gedanken oft sehr, sodass sie viele Sorgen hat. Daher fällt es ihr schwer, Fürsorge zu zeigen wie ihr Vorgesetzter, der seine Aufmerksamkeit unter allen aufteilt. Gelegentlich fragt Lynn engagierte neue Rekruten, ob sie es bereuen, an der Mission teilzunehmen, da dies ihr Leben kosten könnte.\n „Bereuen? Niemals. Das ist unsere Pflicht.“ ... Die Augen der Soldatin hatten ihren Glanz verloren, doch ihr Ton blieb sanft und hoffnungsvoll. „Major Lynn, du bist sich sicher, dass wir Erfolg haben werden, oder? Alle sagen, du scheiterst nie.“\n Verantwortung. Verantwortung für Familie, Arbeit und das Militär.\n Dieses Wort erdrückt Lynn. Sie fühlt sich wie ein Fischer, der gegen die Strömung rudert, festklammernd an schweren Rudern namens Verantwortung. Und sie wird in der Flut untergehen, wenn sie scheitert.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31010104"
+        },
+        UI_CHAR_DATA_TEXT_31010201 = {
+          ContentDE = "Major Lynn der 13. Legion genießt bei ihren Soldaten großes Vertrauen. Sie ist weder so streng wie Sibylle noch so gerissen wie Randy, besitzt jedoch ihren ganz eigenen Charme. Sie ist klar und entschlossen und lässt bei Einsätzen niemals ihre Kameraden im Stich. Sie klagt zwar oft über Überarbeitung, erfüllt aber jede Aufgabe zuverlässig. Als Anführerin hat sie schon viel Bitterkeit und Leid erlebt und versteht daher die Sorgen gewöhnlicher Soldaten sehr gut. Für ihre Leute wirkt Lynn dadurch ehrlicher und nahbarer als andere Offiziere.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31010201"
+        },
+        UI_CHAR_DATA_TEXT_31010202 = {
+          ContentDE = "Obwohl Lynn heute in der Legion großes Vertrauen genießt, war das zu Beginn keineswegs so. An ihr eigenbrötlerisches Wesen gewöhnt und mit einem straßentauglichen Auftreten, hob sie sich deutlich von den aus der Militärakademie stammenden Soldaten ab. Es kursierten sogar Gerüchte, sie habe Kameraden in der eigenen Legion grausam getötet und sich mit fragwürdigen Methoden in die 13. Legion eingeschlichen. Diese zweideutigen Geschichten schürten mit der Zeit die Ablehnung ihr gegenüber. Wohin Lynn auch ging, hörte sie spöttische Bemerkungen und kalte Stimmen. „Lynn? Ach, dieses opportunistische Miststück. Man sagt, sie habe ihre eigenen Leute ermordet ...“",
+          TextMapId = "UI_CHAR_DATA_TEXT_31010202"
+        },
+        UI_CHAR_DATA_TEXT_31010203 = {
+          ContentDE = "Während die gleichaltrigen Sola-Kinder im Imperium noch die Mittelschule besuchten, hatte Lynn bereits mit der Arbeit begonnen. Sie schürfte Phoxene in den Minen, schleppte Fässer in Tavernen und diente als Hausmädchen in wohlhabenden Haushalten. Später wurde sie zu einer Phoxjägerin – einer Auftragsmörderin. Ihr außergewöhnliches Talent und ihre präzisen Fähigkeiten verschafften ihr schnell einen Namen, und immer mehr Auftraggeber suchten sie auf. Aus einfachen Jagdaufträgen wurden zunehmend verdeckte Operationen. Manche umgingen sogar die Asphodel und baten Lynn direkt um private Aufträge.\n So war Lynn in den zwei Jahren zwischen ihrem achtzehnten und zwanzigsten Lebensjahr offiziell als „Botin“ bekannt. Nacht für Nacht erhielt sie „Briefe“ – dicke, glühende, manchmal beinahe wahnhafte Sehnsüchte der Auftraggeber, übergeben in vergoldeten Kutschen aus der Inneren Stadt. Lynn erfüllte diese Verlangen mit den Läufen ihrer Pistolen. Noch vor Tagesanbruch brach sie zu ihrer „Lieferung“ auf und kehrte oft erst nach vielen Tagen zurück, Wind und Schnee trotzend. In Camilla Scarlets Erinnerungen trat das Mädchen namens Lynn stets bei Einbruch der Dämmerung in die Taverne, schüttelte den Schnee von ihrem Mantel, kaufte das billigste Getränk und setzte sich allein ans Fenster, schweigend bis zum Ladenschluss. Einmal – eine seltene Ausnahme – sprach Lynn Camilla an und bat sie um ein Tuch. „Meine Familie soll das nicht sehen“, flüsterte sie. „Ich habe ... etwas ins Gesicht bekommen.“ Camilla betrachtete den dunkelroten Fleck und runzelte die Stirn. Ihr feiner Geruchssinn erkannte sofort den stechenden Geruch, der davon ausging. „Danke“, sagte Lynn, als sie das Tuch entgegennahm. Auf ihrem frostigen Gesicht zeigte sich ein kurzes, kaum merkliches Lächeln, dann verschwand sie wieder in Wind und Schnee.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31010203"
+        },
+        UI_CHAR_DATA_TEXT_31010204 = {
+          ContentDE = "Schusswaffen sind Lynns beste Freunde. Dennoch hatte sie zu Beginn keine Affinität zu Waffen. Ihr Gewicht bedeutete mühsame Pflege, ständiges Nachladen von Munition, überhöhte Preise auf dem Schwarzmarkt und ein ständiges Gefühl von Unbehagen und Beklommenheit.\n Doch angesichts der Macht einer Kugel sind alle gleich. Wenn sie eine Waffe in die Hand nahm, verschwand der Statusunterschied zwischen ihr und den Mächtigen. Lynn war nie als Gleichgestellte behandelt worden, doch die Schusswaffen verschafften ihr dieses Maß an Respekt.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31010204"
+        },
+        UI_CHAR_DATA_TEXT_31010301 = {
+          ContentDE = "Obwohl sie zu Sibylles engsten Vertrauten zählt, ist Lynn finanziell nicht gut gestellt.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31010301"
+        },
+        UI_CHAR_DATA_TEXT_31010302 = {
+          ContentDE = "Lynn nimmt häufig Nebenjobs an, um zusätzliches Geld zu verdienen – etwas, das in der 13. Legion streng verboten ist. Doch das kümmert sie wenig. Sie muss lediglich vermeiden, von ihren Vorgesetzten erwischt zu werden.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31010302"
+        },
+        UI_CHAR_DATA_TEXT_31010303 = {
+          ContentDE = "Mit der Zeit festigte Lynn ihren Platz innerhalb der Legion, und die Gerüchte wie auch das Getuschel über sie verstummten. Einige Kameraden ließen sich sogar von ihr inspirieren und dienten dem Reich mit größerer Hingabe. Manche gingen so weit, sie wegen ihres makellosen Schießens und der meisterhaften Bewältigung einer „unmöglichen“ Mission nach der anderen eine Heldin zu nennen.\n Doch diese blinde Bewunderung erfüllte Lynn nicht mit Stolz. Stattdessen war ihr Herz nur von Spott erfüllt. Eine Soldatin, die tötete, ohne mit der Wimper zu zucken; eine Täterin, die auf Landsleute schoss; eine Sklavin, die sich für Geld verkaufte – all diese Rollen konnte sie spielen, aber eine Heldin konnte sie niemals sein.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31010303"
+        },
+        UI_CHAR_DATA_TEXT_31010304 = {
+          ContentDE = "Lynn würde sich für immer an jenen klaren Morgen erinnern, als der erste Schrei der neugeborenen Zwillinge durch die eisigen Winde von Icelake drang und die sonst kühle Luft der vier Jahreszeiten durchbohrte.\n Die Geburt der Zwillinge kam auf Kosten ihrer gebrechlichen Mutter, deren Leben einer flackernden Kerze glich, und veränderte auch Lynns Leben drastisch. Doch dies war weder Glück noch Unglück, denn von diesem Tag an begann ihre Kindheit, während Lynns eigene Kindheit endete.\n Immer wenn Lynn an diese beiden Kinder dachte, die sie wie Bruder und Schwester behandelte, fühlte sie sich erschöpft. Früher oder später, so glaubte sie, würde sie egoistisch werden und diese beiden Lasten aus ihrem Leben stoßen. Erst dann, meinte sie, könnte sie endlich das Leben führen, das sie sich wirklich wünschte. Jeden Tag rügte Lynn sich selbst so, bevor sie zur Arbeit aufbrach. Sie musste so viel Geld wie möglich verdienen, bevor jener Tag kam. Auf diese Weise könnten die beiden Kinder ein anständiges Leben führen.\n Und dann müssten sie nicht wie sie selbst werden.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31010304"
+        },
+        UI_CHAR_DATA_TEXT_31010305 = {
+          ContentDE = "Lynn sprach niemals mit jemandem über ihren Kindheitstraum. Das einzige Mal, dass sie es erwähnte, war an einem Silvesterabend, als sie zusammen mit Kameraden, die ebenfalls nicht nach Hause konnten, gründlich betrunken war.\n „Früher habe ich davon geträumt, eine Heldin zu werden“, lallte Lynn halb bewusstlos.\n „Wow ... und jetzt, du und deine Träume ... seid wahrscheinlich so weit voneinander entfernt wie die Kaiserstadt und die Elysische Hauptstadt.“\n „Da hast du recht.“ Zum ersten Mal widersprach Lynn nicht dem spielerischen Spott ihres Vorgesetzten.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31010305"
+        },
+        UI_CHAR_DATA_TEXT_31010401 = {
+          ContentDE = "Die unbeliebte Lynn bewegte sich bei Einsätzen stets am Rand der Einheit und trennte sich häufig von unnötigen Teammitgliedern, um allein zu agieren. Diese Haltung versetzte ihren direkten Vorgesetzten Randy regelmäßig in Schrecken. Er murmelte ständig etwas von „anderen Zeiten“, „Teamgeist“ und „militärischer Disziplin“. Doch Lynn verstand seine Sorgen nicht. Wenn der Auftrag erledigt war, spielte es da wirklich eine Rolle, wer ihn vollbrachte und wie? Interessierte sich das Imperium tatsächlich für das Verhalten ein oder zweier Soldaten?\n „Ich brauche diesen ganzen Kram nicht“, fiel sie ihm ungeduldig ins Wort. „Solange die Mission gelingt, reicht das doch. Meine Waffe ist alles, was ich brauche.“\n Weder brauchte sie Kameraden noch Unterstützung. Allein zu kämpfen war Lynns Art zu überleben.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31010401"
+        },
+        UI_CHAR_DATA_TEXT_31010402 = {
+          ContentDE = "Es war nur ein gewöhnlicher Auftrag – oder zumindest hielt Lynn ihn anfangs dafür. Waren transportieren, so leicht war ihre Arbeit lange nicht mehr gewesen. Die Erleichterung darüber, endlich einmal durchatmen zu können, ließ sie sogar vergessen, sich zu fragen, warum ein einfacher Lieferauftrag so fürstlich bezahlt wurde.\n Doch es war eine Falle, gestellt von ihren Auftraggebern. Lynn war zweifellos eine Scharfschützin, genau wie sie es wollten – aber sie war letztlich nur ein Werkzeug. Und nun war der Moment gekommen, seinen „wahren Wert“ auszuschöpfen.\n Die Markierungen auf der Karte; eine Tarnung, die ihre Gestalt vollständig verbirgt; das klare Klicken eines einrastenden Magazins – Lynn bereitete sich wie immer gründlich vor. Doch am festgelegten Treffpunkt erwartete sie kein Empfänger, sondern eine Gruppe schwer bewaffneter Soldaten des Imperiums.\n „Ein Mädchen als Köder zu benutzen, um die eigene Flucht zu decken ... wirklich kein gentlemanhaftes Verhalten“, spottete der Anführer der Soldaten. „Aber junge Dame, vielleicht sollten wir uns für ein ernsthaftes Gespräch einen passenderen Ort suchen?“\n \n Lynn wusste nicht mehr, wie oft sie an diesem Tag den Abzug betätigt hatte. Irgendwann war das Magazin leer, und ihr Kopf wurde in den Boden gedrückt. Trotz der Aussichtslosigkeit zog sie mechanisch weiter am steifen Abzug, flehte innerlich, dieses winzige Stück Metall möge sie ein weiteres Mal retten.\n Doch wie sie schon oft gehört hatte ... Keine Beute entkam der 13. Legion.\n Dann sah sie ein blonder Offizier im Gegenlicht in eine Pfütze treten, seine Militärstiefel spritzten schmutziges Regenwasser auf. „Ich denke, du solltest meinen Vorschlag zuerst überdenken, Frau Lynn“, sagte dieser ruhig.\n \n „Sag mir warum. Warum willst du der Legion beitreten?“ fragte die Frau, die man Großkommandantin nannte, kalt durch die Glasscheibe des Verhörraums. „Randy, halt den Mund. Sie kann mir selbst antworten.“\n „Weil ...“ Lynn holte tief Luft und erinnerte sich an jenen Abend vor einem Monat, als sich das blutrote Leuchten des Sonnenuntergangs in einer Pfütze gespiegelt hatte.\n „... Weil der Sonnenuntergang an diesem Tag verdammt schön war“, antwortete sie leise. „Und ich will ihn einfach noch ein paar Mal sehen.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_31010402"
+        },
+        UI_CHAR_DATA_TEXT_31010403 = {
+          ContentDE = "Als Lynn klein war, war sie einst eine große Nummer auf den Straßen. Als Anführerin einer kleinen Bande gab sie Befehle und führte eine Gruppe gleichaltriger Kinder in „Schlachten“. Dort suchten sie Gerechtigkeit, indem sie Diebe aufhielten, Laken nähten und diese an Bettler verteilten sowie illegale Geschäfte der Reichen störten. Sie nannten sich die „Kämpfer der Gerechtigkeit“ und hatten das Ziel, alle Sünden und Verbrechen in den Slums zu vernichten. Nach einem Arbeitstag versammelten sie sich, um ihre Erfolge zu besprechen und ihre Moral für den kommenden Tag zu stärken. Wenn korrupte Wachleute kamen, um sie zu vertreiben, stellte sie sich immer vor die anderen Kinder, obwohl sie genauso gebrechlich war wie sie.\n Doch Lynn wollte mehr erreichen. Sie sagte ihren Gefolgsleuten, dass sie, wenn sie erwachsen sei, jene herrischen und unfähigen Leute in der Innenstadt vertreiben und Brot, Milch sowie Honig für alle erschwinglich machen würde. Sie würde die Heldin der Straßen sein.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31010403"
+        },
+        UI_CHAR_DATA_TEXT_31010404 = {
+          ContentDE = "Bei ihrer Rückkehr nach Icelake stellte Lynn fest, dass in ihrer Heimatstadt alles unverändert geblieben war.\n In der Nähe der vertrauten Statue auf dem kleinen Platz spielten Gruppen von zwei oder drei Kindern mit kleinen Steinen. Lynn mochte Kinder nicht besonders, doch das unschuldige Gesicht eines Mädchens erregte auf merkwürdige Weise ihre Aufmerksamkeit. Sie streckte die Hand aus und fragte nach dem Namen des Mädchens.\n Das zerzauste Kind antwortete nicht auf ihre Frage. Von Lynns eigenartigem Gesicht angezogen, fragte es sie: „Wer bist du? Ich habe dich noch nie gesehen!“\n Ihre wässrigen Augen richteten sich auf Lynns sorgfältig gearbeitete Uniform und die polierte Pistole an ihrer Hüfte. Voller Staunen und Neugier griff das Kind nach der Armschiene an Lynns Arm. Die Unschuld dieser Geste erinnerte Lynn an ihre eigene furchtlose Art als Kind. Sie versuchte, die Mundwinkel zu einem Lächeln zu heben, was ihr jedoch eher ungewohnt war.\n Doch dieser Moment wurde plötzlich durch ferne Rufe unterbrochen. Eine junge Frau eilte herbei und zog das Kind von Lynn weg. Sie trat ein paar Schritte zurück, verbeugte sich wiederholt mit einer Mischung aus Angst und Respekt, senkte sogar die Stimme: „Entschuldigen Sie, Frau Offizierin, sie versteht es nicht. Ich entschuldige mich für jegliche Beleidigung. Bitte verzeihen Sie ihr!“\n Die plötzliche Wendung ließ Lynn einen Moment lang stumm zurück, während sie die Frau musterte. Anhand ihrer hageren, blassen Konturen tauchte ein Fragment der Vergangenheit allmählich in Lynns Erinnerung auf. Die Mutter dieses Kindes war niemand anderes als eine Freundin, mit der sie früher auf den Straßen gespielt hatte.\n Die Freude über das Wiedersehen nach langer Zeit flackerte in Lynns Herz auf, doch die alte Freundin, kniend und zitternd vor ihr, verhinderte, dass sie Worte der Wiedersehensfreude aussprach. Sie waren nur wenige Armlängen voneinander entfernt, doch Lynn fehlte die Kraft, ihre Freundin hochzuhelfen. In der erstickenden Stille brachte Lynn nur einige Worte der Vergebung hervor:\n „... Es ist in Ordnung.“\n Im Panikmodus wandte sie sich ab, während sie die Frau ihr Kind zurechtweisen und das Mädchen weinen hörte. Dieses Geräusch fühlte sich an wie unzählige winzige Nadeln, die Lynns Herz durchbohrten.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31010404"
+        },
+        UI_CHAR_DATA_TEXT_31020101 = {
+          ContentDE = "Hilda nutzte einmal ihre unauffälligen Fähigkeiten, um an fünf aufeinanderfolgenden Tagen im selben Geschäft einzukaufen, und bekam jedes Mal den Neukundenrabatt.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31020101"
+        },
+        UI_CHAR_DATA_TEXT_31020102 = {
+          ContentDE = "Selbst unter anderen ausgezeichneten Dienstmädchen sticht Hilda hervor. Sie ist eine Allrounderin und glänzt beim Säubern, egal was oder wen es zu säubern gilt. Ihr Lieblingswerkzeug beim Säubern sind Schusswaffen. Immer wenn sie diese während der Arbeit benutzt, huscht ein leichtes Lächeln über ihr Gesicht, als stünde ihr der größte Spaß ihres Lebens bevor.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31020102"
+        },
+        UI_CHAR_DATA_TEXT_31020103 = {
+          ContentDE = "Hilda und Flora teilen eine Beziehung, die über das bloße Herrin-Dienstmädchen-Verhältnis hinausgeht. Privat sind sie auch Freundinnen, wählen gemeinsam Kleidung aus und probieren verschiedene Make-up-Stile aus. Es ist schwer, Hilda in diesen Momenten mit derjenigen zu vergleichen, die mitten im Gefecht ohne zu zögern ein Hagelgewehr an Kugeln abfeuert. Sie ist wie eine Tänzerin, die im Rhythmus der geladenen Kugeln durch die Luft wirbelt.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31020103"
+        },
+        UI_CHAR_DATA_TEXT_31020104 = {
+          ContentDE = "Als Dienstmädchen weiß Hilda genau, wo jedes einzelne Kleid von Flora liegt. Ebenso kennt sie alle umliegenden Straßen in- und auswendig, damit sie Flora schützen und sie im Notfall sofort in Sicherheit bringen kann. Unzählige solcher Kleinigkeiten bewahrt sie mühelos in ihrem Gedächtnis auf – sauber geordnet und einsortiert wie Schmuckstücke in einer Schatulle. Kurz gesagt: Ihr Gedächtnis ist makellos.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31020104"
+        },
+        UI_CHAR_DATA_TEXT_31020105 = {
+          ContentDE = "Hilda ist schließlich mit ihrem Leben zufrieden.\n Obwohl sie gelegentlich noch immer Gewalt einsetzt, um Probleme schnell zu lösen, und in ihrer freien Zeit größere Aufträge annimmt, um den Lebensunterhalt für sich und Flora zu sichern, besitzt sie nun vieles, wovon sie früher nur träumen konnte. Sie kann ihre Gefühle offen zeigen, ohne sich um ihre Identität sorgen zu müssen. Sie kann Flora als Freundin ansehen, nicht mehr nur als eine Überwachungsaufgabe. Doch vor allem lebt sie nicht länger, um anderen zu dienen und ihre Mission zu erfüllen. Endlich hat sie ihre eigene Identität zurückerlangt.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31020105"
+        },
+        UI_CHAR_DATA_TEXT_31020201 = {
+          ContentDE = "Die meisten Menschen tun sich schwer, Hilda wirklich kennenzulernen.\n Meist ist sie zusammen mit ihrer Herrin Flora zu sehen, doch die Aufmerksamkeit der Leute scheint stets auf Flora zu fallen. Hilda, die immer hinter ihr steht, bleibt oft unbeachtet. Der Eindruck der meisten Menschen von dieser Magd lässt sich zusammenfassen mit: „Da scheint jemand zu stehen ... oder vielleicht auch nicht? Aber wen interessiert’s? Reden wir lieber über die außergewöhnliche Frau Flora.“\n Als Magd liebt Hilda es, unauffällig zu bleiben und von anderen nicht bemerkt zu werden. Mit anderen Worten: Sie sorgt bewusst dafür, nicht aufzufallen. Deshalb senkt sie stets den Kopf, spricht leise, versteckt sich und steht im Schatten von Flora.\n Wenn Menschen also ihren Namen erfahren, dann nicht, weil sie Hilda wirklich kennen, sondern weil Hilda findet, dass sie ihren Namen zu kennen verdienen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31020201"
+        },
+        UI_CHAR_DATA_TEXT_31020202 = {
+          ContentDE = "Hilda genießt es, im Schatten von Flora zu stehen, weil es ihr ein Gefühl von Kontrolle über die Situation gibt.\n Sie schätzt das Gefühl, hinter einem Einwegspiegel zu stehen, im Dunkeln zu lauern und andere still, aber aufmerksam zu beobachten.\n Es gibt nur zwei Umstände, unter denen Hilda vor Flora treten würde.\n Der eine ist, wenn sie glaubt, dass die Person Flora helfen kann und sie in ihrem Namen verhandeln kann.\n Der andere ist, wenn sie wahrnimmt, dass die Person eine Bedrohung für Flora darstellt und sie diese beseitigen kann.\n Es ist jedoch nicht einfach, zwischen diesen beiden Situationen zu unterscheiden. Deshalb tritt Hilda in den meisten Fällen erst im allerletzten Moment vor.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31020202"
+        },
+        UI_CHAR_DATA_TEXT_31020203 = {
+          ContentDE = "Hilda ist nicht nur Floras Dienstmädchen. Wenn es nötig ist, nimmt sie auch Nebenaufträge von anderen an, um ihr Leben als Exilantin zu ergänzen. Dabei stellt sie jedoch drei Bedingungen für die Annahme solcher Aufgaben: Erstens darf die Aufgabe Flora nicht gefährden. Zweitens darf es keine überflüssigen Gespräche außerhalb des Aufgabenbereichs geben. Drittens – und scheinbar die einfachste, aber am schwersten zu erfüllende Bedingung – muss der Auftraggeber ihre hohe Provision bezahlen können.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31020203"
+        },
+        UI_CHAR_DATA_TEXT_31020301 = {
+          ContentDE = "Privat ist Hilda keineswegs zurückhaltend. Tatsächlich kann sie sogar ziemlich energisch sein. Das mag ein wenig überraschend erscheinen, ist aber gleichzeitig auch völlig nachvollziehbar.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31020301"
+        },
+        UI_CHAR_DATA_TEXT_31020302 = {
+          ContentDE = "Hilda hatte eine andere Identität, bevor sie Dienstmädchen wurde.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31020302"
+        },
+        UI_CHAR_DATA_TEXT_31020303 = {
+          ContentDE = "Hilda liebt es, Blumen zu schneiden, um ihre Emotionen zu beruhigen, denn sowohl der Beruf als Dienstmädchen als auch der als Agentin sind stressanfällig und könnten sogar Selbstverachtung hervorrufen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31020303"
+        },
+        UI_CHAR_DATA_TEXT_31020304 = {
+          ContentDE = "In Hildas kurzer Laufbahn als Agentin hat sie keinen einzigen Auftrag vollendet. Nicht, weil es ihr an Fähigkeit oder Willenskraft mangelte, sondern weil sie es schlicht nicht wollte.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31020304"
+        },
+        UI_CHAR_DATA_TEXT_31020305 = {
+          ContentDE = "Hilda beginnt ein neues Leben, wandert durch Landschaften, die sie nie zuvor gesehen hat, und spaziert durch Straßen, die sie früher nur aus Büchern kannte. Und doch beschützt sie Flora wie eh und je – aus dem Schatten heraus. Manchmal, wenn Hilda auf die zierliche Gestalt des Mädchens vor ihr blickt, steigt ein leicht aufdringlicher Gedanke in ihr auf: Sie glaubt, dass sie und Flora, auch wenn beide ihre eigenen Blutsverwandten haben, nun die wahre Familie füreinander geworden sind.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31020305"
+        },
+        UI_CHAR_DATA_TEXT_31020401 = {
+          ContentDE = "Hilda hatte eine helle und wohlhabende Kindheit.\n Jeden Tag erwachte sie in den Armen samtener Decken und schwelgte anschließend völlig sorglos in den Erinnerungen an ihre soeben geträumten Träume.\n Beim Frühstück entfernte sie sorgfältig die Krusten von ihrem Brot. Am Nachmittag kratzte sie etwas Sahne von ihren Kuchen, um sie weniger süß zu machen.\n Nachts las sie gern Gedichte unter dem riesigen Kronleuchter in ihrem Salon. Ob alte Mythen oder modische Liebesgedichte – sie las sie laut vor, egal was.\n Kurz gesagt, Hildas Leben glich einem großen Landschaftsgemälde, das ihrem süßen Lächeln ähnelte.\n Doch sie war sich auch bewusst, dass ihr Leben wie eine Leinwand war: unwirklich und leicht mit einem einzigen Stups zerstörbar.\n Einige entscheidende Elemente fehlten in ihrem Leben, wie ihre Eltern.\n Ihre Eltern waren Adlige des Imperiums und zugleich Soldaten der 4. Legion. Doch unter all dem waren sie Agenten.\n Tatsächlich waren nur sehr wenige Adlige bereit, der 4. Legion beizutreten. Das unaufhörliche, harte Training und die lebensgefährlichen Missionen waren nur zweitrangig. Noch unerträglicher war, dass sie, sobald sie Teil des weitreichenden Nachrichtennetzwerks wurden, unweigerlich darin verstrickt waren – ein Knotenpunkt in einem vielschichtigen Geflecht, aus dem es nahezu unmöglich war, sich zu befreien. Sie mussten das stabile Leben hinter sich lassen, Krägen tragen und zu Spielfiguren werden. Es sei denn, sie flehten verzweifelt um Beförderung auf Kosten von Freiheit, Würde und Leben.\n Hildas Vater, ein verarmter kleiner Adliger, befand sich in einer widersprüchlichen Lage: einerseits hohes Ansehen, andererseits kein Genuss der Annehmlichkeiten der hohen Gesellschaft. Dieser innere Konflikt zwang ihn, der 4. Legion beizutreten und in ein anderes Land zu reisen. Jeden Tag gekleidet in tadellos gebügelte Kleidung und mit einem Spazierstock in der Hand, nutzte er die Maske eines Regierungsbeamten, um an Festen von Beamten und reichen Magnaten teilzunehmen. Dort lauschte er den betrunkenen Gesprächen und entdeckte wertvolle Informationen für das Imperium mitten im scheinbar endlosen Geschwafel.\n Wie in anderen romantischen Agentengeschichten traf er im sechsten Jahr seines Auslandsaufenthalts eine rothaarige Dame. Mit dem Codenamen „Concerto“ gehörte auch sie zur 4. Legion und war innerhalb der Legion eine bewunderte Spezialagentin.\n Nächte, Trenchcoats, Kugeln, Parfum, windige Dächer, Feinde, Weingläser, ein rotes Ballkleid und nach viel Mühe gewonnene entscheidende Informationen.\n All diese romantischen Elemente vereinten sich zu einem lodernden Feuer.\n Und Hilda war das nachklingende Nachleuchten dieses Infernos – hell, intensiv, aber einsam. Sie lebte allein im alten Herrenhaus ihres Vaters und traf ihre Mutter einmal im Monat. Von ihrem Vater kannte Hilda nur seinen Namen und erinnerte sich vage an sein Aussehen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31020401"
+        },
+        UI_CHAR_DATA_TEXT_31020402 = {
+          ContentDE = "Im Alter von 12 Jahren erkannte Hilda schließlich die Besonderheit ihrer Familie und verstand, warum sie ihre Mutter nur an Vollmondnächten treffen konnte. Wenn das Mondlicht alles in seinem Schein badete, war es für Agenten schwierig, verborgen zu bleiben. Daher war es auch ein seltener Moment der Ruhe für diejenigen, die es gewohnt waren, im Schatten zu lauern.\n An solchen Tagen schloss Hilda ihr Gedichtebuch, ohne alle Lampen im Haus anzuzünden, um ihre Einsamkeit zu vertreiben. Stattdessen unterhielt sie sich auf dem Balkon mit ihrer Mutter. Meistens sprach Hilda über die Verse, die sie kürzlich gelesen hatte, während ihre Mutter gelegentlich eigene Beobachtungen teilte: Katzen, die auf fremden Straßen von Hunden gejagt wurden, Liebende, die sich unter hohen Stadtmauern zuflüsterten, Geschichten aus vergangenen Jahren, die nicht mit den Büchern übereinstimmten, und so weiter.\n Frau Concerto, Hildas Mutter, erzählte nie zu viel über sich selbst. Die Gefahren, denen sie ausgesetzt gewesen war, ließen sich schwer in Worte fassen, und für diejenigen, die zuhören, konnten sie sogar einen Hauch von Romantik tragen. Sie wollte nicht, dass ihre Tochter denselben Weg einschlug wie sie. Auch wenn sie ihren Beruf nicht hasste, bedeutete das nicht, dass sie wollte, dass andere erleben, was sie erlebt hatte.\n Ihr selten anwesender Vater sah jedoch anders, wenn er aus dem Ausland zurückkehrte. Er war der Meinung, dass Hilda die Schatten genauso umarmen sollte wie ihre Eltern und selbst Agentin werden müsse. Ein großer Teil seiner Motivation lag vielleicht in seiner aufrichtigen Loyalität zum Imperium, doch noch wichtiger war, dass Hilda, die in eine solche Familie hineingeboren wurde, kaum ein normales Leben haben konnte. Selbst wenn sie der Legion nicht beitreten würde, würden sie dennoch Wege finden, sie zu rekrutieren.\n Sobald die unterschiedlichen Meinungen ihrer Eltern aufeinandertrafen, wurde Hildas Leben wie eine zerbrochene Leinwand – zerbrechlich und schwer zu reparieren.\n An dem Tag, an dem Hilda ihren Vater zum zweiten Mal sah, hörte sie einen gewaltigen Streit zwischen ihren Eltern. Er war so laut, dass es klang, als würden die Wände des Hauses zusammenbrechen. Der Konflikt zwischen den beiden Agenten verlagerte sich plötzlich von einem verbalen Streit zu einer Auseinandersetzung im Wohnzimmer, die leicht die Aufmerksamkeit der nahegelegenen Legionäre auf sich ziehen konnte.\n In diesem Moment traf Hilda eine Entscheidung. Sie beschloss, ihre ungewöhnliche Familie zu heilen, und in ihrem Herzen begann der Samen des Abenteuers zu wachsen. Sie wollte ihre Eltern häufiger und an mehr Orten sehen, häufiger mit ihnen sprechen. Sie fantasiert sogar davon, verdeckte Missionen im Schatten gemeinsam mit ihren Eltern auszuführen, wobei die einzigen hellen Dinge vor ihr das Glitzern der Klingen und ihre besorgten Augen waren.\n Daher verabschiedete sich Hilda an einem verschneiten Abend im Alter von 15 Jahren von ihren Gedichten und ihrem hellen Zuhause und klopfte an die Tür, die in einen dunklen Ort führte. Dies war ein Fluchtplan mit einem klaren Ziel. Hilda begann, sich mit den Dingen vertraut zu machen, über die ihre Mutter in ihren täglichen Gesprächen gesprochen hatte: Waffen, Munition und Gerätschaften ...\n Am Ende trat sie offiziell der 4. Legion bei und wurde wie ihre Mutter: ein Dorn inmitten der Blumen, Gift im Honig und ein Schatten unter dem Mond.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31020402"
+        },
+        UI_CHAR_DATA_TEXT_31020403 = {
+          ContentDE = "Hilda konnte sich nicht mehr an die Einzelheiten ihrer ersten Begegnung mit Flora erinnern. Ihr Kopf war voller wichtigerer Angelegenheiten. Dies war ihre erste Mission, und das Ziel trug den Namen Flora. Sie war die Tochter eines Adligen, dessen Status so herausragend war, dass es schwer in Worte zu fassen war. Hildas Auftrag bestand darin, sich als Dienstmädchen zu verkleiden, die Tochter dieses Adligen genau zu beobachten, ihre Sicherheit zu gewährleisten und auf weitere Anweisungen zu warten.\n Hilda wiederholte die Missionsrichtlinien in ihrem Kopf und fühlte sich zugleich neugierig und leicht nervös. Sie passierte drei schwere Türen und erblickte schließlich ihr Ziel, umgeben von einem weiten Blumenmeer. Die Tochter schien in etwa in ihrem Alter zu sein.\n In diesem Moment verspürte Hilda, die sich selbst für eine fähige Agentin hielt, plötzlich einen Hauch von Panik. Ob es nun das unveränderte Gleichgültige in Floras Augen war, als diese sie sah, oder der schillernde Hof mit vergoldeten Verzierungen und hohen Mauern – alles überwältigte sie vollkommen.\n Als die wichtigen Personen, die Hilda dorthin begleitet hatten, den Hof verließen und die Türen hinter sich zuschlugen, blieben die beiden allein zurück. Flora, die bisher schweigsam geblieben war, brach langsam in ein Lächeln aus. Später erkannte Hilda, dass sie die erste Altersgenossin war, die Flora je getroffen hatte. Vielleicht war dies der Grund, warum die sonst so zurückhaltende Adlige nach so langer Zeit endlich lächelte.\n Von da an lebten die beiden wie eine typische Herrin und ihr Dienstmädchen in einem Hof, der einem goldenen Vogelkäfig glich, und genossen gemeinsam ein behagliches Leben. Sie lachten, spielten und kümmerten sich jeden Tag um die Blumen. Und an jedem mondlosen Abend zog Hilda ihre alte Agentenmontur an und berichtete über ihre Beobachtungen.\n Gelegentlich fühlte Hilda Schuldgefühle, weil sie Floras Vertrauen verriet, doch der Gedanke, dass ihr Handeln der Sicherheit Floras diente, trieb sie dazu, diese verdeckten Operationen fortzuführen, trotz ihrer Selbstverachtung.\n Außerhalb des goldenen Vogelkäfigs hatte sich Hildas Familie nicht grundlegend verändert. Während ihrer Ausbildung hatte sie unzählige Gerüchte über Frau Concerto gehört, doch sie war ihrer Mutter innerhalb der Legion nie begegnet. Was ihren Vater betraf, hatte sie überhaupt keine Informationen erhalten. Aufgrund seines Status konnte sie nicht herausfinden, ob er noch geheimere Missionen übernommen hatte oder ein unglückliches Ende weit von zu Hause gefunden hatte.\n Eines Abends, am Vollmond, kehrte Hilda nach Hause zurück und wartete auf ihre Mutter, die ihr immer einen Blumenstrauß oder kalte Desserts brachte. Nachdem Hilda Floras Dienstmädchen geworden war, verhielt sich Frau Concerto mehr wie eine gewöhnliche Mutter und versuchte wiederholt, Hilda davon zu überzeugen, die Legion zu verlassen und ein normales Leben zu führen. Obwohl sowohl Mutter als auch Tochter wussten, dass die 4. Legion weit entfernt von einem adligen Ball war, konnte ein würdevoller Ausstieg mit angemessener Etikette erreicht werden. Doch nun konnten sie nur noch allein tanzen, voneinander getrennt, ohne jemals innezuhalten.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31020403"
+        },
+        UI_CHAR_DATA_TEXT_31020404 = {
+          ContentDE = "Während eines längst überfälligen Heimaturlaubs erhaschte Hilda einen Blick auf ein handgeschriebenes Dossier auf dem Schreibtisch ihrer Mutter. Es war das erste Mal, dass sie ihre eigene Mutter als Frau Concerto bezeichnet sah. In diesem Moment entdeckte Hilda eine Seite ihrer Mutter, die sie bisher nie gekannt hatte. Innerhalb der mächtigsten Kreise des Palastes hatten bestimmte Kräfte die Unterstützung des stellvertretenden Kommandanten der 4. Legion gewonnen. Ihr Ziel war es, destabiliserende Individuen innerhalb des Imperiums auszuschalten – und das wichtigste Element dieses Plans war die Eliminierung von Flora. Und diejenige, die diese Aufgabe ausführen sollte, war niemand anderes als Frau Concerto selbst.\n Das überraschte Hilda nicht. Frau Concerto war eine Legende innerhalb der Legion. Sie scheiterte niemals an einer Mission. Doch während Hilda weiterlas, schmerzte sie der Inhalt zutiefst.\n „Die Wächterin des Ziels, Hilda, ist eine außergewöhnliche Agentin. Wenn sie überzeugt werden kann, sollte dies ausreichen, um den Erfolg dieser Mission zu gewährleisten. Hilda ist jedoch sehr emotional. Besteht sie darauf, Flora zu beschützen und verweigert die Kooperation, werden die notwendigen Maßnahmen ergriffen, um die Mission sicherzustellen.“\n Das dünne Dokument festhaltend, zitterten Hildas Hände unkontrollierbar. Sie stand nun kurz davor, wie eine gefangene Fliege im Netz einer Spinne zu sein. Ihre Mutter, die noch zuvor fröhlich mit ihr gelacht hatte, verfolgte in Wahrheit einen gnadenlosen Plan. Das ständige Drängen ihrer Mutter, die Legion zu verlassen, war nun das letzte Stück Wärme, das Hilda von ihr erhalten hatte. Nun musste sie eine Entscheidung treffen.\n Am anderen Ende dieses Albtraums stand ihre Herrin, ihre Freundin, vielleicht sogar jemand, den sie Familie nennen konnte – Flora.\n Hilda wusste nicht, was sie tun sollte. Nach einem hastigen Abschied von ihrer Mutter, die nicht länger drängte, die Legion zu verlassen, und offenbar zu einem Entschluss gekommen war, kehrte sie in den goldenen Innenhof zurück. Sie konnte die endlose Traurigkeit hinter ihrem Lächeln nicht länger verbergen, und Flora bemerkte dies sofort.\n Flora, die etwas Ungewöhnliches spürte, fragte Hilda, ob sie Anweisungen bezüglich ihrer selbst erhalten habe. Angesichts von Hildas offensichtlichem Schock begann Flora zu erklären. Innerhalb des goldenen Vogelkäfigs war alles bewusst inszeniert. Wie konnte Hilda wirklich nur ein Dienstmädchen sein? Über die unzähligen Tage, die sie zusammen verbracht hatten, war Hilda das einzige geworden, dem Flora in dieser Welt aus Betrug und Täuschung vertrauen konnte.\n Flora nahm Hildas Hand und umarmte sie warm, legte das schwerste Gewicht auf die Waagschale von Hildas schwankendem Herzen.\n Später besprachen sie in einem Meer aus Blumen drei Tage und Nächte lang alles. Schließlich entschieden sie, die Gelegenheit zu nutzen und den Blumen-Käfig für immer zu verlassen.\n An einem Morgen, als Hilda den Innenhof verlassen durfte, öffneten sich die Türen, die Flora sowohl beschützten als auch einsperrten. Verhüllt unter einem Schleier feinen Nebels, verließ Hilda den Ort an der Seite einer zierlichen Gestalt. Und als die Agenten, die den Hof überwachten, Floras Verschwinden bemerkten, erschienen gleichzeitig an sieben Marktplätzen der imperiale Hauptstadt prachtvoll gekleidete Mädchen. Sie alle sangen dasselbe Volkslied inmitten des geschäftigen Treibens, und das Aussehen jedes Mädchens stimmte perfekt mit Flora überein. Selbst Frau Concerto konnte nicht erkennen, welche die echte Flora war.\n Für einen Moment wurden die Bürger der imperiale Hauptstadt wie auch die Agenten in Chaos gestürzt. Zwischen dem Lärm bewegten sich die verkleidete Herrin und das Dienstmädchen leise in die entgegengesetzte Richtung der Menschenmenge. Dem von Hilda geplanten Weg folgend, verließen sie die Stadt und ließen die urbane Landschaft im purpurroten Licht der aufgehenden Sonne zurück.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31020404"
+        },
+        UI_CHAR_DATA_TEXT_31020405 = {
+          ContentDE = "Hilda konnte sich nicht mehr an das Gesicht ihrer Mutter erinnern, und ihr Vater war nichts weiter als eine vage, blasse Silhouette.\n Doch einige der legendären Erzählungen über Frau Concerto, die sie nach ihrem Eintritt in die Legion gehört hatte, waren ihr im Gedächtnis geblieben. Das gewöhnliche Volk kannte ihren Namen kaum, aber immer wenn irgendwo eine unerklärliche Explosion, ein Attentat oder eine Unruhe auftrat, wussten die Mitglieder der 4. Legion instinktiv, dass Frau Concerto ihre Mission erneut erfolgreich abgeschlossen hatte.\n Hilda fiel es schwer, diese Taten mit ihrer eigenen Mutter in Verbindung zu bringen, und vielleicht war es genau deshalb, dass gewisse Erinnerungen an sie bis heute erhalten geblieben waren.\n In ihren frühen Erinnerungen, die sorgfältig wie Blumenäste zurechtgestutzt waren, blieben nur die schönsten Fragmente bestehen: der Moment, als sie ihren Vater mit zehn Jahren zum ersten Mal sah; der Tag, an dem sie ein Wort lernte, das sowohl „süß“ als auch „sonderbar“ bedeutete; oder die Stunde, in der sie den Gedichtband zu Ende gelesen hatte, den ihre Mutter ihr mitgebracht hatte. Ihre Mutter war unendlich geduldig, mit einem sanften Lächeln auf den Lippen, und antwortete ihr hin und wieder liebevoll.\n Doch im Innersten ihres Herzens gab es ein Bild ihrer Mutter, das deutlicher war als alle anderen.\n Dieses Bild stammte aus jener Nacht, in der ihr Vater zum zweiten Mal zurückgekehrt war und sich heftig mit ihrer Mutter stritt. Hilda wusste nicht, ob es daran lag, dass sie das Gesicht ihrer Mutter so lange nicht gesehen hatte oder ob das Mondlicht zu schwach war – doch an diesem Abend fiel ihr plötzlich auf, dass das Gesicht ihrer Mutter ein paar Falten mehr trug, ganz wie die nicht mehr ganz frischen Blumen, die sie mitgebracht hatte. Als sie den sorgenvollen Ausdruck ihrer Mutter sah, begann Hilda erstmals über die Möglichkeit eines anderen Lebenswegs nachzudenken.\n Dieser Weg mochte voller Dornen sein, doch er konnte auch bedeuten, die unsichtbaren Fesseln zu sprengen, die sie an ihre Mutter banden.\n So fasste Hilda ihren Entschluss und warf sich in die Schatten. Doch entgegen ihrer Erwartung führten ihre Schritte nicht dazu, ihrer Mutter näher zu kommen – im Gegenteil: Sie sah sie immer seltener, und selbst die Erinnerungen an die früheren gemeinsamen Momente wurden brüchig. Keine Gedichte mehr, keine Lieder – nur noch Rat und Unzufriedenheit.\n Als schließlich dieses verhängnisvolle Dokument vor ihr lag, zerfiel das Bild ihrer Mutter in Hildas Herzen zu Staub, wie eine vertrocknete Blume.\n Danach sah Hilda ihre Mutter nie wieder. Sie hörte nur, dass diese bei einer entscheidenden Mission versagt hatte und nicht mehr die bewunderte Agentin war, die sie einst in der Legion gewesen war. Sie wurde in ein anderes Land versetzt, und nur wenige Menschen bekamen sie je wieder zu Gesicht.\n Manchmal fragte sich Hilda, ob die einst unfehlbare Frau Concerto jenen entscheidenden Plan aus Nachlässigkeit ausgelassen hatte – oder ob es Absicht gewesen war. Doch sie wollte die Antwort nicht wissen. So wenig, wie sie noch wissen wollte, wo ihre Eltern waren, wen sie trafen oder wie sie lebten.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31020405"
+        },
+        UI_CHAR_DATA_TEXT_31030101 = {
+          ContentDE = "Bald sprach sich herum, dass der Ball, der an Yales Gürtel hing, sprechen konnte. Obwohl dieser Kontinent von allen möglichen Daimons bewohnt war, war niemand auf den Schock vorbereitet, plötzlich ein kleines, grinsendes Kugelchen „zivilisierte“ Sätze in einer scharfen, beißenden Jungenstimme ausspucken zu sehen. Doch ebenso überraschend wie der sprechende Ball war Yales Reaktion – seine gestammelten Entschuldigungen offenbarten oft Bruchstücke der Wahrheit: Der Ball, liebevoll „Kleiner Knaller“ genannt, war tatsächlich eine von ihm selbst gebaute Bombe, die die Seele eines gewissen Oliver enthielt. Trotz all der gemeinsamen Zeit stolperte Yale noch immer über seine Worte, sobald Oliver den Geschmack eines Kunden scharf kritisierte.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31030101"
+        },
+        UI_CHAR_DATA_TEXT_31030102 = {
+          ContentDE = "Yale verabscheute schon immer den Geruch von Krankenhäusern – den stechenden Duft von Desinfektionsmitteln und den aufdringlichen Geruch, der aus Fläschchen mit Tränken und Arzneien strömte. Selbst die Kräuterdüfte, die die Apotheker aus Huaxu an sich trugen, ließen ihn instinktiv auf Abstand gehen, obwohl er wusste, dass es unhöflich wirkte. All diese Gerüche riefen Erinnerungen an die Alchemie-Akademie wach – an den hartnäckigen Duft vergangener Albträume.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31030102"
+        },
+        UI_CHAR_DATA_TEXT_31030103 = {
+          ContentDE = "Zuerst eine senkrechte Linie mit einem kleinen Haken am Ende – das ist die Nase.\n Darunter einen langen Bogen für den Mund.\n Und schließlich oben zwei kleine schwarze Punkte – die dienen als Augen.\n Damit ist der letzte Strich an Kleinem Knaller, Olivers körperlicher Gestalt, vollendet. Trotz Olivers ständigen Beschwerden über Yales Zeichnungen betrachtet Yale diese Bomben als seine eigenen Schöpfungen.\n Ja, Schöpfungen.\n Dachte Yale bei sich, als er eine der Bomben aufhob – so wie Herr Jones einst voller Erwartung über seinen Fortschritt wachte und unzählige Hoffnungen in ihn setzte. Und doch wusste Yale ganz genau, dass er anders war als Herr Jones.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31030103"
+        },
+        UI_CHAR_DATA_TEXT_31030104 = {
+          ContentDE = "Yale hatte lange geglaubt, dass er für immer ohne Freunde bleiben würde. Die Alchemie-Akademie war ein Ort kalter Sterilität – Korridore, die in grelles weißes Licht getaucht waren, Forscher in strahlend weißen Laborkitteln und hohe Stapel von Versuchsberichten auf jedem Schreibtisch. Dieses monochrome Dasein legte sich wie ein Schleier über ihn und erfüllte die Tage seiner Erinnerungen.\n In dieser leb- und farblosen Umgebung sehnte sich Yale nach einem Freund. Seine zeichnerischen Fähigkeiten waren begrenzt – das Beste, was er zustande brachte, war ein Ball, oder vielmehr ein etwas unförmiger Kreis. Zunächst wirkte der Kreis im Widerschein des weißen Lichts auf dem weißen Papier kalt und abweisend, bis Yale einen Hauch Orange hinzufügte – die erste kräftige Farbe in seinem Leben.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31030104"
+        },
+        UI_CHAR_DATA_TEXT_31030105 = {
+          ContentDE = "Im Vergleich zu Yales zweifelhaftem Kunstgeschmack war es für Oliver viel quälender, dass Yale manchmal dachte: „Ich sollte den Körper an Oliver zurückgeben.“ Darüber stritten sie endlos, manchmal redeten sie tagelang nicht miteinander.\n Gelegentlich murrte Yale, Oliver wisse seine guten Absichten einfach nicht zu schätzen. Was dich jedoch wirklich faszinierte, war weniger ihr Streit als vielmehr die überraschende Eloquenz, die Yale zeigte, wenn er sich über diese Dinge beschwerte.\n Oliver hatte es nie ausgesprochen, und wahrscheinlich würde er es niemals tun, aber du spürtest es deutlich:\n Yale, der in der Werkstatt von Snap ’n’ Spark am Werktisch sitzt, aus Kork neue Spielzeuge schnitzt und sie anschließend mit Aquarellstiften mit seinen eigenen kleinen Kritzeleien verziert, während Oliver energische Kommentare beisteuert – dieses friedliche Leben war der Ausgang ihrer Geschichte, der Oliver am meisten erfüllte.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31030105"
+        },
+        UI_CHAR_DATA_TEXT_31030201 = {
+          ContentDE = "Eingebettet in einer abgelegenen Ecke von Scarletriver steht still ein heruntergekommenes kleines Spielwarengeschäft namens „Snap 'n' Spark“. Merkwürdigerweise, anders als bei gewöhnlichen Spielzeugläden, die frühe Besucher mit offenen Türen begrüßen, blieb dieses selbst bei Tageslicht fest verschlossen.\n Einige besonders neugierige Kinder hatten einst den Mut aufgebracht, die Tür zu öffnen, und jedes von ihnen ging mit recht ungewöhnlichem Spielzeug nach Hause – vermutlich als Belohnung für ihren Mut. Unter diesen Schätzen fanden sich Kaleidoskope, die die Augen blendeten, hölzerne Entchen, die wackelten und über den Boden watschelten, und am faszinierendsten von allem – ein magischer „Lutscher“. Wenn sein Stiel entzündet wurde, schoss er mit einem Zischen in die Höhe und explodierte in ein prächtiges Feuerwerk, das begeistertes Staunen der Kinder hervorrief.\n Doch noch geheimnisvoller als das skurrile Spielzeug war der Ladenbesitzer selbst: Yale, ein kleiner Junge, der stets von einer Aura des Rätselhaften umgeben zu sein schien. Seltsamerweise behaupteten viele, aus dem Laden zwei unterschiedliche Stimmen gehört zu haben, was das Mysterium noch verstärkte. Der Legende nach schlich sich in einer mondlosen Nacht eine Gruppe unerschrockener Kinder durch ein kaum gesichertes Fenster hinein. Ihr Abenteuer endete abrupt, als sie in blankem Entsetzen nach Hause flohen.\n „Der orange ... Ball ... Er konnte ... sprechen ... und ... er ... hat mich angeschrien ...“ erzählte ein Kind zwischen Schluchzern, bemüht, durch die Tränen Luft zu holen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31030201"
+        },
+        UI_CHAR_DATA_TEXT_31030202 = {
+          ContentDE = "An einem kalten Wintermorgen entdeckten die Bewohner von Scarletriver zum ersten Mal den seltsamen Jungen namens Yale. Die Frau des Bäckers fand ihn, als sie ihren Ofen reinigte. Ein bewusstloser Junge, der hinter ihrem Haus lag. Seine Kleidung war zerrissen, seine Haut von Brandwunden gezeichnet – er wirkte wie ein kleines Tierchen, das versehentlich durch die glühenden Kohlen ihres Brotbackofens gerollt war. Zusammengerollt wie ein Bündel, erinnerte er zugleich an ein verängstigtes Neugeborenes.\n Auf ihren Ruf hin versammelten sich die Leute des Ortes rasch. Einige brachten frische Tücher, andere Salben gegen Verbrennungen, und ein paar murmelten leise Gebete für die schnelle Genesung des Jungen.\n Ein junger Mann bemerkte etwas Merkwürdiges: Am Kragen des weggeworfenen weißen Hemdes des Jungen waren die Buchstaben „SPATHATOI“ eingestickt. Als einer der wenigen des Dorfes, die lesen konnten, erkannte er, dass diese Buchstaben für die Spathatoi-Alchademie standen – einen Zweig des Militärs.\n Nach langem Zögern fasste er einen Entschluss: Er warf das Hemd in das lodernde Feuer. Während die Flammen das zerschlissene Kleidungsstück verzehrten, schien auch die dunkle Vergangenheit des Jungen darin zu verglühen.\n Kurz darauf eröffnete in Scharlachfluss ein kleines, verwittertes Spielzeuggeschäft. Der neue Ladenbesitzer, stets hinter dem Tresen zusammengekauert, verbrachte seine Tage damit, sonderbare Spielzeuge zu erfinden und an ihnen herumzutüfteln.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31030202"
+        },
+        UI_CHAR_DATA_TEXT_31030203 = {
+          ContentDE = "Spät in der Nacht des 13. Juli kam es in der Spathatoi-Alchademie, die sich im Außenposten der 9. Legion am Stadtrand von Scarletriver befindet, zu einer verheerenden Explosion, gefolgt von einem gewaltigen Brand, der sofort die Aufmerksamkeit der gesamten Stadt auf sich zog.\n Augenzeugen berichten, dass das Feuer mit erschreckender Heftigkeit ausbrach und dichte Rauchschwaden in den Himmel stiegen, während die Flammen rasch auf angrenzende Gebäude übergriffen. Die Lage vor Ort wurde als extrem gefährlich beschrieben. Die 9. Legion reagierte umgehend und leitete eine Notfallrettung ein, während sich Anwohner spontan zusammenschlossen, um Evakuierungen und den Transport lebenswichtiger Güter zu unterstützen. Nach intensiven Bemühungen, die sich über einen ganzen Tag und eine ganze Nacht erstreckten, konnte das Feuer schließlich unter Kontrolle gebracht werden. Das vollständige Ausmaß der Opfer wird derzeit noch ermittelt.\n Erste Untersuchungen deuten darauf hin, dass der Unfall durch unsachgemäßen Umgang mit hochflüchtigen Materialien während eines laufenden Forschungsprojekts in der Spathatoi-Alchademie verursacht wurde, die unter dem Befehl der 9. Legion steht. Die fehlerhafte Handhabung führte zur Freisetzung gefährlicher Substanzen, die sich entzündeten und eine großflächige Explosion auslösten, wodurch schwere Schäden entstanden. Mehrere an dem Vorfall beteiligte Personen wurden zur Verantwortung gezogen und befinden sich derzeit in Untersuchung.“\n — Scarletriver Gazette, Ausgabe Nr. 1012, Titelseite",
+          TextMapId = "UI_CHAR_DATA_TEXT_31030203"
+        },
+        UI_CHAR_DATA_TEXT_31030204 = {
+          ContentDE = "Ein renommierter Psychologe wurde einst eingeladen, eine psychologische Untersuchung an einem Testsubjekt der Spathatoi durchzuführen. Aufgrund von Vertraulichkeitsvorschriften kommunizierten der Psychologe und das Subjekt nur durch einen blickdichten Vorhang miteinander, der visuell, nicht jedoch akustisch trennte. Die Stimme des Jungen, leicht schüchtern, drang von hinter dem Vorhang herüber. Trotz seiner Bemühungen konnte der Psychologe ein leichtes Sprachhemmnis erkennen.\n „Lass uns beginnen“, wies der Psychologe an. „Ich werde ein Wort sagen, und du sollst das Erste nennen, was dir dazu einfällt. Denk nicht zu lange nach, antworte einfach.“\n „O... Okay.“\n „Morgen.“\n „V... Vorhang.“\n „Kleider.“\n „Weiß.“\n „Experimente.“\n „Warten.“\n „Freiheit.“\n „Wände.“\n „Apfel.“\n „Hälfte.“\n „Yale.“\n „Ein guter Junge.“\n „Noch ein letztes Wort – dein Forscher, Jones.“\n Beim Erwähnen dieses Namens verstummte der sonst so schnelle Junge plötzlich. Der Psychologe hielt seinen Stift mitten in der Notiz inne. Dann drang ein heftiger, bitterer und zorniger Ruf durch den Vorhang:\n „Jones! Dieser verdammte Schuft!!!“\n Als der Psychologe kurz davor war, Hilfe zu rufen, aus Sorge, das Subjekt könnte die Kontrolle verlieren, folgte ein schmerzverzerrtes Stöhnen. Dann kehrte die schüchterne, stotternde Stimme des Jungen zurück:\n „Entschuldigen Sie, Herr ... ich habe das nicht verstanden. Könnten Sie es bitte w... wiederholen?“\n Der Psychologe atmete leise aus, erleichtert, aber weiterhin vorsichtig, und wiederholte die Frage mit Bedacht:\n „Dein Forscher ... Jones.“\n Dieses Mal antwortete der Junge ohne Zögern:\n „Vater.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_31030204"
+        },
+        UI_CHAR_DATA_TEXT_31030205 = {
+          ContentDE = "Der Forscher, ein Mann über fünfzig, lag auf seinem Krankenhausbett, seine Gliedmaßen fast bis zur Unkenntlichkeit verkohlt, schwerste Verbrennungen am ganzen Körper. Die Explosion hatte zudem innere Organe zerfetzt und Blutungen verursacht, und die Haut in seinem Gesicht war verfault und löste sich ab, sodass das rohe Zahnfleisch freilag.\n Im Notfalltrakt des Provinzkrankenhauses Flagson konnten die Pflegekräfte keinen einzigen Angehörigen erreichen. Der Forscher namens Jones Bryan hatte im Krieg seine Eltern, Freunde und sogar seine Ehefrau und Kinder verloren. So war niemand an seiner Seite, als er im Sterben lag.\n Nach Aussage des medizinischen Personals zeigte Jones Bryan keinerlei Angst vor dem Tod. Stattdessen spielte ein verstörendes Lächeln um seine Lippen, sein Mund zitterte unaufhörlich.\n Wer sich vorbeugte, um seine letzten Worte zu hören, vernahm nur einen einzigen Satz – immer und immer wieder:\n „Das Experiment ist ... gelungen.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_31030205"
+        },
+        UI_CHAR_DATA_TEXT_31030301 = {
+          ContentDE = "Bei einer Gelegenheit gelang es einem besonders ungezogenen Kind, Yales Bombe „Kleiner Knaller“ zu schnappen, während er abgelenkt war. Das Kind, überzeugt davon, dass es mit zahlenmäßiger Überlegenheit die Oberhand gewinnen könnte, versammelte seine Freunde, um der ungezogenen Bombe eine Lektion zu erteilen. Doch egal wie sehr sie sie verspotteten oder beschimpften, die Bombe blieb regungslos. Später flüsterten manche, vielleicht sei Olivers Seele gar nicht in der Bombe, sondern in Yale selbst.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31030301"
+        },
+        UI_CHAR_DATA_TEXT_31030302 = {
+          ContentDE = "Tief in Yale schlummert Olivers Bewusstsein. Wenn Yale zu Oliver wechselt, umfasst er die Bombe mit seiner rechten Hand. Befindet sie sich jedoch in seiner linken, bedeutet das, dass weiterhin Yale die Kontrolle hat.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31030302"
+        },
+        UI_CHAR_DATA_TEXT_31030303 = {
+          ContentDE = "Manchmal, kurz vor dem Schlafengehen, saß Oliver am Fenster des Balkons und spielte leise ein Schlaflied auf seiner Knochenflöte – eine Melodie, die nur unter den Charon bekannt war. In solchen Momenten war Oliver ungewöhnlich still, sodass man ihn kaum von Yale unterscheiden konnte.\n Wann oder wo Oliver gelernt hatte, die Flöte zu spielen, würde für Yale jedoch für immer ein Rätsel bleiben.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31030303"
+        },
+        UI_CHAR_DATA_TEXT_31030304 = {
+          ContentDE = "Yale hatte einmal von einem bestimmten Tierverhalten gelesen: vom Kuckuck, der dafür bekannt ist, seine Eier in die Nester anderer Vögel zu legen. Nach dem Schlüpfen stößt das Kuckucksküken die rechtmäßigen Nachkommen aus dem Nest, um die ungeteilte Aufmerksamkeit und alle Ressourcen der Pflegeeltern für sich allein zu beanspruchen.\n Obwohl Yale verstand, dass dies ein Vorgang der Natur war, regte sich in ihm dennoch eine unerklärliche Wut. Parasitismus, Nahrung und Schutz von einem anderen zu nehmen, verdiente nichts als Verachtung. Nicht die unschuldigen Küken sollten leiden und fallen, sondern die betrügerischen Kuckucke.\n Diese Auffassung blieb lange Zeit unverändert in ihm bestehen, selbst dann noch, als er eines Tages in der Zukunft auf ein vertrauliches Dokument stieß, das den Titel trug: „Protokoll des Experiments zur kontrollierten Ersatzpersönlichkeit“.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31030304"
+        },
+        UI_CHAR_DATA_TEXT_31030305 = {
+          ContentDE = "Protokoll des Experiments zur kontrollierten Ersatzpersönlichkeit: Yale\n Versuchssubjekt: Primäre Persönlichkeit – Oliver / Ersatzpersönlichkeit – Yale\n Standort: Die Spathatoi der 9. Legion, Scarletriver\n Forschungsteam: Dr. Jones Bryan und Mitarbeiter\n Ziel: Die Zähmung des mächtigen, aber übermäßig aggressiven Charons durch die Erschaffung einer hochgradig unterwürfigen Ersatzpersönlichkeit. Diese Ersatzpersönlichkeit ist darauf ausgelegt, die magischen Fähigkeiten der primären Persönlichkeit zu erben und sie effektiv zu unterdrücken. Bei Erreichen der Kontrollstandards können diese Entitäten in Serie produziert und für Kampfoperationen eingesetzt werden.\n Risikomanagement: Sollte die Ersatzpersönlichkeit die primäre Persönlichkeit nicht kontrollieren können, hat sie diese nach vollständiger Beherrschung all ihrer Fähigkeiten zu eliminieren. Bei Versagen der Kontrolle oder Eliminierung leitet das Forschungsteam ein Terminierungsprotokoll für das Subjekt ein.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31030305"
+        },
+        UI_CHAR_DATA_TEXT_31030401 = {
+          ContentDE = "In einem strahlend weißen Raum stand ein weißer Tisch, auf dem Yale in einem weißen Krankenhauskittel lag. Ihm gegenüber stand ein Mann in einem Laborkittel. Auf dem Tisch waren schwarze mechanische Teile verstreut.\n Yales Erinnerungen begannen stets mit der kalten, schroffen Anweisung des Mannes im weißen Kittel: „Bau sie zusammen.“ Darauf folgte Yales leerer Blick, während er mit den Bauteilen hantierte, und es endete mit dem Krachen der Tür, wenn der Mann enttäuscht den Raum verließ.\n Yale hatte keine Ahnung, wie oft diese Sequenz in seinem Kopf abgelaufen war, noch konnte er die verstrichene Zeit messen. In diesem Reich ewiger Monotonie war das Konzept von Zeit zu einer unbedeutenden Abstraktion geworden.\n Während dieser endlosen Momente hegte Yale bisweilen die Vorstellung, dass vielleicht die ganze Welt eine Illusion sei, ein Konstrukt, das nur von ihm und dem Mann in Weiß bewohnt wurde. In seinem Geist konnte er sich an keine andere Stimme erinnern.\n Das änderte sich an dem Tag, als eine seltsame Stimme die Stille durchbrach und die erstarrte Zeit wieder in Bewegung setzte.\n Er erinnerte sich lebhaft an das erste Wort, das die Stille zerschnitt – in scharfem, verächtlichem Ton:\n „Billigkopie.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_31030401"
+        },
+        UI_CHAR_DATA_TEXT_31030402 = {
+          ContentDE = "„Billigkopie.“\n Yale erinnerte sich lebhaft an das erste Mal, als er diese Stimme hörte – es fühlte sich an, als würde ein Kieselstein plötzlich in einen stillen See geworfen und konzentrische Wellen durch seinen Geist treiben. Er fuhr aus dem Schlaf hoch und starrte erneut auf dieselben sterilen, weißen Wände.\n Der Mann im weißen Laborkittel erschien wieder, die vertrauten schwarzen Bauteile in den Händen, seine Stimme so kühl wie immer: „Bau sie zusammen.“ Es war derselbe Befehl, den Yale in seinen wiederkehrenden Erinnerungen unzählige Male gehört hatte.\n Yale nahm die Teile auf, drehte sie in seinen Händen. Doch diesmal war etwas anders – er fühlte sich nicht mehr verloren. Es war, als hätten seine Hände ein eigenes Gedächtnis. Die filigranen Komponenten fügten sich so mühelos ineinander wie Bausteine aus Kindertagen, jedes Stück rastete perfekt ein, als hätte Yale ihre Anordnung schon immer gekannt.\n Als das letzte Teil einrastete, wie ein Schlüssel, der sich im Schloss dreht, starrte Yale ungläubig auf den kleinen schwarzen Gegenstand, den er erschaffen hatte. Ihm gegenüber ließ der Mann in Weiß seinen Stift fallen. Zum ersten Mal glomm in seinen sonst so gleichgültigen Augen eine wilde, gierige Freude auf, wie ein ausgehungerter Geier, der ein sterbendes Lamm wittert. Er zog Yale fest an sich und murmelte immer wieder: „Wundervoll. Du hast es geschafft. Einfach wundervoll.“\n Endlich fasste Yale den Mut, die Frage zu stellen, die ihm schon lange auf der Seele brannte: „Wer bist du?“\n „Ich bin ein Forscher“, antwortete der Mann. „Du kannst mich Herr Jones nennen.“\n „Herr Jones, Forscher“, wiederholte Yale lautlos vor sich hin und ließ die Worte in seinem Geist sickern. Nach einem Moment stellte er eine weitere Frage: „Wer bin ich?“\n „Du bist Yale“, erwiderte Herr Jones. „Du bist meine Schöpfung.“\n Yale nickte und schüttelte dann verwirrt den Kopf. Damals hatte er keinerlei Vorstellung davon, was es wirklich bedeutete, eine „Schöpfung“ zu sein.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31030402"
+        },
+        UI_CHAR_DATA_TEXT_31030403 = {
+          ContentDE = "Bevor Yale Olivers Namen kannte, war ihr Verhältnis von Spannungen durchzogen.\n Einerseits war die gelegentlich in seinem Kopf auftauchende Stimme alles andere als freundlich. Selbst ein so isoliertes Kind wie Yale konnte sich beim besten Willen nicht dazu durchringen, mit ihr Freundschaft zu schließen. Tatsächlich wäre unfreundlich sogar eine Untertreibung: Die Stimme beschimpfte ihn nicht nur regelmäßig als „Billigkopie“, sondern durchsetzte ihre Tiraden auch mit grausamen, schneidenden Flüchen, als hätte Yale unverzeihliche Sünden begangen, die selbst das Nebelmeer nicht reinwaschen konnte.\n Gekränkt und frustriert über diese grundlosen Anschuldigungen versuchte Yale oft, etwas entgegenzusetzen. Doch wegen seines Stotterns brachte er nur ein hilfloses „D... D... Du ...“ heraus, was Oliver selbstverständlich zu noch gnadenloserer Häme anstachelte.\n Was ihre Feindseligkeit jedoch wirklich vertiefte, war Herr Jones’ Reaktion, als er von der Existenz dieser Stimme erfuhr. Der sonst so strenge Mann verfiel in eine befremdliche Raserei, packte Yales schmale Schultern, seine Finger zitternd und so fest, dass sie schmerzhaft in das Fleisch des Jungen gruben.\n „Du hast seine Stimme gehört, ja?! Sag mir, dass du sie gehört hast! Du darfst nicht gegen ihn verlieren, mein Junge, meine kostbare Schöpfung. Du musst ihn beherrschen, bezwingen und vernichten! Hörst du mich? Antworte mir! Sofort!!!“\n Herr Jones’ Gesicht war vor Besessenheit entstellt, seine Stirn presste sich gegen Yales, Speichel spritzte auf das Gesicht des Jungen. Für Yale war es ein zutiefst verstörendes Erlebnis. Erst viel später, als eine Assistentin ihm verschiedene Gefühle erklärte, begriff er vage, dass das, was er empfand, Angst war – eine tief sitzende, alles durchdringende Angst. Verwirrt konnte Yale nicht verstehen, warum Herr Jones so heftig reagierte, und schob es schließlich auf die merkwürdige Stimme in seinem Kopf.\n Dieses angespannte Verhältnis blieb lange bestehen, bis die Assistentin eines Tages einen Plattenspieler in Yales Zimmer brachte.\n Der Plattenspieler brachte einen Hauch von Farbe in Yales sonst schwarz-weiße Welt, und daher liebte er ihn aufrichtig. Jede Nacht freute er sich darauf, welche neue Schallplatte man einlegen würde und welche Melodien den Raum füllen würden.\n Oliver hingegen hegte eine tiefe Abneigung gegen den Plattenspieler – oder vielmehr gegen das stetige Knistern, das ihn nur noch gereizter und unruhiger machte. Als Yale dies bemerkte, kam ihm ein seltsamer Gedanke: Vielleicht fürchtete die Stimme in seinem Kopf dieses Knistern.\n Yale wusste nur allzu gut, wie es sich anfühlte, Angst zu haben. Dieses schreckliche Gefühl, das einen verzweifelt zur Flucht drängt. Also hielt er die Assistentin beim nächsten Besuch davon ab, die neue Platte abzuspielen.\n „Gefällt dir diese Platte nicht mehr?“\n „D... Doch ... aber ich ... ich will sie einfach nicht mehr hören.“\n Da Yale unfähig war zu lügen, konnte er seinen plötzlichen Sinneswandel nicht erklären. Schließlich gab die Assistentin nach und nahm die Platte wieder mit.\n In dieser Nacht fiel es Yale schwerer als sonst, ohne die beruhigende Musik in den Schlaf zu finden. Halb im Dösen hörte er ein seltsames, aber vertrautes Summen – weich und melodisch, wie ein sanftes Schlaflied für ein neugeborenes Kind.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31030403"
+        },
+        UI_CHAR_DATA_TEXT_31030404 = {
+          ContentDE = "Yale versuchte niemals, den schwarzen Gurten zu entkommen, die ihn an den Operationstisch fesselten. Er verstand nicht, warum sie ihn so fest fixieren mussten – er hatte keinerlei Absicht, sich zu wehren.\n Auf dem Boden lagen Dutzende von Dokumenten verstreut, alle mit einem grellroten „Vertraulich“ abgestempelt. Als Forscher Jones bemerkte, dass Yale diese Unterlagen gelesen hatte, verfiel er erneut in Raserei. Grob drückte er den Jungen zurück auf den Operationstisch und injizierte ihm einen experimentellen Katalysator, der laut Plan erst Monate später in der letzten Phase des Experiments eingesetzt werden sollte.\n „Du unartiger Bengel, du hast Dinge gesehen, die du nicht sehen durftest. Jetzt will ich, dass du ihn tötest! Los!“\n Ein Gefühl, als würde Magma durch seine Adern strömen, übermannte Yale – ein brennender Schmerz, der dem sonst so leisen Jungen einen gellenden Schrei entriss.\n \n „He, Billigkopie.“\n Die vertraute, aber fremde Stimme drang in seine Gedanken. Yale riss die Augen auf, doch statt des Operationstischs blickte er in ein ebenso ruhiges Paar Augen wie seine eigenen. Vor ihm stand ein Junge, der genauso aussah wie er. Unter ihnen brodelte ein Meer aus Magma, so rot wie Blut.\n „Wer bist du?“\n Der andere antwortete nicht. Stattdessen umklammerte er Yales Kehle, fest und entschlossen. Mit übermenschlicher Kraft drückte er zu, sodass Yale keine Luft mehr bekam und verzweifelt nach Atem rang. Erst dann sprach der Besitzer dieser Hände, langsam und voller Verachtung:\n „Ich bin Oliver, der rechtmäßige Besitzer dieses Körpers. Du bist nur eine billige Kopie von mir. Stell dich nicht dumm, du weißt das längst.“\n Yale starrte leer in Olivers Augen und erinnerte sich an die vertraulichen Akten mit dem Titel „Protokoll des Experiments zur kontrollierten Ersatzpersönlichkeit“. Darin war das gesamte Experiment dokumentiert: gefährliche Persönlichkeitstests, Vorstufen, endlose Datensätze – auf jeder Seite stand der Name Oliver.\n Erst auf der letzten Seite tauchte plötzlich Yales Name auf – als Zeichen dafür, dass der Ersatz der Persönlichkeit erfolgreich abgeschlossen worden war.\n „Yale, ich werde dich zu meiner perfekten Schöpfung machen.“\n Das also bedeutete „Schöpfung“ in Wahrheit. Wertvolle Erinnerungen an eine glückliche Kindheit, ein Leben außerhalb des Labors, eine liebevolle Familie – all das war in Yales Geist nicht verblasst, sondern hatte nie existiert.\n Wer war er also? Er war Yale. Und wer war Yale? Ach ja – Yale war nichts weiter als ein Feigling, ein bedauernswertes Geschöpf, stets gehorsam gegenüber den Befehlen der Forscher, eine unvollkommene Schöpfung, ein Parasit, der ein Nest besetzt hielt, das ihm nicht gehörte.\n Doch diesmal beschloss Yale, dem kleinen Vogel in diesem gestohlenen Nest zu helfen. Er löste Olivers Hand und wollte sich dem Magma überlassen, bereit, das flammende Ende zu akzeptieren, das ihn erwartete.\n Aber das erwartete Ersticken blieb aus. Stattdessen wurde Yale plötzlich hochgerissen. Während Oliver fluchte, war es, als würden unzählige Bomben um sie herum detonieren. Ein greller Ton hämmerte in seinen Ohren wie Kugeln, die alles durchschlugen, sein Bewusstsein in Stücke rissen.\n All die Wut, die Angst, der Hass – alles brach in diesem einen explosiven Moment hervor, nur um von einem letzten, dröhnenden Knall verschluckt zu werden.\n Yale hob den Blick zu Oliver. Dessen Gesichtsausdruck war so feindselig wie eh und je – und doch spürte Yale, dass sich etwas verändert hatte; äußerlich jedoch blieb alles unverändert.\n „Hey, Billigkopie. Es gibt tatsächlich einen Weg, wie wir beide lebend hier rauskommen. Bist du dabei?“",
+          TextMapId = "UI_CHAR_DATA_TEXT_31030404"
+        },
+        UI_CHAR_DATA_TEXT_31030405 = {
+          ContentDE = "Der brennende Schmerz riss Yale in die Wirklichkeit zurück. Irgendwann hatten sich die Fesseln, die ihn an den Operationstisch gebunden hatten, gelöst. Langsam hob er den Kopf und traf Jones’ Blick – blutunterlaufene Augen, erfüllt von ungläubiger Verzückung.\n Zum ersten Mal musste Yale, der nie gelogen hatte, Jones täuschen.\n Er näherte sich dem Forscher, jeder Schritt eine ungeheure Kraftanstrengung. Bei jedem Innehalten liefen ihm Tränen über die Wangen, leise, wie ein winziges Sternenmeer im Dunkel des Labors.\n Jones schien zu lächeln, wohl im Glauben, Yale weine über Olivers Tod. Er war überzeugt, dass dieses schüchterne Subjekt letztlich ein gehorsames Kind war – eine perfekte Erschaffung, unfähig, Befehle zu missachten.\n Doch nur Yale kannte den wahren Grund seiner Tränen. Zum ersten Mal umarmte er Jones freiwillig. Der einst so furchteinflößende Mann erschien ihm plötzlich gar nicht mehr bedrohlich.\n „Ich habe Oliver getötet.“\n Yales Schluchzen wurde heftiger, während er sich an Jones klammerte und unkontrolliert in dessen Armen weinte. Er spürte sogar, wie Jones ihm sacht über den Kopf strich – eine seltene Geste, fast wie der Vater, den Yale sich immer gewünscht hatte.\n Doch all das war eine Lüge. Trotz der Wärme in Jones’ Hand stammte sie von einem Mann, dessen Hände unzählige Experimente geplant hatten, die ihn und Oliver quälten und ihr Leben zerstörten. Es war Zeit, sich von diesen Händen zu verabschieden.\n Yale zog das Gerät hervor, das er Tag für Tag zusammengesetzt hatte – jenes, das Oliver „Mikrobombe“ genannt hatte. Alles, was er tun musste, war, es an Jones’ Körper zu drücken; im Chaos des Feuers würde er der weißen Zelle entkommen können und hinaus in die große Welt.\n „Mach schon, Yale. Es ist in Ordnung, wenn du später um diesen Mann weinst.“\n Das Alchemielabor stand lichterloh in Flammen, die gierig um sich griffen und den Nachthimmel in ein grelles, groteskes Rot tauchten. Das sterile Weiß wurde ausgelöscht.\n Yale rannte, so schnell er konnte, seine Seele erhoben, während er und Oliver abwechselnd die Kontrolle über den Körper übernahmen und die Luft außerhalb dieses weißen Gefängnisses verschlangen. Die Luft, schwer vom Rauch, war beißend und doch seltsam süß. Yale begriff: Das war der Duft des Feuers. Niemand konnte sie jetzt noch aufhalten. Sie ließen Jones zurück, das Labor zurück und die Alchemie-Akademie zurück.\n Schließlich brach Yale zusammen, völlig entkräftet, doch die überwältigenden Eindrücke um ihn herum hielten seine Augen offen. Die befreiende Brise verleitete ihn dazu, sich noch einmal aufzurichten, obwohl ihm jede Kraft fehlte.\n Als sein Bewusstsein zu schwinden begann, hörte er erneut Olivers Stimme – diesmal ruhig wie nie zuvor. Oliver riss das Namensschild von Yales Brust, warf es beiseite und sagte:\n „Von jetzt an ist Yale niemandes Schöpfung mehr.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_31030405"
+        },
+        UI_CHAR_DATA_TEXT_32010101 = {
+          ContentDE = "Hellfire verhört Verbrecher am liebsten mit schweren Tritten und Läuterfeuer. Wer einmal ihre Verhöre durchlitten hat, sagt: Ihr Tritt könnte einem die Seele direkt in die Hölle befördern. Der Schmerz ist schlimmer als der Tod. Unter der furchtbaren Gewalt verlieren alle den Verstand – und keine Schuld bleibt verborgen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32010101"
+        },
+        UI_CHAR_DATA_TEXT_32010102 = {
+          ContentDE = "Hellfire bekräftigt immer wieder ihre Vorstellung von Gerechtigkeit: Gerechtigkeit ist kein Traum von Gleichheit, sondern eine Ordnung, die Stabilität gewährt.\n Sie hat genug Schwerverbrecher gesehen, um zu wissen: Die meisten sind auf dem Nährboden eines ungerechten Schicksals groß geworden. An den Klingen ihrer Verbrechen haftet schwer der Rost des Leids. Viele von ihnen schreien Hellfire an, bis ihnen die Stimme reißt: Glaubst du, an meiner Stelle wärst du besser gewesen?! Du Glückskind! Glaubst du etwa, du kämpfst für die Gerechtigkeit?!\n Niemand weiß besser als Hellfire: Im Gefängnis kommt ein Leben ohne Wahl häufiger vor als Eisenketten. Ungerechtigkeit ist wie das Mauerwerk einer Festung – sie steckt in jedem Winkel, in dem Menschen überhaupt Zuflucht finden können.\n Doch sie weiß auch: Wenn der hasserfüllte Orkan die Festung namens „Gefängnis“ in Stücke reißt, stürzt auch der Schutzort derer ein, die auf ihre Existenz angewiesen sind. Darum duldet Hellfire kein Wanken im Fundament. Ihre Gerechtigkeit war nie ein Versprechen, sondern die Standfestigkeit dieser Festung.\n Und so bleibt Hellfires Stimme selbst angesichts blutiger Anklagen ruhig: „Ja. Ich hebe die Klinge ... für meine Gerechtigkeit.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_32010102"
+        },
+        UI_CHAR_DATA_TEXT_32010103 = {
+          ContentDE = "Das Königliche Militärgefängnis hat oft genug mitangesehen, wie Beschuldigten vor Hellfire die Lügen vergehen.\n Hellfire zerrt den Beschuldigten hoch und zwingt ihn, ihr in die Augen zu sehen. Wenn sein Blick ihren trifft, schlägt ihm plötzlich eine Welle glühender Hitze ins Gesicht. Brandmale zeichnen sich auf der Haut ab. Er schreit auf, krümmt sich und wälzt sich über den Boden.\n „Das ist der Preis dafür, dass du die Wächterin Hellfire belogen hast.“ Der Protokollführer wirkt, als hätte er all das schon tausendmal gesehen. Nur du starrst fassungslos. Bis eben war die Verteidigung des Beschuldigten makellos gewesen: Die Legion konnte keine Beweise für seine Vergehen vorzeigen. Selbst die Spezialisten der Alchemie-Akademie, die sich mit Mimik beschäftigen, konnten nichts Ungewöhnliches entdecken. Sogar du hattest kurz gedacht, er sei vielleicht nur zur falschen Zeit am falschen Ort gewesen.\n „Solange Hellfire Verbrechern kalt und gnadenlos begegnet, verrottet jede Lüge in ihrem Blick.“\n Aber was ist, wenn eines Tages jemand vor ihr steht, dem sie nicht so eiskalt begegnen kann wie sonst?\n Du willst gerade deine Frage stellen – doch der Protokollführer ist bereits wieder bei der Arbeit und die Worte bleiben dir im Hals stecken.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32010103"
+        },
+        UI_CHAR_DATA_TEXT_32010201 = {
+          ContentDE = "Hellfire ist die Wächterin des Königliche Militärgefängnis ... und der zu Fleisch gewordene Albtraum aller Verbrecher. Ihr unbestechlicher Ruf, ihr brutales Temperament und ihre eiskalten Verhörmethoden lassen selbst Hartgesottene erschaudern.\n Seit Hellfires Erwachen ist ihre Haut blutrot geworden und ihr Körper strahlt eine Hitze aus, die niemals weicht. Man sagt, das sei eine „Rückkehr zum Ursprung“, ein Erbmerkmal ihres Hauses: Vor ihr habe nur der erste Wächter dieselbe Mutation erlebt. Viele ekeln sich vor ihrer entstellten Erscheinung. Hellfire selbst sieht in ihr jedoch einen Segen ihrer Ahnen. Sie ist dazu bestimmt, mit diesem glühenden Rot die Ordnung des Imperiums zu wahren und in der währenden Nacht ein Licht zu entzünden.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32010201"
+        },
+        UI_CHAR_DATA_TEXT_32010202 = {
+          ContentDE = "Hellfires wohl bekannteste Eigenheit: Sie ist nie ohne ihre Waffe, das „Strafinferno“. Der Legende nach gehörte das Strafinferno dem ersten Wächter. Seine Hitze war für normale Menschen unerträglich und niemand in der Familie konnte die alte Waffe je wieder führen ... bis Hellfire erwachte und sie erneut ans Tageslicht brachte. Dass sie das uralte Relikt heben kann, erfüllt Hellfire mit Stolz. Ob bei Verhören oder im Schlaf: Erst wenn das Strafinferno an ihrer Seite ist, findet sie Ruhe. Manche spotten hinter vorgehaltener Hand, dass Hellfire ihre Waffe für einen Geliebten hält. Vielleicht, sagen sie, werde sie eines Tages tatsächlich ihr eigenes Strafinferno heiraten, denn wer sonst könnte ein rotfarbiges Monster lieben?",
+          TextMapId = "UI_CHAR_DATA_TEXT_32010202"
+        },
+        UI_CHAR_DATA_TEXT_32010203 = {
+          ContentDE = "Im Militärgefängnis, das von Hellfire kontrolliert wird, kursiert eine Redewendung: „Hellfire ist schon unterwegs.“\n Meistens benutzt man sie, wenn jemand ein Lügenmärchen erzählt oder keine weiße Weste mehr hat – denn solche Dinge entgehen Hellfires Blicken nicht. Die Insassen sind überzeugt: Hellfire ist kein Mensch, sondern ein Dämon, der aus der Hölle gekrochen ist. Egal zu welcher Zeit kann sie vor der Zellentür stehen und einen in den Abgrund der Angst zerren. Vielleicht beginnt ihre Folter in Wahrheit schon früher – in jenem Moment, in dem ihre schweren Schritte langsam durch den Gang hallen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32010203"
+        },
+        UI_CHAR_DATA_TEXT_32010204 = {
+          ContentDE = "Die meisten halten Hellfire für eine geborene Wächterin, denn sie hat in ihrem Leben fast noch nie ein Verhör verloren. „Fast“ – weil es einmal passiert ist. Nur ein einziges Mal.\n Gerüchten zufolge war derjenige, der diese Schande über Hellfire bracht, kein Einheimischer aus Hyperborea, sondern ein Parfümeur aus Luca. Der Lügner musste einen Trick gekannt haben, denn er konnte Hellfire in die Augen sehen, ohne von ihrer Flamme versengt zu werden – und entkam am Ende sogar aus ihrem Gefängnis.\n Für Hellfire ist das eine Schmach, die sich nicht wiedergutmachen lässt. Um ihren Fehler zu sühnen, jagt sie ihm bis heute nach.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32010204"
+        },
+        UI_CHAR_DATA_TEXT_32010205 = {
+          ContentDE = "Hellfires Mutter seufzte einst ihrem Kind zu: Du bist wie das ewige Feuer: Du brennst und brennst, ohne je zu erlöschen und ohne je müde zu werden.\n So stürzt Hellfire von Fall zu Fall, von Verbrecher zu Verbrecher – bis das Böse die Furchtflamme zu spüren bekommt und nur noch wagt, sich im bodenlosen Abgrund zusammenzukrümmen.\n „Dein Feuer ist zu heiß, Hellfire ... Ich fürchte, eines Tages wirst du selbst zu Asche.“\n Und wenn schon? Dachte sich Hellfire. Sie stirbt lieber in dieser glühenden Gestalt, so dass jeder Passant stehen bleibt und staunt: Diese Glut erlosch bis zur letzten Sekunde nicht.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32010205"
+        },
+        UI_CHAR_DATA_TEXT_32010301 = {
+          ContentDE = "In Hellfires Büro steht ein eiserner Bücherschrank, an dessen auffälligster Stelle ein dunkelrotes, angebrochenes Horn – ihr eigenes linkes Horn – platziert ist.\n Das Horn wurde gebrochen, als sie neunzehn war. Damals, bei ihrem ersten Einsatz im Verhör, war sie noch nicht so gefasst und abgeklärt wie heute – doch eines konnte sie ebenso wenig ertragen: dass Schuldige entkamen.\n Ein überheblicher Adliger hatte unzählige Mädchen geschändet und doch gelang es ihm, mit seinem verfilzten Netz aus Beziehungen jedes Beweisstück verschwinden zu lassen und der Strafe zu entgehen. Als der vorige Wächter sich persönlich bückte, um ihm die Fußfesseln zu lösen, sprach der Mann zum ersten Mal im Verhör. Er stieß einen schrillen Pfiff aus ... und begann zu summen. Jede Musiknote war wie ein schwerer Stiefeltritt: auf das Wappen des Militärgefängnisses, auf die Seiten des Gesetzbuchs und auf Hellfires glühende Wange.\n In ihrer Brust gingen Flammen auf. Und egal, wie sehr ihr Vorgesetzter sie warnte, es ließ sich nicht mehr löschen. Als der Mann geschniegelt und siegessicher ins Sonnenlicht hinausspazierte, schlug Hellfire schließlich zu. Doch was zu Boden fiel, war nur ein Stück glühend rotes Horn. Die Klinge des Leibwächters des Adligen strich langsam über Hellfires Kehle – nicht aus Gnade, sondern als hochmütige Drohung.\n „Ich werde jedem Verbrecher den Mund aufbrechen, bis in Hyperborea kein Unrecht mehr herrscht.“\n Hellfire bewahrte das abgebrochene Horn wie ein Gelöbnis auf. Bis heute erinnert es sie an die Klinge, die ihr Horn aufriss und ihre Knochen brach. Der Schmerz hält ihren Schwur lebendig.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32010301"
+        },
+        UI_CHAR_DATA_TEXT_32010302 = {
+          ContentDE = "Hellfire hängt kaum an materiellen Dingen, aber harter Alkohol ist eine ihrer wenigen Schwächen. Das betäubende Brennen im Kopf reißt sie für einen Moment aus der Last des Gefängnisses, sodass sie Wut und Ärger der Insassen kurz abschütteln kann. Doch ihre Trinkfestigkeit bleibt ein Rätsel. Selbst ihre Kollegen kennen die Antwort nicht: Normalerweise misst man den Alkoholpegel daran, wie schnell jemand nach dem Trinken rot anläuft – nur funktioniert dieser Trick bei einer Frau, deren Haut ohnehin glüht, schlichtweg nicht.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32010302"
+        },
+        UI_CHAR_DATA_TEXT_32010303 = {
+          ContentDE = "Die Wärter bewundern besonders eine Gewohnheit von Hellfire: Sie stellt stets die höchsten Anforderungen an sich selbst und schläft sogar wie ein Insasse auf dem harten Boden.\n In Wahrheit hat das einen simplen Grund: Die Hitze ihrer Haut setzt Stoff in Brand. Nachdem ihr Schlafzimmer mehr als einmal angekokelt ist, blieb ihr nichts anderes übrig, als auf dem Boden zu schlafen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32010303"
+        },
+        UI_CHAR_DATA_TEXT_32010304 = {
+          ContentDE = "Jede Flüssigkeit, die Hellfires Haut berührt, verdampft augenblicklich – außer ihre Tränen. Tränen dämpfen die Hitze ihrer Haut für einen Herzschlag. Doch die Kälte, die dabei über ihr Gesicht läuft, schneidet sich in sie ein, als würde konzentrierte Säure sich in ihre Knochen fressen. Nachdem sie diesen Schmerz einmal erleiden musste, hat Hellfire nie wieder Tränen vergossen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32010304"
+        },
+        UI_CHAR_DATA_TEXT_32010305 = {
+          ContentDE = "Hellfire besitzt ein einziges Bild aus ihrer Kindheit. Damals war sie noch nicht erwacht, noch kein „Monster“ in den Augen der anderen. Sie sah aus wie jedes andere Kind. Auf dem Bild steht sie stolz vor einer Ahnenstatue. Hinter ihr sitzen ihre Eltern: eine ganz gewöhnliche Charon-Familie – unauffällig, schlicht gekleidet. In einer Menschenmenge würde man sie sofort verlieren. Wenn dieses Bild für Hellfire überhaupt einen besonderen Stellenwert hat, liegt das daran, dass das Mädchen in der Mitte streng wirkt und doch lugt in den Augenwinkeln ein kaum sichtbares Lächeln hervor.\n Sie schaut das Bild nur selten an. Sie schließt es tief in eine Schublade und sagt sich: An die Zeit, in der sie noch nicht „anders“ war, muss sie sich nicht klammern.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32010305"
+        },
+        UI_CHAR_DATA_TEXT_32010401 = {
+          ContentDE = "Hellfires Familie gibt das Amt des Wächters von Generation an Generation weiter. Im Militärgefängnis verwalten sie die gefährlichsten Verbrecher des Imperiums und halten die Ordnung dort, wo das Imperium am dunkelsten ist. Diese Arbeit ist einsam, qualvoll und verlangt einen Willen aus Stahl. Selbst in Hellfires Familie gab es immer wieder welche, die aus Angst vor dieser Pflicht drücken wollen. Hellfire ist anders. Sie wurde im Gefängnis geboren und ist dort aufgewachsen: Geständnisse waren ihre ersten „Schriftwerke“, Schreie und Flehen ihre Musik und Folterszenen ihre tägliche Kost.\n Was andere als Hölle mieden, war Hellfires Zuhause.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32010401"
+        },
+        UI_CHAR_DATA_TEXT_32010402 = {
+          ContentDE = "Am Tag ihres Erwachens schlugen Flammen aus ihr heraus und hätten das Familienanwesen beinahe zu Asche verarbeitet. Als sie aus dem Feuermeer trat, war ihre Haut blutrot und glühte. Ihre Verwandten gerieten außer sich vor Freude. Manche weinten und manche verbrannten sich die Finger, nur um ihr Gesicht berühren zu dürfen. In ihren Blicken lagen Ehrfurcht und Eifer – über Nacht wurden Hellfires Blutsverwandte zu ihren Gläubigen. Sogar ihre Eltern.\n Früher hatte ein Ahne sie mit glühendem Körper und einer großen Infernoklinge aus der Armut und Bedeutungslosigkeit gerissen. Nun erwarteten sie, dass Hellfire – mit demselben Antlitz – ihnen noch größeren Ruhm verschaffte.\n Für ihre Familie wurde sie zur Heiligen. Für Außenstehende zum Monster.\n Doch egal, wie sich die Körper und Haltung der Menschen um sie wandeln: Hellfire weiß, was zu tun ist ... so wie immer.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32010402"
+        },
+        UI_CHAR_DATA_TEXT_32010403 = {
+          ContentDE = "In ihrer Laufbahn als Wächterin hat Hellfire unzählige Verbrecher verhört. Aber sie hätte nie erwartet, eines Tages ihren eigenen Adjutanten, Artin Nonn, im Verhörraum wiederzusehen.\n Artin war ihr Gegenteil. Er war sanftmütig und selbst zu Insassen nicht grausam. Er merkte sich die Namen von denen, die ihm leid taten, und schickte sogar Nachschub an die Gefängnisse, in denen sie einsaßen. In seiner Arbeit hatte er sich nie einen Fehler geleistet. Hellfire konnte Verbrechern nachjagen, weil Artin ihr im Hintergrund stets präzise Informationen lieferte.\n Wenn Hellfire die Beweise nicht mit eigenen Händen gefunden hätte, hätte sie niemals geglaubt, dass der Maulwurf, der Bestechungen annahm und Gefangene freiließ, ausgerechnet dieser Mann sein sollte – ein Kollege, dem sie vertraut hatte.\n „Sieh mich nicht so an, Hellfire.“ Der frühere Kollege wich nicht zurück. Er richtete den Rücken auf und hielt ihrem Blick stand, der voller Enttäuschung und Zorn war. „Ich verabscheue diese Arbeit längst. Dieses lichtlose Abwasserloch ... siehst du es denn nicht? Wir haben alle Blut an den Händen. Die da draußen, die im Krieg kämpfen, sind Hyperboreas Stolz ... und wir? Was sind wir? Die Hunde der Legion! Die Adligen treten auf uns herab, die Gefangenen hassen uns, draußen beschimpfen uns die Bürger. Niemand hält diese Drecksarbeit für etwas wert! Ich hab genug. Ich will an einen Ort, wo Licht ist!“\n Hellfire konnte ihn nicht zurechtweisen. Nicht, nachdem Artin bei einer Informationsbeschaffung aufflog – und seitdem auf dem linken Ohr sein Gehör nie wieder zurückerlangte.\n Sie wusste: Nicht jeder ist so wie sie, nicht jeder ist gewohnt, wie ein Monster behandelt zu werden. Also ordnete sie Artins Verdienste aus seiner Dienstzeit, damit der Richter sie bei der Urteilsfindung berücksichtigen konnte.\n Menschen wie Artin sind in den Militärgefängnissen des Imperiums keine Seltenheit. Viele wollen die Ordnung im Licht bewahren, doch nur wenige sind bereit, im Dunkel die Fäulnis herauszuschneiden. Hellfire dagegen ist für die Nacht bestimmt. Sie fürchtet weder den schlechten Ruf noch die Finsternis. Wenn die sündige Nacht nur durch ihr Fegefeuer zum Morgen führen kann, nimmt sie sie bereitwillig auf sich.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32010403"
+        },
+        UI_CHAR_DATA_TEXT_32010404 = {
+          ContentDE = "In Hellfires Laufbahn als Wächterin kannte sie nur eine einzige Niederlage – und sie war zugleich ihr einziger Fehler.\n Sie deckte eine Schuldige, vernichtete die Beweise und ließ sie fortgehen, weit weg in ein anderes Leben. Doch die Schuldige enttäuschte Hellfires Hoffnungen. Sie setzte erneut leichtfüßig ihren Fuß auf Hyperboreischen Boden, mit einem süßen Lächeln und den immer gleichen Tricks ... und beging wieder und immer wieder unverzeihliche Verbrechen. Hellfire verstand einfach nicht: Warum brachte ihr einziger Bruch mit den Prinzipien, ihre einzige Chance zur Umkehr, nicht Wiedergeburt ... sondern Lüge, Täuschung und Verrat?\n „Wie kannst du so etwas glauben?“ Es ist, als würde Hellfire sie die Schuldige zwischen schwebenden Duftschwaden spöttisch lächeln sehen: „Ich bewundere deine Geradlinigkeit. Und doch hast du für mich deine Gerechtigkeit mit Füßen getreten. Enttäuschend.“\n Hellfire schluckte den Spott und den Verrat hinunter. In ihr wuchs Hass, Abscheu ... und der Entschluss, ihren „einzigen Fehler“ zu korrigieren. Sie musste die Verbrecherin bestrafen. Mit eigenen Händen. Eine Kugel durch den Kopf.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32010404"
+        },
+        UI_CHAR_DATA_TEXT_32010405 = {
+          ContentDE = "Das Scheitern von damals war für Hellfire nicht nur eine Schande, sondern auch ein Same. Er schlug Wurzeln in ihr, wuchs heran und wurde zu einer Obsession. Unzählige Male fragte sie sich: Was hatte sie dazu gebracht, die Prinzipien eines halben Lebens wegzuwerfen, sich gegen das eiserne Gesetz zu stellen, an das sie glaubte und einem Verbrecher zu vergeben?\n \n Hellfire ging im Kopf alles über diese Person durch. Ihre Vorgehensweise, jeden einzelnen Fall, ihre Standardlügen, sogar die kleinen Gesten, wenn sie nervös wurde – Hellfire kannte sie auswendig. Doch wenn der Alkohol in ihrem Hals brannte, lösten sich selbst diese unauslöschlichen Erinnerungen langsam auf. Am Ende blieb nur der Tag, an dem sie die falsche Entscheidung traf. Feuer zerriss die Nacht. Beweise wurden zu Asche. Selbst der wirbelnde Schnee konnte die Flammen nicht ersticken. Als Hellfire den Kopf wandte, spiegelte sich das Gesicht der Schuldigen klar in ihren Augen. Auch sie galt als Monster. Sie erzählte ihre Geschichte und zum ersten Mal verstand Hellfire, was „Artgenossen“ bedeuteten. Und im Nebel des Katers begriff Hellfire für einen Moment: Es gibt Dinge, die schwerer zu verzeihen sind als Hass.\n „Einsamkeit“.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32010405"
+        },
+        UI_CHAR_DATA_TEXT_33010101 = {
+          ContentDE = "Du hast Margie zum ersten Mal in der Asphodel getroffen. Im krassen Gegensatz zur unerschütterlichen Ruhe der Chefin wirkte das Mädchen verzweifelt und zerzaust, eindeutig dringend auf Hilfe angewiesen.\n Vielleicht hatte sie gerade einen Tagesverdienst verloren und stand vor einer Nacht voller Hunger; vielleicht hatte sie gerade einen ungelösten Streit hinter sich und suchte verzweifelt jemanden, der für sie eintritt; oder vielleicht war sie, genau wie du, eine verlorene Außenseiterin, unsicher über den weiteren Weg.\n Damals hättest du nicht wissen können, dass diese Fremde tatsächlich eine beträchtliche Summe Geld verloren hatte, wirklich in Schwierigkeiten war und tatsächlich eine Außenseiterin wie du selbst war. Aber ihre Sorgen galten nicht ihrem persönlichen Vorteil, sondern dem Leben von Menschen, die im Grunde Fremde für sie waren.",
+          TextMapId = "UI_CHAR_DATA_TEXT_33010101"
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CHAR_DATA_TEXT_33010102",
+    MaxKey = "UI_CHAR_NAME_3102",
+    Loader = function()
+      return {
+        UI_CHAR_DATA_TEXT_33010102 = {
+          ContentDE = "Es gibt unzählige Wege, eine Stadt kennenzulernen, aber Margies Methode ist auffallend eigen.\n Ein Rezept, eine Schachtel Papiersterne und ein Schlüssel – drei scheinbar unzusammenhängende Gegenstände, jeder ein Puzzleteil mit einer verborgenen Geschichte. Wie eine geschickte Detektivin folgtest du den Hinweisen und enthülltest die dahinter liegenden Wahrheiten. Indem du Margie schließlich die Lösungen übermittlest und sie dich erneut in der Stadt willkommen hieß, war Icelake für dich längst nicht mehr nur eine farblose Karte. Die Geschichten von Liebe, Bedauern, Groll und Hoffnung, die durch die Ecken der Stadt hallten, hatten der Stadt Leben eingehaucht und dir ein tieferes, persönliches Verständnis geschenkt.",
+          TextMapId = "UI_CHAR_DATA_TEXT_33010102"
+        },
+        UI_CHAR_DATA_TEXT_33010103 = {
+          ContentDE = "Abgesehen von gelegentlichen Besuchen in die Asphodel, um Frau Camilla zu sehen, ist Margie meist allein unterwegs. Anfangs nahm man an, sie sei wie viele andere Waisen in Icelake mit einer Vergangenheit, über die sie nicht sprechen konnte, doch das stimmt nicht.\n Bei einem gewöhnlichen Nachmittagsplausch erzählte Margie von ihrem Vater. Obwohl sie ihre Unzufriedenheit darüber äußerte, dass er ihr die Verantwortung für die Mülltonnen aufgebürdet hatte, während er selbst mysteriösen Tätigkeiten nachging, war deutlich zu spüren, dass sie sich auf ihre eigene Weise gegenseitig unterstützten und ermutigten.\n Vielleicht ist das einer der Gründe, warum Margie in dieser stets kalten Stadt dennoch wie ein kleiner Sonnenstrahl aufzugehen scheint und jeden Tag mit unerschütterlicher Wärme begrüßt.",
+          TextMapId = "UI_CHAR_DATA_TEXT_33010103"
+        },
+        UI_CHAR_DATA_TEXT_33010104 = {
+          ContentDE = "Auf Margies Schreibtisch liegen mehrere alte Fotografien. Das jüngste stammt von ihrem Geburtstag im letzten Jahr – Margie trägt darauf noch nicht ihren charakteristischen Helm, doch ihr Lächeln unterscheidet sich in nichts von dem heutigen. Auf dem ältesten Foto hingegen ist Margie noch ein Kind. Sie versteckt sich hinter einem erwachsenen Mann, der ebenso ärmlich gekleidet ist, und lugt vorsichtig hervor. Ihr Haar steht wirr ab, die Nasenspitze ist vor Kälte gerötet, doch in ihren Augen spiegeln sich reine Unschuld und neugierige Erwartung\n Ein Foto jedoch sticht besonders hervor. Darauf gibt es kein Lachen, keinen klaren Blick. Das kleine Mädchen hat den Kopf abgewandt, ihr Gesicht liegt im Schatten dunkler Wolken. Obwohl jemand ihr die Hand entgegenstreckt, steht sie widerwillig allein in einer Ecke des Bildes und klammert sich fest an ein kleines Stofftier – als wäre es das Einzige, dem sie vertrauen kann.\n Auch wenn das Bild unscharf ist, erkennst du es dennoch: Das Stofftier ist dieselbe kleine Katzenfigur, die Margie stets bei sich trägt. Du hast sie einst nach ihrem Namen gefragt, und Margie nannte sie „Fettschweif“.",
+          TextMapId = "UI_CHAR_DATA_TEXT_33010104"
+        },
+        UI_CHAR_DATA_TEXT_33010105 = {
+          ContentDE = "In Icelake stehen Mülleimer niemals dauerhaft an einem festen Ort. Margie versetzt sie immer wieder – abhängig von Wetter, Gelände oder Veränderungen in den Einkommensverhältnissen der Bewohner. Diese rechtzeitigen Anpassungen erhöhen oft die Erfolgschancen ihrer „Beschaffung“.\n Wenn du sie dabei beobachtest, wie sie voller Eifer auf der Karte die profitabelsten Routen für die kommenden Tage plant, erinnert dich das an eure Jagdzeiten auf der Purgatorio-Insel. Damals habt ihr – du und Berenica – ebenfalls darüber nachgedacht, wo Fallen platziert werden mussten, um listige und flinke Beute in die Irre zu führen.\n Vielleicht sind Mülltonnen in Margies Augen nichts anderes als speziell für die Stadt entwickelte „Fallen“.",
+          TextMapId = "UI_CHAR_DATA_TEXT_33010105"
+        },
+        UI_CHAR_DATA_TEXT_33010201 = {
+          ContentDE = "Solange das Leben eines Bewohners von Icelake reibungslos verläuft, wird der Name „Margie“ ihm kaum begegnen. Doch wenn eines Tages das Unglück mit lautem Klopfen an seine Tür tritt und die eisigen Winde Icelakes ihm alles nehmen, was er besitzt, könnte dieser Name zur letzten Rettungsleine in seinem zerrütteten Leben werden.\n Wenn ein vom Schicksal gebeutelter Mensch aus Margies Händen Münzen, Nahrung oder Winterkleidung entgegennimmt, reagiert er meist wie viele, die erst kürzlich in die Armut gestürzt sind – mit Zweifel und Vorsicht. Er fragt nach ihren Beweggründen: Erwartet sie eine Gegenleistung, oder stillt sie lediglich ein moralisches Bedürfnis aus einer Position der Überlegenheit heraus?\n Doch aus dem spielerischen Lächeln des Mädchens lässt sich nie eine ernsthafte Antwort herauslesen. Und nachdem ihre Hände sie mehr als einmal durch die langen Winter Icelakes geführt haben, werden diese Fragen selbst zu nutzlosem Abfall – weit fortgeworfen, in den Mülltonnen der Erinnerung.",
+          TextMapId = "UI_CHAR_DATA_TEXT_33010201"
+        },
+        UI_CHAR_DATA_TEXT_33010202 = {
+          ContentDE = "Selbst die hochgestellten Würdenträger, die scheinbar fernab aller weltlichen Sorgen leben, haben schon einmal vom Gerücht der „Prinzessin Mülleimer“ gehört.\n \n Man sagt, sie herrsche im Verborgenen über sämtliche Mülleimer Icelakes und durchstreife die Abfälle Tag für Tag wie ein schmutziger, gieriger Aasgeier, stets auf der Suche nach verwertbarem Gut.\n Man sagt, sie habe mit diesen Funden in den Armenvierteln eine treue Gefolgschaft aufgebaut und verfüge sogar über ein Informationsnetz, das es mit dem der Stadtgarde aufnehmen könne.\n Man sagt ferner, sie habe anhand der in den Mülleimern verborgenen Spuren zahllose Geheimnisse der Mächtigen aufgedeckt – und allein das Enthüllen eines einzigen davon könne genügen, um das Gleichgewicht der gesamten Stadt ins Wanken zu bringen.\n \n Niemand weiß, woher diese immer grotesker werdenden urbanen Legenden stammen – und die Heldin dieser Geschichten selbst zeigt keinerlei Interesse daran, ihnen nachzugehen. Tag für Tag zieht sie gewissenhaft durch die Straßen und Gassen, wühlt sich mühsam durch die Mülleimer und spricht vor jedem geöffneten Deckel ein stilles Gebet für eine gute Ausbeute. Nachdem sie die brauchbaren Lebensgüter an jene verteilt hat, die sie benötigen, baut sie einen kleinen Stand auf und verkauft die überschüssigen Waren weiter.\n Fein gekleidete Honoratioren gehen meist hastig und mit abgewandtem Blick an Margies bescheidenem Stand vorbei. Mitunter hört man sie dabei halb ungläubig, halb beunruhigt über die Legende der „Prinzessin Mülleimer“ tuscheln.",
+          TextMapId = "UI_CHAR_DATA_TEXT_33010202"
+        },
+        UI_CHAR_DATA_TEXT_33010203 = {
+          ContentDE = "Bevor die Prinzessin Mülleimer die „Macht an sich riss“, lag die Herrschaft über Icelakes Mülltonnen in den Händen von Margies Vater – Alter Martin, bekannt als der „König der Mülleimer“. Man sagt, er stamme aus einem Land namens das „Herrenlose Gebiet“ und sei nach einer monatelangen, entbehrungsreichen Reise gemeinsam mit seiner Tochter in Icelake angekommen.\nAls der bärtige Martin und die kleine Margie am Stadttor erschienen, sahen sie aus wie zwei Wilde, direkt aus der Schneewüste entsprungen. Nur dank Martins sorgfältiger Vorbereitung – Reisepässe und andere Dokumente waren längst organisiert – entgingen sie dem Schicksal, für angreifende Filthoiden gehalten und auf der Stelle erschossen zu werden.\nDie Wartenden zeigten mit Fingern auf das Vater-Tochter-Gespann, Gelächter und Spott erfüllten die Luft. Martin jedoch ließ sich nicht beirren, während der Reif in seinem Bart mit jedem Atemzug schmolz und als Tropfen herabfiel. Die kleine Margie zeigte keine Spur von Angst – im Gegenteil: Mit neugierigen Augen musterte sie ihrerseits die Menge und schenkte den herablassenden Kommentaren keinerlei Beachtung. Unter dem offenen, unverstellten Blick des Mädchens verstummten die Spötter allmählich und wandten sich beschämt wieder dem öden Warten zu.\nDamals konnte wohl niemand ahnen, welches „Geschäft“ dieses Vater-Tochter-Duo in Icelake eines Tages aufbauen würde. Und ebenso wenig hätte jemand vermutet, dass Margies neugieriger, prüfender Blick von damals kaum anders war als jener, mit dem sie später den Müll der Stadt betrachtete.",
+          TextMapId = "UI_CHAR_DATA_TEXT_33010203"
+        },
+        UI_CHAR_DATA_TEXT_33010204 = {
+          ContentDE = "Man erzählt sich,\n dass die weithin bekannte Prinzessin Mülleimer schon in jungen Jahren\n ihren Blick über die mächtigen Stadtmauern hinaus richtete.\n Das innere Icelake, so heißt es, gleiche fruchtbaren Weiden und dichten Wäldern,\n und unsere Prinzessin Mülleimer sehnte sich danach, die hohe Mauer zu erklimmen.\n Doch unsere Prinzessin Mülleimer war noch nicht stark genug für dieses Ziel.\n Sie zweifelte, sie trauerte, sie war unzufrieden, sie stellte alles infrage!\n So verließ sie die Stadt und schwor, niemals an diesen schmerzvollen Ort zurückzukehren!\n Sie rannte, sie tobte, sie kämpfte, sie erinnerte sich!\n Wo immer sie vorbeizog, waren keine Filthoiden mehr zu finden!\n Doch schließlich ermüdete auch unsere Prinzessin Mülleimer und sank im Schnee in einen süßen, honiggleichen Schlaf.\n Begleitet von kleinen wilden Tieren dauerte ihr Schlummer viele Tage und Nächte,\n und gewiss kannte sie selbst im Traum keine Erschöpfung, sondern half weiterhin den Müden und den enttäuschten Katzen und Hunden.\n Schließlich erwachte der schwerfällige „König der Mülleimer“ auf seinem Thron und erkannte das Verschwinden seiner geliebten Tochter.\n Er fand unsere Mülltonnenprinzessin in der weiten Schneewüste und brachte sie zurück in ihr treues Icelake!\n – Dramatiker Buck, Die Legende der Prinzessin Mülleimer",
+          TextMapId = "UI_CHAR_DATA_TEXT_33010204"
+        },
+        UI_CHAR_DATA_TEXT_33010301 = {
+          ContentDE = "Margie mag keine großen Lebensweisheiten und ebenso wenig feierliche, rührselige Bekenntnisse. Wann immer sich eine solche Gelegenheit ergibt, zieht sie es vor, mit einem Lachen darüber hinwegzugehen und das Thema rasch zu wechseln.",
+          TextMapId = "UI_CHAR_DATA_TEXT_33010301"
+        },
+        UI_CHAR_DATA_TEXT_33010302 = {
+          ContentDE = "Vielleicht gerade weil sie ständig mit Mülltonnen zu tun hat, achtet Margie besonders auf ihre eigene Hygiene. Wenn jemand ihr gegenüber eine Geste macht, als würde er sich die Nase zuhalten oder mit der Hand einen unangenehmen Geruch vertreiben, reagiert sie wie ein Tier, dem man auf den Schwanz getreten ist – sie schnellt davon und versteckt sich an einem Ort, an dem sie niemand sehen kann. In den folgenden zwei Wochen braucht dieser Übeltäter nicht mehr damit zu rechnen, ihr zu begegnen; er kann ihre Nähe höchstens noch an einem etwas intensiveren Duft von Räucherwerk oder Parfum erahnen.\n Wenn du das Herz eines heranwachsenden Mädchens nicht verletzen willst, solltest du mit solchen Scherzen äußerst vorsichtig sein.",
+          TextMapId = "UI_CHAR_DATA_TEXT_33010302"
+        },
+        UI_CHAR_DATA_TEXT_33010303 = {
+          ContentDE = "Margie hat eine ausgesprochene Vorliebe dafür, kleinen Tieren an den Schweifen zu kneten – sie ging sogar einmal so weit, es bei einigen Filthoiden zu versuchen. Dafür bekam sie von altem Martin eine längst fällige Standpauke. Tief gekränkt und zutiefst beleidigt erklärte Margie wütend, sie werde ihm seine „respektlose, verständnislose und völlig inakzeptable Haltung gegenüber persönlichen Hobbys“ erst verzeihen, wenn er selbst einen Schweif bekomme.\n Diese Episode fand schließlich ein ebenso absurdes wie versöhnliches Ende, als alter Martin auf einem Besen vor ihr herumhüpfte und verkündete, er habe nun einen magischen Tannenbaumschweif. Daraufhin hielt Margie eine feurige Rede mit dem Titel „Nur flauschige Schweife sind gute Schweife“, durchbrach unbeabsichtigt den monatelangen stillen Protest und beendete die Zeit, in der die beiden ausschließlich per Handzeichen miteinander kommuniziert hatten.",
+          TextMapId = "UI_CHAR_DATA_TEXT_33010303"
+        },
+        UI_CHAR_DATA_TEXT_33010304 = {
+          ContentDE = "Margie empfand einst eine tiefe Enttäuschung gegenüber Icelake. Damals hatte sie gerade den Hass der Menschen auf die Charons mit eigenen Augen gesehen und die erbärmlichen Lebensumstände der Charons miterlebt. Noch ein Kind, konnte sie nicht begreifen, warum sich solches Leid immer wiederholte – schließlich sind Schmerz und Elend doch eine Last, die man vermeiden sollte. Doch in Icelake bestätigten manche ihre Stellung, indem sie anderen Leid zufügten, ein Verhalten, das Margie völlig sinnlos erschien.\n In jener Zeit lag über Icelake in Margies Augen stets ein seltsamer violetter Schleier – eine Farbe, die dem Frostbrand beängstigend nahekam.",
+          TextMapId = "UI_CHAR_DATA_TEXT_33010304"
+        },
+        UI_CHAR_DATA_TEXT_33010305 = {
+          ContentDE = "Margie gewann vier Jahre in Folge die „Icelake-Schneeschaufelmeisterschaft“. Warum es kein fünfter Titel wurde? Weil die übrigen Teilnehmer sie in diesem Jahr kurzerhand gemeinsam auf den Richterstuhl hievten.",
+          TextMapId = "UI_CHAR_DATA_TEXT_33010305"
+        },
+        UI_CHAR_DATA_TEXT_33010401 = {
+          ContentDE = "Der Frühling in Icelake ist kurz, und gerade deshalb so kostbar.\n Blumen blühen, Zugvögel kehren zurück, smaragdgrüne Schmetterlinge tanzen durch die Luft, und das Klima ist selten so mild. Wer sich in dieser Zeit ausschließlich in Arbeit vergräbt und all das an sich vorbeiziehen lässt, wird es im nächsten langen Winter bitter bereuen – vielleicht sogar so sehr, dass man sich am liebsten den Kopf stoßen möchte.\n Margie überzeugte sich daher mühelos selbst, dass ein seltener Moment der Faulheit wohl nicht schaden könne. Statt wie sonst rastlos von Ort zu Ort zu eilen, kuschelte sich das Mädchen träge auf einer Bank zusammen.\n Als sie im warmen Frühlingslicht mit halb geschlossenen Augen wegdämmerte, wehte eine Unterhaltung über eine streunende Katze zu ihr herüber.\n „Mama, schau! Sie leckt meine Hand! Die arme Katze hat kein Zuhause ... dürfen wir sie mitnehmen?“\n „Liebling, diesmal kann ich es erlauben. Aber du weißt doch, draußen gibt es so viele streunende Katzen und Hunde. Wir können uns unmöglich um alle kümmern. Also nur dieses eine Mal. Bist du sicher?“\n Das Gespräch brach hier ab – nicht, weil es beendet war, sondern weil Margie in ihrem inneren Ringen um ein „Einmal faul sein wird schon nicht schaden ...“ schließlich einschlief.\n \n Als sie wieder zu sich kam, war die Sonne fast vollständig hinter den Mauern von Icelake verschwunden. Gerade wollte sie sich die verschlafenen Augen reiben, da spürte sie etwas Flauschiges auf ihrer Hand.\n Neben ihr lag ein kleines schwarzes Kätzchen, das mit dem Einbruch der Nacht beinahe mit der Dunkelheit verschmolz. Wahrscheinlich war ihm kalt geworden, und so hatte es sich an die reglose Wärmequelle geschmiegt. Vorsichtig hob Margie es hoch und musste lachen: ein mageres kleines Kätzchen, aber mit langen, weißen, buschigen Augenbrauen – wie ein schrulliger kleiner Greisenkater. Vermutlich genau deshalb hatten Mutter und Kind es am Ende doch nicht mitgenommen.\n Margie zog ihre Jacke aus, wickelte das Kätzchen hinein und ging, im Schein der zahllosen Lichter, durch die Armensiedlung zurück zu ihrer Hütte. Sie lächelte, erwiderte die unterschiedlichsten Grüße der Bewohner und sprach beruhigend zu dem kleinen Wesen in ihren Armen: „Egal ob Mensch, Charon oder du – irgendwann braucht jeder jemanden, der sich kümmert.“\n Die kleine schwarze Katze, zugleich alt und jung wirkend, verstand kein Wort, nahm ihre Streicheleinheiten aber scheu an und zog die heimlich ausgefahrenen Krallen wieder ein.\n Nach kurzem Überlegen packte Margie blitzschnell den hin- und herschnellenden Schweif, knetete ihn fröhlich und sagte lachend: „Von jetzt an heißt du Schwarzschweif ... Au!“\n Am nächsten Tag verrichtete Margie ihre Arbeit mit drei frischen Kratzern im Gesicht und schwerem Herzen. Selbst die warme Sonne von Icelake vermochte ihr kein Lachen zu entlocken. Doch alle wussten: Spätestens nach dem Mittagessen würde die kichernde Margie wieder unter ihnen sein.",
+          TextMapId = "UI_CHAR_DATA_TEXT_33010401"
+        },
+        UI_CHAR_DATA_TEXT_33010402 = {
+          ContentDE = "Margies Tag beginnt damit, dass sie ihren Helm ordentlich aufsetzt.\n Danach holt sie ihre stets mitgeführte Karte und ihr Notizbuch hervor und legt anhand ihrer Kenntnisse über die einzelnen Mülltonnen sowie der Beobachtungen vom Vortag ihre heutige Kontrollroute fest. Schließlich schleppt sie einen großen Sack hinter sich her, wirft sich eine Eisenschaufel über die Schulter und hüpft voller Vorfreude los, um aus jeder Mülltonne entlang der Strecke die heutige Ausbeute zu bergen.\n Wenn sie summend um eine Straßenecke biegt, winkt Tante Sarah ihr beim Wäschewaschen mit ihren vor Kälte geröteten Händen zu; Onkel Rett, der Zimmermann, streut ihr spielerisch ein paar Holzspäne wie Blütenblätter entgegen, und die Tochter des Blumenladenbesitzers auf der anderen Straßenseite kichert jedes Mal über diese Szene.\n So verläuft Margies Alltag, Tag für Tag – ein Leben, das sie liebt, immer mit einem Lächeln auf den Lippen und einem freundlichen Gruß für alle.\n Doch es gibt eine Ausnahme. Die kleine Kennice, die Tochter des Zimmermanns, verbeugt sich übertrieben vor ihr, macht einen Knicks und ruft mit erhobener Stimme: „Seid gegrüßt, liebste Prinzessin! Möge der Gott der Mülltonnen Euch auf ewig segnen!“\n Noch bevor der Satz endet, flieht das Mädchen unter dem Gelächter der Erwachsenen davon. Der Grund ist simpel: Margie, eben noch strahlend, hat die Augenbrauen hochgezogen, den Sack weit geöffnet und sieht ganz so aus, als wolle sie Kennice gleich mit dem Tagesmüll einsammeln.\n Mehr als den Prinzessinnentitel, den sie von ihrem Vater – dem sogenannten „König der Mülleimer“ – geerbt hat, liebt Margie ihre selbstgewählte Bezeichnung: „Fräulein Margie, die schweigende Detektivin, die einsam auf der Rückseite der Stadt wandelt.“\n Vielleicht hatte Kennices „Segen“ tatsächlich Wirkung, denn die heutige Ausbeute ist außergewöhnlich reich: ausrangierte Samtvorhänge eines Adeligen, ein beinahe zwei Meter hohes Bücherregal und sogar einige Silbermünzen, die im Geheimfach eines alten Rucksacks vergessen worden waren. Darüber hinaus stößt Margie in einer Mülltonne vor einem großen Anwesen auf einen unerwarteten Fund – Briefe mit dem Geruch von Desinfektionsmittel sowie einen Stapel Papiere voller komplizierter Formeln.\n In Margies Kopf schrillen die Alarmglocken der Detektivin. Ihr Instinkt sagt ihr, dass der Besitzer dieser Dinge kein gewöhnlicher Mensch ist. Zwar versteht sie die formelgleichen Ableitungen nicht, doch die Briefe – ohne Absender und ohne Adresse – könnten Geheimnisse bergen, die niemand sonst kennt.\n Mit heftig klopfendem Herzen liest Margie einen nach dem anderen.\n \n „Meine Tochter, wenn du noch lebst, dann würden deine stets in meinen Ohren nachhallenden Lachen diese Hallen wahrhaft erfüllen ...“\n „Was mich quält, ist nicht richtig oder falsch, sondern der unwiederbringliche Verlust ...“\n „Ich habe die Eltern des Mädchens abgewiesen. Ich kann es nicht ertragen, den damaligen Albtraum noch einmal zu durchleben. Ich habe beschlossen, die Forschung abzubrechen. Hayley, würdest du meine Entscheidung akzeptieren?“\n „Möge ich diesen Entschluss niemals bereuen ...“\n Die Briefe sind nicht unterzeichnet, doch Margie erkennt darin bereits das Bild eines zurückgezogen lebenden Arztes und ahnt die Schatten seiner Vergangenheit.\n In Mülltonnen liegen nicht nur Essensreste und überflüssige Gegenstände – sie bergen auch Informationen und Geheimnisse. Geschichten voller Trauer und Freude, von Leid und Kampf, und dennoch versuchen die Menschen in diesem riesigen, engen Käfig namens Stadt weiterhin, mit aller Kraft zu leben.\n \n Als die Nacht herabsinkt, kehrt Margie nach einem langen Arbeitstag schwer beladen zurück.\n An der Straßenecke wartet Kennice bereits, eine kleine Blume fest in der Hand, und entschuldigt sich unbeholfen: „Tut mir leid ... ich wusste doch, dass du es nicht magst, wenn man dich so nennt ...“\n Margie hebt den Blick. Durch das Fenster zwinkert ihr die Tochter des Blumenladenbesitzers zu, während sie die Pflanzen gießt.\n Margie lächelt, klopft Kennice auf die Schulter und sagt: „Schon gut! Schließlich war ich es, die ihr Versprechen nicht gehalten hat, dir ein Geschenk mitzubringen. Wenn überhaupt, dann war es der Gott der Mülleimer, der mir gestern nicht hold war.“\n Dann zieht sie wie durch Zauberei einen sauber gewischten alten Rucksack aus ihrem Sack. „Dank deines Segens hatte ich heute richtig Glück! Das hier ist dein verspätetes Geschenk.“ Sie nimmt die kleine orangegelbe Blume entgegen. „Und ich nehme deine Entschuldigung an. Damit sind wir quitt, oder?“\n „Ja!“ Das Mädchen strahlt, macht erneut einen Knicks und ruft: „Vielen Dank, hochverehrte schweigende Detektivin!“\n ",
+          TextMapId = "UI_CHAR_DATA_TEXT_33010402"
+        },
+        UI_CHAR_DATA_TEXT_33010403 = {
+          ContentDE = "Niemand weiß, warum der „Aasfeger“ Martin seine Heimat verließ. Man vermutet, dass er ein Tabu brach, das niemals hätte berührt werden dürfen – vielleicht beleidigte er einen jener unantastbaren „Hausväter“. Andernfalls wäre kaum zu erklären, warum ein Mann, der seine Tochter über alles liebte, unter dem Druck von Schusswaffen mit der jungen Margie im Arm in die endlose Schneewüste floh und eine verzweifelte Reise ums Überleben begann.\n Diese Reise war womöglich die größte Tat seines Lebens – nicht, weil vor ihm niemand diese Einöde lebend durchquert hätte, sondern weil es ihm unter solch erbarmungslosen Bedingungen gelang, sowohl sich selbst als auch Margie zu schützen, ein Kind, das man gemeinhin als Bürde betrachtet. Selbst unter den kälteresistenten Charons sind jene, die mit einem kleinen Kind diese Schneewüste überwinden können, äußerst selten.\n Als Vater und Tochter schließlich in Icelake sesshaft wurden und Monate des Umherirrens ein Ende fanden, stellte Martin überrascht fest, dass Margie zwei Zentimeter gewachsen war. In diesem Moment traten ihm die Tränen in die Augen.\n Die kleine Margie verstand nicht, warum ihr Vater, der eben noch voller Begeisterung ihre Größe gemessen hatte, plötzlich den Kopf senkte. Egal wie oft sie ihn „Dummer Papa“ nannte, er hob den Blick nicht. Verwirrt klopfte sie ihm den Schnee von der Schulter – und bemerkte erschrocken, dass ihr sonst so unbeschwerter Vater leise ein paar graue Haare bekommen hatte, die sich nicht mehr wegwischen ließen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_33010403"
+        },
+        UI_CHAR_DATA_TEXT_33010404 = {
+          ContentDE = "Als Margie zum ersten Mal vor Icelake stand, wurde ihr Geist vollständig von dem gewaltigen Bauwerk vor ihr eingenommen.\n Nach einem schweren Fieber waren ihre ohnehin schon verschwommenen Erinnerungen an die Heimat zu einem diffusen Nebel zerfallen. In dem Wenigen, was ihr geblieben war, bestand die Welt aus endlosen Schneefeldern, erbarmungsloser Kälte, Jägern und Gejagten, dem Sternenhimmel und einem einsamen Lagerfeuer – und aus ihrem Vater, ihrem einzigen Gefährten.\n Und dann erschien Icelake, jenes Ziel, das bisher nur aus den Erzählungen ihres Vaters existiert hatte, plötzlich vor ihren Augen. Damals ließ sich ihr Eindruck nur mit den schlichtesten Worten beschreiben: Wow! Was für ein riesiges Lager! So viele Menschen! So viele unbekannte Gerüche!\n Margie fühlte sich wie ein herumirrendes Kind, das endlich seine Sippe gefunden hatte. Sie hatte keine Angst, keine Nervosität – nur ein überwältigendes Gefühl von Zugehörigkeit, das sich tief in ihr Herz einbrannte. Zum ersten Mal begriff sie, dass die Welt nicht nur aus ihr und ihrem Vater bestand. Und als die Nacht hereinbrach, erschütterte Icelake sie ein weiteres Mal: Hatte früher schon ein einzelnes nächtliches Feuer genügt, um sie zu wärmen, so bildeten nun die zahllosen Lichter hinter den Fenstern eine Wärme, die ihre Vorstellungskraft sprengte.\n Als ihr Vater sie fragte, ob sie hier bleiben wolle, nickte sie ohne Zögern. Kurz darauf begann eine Frau namens Camilla, ihr eine lange Liste von Dingen aufzuzählen, die man in Icelake nicht tun dürfe und Orte, die man meiden müsse. Die junge Margie hörte schläfrig zu. Beim vierten Mal, dass Camilla sie weckte, platzte es aus ihr heraus: „Auf dem Schneefeld gab es nicht annähernd so viele Regeln! Ist es hier gefährlicher als draußen in der Wildnis?“\n Camilla und ihr Vater schwiegen lange. Gerade als Margie wieder einzunicken drohte, legte ihr Vater ihr die Hand auf den Kopf und sagte leise: „Mein Schatz, vielleicht hast du recht.“\n \n Als Margie das zweite Mal vor den Toren von Icelake stand, führten ihre Schritte nach draußen. Der Koloss vor ihr hatte seine Gestalt verändert: Er glich nun einem schweigenden Ungeheuer, dessen Tor wie ein aufgerissenes Maul wirkte. Die Freude und Aufregung von damals waren verschwunden, ersetzt durch Verwirrung und Beklemmung.\n Sie verstand nicht, warum Kälteunempfindlichkeit und angeborene Hörner ausreichten, um sie schuldig zu machen. Sie verstand nicht, warum schon der Wunsch, einen Blick in die „Innenstadt“ zu werfen, eine Bestrafung nach sich ziehen konnte. Am erschreckendsten aber war, dass alle dies als selbstverständlich hinnahmen – selbst Menschenkinder warfen ohne Zögern Steine nach ihr, als wäre sie das eigentliche Ungeheuer. Erst da begriff Margie mit Verspätung, dass der Ort, den sie für einen Zufluchtsort gehalten hatte, sie niemals willkommen geheißen hatte.\n Vielleicht ist das Schicksal eines Kindes der Schneefelder, am Ende doch wieder im endlosen Weiß zu landen.\n Sie wandte sich ab, hielt die aufsteigenden Tränen zurück und begann ihr Abenteuer allein.",
+          TextMapId = "UI_CHAR_DATA_TEXT_33010404"
+        },
+        UI_CHAR_DATA_TEXT_33010405 = {
+          ContentDE = "Kalt. Kalt. Und immer noch kalt.\n Ohne die Augen zu öffnen, sah Margie das grenzenlose Weiß wieder vor sich, Tag um Tag, Monat um Monat – als gäbe es keinen Ausweg.\n Die noch kleine Margie entfernte sich weiter von Icelake und ging tiefer in das Schneefeld hinein. Sie war noch immer wütend über das zerbrochene Bild der Stadt ihrer Träume und zog es vor, diesen Ort voller Ungerechtigkeit zu verlassen. Doch je weiter sie ging, desto mehr blätterte ihr Geist wie in einem alten Buch zurück zu den Erinnerungen an die Reise mit dem alten Martin.\n \n Als sie damals erstmals dieses gefrorene Land betreten hatten, fragte Margie ihren Vater jeden Tag: „Wie weit noch?“\n Jedes Mal nannte Martin eine Zahl. Auch wenn Margie kein echtes Gefühl für „Entfernung“ hatte, wusste sie doch: Sobald diese Zahl Null erreichte, würde die lange Wanderung enden.\n Doch die Zahl schrumpfte nicht immer. Verirrten sie sich im Schnee und kehrten zum Lager der vorherigen Nacht zurück, wuchs sie wieder. Wurde jemand verletzt, verringerte sie sich nur langsam. Und als Margie schließlich der erbarmungslosen Kälte erlag und vor Krankheit nicht mehr stehen konnte, blieb die Zahl lange Zeit stehen.\n Das anhaltende Fieber machte Margie zu einer kleinen glühenden Kohle. In ihrem benebelten Bewusstsein hatten Träume von Sommer und Sonne längst keinen Platz mehr; alles wurde von der Kälte durchdrungen. Und doch fragte sie in klareren Momenten immer wieder mit schwächer werdender Stimme: „Wie weit noch?“\n Die Antwort war Schweigen – und die zitternde Hand ihres Vaters auf ihrer Stirn.\n In einer besonders kalten Nacht träumte Margie, ein Stern sei ihr in die Arme gefallen. Auf seinem langen Sturz war nur noch ein schwaches Glimmen geblieben, doch für sie fühlte es sich brennend heiß an.\n Am nächsten Morgen, als das Sonnenlicht ihr Gesicht traf, war das Fieber verschwunden. Ihr Körper fühlte sich warm und leicht an, fast als wäre sie noch immer in einem Traum. Erst die Umarmung ihres Vaters, die ihr die Luft nahm, und das warme kleine Wesen in ihren Armen ließen sie begreifen, dass ein Wunder geschehen war.\n Dieses warme Etwas war der Ursprung von „Fettschweif“, dem Spielzeug, das Margie später stets bei sich tragen sollte. Damals jedoch war es noch ein ausgemergeltes kleines Wildtier, vermutlich von seiner Familie getrennt, dessen dünnes Fell kaum vor der Kälte schützte. Getrieben vom Überlebensinstinkt hatte es sich an Margies fiebrigen Körper gekuschelt – wohl die einzige Wärmequelle, die es finden konnte.\n In den folgenden Tagen begleitete sie dieses kleine Tier. Es war wachsam und hielt Abstand, näherte sich nur, wenn Margie das beste Trockenfleisch hinlegte und ein paar Schritte zurückwich. Nachdem es die Luft ausgiebig beschnuppert hatte, schnappte es sich vorsichtig die Beute ...\n \n Ein schriller Vogelruf riss Margie aus ihren Erinnerungen und rief ihr ins Bewusstsein, dass sie nun einen Weg beschritt, der dem früheren genau entgegengesetzt war. Sie seufzte leise und versuchte erneut, eine Zahl zum Herunterzählen zu finden – doch sie wusste nicht mehr, wo sie beginnen sollte.\n Wohin sollte sie gehen? Margie wusste es nicht. Die Heimat des alten Martin war kein Zuhause, Icelake ebenso wenig. War ihr Platz also dieses endlose Schneefeld?\n Der Schnee fiel weiter, wie die bunten Bänder, die bei den Umzügen der Adligen in der Luft zerplatzten, und legte sich auf Margies Schultern.\n Niemand wusste, wie viele Tage und Nächte vergangen waren. Der Schneefall wurde dichter, ihr Blick verschwamm. Jemand legte ihr etwas wie eine silberne Decke um, und der Wind klang wie ein sanftes Wiegenlied, das sie auf den bodenweichen Schnee sinken ließ.\n Sie spürte wieder diese vertraute bittere Kälte – doch ihre Träume waren voller Leben. Menschen standen um sie herum, lachten und sangen, der Schmerz war aus ihren Gesichtern verschwunden. Sie nannten sie „Prinzessin“, „Liebling“, „kleine Detektivin“. Sie sah Camilla, Kennice und die Tochter des Blumenladenbesitzers, alle mit gesunden, geröteten Wangen, unberührt von Sturm und Schnee.\n Zuletzt sah sie Fettschweif, das kleine Tier, das sie nach dem Verlassen der Schneefelder nie wieder gesehen hatte – ihren ersten Freund. Früher war es winzig gewesen, nun war es groß und kräftig.\n Nein, das war kein Traum. Margie erwachte abrupt. Fettschweif war real, denn er hatte sich verändert. Geschickt jagte er nun kleine Tiere auf dem Schneefeld und ließ Margie, die noch schwach war, stets ein Stück übrig. Selbst die Knochenreste lockten rundliche Vögel an, die sich daran satt fraßen.\n Margie fühlte sich endlich erleichtert: Fettschweif konnte nicht nur sich selbst ernähren, sondern auch die Schwachen der Eisweite versorgen. Vor allem aber hatte er seinen eigenen Weg gefunden.\n \n Sie dachte an den Traum von den ausgezehrten Gesichtern in den Armenvierteln, die plötzlich voller Leben gewesen waren. Es war nur ein Traum – und doch wusste Margie plötzlich, was sie tun musste.\n „Alter Martin – ich komme zurück!“, rief sie in die Richtung, aus der sie gekommen war. „Ab heute werde ich mit dir ganz Icelake nach Mülltonnen durchsuchen!“\n „Leb wohl, Fettschweif!“, winkte sie der Katze im Schnee zu und machte sich erneut auf den Weg nach Icelake – jener riesigen Stadt voller Ungerechtigkeit, aber auch voller Möglichkeiten.",
+          TextMapId = "UI_CHAR_DATA_TEXT_33010405"
+        },
+        UI_CHAR_DATA_TEXT_41010101 = {
+          ContentDE = "Rhythm besitzt kein besonderes Gespür für Musik. Sie versteht nicht einmal die einfachsten Zeichen auf einem Notenblatt. Und doch vermag sie mit ihrer Mundharmonika die Melodie des Requiems für die Namenlosen zu spielen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_41010101"
+        },
+        UI_CHAR_DATA_TEXT_41010102 = {
+          ContentDE = "Rhythm ist nicht wortkarg, weil sie nichts zu sagen hätte, sondern weil sie nicht weiß, wie sie sich zu Dingen äußern soll, die außerhalb ihres Könnens liegen. In solchen Gesprächen zieht sie es vor, eine aufmerksame Zuhörerin zu sein – bescheiden, geduldig, lernbereit.\n Diese vorbehaltlose Art des Zuhörens macht es leicht, sie mit Lügen zu täuschen. Doch selbst das empfindet Rhythm nicht als Verlust. Für sie ist auch getäuscht zu werden eine Form des Lernens, ein Stolpern gehört zum Wachsen dazu.\n Erst wenn es um Bereiche geht, die sie wirklich kennt – ihre Familie oder ihre Ideale –, wird sie gesprächiger. Viele Themen aus der Vergangenheit jedoch sind zu zerbrechlich geworden, zu schmerzhaft, um sie zu berühren. Stattdessen spricht Rhythm lieber über das Kommende: neue Aufträge. Oft taucht sie ungefragt auf, um dir bei komplizierten Missionen zu helfen, stets beschäftigt, stets erfüllt wirkend. Auf die Frage nach dem Warum lächelt sie nur und sagt, es sei ihre Art, sich für deine frühere Hilfe zu revanchieren.",
+          TextMapId = "UI_CHAR_DATA_TEXT_41010102"
+        },
+        UI_CHAR_DATA_TEXT_41010103 = {
+          ContentDE = "Rhythm behauptet stets, sie besitze keine herausragenden Fähigkeiten. Als Kind habe sie nur überlebt, weil sie und ihr jüngerer Bruder sich gegenseitig stützten, um die Prügel des Fabrikherrn zu ertragen. In der Legion habe sie nur gemeinsam mit ihren Kameraden bestehen können, Schulter an Schulter gegen die Härte der Vorgesetzten. Und nach ihrem Austritt habe sie erst durch die Hilfe der Nachtfahrer neuen Lebensmut gefunden.\n Sie sagt, sie sei nicht außergewöhnlich – dass sie es als Charon aus den Slums bis zur niederen Offizierin gebracht habe, liege lediglich daran, dass sie ein kleines bisschen länger durchgehalten habe als andere.\n Sie sagt sogar, sie sei selbstsüchtig, all ihr Handeln diene nur einem einzigen Wunsch: eines Tages ein Lorbeerkranz-Charon zu werden.\n Doch du kennst die Wahrheit. Dieses Bild von ihr, wie sie sich für andere bis an die Grenze verausgabt, dieser Wille, härter als Metall, ist längst ihre größte Stärke, ihre vorzüglichste Eigenschaft geworden. In den endlosen Nächten von Icelake leuchtet sie hell und unbeugsam – und dieses Licht verliert nichts von seinem Glanz, ganz gleich, aus welchem Motiv es einst geboren wurde.",
+          TextMapId = "UI_CHAR_DATA_TEXT_41010103"
+        },
+        UI_CHAR_DATA_TEXT_41010104 = {
+          ContentDE = "Nachdem Rhythm zum Lorbeerkranz-Charon geworden war, gönnte sie sich – ganz untypisch für sie – erstmals eine Auszeit. Allein ging sie ins Galea-Theater, um sich eine Oper anzusehen.\n Das Publikum jubelte über das Zusammentreffen der Hauptfiguren und trauerte über ihren Abschied, doch all diese Gefühle spiegelten sich kein einziges Mal auf Rhythms Gesicht.\n Sie saß einfach da, zwei Eintrittskarten fest in der Hand, reglos und still, bis der Vorhang gefallen war und die Zuschauer den Saal verließen. Erst als ein Mitarbeiter sie darauf hinwies, bemerkte sie, dass die Vorstellung längst vorbei war – und dass sie eine Karte zu viel gekauft hatte.",
+          TextMapId = "UI_CHAR_DATA_TEXT_41010104"
+        },
+        UI_CHAR_DATA_TEXT_41010201 = {
+          ContentDE = "Rhythm Fischer, ehemaliger Feldwebel der Eskorte der 6. Legion von Icelake, war eine der wenigen Soldatinnen der Stadt, die sich außergewöhnlich engagiert um die Belange der Charons kümmerte. Ob Mordermittlungen, Ordnungseinsätze, Notfallrettungen, Nachbarschaftsstreitigkeiten, das Freimachen von Abwasserkanälen, die Rückführung verlorener Gegenstände oder sogar die Wiederherstellung der städtischen Notstromversorgung – überall war Rhythm beteiligt. Und die meisten dieser mühsamen, undankbaren Aufgaben wurden ihr nicht zugewiesen, sondern von ihr freiwillig übernommen.\n Doch selbst bei jahrelanger Überlastung blieb die Kraft eines Einzelnen begrenzt. Für die schwierige Lebenslage der Charons war ihr Einsatz letztlich nur ein Tropfen auf den heißen Stein.",
+          TextMapId = "UI_CHAR_DATA_TEXT_41010201"
+        },
+        UI_CHAR_DATA_TEXT_41010202 = {
+          ContentDE = "Rhythm führt einen äußerst präzisen Tagesrhythmus. Jeden Morgen um Punkt sechs Uhr erscheint sie zuverlässig auf dem Trainingsgelände der Eskorte, um den neuen Tag im Militärdienst zu beginnen. Man erzählt sich, ihre Pünktlichkeit sei so sprichwörtlich, dass andere Soldaten ihre Uhren nach dem Moment stellten, in dem sie den Platz betritt.",
+          TextMapId = "UI_CHAR_DATA_TEXT_41010202"
+        },
+        UI_CHAR_DATA_TEXT_41010203 = {
+          ContentDE = "Doch selbst Rhythm, die alles mit aller Kraft anzugehen versucht, hat etwas, das sie trotz aller Anstrengung nicht beherrscht: das Fahren. Kein Fahrzeug hält lange durch, sobald es in ihre Hände gerät – früher oder später gibt es den Geist auf. Vielleicht liegt es an der elektrischen Energie in ihrem Körper, vielleicht daran, dass sie schlicht dazu bestimmt ist, mit Autos, Motorrädern und ähnlichen Maschinen unvereinbar zu sein. Wie auch immer: Rhythm und Fahrzeuge werden wohl niemals Freunde werden.",
+          TextMapId = "UI_CHAR_DATA_TEXT_41010203"
+        },
+        UI_CHAR_DATA_TEXT_41010204 = {
+          ContentDE = "Unter der Last des täglichen Überlebens ist Rhythm sowohl körperlich als auch emotional abgestumpft – ohne selbst zu merken, wie weit es bereits gekommen ist. Einmal arbeitete sie acht Stunden am Stück in einer Hochtemperaturzone, in der gewöhnliche Menschen schon nach zehn Minuten das Bewusstsein verlieren würden. Als sie danach unversehrt und so gefasst wie immer zurückkehrte, blieb selbst ihren Kameraden im Wachkorps, die den Charons mit tiefen Vorurteilen begegneten, ein Moment des Innehaltens nicht erspart. In ihren Blicken lag nun etwas Neues: ein Anflug von Respekt – und ein leiser Schatten von Furcht.",
+          TextMapId = "UI_CHAR_DATA_TEXT_41010204"
+        },
+        UI_CHAR_DATA_TEXT_41010301 = {
+          ContentDE = "Rhythm hat eine besondere Vorliebe für Ordnung und Symmetrie. Sie arrangiert ihre Besitztümer sorgfältig, gleichmäßig und übersichtlich – und auch ihr äußeres Erscheinungsbild folgt diesem Prinzip. Gerade deshalb quält sie ein Gedanke seit Langem: Ihre Hörner sind nicht symmetrisch. Jedes Mal, wenn sie in den Spiegel blickt, stellt sie sich vor, wie ein zweites Horn aus ihrem Kopf wächst, um das Ungleichgewicht auszugleichen.\n Als Kind fand sie einmal einen Ast, dessen Form ihrem Horn erstaunlich ähnelte. Sie steckte ihn sich an den Kopf und war eine ganze Weile glücklich über diese geliehene Symmetrie – bis der Ast bei der Arbeit in der Fabrik versehentlich in eine Maschine geriet und zu feinem Staub zermahlen wurde, der später Teil der Pflaster von Icelake wurde.\n Sollte das Imperium je über Technologien zur Verschönerung oder Transplantation von Hörnern verfügen, stünde Rhythm vermutlich ganz vorne in der Reihe der Freiwilligen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_41010301"
+        },
+        UI_CHAR_DATA_TEXT_41010302 = {
+          ContentDE = "Als ihre Fähigkeiten gerade erst erwacht waren und sie sie noch nicht kontrollieren konnte, entluden sich selbst beim Gehen unwillkürlich elektrische Ströme. Das blieb den Fischern von Icelake nicht verborgen, und man lud sie ein, mit auf See zu kommen, um Fische zu betäuben. Rhythm lehnte entschieden ab. Applaus und Reichtum waren nie ihr Ziel. Ihr Wunsch war es, ein Lorbeerkranz-Charon zu werden und das Leben gewöhnlicher Menschen zu verbessern.\n Ganz frei von Problemen ist diese Gabe allerdings bis heute nicht: Beim Händeschütteln trägt sie stets Handschuhe, und beim An- und Ausziehen ihrer Kleidung entstehen regelmäßig kleine statische Fussel.",
+          TextMapId = "UI_CHAR_DATA_TEXT_41010302"
+        },
+        UI_CHAR_DATA_TEXT_41010303 = {
+          ContentDE = "Rhythm konnte sich nie an das Gefühl kalter Waffen gewöhnen. Der stockende Widerstand, wenn eine Klinge Fleisch durchtrennt, die zähe Wärme des Blutes, das über die Handfläche rinnt – ein Unbehagen, das sich nicht abschütteln lässt, egal wie oft sie sich die Hände wäscht. Diese Abscheu nährte ihre Angst vor dem Kampf und ist der Grund, warum sie Schusswaffen Klingen vorzieht. Doch kämpfen musste sie. Seit ihrer Kindheit trieb sie das Ziel an, ein Lorbeerkranz-Charon zu werden. Das Verlangen, die Sicherheit der Menschen zu schützen, führte ihren Finger zum Abzug; der Wille, den Feinden unnötiges Leiden zu ersparen, ließ sie ihre Fertigkeiten als Scharfschützin bis zur Perfektion schleifen.\n Meist gelang es ihr, jenen, die anderen Schaden zufügen wollten, eine augenblickliche Ruhe aus Stahl zu schenken. Doch absolute Gewissheit gibt es nicht. Die wenigen Ausnahmen, in denen Schmerz anhielt, betrachtete Rhythm als eigenes Versagen. In zahllosen Nächten kehrten sie als Albträume zurück, genährt von Schuld, und ließen sie bis zum Morgengrauen nicht los. Immer wieder schwor sie sich: Beim nächsten Mal soll das Leiden aller geringer sein. Beim nächsten Mal – ein Schuss, ein Ende.",
+          TextMapId = "UI_CHAR_DATA_TEXT_41010303"
+        },
+        UI_CHAR_DATA_TEXT_41010304 = {
+          ContentDE = "Auch ohne Blues’ sterbliche Überreste zu bergen, meißelte Rhythm ihm einen Grabstein und setzte ihn still an die Seite der Eltern.\n In jener Nacht entglitt ihr die Kontrolle über den Strom – eine Seltenheit. Keine Worte, keine Tränen. Nur unruhige Entladungen, Funken im Dunkel, die sich schließlich zu einer sanften Umarmung formten und Rhythm behutsam einschlossen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_41010304"
+        },
+        UI_CHAR_DATA_TEXT_41010305 = {
+          ContentDE = "Musik besitzt eine eigentümliche Macht: Sie lindert Kummer und treibt Menschen voran. Früher, wenn Rhythm kurz davorstand aufzugeben, griff sie zur Mundharmonika und spielte das „Requiem für die Namenlosen“. Die Melodie richtete sie auf, ließ sie gefasst und entschlossener in die nächsten Aufträge gehen.\n Doch nun, aus unbekannten Gründen, weicht die Traurigkeit nicht mehr – je öfter sie spielt, desto schwerer lastet sie. Heute findet sie nur noch im endlosen Arbeiten Zuflucht: in Aufträgen ohne Pause, bis die Taubheit kurzzeitig die Schmerzen aus dem Kopf drängt und ihr einen flüchtigen Atemzug Ruhe gewährt.",
+          TextMapId = "UI_CHAR_DATA_TEXT_41010305"
+        },
+        UI_CHAR_DATA_TEXT_41010401 = {
+          ContentDE = "„Die Reserve muss lernen zu leiden – und ihr Charons noch mehr als andere. Rhythm Fischer, du hast Talent. Wenn du bereit bist, genug zu ertragen, kannst du es vielleicht eines Tages zum Lorbeerkranz-Charon bringen. Also los: Säubere die Kanalisation im Zuständigkeitsbereich der Sicherheitsbehörde.“\n So sprach der Truppführer, als Rhythm gerade erst Mitglied der Eskorte-Reserve geworden war.\n „Soldaten müssen lernen zu leiden – und ihr Charons noch mehr als andere. Rhythm Fischer, du hast Talent. Wenn du bereit bist, genug zu ertragen, kannst du es vielleicht eines Tages zum Lorbeerkranz-Charon bringen. Also los: Dieses besonders bösartige Ungeheuer übernimmst du.“\n So sprach der Feldwebel, als Rhythm sich mühsam zur einfachen Soldatin hochgearbeitet hatte.\n „Unteroffiziere müssen lernen zu leiden – und ihr Charons noch mehr als andere. Rhythm Fischer, du hast Talent. Wenn du bereit bist, genug zu ertragen, kannst du es vielleicht eines Tages zum Lorbeerkranz-Charon bringen. Der abtrünnige Anhänger der Verlassenen ist ein angeborener ‚Daimon‘. Der vorherige Trupp wurde vollständig ausgelöscht. Eure Einheit übernimmt den Einsatz.“\n So sprach der Leutnant, als Rhythm sich mit letzter Kraft zu Feldwebel befördert hatte.\n Heute weiß Rhythm selbst nicht mehr, ob all diese verschiedenen Menschen tatsächlich dieselben Worte gesprochen haben – oder ob ihre Sätze sich durch ihre erschreckende Ähnlichkeit unmerklich in ihrem Gedächtnis überlagert haben. Wenn sie spät in der Nacht nach dem Verbinden einer weiteren frischen Wunde endlich im Bett lag, konnte sie sich für einen kurzen Moment der Stille hingeben. Die Dienstgrade der Legion waren zahlreich – wie die Äste eines gewaltigen, ausladenden Baumes. Und das Abzeichen des Lorbeerkranz-Charons glich einer leuchtenden Frucht, verborgen zwischen Blättern und Zweigen. Immer wieder schien diese Frucht nur ein kleines Stück entfernt – als müsste sie nur noch ein wenig höher klettern, um sie zu erreichen. Doch sobald sie sich weiter hinaufarbeitete, schwebte sie davon, wie eine schelmische Seifenblase, die sich noch höher in den Himmel erhob.\n Wann würde sie sie wirklich erreichen? Rhythm wusste es nicht. Würde dieser Tag überhaupt je kommen? Ein leiser Zweifel regte sich. Dennoch dachte sie daran, dass ihre Mahlzeiten längst nicht mehr aus hartem Schwarzbrot bestanden, sondern aus Fleischkonserven, dass sie mehr als einen Satz Kleidung besaß und sich an guten Tagen sogar die Zeit nahm, ihre unschöne Hornspitze im Spiegel zu betrachten. Das Leben wurde besser – langsam, aber spürbar. Mit diesem Gedanken zog sie die kalte, eisenharte Decke über sich und schlief ein.\n Sie hatte fest daran geglaubt, dass jeder Tropfen Schweiß eine weitere Stufe auf dem Weg zum Lorbeerkranz-Charon formte.",
+          TextMapId = "UI_CHAR_DATA_TEXT_41010401"
+        },
+        UI_CHAR_DATA_TEXT_41010402 = {
+          ContentDE = "Um {nickname} weiter bei der Suche nach Informationen über Berenica zu helfen, bestieg Rhythm den Zug.\n Am Tag ihrer Abreise zeigte sich Icelake ausnahmsweise von seiner sonnigen Seite. Sie wählte einen Fensterplatz. Als sie den Kopf drehte, um die Stadt ein letztes Mal zu betrachten, wurde sie vom grellen Licht draußen geblendet. Sie hob den Arm, um die Augen zu schützen – und erkannte in diesem Augenblick, dass weder sie selbst noch die Silhouette der Stadt hinter ihr seit sehr, sehr langer Zeit solch warme Sonne gespürt hatten.\n Sie erinnerte sich an die letzten Worte ihres Bruders: „Versprich mir eines. Was auch immer geschieht – lebe weiter.“\n Familie. {nickname}. Viele Menschen hatten ihr gesagt, sie solle weiterleben. Doch niemand hatte ihr je erklärt, was für ein Leben wirklich als Leben galt – oder was ihm Bedeutung verlieh.\n Das Signalhorn des Zuges dröhnte auf, lang und schwer, wie der klagende Ruf von Icelake selbst. Langsam setzte sich der Zug in Bewegung. Er trug sie fort aus diesem bitterkalten Land, hin zur Hauptstadt des Imperiums – einem fernen, unbekannten Ort. Vielleicht erwartete sie dort strahlendes Sonnenlicht. Vielleicht aber auch nur eine weitere endlose Nacht. Vielleicht tanzende Mädchen und singende Jungen. Vielleicht aber auch nur stummes Seufzen. Vielleicht reife Früchte in reicher Ernte. Vielleicht aber auch nur Fäulnis. Sie wusste es nicht.\n Doch in diesem Moment lag das Sonnenlicht wirklich auf ihrem Gesicht.",
+          TextMapId = "UI_CHAR_DATA_TEXT_41010402"
+        },
+        UI_CHAR_DATA_TEXT_42020101 = {
+          ContentDE = "Morgens sortiert Randy seine Arbeit nach Priorität, eine Angewohnheit von ihm. Sie hilft ihm, sauber zu unterscheiden, was heute erledigt werden muss und was warten kann. „Wenn man unwichtige Aufgaben lange genug liegen lässt, erledigen sie sich manchmal von selbst.“ Randy sagt das nicht nur so dahin. Er predigt dir ständig: Kleinkram muss man nicht beachten, der verschwindet schon. Man solle seine Energie auf die wichtigsten Dinge konzentrieren und den Rest der Zeit gefälligst genießen. Mit genau dieser Begründung hat er dir auch schon einen Teil deiner Aufträge abgeschlagen. Und im Nachhinein stellst du fest: So wie er es gesagt hat, haben sich die lästigen Kleinigkeiten tatsächlich von selbst erledigt.",
+          TextMapId = "UI_CHAR_DATA_TEXT_42020101"
+        },
+        UI_CHAR_DATA_TEXT_42020102 = {
+          ContentDE = "Schlaf ist für Randy heilig. Wenn er sein Klappbett auspackt, setzt er zuerst eine Seiden-Augenmaske auf, zündet dann ein Duftaroma zum Einschlafen an – und erst dann legt er sich mit fast schon religiöser Hingabe ins Bett. Fragst du ihn ausgerechnet dann nach Arbeit, zieht er eine seiner Lieblingsthesen aus der Tasche: „Gestern Nacht bis spät gearbeitet“, „Manches kann man nicht erzwingen“, „Heute stehen die Sterne ungünstig“, „Nur wer ruht, kann Großes leisten“ – irgendwas in der Richtung, um dich abzuwimmeln.\n Wenn du ihm einfach glaubst, merkst du bald: Er hat die Arbeit schon vor diesem übertriebenen Einschlafritual erledigt. Denn: „Je schneller alles weg ist, desto mehr Zeit bleibt zum Ausruhen.“ Aber komm bloß nicht auf die Idee, ihm deshalb noch mehr aufzuhalsen. Dann wirft er sich demonstrativ aufs Klappbett und stellt sich tot – und zwar so überzeugend, dass du ihn nicht einmal mit Kanonendonner wach bekommst.",
+          TextMapId = "UI_CHAR_DATA_TEXT_42020102"
+        },
+        UI_CHAR_DATA_TEXT_42020103 = {
+          ContentDE = "Randy beherrscht sämtliche Gesellschaftstänze – ein „Verdienst“ seiner Schwestern. Die wollten unbedingt, dass er auf den Familienbällen der Star ist. Und tatsächlich: In der zweiten Hälfte jedes Balls sieht man ihn regelmäßig mit glasigem Blick ins Nichts starren. Egal was man sagt, es kommt nur noch: „Mhm“, „Ja“, „Klar“, „Passt“, „Kein Problem“ – reine Autopilot-Antworten.",
+          TextMapId = "UI_CHAR_DATA_TEXT_42020103"
+        },
+        UI_CHAR_DATA_TEXT_42020104 = {
+          ContentDE = "Bis heute kann Randy den Eid der Legion nicht vollständig aufsagen ... im krassen Gegensatz zu seinem Vater, der ihn angeblich rückwärts herunterbeten könnte. Für jemanden, der sich Familienbeziehungen, Spezialgebiete und sogar Monatsratenkredite jedes Legionärs merkt, gibt es dafür auf den ersten Blick nur zwei Gründe: zu faul. kein Bock.\n Aber erst nach einem Gespräch wird klar: Es ist weder das eine noch das andere. Es ist ... reines Unverständnis.\n Ein Eid funktioniert nicht wie eine Maschine, die man Schritt für Schritt zusammenbaut. Nicht wie Spurensuche mit klaren Hinweisen. Nicht wie ein Plan, den man Punkt für Punkt abarbeitet. Ein Eid lebt von Geist und von Gefühl. Randy ist nicht gefühllos. Er begreift nur nicht diese glühende, beinahe fanatische Hingabe der Soldaten. So wie er auch nicht begreift, wie sein Vater für die nebulöse „Ehre“ zu einer Maschine aus Loyalität und Kampf werden konnte – bis er am Ende für diesen Schwur sogar zum Pflegefall wurde.",
+          TextMapId = "UI_CHAR_DATA_TEXT_42020104"
+        },
+        UI_CHAR_DATA_TEXT_42020105 = {
+          ContentDE = "Mit der Zeit erkennst du ein Muster: Die Aufgaben, denen Randy mit blumigen Ausreden ausweicht und sich herumdrückt, haben auffällig oft mit unschuldigen Charon-Leuten zu tun.\n Zufall? Oder die Verschlagenheit eines gerissenen Hütehundes? Du lächelst. Du wirst die Frage nicht stellen. Es soll ein Geheimnis bleiben.",
+          TextMapId = "UI_CHAR_DATA_TEXT_42020105"
+        },
+        UI_CHAR_DATA_TEXT_42020201 = {
+          ContentDE = "Randy Howard, 13. Legion des Hyperboreischen Imperiums, Adjutant von Großkommandantin Sibylle Mason.\n Man sieht ihn häufig in einer Ecke der Halle der 13. Legion sitzen und Tee trinken – ein absurdes Gegenbild zu den hektischen, gehetzten Soldaten ringsum. Angeblich ist sein Traum nicht Adjutant, sondern schlichtweg Pförtner der 13. Legion.\n Wenn ein Rekrut ihn fragt, wie er so entspannt bleiben kann, drückt Randy ihm nur einen dicken Stapel Arbeitsberichte in die Hand und bittet nebenbei, doch bitte noch eine frische Kanne Tee aufzusetzen. Meistens staunen die Rekruten beim Einschenken über die Menge der abgearbeiteten Themen, die Weite seiner Gedanken und die Gründlichkeit der Lösungen.\n Nur Lynn hat nach der Lektüre nie gestaunt. Sie hat in ihrem Kopf bloß ihr Urteil über Randy von „nerviger Golden Retriever“ zu „verlässlicher, aber fauler nerviger Golden Retriever“ angepasst.",
+          TextMapId = "UI_CHAR_DATA_TEXT_42020201"
+        },
+        UI_CHAR_DATA_TEXT_42020202 = {
+          ContentDE = "Der Name Howard hat im Imperium Gewicht – so alt, dass niemand mehr genau weiß, wann die Howards zum Maßstab der „Lorbeerkranz-Charon“ wurden. Man weiß nur noch, dass aus ihrer Familie mehr als unzählige treue Leibwächter, die unter Kaiser dienten, Strategen, die gegen Übermacht siegten, Helden, die furchtlos in den Tod gingen, herausgegangen sind. Randys Vater ist in der Legion ganz wie die vorväterlichen Howards: loyal, stark, furchtlos. Nur hat Randy von diesen Tugenden ... erstaunlich wenig geerbt. Seine Loyalität wankt, seine Stärke dient ihm oft als Ausrede, Verantwortung zu vermeiden – und „furchtlos“ kommt in seinem persönlichen Wortschatz praktisch nicht vor.\n „Die Schande der Howards“ – so nennt ihn sein Vater seit seiner Kindheit.",
+          TextMapId = "UI_CHAR_DATA_TEXT_42020202"
+        },
+        UI_CHAR_DATA_TEXT_42020203 = {
+          ContentDE = "Ausgerechnet beim Tee ist Randy extrem anspruchsvoll, obwohl er eine Elite-Ausbildung hinter sich hat. Er trinkt nur Orange-Pekoe-Tee, den er beim Huaxu-Sternenweber kauft. Aber nicht, weil er ein Feinschmecker ist – sondern weil dieser Tee null wach macht. So sieht Randy aus, als würde er sich für Überstunden wach halten ... und kann danach trotzdem schlafen wie ein Stein.",
+          TextMapId = "UI_CHAR_DATA_TEXT_42020203"
+        },
+        UI_CHAR_DATA_TEXT_42020301 = {
+          ContentDE = "„Howard-Hochleistungs-Energiesparmodus“ – so heißt Randys Methodik des eleganten Drückebergers. Einige versuchten, sie zu kopieren und kassierten dafür eine Abmahnung wegen Arbeitsverweigerung. Denn Faulenzen, ohne dass die Arbeit liegen bleibt – das ist bei Randy eine Kunst, die man studieren muss.",
+          TextMapId = "UI_CHAR_DATA_TEXT_42020301"
+        },
+        UI_CHAR_DATA_TEXT_42020302 = {
+          ContentDE = "Randy kann hervorragend mit Frauen umgehen, auf die er meistens er wie ein echter Gentleman wirkt.",
+          TextMapId = "UI_CHAR_DATA_TEXT_42020302"
+        },
+        UI_CHAR_DATA_TEXT_42020303 = {
+          ContentDE = "Randy bastelt gern an seltsamen, ziemlich nutzlosen Gadgets. In seltenen Fällen sind sie tatsächlich brauchbar; viel öfter kommen dabei aber Dinge heraus, bei denen man nur ratlos den Kopf schüttelt: zum Beispiel ein Sibylle-Feuerzeug, das „Drei, zwei, eins“ in Sybils Stimme herunterzählt oder ein Lynn-Wagenheber, der beim Anfassen sofort hochschnellt und mit einem Knall auseinandergeht.",
+          TextMapId = "UI_CHAR_DATA_TEXT_42020303"
+        },
+        UI_CHAR_DATA_TEXT_42020304 = {
+          ContentDE = "Randy hat die Erwartungen seines Vaters so gut wie nie erfüllt: er ist nicht besonders groß, nicht besonders kräftig und selbst als Soldat wird er wohl kaum so „heldenhaft“ fürs Vaterland sterben, wie sein Vater es sich vorstellt. Nur im Umgang mit dem Schwert hat er Fortschritte gemacht: Er kann inzwischen mit ein paar eleganten Klingenwirbeln einen Apfel ganz schälen. Nur ... wird dieser Apfel nie in den Mund seines Vaters gelangen, der längst im Koma liegt.",
+          TextMapId = "UI_CHAR_DATA_TEXT_42020304"
+        },
+        UI_CHAR_DATA_TEXT_42020305 = {
+          ContentDE = "Als Kind hatte Randy einen Traum: die stärkste Waffe der Welt zu erschaffen und Frieden zu bringen. Vielleicht käme sein Vater dann früher nach Hause. Vielleicht müsste er dann nicht dauernd beweisen, wie stark er ist. Doch nachdem er die Kriegsgeschichte des Kontinents Atlasia gelernt hatte, gab er diesen Traum auf. Denn in den Augen der Menschen gibt es keine „stärkste“ Waffe, nur eine noch stärkere. Waffen sind am Ende immer nur Werkzeuge der Macht. Sie bringen keinen echten Frieden. Und vielleicht – so denkt Randy heute – ist ausgerechnet ein halbherziger Legionär wie er eine ganz neue Art und Weise, Frieden zu suchen. Eine Idee, die man eigentlich groß verbreiten müsste.",
+          TextMapId = "UI_CHAR_DATA_TEXT_42020305"
+        },
+        UI_CHAR_DATA_TEXT_42020401 = {
+          ContentDE = "In Randys Erinnerung sind Regennächte im Zimmer immer duftend, gemütlich, perfekt zum Einschlafen. Draußen dagegen sind Regennächte unruhig, nervös und es passiert ständig etwas.\n Eine pechschwarze Gasse im Regen. Der metallische Gestank von Blut. Ein „Taschendieb“. Fremdländische Schusswaffen. Und eine elegante Dame, die scheinbar auf die Hilfe eines Gentleman wartet. All das ist zu Randys erster Erinnerung daran geworden, wie er nach seinem Eintritt in die Legion zum ersten Mal ausgenutzt wurde.\n Er versuchte, die Situation mit ruhigen Worten zu beschwichtigen und bekam niederprasselnde Kugeln als Antwort. Erst nachdem er zwei Tränengasgranaten hochgehen ließ, holte er die Tasche der Frau zurück ... nur um festzustellen, dass sie leer war. Da begriff er, dass dieser „Überfall“ war nichts weiter als eine Lüge – leicht, höflich, und begleitet von einem hübschen Lächeln.\n Jedes Mal, wenn Randy die gestickte Dankesfahne sieht, die ihm jene Dame geschickt hat – als Dank dafür, dass er ihre Verfolger abgeschüttelt hat – muss er an die Begegnung denken. Dann schaut zu seinen Schwestern und seufzt, sie seien „nicht elegant genug“. Und trotzdem hängt ihm dabei unwillkürlich dieses wohlwollende Lächeln im Gesicht, das nur seine Familie zu sehen bekommt.",
+          TextMapId = "UI_CHAR_DATA_TEXT_42020401"
+        },
+        UI_CHAR_DATA_TEXT_42020402 = {
+          ContentDE = "Jeden Sommer erinnert sich Randy an die Versteckspiele von früher mit seinen Schwestern. Das Bild, das aus grellem Sonnenlicht und unterdrücktem Kichern besteht, ist für sie die schönste Erinnerung – für Randy dagegen ein Albtraum. Denn damals ging es um Würde ... und um eine Wette.\n Der kleine Randy hatte in seinem Zimmer alle Hände voll zu tun: Erst ortete er ihre Schritte mit einem kleinen Geräuscheradar. Dann versuchte er mit Seilen und Fallen, die er vorher im Schlafzimmer aufgebaut hatte, seine gutgelaunte große Schwester abzuwehren. Er entkam sogar ihren Fängen – nur um im nächsten Moment in den Händen der immer lächelnden jüngeren großen Schwester mit spielerischer Leichtigkeit zu landen. Am Ende gab er mit hängendem Kopf auf. Die Strafe: Er musste die neuen Röckchen seiner Schwestern anprobieren und die Fotos wurden eingerahmt. Sie hingen dann direkt im Familienwohnzimmer, so platziert, dass man sie gleich beim Reinkommen sieht.\n Zum Glück hing das Foto nicht lange. Es überlebte nur bis zur nächsten Heimkehr seines Vaters. Und in genau diesem Sommer lernten Randy und seine Schwestern zum ersten Mal, dass der Gürtel einer Offiziersuniform wirklich ... hart ist.",
+          TextMapId = "UI_CHAR_DATA_TEXT_42020402"
+        },
+        UI_CHAR_DATA_TEXT_42020403 = {
+          ContentDE = "Ein Sohn stößt sich immer am Vater. Als Jugendlicher nennt man das fehlende Vaterliebe oder Pflichtversäumnis. Erst später begreift man: Es ist die Ähnlichkeit im Blut, die die beiden unverträglich miteinander macht.\n Randy trat der Legion bei, um sich zu beweisen, dass er niemals so werden würde wie sein Vater. Das redete er sich zumindest ein. Doch als er wirklich inmitten der Ränge der Hyperboreischen Soldaten stand, spürte er plötzlich Angst: Etwas zog an ihm, wollte ihn festketten ... für immer ... an Panzerwagen, Geschütze, Luftschiffe, bis er mit dem kalten Stahl verschmilzt.\n Da verstand er endlich, was das Horn auf seinem Kopf und die Magie bedeuten, mit der er so gern herumalberte. Sie waren kein Schmuck. Kein harmloser Trick, der Applaus erntet. Sie waren ein Fluch, ein Fluch ... und noch ein Fluch. Sein strenger Vater hatte ihn grob in der Kampfkunst gedrillt – und zugleich das Grausamste an Hyperborea mit sanfter Hand vor ihm verborgen.\n Da begriff Randy auch endlich, was die glänzenden Abzeichen bedeuteten, die sein Vater so sorgfältig polierte. Sie waren Almosen eines Wolfsrudels an den Hütehund. Knochen, die die Wölfe zerkaut und wieder ausgespuckt hatten. Knochen, die den Hund vor Bissen schützten ... und ihm manchmal die Illusion gaben, er könne mit den Wölfen tanzen.\n Und er verstand, wozu das ganze Training seines Vaters wirklich diente. Er muss den Staffelstab der Verdienste vom Vater übernehmen, damit die Howards die Fassade der „Lorbeerkranz-Charon“ wahren und alles, was dieser Titel mit sich bringt: ein gutes Leben, Würde, die niemand mit den Füßen treten kann, das unbeschwerte Lachen seiner Schwestern ... ja, am Ende sogar das nackte Überleben.\n Dafür muss er Teil dieser Hyperboreischen Kriegsmaschine werden. Ein Tropfen im Strom aus Stahl ... und wenn er Glück hat, eine Welle.\n Er muss. Er muss so werden wie sein Vater.\n Aber ... wer ist er dann? Wer ist Randy Howard jetzt?\n „Wach auf, alter Mann.“ Randy sitzt am Krankenbett und betrachtet den bewusstlosen Mann mittleren Alters. „Du weißt es doch, oder? Sag mir ... die Antwort.“\n Der Mann schweigt.\n Randy seufzt und legt eine kleine Pistole auf seine Brust – die Waffe, die der Mann in seiner schwersten Stunde noch krampfhaft geschützt hatte. Und zugleich das erste Geschenk, das Randy ihm als Kind gemacht hatte. Er geht, kehrt wieder um und richtet die Pistole sorgfältig aus.",
+          TextMapId = "UI_CHAR_DATA_TEXT_42020403"
+        },
+        UI_CHAR_DATA_TEXT_42020404 = {
+          ContentDE = "Früher war Randy mit solchen Grübeleien allein.\n Zuerst dachte er, auch der Konflikt zwischen euch ließe sich wie vieles andere leicht aus der Welt schaffen. Also zeigte er Interesse an „Verhandlungen“ und sagte ein paar Aufgaben locker zu. Doch später merkte er: Diese Verbindung bringt womöglich mehr Ärger als erwartet und sein Instinkt zum Faulenzen flüsterte ihm zu, es sei klüger, sie rechtzeitig abzubrechen. Nur ... eine begonnene Freundschaft zu beenden, bedeutet auch Arbeit.\n Randy fand keine Antwort. Und wenn er ohnehin immer alles so locker nimmt – dann eben auch diesmal. Er schnippte eine Münze.\n Noch bevor sie aufkam, war die Entscheidung irgendwie schon klar.\n Wenn’s soweit ist, findet sich ein Weg. Und: Niemals auf die Zukunft auf Pump leben – das ist die höchste Form des Faulenzens.\n Also ... so soll es sein. Randy starrte auf die Münze. Sie war nicht auf Kopf, nicht auf Zahl – sie stand aufrecht auf der Kante des Tisches.",
+          TextMapId = "UI_CHAR_DATA_TEXT_42020404"
+        },
+        UI_CHAR_DATA_TEXT_43010101 = {
+          ContentDE = "Sibylle schaffte es vom ganz normalen Charon-Volk bis hoch zur Großkommandantin – in der langen Geschichte des Imperiums ist so ein Aufstieg eine absolute Ausnahme.\n Viele Charons ließen sich davon mitreißen, traten in Massen der Legion bei und versuchten, auf dem Schlachtfeld mit blindem Einsatz Ruhm zu erkämpfen, um Sibylles Weg zu kopieren. Am Ende waren alle Bemühungen trotzdem vergeblich.\n Denn so ein Leben wie ihres – hoch oben, einflussreich, respektiert – verlangt Stärke und Methoden, die weit über das hinausgehen, was ein gewöhnlicher Mensch aufbringen kann.",
+          TextMapId = "UI_CHAR_DATA_TEXT_43010101"
+        },
+        UI_CHAR_DATA_TEXT_43010102 = {
+          ContentDE = "In der Kaiserstadt Dismania würde niemand behaupten, die Stadt besser zu kennen als Sibylle. Nicht nur die Ausrichtung der Gebäude und das Raster der Straßen – selbst die versteckten Passagen, Geheimwege und Ecken, in denen besondere Pflanzen wachsen, waren ihr vertraut.\n Als Kind streifte sie ständig dort herum: mal, um die armen Schlucker abzuschütteln, die sie ausrauben wollten; mal, um in Ruhe etwas zu sich zu nehmen, ohne dabei jeden Atemzug lang in Alarmbereitschaft zu sein.\n Wenn Sibylle von ihren alles andere als schönen Erinnerungen spricht, zeigt sie kaum eine Regung. Vielleicht, weil diese Kindheit ihr am Ende sogar ein „Geschenk“ hinterlassen hatte. Heute kann sie Spione, Flüchtlinge und Schmuggler effizient aufspüren und festnehmen – und dadurch unter den Kollegen noch mehr herausstechen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_43010102"
+        },
+        UI_CHAR_DATA_TEXT_43010103 = {
+          ContentDE = "Sibylle ist häufiger als andere Legionskommandanten an der Front zu sehen.\n Weil sie das Gelände oft schon vor Beginn der Schlacht im Kopf komplett durchkalkuliert und alle Szenarien ausgearbeitet hat, muss sie nicht dauernd im Kommandoposten festsitzen. Sie nimmt sich mehr Zeit, die Lage an der Front mit eigenen Augen zu lesen.\n Gleichzeitig macht sie aus dieser „Inspektion“ eine Inszenierung: Sie begibt sich mit ihren Soldaten in Gefahr, bindet ihnen persönlich die Wunden und verkündet eine Siegesrede, umringt von Jubelschreien: „Großkommandantin Sibylle!“, als wäre der Ausgang längst entschieden. Das kann die Moral der Männer und ihre Autorität massiv steigern. Sibylle weiß das und macht es sich wie ein Werkzeug zunutze.\n Ob das bei ihr reine Show ist oder ob da echte Gefühle mitspielen, ist schwer zu sagen. Denn wenn sie die Soldaten sieht, wie sie sich abrackern, töten und durchhalten, nur um Verdienste zu ergattern, kann sie kaum umhin, als an ihre eigene Vergangenheit zu denken.",
+          TextMapId = "UI_CHAR_DATA_TEXT_43010103"
+        },
+        UI_CHAR_DATA_TEXT_43010104 = {
+          ContentDE = "Sibylle schläft ohnehin selten durch. Wenn sie nachts aufwacht, findet sie oft nicht mehr in den Schlaf zurück. Deshalb ist es längst nichts Außergewöhnliches, sie tief in der Nacht noch über Militärakten gebeugt zu sehen.\n Vor allem auf Luftschiffen ist sie dauerhaft angespannt, ständig wachsam. Eine Narbe, die ihr eine alte Niederlage eingebrannt hat.",
+          TextMapId = "UI_CHAR_DATA_TEXT_43010104"
+        },
+        UI_CHAR_DATA_TEXT_43010105 = {
+          ContentDE = "„Hoffentlich erlebt dieses Land eines Tages Frieden.“\n Dieser Satz ist grob in die alten Ziegeln am Stadtrand von Dismania eingeritzt – schief, unbeholfen, als stammen sie von einem Kind. Wind und Wetter hatten den Stein längst angegriffen, doch er blieb dem Wunsch des Kindes trotzdem treu.\n Sibylle stieß ein leises Schnauben aus – es klang fast amüsiert, fast verächtlich. Du konntest diese Reaktion nicht teilen. An diesem Satz war nichts Lächerliches. Sibylle ließ deine Meinung ohne Widerspruch oder Bestätigung stehen.\n „Mein Lehrer und eine Mitschülerin haben mal etwas Ähnliches gesagt. Schade nur, dass sie an ihrer Kurzsichtigkeit zugrunde gegangen sind. Das Rad der Zeit hat sie zu Staub zermahlen.“\n Du schwiegst.\n „Aber vielleicht glaubst du mir das nicht. Ich erkenne dieses Ideal an.“\n Sibylle blieb nicht stehen. Mit einer einzigen Bewegung zerbröselte sie den alten Ziegel zu Pulver – und mit ihm den Wunsch des Kindes. Nur der letzte Halbsatz zerfiel ungehört im Wind.\n „Und ich werde es wahr werden lassen.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_43010105"
+        },
+        UI_CHAR_DATA_TEXT_43010201 = {
+          ContentDE = "Wer im Hyperboreischen Imperium nach dem Namen Sibylle Mason fragt, bekommt Tausend verschiedene Antworten.\n Historiker im Elfenbeinturm sagen, sie sei die erste Großkommandantin der Hyperboreischen Legion, die aus dem Charon-Volk stammt – ein Ereignis von historischer Tragweite.\n Charons, die davon träumen, eines Tages zum „Lorbeerkranz-Charon“ zu werden, sehen in ihr ein seltenes Wunder: Aus niedriger Herkunft hat sie eine Macht ergriffen, die eigentlich nur den Solas zusteht. Für sie ist Sibylle ein Idol, ein strahlendes Symbol.\n Und die Charons, die das Imperium hassen, die wütend sind und sich betrogen fühlen, sagen: Sie hat ihre eigenen Landsleute verraten, sich selbst erniedrigt und ist zum Jagdhund der Hyperboreischen Legion geworden – eine Verbrecherin, die jeder verachten sollte.\n Auch unter ihren Kameraden gehen die Meinungen auseinander. Manche loben ihre Entschlossenheit und verlassen sich auf ihre absolute Loyalität. Andere halten sie für einen Dorn, der tief in der Legion steckt und irgendwann – wenn die Zeit reif ist – zuschlägt.\n Doch egal, ob man Tausend oder Zehntausend Menschen fragt, ein Ratschlag wird immer gegeben: Leg dich nicht mit Sibylle an.",
+          TextMapId = "UI_CHAR_DATA_TEXT_43010201"
+        },
+        UI_CHAR_DATA_TEXT_43010202 = {
+          ContentDE = "Es heißt, die ewig streng dreinblickende Sibylle kümmere sich auffällig oft um schwächliche Tiere. Wenn eine verletzte Katze oder ein Hund vor ihr liegt, befiehlt sie den Sanitätern, das Tier zu retten – obwohl diese schon mehr als einmal erklärt haben, dass sie keine Tierärzte sind.\n Adlige, die Sibylle nicht ausstehen können, kommentieren diese Gerüchte mit einem giftigen Lächeln: „Unsere Großkommandantin ist gegen Feinde wie gegen Verbündete erbarmungslos, aber um Viehzeug sorgt sie sich. Tja, Viehzeug versteht sich eben am besten mit Viehzeug.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_43010202"
+        },
+        UI_CHAR_DATA_TEXT_43010203 = {
+          ContentDE = "Selbst unter Legionskommandanten gibt es Rangunterschiede. Manche sind nur wegen ihres Adelsbluts im Posten und haben kaum echte Erfolge vorzuweisen. Andere sind Wölfe wie Sibylle – im Heer hoch verehrt und sogar in der Lage, die Politik zu beeinflussen.\n Dass Sibylle Mason so schnell zu ihrem derzeitigen Posten aufgestiegen ist, hat zum großen Teil mit ihren auffälligen Verdiensten zu tun. Ihr Führungsstil ist flexibler als der der Kommandanten vor ihr.\n Der imperialen Tradition zufolge ist der „höchste Ruhm“ auf dem Schlachtfeld der Frontalangriff. Die einfachen Soldaten marschieren furchtlos in eiserner Ordnung voran, bis sie dem Feind so nah sind, dass sie die Poren im Gesicht zählen können – und weichen trotzdem nicht. Der Kommandant dagegen sitzt unterdessen im Schatten des Schlachtfelds, beobachtet die Lage mit kaltem Blick, erträgt die steigenden Verlustzahlen Sekunde für Sekunde und wartet auf den einen Moment, in dem es sich lohnt, die gesamte Militärkraft in die Schlacht zu stecken. Und wenn das Schicksal es wohl meint, zückt er alle Trümpfe für das Blutspiel, in dem Sieg und Niederlage mit fliegendem Blut bezahlt werden.\n Ruhm. Was für ein Ruhm. Jeder Legionskommandant träumt von so einem großen, blutigen Sieg – von einem Sieg, der so gewaltig ist, dass irgendwann ein Luftschiff, eine Straße oder gleich eine ganze Stadt seinen Namen trägt.\n Aber gegen den Aufstand der Verlassenen war dieser Ruhm nichts wert. Die Rebellen, die „Daimonen“ als Hauptkampfkraft einsetzen, vermeiden fast immer die direkte Schlacht. Stattdessen nutzen sie unterschiedlichste Magie und brutale Einzelmobilität, verstecken sich im Dunkeln und schlagen immer wieder aus dem Hinterhalt zu. Sie machen sogar Gebrauch von Filthoiden. Die Standardtaktiken der Legion griffen ins Leere. Und die Kommandanten, die nur von „Ruhm“ reden konnten, mussten am Ende fast alle den bitteren Trank der Niederlage schlucken.\n Sibylle war anders. Aufgewachsen auf der Straße, bewandert in Alchemie und Charon-Magie, wusste sie, wie man diese nie dagewesenen Feinde packen musste:\n Sie ließ so viel Lebensmittel wie möglich beschlagnahmen, damit die Rebellen keine Versorgung mehr bekamen.\n Sie ließ Charons „überlaufen“, nur um dem Feind vergiftete Rationen unterzujubeln – und schlug dann zu.\n Sie täuschte einen Rückzug vor und ließ in zurückgelassenen Vorräten Sprengsätze zurück, um gezielt Angst zu säen.\n Sie versprach Adelstitel und nahm Schwüre ab, nur um nach dem Sieg alle Gegner restlos abschlachten zu lassen.\n ...\n So sicherte sie sich auf einem Schlachtfeld nach dem anderen den Sieg und ihre Herkunft als Charon bremste sie kein bisschen.\n Auch wenn man ihre Methoden als schamlos verspottete, als „Schande“ für die glorreiche Tradition des Imperiums – angeblich passend zu ihrer niederen Herkunft – mussten am Ende alle eine Wahrheit schlucken: Sibylle war inzwischen der wichtigste Trumpf des Imperiums. Gegen Feinde wirft sie gnadenlos alles über Bord, was manche für wertvoller als das Leben halten – Barmherzigkeit, Moral, Ruhm – und gewinnt.\n Also, wer will sich wirklich gegen Großkommandantin Sibylle stellen?",
+          TextMapId = "UI_CHAR_DATA_TEXT_43010203"
+        },
+        UI_CHAR_DATA_TEXT_43010204 = {
+          ContentDE = "Sibylle ist zwar für ihre Siege berüchtigt, doch ausgerechnet die Schlacht, die den Kaiser dazu brachte, sie in einem anderen Blickwinkel zu sehen und sie zur Großkommandantin zu machen, war eine „Niederlage“.\n Historiker setzten den Namen der Schlacht fest: Offensive „Klagelied der Götter“. Und wie der Name schon sagt, war es ein Krieg zwischen Menschen und Göttern. Von Straßensängern in den Gassen bis zur großen Oper: Hyperboreas Untertanen besangen den „großen Feldzug“. Denn auch wenn er scheiterte, war es seit der „Großen Migration“ das erste Mal, dass Sterbliche wieder das elysischen Boden betreten hatten. Diesmal stiegen sie sogar bis zum höchsten Turm auf und richteten ihre Pfeile auf die einstigen Götter.\n Nur findet man fast nichts über die Details dieser Schlacht. Wahrscheinlich werden Historiker nie an echte Primärquellen kommen. Denn von allen, die den Turm bestiegen, kehrten nur zwei lebend zurück. Einer von ihnen war Sibylle – und aus ihr bekommt niemand auch nur ein einziges Wort heraus. Der andere war von Anfang bis Ende ein Rätsel: Er tauchte kurz vor der Operation plötzlich bei der Legion auf, übernahm die Führung und verschwand nach der Schlacht genauso plötzlich wieder, als hätte es ihn nie gegeben.",
+          TextMapId = "UI_CHAR_DATA_TEXT_43010204"
+        },
+        UI_CHAR_DATA_TEXT_43010205 = {
+          ContentDE = "Sibylle hatte früher ein, zwei Freunde. Heute sind sie längst verschwunden. Früher lachte sie mit, wenn es ihnen gut ging und seufzte mit, wenn es ihnen schlecht ging. Jetzt hält sie solche Gefühle eher für ... unnötig.",
+          TextMapId = "UI_CHAR_DATA_TEXT_43010205"
+        },
+        UI_CHAR_DATA_TEXT_43010301 = {
+          ContentDE = "Ihre Lieblingswaffe ist eine speziell angefertigte Peitschenklinge – kompliziert im Aufbau, aufwendig in der Pflege. Und trotzdem kümmert sich Sibylle persönlich um jede Wartung und jede Nachjustierung.\n Sie ist überzeugt: Jeder kann dich irgendwann verraten, nur die Waffe in deiner Hand nicht.",
+          TextMapId = "UI_CHAR_DATA_TEXT_43010301"
+        },
+        UI_CHAR_DATA_TEXT_43010302 = {
+          ContentDE = "Sibylle kennt die meisten Gesetzestexte des Imperiums. Welche Paragraphen der Handel mit Schwarzschnaps, der Überfall auf reiche Kaufleute oder der Schmuggel von Waffen bricht, weiß sie auswendig. Genauso gut kann sie vorhersagen, an welchen Gesetzen diese Leute versuchen, sich Schlupflöcher zu bauen. Besser gesagt: Es wirkt nicht wie eine Vorhersage, sondern eher, als hätte sie im Kopf schon einmal durchgespielt, welche Methoden einen über andere stellen – und wie man dabei der Justiz entkommt.\n Am Ende begriff sie wohl: Statt wie ein Parasit zwischen den Ritzen der Regeln zu kriechen, ist es besser, ganz nach oben zu steigen – um Regeln zu beeinflussen, zu ändern, neu zu schreiben.",
+          TextMapId = "UI_CHAR_DATA_TEXT_43010302"
+        },
+        UI_CHAR_DATA_TEXT_43010303 = {
+          ContentDE = "Die 13. Legion, die Sibylle heute führt, ist eine direkte Kaiserlegion. Sie existiert nur für den Kaiser und ist sein loyalster, verlässlichster Jagdhund. Der Kaiser gab Sibylle sogar das Privileg, bewaffnet den Palast zu betreten. Ein Charon, dem so eine Ehre zuteilwird – das gab es früher nur in Märchen. Sibylle machte sie zur Realität.\n Und genau weil der Kaiser ihr vertraut und sie fördert, attackiert der Senat sie umso härter wegen ihrer niederen Herkunft und ihrer frechen Arroganz.\n Doch nur Sibylle selbst weiß, dass „Alle Ehre unserem Kaiser“ bloß eine Floskel ist. Wenn es überhaupt noch jemanden gibt, dem man Treue schuldet, dann inzwischen nur noch sich selbst.",
+          TextMapId = "UI_CHAR_DATA_TEXT_43010303"
+        },
+        UI_CHAR_DATA_TEXT_43010304 = {
+          ContentDE = "„Wenn du Wissen nur als Leiter zur Macht siehst, wirst du das Wissen, das du suchst, niemals wirklich beherrschen.“\n Sibylle schloss als beste Schülerin unter dem obersten Alchemisten ab, doch ihr verehrter Lehrer ließ nur diesen einen Satz in ihrem Abschlussdokument. Der Raum war unheimlich still. In der Luft war nur Sibylles gepresster Atem.",
+          TextMapId = "UI_CHAR_DATA_TEXT_43010304"
+        },
+        UI_CHAR_DATA_TEXT_43010401 = {
+          ContentDE = "In Sibylles Erinnerung wurde der Himmel des Imperiums erst an dem Tag blau, an dem sie die Alchemie-Akademie betrat. Davor war ihr Leben lange Zeit untrennbar mit Schlamm und Dreck verbunden: zerrissene Kleidung, stinkender Müll, summende Fliegen und stechende Mücken. Damals hatte Sibylle nie zum Himmel hochgeschaut. Sie wusste, da oben war nur eine schwere, graue Decke. Nichts, das sich anzusehen lohnte.\n Mit zehn Jahren zwängte Sibylle die Unterschenkel in speziell präparierte Hosenbeine, spielte routiniert die Krüppelnummer und kroch stöhnend über den Boden, um vorbeigehende gutmütige Herren um Münzen oder Essen anzubetteln. Wenn jemand wirklich Mitleid zeigte und dem „behinderten Kind“ etwas geben wollte, wartete Sibylle den richtigen Moment ab, sprang hoch, riss den Geldbeutel oder die Tasche an sich, rammte die Person zu Boden und rannte dann mit irrer Geschwindigkeit durch die verwinkelten Gassen, bis die wütenden Rufe der Verfolger weit hinter ihr lagen.\n Sibylle wusste ganz genau, was sie tat. Sie hatte Essen, weil sie schneller war und weil sie genug Kraft hatte, es sich zu nehmen. Sie hatte über die schwache Gutmütigkeit der Wohltäter gesiegt und das volle Gefühl im Bauch war ihre Beute. Denn so funktioniert die Welt: Der Starke frisst den Schwachen.\n Und wenn sie eines Tages nicht schnell genug war oder ihr Versteck aufflog und man sie erwischte, zusammenschlug, bis sie nicht mehr atmen konnte – so wie die lahme schwarze Katze in der Gasse – hegte Sibylle keinen Funken Groll. Denn so funktioniert die Welt: Der Starke frisst den Schwachen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_43010401"
+        },
+        UI_CHAR_DATA_TEXT_43010402 = {
+          ContentDE = "Als Sibylle klein war, hatte sie einmal einen Raben.\n Er fiel buchstäblich vom Himmel und krachte direkt vor ihrer armseligen Hütte runter – sie zuckte vor Schreck zusammen. Der Rabe war verletzt mit Tränen in den Augen, als würde er gleich weinen. Und die gute Sibylle nahm ihn mit hinein, verband ihn, fütterte ihn, wusch ihn sauber. Als die Wunden langsam heilten, pickte er aus ihrer Handfläche, lernte wieder zu laufen und versuchte sich mühsam in die Luft zu stemmen. Dann lächelte Sibylle ehrlich von Herzen. Selbst ein hässlicher Rabe, selbst wenn er einmal in den Dreck gefallen ist ... kann irgendwann wieder im Himmel fliegen. Das glaubte sie fest.\n Später klopften ein paar Straßenkinder in ihrem Alter an ihre Tür und bettelten. Auch sie hatten nasse Augen. Also teilte die gute Sibylle ihr Abendessen – ein bisschen Brot und heißes Wasser, mehr war da nicht. Doch sie gingen nicht. Sie drangen in die Hütte ein, raubten ihr den letzten Rest Essen und nahmen auch die wenigen Andenken, die ihr von ihren Eltern geblieben waren. Sibylle wollte sie aufhalten, aber wurde von ihnen gepackt, geschleift und so lange verprügelt, bis ihr das Gesicht blau und geschwollen war.\n Der Rabe schien zu begreifen, was los war: Er schlug hektisch mit den Flügeln, flog über ihre Köpfe und hackte wie wild auf die Eindringlinge ein. Doch der Vogel war erst seit Kurzem wieder halbwegs gesund und flog noch unbeholfen, deshalb packte ihn eines der Straßenkinder rasend vor Wut schon nach wenigen Sekunden. „Du kleines Mistvieh“, höhnte der Anführer und presste den Raben in seiner Faust zusammen. „Du willst mich picken? Willst wohl nicht länger leben.“\n „Bitte ... lasst ihn los!“ Sibylle begriff plötzlich, was passieren würde. Sie geriet in Panik, wand sich wie verrückt und versuchte, sich loszureißen. „Nehmt das Essen, nehmt alles – aber fasst ihn nicht an!“\n Sie schrie sich die Kehle wund und ihre Stimme brach. Doch ihr magerer Körper wurde von zwei Kindern festgehalten. Sie drückten ihren Kopf in den Dreck, und ihre Tränen liefen direkt in den schlammigen Boden.\n Durch blutunterlaufene Augen sah sie, wie der Rabe mit voller Wucht auf den Boden geschleudert wurde. Dann kam das Geräusch von Tritten – schwer, brutal, immer wieder.\n Als die Meute endlich abgezogen war, kroch Sibylle mühsam hoch. Sie nahm den Raben in die Arme, hielt ihn fest an sich und küsste seinen kalten Körper, ohne ein einziges Wort. Sie wusste nicht, wie viel Blut der Rabe verloren hatte – ihre Flügel waren pechschwarz. Von diesem kleinen, schwarzen Lebewesen verblich das Blut im Schatten und der Tod kam lautlos.\n \n Viele Jahre später, als sie längst die Alchemie-Akademie abgeschlossen hatte und inzwischen zum aufsteigenden Stern der Legion geworden war, besuchte Sibylle die Hütte. Sie meinte, das Flattern von Rabenflügeln zu hören – oder war es nur Einbildung? Als sie den Kopf neigte und lauschte, hallten im leeren Zimmer nur ihre eigenen Schritte wider. Wieder dachte sie an jene ferne Nacht, als sie acht Jahre alt gewesen war. Für das zerbrechliche Leben. Für ihre eigene Hilflosigkeit. Ein letztes Mal brach sie in hemmungsloses Schluchzen aus. Die Dunkelheit ertrank ihre Tränen und niemand hörte das Weinen eines achtjährigen Mädchens.",
+          TextMapId = "UI_CHAR_DATA_TEXT_43010402"
+        },
+        UI_CHAR_DATA_TEXT_43010403 = {
+          ContentDE = "Die Gauner pressten Flame das Messer an die Kehle. Die Gelehrte, die fast ihr ganzes Leben im Labor verbracht hatte, stieß einen langen Seufzer aus.\n „Kinder“, sagte sie ruhig, „ihr solltet genau wissen, was ihr da tut. Jeder Millimeter, den ihr mir schneidet, wird euch und euren Leuten zum Verhängnis.“\n Die beiden hörten nicht einmal hin. Sie stopften ihr einen muffigen Lappen in den Mund, zurrten sie grob mit einem Hanfseil fest und warfen sie wie eine Kiste in die Ecke. Mit einem dumpfen Krachen fiel das Lagertor ins Schloss. Der schimmelige Gestank nahm ihr fast die Luft und der Drecklappen erstickte den wichtigsten Satz, den sie hätte sagen müssen: „Lasst mich gehen, und ihr bekommt genug Geld, damit eine ganze Straße davon satt wird.“\n Flame schloss die Augen und zwang sich, ruhig zu atmen. Kräfte sparen. Warten. Erst tief in der Nacht kam vom Oberlicht ein verdächtiges Geräusch. Flame hob den Blick und sah ein Kind, das sich behände hineinschwang und lautlos auf dem Boden landete. Im dünnen Sternenlicht erkannte sie ein Mädchen, von oben bis unten verdreckt. Violette kurze Haare klebten ihr an den Ohren, doch ihre Augen waren hell und wach.\n „Psst.“ Sie zog Flame den Lappen aus dem Mund, drückte ihr den gestohlenen Rucksack in die Hände und flüsterte: „Keine Angst. Die schlafen. Ich bring Sie hier raus. Es tut mir leid ... meine Brüder haben beim Anblick einer wichtigen Person aus der Kaiserstadt den Kopf verloren.“\n „Danke“, sagte Flame, „aber ich muss noch etwas erledigen.“ Dann wandte sie sich an das Mädchen: „Kannst du mich zu dem Ort bringen, an dem sie mich gestern gepackt haben? Zehn Goldmünzen, wenn du’s machst. Ich bin Gelehrte – ich kann nicht zurück, bevor meine Untersuchung abgeschlossen ist.“\n Sie gingen durch die nächtlichen Hänge und Senken. Diese Gegend war noch nicht erschlossen; bis zur nächsten Stadt wären es Stunden zu Fuß gewesen. Wenn hier nicht ein unbekannter Filthoid gesichtet worden wäre hätte Flame sich nie allein in so ein menschenleeres Gebiet gewagt.\n Der Herbstwind biss kalt und Flame geriet immer häufiger ins Taumeln. Das Mädchen blieb zunehmend häufiger stehen, um auf sie zu warten.\n „Kennst du hier in der Nähe einen Filthoid, den man ‚Physalis-Filthoid‘ nennt? Bei euch heißt er doch ...“\n „Wir nennen ihn ‚Klaueblume‘“, antwortete das Mädchen. „Er sieht aus wie eine Pflanze, aber schnappt nach allem, was ihm zu nahe kommt. Wollen Sie da wirklich hin?“\n Flame nickte und sie schlugen den Weg nach Westen ein, hinein in den Wald.\n „Du hast ja überhaupt keine Angst vor Filthoiden“, sagte Flame anerkennend. „Du bist ein ‚Daimon‘?“\n „Ja. Und ich finde Filthoiden spannend.“ Das Mädchen drehte sich um, ihr Blick war klar und scharf: „Wenn Sie das Buch ‚Studien zu Filthoiden und dem Ursprung der Charons‘ von Maxima Flame vom letzten Jahr gelesen hätten, dann würden Sie sich auch für sie interessieren ... Ah, Quatsch! Wenn Sie für die Klaueblume hier sind, haben Sie das Buch bestimmt gelesen. Da steht nämlich, dass die Handblume der älteste nachweisbare Filthoid ist.“\n Flame lächelte nur. Sie erreichten den Felswald im Westen. Als sie an einem großen Stein vorbeiwollten, riss das Mädchen plötzlich den Arm hoch und hielt Flame zurück. Die Stille zerschnitt wie ein Riss und Dutzende Lichtbögen zuckten durch die Luft.\n „Gerade hat sich die Klaueblume in den Boden zurückgezogen. Wenn wir weitergegangen wären, wären wir erledigt gewesen. Jetzt ist’s gut. Ich habe sie gelähmt. Sie können untersuchen, was Sie wollen.“ Ihre Stimme blieb erstaunlich ruhig, doch auf ihrer Stirn standen feine Schweißperlen. Wahrscheinlich haben die paar Entladungen eben sie eine Menge Mana gekostet.\n Flame bedankte sich, öffnete den Rucksack und holte ihr Werkzeug heraus. „Du hast ‚Studien zu Filthoiden und dem Ursprung der Charons‘ gelesen“, sagte Flame und schnitt routiniert Gewebe heraus, trennte es sauber und legte es in Petrischalen. „Dann weißt du auch, dass der Autor über die Entdeckung der ‚Helix‘ die Theorie bestätigt hat, dass alle Charons und Filthoiden denselben Ursprung haben. Hast du keine Angst? Nicht nur die Verdorbenen ... in allen Charons fließt Filthoiden-Blut. Auch in dir.“\n „Wovor denn? Mir ist egal, was ich einmal gewesen bin. Mich interessiert nur, was ich noch werden kann. Und außerdem ...“ Dann lächelte sie, und in ihren violetten Augen lag klare Entschlossenheit. „Nur wenn man weiß, was die eigene Kraft wirklich ist, kann man lernen, sie zu nutzen und zu beherrschen.“\n „Ich bin fertig mit den Proben. Danke. Das ist eine extrem seltene Unterart des Physalis-Filthoids. Bring mich bis zur nächsten Stadt.“ Flame richtete sich auf. „Ach ja ... wie heißt du?“\n „Sibylle Mason“, antwortete das Mädchen.\n „Gut, Sibylle Mason.“ Flame lächelte. Der Nachtwind im Tal kam auf und ließ ihren Mantel schlagen. „Ich gebe dir eine Adresse. Wenn du dich für Filthoiden interessierst – und für die Kraft der ‚Daimonen‘, dann komm zu diesem Anwesen und gib deinen Namen an. Ich werde dort auf dich warten.“\n \n „Verräterin! Sibylle, du warst diejenige, die uns die Alte überhaupt auf den Hals gehetzt hat! Und jetzt lässt du sie einfach laufen ... was soll das?!“\n „Reichen euch zehn Goldmünzen nicht?“\n „Du hast doch selbst gesagt, das ist ein hohes Tier aus der Kaiserstadt ... wenn schon, dann dicke Beute! Und jetzt kriegst du kalte Füße? Wenn’s dir nur um die paar Münzen ging, hätten wir sie gleich abstechen sollen, dann wäre Ruhe!“\n Die zwei Gauner waren Rücken an Rücken an eine Bank gefesselt. Um sie herum lagen umgestoßene Flaschen. Sie zerrten an den Seilen und brüllten Sibylle an: „Feigling! Greif doch an, wenn wir wach sind! Du dreckiges, mutterloses Bastardkind! Immer bist du diejenige, die rumzögert und rumeiert. Ich hab dich schon lange satt – irgendwann werden wir dich abstechen wie damals diesen Raben ...“\n Sibylle stand auf, hob müde die Lider und packte dem Jungen, der am lautesten tobte, den Kiefer. Sie riss ihm den Mund auf. Knack. Das war das Geräusch von brechenden Knochen. Sibylle stopfte ihm eine Goldmünze nach der anderen zwischen die Zähne. Das Geschrei wurde zu Würgen, dann zu einem heiseren Röcheln.\n „Idioten. Euer beschissenes Leben endet hier. Meins ganz sicher nicht.“\n Sie ballte das Blatt Papier, das Flame aus ihrem Notizbuch gerissen hatte, fest in der Faust und machte sich auf den Weg zurück in die Kaiserstadt Dismania.",
+          TextMapId = "UI_CHAR_DATA_TEXT_43010403"
+        },
+        UI_CHAR_DATA_TEXT_43010404 = {
+          ContentDE = "Sibylle war überzeugt, dass sie einmal aus der Hölle zurückgekommen war.\n Wie sieht die Hölle aus? Ein Meer aus Flammen. Selbst wenn man fliehen will, drängt das Feuer immer wieder. Glühende Luft, zäh wie Flüssigkeit, kriecht in die Nase und knistert direkt am Ohr.\n Über der Feueroberfläche werden alle Vögel, die noch fliegen wollen, zu blinden Krähen – und stürzen in die verkohlte Erde, wo ihr Aufprall nur ein paar Wellen aus Feuer schlägt.\n \n Eigentlich sollte es eine streng geheime Militäroperation sein. Der Kommandant hatte vor dem Aufbruch unzählige Möglichkeiten durchgespielt – doch niemand wusste wirklich, wie stark die Verteidigung im Kerngebiet der Kirche war.\n Nach drei Tagen und drei Nächten des Abwägens entschied er sich schließlich für alles oder nichts: eine kleine, aber extrem schlagkräftige Einheit mit dem neuesten Luftschiff des Imperiums im Hochtempo zum Ziel. Ein Enthauptungsschlag.\n Riskant, aber von allen Plänen der einzige, der dem Sieg am nächsten kam. Also bewaffneten sich dreizehn „Daimonen“ bis an die Zähne und zogen sich Uniformen über, die von gewöhnlichen Soldaten nicht zu unterscheiden waren. Kein Abschied. Keine Ansprachen. So nüchtern, als würde man Nachschub ausliefern, begann eine Expedition, die jederzeit in den Tod führen konnte.\n Doch selbst mit der schlimmsten Erwartung im Kopf begriffen sie erst, als sie wirklich dem Blick der Höchsten begegneten, was „Gott“ bedeutete ... und wie furchteinflößend die Götter waren.\n \n Strahl um Strahl brannte durch die Nacht, riss den Himmel auf wie ewiges Feuer und verschlang alles und jeden.\n Und Sibylle, die sich am Rande des infernalischen Glühens befand, sah vor allem nur noch Feuerlicht. Alles andere waren verkohlte Äste oder Tierfetzen. Sie hatte längst keine Kraft mehr, den Unterschied zu erkennen.\n Sie hatte Glück: Sie konnte sich aus dem Angriffstrupp zurückziehen und außerhalb des Turms als letzte Trumpfkarte in Deckung gehen. Wenn der Plan aufging, würden ihre Kameraden tief in den Turm eindringen, den Auftrag erledigen und sie würde aus einem Schatten, den der Feind nicht wahrnahm, das Luftschiff heranführen und sie herausholen. Und wenn alles schiefging, würde sie wenigstens so viele Verwundete wie möglich mitnehmen, um die Verluste so niedrig wie möglich zu halten.\n Sie wusste nicht, was ihre Kameraden tief im Inneren des Turms wirklich erlebt hatten ... aber das Inferno vor ihr war offensichtlich der schlimmste Ausgang, der in all den Planspielen überhaupt möglich gewesen war.\n Von den zwölf, die in den Turm gegangen waren, kamen nur drei wieder heraus. Ein grausiges Licht jagte ihnen im Rücken nach. Wo es hinfiel, ging alles in Flammen auf – selbst Felsen wurde durchbohrt. Und sie war nicht die Macht eines Ritters. Es war, als hätte ein Gott persönlich das Urteil gesprochen.\n Zwei der Überlebenden stießen ihr den schwer verletzten, bewusstlosen Kommandanten in die Arme, dann schleppten sie sich mit ihren zerfetzten Körpern in die andere Richtung. Sie hatten entschieden, den Rückzug zu decken.\n \n Dank der zähen Konstitution der Daimonen konnten sie überhaupt noch stehen. Einer schaffte es sogar, das Schwert zu ziehen, nur um sich an ihm festzuklammern.\n Das Feuer um sie herum ließ kurz nach und ihr Keuchen wurde ebenmäßiger – nicht mehr wie eben, als ihnen mit jedem Atemzug heißes Blut aus Mund und Nase lief.\n Doch kaum ebbten die Flammen ab, tauchten sie auf: schwer bewaffnete Ritter. Man musste weder ihre Rüstung noch ihre Waffen sehen – ihre Schritte reichten, um zu wissen, dass sie Elite waren. Und sie kamen nicht, um Gefangene zu nehmen. Sie waren hier, um die Eindringlinge auszulöschen.\n Normalerweise rennen gewöhnliche Feinde vor einem Daimon wie Hasen davon. Aber wenn einem Adler die Flügel gebrochen und die Schwungfedern ausgerissen werden, können selbst Ameisen ihn bei lebendigem Leib zerlegen.\n Ein dichter, von blanker Tötungsabsicht getragener Kugelhagel durchbrach das inzwischen langsamer werdende Klingenwirbeln und durchbohrte die beiden Widerständler, als würde Stoff zerfetzt.\n Die elysischen Ritter, die anfangs nur aus der Distanz geschossen hatten, rückten immer weiter vor. Noch ein paar Schritte und sie wären nah genug gewesen, um mit der Klinge die Wirbelsäule ihres „Großfeinds“ aufzuschneiden.\n \n Sibylle war wie benommen. Vor nicht langer Zeit hatten diese Daimonen mit ihr Seite an Seite den Einsatz durchgeplant und jetzt standen sie auf entgegengesetzten Seiten von Leben und Tod.\n Sie hatten ihre letzten Kräfte aufgebraucht. Um nicht umzufallen, lehnten sie Rücken an Rücken gegeneinander, schräg im Stand, und warfen – ob bewusst oder nicht – immer wieder Blicke in die Richtung, die Sibylle zum Luftschiff nehmen musste.\n Sibylles Verstand – sogar ihre Instinkte, die ihr über Jahre in den Körper gebrannt worden waren – sagten ihr, sie solle den Befehl befolgen. Nicht hinschauen. Nicht zögern. Doch da war auch diese kleine, heimliche Stimme – und trotzdem schrie sie aus voller Kehle, dass das falsch war.\n Sie waren nicht schlecht zu ihr gewesen. Loyal zum Imperium, genauso ehrgeizig und genauso mit einer Vergangenheit, die man nicht stolz herumzeigte. An vielen Abenden hatten sie im Lager unter flackerndem Licht über das gesprochen, was hinter ihnen lag ... und darüber, was aus ihnen irgendwann werden sollte. In Sibylles Welt, in der sie sich eingeredet hatte, mutterseelenallein zu sein, waren sie vermutlich das, was am ehesten an Freunde heranreichte.\n Und jetzt, im letzten Augenblick vor ihrem Tod, sahen genau diese Menschen sie an.\n Was bedeuteten ihre Blicke? Hilfe? Zögern? Hass? Oder etwas ganz anderes?\n \n Sibylle wusste, dass sie darüber nicht nachdenken durfte. Sie musste hart bleiben. Den Befehl befolgen. Hier, an diesem Ort, diese letzte, unzulässige Regung Menschlichkeit in sich selbst ersticken.\n Aber ... sollte sie das wirklich tun? Sollte sie ihre Freunde wirklich sterben lassen?\n Sie schloss die Augen, als könnte sie dieser Höllenentscheidung entkommen, wenn sie nichts mehr wahrnahm.\n Doch in dem Moment, in dem ihre Lider zufielen, trafen die beiden die Entscheidung für sie: Sie zogen die Dolche vom jeweils anderen Gürtel, setzten die Klingen an die Kehle des Gegenübers – und stießen zu. Tief. Ohne Zögern, als wäre es längst beschlossene Sache. Dann sanken sie mit einem Lächeln zu Boden. Gleichzeitig ließ Sibylle die Triebwerke des Luftschiffs an.\n \n Im mechanischen Dröhnen stieß sie endlich Luft aus, die sie so lange in der Brust festgehalten hatte. Sie blinzelte schnell und merkte, dass ihr etwas über die Wange kullerte. Eine Träne, die niemand je an ihr gesehen hatte. Sibylle verstand nicht, was diese Träne bedeutete. Genauso wenig wie sie verstand, was für ein Blick ihr in jenem letzten Moment gegolten hatte.\n Vielleicht Erleichterung, weil sie nicht mehr entscheiden musste, ob sie einen Befehl brechen sollte. Vielleicht etwas anderes.\n \n ...\n Weil es ihnen gelungen war, den Turm der „Götter“ überhaupt zu betreten, erklärte das Imperium die Operation am Ende zum Sieg. In der offiziellen Todesmeldung hieß es: alle gefallen – außer Sibylle.\n Sibylle stieg danach schnell zur Großkommandantin auf und nannte diesen Einsatz später „Rückkehr aus der Hölle“.",
+          TextMapId = "UI_CHAR_DATA_TEXT_43010404"
+        },
+        UI_CHAR_DATA_TEXT_43010405 = {
+          ContentDE = "Ein paar Raben hockten auf der Fensterbank und strichen sich ihr schwarz schimmerndes Gefieder glatt. Flame musste an ihren anderen Namen denken: Todesboten. Ja. Unglück anzukündigen war schon immer die Aufgabe der Raben gewesen.\n Weil die Forschung in der Alchemie-Akademie geheim war, hatten nur die wenigsten Räume überhaupt Fenster. Stattdessen brannten dort Tag und Nacht Lampen wie eine blasse Sonne, die in einer Polarnacht niemals untergeht. Doch Flame hatte sich in ihrem Büro stur ein schmales Fenster einbauen lassen, als würde sie mit dieser einen Öffnung noch irgendwie mit der Welt da draußen verbunden bleiben.\n Heute war dieses Fenster von schwarzen Raben besetzt.\n Flame saß kerzengerade an ihrem Schreibtisch. Der Rücken aufrecht, das Haar makellos im Nacken gebunden. Als es klopfte, sah sie weiterhin nur zum Fenster hinaus. Sie würdigte die Person an der Tür keines Blickes – ihre ehemalige Schülerin, jetzt Großkommandantin Sibylle.\n \n „Frau Maxima Flame“, durchbrach Sybil schließlich die peinliche Stille. „Ich bin hier, um Ihnen Folgendes mitzuteilen: Aufgrund Ihres Verhaltens, das einer indirekten Treueverletzung gegenüber dem Imperium gleichkommt, werden Ihnen alle Ämter an der Spathatoi aberkannt – ebenso der Titel ‚Chef-Alchemistin‘. Allerdings ...“ Sie hielt kurz inne, sah ihre einstige Mentorin an und sprach dann die Gnade aus, die sie unter Verlust ihrer Würde hatte erbetteln müssen: „Wegen Ihrer großen Verdienste im Namen des Imperiums werden Sie nicht ins Königliches Militärgefängnis überstellt. Wenn Sie weiterhin forschen möchten, dürfen Sie sogar einen Forschungsraum in der Alchemie-Akademie behalten – selbstverständlich unter Aufsicht. Jede Ihrer Arbeiten wird überwacht.“\n Flame antwortete nicht. Erst nach einer langen Weile stieß sie einen tiefen Seufzer aus, drehte sich um und sagte: „Großkommandantin, ist das alles, was du mir zu sagen hast?“\n Sibylle wich dem Blick ihrer Lehrerin aus: „Ja. Mehr gibt es nicht.“\n „Als ich dich zum ersten Mal gesehen habe, warst du noch so klein. Damals war ich deine Gefangene. Genau wie heute.“ Dann fragte Flame: „Diese Entführung ... war von Anfang an dein Plan, stimmt’s?“\n Sibylle schüttelte den Kopf: „In alten Erinnerungen zu schwelgen bringt nichts, Frau Flame. Entscheidend ist das Hier und Jetzt.“\n „Die Alchemie-Akademie war einmal ein Ort, an dem man Wissen gesucht hat. Aber du und Julius habt sie zu Hyperboreas Schande gemacht.“ Die längst nicht mehr junge Gelehrte sah ihre Schülerin an und versuchte ein weiteres Mal vergeblich, sie zur Vernunft zu bringen: „Wissen hat einen Sinn: die Welt besser zu machen. Aber du hast es nur als ...“\n „Als Leiter zur Macht benutzt. Das haben Sie mir schonmal gesagt.“ Sibylle sprach: „Ihre Ideale sind edel. Meine Haltung gegenüber Wissen ist schamlos und niederträchtig – das habe ich nie bestritten. Aber haben Sie je darüber nachgedacht? Sich so hehre Ideale leisten zu können, ist ein Privileg für Menschen von Ihrer Herkunft. Sie haben unzählige Auswege. Und der Rabe dort am Fensterbrett ... hat nur zwei. Entweder fliegt er mit allem, was er hat oder er wird von der Steinschleuder eines Kindes vom Himmel geholt.“\n „Und was Sie nicht wissen“, fuhr Sybil fort, „ist: Raben haben auch ihre eigenen Ideale. Sie fliegen hoch genug, um Dinge zu sehen, die Menschen am Boden nie sehen werden. Und deshalb können sie tun, was nur sie können – sie können die Menschen wirklich verändern.“\n „Großkommandantin ... nein. Sibylle. Sag es mir ehrlich!“ Flame sprang so abrupt auf, dass der Stuhl hinter ihr scheppernd umkippte. Die Raben auf dem Fensterbrett flatterten erschrocken davon. „An jenem Tag im ‚Turm‘ der Elysischen Kirche ... was habt ihr dort wirklich gesehen?“\n \n Sibylle antwortete nicht. Das Abendlicht fiel endlich durch das Fenster und erhellte ihr Gesicht. Für einen Augenblick kam Flame das Antlitz ihrer Schülerin wie eine heilige Statue der Kirche vor – kalt und zugleich gütig.\n „Nichts Besonderes, Frau Flame“. Sibylle sprach: „Zurück zum Wesentlichen. Wenn Sie in der Alchemie-Akademie weiterforschen wollen, unterschreiben Sie dieses Dokument. Sie haben drei Tage Bedenkzeit.“\n Die Frau, die nun Großkommandantin war, drehte sich um und ging, ohne sich noch einmal umzusehen. Erst als sie den langen, dunklen Korridor durchquert und das Büro weit hinter sich gelassen hatte, blieb sie stehen, wandte sich zurück – und verbeugte sich tief in Richtung der geschlossenen Tür.\n „Lebwohl, Lehrerin.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_43010405"
+        },
+        UI_CHAR_DATA_TEXT_51010101 = {
+          ContentDE = "Wenn die Leute in der Stadt von Filbert sprechen, denken sie weniger an ein Schwein mit vollgepacktem Futterkorb und mehr an den bebenden Boden, wenn es vorbeidonnert und an den Windstoß, den es dabei aufwirbelt.\n Warum? Na ja ...\n Das hat wohl damit zu tun, dass in der Stadt hin und wieder schiefstehende Mauern stehen oder ein Marktstand plattgedrückt wird. Keine Sorge: Das ist nur ein Beweis, dass Filbert hier war. Und natürlich folgen ein paar Beschwerdebriefe an die Elysische Kirche. \n Nur: Jeder dieser kleinen „Unfälle“ bedeutet auch, dass Filbert wieder einmal mit reicher Beute zurückgekehrt ist. Deshalb liest man zwischen den Zeilen meist mehr Freude als Ärger.\n „Diese alte Mauer gehört praktisch zur Familie! Jetzt hat sie einen ordentlichen Rempler abbekommen – Truffle soll uns zur Entschädigung ein paar Stücke Brot mehr geben!“\n Oh ... und aus der Ferne kommt schon wieder ein „BUMM“ ...",
+          TextMapId = "UI_CHAR_DATA_TEXT_51010101"
+        },
+        UI_CHAR_DATA_TEXT_51010102 = {
+          ContentDE = "Auf gewisse Weise wäre Truffle als Wegführerin für ein Heer perfekt.\n Immerhin kennt sie die bequemsten Routen und kann an der Form der Baumkronen die Richtung erkennen. Und sie weiß ganz genau, an welchen Quellen sich Filbert satt trinken kann.\n Von Wildpilzen und Beeren ganz zu schweigen. Welche Frucht sauer ist, welche herb, welche Pilze knallrot aussehen und trotzdem ungiftig sind und welche Pilze dagegen eine ganze Truppe lahmlegen würden: Truffle kann den Wald lesen wie ein Soldat sein Magazin.\n Nur passt das leider überhaupt nicht zu ihr. Niemand möchte dieses kleine Mädchen im Krieg sehen. Sie sollte über Feldwege laufen mit dem Wind der Berge im Gesicht und nicht mit Kriegsfeuer, Schüssen und all diesen furchtbaren Barbaren verkehren.",
+          TextMapId = "UI_CHAR_DATA_TEXT_51010102"
+        },
+        UI_CHAR_DATA_TEXT_51010103 = {
+          ContentDE = "Es gibt genau eine Situation, in der Truffles Gedächtnis plötzlich unglaublich gut wird: wenn in den Schriften Essen vorkommt. Sie weiß, in welchem Abschnitt und wie oft Trauben, Brot und Milch erwähnt werden, sogar wie ihre Konsistenz beschrieben wird.\n Am stärksten ist ihr eine Passage über Trauben im Kopf geblieben: Ein großer Geistlicher – der Name fällt ihr nicht mehr ein – steht kurz davor, in irgendeiner Wüste zu verdursten. Da schickt der Himmel ihm eine Traube mit neun Beeren. Die Schale ist so violett wie Achat, das Fruchtfleisch so grün wie ein Wald, der Saft süßer als der erste Tautropfen des Tages.\n Truffle hat diese Beschreibung jahrelang mit sich herumgetragen. Als sie dann zum ersten Mal echte Weintrauben probierte, war sie maßlos enttäuscht – sie fing sogar an zu weinen. Die Priester, die sie eigentlich loben wollten, gerieten in Panik und wussten nicht, was passiert war.",
+          TextMapId = "UI_CHAR_DATA_TEXT_51010103"
+        },
+        UI_CHAR_DATA_TEXT_51010104 = {
+          ContentDE = "Truffles Haar ist dicht und goldblond. Nach einer Nacht verknotet es sofort, deshalb braucht Priester McGuffin morgens bei ihr deutlich länger als bei den anderen Kindern.\n Und doch ist nach ein paar Stunden Toben jeder fein geflochtene Zopf wieder zerzaust. Mit der Zeit konnten die Priester allein daran, welche Beerenreste oder Grashalme in ihrem Haar hingen, erkennen, wo Truffle schon wieder herumgestreunt war.",
+          TextMapId = "UI_CHAR_DATA_TEXT_51010104"
+        },
+        UI_CHAR_DATA_TEXT_51010105 = {
+          ContentDE = "Wenn du mit Truffle zusammen bist, landet ihr fast immer beim Thema Essen. Auch ihre Geschichten drehen sich erstaunlich oft um Trinken und Essen.\n Und wenn man sie fragt, was ihr Lieblingsessen ist, lässt sie die sättigenden Kartoffelfladen und den seltenen Ferro-Fischbrei beiseite und sagt ganz gewöhnliches Vollkornbrot mit ein bisschen Salz. Lange Zeit war das das Standard-Mittagessen der Kirche in einer Hungerperiode.",
+          TextMapId = "UI_CHAR_DATA_TEXT_51010105"
+        },
+        UI_CHAR_DATA_TEXT_51010201 = {
+          ContentDE = "„... Mein Freund, wenn du in dieser Stadt ein zierliches Mädchen siehst, das mit einem riesigen Schwein hemmungslos durch die Straßen rast, dann wundere dich nicht. Seltsamer ist eher, dass das hier niemand seltsam findet.“\n Fast jeder kennt sie: Truffle, die Kommissarin und Familie Filbert, Sonderkommissarin. In dieser Stadt, flach ausgebreitet wie ein Pfannkuchen, sind sie zwei leuchtend rote Erdbeeren. Wenn Truffle erwähnt wird, runzeln viele in der Kirche streng die Stirn und schimpfen über ihre verspielte Verschmitztheit – doch in ihren Augen spiegelt sich selten echte Verärgerung wider. Vielleicht ist es wie bei einer reifen Frucht, die einem im Obstgarten auf den Kopf fällt: Das tut kurz weh, aber es ist nichts, worüber man wirklich wütend wird ...“\n „... Die Stimme des Mädchens klang leicht und ehrlich und erreichte Ohren, die sich nach Glück sehnten: ‚Mögen alle Menschen auf dieser Welt satt werden ... und ohne Sorgen!‘ ...“\n — Vivian, Schriftstellerin und Reisende aus der Republik Luca, „Aufzeichnungen aus dem Süden“",
+          TextMapId = "UI_CHAR_DATA_TEXT_51010201"
+        },
+        UI_CHAR_DATA_TEXT_51010202 = {
+          ContentDE = "Das Land vor den Toren der Stadt ist uralt – voller wilder Eichen und Gestrüpp. Und tief unter ihnen ruht still eine Delikatesse namens Rotpilz.\n Rotpilze sind keine Blumen, die offen blühen. Sie verstecken sich. Früher war es fast unmöglich, sie aufzuspüren.\n Aber jetzt tauchen jedes Jahr zwei Gestalten dort ohne Fehl auf, wenn der Südwind nicht mehr brennt und der Nordwind den Herbst über das Land streut: Truffle, klein, und Filbert, groß.\n Wozu? Natürlich um Rotpilze zu suchen.\n Filbert hebt die Schnauze und schnüffelt. Das grünlich-muffige Aroma – das sind gefallene Blätter. Der süß-schwere Duft mit einem Hauch Alkohol – vergorene Beeren. Und dieser seltsame, kräftige Duft ... ja. Da unten sind Rotpilze.\n Mit einem einzigen Stoß wühlt Filbert die dicke Laubschicht und den schweren Boden unter ihm auf. Kaum ist ein Eck freigelegt, breitet sich der merkwürdige Duft aus – sogar Eichhörnchen, die gerade Nüsse sammeln, werden neugierig und kommen näher. Truffle kniet sich neben Filbert und gräbt mit. Sie holt den Rotpilz heraus und stopft ihn in die Taschen. Danach wüscht sie ihre Hände am Bach springt auf Filbert und im Nu sind die beiden wieder zurück in der Stadt.\n So kommt es, dass im mageren Jahr dieser kleinen Stadt der Elysischen Kirche ausgerechnet einige der Ärmsten sich mit teuren Rotpilzen satt essen konnten, bis ihnen schlecht wurde. Seltsam, oder? Wer jedoch Truffle und Filbert durch die Stadt rennen sieht, weiß sofort alles – und nimmt lächelnd noch ein Stück Rotpilz.",
+          TextMapId = "UI_CHAR_DATA_TEXT_51010202"
+        },
+        UI_CHAR_DATA_TEXT_51010203 = {
+          ContentDE = "Truffels Rekord beim konzentrierten Lesen in den Schriften der Kirche liegt bei sieben Minuten. Egal wie oft sie es versucht: Sobald sie das Buch zuklappt, ist fast alles wieder weg. Die Geistlichen machten sich deshalb ernsthaft Sorgen um ihre Zukunft. Damals fiel sogar ein ziemlich gemeiner Satz, der heute nur noch als Witz taugt:\n „Dieses Kind hier zu behalten, ist reine Lebensmittelverschwendung!“",
+          TextMapId = "UI_CHAR_DATA_TEXT_51010203"
+        },
+        UI_CHAR_DATA_TEXT_51010204 = {
+          ContentDE = "Das Amt der Kommissarin ist eigentlich kein fester Posten. Meist braucht man so etwas nur in sehr großen Städten oder an Orten, die selbst keine Nahrung produzieren, damit jemand den Warenfluss organisiert.\n In Truffles kleiner Stadt wäre so ein Posten gar nicht nötig gewesen. Sie liegt weder an der Front, noch ist sie ein Bergbau- oder Holzfällernest.\n Darum wundern sich Besucher der Kleinstadt oft, wie Truffles sich das Amt der Kommissarin überhaupt ergattert hat – und wieso das Schwein, das ihr überallhin folgt, als Sonderkommissarin gilt.\n Aber die Einheimischen antworten jedem neugierigen Gast mit leuchtenden Augen: „Truffle und Filbert haben die ganze Stadt einmal durch eine Hungersnot gebracht und uns alle satt gemacht.“\n Die meisten Reisenden halten das für eine hübsche Legende, lächeln kurz und fragen nicht weiter nach. Ach ... wie dumm die Leute doch manchmal sind.",
+          TextMapId = "UI_CHAR_DATA_TEXT_51010204"
+        },
+        UI_CHAR_DATA_TEXT_51010205 = {
+          ContentDE = "Filbert ist nämlich viel schlauer, als es aussieht. Es hat ein ganz bestimmtes, fröhliches Grunzen, wenn es jemandem den Bauch füllen konnte und wenn man es auslacht, kauert es sogar beschämt in einer Ecke. Aber lange Trost braucht es nicht: Ein halber Tag und schon wackelt es wieder wie gewohnt mit dem Schwanz.",
+          TextMapId = "UI_CHAR_DATA_TEXT_51010205"
+        },
+        UI_CHAR_DATA_TEXT_51010301 = {
+          ContentDE = "Bis heute erinnert sich Truffle glasklar daran, wie sich Hunger anfühlt:\n Zuerst ist es, als würde in deinem Bauch eine Armee Zinnsoldaten mit Lanzen gegen einen feuerspeienden Drachen kämpfen – endlos, rücksichtslos und stechend gegen Truffles zarte Haut. Später wird es stiller. Die Soldaten ziehen sich in den Kopf zurück, fassen sich an den Händen und drehen im Kreis – bis Truffle sich hinsetzen muss, weil ihr schwindlig wird.\n Die Zunge schmeckt bitter, als hätte man ihr eine ganze Schüssel Brühe aus kriechenden Ranken eingeflößt. Glücklich ist sie nur im Schlaf. In ihren Träumen kommt Brot gerade aus dem Ofen und der Duft ist so warm und voll, dass er wie ein Wunder wirkt.\n Darum betet Truffle jeden Abend zum Gott der Träume von Elysium: Du bist der stärkste Gott der Welt ... bitte lass mich nicht aufwachen. Lass dieses Wunder noch ein bisschen länger bleiben.",
+          TextMapId = "UI_CHAR_DATA_TEXT_51010301"
+        },
+        UI_CHAR_DATA_TEXT_51010302 = {
+          ContentDE = "Truffle ist zwar offiziell Kommissarin der Kirche, aber die Regeln der Gemeinschaft mag sie nicht besonders. Vor allem nicht die endlosen, komplizierten Texte, die man auswendig lernen soll. Also ist die Essenssuche für sie auch eine Art Zuflucht. Niemand zweifelt an ihrer Güte – aber wenn man erfährt, dass sie auch deshalb ständig unterwegs ist, muss man unwillkürlich schmunzeln.",
+          TextMapId = "UI_CHAR_DATA_TEXT_51010302"
+        },
+        UI_CHAR_DATA_TEXT_51010303 = {
+          ContentDE = "Truffle weiß selbst nicht genau, warum Essen sie so sehr beschäftigt. Vielleicht hat die Hungersnot in der Kindheit zu tiefe Spuren hinterlassen. Vielleicht fühlt es sich einfach besonders an, auf Filberts Rücken durch die Stadt zu rasen und die Leute glücklich zu sehen. Sicher ist nur: Truffle ist glücklich mit Filbert an ihrer Seite.",
+          TextMapId = "UI_CHAR_DATA_TEXT_51010303"
+        },
+        UI_CHAR_DATA_TEXT_51010304 = {
+          ContentDE = "Truffle kann Krieg nicht ausstehen. Sobald Nachrichten über Krieg die Stadt erreichen, beginnen sie und Filbert, Vorräte anzulegen – nicht nur für die Bewohner, sondern auch für die gewöhnlichen Menschen, die vielleicht alles verloren haben und hierher geflohen sind.",
+          TextMapId = "UI_CHAR_DATA_TEXT_51010304"
+        },
+        UI_CHAR_DATA_TEXT_51010305 = {
+          ContentDE = "Oft denkt Truffle an die Priesterin McGuffin. Sie hatte kein freundliches Gesicht, meist wirkte sie müde und genervt.\n Aber Truffle hat die Wärme ihrer Hand nie vergessen, wenn McGuffin ihr früher über den Rücken strich, damit sie einschlief. Und auch nicht den Blick, mit dem sie ihr schließlich erlaubte, dass Filbert frei in die Kirche ein- und ausgehen durfte.",
+          TextMapId = "UI_CHAR_DATA_TEXT_51010305"
+        },
+        UI_CHAR_DATA_TEXT_51010401 = {
+          ContentDE = "In Truffles frühesten Erinnerungen bleibt ein Kinderlied hängen, das sie nicht loswerden kann:\n Die Schneeflocken schweben, oh, sanft sie fallen,\n Auf das Dach der heiligen Halle, während der Winter alles verhüllt.\n Unter dem Heaventree singen wir unser Lob,\n Die Götter lächeln, während wir zerschlissene Mäntel ablegen und neue in Ihrer Gnade tragen.\n Das Lied kommt aus einem Raum, der von Dutzenden Kerzen erhellt wird. Der Ofen ist warm, die Fenster leuchten. Kinder sitzen um einen langen Tisch und singen im Chor. Entlang der Melodie strömen Düfte heraus: Pasteten, Pilzsuppe, dick geschnittenes Fleisch. Sie tanzen mit den Stimmen, entweichen durch ein nicht ganz geschlossenes Fenster und dringen draußen in Truffles rotgefrorene Ohren und die Nase ein.\n Truffle, die sich unter dem Fenster vor dem Schnee versteckt, zieht die Nase hoch – ob sie die Gerüche besser erkennen will oder weil ihr einfach die Nase läuft, weiß sie selbst nicht.\n Und ohne es zu merken, stimmt sie leise mit ein: „Die Schneeflocken schweben, oh, leicht fallen sie, die belebten Straßen hinab ...“ Als würde sie, wenn sie dasselbe Lied singt, ein Stück Pastete mit ihnen teilen.\n „Ich hab immer noch Hunger ...“\n Sie hält sich den Bauch, der knurrt, nimmt einen trockenen Zweig und beginnt, im noch dünnen Schnee das Essen zu zeichnen, das sie riecht: gebratenes Huhn ... Donuts ... und ganz einfach Brot.\n Brot wäre schon genug ... denkt Truffle – und zeichnet weiter, so sorgfältig wie möglich, als würde der Duft stärker werden, je echter es aussieht. Und tatsächlich wird er stärker. Viel stärker. Als wäre das Brot direkt vor ihr.\n Truffle hebt den Kopf. Vor ihr fliegt Brot, genau so, wie sie es sich vorgestellt hat. Sie streckt die Hand aus und merkt erst jetzt, dass das Brot im Maul von jemandem hängt.\n Es ist ein kleines rosa Tier, bestäubt mit weißem Schnee ... wie ein Erdbeerkuchen mit Zuckerguss. Zwar zittert es vor Kälte, aber es fürchtet sich nicht vor dem Mädchen. Im Gegenteil: Es stemmt sich hoch, schiebt das Brot so weit wie möglich nach oben, damit Truffles Hand es leichter erreichen kann.\n Truffle nimmt das Brot vorsichtig und sieht erst jetzt, wie klein das Tier eigentlich ist. Es stützt sich mühsam auf den Hinterläufen ab und starrt sie an, als würde es sie drängen: Iss. Schnell.\n Während drinnen das Lied weiterklingt, begegnet Truffle in dieser Winternacht ihrem ersten – und zugleich größten – Wunder. Und vermutlich war es für das Schweinchen, das damals noch nicht Filbert hieß, genauso.",
+          TextMapId = "UI_CHAR_DATA_TEXT_51010401"
+        },
+        UI_CHAR_DATA_TEXT_51010402 = {
+          ContentDE = "Irgendwann war das Straßenmädchen nicht mehr allein zu sehen: Neben ihr lief ein kleines Schweinchen, das ihr nicht von der Seite wich. Manchmal halfen sie in Restaurantküchen aus, manchmal suchten sie unter Eichen nach Früchten, die den Hunger stillen.\n Truffle grübelte lange über einen Namen, bis ihr eines Tages beim Knacken einer harten Haselnuss der erste Milchzahn ausfiel.\n Sie hatte von den Alten gehört: Zähne wechseln heißt wachsen. Und Truffle wollte dringend erwachsen werden. Wachsen ist etwas Gutes – wenn man groß ist, hat man Kraft. Und wenn man Kraft hat, muss man nicht hungern. So wurde ausgerechnet diese Haselnuss – Filbert – der Name ihres einzigen Freundes.\n Doch ihre Trennung kam schneller, als Truffle dachte. Als Truffle an einer Klippe Pilze sammelte, rutschte sie ab und stürzte. Als sie wieder zu sich kam, lag sie in einem weichen Bett. Kerzen brannten hoch, die Luft roch nicht nach Erde. Es war ein kleines Zimmer in der Kapelle der Kirche. Priesterin McGuffin hatte sie am Fuß der Klippe bewusstlos gefunden und hergebracht.\n Ein festes, weiches Bett. Verbände und Salben. Sauberes Wasser. Essen. Dinge, die Truffle sonst nur in Träumen hatte. Sie lag reglos da und traute sich nicht einmal, sich selbst zu kneifen.\n Die gutherzigen Priester fragten sie nach und nach: Wo wohnst du? Hast du Familie? Wenn du gesund bist, bringen wir dich nach Hause.\n „Ich ... Ich habe keine Familie. A... Aber ich habe einen Freund. Der wartet draußen auf mich.“\n „Filbert ... ein ungewöhnlicher Name.“\n „Ja! Filbert ist ein ganz, ganz braves Schwein.“\n „Ein Schwein?!“ Die Priester sahen einander an. „Das geht nicht. In der Kapelle können wir keine großen Haustiere halten.“\n „Filbert ist kein Haustier. Filbert ist mein Freund!“\n Truffle wollte gerade weiterreden, da fiel ihr die Priesterin McGuffin, die sie draußen gefunden und zur Kirche gebracht hatte, ins Wort: „Verschwende deine Zeit nicht, Truffle. Du hast die Wahl. Bleibst du hier oder gehst du zu deinem Schwein?“\n Für einen Moment fühlte es sich an wie damals in jenem Winter: Truffle lehnte an einer dicken Wand und hörte noch immer die Kinder drinnen, wie sie unter dem Schutz ihrer Familien ein Lied summten.\n Sie hatte nicht viel Zeit. Sie dachte an das kleine Zimmer, das weiche Bett, das Brot, gestapelt wie ein kleiner Berg. Schließlich griff sie nach der Hand der Priesterin. In der Abenddämmerung war die Luft mit orangefarbenem Licht gefüllt – und Truffles Blick wurde plötzlich verschwommen.\n Sie hatte endlich ein warmes Zuhause gefunden und die Erinnerungen an das Leben auf der Straße konnten endlich wie die sinkende Sonne langsam in die Dunkelheit versinken.\n \n Und doch – in dieser Nacht, als alle schliefen, schlich Truffle aus dem warmen Zimmer. Sie ging dorthin, wo ihre vage Erinnerung sie hinführte.\n Die Häuser ringsum standen hoch. Irgendwo schrie ein Vogel ein dumpfes „gu ... gu“. Truffle wurde mulmig, aber sie ging weiter. Ihr Körper war noch nicht ganz verheilt, ihre Füße taten weh ... doch sie wusste, dass sie dorthin musste ...\n Näher. Immer näher… Da war es, das bodenhohe Fenster aus jener Winternacht. Kein Lied, kein Duft. Truffle war sich nicht einmal sicher, ob es wirklich derselbe Ort war, bis sie die Gestalt sah, die viel größer als in ihrer Erinnerung war.\n Wie in einer Geschichte, die sich ein Schriftsteller ausgedacht hat, lief Truffle in dieser mucksmäuschenstillen Nacht los und warf sich an dieses riesige Wesen ...\n „Filbert!“\n Am Horizont hob sich ein erster Sonnenstreifen. Er fing die Tränen an Truffles Wangen auf, die wie kleine Funken glitzerten.",
+          TextMapId = "UI_CHAR_DATA_TEXT_51010402"
+        },
+        UI_CHAR_DATA_TEXT_51010403 = {
+          ContentDE = "Nicht lange nachdem Truffle Teil der Kirche geworden war, traf eine Hungersnot die Stadt. Die Vorräte der Kapelle gingen zur Neige und die aufgenommenen Waisenkinder wurden natürlich auch nicht satt.\n Nachts, wenn alles ruhig war, hörte man in den Schlafsälen die Mägen knurren: hier ein Geräusch, dort eins – wie eine eigenartige Symphonie.\n Manche der ganz Kleinen konnten vor Hunger nicht einschlafen und weinten leise unter der Decke. Truffle, selbst mit leerem Bauch, hörte sie schluchzen und schlurfte erschöpft zu ihnen, um sie zu trösten.\n „Nicht weinen. Schlaf einfach. Wenn du schläfst, spürst du den Hunger nicht.“\n „Aber ich kann nicht schlafen ... ich hab so Hunger. Und du? Bist du nicht auch hungrig?“\n Truffle strich über ihren flachen Bauch, zog die Augenbrauen zusammen und seufzte.\n „Ich habe auch Hunger, aber keine Sorge. Ich zeig dir, wie du einschlafen kannst. Mach erst mal die Augen zu!“\n Mit ihren warmen Händen bedeckte sie die Augen des Kindes und flüsterte ihm ein selbst erfundenes Schlaflied ins Ohr ... voller Fehler, aber voller Herz: „Stell dir ein riesengroßes Weizenfeld vor. Du bist ein Maulwurf im Feld. In deinem Gang liegen so viele Kartoffeln! Du zählst sie ... eine Kartoffel, zwei Kartoffeln, drei Kartoffeln, vier Kartoffeln…“\n „... siebenundzwanzig Kartoffeln, achtundzwanzig Kartoffeln, neunundzwanzig Kartoffeln ...“\n „... dreiundfünfzig Kartoffeln ... vierundfünfzig Kartoffeln ... f... fünfund ... fünfzig Kartoffeln ... sechsundfünfzig Kartoffeln ... siebenundfünfzig Kartoffeln ... Schnarch ...“\n Die Symphonie der knurrenden Mägen wurde leiser. Der letzte dumpfe Paukenstoß kam aus Truffles eigenem Bauch.\n Da dachte sie an die Tage mit Filbert auf der Straße und fasste einen Entschluss. Für sich. Und für alle.",
+          TextMapId = "UI_CHAR_DATA_TEXT_51010403"
+        },
+        UI_CHAR_DATA_TEXT_51010404 = {
+          ContentDE = "In dieser Nacht, hungrig und benommen, schwor sie sich: Sie wollte diese Bauch-Symphonie nie wieder hören.\n Am nächsten Tag ging sie, während alle sie erstaunt anstarrten, aus der Kirche hinaus, in Richtung Wald und pfiff laut. Sonst hatte sie sich mit Filbert nur heimlich in der Nacht getroffen, nie weit weg, nie zu auffällig – aus Angst, sie würde vor McGuffin auffliegen. Aber heute war es anders. Denn in Truffles kleinem Kopf nahm bereits ein großer Plan Gestalt an.\n Mit einem vertrauten „Tap-Tap-Tap“ kam ihr Freund Filbert, von der Hungersnot unbeeindruckt und rund wie immer. Wenn überhaupt, sogar noch ein bisschen größer als in ihrer Erinnerung.\n „Filbert, erinnerst du dich an damals, als wir umhergezogen sind?“\n Truffle erzählte Filbert von ihren ersten Tagen, wie Filbert sie, halb bewusstlos, an viele Orte getragen hatte: Zum Fluss, der gerade erst vom Eis befreit war, wo sie kleine Fische fingen. In einen kargen Wald, wo sie Nüsse fanden. An die Klippen, wo Pilze wuchsen. Da begriff Truffle: Es gibt da draußen so viel Nahrung ... an Orten, die sie nie betreten hatte.\n Wenn es in der Stadt nicht reicht, dann holen sie eben Nahrung aus der Wildnis!\n So erklärte Truffle Filbert ihren großen Plan. Ein Mädchen und ein Schwein ... nein, zwei Freunde machten sich auf den Weg.\n Sie gingen zum Fluss. An beiden Ufern standen Menschen, die verzweifelt versuchten, Fische zu fangen, aber niemand schien etwas zu erwischen.\n Sie gingen in den Wald. Selbst Rinde und Blätter waren aus Not bereits abgerissen und verspeist worden.\n Die Klippen ließen sie gleich aus. Man musste nicht einmal hingehen, um zu wissen, dass man dort nichts finden würde ...\n Es war, als hatte die ganze Welt Hunger. Fast alles war von den Menschen verschlungen. Fische, Kriechtiere, Vögel, Wild – alles wurde gefressen und doch reichte es nicht. Am Ende fielen sie mit leeren Bäuchen um ... und verrotteten.\n Truffle hatte ihre letzte Kraft verbraucht. Sie lag unter einem Baumstamm, dessen Rinde in Fetzen hing, weil man ihn bis aufs Mark abgeknabbert hatte.\n Dieses altbekannte Gefühl erinnerte sie an damals im Schneewinter. So kalt ... so hungrig ... Filbert vor ihr wurde immer verschwommener ...\n Da hob Filbert plötzlich den Kopf, als hätte es etwas gerochen. Es rannte zu einem Baum in der Nähe und begann mit seiner letzten Kraft zu graben.\n ……\n Ein stechender, seltsamer Geruch füllte Truffles Nase und riss sie wach. Filbert hielt ihr – wie damals – Nahrung an den Mund.\n Truffle wusste sofort, was es war: Rotpilz. Ein seltener Fund, tief unter den Wurzeln verborgen. Eben weil er so schwer zu orten, schwer auszugraben war, war bislang niemand auf die Idee gekommen, nach ihm zu suchen.\n Der Geschmack war ... eigenartig. Aber mit jedem Bissen kam ein bisschen Kraft zurück. Und Filbert hatte nebenbei schon ein Dutzend Rotpilze ausgegraben.\n Nach Truffles und Filberts Ausflug staunten die Schwestern der Kirche nicht schlecht: Vor dem Eingang türmten sich plötzlich Rotpilze wie ein kleiner Berg. Sie aßen sich selbst satt. Und dann begannen sie, die Pilze an die Hungernden zu verteilen.\n Als dann die Zeit kam, in der der Wald wieder grüne Triebe bekam, endete auch die Hungersnot. Doch Truffle war nicht so glücklich, wie sie es sich ausgemalt hatte. Stattdessen wuchs in ihr eine neue Sorge: Jetzt, wo alle satt waren, brauchte niemand mehr sie und Filbert zum Nahrungssuchen. Und das bedeutete ... dass sie Filbert nicht mehr jeden Tag bei sich haben würde.\n Mit hängendem Kopf lief sie vor der Kirche auf und ab. Sie wollte McGuffin fragen, ob sie noch ein bisschen länger mit Filbert zusammen sein durfte, aber sie traute sich nicht. So lief sie weiter auf und ab, bis sie mit der Priesterin, die gerade aus der Stadt zurückkam, beinahe zusammenprallte.\n „Ich ... also ... Filbert ... äh ...“\n Truffle rang nach Worten, um die strenge Priesterin ihre kleine Bitte vorzutragen – da zog McGuffin plötzlich einen Brief hervor und reichte ihn ihr lächelnd. Truffle konnte ihn nicht wirklich lesen. Sie verstand nur Bruchstücke und las den Brief stockend:\n „Beim Himmelbaum ... im Namen des Glanzes der Neun Götter ... das Kind namens Truffle ... obwohl es nicht lesen kann ... in der Not geholfen ... und das vierbeinige Wesen Filbert ... daher wird Truffle ernannt zu ... Komm-irgendwas ... und Filbert zu ... einer Sonder ...“\n „Ich versteh das nicht, Schwester McGuffin ... soll ich etwas tun? Da steht auch Filbert ... Ach ja! Bitte jag Filbert nicht weg. Sie hat allen geholfen. Ich will noch ein bisschen mit ihr zusammen sein ... darf ich?“\n McGuffin lächelte weiter. Sie ging in die Hocke, sah Truffle an und sagte ruhig: „Dieser Brief bedeutet: Du und Filbert ... ihr dürft ab jetzt für immer zusammenbleiben.“\n „Wirklich?!“ Truffles Augen wurden riesig und konnte es nicht ganz begreifen. „Danke, ihr Götter ... danke, Schwester McGuffin!“\n „Nein. Ich habe euch zu danken, Truffle. Und dir auch, Filbert. Ihr seid das größte Wunder, das ich je mit eigenen Augen gesehen habe.“\n \n Truffle verstand es noch nicht ganz, aber sie grinste nur breit. Denn alles, was sie sich gewünscht hatte, war plötzlich da.",
+          TextMapId = "UI_CHAR_DATA_TEXT_51010404"
+        },
+        UI_CHAR_DATA_TEXT_51020101 = {
+          ContentDE = "Geld kann vieles kaufen – aber auch sogenannte Trink- und Essensfreunde. Outsider ist einer von ihnen. Zumindest behauptet er das selbst stets so.",
+          TextMapId = "UI_CHAR_DATA_TEXT_51020101"
+        },
+        UI_CHAR_DATA_TEXT_51020102 = {
+          ContentDE = "Outsider ist äußerst sparsam und gewissenhaft. Zu Hause stapeln sich seine Haushaltsbücher, und nachdem er sich dem Nachtfahrer-Trupp angeschlossen hatte, übernahm er nebenbei auch die Buchführung für {nickname} und die anderen. So geizig und berechnend er auch wirkt, bei zwei Ausgaben zeigt er niemals Zurückhaltung: Zum einen, um Fina ihre Wünsche zu erfüllen, zum anderen, um jedes Jahr zur selben Zeit eine unzeitgemäße weiße Blume zu kaufen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_51020102"
+        },
+        UI_CHAR_DATA_TEXT_51020103 = {
+          ContentDE = "Outsider verfügt über eine ganze Reihe nützlicher wie auch weniger nützlicher kleiner Fertigkeiten – etwa die drei Grundregeln des Benehmens beim Betreten einer Taverne, wie man Trunkenheit vortäuscht, wie man jemandem beim Trinken Gesellschaft leistet, wie Kleidung am haltbarsten zu nähen ist oder wie man jemanden bewusstlos schlägt, ohne bleibende Schäden zu hinterlassen ... Seinen Worten zufolge will er irgendwann ein Buch schreiben, das den Titel „Hundert kleine Lebenskniffe von Outsider“ tragen soll. Es werde garantiert auf dem ganzen Kontinent ein Bestseller, überall von Fans umringt – vielleicht sollte er schon jetzt üben, wie man stilvoll Autogramme gibt. Wenn man dem großspurigen Gerede von Outsider zuhört, ist schwer zu sagen, ob es sich um betrunkene Fantastereien oder um alltägliche, beiläufige Lügen handelt. Doch sollte ein solches Buch tatsächlich erscheinen, könnte es durchaus zu einem beliebten Gesprächsthema im Alltag der Menschen werden.",
+          TextMapId = "UI_CHAR_DATA_TEXT_51020103"
+        },
+        UI_CHAR_DATA_TEXT_51020104 = {
+          ContentDE = "Obwohl Outsider stets betont, mit allen nur Trink- und Essensfreunde zu sein, sieht man ihn nur selten die Bitten eben dieser „Freunde“ ablehnen. Mehr noch: Nicht selten bringt er sich ihretwegen immer wieder selbst in Gefahr. Fragt man ihn nach dem Grund, wendet er lediglich den Kopf ab, um die leichte Röte auf seinen Wangen zu verbergen, und murmelt etwas davon, dass er einfach keinen langfristigen Gratis-Essenslieferanten verlieren wolle.",
+          TextMapId = "UI_CHAR_DATA_TEXT_51020104"
+        },
+        UI_CHAR_DATA_TEXT_51020201 = {
+          ContentDE = "Scharfe Worte, ein kalter Blick und offenliegende Narben – schon eines dieser Merkmale reicht aus, um manche Menschen auf Abstand zu halten. Outsider jedoch vereint alle drei. Entsprechend ist die erste Reaktion der meisten, ihm aus dem Weg zu gehen. Dabei heißt es, Outsider sei in Wahrheit jemand, der die Stimmung gut auflockern kann und ein erstaunlich umgänglicher Mensch ist. Doch nur äußerst wenige können dieses „Man sagt“ tatsächlich bezeugen – und selbst wenn sie es weitertragen, glaubt ihnen niemand. Man hält es schlicht für ein falsches Gerücht, das unter Outsiders Drohung verbreitet wurde.",
+          TextMapId = "UI_CHAR_DATA_TEXT_51020201"
+        },
+        UI_CHAR_DATA_TEXT_51020202 = {
+          ContentDE = "Unter den mit ihm vertrauten Weggefährten gilt Outsider als der fähigste Phoxjäger, den Icelake in den letzten Jahren hervorgebracht hat. Selbst die sonst so scharfzüngige Camilla zollt seinen Fähigkeiten Anerkennung. Outsider selbst jedoch ist alles andere als daran interessiert, dass sein Name nach außen getragen wird – fast so, als wolle er bewusst vermeiden, dass irgendjemand auf ihn aufmerksam wird.",
+          TextMapId = "UI_CHAR_DATA_TEXT_51020202"
+        },
+        UI_CHAR_DATA_TEXT_51020203 = {
+          ContentDE = "Wo immer Outsider sich aufhält, kauft er eine Zeitung, sobald er einem Zeitungsjungen begegnet. In seinen Augen sind die Medien nichts weiter als Werkzeuge der Macht, doch selbst aus diesen trügerischen Zeilen lassen sich mitunter gefährliche Vorzeichen herauslesen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_51020203"
+        },
+        UI_CHAR_DATA_TEXT_51020204 = {
+          ContentDE = "„Er ist ein Monster in menschlicher Haut. Wenn er dem Ruf seines Blutes folgt, wird er zu einem augenblicklich verglühenden Meteor – zu einer Klinge gegen die Götter oder zu einer Flamme, die Stahl schmilzt. Und ich bin überzeugt, dass die Bahn dieses aufsteigenden Meteors, so sehr sie auch abgelenkt sein mag, letztlich an den Ort zurückkehrt, an den er gehört. Denn dies ist die Mission, die uns noch vor unserer Geburt durch das Blut auferlegt wurde.“\n Das Schriftstück wurde zwar in Stücke gerissen, doch die darauf niedergeschriebenen Worte bohrten sich wie verfluchte Giftstacheln tief in den Geist.\n In den vergangenen zehn Jahren hat Outsider viele Orte durchquert. Doch wohin er auch floh, diese Stacheln blieben stets an seiner Seite.",
+          TextMapId = "UI_CHAR_DATA_TEXT_51020204"
+        },
+        UI_CHAR_DATA_TEXT_51020301 = {
+          ContentDE = "Viele der Narben auf Outsiders Körper stammen daher, dass er Wundschorf oft schon kurz nach dem Verkrusten wieder abreißt. Fina hat ihn deshalb einmal zurechtgewiesen, wurde jedoch mit einer schiefen Ausrede abgespeist: „Menschen pulen nun mal an Schorf – so wie Hunde ihr Fell lecken. Reiner Instinkt.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_51020301"
+        },
+        UI_CHAR_DATA_TEXT_51020302 = {
+          ContentDE = "Outsider hält sich nur ungern an hohen Orten auf, denn ein innerer Impuls drängt seine Schritte immer wieder dazu, ins Leere zu treten – hinein in jene „Freiheit“, nach der sich die meisten Menschen sehnen. Doch ein solches Loslassen von allem ist etwas, das Outsider nicht akzeptieren kann. Um mit diesem Zwiespalt umzugehen, trägt er stets Seile, Karabiner und ähnliche Ausrüstung bei sich, um zu verhindern, dass er selbst oder andere abstürzen. Diese Gewohnheit hat sich ganz selbstverständlich auf seinen Alltag übertragen: Wenn ein Problem auftaucht, zieht Outsider stets genau das Werkzeug hervor, das in diesem Moment gebraucht wird. Niemand weiß jedoch, wo er all diese Gegenstände eigentlich an seinem Körper unterbringt.",
+          TextMapId = "UI_CHAR_DATA_TEXT_51020302"
+        },
+        UI_CHAR_DATA_TEXT_51020303 = {
+          ContentDE = "Obwohl Outsider bewusst Abstand zu den Menschen um ihn herum hält, versteht er es, bei Bedarf schnell Nähe herzustellen. Ein gemeinsamer Drink genügt, um einen Phoxjäger zum Reden zu bringen, und eine einzige Nacht reicht aus, damit Diebe ihn am nächsten Tag am liebsten „Bruder“ nennen würden. Eine Tasse Tee, eine Schachtel Zigaretten, ein Schwall wirrer, halb überzeugender Argumente – und selbst berüchtigte Geizhälse lassen ihre Preise erstmals deutlich fallen. Das liegt weniger an außergewöhnlichem sozialen Talent als daran, dass Outsider selbst unzählige Jahre am unteren Rand der Gesellschaft verbracht hat und genau weiß, was die Menschen wirklich brauchen. Kennt man das Bedürfnis, bleibt nur noch, es zu erfüllen. Für die Oberschicht jedoch funktioniert diese Methode nicht: Derselbe Outsider, der sich selbst vor unbekannten Ungeheuern nicht fürchtet, wirkt im Umgang mit hochgestellten Persönlichkeiten seltsam ratlos – fast so, als stünde er einem Wesen aus einer fremden Welt gegenüber.",
+          TextMapId = "UI_CHAR_DATA_TEXT_51020303"
+        },
+        UI_CHAR_DATA_TEXT_51020304 = {
+          ContentDE = "Drei Nachbilder kehren immer wieder in Outsiders Erinnerungen zurück.\n Das erste Nachbild stammt aus einem goldenen Morgen,\n ein elfenbeinweißes Schlafzimmer, durchflutet von Sonnenlicht,\n weiche Lippen, die seine neugeborene Stirn berühren.\n Ihr Name ist ▇▇.\n \n Das zweite Nachbild stammt aus einer zinnoberroten Dämmerung,\n Flüsse zerschneiden die Ödnis wie die Gebeine eines Kadavers,\n eine standhafte Hand umfasst seine kleine, kindliche Hand.\n Ihr Name ist ▇▇.\n \n Das dritte Nachbild stammt aus einer pechschwarzen Restnacht,\n kalter Regen, vermischt mit Frost, prasselt gegen ein zerbrochenes Fenster,\n ein bleiches Mädchen, hastig atmend, ruft seinen Namen.\n Ihr Name ist ▇▇.\n \n In der Tiefsee seines Bewusstseins beginnen diese Nachbilder zu verschwimmen.\n \n Das erste Nachbild wird zu ▇▇, die durch ▇▇ rennt,\n sie murmelt ▇▇▇▇,\n ▇▇ fliegt ▇▇ entgegen.\n \n Das zweite Nachbild ▇▇ auf ▇▇,\n der Wind, der über ▇▇ weht,\n im Erdreich wird ▇▇ von der Zeit ▇▇ und ▇▇ gebrochen.\n \n … Er darf nicht weiter darüber nachdenken.",
+          TextMapId = "UI_CHAR_DATA_TEXT_51020304"
+        },
+        UI_CHAR_DATA_TEXT_51020401 = {
+          ContentDE = "Anfangs hatte Outsider weder die Muße noch die Fähigkeiten zum Kochen. Um satt zu werden, reichte es ihm, draußen irgendein Insekt zu fangen. Erst nachdem es leise, aber bestimmte Proteste gegeben hatte, wurde ihm klar, dass Kochen nicht nur den Geschmack, sondern auch die Nährstoffe berücksichtigen musste – und eine Zeit lang hielt er das für schwieriger als das Erlernen des Kampfes. Nachdem unzählige Küchenmesser zerbrochen und ebenso viele Pfannen ruiniert waren, nachdem ein dünnes Kochbuch bis zur Verblassung durchgeblättert und jede Seite mit dicht gedrängten Notizen gefüllt worden war, hatte Outsider das Kochen schließlich ebenso tief in seinen Instinkt eingeprägt wie den Kampf. Der Nachteil daran ist nur, dass sein Gesichtsausdruck beim Kochen ungewöhnlich ernst und beinahe grimmig wirkt – als stünde er im Begriff, sich mit einem niemals nachgebenden Ungeheuer zu messen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_51020401"
+        },
+        UI_CHAR_DATA_TEXT_51020402 = {
+          ContentDE = "Outsider hat jedem in seiner Nähe wiederholt eingeschärft, sich von den Verlassenen fernzuhalten. In seiner Schilderung gibt es dort keinerlei erhabene Ideale – nur hässliche, niederträchtige Begierden. Niemand weiß, wie Outsider unter diesem verächtlichen Tonfall wirklich über die Verlassenen denkt. Sicher ist nur eines: Selbst der sonst so gewiefte Outsider kann, wenn er von ihnen spricht, den flüchtigen Anflug von Traurigkeit in seinen Augen nicht ganz verbergen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_51020402"
+        },
+        UI_CHAR_DATA_TEXT_51020403 = {
+          ContentDE = "Oft schreckt Outsider beim Donner aus dem Schlaf hoch und blickt sich hastig um. Draußen vor dem Fenster gibt es keine brennenden Kriegsschiffe mehr, die vernichtende Sperrfeuer herabregnen lassen, und drinnen keine grellen Mündungsfeuer, die tödliche Bahnen ziehen. Das scharfe Prasseln des Regens an der Scheibe verdrängt das dumpfe Geräusch von Körpern, die in seinen Erinnerungen unter Militärstiefeln zertrampelt werden. Ein Regentropfen dringt durch einen Fensterspalt und spritzt ihm ins Gesicht. Er hebt die Hand, um ihn wegzuwischen, und kann doch nicht unterscheiden, ob er den Regen abwischt – oder unbewusste Tränen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_51020403"
+        },
+        UI_CHAR_DATA_TEXT_51020404 = {
+          ContentDE = "Wundschorf zu belassen würde nur Sorge hervorrufen; mehr als einmal, mehr als eine Person hatte ihm deswegen Aufmerksamkeit geschenkt. So gewöhnte sich Outsider schon in jungen Jahren an, sie abzureißen.\n Als diese Menschen einer nach dem anderen aus seinem Leben verschwanden, waren Narben kein Grund zur Fürsorge mehr, sondern ein Zeichen von Schwäche. Man fürchtete sein Blut, riss seine Wunden immer wieder auf – eine Narbe breitete sich zu unzähligen Narben aus. Erst als Fina ihre kalte Hand auf ihn legte, kam diese endlose Ausbreitung zum Stillstand. Als Outsider den sorgenvollen Blick in ihren Augen sah, begriff er plötzlich: Die blutigen Narben, beladen mit Schmerz, Demütigung, Schreien und Widerstand, hatten in diesem Augenblick ihre ursprüngliche Bedeutung wiedergefunden.",
+          TextMapId = "UI_CHAR_DATA_TEXT_51020404"
+        },
+        UI_CHAR_DATA_TEXT_53010101 = {
+          ContentDE = "Von eurer ersten Begegnung an spürte Psyche die Unruhe und Beklommenheit, die hinter deinem Lächeln verborgen lagen. Es dauerte eine Weile, bis du verstanden hast, dass dies weder an mangelndem Schauspielvermögen deinerseits lag, noch daran, dass das Mädchen außergewöhnlich sensibel wäre. Es ist nur so, dass ihr beide eure eigenen Kreuze zu tragen hattet, diese jedoch verborgen halten wolltet.",
+          TextMapId = "UI_CHAR_DATA_TEXT_53010101"
+        },
+        UI_CHAR_DATA_TEXT_53010102 = {
+          ContentDE = "Psyche schenkt den Mietern häufig Blumen, selbst wenn diese gleichgültig reagieren. Die Blume, die Psyche dir schenkte, nimmt einen besonderen Platz in ihrem Herzen ein – sie blühte still, bevor sie es selbst bemerkte, ähnlich wie dein unerwarteter Besuch an jenem Tag.",
+          TextMapId = "UI_CHAR_DATA_TEXT_53010102"
+        },
+        UI_CHAR_DATA_TEXT_53010103 = {
+          ContentDE = "Du hast längst bemerkt, dass es um Psyches Gesundheit nicht zum Besten steht. Ihr Lächeln trägt oft Spuren von Verwirrung, und gelegentlich überfallen sie Schwindelanfälle, die zu kurzen Phasen der Blindheit führen. Doch wann immer du deine Sorge äußerst, beschwichtigt Psyche dich stets. Sie versichert dir, es ginge ihr gut. Sie betont, dass sie dein Gesicht längst im Gedächtnis habe und dich sofort erkennen würde, sobald ihre Sicht zurückkehre. Mit deinen auffälligen weißen Haaren und dem einzelnen roten Horn würdest du ihr ohnehin immer ins Auge fallen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_53010103"
+        },
+        UI_CHAR_DATA_TEXT_53010104 = {
+          ContentDE = "Man kann nicht umhin, sich vorzustellen – sollte Psyche erfolgreich erwachen, könnten ihr beide als vertraute Gefährten Seite an Seite kämpfen.\n Sie würde ihre Flügel entfalten und wie ein anmutiger Schmetterling in den Himmel steigen. Und wenn der Kampf vorüber wäre, kehrte sie zurück, landete sanft vor dir, so zart wie ein Schmetterling, der sich auf einem Blütenblatt niederlässt.",
+          TextMapId = "UI_CHAR_DATA_TEXT_53010104"
+        },
+        UI_CHAR_DATA_TEXT_53010105 = {
+          ContentDE = "Du errichtetest für Psyche einen schlichten Steinhügel. Er stand dort, einfach und unscheinbar.\n Du dachtest daran, frische Blumen niederzulegen, doch sie würden nur welken. Du erwogst, einen Papierfalter hinzuzufügen, aber auch er würde vergehen.\n Am Ende ließest du alles so, wie es war. Deine Erinnerungen an sie würden weit länger bestehen als jede greifbare Gabe.\n Vor dem schlichten Steinhügel schlossest du die Augen. In deiner Benommenheit flackerte grünes Licht über deine geschlossenen Lider, wirbelte wie ein anmutiger Schmetterling und trieb immer weiter, immer weiter in die Ferne.",
+          TextMapId = "UI_CHAR_DATA_TEXT_53010105"
+        },
+        UI_CHAR_DATA_TEXT_53010201 = {
+          ContentDE = "Psyche ist eine Mitbewohnerin im Hypnos’ Haus und arbeitet dort zudem als Kellnerin. Da die Türen dieses Gasthauses jedoch kaum jemals für die Öffentlichkeit geöffnet sind, hatten nur wenige Reisende in Icelake die Gelegenheit, ihre Gastfreundschaft zu erleben. Doch jeden Morgen, wenn man vom Eingang des Gasthauses nach oben blickt, kann man eine schlanke Gestalt hinter Ästen und Ranken erhaschen. Das ist Psyche bei ihrer Arbeit. Sie zieht die schweren Vorhänge zurück, damit die Blumen im bescheidenen Sonnenlicht baden können, besprüht sanft die Blätter und schneidet sorgfältig die welkenden Stiele. In der kalten Behausung des Hypnos’ Hauses, erbaut aus düsteren grauen Steinen und bleichen Schneeresten, sind es nur Psyches Blumen, die einen Hauch von Wärme verbreiten.",
+          TextMapId = "UI_CHAR_DATA_TEXT_53010201"
+        },
+        UI_CHAR_DATA_TEXT_53010202 = {
+          ContentDE = "Die Pflanzen, die Psyche im Hypnos’ Haus pflegt, stammen nicht aus dem Blumenladen ihrer Familie. Obwohl sie die Blumen, die sie zu Hause gezogen hatte, sehr schätzte, wusste sie, dass ihre Eltern sie nötiger hatten als sie selbst.\n Die Blumen hatte Psyche unter der Treppe des Hypnos’ Hauses gerettet. Damals hatte ein Mietmädchen verzweifelt die Blumentöpfe, die ihre Eltern ihr geschickt hatten, weinend aus dem Fenster geworfen. Nachdem Psyche das verzweifelte Mädchen getröstet hatte, begab sie sich allein zu dem chaotischen Haufen unter dem Fenster, schnitt die beschädigten Stängel und Wurzeln zurück, sammelte die zerbrochenen Töpfe ein und klebte sie mühsam wieder zusammen. Unter Psyches sorgfältiger Pflege überlebten diese einst beinahe verloren geglaubten Blumen und gediehen schließlich sogar noch üppiger als zuvor.",
+          TextMapId = "UI_CHAR_DATA_TEXT_53010202"
+        },
+        UI_CHAR_DATA_TEXT_53010203 = {
+          ContentDE = "Psyches Eltern sind Meistergärtner und führen in Icelake einen Blumenladen. Für Außenstehende wirkte Psyches Auszug merkwürdig – ihre Eltern waren liebevoll, und sie selbst stets ein braves Kind. Gewiss, die Familie war nicht wohlhabend, aber es war allemal besser, als in diesem unheimlichen Hypnos’ Haus zu arbeiten. Wenn man die Mutter darauf ansprach, schwieg sie beharrlich und bewahrte Haltung, doch ihre Hände, die die Blumen zurechtschnitten, zitterten kaum merklich.",
+          TextMapId = "UI_CHAR_DATA_TEXT_53010203"
+        },
+        UI_CHAR_DATA_TEXT_53010204 = {
+          ContentDE = "Im Hypnos’ Haus fiel Psyche deutlich unter den anderen Mietern auf – einer Gruppe von Menschen, die zum Sterben vorgemerkt waren, noch bevor sie überhaupt die Chance gehabt hatten, wirklich zu leben. Jeglicher Zukunft und Hoffnung beraubt, verbrachten sie ihre letzten Tage damit, darauf zu warten, dass Henrik sie endlich von ihrem Elend erlöste.\n Doch Psyche war anders. Sie begrüßte jeden stets mit einem Lächeln, als läge ihre Zukunft noch vor ihr. Ihr strahlendes Lächeln durchdrang die Finsternis und Verzweiflung des Hauses und ließ einen Schimmer Sonnenlicht herein. Für jene, die so lange an Dunkelheit gewöhnt waren, war dieses Licht so grell, dass es sie zwang, sich der schmerzhaften Realität des Lebens zu stellen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_53010204"
+        },
+        UI_CHAR_DATA_TEXT_53010205 = {
+          ContentDE = "Das Mädchen mit dem strahlenden Lächeln war nun nichts weiter als ein kalter, lebloser Eintrag in einem offiziellen Bericht.\n „... Großer Filthoid, weiblich. Ehemalige Verdorbene, so wird vermutet. Genauere Identität noch in Untersuchung ... In der Nacht des 21. November im Gebiet des Klagenden Sees neutralisiert. Keine Verluste.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_53010205"
+        },
+        UI_CHAR_DATA_TEXT_53010301 = {
+          ContentDE = "Psyche hat eine Vorliebe für Schmetterlinge. Diese zarten Geschöpfe winden sich mühsam aus ihren durchsichtigen Kokons, ihre scheinbar unbeholfenen Körper entfalten schließlich luftige Flügel, die sie in die Lüfte tragen. Sie bewundert solch erstaunliche Lebensformen, die nach Prüfungen und Widrigkeiten neu entstehen. Vielleicht spiegeln die zahllosen Schmetterlingsverzierungen an ihrer Kleidung einen kleinen Hoffnungsschimmer wider, den sie für sich selbst hegt.",
+          TextMapId = "UI_CHAR_DATA_TEXT_53010301"
+        },
+        UI_CHAR_DATA_TEXT_53010302 = {
+          ContentDE = "Psyche hat Icelake nie verlassen. ihre Vorstellung von der Welt ist schlicht in „Icelake“ und „die Welt draußen“ geteilt.\n Während viele in Icelake ähnliche Erfahrungen teilen, versucht Psyche dennoch hartnäckig, die draußenliegende Welt zusammenzusetzen – anhand von Auszügen aus Lehrbüchern, Kram von Händlern, Balladen von Spielleuten und natürlich auch durch deine Worte.",
+          TextMapId = "UI_CHAR_DATA_TEXT_53010302"
+        },
+        UI_CHAR_DATA_TEXT_53010303 = {
+          ContentDE = "Als Psyche noch ein Kind war, wurde sie Zeugin eines erschütternden Verderbnisses: Ein junges Mädchen verwandelte sich in ein groteskes Monster, verlor jegliche Vernunft und griff alles Lebendige in blinder Raserei an. Schließlich wurde es von einem Hagel aus Maschinengewehrfeuer niedergemäht. Das Ehepaar, das monatelang sein Leben riskiert hatte, um das Mädchen im Keller zu verstecken, wurde öffentlich hingerichtet, weil es eine Verdorbene beherbergt hatte. An jenem Tag löschte ein schwerer Schneefall jede Spur der Tragödie aus, als wäre sie nie geschehen.\n Doch die Erinnerung blieb in Psyche zurück. Lange Zeit verfolgte sie ein immer wiederkehrender Albtraum: Ein Schmetterling, der sich mühsam aus seinem Kokon zu befreien suchte, nur um kraftlos zu Boden zu sinken, unfähig, seine Flügel zu öffnen. Dann fiel Schnee – unbarmherzig und lautlos – und begrub ihn, bis keine Spur mehr darauf hindeutete, dass er je existiert hatte.",
+          TextMapId = "UI_CHAR_DATA_TEXT_53010303"
+        },
+        UI_CHAR_DATA_TEXT_53010304 = {
+          ContentDE = "Psyche hatte sich bereits von zwei Mietern im Hypnos’ Haus verabschiedet. Sie hatte Henrik angefleht, sie in jenen verbotenen Raum zu lassen, nicht nur, um ihren Freunden ein letztes Mal Lebewohl zu sagen, sondern auch, um ihrem eigenen, heraufziehenden Schicksal ins Auge zu blicken.\n Das Licht des Ofenfeuers spiegelte sich in ihren Augen – hell und brennend, als würde es von den Leben genährt, die ihre Freunde nie hatten leben dürfen.\n Es gibt nichts zu fürchten, dachte Psyche. Es ist nur ein weiteres, vorbestimmtes Abschiednehmen. Irgendwann gehen alle.\n Sie glaubte, gelernt zu haben, Abschiede mit ruhiger Fassung zu akzeptieren. Doch sie irrte sich. Der letzte Abschied von dir hinterließ in ihrem Herzen einen Schmerz, der sie völlig unvorbereitet traf.",
+          TextMapId = "UI_CHAR_DATA_TEXT_53010304"
+        },
+        UI_CHAR_DATA_TEXT_53010305 = {
+          ContentDE = "In ihren letzten Augenblicken trauerte Psyche weder über den körperlichen Schmerz, noch zitterte sie angesichts ihres Schicksals.\n Stattdessen freute sie sich darüber, dir begegnet zu sein, und darüber, ein Leben gelebt zu haben, das wahrhaft ihr eigenes war.",
+          TextMapId = "UI_CHAR_DATA_TEXT_53010305"
+        },
+        UI_CHAR_DATA_TEXT_53010401 = {
+          ContentDE = "„Psyche, Zeit aufzustehen.“\n Die sechsjährige Psyche sprang aus dem Bett – sie hatte diesen Moment schon lange herbeigesehnt. Erst am Tag zuvor hatten ihre Eltern endlich nachgegeben und zugestimmt, ihr die Grundlagen der Blumenpflege zu zeigen. Die Vorfreude hielt sie die ganze Nacht über wach, die Augen weit geöffnet vor Aufregung.\n Mit der Hand ihres Vaters auf der einen Seite und der ihrer Mutter auf der anderen trat Psyche in das Blumenladen. Es war ein flüchtiger Sommer, helles Sonnenlicht fiel schräg durch die Fenster mit Schmetterlingsdekorationen und warf zarte, schmetterlingsförmige Schatten auf die Blüten, als hätten sich echte Schmetterlinge auf die Blumen gesetzt. Nachdem sie ihre Eltern beim Gießen des letzten Topfes nachgeahmt hatte, war die kleine Psyche, die die ganze Nacht wach gewesen war, schließlich ein wenig müde.\n Die sechsjährige Psyche nickte auf dem Balkon ein und verlor sich in einem gemütlichen Traum. In diesem Traum taut die sanfte Sonne die ewig gefrorene Erde von Icelake auf und erweckt ein Feld lebhafter Wildblumen zum Leben. Zwischen diesem floralen Teppich flattern lebendige Schmetterlinge anmutig umher. Mit ausgebreiteten Armen jagte Psyche dem lockenden Sonnenlicht nach und glitt zusammen mit den Schmetterlingen den Launen einer schelmischen Brise folgend frei im Schoß des Himmels.\n \n „Psyche, Zeit aufzustehen.“\n Die zwölfjährige Psyche kletterte aus dem Bett. Draußen war es noch dunkel, doch sie wusste, dass es Zeit war, im Laden zu helfen.\n Mit hochgekrempelten Ärmeln begleitete sie ihren Vater zum einen Kilometer entfernten tiefen Brunnen, um Wasser zu holen. Als sie mit dem frischen Morgentau zurückkehrten, hatte ihre Mutter das Wasser bereits zum Kochen gebracht. Ohne einen Moment, um ihre müden Arme zu entspannen, mischten Psyche und ihr Vater das heiße und kalte Wasser auf die ideale Temperatur, bevor sie die Gießkannen füllten – das Brunnenwasser von Icelake war für die empfindlichen Blumen zu kalt, daher mussten sie sicherstellen, dass die Wurzeln nicht durch die Kälte Schaden nahmen. Nachdem sie den letzten Blumentopf gepflegt und auf das Pflanzenregal gestellt hatte, beobachtete Psyche, wie ihre Eltern die Ladenfenster öffneten und einen weiteren Geschäftstag begannen, bevor sie ihnen zuwinkte und zur Schule aufbrach.\n Mit zwölf Jahren verstand Psyche, warum ihre Eltern sie früher nicht in die Blumenpflege einweihen wollten – es war für sie kein Hobby oder Zeitvertreib, sondern ein Mittel zum Lebensunterhalt. Trotzdem liebte sie diese Blumen. Die sich öffnenden Knospen zauberten ihr trotz Kälte und Müdigkeit stets ein Lächeln ins Gesicht.\n \n „Psyche, Zeit aufzustehen.“\n Die siebzehnjährige Psyche setzte sich langsam im Bett auf. Sie strich zärtlich über die abgenutzte Decke, zögerte, sie loszulassen – sie spendete wenig Wärme, und wirklich kalt war ihr nicht, doch sich von ihr zu trennen, fiel ihr schwer. Sie wusste, dass dies ihre letzte Nacht in diesem Bett war.\n Ihre Mutter trug ein schlichtes schwarzes Kleid, mit tiefen dunklen Ringen unter den Augen und Tränenstreifen auf den Wangen.\n Die siebzehnjährige Psyche streckte die Hand aus, um das zerzauste Haar ihrer Mutter zu richten. „Ich liebe dich, Mama“, flüsterte sie und küsste eine weitere Träne weg.\n Dann nahm sie wie immer den Arm ihres Vaters in die eine und den ihrer Mutter in die andere Hand und machte sich auf den Weg zu dem hohen Gebäude im Norden der Stadt.",
+          TextMapId = "UI_CHAR_DATA_TEXT_53010401"
+        },
+        UI_CHAR_DATA_TEXT_53010402 = {
+          ContentDE = "„Bleib weg von ihr!“\n Mit diesem Tadel war Psyche seit ihrer Kindheit allzu vertraut – zahllose Erwachsene schleuderten ihn ihren Kindern entgegen. Danach wurden ihre neu gewonnenen Freunde sofort weggezerrt und kamen nie wieder.\n Doch es hatte einmal eine Ausnahme gegeben – ein Sola-Mädchen in ihrem Alter, dem Psyche zufällig im Blumenladen begegnet war. Dieses Mädchen, erfüllt von Neugier auf Psyche, ignorierte oft die Warnungen ihrer Dienerin und rannte einfach in den Laden, nur um Psyche zu suchen und mit ihr zu spielen. Sie lud Psyche sogar in ihr prächtiges Herrenhaus ein, um mit ihren exquisiten Spielbausteinen zu spielen.\n „Siehst du, das Kleine hier bin ich, und die mit den Hörnern, das bist du ...“, sagte sie aufgeregt, während sie die Bauklötze anordnete, „und die beiden spielen zusammen.“\n „Findest du meine Hörner nicht unheimlich?“ fragte Psyche schüchtern.\n „Überhaupt nicht, ich finde sie hübsch!“ erwiderte das Mädchen ohne Zögern. „Oh, stimmt! Lass uns deine Hörner mit niedlichen Accessoires schmücken!“\n Voller Tatendrang sprang sie auf, lief zum Accessoireschrank und begann, sorgfältig verschiedene Bänder und Haarschmuckstücke zu durchsuchen.\n „Hmm ... das rote ist süß, aber es passt nicht so gut zu deinem Kleid. Was ist mit dem goldenen?“\n Als sie sich bewegte, blähte sich ihr Kleid und stieß die kleine Hörner-Figur um. Psyche bemerkte es, stellte sie sanft wieder auf und stellte sie an die Seite ihrer kleinen Freundin. Dann lächelte sie.\n „Psyche, welches gefällt dir?“ Das Mädchen kam zurückgerannt und drückte Psyche einen ganzen Arm voll bunter Accessoires in die Arme. „Du kannst nehmen, was du willst!“\n „Ich ...“\n Psyches Worte wurden durch das Knarren der Tür unterbrochen. Die Mutter des Mädchens, eine elegant gekleidete Dame, trat ein. Ihr Gesicht verzerrte sich vor Zorn und Verachtung, als sähe sie in Psyche kein Kind, sondern einen schmutzigen Köter. Es folgten die üblichen Scheltworte und Beschimpfungen, an die Psyche längst gewöhnt war. Während man sie aus dem Herrenhaus drängte, hörte sie das Mädchen schluchzen:\n „Psyche, es tut mir so leid! Ich komme zu dir, und dann spielen wir wieder zusammen!“\n Doch von diesem Tag an wurde das Mädchen von ihren Eltern eingesperrt; sogar die Fenster ihres Zimmers wurden verriegelt und mit undurchsichtigem Papier verhängt.\n Psyche wusste, dass es so enden würde, aber sie hatte das Gefühl, dem Mädchen wenigstens sagen zu müssen: „Ich würde alles schätzen, was du mir gibst.“\n Dieser Satz blieb viele Jahre in Psyches Herzen, bis sie eines Tages in der Straße versehentlich mit einem prächtig gekleideten Sola-Jungen zusammenstieß. Noch bevor sie sich entschuldigen konnte, zog ein ebenfalls reich gekleidetes Mädchen den Jungen weg: „Wie oft habe ich dir gesagt, du sollst dich von diesen Hornträgern fernhalten! Und du, du dreckige Charon, bist du blind? Wie kannst du es wagen, meinen kleinen Bru...“\n Die Standpauke brach abrupt ab. Der Blick des Mädchens blieb an Psyches Hörnern hängen, und ihr anklagender Finger erstarrte in der Luft. Psyche erkannte sie sofort – es war ihre kleine wohlhabende Freundin aus früheren Tagen, der sie sich immer irgendwie verpflichtet gefühlt hatte.\n „Psyche ...? Du ...“ Das Mädchen war völlig aus dem Konzept. „Ich ...“\n „Sie verwechseln mich, gnädiges Fräulein,“ sagte Psyche mit einem entschuldigenden Lächeln. „Verzeihung, ich war gerade etwas schwindlig und habe Ihren kleinen Bruder nicht gesehen.“\n Psyche wandte sich ab und ging. Die Worte, die sie jahrelang in ihrem Herzen bewahrt hatte, warf sie schließlich in den Abfall der Zeit – ebenso wie jene Accessoires und Spielbausteine, die sie einst berührt hatte.",
+          TextMapId = "UI_CHAR_DATA_TEXT_53010402"
+        },
+        UI_CHAR_DATA_TEXT_53010403 = {
+          ContentDE = "„Bis morgen, Psyche!“\n „Ja, bis morgen!“\n Es war ein Abend wie jeder andere. Psyche verabschiedete sich von {性别:ihrem neuen Phoxjäger-Freund|ihrer neuen Phoxjägerin-Freindin} und sah {性别:ihm|ihr} nach, wie {性别:er|sie} das Hypnos’ Haus verließ. Es wirkte wie ein gewöhnlicher Abschied, doch Psyches Blick haftete an der sich entfernenden Gestalt, bis {性别:er|sie} in der Dunkelheit verschwand. Noch lange stand sie im Türrahmen und zögerte, in ihr Zimmer zurückzukehren.\n „Bis morgen“ – ein so beiläufig dahingesagter Satz bei jedem Abschied – barg für Psyche eine ganz eigene, schmerzlichere Bedeutung. Jede Nacht, wenn sie die Augen schloss, fragte sie sich, ob sie wirklich einen Morgen erleben würde.\n Kurz bevor sie in den Schlaf glitt, sprach sie jedes Mal ein stilles Gebet, voller leiser Hoffnung, am nächsten Tag unversehrt wieder zu erwachen.\n Als die lange Nacht wich und die Morgendämmerung die Erde berührte, erwachte Psyche. Langsam setzte sie sich auf, berührte ihre Arme und fühlte sich durch die vertraute Wärme ihres menschlichen Körpers beruhigt – dankbar für einen weiteren Tag, an dem sie sich nicht in ein Monster verwandelt hatte.\n „Gott sei Dank“, dachte sie erleichtert. „Ich habe mein Versprechen gegenüber {性别:ihm|ihr} erneut gehalten.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_53010403"
+        },
+        UI_CHAR_DATA_TEXT_53010404 = {
+          ContentDE = "„Ich frage dich ein letztes Mal, Psyche. Bist du sicher, dass du das wirklich willst?“\n Psyche nickte fest. Sie hörte, wie Henrik einen langen, schweren Seufzer ausstieß. Inzwischen war ihr Blick völlig verschwommen. Sie konnte sein Gesicht nicht mehr erkennen und setzte es stattdessen aus ihren Erinnerungen zusammen.\n In Psyches frühesten Erinnerungen an Herr Henrik war er stets ernst und distanziert, als trüge er eine Last, die viel zu schwer war für einen Mann seines Alters, als würde in einem noch jungen Körper eine uralte Seele wohnen. Nur wenn sein Blick auf das Foto auf seinem Schreibtisch fiel, glimmte für einen Moment ein Funken echter Emotion auf. Psyche hatte eine Ahnung, wer das Mädchen auf dem Bild sein könnte, doch sie fragte nie danach – sie wollte den Schmerz, den er vielleicht verbarg, nicht berühren. Stattdessen stellte sie jeden Tag still eine frische Blume in die Vase auf seinem Tisch.\n Henrik blieb ein wortkarger Mann, dessen Leben aus einfachen, eintönigen Routinen bestand. Doch mit der Zeit bemerkte Psyche eine leise Veränderung – ein Funke schien in seinen Augen zu wachsen, wie ein junger Spross, der sich durch verkohltes Holz kämpft.\n Eines Tages öffnete Henrik eine alte Bücherwand. Jahrealter Staub stob in die Luft, sodass Psyche ihre Augen schützen musste. Als sie vorsichtig durch ihre Finger blinzelte, sah sie Henrik husten, während er sich durch Stapel alter Papiere und Notizen wühlte und Worte murmelte wie „Blockade-Reaktion“ und „Kristallo von Stella“. Die Fachausdrücke verstand sie nicht, doch sie erinnerte sich lebhaft an seine leise geflüsterten letzten Worte:\n „Hayley, ich will es noch einmal versuchen ... Glaubst du, diesmal könnte es eine andere Geschichte werden?“\n Von diesem Tag an schloss sich Henrik in seinem Büro ein und arbeitete ununterbrochen mit Phiolen, Petrischalen und allen möglichen farbigen Flüssigkeiten. Psyche störte ihn nicht. Nie zuvor hatte sie gesehen, dass er etwas mit solcher Leidenschaft verfolgte. Früher war er ihr wie eine ferne, gütige Gottheit erschienen, die lediglich im richtigen Moment einen gnädigen Schlussstrich unter Leiden zog. Jetzt war er eher wie ein Mann, der verzweifelt nach Hoffnung griff, oder wie ein Kind, das einem lange verlorenen Schatz hinterherjagte.\n Zum ersten Mal erschien Henrik ihr vollkommen menschlich.\n \n ...\n \n „Dann trink das.“\n Henriks Stimme riss Psyche in die Gegenwart zurück. Etwas Kaltes wurde in ihre Hand gedrückt. Als sie die Form abtastete, spürte sie die raue Oberfläche einer kleinen Phiole. Sie hielt sie behutsam, spürte ihr leichtes Gewicht, und erkannte die lebensverändernde Bedeutung, die sie in sich trug. Diese Phiole war das Ergebnis von Henriks unermüdlicher Arbeit, das Produkt unzähliger schlafloser Nächte. Wenn das Schicksal ihr hold war, würde dieses Fläschchen sie von einem hoffnungslosen Schicksal befreien. Und wenn nicht ... nun, dann würde sie wenigstens Henrik helfen, seine Forschung zu verfeinern, und damit eines Tages mehr Leben zu retten.\n Sie stellte sich unwillkürlich die Flüssigkeit darin vor – aus Kristallo von Stella hergestellt, würde sie bestimmt in einem zarten, ätherischen Licht schimmern. Der Gedanke ließ sie lächeln.\n „{nickname} und ich haben dieses Stück Kristallo von Stella gemeinsam geborgen. Ich vertraue darauf, dass es mir Glück bringen wird“, dachte sie hoffnungsvoll.",
+          TextMapId = "UI_CHAR_DATA_TEXT_53010404"
+        },
+        UI_CHAR_DATA_TEXT_53010405 = {
+          ContentDE = "Es war unverkennbar ein Traum, einer, der sich bis ins Detail lebendig anfühlte.\n Schnee fiel über Icelake und hüllte die Stadt in Grau- und Weißtöne, ganz wie an all den anderen Tagen, an die du dich erinnerst. Du durchschrittest rutschige, matschige Gassen, leere Plätze und die Luft, erfüllt vom stechenden Aroma der Asphodel – all das war dir nur zu vertraut.\n Die Einwohner eilten an dir vorbei, ohne dir Beachtung zu schenken. Sie waren nur flüchtige Gestalten auf deinem Weg, so wie du auf ihrem.\n Schließlich standest du vor einem Haus auf einer Anhöhe, einem Ort, der in deiner Erinnerung längst verlassen war. Doch im beißenden weißen Nebel glühten warme, gelbe Lichter einladend.\n Als du klopftest, schwang die Tür auf und ein Mädchen mit silbernem Haar und grüner Kleidung erschien. Ihr Lächeln war hell und herzlich. „Hallo!“, begrüßte sie dich fröhlich, ihre Augenbrauen hoben sich freundlich. „Das hier ist Hypnos’ Haus. Bist du {性别:ein Reisender|eine Reisende} aus weiter Ferne?“\n Etwas in dir regte sich, als hätte eine erstarrte Weite plötzlich aufgetaut und längst vergrabene Samen im Permafrost begännen heftig auszutreiben.\n Du öffnetest den Mund, überwältigt von all den Worten, die du sagen wolltest, doch sie gefroren in der kalten Luft. Am Ende entkam dir nur ein leises Flüstern:\n „... Psyche, sieh nur, es schneit wieder in Icelake.“\n Sie neigte den Kopf, verwundert.\n „In Icelake schneit es jeden Tag. Das ist völlig normal. Du wirst dich schon bald daran gewöhnen.“\n Der Schnee wurde dichter, bis er langsam deine ganze Sicht verschlang.",
+          TextMapId = "UI_CHAR_DATA_TEXT_53010405"
+        },
+        UI_CHAR_DATA_TEXT_54010101 = {
+          ContentDE = "„Alchemie“ – im Hyperboreischen Imperium ist das Wort gleichbedeutend mit „Wunder“.\n Wie der Name schon sagt, waren die ersten hyperboreischen Alchemisten früher eine Gruppe verschrobener Gelehrter: Sie folgten einer okkulten Philosophie und glaubten fest daran, gewöhnliche Metalle und Erze zu Gold veredeln zu können. Gold fanden sie am Ende zwar nicht, aber in ihrer täglichen Forschung destillierten sie das „Phoxichor“ aus Phoxenen, das eine matte, bläulich schimmernde Flüssigkeit und so milchig wie nährende Muttermilch war. Aus ihm entstanden Zahnräder, Hochöfen und Städte aus Stahl – unzählige Spinnmaschinen zerbissen Baumwollkapseln und spuckten Stoffbahnen aus, Schienen legten sich wie eiserne Blutgefäße über uraltes Land, blechverkleidete Schiffe stiegen wie ziehende Zugvögel in den Himmel, und Kanonenfeuer lag in den Händen der Menschen wie himmlisches Flammenwerk, das von den Göttern herabgesandt wurde. Wer könnte da noch behaupten, die Alchemie der Solas sei kein Wunder und nicht noch größer als die Magie der Charon?\n Selbstverständlich wurden Alchemisten damit zum heiß begehrtesten Beruf im Hyperboreischen Imperium. Wie das Sprichwort schon sagt: „Zwischen einem Landstreicher und einem Adeligen liegt nur ein kleines Abzeichen aus Jade.“ Unzählige junge Leute, die nach Wissen, Ruhm – ja, sogar nach einem Klassenaufstieg – dürsteten, setzten alles auf eine Karte: jahrelanges Pauken und Experimentieren, Bestechungen und Schmeicheleien, nur um irgendwo eine Stelle in einer Alchemie-Akademie zu ergattern. Und die Königliche Alchemie-Akademie in der Kaiserstadt Dismania wurde schier zu einem Turm, den man nur aus der Ferne anbeten konnte.\n Umso unbegreiflicher war es, als Daphne Theodore die Chance auf das Studium dort ausschlug und stattdessen als ganz gewöhnliche Sanitäterin mit dem Heer zog. Für alle war klar: Sie hat den Verstand verloren.",
+          TextMapId = "UI_CHAR_DATA_TEXT_54010101"
+        },
+        UI_CHAR_DATA_TEXT_54010102 = {
+          ContentDE = "Du hast schonmal gehört, dass Daphne früher eine außergewöhnlich begabte Schülerin am Spathatoi war. Jedes Fach und jedes Projekt schloss sie mit der Note A ab – nicht weil man sie bevorzugte, sondern weil A schlicht die beste Note war, die das Bewertungssystem hergab.\n Doch nach ihrem Eintritt in die Legion bekam sie zum ersten Mal in ihrem Leben eine katastrophale Benotung: Körperliche Eignung: C. Selbst unter den Sanitätern war das gerade eben noch ausreichend.\n Deshalb siehst du oft, wie sie jede freie Minute zum Training nutzt.",
+          TextMapId = "UI_CHAR_DATA_TEXT_54010102"
+        },
+        UI_CHAR_DATA_TEXT_54010103 = {
+          ContentDE = "Auf Daphnes Schreibtisch steht ein altes Foto. Auf ihrem Schreibtisch steht ein altes Foto. Die kleine Daphne klammert sich an den Arm einer eleganten jungen Frau – doch die rechte Hälfte des Bildes ist abgerissen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_54010103"
+        },
+        UI_CHAR_DATA_TEXT_54010104 = {
+          ContentDE = "Und dir fällt auf: Wenn Daphne nervös ist, macht sie ihren Rücken erst recht ganz gerade.",
+          TextMapId = "UI_CHAR_DATA_TEXT_54010104"
+        },
+        UI_CHAR_DATA_TEXT_54010105 = {
+          ContentDE = "Am Tag, an dem ihr nach Flagson aufbrecht, kommt Daphne, um dich zu verabschieden. Ihr sagt kaum etwas, teilt trotzdem alles – und bringt nur ein bitteres Lächeln zustande.\n „Pass auf dich auf.“ Sie umarmt dich sanft. „Ich werde für dich beten.“\n Du gibst selten Versprechen, wenn du dir nicht sicher bist. Und trotzdem packst du ihre Hand, hältst sie fest und sagst Wort für Wort: „Ich werde die Wahrheit finden – und sie dir zurückbringen.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_54010105"
+        },
+        UI_CHAR_DATA_TEXT_54010201 = {
+          ContentDE = "Vom Behandlungsbereich bis zu den Krankensälen des Riverside Krankenhauses führt ein langer Korridor.\nAnders als in den übrigen Kliniken Dismanias werden hier vor allem Patienten mit chronischen Leiden eingewiesen. Krankheiten, die quälen, aber nicht sofort töten. Sie machen aus den Menschen nicht sofort eine Leiche – sie machen sie über die Jahre zu „Irren“, wie die Ärzte irgendwann sie nur noch „nennen\nSeit ich 7 war, bin ich diesen Korridor rauf und runter gerannt. Weil ich schneller als die meisten erwachsenen Sola-Pfleger war und mir ein Teller Essen und ein Platz zum Schlafen reichten, erlaubten sie mir – einem minderwertigen kleinen Mädchen mit Hörnern am Kopf – aus Barmherzigkeit, auf ihrem Grund zu arbeiten. Meistens habe ich Sachen geschleppt. Alles, was anfiel, ging über mich: dreckige Bettwäsche, Scherben von umgestoßenem Glas, der ganze Mist. Ich räumte es weg und brachte es in den Waschraum oder zur Müllgrube. Und oft drückte mir eine Schwester nebenbei noch ein paar Fläschchen in die Hand, die ich auch mitschleppen sollte. Also schleppte ich die meiste Zeit Kartons, die höher waren als ich, durch den Verbindungskorridor. Sie nahmen mir die Sicht und deshalb knallte ich ständig mit anderen zusammen, die genauso gehetzt unterwegs waren wie ich. Und dann kam’s, wie es immer kam: eine volle Ladung Beschimpfungen.\nEinmal habe ich auf dem Marktplatz einen Wanderbarden gehört, der sich darüber ausließ, Hyperboreaner seien die reizbarsten Menschen in ganz Atlasia. Wenn das stimmt, dann waren die Leute im Riverside Krankenhaus – nach allem, was ich bis dahin kannte – die Reizbarsten der Reizbarsten. Patienten, Ärzte, Schwestern, sogar die Verwandten, die zu Besuch kamen. Es gab keine Ausnahme. Mit der Zeit begriff ich, warum. Diese Krankheiten waren lang, schmerzhaft, zermürbend und sie machten alle irgendwann hysterisch. Trotzdem: Wenn mich wieder jemand zusammengestaucht hatte, streckte ich ihnen den Mittelfinger hinterher, sobald sie weg waren.\nDaphne Theodore war die Einzige, die mich nach einem Zusammenstoß nicht anfuhr, sondern sich bei mir entschuldigte. Ich erinnere mich glasklar an jenen Nachmittag. Ich trug routiniert einen Stapel Stoffpolster in Richtung Waschraum, als ich am Ende des Korridors mit jemandem zusammenprallte – eine junge Blondine, glaube ich. In dem Moment flogen meine Polster und ihre Blumen gleichzeitig in die Luft und krachten auf den Boden. Ich ging sofort in die Hocke und fing an zu brüllen. Laut und schrill wie die Patienten, denen es am schlimmsten ging. Dabei hatte ich mir nicht wehgetan. Und traurig war ich auch kein bisschen, weil ich die Arbeit vermasselt hatte. Das war nur mein kleiner Trick: Wenn ich so losheulte, ließen mich die Erwachsenen, die mich sonst ausgeschimpft oder geschlagen hätten, sofort in Ruhe – als hätte ich etwas Ansteckendes an mir.\nAber die blonde Frau machte nicht, was ich erwartet hatte. Sie warf mir keinen giftigen Fluch hinterher und marschierte davon. Sie kniete sich zu mir, strich mir über den Rücken und fragte hastig, wo ich hingefallen sei und ob es wehtue. Sie klang dabei fast panischer als ich. Als ich nicht reagierte, wurde ihre Stimme weicher, ruhiger, und sie fragte noch einmal. Aber die Unruhe blieb, sie war spürbar in ihren leicht zitternden Fingern.\nIch hab vergessen, was ich ihr genau geantwortet habe – wahrscheinlich „Tut nicht weh“. Sonst hätte sie wohl kaum die Stirn entspannt, mir aufgeholfen und mit mir zusammen die verstreuten Polster und Blumenstiele aufgesammelt.\n„Es tut mir leid.“ Sie strich mir über den Kopf. „Kleine – welche Bonbons magst du? Beim nächsten Mal bring ich dir welche mit, ja?“\n„Erdbeere“, sagte ich. Eigentlich hätte ich ihre Entschuldigung nicht annehmen dürfen. Ich wusste ganz genau, dass beim „Unfall“ ich diejenige gewesen war, die nicht aufgepasst hatte. Aber dann fiel mir etwas ein: Als ich gerade so alt war, dass ich mich an Dinge erinnern konnte, hatte meine Mutter auf dem Sterbebett immer wieder dasselbe gemurmelt – dass die Erdbeerbonbons in der Schublade im Schrank lägen. Aber als ich den Schrank öffnete, war da nichts. Später erfuhr ich, dass mein gefräßiger Bruder alle weggenommen hatte.\n„Erdbeerbonbons. Merk ich mir“, sagte die blonde Frau, hob ihre Blumen auf und ging den Gang hinunter. Sie war eher groß und sehr schlank. Die Nachmittagssonne fiel auf ihre matte Haarspange und zog einen sanften goldenen Schimmer.\nIch kannte ihren Namen nicht, also gab ich ihr den Namen Fräulein Erdbeerbonbon. Außer meiner Mutter hatte seitdem niemand so wie Fräulein Erdbeerbonbon gefragt, ob es weh tut.\n\n— Aus dem Tagebuch von Tiori Stone",
+          TextMapId = "UI_CHAR_DATA_TEXT_54010201"
+        },
+        UI_CHAR_DATA_TEXT_54010202 = {
+          ContentDE = "Beim zweiten Mal, als ich Daphne Theodore begegnete, wurde ich gerade von einer jungen Schwester namens Madeleine zusammengestaucht. Sie packte mich am Kragen und hob mich hoch, als wäre ich ein Lamm. Bis dahin hatte ich nicht gewusst, dass sie so eine irrsinnige Kraft hatte. Sie fauchte mich an und wollte wissen, warum ich ihr das falsche Mittel gebracht hätte.\n Ich konnte nicht lesen. Aber ich hatte mir fest eingeprägt, wie jedes Etikett aussah – nicht die Buchstaben, sondern die Formen. Und ich erinnerte mich ganz genau an die Farbe. Es war ein neues Präparat. Blaue Mixturen gab es viele, aber nur die hier war ein klares, wunderschönes Tiefblau – genau wie Phoxichor.\n Als ich stur blieb und jede Schuld abstritt, holte Schwester Madeleine weit aus. Ich kniff die Augen zu und überlegte in Windeseile, was mir weniger Schläge einbringen würde: still sein oder losheulen. Aber die Ohrfeige kam nicht. Stattdessen lockerte sich die Hand an meinem Kragen. Als ich die Augen öffnete, sah ich warum: Madeleines erhobene Handgelenk wurde von einer schlanken, langen Hand fest umklammert.\n Fräulein Erdbeerbonbon.\n „Entschuldigen Sie. Ich konnte Ihren Streit nicht überhören. Bevor Sie dieses Charon-Kind weiter beschuldigen – dürfte ich kurz einen Blick auf das Fläschchen werfen?“\n Schwester Madeleine versuchte, sich loszureißen, aber die schmale Hand von Fräulein Erdbeerbonbon hatte mehr Kraft, als man ihr ansah. Knurrend drückte sie ihr schließlich die Ampulle in die Hand.\n Sie nahm eine davon, schwenkte sie ein paar Mal, zog den Holzstopfen und roch vorsichtig daran.\n „Ganz eindeutig. Das Präparat, das das Mädchen Ihnen gebracht hat, ist korrekt. Es ist AP-1718. Und hier steht es auch. Sie sollten vor einem Kind, das nicht lesen kann, nicht versuchen zu lügen.“\n „AP-1718 hat nicht diese Farbe! Das Balg hat die Etikette vertauscht!“ Schwester Madeleine kreischte: „Die hat letztes Mal schon eine Abreibung bekommen und jetzt will sie mir eins auswischen!“\n „Die Alchemie-Akademie hat die Rezeptur kürzlich verbessert. Darum unterscheidet sich das neue Mittel in ihren Eigenschaften von dem, was Sie im Kopf haben. Und, gnädige Frau, statt ein unschuldiges Kind zum Sündenbock zu machen ...“ Sie hob den Blick und sah der Schwester direkt in die wütenden Augen. „... sollten Sie lieber mehr Energie in Ihre eigene Arbeit stecken.“\n „Neue Rezeptur? Woher willst du das wissen – du bist doch nur ’ne Angehörige von ’nem Patienten!“ Madeleines Gesicht lief rot an. „Wer weiß, ob du dir das nicht einfach ausdenkst, nur um das Balg zu schützen!“\n „Doch, das weiß ich. Natürlich“, sagte sie. „Ich heiße Daphne Theodore. AP-1718 wurde unter meiner Leitung entwickelt. Das ist mein Abzeichen von der Spathatoi. Das erkennen Sie doch, oder?“\n \n — Aus dem Tagebuch von Tiori Stone",
+          TextMapId = "UI_CHAR_DATA_TEXT_54010202"
+        },
+        UI_CHAR_DATA_TEXT_54010203 = {
+          ContentDE = "An dem Tag, an dem Daphne Theodore mich aus der Klemme holte, war ich wahrscheinlich überglücklich. Als ich die Bonbons von ihr bekam, riss ich das Papier auf, stopfte mir gleich mehrere auf einmal in den Mund und schnitt dabei eine Grimasse in Richtung von Madeleines Rücken, während sie kleinlaut abzog.\n „Wie heißt du?“, fragte Daphne, als wir nebeneinander auf einer Bank unten beim Stationstrakt saßen.\n „Tiori.“\n „Weißt du, wie man das schreibt?“\n Ich schüttelte den Kopf. Sie hob einen Zweig auf und schrieb ein paar Buchstaben in den Sand.\n „Das ist dein Name. Er bedeutet ‚Tauveilchen‘.“\n Die meiste Zeit meines Lebens hing mein Name an Wörtern wie „Mistbalg“ oder „dreckiges Stück“. Ich hätte nie gedacht, dass er so schön klingen konnte.\n „Fräulein Tauveilchen, ich bring dir das Schreiben bei. Ja?“, flüsterte sie.\n „Wozu sollte ich schreiben können?“, fragte ich ehrlich verwirrt. Die Charons machten meistens nur Knochenarbeit. Und ich sah wirklich nicht aus wie jemand, der je zum Lorbeerkranz-Charon werden könnte. So viel Selbsterkenntnis hatte ich.\n „Wenn du lesen kannst, wäre so etwas wie heute vielleicht gar nicht passieren.“ Dann lachte sie leise. „Wissen ist Macht. Eine Waffe, die uns schützt.“\n Ich schüttelte unwissend den Kopf und nickte dann trotzdem heftig. Damals begriff ich nicht, was sie meinte. Aber wenn sie es sagte, konnte ich nicht nein sagen.\n An jenem Nachmittag brachte Daphne Theodore mir das Alphabet bei. Mit krakeliger Schrift schrieb ich alles in ein kleines Heft, das sie mir schenkte. Kurz bevor sie ging, zögerte ich – und rief schließlich ihren Namen.\n „Fräulein Theodore“, sagte ich. „Ich erinnere mich – Sie haben gesagt, Sie seien ‚Alchemistin‘.“\n „Ja.“\n „Was ist Alchemie?“\n „Eine Wissenschaft, die Menschen glücklicher machen kann.“\n Als sie das sagte, veränderte sich ihr Blick. Als würde in ihren Pupillen plötzlich Feuer brennen – nur deshalb konnten ihre Augen so hell werden.\n „Dann ist eine Alchemie-Akademie also der Ort, an dem man Alchemie erforscht.“\n „... Ja.“\n „Wenn ich richtig schreiben lerne“, fragte ich vorsichtig, „kann ich dann auch in die Alchemie-Akademie? Mit Ihnen zusammen, Fräulein Theodore?“\n Ich hatte sonst ein gutes Gefühl dafür, wo mein Platz war. Und ich konnte Gesichter lesen. Selbst ohne zu fragen, hatte mir Madeleines Reaktion gerade gezeigt, dass die Alchemie-Akademie etwas Großes sein musste und für Leute wie mich unerreichbar war. Und doch… dieses Feuer in Daphnes Augen ließ mich für einen Moment glauben, ich dürfte ihm entgegentreten.\n Aber es kam ganz anders. Das Feuer in ihrem Blick erlosch, als hätte jemand es ausgepustet. Ihre Miene wurde kompliziert und schwermütig. Sie wandte den Kopf ab und sah mich nicht mehr an.\n „Nein, Tiori“, sagte sie leise. „Geh nicht dorthin.“\n „Die Alchemie-Akademien von Hyperborea sind auf dem falschen Weg“, fügte sie noch leiser hinzu. „Ich trage den Turm nicht mehr in mir.“\n \n — Aus dem Tagebuch von Tiori Stone",
+          TextMapId = "UI_CHAR_DATA_TEXT_54010203"
+        },
+        UI_CHAR_DATA_TEXT_54010204 = {
+          ContentDE = "Nachdem ich das Notizbuch, das Daphne mir geschenkt hatte, bis zur letzten Seite vollgeschrieben hatte, sah ich sie endlich wieder im Riverside Krankenhaus.\nIch war mir sicher, dass sie kommen würde.\nBeim letzten Mal hatte ich sie gebeten, in der Alchemie-Akademie sich nach einem Mann namens Gary Stone umzuhören. Ich hatte ihr unter Tränen erzählt, Gary sei mein großer Bruder, der einzige Verwandte, den ich auf dieser Welt noch hätte. Seit Ewigkeiten hätte ich nichts mehr von ihm gehört; die letzte Spur führte in die Alchemie-Akademie.\nWie ich es mir ausgemalt hatte, sagte Daphne sofort zu.\nUnd ehrlich gesagt war das meiste davon wahr. Nur in einem Punkt hatte ich gelogen: Ich vermisste Gary Stone kein bisschen. Er war mein Bruder, ja – aber nicht jede Familie ist automatisch mit Liebe verbunden. Als ich ihm kaum bis zum Oberschenkel reichte, packte Gary mich manchmal am Hals und drückte zu, bis mir fast die Luft ausging und ließ erst los, wenn ich ganz benommen war ... nur weil ich einen Bissen von „seinem“ Essen gestohlen hatte.\nSein Schicksal war mir egal. Aber ich wollte Daphne wiedersehen. Ich dachte mir, Daphne musste in einem sehr glücklichen Zuhause aufgewachsen sein. Sonst hätte sie nicht entschieden, dass ein „Bruder“ für mich zwangsläufig das Wichtigste auf der Welt sein musste.\n\nDaphne kam - und sie brachte Neuigkeiten zu Gary Stone mit.\nDiesmal sah sie erschöpft aus. Sie hatte dunkle Ringe unter ihren Augen und auf ihrer Wange schimmerte etwas, das wie verblasste Tränen wirkte.\nIch sah, wie sie am anderen Ende des Verbindungskorridors lange hin und her ging, bevor sie endlich zu mir herüberkam. Da wusste ich: Es musste eine wirklich schlechte Nachricht sein. Zögerte sie etwa? Zögerte sie, mir diese schlechte Nachricht zu übermitteln? Oder zögerte sie nur, wie sie es mir sagen wollte?\n„Tiori“, sagte sie und ging in die Hocke. Ihre Hände umklammerten fest meine Schultern. „Ich habe etwas über deinen Bruder herausgefunden. Bitte ... bitte versprich mir, dass du mutig bleibst, ja?“\n– Oh. Sie entschied sich also dafür, mir alles direkt zu sagen. Vielleicht, weil sie nicht lügen konnte. Oder weil sie glaubte, selbst ein Kind habe ein Recht auf die Wahrheit.\n„Gary Stone kommt nicht mehr zurück“, sagte Daphne mit heiserer Stimme. „Er ist in einen Unfall verwickelt gewesen ... mit einem Alchemisten.“\nIn mir rührte sich nichts. Trotzdem hatte ich Fragen. Nicht, weil mir Gary wichtig war ... sondern weil ich verstehen wollte, welche Endstation uns „Abschaum“ überhaupt erwartete.\n„... Ein Unfall? Ist jemand gestorben?“\n„Ja.“\n„Und der Täter war dieser Alchemist?“\n„Nein.“\n„War Gary der Täter?“\n„Auch nicht.“\n„Wer war es dann?“\n„Ein unsichtbarer Geist. Oder vielleicht wir alle.“\nIch schüttelte den Kopf. Ich verstand nicht.\n„Dann, Fräulein Theodore“, fragte ich, „werde ich eines Tages auch so sterben wie Gary?“\n„Wenn ich eines Tages genug Wörter kenne – so viele, dass ich all die Bücher verstehe, die Sie mir gegeben haben ... so viele, dass ich selbst ‚Alchemie‘ erlernen kann – kann ich dann anders enden als mein Bruder?“\n„Ich würde dir gern ja sagen. Früher habe ich das selbst geglaubt, weil ich viele wie dich gesehen habe, die mit Wissen bis ganz nach oben geklettert sind“, sagte Daphne und strich mir sanft über das Horn. „Aber jetzt sehe ich noch mehr, die abstürzen, bevor sie überhaupt den Gipfel erreichen. Sie stürzen in die Schlucht und zerschellen. Sie sind viel zahlreicher als die, die es schaffen.“\n„Eine Sache musst du dir merken, Tiori“, Sagte sie ganz langsam, als müsse sie jedes Wort festnageln. „Bleib der Alchemie-Akademie fern. Selbst wenn du dich in die Alchemie verliebst – geh nicht dorthin.“\nIch nickte ernst.\nDaphne richtete sich auf, zog ihr Notizbuch hervor und riss ein leeres Blatt heraus. Ich dachte, sie würde wieder etwas aufschreiben, aber sie faltete das Papier nur zu einem kleinen Boot.\n„Ich habe gehört, im Glauben der Charons sind alle Seelen mit dem Wasser verbunden. Sag diesem Boot, was dir auf dem Herzen liegt, und setz es in den Fluss. Es trägt deine Gedanken zu deinem Bruder.“\nIch hielt das Papierboot in den Händen und sah ihr nach, bis sie hinter der Biegung des Gangs verschwand. Danach sah ich Daphne lange Zeit nicht mehr.\nUnd eines Tages, als ein Mitarbeiter der Alchemie-Akademie Medikamente ins Riverside Krankenhaus brachte, nahm ich all meinen Mut zusammen und fragte ihn, wohin Daphne Theodore gegangen sei – und warum sie nicht mehr kam.\nDer Mann sagte, sie sei an die Front gegangen. Die Front ist ein Ort, von dem man nicht mehr zurückkehrt. Also würde sie vielleicht niemals wiederkommen.\nMir rutschte die Schachtel mit den Erdbeerbonbons aus der Hand und sie fiel klappernd zu Boden.\n\n— Aus dem Tagebuch von Tiori Stone",
+          TextMapId = "UI_CHAR_DATA_TEXT_54010204"
+        },
+        UI_CHAR_DATA_TEXT_54010205 = {
+          ContentDE = "Als ich bereits einfache Zeitungsartikel lesen konnte, kam Daphne zurück.\n Wie immer hielt sie einen Blumenstrauß im Arm, doch diesmal war sie noch dünner und noch ausgezehrter als beim letzten Mal, als würde ein einziger Windstoß reichen, um sie wie ein Stück Papier in den Fluss zu treiben.\n Sie trat am Ende des Verbindungskorridors hervor und plötzlich verstummten die Leute. Gespräche brachen ab, Köpfe drehten sich und Blicke bohrten sich in sie hinein ... voller Hass, Ekel, Neid, Angst. Dann lachte jemand schrill auf und aus seiner Kehle kam nur ein Wort: „Verräterin.“ Und sofort fielen andere ein.\n Ach so, so war das also. Ein paar Tage zuvor hatte ich schon das Getuschel der Krankenschwestern gehört: Daphne Theodore soll im Krieg übergelaufen sein. Angeblich.\n Und selbst wenn?\n Wenn ein Land jemanden wie Daphne Theodore dazu bringt, den Verrat vorzuziehen, dann hat das Land versagt.\n \n Daphne reagierte auf keinen der giftigen Kommentare. Sie würdigte niemanden eines Blickes. Sie hielt nur ihren schmalen Rücken gerade und ging schnurstracks auf die Station zu.\n „Geht es Herrn Gaston besser?“, fragte sie die diensthabende Schwester.\n „Wenn Sie Roger Gaston meinen“, sagte die Schwester, „dann ist er tot. Vor kurzem hat er nach einem neuen Schmerzschub, als niemand im Raum war, ein Glas zerbrochen und sich die Arterie aufgeschnitten.“\n „Aber ich habe doch ein Heilserum schicken lassen, das ihn retten kann!“ Zum ersten Mal sah ich Daphne außer Fassung. Ihre Stimme brach in einem verzweifelten Aufschrei: „Hat AG-1899 keine Wirkung gezeigt?“\n „Sie waren zu spät. Er hat sich in der Nacht davor umgebracht, bevor das Serum ankam.“ Die Schwester sprach kühl und verzog den Mund zu einem spöttischen Lächeln. „Und ehrlich gesagt: Als hochdekorierter Veteran hätte Herr Gaston Ihr Serum ohnehin nicht angerührt – spätestens nachdem er von Ihrer ‚Heldentat‘ in der Lonza-Festung gehört hat.“\n Daphnes Gesicht wurde noch blasser. Ihr Daumen grub sich tief in den Zeigefinger. „Nein! Ich habe nicht ...“ Sie wollte sich verteidigen, aber am Ende sagte sie gar nichts.\n Ich griff nach ihrer Hand und bog ihre Finger auf. Ihre Hand war eiskalt ... so kalt wie die Toten im Leichenschauhaus.\n „Fräulein Theodore ... nein, Daphne.“ Zum ersten Mal nannte ich sie sie beim Namen. Fast zog ich sie hinter mir her, hinunter zur Bank vor dem Gebäude. Dort hatte sie mir einst das Schreiben beigebracht.\n Ich brach – wie sie früher – einen Zweig ab und kratzte, schief und unbeholfen, einen Satz in den Boden:\n „Sei nicht traurig.“\n Dann nahm ich ihre Hand und legte ihr etwas hinein: ein kleines Papierboot.\n „Sag diesem Boot, was dir auf dem Herzen liegt, und setz es in den Fluss. Es trägt deine Gedanken zu deinem Vater.“\n Als ich „deinem Vater“ sagte, zuckte Daphne zusammen. Dann breitete sich Überraschung in ihren smaragdgrünen Augen aus und verwandelte sich in ein zartes Lächeln.\n „Danke, Tiori“, sagte sie. „Das werde ich tun.“ Plötzlich fiel ihr etwas ein. Sie öffnete ihren Rucksack, kramte ein paar Bücher hervor und drückte sie mir in die Arme. Sie hatte sich daran erinnert, dass ich beim letzten Mal gesagt hatte, ich wolle mehr lesen. Wir saßen noch einen Moment auf der Bank. Dann stand sie auf und ging – hinein in das zinnoberrote Licht des Sonnenuntergangs.\n \n Als ich später alle Zeitungsartikel lesen konnte, kam Daphne Theodore nicht mehr zurück.\n Als ich das Muster auf der Bonbonschachtel, die sie mir geschenkt hatte, so häufig mit den Fingern nachgezeichnet hatte, dass es glatt und blank wurde, kam Daphne Theodore nicht mehr zurück.\n Als das Stoffpolster in meinen Armen meinen Blick nicht mehr verdecken konnte, kam Daphne Theodore nicht mehr zurück.\n Als ich später die schwierigsten Alchemiebücher lesen konnte, kam Daphne Theodore nicht zurück.\n Als ich bereits aus Tauveilchen Essenzen destillieren konnte, kam Daphne Theodore nicht mehr zurück.\n Als ich genug Geld gespart hatte, um Hyperborea zu verlassen und zum Studieren nach Aethyrie zu gehen, kam Daphne Theodore nicht mehr zurück.\n — Ja, ihr Verwandter, den sie besucht hatte, war tot. Eigentlich gab es keinen Grund zurückzukommen.\n In der Abenddämmerung stand ich am Verbindungskorridor und winkte zum Abschied. Diese Klinik, in der ich fast zwanzig Jahre gelebt und gearbeitet hatte. Der Himmel brannte in einem wunderschönen Zinnoberrot, genau wie am Tag, an dem ich Daphne zuletzt gesehen hatte.\n Da sah ich plötzlich eine Gestalt am anderen Ende des Gangs: ein junges, schmales Mädchen mit blondem Haar. Mein Koffer rutschte mir aus der Hand und schlug auf dem Boden auf. Doch als ich ihn aufhob und erneut hinübersah, war dort nichts. Rein gar nichts.\n „Hast du gerade ein junges Mädchen gesehen?“, fragte ich Schwester Madeleine. „Groß, dünn, blond ...“\n „Welches blonde Mädchen denn?“, Brummte Madeleine. „Du bist jung und siehst schlechter als ich alte Frau.“\n „Ach, ich hab mich wohl getäuscht.“\n Ich nahm den Koffer und ging die Treppe hinunter, ohne noch einmal zurückzusehen.\n \n — Aus dem Tagebuch von Tiori Stone",
+          TextMapId = "UI_CHAR_DATA_TEXT_54010205"
+        },
+        UI_CHAR_DATA_TEXT_54010301 = {
+          ContentDE = "Daphne hatte ihren Notfallkoffer, den sie stets mitführte, schon mehr als einmal vor deinen Augen neu sortiert. Was in ihm gestaut wurde, war für dich kein Geheimnis.\n Oberes Fach: Desinfektionsmittel, Mull, Verbände. Mittleres Fach: Nädel und Faden, Narkotikum, Schmerzmittel, ein Satz simpler OP-Werkzeuge. So sorgfältig Daphne die Inneneinteilung auch umgebaut hatte, damit möglichst viel hineinpasste ... es reichte nie. Gegen Schmerzen und Tod, die mit jeder Sekunde mehr wurden, waren ein einziger Koffer und ein einziger Sanitäter nicht genug.\n Im unteren Fach waren Taschentuch, Bürste – und eine Dienstpistole. Einmal hatte sie dich mit finsterer Stirn gefragt, was man in einer ausweglosen Lage mit der letzten Kugel tun sollte: für den Feind aufheben, oder für sich selbst.",
+          TextMapId = "UI_CHAR_DATA_TEXT_54010301"
+        },
+        UI_CHAR_DATA_TEXT_54010302 = {
+          ContentDE = "Daphne las gern romantische Romane – am liebsten klassische Geschichten über Prinzessinnen und Ritter. In Dismania wirkte das unter jungen Leuten schon etwas altmodisch – erst recht unter den eigenwilligen Nachwuchs-Alchemisten aus der Spathathoi, die sich so gern gegen alles „Gewöhnliche“ stellten. Also verdeckte Daphne ihren Liebesromanen mit anderen Umschlägen: „Vortragssammlung von Kaiser Julius“, „Studien zu Filthoiden und dem Ursprung der Charons“ und ähnliches.",
+          TextMapId = "UI_CHAR_DATA_TEXT_54010302"
+        },
+        UI_CHAR_DATA_TEXT_54010303 = {
+          ContentDE = "Aus „humanitären“ Gründen hatte Daphne Theodore sich geweigert, an den „Eskalationsexperimenten“ der Spathatoi teilzunehmen – die darauf abzielten, das magische Potenzial der Charons gewaltsam zu stimulieren. Zweimal hatte sie dem Akademieleiter offen widersprochen.\n Nur weil Daphne früher die Lieblingsschülerin von Frau Flamme, der Gründerin der Akademie, war und derselben Linie abstammte wie Kommandantin Sibylle, blieb eine direkte Strafe aus – ein offenes Geheimnis innerhalb der Spathatoi.",
+          TextMapId = "UI_CHAR_DATA_TEXT_54010303"
+        },
+        UI_CHAR_DATA_TEXT_54010304 = {
+          ContentDE = "Damals – während ihrer Studienzeit – hatte Daphne einen unheimlichen Instinkt für Kriegsgeschehen. Jedes Mal, wenn irgendwo eine Schlacht stattfand, ließ sie sich die Listen der Gefallenen besorgen.\n Sie suchte hektisch nach einem Namen ... und atmete danach ganz leicht auf.\n Heute musste sie das nicht mehr tun.",
+          TextMapId = "UI_CHAR_DATA_TEXT_54010304"
+        },
+        UI_CHAR_DATA_TEXT_54010305 = {
+          ContentDE = "Daphnes Welt war einmal einfach gewesen: Alles, was sie wahrnahm, folgte Logik und kannte Ursachen. Man musste ein Problem nur Schritt für Schritt zerlegen, herleiten und testen – und selbst der komplizierteste Sachverhalt würde sich lösen wie ein Wollknäuel in den Pfoten einer Katze. Genau deshalb hatte sie geglaubt, der Mensch wäre allmächtig.\n Erst später verstand sie: Selbst ein Geist, der groß genug war, um den Sternenhimmel mit Gesetzen zu versehen, kann von einer kleinen Kugel oder einem gewöhnlichen Ziegelstein mühelos ausgelöscht werden.\n Daphne Theodores Idealismus war nicht verschwunden. Aber der Weg zu diesem Turm, den sie immer erklimmen wollte, war nicht mehr zu finden.",
+          TextMapId = "UI_CHAR_DATA_TEXT_54010305"
+        },
+        UI_CHAR_DATA_TEXT_54010401 = {
+          ContentDE = "Der Regen von Dismania klopfte gegen die Fensterscheiben. Im schneeweißen Krankenzimmer starb ein vierjähriges Mädchen.\n Das Tuch auf ihrer Stirn war unzählige Male gewechselt worden, das Serum tropfte durch den Gummischlauch in die Vene – doch das Fieber brach nicht.\n Am ersten Tag hielt der Vater die dünne, kindliche Hand seiner Tochter fest in seiner großen, schwieligen. Er drückte sie an sein Gesicht, an den rauen Bart, der von Tränen dunkel geworden war. Sie wachte nicht auf.\n Am zweiten Tag brachte die Mutter den besten Arzt von Dismania, der einst dem Kaiser gedient hatte. Der Mann, der für ein Vermögen gekommen war, schüttelte nur den Kopf und sagte: 10% Prozent Hoffnung. Sie wachte nicht auf.\n Am dritten Tag zündete die junge Pflegerin, die das Kind betreute, eine Kerze an, legte beide Hände an die Brust und betete leise. Sie wachte nicht auf.\n Am vierten Tag platzte ein Bestatter mit schmierigem Lächeln ins Zimmer und begann, mit den Eltern über die Zahl der luxuriösen Trauerkutschen zu sprechen. Der Vater packte einen Stuhl und jagte ihn hinaus. Sie wachte nicht auf.\n Am fünften Tag reiste die Großmutter mütterlicherseits aus dem Landgut an. Als sie das noch immer reglose Kind sah, holte sie nur ein Buch aus ihrer Handtasche und begann am Bett Satz für Satz zu lesen:\n „Vor langer, langer Zeit träumten die Menschen davon, aus Stein Gold zu machen – wie Magie. Sie mischten Schwefel, Salz und Quecksilber ... Viele Jahre später hatten wir Phoxene.“\n „Vor langer, langer Zeit träumten die Menschen davon, den Himmel zu vermessen – wie Vögel. Sie trieben Ballons mit Flammen an ... Viele Jahre später hatten wir Luftschiffe.“\n „Wozu erzählst du ihr jetzt noch diese Geschichten?“ Die Mutter hatte rote Augen. „Sie liegt im Koma. Sie hört nichts! Ich ... ich habe dich geholt, damit du dich von ihr verabschieden kannst, Mama.“\n „Nein, Claudia.“ Die alte Frau lächelte sanft. „Daphne hat das immer am liebsten gehört. Sie wird aufwachen.“\n „Vor langer, langer Zeit träumten die Menschen davon, Krankheiten zu vertreiben – wie Götter. Sie zermahlten jedes Kraut und jede Wurzel zu zermahlen ... Viele Jahre später hatten wir Elixiere. Das ist unsere Alchemie. In Huaxu nennt man sie ‘Wissen aus Dingen’, in Aethyrie nennt man sie ‘Wissenschaft’.“ Sie küsste das Mädchen auf die Wange. „Glaub an die Macht der großen Alchemie, Daphne. Du wirst aufwachen. Denn Alchemie ist ...“\n „... eine Wissenschaft, die den Menschen ... Glück bringt.“\n Vor den Augen der Anwesenden, die erst ungläubig und dann vor Freude den Tränen nah waren, bewegten sich die blassen Lippen des Mädchens und formten die „Geheimsprache“, die nur sie und ihre Großmutter teilten.\n Der Zeiger des Schicksals blieb auf dem Feld „eins von zehn“ stehen. Die vierjährige Daphne Theodore wachte auf.\n \n Obwohl Daphne wusste, dass es bloßer Zufall gewesen war, witzelte sie später gerne über diese schwere Krankheit in ihrer Kindheit: Die Geschichten ihrer Großmutter über Alchemie hätten ihr ein zweites Leben geschenkt. Und genau diese Grauzone zwischen Leben und Tod verhalfen ihr zum Entschluss, den Weg ihrer Familie fortzusetzen – so wie ihre Mutter und ihre Großeltern wollte sie eine herausragende Alchemistin werden. Wie die Ahnen aus den alten Erzählungen wollte sie mit ihrem Wissen den Menschen Glück bringen – so wie das bleiche, ausgemergelte Kind damals Tropfen für Tropfen mit einem Elixier aus dem Tod zurückgeholt wurde.\n Daran hatte sie früher felsenfest geglaubt.",
+          TextMapId = "UI_CHAR_DATA_TEXT_54010401"
+        },
+        UI_CHAR_DATA_TEXT_54010402 = {
+          ContentDE = "Die Königliche Alchemie-Akademie thronte in der Kaiserstadt Dismania auf dem höchsten der sieben Hügel. Von der Spitze ihres Turms hinabgesehen, durchschnitt der Fluss die Stadt wie eine messerscharfe Linie zwischen Tag und Nacht: Auf der einen Seite war die Altstadt aus weißem Ziegel, auf der anderen lag die Neustadt aus schwarzem Eisen. Und die Menschen unten waren winzig – kaum mehr als Ameisen – die rastlos Reiskörner umherschleppten. So sahen die Alchemisten der Königlichen Alchemie-Akademie die Welt Tag für Tag: Große Alchemisten waren die Architekten des Wohlstands und selbstverständlich waren sie diejenigen, die von oben herab blickten.\n Doch in diesem Moment – in der Aula der Königlichen Spathatoi – blickte Sibylle Mason auf die Alchemisten hinab. Es war die Aufnahmezeremonie der Azoth-Akademie, die der Spathatoi angeschlossen war. Der übliche Programmpunkt: die Erstsemesterreden. Sibylle Mason gähnte gelangweilt. Sie wusste genau: Diese Aula unterschied sich kaum von einem Ballsaal voller klirrenden Gläser. Und die Reden, ob steif oder überzogen, waren nichts weiter als eine andere Währung für gesellschaftlichen Status. Sie musste nicht einmal richtig zuhören, um zu wissen, was gleich kommen würde. Die beste und sicherste Rede war immer dieselbe: Treueschwüre an Hyperborea, Opfergelöbnisse für den Ruhm des Kaisers. Und der neueste Trend, der gerade am besten ankam, war das genaue Gegenteil: sich als wahnsinnigen Forscher zu inszenieren und pathetisch von der Liebe zu den „Geheimnissen des Lebens“ zu schwärmen (meist ging es um Filthoide, Charons und allerlei bizarre Kreaturen). Je schriller, sonderbarer und irrsinniger die Rede klang, desto besser: Dann gab es Applaus, weil man „modern“ und „anders“ wirkte.\n Die überzogene Rede des vorherigen Neulings war zu Ende. Tosender Beifall. Sibylle fing nur halb den Namen des nächsten Redners auf – irgendwas mit Daphne The..., als eine schlanke junge Frau ans Podium trat. Unter all den Studenten, die sich so auffällig wie möglich geschniegelt und gekleidet hatten, um noch exzentrischer zu wirken, wirkte sie mit ihrer weißen Bluse, ihrem schwarzen Rock – einem äußerst schlichten Ensemble – fast unsichtbar.\n Sie begann ihre Rede. Ihre Stimme klang jünger als die der anderen. Sibylle erinnerte sich plötzlich: Den Namen hatte sie schon einmal gehört. Von Frau Flamme, ihrer früheren Lehrerin. Flamme hatte damals auf einen Artikel gezeigt und gesagt, dieses Mädchen – Daphne Theodore – sei höchst intelligent. Genauso intelligent wie Sibylle damals. Zwar nur 15 Jahre alt, aber in Zukunft würde sie sicher eine großartige Alchemistin werden.\n Aber was bedeutete Intelligenz schon? An Genies hatte es an den Hyperboreischen Instituten noch nie gemangelt. Sibylle blätterte weiter gelangweilt in ihrem Buch. Die Rede neigte sich dem Ende. Das Mädchen kam zum Schlusswort.\n „Darum möchte ich mit meinem wahren Ideal schließen: Alchemie ist eine Wissenschaft, die der Menschheit Glück bringen soll. Und genau deshalb stehe ich heute hier.“\n Unter dem Podium klatschten nur wenige, man hörte dazwischen vereinzeltes Kichern und sogar Buh-Rufe. Sibylle legte das Buch weg. Sie wusste: Es war eine Zeit, die langsam vulgär wurde. Menschen schämten sich, von Idealen und Träumen zu sprechen. Und gerade in der Alchemie-Akademie, wo Wahnsinn und Kälte als „cool“ galten, war Daphnes Abschlusssatz praktisch eine öffentliche Erklärung: Ich bin ein Fossil. Oder: Ich bin ein naiver Idiot, der die „Realität“ nicht versteht.\n Die Neulinge lachten, bis ihnen das Lachen gefror. Denn vom Podium her klatschte jemand klar und deutlich. Und die Person, die den Applaus anführte, war Sibylle Mason, Legionskommandantin und Ehren-Dekanin der Akademie. Der Lorbeerkranz-Charon, dessen Blutlinie sie verachteten, dessen Macht sie aber gehorchen mussten. Also blieb ihnen nichts anderes übrig, als zähneknirschend mitzuklatschen.\n Auf dem Podium drehte Daphne den Kopf und sah Sibylle an, die den Applaus anführte. Ein Scheinwerfer traf ihr Gesicht genau so, dass Sibylle nur ihre Silhouette im Licht erkennen konnte. Was für ein Ausdruck lag in ihrem Gesicht? Ein Lächeln? Verwirrung? Dankbarkeit? Oder dieselbe sanfte Entschlossenheit wie in ihren Worten?\n Damals interessierte Sibylle das alles nicht. Damals verspürte sie nur eine leicht bösartige Genugtuung: Die Spathatoi hatte lange niemanden mit so altmodischen, kindlichen Idealen gesehen. Und Sibylle wollte nur eines wissen: Wenn die hübsche Vergoldung der Akadamie endlich abgeschliffen und darunter Blut, Fleisch und Knochen zum Vorschein kommen würden. Wie lange würde dieses Mädchen namens Daphne Theodore noch an ihren „Idealen“ festhalten können?",
+          TextMapId = "UI_CHAR_DATA_TEXT_54010402"
+        },
+        UI_CHAR_DATA_TEXT_54010403 = {
+          ContentDE = "Daphne übergab wortlos ihren Rucksack, ließ sich von Soldaten abtasten und ging durch zwei schwere Türen. Man sagte, diese Türen seien mit starken Magneten gebaut, die jede Metallklinge und jede Waffe aufspüren konnten, um die hohen Offiziere hinter ihnen vor dem Großteil der Attentaten zu schützen. Doch als Daphne die letzte Tür passierte, war sie überrascht: Im Gegensatz zu den umständlichen Sicherheitsvorkehrungen war das Innere von Sibylle Masons Privatresidenz erschreckend schlicht – fast karg. Die Wände waren roh und kalkgrau – ohne Bilder, Rahmen oder Schmuck. Ein großer Esstisch und ein paar Stühle mit hohen Lehnen waren praktisch die einzigen Möbel. Sie wirkten massiv und kantig, ohne Schnörkel, mit Linien so grob wie die Ausrüstung aus einer Kaserne. Ihr einziger Zweck war es, Gewicht zu tragen.\n „Da bist du, Daphne.“ Sibylles Stimme kam gedämpft aus dem Flur. „Ich bin in der Küche. Komm rein.“\n Daphne antwortete leise und ging in die Küche. Ihr Schritt war vorsichtig, fast steif. Sie verstand nicht, warum die hochrangige Ex-Kommilitonin ausgerechnet sie in ihre Privatresidenz eingeladen hatte.\n Küche und Empfangsraum waren in demselben schmucklosen Grau-Weiß gehalten. In dieser blassen, eintönigen Welt stach nur eines heraus: der tiefrote Granatapfel in den Händen der violetthaarigen Frau. Die Messerspitze glitt über die harte, glatte Schale.\n „Du bist fünfzehn Minuten zu früh. Ich bin noch nicht bereit für den Empfang.“ Sie arbeitete konzentriert weiter, brach die Schale auf und legte die prallen Kerne frei. „Ich hasse Dienstboten. Hier mache ich alles selbst.“\n „Entschuldigen Sie die Umstände.“ Daphne verschränkte die Arme. „Vielleicht ... vielleicht kann ich Ihnen helfen ...“\n \n „Riiiiiing“\n Das Telefon unterbrach Daphne. „Daphne.“ Sibylle schälte die Kerne in eine weiße Porzellanschale. „Geh ran.“ Sie störte sich nicht daran, dass Daphne danebenstand. „Halt den Hörer her. Komm näher.“\n Daphne nahm vorsichtig den Hörer ab und hielt ihn an Sibylles Ohr. Aus dem Hörer kam eine Stimme eines jungen Mannes. Und Daphne konnte jedes Wort klar hören.\n „Frau Sibylle, es geht um die beiden Spione von den Verlassenen.“ Die Stimme des Mannes am anderen Ende der Leitung klang nüchtern. „Wir verhören sie seit vier Tagen. Sie weigern sich immer noch, ihre Komplizen zu nennen. Aber sie halten nicht mehr lange durch.“\n „Für manche Menschen bedeutet körperlicher Schmerz nichts. Du bist noch nicht reif genug. Du darfst nicht auf die härteste Stelle zielen ... du musst die weiche Stelle treffen.“\n Als hätte das Wort den Schnitt ausgelöst, es fielen pralle Granatapfelkerne raschelnd in die Schale, sprangen darin auf und ab und prallten mit einem leisen, hellen Klirren gegeneinander. Sibylle hob nicht einmal den Blick. „Wenn ich mich recht erinnere, sind die beiden Brüder.“\n „Wir haben damit gedroht, den einen vor den Augen des anderen zu töten. Trotzdem haben sie nichts verraten. Vielleicht hatten sie sich von Anfang an auf den Tod eingeschworen.“\n „Nein, du hast nicht verstanden, was die ‚weiche Stelle‘ ist“, sprach Sibylle.\n Sie schüttete die schimmernd weißen Kerne in ein feines Sieb aus dichtem Kupferdraht und setzte es auf eine tiefere Glaskanne. Dann begann sie, sie langsam, unerbittlich zu pressen, zu kneten und zu zerreiben. Ihre Finger schlossen sich, noch einmal, noch enger, bis die Knöchel weiß hervortraten. Dunkelroter Saft trat hervor, erst in Tropfen, dann in einem stetigen Rinnsal. Er sickerte durch das Netz, sammelte sich unten und zog eine klare Linie.\n „Drohe nicht mit dem Tod. Locke sie mit Hoffnung. Sag ihnen: Wer die Information ausspuckt, stirbt. Aber sein Bruder darf leben.“\n Aus dem Hörer kam ein Grunzen, dann klickte die Leitung weg. Im Sieb wurden die Granatapfelkerne blass und schlaff, als wäre ihnen das Leben herausgepresst worden. Sibylle füllte den Saft in zwei Gläser. Daphne stand wie erstarrt noch immer mit dem Hörer in der Hand da – feiner Schweiß auf der Stirn. Dann gingen sie einer nach dem anderen in Richtung Empfangsraum.\n „Daphne, du willst wissen, wie das mit den beiden Brüdern ausgeht, stimmt’s?“ Sibylle reichte ihr ein Glas Granatapfelsaft. „Dann bleib hier und sieh dir ihr Ende selbst an.“\n Daphne zögerte, biss sich auf die Lippe und nickte. Sie tat ruhig, schwenkte das Glas leicht und starrte in das dunkle Rot. Sie liebte Granatäpfel. Als Kind war sie mit ihren Eltern oft durch Granatapfelgärten spaziert. Doch jetzt jagte ihr die vertraute, leuchtende Farbe des Safts plötzlich Angst ein.\n \n Der Minutenzeiger drehte eineinhalb Runden. Dann klingelte das Telefon erneut – wieder derselbe junge Mann. „Der ältere der beiden Brüder hat gestanden. Er hat uns den Informanten genannt, der mit ihm in Kontakt stand. Wir greifen ihn sofort auf. Wie versprochen, haben wir den jüngeren Bruder gehen lassen – wir haben ihm sogar seine Dienstwaffe zurückgegeben.“\n Daphne atmete auf. Doch nur Sekunden später erstarrte ihr Lächeln.\n „Der jüngere Bruder konnte es nicht ertragen, dass sein Bruder ein so wertvolles Geheimnis gegen sein Leben eingetauscht hat. Kaum war er draußen, hat er sich mit einem Schuss den Schädel durchbohrt“, sagte der Mann.\n „Ah. Wirklich schade. So ein junger Mann mit einem Willen aus Stahl“, sprach Sibylle, ohne mit der Wimper zu zucken. Sie sah Daphne an, halb lächelnd, halb prüfend.\n „Sie haben es von Anfang an kommen sehen. Deshalb überrascht Sie das nicht im Geringsten. Und Sie haben mich heute herbestellt, damit ich genau das höre.“ Daphnes Lippen waren trocken. Sie zwang ihre Stimme dazu, nicht zu sehr zu zittern. „W ... war das der Grund? Hat Dekan Selass Sie geschickt? Damit Sie mich ‚überzeugen‘ – damit Sie mir sagen, wie ich unserem Imperium zu dienen habe?“\n „Selass’ Vorwürfe sind es nicht wert, dass ich mich persönlich mit ihm befasse. Daphne. Ich bin nur hier, um dir darzulegen, wie man überlebt – in der Legion genauso wie in der Alchemie-Akademie.“ Sibylle sagte: „Dein Mitgefühl muss auf dem richtigen Niveau bleiben. Genug, damit du die weiche Stelle des Feindes sofort spürst, aber nicht so viel, dass es überläuft und dich handlungsunfähig macht.“\n „Daphne, zu viel Mitgefühl macht dich nicht nur nutzlos. Es macht dich auch unglücklich.“\n Daphne erinnerte sich später kaum noch daran, wie sie ihrer Mentorin mit verkrampftem Lächeln gedankt hatte oder wie sie beinahe fluchtartig aus dem hohen, grau-weißen Haus entkam. Sie erinnerte sich nur an die zwei Gläser Granatapfelsaft: Sibylle hatte ihres längst geleert, ihres dagegen hatte sie nicht einmal angerührt. Manchmal träumte sie von dem Rot im Glas – Granatapfelrot, Lebensrot. Es quoll über den Rand, bis es zu einem dunklen Fluss wurde, der sie langsam umschloss und hinabzog.",
+          TextMapId = "UI_CHAR_DATA_TEXT_54010403"
+        },
+        UI_CHAR_DATA_TEXT_54010404 = {
+          ContentDE = "In Dismania regnete es weiter.\n Dumpfe Schläge und wütende Rufe drangen durch das Glas, gedämpft vom Regenvorhang. Sie schrien ihren Namen: Daphne.\n Daphne kauerte zusammengerollt in einem samtbezogenen Sessel im Schlafzimmer. Es war der vierte Tag, seit man sie aus dem Königlichen Militärgefängnis entlassen hatte und es war auch der vierte Tag, an dem es ohne Pause regnete. Plötzlich knarrte die Tür. Das Mädchen zuckte zusammen wie eine Katze, der man auf den Schwanz getreten hatte, und das Buch rutschte ihr aus den Händen und fiel zu Boden.\n „Verzeihung ... habe ich Sie erschreckt?“ Die Zofe stammelte hastig. „Ich bringe nur das Abendessen. Sie ... Sie haben den ganzen Tag nichts gegessen, Fräulein Daphne.“\n „Mir geht’s gut.“ Daphne starrte weiter aus dem Fenster. Draußen hinter dem Glas waren verschwommene Schatten unter Regenschirmen, die sich vor dem schmiedeeisernen Tor des Hofs drängten. „Schon wieder Ärger. Sind das dieselben wie gestern?“\n „Ich glaube, es ist eine andere Gruppe. Sie wirken jünger.“ Die Zofe dachte kurz nach. „Oh! Jetzt fällt es mir ein ... Die, die vorne stehen, sehen aus wie ... Ihre Kommilitonen aus der Alchemie-Akademie.“\n Daphne stemmte sich an den Armlehnen hoch. „Ich geh mir das ansehen.“\n „Nein, Fräulein!“ Die Zofe packte panisch ihre Hand. „Sie wissen doch – die sind wegen Ihnen hier.“\n Daphne stieß einen leisen Seufzer aus. „Und was dann? Soll ich sie so lange brüllen lassen, bis sie Mutter aufwecken und sie noch einmal zusammenbricht?“\n Sie erinnerte sich noch genau an vor zwei Tagen. Da hatte sie ebenfalls hier gestanden, am Fenster des Schlafzimmers, und hatte zugesehen, wie ihre Mutter hinausging, um mit der Menge zu verhandeln. An diesem Tag trug ihre Mutter ein Korsett, das längst aus der Mode war, aber ihren ausgezehrten Körper ein wenig aufrechter wirken ließ. Der Regen hatte so laut aufgeschlagen, dass Daphne kein einziges Wort verstand. Sie sah nur, wie die Mutter sich immer wieder vor den Leuten verbeugte, als würde sie um Gnade bitten. Ihre Mutter war immer stolz gewesen. Daphne hatte sie noch nie so erniedrigt gesehen. Am Ende brach sie zusammen, ihr Gesicht war von Schmutz bedeckt. Schmerz und Scham hatten die stolze Frau zu Boden gezwungen, und selbst die Fischbein-Stäbchen des Korsetts konnten sie nicht aufrecht halten. Daphne war über ihr zusammengebrochen. Ihre Tränen fielen lautlos in den Regen.\n Und genau jetzt, in diesem Augenblick, war draußen alles wie vor zwei Tagen. Fast identisch. Und egal was geschah: Sie durfte nicht noch einen Angehörigen verlieren.\n Daphne riss ihren Arm aus dem Griff der Zofe, ging die Treppe hinunter und trat ohne Schirm hinaus. Dass sie wirklich kam, hatten sie nicht erwartet. Vor dem Tor stockte der Lärm für einen Herzschlag.\n „Was wollt ihr?“ Daphne schloss das Hoftor auf und trat direkt auf die Straße hinaus. Die Außenmauer des Anwesens der Theodores war über und über mit Graffiti beschmiert – Wörter wie „Verräterin“ und „Bastard“ fanden hier ihren Platz. Daphne zwang sich, nicht hinzusehen. „Weckt meine Mutter nicht auf. Wenn ihr reden wollt, dann woanders.“\n \n „Du hast Hyperborea verraten! Genau wie damals die Alchemie-Akademie!“\n „Wegen dir sind unsere Brüder und Schwestern gestorben!“\n „Wie kannst du so tun, als wäre nichts? Bereust du deine Verbrechen nicht?“\n „Immer diese heuchlerische Maske. Heute sehen wir endlich dein wahres Gesicht.“\n Ihre ehemaligen Kommilitonen drängten sie in die Ecke einer Seitenstraße. Daphne versuchte zu erklären ... versuchte, Worte zu finden – doch ihre Stimme ging unter, verschluckt von wütenden Schreien und dem Regen. Irgendjemand pfiff. Im nächsten Moment packte sie jemand an der Schulter. Am Horizont rollte dumpfer Donner.\n \n Warum klammern sich Menschen so stur an die „Wahrheit“, die sie hören wollen?\n Ihr Rücken prallte gegen einen metallenen Mülleimer, der hohl schepperte. Dann traf sie ein Schlag in den Magen. Ihr wurde schwarz vor Augen und sie krümmte sich zusammen wie ein zusammengeklappter Krebs. Ein Stiefel trat auf die Hand, mit der sie sich abstützte. Ihre Finger schossen vor Schmerz in die Höhe und die Gelenke zitterten, als würden sie gleich brechen.\n \n Warum reicht ein einziger einfacher Grund, dass Menschen ohne Zögern die Zähne gegen ihresgleichen fletschen?\n Sie dachte an die unzähligen Leichen in der Lonza-Festung. Einige waren Kameraden gewesen, andere Feinde. Manche waren noch warm, andere längst kalt. Ja, auch dort hatte ein „einfacher Grund“ gereicht, damit sie sich gegenseitig abschlachteten.\n \n Warum schließen Menschen die Augen und weigern sich, das Leid anderer zu sehen?\n Sie erinnerte sich an die weißen Kaninchen, die sie einmal gehalten hatte. Wie sie auf den makellos weißen Labortisch gedrückt wurden, wie sie unruhig zappelten. Am Ende war es ihre eigene Spritze, die in die kleinen Körper stach ... und erst dann wurden sie still. Sie dachte an ihre frühere Freundin Emilia. Das junge Mädchen lag auf dem schneeweißen Boden und aus ihrer Brust quoll Blut hervor – wie ein Granatapfel, der auf einem weißen Tischtuch zersprungen war.\n \n „Was bringt’s, ihr all das zu sagen? Sie ist doch sowieso nur ein Bastard, ein halber Charon – genau wie ihr Verräter-Vater Avar!“\n Der vertraute Name riss sie zurück in den verregneten Abend von Dismania.\n „Ganz genau. Selbst wenn man den Charons ’ne Krone aufsetzt und ihnen den Zügel anlegt, beißen sie trotzdem irgendwann wieder zu ...“\n Der Anführer der Akademiestudenten brachte das letzte Wort nicht mehr heraus. Sein selbstzufriedenes Grinsen fror ihm im Gesicht fest. Für einen Moment stand er da, als hätte er nicht verstanden, was passiert war – dann griff er sich ans rechte Ohr und schrie auf. Die Menge wich instinktiv ein paar Schritte zurück. Ein Blitz zerriss den Himmel und beleuchtete Daphnes Gesicht. In ihrer Hand lag eine Pistole. In ihren Augen brannte Feuer – so lodernd, dass nicht einmal der Regen es löschen konnte.\n „Noch eine Beleidigung gegen meinen Vater und die nächste Kugel geht nicht mehr durch dein Ohr“, sagte sie Wort für Wort. „Verschwindet.“\n Die Studenten der Alchemie-Akademie hatten in der Kaiserstadt kein Recht auf Schusswaffen. Ihre Münder spuckten Flüche, aber ihre Beine waren ehrlich: Sie drehten auf der Stelle um und rannten davon. Daphne presste sich an die Wand und stemmte sich, so gut es ging, am Mülleimer hoch. Hinter ihr lag die Straße, die nach Hause führte. Die Zofen würden sicher schon ein neues Dessert vorbereitet haben, um sie aufzumuntern. Aber Daphne wollte nicht zurück. Sie wollte nicht, dass sie sich Sorgen machten. Und diese erbärmliche, beschmutzte Gestalt ... sie schämte sich dafür.\n Und wohin sollte sie dann gehen?\n \n Sie lief einfach weiter ziellos durch den Regen. Es war längst dunkel, als sie schließlich eine Brücke sah, die ihr vage bekannt vorkam. Sie dachte angestrengt nach, bis es klickte: Sibylle wohnte in der Nähe dieser Brücke. Dort hatten sie damals die Unterhaltung gehabt, die nicht besonders angenehm war.\n Und jetzt stand die Frau in Violett genau dort oben, unter einem langen Schirm.\n Sie ist gekommen, um sich an meiner Blöße zu weiden. Daphne dachte sich, vielleicht würde sie wieder diese Frage stellen, die sie beim letzten Abschied so beiläufig und so grausam gestellt hatte: Und? Sind deine Ideale noch da? Aber Daphne fand keine Antwort. Es fühlte sich an, als hätte dieser endlose Regen ihr Gehirn verrosten lassen.\n Doch Sibylles Gesicht zeigte weder Spott noch Ärger. Es war ruhig, glatt, still – wie der windstille Fluss. Sie warf Daphne nur wortlos einen Schirm zu.\n „Geh heiß duschen und zieh dir etwas Trockenes an.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_54010404"
+        },
+        UI_CHAR_DATA_TEXT_54010405 = {
+          ContentDE = "Daphne war, als hätte sie einen langen Traum gehabt.\n Im Traum ging sie durch die Straßen von Dismania. Die Luft war immer noch feucht und klebrig. Regentropfen glitten über die Mäuler der Wasserspeier und zeichneten dunkelbraune Spuren an den Mauern.\n Zu beiden Seiten der Straße standen viele vertraute Gestalten, alle mit langen Schirmen in der Hand.\n \n „Alchemie ist eine Wissenschaft, die den Menschen Glück bringt“, sagte die alte Frau.\n „Daphne, du wirst mein Stolz sein“, sagte die strahlende Frau.\n „Aber ich will nur, dass du glücklich bist“, sagte der Mann mit dem warmen Lächeln.\n Sie wollte näher heran, um zu erkennen, ob sie wirklich die Gesichter aus ihrer Erinnerung waren. Doch ihre Züge verblassten, als hätte der Regen sie aufgeweicht: verschwommen, vernebelt, nicht zu fassen.\n \n „Werden die Menschen, die von Schmerz zerfressen werden, wegen uns ein wenig leichter atmen können?“, fragte die junge Forscherin.\n „Wenn ich eines Tages genug Wörter kenne ... so viele, dass ich selbst ‚Alchemie‘ erlernen kann – kann ich dann anders enden als mein Bruder?“, fragte das Mädchen im Krankenhausgewand.\n „Dismania ist zu weit. Der Regen peitscht, der Weg besteht förmlich aus Schlamm. Schaffen wir es überhaupt zurück?“, fragte der sterbende Soldat.\n Sie öffnete den Mund, um ja zu sagen. Doch die Stimme brach ihr weg, als hätte man ihr die Stimmbänder herausgerissen. Sie brachte kein Wort mehr hervor.\n \n „Sind deine Ideale noch da?“ Der Blick der Legionskommandantin fiel von oben herab.\n Er brannte in ihren Augen. Instinktiv wollte sie fliehen, doch als sie sich umdrehte, gähnte unter ihren Füßen ein bodenloser Graben.\n „Kämpf weiter. Leb weiter.“ Ein Kamerad mit silbernem Haar und roten Augen legte ihr eine Hand auf die Schulter. „Vergiss nicht, was du gesagt hast.“\n Ja ... zusammen weiterleben. Das war einmal ihr einziger Wunsch gewesen.\n \n „Daphne, erinnerst du dich an deine Ideale von früher?“ Aus der Straßenecke trat ein kleines Mädchen. Ihre Stimme war kindlich, und ihre Gesichtszüge ähnelten ihren so sehr – ja. Das war sie selbst, als Kind.\n „Mit Alchemie den Menschen Glück bringen.“ Sie antwortete: „Ich habe es nie vergessen.“\n „Aber jedes Ideal hat einen Preis.“ Eine zweite Stimme erklang hinter ihr. Es war ebenfalls ihre eigene – nur kälter, als sie sie je gehört hatte. „Was du gewinnen willst, musst du etwas aufgeben. Daphne, Ideale sind ein Privileg der Starken.“\n „Und was soll ich dann tun?“, fragte Daphne.\n „Wirf deine Prinzipien und deine Heuchelei ab. Geh zu ihnen und werde eine von ihnen“, sagte die kalte Stimme.\n „Nein! Wer mit Bestien Freundschaft schließt, wird selbst zur Bestie!“ widersprach die junge Stimme.\n „Nur wenn du hoch genug stehst, hast du überhaupt die Macht, irgendetwas zu verändern.“ sagte die kalte Stimme.\n „Wenn du diesen Schritt gehst, gibt es kein Zurück mehr!“, widersprach die junge Stimme.\n Die beiden Stimmen stritten unaufhörlich weiter. Daphne pochte der Kopf, als würde man sie in der Mitte auseinanderreißen. Sie ging in die Hocke und umklammerte mit beiden Händen ihren Kopf. Langsam wurden die Stimmen leiser, bis schließlich auch der letzte Rest Licht aus dem Himmel über Dismania verschwand.\n \n Daphne Theodore erwachte in ihrem Schlafzimmer. Der Regen hatte aufgehört. Sonnenlicht fiel auf die Efeublätter vor dem Fenster.\n „Fräulein, jemand möchte Sie sprechen.“ Die Zofe klopfte an ihre Tür und öffnete sie einen Spalt. „Von der Legion. Er wirkt ... nicht feindselig.“\n Also warf Daphne sich den Mantel über und ging hinaus in den Hof. Dort stand ein Mann, eindeutig ein Offizier. Sie erkannte den Adjutanten von Sibylle Mason.\n „Fräulein Theodore. Frau Sibylle lässt fragen, ob Sie an einem Projekt teilnehmen möchten – sofern Sie interessiert sind.“\n „Das Projekt heißt: ‚Zweiter Neuaustrieb‘.“",
+          TextMapId = "UI_CHAR_DATA_TEXT_54010405"
         },
         UI_CHAR_DATA_UNLOCK_20 = {
           ContentDE = "Figur erreicht St. 20",
@@ -56260,15 +57774,7 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_CHAR_FORCE_4102 = {
           ContentDE = "EverSpring",
           TextMapId = "UI_CHAR_FORCE_4102"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CHAR_FORCE_4201",
-    MaxKey = "UI_CMNpc_Name_Rosalind",
-    Loader = function()
-      return {
+        },
         UI_CHAR_FORCE_4201 = {
           ContentDE = "Magistrat von Yingtian",
           TextMapId = "UI_CHAR_FORCE_4201"
@@ -56372,7 +57878,15 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_CHAR_NAME_3102 = {
           ContentDE = "Hilda",
           TextMapId = "UI_CHAR_NAME_3102"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CHAR_NAME_3103",
+    MaxKey = "UI_CMNpc_Name_Xiangguan",
+    Loader = function()
+      return {
         UI_CHAR_NAME_3103 = {
           ContentDE = "Yale und Oliver",
           TextMapId = "UI_CHAR_NAME_3103"
@@ -57068,15 +58582,7 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_CMNpc_Name_Rosalind = {
           ContentDE = "Rosalind",
           TextMapId = "UI_CMNpc_Name_Rosalind"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CMNpc_Name_Rosalind02",
-    MaxKey = "UI_COMMONPOP_TITLE_100014",
-    Loader = function()
-      return {
+        },
         UI_CMNpc_Name_Rosalind02 = {
           ContentDE = "Quirliges Mädchen",
           TextMapId = "UI_CMNpc_Name_Rosalind02"
@@ -57180,7 +58686,15 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_CMNpc_Name_Xiangguan = {
           ContentDE = "Räucherwächter der Xuanheng-Sekte",
           TextMapId = "UI_CMNpc_Name_Xiangguan"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CMNpc_Name_Xiangzi",
+    MaxKey = "UI_COMMONPOP_TITLE_100091",
+    Loader = function()
+      return {
         UI_CMNpc_Name_Xiangzi = {
           ContentDE = "Fräulein Kiste",
           TextMapId = "UI_CMNpc_Name_Xiangzi"
@@ -57310,7 +58824,7 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
           TextMapId = "UI_CMNpc_Yanjindu_Name_MrsCheng"
         },
         UI_CMNpc_Yanjindu_Name_MysteryWhite = {
-          ContentDE = "Luno-Phantom",
+          ContentDE = "Phantom-Luno",
           TextMapId = "UI_CMNpc_Yanjindu_Name_MysteryWhite"
         },
         UI_CMNpc_Yanjindu_Name_PresentMan = {
@@ -57876,15 +59390,7 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_COMMONPOP_TITLE_100014 = {
           ContentDE = "Bestätigen",
           TextMapId = "UI_COMMONPOP_TITLE_100014"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_COMMONPOP_TITLE_100015",
-    MaxKey = "UI_CharPreview_Cannot_Equip",
-    Loader = function()
-      return {
+        },
         UI_COMMONPOP_TITLE_100015 = {
           ContentDE = "Schmieden abbrechen",
           TextMapId = "UI_COMMONPOP_TITLE_100015"
@@ -57988,7 +59494,15 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_COMMONPOP_TITLE_100091 = {
           ContentDE = "Schnellnachricht",
           TextMapId = "UI_COMMONPOP_TITLE_100091"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_COMMONPOP_TITLE_100092",
+    MaxKey = "UI_Chardata_Char_BrithPlace",
+    Loader = function()
+      return {
         UI_COMMONPOP_TITLE_100092 = {
           ContentDE = "Teameinladung",
           TextMapId = "UI_COMMONPOP_TITLE_100092"
@@ -58681,15 +60195,7 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_CharPreview_Cannot_Equip = {
           ContentDE = "Ausrüsten im Vorschaumodus nicht möglich",
           TextMapId = "UI_CharPreview_Cannot_Equip"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CharTrial_AccessWalnut",
-    MaxKey = "UI_Controller_Check",
-    Loader = function()
-      return {
+        },
         UI_CharTrial_AccessWalnut = {
           ContentDE = "Quelle",
           TextMapId = "UI_CharTrial_AccessWalnut"
@@ -58793,7 +60299,15 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Chardata_Char_BrithPlace = {
           ContentDE = "Geburtsort",
           TextMapId = "UI_Chardata_Char_BrithPlace"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Chardata_Char_Brithday",
+    MaxKey = "UI_CustomSquad_Title",
+    Loader = function()
+      return {
         UI_Chardata_Char_Brithday = {
           ContentDE = "Geburtstag",
           TextMapId = "UI_Chardata_Char_Brithday"
@@ -59489,15 +61003,7 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Controller_Check = {
           ContentDE = "Ansehen",
           TextMapId = "UI_Controller_Check"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Controller_CheckDeputeInfo",
-    MaxKey = "UI_DailyGoal_RemainTime_Minute",
-    Loader = function()
-      return {
+        },
         UI_Controller_CheckDeputeInfo = {
           ContentDE = "Missionsdetails anzeigen",
           TextMapId = "UI_Controller_CheckDeputeInfo"
@@ -59601,7 +61107,15 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_CustomSquad_Title = {
           ContentDE = "Voreinstellung",
           TextMapId = "UI_CustomSquad_Title"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_DETAILS",
+    MaxKey = "UI_Dialogue_Review",
+    Loader = function()
+      return {
         UI_DETAILS = {ContentDE = "Ansehen", TextMapId = "UI_DETAILS"},
         UI_DGNpc_Name_BlackMerchant = {
           ContentDE = "Untergrund-Waffenhändler",
@@ -60294,15 +61808,7 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_DailyGoal_RemainTime_Minute = {
           ContentDE = "%d Min.",
           TextMapId = "UI_DailyGoal_RemainTime_Minute"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_DailyGoal_RemainTime_Second",
-    MaxKey = "UI_Dye_Compare",
-    Loader = function()
-      return {
+        },
         UI_DailyGoal_RemainTime_Second = {
           ContentDE = "%s Sek.",
           TextMapId = "UI_DailyGoal_RemainTime_Second"
@@ -60406,7 +61912,15 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Dialogue_Review = {
           ContentDE = "Geschichte",
           TextMapId = "UI_Dialogue_Review"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Disabled_Des_Abyss",
+    MaxKey = "UI_Dye_Success",
+    Loader = function()
+      return {
         UI_Disabled_Des_Abyss = {
           ContentDE = "Immersives Theater vorübergehend nicht verfügbar",
           TextMapId = "UI_Disabled_Des_Abyss"
@@ -60976,43 +62490,43 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
           TextMapId = "UI_DungeonFail_Tips2"
         },
         UI_DungeonMod_Tab_10 = {
-          ContentDE = "''10",
+          ContentDE = "10",
           TextMapId = "UI_DungeonMod_Tab_10"
         },
         UI_DungeonMod_Tab_20 = {
-          ContentDE = "'20",
+          ContentDE = "20",
           TextMapId = "UI_DungeonMod_Tab_20"
         },
         UI_DungeonMod_Tab_30 = {
-          ContentDE = "'30",
+          ContentDE = "30",
           TextMapId = "UI_DungeonMod_Tab_30"
         },
         UI_DungeonMod_Tab_40 = {
-          ContentDE = "'40",
+          ContentDE = "40",
           TextMapId = "UI_DungeonMod_Tab_40"
         },
         UI_DungeonMod_Tab_50 = {
-          ContentDE = "'50",
+          ContentDE = "50",
           TextMapId = "UI_DungeonMod_Tab_50"
         },
         UI_DungeonMod_Tab_55 = {
-          ContentDE = "'55",
+          ContentDE = "55",
           TextMapId = "UI_DungeonMod_Tab_55"
         },
         UI_DungeonMod_Tab_60 = {
-          ContentDE = "'60",
+          ContentDE = "60",
           TextMapId = "UI_DungeonMod_Tab_60"
         },
         UI_DungeonMod_Tab_65 = {
-          ContentDE = "'65",
+          ContentDE = "65",
           TextMapId = "UI_DungeonMod_Tab_65"
         },
         UI_DungeonMod_Tab_70 = {
-          ContentDE = "'70",
+          ContentDE = "70",
           TextMapId = "UI_DungeonMod_Tab_70"
         },
         UI_DungeonMod_Tab_80 = {
-          ContentDE = "'80",
+          ContentDE = "80",
           TextMapId = "UI_DungeonMod_Tab_80"
         },
         UI_Dungeon_Detail = {
@@ -61102,15 +62616,7 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Dye_Compare = {
           ContentDE = "Vergleichen",
           TextMapId = "UI_Dye_Compare"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Dye_Default",
-    MaxKey = "UI_FUNC_LEVELUP",
-    Loader = function()
-      return {
+        },
         UI_Dye_Default = {
           ContentDE = "Standard",
           TextMapId = "UI_Dye_Default"
@@ -61214,7 +62720,15 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Dye_Success = {
           ContentDE = "Färben erfolgreich",
           TextMapId = "UI_Dye_Success"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Dye_Total",
+    MaxKey = "UI_Fishing_FishingNote_Spot",
+    Loader = function()
+      return {
         UI_Dye_Total = {
           ContentDE = "Kosten:",
           TextMapId = "UI_Dye_Total"
@@ -61907,15 +63421,7 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_FUNC_LEVELUP = {
           ContentDE = "Hochstufen",
           TextMapId = "UI_FUNC_LEVELUP"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_FailureTips_JumpText",
-    MaxKey = "UI_HardBoss_Difficulty_Des_Open_5",
-    Loader = function()
-      return {
+        },
         UI_FailureTips_JumpText = {
           ContentDE = "Los",
           TextMapId = "UI_FailureTips_JumpText"
@@ -62019,7 +63525,15 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Fishing_FishingNote_Spot = {
           ContentDE = "Angelplatz:",
           TextMapId = "UI_Fishing_FishingNote_Spot"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Fishing_FishingRod",
+    MaxKey = "UI_Harvest_1009",
+    Loader = function()
+      return {
         UI_Fishing_FishingRod = {
           ContentDE = "Angelrute",
           TextMapId = "UI_Fishing_FishingRod"
@@ -62715,15 +64229,7 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_HardBoss_Difficulty_Des_Open_5 = {
           ContentDE = "Alptraum Ⅴ",
           TextMapId = "UI_HardBoss_Difficulty_Des_Open_5"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_HardBoss_Difficulty_Des_Open_6",
-    MaxKey = "UI_Language_Text_TC",
-    Loader = function()
-      return {
+        },
         UI_HardBoss_Difficulty_Des_Open_6 = {
           ContentDE = "Alptraum Ⅵ",
           TextMapId = "UI_HardBoss_Difficulty_Des_Open_6"
@@ -62827,7 +64333,15 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Harvest_1009 = {
           ContentDE = "Wassergeode",
           TextMapId = "UI_Harvest_1009"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Harvest_1010",
+    MaxKey = "UI_Loading_Testing",
+    Loader = function()
+      return {
         UI_Harvest_1010 = {
           ContentDE = "Reifstrauch",
           TextMapId = "UI_Harvest_1010"
@@ -63520,15 +65034,7 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Language_Text_TC = {
           ContentDE = "繁體中文",
           TextMapId = "UI_Language_Text_TC"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Language_Voice_CN",
-    MaxKey = "UI_MECHANISM_LEAVE_KUANGKENG",
-    Loader = function()
-      return {
+        },
         UI_Language_Voice_CN = {
           ContentDE = "汉语",
           TextMapId = "UI_Language_Voice_CN"
@@ -63589,13 +65095,6 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
           ContentDE = "Max.",
           TextMapId = "UI_Level_Max"
         },
-        UI_Loading_Antiaddiction = {
-          ContentDE = [[
- 
- 
- ]],
-          TextMapId = "UI_Loading_Antiaddiction"
-        },
         UI_Loading_Checking = {
           ContentDE = "Suche nach Aktualiesierung ...",
           TextMapId = "UI_Loading_Checking"
@@ -63639,7 +65138,15 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Loading_Testing = {
           ContentDE = "Dies ist eine Beta-Version und entspricht nicht der finalen Spielqualität.",
           TextMapId = "UI_Loading_Testing"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Loading_Verifying",
+    MaxKey = "UI_MOD_POLARITY_ADD_SUCCESS",
+    Loader = function()
+      return {
         UI_Loading_Verifying = {
           ContentDE = "Ressourcen werden überprüft ...",
           TextMapId = "UI_Loading_Verifying"
@@ -64331,15 +65838,7 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_MECHANISM_LEAVE_KUANGKENG = {
           ContentDE = "Verlasse die Glevum-Grube",
           TextMapId = "UI_MECHANISM_LEAVE_KUANGKENG"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_MECHANISM_LEAVE_OUTSIDERHOME",
-    MaxKey = "UI_NPC_Name_Hehongyi_Sce",
-    Loader = function()
-      return {
+        },
         UI_MECHANISM_LEAVE_OUTSIDERHOME = {
           ContentDE = "Verlasse Outsiders Haus",
           TextMapId = "UI_MECHANISM_LEAVE_OUTSIDERHOME"
@@ -64447,7 +65946,15 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_MOD_POLARITY_ADD_SUCCESS = {
           ContentDE = "Spur hinzugefügt",
           TextMapId = "UI_MOD_POLARITY_ADD_SUCCESS"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_MOD_POLARITY_CHANGE",
+    MaxKey = "UI_NPC_Name_Yuewanwan_Sce",
+    Loader = function()
+      return {
         UI_MOD_POLARITY_CHANGE = {
           ContentDE = "Spur anpassen",
           TextMapId = "UI_MOD_POLARITY_CHANGE"
@@ -65136,15 +66643,7 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_NPC_Name_Hehongyi_Sce = {
           ContentDE = "He Hongyi",
           TextMapId = "UI_NPC_Name_Hehongyi_Sce"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_NPC_Name_Huaite_Sce",
-    MaxKey = "UI_Notice_None",
-    Loader = function()
-      return {
+        },
         UI_NPC_Name_Huaite_Sce = {
           ContentDE = "White",
           TextMapId = "UI_NPC_Name_Huaite_Sce"
@@ -65252,7 +66751,15 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_NPC_Name_Yuewanwan_Sce = {
           ContentDE = "Yue Wanwan",
           TextMapId = "UI_NPC_Name_Yuewanwan_Sce"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_NPC_Name_ZhixingkeJiaojiao",
+    MaxKey = "UI_Npc_Name_240014",
+    Loader = function()
+      return {
         UI_NPC_Name_ZhixingkeJiaojiao = {
           ContentDE = "Luno-Sternweberin",
           TextMapId = "UI_NPC_Name_ZhixingkeJiaojiao"
@@ -65944,15 +67451,7 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Notice_None = {
           ContentDE = "Keine Nachrichten",
           TextMapId = "UI_Notice_None"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Npc_All",
-    MaxKey = "UI_Npc_Name_Photo",
-    Loader = function()
-      return {
+        },
         UI_Npc_All = {ContentDE = "Alle", TextMapId = "UI_Npc_All"},
         UI_Npc_Aside = {
           ContentDE = "{空格}",
@@ -66057,7 +67556,15 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Npc_Name_240014 = {
           ContentDE = "Magistrat von Yingtian",
           TextMapId = "UI_Npc_Name_240014"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Npc_Name_240024",
+    MaxKey = "UI_Npc_Name_Shibing2",
+    Loader = function()
+      return {
         UI_Npc_Name_240024 = {
           ContentDE = "Taihao",
           TextMapId = "UI_Npc_Name_240024"
@@ -66749,15 +68256,7 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Npc_Name_Photo = {
           ContentDE = "Tourist",
           TextMapId = "UI_Npc_Name_Photo"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Npc_Name_PoorMan",
-    MaxKey = "UI_OPTION_Keyboard",
-    Loader = function()
-      return {
+        },
         UI_Npc_Name_PoorMan = {
           ContentDE = "Zerlumpter Bürger",
           TextMapId = "UI_Npc_Name_PoorMan"
@@ -66865,7 +68364,15 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Npc_Name_Shibing2 = {
           ContentDE = "Halbbewusster Soldat",
           TextMapId = "UI_Npc_Name_Shibing2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Npc_Name_Shibing3",
+    MaxKey = "UI_OPTION_MaterialFilter",
+    Loader = function()
+      return {
         UI_Npc_Name_Shibing3 = {
           ContentDE = "Soldat (Entfernte Stimme)",
           TextMapId = "UI_Npc_Name_Shibing3"
@@ -67557,15 +69064,7 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_OPTION_Keyboard = {
           ContentDE = "Tastatur & Maus",
           TextMapId = "UI_OPTION_Keyboard"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_OPTION_LANGUAGE",
-    MaxKey = "UI_Party_Maze_StageStart",
-    Loader = function()
-      return {
+        },
         UI_OPTION_LANGUAGE = {
           ContentDE = "Sprache",
           TextMapId = "UI_OPTION_LANGUAGE"
@@ -67630,6 +69129,10 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
           ContentDE = "Linke Spiralsprung-Taste",
           TextMapId = "UI_OPTION_LeftBulletJumpShow"
         },
+        ["UI_OPTION_LeftShootShow\t"] = {
+          ContentDE = "Bouton de tir main gauche",
+          TextMapId = "UI_OPTION_LeftShootShow\t"
+        },
         UI_OPTION_LightingEffect = {
           ContentDE = "Lichteffekte",
           TextMapId = "UI_OPTION_LightingEffect"
@@ -67669,7 +69172,15 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_OPTION_MaterialFilter = {
           ContentDE = "Texturfilterung",
           TextMapId = "UI_OPTION_MaterialFilter"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_OPTION_MaterialQuality",
+    MaxKey = "UI_PersonInfo_NotHeld",
+    Loader = function()
+      return {
         UI_OPTION_MaterialQuality = {
           ContentDE = "Texturqualität",
           TextMapId = "UI_OPTION_MaterialQuality"
@@ -68365,15 +69876,7 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Party_Maze_StageStart = {
           ContentDE = "Erforschungsmodus gestartet. Der Countdown läuft!",
           TextMapId = "UI_Party_Maze_StageStart"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Party_MiniQuest_CoinTriple",
-    MaxKey = "UI_PlayerHead_Name_30044",
-    Loader = function()
-      return {
+        },
         UI_Party_MiniQuest_CoinTriple = {
           ContentDE = "Der aufnehmende Spieler erhält 20 Sek. lang die 3×-Münzeneffizienz.",
           TextMapId = "UI_Party_MiniQuest_CoinTriple"
@@ -68477,7 +69980,15 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_PersonInfo_NotHeld = {
           ContentDE = "Nicht erhalten",
           TextMapId = "UI_PersonInfo_NotHeld"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_PersonInfo_NotSave",
+    MaxKey = "UI_PlayerHead_Name_30070",
+    Loader = function()
+      return {
         UI_PersonInfo_NotSave = {
           ContentDE = "Änderungen wurden nicht gespeichert. Trotzdem verwerfen?",
           TextMapId = "UI_PersonInfo_NotSave"
@@ -69170,15 +70681,7 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_PlayerHead_Name_30044 = {
           ContentDE = "Der aus den Träumen: Unterstützen",
           TextMapId = "UI_PlayerHead_Name_30044"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_PlayerHead_Name_30045",
-    MaxKey = "UI_RegionMap_MarkedNum",
-    Loader = function()
-      return {
+        },
         UI_PlayerHead_Name_30045 = {
           ContentDE = "Outsider: Gefallen",
           TextMapId = "UI_PlayerHead_Name_30045"
@@ -69282,7 +70785,15 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_PlayerHead_Name_30070 = {
           ContentDE = "Frau Nifle: Unterstützen",
           TextMapId = "UI_PlayerHead_Name_30070"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_PlayerHead_Name_30071",
+    MaxKey = "UI_RegionOnline_NoApplication",
+    Loader = function()
+      return {
         UI_PlayerHead_Name_30071 = {
           ContentDE = "Lynn: Gefallen",
           TextMapId = "UI_PlayerHead_Name_30071"
@@ -69960,15 +71471,7 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_RegionMap_MarkedNum = {
           ContentDE = "Bereits markiert:",
           TextMapId = "UI_RegionMap_MarkedNum"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_RegionMap_MaxMark",
-    MaxKey = "UI_SHOP_SUBTAB_NAME_FISHING",
-    Loader = function()
-      return {
+        },
         UI_RegionMap_MaxMark = {
           ContentDE = "Markierungslimit erreicht",
           TextMapId = "UI_RegionMap_MaxMark"
@@ -70072,7 +71575,15 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_RegionOnline_NoApplication = {
           ContentDE = "Keine Anfragen",
           TextMapId = "UI_RegionOnline_NoApplication"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_RegionOnline_NoInvitation",
+    MaxKey = "UI_SHOWNPC_LABEL_1",
+    Loader = function()
+      return {
         UI_RegionOnline_NoInvitation = {
           ContentDE = "Keine Einladungen",
           TextMapId = "UI_RegionOnline_NoInvitation"
@@ -70768,15 +72279,7 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_SHOP_SUBTAB_NAME_FISHING = {
           ContentDE = "Angelausrüstung",
           TextMapId = "UI_SHOP_SUBTAB_NAME_FISHING"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_SHOP_SUBTAB_NAME_JINGLI",
-    MaxKey = "UI_Shop_Remain",
-    Loader = function()
-      return {
+        },
         UI_SHOP_SUBTAB_NAME_JINGLI = {
           ContentDE = "Sanergie",
           TextMapId = "UI_SHOP_SUBTAB_NAME_JINGLI"
@@ -70880,7 +72383,15 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_SHOWNPC_LABEL_1 = {
           ContentDE = "Wähle eine Figur aus der Liste links aus",
           TextMapId = "UI_SHOWNPC_LABEL_1"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_SHOWNPC_LIST_CONT_1",
+    MaxKey = "UI_SkinGacha_Guarantee_Special",
+    Loader = function()
+      return {
         UI_SHOWNPC_LIST_CONT_1 = {
           ContentDE = "Seltenheit",
           TextMapId = "UI_SHOWNPC_LIST_CONT_1"
@@ -71570,15 +73081,7 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Shop_Remain = {
           ContentDE = "Verbleibende Menge:",
           TextMapId = "UI_Shop_Remain"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Shop_TW_Confirm",
-    MaxKey = "UI_TAB_NAME_RESOURCE",
-    Loader = function()
-      return {
+        },
         UI_Shop_TW_Confirm = {
           ContentDE = "Für Käufe musst du mindestens 18 Jahre alt sein. Bestätigst du, dass du diese Voraussetzung erfüllst?",
           TextMapId = "UI_Shop_TW_Confirm"
@@ -71682,7 +73185,15 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_SkinGacha_Guarantee_Special = {
           ContentDE = "Gegenstand von goldener Qualität garantiert in <highlight>%d</> Weben",
           TextMapId = "UI_SkinGacha_Guarantee_Special"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_SkinGacha_Item_Blue",
+    MaxKey = "UI_TELEPORTPOINT_NAME_101702_1",
+    Loader = function()
+      return {
         UI_SkinGacha_Item_Blue = {
           ContentDE = "Blau-Qualität",
           TextMapId = "UI_SkinGacha_Item_Blue"
@@ -72377,15 +73888,7 @@ Kann gegen die strahlende Pose eingetauscht werden:
         UI_TAB_NAME_RESOURCE = {
           ContentDE = "Materialien",
           TextMapId = "UI_TAB_NAME_RESOURCE"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_TAB_NAME_TASKITEM",
-    MaxKey = "UI_Team_InFriend",
-    Loader = function()
-      return {
+        },
         UI_TAB_NAME_TASKITEM = {
           ContentDE = "Auftragsgegenstände",
           TextMapId = "UI_TAB_NAME_TASKITEM"
@@ -72489,7 +73992,15 @@ Kann gegen die strahlende Pose eingetauscht werden:
         UI_TELEPORTPOINT_NAME_101702_1 = {
           ContentDE = "Tiefen der Icelake-Kanalisation",
           TextMapId = "UI_TELEPORTPOINT_NAME_101702_1"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_TELEPORTPOINT_NAME_101702_2",
+    MaxKey = "UI_Team_YouBecomeLeader",
+    Loader = function()
+      return {
         UI_TELEPORTPOINT_NAME_101702_2 = {
           ContentDE = "Abwasseraufbereitungsgebiet",
           TextMapId = "UI_TELEPORTPOINT_NAME_101702_2"
@@ -73185,15 +74696,7 @@ Kann gegen die strahlende Pose eingetauscht werden:
         UI_Team_InFriend = {
           ContentDE = "Bereits auf der Freundesliste",
           TextMapId = "UI_Team_InFriend"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Team_InTeam",
-    MaxKey = "UI_WEAPON_DESC_10299",
-    Loader = function()
-      return {
+        },
         UI_Team_InTeam = {
           ContentDE = "Im Team",
           TextMapId = "UI_Team_InTeam"
@@ -73297,7 +74800,15 @@ Kann gegen die strahlende Pose eingetauscht werden:
         UI_Team_YouBecomeLeader = {
           ContentDE = "Du bist jetzt der Teamleiter",
           TextMapId = "UI_Team_YouBecomeLeader"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Team_YouGiveWayToNewLeader",
+    MaxKey = "UI_WEAPON_DESC_20102",
+    Loader = function()
+      return {
         UI_Team_YouGiveWayToNewLeader = {
           ContentDE = "Du hast die Teamleitung übertragen",
           TextMapId = "UI_Team_YouGiveWayToNewLeader"
@@ -73990,15 +75501,7 @@ Kann gegen die strahlende Pose eingetauscht werden:
         UI_WEAPON_DESC_10299 = {
           ContentDE = "Eine gewöhnliche Lanze. Aus dem billigsten Metall hergestellt, also ist es nicht schlimm, wenn sie zerbricht.",
           TextMapId = "UI_WEAPON_DESC_10299"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_WEAPON_DESC_10301",
-    MaxKey = "UI_WeaponAccessory_Desc_10017",
-    Loader = function()
-      return {
+        },
         UI_WEAPON_DESC_10301 = {
           ContentDE = "Brenn, brenn, brenn! Dieses läuternde Feuer wird alles Böse auf der Welt verzehren.",
           TextMapId = "UI_WEAPON_DESC_10301"
@@ -74102,7 +75605,15 @@ Kann gegen die strahlende Pose eingetauscht werden:
         UI_WEAPON_DESC_20102 = {
           ContentDE = "Ein Trugschluss, herausgerissen aus dem Strudel des Todes – eine Wahrheit, die nie hätte sein dürfen.",
           TextMapId = "UI_WEAPON_DESC_20102"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_WEAPON_DESC_20103",
+    MaxKey = "UI_WeaponAccessory_Name_10021",
+    Loader = function()
+      return {
         UI_WEAPON_DESC_20103 = {
           ContentDE = "Das Grollen göttlicher Orakel soll durch die Schädel aller Ketzer hallen.",
           TextMapId = "UI_WEAPON_DESC_20103"
@@ -74798,15 +76309,7 @@ Kann gegen die strahlende Pose eingetauscht werden:
         UI_WeaponAccessory_Desc_10017 = {
           ContentDE = "Küken JoeJoe, die Hauptfigur von „JoeJoes wundersame Abenteuer“, einem bekannten Märchen vom Kontinent Atlasia, erzählt in dem Buch seine eigene Geschichte: Jeden Tag erwacht es an einem neuen Ort, freundet sich mit neuen Gefährten an und begibt sich auf bizarre Abenteuer, um den Sinn des Kükenseins zu entdecken und gleichzeitig die Pläne des Bösewichts zu durchkreuzen.",
           TextMapId = "UI_WeaponAccessory_Desc_10017"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_WeaponAccessory_Desc_10021",
-    MaxKey = "VoiceDes053",
-    Loader = function()
-      return {
+        },
         UI_WeaponAccessory_Desc_10021 = {
           ContentDE = "Diese tragbare Edition von Cinder, durchdrungen von der reichen Inspiration und Leidenschaft der Luno-Schmiedin, erinnert einen stets an das lodernde Feuer, das Cinder unermüdlich entfacht.",
           TextMapId = "UI_WeaponAccessory_Desc_10021"
@@ -74910,7 +76413,15 @@ Kann gegen die strahlende Pose eingetauscht werden:
         UI_WeaponAccessory_Name_10021 = {
           ContentDE = "Cinder",
           TextMapId = "UI_WeaponAccessory_Name_10021"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_WeaponAccessory_Name_10022",
+    MaxKey = "VoiceDes079",
+    Loader = function()
+      return {
         UI_WeaponAccessory_Name_10022 = {
           ContentDE = "Fantasydrache - Liuliu",
           TextMapId = "UI_WeaponAccessory_Name_10022"
@@ -75603,15 +77114,7 @@ Kann gegen die strahlende Pose eingetauscht werden:
         VoiceDes053 = {
           ContentDE = "Über Leute, die sie seltsam finden",
           TextMapId = "VoiceDes053"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "VoiceDes054",
-    MaxKey = "WikiText_20300701",
-    Loader = function()
-      return {
+        },
         VoiceDes054 = {
           ContentDE = "Über ihr Gift",
           TextMapId = "VoiceDes054"
@@ -75715,7 +77218,15 @@ Kann gegen die strahlende Pose eingetauscht werden:
         VoiceDes079 = {
           ContentDE = "Über ihre innere Stimme",
           TextMapId = "VoiceDes079"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "VoiceDes080",
+    MaxKey = "WikiText_30300304",
+    Loader = function()
+      return {
         VoiceDes080 = {
           ContentDE = "Über ihren alten Freund",
           TextMapId = "VoiceDes080"
@@ -76411,15 +77922,7 @@ Kann gegen die strahlende Pose eingetauscht werden:
         WikiText_20300701 = {
           ContentDE = "Ein Schwertkämpfer, der sich selbst als Wanderer bezeichnet, mit ungezwungener Art und ritterlichem Geist. Auf der Suche nach seinem Bruder geriet Kezhou in die Vielfach-Fangjagd-Formation, wo er auf den ebenfalls gestrandeten {nickname} traf.",
           TextMapId = "WikiText_20300701"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "WikiText_20400101",
-    MaxKey = "voice_ch_char_Baiheng_vo_idle",
-    Loader = function()
-      return {
+        },
         WikiText_20400101 = {
           ContentDE = "{性别2:Ein geheimnisvoller Junge, der|Ein geheimnisvolles Mädchen, das} in {nickname}s wiederkehrendem Traum vom Sandreich erscheint. {性别2:Er|Sie} scheint Wahrheiten zu kennen, die selbst {nickname} noch nicht erkannt hat.",
           TextMapId = "WikiText_20400101"
@@ -76523,7 +78026,15 @@ Kann gegen die strahlende Pose eingetauscht werden:
         WikiText_30300304 = {
           ContentDE = "Die Betroffenen verlieren nach und nach ihre Menschlichkeit – Erinnerungen, Verstand, selbst ihre Identität – und verwandeln sich schließlich in eine besonders zerstörerische Variante der Filthoiden, weit gefährlicher als jene, die man üblicherweise in der Wildnis antrifft. Eine bekannte Heilung existiert nicht.\n Gerade diese Furcht vor der Verderbnis treibt die Solarian dazu, die Charon als existenzielle Bedrohung zu betrachten.",
           TextMapId = "WikiText_30300304"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "WikiText_30300305",
+    MaxKey = "voice_ch_char_Baonu_vo_be_hit_heavy_r01",
+    Loader = function()
+      return {
         WikiText_30300305 = {
           ContentDE = "Nach hyperboreischen Geschichtsaufzeichnungen führten die Charon während der Ära des Heiligen Turms vor über zweitausend Jahren einen kontinentweiten Krieg, in dem sie Solarian unterschiedslos massakrierten und diese an den Rand der Auslöschung trieben. Dieses Narrativ wird bis heute häufig als zentrales Argument angeführt, um zu rechtfertigen, warum Charon-Bürger im Imperium weiterhin tief verwurzelter Stigmatisierung ausgesetzt sind und ihnen die volle Gleichstellung der Bürgerrechte verwehrt bleibt.",
           TextMapId = "WikiText_30300305"
@@ -77218,15 +78729,7 @@ Die Stadt ist in die Innenstadt und vier sie umgebende Distrikte gegliedert.
         voice_ch_char_Baiheng_vo_idle = {
           ContentDE = "Am frühen Morgen sauber machen und zu lüften, am Nachmittag Alkohol zu sprühen und am Nachmittag Duftkerzen anzuzünden, um Insekten zu vertreiben. Das ist der einzige Weg, um ein Zimmer sauber zu halten.",
           TextMapId = "voice_ch_char_Baiheng_vo_idle"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Baiheng_vo_lvup",
-    MaxKey = "voice_ch_char_Heitao_vo_revive",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Baiheng_vo_lvup = {
           ContentDE = "Eine gesunde Lebensweise und regelmäßiges Training sind eine grundlegende Pflicht für jeden Heiler.",
           TextMapId = "voice_ch_char_Baiheng_vo_lvup"
@@ -77330,7 +78833,15 @@ Die Stadt ist in die Innenstadt und vier sie umgebende Distrikte gegliedert.
         voice_ch_char_Baonu_vo_be_hit_heavy_r01 = {
           ContentDE = "Feiger Wicht!",
           TextMapId = "voice_ch_char_Baonu_vo_be_hit_heavy_r01"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Baonu_vo_be_hit_heavy_r02",
+    MaxKey = "voice_ch_char_Kezhou_vo_companio_01",
+    Loader = function()
+      return {
         voice_ch_char_Baonu_vo_be_hit_heavy_r02 = {
           ContentDE = "Samael!",
           TextMapId = "voice_ch_char_Baonu_vo_be_hit_heavy_r02"
@@ -78026,15 +79537,7 @@ Die Stadt ist in die Innenstadt und vier sie umgebende Distrikte gegliedert.
         voice_ch_char_Heitao_vo_revive = {
           ContentDE = "Es ist noch nicht zu Ende.",
           TextMapId = "voice_ch_char_Heitao_vo_revive"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Heitao_vo_skill01_r01",
-    MaxKey = "voice_ch_char_Maer_vo_topic_02_2",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Heitao_vo_skill01_r01 = {
           ContentDE = "Zerreißen.",
           TextMapId = "voice_ch_char_Heitao_vo_skill01_r01"
@@ -78138,7 +79641,15 @@ Die Stadt ist in die Innenstadt und vier sie umgebende Distrikte gegliedert.
         voice_ch_char_Kezhou_vo_companio_01 = {
           ContentDE = "Man sagt, der beste Schwertkämpfer braucht nicht einmal ein Schwert – alles, sei es ein Grashalm oder ein Zweig, kann zur Waffe werden. Ich habe gehört, du kämpfst mit Putzwerkzeugen. Macht dich das auch zur Meisterin der Klinge? Willst du mir ein, zwei Tricks zeigen?",
           TextMapId = "voice_ch_char_Kezhou_vo_companio_01"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Kezhou_vo_companio_02",
+    MaxKey = "voice_ch_char_NanzhuLight_vo_skill02_r03",
+    Loader = function()
+      return {
         voice_ch_char_Kezhou_vo_companio_02 = {
           ContentDE = "Ich halte dein altes Schwert vorerst für mich. Wenn du aufhörst, mit diesem düsteren Gesicht herumzuhängen, gebe ich es dir zurück – aber nur, wenn du mich in einem Duell besiegst. Verlierst du, gehört es für immer mir.",
           TextMapId = "voice_ch_char_Kezhou_vo_companio_02"
@@ -78834,15 +80345,7 @@ Die Stadt ist in die Innenstadt und vier sie umgebende Distrikte gegliedert.
         voice_ch_char_Maer_vo_topic_02_2 = {
           ContentDE = "Auf der Karte sind alle Mülleimer in Icelake eingezeichnet. Ich habe die Mülleimer mit den besten Schätzen markiert und sie durch größere ersetzt. Und die Zeiten, wann wir was Gutes holen, habe ich natürlich genau durchgerechnet!",
           TextMapId = "voice_ch_char_Maer_vo_topic_02_2"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Maer_vo_topic_02_3",
-    MaxKey = "voice_ch_char_Songlu_vo_topic_02_4",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Maer_vo_topic_02_3 = {
           ContentDE = "Aber in unserem Job gibt es keine Garantie. Wie viel man findet, hängt meist einfach vom Glück ab ...",
           TextMapId = "voice_ch_char_Maer_vo_topic_02_3"
@@ -78946,7 +80449,15 @@ Die Stadt ist in die Innenstadt und vier sie umgebende Distrikte gegliedert.
         voice_ch_char_NanzhuLight_vo_skill02_r03 = {
           ContentDE = "Zurück ins Nebelmeer.",
           TextMapId = "voice_ch_char_NanzhuLight_vo_skill02_r03"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_NanzhuLight_vo_victory",
+    MaxKey = "voice_ch_char_Tuosi_vo_companio_05",
+    Loader = function()
+      return {
         voice_ch_char_NanzhuLight_vo_victory = {
           ContentDE = "Noch ein Schritt nach vorn. Solange ich weitergehe, werde ich es schaffen.",
           TextMapId = "voice_ch_char_NanzhuLight_vo_victory"
@@ -79642,15 +81153,7 @@ Die Stadt ist in die Innenstadt und vier sie umgebende Distrikte gegliedert.
         voice_ch_char_Songlu_vo_topic_02_4 = {
           ContentDE = "Ganz genau! Wer andere hungern lässt, den wirft Filbert früher oder später um!",
           TextMapId = "voice_ch_char_Songlu_vo_topic_02_4"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Songlu_vo_topic_03_1",
-    MaxKey = "voice_ch_char_Yuming_vo_skill02_r02",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Songlu_vo_topic_03_1 = {
           ContentDE = "Schon, aber ich muss ihr kein Essen vorbereiten. Sie findet alles selbst. Selbst über mehrere Bäche hinweg riecht Filbert reife Beeren und trägt mich im Galopp hin – ziemlich beeindruckend!",
           TextMapId = "voice_ch_char_Songlu_vo_topic_03_1"
@@ -79754,7 +81257,15 @@ Die Stadt ist in die Innenstadt und vier sie umgebende Distrikte gegliedert.
         voice_ch_char_Tuosi_vo_companio_05 = {
           ContentDE = "Ich brauche keinen Spiegel, der mich ständig an meine eigene Groteske erinnert.",
           TextMapId = "voice_ch_char_Tuosi_vo_companio_05"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Tuosi_vo_die_r01",
+    MaxKey = "voice_ch_char_Zhangyu_vo_gain",
+    Loader = function()
+      return {
         voice_ch_char_Tuosi_vo_die_r01 = {
           ContentDE = "Mein letzter Akt ... ist vollbracht.",
           TextMapId = "voice_ch_char_Tuosi_vo_die_r01"
@@ -80452,15 +81963,7 @@ Yale: H... Hallo ... du singst wirklich w... wunderbar.
         voice_ch_char_Yuming_vo_skill02_r02 = {
           ContentDE = "Xuanjiao, zerreiß die Front.",
           TextMapId = "voice_ch_char_Yuming_vo_skill02_r02"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Yuming_vo_skill02_r03",
-    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Yuming_vo_skill02_r03 = {
           ContentDE = "Seele zu Stahl.",
           TextMapId = "voice_ch_char_Yuming_vo_skill02_r03"
@@ -80564,7 +82067,15 @@ Yale: H... Hallo ... du singst wirklich w... wunderbar.
         voice_ch_char_Zhangyu_vo_gain = {
           ContentDE = "Hehe, bei dir gibt's ja jede Menge spannender Sachen! Das macht mich ein bisschen neugierig ... Keine Sorge, Dämon Tabethe, der Roten Hand stiehlt nichts von anständigen Leuten! Oder bist du etwa doch ein übler Schurke?",
           TextMapId = "voice_ch_char_Zhangyu_vo_gain"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Zhangyu_vo_idle",
+    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
+    Loader = function()
+      return {
         voice_ch_char_Zhangyu_vo_idle = {
           ContentDE = "... Hey ... hey, lass mich mit dir kämpfen! Ich langweile mich zu Tode und meine Tentakel müssen sich strecken!",
           TextMapId = "voice_ch_char_Zhangyu_vo_idle"
@@ -80652,6 +82163,22 @@ Yale: H... Hallo ... du singst wirklich w... wunderbar.
         voice_ch_char_Zhangyu_vo_welcome = {
           ContentDE = "Hm, jetzt ist der perfekte Zeitpunkt loszulegen. Ich muss schnell raus, sonst ... Hä?! Seit wann bist du denn hier?",
           TextMapId = "voice_ch_char_Zhangyu_vo_welcome"
+        },
+        voice_ch_char_Zhiliu01_vo_appear = {
+          ContentDE = "Le vin est servi, les mets sont dressés, la musique s’élève... es-tu {性别:prêt|prête} à prendre place à mes côtés ?",
+          TextMapId = "voice_ch_char_Zhiliu01_vo_appear"
+        },
+        voice_ch_char_Zhiliu01_vo_battlestart = {
+          ContentDE = "Hmm... J’ai consulté les augures : avant que ce vin tiède ne refroidisse, tout sera réglé.",
+          TextMapId = "voice_ch_char_Zhiliu01_vo_battlestart"
+        },
+        voice_ch_char_Zhiliu01_vo_gain = {
+          ContentDE = "Quoi ? Cela t’étonne tant ? Même en tant que Haut Chancelier de Longyuan, je dois revêtir un habit digne de ces banquets privés. La nuit ne fait que commencer... autant t’y accoutumer dès maintenant.",
+          TextMapId = "voice_ch_char_Zhiliu01_vo_gain"
+        },
+        voice_ch_char_Zhiliu01_vo_skill02_r01 = {
+          ContentDE = "Venez donc égayer le banquet.",
+          TextMapId = "voice_ch_char_Zhiliu01_vo_skill02_r01"
         },
         voice_ch_char_Zhiliu_vo_appear = {
           ContentDE = "Brauchst du meine Hilfe? Hehe. Ich helfe gern.",

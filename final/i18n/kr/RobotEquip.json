@@ -1,12 +1,12 @@
 [
   {
     "id": 1,
-    "name": "生命符石",
+    "name": "HP 룬스톤",
     "icon": "Item02",
     "rarity": 3,
     "cost": 2,
     "buffId": 4020101,
-    "extraBuffDesc": "基础符石",
+    "extraBuffDesc": "기본 룬스톤",
     "hp": 0.3
   },
   {
@@ -16,7 +16,7 @@
     "rarity": 3,
     "cost": 2,
     "buffId": 4020102,
-    "extraBuffDesc": "基础符石",
+    "extraBuffDesc": "기본 룬스톤",
     "def": 0.45
   },
   {
@@ -26,7 +26,7 @@
     "rarity": 3,
     "cost": 2,
     "buffId": 4020103,
-    "extraBuffDesc": "基础符石",
+    "extraBuffDesc": "기본 룬스톤",
     "atk": 0.3
   },
   {
@@ -36,7 +36,7 @@
     "rarity": 3,
     "cost": 2,
     "buffId": 4020104,
-    "extraBuffDesc": "基础符石",
+    "extraBuffDesc": "기본 룬스톤",
     "shield": 0.4
   },
   {
@@ -46,7 +46,7 @@
     "rarity": 3,
     "cost": 4,
     "buffId": 4020105,
-    "extraBuffDesc": "基础符石",
+    "extraBuffDesc": "기본 룬스톤",
     "unlockQuestId": 10300117,
     "def": 0.45,
     "hp": 0.3
@@ -58,7 +58,7 @@
     "rarity": 3,
     "cost": 4,
     "buffId": 4020106,
-    "extraBuffDesc": "基础符石",
+    "extraBuffDesc": "기본 룬스톤",
     "unlockQuestId": 10300103,
     "atk": 0.3,
     "def": 0.45
@@ -70,7 +70,7 @@
     "rarity": 3,
     "cost": 4,
     "buffId": 4020107,
-    "extraBuffDesc": "基础符石",
+    "extraBuffDesc": "기본 룬스톤",
     "unlockQuestId": 10300102,
     "atk": 0.3,
     "hp": 0.3
@@ -82,7 +82,7 @@
     "rarity": 3,
     "cost": 4,
     "buffId": 4020108,
-    "extraBuffDesc": "基础符石",
+    "extraBuffDesc": "기본 룬스톤",
     "unlockQuestId": 10300117,
     "hp": 0.65,
     "shield": 0.6
@@ -94,7 +94,7 @@
     "rarity": 3,
     "cost": 4,
     "buffId": 4020109,
-    "extraBuffDesc": "基础符石",
+    "extraBuffDesc": "기본 룬스톤",
     "unlockQuestId": 10300101,
     "atk": 0.3,
     "shield": 0.4
@@ -106,7 +106,7 @@
     "rarity": 4,
     "cost": 8,
     "buffId": 4020501,
-    "extraBuffDesc": "대미지를 입힐 시 대상의 방어력이 45.0% 감소한다. 지속 시간 10초.",
+    "extraBuffDesc": "옵션 효과: HP가 20% 감소할 때마다 자신의 방어력이 #2 상승한다.",
     "extraBuffId": 4020201,
     "unlockQuestId": 10300104,
     "atk": 0.3
@@ -118,7 +118,7 @@
     "rarity": 4,
     "cost": 12,
     "buffId": 4020502,
-    "extraBuffDesc": "대미지를 입힐 시 대상의 방어력이 20.0% 감소한다. 최대 3.0단계 중첩, 지속 시간 10초.",
+    "extraBuffDesc": "옵션 효과: 대미지를 입힐 시, 대상의 방어력이 20.0% 감소한다. 최대 3.0단계 중첩, 지속 시간 10초.",
     "extraBuffId": 4020202,
     "unlockQuestId": 10300105,
     "atk": 0.45
@@ -130,19 +130,19 @@
     "rarity": 4,
     "cost": 15,
     "buffId": 4020503,
-    "extraBuffDesc": "대미지를 받을 시 자신의 방어력이 25.0% 상승한다. 최대 3.0단계 중첩, 지속 시간 10초.",
+    "extraBuffDesc": "옵션 효과: 대미지를 받을 시 자신의 방어력이 25.0% 상승한다. 최대 3.0단계 중첩, 지속 시간 10초.",
     "extraBuffId": 4020203,
     "unlockQuestId": 10300106,
     "hp": 0.9
   },
   {
     "id": 13,
-    "name": "激怒符石",
+    "name": "분노 룬스톤",
     "icon": "Item03",
     "rarity": 4,
     "cost": 15,
     "buffId": 4020504,
-    "extraBuffDesc": "대미지를 받을 시, 자신의 방어력이 25.0% 상승한다. 최대 3.0단계 중첩, 지속 시간 10초.",
+    "extraBuffDesc": "옵션 효과: 대미지를 받을 시 자신의 공격력이 25.0% 상승한다. 최대 3.0단계 중첩, 지속 시간 10초.",
     "extraBuffId": 4020204,
     "unlockQuestId": 10300106,
     "shield": 0.9
@@ -154,7 +154,7 @@
     "rarity": 4,
     "cost": 8,
     "buffId": 4020505,
-    "extraBuffDesc": "치료 효과 부여 시 대상의 방어력이 45.0% 상승한다. 지속 시간 10초.",
+    "extraBuffDesc": "옵션 효과: 치료 효과 부여 시 대상의 방어력이 45.0% 상승한다. 지속 시간 10초.",
     "extraBuffId": 4020205,
     "unlockQuestId": 10300118,
     "atk": 0.45
@@ -166,7 +166,7 @@
     "rarity": 4,
     "cost": 8,
     "buffId": 4020506,
-    "extraBuffDesc": "치료 효과 부여 시 자신의 공격력이 35.0% 상승한다. 지속 시간 10초.",
+    "extraBuffDesc": "옵션 효과: 치료 효과 부여 시 대상의 공격력이 35.0% 상승한다. 지속 시간 10초.",
     "extraBuffId": 4020206,
     "unlockQuestId": 10300118,
     "atk": 0.45
@@ -178,7 +178,7 @@
     "rarity": 4,
     "cost": 8,
     "buffId": 4020507,
-    "extraBuffDesc": "치료 효과 부여 시 자신의 공격력이 45.0% 상승한다. 최대 #2단계 중첩, 지속 시간 10초.",
+    "extraBuffDesc": "옵션 효과: 치료 효과 부여 시 자신의 공격력이 45.0% 상승한다. 지속 시간 10초.",
     "extraBuffId": 4020207,
     "unlockQuestId": 10300118,
     "atk": 0.45
@@ -190,7 +190,7 @@
     "rarity": 4,
     "cost": 12,
     "buffId": 4020508,
-    "extraBuffDesc": "대미지를 받을 시 자신의 공격력이 20.0%, 방어력이 0.2 상승한다. 최대 3.0%단계 중첩, 지속 시간 10초.",
+    "extraBuffDesc": "옵션 효과: 대미지를 받을 시 자신의 공격력이 20.0%, 방어력이 0.2 상승한다. 최대 3.0%단계 중첩, 지속 시간 10초.",
     "extraBuffId": 4020208,
     "unlockQuestId": 10300119,
     "def": 0.3
@@ -202,7 +202,7 @@
     "rarity": 4,
     "cost": 12,
     "buffId": 4020509,
-    "extraBuffDesc": "대미지를 입힐 시, 자신의 공격력이 20.0%, 방어력이 0.2 상승한다. 최대 3.0%단계 중첩, 지속 시간 10초.",
+    "extraBuffDesc": "옵션 효과: 대미지를 입힐 시 자신의 공격력이 20.0%, 방어력이 0.2 상승한다. 최대 3.0%단계 중첩, 지속 시간 10초.",
     "extraBuffId": 4020209,
     "unlockQuestId": 10300119,
     "atk": 0.2
@@ -214,7 +214,7 @@
     "rarity": 4,
     "cost": 15,
     "buffId": 4020510,
-    "extraBuffDesc": "HP가 25.0%까지 감소하면, 초당 최대 HP를 7.5% 회복한다. 지속 시간 10초.",
+    "extraBuffDesc": "옵션 효과: HP가 25.0%까지 감소할 시, 초당 최대 HP를 7.5% 회복한다. 지속 시간 10초.",
     "extraBuffId": 4020210,
     "unlockQuestId": 10300120,
     "hp": 0.9
@@ -226,7 +226,7 @@
     "rarity": 4,
     "cost": 15,
     "buffId": 4020511,
-    "extraBuffDesc": "HP가 20% 감소할 때마다 자신의 공격력이 15.0% 상승한다.",
+    "extraBuffDesc": "옵션 효과: HP가 20% 감소할 때마다 자신의 공격력이 15.0% 상승한다.",
     "extraBuffId": 4020211,
     "unlockQuestId": 10300120,
     "hp": 0.9
@@ -238,7 +238,7 @@
     "rarity": 4,
     "cost": 15,
     "buffId": 4020512,
-    "extraBuffDesc": "HP가 20% 감소할 때마다 자신의 공격력이 4.0 상승한다.",
+    "extraBuffDesc": "옵션 효과: HP가 20% 감소할 때마다 자신의 방어력이 4.0 상승한다.",
     "extraBuffId": 4020212,
     "unlockQuestId": 10300120,
     "hp": 0.9
@@ -250,7 +250,7 @@
     "rarity": 4,
     "cost": 15,
     "buffId": 4020513,
-    "extraBuffDesc": "대미지를 입힐 때, 대상에게 실드가 있다면 대미지가 100.0% 상승한다.",
+    "extraBuffDesc": "옵션 효과: 대미지를 입힐 때, 대상에게 실드가 있다면 대미지가 100.0% 상승한다.",
     "extraBuffId": 4020213,
     "unlockQuestId": 10300104,
     "atk": 0.55
@@ -262,7 +262,7 @@
     "rarity": 4,
     "cost": 15,
     "buffId": 4020514,
-    "extraBuffDesc": "대미지를 입힐 때, 대상에게 실드가 없다면 대미지가 100.0% 상승한다.",
+    "extraBuffDesc": "옵션 효과: 대미지를 입힐 때, 대상에게 실드가 없다면 대미지가 100.0% 상승한다.",
     "extraBuffId": 4020214,
     "unlockQuestId": 10300119,
     "atk": 0.5
@@ -274,7 +274,7 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020602,
-    "extraBuffDesc": "효과-폭파 획득",
+    "extraBuffDesc": "옵션 효과: 지휘자 능력-폭파 획득",
     "extraBuffId": 4020302,
     "unlockQuestId": 10300111,
     "atk": 1.0,
@@ -289,7 +289,7 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020603,
-    "extraBuffDesc": "효과-침식 획득",
+    "extraBuffDesc": "옵션 효과: 지휘자 능력-침식 획득",
     "extraBuffId": 4020303,
     "unlockQuestId": 10300113,
     "atk": 0.5,
@@ -304,7 +304,7 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020604,
-    "extraBuffDesc": "효과-벼락 획득",
+    "extraBuffDesc": "옵션 효과: 지휘자 능력-벼락 획득",
     "extraBuffId": 4020304,
     "unlockQuestId": 10300122,
     "atk": 1.0,
@@ -319,7 +319,7 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020605,
-    "extraBuffDesc": "효과-진홍 획득",
+    "extraBuffDesc": "옵션 효과: 지휘자 능력-진홍 획득",
     "extraBuffId": 4020305,
     "unlockQuestId": 10300109,
     "atk": 1.0,
@@ -334,7 +334,7 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020606,
-    "extraBuffDesc": "효과-메마름 획득",
+    "extraBuffDesc": "옵션 효과: 지휘자 능력-메마름 획득",
     "extraBuffId": 4020306,
     "unlockQuestId": 10300122,
     "atk": 1.0,
@@ -349,7 +349,7 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020608,
-    "extraBuffDesc": "효과-복수 획득",
+    "extraBuffDesc": "옵션 효과: 지휘자 능력-복수 획득",
     "extraBuffId": 4020308,
     "unlockQuestId": 10300112,
     "atk": 1.5
@@ -361,7 +361,7 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020610,
-    "extraBuffDesc": "효과-잔불 획득",
+    "extraBuffDesc": "옵션 효과: 지휘자 능력-잔불 획득",
     "extraBuffId": 4020310,
     "unlockQuestId": 10300114,
     "atk": 1.0,
@@ -376,7 +376,7 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020611,
-    "extraBuffDesc": "효과-희생 획득",
+    "extraBuffDesc": "옵션 효과: 지휘자 능력-희생 획득",
     "extraBuffId": 4020311,
     "unlockQuestId": 10300110,
     "atk": 1.5
@@ -388,7 +388,7 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020613,
-    "extraBuffDesc": "효과-사혈 획득",
+    "extraBuffDesc": "옵션 효과: 지휘자 능력-사혈 획득",
     "extraBuffId": 4020313,
     "unlockQuestId": 10300107,
     "atk": 1.0,

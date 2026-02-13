@@ -1113,6 +1113,12 @@ return ReadOnly("EffectCreature", {
     MeshResourceId = 312,
     SocketName = "root"
   },
+  [11506] = {
+    EffectCreatureAnimPath = "/Game/Asset/Char/Player/Common/Part/Show/Animation/Montage/Show_Chenglu_NewWoman_Montage.Show_Chenglu_NewWoman_Montage",
+    EffectCreatureId = 11506,
+    MeshResourceId = 312,
+    SocketName = "root"
+  },
   [11601] = {
     EffectCreatureId = 11601,
     EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Gesture/BP_EffectCreature_Gesture_LungChair01.BP_EffectCreature_Gesture_LungChair01",
@@ -2220,6 +2226,7 @@ return ReadOnly("EffectCreature", {
   [420121] = {
     EffectCreatureAnimPath = "/Game/Asset/Char/Player/Char008_Yuming/Animation/Summon/Montage/Combat/Skill/Yuming_Summon_Skill02_Montage.Yuming_Summon_Skill02_Montage",
     EffectCreatureId = 420121,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Common/BP_EffectCreature_CustomDepth1.BP_EffectCreature_CustomDepth1",
     EnterPool = true,
     MeshResourceId = 420101,
     SocketName = "Root"

@@ -6,7 +6,7 @@
     "rarity": 3,
     "cost": 2,
     "buffId": 4020101,
-    "extraBuffDesc": "基础符石",
+    "extraBuffDesc": "基礎符石",
     "hp": 0.3
   },
   {
@@ -16,7 +16,7 @@
     "rarity": 3,
     "cost": 2,
     "buffId": 4020102,
-    "extraBuffDesc": "基础符石",
+    "extraBuffDesc": "基礎符石",
     "def": 0.45
   },
   {
@@ -26,7 +26,7 @@
     "rarity": 3,
     "cost": 2,
     "buffId": 4020103,
-    "extraBuffDesc": "基础符石",
+    "extraBuffDesc": "基礎符石",
     "atk": 0.3
   },
   {
@@ -36,7 +36,7 @@
     "rarity": 3,
     "cost": 2,
     "buffId": 4020104,
-    "extraBuffDesc": "基础符石",
+    "extraBuffDesc": "基礎符石",
     "shield": 0.4
   },
   {
@@ -46,7 +46,7 @@
     "rarity": 3,
     "cost": 4,
     "buffId": 4020105,
-    "extraBuffDesc": "基础符石",
+    "extraBuffDesc": "基礎符石",
     "unlockQuestId": 10300117,
     "def": 0.45,
     "hp": 0.3
@@ -58,7 +58,7 @@
     "rarity": 3,
     "cost": 4,
     "buffId": 4020106,
-    "extraBuffDesc": "基础符石",
+    "extraBuffDesc": "基礎符石",
     "unlockQuestId": 10300103,
     "atk": 0.3,
     "def": 0.45
@@ -70,7 +70,7 @@
     "rarity": 3,
     "cost": 4,
     "buffId": 4020107,
-    "extraBuffDesc": "基础符石",
+    "extraBuffDesc": "基礎符石",
     "unlockQuestId": 10300102,
     "atk": 0.3,
     "hp": 0.3
@@ -82,7 +82,7 @@
     "rarity": 3,
     "cost": 4,
     "buffId": 4020108,
-    "extraBuffDesc": "基础符石",
+    "extraBuffDesc": "基礎符石",
     "unlockQuestId": 10300117,
     "hp": 0.65,
     "shield": 0.6
@@ -94,7 +94,7 @@
     "rarity": 3,
     "cost": 4,
     "buffId": 4020109,
-    "extraBuffDesc": "基础符石",
+    "extraBuffDesc": "基礎符石",
     "unlockQuestId": 10300101,
     "atk": 0.3,
     "shield": 0.4
@@ -106,7 +106,7 @@
     "rarity": 4,
     "cost": 8,
     "buffId": 4020501,
-    "extraBuffDesc": "造成傷害時，降低目標防禦力45.0%，持續10秒。",
+    "extraBuffDesc": "詞條效果: 生命值每降低20%，提升自身#2防禦力。",
     "extraBuffId": 4020201,
     "unlockQuestId": 10300104,
     "atk": 0.3
@@ -118,7 +118,7 @@
     "rarity": 4,
     "cost": 12,
     "buffId": 4020502,
-    "extraBuffDesc": "造成傷害時，降低目標防禦力20.0%，最多疊加3.0層，持續10秒。",
+    "extraBuffDesc": "詞條效果: 造成傷害時，降低目標防禦力20.0%，最多疊加3.0層，持續10秒。",
     "extraBuffId": 4020202,
     "unlockQuestId": 10300105,
     "atk": 0.45
@@ -130,7 +130,7 @@
     "rarity": 4,
     "cost": 15,
     "buffId": 4020503,
-    "extraBuffDesc": "受到傷害時，提升自身防禦力25.0%，最多疊加3.0層，持續10秒。",
+    "extraBuffDesc": "詞條效果: 受到傷害時，提升自身防禦力25.0%，最多疊加3.0層，持續10秒。",
     "extraBuffId": 4020203,
     "unlockQuestId": 10300106,
     "hp": 0.9
@@ -142,7 +142,7 @@
     "rarity": 4,
     "cost": 15,
     "buffId": 4020504,
-    "extraBuffDesc": "受到傷害時，提升自身攻擊力25.0%，最多疊加3.0層，持續10秒。",
+    "extraBuffDesc": "詞條效果: 受到傷害時，提升自身攻擊力25.0%，最多疊加3.0層，持續10秒。",
     "extraBuffId": 4020204,
     "unlockQuestId": 10300106,
     "shield": 0.9
@@ -154,7 +154,7 @@
     "rarity": 4,
     "cost": 8,
     "buffId": 4020505,
-    "extraBuffDesc": "造成治療效果時，提升目標防禦力45.0%，持續10秒。",
+    "extraBuffDesc": "詞條效果: 造成治療效果時，提升目標防禦力45.0%，持續10秒。",
     "extraBuffId": 4020205,
     "unlockQuestId": 10300118,
     "atk": 0.45
@@ -166,7 +166,7 @@
     "rarity": 4,
     "cost": 8,
     "buffId": 4020506,
-    "extraBuffDesc": "造成治療效果時，提升自身攻擊力35.0%，持續10秒。",
+    "extraBuffDesc": "詞條效果: 造成治療效果時，提升目標攻擊力35.0%，持續10秒。",
     "extraBuffId": 4020206,
     "unlockQuestId": 10300118,
     "atk": 0.45
@@ -178,7 +178,7 @@
     "rarity": 4,
     "cost": 8,
     "buffId": 4020507,
-    "extraBuffDesc": "造成治療效果時，提升自身攻擊力45.0%，最多疊加#2層，持續10秒。",
+    "extraBuffDesc": "詞條效果: 造成治療效果時，提升自身攻擊力45.0%，持續10秒。",
     "extraBuffId": 4020207,
     "unlockQuestId": 10300118,
     "atk": 0.45
@@ -190,7 +190,7 @@
     "rarity": 4,
     "cost": 12,
     "buffId": 4020508,
-    "extraBuffDesc": "受到傷害時，提升自身攻擊力20.0%，防禦力0.2，最多疊加3.0%層，持續10秒。",
+    "extraBuffDesc": "詞條效果: 受到傷害時，提升自身攻擊力20.0%，防禦力0.2，最多疊加3.0%層，持續10秒。",
     "extraBuffId": 4020208,
     "unlockQuestId": 10300119,
     "def": 0.3
@@ -202,7 +202,7 @@
     "rarity": 4,
     "cost": 12,
     "buffId": 4020509,
-    "extraBuffDesc": "造成傷害時，提升自身攻擊力20.0%，防禦力0.2，最多疊加3.0%層，持續10秒。",
+    "extraBuffDesc": "詞條效果: 造成傷害時，提升自身攻擊力20.0%，防禦力0.2，最多疊加3.0%層，持續10秒。",
     "extraBuffId": 4020209,
     "unlockQuestId": 10300119,
     "atk": 0.2
@@ -214,7 +214,7 @@
     "rarity": 4,
     "cost": 15,
     "buffId": 4020510,
-    "extraBuffDesc": "生命值降低至25.0%時，每秒回復7.5%最大生命值，持續10秒。",
+    "extraBuffDesc": "詞條效果: 生命值降低至25.0%時，每秒回復7.5%最大生命值，持續10秒。",
     "extraBuffId": 4020210,
     "unlockQuestId": 10300120,
     "hp": 0.9
@@ -226,7 +226,7 @@
     "rarity": 4,
     "cost": 15,
     "buffId": 4020511,
-    "extraBuffDesc": "生命值每降低20%，提升自身15.0%攻擊力。",
+    "extraBuffDesc": "詞條效果: 生命值每降低20%，提升自身15.0%攻擊力。",
     "extraBuffId": 4020211,
     "unlockQuestId": 10300120,
     "hp": 0.9
@@ -238,7 +238,7 @@
     "rarity": 4,
     "cost": 15,
     "buffId": 4020512,
-    "extraBuffDesc": "生命值每降低20%，提升自身4.0防禦力。",
+    "extraBuffDesc": "詞條效果: 生命值每降低20%，提升自身4.0防禦力。",
     "extraBuffId": 4020212,
     "unlockQuestId": 10300120,
     "hp": 0.9
@@ -250,7 +250,7 @@
     "rarity": 4,
     "cost": 15,
     "buffId": 4020513,
-    "extraBuffDesc": "造成傷害時，若目標擁有護盾，傷害提升100.0%。",
+    "extraBuffDesc": "詞條效果: 造成傷害時，若目標擁有護盾，傷害提升100.0%。",
     "extraBuffId": 4020213,
     "unlockQuestId": 10300104,
     "atk": 0.55
@@ -262,7 +262,7 @@
     "rarity": 4,
     "cost": 15,
     "buffId": 4020514,
-    "extraBuffDesc": "造成傷害時，若目標沒有護盾，傷害提升100.0%。",
+    "extraBuffDesc": "詞條效果: 造成傷害時，若目標沒有護盾，傷害提升100.0%。",
     "extraBuffId": 4020214,
     "unlockQuestId": 10300119,
     "atk": 0.5
@@ -274,7 +274,7 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020602,
-    "extraBuffDesc": "獲得效果-爆破",
+    "extraBuffDesc": "詞條效果: 獲得號令者能力-爆破",
     "extraBuffId": 4020302,
     "unlockQuestId": 10300111,
     "atk": 1.0,
@@ -289,7 +289,7 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020603,
-    "extraBuffDesc": "獲得效果-侵蝕",
+    "extraBuffDesc": "詞條效果: 獲得號令者能力-侵蝕",
     "extraBuffId": 4020303,
     "unlockQuestId": 10300113,
     "atk": 0.5,
@@ -304,7 +304,7 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020604,
-    "extraBuffDesc": "獲得效果-霹靂",
+    "extraBuffDesc": "詞條效果: 獲得號令者能力-霹靂",
     "extraBuffId": 4020304,
     "unlockQuestId": 10300122,
     "atk": 1.0,
@@ -319,7 +319,7 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020605,
-    "extraBuffDesc": "獲得效果-猩紅",
+    "extraBuffDesc": "詞條效果: 獲得號令者能力-猩紅",
     "extraBuffId": 4020305,
     "unlockQuestId": 10300109,
     "atk": 1.0,
@@ -334,7 +334,7 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020606,
-    "extraBuffDesc": "獲得效果-枯萎",
+    "extraBuffDesc": "詞條效果: 獲得號令者能力-枯萎",
     "extraBuffId": 4020306,
     "unlockQuestId": 10300122,
     "atk": 1.0,
@@ -349,7 +349,7 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020608,
-    "extraBuffDesc": "獲得效果-復仇",
+    "extraBuffDesc": "詞條效果: 獲得號令者能力-復仇",
     "extraBuffId": 4020308,
     "unlockQuestId": 10300112,
     "atk": 1.5
@@ -361,7 +361,7 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020610,
-    "extraBuffDesc": "獲得效果-殘火",
+    "extraBuffDesc": "詞條效果: 獲得號令者能力-殘火",
     "extraBuffId": 4020310,
     "unlockQuestId": 10300114,
     "atk": 1.0,
@@ -376,7 +376,7 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020611,
-    "extraBuffDesc": "獲得效果-舍身",
+    "extraBuffDesc": "詞條效果: 獲得號令者能力-舍身",
     "extraBuffId": 4020311,
     "unlockQuestId": 10300110,
     "atk": 1.5
@@ -388,7 +388,7 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020613,
-    "extraBuffDesc": "獲得效果-浴血",
+    "extraBuffDesc": "詞條效果: 獲得號令者能力-浴血",
     "extraBuffId": 4020313,
     "unlockQuestId": 10300107,
     "atk": 1.0,

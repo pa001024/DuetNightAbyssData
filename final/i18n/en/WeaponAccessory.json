@@ -233,50 +233,50 @@
   },
   {
     "id": 10030,
-    "name": "龙渊穗·锈红",
-    "desc": "穗为缰，缚神君。",
+    "name": "Loongyuan Tassel: Rust Red",
+    "desc": "A tassel turned into reins, binding the divine.",
     "icon": "T_Fashion_Weapon34_01",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10031,
-    "name": "龙渊穗·绛紫",
-    "desc": "穗为缰，缚神君。",
+    "name": "Loongyuan Tassel: Violet",
+    "desc": "A tassel turned into reins, binding the divine.",
     "icon": "T_Fashion_Weapon34_02",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10032,
-    "name": "龙渊穗·涅白",
-    "desc": "穗为缰，缚神君。",
+    "name": "Loongyuan Tassel: Opaque White",
+    "desc": "A tassel turned into reins, binding the divine.",
     "icon": "T_Fashion_Weapon34",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10033,
-    "name": "龙纹坠·锈红",
-    "desc": "蟠龙栖玄玉。",
+    "name": "Uncoiled Roar: Rust Red",
+    "desc": "A coiling loong roars upon mystic jade.",
     "icon": "T_Fashion_Weapon35_01",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10034,
-    "name": "龙纹坠·绛紫",
-    "desc": "蟠龙栖玄玉。",
+    "name": "Uncoiled Roar: Violet",
+    "desc": "A coiling loong roars upon mystic jade.",
     "icon": "T_Fashion_Weapon35_02",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10035,
-    "name": "龙纹坠·涅白",
-    "desc": "蟠龙栖玄玉。",
+    "name": "Uncoiled Roar: Opaque White",
+    "desc": "A coiling loong roars upon mystic jade.",
     "icon": "T_Fashion_Weapon35",
     "rarity": 5,
-    "unlock": "Available though Prism Exchange"
+    "unlock": "Available through Prism Exchange"
   }
 ]

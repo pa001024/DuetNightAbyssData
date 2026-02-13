@@ -169,7 +169,7 @@
   },
   {
     "id": 10030,
-    "name": "Portrait : Zhiliu",
+    "name": "Portrait: The Mastermind",
     "desc": "Unlocks Zhiliu as your avatar icon.",
     "icon": "T_Head_Zhiliu"
   },
@@ -769,91 +769,91 @@
   },
   {
     "id": 30095,
-    "name": "诡异的光",
+    "name": "Uncanny Glow",
     "desc": "Used as an avatar.",
     "icon": "T_Head_Art_0012"
   },
   {
     "id": 30096,
-    "name": "快乐起飞",
+    "name": "Sky-High Spirits",
     "desc": "Used as an avatar.",
     "icon": "T_Head_Art_0001"
   },
   {
     "id": 30097,
-    "name": "负罪者的肖像·小憩",
+    "name": "Portrait: The Guilty – Repose",
     "desc": "Used as an avatar.",
     "icon": "T_Head_Other0018"
   },
   {
     "id": 30098,
-    "name": "飘零剑客的肖像·雨夜",
+    "name": "Portrait: The Drifter – Rainy Night",
     "desc": "Used as an avatar.",
     "icon": "T_Head_Other0019"
   },
   {
     "id": 30099,
-    "name": "黑与白·太皓",
+    "name": "Sable and Argent – Taihao",
     "desc": "Used as an avatar.",
     "icon": "T_Head_Other0034"
   },
   {
     "id": 30100,
-    "name": "黑与白·烛阴",
+    "name": "Sable and Argent – Zhuyin",
     "desc": "Used as an avatar.",
     "icon": "T_Head_Other0035"
   },
   {
     "id": 30101,
-    "name": "华胥药师的肖像·专注",
+    "name": "Portrait: The Huaxu Apothecary – Focus",
     "desc": "Used as an avatar.",
     "icon": "T_Head_Other0033"
   },
   {
     "id": 30102,
-    "name": "回忆中的肖像·决意",
+    "name": "Portrait: Memory – Resolve",
     "desc": "Used as an avatar.",
     "icon": "T_Head_Other0029"
   },
   {
     "id": 30103,
-    "name": "夜莺小姐的肖像·绿荫",
+    "name": "Portrait: Miss Nightingale – Dappled Shade",
     "desc": "Used as an avatar.",
     "icon": "T_Head_Other0014"
   },
   {
     "id": 30104,
-    "name": "逐灯者的肖像·眺望",
+    "name": "Portrait: The Light Chaser – Distant Gaze",
     "desc": "Used as an avatar.",
     "icon": "T_Head_Other0016"
   },
   {
     "id": 30105,
-    "name": "大军团长的肖像·俯瞰",
+    "name": "Portrait: Legion's Chief – Commanding View",
     "desc": "Used as an avatar.",
     "icon": "T_Head_Other0030"
   },
   {
     "id": 30106,
-    "name": "粮秣专员的肖像·慌乱",
+    "name": "Portrait: The Commissary – Flustered",
     "desc": "Used as an avatar.",
     "icon": "T_Head_Other0031"
   },
   {
     "id": 30107,
-    "name": "机傀大乱斗",
+    "name": "Great Chaos of Mechapuppets",
     "desc": "Used as an avatar.",
     "icon": "T_Head_Art_0011"
   },
   {
     "id": 30108,
-    "name": "惊鱼",
+    "name": "Fishtonished",
     "desc": "Used as an avatar.",
     "icon": "T_Head_Art_0013"
   },
   {
     "id": 30109,
-    "name": "呐喊",
+    "name": "The Scream",
     "desc": "Used as an avatar.",
     "icon": "T_Head_Art_0002"
   }
