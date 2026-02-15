@@ -4,6 +4,7 @@
     "name": "洄游魚",
     "level": 2,
     "type": 1,
+    "rarity": 2,
     "length": [
       20,
       40
@@ -29,6 +30,7 @@
     "name": "多彩棘刺",
     "level": 1,
     "type": 1,
+    "rarity": 2,
     "length": [
       80,
       100
@@ -54,6 +56,7 @@
     "name": "銀條魚",
     "level": 1,
     "type": 1,
+    "rarity": 3,
     "length": [
       50,
       120
@@ -79,6 +82,7 @@
     "name": "長須翁",
     "level": 1,
     "type": 1,
+    "rarity": 3,
     "length": [
       50,
       150
@@ -104,6 +108,7 @@
     "name": "斑點狗魚",
     "level": 1,
     "type": 1,
+    "rarity": 2,
     "length": [
       60,
       240
@@ -129,6 +134,7 @@
     "name": "鰲蝦",
     "level": 1,
     "type": 1,
+    "rarity": 2,
     "length": [
       3,
       15
@@ -154,6 +160,7 @@
     "name": "利齒侏儒",
     "level": 2,
     "type": 1,
+    "rarity": 3,
     "length": [
       3,
       15
@@ -179,6 +186,7 @@
     "name": "吧唧吧唧魚",
     "level": 1,
     "type": 1,
+    "rarity": 2,
     "length": [
       15,
       30
@@ -204,6 +212,7 @@
     "name": "長腿先生",
     "level": 1,
     "type": 1,
+    "rarity": 2,
     "length": [
       5,
       20
@@ -229,6 +238,7 @@
     "name": "永恆燈塔",
     "level": 2,
     "type": 1,
+    "rarity": 3,
     "length": [
       3,
       8
@@ -255,6 +265,7 @@
     "name": "逐汐魚",
     "level": 3,
     "type": 1,
+    "rarity": 3,
     "length": [
       100,
       300
@@ -280,6 +291,7 @@
     "name": "洋面飛鳥",
     "level": 4,
     "type": 1,
+    "rarity": 4,
     "length": [
       20,
       45
@@ -306,6 +318,7 @@
     "name": "海洋寶寶",
     "level": 5,
     "type": 1,
+    "rarity": 4,
     "length": [
       4,
       9
@@ -331,6 +344,7 @@
     "name": "繁葉銀鮫",
     "level": 6,
     "type": 3,
+    "rarity": 5,
     "length": [
       100,
       200
@@ -356,6 +370,7 @@
     "name": "珠紋扁扁鯊",
     "level": 5,
     "type": 1,
+    "rarity": 4,
     "length": [
       50,
       100
@@ -380,6 +395,7 @@
     "name": "齒輪鐘螺蟹",
     "level": 4,
     "type": 1,
+    "rarity": 3,
     "length": [
       8,
       15
@@ -406,6 +422,7 @@
     "name": "懸珠魚",
     "level": 5,
     "type": 1,
+    "rarity": 4,
     "length": [
       50,
       150
@@ -431,6 +448,7 @@
     "name": "蜮",
     "level": 4,
     "type": 1,
+    "rarity": 3,
     "length": [
       4,
       10
@@ -456,6 +474,7 @@
     "name": "雙髻鯊",
     "level": 6,
     "type": 3,
+    "rarity": 5,
     "length": [
       100,
       300
@@ -479,6 +498,7 @@
     "name": "月牙魚",
     "level": 2,
     "type": 1,
+    "rarity": 3,
     "length": [
       20,
       50
@@ -504,6 +524,7 @@
     "name": "湖中夫人",
     "level": 2,
     "type": 1,
+    "rarity": 3,
     "length": [
       50,
       120
@@ -530,6 +551,7 @@
     "name": "淚湖魚",
     "level": 3,
     "type": 1,
+    "rarity": 4,
     "length": [
       70,
       150
@@ -556,6 +578,7 @@
     "name": "洗衣槌魚",
     "level": 3,
     "type": 1,
+    "rarity": 4,
     "length": [
       20,
       35
@@ -581,6 +604,7 @@
     "name": "光椎魚",
     "level": 6,
     "type": 3,
+    "rarity": 5,
     "length": [
       120,
       300
@@ -606,6 +630,7 @@
     "name": "斑斕舞衣",
     "level": 4,
     "type": 1,
+    "rarity": 3,
     "length": [
       3,
       10
@@ -631,6 +656,7 @@
     "name": "壽星烏賊",
     "level": 4,
     "type": 1,
+    "rarity": 3,
     "length": [
       3,
       5
@@ -657,6 +683,7 @@
     "name": "負荊魨",
     "level": 5,
     "type": 1,
+    "rarity": 4,
     "length": [
       30,
       50
@@ -682,6 +709,7 @@
     "name": "荷包鯉",
     "level": 5,
     "type": 1,
+    "rarity": 4,
     "length": [
       30,
       50
@@ -706,6 +734,7 @@
     "name": "水龍王",
     "level": 6,
     "type": 3,
+    "rarity": 5,
     "length": [
       200,
       400
@@ -729,6 +758,7 @@
     "name": "鼠鼠魚",
     "level": 3,
     "type": 1,
+    "rarity": 3,
     "length": [
       7,
       15
@@ -755,6 +785,7 @@
     "name": "囓骨鰻",
     "level": 4,
     "type": 1,
+    "rarity": 3,
     "length": [
       30,
       50
@@ -780,6 +811,7 @@
     "name": "水中骷髏",
     "level": 5,
     "type": 1,
+    "rarity": 4,
     "length": [
       10,
       20
@@ -806,6 +838,7 @@
     "name": "驚聲尖笑獸",
     "level": 5,
     "type": 1,
+    "rarity": 4,
     "length": [
       50,
       100
@@ -831,6 +864,7 @@
     "name": "水蠊",
     "level": 6,
     "type": 3,
+    "rarity": 5,
     "length": [
       10,
       25
@@ -856,6 +890,7 @@
     "name": "石磨比目",
     "level": 4,
     "type": 1,
+    "rarity": 3,
     "length": [
       50,
       80
@@ -882,6 +917,7 @@
     "name": "蘭蟹",
     "level": 4,
     "type": 1,
+    "rarity": 3,
     "length": [
       13,
       16
@@ -907,6 +943,7 @@
     "name": "海星",
     "level": 5,
     "type": 1,
+    "rarity": 4,
     "length": [
       5,
       10
@@ -933,6 +970,7 @@
     "name": "小炮仗",
     "level": 5,
     "type": 1,
+    "rarity": 4,
     "length": [
       10,
       20
@@ -957,6 +995,7 @@
     "name": "滄浪鯤",
     "level": 6,
     "type": 3,
+    "rarity": 5,
     "length": [
       200,
       250
@@ -980,6 +1019,7 @@
     "name": "刀魚",
     "level": 4,
     "type": 1,
+    "rarity": 3,
     "length": [
       15,
       25
@@ -1006,6 +1046,7 @@
     "name": "桃花鱖",
     "level": 4,
     "type": 1,
+    "rarity": 3,
     "length": [
       20,
       40
@@ -1032,6 +1073,7 @@
     "name": "四腮鱸魚",
     "level": 5,
     "type": 1,
+    "rarity": 4,
     "length": [
       8,
       10
@@ -1057,6 +1099,7 @@
     "name": "鳳凰魚",
     "level": 5,
     "type": 1,
+    "rarity": 4,
     "length": [
       10,
       17
@@ -1081,6 +1124,7 @@
     "name": "帝王之徵",
     "level": 6,
     "type": 3,
+    "rarity": 5,
     "length": [
       500,
       560
@@ -1104,6 +1148,7 @@
     "name": "烏睛",
     "level": 4,
     "type": 1,
+    "rarity": 3,
     "length": [
       15,
       30
@@ -1130,6 +1175,7 @@
     "name": "泥雀",
     "level": 4,
     "type": 1,
+    "rarity": 3,
     "length": [
       6,
       20
@@ -1156,6 +1202,7 @@
     "name": "無明魚",
     "level": 5,
     "type": 1,
+    "rarity": 4,
     "length": [
       5,
       10
@@ -1181,6 +1228,7 @@
     "name": "蟾蜍",
     "level": 5,
     "type": 1,
+    "rarity": 4,
     "length": [
       10,
       15
@@ -1205,6 +1253,7 @@
     "name": "撲棱魚",
     "level": 6,
     "type": 3,
+    "rarity": 5,
     "length": [
       30,
       50
@@ -1228,6 +1277,7 @@
     "name": "洄游魚·異種",
     "level": 2,
     "type": 2,
+    "rarity": 2,
     "length": [
       20,
       40
@@ -1249,6 +1299,7 @@
     "name": "多彩棘刺·異種",
     "level": 1,
     "type": 2,
+    "rarity": 2,
     "length": [
       80,
       100
@@ -1270,6 +1321,7 @@
     "name": "銀條魚·異種",
     "level": 1,
     "type": 2,
+    "rarity": 3,
     "length": [
       50,
       120
@@ -1291,6 +1343,7 @@
     "name": "長須翁·異種",
     "level": 1,
     "type": 2,
+    "rarity": 3,
     "length": [
       50,
       150
@@ -1312,6 +1365,7 @@
     "name": "斑點狗魚·異種",
     "level": 1,
     "type": 2,
+    "rarity": 2,
     "length": [
       60,
       240
@@ -1333,6 +1387,7 @@
     "name": "鰲蝦·異種",
     "level": 1,
     "type": 2,
+    "rarity": 2,
     "length": [
       3,
       15
@@ -1354,6 +1409,7 @@
     "name": "利齒侏儒·異種",
     "level": 2,
     "type": 2,
+    "rarity": 3,
     "length": [
       3,
       15
@@ -1375,6 +1431,7 @@
     "name": "吧唧吧唧魚·異種",
     "level": 1,
     "type": 2,
+    "rarity": 2,
     "length": [
       15,
       30
@@ -1396,6 +1453,7 @@
     "name": "長腿先生·異種",
     "level": 1,
     "type": 2,
+    "rarity": 2,
     "length": [
       5,
       20
@@ -1417,6 +1475,7 @@
     "name": "永恆燈塔·異種",
     "level": 2,
     "type": 2,
+    "rarity": 3,
     "length": [
       3,
       8
@@ -1439,6 +1498,7 @@
     "name": "逐汐魚·異種",
     "level": 3,
     "type": 2,
+    "rarity": 3,
     "length": [
       100,
       300
@@ -1460,6 +1520,7 @@
     "name": "洋面飛鳥·異種",
     "level": 4,
     "type": 2,
+    "rarity": 4,
     "length": [
       20,
       45
@@ -1482,6 +1543,7 @@
     "name": "海洋寶寶·異種",
     "level": 5,
     "type": 2,
+    "rarity": 4,
     "length": [
       4,
       9
@@ -1503,6 +1565,7 @@
     "name": "繁葉銀鮫·異種",
     "level": 6,
     "type": 4,
+    "rarity": 5,
     "length": [
       100,
       200
@@ -1524,6 +1587,7 @@
     "name": "珠紋扁扁鯊·異種",
     "level": 5,
     "type": 2,
+    "rarity": 4,
     "length": [
       50,
       100
@@ -1544,6 +1608,7 @@
     "name": "齒輪鐘螺蟹·異種",
     "level": 4,
     "type": 2,
+    "rarity": 3,
     "length": [
       8,
       15
@@ -1566,6 +1631,7 @@
     "name": "懸珠魚·異種",
     "level": 5,
     "type": 2,
+    "rarity": 4,
     "length": [
       50,
       150
@@ -1587,6 +1653,7 @@
     "name": "蜮·異種",
     "level": 4,
     "type": 2,
+    "rarity": 3,
     "length": [
       4,
       10
@@ -1608,6 +1675,7 @@
     "name": "雙髻鯊·異種",
     "level": 6,
     "type": 4,
+    "rarity": 5,
     "length": [
       100,
       300
@@ -1627,6 +1695,7 @@
     "name": "月牙魚·異種",
     "level": 2,
     "type": 2,
+    "rarity": 3,
     "length": [
       20,
       50
@@ -1648,6 +1717,7 @@
     "name": "湖中夫人·異種",
     "level": 2,
     "type": 2,
+    "rarity": 3,
     "length": [
       50,
       120
@@ -1670,6 +1740,7 @@
     "name": "淚湖魚·異種",
     "level": 3,
     "type": 2,
+    "rarity": 4,
     "length": [
       70,
       150
@@ -1692,6 +1763,7 @@
     "name": "洗衣槌魚·異種",
     "level": 3,
     "type": 2,
+    "rarity": 4,
     "length": [
       20,
       35
@@ -1713,6 +1785,7 @@
     "name": "光椎魚·異種",
     "level": 6,
     "type": 4,
+    "rarity": 5,
     "length": [
       120,
       300
@@ -1734,6 +1807,7 @@
     "name": "斑斕舞衣·異種",
     "level": 4,
     "type": 2,
+    "rarity": 3,
     "length": [
       3,
       10
@@ -1755,6 +1829,7 @@
     "name": "壽星烏賊·異種",
     "level": 4,
     "type": 2,
+    "rarity": 3,
     "length": [
       3,
       5
@@ -1777,6 +1852,7 @@
     "name": "負荊魨·異種",
     "level": 5,
     "type": 2,
+    "rarity": 4,
     "length": [
       30,
       50
@@ -1798,6 +1874,7 @@
     "name": "荷包鯉·異種",
     "level": 5,
     "type": 2,
+    "rarity": 4,
     "length": [
       30,
       50
@@ -1818,6 +1895,7 @@
     "name": "水龍王·異種",
     "level": 6,
     "type": 4,
+    "rarity": 5,
     "length": [
       200,
       400
@@ -1837,6 +1915,7 @@
     "name": "鼠鼠魚·異種",
     "level": 3,
     "type": 2,
+    "rarity": 3,
     "length": [
       7,
       15
@@ -1859,6 +1938,7 @@
     "name": "囓骨鰻·異種",
     "level": 4,
     "type": 2,
+    "rarity": 3,
     "length": [
       30,
       50
@@ -1880,6 +1960,7 @@
     "name": "水中骷髏·異種",
     "level": 5,
     "type": 2,
+    "rarity": 4,
     "length": [
       10,
       20
@@ -1902,6 +1983,7 @@
     "name": "驚聲尖笑獸·異種",
     "level": 5,
     "type": 2,
+    "rarity": 4,
     "length": [
       50,
       100
@@ -1923,6 +2005,7 @@
     "name": "水蠊·異種",
     "level": 6,
     "type": 4,
+    "rarity": 5,
     "length": [
       10,
       25
@@ -1944,6 +2027,7 @@
     "name": "石磨比目·異種",
     "level": 4,
     "type": 2,
+    "rarity": 3,
     "length": [
       50,
       80
@@ -1966,6 +2050,7 @@
     "name": "蘭蟹·異種",
     "level": 4,
     "type": 2,
+    "rarity": 3,
     "length": [
       13,
       16
@@ -1987,6 +2072,7 @@
     "name": "海星·異種",
     "level": 5,
     "type": 2,
+    "rarity": 4,
     "length": [
       5,
       10
@@ -2009,6 +2095,7 @@
     "name": "小炮仗·異種",
     "level": 5,
     "type": 2,
+    "rarity": 4,
     "length": [
       10,
       20
@@ -2029,6 +2116,7 @@
     "name": "滄浪鯤·異種",
     "level": 6,
     "type": 4,
+    "rarity": 5,
     "length": [
       200,
       250
@@ -2048,6 +2136,7 @@
     "name": "刀魚·異種",
     "level": 4,
     "type": 2,
+    "rarity": 3,
     "length": [
       15,
       25
@@ -2070,6 +2159,7 @@
     "name": "桃花鱖·異種",
     "level": 4,
     "type": 2,
+    "rarity": 3,
     "length": [
       20,
       40
@@ -2092,6 +2182,7 @@
     "name": "四腮鱸魚·異種",
     "level": 5,
     "type": 2,
+    "rarity": 4,
     "length": [
       8,
       10
@@ -2113,6 +2204,7 @@
     "name": "鳳凰魚·異種",
     "level": 5,
     "type": 2,
+    "rarity": 4,
     "length": [
       10,
       17
@@ -2133,6 +2225,7 @@
     "name": "帝王之徵·異種",
     "level": 6,
     "type": 4,
+    "rarity": 5,
     "length": [
       500,
       560
@@ -2152,6 +2245,7 @@
     "name": "烏睛·異種",
     "level": 4,
     "type": 2,
+    "rarity": 3,
     "length": [
       15,
       30
@@ -2174,6 +2268,7 @@
     "name": "泥雀·異種",
     "level": 4,
     "type": 2,
+    "rarity": 3,
     "length": [
       6,
       20
@@ -2196,6 +2291,7 @@
     "name": "無明魚·異種",
     "level": 5,
     "type": 2,
+    "rarity": 4,
     "length": [
       5,
       10
@@ -2217,6 +2313,7 @@
     "name": "蟾蜍·異種",
     "level": 5,
     "type": 2,
+    "rarity": 4,
     "length": [
       10,
       15
@@ -2237,6 +2334,7 @@
     "name": "撲棱魚·異種",
     "level": 6,
     "type": 4,
+    "rarity": 5,
     "length": [
       30,
       50

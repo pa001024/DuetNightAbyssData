@@ -4,6 +4,7 @@
     "name": "회유어",
     "level": 2,
     "type": 1,
+    "rarity": 2,
     "length": [
       20,
       40
@@ -29,6 +30,7 @@
     "name": "오색 가시",
     "level": 1,
     "type": 1,
+    "rarity": 2,
     "length": [
       80,
       100
@@ -54,6 +56,7 @@
     "name": "은괴어",
     "level": 1,
     "type": 1,
+    "rarity": 3,
     "length": [
       50,
       120
@@ -79,6 +82,7 @@
     "name": "장수옹",
     "level": 1,
     "type": 1,
+    "rarity": 3,
     "length": [
       50,
       150
@@ -104,6 +108,7 @@
     "name": "반점 창꼬치",
     "level": 1,
     "type": 1,
+    "rarity": 2,
     "length": [
       60,
       240
@@ -129,6 +134,7 @@
     "name": "자라새우",
     "level": 1,
     "type": 1,
+    "rarity": 2,
     "length": [
       3,
       15
@@ -154,6 +160,7 @@
     "name": "이빨 난쟁이",
     "level": 2,
     "type": 1,
+    "rarity": 3,
     "length": [
       3,
       15
@@ -179,6 +186,7 @@
     "name": "쩝쩝어",
     "level": 1,
     "type": 1,
+    "rarity": 2,
     "length": [
       15,
       30
@@ -204,6 +212,7 @@
     "name": "키다리 아저씨",
     "level": 1,
     "type": 1,
+    "rarity": 2,
     "length": [
       5,
       20
@@ -229,6 +238,7 @@
     "name": "영원의 등대",
     "level": 2,
     "type": 1,
+    "rarity": 3,
     "length": [
       3,
       8
@@ -255,6 +265,7 @@
     "name": "조수어",
     "level": 3,
     "type": 1,
+    "rarity": 3,
     "length": [
       100,
       300
@@ -280,6 +291,7 @@
     "name": "수면 비행어",
     "level": 4,
     "type": 1,
+    "rarity": 4,
     "length": [
       20,
       45
@@ -306,6 +318,7 @@
     "name": "보글보글밥",
     "level": 5,
     "type": 1,
+    "rarity": 4,
     "length": [
       4,
       9
@@ -331,6 +344,7 @@
     "name": "이파리 은상어",
     "level": 6,
     "type": 3,
+    "rarity": 5,
     "length": [
       100,
       200
@@ -356,6 +370,7 @@
     "name": "무늬 납작 상어",
     "level": 5,
     "type": 1,
+    "rarity": 4,
     "length": [
       50,
       100
@@ -380,6 +395,7 @@
     "name": "톱니 소라게",
     "level": 4,
     "type": 1,
+    "rarity": 3,
     "length": [
       8,
       15
@@ -406,6 +422,7 @@
     "name": "현주어",
     "level": 5,
     "type": 1,
+    "rarity": 4,
     "length": [
       50,
       150
@@ -431,6 +448,7 @@
     "name": "역",
     "level": 4,
     "type": 1,
+    "rarity": 3,
     "length": [
       4,
       10
@@ -456,6 +474,7 @@
     "name": "상투 상어",
     "level": 6,
     "type": 3,
+    "rarity": 5,
     "length": [
       100,
       300
@@ -479,6 +498,7 @@
     "name": "월야어",
     "level": 2,
     "type": 1,
+    "rarity": 3,
     "length": [
       20,
       50
@@ -504,6 +524,7 @@
     "name": "호수 부인",
     "level": 2,
     "type": 1,
+    "rarity": 3,
     "length": [
       50,
       120
@@ -530,6 +551,7 @@
     "name": "눈물의 호수어",
     "level": 3,
     "type": 1,
+    "rarity": 4,
     "length": [
       70,
       150
@@ -556,6 +578,7 @@
     "name": "빨래 방망이어",
     "level": 3,
     "type": 1,
+    "rarity": 4,
     "length": [
       20,
       35
@@ -581,6 +604,7 @@
     "name": "빛고래",
     "level": 6,
     "type": 3,
+    "rarity": 5,
     "length": [
       120,
       300
@@ -606,6 +630,7 @@
     "name": "알로록치마",
     "level": 4,
     "type": 1,
+    "rarity": 3,
     "length": [
       3,
       10
@@ -631,6 +656,7 @@
     "name": "수성 오징어",
     "level": 4,
     "type": 1,
+    "rarity": 3,
     "length": [
       3,
       5
@@ -657,6 +683,7 @@
     "name": "고사 복어",
     "level": 5,
     "type": 1,
+    "rarity": 4,
     "length": [
       30,
       50
@@ -682,6 +709,7 @@
     "name": "주머니 잉어",
     "level": 5,
     "type": 1,
+    "rarity": 4,
     "length": [
       30,
       50
@@ -706,6 +734,7 @@
     "name": "수룡왕",
     "level": 6,
     "type": 3,
+    "rarity": 5,
     "length": [
       200,
       400
@@ -729,6 +758,7 @@
     "name": "찍찍어",
     "level": 3,
     "type": 1,
+    "rarity": 3,
     "length": [
       7,
       15
@@ -755,6 +785,7 @@
     "name": "교골 장어",
     "level": 4,
     "type": 1,
+    "rarity": 3,
     "length": [
       30,
       50
@@ -780,6 +811,7 @@
     "name": "수중 해골",
     "level": 5,
     "type": 1,
+    "rarity": 4,
     "length": [
       10,
       20
@@ -806,6 +838,7 @@
     "name": "괴성수",
     "level": 5,
     "type": 1,
+    "rarity": 4,
     "length": [
       50,
       100
@@ -831,6 +864,7 @@
     "name": "물바퀴",
     "level": 6,
     "type": 3,
+    "rarity": 5,
     "length": [
       10,
       25
@@ -856,6 +890,7 @@
     "name": "맷돌비목어",
     "level": 4,
     "type": 1,
+    "rarity": 3,
     "length": [
       50,
       80
@@ -882,6 +917,7 @@
     "name": "난꽃게",
     "level": 4,
     "type": 1,
+    "rarity": 3,
     "length": [
       13,
       16
@@ -907,6 +943,7 @@
     "name": "불가사리",
     "level": 5,
     "type": 1,
+    "rarity": 4,
     "length": [
       5,
       10
@@ -933,6 +970,7 @@
     "name": "폭죽새우",
     "level": 5,
     "type": 1,
+    "rarity": 4,
     "length": [
       10,
       20
@@ -957,6 +995,7 @@
     "name": "창랑곤",
     "level": 6,
     "type": 3,
+    "rarity": 5,
     "length": [
       200,
       250
@@ -980,6 +1019,7 @@
     "name": "웅어",
     "level": 4,
     "type": 1,
+    "rarity": 3,
     "length": [
       15,
       25
@@ -1006,6 +1046,7 @@
     "name": "도화어",
     "level": 4,
     "type": 1,
+    "rarity": 3,
     "length": [
       20,
       40
@@ -1032,6 +1073,7 @@
     "name": "꺽정이",
     "level": 5,
     "type": 1,
+    "rarity": 4,
     "length": [
       8,
       10
@@ -1057,6 +1099,7 @@
     "name": "봉황어",
     "level": 5,
     "type": 1,
+    "rarity": 4,
     "length": [
       10,
       17
@@ -1081,6 +1124,7 @@
     "name": "제왕의 증거",
     "level": 6,
     "type": 3,
+    "rarity": 5,
     "length": [
       500,
       560
@@ -1104,6 +1148,7 @@
     "name": "가모치",
     "level": 4,
     "type": 1,
+    "rarity": 3,
     "length": [
       15,
       30
@@ -1130,6 +1175,7 @@
     "name": "통통어",
     "level": 4,
     "type": 1,
+    "rarity": 3,
     "length": [
       6,
       20
@@ -1156,6 +1202,7 @@
     "name": "장님물고기",
     "level": 5,
     "type": 1,
+    "rarity": 4,
     "length": [
       5,
       10
@@ -1181,6 +1228,7 @@
     "name": "두꺼비",
     "level": 5,
     "type": 1,
+    "rarity": 4,
     "length": [
       10,
       15
@@ -1205,6 +1253,7 @@
     "name": "파닥감펭",
     "level": 6,
     "type": 3,
+    "rarity": 5,
     "length": [
       30,
       50
@@ -1228,6 +1277,7 @@
     "name": "회유어·특이종",
     "level": 2,
     "type": 2,
+    "rarity": 2,
     "length": [
       20,
       40
@@ -1249,6 +1299,7 @@
     "name": "오색 가시·특이종",
     "level": 1,
     "type": 2,
+    "rarity": 2,
     "length": [
       80,
       100
@@ -1270,6 +1321,7 @@
     "name": "은괴어·특이종",
     "level": 1,
     "type": 2,
+    "rarity": 3,
     "length": [
       50,
       120
@@ -1291,6 +1343,7 @@
     "name": "장수옹·특이종",
     "level": 1,
     "type": 2,
+    "rarity": 3,
     "length": [
       50,
       150
@@ -1312,6 +1365,7 @@
     "name": "반점 창꼬치·특이종",
     "level": 1,
     "type": 2,
+    "rarity": 2,
     "length": [
       60,
       240
@@ -1333,6 +1387,7 @@
     "name": "자라새우·특이종",
     "level": 1,
     "type": 2,
+    "rarity": 2,
     "length": [
       3,
       15
@@ -1354,6 +1409,7 @@
     "name": "이빨 난쟁이·특이종",
     "level": 2,
     "type": 2,
+    "rarity": 3,
     "length": [
       3,
       15
@@ -1375,6 +1431,7 @@
     "name": "쩝쩝어·특이종",
     "level": 1,
     "type": 2,
+    "rarity": 2,
     "length": [
       15,
       30
@@ -1396,6 +1453,7 @@
     "name": "키다리 아저씨·특이종",
     "level": 1,
     "type": 2,
+    "rarity": 2,
     "length": [
       5,
       20
@@ -1417,6 +1475,7 @@
     "name": "영원의 등대·특이종",
     "level": 2,
     "type": 2,
+    "rarity": 3,
     "length": [
       3,
       8
@@ -1439,6 +1498,7 @@
     "name": "조수어·특이종",
     "level": 3,
     "type": 2,
+    "rarity": 3,
     "length": [
       100,
       300
@@ -1460,6 +1520,7 @@
     "name": "수면 비행어·특이종",
     "level": 4,
     "type": 2,
+    "rarity": 4,
     "length": [
       20,
       45
@@ -1482,6 +1543,7 @@
     "name": "보글보글밥·특이종",
     "level": 5,
     "type": 2,
+    "rarity": 4,
     "length": [
       4,
       9
@@ -1503,6 +1565,7 @@
     "name": "이파리 은상어·특이종",
     "level": 6,
     "type": 4,
+    "rarity": 5,
     "length": [
       100,
       200
@@ -1524,6 +1587,7 @@
     "name": "무늬 납작 특이종",
     "level": 5,
     "type": 2,
+    "rarity": 4,
     "length": [
       50,
       100
@@ -1544,6 +1608,7 @@
     "name": "톱니 소라게·특이종",
     "level": 4,
     "type": 2,
+    "rarity": 3,
     "length": [
       8,
       15
@@ -1566,6 +1631,7 @@
     "name": "현주어·특이종",
     "level": 5,
     "type": 2,
+    "rarity": 4,
     "length": [
       50,
       150
@@ -1587,6 +1653,7 @@
     "name": "역·특이종",
     "level": 4,
     "type": 2,
+    "rarity": 3,
     "length": [
       4,
       10
@@ -1608,6 +1675,7 @@
     "name": "상투 상어·특이종",
     "level": 6,
     "type": 4,
+    "rarity": 5,
     "length": [
       100,
       300
@@ -1627,6 +1695,7 @@
     "name": "월야어·특이종",
     "level": 2,
     "type": 2,
+    "rarity": 3,
     "length": [
       20,
       50
@@ -1648,6 +1717,7 @@
     "name": "호수 부인·특이종",
     "level": 2,
     "type": 2,
+    "rarity": 3,
     "length": [
       50,
       120
@@ -1670,6 +1740,7 @@
     "name": "눈물의 호수어·특이종",
     "level": 3,
     "type": 2,
+    "rarity": 4,
     "length": [
       70,
       150
@@ -1692,6 +1763,7 @@
     "name": "빨래 방망이어·특이종",
     "level": 3,
     "type": 2,
+    "rarity": 4,
     "length": [
       20,
       35
@@ -1713,6 +1785,7 @@
     "name": "빛고래·특이종",
     "level": 6,
     "type": 4,
+    "rarity": 5,
     "length": [
       120,
       300
@@ -1734,6 +1807,7 @@
     "name": "알로록치마·특이종",
     "level": 4,
     "type": 2,
+    "rarity": 3,
     "length": [
       3,
       10
@@ -1755,6 +1829,7 @@
     "name": "수성 오징어·특이종",
     "level": 4,
     "type": 2,
+    "rarity": 3,
     "length": [
       3,
       5
@@ -1777,6 +1852,7 @@
     "name": "고사 복어·특이종",
     "level": 5,
     "type": 2,
+    "rarity": 4,
     "length": [
       30,
       50
@@ -1798,6 +1874,7 @@
     "name": "주머니 잉어·특이종",
     "level": 5,
     "type": 2,
+    "rarity": 4,
     "length": [
       30,
       50
@@ -1818,6 +1895,7 @@
     "name": "수룡왕·특이종",
     "level": 6,
     "type": 4,
+    "rarity": 5,
     "length": [
       200,
       400
@@ -1837,6 +1915,7 @@
     "name": "찍찍어·특이종",
     "level": 3,
     "type": 2,
+    "rarity": 3,
     "length": [
       7,
       15
@@ -1859,6 +1938,7 @@
     "name": "교골 장어·특이종",
     "level": 4,
     "type": 2,
+    "rarity": 3,
     "length": [
       30,
       50
@@ -1880,6 +1960,7 @@
     "name": "수중 해골·특이종",
     "level": 5,
     "type": 2,
+    "rarity": 4,
     "length": [
       10,
       20
@@ -1902,6 +1983,7 @@
     "name": "괴성수·특이종",
     "level": 5,
     "type": 2,
+    "rarity": 4,
     "length": [
       50,
       100
@@ -1923,6 +2005,7 @@
     "name": "물바퀴·특이종",
     "level": 6,
     "type": 4,
+    "rarity": 5,
     "length": [
       10,
       25
@@ -1944,6 +2027,7 @@
     "name": "맷돌비목어·특이종",
     "level": 4,
     "type": 2,
+    "rarity": 3,
     "length": [
       50,
       80
@@ -1966,6 +2050,7 @@
     "name": "난꽃게·특이종",
     "level": 4,
     "type": 2,
+    "rarity": 3,
     "length": [
       13,
       16
@@ -1987,6 +2072,7 @@
     "name": "불가사리·특이종",
     "level": 5,
     "type": 2,
+    "rarity": 4,
     "length": [
       5,
       10
@@ -2009,6 +2095,7 @@
     "name": "폭죽새우·특이종",
     "level": 5,
     "type": 2,
+    "rarity": 4,
     "length": [
       10,
       20
@@ -2029,6 +2116,7 @@
     "name": "창랑곤·특이종",
     "level": 6,
     "type": 4,
+    "rarity": 5,
     "length": [
       200,
       250
@@ -2048,6 +2136,7 @@
     "name": "웅어·특이종",
     "level": 4,
     "type": 2,
+    "rarity": 3,
     "length": [
       15,
       25
@@ -2070,6 +2159,7 @@
     "name": "도화어·특이종",
     "level": 4,
     "type": 2,
+    "rarity": 3,
     "length": [
       20,
       40
@@ -2092,6 +2182,7 @@
     "name": "꺽정이·특이종",
     "level": 5,
     "type": 2,
+    "rarity": 4,
     "length": [
       8,
       10
@@ -2113,6 +2204,7 @@
     "name": "봉황어·특이종",
     "level": 5,
     "type": 2,
+    "rarity": 4,
     "length": [
       10,
       17
@@ -2133,6 +2225,7 @@
     "name": "제왕의 증거·특이종",
     "level": 6,
     "type": 4,
+    "rarity": 5,
     "length": [
       500,
       560
@@ -2152,6 +2245,7 @@
     "name": "가모치·특이종",
     "level": 4,
     "type": 2,
+    "rarity": 3,
     "length": [
       15,
       30
@@ -2174,6 +2268,7 @@
     "name": "통통어·특이종",
     "level": 4,
     "type": 2,
+    "rarity": 3,
     "length": [
       6,
       20
@@ -2196,6 +2291,7 @@
     "name": "장님물고기·특이종",
     "level": 5,
     "type": 2,
+    "rarity": 4,
     "length": [
       5,
       10
@@ -2217,6 +2313,7 @@
     "name": "두꺼비·특이종",
     "level": 5,
     "type": 2,
+    "rarity": 4,
     "length": [
       10,
       15
@@ -2237,6 +2334,7 @@
     "name": "파닥감펭·특이종",
     "level": 6,
     "type": 4,
+    "rarity": 5,
     "length": [
       30,
       50

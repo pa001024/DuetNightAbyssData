@@ -30,9 +30,11 @@ class FishProcessor(BaseProcessor):
         # 通过ResourceId获取鱼类名称
         resource_id = fish_data.get("ResourceId")
         fish_name = ""
+        rarity =0
         if resource_id in self.resource_map:
             resource_info = self.resource_map[resource_id]
             resource_name_key = resource_info.get("ResourceName")
+            rarity = resource_info.get("Rarity", 0)
             if resource_name_key:
                 fish_name = self.get_translated_text(resource_name_key, language)
 
@@ -56,6 +58,7 @@ class FishProcessor(BaseProcessor):
             "name": fish_name,
             "level": fish_level,
             "type": fish_type,
+            "rarity": rarity,
             "length": fish_length,
             "icon": icon,
             "price": fish_data.get("PriceOnWeight", []),
