@@ -383,6 +383,8 @@ class QuestStoryProcessor(BaseProcessor):
             list: 按顺序排列的节点列表
         """
         nodes = []
+        self.quest_next_map = {}
+        self.quest_incoming_map = {}
         if not story_data or "storyNodeData" not in story_data:
             return nodes
 
@@ -420,6 +422,23 @@ class QuestStoryProcessor(BaseProcessor):
                 visited = set()
                 ordered_nodes = []
                 quest_next_map = {}
+                quest_incoming_map = {}
+
+                for edge in self.quest_line_data:
+                    if not isinstance(edge, dict):
+                        continue
+                    if edge.get("startPort") == "QuestStart":
+                        continue
+                    start_quest = edge.get("startQuest")
+                    end_quest = edge.get("endQuest")
+                    if start_quest is None or end_quest is None:
+                        continue
+
+                    start_key = str(start_quest)
+                    end_key = str(end_quest)
+                    quest_incoming_map.setdefault(end_key, [])
+                    if start_key not in quest_incoming_map[end_key]:
+                        quest_incoming_map[end_key].append(start_key)
 
                 while current_nodes:
                     next_nodes = []
@@ -513,6 +532,7 @@ class QuestStoryProcessor(BaseProcessor):
 
                 if ordered_nodes:
                     self.quest_next_map = quest_next_map
+                    self.quest_incoming_map = quest_incoming_map
                     return ordered_nodes
 
         return nodes
@@ -594,6 +614,108 @@ class QuestStoryProcessor(BaseProcessor):
                 node.pop("next", None)
 
         return deduped_nodes
+
+    def _collect_node_start_ids(self, processed_nodes, incoming_map=None):
+        """根据 nodes 的 next 引用计算链路起点。"""
+        if not processed_nodes:
+            return []
+
+        if isinstance(incoming_map, dict):
+            start_ids = []
+            for node in processed_nodes:
+                if not isinstance(node, dict):
+                    continue
+                node_id = node.get("id")
+                if node_id is None:
+                    continue
+                if not incoming_map.get(str(node_id)):
+                    start_ids.append(node_id)
+            return start_ids
+
+        ordered_ids = []
+        node_ids = set()
+        incoming_ids = set()
+
+        for node in processed_nodes:
+            if not isinstance(node, dict):
+                continue
+            node_id = node.get("id")
+            if node_id is None:
+                continue
+            node_key = str(node_id)
+            if node_key in node_ids:
+                continue
+            node_ids.add(node_key)
+            ordered_ids.append(node_id)
+
+        for node in processed_nodes:
+            if not isinstance(node, dict):
+                continue
+            next_ids = node.get("next")
+            if not next_ids:
+                continue
+
+            if isinstance(next_ids, list):
+                for next_id in next_ids:
+                    next_key = str(next_id)
+                    if next_key in node_ids:
+                        incoming_ids.add(next_key)
+                continue
+
+            next_key = str(next_ids)
+            if next_key in node_ids:
+                incoming_ids.add(next_key)
+
+        start_ids = []
+        for node_id in ordered_ids:
+            if str(node_id) not in incoming_ids:
+                start_ids.append(node_id)
+
+        if not start_ids and ordered_ids:
+            return [ordered_ids[0]]
+
+        return start_ids
+
+    def _build_quest_incoming_map(self, story_data, quest_id):
+        """从 storyNodeData.lineData 构建任务节点入边映射（排除 QuestStart）。"""
+        incoming_map = {}
+        if not isinstance(story_data, dict):
+            return incoming_map
+
+        story_node_data = story_data.get("storyNodeData", {})
+        if not isinstance(story_node_data, dict):
+            return incoming_map
+
+        for story_node in story_node_data.values():
+            if not isinstance(story_node, dict):
+                continue
+            props_data = story_node.get("propsData", {})
+            if props_data.get("QuestId") != quest_id:
+                continue
+
+            quest_node_data = story_node.get("questNodeData", {})
+            line_data = quest_node_data.get("lineData", [])
+            if not isinstance(line_data, list):
+                continue
+
+            for edge in line_data:
+                if not isinstance(edge, dict):
+                    continue
+                if edge.get("startPort") == "QuestStart":
+                    continue
+
+                start_quest = edge.get("startQuest")
+                end_quest = edge.get("endQuest")
+                if start_quest is None or end_quest is None:
+                    continue
+
+                start_key = str(start_quest)
+                end_key = str(end_quest)
+                incoming_map.setdefault(end_key, [])
+                if start_key not in incoming_map[end_key]:
+                    incoming_map[end_key].append(start_key)
+
+        return incoming_map
 
     def process_quest_chain(self, quest_chain_data, stl_quest_chain_data, language=""):
         """处理单个任务链
@@ -783,6 +905,19 @@ class QuestStoryProcessor(BaseProcessor):
                     "desc": quest_desc,
                     "nodes": processed_nodes,
                 }
+                if processed_nodes:
+                    incoming_map = getattr(self, "quest_incoming_map", None)
+                    if not incoming_map:
+                        incoming_map = self._build_quest_incoming_map(
+                            story_data, quest_id
+                        )
+                    if not incoming_map:
+                        incoming_map = None
+                    start_ids = self._collect_node_start_ids(
+                        processed_nodes, incoming_map
+                    )
+                    if len(start_ids) > 1:
+                        s["startIds"] = start_ids
                 if s["desc"] == s["name"]:
                     del s["desc"]
                 quest_stories.append(s)
