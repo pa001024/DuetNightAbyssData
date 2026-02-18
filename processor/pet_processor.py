@@ -98,6 +98,26 @@ class PetProcessor(BaseProcessor):
 
         return skills
 
+    def _replace_placeholders_by_appearance(self, skill_desc, placeholder_meta):
+        """按占位符在文本中的出现顺序替换，并同步输出值列表"""
+        if not skill_desc or not placeholder_meta:
+            return skill_desc, []
+
+        values = []
+
+        def replace_placeholder(match):
+            placeholder_index = int(match.group(1))
+            meta = placeholder_meta.get(placeholder_index)
+            if not meta:
+                return match.group(0)
+
+            values.append(meta.get("values", []))
+            return "{%}" if meta.get("is_percent") else "{}"
+
+        # 使用精确匹配，避免 #1 误匹配 #10、#11 等
+        replaced_desc = re.sub(r"#(\d+)(?!\d)", replace_placeholder, skill_desc)
+        return replaced_desc, values
+
     def _process_single_pet_skill(self, skill_id):
         """处理单个魔灵技能"""
         # 获取Skill数据
@@ -123,11 +143,10 @@ class PetProcessor(BaseProcessor):
         # 获取技能描述参数
         desc_values = skill_info.get("SkillDescValues", [])
 
-        # 计算技能参数值并替换占位符
-        values = []
+        # 先计算每个占位符编号对应的值，再按文本出现顺序生成最终值列表
+        placeholder_meta = {}
         if desc_values:
             for i, value in enumerate(desc_values):
-                placeholder = f"#{i + 1}"
                 is_percent = False
 
                 # 为每个参数计算不同等级的值（通常是1-3级）
@@ -158,12 +177,14 @@ class PetProcessor(BaseProcessor):
                         param_values.append(self.round_value(param_value))
 
                 if param_values:
-                    values.append(param_values)
-                    # 替换占位符
-                    if is_percent:
-                        skill_desc = skill_desc.replace(placeholder, "{%}")
-                    else:
-                        skill_desc = skill_desc.replace(placeholder, "{}")
+                    placeholder_meta[i + 1] = {
+                        "values": param_values,
+                        "is_percent": is_percent,
+                    }
+
+        skill_desc, values = self._replace_placeholders_by_appearance(
+            skill_desc, placeholder_meta
+        )
 
         # 构建技能数据
         skill_data = {
@@ -189,11 +210,10 @@ class PetProcessor(BaseProcessor):
         # 获取翻译后的技能描述
         skill_desc = self.get_translated_text(passive_desc)
 
-        # 计算技能参数值并替换占位符
-        values = []
+        # 先计算每个占位符编号对应的值，再按文本出现顺序生成最终值列表
+        placeholder_meta = {}
         if passive_effect_params:
             for i, value in enumerate(passive_effect_params):
-                placeholder = f"#{i + 1}"
                 is_percent = False
 
                 # 为每个参数计算不同等级的值（通常是1-3级）
@@ -216,12 +236,14 @@ class PetProcessor(BaseProcessor):
                         param_values.append(self.round_value(param_value))
 
                 if param_values:
-                    values.append(param_values)
-                    # 替换占位符
-                    if is_percent:
-                        skill_desc = skill_desc.replace(placeholder, "{%}")
-                    else:
-                        skill_desc = skill_desc.replace(placeholder, "{}")
+                    placeholder_meta[i + 1] = {
+                        "values": param_values,
+                        "is_percent": is_percent,
+                    }
+
+        skill_desc, values = self._replace_placeholders_by_appearance(
+            skill_desc, placeholder_meta
+        )
 
         return {
             "描述": skill_desc,

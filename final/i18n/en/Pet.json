@@ -654,16 +654,16 @@
       "描述": "Grants {} Ultra Shield points to self and allies, and randomly applies one of the following effects for {}s: +{%} ATK, +{%} DEF, +{%} Skill Intensity, or +{%} Skill Duration.",
       "值": [
         [
-          10,
-          10,
-          10,
-          10
-        ],
-        [
           120,
           160,
           200,
           240
+        ],
+        [
+          10,
+          10,
+          10,
+          10
         ],
         [
           0.1,
@@ -727,16 +727,16 @@
       "描述": "Grants {} Ultra Shield points to self and allies, and randomly applies one of the following effects for {}s: +{%} ATK, +{%} DEF, +{%} Skill Intensity, or +{%} Skill Duration.",
       "值": [
         [
-          10,
-          10,
-          10,
-          10
-        ],
-        [
           120,
           160,
           200,
           240
+        ],
+        [
+          10,
+          10,
+          10,
+          10
         ],
         [
           0.1,
@@ -800,16 +800,16 @@
       "描述": "Grants {} Ultra Shield points to self and allies, and randomly applies one of the following effects for {}s: +{%} ATK, +{%} DEF, +{%} Skill Intensity, or +{%} Skill Duration.",
       "值": [
         [
-          10,
-          10,
-          10,
-          10
-        ],
-        [
           120,
           160,
           200,
           240
+        ],
+        [
+          10,
+          10,
+          10,
+          10
         ],
         [
           0.1,
@@ -873,16 +873,16 @@
       "描述": "Grants {} Ultra Shield points to self and allies, and randomly applies one of the following effects for {}s: +{%} ATK, +{%} DEF, +{%} Skill Intensity, or +{%} Skill Duration.",
       "值": [
         [
-          10,
-          10,
-          10,
-          10
-        ],
-        [
           120,
           160,
           200,
           240
+        ],
+        [
+          10,
+          10,
+          10,
+          10
         ],
         [
           0.1,
@@ -1295,22 +1295,22 @@
       "描述": "Auto-Pickup Range +{}m, EXP gained from defeated enemies +{%}, and a {%} chance to drop bonus loot.",
       "值": [
         [
-          0.075,
-          0.1,
-          0.125,
-          0.15
-        ],
-        [
-          0.075,
-          0.1,
-          0.125,
-          0.15
-        ],
-        [
           20,
           20,
           20,
           20
+        ],
+        [
+          0.075,
+          0.1,
+          0.125,
+          0.15
+        ],
+        [
+          0.075,
+          0.1,
+          0.125,
+          0.15
         ]
       ]
     }
@@ -1344,22 +1344,22 @@
       "描述": "Auto-Pickup Range +{}m, EXP gained from defeated enemies +{%}, and a {%} chance to drop bonus loot.",
       "值": [
         [
-          0.075,
-          0.1,
-          0.125,
-          0.15
-        ],
-        [
-          0.075,
-          0.1,
-          0.125,
-          0.15
-        ],
-        [
           20,
           20,
           20,
           20
+        ],
+        [
+          0.075,
+          0.1,
+          0.125,
+          0.15
+        ],
+        [
+          0.075,
+          0.1,
+          0.125,
+          0.15
         ]
       ]
     }
@@ -1393,22 +1393,22 @@
       "描述": "Auto-Pickup Range +{}m, EXP gained from defeated enemies +{%}, and a {%} chance to drop bonus loot.",
       "值": [
         [
-          0.075,
-          0.1,
-          0.125,
-          0.15
-        ],
-        [
-          0.075,
-          0.1,
-          0.125,
-          0.15
-        ],
-        [
           20,
           20,
           20,
           20
+        ],
+        [
+          0.075,
+          0.1,
+          0.125,
+          0.15
+        ],
+        [
+          0.075,
+          0.1,
+          0.125,
+          0.15
         ]
       ]
     }
@@ -1442,22 +1442,22 @@
       "描述": "Auto-Pickup Range +{}m, EXP gained from defeated enemies +{%}, and a {%} chance to drop bonus loot.",
       "值": [
         [
-          0.075,
-          0.1,
-          0.125,
-          0.15
-        ],
-        [
-          0.075,
-          0.1,
-          0.125,
-          0.15
-        ],
-        [
           20,
           20,
           20,
           20
+        ],
+        [
+          0.075,
+          0.1,
+          0.125,
+          0.15
+        ],
+        [
+          0.075,
+          0.1,
+          0.125,
+          0.15
         ]
       ]
     }
@@ -2464,6 +2464,12 @@
       "描述": "Heals self and allies for {%} of the main character's Max HP and grants +{%} DEF for {}s.",
       "值": [
         [
+          0.18,
+          0.24,
+          0.3,
+          0.36
+        ],
+        [
           0.06,
           0.08,
           0.1,
@@ -2474,12 +2480,6 @@
           15,
           15,
           15
-        ],
-        [
-          0.18,
-          0.24,
-          0.3,
-          0.36
         ]
       ],
       "cd": 30
@@ -2519,6 +2519,12 @@
       "描述": "Heals self and allies for {%} of the main character's Max HP and grants +{%} DEF for {}s.",
       "值": [
         [
+          0.18,
+          0.24,
+          0.3,
+          0.36
+        ],
+        [
           0.06,
           0.08,
           0.1,
@@ -2529,12 +2535,6 @@
           15,
           15,
           15
-        ],
-        [
-          0.18,
-          0.24,
-          0.3,
-          0.36
         ]
       ],
       "cd": 30
@@ -2574,6 +2574,12 @@
       "描述": "Heals self and allies for {%} of the main character's Max HP and grants +{%} DEF for {}s.",
       "值": [
         [
+          0.18,
+          0.24,
+          0.3,
+          0.36
+        ],
+        [
           0.06,
           0.08,
           0.1,
@@ -2584,12 +2590,6 @@
           15,
           15,
           15
-        ],
-        [
-          0.18,
-          0.24,
-          0.3,
-          0.36
         ]
       ],
       "cd": 30
@@ -2853,16 +2853,16 @@
           0.081
         ],
         [
-          0.162,
-          0.216,
-          0.27,
-          0.324
-        ],
-        [
           12,
           12,
           12,
           12
+        ],
+        [
+          0.162,
+          0.216,
+          0.27,
+          0.324
         ]
       ],
       "cd": 20
