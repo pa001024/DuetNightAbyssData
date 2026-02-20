@@ -146,6 +146,108 @@ class QuestStoryProcessor(BaseProcessor):
             print(f"加载对话流程文件失败 {file_path}: {e}", flush=True)
             return None
 
+    def _extract_flow_dialogue_ids(self, node):
+        """提取 FlowNode_Dialogue 的 DialogueId 列表。"""
+        if not isinstance(node, dict):
+            return []
+
+        props = node.get("Properties", {})
+        dialogue_data = props.get("DialogueData", [])
+        if not isinstance(dialogue_data, list):
+            return []
+
+        dialogue_ids = []
+        for item in dialogue_data:
+            if not isinstance(item, dict):
+                continue
+            dialogue_id = item.get("DialogueId")
+            if dialogue_id:
+                dialogue_ids.append(dialogue_id)
+
+        return dialogue_ids
+
+    def _extract_flow_option_dialogue_ids(self, node):
+        """提取选项节点（如 FlowNode_ImpressingOption）的 OptionData 对白ID。"""
+        if not isinstance(node, dict):
+            return []
+
+        props = node.get("Properties", {})
+        option_data = props.get("OptionData", [])
+        if not isinstance(option_data, list):
+            return []
+
+        option_ids = []
+        for item in option_data:
+            if not isinstance(item, dict):
+                continue
+            dialogue_id = item.get("DialogueId")
+            if dialogue_id:
+                option_ids.append(dialogue_id)
+
+        return option_ids
+
+    def _resolve_upstream_dialogue_tail_id(self, node_guid, guid_to_node, incoming_map):
+        """向上游回溯，找到最近对白节点的最后一句 DialogueId。"""
+        queue = list(incoming_map.get(str(node_guid), []))
+        visited = set()
+
+        while queue:
+            current_guid = queue.pop(0)
+            if current_guid in visited:
+                continue
+            visited.add(current_guid)
+
+            node = guid_to_node.get(current_guid)
+            if not isinstance(node, dict):
+                continue
+
+            dialogue_ids = self._extract_flow_dialogue_ids(node)
+            if dialogue_ids:
+                return dialogue_ids[-1]
+
+            for parent_guid in incoming_map.get(current_guid, []):
+                if parent_guid not in visited:
+                    queue.append(parent_guid)
+
+        return None
+
+    def _resolve_downstream_first_dialogue_id(self, start_guid, guid_to_node):
+        """向下游查找首个对白节点的第一句 DialogueId。"""
+        if not start_guid:
+            return None
+
+        queue = [str(start_guid)]
+        visited = set()
+
+        while queue:
+            current_guid = queue.pop(0)
+            if current_guid in visited:
+                continue
+            visited.add(current_guid)
+
+            node = guid_to_node.get(current_guid)
+            if not isinstance(node, dict):
+                continue
+
+            dialogue_ids = self._extract_flow_dialogue_ids(node)
+            if dialogue_ids:
+                return dialogue_ids[0]
+
+            props = node.get("Properties", {})
+            for conn in props.get("Connections", []) or []:
+                if not isinstance(conn, dict):
+                    continue
+                target = conn.get("Value", {})
+                if not isinstance(target, dict):
+                    continue
+                next_guid = target.get("NodeGuid")
+                if next_guid:
+                    next_guid = str(next_guid)
+                    if next_guid not in visited:
+                        queue.append(next_guid)
+
+        return None
+
     def get_dialogue_chain_from_flow_asset(self, flow_asset_path, language=""):
         """从 FlowAssetPath 解析对话链。"""
         flow_data = self.load_dialogue_flow_file(flow_asset_path)
@@ -153,6 +255,7 @@ class QuestStoryProcessor(BaseProcessor):
             return []
 
         guid_to_node = {}
+        incoming_map = {}
         start_guids = []
 
         for item in flow_data:
@@ -165,6 +268,25 @@ class QuestStoryProcessor(BaseProcessor):
             if item.get("Type") == "FlowNode_Start" and node_guid:
                 start_guids.append(str(node_guid))
 
+            if not node_guid:
+                continue
+
+            for conn in props.get("Connections", []) or []:
+                if not isinstance(conn, dict):
+                    continue
+                target = conn.get("Value", {})
+                if not isinstance(target, dict):
+                    continue
+                target_guid = target.get("NodeGuid")
+                if not target_guid:
+                    continue
+
+                source_key = str(node_guid)
+                target_key = str(target_guid)
+                incoming_map.setdefault(target_key, [])
+                if source_key not in incoming_map[target_key]:
+                    incoming_map[target_key].append(source_key)
+
         if not start_guids:
             return []
 
@@ -172,6 +294,7 @@ class QuestStoryProcessor(BaseProcessor):
         visited_guids = set()
         dialogue_ids = []
         dialogue_seen = set()
+        option_node_guids = []
 
         while queue:
             current_guid = queue.pop(0)
@@ -187,13 +310,12 @@ class QuestStoryProcessor(BaseProcessor):
             props = node.get("Properties", {})
 
             if node_type == "FlowNode_Dialogue":
-                for item in props.get("DialogueData", []) or []:
-                    dialogue_id = (
-                        item.get("DialogueId") if isinstance(item, dict) else None
-                    )
-                    if dialogue_id and dialogue_id not in dialogue_seen:
+                for dialogue_id in self._extract_flow_dialogue_ids(node):
+                    if dialogue_id not in dialogue_seen:
                         dialogue_seen.add(dialogue_id)
                         dialogue_ids.append(dialogue_id)
+            elif self._extract_flow_option_dialogue_ids(node):
+                option_node_guids.append(current_guid)
 
             for conn in props.get("Connections", []) or []:
                 if not isinstance(conn, dict):
@@ -210,6 +332,7 @@ class QuestStoryProcessor(BaseProcessor):
         dialogue_chain = []
         emitted_ids = set()
         emitted_option_ids = set()
+        dialogue_item_map = {}
 
         for dialogue_id in dialogue_ids:
             dialogue_id_str = str(dialogue_id)
@@ -227,11 +350,147 @@ class QuestStoryProcessor(BaseProcessor):
 
                 dialogue_chain.append(item)
                 emitted_ids.add(item_id_str)
+                dialogue_item_map[item_id_str] = item
 
                 for option in item.get("options", []):
                     option_id = option.get("id")
                     if option_id is not None:
                         emitted_option_ids.add(str(option_id))
+
+        if option_node_guids:
+            option_dialogue_ids = set()
+            for option_node_guid in option_node_guids:
+                option_node = guid_to_node.get(option_node_guid)
+                if not isinstance(option_node, dict):
+                    continue
+
+                parent_dialogue_id = self._resolve_upstream_dialogue_tail_id(
+                    option_node_guid, guid_to_node, incoming_map
+                )
+                if not parent_dialogue_id:
+                    continue
+
+                parent_item = dialogue_item_map.get(str(parent_dialogue_id))
+                if not isinstance(parent_item, dict):
+                    continue
+
+                option_ids = self._extract_flow_option_dialogue_ids(option_node)
+                if not option_ids:
+                    continue
+
+                props = option_node.get("Properties", {})
+
+                option_pin_map = {}
+                for item in props.get("OptionPinName", []) or []:
+                    if not isinstance(item, dict):
+                        continue
+                    key = item.get("Key")
+                    value = item.get("Value")
+                    if key and value:
+                        option_pin_map[str(key)] = str(value)
+
+                output_pin_tooltips = {}
+                for item in props.get("OutputPins", []) or []:
+                    if not isinstance(item, dict):
+                        continue
+                    pin_name = item.get("PinName")
+                    pin_tip = item.get("PinToolTip")
+                    if pin_name and pin_tip:
+                        output_pin_tooltips[str(pin_name)] = pin_tip
+
+                connection_target_map = {}
+                fallback_option_pins = []
+                for conn in props.get("Connections", []) or []:
+                    if not isinstance(conn, dict):
+                        continue
+                    key = conn.get("Key")
+                    target = conn.get("Value", {})
+                    if not key or not isinstance(target, dict):
+                        continue
+                    target_guid = target.get("NodeGuid")
+                    if not target_guid:
+                        continue
+                    key_str = str(key)
+                    connection_target_map[key_str] = str(target_guid)
+                    if key_str.startswith("Option_"):
+                        fallback_option_pins.append(key_str)
+
+                existing_options = parent_item.get("options", [])
+                option_map = {}
+                for option in existing_options:
+                    if not isinstance(option, dict):
+                        continue
+                    option_id = option.get("id")
+                    if option_id is None:
+                        continue
+                    option_map[str(option_id)] = option
+
+                for index, option_id in enumerate(option_ids):
+                    option_key = str(option_id)
+                    option_item = None
+
+                    option_chain = self.get_dialogue_chain(option_id, language)
+                    if option_chain:
+                        option_item = dict(option_chain[0])
+                    else:
+                        option_content = self.get_dialogue_content(option_id, language)
+                        if option_content:
+                            option_item = {"id": int(option_id), "content": option_content}
+
+                    pin_name = option_pin_map.get(option_key)
+                    if not pin_name and index < len(fallback_option_pins):
+                        pin_name = fallback_option_pins[index]
+
+                    if not option_item and pin_name:
+                        pin_tip = output_pin_tooltips.get(pin_name, "")
+                        if pin_tip:
+                            option_item = {"id": int(option_id), "content": pin_tip}
+
+                    if not option_item:
+                        continue
+
+                    if option_item.get("next") is None and pin_name:
+                        next_guid = connection_target_map.get(pin_name)
+                        next_dialogue_id = self._resolve_downstream_first_dialogue_id(
+                            next_guid, guid_to_node
+                        )
+                        if next_dialogue_id:
+                            option_item["next"] = int(next_dialogue_id)
+
+                    existing_item = option_map.get(option_key)
+                    if existing_item:
+                        if existing_item.get("next") is None and option_item.get("next") is not None:
+                            existing_item["next"] = option_item["next"]
+                        if existing_item.get("impr") is None and option_item.get("impr") is not None:
+                            existing_item["impr"] = option_item["impr"]
+                        if existing_item.get("imprCheck") is None and option_item.get("imprCheck") is not None:
+                            existing_item["imprCheck"] = option_item["imprCheck"]
+                        if (
+                            not existing_item.get("content")
+                            and option_item.get("content")
+                        ):
+                            existing_item["content"] = option_item["content"]
+                    else:
+                        existing_options.append(option_item)
+                        option_map[option_key] = option_item
+
+                    option_dialogue_ids.add(option_key)
+
+                if existing_options:
+                    parent_item["options"] = existing_options
+                    parent_item.pop("next", None)
+
+            if option_dialogue_ids:
+                filtered_chain = []
+                for item in dialogue_chain:
+                    item_id = item.get("id")
+                    if item_id is None:
+                        filtered_chain.append(item)
+                        continue
+                    if str(item_id) in option_dialogue_ids:
+                        continue
+                    filtered_chain.append(item)
+                dialogue_chain = filtered_chain
 
         return dialogue_chain
 

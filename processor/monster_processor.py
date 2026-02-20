@@ -89,6 +89,9 @@ class MonsterProcessor(BaseProcessor):
             if monster_id:
                 self.valid_monster_ids.add(monster_id)
 
+        # 仅补充Dungeon.spawn.m/sm中会用到的怪物ID
+        self._add_dungeon_spawn_monster_ids(data_loader, dungeon_data)
+
     def process_item(self, monster_data, language):
         id = monster_data.get("UnitId", 0)
         # 只处理在valid_monster_ids集合中的怪物ID
@@ -173,3 +176,122 @@ class MonsterProcessor(BaseProcessor):
             if processed is not None:
                 processed_items.append(processed)
         return processed_items
+
+    def _add_dungeon_spawn_monster_ids(self, data_loader, dungeon_data):
+        """补充Dungeon.spawn中的m/sm怪物ID"""
+        monster_spawn_data = data_loader.load_json("MonsterSpawn.json")
+        relation_spawn_data = data_loader.load_json("RelationSpawn.json")
+
+        spawn_source_file_names = [
+            "DefencePro.json",
+            "Defence.json",
+            "DefenceMove.json",
+            "Survival.json",
+            "SurvivalMini.json",
+            "SurvivalMiniPro.json",
+            "SurvivalPro.json",
+            "Excavation.json",
+            "ExtermPro.json",
+            "Exterminate.json",
+            "SabotagePro.json",
+        ]
+
+        dungeon_spawn_source_map = {}
+        for file_name in spawn_source_file_names:
+            file_data = data_loader.load_json(file_name)
+            for item in file_data.values():
+                dungeon_id = item.get("DungeonId")
+                if dungeon_id and dungeon_id not in dungeon_spawn_source_map:
+                    dungeon_spawn_source_map[dungeon_id] = item
+
+        for dungeon_id, dungeon_info in dungeon_data.items():
+            if isinstance(dungeon_id, str):
+                dungeon_id_num = int(dungeon_id)
+            else:
+                dungeon_id_num = dungeon_id
+            if dungeon_id_num <= 20000:
+                continue
+
+            spawn_source = dungeon_spawn_source_map.get(dungeon_id_num)
+            if not spawn_source:
+                continue
+
+            spawn_rule_waves = []
+            self._append_spawn_rule_waves(
+                spawn_rule_waves, spawn_source.get("WaveSpawnRule"), split_list_items=True
+            )
+            self._append_spawn_rule_waves(
+                spawn_rule_waves, spawn_source.get("MonsterFirstSpawnId")
+            )
+            self._append_spawn_rule_waves(
+                spawn_rule_waves, spawn_source.get("MonsterSpawnId")
+            )
+            self._append_spawn_rule_waves(
+                spawn_rule_waves, spawn_source.get("MonsterSpawnIds")
+            )
+            self._append_spawn_rule_waves(
+                spawn_rule_waves, spawn_source.get("OnInitSpawnRule")
+            )
+            self._append_spawn_rule_waves(
+                spawn_rule_waves, spawn_source.get("NormalSpawnRule")
+            )
+            self._append_spawn_rule_waves(
+                spawn_rule_waves, spawn_source.get("EliteSpawnRule")
+            )
+            self._append_spawn_rule_waves(
+                spawn_rule_waves, spawn_source.get("SpMonsterSpawnId")
+            )
+            for sp_monster_info in spawn_source.get("SpMonster", []):
+                self._append_spawn_rule_waves(
+                    spawn_rule_waves, sp_monster_info.get("SpMonsterSpawnId")
+                )
+            for excavation_info in spawn_source.get("Excavation", []):
+                self._append_spawn_rule_waves(
+                    spawn_rule_waves, excavation_info.get("MonsterSpawnId")
+                )
+
+            for spawn_rule_wave in spawn_rule_waves:
+                for spawn_id in spawn_rule_wave:
+                    spawn_config = monster_spawn_data.get(str(spawn_id)) or monster_spawn_data.get(spawn_id)
+                    if not spawn_config:
+                        continue
+
+                    for spawn_monster in spawn_config.get("MonsterSpawnInfos", []):
+                        monster_id = spawn_monster.get("UnitId")
+                        if monster_id:
+                            self.valid_monster_ids.add(monster_id)
+
+                    relation_id = spawn_config.get("RelationId")
+                    if relation_id is None:
+                        continue
+                    relation_info = relation_spawn_data.get(str(relation_id)) or relation_spawn_data.get(relation_id)
+                    if not relation_info:
+                        continue
+
+                    for monster_id in relation_info.get("UnitId", []):
+                        if monster_id:
+                            self.valid_monster_ids.add(monster_id)
+
+    def _append_spawn_rule_waves(
+        self, target_waves, raw_spawn_rule, split_list_items=False
+    ):
+        """将不同格式的刷怪规则统一追加到波次列表"""
+        if raw_spawn_rule is None:
+            return
+
+        if isinstance(raw_spawn_rule, list):
+            if not raw_spawn_rule:
+                return
+            if isinstance(raw_spawn_rule[0], list):
+                for wave in raw_spawn_rule:
+                    if wave:
+                        target_waves.append(wave)
+                return
+            if split_list_items:
+                for spawn_id in raw_spawn_rule:
+                    target_waves.append([spawn_id])
+                return
+            target_waves.append(raw_spawn_rule)
+            return
+
+        target_waves.append([raw_spawn_rule])

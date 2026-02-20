@@ -54330,7 +54330,29 @@
               {
                 "id": 51140008,
                 "content": "My thanks to you both for being so understanding. I stopped you because there's something I truly need your...",
-                "npc": 701074
+                "npc": 701074,
+                "options": [
+                  {
+                    "id": 51140009,
+                    "content": "(Sensing something off, you quietly edge a step back.)",
+                    "impr": [
+                      1041,
+                      "Wisdom",
+                      3
+                    ],
+                    "next": 51140011
+                  },
+                  {
+                    "id": 51140010,
+                    "content": "Another errand, is it? Right then — I'm off!",
+                    "impr": [
+                      1041,
+                      "Benefit",
+                      3
+                    ],
+                    "next": 51140012
+                  }
+                ]
               },
               {
                 "id": 51140011,
@@ -54476,7 +54498,29 @@
             "dialogues": [
               {
                 "id": 51140037,
-                "content": "(As you enter the Hall of Ephemerality, you find Fushu standing still, lost in thought. Even her Fish-loong droops listlessly at her side.)"
+                "content": "(As you enter the Hall of Ephemerality, you find Fushu standing still, lost in thought. Even her Fish-loong droops listlessly at her side.)",
+                "options": [
+                  {
+                    "id": 51140038,
+                    "content": "Is something on your mind?",
+                    "impr": [
+                      1041,
+                      "Empathy",
+                      3
+                    ],
+                    "next": 51140040
+                  },
+                  {
+                    "id": 51140039,
+                    "content": "(Wait quietly for her to notice you.)",
+                    "impr": [
+                      1041,
+                      "Morality",
+                      3
+                    ],
+                    "next": 51140041
+                  }
+                ]
               },
               {
                 "id": 51140040,
@@ -54771,7 +54815,34 @@
               {
                 "id": 51140064,
                 "content": "...So that's how it is. We've already found Weisheng's \"wife\". She is—",
-                "npc": 100001
+                "npc": 100001,
+                "options": [
+                  {
+                    "id": 51140065,
+                    "content": "The girl surnamed Liu",
+                    "next": 51140069
+                  },
+                  {
+                    "id": 51140066,
+                    "content": "The woman surnamed Chen",
+                    "next": 51140069
+                  },
+                  {
+                    "id": 51140067,
+                    "content": "The man surnamed Liu",
+                    "next": 51140069
+                  },
+                  {
+                    "id": 51140068,
+                    "content": "Someone who had already passed away at that time",
+                    "impr": [
+                      1041,
+                      "Wisdom",
+                      3
+                    ],
+                    "next": 51140074
+                  }
+                ]
               },
               {
                 "id": 51140069,
@@ -55113,7 +55184,39 @@
               },
               {
                 "id": 51152017,
-                "content": "(Blood trickled from the man's brow and pooled on the ground. Beside it lay a Filthoid, dead only moments ago. Incense hung heavy in the air, yet there was no sign of Bi'an. It seems that even with his life on the line, Lord Argent's protection never came.)"
+                "content": "(Blood trickled from the man's brow and pooled on the ground. Beside it lay a Filthoid, dead only moments ago. Incense hung heavy in the air, yet there was no sign of Bi'an. It seems that even with his life on the line, Lord Argent's protection never came.)",
+                "options": [
+                  {
+                    "id": 51152018,
+                    "content": "So you killed this Filthoid.",
+                    "impr": [
+                      1041,
+                      "Wisdom",
+                      3
+                    ],
+                    "next": 51152024
+                  },
+                  {
+                    "id": 51152019,
+                    "content": "Looks like Lord Argent didn't lift a finger.",
+                    "impr": [
+                      1041,
+                      "Benefit",
+                      3
+                    ],
+                    "next": 51152024
+                  },
+                  {
+                    "id": 51152020,
+                    "content": "Thought you'd rather die than fight?",
+                    "impr": [
+                      1041,
+                      "Chaos",
+                      3
+                    ],
+                    "next": 51152024
+                  }
+                ]
               },
               {
                 "id": 51152024,

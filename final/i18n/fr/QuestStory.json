@@ -54061,7 +54061,29 @@
               {
                 "id": 51140008,
                 "content": "Je vous remercie infiniment de votre indulgence. Si je vous ai arrêtés, c’est parce que... j’ai une requête importante...",
-                "npc": 701074
+                "npc": 701074,
+                "options": [
+                  {
+                    "id": 51140009,
+                    "content": "<I>Vous percevez quelque chose d’étrange et reculez discrètement d’un pas.</>",
+                    "impr": [
+                      1041,
+                      "Wisdom",
+                      3
+                    ],
+                    "next": 51140011
+                  },
+                  {
+                    "id": 51140010,
+                    "content": "<I>Encore une course à faire ? Désolé, je passe mon tour !</>",
+                    "impr": [
+                      1041,
+                      "Benefit",
+                      3
+                    ],
+                    "next": 51140012
+                  }
+                ]
               },
               {
                 "id": 51140011,
@@ -54207,7 +54229,29 @@
             "dialogues": [
               {
                 "id": 51140037,
-                "content": "Fushu fixe le vide, plongée dans ses pensées. Même son Poisson-Dragon semble abattu."
+                "content": "Fushu fixe le vide, plongée dans ses pensées. Même son Poisson-Dragon semble abattu.",
+                "options": [
+                  {
+                    "id": 51140038,
+                    "content": "<I>Quelque chose te préoccupe ?</>",
+                    "impr": [
+                      1041,
+                      "Empathy",
+                      3
+                    ],
+                    "next": 51140040
+                  },
+                  {
+                    "id": 51140039,
+                    "content": "<I>Attendre qu’elle te remarque</>",
+                    "impr": [
+                      1041,
+                      "Morality",
+                      3
+                    ],
+                    "next": 51140041
+                  }
+                ]
               },
               {
                 "id": 51140040,
@@ -54502,7 +54546,34 @@
               {
                 "id": 51140064,
                 "content": "... Je comprends maintenant. \"L’épouse\" de Weisheng... nous l’avons déjà trouvée. Elle est—",
-                "npc": 100001
+                "npc": 100001,
+                "options": [
+                  {
+                    "id": 51140065,
+                    "content": "<I>La jeune fille de la famille Liu</>",
+                    "next": 51140069
+                  },
+                  {
+                    "id": 51140066,
+                    "content": "<I>La femme de la famille Chen</>",
+                    "next": 51140069
+                  },
+                  {
+                    "id": 51140067,
+                    "content": "<I>L’homme de la famille Liu</>",
+                    "next": 51140069
+                  },
+                  {
+                    "id": 51140068,
+                    "content": "<I>Décédée depuis longtemps</>",
+                    "impr": [
+                      1041,
+                      "Wisdom",
+                      3
+                    ],
+                    "next": 51140074
+                  }
+                ]
               },
               {
                 "id": 51140069,
@@ -54844,7 +54915,39 @@
               },
               {
                 "id": 51152017,
-                "content": "Le sang s’écoule de la tempe de l’homme et s’étale sur le sol. À côté de la flaque repose un Souillé fraîchement abattu. L’air est saturé d’encens, mais aucune trace de Bi’an à l’horizon. Il semble que, même face à la mort, la protection du Seigneur Dragon d’Argent ne soit jamais venue."
+                "content": "Le sang s’écoule de la tempe de l’homme et s’étale sur le sol. À côté de la flaque repose un Souillé fraîchement abattu. L’air est saturé d’encens, mais aucune trace de Bi’an à l’horizon. Il semble que, même face à la mort, la protection du Seigneur Dragon d’Argent ne soit jamais venue.",
+                "options": [
+                  {
+                    "id": 51152018,
+                    "content": "<I>Ce Souillé... c’est vous qui l’avez tué.</>",
+                    "impr": [
+                      1041,
+                      "Wisdom",
+                      3
+                    ],
+                    "next": 51152024
+                  },
+                  {
+                    "id": 51152019,
+                    "content": "<I>On dirait que le Seigneur Dragon d’Argent ne vous a pas porté secours.</>",
+                    "impr": [
+                      1041,
+                      "Benefit",
+                      3
+                    ],
+                    "next": 51152024
+                  },
+                  {
+                    "id": 51152020,
+                    "content": "<I>Vous disiez pourtant préférer mourir plutôt que de vous battre.</>",
+                    "impr": [
+                      1041,
+                      "Chaos",
+                      3
+                    ],
+                    "next": 51152024
+                  }
+                ]
               },
               {
                 "id": 51152024,
