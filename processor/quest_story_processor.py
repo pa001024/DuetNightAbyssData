@@ -436,6 +436,11 @@ class QuestStoryProcessor(BaseProcessor):
                         option_content = self.get_dialogue_content(option_id, language)
                         if option_content:
                             option_item = {"id": int(option_id), "content": option_content}
+                            option_voice = self.get_dialogue_voice_name(
+                                option_id, language
+                            )
+                            if option_voice:
+                                option_item["voice"] = option_voice
 
                     pin_name = option_pin_map.get(option_key)
                     if not pin_name and index < len(fallback_option_pins):
@@ -445,6 +450,11 @@ class QuestStoryProcessor(BaseProcessor):
                         pin_tip = output_pin_tooltips.get(pin_name, "")
                         if pin_tip:
                             option_item = {"id": int(option_id), "content": pin_tip}
+                            option_voice = self.get_dialogue_voice_name(
+                                option_id, language
+                            )
+                            if option_voice:
+                                option_item["voice"] = option_voice
 
                     if not option_item:
                         continue
@@ -465,6 +475,8 @@ class QuestStoryProcessor(BaseProcessor):
                             existing_item["impr"] = option_item["impr"]
                         if existing_item.get("imprCheck") is None and option_item.get("imprCheck") is not None:
                             existing_item["imprCheck"] = option_item["imprCheck"]
+                        if existing_item.get("voice") is None and option_item.get("voice") is not None:
+                            existing_item["voice"] = option_item["voice"]
                         if (
                             not existing_item.get("content")
                             and option_item.get("content")

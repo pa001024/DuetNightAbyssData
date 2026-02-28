@@ -219,7 +219,7 @@
     "id": 11111,
     "icon": "Mon_Survive02",
     "n": "Bulwark Cadence: Brotherhood",
-    "d": "Enemy units take 60.0% reduced damage. This reduction diminishes by 10% each time they take damage from a different ally to the previous one.",
+    "d": "Enemy units take 60% reduced damage. This reduction diminishes by 10% each time they take damage from a different ally to the previous one.",
     "t": 2,
     "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
   },

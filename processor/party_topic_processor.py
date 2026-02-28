@@ -110,6 +110,7 @@ class PartyTopicProcessor(QuestStoryProcessor):
         dialogue_chain = []
         emitted_ids = set()
         emitted_option_ids = set()
+        dialogue_index = {}
 
         for talk_node in talk_nodes:
             first_dialogue_id = talk_node.get("first_dialogue_id", 0)
@@ -127,10 +128,18 @@ class PartyTopicProcessor(QuestStoryProcessor):
             for item in chain:
                 item_id = str(item.get("id"))
                 if item_id in emitted_ids or item_id in emitted_option_ids:
+                    existing_item = dialogue_index.get(item_id)
+                    if (
+                        isinstance(existing_item, dict)
+                        and existing_item.get("voice") is None
+                        and item.get("voice") is not None
+                    ):
+                        existing_item["voice"] = item.get("voice")
                     continue
 
                 dialogue_chain.append(item)
                 emitted_ids.add(item_id)
+                dialogue_index[item_id] = item
 
                 for option in item.get("options", []):
                     option_id = option.get("id")

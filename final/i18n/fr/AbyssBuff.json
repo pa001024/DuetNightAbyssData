@@ -219,7 +219,7 @@
     "id": 11111,
     "icon": "Mon_Survive02",
     "n": "Résonance défensive : Fraternité",
-    "d": "Les ennemis subissent 60.0% de dégâts en moins. Chaque fois qu’ils reçoivent des dégâts d’une unité alliée différente de la précédente, cette réduction diminue de 10%.",
+    "d": "Les ennemis subissent 60% de dégâts en moins. Chaque fois qu’ils reçoivent des dégâts d’une unité alliée différente de la précédente, cette réduction diminue de 10%.",
     "t": 2,
     "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
   },

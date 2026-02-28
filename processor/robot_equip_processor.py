@@ -9,6 +9,20 @@ class RobotEquipProcessor(BaseProcessor):
         # 加载相关数据表
         self.robot_equip_data = data_loader.load_json("RobotEquip.json")
 
+    def _format_desc_numeric(self, value):
+        """格式化描述数值，避免固定1位小数导致精度丢失"""
+        if not isinstance(value, (int, float)):
+            return "0.0"
+
+        rounded = self.round_value(float(value))
+        if isinstance(rounded, int):
+            return f"{rounded:.1f}"
+
+        text = f"{rounded:.4f}".rstrip("0").rstrip(".")
+        if "." not in text:
+            text = f"{text}.0"
+        return text
+
     def process_item(self, robot_equip_data, language):
         """处理单个 RobotEquip 数据
 
@@ -214,8 +228,7 @@ class RobotEquipProcessor(BaseProcessor):
                         if has_neg:
                             processed_value = -processed_value
 
-                        # 格式化结果，保留一位小数
-                        formatted_value = f"{processed_value:.1f}"
+                        formatted_value = self._format_desc_numeric(processed_value)
 
                         # 将计算结果替换到原始格式化串中
                         result = expr.replace(
@@ -245,8 +258,7 @@ class RobotEquipProcessor(BaseProcessor):
                     # 对于普通表达式，直接使用值
                     final_value = expr_value
 
-                # 格式化结果，保留一位小数
-                formatted_value = f"{final_value:.1f}"
+                formatted_value = self._format_desc_numeric(final_value)
 
                 # 将计算结果替换到原始格式化串中
                 result = expr.replace(

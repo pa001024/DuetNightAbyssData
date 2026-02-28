@@ -28,11 +28,11 @@
   },
   {
     "RaidBuffID": 12,
-    "RaidBuffDes": "When an Electro Character's Skill Intensity exceeds 100%, for every additional 30%, Skill DMG ignores an extra 3.5% of the target's DEF, up to 42.0%.",
+    "RaidBuffDes": "When an Electro Character's Skill Intensity exceeds 100%, for every additional 30%, Skill DMG ignores an extra 3.5% of the target's DEF, up to 42%.",
     "RaidBuffParameter": [
       "30%",
       "3.5%",
-      "42.0%"
+      "42%"
     ]
   }
 ]

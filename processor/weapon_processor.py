@@ -280,7 +280,7 @@ class WeaponProcessor(BaseProcessor):
 
             # 计算值（使用武器等级1）
             calculated_value = self._parse_single_desc_value(
-                preprocessed_desc_value, weapon_id, 1, "BattleWeapon"
+                preprocessed_desc_value, weapon_id, 1, "BattleWeapon", True
             )
 
             value, value2, value_format = self._extract_field_value_and_format(
@@ -757,7 +757,7 @@ class WeaponProcessor(BaseProcessor):
                 # weapon_id用于SkillGrow查找
                 weapon_id = battle_weapon.get("WeaponId", None)
                 val_str = self._parse_single_desc_value(
-                    desc_value, weapon_id, grade_level, "BattleWeapon"
+                    desc_value, weapon_id, grade_level, "BattleWeapon", False
                 )
 
                 # 如果需要取整
@@ -778,7 +778,31 @@ class WeaponProcessor(BaseProcessor):
 
         return result_desc
 
-    def _parse_single_desc_value(self, desc_value, weapon_id, grade_level, table_type):
+    def _format_desc_numeric(self, value, keep_precision=True):
+        """格式化描述中的数值。
+
+        keep_precision=True: 保留有效精度（用于技能字段）。
+        keep_precision=False: 固定1位小数（用于熔炼描述，保持历史展示）。
+        """
+        if not isinstance(value, (int, float)):
+            return "0.0"
+
+        numeric = float(value)
+        if not keep_precision:
+            return f"{numeric:.1f}"
+
+        rounded = self.round_value(numeric)
+        if isinstance(rounded, int):
+            return f"{rounded:.1f}"
+
+        text = f"{rounded:.4f}".rstrip("0").rstrip(".")
+        if "." not in text:
+            text = f"{text}.0"
+        return text
+
+    def _parse_single_desc_value(
+        self, desc_value, weapon_id, grade_level, table_type, keep_precision=True
+    ):
         """解析单个DescValue，获取实际值，支持多个$...$表达式"""
         import re
         import math
@@ -823,7 +847,9 @@ class WeaponProcessor(BaseProcessor):
                         if has_neg:
                             processed_value = -processed_value
 
-                        formatted_value = f"{processed_value:.1f}"
+                        formatted_value = self._format_desc_numeric(
+                            processed_value, keep_precision
+                        )
                     else:
                         formatted_value = "0.0"
                 else:
@@ -837,7 +863,9 @@ class WeaponProcessor(BaseProcessor):
                     else:
                         final_value = expr_value
 
-                    formatted_value = f"{final_value:.1f}"
+                    formatted_value = self._format_desc_numeric(
+                        final_value, keep_precision
+                    )
 
                 # 替换匹配的表达式（包括后缀）
                 result = (

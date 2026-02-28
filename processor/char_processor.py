@@ -4,6 +4,7 @@ import re
 import os
 import json
 import glob
+from datetime import datetime, timedelta
 from typing import Any
 
 
@@ -21,6 +22,7 @@ class CharProcessor(BaseProcessor):
         self.skill_data = data_loader.load_json("Skill.json")
         self.combat_term_data = data_loader.load_json("CombatTerm.json")
         self.character_data_target = data_loader.load_json("CharacterDataTarget.json")
+        self.character_data = data_loader.load_json("CharacterData.json")
         self.attribute_data = data_loader.load_json("Attribute.json")
         self.battle_weapon_data = data_loader.load_json("BattleWeapon.json")
         self.u_weapon_data = data_loader.load_json("UWeapon.json")
@@ -131,6 +133,7 @@ class CharProcessor(BaseProcessor):
         base_attr = self._process_attributes(battle_char, char_id)
         name = self.get_translated_text(char_data.get("CharName", ""))
         elm = self._process_element(char_id)
+        character_data = self.character_data.get(str(char_id), {})
         if name == "{nickname}":
             name = f"主角-{elm}"
         # 构建基础处理后的Char数据
@@ -142,6 +145,25 @@ class CharProcessor(BaseProcessor):
             "名称": name,
             "版本": self.process_release(char_data.get("ReleaseVersion", 100)),
             "别名": self.get_translated_text(char_data.get("CharSubtitle", "")),
+            "出生地": self.get_translated_text(
+                character_data.get("CharBirth", ""), language
+            ),
+            "势力": self.get_translated_text(
+                character_data.get("CharForce", ""), language
+            ),
+            "生日": self._format_char_birthday(character_data.get("CharBirthday", "")),
+            "中文CV": self.get_translated_text(
+                character_data.get("CvCNName", ""), "cn"
+            ),
+            "日文CV": self.get_translated_text(
+                character_data.get("CvJPName", ""), "jp"
+            ),
+            "英文CV": self.get_translated_text(
+                character_data.get("CvENName", ""), "en"
+            ),
+            "韩文CV": self.get_translated_text(
+                character_data.get("CvKRName", ""), "kr"
+            ),
             "阵营": self._process_camp(char_data.get("Camp", "None")),
             "属性": elm,
             "精通": self._process_mastery(battle_char.get("ExcelWeaponTags", [])),
@@ -164,6 +186,17 @@ class CharProcessor(BaseProcessor):
             del processed["标签"]
         if not processed.get("同律武器"):
             del processed["同律武器"]
+        for field in [
+            "出生地",
+            "生日",
+            "中文CV",
+            "日文CV",
+            "英文CV",
+            "韩文CV",
+            "势力",
+        ]:
+            if not processed.get(field):
+                del processed[field]
         # if not processed.get("突破"):
         #     del processed["突破"]
         if not processed.get("溯源"):
@@ -171,6 +204,18 @@ class CharProcessor(BaseProcessor):
             return None
 
         return processed
+
+    def _format_char_birthday(self, birthday_value):
+        """将 CharacterData 中的生日序列号格式化为 MM-DD。"""
+        if birthday_value in (None, ""):
+            return ""
+
+        try:
+            days = float(birthday_value)
+            dt = datetime(1899, 12, 30) + timedelta(days=days)
+            return dt.strftime("%m-%d")
+        except (ValueError, TypeError, OverflowError):
+            return str(birthday_value)
 
     def _process_u_weapon(self, u_weapon):
         """处理角色同律武器数据"""
@@ -497,22 +542,22 @@ class CharProcessor(BaseProcessor):
             result["cd"] = skill_info.get("CD")
 
         # 处理技能特效解析
-        skill_effects = self._process_skill_effects(skill_info, skill_id, max_level)
-        if skill_effects:
-            # 处理返回值结构，可能包含 e 和 b 两个字段
-            if isinstance(skill_effects, dict):
-                if skill_effects.get("e"):
-                    result["e"] = skill_effects["e"]
-                if skill_effects.get("b"):
-                    result["b"] = skill_effects["b"]
-            else:
-                # 兼容旧格式（直接返回列表）
-                result["e"] = skill_effects
+        # skill_effects = self._process_skill_effects(skill_info, skill_id, max_level)
+        # if skill_effects:
+        #     # 处理返回值结构，可能包含 e 和 b 两个字段
+        #     if isinstance(skill_effects, dict):
+        #         if skill_effects.get("e"):
+        #             result["e"] = skill_effects["e"]
+        #         if skill_effects.get("b"):
+        #             result["b"] = skill_effects["b"]
+        #     else:
+        #         # 兼容旧格式（直接返回列表）
+        #         result["e"] = skill_effects
 
-        # 处理被动技能特效解析
-        passive_effects = self._process_passive_effects(skill_info, skill_id, max_level)
-        if passive_effects:
-            result["p"] = passive_effects
+        # # 处理被动技能特效解析
+        # passive_effects = self._process_passive_effects(skill_info, skill_id, max_level)
+        # if passive_effects:
+        #     result["p"] = passive_effects
 
         # 使用新的紧凑格式处理技能等级描述
         level_desc = self.process_skill_desc(skill_info, skill_id, max_level)

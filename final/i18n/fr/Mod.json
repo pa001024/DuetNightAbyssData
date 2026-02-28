@@ -3444,7 +3444,7 @@
     "耐受": 24,
     "类型": "Personnages",
     "技能威力": 0.3,
-    "效果": "Lorsqu’un personnage Pyro inflige des dégâts, obtient 1 cumul augmentant l’ATQ de 1.0% pendant 15.0 s, jusqu’à 120.0 cumuls."
+    "效果": "Lorsqu’un personnage Pyro inflige des dégâts, obtient 1 cumul augmentant l’ATQ de 0.96% pendant 15.0 s, jusqu’à 120.0 cumuls."
   },
   {
     "id": 41941,
@@ -3500,7 +3500,7 @@
     "耐受": 24,
     "类型": "Personnages",
     "技能耐久": 0.24,
-    "效果": "Lorsque des ennemis proches d’un personnage Lumino subissent des DGT d’arme, leur Taux CRIT augmente de 32.7%.\nLe bonus est accru de +8.2% contre les cibles affectées par un malus."
+    "效果": "Lorsque des ennemis proches d’un personnage Lumino subissent des DGT d’arme, leur Taux CRIT augmente de 32.7%.\nLe bonus est accru de +8.16% contre les cibles affectées par un malus."
   },
   {
     "id": 41962,
@@ -6157,7 +6157,7 @@
       51931
     ],
     "技能威力": 0.55,
-    "效果": "Lorsqu’un personnage Pyro inflige des dégâts, obtient 1 cumul augmentant l’ATQ de 1.8% pendant 15.0 s, jusqu’à 120.0 cumuls."
+    "效果": "Lorsqu’un personnage Pyro inflige des dégâts, obtient 1 cumul augmentant l’ATQ de 1.76% pendant 15.0 s, jusqu’à 120.0 cumuls."
   },
   {
     "id": 51941,

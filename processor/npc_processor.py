@@ -69,6 +69,7 @@ class NpcProcessor(BaseProcessor):
             talks = npc_data.get("RelatedTalks")
             dialogue_chains = []
             seen_dialogue_ids = set()
+            dialogue_index = {}
             for talk in talks:
                 chain = self._process_talk_trigger(talk, language)
                 if chain:
@@ -78,6 +79,17 @@ class NpcProcessor(BaseProcessor):
                         if dialogue_id not in seen_dialogue_ids:
                             seen_dialogue_ids.add(dialogue_id)
                             dialogue_chains.append(dialogue)
+                            dialogue_index[dialogue_id] = dialogue
+                        else:
+                            # 已存在时补齐缺失字段（例如 voice）
+                            existing_dialogue = dialogue_index.get(dialogue_id)
+                            if not isinstance(existing_dialogue, dict):
+                                continue
+                            if (
+                                existing_dialogue.get("voice") is None
+                                and dialogue.get("voice") is not None
+                            ):
+                                existing_dialogue["voice"] = dialogue.get("voice")
             if dialogue_chains:
                 processed["talks"] = dialogue_chains
 

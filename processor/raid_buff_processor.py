@@ -8,6 +8,17 @@ class RaidBuffProcessor(BaseProcessor):
         # 加载 GlobalPassiveData 数据，用于解析表达式
         self.global_passive_data = self.data_loader.load_json("GlobalPassiveData.json")
 
+    def _format_param_numeric(self, value):
+        """格式化参数数值，避免固定1位小数导致精度丢失"""
+        if not isinstance(value, (int, float)):
+            return "0"
+
+        rounded = self.round_value(float(value))
+        if isinstance(rounded, int):
+            return str(rounded)
+
+        return f"{rounded:.4f}".rstrip("0").rstrip(".")
+
     def process_item(self, raid_buff_data, language):
         """处理单个 RaidBuff 项目"""
         # 获取基本信息
@@ -64,13 +75,7 @@ class RaidBuffProcessor(BaseProcessor):
                 if has_neg:
                     expr_value = -expr_value
                 
-                # 格式化结果，根据值的大小自动调整小数位数
-                if expr_value == int(expr_value):
-                    # 如果值是整数，显示为整数形式
-                    formatted_value = f"{int(expr_value)}{suffix}"
-                else:
-                    # 如果值是小数，显示为一位小数形式
-                    formatted_value = f"{expr_value:.1f}{suffix}"
+                formatted_value = f"{self._format_param_numeric(expr_value)}{suffix}"
                 return formatted_value
             except Exception as e:
                 print(f"计算表达式 '{expr}' 失败: {e}")

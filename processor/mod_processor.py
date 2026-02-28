@@ -63,6 +63,20 @@ class ModProcessor(BaseProcessor):
             "RayCreatureRate": "射线伤害",
         }
 
+    def _format_desc_numeric(self, value):
+        """格式化描述数值，避免固定1位小数导致精度丢失"""
+        if not isinstance(value, (int, float)):
+            return "0.0"
+
+        rounded = self.round_value(float(value))
+        if isinstance(rounded, int):
+            return f"{rounded:.1f}"
+
+        text = f"{rounded:.4f}".rstrip("0").rstrip(".")
+        if "." not in text:
+            text = f"{text}.0"
+        return text
+
     def process_item(self, item_data, language):
         mod_data = item_data
         # 获取ModTag信息
@@ -375,7 +389,7 @@ class ModProcessor(BaseProcessor):
                         if has_neg:
                             processed_value = -processed_value
 
-                        formatted_value = f"{processed_value:.1f}"
+                        formatted_value = self._format_desc_numeric(processed_value)
                     else:
                         formatted_value = "0.0"
                 else:
@@ -388,7 +402,7 @@ class ModProcessor(BaseProcessor):
                     else:
                         final_value = expr_value
 
-                    formatted_value = f"{final_value:.1f}"
+                    formatted_value = self._format_desc_numeric(final_value)
 
                 result = (
                     result[: match.start()]
@@ -788,8 +802,8 @@ class ModProcessor(BaseProcessor):
                 )
 
                 # 格式化值
-                old_val_str = f"{old_val:.1f}{percent}"
-                new_val_str = f"{new_val:.1f}{percent}"
+                old_val_str = f"{self._format_desc_numeric(old_val)}{percent}"
+                new_val_str = f"{self._format_desc_numeric(new_val)}{percent}"
 
                 # 根据cast_to格式化
                 if not forbid_format:
@@ -1057,7 +1071,7 @@ class ModProcessor(BaseProcessor):
                             processed_value = -processed_value
 
                         # 格式化结果，保留一位小数
-                        formatted_value = f"{processed_value:.1f}"
+                        formatted_value = self._format_desc_numeric(processed_value)
 
                         # 将计算结果替换到原始格式化串中
                         result = original_desc_value.replace(
@@ -1113,7 +1127,7 @@ class ModProcessor(BaseProcessor):
                     final_value = expr_value
 
                 # 格式化结果，保留一位小数
-                formatted_value = f"{final_value:.1f}"
+                formatted_value = self._format_desc_numeric(final_value)
 
                 # 将计算结果替换到原始格式化串中
                 result = original_desc_value.replace(

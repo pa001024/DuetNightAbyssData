@@ -34,6 +34,7 @@
       {
         "id": 90030001,
         "content": "Welcome back. What are your plans for today? Or are you planning to rest at home?",
+        "voice": "char/Heitao/vo_welcome",
         "npc": 81101,
         "options": [
           {
@@ -71,36 +72,42 @@
       {
         "id": 90030101,
         "content": "Wishes? I... can't think of any. Your smile in the morning is already the greatest pick-me-up of all.",
+        "voice": "char/Heitao/vo_topic_02_1",
         "npc": 81101,
         "next": 90030103
       },
       {
         "id": 90030301,
         "content": "Unlike Purgatorio Island, it snows here every day. Thankfully, you have a warm place to stay. Compared to our little shack back on the island, this place feels quite luxurious.",
+        "voice": "char/Heitao/vo_topic_03_1",
         "npc": 81101,
         "next": 90030303
       },
       {
         "id": 90030401,
         "content": "...I'm not sure either. Maybe it's a beautiful dream where I've never left your side, as always.",
+        "voice": "char/Heitao/vo_topic_01_1",
         "npc": 81101,
         "next": 90030403
       },
       {
         "id": 90030501,
         "content": "Well, that place is like a city made of steel... Mm, more like a prison, to be precise. I spent my early years there.",
+        "voice": "char/Heitao/vo_topic_04_1",
         "npc": 81101,
         "next": 90030503
       },
       {
         "id": 90030601,
         "content": "It's somewhat noisy, but I don't hate it. You've made many new friends here, which is a good thing — I'm really happy for you.",
+        "voice": "char/Heitao/vo_topic_05_1",
         "npc": 81101,
         "next": 90030603
       },
       {
         "id": 90030801,
         "content": "Then rest your head on my lap for a while, just like old times.",
+        "voice": "char/Heitao/vo_topic_06_1",
         "npc": 81101,
         "options": [
           {
@@ -135,12 +142,14 @@
       {
         "id": 90030503,
         "content": "Later on, along with you, I was taken away from there by someone, and we ended up on Purgatorio Island. I can't share much about her, though — Sorry, I promised her.",
+        "voice": "char/Heitao/vo_topic_04_2",
         "npc": 81101,
         "next": 90030504
       },
       {
         "id": 90030603,
         "content": "This way, you'll never feel lonely, even when I'm not around.",
+        "voice": "char/Heitao/vo_topic_05_2",
         "npc": 81101,
         "options": [
           {
@@ -157,6 +166,7 @@
       {
         "id": 90030104,
         "content": "Don't push yourself. If you ever feel down, just come to me for a chat. Or, if you don't feel like talking, we can just spend some quiet time together.",
+        "voice": "char/Heitao/vo_topic_02_2",
         "npc": 81101,
         "options": [
           {
@@ -173,6 +183,7 @@
       {
         "id": 90030304,
         "content": "Remember how your hands would always get very cold in winter? Here, let me warm them up.",
+        "voice": "char/Heitao/vo_topic_03_2",
         "npc": 81101,
         "options": [
           {
@@ -189,6 +200,7 @@
       {
         "id": 90030404,
         "content": "I feel the same, very much so... May we truly reunite one day.",
+        "voice": "char/Heitao/vo_topic_01_2",
         "npc": 81101,
         "options": [
           {
@@ -205,6 +217,7 @@
       {
         "id": 90030504,
         "content": "...Life on Purgatorio Island was so peaceful, that I almost believed we could live that way forever. But it wasn't until the day they came for me that I realised I had never truly escaped that prison.",
+        "voice": "char/Heitao/vo_topic_04_3",
         "npc": 81101,
         "options": [
           {
@@ -231,6 +244,7 @@
       {
         "id": 90200001,
         "content": "I assume the role of the shattered prisoner, and you, as a watchful warden, stand sentinel over my chains.",
+        "voice": "char/Tuosi/vo_welcome",
         "npc": 81103,
         "options": [
           {
@@ -263,30 +277,35 @@
       {
         "id": 90200101,
         "content": "He was a shattered crystal lamp, a fallen star plunged into a filthy gutter.",
+        "voice": "char/Tuosi/vo_topic_01_1",
         "npc": 81103,
         "next": 90200102
       },
       {
         "id": 90200201,
         "content": "Why should I? Parsifal's story ended long ago. That name is but a distant echo now, so faint and far away that I sometimes wonder if it was ever real.",
+        "voice": "char/Tuosi/vo_topic_02_1",
         "npc": 81103,
         "next": 90200202
       },
       {
         "id": 90200301,
         "content": "You're so kind. Thank you. Yet, all my vows have been fulfilled. There's little left that stirs my heart.",
+        "voice": "char/Tuosi/vo_topic_03_1",
         "npc": 81103,
         "next": 90200302
       },
       {
         "id": 90200401,
         "content": "Why seek to learn acting? You have no need to become someone else.",
+        "voice": "char/Tuosi/vo_topic_04_1",
         "npc": 81103,
         "next": 90200402
       },
       {
         "id": 90200501,
         "content": "It stands, enduring time far beyond my years. On one side of its towering walls lies the imposing inner city — majestic as storm clouds, yet colder.",
+        "voice": "char/Tuosi/vo_topic_05_1",
         "npc": 81103,
         "next": 90200502
       },
@@ -305,6 +324,7 @@
       {
         "id": 90200302,
         "content": "...",
+        "voice": "char/Tuosi/vo_topic_03_2",
         "npc": 81103,
         "next": 90200303
       },
@@ -317,60 +337,70 @@
       {
         "id": 90200502,
         "content": "Elegantly clad figures alight from silk-lined carriages, discussing art, poetry, and the perpetual gloom of the skies. They gossip about balls and betrothals, lamenting how the mire of melting snow from the outer city soils their fine leather boots.",
+        "voice": "char/Tuosi/vo_topic_05_2",
         "npc": 81103,
         "next": 90200503
       },
       {
         "id": 90200103,
         "content": "He was just like those things — laughably absurd, yet somehow, they shine brilliantly.",
+        "voice": "char/Tuosi/vo_topic_01_2",
         "npc": 81103,
         "next": 90200104
       },
       {
         "id": 90200203,
         "content": "...Is that so?",
+        "voice": "char/Tuosi/vo_topic_02_2",
         "npc": 81103,
         "next": 90200204
       },
       {
         "id": 90200303,
         "content": "Should you ever find yourself at the Galea Theatre, please convey to Ms Violetta that I've settled down in Aethyrie. Assure her not to worry, as I am doing very well now.",
+        "voice": "char/Tuosi/vo_topic_03_3",
         "npc": 81103,
         "next": 90200304
       },
       {
         "id": 90200403,
         "content": "When you're on stage, every part of you — from your very bones to the breaths you take — is surrendered to the character. In that moment, you can shed all your sorrows and pain, stepping into a world unblemished by reality.",
+        "voice": "char/Tuosi/vo_topic_04_2",
         "npc": 81103,
         "next": 90200404
       },
       {
         "id": 90200503,
         "content": "On the other side of the walls, the rowdy fog district buzzes with chaos. Vendors hawk loudly, mothers clutch their children, begging for a scrap of rye bread. Mischievous hands sketch defiant graffiti, always a step ahead of the patrols.",
+        "voice": "char/Tuosi/vo_topic_05_3",
         "npc": 81103,
         "next": 90200504
       },
       {
         "id": 90200104,
         "content": "The wall between our cells was so thin, every sound passed through. There he was, barely a metre away — rambling about his family, spinning dreams of the future, or singing some hopelessly off-key tune.",
+        "voice": "char/Tuosi/vo_topic_01_3",
         "npc": 81103,
         "next": 90200105
       },
       {
         "id": 90200204,
         "content": "Then I shall carry this final performance to its conclusion — for you, my last and only audience.",
+        "voice": "char/Tuosi/vo_topic_02_3",
         "npc": 81103,
         "next": 90200205
       },
       {
         "id": 90200304,
         "content": "\"A land of music and poetry, where every pebble taps out a rhythm, and every brook sings a melody.\"",
+        "voice": "char/Tuosi/vo_topic_03_4",
         "npc": 81103,
         "next": 90200305
       },
       {
         "id": 90200404,
         "content": "But you... you were born the {性别：hero|heroine} of your own story, already carrying the admiration and trust of those around you. You shine effortlessly, needing no spotlight to dazzle.",
+        "voice": "char/Tuosi/vo_topic_04_3",
         "npc": 81103,
         "options": [
           {
@@ -387,18 +417,21 @@
       {
         "id": 90200504,
         "content": "And so stands our Galea Theatre, caught between these two worlds, hearing all yet understanding none.",
+        "voice": "char/Tuosi/vo_topic_05_4",
         "npc": 81103,
         "next": 90200505
       },
       {
         "id": 90200105,
         "content": "For a moment, I'd forget I was a caged beast. Instead, I'd feel like an ordinary child in school, waking from a nightmare during an afternoon nap to the racket of a noisy classmate beside me.",
+        "voice": "char/Tuosi/vo_topic_01_4",
         "npc": 81103,
         "next": 90200106
       },
       {
         "id": 90200205,
         "content": "Thank you, for granting me a stage to rest my weary soul.",
+        "voice": "char/Tuosi/vo_topic_02_4",
         "npc": 81103,
         "options": [
           {
@@ -415,6 +448,7 @@
       {
         "id": 90200305,
         "content": "Hopefully, that'll keep her from enquiring after me. Once her favoured pupil... I'd rather not tarnish her memories.",
+        "voice": "char/Tuosi/vo_topic_03_5",
         "npc": 81103,
         "next": 90200306
       },
@@ -439,18 +473,21 @@
       {
         "id": 90200506,
         "content": "Oddly, it's not the scripts or the lavish costumes that first come to mind, nor the cluttered prop room I swept daily.",
+        "voice": "char/Tuosi/vo_topic_05_5",
         "npc": 81103,
         "next": 90200507
       },
       {
         "id": 90200107,
         "content": "...Heh. Perhaps.",
+        "voice": "char/Tuosi/vo_topic_01_5",
         "npc": 81103,
         "next": 90200108
       },
       {
         "id": 90200307,
         "content": "Indeed. Ignorance is always bliss.",
+        "voice": "char/Tuosi/vo_topic_03_6",
         "npc": 81103,
         "options": [
           {
@@ -467,12 +504,14 @@
       {
         "id": 90200507,
         "content": "It's the velvet carpet that blanketed the stage after the curtain fell. As a child, after the earliest performance I can remember, my mother and I lingered on the stage after everyone left, reciting lines and dancing through the night.",
+        "voice": "char/Tuosi/vo_topic_05_6",
         "npc": 81103,
         "next": 90200508
       },
       {
         "id": 90200108,
         "content": "But \"friend\" is far too bright a word for someone like me. We were more like two stranded fish, floundering together in a drying riverbed.",
+        "voice": "char/Tuosi/vo_topic_01_6",
         "npc": 81103,
         "options": [
           {
@@ -489,6 +528,7 @@
       {
         "id": 90200508,
         "content": "When dawn broke, exhaustion finally overtook me. I lay down on that carpet, resting my head on Mother's lap, and drifted into a long, sweet dream.",
+        "voice": "char/Tuosi/vo_topic_05_7",
         "npc": 81103,
         "options": [
           {
@@ -515,6 +555,7 @@
       {
         "id": 90250001,
         "content": "Hey! I'm taking Samael out for some fresh air — soaking up the sunlight, getting a feel for this place together. Wanna say hi? It'll be thrilled! ...Well, probably! Hehe~",
+        "voice": "char/Baonu/vo_welcome",
         "npc": 81501,
         "options": [
           {
@@ -542,24 +583,28 @@
       {
         "id": 90250101,
         "content": "Samael's not just a weapon — it's my best friend!",
+        "voice": "char/Baonu/vo_topic_01_1",
         "npc": 81501,
         "next": 90250102
       },
       {
         "id": 90250201,
         "content": "Ugh—! Shut up! I don't want to talk about those old stick-in-the-muds! Ughhh, you've ruined my day— ...No, no, I can't get angry. Stay calm, Lisbell...",
+        "voice": "char/Baonu/vo_topic_02_1",
         "npc": 81501,
         "next": 90250202
       },
       {
         "id": 90250301,
         "content": "Just what it says. Being patient means staying strong and stoic — putting up with anything and never, ever blowing up!",
+        "voice": "char/Baonu/vo_topic_03_1",
         "npc": 81501,
         "next": 90250302
       },
       {
         "id": 90250401,
         "content": "The \"Seven Virtues\" are the most noble, most powerful, and most drop-dead dazzling champions in all of Elysium! Naturally, they're also the most virtuous — it's in the name!",
+        "voice": "char/Baonu/vo_topic_04_1",
         "npc": 81501,
         "next": 90250402
       },
@@ -590,12 +635,14 @@
       {
         "id": 90250103,
         "content": "In the Church, only those chosen by one of the Seven Relics can become one of the \"Seven Virtues.\" There were loads of strong warriors that day, but I was the only one who could pull Samael free. It chose me, so of course I've got to treat it right!",
+        "voice": "char/Baonu/vo_topic_01_2",
         "npc": 81501,
         "next": 90250104
       },
       {
         "id": 90250203,
         "content": "Ahem! Not at all! They are absolutely wonderful. So kind and understanding. When you mess up a hymn, you just have to copy it thirty times. And if they catch you feeding cream to Samael, it's only two days locked up for solitary reflection. Really, they're the best. Absolutely lovely...",
+        "voice": "char/Baonu/vo_topic_02_2",
         "npc": 81501,
         "options": [
           {
@@ -612,12 +659,14 @@
       {
         "id": 90250303,
         "content": "Right!? But because of this title, they're always telling me to \"swallow my anger with patience.\" But it's like... like being forced to stop mid-yawn or raising your sword for a perfect strike, only to be told, \"Hey! That's not an enemy, it's a friend!\" It just makes you even more—",
+        "voice": "char/Baonu/vo_topic_03_2",
         "npc": 81501,
         "next": 90250304
       },
       {
         "id": 90250403,
         "content": "What's with that look...? How dare you doubt me! I hereby sentence you to copy the Codex thirty — no, a hundred times!",
+        "voice": "char/Baonu/vo_topic_04_2",
         "npc": 81501,
         "options": [
           {
@@ -634,12 +683,14 @@
       {
         "id": 90250104,
         "content": "...Only thing is, ever since then, it hasn't responded to me. Not once... W—Wait — that's top secret! You can't tell anyone, got it!?",
+        "voice": "char/Baonu/vo_topic_01_3",
         "npc": 81501,
         "next": 90250105
       },
       {
         "id": 90250304,
         "content": "Argh, they say anger is a grave sin. I mustn't get angry. I mustn't...",
+        "voice": "char/Baonu/vo_topic_03_3",
         "npc": 81501,
         "next": 90250305
       },
@@ -658,6 +709,7 @@
       {
         "id": 90250106,
         "content": "Huh!? It doesn't like ice cream!? Then... what about mashed potatoes? Or salad dressing!?",
+        "voice": "char/Baonu/vo_topic_01_4",
         "npc": 81501,
         "options": [
           {
@@ -674,6 +726,7 @@
       {
         "id": 90250306,
         "content": "Well... it comes with the job! I am Lord Patience, after all! Hehe!",
+        "voice": "char/Baonu/vo_topic_03_4",
         "npc": 81501,
         "options": [
           {
@@ -700,6 +753,7 @@
       {
         "id": 90220001,
         "content": "Ah, it's you, my dear child. Good day. Is there something on your mind you'd like to share with me?",
+        "voice": "char/Nifu/vo_welcome",
         "npc": 81502,
         "options": [
           {
@@ -727,24 +781,28 @@
       {
         "id": 90220101,
         "content": "Indeed. Over the course of endless time, I've travelled — or perhaps wandered — through every corner of Atlasia, treading upon every inch of its soil and tracing every grain of sand with my fingertips.",
+        "voice": "char/Nifu/vo_topic_01_1",
         "npc": 81502,
         "next": 90220102
       },
       {
         "id": 90220201,
         "content": "The Misty Sea is the birthplace and final rest of all living beings. To the Misty Sea, the deceased return, and from there, life begins anew... just as dying clouds dissolve into the earth as rain, only for flowers to bloom again from that very soil.",
+        "voice": "char/Nifu/vo_topic_02_1",
         "npc": 81502,
         "next": 90220202
       },
       {
         "id": 90220301,
         "content": "Did that surprise you? Long ago, during the Great Migration, I stood on the front lines as a soldier well-versed in close combat.",
+        "voice": "char/Nifu/vo_topic_03_1",
         "npc": 81502,
         "next": 90220302
       },
       {
         "id": 90220401,
         "content": "\"Friends\"... By the common definition of the word, I've had many over my long years.",
+        "voice": "char/Nifu/vo_topic_04_1",
         "npc": 81502,
         "next": 90220402
       },
@@ -763,30 +821,35 @@
       {
         "id": 90220302,
         "content": "Though those days are far behind me, I still remember the essentials of fighting.",
+        "voice": "char/Nifu/vo_topic_03_2",
         "npc": 81502,
         "next": 90220303
       },
       {
         "id": 90220402,
         "content": "Yet when I hear that word, the first who come to mind are Lexis and Erika, the two who once led me away from Elysium.",
+        "voice": "char/Nifu/vo_topic_04_2",
         "npc": 81502,
         "next": 90220403
       },
       {
         "id": 90220103,
         "content": "Once you've seen enough, you'll find that the scenery of all places is not so different after all. Whether it's the snows of the North, the sands of Khemet, or the smoke curling from the chimneys of Huaxu, they are all but different shades of mist drifting through the forest.",
+        "voice": "char/Nifu/vo_topic_01_2",
         "npc": 81502,
         "next": 90220104
       },
       {
         "id": 90220203,
         "content": "I believe so, my child. One day, you will journey to the Misty Sea, into the embrace of Mother Embla.",
+        "voice": "char/Nifu/vo_topic_02_2",
         "npc": 81502,
         "next": 90220204
       },
       {
         "id": 90220303,
         "content": "During my wanderings, I've often faced roaming beasts. Their claws and fangs have left me with scars, bruises, and even deaths I should have rightfully endured.",
+        "voice": "char/Nifu/vo_topic_03_3",
         "npc": 81502,
         "next": 90220304
       },
@@ -799,6 +862,7 @@
       {
         "id": 90220104,
         "content": "If I had to choose, though... it would be the mountains and forests of Aethyrie. The air there brings me the most peace.",
+        "voice": "char/Nifu/vo_topic_01_3",
         "npc": 81502,
         "next": 90220105
       },
@@ -817,6 +881,7 @@
       {
         "id": 90220404,
         "content": "In the annals of history and the tales of heroes, they're often portrayed as the Sage who tore away the gods' veil of ignorance, and the Heroine who gave her life for the Sage's cause...",
+        "voice": "char/Nifu/vo_topic_04_3",
         "npc": 81502,
         "next": 90220405
       },
@@ -829,30 +894,35 @@
       {
         "id": 90220205,
         "content": "My dear child, cherish all that life offers, yet do not shrink from its passing. Demise is not suffering, but the inevitable conclusion of life's journey.",
+        "voice": "char/Nifu/vo_topic_02_3",
         "npc": 81502,
         "next": 90220206
       },
       {
         "id": 90220305,
         "content": "Even the eternal moon wanes and waxes, ever changing. Humans, naturally, are far more complex — especially one who's lived countless lifetimes beyond a mortal span.",
+        "voice": "char/Nifu/vo_topic_03_4",
         "npc": 81502,
         "next": 90220306
       },
       {
         "id": 90220405,
         "content": "But in my memories, they are simply Lexis and Erika.",
+        "voice": "char/Nifu/vo_topic_04_4",
         "npc": 81502,
         "next": 90220406
       },
       {
         "id": 90220106,
         "content": "Perhaps you will.",
+        "voice": "char/Nifu/vo_topic_01_4",
         "npc": 81502,
         "next": 90220107
       },
       {
         "id": 90220206,
         "content": "Should you ever grow weary, rest in my arms for a while... There is no need to fear — this will not be your eternal sleep. There is still much for you to fulfil in this world.",
+        "voice": "char/Nifu/vo_topic_02_4",
         "npc": 81502,
         "options": [
           {
@@ -869,6 +939,7 @@
       {
         "id": 90220306,
         "content": "If you're curious about those days, I'll recount them in detail for you another time.",
+        "voice": "char/Nifu/vo_topic_03_5",
         "npc": 81502,
         "options": [
           {
@@ -885,12 +956,14 @@
       {
         "id": 90220406,
         "content": "Erika was a brave and lively young woman, with a spirit that drew everyone to her. Lexis, though brilliant, often overthought things. He'd suddenly lapse into deep musings, which, ironically, made him seem a bit slow.",
+        "voice": "char/Nifu/vo_topic_04_5",
         "npc": 81502,
         "next": 90220407
       },
       {
         "id": 90220107,
         "content": "Should you wander into the Emerald Forest, would you mind bringing a bouquet of white asters for me? Beneath its earth rest my friends, my child, and a version of myself from long ago.",
+        "voice": "char/Nifu/vo_topic_01_5",
         "npc": 81502,
         "options": [
           {
@@ -913,30 +986,35 @@
       {
         "id": 90220408,
         "content": "Mm... There was one time Lexis tried to apologize to Erika for something he'd done. On a whim, she pointed to one of the soldiers' archery training dummies, saying she'd forgive him if he could hit the bullseye...",
+        "voice": "char/Nifu/vo_topic_04_6",
         "npc": 81502,
         "next": 90220409
       },
       {
         "id": 90220409,
         "content": "Of course, she didn't mean it seriously. Not even all the soldiers could manage it, let alone Lexis, whose hands were meant for quills and scrolls, not bows or blades.",
+        "voice": "char/Nifu/vo_topic_04_7",
         "npc": 81502,
         "next": 90220410
       },
       {
         "id": 90220410,
         "content": "But he took her words to heart. After the soldiers left, he stayed behind and practised alone, long into the night.",
+        "voice": "char/Nifu/vo_topic_04_8",
         "npc": 81502,
         "next": 90220411
       },
       {
         "id": 90220411,
         "content": "As you might guess, true history is not a tale of omnipotent heroes. Even someone as brilliant as Lexis had his limits — he practised until his palms bled. Erika ended up wrapping them in linen, but he never did strike the mark.",
+        "voice": "char/Nifu/vo_topic_04_9",
         "npc": 81502,
         "next": 90220412
       },
       {
         "id": 90220412,
         "content": "The funny thing is, I can't even recall why they argued in the first place. Strange, isn't it? When I think of them now, it's always these small, insignificant details that come to mind first.",
+        "voice": "char/Nifu/vo_topic_04_10",
         "npc": 81502,
         "next": 90220413
       },
@@ -949,6 +1027,7 @@
       {
         "id": 90220414,
         "content": "Indeed. Those were such precious, joyful days... But they are far behind me now.",
+        "voice": "char/Nifu/vo_topic_04_11",
         "npc": 81502,
         "options": [
           {
@@ -975,6 +1054,7 @@
       {
         "id": 90240001,
         "content": "Today's perfect for drinking and singing! Come on, let me finish this glass, and then we'll chase down the sinners who deserve my sword. What? I said the same thing yesterday? Well, every day's a fine day to live like this, don't you think?",
+        "voice": "char/Kezhou/vo_welcome",
         "npc": 81503,
         "options": [
           {
@@ -1002,36 +1082,42 @@
       {
         "id": 90240101,
         "content": "You're into swordplay too? Figured as much — you've got a fine blade there. You must be pretty good with it. Let's have a friendly spar and see what you've got!",
+        "voice": "char/Kezhou/vo_topic_01_1",
         "npc": 81503,
         "next": 90240102
       },
       {
         "id": 90240201,
         "content": "Plenty of reasons, really, but if I had to sum it up: I hate being bound by them.",
+        "voice": "char/Kezhou/vo_topic_02_1",
         "npc": 81503,
         "next": 90240202
       },
       {
         "id": 90240301,
         "content": "Of course! Being good with a sword doesn't mean you're stuck using only it. In Huaxu, there are people who can use pens and chopsticks as weapons — does that mean swordsmen are supposed to starve or never write?",
+        "voice": "char/Kezhou/vo_topic_03_1",
         "npc": 81503,
         "next": 90240302
       },
       {
         "id": 90240401,
         "content": "They sure do. Now that you mention it, I can think of quite a few. Stuff like \"King So-and-So,\" \"Lord Something,\" or \"Immortal This-and-That.\" Animals are the go-to — dragons, tigers, lions, cranes, you name it. It's like a whole zoo out there.",
+        "voice": "char/Kezhou/vo_topic_04_1",
         "npc": 81503,
         "next": 90240402
       },
       {
         "id": 90240102,
         "content": "Honestly, it's been ages since I've met anyone truly on par with me. Though, my shifu always said I need more honing because I'm too blunt — and that I should work on my acting.",
+        "voice": "char/Kezhou/vo_topic_01_2",
         "npc": 81503,
         "next": 90240103
       },
       {
         "id": 90240202,
         "content": "I've been free-spirited all my life, doing everything my way, drawing my sword wherever I saw injustice. I only ever listened to what I wanted to hear from my Shifu or Yuming. The rest? In one ear and out the other, like the wind passing by. So tell me, why would I let myself be chained by some laws?",
+        "voice": "char/Kezhou/vo_topic_02_2",
         "npc": 81503,
         "next": 90240203
       },
@@ -1044,6 +1130,7 @@
       {
         "id": 90240402,
         "content": "Here's how it works: the longer the title, the lousier the skills. Four words? A newbie. Three? Not bad. Two — that's someone you don't want to mess with. And those with no nickname at all? They're the true grandmasters.",
+        "voice": "char/Kezhou/vo_topic_04_2",
         "npc": 81503,
         "next": 90240403
       },
@@ -1062,6 +1149,7 @@
       {
         "id": 90240303,
         "content": "Oh, I can do that. But why bother? Dodging is way easier, after all. Even boars in the woods know to go for radishes over tree bark when they can.",
+        "voice": "char/Kezhou/vo_topic_03_2",
         "npc": 81503,
         "next": 90240304
       },
@@ -1074,18 +1162,21 @@
       {
         "id": 90240104,
         "content": "Not exactly how I see it, but he always said that swordsmanship isn't just about skill; it's about strategy. Stuff like \"conceal your strength by feigning weakness,\" \"subdue the enemy without fighting,\" and \"overwhelm the few with the many.\" Said that's what separates the good from the great.",
+        "voice": "char/Kezhou/vo_topic_01_3",
         "npc": 81503,
         "next": 90240105
       },
       {
         "id": 90240204,
         "content": "I'd say it's the concern of a swordsman. Think of it this way — when you first learn swordsmanship, you follow the swordplay scroll move by move, right? Against regular foes, that's enough. Your sword moves instinctively.",
+        "voice": "char/Kezhou/vo_topic_02_3",
         "npc": 81503,
         "next": 90240205
       },
       {
         "id": 90240304,
         "content": "That said, if I ever meet a worthy opponent, you can bet I'll draw my sword and go all out.",
+        "voice": "char/Kezhou/vo_topic_03_3",
         "npc": 81503,
         "options": [
           {
@@ -1102,24 +1193,28 @@
       {
         "id": 90240404,
         "content": "I walk this world with my real name, of course. I know, it sounds made-up, doesn't it? Even my shifu used to say so — warned me that a name like this would have people mistaking me for some prodigy, and that'd only bring me trouble.",
+        "voice": "char/Kezhou/vo_topic_04_3",
         "npc": 81503,
         "next": 90240405
       },
       {
         "id": 90240105,
         "content": "Back when I was a kid, he used to pull that same trick on me. He'd claim his skills were mediocre and tell me if I could knock him down, I wouldn't have to train anymore. Took me a whole year to realize I couldn't even touch his sleeve.",
+        "voice": "char/Kezhou/vo_topic_01_4",
         "npc": 81503,
         "next": 90240106
       },
       {
         "id": 90240205,
         "content": "But if you stick too closely to the scroll and can't think on your feet, your sword's no better than a lump of scrap — dull, clumsy, useless. Face something unexpected, and you'll flail around like a headless chicken.",
+        "voice": "char/Kezhou/vo_topic_02_4",
         "npc": 81503,
         "next": 90240206
       },
       {
         "id": 90240405,
         "content": "But it's the name my old man gave me. Maybe he hoped I'd grow up to be some kind of hero. He didn't leave much behind, but carrying this name feels like his sword still leaves its mark on the world.",
+        "voice": "char/Kezhou/vo_topic_04_4",
         "npc": 81503,
         "options": [
           {
@@ -1136,6 +1231,7 @@
       {
         "id": 90240106,
         "content": "One day, I was so wiped out I just collapsed. That's when I noticed — not a single drop of sweat beneath his feet. That doddering, clumsy look of his? All an act.",
+        "voice": "char/Kezhou/vo_topic_01_5",
         "npc": 81503,
         "options": [
           {
@@ -1152,6 +1248,7 @@
       {
         "id": 90240206,
         "content": "To me, Huaxu is like a clumsy swordsman glued to their Nine Chapters of Dafeng. They can't even deal with a Drifter like me — what chance do they have against a true threat? It's only a matter of time before they fall.",
+        "voice": "char/Kezhou/vo_topic_02_5",
         "npc": 81503,
         "options": [
           {
@@ -1178,6 +1275,7 @@
       {
         "id": 90150001,
         "content": "...Ah, it's you. Hello, how are you?",
+        "voice": "char/Feina/vo_welcome",
         "npc": 81801,
         "options": [
           {
@@ -1210,42 +1308,49 @@
       {
         "id": 90150101,
         "content": "Um, I was wondering... if there were a candy that could make me grow very tall...",
+        "voice": "char/Feina/vo_topic_01_1",
         "npc": 81801,
         "next": 90150103
       },
       {
         "id": 90150201,
         "content": "I have a big glass chest filled with the soft snow from outside my window and marshmallows as white as the snow. I'd also like to put in clouds as fluffy as those marshmallows, and breezes as warm as those clouds...",
+        "voice": "char/Feina/vo_topic_02_1",
         "npc": 81801,
         "next": 90150203
       },
       {
         "id": 90150301,
         "content": "Mm-hmm! I dreamed of a nightingale, pure as driven snow, resting on my hand one moment, and playing hide-and-seek with me the next... Hmm, was it me who dreamed, or did it dream of me, I wonder?",
+        "voice": "char/Feina/vo_topic_03_1",
         "npc": 81801,
         "next": 90150303
       },
       {
         "id": 90150401,
         "content": "I used to have a mum and two dads. But they've all gone...",
+        "voice": "char/Feina/vo_topic_04_1",
         "npc": 81801,
         "next": 90150402
       },
       {
         "id": 90150501,
         "content": "He's the greatest magician, with the most soothing voice and the gentlest soul in the world...",
+        "voice": "char/Feina/vo_topic_05_1",
         "npc": 81801,
         "next": 90150503
       },
       {
         "id": 90150103,
         "content": "So tall that I could see above the clouds and even touch the stars!",
+        "voice": "char/Feina/vo_topic_01_2",
         "npc": 81801,
         "next": 90150104
       },
       {
         "id": 90150203,
         "content": "And our giggles and chuckles in there too, every single one~",
+        "voice": "char/Feina/vo_topic_02_2",
         "npc": 81801,
         "next": 90150204
       },
@@ -1258,6 +1363,7 @@
       {
         "id": 90150402,
         "content": "The first dad went to a faraway land with mum. And the second one... he's in that faraway land too... I sent him there.",
+        "voice": "char/Feina/vo_topic_04_2",
         "npc": 81801,
         "options": [
           {
@@ -1292,6 +1398,7 @@
       {
         "id": 90150304,
         "content": "You might be right! Maybe it's a wonderland where all the sleeping children and little animals can play together. Hmm... I wonder who I'll meet in my next dream — Owl the Wise, Miss Canary, or Sir Rabbit?",
+        "voice": "char/Feina/vo_topic_03_2",
         "npc": 81801,
         "options": [
           {
@@ -1308,12 +1415,14 @@
       {
         "id": 90150504,
         "content": "Er, what's wrong? You look very confused.",
+        "voice": "char/Feina/vo_topic_05_2",
         "npc": 81801,
         "next": 90150505
       },
       {
         "id": 90150105,
         "content": "I'd walk carefully, I promise! Well... if you're really worried, you could perch on my hand and we'll go for a spin. What do you think?",
+        "voice": "char/Feina/vo_topic_01_3",
         "npc": 81801,
         "options": [
           {
@@ -1330,6 +1439,7 @@
       {
         "id": 90150205,
         "content": "Well... if you nibble one of those candies that shrinks you down tiny, you could get in for a visit. But everything's white in there, so be careful not to wander off and lose your way.",
+        "voice": "char/Feina/vo_topic_02_3",
         "npc": 81801,
         "next": 90150206
       },
@@ -1348,6 +1458,7 @@
       {
         "id": 90150506,
         "content": "Huh...? You mean he's not kind or gentle to you? I'm so sorry... I'll give him a little tap on his head and ask him to be nicer!",
+        "voice": "char/Feina/vo_topic_05_3",
         "npc": 81801,
         "options": [
           {
@@ -1364,6 +1475,7 @@
       {
         "id": 90150207,
         "content": "Mmm... If you get lost, I'll scatter breadcrumbs in a trail for you... Follow them and you'll find the way out!",
+        "voice": "char/Feina/vo_topic_02_4",
         "npc": 81801,
         "options": [
           {
@@ -1390,6 +1502,7 @@
       {
         "id": 90040001,
         "content": "I've been waiting here ever since I woke up. My venom has almost run dry... So, it's a good thing you came. I can feel it bubbling through my veins again. Can you come a little closer...?",
+        "voice": "char/Shuimu/vo_welcome",
         "npc": 82101,
         "options": [
           {
@@ -1422,30 +1535,35 @@
       {
         "id": 90040101,
         "content": "Yes, I love rainy days. They remind me of the love stories I've read, where romantic encounters always happen on a rainy day.",
+        "voice": "char/Shuimu/vo_topic_01_1",
         "npc": 82101,
         "next": 90040103
       },
       {
         "id": 90040201,
         "content": "Ah, you're initiating a conversation about love with me — how unexpected.",
+        "voice": "char/Shuimu/vo_topic_02_1",
         "npc": 82101,
         "next": 90040203
       },
       {
         "id": 90040301,
         "content": "Special? Indeed... Many have seen me as a \"monster\" since I was young.",
+        "voice": "char/Shuimu/vo_topic_03_1",
         "npc": 82101,
         "next": 90040303
       },
       {
         "id": 90040401,
         "content": "I'm perfectly fine. My venom is part of me, like a gift from the God of Love — it's harmless to me, and will help me find my destined lover.",
+        "voice": "char/Shuimu/vo_topic_04_1",
         "npc": 82101,
         "next": 90040403
       },
       {
         "id": 90040501,
         "content": "It's my signature perfume, with top notes as intense as a first encounter, heart notes of sweet nothings that fix the scent, and a base note that lingers with a bittersweet aftertaste.",
+        "voice": "char/Shuimu/vo_topic_05_1",
         "npc": 82101,
         "next": 90040503
       },
@@ -1458,12 +1576,14 @@
       {
         "id": 90040203,
         "content": "Hmm, how should I put it? ...It's like water in perfume, which kisses and embraces each ingredient, devours and absorbs their fragrance, and eventually blends with them to create a long-lasting aroma...",
+        "voice": "char/Shuimu/vo_topic_02_2",
         "npc": 82101,
         "next": 90040204
       },
       {
         "id": 90040303,
         "content": "The looks of disgust on their faces aren't pleasant, which should be corrected...",
+        "voice": "char/Shuimu/vo_topic_03_2",
         "npc": 82101,
         "next": 90040304
       },
@@ -1482,6 +1602,7 @@
       {
         "id": 90040104,
         "content": "Have you ever observed those seeking shelter from the rain? They meet under eaves, the damp air enhancing the fragrance of greenery, love gently flowing with tentative advances...",
+        "voice": "char/Shuimu/vo_topic_01_2",
         "npc": 82101,
         "next": 90040105
       },
@@ -1494,12 +1615,14 @@
       {
         "id": 90040304,
         "content": "Perhaps a little sting of my toxin in their skin will soften those harsh looks... Hehe.",
+        "voice": "char/Shuimu/vo_topic_03_3",
         "npc": 82101,
         "next": 90040305
       },
       {
         "id": 90040404,
         "content": "Of course. Though it often casts me as a monster, it also sets me apart. I believe that the destined lover meant for a monster must be quite special, don't you think?",
+        "voice": "char/Shuimu/vo_topic_04_2",
         "npc": 82101,
         "options": [
           {
@@ -1516,6 +1639,7 @@
       {
         "id": 90040504,
         "content": "That's my little secret. However, I'd be delighted to guide you through the blending process myself, one step at a time.",
+        "voice": "char/Shuimu/vo_topic_05_2",
         "npc": 82101,
         "options": [
           {
@@ -1532,6 +1656,7 @@
       {
         "id": 90040105,
         "content": "Hehe, join me next time it rains, and you'll see what I mean.",
+        "voice": "char/Shuimu/vo_topic_01_3",
         "npc": 82101,
         "options": [
           {
@@ -1548,6 +1673,7 @@
       {
         "id": 90040205,
         "content": "There's much more to that. I seek a love so profound that we become truly inseparable... Even if life itself ends, one will become the mulch for the flowers in our garden; the blooms will turn into perfume, lingering around the other for eternity.",
+        "voice": "char/Shuimu/vo_topic_02_3",
         "npc": 82101,
         "options": [
           {
@@ -1564,6 +1690,7 @@
       {
         "id": 90040305,
         "content": "So, when you say \"special\", do you mean special like a monster... or specially enchanting?",
+        "voice": "char/Shuimu/vo_topic_03_4",
         "npc": 82101,
         "options": [
           {
@@ -1590,6 +1717,7 @@
       {
         "id": 90050001,
         "content": "Now's the perfect timing. I should head out before... Huh?! When did you get here?",
+        "voice": "char/Zhangyu/vo_welcome",
         "npc": 82301,
         "options": [
           {
@@ -1617,24 +1745,28 @@
       {
         "id": 90050101,
         "content": "\"Berry, I...\"",
+        "voice": "char/Zhangyu/vo_topic_01_1",
         "npc": 82301,
         "next": 90050103
       },
       {
         "id": 90050201,
         "content": "Easy, I can change my look however I want! Hehe, I can take any shape, any colour, and blend in anywhere perfectly. No one can spot me!",
+        "voice": "char/Zhangyu/vo_topic_02_1",
         "npc": 82301,
         "next": 90050203
       },
       {
         "id": 90050301,
         "content": "Hey! Don't lump me together with those baddies who steal from just anyone! I'm nothing like them!",
+        "voice": "char/Zhangyu/vo_topic_03_1",
         "npc": 82301,
         "next": 90050303
       },
       {
         "id": 90050401,
         "content": "Of course not. You wouldn't like it either if people called you a \"demon\" with a frown and disgust.",
+        "voice": "char/Zhangyu/vo_topic_04_1",
         "npc": 82301,
         "next": 90050403
       },
@@ -1647,6 +1779,7 @@
       {
         "id": 90050203,
         "content": "One time, I even turned into a barrel just to scare you, but you never came near...",
+        "voice": "char/Zhangyu/vo_topic_02_2",
         "npc": 82301,
         "next": 90050204
       },
@@ -1665,6 +1798,7 @@
       {
         "id": 90050104,
         "content": "\"Your smile in the morning is already the greatest pick-me-up of all. From now on, I'll always be there to keep you safe.\" Hee hee, pretty convincing, isn't it?",
+        "voice": "char/Zhangyu/vo_topic_01_2",
         "npc": 82301,
         "next": 90050105
       },
@@ -1677,12 +1811,14 @@
       {
         "id": 90050304,
         "content": "I only steal from thieves. I blend in, sneak up close, and pluck my favourite treasures right from their pockets!",
+        "voice": "char/Zhangyu/vo_topic_03_2",
         "npc": 82301,
         "next": 90050305
       },
       {
         "id": 90050404,
         "content": "That's because I want to make the word \"demon\" cool. Now, the mere mention of my title \"Demon Tabethe the Red Hand\" sends shivers down the spine of those thieves.",
+        "voice": "char/Zhangyu/vo_topic_04_2",
         "npc": 82301,
         "next": 90050405
       },
@@ -1695,6 +1831,7 @@
       {
         "id": 90050205,
         "content": "What?! Wait, so you knew it was me and just walked away? That's not cool!",
+        "voice": "char/Zhangyu/vo_topic_02_3",
         "npc": 82301,
         "options": [
           {
@@ -1711,6 +1848,7 @@
       {
         "id": 90050305,
         "content": "When they find out, their faces are priceless! Hehe... If anything, I'm more like a vigilante!",
+        "voice": "char/Zhangyu/vo_topic_03_3",
         "npc": 82301,
         "options": [
           {
@@ -1727,6 +1865,7 @@
       {
         "id": 90050405,
         "content": "And one day, the word \"demon\" will only make people think how awesome I am. That'll be pretty cool, don't you think?",
+        "voice": "char/Zhangyu/vo_topic_04_3",
         "npc": 82301,
         "options": [
           {
@@ -1743,6 +1882,7 @@
       {
         "id": 90050106,
         "content": "Are you angry? Hehehe, that scowl on your face makes me want to mimic you even more!",
+        "voice": "char/Zhangyu/vo_topic_01_3",
         "npc": 82301,
         "options": [
           {
@@ -1769,6 +1909,7 @@
       {
         "id": 90110001,
         "content": "One's surroundings shape the spirit, and mindful care strengthens the body. Perhaps a walk beneath these kindly skies would do wonders for your health.",
+        "voice": "char/Baiheng/vo_welcome",
         "npc": 82401,
         "options": [
           {
@@ -1796,24 +1937,28 @@
       {
         "id": 90110101,
         "content": "Indeed. Yet, the contents are dense and cryptic, and even the distinctions between certain remedies remain elusive to me. Perhaps I simply lack the aptitude for this craft.",
+        "voice": "char/Baiheng/vo_topic_01_1",
         "npc": 82401,
         "next": 90110103
       },
       {
         "id": 90110201,
         "content": "I dream of a world without incurable maladies.",
+        "voice": "char/Baiheng/vo_topic_04_1",
         "npc": 82401,
         "next": 90110203
       },
       {
         "id": 90110301,
         "content": "It's a place for healing and saving lives.",
+        "voice": "char/Baiheng/vo_topic_03_1",
         "npc": 82401,
         "next": 90110303
       },
       {
         "id": 90110401,
         "content": "Death is like a lamp extinguished — all traces vanish, all voices fade. That isolation, that profound stillness, consumes every glimmer of hope and possibility. If it lies within my power, I would spare any patient from falling into such an abyss.",
+        "voice": "char/Baiheng/vo_topic_02_1",
         "npc": 82401,
         "next": 90110403
       },
@@ -1844,24 +1989,28 @@
       {
         "id": 90110104,
         "content": "In my time... medication was not the primary means of healing. People practised a miraculous healing art called \"Zhuyou\" to ward off illness.",
+        "voice": "char/Baiheng/vo_topic_01_2",
         "npc": 82401,
         "next": 90110105
       },
       {
         "id": 90110204,
         "content": "It rings as but a fanciful daydream, doesn't it? Yet, even without the miracles of healing magic, the purpose of a healer remains unchanged. I must admit, coming from someone who still struggles to fully grasp medical texts, such a speech must sound absurd.",
+        "voice": "char/Baiheng/vo_topic_04_2",
         "npc": 82401,
         "next": 90110205
       },
       {
         "id": 90110304,
         "content": "The Hall's mission is singular — to heal, and to heal alone. If one were to speak of other aspects... every healer who trained within its walls planted an apricot tree on the first day of their practice. Yet, as time passed, storms and decay claimed many. Now, fewer than half remain.",
+        "voice": "char/Baiheng/vo_topic_03_2",
         "npc": 82401,
         "next": 90110305
       },
       {
         "id": 90110404,
         "content": "You're not mistaken. I... once returned from the brink of death, clawing my way back from the clutches of grave illness. Should such a trial confront me again, I cannot say with certainty that I would make the same choice.",
+        "voice": "char/Baiheng/vo_topic_02_2",
         "npc": 82401,
         "options": [
           {
@@ -1878,12 +2027,14 @@
       {
         "id": 90110105,
         "content": "While this method could bring healing and peace, it demanded the sacrifice of a healer's very life force. None of us lived to see old age — pouring out our essence unto death was the only path we knew.",
+        "voice": "char/Baiheng/vo_topic_01_3",
         "npc": 82401,
         "next": 90110106
       },
       {
         "id": 90110205,
         "content": "But... I'll continue treading this path — not merely for the sake of others or the legacy of the Hall of Ephemerality, but for my own fulfilment as well.",
+        "voice": "char/Baiheng/vo_topic_04_3",
         "npc": 82401,
         "options": [
           {
@@ -1900,6 +2051,7 @@
       {
         "id": 90110305,
         "content": "Waking up from a long slumber, I sought the apricot tree I once planted in my youth. Sadly, the tree had withered to barren wood, and not even this warm spring could coax new buds from its branches.",
+        "voice": "char/Baiheng/vo_topic_03_3",
         "npc": 82401,
         "next": 90110306
       },
@@ -1912,6 +2064,7 @@
       {
         "id": 90110306,
         "content": "Life rushes by, like a fleeting horse through a narrow chasm, a spark struck from flint, or a phantom wandering in a dream. How does one find their way back through such transience? The past slips further from reach, while hopes to amend it vanish like morning mist.",
+        "voice": "char/Baiheng/vo_topic_03_4",
         "npc": 82401,
         "options": [
           {
@@ -1928,6 +2081,7 @@
       {
         "id": 90110107,
         "content": "The Hall of Ephemerality may now be but a relic of time, yet the path of healing and saving lives has never lacked successors. Even under the heaviest burdens, there will always be those who press forward with unwavering resolve.",
+        "voice": "char/Baiheng/vo_topic_01_4",
         "npc": 82401,
         "options": [
           {
@@ -1954,6 +2108,7 @@
       {
         "id": 90130001,
         "content": "Need anything? Spit it out quickly. I've got a mission to finish.",
+        "voice": "char/Linen/vo_welcome",
         "npc": 83101,
         "options": [
           {
@@ -1981,24 +2136,28 @@
       {
         "id": 90130101,
         "content": "Sibylle? She's the chief of the 13th Legion.",
+        "voice": "char/Linen/vo_topic_01_1",
         "npc": 83101,
         "next": 90130103
       },
       {
         "id": 90130201,
         "content": "Tips? The only tip I have is there's no problem a good punch can't fix. If that doesn't work, throw another.",
+        "voice": "char/Linen/vo_topic_02_1",
         "npc": 83101,
         "next": 90130203
       },
       {
         "id": 90130301,
         "content": "Saw a really nice gun the other day... Forget it, can't skimp on food just to buy it. The old one feels better in my hands anyway.",
+        "voice": "char/Linen/vo_topic_03_1",
         "npc": 83101,
         "next": 90130303
       },
       {
         "id": 90130401,
         "content": "No work, no food. What don't you get?",
+        "voice": "char/Linen/vo_topic_04_1",
         "npc": 83101,
         "next": 90130403
       },
@@ -2029,6 +2188,7 @@
       {
         "id": 90130104,
         "content": "Ugh, what do you expect me to know? She calls the shots, I do the work. That's all.",
+        "voice": "char/Linen/vo_topic_01_2",
         "npc": 83101,
         "options": [
           {
@@ -2045,12 +2205,14 @@
       {
         "id": 90130204,
         "content": "Then a bullet usually does the trick.",
+        "voice": "char/Linen/vo_topic_02_2",
         "npc": 83101,
         "next": 90130205
       },
       {
         "id": 90130304,
         "content": "Really?... Nah, you look as broke as me... I appreciate the gesture, but don't go break a piggy bank for me. I don't wanna owe anyone anything.",
+        "voice": "char/Linen/vo_topic_03_2",
         "npc": 83101,
         "options": [
           {
@@ -2067,6 +2229,7 @@
       {
         "id": 90130404,
         "content": "Balance would be great, but my clients don't see it that way — always hounding me, \"Is the job done yet? Hurry up!\" Ugh, if I didn't have a family to feed, I'd punch them in their stupid faces.",
+        "voice": "char/Linen/vo_topic_04_2",
         "npc": 83101,
         "options": [
           {
@@ -2089,6 +2252,7 @@
       {
         "id": 90130206,
         "content": "It's just a figure of speech. My point is: be as tough and strong as you can be, and that's all you need. Keep nitpicking, and your face will be getting those punches next.",
+        "voice": "char/Linen/vo_topic_02_3",
         "npc": 83101,
         "options": [
           {
@@ -2123,6 +2287,7 @@
       {
         "id": 90180001,
         "content": "Yale: Hi... Such a nice day, isn't it... Perfect for some explosive experiments... Um, what a nice day.",
+        "voice": "char/Yeer/vo_welcome",
         "npc": 83103,
         "options": [
           {
@@ -2150,30 +2315,35 @@
       {
         "id": 90180101,
         "content": "Yale: Oliver is not a talking bomb... It might sound strange, but... he's actually...",
+        "voice": "char/Yeer/vo_topic_01_1",
         "npc": 83103,
         "next": 90180103
       },
       {
         "id": 90180201,
         "content": "Yale: I... I might not be much help. The only thing I'm good at... is probably making Tot Poppers...",
+        "voice": "char/Yeer/vo_topic_02_1",
         "npc": 83103,
         "next": 90180203
       },
       {
         "id": 90180301,
         "content": "Yale: Ah, sorry! B-But if I start speaking fast, my tongue tends to get all t-t-tied up.",
+        "voice": "char/Yeer/vo_topic_03_1",
         "npc": 83103,
         "next": 90180303
       },
       {
         "id": 90180401,
         "content": "Yale: I never really had a \"childhood\"... From my earliest memories, I've been in this body. Oliver might have one, though.",
+        "voice": "char/Yeer/vo_topic_04_1",
         "npc": 83103,
         "next": 90180403
       },
       {
         "id": 90180103,
         "content": "Oliver: Ugh, you're killing me here! I am Yale, and Yale is me. Got it? Not that I'd expect someone with your pea-sized brain to understand.",
+        "voice": "char/Yeer/vo_topic_01_2",
         "npc": 83103,
         "next": 90180104
       },
@@ -2204,12 +2374,14 @@
       {
         "id": 90180204,
         "content": "Yale: They're the most popular items at our \"Snap 'n' Spark\" toy store... They take a lot of time to make.",
+        "voice": "char/Yeer/vo_topic_02_2",
         "npc": 83103,
         "next": 90180205
       },
       {
         "id": 90180304,
         "content": "Yale: I-It's okay, sometimes Oliver speaks for me... And when no one else's around, Oliver would always hear me out.",
+        "voice": "char/Yeer/vo_topic_03_2",
         "npc": 83103,
         "options": [
           {
@@ -2226,18 +2398,21 @@
       {
         "id": 90180404,
         "content": "Yale: I've sometimes wondered what having a \"childhood\" would be like... Would Mr Jones have told me bedtime stories every night, like a normal dad...?",
+        "voice": "char/Yeer/vo_topic_04_2",
         "npc": 83103,
         "next": 90180405
       },
       {
         "id": 90180105,
         "content": "Yale: Oliver's a-a-actually a nice guy! He might s-seem a bit rough, and mean, a-and likes to pop up out of the b-blue, but...",
+        "voice": "char/Yeer/vo_topic_01_3",
         "npc": 83103,
         "next": 90180106
       },
       {
         "id": 90180205,
         "content": "Yale: But it's not because I'm skilled... It's all thanks to Oliver's expertise.",
+        "voice": "char/Yeer/vo_topic_02_3",
         "npc": 83103,
         "options": [
           {
@@ -2254,12 +2429,14 @@
       {
         "id": 90180405,
         "content": "Oliver: You expect that jerk to tell you bedtime stories? Have you lost your mind?",
+        "voice": "char/Yeer/vo_topic_04_3",
         "npc": 83103,
         "next": 90180406
       },
       {
         "id": 90180106,
         "content": "Oliver: Hey! That's your idea of nice words?",
+        "voice": "char/Yeer/vo_topic_01_4",
         "npc": 83103,
         "options": [
           {
@@ -2276,6 +2453,7 @@
       {
         "id": 90180406,
         "content": "Yale: S-Sorry! I-I know he only cared about his experiments... He wouldn't have done that...",
+        "voice": "char/Yeer/vo_topic_04_4",
         "npc": 83103,
         "options": [
           {
@@ -2302,6 +2480,7 @@
       {
         "id": 90060001,
         "content": "Ready for the interrogation?",
+        "voice": "char/Haier/vo_welcome",
         "npc": 83201,
         "options": [
           {
@@ -2334,48 +2513,56 @@
       {
         "id": 90060101,
         "content": "If you learned about history, you'd know that the first warden of the Royal Military Prison had skin like molten lava. Even the most ruthless criminals feared her interrogations.",
+        "voice": "char/Haier/vo_topic_01_1",
         "npc": 83201,
         "next": 90060102
       },
       {
         "id": 90060201,
         "content": "Since the Empire's inception, my family has managed the prison that holds the most heinous criminals, correcting wrongs and neutralising threats.",
+        "voice": "char/Haier/vo_topic_02_1",
         "npc": 83201,
         "next": 90060202
       },
       {
         "id": 90060301,
         "content": "Certainly. The Imperial Prison is teeming with devious criminals. My duties include conducting interrogations, reviewing case files, and thwarting escape attempts.",
+        "voice": "char/Haier/vo_topic_03_1",
         "npc": 83201,
         "next": 90060302
       },
       {
         "id": 90060401,
         "content": "Justice? It is the restraint of desire through power, the suppression of evil through strength, and the punishment of the wicked by the mighty.",
+        "voice": "char/Haier/vo_topic_04_1",
         "npc": 83201,
         "next": 90060402
       },
       {
         "id": 90060501,
         "content": "With criminals still roaming the streets of the Empire, spare time is a luxury for a warden. The only respite I get is when I sneak in a few strong drinks amidst a busy schedule.",
+        "voice": "char/Haier/vo_topic_05_1",
         "npc": 83201,
         "next": 90060502
       },
       {
         "id": 90060102,
         "content": "As her descendant, I proudly bear her name, ready to incinerate all sins with my fire.",
+        "voice": "char/Haier/vo_topic_01_2",
         "npc": 83201,
         "next": 90060103
       },
       {
         "id": 90060202,
         "content": "My fiery red skin, a legacy from the first warden, predestined me to continue enforcing the iron-clad code she established. So it wasn't me who chose to become a warden; it was the mantle of warden that chose me.",
+        "voice": "char/Haier/vo_topic_02_2",
         "npc": 83201,
         "next": 90060203
       },
       {
         "id": 90060302,
         "content": "Every minute of rest delays justice a bit, and when justice is delayed, chaos and the law of the jungle take over.",
+        "voice": "char/Haier/vo_topic_03_2",
         "npc": 83201,
         "next": 90060303
       },
@@ -2412,6 +2599,7 @@
       {
         "id": 90060403,
         "content": "Hmph, broad? I wouldn't expect a naive child to understand. We don't live in a utopia where people simply hold hands and love each other. Only through absolute power and order can true justice be secured!",
+        "voice": "char/Haier/vo_topic_04_2",
         "npc": 83201,
         "options": [
           {
@@ -2428,18 +2616,21 @@
       {
         "id": 90060503,
         "content": "Why so surprised? It's merely a diversion. During interrogations, I always hear about various kinds of alcohol, which made me curious about this so-called wicked potion that seems to be associated with crime. So I drink once in a while.",
+        "voice": "char/Haier/vo_topic_05_2",
         "npc": 83201,
         "next": 90060504
       },
       {
         "id": 90060104,
         "content": "It does pose some challenges — I can only sleep on iron beds and can't linger in wooden structures for long. However, it allows me to pull criminals from burning buildings and administer justice. And the cold never bothers me.",
+        "voice": "char/Haier/vo_topic_01_3",
         "npc": 83201,
         "next": 90060105
       },
       {
         "id": 90060204,
         "content": "Becoming a warden is merely the beginning. It compels me to remain vigilant, eradicating any injustice within the Empire until my final breath.",
+        "voice": "char/Haier/vo_topic_02_3",
         "npc": 83201,
         "options": [
           {
@@ -2456,6 +2647,7 @@
       {
         "id": 90060304,
         "content": "Some scholars have envisioned a crime-free world. Should such a day come, my purpose would vanish, for evil necessitates a warden's existence. Until then, I am committed to upholding order.",
+        "voice": "char/Haier/vo_topic_03_3",
         "npc": 83201,
         "options": [
           {
@@ -2472,6 +2664,7 @@
       {
         "id": 90060504,
         "content": "And the more I drink, the more I'm convinced that it's not the drink that is wicked.",
+        "voice": "char/Haier/vo_topic_05_3",
         "npc": 83201,
         "options": [
           {
@@ -2488,6 +2681,7 @@
       {
         "id": 90060105,
         "content": "My unusual appearance is more of a gift. If there's any downside... I've always wanted to try ice cream, but it melts in my hand before I can taste it...",
+        "voice": "char/Haier/vo_topic_01_4",
         "npc": 83201,
         "options": [
           {
@@ -2514,6 +2708,7 @@
       {
         "id": 90170001,
         "content": "I've cleared the snow from your doorstep on my way here! Touched, huh? Bet you're thinking of treating me to a cup of cocoa~",
+        "voice": "char/Maer/vo_welcome",
         "npc": 83301,
         "options": [
           {
@@ -2546,30 +2741,35 @@
       {
         "id": 90170101,
         "content": "Well... it's about giving discarded items a new home and providing those in need with a chance at a better life.",
+        "voice": "char/Maer/vo_topic_01_1",
         "npc": 83301,
         "next": 90170103
       },
       {
         "id": 90170201,
         "content": "Shhhh! That's a scavenger's top secret! I wouldn't have let you in on it if you hadn't helped me out with that thief!",
+        "voice": "char/Maer/vo_topic_02_1",
         "npc": 83301,
         "next": 90170203
       },
       {
         "id": 90170301,
         "content": "Oh, you've got it backwards! I love Icelake through and through. It's just that I often reminisce about the days I spent wandering the snowfields with my dad; that's how I grew up.",
+        "voice": "char/Maer/vo_topic_03_1",
         "npc": 83301,
         "next": 90170303
       },
       {
         "id": 90170401,
         "content": "That's the big cat that used to roam the snowfields with me when I was little! We called him \"Plumpytail\". He would only let me pet him in exchange for some jerky, but oh, the feel of his fur — hehehe, it's the best of the best!",
+        "voice": "char/Maer/vo_topic_04_1",
         "npc": 83301,
         "next": 90170403
       },
       {
         "id": 90170501,
         "content": "Nah-uh! That's not me! I'm too grown up for such a childish title! Please, I beg of you, don't ever call me that again!",
+        "voice": "char/Maer/vo_topic_05_1",
         "npc": 83301,
         "next": 90170503
       },
@@ -2582,6 +2782,7 @@
       {
         "id": 90170203,
         "content": "This map charts every rubbish bin in Icelake, and I've marked the few where the best stuff tends to gather — I've upgraded those bins to larger sizes and timed my visits to perfection!",
+        "voice": "char/Maer/vo_topic_02_2",
         "npc": 83301,
         "next": 90170204
       },
@@ -2606,36 +2807,42 @@
       {
         "id": 90170104,
         "content": "For instance, turning an aristocrat's cast-off velvet curtains into warm winter coats for the elderly, or bringing discarded dolls to children whose only playthings are pebbles — they'll be overjoyed for a long time.",
+        "voice": "char/Maer/vo_topic_01_2",
         "npc": 83301,
         "next": 90170105
       },
       {
         "id": 90170204,
         "content": "But scavenging is really hit-or-miss — mostly, it all comes down to luck...",
+        "voice": "char/Maer/vo_topic_02_3",
         "npc": 83301,
         "next": 90170205
       },
       {
         "id": 90170304,
         "content": "From here, the snowfields look like something out of a fairy tale. But once you step into it, you'd feel so very small. Even after trudging through knee-high snow for hours, that feeling would never leave.",
+        "voice": "char/Maer/vo_topic_03_2",
         "npc": 83301,
         "next": 90170305
       },
       {
         "id": 90170404,
         "content": "Mmm... it's certainly not like \"meow\"; it's more like, \"raawr—raawr—!\"",
+        "voice": "char/Maer/vo_topic_04_2",
         "npc": 83301,
         "next": 90170405
       },
       {
         "id": 90170504,
         "content": "Ahem, that would be — Lady Margie the reticent detective, a lone shadow-walker of the city! Today, I will unveil for you the secrets of Icelake, as always!",
+        "voice": "char/Maer/vo_topic_05_2",
         "npc": 83301,
         "next": 90170505
       },
       {
         "id": 90170105,
         "content": "There was one time, I dragged back a broken bookshelf someone had thrown out. Though I was half-dead from the effort, it quickly turned into a non-stop playground for a litter of kittens — totally worth it!",
+        "voice": "char/Maer/vo_topic_01_3",
         "npc": 83301,
         "next": 90170106
       },
@@ -2648,6 +2855,7 @@
       {
         "id": 90170305,
         "content": "I don't hate those days. But the bustling, lively Icelake is my absolute favourite!",
+        "voice": "char/Maer/vo_topic_03_3",
         "npc": 83301,
         "options": [
           {
@@ -2670,6 +2878,7 @@
       {
         "id": 90170505,
         "content": "Hehe, now that's a proper title for me~",
+        "voice": "char/Maer/vo_topic_05_3",
         "npc": 83301,
         "options": [
           {
@@ -2686,6 +2895,7 @@
       {
         "id": 90170106,
         "content": "That's scavenging for you! It's mostly small fry stuff, but never a dull moment. So, what do you say, wanna join us?",
+        "voice": "char/Maer/vo_topic_01_4",
         "npc": 83301,
         "options": [
           {
@@ -2702,6 +2912,7 @@
       {
         "id": 90170206,
         "content": "Ha, I knew you'd understand!",
+        "voice": "char/Maer/vo_topic_02_4",
         "npc": 83301,
         "options": [
           {
@@ -2718,6 +2929,7 @@
       {
         "id": 90170406,
         "content": "Plumpytail prefers the wild over city life. We had to go our separate ways, but she'll always be a part of me, just like the snowfields.",
+        "voice": "char/Maer/vo_topic_04_3",
         "npc": 83301,
         "options": [
           {
@@ -2744,6 +2956,7 @@
       {
         "id": 90210001,
         "content": "Patrol complete. No signs of dangerous creatures, structural damage, or suspicious markings. Routine operations may proceed without interruption. Report concluded.",
+        "voice": "char/Lise/vo_welcome",
         "npc": 84101,
         "options": [
           {
@@ -2786,42 +2999,49 @@
       {
         "id": 90210101,
         "content": "Oh... You've noticed. Yes, I have one — it was given to me by someone very dear. I keep it locked away safely, but... I can't help checking on it now and then, worried it might just vanish somehow.",
+        "voice": "char/Lise/vo_topic_01_1",
         "npc": 84101,
         "next": 90210102
       },
       {
         "id": 90210201,
         "content": "Not bad. The Legion is one of the few places where hard work truly gets rewarded. I've earned my position here, and now I even have a few subordinates. I make sure they treat Charons and Solas with the same respect.",
+        "voice": "char/Lise/vo_topic_02_1",
         "npc": 84101,
         "next": 90210202
       },
       {
         "id": 90210301,
         "content": "I wouldn't call it responsibility. I'm simply following the Escort's regulations to the letter.",
+        "voice": "char/Lise/vo_topic_03_1",
         "npc": 84101,
         "next": 90210302
       },
       {
         "id": 90210401,
         "content": "No... Thank you. I don't really enjoy looking at myself in the mirror. Seeing my horns always makes me feel... uncomfortable.",
+        "voice": "char/Lise/vo_topic_04_1",
         "npc": 84101,
         "next": 90210402
       },
       {
         "id": 90210501,
         "content": "I do... but it feels so heavy now, almost unbearably so. I'm not sure I have the strength to pick it up and play anymore.",
+        "voice": "char/Lise/vo_topic_05_1",
         "npc": 84101,
         "next": 90210502
       },
       {
         "id": 90210601,
         "content": "I've been taking on odd jobs here and there. It's enough to cover my expenses. But honestly, earning a living isn't the point anymore. These days, work is more about keeping myself busy.",
+        "voice": "char/Lise/vo_topic_06_1",
         "npc": 84101,
         "next": 90210602
       },
       {
         "id": 90210701,
         "content": "Better than if I'd stayed, I suppose. The Legion was once my refuge, the place where I thought my dreams could take flight. But those dreams... they turned out to be illusions, and that so-called refuge was a hell that dragged my loved one into an unending abyss of despair...",
+        "voice": "char/Lise/vo_topic_07_1",
         "npc": 84101,
         "next": 90210702
       },
@@ -2834,6 +3054,7 @@
       {
         "id": 90210202,
         "content": "I've heard plenty of complaints — and bitter accusations — about how harshly the Legion treats the Charon community. I do everything I can to change that... Maybe someday, people will start to see the Legion in a better light.",
+        "voice": "char/Lise/vo_topic_02_2",
         "npc": 84101,
         "next": 90210203
       },
@@ -2852,6 +3073,7 @@
       {
         "id": 90210502,
         "content": "After all, it once carried all my hopes and dreams. Now, it just reminds me of everything I've lost.",
+        "voice": "char/Lise/vo_topic_05_2",
         "npc": 84101,
         "next": 90210503
       },
@@ -2864,12 +3086,14 @@
       {
         "id": 90210702,
         "content": "Now, my heart burns with the desire for vengeance, yet I can't bring myself to aim my weapon at those I once called comrades. I feel lost... Tell me, what should I do?",
+        "voice": "char/Lise/vo_topic_07_2",
         "npc": 84101,
         "next": 90210703
       },
       {
         "id": 90210103,
         "content": "Actually, I only know one. The person who gave it to me taught me. I wasn't quick to pick it up back then... maybe because I've never been good at things that require emotional expression...",
+        "voice": "char/Lise/vo_topic_01_2",
         "npc": 84101,
         "next": 90210104
       },
@@ -2882,12 +3106,14 @@
       {
         "id": 90210303,
         "content": "The Escort's regulations forbid any legionary from commenting on the conduct of their fellow legionaries.",
+        "voice": "char/Lise/vo_topic_03_2",
         "npc": 84101,
         "next": 90210304
       },
       {
         "id": 90210403,
         "content": "No, that's not it at all. I'm not ashamed of my Charon heritage. It's just... I think my horns would look much better if they were more regular, more symmetrical. Ah, don't get me wrong! I'm not saying there's anything wrong with your horn...",
+        "voice": "char/Lise/vo_topic_04_2",
         "npc": 84101,
         "options": [
           {
@@ -2910,6 +3136,7 @@
       {
         "id": 90210603,
         "content": "Yes... Work gives me purpose. It makes me happy. When I'm busy, even the sunlight feels a little warmer.",
+        "voice": "char/Lise/vo_topic_06_2",
         "npc": 84101,
         "options": [
           {
@@ -2932,24 +3159,28 @@
       {
         "id": 90210104,
         "content": "But whenever I'm too tense or carried away, I find myself reaching for it. It's like an anchor — a reminder of the things that matter, the things I can trust. It always helps me find my calm again.",
+        "voice": "char/Lise/vo_topic_01_3",
         "npc": 84101,
         "next": 90210105
       },
       {
         "id": 90210204,
         "content": "Not yet. But there will be. There was a time when you wouldn't find even a single Charon in the Legion. I know I can't make a big difference just yet, but if I guide my subordinates down the right path, I believe the conflicts between Charons and Solas will ease, bit by bit.",
+        "voice": "char/Lise/vo_topic_02_3",
         "npc": 84101,
         "next": 90210205
       },
       {
         "id": 90210304,
         "content": "That said, I really don't understand them. Maybe, to them, it's just a job. As long as their superiors don't notice, they think it's fine to slack off or mess around.",
+        "voice": "char/Lise/vo_topic_03_3",
         "npc": 84101,
         "next": 90210305
       },
       {
         "id": 90210504,
         "content": "...Thank you. I promise, when the day comes that I can pick it up again — when I'm ready to learn a new tune — I'll make sure you're the first to hear it.",
+        "voice": "char/Lise/vo_topic_05_3",
         "npc": 84101,
         "options": [
           {
@@ -2966,6 +3197,7 @@
       {
         "id": 90210704,
         "content": "...Sorry, I lost my cool. You're right — I need to figure it out on my own, instead of placing that weight on you. Though... it might take me some time.",
+        "voice": "char/Lise/vo_topic_07_3",
         "npc": 84101,
         "options": [
           {
@@ -2982,6 +3214,7 @@
       {
         "id": 90210105,
         "content": "Many of my peers rely on doctors for stress relief — sedatives, stimulants, that kind of stuff. I've never needed that. Whether my heart races or slows, the harmonica always steadies me.",
+        "voice": "char/Lise/vo_topic_01_4",
         "npc": 84101,
         "options": [
           {
@@ -2998,6 +3231,7 @@
       {
         "id": 90210205,
         "content": "Treating everyone fairly and keeping them safe from Filthoids and Deterioration... I believe these efforts can improve life for the Charon community. Maybe, it will quiet the weary sighs echoing through Icelake a little bit.",
+        "voice": "char/Lise/vo_topic_02_4",
         "npc": 84101,
         "options": [
           {
@@ -3014,6 +3248,7 @@
       {
         "id": 90210305,
         "content": "I think that kind of attitude is wrong. People need something to keep themselves in check. Without it, they'll just drift through life, letting their standards erode little by little — until they're no better than rats in the sewers.",
+        "voice": "char/Lise/vo_topic_03_4",
         "npc": 84101,
         "options": [
           {
@@ -3040,6 +3275,7 @@
       {
         "id": 90230001,
         "content": "Ah, so you've come to see me... Are you still resentful? Conflicted, perhaps? Or have you become indifferent toward me? It makes no difference. We have all the time in the world to figure it out.",
+        "voice": "char/Zhiliu/vo_welcome",
         "npc": 84102,
         "options": [
           {
@@ -3067,24 +3303,28 @@
       {
         "id": 90230101,
         "content": "There is nothing that cannot be leveraged in a negotiation. The only question is — what price will move the scales in your favour?",
+        "voice": "char/Zhiliu/vo_topic_01_1",
         "npc": 84102,
         "next": 90230102
       },
       {
         "id": 90230201,
         "content": "Mmm... Never lose yourself in fleeting profits and losses. Play the long game. Be generous when needed. Learn to read people, to use them, and to grant them favours, so that they respect you, admire you, and also fear you. True power lies in that delicate balance.",
+        "voice": "char/Zhiliu/vo_topic_02_1",
         "npc": 84102,
         "next": 90230202
       },
       {
         "id": 90230301,
         "content": "I am often entangled in the minutiae of business and rarely afforded the luxury of leisure.",
+        "voice": "char/Zhiliu/vo_topic_03_1",
         "npc": 84102,
         "next": 90230302
       },
       {
         "id": 90230401,
         "content": "Hmm? So, you've noticed. An old habit, nothing more.",
+        "voice": "char/Zhiliu/vo_topic_04_1",
         "npc": 84102,
         "next": 90230402
       },
@@ -3103,24 +3343,28 @@
       {
         "id": 90230302,
         "content": "Yet, if fate were to grant me a fleeting moment of respite... I would likely seek solace in the theatre. Be it the age-old storytelling traditions of Huaxu, the refined operas of the Empire, or the avant-garde films gaining traction overseas — each offers its own intrigue.",
+        "voice": "char/Zhiliu/vo_topic_03_2",
         "npc": 84102,
         "next": 90230303
       },
       {
         "id": 90230402,
         "content": "When I was little, an accident left me stranded in a pitch-black ravine for three days and nights. It was then this... tendency took root.",
+        "voice": "char/Zhiliu/vo_topic_04_2",
         "npc": 84102,
         "next": 90230403
       },
       {
         "id": 90230103,
         "content": "Indeed. Your life, mine, and the lives of countless others — each is but a piece on a grander board, their worth determined only by the stakes at play.",
+        "voice": "char/Zhiliu/vo_topic_01_2",
         "npc": 84102,
         "next": 90230104
       },
       {
         "id": 90230203,
         "content": "Heh. Goods have fixed prices, but human connections are a different currency altogether. Those who haggle over every coin will remain forever bound to their little corner of the market. Only by mastering the art of influence can one rise above mere trade and ascend to true greatness.",
+        "voice": "char/Zhiliu/vo_topic_02_2",
         "npc": 84102,
         "options": [
           {
@@ -3143,18 +3387,21 @@
       {
         "id": 90230403,
         "content": "In this world, everyone harbours their own fears. I am no exception... You seem surprised. May I ask why?",
+        "voice": "char/Zhiliu/vo_topic_04_3",
         "npc": 84102,
         "next": 90230404
       },
       {
         "id": 90230104,
         "content": "For those as insignificant as we, to exchange what little we have for what we desire... is that not, in itself, a stroke of fortune?",
+        "voice": "char/Zhiliu/vo_topic_01_3",
         "npc": 84102,
         "next": 90230105
       },
       {
         "id": 90230304,
         "content": "Heh... No, I suppose not. Theatre distils fleeting moments of life, yet within those fragments, it unveils profound truths about the human soul — one that defies reason, thrives in contradiction, and remains endlessly captivating in its unpredictability.",
+        "voice": "char/Zhiliu/vo_topic_03_3",
         "npc": 84102,
         "next": 90230305
       },
@@ -3167,6 +3414,7 @@
       {
         "id": 90230105,
         "content": "Does my answer unsettle you? Then, by all means, prove me wrong.",
+        "voice": "char/Zhiliu/vo_topic_01_4",
         "npc": 84102,
         "options": [
           {
@@ -3183,6 +3431,7 @@
       {
         "id": 90230305,
         "content": "So, what unexpected turns will you bring to my story? I shall be watching with keen interest.",
+        "voice": "char/Zhiliu/vo_topic_03_4",
         "npc": 84102,
         "options": [
           {
@@ -3199,12 +3448,14 @@
       {
         "id": 90230405,
         "content": "Heh... Correct. Weakness can be a merchant's undoing.",
+        "voice": "char/Zhiliu/vo_topic_04_4",
         "npc": 84102,
         "next": 90230406
       },
       {
         "id": 90230406,
         "content": "I underwent rigorous trainings to suppress this fear. At the negotiating table, I can cast it aside with ease. But in your presence, there's no need for such pretences.",
+        "voice": "char/Zhiliu/vo_topic_04_5",
         "npc": 84102,
         "options": [
           {
@@ -3231,6 +3482,7 @@
       {
         "id": 90070001,
         "content": "Do what you need to. Cherish your freedom before the chains of law bind you.",
+        "voice": "char/Yuming/vo_welcome",
         "npc": 84201,
         "options": [
           {
@@ -3258,24 +3510,28 @@
       {
         "id": 90070101,
         "content": "...Go read a tome or seek another's company for such trivial discourse. Perhaps the Starweavers peddling their crafts would indulge your curiosity.",
+        "voice": "char/Yuming/vo_topic_01_1",
         "npc": 84201,
         "next": 90070102
       },
       {
         "id": 90070201,
         "content": "The Nine Chapters are the sacred laws of Huaxu, brooking no defiance. Should anyone dare to challenge divine decree, it falls upon some to quell the ensuing turmoil.",
+        "voice": "char/Yuming/vo_topic_02_1",
         "npc": 84201,
         "next": 90070202
       },
       {
         "id": 90070301,
         "content": "There is nought to celebrate. That is the entirety of the matter.",
+        "voice": "char/Yuming/vo_topic_03_1",
         "npc": 84201,
         "next": 90070302
       },
       {
         "id": 90070401,
         "content": "Indeed. The moon, a celestial marvel, purifies the remnants of the day, be it festivity or foul deed. Through the ages, the crescent merely watches from its lofty perch.",
+        "voice": "char/Yuming/vo_topic_04_1",
         "npc": 84201,
         "next": 90070402
       },
@@ -3306,6 +3562,7 @@
       {
         "id": 90070103,
         "content": "I am often preoccupied, and my perspectives are notably skewed. Should your curiosity truly beckon, a visit thither would enlighten you far beyond any second-hand account.",
+        "voice": "char/Yuming/vo_topic_01_2",
         "npc": 84201,
         "options": [
           {
@@ -3322,6 +3579,7 @@
       {
         "id": 90070203,
         "content": "...Perhaps in title. I seldom consort with the commoners. My presence, necessary as it may be for law's enforcement, often brings collateral grief. Few in Huaxu would greet me with joy.",
+        "voice": "char/Yuming/vo_topic_02_2",
         "npc": 84201,
         "options": [
           {
@@ -3338,6 +3596,7 @@
       {
         "id": 90070303,
         "content": "Your concern is appreciated, yet I would not burden another soul with my woes. It is unnecessary.",
+        "voice": "char/Yuming/vo_topic_03_2",
         "npc": 84201,
         "options": [
           {
@@ -3354,6 +3613,7 @@
       {
         "id": 90070403,
         "content": "No, I am one who has bid farewell to the past. Tonight, I simply indulged in an extra half cup of wine.",
+        "voice": "char/Yuming/vo_topic_04_2",
         "npc": 84201,
         "options": [
           {
@@ -3380,6 +3640,7 @@
       {
         "id": 90080001,
         "content": "Ahh... I feel so fresh after just waking up. Listen, buddy, there's no point in working all day. Your to-do list will never end. Remember, relaxation is a necessity, not a luxury.",
+        "voice": "char/Landi/vo_welcome",
         "npc": 84202,
         "options": [
           {
@@ -3407,24 +3668,28 @@
       {
         "id": 90080101,
         "content": "My family? My parents haven't really fussed over me for years; just my sisters occasionally trying to boss me around. But now that I'm in the Legion, they're out of reach.",
+        "voice": "char/Landi/vo_topic_01_1",
         "npc": 84202,
         "next": 90080103
       },
       {
         "id": 90080201,
         "content": "Huh, you're one of those who don't appreciate a good rest! Listen up: Beds are havens, where souls find ease; rooftops sanctuaries, where anxieties cease. In afternoon gardens, the sunlight gleams; take a nap, and enjoy the symphony of sweet dreams...",
+        "voice": "char/Landi/vo_topic_02_1",
         "npc": 84202,
         "next": 90080203
       },
       {
         "id": 90080301,
         "content": "She sure knows how to run you ragged... I'd need to split myself in three just to keep up... Ahem, I mean, Chief Sibylle is always perfectly strict with us.",
+        "voice": "char/Landi/vo_topic_03_1",
         "npc": 84202,
         "next": 90080303
       },
       {
         "id": 90080401,
         "content": "I've rigged up something awesome for you — a tiny robot sidekick! It'll follow you around in battle, waving a little banner and cheering, \"Go get'em! You're smashing it!\"",
+        "voice": "char/Landi/vo_topic_04_1",
         "npc": 84202,
         "next": 90080403
       },
@@ -3449,12 +3714,14 @@
       {
         "id": 90080403,
         "content": "Pretty cool, huh? Just wait till I actually get it working...",
+        "voice": "char/Landi/vo_topic_04_2",
         "npc": 84202,
         "next": 90080404
       },
       {
         "id": 90080104,
         "content": "Oh, not at all! T-They're absolutely delightful, smart, kind-hearted, gentle, charming, beautiful, and just about perfect! Though, a bit more decorum would be nice...",
+        "voice": "char/Landi/vo_topic_01_2",
         "npc": 84202,
         "options": [
           {
@@ -3471,6 +3738,7 @@
       {
         "id": 90080204,
         "content": "...Hey! I wasn't done!",
+        "voice": "char/Landi/vo_topic_02_2",
         "npc": 84202,
         "options": [
           {
@@ -3487,6 +3755,7 @@
       {
         "id": 90080304,
         "content": "...How about I treat you to some afternoon tea, and we pretend this conversation never happened? Don't worry, it won't be spiked.",
+        "voice": "char/Landi/vo_topic_03_2",
         "npc": 84202,
         "options": [
           {
@@ -3509,6 +3778,7 @@
       {
         "id": 90080405,
         "content": "Hey, I didn't finish! I drew up these plans during my precious breaks — do you know how hard it was for me to keep them from Chief Sibylle?",
+        "voice": "char/Landi/vo_topic_04_3",
         "npc": 84202,
         "options": [
           {
@@ -3535,6 +3805,7 @@
       {
         "id": 90090001,
         "content": "Watching your relentless efforts to strengthen yourself, I can't help but look forward to the day you challenge me again.",
+        "voice": "char/Xibi/vo_welcome",
         "npc": 84301,
         "options": [
           {
@@ -3562,24 +3833,28 @@
       {
         "id": 90090101,
         "content": "A special force under the direct command of the Emperor, tasked with covert missions and serving as a hammer ready to strike on the battlefield.",
+        "voice": "char/Xibi/vo_topic_01_1",
         "npc": 84301,
         "next": 90090103
       },
       {
         "id": 90090201,
         "content": "Hmph, my allegiance is not to the Empire, but to my ideals. A man once gave everything for these, and it is his legacy that I strive to uphold.",
+        "voice": "char/Xibi/vo_topic_02_1",
         "npc": 84301,
         "next": 90090203
       },
       {
         "id": 90090301,
         "content": "It's okay. My family's long gone anyway.",
+        "voice": "char/Xibi/vo_topic_03_1",
         "npc": 84301,
         "next": 90090303
       },
       {
         "id": 90090401,
         "content": "Indeed. I've endured my share of curses and jibes to my face, and those from the gutter surely grumble even more.",
+        "voice": "char/Xibi/vo_topic_04_1",
         "npc": 84301,
         "next": 90090403
       },
@@ -3604,18 +3879,21 @@
       {
         "id": 90090403,
         "content": "Fortunately, in this unjust world, absolute power can still earn one a modicum of respect.",
+        "voice": "char/Xibi/vo_topic_04_2",
         "npc": 84301,
         "next": 90090404
       },
       {
         "id": 90090104,
         "content": "You got it all wrong. Without the Emperor, the Legion still stands; without the Legion, however, the crown would surely fall.",
+        "voice": "char/Xibi/vo_topic_01_2",
         "npc": 84301,
         "next": 90090105
       },
       {
         "id": 90090204,
         "content": "You're not wrong. To get what I desire, I'll use everything at my disposal and climb the ladder by any means necessary; but each step I take is a step closer to what I believe in. Where have your steps led you?",
+        "voice": "char/Xibi/vo_topic_02_2",
         "npc": 84301,
         "options": [
           {
@@ -3632,6 +3910,7 @@
       {
         "id": 90090304,
         "content": "I find it liberating, actually. It means no more distractions — just a clear path to contend with my enemies, both known and hidden.",
+        "voice": "char/Xibi/vo_topic_03_2",
         "npc": 84301,
         "next": 90090305
       },
@@ -3650,6 +3929,7 @@
       {
         "id": 90090305,
         "content": "Sentiment and feelings are merely weaknesses for anyone in the Legion.",
+        "voice": "char/Xibi/vo_topic_03_3",
         "npc": 84301,
         "options": [
           {
@@ -3666,6 +3946,7 @@
       {
         "id": 90090405,
         "content": "Exactly, which is why I'll never show weakness; otherwise, they'd pounce like wolves at the scent of blood, eager to tear me apart.",
+        "voice": "char/Xibi/vo_topic_04_3",
         "npc": 84301,
         "options": [
           {
@@ -3682,6 +3963,7 @@
       {
         "id": 90090106,
         "content": "Feel free to try. Treason is a grave offence, and any accusation would work its way up through the ranks and end up right on my desk.",
+        "voice": "char/Xibi/vo_topic_01_3",
         "npc": 84301,
         "options": [
           {
@@ -3708,6 +3990,7 @@
       {
         "id": 90120001,
         "content": "The sun is shining bright, and the little birdies are chirping with joy after a hearty meal. Are you hungry too? Wanna grab something to eat as well?",
+        "voice": "char/Songlu/vo_welcome",
         "npc": 85101,
         "options": [
           {
@@ -3740,42 +4023,49 @@
       {
         "id": 90120101,
         "content": "Huh? You don't know? A commissary's job is to make sure everyone's well-fed, dealing with all sorts of food every day.",
+        "voice": "char/Songlu/vo_topic_01_1",
         "npc": 85101,
         "next": 90120103
       },
       {
         "id": 90120201,
         "content": "Hmm... maybe it does? I've never really thought about it, but Filbert only knocks down those no-good, shouty, fighty troublemakers! They totally deserve it!",
+        "voice": "char/Songlu/vo_topic_02_1",
         "npc": 85101,
         "next": 90120203
       },
       {
         "id": 90120301,
         "content": "Yeah, she is! And you know what, even across several creeks, Filbert can sniff out ripe berries and then off we go charging! Pretty awesome, isn't she?",
+        "voice": "char/Songlu/vo_topic_03_1",
         "npc": 85101,
         "next": 90120303
       },
       {
         "id": 90120401,
         "content": "Thank you! Actually, these are shorts, not a dress. They did start as a pretty, long, white dress; then the lady at the tailor's shop turned them into shorts for me.",
+        "voice": "char/Songlu/vo_topic_04_1",
         "npc": 85101,
         "next": 90120403
       },
       {
         "id": 90120501,
         "content": "Oh, I was meditating, not zoning out. I'm a member of the Elysian Church after all, so I do try to give some deep thought occasionally.",
+        "voice": "char/Songlu/vo_topic_05_1",
         "npc": 85101,
         "next": 90120503
       },
       {
         "id": 90120103,
         "content": "For example, I go out to gather all kinds of ingredients from the wild, have Filbert haul them back, and then get Mr Beard at the bakery to turn them into yummy food for everyone.",
+        "voice": "char/Songlu/vo_topic_01_2",
         "npc": 85101,
         "next": 90120104
       },
       {
         "id": 90120203,
         "content": "Those guys always end up hungry after their brawls. They'd do more good ploughing fields than swinging weapons — that way, less people would go to bed hungry.",
+        "voice": "char/Songlu/vo_topic_02_2",
         "npc": 85101,
         "next": 90120204
       },
@@ -3800,6 +4090,7 @@
       {
         "id": 90120104,
         "content": "And just so you know, haggling with Mr Beard is part of my job too! Hehe.",
+        "voice": "char/Songlu/vo_topic_01_3",
         "npc": 85101,
         "next": 90120105
       },
@@ -3812,6 +4103,7 @@
       {
         "id": 90120304,
         "content": "No worries at all! Filbert always brings more food. So never ever make fun of her — it would hurt her feelings, and mine too.",
+        "voice": "char/Songlu/vo_topic_03_2",
         "npc": 85101,
         "options": [
           {
@@ -3828,12 +4120,14 @@
       {
         "id": 90120404,
         "content": "Because dresses aren't the best for all the running around I do. One time, I tripped over the hem and all the bread in my arms went flying.",
+        "voice": "char/Songlu/vo_topic_04_2",
         "npc": 85101,
         "next": 90120405
       },
       {
         "id": 90120504,
         "content": "I used to wonder about that, but the clergy said it was... blastphomy or something. So I stopped thinking about that.",
+        "voice": "char/Songlu/vo_topic_05_2",
         "npc": 85101,
         "next": 90120505
       },
@@ -3846,12 +4140,14 @@
       {
         "id": 90120205,
         "content": "Absolutely! Fighting just leads to hunger — that's really awful! I've heard that in times of war, everyone ends up starving, which is just the worst! I hope I never have to see that.",
+        "voice": "char/Songlu/vo_topic_02_3",
         "npc": 85101,
         "next": 90120206
       },
       {
         "id": 90120405,
         "content": "But if the day comes, when no one's starving anymore, I'll have them changed back into a dress!",
+        "voice": "char/Songlu/vo_topic_04_3",
         "npc": 85101,
         "options": [
           {
@@ -3868,6 +4164,7 @@
       {
         "id": 90120505,
         "content": "I never quite get what they say, like how gluttony is a terrible sin... but it seems like the higher someone's status, the more they eat.",
+        "voice": "char/Songlu/vo_topic_05_3",
         "npc": 85101,
         "options": [
           {
@@ -3884,6 +4181,7 @@
       {
         "id": 90120106,
         "content": "Oh, not at all! The others seem to be brainy types; they're all about the paperwork — filling out application forms, then waiting for trains loaded with food to roll in.",
+        "voice": "char/Songlu/vo_topic_01_4",
         "npc": 85101,
         "next": 90120107
       },
@@ -3896,6 +4194,7 @@
       {
         "id": 90120107,
         "content": "But for a small town like ours, just Filbert and I can feed everyone! Otherwise, I might have to start filling out those forms too — ugh, it's all gibberish to me.",
+        "voice": "char/Songlu/vo_topic_01_5",
         "npc": 85101,
         "options": [
           {
@@ -3912,6 +4211,7 @@
       {
         "id": 90120207,
         "content": "Right! Anyone who makes people go hungry will sooner or later get knocked over by Filbert!",
+        "voice": "char/Songlu/vo_topic_02_4",
         "npc": 85101,
         "options": [
           {
@@ -3938,6 +4238,7 @@
       {
         "id": 90160001,
         "content": "Here you are, finally! I've finished all my chores and got absolutely knackered, but I've only earned a few quid. Urgh... You know I do much for you guys.",
+        "voice": "char/Aote/vo_welcome",
         "npc": 85102,
         "options": [
           {
@@ -3970,30 +4271,35 @@
       {
         "id": 90160101,
         "content": "A guide? No, most folks in this trade aren't the type to stick their nose in a book. But I do have a few mottoes to share, like my personal fighting mantra: \"Two hits in the ribs, one on the head; so dead even the emperor can't pull 'em back.\"",
+        "voice": "char/Aote/vo_topic_01_1",
         "npc": 85102,
         "next": 90160103
       },
       {
         "id": 90160201,
         "content": "They're like a wildfire that's never fully extinguished, ready to flare up at any moment. For your own good, better keep your distance...",
+        "voice": "char/Aote/vo_topic_02_1",
         "npc": 85102,
         "next": 90160203
       },
       {
         "id": 90160301,
         "content": "Yeah. Can you grab that bandage over there for me? I need to keep it from Fina, or she'll make a big fuss again.",
+        "voice": "char/Aote/vo_topic_03_1",
         "npc": 85102,
         "next": 90160303
       },
       {
         "id": 90160401,
         "content": "Oh, would you like some? Don't mind their looks — just pop off the head, and they're crunchy like cookies, even with a hint of meaty aftertaste...",
+        "voice": "char/Aote/vo_topic_04_1",
         "npc": 85102,
         "next": 90160403
       },
       {
         "id": 90160501,
         "content": "Wait a sec, why do you only have a few coins in your hand? Did you give away your share of the bounty again?",
+        "voice": "char/Aote/vo_topic_05_1",
         "npc": 85102,
         "next": 90160503
       },
@@ -4030,6 +4336,7 @@
       {
         "id": 90160104,
         "content": "Don't bite off more than you can chew. In our line of work, greed is the biggest enemy — sometimes it comes from others, but more often, it comes from within.",
+        "voice": "char/Aote/vo_topic_01_2",
         "npc": 85102,
         "options": [
           {
@@ -4046,6 +4353,7 @@
       {
         "id": 90160204,
         "content": "Well... let's just say we've had our little scuffles. If you ever deal with them, make sure my name doesn't come up.",
+        "voice": "char/Aote/vo_topic_02_2",
         "npc": 85102,
         "options": [
           {
@@ -4062,6 +4370,7 @@
       {
         "id": 90160304,
         "content": "I know, but injuries are part of the job. I'd rather she not worry so much. Cover for me if she asks, will you? I owe you one.",
+        "voice": "char/Aote/vo_topic_03_2",
         "npc": 85102,
         "options": [
           {
@@ -4078,6 +4387,7 @@
       {
         "id": 90160404,
         "content": "Wha... where are you going!? This is vital survival wisdom... If you got lost in the wild with no food, these little critters could be a lifesaver.",
+        "voice": "char/Aote/vo_topic_04_2",
         "npc": 85102,
         "options": [
           {
@@ -4094,6 +4404,7 @@
       {
         "id": 90160504,
         "content": "But... Never mind, this is you, always looking out for others. Let me know if you're ever short on cash.",
+        "voice": "char/Aote/vo_topic_05_2",
         "npc": 85102,
         "next": 90160505
       },
@@ -4106,6 +4417,7 @@
       {
         "id": 90160506,
         "content": "...You're milking it, buddy.",
+        "voice": "char/Aote/vo_topic_05_3",
         "npc": 85102,
         "options": [
           {
@@ -4132,6 +4444,7 @@
       {
         "id": 90100001,
         "content": "Such a relief — I'm still here today. And so are you...",
+        "voice": "char/Saiqi/vo_welcome",
         "npc": 85301,
         "options": [
           {
@@ -4164,36 +4477,42 @@
       {
         "id": 90100101,
         "content": "Thank you! Actually, we Charons are quite resilient to the cold, so there's no need for expensive, heavy coats.",
+        "voice": "char/Saiqi/vo_topic_01_1",
         "npc": 85301,
         "next": 90100103
       },
       {
         "id": 90100201,
         "content": "Yeah, it's been that way for ages. We're treated like pests and I've faced harassment and insults for no reason.",
+        "voice": "char/Saiqi/vo_topic_02_1",
         "npc": 85301,
         "next": 90100203
       },
       {
         "id": 90100301,
         "content": "Ah, that might be from my new gardening project. The courtyard at the Hypnos' House looked a bit barren with just a few trees, so I planted some white flowers there.",
+        "voice": "char/Saiqi/vo_topic_03_1",
         "npc": 85301,
         "next": 90100303
       },
       {
         "id": 90100401,
         "content": "No, I've been here my whole life. I always hear those trains and wonder about the places they're heading to. I'd really love to see what's out there.",
+        "voice": "char/Saiqi/vo_topic_04_1",
         "npc": 85301,
         "next": 90100403
       },
       {
         "id": 90100501,
         "content": "Oh, it's just that... I want to take a good look at you all, to memorize your faces better.",
+        "voice": "char/Saiqi/vo_topic_05_1",
         "npc": 85301,
         "next": 90100502
       },
       {
         "id": 90100103,
         "content": "My mom made this dress, but I chose the colour — this vibrant green — and the butterfly details too. They'd look right at home somewhere warm, like the south.",
+        "voice": "char/Saiqi/vo_topic_01_2",
         "npc": 85301,
         "next": 90100104
       },
@@ -4206,6 +4525,7 @@
       {
         "id": 90100303,
         "content": "Perhaps we should plant some here too — bellflowers, windflowers, white dryas... Which would suit this place best?",
+        "voice": "char/Saiqi/vo_topic_03_2",
         "npc": 85301,
         "next": 90100304
       },
@@ -4218,6 +4538,7 @@
       {
         "id": 90100502,
         "content": "Could you maybe take a moment to look at me carefully? I'd like you to remember me... just as I am right now.",
+        "voice": "char/Saiqi/vo_topic_05_2",
         "npc": 85301,
         "options": [
           {
@@ -4240,6 +4561,7 @@
       {
         "id": 90100204,
         "content": "Probably. They say \"Magic is the root of all evil.\" History books claim our ancestors used it to rule over Solas more than a thousand years ago, committing terrible acts.",
+        "voice": "char/Saiqi/vo_topic_02_2",
         "npc": 85301,
         "next": 90100205
       },
@@ -4252,6 +4574,7 @@
       {
         "id": 90100404,
         "content": "Mm, I'd definitely want to visit the capital, for starters; Uncle Henrik once told me the sunsets in Scarletriver are breathtaking... Oh, and I'd love to visit Purgatorio Island you told me about — to feel the sea breeze and see if it's as salty as you described!",
+        "voice": "char/Saiqi/vo_topic_04_2",
         "npc": 85301,
         "options": [
           {
@@ -4268,6 +4591,7 @@
       {
         "id": 90100105,
         "content": "Really? That's so nice to hear! Actually, I've only seen blue butterflies around Icelake. I'd love to see what other colours are out there someday.",
+        "voice": "char/Saiqi/vo_topic_01_3",
         "npc": 85301,
         "options": [
           {
@@ -4284,12 +4608,14 @@
       {
         "id": 90100205,
         "content": "Honestly, I can hardly imagine that... The Charons I know are too terrified of Solas to even speak up around them, let alone use magic.",
+        "voice": "char/Saiqi/vo_topic_02_3",
         "npc": 85301,
         "next": 90100206
       },
       {
         "id": 90100305,
         "content": "Right, it should be a group decision... I'll ask around! By the way, which flower do you like best? I'll pick some for you when they bloom.",
+        "voice": "char/Saiqi/vo_topic_03_3",
         "npc": 85301,
         "options": [
           {
@@ -4306,6 +4632,7 @@
       {
         "id": 90100206,
         "content": "And Most Charon magic is quite ordinary — just good for simple things like lighting fireplaces or freezing food.",
+        "voice": "char/Saiqi/vo_topic_02_4",
         "npc": 85301,
         "next": 90100207
       },
@@ -4318,12 +4645,14 @@
       {
         "id": 90100208,
         "content": "Not at all. Why must one rule over the other? Why can't Charons and Solas just live in peace?",
+        "voice": "char/Saiqi/vo_topic_02_5",
         "npc": 85301,
         "next": 90100209
       },
       {
         "id": 90100209,
         "content": "All I wish for is that when spring comes, everyone can go out together to enjoy all kinds of flowers. That would be enough for me.",
+        "voice": "char/Saiqi/vo_topic_02_6",
         "npc": 85301,
         "options": [
           {
@@ -4350,6 +4679,7 @@
       {
         "id": 90190001,
         "content": "It's delightful to see you safe and well today. Take care... The peace we all long for will surely arrive someday.",
+        "voice": "char/Dafu/vo_welcome",
         "npc": 85401,
         "options": [
           {
@@ -4382,72 +4712,84 @@
       {
         "id": 90190101,
         "content": "I... don't think I have any particular hobbies. Reading, maybe, if that counts.",
+        "voice": "char/Dafu/vo_topic_01_1",
         "npc": 85401,
         "next": 90190102
       },
       {
         "id": 90190201,
         "content": "Certainly! Alchemy is the cornerstone of Hyperborea — scholars call it the \"primordial miracle.\"",
+        "voice": "char/Dafu/vo_topic_02_1",
         "npc": 85401,
         "next": 90190202
       },
       {
         "id": 90190301,
         "content": "Some emergency tools and supplies — bandages, antiseptics, anesthetics, and the basic tools for wound care like surgical blades and sutures.",
+        "voice": "char/Dafu/vo_topic_03_1",
         "npc": 85401,
         "next": 90190302
       },
       {
         "id": 90190401,
         "content": "Oh, it's fine! I can handle it... Well, maybe just a little tough sometimes. The emergency care and nursing lessons aren't too bad, but the physical fitness tests... those are a real struggle for me.",
+        "voice": "char/Dafu/vo_topic_04_1",
         "npc": 85401,
         "next": 90190402
       },
       {
         "id": 90190501,
         "content": "...The last time I spoke with my father was over the radio. It was on the battlefield of Lonza Fortress, and despite the danger, he told me, \"Don't worry, I'll be fine.\"",
+        "voice": "char/Dafu/vo_topic_05_1",
         "npc": 85401,
         "next": 90190502
       },
       {
         "id": 90190102,
         "content": "My mother always says staying home with my books and skipping all those balls and salons will cost me countless opportunities to climb the social ladder...",
+        "voice": "char/Dafu/vo_topic_01_2",
         "npc": 85401,
         "next": 90190103
       },
       {
         "id": 90190202,
         "content": "At first, its purpose was simple: to extract gold from Phoxene. But over time, we discovered this tiny crystal could do so much more — power machinery, generate electricity... It's Solarian magic.",
+        "voice": "char/Dafu/vo_topic_02_2",
         "npc": 85401,
         "next": 90190203
       },
       {
         "id": 90190302,
         "content": "I also keep a handkerchief and a comb in it.",
+        "voice": "char/Dafu/vo_topic_03_2",
         "npc": 85401,
         "next": 90190303
       },
       {
         "id": 90190402,
         "content": "Even though I get up earlier than everyone else for extra training, I still only manage to scrape by with passing scores... Please don't make fun of me! Building stamina is so much harder than studying.",
+        "voice": "char/Dafu/vo_topic_04_2",
         "npc": 85401,
         "next": 90190403
       },
       {
         "id": 90190502,
         "content": "After everything that happened, I'd often turn on my radio in the dead of night, tune to his channel, and press the call button, hoping to hear his voice again...",
+        "voice": "char/Dafu/vo_topic_05_2",
         "npc": 85401,
         "next": 90190503
       },
       {
         "id": 90190103,
         "content": "But honestly, I prefer it this way.",
+        "voice": "char/Dafu/vo_topic_01_3",
         "npc": 85401,
         "next": 90190104
       },
       {
         "id": 90190203,
         "content": "...But then, the Academy...",
+        "voice": "char/Dafu/vo_topic_02_3",
         "npc": 85401,
         "next": 90190204
       },
@@ -4466,6 +4808,7 @@
       {
         "id": 90190503,
         "content": "It wasn't until I sat there in silence for what felt like an eternity that I realized... he was never coming back.",
+        "voice": "char/Dafu/vo_topic_05_3",
         "npc": 85401,
         "next": 90190504
       },
@@ -4484,12 +4827,14 @@
       {
         "id": 90190304,
         "content": "Oh, it's not what you think... They're not for me — they're for my patients. I use them to help those who don't make it... tidy up a bit.",
+        "voice": "char/Dafu/vo_topic_03_3",
         "npc": 85401,
         "next": 90190305
       },
       {
         "id": 90190404,
         "content": "It is. But when I take my mind off my tired legs and look up, I see the wheat fields stretching beyond the city and the cottages on the horizon, and hear the windmills creaking and the herdsmen whistling. It always helps me feel so much better.",
+        "voice": "char/Dafu/vo_topic_04_3",
         "npc": 85401,
         "next": 90190405
       },
@@ -4502,24 +4847,28 @@
       {
         "id": 90190105,
         "content": "Mostly books on battlefield medicine — Emergency Field Aid Manual, Practical Guide to Trauma Care, How to Set Up a Temporary Field Hospital...",
+        "voice": "char/Dafu/vo_topic_01_4",
         "npc": 85401,
         "next": 90190106
       },
       {
         "id": 90190205,
         "content": "...Yes, in the Spathatoi. But that chapter of my life is over now.",
+        "voice": "char/Dafu/vo_topic_02_4",
         "npc": 85401,
         "next": 90190206
       },
       {
         "id": 90190305,
         "content": "The cruelty of death robs people of more than just their lives — it strips them of their dignity.",
+        "voice": "char/Dafu/vo_topic_03_4",
         "npc": 85401,
         "next": 90190306
       },
       {
         "id": 90190405,
         "content": "Because... running along that road feels like my way of protecting these simple, precious things from being taken away.",
+        "voice": "char/Dafu/vo_topic_04_4",
         "npc": 85401,
         "options": [
           {
@@ -4536,6 +4885,7 @@
       {
         "id": 90190505,
         "content": "Thank you. Don't worry, I'll stay strong and keep pushing on. Until I clear my father's name and honour the wronged who fell in the Lonza battle, I won't stop.",
+        "voice": "char/Dafu/vo_topic_05_4",
         "npc": 85401,
         "options": [
           {
@@ -4552,6 +4902,7 @@
       {
         "id": 90190106,
         "content": "You may know that my previous studies never focused on first aid, so even with my medic qualifications, I still feel out of my depth sometimes.",
+        "voice": "char/Dafu/vo_topic_01_5",
         "npc": 85401,
         "next": 90190107
       },
@@ -4564,6 +4915,7 @@
       {
         "id": 90190306,
         "content": "I just want... when their families come to say their final goodbyes, for them to see their loved ones at peace, as though they're merely asleep. After being apart for so long, no parent should have to see their child's face twisted in pain...",
+        "voice": "char/Dafu/vo_topic_03_5",
         "npc": 85401,
         "options": [
           {
@@ -4586,12 +4938,14 @@
       {
         "id": 90190207,
         "content": "I left because the Spathatoi lost its way. What began as a pursuit of knowledge turned into something darker. It's become the blazing core of Hyperborea's war machine, but its fuel brings suffering and misfortune to its people.",
+        "voice": "char/Dafu/vo_topic_02_5",
         "npc": 85401,
         "next": 90190208
       },
       {
         "id": 90190108,
         "content": "I know, which is why I've been reading... Glass Heels. It's about a—a princess and a knight... Not that I'm into romantic novels or anything! I just... happened to flip through it, that's all...",
+        "voice": "char/Dafu/vo_topic_01_6",
         "npc": 85401,
         "options": [
           {
@@ -4608,6 +4962,7 @@
       {
         "id": 90190208,
         "content": "I suppose... I wasn't as strong as I thought. I couldn't reconcile with what it had become, and I lacked the courage or strength to change it. So, I did the only thing I could — I walked away.",
+        "voice": "char/Dafu/vo_topic_02_6",
         "npc": 85401,
         "options": [
           {
@@ -5019,6 +5374,7 @@
       {
         "id": 10037995,
         "content": "Whatever they demand of us... remember this: we are not monsters.",
+        "voice": "story/1003/100379/19210B11",
         "npc": 100328
       }
     ]
@@ -5188,6 +5544,7 @@
       {
         "id": 10037997,
         "content": "I asked the doctor for a pen and some paper — could you fetch the seal for me? Apologies... this injury's turned me into a burden.",
+        "voice": "story/1003/100379/19210B0G",
         "npc": 100304
       }
     ]
@@ -5369,41 +5726,48 @@
       {
         "id": 11010416,
         "content": "Please be careful. I'll be waiting for you right here.",
+        "voice": "story/1002/110104/1B903C37",
         "npc": 110005
       },
       {
         "id": 11011133,
         "content": "When did you get injured?",
+        "voice": "story/1002/110111/1B90B202",
         "npc": 110022,
         "next": 11011134
       },
       {
         "id": 11011134,
         "content": "During the attack by that giant Filthoid. I didn't mean to hide it from you, but...",
+        "voice": "story/1002/110111/1B90B22C",
         "npc": 110005,
         "next": 11011135
       },
       {
         "id": 11011135,
         "content": "...You need a break. Listen to Sir Avar and go to the processing area.",
+        "voice": "story/1002/110111/1B90B256",
         "npc": 110022,
         "next": 11011136
       },
       {
         "id": 11011136,
         "content": "I'll go see you when we're back in the capital.",
+        "voice": "story/1002/110111/1B90B280",
         "npc": 110022,
         "next": 11011137
       },
       {
         "id": 11011137,
         "content": "Okay. After what Commander Avar said, I guess I don't have a choice. But I'm still worried...",
+        "voice": "story/1002/110111/1B90B2AA",
         "npc": 110005,
         "next": 11011138
       },
       {
         "id": 11011138,
         "content": "Forget it. Now that he's here, there shouldn't be any problems.",
+        "voice": "story/1002/110111/1B90B2D4",
         "npc": 110005
       }
     ]
@@ -5434,82 +5798,97 @@
     "talks": [
       {
         "id": 11012501,
-        "content": "<W>That's right — you've made the right choice. Grip the hilt tightly. Yes, just like that. Now aim at the creature's throat...</>"
+        "content": "<W>That's right — you've made the right choice. Grip the hilt tightly. Yes, just like that. Now aim at the creature's throat...</>",
+        "voice": "story/1002/110125/1B919272"
       },
       {
         "id": 11012505,
         "content": "{nickname2}...My god, what have you done!?",
+        "voice": "story/1002/110125/1B91931A",
         "npc": 110010
       },
       {
         "id": 11012509,
-        "content": "<W>That's right! Forget about meaningless reason. Just follow my lead...</>"
+        "content": "<W>That's right! Forget about meaningless reason. Just follow my lead...</>",
+        "voice": "story/1002/110125/1B9193C2"
       },
       {
         "id": 11012603,
         "content": "It was the sound of passing time, the roar of life that once was, the heartbeat of an embryo, and an ancient echo sealed deeply within my heart.",
+        "voice": "story/1002/110126/1B91A32E",
         "next": 11012604
       },
       {
         "id": 11012604,
         "content": "I felt as though I had become one with this primal voice.",
+        "voice": "story/1002/110126/1B91A358",
         "next": 11012605
       },
       {
         "id": 11012605,
-        "content": "Plop... Plop... Plop..."
+        "content": "Plop... Plop... Plop...",
+        "voice": "story/1002/110126/1B91A382"
       },
       {
         "id": 11012607,
         "content": "AARGH...!",
+        "voice": "story/1002/110126/1B91A3D6",
         "npc": 110022,
         "next": 11012608
       },
       {
         "id": 11012608,
         "content": "What's gotten into you? You scared me!",
+        "voice": "story/1002/110126/1B91A400",
         "npc": 110009,
         "next": 11012609
       },
       {
         "id": 11012609,
         "content": "(Were those just... an illusion...?)",
+        "voice": "story/1002/110126/1B91A42A",
         "npc": 110022,
         "next": 11012453
       },
       {
         "id": 11012453,
         "content": "...Leon, keep a close watch on her. Bring her back in one piece, and make sure she doesn't harm herself. Use Frank as leverage if necessary.",
+        "voice": "story/1002/110124/1B918A92",
         "npc": 110022,
         "next": 11012454
       },
       {
         "id": 11012454,
         "content": "Yes, sir!",
+        "voice": "story/1002/110124/1B918ABC",
         "npc": 110015,
         "next": 11012455
       },
       {
         "id": 11012455,
         "content": "Wait!",
+        "voice": "story/1002/110124/1B918AE6",
         "npc": 110009,
         "next": 11012456
       },
       {
         "id": 11012456,
         "content": "Remember what I said back on our way to the turret? \"Your kindness will reap a just reward.\"",
+        "voice": "story/1002/110124/1B918B10",
         "npc": 110009,
         "next": 11012457
       },
       {
         "id": 11012457,
         "content": "Lend me your ear. I've got a secret that's just for you. Rest assured, you've just frisked me. I am really out of weapons.",
+        "voice": "story/1002/110124/1B918B3A",
         "npc": 110009,
         "next": 11012458
       },
       {
         "id": 11012458,
         "content": "It may be extremely important to you. You sure you don't want to hear it?",
+        "voice": "story/1002/110124/1B918B64",
         "npc": 110009,
         "options": [
           {
@@ -5527,82 +5906,96 @@
       {
         "id": 11012464,
         "content": "<W>Someone in your Legion wants you dead.</>",
+        "voice": "story/1002/110124/1B918C36",
         "npc": 110009,
         "next": 11012465
       },
       {
         "id": 11012460,
         "content": "Leon, shut her up.",
+        "voice": "story/1002/110124/1B918BB8",
         "npc": 110022,
         "next": 11012461
       },
       {
         "id": 11012465,
         "content": "What did you say?",
+        "voice": "story/1002/110124/1B918C60",
         "npc": 110022,
         "next": 11012466
       },
       {
         "id": 11012461,
         "content": "Hehe, fine. I hope you won't regret your choice.",
+        "voice": "story/1002/110124/1B918BE2",
         "npc": 110009
       },
       {
         "id": 11012466,
         "content": "Secrets are meant to be whispered once. Take care, sir.",
+        "voice": "story/1002/110124/1B918C8A",
         "npc": 110009
       },
       {
         "id": 11012401,
         "content": "You crazy girl! What are you laughing at? Is this how you repay the Captain's kindness? Don't you feel guilty at all?",
+        "voice": "story/1002/110124/1B91820A",
         "npc": 110015,
         "next": 11012402
       },
       {
         "id": 11012402,
         "content": "Guilty...? Ha, have you had too many alchemical concoctions from your Academy that damaged your brain?",
+        "voice": "story/1002/110124/1B918234",
         "npc": 110009,
         "next": 11012403
       },
       {
         "id": 11012403,
         "content": "Oh wait, I do feel guilty about one thing — to manipulate that stupid captain of yours, I lied about The Forsakens and blamed them for what the Empire did to us. I'm so sorry to The Forsakens!",
+        "voice": "story/1002/110124/1B91825E",
         "npc": 110009,
         "next": 11012404
       },
       {
         "id": 11012404,
         "content": "You—!",
+        "voice": "story/1002/110124/1B918288",
         "npc": 110015,
         "next": 11012405
       },
       {
         "id": 11012405,
         "content": "Oh, look what the cat dragged in. Hello, dear sir.",
+        "voice": "story/1002/110124/1B9182B2",
         "npc": 110009,
         "next": 11012406
       },
       {
         "id": 11012406,
         "content": "I'll take it from here.",
+        "voice": "story/1002/110124/1B9182DC",
         "npc": 110022,
         "next": 11012407
       },
       {
         "id": 11012407,
         "content": "So what are you doing here? Come to show off the benevolence of a Hyperborean officer? Or perhaps you pity this poor girl who's been led \"astray,\" trying to save me from my \"sins\"?",
+        "voice": "story/1002/110124/1B918306",
         "npc": 110009,
         "next": 11012408
       },
       {
         "id": 11012408,
         "content": "Oh, I get it! You want to join The Forsakens, right? Need a reference?",
+        "voice": "story/1002/110124/1B918330",
         "npc": 110009,
         "next": 11012409
       },
       {
         "id": 11012409,
         "content": "Hey — you guys hear that? Your captain wants to join The Forsakens!",
+        "voice": "story/1002/110124/1B91835A",
         "npc": 110009,
         "options": [
           {
@@ -5650,147 +6043,172 @@
       {
         "id": 11012411,
         "content": "Oh, no. This is so sad. Boohoo whoo.",
+        "voice": "story/1002/110124/1B9183AE",
         "npc": 110009,
         "next": 11012419
       },
       {
         "id": 11012413,
         "content": "Oh honey, you really suck at this. Save it — you won't get anything from me. Lowlives who betray their comrades and sell intel to their enemy only exist in your beloved Legion.",
+        "voice": "story/1002/110124/1B918402",
         "npc": 110009,
         "next": 11012419
       },
       {
         "id": 11012415,
         "content": "Because you're always so on guard. I couldn't find a chance, even while we were alone. I had to bide my time patiently. Even offered you help a couple of times to lower your guard.",
+        "voice": "story/1002/110124/1B918456",
         "npc": 110009,
         "next": 11012416
       },
       {
         "id": 11012418,
         "content": "Oww, it hurts! Someone do something about this! An armed soldier's hitting a helpless young girl!",
+        "voice": "story/1002/110124/1B9184D4",
         "npc": 110009,
         "next": 11012419
       },
       {
         "id": 11012419,
         "content": "You...",
+        "voice": "story/1002/110124/1B9184FE",
         "npc": 110022,
         "next": 11012420
       },
       {
         "id": 11012416,
         "content": "And it's more fun this way! Betrayal by a trusted friend is far more memorable than a stab from a stranger, isn't it?",
+        "voice": "story/1002/110124/1B918480",
         "npc": 110009,
         "next": 11012419
       },
       {
         "id": 11012420,
         "content": "Aww, you look like an angry bull. I'm so sorry, sir! I forgot you like it better when I talk like this.",
+        "voice": "story/1002/110124/1B918528",
         "npc": 110009,
         "next": 11012421
       },
       {
         "id": 11012421,
         "content": "...Cut the act, and answer my question.",
+        "voice": "story/1002/110124/1B918552",
         "npc": 110022,
         "next": 11012422
       },
       {
         "id": 11012422,
         "content": "Sure! Ask away. I'll answer whenever I feel like it.",
+        "voice": "story/1002/110124/1B91857C",
         "npc": 110009,
         "next": 11012423
       },
       {
         "id": 11012423,
         "content": "I deserve to know why you stabbed us in the back after I helped you. Is it out of plain hatred for the Hyperborean Legion, or an assassination attempt targeting me specifically?",
+        "voice": "story/1002/110124/1B9185A6",
         "npc": 110022,
         "next": 11012424
       },
       {
         "id": 11012424,
         "content": "If this is your question... Sure, I can answer that — given that you've been naive enough to fall for my trick.",
+        "voice": "story/1002/110124/1B9185D0",
         "npc": 110009,
         "next": 11012425
       },
       {
         "id": 11012425,
         "content": "The Forsakens simply want all Hyperborean dogs to die here, and preferably at the hands of the killing machines they created — I hope you enjoyed our fiery gift.",
+        "voice": "story/1002/110124/1B9185FA",
         "npc": 110009,
         "next": 11012426
       },
       {
         "id": 11012426,
         "content": "As for me... Well, I personally came for <H>you</>!",
+        "voice": "story/1002/110124/1B918624",
         "npc": 110009,
         "next": 11012427
       },
       {
         "id": 11012427,
         "content": "I heard that you, the top graduate of the Imperial Military College, who is also known as the \"Pale Reaper,\" were coming to Lonza Fortress. How could I not come have a good look at the Pale Reaper myself?",
+        "voice": "story/1002/110124/1B91864E",
         "npc": 110009,
         "next": 11012428
       },
       {
         "id": 11012428,
         "content": "You've heard about me? Have we met before?",
+        "voice": "story/1002/110124/1B918678",
         "npc": 110022,
         "next": 11012429
       },
       {
         "id": 11012429,
         "content": "Hehe, that's for you to guess.",
+        "voice": "story/1002/110124/1B9186A2",
         "npc": 110009,
         "next": 11012430
       },
       {
         "id": 11012430,
         "content": "My sources said that our great {性别2:Mr|Miss} Pale Reaper only has a few years' worth of memories. You know nothing of your past. You don't even know where you came from.",
+        "voice": "story/1002/110124/1B9186CC",
         "npc": 110009,
         "next": 11012431
       },
       {
         "id": 11012431,
         "content": "...",
+        "voice": "story/1002/110124/1B9186F6",
         "npc": 110022,
         "next": 11012432
       },
       {
         "id": 11012432,
         "content": "Let's play a game then! Now, honey, take a guess — was I your neighbour, an old nemesis—",
+        "voice": "story/1002/110124/1B918720",
         "npc": 110009,
         "next": 11012433
       },
       {
         "id": 11012433,
         "content": "Or a complete stranger? Maybe I just hate you for being one of Hyperborea's honorable people, and I simply wish to destroy that which they cherish?",
+        "voice": "story/1002/110124/1B91874A",
         "npc": 110009,
         "next": 11012434
       },
       {
         "id": 11012434,
         "content": "...",
+        "voice": "story/1002/110124/1B918774",
         "npc": 110022,
         "next": 11012435
       },
       {
         "id": 11012435,
         "content": "<W>Your head hurts, right? The jabbering of this mad girl is worming through your skull like a leech sucking at your brains.</>",
+        "voice": "story/1002/110124/1B91879E",
         "next": 11012436
       },
       {
         "id": 11012436,
         "content": "<W>See, you have a sword in your hand. That's right — it's the one you've wielded in countless battles. The hilt still carries your warmth. You're familiar with the slick feeling and the subtle tug of resistance when its blade slices through flesh.</>",
+        "voice": "story/1002/110124/1B9187C8",
         "next": 11012437
       },
       {
         "id": 11012437,
         "content": "<W>You can easily slit this creature's throat and make its detestable lips gurgle and whimper in pain.</>",
+        "voice": "story/1002/110124/1B9187F2",
         "next": 11012438
       },
       {
         "id": 11012438,
         "content": "(It's... that voice again! Why now...?)",
+        "voice": "story/1002/110124/1B91881C",
         "npc": 110022,
         "options": [
           {
@@ -5808,29 +6226,34 @@
       {
         "id": 11012451,
         "content": "ENOUGH!!! Shut up!!",
+        "voice": "story/1002/110124/1B918A3E",
         "npc": 110022,
         "next": 11012452
       },
       {
         "id": 11012441,
         "content": "Why suddenly so quiet? You seemed ready to lecture me. Cat got your tongue, honey?",
+        "voice": "story/1002/110124/1B91889A",
         "npc": 110009,
         "next": 11012442
       },
       {
         "id": 11012452,
         "content": "...Okay, looks like somebody needs anger management here.",
+        "voice": "story/1002/110124/1B918A68",
         "npc": 110009,
         "next": 11012453
       },
       {
         "id": 11012442,
         "content": "<W>I am the origin of your soul, the impulse within the deepest recesses of your mind. Do not refuse me... Listen — I am the one who gave you power and made you invincible in battle.</>",
+        "voice": "story/1002/110124/1B9188C4",
         "next": 11012443
       },
       {
         "id": 11012443,
         "content": "<W>Unsheathe your sword, the one that bears the killing razor.</>",
+        "voice": "story/1002/110124/1B9188EE",
         "options": [
           {
             "id": 11012444,
@@ -5847,17 +6270,20 @@
       {
         "id": 11012446,
         "content": "Go on, make your guess — any guess would do, because I won't tell you the truth anyway!",
+        "voice": "story/1002/110124/1B91896C",
         "npc": 110009,
         "next": 11012447
       },
       {
         "id": 11012447,
         "content": "<W>Do not hesitate! Use your sword! It's calling to you! It thirsts for the sweet joy that can only be sated by flesh and blood.</>",
+        "voice": "story/1002/110124/1B918996",
         "next": 11012448
       },
       {
         "id": 11012448,
         "content": "<W>Quick! Silence this mad lass for good!</>",
+        "voice": "story/1002/110124/1B9189C0",
         "options": [
           {
             "id": 11012449,
@@ -5881,6 +6307,7 @@
       {
         "id": 11017901,
         "content": "Go, stay in touch, and be careful.",
+        "voice": "story/1002/110179/1B950862",
         "npc": 110010
       }
     ]
@@ -5948,41 +6375,48 @@
       {
         "id": 11017902,
         "content": "Vic...",
+        "voice": "story/1002/110179/1B95088C",
         "npc": 110020
       },
       {
         "id": 11018502,
         "content": "I found this on Vic. Thought you should have it.",
+        "voice": "story/1002/110185/1B956AFC",
         "npc": 110022,
         "next": 11018503
       },
       {
         "id": 11018503,
         "content": "His identity disc...",
+        "voice": "story/1002/110185/1B956B26",
         "npc": 110020,
         "next": 11018504
       },
       {
         "id": 11018504,
         "content": "\"Monica — next time, I'm beating you at the shooting range.\" ...Heh. Haha... That idiot. What kind of farewell is that...",
+        "voice": "story/1002/110185/1B956B50",
         "npc": 110022,
         "next": 11018505
       },
       {
         "id": 11018505,
         "content": "If I'd known he'd be that petty... maybe I would've let him win...",
+        "voice": "story/1002/110185/1B956B7A",
         "npc": 110020,
         "next": 11018506
       },
       {
         "id": 11018506,
         "content": "...Monica. We've got another fight ahead. Stay sharp.",
+        "voice": "story/1002/110185/1B956BA4",
         "npc": 110022,
         "next": 11018507
       },
       {
         "id": 11018507,
         "content": "I... Yes, sir. And thank you... for bringing this back.",
+        "voice": "story/1002/110185/1B956BCE",
         "npc": 110020
       }
     ]
@@ -6232,6 +6666,7 @@
       {
         "id": 11010401,
         "content": "Damn those friggin' rotters!",
+        "voice": "story/1002/110104/1B9039EA",
         "npc": 110044,
         "options": [
           {
@@ -6269,60 +6704,70 @@
       {
         "id": 11010403,
         "content": "Captain! I'm fine, I can still move... Hssss—",
+        "voice": "story/1002/110104/1B903A3E",
         "npc": 110044,
         "next": 11010408
       },
       {
         "id": 11010405,
         "content": "Please don't say that, Captain! You did your best!",
+        "voice": "story/1002/110104/1B903A92",
         "npc": 110044,
         "next": 11010408
       },
       {
         "id": 11010407,
         "content": "Who else could it be? The bastards who call themselves The Forsakens.",
+        "voice": "story/1002/110104/1B903AE6",
         "npc": 110044,
         "next": 11010408
       },
       {
         "id": 11010408,
         "content": "Those despicable cowards are using Filthoids as their weapon... <W>The Forsakens</> are monsters, just like their Filthoid pets!",
+        "voice": "story/1002/110104/1B903B10",
         "npc": 110044,
         "next": 11010409
       },
       {
         "id": 11010409,
         "content": "And those blasted airheads giving us the orders are just as bad. The mission brief mentioned nothing about the Filthoid hordes down here.",
+        "voice": "story/1002/110104/1B903B3A",
         "npc": 110044,
         "next": 11010410
       },
       {
         "id": 11010410,
         "content": "...Sorry about that. I shouldn't have vented my frustration in front of you, Captain.",
+        "voice": "story/1002/110104/1B903B64",
         "npc": 110044,
         "next": 11010411
       },
       {
         "id": 11010411,
         "content": "It's alright. Letting out emotions is better than being unable to speak at all.",
+        "voice": "story/1002/110104/1B903B8E",
         "npc": 110022,
         "next": 11010412
       },
       {
         "id": 11010412,
         "content": "Hah! You always know how to soothe people, Captain!",
+        "voice": "story/1002/110104/1B903BB8",
         "npc": 110044,
         "next": 11010413
       },
       {
         "id": 11010413,
         "content": "And thank goodness we have you. We thought we were goners.",
+        "voice": "story/1002/110104/1B903BE2",
         "npc": 110044,
         "next": 11010414
       },
       {
         "id": 11010414,
         "content": "It's just that we're too green. If only <H>Commander Avar</> were here... As a veteran, he must have a way to get us out.",
+        "voice": "story/1002/110104/1B903C0C",
         "npc": 110044
       }
     ]
@@ -6336,6 +6781,7 @@
       {
         "id": 11010501,
         "content": "Doctor... Dr Daphne... We're stuck in this bloody dump. Please, Dr Daphne, if I don't make it, do me a favour and bury me...",
+        "voice": "story/1002/110105/1B904A52",
         "npc": 110045,
         "options": [
           {
@@ -6363,42 +6809,49 @@
       {
         "id": 11010503,
         "content": "We're out of painkillers... so I have to grumble a bit to make myself feel better.",
+        "voice": "story/1002/110105/1B904AA6",
         "npc": 110045,
         "next": 11010506
       },
       {
         "id": 11010505,
         "content": "Sorry, Captain. I'll zip it. With no painkillers left, I can only grumble a little to help distract me from the pain.",
+        "voice": "story/1002/110105/1B904AFA",
         "npc": 110045,
         "next": 11010506
       },
       {
         "id": 11010506,
         "content": "Dr Daphne and you covered our retreat just then. How is she?",
+        "voice": "story/1002/110105/1B904B24",
         "npc": 110045,
         "next": 11010507
       },
       {
         "id": 11010507,
         "content": "She's all right. She told me to come check on all of you.",
+        "voice": "story/1002/110105/1B904B4E",
         "npc": 110022,
         "next": 11010508
       },
       {
         "id": 11010508,
         "content": "Good to hear that. *sigh* A high-born lady like her could've stayed at the Academy, but no, she chose to serve with the 13th Legion. What was she thinking?",
+        "voice": "story/1002/110105/1B904B78",
         "npc": 110045,
         "next": 11010509
       },
       {
         "id": 11010509,
         "content": "...\"Eternal glory and loyalty to our Emperor!\" Those aristocrats say that all the time. I wonder if any of them would still be so keen on that when they're actually in a filth pit like this.",
+        "voice": "story/1002/110105/1B904BA2",
         "npc": 110045,
         "next": 11010510
       },
       {
         "id": 11010510,
         "content": "But Dr Daphne has real medical skills and a soft, pretty voice. We gotta keep her safe, Captain. Don't want her to die here.",
+        "voice": "story/1002/110105/1B904BCC",
         "npc": 110045
       }
     ]
@@ -6411,82 +6864,97 @@
     "talks": [
       {
         "id": 11012501,
-        "content": "<W>That's right — you've made the right choice. Grip the hilt tightly. Yes, just like that. Now aim at the creature's throat...</>"
+        "content": "<W>That's right — you've made the right choice. Grip the hilt tightly. Yes, just like that. Now aim at the creature's throat...</>",
+        "voice": "story/1002/110125/1B919272"
       },
       {
         "id": 11012505,
         "content": "{nickname2}...My god, what have you done!?",
+        "voice": "story/1002/110125/1B91931A",
         "npc": 110010
       },
       {
         "id": 11012509,
-        "content": "<W>That's right! Forget about meaningless reason. Just follow my lead...</>"
+        "content": "<W>That's right! Forget about meaningless reason. Just follow my lead...</>",
+        "voice": "story/1002/110125/1B9193C2"
       },
       {
         "id": 11012603,
         "content": "It was the sound of passing time, the roar of life that once was, the heartbeat of an embryo, and an ancient echo sealed deeply within my heart.",
+        "voice": "story/1002/110126/1B91A32E",
         "next": 11012604
       },
       {
         "id": 11012604,
         "content": "I felt as though I had become one with this primal voice.",
+        "voice": "story/1002/110126/1B91A358",
         "next": 11012605
       },
       {
         "id": 11012605,
-        "content": "Plop... Plop... Plop..."
+        "content": "Plop... Plop... Plop...",
+        "voice": "story/1002/110126/1B91A382"
       },
       {
         "id": 11012607,
         "content": "AARGH...!",
+        "voice": "story/1002/110126/1B91A3D6",
         "npc": 110022,
         "next": 11012608
       },
       {
         "id": 11012608,
         "content": "What's gotten into you? You scared me!",
+        "voice": "story/1002/110126/1B91A400",
         "npc": 110009,
         "next": 11012609
       },
       {
         "id": 11012609,
         "content": "(Were those just... an illusion...?)",
+        "voice": "story/1002/110126/1B91A42A",
         "npc": 110022,
         "next": 11012453
       },
       {
         "id": 11012453,
         "content": "...Leon, keep a close watch on her. Bring her back in one piece, and make sure she doesn't harm herself. Use Frank as leverage if necessary.",
+        "voice": "story/1002/110124/1B918A92",
         "npc": 110022,
         "next": 11012454
       },
       {
         "id": 11012454,
         "content": "Yes, sir!",
+        "voice": "story/1002/110124/1B918ABC",
         "npc": 110015,
         "next": 11012455
       },
       {
         "id": 11012455,
         "content": "Wait!",
+        "voice": "story/1002/110124/1B918AE6",
         "npc": 110009,
         "next": 11012456
       },
       {
         "id": 11012456,
         "content": "Remember what I said back on our way to the turret? \"Your kindness will reap a just reward.\"",
+        "voice": "story/1002/110124/1B918B10",
         "npc": 110009,
         "next": 11012457
       },
       {
         "id": 11012457,
         "content": "Lend me your ear. I've got a secret that's just for you. Rest assured, you've just frisked me. I am really out of weapons.",
+        "voice": "story/1002/110124/1B918B3A",
         "npc": 110009,
         "next": 11012458
       },
       {
         "id": 11012458,
         "content": "It may be extremely important to you. You sure you don't want to hear it?",
+        "voice": "story/1002/110124/1B918B64",
         "npc": 110009,
         "options": [
           {
@@ -6504,82 +6972,96 @@
       {
         "id": 11012464,
         "content": "<W>Someone in your Legion wants you dead.</>",
+        "voice": "story/1002/110124/1B918C36",
         "npc": 110009,
         "next": 11012465
       },
       {
         "id": 11012460,
         "content": "Leon, shut her up.",
+        "voice": "story/1002/110124/1B918BB8",
         "npc": 110022,
         "next": 11012461
       },
       {
         "id": 11012465,
         "content": "What did you say?",
+        "voice": "story/1002/110124/1B918C60",
         "npc": 110022,
         "next": 11012466
       },
       {
         "id": 11012461,
         "content": "Hehe, fine. I hope you won't regret your choice.",
+        "voice": "story/1002/110124/1B918BE2",
         "npc": 110009
       },
       {
         "id": 11012466,
         "content": "Secrets are meant to be whispered once. Take care, sir.",
+        "voice": "story/1002/110124/1B918C8A",
         "npc": 110009
       },
       {
         "id": 11012401,
         "content": "You crazy girl! What are you laughing at? Is this how you repay the Captain's kindness? Don't you feel guilty at all?",
+        "voice": "story/1002/110124/1B91820A",
         "npc": 110015,
         "next": 11012402
       },
       {
         "id": 11012402,
         "content": "Guilty...? Ha, have you had too many alchemical concoctions from your Academy that damaged your brain?",
+        "voice": "story/1002/110124/1B918234",
         "npc": 110009,
         "next": 11012403
       },
       {
         "id": 11012403,
         "content": "Oh wait, I do feel guilty about one thing — to manipulate that stupid captain of yours, I lied about The Forsakens and blamed them for what the Empire did to us. I'm so sorry to The Forsakens!",
+        "voice": "story/1002/110124/1B91825E",
         "npc": 110009,
         "next": 11012404
       },
       {
         "id": 11012404,
         "content": "You—!",
+        "voice": "story/1002/110124/1B918288",
         "npc": 110015,
         "next": 11012405
       },
       {
         "id": 11012405,
         "content": "Oh, look what the cat dragged in. Hello, dear sir.",
+        "voice": "story/1002/110124/1B9182B2",
         "npc": 110009,
         "next": 11012406
       },
       {
         "id": 11012406,
         "content": "I'll take it from here.",
+        "voice": "story/1002/110124/1B9182DC",
         "npc": 110022,
         "next": 11012407
       },
       {
         "id": 11012407,
         "content": "So what are you doing here? Come to show off the benevolence of a Hyperborean officer? Or perhaps you pity this poor girl who's been led \"astray,\" trying to save me from my \"sins\"?",
+        "voice": "story/1002/110124/1B918306",
         "npc": 110009,
         "next": 11012408
       },
       {
         "id": 11012408,
         "content": "Oh, I get it! You want to join The Forsakens, right? Need a reference?",
+        "voice": "story/1002/110124/1B918330",
         "npc": 110009,
         "next": 11012409
       },
       {
         "id": 11012409,
         "content": "Hey — you guys hear that? Your captain wants to join The Forsakens!",
+        "voice": "story/1002/110124/1B91835A",
         "npc": 110009,
         "options": [
           {
@@ -6627,147 +7109,172 @@
       {
         "id": 11012411,
         "content": "Oh, no. This is so sad. Boohoo whoo.",
+        "voice": "story/1002/110124/1B9183AE",
         "npc": 110009,
         "next": 11012419
       },
       {
         "id": 11012413,
         "content": "Oh honey, you really suck at this. Save it — you won't get anything from me. Lowlives who betray their comrades and sell intel to their enemy only exist in your beloved Legion.",
+        "voice": "story/1002/110124/1B918402",
         "npc": 110009,
         "next": 11012419
       },
       {
         "id": 11012415,
         "content": "Because you're always so on guard. I couldn't find a chance, even while we were alone. I had to bide my time patiently. Even offered you help a couple of times to lower your guard.",
+        "voice": "story/1002/110124/1B918456",
         "npc": 110009,
         "next": 11012416
       },
       {
         "id": 11012418,
         "content": "Oww, it hurts! Someone do something about this! An armed soldier's hitting a helpless young girl!",
+        "voice": "story/1002/110124/1B9184D4",
         "npc": 110009,
         "next": 11012419
       },
       {
         "id": 11012419,
         "content": "You...",
+        "voice": "story/1002/110124/1B9184FE",
         "npc": 110022,
         "next": 11012420
       },
       {
         "id": 11012416,
         "content": "And it's more fun this way! Betrayal by a trusted friend is far more memorable than a stab from a stranger, isn't it?",
+        "voice": "story/1002/110124/1B918480",
         "npc": 110009,
         "next": 11012419
       },
       {
         "id": 11012420,
         "content": "Aww, you look like an angry bull. I'm so sorry, sir! I forgot you like it better when I talk like this.",
+        "voice": "story/1002/110124/1B918528",
         "npc": 110009,
         "next": 11012421
       },
       {
         "id": 11012421,
         "content": "...Cut the act, and answer my question.",
+        "voice": "story/1002/110124/1B918552",
         "npc": 110022,
         "next": 11012422
       },
       {
         "id": 11012422,
         "content": "Sure! Ask away. I'll answer whenever I feel like it.",
+        "voice": "story/1002/110124/1B91857C",
         "npc": 110009,
         "next": 11012423
       },
       {
         "id": 11012423,
         "content": "I deserve to know why you stabbed us in the back after I helped you. Is it out of plain hatred for the Hyperborean Legion, or an assassination attempt targeting me specifically?",
+        "voice": "story/1002/110124/1B9185A6",
         "npc": 110022,
         "next": 11012424
       },
       {
         "id": 11012424,
         "content": "If this is your question... Sure, I can answer that — given that you've been naive enough to fall for my trick.",
+        "voice": "story/1002/110124/1B9185D0",
         "npc": 110009,
         "next": 11012425
       },
       {
         "id": 11012425,
         "content": "The Forsakens simply want all Hyperborean dogs to die here, and preferably at the hands of the killing machines they created — I hope you enjoyed our fiery gift.",
+        "voice": "story/1002/110124/1B9185FA",
         "npc": 110009,
         "next": 11012426
       },
       {
         "id": 11012426,
         "content": "As for me... Well, I personally came for <H>you</>!",
+        "voice": "story/1002/110124/1B918624",
         "npc": 110009,
         "next": 11012427
       },
       {
         "id": 11012427,
         "content": "I heard that you, the top graduate of the Imperial Military College, who is also known as the \"Pale Reaper,\" were coming to Lonza Fortress. How could I not come have a good look at the Pale Reaper myself?",
+        "voice": "story/1002/110124/1B91864E",
         "npc": 110009,
         "next": 11012428
       },
       {
         "id": 11012428,
         "content": "You've heard about me? Have we met before?",
+        "voice": "story/1002/110124/1B918678",
         "npc": 110022,
         "next": 11012429
       },
       {
         "id": 11012429,
         "content": "Hehe, that's for you to guess.",
+        "voice": "story/1002/110124/1B9186A2",
         "npc": 110009,
         "next": 11012430
       },
       {
         "id": 11012430,
         "content": "My sources said that our great {性别2:Mr|Miss} Pale Reaper only has a few years' worth of memories. You know nothing of your past. You don't even know where you came from.",
+        "voice": "story/1002/110124/1B9186CC",
         "npc": 110009,
         "next": 11012431
       },
       {
         "id": 11012431,
         "content": "...",
+        "voice": "story/1002/110124/1B9186F6",
         "npc": 110022,
         "next": 11012432
       },
       {
         "id": 11012432,
         "content": "Let's play a game then! Now, honey, take a guess — was I your neighbour, an old nemesis—",
+        "voice": "story/1002/110124/1B918720",
         "npc": 110009,
         "next": 11012433
       },
       {
         "id": 11012433,
         "content": "Or a complete stranger? Maybe I just hate you for being one of Hyperborea's honorable people, and I simply wish to destroy that which they cherish?",
+        "voice": "story/1002/110124/1B91874A",
         "npc": 110009,
         "next": 11012434
       },
       {
         "id": 11012434,
         "content": "...",
+        "voice": "story/1002/110124/1B918774",
         "npc": 110022,
         "next": 11012435
       },
       {
         "id": 11012435,
         "content": "<W>Your head hurts, right? The jabbering of this mad girl is worming through your skull like a leech sucking at your brains.</>",
+        "voice": "story/1002/110124/1B91879E",
         "next": 11012436
       },
       {
         "id": 11012436,
         "content": "<W>See, you have a sword in your hand. That's right — it's the one you've wielded in countless battles. The hilt still carries your warmth. You're familiar with the slick feeling and the subtle tug of resistance when its blade slices through flesh.</>",
+        "voice": "story/1002/110124/1B9187C8",
         "next": 11012437
       },
       {
         "id": 11012437,
         "content": "<W>You can easily slit this creature's throat and make its detestable lips gurgle and whimper in pain.</>",
+        "voice": "story/1002/110124/1B9187F2",
         "next": 11012438
       },
       {
         "id": 11012438,
         "content": "(It's... that voice again! Why now...?)",
+        "voice": "story/1002/110124/1B91881C",
         "npc": 110022,
         "options": [
           {
@@ -6785,29 +7292,34 @@
       {
         "id": 11012451,
         "content": "ENOUGH!!! Shut up!!",
+        "voice": "story/1002/110124/1B918A3E",
         "npc": 110022,
         "next": 11012452
       },
       {
         "id": 11012441,
         "content": "Why suddenly so quiet? You seemed ready to lecture me. Cat got your tongue, honey?",
+        "voice": "story/1002/110124/1B91889A",
         "npc": 110009,
         "next": 11012442
       },
       {
         "id": 11012452,
         "content": "...Okay, looks like somebody needs anger management here.",
+        "voice": "story/1002/110124/1B918A68",
         "npc": 110009,
         "next": 11012453
       },
       {
         "id": 11012442,
         "content": "<W>I am the origin of your soul, the impulse within the deepest recesses of your mind. Do not refuse me... Listen — I am the one who gave you power and made you invincible in battle.</>",
+        "voice": "story/1002/110124/1B9188C4",
         "next": 11012443
       },
       {
         "id": 11012443,
         "content": "<W>Unsheathe your sword, the one that bears the killing razor.</>",
+        "voice": "story/1002/110124/1B9188EE",
         "options": [
           {
             "id": 11012444,
@@ -6824,17 +7336,20 @@
       {
         "id": 11012446,
         "content": "Go on, make your guess — any guess would do, because I won't tell you the truth anyway!",
+        "voice": "story/1002/110124/1B91896C",
         "npc": 110009,
         "next": 11012447
       },
       {
         "id": 11012447,
         "content": "<W>Do not hesitate! Use your sword! It's calling to you! It thirsts for the sweet joy that can only be sated by flesh and blood.</>",
+        "voice": "story/1002/110124/1B918996",
         "next": 11012448
       },
       {
         "id": 11012448,
         "content": "<W>Quick! Silence this mad lass for good!</>",
+        "voice": "story/1002/110124/1B9189C0",
         "options": [
           {
             "id": 11012449,
@@ -7128,6 +7643,7 @@
       {
         "id": 10104301,
         "content": "The Asphodel offer more than just libations... much more. All for a price, naturally.",
+        "voice": "char/Kami/vo_npc_02",
         "npc": 200003,
         "options": [
           {
@@ -7154,60 +7670,70 @@
       {
         "id": 10104302,
         "content": "Where to begin... Well, it's got a long history. Built by the Empire's first ruler after the Great Migration 800 years ago, it's among the first few cities of the empire.",
+        "voice": "story/1002/101043/194B890C",
         "npc": 200003,
         "next": 10104303
       },
       {
         "id": 10104306,
         "content": "A bunch of cheap, noisy blighters keen on spinning yarns. Some of them became Phoxhunters to eke a living, some just fancy a bit of ruckus and adventure. One thing they have in common is they often end up more battered and bruised than not.",
+        "voice": "story/1002/101043/194B89B4",
         "npc": 200003,
         "next": 10104307
       },
       {
         "id": 10104310,
         "content": "Hasn't anyone told you it's rather rude to pry into a lady's secrets for no reason?",
+        "voice": "story/1002/101043/194B8A5C",
         "npc": 200003,
         "next": 10104311
       },
       {
         "id": 10104303,
         "content": "It's also the northernmost major city of the Empire. Just over a hundred kilometres further north, past the Vidofnir Mountains, and you're on Askard's turf.",
+        "voice": "story/1002/101043/194B8936",
         "npc": 200003,
         "next": 10104304
       },
       {
         "id": 10104307,
         "content": "Truth be told, I've often wanted to give them the boot, let them munch on dirty snow and gulp the north wind outside.",
+        "voice": "story/1002/101043/194B89DE",
         "npc": 200003,
         "next": 10104308
       },
       {
         "id": 10104311,
         "content": "Of course, I can share my stories with you — provided you can pay the right price... hehe.",
+        "voice": "story/1002/101043/194B8A86",
         "npc": 200003,
         "next": 10104301
       },
       {
         "id": 10104304,
         "content": "Icelake used to be known for its Phoxene veins. Take Glevum Pit for example — one of Hyperborea's largest Phoxene mines back in the day. But now, the veins are spent, only the old factories are barely chugging along.",
+        "voice": "story/1002/101043/194B8960",
         "npc": 200003,
         "next": 10104305
       },
       {
         "id": 10104308,
         "content": "But then, they do manage a fair bit that ought to be the Security Bureau's job. Without them, likely not many in this city would have the luxury to kick back in my tavern.",
+        "voice": "story/1002/101043/194B8A08",
         "npc": 200003,
         "next": 10104309
       },
       {
         "id": 10104305,
         "content": "But then, this is all stuff you can read about in books, things anyone could tell you. I'd suggest you look with your own eyes and listen with your heart, to find out what truly lurks beneath this city's snow and ice.",
+        "voice": "story/1002/101043/194B898A",
         "npc": 200003,
         "next": 10104301
       },
       {
         "id": 10104309,
         "content": "So I let them gather and natter here, a bit of quid pro quo. Still, I do wish they'd keep it down a little and get into fewer brawls.",
+        "voice": "story/1002/101043/194B8A32",
         "npc": 200003,
         "next": 10104301
       }
@@ -7228,6 +7754,7 @@
       {
         "id": 10114401,
         "content": "Keep your nose out of things that don't concern you.",
+        "voice": "story/1002/101144/195201EA",
         "npc": 200005
       }
     ]
@@ -7559,6 +8086,7 @@
       {
         "id": 10114001,
         "content": "Back already? Shouldn't you be following Henrik?",
+        "voice": "story/1002/101140/1951C04A",
         "npc": 200021
       }
     ]
@@ -7732,18 +8260,21 @@
       {
         "id": 20001301,
         "content": "{nickname}, did you manage to find the soil?",
+        "voice": "story/2001/200013/32123772",
         "npc": 200027,
         "next": 20001302
       },
       {
         "id": 20001302,
         "content": "No, not yet.",
+        "voice": "story/2001/200013/3212379C",
         "npc": 100001,
         "next": 20001303
       },
       {
         "id": 20001303,
         "content": "It's alright. You don't need to go to all this trouble for me...",
+        "voice": "story/2001/200013/321237C6",
         "npc": 200027
       }
     ]
@@ -7757,24 +8288,28 @@
       {
         "id": 20001401,
         "content": "Oh, before I forget — I have a couple of questions:",
+        "voice": "story/2001/200014/321247DA",
         "npc": 200027,
         "next": 20001402
       },
       {
         "id": 20001402,
         "content": "Have you ever stood under the Heaventree? Are the legends really true — is the Heaventree so massive that its crown covers the entire sky? Could we see... a glittering canopy of crystals looking up its trunk?",
+        "voice": "story/2001/200014/32124804",
         "npc": 200027,
         "next": 20001403
       },
       {
         "id": 20001403,
         "content": "And... and another question — is the sandy beach really as soft and smooth as they say — malleable like dough, and not at all rough on the feet?",
+        "voice": "story/2001/200014/3212482E",
         "npc": 200027,
         "next": 20001404
       },
       {
         "id": 20001404,
         "content": "Sorry for bombarding you with so many questions! I'm asking for my friends at the inn... Hehe, they are all very fascinated by your hometown.",
+        "voice": "story/2001/200014/32124858",
         "npc": 200027
       }
     ]
@@ -8154,6 +8689,7 @@
       {
         "id": 20005501,
         "content": "Feel free to go back to Icelake, {性别:Sir|Miss}. With Filbert here with me, I'll be just fine.",
+        "voice": "story/2001/200055/3214E882",
         "npc": 200074,
         "options": [
           {
@@ -8175,23 +8711,27 @@
       {
         "id": 20005502,
         "content": "Hehe, we get that a lot. Don't let her size fool you, she's actually really gentle and sweet. Oh, and she's amazing at sniffing out food!",
+        "voice": "story/2001/200055/3214E8AC",
         "npc": 200074,
         "next": 20005503
       },
       {
         "id": 20005504,
         "content": "I don't have any family. I was too young when we got separated, so I don't remember them. But I've got Filbert now, and she's the best family I could ask for! She always looks out for me, so I think she's not worried!",
+        "voice": "story/2001/200055/3214E900",
         "npc": 200074,
         "next": 20005505
       },
       {
         "id": 20005503,
         "content": "Too bad it's too cold around here for mushrooms to grow, or I'd totally show you how we can find an entire hill of Russulas in just half a day!",
+        "voice": "story/2001/200055/3214E8D6",
         "npc": 200074
       },
       {
         "id": 20005505,
         "content": "Oink, oink!",
+        "voice": "story/2001/200055/3214E92A",
         "npc": 200086
       }
     ]
@@ -8525,6 +9065,7 @@
       {
         "id": 12010616,
         "content": "May your virtue endure for all time.",
+        "voice": "story/1201/120106/1E113BB0",
         "npc": 210034
       }
     ]
@@ -16557,6 +17098,7 @@
       {
         "id": 20007101,
         "content": "I am Icelake's foremost Geniemon scholar! If you have any questions about them, feel free to— Oh, it's you. Uh, is—is there anything I can help you with?",
+        "voice": "story/2001/200071/3215EF02",
         "npc": 200075,
         "options": [
           {
@@ -16578,29 +17120,34 @@
       {
         "id": 20007102,
         "content": "You mean that incredibly intelligent Geniemon?",
+        "voice": "story/2001/200071/3215EF2C",
         "npc": 200075,
         "next": 20007103
       },
       {
         "id": 20007105,
         "content": "Much better than being a Geniemon hunter, that's for sure. People actually come to me for advice now. I almost feel like a real academic.",
+        "voice": "story/2001/200071/3215EFAA",
         "npc": 200075,
         "next": 20007106
       },
       {
         "id": 20007103,
         "content": "There's very little documented about it. I've only ever seen it once myself. They say it doesn't reveal itself to just anyone. Only those it deems worthy ever get to meet it.",
+        "voice": "story/2001/200071/3215EF56",
         "npc": 200075,
         "next": 20007104
       },
       {
         "id": 20007106,
         "content": "Speaking of which, I really appreciate that you and Truffle went easy on me back then.",
+        "voice": "story/2001/200071/3215EFD4",
         "npc": 200075
       },
       {
         "id": 20007104,
         "content": "But you might be able to track it down by following the traces it leaves behind.",
+        "voice": "story/2001/200071/3215EF80",
         "npc": 200075
       }
     ]
@@ -17534,17 +18081,20 @@
       {
         "id": 51010426,
         "content": "♪ White snow is her birth-flow, and twilight her warm cord aglow.\nShe bears grand and pain to iron cradle — beneath the mountain, in the cold...",
+        "voice": "story/1002/510104/7FB30204",
         "npc": 700342
       },
       {
         "id": 51010402,
         "content": "We meet again, dear {性别:sir|miss}. You're a garnet on white sand. You must like it here. I do too.",
+        "voice": "story/1002/510104/7FB2FE14",
         "npc": 700342,
         "next": 51010403
       },
       {
         "id": 51010403,
         "content": "Have you ever been inside the Galea Theatre?",
+        "voice": "story/1002/510104/7FB2FE3E",
         "npc": 700342,
         "options": [
           {
@@ -17567,42 +18117,49 @@
       {
         "id": 51010404,
         "content": "Oh! How enviable... You must be well-off.",
+        "voice": "story/1002/510104/7FB2FE68",
         "npc": 700342,
         "next": 51010407
       },
       {
         "id": 51010405,
         "content": "Ah... then I'm not the only one kept outside the gates.",
+        "voice": "story/1002/510104/7FB2FE92",
         "npc": 700342,
         "next": 51010407
       },
       {
         "id": 51010406,
         "content": "You fought the Legion? Remarkable... You must have stories tucked away like old sheet music.",
+        "voice": "story/1002/510104/7FB2FEBC",
         "npc": 700342,
         "next": 51010407
       },
       {
         "id": 51010407,
         "content": "I've visited opera houses across Luca, but here in Hyperborea... they always turn me away.",
+        "voice": "story/1002/510104/7FB2FEE6",
         "npc": 700342,
         "next": 51010408
       },
       {
         "id": 51010408,
         "content": "I knew Charons had it rough in this city, but I never imagined the supervision levies for public spaces would be so steep...",
+        "voice": "story/1002/510104/7FB2FF10",
         "npc": 700342,
         "next": 51010409
       },
       {
         "id": 51010409,
         "content": "Still — I was lucky to arrive just in time for the Silvercandle Carnival. It's the city's one day when even paupers like me can step through the theatre doors for free. Tragic, though... to hear there'd been a shootout inside. Absolutely dreadful.",
+        "voice": "story/1002/510104/7FB2FF3A",
         "npc": 700342,
         "next": 51010410
       },
       {
         "id": 51010410,
         "content": "Even so, I gathered plenty of sheet music! The bookshop prices were fair, and a few kind souls let me trade verses for pages. And one mysterious person... even taught me a famous aria.",
+        "voice": "story/1002/510104/7FB2FF64",
         "npc": 700342,
         "options": [
           {
@@ -17615,36 +18172,42 @@
       {
         "id": 51010411,
         "content": "A few nights ago, I was leaning against a wall under the moonlight, humming a melody I'd picked up from a second-hand score. It was simple enough — soft, easy to carry on the wind.",
+        "voice": "story/1002/510104/7FB2FF8E",
         "npc": 700342,
         "next": 51010412
       },
       {
         "id": 51010412,
         "content": "When I finished, I heard knocking — on the other side of the wall. Rhythmic. Intentional. Bards are always sensitive to rhythm... I knew it wasn't random.",
+        "voice": "story/1002/510104/7FB2FFB8",
         "npc": 700342,
         "next": 51010413
       },
       {
         "id": 51010413,
         "content": "It was code — old knock code, passed down long ago. Just two kinds of taps, but enough to send meaning through stone.",
+        "voice": "story/1002/510104/7FB2FFE2",
         "npc": 700342,
         "next": 51010414
       },
       {
         "id": 51010414,
         "content": "They told me I'd sung it wrong. It was a well-known operatic piece here — but I hadn't read the libretto, so I'd missed its feeling and heart.",
+        "voice": "story/1002/510104/7FB3000C",
         "npc": 700342,
         "next": 51010415
       },
       {
         "id": 51010415,
         "content": "They couldn't speak or sing. I don't know why. But they used that rhythm to teach me how to sing it true.",
+        "voice": "story/1002/510104/7FB30036",
         "npc": 700342,
         "next": 51010416
       },
       {
         "id": 51010416,
         "content": "And when I had finally mastered the song, I ran to the other side of the wall to thank them... Only to find they were already gone.",
+        "voice": "story/1002/510104/7FB30060",
         "npc": 700342,
         "options": [
           {
@@ -17662,70 +18225,82 @@
       {
         "id": 51010417,
         "content": "Oh, how lucky!",
+        "voice": "story/1002/510104/7FB3008A",
         "npc": 700342,
         "next": 51010418
       },
       {
         "id": 51010420,
         "content": "That it is... and full of kooky tales, too.",
+        "voice": "story/1002/510104/7FB30108",
         "npc": 700342,
         "next": 51010421
       },
       {
         "id": 51010418,
         "content": "If it's not too much trouble... would you thank them for me? And send them my best wishes, too. I don't know why they couldn't sing — but I'm sure they loved music, deeply.",
+        "voice": "story/1002/510104/7FB300B4",
         "npc": 700342,
         "next": 51010419
       },
       {
         "id": 51010421,
         "content": "The opera here is quite unlike Luca's.",
+        "voice": "story/1002/510104/7FB30132",
         "npc": 700342,
         "next": 51010422
       },
       {
         "id": 51010419,
         "content": "...Sure, I will.",
+        "voice": "story/1002/510104/7FB300DE",
         "npc": 100001,
         "next": 51010421
       },
       {
         "id": 51010422,
         "content": "Luca's opera is fire. Aethyrie's — wind.",
+        "voice": "story/1002/510104/7FB3015C",
         "npc": 700342,
         "next": 51010423
       },
       {
         "id": 51010423,
         "content": "But Hyperborea... its opera is the earth itself. Heavy, vast, and full of pain...",
+        "voice": "story/1002/510104/7FB30186",
         "npc": 700342,
         "next": 51010424
       },
       {
         "id": 51010424,
         "content": "My friend and I will be leaving soon. But before that... I want to write one last song for this place.",
+        "voice": "story/1002/510104/7FB301B0",
         "npc": 700342
       },
       {
         "id": 51010330,
         "content": "What made us who we are?",
+        "voice": "story/1002/510103/7FB2F244",
         "npc": 700342
       },
       {
         "id": 51010302,
         "content": "This one's the most fascinating — it says everything in the Misty Sea is caught in an endless cycle of life and death. What do you think, Idy—",
+        "voice": "story/1002/510103/7FB2EDAC",
         "npc": 700342,
         "next": 51010303
       },
       {
         "id": 51010303,
         "content": "Ah! It's you! I remember — we spoke right here, didn't we?",
+        "voice": "story/1002/510103/7FB2EDD6",
         "npc": 700342,
         "next": 51010304
       },
       {
         "id": 51010304,
         "content": "Have you seen my friend? Red hair, always drifting in and out like the wind... She was just here a moment ago.",
+        "voice": "story/1002/510103/7FB2EE00",
         "npc": 700342,
         "options": [
           {
@@ -17738,24 +18313,28 @@
       {
         "id": 51010306,
         "content": "Thanks anyway. I'll wait a bit — she has a habit of vanishing... then turning up out of nowhere.",
+        "voice": "story/1002/510103/7FB2EE54",
         "npc": 700342,
         "next": 51010307
       },
       {
         "id": 51010307,
         "content": "We've been gathering Charon myths these past few days. It's surprising how openly people speak of them here.",
+        "voice": "story/1002/510103/7FB2EE7E",
         "npc": 700342,
         "next": 51010308
       },
       {
         "id": 51010308,
         "content": "Charons are shunned here in Hyperborea, but back in my homeland, Elysium, they're venerated as divine messengers enthroned in sacred halls. But to speak those old myths aloud... is dangerous there.",
+        "voice": "story/1002/510103/7FB2EEA8",
         "npc": 700342,
         "next": 51010309
       },
       {
         "id": 51010309,
         "content": "Do you know much about the myths of the Charon?",
+        "voice": "story/1002/510103/7FB2EED2",
         "npc": 700342,
         "options": [
           {
@@ -17773,36 +18352,42 @@
       {
         "id": 51010312,
         "content": "\"Charon\" means \"those who came from the Misty Sea\"...",
+        "voice": "story/1002/510103/7FB2EF50",
         "npc": 700342,
         "next": 51010313
       },
       {
         "id": 51010313,
         "content": "The Misty Sea is the origin of all things. From it rose the Sacred Tree. Its canopy stretched across the heavens — and each of its branches became a Heaventree. Its roots, meanwhile, cradled the world.",
+        "voice": "story/1002/510103/7FB2EF7A",
         "npc": 700342,
         "next": 51010314
       },
       {
         "id": 51010314,
         "content": "The tree bloomed with white flowers, and from them stepped forth Mother Embla. She created all things — and from her came Father Ask. Together, they gave birth to the first of the Charons.",
+        "voice": "story/1002/510103/7FB2EFA4",
         "npc": 700342,
         "next": 51010315
       },
       {
         "id": 51010315,
         "content": "Yet Ask, bearer of <W>the power of death</>, became a vessel of calamity. In the end, it was he who brought ruin to the world — the cataclysm we call Ragnarok.",
+        "voice": "story/1002/510103/7FB2EFCE",
         "npc": 700342,
         "next": 51010316
       },
       {
         "id": 51010316,
         "content": "In that final hour, Mother Embla — keeper of <H>the power of life</> — gathered her children and sheltered them. Her soul scattered into the sea... and at last, returned to the Misty Sea.",
+        "voice": "story/1002/510103/7FB2EFF8",
         "npc": 700342,
         "next": 51010317
       },
       {
         "id": 51010317,
         "content": "Ask's body became the land and his arms, upraised, became the mountains, still reaching for the gods... who no longer come.",
+        "voice": "story/1002/510103/7FB2F022",
         "npc": 700342,
         "options": [
           {
@@ -17815,24 +18400,28 @@
       {
         "id": 51010319,
         "content": "Mm... but there's another thread in the myths that caught my ear.",
+        "voice": "story/1002/510103/7FB2F076",
         "npc": 700342,
         "next": 51010320
       },
       {
         "id": 51010320,
         "content": "It says Ask and Embla were reborn after the world's end — in new forms, walking again in a new world.",
+        "voice": "story/1002/510103/7FB2F0A0",
         "npc": 700342,
         "next": 51010321
       },
       {
         "id": 51010321,
         "content": "And that their reborn selves would one day bring about another ending — and another beginning.",
+        "voice": "story/1002/510103/7FB2F0CA",
         "npc": 700342,
         "next": 51010322
       },
       {
         "id": 51010322,
         "content": "Thus the world turns, ever in circles. Life and death, again and again.",
+        "voice": "story/1002/510103/7FB2F0F4",
         "npc": 700342,
         "options": [
           {
@@ -17845,18 +18434,21 @@
       {
         "id": 51010324,
         "content": "But... what I keep wondering is — why was the storyteller so sure that the gods were reborn? Or rather... what makes Embla and Ask who they are?",
+        "voice": "story/1002/510103/7FB2F148",
         "npc": 700342,
         "next": 51010325
       },
       {
         "id": 51010325,
         "content": "Is it their bodies? Their souls? ...Or something else entirely?",
+        "voice": "story/1002/510103/7FB2F172",
         "npc": 700342,
         "next": 51010326
       },
       {
         "id": 51010326,
         "content": "Imagine this — just for a moment — that a great mage turned the land beneath our feet back into Ask's original form... Then who would truly be Father Ask? The one made of ancient earth? Or the one who bears his soul reborn?",
+        "voice": "story/1002/510103/7FB2F19C",
         "npc": 700342,
         "options": [
           {
@@ -17904,34 +18496,40 @@
       {
         "id": 51010327,
         "content": "Ah... so that's how you see it. Thank you. You've given me something new to ponder.",
+        "voice": "story/1002/510103/7FB2F1C6",
         "npc": 700342,
         "next": 51010329
       },
       {
         "id": 51010328,
         "content": "Most songs begin with a question that sounds pointless, don't they?",
+        "voice": "story/1002/510103/7FB2F1F0",
         "npc": 700342,
         "next": 51010329
       },
       {
         "id": 51010329,
         "content": "Thank you for your time, dear {性别:sir|miss}. You're a spark on a cold wick. I've come to love these myths. I think... I've found a song inside them, at last.",
+        "voice": "story/1002/510103/7FB2F21A",
         "npc": 700342
       },
       {
         "id": 51010221,
         "content": "Thank you, dear {性别:sir|miss}, for giving me the line I needed. You're a rose blooming on the tundra.",
+        "voice": "story/1002/510102/7FB2E062",
         "npc": 700342
       },
       {
         "id": 51010202,
         "content": "♪ Furnace-fire burns the dawn, tipping out the fortress of iron 'n' snow.\nGears sing in hymns, devour the stars, hailing the great age of ice in north—",
+        "voice": "story/1002/510102/7FB2DD44",
         "npc": 700342,
         "next": 51010203
       },
       {
         "id": 51010203,
         "content": "Hmm? Were you talking to me...?",
+        "voice": "story/1002/510102/7FB2DD6E",
         "npc": 700342,
         "options": [
           {
@@ -17959,36 +18557,42 @@
       {
         "id": 51010204,
         "content": "Thank you, kind traveller! But the song's not quite finished yet... Perhaps we could find its ending together?",
+        "voice": "story/1002/510102/7FB2DD98",
         "npc": 700342,
         "next": 51010206
       },
       {
         "id": 51010205,
         "content": "Oh — apologies if I disturbed you! Though I did check with the guard over there, and he said there's no law against bards singing in the square.",
+        "voice": "story/1002/510102/7FB2DDC2",
         "npc": 700342,
         "next": 51010206
       },
       {
         "id": 51010206,
         "content": "Now, how should the final line go...?",
+        "voice": "story/1002/510102/7FB2DDEC",
         "npc": 700342,
         "next": 51010207
       },
       {
         "id": 51010207,
         "content": "I think it should be about the wind. Every place has its own wind...",
+        "voice": "story/1002/510102/7FB2DE16",
         "npc": 700342,
         "next": 51010208
       },
       {
         "id": 51010208,
         "content": "The wind in Elysium smells of frankincense, melting into evening prayers. In Luca, it's turpentine from painter's lofts, and caramel wafting from cafés. In Aethyrie, the scent is ink laced with wild mint...",
+        "voice": "story/1002/510102/7FB2DE40",
         "npc": 700342,
         "next": 51010209
       },
       {
         "id": 51010209,
         "content": "So — what does the wind smell like, here in Hyperborea?",
+        "voice": "story/1002/510102/7FB2DE6A",
         "npc": 700342,
         "options": [
           {
@@ -18011,65 +18615,76 @@
       {
         "id": 51010210,
         "content": "Hmm... you may be right. This city was born of steel — a forest forged, not grown.",
+        "voice": "story/1002/510102/7FB2DE94",
         "npc": 700342,
         "next": 51010211
       },
       {
         "id": 51010213,
         "content": "So true! They say three-quarters of this city is made of snow. Locals told me it's always snowing in Icelake — only thaws three months a year.",
+        "voice": "story/1002/510102/7FB2DF12",
         "npc": 700342,
         "next": 51010214
       },
       {
         "id": 51010215,
         "content": "\"Tears?\" Hmm... That's a line I haven't used yet...",
+        "voice": "story/1002/510102/7FB2DF66",
         "npc": 700342,
         "next": 51010216
       },
       {
         "id": 51010211,
         "content": "The wind may sting with cold, but it hums with gears and hisses with flame. And when you touch it... it burns.",
+        "voice": "story/1002/510102/7FB2DEBE",
         "npc": 700342,
         "next": 51010212
       },
       {
         "id": 51010214,
         "content": "And snow always has its partner: the wind. They dance together — nature's perfect duet!",
+        "voice": "story/1002/510102/7FB2DF3C",
         "npc": 700342,
         "next": 51010220
       },
       {
         "id": 51010216,
         "content": "...",
+        "voice": "story/1002/510102/7FB2DF90",
         "npc": 700342,
         "next": 51010217
       },
       {
         "id": 51010212,
         "content": "Like the barrel of a soldier's rifle — even when their face is cold as stone.",
+        "voice": "story/1002/510102/7FB2DEE8",
         "npc": 700342,
         "next": 51010220
       },
       {
         "id": 51010220,
         "content": "Thank you, dear {性别:sir|miss} — you've given me the line I needed. You're a rose blooming on the tundra. I think I can finally finish this song.",
+        "voice": "story/1002/510102/7FB2E038",
         "npc": 700342
       },
       {
         "id": 51010217,
         "content": "On my first day in this square, I saw a blind jester performing. He said his eyes were burned by boiler fumes years ago. A child laughed wildly at his tricks, and the servant beside him tossed down a silver coin.",
+        "voice": "story/1002/510102/7FB2DFBA",
         "npc": 700342,
         "next": 51010218
       },
       {
         "id": 51010218,
         "content": "On this very bench I'm sitting on now, a retired soldier cried out, trying to sell his last medal. Beside him, a frail mother coaxed out the last of her milk to feed her sick child.",
+        "voice": "story/1002/510102/7FB2DFE4",
         "npc": 700342,
         "next": 51010219
       },
       {
         "id": 51010219,
         "content": "That day, the wind drifting through this square... it felt like it was weeping too.",
+        "voice": "story/1002/510102/7FB2E00E",
         "npc": 700342,
         "next": 51010220
       }
@@ -18096,17 +18711,20 @@
       {
         "id": 51010426,
         "content": "♪ White snow is her birth-flow, and twilight her warm cord aglow.\nShe bears grand and pain to iron cradle — beneath the mountain, in the cold...",
+        "voice": "story/1002/510104/7FB30204",
         "npc": 700342
       },
       {
         "id": 51010402,
         "content": "We meet again, dear {性别:sir|miss}. You're a garnet on white sand. You must like it here. I do too.",
+        "voice": "story/1002/510104/7FB2FE14",
         "npc": 700342,
         "next": 51010403
       },
       {
         "id": 51010403,
         "content": "Have you ever been inside the Galea Theatre?",
+        "voice": "story/1002/510104/7FB2FE3E",
         "npc": 700342,
         "options": [
           {
@@ -18129,42 +18747,49 @@
       {
         "id": 51010404,
         "content": "Oh! How enviable... You must be well-off.",
+        "voice": "story/1002/510104/7FB2FE68",
         "npc": 700342,
         "next": 51010407
       },
       {
         "id": 51010405,
         "content": "Ah... then I'm not the only one kept outside the gates.",
+        "voice": "story/1002/510104/7FB2FE92",
         "npc": 700342,
         "next": 51010407
       },
       {
         "id": 51010406,
         "content": "You fought the Legion? Remarkable... You must have stories tucked away like old sheet music.",
+        "voice": "story/1002/510104/7FB2FEBC",
         "npc": 700342,
         "next": 51010407
       },
       {
         "id": 51010407,
         "content": "I've visited opera houses across Luca, but here in Hyperborea... they always turn me away.",
+        "voice": "story/1002/510104/7FB2FEE6",
         "npc": 700342,
         "next": 51010408
       },
       {
         "id": 51010408,
         "content": "I knew Charons had it rough in this city, but I never imagined the supervision levies for public spaces would be so steep...",
+        "voice": "story/1002/510104/7FB2FF10",
         "npc": 700342,
         "next": 51010409
       },
       {
         "id": 51010409,
         "content": "Still — I was lucky to arrive just in time for the Silvercandle Carnival. It's the city's one day when even paupers like me can step through the theatre doors for free. Tragic, though... to hear there'd been a shootout inside. Absolutely dreadful.",
+        "voice": "story/1002/510104/7FB2FF3A",
         "npc": 700342,
         "next": 51010410
       },
       {
         "id": 51010410,
         "content": "Even so, I gathered plenty of sheet music! The bookshop prices were fair, and a few kind souls let me trade verses for pages. And one mysterious person... even taught me a famous aria.",
+        "voice": "story/1002/510104/7FB2FF64",
         "npc": 700342,
         "options": [
           {
@@ -18177,36 +18802,42 @@
       {
         "id": 51010411,
         "content": "A few nights ago, I was leaning against a wall under the moonlight, humming a melody I'd picked up from a second-hand score. It was simple enough — soft, easy to carry on the wind.",
+        "voice": "story/1002/510104/7FB2FF8E",
         "npc": 700342,
         "next": 51010412
       },
       {
         "id": 51010412,
         "content": "When I finished, I heard knocking — on the other side of the wall. Rhythmic. Intentional. Bards are always sensitive to rhythm... I knew it wasn't random.",
+        "voice": "story/1002/510104/7FB2FFB8",
         "npc": 700342,
         "next": 51010413
       },
       {
         "id": 51010413,
         "content": "It was code — old knock code, passed down long ago. Just two kinds of taps, but enough to send meaning through stone.",
+        "voice": "story/1002/510104/7FB2FFE2",
         "npc": 700342,
         "next": 51010414
       },
       {
         "id": 51010414,
         "content": "They told me I'd sung it wrong. It was a well-known operatic piece here — but I hadn't read the libretto, so I'd missed its feeling and heart.",
+        "voice": "story/1002/510104/7FB3000C",
         "npc": 700342,
         "next": 51010415
       },
       {
         "id": 51010415,
         "content": "They couldn't speak or sing. I don't know why. But they used that rhythm to teach me how to sing it true.",
+        "voice": "story/1002/510104/7FB30036",
         "npc": 700342,
         "next": 51010416
       },
       {
         "id": 51010416,
         "content": "And when I had finally mastered the song, I ran to the other side of the wall to thank them... Only to find they were already gone.",
+        "voice": "story/1002/510104/7FB30060",
         "npc": 700342,
         "options": [
           {
@@ -18224,70 +18855,82 @@
       {
         "id": 51010417,
         "content": "Oh, how lucky!",
+        "voice": "story/1002/510104/7FB3008A",
         "npc": 700342,
         "next": 51010418
       },
       {
         "id": 51010420,
         "content": "That it is... and full of kooky tales, too.",
+        "voice": "story/1002/510104/7FB30108",
         "npc": 700342,
         "next": 51010421
       },
       {
         "id": 51010418,
         "content": "If it's not too much trouble... would you thank them for me? And send them my best wishes, too. I don't know why they couldn't sing — but I'm sure they loved music, deeply.",
+        "voice": "story/1002/510104/7FB300B4",
         "npc": 700342,
         "next": 51010419
       },
       {
         "id": 51010421,
         "content": "The opera here is quite unlike Luca's.",
+        "voice": "story/1002/510104/7FB30132",
         "npc": 700342,
         "next": 51010422
       },
       {
         "id": 51010419,
         "content": "...Sure, I will.",
+        "voice": "story/1002/510104/7FB300DE",
         "npc": 100001,
         "next": 51010421
       },
       {
         "id": 51010422,
         "content": "Luca's opera is fire. Aethyrie's — wind.",
+        "voice": "story/1002/510104/7FB3015C",
         "npc": 700342,
         "next": 51010423
       },
       {
         "id": 51010423,
         "content": "But Hyperborea... its opera is the earth itself. Heavy, vast, and full of pain...",
+        "voice": "story/1002/510104/7FB30186",
         "npc": 700342,
         "next": 51010424
       },
       {
         "id": 51010424,
         "content": "My friend and I will be leaving soon. But before that... I want to write one last song for this place.",
+        "voice": "story/1002/510104/7FB301B0",
         "npc": 700342
       },
       {
         "id": 51010330,
         "content": "What made us who we are?",
+        "voice": "story/1002/510103/7FB2F244",
         "npc": 700342
       },
       {
         "id": 51010302,
         "content": "This one's the most fascinating — it says everything in the Misty Sea is caught in an endless cycle of life and death. What do you think, Idy—",
+        "voice": "story/1002/510103/7FB2EDAC",
         "npc": 700342,
         "next": 51010303
       },
       {
         "id": 51010303,
         "content": "Ah! It's you! I remember — we spoke right here, didn't we?",
+        "voice": "story/1002/510103/7FB2EDD6",
         "npc": 700342,
         "next": 51010304
       },
       {
         "id": 51010304,
         "content": "Have you seen my friend? Red hair, always drifting in and out like the wind... She was just here a moment ago.",
+        "voice": "story/1002/510103/7FB2EE00",
         "npc": 700342,
         "options": [
           {
@@ -18300,24 +18943,28 @@
       {
         "id": 51010306,
         "content": "Thanks anyway. I'll wait a bit — she has a habit of vanishing... then turning up out of nowhere.",
+        "voice": "story/1002/510103/7FB2EE54",
         "npc": 700342,
         "next": 51010307
       },
       {
         "id": 51010307,
         "content": "We've been gathering Charon myths these past few days. It's surprising how openly people speak of them here.",
+        "voice": "story/1002/510103/7FB2EE7E",
         "npc": 700342,
         "next": 51010308
       },
       {
         "id": 51010308,
         "content": "Charons are shunned here in Hyperborea, but back in my homeland, Elysium, they're venerated as divine messengers enthroned in sacred halls. But to speak those old myths aloud... is dangerous there.",
+        "voice": "story/1002/510103/7FB2EEA8",
         "npc": 700342,
         "next": 51010309
       },
       {
         "id": 51010309,
         "content": "Do you know much about the myths of the Charon?",
+        "voice": "story/1002/510103/7FB2EED2",
         "npc": 700342,
         "options": [
           {
@@ -18335,36 +18982,42 @@
       {
         "id": 51010312,
         "content": "\"Charon\" means \"those who came from the Misty Sea\"...",
+        "voice": "story/1002/510103/7FB2EF50",
         "npc": 700342,
         "next": 51010313
       },
       {
         "id": 51010313,
         "content": "The Misty Sea is the origin of all things. From it rose the Sacred Tree. Its canopy stretched across the heavens — and each of its branches became a Heaventree. Its roots, meanwhile, cradled the world.",
+        "voice": "story/1002/510103/7FB2EF7A",
         "npc": 700342,
         "next": 51010314
       },
       {
         "id": 51010314,
         "content": "The tree bloomed with white flowers, and from them stepped forth Mother Embla. She created all things — and from her came Father Ask. Together, they gave birth to the first of the Charons.",
+        "voice": "story/1002/510103/7FB2EFA4",
         "npc": 700342,
         "next": 51010315
       },
       {
         "id": 51010315,
         "content": "Yet Ask, bearer of <W>the power of death</>, became a vessel of calamity. In the end, it was he who brought ruin to the world — the cataclysm we call Ragnarok.",
+        "voice": "story/1002/510103/7FB2EFCE",
         "npc": 700342,
         "next": 51010316
       },
       {
         "id": 51010316,
         "content": "In that final hour, Mother Embla — keeper of <H>the power of life</> — gathered her children and sheltered them. Her soul scattered into the sea... and at last, returned to the Misty Sea.",
+        "voice": "story/1002/510103/7FB2EFF8",
         "npc": 700342,
         "next": 51010317
       },
       {
         "id": 51010317,
         "content": "Ask's body became the land and his arms, upraised, became the mountains, still reaching for the gods... who no longer come.",
+        "voice": "story/1002/510103/7FB2F022",
         "npc": 700342,
         "options": [
           {
@@ -18377,24 +19030,28 @@
       {
         "id": 51010319,
         "content": "Mm... but there's another thread in the myths that caught my ear.",
+        "voice": "story/1002/510103/7FB2F076",
         "npc": 700342,
         "next": 51010320
       },
       {
         "id": 51010320,
         "content": "It says Ask and Embla were reborn after the world's end — in new forms, walking again in a new world.",
+        "voice": "story/1002/510103/7FB2F0A0",
         "npc": 700342,
         "next": 51010321
       },
       {
         "id": 51010321,
         "content": "And that their reborn selves would one day bring about another ending — and another beginning.",
+        "voice": "story/1002/510103/7FB2F0CA",
         "npc": 700342,
         "next": 51010322
       },
       {
         "id": 51010322,
         "content": "Thus the world turns, ever in circles. Life and death, again and again.",
+        "voice": "story/1002/510103/7FB2F0F4",
         "npc": 700342,
         "options": [
           {
@@ -18407,18 +19064,21 @@
       {
         "id": 51010324,
         "content": "But... what I keep wondering is — why was the storyteller so sure that the gods were reborn? Or rather... what makes Embla and Ask who they are?",
+        "voice": "story/1002/510103/7FB2F148",
         "npc": 700342,
         "next": 51010325
       },
       {
         "id": 51010325,
         "content": "Is it their bodies? Their souls? ...Or something else entirely?",
+        "voice": "story/1002/510103/7FB2F172",
         "npc": 700342,
         "next": 51010326
       },
       {
         "id": 51010326,
         "content": "Imagine this — just for a moment — that a great mage turned the land beneath our feet back into Ask's original form... Then who would truly be Father Ask? The one made of ancient earth? Or the one who bears his soul reborn?",
+        "voice": "story/1002/510103/7FB2F19C",
         "npc": 700342,
         "options": [
           {
@@ -18466,18 +19126,21 @@
       {
         "id": 51010327,
         "content": "Ah... so that's how you see it. Thank you. You've given me something new to ponder.",
+        "voice": "story/1002/510103/7FB2F1C6",
         "npc": 700342,
         "next": 51010329
       },
       {
         "id": 51010328,
         "content": "Most songs begin with a question that sounds pointless, don't they?",
+        "voice": "story/1002/510103/7FB2F1F0",
         "npc": 700342,
         "next": 51010329
       },
       {
         "id": 51010329,
         "content": "Thank you for your time, dear {性别:sir|miss}. You're a spark on a cold wick. I've come to love these myths. I think... I've found a song inside them, at last.",
+        "voice": "story/1002/510103/7FB2F21A",
         "npc": 700342
       }
     ]
@@ -27876,6 +28539,7 @@
       {
         "id": 90010201,
         "content": "Have you come across any treasures lately? Show me, and I might forge a truly extraordinary weapon out of it!",
+        "voice": "char/Bai/vo_forge_r02",
         "npc": 900001
       },
       {
@@ -27894,6 +28558,7 @@
       {
         "id": 90020201,
         "content": "Ah! I... I wasn't slacking off... Ahem! I mean, what can I get you?",
+        "voice": "char/Bai/vo_shop_r01",
         "npc": 900002
       }
     ]
@@ -28658,17 +29323,20 @@
       {
         "id": 10010116,
         "content": "Don't push yourself too hard. We still have to save some strength for those Filthoids.",
+        "voice": "story/1001/100101/190F2BB2",
         "npc": 100003
       },
       {
         "id": 11010207,
         "content": "It's done... Argh...",
+        "voice": "story/1002/110102/1B901A16",
         "npc": 110022,
         "next": 11010208
       },
       {
         "id": 11010208,
         "content": "<W>Your hands are drenched in wet, slimy filth, uncertain whether it's the Filthoid's secretions or its innards. Yet, a sudden joy tingles through your soul, bringing an inexplicable elation.</>",
+        "voice": "story/1002/110102/1B901A40",
         "options": [
           {
             "id": 11010209,
@@ -28680,6 +29348,7 @@
       {
         "id": 11010210,
         "content": "<W>Do not resist, because I am what you actually are. I am your instinct for death. One day you shall follow my lead and obey the ancient will...</>",
+        "voice": "story/1002/110102/1B901A94",
         "options": [
           {
             "id": 11010211,
@@ -28691,6 +29360,7 @@
       {
         "id": 11010212,
         "content": "...",
+        "voice": "story/1002/110102/1B901AE8",
         "npc": 110022
       },
       {
@@ -33206,94 +33876,110 @@
       {
         "id": 20000509,
         "content": "You! Hmph!",
+        "voice": "story/2001/200005/3211B582",
         "npc": 200024,
         "next": 20000510
       },
       {
         "id": 20000510,
         "content": "Never mind, arguing with a youngster isn't worth my time.",
+        "voice": "story/2001/200005/3211B5AC",
         "npc": 200024,
         "next": 20000511
       },
       {
         "id": 20000511,
         "content": "Actually, I caught a whiff of something remarkable as you passed by just now.",
+        "voice": "story/2001/200005/3211B5D6",
         "npc": 200024,
         "next": 20000512
       },
       {
         "id": 20000512,
         "content": "That's right. It's the scent of a <H>legendary weapon</>! Do you have any special weapons on you, kiddo?",
+        "voice": "story/2001/200005/3211B600",
         "npc": 200024,
         "next": 20000513
       },
       {
         "id": 20000513,
         "content": "Weapon? This sword is all I have.",
+        "voice": "story/2001/200005/3211B62A",
         "npc": 100001,
         "next": 20000514
       },
       {
         "id": 20000514,
         "content": "!!!",
+        "voice": "story/2001/200005/3211B654",
         "npc": 200024,
         "next": 20000515
       },
       {
         "id": 20000515,
         "content": "(She carefully examined the sword, attempting to glean some information from its pattern.)",
+        "voice": "story/2001/200005/3211B67E",
         "next": 20000516
       },
       {
         "id": 20000516,
         "content": "Amazing! That's incredible! Look at the texture and the craftsmanship! This clearly wasn't made by those mediocre Hyperborean blacksmiths. Where did you get it?",
+        "voice": "story/2001/200005/3211B6A8",
         "npc": 200024,
         "next": 20000517
       },
       {
         "id": 20000517,
         "content": "(The Luno blacksmith recognised that this sword was no ordinary weapon.)",
+        "voice": "story/2001/200005/3211B6FC",
         "next": 20000519
       },
       {
         "id": 20000519,
         "content": "I'm not sure...",
+        "voice": "story/2001/200005/3211B750",
         "npc": 100001,
         "next": 20000520
       },
       {
         "id": 20000520,
         "content": "This sword has been with me for as long as I can remember. Maybe it was passed down to me by my parents?",
+        "voice": "story/2001/200005/3211B77A",
         "npc": 100001,
         "next": 20000522
       },
       {
         "id": 20000522,
         "content": "Intriguing. Very intriguing. I've been a blacksmith my whole life, yet I've never seen a weapon like this before.",
+        "voice": "story/2001/200005/3211B7CE",
         "npc": 200024,
         "next": 20000523
       },
       {
         "id": 20000523,
         "content": "Kiddo, I'm Lunosmith, a wandering blacksmith. Would you mind if I accompanied you on your journey?",
+        "voice": "story/2001/200005/3211B7F8",
         "npc": 200024,
         "next": 20000524
       },
       {
         "id": 20000524,
         "content": "I've travelled all over the land, from Hyperborea to Elysium, and I've forged countless weapons. If you require any weapons, I'm at your disposal.",
+        "voice": "story/2001/200005/3211B822",
         "npc": 200024,
         "next": 20000525
       },
       {
         "id": 20000525,
         "content": "Wow! So you're an experienced master blacksmith!",
+        "voice": "story/2001/200005/3211B84C",
         "npc": 200025,
         "next": 20000526
       },
       {
         "id": 20000526,
         "content": "All I request is a basic salary, and an opportunity to examine your sword, hehe.",
+        "voice": "story/2001/200005/3211B876",
         "npc": 200024
       },
       {
@@ -33312,6 +33998,7 @@
       {
         "id": 20000820,
         "content": "Could you take a closer look? The well-being of flowers hinges on careful observation, but I can't do that now...",
+        "voice": "story/2001/200008/3211E888",
         "npc": 200027,
         "next": 20000848
       },

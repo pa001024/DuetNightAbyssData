@@ -95,14 +95,18 @@ class AbyssBuffProcessor(BaseProcessor):
 
     def _format_value(self, value, suffix):
         """格式化数值"""
+        if not isinstance(value, (int, float)):
+            return value
+
+        rounded = self.round_value(float(value))
         if suffix == "%":
-            if isinstance(value, float) and value.is_integer():
-                return f"{int(value)}%"
-            return f"{value:.1f}%"
+            if isinstance(rounded, int):
+                return f"{rounded}%"
+            return f"{rounded:.4f}".rstrip("0").rstrip(".") + "%"
         else:
-            if isinstance(value, float) and value.is_integer():
-                return int(value)
-            return self.round_value(value)
+            if isinstance(rounded, int):
+                return rounded
+            return rounded
 
     def _get_table_data(self, table_name):
         """获取表数据"""

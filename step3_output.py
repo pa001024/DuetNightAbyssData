@@ -2,6 +2,8 @@ import json
 import os
 from collections import OrderedDict
 from processor.char_processor import CharProcessor
+from processor.char_data_target_processor import CharDataTargetProcessor
+from processor.char_voice_processor import CharVoiceProcessor
 from processor.weapon_processor import WeaponProcessor
 from processor.mod_processor import ModProcessor
 from processor.achievement_processor import AchievementProcessor
@@ -16,6 +18,7 @@ from processor.walnut_processor import WalnutProcessor
 from processor.fish_processor import FishProcessor
 from processor.fishing_spot_processor import FishingSpotProcessor
 from processor.resource_processor import ResourceProcessor
+from processor.book_series_archive_processor import BookSeriesArchiveProcessor
 from processor.dyn_quest_processor import DynQuestProcessor
 from processor.quest_chain_processor import QuestChainProcessor
 from processor.quest_story_processor import QuestStoryProcessor
@@ -220,6 +223,7 @@ class FinalProcessor:
         self.output_dir = output_dir
         self.input_file_alias = {
             "HardBoss": "HardBossMain",
+            "CharDataTarget": "CharacterDataTarget",
         }
 
         # 不在这里创建共享的DataLoader实例，改为每个任务创建独立实例
@@ -230,6 +234,8 @@ class FinalProcessor:
             "Mod": ModProcessor,
             "Weapon": WeaponProcessor,
             "Char": CharProcessor,
+            "CharDataTarget": CharDataTargetProcessor,
+            "CharVoice": CharVoiceProcessor,
             "Monster": MonsterProcessor,
             "Draft": DraftProcessor,
             "Dungeon": DungeonProcessor,
@@ -241,6 +247,7 @@ class FinalProcessor:
             "Fish": FishProcessor,
             "FishingSpot": FishingSpotProcessor,
             "Resource": ResourceProcessor,
+            "BookSeriesArchive": BookSeriesArchiveProcessor,
             "DynQuest": DynQuestProcessor,
             "QuestChain": QuestChainProcessor,
             "QuestStory": QuestStoryProcessor,
@@ -376,6 +383,8 @@ if __name__ == "__main__":
         "Achievement",
         "Mod",
         "Char",
+        "CharDataTarget",
+        "CharVoice",
         "Monster",
         "Weapon",
         "Dungeon",
@@ -389,6 +398,7 @@ if __name__ == "__main__":
         "FishingSpot",
         "DynQuest",
         "Resource",
+        "BookSeriesArchive",
         "QuestChain",
         "QuestStory",
         "PartyTopic",

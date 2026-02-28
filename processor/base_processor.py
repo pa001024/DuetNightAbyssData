@@ -1,4 +1,5 @@
 import json
+import re
 from collections import OrderedDict
 
 
@@ -61,6 +62,44 @@ class BaseProcessor:
         language = language if language else self.data_loader.language
         lang_cache = self.dialogue_data_cache.get(language, {})
         return lang_cache.get(str(dialogue_id))
+
+    def _simplify_voice_name(self, voice_name):
+        """精简 VoiceName 路径，去掉语言前缀。"""
+        if not isinstance(voice_name, str):
+            return ""
+
+        normalized = voice_name.strip().replace("\\", "/")
+        if not normalized:
+            return ""
+
+        prefix_list = [
+            "voice/$Locale$/",
+            "voice/ch/",
+            "voice/en/",
+            "voice/jp/",
+            "voice/kr/",
+            "voice/fr/",
+            "voice/es/",
+            "voice/tc/",
+            "voice/de/",
+        ]
+        for prefix in prefix_list:
+            if normalized.startswith(prefix):
+                return normalized[len(prefix) :]
+
+        match = re.match(r"^voice/[^/]+/(.+)$", normalized)
+        if match:
+            return match.group(1)
+
+        return normalized.lstrip("/")
+
+    def get_dialogue_voice_name(self, dialogue_id, language=""):
+        """获取对话语音路径（精简后）。"""
+        dialogue_data = self.get_dialogue_data(dialogue_id, language)
+        if not isinstance(dialogue_data, dict):
+            return ""
+
+        return self._simplify_voice_name(dialogue_data.get("VoiceName", ""))
 
     def get_dialogue_content(self, dialogue_id, language=""):
         """获取对话内容
@@ -151,6 +190,9 @@ class BaseProcessor:
                 continue
 
             dialogue_item = {"id": int(current_dialogue_id), "content": dialogue_text}
+            voice_name = self.get_dialogue_voice_name(current_dialogue_id, language)
+            if voice_name:
+                dialogue_item["voice"] = voice_name
 
             # 只在有 SpeakNpcId 字段时才添加
             if "SpeakNpcId" in dialogue_data and dialogue_data["SpeakNpcId"]:
@@ -198,6 +240,11 @@ class BaseProcessor:
                                 "id": int(option_id),
                                 "content": option_content,
                             }
+                            option_voice_name = self.get_dialogue_voice_name(
+                                option_id, language
+                            )
+                            if option_voice_name:
+                                option_item["voice"] = option_voice_name
                             # 添加next字段（只在有下一个对话时）
                             option_next = option_data.get("NextDialogue")
                             if option_next and not option_data.get("NextOptions"):
@@ -260,6 +307,10 @@ class BaseProcessor:
             dialogue_data = self.get_dialogue_data(dialogue_id, language)
             if dialogue_data and "SpeakNpcId" in dialogue_data:
                 processed_trigger["speakNpcId"] = dialogue_data["SpeakNpcId"]
+
+            voice_name = self.get_dialogue_voice_name(dialogue_id, language)
+            if voice_name:
+                processed_trigger["voice"] = voice_name
 
         # 处理其他字段
         if "Condition" in talk_trigger_data:
@@ -448,7 +499,7 @@ class BaseProcessor:
                 if fallback_field in text_entry and text_entry[fallback_field]:
                     content = text_entry[fallback_field]
                     break
-        if content[:-4] == "{空格}":
+        if "{空格}" in content:
             content = content.replace("{空格}", " ")
         return content or text_key
 
