@@ -38,7 +38,7 @@ class CharVoiceProcessor(BaseProcessor):
         elif not isinstance(voice_desc, list):
             voice_desc = []
 
-        voice_res = item_data.get("VoiceRes", [])
+        voice_res = item_data.get("VoiceText", [])
         if not isinstance(voice_res, list):
             voice_res = []
 
@@ -56,6 +56,6 @@ class CharVoiceProcessor(BaseProcessor):
                 for name_key in voice_desc
                 if name_key
             ),
-            "res": voice_res[0] if voice_res else "",
+            "res": voice_res[0].replace("voice_ch_", "") if voice_res else "",
             "text": self.get_translated_text(text_key, language),
         }

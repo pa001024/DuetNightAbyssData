@@ -3,5985 +3,5985 @@
     "id": 10001,
     "charId": 1101,
     "name": "初見",
-    "res": "vo_gain",
+    "res": "char_Heitao_vo_gain",
     "text": "我回來了。"
   },
   {
     "id": 10002,
     "charId": 1101,
     "name": "致候",
-    "res": "vo_welcome",
+    "res": "char_Heitao_vo_welcome",
     "text": "你回來了。今天打算做什麼？還是在家休息？"
   },
   {
     "id": 10003,
     "charId": 1101,
     "name": "閒談・為何在此處·其一",
-    "res": "vo_topic_01_1",
+    "res": "char_Heitao_vo_topic_01_1",
     "text": "為什麼呢……我也不知道。不妨就認為這是一個美好的夢吧——就當作我還在你身邊，像從前一樣。"
   },
   {
     "id": 10004,
     "charId": 1101,
     "name": "閒談・為何在此處·其二",
-    "res": "vo_topic_01_2",
+    "res": "char_Heitao_vo_topic_01_2",
     "text": "嗯，我也想，非常想……但願有一天，我們能夠真正重逢。"
   },
   {
     "id": 10005,
     "charId": 1101,
     "name": "閒談・關於願望·其一",
-    "res": "vo_topic_02_1",
+    "res": "char_Heitao_vo_topic_02_1",
     "text": "願望？我……沒有什麼特別的願望。每個早上都看見你笑著，就足夠了。"
   },
   {
     "id": 10006,
     "charId": 1101,
     "name": "閒談・關於願望·其二",
-    "res": "vo_topic_02_2",
+    "res": "char_Heitao_vo_topic_02_2",
     "text": "也不用勉強自己。如果你覺得不開心，就來靠著我說會兒話吧。或者，如果你不想説話的話，我們就一起安靜地待一會兒。"
   },
   {
     "id": 10007,
     "charId": 1101,
     "name": "閒談・關於冰湖城·其一",
-    "res": "vo_topic_03_1",
+    "res": "char_Heitao_vo_topic_03_1",
     "text": "和淨界島不一樣，這座城的每一天都在下雪。不過，還好你有這麼一個溫暖的住處。和我們在淨界島上的破房子相比，這個地方算得上奢侈了。"
   },
   {
     "id": 10008,
     "charId": 1101,
     "name": "閒談・關於冰湖城·其二",
-    "res": "vo_topic_03_2",
+    "res": "char_Heitao_vo_topic_03_2",
     "text": "嗯，以前每到冬天，你的手都會變得很涼……來，手給我，我幫你暖一暖。"
   },
   {
     "id": 10009,
     "charId": 1101,
     "name": "閒談・關於軍團·其一",
-    "res": "vo_topic_04_1",
+    "res": "char_Heitao_vo_topic_04_1",
     "text": "應該怎麼說呢，那個地方像一座鋼鐵做的城市……不對，應該說更像是牢獄吧。很小的時候，我是在那兒度過的。"
   },
   {
     "id": 10010,
     "charId": 1101,
     "name": "閒談・關於軍團·其二",
-    "res": "vo_topic_04_2",
+    "res": "char_Heitao_vo_topic_04_2",
     "text": "後來一個人帶著我逃走了。被她一同帶到淨界島的，還有你。只是關於她的事，我不能說更多了……抱歉。我答應過她不說。"
   },
   {
     "id": 10011,
     "charId": 1101,
     "name": "閒談・關於軍團·其三",
-    "res": "vo_topic_04_3",
+    "res": "char_Heitao_vo_topic_04_3",
     "text": "……在淨界島的日子是那麼平靜，我差點以為我們會一輩子這樣生活下去。但那天，他們再次出現的時候，我才發覺我從未真正逃離那個牢獄。"
   },
   {
     "id": 10012,
     "charId": 1101,
     "name": "閒談・關於新生活·其一",
-    "res": "vo_topic_05_1",
+    "res": "char_Heitao_vo_topic_05_1",
     "text": "是有些吵鬧，不過，我並不討厭。你結識了許多新的朋友，這是好事，我為你高興。"
   },
   {
     "id": 10013,
     "charId": 1101,
     "name": "閒談・關於新生活·其二",
-    "res": "vo_topic_05_2",
+    "res": "char_Heitao_vo_topic_05_2",
     "text": "這樣一來，就算我不在你身邊，你也不會覺得孤單了。"
   },
   {
     "id": 10014,
     "charId": 1101,
     "name": "閒談・我累了……",
-    "res": "vo_topic_06_1",
+    "res": "char_Heitao_vo_topic_06_1",
     "text": "那就枕在我身上歇息一會兒吧，像從前那樣。"
   },
   {
     "id": 10015,
     "charId": 1101,
     "name": "獨白",
-    "res": "vo_idle",
+    "res": "char_Heitao_vo_idle",
     "text": "{性别:他|她}從來都不是一隻甘願困在籠中的鳥。我知道的，總有一天{性别:他|她}會離開那座島，飛向更遠的天空。但我不知道的是，這對我們來說究竟是幸運還是不幸。"
   },
   {
     "id": 10017,
     "charId": 1101,
     "name": "閒談・他人偶遇 其一",
-    "res": "vo_companio_02_1",
+    "res": "char_Heitao_vo_companio_02_1",
     "text": "松露小姐，你的……豬，我可以摸一摸嗎？摸一下就好。請你幫我按住它，我怕它跑遠了，小動物看到我總會跑得遠遠的。"
   },
   {
     "id": 10018,
     "charId": 1101,
     "name": "閒談・他人偶遇 其一",
-    "res": "vo_companio_02_2",
+    "res": "char_Heitao_vo_companio_02_2",
     "text": "謝謝你……啊，暖暖的，真好啊……"
   },
   {
     "id": 10019,
     "charId": 1101,
     "name": "閒談・他人偶遇 其二",
-    "res": "vo_companio_03",
+    "res": "char_Heitao_vo_companio_03",
     "text": "我不是軍團的「零號」，更不是你手中隨意撥弄的玩具。你可以離開，或者帶著我的屍骸回去。"
   },
   {
     "id": 10020,
     "charId": 1101,
     "name": "閒談・他人偶遇 其三",
-    "res": "vo_companio_04_1",
+    "res": "char_Heitao_vo_companio_04_1",
     "text": "聽說你是位優秀的美食家，可以給我看看你的食譜嗎？{nickname}總說你做的飯很好吃，聽起來不像客套話，而是發自內心的誇獎。"
   },
   {
     "id": 10021,
     "charId": 1101,
     "name": "閒談・他人偶遇 其三",
-    "res": "vo_companio_04_2",
+    "res": "char_Heitao_vo_companio_04_2",
     "text": "……你用的食材，也只不過是最普通不過的食物而已？那為什麼……"
   },
   {
     "id": 10022,
     "charId": 1101,
     "name": "生日祝福",
-    "res": "vo_birthday",
+    "res": "char_Heitao_vo_birthday",
     "text": "你說過，想和其他人一樣過一次生日。我學著其他人的樣子，給你做了一個蛋糕，他們說，這是必要的儀式。希望從今以後，當你再度提到「生日」的時候，記憶裡全都是……喜悅。"
   },
   {
     "id": 10023,
     "charId": 1101,
     "name": "準備就緒",
-    "res": "vo_appear",
+    "res": "char_Heitao_vo_appear",
     "text": "走吧。"
   },
   {
     "id": 10024,
     "charId": 1101,
     "name": "精進",
-    "res": "vo_lvup",
+    "res": "char_Heitao_vo_lvup",
     "text": "你覺得怎麼樣？"
   },
   {
     "id": 10025,
     "charId": 1101,
     "name": "戰鬥開始",
-    "res": "vo_battlestart",
+    "res": "char_Heitao_vo_battlestart",
     "text": "我走前面。"
   },
   {
     "id": 10026,
     "charId": 1101,
     "name": "空暇",
-    "res": "vo_battleidle",
+    "res": "char_Heitao_vo_battleidle",
     "text": "……儘快結束戰鬥，一起回家吧。"
   },
   {
     "id": 10027,
     "charId": 1101,
     "name": "釋放技能·其一",
-    "res": "vo_skill01_r01",
+    "res": "char_Heitao_vo_skill01_r01",
     "text": "散碎。"
   },
   {
     "id": 10028,
     "charId": 1101,
     "name": "釋放技能·其二",
-    "res": "vo_skill01_r02",
+    "res": "char_Heitao_vo_skill01_r02",
     "text": "擊潰。"
   },
   {
     "id": 10029,
     "charId": 1101,
     "name": "釋放終結技·其一",
-    "res": "vo_skill02_r01",
+    "res": "char_Heitao_vo_skill02_r01",
     "text": "予你終結。"
   },
   {
     "id": 10030,
     "charId": 1101,
     "name": "釋放終結技·其二",
-    "res": "vo_skill02_r02",
+    "res": "char_Heitao_vo_skill02_r02",
     "text": "永別了。"
   },
   {
     "id": 10031,
     "charId": 1101,
     "name": "釋放終結技·其三",
-    "res": "vo_skill02_r03",
+    "res": "char_Heitao_vo_skill02_r03",
     "text": "危害你的，我絕不寬恕。"
   },
   {
     "id": 10032,
     "charId": 1101,
     "name": "無法行動·其一",
-    "res": "vo_die_r01",
+    "res": "char_Heitao_vo_die_r01",
     "text": "必須……保護……"
   },
   {
     "id": 10033,
     "charId": 1101,
     "name": "無法行動·其二",
-    "res": "vo_die_r02",
+    "res": "char_Heitao_vo_die_r02",
     "text": "好想回到……約定的地方……"
   },
   {
     "id": 10034,
     "charId": 1101,
     "name": "復甦",
-    "res": "vo_revive",
+    "res": "char_Heitao_vo_revive",
     "text": "還沒有結束。"
   },
   {
     "id": 10035,
     "charId": 1101,
     "name": "勝利",
-    "res": "vo_victory",
+    "res": "char_Heitao_vo_victory",
     "text": "一切都過去了。"
   },
   {
     "id": 10036,
     "charId": 1101,
     "name": "敗退",
-    "res": "vo_fail",
+    "res": "char_Heitao_vo_fail",
     "text": "還好你平安無事。"
   },
   {
     "id": 10037,
     "charId": 2101,
     "name": "角色形象·初見",
-    "res": "vo_gain",
+    "res": "char_Shuimu01_vo_gain",
     "text": "在黎明到來前，讓我們一起跳舞吧，永遠永遠地跳下去——直到我親吻你蒼白的嘴唇，直到死亡將我們分開。"
   },
   {
     "id": 10038,
     "charId": 2101,
     "name": "角色形象·準備就緒",
-    "res": "vo_appear",
+    "res": "char_Shuimu01_vo_appear",
     "text": "「砰……砰……」你聽到了嗎，這是我訴說著思念的心跳。"
   },
   {
     "id": 10039,
     "charId": 2101,
     "name": "角色形象·戰鬥開始",
-    "res": "vo_battlestart",
+    "res": "char_Shuimu01_vo_battlestart",
     "text": "讓我們從一曲華爾茲跳起吧，就這樣，一步、兩步……"
   },
   {
     "id": 10040,
     "charId": 2101,
     "name": "角色形象·釋放終結技",
-    "res": "vo_skill02_r01",
+    "res": "char_Shuimu01_vo_skill02_r01",
     "text": "讓那藍寶石般的七層紗染上殷紅。"
   },
   {
     "id": 10041,
     "charId": 2101,
     "name": "初見",
-    "res": "vo_gain",
+    "res": "char_Shuimu_vo_gain",
     "text": "真是浪漫的相遇，莫非這就是愛之神的指引？呵呵，我是調香師麗蓓卡。也許你會想買一瓶……我親手調配的、獨一無二的，「愛之香薰」。"
   },
   {
     "id": 10042,
     "charId": 2101,
     "name": "致候",
-    "res": "vo_welcome",
+    "res": "char_Shuimu_vo_welcome",
     "text": "我從睡醒就一直在這裡等著，體內的毒液都快乾涸了……不過還好你來了，現在它們又開始因為興奮而跳動。你……可以再靠近一些嗎？"
   },
   {
     "id": 10043,
     "charId": 2101,
     "name": "閒談・關於雨天·其一",
-    "res": "vo_topic_01_1",
+    "res": "char_Shuimu_vo_topic_01_1",
     "text": "是的，我喜歡雨天，我讀了許多遍的小說裡，愛的邂逅總是在下雨天自然發生。"
   },
   {
     "id": 10044,
     "charId": 2101,
     "name": "閒談・關於雨天·其二",
-    "res": "vo_topic_01_2",
+    "res": "char_Shuimu_vo_topic_01_2",
     "text": "你留心觀察過那些躲雨的人嗎？他們在屋簷下不期而遇，潮濕的氣息讓草木的芳香更加馥郁，小心的試探使愛意緩緩流動……"
   },
   {
     "id": 10045,
     "charId": 2101,
     "name": "閒談・關於雨天·其三",
-    "res": "vo_topic_01_3",
+    "res": "char_Shuimu_vo_topic_01_3",
     "text": "呵呵……等到下個雨天，您同我一起出去瞧瞧，就會明白的。"
   },
   {
     "id": 10046,
     "charId": 2101,
     "name": "閒談・關於愛·其一",
-    "res": "vo_topic_02_1",
+    "res": "char_Shuimu_vo_topic_02_1",
     "text": "啊呀，難得你居然會和我主動談論「愛」。"
   },
   {
     "id": 10047,
     "charId": 2101,
     "name": "閒談・關於愛·其二",
-    "res": "vo_topic_02_2",
+    "res": "char_Shuimu_vo_topic_02_2",
     "text": "應該如何描述呢……嗯，就像這香薰中的水：親吻擁抱每一劑原料，吞噬汲取它們的氣味，並最終在長久的馥郁中合為一體。"
   },
   {
     "id": 10048,
     "charId": 2101,
     "name": "閒談・關於愛·其三",
-    "res": "vo_topic_02_3",
+    "res": "char_Shuimu_vo_topic_02_3",
     "text": "不止哦。我想要的愛情，是徹底的交融，沒有彼此之分……即使一方生命終結了，也會成為香料園中的花泥；從中綻放的花朵將變成香薰，永遠縈繞著另一個。"
   },
   {
     "id": 10049,
     "charId": 2101,
     "name": "閒談・關於覺得自己怪異的人·其一",
-    "res": "vo_topic_03_1",
+    "res": "char_Shuimu_vo_topic_03_1",
     "text": "特別？啊，是的……從小到大，身邊可有不少人視我為「怪物」呢。"
   },
   {
     "id": 10050,
     "charId": 2101,
     "name": "閒談・關於覺得自己怪異的人·其二",
-    "res": "vo_topic_03_2",
+    "res": "char_Shuimu_vo_topic_03_2",
     "text": "他們每次看到我都會露出厭惡的表情，不過那樣的表情可不好看，得想辦法糾正一下呢……"
   },
   {
     "id": 10051,
     "charId": 2101,
     "name": "閒談・關於覺得自己怪異的人·其三",
-    "res": "vo_topic_03_3",
+    "res": "char_Shuimu_vo_topic_03_3",
     "text": "若是刺痛他們的臉，讓毒素滲透進他們的肌膚，那張嫌惡的臉，也一定會變得溫柔起來吧……呵呵。"
   },
   {
     "id": 10052,
     "charId": 2101,
     "name": "閒談・關於覺得自己怪異的人·其四",
-    "res": "vo_topic_03_4",
+    "res": "char_Shuimu_vo_topic_03_4",
     "text": "那麼話說回來，你說的「特別」指的又是哪種「特別」？「特別」像個怪物……還是，「特別」令人傾心？"
   },
   {
     "id": 10053,
     "charId": 2101,
     "name": "閒談・關於身體的毒液·其一",
-    "res": "vo_topic_04_1",
+    "res": "char_Shuimu_vo_topic_04_1",
     "text": "不，不會的，這份毒與生俱來，像是愛之神賜給我的禮物，不會傷害我，只會幫助我找到命定的戀人。"
   },
   {
     "id": 10054,
     "charId": 2101,
     "name": "閒談・關於身體的毒液·其二",
-    "res": "vo_topic_04_2",
+    "res": "char_Shuimu_vo_topic_04_2",
     "text": "是啊，雖然容易失控的毒液總讓我被當做怪物，但也讓我和其他人不同。所以我堅信，一個怪物的命定之人，也一定很特別，你說對嗎？"
   },
   {
     "id": 10055,
     "charId": 2101,
     "name": "閒談・關於偶爾散發的香氣·其一",
-    "res": "vo_topic_05_1",
+    "res": "char_Shuimu_vo_topic_05_1",
     "text": "是我自製的香薰哦，前調如同初遇一般濃烈，中調則是用來定香的甜言蜜語，最後的尾調，是散不去的回味再加一點苦澀。"
   },
   {
     "id": 10056,
     "charId": 2101,
     "name": "閒談・關於偶爾散發的香氣·其二",
-    "res": "vo_topic_05_2",
+    "res": "char_Shuimu_vo_topic_05_2",
     "text": "秘密喲，當然，我也可以親手教你如何調製，從始至終，一步一步。"
   },
   {
     "id": 10057,
     "charId": 2101,
     "name": "獨白",
-    "res": "vo_idle",
+    "res": "char_Shuimu_vo_idle",
     "text": "你留在這裡，是為了和我一起度過一段繾綣的二人時光嗎……呵呵，我已經開始期待了。"
   },
   {
     "id": 10058,
     "charId": 2101,
     "name": "閒談・他人偶遇 其一",
-    "res": "vo_companio_01",
+    "res": "char_Shuimu_vo_companio_01",
     "text": "……這個乾燥的氣息，原來是你啊。好久不見，你還是想把我拷走嗎？嗯！可以哦。\n畢竟，即使重來一遍，重來多少遍，我依舊能夠從你掌心逃脫……你、相、信、嗎？海爾法大人。"
   },
   {
     "id": 10059,
     "charId": 2101,
     "name": "閒談・他人偶遇 其二",
-    "res": "vo_companio_02",
+    "res": "char_Shuimu_vo_companio_02",
     "text": "你害怕我嗎？那我會讓你喜歡上我的，來聞一聞我調配的香薰吧，很甜的，保證你能體會到前所未有的幸福。"
   },
   {
     "id": 10061,
     "charId": 2101,
     "name": "生日祝福",
-    "res": "vo_birthday",
+    "res": "char_Shuimu_vo_birthday",
     "text": "聽說今天是你的生日，要一起去我的香料園嗎？那裡有我特別為你培育的香料。用它們製成香薰後，每次塗抹都會感受到這份充滿愛意的芳香，那是只屬於我們的味道。嗯？香料有沒有毒？呵呵，你去了就知道了。"
   },
   {
     "id": 10062,
     "charId": 2101,
     "name": "準備就緒",
-    "res": "vo_appear",
+    "res": "char_Shuimu_vo_appear",
     "text": "誒，這是要和我出去約會？"
   },
   {
     "id": 10063,
     "charId": 2101,
     "name": "精進",
-    "res": "vo_lvup",
+    "res": "char_Shuimu_vo_lvup",
     "text": "這是對我飽含愛意的嘉獎嗎？"
   },
   {
     "id": 10064,
     "charId": 2101,
     "name": "戰鬥開始",
-    "res": "vo_battlestart",
+    "res": "char_Shuimu_vo_battlestart",
     "text": "我的毒素，正和我甘美的愛情一起沸騰……"
   },
   {
     "id": 10065,
     "charId": 2101,
     "name": "空暇",
-    "res": "vo_battleidle",
+    "res": "char_Shuimu_vo_battleidle",
     "text": "啊呀，再不快點的話，我們的約會就趕不上了……"
   },
   {
     "id": 10066,
     "charId": 2101,
     "name": "釋放技能·其一",
-    "res": "vo_skill01_r01",
+    "res": "char_Shuimu_vo_skill01_r01",
     "text": "別逃呀。"
   },
   {
     "id": 10067,
     "charId": 2101,
     "name": "釋放技能·其二",
-    "res": "vo_skill01_r02",
+    "res": "char_Shuimu_vo_skill01_r02",
     "text": "不可以哦。"
   },
   {
     "id": 10068,
     "charId": 2101,
     "name": "受傷·其一",
-    "res": "vo_be_hit_heavy_r01",
+    "res": "char_Shuimu_vo_be_hit_heavy_r01",
     "text": "好狠心。"
   },
   {
     "id": 10069,
     "charId": 2101,
     "name": "受傷·其二",
-    "res": "vo_be_hit_heavy_r02",
+    "res": "char_Shuimu_vo_be_hit_heavy_r02",
     "text": "真冷漠！"
   },
   {
     "id": 10070,
     "charId": 2101,
     "name": "釋放終結技·其一",
-    "res": "vo_skill02_r01",
+    "res": "char_Shuimu_vo_skill02_r01",
     "text": "飲下這甘美的毒藥！"
   },
   {
     "id": 10071,
     "charId": 2101,
     "name": "釋放終結技·其二",
-    "res": "vo_skill02_r02",
+    "res": "char_Shuimu_vo_skill02_r02",
     "text": "在甜蜜的香薰中腐化吧！"
   },
   {
     "id": 10072,
     "charId": 2101,
     "name": "釋放終結技·其三",
-    "res": "vo_skill02_r03",
+    "res": "char_Shuimu_vo_skill02_r03",
     "text": "不要怕，我會送你前往愛的國度。"
   },
   {
     "id": 10073,
     "charId": 2101,
     "name": "無法行動·其一",
-    "res": "vo_die_r01",
+    "res": "char_Shuimu_vo_die_r01",
     "text": "愛之神……不要拋棄我……"
   },
   {
     "id": 10074,
     "charId": 2101,
     "name": "無法行動·其二",
-    "res": "vo_die_r02",
+    "res": "char_Shuimu_vo_die_r02",
     "text": "永別了……我的愛人……"
   },
   {
     "id": 10075,
     "charId": 2101,
     "name": "復甦",
-    "res": "vo_revive",
+    "res": "char_Shuimu_vo_revive",
     "text": "這就是愛的力量嗎……"
   },
   {
     "id": 10076,
     "charId": 2101,
     "name": "勝利",
-    "res": "vo_victory",
+    "res": "char_Shuimu_vo_victory",
     "text": "那些人對待愛……不夠虔誠呢，所以我來代替愛之神懲罰他們了。"
   },
   {
     "id": 10077,
     "charId": 2101,
     "name": "敗退",
-    "res": "vo_fail",
+    "res": "char_Shuimu_vo_fail",
     "text": "好難過……需要安慰一下才能繼續戰鬥哦。"
   },
   {
     "id": 10078,
     "charId": 2301,
     "name": "初見",
-    "res": "vo_gain",
+    "res": "char_Zhangyu_vo_gain",
     "text": "嘻嘻嘻，你這裡好玩的東西不少嘛！看得我都有點手癢癢……不過別緊張，大名鼎鼎的惡魔大盜塔比瑟，是不會偷好人的東西的！還是說，其實你是大惡人？"
   },
   {
     "id": 10079,
     "charId": 2301,
     "name": "致候",
-    "res": "vo_welcome",
+    "res": "char_Zhangyu_vo_welcome",
     "text": "嗯，這個時間最適合動手了，要趕緊出門，不然就……哇！你什麼時候來的！"
   },
   {
     "id": 10080,
     "charId": 2301,
     "name": "閒談・關於模仿·其一",
-    "res": "vo_topic_01_1",
+    "res": "char_Zhangyu_vo_topic_01_1",
     "text": "貝蕾，我……"
   },
   {
     "id": 10081,
     "charId": 2301,
     "name": "閒談・關於模仿·其二",
-    "res": "vo_topic_01_2",
+    "res": "char_Zhangyu_vo_topic_01_2",
     "text": "每個早上都看見你笑著，就足夠了。從今以後的每一天，我都會一直保護你的。嘻嘻，我學得像不像？"
   },
   {
     "id": 10082,
     "charId": 2301,
     "name": "閒談・關於模仿·其三",
-    "res": "vo_topic_01_3",
+    "res": "char_Zhangyu_vo_topic_01_3",
     "text": "生氣啦？嘻嘻嘻，你生氣的樣子讓人更想學了！"
   },
   {
     "id": 10083,
     "charId": 2301,
     "name": "閒談・關於擬態·其一",
-    "res": "vo_topic_02_1",
+    "res": "char_Zhangyu_vo_topic_02_1",
     "text": "因為我會變呀，嘻嘻，我能變成任何形狀，任何顏色，完美地偽裝自己，一般人絕對發現不了我！"
   },
   {
     "id": 10084,
     "charId": 2301,
     "name": "閒談・關於擬態·其二",
-    "res": "vo_topic_02_2",
+    "res": "char_Zhangyu_vo_topic_02_2",
     "text": "有一天我還偷偷假扮成了木桶，等著嚇唬你呢，沒想到你根本不靠近……"
   },
   {
     "id": 10085,
     "charId": 2301,
     "name": "閒談・關於擬態·其三",
-    "res": "vo_topic_02_3",
+    "res": "char_Zhangyu_vo_topic_02_3",
     "text": "什麼？！所以原來你是故意無視我的！你這傢伙！"
   },
   {
     "id": 10086,
     "charId": 2301,
     "name": "閒談・關於偷東西·其一",
-    "res": "vo_topic_03_1",
+    "res": "char_Zhangyu_vo_topic_03_1",
     "text": "喂喂喂——我可和那些什麼都偷還一肚子壞水的傢伙不一樣！"
   },
   {
     "id": 10087,
     "charId": 2301,
     "name": "閒談・關於偷東西·其二",
-    "res": "vo_topic_03_2",
+    "res": "char_Zhangyu_vo_topic_03_2",
     "text": "我專門偷小偷的東西——偽裝成他們認不出來的樣子，慢慢靠近，從他們的口袋裡挑出最順眼的贓物，統統帶走！"
   },
   {
     "id": 10088,
     "charId": 2301,
     "name": "閒談・關於偷東西·其三",
-    "res": "vo_topic_03_3",
+    "res": "char_Zhangyu_vo_topic_03_3",
     "text": "等他們發現的時候，總是震驚地眼珠都快掉出來！嘻嘻嘻……我這是伸張正義，怎麼能算壞人！"
   },
   {
     "id": 10089,
     "charId": 2301,
     "name": "閒談・關於惡魔的稱號·其一",
-    "res": "vo_topic_04_1",
+    "res": "char_Zhangyu_vo_topic_04_1",
     "text": "那當然了，你要是被人皺著眉頭一臉嫌棄地叫著「惡魔」，你也不會喜歡的。"
   },
   {
     "id": 10090,
     "charId": 2301,
     "name": "閒談・關於惡魔的稱號·其二",
-    "res": "vo_topic_04_2",
+    "res": "char_Zhangyu_vo_topic_04_2",
     "text": "那當然是想要讓「惡魔」這個詞變得帥氣起來，現在的小偷啊，聽到「惡魔大盜」的名頭就會魂不附體。"
   },
   {
     "id": 10091,
     "charId": 2301,
     "name": "閒談・關於惡魔的稱號·其三",
-    "res": "vo_topic_04_3",
+    "res": "char_Zhangyu_vo_topic_04_3",
     "text": "遲早有一天，人們提到「惡魔」，就只會想到厲害的我，怎麼樣，是很偉大的夢想吧！"
   },
   {
     "id": 10092,
     "charId": 2301,
     "name": "獨白",
-    "res": "vo_idle",
+    "res": "char_Zhangyu_vo_idle",
     "text": "……喂……喂，放我出去玩啦！閒得我觸手都要僵了！"
   },
   {
     "id": 10093,
     "charId": 2301,
     "name": "閒談・他人偶遇 其一",
-    "res": "vo_companio_01",
+    "res": "char_Zhangyu_vo_companio_01",
     "text": "要抓我？我又不是壞人！不就是順了點東西嗎，還是小偷的東西……哇，你不要過來啊！好熱！"
   },
   {
     "id": 10094,
     "charId": 2301,
     "name": "閒談・他人偶遇 其二",
-    "res": "vo_companio_02",
+    "res": "char_Zhangyu_vo_companio_02",
     "text": "送我香薰？唔，你看起來就好危險，我不要我不要！等等……這個香薰聞起來，怎麼讓人感覺飄飄的……我的觸手怎麼麻麻的……你果然很危險！"
   },
   {
     "id": 10095,
     "charId": 2301,
     "name": "閒談・他人偶遇 其三",
-    "res": "vo_companio_03",
+    "res": "char_Zhangyu_vo_companio_03",
     "text": "你對著劍說話的樣子好好玩！薩麥爾，你喜歡這個地方嗎，我們還要一起去更多的地方哦！\n嗯……？你怎麼在那裡幹憋氣不出聲，這樣子更好玩了嘻嘻嘻！"
   },
   {
     "id": 10096,
     "charId": 2301,
     "name": "生日祝福",
-    "res": "vo_birthday",
+    "res": "char_Zhangyu_vo_birthday",
     "text": "我都沒慶祝過生日呢！因為能吃飽飯已經是很不容易的事了！所以……我希望你可以一直吃得飽……永遠不需要去偷東西！"
   },
   {
     "id": 10097,
     "charId": 2301,
     "name": "準備就緒",
-    "res": "vo_appear",
+    "res": "char_Zhangyu_vo_appear",
     "text": "要去哪玩？"
   },
   {
     "id": 10098,
     "charId": 2301,
     "name": "精進",
-    "res": "vo_lvup",
+    "res": "char_Zhangyu_vo_lvup",
     "text": "嘻嘻，下次我再扮成酒桶……你絕對發現不了我了！"
   },
   {
     "id": 10099,
     "charId": 2301,
     "name": "戰鬥開始",
-    "res": "vo_battlestart",
+    "res": "char_Zhangyu_vo_battlestart",
     "text": "嘻嘻，惡魔大盜塔比瑟閃亮登場！"
   },
   {
     "id": 10100,
     "charId": 2301,
     "name": "空暇",
-    "res": "vo_battleidle",
+    "res": "char_Zhangyu_vo_battleidle",
     "text": "哈，真無聊。"
   },
   {
     "id": 10101,
     "charId": 2301,
     "name": "釋放技能·其一",
-    "res": "vo_skill01_r01",
+    "res": "char_Zhangyu_vo_skill01_r01",
     "text": "真好玩！"
   },
   {
     "id": 10102,
     "charId": 2301,
     "name": "釋放技能·其二",
-    "res": "vo_skill01_r02",
+    "res": "char_Zhangyu_vo_skill01_r02",
     "text": "打暈啦！"
   },
   {
     "id": 10103,
     "charId": 2301,
     "name": "受傷·其一",
-    "res": "vo_be_hit_heavy_r01",
+    "res": "char_Zhangyu_vo_be_hit_heavy_r01",
     "text": "我要生氣了！"
   },
   {
     "id": 10104,
     "charId": 2301,
     "name": "受傷·其二",
-    "res": "vo_be_hit_heavy_r02",
+    "res": "char_Zhangyu_vo_be_hit_heavy_r02",
     "text": "欺負人！"
   },
   {
     "id": 10105,
     "charId": 2301,
     "name": "釋放終結技·其一",
-    "res": "vo_skill02_r01",
+    "res": "char_Zhangyu_vo_skill02_r01",
     "text": "嗚嗚嗚……嘻嘻，騙你的！"
   },
   {
     "id": 10106,
     "charId": 2301,
     "name": "釋放終結技·其二",
-    "res": "vo_skill02_r02",
+    "res": "char_Zhangyu_vo_skill02_r02",
     "text": "陪我玩遊戲吧！"
   },
   {
     "id": 10107,
     "charId": 2301,
     "name": "釋放終結技·其三",
-    "res": "vo_skill02_r03",
+    "res": "char_Zhangyu_vo_skill02_r03",
     "text": "惡魔大盜來嘍！"
   },
   {
     "id": 10108,
     "charId": 2301,
     "name": "無法行動·其一",
-    "res": "vo_die_r01",
+    "res": "char_Zhangyu_vo_die_r01",
     "text": "我可是惡魔大盜！我不會輸……"
   },
   {
     "id": 10109,
     "charId": 2301,
     "name": "無法行動·其二",
-    "res": "vo_die_r02",
+    "res": "char_Zhangyu_vo_die_r02",
     "text": "我還想……繼續玩……"
   },
   {
     "id": 10110,
     "charId": 2301,
     "name": "復甦",
-    "res": "vo_revive",
+    "res": "char_Zhangyu_vo_revive",
     "text": "果然遊戲不會結束！"
   },
   {
     "id": 10111,
     "charId": 2301,
     "name": "勝利",
-    "res": "vo_victory",
+    "res": "char_Zhangyu_vo_victory",
     "text": "大笨蛋，來打我呀！哼哼哼，打不到吧！"
   },
   {
     "id": 10112,
     "charId": 2301,
     "name": "敗退",
-    "res": "vo_fail",
+    "res": "char_Zhangyu_vo_fail",
     "text": "全都是大壞蛋！比那群小偷都壞！嗚嗚嗚……"
   },
   {
     "id": 10113,
     "charId": 3101,
     "name": "初見",
-    "res": "vo_gain",
+    "res": "char_Linen_vo_gain",
     "text": "沒想到私活能接到你頭上，有什麼話直說，但報酬得先談好。"
   },
   {
     "id": 10114,
     "charId": 3101,
     "name": "致候",
-    "res": "vo_welcome",
+    "res": "char_Linen_vo_welcome",
     "text": "有事快說，沒有我就出任務去。"
   },
   {
     "id": 10115,
     "charId": 3101,
     "name": "閒談・關於西比爾·其一",
-    "res": "vo_topic_01_1",
+    "res": "char_Linen_vo_topic_01_1",
     "text": "西比爾長官？她是十三軍團的軍團長。"
   },
   {
     "id": 10116,
     "charId": 3101,
     "name": "閒談・關於西比爾·其二",
-    "res": "vo_topic_01_2",
+    "res": "char_Linen_vo_topic_01_2",
     "text": "嘖，我上哪知道那麼多，她是上司，她下命令，我辦事，就行了。"
   },
   {
     "id": 10117,
     "charId": 3101,
     "name": "閒談・關於解決問題的方式·其一",
-    "res": "vo_topic_02_1",
+    "res": "char_Linen_vo_topic_02_1",
     "text": "經驗？什麼經驗，我的經驗就是沒有拳頭解決不了的問題，如果有，那就再來一拳。"
   },
   {
     "id": 10118,
     "charId": 3101,
     "name": "閒談・關於解決問題的方式·其二",
-    "res": "vo_topic_02_2",
+    "res": "char_Linen_vo_topic_02_2",
     "text": "那就再補上一槍。"
   },
   {
     "id": 10119,
     "charId": 3101,
     "name": "閒談・關於解決問題的方式·其三",
-    "res": "vo_topic_02_3",
+    "res": "char_Linen_vo_topic_02_3",
     "text": "哎，我這就是打比方，只要拳頭夠硬槍夠准，比什麼都好使，你要是再抬杠，我先給你兩拳。"
   },
   {
     "id": 10120,
     "charId": 3101,
     "name": "閒談・關於喜歡的武器·其一",
-    "res": "vo_topic_03_1",
+    "res": "char_Linen_vo_topic_03_1",
     "text": "前幾天看到的那把槍真不錯……算了，不能因為買它餓肚子，反正舊的用著更順手些。"
   },
   {
     "id": 10121,
     "charId": 3101,
     "name": "閒談・關於喜歡的武器·其二",
-    "res": "vo_topic_03_2",
+    "res": "char_Linen_vo_topic_03_2",
     "text": "真的假……不對，你看著也不比我有錢……算了，我不懷疑你的好意，但你用不著破費，我不想欠無謂的人情。"
   },
   {
     "id": 10122,
     "charId": 3101,
     "name": "閒談・關於工作的理由·其一",
-    "res": "vo_topic_04_1",
+    "res": "char_Linen_vo_topic_04_1",
     "text": "不工作就沒飯吃，這個道理不懂嗎？"
   },
   {
     "id": 10123,
     "charId": 3101,
     "name": "閒談・關於工作的理由·其二",
-    "res": "vo_topic_04_2",
+    "res": "char_Linen_vo_topic_04_2",
     "text": "我倒是想，但是那些雇主們可不這麼想，隔三差五就問我委託做完沒有，快點做之類，催催催，要不是我還有一家子要養活，真想給他們來上幾發。"
   },
   {
     "id": 10124,
     "charId": 3101,
     "name": "獨白",
-    "res": "vo_idle",
+    "res": "char_Linen_vo_idle",
     "text": "……還好，這個月的錢一分不少，還以為真被蘭迪那傻*扣光了……嗯，這些寄回家裡，剩下的生活費應該還夠用。"
   },
   {
     "id": 10125,
     "charId": 3101,
     "name": "閒談・他人偶遇 其一",
-    "res": "vo_companio_01",
+    "res": "char_Linen_vo_companio_01",
     "text": "下次派任務能不能直說？嘮嘮叨叨的，煩死了。"
   },
   {
     "id": 10126,
     "charId": 3101,
     "name": "閒談・他人偶遇 其二",
-    "res": "vo_companio_02",
+    "res": "char_Linen_vo_companio_02",
     "text": "……長官好。"
   },
   {
     "id": 10127,
     "charId": 3101,
     "name": "閒談・他人偶遇 其三",
-    "res": "vo_companio_03",
+    "res": "char_Linen_vo_companio_03",
     "text": "你是優秀的士兵，僅此一句。哦，還有……好好工作之餘，也得好好生活……嘖，聽完了還不快走？"
   },
   {
     "id": 10128,
     "charId": 3101,
     "name": "生日祝福",
-    "res": "vo_birthday",
+    "res": "char_Linen_vo_birthday",
     "text": "哦，生日快樂，也沒什特別的祝福語，就祝你永遠不缺錢吧……以及，今天的任務給你打八折，夠意思吧。"
   },
   {
     "id": 10129,
     "charId": 3101,
     "name": "準備就緒",
-    "res": "vo_appear",
+    "res": "char_Linen_vo_appear",
     "text": "說吧。今天打誰？"
   },
   {
     "id": 10130,
     "charId": 3101,
     "name": "精進",
-    "res": "vo_lvup",
+    "res": "char_Linen_vo_lvup",
     "text": "真麻煩。"
   },
   {
     "id": 10131,
     "charId": 3101,
     "name": "戰鬥開始",
-    "res": "vo_battlestart",
+    "res": "char_Linen_vo_battlestart",
     "text": "走了！"
   },
   {
     "id": 10132,
     "charId": 3101,
     "name": "空暇",
-    "res": "vo_battleidle",
+    "res": "char_Linen_vo_battleidle",
     "text": "嘖，你再不動動就沒命付我錢了。"
   },
   {
     "id": 10133,
     "charId": 3101,
     "name": "釋放技能·其一",
-    "res": "vo_skill01_r01",
+    "res": "char_Linen_vo_skill01_r01",
     "text": "破壞吧！"
   },
   {
     "id": 10134,
     "charId": 3101,
     "name": "釋放技能·其二",
-    "res": "vo_skill01_r02",
+    "res": "char_Linen_vo_skill01_r02",
     "text": "打爆你。"
   },
   {
     "id": 10135,
     "charId": 3101,
     "name": "受傷·其一",
-    "res": "vo_be_hit_heavy_r01",
+    "res": "char_Linen_vo_be_hit_heavy_r01",
     "text": "真**痛！"
   },
   {
     "id": 10136,
     "charId": 3101,
     "name": "受傷·其二",
-    "res": "vo_be_hit_heavy_r02",
+    "res": "char_Linen_vo_be_hit_heavy_r02",
     "text": "有兩下子。"
   },
   {
     "id": 10137,
     "charId": 3101,
     "name": "釋放終結技·其一",
-    "res": "vo_skill02_r01",
+    "res": "char_Linen_vo_skill02_r01",
     "text": "這是你自找的。"
   },
   {
     "id": 10138,
     "charId": 3101,
     "name": "釋放終結技·其二",
-    "res": "vo_skill02_r02",
+    "res": "char_Linen_vo_skill02_r02",
     "text": "耽誤的時間，你賠。"
   },
   {
     "id": 10139,
     "charId": 3101,
     "name": "釋放終結技·其三",
-    "res": "vo_skill02_r03",
+    "res": "char_Linen_vo_skill02_r03",
     "text": "你惹怒我了。"
   },
   {
     "id": 10140,
     "charId": 3101,
     "name": "無法行動·其一",
-    "res": "vo_die_r01",
+    "res": "char_Linen_vo_die_r01",
     "text": "還有……誰……？"
   },
   {
     "id": 10141,
     "charId": 3101,
     "name": "無法行動·其二",
-    "res": "vo_die_r02",
+    "res": "char_Linen_vo_die_r02",
     "text": "苦……吃夠了……"
   },
   {
     "id": 10142,
     "charId": 3101,
     "name": "復甦",
-    "res": "vo_revive",
+    "res": "char_Linen_vo_revive",
     "text": "再來。"
   },
   {
     "id": 10143,
     "charId": 3101,
     "name": "勝利",
-    "res": "vo_victory",
+    "res": "char_Linen_vo_victory",
     "text": "就這點本事，三流貨色。"
   },
   {
     "id": 10144,
     "charId": 3101,
     "name": "敗退",
-    "res": "vo_fail",
+    "res": "char_Linen_vo_fail",
     "text": "別給我說出去，不然打爛你的腦袋。"
   },
   {
     "id": 10145,
     "charId": 3102,
     "name": "初見",
-    "res": "vo_gain",
+    "res": "char_Xier_vo_gain",
     "text": "希爾妲，一介卑微女僕。負責雇主的日常起居、營養搭配、服飾剪裁、接待來客等事務——當然，也能在休息時幫雇主消滅些敵人，驅逐些覬覦者作為調劑。那麼，我是應當驅逐你，還是接待您呢？"
   },
   {
     "id": 10186,
     "charId": 4201,
     "name": "初見（暫無配音，敬請期待）",
-    "res": "vo_gain",
+    "res": "char_Yuming_vo_gain",
     "text": "你有求於我。以什麼名義——友人？還是視我為任由驅使的兵刃。"
   },
   {
     "id": 10187,
     "charId": 4201,
     "name": "致候",
-    "res": "vo_welcome",
+    "res": "char_Yuming_vo_welcome",
     "text": "趁著你還沒有被各種律法束縛，想做什麼事情，就去做吧。"
   },
   {
     "id": 10188,
     "charId": 4201,
     "name": "閒談・關於華胥·其一",
-    "res": "vo_topic_01_1",
+    "res": "char_Yuming_vo_topic_01_1",
     "text": "……這等閒聊，有更適合的人選吧。找那些販賣貨物的織星客吧，或者看看書也好。"
   },
   {
     "id": 10189,
     "charId": 4201,
     "name": "閒談・關於華胥·其二",
-    "res": "vo_topic_01_2",
+    "res": "char_Yuming_vo_topic_01_2",
     "text": "我平素繁忙，所以眼見多有偏狹。你若是真的好奇，與其假他人言語，不如親自踏足那裡，如何？"
   },
   {
     "id": 10190,
     "charId": 4201,
     "name": "閒談・關於職責·其一",
-    "res": "vo_topic_02_1",
+    "res": "char_Yuming_vo_topic_02_1",
     "text": "《大風九章》是華胥的律法，誰都不能違抗。但倘若真要有人倒反天命，那自然要有人去收拾亂局。"
   },
   {
     "id": 10191,
     "charId": 4201,
     "name": "閒談・關於職責·其二",
-    "res": "vo_topic_02_2",
+    "res": "char_Yuming_vo_topic_02_2",
     "text": "……也許吧，我不常與人們閒談，畢竟但凡需要我出手的地方，總有傷逝。大部華胥之民，是並不樂見我的。"
   },
   {
     "id": 10192,
     "charId": 4201,
     "name": "閒談・關於心情·其一",
-    "res": "vo_topic_03_1",
+    "res": "char_Yuming_vo_topic_03_1",
     "text": "無事可樂，自然如此。"
   },
   {
     "id": 10193,
     "charId": 4201,
     "name": "閒談・關於心情·其二",
-    "res": "vo_topic_03_2",
+    "res": "char_Yuming_vo_topic_03_2",
     "text": "謝了，但是說與你聽，也不過是徒然讓這世上又多了一個煩惱之人，何必。"
   },
   {
     "id": 10194,
     "charId": 4201,
     "name": "閒談・關於夜晚·其一",
-    "res": "vo_topic_04_1",
+    "res": "char_Yuming_vo_topic_04_1",
     "text": "是啊，月亮很好，很好。無論前一天發生過什麼，杯盤狼籍還是血濺五步，月光都能洗淨一切。不管過去多久，天邊的一角總是會為你留下一彎月亮。"
   },
   {
     "id": 10195,
     "charId": 4201,
     "name": "閒談・關於夜晚·其二",
-    "res": "vo_topic_04_2",
+    "res": "char_Yuming_vo_topic_04_2",
     "text": "不，我是與過去訣別之人，沒有過去，只是今天多喝了半杯酒而已。"
   },
   {
     "id": 10196,
     "charId": 4201,
     "name": "獨白",
-    "res": "vo_idle",
+    "res": "char_Yuming_vo_idle",
     "text": "無事，便是好事。"
   },
   {
     "id": 10197,
     "charId": 4201,
     "name": "閒談・他人偶遇 其一",
-    "res": "vo_companio_01",
+    "res": "char_Yuming_vo_companio_01",
     "text": "雖然不知道你告別了怎樣的過去，但我們氣息相似，保持距離吧：我並不喜歡同類。"
   },
   {
     "id": 10198,
     "charId": 4201,
     "name": "閒談・他人偶遇 其二",
-    "res": "vo_companio_02",
+    "res": "char_Yuming_vo_companio_02",
     "text": "我早已不是你的故知。世人萍水相逢本就如風過耳，放下吧。"
   },
   {
     "id": 10199,
     "charId": 4201,
     "name": "閒談・他人偶遇 其三",
-    "res": "vo_companio_03",
+    "res": "char_Yuming_vo_companio_03",
     "text": "我羡慕你的意志與同樣堅固的法條，不知道你可有過什麼時刻，曾自我懷疑過。"
   },
   {
     "id": 10200,
     "charId": 4201,
     "name": "生日祝福",
-    "res": "vo_birthday",
+    "res": "char_Yuming_vo_birthday",
     "text": "生辰？我從未重視過這種事情——既然我已經選擇守護大風九章，那麼就是選擇將死生置於度外。\n……不過，你聽到祝福，是會笑的吧：生辰快樂。"
   },
   {
     "id": 10201,
     "charId": 4201,
     "name": "準備就緒",
-    "res": "vo_appear",
+    "res": "char_Yuming_vo_appear",
     "text": "願為驅馳。"
   },
   {
     "id": 10202,
     "charId": 4201,
     "name": "精進",
-    "res": "vo_lvup",
+    "res": "char_Yuming_vo_lvup",
     "text": "春秋不變，紛爭不止。"
   },
   {
     "id": 10203,
     "charId": 4201,
     "name": "戰鬥開始",
-    "res": "vo_battlestart",
+    "res": "char_Yuming_vo_battlestart",
     "text": "會臟手的事，交給我這樣的人就好。"
   },
   {
     "id": 10204,
     "charId": 4201,
     "name": "空暇",
-    "res": "vo_battleidle",
+    "res": "char_Yuming_vo_battleidle",
     "text": "莫要猶豫。"
   },
   {
     "id": 10205,
     "charId": 4201,
     "name": "受傷·其一",
-    "res": "vo_be_hit_heavy_r01",
+    "res": "char_Yuming_vo_be_hit_heavy_r01",
     "text": "不過如此。"
   },
   {
     "id": 10206,
     "charId": 4201,
     "name": "釋放技能·其一",
-    "res": "vo_skill01_r01",
+    "res": "char_Yuming_vo_skill01_r01",
     "text": "玉山傾倒。"
   },
   {
     "id": 10207,
     "charId": 4201,
     "name": "釋放技能·其二",
-    "res": "vo_skill01_r02",
+    "res": "char_Yuming_vo_skill01_r02",
     "text": "星垂平野。"
   },
   {
     "id": 10208,
     "charId": 4201,
     "name": "釋放終結技·其一",
-    "res": "vo_skill02_r01",
+    "res": "char_Yuming_vo_skill02_r01",
     "text": "罪業伏誅！"
   },
   {
     "id": 10209,
     "charId": 4201,
     "name": "釋放終結技·其二",
-    "res": "vo_skill02_r02",
+    "res": "char_Yuming_vo_skill02_r02",
     "text": "玄蛟，與我破陣。"
   },
   {
     "id": 10210,
     "charId": 4201,
     "name": "釋放終結技·其三",
-    "res": "vo_skill02_r03",
+    "res": "char_Yuming_vo_skill02_r03",
     "text": "且托身白刃。"
   },
   {
     "id": 10211,
     "charId": 4201,
     "name": "無法行動·其一",
-    "res": "vo_die_r01",
+    "res": "char_Yuming_vo_die_r01",
     "text": "此等……醜態……"
   },
   {
     "id": 10212,
     "charId": 4201,
     "name": "無法行動·其二",
-    "res": "vo_die_r02",
+    "res": "char_Yuming_vo_die_r02",
     "text": "這束縛……能夠掙脫嗎……"
   },
   {
     "id": 10213,
     "charId": 4201,
     "name": "復甦",
-    "res": "vo_revive",
+    "res": "char_Yuming_vo_revive",
     "text": "縱是逃向幽冥，這枷鎖還是會追上來嗎？"
   },
   {
     "id": 10214,
     "charId": 4201,
     "name": "勝利",
-    "res": "vo_victory",
+    "res": "char_Yuming_vo_victory",
     "text": "切勿輕敵。"
   },
   {
     "id": 10215,
     "charId": 4201,
     "name": "敗退",
-    "res": "vo_fail",
+    "res": "char_Yuming_vo_fail",
     "text": "……又平添一道新的恥辱。"
   },
   {
     "id": 10216,
     "charId": 5301,
     "name": "角色形象·初見",
-    "res": "vo_gain",
+    "res": "char_Saiqi01_vo_gain",
     "text": "你看！那些和星星一樣亮的就是螢火蟲嗎？你聽，那些和山雀一樣聒噪的就是蟬鳴嗎？啊，小鹿和小兔子讓我給舞會伴奏，可我不會拉琴……可以來教教我嗎？"
   },
   {
     "id": 10217,
     "charId": 5301,
     "name": "角色形象·準備就緒",
-    "res": "vo_appear",
+    "res": "char_Saiqi01_vo_appear",
     "text": "這隻蝴蝶邀請我們參加舞會呢，它說，在盛夏開滿三色堇的森林……"
   },
   {
     "id": 10218,
     "charId": 5301,
     "name": "角色形象·戰鬥開始",
-    "res": "vo_battlestart",
+    "res": "char_Saiqi01_vo_battlestart",
     "text": "走吧，去向我不曾踏足的天地。"
   },
   {
     "id": 10219,
     "charId": 5301,
     "name": "角色形象·釋放終結技",
-    "res": "vo_skill02_r01",
+    "res": "char_Saiqi01_vo_skill02_r01",
     "text": "為絢爛的生命起舞吧。"
   },
   {
     "id": 10220,
     "charId": 5301,
     "name": "初見",
-    "res": "vo_gain",
+    "res": "char_Saiqi_vo_gain",
     "text": "……是你呀，從遠方漂泊至此的朋友。你在呼喚我嗎？"
   },
   {
     "id": 10221,
     "charId": 5301,
     "name": "致候",
-    "res": "vo_welcome",
+    "res": "char_Saiqi_vo_welcome",
     "text": "太好了，今天我還在這兒。而且，你也在這兒……"
   },
   {
     "id": 10222,
     "charId": 5301,
     "name": "閒談・關於衣服·其一",
-    "res": "vo_topic_01_1",
+    "res": "char_Saiqi_vo_topic_01_1",
     "text": "謝謝，著涼的話不用擔心啦，卡戎之民是不怎麼怕冷的，正好也不用再去買又厚又貴的大衣。"
   },
   {
     "id": 10223,
     "charId": 5301,
     "name": "閒談・關於衣服·其二",
-    "res": "vo_topic_01_2",
+    "res": "char_Saiqi_vo_topic_01_2",
     "text": "現在的衣服是媽媽幫我裁的，不過顏色是我自己選的，嫩綠色，這些蝴蝶形狀的裝飾也是我自己挑的，如果在暖和的南方的話，這一身應該就不奇怪了。"
   },
   {
     "id": 10224,
     "charId": 5301,
     "name": "閒談・關於衣服·其三",
-    "res": "vo_topic_01_3",
+    "res": "char_Saiqi_vo_topic_01_3",
     "text": "真的嗎？太好了。其實我只見過冰湖城附近的蝴蝶，都是藍色的。要是能去其他地方，看一看不同顏色的蝴蝶就好了。"
   },
   {
     "id": 10225,
     "charId": 5301,
     "name": "閒談・關於帝國與卡戎·其一",
-    "res": "vo_topic_02_1",
+    "res": "char_Saiqi_vo_topic_02_1",
     "text": "是的，據說幾百年來一直都是這個樣子。人們看到我們總像看到老鼠一樣，我自己也被人追著罵過很難聽的話。"
   },
   {
     "id": 10226,
     "charId": 5301,
     "name": "閒談・關於帝國與卡戎·其二",
-    "res": "vo_topic_02_2",
+    "res": "char_Saiqi_vo_topic_02_2",
     "text": "或許吧。「魔法是最邪惡的東西」，大家總是這麼說。歷史書上也寫著，卡戎之民的先祖在一千多年前，曾經憑藉魔法支配索拉之民，做出了很多惡事。"
   },
   {
     "id": 10227,
     "charId": 5301,
     "name": "閒談・關於帝國與卡戎·其三",
-    "res": "vo_topic_02_3",
+    "res": "char_Saiqi_vo_topic_02_3",
     "text": "說實話我有點難想像……因為我看到的卡戎們都很害怕索拉之民，不太敢和他們說話，在他們面前總是小心翼翼的，更不敢使用魔法。"
   },
   {
     "id": 10228,
     "charId": 5301,
     "name": "閒談・關於帝國與卡戎·其四",
-    "res": "vo_topic_02_4",
+    "res": "char_Saiqi_vo_topic_02_4",
     "text": "而且其實大多數卡戎魔法都很尋常，也就是能用來點點壁爐，冰凍一下食物之類的。"
   },
   {
     "id": 10229,
     "charId": 5301,
     "name": "閒談・關於帝國與卡戎·其五",
-    "res": "vo_topic_02_5",
+    "res": "char_Saiqi_vo_topic_02_5",
     "text": "不，一點也不。為什麼卡戎之民和索拉之民之間，一定要一個支配另一個，一個畏懼另一個呢？"
   },
   {
     "id": 10230,
     "charId": 5301,
     "name": "閒談・關於帝國與卡戎·其六",
-    "res": "vo_topic_02_6",
+    "res": "char_Saiqi_vo_topic_02_6",
     "text": "我希望的只是……到了春天，所有人都能一起肩並著肩，一起去原野上看各種各樣的花。只要這樣就夠了。"
   },
   {
     "id": 10231,
     "charId": 5301,
     "name": "閒談・關於園藝·其一",
-    "res": "vo_topic_03_1",
+    "res": "char_Saiqi_vo_topic_03_1",
     "text": "啊，大概是因為我在試著培育新的花朵。修普諾斯之家前面的庭院只有幾棵樹，總覺得有點兒光禿禿的。所以，我想在那裡種滿白色的花……"
   },
   {
     "id": 10232,
     "charId": 5301,
     "name": "閒談・關於園藝·其二",
-    "res": "vo_topic_03_2",
+    "res": "char_Saiqi_vo_topic_03_2",
     "text": "在這裡也種一點吧，鈴蘭，銀蓮，仙女木……哪種更合適呢？"
   },
   {
     "id": 10233,
     "charId": 5301,
     "name": "閒談・關於園藝·其三",
-    "res": "vo_topic_03_3",
+    "res": "char_Saiqi_vo_topic_03_3",
     "text": "你說得對，應該讓大家一起決定……我會去問問看的！啊，對了，這些花裡有你喜歡的品種嗎？等花開了，我摘一些送給你吧。"
   },
   {
     "id": 10234,
     "charId": 5301,
     "name": "閒談・關於旅行·其一",
-    "res": "vo_topic_04_1",
+    "res": "char_Saiqi_vo_topic_04_1",
     "text": "嗯，我從出生起就一直住在這裡，雖然每天都能聽到列車的聲音，但從來沒去過其他地方。如果有機會的話，真想去外面看一看。"
   },
   {
     "id": 10235,
     "charId": 5301,
     "name": "閒談・關於旅行·其二",
-    "res": "vo_topic_04_2",
+    "res": "char_Saiqi_vo_topic_04_2",
     "text": "唔，我想想，帝都總是要去的，恩里克叔叔說過紅溪城的落日也很好看。對了，還想去你說的淨界島，在南方的海島上，聞一聞海風是不是真的是鹹的！"
   },
   {
     "id": 10236,
     "charId": 5301,
     "name": "閒談・關於心聲·其一",
-    "res": "vo_topic_05_1",
+    "res": "char_Saiqi_vo_topic_05_1",
     "text": "沒什麼，我只是想……再多看幾眼，這樣我就可以把你們的樣子記得更清楚了。"
   },
   {
     "id": 10237,
     "charId": 5301,
     "name": "閒談・關於心聲·其二",
-    "res": "vo_topic_05_2",
+    "res": "char_Saiqi_vo_topic_05_2",
     "text": "如果可以，你可以也多看我幾眼嗎？我也想讓你記住我的樣子……我現在的樣子。"
   },
   {
     "id": 10238,
     "charId": 5301,
     "name": "獨白",
-    "res": "vo_idle",
+    "res": "char_Saiqi_vo_idle",
     "text": "什麼都不做，只是就這樣看著大家，就感覺過得好快好快……真希望時間能走慢一點兒呀。"
   },
   {
     "id": 10239,
     "charId": 5301,
     "name": "閒談・他人偶遇 其一",
-    "res": "vo_companio_01",
+    "res": "char_Saiqi_vo_companio_01",
     "text": "我聽說奧特賽德先生為菲娜的生日精心準備了很久。雖然嘴上不饒人，但你其實是個很體貼的人吧？下一次菲娜生日，我可以和你們一起為她準備驚喜嗎？"
   },
   {
     "id": 10241,
     "charId": 5301,
     "name": "閒談・他人偶遇 其三",
-    "res": "vo_companio_03",
+    "res": "char_Saiqi_vo_companio_03",
     "text": "你要講艾利西安的故事給我聽嗎？太感謝了！唔……作為回禮，我應該送你什麼花好呢……\n咦，你最喜歡好吃的花？"
   },
   {
     "id": 10242,
     "charId": 5301,
     "name": "生日祝福",
-    "res": "vo_birthday",
+    "res": "char_Saiqi_vo_birthday",
     "text": "生日快樂！我為你準備了生日禮物，希望你喜歡……沒錯，是雪片蓮，它的花語是「新生」。自從相遇之後，我和你一起經歷了許多事情，也見證了你的蛻變與成長，「新生」，我認為再適合你不過了！"
   },
   {
     "id": 10243,
     "charId": 5301,
     "name": "準備就緒",
-    "res": "vo_appear",
+    "res": "char_Saiqi_vo_appear",
     "text": "我知道的，你會帶我一起去。"
   },
   {
     "id": 10244,
     "charId": 5301,
     "name": "精進",
-    "res": "vo_lvup",
+    "res": "char_Saiqi_vo_lvup",
     "text": "現在的我，可以守護好大家。"
   },
   {
     "id": 10245,
     "charId": 5301,
     "name": "戰鬥開始",
-    "res": "vo_battlestart",
+    "res": "char_Saiqi_vo_battlestart",
     "text": "好期待……！能和你並肩戰鬥……"
   },
   {
     "id": 10246,
     "charId": 5301,
     "name": "空暇",
-    "res": "vo_battleidle",
+    "res": "char_Saiqi_vo_battleidle",
     "text": "希望這場旅途不要迎來終點。"
   },
   {
     "id": 10247,
     "charId": 5301,
     "name": "受傷·其一",
-    "res": "vo_be_hit_heavy_r01",
+    "res": "char_Saiqi_vo_be_hit_heavy_r01",
     "text": "我不會退縮。"
   },
   {
     "id": 10248,
     "charId": 5301,
     "name": "受傷·其二",
-    "res": "vo_be_hit_heavy_r02",
+    "res": "char_Saiqi_vo_be_hit_heavy_r02",
     "text": "還能戰鬥！"
   },
   {
     "id": 10249,
     "charId": 5301,
     "name": "釋放技能·其一",
-    "res": "vo_skill01_r01",
+    "res": "char_Saiqi_vo_skill01_r01",
     "text": "對不起。"
   },
   {
     "id": 10250,
     "charId": 5301,
     "name": "釋放技能·其二",
-    "res": "vo_skill01_r02",
+    "res": "char_Saiqi_vo_skill01_r02",
     "text": "飛散。"
   },
   {
     "id": 10251,
     "charId": 5301,
     "name": "釋放終結技·其一",
-    "res": "vo_skill02_r01",
+    "res": "char_Saiqi_vo_skill02_r01",
     "text": "燦若繁花。"
   },
   {
     "id": 10252,
     "charId": 5301,
     "name": "釋放終結技·其二",
-    "res": "vo_skill02_r02",
+    "res": "char_Saiqi_vo_skill02_r02",
     "text": "破繭成蝶。"
   },
   {
     "id": 10253,
     "charId": 5301,
     "name": "釋放終結技·其三",
-    "res": "vo_skill02_r03",
+    "res": "char_Saiqi_vo_skill02_r03",
     "text": "腐爛——或者朝著光的方向燃燒。"
   },
   {
     "id": 10254,
     "charId": 5301,
     "name": "無法行動·其一",
-    "res": "vo_die_r01",
+    "res": "char_Saiqi_vo_die_r01",
     "text": "我啊，曾經光輝閃耀過……已經足夠了。"
   },
   {
     "id": 10255,
     "charId": 5301,
     "name": "無法行動·其二",
-    "res": "vo_die_r02",
+    "res": "char_Saiqi_vo_die_r02",
     "text": "旅途已經到了終點啊……"
   },
   {
     "id": 10256,
     "charId": 5301,
     "name": "復甦",
-    "res": "vo_revive",
+    "res": "char_Saiqi_vo_revive",
     "text": "我還……活著……？"
   },
   {
     "id": 10257,
     "charId": 5301,
     "name": "勝利",
-    "res": "vo_victory",
+    "res": "char_Saiqi_vo_victory",
     "text": "這場旅行，我會一直記得。"
   },
   {
     "id": 10258,
     "charId": 5301,
     "name": "敗退",
-    "res": "vo_fail",
+    "res": "char_Saiqi_vo_fail",
     "text": "不要難過。這朵花兒送你，下次一定有好事發生。"
   },
   {
     "id": 10259,
     "charId": 2401,
     "name": "角色形象·初見",
-    "res": "vo_gain",
+    "res": "char_Baiheng01_vo_gain",
     "text": "我幼時倒也曾同家人一起去海邊戲水，那時是姐姐連拖帶拽地把我拉出了房門……若是她能看見今日我邀你同遊，大約會十分欣慰吧。"
   },
   {
     "id": 10260,
     "charId": 2401,
     "name": "角色形象·準備就緒",
-    "res": "vo_appear",
+    "res": "char_Baiheng01_vo_appear",
     "text": "我備了些益氣的湯飲，遊水前記得喝下，免得受涼。"
   },
   {
     "id": 10261,
     "charId": 2401,
     "name": "角色形象·戰鬥開始",
-    "res": "vo_battlestart",
+    "res": "char_Baiheng01_vo_battlestart",
     "text": "難得的假日，休要被這些俗物攪了興致。"
   },
   {
     "id": 10262,
     "charId": 2401,
     "name": "角色形象·釋放終結技",
-    "res": "vo_skill02_r01",
+    "res": "char_Baiheng01_vo_skill02_r01",
     "text": "素湍流轉，滌盡汙濁。"
   },
   {
     "id": 10263,
     "charId": 2401,
     "name": "初見·其一",
-    "res": "vo_gain_1",
+    "res": "char_Baiheng_vo_gain_1",
     "text": "旅途漫漫，前程未定……你我既萍水相逢，便暫且相伴而行吧。"
   },
   {
     "id": 10264,
     "charId": 2401,
     "name": "致候",
-    "res": "vo_welcome",
+    "res": "char_Baiheng_vo_welcome",
     "text": "居移氣，養移體，不妨趁天氣晴朗出去走走，想必對身體會有所裨益。"
   },
   {
     "id": 10265,
     "charId": 2401,
     "name": "閒談・關於故人·其一",
-    "res": "vo_topic_01_1",
+    "res": "char_Baiheng_vo_topic_01_1",
     "text": "確然。只是書中的內容晦澀難懂，藥石之間的差異，在我看來也難以辨別。或許，我在此道上確實沒什麼天賦。"
   },
   {
     "id": 10266,
     "charId": 2401,
     "name": "閒談・關於故人·其二",
-    "res": "vo_topic_01_2",
+    "res": "char_Baiheng_vo_topic_01_2",
     "text": "在我的時代……藥物並不是醫治疾病的主流方式，人們通常依靠一種名為「祝由術」的奇跡驅退病魔。"
   },
   {
     "id": 10267,
     "charId": 2401,
     "name": "閒談・關於故人·其三",
-    "res": "vo_topic_01_3",
+    "res": "char_Baiheng_vo_topic_01_3",
     "text": "然而，這種治療方式雖然會帶來「治愈」與「平安」，但也代表著「交換」與「犧牲」。從沒有壽終正寢的醫者，透支生命直至亡故才是我們唯一的選擇。"
   },
   {
     "id": 10268,
     "charId": 2401,
     "name": "閒談・關於故人·其四",
-    "res": "vo_topic_01_4",
+    "res": "char_Baiheng_vo_topic_01_4",
     "text": "枯榮閣雖然已是歲月的一件遺物，但在治病救人的道路上，永遠不缺後繼者。即便使命沉重，總有人會肩負起這份責任，矢志不渝地走下去。"
   },
   {
     "id": 10269,
     "charId": 2401,
     "name": "閒談・關於海伯利亞·其一",
-    "res": "vo_topic_02_1",
+    "res": "char_Baiheng_vo_topic_02_1",
     "text": "人死如燈滅，一切痕跡湮沒，一切聲息斷絕。那種與世隔絕的寂靜會吞沒一切希望與可能，如果可以，我不希望任何一個病人落入那種境地。"
   },
   {
     "id": 10270,
     "charId": 2401,
     "name": "閒談・關於海伯利亞·其二",
-    "res": "vo_topic_02_2",
+    "res": "char_Baiheng_vo_topic_02_2",
     "text": "的確如你所說，我……曾經從一場重病中逃出生天。假使讓我再次面對這樣的考驗，我也不知道自己是否還會堅持當初的選擇。"
   },
   {
     "id": 10271,
     "charId": 2401,
     "name": "閒談・關於故鄉·其一",
-    "res": "vo_topic_03_1",
+    "res": "char_Baiheng_vo_topic_03_1",
     "text": "一個治病救人的地方。"
   },
   {
     "id": 10272,
     "charId": 2401,
     "name": "閒談・關於故鄉·其二",
-    "res": "vo_topic_03_2",
+    "res": "char_Baiheng_vo_topic_03_2",
     "text": "枯榮閣的使命，僅此而已。若說其他……每位入枯榮閣修行的醫師，都要手植杏樹一株，只是歲月流逝，風雨摧折，留存至今的已不足半數。"
   },
   {
     "id": 10273,
     "charId": 2401,
     "name": "閒談・關於故鄉·其三",
-    "res": "vo_topic_03_3",
+    "res": "char_Baiheng_vo_topic_03_3",
     "text": "從長眠中蘇醒後，我也曾去尋找回憶那株屬於我的杏樹，但天不垂憐，花樹已成枯木，今春雖暖，也未曾發出新芽來。"
   },
   {
     "id": 10274,
     "charId": 2401,
     "name": "閒談・關於故鄉·其四",
-    "res": "vo_topic_03_4",
+    "res": "char_Baiheng_vo_topic_03_4",
     "text": "歎隙中駒，石中火，夢中身，幾時歸去，空作閑人。過去的已無法挽留，就算想要彌補，也再無可能了。"
   },
   {
     "id": 10275,
     "charId": 2401,
     "name": "閒談・關於夢想·其一",
-    "res": "vo_topic_04_1",
+    "res": "char_Baiheng_vo_topic_04_1",
     "text": "願世間再無「無藥可醫」的頑疾。"
   },
   {
     "id": 10276,
     "charId": 2401,
     "name": "閒談・關於夢想·其二",
-    "res": "vo_topic_04_2",
+    "res": "char_Baiheng_vo_topic_04_2",
     "text": "聽起來與空想無異吧？但即使沒有術法帶來的奇跡，醫師所要做的事也從未改變。這樣的話由我這個醫書都未讀通的人說出口，實在貽笑大方。"
   },
   {
     "id": 10277,
     "charId": 2401,
     "name": "閒談・關於夢想·其三",
-    "res": "vo_topic_04_3",
+    "res": "char_Baiheng_vo_topic_04_3",
     "text": "但……我會繼續在這條路上走下去，不止是為了黎民百姓，為了枯榮閣，也是為了我自己。"
   },
   {
     "id": 10278,
     "charId": 2401,
     "name": "獨白",
-    "res": "vo_idle",
+    "res": "char_Baiheng_vo_idle",
     "text": "嗯……晨間打掃後通風，午後四處噴灑烈酒，薄暮時再點幾支香驅散蚊蟲，只有這樣才能保持室內潔淨。"
   },
   {
     "id": 10279,
     "charId": 2401,
     "name": "閒談・他人偶遇 其一",
-    "res": "vo_companio_01",
+    "res": "char_Baiheng_vo_companio_01",
     "text": "蘭迪先生，依我看來，懶惰散漫也是身患疾病的一種表現，如今雖一時無恙，但畢竟也是個隱患。不如我來陪你過上兩招，活動活動筋骨，可好？"
   },
   {
     "id": 10280,
     "charId": 2401,
     "name": "閒談・他人偶遇 其二",
-    "res": "vo_companio_02",
+    "res": "char_Baiheng_vo_companio_02",
     "text": "醫者療疾，卻終究無法逆天改命。我可以為您開一貼緩解心熱的藥方，但病因卻無法根除，但願您能順天應時，自渡為好……"
   },
   {
     "id": 10281,
     "charId": 2401,
     "name": "閒談・他人偶遇 其三",
-    "res": "vo_companio_03",
+    "res": "char_Baiheng_vo_companio_03",
     "text": "有時會聽到另一個人在說話？只有你能聽見嗎？近日睡眠如何？是否心有鬱結？最怕心病難醫，即使用上祝由術也無能為力，但身為醫者，我必定竭盡全力。"
   },
   {
     "id": 10282,
     "charId": 2401,
     "name": "生日祝福",
-    "res": "vo_birthday",
+    "res": "char_Baiheng_vo_birthday",
     "text": "知道今日是你的生辰，為你準備了些出門在外用得到的藥物略作薄禮。若是碰見傷風感冒，磕磕碰碰，就可派上用場了。不過……願你歲歲無事，時時安康，永遠用不到這些才好。"
   },
   {
     "id": 10283,
     "charId": 2401,
     "name": "準備就緒",
-    "res": "vo_appear",
+    "res": "char_Baiheng_vo_appear",
     "text": "刀劍無眼，容我多備些傷藥。"
   },
   {
     "id": 10284,
     "charId": 2401,
     "name": "精進",
-    "res": "vo_lvup",
+    "res": "char_Baiheng_vo_lvup",
     "text": "健康作息，定時鍛煉，也是醫者應盡的義務。"
   },
   {
     "id": 10285,
     "charId": 2401,
     "name": "戰鬥開始",
-    "res": "vo_battlestart",
+    "res": "char_Baiheng_vo_battlestart",
     "text": "我視死亡如寇讎。"
   },
   {
     "id": 10286,
     "charId": 2401,
     "name": "空暇",
-    "res": "vo_battleidle",
+    "res": "char_Baiheng_vo_battleidle",
     "text": "遠處還有人在呼救，我不能停下！"
   },
   {
     "id": 10287,
     "charId": 2401,
     "name": "受傷·其一",
-    "res": "vo_be_hit_heavy_r01",
+    "res": "char_Baiheng_vo_be_hit_heavy_r01",
     "text": "不潔之物……！"
   },
   {
     "id": 10288,
     "charId": 2401,
     "name": "釋放技能·其一",
-    "res": "vo_skill01_r01",
+    "res": "char_Baiheng_vo_skill01_r01",
     "text": "祛風！"
   },
   {
     "id": 10289,
     "charId": 2401,
     "name": "釋放技能·其二",
-    "res": "vo_skill01_r02",
+    "res": "char_Baiheng_vo_skill01_r02",
     "text": "除寒！"
   },
   {
     "id": 10290,
     "charId": 2401,
     "name": "釋放終結技·其一",
-    "res": "vo_skill02_r01",
+    "res": "char_Baiheng_vo_skill02_r01",
     "text": "潤物無聲！"
   },
   {
     "id": 10291,
     "charId": 2401,
     "name": "釋放終結技·其二",
-    "res": "vo_skill02_r02",
+    "res": "char_Baiheng_vo_skill02_r02",
     "text": "如月之恒！"
   },
   {
     "id": 10292,
     "charId": 2401,
     "name": "釋放終結技·其三",
-    "res": "vo_skill02_r03",
+    "res": "char_Baiheng_vo_skill02_r03",
     "text": "藥香盈袖，澤被蒼生。"
   },
   {
     "id": 10293,
     "charId": 2401,
     "name": "無法行動·其一",
-    "res": "vo_die_r01",
+    "res": "char_Baiheng_vo_die_r01",
     "text": "你要保護好……其他人……"
   },
   {
     "id": 10294,
     "charId": 2401,
     "name": "無法行動·其二",
-    "res": "vo_die_r02",
+    "res": "char_Baiheng_vo_die_r02",
     "text": "如果我的醫術……再精進些……"
   },
   {
     "id": 10295,
     "charId": 2401,
     "name": "復甦",
-    "res": "vo_revive",
+    "res": "char_Baiheng_vo_revive",
     "text": "花有重開時。"
   },
   {
     "id": 10296,
     "charId": 2401,
     "name": "勝利",
-    "res": "vo_victory",
+    "res": "char_Baiheng_vo_victory",
     "text": "回去又得換一身乾淨的衣衫了。"
   },
   {
     "id": 10297,
     "charId": 2401,
     "name": "敗退",
-    "res": "vo_fail",
+    "res": "char_Baiheng_vo_fail",
     "text": "不要慌，先喝了這劑止痛藥。"
   },
   {
     "id": 10298,
     "charId": 5101,
     "name": "角色形象·初見",
-    "res": "vo_gain",
+    "res": "char_Songlu01_vo_gain",
     "text": "哇，上面有閃亮亮的星星，小小的向日葵，像剛烤好的麵包一樣鬆鬆軟軟……這麼可愛的裙子，我還是第一次穿呢！哎？榛子說，她已經迫不及待要去跳舞了！"
   },
   {
     "id": 10299,
     "charId": 5101,
     "name": "角色形象·準備就緒",
-    "res": "vo_appear",
+    "res": "char_Songlu01_vo_appear",
     "text": "左腳點一下，右腳點一下，然後轉個圈……嗚啊！差點踩到腳了！榛子再教我一次！"
   },
   {
     "id": 10300,
     "charId": 5101,
     "name": "角色形象·戰鬥開始",
-    "res": "vo_battlestart",
+    "res": "char_Songlu01_vo_battlestart",
     "text": "快點快點！把手伸給我，一起轉圈圈！"
   },
   {
     "id": 10301,
     "charId": 5101,
     "name": "角色形象·釋放終結技",
-    "res": "vo_skill02_r01",
+    "res": "char_Songlu01_vo_skill02_r01",
     "text": "讓你見識一下榛子的超超超華麗舞步！"
   },
   {
     "id": 10302,
     "charId": 5101,
     "name": "初見",
-    "res": "vo_gain",
+    "res": "char_Songlu_vo_gain",
     "text": "你好你好，我是糧秣專員松露，她們是我的可靠可愛可信賴的部下榛子一家。好，自我介紹結束！看你眼睛瞪這麼大，是不是沒吃飽呀！"
   },
   {
     "id": 10303,
     "charId": 5101,
     "name": "致候",
-    "res": "vo_welcome",
+    "res": "char_Songlu_vo_welcome",
     "text": "太陽熱氣騰騰，雲朵鬆軟蓬蓬，早起的鳥兒吃個飽飽。你的肚子有沒有像鳥兒一樣咕咕叫呢？"
   },
   {
     "id": 10304,
     "charId": 5101,
     "name": "閒談・關於糧秣專員·其一",
-    "res": "vo_topic_01_1",
+    "res": "char_Songlu_vo_topic_01_1",
     "text": "咦？你不知道嗎？糧秣專員就是負責填飽大家肚子的人哦，每天都要和各種食物打交道。"
   },
   {
     "id": 10305,
     "charId": 5101,
     "name": "閒談・關於糧秣專員·其二",
-    "res": "vo_topic_01_2",
+    "res": "char_Songlu_vo_topic_01_2",
     "text": "比如我的話，就會去野外收集各種各樣的食物，讓榛子馱回城裡，然後再去委託麵包店的鬍子叔叔做成吃的，分給大家。"
   },
   {
     "id": 10306,
     "charId": 5101,
     "name": "閒談・關於糧秣專員·其三",
-    "res": "vo_topic_01_3",
+    "res": "char_Songlu_vo_topic_01_3",
     "text": "順帶一說，和那位鬍子叔叔討價還價，也是我的工作！哼哼。"
   },
   {
     "id": 10307,
     "charId": 5101,
     "name": "閒談・關於糧秣專員·其四",
-    "res": "vo_topic_01_4",
+    "res": "char_Songlu_vo_topic_01_4",
     "text": "那當然不是啦，其他的糧秣官好像都是一些腦子很好的傢伙，寫什麼手續呀文書呀申請呀，然後就會有火車頭拖著小山一樣的吃的過來。"
   },
   {
     "id": 10308,
     "charId": 5101,
     "name": "閒談・關於糧秣專員·其五",
-    "res": "vo_topic_01_5",
+    "res": "char_Songlu_vo_topic_01_5",
     "text": "不過，我住的鎮子上人不是很多，有我和榛子就夠啦！否則可能我就也得去學怎麼寫那些什麼申請書之類的，唉，誰懂那些啊。"
   },
   {
     "id": 10309,
     "charId": 5101,
     "name": "閒談・關於戰鬥·其一",
-    "res": "vo_topic_02_1",
+    "res": "char_Songlu_vo_topic_02_1",
     "text": "誒？會吧……沒太想過，不過反正榛子撞飛的一定都是那些喜歡哇哇亂叫，打來打去的壞傢伙！是他們活該！"
   },
   {
     "id": 10310,
     "charId": 5101,
     "name": "閒談・關於戰鬥·其二",
-    "res": "vo_topic_02_2",
+    "res": "char_Songlu_vo_topic_02_2",
     "text": "這些傢伙，打打殺殺後又會叫餓連天。有揮武器的勁頭不如多墾一會兒地啦，這樣才會有更多人吃飽。"
   },
   {
     "id": 10311,
     "charId": 5101,
     "name": "閒談・關於戰鬥·其三",
-    "res": "vo_topic_02_3",
+    "res": "char_Songlu_vo_topic_02_3",
     "text": "那是當然！戰鬥是饑餓之母，是壞傢伙！聽說一旦遇到戰爭，那麼大家都會餓肚子，非常討厭！希望我不要遇上就是了。"
   },
   {
     "id": 10312,
     "charId": 5101,
     "name": "閒談・關於戰鬥·其四",
-    "res": "vo_topic_02_4",
+    "res": "char_Songlu_vo_topic_02_4",
     "text": "沒錯，誰讓人餓肚子，誰就遲早會被榛子撞飛！"
   },
   {
     "id": 10313,
     "charId": 5101,
     "name": "閒談・關於榛子·其一",
-    "res": "vo_topic_03_1",
+    "res": "char_Songlu_vo_topic_03_1",
     "text": "是不少啦，不過其實不用特別為她準備吃的，她會自己找的。哪怕隔著幾條小溪，榛子也能聞到熟透漿果的味道，然後馱著我飛奔過去，可能幹啦。"
   },
   {
     "id": 10314,
     "charId": 5101,
     "name": "閒談・關於榛子·其二",
-    "res": "vo_topic_03_2",
+    "res": "char_Songlu_vo_topic_03_2",
     "text": "別擔心別擔心，榛子只會帶來食物，不會吃垮這裡的！所以，一定一定不要拿榛子開玩笑哦，她聽到的話會傷心的，我也會。"
   },
   {
     "id": 10315,
     "charId": 5101,
     "name": "閒談・關於衣服·其一",
-    "res": "vo_topic_04_1",
+    "res": "char_Songlu_vo_topic_04_1",
     "text": "謝謝誇獎，不過我要糾正一下，這其實是褲子。一開始倒的確是裙子，白色的，長長的，可好看啦。是裁縫店的婆婆幫我改成了褲子。"
   },
   {
     "id": 10316,
     "charId": 5101,
     "name": "閒談・關於衣服·其二",
-    "res": "vo_topic_04_2",
+    "res": "char_Songlu_vo_topic_04_2",
     "text": "因為穿著裙子到處跑太不方便啦，有一次我跑得快了，都被裙擺絆倒，手裡的麵包都撒了。"
   },
   {
     "id": 10317,
     "charId": 5101,
     "name": "閒談・關於衣服·其三",
-    "res": "vo_topic_04_3",
+    "res": "char_Songlu_vo_topic_04_3",
     "text": "所以，哎……要是哪天，沒有人挨餓了，我就拜託婆婆再把這條褲子改回去！"
   },
   {
     "id": 10318,
     "charId": 5101,
     "name": "閒談・關於貪吃·其一",
-    "res": "vo_topic_05_1",
+    "res": "char_Songlu_vo_topic_05_1",
     "text": "才不是發呆，是在冥想。不管怎麼說我都是傳頌會的一員，所以偶爾也會像這樣用力想事情的。"
   },
   {
     "id": 10319,
     "charId": 5101,
     "name": "閒談・關於貪吃·其二",
-    "res": "vo_topic_05_2",
+    "res": "char_Songlu_vo_topic_05_2",
     "text": "之前想過，不過修士們說，想這種事情是什麼瀆……神？所以我就不想這些了。"
   },
   {
     "id": 10320,
     "charId": 5101,
     "name": "閒談・關於貪吃·其三",
-    "res": "vo_topic_05_3",
+    "res": "char_Songlu_vo_topic_05_3",
     "text": "唉，修士們的話我總是聽得半懂不懂的，比如他們總是說貪吃是非常非常嚴重的罪過……可是好像越是大吃大喝的人，地位就越高哦。"
   },
   {
     "id": 10321,
     "charId": 5101,
     "name": "獨白",
-    "res": "vo_idle",
+    "res": "char_Songlu_vo_idle",
     "text": "休息一會兒吧，榛子，吃點小麥，吃點堅果。再來上幾朵花當零食，要是吃不完的話，我就先插在帽子上。"
   },
   {
     "id": 10322,
     "charId": 5101,
     "name": "閒談・他人偶遇 其一",
-    "res": "vo_companio_01",
+    "res": "char_Songlu_vo_companio_01",
     "text": "你在垃圾桶裡翻到了發了芽的土豆？不要扔不要扔，我們把它種起來，鬆鬆土、澆澆水，就會有好多好多土豆可以吃啦！"
   },
   {
     "id": 10323,
     "charId": 5101,
     "name": "閒談・他人偶遇 其二",
-    "res": "vo_companio_02",
+    "res": "char_Songlu_vo_companio_02",
     "text": "一直忙著幹活，不餓嗎？要不要加入傳頌會，我會餵飽你的！"
   },
   {
     "id": 10324,
     "charId": 5101,
     "name": "閒談・他人偶遇 其三",
-    "res": "vo_companio_03",
+    "res": "char_Songlu_vo_companio_03",
     "text": "你好你好，我想請教一下……據說祈禱可以讓人的靈魂感到滿足，我覺得吃飯也可以，那麼吃飯和祈禱哪個更管用呀？"
   },
   {
     "id": 10325,
     "charId": 5101,
     "name": "生日祝福",
-    "res": "vo_birthday",
+    "res": "char_Songlu_vo_birthday",
     "text": "生日快樂呀，我原本給你做了一塊滿是堅果、奶油、還有果醬的蛋糕。不過香味吸引了好多人好多人過來，大家眼巴巴看著，我也不好意思什麼都不做……所以……所以……\n不過沒有全部分光哦！還給你留了一塊，看，特意挑了塊果醬多、上面有北風莓的。\n來，嘗嘗味道，一定會比平時的軍糧好上許多哦。"
   },
   {
     "id": 10326,
     "charId": 5101,
     "name": "準備就緒",
-    "res": "vo_appear",
+    "res": "char_Songlu_vo_appear",
     "text": "榛子醒醒，該出門啦！"
   },
   {
     "id": 10327,
     "charId": 5101,
     "name": "精進",
-    "res": "vo_lvup",
+    "res": "char_Songlu_vo_lvup",
     "text": "吃飽才能變強，肚子扁扁不能上戰場！"
   },
   {
     "id": 10328,
     "charId": 5101,
     "name": "戰鬥開始",
-    "res": "vo_battlestart",
+    "res": "char_Songlu_vo_battlestart",
     "text": "榛子衝衝衝——"
   },
   {
     "id": 10329,
     "charId": 5101,
     "name": "空暇",
-    "res": "vo_battleidle",
+    "res": "char_Songlu_vo_battleidle",
     "text": "嚼嚼嚼……"
   },
   {
     "id": 10330,
     "charId": 5101,
     "name": "受傷·其一",
-    "res": "vo_be_hit_heavy_r01",
+    "res": "char_Songlu_vo_be_hit_heavy_r01",
     "text": "欺負人……"
   },
   {
     "id": 10331,
     "charId": 5101,
     "name": "釋放技能·其一",
-    "res": "vo_skill01_r01",
+    "res": "char_Songlu_vo_skill01_r01",
     "text": "撞飛你！"
   },
   {
     "id": 10332,
     "charId": 5101,
     "name": "釋放技能·其二",
-    "res": "vo_skill01_r02",
+    "res": "char_Songlu_vo_skill01_r02",
     "text": "會很痛的！"
   },
   {
     "id": 10333,
     "charId": 5101,
     "name": "釋放終結技·其一",
-    "res": "vo_skill02_r01",
+    "res": "char_Songlu_vo_skill02_r01",
     "text": "糧秣專員，帶來飽餐！"
   },
   {
     "id": 10334,
     "charId": 5101,
     "name": "釋放終結技·其二",
-    "res": "vo_skill02_r02",
+    "res": "char_Songlu_vo_skill02_r02",
     "text": "糧秣特別專員，趕走惡人！"
   },
   {
     "id": 10335,
     "charId": 5101,
     "name": "釋放終結技·其三",
-    "res": "vo_skill02_r03",
+    "res": "char_Songlu_vo_skill02_r03",
     "text": "交出口糧，否則壓扁！"
   },
   {
     "id": 10336,
     "charId": 5101,
     "name": "無法行動·其一",
-    "res": "vo_die_r01",
+    "res": "char_Songlu_vo_die_r01",
     "text": "我好像看到了……比漿果還要大的麥粒……"
   },
   {
     "id": 10337,
     "charId": 5101,
     "name": "無法行動·其二",
-    "res": "vo_die_r02",
+    "res": "char_Songlu_vo_die_r02",
     "text": "明明是吃飽了再出門的呀……"
   },
   {
     "id": 10338,
     "charId": 5101,
     "name": "復甦",
-    "res": "vo_revive",
+    "res": "char_Songlu_vo_revive",
     "text": "應急食品味道好糟糕……算了，吃飽就行。"
   },
   {
     "id": 10339,
     "charId": 5101,
     "name": "勝利",
-    "res": "vo_victory",
+    "res": "char_Songlu_vo_victory",
     "text": "辦場慶功宴吧！……唔，算啦算啦，怪浪費食物的。"
   },
   {
     "id": 10340,
     "charId": 5101,
     "name": "敗退",
-    "res": "vo_fail",
+    "res": "char_Songlu_vo_fail",
     "text": "榛子還好嗎？鼻子痛不痛……來，摸一摸就不痛啦……摸一摸……"
   },
   {
     "id": 10341,
     "charId": 4202,
     "name": "初見",
-    "res": "vo_gain",
+    "res": "char_Landi_vo_gain",
     "text": "唉，怎麼讓你抓到了，看來清閒日子要到頭了……咳，看在你人還不賴的份上，以私人名義給你們提供一點幫助也不是不行啦。"
   },
   {
     "id": 10342,
     "charId": 4202,
     "name": "致候",
-    "res": "vo_welcome",
+    "res": "char_Landi_vo_welcome",
     "text": "呼~剛睡醒的感覺好舒爽啊，你呀，也不要每天太緊繃了，任務是永遠也做不完的，要懂得休息。"
   },
   {
     "id": 10343,
     "charId": 4202,
     "name": "閒談・關於家人·其一",
-    "res": "vo_topic_01_1",
+    "res": "char_Landi_vo_topic_01_1",
     "text": "家裡人？我爸媽都好多年沒管過我了，也就兩位姐姐偶爾會對我指手畫腳，不過啊我現在進了軍團，她們進不來。"
   },
   {
     "id": 10344,
     "charId": 4202,
     "name": "閒談・關於家人·其二",
-    "res": "vo_topic_01_2",
+    "res": "char_Landi_vo_topic_01_2",
     "text": "不，不是的，她們都是潑可愛動人聰明賢慧溫柔樂觀善良積極天真爛漫落落大方的美人！不過，如果能端莊一點就更好了……"
   },
   {
     "id": 10345,
     "charId": 4202,
     "name": "閒談・關於休息·其一",
-    "res": "vo_topic_02_1",
+    "res": "char_Landi_vo_topic_02_1",
     "text": "呵，你們這些不懂休息好的人有難了！聽我說：床是撫慰心靈的港灣，屋頂是洗滌靈魂的聖地，午後的花園是光明降臨的方向，小憩的時刻是甜蜜的交響詩……"
   },
   {
     "id": 10346,
     "charId": 4202,
     "name": "閒談・關於休息·其二",
-    "res": "vo_topic_02_2",
+    "res": "char_Landi_vo_topic_02_2",
     "text": "……誒！你等我念完啊！"
   },
   {
     "id": 10347,
     "charId": 4202,
     "name": "閒談・關於西比爾·其一",
-    "res": "vo_topic_03_1",
+    "res": "char_Landi_vo_topic_03_1",
     "text": "她可太能使喚人了，一個人劈三份都不夠用……咳，我是說，西比爾大人作為長官，對下屬一向嚴格。"
   },
   {
     "id": 10348,
     "charId": 4202,
     "name": "閒談・關於西比爾·其二",
-    "res": "vo_topic_03_2",
+    "res": "char_Landi_vo_topic_03_2",
     "text": "哎呀，這可怎麼辦才好呢……要不，我請你一份下午茶，你就當什麼都沒有聽見，怎麼樣？別擔心，裡面沒有下藥。"
   },
   {
     "id": 10349,
     "charId": 4202,
     "name": "閒談・在忙什麼·其一",
-    "res": "vo_topic_04_1",
+    "res": "char_Landi_vo_topic_04_1",
     "text": "我給你設計了一個好東西，一個小型機器人偶！戰鬥的時候它可以跟在你後面一邊搖小旗，一邊大喊「加油！」「你揍人的樣子真的很酷！」"
   },
   {
     "id": 10350,
     "charId": 4202,
     "name": "閒談・在忙什麼·其二",
-    "res": "vo_topic_04_2",
+    "res": "char_Landi_vo_topic_04_2",
     "text": "怎麼樣，是不是感覺渾身充滿力量？等我把它做出來……"
   },
   {
     "id": 10351,
     "charId": 4202,
     "name": "閒談・在忙什麼·其三",
-    "res": "vo_topic_04_3",
+    "res": "char_Landi_vo_topic_04_3",
     "text": "喂喂，別走啊，圖紙可是我瞞著西比爾長官，用寶貴的休息時間畫的——"
   },
   {
     "id": 10352,
     "charId": 4202,
     "name": "獨白",
-    "res": "vo_idle",
+    "res": "char_Landi_vo_idle",
     "text": "嗯……這個自動繞後的折疊槍可以升級成連發的……火力也可以再猛一些……嗯，不錯不錯，下次出任務就可以更快地解決敵人，然後回家休息了。"
   },
   {
     "id": 10353,
     "charId": 4202,
     "name": "閒談・他人偶遇 其一",
-    "res": "vo_companio_01",
+    "res": "char_Landi_vo_companio_01",
     "text": "報告軍團長，今日的工作已經安排完畢，您如果有其他的需要，可以隨時下達指示。不過今日的工作已經很飽和了，您還是要注意歇息，不要再給自己增添額外的負擔了。"
   },
   {
     "id": 10354,
     "charId": 4202,
     "name": "閒談・他人偶遇 其二",
-    "res": "vo_companio_02",
+    "res": "char_Landi_vo_companio_02",
     "text": "上次的任務真是辛苦你了，不過我接到了一些投訴，說是你在執行任務中損壞公物，唉，你是知道我的，我這麼羞澀內向，還要替你去賠不是，這也太難為我了。所以……這幾個緊急任務就麻煩你代勞了，相信美麗善良和藹可親的琳恩小姐一定不會拒絕的吧！"
   },
   {
     "id": 10355,
     "charId": 4202,
     "name": "閒談・他人偶遇 其三",
-    "res": "vo_companio_03",
+    "res": "char_Landi_vo_companio_03",
     "text": "嗯，你怎麼會……？哎呀，看來我還是休息太少，竟然都出現幻覺，能看見不存在的人了！之後向長官打個工傷報告，再休兩天病假好了。"
   },
   {
     "id": 10356,
     "charId": 4202,
     "name": "準備就緒",
-    "res": "vo_appear",
+    "res": "char_Landi_vo_appear",
     "text": "確定這次我一定要在場嗎？"
   },
   {
     "id": 10357,
     "charId": 4202,
     "name": "精進",
-    "res": "vo_lvup",
+    "res": "char_Landi_vo_lvup",
     "text": "雖然麻煩，但戰前準備永遠不嫌少。"
   },
   {
     "id": 10358,
     "charId": 4202,
     "name": "戰鬥開始",
-    "res": "vo_battlestart",
+    "res": "char_Landi_vo_battlestart",
     "text": "先擊潰防線最薄弱的部分。"
   },
   {
     "id": 10359,
     "charId": 4202,
     "name": "空暇",
-    "res": "vo_battleidle",
+    "res": "char_Landi_vo_battleidle",
     "text": "唉，如果他們也懂得休息的可貴就好了。"
   },
   {
     "id": 10360,
     "charId": 4202,
     "name": "受傷·其一",
-    "res": "vo_be_hit_heavy_r01",
+    "res": "char_Landi_vo_be_hit_heavy_r01",
     "text": "好凶啊。"
   },
   {
     "id": 10361,
     "charId": 4202,
     "name": "受傷·其二",
-    "res": "vo_be_hit_heavy_r02",
+    "res": "char_Landi_vo_be_hit_heavy_r02",
     "text": "可真累人。"
   },
   {
     "id": 10362,
     "charId": 4202,
     "name": "釋放技能·其一",
-    "res": "vo_skill01_r01",
+    "res": "char_Landi_vo_skill01_r01",
     "text": "快投降啦。"
   },
   {
     "id": 10363,
     "charId": 4202,
     "name": "釋放技能·其二",
-    "res": "vo_skill01_r02",
+    "res": "char_Landi_vo_skill01_r02",
     "text": "放輕鬆。"
   },
   {
     "id": 10364,
     "charId": 4202,
     "name": "釋放終結技·其一",
-    "res": "vo_skill02_r01",
+    "res": "char_Landi_vo_skill02_r01",
     "text": "弱點，看穿。"
   },
   {
     "id": 10365,
     "charId": 4202,
     "name": "釋放終結技·其二",
-    "res": "vo_skill02_r02",
+    "res": "char_Landi_vo_skill02_r02",
     "text": "此為，上策。"
   },
   {
     "id": 10366,
     "charId": 4202,
     "name": "釋放終結技·其三",
-    "res": "vo_skill02_r03",
+    "res": "char_Landi_vo_skill02_r03",
     "text": "這就是，耽誤我休息的代價。"
   },
   {
     "id": 10367,
     "charId": 4202,
     "name": "無法行動·其一",
-    "res": "vo_die_r01",
+    "res": "char_Landi_vo_die_r01",
     "text": "果然……不該出這個任務……"
   },
   {
     "id": 10368,
     "charId": 4202,
     "name": "無法行動·其二",
-    "res": "vo_die_r02",
+    "res": "char_Landi_vo_die_r02",
     "text": "長眠的感覺……也沒那麼好啊……"
   },
   {
     "id": 10369,
     "charId": 4202,
     "name": "復甦",
-    "res": "vo_revive",
+    "res": "char_Landi_vo_revive",
     "text": "還是得打起精神來啊……"
   },
   {
     "id": 10370,
     "charId": 4202,
     "name": "勝利",
-    "res": "vo_victory",
+    "res": "char_Landi_vo_victory",
     "text": "像你這麼成熟而睿智的指揮者，一定能夠自己做完收尾工作的吧，我先走嘍！"
   },
   {
     "id": 10371,
     "charId": 4202,
     "name": "敗退",
-    "res": "vo_fail",
+    "res": "char_Landi_vo_fail",
     "text": "適時撤退也是重要的戰術！溜了溜了。"
   },
   {
     "id": 10372,
     "charId": 4202,
     "name": "生日祝福",
-    "res": "vo_birthday",
+    "res": "char_Landi_vo_birthday",
     "text": "今天，我早早就在這裡等你，並且心甘情願為你犧牲了休息時間。為的就是讓你有個難忘的生日，咳嗯，我昨晚還改造了一下你的廚具，用它們做了個蛋糕，就是蛋糕的樣子嘛……你一會別介意就好，畢竟我第一次做，這可是個大工程。"
   },
   {
     "id": 10373,
     "charId": 4301,
     "name": "初見",
-    "res": "vo_gain",
+    "res": "char_Xibi_vo_gain",
     "text": "我知道你想要問什麼，但現在的你，還沒有足以讓我給予答覆的力量。所以，先放下劍，這是我對你最善意的建議。"
   },
   {
     "id": 10374,
     "charId": 4301,
     "name": "致候",
-    "res": "vo_welcome",
+    "res": "char_Xibi_vo_welcome",
     "text": "看到你日復一日這樣奔波努力，我就忍不住開始想像，想像你再次挑戰我的那一天，讓人期待。"
   },
   {
     "id": 10375,
     "charId": 4301,
     "name": "閒談・關於十三軍團·其一",
-    "res": "vo_topic_01_1",
+    "res": "char_Xibi_vo_topic_01_1",
     "text": "直屬於皇帝的特殊軍團，執行機密的任務，以及作為戰場上隨時擊出的鐵錘。"
   },
   {
     "id": 10376,
     "charId": 4301,
     "name": "閒談・關於十三軍團·其二",
-    "res": "vo_topic_01_2",
+    "res": "char_Xibi_vo_topic_01_2",
     "text": "你誤會了。沒有皇帝，軍團依舊是軍團，但沒有軍團，皇冠可就要落地了。"
   },
   {
     "id": 10377,
     "charId": 4301,
     "name": "閒談・關於十三軍團·其三",
-    "res": "vo_topic_01_3",
+    "res": "char_Xibi_vo_topic_01_3",
     "text": "你大可以這麼做，畢竟謀逆可是重罪，然後你的狀告書會立刻被逐級上報，最後呈到我的書桌上。"
   },
   {
     "id": 10378,
     "charId": 4301,
     "name": "閒談・關於帝國·其一",
-    "res": "vo_topic_02_1",
+    "res": "char_Xibi_vo_topic_02_1",
     "text": "呵，我並非忠於帝國，只是忠於理想罷了。曾有一個人為了這個理想付出了他的一切，而我要銘記與踐行他的意志。"
   },
   {
     "id": 10379,
     "charId": 4301,
     "name": "閒談・關於帝國·其二",
-    "res": "vo_topic_02_2",
+    "res": "char_Xibi_vo_topic_02_2",
     "text": "我不否認，不過為了我想要的，我會抓緊能利用的一切，不擇手段地往上爬。但我每爬一步，都離我的理想更近一步。而你，又走到了哪一步呢？"
   },
   {
     "id": 10380,
     "charId": 4301,
     "name": "閒談・關於感情·其一",
-    "res": "vo_topic_03_1",
+    "res": "char_Xibi_vo_topic_03_1",
     "text": "沒關係，我的家人很早就不在了。"
   },
   {
     "id": 10381,
     "charId": 4301,
     "name": "閒談・關於感情·其二",
-    "res": "vo_topic_03_2",
+    "res": "char_Xibi_vo_topic_03_2",
     "text": "我甚至為此慶倖，這樣一來我就沒有了後顧之憂，只需要專心和正面與背面的敵人們廝殺。"
   },
   {
     "id": 10382,
     "charId": 4301,
     "name": "閒談・關於感情·其三",
-    "res": "vo_topic_03_3",
+    "res": "char_Xibi_vo_topic_03_3",
     "text": "情感，對於每一個踏入軍團的人來說，都是破綻罷了。"
   },
   {
     "id": 10383,
     "charId": 4301,
     "name": "閒談・關於身份·其一",
-    "res": "vo_topic_04_1",
+    "res": "char_Xibi_vo_topic_04_1",
     "text": "當然，當面的咒駡和揶揄我已經聽過不少，陰溝裡的碩鼠們的抱怨只會更多。"
   },
   {
     "id": 10384,
     "charId": 4301,
     "name": "閒談・關於身份·其二",
-    "res": "vo_topic_04_2",
+    "res": "char_Xibi_vo_topic_04_2",
     "text": "所幸，儘管這個世界有萬般不公，但只要坐擁眾人之上的力量，就能獲得最起碼的善意。"
   },
   {
     "id": 10385,
     "charId": 4301,
     "name": "閒談・關於身份·其三",
-    "res": "vo_topic_04_3",
+    "res": "char_Xibi_vo_topic_04_3",
     "text": "那是自然，所以我永遠不會對他們卑躬屈膝，否則，他們會立刻變成聞到血腥味的狼群。"
   },
   {
     "id": 10386,
     "charId": 4301,
     "name": "獨白",
-    "res": "vo_idle",
+    "res": "char_Xibi_vo_idle",
     "text": "居然把後背輕易暴露給自己的敵人…… 該說你天真還是愚蠢？"
   },
   {
     "id": 10387,
     "charId": 4301,
     "name": "閒談・他人偶遇 其一",
-    "res": "vo_companio_01",
+    "res": "char_Xibi_vo_companio_01",
     "text": "……你與我，是時候做個了斷了。"
   },
   {
     "id": 10390,
     "charId": 4301,
     "name": "閒談・他人偶遇 其四",
-    "res": "vo_companio_04",
+    "res": "char_Xibi_vo_companio_04",
     "text": "你的偽裝越是完美，就說明你的獠牙在暗地裡打磨得越發鋒銳，我等著你脫韁的那一天，親手敲斷你的大牙。"
   },
   {
     "id": 10391,
     "charId": 4301,
     "name": "閒談・他人偶遇 其五",
-    "res": "vo_companio_06",
+    "res": "char_Xibi_vo_companio_05",
     "text": "近期的任務說明、作戰計畫、後勤運輸、損失條目都整理好了嗎。\n好，那今天再和我把對外宣傳標語、對內案例分析、對皇帝的定期報告以及佩劍煉金院新武器的測試數據做完。工作，可不能叫額外的負擔。"
   },
   {
     "id": 10392,
     "charId": 4301,
     "name": "準備就緒",
-    "res": "vo_appear",
+    "res": "char_Xibi_vo_appear",
     "text": "願意向敵人伸手求援，很好，看來仇恨尚未吞噬你的理性。"
   },
   {
     "id": 10393,
     "charId": 4301,
     "name": "精進",
-    "res": "vo_lvup",
+    "res": "char_Xibi_vo_lvup",
     "text": "唯有不斷向上，才能不墜入深淵。"
   },
   {
     "id": 10394,
     "charId": 4301,
     "name": "戰鬥開始",
-    "res": "vo_battlestart",
+    "res": "char_Xibi_vo_battlestart",
     "text": "是誰膽敢浪費我的時間？"
   },
   {
     "id": 10395,
     "charId": 4301,
     "name": "空暇",
-    "res": "vo_battleidle",
+    "res": "char_Xibi_vo_battleidle",
     "text": "別偷懶，要是在軍團你已經吃鞭子了。"
   },
   {
     "id": 10396,
     "charId": 4301,
     "name": "受傷·其一",
-    "res": "vo_be_hit_heavy_r01",
+    "res": "char_Xibi_vo_be_hit_heavy_r01",
     "text": "竟敢造次！"
   },
   {
     "id": 10397,
     "charId": 4301,
     "name": "受傷·其二",
-    "res": "vo_be_hit_heavy_r02",
+    "res": "char_Xibi_vo_be_hit_heavy_r02",
     "text": "呃！"
   },
   {
     "id": 10398,
     "charId": 4301,
     "name": "釋放技能·其一",
-    "res": "vo_skill01_r01",
+    "res": "char_Xibi_vo_skill01_r01",
     "text": "閃開！"
   },
   {
     "id": 10399,
     "charId": 4301,
     "name": "釋放技能·其二",
-    "res": "vo_skill01_r02",
+    "res": "char_Xibi_vo_skill01_r02",
     "text": "顫慄吧！"
   },
   {
     "id": 10400,
     "charId": 4301,
     "name": "釋放終結技·其一",
-    "res": "vo_skill02_r01",
+    "res": "char_Xibi_vo_skill02_r01",
     "text": "不堪一擊的廢物。"
   },
   {
     "id": 10401,
     "charId": 4301,
     "name": "釋放終結技·其二",
-    "res": "vo_skill02_r02",
+    "res": "char_Xibi_vo_skill02_r02",
     "text": "哀嚎得再響亮些！"
   },
   {
     "id": 10402,
     "charId": 4301,
     "name": "釋放終結技·其三",
-    "res": "vo_skill02_r03",
+    "res": "char_Xibi_vo_skill02_r03",
     "text": "屈服於我！"
   },
   {
     "id": 10403,
     "charId": 4301,
     "name": "無法行動·其一",
-    "res": "vo_die_r01",
+    "res": "char_Xibi_vo_die_r01",
     "text": "我來見您了……陛下……"
   },
   {
     "id": 10404,
     "charId": 4301,
     "name": "無法行動·其二",
-    "res": "vo_die_r02",
+    "res": "char_Xibi_vo_die_r02",
     "text": "陛下，您的願望，我……"
   },
   {
     "id": 10405,
     "charId": 4301,
     "name": "復甦",
-    "res": "vo_revive",
+    "res": "char_Xibi_vo_revive",
     "text": "地獄，也沒比人間壞到哪去。"
   },
   {
     "id": 10406,
     "charId": 4301,
     "name": "勝利",
-    "res": "vo_victory",
+    "res": "char_Xibi_vo_victory",
     "text": "呵，不過是微小的勝利……"
   },
   {
     "id": 10407,
     "charId": 4301,
     "name": "敗退",
-    "res": "vo_fail",
+    "res": "char_Xibi_vo_fail",
     "text": "下次，我定會碾碎這片戰場。"
   },
   {
     "id": 10408,
     "charId": 4301,
     "name": "生日祝福",
-    "res": "vo_birthday",
+    "res": "char_Xibi_vo_birthday",
     "text": "……你在期待些什麼？你覺得我會為你做生日蛋糕？哼，你還是做夢吧。不過下次對決時我可以讓你幾招，竊喜吧。"
   },
   {
     "id": 10409,
     "charId": 3301,
     "name": "初見·其一",
-    "res": "vo_gain_1",
+    "res": "char_Maer_vo_gain_1",
     "text": "嗨，外鄉人，歡迎來到冰湖城！如果覺得這裡不歡迎你，就讓我，瑪爾潔，帶你重新認識一下這裡吧！首先……就從打開幾個「驚喜垃圾桶」開始！"
   },
   {
     "id": 10410,
     "charId": 3301,
     "name": "初見·其二",
-    "res": "vo_gain_2",
+    "res": "char_Maer_vo_gain_2",
     "text": "什麼！你已經聽說我「垃圾桶公主」的名號了？！呃啊……你可千萬別跟著他們起哄！還是叫我瑪爾潔吧，不是什麼公主，只是漫遊於冰湖城的小小拾荒者罷了！"
   },
   {
     "id": 10411,
     "charId": 3301,
     "name": "致候",
-    "res": "vo_welcome",
+    "res": "char_Maer_vo_welcome",
     "text": "我來的時候順手把你家門口的雪給鏟了！是不是特別感動，特別想請我喝一杯熱可可呀~"
   },
   {
     "id": 10412,
     "charId": 3301,
     "name": "閒談・關於拾荒者·其一",
-    "res": "vo_topic_01_1",
+    "res": "char_Maer_vo_topic_01_1",
     "text": "嗯……大概是為那些被捨棄的物品找到合適的主人的營生，唔，也能讓那些遭受物資匱乏之苦的人，得到更好的生活。"
   },
   {
     "id": 10413,
     "charId": 3301,
     "name": "閒談・關於拾荒者·其二",
-    "res": "vo_topic_01_2",
+    "res": "char_Maer_vo_topic_01_2",
     "text": "比如，把貴族老爺淘汰下來的絲絨窗簾換成冬衣，讓老人們暖暖過冬；把被丟棄的玩偶小人帶給那些只能拋石頭玩的孩子，他們能高興很久。"
   },
   {
     "id": 10414,
     "charId": 3301,
     "name": "閒談・關於拾荒者·其三",
-    "res": "vo_topic_01_3",
+    "res": "char_Maer_vo_topic_01_3",
     "text": "還有一次，我把不知道哪家丟掉的破爛書架搬了回來，累得半死，但沒過多久，就有一群貓媽媽貓小孩過來上躥下跳，從太陽上山玩到月亮落山。"
   },
   {
     "id": 10415,
     "charId": 3301,
     "name": "閒談・關於拾荒者·其四",
-    "res": "vo_topic_01_4",
+    "res": "char_Maer_vo_topic_01_4",
     "text": "拾荒者的工作就是這樣啦！大多是些雞毛蒜皮的小事，但永遠不會無聊，怎麼樣，想不想加入我們！"
   },
   {
     "id": 10416,
     "charId": 3301,
     "name": "閒談・關於垃圾桶·其一",
-    "res": "vo_topic_02_1",
+    "res": "char_Maer_vo_topic_02_1",
     "text": "噓噓噓，這可是拾荒者的最高機密！要不是你幫我抓過賊，才不會輕易透露給你呢！"
   },
   {
     "id": 10417,
     "charId": 3301,
     "name": "閒談・關於垃圾桶·其二",
-    "res": "vo_topic_02_2",
+    "res": "char_Maer_vo_topic_02_2",
     "text": "這張圖標明了冰湖城所有垃圾桶的位置，我在上面標了好東西最多的幾個，不僅把那邊的垃圾桶換成了大號，就連什麼時候去進貨都經過我嚴密的計算！"
   },
   {
     "id": 10418,
     "charId": 3301,
     "name": "閒談・關於垃圾桶·其三",
-    "res": "vo_topic_02_3",
+    "res": "char_Maer_vo_topic_02_3",
     "text": "不過我們這行旱澇不保收，能有多少進帳，大部分時候還得靠運氣……"
   },
   {
     "id": 10419,
     "charId": 3301,
     "name": "閒談・關於垃圾桶·其四",
-    "res": "vo_topic_02_4",
+    "res": "char_Maer_vo_topic_02_4",
     "text": "可不是嘛，嘿，我就說你是個明眼人！"
   },
   {
     "id": 10420,
     "charId": 3301,
     "name": "閒談・關於雪原·其一",
-    "res": "vo_topic_03_1",
+    "res": "char_Maer_vo_topic_03_1",
     "text": "不，你說反啦！我非常喜歡冰湖城。只是我常常回想起和爸爸一起在雪原上流浪的日子，我的整個童年都是在那裡度過的。"
   },
   {
     "id": 10421,
     "charId": 3301,
     "name": "閒談・關於雪原·其二",
-    "res": "vo_topic_03_2",
+    "res": "char_Maer_vo_topic_03_2",
     "text": "從這裡看向雪原，美得像童話裡的冰國雪國。可一步一步走進去，又會覺得自己好小好小。在齊膝的雪地裡邁著腿，不管走了多久，看到的景色都不會改變。"
   },
   {
     "id": 10422,
     "charId": 3301,
     "name": "閒談・關於雪原·其三",
-    "res": "vo_topic_03_3",
+    "res": "char_Maer_vo_topic_03_3",
     "text": "我不討厭那段時光，但我最喜歡的，果然還是熱熱鬧鬧，充滿煙火味的冰湖城！"
   },
   {
     "id": 10423,
     "charId": 3301,
     "name": "閒談・關於掛件·其一",
-    "res": "vo_topic_04_1",
+    "res": "char_Maer_vo_topic_04_1",
     "text": "是小時候和我在雪原上一起流浪的大貓！它叫「胖尾巴」，平時得用肉乾賄賂才願意給我摸摸，但那個手感——嘿嘿嘿嘿，一個字，絕啦！"
   },
   {
     "id": 10424,
     "charId": 3301,
     "name": "閒談・關於掛件·其二",
-    "res": "vo_topic_04_2",
+    "res": "char_Maer_vo_topic_04_2",
     "text": "嗯……反正不是喵喵喵，大概是，嗷嗚——嗷嗚——嗷嗚——的聲音！"
   },
   {
     "id": 10425,
     "charId": 3301,
     "name": "閒談・關於掛件·其三",
-    "res": "vo_topic_04_3",
+    "res": "char_Maer_vo_topic_04_3",
     "text": "胖尾巴畢竟是生活在雪原的野獸，它不願意靠近城市，等待我們的只有分道揚鑣。但它會一直留在我的記憶裡，和那片雪原一起。"
   },
   {
     "id": 10426,
     "charId": 3301,
     "name": "閒談・關於外號·其一",
-    "res": "vo_topic_05_1",
+    "res": "char_Maer_vo_topic_05_1",
     "text": "我沒有，我不是，別瞎說！我都這麼大了，怎麼還用這種哄小孩的稱呼！算我求你了，別再提這個了！"
   },
   {
     "id": 10427,
     "charId": 3301,
     "name": "閒談・關於外號·其二",
-    "res": "vo_topic_05_2",
+    "res": "char_Maer_vo_topic_05_2",
     "text": "那當然是——咳咳，於城市背面孤獨行走，緘默的偵探——瑪爾潔小姐！今天，也為你揭示冰湖城不為人知的隱秘！"
   },
   {
     "id": 10428,
     "charId": 3301,
     "name": "閒談・關於外號·其三",
-    "res": "vo_topic_05_3",
+    "res": "char_Maer_vo_topic_05_3",
     "text": "嘿嘿，這才是與我相稱的外號嘛~"
   },
   {
     "id": 10429,
     "charId": 3301,
     "name": "獨白",
-    "res": "vo_idle",
+    "res": "char_Maer_vo_idle",
     "text": "嗯~天氣不錯，正適合去採一些花，熏得身上香香的！{nickname}，想一起出門逛逛嗎？"
   },
   {
     "id": 10431,
     "charId": 3301,
     "name": "閒談・他人偶遇 其二",
-    "res": "vo_companio_02",
+    "res": "char_Maer_vo_companio_02",
     "text": "小菲娜！好久不見啦~想聽《雪貓遊俠與橘貓偵探》的後續？好！等我搬個小板凳，坐下來慢慢給你講！"
   },
   {
     "id": 10432,
     "charId": 3301,
     "name": "閒談・他人偶遇 其三",
-    "res": "vo_companio_03",
+    "res": "char_Maer_vo_companio_03",
     "text": "典獄長大人，我可是徹頭徹尾的良民！一沒偷二沒搶，只是從垃圾桶裡拿一點點殘羹剩飯果腹罷了，您再敬業，也管不到垃圾頭上吧？"
   },
   {
     "id": 10433,
     "charId": 3301,
     "name": "閒談・他人偶遇 其四",
-    "res": "vo_companio_04",
+    "res": "char_Maer_vo_companio_04",
     "text": "你這日子過得也太緊巴巴了吧！好、好慘……你要不要來和我一起撿垃圾，說不定日子還能過得寬裕一點？"
   },
   {
     "id": 10435,
     "charId": 3301,
     "name": "準備就緒",
-    "res": "vo_appear",
+    "res": "char_Maer_vo_appear",
     "text": "今天上哪兒進貨去？"
   },
   {
     "id": 10436,
     "charId": 3301,
     "name": "精進",
-    "res": "vo_lvup",
+    "res": "char_Maer_vo_lvup",
     "text": "哇！裝貨用的口袋變得更大了！"
   },
   {
     "id": 10437,
     "charId": 3301,
     "name": "戰鬥開始",
-    "res": "vo_battlestart",
+    "res": "char_Maer_vo_battlestart",
     "text": "讓我看看有什麼好東西！"
   },
   {
     "id": 10438,
     "charId": 3301,
     "name": "空暇",
-    "res": "vo_battleidle",
+    "res": "char_Maer_vo_battleidle",
     "text": "還不夠！我還能撿更多！"
   },
   {
     "id": 10439,
     "charId": 3301,
     "name": "受傷·其一",
-    "res": "vo_be_hit_heavy_r01",
+    "res": "char_Maer_vo_be_hit_heavy_r01",
     "text": "下手太重了吧！"
   },
   {
     "id": 10440,
     "charId": 3301,
     "name": "受傷·其二",
-    "res": "vo_be_hit_heavy_r02",
+    "res": "char_Maer_vo_be_hit_heavy_r02",
     "text": "痛痛痛！"
   },
   {
     "id": 10441,
     "charId": 3301,
     "name": "釋放技能·其一",
-    "res": "vo_skill01_r01",
+    "res": "char_Maer_vo_skill01_r01",
     "text": "可回收！"
   },
   {
     "id": 10442,
     "charId": 3301,
     "name": "釋放技能·其二",
-    "res": "vo_skill01_r02",
+    "res": "char_Maer_vo_skill01_r02",
     "text": "不可回收！"
   },
   {
     "id": 10443,
     "charId": 3301,
     "name": "釋放終結技·其一",
-    "res": "vo_skill02_r01",
+    "res": "char_Maer_vo_skill02_r01",
     "text": "多餘的垃圾，就只能燒掉了！"
   },
   {
     "id": 10444,
     "charId": 3301,
     "name": "釋放終結技·其二",
-    "res": "vo_skill02_r02",
+    "res": "char_Maer_vo_skill02_r02",
     "text": "在場的各位都是垃圾！"
   },
   {
     "id": 10445,
     "charId": 3301,
     "name": "釋放終結技·其三",
-    "res": "vo_skill02_r03",
+    "res": "char_Maer_vo_skill02_r03",
     "text": "焚燒！填埋！無害化！"
   },
   {
     "id": 10446,
     "charId": 3301,
     "name": "無法行動·其一",
-    "res": "vo_die_r01",
+    "res": "char_Maer_vo_die_r01",
     "text": "我也要……被回收了嗎……"
   },
   {
     "id": 10447,
     "charId": 3301,
     "name": "無法行動·其二",
-    "res": "vo_die_r02",
+    "res": "char_Maer_vo_die_r02",
     "text": "好想回到……冰湖城去……"
   },
   {
     "id": 10448,
     "charId": 3301,
     "name": "復甦",
-    "res": "vo_revive",
+    "res": "char_Maer_vo_revive",
     "text": "變廢為寶！"
   },
   {
     "id": 10449,
     "charId": 3301,
     "name": "勝利",
-    "res": "vo_victory",
+    "res": "char_Maer_vo_victory",
     "text": "進貨大豐收！"
   },
   {
     "id": 10450,
     "charId": 3301,
     "name": "敗退",
-    "res": "vo_fail",
+    "res": "char_Maer_vo_fail",
     "text": "貨物……回收失敗啦……"
   },
   {
     "id": 10451,
     "charId": 3301,
     "name": "生日祝福",
-    "res": "vo_birthday",
+    "res": "char_Maer_vo_birthday",
     "text": "生日快樂！喏，這個給你，是我親手做的胖尾巴小玩偶，和我一個款式哦~我知道的，你早就想這麼揉胖尾巴了吧？嘿嘿，緘默偵探早就已經看穿一切啦！"
   },
   {
     "id": 10452,
     "charId": 1801,
     "name": "初見",
-    "res": "vo_gain",
+    "res": "char_Feina_vo_gain",
     "text": "「啾啾！」小夜鶯說，「你好呀，白色的獨角獸{性别:先生|小姐}！從今以後，你會和菲娜成為很好很好的朋友！」"
   },
   {
     "id": 10453,
     "charId": 1801,
     "name": "致候",
-    "res": "vo_welcome",
+    "res": "char_Feina_vo_welcome",
     "text": "……唔……是你。你好，你好呀。"
   },
   {
     "id": 10454,
     "charId": 1801,
     "name": "閒談・關於心願·其一",
-    "res": "vo_topic_01_1",
+    "res": "char_Feina_vo_topic_01_1",
     "text": "唔，我想吃掉可以讓人變得很大很大的糖果……"
   },
   {
     "id": 10455,
     "charId": 1801,
     "name": "閒談・關於心願·其二",
-    "res": "vo_topic_01_2",
+    "res": "char_Feina_vo_topic_01_2",
     "text": "吃下那樣的糖果，我就會長得比雲還高，可以摸一摸天上的星星了吧？"
   },
   {
     "id": 10456,
     "charId": 1801,
     "name": "閒談・關於心願·其三",
-    "res": "vo_topic_01_3",
+    "res": "char_Feina_vo_topic_01_3",
     "text": "不會的，我會很小心的！嗯……如果你實在害怕的話，就坐在我的手心裡，我帶你出去兜風，怎麼樣？"
   },
   {
     "id": 10457,
     "charId": 1801,
     "name": "閒談・關於秘密·其一",
-    "res": "vo_topic_02_1",
+    "res": "char_Feina_vo_topic_02_1",
     "text": "我有一個很大很大的玻璃盒子，盒子裡面裝著窗戶外軟綿綿的雪，裝著雪一樣白白的棉花糖。我還想裝進去棉花糖一樣輕飄飄的雲朵，雲朵一樣暖乎乎的風……"
   },
   {
     "id": 10458,
     "charId": 1801,
     "name": "閒談・關於秘密·其二",
-    "res": "vo_topic_02_2",
+    "res": "char_Feina_vo_topic_02_2",
     "text": "連同你們的笑聲一起，全～都裝進盒子。"
   },
   {
     "id": 10459,
     "charId": 1801,
     "name": "閒談・關於秘密·其三",
-    "res": "vo_topic_02_3",
+    "res": "char_Feina_vo_topic_02_3",
     "text": "嗯……如果你能吃下讓人變得很小很小的糖果，就可以進去玩啦。不過，這個盒子裡到處都是白色的，你要小心，別在裡面迷路哦。"
   },
   {
     "id": 10460,
     "charId": 1801,
     "name": "閒談・關於秘密·其四",
-    "res": "vo_topic_02_4",
+    "res": "char_Feina_vo_topic_02_4",
     "text": "讓我想想……如果你迷路了，菲娜就把麵包掰成一小塊一小塊，連成一條路……這樣，你只要沿著麵包屑向前走，就能找到出口啦！"
   },
   {
     "id": 10461,
     "charId": 1801,
     "name": "閒談・關於夢·其一",
-    "res": "vo_topic_03_1",
+    "res": "char_Feina_vo_topic_03_1",
     "text": "嗯……！在夢裡，我看到了一隻純白羽毛的夜鶯，它一會兒落在我的手上，一會兒繞著屋子和我捉迷藏……唔……到底是我夢見了它，還是它夢見了我呢……"
   },
   {
     "id": 10462,
     "charId": 1801,
     "name": "閒談・關於夢·其二",
-    "res": "vo_topic_03_2",
+    "res": "char_Feina_vo_topic_03_2",
     "text": "你說得對！也許那是一個仙境，所有睡著的孩子和小動物都可以在那裡一起玩。嗯……下次的夢裡會遇到誰呢？貓頭鷹爺爺、金絲雀小姐，還是白兔先生？"
   },
   {
     "id": 10463,
     "charId": 1801,
     "name": "閒談・關於父母·其一",
-    "res": "vo_topic_04_1",
+    "res": "char_Feina_vo_topic_04_1",
     "text": "菲娜曾經有一個媽媽，兩個爸爸。不過，他們都不在了……"
   },
   {
     "id": 10464,
     "charId": 1801,
     "name": "閒談・關於父母·其二",
-    "res": "vo_topic_04_2",
+    "res": "char_Feina_vo_topic_04_2",
     "text": "第一個爸爸，和媽媽一起，去了很遠很遠的國度。第二個爸爸，也去了很遠很遠的國度……是我帶他去的哦。"
   },
   {
     "id": 10465,
     "charId": 1801,
     "name": "閒談・關於奧特賽德·其一",
-    "res": "vo_topic_05_1",
+    "res": "char_Feina_vo_topic_05_1",
     "text": "他是最偉大的魔法師，是說話最好聽的人，是全世界最溫柔最溫柔的人……"
   },
   {
     "id": 10466,
     "charId": 1801,
     "name": "閒談・關於奧特賽德·其二",
-    "res": "vo_topic_05_2",
+    "res": "char_Feina_vo_topic_05_2",
     "text": "唔，你看起來有很多很多問題，我哪裡說的不對嗎？"
   },
   {
     "id": 10467,
     "charId": 1801,
     "name": "閒談・關於奧特賽德·其三",
-    "res": "vo_topic_05_3",
+    "res": "char_Feina_vo_topic_05_3",
     "text": "咦……？他對你說話不好聽、不溫柔嗎？真對不起……我會敲敲他的腦袋，要他改正的！"
   },
   {
     "id": 10468,
     "charId": 1801,
     "name": "獨白",
-    "res": "vo_idle",
+    "res": "char_Feina_vo_idle",
     "text": "♪ 我的小小的、小小的家……藏在樹梢的新綠裡，藏在金色的河流間……溫暖的壁爐呀，小火苗劈啪劈啪……握著爸爸剛修好的錫兵，聽媽媽唱起搖籃曲……睡吧……"
   },
   {
     "id": 10469,
     "charId": 1801,
     "name": "閒談・他人偶遇 其一",
-    "res": "vo_companio_01",
+    "res": "char_Feina_vo_companio_01",
     "text": "答應菲娜，再也再也再也……不要去那些有很多很多壞巫師的危險地方了，好嗎？"
   },
   {
     "id": 10470,
     "charId": 1801,
     "name": "閒談・他人偶遇 其二",
-    "res": "vo_companio_02",
+    "res": "char_Feina_vo_companio_02",
     "text": "那是什麼？倉鼠小姐飼養的精靈嗎？不可思議……它一定可以載著你飛過所有城堡的圍牆！"
   },
   {
     "id": 10471,
     "charId": 1801,
     "name": "閒談・他人偶遇 其三",
-    "res": "vo_companio_03",
+    "res": "char_Feina_vo_companio_03",
     "text": "獅子小姐，你想要喚醒沉睡在巨劍中的仙女嗎？也許你需要吟誦很多很多咒語，比如——「喚醒聖劍薩麥爾之人啊，必將成為艾利西安之王！」"
   },
   {
     "id": 10473,
     "charId": 1801,
     "name": "準備就緒",
-    "res": "vo_appear",
+    "res": "char_Feina_vo_appear",
     "text": "真的要帶我出去玩嗎？說好了~不許反悔哦！"
   },
   {
     "id": 10474,
     "charId": 1801,
     "name": "精進",
-    "res": "vo_lvup",
+    "res": "char_Feina_vo_lvup",
     "text": "哇……！"
   },
   {
     "id": 10475,
     "charId": 1801,
     "name": "戰鬥開始",
-    "res": "vo_battlestart",
+    "res": "char_Feina_vo_battlestart",
     "text": "好大的花園呀~"
   },
   {
     "id": 10476,
     "charId": 1801,
     "name": "空暇",
-    "res": "vo_battleidle",
+    "res": "char_Feina_vo_battleidle",
     "text": "大家……都去哪兒了？"
   },
   {
     "id": 10477,
     "charId": 1801,
     "name": "受傷·其一",
-    "res": "vo_be_hit_r02",
+    "res": "char_Feina_vo_be_hit_r02",
     "text": "別碰我！"
   },
   {
     "id": 10478,
     "charId": 1801,
     "name": "受傷·其二",
-    "res": "vo_be_hit_heavy_r02",
+    "res": "char_Feina_vo_be_hit_heavy_r02",
     "text": "我不怕……！"
   },
   {
     "id": 10479,
     "charId": 1801,
     "name": "釋放技能·其一",
-    "res": "vo_skill01_r01",
+    "res": "char_Feina_vo_skill01_r01",
     "text": "♪ 星星～閃閃發亮～"
   },
   {
     "id": 10480,
     "charId": 1801,
     "name": "釋放技能·其二",
-    "res": "vo_skill01_r02",
+    "res": "char_Feina_vo_skill01_r02",
     "text": "♪ 我最美麗的~花園~"
   },
   {
     "id": 10481,
     "charId": 1801,
     "name": "釋放終結技·其一",
-    "res": "vo_skill02_r01",
+    "res": "char_Feina_vo_skill02_r01",
     "text": "菲娜的朋友們，一起來保護大家！"
   },
   {
     "id": 10482,
     "charId": 1801,
     "name": "釋放終結技·其二",
-    "res": "vo_skill02_r02",
+    "res": "char_Feina_vo_skill02_r02",
     "text": "不許你們打攪花園的靜謐！"
   },
   {
     "id": 10483,
     "charId": 1801,
     "name": "釋放終結技·其三",
-    "res": "vo_skill02_r03",
+    "res": "char_Feina_vo_skill02_r03",
     "text": "去吧，我最勇敢的士兵——"
   },
   {
     "id": 10484,
     "charId": 1801,
     "name": "無法行動·其一",
-    "res": "vo_die_r01",
+    "res": "char_Feina_vo_die_r01",
     "text": "菲娜也要去很遠很遠的國度了喲……"
   },
   {
     "id": 10485,
     "charId": 1801,
     "name": "無法行動·其二",
-    "res": "vo_die_r02",
+    "res": "char_Feina_vo_die_r02",
     "text": "我好像做了一個很長很長的夢……"
   },
   {
     "id": 10486,
     "charId": 1801,
     "name": "復甦",
-    "res": "vo_revive",
+    "res": "char_Feina_vo_revive",
     "text": "咦……發生了什麼事呢……？"
   },
   {
     "id": 10487,
     "charId": 1801,
     "name": "勝利",
-    "res": "vo_victory",
+    "res": "char_Feina_vo_victory",
     "text": "「從此，大家一起過上了幸福的日子。」晚安，要做個甜甜的夢呀。"
   },
   {
     "id": 10488,
     "charId": 1801,
     "name": "敗退",
-    "res": "vo_fail",
+    "res": "char_Feina_vo_fail",
     "text": "這個結局……我一點都不喜歡……"
   },
   {
     "id": 10489,
     "charId": 1801,
     "name": "生日祝福",
-    "res": "vo_birthday",
+    "res": "char_Feina_vo_birthday",
     "text": "在生日那天，白色的獨角獸{性别:先生|小姐}，回到了{性别:先生|小姐}小小的，溫暖的家。純白羽毛的鳥兒銜來桂葉，魔法師吟唱著帶來歡笑的咒語，勇敢的騎士守在{性别:他|她}身旁，一如往昔。火苗在壁爐裡跳著輕快的舞，雪花自天空送來遙遠的祝福。小小的家啊，搖曳著無可比擬的幸福……"
   },
   {
     "id": 10490,
     "charId": 3103,
     "name": "初見",
-    "res": "vo_gain",
+    "res": "char_Yeer_vo_gain",
     "text": "耶爾：……你，你好……我是耶爾。你、你也是來買「小、小小小可愛」的，對嗎？\n奧利弗：嘖，這傢伙說話還是結結巴巴的，一點長進都沒有。"
   },
   {
     "id": 10491,
     "charId": 3103,
     "name": "致候",
-    "res": "vo_welcome",
+    "res": "char_Yeer_vo_welcome",
     "text": "耶爾：你來啦……天氣真好……很適合做爆炸實驗……唔，天氣真好。"
   },
   {
     "id": 10492,
     "charId": 3103,
     "name": "閒談・關於奧利弗·其一",
-    "res": "vo_topic_01_1",
+    "res": "char_Yeer_vo_topic_01_1",
     "text": "耶爾：奧利弗不是會說話的炸彈……可能聽起來有些不可思議，但……他其實是……"
   },
   {
     "id": 10493,
     "charId": 3103,
     "name": "閒談・關於奧利弗·其二",
-    "res": "vo_topic_01_2",
+    "res": "char_Yeer_vo_topic_01_2",
     "text": "奧利弗：閉嘴，被你急死了！我就是耶爾，耶爾就是我。聽明白了嗎？不明白也無所謂，也沒指望你木屑一樣的腦子能搞懂。"
   },
   {
     "id": 10494,
     "charId": 3103,
     "name": "閒談・關於奧利弗·其三",
-    "res": "vo_topic_01_3",
+    "res": "char_Yeer_vo_topic_01_3",
     "text": "耶爾：奧利弗他、他他是個好孩子！雖然看看上去脾氣不好，說話有點凶，還總總總是突然冒出來，但……"
   },
   {
     "id": 10495,
     "charId": 3103,
     "name": "閒談・關於奧利弗·其四",
-    "res": "vo_topic_01_4",
+    "res": "char_Yeer_vo_topic_01_4",
     "text": "奧利弗：喂，有你這麼誇獎人的嗎？"
   },
   {
     "id": 10496,
     "charId": 3103,
     "name": "閒談・關於擅長的事·其一",
-    "res": "vo_topic_02_1",
+    "res": "char_Yeer_vo_topic_02_1",
     "text": "耶爾：我……可能派不上什麼用場。唯一擅長的……可能就只有製作「小可愛」了吧？"
   },
   {
     "id": 10497,
     "charId": 3103,
     "name": "閒談・關於擅長的事·其二",
-    "res": "vo_topic_02_2",
+    "res": "char_Yeer_vo_topic_02_2",
     "text": "耶爾：「小可愛」……是「劈里啪啦」玩具店中……最受歡迎的商品，製作它們，要花費不少時間。"
   },
   {
     "id": 10498,
     "charId": 3103,
     "name": "閒談・關於擅長的事·其三",
-    "res": "vo_topic_02_3",
+    "res": "char_Yeer_vo_topic_02_3",
     "text": "耶爾：但，不是因為我的技藝……有多好，只是因為，奧利弗他很熟悉。"
   },
   {
     "id": 10499,
     "charId": 3103,
     "name": "閒談・關於口吃·其一",
-    "res": "vo_topic_03_1",
+    "res": "char_Yeer_vo_topic_03_1",
     "text": "耶爾：啊，抱歉！但、但是要是說得快了，我的舌頭就就就容易打結。"
   },
   {
     "id": 10500,
     "charId": 3103,
     "name": "閒談・關於口吃·其二",
-    "res": "vo_topic_03_2",
+    "res": "char_Yeer_vo_topic_03_2",
     "text": "耶爾：還、還好，有時候奧利弗會幫我說......而且，旁邊沒有人的時候，奧利弗總會把我想說的話聽完的。"
   },
   {
     "id": 10501,
     "charId": 3103,
     "name": "閒談・關於童年·其一",
-    "res": "vo_topic_04_1",
+    "res": "char_Yeer_vo_topic_04_1",
     "text": "耶爾：我沒有「小時候」……我從記事的時候，就在這個大孩子的身體裡了。奧利弗也許有吧。"
   },
   {
     "id": 10502,
     "charId": 3103,
     "name": "閒談・關於童年·其二",
-    "res": "vo_topic_04_2",
+    "res": "char_Yeer_vo_topic_04_2",
     "text": "耶爾：我也想過如果能有「童年」，應該會是……怎樣的呢？每晚睡覺前……瓊斯先生會不會像普通的爸爸一樣，坐在我的床頭……給我講故事……"
   },
   {
     "id": 10503,
     "charId": 3103,
     "name": "閒談・關於童年·其三",
-    "res": "vo_topic_04_3",
+    "res": "char_Yeer_vo_topic_04_3",
     "text": "奧利弗：瓊斯那混蛋講故事？你腦子進膠水了嗎？"
   },
   {
     "id": 10504,
     "charId": 3103,
     "name": "閒談・關於童年·其四",
-    "res": "vo_topic_04_4",
+    "res": "char_Yeer_vo_topic_04_4",
     "text": "耶爾：對對對不起！我我知道的，他只關心實驗，不會做這些……"
   },
   {
     "id": 10505,
     "charId": 3103,
     "name": "獨白",
-    "res": "vo_idle",
+    "res": "char_Yeer_vo_idle",
     "text": "耶爾：紅鯉魚，有頭小綠、綠，綠鯉，綠驢，綠縷魚…….\n奧利弗：是「紅鯉魚有頭小綠驢，綠鯉魚有頭小紅驢！」笨蛋耶爾，快跟我念！\n耶爾：好、好的！紅、紅鯉魚……"
   },
   {
     "id": 10506,
     "charId": 3103,
     "name": "閒談・他人偶遇 其一",
-    "res": "vo_companio_01",
+    "res": "char_Yeer_vo_companio_01",
     "text": "耶爾：您，您好……您的歌聲，真的很、很動聽。\n奧利弗：哼，又一隻可憐蟲。"
   },
   {
     "id": 10507,
     "charId": 3103,
     "name": "閒談・他人偶遇 其二",
-    "res": "vo_companio_02",
+    "res": "char_Yeer_vo_companio_02",
     "text": "榛子……是你的朋友嗎？我也有很好的朋友，他像榛、榛子一樣可靠。\n奧利弗：你罵誰呢？"
   },
   {
     "id": 10508,
     "charId": 3103,
     "name": "閒談・他人偶遇 其三",
-    "res": "vo_companio_03",
+    "res": "char_Yeer_vo_companio_03",
     "text": "耶爾：唔啊……你、你不要生氣，我的炸彈實驗都是符！符符符符合安全規定的……"
   },
   {
     "id": 10509,
     "charId": 3103,
     "name": "準備就緒",
-    "res": "vo_appear",
+    "res": "char_Yeer_vo_appear",
     "text": "耶爾：戰鬥的事，奧利弗應該比......比比我更擅長吧……"
   },
   {
     "id": 10510,
     "charId": 3103,
     "name": "精進",
-    "res": "vo_lvup",
+    "res": "char_Yeer_vo_lvup",
     "text": "耶爾：嗯嗯！奧利弗，我們兩個一起成長了哦。"
   },
   {
     "id": 10511,
     "charId": 3103,
     "name": "戰鬥開始·其一",
-    "res": "vo_battlestart_r01",
+    "res": "char_Yeer_vo_battlestart_r01",
     "text": "奧利弗：哈……好新鮮的空氣。"
   },
   {
     "id": 10512,
     "charId": 3103,
     "name": "戰鬥開始·其二",
-    "res": "vo_battlestart_r02",
+    "res": "char_Yeer_vo_battlestart_r02",
     "text": "耶爾：實驗開始了，要、要注意安全。"
   },
   {
     "id": 10513,
     "charId": 3103,
     "name": "空暇",
-    "res": "vo_battleidle",
+    "res": "char_Yeer_vo_battleidle",
     "text": "奧利弗：喂，別愣著，快找點架打。\n耶爾：噓，我們要服從安排。"
   },
   {
     "id": 10514,
     "charId": 3103,
     "name": "受傷·其一",
-    "res": "vo_be_hit_heavy_r01",
+    "res": "char_Yeer_vo_be_hit_heavy_r01",
     "text": "（奧利弗）給我等著。"
   },
   {
     "id": 10515,
     "charId": 3103,
     "name": "受傷·其二",
-    "res": "vo_be_hit_heavy_r02",
+    "res": "char_Yeer_vo_be_hit_heavy_r02",
     "text": "（耶爾）別、別打！"
   },
   {
     "id": 10516,
     "charId": 3103,
     "name": "釋放技能·其一",
-    "res": "vo_skill01_r01",
+    "res": "char_Yeer_vo_skill01_r01",
     "text": "（奧利弗）轟——！"
   },
   {
     "id": 10517,
     "charId": 3103,
     "name": "釋放技能·其二",
-    "res": "vo_skill01_r02",
+    "res": "char_Yeer_vo_skill01_r02",
     "text": "（耶爾）「小可愛」，上、上吧！"
   },
   {
     "id": 10518,
     "charId": 3103,
     "name": "釋放終結技·其一",
-    "res": "vo_skill02_r01",
+    "res": "char_Yeer_vo_skill02_r01",
     "text": "（奧利弗）讓你們久等了！"
   },
   {
     "id": 10519,
     "charId": 3103,
     "name": "釋放終結技·其二",
-    "res": "vo_skill02_r02",
+    "res": "char_Yeer_vo_skill02_r02",
     "text": "（奧利弗）享用本天才最偉大的傑作！"
   },
   {
     "id": 10520,
     "charId": 3103,
     "name": "釋放終結技·其三",
-    "res": "vo_skill02_r03",
+    "res": "char_Yeer_vo_skill02_r03",
     "text": "（奧利弗）耳朵捂好了，嘭！"
   },
   {
     "id": 10521,
     "charId": 3103,
     "name": "無法行動·其一",
-    "res": "vo_die_r01",
+    "res": "char_Yeer_vo_die_r01",
     "text": "（奧利弗）耶爾……也會痛吧……"
   },
   {
     "id": 10522,
     "charId": 3103,
     "name": "無法行動·其二",
-    "res": "vo_die_r02",
+    "res": "char_Yeer_vo_die_r02",
     "text": "（耶爾）沒關係的，奧利弗。我陪你一起……"
   },
   {
     "id": 10523,
     "charId": 3103,
     "name": "復甦",
-    "res": "vo_revive",
+    "res": "char_Yeer_vo_revive",
     "text": "（奧利弗）剛才是哪個混蛋幹的？"
   },
   {
     "id": 10524,
     "charId": 3103,
     "name": "勝利",
-    "res": "vo_victory",
+    "res": "char_Yeer_vo_victory",
     "text": "（奧利弗）最偉大的藝術，你們感受到了嗎？"
   },
   {
     "id": 10525,
     "charId": 3103,
     "name": "敗退",
-    "res": "vo_fail",
+    "res": "char_Yeer_vo_fail",
     "text": "（奧利弗）哼，下次，一個都跑不掉。"
   },
   {
     "id": 10526,
     "charId": 3103,
     "name": "生日祝福",
-    "res": "vo_birthday",
+    "res": "char_Yeer_vo_birthday",
     "text": "耶爾：生日快樂！我……我本來是準備了禮物的，是新型號的“小可愛”，我還在上面畫了我們兩個並肩作戰的樣子……\n耶爾：但每次畫上去奧利弗都要搶著擦掉……最後就……爆炸。唔，我保證今天再給你造一個！\n奧利弗：別丟人了，耶爾。你那糟糕的品味，就像畫了兩個半死不活的穢獸！聽我的，讓本天才來畫個“炸彈戰神”上去，讓{nickname}看看什麼叫大藝術家！"
   },
   {
     "id": 10527,
     "charId": 3201,
     "name": "初見",
-    "res": "vo_gain",
+    "res": "char_Haier_vo_gain",
     "text": "是你？帝國的逃犯，既然你主動送上門來，那就準備好承受被灼傷的苦楚吧。我，「煉火的海爾法」，會親手讓你嘗嘗地獄是什麽滋味！"
   },
   {
     "id": 10528,
     "charId": 3201,
     "name": "致候",
-    "res": "vo_welcome",
+    "res": "char_Haier_vo_welcome",
     "text": "今天準備好接受拷問了嗎？！"
   },
   {
     "id": 10529,
     "charId": 3201,
     "name": "閒談・關於膚色·其一",
-    "res": "vo_topic_01_1",
+    "res": "char_Haier_vo_topic_01_1",
     "text": "如果你熟讀歷史的話，就會知道，皇家軍事監獄的初代典獄長也有著熔巖一般的皮膚，再兇惡的罪徒也會畏懼她的拷問。"
   },
   {
     "id": 10530,
     "charId": 3201,
     "name": "閒談・關於膚色·其二",
-    "res": "vo_topic_01_2",
+    "res": "char_Haier_vo_topic_01_2",
     "text": "而我，作為她的後代，繼承了她的名號，同樣會用煉火將一切罪行燒成爐灰。"
   },
   {
     "id": 10531,
     "charId": 3201,
     "name": "閒談・關於膚色·其三",
-    "res": "vo_topic_01_3",
+    "res": "char_Haier_vo_topic_01_3",
     "text": "有一些影響，我只能睡在鐵製的床上，也不能在木頭屋子裡待上太久。但與之相對地，我能在火場裡把罪犯帶出來讓他們直面法律，也從不怕冷。"
   },
   {
     "id": 10532,
     "charId": 3201,
     "name": "閒談・關於膚色·其四",
-    "res": "vo_topic_01_4",
+    "res": "char_Haier_vo_topic_01_4",
     "text": "異於常人的外表於我而言，更像是一份饋贈，非要說有什麽不方便的……我一直想嘗一嘗那種叫做冰激淩的甜品，但它總是在我手上就化掉了……"
   },
   {
     "id": 10533,
     "charId": 3201,
     "name": "閒談・關於願望·其一",
-    "res": "vo_topic_02_1",
+    "res": "char_Haier_vo_topic_02_1",
     "text": "從帝國誕生起，我的家族就世代執掌著關押罪大惡極的犯人們的牢獄，理清冤罪，或是斬除禍患。"
   },
   {
     "id": 10534,
     "charId": 3201,
     "name": "閒談・關於願望·其二",
-    "res": "vo_topic_02_2",
+    "res": "char_Haier_vo_topic_02_2",
     "text": "而我與生俱來和先祖同樣的火紅膚色，就注定了我要拿起她留下的鐵鑄法典。所以並非是我選擇成為典獄長，而是典獄長的頭銜選擇了我。"
   },
   {
     "id": 10535,
     "charId": 3201,
     "name": "閒談・關於願望·其三",
-    "res": "vo_topic_02_3",
+    "res": "char_Haier_vo_topic_02_3",
     "text": "成為典獄長並非願望的終點，相反，這只是一個開始，它意味著我需要時刻保持戒備和警醒一一斬除帝國土地上孳生的任何不義，直到死亡將我熄滅。"
   },
   {
     "id": 10536,
     "charId": 3201,
     "name": "閒談・關於工作·其一",
-    "res": "vo_topic_03_1",
+    "res": "char_Haier_vo_topic_03_1",
     "text": "那當然，帝國監獄裡多的是難纏的犯人，審訊案件、查閱卷宗、防止那些狡猾的老鼠設法逃走都是典獄長的職責所在。"
   },
   {
     "id": 10537,
     "charId": 3201,
     "name": "閒談・關於工作·其二",
-    "res": "vo_topic_03_2",
+    "res": "char_Haier_vo_topic_03_2",
     "text": "每休息一分，都會讓正義遲到一分——而當正義遲遲不來時，混亂與弱肉強食就會代替法條成為新的規則。"
   },
   {
     "id": 10538,
     "charId": 3201,
     "name": "閒談・關於工作·其三",
-    "res": "vo_topic_03_3",
+    "res": "char_Haier_vo_topic_03_3",
     "text": "確實有學者設想過沒有罪犯的世界。如果真的有那天，我也將不復存在，因為正是罪惡造就了典獄長。但是在那之前，我會盡力維護好現存的秩序。"
   },
   {
     "id": 10539,
     "charId": 3201,
     "name": "閒談・關於正義·其一",
-    "res": "vo_topic_04_1",
+    "res": "char_Haier_vo_topic_04_1",
     "text": "正義？正義是權力約束慾望，力量桎梏罪孽，強者鞭撻惡徒。"
   },
   {
     "id": 10540,
     "charId": 3201,
     "name": "閒談・關於正義·其二",
-    "res": "vo_topic_04_2",
+    "res": "char_Haier_vo_topic_04_2",
     "text": "哼，絕對？不然呢，天真的小朋友，難道指望人人都手拉手過家家？絕對的力量、絕對的秩序，這就是我的正義！"
   },
   {
     "id": 10541,
     "charId": 3201,
     "name": "閒談・關於愛好·其一",
-    "res": "vo_topic_05_1",
+    "res": "char_Haier_vo_topic_05_1",
     "text": "帝國的罪犯還在滿大街地跑，身為典獄長哪有什麽閑暇時間。只能在忙裡偷閒的時候，喝幾杯烈酒。"
   },
   {
     "id": 10542,
     "charId": 3201,
     "name": "閒談・關於愛好·其二",
-    "res": "vo_topic_05_2",
+    "res": "char_Haier_vo_topic_05_2",
     "text": "怎麽，很驚訝？消遣而已：審訊時總會聽到各種酒的名字，就開始好奇，這到底是什麽邪惡藥水，總是和犯罪沾邊，於是偶爾會來上一些。"
   },
   {
     "id": 10543,
     "charId": 3201,
     "name": "閒談・關於愛好·其三",
-    "res": "vo_topic_05_3",
+    "res": "char_Haier_vo_topic_05_3",
     "text": "喝得越多，我越是確信，邪惡的並不是酒。"
   },
   {
     "id": 10544,
     "charId": 3201,
     "name": "獨白",
-    "res": "vo_idle",
+    "res": "char_Haier_vo_idle",
     "text": "真是愜意自得……不害怕我的煉火嗎？哈，無知的螻蟻，或許把你踩在腳下時你才會後悔。"
   },
   {
     "id": 10545,
     "charId": 3201,
     "name": "閒談・他人偶遇 其一",
-    "res": "vo_companio_01",
+    "res": "char_Haier_vo_companio_01",
     "text": "典獄長和軍團長，都是帝國「黑暗」秩序的維護者。我們心狠手辣、聲名狼藉——但是為了海伯利亞，這點惡名又算得上什麽？！"
   },
   {
     "id": 10546,
     "charId": 3201,
     "name": "閒談・他人偶遇 其二",
-    "res": "vo_companio_02",
+    "res": "char_Haier_vo_companio_02",
     "text": "又是你。"
   },
   {
     "id": 10547,
     "charId": 3201,
     "name": "閒談・他人偶遇 其三",
-    "res": "vo_companio_03",
+    "res": "char_Haier_vo_companio_03",
     "text": "嘖，西比爾的副官……那個總被指責不盡職的傢伙，對吧？可惜，你那些隱藏實力的拙劣技巧瞞不過我的眼睛！藏匿鋒芒混跡在軍團長身邊，你到底有什麽居心？！"
   },
   {
     "id": 10548,
     "charId": 3201,
     "name": "準備就緒",
-    "res": "vo_appear",
+    "res": "char_Haier_vo_appear",
     "text": "罪徒呢，他們在哪裡？"
   },
   {
     "id": 10549,
     "charId": 3201,
     "name": "精進",
-    "res": "vo_lvup",
+    "res": "char_Haier_vo_lvup",
     "text": "不錯……哼，烈火愈發滾燙了。"
   },
   {
     "id": 10550,
     "charId": 3201,
     "name": "戰鬥開始",
-    "res": "vo_battlestart",
+    "res": "char_Haier_vo_battlestart",
     "text": "燒卻所有罪行！"
   },
   {
     "id": 10551,
     "charId": 3201,
     "name": "空暇",
-    "res": "vo_battleidle",
+    "res": "char_Haier_vo_battleidle",
     "text": "膽怯了？還以為你和其他的囚犯不同，真令人失望。"
   },
   {
     "id": 10552,
     "charId": 3201,
     "name": "受傷·其一",
-    "res": "vo_be_hit_heavy_r01",
+    "res": "char_Haier_vo_be_hit_heavy_r01",
     "text": "罪徒！"
   },
   {
     "id": 10553,
     "charId": 3201,
     "name": "受傷·其二",
-    "res": "vo_be_hit_heavy_r02",
+    "res": "char_Haier_vo_be_hit_heavy_r02",
     "text": "穩住！"
   },
   {
     "id": 10554,
     "charId": 3201,
     "name": "釋放技能·其一",
-    "res": "vo_skill01_r01",
+    "res": "char_Haier_vo_skill01_r01",
     "text": "燃燒吧！"
   },
   {
     "id": 10555,
     "charId": 3201,
     "name": "釋放技能·其二",
-    "res": "vo_skill01_r02",
+    "res": "char_Haier_vo_skill01_r02",
     "text": "感受恐懼！"
   },
   {
     "id": 10556,
     "charId": 3201,
     "name": "釋放終結技·其一",
-    "res": "vo_skill02_r01",
+    "res": "char_Haier_vo_skill02_r01",
     "text": "接受烈火的拷問！"
   },
   {
     "id": 10557,
     "charId": 3201,
     "name": "釋放終結技·其二",
-    "res": "vo_skill02_r02",
+    "res": "char_Haier_vo_skill02_r02",
     "text": "罪不容誅！"
   },
   {
     "id": 10558,
     "charId": 3201,
     "name": "釋放終結技·其三",
-    "res": "vo_skill02_r03",
+    "res": "char_Haier_vo_skill02_r03",
     "text": "細數你的罪惡！"
   },
   {
     "id": 10559,
     "charId": 3201,
     "name": "無法行動·其一",
-    "res": "vo_die_r01",
+    "res": "char_Haier_vo_die_r01",
     "text": "為了帝國的秩序……"
   },
   {
     "id": 10560,
     "charId": 3201,
     "name": "無法行動·其二",
-    "res": "vo_die_r02",
+    "res": "char_Haier_vo_die_r02",
     "text": "我……不怕……地獄……"
   },
   {
     "id": 10561,
     "charId": 3201,
     "name": "復甦",
-    "res": "vo_revive",
+    "res": "char_Haier_vo_revive",
     "text": "人間的罪惡，更甚地獄百倍！"
   },
   {
     "id": 10562,
     "charId": 3201,
     "name": "勝利",
-    "res": "vo_victory",
+    "res": "char_Haier_vo_victory",
     "text": "這點炙熱就經受不住了嗎？不如下次我灼燒得更痛一點！"
   },
   {
     "id": 10563,
     "charId": 3201,
     "name": "敗退",
-    "res": "vo_fail",
+    "res": "char_Haier_vo_fail",
     "text": "這份邪惡，我必將在未來鏟除！"
   },
   {
     "id": 10564,
     "charId": 3201,
     "name": "生日祝福",
-    "res": "vo_birthday",
+    "res": "char_Haier_vo_birthday",
     "text": "生日？守護秩序的人不需要這些可笑的儀式！\n哈，得到祝福能讓你高興嗎？真是容易滿足的人……嘖，生日快樂。那今天就破例陪你喝兩杯吧，僅此一天。"
   },
   {
     "id": 10565,
     "charId": 1502,
     "name": "初見",
-    "res": "vo_gain",
+    "res": "char_Nifu_vo_gain",
     "text": "我是霧海引渡人，妮弗爾。不必懼怕，此處不是通向霧海之河，你也並非亡靈。請僅僅當我是一個過客吧，亦或是一位見證者。"
   },
   {
     "id": 10566,
     "charId": 1502,
     "name": "致候",
-    "res": "vo_welcome",
+    "res": "char_Nifu_vo_welcome",
     "text": "是你呀，親愛的孩子。日安，有什麼事想要講給我聽嗎？"
   },
   {
     "id": 10567,
     "charId": 1502,
     "name": "閒談・關於故鄉·其一",
-    "res": "vo_topic_01_1",
+    "res": "char_Nifu_vo_topic_01_1",
     "text": "是的，在漫長的時間中，我在阿特拉西亞的各處旅行——或者流浪。我用雙足丈量過這片土地的每一寸刻度，也用手指摩挲過它的每一縷紋理。"
   },
   {
     "id": 10568,
     "charId": 1502,
     "name": "閒談・關於故鄉·其二",
-    "res": "vo_topic_01_2",
+    "res": "char_Nifu_vo_topic_01_2",
     "text": "如果你走過足夠多的地方，會覺得各處的風景並無太多差別。北境的飛雪，赫墨的砂礫，或者華胥的炊煙，無非也是另一種林間的薄霧而已。"
   },
   {
     "id": 10569,
     "charId": 1502,
     "name": "閒談・關於故鄉·其三",
-    "res": "vo_topic_01_3",
+    "res": "char_Nifu_vo_topic_01_3",
     "text": "如果一定要說個地方的話……那便是伊瑟爾的群山和林地。那裡的氣息最讓我感到安心。"
   },
   {
     "id": 10570,
     "charId": 1502,
     "name": "閒談・關於故鄉·其四",
-    "res": "vo_topic_01_4",
+    "res": "char_Nifu_vo_topic_01_4",
     "text": "好啊。"
   },
   {
     "id": 10571,
     "charId": 1502,
     "name": "閒談・關於故鄉·其五",
-    "res": "vo_topic_01_5",
+    "res": "char_Nifu_vo_topic_01_5",
     "text": "若有一天你去翡翠森林，請幫我帶一束白堇致候吧。在那裡長眠的啊，是我的友人、我的孩子、以及少時的我。"
   },
   {
     "id": 10572,
     "charId": 1502,
     "name": "閒談・關於霧海·其一",
-    "res": "vo_topic_02_1",
+    "res": "char_Nifu_vo_topic_02_1",
     "text": "霧海是一切生者的來處與歸途。萬物歸於霧海，霧海又孕育新的萬物……就像死去的雲滴落泥土，鮮花又自泥土中盛開。"
   },
   {
     "id": 10573,
     "charId": 1502,
     "name": "閒談・關於霧海·其二",
-    "res": "vo_topic_02_2",
+    "res": "char_Nifu_vo_topic_02_2",
     "text": "我想是的。終有一天，你會前往霧海，前往茵布拉女神的懷抱。"
   },
   {
     "id": 10574,
     "charId": 1502,
     "name": "閒談・關於霧海·其三",
-    "res": "vo_topic_02_3",
+    "res": "char_Nifu_vo_topic_02_3",
     "text": "孩子，請你愛著生的一切，亦不要畏懼消亡。消亡並非苦痛，只是生命必經的終點。"
   },
   {
     "id": 10575,
     "charId": 1502,
     "name": "閒談・關於霧海·其四",
-    "res": "vo_topic_02_4",
+    "res": "char_Nifu_vo_topic_02_4",
     "text": "若你累了，就在我的臂彎中安歇片刻吧……別害怕，這不會是永眠。現在的你，還有太多未竟之事。"
   },
   {
     "id": 10576,
     "charId": 1502,
     "name": "閒談・關於戰鬥·其一",
-    "res": "vo_topic_03_1",
+    "res": "char_Nifu_vo_topic_03_1",
     "text": "怎麼，這很讓你驚訝嗎？實不相瞞，在昔日「大遷徙」時，我還曾是一位在前線衝鋒陷陣的戰士，一位格鬥的好手。"
   },
   {
     "id": 10577,
     "charId": 1502,
     "name": "閒談・關於戰鬥·其二",
-    "res": "vo_topic_03_2",
+    "res": "char_Nifu_vo_topic_03_2",
     "text": "雖說那是十分遙遠的過去，但基本的戰鬥技巧，我大體都還記得。"
   },
   {
     "id": 10578,
     "charId": 1502,
     "name": "閒談・關於戰鬥·其三",
-    "res": "vo_topic_03_3",
+    "res": "char_Nifu_vo_topic_03_3",
     "text": "在旅途中，我也會時不時要與盤桓的獸群搏鬥，它們也曾帶給我爪痕，淤傷，甚至理當的死亡。"
   },
   {
     "id": 10579,
     "charId": 1502,
     "name": "閒談・關於戰鬥·其四",
-    "res": "vo_topic_03_4",
+    "res": "char_Nifu_vo_topic_03_4",
     "text": "亙古的月亮尚且每天都在變幻，人類當然更加複雜。更何況如我一般，經歷過數倍於常人歲月的人呢？"
   },
   {
     "id": 10580,
     "charId": 1502,
     "name": "閒談・關於戰鬥·其五",
-    "res": "vo_topic_03_5",
+    "res": "char_Nifu_vo_topic_03_5",
     "text": "若是你對這段過往有興趣，改日我細細說於你聽吧。"
   },
   {
     "id": 10581,
     "charId": 1502,
     "name": "閒談・關於朋友·其一",
-    "res": "vo_topic_04_1",
+    "res": "char_Nifu_vo_topic_04_1",
     "text": "「朋友」……以人們對這二字的通常定義來看，我有過很多朋友。"
   },
   {
     "id": 10582,
     "charId": 1502,
     "name": "閒談・關於朋友·其二",
-    "res": "vo_topic_04_2",
+    "res": "char_Nifu_vo_topic_04_2",
     "text": "不過，提起這個詞，我最先想到的還是萊克西斯和艾瑞卡——就是帶我離開艾利西安的那兩位朋友。"
   },
   {
     "id": 10583,
     "charId": 1502,
     "name": "閒談・關於朋友·其三",
-    "res": "vo_topic_04_3",
+    "res": "char_Nifu_vo_topic_04_3",
     "text": "在後世的史書和英雄故事裡，他們通常被描述成揭下神明蒙昧的紗幕、將真理帶給人們的「智者」，以及為了智者崇奉的真理而犧牲的「英雄」……"
   },
   {
     "id": 10584,
     "charId": 1502,
     "name": "閒談・關於朋友·其四",
-    "res": "vo_topic_04_4",
+    "res": "char_Nifu_vo_topic_04_4",
     "text": "但我常常回憶起他們還僅僅是「萊克西斯」和「艾瑞卡」的時候。"
   },
   {
     "id": 10585,
     "charId": 1502,
     "name": "閒談・關於朋友·其五",
-    "res": "vo_topic_04_5",
+    "res": "char_Nifu_vo_topic_04_5",
     "text": "那時艾瑞卡是個勇敢活潑的姑娘，大家都很喜歡她。萊克西斯雖然頭腦很聰明，但有時候太較真，經常突然陷入沉思，所以反而會顯得有些遲鈍。"
   },
   {
     "id": 10586,
     "charId": 1502,
     "name": "閒談・關於朋友·其六",
-    "res": "vo_topic_04_6",
+    "res": "char_Nifu_vo_topic_04_6",
     "text": "嗯……有一次，萊克西斯為了某件事去給艾瑞卡道歉，艾瑞卡便隨口指著士兵們用來練箭的靶子說，他要是能射中紅心就原諒他……"
   },
   {
     "id": 10587,
     "charId": 1502,
     "name": "閒談・關於朋友·其七",
-    "res": "vo_topic_04_7",
+    "res": "char_Nifu_vo_topic_04_7",
     "text": "當然，這是一句氣話。連士兵都不是每個人都做得到，更何況萊克西斯的雙手並不是用來握劍，而是用來書寫靈智與真理的。"
   },
   {
     "id": 10588,
     "charId": 1502,
     "name": "閒談・關於朋友·其八",
-    "res": "vo_topic_04_8",
+    "res": "char_Nifu_vo_topic_04_8",
     "text": "但他卻把這話當真了，趁士兵們歇息之後，一個人練習了一晚上。"
   },
   {
     "id": 10589,
     "charId": 1502,
     "name": "閒談・關於朋友·其九",
-    "res": "vo_topic_04_9",
+    "res": "char_Nifu_vo_topic_04_9",
     "text": "當然，歷史不是英雄傳說。即使是聰慧如萊克西斯，也有學不會的事。他一直練習到手心被磨出血，艾瑞卡為他包上麻布，也沒能射中靶心。"
   },
   {
     "id": 10590,
     "charId": 1502,
     "name": "閒談・關於朋友·其十",
-    "res": "vo_topic_04_10",
+    "res": "char_Nifu_vo_topic_04_10",
     "text": "呵呵……最開始他們到底是為了什麼吵架，我反而記不起來了。真是奇怪……現在回憶有關他們的事，最先浮現的總是這些微不足道的細節。"
   },
   {
     "id": 10591,
     "charId": 1502,
     "name": "閒談・關於朋友·其十一",
-    "res": "vo_topic_04_11",
+    "res": "char_Nifu_vo_topic_04_11",
     "text": "嗯，是啊。那確實是……非常、非常快樂的日子。只是，已經是很久很久以前的事了。"
   },
   {
     "id": 10592,
     "charId": 1502,
     "name": "獨白",
-    "res": "vo_idle",
+    "res": "char_Nifu_vo_idle",
     "text": "在這紛爭的土地上，能擁有這麼一方安寧天地，享受片刻放鬆的時光，也不錯。"
   },
   {
     "id": 10593,
     "charId": 1502,
     "name": "閒談・他人偶遇 其一",
-    "res": "vo_companio_01",
+    "res": "char_Nifu_vo_companio_01",
     "text": "人無法真正逃離自己的過去。總有一天，你會需要面對它們……希望到那時，你已經獲得了足夠與之對抗的力量。"
   },
   {
     "id": 10594,
     "charId": 1502,
     "name": "閒談・他人偶遇 其二",
-    "res": "vo_companio_02",
+    "res": "char_Nifu_vo_companio_02",
     "text": "姑娘，你身上有股熟悉的氣息，莫不是與我同為舊日之人？"
   },
   {
     "id": 10597,
     "charId": 1502,
     "name": "準備就緒",
-    "res": "vo_appear",
+    "res": "char_Nifu_vo_appear",
     "text": "我會盡綿薄之力。"
   },
   {
     "id": 10598,
     "charId": 1502,
     "name": "精進",
-    "res": "vo_lvup",
+    "res": "char_Nifu_vo_lvup",
     "text": "如每個春天，野草破土，樹木綻出新枝。"
   },
   {
     "id": 10599,
     "charId": 1502,
     "name": "戰鬥開始",
-    "res": "vo_battlestart",
+    "res": "char_Nifu_vo_battlestart",
     "text": "我於生之河的此岸守望。"
   },
   {
     "id": 10600,
     "charId": 1502,
     "name": "空暇",
-    "res": "vo_battleidle",
+    "res": "char_Nifu_vo_battleidle",
     "text": "若是累了，不必勉強自己，在此處稍事休息吧。"
   },
   {
     "id": 10601,
     "charId": 1502,
     "name": "受傷·其一",
-    "res": "vo_be_hit_heavy_r01",
+    "res": "char_Nifu_vo_be_hit_heavy_r01",
     "text": "……無礙。"
   },
   {
     "id": 10602,
     "charId": 1502,
     "name": "受傷·其二",
-    "res": "vo_be_hit_heavy_r02",
+    "res": "char_Nifu_vo_be_hit_heavy_r02",
     "text": "只需耐心。"
   },
   {
     "id": 10603,
     "charId": 1502,
     "name": "釋放技能·其一",
-    "res": "vo_skill01_r01",
+    "res": "char_Nifu_vo_skill01_r01",
     "text": "生死流轉。"
   },
   {
     "id": 10604,
     "charId": 1502,
     "name": "釋放技能·其二",
-    "res": "vo_skill01_r02",
+    "res": "char_Nifu_vo_skill01_r02",
     "text": "暮往晝來。"
   },
   {
     "id": 10605,
     "charId": 1502,
     "name": "釋放終結技·其一",
-    "res": "vo_skill02_r01",
+    "res": "char_Nifu_vo_skill02_r01",
     "text": "如茵布拉慈愛的淚水。"
   },
   {
     "id": 10606,
     "charId": 1502,
     "name": "釋放終結技·其二",
-    "res": "vo_skill02_r02",
+    "res": "char_Nifu_vo_skill02_r02",
     "text": "如每條河流歸於霧海。"
   },
   {
     "id": 10607,
     "charId": 1502,
     "name": "釋放終結技·其三",
-    "res": "vo_skill02_r03",
+    "res": "char_Nifu_vo_skill02_r03",
     "text": "迷路的靈魂啊，請靜聽我的指引。"
   },
   {
     "id": 10608,
     "charId": 1502,
     "name": "無法行動·其一",
-    "res": "vo_die_r01",
+    "res": "char_Nifu_vo_die_r01",
     "text": "沒事的，像每一次一樣，很快就會……"
   },
   {
     "id": 10609,
     "charId": 1502,
     "name": "無法行動·其二",
-    "res": "vo_die_r02",
+    "res": "char_Nifu_vo_die_r02",
     "text": "只需享受這片刻沉眠。"
   },
   {
     "id": 10610,
     "charId": 1502,
     "name": "復甦",
-    "res": "vo_revive",
+    "res": "char_Nifu_vo_revive",
     "text": "終究還是不能離去"
   },
   {
     "id": 10611,
     "charId": 1502,
     "name": "勝利",
-    "res": "vo_victory",
+    "res": "char_Nifu_vo_victory",
     "text": "流向霧海的靈魂，將在她的懷抱中，乘著新生的雨，匯入下一條不息的河。"
   },
   {
     "id": 10612,
     "charId": 1502,
     "name": "敗退",
-    "res": "vo_fail",
+    "res": "char_Nifu_vo_fail",
     "text": "無妨，勝敗只是一時，重振旗鼓從頭再來便是。"
   },
   {
     "id": 10613,
     "charId": 1502,
     "name": "生日祝福",
-    "res": "vo_birthday",
+    "res": "char_Nifu_vo_birthday",
     "text": "孩子，你又平安度過了一歲，我由衷為你感到高興。\n來，許個願望吧。在你這個年紀，應當對未來多些渴望和期待才是。\n沒有河流會永遠風平浪靜。但即使被荊棘所傷，被迷途所惑，我仍希望你可以勇敢地前行下去，並在未來靠岸的時候，能愛著你行過的航路。\n若是感到迷惘無助，或是只是想聽聽故事，便隨時來我的懷抱吧。我將為你祈禱，為你祝福……永遠。"
   },
   {
     "id": 10614,
     "charId": 4101,
     "name": "初見·其一",
-    "res": "vo_gain_01",
+    "res": "char_Lise_vo_gain_01",
     "text": "海伯利亞帝國第六軍團下屬，冰湖城衛戍部隊準尉黎瑟·費西爾。你找我有什麼事？如果確實是無法解決的困難，也許我可以幫你——當然，以私人名義。"
   },
   {
     "id": 10615,
     "charId": 4101,
     "name": "初見·其二",
-    "res": "vo_gain_02",
+    "res": "char_Lise_vo_gain_02",
     "text": "是，長官。黎瑟·費西爾向您報告——啊，是你……抱歉，我又忘了，我現在已經不是衛戍部隊的一員了……抱歉。"
   },
   {
     "id": 10616,
     "charId": 4101,
     "name": "致候",
-    "res": "vo_welcome",
+    "res": "char_Lise_vo_welcome",
     "text": "今日據點巡邏結束。未發現危險生物，未發現牆壁開裂，未發現可疑記號，潛在威脅排除，可照例進行日常生活，報告完畢。"
   },
   {
     "id": 10617,
     "charId": 4101,
     "name": "閒談・關於口琴Ⅰ·其一",
-    "res": "vo_topic_01_1",
+    "res": "char_Lise_vo_topic_01_1",
     "text": "呃……你注意到了啊，我是有一把親人留下的口琴。好好地鎖了起來，但又總擔心它會突然消失不見，所以會時不時，忍不住地去確認一下。"
   },
   {
     "id": 10618,
     "charId": 4101,
     "name": "閒談・關於口琴Ⅰ·其二",
-    "res": "vo_topic_01_2",
+    "res": "char_Lise_vo_topic_01_2",
     "text": "其實只會一首，還是親人教給我的。我學得也不是很快，因為實在不擅長音樂這樣需要情緒起伏的東西……"
   },
   {
     "id": 10619,
     "charId": 4101,
     "name": "閒談・關於口琴Ⅰ·其三",
-    "res": "vo_topic_01_3",
+    "res": "char_Lise_vo_topic_01_3",
     "text": "不過，每當我太過緊張或者太過開心的時候，總會暗暗握住它，這能讓我想到很多我確信的事，反而能夠讓我冷靜一些。"
   },
   {
     "id": 10620,
     "charId": 4101,
     "name": "閒談・關於口琴Ⅰ·其四",
-    "res": "vo_topic_01_4",
+    "res": "char_Lise_vo_topic_01_4",
     "text": "我的許多同僚會因為壓力而去找醫生，需要鎮定或者興奮。我不需要那些，心跳快一拍也好慢一拍也罷，口琴會幫找回正常的節拍。"
   },
   {
     "id": 10621,
     "charId": 4101,
     "name": "閒談・關於軍團Ⅰ·其一",
-    "res": "vo_topic_02_1",
+    "res": "char_Lise_vo_topic_02_1",
     "text": "還不錯，軍團是一個只要努力就能獲得回報的地方。我現在受到了認可，擁有幾名部下，我還可以命令他們一定要平等對待卡戎之民和索拉之民。"
   },
   {
     "id": 10622,
     "charId": 4101,
     "name": "閒談・關於軍團Ⅰ·其二",
-    "res": "vo_topic_02_2",
+    "res": "char_Lise_vo_topic_02_2",
     "text": "我聽過許多人抱怨甚至謾罵軍團對於卡戎之民過度嚴苛，而我能盡可能去緩和這些聲音……我希望日子久了，可以讓大家眼裡的軍團變得有那麼一點點不一樣。"
   },
   {
     "id": 10623,
     "charId": 4101,
     "name": "閒談・關於軍團Ⅰ·其三",
-    "res": "vo_topic_02_3",
+    "res": "char_Lise_vo_topic_02_3",
     "text": "會慢慢多起來的，在更早之前軍團裡連一個卡戎都沒有呢。我雖然能做的不多，但是只要我堅持這樣教導部下，那麼卡戎之民和索拉之民的矛盾就會變少。"
   },
   {
     "id": 10624,
     "charId": 4101,
     "name": "閒談・關於軍團Ⅰ·其四",
-    "res": "vo_topic_02_4",
+    "res": "char_Lise_vo_topic_02_4",
     "text": "是的，平等對待所有人，努力保護大家遠離穢獸和穢蝕的威脅，就一定能讓卡戎們的境遇好上一些，冰湖城裡的嘆氣聲也能少一些。"
   },
   {
     "id": 10625,
     "charId": 4101,
     "name": "閒談・關於職責·其一",
-    "res": "vo_topic_03_1",
+    "res": "char_Lise_vo_topic_03_1",
     "text": "談不上負責，我只是嚴格遵守了衛戍部隊規章的所有內容而已。"
   },
   {
     "id": 10626,
     "charId": 4101,
     "name": "閒談・關於職責·其二",
-    "res": "vo_topic_03_2",
+    "res": "char_Lise_vo_topic_03_2",
     "text": "規章規定不允許隨意討論同僚的言行，否則會被視為違背軍紀。"
   },
   {
     "id": 10627,
     "charId": 4101,
     "name": "閒談・關於職責·其三",
-    "res": "vo_topic_03_3",
+    "res": "char_Lise_vo_topic_03_3",
     "text": "不過實話說，我不理解他們是怎麼想的，可能覺得衛戍部隊就只是一份普通的工作，只要不被上司發現，怎麼胡鬧都無所謂。"
   },
   {
     "id": 10628,
     "charId": 4101,
     "name": "閒談・關於職責·其四",
-    "res": "vo_topic_03_4",
+    "res": "char_Lise_vo_topic_03_4",
     "text": "我覺得，不應該這樣，人應該遵循著固定的規則而活著，否則的話，就會不斷放低對自己的要求，過一天算一天，最後只能和下水道的老鼠混在一起。"
   },
   {
     "id": 10629,
     "charId": 4101,
     "name": "閒談・關於惡魔角·其一",
-    "res": "vo_topic_04_1",
+    "res": "char_Lise_vo_topic_04_1",
     "text": "不用了……抱歉，我不太喜歡照鏡子。畢竟一眼就能看到頭上的角，總覺得有些難受……"
   },
   {
     "id": 10630,
     "charId": 4101,
     "name": "閒談・關於惡魔角·其二",
-    "res": "vo_topic_04_2",
+    "res": "char_Lise_vo_topic_04_2",
     "text": "不，我並非對我們一族的外表自輕自賤。我只是覺得，如果它能長得更規則、更對稱一些，也許會看起來舒服很多。啊，不是，我也沒有在說你的角……"
   },
   {
     "id": 10631,
     "charId": 4101,
     "name": "閒談・關於口琴Ⅱ·其一",
-    "res": "vo_topic_05_1",
+    "res": "char_Lise_vo_topic_05_1",
     "text": "還在，只是它現在變得好沉重，太沉重了……我不知道自己是否還有力氣再次握起它，吹奏下去。"
   },
   {
     "id": 10632,
     "charId": 4101,
     "name": "閒談・關於口琴Ⅱ·其二",
-    "res": "vo_topic_05_2",
+    "res": "char_Lise_vo_topic_05_2",
     "text": "畢竟，這把口琴曾裝載了我全部的期待與夢想。"
   },
   {
     "id": 10633,
     "charId": 4101,
     "name": "閒談・關於口琴Ⅱ·其三",
-    "res": "vo_topic_05_3",
+    "res": "char_Lise_vo_topic_05_3",
     "text": "……我明白了。我答應你，等將來有一天，我能夠再次拿起這把口琴，去學習新曲子的時候……一定第一個吹奏給你聽。"
   },
   {
     "id": 10634,
     "charId": 4101,
     "name": "閒談・關於工作·其一",
-    "res": "vo_topic_06_1",
+    "res": "char_Lise_vo_topic_06_1",
     "text": "我每天都會接到一些零工，夠我一個人日常開銷和吃穿用度。不過，對現在的我來說，工作與其說是為了糊口，不如說是為了工作本身。"
   },
   {
     "id": 10635,
     "charId": 4101,
     "name": "閒談・關於工作·其二",
-    "res": "vo_topic_06_2",
+    "res": "char_Lise_vo_topic_06_2",
     "text": "工作讓我的生活充實無比，工作讓我的心情更加快樂，有工作的日子，太陽都會更暖和一點。"
   },
   {
     "id": 10636,
     "charId": 4101,
     "name": "閒談・關於軍團Ⅱ·其一",
-    "res": "vo_topic_07_1",
+    "res": "char_Lise_vo_topic_07_1",
     "text": "至少比待在裡面要好。軍團曾是我安身的庇護所，是我的夢想所在。但是現在夢想成了謊言，我以為的庇護所是讓家人萬劫不復的地獄……"
   },
   {
     "id": 10637,
     "charId": 4101,
     "name": "閒談・關於軍團Ⅱ·其二",
-    "res": "vo_topic_07_2",
+    "res": "char_Lise_vo_topic_07_2",
     "text": "我無法釋懷家人的仇，可是我也無法對昔日的同僚拔槍相向。我真的不知道……告訴我，我應該怎麼辦才好？"
   },
   {
     "id": 10638,
     "charId": 4101,
     "name": "閒談・關於軍團Ⅱ·其三",
-    "res": "vo_topic_07_3",
+    "res": "char_Lise_vo_topic_07_3",
     "text": "……抱歉，剛才是我失態了。你說得沒錯，我應該自己找出答案，而不是把問題推給你。雖然，這可能還要花上很長的時間吧……"
   },
   {
     "id": 10639,
     "charId": 4101,
     "name": "獨白",
-    "res": "vo_idle",
+    "res": "char_Lise_vo_idle",
     "text": "有沒有什麼任務可以安排給我？不，我並非有多喜歡工作，而是……一種慣性吧。如果無法讓自己忙碌起來，我總覺得坐立難安。"
   },
   {
     "id": 10641,
     "charId": 4101,
     "name": "閒談・他人偶遇 其二",
-    "res": "vo_companio_02",
+    "res": "char_Lise_vo_companio_02",
     "text": "這份計劃書上的安排詳略得當，精確到秒，逐步完成這些安排想必能獲得巨大的滿足感。只是……真的很難把這樣嚴密的計畫與蘭迪長官聯繫起來。"
   },
   {
     "id": 10643,
     "charId": 4101,
     "name": "準備就緒",
-    "res": "vo_appear",
+    "res": "char_Lise_vo_appear",
     "text": "武器、補給、電壓，第十七次檢查完畢，等待命令。"
   },
   {
     "id": 10644,
     "charId": 4101,
     "name": "精進",
-    "res": "vo_lvup",
+    "res": "char_Lise_vo_lvup",
     "text": "無序的電流……應當為誰而鳴？"
   },
   {
     "id": 10645,
     "charId": 4101,
     "name": "戰鬥開始",
-    "res": "vo_battlestart",
+    "res": "char_Lise_vo_battlestart",
     "text": "黎瑟·費西爾已出列，請指示！"
   },
   {
     "id": 10646,
     "charId": 4101,
     "name": "空暇",
-    "res": "vo_battleidle",
+    "res": "char_Lise_vo_battleidle",
     "text": "我不想停下，我需要繼續戰鬥。"
   },
   {
     "id": 10647,
     "charId": 4101,
     "name": "受傷·其一",
-    "res": "vo_be_hit_heavy_r01",
+    "res": "char_Lise_vo_be_hit_heavy_r01",
     "text": "小傷而已。"
   },
   {
     "id": 10648,
     "charId": 4101,
     "name": "釋放技能·其一",
-    "res": "vo_skill01_r01",
+    "res": "char_Lise_vo_skill01_r01",
     "text": "電擊！"
   },
   {
     "id": 10649,
     "charId": 4101,
     "name": "釋放技能·其二",
-    "res": "vo_skill01_r02",
+    "res": "char_Lise_vo_skill01_r02",
     "text": "破碎！"
   },
   {
     "id": 10650,
     "charId": 4101,
     "name": "釋放終結技·其一",
-    "res": "vo_skill02_r01",
+    "res": "char_Lise_vo_skill02_r01",
     "text": "任務即將完成。"
   },
   {
     "id": 10651,
     "charId": 4101,
     "name": "釋放終結技·其二",
-    "res": "vo_skill02_r02",
+    "res": "char_Lise_vo_skill02_r02",
     "text": "電流會讓你們安靜。"
   },
   {
     "id": 10652,
     "charId": 4101,
     "name": "釋放終結技·其三",
-    "res": "vo_skill02_r03",
+    "res": "char_Lise_vo_skill02_r03",
     "text": "因為——我會活下去！"
   },
   {
     "id": 10653,
     "charId": 4101,
     "name": "無法行動·其一",
-    "res": "vo_die_r01",
+    "res": "char_Lise_vo_die_r01",
     "text": "對不起……我失約了……"
   },
   {
     "id": 10654,
     "charId": 4101,
     "name": "無法行動·其二",
-    "res": "vo_die_r02",
+    "res": "char_Lise_vo_die_r02",
     "text": "這樣……也不錯……"
   },
   {
     "id": 10655,
     "charId": 4101,
     "name": "復甦",
-    "res": "vo_revive",
+    "res": "char_Lise_vo_revive",
     "text": "嗯……我答應過，會活下去。"
   },
   {
     "id": 10656,
     "charId": 4101,
     "name": "勝利",
-    "res": "vo_victory",
+    "res": "char_Lise_vo_victory",
     "text": "可惜，這麼快就結束了。下次的任務也讓我來吧，你會獲得戰果，我也有事可做。"
   },
   {
     "id": 10657,
     "charId": 4101,
     "name": "敗退",
-    "res": "vo_fail",
+    "res": "char_Lise_vo_fail",
     "text": "這一次……我還是沒能保護好同伴……"
   },
   {
     "id": 10658,
     "charId": 4101,
     "name": "生日祝福",
-    "res": "vo_birthday",
+    "res": "char_Lise_vo_birthday",
     "text": "生日？我已經很久沒有參加過生日宴會了……小時候，每逢家人過生日，我們都會提前很久開始準備。長大之後，我和弟弟一年到頭都見不上一面，也就沒有興致慶祝什麼生日了。\n我一直想著，等到我們都出人頭地，過上了體面的生活之後，就可以像城裡那些有錢人一樣，辦一場光鮮亮麗的生日宴——水晶吊燈、奶油蛋糕、絲綢禮服……一樣不少。但現在，我們再也沒有這個機會了……\n啊……抱歉！明明是應該慶賀的日子，我卻自顧自地說了這麼多掃興的話……真是對不起，請原諒我！雖然我還做不到慶祝自己的生日，但今天是你的生日，我願意為你送上我最真摯的祝福——希望你能度過開心的一天，和重要的人相聚在一起，留下難忘的、珍貴的回憶。"
   },
   {
     "id": 10659,
     "charId": 1103,
     "name": "初見",
-    "res": "vo_gain",
+    "res": "char_Tuosi_vo_gain",
     "text": "但願我們能在夜色最深沉的時刻相遇，那樣，你便不會因我真實的面容而恐懼得驚叫失聲。"
   },
   {
     "id": 10660,
     "charId": 1103,
     "name": "致候",
-    "res": "vo_welcome",
+    "res": "char_Tuosi_vo_welcome",
     "text": "如今我扮演破碎的囚徒，而你是為我執掌枷鎖的典獄長。"
   },
   {
     "id": 10661,
     "charId": 1103,
     "name": "閒談・關於布魯斯·其一",
-    "res": "vo_topic_01_1",
+    "res": "char_Tuosi_vo_topic_01_1",
     "text": "他是被摔碎的玻璃燈，是灑在汙水溝裡的星星。"
   },
   {
     "id": 10662,
     "charId": 1103,
     "name": "閒談・關於布魯斯·其二",
-    "res": "vo_topic_01_2",
+    "res": "char_Tuosi_vo_topic_01_2",
     "text": "和那些東西一樣，荒誕的惹人發笑，卻又閃閃發亮。"
   },
   {
     "id": 10663,
     "charId": 1103,
     "name": "閒談・關於布魯斯·其三",
-    "res": "vo_topic_01_3",
+    "res": "char_Tuosi_vo_topic_01_3",
     "text": "我們的牢房只隔著一道牆，隔音差得讓人絕望。他就在我看不見的一米之外，一會兒回憶家人，一會兒憧憬未來，一會兒又五音不全地哼起歌。"
   },
   {
     "id": 10664,
     "charId": 1103,
     "name": "閒談・關於布魯斯·其四",
-    "res": "vo_topic_01_4",
+    "res": "char_Tuosi_vo_topic_01_4",
     "text": "有時我甚至恍惚覺得，我不是被關在籠子裡的困獸，而是一個無憂無慮的普通學生，在午後打盹時做了個惡夢，被鄰座聒噪的同學吵醒了。"
   },
   {
     "id": 10665,
     "charId": 1103,
     "name": "閒談・關於布魯斯·其五",
-    "res": "vo_topic_01_5",
+    "res": "char_Tuosi_vo_topic_01_5",
     "text": "……呵，也許吧。"
   },
   {
     "id": 10666,
     "charId": 1103,
     "name": "閒談・關於布魯斯·其六",
-    "res": "vo_topic_01_6",
+    "res": "char_Tuosi_vo_topic_01_6",
     "text": "但「朋友」是一個過於耀眼的詞語，我不配擁有它。或許更應該算是，乾枯河床裡擱淺的兩條魚吧。"
   },
   {
     "id": 10667,
     "charId": 1103,
     "name": "閒談・關於稱呼·其一",
-    "res": "vo_topic_02_1",
+    "res": "char_Tuosi_vo_topic_02_1",
     "text": "為什麼？「帕西法爾」的人生早已落幕。那個名字太遙遠了，遠到我懷疑自己是否曾真的擁有它。"
   },
   {
     "id": 10668,
     "charId": 1103,
     "name": "閒談・關於稱呼·其二",
-    "res": "vo_topic_02_2",
+    "res": "char_Tuosi_vo_topic_02_2",
     "text": "……是嗎？"
   },
   {
     "id": 10669,
     "charId": 1103,
     "name": "閒談・關於稱呼·其三",
-    "res": "vo_topic_02_3",
+    "res": "char_Tuosi_vo_topic_02_3",
     "text": "好吧。既然如此，我會把這最後一場戲一直演下去──為了我最後的、唯一的觀眾。"
   },
   {
     "id": 10670,
     "charId": 1103,
     "name": "閒談・關於稱呼·其四",
-    "res": "vo_topic_02_4",
+    "res": "char_Tuosi_vo_topic_02_4",
     "text": "謝謝你，讓我停駐在你的舞台上。"
   },
   {
     "id": 10671,
     "charId": 1103,
     "name": "閒談・關於心願·其一",
-    "res": "vo_topic_03_1",
+    "res": "char_Tuosi_vo_topic_03_1",
     "text": "多謝你的慷慨。但我的承諾都已兌現，我已經不再有什麼值得眷念的事。"
   },
   {
     "id": 10672,
     "charId": 1103,
     "name": "閒談・關於心願·其二",
-    "res": "vo_topic_03_3",
+    "res": "char_Tuosi_vo_topic_03_3",
     "text": "若你有一天在蓋雷亞劇院遇到我的恩師薇奧萊塔女士，請轉告她，我已在伊瑟爾定居。現在過得很好，請不要擔憂。"
   },
   {
     "id": 10673,
     "charId": 1103,
     "name": "閒談・關於心願·其三",
-    "res": "vo_topic_03_4",
+    "res": "char_Tuosi_vo_topic_03_4",
     "text": "「那是音樂與詩的國度，那裡的每一顆卵石都敲擊著節拍，每一泓泉水都歌唱著旋律。」"
   },
   {
     "id": 10674,
     "charId": 1103,
     "name": "閒談・關於心願·其四",
-    "res": "vo_topic_03_5",
+    "res": "char_Tuosi_vo_topic_03_5",
     "text": "這樣一來，或許她就不會再打聽我的下落了。我曾是她欣賞的學生……我不希望她因我蒙羞。"
   },
   {
     "id": 10675,
     "charId": 1103,
     "name": "閒談・關於心願·其五",
-    "res": "vo_topic_03_6",
+    "res": "char_Tuosi_vo_topic_03_6",
     "text": "嗯，一無所知總會是更加幸福的。"
   },
   {
     "id": 10676,
     "charId": 1103,
     "name": "閒談・關於表演·其一",
-    "res": "vo_topic_04_1",
+    "res": "char_Tuosi_vo_topic_04_1",
     "text": "為什麼想學表演？你不需要變成任何人。"
   },
   {
     "id": 10677,
     "charId": 1103,
     "name": "閒談・關於表演·其二",
-    "res": "vo_topic_04_2",
+    "res": "char_Tuosi_vo_topic_04_2",
     "text": "只要站在舞台上，把你的每一寸骨骼，每一縷氣息奉獻給演出，你就可以徹底變成另一個人，忘記帶給你痛苦的一切，走向你前所未見的世界。"
   },
   {
     "id": 10678,
     "charId": 1103,
     "name": "閒談・關於表演·其三",
-    "res": "vo_topic_04_3",
+    "res": "char_Tuosi_vo_topic_04_3",
     "text": "但你生而就是一位冒險故事裡被祝福的主人公，擁有所有角色的矚目和信賴。你無需舞台，便足以熠熠生輝。"
   },
   {
     "id": 10679,
     "charId": 1103,
     "name": "閒談・關於劇院·其一",
-    "res": "vo_topic_05_1",
+    "res": "char_Tuosi_vo_topic_05_1",
     "text": "它站在那兒，歷經遠比我的生命悠長的歲月。在它外牆的這一邊，是巍峨的內城，和烏雲一樣高，比烏雲更冷。"
   },
   {
     "id": 10680,
     "charId": 1103,
     "name": "閒談・關於劇院·其二",
-    "res": "vo_topic_05_2",
+    "res": "char_Tuosi_vo_topic_05_2",
     "text": "人們從裹著絲綢的馬車走來，談論總不放晴的天氣，談論詩歌與繪畫，談論舞會與婚事，抱怨外城污濁的雪水弄髒了漂亮的皮靴。"
   },
   {
     "id": 10681,
     "charId": 1103,
     "name": "閒談・關於劇院·其三",
-    "res": "vo_topic_05_3",
+    "res": "char_Tuosi_vo_topic_05_3",
     "text": "外牆的另一側，是嘈雜的霧區。在那裡，小販扯尖嗓子叫賣，母親抱著自己的孩子，乞求一片黑麵包果腹。好事者一邊躲著衛兵，一邊在牆上塗鴉。"
   },
   {
     "id": 10682,
     "charId": 1103,
     "name": "閒談・關於劇院·其四",
-    "res": "vo_topic_05_4",
+    "res": "char_Tuosi_vo_topic_05_4",
     "text": "這就是我們的蓋雷亞劇院。它站在那兒，聽著這些聲音，但又聽不懂這些聲音。"
   },
   {
     "id": 10683,
     "charId": 1103,
     "name": "閒談・關於劇院·其五",
-    "res": "vo_topic_05_5",
+    "res": "char_Tuosi_vo_topic_05_5",
     "text": "……不知為什麼，我第一個想起的不是各種劇本，不是花俏的戲服和首飾，甚至不是每天打掃的小道具間。"
   },
   {
     "id": 10684,
     "charId": 1103,
     "name": "閒談・關於劇院·其六",
-    "res": "vo_topic_05_6",
+    "res": "char_Tuosi_vo_topic_05_6",
     "text": "我想起的是演出落幕後，舞台上那襲薄毛毯。小時候，記憶裡的第一場演出結束後，我和母親在那兒重複著劇裡的唱詞，跳了整夜的舞。"
   },
   {
     "id": 10685,
     "charId": 1103,
     "name": "閒談・關於劇院·其七",
-    "res": "vo_topic_05_7",
+    "res": "char_Tuosi_vo_topic_05_7",
     "text": "日出時分我累了，就躺在那襲絨毯上，枕著她的兩膝，做了一個長長的夢。"
   },
   {
     "id": 10686,
     "charId": 1103,
     "name": "獨白",
-    "res": "vo_idle",
+    "res": "char_Tuosi_vo_idle",
     "text": "噓……我就快要進入角色了。"
   },
   {
     "id": 10687,
     "charId": 1103,
     "name": "閒談・他人偶遇 其一",
-    "res": "vo_companio_01",
+    "res": "char_Tuosi_vo_companio_01",
     "text": "你最近過得好嗎？\n……抱歉，是我唐突了。我們並不相識，我只是……替一個朋友問問罷了。"
   },
   {
     "id": 10688,
     "charId": 1103,
     "name": "閒談・他人偶遇 其二",
-    "res": "vo_companio_02",
+    "res": "char_Tuosi_vo_companio_02",
     "text": "是嗎，你現在有了一個新家，也有了會關心照顧你的家人……真是太好了。你逃出了自己的囚籠，是個勇敢的孩子。"
   },
   {
     "id": 10690,
     "charId": 1103,
     "name": "閒談・他人偶遇 其四",
-    "res": "vo_companio_04",
+    "res": "char_Tuosi_vo_companio_04",
     "text": "你的擬態能力非常特別，哪怕是最優秀的舞台道具師也未必能做出這樣精妙絕倫的效果。"
   },
   {
     "id": 10692,
     "charId": 1103,
     "name": "準備就緒",
-    "res": "vo_appear",
+    "res": "char_Tuosi_vo_appear",
     "text": "你為我準備了新的舞台。"
   },
   {
     "id": 10693,
     "charId": 1103,
     "name": "精進",
-    "res": "vo_lvup",
+    "res": "char_Tuosi_vo_lvup",
     "text": "過去，我也曾這樣排練無數次。"
   },
   {
     "id": 10694,
     "charId": 1103,
     "name": "戰鬥開始",
-    "res": "vo_battlestart",
+    "res": "char_Tuosi_vo_battlestart",
     "text": "敬請欣賞這齣浪漫的冒險劇目。"
   },
   {
     "id": 10695,
     "charId": 1103,
     "name": "空暇",
-    "res": "vo_battleidle",
+    "res": "char_Tuosi_vo_battleidle",
     "text": "原本的我，是什麼模樣……"
   },
   {
     "id": 10696,
     "charId": 1103,
     "name": "受傷·其一",
-    "res": "vo_be_hit_heavy_r01",
+    "res": "char_Tuosi_vo_be_hit_heavy_r01",
     "text": "我沒事。"
   },
   {
     "id": 10697,
     "charId": 1103,
     "name": "受傷·其二",
-    "res": "vo_be_hit_heavy_r02",
+    "res": "char_Tuosi_vo_be_hit_heavy_r02",
     "text": "一齣悲劇。"
   },
   {
     "id": 10698,
     "charId": 1103,
     "name": "受傷·其三",
-    "res": "vo_be_hit_heavy_r01",
+    "res": "char_Tuosi02_vo_be_hit_heavy_r01",
     "text": "又是這樣……"
   },
   {
     "id": 10699,
     "charId": 1103,
     "name": "受傷·其四",
-    "res": "vo_be_hit_heavy_r02",
+    "res": "char_Tuosi02_vo_be_hit_heavy_r02",
     "text": "撕碎它們。"
   },
   {
     "id": 10700,
     "charId": 1103,
     "name": "釋放技能·其一",
-    "res": "vo_skill01_r01",
+    "res": "char_Tuosi_vo_skill01_r01",
     "text": "退場吧。"
   },
   {
     "id": 10701,
     "charId": 1103,
     "name": "釋放技能·其二",
-    "res": "vo_skill01_r02",
+    "res": "char_Tuosi_vo_skill01_r02",
     "text": "太吵了。"
   },
   {
     "id": 10702,
     "charId": 1103,
     "name": "釋放技能·其三",
-    "res": "vo_shoot_r01",
+    "res": "char_Tuosi02_shoot_r01",
     "text": "標記獵物。"
   },
   {
     "id": 10703,
     "charId": 1103,
     "name": "釋放技能·其四",
-    "res": "vo_skill01_r01",
+    "res": "char_Tuosi02_skill01_r01",
     "text": "逃不掉。"
   },
   {
     "id": 10704,
     "charId": 1103,
     "name": "釋放技能·其五",
-    "res": "vo_attack_r01",
+    "res": "char_Tuosi02_attack_r01",
     "text": "它們在哀嚎！"
   },
   {
     "id": 10705,
     "charId": 1103,
     "name": "釋放終結技·其一",
-    "res": "vo_skill02_r01",
+    "res": "char_Tuosi_vo_skill02_r01",
     "text": "即使化身野獸——"
   },
   {
     "id": 10706,
     "charId": 1103,
     "name": "釋放終結技·其二",
-    "res": "vo_skill02_r02",
+    "res": "char_Tuosi_vo_skill02_r02",
     "text": "那便捨棄我的心臟吧——"
   },
   {
     "id": 10707,
     "charId": 1103,
     "name": "釋放終結技·其三",
-    "res": "vo_skill02_r03",
+    "res": "char_Tuosi_vo_skill02_r03",
     "text": "即使一切夢都已破碎。"
   },
   {
     "id": 10708,
     "charId": 1103,
     "name": "無法行動·其一",
-    "res": "vo_die_r01",
+    "res": "char_Tuosi_vo_die_r01",
     "text": "我完成……這場演出了。"
   },
   {
     "id": 10709,
     "charId": 1103,
     "name": "無法行動·其二",
-    "res": "vo_die_r02",
+    "res": "char_Tuosi_vo_die_r02",
     "text": "歌唱……我前所未見的世界……"
   },
   {
     "id": 10710,
     "charId": 1103,
     "name": "復甦",
-    "res": "vo_revive",
+    "res": "char_Tuosi_vo_revive",
     "text": "只是中場休息嗎。"
   },
   {
     "id": 10711,
     "charId": 1103,
     "name": "勝利",
-    "res": "vo_victory",
+    "res": "char_Tuosi_vo_victory",
     "text": "喜劇是智者的譏諷。"
   },
   {
     "id": 10712,
     "charId": 1103,
     "name": "敗退",
-    "res": "vo_fail",
+    "res": "char_Tuosi_vo_fail",
     "text": "悲劇是勇者的受難。"
   },
   {
     "id": 10713,
     "charId": 1103,
     "name": "生日祝福",
-    "res": "vo_birthday",
+    "res": "char_Tuosi_vo_birthday",
     "text": "生日快樂，{nickname}。謝謝你邀請我。\n對我而言，從被趕下舞台的那一天起，生日就變成了一個映在眼裡會刺痛的日期，像熄滅後再也修不好的泛光燈，像躺在廢紙簍裡被遺忘的舊劇本。\n但是，今天，我久違地記起了一個普通的生日場景是什麼樣的——它是由一些平凡的、溫暖的、只有參與其中的人才覺得珍貴的東西組成的，比如說，邊緣有些粗糙的手工禮物盒、插蠟燭時被不小心碰掉了半朵奶油花的蛋糕，還有——\n……朋友唱的生日歌？你的意思是想聽我唱嗎？好吧。不過，我不知道你的故鄉流行哪個版本的生日歌，恐怕要麻煩你先教我一遍。放心，我學得很快。"
   },
   {
     "id": 10714,
     "charId": 5401,
     "name": "初見",
-    "res": "vo_gain",
+    "res": "char_Dafu_vo_gain",
     "text": "我是達芙涅·塞奧多爾，海伯利亞十三軍團下屬獅鷲小隊的隨行醫務員。戰場兇險萬分，請別擔心，我會為您提供援助。"
   },
   {
     "id": 10715,
     "charId": 5401,
     "name": "致候",
-    "res": "vo_welcome",
+    "res": "char_Dafu_vo_welcome",
     "text": "很高興看到您今天健康平安。請多加珍重……為了終有一天會到來的和平。"
   },
   {
     "id": 10716,
     "charId": 5401,
     "name": "閒談・關於醫學·其一",
-    "res": "vo_topic_01_1",
+    "res": "char_Dafu_vo_topic_01_1",
     "text": "我……沒有什麼特別的愛好。也許讀書算一個吧？"
   },
   {
     "id": 10717,
     "charId": 5401,
     "name": "閒談・關於醫學·其二",
-    "res": "vo_topic_01_2",
+    "res": "char_Dafu_vo_topic_01_2",
     "text": "雖然媽媽總是嘮叨，說我一直把自己關在家裡，錯過了那些舞會和沙龍，會失去很多躋身更上一層的機會……"
   },
   {
     "id": 10718,
     "charId": 5401,
     "name": "閒談・關於醫學·其三",
-    "res": "vo_topic_01_3",
+    "res": "char_Dafu_vo_topic_01_3",
     "text": "但我還是覺得，這樣就很好。"
   },
   {
     "id": 10719,
     "charId": 5401,
     "name": "閒談・關於醫學·其四",
-    "res": "vo_topic_01_4",
+    "res": "char_Dafu_vo_topic_01_4",
     "text": "主要是戰傷救治相關的書籍，《戰地應急救援策略》、《常規外傷處理》、《野戰醫院的臨時搭建》……"
   },
   {
     "id": 10720,
     "charId": 5401,
     "name": "閒談・關於醫學·其五",
-    "res": "vo_topic_01_5",
+    "res": "char_Dafu_vo_topic_01_5",
     "text": "您也許知道，我過去學習的方向並非救護相關，儘管我已經獲得了軍團隨行醫務員的資格，但仍然時常感到沉重與惶恐。"
   },
   {
     "id": 10721,
     "charId": 5401,
     "name": "閒談・關於醫學·其六",
-    "res": "vo_topic_01_6",
+    "res": "char_Dafu_vo_topic_01_6",
     "text": "嗯，最近我也在看一本叫做《玻璃鞋》的書。是關於……呃，公主和騎士……我、我並不是非常喜歡看浪漫小說！只是，隨便……翻一下……"
   },
   {
     "id": 10722,
     "charId": 5401,
     "name": "閒談・關於煉金院·其一",
-    "res": "vo_topic_02_1",
+    "res": "char_Dafu_vo_topic_02_1",
     "text": "嗯，當然可以！它是海伯利亞的基石，是學者們口中「原初的奇蹟」！"
   },
   {
     "id": 10723,
     "charId": 5401,
     "name": "閒談・關於煉金院·其二",
-    "res": "vo_topic_02_2",
+    "res": "char_Dafu_vo_topic_02_2",
     "text": "最一開始，人們試圖從月石中分離出黃金，但後來，人們發現這枚小小的石頭還有更多用途——轉動機械的齒輪，釋放電的火花……它就是索拉之民的「魔法」。"
   },
   {
     "id": 10724,
     "charId": 5401,
     "name": "閒談・關於煉金院·其三",
-    "res": "vo_topic_02_3",
+    "res": "char_Dafu_vo_topic_02_3",
     "text": "……只是後來，煉金院……"
   },
   {
     "id": 10725,
     "charId": 5401,
     "name": "閒談・關於煉金院·其四",
-    "res": "vo_topic_02_4",
+    "res": "char_Dafu_vo_topic_02_4",
     "text": "……是的。不過，那已經是過去的事了。"
   },
   {
     "id": 10726,
     "charId": 5401,
     "name": "閒談・關於煉金院·其五",
-    "res": "vo_topic_02_5",
+    "res": "char_Dafu_vo_topic_02_5",
     "text": "因為後來的佩劍煉金院偏離了軌道，走在了一條錯誤的路上。它是海伯利亞這座戰車最熾熱的爐芯，但燃料卻是太多人的痛苦和不幸。"
   },
   {
     "id": 10727,
     "charId": 5401,
     "name": "閒談・關於煉金院·其六",
-    "res": "vo_topic_02_6",
+    "res": "char_Dafu_vo_topic_02_6",
     "text": "我想，我遠比自己想像中更軟弱。我無法說服自己接受它，也沒有勇氣和力量阻止它。所以，我只能選擇逃離它。"
   },
   {
     "id": 10728,
     "charId": 5401,
     "name": "閒談・關於背包·其一",
-    "res": "vo_topic_03_1",
+    "res": "char_Dafu_vo_topic_03_1",
     "text": "一些應急的器械和藥品。繃帶，消毒劑，麻醉劑，還有處理外傷的刀片和縫線。"
   },
   {
     "id": 10729,
     "charId": 5401,
     "name": "閒談・關於背包·其二",
-    "res": "vo_topic_03_2",
+    "res": "char_Dafu_vo_topic_03_2",
     "text": "此外，還有一張手帕和一把梳子。"
   },
   {
     "id": 10730,
     "charId": 5401,
     "name": "閒談・關於背包·其三",
-    "res": "vo_topic_03_3",
+    "res": "char_Dafu_vo_topic_03_3",
     "text": "啊，這個……不是我自己用的。如果救護的傷員不幸離世，我會幫他們簡單整理一下儀容。"
   },
   {
     "id": 10731,
     "charId": 5401,
     "name": "閒談・關於背包·其四",
-    "res": "vo_topic_03_4",
+    "res": "char_Dafu_vo_topic_03_4",
     "text": "傷痛是很殘忍的東西，它從人們那裡奪走的，除了生命，還有生而為人的全部尊嚴。"
   },
   {
     "id": 10732,
     "charId": 5401,
     "name": "閒談・關於背包·其五",
-    "res": "vo_topic_03_5",
+    "res": "char_Dafu_vo_topic_03_5",
     "text": "我希望……他們的家人看到的他們，可以乾淨一些、安詳一些……久別重逢，父母應該看到孩子們安然睡去的臉，而不是被疼痛扭曲五官的悽慘面容。"
   },
   {
     "id": 10733,
     "charId": 5401,
     "name": "閒談・關於訓練·其一",
-    "res": "vo_topic_04_1",
+    "res": "char_Dafu_vo_topic_04_1",
     "text": "我沒關係，不辛苦的！……呃，其實還是有點……急救和護理知識的學習還好，但體能測驗確實令人苦惱。"
   },
   {
     "id": 10734,
     "charId": 5401,
     "name": "閒談・關於訓練·其二",
-    "res": "vo_topic_04_2",
+    "res": "char_Dafu_vo_topic_04_2",
     "text": "就算每天比大家起得更早獨自加練，還是只能拿勉強及格的分數……唉，不要笑話我，鍛鍊體力真是比讀書難太多了。"
   },
   {
     "id": 10735,
     "charId": 5401,
     "name": "閒談・關於訓練·其三",
-    "res": "vo_topic_04_3",
+    "res": "char_Dafu_vo_topic_04_3",
     "text": "嗯，的確很累。不過當我把注意力從腳下移開，去看城郊的麥田，地平線盡頭的小屋，去聽風車的每一聲轉動和牧牛人的每一聲哨笛，就覺得平靜許多。"
   },
   {
     "id": 10736,
     "charId": 5401,
     "name": "閒談・關於訓練·其四",
-    "res": "vo_topic_04_4",
+    "res": "char_Dafu_vo_topic_04_4",
     "text": "因為……也許我奔跑在這條路上，就是為了保護這些最普通、最尋常的東西不被毀掉吧。"
   },
   {
     "id": 10737,
     "charId": 5401,
     "name": "閒談・關於父親·其一",
-    "res": "vo_topic_05_1",
+    "res": "char_Dafu_vo_topic_05_1",
     "text": "……我最後一次和爸爸說話，就是在對講機裡。那時還在龍莎要塞危機四伏的戰場，他卻對我說，「你放心。」"
   },
   {
     "id": 10738,
     "charId": 5401,
     "name": "閒談・關於父親·其二",
-    "res": "vo_topic_05_2",
+    "res": "char_Dafu_vo_topic_05_2",
     "text": "後來我還是會常常在深夜打開自己的對講機，調到爸爸的頻段，按下呼叫按鈕，期待著他的聲音從對講機那頭傳來……"
   },
   {
     "id": 10739,
     "charId": 5401,
     "name": "閒談・關於父親·其三",
-    "res": "vo_topic_05_3",
+    "res": "char_Dafu_vo_topic_05_3",
     "text": "直到我對著聽筒等了十幾分鐘，我才突然發現，他是真的回不來了。"
   },
   {
     "id": 10740,
     "charId": 5401,
     "name": "閒談・關於父親·其四",
-    "res": "vo_topic_05_4",
+    "res": "char_Dafu_vo_topic_05_4",
     "text": "謝謝，我明白的。我會好好活下去，在為父親、為龍莎戰役的死難者洗刷冤屈之前，我不會停下腳步。"
   },
   {
     "id": 10741,
     "charId": 5401,
     "name": "獨白",
-    "res": "vo_idle",
+    "res": "char_Dafu_vo_idle",
     "text": "難得有這麼悠閒的時光，沒有傷患的呼救，也沒有緊急的戰報。嗯……泡杯咖啡，把那本小說看完吧。公主最後到底跟誰在一起了呢……"
   },
   {
     "id": 10742,
     "charId": 5401,
     "name": "閒談・他人偶遇 其一",
-    "res": "vo_companio_01",
+    "res": "char_Dafu_vo_companio_01",
     "text": "我曾在皇都的圖書館中閱讀過華胥的醫書，雖然與海伯利亞的醫理不太相同，但應用於救治卻十分有效。這本書中我仍有一些問題，方便向您請教嗎？"
   },
   {
     "id": 10743,
     "charId": 5401,
     "name": "閒談・他人偶遇 其二",
-    "res": "vo_companio_02",
+    "res": "char_Dafu_vo_companio_02",
     "text": "典獄長女士，遲來的正義真的還是正義嗎？"
   },
   {
     "id": 10744,
     "charId": 5401,
     "name": "閒談・他人偶遇 其三",
-    "res": "vo_companio_03",
+    "res": "char_Dafu_vo_companio_03",
     "text": "好久不見，自離開煉金院後我們就很少聯繫了，你還……好嗎？"
   },
   {
     "id": 10745,
     "charId": 5401,
     "name": "閒談・他人偶遇 其四",
-    "res": "vo_companio_04",
+    "res": "char_Dafu_vo_companio_04",
     "text": "雖然我已經離開了佩劍煉金院，但那依舊是我學習過的地方。也許您永遠不會選擇寬恕，但還是請允許我說一句，對不起。"
   },
   {
     "id": 10746,
     "charId": 5401,
     "name": "準備就緒",
-    "res": "vo_appear",
+    "res": "char_Dafu_vo_appear",
     "text": "急救用品整理完畢，隨時可以出發。"
   },
   {
     "id": 10747,
     "charId": 5401,
     "name": "精進",
-    "res": "vo_lvup",
+    "res": "char_Dafu_vo_lvup",
     "text": "這樣一來，我也能多為大家減輕一些痛苦吧。"
   },
   {
     "id": 10748,
     "charId": 5401,
     "name": "戰鬥開始",
-    "res": "vo_battlestart",
+    "res": "char_Dafu_vo_battlestart",
     "text": "這一次，也要平安返回。"
   },
   {
     "id": 10749,
     "charId": 5401,
     "name": "空暇",
-    "res": "vo_battleidle",
+    "res": "char_Dafu_vo_battleidle",
     "text": "戰局瞬息萬變，我相信您的判斷。"
   },
   {
     "id": 10750,
     "charId": 5401,
     "name": "受傷·其一",
-    "res": "vo_be_hit_heavy_r01",
+    "res": "char_Dafu_vo_be_hit_heavy_r01",
     "text": "小心敵襲！"
   },
   {
     "id": 10751,
     "charId": 5401,
     "name": "受傷·其二",
-    "res": "vo_be_hit_heavy_r02",
+    "res": "char_Dafu_vo_be_hit_heavy_r02",
     "text": "堅持住……"
   },
   {
     "id": 10752,
     "charId": 5401,
     "name": "釋放技能·其一",
-    "res": "vo_skill01_r01",
+    "res": "char_Dafu_vo_skill01_r01",
     "text": "創傷感染，麻醉清創。"
   },
   {
     "id": 10753,
     "charId": 5401,
     "name": "釋放技能·其二",
-    "res": "vo_skill01_r02",
+    "res": "char_Dafu_vo_skill01_r02",
     "text": "失血性休克，止血帶！"
   },
   {
     "id": 10754,
     "charId": 5401,
     "name": "釋放終結技·其一",
-    "res": "vo_skill02_r01",
+    "res": "char_Dafu_vo_skill02_r01",
     "text": "戰火，你還要大家流血到何時？"
   },
   {
     "id": 10755,
     "charId": 5401,
     "name": "釋放終結技·其二",
-    "res": "vo_skill02_r02",
+    "res": "char_Dafu_vo_skill02_r02",
     "text": "生命從孕育之初，即為至高的尊嚴。"
   },
   {
     "id": 10756,
     "charId": 5401,
     "name": "釋放終結技·其三",
-    "res": "vo_skill02_r03",
+    "res": "char_Dafu_vo_skill02_r03",
     "text": "為了終將到來的和平。"
   },
   {
     "id": 10757,
     "charId": 5401,
     "name": "無法行動·其一",
-    "res": "vo_die_r01",
+    "res": "char_Dafu_vo_die_r01",
     "text": "我是……醫務員，我不能……"
   },
   {
     "id": 10758,
     "charId": 5401,
     "name": "無法行動·其二",
-    "res": "vo_die_r02",
+    "res": "char_Dafu_vo_die_r02",
     "text": "繼續……前進……"
   },
   {
     "id": 10759,
     "charId": 5401,
     "name": "復甦",
-    "res": "vo_revive",
+    "res": "char_Dafu_vo_revive",
     "text": "我說過的，我們會一起平安回去。"
   },
   {
     "id": 10760,
     "charId": 5401,
     "name": "勝利",
-    "res": "vo_victory",
+    "res": "char_Dafu_vo_victory",
     "text": "如果這是最後一場戰鬥……那該有多好啊。"
   },
   {
     "id": 10761,
     "charId": 5401,
     "name": "敗退",
-    "res": "vo_fail",
+    "res": "char_Dafu_vo_fail",
     "text": "我來掩護大家撤退。"
   },
   {
     "id": 10762,
     "charId": 5401,
     "name": "生日祝福",
-    "res": "vo_birthday",
+    "res": "char_Dafu_vo_birthday",
     "text": "你知道今天是個很特殊的日子嗎？嗯，今天是你的生日。\n我知道成人後大家都會變得忙碌，要忙著承擔許多責任，忙著踏上許多旅途。也許你聽起來會有些幼稚，可我想生日的這天應該是不一樣的。人們在生日那天可以變回一個無憂無慮的孩子，暫時忘記那些身為大人的煩惱，安心地接受朋友家人的祝福。所以說，今天你也拋下那些令人苦惱的事情吧，簡單地做個快樂的小朋友，品嚐蛋糕、吹蠟燭、許下願望……\n小朋友，如果你現在是獨自一人，就讓我來當那個「大人」吧。\n祝你生日快樂。"
   },
   {
     "id": 10763,
     "charId": 1503,
     "name": "初見",
-    "res": "vo_gain",
+    "res": "char_Kezhou_vo_gain",
     "text": "以天為被，以地為席，仗劍日月間，專管不平事。\n算了，這套出場白怎麼念怎麼拗口，還是直接點：華胥飄零人，刻舟，需要一臂之力的話，直說。"
   },
   {
     "id": 10764,
     "charId": 1503,
     "name": "致候",
-    "res": "vo_welcome",
+    "res": "char_Kezhou_vo_welcome",
     "text": "今天宜飲酒縱歌，來來，待我飲完這杯，一起去誅盡那些應殺之人。什麼？你說昨天我也是這樣說的？那當然，一年三百六十日，日日都宜如此過活。"
   },
   {
     "id": 10765,
     "charId": 1503,
     "name": "閒談・關於劍法·其一",
-    "res": "vo_topic_01_1",
+    "res": "char_Kezhou_vo_topic_01_1",
     "text": "怎麼，你也對劍法有興趣嗎？是了，我看你也帶著一把好劍，想必是有家傳的功夫。比一比就知道啦。"
   },
   {
     "id": 10766,
     "charId": 1503,
     "name": "閒談・關於劍法·其二",
-    "res": "vo_topic_01_2",
+    "res": "char_Kezhou_vo_topic_01_2",
     "text": "老實說，我已經很久沒有遇到過勢均力敵的對手了。但是按照我師父的說法，我個性太直，不會演戲，還需要繼續磨練。"
   },
   {
     "id": 10767,
     "charId": 1503,
     "name": "閒談・關於劍法·其三",
-    "res": "vo_topic_01_3",
+    "res": "char_Kezhou_vo_topic_01_3",
     "text": "其實我覺得不是，但是師父有說用劍需要會演：「能而示之不能」，和「不戰而屈人之兵」、「以眾擊寡」一樣，都是上等的劍法。"
   },
   {
     "id": 10768,
     "charId": 1503,
     "name": "閒談・關於劍法·其四",
-    "res": "vo_topic_01_4",
+    "res": "char_Kezhou_vo_topic_01_4",
     "text": "我小的時候他就是這樣對待我的，說自己本領稀鬆平常，只要把他打倒在地就可以不用練習之類的話。我試了一年，從沒碰到過他的衣袖。"
   },
   {
     "id": 10769,
     "charId": 1503,
     "name": "閒談・關於劍法·其五",
-    "res": "vo_topic_01_5",
+    "res": "char_Kezhou_vo_topic_01_5",
     "text": "直到有一天累到趴在地上，看他腳底下連一滴汗都沒有。才確信他那副顛顛又倒倒的樣子都是演的。"
   },
   {
     "id": 10770,
     "charId": 1503,
     "name": "閒談・關於反抗·其一",
-    "res": "vo_topic_02_1",
+    "res": "char_Kezhou_vo_topic_02_1",
     "text": "理由可以舉出無數個，但是歸根究底無非三個字：我不願。"
   },
   {
     "id": 10771,
     "charId": 1503,
     "name": "閒談・關於反抗·其二",
-    "res": "vo_topic_02_2",
+    "res": "char_Kezhou_vo_topic_02_2",
     "text": "從小逍遙自在慣了，只知道路見不平拔刀相助。師父和師兄的話我都只聽愛聽的，大半當作秋風過耳。又怎麼會受什麼律法的羈絆。"
   },
   {
     "id": 10772,
     "charId": 1503,
     "name": "閒談・關於反抗·其三",
-    "res": "vo_topic_02_3",
+    "res": "char_Kezhou_vo_topic_02_3",
     "text": "身為劍客的擔憂吧：打個比方，習劍的基礎是熟記圖譜上的一招一式，面對一般的敵人時可以不多加思索，頃刻間拔劍迎敵。"
   },
   {
     "id": 10773,
     "charId": 1503,
     "name": "閒談・關於反抗·其四",
-    "res": "vo_topic_02_4",
+    "res": "char_Kezhou_vo_topic_02_4",
     "text": "但太過依賴圖譜，不會隨機應變，那手中的劍就會變成死劍、呆劍、傻瓜劍。面對未曾謀面的敵人就會方寸大亂，如同呆頭鵝。"
   },
   {
     "id": 10774,
     "charId": 1503,
     "name": "閒談・關於反抗·其五",
-    "res": "vo_topic_02_5",
+    "res": "char_Kezhou_vo_topic_02_5",
     "text": "在我看來，現在的華胥就是把《大風九章》翻爛的拙劍客，連我這樣的飄零人都斬不盡，要是遇到真正的強敵，是會敗的。"
   },
   {
     "id": 10775,
     "charId": 1503,
     "name": "閒談・關於武器·其一",
-    "res": "vo_topic_03_1",
+    "res": "char_Kezhou_vo_topic_03_1",
     "text": "當然了，劍客的意思是擅長用劍，不是只會用劍。否則的話，華胥還有人能把筆和筷子當作武器，那劍客豈不是不能寫字吃飯？"
   },
   {
     "id": 10776,
     "charId": 1503,
     "name": "閒談・關於武器·其二",
-    "res": "vo_topic_03_2",
+    "res": "char_Kezhou_vo_topic_03_2",
     "text": "我能啊，但能這樣做不代表必須這麼做，躲開可要比硬接容易多了。山裡的野豬都知道能吃蘿蔔的時候絕不去啃樹皮呢。"
   },
   {
     "id": 10777,
     "charId": 1503,
     "name": "閒談・關於武器·其三",
-    "res": "vo_topic_03_3",
+    "res": "char_Kezhou_vo_topic_03_3",
     "text": "但是，如果碰見能痛快打上一場的對手，我肯定會拔出劍來，全力以赴。"
   },
   {
     "id": 10778,
     "charId": 1503,
     "name": "閒談・關於外號·其一",
-    "res": "vo_topic_04_1",
+    "res": "char_Kezhou_vo_topic_04_1",
     "text": "確實，你這麼一問我能想到不少。啥啥一哥，什麼王，某仙之類，用動物來做外號的尤其多，龍虎獅鶴，飛禽走獸都有，非常熱鬧。"
   },
   {
     "id": 10779,
     "charId": 1503,
     "name": "閒談・關於外號·其二",
-    "res": "vo_topic_04_2",
+    "res": "char_Kezhou_vo_topic_04_2",
     "text": "然後這些外號啊，往往字數越長，功夫越差。四個字的一看就是剛入門，三個字的有頭有臉，兩個字，高手。至於沒有外號的，那都是大宗師了。"
   },
   {
     "id": 10780,
     "charId": 1503,
     "name": "閒談・關於外號·其三",
-    "res": "vo_topic_04_3",
+    "res": "char_Kezhou_vo_topic_04_3",
     "text": "行不更名坐不改姓，是真名。我知道你想說這個聽起來像是外號。師父也這麼說過，說是容易小小年紀就被當做高手，會吃虧。"
   },
   {
     "id": 10781,
     "charId": 1503,
     "name": "閒談・關於外號·其四",
-    "res": "vo_topic_04_4",
+    "res": "char_Kezhou_vo_topic_04_4",
     "text": "可畢竟這個名字是老爹給我起的，可能也是希望我成為一個俠客吧。他留下的東西不多，但只要這個名字還在，就總歸證明他在世上還留有劍痕一道。"
   },
   {
     "id": 10782,
     "charId": 1503,
     "name": "獨白",
-    "res": "vo_idle",
+    "res": "char_Kezhou_vo_idle",
     "text": "這裡很是亮堂又寬敞，就是桌椅板凳多了些，否則倒是演武對練的好地方。"
   },
   {
     "id": 10784,
     "charId": 1503,
     "name": "閒談・他人偶遇 其二",
-    "res": "vo_companio_02",
+    "res": "char_Kezhou_vo_companio_02",
     "text": "你的舊劍我先代為保管，等你什麼時候不再緊鎖著眉頭哭喪著臉，我就還你。當然，得先比試一場，如果輸了，這劍就當你送我了。"
   },
   {
     "id": 10785,
     "charId": 1503,
     "name": "閒談・他人偶遇 其三",
-    "res": "vo_companio_03",
+    "res": "char_Kezhou_vo_companio_03",
     "text": "劍可以是朋友，可以是玩物，甚至也可以是餐具、撬棍和剃鬚刀，但是唯獨不可以是主人。希望你前行的旅途不要被這柄劍困住。"
   },
   {
     "id": 10786,
     "charId": 1503,
     "name": "準備就緒",
-    "res": "vo_appear",
+    "res": "char_Kezhou_vo_appear",
     "text": "手中劍殺人，心中劍解憂。"
   },
   {
     "id": 10787,
     "charId": 1503,
     "name": "精進",
-    "res": "vo_lvup",
+    "res": "char_Kezhou_vo_lvup",
     "text": "觀千劍而後識器。"
   },
   {
     "id": 10788,
     "charId": 1503,
     "name": "戰鬥開始",
-    "res": "vo_battlestart",
+    "res": "char_Kezhou_vo_battlestart",
     "text": "獅象搏兔，皆用全力。"
   },
   {
     "id": 10789,
     "charId": 1503,
     "name": "空暇",
-    "res": "vo_battleidle",
+    "res": "char_Kezhou_vo_battleidle",
     "text": "招式尚未用老，再戰再戰。"
   },
   {
     "id": 10790,
     "charId": 1503,
     "name": "受傷·其一",
-    "res": "vo_be_hit_heavy_r01",
+    "res": "char_Kezhou_vo_be_hit_heavy_r01",
     "text": "好身手！"
   },
   {
     "id": 10791,
     "charId": 1503,
     "name": "受傷·其二",
-    "res": "vo_be_hit_heavy_r02",
+    "res": "char_Kezhou_vo_be_hit_heavy_r02",
     "text": "未傷筋骨。"
   },
   {
     "id": 10792,
     "charId": 1503,
     "name": "釋放技能·其一",
-    "res": "vo_skill01_r01",
+    "res": "char_Kezhou_vo_skill01_r01",
     "text": "影如流星！"
   },
   {
     "id": 10793,
     "charId": 1503,
     "name": "釋放技能·其二",
-    "res": "vo_skill01_r02",
+    "res": "char_Kezhou_vo_skill01_r02",
     "text": "留步於此！"
   },
   {
     "id": 10794,
     "charId": 1503,
     "name": "釋放終結技·其一",
-    "res": "vo_skill02_r01",
+    "res": "char_Kezhou_vo_skill02_r01",
     "text": "十步以內，寸草不生。"
   },
   {
     "id": 10795,
     "charId": 1503,
     "name": "釋放終結技·其二",
-    "res": "vo_skill02_r02",
+    "res": "char_Kezhou_vo_skill02_r02",
     "text": "一輪劍舞，請君赴死。"
   },
   {
     "id": 10796,
     "charId": 1503,
     "name": "釋放終結技·其三",
-    "res": "vo_skill02_r03",
+    "res": "char_Kezhou_vo_skill02_r03",
     "text": "今日且試霜刃。"
   },
   {
     "id": 10797,
     "charId": 1503,
     "name": "無法行動·其一",
-    "res": "vo_die_r01",
+    "res": "char_Kezhou_vo_die_r01",
     "text": "好漢不吃眼前虧，後會有期。"
   },
   {
     "id": 10798,
     "charId": 1503,
     "name": "無法行動·其二",
-    "res": "vo_die_r02",
+    "res": "char_Kezhou_vo_die_r02",
     "text": "業精於勤荒於嬉……"
   },
   {
     "id": 10799,
     "charId": 1503,
     "name": "復甦",
-    "res": "vo_revive",
+    "res": "char_Kezhou_vo_revive",
     "text": "鹿死誰手，尚未可知。"
   },
   {
     "id": 10800,
     "charId": 1503,
     "name": "勝利",
-    "res": "vo_victory",
+    "res": "char_Kezhou_vo_victory",
     "text": "背上匣中三尺劍，為天且示不平人，還有哪個前來授首？"
   },
   {
     "id": 10801,
     "charId": 1503,
     "name": "敗退",
-    "res": "vo_fail",
+    "res": "char_Kezhou_vo_fail",
     "text": "勝敗乃兵家常事，無妨，重新來過吧。"
   },
   {
     "id": 10802,
     "charId": 1503,
     "name": "生日祝福",
-    "res": "vo_birthday",
+    "res": "char_Kezhou_vo_birthday",
     "text": "今日宜飲酒縱歌……什麼？今天是你的生辰？\n我們飄零人對生辰之事看得不重，畢竟整天吞風飲雪，不知道什麼時候就會與人永訣，所以平素也不過什么生日。\n但你畢竟是異鄉之人，又日復一日同我練劍，還是慶祝一下為好。\n那麼——今日宜高歌，歌我狩月人少年英雄，俠氣崢嶸，一諾千金重！"
   },
   {
     "id": 10803,
     "charId": 5102,
     "name": "初見",
-    "res": "vo_gain",
+    "res": "char_Aote_vo_gain",
     "text": "我們都這麼熟了還要搞自我介紹這種東西嗎……好吧好吧，「夜航者」小隊，奧特賽德，身份的話……帶小孩的保姆？"
   },
   {
     "id": 10804,
     "charId": 5102,
     "name": "致候",
-    "res": "vo_welcome",
+    "res": "char_Aote_vo_welcome",
     "text": "你可來了，我把之前剩下的雜活清了一下，錢沒賺多少還差點把自己累死，唉，為了這個家我真是付出了太多啊。"
   },
   {
     "id": 10805,
     "charId": 5102,
     "name": "閒談・關於技巧·其一",
-    "res": "vo_topic_01_1",
+    "res": "char_Aote_vo_topic_01_1",
     "text": "手冊？沒有，乾這行的可大部分沒看書的耐性，但是口訣倒是不少，比如我自創的打人口訣：「兩下腰子一下頭，皇帝看了說沒救」。"
   },
   {
     "id": 10806,
     "charId": 5102,
     "name": "閒談・關於技巧·其二",
-    "res": "vo_topic_01_2",
+    "res": "char_Aote_vo_topic_01_2",
     "text": "別貪多，飯一口一口吃，乾這行的，最大的敵人永遠是貪婪，有時候來自別人，但更多時候來自自己。"
   },
   {
     "id": 10807,
     "charId": 5102,
     "name": "閒談・關於神棄者同盟·其一",
-    "res": "vo_topic_02_1",
+    "res": "char_Aote_vo_topic_02_1",
     "text": "他們是一團未熄滅的野火，稍不留神就會燒成滿山烈焰。為你個人考慮，還是少與他們接觸為好……"
   },
   {
     "id": 10808,
     "charId": 5102,
     "name": "閒談・關於神棄者同盟·其二",
-    "res": "vo_topic_02_2",
+    "res": "char_Aote_vo_topic_02_2",
     "text": "那當然是因為……有過一些小過節，要是哪天你和他們打上交道，可千萬記得別報我名字。"
   },
   {
     "id": 10809,
     "charId": 5102,
     "name": "閒談・關於傷口·其一",
-    "res": "vo_topic_03_1",
+    "res": "char_Aote_vo_topic_03_1",
     "text": "嗯，能幫我拿一下那邊的紗布嗎？可不能被菲娜發現，不然她又要嘮叨了。"
   },
   {
     "id": 10810,
     "charId": 5102,
     "name": "閒談・關於傷口·其二",
-    "res": "vo_topic_03_2",
+    "res": "char_Aote_vo_topic_03_2",
     "text": "我知道，但乾咱們這一行總免不了受點傷，我也不想她一直擔心嘛。她要是真的問起來，你記得幫我打個圓場啊，回頭請你吃飯。"
   },
   {
     "id": 10811,
     "charId": 5102,
     "name": "閒談・關於求生·其一",
-    "res": "vo_topic_04_1",
+    "res": "char_Aote_vo_topic_04_1",
     "text": "噢，你要不要也試試這些小家伙？別看它們長得醜，去掉頭就跟小餅乾一樣脆脆的，甚至能在嘴巴留下一絲肉類的回甘……"
   },
   {
     "id": 10812,
     "charId": 5102,
     "name": "閒談・關於求生·其二",
-    "res": "vo_topic_04_2",
+    "res": "char_Aote_vo_topic_04_2",
     "text": "你別跑啊，這可是很有用的生存智慧……等你迷失在野外，乾糧吃完的時候，它們就是最寶貴的能量來源。"
   },
   {
     "id": 10813,
     "charId": 5102,
     "name": "閒談・關於報酬·其一",
-    "res": "vo_topic_05_1",
+    "res": "char_Aote_vo_topic_05_1",
     "text": "嗯……等等，你手上怎麼才這麼幾個錢，是不是又把你那份報酬隨便分給其他人了？"
   },
   {
     "id": 10814,
     "charId": 5102,
     "name": "閒談・關於報酬·其二",
-    "res": "vo_topic_05_2",
+    "res": "char_Aote_vo_topic_05_2",
     "text": "你……哎，算了，這大概就是你的優點吧。手頭緊的時候記得跟我說。"
   },
   {
     "id": 10815,
     "charId": 5102,
     "name": "閒談・關於報酬·其三",
-    "res": "vo_topic_05_3",
+    "res": "char_Aote_vo_topic_05_3",
     "text": "……我這是身為朋友在關心你，你別得寸進尺耍無賴啊！"
   },
   {
     "id": 10816,
     "charId": 5102,
     "name": "獨白",
-    "res": "vo_idle",
+    "res": "char_Aote_vo_idle",
     "text": "現在這種安心的感覺也不錯，甚至讓我在過了那麼多年後，還能對一個地方產生一絲歸屬感。"
   },
   {
     "id": 10817,
     "charId": 5102,
     "name": "閒談・他人偶遇 其一",
-    "res": "vo_companio_01",
+    "res": "char_Aote_vo_companio_01",
     "text": "你怎麼也在這兒？身體不要緊嗎，病沒問題嗎，飯吃過了嗎？哎……有什麼想要的給我說就好，沒事還是不要瞎跑了。"
   },
   {
     "id": 10818,
     "charId": 5102,
     "name": "閒談・他人偶遇 其二",
-    "res": "vo_companio_02_1",
+    "res": "char_Aote_vo_companio_02_1",
     "text": "你是跟{nickname}關係很好的那個女孩子吧……聽說你身體不太好，就坐下好好休息一會兒吧。"
   },
   {
     "id": 10819,
     "charId": 5102,
     "name": "閒談・他人偶遇 其二",
-    "res": "vo_companio_02_2",
+    "res": "char_Aote_vo_companio_02_2",
     "text": "不用跟我客氣，我家也有個體弱多病的妹妹，早就習慣照顧人了……要是餓了、渴了，儘管跟我說，{nickname}的朋友就是我的朋友。"
   },
   {
     "id": 10823,
     "charId": 5102,
     "name": "準備就緒",
-    "res": "vo_appear",
+    "res": "char_Aote_vo_appear",
     "text": "看來是遇到棘手任務了，和以前一樣，一人一半？"
   },
   {
     "id": 10824,
     "charId": 5102,
     "name": "精進",
-    "res": "vo_lvup",
+    "res": "char_Aote_vo_lvup",
     "text": "不用在我身上花太多心思，怪別扭的……咳，沒什麼。"
   },
   {
     "id": 10825,
     "charId": 5102,
     "name": "戰鬥開始",
-    "res": "vo_battlestart",
+    "res": "char_Aote_vo_battlestart",
     "text": "速戰速決，家裡一堆事沒做呢。"
   },
   {
     "id": 10826,
     "charId": 5102,
     "name": "空暇",
-    "res": "vo_battleidle",
+    "res": "char_Aote_vo_battleidle",
     "text": "補給開銷是……然後交通開銷……誒，我剛算到哪了？賬本不在身邊真麻煩。"
   },
   {
     "id": 10827,
     "charId": 5102,
     "name": "受傷·其一",
-    "res": "vo_be_hit_heavy_r01",
+    "res": "char_Aote_vo_be_hit_heavy_r01",
     "text": "我剛補的衣服！"
   },
   {
     "id": 10828,
     "charId": 5102,
     "name": "受傷·其二",
-    "res": "vo_be_hit_heavy_r02",
+    "res": "char_Aote_vo_be_hit_heavy_r02",
     "text": "嘶……"
   },
   {
     "id": 10829,
     "charId": 5102,
     "name": "釋放技能·其一",
-    "res": "vo_skill01_r01",
+    "res": "char_Aote_vo_skill01_r01",
     "text": "小把戲，大用途。"
   },
   {
     "id": 10830,
     "charId": 5102,
     "name": "釋放技能·其二",
-    "res": "vo_skill01_r02",
+    "res": "char_Aote_vo_skill01_r02",
     "text": "給大伙開開眼。"
   },
   {
     "id": 10831,
     "charId": 5102,
     "name": "釋放終結技·其一",
-    "res": "vo_skill02_r01",
+    "res": "char_Aote_vo_skill02_r01",
     "text": "別掙紮啦，對大家都好。"
   },
   {
     "id": 10832,
     "charId": 5102,
     "name": "釋放終結技·其二",
-    "res": "vo_skill02_r02",
+    "res": "char_Aote_vo_skill02_r02",
     "text": "試探結束，該認真了。"
   },
   {
     "id": 10833,
     "charId": 5102,
     "name": "釋放終結技·其三",
-    "res": "vo_skill02_r03",
+    "res": "char_Aote_vo_skill02_r03",
     "text": "最後，再看一眼這個世界吧。"
   },
   {
     "id": 10834,
     "charId": 5102,
     "name": "無法行動·其一",
-    "res": "vo_die_r01",
+    "res": "char_Aote_vo_die_r01",
     "text": "咳……老馬也會失蹄……"
   },
   {
     "id": 10835,
     "charId": 5102,
     "name": "無法行動·其二",
-    "res": "vo_die_r02",
+    "res": "char_Aote_vo_die_r02",
     "text": "菲娜就……拜托你們了。"
   },
   {
     "id": 10836,
     "charId": 5102,
     "name": "復甦",
-    "res": "vo_revive",
+    "res": "char_Aote_vo_revive",
     "text": "我身上最不缺的就是傷痕，這種事不算什麼。"
   },
   {
     "id": 10837,
     "charId": 5102,
     "name": "勝利",
-    "res": "vo_victory",
+    "res": "char_Aote_vo_victory",
     "text": "等會我來打掃戰場就好，順便找找有沒有能回收的東西。"
   },
   {
     "id": 10838,
     "charId": 5102,
     "name": "敗退",
-    "res": "vo_fail",
+    "res": "char_Aote_vo_fail",
     "text": "嘖，你們先撤，我隨後跟上。"
   },
   {
     "id": 10839,
     "charId": 5102,
     "name": "生日祝福",
-    "res": "vo_birthday",
+    "res": "char_Aote_vo_birthday",
     "text": "祝你生日快樂！祝你生日快樂……啊，沒什麼，只是想起我們第一次相遇好像也是因為「生日」，看著如今這幅光景，才讓人意識到我們原來已經互相攙扶著走到了另一個「生日」，放在以前這種事我都不敢想，命運還真是奇妙啊。"
   },
   {
     "id": 10840,
     "charId": 4102,
     "name": "角色形象·初見",
-    "res": "vo_gain",
+    "res": "char_Zhiliu01_vo_gain",
     "text": "怎麼，你為何這般驚訝？我雖身為龍淵上卿，出席私宴的時候總也要換一身應景的裝束。今夜還長，你還是趁早看習慣為好。"
   },
   {
     "id": 10841,
     "charId": 4102,
     "name": "角色形象·準備就緒",
-    "res": "vo_appear",
+    "res": "char_Zhiliu01_vo_appear",
     "text": "美酒、佳肴、雅樂俱全，準備好與我一同入席了嗎？"
   },
   {
     "id": 10842,
     "charId": 4102,
     "name": "角色形象·戰鬥開始",
-    "res": "vo_battlestart",
+    "res": "char_Zhiliu01_vo_battlestart",
     "text": "嗯……我算了一卦，在這杯酒變涼之前，定能悉數解決。"
   },
   {
     "id": 10843,
     "charId": 4102,
     "name": "角色形象·釋放終結技",
-    "res": "vo_skill02_r01",
+    "res": "char_Zhiliu01_vo_skill02_r01",
     "text": "來為宴席助興吧。"
   },
   {
     "id": 10844,
     "charId": 4102,
     "name": "初見",
-    "res": "vo_gain",
+    "res": "char_Zhiliu_vo_gain",
     "text": "世間萬物虛虛實實，真心抑或算計，會使你如此在意嗎？重要的是，我來與你相見，這就夠了。"
   },
   {
     "id": 10845,
     "charId": 4102,
     "name": "致候",
-    "res": "vo_welcome",
+    "res": "char_Zhiliu_vo_welcome",
     "text": "你願意來見我了……你還在生氣嗎？困惑嗎？還是說，你已經對我漠然無動於衷？無妨，現在我們有大把的時間可以一一探討。"
   },
   {
     "id": 10846,
     "charId": 4102,
     "name": "閒談・關於代價·其一",
-    "res": "vo_topic_01_1",
+    "res": "char_Zhiliu_vo_topic_01_1",
     "text": "沒有什麼是不能作為籌碼的。區別僅僅在於，你所付出的，能夠撬動怎樣的回報。"
   },
   {
     "id": 10847,
     "charId": 4102,
     "name": "閒談・關於代價·其二",
-    "res": "vo_topic_01_2",
+    "res": "char_Zhiliu_vo_topic_01_2",
     "text": "沒錯。你的性命、我的性命，乃至於芸芸眾生，在更高的利益層面上，都只是一枚籌碼罷了。"
   },
   {
     "id": 10848,
     "charId": 4102,
     "name": "閒談・關於代價·其三",
-    "res": "vo_topic_01_3",
+    "res": "char_Zhiliu_vo_topic_01_3",
     "text": "對於渺小的人類而言，能夠用自己僅有的籌碼，去償換欲求之物，未嘗不是一件幸事。"
   },
   {
     "id": 10849,
     "charId": 4102,
     "name": "閒談・關於代價·其四",
-    "res": "vo_topic_01_4",
+    "res": "char_Zhiliu_vo_topic_01_4",
     "text": "討厭這個答案嗎？那就向我證明，我所言非實吧。"
   },
   {
     "id": 10850,
     "charId": 4102,
     "name": "閒談・關於生意·其一",
-    "res": "vo_topic_02_1",
+    "res": "char_Zhiliu_vo_topic_02_1",
     "text": "讓我想想……不必計較一時得失，多多讓利。學會觀人、用人，施以恩惠。讓他們敬你、重你，但也畏懼於你。"
   },
   {
     "id": 10851,
     "charId": 4102,
     "name": "閒談・關於生意·其二",
-    "res": "vo_topic_02_2",
+    "res": "char_Zhiliu_vo_topic_02_2",
     "text": "呵呵。貨物有價，人情無價。錙銖必較者，只能經營足下一隅。學會藉助人情的東風，才能飛向更加廣闊的天地。"
   },
   {
     "id": 10852,
     "charId": 4102,
     "name": "閒談・關於愛好·其一",
-    "res": "vo_topic_03_1",
+    "res": "char_Zhiliu_vo_topic_03_1",
     "text": "我平素多有瑣事纏身，很少能真正得空。閒暇二字，於我倒是有些許奢侈。"
   },
   {
     "id": 10853,
     "charId": 4102,
     "name": "閒談・關於愛好·其二",
-    "res": "vo_topic_03_2",
+    "res": "char_Zhiliu_vo_topic_03_2",
     "text": "若是僥倖得了浮生半日閒……我大約會去觀戲吧。無論是華胥的說書、評彈，帝國的歌劇、話劇，抑或是遠洋新近流行的照影，我都有幾分興致。"
   },
   {
     "id": 10854,
     "charId": 4102,
     "name": "閒談・關於愛好·其三",
-    "res": "vo_topic_03_3",
+    "res": "char_Zhiliu_vo_topic_03_3",
     "text": "呵呵……是啊。戲劇擷取吉光片羽，卻能講盡人性幽微。人心這東西，說不清，道不明，總是帶來意外，又永遠教人看不厭。"
   },
   {
     "id": 10855,
     "charId": 4102,
     "name": "閒談・關於愛好·其四",
-    "res": "vo_topic_03_4",
+    "res": "char_Zhiliu_vo_topic_03_4",
     "text": "今後的日子裡，你又會給我帶來怎樣的意外？我可是拭目以待呢。"
   },
   {
     "id": 10856,
     "charId": 4102,
     "name": "閒談・關於恐懼·其一",
-    "res": "vo_topic_04_1",
+    "res": "char_Zhiliu_vo_topic_04_1",
     "text": "嗯？這也被你注意到了。只是有些老毛病罷了。"
   },
   {
     "id": 10857,
     "charId": 4102,
     "name": "閒談・關於恐懼·其二",
-    "res": "vo_topic_04_2",
+    "res": "char_Zhiliu_vo_topic_04_2",
     "text": "我年幼時，曾因一起意外，受困於山洞澗谷中，三天三夜不見天日。大約是從那時起落下的陋習。"
   },
   {
     "id": 10858,
     "charId": 4102,
     "name": "閒談・關於恐懼·其三",
-    "res": "vo_topic_04_3",
+    "res": "char_Zhiliu_vo_topic_04_3",
     "text": "在這世間，為人皆有恐懼之物，我也不能倖免……看你的表情，這讓你很驚訝嗎？"
   },
   {
     "id": 10859,
     "charId": 4102,
     "name": "閒談・關於恐懼·其四",
-    "res": "vo_topic_04_4",
+    "res": "char_Zhiliu_vo_topic_04_4",
     "text": "呵呵……沒錯。弱點只會成為商人的絆腳石。"
   },
   {
     "id": 10860,
     "charId": 4102,
     "name": "閒談・關於恐懼·其五",
-    "res": "vo_topic_04_5",
+    "res": "char_Zhiliu_vo_topic_04_5",
     "text": "我後來針對這點進行了嚴格的特訓。若對面是談判的對手，我可以隨時將這份恐懼拋之腦後。只是在你面前，沒有強裝的必要罷了。"
   },
   {
     "id": 10861,
     "charId": 4102,
     "name": "獨白",
-    "res": "vo_idle",
+    "res": "char_Zhiliu_vo_idle",
     "text": "近來的日程我都讓秘書推掉了。這幾日，我只想與你待在一起，排卻外界紛擾，體會此處的清淨——這次是真心誠意，還是另有所圖？不妨猜猜看吧。"
   },
   {
     "id": 10862,
     "charId": 4102,
     "name": "閒談・他人偶遇 其一",
-    "res": "vo_companio_01",
+    "res": "char_Zhiliu_vo_companio_01",
     "text": "你身上香水的味道，濃郁、熱烈，散發出毫不克制的甜美。與華胥慣用香的疏淡卻是有所不同。我很感興趣。"
   },
   {
     "id": 10865,
     "charId": 4102,
     "name": "閒談・他人偶遇 其三",
-    "res": "vo_companio_03",
+    "res": "char_Zhiliu_vo_companio_03",
     "text": "我在你身上看見了故人的影子……不，是我多言了。"
   },
   {
     "id": 10867,
     "charId": 4102,
     "name": "準備就緒",
-    "res": "vo_appear",
+    "res": "char_Zhiliu_vo_appear",
     "text": "需要我的幫忙嗎？呵呵，我很樂意。"
   },
   {
     "id": 10868,
     "charId": 4102,
     "name": "精進",
-    "res": "vo_lvup",
+    "res": "char_Zhiliu_vo_lvup",
     "text": "正如預料，一切都在掌握之中。"
   },
   {
     "id": 10869,
     "charId": 4102,
     "name": "戰鬥開始",
-    "res": "vo_battlestart",
+    "res": "char_Zhiliu_vo_battlestart",
     "text": "速戰速決吧。"
   },
   {
     "id": 10870,
     "charId": 4102,
     "name": "空暇",
-    "res": "vo_battleidle",
+    "res": "char_Zhiliu_vo_battleidle",
     "text": "一寸光陰一寸金，我的出場費可不便宜。"
   },
   {
     "id": 10871,
     "charId": 4102,
     "name": "受傷·其一",
-    "res": "vo_be_hit_heavy_r01",
+    "res": "char_Zhiliu_vo_be_hit_heavy_r01",
     "text": "呵…該罰呢。"
   },
   {
     "id": 10872,
     "charId": 4102,
     "name": "釋放技能·其一",
-    "res": "vo_skill01_r01",
+    "res": "char_Zhiliu_vo_skill01_r01",
     "text": "起卦。"
   },
   {
     "id": 10873,
     "charId": 4102,
     "name": "釋放技能·其二",
-    "res": "vo_skill01_r02",
+    "res": "char_Zhiliu_vo_skill01_r02",
     "text": "留神了。"
   },
   {
     "id": 10874,
     "charId": 4102,
     "name": "釋放終結技·其一",
-    "res": "vo_skill02_r01",
+    "res": "char_Zhiliu_vo_skill02_r01",
     "text": "利有攸往。"
   },
   {
     "id": 10875,
     "charId": 4102,
     "name": "釋放終結技·其二",
-    "res": "vo_skill02_r02",
+    "res": "char_Zhiliu_vo_skill02_r02",
     "text": "震起巽風，其勢愈強。"
   },
   {
     "id": 10876,
     "charId": 4102,
     "name": "釋放終結技·其三",
-    "res": "vo_skill02_r03",
+    "res": "char_Zhiliu_vo_skill02_r03",
     "text": "還要掙扎嗎？"
   },
   {
     "id": 10877,
     "charId": 4102,
     "name": "釋放終結技·其四",
-    "res": "vo_skill02_sp",
+    "res": "char_Zhiliu_vo_skill02_sp",
     "text": "將他們誅盡吧。"
   },
   {
     "id": 10878,
     "charId": 4102,
     "name": "無法行動·其一",
-    "res": "vo_die_r01",
+    "res": "char_Zhiliu_vo_die_r01",
     "text": "我也有失算的一天嗎……"
   },
   {
     "id": 10879,
     "charId": 4102,
     "name": "無法行動·其二",
-    "res": "vo_die_r02",
+    "res": "char_Zhiliu_vo_die_r02",
     "text": "終究未能逃過……"
   },
   {
     "id": 10880,
     "charId": 4102,
     "name": "復甦",
-    "res": "vo_revive",
+    "res": "char_Zhiliu_vo_revive",
     "text": "若以為一切已經結束，就太天真了。"
   },
   {
     "id": 10881,
     "charId": 4102,
     "name": "勝利",
-    "res": "vo_victory",
+    "res": "char_Zhiliu_vo_victory",
     "text": "小事一樁。"
   },
   {
     "id": 10882,
     "charId": 4102,
     "name": "敗退",
-    "res": "vo_fail",
+    "res": "char_Zhiliu_vo_fail",
     "text": "莫灰心，重整策略再來過便是。"
   },
   {
     "id": 10883,
     "charId": 4102,
     "name": "生日祝福",
-    "res": "vo_birthday",
+    "res": "char_Zhiliu_vo_birthday",
     "text": "今日是你的生辰，我備了些薄禮，待會兒再拆開吧。\n很驚訝嗎？你的資料是我略施小計拿到手上的，其中的信息我一直牢牢記著。\n雖然發生了很多事情，但我願你平安順遂的心意，從往昔到今日，從未有過改變。若你還願意聽的話……生辰快樂。"
   },
   {
     "id": 10884,
     "charId": 1501,
     "name": "初見",
-    "res": "vo_gain",
+    "res": "char_Baonu_vo_gain",
     "text": "嗯，咳。我乃莉茲貝爾，艾利西安傳頌會「七美德」之「堅忍」……候補。因至高的「塔」之名，因至聖的艾利西安九神之名，因……因什麼來著……嗚，麻煩死了！總之，你要叫我「堅忍」大人，懂了嗎？"
   },
   {
     "id": 10885,
     "charId": 1501,
     "name": "致候",
-    "res": "vo_welcome",
+    "res": "char_Baonu_vo_welcome",
     "text": "你好啊，我在帶著薩麥爾呼吸新鮮空氣，熟悉這裡的氛圍和陽光，你要和它打招呼嗎？它會很高興的，嗯嗯，應該會的！"
   },
   {
     "id": 10886,
     "charId": 1501,
     "name": "閒談・關於薩麥爾·其一",
-    "res": "vo_topic_01_1",
+    "res": "char_Baonu_vo_topic_01_1",
     "text": "薩麥爾可不是什麼普通兵器，它是我最好的朋友！"
   },
   {
     "id": 10887,
     "charId": 1501,
     "name": "閒談・關於薩麥爾·其二",
-    "res": "vo_topic_01_2",
+    "res": "char_Baonu_vo_topic_01_2",
     "text": "在傳頌會，只有被七件聖器選中的人才能成為「七美德」。當時有那麼多那麼多大力士，但只有我能拔出薩麥爾——既然它選擇了我，我也一定會好好對待它的！"
   },
   {
     "id": 10888,
     "charId": 1501,
     "name": "閒談・關於薩麥爾·其三",
-    "res": "vo_topic_01_3",
+    "res": "char_Baonu_vo_topic_01_3",
     "text": "只是，雖然我拔出了它，但從那天開始，它再也沒有回應過我的呼喚了……等等，這是秘密，絕對不要說出去！"
   },
   {
     "id": 10889,
     "charId": 1501,
     "name": "閒談・關於薩麥爾·其四",
-    "res": "vo_topic_01_4",
+    "res": "char_Baonu_vo_topic_01_4",
     "text": "啊？難道它不喜歡冰淇淋？！那……土豆泥怎麼樣？沙拉醬呢？"
   },
   {
     "id": 10890,
     "charId": 1501,
     "name": "閒談・關於艾利西安傳頌會·其一",
-    "res": "vo_topic_02_1",
+    "res": "char_Baonu_vo_topic_02_1",
     "text": "閉嘴閉嘴！別和我提那群老頑固！啊啊，真是的，好好的心情都被你……啊，我不能生氣，不能生氣……"
   },
   {
     "id": 10891,
     "charId": 1501,
     "name": "閒談・關於艾利西安傳頌會·其二",
-    "res": "vo_topic_02_2",
+    "res": "char_Baonu_vo_topic_02_2",
     "text": "咳咳，才沒有呢！司祭們人都好棒的，一個個都特別和藹可親的。背錯的經文只需要抄三十遍，喂薩麥爾吃奶油被發現也只要面壁思過兩天就行了，超喜歡大家的。"
   },
   {
     "id": 10892,
     "charId": 1501,
     "name": "閒談・關於「堅忍」·其一",
-    "res": "vo_topic_03_1",
+    "res": "char_Baonu_vo_topic_03_1",
     "text": "就是字面意思啊，「堅忍」就是要堅定、要忍耐，無論遇到什麼事都不能生氣！"
   },
   {
     "id": 10893,
     "charId": 1501,
     "name": "閒談・關於「堅忍」·其二",
-    "res": "vo_topic_03_2",
+    "res": "char_Baonu_vo_topic_03_2",
     "text": "可不是嘛……因為這個稱號，我總是被教導要用忍耐去對抗憤怒。可這就像是打哈欠打到一半被人搭話，又或是舉劍後被告知眼前的敵人並非敵人而是同伴一樣。總之就是，反而會讓人更加生……"
   },
   {
     "id": 10894,
     "charId": 1501,
     "name": "閒談・關於「堅忍」·其三",
-    "res": "vo_topic_03_3",
+    "res": "char_Baonu_vo_topic_03_3",
     "text": "唔，他們說憤怒是很大的罪惡，我不能生氣，不能生氣……"
   },
   {
     "id": 10895,
     "charId": 1501,
     "name": "閒談・關於「堅忍」·其四",
-    "res": "vo_topic_03_4",
+    "res": "char_Baonu_vo_topic_03_4",
     "text": "哼哼，誰叫我是「堅忍」大人呢！"
   },
   {
     "id": 10896,
     "charId": 1501,
     "name": "閒談・關於「七美德」·其一",
-    "res": "vo_topic_04_1",
+    "res": "char_Baonu_vo_topic_04_1",
     "text": "「七美德」是艾利西安最威風，最高貴，最強大帥氣的七個人。當然，顧名思義，也是美德最豐沛的七個人啦。"
   },
   {
     "id": 10897,
     "charId": 1501,
     "name": "閒談・關於「七美德」·其二",
-    "res": "vo_topic_04_2",
+    "res": "char_Baonu_vo_topic_04_2",
     "text": "你那是什麼表情……真是放肆！竟然趕質疑本大人，我要罰你抄寫戒律三十……不，一百遍！"
   },
   {
     "id": 10898,
     "charId": 1501,
     "name": "獨白",
-    "res": "vo_idle",
+    "res": "char_Baonu_vo_idle",
     "text": "薩麥爾，今天外面正豔陽高照呢，那我們吃點涼的怎麼樣？唔，聽說聖都最近有一種叫「冰淇淋」的甜品，莉茲偷偷買給你吧！雖然是平民的食物，但肯定比那些老頑固給的餐點美味很多！"
   },
   {
     "id": 10900,
     "charId": 1501,
     "name": "閒談・他人偶遇 其二",
-    "res": "vo_companio_02",
+    "res": "char_Baonu_vo_companio_02",
     "text": "「堅忍，是七大美德之一……心中常存忍耐，就能夠見到常人不能見的，行世人難以……難以……」\n啊啊啊不行受不了啦！小矮子你再在那裡模仿本大人的樣子本大人就要忍不住拿薩麥爾切水產了我以九神之名發誓真的會做到的！！"
   },
   {
     "id": 10901,
     "charId": 1501,
     "name": "閒談・他人偶遇 其三",
-    "res": "vo_companio_03",
+    "res": "char_Baonu_vo_companio_03",
     "text": "抹奶油？怎麼啦。我們艾利西安人就是這樣保養武器的，有什麼意見嗎？"
   },
   {
     "id": 10903,
     "charId": 1501,
     "name": "準備就緒",
-    "res": "vo_appear",
+    "res": "char_Baonu_vo_appear",
     "text": "薩麥爾，我們出發！"
   },
   {
     "id": 10904,
     "charId": 1501,
     "name": "精進",
-    "res": "vo_lvup",
+    "res": "char_Baonu_vo_lvup",
     "text": "薩麥爾，我又變強了哦，讓我們一起保護那些煩人的傢伙吧。"
   },
   {
     "id": 10905,
     "charId": 1501,
     "name": "戰鬥開始",
-    "res": "vo_battlestart",
+    "res": "char_Baonu_vo_battlestart",
     "text": "寬恕罪惡是神明大人的事，我才不！"
   },
   {
     "id": 10906,
     "charId": 1501,
     "name": "空暇",
-    "res": "vo_battleidle",
+    "res": "char_Baonu_vo_battleidle",
     "text": "出——來——挨——打！"
   },
   {
     "id": 10907,
     "charId": 1501,
     "name": "受傷·其一",
-    "res": "vo_be_hit_heavy_r01",
+    "res": "char_Baonu_vo_be_hit_heavy_r01",
     "text": "你不講美德！"
   },
   {
     "id": 10908,
     "charId": 1501,
     "name": "受傷·其二",
-    "res": "vo_be_hit_heavy_r02",
+    "res": "char_Baonu_vo_be_hit_heavy_r02",
     "text": "薩麥爾！"
   },
   {
     "id": 10909,
     "charId": 1501,
     "name": "釋放技能·其一",
-    "res": "vo_skill01_r01",
+    "res": "char_Baonu_vo_skill01_r01",
     "text": "聖哉！"
   },
   {
     "id": 10910,
     "charId": 1501,
     "name": "釋放技能·其二",
-    "res": "vo_skill01_r02",
+    "res": "char_Baonu_vo_skill01_r02",
     "text": "以「堅忍」之名！"
   },
   {
     "id": 10911,
     "charId": 1501,
     "name": "釋放終結技·其一",
-    "res": "vo_skill02_r01",
+    "res": "char_Baonu_vo_skill02_r01",
     "text": "我——不——忍——啦！"
   },
   {
     "id": 10912,
     "charId": 1501,
     "name": "釋放終結技·其二",
-    "res": "vo_skill02_r02",
+    "res": "char_Baonu_vo_skill02_r02",
     "text": "薩麥爾，請回應，我的呼喚——"
   },
   {
     "id": 10913,
     "charId": 1501,
     "name": "釋放終結技·其三",
-    "res": "vo_skill02_r03",
+    "res": "char_Baonu_vo_skill02_r03",
     "text": "薩麥爾，賜予我，你的「憤怒」——"
   },
   {
     "id": 10914,
     "charId": 1501,
     "name": "無法行動·其一",
-    "res": "vo_die_r01",
+    "res": "char_Baonu_vo_die_r01",
     "text": "不能……辱沒……薩麥爾之名……"
   },
   {
     "id": 10915,
     "charId": 1501,
     "name": "無法行動·其二",
-    "res": "vo_die_r02",
+    "res": "char_Baonu_vo_die_r02",
     "text": "我不要一個人去見神明大人……"
   },
   {
     "id": 10916,
     "charId": 1501,
     "name": "復甦",
-    "res": "vo_revive",
+    "res": "char_Baonu_vo_revive",
     "text": "「堅忍」大人的堅忍也是有限度的！"
   },
   {
     "id": 10917,
     "charId": 1501,
     "name": "勝利",
-    "res": "vo_victory",
+    "res": "char_Baonu_vo_victory",
     "text": "快說，「謝謝『堅忍』大人！」"
   },
   {
     "id": 10918,
     "charId": 1501,
     "name": "敗退",
-    "res": "vo_fail",
+    "res": "char_Baonu_vo_fail",
     "text": "忍忍忍忍，不氣不氣不氣不氣……"
   }
 ]
