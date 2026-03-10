@@ -20425,6 +20425,63 @@
             "name": "达芙涅回忆过场",
             "next": [
               "17228313984997035147"
+            ],
+            "dialogues": [
+              {
+                "id": 11015123,
+                "content": "À Dismania, il pleut souvent. Quand j’étais petite, mes camarades détestaient la pluie : elle abîmait leurs coiffures et salissait leurs jolies robes neuves.",
+                "voice": "story/1002/110151/1B93409E",
+                "npc": 110005,
+                "next": 11015124
+              },
+              {
+                "id": 11015124,
+                "content": "Mais moi, je ne la détestais pas. Parce qu’elle ne tombait jamais sur mes épaules. À mes yeux, la pluie, ce n’était que les ronds d’eau sous mes bottes, ou les gouttelettes glissant le long d’un parapluie.",
+                "voice": "story/1002/110151/1B9340C8",
+                "npc": 110005,
+                "next": 11015125
+              },
+              {
+                "id": 11015125,
+                "content": "En grandissant, j’ai compris... Ce n’était pas la pluie que j’aimais. C’était parce que mon père était là, et qu’il prenait toute la pluie pour moi.",
+                "voice": "story/1002/110151/1B9340F2",
+                "npc": 110005,
+                "next": 11015126
+              },
+              {
+                "id": 11015126,
+                "content": "Papa... était un homme si bon, mais aussi incroyablement têtu. Toujours prêt à se sacrifier pour les autres, toujours...",
+                "voice": "story/1002/110151/1B93411C",
+                "npc": 110005,
+                "next": 11015128
+              },
+              {
+                "id": 11015128,
+                "content": "Avant ma naissance, il a rejoint la Légion pour \"mériter\" maman, risquant sa vie au combat. Plus tard, il nous a quittées, maman et moi, afin de \"ne pas gâcher mon avenir\".",
+                "voice": "story/1002/110151/1B934170",
+                "npc": 110005,
+                "next": 11015129
+              },
+              {
+                "id": 11015129,
+                "content": "Dans la rue, il me défendait de l’appeler papa. Mais au fond d’une taverne, au cœur de la nuit, il criait nos noms, à maman et moi, en pleurant, ivre mort... Il portait toujours tout le poids du monde sur ses épaules...",
+                "voice": "story/1002/110151/1B93419A",
+                "npc": 110005,
+                "next": 11015130
+              },
+              {
+                "id": 11015130,
+                "content": "Mais jamais il ne m’a demandé si c’était vraiment ce que je voulais... Tout comme vous, à cet instant, ne me demandez pas si je veux vivre en portant le poids de votre sacrifice !",
+                "voice": "story/1002/110151/1B9341C4",
+                "npc": 110005
+              },
+              {
+                "id": 11015127,
+                "content": "...",
+                "voice": "story/1002/110151/1B934146",
+                "npc": 110022,
+                "next": 11015128
+              }
             ]
           },
           {
