@@ -256,9 +256,11 @@ function M:IsFocusStateValid(State)
   elseif StateName == FocusAreas.AccessoryList then
     return self.List_Accessory:GetIndexForItem(State.Content) >= 0
   elseif StateName == FocusAreas.MVPList then
-    return self.List_Accessory:GetIndexForItem(State.Content) >= 0
+    return self.List_SettlementAction:GetIndexForItem(State.Content) >= 0
   elseif StateName == FocusAreas.HiddenSelf then
     return self.bSelfHidden
+  elseif StateName == FocusAreas.Resource then
+    return true
   end
 end
 
@@ -268,6 +270,9 @@ function M:GetDesiredFocusTarget()
   end
   local State = self.FSM:Peak()
   local StateName = State.Name
+  self.List_SettlementAction:BP_CancelScrollIntoView()
+  self.List_Skin:BP_CancelScrollIntoView()
+  self.List_Accessory:BP_CancelScrollIntoView()
   if self.bSelfHidden then
     return self
   elseif self.CurrentTopTabIdx == self.SkinTabIdx then
@@ -550,7 +555,8 @@ function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
   M.Super.OnPreviewKeyDown(self, MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  if InKeyName == Const.GamepadFaceButtonDown then
+  local StateName = self.FSM:Peak().Name
+  if InKeyName == Const.GamepadFaceButtonDown and StateName ~= FocusAreas.Resource then
     self:OnGamePadConfirKeyDown()
     return UE4.UWidgetBlueprintLibrary.Handled()
   end

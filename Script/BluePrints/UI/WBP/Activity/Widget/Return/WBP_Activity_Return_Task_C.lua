@@ -177,6 +177,7 @@ function M:OnNewPhaseUnlocked()
     if TabInfo and TabInfo.IsLocked and Avatar:IsComeBackPhaseUnlocked(self.CurActivityId, Index, PhaseUnlockInterval) then
       TabInfo.IsLocked = false
       self.Com_TabSub:UnLockTabByIndex(true, Index)
+      self.Com_TabSub:ShowTabRedDot(Index, true, false, false)
     end
   end
   self:RefreshTabUnlockTime()
@@ -309,11 +310,10 @@ function M:RefreshList()
   local CurQuestList = ReturnModel:GetReturnQuestContents(self.CurActivityId, self.CurrTabIdx, self) or {}
   local Count = 0
   local Contents = {}
-  for Idx, Item in ipairs(CurQuestList) do
+  for _, Item in ipairs(CurQuestList) do
     local NewContent = NewObject(UIUtils.GetCommonItemContentClass())
     NewContent.Owner = self
     NewContent.ConfigData = Item
-    NewContent.Idx = Idx - 1
     
     function NewContent.OnGetReward(bReceived)
       if bReceived then
@@ -329,7 +329,7 @@ function M:RefreshList()
     table.insert(Contents, NewContent)
   end
   self:SortList(Contents)
-  for _, Content in ipairs(Contents) do
+  for Idx, Content in ipairs(Contents) do
     self.List_Item:AddItem(Content)
   end
   if Count > 0 or ReturnModel:CheckHaveProgressRewardToGet() then
@@ -437,17 +437,9 @@ function M:TryDecreaseTabReddot(Index)
     if false == CacheDetail[Index] then
       CacheDetail[Index] = true
       local Node = ReddotManager.GetTreeNode("ComeBackTask")
+      ReddotManager.DecreaseLeafNodeCount(ReturnUtils.ReddotTaskNewKey, 1)
+      ActivityReddotHelper.RefreshReddotNode(self.CurActivityId)
       Node:TryFireOnCountChange(Node.Count, true)
-      local bCountChange = true
-      for _, Detail in pairs(CacheDetail) do
-        if false == Detail then
-          bCountChange = false
-        end
-      end
-      if bCountChange then
-        ReddotManager.DecreaseLeafNodeCount(ReturnUtils.ReddotTaskNewKey, 1)
-        ActivityReddotHelper.RefreshReddotNode(self.CurActivityId)
-      end
     end
   end
 end
@@ -808,21 +800,21 @@ function M:DelaySetFocusTarget(bForce)
 end
 
 function M:OnNavigateUp(Content)
-  local Idx = Content.Idx - 1
-  if Idx >= 0 then
-    local Item = self.List_Item:GetItemAt(Idx)
-    self.List_Item:NavigateToIndex(Idx)
+  local Idx = self.List_Item:GetIndexForItem(Content)
+  if Idx >= 1 then
+    local Item = self.List_Item:GetItemAt(Idx - 1)
+    self.List_Item:NavigateToIndex(Idx - 1)
     return Item.SelfWidget:FocusToRewardItem()
   end
   return Content.SelfWidget:FocusToRewardItem()
 end
 
 function M:OnNavigateDown(Content)
-  local Idx = Content.Idx + 1
+  local Idx = self.List_Item:GetIndexForItem(Content)
   local AllItemCount = self.List_Item:GetNumItems() - 1
-  if Idx <= AllItemCount then
-    local Item = self.List_Item:GetItemAt(Idx)
-    self.List_Item:NavigateToIndex(Idx)
+  if Idx <= AllItemCount - 1 then
+    local Item = self.List_Item:GetItemAt(Idx + 1)
+    self.List_Item:NavigateToIndex(Idx + 1)
     return Item.SelfWidget:FocusToRewardItem()
   end
   return Content.SelfWidget:FocusToRewardItem()

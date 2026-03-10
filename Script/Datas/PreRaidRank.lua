@@ -22,10 +22,10 @@ return ReadOnly("PreRaidRank", {
       "B"
     },
     RankPercent = {
-      5,
-      20,
-      45,
-      70,
+      15,
+      35,
+      55,
+      75,
       100
     },
     RankReward = {

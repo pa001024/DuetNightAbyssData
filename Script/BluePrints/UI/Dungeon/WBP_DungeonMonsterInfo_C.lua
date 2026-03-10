@@ -453,10 +453,16 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
   if IsUseKeyAndMouse then
     self.UsingGamepad = false
     self:RefreshKeyView()
+    self.EMScrollBox_1:SetVisibility(UE4.ESlateVisibility.Visible)
+    self.Arrow_Right:SetVisibility(UE4.ESlateVisibility.Visible)
+    self.Arrow_Left:SetVisibility(UE4.ESlateVisibility.Visible)
   else
     self.UsingGamepad = true
     self.GameInputModeSubsystem:SetNavigateWidgetVisibility(false)
     self:RefreshGamepadView()
+    self.EMScrollBox_1:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
+    self.Arrow_Right:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
+    self.Arrow_Left:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
   end
   if self.SubButton and self.SubButton.OnUpdateUIStyleByInputTypeChange then
     self.SubButton:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)

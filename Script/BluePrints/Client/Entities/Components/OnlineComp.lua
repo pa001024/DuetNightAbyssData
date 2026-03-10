@@ -700,6 +700,8 @@ function Component:HandleDelivery(Message)
         end
         
         local AllCallback = {OnNotifyBegin = HidePlayer}
+        Player:InitCharacterInfo(Player.InfoForInit)
+        Player:ResetIdle()
         Player:PlayTeleportAction(AllCallback, false, true, false)
         Player:AddTimer(3, HidePlayer, false, 0, "DeliveryHide_" .. Message.Sender)
       end
@@ -990,10 +992,40 @@ end
 
 function Component:HandleOnDeadRegionOnlineMount(Message)
   PrintTable({OnDeadRegionOnlineMount = Message}, 10)
+  PrintTable({Message = Message}, 10)
+  if Message.Sender == self.Eid then
+    return
+  end
+  local ObjId = Message.Sender
+  local TempRoleInfo = self:GetRoleInfo(ObjId)
+  if not TempRoleInfo then
+    print(_G.LogTag, "Not a legal roleinfo")
+    return
+  end
+  if not TempRoleInfo.MountDatas then
+    print(_G.LogTag, "TempRoleInfo.MountDatas not exist")
+    return
+  end
+  TempRoleInfo.MountDatas.MountId = 0
 end
 
 function Component:HandleOnUseCreateMount(Message)
   PrintTable({OnUseCreateMount = Message}, 10)
+  PrintTable({Message = Message}, 10)
+  if Message.Sender == self.Eid then
+    return
+  end
+  local ObjId = Message.Sender
+  local TempRoleInfo = self:GetRoleInfo(ObjId)
+  if not TempRoleInfo then
+    print(_G.LogTag, "Not a legal roleinfo")
+    return
+  end
+  if not TempRoleInfo.MountDatas then
+    print(_G.LogTag, "TempRoleInfo.MountDatas not exist")
+    return
+  end
+  TempRoleInfo.MountDatas.MountId = Message.MountId or 0
 end
 
 function Component:HandleOnLeaveRegionOnlineItem(message)

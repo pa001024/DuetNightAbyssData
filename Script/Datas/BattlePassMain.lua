@@ -166,7 +166,7 @@ return ReadOnly("BattlePassMain", {
   [100006] = {
     BPRewardTemplateID = 100006,
     BPRewardTyppe = "Skin",
-    BattlePassEndTime = LocalTimeProxy(1775509199),
+    BattlePassEndTime = LocalTimeProxy(1775465999),
     BattlePassId = 100006,
     BattlePassStartTime = LocalTimeProxy(1773090000),
     BattlePassTitle = "UI_BPTitle_100006",

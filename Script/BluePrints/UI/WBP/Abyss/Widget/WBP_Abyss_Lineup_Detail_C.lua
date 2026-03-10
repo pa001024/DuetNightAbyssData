@@ -468,6 +468,9 @@ function WBP_Abyss_Lineup_Detail:ResetListenEvent()
 end
 
 function WBP_Abyss_Lineup_Detail:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
+  if CurInputDevice == ECommonInputType.Touch then
+    return
+  end
   if CurInputDevice == ECommonInputType.Gamepad then
     for _, IconName in pairs(GamepadIcons) do
       if self[IconName] then

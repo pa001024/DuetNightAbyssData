@@ -34,10 +34,14 @@ function WBP_Abyss_Settle_P_C:InitAllAbyssInfo()
   self.MaxAbyssLevelProgress = self.AbyssLevelInfo.MaxAbyssLevelProgress
   DebugPrint("WBP_Abyss_Settle_P_C:self.MaxAbyssLevelProgress", self.MaxAbyssLevelProgress)
   self.MaxLockedTeamProgress = self.AbyssLevelInfo.MaxLockedTeamProgress
+  DebugPrint("WBP_Abyss_Settle_P_C:self.MaxLockedTeamProgress", self.MaxLockedTeamProgress)
   self.MaxPassARoomNumInCurLocked = self.MaxLockedTeamProgress[1] or 0
+  DebugPrint("WBP_Abyss_Settle_P_C:self.MaxPassARoomNumInCurLocked", self.MaxPassARoomNumInCurLocked)
   self.MaxPassBRoomNumInCurLocked = self.MaxLockedTeamProgress[2] or 0
+  DebugPrint("WBP_Abyss_Settle_P_C:self.MaxPassBRoomNumInCurLocked", self.MaxPassBRoomNumInCurLocked)
   self.ARoomNum = self.AbyssLevelInfo.DungeonReward1 or 5
   self.BRoomNum = self.AbyssLevelInfo.DungeonReward2 or 5
+  DebugPrint("WBP_Abyss_Settle_P_C:self.ARoomNum, self.BRoomNum", self.ARoomNum, self.BRoomNum)
   self.AbyssTeamInfo = self.AbyssLevelInfo.AbyssLockedTeamList
   self.ATeamInfo = self.AbyssTeamInfo[1] or nil
   self.BTeamInfo = self.AbyssTeamInfo[2] or nil
@@ -99,11 +103,7 @@ function WBP_Abyss_Settle_P_C:InitRoomStartListInAnimation()
     self.List_Progress_M:ClearListItems()
     local CountDown = self.PassARoomNum
     for i = 1, self.ARoomNum do
-      local Content = NewObject(UIUtils.GetCommonItemContentClass())
-      Content.RoomIndex = i
-      Content.CountDown = CountDown
-      Content.ItemIndex = i
-      self:AddTimer(self.StarAnimationTickTime * i, self.AddItemInListView, false, 0, nil, true, Content)
+      self:AddTimer(self.StarAnimationTickTime * i, self.AddItemInListView, false, 0, nil, true, i, CountDown)
       CountDown = CountDown - 1
     end
     return
@@ -113,11 +113,7 @@ function WBP_Abyss_Settle_P_C:InitRoomStartListInAnimation()
     self.List_Progress_L:ClearListItems()
     local CountDown = self.PassARoomNum
     for i = 1, self.ARoomNum do
-      local Content = NewObject(UIUtils.GetCommonItemContentClass())
-      Content.RoomIndex = i
-      Content.CountDown = CountDown
-      Content.ItemIndex = i
-      self:AddTimer(self.StarAnimationTickTime * i, self.AddItemInListView, false, 0, nil, true, Content)
+      self:AddTimer(self.StarAnimationTickTime * i, self.AddItemInListView, false, 0, nil, true, i, CountDown)
       CountDown = CountDown - 1
     end
   else
@@ -125,18 +121,18 @@ function WBP_Abyss_Settle_P_C:InitRoomStartListInAnimation()
     self.List_Progress_R:ClearListItems()
     local CountDown = self.PassBRoomNum
     for i = 1, self.BRoomNum do
-      local Content = NewObject(UIUtils.GetCommonItemContentClass())
-      Content.RoomIndex = i
-      Content.CountDown = CountDown
-      Content.ItemIndex = i
-      self:AddTimer(self.StarAnimationTickTime * i, self.AddItemInListView, false, 0, nil, true, Content)
+      self:AddTimer(self.StarAnimationTickTime * i, self.AddItemInListView, false, 0, nil, true, i, CountDown)
       CountDown = CountDown - 1
     end
   end
 end
 
-function WBP_Abyss_Settle_P_C:AddItemInListView(Content)
+function WBP_Abyss_Settle_P_C:AddItemInListView(Index, CountDown)
   AudioManager(self):PlayUISound(nil, "event:/ui/activity/drama_challenge_finish_star_add_start", nil, nil)
+  local Content = NewObject(UIUtils.GetCommonItemContentClass())
+  Content.RoomIndex = Index
+  Content.CountDown = CountDown
+  Content.ItemIndex = Index
   if 3 == self.AbyssLevelType then
     self.List_Progress_M:AddItem(Content)
   elseif 1 == self.AbyssDungeonIndex then
@@ -151,9 +147,9 @@ function WBP_Abyss_Settle_P_C:InitTeamListView(TeamMemberIconPath, ListViewWidge
     return
   end
   for Index, IconPath in pairs(TeamMemberIconPath) do
-    local Icon = LoadObject(IconPath)
+    DebugPrint("WBP_Abyss_Settle_P_C:InitTeamListView", Index, IconPath)
     local Content = NewObject(UIUtils.GetCommonItemContentClass())
-    Content.Icon = Icon
+    Content.IconPath = IconPath
     Content.Index = Index
     Content = self:AddContentInfo(Content, IsPlayerInfo)
     ListViewWidget:AddItem(Content)

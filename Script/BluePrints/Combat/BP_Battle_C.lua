@@ -41,6 +41,19 @@ function BP_Battle_C:CanExecute()
   return false
 end
 
+function BP_Battle_C:ClearStrongValue(Target)
+  DebugPrint("ClearStrongValue,111")
+  if not Target then
+    return
+  end
+  local AttributesSet = Target:K2_GetAttributesSet()
+  local AddAttrs = AttributesSet.AddAttrs
+  AddAttrs:Remove("StrongValue")
+  Target:CalcAttr("StrongValue")
+  AddAttrs:Remove("EnmityValue")
+  Target:CalcAttr("EnmityValue")
+end
+
 function BP_Battle_C:ReceiveBeginPlay()
   print(_G.LogTag, "BP_Battle_C ReceiveBeginPlay")
   GWorld.Battle = self

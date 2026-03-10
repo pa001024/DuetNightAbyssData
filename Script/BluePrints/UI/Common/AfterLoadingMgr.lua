@@ -100,7 +100,7 @@ StateImpl.JumpToRogueMain = State:New("JumpToRogueMain", {
         elseif ExitDungeonInfo.Type == "Depute" then
           if not ExitDungeonInfo.IsFromRegionMechanism then
             local DeputeType = ExitDungeonInfo.DeputeType
-            PageJumpUtils:JumpToStyleOfPlaySubUI("NewDeputeRoot", DeputeType)
+            PageJumpUtils:JumpToStyleOfPlaySubUIForce("NewDeputeRoot", DeputeType)
           end
         elseif ExitDungeonInfo.Type == "GuildWar" then
           local JumpId = ExitDungeonInfo.JumpId

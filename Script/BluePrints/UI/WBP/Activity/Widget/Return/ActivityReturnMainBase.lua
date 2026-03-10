@@ -164,12 +164,14 @@ function M:OnTabItemClicked(Index)
   for i = 1, 3 do
     local TabItem = self["Tab_" .. i]
     if TabItem and Index == i then
+      TabItem:StopAnimation(TabItem.Normal)
       TabItem:PlayAnimation(TabItem.Click)
       self:AddTimer(0.1, function()
         TabItem:SetFocus()
       end, false, 0, "SetFocus", true)
       self.CurSubTab = TabItem
     elseif TabItem then
+      TabItem:StopAnimation(TabItem.Click)
       TabItem:PlayAnimation(TabItem.Normal)
     end
   end

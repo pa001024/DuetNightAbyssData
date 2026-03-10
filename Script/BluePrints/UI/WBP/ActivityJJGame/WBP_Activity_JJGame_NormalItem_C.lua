@@ -15,6 +15,7 @@ function M:Construct()
   self.MidTermGoalEventId = self.MidTermConst.MidTermGoalEventId.ConstantValue
   self.List_Task:SetAllowOverscroll(false)
   self.List_Task:DisAbleScroll(true)
+  self.List_Task.BP_OnEntryInitialized:Add(self, self.OnListTaskEntryInitialized)
 end
 
 function M:Destruct()
@@ -69,7 +70,7 @@ function M:UpdateTaskList()
           end
           elseif TaskData.TaskType == self.TaskConfig.TaskType then
             TaskItem = self:NewItemContent(TaskData.TaskType, TaskData.TaskId, self.MidTermConst.CycleRewardPoint.ConstantValue, TaskData.TaskDes)
-            TaskItem.MidTermTasksRecord = self._Avatar.MidTermTasksRecord[Task.UniqueID]
+            TaskItem.MidTermTasksRecord = self._Avatar.MidTermTasksRecord[Task.UniqueID] or {}
           end
           if TaskItem then
             TaskItem.TaskProp = Task.Props
@@ -81,47 +82,18 @@ function M:UpdateTaskList()
     end
   end
   self.List_Task:RequestPlayEntriesAnim()
-  if self.TaskConfig.Name == "UI_Event_MidTerm_DailyTask" then
-    self.List_Task:SetFocus()
-  end
   self:TryIncreaceNormalTaskNewReddot()
 end
 
-function M:UpdateTaskList_M()
-  self.List_Task:SetVisibility(UE4.ESlateVisibility.Collapsed)
-  self.VB_Task:ClearChildren()
-  self.TaskContentList = {}
-  local SortedTaskList = self:SortTaskList(self._Avatar.MidTermTasks)
-  for i, Task in pairs(SortedTaskList) do
-    local TaskData = DataMgr.MidTermTask[Task.UniqueID]
-    if not TaskData then
-      print("TaskData is nil, Task.UniqueID = ", Task.UniqueID)
+function M:OnListTaskEntryInitialized()
+  if self.TaskConfig.Name == "UI_Event_MidTerm_DailyTask" then
+    local FirstItem = self.List_Task:GetItemAt(0)
+    if FirstItem and FirstItem.SelfWidget then
+      FirstItem.SelfWidget:SetFocus()
     else
-      local TaskItemObj = UIManager(self):CreateWidget(NormalTaskBPPath)
-      local TaskItem
-      if type(self.TaskConfig.TaskType) == "table" then
-        if TaskData.TaskType == self.TaskConfig.TaskType[1] then
-          TaskItem = self:NewItemContent(TaskData.TaskType, TaskData.TaskId, self.MidTermConst.DailyRewardPoint_1.ConstantValue, TaskData.TaskDes)
-        elseif TaskData.TaskType == self.TaskConfig.TaskType[2] then
-          TaskItem = self:NewItemContent(TaskData.TaskType, TaskData.TaskId, self.MidTermConst.DailyRewardPoint_2.ConstantValue, TaskData.TaskDes)
-        end
-      elseif TaskData.TaskType == self.TaskConfig.TaskType then
-        TaskItem = self:NewItemContent(TaskData.TaskType, TaskData.TaskId, self.MidTermConst.CycleRewardPoint.ConstantValue, TaskData.TaskDes)
-        TaskItem.MidTermTasksRecord = self._Avatar.MidTermTasksRecord[Task.UniqueID]
-      end
-      if TaskItem then
-        TaskItem.TaskProp = Task
-        TaskItem.TaskConfig = TaskData
-        table.insert(self.TaskContentList, TaskItem)
-        self.VB_Task:AddChild(TaskItemObj)
-        TaskItemObj:OnListItemObjectSet(TaskItem)
-      end
+      self.List_Task:SetFocus()
     end
   end
-  if self.TaskConfig.Name == "UI_Event_MidTerm_DailyTask" then
-    self.VB_Task:GetChildAt(0):SetFocus()
-  end
-  self:TryIncreaceNormalTaskNewReddot()
 end
 
 function M:SortTaskList(TaskList)
@@ -201,14 +173,10 @@ function M:OnMidTermTaskProgressChange(TaskId, Progress)
 end
 
 function M:OnKeyDown(MyGeometry, InKeyEvent)
-  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
-  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  local IsEventHandled = false
   return UE4.UWidgetBlueprintLibrary.Unhandled()
 end
 
 function M:BP_GetDesiredFocusTarget()
-  return self.List_Task
 end
 
 return M

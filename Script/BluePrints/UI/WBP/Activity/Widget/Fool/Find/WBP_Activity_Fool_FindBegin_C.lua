@@ -292,8 +292,12 @@ function M:BeginFind()
   self.FoolsDayFindUI = UIManager(self):_CreateWidgetNew("FoolsDayFind")
   self.FoolsDayFindUI:Init(self.PhotoId, self.TransformId, self.LikeCountDetails, self.MyLikeRecord, self.Texture, self.TextureAlpha, self.FindLimitSeconds, {
     self,
-    function()
-      self:SetKeyboardFocus()
+    function(_, bSuccess)
+      if bSuccess then
+        self:Close()
+      else
+        self:SetKeyboardFocus()
+      end
     end
   })
 end

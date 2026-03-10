@@ -9,8 +9,26 @@ function BP_AutoChess_Formation_C:ReceiveBeginPlay()
   self.Index2EnemyCubeInfo = {}
   self.CurrentHoverCubeIndex = nil
   self.CurrentSelectCubeIndex = nil
+  self.MonsterCreatingCount = 0
   for i = 0, 47 do
-    local CubeActor = self["AutoChess_Cube" .. i].ChildActor
+    local CubeActor
+    if self["Cube" .. i] then
+      local ActorClass = UE4.UClass.Load("/Game/AssetDesign/GameMode/AutoChess/AutoChess_Cube.AutoChess_Cube")
+      local Location = self["Cube" .. i]:K2_GetComponentLocation()
+      local Rotation = self["Cube" .. i]:K2_GetComponentRotation():ToQuat()
+      local SpawnTransform = UE4.FTransform(Rotation, Location)
+      CubeActor = GWorld.GameInstance:GetWorld():SpawnActor(ActorClass, SpawnTransform, UE4.ESpawnActorCollisionHandlingMethod.AlwaysSpawn, nil, self, nil)
+    else
+      DebugPrint("ayff test missing Cube actor:", i)
+      goto lbl_124
+    end
+    if self["Cube" .. i]:GetAttachParent() == self.Scene1 then
+      CubeActor.Index = i - 24
+      CubeActor.Enemy = true
+    elseif self["Cube" .. i]:GetAttachParent() == self.Scene then
+      CubeActor.Index = i
+      CubeActor.Enemy = false
+    end
     if CubeActor then
       CubeActor.Owner = self
       if CubeActor.Enemy then
@@ -19,6 +37,7 @@ function BP_AutoChess_Formation_C:ReceiveBeginPlay()
         self.Index2Cube[CubeActor.Index] = CubeActor
       end
     end
+    ::lbl_124::
   end
 end
 
@@ -60,8 +79,10 @@ function BP_AutoChess_Formation_C:CreateChessMonster(CombatChessId, CubeIndex, I
       Actor.MonsterUnitId = UnitId
       Actor.CombatChessId = CombatChessId
       Actor.EquipList = EquipList
+      Actor.LocZ = Battle(self):GetEntity(Unit.Eid):K2_GetActorLocation().Z
     end
     DebugPrint("ayff test create monster at CubeIndex:", CubeIndex, " UnitId:", UnitId, " Eid:", Unit.Eid)
+    self.MonsterCreatingCount = self.MonsterCreatingCount - 1
     self:OnCubeMonsterSelected(CubeIndex, false)
   end
   
@@ -74,6 +95,7 @@ function BP_AutoChess_Formation_C:CreateChessMonster(CombatChessId, CubeIndex, I
   Context.IntParams:Add("Level", GameMode:GetFixedGamemodeLevel())
   Context.OnUnitInitCreateReadyDynamic:Add(self, LoadFinishCallback)
   GameMode.EMGameState.EventMgr:CreateUnitNew(Context, false)
+  self.MonsterCreatingCount = self.MonsterCreatingCount + 1
   CubeInfoList[CubeIndex] = {}
 end
 
@@ -166,11 +188,13 @@ function BP_AutoChess_Formation_C:SwitchMonsterPosition(Index1, Index2)
       CubeActor1.MonsterUnitId = Info2.UnitId
       CubeActor1.CombatChessId = Info2.CombatChessId
       CubeActor1.EquipList = Info2.EquipList
+      CubeActor1.LocZ = Battle(self):GetEntity(Info2.Eid):K2_GetActorLocation().Z
     else
       CubeActor1.MonsterEid = nil
       CubeActor1.MonsterUnitId = nil
       CubeActor1.CombatChessId = nil
       CubeActor1.EquipList = nil
+      CubeActor1.LocZ = nil
     end
   end
   if CubeActor2 then
@@ -179,11 +203,13 @@ function BP_AutoChess_Formation_C:SwitchMonsterPosition(Index1, Index2)
       CubeActor2.MonsterUnitId = Info1.UnitId
       CubeActor2.CombatChessId = Info1.CombatChessId
       CubeActor2.EquipList = Info1.EquipList
+      CubeActor2.LocZ = Battle(self):GetEntity(Info1.Eid):K2_GetActorLocation().Z - 50
     else
       CubeActor2.MonsterEid = nil
       CubeActor2.MonsterUnitId = nil
       CubeActor2.CombatChessId = nil
       CubeActor2.EquipList = nil
+      CubeActor2.LocZ = nil
     end
   end
   if Info1 and Info1.Eid then
@@ -200,12 +226,16 @@ function BP_AutoChess_Formation_C:SwitchMonsterPosition(Index1, Index2)
     if IsValid(Monster2) and CubeActor1 then
       local Loc1 = CubeActor1:K2_GetActorLocation()
       local PreLoc = Monster2:K2_GetActorLocation()
-      local NewLoc = FVector(Loc1.X, Loc1.Y, PreLoc.Z)
+      local NewLoc = Monster2.IsFlyMonster and FVector(Loc1.X, Loc1.Y, PreLoc.Z + 50) or FVector(Loc1.X, Loc1.Y, PreLoc.Z)
       Monster2:K2_SetActorLocation(NewLoc, false, nil, true)
     end
   end
   self:OnCubeMonsterSelected(Index1, false)
   self:OnCubeMonsterSelected(Index2, false)
+end
+
+function BP_AutoChess_Formation_C:IsMonsterCreating()
+  return self.MonsterCreatingCount > 0
 end
 
 return BP_AutoChess_Formation_C

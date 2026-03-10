@@ -311,11 +311,11 @@ Const.StateEnd = 6
 Const.ExitStateAlert = 7
 Const.StateBattleProgress = 99
 Const.ProgressRecoverDungeonType = {
-  Survival = true,
-  SurvivalPro = true,
-  SurvivalMini = true,
-  Defence = true,
-  Excavation = true,
+  Survival = false,
+  SurvivalPro = false,
+  SurvivalMini = false,
+  Defence = false,
+  Excavation = false,
   Rouge = true
 }
 Const.DungeonErrorType = {

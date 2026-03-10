@@ -122,6 +122,9 @@ function M:AddComsumerItem(InModContent)
   if self.ComsumerCount >= self.MaxComsumerCount then
     return false
   end
+  if InModContent.Count and InModContent.Count <= (self.Uuid2Count[InModContent.UnitId] or 0) then
+    return false
+  end
   self:_SetComsumerCount(self.ComsumerCount + 1)
   local ItemUI = self["Item_" .. self.ComsumerCount]
   self:_SetModItemUI(ItemUI, InModContent, self.ComsumerCount)
@@ -207,10 +210,10 @@ function M:OnItemMinusBtnClick(DelContent)
           self.OnModItemMoveCallback(self.Parent, ItemUI.Content)
         end
       else
-        self:_ResetItemUI(ItemUI, i)
+        self:_ResetItemUI(ItemUI, i, DelContent)
       end
     else
-      self:_ResetItemUI(ItemUI, i)
+      self:_ResetItemUI(ItemUI, i, DelContent)
     end
   end
   self:_SetComsumerCount(self.ComsumerCount - 1)
@@ -226,7 +229,7 @@ function M:InitConsumerList(bRemoveAll)
   self.Uuid2Count = {}
   self.MaxComsumerCount = self.Target.CardLevelNeedNum[self.NowLevel + 1]
   for i, ItemUI in pairs(self.WB_Item:GetAllChildren()) do
-    self:_ResetItemUI(ItemUI, i, i <= self.MaxComsumerCount)
+    self:_ResetItemUI(ItemUI, i, ItemUI.Content, i <= self.MaxComsumerCount)
   end
   self:_SetComsumerCount(0)
   self.Text_Total:SetText("/" .. self.MaxComsumerCount)
@@ -299,11 +302,11 @@ function M:_AddUuid2Count(Content)
   self.Uuid2Count[Uuid] = self.Uuid2Count[Uuid] + 1
 end
 
-function M:_ResetItemUI(ItemUI, IndexInEnhance, bActivate)
+function M:_ResetItemUI(ItemUI, IndexInEnhance, DelContent, bActivate)
   if nil == bActivate then
     bActivate = true
   end
-  self:_SubUuid2Count(ItemUI.Content)
+  self:_SubUuid2Count(DelContent)
   ItemUI:SetMinusBtn(false)
   ItemUI:BP_OnEntryReleased()
   local EmptyContent = NewObject(UIUtils.GetCommonItemContentClass())
@@ -386,7 +389,8 @@ end
 function M:OnLevelUpSuccess()
   self.Panel_Hint:SetVisibility(UIConst.VisibilityOp.Collapsed)
   for i, ItemUI in pairs(self.WB_Item:GetAllChildren()) do
-    self:_ResetItemUI(ItemUI, i, false)
+    self:_ResetItemUI(ItemUI, i, ItemUI.Content, false)
+    self:_SubUuid2Count(ItemUI.Content)
   end
   self:_SetGoldStar(self.PreviewLevel, true, true)
   self:PlayAnimation(self.LevelUp_In)

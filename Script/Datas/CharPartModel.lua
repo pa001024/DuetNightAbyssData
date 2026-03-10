@@ -347,7 +347,7 @@ return ReadOnly("CharPartModel", {
   },
   [410105] = {
     CharPartId = 410105,
-    PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Char020_Lise/Mesh/Lise_Hat_SM.Lise_Hat_SM'",
+    PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Char020_Lise/Mesh/Lise_TP01_Hat_SM.Lise_TP01_Hat_SM'",
     PartType = "Hat"
   },
   [410201] = {
@@ -453,7 +453,7 @@ return ReadOnly("CharPartModel", {
   [510193] = {
     CharPartId = 510193,
     PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Char099_Songlu01/Mesh/Songlu_SP01_Hat_SM.Songlu_SP01_Hat_SM'",
-    PartType = "Tail"
+    PartType = "Hat"
   },
   [510201] = {
     CharPartId = 510201,

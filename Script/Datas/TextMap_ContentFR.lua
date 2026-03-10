@@ -26340,7 +26340,7 @@ local Data = {
           TextMapId = "No_Blueprints"
         },
         NpcBiography_AgeText = {
-          ContentFR = "Âge",
+          ContentFR = "Âge{空格}",
           TextMapId = "NpcBiography_AgeText"
         },
         NpcBiography_Information_Aier = {
@@ -35736,15 +35736,15 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_FUNCTION_211"
         },
         RESOURCE_FUNCTION_29001 = {
-          ContentFR = "Échangeable contre des récompenses d’exploration auprès de Luno, l’Exploratrice, à Givrelac.",
+          ContentFR = "Échangeable contre des récompenses auprès de Luno, l’exploratrice.",
           TextMapId = "RESOURCE_FUNCTION_29001"
         },
         RESOURCE_FUNCTION_29004 = {
-          ContentFR = "Échangeable contre des récompenses d’exploration auprès de Luno, l’Exploratrice, à Port-des-Brumes.",
+          ContentFR = "Échangeable contre des récompenses auprès de Luno, l’exploratrice.",
           TextMapId = "RESOURCE_FUNCTION_29004"
         },
         RESOURCE_FUNCTION_29005 = {
-          ContentFR = "Peut être échangé contre des objets auprès de Luno, la carpe",
+          ContentFR = "Échangeable contre des objets auprès de Luno, la carpe.",
           TextMapId = "RESOURCE_FUNCTION_29005"
         },
         RESOURCE_FUNCTION_30001 = {
@@ -35956,7 +35956,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_FUNCTION_RARECOIN"
         },
         RESOURCE_FUNCTION_ROOT = {
-          ContentFR = "Permet d’obtenir des personnages via la Réminiscence, et d’augmenter leur niveau d’Intron.",
+          ContentFR = "Permet d’obtenir des personnages et d’augmenter leur niveau d’Intron.",
           TextMapId = "RESOURCE_FUNCTION_ROOT"
         },
         RESOURCE_FUNCTION_ROUGECOIN = {
@@ -70590,19 +70590,19 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_GameEvent_StarterQuest_UnlockCondition"
         },
         UI_GameEvent_TimeRemain_Day = {
-          ContentFR = "j",
+          ContentFR = "j{空格}",
           TextMapId = "UI_GameEvent_TimeRemain_Day"
         },
         UI_GameEvent_TimeRemain_Hour = {
-          ContentFR = "h",
+          ContentFR = "h{空格}",
           TextMapId = "UI_GameEvent_TimeRemain_Hour"
         },
         UI_GameEvent_TimeRemain_Min = {
-          ContentFR = "min",
+          ContentFR = "min{空格}",
           TextMapId = "UI_GameEvent_TimeRemain_Min"
         },
         UI_GameEvent_TimeRemain_Sec = {
-          ContentFR = "s",
+          ContentFR = "s{空格}",
           TextMapId = "UI_GameEvent_TimeRemain_Sec"
         },
         UI_GameEvent_ToBeFinished = {
@@ -71546,7 +71546,7 @@ Allez voir ce qui se passe.]],
   },
   {
     MinKey = "UI_Keyboard_UpSelect",
-    MaxKey = "UI_MECHANISM_10626",
+    MaxKey = "UI_MECHANISM_10625",
     Loader = function()
       return {
         UI_Keyboard_UpSelect = {
@@ -71848,6 +71848,10 @@ Allez voir ce qui se passe.]],
         UI_Locked_Des_4030003 = {
           ContentFR = "Débloqué après l’obtention de n’importe quelle Posture radieuse",
           TextMapId = "UI_Locked_Des_4030003"
+        },
+        UI_Locked_Des_4030004 = {
+          ContentFR = "Obtenir toutes les apparences d’arme « Bonheur sucré »",
+          TextMapId = "UI_Locked_Des_4030004"
         },
         UI_Locked_Des_Abyss = {
           ContentFR = "Théâtre immersif non débloqué",
@@ -72344,19 +72348,19 @@ Allez voir ce qui se passe.]],
         UI_MECHANISM_10625 = {
           ContentFR = "Armoire à remèdes",
           TextMapId = "UI_MECHANISM_10625"
-        },
-        UI_MECHANISM_10626 = {
-          ContentFR = "Lit de malade",
-          TextMapId = "UI_MECHANISM_10626"
         }
       }
     end
   },
   {
-    MinKey = "UI_MECHANISM_10627",
-    MaxKey = "UI_Mod_Polarity_Content",
+    MinKey = "UI_MECHANISM_10626",
+    MaxKey = "UI_Mod_Polarity_Btn",
     Loader = function()
       return {
+        UI_MECHANISM_10626 = {
+          ContentFR = "Lit de malade",
+          TextMapId = "UI_MECHANISM_10626"
+        },
         UI_MECHANISM_10627 = {
           ContentFR = "Autel des Wishen",
           TextMapId = "UI_MECHANISM_10627"
@@ -73152,19 +73156,19 @@ Allez voir ce qui se passe.]],
         UI_Mod_Polarity_Btn = {
           ContentFR = "Modifier l’affinité",
           TextMapId = "UI_Mod_Polarity_Btn"
-        },
-        UI_Mod_Polarity_Content = {
-          ContentFR = "La modification d’affinité de cet emplacement affectera tous les ensembles de Sceaux démoniaques de ce personnage ou de cette arme.",
-          TextMapId = "UI_Mod_Polarity_Content"
         }
       }
     end
   },
   {
-    MinKey = "UI_Mod_Polarity_Hint",
-    MaxKey = "UI_Name_Walnut_2003",
+    MinKey = "UI_Mod_Polarity_Content",
+    MaxKey = "UI_Name_Walnut_2002",
     Loader = function()
       return {
+        UI_Mod_Polarity_Content = {
+          ContentFR = "La modification d’affinité de cet emplacement affectera tous les ensembles de Sceaux démoniaques de ce personnage ou de cette arme.",
+          TextMapId = "UI_Mod_Polarity_Content"
+        },
         UI_Mod_Polarity_Hint = {
           ContentFR = "Sélectionnez un emplacement de Sceau démoniaque",
           TextMapId = "UI_Mod_Polarity_Hint"
@@ -73954,19 +73958,19 @@ Allez voir ce qui se passe.]],
         UI_Name_Walnut_2002 = {
           ContentFR = "Mandat scellé : Écho du passé",
           TextMapId = "UI_Name_Walnut_2002"
-        },
-        UI_Name_Walnut_2003 = {
-          ContentFR = "Mandat scellé : Stratagème habile",
-          TextMapId = "UI_Name_Walnut_2003"
         }
       }
     end
   },
   {
-    MinKey = "UI_Name_Walnut_2004",
-    MaxKey = "UI_Npc_Name_Fuluo",
+    MinKey = "UI_Name_Walnut_2003",
+    MaxKey = "UI_Npc_Name_Fulanke",
     Loader = function()
       return {
+        UI_Name_Walnut_2003 = {
+          ContentFR = "Mandat scellé : Stratagème habile",
+          TextMapId = "UI_Name_Walnut_2003"
+        },
         UI_Name_Walnut_2004 = {
           ContentFR = "Mandat scellé : Baiser de la sirène",
           TextMapId = "UI_Name_Walnut_2004"
@@ -74759,19 +74763,19 @@ Allez voir ce qui se passe.]],
         UI_Npc_Name_Fulanke = {
           ContentFR = "Frank",
           TextMapId = "UI_Npc_Name_Fulanke"
-        },
-        UI_Npc_Name_Fuluo = {
-          ContentFR = "Flora",
-          TextMapId = "UI_Npc_Name_Fuluo"
         }
       }
     end
   },
   {
-    MinKey = "UI_Npc_Name_Fushu",
-    MaxKey = "UI_Npc_Name_lingsheng",
+    MinKey = "UI_Npc_Name_Fuluo",
+    MaxKey = "UI_Npc_Name_lesuo",
     Loader = function()
       return {
+        UI_Npc_Name_Fuluo = {
+          ContentFR = "Flora",
+          TextMapId = "UI_Npc_Name_Fuluo"
+        },
         UI_Npc_Name_Fushu = {
           ContentFR = "Fushu",
           TextMapId = "UI_Npc_Name_Fushu"
@@ -75567,19 +75571,19 @@ Allez voir ce qui se passe.]],
         UI_Npc_Name_lesuo = {
           ContentFR = "Garçon insolent",
           TextMapId = "UI_Npc_Name_lesuo"
-        },
-        UI_Npc_Name_lingsheng = {
-          ContentFR = "Ling Shen",
-          TextMapId = "UI_Npc_Name_lingsheng"
         }
       }
     end
   },
   {
-    MinKey = "UI_Npc_Name_shouyueren",
-    MaxKey = "UI_Opition_Clean",
+    MinKey = "UI_Npc_Name_lingsheng",
+    MaxKey = "UI_OnlineRegion_Enter",
     Loader = function()
       return {
+        UI_Npc_Name_lingsheng = {
+          ContentFR = "Ling Shen",
+          TextMapId = "UI_Npc_Name_lingsheng"
+        },
         UI_Npc_Name_shouyueren = {
           ContentFR = "Chasseur de Phoxène timide",
           TextMapId = "UI_Npc_Name_shouyueren"
@@ -76375,19 +76379,19 @@ Allez voir ce qui se passe.]],
         UI_OnlineRegion_Enter = {
           ContentFR = "Vous êtes entré dans une zone en coop",
           TextMapId = "UI_OnlineRegion_Enter"
-        },
-        UI_Opition_Clean = {
-          ContentFR = "Appuyer pour vider",
-          TextMapId = "UI_Opition_Clean"
         }
       }
     end
   },
   {
-    MinKey = "UI_Opition_Clean_Confirm",
-    MaxKey = "UI_PlayerHead_Des_10007",
+    MinKey = "UI_Opition_Clean",
+    MaxKey = "UI_PlayerHead_Des_10006",
     Loader = function()
       return {
+        UI_Opition_Clean = {
+          ContentFR = "Appuyer pour vider",
+          TextMapId = "UI_Opition_Clean"
+        },
         UI_Opition_Clean_Confirm = {
           ContentFR = "L’activation des journaux avancés peut entraîner des ralentissements. Ils seront automatiquement désactivés après le redémarrage du jeu. Souhaitez-vous continuer ?",
           TextMapId = "UI_Opition_Clean_Confirm"
@@ -77183,19 +77187,19 @@ Allez voir ce qui se passe.]],
         UI_PlayerHead_Des_10006 = {
           ContentFR = "Permet de remplacer l’icône d’avatar par celle de Randy.",
           TextMapId = "UI_PlayerHead_Des_10006"
-        },
-        UI_PlayerHead_Des_10007 = {
-          ContentFR = "Permet de remplacer l’icône d’avatar par celle de Lynn.",
-          TextMapId = "UI_PlayerHead_Des_10007"
         }
       }
     end
   },
   {
-    MinKey = "UI_PlayerHead_Des_10008",
-    MaxKey = "UI_QUEST_CONDITION_PLAYERLEVEL",
+    MinKey = "UI_PlayerHead_Des_10007",
+    MaxKey = "UI_QUEST_CONDITION_FINISHQUEST",
     Loader = function()
       return {
+        UI_PlayerHead_Des_10007 = {
+          ContentFR = "Permet de remplacer l’icône d’avatar par celle de Lynn.",
+          TextMapId = "UI_PlayerHead_Des_10007"
+        },
         UI_PlayerHead_Des_10008 = {
           ContentFR = "Permet de remplacer l’icône d’avatar par celle de Psyche.",
           TextMapId = "UI_PlayerHead_Des_10008"
@@ -77991,19 +77995,19 @@ Allez voir ce qui se passe.]],
         UI_QUEST_CONDITION_FINISHQUEST = {
           ContentFR = "Quête requise :",
           TextMapId = "UI_QUEST_CONDITION_FINISHQUEST"
-        },
-        UI_QUEST_CONDITION_PLAYERLEVEL = {
-          ContentFR = "Niveau d’Aventure :",
-          TextMapId = "UI_QUEST_CONDITION_PLAYERLEVEL"
         }
       }
     end
   },
   {
-    MinKey = "UI_QUEST_CONTENT",
-    MaxKey = "UI_Rou_Toast_27022",
+    MinKey = "UI_QUEST_CONDITION_PLAYERLEVEL",
+    MaxKey = "UI_Rou_Toast_27021",
     Loader = function()
       return {
+        UI_QUEST_CONDITION_PLAYERLEVEL = {
+          ContentFR = "Niveau d’Aventure :",
+          TextMapId = "UI_QUEST_CONDITION_PLAYERLEVEL"
+        },
         UI_QUEST_CONTENT = {
           ContentFR = "Contenu de la quête",
           TextMapId = "UI_QUEST_CONTENT"
@@ -78775,19 +78779,19 @@ Allez voir ce qui se passe.]],
         UI_Rou_Toast_27021 = {
           ContentFR = "Vous devez d’abord éveiller tous les nœuds préalables de la Lanterne pour pouvoir éveiller celui-ci.",
           TextMapId = "UI_Rou_Toast_27021"
-        },
-        UI_Rou_Toast_27022 = {
-          ContentFR = "Une exploration de l’Abysse est en cours. Impossible d’enregistrer la configuration d’éveil de la Lanterne.",
-          TextMapId = "UI_Rou_Toast_27022"
         }
       }
     end
   },
   {
-    MinKey = "UI_Rou_Toast_27027",
-    MaxKey = "UI_STAT_KILL_CHAR",
+    MinKey = "UI_Rou_Toast_27022",
+    MaxKey = "UI_STAT_Healing",
     Loader = function()
       return {
+        UI_Rou_Toast_27022 = {
+          ContentFR = "Une exploration de l’Abysse est en cours. Impossible d’enregistrer la configuration d’éveil de la Lanterne.",
+          TextMapId = "UI_Rou_Toast_27022"
+        },
         UI_Rou_Toast_27027 = {
           ContentFR = "Niveau d’Aventure insuffisant. Impossible de s’enfoncer jusqu’à cette profondeur de l’Abysse.",
           TextMapId = "UI_Rou_Toast_27027"
@@ -79583,19 +79587,19 @@ Allez voir ce qui se passe.]],
         UI_STAT_Healing = {
           ContentFR = "Soins prodigués",
           TextMapId = "UI_STAT_Healing"
-        },
-        UI_STAT_KILL_CHAR = {
-          ContentFR = "Par compétences",
-          TextMapId = "UI_STAT_KILL_CHAR"
         }
       }
     end
   },
   {
-    MinKey = "UI_STAT_KILL_MELEE",
-    MaxKey = "UI_SkinGacha_Blue",
+    MinKey = "UI_STAT_KILL_CHAR",
+    MaxKey = "UI_SkinGacha_Again_Ten",
     Loader = function()
       return {
+        UI_STAT_KILL_CHAR = {
+          ContentFR = "Par compétences",
+          TextMapId = "UI_STAT_KILL_CHAR"
+        },
         UI_STAT_KILL_MELEE = {
           ContentFR = "Par attaques de mêlée",
           TextMapId = "UI_STAT_KILL_MELEE"
@@ -79653,19 +79657,19 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_STAT_Online_Kill_4P"
         },
         UI_STAT_Online_P1 = {
-          ContentFR = "Joueur 1",
+          ContentFR = "J1",
           TextMapId = "UI_STAT_Online_P1"
         },
         UI_STAT_Online_P2 = {
-          ContentFR = "Joueur 2",
+          ContentFR = "J2",
           TextMapId = "UI_STAT_Online_P2"
         },
         UI_STAT_Online_P3 = {
-          ContentFR = "Joueur 3",
+          ContentFR = "J3",
           TextMapId = "UI_STAT_Online_P3"
         },
         UI_STAT_Online_P4 = {
-          ContentFR = "Joueur 4",
+          ContentFR = "J4",
           TextMapId = "UI_STAT_Online_P4"
         },
         UI_STAT_Other = {
@@ -80298,7 +80302,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_Shop_ExchangeAmount"
         },
         UI_Shop_ItemUnlock = {
-          ContentFR = "Article non déverrouillé",
+          ContentFR = "Non débloqué",
           TextMapId = "UI_Shop_ItemUnlock"
         },
         UI_Shop_JP_Excess_Content = {
@@ -80388,19 +80392,19 @@ Allez voir ce qui se passe.]],
         UI_SkinGacha_Again_Ten = {
           ContentFR = "Encore 10 fois",
           TextMapId = "UI_SkinGacha_Again_Ten"
-        },
-        UI_SkinGacha_Blue = {
-          ContentFR = "Taux d’obtention d’un objet rare : <highlight>%s %%</>",
-          TextMapId = "UI_SkinGacha_Blue"
         }
       }
     end
   },
   {
-    MinKey = "UI_SkinGacha_Core_GoldSkin",
-    MaxKey = "UI_TALK_AUTO_1",
+    MinKey = "UI_SkinGacha_Blue",
+    MaxKey = "UI_TAB_NAME_TASKITEM",
     Loader = function()
       return {
+        UI_SkinGacha_Blue = {
+          ContentFR = "Taux d’obtention d’un objet rare : <highlight>%s %%</>",
+          TextMapId = "UI_SkinGacha_Blue"
+        },
         UI_SkinGacha_Core_GoldSkin = {
           ContentFR = "Apparence chatoyante",
           TextMapId = "UI_SkinGacha_Core_GoldSkin"
@@ -81193,19 +81197,19 @@ Allez voir ce qui se passe.]],
         UI_TAB_NAME_TASKITEM = {
           ContentFR = "Objets de quête",
           TextMapId = "UI_TAB_NAME_TASKITEM"
-        },
-        UI_TALK_AUTO_1 = {
-          ContentFR = "Auto",
-          TextMapId = "UI_TALK_AUTO_1"
         }
       }
     end
   },
   {
-    MinKey = "UI_TALK_AUTO_2",
-    MaxKey = "UI_TEMPLE_TIPS_81302",
+    MinKey = "UI_TALK_AUTO_1",
+    MaxKey = "UI_TEMPLE_TIPS_81301",
     Loader = function()
       return {
+        UI_TALK_AUTO_1 = {
+          ContentFR = "Auto",
+          TextMapId = "UI_TALK_AUTO_1"
+        },
         UI_TALK_AUTO_2 = {
           ContentFR = "Lecture en cours",
           TextMapId = "UI_TALK_AUTO_2"
@@ -82009,19 +82013,19 @@ Tirer sur les cibles pour marquer des points.
         UI_TEMPLE_TIPS_81301 = {
           ContentFR = "Afficher les cristaux restants",
           TextMapId = "UI_TEMPLE_TIPS_81301"
-        },
-        UI_TEMPLE_TIPS_81302 = {
-          ContentFR = "Afficher les cristaux restants",
-          TextMapId = "UI_TEMPLE_TIPS_81302"
         }
       }
     end
   },
   {
-    MinKey = "UI_TEMPLE_TIPS_81602",
-    MaxKey = "UI_Vote_Finish_Continuing",
+    MinKey = "UI_TEMPLE_TIPS_81302",
+    MaxKey = "UI_Vote_Finish_Continued",
     Loader = function()
       return {
+        UI_TEMPLE_TIPS_81302 = {
+          ContentFR = "Afficher les cristaux restants",
+          TextMapId = "UI_TEMPLE_TIPS_81302"
+        },
         UI_TEMPLE_TIPS_81602 = {
           ContentFR = "Afficher la position des ennemis",
           TextMapId = "UI_TEMPLE_TIPS_81602"
@@ -82811,19 +82815,19 @@ Tirer sur les cibles pour marquer des points.
         UI_Vote_Finish_Continued = {
           ContentFR = "Vous avez choisi de poursuivre le combat",
           TextMapId = "UI_Vote_Finish_Continued"
-        },
-        UI_Vote_Finish_Continuing = {
-          ContentFR = "La Vague %d va commencer",
-          TextMapId = "UI_Vote_Finish_Continuing"
         }
       }
     end
   },
   {
-    MinKey = "UI_Vote_Finish_Notenough",
-    MaxKey = "UI_WEAPON_NAME_AutoChess_27",
+    MinKey = "UI_Vote_Finish_Continuing",
+    MaxKey = "UI_WEAPON_NAME_AutoChess_26",
     Loader = function()
       return {
+        UI_Vote_Finish_Continuing = {
+          ContentFR = "La Vague %d va commencer",
+          TextMapId = "UI_Vote_Finish_Continuing"
+        },
         UI_Vote_Finish_Notenough = {
           ContentFR = "Énergie insuffisante pour poursuivre le combat",
           TextMapId = "UI_Vote_Finish_Notenough"
@@ -83619,19 +83623,19 @@ Tirer sur les cibles pour marquer des points.
         UI_WEAPON_NAME_AutoChess_26 = {
           ContentFR = "Rune de corrosion",
           TextMapId = "UI_WEAPON_NAME_AutoChess_26"
-        },
-        UI_WEAPON_NAME_AutoChess_27 = {
-          ContentFR = "Rune d’éclair foudroyant",
-          TextMapId = "UI_WEAPON_NAME_AutoChess_27"
         }
       }
     end
   },
   {
-    MinKey = "UI_WEAPON_NAME_AutoChess_28",
-    MaxKey = "UI_WeaponStrength_Auto",
+    MinKey = "UI_WEAPON_NAME_AutoChess_27",
+    MaxKey = "UI_WeaponStrength_After",
     Loader = function()
       return {
+        UI_WEAPON_NAME_AutoChess_27 = {
+          ContentFR = "Rune d’éclair foudroyant",
+          TextMapId = "UI_WEAPON_NAME_AutoChess_27"
+        },
         UI_WEAPON_NAME_AutoChess_28 = {
           ContentFR = "Rune de pourriture cramoisie",
           TextMapId = "UI_WEAPON_NAME_AutoChess_28"
@@ -84427,19 +84431,19 @@ Tirer sur les cibles pour marquer des points.
         UI_WeaponStrength_After = {
           ContentFR = "Effets passifs après fusion",
           TextMapId = "UI_WeaponStrength_After"
-        },
-        UI_WeaponStrength_Auto = {
-          ContentFR = "Sélection auto",
-          TextMapId = "UI_WeaponStrength_Auto"
         }
       }
     end
   },
   {
-    MinKey = "UI_WeaponStrength_CantAdd",
-    MaxKey = "VoiceDes122",
+    MinKey = "UI_WeaponStrength_Auto",
+    MaxKey = "VoiceDes121",
     Loader = function()
       return {
+        UI_WeaponStrength_Auto = {
+          ContentFR = "Sélection auto",
+          TextMapId = "UI_WeaponStrength_Auto"
+        },
         UI_WeaponStrength_CantAdd = {
           ContentFR = "Niveau de fusion maximal atteint, impossible d’ajouter d’autres matériaux.",
           TextMapId = "UI_WeaponStrength_CantAdd"
@@ -85232,19 +85236,19 @@ Tirer sur les cibles pour marquer des points.
         VoiceDes121 = {
           ContentFR = "À propos de la Légion I",
           TextMapId = "VoiceDes121"
-        },
-        VoiceDes122 = {
-          ContentFR = "À propos de la Légion II",
-          TextMapId = "VoiceDes122"
         }
       }
     end
   },
   {
-    MinKey = "VoiceDes123",
-    MaxKey = "WikiText_40300402",
+    MinKey = "VoiceDes122",
+    MaxKey = "WikiText_40300401",
     Loader = function()
       return {
+        VoiceDes122 = {
+          ContentFR = "À propos de la Légion II",
+          TextMapId = "VoiceDes122"
+        },
         VoiceDes123 = {
           ContentFR = "À propos de ses cornes",
           TextMapId = "VoiceDes123"
@@ -86040,19 +86044,19 @@ Tirer sur les cibles pour marquer des points.
         WikiText_40300401 = {
           ContentFR = "Sous couvert de recrutement militaire, la VIᵉ Légion enrôlait depuis longtemps des Charons robustes dans un programme d’entraînement fermé, promettant que les meilleurs pourraient devenir des Charons Couronnés.\n\nEn réalité, la VIᵉ Légion collaborait avec les Spathatoi de Givrelac pour sélectionner des individus présentant des aptitudes particulières et les soumettre à des expérimentations alchimiques destinées à créer des armes vivantes.",
           TextMapId = "WikiText_40300401"
-        },
-        WikiText_40300402 = {
-          ContentFR = "Au cours de l’enquête sur la Traque des Charons, Lynn découvrit la vérité sur ces expérimentations et en informa Sibylle, Commandante de la XIIIᵉ Légion.\nCette dernière lui ordonna immédiatement de cesser toute investigation.",
-          TextMapId = "WikiText_40300402"
         }
       }
     end
   },
   {
-    MinKey = "WikiText_40300501",
-    MaxKey = "voice_ch_char_Baonu_vo_skill02_r03",
+    MinKey = "WikiText_40300402",
+    MaxKey = "voice_ch_char_Baonu_vo_skill02_r02",
     Loader = function()
       return {
+        WikiText_40300402 = {
+          ContentFR = "Au cours de l’enquête sur la Traque des Charons, Lynn découvrit la vérité sur ces expérimentations et en informa Sibylle, Commandante de la XIIIᵉ Légion.\nCette dernière lui ordonna immédiatement de cesser toute investigation.",
+          TextMapId = "WikiText_40300402"
+        },
         WikiText_40300501 = {
           ContentFR = "Substance largement utilisée à Huaxu, élaborée selon des procédés précis à partir d’ingrédients choisis. Des brûle-encens embrasent le pays tout entier, et leur parfum imprègne l’air en permanence. Nombreux sont ceux qui portent également des sachets d’encens sur eux. L’Encens est l’une des marques culturelles de Huaxu.",
           TextMapId = "WikiText_40300501"
@@ -86845,19 +86849,19 @@ Tirer sur les cibles pour marquer des points.
         voice_ch_char_Baonu_vo_skill02_r02 = {
           ContentFR = "Samaël, réponds à mon appel !",
           TextMapId = "voice_ch_char_Baonu_vo_skill02_r02"
-        },
-        voice_ch_char_Baonu_vo_skill02_r03 = {
-          ContentFR = "Samaël, accorde-moi ta « colère » !",
-          TextMapId = "voice_ch_char_Baonu_vo_skill02_r03"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Baonu_vo_topic_01_1",
-    MaxKey = "voice_ch_char_Kezhou_vo_topic_01_4",
+    MinKey = "voice_ch_char_Baonu_vo_skill02_r03",
+    MaxKey = "voice_ch_char_Kezhou_vo_topic_01_3",
     Loader = function()
       return {
+        voice_ch_char_Baonu_vo_skill02_r03 = {
+          ContentFR = "Samaël, accorde-moi ta « colère » !",
+          TextMapId = "voice_ch_char_Baonu_vo_skill02_r03"
+        },
         voice_ch_char_Baonu_vo_topic_01_1 = {
           ContentFR = "Samaël n’est pas une simple arme. C’est mon meilleur ami !",
           TextMapId = "voice_ch_char_Baonu_vo_topic_01_1"
@@ -87653,19 +87657,19 @@ Tirer sur les cibles pour marquer des points.
         voice_ch_char_Kezhou_vo_topic_01_3 = {
           ContentFR = "Pas pour moi. Mais lui disait toujours qu’une épée, ça se manie avec la tête autant qu’avec les bras. « Dissimuler sa force en feignant la faiblesse », « vaincre sans combattre », « submerger le petit nombre par le grand nombre »... Pour lui, c’était ça, la vraie maîtrise.",
           TextMapId = "voice_ch_char_Kezhou_vo_topic_01_3"
-        },
-        voice_ch_char_Kezhou_vo_topic_01_4 = {
-          ContentFR = "Quand j’étais gosse, il me jouait toujours le même numéro : il faisait semblant d’être rouillé, pas très doué. Il disait : « Si tu arrives à me foutre au sol, t’auras plus jamais besoin de t’entraîner. » J’ai passé un an à essayer... j’ai même pas effleuré sa manche.",
-          TextMapId = "voice_ch_char_Kezhou_vo_topic_01_4"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Kezhou_vo_topic_01_5",
-    MaxKey = "voice_ch_char_Nifu_vo_revive",
+    MinKey = "voice_ch_char_Kezhou_vo_topic_01_4",
+    MaxKey = "voice_ch_char_Nifu_vo_lvup",
     Loader = function()
       return {
+        voice_ch_char_Kezhou_vo_topic_01_4 = {
+          ContentFR = "Quand j’étais gosse, il me jouait toujours le même numéro : il faisait semblant d’être rouillé, pas très doué. Il disait : « Si tu arrives à me foutre au sol, t’auras plus jamais besoin de t’entraîner. » J’ai passé un an à essayer... j’ai même pas effleuré sa manche.",
+          TextMapId = "voice_ch_char_Kezhou_vo_topic_01_4"
+        },
         voice_ch_char_Kezhou_vo_topic_01_5 = {
           ContentFR = "Un jour, à bout de force, j’étais allongé par terre. J’ai levé les yeux : pas une trace de fatigue chez lui. Même ses faux pas étaient calculés. Toute cette mascarade... c’était de l’art.",
           TextMapId = "voice_ch_char_Kezhou_vo_topic_01_5"
@@ -88461,19 +88465,19 @@ Tirer sur les cibles pour marquer des points.
         voice_ch_char_Nifu_vo_lvup = {
           ContentFR = "Telle la douce renaissance du printemps, où les herbes percent la terre et les branches s’ornent de bourgeons.",
           TextMapId = "voice_ch_char_Nifu_vo_lvup"
-        },
-        voice_ch_char_Nifu_vo_revive = {
-          ContentFR = "Il semble que mon heure ne soit pas encore venue.",
-          TextMapId = "voice_ch_char_Nifu_vo_revive"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Nifu_vo_skill01_r01",
-    MaxKey = "voice_ch_char_Tuosi_vo_topic_02_2",
+    MinKey = "voice_ch_char_Nifu_vo_revive",
+    MaxKey = "voice_ch_char_Tuosi_vo_topic_02_1",
     Loader = function()
       return {
+        voice_ch_char_Nifu_vo_revive = {
+          ContentFR = "Il semble que mon heure ne soit pas encore venue.",
+          TextMapId = "voice_ch_char_Nifu_vo_revive"
+        },
         voice_ch_char_Nifu_vo_skill01_r01 = {
           ContentFR = "Battement du samsara.",
           TextMapId = "voice_ch_char_Nifu_vo_skill01_r01"
@@ -89269,19 +89273,19 @@ Tirer sur les cibles pour marquer des points.
         voice_ch_char_Tuosi_vo_topic_02_1 = {
           ContentFR = "Pourquoi ? La vie de Parsifal est finie. Ce nom est un écho lointain, si lointain que je doute qu’il ait jamais été mien.",
           TextMapId = "voice_ch_char_Tuosi_vo_topic_02_1"
-        },
-        voice_ch_char_Tuosi_vo_topic_02_2 = {
-          ContentFR = "... Vraiment ?",
-          TextMapId = "voice_ch_char_Tuosi_vo_topic_02_2"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Tuosi_vo_topic_02_3",
-    MaxKey = "voice_ch_char_Zhiliu01_vo_gain",
+    MinKey = "voice_ch_char_Tuosi_vo_topic_02_2",
+    MaxKey = "voice_ch_char_Zhiliu01_vo_battlestart",
     Loader = function()
       return {
+        voice_ch_char_Tuosi_vo_topic_02_2 = {
+          ContentFR = "... Vraiment ?",
+          TextMapId = "voice_ch_char_Tuosi_vo_topic_02_2"
+        },
         voice_ch_char_Tuosi_vo_topic_02_3 = {
           ContentFR = "Dans ce cas, je jouerai jusqu’au bout cette dernière scène, pour toi, mon seul et dernier spectateur.",
           TextMapId = "voice_ch_char_Tuosi_vo_topic_02_3"
@@ -90079,19 +90083,19 @@ Oliver : Pff. Encore une pauvre victime.]],
         voice_ch_char_Zhiliu01_vo_battlestart = {
           ContentFR = "Hmm... J’ai consulté les augures : avant que ce vin tiède ne refroidisse, tout sera réglé.",
           TextMapId = "voice_ch_char_Zhiliu01_vo_battlestart"
-        },
-        voice_ch_char_Zhiliu01_vo_gain = {
-          ContentFR = "Quoi ? Cela t’étonne tant ? Même en tant que Haut Chancelier de Longyuan, je dois revêtir un habit digne de ces banquets privés. La nuit ne fait que commencer... autant t’y accoutumer dès maintenant.",
-          TextMapId = "voice_ch_char_Zhiliu01_vo_gain"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Zhiliu01_vo_skill02_r01",
+    MinKey = "voice_ch_char_Zhiliu01_vo_gain",
     MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
     Loader = function()
       return {
+        voice_ch_char_Zhiliu01_vo_gain = {
+          ContentFR = "Quoi ? Cela t’étonne tant ? Même en tant que Haut Chancelier de Longyuan, je dois revêtir un habit digne de ces banquets privés. La nuit ne fait que commencer... autant t’y accoutumer dès maintenant.",
+          TextMapId = "voice_ch_char_Zhiliu01_vo_gain"
+        },
         voice_ch_char_Zhiliu01_vo_skill02_r01 = {
           ContentFR = "Venez donc égayer le banquet.",
           TextMapId = "voice_ch_char_Zhiliu01_vo_skill02_r01"

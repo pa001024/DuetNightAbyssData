@@ -39,6 +39,7 @@ function BP_UIManagerComponent_C:Initialize(Initializer)
   self.IsMenuAnchorOpen = false
   self.GameInputModeSubsystem = nil
   self.FlowList = {}
+  self.BlockingReasons = {}
   self.AsyncLoadHandlers = {}
   self.AsyncGetUIContexts = {}
   self.AsyncUnloadFlags = {}
@@ -1696,6 +1697,9 @@ function BP_UIManagerComponent_C:_BlockAllUIInput(bBlock, Reason)
       end)
       self.ReconnectUITimer = TimerKey
     end
+    if not self.BlockingReasons then
+      self.BlockingReasons = {}
+    end
     self.BlockingReasons[Reason] = 1
   end
   DebugPrint(WarningTag, string.format("BP_UIManagerComponent_C:_BlockAllUIInput(%s, %s)", bBlock, Reason))
@@ -1910,6 +1914,9 @@ function BP_UIManagerComponent_C:_BreakInTopToastInQueue(QueneContainerName, Set
 end
 
 function BP_UIManagerComponent_C:ShowUITip_BattleCommonTop(TipType, TipContent, LastTime, IsWaitToTrigger, ExtraData)
+  if "UI_WalkSwitch_Forbid" == TipContent or "UI_WalkSwtich_On_Toast" == TipContent or "UI_WalkSwtich_Off_Toast" == TipContent then
+    return
+  end
   if TipType == UIConst.Tip_CommonTop then
     if not self["BattleCommonTopInCD_" .. TipContent] then
       self:ShowUITip(TipType, GText(TipContent), LastTime, IsWaitToTrigger, ExtraData)
@@ -2053,7 +2060,7 @@ function BP_UIManagerComponent_C:TryShowPlayerLevelUpInfo(LevelUpInfo)
   if Avatar:IsInDungeon() and LevelUpInfo.ShowProgressBar then
     return
   end
-  if GameState and (GameState.GameModeType == "Temple" or GameState.GameModeType == "Party") then
+  if GameState and (GameState.GameModeType == "Temple" or GameState.GameModeType == "Party" or GameState.GameModeType == "MonsterRush") then
     return
   end
   if not self:IsInHUDShowMode() then
@@ -2292,9 +2299,13 @@ function BP_UIManagerComponent_C:HideNpcById(NpcId, bHide, HideTag)
   end
 end
 
-function BP_UIManagerComponent_C:CreateUIActorCameraHelper(Player)
+function BP_UIManagerComponent_C:CreateUIActorCameraHelper(Player, bDontAttach)
   local ToCreateUIActorCameraHelper = self:GetWorld():SpawnActor(LoadClass("/Game/BluePrints/Char/BP_PlayerCharacterArmoryHelper.BP_PlayerCharacterArmoryHelper_C"), Player:GetTransform(), UE4.ESpawnActorCollisionHandlingMethod.Default)
-  ToCreateUIActorCameraHelper:K2_AttachToActor(Player, "Root", UE4.EAttachmentRule.KeepWorld, UE4.EAttachmentRule.KeepWorld, UE4.EAttachmentRule.KeepWorld, true)
+  if bDontAttach then
+    ToCreateUIActorCameraHelper:K2_SetActorTransform(Player.Mesh:GetSocketTransform("Root", ERelativeTransformSpace.RTS_World))
+  else
+    ToCreateUIActorCameraHelper:K2_AttachToActor(Player, "Root", UE4.EAttachmentRule.KeepWorld, UE4.EAttachmentRule.KeepWorld, UE4.EAttachmentRule.KeepWorld, true)
+  end
   ToCreateUIActorCameraHelper:K2_AddActorLocalOffset(FVector(0, 0, 0), false, nil, false)
   return ToCreateUIActorCameraHelper
 end
@@ -3299,6 +3310,28 @@ function BP_UIManagerComponent_C:StartScriptDetectionCheck()
       SceneManager:StartScriptDetectionCheck(Const.ScriptDetectionCheckType.OnMouse)
       SceneManager:StartScriptDetectionCheck(Const.ScriptDetectionCheckType.OnKeyboard)
     end
+  end
+end
+
+function BP_UIManagerComponent_C:MarkKeyLongPressSuccess(InKey)
+  if not self.LongPressTbl then
+    self.LongPressTbl = {}
+  end
+  self.LongPressTbl[InKey] = 1
+end
+
+function BP_UIManagerComponent_C:CheckAndCleanKeyLongPressSuccess(InKey)
+  if self.LongPressTbl then
+    local Res = self.LongPressTbl[InKey]
+    self:ClearKeyLongPressSuccess(InKey)
+    return Res
+  end
+  return false
+end
+
+function BP_UIManagerComponent_C:ClearKeyLongPressSuccess(InKey)
+  if self.LongPressTbl and self.LongPressTbl[InKey] then
+    self.LongPressTbl[InKey] = nil
   end
 end
 

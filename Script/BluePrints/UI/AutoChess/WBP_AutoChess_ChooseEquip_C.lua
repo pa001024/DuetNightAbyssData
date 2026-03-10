@@ -42,6 +42,9 @@ function M:OnLoaded(...)
   self.CurEquip = nil
   self.Text_Title:SetTexT(GText("UI_AutoChess_EquipTitle"))
   self.List_Chess:ClearListItems()
+  if CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" then
+    CommonUtils:CloseGuideTouchIfExist(self)
+  end
   for key, value in pairs(Model:GetChessData()) do
     if value.Locked ~= true then
       local Content = NewObject(UIUtils.GetCommonItemContentClass())
@@ -152,7 +155,7 @@ function M:RefreshEquip(Rarity)
       Obj = self,
       Callback = function()
         self:OnClickEquip(Content)
-        if self.UsingGamepad then
+        if self.UsingGamepad and not CommonUtils:IfExistSystemGuideUI(self) then
           local Equips = Model:GetMonsterEquipInfo(self.CurChess.Id)
           if Content.State == EquipState.UnEquip and 2 ~= #Equips then
             self:AddEquip()
@@ -163,6 +166,7 @@ function M:RefreshEquip(Rarity)
             UIManager(self):ShowUITip(UIConst.Tip_CommonTop, GText("UI_AutoChess_UnlockToast"))
           end
         end
+        CommonUtils:CloseGuideTouchIfExist(self)
       end
     }
     Content.OnFocusReceivedEvent = {
@@ -426,7 +430,7 @@ end
 
 function M:OnEndClose()
   AudioManager(self):SetEventSoundParam(self, "Open", {ToEnd = 1})
-  if self.ParentWidget then
+  if self.ParentWidget and not CommonUtils:IfExistSystemGuideUI(self) then
     self.ParentWidget:SetFocus()
   end
 end

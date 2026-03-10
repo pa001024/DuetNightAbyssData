@@ -63,9 +63,8 @@ function M:OnNewCharHairObtained(HairId, CharId)
     if not self.NoReddot then
       Content.RedDotType = UIConst.RedDotType.NewRedDot
     end
-    if Content.Widget then
-      Content.Widget.LockType = Content.LockType
-      Content.Widget:SetReddot(Content.RedDotType)
+    if Content.SelfWidget then
+      Content.SelfWidget:OnListItemObjectSet(Content)
     end
     if self.SelectedHairId == HairId and self.CurrentTopTabIdx == self.HairTabIdx then
       self:UpdateHairDetails(Content)
@@ -248,6 +247,10 @@ function M:OnCharSkinGotoBagBtnClicked()
   UIManager(self):LoadUINew("CharSkinPreview", self.UseParamsInOpt)
 end
 
+function M:OnCharHairGotoBagBtnClicked()
+  UIManager(self):LoadUINew("CharSkinPreview", self.UseParamsInOpt)
+end
+
 function M:OnCharSkinGoToShopBtnClicked()
   if not self.SelectedSkinId or self.SelectedSkinId <= 0 then
     return
@@ -273,6 +276,33 @@ function M:OnCharSkinGoToShopBtnClicked()
     end
   end
   Utils.ScreenPrint("皮肤表对应的商品Id可能没配对,麻烦策划检查一下")
+end
+
+function M:OnCharHairGoToShopBtnClicked()
+  if not self.SelectedHairId or self.SelectedHairId <= 0 then
+    return
+  end
+  local HairInfo = DataMgr.Hair[self.SelectedHairId]
+  if not HairInfo then
+    return
+  end
+  local ItemIds = HairInfo.GoShopTypeId
+  if not ItemIds or not next(ItemIds) then
+    return
+  end
+  for _, ItemId in ipairs(ItemIds) do
+    local ShopItemData = DataMgr.ShopItem[ItemId]
+    if ShopItemData then
+      local AccessData = DataMgr.Access.Shop_Main
+      local IsShopAccessValid = AccessData and AccessData.UIUnlockRuleId and PageJumpUtils:IsValidAccess(AccessData.UIUnlockRuleId)
+      local bSuccess, JumpToPage = PageJumpUtils:CreateJumpToShopAccess(ShopItemData.ItemType, "Shop", ShopItemData.TypeId)
+      if bSuccess and JumpToPage then
+        JumpToPage()
+        return
+      end
+    end
+  end
+  Utils.ScreenPrint("发型表对应的商品Id可能没配对,麻烦策划检查一下")
 end
 
 function M:OnCharSkinChanged(Ret, CharUuid, AppearanceIndex, SkinId)
@@ -355,7 +385,7 @@ function M:CreateHairContents(Target)
       elseif OtherOwnedHairs[HairId] then
         rawset(Obj, "LockType", false)
       else
-        rawset(Obj, "LockType", HairId ~= DefaultHairId)
+        rawset(Obj, "LockType", HairId ~= DefaultHairId and 2)
       end
       local CharInfo = DataMgr.BattleChar[Data.CharId]
       if CharInfo then
@@ -517,7 +547,7 @@ function M:UpdateHairDetails(Content)
     self.Text_Char_None:SetText(GText("UI_SkinPreview_CharNotOwned"))
     self.Text_Char_None:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   end
-  if Content.Rarity then
+  if Content.Rarity and (Content.Name or Content.Text) then
     self.Tag_Quality:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.Tag_Quality:Init(Content.Rarity)
   end
@@ -610,9 +640,6 @@ end
 
 function M:CreateCharAccessoryContents(Char, SkinId, Params)
   Params = Params or {}
-  if rawget(self, "IsAccessoryContentsCreated") and not Params.bRecreate then
-    return
-  end
   local OnContentCreated = Params.OnContentCreated or function()
   end
   rawset(self, "IsAccessoryContentsCreated", true)
@@ -926,13 +953,13 @@ function M:InitCharAccessoryList()
   self.List_Accessory:RequestPlayEntriesAnim()
 end
 
-function M:RecoverAccessory()
+function M:RecoverAccessory(Params)
   if self.Type ~= CommonConst.ArmoryType.Char then
     return
   end
   self.ActorController:DestoryCreature(CommonConst.CharAccessoryTypes.FX_Dead)
   self.ActorController:StopPlayerFX()
-  self.ActorController:StopPlayerMontage()
+  self.ActorController:StopPlayerMontage(Params)
   self.ActorController:DestoryPlayerMeleeWeapon()
   if not self.ComparedContent or self.ComparedContent == self.CurrentContent then
     return
@@ -1080,7 +1107,7 @@ function M:CreateCurrentMVPContent(Char)
 end
 
 function M:CreateMVPContentMap()
-  if rawget(self, "Map_MVPContents") or not rawget(self, "Map_AccessoryContents") then
+  if not rawget(self, "Map_AccessoryContents") then
     return
   end
   rawset(self, "Map_MVPContents", {})
@@ -1186,6 +1213,48 @@ function M:OnTopTabSelected(TabWidget, Content)
     self.ActorController:TryCreateMVPActorController()
     self:InitCharMVP()
   end
+  self:UpdateCharAppearanceResourceBar()
+end
+
+function M:UpdateCharAppearanceResourceBar()
+  if self.CurrentTopTabIdx == self.MVPTabIdx then
+    for _, Content in pairs(self.Map_MVPContents or {}) do
+      local ShopItemId = self:GetShopItemByAccessoryId(Content.AccessoryId)
+      local ShopItemData = DataMgr.ShopItem[ShopItemId]
+      local PriceType = ShopItemData and ShopItemData.PriceType
+      if PriceType then
+        self.Tab_Skin:OverrideTopResource({PriceType}, true)
+        break
+      end
+    end
+  else
+    self.Tab_Skin:OverrideTopResource(nil, true)
+  end
+end
+
+local function IsSkinSupportAccessory(SkinId, AccessoryId)
+  local Data = DataMgr.CharAccessory[AccessoryId] or DataMgr.CharPartMesh[AccessoryId]
+  if not Data or not Data.Skin then
+    return true
+  end
+  for key, value in pairs(Data.Skin) do
+    if value == SkinId then
+      return true
+    end
+  end
+  return false
+end
+
+local function RemoveUnsupportedAccessories(SkinId, AccessorySuit)
+  local UnsupportedAcceesoryIdx = {}
+  for key, value in pairs(AccessorySuit) do
+    if not IsSkinSupportAccessory(SkinId, value) then
+      table.insert(UnsupportedAcceesoryIdx, key)
+    end
+  end
+  for index, value in ipairs(UnsupportedAcceesoryIdx) do
+    AccessorySuit[value] = nil
+  end
 end
 
 function M:UpdateActorAppearance(SkinId, HairId)
@@ -1195,10 +1264,14 @@ function M:UpdateActorAppearance(SkinId, HairId)
   if not self.ActorController then
     return
   end
-  local AppearanceSuitInfo = self.Target:DumpAppearanceSuit(ArmoryUtils:GetAvatar(), self.AppearanceSuitIndex)
+  local Avatar = ArmoryUtils:GetAvatar()
+  local AppearanceSuitInfo = self.Target:DumpAppearanceSuit(Avatar, self.AppearanceSuitIndex)
   AppearanceSuitInfo.SkinId = SkinId or AppearanceSuitInfo.SkinId
   AppearanceSuitInfo.HairId = HairId or AppearanceSuitInfo.HairId
-  AppearanceSuitInfo.Colors = self.Target:DumpColors(ArmoryUtils:GetAvatar(), AppearanceSuitInfo.SkinId)
+  AppearanceSuitInfo.Colors = self.Target:DumpColors(Avatar, AppearanceSuitInfo.SkinId)
+  AppearanceSuitInfo.HairColors = self.Target:DumpHairColors(Avatar, AppearanceSuitInfo.HairId)
+  AppearanceSuitInfo.AccessorySuit = AppearanceSuitInfo.AccessorySuit or {}
+  RemoveUnsupportedAccessories(AppearanceSuitInfo.SkinId, AppearanceSuitInfo.AccessorySuit)
   self.ActorController:ChangeCharAppearance(AppearanceSuitInfo)
   if self.LastCharSkinId and AppearanceSuitInfo.SkinId ~= self.LastCharSkinId then
     self.ActorController.DelayFrame = 30
@@ -1214,15 +1287,25 @@ function M:OnConfirmBtnClicked()
   if self.Type ~= CommonConst.ArmoryType.Char then
     return
   end
-  if self.CurrentTopTabIdx == self.SkinTabIdx and not self.CurrentLockContent then
-    self:OnCharSkinConfirmBtnClicked()
-  elseif self.CurrentTopTabIdx == self.HairTabIdx and not self.CurrentLockContent then
-    self:OnCharHairConfirmBtnClicked()
-  elseif self.CurrentTopTabIdx == self.SkinTabIdx and self.CurrentLockContent then
-    if self.UseParamsInOpt then
-      self:OnCharSkinGotoBagBtnClicked()
+  if self.CurrentTopTabIdx == self.SkinTabIdx then
+    if self.CurrentLockContent then
+      if self.UseParamsInOpt then
+        self:OnCharSkinGotoBagBtnClicked()
+      else
+        self:OnCharSkinGoToShopBtnClicked()
+      end
     else
-      self:OnCharSkinGoToShopBtnClicked()
+      self:OnCharSkinConfirmBtnClicked()
+    end
+  elseif self.CurrentTopTabIdx == self.HairTabIdx then
+    if self.CurrentLockContent then
+      if self.UseParamsInOpt then
+        self:OnCharHairGotoBagBtnClicked()
+      else
+        self:OnCharHairGoToShopBtnClicked()
+      end
+    else
+      self:OnCharHairConfirmBtnClicked()
     end
   else
     self:OnCharAccessoryConfirmBtnClicked()

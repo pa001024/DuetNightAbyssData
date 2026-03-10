@@ -31,13 +31,7 @@ function ReddotTreeNode_JJGame:_Judge(ActivityID)
   if CommonUtils.Size(MidTermGoals.ScoresRewards) > 0 then
     return true
   end
-  local allRewardsClaimed = true
-  for _, v in pairs(MidTermGoals.AchvProgressRewarded) do
-    if 0 == v then
-      allRewardsClaimed = false
-      return true
-    end
-  end
+  local allRewardsClaimed = Avatar:CheckIsChallengeRewardAllClaimed()
   for TaskId, Task in pairs(MidTermGoals.Tasks) do
     local TaskData = DataMgr.MidTermTask[TaskId]
     local isAchievementTask = 4 == TaskData.TaskType
@@ -51,6 +45,7 @@ function ReddotTreeNode_JJGame:_Judge(ActivityID)
       end
     end
   end
+  self:ClearJJGameReddot()
   return false
 end
 
@@ -66,6 +61,13 @@ end
 function ReddotTreeNode_JJGame:OnInitNodeCache(NodeCache)
   ReddotTreeNode_JJGame.Super.OnInitNodeCache(self, NodeCache)
   ReddotManager.AddListenerEx("Acti_JJGame", self, self.OnJJGameReddotChange)
+  local NormalRewardNode = ReddotManager.GetTreeNode(NormalRewardReddotName)
+  local ChallengeRewardNode = ReddotManager.GetTreeNode(ChallengeRewardReddotName)
+  local NormalRewardCount = NormalRewardNode and NormalRewardNode.Count or 0
+  local ChallengeRewardCount = ChallengeRewardNode and ChallengeRewardNode.Count or 0
+  if 0 == NormalRewardCount and 0 == ChallengeRewardCount and self.Count and self.Count > 0 then
+    self:ClearJJGameReddot()
+  end
 end
 
 function ReddotTreeNode_JJGame:OnDisposeNode()
@@ -139,6 +141,19 @@ function ReddotTreeNode_JJGame:ClearNormalRewardReddot()
       CacheData[key] = nil
     end
     ReddotManager.ClearLeafNodeCount(NormalRewardReddotName)
+  end
+end
+
+function ReddotTreeNode_JJGame:ClearJJGameReddot()
+  if not ReddotManager.GetTreeNode("Acti_JJGame") then
+    ReddotManager.AddNodeEx("Acti_JJGame", nil, Const.ReddotCacheType.UserCache)
+  end
+  local CacheData = ReddotManager.GetLeafNodeCacheDetail("Acti_JJGame")
+  if CacheData then
+    for key, _ in pairs(CacheData) do
+      CacheData[key] = nil
+    end
+    ReddotManager.ClearLeafNodeCount("Acti_JJGame")
   end
 end
 

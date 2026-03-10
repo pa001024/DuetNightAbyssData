@@ -47,6 +47,7 @@ function M:InitSpecialReward(Index, ConfigData, ParentWidget)
   self.ActivityId = ConfigData.ActivityId
   self.RewardType = "SpecialReward"
   self.ParentWidget = ParentWidget
+  self.bComeBackEvent = ConfigData.bComeBackEvent or false
   self.Text_ItemIndex:SetText(string.format("%02d", Index))
   if ConfigData.CharId then
     self.IsShowAvatarIcon = true
@@ -278,7 +279,7 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
         IsEventHandled = true
         self.SevenDayIconItem_1:OnBtnClicked()
       end
-    elseif InKeyName == UIConst.GamePadKey.FaceButtonRight then
+    elseif InKeyName == UIConst.GamePadKey.FaceButtonRight and not self.bComeBackEvent then
       IsEventHandled = self:LeaveSpecialRewardItemViewMode()
     end
   end

@@ -581,7 +581,7 @@ function WBP_Battle_Button_Phone:OnSkillInfosRep(Character)
   if not self.OwnerPlayer or self.OwnerPlayer ~= Character then
     return
   end
-  self:RefreshSkillConfig()
+  self:RefreshRoleSkillButton()
 end
 
 function WBP_Battle_Button_Phone:UpdateSkillInfoInTimer()

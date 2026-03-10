@@ -214,9 +214,12 @@ function BattleDumpUtils:GetSquadInfoByTemplate(Avatar, AvatarSquad, TrialSquad,
   local TemplateAvatarComponent = require("BluePrints.Client.TemplateAvatar.TemplateAvatarComponent")
   local TemplateAvatar = TemplateAvatarComponent()
   local ExtraSquad = {}
+  TemplateAvatar.Mods = TemplateAvatar.__Class__.Props.Mods:GetTypeInstance(Avatar.Mods:save_dump(Avatar.Mods))
   if AvatarSquad.Char then
     TemplateAvatar.CurrentChar = AvatarSquad.Char
     TemplateAvatar.Chars[AvatarSquad.Char] = Avatar.Chars[AvatarSquad.Char]
+    local CharId = Avatar.Chars[AvatarSquad.Char].CharId
+    TemplateAvatar.CommonChars[CharId] = Avatar.CommonChars[CharId]
   end
   if TrialSquad.Char then
     TemplateDumpUtils:CreateTemplate_Char(TemplateAvatar, TrialSquad.Char, nil, true)
@@ -238,6 +241,8 @@ function BattleDumpUtils:GetSquadInfoByTemplate(Avatar, AvatarSquad, TrialSquad,
   if AvatarSquad.Phantom1 then
     TemplateAvatar.Chars[AvatarSquad.Phantom1] = Avatar.Chars[AvatarSquad.Phantom1]
     ExtraSquad.Phantom1 = AvatarSquad.Phantom1
+    local CharId = Avatar.Chars[AvatarSquad.Phantom1].CharId
+    TemplateAvatar.CommonChars[CharId] = Avatar.CommonChars[CharId]
   end
   if TrialSquad.Phantom1 then
     local Ok, Uuid = TemplateDumpUtils:CreateTemplate_Char(TemplateAvatar, TrialSquad.Phantom1, nil, false)
@@ -248,6 +253,8 @@ function BattleDumpUtils:GetSquadInfoByTemplate(Avatar, AvatarSquad, TrialSquad,
   if AvatarSquad.Phantom2 then
     TemplateAvatar.Chars[AvatarSquad.Phantom2] = Avatar.Chars[AvatarSquad.Phantom2]
     ExtraSquad.Phantom2 = AvatarSquad.Phantom2
+    local CharId = Avatar.Chars[AvatarSquad.Phantom2].CharId
+    TemplateAvatar.CommonChars[CharId] = Avatar.CommonChars[CharId]
   end
   if TrialSquad.Phantom2 then
     local Ok, Uuid = TemplateDumpUtils:CreateTemplate_Char(TemplateAvatar, TrialSquad.Phantom2, nil, false)

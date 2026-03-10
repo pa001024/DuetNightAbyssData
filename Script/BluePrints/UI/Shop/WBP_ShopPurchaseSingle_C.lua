@@ -651,6 +651,8 @@ function M:Purchase()
         ShopUtils:SetCloseGetItemPageCallback({CloseGetItemPageCallback = nil})
       end
       
+      Params.LeftGamepadKey = Const.GamepadFaceButtonUp
+      Params.ShowBKeyClose = true
       self.PopupUI = UIManager(self):ShowCommonPopupUI(PopupId, Params, self)
     end
     return

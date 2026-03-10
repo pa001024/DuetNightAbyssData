@@ -85,7 +85,7 @@
     "desc": "Symbole de noblesse, incarnation des bonnes manières... ou peut-être simplement un papillon incapable de s’envoler.",
     "icon": "T_Fashion_Head_SilverBow",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "Disponible via les événements"
   },
   {
     "id": 10012,
@@ -691,7 +691,7 @@
     "id": 11004,
     "name": "Pluie d’astres",
     "desc": "On dirait qu’un dragon pourpre, une étincelle entre les crocs, a dérobé une pluie d’étoiles pour l’ensemencer sur le monde des mortels.",
-    "icon": "",
+    "icon": "T_Fashion_Fx13",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   },
@@ -699,9 +699,9 @@
     "id": 12001,
     "name": "Murmure d’indigo",
     "desc": "Dans ce bol aux reflets d’indigo repose la moitié d’une vie de tempêtes ; et, pourtant, c’est tout un paysage que vous portez entre vos mains.",
-    "icon": "T_Fashion_Hat03",
+    "icon": "T_Fashion_Hat03_01",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "Disponible dans la boutique"
   },
   {
     "id": 12002,
@@ -709,7 +709,7 @@
     "desc": "Un bord ni trop large ni trop étroit — juste assez pour avancer sans hâte, dans la bruine et la brume.",
     "icon": "T_Fashion_Hat04",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "Disponible dans la boutique"
   },
   {
     "id": 12003,
@@ -717,7 +717,7 @@
     "desc": "Lancer ses idéaux et son avenir vers le firmament.",
     "icon": "T_Fashion_Hat01",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "Disponible dans la boutique"
   },
   {
     "id": 12004,
@@ -725,7 +725,7 @@
     "desc": "Au détour de la galerie, un ruban se balance doucement dans la brise.",
     "icon": "T_Fashion_Hat02",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "Disponible dans la boutique"
   },
   {
     "id": 12121,
@@ -1459,7 +1459,7 @@
     "id": 21004,
     "name": "Dragon de la Voie lactée",
     "desc": "La flamme poursuit l’éclat des astres ; la Voie lactée s’ébranle, et un dragon y ondule, au-dessus de nos têtes.",
-    "icon": "",
+    "icon": "T_Fashion_Fx12",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   },
@@ -1669,7 +1669,7 @@
     "desc": "Permet de modifier l’animation de victoire.",
     "icon": "T_Fashion_SettlementAction_01",
     "rarity": 5,
-    "unlock": ""
+    "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 31002,
@@ -1677,7 +1677,7 @@
     "desc": "Permet de modifier l’animation de victoire.",
     "icon": "T_Fashion_SettlementAction_02",
     "rarity": 5,
-    "unlock": ""
+    "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 40001,
@@ -2034,7 +2034,7 @@
   {
     "id": 50002,
     "name": "Flammes de la Chandelle d’Argent",
-    "desc": "{空格}",
+    "desc": " ",
     "icon": "T_Fashion_Fx03",
     "rarity": 4,
     "unlock": "Disponible via la Myriade"
@@ -2042,15 +2042,15 @@
   {
     "id": 50003,
     "name": "Poupée de la Chandelle d’Argent",
-    "desc": "{空格}",
+    "desc": " ",
     "icon": "T_Fashion_Fx11",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 60001,
-    "name": "{空格}",
-    "desc": "{空格}",
+    "name": " ",
+    "desc": " ",
     "icon": "",
     "rarity": 5,
     "unlock": ""
@@ -2083,7 +2083,7 @@
     "id": 70003,
     "name": "Feux d’éclat – Doré",
     "desc": "Le dragon s’élance et crache ses flammes ; et nos chants traversent la nuit.",
-    "icon": "T_Fashion_Head_YellowChick",
+    "icon": "T_Fashion_Fx10_02",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   },
@@ -2139,7 +2139,7 @@
     "id": 70031,
     "name": "Feux d’éclat – Rouille",
     "desc": "Le dragon s’élance et crache ses flammes ; et nos chants traversent la nuit.",
-    "icon": "T_Fashion_Head_YellowChick",
+    "icon": "T_Fashion_Fx10_01",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   },
@@ -2147,7 +2147,7 @@
     "id": 70032,
     "name": "Feux d’éclat – Blanc ivoire",
     "desc": "Le dragon s’élance et crache ses flammes ; et nos chants traversent la nuit.",
-    "icon": "T_Fashion_Head_YellowChick",
+    "icon": "T_Fashion_Fx10",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   },
@@ -2155,7 +2155,7 @@
     "id": 70033,
     "name": "Feux d’éclat – Bleu indigo",
     "desc": "Le dragon s’élance et crache ses flammes ; et nos chants traversent la nuit.",
-    "icon": "T_Fashion_Head_YellowChick",
+    "icon": "T_Fashion_Fx10_03",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   },

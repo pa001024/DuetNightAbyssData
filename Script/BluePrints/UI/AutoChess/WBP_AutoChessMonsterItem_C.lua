@@ -166,4 +166,15 @@ function View:OnPressed()
   self:PlayAnimation(self.Press)
 end
 
+function View:OnKeyDown(MyGeometry, InKeyEvent)
+  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
+  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+  local IsEventHandled = false
+  if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) and InKeyName == UIConst.GamePadKey.FaceButtonBottom then
+    self:OnBtnClicked()
+    IsEventHandled = true
+  end
+  return IsEventHandled and UIUtils.Handled or UIUtils.Unhandled
+end
+
 return View

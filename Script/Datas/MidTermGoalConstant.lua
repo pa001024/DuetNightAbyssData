@@ -31,7 +31,7 @@ return ReadOnly("MidTermGoalConstant", {
   },
   BaseRewardCount = {
     ConstantName = "BaseRewardCount",
-    ConstantValue = 1
+    ConstantValue = 10
   },
   BaseRewardId = {
     ConstantName = "BaseRewardId",
@@ -59,7 +59,7 @@ return ReadOnly("MidTermGoalConstant", {
   },
   OFRewardCount = {
     ConstantName = "OFRewardCount",
-    ConstantValue = 1
+    ConstantValue = 10
   },
   OFRewardId = {ConstantName = "OFRewardId", ConstantValue = 110202},
   TabIcon_1 = {

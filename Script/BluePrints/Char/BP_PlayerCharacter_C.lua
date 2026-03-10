@@ -846,6 +846,10 @@ function BP_PlayerCharacter_C:TriggerFallingCallable(GameMode, DefaultTransform,
     self:K2_SetActorLocation(DefaultTransform.Translation, false, nil, false)
     self:K2_SetActorRotation(DefaultTransform.Rotation:ToRotator(), false)
   end
+  if IsStandAlone(self) then
+    self:ChangeGravityUseAnim(false, 0)
+    self:ClearGravityModifier()
+  end
   self:GetMovementComponent():ForceClientUpdate()
   self:EnableCheckOverlapPush({})
   if self.OnTriggerFallingCallable then
@@ -868,8 +872,12 @@ function BP_PlayerCharacter_C:TriggerFallingCallable(GameMode, DefaultTransform,
       MountAnim:OnMountStopRideFly()
     end
   end
-  if self.FlyMount then
-    self:StartRideFly()
+  if Mount then
+    if self.FlyMount then
+      self:StartRideFly()
+    else
+      EventManager:FireEvent(EventID.OnStopMountFly, self)
+    end
   end
 end
 
@@ -3245,6 +3253,14 @@ end
 function BP_PlayerCharacter_C:UpdateVirtualJoystickEnableMoveLock(bEnable)
   EMCache:Set("VirtualJoystickMoveLock", bEnable)
   UIManager(self):SetVirtualJoystickEnableMoveLock(bEnable)
+end
+
+function BP_PlayerCharacter_C:DisableNESkill()
+  self.bDisableNEContinuousSkill = true
+end
+
+function BP_PlayerCharacter_C:EnableNESkill()
+  self.bDisableNEContinuousSkill = false
 end
 
 AssembleComponents(BP_PlayerCharacter_C, {

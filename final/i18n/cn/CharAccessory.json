@@ -85,7 +85,7 @@
     "desc": "端庄的象征，礼仪的具现，亦或是，一只无法飞翔的蝴蝶。",
     "icon": "T_Fashion_Head_SilverBow",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "通过活动获得"
   },
   {
     "id": 10012,
@@ -691,7 +691,7 @@
     "id": 11004,
     "name": "星落如雨",
     "desc": "疑是赤龙衔燧木，偷来星雨种人间。",
-    "icon": "",
+    "icon": "T_Fashion_Fx13",
     "rarity": 5,
     "unlock": "通过棱镜兑换获得"
   },
@@ -699,9 +699,9 @@
     "id": 12001,
     "name": "釉色铭",
     "desc": "这青蓝的茶盏，装的是半生风雨，端的是一顶山河。",
-    "icon": "T_Fashion_Hat03",
+    "icon": "T_Fashion_Hat03_01",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "通过商店获得"
   },
   {
     "id": 12002,
@@ -709,7 +709,7 @@
     "desc": "不大不小的帽檐，刚好足以在朦胧雨雾里徐行。",
     "icon": "T_Fashion_Hat04",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "通过商店获得"
   },
   {
     "id": 12003,
@@ -717,7 +717,7 @@
     "desc": "将理想与未来掷向苍穹。",
     "icon": "T_Fashion_Hat01",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "通过商店获得"
   },
   {
     "id": 12004,
@@ -725,7 +725,7 @@
     "desc": "回廊转角处，发带在柔风中轻摇。",
     "icon": "T_Fashion_Hat02",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "通过商店获得"
   },
   {
     "id": 12121,
@@ -1459,7 +1459,7 @@
     "id": 21004,
     "name": "星河游龙",
     "desc": "逐焰摇光动星汉，垂天银河作游龙。",
-    "icon": "",
+    "icon": "T_Fashion_Fx12",
     "rarity": 5,
     "unlock": "通过棱镜兑换获得"
   },
@@ -1669,7 +1669,7 @@
     "desc": "可变更胜利动作。",
     "icon": "T_Fashion_SettlementAction_01",
     "rarity": 5,
-    "unlock": ""
+    "unlock": "通过棱镜兑换获得"
   },
   {
     "id": 31002,
@@ -1677,7 +1677,7 @@
     "desc": "可变更胜利动作。",
     "icon": "T_Fashion_SettlementAction_02",
     "rarity": 5,
-    "unlock": ""
+    "unlock": "通过棱镜兑换获得"
   },
   {
     "id": 40001,
@@ -2045,7 +2045,7 @@
     "desc": " ",
     "icon": "T_Fashion_Fx11",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "通过棱镜兑换获得"
   },
   {
     "id": 60001,
@@ -2083,7 +2083,7 @@
     "id": 70003,
     "name": "火树银花·鎏金",
     "desc": "腾龙吹焰，彻夜欢歌。",
-    "icon": "T_Fashion_Head_YellowChick",
+    "icon": "T_Fashion_Fx10_02",
     "rarity": 5,
     "unlock": "通过棱镜兑换获得"
   },
@@ -2139,7 +2139,7 @@
     "id": 70031,
     "name": "火树银花·锈红",
     "desc": "腾龙吹焰，彻夜欢歌。",
-    "icon": "T_Fashion_Head_YellowChick",
+    "icon": "T_Fashion_Fx10_01",
     "rarity": 5,
     "unlock": "通过棱镜兑换获得"
   },
@@ -2147,7 +2147,7 @@
     "id": 70032,
     "name": "火树银花·涅白",
     "desc": "腾龙吹焰，彻夜欢歌。",
-    "icon": "T_Fashion_Head_YellowChick",
+    "icon": "T_Fashion_Fx10",
     "rarity": 5,
     "unlock": "通过棱镜兑换获得"
   },
@@ -2155,7 +2155,7 @@
     "id": 70033,
     "name": "火树银花·黛蓝",
     "desc": "腾龙吹焰，彻夜欢歌。",
-    "icon": "T_Fashion_Head_YellowChick",
+    "icon": "T_Fashion_Fx10_03",
     "rarity": 5,
     "unlock": "通过棱镜兑换获得"
   },

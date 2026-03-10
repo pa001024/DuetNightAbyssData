@@ -112,6 +112,13 @@ function M:OnLoaded(...)
   if ConfigData.ReceiveBtnSoundPath and self.RewardContent_OneClick.Btn_OneClick then
     self.RewardContent_OneClick.Btn_OneClick.AudioEventPath = ConfigData.ReceiveBtnSoundPath
   end
+  EventManager:AddEvent(EventID.RefreshAcvitityRewardPanel, self, self.RefreshAcvitityRewardPanel)
+end
+
+function M:RefreshAcvitityRewardPanel()
+  if self.ConfigData.RefreshPanleCallBack then
+    self.ConfigData.RefreshPanleCallBack(self)
+  end
 end
 
 function M:AddReddotChangedListen()

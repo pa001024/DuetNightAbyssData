@@ -61,6 +61,7 @@ function M:ResetUIData()
   self.MainUICase = ModCommon.MainUICase.Normal
   self.GamePadSelectedStuff = nil
   self.DummyAvatar_CopyMode = nil
+  self.CopyModeSenderName = nil
 end
 
 function M:GenerateSlotUIDatas(SuitIndex)
@@ -1265,6 +1266,14 @@ function M:GetConvertMods(CurConvertPoolId)
     end
   end
   return ShowMods
+end
+
+function M:GetModFullNameByConf(ModId)
+  local ModInfo = DataMgr.Mod[ModId]
+  if CommonConst.SystemLanguage == CommonConst.SystemLanguages.FR then
+    return string.format("%s %s", GText(ModInfo.Name), GText(ModInfo.TypeName))
+  end
+  return GText(ModInfo.TypeName) .. GText(ModInfo.Name)
 end
 
 AssembleComponents(M)

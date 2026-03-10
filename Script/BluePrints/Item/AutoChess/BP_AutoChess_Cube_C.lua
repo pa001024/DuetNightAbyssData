@@ -14,7 +14,7 @@ function BP_AutoChess_Cube_C:ReceiveBeginPlay()
   if self.OnReleased then
     self.OnReleased:Add(self, self._OnReleased)
   end
-  if CommonUtils.GetRuntimePlatform(self) == "Mobile" then
+  if CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" then
     if self.OnInputTouchBegin then
       self.OnInputTouchBegin:Add(self, self._OnInputTouchBegin)
     end
@@ -32,6 +32,7 @@ function BP_AutoChess_Cube_C:ReceiveBeginPlay()
   local PlayerController = UE4.UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
   self:EnableInput(PlayerController)
   EventManager:AddEvent(EventID.OnAutoChessCubeChangeState, self, self.OnAutoChessCubeChangeState)
+  EventManager:AddEvent(EventID.OnAutoChessDisableCubeInteraction, self, self.DisableCubeInteraction)
 end
 
 function BP_AutoChess_Cube_C:OnAutoChessCubeChangeState(State, ...)
@@ -200,8 +201,11 @@ function BP_AutoChess_Cube_C:SetMonsterState(IsSelected)
   if self.MonsterEid then
     local Monster = Battle(self):GetEntity(self.MonsterEid)
     local Loc = Monster:K2_GetActorLocation()
+    if not self.LocZ then
+      self.LocZ = Loc.Z
+    end
     if IsSelected then
-      local NewLoc = FVector(Loc.X, Loc.Y, Loc.Z + 50)
+      local NewLoc = FVector(Loc.X, Loc.Y, self.LocZ + 50)
       Monster:SetTickEnabled(ETickCtrlType.GamePlay, ETickObjectFlag.FLAG_CHARMOVEMENTCOMPONENT, false)
       Monster.EMAnimInstance.EnableFootIK = false
       Monster:K2_SetActorLocation(NewLoc, false, nil, true)
@@ -209,10 +213,27 @@ function BP_AutoChess_Cube_C:SetMonsterState(IsSelected)
       Monster:SetTickEnabled(ETickCtrlType.GamePlay, ETickObjectFlag.FLAG_CHARMOVEMENTCOMPONENT, true)
       Monster:GetMovementComponent():LockMovementMode(false, EMovementMode.MOVE_Falling)
       if Monster:HasAnyTags_Table(Monster, {"Mon.Fly"}, false) then
-        local NewLoc = FVector(Loc.X, Loc.Y, Loc.Z - 50)
+        local NewLoc = FVector(Loc.X, Loc.Y, self.LocZ)
         Monster:K2_SetActorLocation(NewLoc, false, nil, true)
       end
     end
+  end
+end
+
+function BP_AutoChess_Cube_C:DisableCubeInteraction()
+  if CommonUtils.GetRuntimePlatform(self) == "Mobile" then
+    if self.OnInputTouchBegin then
+      self.OnInputTouchBegin:Clear()
+    end
+    if self.OnInputTouchEnd then
+      self.OnInputTouchEnd:Clear()
+    end
+  end
+  if self.OnClicked then
+    self.OnClicked:Clear()
+  end
+  if self.OnReleased then
+    self.OnReleased:Clear()
   end
 end
 

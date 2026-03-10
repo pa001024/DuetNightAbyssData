@@ -140,6 +140,7 @@ EMLuaConst.OpenHatredCompute = true
 EMLuaConst.OpenAccessoryDrop = false
 EMLuaConst.OpenGetEventByIDCompute = true
 EMLuaConst.OpenFightAttrWorker = true
+EMLuaConst.OpenDamageMonitoDefaultType = false
 EMLuaConst.EnablePSODiskCache = true
 EMLuaConst.PSOFlushThreshold = 10
 EMLuaConst.ShouldCombinePartMesh = true

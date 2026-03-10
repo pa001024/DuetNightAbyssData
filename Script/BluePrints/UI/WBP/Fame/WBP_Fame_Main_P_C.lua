@@ -154,7 +154,6 @@ function M:InitRegionTab()
   else
     self.Com_Tab:Play_WBP_Com_Tab_P_In()
   end
-  self:RefreshAllTabReddots()
 end
 
 function M:TrySelectRegionTabById(targetTabId)
@@ -194,6 +193,7 @@ function M:RefreshUI()
   self:RefreshUIBG()
   self:PlayAnimation(self.In)
   self:RefreshCurRewardReddot()
+  self:RefreshAllTabReddots()
 end
 
 function M:RefreshReputationData()

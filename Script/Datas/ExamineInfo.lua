@@ -203,7 +203,7 @@ return ReadOnly("ExamineInfo", {
     ExamineKey = "8.0",
     HostNum = 5001,
     IP = "121.199.19.146",
-    MirrorChannelID = 0,
+    MirrorChannelID = 259,
     Port = 8000,
     Remark = "PC-官方"
   },

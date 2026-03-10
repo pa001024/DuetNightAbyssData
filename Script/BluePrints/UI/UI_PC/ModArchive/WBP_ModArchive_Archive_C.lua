@@ -315,7 +315,7 @@ function WBP_ModArchive_Archive_C:SetTipsInfo(ModInfo, LockState)
     self.Panel_Hold:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.Group_Empty:SetVisibility(ESlateVisibility.Collapsed)
   end
-  self.Text_ItemName:SetText(GText(ModInfo.TypeName) .. GText(ModInfo.Name))
+  self.Text_ItemName:SetText(ModModel:GetModFullNameByConf(ModInfo.Id))
   local FontMaterial = self.Text_ItemName:GetDynamicFontMaterial()
   if ModInfo.Rarity and ModInfo.Rarity > 0 then
     FontMaterial:SetTextureParameterValue("IconTex", self["Img_Text_" .. ModInfo.Rarity])

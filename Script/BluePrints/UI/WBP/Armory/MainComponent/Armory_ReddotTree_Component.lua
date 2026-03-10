@@ -200,11 +200,7 @@ function Component:AddSubTabReddotListen()
       self:UpdateSubTabReddotCommon(ArmoryUtils.ArmorySubTabNames.Grade)
     end, self.ComparedChar.CharId)
     self:AddCharAppearanceReddotListen(function(self, Count)
-      local IsNew = Count > 0
-      if self.ComparedChar and ArmoryUtils:GetCharByUuid(self.ComparedChar.Uuid) == nil then
-        IsNew = false
-      end
-      self:SubTabReddotFunc(ArmoryUtils.ArmorySubTabNames.Appearance, IsNew)
+      self:UpdateSubTabReddotCommon(ArmoryUtils.ArmorySubTabNames.Appearance)
     end, self.ComparedChar.CharId)
     self:AddCharRedordReddotListen(function(self, Count)
       self:SubTabReddotFunc(ArmoryUtils.ArmorySubTabNames.Files, Count > 0)
@@ -482,12 +478,18 @@ function Component:AddCharAppearanceReddotListen(Callback, CharId, Exclude)
       end
     end
   end
-  local LeafNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Skin .. CharId
-  LeafNodes[LeafNodeName] = ReddotManager.GetTreeNode(LeafNodeName) and 1 or nil
-  local NodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair .. CharId
-  LeafNodes[LeafNodeName] = ReddotManager.GetTreeNode(LeafNodeName) and 1 or nil
   if not self.CharAppearanceNodeNames[NodeName] and not IsEmptyTable(LeafNodes) then
     ReddotManager.AddListener(NodeName, self, Callback, LeafNodes)
+    self.CharAppearanceNodeNames[NodeName] = 1
+  end
+  NodeName = CommonConst.DataType.Char .. CommonConst.DataType.Skin .. CharId
+  if ReddotManager.GetTreeNode(NodeName) then
+    ReddotManager.AddListener(NodeName, self, Callback, nil, true)
+    self.CharAppearanceNodeNames[NodeName] = 1
+  end
+  NodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair .. CharId
+  if ReddotManager.GetTreeNode(NodeName) then
+    ReddotManager.AddListener(NodeName, self, Callback, nil, true)
     self.CharAppearanceNodeNames[NodeName] = 1
   end
   NodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair .. CharId

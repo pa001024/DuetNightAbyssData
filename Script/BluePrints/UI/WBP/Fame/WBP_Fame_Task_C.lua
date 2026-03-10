@@ -301,7 +301,7 @@ function M:UpdateRefreshDetail()
   local RecurringTaskRefreshTimestamp = RegionFameModel:GetRecurringTaskRefreshTime(self.CurRegionTabId)
   rawset(self, "EntrustTaskRefreshTimestamp", EntrustTaskRefreshTimestamp)
   rawset(self, "RecurringTaskRefreshTimestamp", RecurringTaskRefreshTimestamp)
-  self.Text_Time:SetText(string.format("%s :", GText("RegionReputation_RefreshTime")))
+  self.Text_Time:SetText(GText("RegionReputation_RefreshTime01"))
   self:AddTimer(0.01, function()
     self:UpdateRefreshRemainingTime()
   end)
@@ -464,10 +464,12 @@ function M:OnRefreshClickedCallBack()
     local function CallBack(Ret)
       if Ret == ErrorCode.RET_SUCCESS then
         self:RefreshEntrustTask()
-      elseif Ret == ErrorCode.RET_ITEM_NOT_ENOUGH then
-        UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("Insufficient_Cash"))
-      elseif Ret == ErrorCode.RET_REGION_REPUTATION_REFRESHTIMES_LIMIT then
-        UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_COMMONPOP_TITLE_100027"))
+        
+        return
+      end
+      local Error = DataMgr.ErrorCode[Ret]
+      if nil ~= Error then
+        UIManager(self):ShowError(Ret, 1.5)
       else
         UIManager(self):ShowUITip(UIConst.Tip_CommonToast, string.format("ErrorCode :%d", Ret))
       end
@@ -605,6 +607,11 @@ function M:RefreshRecurringTaskDetail()
         self:AddTimer(0.25, function()
           self:SetFocus()
         end)
+        return
+      end
+      local Error = DataMgr.ErrorCode[Ret]
+      if nil ~= Error then
+        UIManager(self):ShowError(Ret, 1.5)
       else
         UIManager(self):ShowUITip(UIConst.Tip_CommonToast, string.format("ErrorCode :%d", Ret))
       end
@@ -614,6 +621,11 @@ function M:RefreshRecurringTaskDetail()
       if Ret == ErrorCode.RET_SUCCESS then
         self:RefreshRecurringTask()
         self:InitWeeklyDetail()
+        return
+      end
+      local Error = DataMgr.ErrorCode[Ret]
+      if nil ~= Error then
+        UIManager(self):ShowError(Ret, 1.5)
       else
         UIManager(self):ShowUITip(UIConst.Tip_CommonToast, string.format("ErrorCode :%d", Ret))
       end
@@ -663,12 +675,11 @@ function M:RefreshEntrustTask()
         self:ConsumeTargetQuestMod(QuestId)
         self:RefreshEntrustTask()
         self:InitWeeklyDetail()
-      elseif Ret == ErrorCode.RET_REGION_REPUTATION_WEEK_EXP_LIMIT then
-        UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("ReputationExp_AchievedWeekLimit"))
-      elseif Ret == ErrorCode.RET_REGION_REPUTATION_LEVEL_MAX then
-        UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("Reputation_MaxLevel_01"))
-      elseif Ret == ErrorCode.RET_ITEM_NOT_ENOUGH then
-        UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("(临时) 物品数量不足"))
+        return
+      end
+      local Error = DataMgr.ErrorCode[Ret]
+      if nil ~= Error then
+        UIManager(self):ShowError(Ret, 1.5)
       else
         UIManager(self):ShowUITip(UIConst.Tip_CommonToast, string.format("ErrorCode :%d", Ret))
       end

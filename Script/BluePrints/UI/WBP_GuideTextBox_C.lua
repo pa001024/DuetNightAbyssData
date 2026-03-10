@@ -27,6 +27,7 @@ end
 
 function WBP_GuideTextBox_C:Destruct()
   WBP_GuideTextBox_C.Super.Destruct(self)
+  self.Btn_Skip.OnClicked:Remove(self, self.OpenWindow)
   if self.IsTimePause then
     self:UISetGamePaused("GuideTextBox", false)
   end
@@ -42,6 +43,9 @@ function WBP_GuideTextBox_C:Destruct()
 end
 
 function WBP_GuideTextBox_C:OpenWindow()
+  if self.bOpenWindow then
+    return
+  end
   AudioManager(self):PlayUISound(self, "event:/ui/common/special_content_01_click", nil, nil)
   if self.Controller_Skip then
     self.Controller_Skip:PlayAnimation(self.Controller_Skip.Normal)

@@ -321,7 +321,13 @@ function View:InitCondition(Info, State)
     local Content = NewObject(UIUtils.GetCommonItemContentClass())
     Content.State = State
     local PreDungeonId = DataMgr.AutoChessMission[Info.UnlockMissionId].DungeonId
-    Content.Text = GText("UI_AutoChess_CompleteText") .. GText(DataMgr.Dungeon[PreDungeonId].DungeonName)
+    local Language = CommonConst.SystemLanguage
+    Content.Text = nil
+    if Language == CommonConst.SystemLanguages.KR then
+      Content.Text = GText(DataMgr.Dungeon[PreDungeonId].DungeonName) .. " " .. GText("UI_AutoChess_CompleteText")
+    else
+      Content.Text = GText("UI_AutoChess_CompleteText") .. GText(DataMgr.Dungeon[PreDungeonId].DungeonName)
+    end
     local bPrePass = false
     if Avatar.Dungeons[PreDungeonId] and Avatar.Dungeons[PreDungeonId].IsPass then
       bPrePass = true
@@ -358,31 +364,12 @@ function View:InitEnemy(Info)
     return
   end
   self.Details.Text_Enemy:SetText(GText("UI_AutoChess_EnemyInfo"))
-  local FormatInfo = DataMgr.AutoChessFormat[Info.ACFormationId]
-  local FormatInfoTable = {}
-  for key, value in pairs(FormatInfo) do
-    if string.find(key, "ACLocation") then
-      table.insert(FormatInfoTable, value)
-    end
-  end
-  table.sort(FormatInfoTable, function(a, b)
-    local A, B
-    for key, value in pairs(a) do
-      A = key
-    end
-    for key, value in pairs(b) do
-      B = key
-    end
-    return A < B
-  end)
-  for key, value in pairs(FormatInfoTable) do
+  local MosterInfoData = Model:GetMonsterInfoByMissionId(Info.MissionId)
+  for Index = 1, #MosterInfoData do
+    local Row = MosterInfoData[Index]
     local Content = NewObject(UIUtils.GetCommonItemContentClass())
-    local Count = 0
-    for Index, Equip in pairs(value) do
-      Count = #Equip
-      Content.AutoChessId = Index
-    end
-    Content.EquipCount = Count
+    Content.AutoChessId = Row.MonsterId
+    Content.EquipCount = #Row.EquipList
     Content.MissionId = nil
     if self.SelectedItem then
       Content.MissionId = self.SelectedItem.Id
@@ -821,6 +808,9 @@ function View:OnFocusReceived(MyGeometry, InFocusEvent)
 end
 
 function View:OnPagePoped()
+  if self.Type == AutoChessConst.LevelSelectType.Linear then
+    Model:DecreaseLinearReddotById()
+  end
   AudioManager(self):SetEventSoundParam(self, "SelectOpen", {ToEnd = 1})
 end
 

@@ -1970,6 +1970,9 @@ return ReadOnly("PureLogicBuff", {
   },
   [420122] = {
     BuffId = 420122,
+    BuffType = {
+      [1] = 430101
+    },
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },

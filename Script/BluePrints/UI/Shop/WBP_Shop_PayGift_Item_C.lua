@@ -45,7 +45,7 @@ function M:InitPayGiftItemInfo(ShopItemData)
     if PurchaseLimit and PurchaseLimit > -1 and 0 == PurchaseLimit then
       self.PayGift_PurpleItem.Group_More:SetVisibility(ESlateVisibility.Collapsed)
       self.PayGift_YellowItem.Group_More:SetVisibility(ESlateVisibility.Collapsed)
-      self.Text_SoldOut:SetText(GText("UI_SendGift_SendGiftLimit"))
+      self.Text_SoldOut:SetText(GText("UI_SendGift_GiftItemMax"))
       self.Group_SoldOut:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     end
   elseif Avatar:CheckShopItemSoldOutDisplay(ShopItemData.ItemId) then

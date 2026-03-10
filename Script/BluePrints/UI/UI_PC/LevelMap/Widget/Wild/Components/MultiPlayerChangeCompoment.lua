@@ -155,11 +155,16 @@ end
 
 function Component:OnChallengePointClick(Id)
   local ChallengeId = self.TeleportIdToChallengeId[Id]
-  local challengeData = (DataMgr.MultiplayerChallenge or {})[ChallengeId]
-  if not challengeData or not self:CheckControlPriority_Normal() then
+  local ChallengeData = (DataMgr.MultiplayerChallenge or {})[ChallengeId]
+  if not ChallengeData or not self:CheckControlPriority_Normal() then
     return
   end
-  self:ClosePanel(true)
+  local IsTipsVisible = self.ChanllengeTips and self.ChanllengeTips:GetVisibility() == ESlateVisibility.SelfHitTestInvisible
+  local CurrentTipsId = IsTipsVisible and self.ChanllengeTips.CurChallengeId or nil
+  if IsTipsVisible and CurrentTipsId == ChallengeId then
+    self:ClosePanel(true)
+    return
+  end
   if not self:CheckSelect(self.ChallengePoints[Id]) then
     return
   end

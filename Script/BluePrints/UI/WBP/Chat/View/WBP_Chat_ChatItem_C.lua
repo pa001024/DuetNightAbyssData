@@ -226,7 +226,7 @@ function M:_ParseModSuitInfo(MsgWrap)
   if ModSuitInfo then
     self.Switcher:SetActiveWidgetIndex(1)
     local bSelfMsg = self.MsgWrap.MsgType == ChatCommon.MsgType.Self
-    self.ModPlan:InitMod(ModSuitInfo, bSelfMsg)
+    self.ModPlan:InitMod(ModSuitInfo, bSelfMsg, MsgWrap.Message.Sender.Nickname)
   elseif DyePlanInfo then
     self.Switcher:SetActiveWidgetIndex(1)
     local bSelfMsg = self.MsgWrap.MsgType == ChatCommon.MsgType.Self

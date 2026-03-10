@@ -15,6 +15,10 @@ function M:ShowCursor_Press()
     return
   end
   GameInputSubsystem:HandleShowCursorPressOrRelease(true)
+  local BattlePage = UIManager(self):GetUIObj("AutoChessBattlePage")
+  if BattlePage then
+    BattlePage:SetUserFocus(self.PlayerController)
+  end
 end
 
 function M:ShowCursor_Release()

@@ -161,6 +161,7 @@ end
 
 function M:Destruct()
   M.Super.Destruct(self)
+  self:RecoverActorColor()
   self.ActorController:StopSkinWeaponVFX()
 end
 
@@ -274,10 +275,12 @@ function M:OnImportBtnClicked()
         UIManager(self):ShowUITip(UIConst.Tip_CommonToast, TargetToastText)
         return
       end
-      if dyePlanInfo.SkinId ~= self.SkinId then
+      if dyePlanInfo.SkinId ~= self.SkinId or dyePlanInfo.SkinType == "Char" and self.SkinType ~= CommonConst.DataType.Skin or dyePlanInfo.SkinType == "Hair" and self.SkinType ~= CommonConst.DataType.Hair then
         local TargetName
         if dyePlanInfo.SkinType == "Char" then
           TargetName = DataMgr.Skin[dyePlanInfo.SkinId].SkinName
+        elseif dyePlanInfo.SkinType == "Hair" then
+          TargetName = DataMgr.Hair[dyePlanInfo.SkinId].Name
         else
           TargetName = DataMgr.WeaponSkin[dyePlanInfo.SkinId] and DataMgr.WeaponSkin[dyePlanInfo.SkinId].Name or DataMgr.Weapon[dyePlanInfo.SkinId].WeaponName
         end
@@ -992,8 +995,9 @@ function M:CreateNormalDefaultColor()
   self.DefaultFresnel = {}
   if self.Type == CommonConst.ArmoryType.Char then
     if self.SkinType == CommonConst.DataType.Hair then
+      local MeshName = self.ArmoryPlayer.CharacterFashion:GetCurrentHairMeshName()
       self.DefaultColors = {
-        self:GetHairDefaultColorsFromDataTable(self.ArmoryPlayer)
+        self:GetHairDefaultColorsFromDataTable(MeshName)
       }
       return
     end
@@ -1237,6 +1241,9 @@ function M:OnNormalDyeTabInit(TabContent)
       GetReplyOnBack = self.OnResourceGetReply
     }
     self.Tab_Dye:Init(self.TabConfig)
+  end
+  if self.SkinType == CommonConst.DataType.Hair then
+    self.Tab_Dye:SetResourceBarVisibility(UIConst.VisibilityOp.Collapsed)
   end
   self.EMList_Normal:RegenerateAllEntries()
 end

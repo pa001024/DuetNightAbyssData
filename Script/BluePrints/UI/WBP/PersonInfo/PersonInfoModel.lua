@@ -556,7 +556,9 @@ function M:ChangeToCharBattleDumpInfo(CharInfos)
     local AppearanceSuit = {
       Colors = CharInfo.Appearance.SkinColors[CharInfo.Appearance.CurrentPlanIndex],
       SkinId = CharInfo.Appearance.SkinId,
-      AccessorySuit = CharInfo.Appearance.Accessory
+      AccessorySuit = CharInfo.Appearance.Accessory,
+      HairId = CharInfo.Appearance.HairId,
+      HairColors = CharInfo.Appearance.HairColors
     }
     local SkillInfos = {}
     for _, Skill in ipairs(CharInfo.Skills) do

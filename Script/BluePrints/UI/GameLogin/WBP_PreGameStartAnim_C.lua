@@ -15,12 +15,15 @@ function WBP_PreGameStartAnim_C:Construct()
       self:PlayAnimAndClose()
     end
   else
+    local bShouldClose = true
     if HeroUSDKUtils.IsEnable() and "Android" == PlatformName and not HeroUSDKSubsystem(self).bAndroidPreDownload then
       HeroUSDKSubsystem(self).OnHeroOppoResourceCopySuccess:Add(self, self.PlayAnimAndClose)
       HeroUSDKSubsystem(self).OnHeroOppoResourceCopyFail:Add(self, self.PlayAnimAndClose)
-      return
+      bShouldClose = false
     end
-    self:PlayAnimAndClose()
+    if bShouldClose then
+      self:PlayAnimAndClose()
+    end
   end
   if UE4.UUIFunctionLibrary.GetDevicePlatformName() ~= "Android" then
     HeroUSDKSubsystem():InitHeroUSDK()
@@ -77,6 +80,7 @@ function WBP_PreGameStartAnim_C:PlayAnimAndClose()
   local AnimPlayTime = self[SystemLanguage] and self[SystemLanguage]:GetEndTime() or 0.5
   self:PlayAnim(SystemLanguage, 1.0)
   self:AddTimer(AnimPlayTime + 0.2, self.CloseUI, false, 0, "CloseAndLoadCG")
+  GWorld.GameInstance:LoadGMHyperLink()
 end
 
 function WBP_PreGameStartAnim_C:CloseUI()

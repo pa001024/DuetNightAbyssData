@@ -65,6 +65,7 @@ function M:InitTaskData()
   self.MidTermGoalEventId = self.MidTermConst.MidTermGoalEventId.ConstantValue
   self.EventStartTime = DataMgr.EventMain[self.MidTermGoalEventId].EventStartTime
   self.EventEndTime = DataMgr.EventMain[self.MidTermGoalEventId].EventEndTime
+  self.RewardEndTime = DataMgr.EventMain[self.MidTermGoalEventId].RewardEndTime
   self.MidTermGoals = self._Avatar.MidTermGoals[self.MidTermGoalEventId] or {}
   self.MidTermAchvScores = self.MidTermGoals.AchvScores or 0
   self.MidTermTasks = self.MidTermGoals.Tasks
@@ -85,7 +86,7 @@ function M:UpdateEventDay()
   local calculatedEventDay = intervalDays + 1
   local hasDailyTask = false
   local enableDayEventDay = -1
-  for _, Task in pairs(self._Avatar.MidTermTasks) do
+  for _, Task in pairs(self.MidTermTasks) do
     local TaskData = DataMgr.MidTermTask[Task.UniqueID]
     if not TaskData then
       Utils.ScreenPrint("MidTermTask表中不存在UniqueID为" .. Task.UniqueID .. "的任务，请检查配置")
@@ -219,6 +220,8 @@ function M:UpdateTabNewReddot()
   local HasNewChallengeTask = false
   local HasNormalReward = false
   local HasChallengeReward = false
+  local Avatar = GWorld:GetAvatar()
+  self.MidTermGoals = Avatar.MidTermGoals[self.MidTermGoalEventId] or {}
   local MidTermTasks = self.MidTermGoals.Tasks or {}
   for TaskId, Task in pairs(MidTermTasks) do
     local TaskData = DataMgr.MidTermTask[Task.UniqueID]
@@ -271,18 +274,22 @@ function M:UpdateTabNewReddot()
   if HasNormalReward then
     self.Com_Tab:ShowTabRedDot(1, false, true)
   elseif HasNewNormalTask then
-    self.Com_Tab:ShowTabRedDot(1, true, false)
+    if TimeUtils.NowTime() < self.EventEndTime then
+      self.Com_Tab:ShowTabRedDot(1, true, false)
+    end
   else
     self.Com_Tab:ShowTabRedDot(1, false)
   end
   if HasChallengeReward then
     self.Com_Tab:ShowTabRedDot(2, false, true)
   elseif HasNewChallengeTask then
-    self.Com_Tab:ShowTabRedDot(2, true, false)
+    if TimeUtils.NowTime() < self.EventEndTime then
+      self.Com_Tab:ShowTabRedDot(2, true, false)
+    end
   else
     self.Com_Tab:ShowTabRedDot(2, false)
   end
-  if TimeUtils.NowTime() > self.EventEndTime then
+  if TimeUtils.NowTime() > self.RewardEndTime then
     self.Com_Tab:ShowTabRedDot(1, false)
     self.Com_Tab:ShowTabRedDot(2, false)
     return
@@ -400,9 +407,10 @@ function M:OnMidTermTaskProgressChange(TaskId, Progress)
 end
 
 function M:GetTaskReward(Item, TaskWidget, TaskId)
+  local Avatar = GWorld:GetAvatar()
+  
   local function Callback(ErrCode)
     print("MidTermGetTaskReward", ErrorCode:Name(ErrCode))
-    
     if ErrCode == ErrorCode.RET_SUCCESS then
       TaskWidget:OnTaskGet(Item)
     else
@@ -413,7 +421,7 @@ function M:GetTaskReward(Item, TaskWidget, TaskId)
   end
   
   self:BlockAllUIInput(true)
-  self._Avatar:MidTermGetTaskReward(TaskId, Callback)
+  Avatar:MidTermGetTaskReward(TaskId, Callback)
 end
 
 function M:OnTabChanged(TabWidget)
@@ -515,10 +523,20 @@ function M:ReceiveEnterState(StackAction)
   self.Super.ReceiveEnterState(self, StackAction)
   if 0 == self.CurrentTabIndex then
     if IsValid(self.TaskWidget.NormalItem) then
-      self.TaskWidget.NormalItem:SetFocus()
+      local FirstItem = self.TaskWidget.NormalItem.List_Task:GetItemAt(0)
+      if FirstItem and FirstItem.SelfWidget then
+        FirstItem.SelfWidget:SetFocus()
+      else
+        self.TaskWidget.NormalItem:SetFocus()
+      end
     end
-  elseif 1 == self.CurrentTabIndex and IsValid(self.TaskWidget.ChallengeItem) then
-    self.TaskWidget.List_Challenge:SetFocus()
+  elseif 1 == self.CurrentTabIndex and IsValid(self.TaskWidget.List_Challenge) then
+    local FirstItem = self.TaskWidget.List_Challenge:GetItemAt(0)
+    if FirstItem and FirstItem.SelfWidget then
+      FirstItem.SelfWidget:SetFocus()
+    else
+      self.TaskWidget.List_Challenge:SetFocus()
+    end
   end
 end
 

@@ -594,6 +594,7 @@ function BP_MonsterCharacter_C:AddPhantomBattleAchieve(Source)
 end
 
 function BP_MonsterCharacter_C:PhysStateErrorReset_Lua()
+  Battle(self):ShowError_Monster_Inner_Lua("PhysStateErrorReset_Lua" .. self:GetName())
   self.Mesh:TermBodiesBelow("Root")
 end
 

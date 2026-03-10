@@ -270,7 +270,11 @@ function WBP_SquadListItem_C:OnMouseMove(MyGeometry, MouseEvent)
   if self.Owner.IsDraging then
   end
   if self.Owner.CurInputDeviceType == ECommonInputType.Touch then
-    return Handled
+    if CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" then
+      return Handled
+    else
+      return UnHandled
+    end
   end
   local Reply = UE4.UWidgetBlueprintLibrary.DetectDragIfPressed(MouseEvent, self, EKeys.LeftMouseButton)
   return UE4.UWidgetBlueprintLibrary.ReleaseMouseCapture(Reply)
@@ -303,6 +307,7 @@ function WBP_SquadListItem_C:OnMouseLeave(MyGeometry, InKeyEvent)
 end
 
 function WBP_SquadListItem_C:OnTouchStarted(MyGeometry, InTouchEvent)
+  DebugPrint("WBP_SquadListItem_C:OnTouchStarted")
   local LocalHandle = UE.UWidgetBlueprintLibrary.DetectDragIfPressed(InTouchEvent, self, UE.FKey("Touch"))
   self.bClickBegin = true
   if self.Owner.CurSelectSquadIndex ~= self.Index then
@@ -346,7 +351,7 @@ function WBP_SquadListItem_C:OnTouchMoved(MyGeometry, InTouchEvent)
     self.Owner.IsTouchMoving = false
   end
   self.Owner.PreMousPos = MousePos
-  return Handled
+  return UnHandled
 end
 
 function WBP_SquadListItem_C:OnTouchEnded(MyGeometry, InTouchEvent)

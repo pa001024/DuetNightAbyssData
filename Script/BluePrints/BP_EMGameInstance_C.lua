@@ -77,6 +77,7 @@ function BP_EMGameInstance_C:_FontOptimizeSetting()
 end
 
 function BP_EMGameInstance_C:InitReady()
+  GWorld.IsDev = self:GetIsDev()
   if IsDedicatedServer(self) then
     GWorld.bDebugServer = self.bDebugServer
     print(_G.LogTag, "DebugServer", GWorld.bDebugServer)
@@ -121,6 +122,7 @@ function BP_EMGameInstance_C:SetWorldStandardTime_Lua()
 end
 
 function BP_EMGameInstance_C:OnStart_Lua(GroupId)
+  GWorld.IsDev = self:GetIsDev()
   if IsDedicatedServer(self) and not GWorld.bDebugServer then
     self:HandleDSConnect(GroupId)
   end
@@ -598,7 +600,7 @@ function BP_EMGameInstance_C:CalculateMVP()
     if self.MVPInfo.MVPScore == nil or CurScore > self.MVPInfo.MVPScore then
       IsCurrentMVP = true
     elseif CurScore == self.MVPInfo.MVPScore then
-      if Player.IsPhantom == self.MVPInfo.IsPhantom then
+      if Player.IsPhantom and self.MVPInfo.IsPhantom or not Player.IsPhantom and not self.MVPInfo.IsPhantom then
         if PlayerRoleId < self.MVPInfo.RoleId then
           IsCurrentMVP = true
         end
@@ -677,13 +679,6 @@ function BP_EMGameInstance_C:OnSettlementPlayerCharacterBeginPlay()
   DebugPrint("DungeonSettlement: OnSettlementPlayerCharacterBeginPlay")
   local BlackUI = self:CreateDungeonBlackScreen(false)
   self.GameEndInfo = nil
-  self.SettlemetnLevelLoader = self:GetSceneManager():GetLevelLoader()
-  if not self.SettlemetnLevelLoader then
-    local EMLevelLoaderClass = LoadClass("/Game/BluePrints/Common/Level/BP_SettlementLevelLoader.BP_SettlementLevelLoader")
-    if EMLevelLoaderClass then
-      self.SettlemetnLevelLoader = self:GetWorld():SpawnActor(EMLevelLoaderClass, FTransform())
-    end
-  end
 end
 
 function BP_EMGameInstance_C:OnSettlementPhantomInitReady()
@@ -727,6 +722,13 @@ end
 function BP_EMGameInstance_C:TryDungeonSettlement()
   DebugPrint("DungeonSettlement: TryDungeonSettlement", self.bPlayerCharacterInitReady, self.LogicServerCallbackInfo)
   if self.bPlayerCharacterInitReady and self.LogicServerCallbackInfo then
+    self.SettlemetnLevelLoader = self:GetSceneManager():GetLevelLoader()
+    if not self.SettlemetnLevelLoader then
+      local EMLevelLoaderClass = LoadClass("/Game/BluePrints/Common/Level/BP_SettlementLevelLoader.BP_SettlementLevelLoader")
+      if EMLevelLoaderClass then
+        self.SettlemetnLevelLoader = self:GetWorld():SpawnActor(EMLevelLoaderClass, FTransform())
+      end
+    end
     if CommonUtils.GetRuntimePlatform(self) ~= "Mobile" then
       local PostProcessVolumeActor = UGameplayStatics.GetActorOfClass(self, APostProcessVolume:StaticClass())
       local RVTVolumeActor = UGameplayStatics.GetActorOfClass(self, ARuntimeVirtualTextureVolume:StaticClass())
@@ -1356,7 +1358,15 @@ function BP_EMGameInstance_C:LoadGameEventSettlementUI(CurrentDungeonId, CurDung
       Text_GetReward = "UI_AutoChess_WinReward",
       DungeonType = "AutoChess",
       ContinueCallback = function()
-        Avatar:EnterEventDungeon(nil, CurrentDungeonId, nil, Avatar.AutoChess.EventId, {MissionId = MissionId})
+        Avatar:EnterDungeonAgain(function(Ret)
+          if Ret and Ret == ErrorCode.RET_SUCCESS then
+            DebugPrint("AutoChessContinueSuccess RetCode:", Ret)
+          else
+            DebugPrint("AutoChessContinueFail RetCode:", Ret)
+            self.AutoChessMissionId = nil
+            Avatar:ExitDungeonSettlement()
+          end
+        end, nil, {MissionId = MissionId})
       end,
       BattleInfo = self.CombatData.AutoChessBattleInfo,
       RewardsInfo = DungeonRewards,
@@ -1790,7 +1800,6 @@ function BP_EMGameInstance_C:ReceiveInit()
   self.CacheShowRewardUIParams = {}
   EventManager:AddEvent(EventID.TalkHiddenGameUI, self, self.OnTalkHiddenGameUIChange)
   EventManager:AddEvent(EventID.ConditionComplete, self, self.OnConditionComplete)
-  self:LoadGMHyperLink()
 end
 
 function BP_EMGameInstance_C:OnApplicationWillTerminate()

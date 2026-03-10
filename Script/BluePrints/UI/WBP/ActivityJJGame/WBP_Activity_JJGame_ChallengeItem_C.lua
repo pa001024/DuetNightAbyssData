@@ -33,6 +33,7 @@ function M:OnListItemObjectSet(Content)
   self.TaskId = Content.TaskId
   self.TaskProp = Content.TaskProp
   self.TaskConfig = Content.TaskConfig
+  self.MidTermConst = DataMgr.MidTermGoalConstant
   Content.SelfWidget = self
   self.Text_RewardNum:SetText(Content.Point)
   self.Text_Desc:SetText(GText(Content.Desc))
@@ -100,15 +101,8 @@ function M:OnJumpClicked()
 end
 
 function M:TryIncreaceChallengeRewardReddot(Key)
-  local allRewardsClaimed = true
-  local MidTermAchvProgressRewarded = self.MidTermGoals.AchvProgressRewarded or {}
-  for _, v in pairs(MidTermAchvProgressRewarded) do
-    if 0 == v then
-      allRewardsClaimed = false
-      break
-    end
-  end
-  if allRewardsClaimed then
+  local Avatar = GWorld:GetAvatar()
+  if Avatar:CheckIsChallengeRewardAllClaimed() then
     return
   end
   local CacheKey = ChallengeRewardReddotName .. Key

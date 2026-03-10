@@ -501,6 +501,17 @@ function M:Close()
   M.Super.Close(self)
 end
 
+function M:ReceiveEnterState(StackAction)
+  if 1 == StackAction then
+    self:RefreshImpressionList()
+  end
+  M.Super.ReceiveEnterState(self, StackAction)
+end
+
+function M:RefreshImpressionList()
+  self.List_Item:RegenerateAllEntries()
+end
+
 function M:ReceiveExitState(StackAction)
   self:CloseItemDetail()
   M.Super.ReceiveExitState(self, StackAction)

@@ -190,7 +190,7 @@
     "rarity": 4,
     "cost": 12,
     "buffId": 4020508,
-    "extraBuffDesc": "Effet du trait : Lorsque vous subissez des dégâts, augmente votre ATQ de 20.0% et votre DÉF de 0.2, cumulable jusqu’à 3.0% fois, pendant 10 s.",
+    "extraBuffDesc": "Effet du trait : Lorsque vous subissez des dégâts, augmente votre ATQ de 20.0% et votre DÉF de 20.0%, cumulable jusqu’à 3.0 fois, pendant 10 s.",
     "extraBuffId": 4020208,
     "unlockQuestId": 10300119,
     "def": 0.3
@@ -202,7 +202,7 @@
     "rarity": 4,
     "cost": 12,
     "buffId": 4020509,
-    "extraBuffDesc": "Effet du trait : Lorsque vous infligez des dégâts, augmente votre ATQ de 20.0% et votre DÉF de 0.2, cumulable jusqu’à 3.0% fois, pendant 10 s.",
+    "extraBuffDesc": "Effet du trait : Lorsque vous infligez des dégâts, augmente votre ATQ de 20.0% et votre DÉF de 20.0%, cumulable jusqu’à 3.0 fois, pendant 10 s.",
     "extraBuffId": 4020209,
     "unlockQuestId": 10300119,
     "atk": 0.2

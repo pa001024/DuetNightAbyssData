@@ -193,8 +193,8 @@ function M:OpenDetail(TypeId, Index)
     local locked2 = avatar.Achvs:IsAchvLocked(y)
     local finshNoRec1 = achv1:IsFinished() and achv1:CanRecvReward() and not locked1
     local finshNoRec2 = achv2:IsFinished() and achv2:CanRecvReward() and not locked2
-    local finished1 = (achv1:IsFinished() or not achv1:CanRecvReward()) and not locked1
-    local finished2 = (achv2:IsFinished() or not achv2:CanRecvReward()) and not locked2
+    local finished1 = achv1:IsFinished() and not locked1
+    local finished2 = achv2:IsFinished() and not locked2
     if finshNoRec1 == finshNoRec2 and finshNoRec1 then
       return x < y
     elseif finshNoRec1 ~= finshNoRec2 then

@@ -16,7 +16,7 @@ return ReadOnly("LimitedTimeResource", {
       TransType = "Ordinary"
     },
     [2] = {
-      EndTime = LocalTimeProxy(1775163600),
+      EndTime = LocalTimeProxy(1775768400),
       LimitedTimeId = 2,
       MailRemindId = 10061,
       ResourceId = 217,

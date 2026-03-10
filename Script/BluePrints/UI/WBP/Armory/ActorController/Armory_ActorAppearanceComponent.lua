@@ -50,7 +50,7 @@ function M:ChangeCharSkin(SkinId)
     return
   end
   self.CurrentAppearanceInfo.SkinId = SkinId
-  self.ArmoryPlayer:ChangeSkinModel(SkinId)
+  self.ArmoryPlayer.CharacterFashion:ChangeCharSkin(SkinId)
   if self.ArmoryPlayer.PlayerAnimInstance then
     self.ArmoryPlayer.PlayerAnimInstance:SetKawiiLayerState(EKawaiiLayerState.EKLS_Armory)
   end
@@ -69,6 +69,7 @@ function M:ChangeCharHairColor(Colors)
   if not CharacterFashion then
     return
   end
+  self.CurrentAppearanceInfo.HairColors = Colors
   CharacterFashion:InitHairColors(Colors)
 end
 
@@ -103,6 +104,7 @@ function M:ChangeCharAccessory(AccessoryId, AccessoryType, CustomParams)
   end
   self.CurrentAppearanceInfo.AccessorySuit[CommonConst.NewCharAccessoryTypes[AccessoryType]] = AccessoryId
   self.ArmoryPlayer.CharacterFashion:ChangeAccessory(AccessoryId, AccessoryType, CustomParams)
+  self.ArmoryPlayer.CharacterFashion:RefreshUncoloredSkinColors(nil, self.CurrentAppearanceInfo.Colors)
 end
 
 local ShowFXAccessoryPrefix = "ShowFXAccessory_"
@@ -179,26 +181,51 @@ M[ShowFXAccessoryPrefix .. CommonConst.CharAccessoryTypes.FX_HelixLeap] = functi
   self:ChangeCharAccessory(AccessoryId, AccessoryType)
   Player:SetArmoryTag(Const.ArmoryIdleTags.Armory_BullutJump)
 end
+local MVPLocation = FVector(200000, 200000, 200000)
 
 local function PlayMVPSequenceInternal(self, Player, AccessoryId)
+  UIManager(self.ViewUI):ShowCommonBlackScreen({OutAnimationPlayTime = 1, IsPlayOutWhenLoaded = true})
+  local Data = DataMgr.CharAccessory[AccessoryId]
+  if not Data then
+    return
+  end
   self.PlayMVPInfo = {
     self,
     Player,
     AccessoryId
   }
-  local Data = DataMgr.CharAccessory[AccessoryId]
-  if not Data then
-    return
-  end
   local MVPPath = Data.MVPKey
   local MontagePath = Data.Montage
-  self.ViewUI:UISetGamePaused(self.ViewUI.WidgetName or self.ViewUI.ConfigName, false)
+  self.BeforeMVPLocation = Player:K2_GetActorLocation()
+  Player:K2_SetActorLocation(MVPLocation, false, nil, false)
   Player:PlayDungeonSettlementMVPMontage(MontagePath)
+  if Player.MVPSequenceActor then
+    local SequencePlayer = Player.MVPSequenceActor:GetSequencePlayer()
+    if SequencePlayer then
+      SequencePlayer:Stop()
+    end
+  end
   Player:PlayDungeonSettlementMVPSequence(MVPPath)
+  if Player.MVPSequenceActor then
+    local SequencePlayer = Player.MVPSequenceActor:GetSequencePlayer()
+    if SequencePlayer then
+      SequencePlayer:PlayLooping()
+    end
+  end
   self:HidePlayerActor("ActorController_ChangeViewTarget", false)
   self.IsPlayingSequence = true
-  if Player.MVPSequenceActor then
-    CommonUtils:SetActorTickableWhenPaused(Player.MVPSequenceActor, true)
+  self.ViewUI:AddTimer(0.03, function()
+    self:SetGamePauseIfNeed(false)
+    self:RefreshEnvironment()
+  end, false, 0, "DelayUnpauseGame")
+end
+
+function M:SetGamePauseIfNeed(bPause)
+  if self.MVPActorController or self.PlayMVPInfo then
+    local Avatar = GWorld:GetAvatar()
+    if not (Avatar and Avatar.CurrentOnlineType) or -1 == Avatar.CurrentOnlineType then
+      self.ViewUI:UISetGamePaused(self.ViewUI.WidgetName or self.ViewUI.ConfigName, bPause)
+    end
   end
 end
 
@@ -219,28 +246,71 @@ end
 function M:ReplayMVPSequence()
   if self.MVPActorController and self.MVPActorController.PlayMVPInfo then
     local MVPActorController, Player, AccessoryId = table.unpack(self.MVPActorController.PlayMVPInfo)
+    self:StopMVPSequence()
     PlayMVPSequenceInternal(MVPActorController, Player, AccessoryId)
   elseif self.PlayMVPInfo then
     local MVPActorController, Player, AccessoryId = table.unpack(self.PlayMVPInfo)
+    self:StopMVPSequence()
     PlayMVPSequenceInternal(MVPActorController, Player, AccessoryId)
   end
 end
 
+local function StopMVPSequenceInternal(self)
+  self.ViewUI:RemoveTimer("DelayUnpauseGame")
+  local _self, Player, AccessoryId = table.unpack(self.PlayMVPInfo)
+  self.PlayMVPInfo = nil
+  self.IsPlayingSequence = false
+  Player:StopMontage()
+  Player:StopMVPSequence()
+  if self.BeforeMVPLocation then
+    Player:K2_SetActorLocation(self.BeforeMVPLocation, false, nil, false)
+  end
+  self:RefreshEnvironment()
+end
+
 function M:StopMVPSequence()
   if self.MVPActorController and self.MVPActorController.PlayMVPInfo then
-    local _self, Player, AccessoryId = table.unpack(self.MVPActorController.PlayMVPInfo)
-    self.MVPActorController.PlayMVPInfo = nil
-    self.MVPActorController.IsPlayingSequence = false
-    Player:StopMontage()
-    Player:StopMVPSequence()
-    self.ViewUI:UISetGamePaused(self.ViewUI.WidgetName or self.ViewUI.ConfigName, true)
+    StopMVPSequenceInternal(self.MVPActorController)
   elseif self.PlayMVPInfo then
-    local _self, Player, AccessoryId = table.unpack(self.PlayMVPInfo)
-    self.PlayMVPInfo = nil
-    self.IsPlayingSequence = false
-    Player:StopMontage()
-    Player:StopMVPSequence()
-    self.ViewUI:UISetGamePaused(self.ViewUI.WidgetName or self.ViewUI.ConfigName, true)
+    StopMVPSequenceInternal(self)
+  end
+end
+
+local function PauseMVPSequenceInternal(self)
+  self.bMVPSequencePaused = true
+  self.ViewUI:RemoveTimer("DelayUnpauseGame")
+  local _self, Player, AccessoryId = table.unpack(self.PlayMVPInfo)
+  if Player and Player.MVPSequenceActor then
+    local SequencePlayer = Player.MVPSequenceActor:GetSequencePlayer()
+    if SequencePlayer then
+      SequencePlayer:Pause()
+    end
+  end
+end
+
+function M:PauseMVPSequence()
+  if self.MVPActorController and self.MVPActorController.PlayMVPInfo then
+    PauseMVPSequenceInternal(self.MVPActorController)
+  elseif self.PlayMVPInfo then
+    PauseMVPSequenceInternal(self)
+  end
+end
+
+local function IsMVPSequencePausedInternal(self)
+  local _self, Player, AccessoryId = table.unpack(self.PlayMVPInfo)
+  if Player and Player.MVPSequenceActor then
+    local SequencePlayer = Player.MVPSequenceActor:GetSequencePlayer()
+    if SequencePlayer then
+      return SequencePlayer:IsPaused()
+    end
+  end
+end
+
+function M:IsMVPSequencePaused()
+  if self.MVPActorController and self.MVPActorController.PlayMVPInfo then
+    return IsMVPSequencePausedInternal(self.MVPActorController)
+  elseif self.PlayMVPInfo then
+    return IsMVPSequencePausedInternal(self)
   end
 end
 
@@ -249,13 +319,6 @@ function M:ShouldPlayMVPSequence()
 end
 
 function M:OnMVPSequenceFinish()
-  if not self.IsControled then
-    return
-  end
-  if self.PlayMVPInfo then
-    local MVPActorController, Player, AccessoryId = table.unpack(self.PlayMVPInfo)
-    PlayMVPSequenceInternal(MVPActorController, Player, AccessoryId)
-  end
 end
 
 function M:TryCreateMVPActorController()
@@ -278,11 +341,8 @@ end
 
 function M:AfterMVPActorControllerEndViewTarget()
   local TopStackUI = UIManager(self.ViewUI):GetWidgetObjInTopStack()
-  if TopStackUI ~= self.ViewUI and self.MVPActorController and self.MVPActorController.PlayMVPInfo then
-    local _self, Player, AccessoryId = table.unpack(self.MVPActorController.PlayMVPInfo)
-    self.MVPActorController.IsPlayingSequence = false
-    Player:StopMontage()
-    Player:StopMVPSequence()
+  if TopStackUI ~= self.ViewUI and not self:IsMVPSequencePaused() then
+    self:StopMVPSequence()
   end
 end
 

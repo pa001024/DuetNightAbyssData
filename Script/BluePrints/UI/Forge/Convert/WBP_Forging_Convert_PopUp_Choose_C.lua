@@ -546,6 +546,7 @@ function WBP_Forging_Convert_PopUp_Choose_C:ShowChooseUI(bIsShow)
       self:SetDefaultMaterialFocus()
     end
   else
+    self.Parent:SetFocus()
     self:PlayAnimation(self.Out)
     AudioManager(self):SetEventSoundParam(self, "ForgeConvertChooseUIShow", {ToEnd = 1})
   end

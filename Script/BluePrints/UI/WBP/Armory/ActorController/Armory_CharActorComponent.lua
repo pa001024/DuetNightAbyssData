@@ -181,6 +181,8 @@ function M:ChangeCharModel(Info, bIfNoDelay, bNoCharVoice, bForceChange, IsProta
   self.CurrentCharFromAvatar = Avatar
   if self.CurrentCharInfo.DumpAppearanceSuit then
     self.CurrentAppearanceInfo = self.CurrentCharInfo:DumpAppearanceSuit(Avatar)
+  else
+    self.CurrentAppearanceInfo = {}
   end
   local CharId
   local AvatarBattleInfo = {}
@@ -256,12 +258,9 @@ function M:ChangeToProtagonist(bIfNoDelay, bNoCharVoice, bForceChange)
   IsRoleChanged = self:ChangeCharModel(self.ProtagonistCharInfo, bIfNoDelay, bNoCharVoice, bForceChange, true)
   local PlayCharacter = self:GetPlayerActor(true)
   if PlayCharacter.CharacterFashion then
-    for key, value in pairs(CommonConst.CharAccessoryTypes) do
-      PlayCharacter.CharacterFashion:ChangeAccessory(nil, value)
-    end
-    if PlayCharacter.PartsMesh then
-      PlayCharacter.PartsMesh:SetVisibility(true, false)
-    end
+    PlayCharacter.CharacterFashion:InitAppearanceSuit({
+      SkinId = self.ProtagonistCharInfo.CharId
+    })
   end
   return IsRoleChanged
 end
@@ -380,14 +379,17 @@ function M:CharLvUpOrBreakUp()
   ArmoryPlayer.FXComponent:PlayEffectByIDParams(303, {bTickEvenWhenPaused = true, NotAttached = true})
 end
 
-function M:StopPlayerMontage()
+function M:StopPlayerMontage(Params)
+  Params = Params or {}
   for key, value in pairs(self.PlayerMontageTimerKeys) do
     self.ViewUI:RemoveTimer(key)
   end
   self.PlayerMontageTimerKeys = {}
   local Player = self:GetPlayerActor()
   Player:StopMontage()
-  self:StopMVPSequence()
+  if not Params.DontStopSequance then
+    self:StopMVPSequence()
+  end
   self.CurMontageTag = "None"
 end
 

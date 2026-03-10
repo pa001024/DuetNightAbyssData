@@ -161,10 +161,14 @@ end
 
 function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
   local IsUseKeyAndMouse = CurInputDevice == ECommonInputType.MouseAndKeyboard
+  local IsUseGamepad = CurInputDevice == ECommonInputType.Gamepad
   local ActiveWidgetIndex = IsUseKeyAndMouse and 0 or 1
-  if IsUseKeyAndMouse then
-    self.Key_Controller:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  if IsUseGamepad then
+    if self:HasAnyUserFocus() or self:HasFocusedDescendants() then
+      self.Key_Controller:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    end
   else
+    self.Key_Controller:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
   self.CurInputDevice = CurInputDevice
 end

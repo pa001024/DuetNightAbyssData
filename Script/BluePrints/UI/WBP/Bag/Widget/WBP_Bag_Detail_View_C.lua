@@ -146,7 +146,7 @@ function WBP_Bag_Detail_View_C:RefreshDetailInfo(StuffServerData, StuffConfigDat
     Icon = self.OwnerContent.Icon
   }
   self.Item:Init(ItemObject)
-  self.Item:HideOrShowTimeLimitWidget(true)
+  self.Item:HideNotNeccessaryWidget(true)
   self.Item:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
   if self.StuffType == BagCommon.StuffType.Mod and nil ~= self.OwnerContent then
     self:UpdateStarStyle(self.OwnerContent.Level)
@@ -246,7 +246,7 @@ function WBP_Bag_Detail_View_C:RefreshInfoWithWeapon(PlayerAvatar, StuffServerDa
 end
 
 function WBP_Bag_Detail_View_C:RefreshInfoWithMod(PlayerAvatar, StuffServerData, StuffConfigData)
-  self.Text_ItemName:SetText(GText(StuffConfigData.TypeName) .. GText(StuffConfigData.Name))
+  self.Text_ItemName:SetText(StuffServerData:GetName(ModInfo))
   local StuffLevel = StuffServerData.Level or 1
   self.Text_Polarity01:SetText(GText(StuffConfigData.FunctionDes))
   self.Text_Polarity02:SetText(tostring(StuffServerData.Cost))
@@ -602,12 +602,16 @@ function WBP_Bag_Detail_View_C:UpdateBottomSingleBtnInfo(FromStr, Callback, Pare
     self.Btn01:SetText(GText("UI_BAG_Gotoarmory"))
     self.Btn01:SetReddot(false)
     self.Btn01:BindEventOnClicked(ParentWidget, Callback)
+    self.Img_Yes:SetBrushResourceObject(LoadObject("/Game/UI/Texture/Static/Atlas/Common/T_Com_IconYes.T_Com_IconYes"))
+    self.Img_Yes:SetBrushTintColor(UE4.UUIFunctionLibrary.StringToSlateColor("E1B453FF"))
     self.Panel_Button:SetVisibility(UE4.ESlateVisibility.Collapsed)
   elseif "Mount" == FromStr then
     self.Btn01:UnBindEventOnClickedByObj(ParentWidget)
     self.Btn01:SetText(GText("UI_JumpMount"))
     self.Btn01:SetReddot(false)
     self.Btn01:BindEventOnClicked(ParentWidget, Callback)
+    self.Img_Yes:SetBrushResourceObject(LoadObject("/Game/UI/Texture/Static/Atlas/Common/T_Com_IconYes.T_Com_IconYes"))
+    self.Img_Yes:SetBrushTintColor(UE4.UUIFunctionLibrary.StringToSlateColor("E1B453FF"))
     self.Panel_Button:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   elseif "Read" == FromStr then
     self.Btn01:UnBindEventOnClickedByObj(ParentWidget)
@@ -633,6 +637,8 @@ function WBP_Bag_Detail_View_C:UpdateBottomSingleBtnInfo(FromStr, Callback, Pare
     self.Btn01:SetReddot(false)
     self.Btn01.AudioEventPath = "event:/ui/common/click_btn_confirm"
     self.Btn01:BindEventOnClicked(ParentWidget, Callback)
+    self.Img_Yes:SetBrushResourceObject(LoadObject("/Game/UI/Texture/Static/Atlas/Common/T_Com_IconYes.T_Com_IconYes"))
+    self.Img_Yes:SetBrushTintColor(UE4.UUIFunctionLibrary.StringToSlateColor("E1B453FF"))
     self.Panel_Button:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   else
     self.Panel_Button:SetVisibility(UE4.ESlateVisibility.Collapsed)
@@ -814,6 +820,7 @@ function WBP_Bag_Detail_View_C:OnViewStuffAccessKey()
   end
   if TargetNavigateWidget then
     TargetNavigateWidget:SetFocus()
+    self.EMScrollBox_Detail:ScrollWidgetIntoView(TargetNavigateWidget)
   end
 end
 

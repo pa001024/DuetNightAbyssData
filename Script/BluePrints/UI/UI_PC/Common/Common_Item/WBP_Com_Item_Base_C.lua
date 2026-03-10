@@ -53,7 +53,7 @@ function M:InitData(Content)
   self.IsShowDetails = Content.IsShowDetails
   self.MenuPlacement = Content.MenuPlacement
   self.UIName = Content.UIName
-  self.bShowAccess = Content.bShowAccess
+  self.bNotShowAccess = Content.bNotShowAccess
   self.bCustomStype = Content.bCustomStype
   self.ItemDetailsButton01EventInfo = Content.ItemDetailsButton01EventInfo
   self.ItemDetailsButton02EventInfo = Content.ItemDetailsButton02EventInfo
@@ -554,7 +554,7 @@ function M:OpenItemMenu()
     Uuid = self.Uuid,
     MenuPlacement = self.MenuPlacement,
     UIName = self.UIName,
-    bShowAccess = self.bShowAccess,
+    bNotShowAccess = self.bNotShowAccess,
     bCustomStype = self.bCustomStype,
     KeyDownEvent = self.ItemDetailKeyDownEvent,
     HandleKeyDown = self.ItemDetailHandleKeyDown,
@@ -824,13 +824,14 @@ end
 
 function M:SetShadow(bShadow)
   self:AsyncLoadWidgetCommon(nil, "SetShadowTask", function(CoroutineObj)
+    if self.WidgetMap[self.ShadowWidget] then
+      self:RemoveWidgetFromNode(self.ShadowWidget, true)
+    end
     if bShadow then
       if not self.WidgetMap[self.ShadowWidget] then
         self.ShadowWidget = self:CreateWidgetAsync("ComItemShadow", CoroutineObj)
       end
       self:AddWidgetToNode(self.ShadowWidget)
-    elseif self.WidgetMap[self.ShadowWidget] then
-      self:RemoveWidgetFromNode(self.ShadowWidget)
     end
   end)
 end

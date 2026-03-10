@@ -443,6 +443,9 @@ function M:OnBtnPreviewClick()
   local PreviewType = BannerData.PreviewType
   local PreviewIdList = BannerData.PreviewId
   if ("Char" == PreviewType or "Weapon" == PreviewType) and PreviewIdList then
+    if self.Parent and self.Parent.ActorController then
+      self.Parent.ActorController:HidePlayerActor("ActorController_HidePlayerBeforeMount", false)
+    end
     local Params = {}
     Params.IsPreviewMode = true
     if self.BannerData.PreviewType == "Char" then
@@ -452,11 +455,12 @@ function M:OnBtnPreviewClick()
     end
     Params.EPreviewSceneType = CommonConst.EPreviewSceneType.PreviewCommon
     Params.bNoEndCamera = true
-    self.Parent.ActorController:HidePlayerActor("ActorController_HidePlayerBeforeMount", false)
     UIManager(self):LoadUINew("ArmoryDetail", Params)
     self.Parent.Shop_RecommendBanner:StopBannerTimer()
   elseif PreviewIdList and UIUtils.CanOpenSkinPreview(PreviewType, PreviewIdList[1]) then
-    self.Parent.ActorController:HidePlayerActor("ActorController_HidePlayerBeforeMount", false)
+    if self.Parent and self.Parent.ActorController then
+      self.Parent.ActorController:HidePlayerActor("ActorController_HidePlayerBeforeMount", false)
+    end
     UIManager(self):LoadUINew("SkinPreview", {
       ItemType = PreviewType,
       SkinList = PreviewIdList,
@@ -465,7 +469,9 @@ function M:OnBtnPreviewClick()
     self.Parent.Shop_RecommendBanner:StopBannerTimer()
     return
   elseif "SkinSeries" == PreviewType then
-    self.Parent.ActorController:HidePlayerActor("ActorController_HidePlayerBeforeMount", false)
+    if self.Parent and self.Parent.ActorController then
+      self.Parent.ActorController:HidePlayerActor("ActorController_HidePlayerBeforeMount", false)
+    end
     UIManager(self):LoadUINew("CharSkinPreview", {
       Type = "ShopRecommend",
       SkinSeriesId = BannerData.SkinSeries

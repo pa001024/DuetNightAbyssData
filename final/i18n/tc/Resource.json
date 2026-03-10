@@ -2223,25 +2223,25 @@
     "id": 30113,
     "name": "中級染劑·楓糖",
     "icon": "T_Dye_15",
-    "rarity": 5
+    "rarity": 4
   },
   {
     "id": 30114,
     "name": "中級染劑·可可",
-    "icon": "T_Dye_15",
-    "rarity": 5
+    "icon": "T_Dye_15_01",
+    "rarity": 4
   },
   {
     "id": 30115,
     "name": "中級染劑·碧波",
     "icon": "T_Dye_14",
-    "rarity": 5
+    "rarity": 4
   },
   {
     "id": 30116,
     "name": "中級染劑·蒼松",
-    "icon": "T_Dye_15",
-    "rarity": 5
+    "icon": "T_Dye_14_01",
+    "rarity": 4
   },
   {
     "id": 30117,
@@ -2252,13 +2252,13 @@
   {
     "id": 30118,
     "name": "基礎發色染劑",
-    "icon": "T_Dye_12",
+    "icon": "T_Dye_16",
     "rarity": 4
   },
   {
     "id": 30119,
     "name": "高級發色染劑",
-    "icon": "T_Dye_12",
+    "icon": "T_Dye_17",
     "rarity": 5
   },
   {

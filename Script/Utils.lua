@@ -103,9 +103,9 @@ function Utils.GLink(LinkId)
   end
   local Link
   if IsGlobalPak then
-    local SystemLanguage = EMCache:Get("SystemLanguage") or "CN"
+    local SystemLanguage = EMCache:Get("SystemLanguage") or "EN"
     if LinkInfo then
-      Link = LinkInfo["Abroad" .. SystemLanguage] or LinkInfo.ChinaCN
+      Link = LinkInfo["Abroad" .. SystemLanguage] or LinkInfo.AbroadEN or LinkInfo.ChinaCN
     end
   elseif LinkInfo then
     Link = LinkInfo.ChinaCN

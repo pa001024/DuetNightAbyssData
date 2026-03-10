@@ -803,6 +803,7 @@ function M:OnKeyDown(_, InKeyEvent)
     self.bConsumeFocused = false
     return UE4.UWidgetBlueprintLibrary.Handled()
   end
+  DebugPrint("gmy@WBP_CharSkinPreview_C M:OnKeyDown", InKeyName)
   if self.KeyDownEvents and self.KeyDownEvents[InKeyName] then
     local func = self.KeyDownEvents[InKeyName]
     if func then
@@ -967,7 +968,7 @@ function M:OnBackKeyDown()
 end
 
 function M:OnConfirmKeyDown()
-  if self.Btn_Confirm.IsEnabled ~= false then
+  if self.Btn_Confirm.IsEnabled ~= false and not self.bSelfHidden then
     self:OnConfirmClicked()
   end
 end
@@ -987,13 +988,29 @@ function M:OnHideUIKeyDown()
     if self.Image_Click and self.Image_Click.Slot then
       self.Image_Click.Slot:SetZOrder(10)
     end
-    self.GameInputModeSubsystem:SetNavigateWidgetVisibility(false)
+    self:AddDelayFrameFunc(function()
+      if UIUtils.IsGamepadInput() then
+        self.GameInputModeSubsystem:SetNavigateWidgetVisibility(false)
+        self.Switch_Type:SetVisibility(ESlateVisibility.Collapsed)
+      end
+    end, 2)
   else
     self:SetRenderOpacity(1)
     if self.Image_Click and self.Image_Click.Slot then
       self.Image_Click.Slot:SetZOrder(-1)
     end
-    self.GameInputModeSubsystem:SetNavigateWidgetVisibility(true)
+    if UIUtils.IsGamepadInput() then
+      self.GameInputModeSubsystem:SetNavigateWidgetVisibility(true)
+    end
+    self.Switch_Type:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    local CurActiveWidgetIndex = self.Switch_Type:GetActiveWidgetIndex()
+    if 0 == CurActiveWidgetIndex then
+      self.EMListView_Role:SetFocus()
+    elseif 1 == CurActiveWidgetIndex then
+      self.List_Skin:SetFocus()
+    elseif 2 == CurActiveWidgetIndex then
+      self.TileView_Pendant:SetFocus()
+    end
   end
 end
 
@@ -1412,9 +1429,6 @@ function M:OnConfirmClicked()
     self:OnConfirmClicked_Gesture()
     return
   end
-  if ConfirmId == HAS_SKIN_ALERT_POP then
-    self:PopupUIGamepadSetting()
-  end
 end
 
 function M:OnConfirmClicked_WeaponSkin()
@@ -1472,9 +1486,6 @@ function M:OnConfirmClicked_WeaponSkin()
     }
     PopupParams.ItemList = ItemList
     self.SecondConfirmPopup = UIManager(self):ShowCommonPopupUI(ConfirmId, PopupParams, self.List_Skin)
-    if ConfirmId == HAS_SKIN_ALERT_POP then
-      self:PopupUIGamepadSetting()
-    end
   end
 end
 
@@ -1534,9 +1545,6 @@ function M:OnConfirmClicked_CharSkin()
     }
     PopupParams.ItemList = ItemList
     self.SecondConfirmPopup = UIManager(self):ShowCommonPopupUI(ConfirmId, PopupParams, self.List_Skin)
-    if ConfirmId == HAS_SKIN_ALERT_POP then
-      self:PopupUIGamepadSetting()
-    end
   end
 end
 
@@ -1597,9 +1605,6 @@ function M:OnConfirmClicked_Accessory()
     }
     PopupParams.ItemList = ItemList
     self.SecondConfirmPopup = UIManager(self):ShowCommonPopupUI(ConfirmId, PopupParams, self.TileView_Pendant)
-    if ConfirmId == HAS_SKIN_ALERT_POP then
-      self:PopupUIGamepadSetting()
-    end
   end
 end
 
@@ -1666,9 +1671,6 @@ function M:OnConfirmClicked_Gesture()
     }
     PopupParams.ItemList = ItemList
     self.SecondConfirmPopup = UIManager(self):ShowCommonPopupUI(ConfirmId, PopupParams, self.TileView_Pendant)
-    if ConfirmId == HAS_SKIN_ALERT_POP then
-      self:PopupUIGamepadSetting()
-    end
   end
 end
 
@@ -2158,43 +2160,6 @@ function M:IsGamepadInput()
 end
 
 function M:PopupUIGamepadSetting()
-  self.SecondConfirmPopup.OpenTipsButtonIndex = self.SecondConfirmPopup:InitGamepadShortcut({
-    KeyInfoList = {
-      {
-        Type = "Img",
-        ImgShortPath = UIConst.GamePadImgKey.LeftThumb
-      }
-    },
-    Desc = GText("UI_Controller_CheckDetails")
-  })
-  self.SecondConfirmPopup.ConfirmButtonIndex = self.SecondConfirmPopup:InitGamepadShortcut({
-    KeyInfoList = {
-      {
-        Type = "Img",
-        ImgShortPath = UIConst.GamePadImgKey.FaceButtonBottom
-      }
-    },
-    Desc = GText("UI_Tips_Ensure")
-  })
-  self.SecondConfirmPopup.CancelButtonIndex = self.SecondConfirmPopup:InitGamepadShortcut({
-    KeyInfoList = {
-      {
-        Type = "Img",
-        ImgShortPath = UIConst.GamePadImgKey.FaceButtonRight
-      }
-    },
-    Desc = GText("UI_BACK")
-  })
-  self.SecondConfirmPopup:HideGamepadShortcut(self.SecondConfirmPopup.ConfirmButtonIndex)
-  self.SecondConfirmPopup:HideGamepadShortcut(self.SecondConfirmPopup.CancelButtonIndex)
-  local ItemWidget = self.SecondConfirmPopup:GetContentWidgetByName("ItemSubsize")
-  if ItemWidget then
-    ItemWidget.OnContentKeyDown = self.OnContentKeyDown
-    local Item = ItemWidget.Item:GetChildAt(0)
-    if Item then
-      Item:BindEventOnMenuOpenChanged(self, self.ItemMenuAnchorChanged)
-    end
-  end
 end
 
 function M:OnContentKeyDown(MyGeometry, InKeyEvent)

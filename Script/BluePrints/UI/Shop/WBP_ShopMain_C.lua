@@ -416,6 +416,7 @@ function M:RefreshSubTabData(SubTabData)
     self:SetAllowedToShowHideUI(false)
     self:SetShowModel(false)
     self:SetHasVideo(false)
+    self:SetCameraToDefault()
     self:DestroyPreviewActor()
     if self.Common_Tab and self.Common_Tab.WBP_Com_Tab_ResourceBar then
       self.Common_Tab.WBP_Com_Tab_ResourceBar:SetGetReplyOnBack(nil)
@@ -584,6 +585,8 @@ function M:InitBannerPage(SelectBannerId)
   local bSwitchBanner = false
   if self.SwitchBannerList and next(self.SwitchBannerList) then
     self.Shop_RecommendBanner:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.Shop_RecommendBanner.CurrentIndex = nil
+    self.LastWidgetContent = nil
     self.Shop_RecommendBanner:InitItemInfo()
     self.Shop_RecommendBanner:BindBtnEvent(self, self.OnSwitchBannerChanged)
     self.Shop_RecommendBanner:BindBtnClickEvent(self, self.OnSwitchBannerItemClick)

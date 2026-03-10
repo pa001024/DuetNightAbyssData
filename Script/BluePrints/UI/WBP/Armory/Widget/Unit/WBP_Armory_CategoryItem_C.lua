@@ -12,6 +12,14 @@ function M:OnListItemObjectSet(Content)
   self:SetIsSelected(Content.IsSelected)
   self:ShowRecommend(Content.bShowRecommend)
   self.Owner = Content.Owner
+  self:SetNavigationRuleCustom(EUINavigation.Up, {
+    self,
+    self.OnListItemNavigation
+  })
+  self:SetNavigationRuleCustom(EUINavigation.Down, {
+    self,
+    self.OnListItemNavigation
+  })
 end
 
 function M:BP_OnEntryReleased()
@@ -104,6 +112,19 @@ function M:OnFocusReceived()
     end
   end
   return UIUtils.Unhandled
+end
+
+function M:OnListItemNavigation(NavigationDirection)
+  local CurIndex = self.Content.Index
+  if not self.Owner and not CurIndex then
+    return self
+  end
+  if NavigationDirection == EUINavigation.Up then
+    self.Owner.EMListView_Filter:NavigateToIndex(CurIndex - 1)
+  elseif NavigationDirection == EUINavigation.Down then
+    self.Owner.EMListView_Filter:NavigateToIndex(CurIndex + 1)
+  end
+  return self
 end
 
 return M

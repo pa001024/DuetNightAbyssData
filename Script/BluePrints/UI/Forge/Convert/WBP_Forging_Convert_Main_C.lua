@@ -304,7 +304,7 @@ end
 
 function WBP_Forging_Convert_Main_C:OnEMListItemClicked(Item)
   DebugPrint("Yihan@ WBP_Forging_Convert_C:OnEMListItemClicked12312312313", Item)
-  if self.CurListItem == Item then
+  if self.WBP_Forging_Convert.bInMixAnimation or self.CurListItem == Item then
     return
   end
   self.WBP_Forging_Convert:UpdateForingConvertContent(Item)

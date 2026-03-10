@@ -150,10 +150,13 @@ function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   if "Gamepad_FaceButton_Right" == InKeyName or "Escape" == InKeyName then
-    if self.Parent then
-      self.Parent:SetFocus()
+    if not self:IsAnimationPlaying(self.Auto_In) then
+      if self.Parent then
+        self.Parent.BattleInfoUI = nil
+        self.Parent:SetFocus()
+      end
+      self:TryClose()
     end
-    self:Close()
     return true
   end
   return false
@@ -169,6 +172,7 @@ function M:OnFocusReceived(MyGeometry, InFocusEvent)
   self.GameInputModeSubsystem:SetNavigateWidgetOpacity(1)
   self.List_Value:SetFocus()
   self.List_Value:SetSelectItemIndex(0)
+  return true
 end
 
 function M:OnFocusLost(InFocusEvent)

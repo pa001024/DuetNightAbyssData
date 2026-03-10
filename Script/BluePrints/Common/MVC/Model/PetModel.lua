@@ -1,6 +1,7 @@
 local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
 local M = Class()
-local _ResourcePetMap, _PetMap
+local _ResourcePetMap = {}
+local _PetMap = {}
 
 function M:Init(Pets)
   _PetMap = {}

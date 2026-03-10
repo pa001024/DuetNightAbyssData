@@ -374,6 +374,10 @@ function M:OnCloseSquadGamepad()
 end
 
 function M:InitWidgetInfoInGamePad()
+  self.Mobile = "Mobile" == CommonUtils.GetDeviceTypeByPlatformName(self)
+  if self.Mobile then
+    return
+  end
   if UIUtils.UtilsGetCurrentInputType() ~= ECommonInputType.Gamepad then
     return
   end

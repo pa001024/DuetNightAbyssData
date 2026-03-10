@@ -538,6 +538,7 @@ return ReadOnly("SystemUI", {
     ZOrder = 54
   },
   AutoChessBattlePage = {
+    ConfigName = "OnlyAddToStack",
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/AutoChess/WBP_Activity_AutoChess_BattlePage_M.WBP_Activity_AutoChess_BattlePage_M'",
     PCBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/AutoChess/WBP_Activity_AutoChess_BattlePage_P.WBP_Activity_AutoChess_BattlePage_P'",
     UIName = "AutoChessBattlePage"
@@ -567,7 +568,6 @@ return ReadOnly("SystemUI", {
     PCBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/AutoChess/WBP_Activity_AutoChess_Main_P.WBP_Activity_AutoChess_Main_P'",
     Popup = true,
     PopupInfoId = 100305,
-    TabCoin = {219},
     UIName = "AutoChessMain",
     ZOrder = 56
   },
@@ -882,6 +882,7 @@ return ReadOnly("SystemUI", {
     IsHideBattleUnit = 1,
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/BattlePass/Mobile/WBP_BattlePass_SkinPreview_M.WBP_BattlePass_SkinPreview_M'",
     PCBPPath = "WidgetBlueprint'/Game/UI/WBP/BattlePass/PC/WBP_BattlePass_SkinPreview_P.WBP_BattlePass_SkinPreview_P'",
+    Popup = true,
     System = "BattlePass",
     UIName = "CharSkinPreview"
   },
@@ -1710,7 +1711,8 @@ return ReadOnly("SystemUI", {
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Impression/Mobile/Shop/WBP_Impression_Shop_M.WBP_Impression_Shop_M'",
     PCBPPath = "WidgetBlueprint'/Game/UI/WBP/Impression/PC/Shop/WBP_Impression_Shop_P.WBP_Impression_Shop_P_C'",
     Popup = true,
-    UIName = "ImpressionShop"
+    UIName = "ImpressionShop",
+    ZOrder = 55
   },
   InBattleWheelMenu = {
     KeyboardSetName = "InBattleWheel",
@@ -2972,17 +2974,16 @@ return ReadOnly("SystemUI", {
     ZOrder = 54
   },
   WuyoushengMod = {
-    ConfigName = "StackAndUIMode",
+    ConfigName = "UIModeAndForceShow",
     IsHideBattleUnit = 1,
     IsHideDrop = true,
     IsStopGame = 1,
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/Wuyousheng/WBP_Activity_Wuyousheng_Mod_M.WBP_Activity_Wuyousheng_Mod_M'",
     PCBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/Wuyousheng/WBP_Activity_Wuyousheng_Mod_P.WBP_Activity_Wuyousheng_Mod_P'",
     Params = T.RT_2,
-    Popup = true,
     TabCoin = T.RT_3,
     UIName = "WuyoushengMod",
-    ZOrder = 51
+    ZOrder = 60
   },
   ZhiLiuDoorQTE = {
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Level/Mobile/WBP_Level_QTE_Zhiliu_M.WBP_Level_QTE_Zhiliu_M'",

@@ -168,7 +168,8 @@ function M:SetMailSenderIcon(Content)
     local NickName = GiftController:GetSenderName(Content.UniqueId, Content.IsStar)
     self.Text_MailFrom_Normal:SetText(GText(NickName))
     self.Text_MailFrom_Select:SetText(GText(NickName))
-    DynamicIcon = LoadObject("Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_JJ.T_Head_JJ'")
+    local NpcInfo = DataMgr.Npc[99998]
+    DynamicIcon = LoadObject(NpcInfo.MailHead)
   else
     self.Text_MailFrom_Normal:SetText(GText(Name))
     self.Text_MailFrom_Select:SetText(GText(Name))

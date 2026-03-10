@@ -5,7 +5,7 @@
     "desc": "Frappez en cadence — laissez monter le chant du combat.",
     "icon": "T_Fashion_Weapon22",
     "rarity": 5,
-    "unlock": "Disponible dans la boutique"
+    "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 10002,
@@ -13,7 +13,7 @@
     "desc": "Frappez en cadence — laissez monter le chant du combat.",
     "icon": "T_Fashion_Weapon23",
     "rarity": 5,
-    "unlock": "Disponible dans la boutique"
+    "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 10003,
@@ -21,7 +21,7 @@
     "desc": "Frappez en cadence — laissez monter le chant du combat.",
     "icon": "T_Fashion_Weapon02",
     "rarity": 5,
-    "unlock": "Disponible dans la boutique"
+    "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 10004,
@@ -29,7 +29,7 @@
     "desc": "Frappez en cadence — laissez monter le chant du combat.",
     "icon": "T_Fashion_Weapon01",
     "rarity": 5,
-    "unlock": "Disponible dans la boutique"
+    "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 10005,
@@ -37,7 +37,7 @@
     "desc": "Un papillon qui renonce à son rêve de voler.",
     "icon": "T_Fashion_Weapon16",
     "rarity": 5,
-    "unlock": "Disponible dans la boutique"
+    "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 10006,
@@ -45,7 +45,7 @@
     "desc": "Un papillon qui renonce à son rêve de voler.",
     "icon": "T_Fashion_Weapon15",
     "rarity": 5,
-    "unlock": "Disponible dans la boutique"
+    "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 10007,
@@ -53,7 +53,7 @@
     "desc": "Un papillon qui renonce à son rêve de voler.",
     "icon": "T_Fashion_Weapon13",
     "rarity": 5,
-    "unlock": "Disponible dans la boutique"
+    "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 10008,
@@ -61,7 +61,7 @@
     "desc": "Un papillon qui renonce à son rêve de voler.",
     "icon": "T_Fashion_Weapon14",
     "rarity": 5,
-    "unlock": "Disponible dans la boutique"
+    "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 10009,
@@ -69,7 +69,7 @@
     "desc": "Une fleur née du brasier et de la fumée.",
     "icon": "T_Fashion_Weapon17",
     "rarity": 5,
-    "unlock": "Disponible dans la boutique"
+    "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 10010,
@@ -77,7 +77,7 @@
     "desc": "Une fleur née du brasier et de la fumée.",
     "icon": "T_Fashion_Weapon20",
     "rarity": 5,
-    "unlock": "Disponible dans la boutique"
+    "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 10011,
@@ -85,7 +85,7 @@
     "desc": "Une fleur née du brasier et de la fumée.",
     "icon": "T_Fashion_Weapon18",
     "rarity": 5,
-    "unlock": "Disponible dans la boutique"
+    "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 10012,
@@ -93,7 +93,7 @@
     "desc": "Une fleur née du brasier et de la fumée.",
     "icon": "T_Fashion_Weapon19",
     "rarity": 5,
-    "unlock": "Disponible dans la boutique"
+    "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 10013,
@@ -101,7 +101,7 @@
     "desc": "Une aile reniée par les dieux.",
     "icon": "T_Fashion_Weapon03",
     "rarity": 5,
-    "unlock": "Disponible dans la boutique"
+    "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 10014,
@@ -109,7 +109,7 @@
     "desc": "Une aile reniée par les dieux.",
     "icon": "T_Fashion_Weapon05",
     "rarity": 5,
-    "unlock": "Disponible dans la boutique"
+    "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 10015,
@@ -117,7 +117,7 @@
     "desc": "Une aile reniée par les dieux.",
     "icon": "T_Fashion_Weapon09",
     "rarity": 5,
-    "unlock": "Disponible dans la boutique"
+    "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 10016,
@@ -125,7 +125,7 @@
     "desc": "Une aile reniée par les dieux.",
     "icon": "T_Fashion_Weapon06",
     "rarity": 5,
-    "unlock": "Disponible dans la boutique"
+    "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 10017,
@@ -133,7 +133,7 @@
     "desc": "Héros du célèbre conte « L’Étrange Aventure de Pioupiou », répandu sur tout le continent d’Atlasia. Chaque jour, le petit poussin s’éveille dans un lieu différent, rencontre de nouveaux compagnons et s’élance dans une odyssée singulière pour découvrir le sens de sa vie — et déjouer les complots des méchants.",
     "icon": "T_Fashion_Weapon21",
     "rarity": 4,
-    "unlock": "Disponible dans la boutique"
+    "unlock": "Disponible dans la Boutique d’Impressions de Lunoeggy"
   },
   {
     "id": 10018,
@@ -141,7 +141,7 @@
     "desc": "Héros du célèbre conte « L’Étrange Aventure de Pioupiou », répandu sur tout le continent d’Atlasia. Chaque jour, le petit poussin s’éveille dans un lieu différent, rencontre de nouveaux compagnons et s’élance dans une odyssée singulière pour découvrir le sens de sa vie — et déjouer les complots des méchants.",
     "icon": "T_Fashion_Weapon25",
     "rarity": 4,
-    "unlock": "Disponible dans la boutique"
+    "unlock": "Disponible via les récompenses de niveau de réputation"
   },
   {
     "id": 10019,
@@ -149,7 +149,7 @@
     "desc": "Héros du célèbre conte « L’Étrange Aventure de Pioupiou », répandu sur tout le continent d’Atlasia. Chaque jour, le petit poussin s’éveille dans un lieu différent, rencontre de nouveaux compagnons et s’élance dans une odyssée singulière pour découvrir le sens de sa vie — et déjouer les complots des méchants.",
     "icon": "T_Fashion_Weapon24",
     "rarity": 4,
-    "unlock": "Disponible dans la boutique"
+    "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 10020,
@@ -157,7 +157,7 @@
     "desc": "Héros du célèbre conte « L’Étrange Aventure de Pioupiou », répandu sur tout le continent d’Atlasia. Chaque jour, le petit poussin s’éveille dans un lieu différent, rencontre de nouveaux compagnons et s’élance dans une odyssée singulière pour découvrir le sens de sa vie — et déjouer les complots des méchants.",
     "icon": "T_Fashion_Weapon26",
     "rarity": 4,
-    "unlock": "Disponible dans la boutique"
+    "unlock": "Disponible via les récompenses de niveau de réputation"
   },
   {
     "id": 10021,
@@ -165,7 +165,7 @@
     "desc": "Infusé de l’inspiration et de la fougue de Luno, la forgeronne, ce Cinder portatif évoque sans cesse la fournaise ardente qu’il attise de ses battements.",
     "icon": "T_Fashion_Weapon12",
     "rarity": 5,
-    "unlock": "Disponible dans la boutique"
+    "unlock": "Disponible dans la Boutique d’Impressions de Lunoeggy"
   },
   {
     "id": 10022,
@@ -173,7 +173,7 @@
     "desc": "Les dragons fascinent chaque époque. Puissants, sauvages, insaisissables — leur rareté les drape d’une aura de mystère. C’est cette brume d’imaginaire qui nourrit la créativité des peuples depuis toujours.",
     "icon": "T_Fashion_Weapon10",
     "rarity": 5,
-    "unlock": "Disponible dans la boutique"
+    "unlock": "Disponible dans la Boutique d’Impressions de Lunoeggy"
   },
   {
     "id": 10023,
@@ -181,7 +181,7 @@
     "desc": "Sous la coquille... encore une coquille. Et sous la coquille ? Toujours une coquille. Absolument pas une Luno. Vraiment pas.",
     "icon": "T_Fashion_Weapon27",
     "rarity": 5,
-    "unlock": "Disponible dans la boutique"
+    "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 10024,
@@ -189,7 +189,7 @@
     "desc": "Les étoiles de mer rêvent-elles de météores ?",
     "icon": "T_Fashion_Weapon33",
     "rarity": 5,
-    "unlock": "Disponible dans la boutique"
+    "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 10025,
@@ -197,7 +197,7 @@
     "desc": "Les étoiles de mer rêvent-elles de météores ?",
     "icon": "T_Fashion_Weapon31",
     "rarity": 5,
-    "unlock": "Disponible dans la boutique"
+    "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 10026,
@@ -205,7 +205,7 @@
     "desc": "Les étoiles de mer rêvent-elles de météores ?",
     "icon": "T_Fashion_Weapon32",
     "rarity": 5,
-    "unlock": "Disponible dans la boutique"
+    "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 10027,
@@ -213,7 +213,7 @@
     "desc": "Pourquoi ne pas demander à la conque chatoyante ?",
     "icon": "T_Fashion_Weapon30",
     "rarity": 5,
-    "unlock": "Disponible dans la boutique"
+    "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 10028,
@@ -221,7 +221,7 @@
     "desc": "Pourquoi ne pas demander à la conque chatoyante ?",
     "icon": "T_Fashion_Weapon29",
     "rarity": 5,
-    "unlock": "Disponible dans la boutique"
+    "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 10029,
@@ -229,7 +229,7 @@
     "desc": "Pourquoi ne pas demander à la conque chatoyante ?",
     "icon": "T_Fashion_Weapon28",
     "rarity": 5,
-    "unlock": "Disponible dans la boutique"
+    "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 10030,

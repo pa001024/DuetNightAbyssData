@@ -7,7 +7,7 @@ local M = Class("BluePrints.UI.BP_UIState_C")
 function M:InitItemInfo(ItemType, ItemId, UnitId)
   self.EffectDetails:ClearChildren()
   local ModInfo = DataMgr.Mod[ItemId]
-  local ModName = GText(ModInfo.TypeName) .. GText(ModInfo.Name)
+  local ModName = ModModel:GetModFullNameByConf(ItemId)
   if ModCommon.DebugMode then
     ModName = ModName .. "_" .. ItemId
   end

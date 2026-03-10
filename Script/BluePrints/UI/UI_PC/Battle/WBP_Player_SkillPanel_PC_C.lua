@@ -229,6 +229,12 @@ function WBP_Player_SkillPanel_PC_C:InitMountButtonVariables()
     self,
     self.OnMountFlyReleased
   })
+  if not self.OwnerPlayer or not self.OwnerPlayer.CurMount then
+    if self.Overlay_Mounts:GetVisibility() ~= ESlateVisibility.Collapsed then
+      self.Overlay_Mounts:SetVisibility(ESlateVisibility.Collapsed)
+    end
+    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Mounts_Out)
+  end
 end
 
 function WBP_Player_SkillPanel_PC_C:OnMountFlyPressed()

@@ -66,18 +66,18 @@ return ReadOnly("ReddotNode", {
   },
   Acti_AutoChess = {
     Childs = {
-      "AutoChessMonster",
-      "AutoChessEquip",
       "AutoChessReward",
+      "Acti_AutoChessActivity",
       "AutoChessLinear"
     },
-    Name = "Acti_AutoChess"
+    Name = "Acti_AutoChess",
+    bInvokeEveryTime = true
   },
   Acti_AutoChessActivity = {
     CacheType = 1,
     IsLeaf = true,
     Name = "Acti_AutoChessActivity",
-    NodeModuleName = "AutoChess.Activity",
+    NodeModuleName = "Activity.ActivityBase",
     Type = 1
   },
   Acti_BetaAward = {
@@ -177,7 +177,8 @@ return ReadOnly("ReddotNode", {
     IsLeaf = true,
     Name = "Acti_JJGame",
     NodeModuleName = "Activity.JJGame",
-    Type = 0
+    Type = 0,
+    bInvokeEveryTime = true
   },
   Acti_MidTerm = {
     Childs = {
@@ -598,6 +599,7 @@ return ReadOnly("ReddotNode", {
     CacheType = 1,
     IsLeaf = true,
     Name = "AutoChessReward",
+    NodeModuleName = "AutoChess.Reward",
     Type = 0,
     bInvokeEveryTime = true
   },
@@ -755,6 +757,7 @@ return ReadOnly("ReddotNode", {
     Childs = {
       "Entertainment_Char"
     },
+    NodeModuleName = "CheckEscShowCond",
     Name = "Entertainment"
   },
   Entertainment_Char = {
@@ -866,7 +869,8 @@ return ReadOnly("ReddotNode", {
     CacheType = 1,
     IsLeaf = true,
     Name = "JJGameTask_Challenge_New",
-    Type = 1
+    Type = 1,
+    bInvokeEveryTime = true
   },
   JJGameTask_Challenge_Reddot = {
     CacheType = 1,
@@ -879,7 +883,8 @@ return ReadOnly("ReddotNode", {
     CacheType = 1,
     IsLeaf = true,
     Name = "JJGameTask_Normal_New",
-    Type = 1
+    Type = 1,
+    bInvokeEveryTime = true
   },
   JJGameTask_Normal_Reddot = {
     CacheType = 1,

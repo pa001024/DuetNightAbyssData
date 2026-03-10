@@ -2223,25 +2223,25 @@
     "id": 30113,
     "name": "중급 염료·메이플 캔디",
     "icon": "T_Dye_15",
-    "rarity": 5
+    "rarity": 4
   },
   {
     "id": 30114,
     "name": "중급 염료·코코아",
-    "icon": "T_Dye_15",
-    "rarity": 5
+    "icon": "T_Dye_15_01",
+    "rarity": 4
   },
   {
     "id": 30115,
     "name": "중급 염료·푸른 파도",
     "icon": "T_Dye_14",
-    "rarity": 5
+    "rarity": 4
   },
   {
     "id": 30116,
     "name": "중급 염료·푸른 소나무",
-    "icon": "T_Dye_15",
-    "rarity": 5
+    "icon": "T_Dye_14_01",
+    "rarity": 4
   },
   {
     "id": 30117,
@@ -2252,13 +2252,13 @@
   {
     "id": 30118,
     "name": "기본 헤어 염료",
-    "icon": "T_Dye_12",
+    "icon": "T_Dye_16",
     "rarity": 4
   },
   {
     "id": 30119,
     "name": "고급 헤어 염료",
-    "icon": "T_Dye_12",
+    "icon": "T_Dye_17",
     "rarity": 5
   },
   {

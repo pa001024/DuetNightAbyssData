@@ -66,6 +66,7 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
       self.List_Tab:SetFocus()
     end
   end
+  self:UpdateUIStyleInPlatform(CurInputDevice == ECommonInputType.Gamepad)
 end
 
 function M:InitListenEvent()
@@ -229,10 +230,20 @@ function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
 end
 
 function M:OnReturnToActivityEntry()
+  if self:IsPlayingAnimation(self.In) then
+    DebugPrint("OnReturnToActivityEntry IsPlayingAnimation In")
+    return
+  end
+  self:StopAllAnimations()
   self:PlayAnimationForward(self.In)
 end
 
 function M:OnLeaveActivityEntry()
+  if self:IsPlayingAnimation(self.Out) then
+    DebugPrint("OnReturnToActivityEntry IsPlayingAnimation Out")
+    return
+  end
+  self:StopAllAnimations()
   self:PlayAnimationForward(self.Out)
 end
 

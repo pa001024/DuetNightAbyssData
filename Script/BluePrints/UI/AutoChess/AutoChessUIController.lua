@@ -83,12 +83,12 @@ function AutoChessUIController:ShowMonsterDetails(AutoChessId)
 end
 
 function AutoChessUIController:OpenAutoChessShop()
-  AudioManager(self.MainUI):PlayUISound(self.MainUI, "event:/ui/activity/auto_chess_mid_btn_click", nil, nil)
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_large", nil, nil)
   PageJumpUtils:JumpToTargetPageByJumpId(81)
 end
 
 function AutoChessUIController:OpenAutoChessQuest()
-  AudioManager(self.MainUI):PlayUISound(self.MainUI, "event:/ui/activity/auto_chess_mid_btn_click", nil, nil)
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_large", nil, nil)
   RewardModel:OpenReward(self)
 end
 

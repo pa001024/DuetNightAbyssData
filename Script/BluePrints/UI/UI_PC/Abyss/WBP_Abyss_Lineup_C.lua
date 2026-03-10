@@ -73,6 +73,7 @@ function WBP_Abyss_Lineup_C:Construct()
   self.Btn_Save:SetText(GText("UI_RegionMap_Save"))
   self.Btn_Save:Init(self, self.SaveLineup)
   self.Btn_Click.OnClicked:Add(self, self.OnBackgroundClicked)
+  self.Btn_Click:SetTouchMethod(UE4.EButtonTouchMethod.Down)
   self:InitSelectiveList()
   self:InitItemDetailWidget()
   self:InitGamepadKeys()
@@ -1132,6 +1133,7 @@ end
 
 function WBP_Abyss_Lineup_C:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
   if self:IsMobile() then
+    self:OnUpdateUIStyleByInputTypeChange(ECommonInputType.Touch)
     return
   end
   local IsUseKeyAndMouse = CurInputDevice == ECommonInputType.MouseAndKeyboard
@@ -1152,7 +1154,9 @@ function WBP_Abyss_Lineup_C:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepa
 end
 
 function WBP_Abyss_Lineup_C:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
-  if self:IsMobile() then
+  if CurInputDevice == ECommonInputType.Touch then
+    self.List_Lineup:OnUpdateUIStyleByInputTypeChange(CurInputDevice)
+    self.CurDungeonPanel:OnUpdateUIStyleByInputTypeChange(CurInputDevice)
     return
   end
   if CurInputDevice == ECommonInputType.Gamepad then

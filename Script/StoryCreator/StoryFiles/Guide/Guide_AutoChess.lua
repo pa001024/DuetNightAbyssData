@@ -114,12 +114,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "176950599111217715161",
-            startPort = "Out",
-            endQuest = "176951245935440881964",
-            endPort = "In"
-          },
-          {
             startQuest = "176951245935440881964",
             startPort = "Out",
             endQuest = "176951291329743609045",
@@ -177,6 +171,30 @@ return {
             startQuest = "17694310934959536289",
             startPort = "Out",
             endQuest = "176950565623115670497",
+            endPort = "In"
+          },
+          {
+            startQuest = "176950599111217715161",
+            startPort = "Out",
+            endQuest = "17700887244581366977",
+            endPort = "Input"
+          },
+          {
+            startQuest = "17700887244581366977",
+            startPort = "PC",
+            endQuest = "176951245935440881964",
+            endPort = "In"
+          },
+          {
+            startQuest = "17700887244581366977",
+            startPort = "Mobile",
+            endQuest = "17700887370861367200",
+            endPort = "In"
+          },
+          {
+            startQuest = "17700887370861367200",
+            startPort = "Out",
+            endQuest = "176951291329743609045",
             endPort = "In"
           }
         },
@@ -432,7 +450,7 @@ return {
             key = "176950599111217715161",
             type = "ShowGuideButtonNode",
             name = "Button显示/隐藏信息",
-            pos = {x = 1081.6430138357925, y = 835.7429663808198},
+            pos = {x = 798.3096848694527, y = 876.6520566593822},
             propsData = {
               ShowEnable = true,
               MessageId = 303809,
@@ -478,7 +496,7 @@ return {
             key = "176951245935440881964",
             type = "ShowGuideButtonNode",
             name = "Button显示/隐藏信息",
-            pos = {x = 1535.8826435839353, y = 865.6507989087377},
+            pos = {x = 1541.9432495511296, y = 783.8326183516127},
             propsData = {
               ShowEnable = true,
               MessageId = 303810,
@@ -681,6 +699,43 @@ return {
               UICompLocOffset = {X = 0, Y = 0},
               MessageParentLoc = "HighLightUI",
               MessageLoc = "Left",
+              MessageLocOffset = {X = 0, Y = 0}
+            }
+          },
+          ["17700887244581366977"] = {
+            key = "17700887244581366977",
+            type = "PlatformJudgmentNode",
+            name = "PC/手机平台判断(云游戏视为手机)",
+            pos = {x = 1157.9673128071217, y = 866.9771251268555},
+            propsData = {}
+          },
+          ["17700887370861367200"] = {
+            key = "17700887370861367200",
+            type = "ShowGuideButtonNode",
+            name = "Button显示/隐藏信息",
+            pos = {x = 1535.2400327236837, y = 910.9165160770773},
+            propsData = {
+              ShowEnable = true,
+              MessageId = 303810,
+              MessageNote = "",
+              DelayTime = 0,
+              IsForceClick = true,
+              IsControlPlayer = false,
+              IsTimePause = false,
+              IsShowCursor = true,
+              HighLightUIPath = "AutoChessMain.Tab.Panel_Info:1",
+              UICompName = "Btn_Back",
+              GamePadWidgetName = "",
+              IsAutoClick = false,
+              IsAutoClickByGamepad = false,
+              UIShape = "Square",
+              IsResetPlayer = false,
+              IsForbidInAnim = true,
+              IsForbidOutAnim = true,
+              UICompSizeOffset = {X = 0, Y = 0},
+              UICompLocOffset = {X = 0, Y = 0},
+              MessageParentLoc = "HighLightUI",
+              MessageLoc = "DownRight",
               MessageLocOffset = {X = 0, Y = 0}
             }
           }

@@ -190,7 +190,7 @@
     "rarity": 4,
     "cost": 12,
     "buffId": 4020508,
-    "extraBuffDesc": "Buff Effect: When taking damage, gains +20.0% ATK and +0.2 DEF for 10s, stacking up to 3.0% times.",
+    "extraBuffDesc": "Buff Effect: When taking damage, gains +20.0% ATK and +20.0% DEF for 10s, stacking up to 3.0 times.",
     "extraBuffId": 4020208,
     "unlockQuestId": 10300119,
     "def": 0.3
@@ -202,7 +202,7 @@
     "rarity": 4,
     "cost": 12,
     "buffId": 4020509,
-    "extraBuffDesc": "Buff Effect: When dealing damage, gains +20.0% ATK and +0.2 DEF for 10s, stacking up to 3.0% times.",
+    "extraBuffDesc": "Buff Effect: When dealing damage, gains +20.0% ATK and +20.0% DEF for 10s, stacking up to 3.0 times.",
     "extraBuffId": 4020209,
     "unlockQuestId": 10300119,
     "atk": 0.2

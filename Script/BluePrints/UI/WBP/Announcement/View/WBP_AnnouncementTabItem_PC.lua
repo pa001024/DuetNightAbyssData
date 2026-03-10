@@ -45,6 +45,12 @@ function M:OnListItemObjectSet(Content)
   end
   self.ButtonArea:SetVisibility(UIConst.VisibilityOp.Visible)
   self.Text_AnnouncementTitle:SetText(GText(Content.Conf.NoticeTitle))
+  if CommonConst.SystemLanguage[Content.Conf.Language] == CommonConst.SystemLanguage.TC then
+    self.Text_AnnouncementTitle.Font.TypefaceFontName = "Default-TC"
+  else
+    self.Text_AnnouncementTitle.Font.TypefaceFontName = "Default"
+  end
+  self.Text_AnnouncementTitle:SetFont(self.Text_AnnouncementTitle.Font)
   if Content.IsSelected then
     self:OnClick(true, Content.bForce)
     Content.bForce = nil

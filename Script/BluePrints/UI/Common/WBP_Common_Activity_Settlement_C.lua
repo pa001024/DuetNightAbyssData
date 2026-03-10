@@ -3,22 +3,42 @@ local M = Class({
   "BluePrints.UI.BP_UIState_C"
 })
 local Model = require("BluePrints.UI.AutoChess.AutoChessDataModel")
+local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
+
+function M:OnInAnimationFinished()
+  DebugPrint("JLY Test OnInAnimationFinished")
+  self:UnbindAllFromAnimationFinished(self.In)
+  self:UnbindAllFromAnimationFinished(self.Fail_In)
+  if self.Text_Title then
+    self.Text_Title:SetVisibility(UE4.ESlateVisibility.Visible)
+    self.Text_Title:SetRenderOpacity(1)
+  end
+  if self.Text_Title_New then
+    self.Text_Title_New:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.Text_Title_New:SetRenderOpacity(1)
+  end
+end
 
 function M:InitParams(Params)
   self.Params = Params
   self:InitDungeonInfo()
   self.Btn_Exit.Button_Area.OnClicked:Add(self, self.OnExitClicked)
-  self.Btn_Continue.Button_Area.OnClicked:Add(self, self.OnContinueClicked)
   if self.Params and 2 == self.Params.MissionType and self.Params.IsWin then
-    self.Btn_Continue:SetIsEnabled(false)
+    self.Btn_Continue:ForbidBtn(true)
     self.Btn_Continue:BindForbidStateExecuteEvent(self, function()
       UIManager(self):ShowUITip("CommonToastMain", GText("UI_AutoChess_CantStartAgain"))
     end)
+  else
+    self.Btn_Continue.Button_Area.OnClicked:Add(self, self.OnContinueClicked)
   end
   if self.Btn_Data then
     self.Btn_Data.Button_Area.OnClicked:Add(self, self.InitBattleInfo)
   end
   self:InitUI()
+  self:StopAllAnimations()
+  self:AddTimer(0.1, function()
+    self:OnInAnimationFinished()
+  end)
   if Params.IsWin then
     self:PlayAnimation(self.In)
     if self.EventSettlementPage and self.EventSettlementPage.WinSound then
@@ -143,6 +163,13 @@ function M:InitUI()
       end
     end
   end
+  if self.Text_Title_New then
+    if self.Params.IsWin then
+      self.Text_Title_New:SetText(GText("EventDungeonPass_Title1"))
+    else
+      self.Text_Title_New:SetText(GText("EventDungeonPass_Title2"))
+    end
+  end
   if self.Params.TitleColor and self.Text_Title then
     self.Text_Title:SetColorAndOpacity(self.Params.TitleColor)
   end
@@ -210,6 +237,9 @@ function M:InitUI()
                   Content.ItemType = ItemType
                   Content.Rarity = Rarity
                   Content.IsShowDetails = true
+                  if self.Params.DungeonType == "AutoChess" then
+                    Content.bNotShowAccess = true
+                  end
                   Content.OnMenuOpenChangedEvents = {
                     Obj = self,
                     Callback = self.ItemMenuAnchorChanged
@@ -269,7 +299,9 @@ function M:InitUI()
     if 1 == self.Params.MissionType then
       self.ScorePanel:SetVisibility(ESlateVisibility.Collapsed)
     elseif 2 == self.Params.MissionType then
-      self.ScorePanel:SetVisibility(ESlateVisibility.Visible)
+      if self.Params.IsWin then
+        self.ScorePanel:SetVisibility(ESlateVisibility.Visible)
+      end
       self:InitRankIcon()
     end
   end
@@ -454,14 +486,18 @@ end
 
 function M:ItemMenuAnchorChanged(IsOpen)
   if self.CurInputDeviceType ~= ECommonInputType.Gamepad then
-    self.Key_GamePad:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    if self.Key_GamePad then
+      self.Key_GamePad:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
     return
   end
   self.IsOpenItemMenu = IsOpen
   if IsOpen then
     local BottomKeyInfo = {}
-    self.Key_GamePad:UpdateKeyInfo(BottomKeyInfo)
-    self.Key_GamePad:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    if self.Key_GamePad then
+      self.Key_GamePad:UpdateKeyInfo(BottomKeyInfo)
+      self.Key_GamePad:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
   else
     if self.IsFocusRewardList then
       local RewardWidget = self.Settlement_RewardItem
@@ -514,11 +550,6 @@ function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
       isHandle = true
     end
   elseif "Gamepad_FaceButton_Right" == InKeyName then
-    if self.BattleInfoUI then
-      self.BattleInfoUI.GameInputModeSubsystem:SetNavigateWidgetOpacity(0)
-      self.BattleInfoUI:TryClose()
-      return UE4.UWidgetBlueprintLibrary.Handled()
-    end
     self:OnExitClicked()
     isHandle = true
   elseif "Gamepad_FaceButton_Top" == InKeyName then
@@ -526,7 +557,11 @@ function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
       if 1 == self.Params.MissionType then
         self:OnContinueClicked()
       elseif 2 == self.Params.MissionType then
-        UIManager(self):ShowUITip("CommonToastMain", GText("UI_AutoChess_CantStartAgain"))
+        if self.Params.IsWin then
+          UIManager(self):ShowUITip("CommonToastMain", GText("UI_AutoChess_CantStartAgain"))
+        else
+          self:OnContinueClicked()
+        end
       end
     else
       self:OnContinueClicked()
@@ -578,6 +613,11 @@ end
 
 function M:OnContinueClicked()
   local CallbackResult
+  local IsOpen = ActivityUtils.CheckEventIsOpen(self.Params.ActivityId, nil, false)
+  if not IsOpen then
+    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_GameEvent_EventEnd"))
+    return
+  end
   if self.Params.ContinueCallback then
     CallbackResult = self.Params.ContinueCallback(self)
   end
@@ -744,6 +784,7 @@ function M:Destruct()
     self:RemoveTimer(self.ScoreAnimationTimer)
     self.ScoreAnimationTimer = nil
   end
+  self.GameInputModeSubsystem:DisableInputMode("Settlement")
 end
 
 return M

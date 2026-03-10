@@ -563,6 +563,13 @@ return ReadOnly("BattlePassCameraData", {
       390,
       93
     },
+    MobileLocationOffset = {
+      [0] = {
+        -40,
+        0,
+        -15.5
+      }
+    },
     Rotation = T.RT_1,
     Time = 1.2
   },

@@ -5144,6 +5144,13 @@
     "type": "Normal"
   },
   {
+    "id": 99998,
+    "name": "L’équipe opérationnelle",
+    "camp": "NPC",
+    "type": "Normal",
+    "icon": "Gift"
+  },
+  {
     "id": 99999,
     "name": "L’équipe opérationnelle",
     "camp": "NPC",
@@ -8019,7 +8026,7 @@
       },
       {
         "id": 51001930,
-        "content": "……",
+        "content": "...",
         "npc": 100001,
         "next": 51001931
       },
@@ -8604,7 +8611,7 @@
       },
       {
         "id": 51001930,
-        "content": "……",
+        "content": "...",
         "npc": 100001,
         "next": 51001931
       },
@@ -28513,7 +28520,7 @@
   },
   {
     "id": 830001,
-    "name": "UI_Npc_Name_WuyouSheng_Explore",
+    "name": "Wishen vagabond",
     "camp": "NPC",
     "type": "Normal"
   },

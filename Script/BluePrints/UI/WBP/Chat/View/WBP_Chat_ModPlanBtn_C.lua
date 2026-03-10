@@ -30,7 +30,7 @@ function M:OnBtnClickInMod()
   else
     UIMode = ModCommon.MainUICase.CopyMode
   end
-  ModModel:CreateDummyAvatarForCopyMode(self.ModSuitInfo)
+  ModModel:CreateDummyAvatarForCopyMode(self.ModSuitInfo, self.SenderName)
   ModController:OpenView(ModCommon.ArmoryMod, self.TargetType, Tag, {1}, nil, {
     Func = function()
       ChatController:OpenView(nil, bBattle)
@@ -65,8 +65,9 @@ end
 function M:Destruct()
 end
 
-function M:InitMod(ModSuitInfo, bSelfMsg)
+function M:InitMod(ModSuitInfo, bSelfMsg, SenderName)
   self.DyePlanInfo = nil
+  self.SenderName = nil
   self.ModSuitInfo = ModSuitInfo
   local ModSuitName = ModSuitInfo.TargetInfo[6]
   local TargetType = ModSuitInfo.TargetInfo[1]
@@ -77,7 +78,12 @@ function M:InitMod(ModSuitInfo, bSelfMsg)
   local Conf, Name = nil, "角色或武器被删除了!!!!"
   if "Char" == TargetType then
     Conf = DataMgr.Char[TargetId]
-    Name = Conf.CharName
+    if nil ~= Conf.GenderTag then
+      Name = SenderName
+      self.SenderName = SenderName
+    else
+      Name = Conf.CharName
+    end
   elseif "Weapon" == TargetType then
     Conf = DataMgr.Weapon[TargetId]
     Name = Conf.WeaponName
@@ -119,6 +125,7 @@ function M:InitDye(DyePlanInfo, bSelfMsg)
     Conf = DataMgr.Hair[SkinId]
     self.SkinType = "Char"
     self.HairId = SkinId
+    self.SkinId = DyePlanInfo.CharId
   end
   if Conf and Conf.Icon then
     UResourceLibrary.LoadObjectAsync(self, Conf.Icon, {

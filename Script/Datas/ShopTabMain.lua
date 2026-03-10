@@ -133,7 +133,7 @@ return ReadOnly("ShopTabMain", {
   },
   [10006] = {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Item.T_Tab_Item'",
-    MainName = "AutoChessShop",
+    MainName = "UI_AutoChess_ShopName",
     MainTabId = 10006
   },
   [90001] = {

@@ -129,8 +129,11 @@ end
 function View:Handle_KeyDownOnKeyboard(InKeyName)
   local IsHandled = false
   if "Escape" == InKeyName then
-    self:PopSubPage()
-    IsHandled = true
+    local TopSubPage = self:GetTopSubPage()
+    if TopSubPage and not TopSubPage:IsAnyAnimationPlaying() then
+      self:PopSubPage()
+      IsHandled = true
+    end
   end
   return IsHandled
 end
@@ -149,7 +152,12 @@ function View:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
     self.Tab:UpdateBottomKeyInfo({
       {
         KeyInfoList = {
-          {Type = "Text", Text = "Esc"}
+          {
+            Type = "Text",
+            Text = "Esc",
+            ClickCallback = self.PopSubPage,
+            Owner = self
+          }
         },
         Desc = GText("UI_BACK")
       }

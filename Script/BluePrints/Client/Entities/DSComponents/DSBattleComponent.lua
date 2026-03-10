@@ -117,6 +117,7 @@ function Component:BattleFinish(IsWin, AvatarEids)
   local AvatarArr = TArray("")
   local GameMode = GWorld.GameInstance:GetCurrentGameMode()
   local GameTime = GameMode.EMGameState:GetGameEndTime()
+  local SumAvatars = CommonUtils.Size(GameMode.AvatarInfos)
   GameMode:FlushRewards()
   local ExtraInfo = {}
   if AvatarEids then
@@ -139,7 +140,6 @@ function Component:BattleFinish(IsWin, AvatarEids)
   end
   GameMode:NotifyClientGameEnd(IsWin, RealFinishAvatar)
   GameMode:OnPlayersDungeonEnd(RealFinishAvatar)
-  local SumAvatars = CommonUtils.Size(GameMode.AvatarInfos)
   ServerPrint("Finish Player Count", AvatarArrLen, SumAvatars)
   self:CallSkynetServerMethod("BattleFinish", IsWin, GameMode.EMGameState.DungeonProgress - 1, GameTime, ExtraInfo)
   GameMode:TriggerOnExit(AvatarArr)

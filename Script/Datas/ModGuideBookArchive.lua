@@ -996,7 +996,11 @@ return ReadOnly("ModGuideBookArchive", {
   },
   [2161] = {
     ArchiveId = 2161,
-    ModList = {101001, 101002},
+    ModList = {
+      101001,
+      101002,
+      101003
+    },
     Name = "ModArchive_Name_Melee_2161",
     RewardId = 7101,
     TabId = 2

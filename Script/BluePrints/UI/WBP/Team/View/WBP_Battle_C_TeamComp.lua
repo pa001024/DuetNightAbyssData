@@ -35,7 +35,11 @@ function Component:InitTeam()
         return
       end
       if TeamModel:IsYourself(NewLeader.Uid) and GWorld:IsStandAlone() then
-        self.WBP_Team_Tag:Init(true, NewLeader.Index, NewLeader.Uid)
+        if self.Platform == "PC" then
+          self.WBP_Team_Tag:Init(true, NewLeader.Index, NewLeader.Uid)
+        else
+          self.HUD_MainBar.T_Tag:Init(true, NewLeader.Index, NewLeader.Uid)
+        end
       end
     elseif EventId == TeamCommon.EventId.TeamOnVoteRefused then
       self.HUD_MainBar.Icon_Agree:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -118,7 +122,11 @@ function Component:RefreshTeamWhenEnterGame(bMultiGame)
         DebugPrint(LXYTag, "TeamSyncDebug WBP_Battle_C::RefreshTeam.......PlayerArray Exist， Eid:", Member.Uid)
         local bSelfCharacter = false
         if TeamModel:IsYourself(Member.Uid) and self.Platform == "PC" then
-          self.WBP_Team_Tag:Init(false, Member.Index, Member.Uid)
+          if self.Platform == "PC" then
+            self.WBP_Team_Tag:Init(false, Member.Index, Member.Uid)
+          else
+            self.HUD_MainBar.T_Tag:Init(false, Member.Index, Member.Uid)
+          end
           bSelfCharacter = true
         else
           self:AddTeammateUI(Member.Uid, true)
@@ -373,9 +381,11 @@ function Component:_ShowTeamPart(bShow)
       if self.Platform == "Mobile" then
         self.Spacer_Tag:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
       end
+      local YourselfMember = TeamModel:GetTeamMember(PlayerChar.Eid)
       if self.Platform == "PC" then
-        local YourselfMember = TeamModel:GetTeamMember(PlayerChar.Eid)
         self.WBP_Team_Tag:Init(false, YourselfMember.Index, YourselfMember.Uid)
+      else
+        self.HUD_MainBar.T_Tag:Init(false, YourselfMember.Index, YourselfMember.Uid)
       end
       return
     end
@@ -383,9 +393,11 @@ function Component:_ShowTeamPart(bShow)
     if not TeamData then
       return
     end
+    local YourselfMember = TeamModel:GetTeamMember(TeamModel:GetAvatar().Uid)
     if self.Platform == "PC" then
-      local YourselfMember = TeamModel:GetTeamMember(TeamModel:GetAvatar().Uid)
       self.WBP_Team_Tag:Init(IsLeader, YourselfMember.Index, YourselfMember.Uid)
+    else
+      self.HUD_MainBar.T_Tag:Init(IsLeader, YourselfMember.Index, YourselfMember.Uid)
     end
     if #TeamData.Members > 0 and self.Pos_Player:IsVisible() then
       if self.TeamHeadUI then

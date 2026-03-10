@@ -120019,7 +120019,7 @@ I've witnessed deeds that daylight never sees, and not all are the work of "demo
           VoiceName = "voice/$Locale$/env/700077/7D2ECA4A"
         },
         [50005301] = {
-          Content = "开往下一站的列车即将出发，如有购票需求请您在此处办理——什么？没钱？那就一边儿去！",
+          ContentFR = "Le train pour la prochaine station va partir. Billets en vente ici — Quoi ? Pas d’argent ? Alors cessez de rêver et dégagez d’ici !",
           DialogueId = 50005301,
           Duration = 4,
           GUID = "7D2D1FBA",
@@ -122494,7 +122494,7 @@ I've witnessed deeds that daylight never sees, and not all are the work of "demo
           Subtitle = "I think I had an older brother..."
         },
         [51000001] = {
-          Content = "（接受）",
+          ContentFR = "Accepter",
           DialogueId = 51000001,
           GUID = "7FAC53AA",
           NextDialogue = 51005311,
@@ -125974,7 +125974,7 @@ MoveTo{ActorId{700085},MoveSpeed{150},TargetPoint{"Point_Sangni_nearby_YNM01"},V
           }
         },
         [51001930] = {
-          Content = "……",
+          ContentFR = "...",
           DialogueId = 51001930,
           GUID = "7FAD9024",
           NextDialogue = 51001931,
@@ -136857,14 +136857,14 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           Subtitle = "Pipe No. 13 is under repair — blimey, it's swarming with rats in there."
         },
         [51007383] = {
-          Content = "（达顿抬起头来，他身上臭气熏天，强烈刺鼻的味道逼得你不得不后退一步，你忍住干呕。）",
+          ContentFR = "Dutton lève les yeux vers toi. Une odeur nauséabonde s’échappe de ses vêtements, si forte que tu recules instinctivement d’un pas, luttant contre la nausée.",
           DialogueId = 51007383,
           GUID = "7FB10EC6",
           NextDialogue = 51007384,
           Subtitle = "(Dutton looks up, reeking so strongly that you're forced to step back. You manage to stifle a gag.)"
         },
         [51007384] = {
-          Content = "嘶，你躲什么躲，在下水道干活儿身上哪能没点味道。",
+          ContentFR = "Hé ! Pourquoi tu t’éloignes ? Quand on bosse dans les égouts, c’est normal de sentir un peu fort.",
           DialogueId = 51007384,
           GUID = "7FB10EF0",
           SpeakNpcId = 700069,
@@ -136876,7 +136876,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           }
         },
         [51007388] = {
-          Content = "别看我现在这样，在几年前，大多数人还是会尊敬地叫我“达顿医生”。",
+          ContentFR = "Ne te fie pas à ce que tu vois. Il y a encore quelques années, la plupart des gens m’appelaient avec respect « Docteur Dutton ».",
           DialogueId = 51007388,
           GUID = "7FB10F98",
           NextDialogue = 51007389,
@@ -136884,7 +136884,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           Subtitle = "You might not believe it, but there was a time people respectfully addressed me as \"Doctor Dutton\"."
         },
         [51007389] = {
-          Content = "你应该明白作为一个出生在贫民区的卡戎人，这个称呼有怎样特别的意义吧。",
+          ContentFR = "Tu comprends sans doute ce que ce titre représentait pour un Charon né dans les taudis.",
           DialogueId = 51007389,
           GUID = "7FB10FC2",
           NextDialogue = 51007390,
@@ -136892,7 +136892,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           Subtitle = "You get what that title means to a Charon who's come up from the slums, right?"
         },
         [51007390] = {
-          Content = "我在中心医院给数不清的卡戎人看病，甚至有贵族慕名请我问诊。",
+          ContentFR = "J’ai soigné d’innombrables Charons à l’hôpital central... même des nobles faisaient le déplacement pour une consultation.",
           DialogueId = 51007390,
           GUID = "7FB10FEC",
           NextDialogue = 51007391,
@@ -136900,7 +136900,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           Subtitle = "I've treated countless Charons at the central hospital; even the nobility sought me out for consultations."
         },
         [51007391] = {
-          Content = "不信的话你可以问问年轻一辈的卡戎小孩，他们父母以前最常说的话就是让这帮孩子向我好好学习。",
+          ContentFR = "Si tu ne me crois pas, demande donc aux jeunes Charons : leurs parents leur répétaient sans cesse de prendre exemple sur moi.",
           DialogueId = 51007391,
           GUID = "7FB11016",
           NextDialogue = 51007392,
@@ -136908,7 +136908,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           Subtitle = "Don't take my word for it — go ask the younger Charons. Their folks always told them to model themselves on me."
         },
         [51007392] = {
-          Content = "那时候我可有着不轻的洁癖呢，地砖缝但凡有一点灰尘都受不了......",
+          ContentFR = "À l’époque, j’étais un vrai maniaque de la propreté... le moindre grain de poussière entre deux carreaux me rendait fou.",
           DialogueId = 51007392,
           GUID = "7FB11040",
           RestartTag = 51007392,
@@ -136919,7 +136919,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           }
         },
         [51007393] = {
-          Content = "一个救死扶伤的人怎么会来修理下水道？",
+          ContentFR = "Un homme qui sauve des vies ne devrait pas se retrouver à réparer des canalisations.",
           DialogueId = 51007393,
           GUID = "7FB1106A",
           ImprCheckId = 1062,
@@ -136927,7 +136927,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           Subtitle = "A life-saver like you shouldn't be stuck mending sewers."
         },
         [51007395] = {
-          Content = "我之前修理人们，现在修理管道，也没什么不同吧。",
+          ContentFR = "Je réparais des gens, aujourd’hui je répare des tuyaux... au fond, ça revient au même, non ?",
           DialogueId = 51007395,
           GUID = "7FB110BE",
           NextDialogue = 51007396,
@@ -136935,14 +136935,14 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           Subtitle = "I used to patch up people, and now I patch up pipes. Not much difference, eh?"
         },
         [51007396] = {
-          Content = "（达顿笑了笑，好像有什么不算轻松的故事就这么翻了篇。）",
+          ContentFR = "Dutton esquisse un sourire tranquille, comme s’il tournait sans rancune la page d’un passé douloureux.",
           DialogueId = 51007396,
           GUID = "7FB110E8",
           NextDialogue = 51007398,
           Subtitle = "(Dutton gave a serene smile, seemingly turning a page on some tough memories without a grudge.)"
         },
         [51007398] = {
-          Content = "生活本来就是这样充满意外，突发高危急症的行人晕倒在一个医生面前，医生大义凛然，选了抢救。",
+          ContentFR = "Imagine la scène : un passant s’effondre, frappé par une urgence vitale, juste devant un médecin... et ce médecin choisit bravement de le sauver.",
           DialogueId = 51007398,
           GUID = "7FB1113C",
           NextDialogue = 51007399,
@@ -136950,7 +136950,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           Subtitle = "Picture this: a pedestrian collapsed from an acute condition right in front of a doctor, who heroically opted to save him."
         },
         [51007399] = {
-          Content = "想知道结局是什么？等我修完下水道那几条破管子着，还是说你要跟我一起？",
+          ContentFR = "Tu veux connaître la suite ? Passe-moi plutôt cette clé à molette.",
           DialogueId = 51007399,
           GUID = "7FB11166",
           SpeakNpcId = 700069,
@@ -139743,7 +139743,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           Subtitle = "Mist Aken's got no entertainment at all... There's gotta be an untapped market hiding somewhere. I'll figure something out... sooner or later..."
         },
         [51008001] = {
-          Content = "走，走开……不买月石的话就赶紧走……别把那群当兵的引来了……",
+          ContentFR = "Va... va-t’en... si tu n’achètes pas de Phoxène, ne reste pas ici... et n’attire pas ces foutus soldats sur moi...",
           DialogueId = 51008001,
           GUID = "7FB1742A",
           NextDialogue = 51008002,
@@ -139751,7 +139751,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           Subtitle = "S—Scoot if you ain't buying any Phoxene... Stop drawing the soldiers' attention to me..."
         },
         [51008002] = {
-          Content = "（男人瑟缩在角落，与他健硕的体格所给人的印象相去甚远。他的眼神躲闪，渴望将身旁的月石脱手，却迟疑着要不要向他人寻求帮助。）",
+          ContentFR = "L’homme, pourtant bâti comme un colosse, se recroqueville dans un coin. Son regard fuyant trahit sa nervosité. À ses côtés, un sac rempli de Phoxènes qu’il semble vouloir vendre à tout prix... mais il hésite encore à demander de l’aide.",
           DialogueId = 51008002,
           GUID = "7FB17454",
           NextOptions = {
@@ -139763,7 +139763,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           Subtitle = "(Despite his strong, powerful build, the man cowers in the corner. His shifty gaze and the bag of Phoxene by his side suggest he's desperate to rid himself of it but hesitant to ask for help.)"
         },
         [51008003] = {
-          Content = "我虽然不买，但分我一半报酬的话，可以帮你找找买家。",
+          ContentFR = "Je n’achète pas, mais si on partage la récompense à parts égales, je peux t’aider à trouver un acheteur.",
           DialogueId = 51008003,
           GUID = "7FB1747E",
           ImprPlusId = 1001,
@@ -139771,7 +139771,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           Subtitle = "I'm not buying, but I can find you a buyer if we split it fifty-fifty."
         },
         [51008004] = {
-          Content = "你需要什么帮助吗？",
+          ContentFR = "Tu as besoin d’aide ?",
           DialogueId = 51008004,
           GUID = "7FB174A8",
           ImprPlusId = 1004,
@@ -139779,7 +139779,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           Subtitle = "Do you need help?"
         },
         [51008005] = {
-          Content = "帝国肯定不会允许你干这种事，不想惹麻烦的话就快走吧。",
+          ContentFR = "L’Empire ne tolère pas ce genre de trafic. Si tu veux éviter les ennuis, pars vite.",
           DialogueId = 51008005,
           GUID = "7FB174D2",
           ImprPlusId = 1002,
@@ -139787,7 +139787,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           Subtitle = "This is illegal in the Empire. You should leave if you don't want any trouble."
         },
         [51008006] = {
-          Content = "您高抬贵手，把我当个屁放了吧，我只要把这批月石卖掉就立马离开冰湖城，绝不回来。",
+          ContentFR = "Ayez pitié... Faites comme si je n’existais pas... Dès que j’ai vendu ce Phoxène, je quitte Givrelac pour de bon, je le jure !",
           DialogueId = 51008006,
           GUID = "7FB174FC",
           NextDialogue = 51008009,
@@ -139795,7 +139795,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           Subtitle = "Show some mercy and look the other way, please. Once I sell this load of Phoxene I'll leave Icelake at once and never ever come back."
         },
         [51008007] = {
-          Content = "咳！军团的士兵委托我盘查你，赶紧把通行证拿出来！",
+          ContentFR = "Hum ! La Légion m’a chargé de contrôler les gens comme toi. Montre-moi ton permis de circulation, tout de suite !",
           DialogueId = 51008007,
           GUID = "7FB17526",
           ImprPlusId = 1005,
@@ -139803,7 +139803,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           Subtitle = "Ahem! The Legion commissioned me to search the likes of you. Show me your travel permit!"
         },
         [51008008] = {
-          Content = "（男人听罢提起袋子就要跑，好不容易向他说明玩笑并解释身份后，他才悄声说明了自己的难处。）",
+          ContentFR = "À ces mots, l’homme agrippe son sac et s’enfuit. Tu parviens à l’arrêter de justesse et, après lui avoir expliqué qu’il s’agissait d’une plaisanterie, il t’avoue à voix basse ses véritables difficultés.",
           DialogueId = 51008008,
           GUID = "7FB17550",
           NextDialogue = 51008009,
@@ -139811,14 +139811,14 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           Subtitle = "(The man grabs his bag and bolts. After a breathless chase, you manage to tell him who you really are and convince him you were joking. In a hushed voice, he reveals his dire circumstances.)"
         },
         [51008009] = {
-          Content = "只要你帮我找个买家，报酬分你七成，不，八成！拜托了，拜托！",
+          ContentFR = "Trouve-moi un acheteur et je te laisse 70 %... Non, 80 % ! Je t’en supplie, aide-moi !",
           DialogueId = 51008009,
           GUID = "7FB1757A",
           SpeakNpcId = 700113,
           Subtitle = "Find me a buyer and I'll let you take 70 percents! No, 80! Please! I really need the help!"
         },
         [51008010] = {
-          Content = "（虽说答应了男人的委托，但他的神色和袋子上干涸的暗红色痕迹都宣告着这批月石的来路并不单纯。）",
+          ContentFR = "Tu acceptes sa requête, mais son attitude nerveuse et les traces rouge sombre séchées sur son sac ne laissent guère de doute : cette cargaison de Phoxène n’a pas une origine très nette.",
           DialogueId = 51008010,
           GUID = "7FB175A4",
           NextDialogue = 51008011,
@@ -155003,7 +155003,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51103013] = {
           Camera = "-273.101562,182.818359,178.920898,0.00004,-6.843535,-26.529842,35.0,100000.0,false,DoNotOverride,2.8",
-          Content = "公尚师傅，你怎么在这？",
+          ContentFR = "Maître Gongshang ?! Qu’est-ce que tu fais ici ?",
           DialogueId = 51103013,
           FacialId = {
             [1] = "100001:Shock01"
@@ -155446,7 +155446,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           Subtitle = "Master Gongshang!? What are you doing here!?"
         },
         [51103056] = {
-          Content = "公尚师傅，你怎么在这？",
+          ContentFR = "Maître Gongshang ?! Qu’est-ce que tu fais ici ?",
           DialogueId = 51103056,
           GUID = "7FEE5D2B",
           NextDialogue = 51103014,
@@ -165677,7 +165677,7 @@ MoveTo{ActorId{701023},TargetPoint{"YuXian_Leave_Target"},MoveSpeed{100},Visibil
           Subtitle = "(When she learns the truth one day... may it not take that smile from her...)"
         },
         [51118062] = {
-          Content = "（青青打着哈欠走了出来。）",
+          ContentFR = "Qingqing sort en bâillant.",
           DialogueId = 51118062,
           GUID = "7FF7FD0C",
           IsBlack = 1,
@@ -174860,13 +174860,14 @@ SEQ{ MoveTo{ActorId{701075},MoveSpeed{150},TargetPoint{"Targetpoint_20030907"}},
         },
         [51140077] = {
           Camera = "-24.294922,12.818359,82.566406,0.000001,0.0,-178.519165,18.36294,75.471931,false,Manual,2.8",
-          Content = "……我明白了！扶疏的姐姐救治的那个病人，不是尾生的妻子，而是尾生自己！他的妻子早就过世了，而他得了心病，一直以为自己的妻子还在身边！",
+          ContentFR = "Je comprends ! Celui que ta sœur soignait n’était pas l’épouse de Weisheng... mais Weisheng lui-même ! Son épouse était déjà morte, et son cœur brisé l’a conduit à croire qu’elle était encore là !",
           DialogueId = 51140077,
           FacialId = {
             [1] = "200002:Smile01"
           },
           GUID = "800618E2",
           SpeakNpcId = 200002,
+          Subtitle = "Oh! I get it now! The patient Fushu's sister treated wasn't his wife at all — it was Weisheng himself! His wife had died long before, and he was so heartbroken he kept believing she was still beside him!",
           TalkActionId = {
             [1] = "200002:Excited02_Start"
           }
@@ -247132,7 +247133,7 @@ However, her teacher is displeased with her momentary distraction.]]
           Subtitle = "I get it. You're trying to keep your identity secret from others."
         },
         [510073841] = {
-          Content = "（真诚建议他注意个人卫生问题）",
+          ContentFR = "Conseiller sincèrement de faire plus attention à son hygiène",
           DialogueId = 510073841,
           GUID = "510073841.0",
           ImprPlusId = 1003,
@@ -247140,7 +247141,7 @@ However, her teacher is displeased with her momentary distraction.]]
           Subtitle = "(Sincerely suggest he looks into personal hygiene.)"
         },
         [510073842] = {
-          Content = "（为自己刚才失礼的动作道歉）",
+          ContentFR = "Présenter ses excuses pour la réaction déplacée",
           DialogueId = 510073842,
           GUID = "510073842.0",
           ImprPlusId = 1004,
@@ -247148,7 +247149,7 @@ However, her teacher is displeased with her momentary distraction.]]
           Subtitle = "(Apologise for your rather impolite reaction just now.)"
         },
         [510073843] = {
-          Content = "（指责他的味道过于腥臭有恶劣影响）",
+          ContentFR = "Reprocher de sentir si mauvais que ça en devient insupportable",
           DialogueId = 510073843,
           GUID = "510073843.0",
           ImprPlusId = 1002,

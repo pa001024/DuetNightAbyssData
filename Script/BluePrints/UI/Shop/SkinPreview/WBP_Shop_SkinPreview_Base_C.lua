@@ -262,7 +262,7 @@ function M:OnBtnChooseGiftClicked()
     if self.Btn_Choose:IsBtnForbidden() then
       ShopUtils:OpenForbidGiftChooseTip()
     else
-      ShopUtils:OpenChooseGiftTarget(self.ShopItemData.ItemId)
+      ShopUtils:OpenChooseGiftTarget(self.ShopItemData.ItemId, self)
     end
   else
   end
@@ -377,8 +377,8 @@ function M:OnClickDyeingPreview()
       local Avatar = ArmoryUtils:GetAvatar()
       if self.Params.Type == CommonConst.ArmoryType.Char then
         self.Params.Target = Avatar.Chars[self.Params.Target.Uuid] or self.Params.Target
-      else
-        self.ActorController.ArmoryHelper.EnableCameraScrolling = false
+      elseif self.Params.Type == CommonConst.ArmoryType.Weapon then
+        self:ResetWeaponCamera()
         self.Params.Target = Avatar.Weapons[self.Params.Target.Uuid] or self.Params.Target
       end
     end
@@ -524,8 +524,8 @@ function M:UpdateUI()
     if self.IsLockState then
       self:UpdateLockCondition()
     else
-      self:UpdateButtonBuy()
       self:UpdatePrice()
+      self:UpdateButtonBuy()
       self:RemoveTimer("UpdatePriceTimer")
       local CutoffInfo = ShopUtils:GetShopItemCutoffData(self.ShopItemData.ItemId)
       if CutoffInfo and CutoffInfo.CutoffEndTime then
@@ -536,8 +536,8 @@ function M:UpdateUI()
             if not self or not IsValid(self) then
               return
             end
-            self:UpdateButtonBuy()
             self:UpdatePrice()
+            self:UpdateButtonBuy()
           end, false, 0, "UpdatePriceTimer")
         end
       end
@@ -577,6 +577,7 @@ function M:UpdatePrice()
   self.CurrentCount = 1
   self.UnitPrice = ShopUtils:GetShopItemPrice(self.ShopItemData.ItemId)
   self.CutoffData = ShopUtils:GetShopItemCutoffData(self.ShopItemData.ItemId)
+  self.canPurchase = ShopUtils:CanPurchase(self.ShopItemData, self.ShopItemData.PriceType, ShopUtils:GetShopItemPrice(self.ShopItemData.ItemId))
   if self.CutoffData ~= nil then
     self.WBP_Com_Cost:InitContent({
       ResourceId = self.ShopItemData.PriceType,
@@ -642,7 +643,6 @@ end
 function M:UpdateButtonBuy()
   self.WS_Btn:SetActiveWidgetIndex(0)
   self.Btn_Function:UnBindButtonPerformances()
-  self.canPurchase = ShopUtils:CanPurchase(self.ShopItemData, self.ShopItemData.PriceType, ShopUtils:GetShopItemPrice(self.ShopItemData.ItemId))
   local failReason = self.ShopItemData.PurchaseFailRes
   self.WidgetSwitcher_BtnState:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   if self.bInGiftShop then
@@ -828,6 +828,7 @@ function M:PurChase()
       if not IsValid(self) then
         return
       end
+      self:UpdatePrice()
       self:UpdateButtonBuy()
       self:PurChase()
     end
@@ -845,6 +846,8 @@ function M:PurChase()
       Obj = self,
       Func = self.Close
     }
+    Params.LeftGamepadKey = Const.GamepadFaceButtonUp
+    Params.ShowBKeyClose = true
     self.PopupUI = UIManager(self):ShowCommonPopupUI(PopupId, Params, self)
     return
   end
@@ -878,8 +881,14 @@ function M:PurChase()
       end
     end,
     RightCallbackObj = self,
-    RightCallbackFunction = function()
-      self:PurchaseShopItem()
+    RightCallbackFunction = function(Obj, Data)
+      if Obj then
+        local count = 1
+        if Data and Data.Content_1 and Data.Content_1.CallObj then
+          count = Data.Content_1.CallObj.CurrentCount or 1
+        end
+        Obj:PurchaseShopItem(count)
+      end
     end,
     ForbiddenRightCallbackObj = self,
     ForbiddenRightCallbackFunction = function(Obj, PackageData)
@@ -906,11 +915,12 @@ function M:PurchaseGift()
   if OtherUid then
     GiftController:TryToSendGift(OtherUid, self.ShopItemData.ItemId)
   else
-    GiftController:OpenSelectFriendPopup(self.ShopItemData.ItemId)
+    GiftController:OpenSelectFriendPopup(self.ShopItemData.ItemId, self)
   end
 end
 
-function M:PurchaseShopItem()
+function M:PurchaseShopItem(count)
+  local FinalCount = count or self.CurrentCount or 1
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return
@@ -962,7 +972,7 @@ function M:PurchaseShopItem()
     return
   end
   self:BlockAllUIInput(true)
-  Avatar:PurchaseShopItem(self.ShopItemData.ItemId, 1)
+  Avatar:PurchaseShopItem(self.ShopItemData.ItemId, FinalCount)
 end
 
 function M:RefreshPurchaseState()
@@ -971,6 +981,9 @@ function M:RefreshPurchaseState()
     self.WidgetSwitcher_BtnState:SetActiveWidgetIndex(1)
     self.Text_Desc:SetText(GText("UI_SHOP_ALREADYOWNED"))
     self.bForbiddenButton = true
+  else
+    self:UpdatePrice()
+    self:UpdateButtonBuy()
   end
 end
 
@@ -1092,6 +1105,7 @@ function M:RefreshShopUI()
   end
   local ShopMain = UIManager(GWorld.GameInstance):GetUIObj("ShopMain")
   if ShopMain then
+    ShopMain.NotNeedPlayEntryAnimation = true
     ShopMain:RefreshSubTabData(ShopMain.CurSubTabMap, true, true)
   end
   local CommonShopActivity = UIManager(GWorld.GameInstance):GetUIObj("ShopActivity")

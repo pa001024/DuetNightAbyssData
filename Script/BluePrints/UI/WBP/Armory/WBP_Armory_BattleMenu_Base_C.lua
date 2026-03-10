@@ -834,7 +834,7 @@ function M:NewItemContent(ServerData)
     else
       Obj.ItemName = GText("INFINITY_SYMBOL")
       Obj.ItemDetailsButton01EventInfo = self:CreateQuickEquipButtonEventInfo(Obj)
-      if Obj.ResourceSType == "GestureItem" then
+      if Obj.ResourceSType == "GestureItem" and not UIConst.LimitPreviewResource[Obj.Id] then
         Obj.ItemDetailsButton02EventInfo = self:CreatePreviewButtonEventInfo(Obj)
       end
     end
@@ -1284,7 +1284,7 @@ function M:ResetContentButtonInfo(Content)
     else
       Content.ItemDetailsButton01EventInfo = self:CreateQuickEquipButtonEventInfo(Content)
     end
-    if Content.ResourceSType == "GestureItem" then
+    if Content.ResourceSType == "GestureItem" and not UIConst.LimitPreviewResource[Content.Id] then
       Content.ItemDetailsButton02EventInfo = self:CreatePreviewButtonEventInfo(Content)
     else
       Content.ItemDetailsButton02EventInfo = nil
@@ -1361,6 +1361,8 @@ function M:UpdateItemDetails(Content)
   Content.bHideGamePad = true
   self.Tips_Item:RefreshItemInfo(Content, true)
   self:UpdateItemDetailsButton(Content)
+  self:StopAnimation(self.Tips_Out)
+  self:PlayAnimation(self.Tips_In)
 end
 
 function M:UpdateItemDetailsButton(Content)
@@ -1374,8 +1376,6 @@ end
 
 function M:ShowItemDetail()
   self:UpdateItemDetails(self.ItemtDetailContent)
-  self:StopAnimation(self.Tips_Out)
-  self:PlayAnimation(self.Tips_In)
   self.Tips_Item:SetVisibility(UIConst.VisibilityOp.Visible)
   if self.IsShowTips then
     return

@@ -181,7 +181,7 @@ function M:OnListItemObjectSet(Content)
   self.CompleteMask:SetVisibility(ESlateVisibility.Collapsed)
   if locked then
     self.Change:SetActiveWidgetIndex(0)
-  elseif not achieve:IsFinished() and achieve:CanRecvReward() then
+  elseif not achieve:IsFinished() then
     self.Change:SetActiveWidgetIndex(1)
     if achieve:IsIndividual() and not data.ShowTargetProgress then
       self.ing_Progress:SetText("(" .. achieve.CurrentValue .. "/" .. achieve.CompletionValue .. ")")

@@ -691,32 +691,7 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputType, CurGamepadName)
 end
 
 function M:OnUpdateActivityByAction(OpAction, ...)
-  if "QuestGetReward" == OpAction then
-    local QuestId = (...)
-    local ActivityID = DataMgr.CommonQuestDetail[QuestId].EventId
-    local CurPageWidget = self.AllCurrentActivityPage[self.CurTabId]
-    if nil ~= CurPageWidget and CurPageWidget:GetActivityId() == ActivityID and CurPageWidget:IsPageInVisible() then
-      CurPageWidget:RefreshItemStyleByAction("QuestGetReward", QuestId)
-    end
-  elseif "QuestGetAllReward" == OpAction then
-    local PhaseId = (...)
-    local ActivityID = DataMgr.CommonQuestPhase[PhaseId].EventId
-    local CurPageWidget = self.AllCurrentActivityPage[self.CurTabId]
-    if nil ~= CurPageWidget and CurPageWidget:GetActivityId() == ActivityID and CurPageWidget:IsPageInVisible() then
-      CurPageWidget:RefreshItemStyleByAction("QuestGetAllReward", PhaseId)
-    end
-  elseif "QuestComplete" == OpAction then
-    local QuestId = (...)
-    local ActivityID = DataMgr.CommonQuestDetail[QuestId].EventId
-    local CurPageWidget = self.AllCurrentActivityPage[self.CurTabId]
-    if nil ~= CurPageWidget and CurPageWidget:GetActivityId() == ActivityID and CurPageWidget:IsPageInVisible() then
-      CurPageWidget:RefreshItemStyleByAction("QuestComplete", QuestId)
-    end
-    self:UpdateTabRedInfoByActivityID(nil, ActivityID)
-  elseif "QuestRefreshReddot" == OpAction then
-    local ActivityID = (...)
-    self:UpdateTabRedInfoByActivityID(nil, ActivityID)
-  elseif "SignGetReward" == OpAction then
+  if "SignGetReward" == OpAction then
     local ActivityID, RewardIndex = ...
     local CurPageWidget = self.AllCurrentActivityPage[self.CurTabId]
     if nil ~= CurPageWidget and CurPageWidget:GetActivityId() == ActivityID and CurPageWidget:IsPageInVisible() then

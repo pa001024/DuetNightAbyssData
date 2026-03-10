@@ -1,7 +1,7 @@
 local Component = {}
 local EntertainmentController = require("BluePrints.UI.WBP.Entertainment.EntertainmentController")
 
-function Component:EnterWorld()
+function Component:_OnLoginSuccess()
   EntertainmentController:Init()
 end
 

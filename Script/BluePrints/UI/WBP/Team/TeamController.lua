@@ -280,6 +280,7 @@ function M:RecvTeamBeAgreed(Uid)
 end
 
 function M:RecvTeamOnAddPlayer(MemberInfo)
+  TeamModel:TryAddCachedRecoveryTeamInfo(MemberInfo)
   TeamModel:AddTeamMember(MemberInfo)
   local Nickname = MemberInfo.Nickname
   if Nickname then
@@ -290,6 +291,7 @@ function M:RecvTeamOnAddPlayer(MemberInfo)
 end
 
 function M:RecvTeamOnDelPlayer(Uid, LeaveReason)
+  TeamModel:TryDelCachedRecoveryTeamInfo(Uid)
   local Member = TeamModel:GetTeamMember(Uid)
   if Member and not Member.bDsData then
     local Text = ""
@@ -336,6 +338,7 @@ function M:RecvDsServerDie()
 end
 
 function M:RecvTeamOnChangeLeader(Uid)
+  TeamModel:TryChangeLeaderInRecoveryTeamInfo(Uid)
   local NewLeader = TeamModel:GetTeamMember(Uid)
   local OldLeaderId = TeamModel:GetTeamLeaderId()
   if NewLeader and not NewLeader.bDsData then

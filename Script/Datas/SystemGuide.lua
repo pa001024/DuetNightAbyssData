@@ -759,6 +759,7 @@ return ReadOnly("SystemGuide", {
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_ZuoQi.story",
     IsInRegion = 1,
+    OpenInterface = "BattleMain",
     PlayerInControl = 1,
     SysGuideId = 2092,
     UIUnlockRule = "Mount"

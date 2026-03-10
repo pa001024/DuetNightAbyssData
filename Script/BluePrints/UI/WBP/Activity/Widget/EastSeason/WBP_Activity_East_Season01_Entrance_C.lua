@@ -6,6 +6,7 @@ local EastSeasonQuestUtils = require("BluePrints.UI.WBP.Activity.Widget.EastSeas
 
 function M:Construct()
   self.Btn_Click.OnClicked:Add(self, self.OnClick)
+  self.Btn_Click.OnPressed:Add(self, self.OnPressed)
 end
 
 function M:InitUI()
@@ -53,6 +54,10 @@ function M:OnClick()
     TaskPage = UIManager:LoadUINew("ActivityEastTask", self.EventId, self.TabId, self.ParentWidget)
     UIManager:AddToJumpPageDeque(TaskPage)
   end
+end
+
+function M:OnPressed()
+  AudioManager(self):PlayUISound(nil, "event:/ui/activity/huaxu_sub_page_btn_click", nil, nil)
 end
 
 function M:BP_GetDesiredFocusTarget()

@@ -151,7 +151,7 @@ return ReadOnly("AnimCacheMap", {
     MonModelId = 99,
     MontagePath = {
       [4] = "AnimMontage'/Game/Asset/Char/Monster/JT_Ranger/Animation/Montage/Combat/Hit/JT_Ranger_Die_Montage.JT_Ranger_Die_Montage'",
-      [5] = "AnimMontage'/Game/Asset/Char/Monster/Jt_Ranger/Animation/Montage/Combat/Skill/JT_Ranger_Attack01_Montage.JT_Ranger_Attack01_Montage'"
+      [5] = "AnimMontage'/Game/Asset/Char/Monster/JT_Ranger/Animation/Montage/Combat/Skill/JT_Ranger_Attack01_Montage.JT_Ranger_Attack01_Montage'"
     },
     bBlendLowerBody = T.RT_1
   },
@@ -469,16 +469,16 @@ return ReadOnly("AnimCacheMap", {
     EightDirectionMove = T.RT_17,
     MonModelId = 700301,
     MontagePath = {
-      [4] = "AnimMontage'/Game/Asset/Char/Monster/Jt_Ranger/Animation/Montage/Combat/Hit/JT_Ranger_Die_Montage.JT_Ranger_Die_Montage'",
-      [5] = "AnimMontage'/Game/Asset/Char/Monster/Jt_Ranger/Animation/Montage/Combat/Skill/JT_Ranger_Attack01_Montage.JT_Ranger_Attack01_Montage'",
+      [4] = "AnimMontage'/Game/Asset/Char/Monster/JT_Ranger/Animation/Montage/Combat/Hit/JT_Ranger_Die_Montage.JT_Ranger_Die_Montage'",
+      [5] = "AnimMontage'/Game/Asset/Char/Monster/JT_Ranger/Animation/Montage/Combat/Skill/JT_Ranger_Attack01_Montage.JT_Ranger_Attack01_Montage'",
       [6] = "AnimMontage'/Game/Asset/Char/Monster/JT_Ranger/Animation/Montage/Combat/Hit/JT_Ranger_HeavyHit_Montage.JT_Ranger_HeavyHit_Montage'",
       [7] = "AnimMontage'/Game/Asset/Char/Monster/JT_Ranger/Animation/Montage/Combat/Hit/JT_Ranger_LightHit1_Montage.JT_Ranger_LightHit1_Montage'",
       [8] = "AnimMontage'/Game/Asset/Char/Monster/JT_Ranger/Animation/Montage/Combat/Hit/JT_Ranger_LightHit2_Montage.JT_Ranger_LightHit2_Montage'",
       [9] = "AnimMontage'/Game/Asset/Char/Monster/JT_Ranger/Animation/Montage/Combat/Hit/JT_Ranger_LightHitRanged_Montage.JT_Ranger_LightHitRanged_Montage'",
       [10] = "AnimMontage'/Game/Asset/Char/Monster/JT_Ranger/Animation/Montage/Combat/Hit/JT_Ranger_GetUpBack_Montage.JT_Ranger_GetUpBack_Montage'",
       [11] = "AnimMontage'/Game/Asset/Char/Monster/JT_Ranger/Animation/Montage/Combat/Hit/JT_Ranger_GetUpFront_Montage.JT_Ranger_GetUpFront_Montage'",
-      [12] = "AnimMontage'/Game/Asset/Char/Monster/Jt_Ranger/Animation/Montage/Combat/Skill/JT_Ranger_Reload_Montage.JT_Ranger_Reload_Montage'",
-      [13] = "AnimMontage'/Game/Asset/Char/Monster/Jt_Ranger/Animation/Montage/Combat/Skill/JT_Ranger_Skill01_Montage.JT_Ranger_Skill01_Montage'"
+      [12] = "AnimMontage'/Game/Asset/Char/Monster/JT_Ranger/Animation/Montage/Combat/Skill/JT_Ranger_Reload_Montage.JT_Ranger_Reload_Montage'",
+      [13] = "AnimMontage'/Game/Asset/Char/Monster/JT_Ranger/Animation/Montage/Combat/Skill/JT_Ranger_Skill01_Montage.JT_Ranger_Skill01_Montage'"
     },
     bBlendLowerBody = {
       [1] = true,

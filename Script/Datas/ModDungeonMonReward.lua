@@ -888,7 +888,7 @@ return ReadOnly("ModDungeonMonReward", {
     Condition = T.RT_5,
     DungeonDropReward = 136010,
     DungeonList = {91204},
-    DungeonRewardView = 136009,
+    DungeonRewardView = 136010,
     MonRewardId = 16010,
     MonsterUnitId = 10005024,
     Sequence = 2

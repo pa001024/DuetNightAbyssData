@@ -20,6 +20,14 @@ function AutoChessRewardModel:MakeRewardData(EventId)
   Params.ConfigData.InSoundPath = "event:/ui/armory/open"
   Params.ConfigData.OutSoundPath = "event:/ui/armory/open"
   Params.ConfigData.TabSoundPath = "event:/ui/activity/auto_chess_mid_btn_click"
+  
+  function Params.ConfigData.RefreshPanleCallBack(Widget)
+    if Widget then
+      self:RefreshConfigData(CommonConst.AutoChessEventId, Widget)
+      Widget:RefreshItems()
+    end
+  end
+  
   local SortedInfo = {}
   for QuestPhaseId, PhaseConfig in pairs(DataMgr.CommonQuestPhase) do
     if PhaseConfig.EventId == EventId then
@@ -74,13 +82,17 @@ function AutoChessRewardModel:MakeRewardData(EventId)
             Item.CanReceive = CommonQuestActivity[QuestId].Progress >= CommonQuestActivity[QuestId].Target and false == CommonQuestActivity[QuestId].RewardsGot
           end
           Item.Type = QuestPhaseId
-          Item.RewardsGot = CommonQuestActivity[QuestId].RewardsGot
+          if CommonQuestActivity[QuestId] then
+            Item.RewardsGot = CommonQuestActivity[QuestId].RewardsGot
+          end
           Item.NotreachText = GText("UI_Archive_CollectionInProgress")
           Item.Hint = GText(Config.StarterQuestDes)
           Item.ReddotName = "AutoChessReward"
           Item.ReceiveButtonText = GText("UI_Archive_CollectionClaim")
           Item.Num = Config.Target
-          Item.TextProgress = "(" .. tostring(CommonQuestActivity[QuestId].Progress) .. "/" .. tostring(CommonQuestActivity[QuestId].Target) .. ")"
+          if CommonQuestActivity[QuestId] then
+            Item.TextProgress = "(" .. tostring(CommonQuestActivity[QuestId].Progress) .. "/" .. tostring(CommonQuestActivity[QuestId].Target) .. ")"
+          end
           Item.HideProgressAfterGot = true
           Item.ReceiveCallBack = self.GetReward
           Item.ReceiveParm = {}
@@ -127,6 +139,7 @@ function AutoChessRewardModel:MakeRewardData(EventId)
           if Widget then
             self:RefreshConfigData(EventId, Widget)
             
+            self:RefreshReddotInfo(true)
             Widget:RefreshDaily()
           end
         end
@@ -170,7 +183,7 @@ function AutoChessRewardModel:GetAllRewards(ReceiveAllParm)
         end
       end
       UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, Reward, false, function()
-        ReceiveAllParm.SelfWidget:SetFocus()
+        ReceiveAllParm.SelfWidget:ScrollToSelectTab()
       end, ReceiveAllParm.SelfWidget)
       ReceiveAllParm.SelfWidget:RefreshButton(HaveReWardToGet)
       DebugPrint("@@@hRaid GetAllRewards HaveReWardToGet", HaveReWardToGet)
@@ -218,7 +231,7 @@ function AutoChessRewardModel:GetReward(Content)
       Content.SelfWidget:RefreshItems()
       DebugPrint("@@@Raid GetReward HaveReWardToGet", HaveReWardToGet)
       UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, Rewards, false, function()
-        Content.SelfWidget:SetFocus()
+        Content.Owner.List_Item:SetFocus()
       end, Content.SelfWidget)
     end
     
@@ -295,7 +308,6 @@ function AutoChessRewardModel:RefreshConfigData(EventId, Widget)
       Data.NowNum, Data.NumMax = EastSeasonQuestUtils:GetQuestPhaseInfo(EventId, Data.ReceiveAllParam.QuestPhaseId)
     end
   end
-  self:RefreshReddotInfo(true)
 end
 
 return AutoChessRewardModel

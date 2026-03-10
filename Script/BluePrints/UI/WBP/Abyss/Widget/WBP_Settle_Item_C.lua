@@ -3,12 +3,13 @@ local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C"
 })
 
-function M:SetIcon(Icon)
-  if not Icon then
+function M:SetIcon(IconPath)
+  if not IconPath then
     DebugPrint("thy   道具框缺少Icon")
     return
   end
   local IconDynaMaterial = self.Icon_Item:GetDynamicMaterial()
+  local Icon = LoadObject(IconPath)
   if IsValid(IconDynaMaterial) then
     if not IsValid(Icon) then
       DebugPrint("thy     请对应系统检查Icon是否正确")
@@ -23,14 +24,14 @@ end
 function M:OnListItemObjectSet(Content)
   self.Index = Content.Index
   self.Type = Content.Type
-  if not Content.Icon or Content.Icon == "" then
+  if not Content.IconPath or Content.IconPath == "" then
     self.Icon_Item:SetVisibility(ESlateVisibility.Collapsed)
     self.Icon_Empty_Melee:SetVisibility(ESlateVisibility.Visible)
     self:SetEmptyIcon()
   else
     self.Icon_Item:SetVisibility(ESlateVisibility.Visibie)
     self.Icon_Empty_Melee:SetVisibility(ESlateVisibility.Collapsed)
-    self:SetIcon(Content.Icon)
+    self:SetIcon(Content.IconPath)
   end
 end
 

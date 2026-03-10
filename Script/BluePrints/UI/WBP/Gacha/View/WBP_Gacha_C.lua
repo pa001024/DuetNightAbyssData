@@ -73,7 +73,9 @@ end
 function M:ReceiveEnterState(StackAction)
   self.bCanNotClick = false
   M.Super.ReceiveEnterState(self, StackAction)
-  self:RefreshGachaInfo(self.TabId)
+  if self.bInGachaMain then
+    self:RefreshGachaInfo(self.TabId)
+  end
 end
 
 function M:InitListenEvent()
@@ -831,6 +833,8 @@ function M:PurchaseGachaResource(IsSingleGacha, bFromGachaRes)
       Params.CostNum = CoinNeededCount
       Params.LeftCallbackObj = self
       Params.RightCallbackObj = self
+      Params.LeftGamepadKey = Const.GamepadFaceButtonUp
+      Params.ShowBKeyClose = true
       self.PopupUI = UIManager(self):ShowCommonPopupUI(PopupId, Params, self)
     else
       local function Confirm()

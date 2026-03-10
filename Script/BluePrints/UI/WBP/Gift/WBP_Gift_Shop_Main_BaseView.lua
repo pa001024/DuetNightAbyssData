@@ -688,5 +688,24 @@ function M:Destruct()
   end
 end
 
+function M:SetFocus_Lua()
+  DebugPrint("默认聚焦 SetFocus_Lua")
+  if self.CurSubTabMap and self.CurSubTabMap.TabType == "Pack" then
+    if self.List_PayGift_Cached and self.List_PayGift_Cached.GetNumItems and self.List_PayGift_Cached:GetNumItems() > 0 then
+      self.List_PayGift_Cached:SetFocus()
+      return
+    end
+    if self.PayGiftPage and self.PayGiftPage.SetFocus then
+      self.PayGiftPage:SetFocus()
+      return
+    end
+  end
+  if self.List_Item and self.List_Item.GetNumItems and self.List_Item:GetNumItems() > 0 then
+    self.List_Item:SetFocus()
+  else
+    self:SetFocus()
+  end
+end
+
 AssembleComponents(M)
 return M

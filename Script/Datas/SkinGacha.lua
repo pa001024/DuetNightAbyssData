@@ -106,6 +106,8 @@ return ReadOnly("SkinGacha", {
     TabId = 3
   },
   [9004] = {
+    BgBGM = "event:/bgm/1_2/0136_zhiliu_skin01",
+    BgMusic = "event:/ui/btc/gacha_pool_zhiliu_skin01",
     BubbleShowGoods = {
       140270,
       140271,
@@ -126,7 +128,7 @@ return ReadOnly("SkinGacha", {
     GachaId = 9004,
     GachaName = "SkinGacha_Name_Special_3",
     GachaNameBp = "WidgetBlueprint'/Game/UI/WBP/GachaNew/Widget/Title/WBP_Gacha_PoolTitle_Zhiliu01.WBP_Gacha_PoolTitle_Zhiliu01'",
-    GachaStartTime = LocalTimeProxy(1768356000),
+    GachaStartTime = LocalTimeProxy(1770602400),
     GachaTimes = 1,
     GachaType = "GACHA_SKIN_TYPE_SPECIAL_3",
     GachaWarning = "SkinGacha_Warning_Special_3",

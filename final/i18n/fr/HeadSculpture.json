@@ -199,8 +199,8 @@
   },
   {
     "id": 20005,
-    "name": "",
-    "desc": "UI_PlayerHead_Des_20005",
+    "name": "Portrait : La stratège – Libations",
+    "desc": "Utilisable comme avatar.",
     "icon": "T_Head_Zhiliu01"
   },
   {
@@ -856,5 +856,47 @@
     "name": "Le Cri",
     "desc": "Utilisable comme avatar.",
     "icon": "T_Head_Art_0002"
+  },
+  {
+    "id": 30110,
+    "name": "Dominer monts et fleuves – Pourpre profond",
+    "desc": "Utilisable comme avatar.",
+    "icon": "T_Head_Art_0014_03"
+  },
+  {
+    "id": 30111,
+    "name": "Dominer monts et fleuves – Gris plomb",
+    "desc": "Utilisable comme avatar.",
+    "icon": "T_Head_Art_0014_01"
+  },
+  {
+    "id": 30112,
+    "name": "Dominer monts et fleuves – Doré",
+    "desc": "Utilisable comme avatar.",
+    "icon": "T_Head_Art_0014_02"
+  },
+  {
+    "id": 30113,
+    "name": "Gravé au pinceau – Bleu indigo",
+    "desc": "Utilisable comme avatar.",
+    "icon": "T_Head_Creator02"
+  },
+  {
+    "id": 30114,
+    "name": "Gravé au pinceau – Émeraude",
+    "desc": "Utilisable comme avatar.",
+    "icon": "T_Head_Creator01"
+  },
+  {
+    "id": 30115,
+    "name": "Gravé au pinceau – Pourpre profond",
+    "desc": "Utilisable comme avatar.",
+    "icon": "T_Head_Creator03"
+  },
+  {
+    "id": 30116,
+    "name": "Marchevent de la Fortune",
+    "desc": "Utilisable comme avatar.",
+    "icon": "T_Head_Art_0015"
   }
 ]

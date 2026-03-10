@@ -194,6 +194,7 @@ function Component:PurchaseShopItem(ShopItemId, Count, NotShow, PurchaseCallback
     end
     self.logger.info("PurchaseShopItem callback", Ret, ShopItemId, Count, PackRewards)
     if ShopMain then
+      ShopMain.NotNeedPlayEntryAnimation = true
       ShopMain:RefreshSubTabData(ShopMain.CurSubTabMap, true, true)
     end
     if CommonShopActivity then

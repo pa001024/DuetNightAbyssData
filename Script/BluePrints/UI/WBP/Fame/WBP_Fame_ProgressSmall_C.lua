@@ -7,7 +7,7 @@ function M:Init(Content)
   rawset(self, "MaxFameValue", Content.MaxFameValue)
   rawset(self, "bMaxLevel", Content.bMaxLevel)
   rawset(self, "bNotUpdateProgress", Content.bNotUpdateProgress)
-  self.TextLevel:SetText(string.format("%s :", GText("ReputationLevel_Title")))
+  self.TextLevel:SetText(GText("ReputationLevel_Title01"))
   self.TextLevelNum:SetText(self.FameLevel)
   if self.bMaxLevel then
     self.TextNow_1:SetText(GText("Reputation_MaxLevel"))

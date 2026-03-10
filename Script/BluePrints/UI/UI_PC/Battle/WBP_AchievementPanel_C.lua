@@ -77,10 +77,6 @@ function WBP_AchievementPanel_C:UpdateAchievementPage(CountStage, TargetNeedCoun
   end
   Straight_matter_Desc = Straight_matter_Desc .. " " .. desc
   self.ProgressBar_Achievement:SetPercent(PercentValue)
-  local EffectMaterial = self.RetainerBox_Text:GetEffectMaterial()
-  if EffectMaterial then
-    EffectMaterial:SetScalarParameterValue("HPValue1", PercentValue)
-  end
   self.Text_Title:SetText(Text_Title_Info)
   self.Straight_matter:SetText(Straight_matter_Desc)
   local Icon = LoadObject(DataMgr.AchievementType[DataMgr.Achievement[self.AchievementId].AchievementType].AchievementTypeIcon2)

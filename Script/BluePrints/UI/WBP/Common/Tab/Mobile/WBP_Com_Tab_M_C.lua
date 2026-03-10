@@ -171,6 +171,10 @@ function M:UpdateResource()
   end
 end
 
+function M:SetResourceBarVisibility(Visibility)
+  self.Panel_ResourceBar:SetVisibility(Visibility)
+end
+
 function M:UpdateTopRightTips()
   local function RealUpdateTopRightTips()
     if self.PopupInfoId ~= nil or type(self.InfoCallback) == "function" then

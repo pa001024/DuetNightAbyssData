@@ -36,8 +36,14 @@ function M:InitBaseView()
 end
 
 function M:UpdateStaticWidget()
-  self.Text_TitleFront:SetText(GText(MonthCardCommon.TextTitleFront))
-  self.Text_TitleBack:SetText(GText(MonthCardCommon.TextTitleBack))
+  if CommonConst.SystemLanguage == CommonConst.SystemLanguages.FR then
+    self.Text_TitleBack:GetParent():SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Text_TitleFront:SetText(string.format("%s %s", GText(MonthCardCommon.TextTitleBack), GText(MonthCardCommon.TextTitleFront)))
+  else
+    self.Text_TitleBack:GetParent():SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Text_TitleFront:SetText(GText(MonthCardCommon.TextTitleFront))
+    self.Text_TitleBack:SetText(GText(MonthCardCommon.TextTitleBack))
+  end
   self.Text_GetTitle:SetText(GText(MonthCardCommon.TextGetReward))
   self.Text_EveryDayGetTitle:SetText(GText(MonthCardCommon.TextEveryDayGetReward))
   self.Text_BtnBuy:SetText(GText(MonthCardCommon.TextBuyButton))

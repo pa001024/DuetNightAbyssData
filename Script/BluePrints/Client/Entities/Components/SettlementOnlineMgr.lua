@@ -75,7 +75,10 @@ end
 
 function Component:SettlementBattleEvent_SelectWalnut(DungeonId)
   DebugPrint("gmy@SettlementOnlineMgr Component:SettlementBattleEvent_SelectWalnut", DungeonId)
-  UIManager(self):LoadUINew("WalnutChoice", CommonConst.WalnutUser.Settlement, DungeonId, GWorld.GameInstance.CombatData.TempTeamInfo)
+  local WalnutChoiceUI = UIManager(self):LoadUINew("WalnutChoice", CommonConst.WalnutUser.Settlement, DungeonId, GWorld.GameInstance.CombatData.TempTeamInfo)
+  local WalnutUtils = require("BluePrints.UI.WBP.Walnut.WalnutChoice.WalnutUtils")
+  local WalnutId = WalnutUtils:GetWalnutCacheIdByDungeonId(DungeonId)
+  WalnutChoiceUI:SelectWalnutById(WalnutId)
   EventManager:FireEvent(EventID.SelectWalnut)
 end
 

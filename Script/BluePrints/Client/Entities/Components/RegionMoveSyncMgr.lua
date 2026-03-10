@@ -184,6 +184,7 @@ function Component:RegionSyncAddRoleToCreate(ObjId, RoleInfo)
   SuitTalble.Colors = CharInfo.Colors
   SuitTalble.SkinId = CharInfo.SkinId
   SuitTalble.HairId = CharInfo.HairId
+  SuitTalble.HairColors = CharInfo.HairColors
   if RoleInfo.WeaponInfo then
     local MeleeWeapon = {}
     if RoleInfo.WeaponInfo.MeleeWeapon then
@@ -231,6 +232,8 @@ function Component:RegionSyncChangeRoleInfo(ObjId, RoleInfo)
   SuitTalble.AccessorySuit = CharInfo.AccessorySuit
   SuitTalble.Colors = CharInfo.Colors
   SuitTalble.SkinId = CharInfo.SkinId
+  SuitTalble.HairId = CharInfo.HairId
+  SuitTalble.HairColors = CharInfo.HairColors
   if RoleInfo.WeaponInfo then
     local MeleeWeapon = {}
     if RoleInfo.WeaponInfo.MeleeWeapon then

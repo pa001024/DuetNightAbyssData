@@ -824,6 +824,14 @@ return ReadOnly("Npc", {
     UnitId = 95401,
     UnitName = "UI_CHAR_NAME_5401"
   },
+  [99998] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    MailHead = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Gift.T_Head_Gift'",
+    NpcType = "Normal",
+    UnitId = 99998,
+    UnitName = "UI_CHAR_NAME_9999"
+  },
   [99999] = {
     Camp = "NPC",
     CollisionLevel = 999,
@@ -12778,7 +12786,7 @@ return ReadOnly("Npc", {
     NpcType = "Normal",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/NPC_Wuyou/Wuyou02/BP_NPC_Wuyou02_Explore.BP_NPC_Wuyou02_Explore",
     UnitId = 830001,
-    UnitName = "UI_Npc_Name_WuyouSheng_Explore"
+    UnitName = "UI_Npc_Name_Wuyousheng_Explore"
   },
   [888888] = {
     BT = "BehaviorTree'/Game/AssetDesign/AI/Npc/Cat_Home/BT_Npc_Cat_Home.BT_Npc_Cat_Home'",

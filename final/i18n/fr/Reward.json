@@ -53870,19 +53870,19 @@
       {
         "id": 211,
         "t": "Resource",
-        "c": 40,
+        "c": 4,
         "n": "Indice de Mandat scellé"
       },
       {
         "id": 102,
         "t": "Resource",
-        "c": 1200,
+        "c": 120,
         "n": "Globule cramoisi"
       },
       {
         "id": 20013,
         "t": "Resource",
-        "c": 30,
+        "c": 3,
         "n": "Souvenir des Lunariens"
       }
     ]
@@ -53894,7 +53894,7 @@
       {
         "id": 101,
         "t": "Resource",
-        "c": 40000,
+        "c": 4000,
         "n": "Pièce"
       }
     ]
@@ -55084,6 +55084,12 @@
         "n": "Indice de Mandat scellé"
       },
       {
+        "id": 30113,
+        "t": "Resource",
+        "c": 1,
+        "n": "Teinture intermédiaire : Sirop d’érable"
+      },
+      {
         "id": 2009,
         "t": "Resource",
         "c": 9,
@@ -55094,12 +55100,6 @@
         "t": "Resource",
         "c": 1000,
         "n": "Globule cramoisi"
-      },
-      {
-        "id": 30113,
-        "t": "Resource",
-        "c": 1,
-        "n": "Teinture intermédiaire : Sirop d’érable"
       }
     ]
   },
@@ -55144,6 +55144,12 @@
         "n": "Indice de Mandat scellé"
       },
       {
+        "id": 30114,
+        "t": "Resource",
+        "c": 1,
+        "n": "Teinture intermédiaire : Cacao"
+      },
+      {
         "id": 101,
         "t": "Resource",
         "c": 120000,
@@ -55154,12 +55160,6 @@
         "t": "Resource",
         "c": 1000,
         "n": "Globule cramoisi"
-      },
-      {
-        "id": 30114,
-        "t": "Resource",
-        "c": 1,
-        "n": "Teinture intermédiaire : Cacao"
       }
     ]
   },
@@ -55204,6 +55204,12 @@
         "n": "Indice de Mandat scellé"
       },
       {
+        "id": 30115,
+        "t": "Resource",
+        "c": 1,
+        "n": "Teinture intermédiaire : Vague azurée"
+      },
+      {
         "id": 2010,
         "t": "Resource",
         "c": 5,
@@ -55214,12 +55220,6 @@
         "t": "Resource",
         "c": 40,
         "n": "Souvenir des Lunariens"
-      },
-      {
-        "id": 30115,
-        "t": "Resource",
-        "c": 1,
-        "n": "Teinture intermédiaire : Vague azurée"
       }
     ]
   },
@@ -55232,6 +55232,12 @@
         "t": "Resource",
         "c": 60,
         "n": "Indice de Mandat scellé"
+      },
+      {
+        "id": 30116,
+        "t": "Resource",
+        "c": 1,
+        "n": "Teinture intermédiaire : Pin ancien"
       },
       {
         "id": 101,
@@ -55250,12 +55256,6 @@
         "t": "Resource",
         "c": 40,
         "n": "Souvenir des Lunariens"
-      },
-      {
-        "id": 30116,
-        "t": "Resource",
-        "c": 1,
-        "n": "Teinture intermédiaire : Pin ancien"
       }
     ]
   },
@@ -71178,6 +71178,12 @@
         "t": "Resource",
         "c": 1,
         "n": "Rune de rupture"
+      },
+      {
+        "id": 6100022,
+        "t": "Resource",
+        "c": 1,
+        "n": "Rune de perforation"
       }
     ]
   },
@@ -71208,6 +71214,12 @@
         "t": "Resource",
         "c": 1,
         "n": "Rune de trempe"
+      },
+      {
+        "id": 6100013,
+        "t": "Resource",
+        "c": 1,
+        "n": "Rune d’enragement"
       }
     ]
   },
@@ -71400,6 +71412,12 @@
         "t": "Resource",
         "c": 1,
         "n": "Rune PV·DÉF"
+      },
+      {
+        "id": 6100008,
+        "t": "Resource",
+        "c": 1,
+        "n": "Rune Bouclier·PV"
       }
     ]
   },
@@ -71430,6 +71448,18 @@
         "t": "Resource",
         "c": 1,
         "n": "Rune de restauration"
+      },
+      {
+        "id": 6100015,
+        "t": "Resource",
+        "c": 1,
+        "n": "Rune d’inspiration"
+      },
+      {
+        "id": 6100016,
+        "t": "Resource",
+        "c": 1,
+        "n": "Rune de résonance"
       }
     ]
   },
@@ -71454,6 +71484,18 @@
         "t": "Resource",
         "c": 1,
         "n": "Rune de frénésie"
+      },
+      {
+        "id": 6100018,
+        "t": "Resource",
+        "c": 1,
+        "n": "Rune de raz-de-marée"
+      },
+      {
+        "id": 6100023,
+        "t": "Resource",
+        "c": 1,
+        "n": "Rune fatale"
       }
     ]
   },
@@ -71484,6 +71526,18 @@
         "t": "Resource",
         "c": 1,
         "n": "Rune de bienveillance"
+      },
+      {
+        "id": 6100020,
+        "t": "Resource",
+        "c": 1,
+        "n": "Rune du dernier sursaut"
+      },
+      {
+        "id": 6100021,
+        "t": "Resource",
+        "c": 1,
+        "n": "Rune de ténacité"
       }
     ]
   },
@@ -71532,6 +71586,12 @@
         "t": "Resource",
         "c": 1,
         "n": "Rune d’éclair foudroyant"
+      },
+      {
+        "id": 6100029,
+        "t": "Resource",
+        "c": 1,
+        "n": "Rune de flétrissure"
       }
     ]
   },
@@ -73438,6 +73498,18 @@
         "t": "Resource",
         "c": 30,
         "n": "Fragment de pensée : Rebecca"
+      }
+    ]
+  },
+  {
+    "id": 2010005,
+    "m": "Fixed",
+    "child": [
+      {
+        "id": 100,
+        "t": "Resource",
+        "c": 160,
+        "n": "Phoxène"
       }
     ]
   },

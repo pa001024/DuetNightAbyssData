@@ -100,6 +100,7 @@ function M:InitItemName(ShopItemData)
   end
   self.Text_Name:SetText(ItemName)
   self.Text_Name_NoQuality:SetText(ItemName)
+  self:Set_Text_Height()
 end
 
 function M:InitItemPrice(ShopItemData)
@@ -421,7 +422,7 @@ function M:ShowCheckUI()
   DebugPrint("WBP_Impression_ShopItem: ShowCheckUI")
   self.ShopUI.bCannotResponseEscape = true
   local ImpressionResultUI = self.ShopUI:CreateWidgetNew("ImperssionResult")
-  ImpressionResultUI:AddToViewport()
+  ImpressionResultUI:AddToViewport(self.ShopUI:GetZOrder())
   self.ImpressionResultUI = ImpressionResultUI
   local CheckParams = self:GenerateUICheckParams()
   if not CheckParams then
@@ -603,6 +604,7 @@ end
 
 function M:OnPurchaseEnd()
   self.ShopUI:SetFocus()
+  self.ShopUI:RefreshImpressionList()
   self.ShopUI.bCannotResponseEscape = false
 end
 

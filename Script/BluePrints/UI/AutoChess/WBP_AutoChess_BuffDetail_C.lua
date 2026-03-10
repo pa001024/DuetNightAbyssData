@@ -50,7 +50,7 @@ function View:Init(MissionId)
     })
   end
   self:PlayAnimation(self.In)
-  AudioManager(self):PlayUISound(self, "event:/ui/roguelike/affix_info_panel_show", " ", nil)
+  AudioManager(self):PlayUISound(self, "event:/ui/roguelike/affix_info_panel_show", "BuffDetailPanelSfx", nil)
   self:SetFocus()
 end
 
@@ -109,7 +109,7 @@ end
 
 function View:OnClosedButtonClicked()
   self:PlayAnimation(self.Out)
-  AudioManager(self):PlayUISound(self, "event:/ui/roguelike/affix_info_panel_show", " ", {ToEnd = 1})
+  AudioManager(self):SetEventSoundParam(self, "BuffDetailPanelSfx", {ToEnd = 1})
 end
 
 function View:BindBtnEvent()

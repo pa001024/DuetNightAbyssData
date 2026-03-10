@@ -174860,6 +174860,7 @@ SEQ{ MoveTo{ActorId{701075},MoveSpeed{150},TargetPoint{"Targetpoint_20030907"}},
           },
           GUID = "800618E2",
           SpeakNpcId = 200002,
+          Subtitle = "Oh! I get it now! The patient Fushu's sister treated wasn't his wife at all — it was Weisheng himself! His wife had died long before, and he was so heartbroken he kept believing she was still beside him!",
           TalkActionId = {
             [1] = "200002:Excited02_Start"
           }

@@ -19,6 +19,7 @@ function Component:CacheDyePlanInfoCopyed(DyePlanInfo)
     PlanName = DyePlanInfo.PlanName,
     SkinType = DyePlanInfo.SkinType,
     SkinId = DyePlanInfo.SkinId,
+    CharId = DyePlanInfo.CharId,
     colorStrings = {}
   }
   if DyePlanInfo.Colors then
@@ -57,6 +58,7 @@ function Component:GenerateDyeShareMsg()
     PlanName = DyePlanInfoCopyed.PlanName,
     SkinType = DyePlanInfoCopyed.SkinType,
     SkinId = DyePlanInfoCopyed.SkinId,
+    CharId = DyePlanInfoCopyed.CharId,
     Colors = DyePlanInfoCopyed.colorStrings or {}
   }
   return ChatCommon.DyePlanCopyHeader .. json.encode(Table)

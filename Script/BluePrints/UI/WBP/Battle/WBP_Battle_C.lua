@@ -1167,7 +1167,11 @@ function WBP_Battle_C:InitHomeBaseMain()
     self:AddDispatcher(EventID.OnCharShowPartMesh, self, self.OnCharAccessoryChange)
     self:AddDispatcher(EventID.OnCharCornerVisibilityChanged, self, self.OnCharAccessoryChange)
     self:AddDispatcher(EventID.OnCharSkinChanged, self, self.OnCharSkinChange)
+    self:AddDispatcher(EventID.OnCharSkinColorPlanChanged, self, self.OnCharSkinChange)
     self:AddDispatcher(EventID.OnCharColorsChanged, self, self.OnCharColorsChanged)
+    self:AddDispatcher(EventID.OnCharHairChanged, self, self.OnCharAccessoryChange)
+    self:AddDispatcher(EventID.OnCharHairColorPlanChanged, self, self.OnCharHairChanged)
+    self:AddDispatcher(EventID.OnCharHairColorsChanged, self, self.RefreshAllSignBoardNpcSkin)
     self:AddDispatcher(EventID.OnWindowResized, self, function(self)
       self.bRebuildChatSimple = true
     end)
@@ -1199,6 +1203,10 @@ function WBP_Battle_C:InitBtnList()
           self.SystemUnlockList[index] = self:CheckUIUnlock(RuleName)
         end
       end
+    end
+    local Node = ReddotManager.GetTreeNode(Data.ReddotNode)
+    if Node and Node.OnCheckEscShowCondition then
+      Node:OnCheckEscShowCondition(Data.EnterId)
     end
   end
   self:InitSystemEntrance()
@@ -1417,6 +1425,33 @@ function WBP_Battle_C:OnCharColorsChanged(Ret, SkinId)
   end
 end
 
+function WBP_Battle_C:RefreshAllSignBoardNpcSkin()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  for key, NpcId in pairs(Avatar.SignBoardNpc) do
+    if NpcId ~= CommonConst.SignBoardUnset then
+      local NpcInfo = DataMgr.Npc[NpcId]
+      if NpcInfo and NpcInfo.CharId then
+        self:UpdateSignBoardNpcSkin(NpcInfo.CharId)
+      end
+    end
+  end
+end
+
+function WBP_Battle_C:OnCharHairChanged(Ret, HairId)
+  if not Ret == ErrorCode.RET_SUCCESS then
+    return
+  end
+  local HairInfo = DataMgr.Hair[HairId]
+  if not HairInfo then
+    return
+  end
+  local CharId = HairInfo.CharId
+  self:UpdateSignBoardNpcSkin(CharId)
+end
+
 function WBP_Battle_C:OnCharSkinChange(Ret, CharUuid)
   if Ret == ErrorCode.RET_SUCCESS then
     local Avatar = GWorld:GetAvatar()
@@ -1500,16 +1535,20 @@ end
 function WBP_Battle_C:UnLoadSystem(UIName)
   local SystemInfo, IsPlayInAnim = DataMgr.MainUI, false
   self:RemovePlayInOutSystems(UIName)
-  for SystemId, Info in pairs(SystemInfo) do
-    if self:CheckNeedPlayInOutAnim(SystemId) then
-      local SystemName = Info.SystemUIName
-      if SystemName and SystemName == UIName then
-        local MenuWorld = UIManager(self):GetUIObj(UIConst.MenuWorld)
-        if MenuWorld then
-          return false
+  if UIName == UIConst.MenuLevel then
+    IsPlayInAnim = self:TryRecoverUI()
+  else
+    for SystemId, Info in pairs(SystemInfo) do
+      if self:CheckNeedPlayInOutAnim(SystemId) then
+        local SystemName = Info.SystemUIName
+        if SystemName and SystemName == UIName then
+          local MenuWorld = UIManager(self):GetUIObj(UIConst.MenuWorld)
+          if MenuWorld then
+            return false
+          end
+          IsPlayInAnim = self:TryRecoverUI()
+          break
         end
-        IsPlayInAnim = self:TryRecoverUI()
-        break
       end
     end
   end
@@ -1533,7 +1572,7 @@ function WBP_Battle_C:TryRecoverUI()
     return false
   end
   if self:CheckPlayInOutSystems() then
-    return
+    return false
   end
   self:PlayInAnim()
   self:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
@@ -2104,8 +2143,7 @@ function WBP_Battle_C:EMAfterInitialize()
     if UIConst.OptimizeSwitch[CommonConst.CLIENT_DEVICE_TYPE.MOBILE].UI_WRAPPING_WITH_INVALIDBOX then
     end
     if UIConst.OptimizeSwitch[CommonConst.CLIENT_DEVICE_TYPE.MOBILE].UI_WRAPPING_WITH_RETAINERBOX then
-      local IsShippingPackage = UE4.UKismetSystemLibrary.IsPackagedForDistribution()
-      if IsShippingPackage then
+      if self:CheckOptimizeSwitch_ForTaskBar() then
         self:ArrangeSingleWidgetWithRetainerBox(self.Pos_TaskBar, "CustomRetainerBox_TaskBar", 1, 10)
       end
       self:ArrangeSingleWidgetWithRetainerBox(self.Pos_Drops, "CustomRetainerBox_CommonDrops", 2, 10)
@@ -2117,6 +2155,21 @@ function WBP_Battle_C:EMAfterInitialize()
     self:ArrangeSingleWidgetWithRetainerBox(self.Pos_SpecialDrops, "CustomRetainerBox_SpecialDrops", 5, 10)
     self:ArrangeSingleWidgetWithRetainerBox(self.Char_Skill, "CustomRetainerBox_Skill", 2, 10)
   end
+end
+
+function WBP_Battle_C:CheckOptimizeSwitch_ForTaskBar()
+  local PlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName(self)
+  if "Android" == PlatformName then
+    return false
+  end
+  local IsShippingPackage = UE4.UKismetSystemLibrary.IsPackagedForDistribution()
+  local GameState = UE4.UGameplayStatics.GetGameState(self)
+  if GameState and GameState.GameModeType == "Synthesis" then
+    return false
+  elseif IsShippingPackage then
+    return true
+  end
+  return false
 end
 
 function WBP_Battle_C:OnHomeBaseeBtnShowNewClue(UIName)

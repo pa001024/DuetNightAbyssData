@@ -222,6 +222,7 @@ end
 
 function Component:PlayWalnutReady()
   self:PlayAnimation(self.LayoutRefresh)
+  self.WalnutChoiceFinish = 1
   self:StartDeputeWalnutReadyCountDown()
   self.Btn_No.Button_Area.OnClicked:Clear()
   self.Btn_No.Button_Area.OnClicked:Add(self, self.OnBtnGiveUpClicked)

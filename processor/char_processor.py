@@ -1288,15 +1288,20 @@ class CharProcessor(BaseProcessor):
 
         result = desc_value
         placeholder_count = 0
+        expr_index = 0
 
         # 处理所有 $...$ 表达式
         def replace_expr(match):
-            nonlocal placeholder_count
+            nonlocal placeholder_count, expr_index
             expr = match.group(1)
             placeholder_count += 1
 
-            # 检查表达式内部是否包含 *100
-            if "*100" in expr:
+            # 仅当后缀实际包含 % 时，才判定为百分比
+            is_percentage = self._is_value_percentage(
+                "$" + expr + "$", desc_value, expr_index
+            )
+            expr_index += 1
+            if is_percentage:
                 return "{%}"  # 百分比占位符
             else:
                 return "{}"  # 普通数值占位符
@@ -1313,14 +1318,29 @@ class CharProcessor(BaseProcessor):
 
         return result
 
-    def _is_value_percentage(self, desc_value):
-        """检查数值是否为百分比格式"""
-        if not isinstance(desc_value, str):
+    def _is_value_percentage(self, expr_value, full_desc_value=None, expr_index=0):
+        """检查单个表达式是否应按百分比格式处理"""
+        if not isinstance(expr_value, str):
             return False
-        # 检查是否包含 "*100"
-        if "*100" in desc_value:
+
+        expr = expr_value.strip()
+        if expr.startswith("$") and expr.endswith("$"):
+            expr = expr[1:-1]
+
+        # 不包含 *100 的表达式一定不是百分比
+        if "*100" not in expr:
+            return False
+
+        # 无完整描述上下文时，回退到旧逻辑（保持兼容）
+        if not isinstance(full_desc_value, str):
             return True
-        return False
+
+        matches = list(re.finditer(r"\$([^$]+)\$", full_desc_value))
+        if expr_index < 0 or expr_index >= len(matches):
+            return True
+
+        suffix = full_desc_value[matches[expr_index].end() :].lstrip()
+        return suffix.startswith("%")
 
     def _trim_trailing_zeros(self, arr):
         """去掉数组尾部的0，如果全为0则返回空数组"""
@@ -1431,7 +1451,9 @@ class CharProcessor(BaseProcessor):
             # 移除可能存在的%后缀
             if first_expr.endswith("%"):
                 first_expr = first_expr[:-1]
-            is_first_percentage = self._is_value_percentage("$" + first_expr + "$")
+            is_first_percentage = self._is_value_percentage(
+                "$" + first_expr + "$", preprocessed_desc_value, 0
+            )
             values1 = []
             for level in range(1, max_level + 1):
                 raw_value = self._calc_skill_desc_value_raw(
@@ -1462,7 +1484,7 @@ class CharProcessor(BaseProcessor):
                 if second_expr.endswith("%"):
                     second_expr = second_expr[:-1]
                 is_second_percentage = self._is_value_percentage(
-                    "$" + second_expr + "$"
+                    "$" + second_expr + "$", preprocessed_desc_value, 1
                 )
                 values2 = []
                 for level in range(1, max_level + 1):

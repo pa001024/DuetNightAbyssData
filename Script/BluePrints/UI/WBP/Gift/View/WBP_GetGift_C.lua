@@ -32,9 +32,9 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, ...)
   if ResourceObj then
     self.Image_GiftItem:SetBrushResourceObject(ResourceObj)
   end
-  local SubName = DataMgr.ShopTabSub[ShopItemConfig.SubTabId].SubName
+  local SubName = DataMgr.ShopTabSub[ShopItemConfig.GiftSubTabId].SubName
   self.Text_ItemType:SetText(GText(SubName))
-  self.Text_ItemName:SetText(GText(ResourceConfig.Name))
+  self.Text_ItemName:SetText(GText(ResourceConfig.Name or ResourceConfig.ResourceName))
   local Anim, SenderInfo, RecverInfo
   if GreetingsMode == EGreetingMode.SenderMode then
     SenderInfo = GWorld:GetAvatar()
@@ -107,7 +107,8 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, ...)
       },
       HintText = GText("UI_SendGift_DefaultWord"),
       TextLimit = 40,
-      BackFocusWidget = self
+      BackFocusWidget = self,
+      HideGamePadDeleteBtn = true
     })
     self.WS_Btn:SetActiveWidgetIndex(0)
     self.Com_Input_Multiline:SetVisibility(UIConst.VisibilityOp.Visible)
@@ -273,7 +274,9 @@ function M:OnPurChaseClick()
         CallbackInfo = {
           Func = self.OnRechargeCallback,
           Obj = self
-        }
+        },
+        LeftGamepadKey = Const.GamepadFaceButtonUp,
+        ShowBKeyClose = true
       })
     end
   end

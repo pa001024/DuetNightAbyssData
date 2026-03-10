@@ -70,6 +70,9 @@ function Component:TriggerRewardEvent(UnitId, Reason, Transform, ExtraInfo, Call
   ExtraInfo = ExtraInfo or {}
   local AvatarEid = self:GetAvatarEidByBattleEid(rawget(ExtraInfo, "SourceEid"))
   ExtraInfo.Avatar = AvatarEid
+  if Reason == CommonConst.RewardReason.MonsterDead and not AvatarEid then
+    ExtraInfo.Avatar = -1
+  end
   return self:AddCacheGenUnitReward(UnitId, Reason, Transform, ExtraInfo, Callback)
 end
 
@@ -87,13 +90,12 @@ function Component:AddCacheGenUnitReward(UnitId, Reason, Transform, ExtraInfo, C
     end
   end
   local bHasLogicRewards = false
-  local bForceLogicRewardReason = ForceLogicRewardReason[Reason]
-  if not ExtraInfo.Avatar and not bForceLogicRewardReason then
+  if not ExtraInfo.Avatar then
     self:AddCacheBattleReward(RewardIds, Reason, Transform, ExtraInfo)
   else
     local RewardId, BattleRewards = RewardUtils:SplitBattleRewards(RewardIds)
     self:AddCacheBattleReward(BattleRewards, Reason, Transform, ExtraInfo)
-    if #RewardId > 0 or bForceLogicRewardReason then
+    if #RewardId > 0 or ForceLogicRewardReason[Reason] then
       self:AddCacheLogicUnitReward(UnitId, Reason, Transform, ExtraInfo, Callback)
       bHasLogicRewards = true
     end

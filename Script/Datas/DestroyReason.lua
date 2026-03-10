@@ -173,6 +173,14 @@ return ReadOnly("DestroyReason", {
     IsTriggerDestroyEvent = false,
     IsTriggrRelationSpawn = true
   },
+  MonsterSpawnDestroy = {
+    DestroyReason = "MonsterSpawnDestroy",
+    IsClearGuide = true,
+    IsClearStaticCreatorRef = true,
+    IsMonClearBattleInfo = true,
+    IsTriggerDestroyEvent = false,
+    IsTriggrRelationSpawn = false
+  },
   NoReason = {
     DestroyReason = "NoReason",
     IsClearGuide = true,

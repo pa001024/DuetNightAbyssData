@@ -67,8 +67,8 @@ function M:InitOptParams()
   self.bAutoCheckPlayerHighMeshLOD = true
 end
 
-function M:SetEnableAnimBudget(bEnable)
-  self.bEnableAnimBudget = bEnable
+function M:SetEnableAnimCache(bEnable)
+  self.bEnableAnimCache = bEnable
 end
 
 function M:GetPlayerHighMeshLODIDConfig()

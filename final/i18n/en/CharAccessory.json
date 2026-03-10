@@ -85,7 +85,7 @@
     "desc": "An emblem of elegance, the embodiment of grace — or perhaps, just a butterfly unable to flutter its wings.",
     "icon": "T_Fashion_Head_SilverBow",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "Available from events"
   },
   {
     "id": 10012,
@@ -691,7 +691,7 @@
     "id": 11004,
     "name": "Flare Cascading",
     "desc": "A crimson loong soars with a spark between its jaws, spilling star-rain across the mortal world.",
-    "icon": "",
+    "icon": "T_Fashion_Fx13",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
   },
@@ -699,9 +699,9 @@
     "id": 12001,
     "name": "Glazed Whisper",
     "desc": "A glazed cup, brimful of half a life's bitters and sweets — yet a whole landscape rests in your hands.",
-    "icon": "T_Fashion_Hat03",
+    "icon": "T_Fashion_Hat03_01",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "Available at Shop"
   },
   {
     "id": 12002,
@@ -709,7 +709,7 @@
     "desc": "A brim neither too wide nor too narrow — just enough for an unhurried stroll in a gentle drizzle.",
     "icon": "T_Fashion_Hat04",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "Available at Shop"
   },
   {
     "id": 12003,
@@ -717,7 +717,7 @@
     "desc": "Cast your hopes and your future to the sky.",
     "icon": "T_Fashion_Hat01",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "Available at Shop"
   },
   {
     "id": 12004,
@@ -725,7 +725,7 @@
     "desc": "At the bend in the corridor, a ribbon flutters in the breeze.",
     "icon": "T_Fashion_Hat02",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "Available at Shop"
   },
   {
     "id": 12121,
@@ -1459,7 +1459,7 @@
     "id": 21004,
     "name": "Flare Flowing",
     "desc": "Firelight gives chase through swaying starlight; the river of stars stirs, and a loong drifts overhead.",
-    "icon": "",
+    "icon": "T_Fashion_Fx12",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
   },
@@ -1669,7 +1669,7 @@
     "desc": "Changes your Victory Posture.",
     "icon": "T_Fashion_SettlementAction_01",
     "rarity": 5,
-    "unlock": ""
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 31002,
@@ -1677,7 +1677,7 @@
     "desc": "Changes your Victory Posture.",
     "icon": "T_Fashion_SettlementAction_02",
     "rarity": 5,
-    "unlock": ""
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 40001,
@@ -2034,7 +2034,7 @@
   {
     "id": 50002,
     "name": "Argent Flare",
-    "desc": "{空格}",
+    "desc": " ",
     "icon": "T_Fashion_Fx03",
     "rarity": 4,
     "unlock": "Available through Myriad"
@@ -2042,15 +2042,15 @@
   {
     "id": 50003,
     "name": "Silvercandle Doll",
-    "desc": "{空格}",
+    "desc": " ",
     "icon": "T_Fashion_Fx11",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 60001,
-    "name": "{空格}",
-    "desc": "{空格}",
+    "name": " ",
+    "desc": " ",
     "icon": "",
     "rarity": 5,
     "unlock": ""
@@ -2083,7 +2083,7 @@
     "id": 70003,
     "name": "Flare Blossom: Gilt",
     "desc": "A loong soars and breathes fire; our songs carry on through the night.",
-    "icon": "T_Fashion_Head_YellowChick",
+    "icon": "T_Fashion_Fx10_02",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
   },
@@ -2139,7 +2139,7 @@
     "id": 70031,
     "name": "Flare Blossom: Rust Red",
     "desc": "A loong soars and breathes fire; our songs carry on through the night.",
-    "icon": "T_Fashion_Head_YellowChick",
+    "icon": "T_Fashion_Fx10_01",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
   },
@@ -2147,7 +2147,7 @@
     "id": 70032,
     "name": "Flare Blossom: Opaque White",
     "desc": "A loong soars and breathes fire; our songs carry on through the night.",
-    "icon": "T_Fashion_Head_YellowChick",
+    "icon": "T_Fashion_Fx10",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
   },
@@ -2155,7 +2155,7 @@
     "id": 70033,
     "name": "Flare Blossom: Azure",
     "desc": "A loong soars and breathes fire; our songs carry on through the night.",
-    "icon": "T_Fashion_Head_YellowChick",
+    "icon": "T_Fashion_Fx10_03",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
   },

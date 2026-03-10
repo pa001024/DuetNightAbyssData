@@ -2616,7 +2616,7 @@ return ReadOnly("VisualEffect", {
   [80010] = {
     EffectId = 80010,
     EffectPath = "/Game/Asset/Effect/Niagara/Costume/08HW/NS_HW_001.NS_HW_001",
-    FXPriorityType = 90,
+    FXPriorityType = 99,
     NotFollowRotation = true,
     PlayLocation = T.RT_32,
     SoundID = 3101,
@@ -2625,7 +2625,7 @@ return ReadOnly("VisualEffect", {
   [80011] = {
     EffectId = 80011,
     EffectPath = "/Game/Asset/Effect/Niagara/Costume/08HW/NS_HW_001_R.NS_HW_001_R",
-    FXPriorityType = 90,
+    FXPriorityType = 99,
     NotFollowRotation = true,
     PlayLocation = T.RT_32,
     SoundID = 3101,
@@ -2634,7 +2634,7 @@ return ReadOnly("VisualEffect", {
   [80012] = {
     EffectId = 80012,
     EffectPath = "/Game/Asset/Effect/Niagara/Costume/08HW/NS_HW_001_V.NS_HW_001_V",
-    FXPriorityType = 90,
+    FXPriorityType = 99,
     NotFollowRotation = true,
     PlayLocation = T.RT_32,
     SoundID = 3101,
@@ -2643,7 +2643,7 @@ return ReadOnly("VisualEffect", {
   [80013] = {
     EffectId = 80013,
     EffectPath = "/Game/Asset/Effect/Niagara/Costume/08HW/NS_HW_001_W.NS_HW_001_W",
-    FXPriorityType = 90,
+    FXPriorityType = 99,
     NotFollowRotation = true,
     PlayLocation = T.RT_32,
     SoundID = 3101,
@@ -2652,7 +2652,7 @@ return ReadOnly("VisualEffect", {
   [80020] = {
     EffectId = 80020,
     EffectPath = "/Game/Asset/Effect/Niagara/Costume/08HW/NS_HW_002.NS_HW_002",
-    FXPriorityType = 90,
+    FXPriorityType = 99,
     NotFollowRotation = true,
     PlayLocation = T.RT_32,
     SoundID = 3102,
@@ -2661,7 +2661,7 @@ return ReadOnly("VisualEffect", {
   [80021] = {
     EffectId = 80021,
     EffectPath = "/Game/Asset/Effect/Niagara/Costume/08HW/NS_HW_002_B.NS_HW_002_B",
-    FXPriorityType = 90,
+    FXPriorityType = 99,
     NotFollowRotation = true,
     PlayLocation = T.RT_32,
     SoundID = 3102,
@@ -2670,7 +2670,7 @@ return ReadOnly("VisualEffect", {
   [80022] = {
     EffectId = 80022,
     EffectPath = "/Game/Asset/Effect/Niagara/Costume/08HW/NS_HW_002_R.NS_HW_002_R",
-    FXPriorityType = 90,
+    FXPriorityType = 99,
     NotFollowRotation = true,
     PlayLocation = T.RT_32,
     SoundID = 3102,
@@ -2679,7 +2679,7 @@ return ReadOnly("VisualEffect", {
   [80023] = {
     EffectId = 80023,
     EffectPath = "/Game/Asset/Effect/Niagara/Costume/08HW/NS_HW_002_Y.NS_HW_002_Y",
-    FXPriorityType = 90,
+    FXPriorityType = 99,
     NotFollowRotation = true,
     PlayLocation = T.RT_32,
     SoundID = 3102,
@@ -2688,7 +2688,7 @@ return ReadOnly("VisualEffect", {
   [80030] = {
     EffectId = 80030,
     EffectPath = "/Game/Asset/Effect/Niagara/Costume/08HW/NS_DragonHW.NS_DragonHW",
-    FXPriorityType = 90,
+    FXPriorityType = 99,
     NotFollowRotation = true,
     PlayLocation = T.RT_32,
     SoundID = 3103,
@@ -2697,7 +2697,7 @@ return ReadOnly("VisualEffect", {
   [80031] = {
     EffectId = 80031,
     EffectPath = "/Game/Asset/Effect/Niagara/Costume/08HW/NS_DragonHW.NS_DragonHW",
-    FXPriorityType = 90,
+    FXPriorityType = 99,
     NotFollowRotation = true,
     PlayLocation = T.RT_32,
     SoundID = 3103,
@@ -2707,7 +2707,7 @@ return ReadOnly("VisualEffect", {
   [80032] = {
     EffectId = 80032,
     EffectPath = "/Game/Asset/Effect/Niagara/Costume/08HW/NS_DragonHW.NS_DragonHW",
-    FXPriorityType = 90,
+    FXPriorityType = 99,
     NotFollowRotation = true,
     PlayLocation = T.RT_32,
     SoundID = 3103,
@@ -2717,7 +2717,7 @@ return ReadOnly("VisualEffect", {
   [80033] = {
     EffectId = 80033,
     EffectPath = "/Game/Asset/Effect/Niagara/Costume/08HW/NS_DragonHW.NS_DragonHW",
-    FXPriorityType = 90,
+    FXPriorityType = 99,
     NotFollowRotation = true,
     PlayLocation = T.RT_32,
     SoundID = 3103,
@@ -2727,7 +2727,7 @@ return ReadOnly("VisualEffect", {
   [80040] = {
     EffectId = 80040,
     EffectPath = "/Game/Asset/Effect/Niagara/Costume/08HW/NS_suyi_HW_Cyan.NS_suyi_HW_Cyan",
-    FXPriorityType = 90,
+    FXPriorityType = 99,
     NotFollowRotation = true,
     PlayLocation = T.RT_32,
     bTickEvenWhenPaused = true
@@ -2735,7 +2735,7 @@ return ReadOnly("VisualEffect", {
   [80041] = {
     EffectId = 80041,
     EffectPath = "/Game/Asset/Effect/Niagara/Costume/08HW/NS_suyi_HW_blue.NS_suyi_HW_blue",
-    FXPriorityType = 90,
+    FXPriorityType = 99,
     NotFollowRotation = true,
     PlayLocation = T.RT_32,
     bTickEvenWhenPaused = true
@@ -2743,7 +2743,7 @@ return ReadOnly("VisualEffect", {
   [80042] = {
     EffectId = 80042,
     EffectPath = "/Game/Asset/Effect/Niagara/Costume/08HW/NS_suyi_HW_pink.NS_suyi_HW_pink",
-    FXPriorityType = 90,
+    FXPriorityType = 99,
     NotFollowRotation = true,
     PlayLocation = T.RT_32,
     bTickEvenWhenPaused = true
@@ -2751,7 +2751,7 @@ return ReadOnly("VisualEffect", {
   [80043] = {
     EffectId = 80043,
     EffectPath = "/Game/Asset/Effect/Niagara/Costume/08HW/NS_suyi_HW_red.NS_suyi_HW_red",
-    FXPriorityType = 90,
+    FXPriorityType = 99,
     NotFollowRotation = true,
     PlayLocation = T.RT_32,
     bTickEvenWhenPaused = true

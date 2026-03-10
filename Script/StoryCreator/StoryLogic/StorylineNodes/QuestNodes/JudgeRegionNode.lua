@@ -3,6 +3,7 @@ local JudgeRegionNode = Class("StoryCreator.StoryLogic.StorylineNodes.BaseAsynQu
 function JudgeRegionNode:Init()
   self.IsWaitingEnterRegion = false
   self.RegionIds = {}
+  self.RegionSkipCallback = nil
 end
 
 function JudgeRegionNode:Execute()
@@ -86,10 +87,12 @@ function JudgeRegionNode:CheckIsAsyncTraveling(WCSubsystem, OutPortName)
 end
 
 function JudgeRegionNode:Clear()
-  local Avatar = GWorld:GetAvatar()
-  if Avatar then
-    for _, RegionId in pairs(self.RegionIds) do
-      Avatar:RemoveSubRegionSkipCallback(RegionId, self, self.RegionSkipCallback)
+  if self.RegionSkipCallback then
+    local Avatar = GWorld:GetAvatar()
+    if Avatar then
+      for _, RegionId in pairs(self.RegionIds) do
+        Avatar:RemoveSubRegionSkipCallback(RegionId, self, self.RegionSkipCallback)
+      end
     end
   end
 end

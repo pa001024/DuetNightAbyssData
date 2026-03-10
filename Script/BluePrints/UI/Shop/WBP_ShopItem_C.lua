@@ -199,12 +199,12 @@ function M:RefreshGiftSoldOutInfo()
     self.Group_BuyLimit:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.Text_Limit:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     if TotalLimit > -1 then
-      self.Text_Limit:SetText(GText("UI_SendGift_GiftItemMax") .. PurchaseLimit .. "/" .. TotalLimit)
+      self.Text_Limit:SetText(GText("UI_SendGift_SendGiftLimit") .. PurchaseLimit .. "/" .. TotalLimit)
     else
-      self.Text_Limit:SetText(GText("UI_SendGift_GiftItemMax"))
+      self.Text_Limit:SetText(GText("UI_SendGift_SendGiftLimit"))
     end
     if 0 == PurchaseLimit then
-      self.Text_SoldOut:SetText(GText("UI_SendGift_SendGiftLimit"))
+      self.Text_SoldOut:SetText(GText("UI_SendGift_GiftItemMax"))
       self.Panel_Discount:SetVisibility(UIConst.VisibilityOp.Collapsed)
       self.Panel_SoldOut:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     else
@@ -382,53 +382,12 @@ function M:ShowGiftItemDetail()
   end
   local giftMain = GiftController:GetGiftMainPage()
   local Uid = giftMain and giftMain.FriendUid or nil
-  local RemainTimes = ShopUtils:GetGiftItemPurchaseLimit(self.ShopItemData.ItemId, Uid)
-  local CommonPopupUIID
-  if 0 == RemainTimes then
-    CommonPopupUIID = 100042
-  else
-    CommonPopupUIID = 100041
-  end
-  if not CommonPopupUIID then
-    return
-  end
-  local Funds = {}
-  Funds[1] = {}
-  Funds[1].FundId = self.ShopItemData.PriceType
-  Funds[1].FundNeed = ShopUtils:GetShopItemPrice(self.ShopItemData.ItemId)
-  local ShopUIName = DataMgr.Shop[self.ShopType].ShopUIName
   local GiftController = require("BluePrints.UI.WBP.Gift.GiftController")
-  UIManager(self):ShowCommonPopupUI(CommonPopupUIID, {
-    ShopItemData = self.ShopItemData,
-    ShopType = 0,
-    Funds = Funds,
-    ShowParentTabCoin = true,
-    YesButtonText = GText("UI_SendGift_Send"),
-    LeftCallbackObj = self,
-    LeftCallbackFunction = function(Obj, PackageData)
-      local Shop = UIManager(self):GetUIObj(ShopUIName)
-      if Shop then
-        Shop:SetFocus()
-      end
-    end,
-    RightCallbackObj = self,
-    RightCallbackFunction = function(Obj, PackageData)
-      GiftController:OpenSelectFriendPopup(self.ShopItemData.ItemId)
-    end,
-    ForbiddenRightCallbackObj = self,
-    ForbiddenRightCallbackFunction = function(Obj, PackageData)
-      PackageData.Content_1.CallFunc(PackageData.Content_1.CallObj)
-    end,
-    DontFocusParentWidget = true,
-    CloseBtnCallbackObj = self,
-    CloseBtnCallbackFunction = function(Obj, PackageData)
-      local Shop = UIManager(self):GetUIObj(ShopUIName)
-      if Shop then
-        Shop:SetFocus()
-      end
-    end,
-    ForbidRightBtn = not ShopUtils:CanPurchase(self.ShopItemData, Funds[1].FundId, Funds[1].FundNeed)
-  }, UIManager(self):GetUIObj(ShopUIName))
+  if Uid then
+    GiftController:TryToSendGift(Uid, self.ShopItemData.ItemId)
+  else
+    GiftController:OpenSelectFriendPopup(self.ShopItemData.ItemId)
+  end
 end
 
 function M:OnBtnHovered()

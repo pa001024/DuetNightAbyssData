@@ -19,13 +19,13 @@ function M:InitBaseView()
   local CurrentFrameID = Avatar.TitleFrame
   local AllFrames = DataMgr.TitleFrame or {}
   local OwnedList, UnownedList = {}, {}
-  for frameId, _ in pairs(AllFrames) do
+  for FrameId, _ in pairs(AllFrames) do
     local SingleFrame = NewObject(UIUtils.GetCommonItemContentClass())
-    SingleFrame.FrameId = frameId
-    SingleFrame.bOwned = OwnedFrames and nil ~= OwnedFrames[frameId]
-    local FrameData = AllFrames[frameId]
-    local shouldInclude = SingleFrame.bOwned or FrameData and FrameData.CanPreView
-    if shouldInclude then
+    SingleFrame.FrameId = FrameId
+    SingleFrame.bOwned = OwnedFrames and nil ~= OwnedFrames[FrameId]
+    local FrameData = AllFrames[FrameId]
+    local ShouldInclude = SingleFrame.bOwned or FrameData and FrameData.CanPreView
+    if ShouldInclude then
       if CurrentFrameID == SingleFrame.FrameId and nil == self.SelectedItem and SingleFrame.bOwned then
         SingleFrame.bSelect = true
         SingleFrame.bEquipped = true
@@ -48,6 +48,16 @@ function M:InitBaseView()
       end
     end
   end
+  table.sort(OwnedList, function(LeftItem, RightItem)
+    local LeftId = tonumber(LeftItem.FrameId) or LeftItem.FrameId
+    local RightId = tonumber(RightItem.FrameId) or RightItem.FrameId
+    return LeftId < RightId
+  end)
+  table.sort(UnownedList, function(LeftItem, RightItem)
+    local LeftId = tonumber(LeftItem.FrameId) or LeftItem.FrameId
+    local RightId = tonumber(RightItem.FrameId) or RightItem.FrameId
+    return LeftId < RightId
+  end)
   for _, item in ipairs(OwnedList) do
     self.List_Title:AddItem(item)
   end

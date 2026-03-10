@@ -122,7 +122,7 @@ function M:UpdateDialogBtnState()
     if not bPaused then
       self.Owner:GetButtonBar().Btn_Yes:SetText(GText("UI_OPTION_Language_Download_Pause"))
     else
-      self.Owner:GetButtonBar().Btn_Yes:SetText(GText("UI_OPTION_Language_Download_Continue"))
+      self.Owner:GetButtonBar().Btn_Yes:SetText(GText("UI_Loading_Download_Continue"))
     end
   else
     self.Owner:GetButtonBar().Btn_Yes:SetText(GText("UI_OPTION_Language_Unload"))

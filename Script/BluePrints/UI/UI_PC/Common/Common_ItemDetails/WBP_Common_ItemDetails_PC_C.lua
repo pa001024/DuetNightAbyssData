@@ -136,8 +136,12 @@ function M:RefreshItemInfo(Content, bNotFocus, bInitLockedEvent)
   if bInitLockedEvent then
     self.Btn_Locked:ForbidBtn(false)
     if not Content.LockType then
+      self.Key_Lock:SetVisibility(ESlateVisibility.Collapsed)
       self.Btn_Locked:SetVisibility(ESlateVisibility.Collapsed)
     else
+      if UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad then
+        self.Key_Lock:SetVisibility(ESlateVisibility.Visible)
+      end
       self.Btn_Locked:SetVisibility(ESlateVisibility.Visible)
       self:InitLockedEvent(Content)
       self.bLocked = Content.IsLocked
@@ -228,7 +232,7 @@ function M:InitItemDetails(ItemType, ItemId, Uuid)
     self.Parent:Close()
     return
   end
-  if not ("Resource" ~= ItemType and ("Mod" ~= ItemType or self.Content.IsArmoryMod)) or "CharPartMesh" == ItemType or "Draft" == ItemType or self.Content.bShowAccess then
+  if (not ("Resource" ~= ItemType and ("Mod" ~= ItemType or self.Content.IsArmoryMod)) or "CharPartMesh" == ItemType or "Draft" == ItemType) and not self.Content.bNotShowAccess then
     self:SetAccessItem(ItemType, ItemId)
   else
     self.Panel_Method:SetVisibility(UIConst.VisibilityOp.Collapsed)

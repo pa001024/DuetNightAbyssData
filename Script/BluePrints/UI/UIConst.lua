@@ -900,6 +900,15 @@ UIConst.SkinPreviewItemTypes = {
   WeaponAccessory = true,
   Mount = true
 }
+UIConst.LimitPreviewResource = {
+  [41037] = true,
+  [41038] = true,
+  [41039] = true,
+  [41042] = true,
+  [41043] = true,
+  [41044] = true,
+  [41045] = true
+}
 UIConst.BlockingTime = 3
 UIConst.MaxBlockTime = 10
 return UIConst

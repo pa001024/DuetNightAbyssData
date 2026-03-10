@@ -69,8 +69,10 @@ function Component:RequestUseGestureOnline(PlayerCharacter, GestureResourceId)
 end
 
 function Component:SendMountRequest(PlayerCharacter, GestureResourceId, ResourceIsMountId)
-  if 0 ~= PlayerCharacter.CurrentMountId then
+  if 0 ~= PlayerCharacter.CurrentMountId and PlayerCharacter:IsInRideMove() then
     self:RequestUseCreateMount(self.CurrentOnlineType, GestureResourceId, ResourceIsMountId, 0)
+  elseif 0 ~= PlayerCharacter.CurrentMountId and not PlayerCharacter:IsInRideMove() then
+    self:RequestDeadRegionOnlineMount(self.CurrentOnlineType, 0)
   else
     self:RequestDeadRegionOnlineMount(self.CurrentOnlineType, 0)
   end

@@ -2223,25 +2223,25 @@
     "id": 30113,
     "name": "中級染料・メープルシロップ",
     "icon": "T_Dye_15",
-    "rarity": 5
+    "rarity": 4
   },
   {
     "id": 30114,
     "name": "中級染料・ココア",
-    "icon": "T_Dye_15",
-    "rarity": 5
+    "icon": "T_Dye_15_01",
+    "rarity": 4
   },
   {
     "id": 30115,
     "name": "中級染料・碧い波",
     "icon": "T_Dye_14",
-    "rarity": 5
+    "rarity": 4
   },
   {
     "id": 30116,
     "name": "中級染料・蒼い松",
-    "icon": "T_Dye_15",
-    "rarity": 5
+    "icon": "T_Dye_14_01",
+    "rarity": 4
   },
   {
     "id": 30117,
@@ -2252,13 +2252,13 @@
   {
     "id": 30118,
     "name": "基本ヘアカラー染料",
-    "icon": "T_Dye_12",
+    "icon": "T_Dye_16",
     "rarity": 4
   },
   {
     "id": 30119,
     "name": "高級ヘアカラー染料",
-    "icon": "T_Dye_12",
+    "icon": "T_Dye_17",
     "rarity": 5
   },
   {

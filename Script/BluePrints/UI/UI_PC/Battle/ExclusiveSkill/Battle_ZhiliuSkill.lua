@@ -98,6 +98,9 @@ function M:ShowSkillCreatureLifeTime(SkillCreature)
     self.SkillCreature = SkillCreature
     self.TotalLifeTime = self.SkillCreature:GetTotalLifeTime()
     if self.TotalLifeTime < 0 then
+      if self:IsExistTimer("RefreshSkillCreatureLifeTimeProgress") then
+        self:RemoveTimer("RefreshSkillCreatureLifeTimeProgress")
+      end
       if EMUIAnimationSubsystem:EMAnimationIsPlaying(self, self.Out) then
         EMUIAnimationSubsystem:EMStopAnimation(self, self.Out)
       end
@@ -124,11 +127,11 @@ function M:ShowSkillCreatureLifeTime(SkillCreature)
   end
 end
 
-function M:HideSkillCreatureLifeTime()
-  if self:IsExistTimer("RefreshSkillCreatureLifeTimeProgress") then
-    self:RemoveTimer("RefreshSkillCreatureLifeTimeProgress")
-  end
-  if self.SkillCreature then
+function M:HideSkillCreatureLifeTime(TimeEnd)
+  if IsValid(self.SkillCreature) and (TimeEnd or self.SkillCreature:IsActorBeingDestroyed()) then
+    if self:IsExistTimer("RefreshSkillCreatureLifeTimeProgress") then
+      self:RemoveTimer("RefreshSkillCreatureLifeTimeProgress")
+    end
     if EMUIAnimationSubsystem:EMAnimationIsPlaying(self, self.In) then
       EMUIAnimationSubsystem:EMStopAnimation(self, self.In)
     end
@@ -146,7 +149,7 @@ function M:RefreshSkillCreatureLifeTimeProgress()
     local TimeString = string.format("%.0fs", LeftLifeTime)
     self.Text_Time:SetText(TimeString)
     if LeftLifeTime <= 0 then
-      self:HideSkillCreatureLifeTime()
+      self:HideSkillCreatureLifeTime(true)
     end
   end
 end

@@ -24,7 +24,7 @@ function Component:_OnPropChangeMailInbox(keys)
       return
     end
     local UniqueId = keys[1]
-    local MailData = self.MailInbox[UniqueId]
+    local MailData = self.MailInbox[UniqueId] or self.StarMails[UniqueId]
     if 1 == CommonUtils.Size(keys) and MailData and not self._DeletedStarMail then
       self:_AddNormalMailReddotCount(MailData)
     end
@@ -33,11 +33,19 @@ function Component:_OnPropChangeMailInbox(keys)
       local MailData = self._PendingDelMails[UniqueId]
       if MailData and 1 == MailData.MailReaded then
         if 0 == MailData.RewardGot then
-          local FakeMailData = {RewardGot = 1, MailReaded = 1}
+          local FakeMailData = {
+            RewardGot = 1,
+            MailReaded = 1,
+            UniqueId = UniqueId
+          }
           self:_SubNormalMailReddotCount(FakeMailData)
         end
       elseif not MailData then
-        local FakeMailData = {RewardGot = 1, MailReaded = 1}
+        local FakeMailData = {
+          RewardGot = 1,
+          MailReaded = 1,
+          UniqueId = UniqueId
+        }
         self:_SubNormalMailReddotCount(FakeMailData)
       end
       self._PendingDelMails[UniqueId] = nil
@@ -61,20 +69,28 @@ end
 
 function Component:_AddNormalMailReddotCount(MailData)
   if 0 == MailData.MailReaded or 0 == MailData.RewardGot then
-    DebugPrint("_AddNormalMailReddotCount邮件")
-    ReddotManager.IncreaseLeafNodeCount(NormalMailName)
+    local Detail = ReddotManager.GetLeafNodeCacheDetail(NormalMailName)
+    if not Detail[MailData.UniqueId] then
+      DebugPrint("_AddNormalMailReddotCount邮件")
+      ReddotManager.IncreaseLeafNodeCount(NormalMailName)
+      Detail[MailData.UniqueId] = 1
+    end
   end
 end
 
 function Component:_SubNormalMailReddotCount(MailData)
   if 1 == MailData.MailReaded and 1 == MailData.RewardGot then
-    DebugPrint("_SubNormalMailReddotCount邮件")
-    ReddotManager.DecreaseLeafNodeCount(NormalMailName)
+    local Detail = ReddotManager.GetLeafNodeCacheDetail(NormalMailName)
+    if Detail[MailData.UniqueId] then
+      DebugPrint("_SubNormalMailReddotCount邮件")
+      ReddotManager.DecreaseLeafNodeCount(NormalMailName)
+      Detail[MailData.UniqueId] = nil
+    end
   end
 end
 
 function Component:_SubAllNormalMailReddotCount()
-  ReddotManager.ClearLeafNodeCount(NormalMailName)
+  ReddotManager.ClearLeafNodeCount(NormalMailName, true)
 end
 
 function Component:EchoMail()
@@ -107,7 +123,7 @@ function Component:MarkMailReaded(UniqueID)
     
     self.logger.info("MarkMailReaded Callback", ErrorCode:Name(errCode))
     if errCode == ErrorCode.RET_SUCCESS then
-      self:_SubNormalMailReddotCount(self.MailInbox[UniqueID])
+      self:_SubNormalMailReddotCount(self.MailInbox[UniqueID] or self.StarMails[UniqueID])
     end
   end
   
@@ -125,6 +141,9 @@ function Component:MarkMailStar(UniqueID)
   end
   
   local function cb(errCode, reward)
+    if errCode == ErrorCode.RET_SUCCESS then
+      self:_SubNormalMailReddotCount(self.StarMails[UniqueID])
+    end
     EventManager:FireEvent(EventID.OnMarkMailStar, errCode, UniqueID, reward)
     self.logger.info("MarkMailStar Callback", ErrorCode:Name(errCode), reward)
   end
@@ -175,6 +194,14 @@ function Component:DeleteMail(UniqueID)
   local function cb(errCode)
     self.logger.info("DeleteMail Callback", ErrorCode:Name(errCode))
     EventManager:FireEvent(EventID.OnDeleteMail)
+    if errCode == ErrorCode.RET_SUCCESS then
+      local FakeMailData = {
+        RewardGot = 1,
+        MailReaded = 1,
+        UniqueId = UniqueID
+      }
+      self:_SubNormalMailReddotCount(FakeMailData)
+    end
   end
   
   self.logger.info("DeleteMail Start UniqueID:", UniqueID)

@@ -25,6 +25,13 @@ function M:ReceiveEnterState(StackAction)
   end
 end
 
+function M:ReceiveExitState(StackAction)
+  M.Super.ReceiveExitState(self, StackAction)
+  if self.ActorController then
+    self.ActorController:PauseMVPSequence()
+  end
+end
+
 function M:Construct()
   M.Super.Construct(self)
   self:UnbindAllFromAnimationFinished(self.In)
@@ -87,15 +94,25 @@ function M:OnNewAccessoryObtained(AccessoryId)
     Content.SelfWidget:SetRedDot(Content.RedDotType)
     Content.SelfWidget:SetLock(Content.LockType)
   end
-  if self.CurrentTopTabIdx ~= self.AccessoryTabIdx then
+  if Content.Widget then
+    Content.Widget:SetReddot(Content.RedDotType)
+    Content.Widget.LockType = nil
+    Content.Widget:InitTextStyle()
+  end
+  if self.CurrentTopTabIdx ~= self.AccessoryTabIdx and self.CurrentTopTabIdx ~= self.MVPTabIdx then
     return
   end
   if Content == self.ComparedContent then
     self:UpdateAccessoryDetails(self.ComparedContent)
   end
   if self.Type == CommonConst.ArmoryType.Char then
-    self:CheckCharAccessoryContentReddot(AccessoryId)
-    self:InitCharAccessoryList()
+    if self.CurrentTopTabIdx == self.MVPTabIdx then
+      self:CheckMVPContentReddot(AccessoryId)
+      self:InitMVPList()
+    else
+      self:CheckCharAccessoryContentReddot(AccessoryId)
+      self:InitCharAccessoryList()
+    end
   else
     self:CheckWeaponAccessoryContentReddot(AccessoryId)
     self:InitWeaponAccessoryList()
@@ -163,8 +180,13 @@ function M:OnBackKeyDown()
   elseif self.bAccessoryCustomOpened then
     return self:TryCloseAccessoryCustom()
   else
-    if self.CurrentTopTabIdx ~= self.SkinTabIdx and self.IsAccessoryContentsCreated then
-      self:RecoverAccessory()
+    if self.CurrentTopTabIdx ~= self.SkinTabIdx then
+      if self.IsAccessoryContentsCreated then
+        self:RecoverAccessory({DontStopSequance = true})
+      end
+      if self.CurrentTopTabIdx == self.MVPTabIdx then
+        self.BlackScreenHandle = UIManager(self):ShowCommonBlackScreen({OutAnimationPlayTime = 0.3})
+      end
     end
     if self.OpenPreviewDyeFromChat then
       if self.ActorController then
@@ -510,7 +532,7 @@ function M:UpdateSkinDetails(Content)
     self.Text_Char_None:SetText(GText("UI_SkinPreview_CharNotOwned"))
     self.Text_Char_None:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   end
-  if Content.Rarity then
+  if Content.Rarity and (Content.Name or Content.Text) then
     self.Tag_Quality:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.Tag_Quality:Init(Content.Rarity)
   end
@@ -619,14 +641,23 @@ function M:UpdateFunctionBtn(Content, CurrentContent)
 end
 
 function M:CheckSkinGoToShopState()
-  if not self.SelectedSkinId or self.SelectedSkinId <= 0 then
+  local SkinId = self.SelectedSkinId
+  local SkinType
+  if self.CurrentTopTabIdx == self.SkinTabIdx then
+    SkinType = CommonConst.DataType.Skin
+    SkinId = self.SelectedSkinId
+  elseif self.CurrentTopTabIdx == self.HairTabIdx then
+    SkinType = CommonConst.DataType.Hair
+    SkinId = self.SelectedHairId
+  end
+  if not SkinId or SkinId <= 0 then
     return GoToShopState.SkinNotValid
   end
   local SkinInfo
   if self.Type == CommonConst.ArmoryType.Char then
-    SkinInfo = DataMgr.Skin[self.SelectedSkinId]
+    SkinInfo = DataMgr[SkinType][SkinId]
   else
-    SkinInfo = DataMgr.WeaponSkin[self.SelectedSkinId]
+    SkinInfo = DataMgr.WeaponSkin[SkinId]
   end
   if not SkinInfo then
     return GoToShopState.SkinNotValid
@@ -849,7 +880,12 @@ function M:UpdateAccessoryDetails(Content)
 end
 
 function M:ShowChargeDialog(CostNum, CostType)
-  UIManager(self):ShowCommonPopupUI(100290, {CostNum = CostNum, CostType = CostType}, self)
+  UIManager(self):ShowCommonPopupUI(100290, {
+    CostNum = CostNum,
+    CostType = CostType,
+    LeftGamepadKey = Const.GamepadFaceButtonUp,
+    ShowBKeyClose = true
+  }, self)
 end
 
 function M:OnUseOptBtnClicked()
@@ -876,6 +912,10 @@ function M:OnBuyBtnClicked()
     RightCallbackObj = self,
     RightCallbackFunction = self.PurchaseAccessory
   }, self)
+end
+
+function M:GetOverrideTopResource()
+  return self.Tab_Skin.OverridenTopResouces
 end
 
 function M:PurchaseAccessory()
@@ -916,9 +956,13 @@ end
 
 function M:CheckIsOptReward(Content)
   local OptReward = DataMgr.OptReward
+  local ContentType = Content.ItemType
+  if "Hair" == ContentType then
+    ContentType = "Skin"
+  end
   for OptRewardId, Data in pairs(OptReward) do
     local ItemType = Data.Type[1]
-    if ItemType == Content.ItemType then
+    if ItemType == ContentType then
       for Index = 1, #Data.Type do
         if Data.Id[Index] == (Content.ItemId or Content.Id) then
           local Avatar = GWorld:GetAvatar()
@@ -1032,7 +1076,7 @@ function M:OpenDye()
     Content = self.HairMap[self.SelectedHairId]
     SkinType = CommonConst.DataType.Hair
   end
-  if not (not self.IsTargetUnowned and Content and Content.bDyeable) or Content.LockType then
+  if not (not self.IsTargetUnowned and Content and Content.bDyeable) or Content.LockType and not self.IsPreviewMode then
     return
   end
   local Params = {
@@ -1144,6 +1188,9 @@ function M:Destruct()
     self.ComBgSwitch:RemoveFromParent()
   end
   self:RemoveTopTabReddotListen()
+  if self.BlackScreenHandle then
+    UIManager(self):HideCommonBlackScreen(self.BlackScreenHandle)
+  end
   M.Super.Destruct(self)
   if self.bRecoverAppearanceWhenDestruct and not self.IsPreviewMode then
     self:UpdateActorAppearance()

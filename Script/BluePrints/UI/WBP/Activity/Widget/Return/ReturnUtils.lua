@@ -202,7 +202,7 @@ function ReturnUtils.RefreshComeBackTaskNewReddot(ClearCache)
     end
   end
   if Num > 0 then
-    ReddotManager.IncreaseLeafNodeCount(ReturnUtils.ReddotTaskNewKey, 1)
+    ReddotManager.IncreaseLeafNodeCount(ReturnUtils.ReddotTaskNewKey, Num)
     ActivityReddotHelper.RefreshReddotNode(EventID)
   end
 end

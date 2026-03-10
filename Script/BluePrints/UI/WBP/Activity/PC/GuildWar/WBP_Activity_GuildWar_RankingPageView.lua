@@ -5,10 +5,12 @@ local GuildWarUtils = require("BluePrints.UI.WBP.Activity.Widget.GuildWar.GuildW
 local M = Class({})
 
 function M:OnLoaded(...)
-  local SelfRankInfo, TopNInfo = ...
+  self.SelfRankInfo, self.TopNInfo = ...
   self.IsFirstOpen = true
-  self:InitOnGetTopN(TopNInfo)
-  self:InitRankInfoSelf(SelfRankInfo)
+  PrintTable(self.SelfRankInfo, 5, "工会战-玩家个人全数据")
+  PrintTable(self.TopNInfo, 5, "工会战-排行榜全部数据")
+  self:InitOnGetTopN(self.TopNInfo)
+  self:InitRankInfoSelf(self.SelfRankInfo)
   self:InitView()
 end
 
@@ -49,6 +51,7 @@ function M:InitOnGetTopN(TopNInfo)
   self:InitPreviewScene(TopNInfo)
   if not TopNInfo or GuildWarUtils.IsEmptyTable(TopNInfo) then
     self.List_Ranking:ClearListItems()
+    DebugPrint("公会战排行榜，无数据时清空列表 ", self:GetUIConfigName())
   else
     self:InitRankInfoTopN(TopNInfo)
   end
@@ -139,17 +142,19 @@ function M:InitRankInfoTopN(TopNInfo)
   self.List_Ranking:ClearListItems()
   local RankCount = 0
   for _, RankInfo in pairs(TopNInfo or {}) do
-    if 0 == RankInfo.BanState then
-      RankCount = RankCount + 1
-      local ItemObj = NewObject(UIUtils.GetCommonItemContentClass())
-      ItemObj.RankInfo = RankInfo
-      ItemObj.RoleInfo, ItemObj.PetInfo = self:GetMaxScoreSquad(RankInfo.MaxSquad)
-      ItemObj.RankInfo.RankNum = RankCount
-      ItemObj.ParentWidget = self
-      ItemObj.SelfAvatar = self.Avatar
-      self.List_Ranking:AddItem(ItemObj)
-      PrintTable(ItemObj.RoleInfo or RankInfo.MaxSquad or "该玩家阵容为空", 2, string.format("看看排行榜第 %d 名的阵容数据：", _))
+    RankCount = RankCount + 1
+    local ItemObj = NewObject(UIUtils.GetCommonItemContentClass())
+    ItemObj.RankInfo = RankInfo
+    ItemObj.RoleInfo, ItemObj.PetInfo = self:GetMaxScoreSquad(RankInfo.MaxSquad)
+    ItemObj.RankInfo.RankNum = RankCount
+    ItemObj.ParentWidget = self
+    ItemObj.SelfAvatar = self.Avatar
+    self.List_Ranking:AddItem(ItemObj)
+    if RankInfo.Uid == self.Avatar.Uid then
+      self.SelfRankInfo.Rank = RankCount
     end
+    PrintTable(ItemObj.RoleInfo or RankInfo.MaxSquad or "该玩家阵容为空", 2, string.format("看看排行榜第 %d 名的阵容数据：", _))
+    DebugPrint("数据完成 Rank:", RankCount, RankInfo.Nickname, RankInfo.Uid)
   end
   self.List_Ranking:NavigateToIndex(0)
   self.ValidItemNum = RankCount

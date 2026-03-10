@@ -73248,7 +73248,7 @@ The list below shows how many points each item awards:]],
   },
   {
     MinKey = "UI_Keyboard_Map_Recovery",
-    MaxKey = "UI_MECHANISM_106124",
+    MaxKey = "UI_MECHANISM_10612",
     Loader = function()
       return {
         UI_Keyboard_Map_Recovery = {
@@ -73613,6 +73613,10 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_Locked_Des_4030003 = {
           ContentEN = "Unlocks after obtaining a Radiant Posture",
           TextMapId = "UI_Locked_Des_4030003"
+        },
+        UI_Locked_Des_4030004 = {
+          ContentEN = "Obtain all [Sweet Fortune] series weapon skins",
+          TextMapId = "UI_Locked_Des_4030004"
         },
         UI_Locked_Des_Abyss = {
           ContentEN = "Immersive Theatre not yet unlocked",
@@ -74045,19 +74049,19 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_MECHANISM_10612 = {
           ContentEN = "Crane",
           TextMapId = "UI_MECHANISM_10612"
-        },
-        UI_MECHANISM_106124 = {
-          ContentEN = "Access Lift Controls",
-          TextMapId = "UI_MECHANISM_106124"
         }
       }
     end
   },
   {
-    MinKey = "UI_MECHANISM_106125",
-    MaxKey = "UI_Mod_AddPolarity",
+    MinKey = "UI_MECHANISM_106124",
+    MaxKey = "UI_ModToast_EmptyCanNotRemoveAll",
     Loader = function()
       return {
+        UI_MECHANISM_106124 = {
+          ContentEN = "Access Lift Controls",
+          TextMapId = "UI_MECHANISM_106124"
+        },
         UI_MECHANISM_106125 = {
           ContentEN = "Activate Cargo Lift",
           TextMapId = "UI_MECHANISM_106125"
@@ -74853,19 +74857,19 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_ModToast_EmptyCanNotRemoveAll = {
           ContentEN = "No removable Demon Wedges",
           TextMapId = "UI_ModToast_EmptyCanNotRemoveAll"
-        },
-        UI_Mod_AddPolarity = {
-          ContentEN = "Add a Track for the slot",
-          TextMapId = "UI_Mod_AddPolarity"
         }
       }
     end
   },
   {
-    MinKey = "UI_Mod_AutoPutOn",
-    MaxKey = "UI_Name_Walnut_151921",
+    MinKey = "UI_Mod_AddPolarity",
+    MaxKey = "UI_Name_Walnut_151911",
     Loader = function()
       return {
+        UI_Mod_AddPolarity = {
+          ContentEN = "Add a Track for the slot",
+          TextMapId = "UI_Mod_AddPolarity"
+        },
         UI_Mod_AutoPutOn = {
           ContentEN = "Auto-Equip",
           TextMapId = "UI_Mod_AutoPutOn"
@@ -75652,19 +75656,19 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_Name_Walnut_151911 = {
           ContentEN = "Secret Letter: Arbiter's Illusionary Sacrifice",
           TextMapId = "UI_Name_Walnut_151911"
-        },
-        UI_Name_Walnut_151921 = {
-          ContentEN = "Secret Letter: Bahamut's Misty Veil",
-          TextMapId = "UI_Name_Walnut_151921"
         }
       }
     end
   },
   {
-    MinKey = "UI_Name_Walnut_151922",
-    MaxKey = "UI_Npc_Name_FindSaiqiNpc6",
+    MinKey = "UI_Name_Walnut_151921",
+    MaxKey = "UI_Npc_Name_FindSaiqiNpc5",
     Loader = function()
       return {
+        UI_Name_Walnut_151921 = {
+          ContentEN = "Secret Letter: Bahamut's Misty Veil",
+          TextMapId = "UI_Name_Walnut_151921"
+        },
         UI_Name_Walnut_151922 = {
           ContentEN = "Secret Letter: Bahamut's Frosty Torrent",
           TextMapId = "UI_Name_Walnut_151922"
@@ -76457,19 +76461,19 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_Npc_Name_FindSaiqiNpc5 = {
           ContentEN = "Panicked Civilian",
           TextMapId = "UI_Npc_Name_FindSaiqiNpc5"
-        },
-        UI_Npc_Name_FindSaiqiNpc6 = {
-          ContentEN = "Angry Civilian",
-          TextMapId = "UI_Npc_Name_FindSaiqiNpc6"
         }
       }
     end
   },
   {
-    MinKey = "UI_Npc_Name_FindSaiqiNpc7",
-    MaxKey = "UI_Npc_Name_XuanSeBiAn",
+    MinKey = "UI_Npc_Name_FindSaiqiNpc6",
+    MaxKey = "UI_Npc_Name_Ximeng",
     Loader = function()
       return {
+        UI_Npc_Name_FindSaiqiNpc6 = {
+          ContentEN = "Angry Civilian",
+          TextMapId = "UI_Npc_Name_FindSaiqiNpc6"
+        },
         UI_Npc_Name_FindSaiqiNpc7 = {
           ContentEN = "Soldier Feigning Calm",
           TextMapId = "UI_Npc_Name_FindSaiqiNpc7"
@@ -77265,19 +77269,19 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_Npc_Name_Ximeng = {
           ContentEN = "Simon",
           TextMapId = "UI_Npc_Name_Ximeng"
-        },
-        UI_Npc_Name_XuanSeBiAn = {
-          ContentEN = "Sable Bi'an",
-          TextMapId = "UI_Npc_Name_XuanSeBiAn"
         }
       }
     end
   },
   {
-    MinKey = "UI_Npc_Name_XunluoShibing",
-    MaxKey = "UI_OPTION_TotalVolume",
+    MinKey = "UI_Npc_Name_XuanSeBiAn",
+    MaxKey = "UI_OPTION_ThisKeyIsUsed",
     Loader = function()
       return {
+        UI_Npc_Name_XuanSeBiAn = {
+          ContentEN = "Sable Bi'an",
+          TextMapId = "UI_Npc_Name_XuanSeBiAn"
+        },
         UI_Npc_Name_XunluoShibing = {
           ContentEN = "Patrolling Soldier",
           TextMapId = "UI_Npc_Name_XunluoShibing"
@@ -78073,19 +78077,19 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_OPTION_ThisKeyIsUsed = {
           ContentEN = "Already in use by the uneditable <Highlight>%s</>",
           TextMapId = "UI_OPTION_ThisKeyIsUsed"
-        },
-        UI_OPTION_TotalVolume = {
-          ContentEN = "Volume",
-          TextMapId = "UI_OPTION_TotalVolume"
         }
       }
     end
   },
   {
-    MinKey = "UI_OPTION_TripleBuffer",
-    MaxKey = "UI_Pet_Locked",
+    MinKey = "UI_OPTION_TotalVolume",
+    MaxKey = "UI_Pet_LevelUp",
     Loader = function()
       return {
+        UI_OPTION_TotalVolume = {
+          ContentEN = "Volume",
+          TextMapId = "UI_OPTION_TotalVolume"
+        },
         UI_OPTION_TripleBuffer = {
           ContentEN = "Triple Buffering",
           TextMapId = "UI_OPTION_TripleBuffer"
@@ -78883,19 +78887,19 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
         UI_Pet_LevelUp = {
           ContentEN = "Geniemon Upgrade",
           TextMapId = "UI_Pet_LevelUp"
-        },
-        UI_Pet_Locked = {
-          ContentEN = "This Geniemon is locked and cannot be used",
-          TextMapId = "UI_Pet_Locked"
         }
       }
     end
   },
   {
-    MinKey = "UI_Pet_Popup_Quit",
-    MaxKey = "UI_PretextTasks",
+    MinKey = "UI_Pet_Locked",
+    MaxKey = "UI_PowerSeat",
     Loader = function()
       return {
+        UI_Pet_Locked = {
+          ContentEN = "This Geniemon is locked and cannot be used",
+          TextMapId = "UI_Pet_Locked"
+        },
         UI_Pet_Popup_Quit = {
           ContentEN = "Do you want to exit Geniemon Feeding?",
           TextMapId = "UI_Pet_Popup_Quit"
@@ -79691,19 +79695,19 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
         UI_PowerSeat = {
           ContentEN = "Take a seat",
           TextMapId = "UI_PowerSeat"
-        },
-        UI_PretextTasks = {
-          ContentEN = "Prerequisite Quest",
-          TextMapId = "UI_PretextTasks"
         }
       }
     end
   },
   {
-    MinKey = "UI_Preview_GestureItem",
-    MaxKey = "UI_Reward_Walnut_Select_Success",
+    MinKey = "UI_PretextTasks",
+    MaxKey = "UI_Reward_Walnut_Preview",
     Loader = function()
       return {
+        UI_PretextTasks = {
+          ContentEN = "Prerequisite Quest",
+          TextMapId = "UI_PretextTasks"
+        },
         UI_Preview_GestureItem = {
           ContentEN = "Posture",
           TextMapId = "UI_Preview_GestureItem"
@@ -80493,19 +80497,19 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
         UI_Reward_Walnut_Preview = {
           ContentEN = "Possible Rewards",
           TextMapId = "UI_Reward_Walnut_Preview"
-        },
-        UI_Reward_Walnut_Select_Success = {
-          ContentEN = "Selected",
-          TextMapId = "UI_Reward_Walnut_Select_Success"
         }
       }
     end
   },
   {
-    MinKey = "UI_Reward_Walnut_Select_Wait",
-    MaxKey = "UI_SQUAD_SELECT_FOLD",
+    MinKey = "UI_Reward_Walnut_Select_Success",
+    MaxKey = "UI_SQUAD_SELECT_CONFIRM",
     Loader = function()
       return {
+        UI_Reward_Walnut_Select_Success = {
+          ContentEN = "Selected",
+          TextMapId = "UI_Reward_Walnut_Select_Success"
+        },
         UI_Reward_Walnut_Select_Wait = {
           ContentEN = "Waiting for others to select their rewards of the Secret Letter",
           TextMapId = "UI_Reward_Walnut_Select_Wait"
@@ -81313,19 +81317,19 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
         UI_SQUAD_SELECT_CONFIRM = {
           ContentEN = "Confirm",
           TextMapId = "UI_SQUAD_SELECT_CONFIRM"
-        },
-        UI_SQUAD_SELECT_FOLD = {
-          ContentEN = "Collapse",
-          TextMapId = "UI_SQUAD_SELECT_FOLD"
         }
       }
     end
   },
   {
-    MinKey = "UI_STAT_ActionPoint_Cost",
-    MaxKey = "UI_Shop_More",
+    MinKey = "UI_SQUAD_SELECT_FOLD",
+    MaxKey = "UI_Shop_KR_Link",
     Loader = function()
       return {
+        UI_SQUAD_SELECT_FOLD = {
+          ContentEN = "Collapse",
+          TextMapId = "UI_SQUAD_SELECT_FOLD"
+        },
         UI_STAT_ActionPoint_Cost = {
           ContentEN = "Sanity Cost",
           TextMapId = "UI_STAT_ActionPoint_Cost"
@@ -82118,19 +82122,19 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
         UI_Shop_KR_Link = {
           ContentEN = "Korean Payment Regulations",
           TextMapId = "UI_Shop_KR_Link"
-        },
-        UI_Shop_More = {
-          ContentEN = "Bonus",
-          TextMapId = "UI_Shop_More"
         }
       }
     end
   },
   {
-    MinKey = "UI_Shop_Remain",
-    MaxKey = "UI_SubTitle_ItemArchive",
+    MinKey = "UI_Shop_More",
+    MaxKey = "UI_SubTitle_EnemyArchive",
     Loader = function()
       return {
+        UI_Shop_More = {
+          ContentEN = "Bonus",
+          TextMapId = "UI_Shop_More"
+        },
         UI_Shop_Remain = {
           ContentEN = "Remaining Qty: ",
           TextMapId = "UI_Shop_Remain"
@@ -82923,19 +82927,19 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
         UI_SubTitle_EnemyArchive = {
           ContentEN = "Opponents",
           TextMapId = "UI_SubTitle_EnemyArchive"
-        },
-        UI_SubTitle_ItemArchive = {
-          ContentEN = "Items",
-          TextMapId = "UI_SubTitle_ItemArchive"
         }
       }
     end
   },
   {
-    MinKey = "UI_SubTitle_MeeleArchive",
-    MaxKey = "UI_TEMPLE_RULE_NoSkill",
+    MinKey = "UI_SubTitle_ItemArchive",
+    MaxKey = "UI_TEMPLE_RULE_NoRanged",
     Loader = function()
       return {
+        UI_SubTitle_ItemArchive = {
+          ContentEN = "Items",
+          TextMapId = "UI_SubTitle_ItemArchive"
+        },
         UI_SubTitle_MeeleArchive = {
           ContentEN = "Ranged Weapons",
           TextMapId = "UI_SubTitle_MeeleArchive"
@@ -83756,19 +83760,19 @@ Don't let up until she reaches the finish!]],
         UI_TEMPLE_RULE_NoRanged = {
           ContentEN = "Ranged Weapons Disabled",
           TextMapId = "UI_TEMPLE_RULE_NoRanged"
-        },
-        UI_TEMPLE_RULE_NoSkill = {
-          ContentEN = "Skills Disabled",
-          TextMapId = "UI_TEMPLE_RULE_NoSkill"
         }
       }
     end
   },
   {
-    MinKey = "UI_TEMPLE_SCORE",
-    MaxKey = "UI_Unselect",
+    MinKey = "UI_TEMPLE_RULE_NoSkill",
+    MaxKey = "UI_Unlock_Topic",
     Loader = function()
       return {
+        UI_TEMPLE_RULE_NoSkill = {
+          ContentEN = "Skills Disabled",
+          TextMapId = "UI_TEMPLE_RULE_NoSkill"
+        },
         UI_TEMPLE_SCORE = {
           ContentEN = "Gold Coin Collected: ",
           TextMapId = "UI_TEMPLE_SCORE"
@@ -84572,19 +84576,19 @@ About Zones
         UI_Unlock_Topic = {
           ContentEN = "Unlock",
           TextMapId = "UI_Unlock_Topic"
-        },
-        UI_Unselect = {
-          ContentEN = "Cancel",
-          TextMapId = "UI_Unselect"
         }
       }
     end
   },
   {
-    MinKey = "UI_Voice_Actor_CN",
-    MaxKey = "UI_WEAPON_NAME_AutoChess_15",
+    MinKey = "UI_Unselect",
+    MaxKey = "UI_WEAPON_NAME_AutoChess_14",
     Loader = function()
       return {
+        UI_Unselect = {
+          ContentEN = "Cancel",
+          TextMapId = "UI_Unselect"
+        },
         UI_Voice_Actor_CN = {
           ContentEN = "CN VA",
           TextMapId = "UI_Voice_Actor_CN"
@@ -85380,19 +85384,19 @@ About Zones
         UI_WEAPON_NAME_AutoChess_14 = {
           ContentEN = "Rune: Restoration",
           TextMapId = "UI_WEAPON_NAME_AutoChess_14"
-        },
-        UI_WEAPON_NAME_AutoChess_15 = {
-          ContentEN = "Rune: Inspiration",
-          TextMapId = "UI_WEAPON_NAME_AutoChess_15"
         }
       }
     end
   },
   {
-    MinKey = "UI_WEAPON_NAME_AutoChess_16",
-    MaxKey = "UI_WeaponSkin_Name_3010705",
+    MinKey = "UI_WEAPON_NAME_AutoChess_15",
+    MaxKey = "UI_WeaponSkin_Name_3010703",
     Loader = function()
       return {
+        UI_WEAPON_NAME_AutoChess_15 = {
+          ContentEN = "Rune: Inspiration",
+          TextMapId = "UI_WEAPON_NAME_AutoChess_15"
+        },
         UI_WEAPON_NAME_AutoChess_16 = {
           ContentEN = "Rune: Resonance",
           TextMapId = "UI_WEAPON_NAME_AutoChess_16"
@@ -86196,19 +86200,19 @@ Gaming services will only be available to minors for 1 hour between 20:00 and 21
         UI_WeaponSkin_Name_3010703 = {
           ContentEN = "I Am a Cat",
           TextMapId = "UI_WeaponSkin_Name_3010703"
-        },
-        UI_WeaponSkin_Name_3010705 = {
-          ContentEN = "Vigor Rise – Katana",
-          TextMapId = "UI_WeaponSkin_Name_3010705"
         }
       }
     end
   },
   {
-    MinKey = "UI_WeaponSkin_Name_3010707",
-    MaxKey = "VoiceDes109",
+    MinKey = "UI_WeaponSkin_Name_3010705",
+    MaxKey = "VoiceDes108",
     Loader = function()
       return {
+        UI_WeaponSkin_Name_3010705 = {
+          ContentEN = "Vigor Rise – Katana",
+          TextMapId = "UI_WeaponSkin_Name_3010705"
+        },
         UI_WeaponSkin_Name_3010707 = {
           ContentEN = "Sweet Fortune – Katana",
           TextMapId = "UI_WeaponSkin_Name_3010707"
@@ -87001,19 +87005,19 @@ Gaming services will only be available to minors for 1 hour between 20:00 and 21
         VoiceDes108 = {
           ContentEN = "About Your Skin",
           TextMapId = "VoiceDes108"
-        },
-        VoiceDes109 = {
-          ContentEN = "About Work",
-          TextMapId = "VoiceDes109"
         }
       }
     end
   },
   {
-    MinKey = "VoiceDes110",
-    MaxKey = "WikiText_30400601",
+    MinKey = "VoiceDes109",
+    MaxKey = "WikiText_30400502",
     Loader = function()
       return {
+        VoiceDes109 = {
+          ContentEN = "About Work",
+          TextMapId = "VoiceDes109"
+        },
         VoiceDes110 = {
           ContentEN = "About Justice",
           TextMapId = "VoiceDes110"
@@ -87869,19 +87873,19 @@ The Scourge manifests chiefly in two forms: the Sable Bi'an and Gritblight.]],
         WikiText_30400502 = {
           ContentEN = "The Art of Ephemerality works by using Zhuyous' own vitality as a conduit to purge impurities from the patient. Frequent use places a heavy physical burden on the practitioner.",
           TextMapId = "WikiText_30400502"
-        },
-        WikiText_30400601 = {
-          ContentEN = "A hypothetical entity in natural philosophy. Huaxu scholars believe the air is permeated by a colorless, odorless substance that provides energy for all things. When activated by incense, this substance becomes the medium through which the Nine Chapters operate. Gritblight is considered the tangible form of condensed Taixu — a physical manifestation of its existence.",
-          TextMapId = "WikiText_30400601"
         }
       }
     end
   },
   {
-    MinKey = "WikiText_30400701",
-    MaxKey = "voice_ch_char_Baonu_vo_companio_02",
+    MinKey = "WikiText_30400601",
+    MaxKey = "voice_ch_char_Baonu_vo_companio_01",
     Loader = function()
       return {
+        WikiText_30400601 = {
+          ContentEN = "A hypothetical entity in natural philosophy. Huaxu scholars believe the air is permeated by a colorless, odorless substance that provides energy for all things. When activated by incense, this substance becomes the medium through which the Nine Chapters operate. Gritblight is considered the tangible form of condensed Taixu — a physical manifestation of its existence.",
+          TextMapId = "WikiText_30400601"
+        },
         WikiText_30400701 = {
           ContentEN = "Mysterious runes drifting throughout Huaxu, formed from the condensation of excess Taixu in the air.",
           TextMapId = "WikiText_30400701"
@@ -88714,21 +88718,21 @@ While a healer may ease affliction, defying fate is beyond us. I can offer a rem
         voice_ch_char_Baonu_vo_companio_01 = {
           ContentEN = "Samael? Oh, it's alright. It wakes me up every morning, cheers me on during combat, and even has a dozen bedtime stories lined up for me! So, there's nothing to worry about.",
           TextMapId = "voice_ch_char_Baonu_vo_companio_01"
-        },
-        voice_ch_char_Baonu_vo_companio_02 = {
-          ContentEN = [[
-"Patience is one of the Seven Virtues. Those gifted with patience can discover hidden secrets and accomplish extraordinary... feats..."
-I can't take it anymore! Don't imitate me dwarf in the name of the Nine Gods I'll cut you in half with Samel if you do that one more time!]],
-          TextMapId = "voice_ch_char_Baonu_vo_companio_02"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Baonu_vo_companio_03",
-    MaxKey = "voice_ch_char_Kezhou_vo_die_r02",
+    MinKey = "voice_ch_char_Baonu_vo_companio_02",
+    MaxKey = "voice_ch_char_Kezhou_vo_die_r01",
     Loader = function()
       return {
+        voice_ch_char_Baonu_vo_companio_02 = {
+          ContentEN = [[
+"Patience is one of the Seven Virtues. Those gifted with patience can discover hidden secrets and accomplish extraordinary... feats..."
+I can't take it anymore! Don't imitate me dwarf in the name of the Nine Gods I'll cut you in half with Samel if you do that one more time!]],
+          TextMapId = "voice_ch_char_Baonu_vo_companio_02"
+        },
         voice_ch_char_Baonu_vo_companio_03 = {
           ContentEN = "Cream? What's wrong? That's how we Elysians take care of our weapons. You got a problem with that?",
           TextMapId = "voice_ch_char_Baonu_vo_companio_03"
@@ -89530,19 +89534,19 @@ I am Hellfire, and I'll show you what hell is truly like!]],
         voice_ch_char_Kezhou_vo_die_r01 = {
           ContentEN = "A wise man knows when to retreat — til we meet again.",
           TextMapId = "voice_ch_char_Kezhou_vo_die_r01"
-        },
-        voice_ch_char_Kezhou_vo_die_r02 = {
-          ContentEN = "Skill sharpens with effort… slacks dull the blade…",
-          TextMapId = "voice_ch_char_Kezhou_vo_die_r02"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Kezhou_vo_fail",
-    MaxKey = "voice_ch_char_Nifu_vo_battlestart",
+    MinKey = "voice_ch_char_Kezhou_vo_die_r02",
+    MaxKey = "voice_ch_char_Nifu_vo_battleidle",
     Loader = function()
       return {
+        voice_ch_char_Kezhou_vo_die_r02 = {
+          ContentEN = "Skill sharpens with effort… slacks dull the blade…",
+          TextMapId = "voice_ch_char_Kezhou_vo_die_r02"
+        },
         voice_ch_char_Kezhou_vo_fail = {
           ContentEN = "Some battles you win, some you lose, no big deal. We'll go again.",
           TextMapId = "voice_ch_char_Kezhou_vo_fail"
@@ -90340,19 +90344,19 @@ so I suppose I could lend a hand. In my own personal capacity, of course.]],
         voice_ch_char_Nifu_vo_battleidle = {
           ContentEN = "If weariness weighs on you, rest here awhile. No need to strain yourself.",
           TextMapId = "voice_ch_char_Nifu_vo_battleidle"
-        },
-        voice_ch_char_Nifu_vo_battlestart = {
-          ContentEN = "I stand watch upon the shore of the River of Life.",
-          TextMapId = "voice_ch_char_Nifu_vo_battlestart"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Nifu_vo_be_hit_heavy_r01",
-    MaxKey = "voice_ch_char_Tuosi_vo_battlestart",
+    MinKey = "voice_ch_char_Nifu_vo_battlestart",
+    MaxKey = "voice_ch_char_Tuosi_vo_battleidle",
     Loader = function()
       return {
+        voice_ch_char_Nifu_vo_battlestart = {
+          ContentEN = "I stand watch upon the shore of the River of Life.",
+          TextMapId = "voice_ch_char_Nifu_vo_battlestart"
+        },
         voice_ch_char_Nifu_vo_be_hit_heavy_r01 = {
           ContentEN = "...I am unharmed.",
           TextMapId = "voice_ch_char_Nifu_vo_be_hit_heavy_r01"
@@ -91156,19 +91160,19 @@ After all, even if I gave you a thousand chances, I would still escape from your
         voice_ch_char_Tuosi_vo_battleidle = {
           ContentEN = "What did I used to look like, I wonder...",
           TextMapId = "voice_ch_char_Tuosi_vo_battleidle"
-        },
-        voice_ch_char_Tuosi_vo_battlestart = {
-          ContentEN = "Now presenting: a tale of adventure and grandeur.",
-          TextMapId = "voice_ch_char_Tuosi_vo_battlestart"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Tuosi_vo_be_hit_heavy_r01",
-    MaxKey = "voice_ch_char_Zhangyu_vo_be_hit_r02",
+    MinKey = "voice_ch_char_Tuosi_vo_battlestart",
+    MaxKey = "voice_ch_char_Zhangyu_vo_be_hit_r01",
     Loader = function()
       return {
+        voice_ch_char_Tuosi_vo_battlestart = {
+          ContentEN = "Now presenting: a tale of adventure and grandeur.",
+          TextMapId = "voice_ch_char_Tuosi_vo_battlestart"
+        },
         voice_ch_char_Tuosi_vo_be_hit_heavy_r01 = {
           ContentEN = "I'm fine.",
           TextMapId = "voice_ch_char_Tuosi_vo_be_hit_heavy_r01"
@@ -91981,19 +91985,19 @@ Yale: Peter Piker p-picked a peck of p-p-peckled peppers...
         voice_ch_char_Zhangyu_vo_be_hit_r01 = {
           ContentEN = "Ah!",
           TextMapId = "voice_ch_char_Zhangyu_vo_be_hit_r01"
-        },
-        voice_ch_char_Zhangyu_vo_be_hit_r02 = {
-          ContentEN = "Uh!",
-          TextMapId = "voice_ch_char_Zhangyu_vo_be_hit_r02"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Zhangyu_vo_birthday",
+    MinKey = "voice_ch_char_Zhangyu_vo_be_hit_r02",
     MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
     Loader = function()
       return {
+        voice_ch_char_Zhangyu_vo_be_hit_r02 = {
+          ContentEN = "Uh!",
+          TextMapId = "voice_ch_char_Zhangyu_vo_be_hit_r02"
+        },
         voice_ch_char_Zhangyu_vo_birthday = {
           ContentEN = "I've never celebrated my birthday so I'm not sure what I meant to say. So, I wish you never have to know what it's like to be starving or have to steal to survive. How was that?!",
           TextMapId = "voice_ch_char_Zhangyu_vo_birthday"

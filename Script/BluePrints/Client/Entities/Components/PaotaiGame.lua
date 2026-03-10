@@ -1,3 +1,4 @@
+local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
 local Component = {}
 
 function Component:EnterWorld()
@@ -72,6 +73,9 @@ function Component:_TryAddPaotaiGameRewardReddot(EventId)
   if CacheDetail.EventId ~= EventId then
     ReddotManager.ClearLeafNodeCount("PaotaiEventReward", true)
   end
+  if not EventId or not ActivityUtils.CheckEventIsOpen(EventId) then
+    return
+  end
   CacheDetail = ReddotManager.GetLeafNodeCacheDetail("PaotaiEventReward")
   CacheDetail.EventId = EventId
   local TargetNum = 0
@@ -131,6 +135,9 @@ function Component:_TryAddPaotaiGameNewLevelReddot(EventId)
   local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("PaotaiEventNewLevel")
   if CacheDetail.EventId ~= EventId then
     ReddotManager.ClearLeafNodeCount("PaotaiEventNewLevel", true)
+  end
+  if not EventId or not ActivityUtils.CheckEventIsOpen(EventId) then
+    return
   end
   CacheDetail = ReddotManager.GetLeafNodeCacheDetail("PaotaiEventNewLevel")
   CacheDetail.EventId = EventId
@@ -219,6 +226,9 @@ function Component:_TryAddPaotaiGameNewBuffReddot(EventId)
   local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("PaotaiEventNewBuff")
   if CacheDetail.EventId ~= EventId then
     ReddotManager.ClearLeafNodeCount("PaotaiEventNewBuff", true)
+  end
+  if not EventId or not ActivityUtils.CheckEventIsOpen(EventId) then
+    return
   end
   CacheDetail = ReddotManager.GetLeafNodeCacheDetail("PaotaiEventNewBuff")
   CacheDetail.EventId = EventId

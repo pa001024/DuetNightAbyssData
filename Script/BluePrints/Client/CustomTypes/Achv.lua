@@ -80,7 +80,7 @@ function Achv:GetProgressIndex()
 end
 
 function Achv:IsFinished()
-  return self:GetCount() >= self.TargetNeedCount
+  return self:GetCount() >= self.TargetNeedCount or not self:CanRecvReward()
 end
 
 function Achv:OnTargetFinish(Target, UniqueAttr, FinishedCount)

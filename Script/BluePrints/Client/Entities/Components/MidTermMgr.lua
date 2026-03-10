@@ -111,15 +111,7 @@ function Component:UpdateJJGameReddot(TaskId)
 end
 
 function Component:TryIncreaceChallengeTaskRewardReddot(TaskId)
-  local allRewardsClaimed = true
-  local MidTermAchvProgressRewarded = self.MidTermGoals[MidTermGoalEventId].AchvProgressRewarded or {}
-  for _, v in pairs(MidTermAchvProgressRewarded) do
-    if 0 == v then
-      allRewardsClaimed = false
-      break
-    end
-  end
-  if allRewardsClaimed then
+  if self:CheckIsChallengeRewardAllClaimed() then
     return
   end
   local CacheKey = ChallengeRewardReddotName .. TaskId
@@ -128,6 +120,28 @@ function Component:TryIncreaceChallengeTaskRewardReddot(TaskId)
     CacheData[CacheKey] = true
     ReddotManager.IncreaseLeafNodeCount(ChallengeRewardReddotName)
   end
+end
+
+function Component:CheckIsChallengeRewardAllClaimed()
+  local AchievementPrize = DataMgr.AchievementPrize
+  local MidTermGoals = self.MidTermGoals[MidTermGoalEventId] or {}
+  local MidTermAchvScores = MidTermGoals.AchvScores or 0
+  local MidTermAchvProgressRewarded = MidTermGoals.AchvProgressRewarded or {}
+  local maxCount = 0
+  for Count, _ in pairs(AchievementPrize) do
+    if Count > maxCount then
+      maxCount = Count
+    end
+  end
+  if MidTermAchvScores < maxCount then
+    return false
+  end
+  for Count, _ in pairs(AchievementPrize) do
+    if Count <= MidTermAchvScores and 1 ~= MidTermAchvProgressRewarded[Count] then
+      return false
+    end
+  end
+  return true
 end
 
 function Component:TryIncreaceNormalRewardReddot(TaskId)

@@ -108,7 +108,7 @@ function Component:_OnPropChangeBattlePassUnlockRank2()
       ReddotManager.AddNode("BattlePassReward")
     end
     local MaxLevel = BattlePassUtils:GetMaxLevelReal()
-    local IncreaceNum = self.BattlePassLevel
+    local IncreaceNum = 0
     for i = 1, self.BattlePassLevel do
       if i > MaxLevel then
         return

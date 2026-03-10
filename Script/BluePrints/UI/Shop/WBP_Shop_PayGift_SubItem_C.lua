@@ -54,7 +54,7 @@ function M:InitItemInfo(ShopItemData)
   end
   local ItemName = ItemUtils:GetDropName(ShopItemData.TypeId, ShopItemData.ItemType)
   self.Text_GiftTitle:SetText(ItemName)
-  local LimitText = ShopUtils:GetUnifiedLimitText(ShopItemData.ItemId)
+  local LimitText = ShopUtils:GetUnifiedLimitText(ShopItemData.ItemId, true)
   if "" ~= LimitText then
     self.Group_BuyLeftTimes:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.Text_BuyLeftTimes:SetText(LimitText)
@@ -88,7 +88,7 @@ function M:UpdateBuyLeftTimesForGift(ShopItemData)
   local Total = ShopUtils:GetGiftItemPurchaseTotalLimit(ShopItemData.ItemId, Uid)
   if Remain >= 0 and Total >= 0 then
     self.Group_BuyLeftTimes:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    self.Text_BuyLeftTimes:SetText(GText("UI_SendGift_GiftItemMax") .. Remain .. "/" .. Total)
+    self.Text_BuyLeftTimes:SetText(GText("UI_SendGift_SendGiftLimit") .. Remain .. "/" .. Total)
   else
     self.Group_BuyLeftTimes:SetVisibility(ESlateVisibility.Collapsed)
   end

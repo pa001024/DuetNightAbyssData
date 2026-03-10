@@ -577,9 +577,16 @@ function M:ParseModSuitText(MsgWrap)
   local Name = "角色或武器被删除了!!!!"
   local Conf = DataMgr[TargetType][TargetId]
   if "Char" == TargetType then
-    Name = Conf.CharName
+    if Conf.GenderTag ~= nil then
+      Name = MsgWrap.Message.Sender.Nickname
+    else
+      Name = Conf.CharName
+    end
   else
     Name = Conf.WeaponName
+  end
+  if Name == MsgWrap.Message.Sender.Nickname then
+    return string.format(GText("UI_Chat_ModSuitFormat"), Name)
   end
   return string.format(GText("UI_Chat_ModSuitFormat"), GText(Name))
 end

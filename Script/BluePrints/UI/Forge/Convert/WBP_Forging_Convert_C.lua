@@ -256,7 +256,7 @@ function WBP_Forging_Convert_C:UpdateForingConvertContent(Item)
     self.Num:SetText(self:GetHaveCount(Item.Id))
   end
   self.Shop.Item_Shop:OnListItemObjectSet(self.ConvertContent)
-  self.Shop.Text_Num:SetText("X" .. tostring(DataMgr.Convert[Item.Idx].ProductNum))
+  self.Shop.Text_Num:SetText("x" .. tostring(DataMgr.Convert[Item.Idx].ProductNum))
   self.Shop.Text_Name:SetText(GText(ResourceData.ResourceName))
   for CostType, CostCount in pairs(DataMgr.Convert[Item.Idx].ConvertCost) do
     self.CostType = CostType
@@ -341,7 +341,7 @@ function WBP_Forging_Convert_C:UpdateTextPanel()
   end
   self.TextNumNow:SetText(self.CurrentCount)
   self.TextNumMax:SetText(self:GetMaxCount())
-  self.Shop.Text_Num:SetText("X" .. tostring(self.CurrentCount * DataMgr.Convert[self.ConvertContent.Idx].ProductNum))
+  self.Shop.Text_Num:SetText("x" .. tostring(self.CurrentCount * DataMgr.Convert[self.ConvertContent.Idx].ProductNum))
 end
 
 function WBP_Forging_Convert_C:CollapseAllMaterialSlot(bIsCollaspe)
@@ -368,7 +368,7 @@ function WBP_Forging_Convert_C:OnConfirmConvertClicked()
   Params.ConvertContent = self.ConvertContent
   Params.CurrentCount = self.CurrentCount
   local ResourceData = DataMgr.Resource[self.ConvertContent.ShopItemId]
-  local ConvertName = GText(ResourceData.ResourceName) .. "X"
+  local ConvertName = GText(ResourceData.ResourceName) .. "x"
   local ConvertCount = DataMgr.Convert[self.ConvertContent.Idx].ProductNum
   Params.Str = string.format(GText("Convert_Popup_Content"), ConvertName .. tostring(self.CurrentCount * ConvertCount))
   local Funds = {}

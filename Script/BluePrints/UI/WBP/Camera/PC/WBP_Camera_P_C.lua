@@ -176,55 +176,41 @@ function M:Construct()
     end,
     Desc = GText("UI_BACK")
   })
-  self.Z_L:CreateCommonKey({
+  self.Key_Rotation:CreateSubKeyDesc({
     KeyInfoList = {
       {
         Type = "Text",
         Text = self.CameraRollLeftKey,
-        ClickCallback = self.OnCameraRollLeftClicked,
         Owner = self
-      }
-    },
-    SoundFunc = function()
-    end,
-    Desc = GText("UI_CameraSystem_CameraLeftLean")
-  })
-  self.X_R:CreateCommonKey({
-    KeyInfoList = {
+      },
       {
         Type = "Text",
         Text = self.CameraRollRightKey,
-        ClickCallback = self.OnCameraRollRightClicked,
         Owner = self
       }
     },
+    Type = "Or",
     SoundFunc = function()
     end,
-    Desc = GText("UI_CameraSystem_CameraRightLean")
+    Desc = GText("UI_Accessory_Custom_Rotation")
   })
-  self.Key_Controller_LeanL:CreateCommonKey({
+  self.Key_Controller_Rotation:CreateSubKeyDesc({
     KeyInfoList = {
       {
         Type = "Img",
         ImgShortPath = "Left",
         Owner = self
-      }
-    },
-    SoundFunc = function()
-    end,
-    Desc = GText("UI_CameraSystem_CameraLeftLean")
-  })
-  self.Key_Controller_LeanR:CreateCommonKey({
-    KeyInfoList = {
+      },
       {
         Type = "Img",
         ImgShortPath = "Right",
         Owner = self
       }
     },
+    Type = "Or",
     SoundFunc = function()
     end,
-    Desc = GText("UI_CameraSystem_CameraRightLean")
+    Desc = GText("UI_Accessory_Custom_Rotation")
   })
   self.Key_Controller_View:CreateCommonKey({
     KeyInfoList = {
@@ -389,10 +375,6 @@ function M:Construct()
     Bottom = {
       In = self.MenuPart_In,
       Out = self.MenuPart_Out
-    },
-    ESC = {
-      In = self.ESC_In,
-      Out = self.ESC_Out
     },
     Menu = {
       In = self.Menu_In,
@@ -765,7 +747,6 @@ function M:ToggleShowHideCharacterWidget()
   if self.bShowHideCharacterWidget then
     self:PushOperationStack("HideCharcater")
     self:RemoveWidgetHideTag("Menu")
-    self:AddWidgetHideTag("ESC")
     self:AddWidgetHideTag("Bottom")
     self.KeyDownEvent[self.ResetCameraKeyGamepad] = self.HiddenAllKeyDown
     self.GameInputModeSubsystem:SetTargetUIFocusWidget(self.Hide_Role.Btn_Click)
@@ -773,7 +754,6 @@ function M:ToggleShowHideCharacterWidget()
   else
     self:PopOperationStack("HideCharcater")
     self:AddWidgetHideTag("Menu")
-    self:RemoveWidgetHideTag("ESC")
     self:RemoveWidgetHideTag("Bottom")
     self.KeyDownEvent[self.ResetCameraKeyGamepad] = self.OnResetCameraKeyDown
     self.GameInputModeSubsystem:SetTargetUIFocusWidget(self)
@@ -819,7 +799,6 @@ function M:SetBottomWidgetVisibility(bHitTestable)
     self.HideUI_Key:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.HideRole_Key:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.Restore_Key:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    self.HorizontalBox_39:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.WBP_Camera_Roll_P:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.WBP_Camera_Scale_P:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.Btn_Close:SetVisibility(UIConst.VisibilityOp.Visible)
@@ -828,7 +807,6 @@ function M:SetBottomWidgetVisibility(bHitTestable)
     self.HideUI_Key:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
     self.HideRole_Key:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
     self.Restore_Key:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-    self.HorizontalBox_39:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
     self.WBP_Camera_Roll_P:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
     self.WBP_Camera_Scale_P:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
     self.Btn_Close:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
@@ -845,11 +823,6 @@ function M:SetMenuWidgetVisibility(bHitTestable)
 end
 
 function M:SetESCWidgetVisibility(bHitTestable)
-  if bHitTestable then
-    self.Close_Key:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-  else
-    self.Close_Key:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-  end
 end
 
 function M:SetMenuHideExcludeBottom()

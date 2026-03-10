@@ -2519,8 +2519,9 @@ return ReadOnly("Monster", {
     ForbidenMoveComp = true,
     GamePlayTags = T.RT_4,
     IgnoreGlobalPassive = true,
+    IsSyncLoad = true,
     ModelId = 430101,
-    SpecificBuffTypes = T.RT_37,
+    SpecificBuffTypes = {430101},
     UnitBPPath = "/Game/AssetDesign/Char/Player/Xibi/BP_Xibi_Summon.BP_Xibi_Summon",
     UnitId = 430101,
     UnitName = "TERM_4301_Skill02"

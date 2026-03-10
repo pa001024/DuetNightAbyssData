@@ -217,18 +217,6 @@ function Component:OnBtnAutoClick()
       local Content = self.Selective_Listing.FilteredContents[i]
       if Content.IsLocked or Content.Level and Content.Level > 0 or Content.bShadow then
       elseif Content.Count and Content.Count > 0 then
-        local IsCommon = false
-        if self.Target.CardLevelNeedResourceId then
-          for _, ResourceId in pairs(self.Target.CardLevelNeedResourceId) do
-            if ResourceId == Content.UnitId then
-              IsCommon = true
-              break
-            end
-          end
-        end
-        if not IsCommon then
-          table.insert(PendingEnhanceResList, Content)
-        end
       else
         SetItemChosen(Content, true)
         table.insert(AutoSelectContents, Content)
@@ -567,6 +555,16 @@ function Component:OnKeyDownComp(MyGeometry, InKeyName)
     self.Selective_Listing.Common_Sort_List.Btn_Filter_List:SetFocus()
   elseif InKeyName == UIConst.GamePadKey.RightThumb then
     self.Tab_Intensify:Handle_KeyEventOnGamePad(InKeyName, "KeyDown")
+  end
+end
+
+function Component:OnKeyUpComp(MyGeometry, InKeyName)
+  if InKeyName == UIConst.GamePadKey.SpecialRight then
+    local DetailContent = self.ItemDetailsWidget.Content
+    if self.ItemDetailsWidget:IsVisible() and DetailContent then
+      self.ItemDetailsWidget.Btn_Locked:OnBtnPressed()
+      self.ItemDetailsWidget.Btn_Locked:OnBtnReleased()
+    end
   end
 end
 

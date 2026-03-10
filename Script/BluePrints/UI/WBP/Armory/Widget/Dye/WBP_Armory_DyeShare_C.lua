@@ -67,9 +67,15 @@ function M:GetCurrentDyePlanInfo()
     if Parent.SkinType == CommonConst.DataType.Hair then
       DyePlanInfo.SkinType = Parent.SkinType
       DyePlanInfo.SkinId = CurrentSkin.SkinId
+      DyePlanInfo.CharId = self.Parent.Target and self.Parent.Target.CharId
+      local CharData = DataMgr.Char[DyePlanInfo.CharId]
       local HairData = DataMgr.Hair[CurrentSkin.SkinId]
-      if HairData then
-        DyePlanInfo.TargetName = GText(HairData.Name)
+      if CharData and HairData then
+        DyePlanInfo.TargetName = table.concat({
+          GText(CharData.CharName),
+          ": ",
+          GText(HairData.Name)
+        })
       end
     else
       DyePlanInfo.SkinType = "Char"
@@ -127,7 +133,7 @@ end
 function M:OnKeyDown(MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  if "Gamepad_FaceButton_Right" == InKeyName then
+  if "Gamepad_FaceButton_Right" == InKeyName or "Escape" == InKeyName then
     self:Close()
     return UE4.UWidgetBlueprintLibrary.Handled()
   end

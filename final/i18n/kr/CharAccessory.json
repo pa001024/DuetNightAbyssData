@@ -85,7 +85,7 @@
     "desc": "단정함의 상징, 예의의 구현, 혹은 날지 못하는 나비 한 마리.",
     "icon": "T_Fashion_Head_SilverBow",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "이벤트를 통해 획득"
   },
   {
     "id": 10012,
@@ -691,7 +691,7 @@
     "id": 11004,
     "name": "별빛 폭우",
     "desc": "부싯나무를 문 붉은 용이 별빛 비를 훔쳐 세상에 내린 듯하구나.",
-    "icon": "",
+    "icon": "T_Fashion_Fx13",
     "rarity": 5,
     "unlock": "프리즘 교환으로 획득"
   },
@@ -699,9 +699,9 @@
     "id": 12001,
     "name": "코발트의 속삭임",
     "desc": "이 코발트빛 찻잔에 담긴 건 반평생의 풍파요, 한 폭의 산하로다.",
-    "icon": "T_Fashion_Hat03",
+    "icon": "T_Fashion_Hat03_01",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "상점을 통해 획득"
   },
   {
     "id": 12002,
@@ -709,7 +709,7 @@
     "desc": "크지도 작지도 않은 모자챙. 흐릿한 안개비 속을 걸어가기에는 안성맞춤이다.",
     "icon": "T_Fashion_Hat04",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "상점을 통해 획득"
   },
   {
     "id": 12003,
@@ -717,7 +717,7 @@
     "desc": "이상과 미래를 맑은 하늘에 던지노라.",
     "icon": "T_Fashion_Hat01",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "상점을 통해 획득"
   },
   {
     "id": 12004,
@@ -725,7 +725,7 @@
     "desc": "복도 모퉁이에서 머리끈이 산들바람에 나풀거린다.",
     "icon": "T_Fashion_Hat02",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "상점을 통해 획득"
   },
   {
     "id": 12121,
@@ -1459,7 +1459,7 @@
     "id": 21004,
     "name": "은하를 떠도는 용",
     "desc": "불꽃을 따라 별빛이 흔들리니 은하수가 움직이고, 용이 하늘에 드리운 은하를 누비네.",
-    "icon": "",
+    "icon": "T_Fashion_Fx12",
     "rarity": 5,
     "unlock": "프리즘 교환으로 획득"
   },
@@ -1669,7 +1669,7 @@
     "desc": "클리어 동작을 변경할 수 있다.",
     "icon": "T_Fashion_SettlementAction_01",
     "rarity": 5,
-    "unlock": ""
+    "unlock": "프리즘 교환으로 획득"
   },
   {
     "id": 31002,
@@ -1677,7 +1677,7 @@
     "desc": "클리어 동작을 변경할 수 있다.",
     "icon": "T_Fashion_SettlementAction_02",
     "rarity": 5,
-    "unlock": ""
+    "unlock": "프리즘 교환으로 획득"
   },
   {
     "id": 40001,
@@ -2034,7 +2034,7 @@
   {
     "id": 50002,
     "name": "은촛불 화염",
-    "desc": "{空格}",
+    "desc": " ",
     "icon": "T_Fashion_Fx03",
     "rarity": 4,
     "unlock": "광채에서 획득"
@@ -2042,15 +2042,15 @@
   {
     "id": 50003,
     "name": "은촛불 인형",
-    "desc": "{空格}",
+    "desc": " ",
     "icon": "T_Fashion_Fx11",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "프리즘 교환으로 획득"
   },
   {
     "id": 60001,
-    "name": "{空格}",
-    "desc": "{空格}",
+    "name": " ",
+    "desc": " ",
     "icon": "",
     "rarity": 5,
     "unlock": ""
@@ -2083,7 +2083,7 @@
     "id": 70003,
     "name": "불꽃의 길·골드",
     "desc": "솟아오른 용이 불꽃을 내뿜고, 밤새도록 환희의 노래를 부른다.",
-    "icon": "T_Fashion_Head_YellowChick",
+    "icon": "T_Fashion_Fx10_02",
     "rarity": 5,
     "unlock": "프리즘 교환으로 획득"
   },
@@ -2139,7 +2139,7 @@
     "id": 70031,
     "name": "불꽃의 길·\n러스트 레드",
     "desc": "솟아오른 용이 불꽃을 내뿜고, 밤새도록 환희의 노래를 부른다.",
-    "icon": "T_Fashion_Head_YellowChick",
+    "icon": "T_Fashion_Fx10_01",
     "rarity": 5,
     "unlock": "프리즘 교환으로 획득"
   },
@@ -2147,7 +2147,7 @@
     "id": 70032,
     "name": "불꽃의 길·아이보리",
     "desc": "솟아오른 용이 불꽃을 내뿜고, 밤새도록 환희의 노래를 부른다.",
-    "icon": "T_Fashion_Head_YellowChick",
+    "icon": "T_Fashion_Fx10",
     "rarity": 5,
     "unlock": "프리즘 교환으로 획득"
   },
@@ -2155,7 +2155,7 @@
     "id": 70033,
     "name": "불꽃의 길·다크 블루",
     "desc": "솟아오른 용이 불꽃을 내뿜고, 밤새도록 환희의 노래를 부른다.",
-    "icon": "T_Fashion_Head_YellowChick",
+    "icon": "T_Fashion_Fx10_03",
     "rarity": 5,
     "unlock": "프리즘 교환으로 획득"
   },

@@ -658,12 +658,22 @@ function Component:OnListItemClicked(Content)
       if OtherSlotWidget then
         self:SetContentIsChosen(Content, false)
       end
-      self:UpdateSlot(self.CurSlotName, Content)
-      self:SetContentIsChosen(Content, true)
       if CurContent then
         self:UpdateSlot(OtherSlotInfo.SlotName, CurContent)
         self:SetContentIsChosen(CurContent, true)
+      else
+        self:ClearSlot(OtherSlotInfo.SlotName)
+        local OtherSlotType = Component.SlotName2Type[OtherSlotInfo.SlotName]
+        self:UpdateCurrentUuid(OtherSlotType, nil)
+        if "Char" == OtherSlotType then
+          self:UpdateCharConflict()
+        end
+        if self.OnLeftItemContentChanged then
+          self:OnLeftItemContentChanged()
+        end
       end
+      self:UpdateSlot(self.CurSlotName, Content)
+      self:SetContentIsChosen(Content, true)
       self:UpdateCurrentUuid(Type, Content.Uuid)
       if "Char" == Type then
         self:UpdateCharConflict()

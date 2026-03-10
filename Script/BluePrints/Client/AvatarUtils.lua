@@ -741,16 +741,20 @@ function AvatarUtils:GetPlayerPersonalInfoChar(Avatar, FromDb)
           CharSkin = CommonChar.OwnedSkins[tostring(SkinId)]
         end
         local HairId = AppearanceSuit and AppearanceSuit.HairId
-        local CharHair = CommonChar.OwnedHairs[HairId]
-        if FromDb then
-          CharHair = CommonChar.OwnedHairs[tostring(HairId)]
+        local CharHair
+        if not CommonChar.OwnedHairs then
+          HairId = DataMgr.Char[Char.CharId].DefaultHairId
+        else
+          CharHair = CommonChar.OwnedHairs[HairId]
+          if FromDb then
+            CharHair = CommonChar.OwnedHairs[tostring(HairId)]
+          end
         end
         local Appearance = {
           SkinId = SkinId,
           HairId = HairId,
           Accessory = AppearanceSuit and AppearanceSuit.Accessory or {},
-          CurrentPlanIndex = CharSkin.CurrentPlanIndex or 1,
-          CurrentHairPlanIndex = CharHair.CurrentPlanIndex or 1
+          CurrentPlanIndex = CharSkin.CurrentPlanIndex or 1
         }
         for key, value in pairs(CharSkin.Colors) do
           if not Appearance.SkinColors then
@@ -758,11 +762,23 @@ function AvatarUtils:GetPlayerPersonalInfoChar(Avatar, FromDb)
           end
           Appearance.SkinColors[tonumber(key)] = value
         end
-        for key, value in pairs(CharHair.Colors) do
-          if not Appearance.HairColors then
-            Appearance.HairColors = {}
+        if CharHair then
+          for key, value in pairs(CharHair.Colors) do
+            if not Appearance.HairColors then
+              Appearance.HairColors = {}
+            end
+            Appearance.HairColors[tonumber(key)] = value
           end
-          Appearance.HairColors[tonumber(key)] = value
+          Appearance.CurrentHairPlanIndex = CharHair.CurrentPlanIndex or 1
+        else
+          local DefaultColor = DataMgr.GlobalConstant.HairDefaultColor.ConstantValue
+          for i = 1, DataMgr.GlobalConstant.HairColorPart.ConstantValue do
+            if not Appearance.HairColors then
+              Appearance.HairColors = {}
+            end
+            Appearance.HairColors[i] = DefaultColor
+          end
+          Appearance.CurrentHairPlanIndex = 1
         end
         local ModSuitIndex = value.ModPlan or 1
         local ModSuit = Char["ModSuit_" .. ModSuitIndex]
@@ -1036,6 +1052,9 @@ function AvatarUtils:GetPlayerPersonalInfoAchievementCount(Avatar, FromDb)
 end
 
 function AvatarUtils:IsAchvFinished(Achv, FromDb)
+  if Achv.IsBonus then
+    return true
+  end
   local AchvInfo = DataMgr.Achievement[Achv.AchvId]
   local FinishCount = 0
   for _, value in ipairs(AchvInfo.TargetId) do

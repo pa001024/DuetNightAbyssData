@@ -397,6 +397,10 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "MonsterRushEvent_Wuyou_DungeonDes03",
     WildcardClassification = "Story"
   },
+  NpcBiography_AgeText = {
+    TextMapId = "NpcBiography_AgeText",
+    WildcardClassification = "Story"
+  },
   NpcBiography_Information_Feiyi_2 = {
     TextMapId = "NpcBiography_Information_Feiyi_2",
     WildcardClassification = "Story"
@@ -1231,6 +1235,10 @@ return ReadOnly("TextMapWildcard", {
   },
   UI_GameEvent_TimeRemain_Min = {
     TextMapId = "UI_GameEvent_TimeRemain_Min",
+    WildcardClassification = "Story"
+  },
+  UI_GameEvent_TimeRemain_Sec = {
+    TextMapId = "UI_GameEvent_TimeRemain_Sec",
     WildcardClassification = "Story"
   },
   UI_HardBoss_ChancesRemain = {

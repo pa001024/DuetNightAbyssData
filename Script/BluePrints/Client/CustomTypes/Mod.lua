@@ -108,6 +108,9 @@ function Mod:IsFinalMaxLevel()
 end
 
 function Mod:GetName()
+  if CommonConst.SystemLanguage == CommonConst.SystemLanguages.FR then
+    return string.format("%s %s", GText(self:Data().Name), GText(self:Data().TypeName))
+  end
   return GText(self:Data().TypeName) .. GText(self:Data().Name)
 end
 

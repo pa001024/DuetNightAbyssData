@@ -2630,6 +2630,9 @@ function UIUtils.CalculateHoleTitle(TitleBefore, TitleAfter)
   TitleBeforeText = TitleBeforeText and (GText(TitleBeforeText) or "")
   TitleAfterText = TitleAfterText and (GText(TitleAfterText) or "")
   local WholeTitle = (TitleBeforeText or "") .. (TitleAfterText or "")
+  if CommonConst.SystemLanguage == CommonConst.SystemLanguages.FR then
+    WholeTitle = (TitleAfterText or " ") .. (TitleBeforeText and string.format(" %s", TitleBeforeText) or " ")
+  end
   return WholeTitle
 end
 
@@ -2997,7 +3000,7 @@ function UIUtils.CanOpenSkinPreview(ItemType, TypeId)
   end
   if "Resource" == ItemType then
     local ResData = DataMgr.Resource[TypeId]
-    return ResData and ResData.ResourceSType == "GestureItem"
+    return ResData and ResData.ResourceSType == "GestureItem" and not UIConst.LimitPreviewResource[ResData.ResourceId]
   end
   return false
 end

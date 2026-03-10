@@ -326,7 +326,7 @@ return ReadOnly("ShopTabSub", {
   },
   [100061] = {
     MainTabId = 10006,
-    SubName = "AutoChessShop",
+    SubName = "UI_AutoChess_ShopName",
     SubTabId = 100061,
     TabCoin = {219},
     TabType = "Normal"

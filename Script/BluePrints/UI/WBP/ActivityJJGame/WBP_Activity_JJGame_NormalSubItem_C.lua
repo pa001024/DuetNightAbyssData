@@ -49,7 +49,7 @@ function M:OnListItemObjectSet(Content)
   self._Avatar = GWorld:GetAvatar()
   self.Text_RewardNum:SetText(Content.Point)
   self.Text_Desc:SetText(GText(Content.Desc))
-  self.MidTermGoals = self._Avatar.MidTermGoals[10300601]
+  self.MidTermGoals = self._Avatar.MidTermGoals[self.MidTermGoalEventId] or {}
   self.TaskFinishCount = self.MidTermGoals.TaskFinishCount[self.TaskId] or 0
   self.Progress = self.TaskProp.Progress or 0
   if self.Progress >= self.TaskProp.Target then
@@ -66,7 +66,6 @@ function M:OnListItemObjectSet(Content)
     self.WS_Btn:SetActiveWidgetIndex(0)
   end
   if Content.TaskType == TaskType.Cycle then
-    self.MidTermGoals = self._Avatar.MidTermGoals[self.MidTermGoalEventId]
     local TaskFinishCount = self.MidTermGoals.TaskFinishCount[self.TaskId] or 0
     self.Text_InfinityNum:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.Image_IconInfinity:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)

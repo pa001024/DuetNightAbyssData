@@ -2,6 +2,7 @@ require("UnLua")
 local AutoChessConst = require("BluePrints.UI.AutoChess.AutoChessConst")
 local SkillUtils = require("Utils.SkillUtils")
 local TimeUtils = require("Utils.TimeUtils")
+local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
 local AutoChessDataModel = {}
 local ActiveId = 103016
 
@@ -10,30 +11,23 @@ function AutoChessDataModel:InitModel()
 end
 
 function AutoChessDataModel:InitReddotTree()
+  if not ActivityUtils.CheckEventIsOpen(ActiveId) then
+    ReddotManager.ClearLeafNodeCount("Acti_AutoChess", true)
+    ReddotManager.ClearLeafNodeCount("AutoChessLinear", true)
+    ReddotManager.ClearLeafNodeCount("AutoChessReward", true)
+    return
+  end
   if not ReddotManager.GetTreeNode("Acti_AutoChess") then
     ReddotManager.AddNodeEx("Acti_AutoChess")
-    self:RefreshAutoChessLinearRaddot()
   end
-  ReddotManager.AddListenerEx("Acti_AutoChess", self, self.OnAutoChessReddotChange)
+  self:RefreshAutoChessLinearReddot()
 end
 
-function AutoChessDataModel:OnAutoChessReddotChange(Count, RdType, RdName)
-  local ActivityNode = ReddotManager.GetTreeNode("Acti_AutoChessActivity")
-  if ActivityNode then
-    if Count > 0 then
-      ActivityNode.Cache.Detail.New = 1
-      ActivityNode:TryFireOnCountChange(1, true)
-      ActivityNode.Count = 1
-    else
-      ActivityNode.Cache.Detail.New = 0
-      ActivityNode:TryFireOnCountChange(0, true)
-      ActivityNode.Count = 0
-    end
-  end
-end
-
-function AutoChessDataModel:RefreshAutoChessLinearRaddot()
+function AutoChessDataModel:RefreshAutoChessLinearReddot()
   local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
   
   local function CheckTimeLock(Info)
     local UnlockDay = Info.UnlockDay
@@ -82,6 +76,22 @@ function AutoChessDataModel:RefreshAutoChessLinearRaddot()
     return true
   end
   
+  local function GetQuestChainState(QuestChainId)
+    if not Avatar.QuestChains[QuestChainId] then
+      return "Unlock"
+    end
+    if Avatar.QuestChains[QuestChainId]:IsFinish() then
+      return "Finish"
+    elseif Avatar.QuestChains[QuestChainId]:IsDoing() then
+      return "Doing"
+    else
+      return "Unlock"
+    end
+  end
+  
+  if not ActivityUtils.CheckEventIsOpen(ActiveId) or GetQuestChainState(DataMgr.EventMain[ActiveId].PretextTasks1) == "Unlock" then
+    return
+  end
   for key, value in pairs(DataMgr.AutoChessMission) do
     if 1 == value.MissionType and CheckLinear(value) then
       local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(DataMgr.ReddotNode.AutoChessLinear.Name)
@@ -103,6 +113,17 @@ end
 
 function AutoChessDataModel:DecreaseLinearReddotById(MissionId)
   local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(DataMgr.ReddotNode.AutoChessLinear.Name)
+  if not MissionId and CacheDetail then
+    local AllUnlockedLevels = {}
+    for Id, _ in pairs(CacheDetail) do
+      if true == CacheDetail[Id] then
+        table.insert(AllUnlockedLevels, Id)
+        CacheDetail[Id] = false
+      end
+    end
+    ReddotManager.ClearLeafNodeCount("AutoChessLinear", false, AllUnlockedLevels)
+    return
+  end
   if MissionId and CacheDetail[MissionId] then
     CacheDetail[MissionId] = false
     ReddotManager.DecreaseLeafNodeCount("AutoChessLinear", 1, {MissionId})

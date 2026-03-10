@@ -628,6 +628,7 @@ return ReadOnly("CommonQuestDetail", {
   },
   [10301805] = {
     EventId = 103018,
+    NoRepeatField = "AFdayTransferId",
     QuestId = 10301805,
     QuestPhaseId = 3003,
     QuestReward = {110905},
@@ -637,6 +638,7 @@ return ReadOnly("CommonQuestDetail", {
   },
   [10301806] = {
     EventId = 103018,
+    NoRepeatField = "AFdayTransferId",
     QuestId = 10301806,
     QuestPhaseId = 3003,
     QuestReward = {110906},

@@ -862,7 +862,7 @@ return ReadOnly("GlobalConstant", {
   },
   RegionOnlineMax = {
     ConstantName = "RegionOnlineMax",
-    ConstantValue = 50
+    ConstantValue = 80
   },
   RegionOnlineShowHigh = {
     ConstantName = "RegionOnlineShowHigh",

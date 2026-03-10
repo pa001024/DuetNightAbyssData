@@ -212,6 +212,9 @@ function M:OnBtnReleased()
   if self:IsAnimationPlaying(self.Change_LToR) or self:IsAnimationPlaying(self.Change_RToL) then
     return
   end
+  if not self.PressX then
+    return
+  end
   local MousePos = UWidgetLayoutLibrary.GetMousePositionOnPlatform()
   if MousePos.X > self.PressX then
     self:SwitchBannerItem(nil, false, true)
@@ -233,6 +236,9 @@ end
 
 function M:OnScrollBoxMouseButtonUp(MyGeometry, InTouchEvent)
   if self:IsAnimationPlaying(self.Change_LToR) or self:IsAnimationPlaying(self.Change_RToL) then
+    return UE4.UWidgetBlueprintLibrary.Unhandled()
+  end
+  if not self.PressX then
     return UE4.UWidgetBlueprintLibrary.Unhandled()
   end
   local ScreenSpacePosition = UE4.UKismetInputLibrary.PointerEvent_GetScreenSpacePosition(InTouchEvent)

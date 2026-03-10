@@ -107,6 +107,7 @@ function M:OnBtnClicked()
 end
 
 function M:OpenReward()
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_large", nil, nil)
   RewardModel:OpenReward(self)
 end
 

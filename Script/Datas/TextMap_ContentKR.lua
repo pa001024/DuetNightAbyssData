@@ -19505,7 +19505,7 @@ local Data = {
           TextMapId = "Message_Guide_Alt"
         },
         Message_Guide_AutoChess_1 = {
-          ContentKR = "체스를 시작하기 전에 기본 정보를 확인해 볼까요.",
+          ContentKR = "체스를 시작하기 전에 기본 정보를 확인해 보자.",
           TextMapId = "Message_Guide_AutoChess_1"
         },
         Message_Guide_AutoChess_10 = {
@@ -19589,7 +19589,7 @@ local Data = {
           TextMapId = "Message_Guide_AutoChess_7_Pad"
         },
         Message_Guide_AutoChess_8 = {
-          ContentKR = "룬스톤이 장착되었습니다.",
+          ContentKR = "룬스톤이 장착됐어.",
           TextMapId = "Message_Guide_AutoChess_8"
         },
         Message_Guide_AutoChess_9 = {
@@ -71559,7 +71559,7 @@ local Data = {
   },
   {
     MinKey = "UI_Keyboard_Map_OpenMenu",
-    MaxKey = "UI_MECHANISM_10463",
+    MaxKey = "UI_MECHANISM_10460",
     Loader = function()
       return {
         UI_Keyboard_Map_OpenMenu = {
@@ -71942,6 +71942,10 @@ local Data = {
         UI_Locked_Des_4030003 = {
           ContentKR = "임의의 찬란 전시 동작 획득 시 해제",
           TextMapId = "UI_Locked_Des_4030003"
+        },
+        UI_Locked_Des_4030004 = {
+          ContentKR = "후루후루 무기 코스튬 모두 획득",
+          TextMapId = "UI_Locked_Des_4030004"
         },
         UI_Locked_Des_Abyss = {
           ContentKR = "몰입형 연극이 아직 해제되지 않았습니다.",
@@ -72354,19 +72358,19 @@ local Data = {
         UI_MECHANISM_10460 = {
           ContentKR = "쓰레기통",
           TextMapId = "UI_MECHANISM_10460"
-        },
-        UI_MECHANISM_10463 = {
-          ContentKR = "천연 수정",
-          TextMapId = "UI_MECHANISM_10463"
         }
       }
     end
   },
   {
-    MinKey = "UI_MECHANISM_10475",
-    MaxKey = "UI_ModGuideBook_Unlock_New",
+    MinKey = "UI_MECHANISM_10463",
+    MaxKey = "UI_ModGuideBook_Task_Update",
     Loader = function()
       return {
+        UI_MECHANISM_10463 = {
+          ContentKR = "천연 수정",
+          TextMapId = "UI_MECHANISM_10463"
+        },
         UI_MECHANISM_10475 = {
           ContentKR = "낡은 공고판",
           TextMapId = "UI_MECHANISM_10475"
@@ -73162,19 +73166,19 @@ local Data = {
         UI_ModGuideBook_Task_Update = {
           ContentKR = "퀘스트 업데이트",
           TextMapId = "UI_ModGuideBook_Task_Update"
-        },
-        UI_ModGuideBook_Unlock_New = {
-          ContentKR = "다음 악마의 쐐기 해제 완료",
-          TextMapId = "UI_ModGuideBook_Unlock_New"
         }
       }
     end
   },
   {
-    MinKey = "UI_ModTask_QuestPhase_Complete",
-    MaxKey = "UI_Name_Walnut_151761",
+    MinKey = "UI_ModGuideBook_Unlock_New",
+    MaxKey = "UI_Name_Walnut_151756",
     Loader = function()
       return {
+        UI_ModGuideBook_Unlock_New = {
+          ContentKR = "다음 악마의 쐐기 해제 완료",
+          TextMapId = "UI_ModGuideBook_Unlock_New"
+        },
         UI_ModTask_QuestPhase_Complete = {
           ContentKR = "현재 단계의 모든 퀘스트 완료 시 수령할 수 있습니다.",
           TextMapId = "UI_ModTask_QuestPhase_Complete"
@@ -73964,19 +73968,19 @@ local Data = {
         UI_Name_Walnut_151756 = {
           ContentKR = "편지·쿠쿨칸의 영원",
           TextMapId = "UI_Name_Walnut_151756"
-        },
-        UI_Name_Walnut_151761 = {
-          ContentKR = "편지·메피스토의 소멸",
-          TextMapId = "UI_Name_Walnut_151761"
         }
       }
     end
   },
   {
-    MinKey = "UI_Name_Walnut_151762",
-    MaxKey = "UI_Npc_Name_FindSaiqiNpc1",
+    MinKey = "UI_Name_Walnut_151761",
+    MaxKey = "UI_Npc_Name_FemaleOfficer",
     Loader = function()
       return {
+        UI_Name_Walnut_151761 = {
+          ContentKR = "편지·메피스토의 소멸",
+          TextMapId = "UI_Name_Walnut_151761"
+        },
         UI_Name_Walnut_151762 = {
           ContentKR = "편지·메피스토의 작열·필사",
           TextMapId = "UI_Name_Walnut_151762"
@@ -74769,19 +74773,19 @@ local Data = {
         UI_Npc_Name_FemaleOfficer = {
           ContentKR = "여장교",
           TextMapId = "UI_Npc_Name_FemaleOfficer"
-        },
-        UI_Npc_Name_FindSaiqiNpc1 = {
-          ContentKR = "곤란에 빠진 아이",
-          TextMapId = "UI_Npc_Name_FindSaiqiNpc1"
         }
       }
     end
   },
   {
-    MinKey = "UI_Npc_Name_FindSaiqiNpc2",
-    MaxKey = "UI_Npc_Name_Xiaonanhai",
+    MinKey = "UI_Npc_Name_FindSaiqiNpc1",
+    MaxKey = "UI_Npc_Name_Xiaonan",
     Loader = function()
       return {
+        UI_Npc_Name_FindSaiqiNpc1 = {
+          ContentKR = "곤란에 빠진 아이",
+          TextMapId = "UI_Npc_Name_FindSaiqiNpc1"
+        },
         UI_Npc_Name_FindSaiqiNpc2 = {
           ContentKR = "당황한 평민",
           TextMapId = "UI_Npc_Name_FindSaiqiNpc2"
@@ -75577,19 +75581,19 @@ local Data = {
         UI_Npc_Name_Xiaonan = {
           ContentKR = "남자아이",
           TextMapId = "UI_Npc_Name_Xiaonan"
-        },
-        UI_Npc_Name_Xiaonanhai = {
-          ContentKR = "똑똑한 남자아이",
-          TextMapId = "UI_Npc_Name_Xiaonanhai"
         }
       }
     end
   },
   {
-    MinKey = "UI_Npc_Name_Xiaonv",
-    MaxKey = "UI_OPTION_TeammateEffects",
+    MinKey = "UI_Npc_Name_Xiaonanhai",
+    MaxKey = "UI_OPTION_SystemVoice",
     Loader = function()
       return {
+        UI_Npc_Name_Xiaonanhai = {
+          ContentKR = "똑똑한 남자아이",
+          TextMapId = "UI_Npc_Name_Xiaonanhai"
+        },
         UI_Npc_Name_Xiaonv = {
           ContentKR = "여자아이",
           TextMapId = "UI_Npc_Name_Xiaonv"
@@ -76385,19 +76389,19 @@ local Data = {
         UI_OPTION_SystemVoice = {
           ContentKR = "시스템 음성",
           TextMapId = "UI_OPTION_SystemVoice"
-        },
-        UI_OPTION_TeammateEffects = {
-          ContentKR = "아군 이펙트",
-          TextMapId = "UI_OPTION_TeammateEffects"
         }
       }
     end
   },
   {
-    MinKey = "UI_OPTION_TermsOfService",
-    MaxKey = "UI_Pet_ChooseSnacks",
+    MinKey = "UI_OPTION_TeammateEffects",
+    MaxKey = "UI_Pet_CaptureSuccess",
     Loader = function()
       return {
+        UI_OPTION_TeammateEffects = {
+          ContentKR = "아군 이펙트",
+          TextMapId = "UI_OPTION_TeammateEffects"
+        },
         UI_OPTION_TermsOfService = {
           ContentKR = "이용약관",
           TextMapId = "UI_OPTION_TermsOfService"
@@ -77190,19 +77194,19 @@ local Data = {
         UI_Pet_CaptureSuccess = {
           ContentKR = "먹이주기 성공",
           TextMapId = "UI_Pet_CaptureSuccess"
-        },
-        UI_Pet_ChooseSnacks = {
-          ContentKR = "통조림 선택",
-          TextMapId = "UI_Pet_ChooseSnacks"
         }
       }
     end
   },
   {
-    MinKey = "UI_Pet_FoodLV0",
-    MaxKey = "UI_Player_LevelReward_Title1",
+    MinKey = "UI_Pet_ChooseSnacks",
+    MaxKey = "UI_Player_Level",
     Loader = function()
       return {
+        UI_Pet_ChooseSnacks = {
+          ContentKR = "통조림 선택",
+          TextMapId = "UI_Pet_ChooseSnacks"
+        },
         UI_Pet_FoodLV0 = {
           ContentKR = "마령이 좋아하는 음식. 마령에게 먹이를 줄 때 사용할 수 있다.",
           TextMapId = "UI_Pet_FoodLV0"
@@ -77998,19 +78002,19 @@ local Data = {
         UI_Player_Level = {
           ContentKR = "수련 레벨",
           TextMapId = "UI_Player_Level"
-        },
-        UI_Player_LevelReward_Title1 = {
-          ContentKR = "시련자의",
-          TextMapId = "UI_Player_LevelReward_Title1"
         }
       }
     end
   },
   {
-    MinKey = "UI_Player_LevelReward_Title2",
-    MaxKey = "UI_RewardUnlockTips_107003",
+    MinKey = "UI_Player_LevelReward_Title1",
+    MaxKey = "UI_Review_Chats",
     Loader = function()
       return {
+        UI_Player_LevelReward_Title1 = {
+          ContentKR = "시련자의",
+          TextMapId = "UI_Player_LevelReward_Title1"
+        },
         UI_Player_LevelReward_Title2 = {
           ContentKR = "[발자취]",
           TextMapId = "UI_Player_LevelReward_Title2"
@@ -78785,19 +78789,19 @@ local Data = {
         UI_Review_Chats = {
           ContentKR = "세월 돌아보기",
           TextMapId = "UI_Review_Chats"
-        },
-        UI_RewardUnlockTips_107003 = {
-          ContentKR = "메인 퀘스트 '부드러운 바람을 타고'를 완료하여 해제",
-          TextMapId = "UI_RewardUnlockTips_107003"
         }
       }
     end
   },
   {
-    MinKey = "UI_Reward_Bonus",
-    MaxKey = "UI_SPECIALPOP_COMMON_TITLE",
+    MinKey = "UI_RewardUnlockTips_107003",
+    MaxKey = "UI_SPECIALPOP_COMMON_TIPS_3",
     Loader = function()
       return {
+        UI_RewardUnlockTips_107003 = {
+          ContentKR = "메인 퀘스트 '부드러운 바람을 타고'를 완료하여 해제",
+          TextMapId = "UI_RewardUnlockTips_107003"
+        },
         UI_Reward_Bonus = {
           ContentKR = "Bonus",
           TextMapId = "UI_Reward_Bonus"
@@ -79593,19 +79597,19 @@ local Data = {
         UI_SPECIALPOP_COMMON_TIPS_3 = {
           ContentKR = "게임 체험 성향에 따라 선택해 주세요. <W>선택 후 변경할 수 없습니다.</>",
           TextMapId = "UI_SPECIALPOP_COMMON_TIPS_3"
-        },
-        UI_SPECIALPOP_COMMON_TITLE = {
-          ContentKR = "퀘스트 모드 선택:",
-          TextMapId = "UI_SPECIALPOP_COMMON_TITLE"
         }
       }
     end
   },
   {
-    MinKey = "UI_SPECIALPOP_TEXT_CONTENT_1_1",
-    MaxKey = "UI_Shop_JP_Exchange",
+    MinKey = "UI_SPECIALPOP_COMMON_TITLE",
+    MaxKey = "UI_Shop_JP_Excess_Title",
     Loader = function()
       return {
+        UI_SPECIALPOP_COMMON_TITLE = {
+          ContentKR = "퀘스트 모드 선택:",
+          TextMapId = "UI_SPECIALPOP_COMMON_TITLE"
+        },
         UI_SPECIALPOP_TEXT_CONTENT_1_1 = {
           ContentKR = "1. 밤의 항해편·제1장의 메인 및 일부 스페셜 퀘스트 보상을 사전 획득하며, 황혼의 정박편·제1장의 메인 퀘스트를 사전 수락할 수 있습니다.\n2. 의뢰, 주조, 마령 먹이주기, 낚시, 악몽의 잔향, 미로, 기억 조각 등 콘텐츠를 사전 해제할 수 있습니다. 게임 시스템 및 콘텐츠를 숙지하고 있는 플레이어에게 권장 드립니다.\n \n<H>주의사항</>\n1. 사전 해제된 시스템 튜토리얼은 스킵되며, 일부 가이드는 튜토리얼 메뉴에서 확인할 수 있습니다.\n2. 황혼의 정박편·제1장을 사전 수락한 경우, 스토리 체험에 어느 정도 영향을 미칠 수 있습니다.\n3. 이후 밤의 항해편·제1장의 메인 퀘스트를 계속해서 체험할 수 있지만, 퀘스트 보상을 중복 획득할 수 없습니다. 일부 서브 및 구역 탐색 포인트는 밤의 항해편·제1장 완료 후 해제됩니다.",
           TextMapId = "UI_SPECIALPOP_TEXT_CONTENT_1_1"
@@ -80385,7 +80389,7 @@ local Data = {
           TextMapId = "UI_Shop_ExchangeAmount"
         },
         UI_Shop_ItemUnlock = {
-          ContentKR = "상품이 해제되지 않았습니다.",
+          ContentKR = "상품 미해제",
           TextMapId = "UI_Shop_ItemUnlock"
         },
         UI_Shop_JP_Excess_Content = {
@@ -80395,19 +80399,19 @@ local Data = {
         UI_Shop_JP_Excess_Title = {
           ContentKR = "한도 초과",
           TextMapId = "UI_Shop_JP_Excess_Title"
-        },
-        UI_Shop_JP_Exchange = {
-          ContentKR = "월석의 싹 교환",
-          TextMapId = "UI_Shop_JP_Exchange"
         }
       }
     end
   },
   {
-    MinKey = "UI_Shop_JP_Link",
-    MaxKey = "UI_State_Replaced",
+    MinKey = "UI_Shop_JP_Exchange",
+    MaxKey = "UI_Squad_UnessentialMiss_Tips",
     Loader = function()
       return {
+        UI_Shop_JP_Exchange = {
+          ContentKR = "월석의 싹 교환",
+          TextMapId = "UI_Shop_JP_Exchange"
+        },
         UI_Shop_JP_Link = {
           ContentKR = "자금결제법 ・특정상거래법",
           TextMapId = "UI_Shop_JP_Link"
@@ -81203,19 +81207,19 @@ local Data = {
         UI_Squad_UnessentialMiss_Tips = {
           ContentKR = "부족",
           TextMapId = "UI_Squad_UnessentialMiss_Tips"
-        },
-        UI_State_Replaced = {
-          ContentKR = "선택 중",
-          TextMapId = "UI_State_Replaced"
         }
       }
     end
   },
   {
-    MinKey = "UI_StoryReview_Dialogue_None",
-    MaxKey = "UI_TEMPLE_RESTART",
+    MinKey = "UI_State_Replaced",
+    MaxKey = "UI_TEMPLE_NO_STAR",
     Loader = function()
       return {
+        UI_State_Replaced = {
+          ContentKR = "선택 중",
+          TextMapId = "UI_State_Replaced"
+        },
         UI_StoryReview_Dialogue_None = {
           ContentKR = "내용 없음",
           TextMapId = "UI_StoryReview_Dialogue_None"
@@ -82011,19 +82015,19 @@ local Data = {
         UI_TEMPLE_NO_STAR = {
           ContentKR = "해당 스테이지는 별 등급이 존재하지 않습니다.",
           TextMapId = "UI_TEMPLE_NO_STAR"
-        },
-        UI_TEMPLE_RESTART = {
-          ContentKR = "재시작",
-          TextMapId = "UI_TEMPLE_RESTART"
         }
       }
     end
   },
   {
-    MinKey = "UI_TEMPLE_REWARDS",
-    MaxKey = "UI_UNLOCKED",
+    MinKey = "UI_TEMPLE_RESTART",
+    MaxKey = "UI_UNLOCK",
     Loader = function()
       return {
+        UI_TEMPLE_RESTART = {
+          ContentKR = "재시작",
+          TextMapId = "UI_TEMPLE_RESTART"
+        },
         UI_TEMPLE_REWARDS = {
           ContentKR = "영혼의 새 시련 보상",
           TextMapId = "UI_TEMPLE_REWARDS"
@@ -82813,19 +82817,19 @@ local Data = {
           ContentKR = "지난 페이지",
           TextMapId = "UI_UIGUIDE_PREV"
         },
-        UI_UNLOCK = {ContentKR = "해제", TextMapId = "UI_UNLOCK"},
-        UI_UNLOCKED = {
-          ContentKR = "해제 완료",
-          TextMapId = "UI_UNLOCKED"
-        }
+        UI_UNLOCK = {ContentKR = "해제", TextMapId = "UI_UNLOCK"}
       }
     end
   },
   {
-    MinKey = "UI_Unlock_Condition",
-    MaxKey = "UI_WEAPON_NAME_AutoChess_10",
+    MinKey = "UI_UNLOCKED",
+    MaxKey = "UI_WEAPON_NAME_AutoChess_1",
     Loader = function()
       return {
+        UI_UNLOCKED = {
+          ContentKR = "해제 완료",
+          TextMapId = "UI_UNLOCKED"
+        },
         UI_Unlock_Condition = {
           ContentKR = "해제 조건",
           TextMapId = "UI_Unlock_Condition"
@@ -83621,19 +83625,19 @@ local Data = {
         UI_WEAPON_NAME_AutoChess_1 = {
           ContentKR = "HP 룬스톤",
           TextMapId = "UI_WEAPON_NAME_AutoChess_1"
-        },
-        UI_WEAPON_NAME_AutoChess_10 = {
-          ContentKR = "격퇴 룬스톤",
-          TextMapId = "UI_WEAPON_NAME_AutoChess_10"
         }
       }
     end
   },
   {
-    MinKey = "UI_WEAPON_NAME_AutoChess_11",
-    MaxKey = "UI_WeaponSkin_Name_3010603",
+    MinKey = "UI_WEAPON_NAME_AutoChess_10",
+    MaxKey = "UI_WeaponSkin_Name_3010601",
     Loader = function()
       return {
+        UI_WEAPON_NAME_AutoChess_10 = {
+          ContentKR = "격퇴 룬스톤",
+          TextMapId = "UI_WEAPON_NAME_AutoChess_10"
+        },
         UI_WEAPON_NAME_AutoChess_11 = {
           ContentKR = "와해 룬스톤",
           TextMapId = "UI_WEAPON_NAME_AutoChess_11"
@@ -84429,19 +84433,19 @@ local Data = {
         UI_WeaponSkin_Name_3010601 = {
           ContentKR = "선조의 그늘·쌍도",
           TextMapId = "UI_WeaponSkin_Name_3010601"
-        },
-        UI_WeaponSkin_Name_3010603 = {
-          ContentKR = "수상쩍다옹",
-          TextMapId = "UI_WeaponSkin_Name_3010603"
         }
       }
     end
   },
   {
-    MinKey = "UI_WeaponSkin_Name_3010605",
-    MaxKey = "VoiceDes104",
+    MinKey = "UI_WeaponSkin_Name_3010603",
+    MaxKey = "VoiceDes103",
     Loader = function()
       return {
+        UI_WeaponSkin_Name_3010603 = {
+          ContentKR = "수상쩍다옹",
+          TextMapId = "UI_WeaponSkin_Name_3010603"
+        },
         UI_WeaponSkin_Name_3010605 = {
           ContentKR = "파죽지세·쌍도",
           TextMapId = "UI_WeaponSkin_Name_3010605"
@@ -85234,19 +85238,19 @@ local Data = {
         VoiceDes103 = {
           ContentKR = "소원 관련",
           TextMapId = "VoiceDes103"
-        },
-        VoiceDes104 = {
-          ContentKR = "비밀 관련",
-          TextMapId = "VoiceDes104"
         }
       }
     end
   },
   {
-    MinKey = "VoiceDes105",
-    MaxKey = "WikiText_30400302",
+    MinKey = "VoiceDes104",
+    MaxKey = "WikiText_30400301",
     Loader = function()
       return {
+        VoiceDes104 = {
+          ContentKR = "비밀 관련",
+          TextMapId = "VoiceDes104"
+        },
         VoiceDes105 = {
           ContentKR = "꿈 관련",
           TextMapId = "VoiceDes105"
@@ -86042,19 +86046,19 @@ local Data = {
         WikiText_30400301 = {
           ContentKR = "화서 전역을 다스리는 최고 법률.\n화서 경내에 머무는 사람은 누구나 대풍구장의 규율을 지켜야 하며, 위반자는 폐안과 응천위에 의해 처벌받는다. 살인, 폭행, 도둑질 등을 금지하는 것 외에도, 대풍구장은 통치 범위 내로 들어오는 필토이드가 인간을 다치게 하지 않도록 제어할 수 있다.\n화서가 숭배하는 신인 태호는 대풍구장 의지를 대표하는 화신이다.",
           TextMapId = "WikiText_30400301"
-        },
-        WikiText_30400302 = {
-          ContentKR = "'아홉 규율'이라고도 불리는 대풍구장의 계율은 다음과 같다.\n \n천지의 가장 큰 덕을 '생'이라 이르나니, 남을 해하거나 목숨을 빼앗지 말지어다.\n사람의 근본은 신의를 지키는 것이니, 약조를 어기거나 맹세를 저버리지 말지어다.\n참을 드러내고 거짓을 버려 진실로서 정성을 다할지니, 망령된 말로 무리를 속이지 말지어다.\n\n스스로를 낮추어 겸양으로 자신을 다스릴지니, 오만방자하여 전횡을 일삼지 말지어다.\n어진 이를 높이고 손을 벗 삼아 질서를 지키는 것이 '예'이니, 방탕하거나 방종하지 말지어다.\n나를 미루어 남을 헤아리고, 옮음을 행함이 '의'이니, 힘을 믿고 약자를 업신여기지 말지어다.\n\n맑은 마음으로 몸가짐을 단정히 하는 것이 '염'이니, 법을 어기고 탐욕과 잔학을 행하지 말지어다.\n시비를 분별하여 아는 것이 '명'이니, 이를 혼란케 하여 뒤바꾸지 말지어다.\n하늘의 법도에 경청하여 엄숙히 대하는 것이 '경'이니, 정도를 벗어나 도리를 위배하지 말지어다.",
-          TextMapId = "WikiText_30400302"
         }
       }
     end
   },
   {
-    MinKey = "WikiText_30400303",
-    MaxKey = "voice_ch_char_Baonu_vo_battlestart",
+    MinKey = "WikiText_30400302",
+    MaxKey = "voice_ch_char_Baonu_vo_battleidle",
     Loader = function()
       return {
+        WikiText_30400302 = {
+          ContentKR = "'아홉 규율'이라고도 불리는 대풍구장의 계율은 다음과 같다.\n \n천지의 가장 큰 덕을 '생'이라 이르나니, 남을 해하거나 목숨을 빼앗지 말지어다.\n사람의 근본은 신의를 지키는 것이니, 약조를 어기거나 맹세를 저버리지 말지어다.\n참을 드러내고 거짓을 버려 진실로서 정성을 다할지니, 망령된 말로 무리를 속이지 말지어다.\n\n스스로를 낮추어 겸양으로 자신을 다스릴지니, 오만방자하여 전횡을 일삼지 말지어다.\n어진 이를 높이고 손을 벗 삼아 질서를 지키는 것이 '예'이니, 방탕하거나 방종하지 말지어다.\n나를 미루어 남을 헤아리고, 옮음을 행함이 '의'이니, 힘을 믿고 약자를 업신여기지 말지어다.\n\n맑은 마음으로 몸가짐을 단정히 하는 것이 '염'이니, 법을 어기고 탐욕과 잔학을 행하지 말지어다.\n시비를 분별하여 아는 것이 '명'이니, 이를 혼란케 하여 뒤바꾸지 말지어다.\n하늘의 법도에 경청하여 엄숙히 대하는 것이 '경'이니, 정도를 벗어나 도리를 위배하지 말지어다.",
+          TextMapId = "WikiText_30400302"
+        },
         WikiText_30400303 = {
           ContentKR = "대풍구장의 취지는 범죄를 근절하는 것이지만, 때로는 판결이 너무 경직되어, 일부 불순한 사람들이 허점을 파고들곤 한다. 암시장 상인은 계약서에 잔꾀를 부리는 방식으로 젊은 아가씨 부친의 돈을 갈취했다.",
           TextMapId = "WikiText_30400303"
@@ -86847,19 +86851,19 @@ local Data = {
         voice_ch_char_Baonu_vo_battleidle = {
           ContentKR = "나한테 좀... 맞... 자!",
           TextMapId = "voice_ch_char_Baonu_vo_battleidle"
-        },
-        voice_ch_char_Baonu_vo_battlestart = {
-          ContentKR = "죄를 용서하는 것은 신이 하는 일이니까! 내가 아니라!",
-          TextMapId = "voice_ch_char_Baonu_vo_battlestart"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Baonu_vo_be_hit_heavy_r01",
-    MaxKey = "voice_ch_char_Kezhou_vo_birthday",
+    MinKey = "voice_ch_char_Baonu_vo_battlestart",
+    MaxKey = "voice_ch_char_Kezhou_vo_be_hit_heavy_r02",
     Loader = function()
       return {
+        voice_ch_char_Baonu_vo_battlestart = {
+          ContentKR = "죄를 용서하는 것은 신이 하는 일이니까! 내가 아니라!",
+          TextMapId = "voice_ch_char_Baonu_vo_battlestart"
+        },
         voice_ch_char_Baonu_vo_be_hit_heavy_r01 = {
           ContentKR = "'품위' 없게!",
           TextMapId = "voice_ch_char_Baonu_vo_be_hit_heavy_r01"
@@ -87655,19 +87659,19 @@ local Data = {
         voice_ch_char_Kezhou_vo_be_hit_heavy_r02 = {
           ContentKR = "근골은 다치지 않았다.",
           TextMapId = "voice_ch_char_Kezhou_vo_be_hit_heavy_r02"
-        },
-        voice_ch_char_Kezhou_vo_birthday = {
-          ContentKR = "술 마시며 노래하기 좋은 날이로구나... 뭐? 오늘이 네 생일이라고?\n우리 나그네들은 생일 따위 잊고 사는 법이지. 바람을 삼키고 눈을 마시는 날들을 보내다 보면 언제 이승과 이별할지 모르니까.\n하지만 네가 이방인의 몸으로 나와 함께 검술을 익혀온 정이 있으니, 축하 정도는 해주는 게 옳겠지.\n자, 잔을 채워라! 네 용맹과 의기, 천금과도 바꿀 수 없는 신의를 위해 건배하자!",
-          TextMapId = "voice_ch_char_Kezhou_vo_birthday"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Kezhou_vo_companio_01",
-    MaxKey = "voice_ch_char_NanzhuLight_vo_skill02_r02",
+    MinKey = "voice_ch_char_Kezhou_vo_birthday",
+    MaxKey = "voice_ch_char_NanzhuLight_vo_skill02_r01",
     Loader = function()
       return {
+        voice_ch_char_Kezhou_vo_birthday = {
+          ContentKR = "술 마시며 노래하기 좋은 날이로구나... 뭐? 오늘이 네 생일이라고?\n우리 나그네들은 생일 따위 잊고 사는 법이지. 바람을 삼키고 눈을 마시는 날들을 보내다 보면 언제 이승과 이별할지 모르니까.\n하지만 네가 이방인의 몸으로 나와 함께 검술을 익혀온 정이 있으니, 축하 정도는 해주는 게 옳겠지.\n자, 잔을 채워라! 네 용맹과 의기, 천금과도 바꿀 수 없는 신의를 위해 건배하자!",
+          TextMapId = "voice_ch_char_Kezhou_vo_birthday"
+        },
         voice_ch_char_Kezhou_vo_companio_01 = {
           ContentKR = "검의 궁극은 무검이요, 모든 것이 검이 될 수 있다 했으니. 청소 도구로도 적을 물리친다 들었다. 분명 검도의 고수일 테지. 한 수 가르쳐 다오.",
           TextMapId = "voice_ch_char_Kezhou_vo_companio_01"
@@ -88463,19 +88467,19 @@ local Data = {
         voice_ch_char_NanzhuLight_vo_skill02_r01 = {
           ContentKR = "이번엔 내가 지켜줄 차례야.",
           TextMapId = "voice_ch_char_NanzhuLight_vo_skill02_r01"
-        },
-        voice_ch_char_NanzhuLight_vo_skill02_r02 = {
-          ContentKR = "내일을 향해.",
-          TextMapId = "voice_ch_char_NanzhuLight_vo_skill02_r02"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_NanzhuLight_vo_skill02_r03",
-    MaxKey = "voice_ch_char_Tuosi02_skill01_r01",
+    MinKey = "voice_ch_char_NanzhuLight_vo_skill02_r02",
+    MaxKey = "voice_ch_char_Tuosi02_shoot_r01",
     Loader = function()
       return {
+        voice_ch_char_NanzhuLight_vo_skill02_r02 = {
+          ContentKR = "내일을 향해.",
+          TextMapId = "voice_ch_char_NanzhuLight_vo_skill02_r02"
+        },
         voice_ch_char_NanzhuLight_vo_skill02_r03 = {
           ContentKR = "안개의 바다로 돌아가라.",
           TextMapId = "voice_ch_char_NanzhuLight_vo_skill02_r03"
@@ -89271,19 +89275,19 @@ local Data = {
         voice_ch_char_Tuosi02_shoot_r01 = {
           ContentKR = "사냥감 발견.",
           TextMapId = "voice_ch_char_Tuosi02_shoot_r01"
-        },
-        voice_ch_char_Tuosi02_skill01_r01 = {
-          ContentKR = "도망칠 수 없을 거야",
-          TextMapId = "voice_ch_char_Tuosi02_skill01_r01"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Tuosi02_vo_be_hit_heavy_r01",
-    MaxKey = "voice_ch_char_Zhangyu_vo_battleidle",
+    MinKey = "voice_ch_char_Tuosi02_skill01_r01",
+    MaxKey = "voice_ch_char_Zhangyu_vo_appear",
     Loader = function()
       return {
+        voice_ch_char_Tuosi02_skill01_r01 = {
+          ContentKR = "도망칠 수 없을 거야",
+          TextMapId = "voice_ch_char_Tuosi02_skill01_r01"
+        },
         voice_ch_char_Tuosi02_vo_be_hit_heavy_r01 = {
           ContentKR = "또다시 이렇게...",
           TextMapId = "voice_ch_char_Tuosi02_vo_be_hit_heavy_r01"
@@ -90079,19 +90083,19 @@ local Data = {
         voice_ch_char_Zhangyu_vo_appear = {
           ContentKR = "어디로 놀러 갈 거야?",
           TextMapId = "voice_ch_char_Zhangyu_vo_appear"
-        },
-        voice_ch_char_Zhangyu_vo_battleidle = {
-          ContentKR = "하암, 지루해.",
-          TextMapId = "voice_ch_char_Zhangyu_vo_battleidle"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Zhangyu_vo_battlestart",
+    MinKey = "voice_ch_char_Zhangyu_vo_battleidle",
     MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
     Loader = function()
       return {
+        voice_ch_char_Zhangyu_vo_battleidle = {
+          ContentKR = "하암, 지루해.",
+          TextMapId = "voice_ch_char_Zhangyu_vo_battleidle"
+        },
         voice_ch_char_Zhangyu_vo_battlestart = {
           ContentKR = "히힛, 악마대도 타비사 님 깜짝 등장!",
           TextMapId = "voice_ch_char_Zhangyu_vo_battlestart"

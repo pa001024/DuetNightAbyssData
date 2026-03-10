@@ -544,11 +544,20 @@ function BP_CharacterBase_C:ResetJumpState(KeepJumpCount)
 end
 
 function BP_CharacterBase_C:CheckMountCanFly()
+  if self.FromOtherWorld then
+    return false
+  end
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return true
   end
   if not self.CurrentMountId then
+    return false
+  end
+  if 0 == self.CurrentMountId then
+    if self.FlyMount then
+      self.FlyMount = false
+    end
     return false
   end
   return Avatar:CheckMountCanFly(self.CurrentMountId)

@@ -269,6 +269,7 @@ function M:InitQuestPhaseContent(TabId)
         if index == TabId then
           widget:SetVisibility(UIConst.VisibilityOp.Visible)
           widget:PlayAnimation(widget.In)
+          AudioManager(self):PlayUISound(nil, "event:/ui/activity/huaxu_sub_page_in", nil, nil)
         else
           widget:SetVisibility(UIConst.VisibilityOp.Hidden)
         end

@@ -665,11 +665,11 @@
     "mainTabs": [
       {
         "id": 10006,
-        "name": "AutoChessShop",
+        "name": "Master Gongshang's Gifts",
         "subTabs": [
           {
             "id": 100061,
-            "name": "AutoChessShop",
+            "name": "Master Gongshang's Gifts",
             "items": [
               {
                 "id": 10006102,
@@ -1053,7 +1053,7 @@
                 "id": 701003,
                 "itemType": "Mod",
                 "typeId": 31532,
-                "typeName": "Feathered Serpent's{空格}Ignite",
+                "typeName": "Feathered Serpent's Ignite",
                 "price": 1,
                 "priceType": 29001,
                 "priceName": "Advensphere: Purgatorio Island",
@@ -1068,7 +1068,7 @@
                 "id": 701004,
                 "itemType": "Mod",
                 "typeId": 31521,
-                "typeName": "Feathered Serpent's{空格}Recovery",
+                "typeName": "Feathered Serpent's Recovery",
                 "price": 1,
                 "priceType": 29001,
                 "priceName": "Advensphere: Purgatorio Island",
@@ -1083,7 +1083,7 @@
                 "id": 701005,
                 "itemType": "Mod",
                 "typeId": 31526,
-                "typeName": "Feathered Serpent's{空格}Steadfast",
+                "typeName": "Feathered Serpent's Steadfast",
                 "price": 1,
                 "priceType": 29001,
                 "priceName": "Advensphere: Purgatorio Island",
@@ -1198,7 +1198,7 @@
                 "id": 702007,
                 "itemType": "Mod",
                 "typeId": 31502,
-                "typeName": "Feathered Serpent's{空格}Helido",
+                "typeName": "Feathered Serpent's Helido",
                 "price": 1,
                 "priceType": 29002,
                 "priceName": "Advensphere: Icelake",
@@ -1213,7 +1213,7 @@
                 "id": 702008,
                 "itemType": "Mod",
                 "typeId": 31523,
-                "typeName": "Feathered Serpent's{空格}Unyielding",
+                "typeName": "Feathered Serpent's Unyielding",
                 "price": 1,
                 "priceType": 29002,
                 "priceName": "Advensphere: Icelake",
@@ -1228,7 +1228,7 @@
                 "id": 702009,
                 "itemType": "Mod",
                 "typeId": 31531,
-                "typeName": "Feathered Serpent's{空格}Sidestep",
+                "typeName": "Feathered Serpent's Sidestep",
                 "price": 1,
                 "priceType": 29002,
                 "priceName": "Advensphere: Icelake",
@@ -1243,7 +1243,7 @@
                 "id": 702010,
                 "itemType": "Mod",
                 "typeId": 31525,
-                "typeName": "Feathered Serpent's{空格}Rescue",
+                "typeName": "Feathered Serpent's Rescue",
                 "price": 1,
                 "priceType": 29002,
                 "priceName": "Advensphere: Icelake",
@@ -1315,7 +1315,7 @@
                 "id": 703004,
                 "itemType": "Mod",
                 "typeId": 31513,
-                "typeName": "Feathered Serpent's{空格}Blastwave",
+                "typeName": "Feathered Serpent's Blastwave",
                 "price": 1,
                 "priceType": 29003,
                 "priceName": "Advensphere: Lonza Fortress",
@@ -1330,7 +1330,7 @@
                 "id": 703005,
                 "itemType": "Mod",
                 "typeId": 31522,
-                "typeName": "Feathered Serpent's{空格}Cutoff",
+                "typeName": "Feathered Serpent's Cutoff",
                 "price": 1,
                 "priceType": 29003,
                 "priceName": "Advensphere: Lonza Fortress",
@@ -1345,7 +1345,7 @@
                 "id": 703006,
                 "itemType": "Mod",
                 "typeId": 31524,
-                "typeName": "Feathered Serpent's{空格}Vigilant",
+                "typeName": "Feathered Serpent's Vigilant",
                 "price": 1,
                 "priceType": 29003,
                 "priceName": "Advensphere: Lonza Fortress",
@@ -6812,6 +6812,7 @@
                 "subTabId": 1604,
                 "sequence": 101,
                 "startTime": 1770602400,
+                "endTime": 1772312400,
                 "isSpPopup": 1
               },
               {
@@ -6827,6 +6828,7 @@
                 "subTabId": 1604,
                 "sequence": 98,
                 "startTime": 1770602400,
+                "endTime": 1772312400,
                 "isSpPopup": 1
               },
               {
@@ -6842,6 +6844,7 @@
                 "subTabId": 1604,
                 "sequence": 97,
                 "startTime": 1770602400,
+                "endTime": 1772312400,
                 "isSpPopup": 1
               },
               {
@@ -6857,6 +6860,67 @@
                 "subTabId": 1604,
                 "sequence": 96,
                 "startTime": 1770602400,
+                "endTime": 1772312400,
+                "isSpPopup": 1
+              },
+              {
+                "id": 160222,
+                "itemType": "Reward",
+                "typeId": 12061,
+                "typeName": "Amplification Supply Chest",
+                "price": 2680,
+                "priceType": 99,
+                "priceName": "Phoxene Plumule",
+                "num": 1,
+                "limit": 3,
+                "subTabId": 1604,
+                "sequence": 101,
+                "startTime": 1772312400,
+                "isSpPopup": 1
+              },
+              {
+                "id": 160223,
+                "itemType": "Reward",
+                "typeId": 12062,
+                "typeName": "Premium Coin Supply Chest",
+                "price": 1280,
+                "priceType": 99,
+                "priceName": "Phoxene Plumule",
+                "num": 1,
+                "limit": 5,
+                "subTabId": 1604,
+                "sequence": 98,
+                "startTime": 1772312400,
+                "isSpPopup": 1
+              },
+              {
+                "id": 160224,
+                "itemType": "Reward",
+                "typeId": 12063,
+                "typeName": "Premium Carmine Globule Supply Chest",
+                "price": 1280,
+                "priceType": 99,
+                "priceName": "Phoxene Plumule",
+                "num": 1,
+                "limit": 5,
+                "subTabId": 1604,
+                "sequence": 97,
+                "startTime": 1772312400,
+                "isSpPopup": 1
+              },
+              {
+                "id": 160225,
+                "itemType": "Reward",
+                "typeId": 12064,
+                "typeName": "Premium Luno Memento Supply Chest",
+                "price": 1280,
+                "priceType": 99,
+                "priceName": "Phoxene Plumule",
+                "num": 1,
+                "limit": 5,
+                "subTabId": 1604,
+                "sequence": 96,
+                "startTime": 1772312400,
                 "isSpPopup": 1
               }
             ]
@@ -7818,7 +7882,7 @@
                 "id": 150317,
                 "itemType": "HeadSculpture",
                 "typeId": 30116,
-                "typeName": "",
+                "typeName": "Wealthstrider",
                 "price": 60,
                 "priceType": 100,
                 "priceName": "Phoxene",
@@ -11286,6 +11350,7 @@
                 "sequence": 293,
                 "startTime": 1770602400,
                 "endTime": 1776027600,
+                "cond": "Unlocks after obtaining a Radiant Posture",
                 "isSpPopup": 1
               },
               {
@@ -11302,6 +11367,7 @@
                 "sequence": 292,
                 "startTime": 1770602400,
                 "endTime": 1776027600,
+                "cond": "Unlocks after obtaining a Radiant Posture",
                 "isSpPopup": 1
               },
               {
@@ -11613,7 +11679,7 @@
                 "id": 140288,
                 "itemType": "HeadSculpture",
                 "typeId": 30112,
-                "typeName": "",
+                "typeName": "Throne Above All: Gilt",
                 "price": 0,
                 "priceType": 111,
                 "priceName": "Iridescent Prism",
@@ -11629,7 +11695,7 @@
                 "id": 140289,
                 "itemType": "HeadSculpture",
                 "typeId": 30111,
-                "typeName": "",
+                "typeName": "Throne Above All: Leaden Grey",
                 "price": 0,
                 "priceType": 111,
                 "priceName": "Iridescent Prism",
@@ -11645,7 +11711,7 @@
                 "id": 140290,
                 "itemType": "HeadSculpture",
                 "typeId": 30110,
-                "typeName": "",
+                "typeName": "Throne Above All: Violet",
                 "price": 0,
                 "priceType": 111,
                 "priceName": "Iridescent Prism",
@@ -12995,7 +13061,7 @@
                 "num": 1,
                 "limit": 1,
                 "subTabId": 1208,
-                "sequence": 1193,
+                "sequence": 1194,
                 "startTime": 1770602400,
                 "endTime": 1775466000,
                 "isSpPopup": 1
@@ -13011,7 +13077,7 @@
                 "num": 1,
                 "limit": 1,
                 "subTabId": 1208,
-                "sequence": 1194,
+                "sequence": 1195,
                 "startTime": 1770602400,
                 "endTime": 1775466000,
                 "isSpPopup": 1
@@ -13027,7 +13093,7 @@
                 "num": 1,
                 "limit": 1,
                 "subTabId": 1208,
-                "sequence": 1197,
+                "sequence": 1198,
                 "startTime": 1770602400,
                 "endTime": 1775466000,
                 "isSpPopup": 1
@@ -13043,7 +13109,7 @@
                 "num": 1,
                 "limit": 1,
                 "subTabId": 1208,
-                "sequence": 1195,
+                "sequence": 1196,
                 "startTime": 1770602400,
                 "endTime": 1775466000,
                 "isSpPopup": 1
@@ -13059,7 +13125,7 @@
                 "num": 1,
                 "limit": 1,
                 "subTabId": 1208,
-                "sequence": 1192,
+                "sequence": 1193,
                 "startTime": 1770602400,
                 "endTime": 1775466000,
                 "isSpPopup": 1
@@ -13075,7 +13141,7 @@
                 "num": 1,
                 "limit": 1,
                 "subTabId": 1208,
-                "sequence": 1196,
+                "sequence": 1197,
                 "startTime": 1770602400,
                 "endTime": 1775466000,
                 "isSpPopup": 1
@@ -13091,7 +13157,7 @@
                 "num": 1,
                 "limit": 1,
                 "subTabId": 1208,
-                "sequence": 1199,
+                "sequence": 1200,
                 "startTime": 1773108000,
                 "endTime": 1775466000,
                 "isSpPopup": 1
@@ -13107,7 +13173,7 @@
                 "num": 1,
                 "limit": 1,
                 "subTabId": 1208,
-                "sequence": 1200,
+                "sequence": 1201,
                 "startTime": 1773108000,
                 "endTime": 1775466000,
                 "isSpPopup": 1
@@ -13123,7 +13189,7 @@
                 "num": 1,
                 "limit": 1,
                 "subTabId": 1208,
-                "sequence": 1198,
+                "sequence": 1199,
                 "startTime": 1773108000,
                 "endTime": 1775466000,
                 "isSpPopup": 1
@@ -13219,6 +13285,22 @@
                 "startTime": 1772503200,
                 "require": 120149,
                 "isSpPopup": 1
+              },
+              {
+                "id": 120151,
+                "itemType": "HeadFrame",
+                "typeId": 10022,
+                "typeName": "",
+                "price": 0,
+                "priceType": 99,
+                "priceName": "Phoxene Plumule",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1208,
+                "sequence": 1192,
+                "startTime": 1770602400,
+                "endTime": 1775466000,
+                "cond": "Obtain all [Sweet Fortune] series weapon skins"
               }
             ]
           },

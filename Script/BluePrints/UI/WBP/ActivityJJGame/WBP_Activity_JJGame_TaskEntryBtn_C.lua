@@ -92,7 +92,7 @@ function M:OnChallengeTaskClicked()
 end
 
 function M:OnCloseCallback(CloseCallbackObj)
-  CloseCallbackObj:UpdateActivityTabNewReddot()
+  CloseCallbackObj:InitJJGameReddot()
 end
 
 function M:InitListenEvent()
@@ -179,6 +179,8 @@ function M:InitJJGameReddot()
   ReddotManager.AddListenerEx(ChallengeRewardReddotName, self, self.UpdateChallengeReddot)
   ReddotManager.AddListenerEx(NormalTaskNewReddotName, self, self.UpdateNormalTaskNewReddot)
   ReddotManager.AddListenerEx(ChallengeTaskNewReddotName, self, self.UpdateChallengeTaskNewReddot)
+  self._Avatar = GWorld:GetAvatar()
+  self.MidTermGoals = self._Avatar.MidTermGoals[self.MidTermGoalEventId] or {}
   self:CheckIsMidTermGoalNeedShowReddot()
   self:UpdateActivityTabNewReddot()
 end
@@ -198,16 +200,20 @@ function M:CheckIsMidTermGoalNeedShowReddot()
   local MidTermAchvProgressRewarded = self.MidTermGoals.AchvProgressRewarded or {}
   local TaskFinishCounts = self.MidTermGoals.TaskFinishCount or {}
   local MidTermTasks = self.MidTermGoals.Tasks or {}
+  local AchievementPrize = DataMgr.AchievementPrize
+  local MidTermAchvScores = self.MidTermGoals.AchvScores or 0
   if CommonUtils.Size(MidTermScoresRewards) > 0 then
     self:TryIncreaceNormalRewardReddot("ScoresRewards")
   else
     self:TrySubNormalRewardReddot("ScoresRewards")
   end
-  for Count, v in pairs(MidTermAchvProgressRewarded) do
-    if 0 == v then
-      self:TryIncreaceChallengeRewardReddot(Count)
-    else
-      self:TrySubChallengeRewardReddot(Count)
+  for Count, v in pairs(AchievementPrize) do
+    if Count <= MidTermAchvScores then
+      if 1 ~= MidTermAchvProgressRewarded[Count] then
+        self:TryIncreaceChallengeRewardReddot(Count)
+      else
+        self:TrySubChallengeRewardReddot(Count)
+      end
     end
   end
   for TaskId, Task in pairs(MidTermTasks) do
@@ -215,7 +221,7 @@ function M:CheckIsMidTermGoalNeedShowReddot()
     if not TaskData then
       Utils.ScreenPrint("MidTermTask表中不存在UniqueID为" .. Task.UniqueID .. "的任务，请检查配置")
     elseif TaskData.TaskType == TaskType.Achievement then
-      if Task.Progress >= Task.Target and Task.RewardsGot == false and TaskData.EnableDay <= self:CalEventDay() then
+      if not self._Avatar:CheckIsChallengeRewardAllClaimed() and Task.Progress >= Task.Target and Task.RewardsGot == false and TaskData.EnableDay <= self:CalEventDay() then
         self:TryIncreaceChallengeRewardReddot(Task.UniqueID)
       else
         self:TrySubChallengeTaskRewardReddot(Task.UniqueID)

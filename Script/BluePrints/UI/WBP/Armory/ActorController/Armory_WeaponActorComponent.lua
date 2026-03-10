@@ -262,13 +262,21 @@ function M:SetSingleWeaponCameraStartInfo(WeaponData)
   self.ArmoryHelper:SetCameraStartInfo(Location, Rotation)
 end
 
-function M:SetSingleWeaponCamera(WeaponData)
-  _InitWeaponHelperTrans(self)
+function M:SetSingleWeaponCamera(WeaponData, bKeepTransform)
+  if not bKeepTransform then
+    _InitWeaponHelperTrans(self)
+  end
   local WeaponHelper = self.ArmoryHelper:CreateOrGetWeaponHelper()
   local WeaponTag = self:GetSingleWeaponTag(WeaponData)
   local Distance = WeaponHelper.CamDistance:ToTable()[WeaponTag] or 0
   local ViewActorLocation = self.ArmoryHelper:K2_GetActorLocation()
-  local Rotation = UKismetMathLibrary.FindLookAtRotation(ViewActorLocation + WeaponHelper:GetActorRightVector(), ViewActorLocation)
+  local CalcRightVector
+  if bKeepTransform then
+    CalcRightVector = UKismetMathLibrary.GetRightVector(FRotator(0, 0, 0))
+  else
+    CalcRightVector = WeaponHelper:GetActorRightVector()
+  end
+  local Rotation = UKismetMathLibrary.FindLookAtRotation(ViewActorLocation + CalcRightVector, ViewActorLocation)
   local Offset = UKismetMathLibrary.GetForwardVector(Rotation) * -Distance
   if self.ExCameraOffset then
     Offset = Offset + self.ExCameraOffset

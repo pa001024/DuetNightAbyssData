@@ -50,7 +50,7 @@ function M:Init()
   self:RefreshRedState()
   EventManager:AddEvent(EventID.OnNewCharObtained, self, self.OnNewCharObtained)
   EventManager:AddEvent(EventID.OnCharDeleted, self, self.OnCharDeleted)
-  self:TryListenEvent()
+  EventManager:AddEvent(EventID.CloseLoading, self, self.TryListenEvent)
 end
 
 function M:TryListenEvent()

@@ -507,7 +507,7 @@ return ReadOnly("ShopBannerTab", {
     Bp = "WBP_Shop_Recommend_Common",
     DisplayId = 1003,
     DisplayType = "Mount",
-    EndTime = LocalTimeProxy(1775466000),
+    EndTime = LocalTimeProxy(1773090000),
     Id = 221,
     ItemIds = T.RT_4,
     MarkText = "UI_Banner_Tab_Sale121",
@@ -552,7 +552,7 @@ return ReadOnly("ShopBannerTab", {
     Bp = "WBP_Shop_Recommend_Common",
     DisplayId = 4201,
     DisplayType = "Char",
-    EndTime = LocalTimeProxy(1775466000),
+    EndTime = LocalTimeProxy(1775505600),
     Id = 251,
     IsSwitchTab = true,
     ItemIds = {150134},
@@ -570,7 +570,7 @@ return ReadOnly("ShopBannerTab", {
     Bp = "WBP_Shop_Recommend_Common",
     DisplayId = 10203,
     DisplayType = "Weapon",
-    EndTime = LocalTimeProxy(1775466000),
+    EndTime = LocalTimeProxy(1775505600),
     Id = 252,
     IsSwitchTab = true,
     ItemIds = {159108},
@@ -626,7 +626,7 @@ return ReadOnly("ShopBannerTab", {
     PreviewType = "Char",
     Sequence = 5002,
     ShowRemainTime = true,
-    StartTime = LocalTimeProxy(1773090000),
+    StartTime = LocalTimeProxy(1773108000),
     Text1 = "DailyPack_Name_1",
     Text2 = "UI_DailyPack_RuleDes_4",
     Text2EntryText = "UI_DailyPack_Rule"
@@ -704,7 +704,7 @@ return ReadOnly("ShopBannerTab", {
     Sequence = 5007,
     ShowRemainTime = true,
     SoldOutSinkBanner = true,
-    StartTime = LocalTimeProxy(1771898400),
+    StartTime = LocalTimeProxy(1773090000),
     Text1 = "RESOURCE_NAME_49996"
   }
 })

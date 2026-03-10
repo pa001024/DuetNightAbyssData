@@ -42,6 +42,26 @@ function BP_EMGameState_C:ReceiveBeginPlay()
   self:InitPickupNiagaraPath()
   self.AudioCompCacheNum = 0
   self:SpawnClientEventManager()
+  self:ResetInSettlementParams()
+end
+
+function BP_EMGameState_C:ResetInSettlementParams()
+  if IsDedicatedServer(self) then
+    return
+  end
+  if not IsClient(self) then
+    local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+    if GameMode then
+      local EMCustomString = UE4.UGameplayStatics.ParseOption(GameMode.OptionsString, "EMCUSTOM")
+      if "TempScene" == EMCustomString then
+        return
+      end
+    end
+  end
+  GWorld.GameInstance.IsDSOnDungeonFinish = nil
+  GWorld.GameInstance.IsInSettlementScene = nil
+  self.IsInSettlementScene = nil
+  DebugPrint("ljl Client ResetInSettlementParams!")
 end
 
 function BP_EMGameState_C:OnLoadingPanelClosed()

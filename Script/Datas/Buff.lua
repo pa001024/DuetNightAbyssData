@@ -1352,6 +1352,7 @@ return ReadOnly("Buff", {
     AddPassiveEffect = {1},
     BuffId = 5,
     DisableEmoIdle = true,
+    DisableSkills = {"Skill1", "Skill2"},
     ForbidenJumpState = {
       "EWallJump",
       "EBulletJump",
@@ -2707,7 +2708,7 @@ return ReadOnly("Buff", {
     CombatConditionId = 1004,
     IsShowInBillboard = true,
     MaxLayer = 5,
-    MergeRule1 = "Personal",
+    MergeRule1 = "Global",
     MergeRule2 = "NewFree"
   },
   [10204] = {
@@ -6450,6 +6451,7 @@ return ReadOnly("Buff", {
   },
   [420122] = {
     BuffId = 420122,
+    BuffType = {430101},
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },

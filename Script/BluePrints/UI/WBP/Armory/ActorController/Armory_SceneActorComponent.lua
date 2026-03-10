@@ -77,7 +77,7 @@ function M:TryLoadPreviewScene(SceneType)
   if not Path then
     return
   end
-  self.PreviewSceneLocation = self.PreviewSceneLocation or FVector(200000, 200000, 200000)
+  self.PreviewSceneLocation = self.PreviewSceneLocation or FVector(190000, 190000, 190000)
   local PreviewLevelLocation = self.PreviewSceneLocation
   local GameMode = UE4.UGameplayStatics.GetGameMode(self.ViewUI)
   local WorldLoader = GameMode:GetLevelLoader()
@@ -91,7 +91,6 @@ function M:TryLoadPreviewScene(SceneType)
     if not IsPreviewSceneHasRef(PreviewLevelName) then
       self.IsPreviewSceneLoading = true
       bSuccess = WorldLoader:LoadPreviewLevel(PreviewLevelName, Path, function()
-        self.IsPreviewSceneLoading = false
         self.ArmoryHelper:SetPreviewLevelActor(GetLevelScriptActor(WorldLoader, PreviewLevelName))
         self:OnPreviewSceneLoaded()
       end, PreviewLevelLocation, FRotator(0, 0, 0))
@@ -153,9 +152,10 @@ function M:UnloadPreviewScene()
       local GameMode = UE4.UGameplayStatics.GetGameMode(self.ViewUI)
       local WorldLoader = GameMode:GetLevelLoader()
       if WorldLoader then
-        local EnvirSystemActor = self:GetEnvirSystemActor()
-        if EnvirSystemActor then
-          EnvirSystemActor.Disable = true
+        self:DisableEnvirSystem(true)
+        local Controller = UE4.UGameplayStatics.GetPlayerController(self.ArmoryHelper, 0)
+        if Controller then
+          UTalkSequenceFunctionLibrary.UpdatePlayerCameraManager(Controller)
         end
         WorldLoader:UnloadPreviewLevel("PreviewLevel" .. self.EPreviewSceneType)
         if IsValid(self.ArmoryHelper) then
@@ -168,10 +168,24 @@ function M:UnloadPreviewScene()
   end
 end
 
+function M:RefreshEnvironment()
+  self.ViewUI:AddTimer(0.01, function()
+    local EnvironmentManager = UE4.UGameplayStatics.GetActorOfClass(self.ViewUI, UE4.AEnvironmentManager:StaticClass())
+    if EnvironmentManager then
+      self:DisableEnvirSystem(true)
+      local Controller = UE4.UGameplayStatics.GetPlayerController(self.ArmoryHelper, 0)
+      if Controller then
+        UTalkSequenceFunctionLibrary.UpdatePlayerCameraManager(Controller)
+      end
+      EnvironmentManager:Refresh(true)
+    end
+  end, false, 0, "RefreshEnvironment", true)
+end
+
 function M:GetEnvirSystemActor()
   if IsValid(self.ArmoryHelper) then
     local PreviewLevelActor = self.ArmoryHelper:GetPreviewLevelActor()
-    local EnvirSystemActor = PreviewLevelActor and PreviewLevelActor.GetPreviewLevelActor and PreviewLevelActor:GetPreviewLevelActor()
+    local EnvirSystemActor = PreviewLevelActor and PreviewLevelActor.GetEnvirSystemActor and PreviewLevelActor:GetEnvirSystemActor()
     return EnvirSystemActor
   end
 end
@@ -206,6 +220,22 @@ function M:StartPreviewBGAnimation(PreviewBGPos, Time)
   self:DoSomethingWithScene("StartPreviewBGAnimation", _StartPreviewBGAnimation)
 end
 
+function M:DisableEnvirSystem(bDisable)
+  local function _DisableEnvirSystem(...)
+    local bSuccess = self:WaitForPreviewSceneLoadFinished()
+    
+    if not bSuccess then
+      return
+    end
+    local EnvirSystemActor = self:GetEnvirSystemActor()
+    if EnvirSystemActor then
+      EnvirSystemActor.Disable = bDisable
+    end
+  end
+  
+  self:DoSomethingWithScene("DisableEnvirSystem", _DisableEnvirSystem)
+end
+
 function M:DoSomethingWithScene(BehaviorName, Func, ...)
   local Co = _FindSceneCoroutine(self, BehaviorName)
   if Co then
@@ -237,20 +267,23 @@ function M:IsSceneActorLoading()
 end
 
 function M:OnPreviewSceneLoaded()
+  self:DisableEnvirSystem(false)
   self.IsPreviewSceneLoading = false
-  self:SetPreviewLevelSkyBoxColor()
-  local PreviewLevelActor = self.ArmoryHelper:GetPreviewLevelActor()
-  if PreviewLevelActor and PreviewLevelActor.GetEnvirSystemActor then
-    local EnvirSystemActor = PreviewLevelActor:GetEnvirSystemActor()
-    if EnvirSystemActor then
-      EnvirSystemActor.Disable = false
-    end
-  end
   self:DoDeferedSceneBehavior()
-  self:UpdateLighting()
+  self:SetPreviewLevelSkyBoxColor()
+  self:UpdateSceneLighting()
 end
 
-function M:UpdateLighting()
+function M:DelayUpdateSceneLighting()
+  self.ViewUI:AddTimer(0.03, function()
+    self:UpdateSceneLighting()
+  end)
+end
+
+function M:UpdateSceneLighting()
+  if not self.bPreviewSceneLoaded then
+    return
+  end
   self.bNotifyHelperUpdateLighting = false
   
   local function _NotifyPreviewSceneUpdateLight(...)
@@ -291,21 +324,21 @@ function M:TryNotifyHelperUpdateLighting()
   end
   if IsValid(self.ArmoryHelper) then
     self.bNotifyHelperUpdateLighting = true
-    self.ArmoryHelper:OnArmoryOpenOrClose(true)
+    self.ArmoryHelper:UpdateDirLight(true)
     if self.bPreviewSceneLoaded then
-      self.ArmoryHelper:OnPreviewSceneLoaded()
+      self.ArmoryHelper:UpdateLighting()
     end
   end
 end
 
 function M:SwitchArmoryCamera(IsArmoryCamera)
   if IsArmoryCamera then
-    self.ArmoryHelper:OnArmoryOpenOrClose(true)
+    self.ArmoryHelper:UpdateDirLight(true)
   end
 end
 
 function M:Component_OnClosed()
-  self.ArmoryHelper:OnArmoryOpenOrClose(false)
+  self.ArmoryHelper:UpdateDirLight(false)
 end
 
 function M:Component_DestroyActors()

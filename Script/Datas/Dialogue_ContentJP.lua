@@ -174858,13 +174858,14 @@ SEQ{ MoveTo{ActorId{701075},MoveSpeed{150},TargetPoint{"Targetpoint_20030907"}},
         },
         [51140077] = {
           Camera = "-24.294922,12.818359,82.566406,0.000001,0.0,-178.519165,18.36294,75.471931,false,Manual,2.8",
-          Content = "……我明白了！扶疏的姐姐救治的那个病人，不是尾生的妻子，而是尾生自己！他的妻子早就过世了，而他得了心病，一直以为自己的妻子还在身边！",
+          ContentJP = "わかった……！フーシュのお姉さんが診ていた患者は、オショウの妻じゃなくて……オショウ本人！オショウの妻はずっと前に亡くなっていて、彼は心を壊し、ずっと妻が側にいるって錯覚してたんだ……！",
           DialogueId = 51140077,
           FacialId = {
             [1] = "200002:Smile01"
           },
           GUID = "800618E2",
           SpeakNpcId = 200002,
+          Subtitle = "Oh! I get it now! The patient Fushu's sister treated wasn't his wife at all — it was Weisheng himself! His wife had died long before, and he was so heartbroken he kept believing she was still beside him!",
           TalkActionId = {
             [1] = "200002:Excited02_Start"
           }

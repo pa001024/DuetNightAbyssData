@@ -35,7 +35,6 @@ function M:Construct()
     }
     UIManager(self):ShowCommonPopupUI(100101, Params, self)
   end)
-  self._Avatar = GWorld:GetAvatar()
   self:InitListenEvent()
   self:RefreshBaseInfo()
   self.List_Challenge:SetScrollBarVisibility(UIConst.VisibilityOp.Hidden)
@@ -107,7 +106,8 @@ end
 
 function M:UpdateChallengeTaskList()
   self.List_Challenge:ClearListItems()
-  self.MidTermGoals = self._Avatar.MidTermGoals[self.MidTermGoalEventId] or {}
+  local Avatar = GWorld:GetAvatar()
+  self.MidTermGoals = Avatar.MidTermGoals[self.MidTermGoalEventId] or {}
   local MidTermTasks = self.MidTermGoals.Tasks or {}
   local SortedTaskList = self:SortTaskList(MidTermTasks)
   self.ChallengeTaskList = {}
@@ -222,34 +222,6 @@ function M:TryIncreaceChallengeRewardReddot(Count)
   end
 end
 
-function M:TrySubChallengeRewardReddot(Target)
-  local CacheKey = "ChallengeScoreItem" .. Target
-  local CacheData = ReddotManager.GetLeafNodeCacheDetail(ChallengeRewardReddotName)
-  if CacheData and CacheData[CacheKey] then
-    CacheData[CacheKey] = nil
-    ReddotManager.DecreaseLeafNodeCount(ChallengeRewardReddotName)
-  end
-end
-
-function M:TryIncreaceChallengeTaskRewardReddot(TaskId)
-  local allRewardsClaimed = true
-  for _, v in pairs(self.MidTermAchvProgressRewarded) do
-    if 0 == v then
-      allRewardsClaimed = false
-      break
-    end
-  end
-  if allRewardsClaimed then
-    return
-  end
-  local CacheKey = ChallengeRewardReddotName .. TaskId
-  local CacheData = ReddotManager.GetLeafNodeCacheDetail(ChallengeRewardReddotName)
-  if CacheData and nil == CacheData[CacheKey] then
-    CacheData[CacheKey] = true
-    ReddotManager.IncreaseLeafNodeCount(ChallengeRewardReddotName)
-  end
-end
-
 function M:TrySubChallengeTaskRewardReddot(TaskId)
   local CacheKey = ChallengeRewardReddotName .. TaskId
   local CacheData = ReddotManager.GetLeafNodeCacheDetail(ChallengeRewardReddotName)
@@ -269,12 +241,15 @@ function M:TrySubChallengeTaskNewReddot(TaskId)
 end
 
 function M:UpdateChallengeScoreItem(TaskScoreToday)
+  local Avatar = GWorld:GetAvatar()
+  local MidTermGoals = Avatar.MidTermGoals[self.MidTermGoalEventId] or {}
+  local MidTermAchvProgressRewarded = MidTermGoals.AchvProgressRewarded or {}
   local RewardCanGet = false
   for Count, RewardId in pairs(self.AchievementPrize) do
     local Index = math.floor(Count / 10)
     local Item = self["ChallengeScoreItem_" .. Index]
     if Count <= TaskScoreToday then
-      if 1 == self.MidTermAchvProgressRewarded[Count] then
+      if 1 == MidTermAchvProgressRewarded[Count] then
         Item:StopAnimation(Item.Reward)
         Item:PlayAnimation(Item.Recived)
       else
@@ -403,6 +378,7 @@ function M:GetAllTaskScores()
   if self.Btn_OneClickGet.Btn_GetReward:GetForbidden() then
     return
   end
+  local Avatar = GWorld:GetAvatar()
   AudioManager(self):PlayUISound(self, "event:/ui/activity/wenmingboyi_all_btn_click", nil, nil)
   
   local function Cb(ErrCode, Ret)
@@ -412,7 +388,7 @@ function M:GetAllTaskScores()
       self.ChallengeTaskScore = self:CalChallengeTaskScore()
       self:UpdateChallengeTaskScore(self.ChallengeTaskScore)
       self:UpdateOneClickBtnState()
-      self:ClearChallengeTaskReddot()
+      self:ClearChallengeTaskNewReddot()
       if self.ChallengeTaskList then
         for _, TaskItem in pairs(self.ChallengeTaskList) do
           if TaskItem.TaskProp and TaskItem.TaskProp.RewardsGot then
@@ -427,7 +403,7 @@ function M:GetAllTaskScores()
   end
   
   self.Owner:BlockAllUIInput(true)
-  self._Avatar:MidTermGetAllAchvScores(Cb)
+  Avatar:MidTermGetAllAchvScores(Cb)
 end
 
 function M:NewItemContent(TaskType, TaskId, TaskPoint, TaskDes)
@@ -467,6 +443,7 @@ function M:OnTaskGet(Item)
   Item.WS_Btn:SetActiveWidgetIndex(3)
   Item:PlayAnimation(Item.In_Got)
   Item.Content.CanGet = false
+  Item.Content.TaskProp.RewardsGot = true
   self.ChallengeTaskScore = self:CalChallengeTaskScore()
   self:TrySubChallengeTaskRewardReddot(Item.TaskProp.UniqueID)
   self:TrySubChallengeTaskNewReddot(Item.TaskProp.UniqueID)
@@ -480,17 +457,18 @@ function M:OnTaskGet(Item)
 end
 
 function M:OnChallengeRewardGet()
+  local Avatar = GWorld:GetAvatar()
+  
   local function Callback(ErrCode, Ret)
     if ErrCode == ErrorCode.RET_SUCCESS then
       UIManager(GWorld.GameInstance):LoadUI(UIConst.LoadInConfig, "GetItemPage", nil, nil, nil, nil, Ret, function()
         self:AddTimer(0.1, function()
           local FocusedTask = self.CurFocusTask or self.List_Challenge:GetItemAt(0)
-          
           self.List_Challenge:BP_NavigateToItem(FocusedTask)
         end)
       end)
       self:UpdateChallengeScoreItem(self:CalChallengeTaskScore())
-      self:ClearChallengeReddot()
+      self:ClearChallengeRewardReddot()
     else
       local Params = {
         Count = self.Count,
@@ -510,7 +488,7 @@ function M:OnChallengeRewardGet()
   end
   
   self.Owner:BlockAllUIInput(true)
-  self._Avatar:MidTermGetProgressReward(Callback)
+  Avatar:MidTermGetProgressReward(Callback)
 end
 
 function M:ClearChallengeReddot()
@@ -523,7 +501,33 @@ function M:ClearChallengeReddot()
   ReddotManager.ClearLeafNodeCount(ChallengeRewardReddotName)
 end
 
-function M:ClearChallengeTaskReddot()
+function M:ClearChallengeRewardReddot()
+  local Avatar = GWorld:GetAvatar()
+  local AchievementPrize = DataMgr.AchievementPrize
+  local MidTermAchvScores = Avatar.MidTermGoals[self.MidTermGoalEventId].AchvScores or 0
+  local maxCount = 0
+  for Count, _ in pairs(AchievementPrize) do
+    if Count > maxCount then
+      maxCount = Count
+    end
+  end
+  if MidTermAchvScores >= maxCount then
+    self:ClearChallengeReddot()
+    return
+  end
+  local CacheData = ReddotManager.GetLeafNodeCacheDetail(ChallengeRewardReddotName)
+  if CacheData then
+    for Count, _ in pairs(AchievementPrize) do
+      local CacheKey = "ChallengeScoreItem" .. Count
+      if Count <= MidTermAchvScores then
+        CacheData[CacheKey] = nil
+        ReddotManager.DecreaseLeafNodeCount(ChallengeRewardReddotName)
+      end
+    end
+  end
+end
+
+function M:ClearChallengeTaskNewReddot()
   local CacheData = ReddotManager.GetLeafNodeCacheDetail(ChallengeTaskNewReddotName)
   if CacheData then
     for _, TaskItem in pairs(self.ChallengeTaskList) do

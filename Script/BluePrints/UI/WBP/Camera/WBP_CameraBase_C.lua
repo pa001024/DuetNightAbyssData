@@ -143,6 +143,7 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, Params)
       self.Btn_Pause:SetChecked(true, true)
       self.Btn_Pause:StopAllAnimations()
       self.Btn_Pause:PlayAnimation(self.Btn_Pause.Open_Normal)
+      self:UISetGamePaused(self.WidgetName or self.ConfigName, true)
     end
   end
   if self.InitParams.IsAprilFoolsDayActivity then
@@ -204,6 +205,11 @@ function M:SetInitParams(Params)
   self.Panel_SuccessToast:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Text_LostTarget:SetText(self.Text_TargetNotFound)
   self.bHasFoundTargets = false
+  if Params.IsAprilFoolsDayActivity then
+    self.bFindTargetEveryFrame = false
+  else
+    self.bFindTargetEveryFrame = true
+  end
   self.CloseCallback = Params.CloseCallback
   self.OnShotTargetSuccess = Params.OnShotTargetSuccess
   if Params.bStartHiddenRole then
@@ -316,111 +322,131 @@ function M:Tick(MyGeometry, InDeltaTime)
     end
   end
   self:TickFindTargets()
-  local IsGamePaused = UE4.UGameplayStatics.IsGamePaused(self)
-  if IsGamePaused ~= self.Btn_Pause:GetChecked() then
-    self:UISetGamePaused(self.WidgetName, self.Btn_Pause:GetChecked())
+  if UE4.UGameplayStatics.IsGamePaused(self) and self.NeedPauseNextFrameMeshes then
+    for _, Mesh in pairs(self.NeedPauseNextFrameMeshes) do
+      if IsValid(Mesh) then
+        Mesh:SetTickableWhenPaused(false)
+        if Mesh.GetOwner and Mesh:GetOwner() then
+          DebugPrint("@gulinan Reset mesh tickable when gamepause, Character: " .. tostring(Mesh:GetOwner():GetName()) .. "ForcedLOD: " .. tostring(Mesh:GetForcedLOD()))
+        end
+      end
+    end
+    self.NeedPauseNextFrameMeshes = {}
   end
   if UE4.UGameplayStatics.IsGamePaused(self) and self.NeedUpdateLODCharacter and #self.NeedUpdateLODCharacter > 0 and self.bNeedUpdateLODCharacterOnce then
+    self.NeedPauseNextFrameMeshes = {}
     self.bNeedUpdateLODCharacterOnce = false
+    local HighestLod = 0
+    local PlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName(self)
+    if string.lower(PlatformName) == CommonConst.CHANNEL_OS.ANDROID or string.lower(PlatformName) == CommonConst.CHANNEL_OS.IOS then
+      HighestLod = 1
+    end
     for _, Character in pairs(self.NeedUpdateLODCharacter) do
-      if IsValid(Character) then
-        Character.Mesh:SetForcedLOD(1)
-        self:UISetGamePaused(self.WidgetName, false)
-        DebugPrint("@gulinan Update LOD for Character: " .. tostring(Character:GetName()) .. " bChanged: " .. tostring(bLODChanged))
+      if IsValid(Character) and Character.Mesh and Character.Mesh.SetTickableWhenPaused and Character.Mesh:GetForcedLOD() ~= HighestLod + 1 then
+        Character.Mesh:SetForcedLOD(HighestLod + 1)
+        Character.Mesh:SetTickableWhenPaused(true)
+        self.NeedPauseNextFrameMeshes[#self.NeedPauseNextFrameMeshes + 1] = Character.Mesh
+        DebugPrint("@gulinan Update LOD for Character: " .. tostring(Character:GetName()) .. " bChanged: " .. tostring(1))
       end
     end
   end
 end
 
+local function GetTargetLoc(Actor, TargetsLoc)
+  if not TargetsLoc[Actor] then
+    if Actor.AFDTransformStaticMeshComponent then
+      TargetsLoc[Actor] = Actor.AFDTransformStaticMeshComponent:K2_GetComponentLocation()
+    else
+      TargetsLoc[Actor] = Actor:K2_GetActorLocation()
+      if Actor.CapsuleComponent then
+        TargetsLoc[Actor].Z = TargetsLoc[Actor].Z - Actor.CapsuleComponent:GetScaledCapsuleHalfHeight()
+      end
+    end
+  end
+  return TargetsLoc[Actor]
+end
+
 local ScreenPos = FVector2D()
 local HitResult = FHitResult()
+
+function M:TryFindTargets()
+  if self.TargetActors == nil then
+    return
+  end
+  self.bFindTarget = false
+  local ContinueFindTarget = true
+  local TargetsLoc = {}
+  if 0 ~= EDetectTargetMethods.ProjectToScreen & self.DetectTargetMethod then
+    local ViewPortScale = UWidgetLayoutLibrary.GetViewportScale(self)
+    local RangeWidget = self.Border_FindTarget
+    if self.InitParams.IsLargeRange then
+      RangeWidget = self
+    end
+    local Geo = RangeWidget:GetTickSpaceGeometry()
+    local LeftTop = USlateBlueprintLibrary.GetLocalTopLeft(Geo) * ViewPortScale
+    local Size = USlateBlueprintLibrary.GetLocalSize(Geo) * ViewPortScale
+    for key, value in pairs(self.TargetActors) do
+      UGameplayStatics.ProjectWorldToScreen(self.PlayerController, GetTargetLoc(value, TargetsLoc), ScreenPos, false)
+      if ScreenPos.X > LeftTop.X and ScreenPos.Y > LeftTop.Y and ScreenPos.X < LeftTop.X + Size.X and ScreenPos.Y < LeftTop.Y + Size.Y then
+        self.bFindTarget = true
+      else
+        self.bFindTarget = false
+        break
+      end
+    end
+    ContinueFindTarget = self.bFindTarget
+  end
+  if ContinueFindTarget and 0 ~= EDetectTargetMethods.LineTrace & self.DetectTargetMethod and self.CameraManager then
+    local CameraLocation = self.CameraManager:GetCameraLocation()
+    for key, value in pairs(self.TargetActors) do
+      local bHit = UE4.UKismetSystemLibrary.LineTraceSingle(self, CameraLocation, GetTargetLoc(value, TargetsLoc), 0, false, nil, 0, HitResult, true)
+      if bHit and HitResult.Actor == value and not HitResult.Actor.bHidden then
+        self.bFindTarget = true
+      else
+        self.bFindTarget = false
+        break
+      end
+    end
+  end
+  if self.bFindTarget then
+    if not self.bHasFoundTargets then
+      self:StopAnimation(self.TargetOut)
+      self:PlayAnimation(self.TargetIn)
+      self.Text_FindTarget:SetText(self.Text_TargetFound)
+      self.Panel_FailToast:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      self.Panel_SuccessToast:SetVisibility(UIConst.VisibilityOp.Visible)
+      self.bHasFoundTargets = true
+      if self.InitParams.IsAprilFoolsDayActivity then
+        self.bHasPlayedFoundSound = true
+        self.bHasPlayedNotFoundSound = true
+      end
+      if not self.bHasPlayedFoundSound then
+        AudioManager(self):PlayUISound(self, "event:/ui/common/task_target_detect", "Camera_Target_Found", nil)
+        self.bHasPlayedFoundSound = true
+        self.bHasPlayedNotFoundSound = false
+      end
+    end
+  elseif self.bHasFoundTargets then
+    self:StopAnimation(self.TargetIn)
+    self:PlayAnimation(self.TargetOut)
+    self.Text_LostTarget:SetText(self.Text_TargetNotFound)
+    self.Panel_FailToast:SetVisibility(UIConst.VisibilityOp.Visible)
+    self.Panel_SuccessToast:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.bHasFoundTargets = false
+    if nil ~= self.bHasPlayedFoundSound and not self.bHasPlayedNotFoundSound then
+      AudioManager(self):PlayUISound(self, "event:/ui/common/task_target_lost", "Camera_Target_Not_Found", nil)
+      self.bHasPlayedFoundSound = false
+      self.bHasPlayedNotFoundSound = true
+    end
+  end
+end
 
 function M:TickFindTargets()
   if self.IsShotTargetSucceeded then
     return
   end
-  if self.TargetActors then
-    self.bFindTarget = false
-    local ContinueFindTarget = true
-    local TargetsLoc = {}
-    
-    local function GetTargetLoc(Actor)
-      if not TargetsLoc[Actor] then
-        if Actor.AFDTransformStaticMeshComponent then
-          TargetsLoc[Actor] = Actor.AFDTransformStaticMeshComponent:K2_GetComponentLocation()
-        else
-          TargetsLoc[Actor] = Actor:K2_GetActorLocation()
-          if Actor.CapsuleComponent then
-            TargetsLoc[Actor].Z = TargetsLoc[Actor].Z - Actor.CapsuleComponent:GetScaledCapsuleHalfHeight()
-          end
-        end
-      end
-      return TargetsLoc[Actor]
-    end
-    
-    if 0 ~= EDetectTargetMethods.ProjectToScreen & self.DetectTargetMethod then
-      local ViewPortScale = UWidgetLayoutLibrary.GetViewportScale(self)
-      local RangeWidget = self.Border_FindTarget
-      if self.InitParams.IsLargeRange then
-        RangeWidget = self
-      end
-      local Geo = RangeWidget:GetTickSpaceGeometry()
-      local LeftTop = USlateBlueprintLibrary.GetLocalTopLeft(Geo) * ViewPortScale
-      local Size = USlateBlueprintLibrary.GetLocalSize(Geo) * ViewPortScale
-      for key, value in pairs(self.TargetActors) do
-        UGameplayStatics.ProjectWorldToScreen(self.PlayerController, GetTargetLoc(value), ScreenPos, false)
-        if ScreenPos.X > LeftTop.X and ScreenPos.Y > LeftTop.Y and ScreenPos.X < LeftTop.X + Size.X and ScreenPos.Y < LeftTop.Y + Size.Y then
-          self.bFindTarget = true
-        else
-          self.bFindTarget = false
-          break
-        end
-      end
-      ContinueFindTarget = self.bFindTarget
-    end
-    if ContinueFindTarget and 0 ~= EDetectTargetMethods.LineTrace & self.DetectTargetMethod and self.CameraManager then
-      local CameraLocation = self.CameraManager:GetCameraLocation()
-      for key, value in pairs(self.TargetActors) do
-        local bHit = UE4.UKismetSystemLibrary.LineTraceSingle(self, CameraLocation, GetTargetLoc(value), 0, false, nil, 0, HitResult, true)
-        if bHit and HitResult.Actor == value and not HitResult.Actor.bHidden then
-          self.bFindTarget = true
-        else
-          self.bFindTarget = false
-          break
-        end
-      end
-    end
-    if self.bFindTarget then
-      if not self.bHasFoundTargets then
-        self:StopAnimation(self.TargetOut)
-        self:PlayAnimation(self.TargetIn)
-        self.Text_FindTarget:SetText(self.Text_TargetFound)
-        self.Panel_FailToast:SetVisibility(UIConst.VisibilityOp.Collapsed)
-        self.Panel_SuccessToast:SetVisibility(UIConst.VisibilityOp.Visible)
-        self.bHasFoundTargets = true
-        if self.InitParams.IsAprilFoolsDayActivity then
-          self.bHasPlayedFoundSound = true
-          self.bHasPlayedNotFoundSound = true
-        end
-        if not self.bHasPlayedFoundSound then
-          AudioManager(self):PlayUISound(self, "event:/ui/common/task_target_detect", "Camera_Target_Found", nil)
-          self.bHasPlayedFoundSound = true
-          self.bHasPlayedNotFoundSound = false
-        end
-      end
-    elseif self.bHasFoundTargets then
-      self:StopAnimation(self.TargetIn)
-      self:PlayAnimation(self.TargetOut)
-      self.Text_LostTarget:SetText(self.Text_TargetNotFound)
-      self.Panel_FailToast:SetVisibility(UIConst.VisibilityOp.Visible)
-      self.Panel_SuccessToast:SetVisibility(UIConst.VisibilityOp.Collapsed)
-      self.bHasFoundTargets = false
-      if self.bHasPlayedFoundSound ~= nil and not self.bHasPlayedNotFoundSound then
-        AudioManager(self):PlayUISound(self, "event:/ui/common/task_target_lost", "Camera_Target_Not_Found", nil)
-        self.bHasPlayedFoundSound = false
-        self.bHasPlayedNotFoundSound = true
-      end
-    end
+  if self.bFindTargetEveryFrame then
+    self:TryFindTargets()
   end
 end
 
@@ -729,6 +755,9 @@ function M:Screenshot()
   if self.bSelfHidden then
     return
   end
+  if not self.IsShotTargetSucceeded and not self.bFindTargetEveryFrame then
+    self:TryFindTargets()
+  end
   if not self.IsShotTargetSucceeded then
     self.IsShotTargetSucceeded = self.bHasFoundTargets
   end
@@ -970,6 +999,10 @@ function M:Destruct()
   if self.InitParams ~= nil or self.InitParams ~= {} then
     self:UISetGamePaused(self.WidgetName or self.ConfigName, false)
   end
+  for _, Character in pairs(self.NeedUpdateLODCharacter) do
+    Character.Mesh:SetForcedLOD(0)
+    DebugPrint("@gulinan Reset force lod to 0: " .. tostring(Character:GetName()))
+  end
 end
 
 function M:SaveAndSetNPCTickableState()
@@ -1024,18 +1057,10 @@ function M:RecoverActorTickableState()
 end
 
 function M:NotifyGamePauseChange(IsGamePause)
-  if IsGamePause then
-    if self.NeedUpdateLODCharacter and #self.NeedUpdateLODCharacter > 0 then
-      for _, Character in pairs(self.NeedUpdateLODCharacter) do
-        if IsValid(Character) then
-          Character.Mesh:SetForcedLOD(1)
-          DebugPrint("@gulinan Notify Update LOD for Character: " .. tostring(Character:GetName()))
-        end
-      end
-    end
-  else
-    self:UISetGamePaused(self.WidgetName or self.ConfigName, IsGamePause)
+  if IsGamePause and self.NeedUpdateLODCharacter and #self.NeedUpdateLODCharacter > 0 then
+    self.bNeedUpdateLODCharacterOnce = true
   end
+  self:UISetGamePaused(self.WidgetName or self.ConfigName, IsGamePause)
 end
 
 function M:SetLockGamePause(bNewLock)

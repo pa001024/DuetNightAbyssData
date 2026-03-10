@@ -53870,19 +53870,19 @@
       {
         "id": 211,
         "t": "Resource",
-        "c": 40,
+        "c": 4,
         "n": "Secret Letter Clue"
       },
       {
         "id": 102,
         "t": "Resource",
-        "c": 1200,
+        "c": 120,
         "n": "Carmine Globule"
       },
       {
         "id": 20013,
         "t": "Resource",
-        "c": 30,
+        "c": 3,
         "n": "Luno Memento"
       }
     ]
@@ -53894,7 +53894,7 @@
       {
         "id": 101,
         "t": "Resource",
-        "c": 40000,
+        "c": 4000,
         "n": "Coin"
       }
     ]
@@ -55084,6 +55084,12 @@
         "n": "Secret Letter Clue"
       },
       {
+        "id": 30113,
+        "t": "Resource",
+        "c": 1,
+        "n": "Intermediate Dye: Maple Syrup"
+      },
+      {
         "id": 2009,
         "t": "Resource",
         "c": 9,
@@ -55094,12 +55100,6 @@
         "t": "Resource",
         "c": 1000,
         "n": "Carmine Globule"
-      },
-      {
-        "id": 30113,
-        "t": "Resource",
-        "c": 1,
-        "n": "Intermediate Dye: Maple Syrup"
       }
     ]
   },
@@ -55144,6 +55144,12 @@
         "n": "Secret Letter Clue"
       },
       {
+        "id": 30114,
+        "t": "Resource",
+        "c": 1,
+        "n": "Intermediate Dye: Cocoa"
+      },
+      {
         "id": 101,
         "t": "Resource",
         "c": 120000,
@@ -55154,12 +55160,6 @@
         "t": "Resource",
         "c": 1000,
         "n": "Carmine Globule"
-      },
-      {
-        "id": 30114,
-        "t": "Resource",
-        "c": 1,
-        "n": "Intermediate Dye: Cocoa"
       }
     ]
   },
@@ -55204,6 +55204,12 @@
         "n": "Secret Letter Clue"
       },
       {
+        "id": 30115,
+        "t": "Resource",
+        "c": 1,
+        "n": "Intermediate Dye: Verdant Wave"
+      },
+      {
         "id": 2010,
         "t": "Resource",
         "c": 5,
@@ -55214,12 +55220,6 @@
         "t": "Resource",
         "c": 40,
         "n": "Luno Memento"
-      },
-      {
-        "id": 30115,
-        "t": "Resource",
-        "c": 1,
-        "n": "Intermediate Dye: Verdant Wave"
       }
     ]
   },
@@ -55232,6 +55232,12 @@
         "t": "Resource",
         "c": 60,
         "n": "Secret Letter Clue"
+      },
+      {
+        "id": 30116,
+        "t": "Resource",
+        "c": 1,
+        "n": "Intermediate Dye: Weathered Pine"
       },
       {
         "id": 101,
@@ -55250,12 +55256,6 @@
         "t": "Resource",
         "c": 40,
         "n": "Luno Memento"
-      },
-      {
-        "id": 30116,
-        "t": "Resource",
-        "c": 1,
-        "n": "Intermediate Dye: Weathered Pine"
       }
     ]
   },
@@ -71178,6 +71178,12 @@
         "t": "Resource",
         "c": 1,
         "n": "Rune: Break"
+      },
+      {
+        "id": 6100022,
+        "t": "Resource",
+        "c": 1,
+        "n": "Rune: Penetration"
       }
     ]
   },
@@ -71208,6 +71214,12 @@
         "t": "Resource",
         "c": 1,
         "n": "Rune: Tempering"
+      },
+      {
+        "id": 6100013,
+        "t": "Resource",
+        "c": 1,
+        "n": "Rune: Enrage"
       }
     ]
   },
@@ -71400,6 +71412,12 @@
         "t": "Resource",
         "c": 1,
         "n": "HP·DEF Rune"
+      },
+      {
+        "id": 6100008,
+        "t": "Resource",
+        "c": 1,
+        "n": "Shield·HP Rune"
       }
     ]
   },
@@ -71430,6 +71448,18 @@
         "t": "Resource",
         "c": 1,
         "n": "Rune: Restoration"
+      },
+      {
+        "id": 6100015,
+        "t": "Resource",
+        "c": 1,
+        "n": "Rune: Inspiration"
+      },
+      {
+        "id": 6100016,
+        "t": "Resource",
+        "c": 1,
+        "n": "Rune: Resonance"
       }
     ]
   },
@@ -71454,6 +71484,18 @@
         "t": "Resource",
         "c": 1,
         "n": "Rune: Frenzy"
+      },
+      {
+        "id": 6100018,
+        "t": "Resource",
+        "c": 1,
+        "n": "Rune: Riptide"
+      },
+      {
+        "id": 6100023,
+        "t": "Resource",
+        "c": 1,
+        "n": "Rune: Fatality"
       }
     ]
   },
@@ -71484,6 +71526,18 @@
         "t": "Resource",
         "c": 1,
         "n": "Rune: Benevolence"
+      },
+      {
+        "id": 6100020,
+        "t": "Resource",
+        "c": 1,
+        "n": "Rune: Last Stand"
+      },
+      {
+        "id": 6100021,
+        "t": "Resource",
+        "c": 1,
+        "n": "Rune: Tenacity"
       }
     ]
   },
@@ -71532,6 +71586,12 @@
         "t": "Resource",
         "c": 1,
         "n": "Rune: Thunderbolt"
+      },
+      {
+        "id": 6100029,
+        "t": "Resource",
+        "c": 1,
+        "n": "Rune: Wither"
       }
     ]
   },
@@ -73438,6 +73498,18 @@
         "t": "Resource",
         "c": 30,
         "n": "Thought: Rebecca"
+      }
+    ]
+  },
+  {
+    "id": 2010005,
+    "m": "Fixed",
+    "child": [
+      {
+        "id": 100,
+        "t": "Resource",
+        "c": 160,
+        "n": "Phoxene"
       }
     ]
   },

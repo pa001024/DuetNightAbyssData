@@ -163,7 +163,7 @@ end
 function M:IsRealSummonMainPlayer(NowSummoner)
   local PC = UE4.UGameplayStatics.GetPlayerController(self, 0)
   local SummonMaster = NowSummoner:GetDirectSource()
-  if PC and SummonMaster and SummonMaster == PC:GetMyPawn() and NowSummoner:IsSummonByMainPlayer() then
+  if PC and SummonMaster and SummonMaster == PC:GetMyPawn() and NowSummoner.SummonID ~= nil and NowSummoner:IsSummonByMainPlayer() then
     return true
   end
   return false

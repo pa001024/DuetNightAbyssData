@@ -27,10 +27,6 @@ function M:Construct()
   })
   self:BindButtonEvents()
   self:InitGamepadKeys()
-  self:BindToAnimationFinished(self.Out, {
-    self,
-    self.OnOutAnimationFinished
-  })
   self.List_FoolMyDetail.BP_OnItemIsHoveredChanged:Add(self, self.OnItemHoveredChanged)
   self.List_FoolMyDetail.OnCreateEmptyContent:Bind(self, function()
     return self:CreateEmptyItem()
@@ -56,6 +52,11 @@ function M:EnterPage()
   self.CurContent = nil
   self:SetFocus()
   self:RefreshList()
+  self:UnbindFromAnimationFinished(self.Out, {
+    self,
+    self.OnOutAnimationFinished
+  })
+  self:StopAllAnimations()
   self:PlayAnimation(self.In)
 end
 
@@ -67,12 +68,21 @@ function M:LeavePage()
   self.bEntered = false
   self.CurContent = nil
   self:CleanTimer()
+  self:StopAllAnimations()
+  self:BindToAnimationFinished(self.Out, {
+    self,
+    self.OnOutAnimationFinished
+  })
   self:PlayAnimation(self.Out)
   self.List_FoolMyDetail:ClearListItems()
 end
 
 function M:OnOutAnimationFinished()
   self:SetVisibility(ESlateVisibility.Collapsed)
+  self:UnbindFromAnimationFinished(self.Out, {
+    self,
+    self.OnOutAnimationFinished
+  })
 end
 
 function M:SwitchState(EState)
@@ -98,7 +108,7 @@ function M:SwitchState(EState)
   self.CheckedContentNum = 0
   for _, Content in pairs(self.ContentMap) do
     Content.State = EState
-    if IsValid(Content.Widget) then
+    if IsValid(Content.Widget) and Content.Widget.SwitchItemState then
       Content.Widget:SwitchItemState(EState)
     end
   end

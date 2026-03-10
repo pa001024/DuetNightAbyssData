@@ -1158,15 +1158,15 @@ function Component:PreloadGameAssets()
       local DungeonId = GWorld.GameInstance:GetCurrentDungeonId()
       local DungeonInfo = DataMgr.Dungeon[DungeonId]
       if DungeonInfo and DungeonInfo.DungeonType == "AutoChess" then
-        print(_G.LogTag, "wzj- 自走棋跳过EnableAnimBudget")
-        UnitBudgetSystem:SetEnableAnimBudget(false)
+        print(_G.LogTag, "wzj- 自走棋跳过EnableAnimCache")
+        UnitBudgetSystem:SetEnableAnimCache(false)
       else
-        print(_G.LogTag, "wzj- 打开EnableAnimBudget")
-        UnitBudgetSystem:SetEnableAnimBudget(true)
+        print(_G.LogTag, "wzj- 打开EnableAnimCache")
+        UnitBudgetSystem:SetEnableAnimCache(true)
       end
     else
-      print(_G.LogTag, "wzj- 打开EnableAnimBudget")
-      UnitBudgetSystem:SetEnableAnimBudget(true)
+      print(_G.LogTag, "wzj- 打开EnableAnimCache")
+      UnitBudgetSystem:SetEnableAnimCache(true)
     end
     local bSkip = false
     if IsClient(self) then

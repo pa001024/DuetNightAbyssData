@@ -125,14 +125,9 @@ function M.JumpToInviteCode()
   local AccessToken = SdkUserInfo.accessToken
   local SdkUserId = SdkUserInfo.sdkUserId
   local UserName = SdkUserInfo.userName
-  local UIManager = GWorld.GameInstance:GetGameUIManager()
-  local TargetUIPage = UIManager:GetUIObj("GlobalWebBrowser")
-  if not TargetUIPage then
-    TargetUIPage = UIManager:LoadUINew("GlobalWebBrowser", "InviteCode", true, "&accessToken=" .. AccessToken, "&cUid=" .. SdkUserId, "&cName=" .. UserName)
-    UIManager:AddToJumpPageDeque(TargetUIPage)
-  else
-    UIManager:PlaceJumpUIToTop(TargetUIPage, "GlobalWebBrowser")
-  end
+  local Url = GLink("InviteCode")
+  Url = Url .. "&accessToken=" .. AccessToken .. "&cUid=" .. SdkUserId .. "&cName=" .. UserName
+  UE4.UKismetSystemLibrary.LaunchURL(Url)
 end
 
 return M

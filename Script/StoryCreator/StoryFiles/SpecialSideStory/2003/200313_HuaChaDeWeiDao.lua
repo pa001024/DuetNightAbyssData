@@ -485,7 +485,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        SubRegionId = 0,
+        SubRegionId = 104107,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "Mechanism_PingYuan_2080425",

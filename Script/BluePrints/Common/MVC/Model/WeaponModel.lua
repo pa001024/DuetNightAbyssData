@@ -1,6 +1,13 @@
 local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
 local M = Class()
-local _WeaponMap, _WeaponSkinMap, _WeaponAccessoryMap, _WeaponCount, _WeaponReward, _WeaponUuid2Id, _WeaponId2Uuid, _ConsumeWeaponRedCount
+local _WeaponMap = {}
+local _WeaponSkinMap = {}
+local _WeaponAccessoryMap = {}
+local _WeaponCount = {}
+local _WeaponReward = {}
+local _WeaponUuid2Id = {}
+local _WeaponId2Uuid = {}
+local _ConsumeWeaponRedCount = {}
 
 local function UpdateRedCountForWeaponId(WeaponTag, WeaponId)
   local allUuids = {}
@@ -305,7 +312,11 @@ function M:Destory()
   _WeaponMap = {}
   _WeaponSkinMap = {}
   _WeaponAccessoryMap = {}
+  _WeaponCount = {}
+  _WeaponReward = {}
+  _WeaponUuid2Id = {}
   _WeaponId2Uuid = {}
+  _ConsumeWeaponRedCount = {}
 end
 
 return M

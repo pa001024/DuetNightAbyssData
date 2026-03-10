@@ -5144,6 +5144,13 @@
     "type": "Normal"
   },
   {
+    "id": 99998,
+    "name": "運営チーム",
+    "camp": "NPC",
+    "type": "Normal",
+    "icon": "Gift"
+  },
+  {
     "id": 99999,
     "name": "運営チーム",
     "camp": "NPC",
@@ -28513,7 +28520,7 @@
   },
   {
     "id": 830001,
-    "name": "UI_Npc_Name_WuyouSheng_Explore",
+    "name": "さすらいのムユウセイ",
     "camp": "NPC",
     "type": "Normal"
   },

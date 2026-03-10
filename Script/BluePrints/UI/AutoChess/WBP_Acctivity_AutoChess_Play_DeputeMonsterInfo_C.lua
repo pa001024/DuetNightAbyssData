@@ -20,11 +20,12 @@ end
 
 function View:Init(MissionId)
   DebugPrint("------------初始化怪物界面------------")
+  self.bClosing = false
   self.List_Tab:ClearListItems()
   self:GetDataFromModel(MissionId)
   self:InitMonsterList()
   self:DefaultShowFirstItem()
-  AudioManager(self):PlayUISound(self, "event:/ui/common/npc_info_panel", " ", nil)
+  AudioManager(self):PlayUISound(self, "event:/ui/common/npc_info_panel", "DeputeMonsterInfo", nil)
   self:PlayAnimation(self.In)
 end
 
@@ -296,19 +297,19 @@ end
 
 function View:ChangeHightlight(NewMonsterIndex, OldMonsterIndex)
   local NewMonsterData = self.List_Tab:GetItemAt(NewMonsterIndex - 1)
-  local OldMonsterIndex = self.List_Tab:GetItemAt(OldMonsterIndex - 1)
-  if OldMonsterIndex then
-    OldMonsterIndex.IsSelected = false
+  local OldMonsterData = self.List_Tab:GetItemAt(OldMonsterIndex - 1)
+  if OldMonsterData then
+    OldMonsterData.IsSelected = false
   end
   if NewMonsterData then
     NewMonsterData.IsSelected = true
   end
   local AllDisplayedEntries = self.List_Tab:GetDisplayedEntryWidgets()
   for _, Entry in pairs(AllDisplayedEntries) do
-    local idx = Entry.Content.Index
-    if idx == OldMonsterIndex.Index then
-      Entry:SetSelected(OldMonsterIndex.IsSelected)
-    elseif idx == NewMonsterData.Index then
+    local Idx = Entry.Content.Index
+    if Idx == OldMonsterData.Index then
+      Entry:SetSelected(OldMonsterData.IsSelected)
+    elseif Idx == NewMonsterData.Index then
       Entry:SetSelected(NewMonsterData.IsSelected)
     end
   end
@@ -501,7 +502,7 @@ function View:OnKeyDown(MyGeometry, InKeyEvent)
   end
   if InKeyName == Const.GamepadFaceButtonRight then
     if self.CurFocusState == self.FocusState.Focus1 then
-      self:Close()
+      self:OnBackBtnClicked()
     elseif self.CurFocusState == self.FocusState.Focus2 then
       self:SetFocusState(self.FocusState.Focus1)
     elseif self.CurFocusState == self.FocusState.Focus3 then
@@ -578,12 +579,15 @@ end
 
 function View:BindBtnEvent()
   if self.Button_Back then
+    self.Button_Back.OnClicked:Remove(self, self.OnBackBtnClicked)
     self.Button_Back.OnClicked:Add(self, self.OnBackBtnClicked)
   end
   if self.Arrow_Right then
+    self.Arrow_Right.OnClicked:Remove(self, self.OnArrowRightBtnClicked)
     self.Arrow_Right.OnClicked:Add(self, self.OnArrowRightBtnClicked)
   end
   if self.Arrow_Left then
+    self.Arrow_Left.OnClicked:Remove(self, self.OnArrowLeftBtnClicked)
     self.Arrow_Left.OnClicked:Add(self, self.OnArrowLeftBtnClicked)
   end
 end
@@ -592,8 +596,12 @@ function View:OnBackBtnClicked()
   if self.Tips and self:IsTipsVisible() then
     self.Tips:Hide()
   else
+    if self.bClosing then
+      return
+    end
+    self.bClosing = true
     self:PlayAnimation(self.Out)
-    AudioManager(self):PlayUISound(self, "event:/ui/common/npc_info_panel", " ", {ToEnd = 1})
+    AudioManager(self):SetEventSoundParam(self, "DeputeMonsterInfo", {ToEnd = 1})
   end
 end
 

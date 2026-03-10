@@ -171,9 +171,9 @@ end
 
 function WalnutComponent:KickPlayerNotInGame()
   local KickedAvatarEids = {}
-  for _, Player in pairs(self:GetAllPlayer()) do
-    local AvatarEidStr = Player:GetOwner().AvatarEidStr
-    local PlayerState = Player.PlayerState
+  local InGameAvatarEids = self:GetInGamePlayerAvatarEids()
+  for _, AvatarEidStr in pairs(InGameAvatarEids) do
+    local PlayerState = UE4.URuntimeCommonFunctionLibrary.GetPlayerStateByAvatarEid(GWorld.GameInstance, AvatarEidStr)
     if PlayerState and not PlayerState:IsInGame() then
       table.insert(KickedAvatarEids, AvatarEidStr)
       DebugPrint("WalnutComponent:KickPlayerNotInGame, 踢掉未连进来的玩家 AvatarEidStr", AvatarEidStr)

@@ -7,6 +7,7 @@ function M:Construct()
   self.HoverSoundFunc = nil
   self.SoundFuncReceiverObj = nil
   self.Group_Team:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.WBP_Com_Tab_ResourceBar:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.WBP_Com_Tab_ResourceBar:BindEvents(self, {
     OnAddedToFocusPath = self.OnResourceBarAddedToFocusPath,
     OnRemovedFromFocusPath = self.OnResourceBarRemovedFromFocusPath
@@ -259,6 +260,10 @@ end
 
 function M:UpdateResource()
   self.WBP_Com_Tab_ResourceBar:UpdateResource()
+end
+
+function M:SetResourceBarVisibility(Visibility)
+  self.WBP_Com_Tab_ResourceBar:SetVisibility(Visibility)
 end
 
 function M:UpdateTopTitle(TitleName)
@@ -742,7 +747,9 @@ function M:Handle_KeyEventOnGamePad_KeyDown(InKeyName)
   elseif InKeyName == UIConst.GamePadKey.RightShoulder then
     self:ClickToRightOnGamePad("Tab")
   elseif InKeyName == UIConst.GamePadKey.RightThumb then
-    self.WBP_Com_Tab_ResourceBar:FocusToResource()
+    if self.WBP_Com_Tab_ResourceBar:IsVisible() then
+      self.WBP_Com_Tab_ResourceBar:FocusToResource()
+    end
   elseif InKeyName == (UIConst.GamePadKey[self.ConfigData.PopupInfoHotKey] or UIConst.GamePadKey.SpecialRight) then
     self:OnInfoClick()
   else

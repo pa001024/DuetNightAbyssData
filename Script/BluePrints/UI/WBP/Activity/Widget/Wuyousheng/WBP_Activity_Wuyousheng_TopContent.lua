@@ -113,7 +113,7 @@ function M:PlayLevelUpAnimation(Level)
   self.bIsPlayingAnimation = true
   self:SetTipVisibility(true)
   self:PlayAnimation(self.Tips_In)
-  self.Text_TipsDetailTitle:SetText(GText("UI_WuyoushengEvent_LvUp") .. "LV." .. Level)
+  self.Text_TipsDetailTitle:SetText(GText("UI_WuyoushengEvent_LvUp") .. "Lv." .. Level)
   local DetailText = DataMgr.Pet[self.PetId].WysSkillDesLv[Level]
   self.Text_TipsDetail:SetText(GText(DetailText))
 end

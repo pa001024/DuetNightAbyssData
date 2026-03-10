@@ -166,6 +166,10 @@ function Component:InitCharacterInfo(Info)
   if not self.InitSuccess and IsEmptyTable(self.WaitInitTags) then
     self:RealInitInfo(Info)
   end
+  local HasMesh = self.Mesh and self.Mesh.SkeletalMesh and self.Mesh.SkeletalMesh.PhysicsAsset
+  if HasMesh then
+    self.Mesh.bComponentUseFixedSkelBounds = false
+  end
 end
 
 function Component:AuthorityPreInitInfo(Info)
@@ -503,7 +507,7 @@ function Component:GetAvatarBuffList()
       if not AvatarInfo then
         return
       end
-      AvatarBuffs = AvatarInfo.PlayerInfo.Buffs
+      AvatarBuffs = AvatarInfo.PlayerInfo.ServerBuffs
     end
   end
   return AvatarBuffs
@@ -609,6 +613,10 @@ end
 
 function Component:OnCharacterReady(Info)
   self:SetActorHideTag("login", false)
+  local HasMesh = self.Mesh and self.Mesh.SkeletalMesh and self.Mesh.SkeletalMesh.PhysicsAsset
+  if HasMesh then
+    self.Mesh.bComponentUseFixedSkelBounds = false
+  end
   if Info.FromOtherWorld then
     if Info.IsDungeonEnd then
       self:ServerSetUpWeapons(Info.MeleeWeapon, Info.RangedWeapon, Info.UltraWeapons)
@@ -622,6 +630,30 @@ function Component:OnCharacterReady(Info)
     self:HandleModelFashion()
     self.Overridden.OnCharacterReady(self)
     self.Overridden.ReceiveBeginPlay(self)
+    if self:IsPlayer() and not self.FromArmory then
+      if self.Mesh then
+        self.Mesh:SetCastInsetShadow(false)
+      end
+      if self.PartsMesh then
+        self.PartsMesh:SetCastInsetShadow(false)
+      end
+      if self.TailMesh then
+        self.TailMesh:SetCastInsetShadow(false)
+      end
+      if self.AccessoryMesh then
+        self.AccessoryMesh:SetCastInsetShadow(false)
+      end
+      for _, CharPartMesh in pairs(self.CharPartMeshComponents) do
+        if CharPartMesh then
+          CharPartMesh:SetCastInsetShadow(false)
+        end
+      end
+      for _, SuitMesh in pairs(self.SuitMeshComponents) do
+        if SuitMesh then
+          SuitMesh:SetCastInsetShadow(false)
+        end
+      end
+    end
     self:ReceiveOnCharacterReady()
     return
   end

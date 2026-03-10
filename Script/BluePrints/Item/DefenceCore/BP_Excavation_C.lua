@@ -186,6 +186,7 @@ function BP_Excavation_C:ShowDeath()
 end
 
 function BP_Excavation_C:OnDead(KillMineRoleEid, KillMineSkillId, DeathReason)
+  print(_G.LogTag, "LXZ OnDead Excavation", self:GetName())
   BP_Excavation_C.Super.OnDead(self, KillMineRoleEid, KillMineSkillId, DeathReason)
   local GameMode = UE4.UGameplayStatics.GetGameMode(self)
   if IsAuthority(self) and not self.bTriggerDeadGameMode then
@@ -201,7 +202,12 @@ function BP_Excavation_C:OnDead(KillMineRoleEid, KillMineSkillId, DeathReason)
     self:OnExcavationDestroyed()
   end
   self:RemoveTimer(self.BatteryHandle)
-  self:EMActorDestroy(EDestroyReason.MechanismDead)
+  
+  local function DelayDestroy()
+    self:EMActorDestroy(EDestroyReason.MechanismDead)
+  end
+  
+  self:AddTimer(0.1, DelayDestroy)
 end
 
 function BP_Excavation_C:OnActorReady(Info)

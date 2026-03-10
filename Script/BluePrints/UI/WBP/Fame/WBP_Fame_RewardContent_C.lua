@@ -108,6 +108,11 @@ function M:RefreshRewardList()
         UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, RewardReturn, false, function()
           self:SetFocus()
         end, self)
+        return
+      end
+      local Error = DataMgr.ErrorCode[Ret]
+      if nil ~= Error then
+        UIManager(self):ShowError(Ret, 1.5)
       else
         UIManager(self):ShowUITip(UIConst.Tip_CommonToast, string.format("ErrorCode :%d", Ret))
       end
@@ -164,6 +169,11 @@ function M:OnGetAllRewardsBtnClicked()
         UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, RewardReturn, false, function()
           self:SetFocus()
         end, self)
+        return
+      end
+      local Error = DataMgr.ErrorCode[Ret]
+      if nil ~= Error then
+        UIManager(self):ShowError(Ret, 1.5)
       else
         UIManager(self):ShowUITip(UIConst.Tip_CommonToast, string.format("ErrorCode :%d", Ret))
       end

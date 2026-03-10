@@ -7868,7 +7868,7 @@ local Data = {
         voice_kr_char_Yuming_vo_companio_01 = {
           ProgrammerSoundPath = "event:/voice/kr/char/Yuming/vo",
           SelectKey = "voice_kr_char_Yuming_vo_companio_01",
-          SoundLength = 10800
+          SoundLength = 11190
         },
         voice_kr_char_Yuming_vo_companio_02 = {
           ProgrammerSoundPath = "event:/voice/kr/char/Yuming/vo",
@@ -7878,7 +7878,7 @@ local Data = {
         voice_kr_char_Yuming_vo_companio_03 = {
           ProgrammerSoundPath = "event:/voice/kr/char/Yuming/vo",
           SelectKey = "voice_kr_char_Yuming_vo_companio_03",
-          SoundLength = 8020
+          SoundLength = 8740
         },
         voice_kr_char_Yuming_vo_emotion_amaze_01 = {
           ProgrammerSoundPath = "event:/voice/kr/char/Yuming/vo",
@@ -8461,7 +8461,7 @@ local Data = {
         voice_kr_char_Zhiliu_vo_birthday = {
           ProgrammerSoundPath = "event:/voice/kr/char/Zhiliu/vo",
           SelectKey = "voice_kr_char_Zhiliu_vo_birthday",
-          SoundLength = 33670
+          SoundLength = 36990
         },
         voice_kr_char_Zhiliu_vo_companio_01 = {
           ProgrammerSoundPath = "event:/voice/kr/char/Zhiliu/vo",
@@ -8721,7 +8721,7 @@ local Data = {
         voice_kr_char_Zhiliu_vo_topic_03_2 = {
           ProgrammerSoundPath = "event:/voice/kr/char/Zhiliu/vo",
           SelectKey = "voice_kr_char_Zhiliu_vo_topic_03_2",
-          SoundLength = 19050
+          SoundLength = 19950
         },
         voice_kr_char_Zhiliu_vo_topic_03_3 = {
           ProgrammerSoundPath = "event:/voice/kr/char/Zhiliu/vo",
@@ -8736,7 +8736,7 @@ local Data = {
         voice_kr_char_Zhiliu_vo_topic_04_1 = {
           ProgrammerSoundPath = "event:/voice/kr/char/Zhiliu/vo",
           SelectKey = "voice_kr_char_Zhiliu_vo_topic_04_1",
-          SoundLength = 7450
+          SoundLength = 7580
         },
         voice_kr_char_Zhiliu_vo_topic_04_2 = {
           ProgrammerSoundPath = "event:/voice/kr/char/Zhiliu/vo",

@@ -911,7 +911,7 @@ return ReadOnly("SubRegion", {
     TODSetting = true
   },
   [999701] = {
-    FlyLicense = 1001,
+    FlyLicense = -1,
     RegionId = 9997,
     SubRegionDes = "区域性能测试场景",
     SubRegionId = 999701,

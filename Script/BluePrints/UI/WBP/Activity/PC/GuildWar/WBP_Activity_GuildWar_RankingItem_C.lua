@@ -199,6 +199,7 @@ function M:InitPlayerSquad()
       end
       CharSlotWidget.Text_Level:SetText(Info.level)
       CharSlotWidget.Switch_Type:SetActiveWidget(CharSlotWidget.Img_Avatar)
+      CharSlotWidget.Panel_Level:SetVisibility(UIConst.VisibilityOp.Visible)
     else
       CharSlotWidget.Switch_Type:SetActiveWidget(CharSlotWidget.Empty)
       CharSlotWidget.Panel_Level:SetVisibility(UIConst.VisibilityOp.Collapsed)

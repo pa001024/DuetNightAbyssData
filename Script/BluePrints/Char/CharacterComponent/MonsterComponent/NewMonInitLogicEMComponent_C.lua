@@ -29,8 +29,40 @@ function M:NewMonInitComponent_SyncServerBornInfo(Owner)
   Owner.ServerBornInfo = Owner.BornInfo:ToEffectStruct()
 end
 
+local SpSKin01 = {
+  [530199] = "AnimBlueprint'/Game/AssetDesign/Char/Player/Saiqi/ABP_Mount_Saiqi01.ABP_Mount_Saiqi01_C'",
+  [510199] = "AnimBlueprint'/Game/AssetDesign/Char/Player/Songlu/ABP_Mount_Songlu01.ABP_Mount_Songlu01_C'",
+  [210199] = "AnimBlueprint'/Game/AssetDesign/Char/Player/Shuimu/ABP_Mount_Shuimu01.ABP_Mount_Shuimu01_C'"
+}
+
 function M:NewMonInitComponent_CallBPReceiveBeginPlay(Owner)
   Owner.Overridden.ReceiveBeginPlay(Owner)
+  if (IsStandAlone(Owner) or IsClient(Owner)) and Owner:IsBossMonster() and Owner.Weapons:Num() > 0 then
+    print(_G.LogTag, "wzj: 强制boss LOD0, " .. Owner:GetName())
+    Owner.Mesh:SetForcedLOD(1)
+  end
+  local MountInfo = DataMgr.BattleMount[Owner.UnitId]
+  if MountInfo then
+    local MountOwner = Owner:GetRootSource()
+    if MountOwner then
+      local ModelComp = MountOwner:GetCharModelComponent()
+      if ModelComp then
+        local ModelId = ModelComp:GetCurrentModelId()
+        local path = SpSKin01[ModelId]
+        if path then
+          MountOwner:ChangeAnimInstance(path)
+          if Owner.EMAnimInstance and Owner.EMAnimInstance.SetRootSourceObj then
+            MountOwner.EMAnimInstance.IsSpSkin = true
+            Owner.EMAnimInstance:SetRootSourceObj(MountOwner)
+            Owner.EMAnimInstance:SetRootSourceAnimInstance(MountOwner.EMAnimInstance)
+            Owner.EMAnimInstance.RootInstance = MountOwner.EMAnimInstance
+            Owner.EMAnimInstance.Character_Base = MountOwner
+            Owner.EMAnimInstance.ABPMountHeitaoGraph = MountOwner.EMAnimInstance
+          end
+        end
+      end
+    end
+  end
   if not IsAuthority(Owner) and Owner.bIsFromCache then
     for Key, Value in pairs(Owner.Weapons) do
       if Value ~= Owner.UsingWeapon and not Value.bChildWeapon then

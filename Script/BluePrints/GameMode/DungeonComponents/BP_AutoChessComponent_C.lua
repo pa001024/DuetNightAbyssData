@@ -95,6 +95,11 @@ function M:OnBattleChessFight(SourceEid, Value, FightType)
     return
   end
   local Source = Battle(self):GetEntity(SourceEid)
+  Source = Source:GetRootSource()
+  if not Source then
+    return
+  end
+  SourceEid = Source.Eid
   local Camp
   if self.Player:IsEnemy(Source) then
     Camp = "Enemy"
@@ -140,6 +145,13 @@ function M:InitAutoChessBaseInfo()
   local SpawnTransform = FTransform(Rotation, Location)
   self.CameraPawn = self:GetWorld():SpawnActor(LoadClass("/Game/BluePrints/Char/BP_PlayerCameraPawn.BP_PlayerCameraPawn_C"), SpawnTransform, UE4.ESpawnActorCollisionHandlingMethod.AlwaysSpawn)
   self.PlayerController = UE4.UGameplayStatics.GetPlayerController(self, 0)
+  local FormationClass = UE4.UClass.Load("/Game/AssetDesign/GameMode/AutoChess/AutoChess_Formation.AutoChess_Formation")
+  local Transform = self.GameMode:GetLevelLoader():GetLevelTransformById("0")
+  local FormationLocation = FVector(-60512.0, 5537.0, -4076.0)
+  local NewLoc = UKismetMathLibrary.TransformLocation(Transform, FormationLocation)
+  local FormationRotation = FRotator(0.0, -23.0, 0.0):ToQuat()
+  local SpawnTransform = UE4.FTransform(FormationRotation, NewLoc)
+  local AutoChessFormation = GWorld.GameInstance:GetWorld():SpawnActor(FormationClass, SpawnTransform, UE4.ESpawnActorCollisionHandlingMethod.AlwaysSpawn, nil, self, nil)
   self:SwitchToCameraPawn()
   self:InitInGameUI()
   self:GetAutoChessFormation()
@@ -323,6 +335,17 @@ function M:DisableCubeInteraction()
   local PlayerController = UE4.UGameplayStatics.GetPlayerController(self, 0)
   PlayerController.bEnableMouseOverEvents = false
   PlayerController.bEnableClickEvents = false
+  EventManager:FireEvent(EventID.OnAutoChessDisableCubeInteraction)
+end
+
+function M:IsMonsterCreating()
+  if not self.AutoChessFormation then
+    self:GetAutoChessFormation()
+  end
+  if self.AutoChessFormation.IsMonsterCreating then
+    return self.AutoChessFormation:IsMonsterCreating()
+  end
+  return false
 end
 
 AssembleComponents(M)

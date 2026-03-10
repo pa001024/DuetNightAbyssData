@@ -321,6 +321,7 @@ return ReadOnly("Swatch", {
       219,
       219
     },
+    Fresnel = 0.27,
     HairResourceID = 30119,
     ResourceID = 30101,
     Sort = 41
@@ -335,6 +336,7 @@ return ReadOnly("Swatch", {
       160,
       160
     },
+    Fresnel = 0.2581,
     HairResourceID = 30119,
     ResourceID = 30101,
     Sort = 42
@@ -349,6 +351,7 @@ return ReadOnly("Swatch", {
       101,
       101
     },
+    Fresnel = 0.06,
     HairResourceID = 30119,
     ResourceID = 30108,
     Sort = 43
@@ -363,6 +366,7 @@ return ReadOnly("Swatch", {
       50,
       50
     },
+    Fresnel = 0.08,
     HairResourceID = 30119,
     ResourceID = 30108,
     Sort = 44

@@ -29,6 +29,7 @@ function M:Init()
     end
     local InviteInfos = (...)
     local InviteData = InviteInfos.data
+    self.InviteCode = InviteData.code
     PrintTable(InviteInfos, 2)
     PrintTable(InviteData, 2)
     self.Text_MyInviteCode:SetText(GText(InviteData.code))
@@ -41,14 +42,17 @@ function M:OnBtnPasteClicked()
   local AccessToken = SdkUserInfo.accessToken
   local SdkUserId = SdkUserInfo.sdkUserId
   local UserName = SdkUserInfo.userName
-  local text = self.Text_MyInviteCode:GetText()
-  ULowEntryExtendedStandardLibrary.ClipboardSet(text)
-  UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("InvitationEvent_Copy_Tosat"))
+  if self.InviteCode ~= nil then
+    ULowEntryExtendedStandardLibrary.ClipboardSet(self.InviteCode)
+    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("InvitationEvent_Copy_Tosat"))
+  else
+    UIManager(GWorld.GameInstance):ShowError(ErrorCode.RET_INVITEINFO_HTTP_RET_FAIL, 1.0, "CommonToastMain")
+  end
 end
 
 function M:UpdateInviteInfos(InviteData)
   for i = 1, 4 do
-    local InviteStatus = InviteData["invite" .. i]
+    local InviteStatus = InviteData["invite" .. i] or 0
     if 0 == InviteStatus then
       self["WS_Invite_" .. i]:SetActiveWidgetIndex(0)
     else

@@ -247,6 +247,13 @@ function WBP_Bag_Main_P_C:FillPlayerDataByTypeInFrame(TabId, NeedDelayJump)
   local PlayerStuffs, AllWeaponCount = nil, 0
   if self.GameInputModeSubsystem and self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad then
     self.NeedSelectGridIndex = 0
+    self.GameInputModeSubsystem:SetNavigateWidgetOpacity(0)
+    self:AddTimer(1, function()
+      if not self then
+        return
+      end
+      self.GameInputModeSubsystem:SetNavigateWidgetOpacity(1)
+    end)
   else
     self.NeedSelectGridIndex = -1
   end
@@ -400,9 +407,9 @@ function WBP_Bag_Main_P_C:OnFrameLoadCompleted(NeedDelayJump, AnimGridCount, bNe
   
   local function SetNavigateWidgetOpacityAndFocus()
     if self.GameInputModeSubsystem and self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad then
+      self:SetFocus_Lua()
       self:AddTimer(0.1, function()
-        if IsNeedSetFocus then
-          self:SetFocus_Lua()
+        if not IsNeedSetFocus or self:HasAnyFocus() then
         end
         self.GameInputModeSubsystem:SetNavigateWidgetOpacity(1)
       end)

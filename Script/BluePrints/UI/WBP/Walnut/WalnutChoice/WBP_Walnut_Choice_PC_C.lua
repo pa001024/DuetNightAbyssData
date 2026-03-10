@@ -207,7 +207,10 @@ function M:OnPurchaseShopItem(Ret, ShopItemId, Count)
 end
 
 function M:OnListItemClicked(Content)
-  if self.CheckIsAutoModeTimer and self.CurrentSelectContent then
+  if 1 == self.WalnutChoiceFinish then
+    return
+  end
+  if self.CheckIsAutoModeTimer and self.CurrentSelectContent and self.CurrentSelectContent.Id ~= Content.Id then
     self:RemoveTimer(self.CheckIsAutoModeTimer)
     self.CheckIsAutoModeTimer = nil
     self.Btn_Yes:SetText(GText("UI_CONFIRM_SELECTION"))

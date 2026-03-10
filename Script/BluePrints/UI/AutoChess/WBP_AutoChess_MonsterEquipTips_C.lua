@@ -45,10 +45,10 @@ function WBP_AutoChess_MonsterEquipTips:ShowEquipInfo(EquipInfo)
     self.Value_02:InitView(GText("UI_AutoChess_MonsterProp2"), EquipAttrInfo.Hp)
   end
   if self.Value_03 then
-    self.Value_03:InitView(GText("UI_AutoChess_MonsterProp3"), EquipAttrInfo.Es)
+    self.Value_03:InitView(GText("UI_AutoChess_MonsterProp3"), EquipAttrInfo.Def)
   end
   if self.Value_04 then
-    self.Value_04:InitView(GText("UI_AutoChess_MonsterProp4"), EquipAttrInfo.Def)
+    self.Value_04:InitView(GText("UI_AutoChess_MonsterProp4"), EquipAttrInfo.Es)
   end
   if self.OutLine_Quality then
     local Rarity = EquipAttrInfo.Rarity

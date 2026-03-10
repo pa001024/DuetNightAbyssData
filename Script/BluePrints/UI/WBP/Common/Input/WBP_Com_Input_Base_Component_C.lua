@@ -56,6 +56,7 @@ function M:Init(Config, DialogParams)
   self.TextLimit = Config.TextLimit or 9999
   self.bLimitSpaces = Config.bLimitSpaces
   self.bNeedPasteBtn = Config.bNeedPasteBtn
+  self.HideGamePadDeleteBtn = Config.HideGamePadDeleteBtn
   self.DialogParams = DialogParams
   self.OnGetBackFocusWidget = Config.OnGetBackFocusWidget
   self.BackFocusWidget = Config.BackFocusWidget or self.DialogParams and self.DialogParams.OwnerDialog or self.Owner

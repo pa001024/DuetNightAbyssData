@@ -12,6 +12,11 @@ function Guide_Bubble:Construct()
   self.VisibilityType = self:GetVisibility()
 end
 
+function Guide_Bubble:Destruct()
+  Guide_Bubble.Super.Destruct(self)
+  self.Btn_Skip.OnClicked:Remove(self, self.OpenWindow)
+end
+
 function Guide_Bubble:InitUIInfo(Name, IsInUIMode, EventList, MessageContent, MessageLoc, GamePadKey, bSkip, Owner)
   self.Super.InitUIInfo(self, Name, IsInUIMode, EventList, MessageContent, MessageLoc, GamePadKey, bSkip, Owner)
   self:InitMessage(MessageContent, MessageLoc, GamePadKey, bSkip, Owner)
@@ -52,6 +57,9 @@ function Guide_Bubble:InitMessage(MessageContent, MessageLoc, GamePadKey, bSkip,
 end
 
 function Guide_Bubble:OpenWindow()
+  if self.Owner.bOpenWindow then
+    return
+  end
   AudioManager(self):PlayUISound(self, "event:/ui/common/special_content_01_click", nil, nil)
   if self.Controller_Skip then
     self.Controller_Skip:PlayAnimation(self.Controller_Skip.Normal)

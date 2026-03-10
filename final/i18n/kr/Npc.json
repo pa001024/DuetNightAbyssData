@@ -5144,6 +5144,13 @@
     "type": "Normal"
   },
   {
+    "id": 99998,
+    "name": "운영팀",
+    "camp": "NPC",
+    "type": "Normal",
+    "icon": "Gift"
+  },
+  {
     "id": 99999,
     "name": "운영팀",
     "camp": "NPC",
@@ -28513,7 +28520,7 @@
   },
   {
     "id": 830001,
-    "name": "UI_Npc_Name_WuyouSheng_Explore",
+    "name": "방황하는 무유생",
     "camp": "NPC",
     "type": "Normal"
   },

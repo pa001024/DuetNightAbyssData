@@ -295,6 +295,13 @@ function TemplateDumpUtils:CreateTemplate_SetCharSkin(Target, TargetCostumeInfo)
   if SkinInfo then
     AppearanceSuit.SkinId = TargetCostumeInfo.SkinId
   end
+  local HairType = CommonConst.DataType.Hair
+  if SkinInfo.DefaultItem and SkinInfo.DefaultItem[HairType] then
+    for HairId, Count in pairs(SkinInfo.DefaultItem[HairType]) do
+      AppearanceSuit.HairId = HairId
+      break
+    end
+  end
   return AppearanceSuit
 end
 

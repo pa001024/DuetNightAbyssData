@@ -210,10 +210,15 @@ function M:GetContextRemainAndTotal(ShopItemId)
   end
 end
 
-function M:GetUnifiedLimitText(ShopItemId)
+function M:GetUnifiedLimitText(ShopItemId, InCludeText)
   local Remain, Total = self:GetContextRemainAndTotal(ShopItemId)
   if -1 == Remain or -1 == Total or Remain < 0 or Total < 0 then
     return ""
+  end
+  if InCludeText then
+    local InGift = GiftController and GiftController:IsInGiftShop()
+    local Key = InGift and "UI_SendGift_GiftItemMax" or "UI_SHOP_SHOPITEMLIMIT"
+    return GText(Key) .. Remain .. "/" .. Total
   end
   return Remain .. "/" .. Total
 end
@@ -1031,18 +1036,19 @@ function M:GetDailyPackShopItemInfo(BannerId)
     if DailyPackData.BannerId == BannerId then
       local ShopItemId = DataMgr.PayGoods[DailyPackData.GoodsId].ItemId
       if not ShopItemId then
-        Utils.ScreenPrint("请检查一下分日礼包对应的PayGoods:[" .. tostring(DailyPackData.GoodsId) .. "] 是否填写了商店商品ID")
+        DebugPrint("请检查一下分日礼包对应的PayGoods:[" .. tostring(DailyPackData.GoodsId) .. "] 是否填写了商店商品ID")
       else
         local ShopData = DataMgr.ShopItem[ShopItemId]
         if not ShopData then
-          Utils.ScreenPrint("请检查一下分日礼包对应的商店商品ID:[" .. tostring(ShopItemId) .. "] 是否存在")
+          DebugPrint("请检查一下分日礼包对应的商店商品ID:[" .. tostring(ShopItemId) .. "] 是否存在")
         else
           local ShouldShow = false
           if Avatar:CheckIsEffective(ShopItemId) then
-            Utils.ScreenPrint("分日礼包对应的商店商品ID:[" .. tostring(ShopItemId) .. "] 未在上架时间内")
             ShouldShow = true
           elseif self:ShouldShowCompletionTime(ShopData.TypeId) then
             ShouldShow = true
+          else
+            DebugPrint("请检查一下分日礼包对应的商店商品ID:[" .. tostring(ShopItemId) .. "] 是否在上架时间内")
           end
           if ShouldShow then
             local PlayerDailyPack = Avatar.DailyPacks[ShopData.TypeId]
@@ -1230,11 +1236,11 @@ function M:ShowSendGiftButton(ShopItemData)
   return false
 end
 
-function M:OpenChooseGiftTarget(ShopItemId)
+function M:OpenChooseGiftTarget(ShopItemId, ParentWidget)
   if not ShopItemId then
     return
   end
-  GiftController:OpenSelectFriendPopup(ShopItemId)
+  GiftController:OpenSelectFriendPopup(ShopItemId, ParentWidget)
 end
 
 function M:OpenForbidGiftChooseTip()

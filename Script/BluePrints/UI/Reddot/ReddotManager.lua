@@ -330,6 +330,29 @@ function ReddotManager.ClearLeafNodeCount(NodeName, bClearCacheDetail, CacheDeta
   end
 end
 
+function ReddotManager.ClearNodeCount(NodeName, bClearCacheDetail, CacheDetailChangedParamsDict)
+  local Node = ReddotManager.GetTreeNode(NodeName)
+  if not Node then
+    DebugPrint(ErrorTag, "ReddotManager.ClearNodeCount 节点不存在", NodeName)
+    return
+  end
+  if Node:IsLeaf() then
+    local CacheDetailChangedParams
+    if not table.isempty(CacheDetailChangedParamsDict) and CacheDetailChangedParamsDict[NodeName] then
+      CacheDetailChangedParams = CacheDetailChangedParamsDict[NodeName]
+    end
+    ReddotManager.ClearLeafNodeCount(NodeName, bClearCacheDetail, CacheDetailChangedParams)
+    return
+  end
+  for _, ChildNode in pairs(Node.LeafChildrens) do
+    local CacheDetailChangedParams
+    if not table.isempty(CacheDetailChangedParamsDict) and CacheDetailChangedParamsDict[NodeName] then
+      CacheDetailChangedParams = CacheDetailChangedParamsDict[NodeName]
+    end
+    ReddotManager.ClearLeafNodeCount(ChildNode.Name, bClearCacheDetail, CacheDetailChangedParams)
+  end
+end
+
 function ReddotManager.IncreaseLeafNodeCount(NodeName, AddValue, CacheDetailChangedParams)
   local LeafNode = ReddotManager.LeafNodes[NodeName]
   if not LeafNode then

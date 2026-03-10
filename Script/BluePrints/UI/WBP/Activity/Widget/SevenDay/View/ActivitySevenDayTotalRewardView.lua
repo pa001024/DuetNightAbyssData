@@ -10,7 +10,8 @@ function M:InitRewardInfo(PageConfigData, ParentWidget)
       SpRewardWidget:InitSpecialReward(i, {
         ActivityId = PageConfigData.EventId,
         RewardId = PageConfigData.EventReward[i],
-        CharId = PageConfigData.CharInfo
+        CharId = PageConfigData.CharInfo,
+        bComeBackEvent = PageConfigData.bComeBackEvent
       }, ParentWidget)
     else
       local NorRewardWidget = self["LowItem_" .. i]

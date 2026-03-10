@@ -8,6 +8,7 @@ function M:Init(Param)
   self.Text_Crack:SetText(GText("UI_MiniGame_Decode"))
   self.NeedCrack = Param.NeedCrack
   self.NeedReset = Param.NeedReset
+  self.bClicked = false
   self.GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(self)
   self.GameInputModeSubsystem.OnInputMethodChanged:Add(self, self.RefreshInfoByInputTypeChange)
   self.CurMode = self.GameInputModeSubsystem:GetCurrentInputType()

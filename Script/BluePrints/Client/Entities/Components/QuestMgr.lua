@@ -21,6 +21,9 @@ function Component:EnterWorld()
   DebugPrint("QuestMgr EnterWorld")
   self.DoingQuestChainIds = {}
   self.DoingQuestIds = {}
+end
+
+function Component:OnLoginSuccess()
   self:RefreshTaskRedDot()
 end
 

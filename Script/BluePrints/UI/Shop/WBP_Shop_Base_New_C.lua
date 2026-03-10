@@ -393,7 +393,10 @@ function M:UpdateShopDetail(SubTabData)
       self.VB_ItemList:SetVisibility(ESlateVisibility.Visible)
       self.Group_Empty:SetVisibility(ESlateVisibility.Collapsed)
       self.List_Item:RequestFillEmptyContent()
-      self.List_Item:RequestPlayEntriesAnim()
+      if not self.NotNeedPlayEntryAnimation then
+        self.List_Item:RequestPlayEntriesAnim()
+      end
+      self.NotNeedPlayEntryAnimation = nil
       if not CommonUtils:IfExistSystemGuideUI(self) or self:HasAnyFocus() or self:HasFocusedDescendants() then
         self.List_Item:SetFocus()
       end
@@ -566,7 +569,7 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
   else
     if self.IsBannerPage and self.BannerIdMap and self.SelectBannerId then
       local Banner = self.BannerIdMap[self.SelectBannerId]
-      if Banner.OnKeyDown then
+      if Banner and Banner.OnKeyDown then
         return Banner:OnKeyDown(MyGeometry, InKeyEvent)
       end
     end

@@ -56,7 +56,7 @@ return ReadOnly("DailyPack", {
   [9003] = {
     BannerCharId = 4102,
     BannerId = 218,
-    BuyReward = 12145,
+    BuyReward = 12138,
     DailyPackId = 9003,
     GoodsId = "com.hero.dna.Pay_DailyCharaShards_zhiliu",
     LoginRequire = T.RT_1,
@@ -64,11 +64,11 @@ return ReadOnly("DailyPack", {
     MainRewardId = 1001101,
     Name = "DailyPack_Name_1",
     Reward = {
-      [1] = 12145,
-      [2] = 12145,
-      [3] = 12145,
-      [4] = 12145,
-      [5] = 12145
+      [1] = 12139,
+      [2] = 12139,
+      [3] = 12139,
+      [4] = 12139,
+      [5] = 12139
     },
     RewardMailId = 10037,
     RewardPeriod = 5
@@ -76,7 +76,7 @@ return ReadOnly("DailyPack", {
   [9004] = {
     BannerCharId = 4201,
     BannerId = 255,
-    BuyReward = 12146,
+    BuyReward = 12140,
     DailyPackId = 9004,
     GoodsId = "com.hero.dna.Pay_DailyCharaShards_yuming",
     LoginRequire = T.RT_1,
@@ -84,11 +84,11 @@ return ReadOnly("DailyPack", {
     MainRewardId = 1001101,
     Name = "DailyPack_Name_1",
     Reward = {
-      [1] = 12146,
-      [2] = 12146,
-      [3] = 12146,
-      [4] = 12146,
-      [5] = 12146
+      [1] = 12141,
+      [2] = 12141,
+      [3] = 12141,
+      [4] = 12141,
+      [5] = 12141
     },
     RewardMailId = 10037,
     RewardPeriod = 5

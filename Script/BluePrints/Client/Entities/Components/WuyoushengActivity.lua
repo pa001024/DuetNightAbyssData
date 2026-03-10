@@ -95,6 +95,10 @@ function Component:_TryAddWuyoushengNewLevelReddot(EventId)
   if PageConfigData and ActivityUtils.CheckIsActivityLock(PageConfigData) then
     return
   end
+  if not ActivityUtils.CheckEventIsOpen(EventId, nil, false, nil) then
+    ReddotManager.ClearLeafNodeCount(WuyoushengLevelReddotName, true)
+    return
+  end
   local CurrentTime = TimeUtils.NowTime()
   local IncreaseNum = 0
   local Avatar = GWorld:GetAvatar()
@@ -147,6 +151,9 @@ function Component:RefreshWuyoushengRewardReddot()
   ReddotManager.ClearLeafNodeCount("WuyoushengReward")
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
+    return
+  end
+  if not ActivityUtils.CheckEventIsOpen(WuyoushengId[1], nil, false, nil) then
     return
   end
   for _, EventId in ipairs(WuyoushengId) do

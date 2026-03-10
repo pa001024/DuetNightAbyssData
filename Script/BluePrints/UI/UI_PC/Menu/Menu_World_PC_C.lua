@@ -537,6 +537,16 @@ function Menu_World_PC_C:InitSystemItem()
         Type = "Small"
         WidgetName = "MenuEntranceBtnS"
       end
+      local ChannelId = HeroUSDKSubsystem(self):GetChannelId()
+      local IgnoreCNChannelIds = {
+        [46] = true,
+        [303] = true,
+        [269] = true,
+        [286] = true,
+        [297] = true,
+        [301] = true,
+        [300] = true
+      }
       local Item
       if id == self.ShopEntranceId or id == self.ActivityEntranceId then
         Type = "Large"
@@ -545,24 +555,10 @@ function Menu_World_PC_C:InitSystemItem()
         else
           Item = self.Entrance_Activity
         end
-      elseif id == self.RelatedProductEntranceId then
-        if UE.AHotUpdateGameMode.IsGlobalPak() then
-          goto lbl_270
-        end
-      elseif id == self.CloudGameEntranceId then
-        local ChannelId = HeroUSDKSubsystem(self):GetChannelId()
-        local IgnoreCNChannelIds = {
-          [46] = true,
-          [303] = true,
-          [269] = true,
-          [286] = true,
-          [297] = true,
-          [301] = true,
-          [300] = true
-        }
-        if UE.AHotUpdateGameMode.IsGlobalPak() or IgnoreCNChannelIds[ChannelId] then
-          goto lbl_270
-        end
+      elseif id == self.RelatedProductEntranceId and UE.AHotUpdateGameMode.IsGlobalPak() then
+        goto lbl_270
+      elseif id == self.CloudGameEntranceId and (UE.AHotUpdateGameMode.IsGlobalPak() or IgnoreCNChannelIds[ChannelId]) then
+        goto lbl_270
       else
         local TaskName = "MenuEntranceBtn_" .. id
         Item = UIManager(GWorld.GameInstance):_CreateWidgetNew(WidgetName)

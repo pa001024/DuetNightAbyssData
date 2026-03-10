@@ -94,7 +94,9 @@ function View:UpdateEquipInfo(EquipItems)
           Callback = function()
             AudioManager(self):PlayUISound(self, "event:/ui/common/combat_bag_cell_place_common", nil, nil)
             UIManager(self):LoadUINew("AutoChessChooseEquip", self.ChessData, ParentWidget)
-            CommonUtils:CloseGuideTouchIfExist(self)
+            if CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" then
+              CommonUtils:CloseGuideTouchIfExist(self)
+            end
           end
         }
         Widget:Init(Content)
@@ -115,7 +117,9 @@ function View:UpdateEquipInfo(EquipItems)
           Callback = function()
             AudioManager(self):PlayUISound(self, "event:/ui/common/click_mid", nil, nil)
             UIManager(self):LoadUINew("AutoChessChooseEquip", self.ChessData, self)
-            CommonUtils:CloseGuideTouchIfExist(self)
+            if CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" then
+              CommonUtils:CloseGuideTouchIfExist(self)
+            end
           end
         }
       }

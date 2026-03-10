@@ -4,9 +4,17 @@ local M = Class({
   "BluePrints.UI.WBP.Team.View.WBP_Team_PlayerList_Base"
 })
 
+function M:Construct()
+  M.Super.Construct(self)
+  self.CanvasPanel_2:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+end
+
 function M:InitUIInfo(Name, bInUIMode, EventList, ...)
   M.Super.InitUIInfo(self, Name, bInUIMode, EventList, ...)
   self.Block:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  if not GWorld:IsStandAlone() then
+    self.CanvasPanel_2:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
 end
 
 function M:AddTeammateUI(Member, ItemUI, Index, bAnim)

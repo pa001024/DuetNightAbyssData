@@ -63,6 +63,40 @@ function M:DelTeamMember(Param)
   end
 end
 
+function M:TryAddCachedRecoveryTeamInfo(TeamInfo)
+  if self.CachedRecoveryTeamInfo and self.CachedRecoveryTeamInfo.Members then
+    table.insert(self.CachedRecoveryTeamInfo.Members, TeamInfo)
+  end
+end
+
+function M:TryDelCachedRecoveryTeamInfo(Uid)
+  if self.CachedRecoveryTeamInfo then
+    if self.CachedRecoveryTeamInfo.Members then
+      local RemovedIdx
+      for Idx, Member in ipairs(self.CachedRecoveryTeamInfo.Members or {}) do
+        if Member.Uid == Uid then
+          RemovedIdx = Idx
+          break
+        end
+      end
+      if RemovedIdx then
+        table.remove(self.CachedRecoveryTeamInfo.Members, RemovedIdx)
+      end
+      if 1 == #self.CachedRecoveryTeamInfo.Members then
+        self.CachedRecoveryTeamInfo = nil
+      end
+    else
+      self.CachedRecoveryTeamInfo = nil
+    end
+  end
+end
+
+function M:TryChangeLeaderInRecoveryTeamInfo(LeaderUid)
+  if self.CachedRecoveryTeamInfo and self.CachedRecoveryTeamInfo then
+    self.CachedRecoveryTeamInfo.LeaderId = LeaderUid
+  end
+end
+
 function M:_RealDelTeamMember(Team, Param)
   if type(Param) == "number" then
     local Uid = Param

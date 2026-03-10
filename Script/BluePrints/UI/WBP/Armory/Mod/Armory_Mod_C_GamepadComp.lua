@@ -14,10 +14,25 @@ function Component:InitGamePad()
   end
   self.Mod_Plan.Key_GamePad:CreateCommonKey({
     KeyInfoList = {
-      {Type = "Img", ImgShortPath = "Menu"}
-    }
+      {
+        Type = "Img",
+        ImgShortPath = "Menu",
+        ClickCallback = function()
+          UIManager():MarkKeyLongPressSuccess(UIConst.GamePadKey.SpecialRight)
+          ModController:SetSelectedStuff(nil, nil)
+          self.Mod_Plan.Btn_Plan:SetFocus()
+          self.IsFocusInSpecialItem = true
+        end
+      }
+    },
+    bLongPress = true
   })
   self.Btn_EditPolarity:SetDefaultGamePadImg("RS")
+  self.Key_Search:CreateCommonKey({
+    KeyInfoList = {
+      {Type = "Img", ImgShortPath = "LS"}
+    }
+  })
   self.Btn_Auto:SetDefaultGamePadImg("Y")
   self.Btn_Discharge:SetDefaultGamePadImg("X")
   self.Btn_Discharge:TryOverrideLongPressClickFunc(function()
@@ -178,9 +193,7 @@ function Component:Handle_OnGamePadDown(InKeyName)
       end
       return true
     elseif "Gamepad_Special_Right" == InKeyName then
-      ModController:SetSelectedStuff(nil, nil)
-      self.Mod_Plan.Btn_Plan:SetFocus()
-      self.IsFocusInSpecialItem = true
+      self.Mod_Plan.Key_GamePad:OnShortCutPressed()
       return true
     elseif "Gamepad_LeftTrigger" == InKeyName then
       self:ChangePolarityListIndex(-1)
@@ -196,6 +209,10 @@ function Component:Handle_OnGamePadDown(InKeyName)
       return true
     elseif "Gamepad_RightThumbstick" == InKeyName then
       self.Btn_EditPolarity:OnBtnClicked()
+      return true
+    elseif "Gamepad_LeftThumbstick" == InKeyName then
+      self.Com_Search:SetFocus()
+      self.IsFocusInSpecialItem = true
       return true
     elseif "Gamepad_Special_Left" == InKeyName then
       self.Btn_Info:SetFocus()
@@ -219,6 +236,16 @@ function Component:Handle_OnGamePadUp(InKeyName)
     self.Btn_Discharge:OnBtnReleased()
     if not self.Btn_Discharge.IsForbidden then
       self.Btn_Discharge:OnBtnClicked()
+    end
+    return true
+  elseif "Gamepad_Special_Right" == InKeyName then
+    self.Mod_Plan.Key_GamePad:OnShortCutReleased()
+    if not UIManager():CheckAndCleanKeyLongPressSuccess(InKeyName) then
+      local DetailContent = self.ItemDetailsWidget.Content
+      if self.ItemDetailsWidget:IsVisible() and DetailContent then
+        self.ItemDetailsWidget.Btn_Locked:OnBtnPressed()
+        self.ItemDetailsWidget.Btn_Locked:OnBtnReleased()
+      end
     end
     return true
   end
@@ -289,6 +316,7 @@ function Component:SwitchMainUIToPCOrMoble()
   self.Key_FocusList_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.List_Role:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self.CheckBox_Mod:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  self.Key_Search:SetVisibility(UIConst.VisibilityOp.Collapsed)
   ModModel:SetGamePadSelectedStuff(nil, nil)
   self.IsFocusOnResourceBar = false
 end
@@ -341,7 +369,7 @@ function Component:SwitchMainUIToGamePad()
   if self.PolarityEditWidget then
     self.PolarityEditWidget.Com_Cost.Key:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
-  self.Mod_Plan.Key_GamePad:SetVisibility(UIConst.VisibilityOp.Visible)
+  self.Mod_Plan.Key_GamePad:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
   self.Common_PolarityList_PC.Key_LT:SetVisibility(UIConst.VisibilityOp.Visible)
   self.Common_PolarityList_PC.Key_RT:SetVisibility(UIConst.VisibilityOp.Visible)
   self.Key_FocusList_GamePad:SetVisibility(UIConst.VisibilityOp.Visible)
@@ -351,6 +379,7 @@ function Component:SwitchMainUIToGamePad()
   self.List_Role.BP_OnItemSelectionChanged:Clear()
   self.List_Role.BP_OnItemSelectionChanged:Add(self, self.OnRoleListItemSelectionChanged)
   self.List_Select_Mod.BP_OnItemSelectionChanged:Add(self, self.OnModListItemChange)
+  self.Key_Search:SetVisibility(UIConst.VisibilityOp.Visible)
   self:SetGamepadNavigationRule()
   self:SetDefaultGamepadFocus()
   self.Btn_Share:BindEventOnAddedToFocusPath(self, self.OnBtnCopyLinkAddedToFocusPath)

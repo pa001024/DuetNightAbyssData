@@ -31,7 +31,11 @@ function M:UpdateUI()
 end
 
 function M:UpdateReplayTips()
-  if self.ShopItemData.ItemType == "Resource" then
+  if self.ShopItemData.ItemType == "Mount" then
+    self.WBP_MountsMainBtn:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.Btn_Dye:SetVisibility(ESlateVisibility.Collapsed)
+    self.Btn_HideUI:SetVisibility(ESlateVisibility.Collapsed)
+  elseif self.ShopItemData.ItemType == "Resource" then
     self:SetDyeIcon(false)
     if self.ShopItemData.ResourceSType == "GestureItem" then
       self.Text_Color:SetText(GText("UI_Replay"))
@@ -40,9 +44,6 @@ function M:UpdateReplayTips()
       self.Btn_Dye:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
       self.Btn_HideUI:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     elseif self.ShopItemData.ResourceSType == "MountItem" then
-      self.WBP_MountsMainBtn:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-      self.Btn_Dye:SetVisibility(ESlateVisibility.Collapsed)
-      self.Btn_HideUI:SetVisibility(ESlateVisibility.Collapsed)
     end
   elseif self.ShopItemData.ItemType == "WeaponAccessory" or self.ShopItemData.ItemType == "CharAccessory" then
     self.WBP_MountsMainBtn:SetVisibility(ESlateVisibility.Collapsed)

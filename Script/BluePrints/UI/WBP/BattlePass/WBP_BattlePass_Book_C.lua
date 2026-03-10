@@ -1734,7 +1734,9 @@ function WBP_BattlePass_Book_C:StartBuyLevel(Res)
               self:StartBuyLevel(Res)
             end,
             Obj = self
-          }
+          },
+          LeftGamepadKey = Const.GamepadFaceButtonUp,
+          ShowBKeyClose = true
         }, self)
       else
         local ItemList = {}

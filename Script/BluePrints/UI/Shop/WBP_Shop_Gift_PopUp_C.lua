@@ -18,8 +18,8 @@ function M:Construct()
   self.Text_Qa:SetText(GText("UI_GACHA_DESDETAIL"))
   self.Btn_GiftPay.Text_BtnBuy:SetText(GText("UI_SHOP_PURCHASE"))
   if GiftController and GiftController:IsInGiftShop() then
-    self.Btn_GiftPay.Text_BtnEmpty:SetText(GText("UI_SendGift_SendGiftLimit"))
-    self.Text_SoldOut:SetText(GText("UI_SendGift_SendGiftLimit"))
+    self.Btn_GiftPay.Text_BtnEmpty:SetText(GText("UI_SendGift_GiftItemMax"))
+    self.Text_SoldOut:SetText(GText("UI_SendGift_GiftItemMax"))
   else
     self.Btn_GiftPay.Text_BtnEmpty:SetText(GText("UI_SHOP_SOLDOUT"))
     self.Text_SoldOut:SetText(GText("UI_SHOP_SOLDOUT"))
@@ -468,6 +468,8 @@ function M:Purchase(ShopItemData, ParentWidget)
         ShopUtils:SetCloseGetItemPageCallback({CloseGetItemPageCallback = nil})
       end
       
+      Params.LeftGamepadKey = Const.GamepadFaceButtonUp
+      Params.ShowBKeyClose = true
       self.PopupUI = UIManager(self):ShowCommonPopupUI(PopupId, Params, self)
       self:CloseSelf(true)
     end
@@ -497,7 +499,7 @@ function M:OnBtnChooseGiftClicked()
     if self.Btn_Choose:IsBtnForbidden() then
       ShopUtils:OpenForbidGiftChooseTip()
     else
-      ShopUtils:OpenChooseGiftTarget(self.ShopItemData.ItemId)
+      ShopUtils:OpenChooseGiftTarget(self.ShopItemData.ItemId, self.ParentWidget)
       self:CloseSelf(true)
     end
   else

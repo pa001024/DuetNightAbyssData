@@ -1,4 +1,5 @@
 local Component = {}
+local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
 local EventId = 108001
 
 function Component:EnterWorld()
@@ -10,6 +11,9 @@ function Component:LeaveWorld()
 end
 
 function Component:OnLoginSuccess()
+  if not ActivityUtils.CheckEventIsOpen(EventId) then
+    return
+  end
   self:RefreshTempleSoloNewLevelReddot()
   self:RefreshTempleSoloEventRewardReddot()
 end
@@ -41,7 +45,6 @@ function Component:TempleGetAllModeReward(EventId, IsHardMode, CallBack)
 end
 
 function Component:RefreshTempleSoloNewLevelReddot()
-  DebugPrint("ayff test RefreshTempleSoloNewLevelReddot")
   if not ReddotManager.GetTreeNode("TempleSoloNewLevel") then
     ReddotManager.AddNodeEx("TempleSoloNewLevel")
   end
@@ -105,7 +108,6 @@ function Component:_TryAddTempleSoloNewLevelReddot(EventId)
 end
 
 function Component:RefreshTempleSoloEventRewardReddot()
-  DebugPrint("ayff test RefreshTempleSoloEventRewardReddot")
   if not ReddotManager.GetTreeNode("TempleSoloEventReward") then
     ReddotManager.AddNodeEx("TempleSoloEventReward")
   end

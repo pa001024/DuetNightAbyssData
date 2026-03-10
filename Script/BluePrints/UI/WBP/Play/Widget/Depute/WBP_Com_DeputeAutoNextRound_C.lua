@@ -72,10 +72,6 @@ function M:RefreshCommonWidget()
     self:StopAllAnimations()
     self:PlayAnimation(self.Fold_Normal)
   end
-  self.Mobile = "Mobile" == CommonUtils.GetDeviceTypeByPlatformName(self)
-  if self.Mobile then
-    return
-  end
   self.Slider:UpdateUIStyleInPlatform(false, self.CurGamepadName)
 end
 

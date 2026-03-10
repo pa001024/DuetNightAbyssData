@@ -53,6 +53,7 @@ function M:Init(Parent, Params)
     self.FilterContentObj_All.Index = 0
     self.FilterContentObj_All.Icon = "/Game/UI/Texture/Static/Atlas/Armory/T_Armory_Select.T_Armory_Select"
     self.FilterContentObj_All.IsSelected = true
+    self.FilterContentObj_All.Owner = self
     self.LastSelectedFilterContent = self.FilterContentObj_All
     self.EMListView_Filter:AddItem(self.FilterContentObj_All)
     self.Panel_FilterTab:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
@@ -68,6 +69,7 @@ function M:Init(Parent, Params)
       Obj[key] = value
     end
     Obj.Index = Index
+    Obj.Owner = self
     self.EMListView_Filter:AddItem(Obj)
   end
   self.Common_Sort_List:Init(self.Parent, self.OrderByDisplayNames, self.SortType or CommonConst.DESC, {

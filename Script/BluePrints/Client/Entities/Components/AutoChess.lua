@@ -1,7 +1,7 @@
 local AutoChessModel = require("BluePrints.UI.AutoChess.AutoChessDataModel")
 local Component = {}
 
-function Component:EnterWorld()
+function Component:OnLoginSuccess()
   AutoChessModel:InitModel()
 end
 

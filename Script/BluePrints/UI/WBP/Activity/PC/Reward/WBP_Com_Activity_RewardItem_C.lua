@@ -60,6 +60,7 @@ function M:OnListItemObjectSet(Content)
     self.Btn_Reward.AudioEventPath = Content.ConfigData.ReceiveBtnSoundPath
   end
   self.Btn_Goto:SetText(GText(Content.ConfigData.GotoButtonText) or GText("UI_BattlePass_QuestJump"))
+  self.Btn_Goto:SetGamepadIconVisibility(false)
   if Content.ConfigData.ReceiveCallBack then
     self.Btn_Reward:BindEventOnClicked(self, function()
       Content.ConfigData.ReceiveCallBack(self, Content)
@@ -84,7 +85,10 @@ function M:OnListItemObjectSet(Content)
   end
   self.IsListened = true
   self:InitRewards(Content.ConfigData)
-  self.Key_Item:CreateGamepadKey(UIConst.GamePadImgKey.LeftThumb)
+  if self.Key_Item then
+    self.Key_Item:CreateGamepadKey(UIConst.GamePadImgKey.LeftThumb)
+  end
+  self.Btn_Reward:SetDefaultGamePadImg("A")
 end
 
 function M:SetIcon(IconPath)
@@ -133,7 +137,9 @@ function M:OnFocusReceived(MyGeometry, InFocusEvent)
     end
     if not self.Owner.IsInViewMode then
       self.Owner:ShowGamepadViewBtn(true)
-      self.Key_Item:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      if self.Key_Item then
+        self.Key_Item:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      end
       self.Btn_Reward:SetGamePadIconVisible(true)
       self.Btn_Goto:SetGamepadIconVisibility(true)
     end
@@ -166,36 +172,20 @@ function M:InitRewards(Config)
     ItemContent.IsEmpty = true
     return ItemContent
   end)
+  self.UsedList.BP_OnEntryGenerated:Add(self, function(self, Widget)
+    if IsValid(Widget) then
+      Widget:SetNavigationRuleCustom(UE4.EUINavigation.Up, {
+        self,
+        self.OnNavigateUp
+      })
+      Widget:SetNavigationRuleCustom(UE4.EUINavigation.Down, {
+        self,
+        self.OnNavigateDown
+      })
+    end
+  end)
   self.UsedList:RequestFillEmptyContent()
   self:AddTimer(0.01, function()
-    local AllItemCount = self.List_Item_L:GetNumItems()
-    for i = 0, AllItemCount - 1 do
-      local Item = self.List_Item_L:GetItemAt(i)
-      if Item.SelfWidget then
-        Item.SelfWidget:SetNavigationRuleCustom(UE4.EUINavigation.Up, {
-          self,
-          self.OnNavigateUp
-        })
-        Item.SelfWidget:SetNavigationRuleCustom(UE4.EUINavigation.Down, {
-          self,
-          self.OnNavigateDown
-        })
-      end
-    end
-    AllItemCount = self.List_Item_R:GetNumItems()
-    for i = 0, AllItemCount - 1 do
-      local Item = self.List_Item_R:GetItemAt(i)
-      if Item.SelfWidget then
-        Item.SelfWidget:SetNavigationRuleCustom(UE4.EUINavigation.Up, {
-          self,
-          self.OnNavigateUp
-        })
-        Item.SelfWidget:SetNavigationRuleCustom(UE4.EUINavigation.Down, {
-          self,
-          self.OnNavigateDown
-        })
-      end
-    end
     self.UsedList:SetScrollOffset(0)
   end, false, 0, nil, true)
 end
@@ -207,7 +197,7 @@ function M:RefreshBtn(IsGot)
       self.Text_Progress:SetVisibility(UIConst.VisibilityOp.Collapsed)
     end
     self:PlayAnimation(self.Forbidden)
-  elseif self.CanReceive then
+  elseif self.Content.ConfigData.CanReceive then
     self.WS_State:SetActiveWidgetIndex(0)
   elseif self.HasGoto then
     self.WS_State:SetActiveWidgetIndex(3)
@@ -258,7 +248,7 @@ end
 
 function M:InitGamepadView()
   self.UsedList:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-  if self:HasAnyUserFocus() and not self.Owner.IsInViewMode then
+  if self:HasAnyUserFocus() and not self.Owner.IsInViewMode and self.Key_Item then
     self.Key_Item:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   end
   if self:IsAnimationPlaying() then
@@ -275,7 +265,9 @@ function M:InitKeyBoardView()
   if self.UsedList then
     self.UsedList:SetVisibility(UIConst.VisibilityOp.Visible)
   end
-  self.Key_Item:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  if self.Key_Item then
+    self.Key_Item:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
   if not self:IsAnimationPlaying(self.In) then
     self:StopAllAnimations()
   end
@@ -459,11 +451,15 @@ function M:SwitchSelectedMode()
     self.Owner.IsInViewMode = false
     self:SetFocus()
     self.Owner:ShowGamepadViewBtn(true)
-    self.Key_Item:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    if self.Key_Item then
+      self.Key_Item:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    end
   else
     self.Owner.RewardContent_OneClick.Btn_OneClick:SetGamePadIconVisible(false)
     self.UsedList:SetVisibility(UIConst.VisibilityOp.Visible)
-    self.Key_Item:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    if self.Key_Item then
+      self.Key_Item:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
     self.Owner.IsInViewMode = true
     self.SelectedIndex = 0
     self:FocusToRewardItem()
@@ -499,7 +495,9 @@ end
 function M:OnFocusLost(InFocusEvent)
   self.Btn_Reward:SetGamePadIconVisible(false)
   self.Btn_Goto:SetGamepadIconVisibility(false)
-  self.Key_Item:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  if self.Key_Item then
+    self.Key_Item:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
 end
 
 return M

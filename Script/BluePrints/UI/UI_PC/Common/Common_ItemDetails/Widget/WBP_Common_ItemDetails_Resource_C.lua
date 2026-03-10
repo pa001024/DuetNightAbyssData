@@ -164,7 +164,7 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
     }
     self.ParentWidget:InitButtonEvent(Content)
   end
-  if ResourceInfo.ResourceSType == "GestureItem" then
+  if ResourceInfo.ResourceSType == "GestureItem" and not UIConst.LimitPreviewResource[ResourceInfo.ResourceId] then
     local Content = {
       ButtonClickCallBack = function()
         if self.ParentWidget and self.ParentWidget.Content and self.ParentWidget.Content.UIName and DataMgr.SystemUI[self.ParentWidget.Content.UIName].IsBanAccess then
@@ -369,7 +369,7 @@ function M:InitItemInfoInBag(ItemType, ItemId, UnitId, Content)
       ButtonIcon = 1
     }
   end
-  if ResourceInfo.ResourceSType == "GestureItem" then
+  if ResourceInfo.ResourceSType == "GestureItem" and not UIConst.LimitPreviewResource[ResourceInfo.ResourceId] then
     local Content = {
       ButtonClickCallBack = function()
         if self.ParentWidget and self.ParentWidget.Content and self.ParentWidget.Content.UIName and DataMgr.SystemUI[self.ParentWidget.Content.UIName].IsBanAccess then

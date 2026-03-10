@@ -1409,8 +1409,10 @@ end
 
 function Menu_Level_PC_C:InitGamepadView()
   if self:HasFocusedDescendants() or self:HasAnyUserFocus() then
-    self.GameInputModeSubsystem:SetTargetUIFocusWidget(self.Btn_1.Button_Area)
-    self.GameInputModeSubsystem:UpdateCurrentFocusWidgetPos()
+    self:AddTimer(0.01, function()
+      self.GameInputModeSubsystem:SetTargetUIFocusWidget(self.Btn_1.Button_Area)
+      self.GameInputModeSubsystem:UpdateCurrentFocusWidgetPos()
+    end, false, 0, nil, true)
   end
   if CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" then
     self.KeyTips:SetVisibility(UIConst.VisibilityOp.Visible)

@@ -53,9 +53,9 @@ function M:UpdateGiftItem()
       local ResourceConfig = DataMgr[ShopItemData.ItemType] and DataMgr[ShopItemData.ItemType][ShopItemData.TypeId]
       if ResourceConfig then
         self:SetGiftItemImage(ResourceConfig.Icon)
-        self.Text_ItemName:SetText(GText(ResourceConfig.Name))
+        self.Text_ItemName:SetText(GText(ResourceConfig.Name or ResourceConfig.ResourceName))
       end
-      local ItemType = DataMgr.ShopTabSub[ShopItemData.SubTabId].SubName
+      local ItemType = DataMgr.ShopTabSub[ShopItemData.GiftSubTabId].SubName
       if ItemType then
         self.Text_ItemType:SetText(GText(ItemType))
       end
@@ -94,9 +94,9 @@ function M:UpdateGiftItem()
       local ResourceConfig = DataMgr[ShopItemData.ItemType] and DataMgr[ShopItemData.ItemType][ShopItemData.TypeId]
       if ResourceConfig then
         self:SetGiftItemImage(ResourceConfig.Icon)
-        self.Text_ItemName:SetText(GText(ResourceConfig.Name))
+        self.Text_ItemName:SetText(GText(ResourceConfig.Name or ResourceConfig.ResourceName))
       end
-      local ItemType = DataMgr.ShopTabSub[ShopItemData.SubTabId].SubName
+      local ItemType = DataMgr.ShopTabSub[ShopItemData.GiftSubTabId].SubName
       if ItemType then
         self.Text_ItemType:SetText(GText(ItemType))
       end

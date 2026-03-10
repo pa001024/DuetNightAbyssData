@@ -2109,14 +2109,28 @@ function M._CreateDummyAvatarCustom(DummyAvatar, _Params)
     _AddCharToDummyAvatar(DummyAvatar, Char, CharInfo)
     local CommonChar = DummyAvatar.CommonChars[Char.CharId]
     local AppearanceSuit = CharInfo.AppearanceSuit
-    if AppearanceSuit then
-      CommonChar:AddSkin(AppearanceSuit.SkinId)
-      CommonChar:AddHair(AppearanceSuit.HairId)
-      local Skin = CommonChar:GetSkin(AppearanceSuit.SkinId)
-      local CurrentPlanIndex = Skin.CurrentPlanIndex or 1
-      if Skin then
-        for i, value in pairs(AppearanceSuit.Colors or {}) do
-          Skin.Colors[CurrentPlanIndex][i] = value
+    if AppearanceSuit and CommonChar then
+      if AppearanceSuit.SkinId then
+        CommonChar:AddSkin(AppearanceSuit.SkinId)
+        local Skin = CommonChar:GetSkin(AppearanceSuit.SkinId)
+        if Skin then
+          local CurrentPlanIndex = Skin.CurrentPlanIndex or 1
+          for i, value in pairs(AppearanceSuit.Colors or {}) do
+            if Skin.Colors[CurrentPlanIndex] then
+              Skin.Colors[CurrentPlanIndex][i] = value
+            end
+          end
+        end
+      end
+      CommonChar:AddHair(AppearanceSuit.HairId or Char.CharId)
+      local Hair = CommonChar:GetHair(AppearanceSuit.HairId or Char.CharId)
+      if Hair and type(AppearanceSuit.HairColors) == "table" then
+        for PlanIdx, PlanColors in pairs(AppearanceSuit.HairColors) do
+          if Hair.Colors[PlanIdx] and type(PlanColors) == "table" then
+            for PartIdx, ColorId in pairs(PlanColors) do
+              Hair.Colors[PlanIdx][PartIdx] = ColorId
+            end
+          end
         end
       end
     end

@@ -5,7 +5,7 @@
     "desc": "Strike in rhythm — let the song of battle rise.",
     "icon": "T_Fashion_Weapon22",
     "rarity": 5,
-    "unlock": "Available at Shop"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10002,
@@ -13,7 +13,7 @@
     "desc": "Strike in rhythm — let the song of battle rise.",
     "icon": "T_Fashion_Weapon23",
     "rarity": 5,
-    "unlock": "Available at Shop"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10003,
@@ -21,7 +21,7 @@
     "desc": "Strike in rhythm — let the song of battle rise.",
     "icon": "T_Fashion_Weapon02",
     "rarity": 5,
-    "unlock": "Available at Shop"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10004,
@@ -29,7 +29,7 @@
     "desc": "Strike in rhythm — let the song of battle rise.",
     "icon": "T_Fashion_Weapon01",
     "rarity": 5,
-    "unlock": "Available at Shop"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10005,
@@ -37,7 +37,7 @@
     "desc": "A butterfly laid to rest its dream of flight.",
     "icon": "T_Fashion_Weapon16",
     "rarity": 5,
-    "unlock": "Available at Shop"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10006,
@@ -45,7 +45,7 @@
     "desc": "A butterfly laid to rest its dream of flight.",
     "icon": "T_Fashion_Weapon15",
     "rarity": 5,
-    "unlock": "Available at Shop"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10007,
@@ -53,7 +53,7 @@
     "desc": "A butterfly laid to rest its dream of flight.",
     "icon": "T_Fashion_Weapon13",
     "rarity": 5,
-    "unlock": "Available at Shop"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10008,
@@ -61,7 +61,7 @@
     "desc": "A butterfly laid to rest its dream of flight.",
     "icon": "T_Fashion_Weapon14",
     "rarity": 5,
-    "unlock": "Available at Shop"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10009,
@@ -69,7 +69,7 @@
     "desc": "A bloom born of smoke and flame.",
     "icon": "T_Fashion_Weapon17",
     "rarity": 5,
-    "unlock": "Available at Shop"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10010,
@@ -77,7 +77,7 @@
     "desc": "A bloom born of smoke and flame.",
     "icon": "T_Fashion_Weapon20",
     "rarity": 5,
-    "unlock": "Available at Shop"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10011,
@@ -85,7 +85,7 @@
     "desc": "A bloom born of smoke and flame.",
     "icon": "T_Fashion_Weapon18",
     "rarity": 5,
-    "unlock": "Available at Shop"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10012,
@@ -93,7 +93,7 @@
     "desc": "A bloom born of smoke and flame.",
     "icon": "T_Fashion_Weapon19",
     "rarity": 5,
-    "unlock": "Available at Shop"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10013,
@@ -101,7 +101,7 @@
     "desc": "Wings forsaken by the gods.",
     "icon": "T_Fashion_Weapon03",
     "rarity": 5,
-    "unlock": "Available at Shop"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10014,
@@ -109,7 +109,7 @@
     "desc": "Wings forsaken by the gods.",
     "icon": "T_Fashion_Weapon05",
     "rarity": 5,
-    "unlock": "Available at Shop"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10015,
@@ -117,7 +117,7 @@
     "desc": "Wings forsaken by the gods.",
     "icon": "T_Fashion_Weapon09",
     "rarity": 5,
-    "unlock": "Available at Shop"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10016,
@@ -125,7 +125,7 @@
     "desc": "Wings forsaken by the gods.",
     "icon": "T_Fashion_Weapon06",
     "rarity": 5,
-    "unlock": "Available at Shop"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10017,
@@ -133,7 +133,7 @@
     "desc": "Protagonist of the beloved fairy tale JoeJoe's Bizarre Adventure, famed across the continent of Atlasia. Each day, this plucky chickie named JoeJoe awakens in a new land, befriends interesting characters, and embarks on bizarre quests to discover the meaning of life and thwart villainy wherever it stirs.",
     "icon": "T_Fashion_Weapon21",
     "rarity": 4,
-    "unlock": "Available at Shop"
+    "unlock": "Available at Lunoeggy's Impression Shop"
   },
   {
     "id": 10018,
@@ -141,7 +141,7 @@
     "desc": "Protagonist of the beloved fairy tale JoeJoe's Bizarre Adventure, famed across the continent of Atlasia. Each day, this plucky chickie named JoeJoe awakens in a new land, befriends interesting characters, and embarks on bizarre quests to discover the meaning of life and thwart villainy wherever it stirs.",
     "icon": "T_Fashion_Weapon25",
     "rarity": 4,
-    "unlock": "Available at Shop"
+    "unlock": "Available through Reputation Level-up rewards"
   },
   {
     "id": 10019,
@@ -149,7 +149,7 @@
     "desc": "Protagonist of the beloved fairy tale JoeJoe's Bizarre Adventure, famed across the continent of Atlasia. Each day, this plucky chickie named JoeJoe awakens in a new land, befriends interesting characters, and embarks on bizarre quests to discover the meaning of life and thwart villainy wherever it stirs.",
     "icon": "T_Fashion_Weapon24",
     "rarity": 4,
-    "unlock": "Available at Shop"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10020,
@@ -157,7 +157,7 @@
     "desc": "Protagonist of the beloved fairy tale JoeJoe's Bizarre Adventure, famed across the continent of Atlasia. Each day, this plucky chickie named JoeJoe awakens in a new land, befriends interesting characters, and embarks on bizarre quests to discover the meaning of life and thwart villainy wherever it stirs.",
     "icon": "T_Fashion_Weapon26",
     "rarity": 4,
-    "unlock": "Available at Shop"
+    "unlock": "Available through Reputation Level-up rewards"
   },
   {
     "id": 10021,
@@ -165,7 +165,7 @@
     "desc": "Modelled after Cinder, Lunosmith's faithful little helper, this charm burns with boundless spark and spirit — a tiny tribute to the forge flames it helped fan to life.",
     "icon": "T_Fashion_Weapon12",
     "rarity": 5,
-    "unlock": "Available at Shop"
+    "unlock": "Available at Lunoeggy's Impression Shop"
   },
   {
     "id": 10022,
@@ -173,7 +173,7 @@
     "desc": "In every era, dragons have captivated hearts and stirred imaginations — powerful, untamed, and ever elusive. Their rarity only deepens the mystery, making them the perfect canvas for boundless fantasy.",
     "icon": "T_Fashion_Weapon10",
     "rarity": 5,
-    "unlock": "Available at Shop"
+    "unlock": "Available at Lunoeggy's Impression Shop"
   },
   {
     "id": 10023,
@@ -181,7 +181,7 @@
     "desc": "Under the eggshell is still eggshell. Definitely not a Luno. Don't ask again.",
     "icon": "T_Fashion_Weapon27",
     "rarity": 5,
-    "unlock": "Available at Shop"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10024,
@@ -189,7 +189,7 @@
     "desc": "Do starfish dream of shooting stars?",
     "icon": "T_Fashion_Weapon33",
     "rarity": 5,
-    "unlock": "Available at Shop"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10025,
@@ -197,7 +197,7 @@
     "desc": "Do starfish dream of shooting stars?",
     "icon": "T_Fashion_Weapon31",
     "rarity": 5,
-    "unlock": "Available at Shop"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10026,
@@ -205,7 +205,7 @@
     "desc": "Do starfish dream of shooting stars?",
     "icon": "T_Fashion_Weapon32",
     "rarity": 5,
-    "unlock": "Available at Shop"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10027,
@@ -213,7 +213,7 @@
     "desc": "Why not ask the Chroma Conch?",
     "icon": "T_Fashion_Weapon30",
     "rarity": 5,
-    "unlock": "Available at Shop"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10028,
@@ -221,7 +221,7 @@
     "desc": "Why not ask the Chroma Conch?",
     "icon": "T_Fashion_Weapon29",
     "rarity": 5,
-    "unlock": "Available at Shop"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10029,
@@ -229,7 +229,7 @@
     "desc": "Why not ask the Chroma Conch?",
     "icon": "T_Fashion_Weapon28",
     "rarity": 5,
-    "unlock": "Available at Shop"
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 10030,

@@ -16,6 +16,16 @@ end
 
 function BP_MergeInteractiveComponent_C:StartInteractive(PlayerActor)
   local Result = self:GetResult(PlayerActor)
+  if not Result then
+    DebugPrint("StartInteractive Result is nil")
+    local UIManager = UGameplayStatics.GetGameInstance(self):GetGameUIManager()
+    local InteractiveUI = UIManager:GetUIObj(UIConst.InteractiveUIName)
+    if not InteractiveUI then
+      return
+    end
+    InteractiveUI:RemoveInteractiveItem(self)
+    return
+  end
   Result:StartInteractive(PlayerActor)
 end
 
@@ -42,11 +52,31 @@ end
 
 function BP_MergeInteractiveComponent_C:EndInteractive(PlayerActor)
   local Result = self:GetResult(PlayerActor)
+  if not Result then
+    DebugPrint("EndInteractive Result is nil")
+    local UIManager = UGameplayStatics.GetGameInstance(self):GetGameUIManager()
+    local InteractiveUI = UIManager:GetUIObj(UIConst.InteractiveUIName)
+    if not InteractiveUI then
+      return
+    end
+    InteractiveUI:RemoveInteractiveItem(self)
+    return
+  end
   Result:EndInteractive(PlayerActor)
 end
 
 function BP_MergeInteractiveComponent_C:EndPressInteractive(PlayerActor)
   local Result = self:GetResult(PlayerActor)
+  if not Result then
+    DebugPrint("EndPressInteractive Result is nil")
+    local UIManager = UGameplayStatics.GetGameInstance(self):GetGameUIManager()
+    local InteractiveUI = UIManager:GetUIObj(UIConst.InteractiveUIName)
+    if not InteractiveUI then
+      return
+    end
+    InteractiveUI:RemoveInteractiveItem(self)
+    return
+  end
   Result:EndPressInteractive(PlayerActor)
 end
 

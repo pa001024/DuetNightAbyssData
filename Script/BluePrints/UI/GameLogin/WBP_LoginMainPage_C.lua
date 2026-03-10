@@ -1631,6 +1631,22 @@ function WBP_GameStartMainPage_C:ShowPatchPopUI(Id, RightBtnCallBack, LeftBtnCal
   UIManager:ShowCommonPopupUI(Id, Params, self)
 end
 
+function WBP_GameStartMainPage_C:ShowPatchPopUI_ForceUpdate(Id, RightBtnCallBack, LeftBtnCallBack)
+  DebugPrint("Enter ShowPatchPopUI_ForceUpdate")
+  local PlatformName = UGameplayStatics.GetPlatformName()
+  local Params = {}
+  Params.CloseBtnCallbackFunction = LeftBtnCallBack
+  Params.LeftCallbackFunction = LeftBtnCallBack
+  Params.RightCallbackFunction = RightBtnCallBack
+  if "Android" == PlatformName then
+    DebugPrint("Enter ShowPatchPopUI_ForceUpdate Android set dontclose")
+    Params.DontCloseWhenLeftBtnClicked = true
+    Params.DontCloseWhenRightBtnClicked = true
+  end
+  local UIManager = GWorld.GameInstance:GetGameUIManager()
+  UIManager:ShowCommonPopupUI(Id, Params, self)
+end
+
 function WBP_GameStartMainPage_C:ShowPatchPopUI_ReplaceText(Id, ReplaceText, RightBtnCallBack, LeftBtnCallBack)
   local Params = {}
   Params.LeftCallbackFunction = LeftBtnCallBack
@@ -1709,13 +1725,16 @@ function WBP_GameStartMainPage_C:ShowOptionPatchPopUI(OptionalAssetsSize, TotalS
 end
 
 function WBP_GameStartMainPage_C:ShowDownloadBasepakUI(bLargeVersion)
-  self:ShowPatchPopUI(bLargeVersion and 100020 or 100031, function()
+  self:ShowPatchPopUI_ForceUpdate(bLargeVersion and 100020 or 100031, function()
     local NewGMHyperLink = GWorld.GameInstance.GMHyperLink
+    local PlatformName = UGameplayStatics.GetPlatformName()
     DebugPrint("1 ShowDownloadBasepakUI NewGMHyperLink:", NewGMHyperLink)
-    if NewGMHyperLink then
+    if NewGMHyperLink and "" ~= NewGMHyperLink then
       DebugPrint("1 ShowDownloadBasepakUI launch NewGMHyperLink and quit game")
       UE4.UKismetSystemLibrary.LaunchURL(NewGMHyperLink)
-      self:ForceQuitGame()
+      if "Android" ~= PlatformName then
+        self:ForceQuitGame()
+      end
       return
     end
     local HyperLink = ""
@@ -1737,15 +1756,20 @@ function WBP_GameStartMainPage_C:ShowDownloadBasepakUI(bLargeVersion)
       self:ForceQuitGame()
     else
       UE4.UKismetSystemLibrary.LaunchURL(HyperLink)
-      self:ForceQuitGame()
+      if "Android" ~= PlatformName then
+        self:ForceQuitGame()
+      end
     end
   end, function()
     local NewGMHyperLink = GWorld.GameInstance.GMHyperLink
+    local PlatformName = UGameplayStatics.GetPlatformName()
     DebugPrint("2 ShowDownloadBasepakUI NewGMHyperLink:", NewGMHyperLink)
     if NewGMHyperLink then
       DebugPrint("2 ShowDownloadBasepakUI launch NewGMHyperLink and quit game")
       UE4.UKismetSystemLibrary.LaunchURL(NewGMHyperLink)
-      self:ForceQuitGame()
+      if "Android" ~= PlatformName then
+        self:ForceQuitGame()
+      end
       return
     end
     local HyperLink = ""
@@ -1767,7 +1791,9 @@ function WBP_GameStartMainPage_C:ShowDownloadBasepakUI(bLargeVersion)
       self:ForceQuitGame()
     else
       UE4.UKismetSystemLibrary.LaunchURL(HyperLink)
-      self:ForceQuitGame()
+      if "Android" ~= PlatformName then
+        self:ForceQuitGame()
+      end
     end
   end)
 end

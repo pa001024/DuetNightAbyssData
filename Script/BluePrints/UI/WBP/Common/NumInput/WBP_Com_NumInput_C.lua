@@ -229,8 +229,8 @@ function M:OnMinusKeyDown()
   local AddTimerKey = self:_GetTimerInfo("PreAddLoop")
   if AddTimerKey then
     self.AddTime = 0
-    self:PauseTimer("PreAddLoop")
-    self:PauseTimer("PreMinusLoop")
+    self:RemoveTimer("PreAddLoop")
+    self:RemoveTimer("PreMinusLoop")
   else
     self:OnClickToMinus()
   end
@@ -246,8 +246,8 @@ function M:OnAddKeyDown()
   local AddTimerKey = self:_GetTimerInfo("PreMinusLoop")
   if AddTimerKey then
     self.MinTime = 0
-    self:PauseTimer("PreMinusLoop")
-    self:PauseTimer("PreAddLoop")
+    self:RemoveTimer("PreMinusLoop")
+    self:RemoveTimer("PreAddLoop")
   else
     self:OnClickToAdd()
   end

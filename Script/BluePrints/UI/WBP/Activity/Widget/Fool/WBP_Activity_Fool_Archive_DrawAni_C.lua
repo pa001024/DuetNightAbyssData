@@ -49,7 +49,7 @@ function M:GetRandomTransformData()
   end
   local OwnedIds = {}
   local UnownedIds = {}
-  for _, Data in ipairs(DataMgr.TransformAFDayEvent or {}) do
+  for _, Data in pairs(DataMgr.TransformAFDayEvent or {}) do
     local Id = Data.TransformID
     if self.Avatar.UnlockedFoolsDayTransforms[Id] then
       table.insert(OwnedIds, Id)

@@ -63,6 +63,7 @@ function M:Construct()
   self.Btn_Save.Btn_Click.OnClicked:Add(self, self.OnSaveClicked)
   self.Btn_Save.Btn_Click.OnPressed:Add(self, self.OnSavePressed)
   self.Btn_Click.OnClicked:Add(self, self.OnBackgroundClicked)
+  self.Btn_Click:SetTouchMethod(UE4.EButtonTouchMethod.Down)
   self.Text_DescTitle:SetText(GText("UI_WuyoushengEvent_LevelBuff"))
   self.Text_BuildTitle:SetText(GText("UI_WuyoushengEvent_EditTeam"))
   self.Text_ActivitySign:SetText(GText("UI_Wuyousheng_ArmoryEventOnly"))
@@ -479,7 +480,7 @@ function M:SwitchOut()
   local SquadChanged = not self:IsSquadEqual(self.InitialSquad, CurrentSquad)
   if SquadChanged then
     local Params = {
-      ShortText = GText("是否保存修改？"),
+      ShortText = GText("UI_CommonPopup_SaveLayout_Content"),
       LeftCallbackObj = self,
       LeftCallbackFunction = function(Obj)
         Obj:DoSwitchOut()
@@ -601,7 +602,7 @@ function M:OnSavePressed()
   if self.Btn_Save.Btn_Click:GetForbidden() then
     return
   end
-  AudioManager(self):PlayUISound(self, "event:/ui/activity/wuyoudaguai_btn_click_common", nil, nil)
+  AudioManager(self):PlayUISound(self, "event:/ui/activity/wuyoudaguai_btn_click_enter_game", nil, nil)
 end
 
 function M:CheckTeamCondition()

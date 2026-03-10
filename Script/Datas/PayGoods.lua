@@ -925,15 +925,15 @@ return ReadOnly("PayGoods", {
   ["com.hero.dna.Pay_ThemedSkinPack_dongri01"] = {
     GoodsId = "com.hero.dna.Pay_ThemedSkinPack_dongri01",
     ItemId = 160318,
-    PriceCNY = 128,
-    PriceEUR = 20.99,
-    PriceGBP = 19.99,
-    PriceHKD = 158,
-    PriceJPY = 3000,
-    PriceKRW = 25000,
-    PriceRUB = 1790,
-    PriceTWD = 670,
-    PriceUSD = 19.99
+    PriceCNY = 98,
+    PriceEUR = 17.99,
+    PriceGBP = 14.99,
+    PriceHKD = 118,
+    PriceJPY = 2280,
+    PriceKRW = 19000,
+    PriceRUB = 1290,
+    PriceTWD = 490,
+    PriceUSD = 14.99
   },
   ["com.hero.dna.Pay_ThemedSkinPack_qipao"] = {
     GoodsId = "com.hero.dna.Pay_ThemedSkinPack_qipao",

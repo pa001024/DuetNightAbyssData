@@ -1299,9 +1299,9 @@ function BP_EMGameMode_C:UpdateDungeonProgress()
       DSEntity:UpdateDungeonProgress()
     end
   else
-    local ResTable
+    local ResTable, _Data
     if self:CheckProgressSnapShotEnable() then
-      ResTable = self:GenerateProgressData("OnVoteBegin")
+      ResTable, _Data = self:GenerateProgressData("OnVoteBegin")
     end
     local Avatar = GWorld:GetAvatar()
     if Avatar then

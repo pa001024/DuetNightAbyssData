@@ -57,7 +57,7 @@ function Component:OnClickButtonYes()
   local Avatar = GWorld:GetAvatar()
   Avatar:SelectWalnut(self:ShowChooseSuccessToast(self.CurrentSelectContent), self.CurrentDungeonId, WalnutId)
   self.SelectYes = true
-  EventManager:FireEvent(EventID.OnDisableEscOnDungeonLoading)
+  EventManager:FireEvent(EventID.OnDisableEscOnDungeonLoading, true)
   if not self.IsStandAlone then
     EventManager:FireEvent(EventID.SelectedWalnut)
   else
@@ -165,6 +165,7 @@ end
 
 function Component:PlayWalnutReady()
   self:PlayAnimation(self.LayoutRefresh)
+  self.WalnutChoiceFinish = 1
   self:StartDeputeWalnutReadyCountDown()
   self.Btn_No.Button_Area.OnClicked:Clear()
   self.Btn_No.Button_Area.OnClicked:Add(self, self.OnBtnGiveUpClicked)

@@ -409,6 +409,7 @@ end
 
 function WBP_Forging_Compendium_C:ShowDraftPath(DraftId)
   self.PathWidget = UIManager(self):LoadUINew("ForgePathView", DraftId)
+  self.PathWidget:SetFocus()
 end
 
 function WBP_Forging_Compendium_C:UpdateKeyboardBottomKeyInfo(KeyTypeList)

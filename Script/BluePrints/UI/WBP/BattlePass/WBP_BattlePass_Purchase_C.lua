@@ -171,9 +171,12 @@ end
 
 function M:RefreshCloudTimeText(BattlePassPayType)
   local function HideText(bHide)
-    self.Panel_HighPresent:SetVisibility(bHide and UE4.ESlateVisibility.Collapsed or UE4.ESlateVisibility.SelfHitTestInvisible)
-    
-    self.Panel_SuperPresent:SetVisibility(bHide and UE4.ESlateVisibility.Collapsed or UE4.ESlateVisibility.SelfHitTestInvisible)
+    if self.Panel_HighPresent then
+      self.Panel_HighPresent:SetVisibility(bHide and UE4.ESlateVisibility.Collapsed or UE4.ESlateVisibility.SelfHitTestInvisible)
+    end
+    if self.Panel_SuperPresent then
+      self.Panel_SuperPresent:SetVisibility(bHide and UE4.ESlateVisibility.Collapsed or UE4.ESlateVisibility.SelfHitTestInvisible)
+    end
   end
   
   local Avatar = GWorld:GetAvatar()
@@ -209,24 +212,84 @@ function M:RefreshCloudTimeText(BattlePassPayType)
   local bHasRank3 = Avatar.BattlePassUnlockRank3
   if BattlePassPayType then
     if BattlePassPayType == CommonConst.BattlePassPayType.RANK2 and bHasRank2 then
-      self.Text_Present:SetText(GText("UI_BattlePass_CloudGameTime_Rank2"))
-      self.Text_Present_1:SetText(GText("UI_BattlePass_CloudGameTime_UpdatetoRank3"))
+      if self.Text_Present then
+        self.Text_Present:SetText(GText("UI_BattlePass_CloudGameTime_Rank2"))
+      end
+      if self.Text_Present_1 then
+        self.Text_Present_1:SetText(GText("UI_BattlePass_CloudGameTime_UpdatetoRank3"))
+      end
+      if self.Text_Info then
+        self.Text_Info:SetText(GText("UI_BattlePass_CloudGameTime_Rank2"))
+      end
+      if self.Text_Info_1 then
+        self.Text_Info_1:SetText(GText("UI_BattlePass_CloudGameTime_UpdatetoRank3"))
+      end
     elseif BattlePassPayType == CommonConst.BattlePassPayType.RANK3 and bHasRank3 then
-      self.Text_Present:SetText(GText("UI_BattlePass_CloudGameTime_Rank2"))
-      self.Text_Present_1:SetText(GText("UI_BattlePass_CloudGameTime_Rank3"))
+      if self.Text_Present then
+        self.Text_Present:SetText(GText("UI_BattlePass_CloudGameTime_Rank2"))
+      end
+      if self.Text_Present_1 then
+        self.Text_Present_1:SetText(GText("UI_BattlePass_CloudGameTime_Rank3"))
+      end
+      if self.Text_Info then
+        self.Text_Info:SetText(GText("UI_BattlePass_CloudGameTime_Rank2"))
+      end
+      if self.Text_Info_1 then
+        self.Text_Info_1:SetText(GText("UI_BattlePass_CloudGameTime_Rank3"))
+      end
     elseif BattlePassPayType == CommonConst.BattlePassPayType.RANK2_UPGRADE_RANK3 and bHasRank3 then
-      self.Text_Present:SetText(GText("UI_BattlePass_CloudGameTime_Rank2"))
-      self.Text_Present_1:SetText(GText("UI_BattlePass_CloudGameTime_UpdatetoRank3"))
+      if self.Text_Present then
+        self.Text_Present:SetText(GText("UI_BattlePass_CloudGameTime_Rank2"))
+      end
+      if self.Text_Present_1 then
+        self.Text_Present_1:SetText(GText("UI_BattlePass_CloudGameTime_UpdatetoRank3"))
+      end
+      if self.Text_Info then
+        self.Text_Info:SetText(GText("UI_BattlePass_CloudGameTime_Rank2"))
+      end
+      if self.Text_Info_1 then
+        self.Text_Info_1:SetText(GText("UI_BattlePass_CloudGameTime_UpdatetoRank3"))
+      end
     end
   elseif not bHasRank2 and not bHasRank3 then
-    self.Text_Present:SetText(GText("UI_BattlePass_CloudGameTime_Rank2"))
-    self.Text_Present_1:SetText(GText("UI_BattlePass_CloudGameTime_Rank3"))
+    if self.Text_Present then
+      self.Text_Present:SetText(GText("UI_BattlePass_CloudGameTime_Rank2"))
+    end
+    if self.Text_Present_1 then
+      self.Text_Present_1:SetText(GText("UI_BattlePass_CloudGameTime_Rank3"))
+    end
+    if self.Text_Info then
+      self.Text_Info:SetText(GText("UI_BattlePass_CloudGameTime_Rank2"))
+    end
+    if self.Text_Info_1 then
+      self.Text_Info_1:SetText(GText("UI_BattlePass_CloudGameTime_Rank3"))
+    end
   elseif bHasRank2 and not bHasRank3 then
-    self.Text_Present:SetText(GText("UI_BattlePass_CloudGameTime_Rank2"))
-    self.Text_Present_1:SetText(GText("UI_BattlePass_CloudGameTime_UpdatetoRank3"))
+    if self.Text_Present then
+      self.Text_Present:SetText(GText("UI_BattlePass_CloudGameTime_Rank2"))
+    end
+    if self.Text_Present_1 then
+      self.Text_Present_1:SetText(GText("UI_BattlePass_CloudGameTime_UpdatetoRank3"))
+    end
+    if self.Text_Info then
+      self.Text_Info:SetText(GText("UI_BattlePass_CloudGameTime_Rank2"))
+    end
+    if self.Text_Info_1 then
+      self.Text_Info_1:SetText(GText("UI_BattlePass_CloudGameTime_UpdatetoRank3"))
+    end
   elseif bHasRank2 and bHasRank3 then
-    self.Text_Present:SetText(GText("UI_BattlePass_CloudGameTime_Rank2"))
-    self.Text_Present_1:SetText(GText("UI_BattlePass_CloudGameTime_Rank3"))
+    if self.Text_Present then
+      self.Text_Present:SetText(GText("UI_BattlePass_CloudGameTime_Rank2"))
+    end
+    if self.Text_Present_1 then
+      self.Text_Present_1:SetText(GText("UI_BattlePass_CloudGameTime_Rank3"))
+    end
+    if self.Text_Info then
+      self.Text_Info:SetText(GText("UI_BattlePass_CloudGameTime_Rank2"))
+    end
+    if self.Text_Info_1 then
+      self.Text_Info_1:SetText(GText("UI_BattlePass_CloudGameTime_Rank3"))
+    end
   end
 end
 

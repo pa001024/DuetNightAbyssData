@@ -32,6 +32,12 @@ function M:Construct()
   self:SetNavigationRuleBase(EUINavigation.Down, EUINavigationRule.Stop)
   self:SetNavigationRuleBase(EUINavigation.Right, EUINavigationRule.Stop)
   self.AnalogControlCd = 0.2
+  self.List01 = self.List_Title01
+  self.List02 = self.List_Title02
+  if CommonConst.SystemLanguage == CommonConst.SystemLanguages.FR then
+    self.List01 = self.List_Title02
+    self.List02 = self.List_Title01
+  end
   self:SetFocus()
 end
 
@@ -79,14 +85,14 @@ function M:InitBaseView()
     if -1 == self.UsedPrefixTitleID and self.UsedPrefixTitle == nil then
       self.UsedPrefixTitle = EmptyTitle1
     end
-    self.List_Title01:AddItem(EmptyTitle1)
+    self.List01:AddItem(EmptyTitle1)
     table.insert(PrefixTitleContents, EmptyTitle1)
     for index, value in pairs(PrefixTitles) do
       local PrefixTitle = NewObject(UIUtils.GetCommonItemContentClass())
       PrefixTitle.Name = value.Name
       PrefixTitle.TitleID = value.TitleID
       PrefixTitle.RealIndex = #PrefixTitleContents + 1
-      self.List_Title01:AddItem(PrefixTitle)
+      self.List01:AddItem(PrefixTitle)
       table.insert(PrefixTitleContents, PrefixTitle)
       if self.UsedPrefixTitleID == value.TitleID and self.UsedPrefixTitle == nil then
         self.UsedPrefixTitle = PrefixTitle
@@ -103,14 +109,14 @@ function M:InitBaseView()
     if -1 == self.UsedSuffixTitleID and nil == self.UsedSuffixTitle then
       self.UsedSuffixTitle = EmptyTitle2
     end
-    self.List_Title02:AddItem(EmptyTitle2)
+    self.List02:AddItem(EmptyTitle2)
     table.insert(SuffixTitleContents, EmptyTitle2)
     for index, value in pairs(SuffixTitles) do
       local SuffixTitle = NewObject(UIUtils.GetCommonItemContentClass())
       SuffixTitle.Name = value.Name
       SuffixTitle.TitleID = value.TitleID
       SuffixTitle.RealIndex = #SuffixTitleContents + 1
-      self.List_Title02:AddItem(SuffixTitle)
+      self.List02:AddItem(SuffixTitle)
       table.insert(SuffixTitleContents, SuffixTitle)
       if self.UsedSuffixTitleID == value.TitleID and nil == self.UsedSuffixTitle then
         self.UsedSuffixTitle = SuffixTitle
@@ -121,19 +127,19 @@ function M:InitBaseView()
   self.OriginalPreItemCount = #PrefixTitleContents
   self.OriginalSuffixItemCount = #SuffixTitleContents
   local fakeidx = 0
-  self.List_Title01.OnCreateEmptyContent:Bind(self, function(self)
+  self.List01.OnCreateEmptyContent:Bind(self, function(self)
     fakeidx = fakeidx + 1
     local obj = NewObject(UIUtils.GetCommonItemContentClass())
     obj.Name = fakeidx + 1
     return obj
   end)
-  self.List_Title02.OnCreateEmptyContent:Bind(self, function(self)
+  self.List02.OnCreateEmptyContent:Bind(self, function(self)
     return NewObject(UIUtils.GetCommonItemContentClass())
   end)
-  self.List_Title01:SetIsEnableScrollAnimation(true)
-  self.List_Title02:SetIsEnableScrollAnimation(true)
-  self.List_Title01:RequestLoopListInit()
-  self.List_Title02:RequestLoopListInit()
+  self.List01:SetIsEnableScrollAnimation(true)
+  self.List02:SetIsEnableScrollAnimation(true)
+  self.List01:RequestLoopListInit()
+  self.List02:RequestLoopListInit()
   self:BindListViewEvents()
   self:AddTimer(0.1, function()
     self:CalculateLayoutParams()
@@ -141,8 +147,8 @@ function M:InitBaseView()
   end, nil, nil, nil, true)
   if EnableLog then
     self:AddTimer(1, function()
-      local currentOffset = self.List_Title01:GetScrollOffset()
-      ScreenPrint("位置报时:currentOffset:" .. currentOffset .. "后最  " .. self.List_Title02:GetScrollOffset())
+      local currentOffset = self.List01:GetScrollOffset()
+      ScreenPrint("位置报时:currentOffset:" .. currentOffset .. "后最  " .. self.List02:GetScrollOffset())
     end, true, nil, nil, true)
   end
 end
@@ -162,26 +168,26 @@ function M:GetAutoSelectTitle(bIsPrefix)
     if self.UsedPrefixTitleID and self.UsedPrefixTitle then
       return self.UsedPrefixTitle
     else
-      local currentOffset = self.List_Title01:GetScrollOffset()
+      local currentOffset = self.List01:GetScrollOffset()
       local NewItem = self:ItemOffset2SelectContent(currentOffset, true)
       return NewItem
     end
   elseif self.UsedSuffixTitleID and self.UsedSuffixTitle then
     return self.UsedSuffixTitle
   else
-    local currentOffset = self.List_Title02:GetScrollOffset()
+    local currentOffset = self.List02:GetScrollOffset()
     local NewItem = self:ItemOffset2SelectContent(currentOffset, false)
     return NewItem
   end
 end
 
 function M:BindListViewEvents()
-  self.List_Title01.OnListViewScrolled:Add(self, self.OnPrefixTitleScrolled)
-  self.List_Title01.OnMouseButtonUp:Add(self, self.OnPrefixTitleMouseUp)
-  self.List_Title01.OnMouseButtonDown:Add(self, self.OnPrefixTitleMouseDown)
-  self.List_Title02.OnListViewScrolled:Add(self, self.OnSuffixTitleScrolled)
-  self.List_Title02.OnMouseButtonUp:Add(self, self.OnSuffixTitleMouseUp)
-  self.List_Title02.OnMouseButtonDown:Add(self, self.OnSuffixTitleMouseDown)
+  self.List01.OnListViewScrolled:Add(self, self.OnPrefixTitleScrolled)
+  self.List01.OnMouseButtonUp:Add(self, self.OnPrefixTitleMouseUp)
+  self.List01.OnMouseButtonDown:Add(self, self.OnPrefixTitleMouseDown)
+  self.List02.OnListViewScrolled:Add(self, self.OnSuffixTitleScrolled)
+  self.List02.OnMouseButtonUp:Add(self, self.OnSuffixTitleMouseUp)
+  self.List02.OnMouseButtonDown:Add(self, self.OnSuffixTitleMouseDown)
 end
 
 function M:OnPrefixTitleMouseDown()
@@ -195,7 +201,7 @@ function M:OnSuffixTitleMouseDown()
 end
 
 function M:CalculateLayoutParams()
-  self.FullFillCount = self.List_Title01:GetFullFillItemCount()
+  self.FullFillCount = self.List01:GetFullFillItemCount()
   DebugPrint("称号系统：FullFillCount:" .. self.FullFillCount)
   self.CenterOffset = (self.FullFillCount - 1) / 2
   DebugPrint("称号系统：CenterOffset:" .. self.CenterOffset)
@@ -234,7 +240,7 @@ function M:OnSuffixTitleScrolled(ItemOffset, DistanceRemaining)
 end
 
 function M:ChangeSelectPrefixTitle(Aim)
-  local currentOffset = Aim or self.List_Title01:GetScrollOffset()
+  local currentOffset = Aim or self.List01:GetScrollOffset()
   local NewItem = self:ItemOffset2SelectContent(currentOffset, true)
   if NewItem == self.SelectPrefixTitleItem then
     return
@@ -244,7 +250,7 @@ function M:ChangeSelectPrefixTitle(Aim)
 end
 
 function M:ChangeSelectSuffixTitle()
-  local currentOffset = self.List_Title02:GetScrollOffset()
+  local currentOffset = self.List02:GetScrollOffset()
   local NewItem = self:ItemOffset2SelectContent(currentOffset, false)
   if NewItem == self.SelectSuffixTitleItem then
     return
@@ -270,9 +276,9 @@ function M:ScrollandSelectTitle(Item, bIsPrefix)
   local RealIdx = Item.RealIndex
   local list
   if bIsPrefix then
-    list = self.List_Title01
+    list = self.List01
   else
-    list = self.List_Title02
+    list = self.List02
   end
   list:ScrollIndexIntoView(math.floor(self.FullFillCount - self.CenterOffset + RealIdx + 0.5))
   self:Addtimer(1, function()
@@ -320,9 +326,9 @@ function M:ReallySelectTitle(Item, bIsPrefix)
     Item.UI:SetNotNew()
     local list
     if bIsPrefix then
-      list = self.List_Title01
+      list = self.List01
     else
-      list = self.List_Title02
+      list = self.List02
     end
     local GetDisplayedEntryWidgets = list:GetDisplayedEntryWidgets()
     for index, value in pairs(GetDisplayedEntryWidgets) do
@@ -345,7 +351,7 @@ function M:GetCurrentSelectTitle()
 end
 
 function M:ItemOffset2SelectContent(currentOffset, IsPrefix)
-  local list = IsPrefix and self.List_Title01 or self.List_Title02
+  local list = IsPrefix and self.List01 or self.List02
   local originalCount = IsPrefix and self.OriginalPreItemCount or self.OriginalSuffixItemCount
   local aimOffset = math.floor(currentOffset + 0.5)
   local centerListIdx = math.floor(aimOffset + self.CenterOffset + 0.5)
@@ -369,10 +375,10 @@ function M:ScrollToItem(Item, IsPrefix, bSmoothScroll)
   bSmoothScroll = nil == bSmoothScroll and true
   local List, OriginalItemCount
   if IsPrefix then
-    List = self.List_Title01
+    List = self.List01
     OriginalItemCount = self.OriginalPreItemCount
   else
-    List = self.List_Title02
+    List = self.List02
     OriginalItemCount = self.OriginalSuffixItemCount
   end
   local currentOffset = List:GetScrollOffset()
@@ -442,10 +448,10 @@ end
 function M:SetToClosestItem(IsPrefix)
   local List, OriginalItemCount
   if IsPrefix then
-    List = self.List_Title01
+    List = self.List01
     OriginalItemCount = self.OriginalPreItemCount
   else
-    List = self.List_Title02
+    List = self.List02
     OriginalItemCount = self.OriginalSuffixItemCount
   end
   local currentOffset = List:GetScrollOffset()
@@ -462,9 +468,9 @@ end
 function M:EndScroll(bIsPrefix, EndCallBack)
   local List
   if bIsPrefix then
-    List = self.List_Title01
+    List = self.List01
   else
-    List = self.List_Title02
+    List = self.List02
   end
   local aim = math.floor(List:GetScrollOffset() + 0.5)
   List:ScrollIndexIntoView(aim)
@@ -498,9 +504,9 @@ function M:RandomSelectTitle()
   math.randomseed(seed)
   math.random()
   local randomIdx1 = math.random(1, #self.PrefixTitles)
-  local randomItem1 = self.List_Title01:GetItemAt(randomIdx1 + self.FullFillCount)
+  local randomItem1 = self.List01:GetItemAt(randomIdx1 + self.FullFillCount)
   local randomIdx2 = math.random(1, #self.SuffixTitles)
-  local randomItem2 = self.List_Title02:GetItemAt(randomIdx2 + self.FullFillCount)
+  local randomItem2 = self.List02:GetItemAt(randomIdx2 + self.FullFillCount)
   ScreenPrint("随机选中了 " .. GText(randomItem1.Name) .. " " .. GText(randomItem2.Name) .. " time " .. os.time())
   self:ScrollToItem(randomItem1, true)
   self:ScrollToItem(randomItem2, false)
@@ -510,10 +516,10 @@ function M:ScrollUp(IsPrefix)
   local List, OriginalItemCount
   if IsPrefix then
     OriginalItemCount = self.OriginalPreItemCount
-    List = self.List_Title01
+    List = self.List01
   else
     OriginalItemCount = self.OriginalSuffixItemCount
-    List = self.List_Title02
+    List = self.List02
   end
   local currentOffset = List:GetScrollOffset()
   local AimOffset = currentOffset - 1
@@ -530,10 +536,10 @@ end
 function M:ScrollDown(IsPrefix)
   local List, originalItemCount
   if IsPrefix then
-    List = self.List_Title01
+    List = self.List01
     originalItemCount = self.OriginalPreItemCount
   else
-    List = self.List_Title02
+    List = self.List02
     originalItemCount = self.OriginalSuffixItemCount
   end
   local currentOffset = List:GetScrollOffset()

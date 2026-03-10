@@ -10,8 +10,6 @@ function M:InitContent(Params, PopupData, Owner)
   self.Owner:GetButtonBar().Btn_Quit:BindEventOnClicked(self, self.OnClickNo)
   self.Owner:GetButtonBar().Btn_Yes:SetIconPanelVisibility(UIConst.VisibilityOp.Collapsed)
   self.Owner:GetButtonBar().Btn_Quit:SetIconPanelVisibility(UIConst.VisibilityOp.Collapsed)
-  self.Owner:GetButtonBar().Btn_Yes.bAutoButtonChange = false
-  self.Owner:GetButtonBar().Btn_Quit.bAutoButtonChange = false
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return
@@ -51,6 +49,7 @@ function M:InitContent(Params, PopupData, Owner)
   self.RechargeItem:SetRechargeItemCost(self.NeedShopItemData, Price, Count)
   self.RechargeItem:SetVisibility(ESlateVisibility.HitTestInvisible)
   self.Owner:GetButtonBar().Btn_Yes:SetText(GText(ShopUtils:GetCurrencyType() .. Price))
+  self.Owner:GetButtonBar().Btn_Quit:SetDefaultGamePadImg("Y")
 end
 
 function M:Construct()

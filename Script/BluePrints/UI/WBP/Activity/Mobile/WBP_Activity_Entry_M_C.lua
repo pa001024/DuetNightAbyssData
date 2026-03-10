@@ -155,10 +155,20 @@ function M:Handle_KeyDownOnGamePad()
 end
 
 function M:OnReturnToActivityEntry()
+  if self:IsPlayingAnimation(self.In) then
+    DebugPrint("OnReturnToActivityEntry IsPlayingAnimation In")
+    return
+  end
+  self:StopAllAnimations()
   self:PlayAnimationForward(self.In)
 end
 
 function M:OnLeaveActivityEntry()
+  if self:IsPlayingAnimation(self.Out) then
+    DebugPrint("OnLeaveActivityEntry IsPlayingAnimation Out")
+    return
+  end
+  self:StopAllAnimations()
   self:PlayAnimationForward(self.Out)
 end
 

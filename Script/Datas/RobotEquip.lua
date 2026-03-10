@@ -219,8 +219,8 @@ return ReadOnly("RobotEquip", {
     DeployCost = 12,
     DescValue = {
       [1] = "$#Buff[4020408].AddAttrs[1].Rate*100$%",
-      [2] = "$#Buff[4020408].AddAttrs[2].Rate$",
-      [3] = "$#Buff[4020408].MaxLayer$%"
+      [2] = "$#Buff[4020408].AddAttrs[2].Rate*100$%",
+      [3] = "$#Buff[4020408].MaxLayer$"
     },
     EquipIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item04.T_Activity_Autochess_Item04'",
     EquipId = 17,
@@ -236,8 +236,8 @@ return ReadOnly("RobotEquip", {
     DeployCost = 12,
     DescValue = {
       [1] = "$#Buff[4020409].AddAttrs[1].Rate*100$%",
-      [2] = "$#Buff[4020409].AddAttrs[2].Rate$",
-      [3] = "$#Buff[4020409].MaxLayer$%"
+      [2] = "$#Buff[4020409].AddAttrs[2].Rate*100$%",
+      [3] = "$#Buff[4020409].MaxLayer$"
     },
     EquipIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item03.T_Activity_Autochess_Item03'",
     EquipId = 18,

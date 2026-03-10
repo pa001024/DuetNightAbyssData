@@ -333,7 +333,7 @@ return ReadOnly("AbyssSeason", {
     WalnutNum = 45
   },
   [1213] = {
-    AbyssEndTime = LocalTimeProxy(1775527200),
+    AbyssEndTime = LocalTimeProxy(1775466000),
     AbyssId = 1213,
     AbyssIdName = "Abyss_Rotate",
     AbyssLevelId = {
@@ -369,7 +369,7 @@ return ReadOnly("AbyssSeason", {
     WalnutNum = 20
   },
   [1214] = {
-    AbyssEndTime = LocalTimeProxy(1775527200),
+    AbyssEndTime = LocalTimeProxy(1775466000),
     AbyssId = 1214,
     AbyssIdName = "Abyss_Infinite",
     AbyssLevelId = {

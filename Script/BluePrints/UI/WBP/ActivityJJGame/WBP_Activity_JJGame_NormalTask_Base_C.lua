@@ -48,7 +48,15 @@ function M:Construct()
   })
 end
 
+function M:UpdateNormalRewardReddot(Count)
+  if not self.Owner.Com_Tab then
+    return
+  end
+  self.Owner:UpdateTabNewReddot()
+end
+
 function M:Destruct()
+  ReddotManager.RemoveListener(NormalRewardReddotName, self)
   self.Btn_GetBigReward.OnClicked:Clear()
   self.Btn_OneClickGet.Btn_GetReward.OnClicked:Clear()
   self:UnbindFromAnimationFinished(self.Percent, {
@@ -84,6 +92,7 @@ function M:Init(Params)
     self.Btn_OneClickGet.Key_GetReward:SetForbidKey(true)
     self:PlayAnimation(self.VX_Reminder)
   else
+    self:TrySubNormalRewardReddot("ScoresRewards")
     self.Group_Score:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.Group_Progress:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.Text_BigRewardTitle:SetText(GText("UI_Event_MidTerm_NormalPreview"))
@@ -94,6 +103,7 @@ function M:Init(Params)
   self:UpdateTaskScoreToday()
   self:InitTaskList()
   self:PlayAnimation(self.In)
+  ReddotManager.AddListenerEx(NormalRewardReddotName, self, self.UpdateNormalRewardReddot)
   if TimeUtils.NowTime() > self.EventEndTime then
     self:TryClearNormalTaskRewardReddot()
     self.WS_Right:SetActiveWidgetIndex(1)
@@ -278,6 +288,8 @@ end
 function M:UpdateRewardList(TaskScoreToday)
   self.List_BigReward:ClearListItems()
   local RewardContentList = {}
+  local BaseRewardCount = self.MidTermConst.BaseRewardCount.ConstantValue
+  local OFRewardCount = self.MidTermConst.OFRewardCount.ConstantValue
   if TaskScoreToday <= self.MidTermConst.MaxPrizePoint.ConstantValue then
     local RewardId = self.MidTermConst.BaseRewardId.ConstantValue
     local Ratio = TaskScoreToday / self.MidTermConst.MaxPrizePoint.ConstantValue
@@ -285,7 +297,7 @@ function M:UpdateRewardList(TaskScoreToday)
     for j, ResourceId in ipairs(RewardConfig.Id) do
       local ResourceConfig = DataMgr.Resource[ResourceId]
       local RewardIcon = ItemUtils.GetItemIconPath(ResourceId, CommonConst.ItemType.Resource)
-      local RewardContent = self:NewItemContent(RewardConfig.Type[1], ResourceId, RewardIcon, ResourceConfig.Rarity or 1, RewardConfig.Count[j][1] * Ratio)
+      local RewardContent = self:NewItemContent(RewardConfig.Type[1], ResourceId, RewardIcon, ResourceConfig.Rarity or 1, RewardConfig.Count[j][1] * Ratio * BaseRewardCount)
       table.insert(RewardContentList, RewardContent)
     end
   else
@@ -297,7 +309,7 @@ function M:UpdateRewardList(TaskScoreToday)
     for j, ResourceId in ipairs(OFRewardConfig.Id) do
       local ResourceConfig = DataMgr.Resource[ResourceId]
       local RewardIcon = ItemUtils.GetItemIconPath(ResourceId, CommonConst.ItemType.Resource)
-      local RewardContent = self:NewItemContent(OFRewardConfig.Type[1], ResourceId, RewardIcon, ResourceConfig.Rarity or 1, OFRewardConfig.Count[j][1] * OverflowRatio)
+      local RewardContent = self:NewItemContent(OFRewardConfig.Type[1], ResourceId, RewardIcon, ResourceConfig.Rarity or 1, OFRewardConfig.Count[j][1] * OverflowRatio * OFRewardCount)
       RewardContent.BonusType = 1
       table.insert(RewardContentList, RewardContent)
     end
@@ -306,7 +318,7 @@ function M:UpdateRewardList(TaskScoreToday)
     for j, ResourceId in ipairs(BaseRewardConfig.Id) do
       local ResourceConfig = DataMgr.Resource[ResourceId]
       local RewardIcon = ItemUtils.GetItemIconPath(ResourceId, CommonConst.ItemType.Resource)
-      local RewardContent = self:NewItemContent(BaseRewardConfig.Type[1], ResourceId, RewardIcon, ResourceConfig.Rarity or 1, BaseRewardConfig.Count[j][1])
+      local RewardContent = self:NewItemContent(BaseRewardConfig.Type[1], ResourceId, RewardIcon, ResourceConfig.Rarity or 1, BaseRewardConfig.Count[j][1] * BaseRewardCount)
       table.insert(RewardContentList, RewardContent)
     end
   end
@@ -451,6 +463,7 @@ function M:GetBigReward()
   if TimeUtils.NowTime() > self.RewardEndTime then
     return
   end
+  local Avatar = GWorld:GetAvatar()
   AudioManager(self):PlayUISound(self, "event:/ui/activity/wenmingboyi_all_btn_click", nil, nil)
   
   local function Cb(ErrCode, Ret)
@@ -460,24 +473,15 @@ function M:GetBigReward()
       self:UpdateTaskScoreToday()
       self:TrySubNormalRewardReddot("ScoresRewards")
       UIManager(GWorld.GameInstance):LoadUI(UIConst.LoadInConfig, "GetItemPage", nil, nil, nil, nil, Ret, self.OnGetItemPageClosed, self)
-    else
-      local ErrorCodeData = DataMgr.ErrorCode[ErrCode]
-      UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText(ErrorCodeData.ErrorCodeContent))
     end
     self.Owner:BlockAllUIInput(false)
   end
   
   self.Owner:BlockAllUIInput(true)
-  self._Avatar:MidTermGetScoresRewards(Cb)
+  Avatar:MidTermGetScoresRewards(Cb)
 end
 
 function M:OnGetItemPageClosed()
-  local FocusedTask = self.CurFocusTask or self.NormalItem.List_Task:GetItemAt(0) or self.CycleItem.List_Task:GetItemAt(0)
-  if FocusedTask.TaskType == TaskType.Cycle then
-    self.CycleItem.List_Task:BP_NavigateToItem(FocusedTask)
-  else
-    self.NormalItem.List_Task:BP_NavigateToItem(FocusedTask)
-  end
   self.Group_Score:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.Group_Progress:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self:InitTaskList()
@@ -491,15 +495,43 @@ function M:OnGetItemPageClosed()
     end
     self.List_BigReward:RegenerateAllEntries()
   end
+  self:AddTimer(0.1, function()
+    if self.CurInputDevice == ECommonInputType.Gamepad then
+      local FocusedTask = self.CurFocusTask or self.NormalItem.List_Task:GetItemAt(0) or self.CycleItem.List_Task:GetItemAt(0)
+      if FocusedTask then
+        if FocusedTask.TaskType == TaskType.Cycle then
+          self.CycleItem.List_Task:BP_NavigateToItem(FocusedTask)
+        else
+          self.NormalItem.List_Task:BP_NavigateToItem(FocusedTask)
+        end
+      else
+        self:SetFocus()
+      end
+    else
+      local NormalFirstItem = self.NormalItem.List_Task:GetItemAt(0)
+      local CycleFirstItem = self.CycleItem.List_Task:GetItemAt(0)
+      if NormalFirstItem and NormalFirstItem.SelfWidget then
+        NormalFirstItem.SelfWidget:SetFocus()
+      elseif CycleFirstItem and CycleFirstItem.SelfWidget then
+        CycleFirstItem.SelfWidget:SetFocus()
+      else
+        self:SetFocus()
+      end
+    end
+  end)
 end
 
 function M:GetAllTaskScores()
   if TimeUtils.NowTime() > self.EventEndTime then
     return
   end
+  if not self.YesterdayRewardGot then
+    return
+  end
   if self.Btn_OneClickGet.Btn_GetReward:GetForbidden() then
     return
   end
+  local Avatar = GWorld:GetAvatar()
   AudioManager(self):PlayUISound(self, "event:/ui/activity/wenmingboyi_all_btn_click", nil, nil)
   
   local function Cb(ErrCode, Ret)
@@ -517,7 +549,7 @@ function M:GetAllTaskScores()
   end
   
   self.Owner:BlockAllUIInput(true)
-  self._Avatar:MidTermGetAllNormalScores(Cb)
+  Avatar:MidTermGetAllNormalScores(Cb)
 end
 
 function M:NewItemContent(ItemType, ItemId, Icon, Rarity, Count, Quantity, OpenFunction)

@@ -65,6 +65,25 @@ function BP_CharacterFashion_C:ColletctPartMeshIds(AppearanceSuitInfo, PartMeshI
   end
 end
 
+local function CreateAccessoryHideTags(self)
+  rawset(self, "AccessoryHideTags", {})
+  for AccessoryType, AccessoryTypeIdx in pairs(CommonConst.NewCharAccessoryTypes) do
+    self.AccessoryHideTags[AccessoryType] = {}
+  end
+end
+
+local function AddAccessoryHideTag(self, AccessoryType, Tag)
+  self.AccessoryHideTags[AccessoryType][Tag] = true
+end
+
+local function RemoveAccessoryHideTag(self, AccessoryType, Tag)
+  self.AccessoryHideTags[AccessoryType][Tag] = nil
+end
+
+local function IsAccessoryHiddenByAnyTag(self, AccessoryType)
+  return self.AccessoryHideTags[AccessoryType] and not not next(self.AccessoryHideTags[AccessoryType])
+end
+
 function BP_CharacterFashion_C:InitAppearanceSuit(Info)
   print(_G.LogTag, "BP_CharacterFashion_C:InitAppearanceSuit")
   rawset(self, "AppearanceSuitInfo", Info)
@@ -72,6 +91,7 @@ function BP_CharacterFashion_C:InitAppearanceSuit(Info)
   self:InitWeaponColor(Info.Colors)
   self.InitPartIds = {}
   self.InitWithCombinePart = false
+  CreateAccessoryHideTags(self)
   if not Info then
     self:ChangeAccessoryWithDefautl()
     self:InitPartMeshCompWithDefault()
@@ -82,12 +102,13 @@ function BP_CharacterFashion_C:InitAppearanceSuit(Info)
     return
   end
   if EMLuaConst.ShouldCombinePartMesh then
-    self.InitWithCombinePart = not Owner or not Owner.FromArmory
+    self.InitWithCombinePart = (not Owner or not Owner.FromArmory) and (not Owner or not Owner.FromOtherWorld)
     print(_G.LogTag, "BP_CharacterFashion_C:InitAppearanceSuit combine", self.InitWithCombinePart, Owner.FromArmory)
   end
-  if Owner.ChangeSkinModel then
-    Owner:ChangeSkinModel(Info.SkinId)
+  if self.InitWithCombinePart then
+    Owner:RemoveAllPartMeshComps()
   end
+  self:ChangeCharSkin(Info.SkinId)
   local DefaultFacePart = Owner.DefaultCharPartId:Find("Faces")
   if self.InitWithCombinePart then
     table.insert(self.InitPartIds, DefaultFacePart)
@@ -107,14 +128,15 @@ function BP_CharacterFashion_C:InitAppearanceSuit(Info)
     local Transform = CommonUtils.UnSerializeAccessoryCustomParams(AccessoryCustomParams[AccessoryId], AccessoryType)
     self:ChangeAccessory(AccessoryId, AccessoryType, Transform)
     local InValidAccId = not AccessoryId
-    if InValidAccId and self.InitWithCombinePart then
-      local DefaultPartId = Owner.DefaultCharPartId:Find(AccessoryType)
-      if DefaultPartId then
-        table.insert(self.InitPartIds, DefaultPartId)
+    if InValidAccId and not IsAccessoryHiddenByAnyTag(self, AccessoryType) then
+      if self.InitWithCombinePart then
+        local DefaultPartId = Owner.DefaultCharPartId:Find(AccessoryType)
+        if DefaultPartId then
+          table.insert(self.InitPartIds, DefaultPartId)
+        end
+      else
+        Owner:RecoverDefaultPartMesh(AccessoryType)
       end
-    end
-    if InValidAccId and not self.InitWithCombinePart then
-      Owner:RecoverDefaultPartMesh(AccessoryType)
     end
     print(_G.LogTag, "BP_CharacterFashion_C:InitAppearanceSuit acc", AccessoryId, AccessoryType)
   end
@@ -130,6 +152,16 @@ function BP_CharacterFashion_C:InitAppearanceSuit(Info)
   self:InitHairColors(Info.HairColors)
   if Owner.InfoForInit then
     self:GradeUpEmissive(Owner.InfoForInit.GradeLevel)
+  end
+end
+
+function BP_CharacterFashion_C:ChangeCharSkin(SkinId)
+  local Owner = self:GetOwner()
+  if not Owner then
+    return
+  end
+  if Owner.ChangeSkinModel then
+    Owner:ChangeSkinModel(SkinId)
   end
 end
 
@@ -193,18 +225,19 @@ function BP_CharacterFashion_C:RecoverHairMesh()
   if HairData then
     if HairData.LinkAccessory then
       self:ChangeAccessory(HairData.LinkAccessory, HairType)
-      return
-    end
-    if HairData.CharPartId then
+    elseif HairData.CharPartId then
       Owner:SetPartMesh(HairData.CharPartId)
     end
   else
     Owner:RecoverDefaultPartMesh(HairType)
   end
+  for PartIdx, value in pairs(self.RealHairPartColors or {}) do
+    self:ChangeHairPartColor(PartIdx, value.Color, value.Fresnel)
+  end
 end
 
 function BP_CharacterFashion_C:ChangeCharHair(HairId)
-  rawset(self, "HideHatByHair", false)
+  RemoveAccessoryHideTag(self, CommonConst.CharAccessoryTypes.Hat, CommonConst.DataType.Hair)
   rawset(self, "CurrentHairId", HairId)
   local Owner = self:GetOwner()
   if not Owner then
@@ -212,8 +245,17 @@ function BP_CharacterFashion_C:ChangeCharHair(HairId)
   end
   local HairType = CommonConst.DataType.Hair
   local DefaultHairId = Owner.DefaultCharPartId:Find(HairType)
+  if 2101 == HairId and Owner.CurrentSkinId == 210102 or 5101 == HairId and Owner.CurrentSkinId == 510101 or 5101 == HairId and Owner.CurrentSkinId == 51010010 then
+    HairId = DefaultHairId
+    rawset(self, "CurrentHairId", HairId)
+  end
   local HairData = DataMgr.Hair[HairId]
+  if HairData and HairData.IsHideHat then
+    AddAccessoryHideTag(self, CommonConst.CharAccessoryTypes.Hat, CommonConst.DataType.Hair)
+  end
   if self.InitWithCombinePart then
+    Owner:DetachSuitItem(HairType)
+    Owner:DeactivatePartMeshComp(HairType)
     if not HairData then
       if not self:IsHideHiarByAnyAccessory() then
         table.insert(self.InitPartIds, DefaultHairId)
@@ -225,7 +267,8 @@ function BP_CharacterFashion_C:ChangeCharHair(HairId)
     end
     local CharPartId
     if HairData.LinkAccessory then
-      CharPartId = GetCharPartIdByAccessoryId(HairData.LinkAccessory)
+      self:ChangeAccessory(HairData.LinkAccessory, HairType)
+      return
     elseif HairData.CharPartId then
       CharPartId = HairData.CharPartId
     end
@@ -244,8 +287,8 @@ function BP_CharacterFashion_C:ChangeCharHair(HairId)
     end
     Owner:DeactivatePartMeshComp(HairType)
     if HairData.IsHideHat then
-      rawset(self, "HideHatByHair", true)
-      self:ChangeAccessory(-1, CommonConst.CharAccessoryTypes.Hat)
+      AddAccessoryHideTag(self, CommonConst.CharAccessoryTypes.Hat, CommonConst.DataType.Hair)
+      self:ChangeAccessory(DataMgr.GlobalConstant.EmptyCharAccessoryID.ConstantValue, CommonConst.CharAccessoryTypes.Hat)
     end
     if HairData.LinkAccessory then
       self:ChangeAccessory(HairData.LinkAccessory, HairType)
@@ -413,12 +456,14 @@ function BP_CharacterFashion_C:ChangePartColor(PartIdx, Color, Fresnel)
 end
 
 function BP_CharacterFashion_C:InitHairColors(Colors)
+  rawset(self, "CurrentHairColors", Colors)
+  rawset(self, "RealHairPartColors", {})
   if not Colors then
     return
   end
   local SwatchData = DataMgr.Swatch
   local Color = FLinearColor()
-  for i = 1, #Colors - 1 do
+  for i = 1, #Colors do
     local ColorId = Colors[i]
     local PartIdx = i
     local ColorData = SwatchData[ColorId]
@@ -445,6 +490,7 @@ local HairColorFuncNames = {
 }
 
 function BP_CharacterFashion_C:ChangeHairPartColor(PartIdx, Color, Fresnel)
+  self.RealHairPartColors[PartIdx] = {Color = Color, Fresnel = Fresnel}
   local FunctionName = HairColorFuncNames[PartIdx]
   local Func = self[FunctionName]
   if Func then
@@ -479,7 +525,7 @@ function BP_CharacterFashion_C:ChangeAccessory(AccessoryId, AccessoryType, Trans
     self:SetHideHiarByAccessory(AccessoryType, false)
     self:RecoverHairMesh()
   end
-  if AccessoryType == CommonConst.CharAccessoryTypes.Hat and rawget(self, "HideHatByHair") then
+  if IsAccessoryHiddenByAnyTag(self, AccessoryType) then
     RemoveType2Id(self, AccessoryType)
     Owner:DeactivatePartMeshComp(AccessoryType)
     return
@@ -524,7 +570,7 @@ function BP_CharacterFashion_C:ChangeAccessory(AccessoryId, AccessoryType, Trans
     end
     return
   end
-  if Data.IsTail and not rawget(self, "HideHatByHair") then
+  if Data.IsTail and not IsAccessoryHiddenByAnyTag(self, AccessoryType) then
     self:SetHideHiarByAccessory(AccessoryType, true)
     Owner:DeactivatePartMeshComp(CommonConst.DataType.Hair)
   end
@@ -629,6 +675,33 @@ function BP_CharacterFashion_C:AddAccessoryParameter(AccessoryId, Paths, SocketN
   end
   if Data.VisualEffectId then
     VisualEffectIds:Add(Data.VisualEffectId)
+  end
+end
+
+function BP_CharacterFashion_C:GetCurrentHairMeshName()
+  local HairData = DataMgr.Hair[rawget(self, "CurrentHairId")]
+  if nil == HairData then
+    return
+  end
+  local ModelPath
+  if nil == HairData.CharPartId then
+    if HairData.LinkAccessory then
+      local CharAccessoryData = DataMgr.CharAccessory[HairData.LinkAccessory]
+      ModelPath = CharAccessoryData and CharAccessoryData.ModelPath
+    end
+  else
+    local CharPartModelData = DataMgr.CharPartModel[HairData.CharPartId]
+    ModelPath = CharPartModelData and CharPartModelData.PartPath
+  end
+  if ModelPath then
+    local Res = string.split(ModelPath, ".")
+    local MeshName = Res[#Res] or ""
+    local Len = #MeshName
+    local LastChar = string.sub(MeshName, Len, Len)
+    if "'" == LastChar then
+      MeshName = string.sub(MeshName, 1, Len - 1)
+    end
+    return MeshName
   end
 end
 

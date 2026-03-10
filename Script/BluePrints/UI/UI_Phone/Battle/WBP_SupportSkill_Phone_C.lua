@@ -37,7 +37,7 @@ function SupportSkill_Phone_C:RefreshSupportSkillIcon()
   self.IsInit = true
   self.SkillId = DataMgr.BattlePet[BattlePet.BattlePetId].SupportSkillId
   self:RefreshButtonStyle()
-  if not self.OwnerPlayer:CheckSkillInActive(ESkillName.Skill3) then
+  if self.OwnerPlayer:CheckSkillInActive(ESkillName.Skill3) then
     DebugPrint("RefreshSupportSkillIcon时Skill3被禁用!!!")
     return
   end

@@ -707,6 +707,7 @@ end
 function M:InitBtnInfo()
   local DispatchState = self.Dispatch.State
   if DispatchState == CommonConst.DispatchState.Unlock then
+    self:StopAnimation(self.Progessing)
     self:IsShowExtraText(true)
     self:PlayAnimation(self.Initial)
     self.Buff:SetVisibility(ESlateVisibility.Collapsed)

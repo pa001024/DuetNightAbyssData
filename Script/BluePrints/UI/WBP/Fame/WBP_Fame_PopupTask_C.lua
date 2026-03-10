@@ -184,10 +184,11 @@ function M:OnAcceptBtnClicked()
       if Ret == ErrorCode.RET_SUCCESS then
         self.Parent.RefreshRecurringTaskDetail(self.Parent)
         self:PlayAnimation(self.Click)
-      elseif Ret == ErrorCode.RET_REGION_REPUTATION_WEEK_EXP_LIMIT then
-        UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("ReputationExp_AchievedWeekLimit"))
-      elseif Ret == ErrorCode.RET_REGION_REPUTATION_LEVEL_MAX then
-        UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("Reputation_MaxLevel_01"))
+        return
+      end
+      local Error = DataMgr.ErrorCode[Ret]
+      if nil ~= Error then
+        UIManager(self):ShowError(Ret, 1.5)
       else
         UIManager(self):ShowUITip(UIConst.Tip_CommonToast, string.format("ErrorCode :%d", Ret))
       end

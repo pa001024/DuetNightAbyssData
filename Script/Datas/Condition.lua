@@ -10400,6 +10400,101 @@ return ReadOnly("Condition", {
     ConditionText = "UI_Locked_Des_4030002",
     Remark = "购买龙坐骑"
   },
+  [4030003] = {
+    ConditionId = 4030003,
+    ConditionLogic = "OR",
+    ConditionMap = {
+      HaveItem = {
+        {
+          "Resource",
+          41014,
+          1
+        },
+        {
+          "Resource",
+          41017,
+          1
+        },
+        {
+          "Resource",
+          41018,
+          1
+        },
+        {
+          "Resource",
+          41020,
+          1
+        },
+        {
+          "Resource",
+          41021,
+          1
+        },
+        {
+          "Resource",
+          41022,
+          1
+        },
+        {
+          "Resource",
+          41032,
+          1
+        },
+        {
+          "Resource",
+          41040,
+          1
+        },
+        {
+          "Resource",
+          41041,
+          1
+        }
+      }
+    },
+    ConditionText = "UI_Locked_Des_4030003",
+    Remark = "获得截至1.2的任一红色轮盘动作"
+  },
+  [4030004] = {
+    ConditionId = 4030004,
+    ConditionLogic = "AND",
+    ConditionMap = {
+      HaveItem = {
+        {
+          "WeaponSkin",
+          3010205,
+          1
+        },
+        {
+          "WeaponSkin",
+          3010406,
+          1
+        },
+        {
+          "WeaponSkin",
+          3010108,
+          1
+        },
+        {
+          "WeaponSkin",
+          3010707,
+          1
+        },
+        {
+          "WeaponSkin",
+          3010804,
+          1
+        },
+        {
+          "WeaponSkin",
+          3010607,
+          1
+        }
+      }
+    },
+    ConditionText = "UI_Locked_Des_4030004",
+    Remark = "获得1.2所有6个糖葫芦武器皮肤"
+  },
   [10020106] = {
     ConditionId = 10020106,
     ConditionLogic = "AND",

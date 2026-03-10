@@ -104,7 +104,7 @@ function ProgressSnapShotComponent:RecordProgressData()
   if not self:CheckProgressSnapShotEnable() then
     return
   end
-  local ResData = self:GenerateProgressData("OnBattle")
+  local ResData, _Data = self:GenerateProgressData("OnBattle")
   UE4.UGameplayStatics.GetGameInstance(self):ClearProgressData()
   GWorld:GetAvatar():SaveProgressData(ResData)
 end
@@ -260,7 +260,7 @@ function ProgressSnapShotComponent:GenerateProgressData(CurStage)
     CurStage = CurStage
   }
   PrintTable(ResData, 6)
-  return ResData
+  return ResData, TmpDungeonSnapShotData
 end
 
 function ProgressSnapShotComponent:RecoverProgressData()
@@ -665,9 +665,24 @@ function ProgressSnapShotComponent:RougeRecoverProgressData()
       self:PostCustomEvent(GameModeEvent)
     end
   end
-  if ProgressData.PassRoomExtraInfo.IsRougeFinished and 0 ~= GWorld.RougeLikeManager.StoryId then
-    DebugPrint("ProgressSnapShotComponent: 恢复触发通关Story", GWorld.RougeLikeManager.StoryId, "是否通关:", ProgressData.PassRoomExtraInfo.IsWin)
-    self:ShowFinishRougeStory(ProgressData.PassRoomExtraInfo.IsWin)
+  if ProgressData.PassRoomExtraInfo.IsRougeFinished then
+    if 0 ~= GWorld.RougeLikeManager.StoryId then
+      DebugPrint("ProgressSnapShotComponent: 恢复触发通关Story", GWorld.RougeLikeManager.StoryId, "是否通关:", ProgressData.PassRoomExtraInfo.IsWin)
+      self:ShowFinishRougeStory(ProgressData.PassRoomExtraInfo.IsWin)
+    else
+      DebugPrint("ProgressSnapShotComponent: 恢复直接通关! 是否通关:", ProgressData.PassRoomExtraInfo.IsWin)
+      local LoadingUI = GWorld.GameInstance:GetLoadingUI()
+      if LoadingUI then
+        EventManager:AddEvent(EventID.CloseLoading, self, function()
+          EventManager:RemoveEvent(EventID.CloseLoading, self)
+          self:AddTimer(5, function()
+            self:TriggerRealFinish(ProgressData.PassRoomExtraInfo.IsWin)
+          end)
+        end)
+      else
+        self:TriggerRealFinish(ProgressData.PassRoomExtraInfo.IsWin)
+      end
+    end
   end
 end
 

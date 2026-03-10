@@ -125,7 +125,7 @@ function RaidSeason:IsRaidTime()
 end
 
 function RaidSeason:IsBaned()
-  return 1 == self.BanState
+  return self.BanState >= 1
 end
 
 function RaidSeason:GetRaidGoupId()

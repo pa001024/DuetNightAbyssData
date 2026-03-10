@@ -385,6 +385,10 @@ end
 
 function M:SetupInitialMountsPreview(ItemData)
   local MountData = DataMgr.Mount[ItemData.TypeId]
+  local Player = self.ActorController:GetPlayerActor()
+  self.ActorController:ChangeCharAppearance({
+    SkinId = Player.CurrentRoleId
+  })
   self.ActorController:SetArmoryCameraTag(MountData.CameraName or CommonConst.ArmoryType.Char, "", "")
   self.ActorController:HidePlayerOnMount(false)
   self.ActorController:CreateMount(ItemData.TypeId)
@@ -570,6 +574,10 @@ function M:UpdateToMountsPreview(ItemData)
   self:SetupDefaultCharacterModel()
   self.IsRiderMount = true
   self.ActorController:DestroyMount()
+  local Player = self.ActorController:GetPlayerActor()
+  self.ActorController:ChangeCharAppearance({
+    SkinId = Player.CurrentRoleId
+  })
   self.ActorController:HidePlayerOnMount(false)
   self.ActorController:CreateMount(ItemData.TypeId)
   local MountData = DataMgr.Mount[ItemData.TypeId]
@@ -831,6 +839,7 @@ function M:SetCameraToDefault()
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
   local PreviewController = self.ActorController
   if Controller and Player and PreviewController then
+    self:CloseMVPSequence()
     Controller:SetViewTargetWithBlend(Player)
     self.CurrentCameraState = "Default"
   end
@@ -846,8 +855,16 @@ function M:SetCameraToPreviewActor()
     local PreviewTargetActor = PreviewController:GetViewTarget()
     if PreviewTargetActor then
       Controller:SetViewTargetWithBlend(PreviewTargetActor)
-      self.CurrentCameraState = "Preview"
     end
+  end
+  self.CurrentCameraState = "Preview"
+end
+
+function M:ResetWeaponCamera()
+  if self.ActorController then
+    self.ActorController.ExCameraOffset = self.WeaponCameraOffset
+    self.ActorController:SetSingleWeaponCamera(self.Params.Target, true)
+    self.ActorController.ArmoryHelper.EnableCameraScrolling = false
   end
 end
 
@@ -861,7 +878,6 @@ function M:DestroyPreviewActor()
   if self.ActorController then
     self.ActorController:DestroyMount()
     self.ActorController:OnDestruct()
-    self.ActorController:TryDestroyActors()
     self.ActorController = nil
   end
 end

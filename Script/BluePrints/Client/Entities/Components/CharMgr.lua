@@ -96,7 +96,7 @@ function Component:_OnPropChangeOtherCharHairs(Keys)
   if not OtherCharHairs then
     return
   end
-  for HairId, Hair in pairs(OtherCharHairs or {}) do
+  for Hair, HairId in pairs(OtherCharHairs or {}) do
     if CharModel:GetCharIdByHairId(HairId) == nil then
       CharModel:OnNewCharHairObtained(HairId, CharId)
       EventManager:FireEvent(EventID.OnNewCharHairObtained, HairId, CharId)

@@ -10,7 +10,6 @@ local AnnounceCommon = {
     News = 3
   },
   ShowTag = {InLogin = 1, InGame = 2},
-  SpecialChannelName = {bilibili = 1, wegame = 1},
   PlatformName = string.lower(UE4.UUIFunctionLibrary.GetDevicePlatformName(GWorld.GameInstance)),
   AnnounceWeb = UEMPathFunctionLibrary.GetProjectSavedDirectory() .. "AnnounceWeb/",
   FontTypeMap = {

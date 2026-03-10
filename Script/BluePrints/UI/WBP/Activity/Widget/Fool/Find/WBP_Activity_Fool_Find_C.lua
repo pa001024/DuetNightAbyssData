@@ -56,6 +56,7 @@ function M:Construct()
   self.ClickCount = 0
   self.RemainingSeconds = 0
   self.UpdateTimerHandle = nil
+  self.bSuccess = false
   self:SetKeyboardFocus()
   self:SetInputType(UIUtils.UtilsGetCurrentInputType(), UIUtils.UtilsGetCurrentGamepadName())
   self:ListenInputTypeChanged()
@@ -76,7 +77,7 @@ function M:Destruct()
     self.FoolsDaySettlementUI:Close()
   end
   if self.OnCompleted then
-    self.OnCompleted[2](self.OnCompleted[1])
+    self.OnCompleted[2](self.OnCompleted[1], self.bSuccess)
   end
 end
 
@@ -233,7 +234,7 @@ function M:BeginGame()
   self.RemainingSeconds = self.LimitSeconds
   local Avatar = GWorld:GetAvatar()
   if Avatar then
-    Avatar:CallServerMethod("FoolsDayMiniGameStart")
+    Avatar:CallServerMethod("FoolsDayMiniGameStart", self.PhotoId)
   end
   AudioManager(self):PlaySystemUIBGM(self.BGMPathName, nil, self.BGMPathName)
   AudioManager(self):PlayUISound(self, self.CountdownBeginSoundPathName, nil, nil)
@@ -270,7 +271,7 @@ function M:EndGame(FindResult)
   self:RemoveTimer(self.UpdateTimerHandle)
   local Avatar = GWorld:GetAvatar()
   if Avatar then
-    Avatar:CallServerMethod("FoolsDayCompleteMiniGame", self.PhotoId, self.TransformId or -1, self.ClickCount, FindResult == EFindResult.Victory and 1 or 0)
+    Avatar:CallServerMethod("FoolsDayCompleteMiniGame", self.PhotoId, self.TransformId or -1, self.ClickCount, FindResult == EFindResult.Victory)
   end
   if FindResult == EFindResult.Abandoned then
     self.FindState = EFindState.Completed
@@ -297,6 +298,7 @@ function M:Settlement(bSuccess)
     return
   end
   self.FindState = EFindState.Settling
+  self.bSuccess = bSuccess
   AudioManager(self):SetEventSoundParam(self, self.BGMPathName, {state = 1})
   self.FoolsDaySettlementUI = UIManager(self):_CreateWidgetNew("FoolsDaySettlement")
   self.FoolsDaySettlementUI:Init(self.PhotoId, self.TransformId, self.LikeCountDetails, self.MyLikeRecord, bSuccess, self.ClickCount, {

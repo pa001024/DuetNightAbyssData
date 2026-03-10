@@ -109,6 +109,8 @@ function M:OnLoaded(...)
   self.bIsFocusable = true
   self.SquadFolding = true
   self.Title_Level:SetText(MatchTitle)
+  self.RemainTime = WAITING_MATCHING_TIME
+  self.TotalTime = WAITING_MATCHING_TIME
   self.StartTimeStamp = os.clock()
   self:SwitchState(nil, EnterState)
   self:PlayInitSound()
@@ -139,7 +141,7 @@ end
 
 function M:Tick(MyGeometry, InDeltaTime)
   self.Overridden.Tick(self, MyGeometry, InDeltaTime)
-  self:UpdateTimeProgress()
+  self:UpdateTimeProgress(InDeltaTime)
 end
 
 function M:SwitchState(OldState, NewState)
@@ -300,6 +302,7 @@ function M:SetState_WaitingMatchingWithCancel()
     end
     self:PlayCancelSound()
     self:Close()
+    EventManager:FireEvent(EventID.OnDisableEscOnDungeonLoading, false)
     EventManager:FireEvent(EventID.OnMatchStateChanged)
     UIManager(self):ShowUITip("CommonToastMain", GText("DUNGEONMATCH_CANCEL"), 1.5)
   end)
@@ -324,18 +327,16 @@ function M:SetState_WaitingEnterDungeon()
   self:SetBtnNo(false)
 end
 
-function M:UpdateTimeProgress()
+function M:UpdateTimeProgress(InDeltaTime)
   if self.StartTimeStamp and self.EndTimeStamp and self.StartTimeStamp < self.EndTimeStamp then
-    local NowTime = os.clock()
-    local ElapsedTime = NowTime - self.StartTimeStamp
-    local TotalTime = self.EndTimeStamp - self.StartTimeStamp
-    local RemainTime = self.EndTimeStamp - NowTime
-    RemainTime = RemainTime > 0 and RemainTime or 0
-    local Percent = ElapsedTime / TotalTime
+    self.RemainTime = self.RemainTime - InDeltaTime
+    self.RemainTime = self.RemainTime > 0 and self.RemainTime or 0
+    local ElapsedTime = self.TotalTime - self.RemainTime
+    local Percent = ElapsedTime / self.TotalTime
     local CanvasSlot = UE4.UWidgetLayoutLibrary.SlotAsCanvasSlot(self.Panel_Progress)
     local CurrentSize = CanvasSlot:GetSize()
     CanvasSlot:SetSize(FVector2D((1 - Percent) * PROGRESS_PERCENT_SIZE_X, CurrentSize.Y))
-    self.Text_Timing:SetText(string.format(GText("DUNGEON_TIME_REMAIN_FMT"), RemainTime))
+    self.Text_Timing:SetText(string.format(GText("DUNGEON_TIME_REMAIN_FMT"), self.RemainTime))
     if not self:HasFocusedDescendants() and TeamController:IsTeamPopupBarOpenInGamepad() then
       DebugPrint(LXYTag, WarningTag, "组队进本倒计时UI需要抢夺聚焦！！！！！！")
       self:SetFocus()

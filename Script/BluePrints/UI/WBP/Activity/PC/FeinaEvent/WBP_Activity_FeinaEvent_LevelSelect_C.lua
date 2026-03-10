@@ -4,7 +4,6 @@ local M = Class("BluePrints.UI.BP_UIState_C")
 
 function M:Construct()
   EventManager:AddEvent(EventID.OnGetFeiNaReward, self, self.OnGetFeiNaReward)
-  EventManager:FireEvent(EventID.OnLeaveActivityEntry)
 end
 
 function M:Destruct()
@@ -212,6 +211,7 @@ function M:CloseSelf()
   else
     self:PlayAnimation(self.Out)
     EventManager:FireEvent(EventID.OnReturnToActivityEntry)
+    EventManager:FireEvent(EventID.OnActivityEntryShowVisible)
   end
 end
 

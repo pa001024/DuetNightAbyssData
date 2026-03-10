@@ -628,7 +628,9 @@ function M:OnGoToShop()
     CallbackInfo = {
       Func = self.OnRechargeCallback,
       Obj = self
-    }
+    },
+    LeftGamepadKey = Const.GamepadFaceButtonUp,
+    ShowBKeyClose = true
   }, self)
 end
 

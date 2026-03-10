@@ -1134,4 +1134,11 @@ function BP_LevelLoader_C:GetExitLevelLocation()
   return nil
 end
 
+function BP_LevelLoader_C:GetLevelTransformById(Id)
+  if self.id2LevelLocationAndRotation[Id] then
+    return FTransform(self.id2LevelLocationAndRotation[Id][3], self.id2LevelLocationAndRotation[Id][2])
+  end
+  return nil
+end
+
 return BP_LevelLoader_C

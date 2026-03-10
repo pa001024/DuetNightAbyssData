@@ -16,22 +16,21 @@ T.RT_14 = {20200109}
 T.RT_15 = {20200110}
 T.RT_16 = {20200111}
 T.RT_17 = {20200112}
-T.RT_18 = {3}
-T.RT_19 = {20200115}
-T.RT_20 = {20200116}
-T.RT_21 = {20200117}
-T.RT_22 = {20200118}
-T.RT_23 = {250}
-T.RT_24 = {40}
-T.RT_25 = {20}
-T.RT_26 = {2}
-T.RT_27 = {20200113}
-T.RT_28 = {6}
-T.RT_29 = {7}
-T.RT_30 = {350}
-T.RT_31 = {50}
-T.RT_32 = {25}
-T.RT_33 = {20200114}
+T.RT_18 = {20200115}
+T.RT_19 = {20200116}
+T.RT_20 = {20200117}
+T.RT_21 = {20200118}
+T.RT_22 = {250}
+T.RT_23 = {40}
+T.RT_24 = {20}
+T.RT_25 = {2}
+T.RT_26 = {20200113}
+T.RT_27 = {7}
+T.RT_28 = {350}
+T.RT_29 = {50}
+T.RT_30 = {25}
+T.RT_31 = {3}
+T.RT_32 = {20200114}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -166,9 +165,9 @@ return ReadOnly("RecurringTask", {
     ReputationID = 1001,
     Resource = 2015,
     StarterQuestDes = "RegionReputation_RecurringTask_11",
-    Target = 3,
+    Target = 1,
     TargetId = T.RT_17,
-    Times = T.RT_18,
+    Times = T.RT_7,
     Type = 1
   },
   [1001012] = {
@@ -179,7 +178,7 @@ return ReadOnly("RecurringTask", {
     Resource = 2015,
     StarterQuestDes = "RegionReputation_RecurringTask_14",
     Target = 15,
-    TargetId = T.RT_19,
+    TargetId = T.RT_18,
     Times = T.RT_5,
     Type = 1
   },
@@ -191,7 +190,7 @@ return ReadOnly("RecurringTask", {
     Resource = 2015,
     StarterQuestDes = "RegionReputation_RecurringTask_15",
     Target = 15,
-    TargetId = T.RT_20,
+    TargetId = T.RT_19,
     Times = T.RT_5,
     Type = 1
   },
@@ -203,7 +202,7 @@ return ReadOnly("RecurringTask", {
     Resource = 2015,
     StarterQuestDes = "RegionReputation_RecurringTask_16",
     Target = 15,
-    TargetId = T.RT_21,
+    TargetId = T.RT_20,
     Times = T.RT_5,
     Type = 1
   },
@@ -215,12 +214,12 @@ return ReadOnly("RecurringTask", {
     Resource = 2015,
     StarterQuestDes = "RegionReputation_RecurringTask_17",
     Target = 5,
-    TargetId = T.RT_22,
+    TargetId = T.RT_21,
     Times = T.RT_9,
     Type = 1
   },
   [1001016] = {
-    ExpCount = T.RT_23,
+    ExpCount = T.RT_22,
     QuestId = 1001016,
     Rarity = 2,
     ReputationID = 1001,
@@ -228,11 +227,11 @@ return ReadOnly("RecurringTask", {
     StarterQuestDes = "RegionReputation_RecurringTask_01",
     Target = 40,
     TargetId = T.RT_2,
-    Times = T.RT_24,
+    Times = T.RT_23,
     Type = 1
   },
   [1001017] = {
-    ExpCount = T.RT_23,
+    ExpCount = T.RT_22,
     QuestId = 1001017,
     Rarity = 2,
     ReputationID = 1001,
@@ -240,11 +239,11 @@ return ReadOnly("RecurringTask", {
     StarterQuestDes = "RegionReputation_RecurringTask_02",
     Target = 20,
     TargetId = T.RT_4,
-    Times = T.RT_25,
+    Times = T.RT_24,
     Type = 1
   },
   [1001018] = {
-    ExpCount = T.RT_23,
+    ExpCount = T.RT_22,
     QuestId = 1001018,
     Rarity = 2,
     ReputationID = 1001,
@@ -252,11 +251,11 @@ return ReadOnly("RecurringTask", {
     StarterQuestDes = "RegionReputation_RecurringTask_03",
     Target = 2,
     TargetId = T.RT_6,
-    Times = T.RT_26,
+    Times = T.RT_25,
     Type = 1
   },
   [1001019] = {
-    ExpCount = T.RT_23,
+    ExpCount = T.RT_22,
     QuestId = 1001019,
     Rarity = 2,
     ReputationID = 1001,
@@ -268,7 +267,7 @@ return ReadOnly("RecurringTask", {
     Type = 1
   },
   [1001020] = {
-    ExpCount = T.RT_23,
+    ExpCount = T.RT_22,
     QuestId = 1001020,
     Rarity = 2,
     ReputationID = 1001,
@@ -276,11 +275,11 @@ return ReadOnly("RecurringTask", {
     StarterQuestDes = "RegionReputation_RecurringTask_05",
     Target = 20,
     TargetId = T.RT_10,
-    Times = T.RT_25,
+    Times = T.RT_24,
     Type = 1
   },
   [1001021] = {
-    ExpCount = T.RT_23,
+    ExpCount = T.RT_22,
     QuestId = 1001021,
     Rarity = 2,
     ReputationID = 1001,
@@ -288,11 +287,11 @@ return ReadOnly("RecurringTask", {
     StarterQuestDes = "RegionReputation_RecurringTask_06",
     Target = 20,
     TargetId = T.RT_12,
-    Times = T.RT_25,
+    Times = T.RT_24,
     Type = 1
   },
   [1001022] = {
-    ExpCount = T.RT_23,
+    ExpCount = T.RT_22,
     QuestId = 1001022,
     Rarity = 2,
     ReputationID = 1001,
@@ -300,11 +299,11 @@ return ReadOnly("RecurringTask", {
     StarterQuestDes = "RegionReputation_RecurringTask_07",
     Target = 20,
     TargetId = T.RT_13,
-    Times = T.RT_25,
+    Times = T.RT_24,
     Type = 1
   },
   [1001023] = {
-    ExpCount = T.RT_23,
+    ExpCount = T.RT_22,
     QuestId = 1001023,
     Rarity = 2,
     ReputationID = 1001,
@@ -312,11 +311,11 @@ return ReadOnly("RecurringTask", {
     StarterQuestDes = "RegionReputation_RecurringTask_08",
     Target = 20,
     TargetId = T.RT_14,
-    Times = T.RT_25,
+    Times = T.RT_24,
     Type = 1
   },
   [1001024] = {
-    ExpCount = T.RT_23,
+    ExpCount = T.RT_22,
     QuestId = 1001024,
     Rarity = 2,
     ReputationID = 1001,
@@ -324,11 +323,11 @@ return ReadOnly("RecurringTask", {
     StarterQuestDes = "RegionReputation_RecurringTask_09",
     Target = 20,
     TargetId = T.RT_15,
-    Times = T.RT_25,
+    Times = T.RT_24,
     Type = 1
   },
   [1001025] = {
-    ExpCount = T.RT_23,
+    ExpCount = T.RT_22,
     QuestId = 1001025,
     Rarity = 2,
     ReputationID = 1001,
@@ -336,71 +335,71 @@ return ReadOnly("RecurringTask", {
     StarterQuestDes = "RegionReputation_RecurringTask_10",
     Target = 20,
     TargetId = T.RT_16,
-    Times = T.RT_25,
+    Times = T.RT_24,
     Type = 1
   },
   [1001026] = {
-    ExpCount = T.RT_23,
+    ExpCount = T.RT_22,
     QuestId = 1001026,
     Rarity = 2,
     ReputationID = 1001,
     Resource = 2015,
     StarterQuestDes = "RegionReputation_RecurringTask_12",
-    Target = 6,
-    TargetId = T.RT_27,
-    Times = T.RT_28,
+    Target = 1,
+    TargetId = T.RT_26,
+    Times = T.RT_7,
     Type = 1
   },
   [1001027] = {
-    ExpCount = T.RT_23,
+    ExpCount = T.RT_22,
     QuestId = 1001027,
     Rarity = 2,
     ReputationID = 1001,
     Resource = 2015,
     StarterQuestDes = "RegionReputation_RecurringTask_14",
     Target = 20,
-    TargetId = T.RT_19,
-    Times = T.RT_25,
+    TargetId = T.RT_18,
+    Times = T.RT_24,
     Type = 1
   },
   [1001028] = {
-    ExpCount = T.RT_23,
+    ExpCount = T.RT_22,
     QuestId = 1001028,
     Rarity = 2,
     ReputationID = 1001,
     Resource = 2015,
     StarterQuestDes = "RegionReputation_RecurringTask_15",
     Target = 20,
-    TargetId = T.RT_20,
-    Times = T.RT_25,
+    TargetId = T.RT_19,
+    Times = T.RT_24,
     Type = 1
   },
   [1001029] = {
-    ExpCount = T.RT_23,
+    ExpCount = T.RT_22,
     QuestId = 1001029,
     Rarity = 2,
     ReputationID = 1001,
     Resource = 2015,
     StarterQuestDes = "RegionReputation_RecurringTask_16",
     Target = 20,
-    TargetId = T.RT_21,
-    Times = T.RT_25,
+    TargetId = T.RT_20,
+    Times = T.RT_24,
     Type = 1
   },
   [1001030] = {
-    ExpCount = T.RT_23,
+    ExpCount = T.RT_22,
     QuestId = 1001030,
     Rarity = 2,
     ReputationID = 1001,
     Resource = 2015,
     StarterQuestDes = "RegionReputation_RecurringTask_17",
     Target = 7,
-    TargetId = T.RT_22,
-    Times = T.RT_29,
+    TargetId = T.RT_21,
+    Times = T.RT_27,
     Type = 1
   },
   [1001031] = {
-    ExpCount = T.RT_30,
+    ExpCount = T.RT_28,
     QuestId = 1001031,
     Rarity = 3,
     ReputationID = 1001,
@@ -408,11 +407,11 @@ return ReadOnly("RecurringTask", {
     StarterQuestDes = "RegionReputation_RecurringTask_01",
     Target = 50,
     TargetId = T.RT_2,
-    Times = T.RT_31,
+    Times = T.RT_29,
     Type = 1
   },
   [1001032] = {
-    ExpCount = T.RT_30,
+    ExpCount = T.RT_28,
     QuestId = 1001032,
     Rarity = 3,
     ReputationID = 1001,
@@ -420,11 +419,11 @@ return ReadOnly("RecurringTask", {
     StarterQuestDes = "RegionReputation_RecurringTask_02",
     Target = 25,
     TargetId = T.RT_4,
-    Times = T.RT_32,
+    Times = T.RT_30,
     Type = 1
   },
   [1001033] = {
-    ExpCount = T.RT_30,
+    ExpCount = T.RT_28,
     QuestId = 1001033,
     Rarity = 3,
     ReputationID = 1001,
@@ -432,11 +431,11 @@ return ReadOnly("RecurringTask", {
     StarterQuestDes = "RegionReputation_RecurringTask_03",
     Target = 3,
     TargetId = T.RT_6,
-    Times = T.RT_18,
+    Times = T.RT_31,
     Type = 1
   },
   [1001034] = {
-    ExpCount = T.RT_30,
+    ExpCount = T.RT_28,
     QuestId = 1001034,
     Rarity = 3,
     ReputationID = 1001,
@@ -448,7 +447,7 @@ return ReadOnly("RecurringTask", {
     Type = 1
   },
   [1001035] = {
-    ExpCount = T.RT_30,
+    ExpCount = T.RT_28,
     QuestId = 1001035,
     Rarity = 3,
     ReputationID = 1001,
@@ -460,7 +459,7 @@ return ReadOnly("RecurringTask", {
     Type = 1
   },
   [1001036] = {
-    ExpCount = T.RT_30,
+    ExpCount = T.RT_28,
     QuestId = 1001036,
     Rarity = 3,
     ReputationID = 1001,
@@ -472,7 +471,7 @@ return ReadOnly("RecurringTask", {
     Type = 1
   },
   [1001037] = {
-    ExpCount = T.RT_30,
+    ExpCount = T.RT_28,
     QuestId = 1001037,
     Rarity = 3,
     ReputationID = 1001,
@@ -484,7 +483,7 @@ return ReadOnly("RecurringTask", {
     Type = 1
   },
   [1001038] = {
-    ExpCount = T.RT_30,
+    ExpCount = T.RT_28,
     QuestId = 1001038,
     Rarity = 3,
     ReputationID = 1001,
@@ -496,7 +495,7 @@ return ReadOnly("RecurringTask", {
     Type = 1
   },
   [1001039] = {
-    ExpCount = T.RT_30,
+    ExpCount = T.RT_28,
     QuestId = 1001039,
     Rarity = 3,
     ReputationID = 1001,
@@ -508,7 +507,7 @@ return ReadOnly("RecurringTask", {
     Type = 1
   },
   [1001040] = {
-    ExpCount = T.RT_30,
+    ExpCount = T.RT_28,
     QuestId = 1001040,
     Rarity = 3,
     ReputationID = 1001,
@@ -520,62 +519,62 @@ return ReadOnly("RecurringTask", {
     Type = 1
   },
   [1001041] = {
-    ExpCount = T.RT_30,
+    ExpCount = T.RT_28,
     QuestId = 1001041,
     Rarity = 3,
     ReputationID = 1001,
     Resource = 2015,
     StarterQuestDes = "RegionReputation_RecurringTask_13",
-    Target = 10,
-    TargetId = T.RT_33,
-    Times = T.RT_11,
+    Target = 1,
+    TargetId = T.RT_32,
+    Times = T.RT_7,
     Type = 1
   },
   [1001042] = {
-    ExpCount = T.RT_30,
+    ExpCount = T.RT_28,
     QuestId = 1001042,
     Rarity = 3,
     ReputationID = 1001,
     Resource = 2015,
     StarterQuestDes = "RegionReputation_RecurringTask_14",
     Target = 25,
-    TargetId = T.RT_19,
-    Times = T.RT_32,
+    TargetId = T.RT_18,
+    Times = T.RT_30,
     Type = 1
   },
   [1001043] = {
-    ExpCount = T.RT_30,
+    ExpCount = T.RT_28,
     QuestId = 1001043,
     Rarity = 3,
     ReputationID = 1001,
     Resource = 2015,
     StarterQuestDes = "RegionReputation_RecurringTask_15",
     Target = 25,
-    TargetId = T.RT_20,
-    Times = T.RT_32,
+    TargetId = T.RT_19,
+    Times = T.RT_30,
     Type = 1
   },
   [1001044] = {
-    ExpCount = T.RT_30,
+    ExpCount = T.RT_28,
     QuestId = 1001044,
     Rarity = 3,
     ReputationID = 1001,
     Resource = 2015,
     StarterQuestDes = "RegionReputation_RecurringTask_16",
     Target = 25,
-    TargetId = T.RT_21,
-    Times = T.RT_32,
+    TargetId = T.RT_20,
+    Times = T.RT_30,
     Type = 1
   },
   [1001045] = {
-    ExpCount = T.RT_30,
+    ExpCount = T.RT_28,
     QuestId = 1001045,
     Rarity = 3,
     ReputationID = 1001,
     Resource = 2015,
     StarterQuestDes = "RegionReputation_RecurringTask_17",
     Target = 10,
-    TargetId = T.RT_22,
+    TargetId = T.RT_21,
     Times = T.RT_11,
     Type = 1
   },
@@ -706,9 +705,9 @@ return ReadOnly("RecurringTask", {
     ReputationID = 1002,
     Resource = 2016,
     StarterQuestDes = "RegionReputation_RecurringTask_11",
-    Target = 3,
+    Target = 1,
     TargetId = T.RT_17,
-    Times = T.RT_18,
+    Times = T.RT_7,
     Type = 1
   },
   [1002012] = {
@@ -719,7 +718,7 @@ return ReadOnly("RecurringTask", {
     Resource = 2016,
     StarterQuestDes = "RegionReputation_RecurringTask_14",
     Target = 15,
-    TargetId = T.RT_19,
+    TargetId = T.RT_18,
     Times = T.RT_5,
     Type = 1
   },
@@ -731,7 +730,7 @@ return ReadOnly("RecurringTask", {
     Resource = 2016,
     StarterQuestDes = "RegionReputation_RecurringTask_15",
     Target = 15,
-    TargetId = T.RT_20,
+    TargetId = T.RT_19,
     Times = T.RT_5,
     Type = 1
   },
@@ -743,7 +742,7 @@ return ReadOnly("RecurringTask", {
     Resource = 2016,
     StarterQuestDes = "RegionReputation_RecurringTask_16",
     Target = 15,
-    TargetId = T.RT_21,
+    TargetId = T.RT_20,
     Times = T.RT_5,
     Type = 1
   },
@@ -755,12 +754,12 @@ return ReadOnly("RecurringTask", {
     Resource = 2016,
     StarterQuestDes = "RegionReputation_RecurringTask_17",
     Target = 5,
-    TargetId = T.RT_22,
+    TargetId = T.RT_21,
     Times = T.RT_9,
     Type = 1
   },
   [1002016] = {
-    ExpCount = T.RT_23,
+    ExpCount = T.RT_22,
     QuestId = 1002016,
     Rarity = 2,
     ReputationID = 1002,
@@ -768,11 +767,11 @@ return ReadOnly("RecurringTask", {
     StarterQuestDes = "RegionReputation_RecurringTask_01",
     Target = 40,
     TargetId = T.RT_2,
-    Times = T.RT_24,
+    Times = T.RT_23,
     Type = 1
   },
   [1002017] = {
-    ExpCount = T.RT_23,
+    ExpCount = T.RT_22,
     QuestId = 1002017,
     Rarity = 2,
     ReputationID = 1002,
@@ -780,11 +779,11 @@ return ReadOnly("RecurringTask", {
     StarterQuestDes = "RegionReputation_RecurringTask_02",
     Target = 20,
     TargetId = T.RT_4,
-    Times = T.RT_25,
+    Times = T.RT_24,
     Type = 1
   },
   [1002018] = {
-    ExpCount = T.RT_23,
+    ExpCount = T.RT_22,
     QuestId = 1002018,
     Rarity = 2,
     ReputationID = 1002,
@@ -792,11 +791,11 @@ return ReadOnly("RecurringTask", {
     StarterQuestDes = "RegionReputation_RecurringTask_03",
     Target = 2,
     TargetId = T.RT_6,
-    Times = T.RT_26,
+    Times = T.RT_25,
     Type = 1
   },
   [1002019] = {
-    ExpCount = T.RT_23,
+    ExpCount = T.RT_22,
     QuestId = 1002019,
     Rarity = 2,
     ReputationID = 1002,
@@ -808,7 +807,7 @@ return ReadOnly("RecurringTask", {
     Type = 1
   },
   [1002020] = {
-    ExpCount = T.RT_23,
+    ExpCount = T.RT_22,
     QuestId = 1002020,
     Rarity = 2,
     ReputationID = 1002,
@@ -816,11 +815,11 @@ return ReadOnly("RecurringTask", {
     StarterQuestDes = "RegionReputation_RecurringTask_05",
     Target = 20,
     TargetId = T.RT_10,
-    Times = T.RT_25,
+    Times = T.RT_24,
     Type = 1
   },
   [1002021] = {
-    ExpCount = T.RT_23,
+    ExpCount = T.RT_22,
     QuestId = 1002021,
     Rarity = 2,
     ReputationID = 1002,
@@ -828,11 +827,11 @@ return ReadOnly("RecurringTask", {
     StarterQuestDes = "RegionReputation_RecurringTask_06",
     Target = 20,
     TargetId = T.RT_12,
-    Times = T.RT_25,
+    Times = T.RT_24,
     Type = 1
   },
   [1002022] = {
-    ExpCount = T.RT_23,
+    ExpCount = T.RT_22,
     QuestId = 1002022,
     Rarity = 2,
     ReputationID = 1002,
@@ -840,11 +839,11 @@ return ReadOnly("RecurringTask", {
     StarterQuestDes = "RegionReputation_RecurringTask_07",
     Target = 20,
     TargetId = T.RT_13,
-    Times = T.RT_25,
+    Times = T.RT_24,
     Type = 1
   },
   [1002023] = {
-    ExpCount = T.RT_23,
+    ExpCount = T.RT_22,
     QuestId = 1002023,
     Rarity = 2,
     ReputationID = 1002,
@@ -852,11 +851,11 @@ return ReadOnly("RecurringTask", {
     StarterQuestDes = "RegionReputation_RecurringTask_08",
     Target = 20,
     TargetId = T.RT_14,
-    Times = T.RT_25,
+    Times = T.RT_24,
     Type = 1
   },
   [1002024] = {
-    ExpCount = T.RT_23,
+    ExpCount = T.RT_22,
     QuestId = 1002024,
     Rarity = 2,
     ReputationID = 1002,
@@ -864,11 +863,11 @@ return ReadOnly("RecurringTask", {
     StarterQuestDes = "RegionReputation_RecurringTask_09",
     Target = 20,
     TargetId = T.RT_15,
-    Times = T.RT_25,
+    Times = T.RT_24,
     Type = 1
   },
   [1002025] = {
-    ExpCount = T.RT_23,
+    ExpCount = T.RT_22,
     QuestId = 1002025,
     Rarity = 2,
     ReputationID = 1002,
@@ -876,71 +875,71 @@ return ReadOnly("RecurringTask", {
     StarterQuestDes = "RegionReputation_RecurringTask_10",
     Target = 20,
     TargetId = T.RT_16,
-    Times = T.RT_25,
+    Times = T.RT_24,
     Type = 1
   },
   [1002026] = {
-    ExpCount = T.RT_23,
+    ExpCount = T.RT_22,
     QuestId = 1002026,
     Rarity = 2,
     ReputationID = 1002,
     Resource = 2016,
     StarterQuestDes = "RegionReputation_RecurringTask_12",
-    Target = 6,
-    TargetId = T.RT_27,
-    Times = T.RT_28,
+    Target = 1,
+    TargetId = T.RT_26,
+    Times = T.RT_7,
     Type = 1
   },
   [1002027] = {
-    ExpCount = T.RT_23,
+    ExpCount = T.RT_22,
     QuestId = 1002027,
     Rarity = 2,
     ReputationID = 1002,
     Resource = 2016,
     StarterQuestDes = "RegionReputation_RecurringTask_14",
     Target = 20,
-    TargetId = T.RT_19,
-    Times = T.RT_25,
+    TargetId = T.RT_18,
+    Times = T.RT_24,
     Type = 1
   },
   [1002028] = {
-    ExpCount = T.RT_23,
+    ExpCount = T.RT_22,
     QuestId = 1002028,
     Rarity = 2,
     ReputationID = 1002,
     Resource = 2016,
     StarterQuestDes = "RegionReputation_RecurringTask_15",
     Target = 20,
-    TargetId = T.RT_20,
-    Times = T.RT_25,
+    TargetId = T.RT_19,
+    Times = T.RT_24,
     Type = 1
   },
   [1002029] = {
-    ExpCount = T.RT_23,
+    ExpCount = T.RT_22,
     QuestId = 1002029,
     Rarity = 2,
     ReputationID = 1002,
     Resource = 2016,
     StarterQuestDes = "RegionReputation_RecurringTask_16",
     Target = 20,
-    TargetId = T.RT_21,
-    Times = T.RT_25,
+    TargetId = T.RT_20,
+    Times = T.RT_24,
     Type = 1
   },
   [1002030] = {
-    ExpCount = T.RT_23,
+    ExpCount = T.RT_22,
     QuestId = 1002030,
     Rarity = 2,
     ReputationID = 1002,
     Resource = 2016,
     StarterQuestDes = "RegionReputation_RecurringTask_17",
     Target = 7,
-    TargetId = T.RT_22,
-    Times = T.RT_29,
+    TargetId = T.RT_21,
+    Times = T.RT_27,
     Type = 1
   },
   [1002031] = {
-    ExpCount = T.RT_30,
+    ExpCount = T.RT_28,
     QuestId = 1002031,
     Rarity = 3,
     ReputationID = 1002,
@@ -948,11 +947,11 @@ return ReadOnly("RecurringTask", {
     StarterQuestDes = "RegionReputation_RecurringTask_01",
     Target = 50,
     TargetId = T.RT_2,
-    Times = T.RT_31,
+    Times = T.RT_29,
     Type = 1
   },
   [1002032] = {
-    ExpCount = T.RT_30,
+    ExpCount = T.RT_28,
     QuestId = 1002032,
     Rarity = 3,
     ReputationID = 1002,
@@ -960,11 +959,11 @@ return ReadOnly("RecurringTask", {
     StarterQuestDes = "RegionReputation_RecurringTask_02",
     Target = 25,
     TargetId = T.RT_4,
-    Times = T.RT_32,
+    Times = T.RT_30,
     Type = 1
   },
   [1002033] = {
-    ExpCount = T.RT_30,
+    ExpCount = T.RT_28,
     QuestId = 1002033,
     Rarity = 3,
     ReputationID = 1002,
@@ -972,11 +971,11 @@ return ReadOnly("RecurringTask", {
     StarterQuestDes = "RegionReputation_RecurringTask_03",
     Target = 3,
     TargetId = T.RT_6,
-    Times = T.RT_18,
+    Times = T.RT_31,
     Type = 1
   },
   [1002034] = {
-    ExpCount = T.RT_30,
+    ExpCount = T.RT_28,
     QuestId = 1002034,
     Rarity = 3,
     ReputationID = 1002,
@@ -988,7 +987,7 @@ return ReadOnly("RecurringTask", {
     Type = 1
   },
   [1002035] = {
-    ExpCount = T.RT_30,
+    ExpCount = T.RT_28,
     QuestId = 1002035,
     Rarity = 3,
     ReputationID = 1002,
@@ -1000,7 +999,7 @@ return ReadOnly("RecurringTask", {
     Type = 1
   },
   [1002036] = {
-    ExpCount = T.RT_30,
+    ExpCount = T.RT_28,
     QuestId = 1002036,
     Rarity = 3,
     ReputationID = 1002,
@@ -1012,7 +1011,7 @@ return ReadOnly("RecurringTask", {
     Type = 1
   },
   [1002037] = {
-    ExpCount = T.RT_30,
+    ExpCount = T.RT_28,
     QuestId = 1002037,
     Rarity = 3,
     ReputationID = 1002,
@@ -1024,7 +1023,7 @@ return ReadOnly("RecurringTask", {
     Type = 1
   },
   [1002038] = {
-    ExpCount = T.RT_30,
+    ExpCount = T.RT_28,
     QuestId = 1002038,
     Rarity = 3,
     ReputationID = 1002,
@@ -1036,7 +1035,7 @@ return ReadOnly("RecurringTask", {
     Type = 1
   },
   [1002039] = {
-    ExpCount = T.RT_30,
+    ExpCount = T.RT_28,
     QuestId = 1002039,
     Rarity = 3,
     ReputationID = 1002,
@@ -1048,7 +1047,7 @@ return ReadOnly("RecurringTask", {
     Type = 1
   },
   [1002040] = {
-    ExpCount = T.RT_30,
+    ExpCount = T.RT_28,
     QuestId = 1002040,
     Rarity = 3,
     ReputationID = 1002,
@@ -1060,62 +1059,62 @@ return ReadOnly("RecurringTask", {
     Type = 1
   },
   [1002041] = {
-    ExpCount = T.RT_30,
+    ExpCount = T.RT_28,
     QuestId = 1002041,
     Rarity = 3,
     ReputationID = 1002,
     Resource = 2016,
     StarterQuestDes = "RegionReputation_RecurringTask_13",
-    Target = 10,
-    TargetId = T.RT_33,
-    Times = T.RT_11,
+    Target = 1,
+    TargetId = T.RT_32,
+    Times = T.RT_7,
     Type = 1
   },
   [1002042] = {
-    ExpCount = T.RT_30,
+    ExpCount = T.RT_28,
     QuestId = 1002042,
     Rarity = 3,
     ReputationID = 1002,
     Resource = 2016,
     StarterQuestDes = "RegionReputation_RecurringTask_14",
     Target = 25,
-    TargetId = T.RT_19,
-    Times = T.RT_32,
+    TargetId = T.RT_18,
+    Times = T.RT_30,
     Type = 1
   },
   [1002043] = {
-    ExpCount = T.RT_30,
+    ExpCount = T.RT_28,
     QuestId = 1002043,
     Rarity = 3,
     ReputationID = 1002,
     Resource = 2016,
     StarterQuestDes = "RegionReputation_RecurringTask_15",
     Target = 25,
-    TargetId = T.RT_20,
-    Times = T.RT_32,
+    TargetId = T.RT_19,
+    Times = T.RT_30,
     Type = 1
   },
   [1002044] = {
-    ExpCount = T.RT_30,
+    ExpCount = T.RT_28,
     QuestId = 1002044,
     Rarity = 3,
     ReputationID = 1002,
     Resource = 2016,
     StarterQuestDes = "RegionReputation_RecurringTask_16",
     Target = 25,
-    TargetId = T.RT_21,
-    Times = T.RT_32,
+    TargetId = T.RT_20,
+    Times = T.RT_30,
     Type = 1
   },
   [1002045] = {
-    ExpCount = T.RT_30,
+    ExpCount = T.RT_28,
     QuestId = 1002045,
     Rarity = 3,
     ReputationID = 1002,
     Resource = 2016,
     StarterQuestDes = "RegionReputation_RecurringTask_17",
     Target = 10,
-    TargetId = T.RT_22,
+    TargetId = T.RT_21,
     Times = T.RT_11,
     Type = 1
   }

@@ -11,9 +11,18 @@ function M:OnLoaded(...)
   self.Text_Tip:SetText(GText("UI_RougeLike_End__ClickEmpty"))
   self:InitPresets()
   self.GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(self)
+  self:SetFocus()
   self:RefreshOpInfoByInputDevice(self.GameInputModeSubsystem:GetCurrentInputType(), self.GameInputModeSubsystem:GetCurrentGamepadName())
   self:InitButtonNavigation()
   self:PlayAnimation(self.In)
+  self.Key01:CreateGamepadKey(UIConst.GamePadImgKey.FaceButtonBottom)
+  self.Key01:CreateSubKeyDesc({
+    KeyInfoList = {
+      {Type = "Img", ImgShortPath = "B"}
+    },
+    Type = "Img",
+    Desc = GText("UI_Controller_Close")
+  })
   AudioManager(self):PlayUISound(nil, "event:/ui/activity/auto_chess_team_preset_in", "AutoChessPresetPage_InSound", nil)
 end
 
@@ -22,10 +31,14 @@ function M:InitButtonNavigation()
     self,
     function()
       if 0 == self.Preset_02.WS_Type:GetActiveWidgetIndex() then
-        self.Preset_02:OnClickPreset()
+        if not self.Preset_02.IsSelected then
+          self.Preset_02:OnClickPreset()
+        end
         return self.Preset_02.Btn_Click
-      else
+      elseif not self.Preset_02:OnClickAdd() then
         return self.Preset_02.Btn_Add
+      else
+        return self.Preset_02.Btn_Click
       end
     end
   })
@@ -33,10 +46,14 @@ function M:InitButtonNavigation()
     self,
     function()
       if 0 == self.Preset_01.WS_Type:GetActiveWidgetIndex() then
-        self.Preset_01:OnClickPreset()
+        if not self.Preset_01.IsSelected then
+          self.Preset_01:OnClickPreset()
+        end
         return self.Preset_01.Btn_Click
-      else
+      elseif not self.Preset_01:OnClickAdd() then
         return self.Preset_01.Btn_Add
+      else
+        return self.Preset_01.Btn_Click
       end
     end
   })
@@ -44,10 +61,14 @@ function M:InitButtonNavigation()
     self,
     function()
       if 0 == self.Preset_03.WS_Type:GetActiveWidgetIndex() then
-        self.Preset_03:OnClickPreset()
+        if not self.Preset_03.IsSelected then
+          self.Preset_03:OnClickPreset()
+        end
         return self.Preset_03.Btn_Click
-      else
+      elseif not self.Preset_03:OnClickAdd() then
         return self.Preset_03.Btn_Add
+      else
+        return self.Preset_03.Btn_Click
       end
     end
   })
@@ -55,10 +76,14 @@ function M:InitButtonNavigation()
     self,
     function()
       if 0 == self.Preset_02.WS_Type:GetActiveWidgetIndex() then
-        self.Preset_02:OnClickPreset()
+        if not self.Preset_02.IsSelected then
+          self.Preset_02:OnClickPreset()
+        end
         return self.Preset_02.Btn_Click
-      else
+      elseif not self.Preset_02:OnClickAdd() then
         return self.Preset_02.Btn_Add
+      else
+        return self.Preset_02.Btn_Click
       end
     end
   })
@@ -69,10 +94,14 @@ function M:InitButtonNavigation()
     self,
     function()
       if 0 == self.Preset_02.WS_Type:GetActiveWidgetIndex() then
-        self.Preset_02:OnClickPreset()
+        if not self.Preset_02.IsSelected then
+          self.Preset_02:OnClickPreset()
+        end
         return self.Preset_02.Btn_Click
-      else
+      elseif not self.Preset_02:OnClickAdd() then
         return self.Preset_02.Btn_Add
+      else
+        return self.Preset_02.Btn_Click
       end
     end
   })
@@ -80,10 +109,14 @@ function M:InitButtonNavigation()
     self,
     function()
       if 0 == self.Preset_01.WS_Type:GetActiveWidgetIndex() then
-        self.Preset_01:OnClickPreset()
+        if not self.Preset_01.IsSelected then
+          self.Preset_01:OnClickPreset()
+        end
         return self.Preset_01.Btn_Click
-      else
+      elseif not self.Preset_01:OnClickAdd() then
         return self.Preset_01.Btn_Add
+      else
+        return self.Preset_01.Btn_Click
       end
     end
   })
@@ -91,10 +124,14 @@ function M:InitButtonNavigation()
     self,
     function()
       if 0 == self.Preset_03.WS_Type:GetActiveWidgetIndex() then
-        self.Preset_03:OnClickPreset()
+        if not self.Preset_03.IsSelected then
+          self.Preset_03:OnClickPreset()
+        end
         return self.Preset_03.Btn_Click
-      else
+      elseif not self.Preset_03:OnClickAdd() then
         return self.Preset_03.Btn_Add
+      else
+        return self.Preset_03.Btn_Click
       end
     end
   })
@@ -102,10 +139,14 @@ function M:InitButtonNavigation()
     self,
     function()
       if 0 == self.Preset_02.WS_Type:GetActiveWidgetIndex() then
-        self.Preset_02:OnClickPreset()
+        if not self.Preset_02.IsSelected then
+          self.Preset_02:OnClickPreset()
+        end
         return self.Preset_02.Btn_Click
-      else
+      elseif not self.Preset_02:OnClickAdd() then
         return self.Preset_02.Btn_Add
+      else
+        return self.Preset_02.Btn_Click
       end
     end
   })
@@ -170,12 +211,19 @@ end
 
 function M:InitKeyboardView()
   self.Btn_Close:SetVisibility(UE4.ESlateVisibility.Visible)
+  self.Preset_01:InitKeyboardView()
+  self.Preset_02:InitKeyboardView()
+  self.Preset_03:InitKeyboardView()
+  self.WS_Type:SetActiveWidgetIndex(0)
 end
 
 function M:InitGamepadView()
   if self:HasFocusedDescendants() or self:HasAnyUserFocus() then
     self.Preset_01:SetFocus()
     self.Preset_01:InitGamepadView()
+    self.Preset_02:InitGamepadView()
+    self.Preset_03:InitGamepadView()
+    self.WS_Type:SetActiveWidgetIndex(1)
   end
 end
 

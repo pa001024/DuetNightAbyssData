@@ -21,10 +21,6 @@ function M:Construct()
   end)
   self.List_FoolOtherDetail.BP_OnEntryInitialized:Add(self, self.OnItemScrolledIntoView)
   self.List_FoolOtherDetail.BP_OnItemIsHoveredChanged:Add(self, self.OnItemHoveredChanged)
-  self:BindToAnimationFinished(self.Out, {
-    self,
-    self.OnOutAnimationFinished
-  })
 end
 
 function M:Destruct()
@@ -45,6 +41,11 @@ function M:EnterPage()
   self:InitTable()
   self.Parent:OnTabDetailInited(false)
   self:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  self:UnbindFromAnimationFinished(self.Out, {
+    self,
+    self.OnOutAnimationFinished
+  })
+  self:StopAllAnimations()
   self:PlayAnimation(self.In)
   self.bActive = true
 end
@@ -58,12 +59,21 @@ function M:LeavePage()
   self.CurrTabId = nil
   self.CurContent = nil
   self.bFetchingNewPhotos = false
+  self:StopAllAnimations()
+  self:BindToAnimationFinished(self.Out, {
+    self,
+    self.OnOutAnimationFinished
+  })
   self:PlayAnimation(self.Out)
   self.List_FoolOtherDetail:ClearListItems()
 end
 
 function M:OnOutAnimationFinished()
   self:SetVisibility(ESlateVisibility.Collapsed)
+  self:UnbindFromAnimationFinished(self.Out, {
+    self,
+    self.OnOutAnimationFinished
+  })
 end
 
 function M:InitTable()

@@ -15,4 +15,13 @@ function M:Initialize_Lua()
   end
 end
 
+function M:AnimCachePhysErrorReset_Lua(MeshComp)
+  if MeshComp then
+    local Mon = MeshComp:GetOwner()
+    if Mon and Mon.PhysStateErrorReset_Lua then
+      Mon:PhysStateErrorReset_Lua()
+    end
+  end
+end
+
 return M

@@ -1,3 +1,10 @@
+local T = {}
+T.RT_1 = {
+  120148,
+  120149,
+  120150
+}
+T.RT_2 = {160318}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -198,7 +205,7 @@ return ReadOnly("Hair", {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Hair008.T_Fashion_Hair008'",
     LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Hair008.T_Fashion_Hair008'",
     Rarity = 0,
-    ReleaseVersion = 149,
+    ReleaseVersion = 130,
     Sound = "SOUND_ITEM_NORMAL"
   },
   [3301] = {
@@ -224,12 +231,12 @@ return ReadOnly("Hair", {
     Sound = "SOUND_ITEM_NORMAL"
   },
   [4102] = {
-    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Hair027.T_Fashion_Hair027'",
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Zhiliu.T_Fashion_Zhiliu'",
     CharId = 4102,
     CharPartId = 410202,
     HairId = 4102,
-    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Hair027.T_Fashion_Hair027'",
-    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Hair027.T_Fashion_Hair027'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Zhiliu.T_Fashion_Zhiliu'",
+    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Zhiliu.T_Fashion_Zhiliu'",
     Rarity = 0,
     ReleaseVersion = 120,
     Sound = "SOUND_ITEM_NORMAL"
@@ -242,7 +249,7 @@ return ReadOnly("Hair", {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Yuming.T_Fashion_Yuming'",
     LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Yuming.T_Fashion_Yuming'",
     Rarity = 0,
-    ReleaseVersion = 130,
+    ReleaseVersion = 120,
     Sound = "SOUND_ITEM_NORMAL"
   },
   [4202] = {
@@ -411,6 +418,7 @@ return ReadOnly("Hair", {
   [11010121] = {
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     CharId = 1101,
+    GoShopTypeId = T.RT_1,
     HairId = 11010121,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     IsHideHair = true,
@@ -423,6 +431,7 @@ return ReadOnly("Hair", {
   [11030121] = {
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     CharId = 1103,
+    GoShopTypeId = T.RT_1,
     HairId = 11030121,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     IsHideHair = true,
@@ -435,6 +444,7 @@ return ReadOnly("Hair", {
   [15010121] = {
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     CharId = 1501,
+    GoShopTypeId = T.RT_1,
     HairId = 15010121,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     IsHideHair = true,
@@ -447,6 +457,7 @@ return ReadOnly("Hair", {
   [15020121] = {
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     CharId = 1502,
+    GoShopTypeId = T.RT_1,
     HairId = 15020121,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     IsHideHair = true,
@@ -459,6 +470,7 @@ return ReadOnly("Hair", {
   [15030121] = {
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     CharId = 1503,
+    GoShopTypeId = T.RT_1,
     HairId = 15030121,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     IsHideHair = true,
@@ -471,6 +483,7 @@ return ReadOnly("Hair", {
   [16010121] = {
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     CharId = 1601,
+    GoShopTypeId = T.RT_2,
     HairId = 16010121,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     IsHideHair = true,
@@ -483,6 +496,7 @@ return ReadOnly("Hair", {
   [16010221] = {
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     CharId = 160101,
+    GoShopTypeId = T.RT_2,
     HairId = 16010221,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     IsHideHair = true,
@@ -495,6 +509,7 @@ return ReadOnly("Hair", {
   [18010121] = {
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     CharId = 1801,
+    GoShopTypeId = T.RT_1,
     HairId = 18010121,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     IsHideHair = true,
@@ -507,6 +522,7 @@ return ReadOnly("Hair", {
   [21010121] = {
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     CharId = 2101,
+    GoShopTypeId = T.RT_1,
     HairId = 21010121,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     IsHideHair = true,
@@ -519,6 +535,7 @@ return ReadOnly("Hair", {
   [23010121] = {
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     CharId = 2301,
+    GoShopTypeId = T.RT_1,
     HairId = 23010121,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     IsHideHair = true,
@@ -531,6 +548,7 @@ return ReadOnly("Hair", {
   [24010121] = {
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     CharId = 2401,
+    GoShopTypeId = T.RT_1,
     HairId = 24010121,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     IsHideHair = true,
@@ -543,6 +561,7 @@ return ReadOnly("Hair", {
   [31010121] = {
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     CharId = 3101,
+    GoShopTypeId = T.RT_1,
     HairId = 31010121,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     IsHideHair = true,
@@ -555,6 +574,7 @@ return ReadOnly("Hair", {
   [31030121] = {
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     CharId = 3103,
+    GoShopTypeId = T.RT_1,
     HairId = 31030121,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     IsHideHair = true,
@@ -567,6 +587,7 @@ return ReadOnly("Hair", {
   [32010121] = {
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     CharId = 3201,
+    GoShopTypeId = T.RT_1,
     HairId = 32010121,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     IsHideHair = true,
@@ -579,6 +600,7 @@ return ReadOnly("Hair", {
   [33010121] = {
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     CharId = 3301,
+    GoShopTypeId = T.RT_1,
     HairId = 33010121,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     IsHideHair = true,
@@ -591,6 +613,7 @@ return ReadOnly("Hair", {
   [41010121] = {
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     CharId = 4101,
+    GoShopTypeId = T.RT_1,
     HairId = 41010121,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     IsHideHair = true,
@@ -603,6 +626,7 @@ return ReadOnly("Hair", {
   [41020121] = {
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     CharId = 4102,
+    GoShopTypeId = T.RT_1,
     HairId = 41020121,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     IsHideHair = true,
@@ -615,6 +639,7 @@ return ReadOnly("Hair", {
   [42010121] = {
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     CharId = 4201,
+    GoShopTypeId = T.RT_1,
     HairId = 42010121,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     IsHideHair = true,
@@ -627,6 +652,7 @@ return ReadOnly("Hair", {
   [42020121] = {
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     CharId = 4202,
+    GoShopTypeId = T.RT_1,
     HairId = 42020121,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     IsHideHair = true,
@@ -639,6 +665,7 @@ return ReadOnly("Hair", {
   [43010121] = {
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     CharId = 4301,
+    GoShopTypeId = T.RT_1,
     HairId = 43010121,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     IsHideHair = true,
@@ -651,6 +678,7 @@ return ReadOnly("Hair", {
   [51010121] = {
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     CharId = 5101,
+    GoShopTypeId = T.RT_1,
     HairId = 51010121,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     IsHideHair = true,
@@ -663,6 +691,7 @@ return ReadOnly("Hair", {
   [51020121] = {
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     CharId = 5102,
+    GoShopTypeId = T.RT_1,
     HairId = 51020121,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     IsHideHair = true,
@@ -675,6 +704,7 @@ return ReadOnly("Hair", {
   [53010121] = {
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     CharId = 5301,
+    GoShopTypeId = T.RT_1,
     HairId = 53010121,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     IsHideHair = true,
@@ -687,6 +717,7 @@ return ReadOnly("Hair", {
   [54010121] = {
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     CharId = 5401,
+    GoShopTypeId = T.RT_1,
     HairId = 54010121,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head46.T_Fashion_Head46'",
     IsHideHair = true,

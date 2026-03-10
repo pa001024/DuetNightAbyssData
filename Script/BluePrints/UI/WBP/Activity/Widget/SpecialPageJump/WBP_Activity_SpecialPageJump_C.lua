@@ -75,11 +75,13 @@ function M:InitUI()
   if IsValid(self.GameInputModeSubsystem) then
     self:UpdateUIByInputDevice(self.GameInputModeSubsystem:GetCurrentInputType())
   end
-  self.Key_RewardTitle:CreateCommonKey({
-    KeyInfoList = {
-      {Type = "Img", ImgShortPath = "LS"}
-    }
-  })
+  if self.Key_RewardTitle then
+    self.Key_RewardTitle:CreateCommonKey({
+      KeyInfoList = {
+        {Type = "Img", ImgShortPath = "LS"}
+      }
+    })
+  end
   self.Btn_Goto:SetDefaultGamePadImg("A")
   self.Btn_Reward:SetDefaultGamePadImg("X")
   self.IsSelectItem = false

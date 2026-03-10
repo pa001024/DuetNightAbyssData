@@ -66,6 +66,7 @@ function HardBossComponent:InitHardBoss(BossBattleId, DifficultyId)
   end
   self.LevelGameMode.IsInHardBossSettlement = false
   MissionIndicatorManager:TriggerAllIndicatorVisible(false)
+  self.EMGameState.IsInSettlementScene = nil
   self:SpawnHardBossInfo()
   if self.LevelGameMode.BossBattleInfo.StorylinePath then
     local function STLCallback()
@@ -146,6 +147,7 @@ function HardBossComponent:EndHardBossCallBack(IsWin)
   local Avatar = GWorld:GetAvatar()
   Avatar:TriggerQuestChain()
   MissionIndicatorManager:TriggerAllIndicatorVisible(true)
+  self.EMGameState.IsInSettlementScene = nil
 end
 
 function HardBossComponent:QuitHardBoss()

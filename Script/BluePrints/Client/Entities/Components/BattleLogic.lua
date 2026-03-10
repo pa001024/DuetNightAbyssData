@@ -88,6 +88,10 @@ function Component:RequestLeaveBattle(IsWin, bInterrupt)
       return
     end
     if GWorld:IsStandAlone() or GWorld:IsListenServer() then
+      if GWorld.GameInstance and GWorld.GameInstance:IsInTempScene() then
+        self.logger.debug(string.format("Client callback in temp scene!"))
+        return
+      end
       local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
       if self:IsInRougeLike() then
         print(_G.LogTag, "Avatar RequestLeaveBattle RougeLike", IsWin)

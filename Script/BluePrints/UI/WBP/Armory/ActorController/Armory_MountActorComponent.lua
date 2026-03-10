@@ -32,6 +32,19 @@ function M:CreateMount(MountId)
   end
   Player:EnableBattleMountOnDisplay(MountConfig.BattleMountId)
   self:PlayMountMontageOnDisplay()
+  self.CurRiddingMount = MountId
+end
+
+function M:RefreshMount()
+  if not self.CurRiddingMount then
+    return
+  end
+  local Player = self:GetPlayerActor()
+  if not Player then
+    return
+  end
+  local MountConfig = DataMgr.Mount[self.CurRiddingMount]
+  Player:EnableBattleMountOnDisplay(MountConfig.BattleMountId)
 end
 
 function M:PlayMountMontageOnDisplay()
@@ -88,8 +101,8 @@ function M:HidePlayerAndMount(IsHide)
   if not Player or not Player.CurMount then
     return
   end
-  self:HidePlayerActorOnDisplayMount("ActorController_HidePlayerBeforeMount", IsHide)
-  Player.CurMount:SetActorHideTag("ActorController_HidePlayerBeforeMount", IsHide)
+  self:HidePlayerActorOnDisplayMount("ActorController_HidePlayerPlayMount", IsHide)
+  Player.CurMount:SetActorHideTag("ActorController_HidePlayerPlayMount", IsHide)
 end
 
 function M:HidePlayerActorOnDisplayMount(Tag, IsHidden, bDontSaveTag)
@@ -128,6 +141,7 @@ function M:DestroyMount()
     return
   end
   Player:DisableBattleMount(true)
+  self.CurRiddingMount = nil
 end
 
 function M:GetMountActor()

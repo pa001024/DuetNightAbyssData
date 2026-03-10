@@ -1336,11 +1336,8 @@ function M:EnterStandalone(TicketId)
     UIUtils.ShowActionRecover(self)
     return
   end
-  if -1 ~= TicketId then
-    self.TicketId = TicketId
-    GWorld.GameInstance:SetTicketId(self.TicketId)
-  end
-  local StyleOfPlay = UIManager(self):GetUI("StyleOfPlay")
+  self.TicketId = TicketId
+  GWorld.GameInstance:SetTicketId(self.TicketId)
   AudioManager(self):PlayUISound(self, "event:/ui/common/map_click_enter_level", nil, nil)
   local Avatar = GWorld:GetAvatar()
   if Avatar then
@@ -2165,7 +2162,9 @@ function M:OnDungeonsUpdate()
     local Params = {}
     
     function Params.RightCallbackFunction()
-      self:OnReturnKeyDown()
+      if self then
+        self:OnReturnKeyDown()
+      end
     end
     
     UIManager(self):ShowCommonPopupUI(100157, Params)
@@ -2407,8 +2406,8 @@ function M:TeamMatchTimingEnd(arg)
   self:RefreshBtnState(arg)
 end
 
-function M:DisableEscOnDungeonLoading()
-  self.DisableEsc = true
+function M:DisableEscOnDungeonLoading(State)
+  self.DisableEsc = State
 end
 
 AssembleComponents(M)

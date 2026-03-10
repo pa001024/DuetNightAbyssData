@@ -676,6 +676,8 @@ return ReadOnly("Skin", {
     Des = "UI_Skin_Des_410201",
     DisplayPath = "FileMediaSource'/Game/Asset/UIVideo/Gacha/Gacha_GetSkin_Zhiliu01.Gacha_GetSkin_Zhiliu01'",
     GetDisplayType = 1,
+    GetSoundPath = "event:/ui/btc/cg_zhiliu_skin01",
+    GoShopTypeId = {140259},
     Icon = "/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Zhiliu01",
     LongIcon = "/Game/UI/Texture/Dynamic/Image/Gacha/Avatar/T_Gacha_AvatarZhiliu01",
     NpcSkinModelId = 8410299,
@@ -689,7 +691,8 @@ return ReadOnly("Skin", {
     SkinName = "UI_Skin_Name_410201",
     SkinTag = "Zhiliu01",
     Sound = "SOUND_ITEM_NORMAL",
-    UIDisplayTime = 10
+    UIDisplayTime = 10,
+    VideoCover = "Texture2D'/Game/UI/Texture/Dynamic/Image/SkinVideo/T_SkinVideo_Zhiliu.T_SkinVideo_Zhiliu'"
   },
   [510101] = {
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Avatar/T_Bust_Songlu01.T_Bust_Songlu01'",

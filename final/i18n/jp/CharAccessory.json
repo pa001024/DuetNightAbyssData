@@ -85,7 +85,7 @@
     "desc": "端正の象徴、礼儀の具現、あるいは、飛べない蝶。",
     "icon": "T_Fashion_Head_SilverBow",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "イベントで入手"
   },
   {
     "id": 10012,
@@ -691,7 +691,7 @@
     "id": 11004,
     "name": "降り注ぐ星の雨",
     "desc": "赤龍が燧木をくわえて、星の雨を盗み、人の世に蒔いたのか。",
-    "icon": "",
+    "icon": "T_Fashion_Fx13",
     "rarity": 5,
     "unlock": "プリズムの交換で獲得"
   },
@@ -699,9 +699,9 @@
     "id": 12001,
     "name": "釉薬の刻印",
     "desc": "青藍の茶碗に注ぐのは半生の風雨、手に掲げるのは山河そのもの。",
-    "icon": "T_Fashion_Hat03",
+    "icon": "T_Fashion_Hat03_01",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "ショップで獲得"
   },
   {
     "id": 12002,
@@ -709,7 +709,7 @@
     "desc": "大きすぎず小さすぎない帽子のつばは、朧な雨霧の中を歩くのにちょうどいい。",
     "icon": "T_Fashion_Hat04",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "ショップで獲得"
   },
   {
     "id": 12003,
@@ -717,7 +717,7 @@
     "desc": "理想と未来を蒼穹へ投げ放て。",
     "icon": "T_Fashion_Hat01",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "ショップで獲得"
   },
   {
     "id": 12004,
@@ -725,7 +725,7 @@
     "desc": "回廊の曲がり角で、リボンがそよ風に揺れる。",
     "icon": "T_Fashion_Hat02",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "ショップで獲得"
   },
   {
     "id": 12121,
@@ -1459,7 +1459,7 @@
     "id": 21004,
     "name": "星河を翔ける龍",
     "desc": "炎を追い、光を揺らして星々を動かし、天を垂れる銀河を龍となす。",
-    "icon": "",
+    "icon": "T_Fashion_Fx12",
     "rarity": 5,
     "unlock": "プリズムの交換で獲得"
   },
@@ -1669,7 +1669,7 @@
     "desc": "勝利ポーズを変更できます。",
     "icon": "T_Fashion_SettlementAction_01",
     "rarity": 5,
-    "unlock": ""
+    "unlock": "プリズムの交換で獲得"
   },
   {
     "id": 31002,
@@ -1677,7 +1677,7 @@
     "desc": "勝利ポーズを変更できます。",
     "icon": "T_Fashion_SettlementAction_02",
     "rarity": 5,
-    "unlock": ""
+    "unlock": "プリズムの交換で獲得"
   },
   {
     "id": 40001,
@@ -2034,7 +2034,7 @@
   {
     "id": 50002,
     "name": "銀燭の焔火",
-    "desc": "{空格}",
+    "desc": " ",
     "icon": "T_Fashion_Fx03",
     "rarity": 4,
     "unlock": "万華で獲得"
@@ -2042,15 +2042,15 @@
   {
     "id": 50003,
     "name": "銀燭のぬいぐるみ",
-    "desc": "{空格}",
+    "desc": " ",
     "icon": "T_Fashion_Fx11",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "プリズムの交換で獲得"
   },
   {
     "id": 60001,
-    "name": "{空格}",
-    "desc": "{空格}",
+    "name": " ",
+    "desc": " ",
     "icon": "",
     "rarity": 5,
     "unlock": ""
@@ -2083,7 +2083,7 @@
     "id": 70003,
     "name": "花火繚乱・マリーゴールド",
     "desc": "龍が焔を吹き、歓歌が鳴り響く。",
-    "icon": "T_Fashion_Head_YellowChick",
+    "icon": "T_Fashion_Fx10_02",
     "rarity": 5,
     "unlock": "プリズムの交換で獲得"
   },
@@ -2139,7 +2139,7 @@
     "id": 70031,
     "name": "花火繚乱・ペルシアンレッド",
     "desc": "龍が焔を吹き、歓歌が鳴り響く。",
-    "icon": "T_Fashion_Head_YellowChick",
+    "icon": "T_Fashion_Fx10_01",
     "rarity": 5,
     "unlock": "プリズムの交換で獲得"
   },
@@ -2147,7 +2147,7 @@
     "id": 70032,
     "name": "花火繚乱・アイボリー",
     "desc": "龍が焔を吹き、歓歌が鳴り響く。",
-    "icon": "T_Fashion_Head_YellowChick",
+    "icon": "T_Fashion_Fx10",
     "rarity": 5,
     "unlock": "プリズムの交換で獲得"
   },
@@ -2155,7 +2155,7 @@
     "id": 70033,
     "name": "花火繚乱・インディゴ",
     "desc": "龍が焔を吹き、歓歌が鳴り響く。",
-    "icon": "T_Fashion_Head_YellowChick",
+    "icon": "T_Fashion_Fx10_03",
     "rarity": 5,
     "unlock": "プリズムの交換で獲得"
   },

@@ -117,7 +117,7 @@ function AprilFoolDayRewardModel:SetRewardParams()
       RewardsGot = CommonQuestActivity[Info.QuestId].RewardsGot
     end
     local Item = {}
-    Item.SourceNum = Index
+    Item.ItemId = Index
     Item.CanReceive = false
     Item.RewardsGot = false
     if Progress < Target then

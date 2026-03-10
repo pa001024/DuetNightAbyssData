@@ -53,6 +53,10 @@ function M:OnLoaded(...)
   self.Index2EnemyCubeInfo = {}
   self.EnemyChessEquips = {}
   self.CameraPawn = nil
+  self.DeployChessState = {}
+  for CubeIndex = 0, Const.MaxChessNum - 1 do
+    self.DeployChessState[CubeIndex] = false
+  end
   self.GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
   self.GameInstance.bAutoChessDeploying = true
   self.bBannedEnemy = false
@@ -89,6 +93,12 @@ function M:OnLoaded(...)
     end
   end
   self.FocusChessCardId = ChessDatas[1].Id
+  self.List_Chess.OnCreateEmptyContent:Bind(self, function(self)
+    local ItemContent = NewObject(UIUtils.GetCommonItemContentClass())
+    ItemContent.IsEmpty = true
+    return ItemContent
+  end)
+  self.List_Chess:RequestFillEmptyContent()
   EventManager:AddEvent(EventID.OnDungeonEscClose, self, self.OnDungeonEscClose)
   self.bNoFocus = false
   self.FocusState = Const.GamepadFocusState.Focus1
@@ -102,14 +112,15 @@ end
 function M:Close()
   EventManager:RemoveEvent(EventID.OnDungeonEscClose, self)
   self:RemoveTimer(self.CountDownTimerName)
+  self:StopListeningForInputAction("OpenMenu", EInputEvent.IE_Pressed)
   self:StopListeningForInputAction("OpenMenu", EInputEvent.IE_Released)
   self.Super.Close(self)
 end
 
 function M:OnDungeonEscClose()
   self.bNoFocus = false
-  if self.WS_Battle_Controller then
-    self.WS_Battle_Controller:SetVisibility(ESlateVisibility.Visible)
+  if IsValid(self.GameInputModeSubsystem) then
+    self:RefreshOpInfoByInputDevice(self.GameInputModeSubsystem:GetCurrentInputType(), self.GameInputModeSubsystem:GetCurrentGamepadName())
   end
 end
 
@@ -126,13 +137,20 @@ function M:SelectChessCard(ChessId, bNoToast)
   end
   if Entry.Content.bForbidden == true then
     self.SelectChessCardId = nil
+    self:ExitChessBoard()
     if not bNoToast then
-      self.UIManager:ShowUITip("CommonToastMain", GText("UI_AutoChess_NoCostToast"))
+      if self.bChessBoardFull then
+        self.UIManager:ShowUITip("CommonToastMain", GText("UI_AutoChess_MonsterOverflow"))
+      else
+        self.UIManager:ShowUITip("CommonToastMain", GText("UI_AutoChess_NoCostToast"))
+      end
     end
-    if self.UsedDeployCost > self.TotalDeployCost then
-      self:PlayAnimation(self.Cost_Warning)
-    else
-      self:PlayAnimationReverse(self.Cost_Warning)
+    if not self.bChessBoardFull then
+      if self.UsedDeployCost > self.TotalDeployCost then
+        self:PlayAnimation(self.Cost_Warning)
+      else
+        self:PlayAnimationReverse(self.Cost_Warning)
+      end
     end
     return
   end
@@ -240,6 +258,9 @@ end
 
 function M:ShowChessInfo(CombatChessId, bIsEnemy, bIsCard)
   local CombatChessInfo = DataMgr.CombatChessInfo[CombatChessId]
+  if not CombatChessInfo then
+    return
+  end
   local CombatChessName = CombatChessInfo.CombatChessName
   self.MonsterInfo.Text_Name:SetText(GText(CombatChessName))
   if CombatChessInfo.PositionIcon then
@@ -268,16 +289,22 @@ function M:ShowChessInfo(CombatChessId, bIsEnemy, bIsCard)
   end
   if not bIsEnemy and not bIsCard then
     self.Btn_Delete:SetVisibility(ESlateVisibility.Visible)
-    self.Btn_Delete:PlayAnimation(self.Btn_Delete.In)
+    if not self.Btn_Delete:IsPlayingAnimation(self.Btn_Delete.In) then
+      self.Btn_Delete:PlayAnimation(self.Btn_Delete.In)
+    end
   else
     self.Btn_Delete:SetVisibility(ESlateVisibility.Collapsed)
   end
-  self:PlayAnimation(self.MonsterInfo_In)
+  if self.Panel_MonsterInfo:GetVisibility() ~= ESlateVisibility.SelfHitTestInvisible then
+    DebugPrint("WBP_Activity_AutoChess_BattlePage PlayAnimation MonsterInfo_In")
+    self:PlayAnimation(self.MonsterInfo_In)
+  end
   self:AdjustScrollable()
 end
 
 function M:HideChessInfo()
-  if self.Panel_MonsterInfo:GetVisibility() ~= ESlateVisibility.Collapsed then
+  if self.Panel_MonsterInfo:GetVisibility() ~= ESlateVisibility.Collapsed and not self.SelectChessCardId then
+    DebugPrint("WBP_Activity_AutoChess_BattlePage PlayAnimation MonsterInfo_Out")
     self:PlayAnimation(self.MonsterInfo_Out)
   end
   EventManager:FireEvent(EventID.OnAutoChessCubeChangeState, Const.CubeState.Xuanzhong)
@@ -387,9 +414,6 @@ function M:OnClickExit()
     self.bNoFocus = true
     self.UIManager:ShowCommonPopupUI(100096, Params, self)
   else
-    if self.WS_Battle_Controller then
-      self.WS_Battle_Controller:SetVisibility(ESlateVisibility.Collapsed)
-    end
     self.bNoFocus = true
     UIUtils.OpenEsc()
   end
@@ -474,7 +498,6 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
         if self.PickCubeIndex then
           self:ExitPick()
         end
-        self:RecoverListFocus()
         IsEventHandled = true
       elseif InKeyName == UIConst.GamePadKey.FaceButtonBottom then
         local CubeIndex = self.GamepadCubeIndex
@@ -524,17 +547,18 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
               self:ShowTips(false)
               self:BanEmemy(false)
             end
-          else
-            self:HideChessInfo()
-            if self.PickCubeIndex and self.PickCubeIndex ~= CubeIndex then
-              EventManager:FireEvent(EventID.OnAutoChessCubeChangeState, Const.CubeState.InitEffect)
-              EventManager:FireEvent(EventID.OnAutoChessCubeChangeState, Const.CubeState.Hover, CubeIndex, bIsEnemy)
-              EventManager:FireEvent(EventID.OnAutoChessCubeChangeState, Const.CubeState.UnHover, self.PickCubeIndex, bIsEnemy)
-              self.AutoChessFormation:SwitchMonsterPosition(self.PickCubeIndex, CubeIndex)
-              self.PickCubeIndex = nil
-              self:ShowTips(false)
-              self:BanEmemy(false)
-            end
+          elseif self.PickCubeIndex and self.PickCubeIndex ~= CubeIndex then
+            EventManager:FireEvent(EventID.OnAutoChessCubeChangeState, Const.CubeState.InitEffect)
+            EventManager:FireEvent(EventID.OnAutoChessCubeChangeState, Const.CubeState.Hover, CubeIndex, bIsEnemy)
+            EventManager:FireEvent(EventID.OnAutoChessCubeChangeState, Const.CubeState.UnHover, self.PickCubeIndex, bIsEnemy)
+            self.SelectChessId = self:GetChessByCubeIndex(self.PickCubeIndex, false)
+            self:ShowChessInfo(self.SelectChessId, false, false)
+            self.AutoChessFormation:SwitchMonsterPosition(self.PickCubeIndex, CubeIndex)
+            self:ShowTips(false)
+            self:BanEmemy(false)
+            self:MarkDeployChessState(CubeIndex, true)
+            self:MarkDeployChessState(self.PickCubeIndex, false)
+            self.PickCubeIndex = nil
           end
         end
         IsEventHandled = true
@@ -601,6 +625,9 @@ function M:DeleteSelectedChess()
   if not self.SelectCubeIndex then
     return
   end
+  if self.SelectChessCardId then
+    return
+  end
   local DeviceType = self.GameInputModeSubsystem:GetCurrentInputType()
   local bIsGamepad = DeviceType == ECommonInputType.Gamepad
   if bIsGamepad then
@@ -612,18 +639,30 @@ function M:DeleteSelectedChess()
     end
     self.SelectChessId = self:GetChessByCubeIndex(self.GamepadCubeIndex, self.bGamepadCubeEnemy)
   end
+  if not self:MarkDeployChessState(self.SelectCubeIndex, false) then
+    return
+  end
   EventManager:FireEvent(EventID.OnAutoChessRemoveMonster, self.SelectCubeIndex, false)
   if self.SelectChessId then
     local DeployCost = self:GetChessCost(self.SelectChessId)
     self:UpdateDeployCost(false, -DeployCost, -1)
   end
   self:HideChessInfo()
-  self:ExitPick()
   self:BanEmemy(false)
-  if bIsGamepad then
+  if bIsGamepad and not self.PickCubeIndex then
     EventManager:FireEvent(EventID.OnAutoChessCubeChangeState, Const.CubeState.Hover, self.SelectCubeIndex, false)
   else
     EventManager:FireEvent(EventID.OnAutoChessCubeChangeState, Const.CubeState.UnHover, self.SelectCubeIndex, false)
+  end
+  self:ExitPick()
+end
+
+function M:MarkDeployChessState(CubeIndex, bDeploy)
+  if self.DeployChessState[CubeIndex] == bDeploy then
+    return false
+  else
+    self.DeployChessState[CubeIndex] = bDeploy
+    return true
   end
 end
 
@@ -665,7 +704,6 @@ function M:UpdateDeployCost(bDirectSet, CostChange, ChessNumChange)
       self.ChessNum = self.ChessNum + ChessNumChange
     end
     if self.ChessNum == Const.MaxChessNum then
-      self.UIManager:ShowUITip("CommonToastMain", GText("UI_AutoChess_MonsterOverflow"))
       self.bChessBoardFull = true
     else
       self.bChessBoardFull = false
@@ -692,12 +730,6 @@ function M:UpdateDeployCost(bDirectSet, CostChange, ChessNumChange)
       end
     end
   end
-  self.List_Chess.OnCreateEmptyContent:Bind(self, function(self)
-    local ItemContent = NewObject(UIUtils.GetCommonItemContentClass())
-    ItemContent.IsEmpty = true
-    return ItemContent
-  end)
-  self.List_Chess:RequestFillEmptyContent()
   return bSuccess
 end
 
@@ -710,16 +742,47 @@ function M:RecoverListFocus()
     end
     local ChessId = Entry.Content.Data.Id
     if ChessId and ChessId == self.FocusChessCardId and not Entry:HasFocusedDescendants() and not Entry:HasAnyUserFocus() then
+      DebugPrint("RecoverListFocus Success ChessId: ", ChessId)
       bSuccess = true
+      self.List_Chess:BP_SetItemSelection(Entry.Content, true)
       Entry:SetFocus()
       if not Entry.Content.bForbidden then
-        Entry:StopAllAnimations()
         Entry:PlayAnimation(Entry.Hover)
       end
+      break
     end
   end
   if not bSuccess then
+    DebugPrint("RecoverListFocus Fail")
+    for Index, Content in pairs(self.List_Chess:GetListItems()) do
+      if Content and Content.Data then
+        local ChessId = Content.Data.Id
+        if ChessId and ChessId == self.FocusChessCardId then
+          self.List_Chess:ScrollIndexIntoView(Index)
+          break
+        end
+      end
+    end
+    self:AddTimer(0.001, function()
+      local AllDisplayedEntries = self.List_Chess:GetDisplayedEntryWidgets()
+      for _, Entry in pairs(AllDisplayedEntries) do
+        if not (Entry and Entry.Content) or not Entry.Content.Data then
+          return
+        end
+        local ChessId = Entry.Content.Data.Id
+        if ChessId and ChessId == self.FocusChessCardId and not Entry:HasFocusedDescendants() and not Entry:HasAnyUserFocus() then
+          bSuccess = true
+          Entry:SetFocus()
+          if not Entry.Content.bForbidden then
+            Entry:PlayAnimation(Entry.Hover)
+          end
+        end
+      end
+    end, false, 0, "WBP_AutoChessBattlePage_RecoverListFocus")
+  end
+  if not bSuccess and not self.bHadForceRecoverListFocus then
     self:AddTimer(0.001, self.RecoverListFocus, false, 0, "WBP_AutoChessBattlePage_RecoverListFocus")
+    self.bHadForceRecoverListFocus = true
   end
 end
 
@@ -735,6 +798,7 @@ function M:ResetLineup()
     self.bNoFocus = false
     self:ExitPick()
     for CubeIndex = 0, Const.MaxChessNum - 1 do
+      self:MarkDeployChessState(CubeIndex, false)
       EventManager:FireEvent(EventID.OnAutoChessRemoveMonster, CubeIndex, false)
     end
     self:UpdateDeployCost(true, 0, 0)
@@ -760,6 +824,7 @@ end
 
 function M:SetLineup(InfoList)
   for CubeIndex = 0, Const.MaxChessNum - 1 do
+    self:MarkDeployChessState(CubeIndex, false)
     EventManager:FireEvent(EventID.OnAutoChessRemoveMonster, CubeIndex, false)
   end
   local Cost = 0
@@ -767,6 +832,7 @@ function M:SetLineup(InfoList)
   for CubeIndex, CombatChessId in pairs(InfoList) do
     local CubeIndex = CubeIndex - 1
     Cost = Cost + self:GetChessCost(CombatChessId)
+    self:MarkDeployChessState(CubeIndex, true)
     EventManager:FireEvent(EventID.OnAutoChessCreateMonster, CombatChessId, CubeIndex, false, self:GetChessEquips(CombatChessId, false))
     ChessCount = ChessCount + 1
   end
@@ -809,9 +875,15 @@ function M:ActivateMonsters(IndexTable)
 end
 
 function M:TryStartBattle()
+  if self.bHadStartedBattle == true then
+    return
+  end
   self:PlaySound("event:/ui/activity/auto_chess_main_level_btn_click")
   if self.Btn_Start.Btn_Click:GetForbidden() then
     self.UIManager:ShowUITip("CommonToastMain", GText("UI_AutoChess_NoMonsterToast"))
+    return
+  end
+  if self.GameMode:TriggerDungeonComponentFun("IsMonsterCreating") then
     return
   end
   if self.UsedDeployCost > self.TotalDeployCost then
@@ -849,6 +921,8 @@ function M:TryStartBattle()
 end
 
 function M:RealStartBattle()
+  self.bHadStartedBattle = true
+  self.Btn_Start:PlayAnimation(self.Btn_Start.Click)
   self.GameInstance.bAutoChessDeploying = false
   self.bDeploying = false
   self.CameraPawn:SwitchInputState(true)
@@ -867,6 +941,9 @@ function M:RealStartBattle()
     self:MotivateCountDown()
   end, true, 0, self.CountDownTimerName)
   self:ShowTimeText(self.TotalCountDownTime)
+  self:ExitChessBoard()
+  self.SelectChessCardId = nil
+  self.PickCubeIndex = nil
 end
 
 function M:MotivateCountDown()
@@ -1007,7 +1084,7 @@ function M:InitButtonGamepadView()
         {Type = "Text", Text = "S"}
       },
       bLongPress = false,
-      Desc = GText("UI_CTL_MoveLR")
+      Desc = GText("UI_CTL_MoveTB")
     })
     local Key4 = self.UIManager:CreateWidget("/Game/UI/WBP/Common/Key/WBP_Com_KeyText.WBP_Com_KeyText", false)
     WrapBox:AddChild(Key4)
@@ -1025,7 +1102,7 @@ function M:InitButtonGamepadView()
         {Type = "Text", Text = "D"}
       },
       bLongPress = false,
-      Desc = GText("UI_CTL_MoveTB")
+      Desc = GText("UI_CTL_MoveLR")
     })
     local Key7 = self.UIManager:CreateWidget("/Game/UI/WBP/Common/Key/WBP_Com_KeyTextDesc.WBP_Com_KeyTextDesc", false)
     WrapBox:AddChild(Key7)
@@ -1056,7 +1133,7 @@ function M:InitButtonGamepadView()
     WrapBox:AddChild(Key1)
     Key1:CreateCommonKey({
       KeyInfoList = {
-        {Type = "Img", ImgShortPath = "R"}
+        {Type = "Img", ImgShortPath = "L"}
       },
       bLongPress = false,
       Desc = GText("UI_CTL_Move")
@@ -1065,7 +1142,7 @@ function M:InitButtonGamepadView()
     WrapBox:AddChild(Key2)
     Key2:CreateCommonKey({
       KeyInfoList = {
-        {Type = "Img", ImgShortPath = "L"}
+        {Type = "Img", ImgShortPath = "R"}
       },
       bLongPress = false,
       Desc = GText("UI_CTL_Camera")
@@ -1109,18 +1186,20 @@ function M:InitButtonGamepadView()
 end
 
 function M:SetFocusState(NewFocusState)
+  DebugPrint("WBP_AutoChessBattlePage SetFocusState: ", NewFocusState)
   local DeviceType = self.GameInputModeSubsystem:GetCurrentInputType()
   local bIsGamepad = DeviceType == ECommonInputType.Gamepad
   if self.WBox_Controller_Chess then
     if bIsGamepad then
       if NewFocusState == Const.GamepadFocusState.Focus1 then
-        self:AddTimer(0.1, function()
+        self:AddTimer(0.001, function()
           self:RecoverListFocus()
         end, false, 0, "WBP_AutoChessBattlePage_SetFocus1", true)
         self.Key_Chess_Edit:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
         self.Key_Chess_Move:SetVisibility(ESlateVisibility.Collapsed)
         self.Key_Chess_Back:SetVisibility(ESlateVisibility.Collapsed)
         self.Key_Chess_Confirm:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+        EventManager:FireEvent(EventID.OnAutoChessCubeChangeState, Const.CubeState.Xuanzhong)
       elseif NewFocusState == Const.GamepadFocusState.Focus2 then
         self:AddTimer(0.1, self.SetFocus, false, 0, "WBP_AutoChessBattlePage_SetFocus2", true)
         self:GamepadLocate(0, false)
@@ -1153,6 +1232,7 @@ function M:OnFocusReceived(MyGeometry, InFocusEvent)
     PressKey:OnButtonReleased()
   end
   self:SetFocusState(self.FocusState)
+  return UIUtils.Handled
 end
 
 function M:CountGamepadOnlyUI()
@@ -1201,13 +1281,13 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
   if self.BattleStatisticsTips then
     self.BattleStatisticsTips:RefreshUIInfoOnUpdateDevice()
   end
-  if not self:HasFocusedDescendants() and not self:HasAnyFocus() and self.bNoFocus then
-    return
+  local TopUI = UIManager(self):GetLastestAndFocusableUIWidgetObj()
+  if self == TopUI then
+    self:SetFocusState(self.FocusState)
   end
   if self.bDeploying then
     self:UpdateTipsKey()
   end
-  self:SetFocusState(self.FocusState)
   if CurInputDevice == ECommonInputType.Gamepad then
     self:SetGamepadOnlyUIVisibility(true)
     if self.Buff and self.Buff.WS_Controller then
@@ -1342,10 +1422,12 @@ function M:ClickChess(CubeIndex, bIsEnemy, CubeActor, ButtonOrNil)
         EventManager:FireEvent(EventID.OnAutoChessCubeChangeState, Const.CubeState.Hover, CubeIndex, bIsEnemy)
         EventManager:FireEvent(EventID.OnAutoChessCubeChangeState, Const.CubeState.UnHover, self.PickCubeIndex, bIsEnemy)
         self.AutoChessFormation:SwitchMonsterPosition(self.PickCubeIndex, CubeIndex)
-        self.PickCubeIndex = nil
         self:ShowTips(false)
         self:BanEmemy(false)
         self:SetFocusState(Const.GamepadFocusState.Focus1)
+        self:MarkDeployChessState(CubeIndex, true)
+        self:MarkDeployChessState(self.PickCubeIndex, false)
+        self.PickCubeIndex = nil
       end
     end
   end
@@ -1363,11 +1445,14 @@ end
 
 function M:ExitPick()
   if self.PickCubeIndex then
+    self:HideChessInfo()
     EventManager:FireEvent(EventID.OnAutoChessCubeChangeState, Const.CubeState.InitEffect)
+    EventManager:FireEvent(EventID.OnAutoChessCubeChangeState, Const.CubeState.Hover, self.PickCubeIndex, false)
     self.AutoChessFormation:OnCubeMonsterSelected(self.PickCubeIndex, false)
     self.PickCubeIndex = nil
     self:ShowTips(false)
-    self:HideChessInfo()
+    self:BanEmemy(false)
+    self:SetFocusState(Const.GamepadFocusState.Focus1)
   end
 end
 
@@ -1381,6 +1466,9 @@ function M:DeploySelfMonster(CubeIndex)
   local DeployCost = self:GetChessCost(self.SelectChessCardId)
   if not self:UpdateDeployCost(false, DeployCost, 1) then
     return false
+  end
+  if not self:MarkDeployChessState(CubeIndex, true) then
+    return
   end
   EventManager:FireEvent(EventID.OnAutoChessCreateMonster, self.SelectChessCardId, CubeIndex, false, self:GetChessEquips(self.SelectChessCardId, false))
   return true
@@ -1396,7 +1484,16 @@ function M:GamepadLocate(CubeIndex, bIsEnemy)
   end
   if not self:IsSpecifyChessEmpty(CubeIndex, bIsEnemy) then
     self.SelectChessId = self:GetChessByCubeIndex(CubeIndex, bIsEnemy)
-    self:ShowChessInfo(self.SelectChessId, bIsEnemy, false)
+    local bIsCard = self.SelectChessCardId and true or false
+    if self.PickCubeIndex and self.PickCubeIndex ~= CubeIndex then
+      bIsCard = true
+    end
+    self:ShowChessInfo(self.SelectChessId, bIsEnemy, bIsCard)
+  elseif self.SelectChessCardId then
+    self:ShowChessInfo(self.SelectChessCardId, bIsEnemy, true)
+  elseif self.PickCubeIndex then
+    local SelectChessId = self:GetChessByCubeIndex(self.PickCubeIndex, bIsEnemy)
+    self:ShowChessInfo(SelectChessId, bIsEnemy, true)
   else
     self:HideChessInfo()
   end
@@ -1468,7 +1565,6 @@ function M:GamepadLocateSelfFirstEmpty()
       return
     end
   end
-  self.UIManager:ShowUITip("CommonToastMain", GText("UI_AutoChess_MonsterOverflow"))
   self.bChessBoardFull = true
 end
 

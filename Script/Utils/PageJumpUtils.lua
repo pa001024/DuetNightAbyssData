@@ -148,7 +148,7 @@ function PageJumpUtils:GetItemAccess(ItemWidget, ItemId, ItemType, AccessKey, UI
     if not res then
       return
     end
-    self:ProcessAccessItem(AccessItem, NewText, self.UIPageName, AccessData.UIUnlockRuleId, JumpToPage, nil, nil, true)
+    self:ProcessAccessItem(AccessItem, NewText, self.UIPageName, AccessData.UIUnlockRuleId, JumpToPage)
     ItemWidget.Method:AddChild(AccessItem)
     return
   end
@@ -1594,23 +1594,6 @@ function PageJumpUtils:JumpToWalnutDungeonPage(WalnutType, WalnutId)
   }, nil, true)
 end
 
-function PageJumpUtils:JumpToStyleOfPlaySubUI(SubUIName, ...)
-  local GameInstance = GWorld.GameInstance
-  local UIManager = GameInstance:GetGameUIManager()
-  self:CloseFrontDialog()
-  local StyleOfPlay = UIManager:GetUIObj("StyleOfPlay")
-  if not StyleOfPlay then
-    StyleOfPlay = UIManager:LoadUINew("StyleOfPlay")
-    UIManager:AddToJumpPageDeque(StyleOfPlay)
-  else
-    UIManager:PlaceJumpUIToTop(StyleOfPlay, "StyleOfPlay")
-  end
-  local WidgetUI = StyleOfPlay:OpenSubUI(SubUIName)
-  if WidgetUI.SubUIJumpFunc then
-    WidgetUI:SubUIJumpFunc(...)
-  end
-end
-
 function PageJumpUtils:JumpToRougeMain(JumpType)
   local GameInstance = GWorld.GameInstance
   local UIManager = GameInstance:GetGameUIManager()
@@ -1845,6 +1828,10 @@ function PageJumpUtils:JumpToForgeCompendiumPathByDraftId(DraftId)
     UIManager:AddToJumpPageDeque(ForgeCompenduimPage)
     ForgeCompenduimPage:NavigateToTargetDraft(DraftId)
   end
+  local ConvertPage = UIManager:GetUI("ForgeConvertMain")
+  if ConvertPage then
+    ConvertPage:Close()
+  end
 end
 
 function PageJumpUtils:JumpToForgePageByDraftId(DraftId)
@@ -1929,10 +1916,10 @@ local function JumpToPageCheck(JumpToPageUIName)
         local OpenDescs = UIUnlockRuleInfo.OpenSystemDesc
         if #OpenConditionId == #OpenDescs then
           for _, Value in pairs(FailedIdIndex) do
-            UIManager:ShowUITip(UIConst.Tip_CommonToast, OpenDescs[Value])
+            UIManager(GWorld.GameInstance):ShowUITip(UIConst.Tip_CommonToast, OpenDescs[Value])
           end
         else
-          UIManager:ShowUITip(UIConst.Tip_CommonToast, OpenDescs[1])
+          UIManager(GWorld.GameInstance):ShowUITip(UIConst.Tip_CommonToast, OpenDescs[1])
         end
         return false
       end
@@ -2140,6 +2127,46 @@ function PageJumpUtils:JumpToAutoChessMain()
   local UIManager = GameInstance:GetGameUIManager()
   UIManager:LoadUINew(UIName, GameInstance.AutoChessMissionId)
   GameInstance.AutoChessMissionId = nil
+  return true
+end
+
+function PageJumpUtils:JumpToStyleOfPlaySubUI(SubUIName, ...)
+  local UIName = "StyleOfPlay"
+  if not JumpToPageCheck(UIName) then
+    return false
+  end
+  local GameInstance = GWorld.GameInstance
+  local UIManager = GameInstance:GetGameUIManager()
+  self:CloseFrontDialog()
+  local StyleOfPlay = UIManager:GetUIObj("StyleOfPlay")
+  if not StyleOfPlay then
+    StyleOfPlay = UIManager:LoadUINew("StyleOfPlay")
+    UIManager:AddToJumpPageDeque(StyleOfPlay)
+  else
+    UIManager:PlaceJumpUIToTop(StyleOfPlay, "StyleOfPlay")
+  end
+  local WidgetUI = StyleOfPlay:OpenSubUI(SubUIName)
+  if WidgetUI.SubUIJumpFunc then
+    WidgetUI:SubUIJumpFunc(...)
+  end
+  return true
+end
+
+function PageJumpUtils:JumpToStyleOfPlaySubUIForce(SubUIName, ...)
+  local GameInstance = GWorld.GameInstance
+  local UIManager = GameInstance:GetGameUIManager()
+  self:CloseFrontDialog()
+  local StyleOfPlay = UIManager:GetUIObj("StyleOfPlay")
+  if not StyleOfPlay then
+    StyleOfPlay = UIManager:LoadUINew("StyleOfPlay")
+    UIManager:AddToJumpPageDeque(StyleOfPlay)
+  else
+    UIManager:PlaceJumpUIToTop(StyleOfPlay, "StyleOfPlay")
+  end
+  local WidgetUI = StyleOfPlay:OpenSubUI(SubUIName)
+  if WidgetUI.SubUIJumpFunc then
+    WidgetUI:SubUIJumpFunc(...)
+  end
   return true
 end
 

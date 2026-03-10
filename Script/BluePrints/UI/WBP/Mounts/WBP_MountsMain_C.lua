@@ -514,6 +514,10 @@ function M:CreateMount()
     Char = Avatar.Chars[Avatar.CurrentChar]
   })
   self.ActorController:OnOpened()
+  local Player = self.ActorController:GetPlayerActor()
+  self.ActorController:ChangeCharAppearance({
+    SkinId = Player.CurrentRoleId
+  })
   self.ActorController:SetArmoryCameraTag(CommonConst.ArmoryType.Char)
   self.ActorController:HidePlayerOnMount(not self.IsRiderMount)
   self.ActorController:CreateMount(self.DisplayMountId)

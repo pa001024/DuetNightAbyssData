@@ -781,8 +781,8 @@ function WBP_Setting_PC_C:InitCommonTabInfo()
         for index, Cache in pairs(OptionTags) do
           OptionInfo = DataMgr.Option[Cache]
           local Region = OptionInfo.Region
-          if nil == RegionNames[Region] then
-            RegionNames[Region] = OptionInfo.RegionName
+          if nil == RegionNames[Region] and self:CheckOptionSpecialHide(Cache, OptionInfo.SpecialHide) then
+            RegionNames[Region] = OptionInfo.RegionName or ""
           end
           if RegionNums < Region then
             RegionNums = Region
@@ -978,11 +978,13 @@ function WBP_Setting_PC_C:OnTabSelected(TabWidget, NeedInit)
   if nil == self.SettingUIs[self.CurrentTab] then
     self.SettingUIs[self.CurrentTab] = {}
     for i = 1, self.CommonTabInfo[self.CurrentTab].Regions do
-      local SettingUI = self:CreateWidgetNew("SettingList")
-      self.ScrollBox_Option:AddChild(SettingUI)
-      local CanvasSlot = UE4.UWidgetLayoutLibrary.SlotAsScrollBoxSlot(SettingUI)
-      CanvasSlot:SetPadding(FMargin(0, 0, 0, 0))
-      self.SettingUIs[self.CurrentTab][i] = SettingUI
+      if self.CommonTabInfo[self.CurrentTab].RegionNames[i] then
+        local SettingUI = self:CreateWidgetNew("SettingList")
+        self.ScrollBox_Option:AddChild(SettingUI)
+        local CanvasSlot = UE4.UWidgetLayoutLibrary.SlotAsScrollBoxSlot(SettingUI)
+        CanvasSlot:SetPadding(FMargin(0, 0, 0, 0))
+        self.SettingUIs[self.CurrentTab][i] = SettingUI
+      end
     end
     IsInit = true
   end
@@ -1052,10 +1054,11 @@ function WBP_Setting_PC_C:UpdateEmptyGridCount()
   
   local function GetEmptyGridCount()
     local GridCountSum = 0
+    local ListView
     for i, SettingUI in pairs(self.SettingUIs[self.CurrentTab]) do
       GridCountSum = GridCountSum + SettingUI:GetCurrentStateGrideCount()
+      ListView = ListView or SettingUI.List_Options
     end
-    local ListView = self.SettingUIs[self.CurrentTab][1].List_Options
     local ItemUIs = ListView:GetDisplayedEntryWidgets()
     if 0 == ItemUIs:Length() then
       self.EmptySettingUI:SetVisibility(ESlateVisibility.Collapsed)

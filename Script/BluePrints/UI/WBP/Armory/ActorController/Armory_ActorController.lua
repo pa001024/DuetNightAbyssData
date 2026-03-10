@@ -131,10 +131,13 @@ function M:OnHelperBecomeViewTarget(PC)
     self:HidePlayerActor("ActorController_ChangeViewTarget", false)
     self:HideWeaponActor("ActorController_ChangeViewTarget", false)
     self:HidePetActor("ActorController_ChangeViewTarget", false)
-    self:UpdateLighting()
+    self:UpdateSceneLighting()
     return
   end
   if self.IsPlayingSequence then
+    if self.MVPActorController then
+      self.MVPActorController:ViewTarget()
+    end
     return
   end
   for key, value in pairs(self.PlayerActorHideTags) do
@@ -152,7 +155,7 @@ function M:OnHelperBecomeViewTarget(PC)
   else
     self:SetNoActorCamera()
   end
-  self:UpdateLighting()
+  self:DelayUpdateSceneLighting()
 end
 
 function M:RecoverToPlayerActor()
@@ -188,6 +191,8 @@ function M:RecoverToPlayerActor()
   self.ArmoryHelper:OnRoleChanged()
   if self.PlayMVPInfo then
     self:ReplayMVPSequence()
+  elseif self.CurRiddingMount then
+    self:RefreshMount()
   else
     self.bPlaySameMontage = true
     self:SetArmoryMontageTag(self.ArmoryPlayer, self.CurMontageTag, self.LastShowOrHideWeapon)
@@ -232,7 +237,8 @@ function M:OnOpened(Duration)
   local GameInstance = UE4.UGameplayStatics.GetGameInstance(self.ViewUI)
   local UIManager = GameInstance:GetGameUIManager()
   if not IsValid(self.ArmoryHelper) then
-    self.ArmoryHelper = UIManager:CreateUIActorCameraHelper(UE4.UGameplayStatics.GetPlayerCharacter(self.ViewUI, 0))
+    local bDontAttach = self.UIName == "MountsMain"
+    self.ArmoryHelper = UIManager:CreateUIActorCameraHelper(UE4.UGameplayStatics.GetPlayerCharacter(self.ViewUI, 0), bDontAttach)
   end
   if IsValid(self.ArmoryHelper) then
     self.ArmoryHelper:BindViewTargetEvents({
@@ -510,6 +516,10 @@ function M:RealPlayMontageAndCamera(ArmoryPlayer, MontageTag, bShowOrHideWeapon,
 end
 
 function M:ResetActorRotation()
+  if self.MVPActorController then
+    self.MVPActorController:ResetActorRotation()
+    return
+  end
   self.ArmoryHelper:ResetRotation()
   local ArmoryPet = self:GetPetActor()
   if ArmoryPet and ArmoryPet.SkeletalMesh then
@@ -872,7 +882,7 @@ function M:Component_OnDestruct()
 end
 
 function M:ViewTarget()
-  if self.IsControled then
+  if self.IsControled or self.bDestructed then
     return
   end
   if not IsValid(self.ArmoryHelper) then

@@ -2223,25 +2223,25 @@
     "id": 30113,
     "name": "Intermediate Dye: Maple Syrup",
     "icon": "T_Dye_15",
-    "rarity": 5
+    "rarity": 4
   },
   {
     "id": 30114,
     "name": "Intermediate Dye: Cocoa",
-    "icon": "T_Dye_15",
-    "rarity": 5
+    "icon": "T_Dye_15_01",
+    "rarity": 4
   },
   {
     "id": 30115,
     "name": "Intermediate Dye: Verdant Wave",
     "icon": "T_Dye_14",
-    "rarity": 5
+    "rarity": 4
   },
   {
     "id": 30116,
     "name": "Intermediate Dye: Weathered Pine",
-    "icon": "T_Dye_15",
-    "rarity": 5
+    "icon": "T_Dye_14_01",
+    "rarity": 4
   },
   {
     "id": 30117,
@@ -2252,13 +2252,13 @@
   {
     "id": 30118,
     "name": "Standard Hair Dye",
-    "icon": "T_Dye_12",
+    "icon": "T_Dye_16",
     "rarity": 4
   },
   {
     "id": 30119,
     "name": "Premium Hair Dye",
-    "icon": "T_Dye_12",
+    "icon": "T_Dye_17",
     "rarity": 5
   },
   {

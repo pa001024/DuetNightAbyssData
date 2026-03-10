@@ -24,11 +24,16 @@ function M:Init(GameInstance)
   M:LoadResource(true)
 end
 
-function M:_GetFontPath()
-  local Postfix = AnnounceCommon.FontTypeMap[CommonConst.SystemLanguage]
-  local FontFile = string.format("%s.%s", CommonConst.SystemLanguage, Postfix)
+function M:_GetFontPath(Conf)
+  local TextLang = CommonConst.SystemLanguage
+  if Conf and Conf.Language ~= TextLang then
+    TextLang = CommonConst.SystemLanguages[Conf.Language]
+  end
+  local Postfix = AnnounceCommon.FontTypeMap[TextLang]
+  local FontFile = string.format("%s.%s", TextLang, Postfix)
   local FontPath = AnnounceCommon.AnnounceWeb .. "Fonts/" .. FontFile
   local FontUrl = CdnTool:CdnUrl() .. "/OperationGameNotice/Resource/Fonts/" .. FontFile
+  DebugPrint("FontUrl/////", FontUrl)
   return FontPath, string.format("font/%s", Postfix), FontUrl, FontFile
 end
 
@@ -50,7 +55,7 @@ function M:LoadHtmlContent(Conf, Callback, ContentSize)
       URuntimeCommonFunctionLibrary.SaveFile(HtmlPath, HtmlText)
     end
     if AnnounceCommon.PlatformName ~= CommonConst.CHANNEL_OS.IOS then
-      local _, _, _, FontFile = M:_GetFontPath()
+      local _, _, _, FontFile = M:_GetFontPath(Conf)
       local FontUrl = string.format("http://localhost:%s/AnnounceWeb/Fonts/%s", M.AHSS:GetPortId(), FontFile)
       local FontFileParam = string.format("?fontUrl=%s", FontUrl)
       local Param2 = string.format("&disableScroll=%s", Conf.NoticeStyle == AnnounceCommon.ContentUIStyle.ImageOnly)
@@ -58,7 +63,7 @@ function M:LoadHtmlContent(Conf, Callback, ContentSize)
       Conf.HtmlUrl = RawUrl .. FontFileParam .. Param2
     else
       HtmlPath = MiscUtils.CorrectUrl(HtmlPath)
-      local FontPath = M:_GetFontPath()
+      local FontPath = M:_GetFontPath(Conf)
       FontPath = MiscUtils.CorrectUrl(FontPath)
       local FontUrl = URuntimeCommonFunctionLibrary.ConvertRelativePathToFull(FontPath)
       local FontFileParam = string.format("?fontUrl=file://%s", FontUrl)
@@ -70,13 +75,13 @@ function M:LoadHtmlContent(Conf, Callback, ContentSize)
   end
   
   if not Conf.HtmlUrl then
-    M:LoadResource(false, Cb)
+    M:LoadResource(false, Cb, Conf)
     return
   end
   Cb()
 end
 
-function M:LoadResource(bForceLoad, Cb)
+function M:LoadResource(bForceLoad, Cb, Conf)
   local CachedVer = EMCache:Get("AnnounceVersion")
   if CachedVer ~= AnnounceCommon.Version then
     UBlueprintFileUtilsBPLibrary.DeleteDirectory(AnnounceCommon.AnnounceWeb, true, true)
@@ -117,7 +122,7 @@ function M:LoadResource(bForceLoad, Cb)
     function(_, bSuccess)
     end
   }, bForceLoad)
-  local FontPath, ContentType, FontUrl = M:_GetFontPath()
+  local FontPath, ContentType, FontUrl = M:_GetFontPath(Conf)
   if not UBlueprintPathsLibrary.FileExists(FontPath) then
     DebugPrint(LXYTag, "检测到字体不存在，通过httpget获取字体")
     M.bFontLoading = true
@@ -127,7 +132,6 @@ function M:LoadResource(bForceLoad, Cb)
         M.bFontLoading = false
         if not bSuccess then
           DebugPrint(WarningTag, LXYTag, "网络太差，公告没有拉到字体", FontUrl)
-          return
         end
         if Cb then
           Cb()
@@ -509,7 +513,8 @@ function M:_AddNewConf(Info, ShowTag)
     return
   end
   if not M:CheckPakInfos(Info) then
-    DebugPrint(LXYTag, Info.UniqueId .. "公告渠道检测不通过|PakInfo")
+    DebugPrint(LXYTag, Info.UniqueId .. "公告PakInfo渠道检测不通过|PakInfo")
+    return
   end
   if not M:CheckChannel(Info) then
     DebugPrint(LXYTag, Info.UniqueId .. " 公告渠道检测不通过|Channel")
@@ -566,8 +571,10 @@ end
 
 function M:_ParseContent(Conf, Info)
   Conf.NoticeTitle, Conf.NoticeContent = "", ""
+  local bNeedDefaultEnglish = true
   for _, Text in pairs(Info.Content or {}) do
-    if CommonConst.SystemLanguage == CommonConst.SystemLanguages[Text.language] then
+    if self:_TestContentLangPass(Conf, Text) then
+      Conf.Language = Text.language
       Conf.NoticeTitle = Text.title
       if Conf.NoticeStyle == AnnounceCommon.ContentUIStyle.Default then
         if not Text.title1 or "" == Text.title1 then
@@ -579,11 +586,40 @@ function M:_ParseContent(Conf, Info)
       else
         DebugPrint(LXYTag, ErrorTag, "未定义的公告内容样式：" .. Conf.NoticeStyle)
       end
-      return
+      bNeedDefaultEnglish = false
+      break
     else
       DebugPrint(LXYTag, Info.UniqueId .. " 公告语言对不上 跳过" .. Text.title)
     end
   end
+  if bNeedDefaultEnglish then
+    for _, Text in pairs(Info.Content or {}) do
+      if CommonConst.SystemLanguages[Text.language] == CommonConst.SystemLanguages.EN then
+        DebugPrint(LXYTag, Info.UniqueId .. " 公告语言默认选择英语")
+        Conf.Language = Text.language
+        Conf.NoticeTitle = Text.title
+        if Conf.NoticeStyle == AnnounceCommon.ContentUIStyle.Default then
+          if not Text.title1 or "" == Text.title1 then
+            Text.title1 = Text.title
+          end
+          Conf.NoticeContent = string.format(AnnounceCommon.DefaultContent, Text.title1, Text.body)
+        elseif Conf.NoticeStyle == AnnounceCommon.ContentUIStyle.ImageOnly then
+          Conf.NoticeContent = string.format(AnnounceCommon.ImageOnlyContent, Text.noticeImageURL, Text.noticeImage)
+        else
+          DebugPrint(LXYTag, ErrorTag, "未定义的公告内容样式：" .. Conf.NoticeStyle)
+        end
+        bNeedDefaultEnglish = false
+        break
+      end
+    end
+  end
+end
+
+function M:_TestContentLangPass(Conf, Text)
+  local TextLang = CommonConst.SystemLanguages[Text.language]
+  local bLangPass = CommonConst.SystemLanguage == TextLang
+  local bChineseDefault = TextLang == CommonConst.SystemLanguages.TC and CommonConst.SystemLanguage == CommonConst.SystemLanguages.CN
+  return bLangPass or bChineseDefault
 end
 
 function M:_ParseShowTag(Conf, Info)
@@ -601,8 +637,6 @@ function M:_ParseShowTag(Conf, Info)
     Conf.ShowTags[tonumber(ShowTag)] = 1
   end
 end
-
-M.bIndepChannel = false
 
 function M:CheckChannel(Info)
   local ChannelId = Utils.HeroUSDKSubsystem():GetChannelId()
@@ -630,10 +664,7 @@ function M:CheckChannel(Info)
   end
   PrintTable(Info.Channels, 2, "看看公告自身的ChannelId ")
   for i, Channel in pairs(Info.Channels) do
-    if Channel.code == Provider or Channel.code == ChannelId then
-      if AnnounceCommon.SpecialChannelName[Provider] then
-        M.bIndepChannel = true
-      end
+    if not table.isempty(Channel) and (Channel.code == Provider or Channel.code == ChannelId) then
       return true
     end
   end
@@ -657,18 +688,17 @@ function M:CheckPakInfos(Info)
   }
   for _, pakInfo in ipairs(Info.pakInfos) do
     local EInfo = DataMgr.ExamineInfo[pakInfo.code]
-    table.insert(DummyInfo.Channels, EInfo.ChannelID)
-    table.insert(DummyInfo.img_channel_id, EInfo.MirrorChannelID)
+    table.insert(DummyInfo.Channels, {
+      code = EInfo.ChannelID
+    })
+    table.insert(DummyInfo.img_channel_id, {
+      code = EInfo.MirrorChannelID
+    })
   end
-  return M:CheckChannel(DummyInfo) or M:CheckSubChannel(DummyInfo)
+  return M:CheckChannel(DummyInfo) and M:CheckSubChannel(DummyInfo)
 end
 
 function M:CheckSubChannel(Info)
-  if M.bIndepChannel then
-    DebugPrint("独立渠道忽略子渠道检测...")
-    M.bIndepChannel = false
-    return true
-  end
   local SubChannelId = Utils.HeroUSDKSubsystem():GetMirrorChannelId()
   local Provider = -1 ~= SubChannelId and DataMgr.ImgChannelInfo[SubChannelId].Provider
   if Info.img_channel_id and type(Info.img_channel_id) ~= "table" then

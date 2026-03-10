@@ -147,6 +147,14 @@ return ReadOnly("Mail", {
     MailTimeLimit = -1,
     MailTitle = "Mail_Title_10018"
   },
+  [10019] = {
+    MailContent = "Mail_Content_10008",
+    MailId = 10019,
+    MailReward = 2010005,
+    MailSenderId = 99999,
+    MailTimeLimit = -1,
+    MailTitle = "Mail_Title_10008"
+  },
   [10021] = {
     MailContent = "Mail_Content_10021",
     MailId = 10021,
@@ -466,6 +474,7 @@ return ReadOnly("Mail", {
     IfStar = true,
     MailContent = "Mail_Content_10067",
     MailId = 10067,
+    MailSenderId = 99998,
     MailTimeLimit = -1,
     MailTitle = "Mail_Title_10067"
   },
