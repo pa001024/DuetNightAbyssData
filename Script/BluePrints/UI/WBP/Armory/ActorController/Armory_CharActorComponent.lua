@@ -1,6 +1,7 @@
 local HitResult = FHitResult()
 local M = {}
 local PlayerActorRefs = {}
+local PlayerReflectionRefs = {}
 
 function M:Init(Params)
   self.PlayerMontageTimerKeys = {}
@@ -31,6 +32,30 @@ local function CalculatePlayerTrans(self, Params)
   self.PlayerOriginalRootTrans = self.ArmoryPlayer.Mesh:K2_GetComponentToWorld()
   self.ArmoryHelper.OriginalRootTrans = self.PlayerOriginalRootTrans
   return TargetTrans
+end
+
+local function SetPlayerLocationInternal(PlayerCharacter, Loc)
+  if nil == PlayerCharacter then
+    return
+  end
+  PlayerCharacter:K2_SetActorLocation(Loc, false, HitResult, false)
+end
+
+function M:SetPlayerLocation(Loc)
+  SetPlayerLocationInternal(self:GetPlayerActor(), Loc)
+  SetPlayerLocationInternal(self:GetReflectionActor(self:GetPlayerActor()), Loc)
+end
+
+local function SetPlayerRotationInternal(PlayerCharacter, Rot)
+  if nil == PlayerCharacter then
+    return
+  end
+  PlayerCharacter:K2_SetActorRotation(Rot, false, HitResult, false)
+end
+
+function M:SetPlayerRotation(Rot)
+  SetPlayerRotationInternal(self:GetPlayerActor(), Rot)
+  SetPlayerRotationInternal(self:GetReflectionActor(self:GetPlayerActor()), Rot)
 end
 
 function M:OnOpened()
@@ -158,6 +183,42 @@ function M:LoadPlayerInfo()
   EventManager:FireEvent(EventID.UpdateMainPlayerSp, nil, nil, Player)
 end
 
+local function ChangeCharModelInternal(self, PlayCharacter, Avatar, CharInfo, Char)
+  if not PlayCharacter then
+    return
+  end
+  local CharId
+  local AvatarBattleInfo = {}
+  local GameMode = UE4.UGameplayStatics.GetGameMode(PlayCharacter)
+  if PlayCharacter.CharacterFashion then
+    PlayCharacter.CharacterFashion.Type2PartId = {}
+  end
+  if Char and GameMode then
+    CharId = Char.CharId
+    AvatarBattleInfo = AvatarUtils:GetDefaultBattleInfo(Avatar, {Char = Char})
+    AvatarBattleInfo = {AvatarInfo = AvatarBattleInfo}
+    AvatarBattleInfo = GameMode:SimplifyInfoForInit(AvatarBattleInfo)
+    AvatarBattleInfo.FromArmory = true
+    if AvatarBattleInfo.AvatarInfo then
+      AvatarBattleInfo.AvatarInfo.MeleeWeapon = nil
+      AvatarBattleInfo.AvatarInfo.RangedWeapon = nil
+    end
+    PlayCharacter:InitCharacterInfo(AvatarBattleInfo)
+  else
+    CharId = CharInfo.CharId
+    AvatarBattleInfo.FromOtherWorld = true
+    AvatarBattleInfo.FromArmory = true
+    PlayCharacter:ChangeRole(CharId, AvatarBattleInfo)
+  end
+  PlayCharacter:ClearWeapon()
+  PlayCharacter:SetCharacterTag("Interactive")
+  PlayCharacter:KawaiiSwitch(true)
+  if PlayCharacter.PlayerAnimInstance then
+    PlayCharacter.PlayerAnimInstance:SetKawiiLayerState(EKawaiiLayerState.EKLS_Armory)
+  end
+  return CharId
+end
+
 function M:ChangeCharModel(Info, bIfNoDelay, bNoCharVoice, bForceChange, IsProtagonist)
   self:BeforeViewActorChanged()
   local PlayCharacter = self:GetPlayerActor(true)
@@ -184,28 +245,9 @@ function M:ChangeCharModel(Info, bIfNoDelay, bNoCharVoice, bForceChange, IsProta
   else
     self.CurrentAppearanceInfo = {}
   end
-  local CharId
-  local AvatarBattleInfo = {}
-  local GameMode = UE4.UGameplayStatics.GetGameMode(PlayCharacter)
-  if Char and GameMode then
-    CharId = Char.CharId
-    AvatarBattleInfo = AvatarUtils:GetDefaultBattleInfo(Avatar, {Char = Char})
-    AvatarBattleInfo = {AvatarInfo = AvatarBattleInfo}
-    AvatarBattleInfo = GameMode:SimplifyInfoForInit(AvatarBattleInfo)
-    AvatarBattleInfo.FromArmory = true
-    if AvatarBattleInfo.AvatarInfo then
-      AvatarBattleInfo.AvatarInfo.MeleeWeapon = nil
-      AvatarBattleInfo.AvatarInfo.RangedWeapon = nil
-    end
-    PlayCharacter:InitCharacterInfo(AvatarBattleInfo)
-  else
-    CharId = Info.CharId
-    AvatarBattleInfo.FromOtherWorld = true
-    AvatarBattleInfo.FromArmory = true
-    PlayCharacter:ChangeRole(CharId, AvatarBattleInfo)
-  end
-  PlayCharacter:ClearWeapon()
-  PlayCharacter:SetCharacterTag("Interactive")
+  local CharId = ChangeCharModelInternal(self, PlayCharacter, Avatar, Info, Char)
+  ChangeCharModelInternal(self, self:GetReflectionActor(PlayCharacter), Avatar, Info, Char)
+  self:UpdatePlayerReflectionTrans()
   if IsProtagonist then
     self.IsProtagonist = true
     self.bWaitForNotifyToChangePet = true
@@ -224,10 +266,6 @@ function M:ChangeCharModel(Info, bIfNoDelay, bNoCharVoice, bForceChange, IsProta
     self.bPlayRoleChangedSound = false
   end
   self.bPlaySameMontage = true
-  PlayCharacter:KawaiiSwitch(true)
-  if PlayCharacter.PlayerAnimInstance then
-    PlayCharacter.PlayerAnimInstance:SetKawiiLayerState(EKawaiiLayerState.EKLS_Armory)
-  end
   self.ArmoryHelper:OnRoleChanged()
   self:StopPlayerSound()
   if self.OnCharModelChanged then
@@ -256,12 +294,9 @@ function M:ChangeToProtagonist(bIfNoDelay, bNoCharVoice, bForceChange)
     CharId = DataMgr.Player2RoleId.Player[Avatar.Sex]
   }
   IsRoleChanged = self:ChangeCharModel(self.ProtagonistCharInfo, bIfNoDelay, bNoCharVoice, bForceChange, true)
-  local PlayCharacter = self:GetPlayerActor(true)
-  if PlayCharacter.CharacterFashion then
-    PlayCharacter.CharacterFashion:InitAppearanceSuit({
-      SkinId = self.ProtagonistCharInfo.CharId
-    })
-  end
+  self:ChangeCharAppearance({
+    SkinId = self.ProtagonistCharInfo.CharId
+  })
   return IsRoleChanged
 end
 
@@ -279,8 +314,8 @@ function M:CreatePlayerActor()
   local UIManager = UIManager(self.ViewUI)
   local IsCharActorFistCreated
   self.ArmoryPlayer, IsCharActorFistCreated = UIManager:CreateOrGetArmoryPlayerActor(self.CurrentCharInfo, self:GetAvatar())
-  self:ClearPlayerHideTag()
   PlayerActorRefs[self] = self.ArmoryPlayer
+  self:ClearPlayerHideTag(self.ArmoryPlayer)
   local Params = {}
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(self.ViewUI, 0)
   Params.PreRoleId = Player.CurrentRoleId
@@ -289,18 +324,26 @@ function M:CreatePlayerActor()
     self:ChangeCharModel(self.CurrentCharInfo, true, nil, true)
   end
   self.CurrentAppearanceInfo = self.ArmoryPlayer.InfoForInit and self.ArmoryPlayer.InfoForInit.AppearanceSuit
-  if self.ArmoryPlayer.MeleeWeapon then
-    self.ArmoryPlayer.MeleeWeapon:SetActorHideTag(self.UIName, true)
+  
+  local function AfterCreated(PlayerActor)
+    if not PlayerActor then
+      return
+    end
+    if PlayerActor.MeleeWeapon then
+      PlayerActor.MeleeWeapon:SetActorHideTag(self.UIName, true)
+    end
+    if IsValid(UIManager.ArmoryWeapon) then
+      UIManager.ArmoryWeapon:SetActorHideTag(self.UIName, true)
+    end
+    PlayerActor:KawaiiSwitch(true)
+    if PlayerActor.PlayerAnimInstance then
+      PlayerActor.PlayerAnimInstance:SetKawiiLayerState(EKawaiiLayerState.EKLS_Armory)
+    end
+    PlayerActor:SetCharacterTag("Interactive")
+    PlayerActor:K2_SetActorTransform(Player:GetTransform(), false, nil, false)
   end
-  if IsValid(UIManager.ArmoryWeapon) then
-    UIManager.ArmoryWeapon:SetActorHideTag(self.UIName, true)
-  end
-  self.ArmoryPlayer:KawaiiSwitch(true)
-  if self.ArmoryPlayer.PlayerAnimInstance then
-    self.ArmoryPlayer.PlayerAnimInstance:SetKawiiLayerState(EKawaiiLayerState.EKLS_Armory)
-  end
-  self.ArmoryPlayer:SetCharacterTag("Interactive")
-  self.ArmoryPlayer:K2_SetActorTransform(Player:GetTransform(), false, nil, false)
+  
+  AfterCreated(self.ArmoryPlayer)
   self.ArmoryHelper:SetPlayer(self.ArmoryPlayer)
   self.ArmoryHelper:SetViewActor(self.ArmoryPlayer)
   self.ViewActorType = self.ViewActorTypes.Player
@@ -311,6 +354,30 @@ function M:CreatePlayerActor()
     end
   end
   CalculatePlayerTrans(self, Params)
+  if not self.bEnableReflection then
+    return
+  end
+  local PlayerReflection = UIManager:CreateOrGetPlayerReflection(self.CurrentCharInfo, self:GetAvatar())
+  self:SetReflectionActor(self.ArmoryPlayer, PlayerReflection)
+  PlayerReflectionRefs[self] = PlayerReflection
+  if not IsCharActorFistCreated and self.CurrentCharInfo then
+    self:ChangeCharModel(self.CurrentCharInfo, true, nil, true)
+  end
+  AfterCreated(PlayerReflection)
+  self:UpdatePlayerReflectionTrans()
+  self:ClearPlayerHideTag(self:GetReflectionActor(self.ArmoryPlayer))
+end
+
+function M:UpdatePlayerReflectionTrans()
+  local PlayerReflection = self:GetReflectionActor(self.ArmoryPlayer)
+  if nil == PlayerReflection then
+    return
+  end
+  PlayerReflection:K2_SetActorTransform(self.ArmoryPlayer:GetTransform(), false, nil, false)
+  local Trans = PlayerReflection.Mesh:K2_GetComponentToWorld()
+  Trans.Scale3D.Z = -Trans.Scale3D.Z
+  PlayerReflection.Mesh:K2_SetWorldTransform(Trans, false, nil, false)
+  PlayerReflection.Mesh:SetBoundsScale(10000)
 end
 
 function M:ChangeRealPlayerInfo()
@@ -324,7 +391,7 @@ function M:ChangeRealPlayerInfo()
   end
   if 0 ~= Avatar.CurrentPet then
     local Pet = Avatar.Pets[Avatar.CurrentPet]
-    Player:ServerSetBattlePet(Pet.PetId, Pet:GetSkillLevel(), false)
+    Player:ServerSetBattlePet(Pet.PetId, Pet:GetSkillLevel(), false, TArray(0))
   end
   if Player.CurrentMasterBan then
     Player:WithChangeBackToHero()
@@ -342,21 +409,34 @@ function M:ChangeRealPlayerInfo()
 end
 
 function M:HidePlayerActor(Tag, IsHidden, bDontSaveTag)
-  if not IsValid(self.ArmoryPlayer) then
+  local Player = self:GetPlayerActor()
+  if not IsValid(Player) then
     return
   end
   if not bDontSaveTag then
-    self.PlayerActorHideTags[Tag] = IsHidden
+    if true == IsHidden then
+      self.PlayerActorHideTags[Tag] = true
+    else
+      self.PlayerActorHideTags[Tag] = nil
+    end
   end
-  self.ArmoryPlayer:SetActorHideTag(Tag, IsHidden, false, true)
-  self.ArmoryPlayer:HideAllEffectCreature(Tag, IsHidden)
+  self:HidePlayerActorInternal(Player, Tag, IsHidden)
+  self:HidePlayerActorInternal(self:GetReflectionActor(Player), Tag, IsHidden)
 end
 
-function M:ClearPlayerHideTag()
-  if not IsValid(self.ArmoryPlayer) then
+function M:HidePlayerActorInternal(PlayerCharacter, Tag, IsHidden)
+  if nil == PlayerCharacter then
     return
   end
-  local Tags = self.ArmoryPlayer.HideTags:ToTable()
+  PlayerCharacter:SetActorHideTag(Tag, IsHidden, false, true)
+  PlayerCharacter:HideAllEffectCreature(Tag, IsHidden)
+end
+
+function M:ClearPlayerHideTag(PlayerActor)
+  if not IsValid(PlayerActor) then
+    return
+  end
+  local Tags = PlayerActor.HideTags:ToTable()
   for key, Tag in pairs(Tags) do
     self:HidePlayerActor(Tag, false)
   end
@@ -375,29 +455,126 @@ function M:AfterViewActorChanged()
 end
 
 function M:CharLvUpOrBreakUp()
-  local ArmoryPlayer = self.ArmoryPlayer
-  ArmoryPlayer.FXComponent:PlayEffectByIDParams(303, {bTickEvenWhenPaused = true, NotAttached = true})
+  local function CharLvUpOrBreakUpInternal(PlayerCharacter)
+    if nil == PlayerCharacter then
+      return
+    end
+    PlayerCharacter.FXComponent:PlayEffectByIDParams(303, {bTickEvenWhenPaused = true, NotAttached = true})
+  end
+  
+  CharLvUpOrBreakUpInternal(self:GetPlayerActor())
+  CharLvUpOrBreakUpInternal(self:GetReflectionActor(self:GetPlayerActor()))
 end
 
 function M:StopPlayerMontage(Params)
   Params = Params or {}
   for key, value in pairs(self.PlayerMontageTimerKeys) do
-    self.ViewUI:RemoveTimer(key)
+    self.ArmoryHelper:RemoveTimer(key)
   end
   self.PlayerMontageTimerKeys = {}
-  local Player = self:GetPlayerActor()
-  Player:StopMontage()
+  
+  local function StopMontage(PlayerCharacter)
+    if nil == PlayerCharacter then
+      return
+    end
+    PlayerCharacter:StopMontage()
+  end
+  
+  StopMontage(self:GetPlayerActor())
+  StopMontage(self:GetReflectionActor(self:GetPlayerActor()))
+  if self.TeleportMontagePaused then
+    self.TeleportMontagePaused = false
+    self:HidePlayerActor(self.UIName, false)
+  end
   if not Params.DontStopSequance then
-    self:StopMVPSequence()
+    self:StopSequence()
   end
   self.CurMontageTag = "None"
 end
 
 function M:StopPlayerFX()
   for key, value in pairs(self.PlayerFXTimerKeys) do
-    self.ViewUI:RemoveTimer(key)
+    self.ArmoryHelper:RemoveTimer(key)
   end
   self.PlayerFXTimerKeys = {}
+end
+
+function M:PlayResourceMotion(ResourceId)
+  local function PlayResourceMotionInternal(PlayerCharacter)
+    if nil == PlayerCharacter then
+      return
+    end
+    PlayerCharacter:InvokeResourceBPFunction(ResourceId)
+  end
+  
+  PlayResourceMotionInternal(self:GetPlayerActor())
+  PlayResourceMotionInternal(self:GetReflectionActor(self:GetPlayerActor()))
+end
+
+function M:RemovePlayerGestureEffectCreature()
+  local function RemovePlayerGestureEffectCreatureInternal(PlayerCharacter)
+    if nil == PlayerCharacter then
+      return
+    end
+    PlayerCharacter:RemoveAllEffectCreature(false)
+  end
+  
+  RemovePlayerGestureEffectCreatureInternal(self:GetPlayerActor())
+  RemovePlayerGestureEffectCreatureInternal(self:GetReflectionActor(self:GetPlayerActor()))
+end
+
+function M:ClearPlayerGestureHideTags()
+  local function ClearPlayerGestureHideTagsInternal(PlayerCharacter, PlayerEffectCreatureHideTags)
+    if nil == PlayerCharacter then
+      return
+    end
+    if PlayerCharacter.EffectCreatureHideTags then
+      local EffectCreatureHideTags = PlayerCharacter.EffectCreatureHideTags:ToTable()
+      for k, v in pairs(EffectCreatureHideTags) do
+        if PlayerEffectCreatureHideTags then
+          PlayerEffectCreatureHideTags[k] = v
+        end
+        PlayerCharacter:HideAllEffectCreature(k, false)
+      end
+    end
+  end
+  
+  self.PlayerEffectCreatureHideTags = {}
+  self.ReflectionPlayerEffectCreatureHideTags = {}
+  ClearPlayerGestureHideTagsInternal(self:GetPlayerActor(), self.PlayerEffectCreatureHideTags)
+  ClearPlayerGestureHideTagsInternal(self:GetReflectionActor(self:GetPlayerActor()), self.ReflectionPlayerEffectCreatureHideTags)
+end
+
+function M:RevertPlayerGestureEffectCreature()
+  local function RevertPlayerGestureEffectCreatureInternal(PlayerCharacter, PlayerEffectCreatureHideTags)
+    if nil == PlayerCharacter then
+      return
+    end
+    if PlayerEffectCreatureHideTags then
+      for k, v in pairs(PlayerEffectCreatureHideTags) do
+        PlayerCharacter:HideAllEffectCreature(k, v)
+      end
+    end
+  end
+  
+  RevertPlayerGestureEffectCreatureInternal(self:GetPlayerActor(), self.PlayerEffectCreatureHideTags)
+  RevertPlayerGestureEffectCreatureInternal(self:GetReflectionActor(self:GetPlayerActor()), self.ReflectionPlayerEffectCreatureHideTags)
+  self.PlayerEffectCreatureHideTags = nil
+  self.ReflectionPlayerEffectCreatureHideTags = nil
+end
+
+function M:HidePlayerMeleeWeapon()
+  local function HidePlayerMeleeWeaponInternal(PlayerCharacter)
+    if nil == PlayerCharacter then
+      return
+    end
+    if PlayerCharacter.MeleeWeapon then
+      PlayerCharacter.MeleeWeapon:SetActorHideTag(self.UIName, true)
+    end
+  end
+  
+  HidePlayerMeleeWeaponInternal(self:GetPlayerActor())
+  HidePlayerMeleeWeaponInternal(self:GetReflectionActor(self:GetPlayerActor()))
 end
 
 function M:Component_OnClosed()
@@ -413,12 +590,17 @@ function M:Component_DestroyActors()
     end
   end
   PlayerActorRefs[self] = nil
+  PlayerReflectionRefs[self] = nil
   local UIManager = UIManager(self.ViewUI)
   if nil == next(PlayerActorRefs) then
     UIManager.ArmoryPlayer = nil
     if self.ArmoryHelper then
       self.ArmoryHelper.bNeedDestroyPlayerActor = true
     end
+  end
+  if nil == next(PlayerReflectionRefs) then
+    self:DestroyPlayerActor(UIManager.PlayerReflection)
+    UIManager.PlayerReflection = nil
   end
   if self.IsPreviewMode or self.IsSecondary then
     return
@@ -431,6 +613,17 @@ function M:Component_DestroyActors()
     end
   end
   self:LoadPlayerInfo()
+end
+
+function M:DestroyPlayerActor(PlayerActor)
+  if nil == PlayerActor then
+    return
+  end
+  if PlayerActor.IsPlayer and PlayerActor:IsPlayer() then
+    PlayerActor:ServerRemoveBattlePet()
+  end
+  PlayerActor:EMActorDestroy(EDestroyReason.Armory)
+  PlayerActor:K2_DestroyActor()
 end
 
 return M

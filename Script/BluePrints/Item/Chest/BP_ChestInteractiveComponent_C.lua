@@ -41,6 +41,8 @@ function BP_ChestInteractiveComponent_C:InitInteractiveComponent(InteractiveId)
   self.AutoRotate = self.InteractiveParam.AutoRotate
   if self.MontageName then
     self.InteractiveTag = self.InteractiveParam.InteractiveTag or "Interactive"
+  else
+    self.InteractiveTag = nil
   end
   self.InteractiveName = self:GetInteractiveName()
 end
@@ -48,6 +50,9 @@ end
 function BP_ChestInteractiveComponent_C:IsForbidden(PlayerActor)
   if not IsValid(PlayerActor) then
     return false
+  end
+  if self:HasBuffType(PlayerActor, 73) then
+    return true
   end
   local Owner = self:GetOwner()
   if Owner and Owner.IsForbidden then
@@ -57,6 +62,27 @@ function BP_ChestInteractiveComponent_C:IsForbidden(PlayerActor)
     end
   end
   return not self:CheckInteractiveSucc(PlayerActor.Eid)
+end
+
+function BP_ChestInteractiveComponent_C:HasBuffType(PlayerActor, TargetBuffType)
+  if not PlayerActor.BuffManager then
+    return false
+  end
+  local Buffs = PlayerActor.BuffManager.Buffs
+  for i = 1, Buffs:Length() do
+    local Buff = Buffs:GetRef(i)
+    if IsValid(Buff) and Buff.BuffId then
+      local BuffConfig = DataMgr.Buff[Buff.BuffId]
+      if BuffConfig and BuffConfig.BuffType then
+        for _, TypeId in ipairs(BuffConfig.BuffType) do
+          if TypeId == TargetBuffType then
+            return true
+          end
+        end
+      end
+    end
+  end
+  return false
 end
 
 function BP_ChestInteractiveComponent_C:IsForbidden_CPP(PlayerActor)
@@ -235,6 +261,14 @@ function BP_ChestInteractiveComponent_C:GetReduceTime()
   return 0.1
 end
 
+function BP_ChestInteractiveComponent_C:GetLongPressingText()
+  local Owner = self:GetOwner()
+  if Owner and Owner.GetLongPressingText then
+    return Owner:GetLongPressingText()
+  end
+  return ""
+end
+
 function BP_ChestInteractiveComponent_C:GetInteractiveIcon(PlayerActor)
   if self.OverriddenIcon then
     return self.OverriddenIcon
@@ -264,6 +298,9 @@ function BP_ChestInteractiveComponent_C:GetInteractiveName()
   local PlayerActor = UGameplayStatics.GetPlayerCharacter(self, 0)
   if not PlayerActor then
     return GText(self.InteractiveName)
+  end
+  if Owner.GetInteractiveName then
+    return Owner:GetInteractiveName(PlayerActor)
   end
   if not Owner.UsePlayerId and self:IsForbidden(PlayerActor) and Owner.IsForbidden then
     return GText(self.InteractiveName)
@@ -301,6 +338,33 @@ function BP_ChestInteractiveComponent_C:GetSpecialQuestID()
     return Owner.ExtraRegionInfo.SpecialQuestId
   end
   return nil
+end
+
+function BP_ChestInteractiveComponent_C:GetCostItemInfo()
+  local Owner = self:GetOwner()
+  if Owner and Owner.GetCostItemInfo then
+    return Owner:GetCostItemInfo()
+  end
+  return nil
+end
+
+function BP_ChestInteractiveComponent_C:GetShowTagNew()
+  local Owner = self:GetOwner()
+  if Owner and Owner.GetShowTagNew then
+    return Owner:GetShowTagNew()
+  end
+  return false
+end
+
+function BP_ChestInteractiveComponent_C:GetInteractivePriority()
+  local Owner = self:GetOwner()
+  if Owner and Owner.GetInteractivePriority then
+    local OwnerPriority = Owner:GetInteractivePriority()
+    if nil ~= OwnerPriority then
+      return OwnerPriority
+    end
+  end
+  return BP_ChestInteractiveComponent_C.Super.GetInteractivePriority(self)
 end
 
 return BP_ChestInteractiveComponent_C

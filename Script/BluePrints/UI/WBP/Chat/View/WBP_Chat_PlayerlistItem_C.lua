@@ -21,6 +21,22 @@ function M:Construct()
   end)
 end
 
+function M:_UpdateHeadClickableState()
+  local Avatar = ChatController:GetAvatar()
+  local Uid = self.Content and self.Content.Data and self.Content.Data.Uid
+  if not Uid then
+    return
+  end
+  Uid = Uid < 10000 and self.Content and self.Content.Data and self.Content.Data.RealUID or Uid
+  local IsYourSelf = Uid == Avatar.Uid
+  local isDungeonOrSettlement = not GWorld:GetAvatar():IsInDungeon() and GWorld.GameInstance.IsInTempScene and GWorld.GameInstance:IsInTempScene()
+  if IsYourSelf and isDungeonOrSettlement then
+    self.WBP_Com_ItemHead:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+  else
+    self.WBP_Com_ItemHead:SetVisibility(UIConst.VisibilityOp.Visible)
+  end
+end
+
 function M:Destruct()
   self.Button_Area.OnHovered:Remove(self, self.BtnAreaOnHovered)
   self.Button_Area.OnUnhovered:Remove(self, self.BtnAreaOnUnhovered)
@@ -176,6 +192,7 @@ function M:OnListItemObjectSet(Content)
   else
     self:UnSelect()
   end
+  self:_UpdateHeadClickableState()
 end
 
 function M:OnListItemObjectSet_League()
@@ -196,7 +213,7 @@ function M:OnListItemObjectSet_InTeam()
   self:_SetHeadIcon(TeamData.HeadIconId)
   self.WBP_Com_ItemHead:SetHeadFrame(TeamData.HeadFrameId)
   self:_SetTeamIndexInfo(TeamData, Index)
-  self:SetupAnchor(self.Head_Anchor, self.WBP_Com_ItemHead, TeamData, not TeamData.bDsData)
+  self:SetupAnchor(self.Head_Anchor, self.WBP_Com_ItemHead, TeamData, true)
   self.Common_Subsize_Reddot_Num:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self:AddEventListen()
   self.Group_Normal:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)

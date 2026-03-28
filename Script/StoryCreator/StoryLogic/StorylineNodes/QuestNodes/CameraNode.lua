@@ -27,7 +27,7 @@ function M:Init()
   self.bStartHiddenPet = false
   self.bLockHiddenPet = false
   self.bLockGamePause = false
-  self.bForceGamePause = false
+  self.bForceGamePause = true
   self.ForceMaxLodStaticPointList = {}
 end
 

@@ -176,6 +176,10 @@ function FOptionNode:IsImpressionSuccess(DialogueId)
   return false
 end
 
+function FOptionNode:GetIsOptionSelected(OptionId)
+  return self.VisitedOptions[OptionId]
+end
+
 function FOptionNode:HasFinalDialogue()
   return self.FinalDialogue ~= nil
 end

@@ -821,6 +821,18 @@ GMCommandConfig.commands.UI.commands = {
     }
   },
   {
+    text = "自定义标题栏",
+    mode = "switch",
+    var_name = "EnableCustomTitleBar",
+    callback = "ToggleCustomTitleBar"
+  },
+  {
+    text = "编辑器模式下也显示自定义标题栏",
+    mode = "switch",
+    var_name = "ForceUseCustomTitleBar",
+    callback = "ToggleForceCustomTitleBar"
+  },
+  {
     text = "屏幕Message",
     mode = "switch",
     var_name = "EnableScreenMessages",
@@ -955,6 +967,12 @@ GMCommandConfig.commands.UI.commands = {
     text = "隐藏GM入口(移动端)",
     mode = "button",
     callback = "HideGMBtnInHUD"
+  },
+  {
+    text = "关卡加载信息显隐",
+    mode = "switch",
+    var_name = "EnableShowLevelLoadingInfo",
+    callback = "SetShowLevelLoadingInfo"
   }
 }
 GMCommandConfig.commands["系统"].commands = {

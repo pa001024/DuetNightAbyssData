@@ -59,6 +59,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_10101",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -82,6 +83,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_10102",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -105,6 +107,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_10103",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -128,6 +131,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_10104",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -151,6 +155,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_10105",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -174,6 +179,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_10201",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -197,6 +203,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_10202",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -220,6 +227,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_10203",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -243,6 +251,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_10204",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -266,6 +275,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_10206",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -289,6 +299,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_10208",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -312,6 +323,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_10301",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -335,6 +347,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_10302",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -358,6 +371,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_10303",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -381,6 +395,54 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_10304",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
+    WeaponToCoinType = 101,
+    WeaponValue = 10000
+  },
+  [10305] = {
+    BigIcon = "/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Claymore_Mingjin",
+    CollectRewardExp = 400,
+    DecomposeReward = 160004,
+    GUIPathVariableName = "Mingjin",
+    GUIPathVariableType = "Claymore",
+    GachaIcon = "/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Claymore_Mingjin",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Claymore_Mingjin",
+    ModSlot = T.RT_1,
+    ModSlotUnlock = T.RT_2,
+    OpenVersion = 13,
+    ReleaseVersion = 130,
+    SkinApplicationType = T.RT_5,
+    SortPriority = 10305,
+    Sound = "SOUND_ITEM_WEAPON",
+    WeaponDescribe = "UI_WEAPON_DESC_10305",
+    WeaponId = 10305,
+    WeaponMaxLevel = 80,
+    WeaponName = "UI_WEAPON_NAME_10305",
+    WeaponRarity = 5,
+    WeaponSubType = "Normal",
+    WeaponToCoinType = 101,
+    WeaponValue = 10000
+  },
+  [10399] = {
+    BigIcon = "/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Claymore_",
+    CollectRewardExp = 400,
+    DecomposeReward = 160004,
+    GUIPathVariableType = "Claymore",
+    GachaIcon = "/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Claymore_",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Claymore_",
+    ModSlot = T.RT_1,
+    ModSlotUnlock = T.RT_2,
+    OpenVersion = 14,
+    ReleaseVersion = 140,
+    SkinApplicationType = T.RT_5,
+    SortPriority = 10399,
+    Sound = "SOUND_ITEM_WEAPON",
+    WeaponDescribe = "UI_WEAPON_DESC_10399",
+    WeaponId = 10399,
+    WeaponMaxLevel = 80,
+    WeaponName = "UI_WEAPON_NAME_10399",
+    WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -404,6 +466,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_10401",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -427,6 +490,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_10402",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -450,6 +514,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_10403",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -473,6 +538,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_10404",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -496,6 +562,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_10501",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -519,6 +586,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_10502",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -542,6 +610,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_10503",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -565,6 +634,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_10504",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -588,6 +658,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_10601",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -611,6 +682,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_10602",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -634,6 +706,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_10603",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -657,6 +730,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_20101",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -680,6 +754,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_20102",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -703,6 +778,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_20103",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -726,6 +802,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_20201",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -749,6 +826,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_20203",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -772,6 +850,30 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_20205",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
+    WeaponToCoinType = 101,
+    WeaponValue = 10000
+  },
+  [20298] = {
+    BigIcon = "/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Crossbow_",
+    CollectRewardExp = 400,
+    DecomposeReward = 160004,
+    GUIPathVariableType = "Crossbow",
+    GachaIcon = "/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Crossbow_",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Crossbow_",
+    ModSlot = T.RT_1,
+    ModSlotUnlock = T.RT_2,
+    OpenVersion = 14,
+    ReleaseVersion = 140,
+    SkinApplicationType = T.RT_10,
+    SortPriority = 20298,
+    Sound = "SOUND_ITEM_WEAPON",
+    WeaponDescribe = "UI_WEAPON_DESC_20298",
+    WeaponId = 20298,
+    WeaponMaxLevel = 80,
+    WeaponName = "UI_WEAPON_NAME_20298",
+    WeaponRarity = 5,
+    WeaponSubType = "Hyper",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -795,6 +897,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_20301",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -818,6 +921,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_20302",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -841,6 +945,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_20303",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -864,6 +969,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_20304",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -887,6 +993,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_20305",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -910,6 +1017,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_20401",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -933,6 +1041,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_20402",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -956,6 +1065,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_20403",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -979,6 +1089,55 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_20405",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
+    WeaponToCoinType = 101,
+    WeaponValue = 10000
+  },
+  [20406] = {
+    BigIcon = "/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Shotgun_Qiege",
+    CollectRewardExp = 400,
+    DecomposeReward = 160004,
+    GUIPathVariableName = "Qiege",
+    GUIPathVariableType = "Shotgun",
+    GachaIcon = "/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Shotgun_Qiege",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Shotgun_Qiege",
+    ModSlot = T.RT_1,
+    ModSlotUnlock = T.RT_2,
+    OpenVersion = 13,
+    ReleaseVersion = 130,
+    SkinApplicationType = T.RT_12,
+    SortPriority = 20406,
+    Sound = "SOUND_ITEM_WEAPON",
+    WeaponDescribe = "UI_WEAPON_DESC_20406",
+    WeaponId = 20406,
+    WeaponMaxLevel = 80,
+    WeaponName = "UI_WEAPON_NAME_20406",
+    WeaponRarity = 5,
+    WeaponSubType = "Normal",
+    WeaponToCoinType = 101,
+    WeaponValue = 10000
+  },
+  [20407] = {
+    BigIcon = "/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Shotgun_Guchu",
+    CollectRewardExp = 400,
+    DecomposeReward = 160004,
+    GUIPathVariableName = "Guchu",
+    GUIPathVariableType = "Shotgun",
+    GachaIcon = "/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Shotgun_Guchu",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Shotgun_Guchu",
+    ModSlot = T.RT_1,
+    ModSlotUnlock = T.RT_2,
+    OpenVersion = 13,
+    ReleaseVersion = 130,
+    SkinApplicationType = T.RT_12,
+    SortPriority = 20407,
+    Sound = "SOUND_ITEM_WEAPON",
+    WeaponDescribe = "UI_WEAPON_DESC_20407",
+    WeaponId = 20407,
+    WeaponMaxLevel = 80,
+    WeaponName = "UI_WEAPON_NAME_20407",
+    WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -1002,6 +1161,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_20501",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -1025,6 +1185,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_20502",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -1048,6 +1209,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_20503",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -1071,6 +1233,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_20504",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -1094,6 +1257,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_20505",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -1117,6 +1281,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_20506",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -1140,6 +1305,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_20507",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -1163,6 +1329,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_20509",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -1186,6 +1353,54 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_20510",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
+    WeaponToCoinType = 101,
+    WeaponValue = 10000
+  },
+  [20512] = {
+    BigIcon = "/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Machinegun_Beizhong",
+    CollectRewardExp = 400,
+    DecomposeReward = 160004,
+    GUIPathVariableName = "Beizhong",
+    GUIPathVariableType = "Machinegun",
+    GachaIcon = "/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Machinegun_Beizhong",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Machinegun_Beizhong",
+    ModSlot = T.RT_1,
+    ModSlotUnlock = T.RT_2,
+    OpenVersion = 13,
+    ReleaseVersion = 130,
+    SkinApplicationType = T.RT_13,
+    SortPriority = 20512,
+    Sound = "SOUND_ITEM_WEAPON",
+    WeaponDescribe = "UI_WEAPON_DESC_20512",
+    WeaponId = 20512,
+    WeaponMaxLevel = 80,
+    WeaponName = "UI_WEAPON_NAME_20512",
+    WeaponRarity = 5,
+    WeaponSubType = "Normal",
+    WeaponToCoinType = 101,
+    WeaponValue = 10000
+  },
+  [20599] = {
+    BigIcon = "/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Machinegun_",
+    CollectRewardExp = 400,
+    DecomposeReward = 160004,
+    GUIPathVariableType = "Machinegun",
+    GachaIcon = "/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Machinegun_",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Machinegun_",
+    ModSlot = T.RT_1,
+    ModSlotUnlock = T.RT_2,
+    OpenVersion = 14,
+    ReleaseVersion = 140,
+    SkinApplicationType = T.RT_13,
+    SortPriority = 20599,
+    Sound = "SOUND_ITEM_WEAPON",
+    WeaponDescribe = "UI_WEAPON_DESC_20599",
+    WeaponId = 20599,
+    WeaponMaxLevel = 80,
+    WeaponName = "UI_WEAPON_NAME_20599",
+    WeaponRarity = 5,
+    WeaponSubType = "Hyper",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -1209,6 +1424,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_20601",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -1232,6 +1448,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_20602",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -1255,6 +1472,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_20603",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   },
@@ -1278,6 +1496,7 @@ return ReadOnly("Weapon", {
     WeaponMaxLevel = 80,
     WeaponName = "UI_WEAPON_NAME_20604",
     WeaponRarity = 5,
+    WeaponSubType = "Normal",
     WeaponToCoinType = 101,
     WeaponValue = 10000
   }

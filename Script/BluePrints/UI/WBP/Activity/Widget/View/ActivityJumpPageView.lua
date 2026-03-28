@@ -3,7 +3,9 @@ local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
 local ActivityReddotHelper = require("BluePrints.UI.WBP.Activity.ActivityReddotHelper")
 local M = {}
 local NotNeedShowButtonActivityId = {
-  [103011] = true
+  [103011] = true,
+  [103020] = true,
+  [103015] = true
 }
 local NeedShowButtonActivityIdByTabName = {
   [103016] = true
@@ -82,7 +84,9 @@ function M:RefreshPageStaticView(ActivityConfigData, PageConfigData, InfoClickFu
       if RewardInfo then
         local RewardIcon = ItemUtils.GetItemIconPath(RewardInfo.Id, RewardInfo.Type)
         local RewardContent = self:NewItemContent(RewardInfo.Type, RewardInfo.Id, RewardIcon, RewardInfo.Rarity or 1, RewardInfo.Quantity, StuffDetailOpenFunction)
-        table.insert(RewardContentList, RewardContent)
+        if self:IsRewardShow(RewardInfo, RewardContent) then
+          table.insert(RewardContentList, RewardContent)
+        end
       end
     end
     for _, ItemContent in ipairs(RewardContentList) do
@@ -190,8 +194,21 @@ function M:RefreshPageStaticView(ActivityConfigData, PageConfigData, InfoClickFu
     Slot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
     Slot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
   end
+  self.PermanentRewardWidget = UIManager(self):CreateWidget(PageConfigData.PermanentRewardBPPath)
+  if PageConfigData.PermanentRewardBPPath and ActivityUtils.CheckIsPermanentEvent(ActivityConfigData.EventId) and not IsLock then
+    if self.PermanentRewardWidget.Init then
+      self.PermanentRewardWidget.ParentWidget = self
+      self.PermanentRewardWidget:Init(ActivityConfigData, PageConfigData, PlayerAvatar)
+    end
+    local Slot = self.Group_LimitTimeReward:AddChildToOverlay(self.PermanentRewardWidget)
+    Slot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
+    Slot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
+  end
   self.Text_Lock:SetText(GText(PageConfigData.JumpUnlockTips))
   self.Btn_Confirm:SetText(GText("UI_GameEvent_EventPortal_Goto"))
+  if PageConfigData.GotoBtnTextmap then
+    self.Btn_Confirm:SetText(GText(PageConfigData.GotoBtnTextmap))
+  end
   self.Btn_Confirm:SetGamePadImg("A")
   self:BindAllClickFunction(InfoClickFunction, ShopClickFunction, GoToTargetPageFunction, GoToTaskClickFunction, GoToMoreClickFunction)
   self:InitUIInfoByPlatform()
@@ -214,15 +231,41 @@ function M:RefreshPageStaticView(ActivityConfigData, PageConfigData, InfoClickFu
     ActivityReddotHelper.RemoveReddotListenByEventId(self.CurActivityId, self)
     ActivityReddotHelper.AddReddotListenByEventId(self.CurActivityId, CallbackInfo)
   end
-  self.Btn_Buy:TryOverrideSoundFunc(function()
-    AudioManager(self):PlayUISound(self, "event:/ui/activity/shop_small_btn_click", nil, nil)
-  end)
+  if ActivityUtils.IsAccessoryDropActivity(self.CurActivityId) then
+    self.Btn_Buy:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  else
+    self.Btn_Buy:TryOverrideSoundFunc(function()
+      AudioManager(self):PlayUISound(self, "event:/ui/activity/shop_small_btn_click", nil, nil)
+    end)
+    self.Btn_Buy:SetVisibility(UIConst.VisibilityOp.Visible)
+  end
   self.Btn_Confirm:TryOverrideSoundFunc(function()
     AudioManager(self):PlayUISound(self, "event:/ui/activity/confirm_click", nil, nil)
   end)
   if self.IsHideReward then
     self.Group_Task:ClearChildren()
   end
+end
+
+function M:IsRewardShow(RewardInfo, RewardContent)
+  if ActivityUtils.IsAccessoryDropActivity(self.CurActivityId) then
+    if RewardInfo.DropType == "DropTag_AccessoryDropMain" then
+      local Avatar = GWorld:GetAvatar()
+      local has = false
+      if RewardContent.ItemType == "CharAccessory" then
+        has = Avatar:IsCharAccessoryExist(RewardContent.UnitId)
+      elseif RewardContent.ItemType == "Skin" then
+        has = Avatar:IsCharSkinExist(RewardContent.UnitId) and true or false
+      elseif RewardContent.ItemType == "HeadSculpture" then
+        has = Avatar:IsHeadSculptureExist(RewardContent.UnitId)
+      end
+      RewardContent.bHasGot = has
+      return true
+    else
+      return false
+    end
+  end
+  return true
 end
 
 function M:UpdateEventTitleInfo(ActivityConfigData, TitleWidget, PlayerAvatar)
@@ -317,6 +360,24 @@ function M:NewItemContent(ItemType, ItemId, Icon, Rarity, Quantity, OpenFunction
     end
   end
   return Obj
+end
+
+function M:RefreshRewardList()
+  for _, Content in pairs(self.List_Reward:GetListItems()) do
+    if Content.SelfWidget then
+      local Avatar = GWorld:GetAvatar()
+      local has = false
+      if Content.ItemType == "CharAccessory" then
+        has = Avatar:IsCharAccessoryExist(Content.UnitId)
+      elseif Content.ItemType == "Skin" then
+        has = Avatar:IsCharSkinExist(Content.UnitId)
+      elseif Content.ItemType == "HeadSculpture" then
+        has = Avatar:IsHeadSculptureExist(Content.UnitId)
+      end
+      Content.bHasGot = has
+      Content.SelfWidget:SetIsGot(Content.bHasGot)
+    end
+  end
 end
 
 return M

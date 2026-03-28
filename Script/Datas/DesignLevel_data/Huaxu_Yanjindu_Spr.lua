@@ -390,6 +390,16 @@ return {
       UnitType = "Drop",
       UnitId = 11223
     },
+    ["2110366"] = {
+      CreatorId = 2110366,
+      UnitType = "Mechanism",
+      UnitId = 1130128
+    },
+    ["2110367"] = {
+      CreatorId = 2110367,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
     ["2110027"] = {
       CreatorId = 2110027,
       UnitType = "Drop",

@@ -61,7 +61,6 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
@@ -69,6 +68,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -869,6 +869,7 @@ return {
               SwitchToMaster = "None",
               bNpcActionKeepIn = true,
               bNpcActionKeepOut = false,
+              bForceWaitNavLoaded = false,
               NormalOptions = {},
               OverrideFailBlend = false
             }
@@ -1020,7 +1021,7 @@ return {
             key = "17447256055311632234",
             type = "ShowOrHideTaskIndicatorNode",
             name = "隐藏任务指引点",
-            pos = {x = 2673.4247266275165, y = 1166.6203368395893},
+            pos = {x = 2672.4569846920326, y = 1166.6203368395893},
             propsData = {
               IsShow = false,
               bOpenRangeEffect = false,
@@ -1068,7 +1069,7 @@ return {
             key = "1744727809896548329",
             type = "ShowOrHideTaskIndicatorNode",
             name = "隐藏任务指引点",
-            pos = {x = 2734.0727868568542, y = 1537.3543158655489},
+            pos = {x = 2746.9299297139974, y = 1540.0363435153185},
             propsData = {
               IsShow = false,
               bOpenRangeEffect = false,
@@ -1080,7 +1081,7 @@ return {
             key = "1744727811842548391",
             type = "ShowOrHideTaskIndicatorNode",
             name = "隐藏任务指引点",
-            pos = {x = 2862.586611741647, y = 1552.6596154047197},
+            pos = {x = 2911.586611741647, y = 1559.945329690434},
             propsData = {
               IsShow = false,
               bOpenRangeEffect = false,

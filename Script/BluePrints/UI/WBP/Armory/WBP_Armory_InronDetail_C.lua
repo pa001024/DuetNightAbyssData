@@ -20,6 +20,7 @@ function M:OnLoaded(...)
   M.Super.OnLoaded(self, ...)
   self.Parent, self.SelectTraceId, self.SelectMod = ...
   self.MaxGradeLevel = tonumber(DataMgr.GlobalConstant.CharCardLevelMax.ConstantValue)
+  self.TotalMaxGradeLevel = DataMgr.GlobalConstant.CharCardLevelMax.ConstantValue + 1
   self.FocusOnDetail = false
   self.CurSelectCanGrade = false
   self.UnlockPlaying = false
@@ -38,7 +39,7 @@ function M:OnLoaded(...)
     self.OnInAnimFinished
   })
   self:PlayAnimation(self.Detail_In)
-  for i = 1, self.Parent.MaxGradeLevel do
+  for i = 1, self.TotalMaxGradeLevel do
     if self.Armory_Inron["InronItem_" .. i] and i ~= self.SelectTraceId then
       self.Armory_Inron["InronItem_" .. i].IsClick = false
       self.Armory_Inron["InronItem_" .. i]:SetNormalState()
@@ -72,7 +73,6 @@ function M:UpdateDetailInfo(TraceId, SelectMod)
   local Res = self.Armory_Inron:InitResourceNeeded()
   self.Type, self.Resource1, self.Resource2 = Res[1], Res[2], Res[3]
   self.CurSelectCanGrade = false
-  local CanUpGrade = self.Armory_Inron:CheckCharCanUpGradeLevel()
   if 1 == SelectMod or 4 == SelectMod then
     self.WidgetSwitcher_Btn:SetActiveWidgetIndex(1)
     self.Hint_Lock.WidgetSwitcher_State:SetActiveWidgetIndex(1)
@@ -84,9 +84,34 @@ function M:UpdateDetailInfo(TraceId, SelectMod)
       self.Panel_Unlock:SetVisibility(UE4.ESlateVisibility.Collapsed)
     end
   elseif 2 == SelectMod then
-    self.WidgetSwitcher_Btn:SetActiveWidgetIndex(0)
-    self.Btn_Unlock:SetText(GText("UI_UNLOCK"))
-    self.CurSelectCanGrade = true
+    if 7 == TraceId then
+      local Avatar = GWorld:GetAvatar()
+      local CharId = self.Parent.CharId
+      local Condition = DataMgr.UltraCharCardLevelUp and DataMgr.UltraCharCardLevelUp[CharId] and DataMgr.UltraCharCardLevelUp[CharId].ExtraUnlockCondition
+      local ConditionTrue = false
+      local ConditionDesc = DataMgr.UltraCharCardLevelUp and DataMgr.UltraCharCardLevelUp[CharId] and DataMgr.UltraCharCardLevelUp[CharId].UnlockDes
+      if Avatar and CharId and ConditionUtils.CheckCondition(Avatar, Condition) then
+        ConditionTrue = true
+      end
+      if not ConditionTrue then
+        self.WidgetSwitcher_Btn:SetActiveWidgetIndex(1)
+        self.Hint_Lock.WidgetSwitcher_State:SetActiveWidgetIndex(0)
+        self.Hint_Lock.Text_Hint_Normal:SetText(GText(ConditionDesc))
+      elseif 1 == self.Type then
+        self.WidgetSwitcher_Btn:SetActiveWidgetIndex(0)
+        self.Btn_Unlock:SetText(GText("UI_UNLOCK"))
+        self.CurSelectCanGrade = true
+      else
+        self.WidgetSwitcher_Btn:SetActiveWidgetIndex(1)
+        self.Hint_Lock.WidgetSwitcher_State:SetActiveWidgetIndex(0)
+        self.Hint_Lock.Text_Hint_Locked:SetText(GText("UI_Prop_Notenough"))
+        self.Hint_Lock.Text_Hint_Normal:SetText(GText("UI_Prop_Notenough"))
+      end
+    else
+      self.WidgetSwitcher_Btn:SetActiveWidgetIndex(0)
+      self.Btn_Unlock:SetText(GText("UI_UNLOCK"))
+      self.CurSelectCanGrade = true
+    end
   else
     self.WidgetSwitcher_Btn:SetActiveWidgetIndex(1)
     self.Hint_Lock.WidgetSwitcher_State:SetActiveWidgetIndex(2)
@@ -105,9 +130,15 @@ end
 function M:ShowCollectRewardExpText(TraceId, SelectMod)
   if 2 == SelectMod or 3 == SelectMod then
     self.Panel_ExpHint:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-    local CurCharLevelUpData = self.Parent.CharId and DataMgr.CharCardLevelUp[self.Parent.CharId] or {}
-    local RewardData = CurCharLevelUpData[TraceId - 1] or {}
-    local CollectRewardExp = RewardData.CollectRewardExp or 0
+    local CollectRewardExp = 0
+    if 7 == TraceId then
+      local UltraData = DataMgr.UltraCharCardLevelUp and DataMgr.UltraCharCardLevelUp[self.Parent.CharId]
+      CollectRewardExp = UltraData and UltraData.CollectRewardExp or 0
+    else
+      local CurCharLevelUpData = self.Parent.CharId and DataMgr.CharCardLevelUp[self.Parent.CharId] or {}
+      local RewardData = CurCharLevelUpData[TraceId - 1] or {}
+      CollectRewardExp = RewardData.CollectRewardExp or 0
+    end
     local HintText = string.format(GText("UI_Armory_CharCardUpExp"), CollectRewardExp)
     self.Text_ExpHint:SetText(HintText)
   else
@@ -124,7 +155,7 @@ function M:OnBackgroundClicked()
     return
   end
   if self.Parent then
-    for i = 1, self.Parent.MaxGradeLevel do
+    for i = 1, self.TotalMaxGradeLevel do
       if self.Parent["InronItem_" .. i] and self.Parent["InronItem_" .. i]:IsAnimationPlaying(self.Parent["InronItem_" .. i].UnLock) then
         return
       end
@@ -147,7 +178,7 @@ function M:OnCloseBtnClicked()
     self.Armory_Inron["InronItem_" .. self.SelectTraceId]:SetNormalState()
   end
   if self.Parent then
-    for i = 1, self.Parent.MaxGradeLevel do
+    for i = 1, self.TotalMaxGradeLevel do
       if self.Parent["InronItem_" .. i] then
         self.Parent["InronItem_" .. i].IsClick = false
         self.Parent["InronItem_" .. i]:SetNormalState()
@@ -175,7 +206,7 @@ function M:OnOutAnimFinished()
   self.Parent:OnTraceDetailsDestruct(self.SelectTraceId)
   local ArmoryMain = UIManager(self):GetArmoryUIObj()
   if ArmoryMain and ArmoryMain.BackgroundBlurWithMask_39 then
-    ArmoryMain.BackgroundBlurWithMask_39:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    ArmoryMain.BackgroundBlurWithMask_39:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   end
   self:Close()
 end
@@ -204,7 +235,11 @@ function M:ReceiveEnterState(StackAction)
       self.Armory_Inron["InronItem_" .. self.SelectTraceId].IsClick = false
       self.Armory_Inron["InronItem_" .. self.SelectTraceId]:SetClickState()
       self.Armory_Inron.LastFocusItem = self["InronItem_" .. self.SelectTraceId]
-      self.Armory_Inron["InronItem_" .. self.SelectTraceId]:SetReddotState(self.Armory_Inron:CheckCharCanUpGradeLevel())
+      if 7 == self.SelectTraceId then
+        self.Armory_Inron["InronItem_" .. self.SelectTraceId]:SetReddotState(self.Armory_Inron:CheckCharCanUpUltraGradeLevel())
+      else
+        self.Armory_Inron["InronItem_" .. self.SelectTraceId]:SetReddotState(self.Armory_Inron:CheckCharCanUpGradeLevel())
+      end
     end
   end
 end

@@ -227,26 +227,12 @@ function M:UpdateSkillInTimer()
   end
   local SkillId = self.SkillId
   local Skill = self.OwnerPlayer:GetSkill(SkillId)
-  self:CheckIsInAir(Skill)
   self:HandleCurButtonState(SkillId, Skill, self.CurButtonState)
   self:PlayWithTimerAnimation()
 end
 
-function M:CheckIsInAir(Skill)
-  if not Skill then
-    return
-  end
-  if self.OwnerPlayer:CheckSkillInActive(self.SkillName) then
-    return
-  end
-  if self.OwnerPlayer:CheckSkillIsBan(self.SkillName) then
-    return
-  end
-  if not Skill.Data.AllowUseSkillInAir and (self.OwnerPlayer.IsInAir or self.OwnerPanel.IsCharacterInFalling) then
-    self:BanSkillInAir(true)
-  else
-    self:BanSkillInAir(false)
-  end
+function M:ChangeIsInAir(IsInAir)
+  self:BanSkillInAir(IsInAir)
 end
 
 function M:BanSkillInAir(IsBanInAir)

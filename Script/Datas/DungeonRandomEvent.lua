@@ -178,5 +178,14 @@ return ReadOnly("DungeonRandomEvent", {
     IncreasingProbability = 0.3,
     PetGroups = T.RT_1,
     WeeklyLimit = 30
+  },
+  [5] = {
+    Dungeons = {1},
+    EventID = 5,
+    EventPriority = 0,
+    EventProbability = 0,
+    EventType = "Chest",
+    IncreasingProbability = 0,
+    WeeklyLimit = 99
   }
 })

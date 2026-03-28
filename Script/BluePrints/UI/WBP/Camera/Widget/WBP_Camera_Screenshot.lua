@@ -133,27 +133,7 @@ function M:Init(Params)
   DateTimeStr = ULowEntryExtendedStandardLibrary.DateTime_ToString(UKismetMathLibrary.Now("%Y.%m.%d-%H.%M.%S"))
   FileName = "Screenshot-" .. DateTimeStr .. ".png"
   self.bHasFoundTargets = Params.bHasFoundTargets
-  local EventId = tonumber(Params.EventId)
-  if EventId and 0 ~= EventId then
-    self.EventId = math.floor(EventId)
-    self.EventParams = Params.EventParams
-    self.KeyDownEvent[Const.GamepadFaceButtonDown] = {
-      Func = self.JumpToActivityPage,
-      Self = self
-    }
-    self.Btn_Yes_1:SetText(GText("前往查看（未配）"))
-    self.Btn_Yes_1:UnBindEventOnClickedByObj(self)
-    self.Btn_Yes_1:BindEventOnClicked(self, self.JumpToActivityPage)
-    self.KeyDownEvent[Const.GamepadFaceButtonUp] = {
-      Func = self.TrySaveScreenshot,
-      Self = self
-    }
-    self.Btn_Save:SetVisibility(UIConst.VisibilityOp.Visible)
-    self.Btn_Save:UnBindEventOnClickedByObj(self)
-    self.Btn_Save:BindSingleEventOnClicked(self, self.TrySaveScreenshot)
-    if Params.bHasFoundTargets then
-    end
-  elseif Params.bAprilFoolsDayActivity then
+  if Params.bAprilFoolsDayActivity then
     self.Btn_Upload:SetText(GText("AFDayEvent_PhotoWall_Upload"))
     self.Btn_Upload:UnBindEventOnClickedByObj(self)
     if not Params.bHasFoundTargets then
@@ -372,6 +352,19 @@ function M:SaveScreenshotToLocal()
   UKismetRenderingLibrary.ClearRenderTarget2D(self, self.RenderTarget)
   local Canvas, Size, Context = UKismetRenderingLibrary.BeginDrawCanvasToRenderTarget(self, self.RenderTarget)
   Canvas:K2_DrawTexture(self.ScreenshotImage, FVector2D(0, 0), Size)
+  if GWorld and GWorld.bShouldShowWaterMark or Const.bTakePhotoAddWatermark then
+    local GameInstance = GWorld.GameInstance
+    if GameInstance and GameInstance.GetGameUIManager then
+      local TestServerWaterMarkUI = GameInstance:GetGameUIManager():GetUI("WaterMark")
+      if TestServerWaterMarkUI then
+        local WatermarkTexture2D = UKismetRenderingLibrary.CreateRenderTarget2D(self, self.RTWidth, self.RTHeight, UE4.ETextureRenderTargetFormat.RTF_RGBA8_SRGB)
+        if IsValid(WatermarkTexture2D) then
+          local WatermarkTextureRes = UE4.URuntimeCommonFunctionLibrary.RenderWidgetToTexture(TestServerWaterMarkUI, WatermarkTexture2D, self.RTWidth, self.RTHeight, 16)
+          Canvas:K2_DrawTexture(WatermarkTextureRes, FVector2D(0, 0), Size)
+        end
+      end
+    end
+  end
   local LocalCoordinate = FVector2D(0, 0)
   local ScreenshotGeo = self.Screenshot:GetTickSpaceGeometry()
   local ScreenshotAbsSize = USlateBlueprintLibrary.GetAbsoluteSize(ScreenshotGeo)

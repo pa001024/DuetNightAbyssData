@@ -339,4 +339,8 @@ function M:GetCurrentSoundPosValue()
   return Value
 end
 
+function M:SetFinish(Show)
+  self.Finish:SetVisibility(Show and ESlateVisibility.SelfHitTestInvisible or ESlateVisibility.Collapsed)
+end
+
 return M

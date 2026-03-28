@@ -127,5 +127,75 @@ return ReadOnly("SpecialLoading", {
     Id = 10021,
     LoadingId = 10410702,
     Region = {SpawnPoint = 4, SubId = 104107}
+  },
+  [10022] = {
+    Id = 10022,
+    LoadingId = 10450101,
+    Region = {SubId = 104501}
+  },
+  [10023] = {
+    Id = 10023,
+    LoadingId = 10450201,
+    Region = {SubId = 104502}
+  },
+  [10024] = {
+    Id = 10024,
+    LoadingId = 10450301,
+    Region = {SubId = 104503}
+  },
+  [10025] = {
+    Id = 10025,
+    LoadingId = 10450401,
+    Region = {SubId = 104504}
+  },
+  [10026] = {
+    Id = 10026,
+    LoadingId = 10450501,
+    Region = {SubId = 104505}
+  },
+  [10027] = {
+    Id = 10027,
+    LoadingId = 10450601,
+    Region = {SubId = 104506}
+  },
+  [10028] = {
+    Id = 10028,
+    LoadingId = 10510101,
+    Region = {SubId = 105101}
+  },
+  [10029] = {
+    Id = 10029,
+    LoadingId = 10520101,
+    Region = {SubId = 105201}
+  },
+  [10030] = {
+    Id = 10030,
+    LoadingId = 10530101,
+    Region = {SubId = 105301}
+  },
+  [10031] = {
+    Id = 10031,
+    LoadingId = 10550101,
+    Region = {SubId = 105501}
+  },
+  [10032] = {
+    Id = 10032,
+    LoadingId = 10480101,
+    Region = {SubId = 104801}
+  },
+  [10033] = {
+    Id = 10033,
+    LoadingId = 10560101,
+    Region = {SubId = 105601}
+  },
+  [10034] = {
+    Id = 10034,
+    LoadingId = 10560201,
+    Region = {SubId = 105602}
+  },
+  [10035] = {
+    Id = 10035,
+    LoadingId = 10540101,
+    Region = {SubId = 105401}
   }
 })

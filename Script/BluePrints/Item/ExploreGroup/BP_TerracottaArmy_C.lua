@@ -8,7 +8,11 @@ end
 
 function M:OnActorReady(Info)
   M.Super.OnActorReady(self, Info)
-  self:CheckAutoBomb()
+end
+
+function M:CheckInCamera()
+  local bShouldShow = URuntimeCommonFunctionLibrary.WasComponentRecentlyRenderedOnScreen(self.StaticMesh, 0.5)
+  return bShouldShow
 end
 
 return M

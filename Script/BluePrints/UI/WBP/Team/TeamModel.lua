@@ -141,6 +141,7 @@ function M:AddTeamMemberWithDs(WorldContext, Eid, PlayerState)
   end
   local Member = {
     Uid = Eid,
+    RealUID = PlayerState.Uid,
     Eid = CommonUtils.Str2ObjId(PlayerState.AvatarEidStr),
     Nickname = PlayerState.PlayerName,
     Char = {
@@ -244,6 +245,14 @@ function M:SetTeadLeaderId(Uid)
   if self.TeamData then
     self.TeamData:SetLeaderId(Uid)
   end
+end
+
+function M:GetMembersWithAvatarProps()
+  local TeamData = self.TeamDataBackup or self.TeamData
+  if not TeamData then
+    return {}
+  end
+  return TeamData.Members
 end
 
 function M:GetTeamLeaderId()

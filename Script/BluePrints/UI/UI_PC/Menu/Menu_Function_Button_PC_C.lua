@@ -1,6 +1,9 @@
 require("UnLua")
 local EMCache = require("EMCache.EMCache")
-local Menu_Function_Button_PC_C = Class("BluePrints.UI.BP_UIState_C")
+local Menu_Function_Button_PC_C = Class({
+  "BluePrints.UI.BP_EMUserWidget_C",
+  "BluePrints.UI.BP_EMUserWidgetUtils_C"
+})
 Menu_Function_Button_PC_C._components = {
   "BluePrints.UI.UI_PC.Menu.Reddot.MainUIItem_ReddotTree_Component"
 }
@@ -85,6 +88,23 @@ function Menu_Function_Button_PC_C:LoadImage(MainUIId, Type)
   if "Small" ~= Type then
     self.Text_Entrance:SetText(GText(BtnInfo[Id].Name))
   end
+  if "Small" == Type then
+    self.Pos_DownloadSign:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    if MainUIId == CommonConst.CommonSetId and CommonUtils.GetDeviceTypeByPlatformName() == "Mobile" then
+      if not self.ListenEvent or not self.ListenEvent[EventID.DownloadTaskStart] then
+        self:AddDispatcher(EventID.DownloadTaskStart, self, self.AddDownloadSignEffect)
+      end
+      if not self.ListenEvent or not self.ListenEvent[EventID.DownloadTaskFinish] then
+        self:AddDispatcher(EventID.DownloadTaskFinish, self, self.RemoveDownloadSignEffect)
+      end
+      local HotUpdateSubsystem = USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, UHotUpdateSubsystem)
+      if HotUpdateSubsystem and HotUpdateSubsystem:HasDownloadTask() then
+        self:AddDownloadSignEffect()
+      else
+        self:RemoveDownloadSignEffect(false)
+      end
+    end
+  end
   self:PlayAnimation(self.Normal)
   self:ReddotTreePlugIn(BtnInfo[Id], "Esc")
   self:UpdateGuidePoint()
@@ -92,7 +112,23 @@ end
 
 function Menu_Function_Button_PC_C:Destruct()
   self:ReddotTreePlugOut()
-  Menu_Function_Button_PC_C.Super.Destruct(self)
+  self:RemoveDispatcher(EventID.ConditionComplete, self, self.OnConditionComplete)
+  self:RemoveDispatcher(EventID.DownloadTaskStart, self, self.AddDownloadSignEffect)
+  self:RemoveDispatcher(EventID.DownloadTaskFinish, self, self.RemoveDownloadSignEffect)
+end
+
+function Menu_Function_Button_PC_C:AddDownloadSignEffect()
+  if not self.Pos_DownloadSign:IsVisible() then
+    self.Pos_DownloadSign:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  end
+end
+
+function Menu_Function_Button_PC_C:RemoveDownloadSignEffect(bIsNeedRealRemove)
+  if bIsNeedRealRemove and self.DownloadSign_EffectWidget then
+    self.Pos_DownloadSign:RemoveChild(self.DownloadSign_EffectWidget)
+    self.DownloadSign_EffectWidget = nil
+  end
+  self.Pos_DownloadSign:SetVisibility(UE4.ESlateVisibility.Collapsed)
 end
 
 function Menu_Function_Button_PC_C:UpdateArmoryIcon()

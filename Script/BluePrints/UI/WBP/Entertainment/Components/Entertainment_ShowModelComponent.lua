@@ -127,11 +127,13 @@ end
 
 function Component:WaitTime(Duration, Callback)
   self.WaitProcess:AddProcess(function(OnFinished)
-    self:AddTimer(Duration + 0.001, function()
-      if IsValid(self) then
-        Callback()
-      end
-      OnFinished()
+    self:AddTimer(0.001, function()
+      self:AddTimer(Duration + 0.001, function()
+        if IsValid(self) then
+          Callback()
+        end
+        OnFinished()
+      end)
     end)
   end)
   self.WaitProcess:ApplyTask()

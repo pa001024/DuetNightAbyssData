@@ -105,7 +105,7 @@ function M:BackToRegionOnline()
   end
 end
 
-function M:StartRegionOnline()
+function M:StartRegionOnline(bContinue)
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return
@@ -128,9 +128,14 @@ function M:StartRegionOnline()
   if TimeUI then
     TimeUI:Close()
   end
-  if PlayerCharacter.bFirstInitRegionOnline or self.bNotShowEnterUI == false then
+  if PlayerCharacter.bFirstInitRegionOnline or self.bNotShowEnterUI == false and not bContinue then
     self.bNotShowEnterUI = true
     TimeUI = UIManager(self):LoadUINew("RegionOnlineFloat", "In")
+    PlayerCharacter.bFirstInitRegionOnline = false
+  end
+  if bContinue then
+    self.bNotShowEnterUI = true
+    TimeUI = UIManager(self):LoadUINew("RegionOnlineFloat", "Another")
     PlayerCharacter.bFirstInitRegionOnline = false
   end
   local EnterState = (self.bShouldEndDeliveryMontage or GWorld.GameInstance.ShouldPlayDeliveryEndMontage) and CommonConst.OnlineState.UseDelivery or CommonConst.OnlineState.Normal

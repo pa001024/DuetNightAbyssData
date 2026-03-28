@@ -1,142 +1,234 @@
-local InventoryController = require("BluePrints.UI.WBP.SoloTreasure.Widget.Inventory.InventoryController")
 local InventoryCommonConst = require("BluePrints.UI.WBP.SoloTreasure.Widget.Inventory.InventoryCommonConst")
+local InventoryController = require("BluePrints.UI.WBP.SoloTreasure.Widget.Inventory.InventoryController")
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C",
   "BluePrints.Common.TimerMgr",
   "BluePrints.Common.DelayFrameComponent"
 })
+M._components = {
+  "BluePrints.UI.WBP.SoloTreasure.Widget.Inventory.InventoryDragInputComponent"
+}
 
 function M:Construct()
+  self.bNormal = true
 end
 
 function M:Destruct()
 end
 
 function M:Init(Params)
-  self.TreasureItem = Params.TreasureItem and Params.TreasureItem or self.TreasureItem
-  self.PocketData = Params.PocketData and Params.PocketData or self.PocketData
-  self.Inventory = Params.Inventory and Params.Inventory or self.Inventory
-  self.bGrid = true
-  self.bNormal = true
-  self:InitBtnEvents()
+  local PocketData = Params.PocketData
+  if not PocketData then
+    return
+  end
+  local GridDatas = InventoryController.InventoryModel.Grids[PocketData.Name]
+  if not GridDatas then
+    return
+  end
+  local GridData = GridDatas[self.Position.X] and GridDatas[self.Position.X][self.Position.Y]
+  if not GridData then
+    return
+  end
+  GridData.Grid = self
+  GridData.TreasureData = GridData.TreasureData or Params.TreasureData
+  self.PocketData = PocketData
+  self.Inventory = PocketData.Inventory or self.Inventory
+  self.bRecycle = PocketData.bRecycle or false
 end
 
-function M:InitBtnEvents()
-  self.Btn.OnHovered:Add(self, self.OnBtnHovered)
-  self.Btn.OnUnHovered:Add(self, self.OnBtnUnHovered)
-  self.Btn.OnClicked:Add(self, self.OnBtnClicked)
+function M:OnHovered()
+  if self.PocketData == nil then
+    return
+  end
+  local GridData = InventoryController:GetGridData(self.PocketData.Name, self.Position)
+  local TreasureData = GridData and GridData.TreasureData or nil
+  local TreasureItem = TreasureData and TreasureData.Treasure or nil
+  if UIUtils.IsMobileInput() then
+    return
+  end
+  InventoryController:RequestSelectedGrid(self)
+  if InventoryController.bDraging or InventoryController.bOpenItemDetails then
+    return
+  end
+  if IsValid(TreasureItem) then
+    TreasureItem:OnHovered(self)
+  end
 end
 
-function M:OnBtnHovered()
+function M:OnUnHovered()
+  if self.PocketData == nil then
+    return
+  end
+  local GridData = InventoryController:GetGridData(self.PocketData.Name, self.Position)
+  local TreasureData = GridData and GridData.TreasureData or nil
+  local TreasureItem = TreasureData and TreasureData.Treasure or nil
+  if UIUtils.IsMobileInput() then
+    return
+  end
+  InventoryController:RequestUnSelectedGrid(self)
+  if IsValid(TreasureItem) then
+    TreasureItem:OnUnHovered(self)
+  end
+end
+
+function M:OnPressed()
+  if not self.PocketData then
+    return
+  end
+  local GridData = InventoryController:GetGridData(self.PocketData.Name, self.Position)
+  local TreasureData = GridData and GridData.TreasureData or nil
+  local TreasureItem = TreasureData and TreasureData.Treasure or nil
   local bMobile = CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile"
   if bMobile then
     return
   end
-  if self.TreasureItem then
-    self.TreasureItem:OnHovered(self)
+  if IsValid(TreasureItem) then
+    TreasureItem:OnPressed()
   end
 end
 
-function M:OnBtnUnHovered()
-  local bMobile = CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile"
-  if bMobile then
+function M:OnClicked()
+  if not self.PocketData then
     return
   end
-  if self.TreasureItem then
-    self.TreasureItem:OnUnHovered(self)
-  end
-end
-
-function M:OnBtnClicked()
-  local key = "DoubleClickTimer_" .. self:GetName()
-  if self:IsExistTimer(key) then
-    self:RemoveTimer(key)
-    self._DoubleClickTimerKey = nil
-    self:OnDoubleClicked()
-    return
-  end
-  self._DoubleClickTimerKey = key
-  local interval = 0.25
-  self:AddTimer(interval, function(self)
-    if self._DoubleClickTimerKey == key then
+  if UIUtils.IsMobileInput() then
+    local key = "DoubleClickTimer_" .. self:GetName()
+    if self:IsExistTimer(key) then
+      self:RemoveTimer(key)
       self._DoubleClickTimerKey = nil
+      self:OnDoubleClicked()
+      return
     end
-  end, false, 0, key)
-  self:OnSingleClicked()
+    self._DoubleClickTimerKey = key
+    local interval = 0.25
+    self:AddTimer(interval, function(self)
+      if self._DoubleClickTimerKey == key then
+        self._DoubleClickTimerKey = nil
+      end
+    end, false, 0, key)
+  end
+  local GridData = InventoryController:GetGridData(self.PocketData.Name, self.Position)
+  local TreasureData = GridData and GridData.TreasureData or nil
+  local TreasureItem = TreasureData and TreasureData.Treasure or nil
+  if IsValid(TreasureItem) and TreasureItem.bSearched then
+    TreasureItem:OnClicked()
+  end
 end
 
 function M:OnDoubleClicked()
-  DebugPrint("lgc@WBP_SoloTreasure_Grid OnDoubleClicked")
-  if not self.TreasureItem or not self.TreasureItem.bSearched then
+  if not self.PocketData then
     return false
   end
-  return InventoryController:QuickTransferFromGrid(self)
-end
-
-function M:OnSingleClicked()
-  if self.TreasureItem and self.TreasureItem.bSearched then
-    self.TreasureItem:OnClicked()
+  local GridData = InventoryController:GetGridData(self.PocketData.Name, self.Position)
+  local TreasureData = GridData and GridData.TreasureData or nil
+  local TreasureItem = TreasureData and TreasureData.Treasure or nil
+  if not IsValid(TreasureItem) or not TreasureItem.bSearched then
+    return false
   end
+  local bSuccess = false
+  bSuccess = InventoryController:QuickTransferFromGrid(GridData, InventoryCommonConst.QuickTransferType.RightClick)
+  return bSuccess
 end
 
-function M:OnPreviewMouseButtonDown(MyGeometry, MouseEvent)
+function M:CustomOnPreviewMouseButtonDown(MyGeometry, MouseEvent)
   local MouseButton = UE4.UKismetInputLibrary.PointerEvent_GetEffectingButton(MouseEvent)
-  if MouseButton.KeyName == "LeftMouseButton" and self.TreasureItem then
-    return UWidgetBlueprintLibrary.DetectDrag(UWidgetBlueprintLibrary.ReleaseMouseCapture(UWidgetBlueprintLibrary.Unhandled()), self, UE4.EKeys.LeftMouseButton)
+  if self.PocketData == nil then
+    return false
   end
-  return UE4.UWidgetBlueprintLibrary.Unhandled()
+  local GridData = InventoryController:GetGridData(self.PocketData.Name, self.Position)
+  local TreasureData = GridData and GridData.TreasureData or nil
+  if MouseButton.KeyName == "LeftMouseButton" and TreasureData then
+    self:OnPressed()
+  end
+  return false
 end
 
-function M:OnMouseButtonUp(MyGeometry, MouseEvent)
-  DebugPrint("lgc@WBP_SoloTreasure_Grid OnMouseButtonUp", self:IsHovered())
+function M:CustomOnMouseButtonUp(MyGeometry, MouseEvent)
+  if not self.PocketData then
+    return false
+  end
   local MouseButton = UE4.UKismetInputLibrary.PointerEvent_GetEffectingButton(MouseEvent)
-  if MouseButton.KeyName == "RightMouseButton" then
-    self:OnSingleClicked()
-    local bSuccess = self:OnDoubleClicked()
-    if bSuccess then
-      return UE4.UWidgetBlueprintLibrary.Handled()
+  local bAltBtnDown = UKismetInputLibrary.InputEvent_IsAltDown(MouseEvent)
+  if MouseButton.KeyName == "RightMouseButton" and not UIUtils.IsMobileInput() and not bAltBtnDown then
+    if not InventoryController.bDraging then
+      local bSuccess = self:OnDoubleClicked()
+      if bSuccess then
+        return true
+      end
     end
+  elseif MouseButton.KeyName == "RightMouseButton" and bAltBtnDown then
+    if not InventoryController.bDraging and not self.bRecycle then
+      local GridData = InventoryController:GetGridData(self.PocketData.Name, self.Position)
+      local TreasureData = GridData and GridData.TreasureData or nil
+      local TreasureItem = TreasureData and TreasureData.Treasure or nil
+      if not IsValid(TreasureItem) or not TreasureItem.bSearched then
+        return false
+      end
+      return InventoryController:QuickTransferFromGrid(GridData, InventoryCommonConst.QuickTransferType.AltAndRightClick)
+    end
+  elseif MouseButton.KeyName == "LeftMouseButton" and not InventoryController.bDraging then
+    self:OnClicked()
+    return true
   end
-  return UE4.UWidgetBlueprintLibrary.Unhandled()
+  return false
 end
 
-function M:OnDragDetected(MyGeometry, PointerEvent)
-  local TreasureItem = self.TreasureItem
-  if not TreasureItem or not TreasureItem.bSearched then
+function M:CustomOnMouseEnter(MyGeometry, MouseEvent)
+  self:OnHovered()
+end
+
+function M:CustomOnMouseLeave(MouseEvent)
+  self:OnUnHovered()
+end
+
+function M:CustomOnMouseMove(MyGeometry, MouseEvent)
+  return false
+end
+
+function M:CustomOnDragDetected()
+  InventoryController.bDetectDrag = false
+  InventoryController.StartDetectDragPos = nil
+  InventoryController.StartDetectDragGrid = nil
+  local GridData = InventoryController:GetGridData(self.PocketData.Name, self.Position)
+  local TreasureData = GridData and GridData.TreasureData or nil
+  local TreasureItem = TreasureData and TreasureData.Treasure or nil
+  if not IsValid(TreasureItem) or not TreasureItem.bSearched then
     return
   end
   local Operation = NewObject(UIUtils.GetCommonDragDropOperationClass())
   Operation.Payload = self
-  if not IsValid(TreasureItem.TreasureContent.DefaultDragVisual) then
-    TreasureItem:CreateDragWidget(TreasureItem.TreasureContent)
+  if not IsValid(TreasureItem.TreasureData.DefaultDragVisual) then
+    TreasureItem:CreateDragWidget(TreasureItem.TreasureData)
   end
-  Operation.DefaultDragVisual = TreasureItem.TreasureContent.DefaultDragVisual
+  Operation.DefaultDragVisual = TreasureItem.TreasureData.DefaultDragVisual
   if not Operation.DefaultDragVisual then
     return nil
   end
-  Operation.Tag = "SoloTreasureGrid"
-  Operation.Pivot = self.DragPivot or UE4.EDragPivot.CenterCenter
-  Operation.Offset = self.DragOffset or Operation.Offset
-  InventoryController:OnDragDetected(self, MyGeometry, PointerEvent, Operation)
-  return Operation
+  InventoryController:CustomOnDragDetected(GridData, Operation)
+  AudioManager(self):PlayUISound(self, "event:/ui/activity/auto_chess_cell_click_remove", nil, nil)
 end
 
-function M:OnDragCancelled(PointerEvent, Operation)
-  Operation = InventoryController:OnDragCancelled(self, PointerEvent, Operation)
+function M:CustomOnDragEnter(MyGeometry, PointerEvent)
+  if not self.PocketData then
+    return false
+  end
+  local GridData = InventoryController:GetGridData(self.PocketData.Name, self.Position)
+  InventoryController:CustomOnDragEnter(GridData, MyGeometry, PointerEvent)
 end
 
-function M:OnDragEnter(MyGeometry, PointerEvent, Operation)
-  DebugPrint("lgc@WBP_SoloTreasure_Grid OnDragEnter", self.Btn:IsHovered())
-  Operation = InventoryController:OnDragEnter(self, MyGeometry, PointerEvent, Operation)
+function M:CustomOnDragLeave(PointerEvent)
+  if not self.PocketData then
+    return false
+  end
+  local GridData = InventoryController:GetGridData(self.PocketData.Name, self.Position)
+  InventoryController:CustomOnDragLeave(GridData, PointerEvent)
+  self.Quadrant = nil
 end
 
-function M:OnDragLeave(PointerEvent, Operation)
-  DebugPrint("lgc@WBP_SoloTreasure_Grid OnDragLeave", self.Btn:IsHovered())
-  Operation = InventoryController:OnDragLeave(self, PointerEvent, Operation)
-  self._Quadrant = nil
-end
-
-function M:OnDragOver(MyGeometry, PointerEvent, Operation)
+function M:CustomOnDragOver(MyGeometry, PointerEvent)
+  if not self.PocketData then
+    return false
+  end
   local ScreenPos = UE4.UKismetInputLibrary.PointerEvent_GetScreenSpacePosition(PointerEvent)
   local LocalPos = UE4.USlateBlueprintLibrary.AbsoluteToLocal(MyGeometry, ScreenPos)
   local Size = UE4.USlateBlueprintLibrary.GetLocalSize(MyGeometry)
@@ -156,23 +248,30 @@ function M:OnDragOver(MyGeometry, PointerEvent, Operation)
     NewQuadrant = 2
   end
   self.CursorPosition = FVector2D(self.Position.X + RelX, self.Position.Y + RelY)
-  if self._Quadrant ~= NewQuadrant then
-    self._Quadrant = NewQuadrant
-    InventoryController:OnDragEnter(self, MyGeometry, PointerEvent, Operation)
+  if self.Quadrant ~= NewQuadrant then
+    self.Quadrant = NewQuadrant
+    local GridData = InventoryController:GetGridData(self.PocketData.Name, self.Position)
+    InventoryController:CustomOnDragEnter(GridData, MyGeometry, PointerEvent)
   end
-  return Operation
 end
 
-function M:OnDrop(MyGeometry, PointerEvent, Operation)
-  local bDropSuccess = InventoryController:OnDrop(self, MyGeometry, PointerEvent, Operation)
+function M:CustomOnDrop(MyGeometry, PointerEvent, Operation)
+  if not self.PocketData then
+    return false
+  end
+  if self.bRecycle then
+    return false
+  end
+  local GridData = InventoryController:GetGridData(self.PocketData.Name, self.Position)
+  local bDropSuccess = InventoryController:CustomOnDrop(GridData)
+  self:OnHovered()
   return bDropSuccess
 end
 
 function M:UpdateView(UpdateParams)
   local bCanMove = UpdateParams.bCanMove
   local bReset = UpdateParams.bReset
-  DebugPrint("lgc@WBP_SoloTreasure_Grid UpdateView bCanMove =", bCanMove, "bReset =", bReset)
-  if bReset then
+  if bReset and not self.bNormal then
     self.bNormal = true
     self.bAble = false
     self.bDisable = false
@@ -208,10 +307,5 @@ function M:UpdateView(UpdateParams)
   end
 end
 
-function M:OnAddedToFocusPath(InFocusEvent)
-  if self.TreasureItem then
-    self.TreasureItem:SetFocus()
-  end
-end
-
+AssembleComponents(M)
 return M

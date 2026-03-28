@@ -48,6 +48,12 @@ function FDialogueIterationComponent:Pause()
     self.FlowCompoent:Pause()
     return
   end
+  local CurrentNode = self.StoryIterGraph:GetCurrentNode()
+  if CurrentNode then
+    CurrentNode:Pause()
+  else
+    DebugPrint("lhr@FDialogueIterationComponent:Pause(),CurrentNode is nil")
+  end
 end
 
 function FDialogueIterationComponent:Resume()
@@ -213,15 +219,15 @@ function FDialogueIterationComponent:IsEnd()
   return CurrentNode and CurrentNode:GetType() == EDialogueNodeType.End
 end
 
-function FDialogueIterationComponent:IsSelectedOption(OptionId)
+function FDialogueIterationComponent:IsOptionSelected(OptionId)
   if self.bUseFlow then
-    return self.FlowCompoent:IsSelectedOption(OptionId)
+    return self.FlowCompoent:IsOptionSelected(OptionId)
   end
   local CurrentNode = self.StoryIterGraph:GetCurrentNode()
   if not CurrentNode or CurrentNode:GetType() ~= EDialogueNodeType.Option then
     return false
   end
-  return CurrentNode.VisitedOptions[OptionId]
+  return CurrentNode:GetIsOptionSelected(OptionId)
 end
 
 function FDialogueIterationComponent:HasFinalDialogue()

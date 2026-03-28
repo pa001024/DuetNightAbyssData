@@ -532,8 +532,10 @@ function M:GenModPassiveEffectDesc(ModConf, BaseLevel, ExpectLevel)
   ExpectLevel = nil == ExpectLevel and BaseLevel or ExpectLevel
   local CastTo
   for i, DescValue in pairs(ModConf.DescValues) do
-    Desc, CastTo = SkillUtils.ReplaceDescValueTypeCast(Desc, i)
-    CastTo = nil ~= string.find(DescValue, "math.floor")
+    Desc, CastTo = SkillUtils.ReplaceAndChekDescValueCast(Desc, i)
+    if nil ~= string.find(DescValue, "math.floor") then
+      CastTo = {"int"}
+    end
     local Percent = string.match(DescValue, "%%") or ""
     local ValStr = self:_ModAttrGrowDesc2(DescValue, BaseLevel, ExpectLevel, Percent, CastTo)
     ValStr = "" == ValStr and self:_SkillGrowDesc(DescValue, BaseLevel, ExpectLevel, Percent, CastTo) or ValStr
@@ -666,6 +668,7 @@ function ReddotCreateFunctions.CreateCharReddotInfos(M)
   local AllChars = Avatar.Chars
   for Uuid, Char in pairs(AllChars) do
     M:TryAddNewCharReddot(Char, CommonUtils.ObjId2Str(Uuid))
+    M:TryAddNewUltraGradeCharReddot(Char)
   end
   
   local function RemoveUnknownChars(CacheDetail)
@@ -851,10 +854,11 @@ local function CreateOneCharAppearanceReddotInfos(CharId)
     ReddotManager.AddNode(LeafNodeName, nil, 1)
   end
   local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(LeafNodeName)
+  local CharAllHairs = CommonChar.OwnedHairs
   if CacheDetail then
     for key, _ in pairs(CacheDetail) do
       key = tonumber(key)
-      if nil == CharAllSkin[key] or not CommonUtils.IsCurrentTimeRealease(CommonConst.DataType.Hair, key) then
+      if nil == CharAllHairs[key] or not CommonUtils.IsCurrentTimeRealease(CommonConst.DataType.Hair, key) then
         M:SetItemReddotRead({
           ItemType = CommonConst.DataType.Hair,
           HairId = key
@@ -903,6 +907,26 @@ function ReddotCreateFunctions.CreateCharAppearanceReddotInfos(M)
   end
   for _, CommonChar in pairs(Avatar.CommonChars) do
     CreateOneCharAppearanceReddotInfos(CommonChar.CharId)
+  end
+  local AllCommonCharHairs = Avatar.CommonCharHairs
+  for HairId, Hair in pairs(AllCommonCharHairs) do
+    M:TryAddNewCharHairReddot(HairId)
+  end
+  local LeafNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair
+  if not ReddotManager.GetTreeNode(LeafNodeName) then
+    ReddotManager.AddNode(LeafNodeName, nil, 1)
+  end
+  local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(LeafNodeName)
+  if CacheDetail then
+    for key, _ in pairs(CacheDetail) do
+      key = tonumber(key)
+      if nil == AllCommonCharHairs[key] or not CommonUtils.IsCurrentTimeRealease(CommonConst.DataType.Hair, key) then
+        M:SetItemReddotRead({
+          ItemType = CommonConst.DataType.Hair,
+          HairId = key
+        }, true, true, true)
+      end
+    end
   end
 end
 
@@ -1214,10 +1238,12 @@ local SetReddotReadFunctions = {
     M:_SetReddotReadCommon(Content.SkinId, NodeName)
   end,
   SetHairReddotRead = function(self, Content, ReadNew, ReadUpgradeable, bDeleteCache)
-    if not Content.CharId then
-      return
+    local NodeName
+    if Content.CharId then
+      NodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair .. Content.CharId
+      M:_SetReddotReadCommon(Content.HairId, NodeName)
     end
-    local NodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair .. Content.CharId
+    NodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair
     M:_SetReddotReadCommon(Content.HairId, NodeName)
   end,
   SetWeaponSkinReddotRead = function(self, Content, ReadNew, ReadUpgradeable, bDeleteCache)
@@ -1280,6 +1306,17 @@ function M:UpdateContentRetDotType(Content)
   if Content.Widget and Content.Widget.SetReddot then
     Content.Widget:SetReddot(Content.RedDotType)
   end
+end
+
+function M:TryAddNewUltraGradeCharReddot(Char)
+  if Char:HasUltraGradeLevel() and not Char:IsExtraGradeLevelUnlocked() then
+    return M:_TryAddNewReddotCommon(Char.CharId, DataMgr.ReddotNode.NewUltraGradeChar.Name)
+  end
+  return false
+end
+
+function M:SetUltraGradeCharReddotRead(CharId)
+  M:_SetReddotReadCommon(CharId, DataMgr.ReddotNode.NewUltraGradeChar.Name)
 end
 
 function M:SetArchiveReddotRead(Content)
@@ -1437,8 +1474,10 @@ function M:TryAddNewCharReddot(Char, UuidStr)
     UuidStr = CommonUtils.ObjId2Str(Char.Uuid)
   end
   local CardUpgradeable = UpgradeUtils.CheckCharCanUpgradeCardLevel(Char)
-  local PromoteRes = M:_TryAddNewReddotCommon(UuidStr, DataMgr.ReddotNode.PromoteChar.Name, true, not CardUpgradeable)
-  if not CardUpgradeable then
+  local UltraUpgradeable = UpgradeUtils.CheckCharCanUpgradeUltraCardLevel(Char)
+  local Upgradeable = CardUpgradeable or UltraUpgradeable
+  local PromoteRes = M:_TryAddNewReddotCommon(UuidStr, DataMgr.ReddotNode.PromoteChar.Name, true, not Upgradeable)
+  if not Upgradeable then
     self:_SetReddotReadCommon(UuidStr, DataMgr.ReddotNode.PromoteChar.Name)
   end
   CreateOneCharAppearanceReddotInfos(Char.CharId)
@@ -1561,8 +1600,13 @@ function M:TryAddNewCharHairReddot(HairId, CharId)
   if not CharHairData then
     return false
   end
-  local ReddotName = CommonConst.DataType.Char .. CommonConst.DataType.Hair .. CharId
-  return M:_TryAddNewReddotCommon(HairId, ReddotName)
+  if CharHairData.IsCommon then
+    local ReddotName = CommonConst.DataType.Char .. CommonConst.DataType.Hair
+    return M:_TryAddNewReddotCommon(HairId, ReddotName)
+  else
+    local ReddotName = CommonConst.DataType.Char .. CommonConst.DataType.Hair .. (CharId or "")
+    return M:_TryAddNewReddotCommon(HairId, ReddotName)
+  end
 end
 
 function M:TryAddNewWeaponAccessoryReddot(AccessoryId)
@@ -1762,11 +1806,13 @@ local function _CreateDummyAvatarBase(DummyAvatar, _Params)
     return true
   end
   
+  DummyAvatar.CheckHairEnough = GWorld:GetAvatar().CheckHairEnough
   DummyAvatar.CreateInfo2Uuids = {
     Chars = {},
     Weapons = {},
     Pets = {}
   }
+  DummyAvatar.CommonCharHairs = {}
   DummyAvatar.Sex = _Params.Sex or GWorld:GetAvatar().Sex
 end
 
@@ -1966,6 +2012,9 @@ local function _CreateDummyAvatarMax(DummyAvatar, _Params)
         DummyAvatar.CurrentChar = Char.Uuid
       end
       Char:SetGradeLevel(DataMgr.GlobalConstant.CharCardLevelMax.ConstantValue)
+      if DataMgr.UltraCharCardLevelUp[CharId] then
+        Char.ExtraGradeLevel = 1
+      end
       for _, Skill in pairs(Char.Skills) do
         Skill:UnLock()
         if DataMgr.SkillLevelUp[Skill.SkillId] then
@@ -2051,6 +2100,7 @@ function M._CreateDummyAvatarCustom(DummyAvatar, _Params)
     end
     Char.Exp = CharInfo.Exp
     Char.GradeLevel = CharInfo.GradeLevel
+    Char.ExtraGradeLevel = CharInfo.ExtraGradeLevel
     if CharInfo.EnhanceLevel then
       Char.EnhanceLevel = CharInfo.EnhanceLevel
     end
@@ -2122,8 +2172,19 @@ function M._CreateDummyAvatarCustom(DummyAvatar, _Params)
           end
         end
       end
-      CommonChar:AddHair(AppearanceSuit.HairId or Char.CharId)
-      local Hair = CommonChar:GetHair(AppearanceSuit.HairId or Char.CharId)
+      local HairId = AppearanceSuit.HairId
+      local Hair
+      if HairId then
+        local HairData = DataMgr.Hair[HairId]
+        if HairData then
+          if HairData.CharId and HairData.CharId == Char.CharId then
+            CommonChar:AddHair(HairId)
+            Hair = CommonChar:GetHair(HairId)
+          elseif HairData.IsCommon then
+            DummyAvatar.CommonCharHairs[HairId] = true
+          end
+        end
+      end
       if Hair and type(AppearanceSuit.HairColors) == "table" then
         for PlanIdx, PlanColors in pairs(AppearanceSuit.HairColors) do
           if Hair.Colors[PlanIdx] and type(PlanColors) == "table" then
@@ -2279,6 +2340,14 @@ function M:GetCharNoneAccessoryIconPaths()
   for _, value in pairs(CommonConst.CharAccessoryTypes) do
     AccessoryIconPaths[value] = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Fashion_" .. value .. ".T_Tab_Fashion_" .. value
   end
+  return AccessoryIconPaths
+end
+
+function M:GetWeaponNoneAccessoryIconPaths()
+  local AccessoryIconPaths = {
+    [CommonConst.WeaponAccessoryTypes.Accessory] = DataMgr.AppearanceTab[3].IconPath,
+    [CommonConst.WeaponAccessoryTypes.RunAttack] = DataMgr.AppearanceTab[5].IconPath
+  }
   return AccessoryIconPaths
 end
 
@@ -2535,6 +2604,89 @@ function M:OnUnlockCharUsePiece(Ret, CharId, EscapeArmoryCharID, BeforeCheckErro
       [CharId] = 1
     }
   }, CallbackFunc, self, nil)
+end
+
+function M:IsSkinSupportAccessory(SkinId, AccessoryId)
+  local Data = DataMgr.CharAccessory[AccessoryId] or DataMgr.CharPartMesh[AccessoryId]
+  if not Data or not Data.Skin then
+    return true
+  end
+  for key, value in pairs(Data.Skin) do
+    if value == SkinId then
+      return true
+    end
+  end
+  return false
+end
+
+function M:InitSkinLevelUpReddot(CharId, Obj, Callback)
+  if self.IsPreviewMode then
+    return
+  end
+  if not CharId then
+    return
+  end
+  local NodeName = CommonConst.DataType.Char .. CommonConst.DataType.Skin .. "LevelUp" .. CharId
+  if not ReddotManager.GetTreeNode(NodeName) then
+    ReddotManager.AddNodeEx(NodeName)
+  end
+  local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(NodeName)
+  if not CacheDetail then
+    return
+  end
+  if not next(CacheDetail) then
+    local SkinData = DataMgr.Skin[CharId]
+    for SkinId, Data in pairs(DataMgr.Skin) do
+      if Data.CharId == CharId then
+        local SkinData = self:GetOwnedSkinData(SkinId)
+        CacheDetail[SkinId] = SkinData and SkinData.Level or 1
+      end
+    end
+  end
+  if Obj and Callback then
+    ReddotManager.AddListener(NodeName, Obj, Callback)
+  end
+end
+
+function M:GetOwnedSkinData(SkinId)
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar or not Avatar.CommonChars then
+    return
+  end
+  local CharId = DataMgr.Skin[SkinId] and DataMgr.Skin[SkinId].CharId
+  if not CharId then
+    return
+  end
+  local CommonChar = Avatar.CommonChars[CharId]
+  local Skin = CommonChar and CommonChar.OwnedSkins[SkinId]
+  return Skin
+end
+
+function M:CanSkinUpgrade(SkinId, TargetLevel)
+  local SkinUpData = DataMgr.SkinUpgrade[SkinId]
+  if not SkinUpData then
+    return false
+  end
+  if self.IsPreviewMode then
+    return false
+  end
+  local SkinData = self:GetOwnedSkinData(SkinId)
+  if not SkinData then
+    return false
+  end
+  local NextLevel = SkinData.Level + 1
+  local NextSkinUp = SkinUpData[NextLevel]
+  if not NextSkinUp then
+    return false
+  end
+  local Condition1 = true
+  if TargetLevel then
+    Condition1 = NextLevel == TargetLevel
+  end
+  local Avatar = GWorld:GetAvatar()
+  local OwnedAmount = Avatar:GetResourceNum(NextSkinUp.UnlockCurrency)
+  local Condition2 = OwnedAmount >= NextSkinUp.UnlockAmount
+  return Condition1 and Condition2
 end
 
 return M

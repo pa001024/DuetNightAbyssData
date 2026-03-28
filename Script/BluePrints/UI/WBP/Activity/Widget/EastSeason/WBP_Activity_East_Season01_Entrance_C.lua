@@ -49,9 +49,13 @@ end
 function M:OnClick()
   local GameInstance = GWorld.GameInstance
   local UIManager = GameInstance:GetGameUIManager()
-  local TaskPage = UIManager:GetUIObj("ActivityEastTask")
+  local UIName = "ActivityEastTask"
+  if DataMgr.SystemUIName[self.EventId] then
+    UIName = DataMgr.SystemUIName[self.EventId].UIName
+  end
+  local TaskPage = UIManager:GetUIObj(UIName)
   if not TaskPage then
-    TaskPage = UIManager:LoadUINew("ActivityEastTask", self.EventId, self.TabId, self.ParentWidget)
+    TaskPage = UIManager:LoadUINew(UIName, self.EventId, self.TabId, self.ParentWidget)
     UIManager:AddToJumpPageDeque(TaskPage)
   end
 end

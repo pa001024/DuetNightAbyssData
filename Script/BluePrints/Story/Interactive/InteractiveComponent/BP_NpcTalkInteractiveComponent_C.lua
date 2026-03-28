@@ -129,6 +129,11 @@ function BP_NpcTalkInteractiveComponent_C:TriggerTick(PlayerActor)
       self:EnableLookAt(PlayerActor, IsInLookAtRange)
     end
   end
+  if self:IsCanInteractTrigger(PlayerActor) then
+    self:BeginInteractTrigger()
+  else
+    self:EndInteractTrigger()
+  end
 end
 
 function BP_NpcTalkInteractiveComponent_C:GetNpcCharData(InType, InUnitId)
@@ -160,6 +165,7 @@ function BP_NpcTalkInteractiveComponent_C:TriggerExit(PlayerActor)
   if not PlayerActor:CheckCanInteractiveTrigger() then
     self:NotDisplayHeadWidget(PlayerActor)
   end
+  self:EndInteractTrigger()
 end
 
 function BP_NpcTalkInteractiveComponent_C:BtnPressed(PlayerActor)
@@ -359,6 +365,61 @@ function BP_NpcTalkInteractiveComponent_C:NotDisplayBubble(PlayerActor)
     end)
   end
   self.BubbleTalkKey = nil
+end
+
+function BP_NpcTalkInteractiveComponent_C:IsCanInteractTrigger(PlayerActor)
+  if not self.bIsInit or self.bCannotActive or self.Owner.bHidden then
+    return false
+  end
+  local NpcData = self:GetNpcCharData(self.Owner.UnitType, self.Owner.UnitId)
+  if not NpcData then
+    return false
+  end
+  local InteractTriggerData = DataMgr.InteractTrigger[NpcData.InteractTriggerId]
+  if not InteractTriggerData then
+    return false
+  end
+  return self.DistanceCheck(self.Owner, PlayerActor, InteractTriggerData.DetectionCM)
+end
+
+function BP_NpcTalkInteractiveComponent_C:BeginInteractTrigger()
+  if self.bIsInteractTrigger then
+    return
+  end
+  self.bIsInteractTrigger = true
+  local NpcData = self:GetNpcCharData(self.Owner.UnitType, self.Owner.UnitId)
+  if not NpcData then
+    return
+  end
+  local InteractTriggerData = DataMgr.InteractTrigger[NpcData.InteractTriggerId]
+  if not InteractTriggerData then
+    return
+  end
+  GWorld.StoryMgr:RunStory(InteractTriggerData.StorylineFilePath, nil, nil, function()
+    local Avatar = GWorld:GetAvatar()
+    if not Avatar:CheckInteractTriggerRewardIsGot(InteractTriggerData.InteractTriggerId) then
+      Avatar:GetInteractTriggerReward(InteractTriggerData.InteractTriggerId)
+    end
+  end)
+end
+
+function BP_NpcTalkInteractiveComponent_C:EndInteractTrigger()
+  if not self.bIsInteractTrigger then
+    return
+  end
+  if self.TalkState == ETalkInteractiveState.InteractiveTalk then
+    return
+  end
+  self.bIsInteractTrigger = false
+  local NpcData = self:GetNpcCharData(self.Owner.UnitType, self.Owner.UnitId)
+  if not NpcData then
+    return
+  end
+  local InteractTriggerData = DataMgr.InteractTrigger[NpcData.InteractTriggerId]
+  if not InteractTriggerData then
+    return
+  end
+  GWorld.StoryMgr:StopStoryline(InteractTriggerData.StorylineFilePath)
 end
 
 function BP_NpcTalkInteractiveComponent_C:TryExitInterativeTalkState()

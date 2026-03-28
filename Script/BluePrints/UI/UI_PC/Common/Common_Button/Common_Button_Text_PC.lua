@@ -13,6 +13,7 @@ function Common_Button_Text_PC:Construct()
   self.Super.Construct(self, self.Button_Area)
   self.bGamepadIconVisible = true
   self:PlayButtonUnForbidAnim()
+  self:SetKey_PCVisibility(UIConst.VisibilityOp.Collapsed)
 end
 
 function Common_Button_Text_PC:Destruct()
@@ -25,6 +26,9 @@ function Common_Button_Text_PC:RefreshIconAndGamePadVisibility()
     return
   end
   if self.CurInputDeviceType == ECommonInputType.Gamepad then
+    if self.WS_Key then
+      self.WS_Key:SetActiveWidgetIndex(0)
+    end
     if self.bGamepadIconVisible or self.bGamepadIconVisible == nil then
       self:SetGamePadVisibility(self.OverrideGamePadVisibilityOp or UIConst.VisibilityOp.SelfHitTestInvisible)
       self:SetIconPanelVisibility(UIConst.VisibilityOp.Collapsed)
@@ -33,6 +37,9 @@ function Common_Button_Text_PC:RefreshIconAndGamePadVisibility()
       self:SetIconPanelVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     end
   else
+    if self.WS_Key then
+      self.WS_Key:SetActiveWidgetIndex(1)
+    end
     self:SetGamePadVisibility(UIConst.VisibilityOp.Collapsed)
     self:SetIconPanelVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   end
@@ -195,12 +202,39 @@ function Common_Button_Text_PC:SetGamepadIconVisibility(bShow)
   self:RefreshIconAndGamePadVisibility()
 end
 
+function Common_Button_Text_PC:SetPCImg(ImgShortPath, ImgLongPath)
+  if not self.Key_PC or CommonUtils.GetDeviceTypeByPlatformName(self) ~= "PC" then
+    return
+  end
+  self.Key_PC:CreateCommonKey({
+    KeyInfoList = {
+      {
+        Type = "Text",
+        ImgShortPath = ImgShortPath,
+        ImgLongPath = ImgLongPath
+      }
+    },
+    bLongPress = self:GetIsLongPressButton(),
+    bButton = self:GetIsLongPressButton()
+  })
+  self:SetKey_PCVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+end
+
+function Common_Button_Text_PC:SetKey_PCVisibility(Op)
+  if self.Key_PC then
+    self.Key_PC:SetVisibility(Op)
+  end
+end
+
 function Common_Button_Text_PC:PlayLongPressAnimation()
   if self.CurInputDeviceType == ECommonInputType.Gamepad then
     self.Key_GamePad:OnButtonPressed(false, true, 0, self.LongPressDuration)
   else
     local Speed = self.LongPress:GetEndTime() / self.LongPressDuration
     self:PlayAnimation(self.LongPress, 0, 1, EUMGSequencePlayMode.Forward, Speed, false)
+    if self.Key_PC then
+      self.Key_PC:OnButtonPressed(false, true, 0, self.LongPressDuration)
+    end
   end
 end
 
@@ -210,6 +244,11 @@ function Common_Button_Text_PC:StopLongPressAnimation()
     self.Key_GamePad:StopAllAnimations()
     self.Key_GamePad:PlayAnimation(self.Key_GamePad.Normal)
   else
+    if self.Key_PC then
+      self.Key_PC:OnButtonReleased()
+      self.Key_PC:StopAllAnimations()
+      self.Key_PC:PlayAnimation(self.Key_PC.Normal)
+    end
     self:PlayAnimation(self.LongPress)
     self:StopAnimation(self.LongPress)
   end
@@ -217,11 +256,17 @@ end
 
 function Common_Button_Text_PC:PlayButtonForbidAnim()
   self.Key_GamePad:DisableKey()
+  if self.Key_PC then
+    self.Key_PC:DisableKey()
+  end
   self.Super.PlayButtonForbidAnim(self)
 end
 
 function Common_Button_Text_PC:PlayButtonUnForbidAnim()
   self.Key_GamePad:EnableKey()
+  if self.Key_PC then
+    self.Key_PC:EnableKey()
+  end
   self.Super.PlayButtonUnForbidAnim(self)
 end
 

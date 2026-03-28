@@ -2299,6 +2299,15 @@
     ]
   },
   {
+    "id": 150101,
+    "charId": 1501,
+    "name": "",
+    "reward": 7050,
+    "consume": {
+      "19006": 2
+    }
+  },
+  {
     "id": 150201,
     "charId": 1502,
     "name": "Death is Gentle",
@@ -5350,6 +5359,47 @@
         "npc": 790067
       }
     ]
+  },
+  {
+    "id": 150401,
+    "charId": 1504,
+    "name": "Wandering No More",
+    "desc": "Drifting leaves settle on the earth. The wandering returns home at last.",
+    "memoryName": "Sun-Scented Cuddlebird",
+    "memoryDesc": "A rotund, nameless bird, about the length of a forearm. Sinking into its soft belly melts away the day's fatigue.",
+    "reward": 7050,
+    "consume": {
+      "19003": 3,
+      "19006": 3
+    }
+  },
+  {
+    "id": 150402,
+    "charId": 1504,
+    "name": "A Parting of Ways",
+    "desc": "The road away from home winds on — long, crooked, and far. You daren't look back.",
+    "memoryName": "Powered Suitcase",
+    "memoryDesc": "A young artisan's pride and joy. Upgraded wheel assembly and a small thruster take the legwork out of travel — perfect for making a clean getaway.",
+    "reward": 7051,
+    "consume": {
+      "19002": 6,
+      "19004": 6,
+      "19006": 6
+    }
+  },
+  {
+    "id": 150403,
+    "charId": 1504,
+    "name": "Unceasing Flow",
+    "desc": "Blood binds. Cut it, and you might as well try to cut a river. The blade passes; the water does not part.",
+    "memoryName": "A Crumpled Letter from Home",
+    "memoryDesc": "A letter hidden for years inside the lining of a Cuddlebird. The paper is worn soft with creases, heavy with a parent's longing.",
+    "reward": 7052,
+    "consume": {
+      "19002": 9,
+      "19005": 9,
+      "19008": 9
+    }
   },
   {
     "id": 180101,
@@ -15192,6 +15242,47 @@
     ]
   },
   {
+    "id": 320201,
+    "charId": 3202,
+    "name": "Everything Has a Price",
+    "desc": "Today only at The Asphodel: 20% off all drinks! Charon or not — everyone gets the discount!",
+    "memoryName": "The Absolute Truth",
+    "memoryDesc": "Truth changes with what people are willing to believe. There's no such thing as an \"absolute truth\". The same goes for people: no enemies are eternal — only interests.",
+    "reward": 7050,
+    "consume": {
+      "19003": 3,
+      "19006": 3
+    }
+  },
+  {
+    "id": 320202,
+    "charId": 3202,
+    "name": "A Quiet Choice in the Dark",
+    "desc": "The moment she chose death, Camilla made her own choice.",
+    "memoryName": "Honey and Bread",
+    "memoryDesc": "Bread that goes down easy, and honey that's still runny and warm — this is their idea of a decent life. The Charon kids choke down their stale crusts and pretend it's the real thing.",
+    "reward": 7051,
+    "consume": {
+      "19002": 6,
+      "19004": 6,
+      "19006": 6
+    }
+  },
+  {
+    "id": 320203,
+    "charId": 3202,
+    "name": "An Unintended Investment",
+    "desc": "Years later, The Asphodel hasn't changed, and neither has its owner. Only one former regular is barely recognisable now.",
+    "memoryName": "Farewell to Yesterday",
+    "memoryDesc": "A warm draught goes down easy. For a moment, you almost believe you can leave yesterday's regrets behind.",
+    "reward": 7052,
+    "consume": {
+      "19002": 9,
+      "19005": 9,
+      "19008": 9
+    }
+  },
+  {
     "id": 330101,
     "charId": 3301,
     "name": "The Scavenger's Work",
@@ -17430,24 +17521,106 @@
   {
     "id": 410201,
     "charId": 4102,
-    "name": "",
+    "name": "On the Way",
+    "desc": "A Way that can be articulated is never the enduring Way. What sustains the order of all things is a Way beyond words.",
+    "memoryName": "Heaven's Way",
+    "memoryDesc": "The Nine Chapters of Dafeng move in their ordained cycle, unchanged from antiquity to the present. Such is Heaven's Way.",
+    "reward": 7050,
+    "consume": {
+      "19005": 2,
+      "19006": 2
+    }
+  },
+  {
+    "id": 410202,
+    "charId": 4102,
+    "name": "On Statecraft",
+    "desc": "In the end, statecraft is a matter of decisiveness. Has anyone who achieved greatness ever been constrained by trivialities?",
+    "memoryName": "Rumour and Calumny",
+    "memoryDesc": "Wrongs and unspoken grievances that once ran deep have faded into whispers, buried beneath rumour and calumny.",
     "reward": 7051,
     "consume": {
       "19002": 5,
-      "19003": 5,
-      "19008": 5
+      "19004": 5
+    }
+  },
+  {
+    "id": 410203,
+    "charId": 4102,
+    "name": "On the Heart",
+    "desc": "Cultivate the heart in the realm, and virtue flourishes. Cultivate the heart within oneself, and virtue proves true.",
+    "memoryName": "Severing the Past",
+    "memoryDesc": "What has passed belongs to yesterday. What lingers serves only to trouble the heart today.",
+    "reward": 7052,
+    "consume": {
+      "19007": 8,
+      "19008": 8
+    }
+  },
+  {
+    "id": 410204,
+    "charId": 4102,
+    "name": "A Heart Unbending",
+    "desc": "My heart will not be turned. Nor will it ever bow.",
+    "memoryName": "Promise",
+    "memoryDesc": "Time wears all things away. Yet there are some resolves that never waver.",
+    "reward": 7053,
+    "consume": {
+      "19001": 10,
+      "19002": 10
     }
   },
   {
     "id": 420101,
     "charId": 4201,
-    "name": "",
+    "name": "Jade Flute, Lingering Echoes",
+    "desc": "A jade flute's melody drifts away on the wind, carrying memories both bitter and sweet.",
+    "memoryName": "Phoenix's Cry",
+    "memoryDesc": "A bamboo flute, faint seams tracing where it was once broken and mended. No one knows what those scars have done to its voice.",
+    "reward": 7050,
+    "consume": {
+      "19005": 2,
+      "19006": 2
+    },
+    "conditionId": 120206
+  },
+  {
+    "id": 420102,
+    "charId": 4201,
+    "name": "Nowhere Home",
+    "desc": "The old hearth has gone to wind and rain. Where is there left to return to?",
+    "memoryName": "Heavenbound Sash",
+    "memoryDesc": "A sash from the Yingtian Magistrates' official regalia. Poets and bards liken it to a bond with the Heavenly Way — yet in truth, it is a shackle.",
     "reward": 7051,
     "consume": {
-      "19001": 5,
       "19002": 5,
-      "19006": 5,
-      "19007": 5
+      "19004": 5
+    }
+  },
+  {
+    "id": 420103,
+    "charId": 4201,
+    "name": "Bloodstained Steel, Severed Bonds",
+    "desc": "Once a blade has tasted blood, there's no going back. Look back, and the road behind you is already gone.",
+    "memoryName": "A Broken Jade Clasp",
+    "memoryDesc": "A jade belt clasp. Once broken, it was pieced back together and kept for years. But the deep crack down the middle never truly healed.",
+    "reward": 7052,
+    "consume": {
+      "19007": 8,
+      "19008": 8
+    }
+  },
+  {
+    "id": 420104,
+    "charId": 4201,
+    "name": "Clearing Skies, Untrodden Paths",
+    "desc": "When the dust settles and the clouds part, where does a traveller who once lost their way go next?",
+    "memoryName": "A Worn Bell",
+    "memoryDesc": "Three youngsters once tied this little bell to a wild fox and told it, \"This is your home now.\" Now a traveller who has drifted too long feels, at last, the urge to return.",
+    "reward": 7053,
+    "consume": {
+      "19001": 10,
+      "19002": 10
     }
   },
   {

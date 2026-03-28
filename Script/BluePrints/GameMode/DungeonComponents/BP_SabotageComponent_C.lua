@@ -66,9 +66,9 @@ function BP_SabotageComponent_C:InitEmergencyMonster(SabotageData)
   end)
 end
 
-function BP_SabotageComponent_C:OnStaticCreatorEvent(EventName, Eid, UnitId, UnitType)
+function BP_SabotageComponent_C:OnStaticCreatorEvent(EventName, Eid, UnitId, UnitType, CreatorId)
   if "SabotageMonsterGuide" == EventName then
-    DebugPrint("SabotageComponent SabotageMonsterGuide Eid", Eid, "UnitId", UnitId)
+    DebugPrint("SabotageComponent SabotageMonsterGuide Eid", Eid, "UnitId", UnitId, CreatorId)
     self.SabotageMonsterGuide[Eid] = UnitId
   end
 end

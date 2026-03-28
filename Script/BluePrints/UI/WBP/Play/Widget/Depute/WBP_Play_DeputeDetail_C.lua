@@ -127,13 +127,13 @@ function M:InitLevelList(DungeonList, SelectDungeonId, DeputeType, WalnutId)
     self.CurTabId = PlayEntry.CurTabId
   end
   self:SetFocus()
+  self.TitleEventTabId = nil
   self.MonsterIdToItem = {}
   self.TypeTable = {}
   self.TypeTableKeys = {}
   self.HB_Type:ClearChildren()
   self.CurrentTabIdx = 1
   self.SelectCell = nil
-  self.FirstEnter = true
   if not DeputeType then
     self.DeputeType = Const.DeputeType.RegularDepute
   else
@@ -707,22 +707,17 @@ function M:RefreshLevelCellContent(DungeonId)
   end
   self.DungeonUIBG = DungeonUIBG
   local Item = UIManager(self):CreateWidget(DungeonUIBG)
-  if self.DeputeType == Const.DeputeType.RegularDepute then
-    self.Panel_Bg:ClearChildren()
-  else
-    self.Panel_Bg:ClearChildren()
-    local ChildrenCount = self.Panel_Bg:GetChildrenCount()
-    if ChildrenCount >= 2 then
-      self.Panel_Bg:RemoveChildAt(0)
-    end
-    local OldItem = ChildrenCount > 0 and self.Panel_Bg:GetChildAt(0) or nil
-    if OldItem then
-      self:AddDelayFrameFunc(function()
-        if OldItem and OldItem:IsValid() then
-          self.Panel_Bg:RemoveChild(OldItem)
-        end
-      end, 8, "RemoveOldDungeonBG")
-    end
+  local ChildrenCount = self.Panel_Bg:GetChildrenCount()
+  if ChildrenCount >= 2 then
+    self.Panel_Bg:RemoveChildAt(0)
+  end
+  local OldItem = ChildrenCount > 0 and self.Panel_Bg:GetChildAt(0) or nil
+  if OldItem then
+    self:AddDelayFrameFunc(function()
+      if OldItem and OldItem:IsValid() then
+        self.Panel_Bg:RemoveChild(OldItem)
+      end
+    end, 8, "RemoveOldDungeonBG")
   end
   if Item then
     self.Panel_Bg:AddChild(Item)
@@ -732,14 +727,7 @@ function M:RefreshLevelCellContent(DungeonId)
     Item.Slot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
     Item.Slot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
     if Item.In then
-      if self.DeputeType == Const.DeputeType.RegularDepute and self.FirstEnter then
-        Item:PlayAnimation(Item.In)
-      elseif self.DeputeType ~= Const.DeputeType.RegularDepute then
-        Item:PlayAnimation(Item.In)
-      end
-    end
-    if self.DeputeType == Const.DeputeType.RegularDepute then
-      self.FirstEnter = false
+      Item:PlayAnimation(Item.In)
     end
   else
     DebugPrint("SL DungeonUIBG Create Failed")
@@ -1142,6 +1130,23 @@ function M:CheckNeedShowWindow()
   return IsNoMorePrompts
 end
 
+function M:EnsureOptionalPatchDownloaded()
+  local PatchCond = DataMgr.DungeonPatchCondition and DataMgr.DungeonPatchCondition[self.CurSelectedDungeonId]
+  local NecessaryPatch = PatchCond and PatchCond.NecessaryPatch
+  if not NecessaryPatch or 0 == #NecessaryPatch then
+    return true
+  end
+  local HotUpdateSubsystem = UE4.USubsystemBlueprintLibrary.GetGameInstanceSubsystem(self, UE4.UHotUpdateSubsystem)
+  if not HotUpdateSubsystem then
+    return true
+  end
+  if NecessaryPatch and not HotUpdateSubsystem:IsAllPatchOptionalSignsDownloaded(NecessaryPatch) then
+    UIManager(self):LoadUINew("OptionalPatch", NecessaryPatch)
+    return false
+  end
+  return true
+end
+
 function M:OnClickSolo()
   self.IsSoloStart = true
   self.MultiWalnut = false
@@ -1155,6 +1160,9 @@ function M:OnClickSolo()
     return
   end
   if self:IsAnimationPlaying(self.Out_Loading) then
+    return
+  end
+  if not self:EnsureOptionalPatchDownloaded() then
     return
   end
   local DungeonData = DataMgr.Dungeon[self.CurSelectedDungeonId]
@@ -1229,6 +1237,9 @@ function M:OnClickMulti()
   end
   local Avatar = GWorld:GetAvatar()
   assert(Avatar, "NO AVATAR")
+  if not self:EnsureOptionalPatchDownloaded() then
+    return
+  end
   if self.DeputeType == Const.DeputeType.DeputeWeekly and self.WeeklyDungeonRewardLeft <= 0 then
     local IsDeputeWeeklyNum = EMCache:Get("Is_DeputeWeeklyNum", true) or false
     local IsNoMorePrompts = self:CheckNeedShowWindow()
@@ -2158,6 +2169,10 @@ function M:UpdateActionPoint(ActionPointID)
 end
 
 function M:OnDungeonsUpdate()
+  local CommonDialogUI = UIManager(self):GetUIObj("CommonDialog")
+  if CommonDialogUI then
+    return
+  end
   if self.DeputeType == Const.DeputeType.WalnutDepute then
     local Params = {}
     

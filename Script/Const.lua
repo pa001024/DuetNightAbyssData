@@ -65,6 +65,7 @@ Const.Slide = 2
 Const.InvincibleBuffId = 301
 Const.SynthesisSpeedUpBuffId = 5000301
 Const.MuteBuffId = 859900
+Const.BossInvincibleBuffId = 6000212
 Const.Forward = 0
 Const.Right = 1
 Const.Left = 2
@@ -311,11 +312,11 @@ Const.StateEnd = 6
 Const.ExitStateAlert = 7
 Const.StateBattleProgress = 99
 Const.ProgressRecoverDungeonType = {
-  Survival = false,
-  SurvivalPro = false,
-  SurvivalMini = false,
-  Defence = false,
-  Excavation = false,
+  Survival = true,
+  SurvivalPro = true,
+  SurvivalMini = true,
+  Defence = true,
+  Excavation = true,
   Rouge = true
 }
 Const.DungeonErrorType = {
@@ -360,6 +361,9 @@ Const.RegionErrorTitle = {
   CanNotDestroy = "数据Actor无法销毁",
   GetRandomCreatorNil = "随机点GetCreator失败",
   GetRnadomParamActorNil = "随机点GetParamActorId失败"
+}
+Const.ServerDungeonType = {
+  "SoloTreasure"
 }
 Const.DungeonEnd_NoReason = 0
 Const.DungeonEnd_PlayerDead = 1
@@ -552,6 +556,7 @@ Const.MaxCrackKeyOneChar = 1
 Const.MainCityID = 2101
 Const.DefaultMainCityFile = "/Game/Maps/Chapter01_HomeBase"
 Const.DefaultLoginSceneFile = "/Game/Maps/Login"
+Const.DefaultOptionalPatchSceneFile = "/Game/Maps/OptionPatch"
 Const.DefaultMainCityRegionId = 210101
 Const.DefaultPrologueRegionId = 100103
 Const.BaseSummonOffset = 100
@@ -807,7 +812,7 @@ Const.Popup_AccerateProduce = 100018
 Const.Popup_ConfirmLockedMod = 100098
 Const.Popup_ConfirmUpgradedMod = 100099
 Const.StunTag = "Stun"
-Const.DS_Default_GroupId = 102
+Const.DS_Default_GroupId = 101
 Const.DSVersion = 0
 Const.NetWorkFailure_Tag = "NetWorkFailure"
 Const.NET_CLIENT_SEND_HEARTBEAT_TIME = 60
@@ -928,7 +933,10 @@ Const.CampType = {
 }
 Const.EnableCreateUnitLog = false
 Const.IsOpenNpcInitOpt = true
+Const.IsOpenNpcGetBattleCharTag = true
 Const.IsNpcUseNavFixPawnLoc = false
+Const.IsOpenCustomNPCCategory = false
+Const.IsOpenEscortNPCPhantomOpt = true
 Const.EnableFXOptimization = true
 Const.ToughnessTimeDilation = 0.33
 Const.ToughnessShowBloodTip = 0.4
@@ -975,11 +983,18 @@ Const.DialogueSnapShot = {
   ELECTRIC = 7,
   BROADCAST = 8,
   ECHO = 9,
-  WUYOU = 10
+  WUYOU = 10,
+  ROBOT = 11
 }
 Const.DungeonFrameLoadBreakableItemMaxNum = 2
 Const.MaxDungeonMonNum_PC = 150
 Const.MaxDungeonMonNum_Mobile = 100
+Const.DefenceGameToastType = {
+  Damaged = 1,
+  Destroyed = 2,
+  Fail = 3,
+  Success = 4
+}
 Const.bOverrideHLODDistance = false
 Const.HLODDistanceDefault = {
   [0] = 12000,
@@ -1081,6 +1096,7 @@ Const.RegionPreloadSupportSceneId = {
 Const.RegionStoryPreloadSupportSceneId = {
   [0] = 1001
 }
+Const.bServerMonsterDead = true
 Const.NeedStoreSTLBGM = true
 Const.FootstepFXSlowSpeed = 230
 Const.FootstepFXFastSpeed = 800
@@ -1232,11 +1248,11 @@ Const.PCScalabilityLevelNum = {
 }
 Const.MobileScalabilityLevelNum = {
   IOS = {
-    [0] = 5,
-    [1] = 5,
-    [2] = 5,
-    [3] = 5,
-    [4] = 5
+    [0] = 10,
+    [1] = 10,
+    [2] = 10,
+    [3] = 10,
+    [4] = 10
   },
   Android = {
     [0] = 8,
@@ -1246,5 +1262,6 @@ Const.MobileScalabilityLevelNum = {
     [4] = 8
   }
 }
-Const.EnableRougeLikeBornCheck = false
+Const.bTakePhotoAddWatermark = false
+Const.SynthesisCheckResetPointTime = 10
 return Const

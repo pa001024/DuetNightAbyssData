@@ -84,6 +84,7 @@ function WBP_Common_Dialog_ItemSubsize_PC_C:UpdateView(Params)
       local ModContent = ModModel:CreateModContent(ResInfo.ItemInstance, nil, true)
       Content = ModContent
       Content.StartLevelNum = Content.Level
+      Content.ItemType = ModContent.Type
       Content.Level = nil
       Content.IsShowDetails = true
     end

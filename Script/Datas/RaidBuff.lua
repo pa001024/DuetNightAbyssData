@@ -34,5 +34,17 @@ return ReadOnly("RaidBuff", {
       [2] = "$#GlobalPassiveData[30102].Vars.Penetration*100$%",
       [3] = "$(#GlobalPassiveData[30102].Vars.MaxSkillInten-1)/(#GlobalPassiveData[30102].Vars.Divider)*(#GlobalPassiveData[30102].Vars.Penetration)*100$%"
     }
+  },
+  [13] = {
+    RaidBuffDes = "Raid_Buff_13",
+    RaidBuffID = 13,
+    RaidBuffParameter = {
+      [1] = "$#GlobalPassiveData[30103].Vars.Divider1*100$%",
+      [2] = "$#GlobalPassiveData[30103].Vars.Penetration1*100$%",
+      [3] = "$(#GlobalPassiveData[30103].Vars.MaxRange)/(#GlobalPassiveData[30103].Vars.Divider1)*(#GlobalPassiveData[30103].Vars.Penetration1)*100$%",
+      [4] = "$#GlobalPassiveData[30103].Vars.Divider2*100$%",
+      [5] = "$#GlobalPassiveData[30103].Vars.Penetration2*100$%",
+      [6] = "$(#GlobalPassiveData[30103].Vars.MaxSustain)/(#GlobalPassiveData[30103].Vars.Divider2)*(#GlobalPassiveData[30103].Vars.Penetration2)*100$%"
+    }
   }
 })

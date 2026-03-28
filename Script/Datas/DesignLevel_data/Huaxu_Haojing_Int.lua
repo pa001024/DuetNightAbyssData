@@ -1,5 +1,10 @@
 return {
   StaticCreator = {
+    ["242350039"] = {
+      CreatorId = 242350039,
+      UnitType = "Drop",
+      UnitId = 11211
+    },
     ["2350034"] = {
       CreatorId = 2350034,
       UnitType = "Mechanism",
@@ -45,14 +50,66 @@ return {
       UnitType = "Mechanism",
       UnitId = 39029
     },
-    ["242350039"] = {
-      CreatorId = 242350039,
+    ["2350024"] = {
+      CreatorId = 2350024,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["2350042"] = {
+      CreatorId = 2350042,
+      UnitType = "Mechanism",
+      UnitId = 39029
+    },
+    ["242350043"] = {
+      CreatorId = 242350043,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["242350044"] = {
+      CreatorId = 242350044,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["242350045"] = {
+      CreatorId = 242350045,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["242350046"] = {
+      CreatorId = 242350046,
       UnitType = "Drop",
-      UnitId = 11210
+      UnitId = 11218
     }
   },
   ManualItem = {},
   Explore = {
+    ["7065008"] = {
+      AutoReset = 0,
+      ["2350039"] = {
+        CreatorId = 2350039,
+        UnitType = "Drop",
+        UnitId = 2000100,
+        RarelyId = 7065008
+      }
+    },
+    ["7065009"] = {
+      AutoReset = 0,
+      ["2350040"] = {
+        CreatorId = 2350040,
+        UnitType = "Drop",
+        UnitId = 2000112,
+        RarelyId = 7065009
+      }
+    },
+    ["7065007"] = {
+      AutoReset = 0,
+      ["2350038"] = {
+        CreatorId = 2350038,
+        UnitType = "Drop",
+        UnitId = 2000099,
+        RarelyId = 7065007
+      }
+    },
     ["7065004"] = {
       AutoReset = 0,
       ["2350017"] = {

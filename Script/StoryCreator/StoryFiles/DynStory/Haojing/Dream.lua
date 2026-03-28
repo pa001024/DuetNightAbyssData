@@ -51,7 +51,7 @@ return {
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
-        QuestDescription = "",
+        QuestDescription = "DynQuest_Dream_Des",
         QuestDeatil = "",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
@@ -61,7 +61,6 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = true,
@@ -69,6 +68,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -105,12 +105,6 @@ return {
             startQuest = "17590419008403400",
             startPort = "Out",
             endQuest = "17590422281204669",
-            endPort = "In"
-          },
-          {
-            startQuest = "17590422281204669",
-            startPort = "Option_1",
-            endQuest = "17590422449485097",
             endPort = "In"
           },
           {
@@ -352,6 +346,36 @@ return {
             startPort = "Out",
             endQuest = "17590419008403400",
             endPort = "In"
+          },
+          {
+            startQuest = "17590422281204669",
+            startPort = "Option_1",
+            endQuest = "17706042555471474",
+            endPort = "In"
+          },
+          {
+            startQuest = "17706042555471474",
+            startPort = "Out",
+            endQuest = "17590422449485097",
+            endPort = "In"
+          },
+          {
+            startQuest = "17599940056142360",
+            startPort = "Out",
+            endQuest = "17706061441551542155",
+            endPort = "In"
+          },
+          {
+            startQuest = "17590423627436832",
+            startPort = "Out",
+            endQuest = "17706061593241542372",
+            endPort = "In"
+          },
+          {
+            startQuest = "17590423692847037",
+            startPort = "Out",
+            endQuest = "17706061648561542535",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -411,14 +435,14 @@ return {
             key = "17590416757281048",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1489.7665903890158, y = 295.65675057208233},
+            pos = {x = 1489.7665903890158, y = 297.07967547326814},
             propsData = {
               IsNpcNode = true,
               NpcNodeInteractiveName = "",
               NpcId = 818082,
               GuideUIEnable = true,
               GuideType = "N",
-              GuidePointName = "",
+              GuidePointName = "Npc_Dyn_2430027",
               DelayShowGuideTime = 0,
               IsPlayerTurnToNPC = true,
               IsNPCTurnToPlayer = true,
@@ -503,14 +527,13 @@ return {
               IsNpcNode = false,
               IsPlayerTurnToNPC = false,
               IsNPCTurnToPlayer = false,
-              FirstDialogueId = 71007804,
+              FirstDialogueId = 71007805,
               FlowAssetPath = "",
               TalkType = "FreeSimple",
               BlendInTime = 0.5,
-              BlendOutTime = 2,
+              BlendOutTime = 0.5,
               InType = "BlendIn",
-              OutType = "FadeOut",
-              ShowFadeDetail = false,
+              OutType = "BlendOut",
               BlendEaseExp = 2,
               UseProceduralCamera = false,
               ProceduralCameraId = 1,
@@ -531,7 +554,14 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
-              TalkActors = {},
+              TalkActors = {
+                {
+                  TalkActorType = "Player",
+                  TalkActorId = 0,
+                  TalkActorVisible = true,
+                  AroundPlayer = false
+                }
+              },
               OptionType = "branch",
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
@@ -552,9 +582,9 @@ return {
             pos = {x = 2451.3638059342743, y = -824.0328361009477},
             propsData = {
               ActiveEnable = true,
-              EnableBlackScreenSync = false,
-              EnableFadeIn = false,
-              EnableFadeOut = false,
+              EnableBlackScreenSync = true,
+              EnableFadeIn = true,
+              EnableFadeOut = true,
               NewTargetPointName = "",
               StaticCreatorIdList = {
                 2430031,
@@ -576,9 +606,9 @@ return {
             pos = {x = 2885.437032478897, y = 331.95877335748094},
             propsData = {
               ActiveEnable = true,
-              EnableBlackScreenSync = false,
-              EnableFadeIn = false,
-              EnableFadeOut = false,
+              EnableBlackScreenSync = true,
+              EnableFadeIn = true,
+              EnableFadeOut = true,
               NewTargetPointName = "",
               StaticCreatorIdList = {
                 2430029,
@@ -596,9 +626,9 @@ return {
             pos = {x = 2887.103699145563, y = 1028.04572987922},
             propsData = {
               ActiveEnable = true,
-              EnableBlackScreenSync = false,
-              EnableFadeIn = false,
-              EnableFadeOut = false,
+              EnableBlackScreenSync = true,
+              EnableFadeIn = true,
+              EnableFadeOut = true,
               NewTargetPointName = "",
               StaticCreatorIdList = {2430030}
             }
@@ -645,10 +675,10 @@ return {
             propsData = {
               IsNpcNode = true,
               NpcNodeInteractiveName = "",
-              NpcId = 74114743,
+              NpcId = 818092,
               GuideUIEnable = true,
               GuideType = "N",
-              GuidePointName = "",
+              GuidePointName = "Npc_Dyn_2430030",
               DelayShowGuideTime = 0,
               IsPlayerTurnToNPC = true,
               IsNPCTurnToPlayer = true,
@@ -656,10 +686,9 @@ return {
               FlowAssetPath = "",
               TalkType = "FreeSimple",
               BlendInTime = 0.5,
-              BlendOutTime = 2,
+              BlendOutTime = 0.5,
               InType = "BlendIn",
-              OutType = "FadeOut",
-              ShowFadeDetail = false,
+              OutType = "BlendOut",
               BlendEaseExp = 2,
               UseProceduralCamera = false,
               ProceduralCameraId = 1,
@@ -684,7 +713,7 @@ return {
               OptionType = "normal",
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
-              SwitchToMaster = "None",
+              SwitchToMaster = "Player",
               PlayerSwitchEmoIdle = true,
               NormalOptions = {},
               OverrideFailBlend = false
@@ -752,7 +781,7 @@ return {
               NpcId = 818082,
               GuideUIEnable = true,
               GuideType = "N",
-              GuidePointName = "",
+              GuidePointName = "Npc_Dyn_2430027",
               DelayShowGuideTime = 0,
               IsPlayerTurnToNPC = true,
               IsNPCTurnToPlayer = true,
@@ -760,10 +789,9 @@ return {
               FlowAssetPath = "",
               TalkType = "FreeSimple",
               BlendInTime = 0.5,
-              BlendOutTime = 2,
+              BlendOutTime = 0.5,
               InType = "BlendIn",
-              OutType = "FadeOut",
-              ShowFadeDetail = false,
+              OutType = "BlendOut",
               BlendEaseExp = 2,
               UseProceduralCamera = false,
               ProceduralCameraId = 1,
@@ -798,11 +826,13 @@ return {
             key = "17590424851719106",
             type = "DynamicQuestSuccessNode",
             name = "动态任务主动成功",
-            pos = {x = 4351.828336826722, y = -400.3455744686062},
+            pos = {x = 4351.828336826722, y = -401.9245218370272},
             propsData = {
               DialogueId = 71007808,
-              UseTalkFadeOut = false,
-              TalkFadeOutTime = 0
+              UseTalkFadeOut = true,
+              TalkFadeOutTime = 1,
+              UseTalkFadeIn = true,
+              TalkFadeInTime = 1
             }
           },
           ["17590424911429340"] = {
@@ -812,8 +842,10 @@ return {
             pos = {x = 4373.828336826722, y = 323.48163829709074},
             propsData = {
               DialogueId = 71007811,
-              UseTalkFadeOut = false,
-              TalkFadeOutTime = 0
+              UseTalkFadeOut = true,
+              TalkFadeOutTime = 1,
+              UseTalkFadeIn = true,
+              TalkFadeInTime = 1
             }
           },
           ["17590424973049605"] = {
@@ -823,8 +855,10 @@ return {
             pos = {x = 4349.828336826722, y = 1021.6544255313938},
             propsData = {
               DialogueId = 71007815,
-              UseTalkFadeOut = false,
-              TalkFadeOutTime = 0
+              UseTalkFadeOut = true,
+              TalkFadeOutTime = 1,
+              UseTalkFadeIn = true,
+              TalkFadeInTime = 1
             }
           },
           ["17590496050511329410"] = {
@@ -882,14 +916,14 @@ return {
             key = "17590497002711331015",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 4027.3262726247167, y = 331.2083562778137},
+            pos = {x = 4027.3262726247167, y = 329.9040084517268},
             propsData = {
               IsNpcNode = true,
               NpcNodeInteractiveName = "",
               NpcId = 818082,
               GuideUIEnable = true,
               GuideType = "N",
-              GuidePointName = "",
+              GuidePointName = "Npc_Dyn_2430027",
               DelayShowGuideTime = 0,
               IsPlayerTurnToNPC = true,
               IsNPCTurnToPlayer = true,
@@ -897,10 +931,9 @@ return {
               FlowAssetPath = "",
               TalkType = "FreeSimple",
               BlendInTime = 0.5,
-              BlendOutTime = 2,
+              BlendOutTime = 0.5,
               InType = "BlendIn",
-              OutType = "FadeOut",
-              ShowFadeDetail = false,
+              OutType = "BlendOut",
               BlendEaseExp = 2,
               UseProceduralCamera = false,
               ProceduralCameraId = 1,
@@ -942,7 +975,7 @@ return {
               NpcId = 818082,
               GuideUIEnable = true,
               GuideType = "N",
-              GuidePointName = "",
+              GuidePointName = "Npc_Dyn_2430027",
               DelayShowGuideTime = 0,
               IsPlayerTurnToNPC = true,
               IsNPCTurnToPlayer = true,
@@ -950,10 +983,9 @@ return {
               FlowAssetPath = "",
               TalkType = "FreeSimple",
               BlendInTime = 0.5,
-              BlendOutTime = 2,
+              BlendOutTime = 0.5,
               InType = "BlendIn",
-              OutType = "FadeOut",
-              ShowFadeDetail = false,
+              OutType = "BlendOut",
               BlendEaseExp = 2,
               UseProceduralCamera = false,
               ProceduralCameraId = 1,
@@ -988,12 +1020,12 @@ return {
             key = "17590498175821989957",
             type = "ChangeStaticCreatorNode",
             name = "销毁黑桃",
-            pos = {x = 3672.326272624717, y = 1268.0478101787837},
+            pos = {x = 3663.1958378421086, y = 1270.6565058309577},
             propsData = {
               ActiveEnable = false,
-              EnableBlackScreenSync = false,
-              EnableFadeIn = false,
-              EnableFadeOut = false,
+              EnableBlackScreenSync = true,
+              EnableFadeIn = true,
+              EnableFadeOut = true,
               NewTargetPointName = "",
               StaticCreatorIdList = {2430030}
             }
@@ -1118,6 +1150,49 @@ return {
               StaticCreatorIdList = {2430026},
               ManualItemIdList = {},
               StateId = 780651,
+              QuestId = 0
+            }
+          },
+          ["17706042555471474"] = {
+            key = "17706042555471474",
+            type = "WaitOfTimeNode",
+            name = "延迟等待",
+            pos = {x = 2743.313656931305, y = 45.78553288144121},
+            propsData = {WaitTime = 0.2}
+          },
+          ["17706061441551542155"] = {
+            key = "17706061441551542155",
+            type = "SwitchMechanismStateNode",
+            name = "切换机关状态",
+            pos = {x = 3673.76820238585, y = -215.72961863371046},
+            propsData = {
+              StaticCreatorIdList = {2430026},
+              ManualItemIdList = {},
+              StateId = 780650,
+              QuestId = 0
+            }
+          },
+          ["17706061593241542372"] = {
+            key = "17706061593241542372",
+            type = "SwitchMechanismStateNode",
+            name = "切换机关状态",
+            pos = {x = 3676.8116806467187, y = 503.54574368513016},
+            propsData = {
+              StaticCreatorIdList = {2430026},
+              ManualItemIdList = {},
+              StateId = 780650,
+              QuestId = 0
+            }
+          },
+          ["17706061648561542535"] = {
+            key = "17706061648561542535",
+            type = "SwitchMechanismStateNode",
+            name = "切换机关状态",
+            pos = {x = 3668.9855936901977, y = 851.8066132503477},
+            propsData = {
+              StaticCreatorIdList = {2430026},
+              ManualItemIdList = {},
+              StateId = 780650,
               QuestId = 0
             }
           }

@@ -1,5 +1,4 @@
 require("UnLua")
-local TimeUtils = require("Utils.TimeUtils")
 local DeputeDetail = require("BluePrints.UI.WBP.Play.Widget.Depute.WBP_Play_DeputeDetail_C")
 local M = Class("BluePrints.UI.BP_UIState_C")
 local DUNGEON_MATCH_BAR_STATE = Const.DUNGEON_MATCH_BAR_STATE
@@ -7,7 +6,7 @@ local STATE_SET_FUNCTOR = {}
 local SQUAD_PANEL_MAP = {}
 local WAITING_CONFIRM_TIME = CommonConst.ONLINE_TEAM_VOTE_TIME
 local WAITING_MATCHING_TIME = CommonConst.ONLINE_MATCH_TIME
-local PROGRESS_PERCENT_SIZE_X = 578
+local PROGRESS_PERCENT_SIZE_X = 630
 local FORCE_CLOSE_TIME = 30
 
 function M:Construct()
@@ -46,9 +45,9 @@ function M:OnLoaded(...)
   local DungeonData = DataMgr.Dungeon[self.DungeonId]
   assert(DungeonData, "副本ID错误" .. tostring(self.DungeonId))
   local TeleportId = self:GetTeleportIdByMultiplayerChallenge(DungeonId)
-  local MatchTitle
+  local TypeTitle, LevelTitle, DungeonNameOnly
   if DungeonData.DungeonType == "HardBossDg" then
-    MatchTitle = GText("UI_HardBoss_TabName_1")
+    TypeTitle = GText("UI_HardBoss_TabName_1")
     local DifficultyId = DataMgr.HardBossDg[DungeonId].DifficultyId
     local HardBossName
     for _, HardbossMainData in pairs(DataMgr.HardBossMain) do
@@ -63,59 +62,79 @@ function M:OnLoaded(...)
       end
     end
     if HardBossName then
-      MatchTitle = string.format("%s %s", MatchTitle, GText(HardBossName))
+      TypeTitle = string.format("%s %s", TypeTitle, GText(HardBossName))
+      DungeonNameOnly = GText(HardBossName)
     end
     if DataMgr.HardBossDifficulty[DifficultyId] then
-      local LevelText = GText("BATTLE_UI_BLOOD_LV") .. DataMgr.HardBossDifficulty[DifficultyId].DifficultyLevel
-      MatchTitle = string.format("%s %s", MatchTitle, LevelText)
+      LevelTitle = GText("BATTLE_UI_BLOOD_LV") .. DataMgr.HardBossDifficulty[DifficultyId].DifficultyLevel
     end
   elseif DungeonData.IsModDungeon then
-    MatchTitle = GText("UI_DUNGEONMOD")
+    TypeTitle = GText("UI_DUNGEONMOD")
     if DungeonData.DungeonName then
-      MatchTitle = string.format("%s %s", MatchTitle, GText(DungeonData.DungeonName))
+      TypeTitle = string.format("%s %s", TypeTitle, GText(DungeonData.DungeonName))
+      DungeonNameOnly = GText(DungeonData.DungeonName)
     end
     if DungeonData.DungeonLevel then
-      local LevelText = GText("BATTLE_UI_BLOOD_LV") .. tostring(DungeonData.DungeonLevel)
-      MatchTitle = string.format("%s %s", MatchTitle, LevelText)
+      LevelTitle = GText("BATTLE_UI_BLOOD_LV") .. tostring(DungeonData.DungeonLevel)
     end
   elseif DungeonData.IsWalnutDungeon then
-    MatchTitle = GText("UI_DUNGEONWALNUT")
+    TypeTitle = GText("UI_DUNGEONWALNUT")
     if DungeonData.DungeonName then
-      MatchTitle = string.format("%s %s", MatchTitle, GText(DungeonData.DungeonName))
+      TypeTitle = string.format("%s %s", TypeTitle, GText(DungeonData.DungeonName))
+      DungeonNameOnly = GText(DungeonData.DungeonName)
     end
     if DungeonData.DungeonLevel then
-      local LevelText = GText("BATTLE_UI_BLOOD_LV") .. tostring(DungeonData.DungeonLevel)
-      MatchTitle = string.format("%s %s", MatchTitle, LevelText)
+      LevelTitle = GText("BATTLE_UI_BLOOD_LV") .. tostring(DungeonData.DungeonLevel)
     end
   elseif TeleportId and -1 ~= TeleportId then
     if DataMgr.TeleportPoint[TeleportId] and DataMgr.TeleportPoint[TeleportId].TeleportPointName then
-      MatchTitle = GText(DataMgr.TeleportPoint[TeleportId].TeleportPointName)
+      TypeTitle = GText(DataMgr.TeleportPoint[TeleportId].TeleportPointName)
     end
     if DungeonData.DungeonLevel then
-      local LevelText = GText("BATTLE_UI_BLOOD_LV") .. tostring(DungeonData.DungeonLevel)
-      MatchTitle = string.format("%s %s", MatchTitle, LevelText)
+      LevelTitle = GText("BATTLE_UI_BLOOD_LV") .. tostring(DungeonData.DungeonLevel)
     end
   else
-    MatchTitle = GText(DungeonData.DungeonName)
-    local LevelIndex = self:GetDungeonIndex(DungeonId)
-    local LevelText = GText(Const.RomanNum[LevelIndex])
-    MatchTitle = string.format("%s%s", MatchTitle, LevelText)
+    TypeTitle = GText(DungeonData.DungeonName)
+    if DungeonData.DungeonLevel then
+      LevelTitle = GText("BATTLE_UI_BLOOD_LV") .. tostring(DungeonData.DungeonLevel)
+    end
   end
-  DebugPrint("gmy@WBP_DungeonMatchTimingBar_C M:OnLoaded", DungeonId, LevelIndex)
+  DebugPrint("gmy@WBP_DungeonMatchTimingBar_C M:OnLoaded", DungeonId)
+  local TitleLevelText = DungeonNameOnly or TypeTitle or ""
+  local TypeLabel
+  if DungeonData.IsWalnutDungeon then
+    TypeLabel = GText("UI_DUNGEONWALNUT")
+  elseif DungeonData.IsModDungeon then
+    TypeLabel = GText("UI_DUNGEONMOD")
+  elseif DungeonData.IsWeeklyDungeon then
+    TypeLabel = GText("DUNGEON_WEEK")
+  elseif DungeonData.DungeonType == "HardBossDg" then
+    TypeLabel = GText("UI_HardBoss_TabName_1")
+  elseif DungeonData.DungeonType == "Party" then
+    TypeLabel = GText("MAIN_UI_Temple")
+  else
+    TypeLabel = GText("UI_Dungeon_TabName")
+  end
   if bIsMatch then
-    MatchTitle = string.format("%s%s", MatchTitle, GText("UI_DUNGEON_TITLE_MATCHING"))
+    TypeLabel = string.format("%s%s", TypeLabel, GText("UI_DUNGEON_TITLE_MATCHING"))
   end
   self.bIsMatch = bIsMatch
   self.bIsFocusable = true
   self.SquadFolding = true
-  self.Title_Level:SetText(MatchTitle)
+  self.bQaBubbleOpen = false
+  self.Text_Title:SetText(TypeLabel)
+  self.Text_Level:SetText(LevelTitle or "")
+  self.Title_Level:SetText(TitleLevelText)
+  self.Text_LowSpeed:SetText(GText("NegativePlayPenalty1"))
   self.RemainTime = WAITING_MATCHING_TIME
   self.TotalTime = WAITING_MATCHING_TIME
   self.StartTimeStamp = os.clock()
+  self.HB_Agree:SetVisibility(ESlateVisibility.Collapsed)
   self:SwitchState(nil, EnterState)
   self:PlayInitSound()
   self:InitSquadPanel()
   self:InitWeekTip(DungeonId)
+  self:InitQaControllerHint()
   TeamController:SetTeamPopupBarOpen(true)
 end
 
@@ -146,6 +165,7 @@ end
 
 function M:SwitchState(OldState, NewState)
   DebugPrint("gmy@M:SwitchState OldState, NewState", OldState, NewState)
+  self:RefreshBlackMatchBtn()
   if OldState then
   else
     self:StopAllAnimations()
@@ -232,6 +252,7 @@ function M:SetState_TeammateWaitingConfirming()
   AudioManager(self):PlayUISound(self, "event:/ui/common/team_in_line_hud_show", "dungeon_match_loop", nil)
   self.bWaitingTextChange = true
   self:StopAllAnimations()
+  self.HB_Agree:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self:PlayAnimation(self.Agree)
   self:SetBtnYes(false)
   self:SetBtnNo(false)
@@ -264,6 +285,7 @@ function M:SetState_WaitingMatching()
   self.Text_Timing:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self.Text_Split_1:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self.Panel_Enter:SetVisibility(ESlateVisibility.Collapsed)
+  self.HB_Agree:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self:PlayAnimation(self.Agree)
   self.bWaitingTextChange = true
   self:SetBtnYes(false)
@@ -288,6 +310,14 @@ function M:SetState_WaitingMatchingWithCancel()
   self.Text_Timing:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self.Text_Split_1:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self.Panel_Enter:SetVisibility(ESlateVisibility.Collapsed)
+  local Slot = self.HB_Agree.Slot
+  if Slot then
+    if self.Gruop_LowSpeed:IsVisible() then
+      Slot:SetVerticalAlignment(EVerticalAlignment.VAlign_Bottom)
+    else
+      Slot:SetVerticalAlignment(EVerticalAlignment.VAlign_Center)
+    end
+  end
   self.Text_Hint:SetText(GText("DUNGEON_TITLE_MATCHING_GAME"))
   self:SetBtnYes(false)
   self:SetBtnNo(true, GText("UI_PATCH_CANCEL"), function()
@@ -336,6 +366,9 @@ function M:UpdateTimeProgress(InDeltaTime)
     local CanvasSlot = UE4.UWidgetLayoutLibrary.SlotAsCanvasSlot(self.Panel_Progress)
     local CurrentSize = CanvasSlot:GetSize()
     CanvasSlot:SetSize(FVector2D((1 - Percent) * PROGRESS_PERCENT_SIZE_X, CurrentSize.Y))
+    if 1 ~= self.Panel_Progress:GetRenderOpacity() then
+      self.Panel_Progress:SetRenderOpacity(1)
+    end
     self.Text_Timing:SetText(string.format(GText("DUNGEON_TIME_REMAIN_FMT"), self.RemainTime))
     if not self:HasFocusedDescendants() and TeamController:IsTeamPopupBarOpenInGamepad() then
       DebugPrint(LXYTag, WarningTag, "组队进本倒计时UI需要抢夺聚焦！！！！！！")
@@ -395,13 +428,20 @@ function M:InitEvents()
       self:ConfirmKeyDown()
     elseif Key.KeyName == Const.GamepadSpecialLeft then
       self:RefuseKeyDown()
+    elseif Key.KeyName == Const.GamepadRightThumbstick then
+      if self.Btn_Qa and self.Btn_Qa:GetVisibility() ~= ESlateVisibility.Collapsed and self.SquadFolding and not self.bQaBubbleOpen then
+        self:OpenQaBubble()
+      end
+    elseif Key.KeyName == Const.GamepadFaceButtonRight and self.bQaBubbleOpen then
+      self:CloseQaBubble()
     end
   end)
   self:AddDispatcher(EventID.OnRequestToMatch, self, self.OnTeamMatchCancel)
 end
 
-function M:OnTeamMatchStartMatching()
-  DebugPrint("gmy@M:OnTeamMatchStartMatching")
+function M:OnTeamMatchStartMatching(bIsLowSpeed)
+  DebugPrint("gmy@M:OnTeamMatchStartMatching", bIsLowSpeed)
+  self.bIsLowSpeed = bIsLowSpeed
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return
@@ -540,6 +580,108 @@ function M:InitKeyMap()
   self.NO_GAMEPAD_IMG = "View"
 end
 
+function M:CheckBlackMatchState()
+  local Now = os.time()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return nil, 0
+  end
+  if Avatar.BlackMatch > 0 and Now < Avatar.BlackMatch and UIUtils.GetLeftTimeStrStyle1(Avatar.BlackMatch) ~= "TimeOut" then
+    return "self", Avatar.BlackMatch
+  end
+  local Members = TeamController:GetModel():GetMembersWithAvatarProps()
+  local MaxTeamBlackMatch = 0
+  for _, Member in ipairs(Members) do
+    if Member.Uid ~= Avatar.Uid and Member.BlackMatch and Now < Member.BlackMatch and UIUtils.GetLeftTimeStrStyle1(Member.BlackMatch) ~= "TimeOut" and MaxTeamBlackMatch < Member.BlackMatch then
+      MaxTeamBlackMatch = Member.BlackMatch
+    end
+  end
+  if MaxTeamBlackMatch > 0 then
+    return "team", MaxTeamBlackMatch
+  end
+  return nil, 0
+end
+
+function M:RefreshBlackMatchBtn()
+  local Case, EndTimestamp = self:CheckBlackMatchState()
+  if not Case then
+    self.Btn_Qa:SetVisibility(ESlateVisibility.Collapsed)
+    self.Gruop_LowSpeed:SetVisibility(ESlateVisibility.Collapsed)
+    local Slot = self.HB_Agree.Slot
+    if Slot then
+      Slot:SetVerticalAlignment(EVerticalAlignment.VAlign_Center)
+    end
+    return
+  end
+  self.Gruop_LowSpeed:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  local Slot = self.HB_Agree.Slot
+  if Slot then
+    Slot:SetVerticalAlignment(EVerticalAlignment.VAlign_Bottom)
+  end
+  self.Btn_Qa:SetVisibility(ESlateVisibility.Visible)
+  local BubbleText = ""
+  if "self" == Case then
+    BubbleText = string.format(GText("NegativePlayPenalty2"), UIUtils.GetLeftTimeStrStyle1(EndTimestamp))
+  elseif "team" == Case then
+    BubbleText = string.format(GText("NegativePlayPenalty3"), UIUtils.GetLeftTimeStrStyle1(EndTimestamp))
+  end
+  local ConfigData = {
+    OwnerWidget = self,
+    MenuPlacement = EMenuPlacement.MenuPlacement_CenteredAboveAnchor,
+    TextContent = BubbleText
+  }
+  self.Btn_Qa:Init(ConfigData)
+end
+
+function M:OpenQaBubble()
+  self.bQaBubbleOpen = true
+  self.Btn_Qa:PlayAnimation(self.Btn_Qa.Click)
+  self.Btn_Qa.Btn_Click:SetChecked(true)
+  self.Btn_Qa:SetFocus()
+  self.Btn_Qa:OpenMenuAnchor()
+  self:SetQaControllerHintVisible(true)
+end
+
+function M:CloseQaBubble()
+  self.bQaBubbleOpen = false
+  self.Btn_Qa.Btn_Click:SetChecked(false)
+  self.Btn_Qa:CloseMenuAnchor()
+  self:SetQaControllerHintVisible(false)
+end
+
+function M:InitQaControllerHint()
+  self.Key_LowSpeed:CreateCommonKey({
+    KeyInfoList = {
+      {Type = "Img", ImgShortPath = "RS"}
+    }
+  })
+  self.Key_Close:CreateCommonKey({
+    KeyInfoList = {
+      {Type = "Img", ImgShortPath = "B"}
+    },
+    Desc = GText("UI_Tips_Close")
+  })
+  self.Key_Close:SetVisibility(ESlateVisibility.Collapsed)
+  self:RefreshRsHintVisibility()
+end
+
+function M:SetQaControllerHintVisible(bVisible)
+  self.Key_Close:SetVisibility(bVisible and ESlateVisibility.SelfHitTestInvisible or ESlateVisibility.Collapsed)
+  self:RefreshRsHintVisibility()
+end
+
+function M:RefreshRsHintVisibility()
+  local bShow = self.UsingGamepad and not self.bQaBubbleOpen and self.SquadFolding
+  self.Key_LowSpeed:SetVisibility(bShow and ESlateVisibility.SelfHitTestInvisible or ESlateVisibility.Collapsed)
+end
+
+function M:RefreshKeyClosePosition()
+  local bListOpen = self.DefaultList:GetVisibility() ~= ESlateVisibility.Collapsed
+  local Slot = UWidgetLayoutLibrary.SlotAsCanvasSlot(self.Key_Close)
+  local Pos = Slot:GetPosition()
+  Slot:SetPosition(UE4.FVector2D(Pos.X, bListOpen and self.HightKeyList or self.HightKeyNormal))
+end
+
 function M:ConfirmKeyDown()
   DebugPrint("gmy@M:ConfirmKeyDown")
   if self.YesCallback then
@@ -628,12 +770,14 @@ function M:InitSquadPanel()
     DebugPrint("gmy@WBP_DungeonMatchTimingBar_C M:InitSquadPanel", self.NowState, bShowSquadPanel, SquadId, SquadInfo.Props, bIsNowEquipSquad, bInSameDungeonType)
     local bHidden = not bShowSquadPanel or nil == SquadInfo or not bIsNowEquipSquad and SquadInfo.Props == nil or bInSameDungeonType or DungeonData and not DungeonData.Squad and DungeonData.DungeonType == "HardBossDg" or bIsSettlement
     self.DefaultList:SetVisibility(bHidden and ESlateVisibility.Collapsed or ESlateVisibility.SelfHitTestInvisible)
+    self:RefreshKeyClosePosition()
     if bHidden then
       return
     end
     self:RefreshSquadPanel(SquadId)
   else
     self.DefaultList:SetVisibility(ESlateVisibility.Collapsed)
+    self:RefreshKeyClosePosition()
   end
 end
 
@@ -658,6 +802,7 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
   else
     self.UsingGamepad = true
   end
+  self:RefreshRsHintVisibility()
 end
 
 function M:RefreshSquadPanel(SquadId)
@@ -679,12 +824,17 @@ function M:OnTeamMatchSquadFold()
   DebugPrint("gmy@WBP_DungeonMatchTimingBar_C M:OnTeamMatchSquadFold")
   self:SetInputUIOnly(false)
   self.SquadFolding = true
+  self:RefreshRsHintVisibility()
 end
 
 function M:OnTeamMatchSquadUnfold()
   DebugPrint("gmy@WBP_DungeonMatchTimingBar_C M:OnTeamMatchSquadUnfold")
   self:SetInputUIOnly(true)
   self.SquadFolding = false
+  if self.bQaBubbleOpen then
+    self:CloseQaBubble()
+  end
+  self:RefreshRsHintVisibility()
 end
 
 function M:IsInSettlement()

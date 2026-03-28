@@ -142,6 +142,12 @@ function M:OnFocusReceived(MyGeometry, InFocusEvent)
       end
       self.Btn_Reward:SetGamePadIconVisible(true)
       self.Btn_Goto:SetGamepadIconVisibility(true)
+      self:AddTimer(0.1, function()
+        if not self:IsAnimationPlaying(self.In) then
+          self:StopAllAnimations()
+        end
+        self:PlayAnimation(self.Hover)
+      end, false, 0, nil, true)
     end
   end
   return self.Super.OnFocusReceived(self, MyGeometry, InFocusEvent)
@@ -454,6 +460,9 @@ function M:SwitchSelectedMode()
     if self.Key_Item then
       self.Key_Item:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     end
+    if self.Owner.Key_Check then
+      self.Owner.Key_Check:SetVisibility(UIConst.VisibilityOp.Visible)
+    end
   else
     self.Owner.RewardContent_OneClick.Btn_OneClick:SetGamePadIconVisible(false)
     self.UsedList:SetVisibility(UIConst.VisibilityOp.Visible)
@@ -465,6 +474,9 @@ function M:SwitchSelectedMode()
     self:FocusToRewardItem()
     self.Owner:ShowGamepadViewBtn(false)
     self.Owner:ShowGamepadViewSingleBtn(true)
+    if self.Owner.Key_Check then
+      self.Owner.Key_Check:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
   end
 end
 
@@ -474,10 +486,6 @@ function M:OnMouseEnter(MyGeometry, MouseEvent)
   if self.Mobile or self:IsAnimationPlaying(self.In) or not IsGamePad then
     return UE4.UWidgetBlueprintLibrary.UnHandled()
   end
-  if not self:IsAnimationPlaying(self.In) then
-    self:StopAllAnimations()
-  end
-  self:PlayAnimation(self.Hover)
 end
 
 function M:OnMouseLeave(MyGeometry, MouseEvent)

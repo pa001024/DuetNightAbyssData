@@ -163,12 +163,9 @@ function M:UpdateFishingRodModelId(DisplayRodId)
 end
 
 function M:UpdateFishingRodMaterial(Player, EffectCreatureId, MaterialPath, MaterialParam)
-  if not Player.EffectCreatures or not Player.EffectCreatures[EffectCreatureId] then
-    return
-  end
-  local EffectCreatures = Player.EffectCreatures[EffectCreatureId]
-  for Index = #EffectCreatures, 1, -1 do
-    local EffectCreature = EffectCreatures[Index]
+  local EffectCreatures = Player:GetEffectCreatureById(EffectCreatureId)
+  for i = EffectCreatures:Num(), 1, -1 do
+    local EffectCreature = EffectCreatures:GetRef(i)
     if IsValid(EffectCreature) then
       if MaterialPath then
         local Material = LoadObject(MaterialPath)
@@ -179,8 +176,6 @@ function M:UpdateFishingRodMaterial(Player, EffectCreatureId, MaterialPath, Mate
       if MaterialParam then
         EffectCreature.FishMaterial:SetScalarParameterValue("PartSelect", MaterialParam)
       end
-    else
-      table.remove(EffectCreatures, Index)
     end
   end
 end

@@ -61,7 +61,6 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = true,
@@ -69,6 +68,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -390,10 +390,9 @@ return {
               FlowAssetPath = "",
               TalkType = "FreeSimple",
               BlendInTime = 0.5,
-              BlendOutTime = 2,
+              BlendOutTime = 0.5,
               InType = "BlendIn",
-              OutType = "FadeOut",
-              ShowFadeDetail = false,
+              OutType = "BlendOut",
               BlendEaseExp = 2,
               UseProceduralCamera = false,
               ProceduralCameraId = 1,
@@ -438,9 +437,9 @@ return {
             pos = {x = 2454.4311414849326, y = 19.11677099989805},
             propsData = {
               ActiveEnable = false,
-              EnableBlackScreenSync = false,
-              EnableFadeIn = false,
-              EnableFadeOut = false,
+              EnableBlackScreenSync = true,
+              EnableFadeIn = true,
+              EnableFadeOut = true,
               NewTargetPointName = "",
               StaticCreatorIdList = {2070013}
             }
@@ -632,6 +631,7 @@ return {
               SwitchToMaster = "None",
               bNpcActionKeepIn = true,
               bNpcActionKeepOut = false,
+              bForceWaitNavLoaded = false,
               NormalOptions = {},
               OverrideFailBlend = false
             }
@@ -653,7 +653,7 @@ return {
             key = "174980220162410143",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 4397.971127814393, y = 290.148639131766},
+            pos = {x = 4397.971127814393, y = 288.898639131766},
             propsData = {
               IsNpcNode = true,
               NpcNodeInteractiveName = "",
@@ -766,22 +766,26 @@ return {
             key = "174980232999412434",
             type = "DynamicQuestSuccessNode",
             name = "动态任务主动成功",
-            pos = {x = 5779.180641984432, y = 244.7083557309564},
+            pos = {x = 5777.930641984432, y = 244.7083557309564},
             propsData = {
               DialogueId = 71006720,
-              UseTalkFadeOut = false,
-              TalkFadeOutTime = 0
+              UseTalkFadeOut = true,
+              TalkFadeOutTime = 1,
+              UseTalkFadeIn = true,
+              TalkFadeInTime = 1
             }
           },
           ["174980233257312533"] = {
             key = "174980233257312533",
             type = "DynamicQuestSuccessNode",
             name = "动态任务主动成功",
-            pos = {x = 5786.488334292125, y = 369.62738407103745},
+            pos = {x = 5786.488334292125, y = 370.87738407103745},
             propsData = {
               DialogueId = 71006717,
-              UseTalkFadeOut = false,
-              TalkFadeOutTime = 0
+              UseTalkFadeOut = true,
+              TalkFadeOutTime = 1,
+              UseTalkFadeIn = true,
+              TalkFadeInTime = 1
             }
           },
           ["174980233363912565"] = {
@@ -791,8 +795,10 @@ return {
             pos = {x = 5791.528820122086, y = 487.74479297791993},
             propsData = {
               DialogueId = 71006717,
-              UseTalkFadeOut = false,
-              TalkFadeOutTime = 0
+              UseTalkFadeOut = true,
+              TalkFadeOutTime = 1,
+              UseTalkFadeIn = true,
+              TalkFadeInTime = 1
             }
           },
           ["174980234542312929"] = {
@@ -802,8 +808,10 @@ return {
             pos = {x = 5732.084488138278, y = 868.1678699009967},
             propsData = {
               DialogueId = 71006711,
-              UseTalkFadeOut = false,
-              TalkFadeOutTime = 0
+              UseTalkFadeOut = true,
+              TalkFadeOutTime = 1,
+              UseTalkFadeIn = true,
+              TalkFadeInTime = 1
             }
           },
           ["1749814544722647449"] = {
@@ -827,8 +835,7 @@ return {
               BlendInTime = 0.5,
               BlendOutTime = 0.5,
               InType = "BlendIn",
-              OutType = "FadeOut",
-              ShowFadeDetail = false,
+              OutType = "BlendOut",
               BlendEaseExp = 2,
               UseProceduralCamera = false,
               ProceduralCameraId = 1,
@@ -880,8 +887,7 @@ return {
               BlendInTime = 0.5,
               BlendOutTime = 0.5,
               InType = "BlendIn",
-              OutType = "FadeOut",
-              ShowFadeDetail = false,
+              OutType = "BlendOut",
               BlendEaseExp = 2,
               UseProceduralCamera = false,
               ProceduralCameraId = 1,
@@ -916,7 +922,7 @@ return {
             key = "1749814580465648178",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 5407.481180817582, y = 509.06121907661156},
+            pos = {x = 5408.731180817582, y = 509.06121907661156},
             propsData = {
               IsNpcNode = true,
               NpcNodeInteractiveName = "",
@@ -933,8 +939,7 @@ return {
               BlendInTime = 0.5,
               BlendOutTime = 0.5,
               InType = "BlendIn",
-              OutType = "FadeOut",
-              ShowFadeDetail = false,
+              OutType = "BlendOut",
               BlendEaseExp = 2,
               UseProceduralCamera = false,
               ProceduralCameraId = 1,

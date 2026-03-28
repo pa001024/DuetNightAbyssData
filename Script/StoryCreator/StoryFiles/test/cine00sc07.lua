@@ -47,7 +47,7 @@ return {
       key = "170893333264654782",
       type = "StoryNode",
       name = "未命名任务",
-      pos = {x = 300, y = 140},
+      pos = {x = 300, y = 138.125},
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
@@ -61,7 +61,6 @@ return {
         bIsNotifyGameMode = false,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
@@ -69,6 +68,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -126,17 +126,8 @@ return {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false
-                },
-                {
-                  TalkActorType = "Npc",
-                  TalkActorId = 100003,
-                  TalkActorVisible = true
-                },
-                {
-                  TalkActorType = "Npc",
-                  TalkActorId = 100001,
-                  TalkActorVisible = true
+                  TalkActorVisible = false,
+                  AroundPlayer = false
                 }
               },
               FreezeWorldComposition = false,
@@ -200,12 +191,14 @@ return {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false
+                  TalkActorVisible = false,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 }
               },
               FreezeWorldComposition = false,

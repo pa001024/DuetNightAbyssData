@@ -334,7 +334,24 @@ function M:SetContentInfo(SourceInfo, CollectRewardExpRecord)
       SubContent.TotalNum = nil
       SubContent.CurNum = nil
     end
-    self.AllContentInfo[Id].AllSubContentInfo[SubContent.ID] = SubContent
+    local CurSubContent = self.AllContentInfo[Id].AllSubContentInfo[SubContent.SubSourceName]
+    if not CurSubContent then
+      self.AllContentInfo[Id].AllSubContentInfo[SubContent.SubSourceName] = SubContent
+    else
+      CurSubContent.CollectRewardExp = CurSubContent.CollectRewardExp + SubContent.CollectRewardExp
+      if CurSubContent.CanGetRewardExp or SubContent.CanGetRewardExp then
+        CurSubContent.CanGetRewardExp = (CurSubContent.CanGetRewardExp or 0) + (SubContent.CanGetRewardExp or 0)
+      end
+      if CurSubContent.TotalNum or SubContent.TotalNum then
+        CurSubContent.TotalNum = (CurSubContent.TotalNum or 0) + (SubContent.TotalNum or 0)
+      end
+      if CurSubContent.CurNum or SubContent.CurNum then
+        CurSubContent.CurNum = (CurSubContent.CurNum or 0) + (SubContent.CurNum or 0)
+      end
+      if CurSubContent.ID > SubContent.ID then
+        CurSubContent.ID = SubContent.ID
+      end
+    end
   end
   self.AllContentInfo[Id].SumCanGetRewardExp = SumCanGetRewardExp
   self.AllContentInfo[Id].SumCollectRewardExp = SumCollectRewardExp

@@ -22,7 +22,9 @@ T.RT_7 = {
 }
 T.RT_8 = {2050631}
 T.RT_9 = {2050632}
-T.RT_10 = {4200105}
+T.RT_10 = {2051231}
+T.RT_11 = {2051232}
+T.RT_12 = {4200105}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -231,6 +233,70 @@ return ReadOnly("RayCreature", {
     SpawnSocket = T.RT_7,
     Tags = T.RT_5
   },
+  [2051211] = {
+    AimUpdateEndLoc = true,
+    AllowAttackRangeModify = true,
+    AttackRangeType = "RayLength",
+    CreatureId = 2051211,
+    EffectMultiple = true,
+    FixDistanceByWeapon = true,
+    HitEnemy = T.RT_10,
+    HitOthers = T.RT_2,
+    HitScene = T.RT_11,
+    LifeTime = 1,
+    RayFXID = 2051202,
+    RayLength = 2000,
+    SpawnSocket = T.RT_7,
+    Tags = T.RT_5
+  },
+  [2051212] = {
+    AimUpdateEndLoc = true,
+    AllowAttackRangeModify = true,
+    AttackRangeType = "RayLength",
+    CreatureId = 2051212,
+    EffectMultiple = true,
+    FixDistanceByWeapon = true,
+    HitEnemy = T.RT_10,
+    HitOthers = T.RT_2,
+    HitScene = T.RT_11,
+    LifeTime = 1,
+    RayFXID = 2051202,
+    RayLength = 2000,
+    SpawnSocket = T.RT_7,
+    Tags = T.RT_5
+  },
+  [2051213] = {
+    AimUpdateEndLoc = true,
+    AllowAttackRangeModify = true,
+    AttackRangeType = "RayLength",
+    CreatureId = 2051213,
+    EffectMultiple = true,
+    FixDistanceByWeapon = true,
+    HitEnemy = T.RT_10,
+    HitOthers = T.RT_2,
+    HitScene = T.RT_11,
+    LifeTime = 1,
+    RayFXID = 2051203,
+    RayLength = 2000,
+    SpawnSocket = T.RT_7,
+    Tags = T.RT_5
+  },
+  [2051214] = {
+    AimUpdateEndLoc = true,
+    AllowAttackRangeModify = true,
+    AttackRangeType = "RayLength",
+    CreatureId = 2051214,
+    EffectMultiple = true,
+    FixDistanceByWeapon = true,
+    HitEnemy = T.RT_10,
+    HitOthers = T.RT_2,
+    HitScene = T.RT_11,
+    LifeTime = 1,
+    RayFXID = 2051203,
+    RayLength = 2000,
+    SpawnSocket = T.RT_7,
+    Tags = T.RT_5
+  },
   [4010104] = {
     AimUpdateEndLoc = true,
     AllowSkillRangeModify = true,
@@ -252,7 +318,7 @@ return ReadOnly("RayCreature", {
     CreatureId = 4200101,
     EffectMultiple = false,
     HitOthers = T.RT_6,
-    RayLength = 2900,
+    RayLength = 5000,
     SpawnSocket = T.RT_7,
     Tags = T.RT_5
   },
@@ -260,10 +326,10 @@ return ReadOnly("RayCreature", {
     AttackRangeType = "RayLength",
     CreatureId = 4200102,
     EffectMultiple = false,
-    HitEnemy = T.RT_10,
+    HitEnemy = T.RT_12,
     HitOthers = T.RT_6,
-    HitScene = T.RT_10,
-    RayLength = 2900,
+    HitScene = T.RT_12,
+    RayLength = 5000,
     SpawnSocket = T.RT_7,
     Tags = T.RT_5
   },

@@ -9,7 +9,8 @@ return ReadOnly("CombatVersionControl", {
     CombatVersionOpen = {
       10,
       11,
-      12
+      12,
+      13
     },
     Id = 1
   }

@@ -20,7 +20,27 @@ function DynamicQuestSuccessNode:Execute(Callback)
     end
   end
   
-  CurrentEvent:TryFinishEvent(true, CompositeCallback, self.NodeId, self.DialogueId)
+  if self.UseTalkFadeIn and self.TalkFadeInTime then
+    local TalkContext = GWorld.GameInstance:GetTalkContext()
+    if TalkContext then
+      local TalkBlackUI = TalkContext:GetSimpleBlackUI()
+      if TalkBlackUI then
+        TalkBlackUI:FadeIn(self.TalkFadeInTime, {
+          Func = CurrentEvent.TryFinishEvent,
+          Obj = CurrentEvent,
+          Params = {
+            true,
+            CompositeCallback,
+            self.NodeId,
+            self.DialogueId
+          }
+        })
+        return
+      end
+    end
+  else
+    CurrentEvent:TryFinishEvent(true, CompositeCallback, self.NodeId, self.DialogueId)
+  end
 end
 
 return DynamicQuestSuccessNode

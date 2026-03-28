@@ -9,6 +9,10 @@ return ReadOnly("ReasonType", {
     ReasonId = 9001,
     ReasonName = "ABYSS_REWARD"
   },
+  ACCESSORYDROP_REWARD_GET = {
+    ReasonId = 50001,
+    ReasonName = "ACCESSORYDROP_REWARD_GET"
+  },
   ACHV_FINISH_REWARD = {
     ReasonId = 12001,
     ReasonName = "ACHV_FINISH_REWARD"
@@ -25,6 +29,10 @@ return ReadOnly("ReasonType", {
   AVATAR_LEVEL_REWARD = {
     ReasonId = 28001,
     ReasonName = "AVATAR_LEVEL_REWARD"
+  },
+  BACKPACKPUZZLE_REWARD_GET = {
+    ReasonId = 49001,
+    ReasonName = "BACKPACKPUZZLE_REWARD_GET"
   },
   BATTLE_PASS_BUY_LEVEL_CONSUME = {
     ReasonId = 30002,
@@ -74,6 +82,10 @@ return ReadOnly("ReasonType", {
   CHAR_SKILL_TREE_ACTIVATE_CONSUME = {
     ReasonId = 1007,
     ReasonName = "CHAR_SKILL_TREE_ACTIVATE_CONSUME"
+  },
+  CHAR_SKIN_LEVEL_CONSUME = {
+    ReasonId = 1010,
+    ReasonName = "CHAR_SKIN_LEVEL_CONSUME"
   },
   CHAR_TRIAL = {ReasonId = 24003, ReasonName = "CHAR_TRIAL"},
   CHAR_UNLOCK_USE_PIECE = {
@@ -227,6 +239,14 @@ return ReadOnly("ReasonType", {
   GM_CONSUME = {ReasonId = 1, ReasonName = "GM_CONSUME"},
   GUIDE_BOOK = {ReasonId = 15001, ReasonName = "GUIDE_BOOK"},
   HARDBOSS = {ReasonId = 24002, ReasonName = "HARDBOSS"},
+  HYPERWEAPON_LEVELUP_CONSUME = {
+    ReasonId = 2007,
+    ReasonName = "HYPERWEAPON_LEVELUP_CONSUME"
+  },
+  HYPERWEAPON_TALENT_CONSUME = {
+    ReasonId = 2009,
+    ReasonName = "HYPERWEAPON_TALENT_CONSUME"
+  },
   IMPRESSION_DALIY_LOGIN = {
     ReasonId = 13001,
     ReasonName = "IMPRESSION_DALIY_LOGIN"
@@ -246,6 +266,22 @@ return ReadOnly("ReasonType", {
   INIT_AVATAR = {
     ReasonId = 2,
     ReasonName = "INIT_AVATAR"
+  },
+  INTERACT_TRIGGER_REWARD = {
+    ReasonId = 46001,
+    ReasonName = "INTERACT_TRIGGER_REWARD"
+  },
+  IRON_SURVIVAL_TRANSFORM = {
+    ReasonId = 25003,
+    ReasonName = "IRON_SURVIVAL_TRANSFORM"
+  },
+  LIMIT_PRIZE = {
+    ReasonId = 47001,
+    ReasonName = "LIMIT_PRIZE"
+  },
+  LIMIT_PRIZE_CONSUME = {
+    ReasonId = 47002,
+    ReasonName = "LIMIT_PRIZE_CONSUME"
   },
   MAIL = {ReasonId = 17001, ReasonName = "MAIL"},
   MIDTERM_LEVEL_REWARD = {
@@ -456,6 +492,10 @@ return ReadOnly("ReasonType", {
     ReasonId = 4005,
     ReasonName = "RESOURCE_OPEN_CHEST_CONSUME"
   },
+  RESOURCE_RANDSELECTPACK_GET = {
+    ReasonId = 48001,
+    ReasonName = "RESOURCE_RANDSELECTPACK_GET"
+  },
   RESOURCE_SALE_CONSUME = {
     ReasonId = 4001,
     ReasonName = "RESOURCE_SALE_CONSUME"
@@ -544,6 +584,14 @@ return ReadOnly("ReasonType", {
     ReasonId = 23006,
     ReasonName = "ROUGELIKE_WEEKLY_REWARD"
   },
+  SOLO_TREASURE_DUNGEON_FEE_CONSUME = {
+    ReasonId = 45001,
+    ReasonName = "SOLO_TREASURE_DUNGEON_FEE_CONSUME"
+  },
+  SOLO_TREASURE_DUNGEON_FEE_REWARD = {
+    ReasonId = 45002,
+    ReasonName = "SOLO_TREASURE_DUNGEON_FEE_REWARD"
+  },
   STARTER_QUEST = {
     ReasonId = 21013,
     ReasonName = "STARTER_QUEST"
@@ -583,6 +631,10 @@ return ReadOnly("ReasonType", {
   WEAPON_COLOR_CHANGE_CONSUME = {
     ReasonId = 2005,
     ReasonName = "WEAPON_COLOR_CHANGE_CONSUME"
+  },
+  WEAPON_FORGE_LEVELUP = {
+    ReasonId = 2008,
+    ReasonName = "WEAPON_FORGE_LEVELUP"
   },
   WEAPON_LEVELUP_CONSUME = {
     ReasonId = 2001,

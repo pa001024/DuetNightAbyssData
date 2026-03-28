@@ -1,5 +1,6 @@
 local M = Class("BluePrints.Common.MVC.Controller")
 local SignBoardBubbleTalkModel = require("BluePrints.UI.WBP.SignBoardBubble.SignBoardBubbleTalkModel")
+local SignBoardBubbleTalkCommon = require("BluePrints.UI.WBP.SignBoardBubble.SignBoardBubbleTalkCommon")
 
 function M:Init()
   M.Super.Init(self)
@@ -20,8 +21,10 @@ end
 
 function M:OnCloseLoading()
   local Avatar = self:GetAvatar()
-  if Avatar and Avatar:CheckSubRegionType(Avatar:GetCurrentRegionId(), CommonConst.SubRegionType.Home) then
-    self:StaryHomeBase()
+  local bIsInBigWorld = Avatar and Avatar:IsInBigWorld()
+  local bIsInHomeBase = Avatar and Avatar:CheckSubRegionType(Avatar:GetCurrentRegionId(), CommonConst.SubRegionType.Home)
+  if Avatar and bIsInBigWorld and bIsInHomeBase then
+    self:StartHomeBase()
   end
 end
 
@@ -95,34 +98,29 @@ end
 
 function M:TickCheck()
   local Avatar = self:GetAvatar()
+  local BoardSystem = UBoardBubbleSubsystem.GetSubsystem(GWorld.GameInstance)
+  if not BoardSystem then
+    return
+  end
   if not Avatar then
-    local BoardSystem = UBoardBubbleSubsystem.GetSubsystem(GWorld.GameInstance)
-    if not BoardSystem then
-      return
-    end
     BoardSystem:RemoveTimer(self.Timer)
     self.Timer = nil
     return
   end
-  local SignBoardNpc = Avatar.SignBoardNpc
-  if not SignBoardNpc then
+  local Player = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
+  if not IsValid(Player) then
     return
   end
-  for i = 1, SignBoardNpc:Length() do
-    local NpcId = SignBoardNpc[i]
-    local TriggerIds = SignBoardBubbleTalkModel:GetNpcCanTrigger(NpcId)
-    if TriggerIds then
-      for _, TriggerId in pairs(TriggerIds) do
-        if not SignBoardBubbleTalkModel:GetWaitTriggerQueue()[TriggerId] and SignBoardBubbleTalkModel:CheckCanTrigger(TriggerId) then
-          SignBoardBubbleTalkModel:AddStartWaitTrigger(TriggerId)
-        end
-      end
-    end
+  local CanTriggers = BoardSystem:TickCheck()
+  local TriggerMap = {}
+  for _, TriggerId in pairs(CanTriggers) do
+    TriggerMap[TriggerId] = true
+    SignBoardBubbleTalkModel:AddStartWaitTrigger(TriggerId)
   end
   local TriggerQueue = SignBoardBubbleTalkModel:GetWaitTriggerQueue()
   local ToRemove
   for WaitTriggerId, _ in pairs(TriggerQueue) do
-    if not SignBoardBubbleTalkModel:CheckTriggerDistance(WaitTriggerId) or not SignBoardBubbleTalkModel:CheckCanTrigger(WaitTriggerId) then
+    if not TriggerMap[WaitTriggerId] or not Player:CheckCanInteractiveTrigger() then
       ToRemove = ToRemove or {}
       table.insert(ToRemove, WaitTriggerId)
     end
@@ -142,13 +140,25 @@ function M:TickCheck()
   end
 end
 
-function M:StaryHomeBase()
+function M:StartHomeBase()
+  DebugPrint("SignBoardBubbleTalkController:StartHomeBase")
   local BoardSystem = UBoardBubbleSubsystem.GetSubsystem(GWorld.GameInstance)
   if not BoardSystem then
     return
   end
   BoardSystem:RemoveTimer(self.Timer)
   self.Timer = nil
+  local Avatar = GWorld:GetAvatar()
+  BoardSystem:ClearTickCheckCharacters()
+  local Player = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
+  if Avatar then
+    for key, value in pairs(Avatar.SignBoardNpc) do
+      BoardSystem:AddTickCheckCharacter(value, key, SignBoardBubbleTalkCommon.NpcPoint[key])
+    end
+  end
+  if IsValid(Player) and IsValid(Player.InteractiveTriggerComponent) then
+    BoardSystem:SetDefaultDistanceSquared(Player.InteractiveTriggerComponent:GetInteractiveTriggerDistance())
+  end
   self.Timer = BoardSystem:AddTimer(0.2, function()
     self:TickCheck()
   end, true, 0, nil, false, UE4.ETickingGroup.TG_EndPhysics)
@@ -159,7 +169,7 @@ function M:OnUpdateSignBoardNpc()
   SignBoardBubbleTalkModel:ResetTalkData()
   local Avatar = self:GetAvatar()
   if Avatar and Avatar:CheckSubRegionType(Avatar:GetCurrentRegionId(), CommonConst.SubRegionType.Home) then
-    self:StaryHomeBase()
+    self:StartHomeBase()
   end
 end
 

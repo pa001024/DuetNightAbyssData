@@ -15,7 +15,9 @@ return ReadOnly("MapDesignerIdConfig", {
   fanyige = {DesignerID = 22, DesignerName = "fanyige"},
   gongjiahao = {DesignerID = 28, DesignerName = "gongjiahao"},
   hehao = {DesignerID = 12, DesignerName = "hehao"},
+  jiangyiqun = {DesignerID = 32, DesignerName = "jiangyiqun"},
   jinhengyi = {DesignerID = 24, DesignerName = "jinhengyi"},
+  luwenxin = {DesignerID = 30, DesignerName = "luwenxin"},
   orson = {DesignerID = 13, DesignerName = "orson"},
   oujiahao = {DesignerID = 15, DesignerName = "oujiahao"},
   pukun = {DesignerID = 14, DesignerName = "pukun"},
@@ -25,6 +27,7 @@ return ReadOnly("MapDesignerIdConfig", {
     DesignerName = "shenglinyun"
   },
   tianyuxin = {DesignerID = 20, DesignerName = "tianyuxin"},
+  xiongcai = {DesignerID = 31, DesignerName = "xiongcai"},
   yangnongquan = {
     DesignerID = 19,
     DesignerName = "yangnongquan"

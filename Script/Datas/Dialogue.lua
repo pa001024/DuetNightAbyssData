@@ -9,12 +9,22 @@ if not ok then
 end
 local Dialogue = setmetatable({}, {
   __index = function(t, key)
-    local tbl = DataMgr["Dialogue_" .. CommonConst.SystemLanguage]
+    local ok, tbl = pcall(function()
+      return DataMgr["Dialogue_" .. CommonConst.SystemLanguage]
+    end)
+    if not ok then
+      tbl = nil
+    end
     tbl = tbl or DataMgr["Dialogue_" .. CommonConst.SystemLanguages.Default]
     return tbl[key]
   end,
   __pairs = function(t)
-    local realTbl = DataMgr["Dialogue_" .. CommonConst.SystemLanguage]
+    local ok, realTbl = pcall(function()
+      return DataMgr["Dialogue_" .. CommonConst.SystemLanguage]
+    end)
+    if not ok then
+      realTbl = nil
+    end
     realTbl = realTbl or DataMgr["Dialogue_" .. CommonConst.SystemLanguages.Default]
     local mt = getmetatable(realTbl)
     if mt and mt.__pairs then

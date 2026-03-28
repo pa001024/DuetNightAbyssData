@@ -24,21 +24,6 @@ function Component:GetSquadCreateInfoByNow(ExtraInfo)
     end
   end
   ResInfo.WheelIndex = self.WheelIndex
-  if ExtraInfo then
-    ResInfo.Phantom1 = ExtraInfo.Phantom1
-    ResInfo.Phantom2 = ExtraInfo.Phantom2
-    ResInfo.PhantomWeapon1 = ExtraInfo.PhantomWeapon1
-    ResInfo.PhantomWeapon2 = ExtraInfo.PhantomWeapon2
-    ResInfo.Pet = ExtraInfo.Pet
-    if not ResInfo.PhantomWeapon1 or not ResInfo.Phantom1 then
-      ResInfo.Phantom1 = nil
-      ResInfo.PhantomWeapon1 = nil
-    end
-    if not ResInfo.PhantomWeapon2 or not ResInfo.Phantom2 then
-      ResInfo.Phantom2 = nil
-      ResInfo.PhantomWeapon2 = nil
-    end
-  end
   return ResInfo
 end
 
@@ -61,6 +46,37 @@ function Component:ReShapeSquadInfo(Avatar, Squad)
     Info.UltraWeapons = BattleDumpUtils:GetDefaultUltraWeaponInfo(Avatar, Info.Char)
   end
   return Info
+end
+
+function Component:GetSquadCreateInfoByExtra(ExtraInfo)
+  self.logger.debug("GetSquadCreateInfoByExtra")
+  local ResInfo = {}
+  if self.CurrentChar then
+    ResInfo.Char = self.Chars[self.CurrentChar]
+    if ResInfo.Char then
+      ResInfo.CharModSuit = ExtraInfo.CharModSuit or ResInfo.Char.ModSuitIndex
+      ResInfo.UltraWeapons = BattleDumpUtils:GetDefaultUltraWeaponInfo(self, ResInfo.Char)
+    end
+  end
+  if self.MeleeWeapon then
+    ResInfo.MeleeWeapon = self.Weapons[self.MeleeWeapon]
+    if ResInfo.MeleeWeapon then
+      ResInfo.MeleeWeaponModSuit = ExtraInfo.MeleeWeaponModSuit or ResInfo.MeleeWeapon.ModSuitIndex
+    end
+  end
+  if self.RangedWeapon then
+    ResInfo.RangedWeapon = self.Weapons[self.RangedWeapon]
+    if ResInfo.RangedWeapon then
+      ResInfo.RangedWeaponModSuit = ExtraInfo.RangedWeaponModSuit or ResInfo.RangedWeapon.ModSuitIndex
+    end
+  end
+  ResInfo.WheelIndex = self.WheelIndex
+  ResInfo.Phantom1 = ExtraInfo.Phantom1
+  ResInfo.Phantom2 = ExtraInfo.Phantom2
+  ResInfo.PhantomWeapon1 = ExtraInfo.PhantomWeapon1
+  ResInfo.PhantomWeapon2 = ExtraInfo.PhantomWeapon2
+  ResInfo.Pet = ExtraInfo.Pet
+  return ResInfo
 end
 
 return Component

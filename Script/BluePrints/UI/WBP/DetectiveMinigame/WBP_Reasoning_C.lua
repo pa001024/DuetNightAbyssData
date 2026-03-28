@@ -62,6 +62,9 @@ function M:Construct()
   self.Tab:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Panel_Num:SetVisibility(UE4.ESlateVisibility.Collapsed)
   AudioManager(self):PlaySystemUIBGM("event:/bgm/cbt03/0072_story_reasoning", nil, "Reasoning")
+  for _, clueWidget in ipairs(self.ClueWidgets) do
+    clueWidget:PlayAnimation(clueWidget.Normal)
+  end
 end
 
 function M:Destruct()

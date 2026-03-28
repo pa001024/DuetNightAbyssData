@@ -44,6 +44,7 @@ function WBP_Player_SkillPanel_PC_C:InitSkillAfterCharInitReady()
   end
   self:OnLoaded()
   self:ClearRemainAnim()
+  self.OwnerPlayer:SetSkillPanelTimer()
 end
 
 function WBP_Player_SkillPanel_PC_C:Destruct()
@@ -103,6 +104,8 @@ function WBP_Player_SkillPanel_PC_C:InitListenEvent()
   self:AddDispatcher(EventID.OnStartMountFly, self, self.OnStartMountFly)
   self:AddDispatcher(EventID.OnStopMountFly, self, self.OnStopMountFly)
   self:AddDispatcher(EventID.OnSkillInfosRep, self, self.OnSkillInfosRep)
+  self:AddDispatcher(EventID.OnSkill1InAirChanged, self, self.OnSkill1InAirChanged)
+  self:AddDispatcher(EventID.OnSkill2InAirChanged, self, self.OnSkill2InAirChanged)
 end
 
 function WBP_Player_SkillPanel_PC_C:InitVariable(OwnerPlayer)
@@ -1062,6 +1065,14 @@ function WBP_Player_SkillPanel_PC_C:OnSkillInfosRep(Character)
   self:RefreshSkillConfig()
 end
 
+function WBP_Player_SkillPanel_PC_C:OnSkill1InAirChanged(IsInAir)
+  self.Battle_Skill_1:ChangeIsInAir(IsInAir)
+end
+
+function WBP_Player_SkillPanel_PC_C:OnSkill2InAirChanged(IsInAir)
+  self.Battle_Skill_2:ChangeIsInAir(IsInAir)
+end
+
 function WBP_Player_SkillPanel_PC_C:InitSupportSkill()
   self.bSupportSkillUnlock = false
   local Avatar = GWorld:GetAvatar()
@@ -1247,10 +1258,7 @@ function WBP_Player_SkillPanel_PC_C:OnDisableBattleMount(Character)
   })
 end
 
-function WBP_Player_SkillPanel_PC_C:OnStartMountFly(Character)
-  if not Character:IsMainPlayer() then
-    return
-  end
+function WBP_Player_SkillPanel_PC_C:OnStartMountFly()
   DebugPrint("@zyh StartMountFly")
   self.WS_Operation_PC:SetActiveWidgetIndex(0)
   self.WS_Operation_GamePad:SetActiveWidgetIndex(0)
@@ -1258,10 +1266,7 @@ function WBP_Player_SkillPanel_PC_C:OnStartMountFly(Character)
   self:StopListeningForInputAction("Avoid", EInputEvent.IE_Pressed)
 end
 
-function WBP_Player_SkillPanel_PC_C:OnStopMountFly(Character)
-  if not Character:IsMainPlayer() then
-    return
-  end
+function WBP_Player_SkillPanel_PC_C:OnStopMountFly()
   self.WS_Operation_PC:SetActiveWidgetIndex(1)
   self.WS_Operation_GamePad:SetActiveWidgetIndex(1)
   EMUIAnimationSubsystem:EMPlayAnimation(self, self.MountFly_Out)

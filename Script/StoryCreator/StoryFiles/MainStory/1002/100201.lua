@@ -115,7 +115,6 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = true,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
@@ -123,6 +122,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -295,7 +295,8 @@ return {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false
+                  TalkActorVisible = false,
+                  AroundPlayer = false
                 }
               },
               FreezeWorldComposition = false,
@@ -380,22 +381,26 @@ return {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false
+                  TalkActorVisible = false,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200002,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200003,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 }
               },
               OptionType = "normal",
@@ -404,6 +409,7 @@ return {
               SwitchToMaster = "None",
               bNpcActionKeepIn = true,
               bNpcActionKeepOut = false,
+              bForceWaitNavLoaded = false,
               NormalOptions = {},
               OverrideFailBlend = false
             }
@@ -438,7 +444,7 @@ return {
       key = "story_168448111698466",
       type = "StoryNode",
       name = "上公路",
-      pos = {x = -1.5261889539352467, y = 114.101181590896},
+      pos = {x = -1.5261889539352467, y = 112.851181590896},
       propsData = {
         QuestId = 10020102,
         QuestDescriptionComment = "",
@@ -452,7 +458,6 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = false,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
@@ -460,6 +465,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -902,7 +908,6 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
@@ -910,6 +915,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 101103,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -1098,7 +1104,6 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
@@ -1106,6 +1111,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -1249,22 +1255,26 @@ return {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false
+                  TalkActorVisible = false,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200002,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200003,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 }
               },
               OptionType = "normal",
@@ -1273,6 +1283,7 @@ return {
               SwitchToMaster = "None",
               bNpcActionKeepIn = true,
               bNpcActionKeepOut = false,
+              bForceWaitNavLoaded = false,
               NormalOptions = {},
               OverrideFailBlend = false
             }
@@ -1435,7 +1446,8 @@ return {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false
+                  TalkActorVisible = false,
+                  AroundPlayer = false
                 }
               },
               FreezeWorldComposition = true,
@@ -1467,7 +1479,6 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
@@ -1475,6 +1486,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -1666,22 +1678,26 @@ return {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false
+                  TalkActorVisible = false,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200002,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200006,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 }
               },
               OptionType = "normal",
@@ -1690,6 +1706,7 @@ return {
               SwitchToMaster = "None",
               bNpcActionKeepIn = true,
               bNpcActionKeepOut = false,
+              bForceWaitNavLoaded = false,
               NormalOptions = {},
               OverrideFailBlend = false
             }
@@ -1724,7 +1741,6 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = true,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
@@ -1732,6 +1748,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -1901,7 +1918,8 @@ return {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false
+                  TalkActorVisible = false,
+                  AroundPlayer = false
                 }
               },
               FreezeWorldComposition = false,
@@ -1942,7 +1960,8 @@ return {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false
+                  TalkActorVisible = false,
+                  AroundPlayer = false
                 }
               },
               FreezeWorldComposition = false,
@@ -1991,22 +2010,26 @@ return {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false
+                  TalkActorVisible = false,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200002,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200005,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 }
               },
               OptionType = "normal",
@@ -2015,6 +2038,7 @@ return {
               SwitchToMaster = "None",
               bNpcActionKeepIn = true,
               bNpcActionKeepOut = false,
+              bForceWaitNavLoaded = false,
               NormalOptions = {},
               OverrideFailBlend = false
             }
@@ -2096,27 +2120,32 @@ return {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false
+                  TalkActorVisible = false,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200002,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200005,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200006,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 }
               },
               OptionType = "normal",
@@ -2125,6 +2154,7 @@ return {
               SwitchToMaster = "None",
               bNpcActionKeepIn = true,
               bNpcActionKeepOut = false,
+              bForceWaitNavLoaded = false,
               NormalOptions = {},
               OverrideFailBlend = false
             }
@@ -2179,27 +2209,32 @@ return {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false
+                  TalkActorVisible = false,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200002,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200005,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200006,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 }
               },
               OptionType = "normal",
@@ -2208,6 +2243,7 @@ return {
               SwitchToMaster = "None",
               bNpcActionKeepIn = true,
               bNpcActionKeepOut = false,
+              bForceWaitNavLoaded = false,
               NormalOptions = {},
               OverrideFailBlend = false
             }
@@ -2242,7 +2278,6 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
@@ -2250,6 +2285,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -2420,7 +2456,6 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = true,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
@@ -2428,6 +2463,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -2675,7 +2711,6 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
@@ -2683,6 +2718,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -2864,12 +2900,14 @@ return {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false
+                  TalkActorVisible = false,
+                  AroundPlayer = false
                 }
               },
               OptionType = "normal",
@@ -2878,6 +2916,7 @@ return {
               SwitchToMaster = "None",
               bNpcActionKeepIn = true,
               bNpcActionKeepOut = false,
+              bForceWaitNavLoaded = false,
               NormalOptions = {},
               OverrideFailBlend = false
             }
@@ -2921,17 +2960,20 @@ return {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false
+                  TalkActorVisible = false,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100003,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 }
               },
               OptionType = "normal",
@@ -2940,6 +2982,7 @@ return {
               SwitchToMaster = "None",
               bNpcActionKeepIn = true,
               bNpcActionKeepOut = false,
+              bForceWaitNavLoaded = false,
               NormalOptions = {},
               OverrideFailBlend = false
             }
@@ -2983,17 +3026,20 @@ return {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false
+                  TalkActorVisible = false,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200006,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 }
               },
               OptionType = "normal",
@@ -3002,6 +3048,7 @@ return {
               SwitchToMaster = "None",
               bNpcActionKeepIn = true,
               bNpcActionKeepOut = false,
+              bForceWaitNavLoaded = false,
               NormalOptions = {},
               OverrideFailBlend = false
             }
@@ -3046,17 +3093,20 @@ return {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200006,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false
+                  TalkActorVisible = false,
+                  AroundPlayer = false
                 }
               },
               OptionType = "normal",
@@ -3065,6 +3115,7 @@ return {
               SwitchToMaster = "None",
               bNpcActionKeepIn = true,
               bNpcActionKeepOut = false,
+              bForceWaitNavLoaded = false,
               NormalOptions = {},
               OverrideFailBlend = false
             }
@@ -3229,7 +3280,6 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
@@ -3237,6 +3287,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 101103,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -3339,12 +3390,6 @@ return {
             startQuest = "17561930523131911456",
             startPort = "Out",
             endQuest = "170417835022081465",
-            endPort = "In"
-          },
-          {
-            startQuest = "17561930523131911456",
-            startPort = "Out",
-            endQuest = "170417835022081457",
             endPort = "In"
           },
           {
@@ -3459,7 +3504,7 @@ return {
             key = "170417835022081466",
             type = "GoToRegionNode",
             name = "wait  for 公路",
-            pos = {x = -569.2465890648139, y = 75.10609731666018},
+            pos = {x = -569.2465890648139, y = 73.43943064999351},
             propsData = {
               RegionType = 1,
               IsEnter = "Enter",
@@ -3491,10 +3536,10 @@ return {
             key = "170417835022081469",
             type = "AsyncSetActorLocationAndRotationNode",
             name = "设置玩家位置旋转",
-            pos = {x = 151.2241953708433, y = -670.5035044654837},
+            pos = {x = 151.2241953708433, y = -671.7035044654838},
             propsData = {
               UnitId = 0,
-              NewTargetPointName = "QuestPoint_10020106",
+              NewTargetPointName = "TargetPoint_IcelakeCity_Connect",
               FadeIn = false,
               FadeOut = true,
               bResetCamera = true,
@@ -3549,27 +3594,32 @@ return {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false
+                  TalkActorVisible = false,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200002,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200003,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200004,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 }
               },
               OptionType = "normal",
@@ -3578,6 +3628,7 @@ return {
               SwitchToMaster = "None",
               bNpcActionKeepIn = true,
               bNpcActionKeepOut = false,
+              bForceWaitNavLoaded = false,
               NormalOptions = {},
               OverrideFailBlend = false
             }
@@ -3653,27 +3704,32 @@ return {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false
+                  TalkActorVisible = false,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200002,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200003,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200071,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 }
               },
               OptionType = "normal",
@@ -3682,6 +3738,7 @@ return {
               SwitchToMaster = "None",
               bNpcActionKeepIn = true,
               bNpcActionKeepOut = false,
+              bForceWaitNavLoaded = false,
               NormalOptions = {},
               OverrideFailBlend = false
             }
@@ -3840,17 +3897,20 @@ return {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false
+                  TalkActorVisible = false,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200002,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 }
               },
               OptionType = "normal",
@@ -3859,6 +3919,7 @@ return {
               SwitchToMaster = "None",
               bNpcActionKeepIn = true,
               bNpcActionKeepOut = false,
+              bForceWaitNavLoaded = false,
               NormalOptions = {},
               OverrideFailBlend = false
             }

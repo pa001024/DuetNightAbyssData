@@ -1,5 +1,5 @@
 require("UnLua")
-local AnnouncementUtils = require("BluePrints.UI.WBP.Announcement.AnnounceUtils")
+local AnnounceModel = AnnounceController:GetModel()
 local M = Class("BluePrints.UI.BP_EMUserWidget_C")
 
 function M:Construct()
@@ -55,7 +55,7 @@ function M:OnListItemObjectSet(Content)
     self:OnClick(true, Content.bForce)
     Content.bForce = nil
   end
-  self.ReddotName = AnnouncementUtils:GetReddotNameByConf(self.Content.Conf)
+  self.ReddotName = AnnounceModel:GetReddotNameByConf(self.Content.Conf)
   self:AddReddotListener(self.ReddotName)
 end
 
@@ -64,7 +64,7 @@ function M:OnReddotChange(Count)
     return
   end
   local CacheKey = tostring(self.Content.Conf.NoticeID)
-  local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(AnnouncementUtils:GetReddotNameByConf(self.Content.Conf))
+  local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(AnnounceModel:GetReddotNameByConf(self.Content.Conf))
   self.Common_Item_Subsize_New_PC:SetEnable(CacheDetail[CacheKey] and Count > 0)
 end
 
@@ -111,7 +111,7 @@ function M:OnClick(bMuteSound, bForce)
   self:StopAllAnimations()
   self:PlayAnimation(self.Click)
   self.Parent:ChangeMainContent(self.Content, bForce)
-  AnnouncementUtils:TrySubReddotCacheDetail(self.Content.Conf)
+  AnnounceModel:TrySubReddotCacheDetail(self.Content.Conf)
 end
 
 function M:BP_OnItemSelectionChanged(IsSelected)

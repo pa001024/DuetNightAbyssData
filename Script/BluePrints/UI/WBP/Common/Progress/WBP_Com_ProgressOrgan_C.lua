@@ -56,12 +56,12 @@ function M:InitListenEvents()
 end
 
 function M:OnSwitchOnCannonProp()
-  UIManager(self):ShowUITip(UIConst.Tip_CommonTop, "装备成功_待配表")
+  UIManager(self):ShowUITip(UIConst.Tip_CommonTop, GText("UI_DUNGEON_SWSCannon_Equip"))
   self:PlayAnimation(self.Overlay_On)
 end
 
 function M:OnSwitchOffCannonProp()
-  UIManager(self):ShowUITip(UIConst.Tip_CommonTop, "机关武器已收回至轮盘_待配表")
+  UIManager(self):ShowUITip(UIConst.Tip_CommonTop, GText("UI_DUNGEON_SWSCannon_Unequip"))
   self:PlayAnimation(self.Overlay_Off)
 end
 
@@ -83,7 +83,7 @@ function M:OnSWSCannonFired(Index)
 end
 
 function M:OnSWSCannonInCD()
-  UIManager(self):ShowUITip(UIConst.Tip_CommonTop, "等待充能完成_待配表")
+  UIManager(self):ShowUITip(UIConst.Tip_CommonTop, GText("UI_DUNGEON_SWSCannon_Reload"))
   self:PlayAnimation(self.NoBullet)
 end
 
@@ -99,6 +99,7 @@ function M:UpdateCannonInfo(CannonActor, Index)
   local CanShoot = CannonActor.CanShoot
   if CanShoot and not self["LastCanShoot" .. Index] then
     self:PlayAnimation(self[Index .. "_Full"])
+    AudioManager(self):PlayUISound(self, "event:/ui/common/shanwaishan_cannon_charging_complete", nil, nil)
   end
   self["LastCanShoot" .. Index] = CanShoot
 end

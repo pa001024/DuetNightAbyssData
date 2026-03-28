@@ -5,9 +5,15 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("QuestAddBuff", {
+  [10010107] = {
+    AddorRemove = "Add",
+    BuffId = {304},
+    QuestId = 10010107,
+    QuestStartorSuccess = "Start"
+  },
   [10010108] = {
     AddorRemove = "Add",
-    BuffId = {304, 309},
+    BuffId = {309},
     QuestId = 10010108,
     QuestStartorSuccess = "Start"
   },

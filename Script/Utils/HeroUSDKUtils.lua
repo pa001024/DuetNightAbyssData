@@ -206,4 +206,107 @@ function HeroUSDKUtils.CheckStringSensitiveFinished(CallObject, Str, SensitiveCa
   end
 end
 
+function HeroUSDKUtils.IsSteamChannel()
+  local Channel = UUsdkSettings:GetDefaultObject().Channel
+  return Channel == EHeroUSDKChannel.Steam or Channel == EHeroUSDKChannel.Hero_Steam
+end
+
+function HeroUSDKUtils.GetAchievement_Steam(AchievementName)
+  if not HeroUSDKUtils.IsSteamChannel() then
+    return false, false
+  end
+  local Subsystem = HeroUSDKSubsystem(GWorld.GameInstance)
+  local bAchieved = false
+  local Success = false
+  bAchieved, Success = Subsystem:GetAchievement_Steam(AchievementName)
+  return Success, bAchieved
+end
+
+function HeroUSDKUtils.SetAchievement_Steam(AchievementName)
+  if not HeroUSDKUtils.IsSteamChannel() then
+    return false
+  end
+  local Subsystem = HeroUSDKSubsystem(GWorld.GameInstance)
+  return Subsystem:SetAchievement_Steam(AchievementName)
+end
+
+function HeroUSDKUtils.StoreStats_Steam(Callback)
+  if not HeroUSDKUtils.IsSteamChannel() then
+    if Callback then
+      Callback(false)
+    end
+    return
+  end
+  local Subsystem = HeroUSDKSubsystem(GWorld.GameInstance)
+  Subsystem:StoreStats_Steam()
+end
+
+function HeroUSDKUtils.SyncSteamAchievements(AchvMgr, Callback)
+  if not HeroUSDKUtils.IsSteamChannel() then
+    if Callback then
+      Callback({})
+    end
+    return
+  end
+  DebugPrint("SyncSteamAchievements: Steam data already synced by client on launch")
+  local SteamAchievements = DataMgr.SteamAchievement
+  if not SteamAchievements or 0 == #SteamAchievements then
+    DebugPrint("No Steam achievements configured")
+    if Callback then
+      Callback({})
+    end
+    return
+  end
+  local AchievementsToSync = {}
+  for _, Item in ipairs(SteamAchievements) do
+    local AchvId = Item.AchvId
+    local SteamAPIName = Item.SteamAPIName
+    local Success, bSteamAchieved = HeroUSDKUtils.GetAchievement_Steam(SteamAPIName)
+    DebugPrint("Check Success", Success, "bSteamAchieved:", bSteamAchieved)
+    if Success then
+      local GameAchv = AchvMgr.Achvs[AchvId]
+      local bGameFinished = GameAchv and GameAchv:IsFinished()
+      DebugPrint("Check Achievement", AchvId, "SteamAPI:", SteamAPIName, "SteamAchieved:", bSteamAchieved, "GameFinished:", bGameFinished)
+      if bGameFinished and not bSteamAchieved then
+        table.insert(AchievementsToSync, {AchvId = AchvId, SteamAPIName = SteamAPIName})
+      end
+    else
+      DebugPrint("GetAchievement_Steam failed for", SteamAPIName)
+    end
+  end
+  if 0 == #AchievementsToSync then
+    DebugPrint("No achievements need to sync")
+    if Callback then
+      Callback({})
+    end
+    return
+  end
+  DebugPrint("Found", #AchievementsToSync, "achievements to sync to Steam")
+  local SyncedCount = 0
+  local FailedCount = 0
+  for _, Item in ipairs(AchievementsToSync) do
+    local Result = HeroUSDKUtils.SetAchievement_Steam(Item.SteamAPIName)
+    if Result then
+      SyncedCount = SyncedCount + 1
+      DebugPrint("SetAchievement_Steam success:", Item.SteamAPIName)
+    else
+      FailedCount = FailedCount + 1
+      DebugPrint("SetAchievement_Steam failed:", Item.SteamAPIName)
+    end
+  end
+  
+  local function OnStoreStatsSuccess(bStoreSuccess)
+    if bStoreSuccess then
+      DebugPrint("StoreStats_Steam success, synced", SyncedCount, "achievements")
+    else
+      DebugPrint("StoreStats_Steam failed")
+    end
+    if Callback then
+      Callback(AchievementsToSync, bStoreSuccess)
+    end
+  end
+  
+  HeroUSDKUtils.StoreStats_Steam(OnStoreStatsSuccess)
+end
+
 return HeroUSDKUtils

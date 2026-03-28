@@ -7,6 +7,12 @@ function Component:InitComponentCoroutine()
   coroutine.resume(Coroutine, self, #self.InitCoroutines)
 end
 
+function Component:InitDungeonComponentCoroutine()
+  local Coroutine = CreateCoroutine(self.InitFloorBox)
+  table.insert(self.InitCoroutines, Coroutine)
+  coroutine.resume(Coroutine, self, #self.InitCoroutines)
+end
+
 function Component:ClearData()
   if self.BuildingFloor2Map then
     for _, floorTable in pairs(self.BuildingFloor2Map) do

@@ -1,46 +1,3 @@
-local T = {}
-T.RT_1 = {
-  Key = "ù",
-  KeyImgHeight = 32,
-  KeyImgWidth = 32,
-  KeyText = "ù"
-}
-T.RT_2 = {
-  Key = "²",
-  KeyImgHeight = 32,
-  KeyImgWidth = 32,
-  KeyText = "²"
-}
-T.RT_3 = {
-  Key = "Exclamation",
-  KeyImgHeight = 32,
-  KeyImgWidth = 32,
-  KeyText = "Exclamation"
-}
-T.RT_4 = {
-  Key = "RightParantheses",
-  KeyImgHeight = 32,
-  KeyImgWidth = 32,
-  KeyText = "RightParantheses"
-}
-T.RT_5 = {
-  Key = "Dollar",
-  KeyImgHeight = 32,
-  KeyImgWidth = 32,
-  KeyText = "Dollar"
-}
-T.RT_6 = {
-  Key = "Colon",
-  KeyImgHeight = 32,
-  KeyImgWidth = 32,
-  KeyText = "Colon"
-}
-T.RT_7 = {
-  Key = "Caret",
-  KeyImgHeight = 32,
-  KeyImgWidth = 32,
-  KeyText = "Caret"
-}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -60,24 +17,29 @@ return ReadOnly("KeyboardText_ContentFR", {
     KeyImgWidth = 74,
     KeyText = "Add"
   },
-  Apostrophe = T.RT_1,
+  Apostrophe = {
+    Key = "U_AccentGrave",
+    KeyImgHeight = 32,
+    KeyImgWidth = 32,
+    KeyText = "U_AccentGrave"
+  },
   B = {
     Key = "B",
     KeyImgHeight = 32,
     KeyImgWidth = 32,
     KeyText = "B"
   },
-  BackSlash = {
-    Key = "BackSlash",
-    KeyImgHeight = 32,
-    KeyImgWidth = 32,
-    KeyText = "BackSlash"
-  },
   BackSpace = {
     Key = "BackSpace",
     KeyImgHeight = 32,
     KeyImgWidth = 50,
     KeyText = "BackSpace"
+  },
+  Backslash = {
+    Key = "Asterix",
+    KeyImgHeight = 32,
+    KeyImgWidth = 32,
+    KeyText = "Asterix"
   },
   C = {
     Key = "C",
@@ -91,8 +53,6 @@ return ReadOnly("KeyboardText_ContentFR", {
     KeyImgWidth = 62,
     KeyText = "CapsLock"
   },
-  Caret = T.RT_7,
-  Colon = T.RT_6,
   Comma = {
     Key = "Semicolon",
     KeyImgHeight = 32,
@@ -123,7 +83,6 @@ return ReadOnly("KeyboardText_ContentFR", {
     KeyImgWidth = 74,
     KeyText = "Divide"
   },
-  Dollar = T.RT_5,
   Down = {
     Key = "Down",
     KeyImgHeight = 32,
@@ -166,7 +125,6 @@ return ReadOnly("KeyboardText_ContentFR", {
     KeyImgWidth = 50,
     KeyText = "Escape"
   },
-  Exclamation = T.RT_3,
   F = {
     Key = "F",
     KeyImgHeight = 32,
@@ -371,7 +329,12 @@ return ReadOnly("KeyboardText_ContentFR", {
     KeyImgWidth = 70,
     KeyText = "Home"
   },
-  Hyphen = T.RT_4,
+  Hyphen = {
+    Key = "RightParantheses",
+    KeyImgHeight = 32,
+    KeyImgWidth = 32,
+    KeyText = "RightParantheses"
+  },
   I = {
     Key = "I",
     KeyImgHeight = 32,
@@ -414,7 +377,12 @@ return ReadOnly("KeyboardText_ContentFR", {
     KeyImgWidth = 62,
     KeyText = "LeftAlt"
   },
-  LeftBracket = T.RT_7,
+  LeftBracket = {
+    Key = "Caret",
+    KeyImgHeight = 32,
+    KeyImgWidth = 32,
+    KeyText = "Caret"
+  },
   LeftControl = {
     Key = "LeftControl",
     KeyImgHeight = 32,
@@ -583,7 +551,12 @@ return ReadOnly("KeyboardText_ContentFR", {
     KeyImgWidth = 68,
     KeyText = "Pause"
   },
-  Period = T.RT_6,
+  Period = {
+    Key = "Colon",
+    KeyImgHeight = 32,
+    KeyImgWidth = 32,
+    KeyText = "Colon"
+  },
   Q = {
     Key = "A",
     KeyImgHeight = 32,
@@ -608,7 +581,12 @@ return ReadOnly("KeyboardText_ContentFR", {
     KeyImgWidth = 62,
     KeyText = "RightAlt"
   },
-  RightBracket = T.RT_5,
+  RightBracket = {
+    Key = "Dollar",
+    KeyImgHeight = 32,
+    KeyImgWidth = 32,
+    KeyText = "Dollar"
+  },
   RightControl = {
     Key = "RightControl",
     KeyImgHeight = 32,
@@ -621,7 +599,6 @@ return ReadOnly("KeyboardText_ContentFR", {
     KeyImgWidth = 48,
     KeyText = "RightMouseButton"
   },
-  RightParantheses = T.RT_4,
   RightShift = {
     Key = "RightShift",
     KeyImgHeight = 32,
@@ -658,7 +635,12 @@ return ReadOnly("KeyboardText_ContentFR", {
     KeyImgWidth = 32,
     KeyText = "Six"
   },
-  Slash = T.RT_3,
+  Slash = {
+    Key = "Exclamation",
+    KeyImgHeight = 32,
+    KeyImgWidth = 32,
+    KeyText = "Exclamation"
+  },
   SpaceBar = {
     Key = "SpaceBar",
     KeyImgHeight = 32,
@@ -701,7 +683,12 @@ return ReadOnly("KeyboardText_ContentFR", {
     KeyImgWidth = 48,
     KeyText = "ThumbMouseButton2"
   },
-  Tilde = T.RT_2,
+  Tilde = {
+    Key = "Square",
+    KeyImgHeight = 32,
+    KeyImgWidth = 32,
+    KeyText = "Square"
+  },
   Two = {
     Key = "Two",
     KeyImgHeight = 32,
@@ -755,7 +742,5 @@ return ReadOnly("KeyboardText_ContentFR", {
     KeyImgHeight = 32,
     KeyImgWidth = 32,
     KeyText = "Zero"
-  },
-  ["²"] = T.RT_2,
-  ["ù"] = T.RT_1
+  }
 })

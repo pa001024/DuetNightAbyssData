@@ -689,7 +689,7 @@ function M:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
   if "Gamepad_RightX" == InKeyName then
     if self.ActorController then
       local DeltaX = UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent) * 10
-      self.ActorController:OnDragging({X = DeltaX})
+      self.ActorController:OnDragViewActor({X = DeltaX})
     end
     return UIUtils.Handled
   end

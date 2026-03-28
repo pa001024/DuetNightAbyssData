@@ -563,7 +563,6 @@ function TalkTaskBase_C:ProcessShowHide(bIsBegin)
     if self.TalkTaskData.bShowInteractiveActor then
       self.TalkContext:ShowInteractiveActor(true)
     end
-    self.TalkContext:ShowHideInTalkActors()
   else
     if self.HideAllMonstersComponent then
       self.HideAllMonstersComponent:ResumeHide()

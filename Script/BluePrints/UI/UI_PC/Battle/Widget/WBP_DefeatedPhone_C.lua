@@ -67,6 +67,9 @@ function M:RefreshPhoneExecuteBan()
   if CommonUtils.GetDeviceTypeByPlatformName(self) ~= "Mobile" then
     return
   end
+  if self.bDraggable then
+    return
+  end
   if self:IsCanExecute() then
     if self.IsPlayBan then
       self:ShowBan(false)

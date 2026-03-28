@@ -116,12 +116,18 @@ function Component:InitTeleportPoint(CoroutineIndex)
 end
 
 function Component:ShowFloor_Component(FloorId)
+  if not self.TeleportPoints then
+    return
+  end
   for id, teleportPoint in pairs(self.TeleportPoints) do
     teleportPoint:SetFloor(self.TeleportPoint2FloorId[id] - FloorId)
   end
 end
 
 function Component:OnScaleChange_Component(Percent)
+  if not self.TeleportPoints then
+    return
+  end
   local TrackingID = self:GetTrackingId(CommonConst.RegionMapTrackingType.TeleportPoint)
   local Visible = self:GetMapIconVisible("UI_TELEPORTPOINT", Percent)
   local BossVisible = self:GetMapIconVisible("UI_BOSS", Percent)
@@ -280,6 +286,10 @@ function Component:OnConveyClicked(ForceUnlock)
     local Avatar = GWorld:GetAvatar()
     local data = DataMgr.TeleportPoint[self.CurrentConveyId]
     if Avatar and GameMode and data then
+      if not GameMode:CheckRegionPatchCondition(DataMgr.SubRegion[data.TeleportPointSubRegion].RegionId) then
+        GameMode:HandleLevelDeliver(UE4.EModeType.ModeRegion, data.TeleportPointSubRegion, data.TeleportPointPos, nil, true, true)
+        return
+      end
       self.MainMap:BindToAnimationFinished(self.MainMap.Auto_Out, function()
         GameMode:HandleLevelDeliver(UE4.EModeType.ModeRegion, data.TeleportPointSubRegion, data.TeleportPointPos, nil, true, true)
       end)

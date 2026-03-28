@@ -51,6 +51,16 @@ return ReadOnly("WidgetUI", {
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/Return/Tab/WBP_Activity_ReturnTabSubItem01.WBP_Activity_ReturnTabSubItem01'",
     UIName = "ActivityReturnTabSubItem01"
   },
+  ActivitySoloTreasureLevel = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/SoloTreasure/WBP_Activity_SoloTreasure_Level_P.WBP_Activity_SoloTreasure_Level_P'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/SoloTreasure/WBP_Activity_SoloTreasure_Level_M.WBP_Activity_SoloTreasure_Level_M'",
+    UIName = "ActivitySoloTreasureLevel"
+  },
+  ActivitySoloTreasurePrepare = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/SoloTreasure/WBP_Activity_SoloTreasure_Prepare_P.WBP_Activity_SoloTreasure_Prepare_P'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/SoloTreasure/WBP_Activity_SoloTreasure_Prepare_M.WBP_Activity_SoloTreasure_Prepare_M'",
+    UIName = "ActivitySoloTreasurePrepare"
+  },
   ActivityTryOutAvatarNeed = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/TryOut/WBP_Activity_TryOut_AvatarNeed.WBP_Activity_TryOut_AvatarNeed'",
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/TryOut/WBP_Activity_TryOut_AvatarNeed.WBP_Activity_TryOut_AvatarNeed'",
@@ -122,6 +132,11 @@ return ReadOnly("WidgetUI", {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Armory/Widget/Mod/WBP_Armory_Mod_Replace.WBP_Armory_Mod_Replace'",
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Armory/Widget/Mod/WBP_Armory_Mod_Replace.WBP_Armory_Mod_Replace'",
     UIName = "ArmoryModPolarity"
+  },
+  ArmoryModRecommend = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Armory/Widget/Mod/WBP_Armory_ModRecommend.WBP_Armory_ModRecommend'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Armory/Widget/Mod/WBP_Armory_ModRecommend.WBP_Armory_ModRecommend'",
+    UIName = "ArmoryModRecommend"
   },
   ArmoryPetAttribute = {
     UIName = "ArmoryPetAttribute"
@@ -210,6 +225,11 @@ return ReadOnly("WidgetUI", {
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/Aim/WBP_Battle_Aim_Bow.WBP_Battle_Aim_Bow'",
     UIName = "BattleAimBow"
   },
+  BattleAimBulletJump = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/Aim/WBP_Battle_Aim_Jump.WBP_Battle_Aim_Jump'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/Aim/WBP_Battle_Aim_Jump.WBP_Battle_Aim_Jump'",
+    UIName = "BattleAimBulletJump"
+  },
   BattleAimCannon = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/Aim/WBP_Battle_Aim_Cannon.WBP_Battle_Aim_Cannon'",
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/Aim/WBP_Battle_Aim_Cannon.WBP_Battle_Aim_Cannon'",
@@ -239,6 +259,11 @@ return ReadOnly("WidgetUI", {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/Aim/WBP_Battle_Aim_Suyi.WBP_Battle_Aim_Suyi'",
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/Aim/WBP_Battle_Aim_Suyi.WBP_Battle_Aim_Suyi'",
     UIName = "BattleAimSuyi"
+  },
+  BattleAimSuyi01 = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/Aim/WBP_Battle_Aim_Suyi_Sp.WBP_Battle_Aim_Suyi_Sp'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/Aim/WBP_Battle_Aim_Suyi_Sp.WBP_Battle_Aim_Suyi_Sp'",
+    UIName = "BattleAimSuyi01"
   },
   BattleAimThunder = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/Aim/WBP_Battle_Aim_Thunder.WBP_Battle_Aim_Thunder'",
@@ -337,6 +362,11 @@ return ReadOnly("WidgetUI", {
   BulletPhone = {
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_Battle_Bullet_M.WBP_Battle_Bullet_M'",
     UIName = "BulletPhone"
+  },
+  ChannelMapBtn = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Chat/Widget/Channel/WBP_Chat_ChannelMapBtn.WBP_Chat_ChannelMapBtn'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Chat/Widget/Channel/WBP_Chat_ChannelMapBtn.WBP_Chat_ChannelMapBtn'",
+    UIName = "ChannelMapBtn"
   },
   CharSkillAtrrTitle = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Armory/Widget/CharSkill/WBP_Armory_CharSkillAtrrTitle.WBP_Armory_CharSkillAtrrTitle'",
@@ -482,6 +512,11 @@ return ReadOnly("WidgetUI", {
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Item/Widget/WBP_Com_Item_NeedCount.WBP_Com_Item_NeedCount'",
     UIName = "ComItemNeedCount"
   },
+  ComItemNewGlow = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Item/Widget/WBP_Com_ItemL_GetVX.WBP_Com_ItemL_GetVX'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Item/Widget/WBP_Com_ItemL_GetVX.WBP_Com_ItemL_GetVX'",
+    UIName = "ComItemNewGlow"
+  },
   ComItemNewReddot = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Item/Widget/WBP_Com_Item_New.WBP_Com_Item_New'",
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Item/Widget/WBP_Com_Item_New.WBP_Com_Item_New'",
@@ -546,6 +581,11 @@ return ReadOnly("WidgetUI", {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Item/Widget/WBP_Com_Item_Shadow.WBP_Com_Item_Shadow'",
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Item/Widget/WBP_Com_Item_Shadow.WBP_Com_Item_Shadow'",
     UIName = "ComItemShadow"
+  },
+  ComItemSquadBuildTryOut = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/SoloTreasure/WBP_Activity_SoloTreausre_Build_Item_TryOut.WBP_Activity_SoloTreausre_Build_Item_TryOut'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/SoloTreasure/WBP_Activity_SoloTreausre_Build_Item_TryOut.WBP_Activity_SoloTreausre_Build_Item_TryOut'",
+    UIName = "ComItemSquadBuildTryOut"
   },
   ComItemStartLevel = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Item/Widget/WBP_Com_Item_StarLevel.WBP_Com_Item_StarLevel'",
@@ -621,6 +661,11 @@ return ReadOnly("WidgetUI", {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Bag/Widget/Optional/WBP_Bag_OptionalGiftItem.WBP_Bag_OptionalGiftItem'",
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Bag/Widget/Optional/WBP_Bag_OptionalGiftItem.WBP_Bag_OptionalGiftItem'",
     UIName = "ComOptionalResourceItem"
+  },
+  ComSquadItemTips = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Tips/WBP_Com_BuildTips.WBP_Com_BuildTips'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Tips/WBP_Com_BuildTips.WBP_Com_BuildTips'",
+    UIName = "ComSquadItemTips"
   },
   ComTreasureDigable = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Item/Widget/WBP_Com_Item_DigHint.WBP_Com_Item_DigHint'",
@@ -1007,6 +1052,11 @@ return ReadOnly("WidgetUI", {
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Play/Widget/HardBoss/WBP_Play_HardBoss_MapTips.WBP_Play_HardBoss_MapTips'",
     UIName = "HardBossMapTips"
   },
+  HardBossOpenTitle_Bailong = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Play/Widget/HardBoss/BattleOpenTitle/WBP_Play_HardBossBattleOpenTitle_Bailong.WBP_Play_HardBossBattleOpenTitle_Bailong'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Play/Widget/HardBoss/BattleOpenTitle/WBP_Play_HardBossBattleOpenTitle_Bailong.WBP_Play_HardBossBattleOpenTitle_Bailong'",
+    UIName = "HardBossOpenTitle_Bailong"
+  },
   HardBossOpenTitle_Haier = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Play/Widget/HardBoss/BattleOpenTitle/WBP_Play_HardBossBattleOpenTitle_Haier.WBP_Play_HardBossBattleOpenTitle_Haier'",
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Play/Widget/HardBoss/BattleOpenTitle/WBP_Play_HardBossBattleOpenTitle_Haier.WBP_Play_HardBossBattleOpenTitle_Haier'",
@@ -1167,6 +1217,16 @@ return ReadOnly("WidgetUI", {
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/Mobile/JumpShop/WBP_Shop_JumpShop_Item_M'",
     UIName = "JumpShopItem"
   },
+  LimitedPoolRoundSwitch = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/LimitedPrizePool/WBP_LimitedPrizePool_RewardSwitchTip.WBP_LimitedPrizePool_RewardSwitchTip'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/LimitedPrizePool/WBP_LimitedPrizePool_RewardSwitchTip.WBP_LimitedPrizePool_RewardSwitchTip'",
+    UIName = "LimitedPoolRoundSwitch"
+  },
+  LimitedPrizePoolGacha = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/LimitedPrizePool/WBP_LimitedPrizePool_Gacha_P.WBP_LimitedPrizePool_Gacha_P'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/LimitedPrizePool/WBP_LimitedPrizePool_Gacha_M.WBP_LimitedPrizePool_Gacha_M'",
+    UIName = "LimitedPrizePoolGacha"
+  },
   MapTabSubItem = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/Tab/WBP_Map_TabText.WBP_Map_TabText'",
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/Tab/WBP_Map_TabText.WBP_Map_TabText'",
@@ -1261,6 +1321,11 @@ return ReadOnly("WidgetUI", {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Tips/Widget/WBP_Com_Tips_Mod.WBP_Com_Tips_Mod'",
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Tips/Widget/WBP_Com_Tips_Mod.WBP_Com_Tips_Mod'",
     UIName = "ModItemDetails"
+  },
+  ModPopupItem = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/Widget/WBP_Shop_BuyWalnutPart_PopupItem.WBP_Shop_BuyWalnutPart_PopupItem'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/Widget/WBP_Shop_BuyWalnutPart_PopupItem.WBP_Shop_BuyWalnutPart_PopupItem'",
+    UIName = "ModPopupItem"
   },
   MonthCardPage = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/PC/WBP_Shop_MonthCard_P.WBP_Shop_MonthCard_P'",
@@ -1451,6 +1516,18 @@ return ReadOnly("WidgetUI", {
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/Interactive/WBP_Map_InteractiveItem.WBP_Map_InteractiveItem'",
     UIName = "RegionMapSelectItem"
   },
+  RegionMapSoloTreasureConvey = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/SoloTreasure/Map/WBP_Activity_SoloTreasure_Map_Convey.WBP_Activity_SoloTreasure_Map_Convey'",
+    UIName = "RegionMapSoloTreasureConvey"
+  },
+  RegionMapSoloTreasureKeyLoc = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/SoloTreasure/Map/WBP_Activity_SoloTreasure_Map_KeyLocation.WBP_Activity_SoloTreasure_Map_KeyLocation'",
+    UIName = "RegionMapSoloTreasureKeyLoc"
+  },
+  RegionMapSoloTreasureKeyLocItem = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/SoloTreasure/Map/WBP_Activity_SoloTreasure_Map_KeyLocationItem.WBP_Activity_SoloTreasure_Map_KeyLocationItem'",
+    UIName = "RegionMapSoloTreasureKeyLocItem"
+  },
   RegionMultiDestroyPoint = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/Task_Process/WBP_Battle_ProcessOverload_Point.WBP_Battle_ProcessOverload_Point'",
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/Task_Process/WBP_Battle_ProcessOverload_Point.WBP_Battle_ProcessOverload_Point'",
@@ -1566,6 +1643,11 @@ return ReadOnly("WidgetUI", {
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/RougeLike/Mobile/TalentTree/WBP_Rouge_TalentPage_M.WBP_Rouge_TalentPage_M'",
     UIName = "RougeTalentPage"
   },
+  SelectLimitedGrandPrize = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/LimitedPrizePool/WBP_LimitedPrizePool_SelectPrize_P.WBP_LimitedPrizePool_SelectPrize_P'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/LimitedPrizePool/WBP_LimitedPrizePool_SelectPrize_M.WBP_LimitedPrizePool_SelectPrize_M'",
+    UIName = "SelectLimitedGrandPrize"
+  },
   SettingList = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Set/Widget/WBP_Set_List.WBP_Set_List'",
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Set/Widget/WBP_Set_List.WBP_Set_List'",
@@ -1575,6 +1657,11 @@ return ReadOnly("WidgetUI", {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/HUD_Bar/Unit/WBP_ShieldBar_New.WBP_ShieldBar_New'",
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/HUD_Bar/Unit/WBP_ShieldBar_New.WBP_ShieldBar_New'",
     UIName = "ShieldBar"
+  },
+  ShopDiscountContent = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/Widget/WBP_Shop_Discount_Content.WBP_Shop_Discount_Content'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/Widget/WBP_Shop_Discount_Content.WBP_Shop_Discount_Content'",
+    UIName = "ShopDiscountContent"
   },
   ShopItem = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/Widget/WBP_Shop_Item.WBP_Shop_Item'",
@@ -1600,6 +1687,16 @@ return ReadOnly("WidgetUI", {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/GuildWar/WBP_BattleHUD_Score.WBP_BattleHUD_Score'",
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/GuildWar/WBP_BattleHUD_Score.WBP_BattleHUD_Score'",
     UIName = "SoloRaidScore"
+  },
+  SoloTreasureGuardTaskHud = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/SoloTreasure/Widget/WBP_SoloTreasure_HudTask.WBP_SoloTreasure_HudTask'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/SoloTreasure/Widget/WBP_SoloTreasure_HudTask.WBP_SoloTreasure_HudTask'",
+    UIName = "SoloTreasureGuardTaskHud"
+  },
+  SoloTreasureHudItem01 = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/SoloTreasure/Widget/WBP_SoloTreasure_HudItem01.WBP_SoloTreasure_HudItem01'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/SoloTreasure/Widget/WBP_SoloTreasure_HudItem01.WBP_SoloTreasure_HudItem01'",
+    UIName = "SoloTreasureHudItem01"
   },
   SoloTreasureScoreAndBag = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/SoloTreasure/Widget/WBP_SoloTreasure_HudScore.WBP_SoloTreasure_HudScore'",
@@ -1704,6 +1801,21 @@ return ReadOnly("WidgetUI", {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/TaskBar/WBP_Battle_TaskBar_WeeklySubTask.WBP_Battle_TaskBar_WeeklySubTask'",
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/TaskBar/WBP_Battle_TaskBar_WeeklySubTask.WBP_Battle_TaskBar_WeeklySubTask'",
     UIName = "SynthesisDestructionSubTask"
+  },
+  SynthesisIIExpelBarHud = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Play/Widget/Depute/Weekly/Weekly02/WBP_Play_DeputeWeekly02_Hud_ExpelBar.WBP_Play_DeputeWeekly02_Hud_ExpelBar'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Play/Widget/Depute/Weekly/Weekly02/WBP_Play_DeputeWeekly02_Hud_ExpelBar.WBP_Play_DeputeWeekly02_Hud_ExpelBar'",
+    UIName = "SynthesisIIExpelBarHud"
+  },
+  SynthesisIIHostageHealthBarHud = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Play/Widget/Depute/Weekly/Weekly02/WBP_Play_DeputeWeekly02_Hud_HealthBar.WBP_Play_DeputeWeekly02_Hud_HealthBar'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Play/Widget/Depute/Weekly/Weekly02/WBP_Play_DeputeWeekly02_Hud_HealthBar.WBP_Play_DeputeWeekly02_Hud_HealthBar'",
+    UIName = "SynthesisIIHostageHealthBarHud"
+  },
+  SynthesisIIProgressHud = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Play/Widget/Depute/Weekly/Weekly02/WBP_Play_DeputeWeekly02_Hud_Health.WBP_Play_DeputeWeekly02_Hud_Health'",
+    MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Play/Widget/Depute/Weekly/Weekly02/WBP_Play_DeputeWeekly02_Hud_Health.WBP_Play_DeputeWeekly02_Hud_Health'",
+    UIName = "SynthesisIIProgressHud"
   },
   TabSubIconItem = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Tab/Widget/WBP_Com_TabSubItem04.WBP_Com_TabSubItem04'",

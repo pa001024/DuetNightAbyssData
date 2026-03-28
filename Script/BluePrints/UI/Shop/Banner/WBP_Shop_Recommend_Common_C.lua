@@ -159,7 +159,8 @@ function M:GetDisplayRarity()
     Skin = true,
     CharAccessory = true,
     WeaponAccessory = true,
-    Resource = true
+    Resource = true,
+    Mount = true
   }
   local FilterDisplayTypeWithSkinSeries = {GeneralSkin = true}
   local Rarity
@@ -168,7 +169,7 @@ function M:GetDisplayRarity()
     local DisplayId = BannerData.DisplayId
     if DisplayId and DataMgr[DisplayType] then
       local DataInfo = DataMgr[DisplayType][DisplayId]
-      Rarity = DataInfo and DataInfo.Rarity or nil
+      Rarity = DataInfo and (DataInfo.Rarity or DataInfo.MountRarity or 4) or nil
     end
   elseif BannerData.DisplayType and FilterDisplayTypeWithSkinSeries[BannerData.DisplayType] then
     local SkinSeries = BannerData.SkinSeries
@@ -610,7 +611,7 @@ function M:GetCutoffInfo(ItemId)
   return nil
 end
 
-function M:ComputeFinalPrice(ShopItemData)
+function M:ComputeFinalPrice(ShopItemData, VoucherId)
   if not ShopItemData then
     return 0, nil
   end
@@ -628,6 +629,7 @@ function M:ComputeFinalPrice(ShopItemData)
     if CutoffInfo and CutoffInfo.CutoffPrice and bInCutoffTime then
       FinalPrice = CutoffInfo.CutoffPrice
     end
+    FinalPrice = ShopUtils:GetPriceAfterDiscount(BannerData.ItemId, FinalPrice, VoucherId)
   end
   return FinalPrice, PriceType
 end
@@ -722,9 +724,9 @@ function M:OnBtnPayClick()
   local ShopItemData = setmetatable({}, {
     __index = self.ShopItemData
   })
+  local Avatar = GWorld:GetAvatar()
   
   local function ExecutePurchase(RightCallbackObj, PackageResult, DialogWidget)
-    local Avatar = GWorld:GetAvatar()
     if not Avatar or not ShopItemData then
       return
     end
@@ -732,37 +734,31 @@ function M:OnBtnPayClick()
       return
     end
     local SelectCount = 1
-    if PackageResult and PackageResult.Content_1 and PackageResult.Content_1.CallObj and PackageResult.Content_1.CallObj.CurrentCount then
-      SelectCount = PackageResult.Content_1.CallObj.CurrentCount
+    local SelectedDiscount
+    if PackageResult and PackageResult.Content_1 and PackageResult.Content_1.CallObj then
+      if PackageResult.Content_1.CallObj.CurrentCount then
+        SelectCount = PackageResult.Content_1.CallObj.CurrentCount
+      end
+      if PackageResult.Content_1.CallObj.SelectedDiscount then
+        SelectedDiscount = PackageResult.Content_1.CallObj.SelectedDiscount
+      end
     end
-    local FinalPrice, PriceType = self:ComputeFinalPrice(ShopItemData)
+    local FinalPrice, PriceType = self:ComputeFinalPrice(ShopItemData, SelectedDiscount and SelectedDiscount.VoucherId or nil)
     local CurrentCount = Avatar:GetResourceNum(PriceType)
     FinalPrice = FinalPrice * SelectCount
     if CurrentCount < FinalPrice then
-      local function JumpToShop()
-        self:AddTimer(0.3, function()
-          PageJumpUtils:JumpToShopPage(CommonConst.GachaJumpToShopMainTabId, nil, nil, "Shop")
-        end, false, 0, "JumpToShopPage", true)
-      end
-      
-      local PopupId = 100263
       local Params = {}
-      Params.LeftCallbackObj = self
-      
-      function Params.LeftCallbackFunction()
-        self.Parent.Shop_RecommendBanner:StartBannerTimer()
-      end
-      
+      Params.CostNum = FinalPrice
+      Params.CostType = PriceType
       Params.RightCallbackObj = self
-      Params.RightCallbackFunction = JumpToShop
-      UIManager(self):ShowCommonPopupUI(PopupId, Params, self)
+      UIManager(self):LoadUINew("ShopTargetPay", Params)
       return
     end
     Avatar:PurchaseShopItem(DialogWidget.Params.ShopItemData.ItemId, SelectCount, false, function(Ret)
       if self and self.Parent and self.Parent.Shop_RecommendBanner then
         self.Parent.Shop_RecommendBanner:StartBannerTimer()
       end
-    end)
+    end, SelectedDiscount and SelectedDiscount.VoucherId or nil)
   end
   
   local BannerData = self.BannerData
@@ -783,6 +779,11 @@ function M:OnBtnPayClick()
           FundNeed = self.FinalPrice
         }
       }
+      local CurrentCount = Avatar:GetResourceNum(ShopItemData.PriceType)
+      local ForbidRightBtn = false
+      if CurrentCount < self.FinalPrice and ShopItemData.PriceType ~= CommonConst.Coins.Coin1 and ShopItemData.PriceType ~= CommonConst.Coins.Coin4 then
+        ForbidRightBtn = true
+      end
       UIManager(self):ShowCommonPopupUI(100041, {
         ShopItemData = ShopItemData,
         ShopType = 0,
@@ -795,7 +796,7 @@ function M:OnBtnPayClick()
           PopupWidget:OnClose()
           self.Parent.Shop_RecommendBanner:StartBannerTimer()
         end,
-        ForbidRightBtn = false
+        ForbidRightBtn = ForbidRightBtn
       }, self)
     end
   end

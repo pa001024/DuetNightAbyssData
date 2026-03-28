@@ -278,4 +278,44 @@ function M:MarkGachaAsOpened(GachaId)
   EMCache:Set(GachaKey, true, true)
 end
 
+function M:UpdateGachaBtnComplex(Btn, CostNum, TimeLimitCount, ShowResourceCount, ShowResourceId, TimeLimitResourceId)
+  Btn.HB_Combination:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  local IconPath = ItemUtils.GetItemIconPath(ShowResourceId, "Resource")
+  if IconPath then
+    Btn.Icon_Currency.Icon = IconPath
+    Btn.Icon_Currency:SetIcon()
+  end
+  if Btn.Text_Price then
+    Btn.Text_Price:SetText(tostring(CostNum - TimeLimitCount))
+  end
+  local IconPath = ItemUtils.GetItemIconPath(TimeLimitResourceId, "Resource")
+  if IconPath then
+    Btn.Icon_Currency_Combination.Icon = IconPath
+    Btn.Icon_Currency_Combination:SetIcon()
+  end
+  if Btn.Text_Price_Combination then
+    Btn.Text_Price_Combination:SetText(tostring(TimeLimitCount))
+  end
+end
+
+function M:UpdateGachaBtnPrice(Btn, CostNum, TimeLimitResourceCount, ShowResourceId, TimeLimitResourceId)
+  if Btn.HB_Combination then
+    Btn.HB_Combination:SetVisibility(ESlateVisibility.Collapsed)
+  end
+  local ResourceId = TimeLimitResourceCount > 0 and TimeLimitResourceId or ShowResourceId
+  if Btn.Icon_Currency then
+    local IconPath = ItemUtils.GetItemIconPath(ResourceId, "Resource")
+    if IconPath then
+      Btn.Icon_Currency.Icon = IconPath
+      Btn.Icon_Currency:SetIcon()
+    end
+  end
+  if Btn.Text_Price then
+    Btn.Text_Price:SetText(tostring(CostNum))
+  end
+  if Btn.Text_Undiscounted_Price then
+    Btn.Text_Undiscounted_Price:SetVisibility(ESlateVisibility.Collapsed)
+  end
+end
+
 return M

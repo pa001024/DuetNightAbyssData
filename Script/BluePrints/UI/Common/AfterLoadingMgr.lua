@@ -84,7 +84,7 @@ StateImpl.JumpToRogueMain = State:New("JumpToRogueMain", {
           local AbyssDungeonIndex = ExitDungeonInfo.AbyssDungeonIndex
           PageJumpUtils:JumpToAbyssLevelInfoPage(AbyssId, AbyssLevelId, AbyssDungeonIndex)
         elseif ExitDungeonInfo.Type == "Rouge" then
-          PageJumpUtils:JumpToRougeMain("ExitFromRouge")
+          PageJumpUtils:JumpToRougeMain("ExitFromRouge", true)
         elseif ExitDungeonInfo.Type == "TryOut" then
           local CurTabIndex = ExitDungeonInfo.CurTabIndex
           local CurSelectIndex = ExitDungeonInfo.CurSelectIndex
@@ -100,7 +100,7 @@ StateImpl.JumpToRogueMain = State:New("JumpToRogueMain", {
         elseif ExitDungeonInfo.Type == "Depute" then
           if not ExitDungeonInfo.IsFromRegionMechanism then
             local DeputeType = ExitDungeonInfo.DeputeType
-            PageJumpUtils:JumpToStyleOfPlaySubUIForce("NewDeputeRoot", DeputeType)
+            PageJumpUtils:JumpToStyleOfPlaySubUI("NewDeputeRoot", true, DeputeType)
           end
         elseif ExitDungeonInfo.Type == "GuildWar" then
           local JumpId = ExitDungeonInfo.JumpId
@@ -115,6 +115,12 @@ StateImpl.JumpToRogueMain = State:New("JumpToRogueMain", {
           PageJumpUtils:JumpToMonsterRush(CurTabIndex, EventId, DungeonId)
         elseif ExitDungeonInfo.Type == "AutoChess" then
           PageJumpUtils:JumpToAutoChessMain()
+        elseif ExitDungeonInfo.Type == "SoloTreasure" and 1 == ExitDungeonInfo.Mode then
+          local EventId = ExitDungeonInfo.EventId
+          local Mode = ExitDungeonInfo.Mode
+          local bIsDifficulty = ExitDungeonInfo.bIsDifficulty
+          local EventDungeonId = ExitDungeonInfo.EventDungeonId
+          PageJumpUtils:SoloTreasureRepeatLevel(EventId, Mode, bIsDifficulty, EventDungeonId)
         end
       end
     end

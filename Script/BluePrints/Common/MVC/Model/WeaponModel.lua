@@ -146,6 +146,7 @@ function M:Init(Avatar)
       DebugPrint("Error: 武器红点数据创建失败！" .. "\n" .. trace)
     end
   })
+  self.Inited = true
 end
 
 function M:HasWeapon(Uuid)
@@ -167,6 +168,9 @@ function M:IsWeaponConsumable(Uuid)
 end
 
 function M:UpdateStoredWeapon(Avatar, Uuid)
+  if not self.Inited then
+    return
+  end
   if Avatar and Avatar.Weapons and Avatar.Weapons[Uuid] then
     local weapon = Avatar.Weapons[Uuid]
     if not _WeaponId2Uuid[weapon.WeaponId] then
@@ -177,6 +181,9 @@ function M:UpdateStoredWeapon(Avatar, Uuid)
 end
 
 function M:UpdateWeaponConsumeStatus(Avatar, Uuid)
+  if not self.Inited then
+    return
+  end
   local weaponData = _WeaponMap[Uuid]
   if not weaponData then
     return
@@ -186,6 +193,9 @@ function M:UpdateWeaponConsumeStatus(Avatar, Uuid)
 end
 
 function M:OnWeaponStatusChanged(Avatar, Uuid)
+  if not self.Inited then
+    return
+  end
   self:UpdateWeaponConsumeStatus(Avatar, Uuid)
 end
 
@@ -214,6 +224,9 @@ function M:IsWeaponSkinExist(SkinId)
 end
 
 function M:OnPropChangeStoredCollectReward(Strings)
+  if not self.Inited then
+    return
+  end
   if _WeaponReward[Strings[1]] and Strings[2] and Strings[3] then
     local WeaponId = tonumber(Strings[2])
     if not DataMgr.Weapon[WeaponId] then
@@ -241,6 +254,9 @@ function M:OnPropChangeStoredCollectReward(Strings)
 end
 
 function M:OnNewWeaponObtained(Uuid)
+  if not self.Inited then
+    return
+  end
   local Avatar = GWorld:GetAvatar()
   local Weapon = Avatar.Weapons[Uuid]
   if Weapon then
@@ -260,6 +276,9 @@ function M:OnNewWeaponObtained(Uuid)
 end
 
 function M:OnWeaponDeleted(Uuid)
+  if not self.Inited then
+    return
+  end
   local WeaponTag = _WeaponMap[Uuid] and _WeaponMap[Uuid].WeaponTag
   local WeaponId = _WeaponUuid2Id[Uuid]
   RemoveWeaponFromMap(Uuid)
@@ -287,6 +306,9 @@ function M:OnWeaponDeleted(Uuid)
 end
 
 function M:OnNewWeaponAccessoryObtained(AccessoryId)
+  if not self.Inited then
+    return
+  end
   if not AccessoryId then
     return
   end
@@ -298,6 +320,9 @@ function M:OnNewWeaponAccessoryObtained(AccessoryId)
 end
 
 function M:OnNewWeaponSkinObtained(SkinId)
+  if not self.Inited then
+    return
+  end
   if not SkinId then
     return
   end
@@ -317,6 +342,7 @@ function M:Destory()
   _WeaponUuid2Id = {}
   _WeaponId2Uuid = {}
   _ConsumeWeaponRedCount = {}
+  self.Inited = false
 end
 
 return M

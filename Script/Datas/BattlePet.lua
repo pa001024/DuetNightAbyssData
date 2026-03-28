@@ -134,7 +134,7 @@ return ReadOnly("BattlePet", {
     AddAttrs = {
       [1] = {
         AttrName = "DropDistance",
-        Value = 2000
+        Value = "#3"
       }
     },
     BonusRateOffset = "#1",
@@ -269,7 +269,16 @@ return ReadOnly("BattlePet", {
     SupportSkillId = 416
   },
   [417] = {
+    AddAttrs = {
+      [1] = T.RT_2,
+      [2] = T.RT_4
+    },
     EffectCreatureId = 4171,
+    PassiveEffectDesc = "PET_417_PASSIVE",
+    PassiveEffectDescParameter = {
+      [1] = "$#BattlePet[417].AddAttrs[1].Rate*100$%",
+      [2] = "$#BattlePet[417].AddAttrs[2].Rate*100$%"
+    },
     PetId = 417,
     PetType = "Pet",
     SupportSkillId = 417
@@ -411,11 +420,16 @@ return ReadOnly("BattlePet", {
     SupportSkillId = 604
   },
   [605] = {
-    AutoReleaseSkill = true,
     EffectCreatureId = 6051,
     PetId = 605,
     PetType = "Pet",
-    SupportSkillId = 417
+    SupportSkillId = 605
+  },
+  [606] = {
+    EffectCreatureId = 6051,
+    PetId = 606,
+    PetType = "Pet",
+    SupportSkillId = 606
   },
   [901] = {
     EffectCreatureId = 9011,
@@ -619,6 +633,147 @@ return ReadOnly("BattlePet", {
     AutoReleaseSkill = true,
     PassiveEffectDesc = "AFFIX_1018_DESC",
     PetId = 1018,
+    PetType = "Affix"
+  },
+  [1019] = {
+    AddAttrs = {
+      [1] = {
+        AttrName = "SkillIntensity",
+        Rate = "#1"
+      }
+    },
+    PassiveEffectDesc = "AFFIX_1019_DESC",
+    PassiveEffectDescParameter = {
+      [1] = "$#BattlePet[1019].AddAttrs[1].Rate*100$%"
+    },
+    PetId = 1019,
+    PetType = "Affix"
+  },
+  [1020] = {
+    AddAttrs = {
+      [1] = {AttrName = "SkillRange", Rate = "#1"}
+    },
+    PassiveEffectDesc = "AFFIX_1020_DESC",
+    PassiveEffectDescParameter = {
+      [1] = "$#BattlePet[1020].AddAttrs[1].Rate*100$%"
+    },
+    PetId = 1020,
+    PetType = "Affix"
+  },
+  [1021] = {
+    AddAttrs = {
+      [1] = {
+        AttrName = "SkillSustain",
+        Rate = "#1"
+      }
+    },
+    PassiveEffectDesc = "AFFIX_1021_DESC",
+    PassiveEffectDescParameter = {
+      [1] = "$#BattlePet[1021].AddAttrs[1].Rate*100$%"
+    },
+    PetId = 1021,
+    PetType = "Affix"
+  },
+  [1022] = {
+    AddAttrs = {
+      [1] = {
+        AttrName = "SkillEfficiency",
+        Rate = "#1"
+      }
+    },
+    PassiveEffectDesc = "AFFIX_1022_DESC",
+    PassiveEffectDescParameter = {
+      [1] = "$#BattlePet[1022].AddAttrs[1].Rate*100$%"
+    },
+    PetId = 1022,
+    PetType = "Affix"
+  },
+  [1023] = {
+    AddAttrs = {
+      [1] = {
+        AttrName = "StrongValue",
+        Value = "#1"
+      }
+    },
+    PassiveEffectDesc = "AFFIX_1023_DESC",
+    PassiveEffectDescParameter = {
+      [1] = "$#BattlePet[1023].AddAttrs[1].Value*100$%"
+    },
+    PetId = 1023,
+    PetType = "Affix"
+  },
+  [1024] = {
+    AddAttrs = {
+      [1] = {
+        AttrName = "EnmityValue",
+        Value = "#1"
+      }
+    },
+    PassiveEffectDesc = "AFFIX_1024_DESC",
+    PassiveEffectDescParameter = {
+      [1] = "$#BattlePet[1024].AddAttrs[1].Value*100$%"
+    },
+    PetId = 1024,
+    PetType = "Affix"
+  },
+  [1025] = {
+    AddAttrs = {
+      [1] = {
+        AttrName = "WeaponCRIModifierRate",
+        Value = "#1"
+      }
+    },
+    PassiveEffectDesc = "AFFIX_1025_DESC",
+    PassiveEffectDescParameter = {
+      [1] = "$#BattlePet[1025].AddAttrs[1].Value*100$%"
+    },
+    PetId = 1025,
+    PetType = "Affix"
+  },
+  [1026] = {
+    AddAttrs = {
+      [1] = {
+        AttrName = "WeaponCRDModifierRate",
+        Value = "#1"
+      }
+    },
+    PassiveEffectDesc = "AFFIX_1026_DESC",
+    PassiveEffectDescParameter = {
+      [1] = "$#BattlePet[1026].AddAttrs[1].Value*100$%"
+    },
+    PetId = 1026,
+    PetType = "Affix"
+  },
+  [1027] = {
+    AddAttrs = {
+      [1] = {
+        AttrName = "MultiShootModifierRate",
+        Value = "#1"
+      }
+    },
+    PassiveEffectDesc = "AFFIX_1027_DESC",
+    PassiveEffectDescParameter = {
+      [1] = "$#BattlePet[1027].AddAttrs[1].Value*100$%"
+    },
+    PetId = 1027,
+    PetType = "Affix"
+  },
+  [1028] = {
+    PassiveEffectDesc = "AFFIX_1028_DESC",
+    PassiveEffects = {610},
+    PetId = 1028,
+    PetType = "Affix"
+  },
+  [1029] = {
+    AutoTransfer = true,
+    PassiveEffectDesc = "AFFIX_1029_DESC",
+    PetId = 1029,
+    PetType = "Affix"
+  },
+  [1030] = {
+    PassiveEffectDesc = "AFFIX_1030_DESC",
+    PetId = 1030,
+    PetSkillLevelUp = 1,
     PetType = "Affix"
   }
 })

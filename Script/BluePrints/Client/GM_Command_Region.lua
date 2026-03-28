@@ -53,7 +53,6 @@ function GM_Command_Region:Init_Region_Command()
     AADE = "AddAllDeliverMechanism",
     StartBoss = "StartBossBattle",
     EndBoss = "EndBossBattle",
-    AddPet = "AddPet",
     InActiveStaticCreator = "InActiveStaticCreator",
     HQCD = "HandleQuestChainDoing",
     PrintCharAccessoryDecoration = "PrintCharAccessoryDecoration",

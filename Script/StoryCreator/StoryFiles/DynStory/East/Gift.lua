@@ -47,7 +47,7 @@ return {
       key = "175015168049583",
       type = "StoryNode",
       name = "礼物",
-      pos = {x = 1110.5, y = 281.5},
+      pos = {x = 1110.5, y = 279.5},
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
@@ -61,7 +61,6 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = true,
@@ -69,6 +68,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -243,7 +243,7 @@ return {
             key = "1750151806482874",
             type = "TalkNode",
             name = "请求买礼物对话",
-            pos = {x = 1743.4631578947372, y = 300.18026315789484},
+            pos = {x = 1743.4631578947372, y = 298.18026315789484},
             propsData = {
               IsNpcNode = true,
               NpcNodeInteractiveName = "",
@@ -388,7 +388,7 @@ return {
             key = "17501520042682862",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 3028.8969030969033, y = 101.16290376290397},
+            pos = {x = 3026.8969030969033, y = 101.16290376290397},
             propsData = {
               IsNpcNode = true,
               NpcNodeInteractiveName = "",
@@ -405,8 +405,7 @@ return {
               BlendInTime = 0.5,
               BlendOutTime = 0.5,
               InType = "BlendIn",
-              OutType = "FadeOut",
-              ShowFadeDetail = false,
+              OutType = "BlendOut",
               BlendEaseExp = 2,
               UseProceduralCamera = false,
               ProceduralCameraId = 1,
@@ -444,8 +443,10 @@ return {
             pos = {x = 3764.9584415584413, y = 107.80905760905777},
             propsData = {
               DialogueId = 710070101,
-              UseTalkFadeOut = false,
-              TalkFadeOutTime = 0
+              UseTalkFadeOut = true,
+              TalkFadeOutTime = 1,
+              UseTalkFadeIn = true,
+              TalkFadeInTime = 1
             }
           },
           ["17501520405463755"] = {
@@ -455,8 +456,10 @@ return {
             pos = {x = 3775.758441558441, y = 595.0090576090577},
             propsData = {
               DialogueId = 710070103,
-              UseTalkFadeOut = false,
-              TalkFadeOutTime = 0
+              UseTalkFadeOut = true,
+              TalkFadeOutTime = 1,
+              UseTalkFadeIn = true,
+              TalkFadeInTime = 1
             }
           },
           ["17501639742181275563"] = {
@@ -480,8 +483,7 @@ return {
               BlendInTime = 0.5,
               BlendOutTime = 0.5,
               InType = "BlendIn",
-              OutType = "FadeOut",
-              ShowFadeDetail = false,
+              OutType = "BlendOut",
               BlendEaseExp = 2,
               UseProceduralCamera = false,
               ProceduralCameraId = 1,
@@ -533,8 +535,7 @@ return {
               BlendInTime = 0.5,
               BlendOutTime = 0.5,
               InType = "BlendIn",
-              OutType = "FadeOut",
-              ShowFadeDetail = false,
+              OutType = "BlendOut",
               BlendEaseExp = 2,
               UseProceduralCamera = false,
               ProceduralCameraId = 1,
@@ -572,8 +573,10 @@ return {
             pos = {x = 3774.190424792598, y = 313.8665834165834},
             propsData = {
               DialogueId = 710070102,
-              UseTalkFadeOut = false,
-              TalkFadeOutTime = 0
+              UseTalkFadeOut = true,
+              TalkFadeOutTime = 1,
+              UseTalkFadeIn = true,
+              TalkFadeInTime = 1
             }
           }
         },

@@ -199,34 +199,6 @@ function M:OnPreloadComplete()
   end
 end
 
-function M:StartSynthesisLevelKeepAlive()
-  if not IsStandAlone(self) then
-    return
-  end
-  self.KeepAliveLevel = {}
-  local DungeonId = GWorld.GameInstance:GetCurrentDungeonId()
-  local DungeonInfo = DataMgr.Dungeon[DungeonId]
-  if DungeonInfo.DungeonType == "Synthesis" then
-    if UKismetStringLibrary.EndsWith(self.shortname, "synthesis01", ESearchCase.CaseSensitive) then
-      self.KeepAliveLevel = {
-        ["14"] = true,
-        ["7"] = true,
-        ["25"] = true,
-        ["26"] = true
-      }
-      DebugPrint("NewLevelLoader", "StartSynthesisLevelKeepAlive 01")
-    elseif UKismetStringLibrary.EndsWith(self.shortname, "synthesis02", ESearchCase.CaseSensitive) then
-      self.KeepAliveLevel = {
-        ["7"] = true,
-        ["0"] = true,
-        ["16"] = true,
-        ["17"] = true
-      }
-      DebugPrint("NewLevelLoader", "StartSynthesisLevelKeepAlive 02")
-    end
-  end
-end
-
 function M:CheckLevelCount()
   local count = 0
   for _, loaded in pairs(self.ArtLevelLoaded:ToTable()) do
@@ -410,7 +382,7 @@ function M:LoadLevelByServerBPArrow(CurrentLevelId, OtherLevelId, IsLoad, Player
   end
 end
 
-function M:TeleportInDedicatedServer(PlayerCharacter, TargetPosition, TargetRotation)
+function M:TeleportInDedicatedServer(PlayerCharacter, TargetPosition, TargetRotation, TeleportTag)
   if IsDedicatedServer(self) then
     local TargetLevelId = self:GetLevelIdByLocation(TargetPosition)
     if not self.ConnectedLevel[TargetLevelId] then
@@ -420,23 +392,27 @@ function M:TeleportInDedicatedServer(PlayerCharacter, TargetPosition, TargetRota
     for _, Level in pairs(self.ConnectedLevel[TargetLevelId]) do
       self:QueueLoadArtLevel(Level)
     end
-    PlayerCharacter:K2_TeleportTo(TargetPosition, TargetRotation, false, nil, false)
+    URuntimeCommonFunctionLibrary.ResetCharacterBaseLocation(PlayerCharacter, TargetPosition, true)
     PlayerCharacter:MulticastSetPlayerRotation(TargetRotation)
     if PlayerCharacter:GetMovementComponent() then
       PlayerCharacter:GetMovementComponent():ForceClientUpdate()
     end
-    PlayerCharacter.RPCComponent:TeleportInDedicatedServer(TargetPosition, TargetRotation)
+    PlayerCharacter.RPCComponent:TeleportInDedicatedServer(TargetPosition, TargetRotation, TeleportTag)
     PlayerCharacter:UpdateCurrentLevelId()
     PlayerCharacter:GetEMPlayerState():SetIsDedicatedServerTeleporting(true)
     DebugPrint("NewLevelLoader", "SetIsDedicatedServerTeleporting true")
-  elseif IsClient(self) then
+  elseif IsClient(self) or IsStandAlone(self) then
+    if IsStandAlone(self) then
+      PlayerCharacter:GetEMPlayerState():SetIsDedicatedServerTeleporting(true)
+      PlayerCharacter:GetMovementComponent():SetMovementMode(UE4.EMovementMode.Move_None)
+    end
     local TargetLevelId = self:GetLevelIdByLocation(TargetPosition)
     if not self.ConnectedLevel[TargetLevelId] then
       self:GetConnectedLevel(TargetLevelId)
     end
     local LoadedLevels = self.ArtLevelLoaded:ToTable()
     for Id, IsLoaded in pairs(LoadedLevels) do
-      if IsLoaded and not CommonUtils.HasValue(self.ConnectedLevel[TargetLevelId], Id) and Id ~= TargetLevelId and (not self.KeepAliveLevel or not self.KeepAliveLevel[UnloadId]) then
+      if IsLoaded and not CommonUtils.HasValue(self.ConnectedLevel[TargetLevelId], Id) and Id ~= TargetLevelId and (not self.KeepAliveLevel or not self.KeepAliveLevel[Id]) then
         M.Super.UnloadArtLevel(self, Id)
         DebugPrint("NewLevelLoader", "Unload By TeleportInDedicatedServer", Id, TargetLevelId)
       end
@@ -452,6 +428,10 @@ function M:TeleportInDedicatedServer(PlayerCharacter, TargetPosition, TargetRota
       end
     end
     self.LoadingUI = GWorld.GameInstance:ShowLoadingUI(UIConst.COMMONCHANGESCENE)
+    local SaveLocation = FVector()
+    SaveLocation:Set(TargetPosition.X, TargetPosition.Y, TargetPosition.Z)
+    local SaveRotation = FRotator()
+    SaveRotation:Set(TargetRotation.Pitch, TargetRotation.Yaw, TargetRotation.Roll)
     self:AddTimer(0.1, function()
       local LoadedTable = self.ArtLevelLoaded:ToTable()
       local TotalNum = #self.ConnectedLevel[TargetLevelId] + 1
@@ -473,9 +453,16 @@ function M:TeleportInDedicatedServer(PlayerCharacter, TargetPosition, TargetRota
       if LoadNum ~= TotalNum then
         return
       end
-      DebugPrint("NewLevelLoader", "TeleportInDedicatedServer End!!!!!!!!!!!")
+      DebugPrint("NewLevelLoader", "TeleportInDedicatedServer End!!!!!!!!!!!", TeleportTag)
       if IsValid(PlayerCharacter) then
-        PlayerCharacter.RPCComponent:TeleportInDedicatedServerEnd()
+        if IsStandAlone(self) then
+          URuntimeCommonFunctionLibrary.ResetCharacterBaseLocation(PlayerCharacter, SaveLocation, true)
+          PlayerCharacter:MulticastSetPlayerRotation(SaveRotation)
+          PlayerCharacter:UpdateCurrentLevelId()
+          local MovementComponent = PlayerCharacter:GetMovementComponent()
+          MovementComponent:SetMovementMode(MovementComponent.DefaultLandMovementMode)
+        end
+        PlayerCharacter.RPCComponent:TeleportInDedicatedServerEnd(TeleportTag)
       end
       local GameState = UE4.UGameplayStatics.GetGameState(self)
       if GameState.ShouldStopHookInDungeonDelivery then
@@ -484,6 +471,29 @@ function M:TeleportInDedicatedServer(PlayerCharacter, TargetPosition, TargetRota
       EventManager:FireEvent(EventID.ForceUpdatePlayerCurrentLevelId)
       self:RemoveTimer("TeleportInDedicatedServerHandle")
     end, true, 0, "TeleportInDedicatedServerHandle")
+  end
+end
+
+function M:SwitchLoadingGroupId(Id)
+  if not IsStandAlone(self) then
+    return
+  end
+  if self.KeepAliveLevel then
+    local PlayerCharacter = UGameplayStatics.GetPlayerCharacter(self, 0)
+    local CurrentLevels = self.ConnectedLevel[PlayerCharacter.CurrentLevelId:GetRef(1)]
+    local LoadedLevels = self.ArtLevelLoaded:ToTable()
+    for LevelId, _ in pairs(self.KeepAliveLevel) do
+      if LoadedLevels[LevelId] and not CommonUtils.HasValue(CurrentLevels, LevelId) then
+        M.Super.UnloadArtLevel(self, LevelId)
+        DebugPrint("NewLevelLoader", "SwitchLoadingGroupId UnloadLevel:", LevelId)
+      end
+    end
+  end
+  self.KeepAliveLevel = {}
+  if self.LoadingGroupId and self.LoadingGroupId[Id] then
+    self.KeepAliveLevel = self.LoadingGroupId[Id]
+    DebugPrint("NewLevelLoader", "SwitchLoadingGroupId KeepAliveLevel:", Id)
+    PrintTable(self.LoadingGroupId[Id], 2)
   end
 end
 

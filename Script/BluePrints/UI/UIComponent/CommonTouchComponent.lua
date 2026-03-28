@@ -164,8 +164,11 @@ function CommonTouchComponent:MouseOrTouchButtonDown(InGeometry, InGestureEvent)
     local WidgetWorldPos, WidgetWorldSize = self:GetWorldPos(v)
     local ParentWidgetNode = self.AllParentWidget[k]
     local WidgetLocalScale = ParentWidgetNode and ParentWidgetNode.RenderTransform.Scale.X or 1.0
-    DebugPrint("=== CommonTouchComponent MouseOrTouchButtonDown Info ===", WidgetLocalScale)
-    if ScreenSpacePosition.X >= WidgetWorldPos.X and ScreenSpacePosition.X <= WidgetWorldPos.X + WidgetWorldSize.X * WidgetLocalScale and ScreenSpacePosition.Y >= WidgetWorldPos.Y and ScreenSpacePosition.Y <= WidgetWorldPos.Y + WidgetWorldSize.Y * WidgetLocalScale then
+    local ParentSlot = UE4.UWidgetLayoutLibrary.SlotAsCanvasSlot(ParentWidgetNode)
+    local ParentAlignment = ParentSlot:GetAlignment()
+    local StartCamparePosX = WidgetWorldPos.X + WidgetWorldSize.X * WidgetLocalScale * (ParentAlignment.X - 1)
+    local EndCamparePosX = WidgetWorldPos.X + WidgetWorldSize.X * WidgetLocalScale * ParentAlignment.X
+    if StartCamparePosX <= ScreenSpacePosition.X and EndCamparePosX >= ScreenSpacePosition.X and ScreenSpacePosition.Y >= WidgetWorldPos.Y and ScreenSpacePosition.Y <= WidgetWorldPos.Y + WidgetWorldSize.Y * WidgetLocalScale then
       if nil == SubTouchItem then
         SubTouchItem = v
         SubTouchItemName = k
@@ -174,7 +177,7 @@ function CommonTouchComponent:MouseOrTouchButtonDown(InGeometry, InGestureEvent)
       else
         local ChooseCanvasSlot = UE4.UWidgetLayoutLibrary.SlotAsCanvasSlot(SubTouchItem)
         local TouchCanvasSlot = UE4.UWidgetLayoutLibrary.SlotAsCanvasSlot(v)
-        if TouchCanvasSlot.ZOrder > ChooseCanvasSlot.ZOrder then
+        if ChooseCanvasSlot and TouchCanvasSlot and TouchCanvasSlot.ZOrder > ChooseCanvasSlot.ZOrder then
           SubTouchItem = v
           SubTouchItemName = k
           SubTouchItemStartWorldPos = FVector2D(WidgetWorldPos.X + WidgetWorldSize.X * 0.5, WidgetWorldPos.Y + WidgetWorldSize.Y * 0.5)

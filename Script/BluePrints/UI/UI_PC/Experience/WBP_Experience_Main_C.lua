@@ -121,8 +121,12 @@ function WBP_Experience_Main_C:Construct()
   self.ScrollBox:ClearChildren()
   self.ScrollBox:SetControlScrollbarInside(false)
   self.List_Item:DisableScroll(true)
-  self.ListView_Promote:SetScrollBarVisibility(ESlateVisibility.Hidden)
-  self.ListView_Promote:SetControlScrollbarInside(true)
+  if CommonUtils.GetDeviceTypeByPlatformName() == "Mobile" then
+    self.ListView_Promote:SetControlScrollbarInside(false)
+  else
+    self.ListView_Promote:SetScrollbarVisibility(UIConst.VisibilityOp.Collapsed)
+    self.ListView_Promote:SetControlScrollbarInside(true)
+  end
   self.EMMenuAnchor_Item.OnGetMenuContentEvent:Bind(self, self.OnAnchorGetUserMenuContent)
   self.EMMenuAnchor_Item.OnMenuOpenChanged:Clear()
   self.EMMenuAnchor_Item.OnMenuOpenChanged:Add(self, self.OnMenuOpenChanged)

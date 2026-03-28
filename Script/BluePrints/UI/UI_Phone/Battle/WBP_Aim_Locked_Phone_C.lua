@@ -15,6 +15,7 @@ end
 
 function M:OnPressed()
   self.OwnerPlayer:FlipCameraLockOnMonster()
+  self.OwnerPanel:CancelBulletJump()
   if self.OwnerPlayer.CameraRotationComponent.IsCameraLookingToTarget then
     self.CurButtonState = "Lock"
     self:PlayAnimation(self.Lock)
@@ -24,28 +25,23 @@ function M:OnPressed()
   end
 end
 
-function M:UpdateButtonInTimer()
-  if IsValid(self.OwnerPlayer.CameraRotationComponent.PreLockOnInfo) or self.OwnerPlayer.IsLockOn then
-    self.IsShowButton = true
+function M:OnLockOnButtonShowChanged(IsLooking, IsShow)
+  if IsLooking then
+    self:PlayAnimation(self.Lock)
+    self.CurButtonState = "Lock"
   else
-    self.IsShowButton = false
+    self:PlayAnimation(self.Unlock)
+    self.CurButtonState = "UnLock"
   end
-  if self.IsShowButton ~= self.LastShowButton then
-    if self.OwnerPlayer.CameraRotationComponent.IsCameraLookingToTarget then
-      self:PlayAnimation(self.Lock)
-      self.CurButtonState = "Lock"
-    else
-      self:PlayAnimation(self.Unlock)
-      self.CurButtonState = "UnLock"
-    end
-    if self.IsShowButton then
-      self:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-    else
-      self:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    end
+  if IsShow then
+    self:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  else
+    self:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
-  self.LastShowButton = self.IsShowButton
-  if "Lock" == self.CurButtonState and not self.OwnerPlayer.CameraRotationComponent.IsCameraLookingToTarget then
+end
+
+function M:OnCameraLockOnChanged(IsLooking)
+  if self.CurButtonState == "Lock" and not IsLooking then
     self.CurButtonState = "Unlock"
     self:PlayAnimation(self.Unlock)
   end

@@ -18,7 +18,6 @@ function AsyncSetActorLocationAndRotationNode:Execute(Callback)
     Player:DisablePlayerInputInDeliver(true)
   end
   local GameInstance = GWorld.GameInstance
-  local SceneMgrComponent = GameInstance:GetSceneManager()
   self.TalkContext = GameInstance:GetTalkContext()
   local TargetActor
   local EMGameState = UE4.UGameplayStatics.GetGameState(self.TalkContext)
@@ -37,7 +36,11 @@ function AsyncSetActorLocationAndRotationNode:Execute(Callback)
   end
   
   local function FadeInCallback()
-    SceneMgrComponent:ShowOrHideAllSceneGuideIcon(false)
+    local GameInstance = GWorld.GameInstance
+    local SceneMgrComponent = GameInstance:GetSceneManager()
+    if IsValid(SceneMgrComponent) then
+      SceneMgrComponent:ShowOrHideAllSceneGuideIcon(false)
+    end
     local TaskIndicator = UIManager(self):GetUIObj("MainTaskIndicator")
     if IsValid(TaskIndicator) then
       TaskIndicator:SetVisibility(UE4.ESlateVisibility.Collapsed)
@@ -102,12 +105,15 @@ function AsyncSetActorLocationAndRotationNode:Execute(Callback)
   end
   
   local function FadeOutCallback()
-    TaskIndicator = UIManager(self):GetUIObj("MainTaskIndicator")
+    local TaskIndicator = UIManager(self):GetUIObj("MainTaskIndicator")
     if IsValid(TaskIndicator) then
       TaskIndicator:SetVisibility(UE4.ESlateVisibility.Visible)
     end
-    SceneMgrComponent = GameInstance:GetSceneManager()
-    SceneMgrComponent:ShowOrHideAllSceneGuideIcon(true)
+    local GameInstance = GWorld.GameInstance
+    local SceneMgrComponent = GameInstance:GetSceneManager()
+    if IsValid(SceneMgrComponent) then
+      SceneMgrComponent:ShowOrHideAllSceneGuideIcon(true)
+    end
     if TargetActorController:IsA(APlayerController) then
       TargetActor:EnableInput(TargetActorController)
     end
@@ -115,7 +121,7 @@ function AsyncSetActorLocationAndRotationNode:Execute(Callback)
       local TargetLevelId = GameMode:GetLevelLoader():GetLevelIdByLocation(NewTargetPoint:K2_GetActorLocation())
       LevelLoader:RemoveArtLevelLoadedCompleteCallback(TargetLevelId)
     end
-    local Player = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
+    local Player = UE4.UGameplayStatics.GetPlayerCharacter(GameInstance, 0)
     if IsValid(Player) then
       Player:DisablePlayerInputInDeliver(false)
     end

@@ -1,4 +1,5 @@
 require("UnLua")
+local ChatController = require("BluePrints.UI.WBP.Chat.ChatController")
 local M = Class("BluePrints.UI.BP_UIState_C")
 local TaskUtils = require("BluePrints.UI.TaskPanel.TaskUtils")
 local GuidePointLocData = require("BluePrints.UI.TaskPanel/QuestGuidePointLocData")
@@ -321,6 +322,11 @@ function M:InitCommonWidget()
   end
   self.Entrance_Dispatch.Btn_Click.OnClicked:Add(self, self.OnClickDispatch)
   self.Entrance_Dispatch.Text_Name:SetText(GText("UI_Disptach_Title"))
+  local ChatWidget = UIManager(self):_CreateWidgetNew("ChannelMapBtn")
+  if ChatWidget then
+    self.Dispatch_ChatChannel:AddChild(ChatWidget)
+    self.ChannelMapBtn = ChatWidget
+  end
 end
 
 function M:InitBottomTab()
@@ -382,6 +388,7 @@ function M:OnTabItemClick(TabWidget)
   local TabId = TabWidget.Idx
   self.CurTabId = TabId
   if 1 == self.CurTabId then
+    self:SetChatBtnVis(false)
     self:OnOpenWorldMap()
     self:UpdateWorldMapKeys()
     self.GameInputModeSubsystem:SetNavigateWidgetOpacity(0)
@@ -401,6 +408,7 @@ function M:OnTabItemClick(TabWidget)
     self.Slider_Zoom:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.LevelMap_World:ResetTranslation()
   else
+    self:SetChatBtnVis(true)
     local Avatar = GWorld:GetAvatar()
     local RegionId = DataMgr.SubRegion[Avatar.CurrentRegionId].RegionId
     local RealRegionId = self.CurrentMainRegionId
@@ -532,7 +540,7 @@ function M:OnUIReturnKeyDown()
     self.DispatchList = nil
     return
   end
-  if self.RealWildMap and self.RealWildMap:ClosePanel() then
+  if self.RealWildMap and not self.RealWildMap.IsEmpty and self.RealWildMap:ClosePanel() then
     return
   end
   if self:IsInteractiveOpen() then
@@ -575,8 +583,9 @@ end
 
 function M:ReturnHome()
   local GameMode = UE.UGameplayStatics.GetGameMode(self)
-  GameMode:HandleLevelDeliver(1, 210101, 1)
-  self:PlayOutAnim()
+  if GameMode:HandleLevelDeliver(1, 210101, 1) then
+    self:PlayOutAnim()
+  end
 end
 
 function M:OnReturnHomePress()
@@ -680,6 +689,8 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
   elseif ("H" == InKeyName or InKeyName == UIConst.GamePadKey.RightThumb) and self.ReturnHomeConditionRes then
     self:OnReturnHomeKeyDown()
     return UWidgetBlueprintLibrary.Handled()
+  elseif "Gamepad_Special_Right" == InKeyName and self.Dispatch_ChatChannel:IsVisible() then
+    ChatController:OpenChatChannelUI(self)
   else
     if self.DeviceInPc then
       if self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad then
@@ -977,17 +988,29 @@ function M:ShoworHideBottomTab(bShow)
   end
 end
 
+function M:SetChatBtnVis(Value)
+  if not self.Dispatch_ChatChannel then
+    return
+  end
+  self.Dispatch_ChatChannel:SetVisibility(Value and UIConst.VisibilityOp.Visible or UIConst.VisibilityOp.Collapsed)
+  if self.ChannelMapBtn then
+    self.ChannelMapBtn.Key_Channel:SetVisibility(UIUtils.IsGamepadInput() and UIConst.VisibilityOp.Visible or UIConst.VisibilityOp.Collapsed)
+  end
+end
+
 function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
   if self.LastInputDevice == CurInputDevice then
     return
   end
   self.LastInputDevice = CurInputDevice
   if 1 == self.CurTabId then
+    self:SetChatBtnVis(false)
     self:UpdateWorldMapKeys()
     self.LevelMap_World.GamepadSelect:SetFocus()
     self.FloorWidget.Key_Controller_Up:SetVisibility(ESlateVisibility.Collapsed)
     self.FloorWidget.Key_Controller_Down:SetVisibility(ESlateVisibility.Collapsed)
   else
+    self:SetChatBtnVis(true)
     self:UpdateWildMapKeys()
     if self:HasFocusedDescendants() or self:HasAnyUserFocus() then
       if self:IsInteractiveOpen() then
@@ -1043,6 +1066,19 @@ function M:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
     return self.LevelMap_World:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
   else
     return UE4.UWidgetBlueprintLibrary.UnHandled()
+  end
+end
+
+function M:GetRegionMapBlock()
+  if self.RealWildMap then
+    return self.RealWildMap:GetRegionMapBlock()
+  end
+  return ""
+end
+
+function M:SetRegionMapBlock(Block)
+  if self.RealWildMap then
+    self.RealWildMap:SetRegionMapBlock(Block)
   end
 end
 

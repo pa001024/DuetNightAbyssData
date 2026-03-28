@@ -7,6 +7,24 @@ T.RT_3 = {Name = "AltStart", Value = 1}
 T.RT_4 = {
   [1] = T.RT_3
 }
+T.RT_5 = {
+  Name = "FengxiangBoss",
+  Value = 1
+}
+T.RT_6 = {
+  Name = "ZhiliuA12020414",
+  Value = 1
+}
+T.RT_7 = {
+  [1] = T.RT_6
+}
+T.RT_8 = {
+  Name = "ZhiliuA12020414",
+  Value = 0
+}
+T.RT_9 = {
+  [1] = T.RT_8
+}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -355,6 +373,253 @@ return ReadOnly("QuestSetVariable", {
     Success = {
       Info = T.RT_4,
       QuestId = 12010606,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [12020101] = {
+    Start = {
+      Info = {
+        [1] = {
+          Name = "Wuyousheng_First_12020122",
+          Value = 1
+        },
+        [2] = {Name = "IQ120315", Value = 0},
+        [3] = T.RT_5
+      },
+      QuestId = 12020101,
+      QuestStartorSuccess = "Start"
+    }
+  },
+  [12020112] = {
+    Success = {
+      Info = {
+        [1] = {
+          Name = "Wuyousheng_First_12020122",
+          Value = 0
+        }
+      },
+      QuestId = 12020112,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [12020205] = {
+    Start = {
+      Info = {
+        [1] = {
+          Name = "Qianxing12020208",
+          Value = 1
+        }
+      },
+      QuestId = 12020205,
+      QuestStartorSuccess = "Start"
+    }
+  },
+  [12020210] = {
+    Start = {
+      Info = {
+        [1] = {
+          Name = "Qianxing12020208",
+          Value = 0
+        },
+        [2] = {
+          Name = "Int12020208",
+          Value = 1
+        }
+      },
+      QuestId = 12020210,
+      QuestStartorSuccess = "Start"
+    }
+  },
+  [12020211] = {
+    Start = {
+      Info = {
+        [1] = {
+          Name = "Wuyousheng_Escape_12020212",
+          Value = 1
+        }
+      },
+      QuestId = 12020211,
+      QuestStartorSuccess = "Start"
+    }
+  },
+  [12020212] = {
+    Success = {
+      Info = {
+        [1] = {
+          Name = "Wuyousheng_Escape_12020212",
+          Value = 0
+        }
+      },
+      QuestId = 12020212,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [12020401] = {
+    Start = {
+      Info = {
+        [1] = {Name = "IQ12020401", Value = 1}
+      },
+      QuestId = 12020401,
+      QuestStartorSuccess = "Start"
+    }
+  },
+  [12020411] = {
+    Success = {
+      Info = {
+        [1] = {Name = "IQ12020401", Value = 0}
+      },
+      QuestId = 12020411,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [12020414] = {
+    Start = {
+      Info = T.RT_7,
+      QuestId = 12020414,
+      QuestStartorSuccess = "Start"
+    },
+    Success = {
+      Info = T.RT_9,
+      QuestId = 12020414,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [12020513] = {
+    Start = {
+      Info = {
+        [1] = {
+          Name = "Special_Zhiliu_12020515",
+          Value = 1
+        }
+      },
+      QuestId = 12020513,
+      QuestStartorSuccess = "Start"
+    }
+  },
+  [12020516] = {
+    Start = {
+      Info = {
+        [1] = {
+          Name = "Special_Zhiliu_12020515",
+          Value = 0
+        }
+      },
+      QuestId = 12020516,
+      QuestStartorSuccess = "Start"
+    }
+  },
+  [12020517] = {
+    Success = {
+      Info = {
+        [1] = {Name = "IQ12020517", Value = 1}
+      },
+      QuestId = 12020517,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [12020612] = {
+    Start = {
+      Info = T.RT_7,
+      QuestId = 12020612,
+      QuestStartorSuccess = "Start"
+    },
+    Success = {
+      Info = T.RT_9,
+      QuestId = 12020612,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [12020623] = {
+    Success = {
+      Info = {
+        [1] = {Name = "IQ12020517", Value = 0}
+      },
+      QuestId = 12020623,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [12030101] = {
+    Start = {
+      Info = {
+        [1] = {
+          Name = "FengxiangBaoming",
+          Value = 1
+        },
+        [2] = T.RT_5
+      },
+      QuestId = 12030101,
+      QuestStartorSuccess = "Start"
+    }
+  },
+  [12030202] = {
+    Success = {
+      Info = {
+        [1] = {
+          Name = "FengxiangXiaochi",
+          Value = 1
+        }
+      },
+      QuestId = 12030202,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [12030703] = {
+    Success = {
+      Info = {
+        [1] = {
+          Name = "FengxiangBoss",
+          Value = 0
+        }
+      },
+      QuestId = 12030703,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [12030706] = {
+    Start = {
+      Info = {
+        [1] = {
+          Name = "IQ12030706_jlc",
+          Value = 1
+        }
+      },
+      QuestId = 12030706,
+      QuestStartorSuccess = "Start"
+    },
+    Success = {
+      Info = {
+        [1] = {Name = "IQ12030706", Value = 1}
+      },
+      QuestId = 12030706,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [12030707] = {
+    Success = {
+      Info = {
+        [1] = {
+          Name = "IQ12030706_jlc",
+          Value = 0
+        }
+      },
+      QuestId = 12030707,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [12030801] = {
+    Success = {
+      Info = {
+        [1] = {
+          Name = "FengxiangXiaochi",
+          Value = 0
+        },
+        [2] = {
+          Name = "FengxiangBaoming",
+          Value = 0
+        },
+        [3] = {Name = "IQ12030706", Value = 0}
+      },
+      QuestId = 12030801,
       QuestStartorSuccess = "Success"
     }
   },

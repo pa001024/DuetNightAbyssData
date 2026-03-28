@@ -67,6 +67,17 @@ return ReadOnly("CharVoice2Gacha", {
       }
     }
   },
+  [1504] = {
+    [1] = {
+      [1] = {
+        VoiceId = 10961,
+        VoiceRes = T.RT_1,
+        VoiceText = {
+          [1] = "voice_ch_char_Suyi_vo_gain"
+        }
+      }
+    }
+  },
   [1801] = {
     [1] = {
       [1] = {
@@ -151,6 +162,17 @@ return ReadOnly("CharVoice2Gacha", {
         VoiceRes = T.RT_1,
         VoiceText = {
           [1] = "voice_ch_char_Haier_vo_gain"
+        }
+      }
+    }
+  },
+  [3202] = {
+    [1] = {
+      [1] = {
+        VoiceId = 10919,
+        VoiceRes = T.RT_1,
+        VoiceText = {
+          [1] = "voice_ch_char_Kami_vo_gain"
         }
       }
     }

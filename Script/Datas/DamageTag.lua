@@ -36,11 +36,13 @@ return ReadOnly("DamageTag", {
   FeinaColorRed = {
     DamageTag = "FeinaColorRed"
   },
+  HaierUltra = {DamageTag = "HaierUltra"},
   HeavyAttack = {
     DamageTag = "HeavyAttack"
   },
   Hot = {DamageTag = "Hot"},
   IceOrb = {DamageTag = "IceOrb"},
+  KamiCrack = {DamageTag = "KamiCrack"},
   KamiPassive = {
     DamageTag = "KamiPassive"
   },
@@ -99,6 +101,12 @@ return ReadOnly("DamageTag", {
   SaiqiSkill01 = {
     DamageTag = "SaiqiSkill01"
   },
+  Shotgun20406 = {
+    DamageTag = "Shotgun20406"
+  },
+  ShuimuSummonAttack = {
+    DamageTag = "ShuimuSummonAttack"
+  },
   Skill = {DamageTag = "Skill"},
   Skill1 = {DamageTag = "Skill1"},
   Skill2 = {DamageTag = "Skill2"},
@@ -109,6 +117,7 @@ return ReadOnly("DamageTag", {
     DamageTag = "SpiritualFire"
   },
   Support = {DamageTag = "Support"},
+  SuyiGrade6 = {DamageTag = "SuyiGrade6"},
   SuyiSkill02Creature = {
     DamageTag = "SuyiSkill02Creature"
   },
@@ -124,6 +133,9 @@ return ReadOnly("DamageTag", {
     DamageTag = "UnlockChest"
   },
   Weapon = {DamageTag = "Weapon"},
+  WeeklyPaoTai = {
+    DamageTag = "WeeklyPaoTai"
+  },
   XibiSkill01 = {
     DamageTag = "XibiSkill01"
   },
@@ -145,6 +157,9 @@ return ReadOnly("DamageTag", {
     DamageTag = "YumingExtra"
   },
   Zhangyu = {DamageTag = "Zhangyu"},
+  Zhouben_5000003 = {
+    DamageTag = "Zhouben_5000003"
+  },
   ZhujueDark = {DamageTag = "ZhujueDark"},
   ZhujueDarkPassive = {
     DamageTag = "ZhujueDarkPassive"

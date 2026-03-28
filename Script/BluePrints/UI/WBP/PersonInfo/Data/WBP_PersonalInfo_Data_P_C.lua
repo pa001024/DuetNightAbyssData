@@ -72,7 +72,7 @@ function M:InitTab()
     },
     StyleName = "Text",
     OwnerPanel = self,
-    TitleName = GText("UI_PersonInfo_Name"),
+    TitleName = GText("UI_PersonalPage_Recount_Name"),
     BackCallback = self.OnReturnKeyDown
   }
   self.Root.Com_Tab:Init(TabInfo)
@@ -193,6 +193,8 @@ function M:OnGamePadDown(InKeyName)
     IsEventHandled = true
   elseif InKeyName == UIConst.GamePadKey.LeftThumb then
     self:InitTabInSortDown()
+  elseif InKeyName == UIConst.GamePadKey.FaceButtonLeft then
+    self:OnClickHistoryRank()
   end
   return IsEventHandled
 end

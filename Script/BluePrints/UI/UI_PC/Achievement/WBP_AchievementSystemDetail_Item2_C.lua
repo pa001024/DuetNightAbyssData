@@ -2,7 +2,8 @@ require("UnLua")
 local TimeUtils = require("Utils.TimeUtils")
 local M = Class({
   "BluePrints.Common.TimerMgr",
-  "BluePrints.UI.BP_EMUserWidget_C"
+  "BluePrints.UI.BP_EMUserWidget_C",
+  "BluePrints.Common.DelayFrameComponent"
 })
 
 function M:Construct()
@@ -141,12 +142,14 @@ function M:OnListItemObjectSet(Content)
         local Icon = ItemUtils.GetItemIconPath(ItemId, RewardTypes[i])
         local Rarity = ItemUtils.GetItemRarity(ItemId, RewardTypes[i])
         local ItemType = RewardTypes[i]
+        local bHasGot = achieve:IsFinished() and not achieve:CanRecvReward()
         local RewardContent = {
           Id = ItemId,
           Type = ItemType,
           ItemCount = Count,
           Icon = Icon,
-          Rarity = Rarity
+          Rarity = Rarity,
+          bHasGot = bHasGot
         }
         table.insert(RewardList, RewardContent)
       end
@@ -174,7 +177,7 @@ function M:OnListItemObjectSet(Content)
       end
     end
     for _, ItemInfo in pairs(RewardList) do
-      local Item = self:NewItemContent(ItemInfo.Type, ItemInfo.Id, ItemInfo.ItemCount)
+      local Item = self:NewItemContent(ItemInfo.Type, ItemInfo.Id, ItemInfo.ItemCount, ItemInfo.bHasGot)
       self.List_ItemRewards:AddItem(Item)
     end
   end
@@ -195,12 +198,6 @@ function M:OnListItemObjectSet(Content)
     self.Change:SetActiveWidgetIndex(3)
     self.Complete_Date_1:SetTimeText(0 ~= achieve.Time and achieve.Time or nil, UIConst.EnumTimeStyleType.YMD, nil, nil, nil, nil, true)
     self.CompleteMask:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    for i = 0, self.List_ItemRewards:GetNumItems() - 1 do
-      local Item = self.List_ItemRewards:GetItemAt(i)
-      if Item and Item.SelfWidget and Item.SelfWidget.SetIsGot then
-        Item.SelfWidget:SetIsGot(true)
-      end
-    end
   end
   local currentTime = UGameplayStatics.GetTimeSeconds(self)
   if currentTime < Content.StartTime + 0.05 * self.Index + 0.1 and Content.AchievementSystem.PlayInAnimation then
@@ -225,7 +222,7 @@ function M:OnListItemObjectSet(Content)
   self:SetNavigationRuleBase(EUINavigation.Left, EUINavigationRule.Stop)
 end
 
-function M:NewItemContent(ItemType, ItemId, Count)
+function M:NewItemContent(ItemType, ItemId, Count, bHasGot)
   if 0 == ItemId then
     local Obj = NewObject(UIUtils.GetCommonItemContentClass())
     return Obj
@@ -243,6 +240,7 @@ function M:NewItemContent(ItemType, ItemId, Count)
   NewObj.Count = Count
   NewObj.IsShowDetails = true
   NewObj.ParentWidget = self
+  NewObj.bHasGot = bHasGot
   NewObj.OnMenuOpenChangedEvents = {
     Obj = self,
     Callback = self.OnMenuOpenChanged

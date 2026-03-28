@@ -25,7 +25,7 @@ function M:Construct()
   end
   table.sort(MapData)
   for _, id in pairs(MapData) do
-    worldData = DataMgr.WorldMap[id]
+    local worldData = DataMgr.WorldMap[id]
     local worldWidget = NewObject(self.RegionClass, self)
     self.WrapBox:AddChild(worldWidget)
     self.WorldList[id] = worldWidget
@@ -205,6 +205,8 @@ function M:OnWorldClick(id)
       end
       widget.Btn_ShowUp.OnClicked:Add(self, function()
         AudioManager(self):PlayUISound(self, "event:/ui/common/click_level_03", nil, nil)
+        widget:StopAllAnimations()
+        widget:PlayAnimation(widget.Click)
         if self.LastRegionWidgetId and self.RegionList[self.LastRegionWidgetId] and self.LastRegionWidgetId ~= regionMapId then
           self.RegionList[self.LastRegionWidgetId]:PlayAnimation(widget.Normal)
         end
@@ -213,6 +215,10 @@ function M:OnWorldClick(id)
           self.Parent:OnRegionClick(regionData.RegionId)
         end
         self.LastRegionWidgetId = regionMapId
+      end)
+      widget.Btn_ShowUp.OnReleased:Add(self, function()
+        widget:StopAllAnimations()
+        widget:PlayAnimation(self.LastRegionWidgetId == regionMapId and widget.Click or widget.Normal)
       end)
       widget:PlayAnimation(self.LastRegionWidgetId == regionMapId and widget.Click or widget.Normal)
       if self.LastRegionWidgetId == regionMapId then

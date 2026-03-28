@@ -122,6 +122,9 @@ function Component:ShowFloor_Component(FloorId)
 end
 
 function Component:OnScaleChange_Component(Percent)
+  if not self.DoorIcons then
+    return
+  end
   local Visible = self:GetMapIconVisible("UI_DOORICONS", Percent)
   for Id, Point in pairs(self.DoorIcons) do
     local ThisVisible = DataMgr.RegionDoor[Id] and Visible

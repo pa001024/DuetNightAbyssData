@@ -49,6 +49,50 @@ return ReadOnly("CharCardLevelUp", {
       RoleId = 1101
     }
   },
+  [1102] = {
+    [0] = {
+      CardLevel = 0,
+      CollectRewardExp = 250,
+      ResourceId1 = 1001102,
+      ResourceNum1 = 30,
+      RoleId = 1102
+    },
+    [1] = {
+      CardLevel = 1,
+      CollectRewardExp = 250,
+      ResourceId1 = 1001102,
+      ResourceNum1 = 30,
+      RoleId = 1102
+    },
+    [2] = {
+      CardLevel = 2,
+      CollectRewardExp = 250,
+      ResourceId1 = 1001102,
+      ResourceNum1 = 30,
+      RoleId = 1102
+    },
+    [3] = {
+      CardLevel = 3,
+      CollectRewardExp = 250,
+      ResourceId1 = 1001102,
+      ResourceNum1 = 30,
+      RoleId = 1102
+    },
+    [4] = {
+      CardLevel = 4,
+      CollectRewardExp = 250,
+      ResourceId1 = 1001102,
+      ResourceNum1 = 30,
+      RoleId = 1102
+    },
+    [5] = {
+      CardLevel = 5,
+      CollectRewardExp = 250,
+      ResourceId1 = 1001102,
+      ResourceNum1 = 30,
+      RoleId = 1102
+    }
+  },
   [1103] = {
     [0] = {
       CardLevel = 0,

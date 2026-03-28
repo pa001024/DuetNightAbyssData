@@ -120,7 +120,7 @@ function QuestData:GetTargetProgress()
 end
 
 function QuestData:IsComplete()
-  return 0 ~= self.CurrentProgress and 0 ~= self.TargetProgress and self.TargetProgress == self.CurrentProgress
+  return 0 ~= self.CurrentProgress and 0 ~= self.TargetProgress and self.TargetProgress <= self.CurrentProgress
 end
 
 FormatProperties(QuestData)

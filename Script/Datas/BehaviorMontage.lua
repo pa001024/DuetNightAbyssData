@@ -322,6 +322,25 @@ return ReadOnly("BehaviorMontage", {
     MontagePath = "/Game/Asset/Char/Monster/JT_Jingjie/Animation/Montage/SpecialIdle/JT_Jingjie_SpecialAlert_Montage.JT_Jingjie_SpecialAlert_Montage",
     MontageType = "EnterAlert"
   },
+  [7018001] = {
+    MontageGroupId = 7018,
+    MontageId = 7018001,
+    MontagePath = "/Game/Asset/Char/Monster/JT_Tiequan/Animation/Montage/SpeicaIIdle/JT_Tiequan_SpecialIdle01_Montage.JT_Tiequan_SpecialIdle01_Montage",
+    MontageType = "OutBattleBehavior",
+    NextMontage = 7018101
+  },
+  [7018100] = {
+    MontageGroupId = 7018,
+    MontageId = 7018100,
+    MontagePath = "/Game/Asset/Char/Monster/JT_Tiequan/Animation/Montage/SpeicaIIdle/JT_Tiequan_SpecialAlert_Montage.JT_Tiequan_SpecialAlert_Montage",
+    MontageType = "EnterAlert"
+  },
+  [7018101] = {
+    MontageGroupId = 7018,
+    MontageId = 7018101,
+    MontagePath = "/Game/Asset/Char/Monster/JT_Tiequan/Animation/Montage/SpeicaIIdle/JT_Tiequan_SpecialIdle01_End_Montage.JT_Tiequan_SpecialIdle01_End_Montage",
+    MontageType = "EnterAlert"
+  },
   [8001001] = {
     MontageGroupId = 8001,
     MontageId = 8001001,
@@ -363,14 +382,14 @@ return ReadOnly("BehaviorMontage", {
   [8003001] = {
     MontageGroupId = 8003,
     MontageId = 8003001,
-    MontagePath = "/Game/Asset/Char/Monster/JH_Shenfu/Animation/Montage/SpeicalIdle/JH_Shenfu_SpecialIdle01_Montage.JH_Shenfu_SpecialIdle01_Montage",
+    MontagePath = "/Game/Asset/Char/Monster/JH_Shenfu/Animation/Montage/SpecialIdle/JH_Shenfu_SpecialIdle01_Montage.JH_Shenfu_SpecialIdle01_Montage",
     MontageType = "OutBattleBehavior",
     NextMontage = 8003100
   },
   [8003100] = {
     MontageGroupId = 8003,
     MontageId = 8003100,
-    MontagePath = "/Game/Asset/Char/Monster/JH_Shenfu/Animation/Montage/SpeicalIdle/JH_Shenfu_SpecialAlert_Montage.JH_Shenfu_SpecialAlert_Montage",
+    MontagePath = "/Game/Asset/Char/Monster/JH_Shenfu/Animation/Montage/SpecialIdle/JH_Shenfu_SpecialAlert_Montage.JH_Shenfu_SpecialAlert_Montage",
     MontageType = "EnterAlert"
   },
   [9001001] = {

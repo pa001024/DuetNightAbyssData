@@ -35,6 +35,20 @@ function WBP_Common_Dialog_PC_C:ShowPopupInterrupt(PopupId, Params, ParentWidget
   self:OnClose()
 end
 
+function WBP_Common_Dialog_PC_C:ShowPopupPush(PopupId, Params, ParentWidget)
+  self.PopupQueue = self.PopupQueue or {}
+  if #self.PopupQueue <= 0 then
+    self:ShowPopup(PopupId, Params, ParentWidget)
+    return
+  end
+  table.insert(self.PopupQueue, 1, {
+    PopupId,
+    Params,
+    ParentWidget
+  })
+  self:InitView(PopupId, Params, ParentWidget)
+end
+
 function WBP_Common_Dialog_PC_C:RemoveFirstItemInPopupQueue()
   table.remove(self.PopupQueue, 1)
 end
@@ -213,6 +227,8 @@ function WBP_Common_Dialog_PC_C:UpdateView(PopupStyleID, Params, PopupData)
   if PopupStyleID and not PopupData then
     PopupData = {Style = PopupStyleID}
   end
+  self.ResourceBarWidget = {}
+  self.Tips = {}
   self.ContentWidgetTable = {}
   self.EventListenerMap = {}
   self.PackageFuncs = {}
@@ -418,11 +434,11 @@ function WBP_Common_Dialog_PC_C:UpdateView(PopupStyleID, Params, PopupData)
   self.CloseMask.OnClicked:Clear()
   if PopupData.ShowQuitTip then
     self.Text_Tips:SetText(GText("UI_TRAIN_CLOSE"))
-    self.Text_Tips:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.Panel_Tips:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     self.CloseMask.OnPressed:Add(self, self.OnCloseMaskClicked)
     self.CloseMask:SetVisibility(UE4.ESlateVisibility.Visible)
   else
-    self.Text_Tips:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.Panel_Tips:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.CloseMask:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
   if PopupStyle.ShowContent then
@@ -548,6 +564,18 @@ function WBP_Common_Dialog_PC_C:OnPreviewKeyDown(MyGeometry, InKeyEvent)
       end
     end
   end
+  if InKeyName == self.Params.NoButtonPCKey or InKeyName == self.Params.YesButtonPCKey then
+    local ButtonBar = self:GetButtonBar()
+    if ButtonBar then
+      if InKeyName == self.Params.NoButtonPCKey then
+        ButtonBar:SimulateLeftBtnClick()
+      else
+        AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_confirm", nil, nil)
+        ButtonBar:SimulateRightBtnClick()
+      end
+      return UE4.UWidgetBlueprintLibrary.Handled()
+    end
+  end
   return UE4.UWidgetBlueprintLibrary.UnHandled()
 end
 
@@ -610,7 +638,7 @@ function WBP_Common_Dialog_PC_C:ProcessGamepadKeydown(InKeyName)
       return true
     end
   elseif InKeyName == LeftBtnKey then
-    if ButtonBar then
+    if self.PopupStyle.ShowLeftButton and ButtonBar then
       ButtonBar:SimulateLeftBtnClick()
     end
     return true

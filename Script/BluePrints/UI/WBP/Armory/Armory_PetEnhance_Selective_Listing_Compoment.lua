@@ -422,7 +422,19 @@ function Component:LockOrUnlockPet()
   end
   local Avatar = GWorld:GetAvatar()
   if self.ItemDetailsContent.LockType and 0 ~= self.ItemDetailsContent.LockType then
-    Avatar:UnLockPet(self.ItemDetailsContent.UniqueId)
+    local function CancelFunc()
+      self:SetFocus()
+    end
+    
+    local function ConfirmFunc()
+      SecondaryPasswordController:Pet_OpenSeconderyPassword(self.ItemDetailsContent.UniqueId, self)
+    end
+    
+    UIManager(self):ShowCommonPopupUI(100019, {
+      LeftCallbackFunction = CancelFunc,
+      RightCallbackFunction = ConfirmFunc,
+      CloseBtnCallbackFunction = CancelFunc
+    }, self)
   else
     Avatar:LockPet(self.ItemDetailsContent.UniqueId)
   end

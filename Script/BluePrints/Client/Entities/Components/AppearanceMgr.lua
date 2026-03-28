@@ -66,22 +66,28 @@ end
 function Component:CheckHairEnough(CheckData)
   for CharHairId, Count in pairs(CheckData) do
     local HairInfo = DataMgr.Hair[CharHairId]
-    if not HairInfo or not HairInfo.CharId then
+    if not HairInfo then
       return false
     end
-    local CharId = HairInfo.CharId
-    local CommonChar = self.CommonChars[CharId]
-    if CommonChar then
-      if CommonChar.OwnedHairs[CharHairId] == nil then
+    if HairInfo.IsCommon then
+      if not self.CommonCharHairs[CharHairId] then
         return false
       end
     else
-      local OtherCharHair = self.OtherCharHairs[CharId]
-      if not OtherCharHair then
-        return false
-      end
-      if not OtherCharHair:HasValue(CharHairId) then
-        return false
+      local CharId = HairInfo.CharId
+      local CommonChar = self.CommonChars[CharId]
+      if CommonChar then
+        if CommonChar.OwnedHairs[CharHairId] == nil then
+          return false
+        end
+      else
+        local OtherCharHair = self.OtherCharHairs[CharId]
+        if not OtherCharHair then
+          return false
+        end
+        if not OtherCharHair:HasValue(CharHairId) then
+          return false
+        end
       end
     end
   end
@@ -181,14 +187,52 @@ function Component:SetCharCornerVisibility(CharUuid, AppearancIndex, IsVisible)
   self:CallServer("SetCharCornerVisibility", Callback, CharUuid, AppearancIndex, IsVisible)
 end
 
+function Component:UpCharSkinLevel(InCallback, SkinId, NewLevel)
+  self.logger.debug("UpCharSkinLevel Begin", SkinId, NewLevel)
+  
+  local function Callback(Ret)
+    self.logger.debug("UpCharSkinLevel Callback", Ret, SkinId, NewLevel)
+    if InCallback then
+      InCallback(Ret)
+    end
+  end
+  
+  self:CallServer("UpCharSkinLevel", Callback, SkinId, NewLevel)
+end
+
+function Component:SwitchCharSkinSelectedLevel(InCallback, SkinId, NewLevel)
+  self.logger.debug("SwitchCharSkinSelectedLevel Begin", SkinId, NewLevel)
+  
+  local function Callback(Ret)
+    self.logger.debug("SwitchCharSkinSelectedLevel Callback", Ret, SkinId, NewLevel)
+    if InCallback then
+      InCallback(Ret, SkinId, NewLevel)
+    end
+  end
+  
+  self:CallServer("SwitchCharSkinSelectedLevel", Callback, SkinId, NewLevel)
+end
+
 function Component:ChangeWeaponAppearanceAccessory(WeaponUuid, AccessoryId)
+  self.logger.debug("ChangeWeaponAppearanceAccessory Begin", CommonUtils.ObjId2Str(WeaponUuid), AccessoryId)
+  
   local function callback(Ret)
-    self.logger.debug("ZJT_ OnChangeWeaponAppearanceAccessory callback", Ret, AccessoryId)
-    
+    self.logger.debug("ChangeWeaponAppearanceAccessory callback", Ret, AccessoryId)
     EventManager:FireEvent(EventID.OnWeaponAccessoryChanged, Ret, WeaponUuid, AccessoryId)
   end
   
   self:CallServer("ChangeWeaponAppearanceAccessory", callback, WeaponUuid, AccessoryId)
+end
+
+function Component:RemoveWeaponAppearanceAccessory(WeaponUuid, AccessoryId)
+  self.logger.debug("RemoveWeaponAppearanceAccessory Begin", CommonUtils.ObjId2Str(WeaponUuid), AccessoryId)
+  
+  local function Callback(Ret)
+    self.logger.debug("RemoveWeaponAppearanceAccessory callback", Ret, AccessoryId)
+    EventManager:FireEvent(EventID.OnWeaponAccessoryChanged, Ret, WeaponUuid, AccessoryId)
+  end
+  
+  self:CallServer("RemoveWeaponAppearanceAccessory", Callback, WeaponUuid, AccessoryId)
 end
 
 function Component:ChangeWeaponAppearanceSkin(WeaponUuid, SkinId)

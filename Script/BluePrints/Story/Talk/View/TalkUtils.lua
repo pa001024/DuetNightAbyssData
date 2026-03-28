@@ -75,6 +75,29 @@ function TalkUtils:OptionIdToContent(OptionId)
   return self:DialogueIdToContent(OptionId)
 end
 
+function TalkUtils:OptionIdToTemplate(OptionId)
+  local DialogueId = tonumber(OptionId)
+  local DialogueInfo = DataMgr.Dialogue[DialogueId]
+  local Template = {}
+  if not DialogueInfo or not DialogueInfo.OptionTemplateId then
+    return Template
+  end
+  local TemplateId = DialogueInfo.OptionTemplateId
+  local TemplateInfo = DataMgr.OptionTemplate[TemplateId]
+  if not TemplateInfo then
+    return Template
+  end
+  Template = setmetatable({}, {__index = TemplateInfo})
+  return Template
+end
+
+function TalkUtils:IsOptionSavedOnServer(OptionId)
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    return Avatar:IsStoryOptionSelected(OptionId)
+  end
+end
+
 function TalkUtils:IsKeyOption(DialogueId)
   DialogueId = tonumber(DialogueId)
   local DialogueInfo = DataMgr.Dialogue[DialogueId]

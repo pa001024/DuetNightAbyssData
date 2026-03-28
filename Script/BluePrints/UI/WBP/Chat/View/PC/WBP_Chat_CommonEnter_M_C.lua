@@ -6,17 +6,12 @@ local M = Class({
 function M:Construct()
   self.Com_ChatBtn.Button_Area.OnClicked:Add(self, self.OnClick)
   ReddotManager.AddListener(ChatCommon.ReddotName, self, function(self, Count)
-    if 0 == Count then
-      self.Reddot_Num:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    else
-      self.Reddot_Num:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-      local NumText = tostring(Count)
-      if Count > ChatCommon.ReddotMaxCount then
-        NumText = ChatCommon.ReddotMaxCount .. "+"
-      end
-      self.Reddot_Num:SetNum(NumText)
-    end
+    self:OnReddotUpdateChatMainMenu()
   end)
+end
+
+function M:OnReddotUpdateChatMainMenu()
+  ChatController:OnChatReddotUpdate(self.Reddot_Num)
 end
 
 function M:Destruct()

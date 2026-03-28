@@ -665,6 +665,174 @@ return ReadOnly("UIGuide", {
     GuideId = 119,
     MainGuideTitle = "MAINUIGUIDE_TITLE_ZuoQi_1"
   },
+  [120] = {
+    ChildGuideId = {12001},
+    GuideId = 120,
+    MainGuideTitle = "UI_Title_Popup_RecordVedio"
+  },
+  [121] = {
+    ChildGuideId = {
+      12101,
+      12102,
+      12103,
+      12104
+    },
+    GuideId = 121,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_QiaoBan_1"
+  },
+  [122] = {
+    ChildGuideId = {12201},
+    GuideId = 122,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_PinTu_1"
+  },
+  [123] = {
+    ChildGuideId = {12301, 12302},
+    GuideId = 123,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_ShenJi_1"
+  },
+  [124] = {
+    ChildGuideId = {
+      12403,
+      12401,
+      12402,
+      12404
+    },
+    GuideId = 124,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_XiaoYao_1"
+  },
+  [125] = {
+    ChildGuideId = {12501},
+    GuideId = 125,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_XuanYong_1"
+  },
+  [126] = {
+    ChildGuideId = {12601, 12602},
+    GuideId = 126,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_ZhenLv_1"
+  },
+  [127] = {
+    ChildGuideId = {12701, 12702},
+    GuideId = 127,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_AnHao_1"
+  },
+  [128] = {
+    ChildGuideId = {12801, 12802},
+    GuideId = 128,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_YanQue_1"
+  },
+  [129] = {
+    ChildGuideId = {12901, 12902},
+    GuideId = 129,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_QueXie_1"
+  },
+  [130] = {
+    ChildGuideId = {13001, 13002},
+    GuideId = 130,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_QianKun_1"
+  },
+  [131] = {
+    ChildGuideId = {
+      13101,
+      13102,
+      13103,
+      13104
+    },
+    GuideId = 131,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_ZhengLi_Main"
+  },
+  [132] = {
+    ChildGuideId = {13201, 13202},
+    GuideId = 132,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_RongQi_1"
+  },
+  [133] = {
+    ChildGuideId = {13301, 13302},
+    GuideId = 133,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_NiuDan_1"
+  },
+  [134] = {
+    ChildGuideId = {13401, 13402},
+    GuideId = 134,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_TianQi_1"
+  },
+  [135] = {
+    ChildGuideId = {13501, 13502},
+    GuideId = 135,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_GongFeng_1"
+  },
+  [136] = {
+    ChildGuideId = {13601, 13602},
+    GuideId = 136,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_MiShi_1"
+  },
+  [137] = {
+    ChildGuideId = {13701},
+    GuideId = 137,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_XianJing_1"
+  },
+  [138] = {
+    ChildGuideId = {13801, 13802},
+    GuideId = 138,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_ShouHu_1"
+  },
+  [139] = {
+    ChildGuideId = {13901},
+    GuideId = 139,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_JingYing_1"
+  },
+  [140] = {
+    ChildGuideId = {14001},
+    GuideId = 140,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_JieSuan_1"
+  },
+  [141] = {
+    ChildGuideId = {12403, 12404},
+    GuideId = 141,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_XiaoYao_1"
+  },
+  [142] = {
+    ChildGuideId = {12401, 12402},
+    GuideId = 142,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_XiaoYao_1"
+  },
+  [143] = {
+    ChildGuideId = {14301, 14302},
+    GuideId = 143,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_SuYi_1"
+  },
+  [144] = {
+    ChildGuideId = {14401},
+    GuideId = 144,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_TeYao_1"
+  },
+  [145] = {
+    ChildGuideId = {
+      14501,
+      14502,
+      14503,
+      14504,
+      14505,
+      14506
+    },
+    GuideId = 145,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_YanQueFeiXing_1"
+  },
+  [146] = {
+    ChildGuideId = {14601},
+    GuideId = 146,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_YinZong_1"
+  },
+  [147] = {
+    ChildGuideId = {
+      14701,
+      14702,
+      14703,
+      14704,
+      14705
+    },
+    GuideId = 147,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_YuBo_1"
+  },
   [1001] = {
     ChildGuideId = {
       100101,
@@ -773,6 +941,18 @@ return ReadOnly("UIGuide", {
     },
     GuideId = 1013,
     MainGuideTitle = "MAINUIGUIDE_TITLE_Synthesis"
+  },
+  [1014] = {
+    ChildGuideId = {
+      101401,
+      101402,
+      101403,
+      101404,
+      101405,
+      101406
+    },
+    GuideId = 1014,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_Synthesis2"
   },
   [2001] = {
     ChildGuideId = {200101},

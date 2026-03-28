@@ -1,6 +1,20 @@
 require("UnLua")
 local M = Class("BluePrints.UI.BP_EMUserWidget_C")
 
+function M:Construct()
+  local PlayerController = UE4.UGameplayStatics.GetPlayerController(self, 0)
+  self.GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(PlayerController)
+  if IsValid(self.GameInputModeSubsystem) then
+    self.GameInputModeSubsystem.OnInputMethodChanged:Add(self, self.RefreshOpInfoByInputDevice)
+    self:RefreshOpInfoByInputDevice(self.GameInputModeSubsystem:GetCurrentInputType(), self.GameInputModeSubsystem:GetCurrentGamepadName())
+  end
+end
+
+function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
+  local ResourceBarIcon = UIUtils.UtilsGetKeyIconPathInGamepad("RS", CurGamepadName)
+  self.WBP_Com_Tab_ResourceBar:SetGamePadKeyImgByPath(ResourceBarIcon)
+end
+
 function M:Init(Info)
   self.Info = Info
   self.BackCallback = Info.BackCallback
@@ -8,6 +22,12 @@ function M:Init(Info)
   self.Title_Tab:SetText(Info.TitleName)
   self.TabBack.Btn_Back.OnClicked:Clear()
   self.TabBack.Btn_Back.OnClicked:Add(self, self.OnReturnClick)
+  if Info.OverridenTopResouces then
+    self.WBP_Com_Tab_ResourceBar:SetVisibility(UIConst.VisibilityOp.Visible)
+    self.WBP_Com_Tab_ResourceBar:InitResourceBar(Info.OverridenTopResouces, false)
+  else
+    self.WBP_Com_Tab_ResourceBar:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
 end
 
 function M:OnReturnClick()

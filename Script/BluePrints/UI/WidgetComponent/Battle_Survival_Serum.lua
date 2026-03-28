@@ -19,12 +19,14 @@ end
 
 function Battle_Survival_Serum:SetUnitParams(MechanismID)
   local BuffTypeImgPathPostFix = DataMgr.Mechanism[MechanismID].GuideIconBPPath
-  BuffTypeImgPathPostFix = string.gsub(BuffTypeImgPathPostFix, "Guide_", "")
-  local BuffIconPath = "/Game/UI/UI_PNG/Battle/Battle_Buff_" .. BuffTypeImgPathPostFix .. ".Battle_Buff_" .. BuffTypeImgPathPostFix
-  UE.UResourceLibrary.LoadObjectAsync(self, BuffIconPath, {
-    self,
-    Battle_Survival_Serum.OnBuffIconLoadFinish
-  })
+  if BuffTypeImgPathPostFix then
+    BuffTypeImgPathPostFix = string.gsub(BuffTypeImgPathPostFix, "Guide_", "")
+    local BuffIconPath = "/Game/UI/UI_PNG/Battle/Battle_Buff_" .. BuffTypeImgPathPostFix .. ".Battle_Buff_" .. BuffTypeImgPathPostFix
+    UE.UResourceLibrary.LoadObjectAsync(self, BuffIconPath, {
+      self,
+      Battle_Survival_Serum.OnBuffIconLoadFinish
+    })
+  end
   self:OnEnergyChanged(self.Energy)
   local ResurgenceMat = self.Bar_Agentia_Surge:GetDynamicMaterial()
   if nil ~= ResurgenceMat then

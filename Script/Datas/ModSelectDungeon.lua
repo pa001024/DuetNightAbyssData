@@ -1,3 +1,5 @@
+local T = {}
+T.RT_1 = {160}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -78,7 +80,9 @@ return ReadOnly("ModSelectDungeon", {
       6007,
       6008,
       6009,
-      6010
+      6010,
+      6011,
+      6012
     },
     Name = "UI_DungeonMod_Tab_60",
     Sequence = 70
@@ -113,8 +117,8 @@ return ReadOnly("ModSelectDungeon", {
     Name = "UI_DungeonMod_Tab_70",
     Sequence = 90
   },
-  UI_DungeonMod_Tab_80 = {
-    Condition = {160},
+  UI_DungeonMod_Tab_75 = {
+    Condition = T.RT_1,
     MonRewardIdList = {
       8001,
       8002,
@@ -126,7 +130,18 @@ return ReadOnly("ModSelectDungeon", {
       8008,
       8009
     },
-    Name = "UI_DungeonMod_Tab_80",
+    Name = "UI_DungeonMod_Tab_75",
     Sequence = 100
+  },
+  UI_DungeonMod_Tab_80 = {
+    Condition = T.RT_1,
+    MonRewardIdList = {
+      8010,
+      8011,
+      8012,
+      8013
+    },
+    Name = "UI_DungeonMod_Tab_80",
+    Sequence = 110
   }
 })

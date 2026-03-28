@@ -24,8 +24,8 @@ T.RT_8 = {
   [0] = T.RT_7
 }
 T.RT_9 = {
-  [1] = 3,
-  [2] = 2
+  [1] = 2,
+  [2] = 3
 }
 T.RT_10 = {
   [0] = T.RT_7,
@@ -42,7 +42,12 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("Dungeon2DungeonRandomEvent", {
-  [1] = T.RT_4,
+  [1] = {
+    [0] = {
+      [1] = 5
+    },
+    [1] = T.RT_3
+  },
   [20002] = T.RT_4,
   [20003] = T.RT_4,
   [30001] = T.RT_4,

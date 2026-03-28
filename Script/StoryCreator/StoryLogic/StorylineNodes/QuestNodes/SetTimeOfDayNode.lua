@@ -12,7 +12,6 @@ function SetTimeOfDayNode:Execute()
     self.EnvironmentManager = UE4.UGameplayStatics.GetActorOfClass(Player, UE4.AEnvironmentManager:StaticClass())
   end
   self.EnvironmentManager:SetTimeOfDay(self.TargetTime, true, ESetTODReason.DesignSet, self.NeedLerp, self.LerpTime)
-  return "True"
 end
 
 return SetTimeOfDayNode

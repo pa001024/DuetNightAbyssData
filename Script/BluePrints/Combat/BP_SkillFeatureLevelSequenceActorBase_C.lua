@@ -40,6 +40,10 @@ function M:StartSkillFeatureCD()
       OwnerCharacter.bSkillFeatureCD = false
     end, false, 0, "SkillFeatureCD")
   end
+  local PlayerCameraManager = UE4.UGameplayStatics.GetPlayerCameraManager(self, 0)
+  if PlayerCameraManager then
+    PlayerCameraManager:ForbidCameraShake("SkillFeature", true)
+  end
 end
 
 function M:EndSkillFeature()
@@ -50,6 +54,10 @@ function M:EndSkillFeature()
   end
   self.Overridden.EndSkillFeature(self)
   self.OwnerCharacter:SkillFeatureHideAllEffectCreature("StartSkillFeature", false)
+  local PlayerCameraManager = UE4.UGameplayStatics.GetPlayerCameraManager(self, 0)
+  if PlayerCameraManager then
+    PlayerCameraManager:ForbidCameraShake("SkillFeature", false)
+  end
 end
 
 function M:ReceiveTick(DeltaSeconds)

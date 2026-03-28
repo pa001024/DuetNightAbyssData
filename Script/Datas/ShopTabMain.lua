@@ -82,6 +82,13 @@ return ReadOnly("ShopTabMain", {
     MainTabId = 704,
     UnlockHide = true
   },
+  [705] = {
+    ConditionId = "HaoJingShopTab",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_East_Season02.T_Tab_East_Season02'",
+    MainName = "UI_SHOP_TAB_ExploreBadge_East02",
+    MainTabId = 705,
+    UnlockHide = true
+  },
   [801] = {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_IceLake.T_Tab_IceLake'",
     MainName = "UI_SHOP_Fishing_Chapter01",
@@ -135,6 +142,16 @@ return ReadOnly("ShopTabMain", {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Item.T_Tab_Item'",
     MainName = "UI_AutoChess_ShopName",
     MainTabId = 10006
+  },
+  [10007] = {
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Item.T_Tab_Item'",
+    MainName = "UI_SoloTreasureShop",
+    MainTabId = 10007
+  },
+  [10008] = {
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Item.T_Tab_Item'",
+    MainName = "Event_FreeAppearance_tittle01",
+    MainTabId = 10008
   },
   [90001] = {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_ShopClothes.T_Tab_ShopClothes'",

@@ -144,10 +144,6 @@ end
 function WBP_ImpressionResult_PC:OnKeyUp(MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   DebugPrint("WBP_ImpressionResult_PC:OnKeyDown", InKey.KeyName)
-  local EventHandled = self:OnKeyUpForLSComp(MyGeometry, InKeyEvent)
-  if EventHandled then
-    return UE4.UWidgetBlueprintLibrary.Handled()
-  end
   if InKey.KeyName == "Gamepad_FaceButton_Right" then
     if self:IsTipsOpen() then
       self:SetFocus()

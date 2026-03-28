@@ -79,7 +79,6 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
@@ -87,6 +86,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 101107,
         SubRegionIdList = {},
         StoryGuideType = "Npc",
@@ -271,7 +271,6 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
@@ -279,6 +278,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 101107,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -439,17 +439,20 @@ return {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false
+                  TalkActorVisible = false,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 700207,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 }
               },
               OptionType = "normal",
@@ -458,6 +461,7 @@ return {
               SwitchToMaster = "Player",
               bNpcActionKeepIn = true,
               bNpcActionKeepOut = false,
+              bForceWaitNavLoaded = false,
               NormalOptions = {},
               OverrideFailBlend = false
             }
@@ -652,12 +656,14 @@ return {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200015,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200003,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 }
               },
               OptionType = "normal",

@@ -448,7 +448,6 @@ function M:Purchase(ShopItemData, ParentWidget)
       if not Avatar then
         return
       end
-      local PopupId = 100290
       local CachedShopItemData = self.ShopItemData
       local CachedParentWidget = self.ParentWidget
       local CachedCloseCallback = self.CloseCallback
@@ -463,14 +462,12 @@ function M:Purchase(ShopItemData, ParentWidget)
       local Params = {}
       Params.ShopItemId = self.ShopItemData.ItemId
       Params.Uid = Avatar.Uid
-      
-      function Params.CloseBtnCallbackFunction(Obj, PackageData)
-        ShopUtils:SetCloseGetItemPageCallback({CloseGetItemPageCallback = nil})
-      end
-      
-      Params.LeftGamepadKey = Const.GamepadFaceButtonUp
-      Params.ShowBKeyClose = true
-      self.PopupUI = UIManager(self):ShowCommonPopupUI(PopupId, Params, self)
+      Params.CloseBtnCallback = {
+        Func = function()
+          ShopUtils:SetCloseGetItemPageCallback({CloseGetItemPageCallback = nil})
+        end
+      }
+      UIManager(self):LoadUINew("ShopTargetPay", Params)
       self:CloseSelf(true)
     end
     return

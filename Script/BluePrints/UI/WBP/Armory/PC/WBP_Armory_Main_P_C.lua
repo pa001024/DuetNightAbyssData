@@ -360,7 +360,7 @@ function M:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
   if self.EnableDrag and "Gamepad_RightX" == InKeyName then
     if self.ActorController then
       local DeltaX = UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent) * 10
-      self.ActorController:OnDragging({X = DeltaX})
+      self.ActorController:OnDragViewActor({X = DeltaX})
     end
     return Handled
   end
@@ -807,7 +807,8 @@ function M:InitKeySettingCommon()
   else
     self.EnableMouseWheel = ConstCurSubTab.EnableMouseWheel
   end
-  if self.EnableMouseWheel and self.IsGamepadInput then
+  local ActorControllerEnable = self.ActorController:IsEnableCameraScrolling()
+  if self.EnableMouseWheel and self.IsGamepadInput and ActorControllerEnable then
     self:AddKeyEvents(self.RepeatKeyDownEvents, self.CameraScrollKeyDownEvents)
     table.insert(self.BottomKeyInfo, self.CameraScrollBottomKeyInfoList)
   end

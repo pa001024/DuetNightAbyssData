@@ -210,74 +210,92 @@ function BattleDumpUtils:GetSquadInfoByQuestRoleId(RoleId, Avatar)
   return Info, TemplateAvatar
 end
 
-function BattleDumpUtils:GetSquadInfoByTemplate(Avatar, AvatarSquad, TrialSquad, PetId)
+function BattleDumpUtils:GetSquadInfoByTemplate(Avatar, Squad)
   local TemplateAvatarComponent = require("BluePrints.Client.TemplateAvatar.TemplateAvatarComponent")
   local TemplateAvatar = TemplateAvatarComponent()
   local ExtraSquad = {}
-  TemplateAvatar.Mods = TemplateAvatar.__Class__.Props.Mods:GetTypeInstance(Avatar.Mods:save_dump(Avatar.Mods))
-  if AvatarSquad.Char then
-    TemplateAvatar.CurrentChar = AvatarSquad.Char
-    TemplateAvatar.Chars[AvatarSquad.Char] = Avatar.Chars[AvatarSquad.Char]
-    local CharId = Avatar.Chars[AvatarSquad.Char].CharId
-    TemplateAvatar.CommonChars[CharId] = Avatar.CommonChars[CharId]
+  
+  local function DumpAvatarData(Prop, Key)
+    return Avatar[Prop][Key]:all_dump(Avatar[Prop][Key])
   end
-  if TrialSquad.Char then
-    TemplateDumpUtils:CreateTemplate_Char(TemplateAvatar, TrialSquad.Char, nil, true)
+  
+  TemplateAvatar.Mods = TemplateAvatar.Mods:load(Avatar.Mods:save_dump(Avatar.Mods))
+  if Squad.Char.bTrial then
+    TemplateDumpUtils:CreateTemplate_Char(TemplateAvatar, Squad.Char.Id, nil, true)
+  else
+    local CharUuid = Squad.Char.Id
+    local CharId = Avatar.Chars[CharUuid].CharId
+    TemplateAvatar.CurrentChar = CharUuid
+    TemplateAvatar.Chars[CharUuid] = TemplateAvatar.Chars:LoadChar(DumpAvatarData("Chars", CharUuid))
+    TemplateAvatar.CommonChars[CharId] = TemplateAvatar.CommonChars:LoadCommonChar(DumpAvatarData("CommonChars", CharId))
+    ExtraSquad.CharModSuit = Squad.Char.ModIndex
   end
-  if AvatarSquad.MeleeWeapon then
-    TemplateAvatar.MeleeWeapon = AvatarSquad.MeleeWeapon
-    TemplateAvatar.Weapons[AvatarSquad.MeleeWeapon] = Avatar.Weapons[AvatarSquad.MeleeWeapon]
+  if Squad.MeleeWeapon.bTrial then
+    TemplateAvatar.MeleeWeapon = TemplateDumpUtils:CreateTemplate_Weapon(TemplateAvatar, Squad.MeleeWeapon.Id)
+  else
+    local MeleeWeaponUuid = Squad.MeleeWeapon.Id
+    TemplateAvatar.MeleeWeapon = MeleeWeaponUuid
+    TemplateAvatar.Weapons[MeleeWeaponUuid] = TemplateAvatar.Weapons:LoadWeapon(DumpAvatarData("Weapons", MeleeWeaponUuid))
+    ExtraSquad.MeleeWeaponModSuit = Squad.MeleeWeapon.ModIndex
   end
-  if TrialSquad.MeleeWeapon then
-    TemplateAvatar.MeleeWeapon = TemplateDumpUtils:CreateTemplate_Weapon(TemplateAvatar, TrialSquad.MeleeWeapon)
+  if Squad.RangedWeapon.bTrial then
+    TemplateAvatar.RangedWeapon = TemplateDumpUtils:CreateTemplate_Weapon(TemplateAvatar, Squad.RangedWeapon.Id)
+  else
+    local RangedWeaponUuid = Squad.RangedWeapon.Id
+    TemplateAvatar.RangedWeapon = RangedWeaponUuid
+    TemplateAvatar.Weapons[RangedWeaponUuid] = TemplateAvatar.Weapons:LoadWeapon(DumpAvatarData("Weapons", RangedWeaponUuid))
+    ExtraSquad.RangedWeaponModSuit = Squad.RangedWeapon.ModIndex
   end
-  if AvatarSquad.RangedWeapon then
-    TemplateAvatar.RangedWeapon = AvatarSquad.RangedWeapon
-    TemplateAvatar.Weapons[AvatarSquad.RangedWeapon] = Avatar.Weapons[AvatarSquad.RangedWeapon]
-  end
-  if TrialSquad.RangedWeapon then
-    TemplateAvatar.RangedWeapon = TemplateDumpUtils:CreateTemplate_Weapon(TemplateAvatar, TrialSquad.RangedWeapon)
-  end
-  if AvatarSquad.Phantom1 then
-    TemplateAvatar.Chars[AvatarSquad.Phantom1] = Avatar.Chars[AvatarSquad.Phantom1]
-    ExtraSquad.Phantom1 = AvatarSquad.Phantom1
-    local CharId = Avatar.Chars[AvatarSquad.Phantom1].CharId
-    TemplateAvatar.CommonChars[CharId] = Avatar.CommonChars[CharId]
-  end
-  if TrialSquad.Phantom1 then
-    local Ok, Uuid = TemplateDumpUtils:CreateTemplate_Char(TemplateAvatar, TrialSquad.Phantom1, nil, false)
-    if Ok then
-      ExtraSquad.Phantom1 = Uuid
+  if Squad.Phantom1 and next(Squad.Phantom1) then
+    if Squad.Phantom1.bTrial then
+      local Ok, Uuid = TemplateDumpUtils:CreateTemplate_Char(TemplateAvatar, Squad.Phantom1.Id, nil, false)
+      if Ok then
+        ExtraSquad.Phantom1 = Uuid
+      end
+    else
+      local Phantom1CharUuid = Squad.Phantom1.Id
+      local CharId = Avatar.Chars[Phantom1CharUuid].CharId
+      TemplateAvatar.Chars[Phantom1CharUuid] = TemplateAvatar.Chars:LoadChar(DumpAvatarData("Chars", Phantom1CharUuid))
+      TemplateAvatar.CommonChars[CharId] = TemplateAvatar.CommonChars:LoadCommonChar(DumpAvatarData("CommonChars", CharId))
+      ExtraSquad.Phantom1 = Phantom1CharUuid
+    end
+    if Squad.PhantomWeapon1.bTrial then
+      ExtraSquad.PhantomWeapon1 = TemplateDumpUtils:CreateTemplate_Weapon(TemplateAvatar, Squad.PhantomWeapon1.Id)
+    else
+      local PhantomWeapon1Uuid = Squad.PhantomWeapon1.Id
+      TemplateAvatar.Weapons[PhantomWeapon1Uuid] = TemplateAvatar.Weapons:LoadWeapon(DumpAvatarData("Weapons", PhantomWeapon1Uuid))
+      ExtraSquad.PhantomWeapon1 = PhantomWeapon1Uuid
     end
   end
-  if AvatarSquad.Phantom2 then
-    TemplateAvatar.Chars[AvatarSquad.Phantom2] = Avatar.Chars[AvatarSquad.Phantom2]
-    ExtraSquad.Phantom2 = AvatarSquad.Phantom2
-    local CharId = Avatar.Chars[AvatarSquad.Phantom2].CharId
-    TemplateAvatar.CommonChars[CharId] = Avatar.CommonChars[CharId]
-  end
-  if TrialSquad.Phantom2 then
-    local Ok, Uuid = TemplateDumpUtils:CreateTemplate_Char(TemplateAvatar, TrialSquad.Phantom2, nil, false)
-    if Ok then
-      ExtraSquad.Phantom2 = Uuid
+  if Squad.Phantom2 and next(Squad.Phantom2) then
+    if Squad.Phantom2.bTrial then
+      local Ok, Uuid = TemplateDumpUtils:CreateTemplate_Char(TemplateAvatar, Squad.Phantom2.Id, nil, false)
+      if Ok then
+        ExtraSquad.Phantom2 = Uuid
+      end
+    else
+      local Phantom2CharUuid = Squad.Phantom2.Id
+      local CharId = Avatar.Chars[Phantom2CharUuid].CharId
+      TemplateAvatar.Chars[Phantom2CharUuid] = TemplateAvatar.Chars:LoadChar(DumpAvatarData("Chars", Phantom2CharUuid))
+      TemplateAvatar.CommonChars[CharId] = TemplateAvatar.CommonChars:LoadCommonChar(DumpAvatarData("CommonChars", CharId))
+      ExtraSquad.Phantom2 = Phantom2CharUuid
+    end
+    if Squad.PhantomWeapon2.bTrial then
+      ExtraSquad.PhantomWeapon2 = TemplateDumpUtils:CreateTemplate_Weapon(TemplateAvatar, Squad.PhantomWeapon2.Id)
+    else
+      local PhantomWeapon2Uuid = Squad.PhantomWeapon2.Id
+      TemplateAvatar.Weapons[PhantomWeapon2Uuid] = TemplateAvatar.Weapons:LoadWeapon(DumpAvatarData("Weapons", PhantomWeapon2Uuid))
+      ExtraSquad.PhantomWeapon2 = PhantomWeapon2Uuid
     end
   end
-  if AvatarSquad.PhantomWeapon1 then
-    TemplateAvatar.Weapons[AvatarSquad.PhantomWeapon1] = Avatar.Weapons[AvatarSquad.PhantomWeapon1]
-    ExtraSquad.PhantomWeapon1 = AvatarSquad.PhantomWeapon1
+  if Squad.Pet.bTrial then
+    ExtraSquad.Pet = TemplateDumpUtils:CreateTemplate_Pet(TemplateAvatar, Squad.Pet.Id)
+  else
+    local PetUuid = Squad.Pet.Id
+    TemplateAvatar.Pets[PetUuid] = TemplateAvatar.Pets:LoadPet(DumpAvatarData("Pets", PetUuid))
+    ExtraSquad.Pet = TemplateAvatar.Pets[PetUuid]
   end
-  if TrialSquad.PhantomWeapon1 then
-    ExtraSquad.PhantomWeapon1 = TemplateDumpUtils:CreateTemplate_Weapon(TemplateAvatar, TrialSquad.PhantomWeapon1)
-  end
-  if AvatarSquad.PhantomWeapon2 then
-    TemplateAvatar.Weapons[AvatarSquad.PhantomWeapon2] = Avatar.Weapons[AvatarSquad.PhantomWeapon2]
-    ExtraSquad.PhantomWeapon2 = AvatarSquad.PhantomWeapon2
-  end
-  if TrialSquad.PhantomWeapon2 then
-    ExtraSquad.PhantomWeapon2 = TemplateDumpUtils:CreateTemplate_Weapon(TemplateAvatar, TrialSquad.PhantomWeapon2)
-  end
-  ExtraSquad.Pet = TemplateDumpUtils:CreateTemplate_Pet(TemplateAvatar, PetId)
-  return TemplateAvatar:GetSquadCreateInfoByNow(ExtraSquad), TemplateAvatar
+  return TemplateAvatar:GetSquadCreateInfoByExtra(ExtraSquad), TemplateAvatar
 end
 
 function BattleDumpUtils:GetBattleInfoByQuestRoleId(RoleId, Avatar)

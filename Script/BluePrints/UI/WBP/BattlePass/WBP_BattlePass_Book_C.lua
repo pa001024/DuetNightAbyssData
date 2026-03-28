@@ -123,6 +123,7 @@ function WBP_BattlePass_Book_C:Destruct()
   self.List_Reward:ClearListItems()
   self:ClearBindEventAndTimer()
   self:RemoveTimer("ShowAutoGetPopupUITimer")
+  self:RemoveTimer("CancelBlockInputTimer")
   self:RemoveTimer("RefreshLastLevelForLevelUpTimer")
   EventManager:RemoveEvent(EventID.BattlePassTaskProgressChange, self)
   EventManager:RemoveEvent(EventID.BattlePassLevelChange, self)
@@ -1166,7 +1167,7 @@ function WBP_BattlePass_Book_C:OnAnalogValueChanged(MyGeometry, InAnalogInputEve
     IsEventHandled = true
     if BattlePassController:GetModelData("ActorController") then
       local DeltaX = UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent) * 10
-      BattlePassController:GetModelData("ActorController"):OnDragging({X = DeltaX})
+      BattlePassController:GetModelData("ActorController"):OnDragViewActor({X = DeltaX})
     end
   end
   return IsEventHandled
@@ -1669,7 +1670,7 @@ function WBP_BattlePass_Book_C:ShowUITip()
   UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_BattlePass_Oversea_PurchaseLocked"))
 end
 
-function WBP_BattlePass_Book_C:OpenPurchase()
+function WBP_BattlePass_Book_C:DoOpenPurchase()
   AudioManager(self):PlayUISound(self, "event:/ui/common/battle_pass_btn_click_special", nil, nil)
   local PurchasePanel = UIManager(self):GetUIObj("BattlePassPurchase")
   if PurchasePanel then
@@ -1685,7 +1686,11 @@ function WBP_BattlePass_Book_C:OpenPurchase()
   end
 end
 
-function WBP_BattlePass_Book_C:OpenPurchaseDialog()
+function WBP_BattlePass_Book_C:OpenPurchase()
+  self:DoOpenPurchase()
+end
+
+function WBP_BattlePass_Book_C:DoOpenPurchaseDialog()
   AudioManager(self):PlayUISound(self, "event:/ui/common/battle_pass_btn_click_normal", nil, nil)
   local CurLoopMaxLevel = BattlePassUtils:GetCurLoopMaxLevel()
   local Params = {
@@ -1706,6 +1711,12 @@ function WBP_BattlePass_Book_C:OpenPurchaseDialog()
   self.PurchaseDialog = UIManager(self):ShowCommonPopupUI(BATTLE_PASS_LEVEL_PURCHASE_POPUP, Params)
 end
 
+function WBP_BattlePass_Book_C:OpenPurchaseDialog()
+  BattlePassUtils:TryOpenWithEndTimeReminder(self, function()
+    self:DoOpenPurchaseDialog()
+  end)
+end
+
 function WBP_BattlePass_Book_C:StartBuyLevel(Res)
   DebugPrint("gmy@WBP_BattlePass_Book_C M:StartBuyLevel", Res and Res.BattlePass and Res.BattlePass.Level)
   local Avatar = GWorld:GetAvatar()
@@ -1722,7 +1733,7 @@ function WBP_BattlePass_Book_C:StartBuyLevel(Res)
       if NeedTransformCount > Coin4Count then
         local CostType = CommonConst.Coins.Coin4
         local CostNum = NeedTransformCount
-        UIManager(self):ShowCommonPopupUI(100290, {
+        UIManager(self):LoadUINew("ShopTargetPay", {
           CostNum = CostNum,
           CostType = CostType,
           RightCallbackObj = self,
@@ -1734,10 +1745,8 @@ function WBP_BattlePass_Book_C:StartBuyLevel(Res)
               self:StartBuyLevel(Res)
             end,
             Obj = self
-          },
-          LeftGamepadKey = Const.GamepadFaceButtonUp,
-          ShowBKeyClose = true
-        }, self)
+          }
+        })
       else
         local ItemList = {}
         table.insert(ItemList, {
@@ -1827,20 +1836,30 @@ end
 
 function WBP_BattlePass_Book_C:ShowAutoGetPopupUI()
   self:BlockAllUIInput(true, "SP_DisplayOnly")
-  local CommonDialogParams = {}
-  
-  function CommonDialogParams.RightCallbackFunction()
-    self.ShowingPopupUI = false
-  end
-  
+  local bBlockInput = true
   if not self:IsExistTimer("ShowAutoGetPopupUITimer") then
     self:AddTimer(0.5, function()
-      self:BlockAllUIInput(false)
-      self.ShowingPopupUI = true
-      self.AutoGetPopupUI = UIManager(self):ShowCommonPopupUI(100203, CommonDialogParams, self)
-      self.NeedShowAutoGetPopupUI = false
-      self.Avatar:CallServerMethod("BattlePassAutoGetTaskRewardReset")
+      self.Avatar:CallServer("BattlePassAutoGetTaskRewardDetail", function(ErrCode, Rewards)
+        DebugPrint("BattlePassAutoGetTaskRewardDetail Callback", ErrCode, Rewards)
+        self:BlockAllUIInput(false)
+        bBlockInput = false
+        self.NeedShowAutoGetPopupUI = false
+        if ErrorCode:Check(ErrCode) then
+          self.ShowingPopupUI = true
+          self:ShowGetItemPage(Rewards, false, function()
+            self.ShowingPopupUI = false
+            self:SetFocus()
+          end, self)
+        end
+      end)
     end, false, 0, "ShowAutoGetPopupUITimer", true)
+    self:AddTimer(5, function()
+      if bBlockInput then
+        self:BlockAllUIInput(false)
+        bBlockInput = false
+        self.NeedShowAutoGetPopupUI = false
+      end
+    end, false, 0, "CancelBlockInputTimer", true)
   end
 end
 
@@ -1856,9 +1875,6 @@ function WBP_BattlePass_Book_C:TryClosePopupUI()
   end
   if IsValid(self.PopupUI) then
     self.PopupUI:Close()
-  end
-  if IsValid(self.AutoGetPopupUI) then
-    self.AutoGetPopupUI:Close()
   end
 end
 
@@ -1966,6 +1982,11 @@ function WBP_BattlePass_Book_C:TryCloseTips()
   end
   self.IsTipMode = false
   self.OpenTipsWidget = nil
+end
+
+function WBP_BattlePass_Book_C:ShowGetItemPage(PurchaseRewards, func, ParentWidget)
+  local UIManager = GWorld.GameInstance:GetGameUIManager()
+  UIManager:LoadUINew("BattlePassAutoGetItemPage", PurchaseRewards, func, ParentWidget)
 end
 
 return WBP_BattlePass_Book_C

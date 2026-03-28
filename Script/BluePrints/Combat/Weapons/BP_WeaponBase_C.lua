@@ -1,6 +1,7 @@
 require("UnLua")
 local EffectResults = require("BluePrints.Combat.BattleLogic.EffectResults")
 local EMCache = require("EMCache.EMCache")
+local HyperWeaponUtils = require("Utils.HyperWeaponUtils")
 local BP_WeaponBase_C = Class({
   "BluePrints.Combat.Components.EffectSourceInterface"
 })
@@ -39,13 +40,11 @@ function BP_WeaponBase_C:SetData()
 end
 
 function BP_WeaponBase_C:ApplyWeaponAttributes()
-  if IsClient(self) then
+  if not self:CanApplyWeaponAttributes() then
     return
   end
-  if 0 ~= self.InheritAttributesWeaponId then
-    return
-  end
-  self:SetTableAttr(self.ReplaceAttrs)
+  local attrs = rawget(self, "ReplaceAttrs")
+  self:SetTableAttr(attrs)
 end
 
 function BP_WeaponBase_C:SetServerBornInfo()
@@ -68,7 +67,10 @@ end
 function BP_WeaponBase_C:Lua_InitShowWeaponAppearance()
   self:InitWeaponBreakMI()
   self:InitWeaponColor(self.AppearanceInfo and self.AppearanceInfo.Colors)
-  self:ChangeAccessory(self.AppearanceInfo and self.AppearanceInfo.AccessoryId)
+  local AccessorySuit = self.AppearanceInfo and self.AppearanceInfo.AccessorySuit or {}
+  for AccessoryType, AccessoryTypeIdx in pairs(CommonConst.WeaponAccessoryTypeIndex) do
+    self:ChangeAccessory(AccessorySuit[AccessoryTypeIdx], AccessoryType)
+  end
   EventManager:FireEvent(EventID.OnShowWeaponLoadFinished, self)
 end
 
@@ -122,23 +124,41 @@ function BP_WeaponBase_C:InitWeaponSpecialColor(Colors)
   end
 end
 
-function BP_WeaponBase_C:ChangeAccessory(AccessoryId)
-  self:DetachWeaponSuit()
-  if nil == AccessoryId then
+function BP_WeaponBase_C:ChangeAccessory(AccessoryId, AccessoryType)
+  local Data = DataMgr.WeaponAccessory[AccessoryId]
+  if AccessoryType == CommonConst.WeaponAccessoryTypes.Accessory then
+    self:DetachWeaponSuit()
+    if nil == Data then
+      self.AccessoryAuName = ""
+      return
+    end
+    local Offsets = Data.Offset or {
+      0,
+      0,
+      0
+    }
+    local Offset = FTransform(FRotator(0, 0, 0):ToQuat(), FVector(Offsets[1] or 0, Offsets[2] or 0, Offsets[3] or 0))
+    self:AttachWeaponSuit(Data.AccessorySocket, Data.ModelPath, Offset, Data.NiagaraPath, Data.SocketName)
+    self:ChangeWPSuitLook(Data.ChangeColor or 1)
+    if Data.AuSplice then
+      self.AccessoryAuName = Data.AuSplice
+    else
+      self.AccessoryAuName = ""
+    end
     return
   end
-  local Data = DataMgr.WeaponAccessory[AccessoryId]
   if nil == Data then
     return
   end
-  local Offsets = Data.Offset or {
-    0,
-    0,
-    0
-  }
-  local Offset = FTransform(FRotator(0, 0, 0):ToQuat(), FVector(Offsets[1] or 0, Offsets[2] or 0, Offsets[3] or 0))
-  self:AttachWeaponSuit(Data.AccessorySocket, Data.ModelPath, Offset, Data.NiagaraPath, Data.NiagaraSocket)
-  self:ChangeWPSuitLook(Data.ChangeColor or 1)
+  if Data.StanceFXType and Data.StanceFXTag then
+    self.StanceFXName = Data.StanceFXType .. "_" .. Data.StanceFXTag .. "_"
+    self.StanceFXType = Data.StanceFXType
+    self.StanceFXTag = Data.StanceFXTag
+  else
+    self.StanceFXName = ""
+    self.StanceFXType = ""
+    self.StanceFXTag = ""
+  end
 end
 
 function BP_WeaponBase_C:ClearAccessories()
@@ -225,76 +245,6 @@ function BP_WeaponBase_C:RemoveWeaponSkill()
   end
 end
 
-function BP_WeaponBase_C:ActivateSkills()
-  if not self.Owner then
-    return
-  end
-  self:SetIsActivated(true)
-  local ChangedSkills = TMap(0, 0)
-  if self.Owner.SkillsComponent and self.Owner.SkillsComponent.SkillInfos then
-    for _, Data in pairs(self.Owner.SkillsComponent.SkillInfos) do
-      if Data.Weapon and Data.Weapon == self and not Data.IsSubSkill then
-        local SkillId = Data.SkillId
-        local Skill = self.Owner:GetSkill(SkillId)
-        if Skill then
-          local SkillType = Skill:GetSkillType()
-          local OldSkillId = self.Owner.Type_2_Skills:Find(SkillType)
-          if OldSkillId and OldSkillId ~= SkillId then
-            self.Owner.WeaponReplaceSkills:Add(SkillId, OldSkillId)
-            ChangedSkills:Add(OldSkillId, SkillId)
-          end
-        end
-        self.Owner:ActivateSkill(SkillId)
-      end
-    end
-  else
-    local SkillList = self.Data.WeaponSkillList
-    if nil ~= SkillList then
-      for _, SkillId in pairs(SkillList) do
-        local Skill = self.Owner:GetSkill(SkillId)
-        if Skill then
-          local SkillType = Skill:GetSkillType()
-          local OldSkillId = self.Owner.Type_2_Skills:Find(SkillType)
-          if OldSkillId and OldSkillId ~= SkillId then
-            self.Owner.WeaponReplaceSkills:Add(SkillId, OldSkillId)
-            ChangedSkills:Add(OldSkillId, SkillId)
-          end
-        end
-        self.Owner:ActivateSkill(SkillId)
-      end
-    end
-  end
-  if self.Owner:IsMainPlayer() and not self.Owner:IsRobot() then
-    self:AddDelayFrameFunc(function()
-      if IsValid(self.Owner) and self.Owner.UpdateSkillUIInfo then
-        self.Owner:UpdateSkillUIInfo(ChangedSkills)
-      end
-    end)
-  end
-end
-
-function BP_WeaponBase_C:DeactivateSkills()
-  if not self.Owner then
-    return
-  end
-  self:SetIsActivated(false)
-  if self.Owner.SkillsComponent and self.Owner.SkillsComponent.SkillInfos then
-    for _, Data in pairs(self.Owner.SkillsComponent.SkillInfos) do
-      if Data.Weapon and Data.Weapon == self and not Data.IsSubSkill then
-        local SkillId = Data.SkillId
-        self.Owner:DeactivateSkill(SkillId)
-      end
-    end
-  else
-    local SkillList = self.Data.WeaponSkillList
-    if nil ~= SkillList then
-      for _, v in pairs(SkillList) do
-        self.Owner:DeactivateSkill(v)
-      end
-    end
-  end
-end
-
 function BP_WeaponBase_C:GetSkills()
   local Skills = {}
   if self.Owner.SkillsComponent and self.Owner.SkillsComponent.SkillInfos then
@@ -374,6 +324,31 @@ end
 
 function BP_WeaponBase_C:GetHideDelayTimeOnMoveToBack()
   return 5
+end
+
+function BP_WeaponBase_C:IsHyperWeapon()
+  return HyperWeaponUtils.IsHyperWeapon(self.WeaponId)
+end
+
+function BP_WeaponBase_C:IsHyperWeaponSkillActivated(HyperWeaponSkillId)
+  if not self:IsHyperWeapon() then
+    return false
+  end
+  local Avatar = GWorld:GetAvatar()
+  local HyperWeaponUid
+  local _ServerMeleeWeapon = Avatar and Avatar.Weapons[Avatar.MeleeWeapon]
+  if _ServerMeleeWeapon and _ServerMeleeWeapon.WeaponId == self.WeaponId then
+    HyperWeaponUid = Avatar.MeleeWeapon
+  else
+    local _ServerRangedWeapon = Avatar and Avatar.Weapons[Avatar.RangedWeapon]
+    if _ServerRangedWeapon and _ServerRangedWeapon.WeaponId == self.WeaponId then
+      HyperWeaponUid = Avatar.RangedWeapon
+    end
+  end
+  if not HyperWeaponUid then
+    return false
+  end
+  return HyperWeaponUtils.IsHyperWeaponSkillActivated(HyperWeaponUid, HyperWeaponSkillId)
 end
 
 AssembleComponents(BP_WeaponBase_C)

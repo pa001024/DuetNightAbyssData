@@ -13,7 +13,9 @@ M._components = {
   "BluePrints.UI.UI_PC.LevelMap.Widget.Wild.Components.DispatchPointComponent",
   "BluePrints.UI.UI_PC.LevelMap.Widget.Wild.Components.TaskIndicatorComponent",
   "BluePrints.UI.UI_PC.LevelMap.Widget.Wild.Components.MultiPlayerChangeCompoment",
-  "BluePrints.UI.UI_PC.LevelMap.Widget.Wild.Components.DungeonCompoment"
+  "BluePrints.UI.UI_PC.LevelMap.Widget.Wild.Components.DungeonCompoment",
+  "BluePrints.UI.UI_PC.LevelMap.Widget.Wild.Components.MapPaneCompoment",
+  "BluePrints.UI.UI_PC.LevelMap.Widget.Wild.Components.SoloTreasureComponent"
 }
 local TaskUtils = require("BluePrints.UI.TaskPanel.TaskUtils")
 local CommonUtils = require("Utils.CommonUtils")
@@ -492,21 +494,6 @@ function M:InitInRegionMap()
   self.Panel_Point:SetRenderTranslation(self.CurrentDragOffset)
   self.FloorWidget = self.MainMap.FloorWidget
   self.FloorWidget:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-  if not self.LevelMap_Convey_Widget_PC then
-    self.LevelMap_Convey_Widget_PC = self:CreateWidgetAsync("RegionMapConvey", self.CoroutineInitObj)
-    self.MainMap.Convey:AddChild(self.LevelMap_Convey_Widget_PC)
-    self.LevelMap_Convey_Widget_PC.Text_LockTips:SetText(GText("UI_TELEPORTPOINT_UNLOCK"))
-    self.LevelMap_Convey_Widget_PC.Btn_Go:SetText(GText("UI_MECHANISM_105"))
-    self.LevelMap_Convey_Widget_PC.Btn_Track:SetText(GText("UI_RegionMap_Track"))
-    self.LevelMap_Convey_Widget_PC.Btn_Go:BindEventOnClicked(self, self.OnConveyClicked)
-    self.LevelMap_Convey_Widget_PC.Btn_Track:BindEventOnClicked(self, self.OnConveyTrace)
-    self.LevelMap_Convey_Widget_PC.Btn_Track:TryOverrideSoundFunc(self.OnTraceSound)
-    self.LevelMap_Convey_Widget_PC.Btn_Go_Track:BindEventOnClicked(self, self.OnConveyGoTrace)
-    self.LevelMap_Convey_Widget_PC.Btn_Go_Track:TryOverrideSoundFunc(self.OnTraceSound)
-    self.LevelMap_Convey_Widget_PC.Btn_Go_Track:SetText(GText("UI_RegionMap_Track"))
-    self.LevelMap_Convey_Widget_PC:InitWildMap(self)
-  end
-  self.LevelMap_Convey_Widget_PC:SetVisibility(ESlateVisibility.Collapsed)
   if not self.TureHardBoss_MapTips then
     self.TureHardBoss_MapTips = self:CreateWidgetAsync("HardBossMapTips", self.CoroutineInitObj)
     self.MainMap.Convey_HardBoss:AddChild(self.TureHardBoss_MapTips)
@@ -531,6 +518,7 @@ function M:InitInRegionMap()
     end
   end
   self.TureHardBoss_MapTips:SetVisibility(ESlateVisibility.Collapsed)
+  self:InitConveyWidget()
   if not self.InteractivePanel then
     self.InteractivePanel = self.MainMap.Interactive_Locate
     local Item1 = self:CreateWidgetAsync("RegionMapSelectItem", self.CoroutineInitObj)
@@ -591,6 +579,33 @@ function M:InitInRegionMap()
     Move = self.OnRegionTouchMove,
     Up = self.OnRegionTouchUp
   })
+  if _G.ShowRegionmapPane then
+    self.Panel_Touch:SetVisibility(ESlateVisibility.Collapsed)
+  end
+end
+
+function M:InitConveyWidget()
+  if not self.LevelMap_Convey_Widget_PC then
+    self.LevelMap_Convey_Widget_PC = self:CreateWidgetAsync("RegionMapConvey", self.CoroutineInitObj)
+    self.MainMap.Convey:AddChild(self.LevelMap_Convey_Widget_PC)
+    self.LevelMap_Convey_Widget_PC.Text_LockTips:SetText(GText("UI_TELEPORTPOINT_UNLOCK"))
+    self.LevelMap_Convey_Widget_PC.Btn_Go:SetText(GText("UI_MECHANISM_105"))
+    self.LevelMap_Convey_Widget_PC.Btn_Track:SetText(GText("UI_RegionMap_Track"))
+    self.LevelMap_Convey_Widget_PC.Btn_Go:BindEventOnClicked(self, self.OnConveyClicked)
+    self.LevelMap_Convey_Widget_PC.Btn_Track:BindEventOnClicked(self, self.OnConveyTrace)
+    self.LevelMap_Convey_Widget_PC.Btn_Track:TryOverrideSoundFunc(self.OnTraceSound)
+    self.LevelMap_Convey_Widget_PC.Btn_Go_Track:BindEventOnClicked(self, self.OnConveyGoTrace)
+    self.LevelMap_Convey_Widget_PC.Btn_Go_Track:TryOverrideSoundFunc(self.OnTraceSound)
+    self.LevelMap_Convey_Widget_PC.Btn_Go_Track:SetText(GText("UI_RegionMap_Track"))
+    self.LevelMap_Convey_Widget_PC:InitWildMap(self)
+  end
+  self.LevelMap_Convey_Widget_PC:SetVisibility(ESlateVisibility.Collapsed)
+end
+
+function M:OnConveyGoTrace()
+  if self.OnConveyGoTrace_Component then
+    self.OnConveyGoTrace_Component(self)
+  end
 end
 
 function M:InitDispatchCondition()
@@ -699,6 +714,15 @@ function M:UpdateMapImageFog()
         Material:SetVectorParameterValue("Offset", LinerColor)
         Material:SetScalarParameterValue("Rotator", self.MapRotation / 360.0)
         if _G.ShowRegionmapPane and not self.IsMiniMap then
+          if not self.PaneBtns then
+            self.PaneBtns = {}
+          end
+          if not self.PaneBtns[FloorId] then
+            self.PaneBtns[FloorId] = {}
+          end
+          if not self.PaneBtns[FloorId][Index] then
+            self.PaneBtns[FloorId][Index] = {}
+          end
           local Pane = UIManager(self):CreateWidget("/Game/UI/WBP/Map/Widget/RegionMap/WBP_Map_Pane.WBP_Map_Pane_C")
           Map:GetParent():AddChild(Pane)
           if UKismetMathLibrary.ClassIsChildOf(Pane.Slot:GetClass(), UUniformGridSlot:StaticClass()) then
@@ -713,6 +737,10 @@ function M:UpdateMapImageFog()
             Pane.Text:SetText(Index)
           end
           Pane:SetRenderTransformAngle(360 - self.MapRotation)
+          for i = 0, 15 do
+            Pane["WBP_Map_PaneBtn_" .. i]:Init(Index, i + 1, FloorId, self)
+            self.PaneBtns[FloorId][Index][i + 1] = Pane["WBP_Map_PaneBtn_" .. i]
+          end
         end
       end
     end
@@ -945,6 +973,10 @@ function M:OpenOptionSelect()
   end
 end
 
+function M:GoToCurrentPosition()
+  self:MoveMapTo(self.gamerLoc * -1)
+end
+
 function M:OnKeyDown(MyGeometry, InKeyEvent)
   if self.IsMiniMap then
     return UWidgetBlueprintLibrary.Unhandled()
@@ -985,7 +1017,7 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
       elseif self.GamepadSelectPoint.GuidePoint then
         self.GamepadSelectPoint.GuidePoint.Button_GuidePoint.OnClicked:Broadcast()
       end
-    else
+    elseif not self.IsInDungeon then
       self:ClosePanel(true)
       self:OpenMark(nil, self.CurrentDragOffset * -1 + self.ScreenSize)
     end
@@ -993,6 +1025,9 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
   elseif InKeyName == UIConst.GamePadKey.LeftThumb or "V" == InKeyName then
     if not self.LastPanelId and self.InteractivePanel then
       self:OpenOptionSelect()
+      return UWidgetBlueprintLibrary.Handled()
+    elseif self.IsInDungeon then
+      self:GoToCurrentPosition()
       return UWidgetBlueprintLibrary.Handled()
     end
   elseif InKeyName == UIConst.GamePadKey.DPadUp then
@@ -1006,7 +1041,7 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
       end
     end
   elseif InKeyName == UIConst.GamePadKey.DPadDown then
-    if next(self.FloorWidgetTable) then
+    if self.FloorWidgetTable and next(self.FloorWidgetTable) then
       local Index = self.FloorWidget.WrapBox:GetChildIndex(self.LastFloorWidget)
       if Index ~= self.FloorWidget.WrapBox:GetChildrenCount() - 1 then
         local Child = self.FloorWidget.WrapBox:GetChildAt(Index + 1)
@@ -1016,13 +1051,19 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
       end
     end
   elseif InKeyName == UIConst.GamePadKey.FaceButtonLeft or "L" == InKeyName then
-    if self.MainMap.Entrance_Dispatch:GetVisibility() == ESlateVisibility.SelfHitTestInvisible then
+    if self.MainMap.Entrance_Dispatch and self.MainMap.Entrance_Dispatch:GetVisibility() == ESlateVisibility.SelfHitTestInvisible then
       self.MainMap:OnClickDispatch()
+    end
+    if self.KeyLocPanel then
+      self.KeyLocPanel:OnOpenClick()
     end
     return UWidgetBlueprintLibrary.Handled()
   elseif "SpaceBar" == InKeyName then
     if self.MainMap.DispatchList and self.MainMap.DispatchAgentList == nil then
       self.MainMap.DispatchList:OnClickSpace()
+    end
+    if self.KeyLocPanel then
+      self.KeyLocPanel:OnOpenClick()
     end
     return UWidgetBlueprintLibrary.Handled()
   end
@@ -1280,7 +1321,7 @@ function M:OnPointerUp(MyGeometry, Event)
     return UWidgetBlueprintLibrary.Handled()
   end
   self.IsDragging = false
-  if self.IsClicked and false == self.IsOpenDispatch and not self:ClosePanel() and self:CheckControlPriority(ControlPriority.Normal) then
+  if self.IsClicked and false == self.IsOpenDispatch and not self:ClosePanel() and self:CheckControlPriority(ControlPriority.Normal) and not self.IsInDungeon then
     local position = USlateBlueprintLibrary.AbsoluteToLocal(self.Panel_Point:GetCachedGeometry(), UKismetInputLibrary.PointerEvent_GetScreenSpacePosition(Event))
     self:OpenMark(nil, position)
   end
@@ -1340,6 +1381,9 @@ function M:ClosePanel(IsImmediately)
       self.FloorWidget:SetVisibility(IsEmptyTable(self.FloorWidgetTable) and ESlateVisibility.Collapsed or ESlateVisibility.SelfHitTestInvisible)
     end
     self.MainMap.DispatchId = -1
+  end
+  if self.KeyLocPanel then
+    self.KeyLocPanel:Show()
   end
   if self.MainMap.DispatchDetail then
     self.MainMap.DispatchDetail:RealClose()
@@ -1810,6 +1854,9 @@ function M:ShowFloor(FloorId)
 end
 
 function M:OnClickOpenRegionList_Sound()
+  if self.IsInDungeon then
+    return
+  end
   AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", "", nil)
   self:OnClickOpenRegionList()
 end
@@ -1894,7 +1941,19 @@ function M:ChangeRegionForSmartIndicator(InTaskSubRegionId, TrackingQuestChainId
     return
   end
   local RegionId = DataMgr.SubRegion[InTaskSubRegionId].RegionId
-  if self:CheckIsAnyTeleporPointUnlock(InTaskSubRegionId, true) or DataMgr.RegionGraph[Avatar.CurrentRegionId] and DataMgr.RegionGraph[Avatar.CurrentRegionId].RegionStart == nil then
+  if DataMgr.RegionGraph[Avatar.CurrentRegionId] and DataMgr.RegionGraph[Avatar.CurrentRegionId].RegionStart == nil and DataMgr.RegionGraph[InTaskSubRegionId] and DataMgr.RegionGraph[InTaskSubRegionId].RegionStart == nil then
+    local TargetRegionTargetDatas = DataMgr.RegionGraph[InTaskSubRegionId].SubRegionTarget.RegionTarget
+    for _, IterData in pairs(TargetRegionTargetDatas) do
+      if IterData and IterData[1] and IterData[2] then
+        local IterRegionId = DataMgr.SubRegion[IterData[1]].RegionId
+        self:ChangeRegion(IterRegionId, function()
+          self:AddMainTaskGuidePointToRegionMapForTrackingQuest(IterData[2])
+          self:MoveMapToQuestTarget(TrackingQuestChainId)
+        end)
+        return
+      end
+    end
+  elseif self:CheckIsAnyTeleporPointUnlock(InTaskSubRegionId, true) or DataMgr.RegionGraph[Avatar.CurrentRegionId] and DataMgr.RegionGraph[Avatar.CurrentRegionId].RegionStart == nil then
     self:ChangeRegion(RegionId, function()
       self:ShowMissionIndicatorsInRegionMap()
       self:MoveMapToQuestTarget(TrackingQuestChainId)
@@ -2005,6 +2064,13 @@ function M:OnCommonTrack(TrackingType, Id, IsAdd)
       local Transform = FTransform(FRotator(), FVector(Location.X, Location.Y, -100000))
       self.MarkPointTargetActor = self:GetWorld():SpawnActor(ActorClass, Transform, ESpawnActorCollisionHandlingMethod.AlwaysSpawn, nil, self, nil)
       self.MarkPointTargetActor.MarkUuid = Id
+    elseif TrackingType == CommonConst.RegionMapTrackingType.SoloTreasure then
+      if self:IsSolotreasureStaticCreator(Id) then
+        TargetActor = self.GameState.StaticCreatorMap:FindRef(Id)
+        StaticCreartorId:Add(Id)
+      else
+        self:AddGuideRandomCreator(Id)
+      end
     end
     local arrow = self.MainMap:NewPointArrow()
     self:AddTrack(trackTarget, arrow, TargetActor)
@@ -2042,6 +2108,12 @@ function M:OnCommonTrack(TrackingType, Id, IsAdd)
       local CreatorId = Data.TriggerBoxID
       if CreatorId then
         StaticCreartorId:Add(CreatorId)
+      end
+    elseif TrackingType == CommonConst.RegionMapTrackingType.SoloTreasure then
+      if self:IsSolotreasureStaticCreator(Id) then
+        StaticCreartorId:Add(Id)
+      else
+        self:RemoveGuideRandomCreator(Id)
       end
     end
     if TrackingType == CommonConst.RegionMapTrackingType.MiniDispatchPoint and DataMgr.Dispatch[Id] ~= nil then
@@ -2113,7 +2185,8 @@ function M:GetTrackingTarget(TrackingType, Id)
     [CommonConst.RegionMapTrackingType.TeleportPoint] = self.TeleportPoints,
     [CommonConst.RegionMapTrackingType.RegionPoint] = self.RegionPoints,
     [CommonConst.RegionMapTrackingType.MarkPoint] = self.MarkTable,
-    [CommonConst.RegionMapTrackingType.MiniDispatchPoint] = self.MiniDispatchPoint
+    [CommonConst.RegionMapTrackingType.MiniDispatchPoint] = self.MiniDispatchPoint,
+    [CommonConst.RegionMapTrackingType.SoloTreasure] = self.SoloTreasurePoints
   }
   if not TrackingType2Table[TrackingType] or not TrackingType2Table[TrackingType][Id] then
     return nil

@@ -22,22 +22,41 @@ T.RT_5 = {
   [19006] = 2
 }
 T.RT_6 = {
-  [19002] = 5,
-  [19003] = 5,
-  [19008] = 5
+  [19003] = 3,
+  [19006] = 3
 }
 T.RT_7 = {
+  [19002] = 6,
+  [19004] = 6,
+  [19006] = 6
+}
+T.RT_8 = {
+  [19002] = 9,
+  [19005] = 9,
+  [19008] = 9
+}
+T.RT_9 = {
   [19002] = 8,
   [19003] = 8,
   [19004] = 8
 }
-T.RT_8 = {
-  [19001] = 5,
-  [19002] = 5,
-  [19006] = 5,
-  [19007] = 5
+T.RT_10 = {
+  [19005] = 2,
+  [19006] = 2
 }
-T.RT_9 = {
+T.RT_11 = {
+  [19002] = 5,
+  [19004] = 5
+}
+T.RT_12 = {
+  [19007] = 8,
+  [19008] = 8
+}
+T.RT_13 = {
+  [19001] = 10,
+  [19002] = 10
+}
+T.RT_14 = {
   [19001] = 2,
   [19008] = 2
 }
@@ -136,6 +155,11 @@ return ReadOnly("PartyTopic", {
     PartyTopicName = "PartyTopic_Name_110304",
     PartyTopicReward = 7053,
     PartyTopicTalkId = "Invite/Tuosi_110304.story"
+  },
+  [150101] = {
+    PartyTopicConsume = T.RT_5,
+    PartyTopicId = 150101,
+    PartyTopicReward = 7050
   },
   [150201] = {
     MemoryDescription = "PartyReward_Description_150201",
@@ -238,6 +262,39 @@ return ReadOnly("PartyTopic", {
     PartyTopicName = "PartyTopic_Name_150304",
     PartyTopicReward = 7053,
     PartyTopicTalkId = "Invite/Kezhou_150304.story"
+  },
+  [150401] = {
+    MemoryDescription = "PartyReward_Description_150401",
+    MemoryIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Entertainment/T_Entertainment_Suyi_1.T_Entertainment_Suyi_1'",
+    MemoryName = "PartyReward_Name_150401",
+    PartyTopicConsume = T.RT_6,
+    PartyTopicDescription = "PartyTopic_Description_150401",
+    PartyTopicId = 150401,
+    PartyTopicName = "PartyTopic_Name_150401",
+    PartyTopicReward = 7050,
+    PartyTopicTalkId = "Invite/Suyi_150401.story"
+  },
+  [150402] = {
+    MemoryDescription = "PartyReward_Description_150402",
+    MemoryIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Entertainment/T_Entertainment_Suyi_2.T_Entertainment_Suyi_2'",
+    MemoryName = "PartyReward_Name_150402",
+    PartyTopicConsume = T.RT_7,
+    PartyTopicDescription = "PartyTopic_Description_150402",
+    PartyTopicId = 150402,
+    PartyTopicName = "PartyTopic_Name_150402",
+    PartyTopicReward = 7051,
+    PartyTopicTalkId = "Invite/Suyi_150402.story"
+  },
+  [150403] = {
+    MemoryDescription = "PartyReward_Description_150403",
+    MemoryIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Entertainment/T_Entertainment_Suyi_3.T_Entertainment_Suyi_3'",
+    MemoryName = "PartyReward_Name_150403",
+    PartyTopicConsume = T.RT_8,
+    PartyTopicDescription = "PartyTopic_Description_150403",
+    PartyTopicId = 150403,
+    PartyTopicName = "PartyTopic_Name_150403",
+    PartyTopicReward = 7052,
+    PartyTopicTalkId = "Invite/Suyi_150403.story"
   },
   [180101] = {
     ConditionId = 100204,
@@ -379,7 +436,11 @@ return ReadOnly("PartyTopic", {
     MemoryDescription = "PartyReward_Description_230102",
     MemoryIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Entertainment/T_Entertainment_Zhangyu_2.T_Entertainment_Zhangyu_2'",
     MemoryName = "PartyReward_Name_230102",
-    PartyTopicConsume = T.RT_6,
+    PartyTopicConsume = {
+      [19002] = 5,
+      [19003] = 5,
+      [19008] = 5
+    },
     PartyTopicDescription = "PartyTopic_Description_230102",
     PartyTopicId = 230102,
     PartyTopicName = "PartyTopic_Name_230102",
@@ -481,10 +542,7 @@ return ReadOnly("PartyTopic", {
     MemoryDescription = "PartyReward_Description_310101",
     MemoryIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Entertainment/T_Entertainment_Linen_1.T_Entertainment_Linen_1'",
     MemoryName = "PartyReward_Name_310101",
-    PartyTopicConsume = {
-      [19003] = 3,
-      [19006] = 3
-    },
+    PartyTopicConsume = T.RT_6,
     PartyTopicDescription = "PartyTopic_Description_310101",
     PartyTopicId = 310101,
     PartyTopicName = "PartyTopic_Name_310101",
@@ -495,11 +553,7 @@ return ReadOnly("PartyTopic", {
     MemoryDescription = "PartyReward_Description_310102",
     MemoryIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Entertainment/T_Entertainment_Linen_2.T_Entertainment_Linen_2'",
     MemoryName = "PartyReward_Name_310102",
-    PartyTopicConsume = {
-      [19002] = 6,
-      [19004] = 6,
-      [19006] = 6
-    },
+    PartyTopicConsume = T.RT_7,
     PartyTopicDescription = "PartyTopic_Description_310102",
     PartyTopicId = 310102,
     PartyTopicName = "PartyTopic_Name_310102",
@@ -510,11 +564,7 @@ return ReadOnly("PartyTopic", {
     MemoryDescription = "PartyReward_Description_310103",
     MemoryIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Entertainment/T_Entertainment_Linen_3.T_Entertainment_Linen_3'",
     MemoryName = "PartyReward_Name_310103",
-    PartyTopicConsume = {
-      [19002] = 9,
-      [19005] = 9,
-      [19008] = 9
-    },
+    PartyTopicConsume = T.RT_8,
     PartyTopicDescription = "PartyTopic_Description_310103",
     PartyTopicId = 310103,
     PartyTopicName = "PartyTopic_Name_310103",
@@ -612,7 +662,7 @@ return ReadOnly("PartyTopic", {
     MemoryDescription = "PartyReward_Description_310303",
     MemoryIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Entertainment/T_Entertainment_Yeer_3.T_Entertainment_Yeer_3'",
     MemoryName = "PartyReward_Name_310303",
-    PartyTopicConsume = T.RT_7,
+    PartyTopicConsume = T.RT_9,
     PartyTopicDescription = "PartyTopic_Description_310303",
     PartyTopicId = 310303,
     PartyTopicName = "PartyTopic_Name_310303",
@@ -638,10 +688,7 @@ return ReadOnly("PartyTopic", {
     MemoryDescription = "PartyReward_Description_320101",
     MemoryIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Entertainment/T_Entertainment_Haier_1.T_Entertainment_Haier_1'",
     MemoryName = "PartyReward_Name_320101",
-    PartyTopicConsume = {
-      [19005] = 2,
-      [19006] = 2
-    },
+    PartyTopicConsume = T.RT_10,
     PartyTopicDescription = "PartyTopic_Description_320101",
     PartyTopicId = 320101,
     PartyTopicName = "PartyTopic_Name_320101",
@@ -652,10 +699,7 @@ return ReadOnly("PartyTopic", {
     MemoryDescription = "PartyReward_Description_320102",
     MemoryIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Entertainment/T_Entertainment_Haier_2.T_Entertainment_Haier_2'",
     MemoryName = "PartyReward_Name_320102",
-    PartyTopicConsume = {
-      [19002] = 5,
-      [19004] = 5
-    },
+    PartyTopicConsume = T.RT_11,
     PartyTopicDescription = "PartyTopic_Description_320102",
     PartyTopicId = 320102,
     PartyTopicName = "PartyTopic_Name_320102",
@@ -666,10 +710,7 @@ return ReadOnly("PartyTopic", {
     MemoryDescription = "PartyReward_Description_320103",
     MemoryIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Entertainment/T_Entertainment_Haier_3.T_Entertainment_Haier_3'",
     MemoryName = "PartyReward_Name_320103",
-    PartyTopicConsume = {
-      [19007] = 8,
-      [19008] = 8
-    },
+    PartyTopicConsume = T.RT_12,
     PartyTopicDescription = "PartyTopic_Description_320103",
     PartyTopicId = 320103,
     PartyTopicName = "PartyTopic_Name_320103",
@@ -680,15 +721,45 @@ return ReadOnly("PartyTopic", {
     MemoryDescription = "PartyReward_Description_320104",
     MemoryIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Entertainment/T_Entertainment_Haier_4.T_Entertainment_Haier_4'",
     MemoryName = "PartyReward_Name_320104",
-    PartyTopicConsume = {
-      [19001] = 10,
-      [19002] = 10
-    },
+    PartyTopicConsume = T.RT_13,
     PartyTopicDescription = "PartyTopic_Description_320104",
     PartyTopicId = 320104,
     PartyTopicName = "PartyTopic_Name_320104",
     PartyTopicReward = 7053,
     PartyTopicTalkId = "Invite/Haier_320104.story"
+  },
+  [320201] = {
+    MemoryDescription = "PartyReward_Description_320201",
+    MemoryIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Entertainment/T_Entertainment_Kami_1.T_Entertainment_Kami_1'",
+    MemoryName = "PartyReward_Name_320201",
+    PartyTopicConsume = T.RT_6,
+    PartyTopicDescription = "PartyTopic_Description_320201",
+    PartyTopicId = 320201,
+    PartyTopicName = "PartyTopic_Name_320201",
+    PartyTopicReward = 7050,
+    PartyTopicTalkId = "Invite/Kami_320201.story"
+  },
+  [320202] = {
+    MemoryDescription = "PartyReward_Description_320202",
+    MemoryIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Entertainment/T_Entertainment_Kami_2.T_Entertainment_Kami_2'",
+    MemoryName = "PartyReward_Name_320202",
+    PartyTopicConsume = T.RT_7,
+    PartyTopicDescription = "PartyTopic_Description_320202",
+    PartyTopicId = 320202,
+    PartyTopicName = "PartyTopic_Name_320202",
+    PartyTopicReward = 7051,
+    PartyTopicTalkId = "Invite/Kami_320202.story"
+  },
+  [320203] = {
+    MemoryDescription = "PartyReward_Description_320203",
+    MemoryIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Entertainment/T_Entertainment_Kami_3.T_Entertainment_Kami_3'",
+    MemoryName = "PartyReward_Name_320203",
+    PartyTopicConsume = T.RT_8,
+    PartyTopicDescription = "PartyTopic_Description_320203",
+    PartyTopicId = 320203,
+    PartyTopicName = "PartyTopic_Name_320203",
+    PartyTopicReward = 7052,
+    PartyTopicTalkId = "Invite/Kami_320203.story"
   },
   [330101] = {
     ConditionId = 100203,
@@ -710,7 +781,12 @@ return ReadOnly("PartyTopic", {
     MemoryDescription = "PartyReward_Description_330102",
     MemoryIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Entertainment/T_Entertainment_Maer_2.T_Entertainment_Maer_2'",
     MemoryName = "PartyReward_Name_330102",
-    PartyTopicConsume = T.RT_8,
+    PartyTopicConsume = {
+      [19001] = 5,
+      [19002] = 5,
+      [19006] = 5,
+      [19007] = 5
+    },
     PartyTopicDescription = "PartyTopic_Description_330102",
     PartyTopicId = 330102,
     PartyTopicName = "PartyTopic_Name_330102",
@@ -791,20 +867,99 @@ return ReadOnly("PartyTopic", {
     PartyTopicTalkId = "Invite/Lise_410103.story"
   },
   [410201] = {
-    PartyTopicConsume = T.RT_6,
+    MemoryDescription = "PartyReward_Description_410201",
+    MemoryIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Entertainment/T_Entertainment_Zhiliu_1.T_Entertainment_Zhiliu_1'",
+    MemoryName = "PartyReward_Name_410201",
+    PartyTopicConsume = T.RT_10,
+    PartyTopicDescription = "PartyTopic_Description_410201",
     PartyTopicId = 410201,
-    PartyTopicReward = 7051
+    PartyTopicName = "PartyTopic_Name_410201",
+    PartyTopicReward = 7050,
+    PartyTopicTalkId = "Invite/Zhiliu_410201.story"
+  },
+  [410202] = {
+    MemoryDescription = "PartyReward_Description_410202",
+    MemoryIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Entertainment/T_Entertainment_Zhiliu_2.T_Entertainment_Zhiliu_2'",
+    MemoryName = "PartyReward_Name_410202",
+    PartyTopicConsume = T.RT_11,
+    PartyTopicDescription = "PartyTopic_Description_410202",
+    PartyTopicId = 410202,
+    PartyTopicName = "PartyTopic_Name_410202",
+    PartyTopicReward = 7051,
+    PartyTopicTalkId = "Invite/Zhiliu_410202.story"
+  },
+  [410203] = {
+    MemoryDescription = "PartyReward_Description_410203",
+    MemoryIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Entertainment/T_Entertainment_Zhiliu_3.T_Entertainment_Zhiliu_3'",
+    MemoryName = "PartyReward_Name_410203",
+    PartyTopicConsume = T.RT_12,
+    PartyTopicDescription = "PartyTopic_Description_410203",
+    PartyTopicId = 410203,
+    PartyTopicName = "PartyTopic_Name_410203",
+    PartyTopicReward = 7052,
+    PartyTopicTalkId = "Invite/Zhiliu_410203.story"
+  },
+  [410204] = {
+    MemoryDescription = "PartyReward_Description_410204",
+    MemoryIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Entertainment/T_Entertainment_Zhiliu_4.T_Entertainment_Zhiliu_4'",
+    MemoryName = "PartyReward_Name_410204",
+    PartyTopicConsume = T.RT_13,
+    PartyTopicDescription = "PartyTopic_Description_410204",
+    PartyTopicId = 410204,
+    PartyTopicName = "PartyTopic_Name_410204",
+    PartyTopicReward = 7053,
+    PartyTopicTalkId = "Invite/Zhiliu_410204.story"
   },
   [420101] = {
-    PartyTopicConsume = T.RT_8,
+    ConditionId = 120206,
+    MemoryDescription = "PartyReward_Description_420101",
+    MemoryIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Entertainment/T_Entertainment_Yuming_1.T_Entertainment_Yuming_1'",
+    MemoryName = "PartyReward_Name_420101",
+    PartyTopicConsume = T.RT_10,
+    PartyTopicDescription = "PartyTopic_Description_420101",
     PartyTopicId = 420101,
-    PartyTopicReward = 7051
+    PartyTopicName = "PartyTopic_Name_420101",
+    PartyTopicReward = 7050,
+    PartyTopicTalkId = "Invite/Yuming_420101.story"
+  },
+  [420102] = {
+    MemoryDescription = "PartyReward_Description_420102",
+    MemoryIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Entertainment/T_Entertainment_Yuming_2.T_Entertainment_Yuming_2'",
+    MemoryName = "PartyReward_Name_420102",
+    PartyTopicConsume = T.RT_11,
+    PartyTopicDescription = "PartyTopic_Description_420102",
+    PartyTopicId = 420102,
+    PartyTopicName = "PartyTopic_Name_420102",
+    PartyTopicReward = 7051,
+    PartyTopicTalkId = "Invite/Yuming_420102.story"
+  },
+  [420103] = {
+    MemoryDescription = "PartyReward_Description_420103",
+    MemoryIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Entertainment/T_Entertainment_Yuming_3.T_Entertainment_Yuming_3'",
+    MemoryName = "PartyReward_Name_420103",
+    PartyTopicConsume = T.RT_12,
+    PartyTopicDescription = "PartyTopic_Description_420103",
+    PartyTopicId = 420103,
+    PartyTopicName = "PartyTopic_Name_420103",
+    PartyTopicReward = 7052,
+    PartyTopicTalkId = "Invite/Yuming_420103.story"
+  },
+  [420104] = {
+    MemoryDescription = "PartyReward_Description_420104",
+    MemoryIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Entertainment/T_Entertainment_Yuming_4.T_Entertainment_Yuming_4'",
+    MemoryName = "PartyReward_Name_420104",
+    PartyTopicConsume = T.RT_13,
+    PartyTopicDescription = "PartyTopic_Description_420104",
+    PartyTopicId = 420104,
+    PartyTopicName = "PartyTopic_Name_420104",
+    PartyTopicReward = 7053,
+    PartyTopicTalkId = "Invite/Yuming_420104.story"
   },
   [420201] = {
     MemoryDescription = "PartyReward_Description_420201",
     MemoryIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Entertainment/T_Entertainment_Landi_1.T_Entertainment_Landi_1'",
     MemoryName = "PartyReward_Name_420201",
-    PartyTopicConsume = T.RT_9,
+    PartyTopicConsume = T.RT_14,
     PartyTopicDescription = "PartyTopic_Description_420201",
     PartyTopicId = 420201,
     PartyTopicName = "PartyTopic_Name_420201",
@@ -831,7 +986,7 @@ return ReadOnly("PartyTopic", {
     MemoryDescription = "PartyReward_Description_420203",
     MemoryIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Entertainment/T_Entertainment_Landi_3.T_Entertainment_Landi_3'",
     MemoryName = "PartyReward_Name_420203",
-    PartyTopicConsume = T.RT_7,
+    PartyTopicConsume = T.RT_9,
     PartyTopicDescription = "PartyTopic_Description_420203",
     PartyTopicId = 420203,
     PartyTopicName = "PartyTopic_Name_420203",
@@ -963,7 +1118,7 @@ return ReadOnly("PartyTopic", {
     MemoryDescription = "PartyReward_Description_510201",
     MemoryIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Entertainment/T_Entertainment_Aote_1.T_Entertainment_Aote_1'",
     MemoryName = "PartyReward_Name_510201",
-    PartyTopicConsume = T.RT_9,
+    PartyTopicConsume = T.RT_14,
     PartyTopicDescription = "PartyTopic_Description_510201",
     PartyTopicId = 510201,
     PartyTopicName = "PartyTopic_Name_510201",

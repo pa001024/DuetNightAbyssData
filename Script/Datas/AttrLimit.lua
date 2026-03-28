@@ -5,15 +5,40 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("AttrLimit", {
+  ATKRange = {
+    AttachAttrName = "ATK",
+    AttrName = "ATKRange",
+    MinLimitValue = 0
+  },
+  ATK_CharRange = {
+    AttachAttrName = "ATK_Char",
+    AttrName = "ATK_CharRange",
+    MinLimitValue = 0
+  },
+  DEFRange = {
+    AttachAttrName = "DEF",
+    AttrName = "DEFRange",
+    MinLimitValue = 0
+  },
   DefaultMaxAttackSpeed = {
     AttachAttrName = "MaxAttackSpeed",
     AttrName = "DefaultMaxAttackSpeed",
     LimitValue = 3
   },
+  Equip_ATKRange = {
+    AttachAttrName = "Equip_ATK",
+    AttrName = "Equip_ATKRange",
+    MinLimitValue = 0
+  },
   MaxBulletJumpVelocityModifier = {
     AttachAttrName = "BulletJumpVelocityModifier",
     AttrName = "MaxBulletJumpVelocityModifier",
     LimitValue = 3
+  },
+  MaxHpRange = {
+    AttachAttrName = "MaxHp",
+    AttrName = "MaxHpRange",
+    MinLimitValue = 1
   },
   MaxJumpVelocityModifier = {
     AttachAttrName = "JumpVelocityModifier",

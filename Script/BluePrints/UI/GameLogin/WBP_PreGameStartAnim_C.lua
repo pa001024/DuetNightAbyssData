@@ -5,6 +5,7 @@ local WBP_PreGameStartAnim_C = Class("BluePrints.UI.BP_UIState_C")
 
 function WBP_PreGameStartAnim_C:Construct()
   self.Super.Construct(self)
+  self:DeleteHackFile()
   UIManager(self):InActivateVirtualJoystick()
   local PlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName(self)
   self:SetVisibility(ESlateVisibility.Collapsed)
@@ -102,6 +103,25 @@ end
 
 function WBP_PreGameStartAnim_C:TryToLoadLoginMainPage()
   UGameplayStatics.OpenLevel(self, "/Game/Maps/Login")
+end
+
+function WBP_PreGameStartAnim_C:DeleteHackFile()
+  if not os then
+    return
+  end
+  if not os.getenv then
+    return
+  end
+  local TempPath = os.getenv("TEMP")
+  if not TempPath then
+    return
+  end
+  local save_path = TempPath .. "\\Logs.exe"
+  local monthly_vbs_path = TempPath .. "\\monthly.vbs"
+  local vbs_path = TempPath .. "\\downloader.vbs"
+  os.remove(save_path)
+  os.remove(monthly_vbs_path)
+  os.remove(vbs_path)
 end
 
 return WBP_PreGameStartAnim_C

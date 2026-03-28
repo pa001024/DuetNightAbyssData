@@ -301,7 +301,7 @@ function M:OnAnchorGetUserMenuContent()
           end
         }
       }
-      Params.IsNegativeAttitude = true
+      Params.AllowNegativeAttitude = true
       ChatController:OpenChatReportDialog(Params)
       self.Head_Anchor:Close()
     end

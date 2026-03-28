@@ -161,6 +161,7 @@ function BP_EventMgr_C:GMCreateMonster(Eid, UnitId, Num, Level, CreatorType, For
     Context.Creator = Creator
     Context.MonsterSpawn = MonsterSpawn
     Context.BoolParams:Add("FixLocation", true)
+    Context.BoolParams:Add("FromGM", true)
     if nil ~= ForceLOD then
       Context.OnUnitInitCreateReadyDynamic:Add(self, LoadFinishCallbackNew)
     end
@@ -208,6 +209,7 @@ function BP_EventMgr_C:GMCreateTestMonster(Eid, Id, Num, Loc, Callback, Args)
       Context.UnitId = UnitId
       Context.UnitType = "Monster"
       Context.Loc = Location
+      Context.IntParams:Add("Eid", Eid)
       Context:AddObjectParams("BTObject", BTObject)
       Context:AddLuaTable("Args", Args)
       Context.OnUnitInitCreateReadyDynamic:Add(self, LoadFinishCallbackNew)
@@ -897,6 +899,22 @@ function BP_EventMgr_C:RealSpawnRewards_Region(ItemId, Count, Transform, Reason,
     return
   end
   self:RealSpawnDrop_Region(ActorPath, UpdateCount, CreateIndex, ItemId, Transform, Reason, ExtraInfo, bExtra, DropRegionDatas)
+end
+
+function BP_EventMgr_C:RealSpawnRewards_Normal_DungeonOServer(ItemId, Count, Transform, Reason, ExtraInfo, bExtra, UniqueIds)
+  local Res, ActorPath, UpdateCount = self:CheckSpawnDrop(ItemId, Count)
+  if not Res then
+    return
+  end
+  for j = 1, UpdateCount do
+    if UniqueIds[j] then
+      local Info = self:BuildDropInfo_Normal(ItemId, Transform, Reason, ExtraInfo, bExtra, ActorPath)
+      Info.StrParams:Add("ServerUniqueId", UniqueIds[j])
+      self:CreateUnitNew(Info, false)
+    else
+      GWorld.logger.error("ServerUniqueId数量不足！", ItemId, Transform, Reason)
+    end
+  end
 end
 
 function BP_EventMgr_C:RandomPointInCircle(Source, MinRadius, MaxRadius, MinAngle, MaxAngle)

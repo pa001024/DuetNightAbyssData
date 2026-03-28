@@ -188,4 +188,18 @@ function M:StopTalkTask(Character)
   self:OnTalkTaskEnd(Character)
 end
 
+function M:DisplayName(Character, TalkSetting)
+  if not Character then
+    return
+  end
+  Character:EnableNameWidget(true, TalkSetting.TextMapName)
+end
+
+function M:CollapsedName(Character)
+  if not Character then
+    return
+  end
+  Character:EnableNameWidget(false)
+end
+
 return M

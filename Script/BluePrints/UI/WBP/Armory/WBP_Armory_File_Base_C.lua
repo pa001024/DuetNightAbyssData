@@ -232,7 +232,6 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, ...)
   local ArmoryMain = UIManager(self):GetArmoryUIObj()
   if ArmoryMain then
     self.ArmoryPlayer = ArmoryMain.ActorController.ArmoryPlayer
-    self.ArmoryHelper = ArmoryMain.ActorController.ArmoryHelper
   end
   local Avatar = GWorld:GetAvatar()
   if 1 == Avatar.Sex then

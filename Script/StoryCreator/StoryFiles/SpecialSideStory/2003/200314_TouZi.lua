@@ -47,7 +47,7 @@ return {
       key = "176706437648488",
       type = "StoryNode",
       name = "任务节点",
-      pos = {x = 1347.612903205959, y = 294},
+      pos = {x = 1349.612903205959, y = 294},
       propsData = {
         QuestId = 20031401,
         QuestDescriptionComment = "",
@@ -61,7 +61,6 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
@@ -69,6 +68,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -86,11 +86,11 @@ return {
           {
             startQuest = "17678699663895800264",
             startPort = "Out",
-            endQuest = "1768805376197961",
+            endQuest = "1768814953691387",
             endPort = "In"
           },
           {
-            startQuest = "1768805376197961",
+            startQuest = "1768814953691387",
             startPort = "Out",
             endQuest = "1767093768339479",
             endPort = "In"
@@ -98,11 +98,11 @@ return {
           {
             startQuest = "1767093768339479",
             startPort = "Out",
-            endQuest = "17688053961821467",
+            endQuest = "17688149957261169",
             endPort = "In"
           },
           {
-            startQuest = "17688053961821467",
+            startQuest = "17688149957261169",
             startPort = "Out",
             endQuest = "176706437648497",
             endPort = "Success"
@@ -134,7 +134,7 @@ return {
             key = "1767093768339479",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1905.1428492020589, y = 373.6277049763502},
+            pos = {x = 2057.1428492020586, y = 333.6277049763502},
             propsData = {
               IsNpcNode = true,
               NpcNodeInteractiveName = "",
@@ -179,6 +179,7 @@ return {
               SwitchToMaster = "None",
               bNpcActionKeepIn = false,
               bNpcActionKeepOut = false,
+              bForceWaitNavLoaded = false,
               NormalOptions = {},
               OverrideFailBlend = false
             }
@@ -197,11 +198,11 @@ return {
               GuideName = "TargetPoint_EnterQiuOffice"
             }
           },
-          ["1768805376197961"] = {
-            key = "1768805376197961",
+          ["1768814953691387"] = {
+            key = "1768814953691387",
             type = "ChangeStaticCreatorNode",
             name = "生成/销毁节点",
-            pos = {x = 1550, y = 428},
+            pos = {x = 1662, y = 442},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,
@@ -211,11 +212,11 @@ return {
               StaticCreatorIdList = {2270015}
             }
           },
-          ["17688053961821467"] = {
-            key = "17688053961821467",
+          ["17688149957261169"] = {
+            key = "17688149957261169",
             type = "ChangeStaticCreatorNode",
             name = "生成/销毁节点",
-            pos = {x = 2222, y = 396},
+            pos = {x = 2430, y = 320},
             propsData = {
               ActiveEnable = false,
               EnableBlackScreenSync = true,

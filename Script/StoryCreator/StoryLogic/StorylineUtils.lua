@@ -22,7 +22,8 @@ StorylineUtils.EMonitorNodeFinishType = {Changed = 1, Unchanged = 2}
 StorylineUtils.EActorEventType = {
   OnCreated = "OnCreated",
   OnTriggerAOIBase = "OnTriggerAOIBase",
-  OnActorDestroyed = "OnActorDestroyed"
+  OnActorDestroyed = "OnActorDestroyed",
+  OnMonsterDeath = "OnMonsterDeath"
 }
 StorylineUtils.EssentialStoryNode = {
   StoryStartNode = "StoryStartNode",

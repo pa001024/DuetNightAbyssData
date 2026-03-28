@@ -161,14 +161,6 @@ function Component:GM_CMD(Args)
   GWorld.GameInstance:ExecuteCmd(ArgStr)
 end
 
-function Component:GM_RPC()
-  local a = 1
-  self:GetMyPawn():AddTimer(1, function()
-    self:TestRPC(a)
-    a = a + 1
-  end, true)
-end
-
 function Component:GM_TestCrash()
   self:TestCrash()
 end

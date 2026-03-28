@@ -33,8 +33,7 @@ function Component:_OnPropChangeFriendRequestReceiveBox(keys)
   if not GWorld:GetAvatar() then
     return
   end
-  FriendController:GetModel():GetFriendRequestList(true)
-  FriendController:GetModel():AddReddotCount()
+  FriendController:RecvNewFriendRequestReceiveBox(keys)
 end
 
 function Component:RealUpdateFriendInfo(info)

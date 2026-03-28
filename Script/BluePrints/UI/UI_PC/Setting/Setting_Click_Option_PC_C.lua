@@ -416,6 +416,15 @@ function S:OnUserPolicyClicked()
   UE4.UKismetSystemLibrary.LaunchURL(self.Link)
 end
 
+function S:SetPatchManageKeyText()
+  self.Key_State:SetActiveWidgetIndex(1)
+  self.Text_Fixed:SetText(GText(self.CacheInfo.DefaultValue))
+end
+
+function S:OnPatchManageClicked()
+  UIManager(self):LoadUINew("OptionalPatch", nil)
+end
+
 function S:OnVoiceResourceClicked()
   EventManager:FireEvent(EventID.OnVoiceResourceClicked)
 end

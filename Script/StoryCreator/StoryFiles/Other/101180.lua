@@ -61,7 +61,6 @@ return {
         bIsNotifyGameMode = false,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = false,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
@@ -69,6 +68,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -116,7 +116,8 @@ return {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200055,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 }
               },
               OverrideFailBlend = false

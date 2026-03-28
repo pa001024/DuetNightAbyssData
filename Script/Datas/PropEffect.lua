@@ -14,6 +14,7 @@ return ReadOnly("PropEffect", {
     BPPath = "Blueprint'/Game/BluePrints/Combat/PropEffect/PropEffectObject_42001.PropEffectObject_42001'",
     Id = 42001,
     ReplaceShootIconPath = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_Skill_Ray.T_Skill_Ray",
+    ReplaceSupportIconPath = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_Skill_Pet_EastScan.T_Skill_Pet_EastScan",
     UsingIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_CentralSquare_Unequip01.T_Icon_CentralSquare_Unequip01"
   },
   [42002] = {
@@ -22,6 +23,22 @@ return ReadOnly("PropEffect", {
     ReplaceShootIconPath = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_Skill_Blow.T_Skill_Blow",
     ReplaceSupportIconPath = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_Skill_Pet_EastScan.T_Skill_Pet_EastScan",
     UsingIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_CentralSquare_Unequip.T_Icon_CentralSquare_Unequip"
+  },
+  [49992] = {
+    Id = 49992,
+    UsingIcon = "/Game/UI/Texture/Dynamic/Image/Mounts/T_Mounts_Gesture_0502.T_Mounts_Gesture_0502"
+  },
+  [49993] = {
+    Id = 49993,
+    UsingIcon = "/Game/UI/Texture/Dynamic/Image/Mounts/T_Mounts_Gesture_0502.T_Mounts_Gesture_0502"
+  },
+  [49994] = {
+    Id = 49994,
+    UsingIcon = "/Game/UI/Texture/Dynamic/Image/Mounts/T_Mounts_Gesture_0504.T_Mounts_Gesture_0504"
+  },
+  [49995] = {
+    Id = 49995,
+    UsingIcon = "/Game/UI/Texture/Dynamic/Image/Mounts/T_Mounts_Gesture_0502.T_Mounts_Gesture_0502"
   },
   [49996] = {
     Id = 49996,

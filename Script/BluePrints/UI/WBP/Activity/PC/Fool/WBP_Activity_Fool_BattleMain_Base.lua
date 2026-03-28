@@ -112,7 +112,9 @@ function M:Close()
     self.LoadUIName = nil
   else
     local PlayerCharacter = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
-    if PlayerCharacter and IsValid(PlayerCharacter) then
+    local Avatar = GWorld:GetAvatar()
+    if PlayerCharacter and IsValid(PlayerCharacter) and Avatar then
+      Avatar:RegionOnlineTransformAFDay(-1)
       PlayerCharacter:CancelAFDTransform()
     end
   end

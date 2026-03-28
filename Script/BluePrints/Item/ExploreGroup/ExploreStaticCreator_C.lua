@@ -27,6 +27,7 @@ function M:TryActive()
   local SubRegionId = GameMode:GetRegionIdByLocation(self:K2_GetActorLocation())
   local Avatar = GWorld:GetAvatar()
   if Avatar then
+    print(_G.LogTag, "LXZ TryActive???", self.ExploreGroupId)
     Avatar:ExploreIdActive(self.ExploreGroupId, SubRegionId)
   end
 end
@@ -77,12 +78,14 @@ function M:ReceiveOnExploreGroupReset()
   self.Overridden.ReceiveOnExploreGroupReset(self)
 end
 
-function M:ReceiveOnExploreGroupResetUI()
+function M:ReceiveOnExploreGroupResetUI(bShowToast)
+  print(_G.LogTag, "LXZ ReceiveOnExploreGroupResetUI", bShowToast)
+  Traceback()
   EventManager:RemoveEvent(EventID.CharDie, self)
   local TimeItem = UIManager(self):GetUIObj("DungeonCaptureFloat")
   if TimeItem and TimeItem.SelfActor and TimeItem.AnotherActor then
     TimeItem:RemainingDistance(TimeItem.SelfActor, TimeItem.AnotherActor)
-  else
+  elseif bShowToast then
     UIManager(self):UnLoadUI("DungeonCaptureFloat")
   end
   if CommonUtils.GetRuntimePlatform(self) == "PC" then
@@ -99,7 +102,6 @@ function M:ReceiveOnExploreGroupResetUI()
   if self.IsHideWorldTask then
     local BattleMain = UIManager(self):GetUIObj("BattleMain")
     if BattleMain then
-      BattleMain.VB_View:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
       local DynamicEventUI = BattleMain:GetOrAddDynamicEventWidget()
       local Avatar = GWorld:GetAvatar()
       if not Avatar then
@@ -180,7 +182,7 @@ function M:ReceiveOnExploreGroupSuccess(bShowToast)
   if not LoadingUI and bShowToast then
     UIManager(self):LoadUINew("ExploreToastSuccess", "UI_LIMITEXPLORE_SUCCESS")
   end
-  self:ReceiveOnExploreGroupResetUI()
+  self:ReceiveOnExploreGroupResetUI(bShowToast)
 end
 
 function M:ReceiveOnExploreGroupFailed()
@@ -198,7 +200,7 @@ function M:ReceiveOnExploreGroupFailed()
       end
     end
   end
-  if self.LimitTime > 0 then
+  if self.LimitTime ~= nil and self.LimitTime > 0 then
     local GameState = UE4.UGameplayStatics.GetGameState(self)
     GameState.ActiveLimitTimeExploreGroup = 0
   end
@@ -207,7 +209,7 @@ function M:ReceiveOnExploreGroupFailed()
   if not LoadingUI then
     UIManager(self):LoadUINew("ExploreToastFail", "UI_LIMITEXPLORE_FAIL")
   end
-  self:ReceiveOnExploreGroupResetUI()
+  self:ReceiveOnExploreGroupResetUI(true)
 end
 
 function M:ReceiveOnExploreLimitStarted(Title, Des, TotalTargetNum)
@@ -231,18 +233,10 @@ function M:ReceiveOnExploreLimitStarted(Title, Des, TotalTargetNum)
   if TimeItem then
     TimeItem.TaskTitle:SetText(GText("UI_LIMITEXPLORE_TIME"))
     TimeItem:UIStateChange_OnTarget()
-    if CommonUtils.GetRuntimePlatform(self) == "Mobile" then
-      TimeItem.Group_BtnCancel:SetVisibility(ESlateVisibility.Visible)
-      TimeItem.Btn_Cancel:BindEventOnClicked(self, self.OnPressQuitChallenge)
-    end
   end
   self.IsHideWorldTask = false
   if "" ~= Title or "" ~= Des then
     self.IsHideWorldTask = true
-    local BattleMain = UIManager(self):GetUIObj("BattleMain")
-    if BattleMain then
-      BattleMain.VB_View:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    end
     local UIObjs = MissionIndicatorManager:GetIndicatorUIObjBySTLType("Dynamic")
     if not IsEmptyTable(UIObjs) then
       for _, UI in pairs(UIObjs) do
@@ -251,83 +245,8 @@ function M:ReceiveOnExploreLimitStarted(Title, Des, TotalTargetNum)
         end
       end
     end
-    
-    local function ShowExploreTaskPanel()
-      local BattleMain = UIManager(self):GetUIObj("BattleMain")
-      local DynamicEventIndicator = UIManager(self):GetUIObj("DynamicEventIndicator")
-      if nil ~= DynamicEventIndicator then
-        DynamicEventIndicator.Main:SetVisibility(ESlateVisibility.Collapsed)
-      end
-      if BattleMain then
-        local DynamicEventUI = BattleMain:GetOrAddDynamicEventWidget()
-        local Avatar = GWorld:GetAvatar()
-        if not Avatar then
-          return false
-        end
-        if nil ~= BattleMain and nil ~= BattleMain.Pos_TaskBar and 0 ~= BattleMain.Pos_TaskBar:GetChildrenCount() then
-          local TrackingQuestChain = Avatar.TrackingQuestChainId
-          local TaskBarWidget = BattleMain.Pos_TaskBar:GetChildAt(0)
-          if nil ~= TaskBarWidget then
-            if 0 ~= TrackingQuestChain then
-              if CommonUtils.GetRuntimePlatform(self) == "PC" then
-              else
-                TaskBarWidget.Tips:SetVisibility(ESlateVisibility.Collapsed)
-              end
-              if TaskBarWidget.VBox_SubTasks:GetChildrenCount() > 0 then
-                TaskBarWidget.VBox_SubTasks:SetVisibility(ESlateVisibility.Collapsed)
-              end
-            end
-            TaskBarWidget.IsInExplore = true
-            if CommonUtils.GetRuntimePlatform(self) == "PC" then
-              TaskBarWidget:PlayAnimation(TaskBarWidget.Tooltip_Out)
-            end
-          end
-        end
-        DynamicEventUI:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-        DynamicEventUI.DynamicEvent:SetVisibility(ESlateVisibility.Collapsed)
-        DynamicEventUI:PlayAnimation(DynamicEventUI.Challenge_In)
-        if ClientEventUtils:GetCurrentDoingDynamicEvent() then
-          DynamicEventUI:PlayAnimation(DynamicEventUI.Out)
-        end
-        DynamicEventUI.ExplorationChallenge.Text_Name:SetText(GText(Des))
-        DynamicEventUI.ExplorationChallenge.Text_TaskName:SetText(GText(Title))
-        DynamicEventUI.ExplorationChallenge:SetQuitButtonByInputDevice(UIUtils.UtilsGetCurrentInputType())
-        DynamicEventUI.ExplorationChallenge.Text_Tips01:SetVisibility(ESlateVisibility.Collapsed)
-        DynamicEventUI.ExplorationChallenge.Text_Tips02:SetText(GText("UI_Esc_Challenge"))
-        DynamicEventUI.ExplorationChallenge.Text_Total:SetText(TotalTargetNum)
-        if CommonUtils.GetRuntimePlatform(self) == "PC" then
-          DynamicEventUI:ListenForInputAction("QuitChallenge", EInputEvent.IE_Pressed, true, {
-            self,
-            self.OnPressQuitChallenge
-          })
-          DynamicEventUI.ExplorationChallenge:ListenForInputAction("ExploraChallengeQuitL", EInputEvent.IE_Pressed, true, {
-            self,
-            self.OnPadActiveGuidePress
-          })
-          DynamicEventUI.ExplorationChallenge:ListenForInputAction("ExploraChallengeQuitR", EInputEvent.IE_Pressed, true, {
-            self,
-            self.OnPadExploraChallengeQuitPress
-          })
-          DynamicEventUI.ExplorationChallenge:ListenForInputAction("ExploraChallengeQuitL", EInputEvent.IE_Released, true, {
-            self,
-            self.OnPadActiveGuideRelease
-          })
-          DynamicEventUI.ExplorationChallenge:ListenForInputAction("ExploraChallengeQuitR", EInputEvent.IE_Released, true, {
-            self,
-            self.OnPadExploraChallengeQuitRelease
-          })
-        end
-        if CommonUtils.GetRuntimePlatform(self) == "Mobile" then
-          DynamicEventUI.ExplorationChallenge.Panel_Tips:SetVisibility(ESlateVisibility.Collapsed)
-        end
-        self:RemoveTimer("ShowExploreTaskPanelBindToTimer")
-        return true
-      end
-      return false
-    end
-    
-    if not ShowExploreTaskPanel() then
-      self:AddTimer(0.1, ShowExploreTaskPanel, true, 0, "ShowExploreTaskPanelBindToTimer", false)
+    if not self:ShowExploreTaskPanel(Title, Des, TotalTargetNum) then
+      self:AddTimer(0.1, self.ShowExploreTaskPanel, true, 0, "ShowExploreTaskPanelBindToTimer", false, Title, Des, TotalTargetNum)
     end
   end
   EventManager:AddEvent(EventID.CharDie, self, self.OnCharDie)
@@ -348,6 +267,90 @@ function M:UpdateLimitUI(CurrentTargetNum)
     end
     DynamicEventUI.ExplorationChallenge.Text_Now:SetText(CurrentTargetNum)
   end
+end
+
+function M:ShowExploreTaskPanel(Title, Des, TotalTargetNum)
+  local BattleMain = UIManager(self):GetUIObj("BattleMain")
+  local DynamicEventIndicator = UIManager(self):GetUIObj("DynamicEventIndicator")
+  if nil ~= DynamicEventIndicator then
+    DynamicEventIndicator.Main:SetVisibility(ESlateVisibility.Collapsed)
+  end
+  if BattleMain then
+    local DynamicEventUI = BattleMain:GetOrAddDynamicEventWidget()
+    local Avatar = GWorld:GetAvatar()
+    if not Avatar then
+      return false
+    end
+    if nil ~= BattleMain and nil ~= BattleMain.Pos_TaskBar and 0 ~= BattleMain.Pos_TaskBar:GetChildrenCount() then
+      local TrackingQuestChain = Avatar.TrackingQuestChainId
+      local TaskBarWidget = BattleMain.Pos_TaskBar:GetChildAt(0)
+      if nil ~= TaskBarWidget then
+        if 0 ~= TrackingQuestChain then
+          if CommonUtils.GetRuntimePlatform(self) == "PC" then
+          else
+            TaskBarWidget.Tips:SetVisibility(ESlateVisibility.Collapsed)
+          end
+          if TaskBarWidget.VBox_SubTasks:GetChildrenCount() > 0 then
+            TaskBarWidget.VBox_SubTasks:SetVisibility(ESlateVisibility.Collapsed)
+          end
+        end
+        TaskBarWidget.IsInExplore = true
+        if CommonUtils.GetRuntimePlatform(self) == "PC" then
+          TaskBarWidget:PlayAnimation(TaskBarWidget.Tooltip_Out)
+        end
+      end
+    end
+    DynamicEventUI:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    DynamicEventUI.DynamicEvent:SetVisibility(ESlateVisibility.Collapsed)
+    DynamicEventUI:PlayAnimation(DynamicEventUI.Challenge_In)
+    if ClientEventUtils:GetCurrentDoingDynamicEvent() then
+      DynamicEventUI:PlayAnimation(DynamicEventUI.Out)
+    end
+    DynamicEventUI.ExplorationChallenge.Text_Name:SetText(GText(Des))
+    DynamicEventUI.ExplorationChallenge.Text_TaskName:SetText(GText(Title))
+    DynamicEventUI.ExplorationChallenge:SetQuitButtonByInputDevice(UIUtils.UtilsGetCurrentInputType())
+    DynamicEventUI.ExplorationChallenge.Text_Tips01:SetVisibility(ESlateVisibility.Collapsed)
+    DynamicEventUI.ExplorationChallenge.Text_Tips02:SetText(GText("UI_Esc_Challenge"))
+    if TotalTargetNum and TotalTargetNum > 0 then
+      DynamicEventUI.ExplorationChallenge.Panel_Progress:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      DynamicEventUI.ExplorationChallenge.Text_Total:SetText(TotalTargetNum)
+    else
+      DynamicEventUI.ExplorationChallenge.Panel_Progress:SetVisibility(ESlateVisibility.Collapsed)
+    end
+    if CommonUtils.GetRuntimePlatform(self) == "PC" then
+      DynamicEventUI:ListenForInputAction("QuitChallenge", EInputEvent.IE_Pressed, true, {
+        self,
+        self.OnPressQuitChallenge
+      })
+      DynamicEventUI.ExplorationChallenge:ListenForInputAction("ExploraChallengeQuitL", EInputEvent.IE_Pressed, true, {
+        self,
+        self.OnPadActiveGuidePress
+      })
+      DynamicEventUI.ExplorationChallenge:ListenForInputAction("ExploraChallengeQuitR", EInputEvent.IE_Pressed, true, {
+        self,
+        self.OnPadExploraChallengeQuitPress
+      })
+      DynamicEventUI.ExplorationChallenge:ListenForInputAction("ExploraChallengeQuitL", EInputEvent.IE_Released, true, {
+        self,
+        self.OnPadActiveGuideRelease
+      })
+      DynamicEventUI.ExplorationChallenge:ListenForInputAction("ExploraChallengeQuitR", EInputEvent.IE_Released, true, {
+        self,
+        self.OnPadExploraChallengeQuitRelease
+      })
+    end
+    if CommonUtils.GetRuntimePlatform(self) == "Mobile" then
+      DynamicEventUI.ExplorationChallenge.Panel_Tips:SetVisibility(ESlateVisibility.Collapsed)
+      if DynamicEventUI.ExplorationChallenge.Panel_Tips2 and DynamicEventUI.ExplorationChallenge.WBP_Btn_Tips3 then
+        DynamicEventUI.ExplorationChallenge.Panel_Tips2:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+        DynamicEventUI.ExplorationChallenge.WBP_Btn_Tips3:BindEventOnClicked(self, self.OnPressQuitChallenge)
+        DynamicEventUI.ExplorationChallenge.WBP_Btn_Tips3:SetText(GText("UI_Esc_Challenge"))
+      end
+    end
+    self:RemoveTimer("ShowExploreTaskPanelBindToTimer")
+    return true
+  end
+  return false
 end
 
 function M:OnPressQuitChallenge()
@@ -536,6 +539,20 @@ function M:TriggerTransferPlayer(TargetTransform, BlackScreenTime)
   Player:ShowBlackScreenFade_StandAlone("Black", BlackScreenTime)
   Player:GetController():SetControlRotation(Player:K2_GetActorRotation())
   Player:Landed()
+end
+
+function M:BindExploreSpline(StaticCreator, SplineComponent)
+  if not SplineComponent then
+    return
+  end
+  if not StaticCreator or 0 == StaticCreator.ChildEids:Length() then
+    return
+  end
+  local Mechanism = Battle(self):GetEntity(StaticCreator.ChildEids[1])
+  if not Mechanism or not Mechanism.SetExploreSpline then
+    return
+  end
+  Mechanism:SetExploreSpline(SplineComponent)
 end
 
 return M

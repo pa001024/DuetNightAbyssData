@@ -16,7 +16,7 @@ function M:OnListItemObjectSet(Content)
   self.Content = Content
   self.SkillData = Content.SkillData
   self.Text_Skill_Name:SetText(Content.SkillName)
-  self.Num_Level:SetText(Content.Pet:GetSkillLevel())
+  self.Num_Level:SetText(Content.SkillLevel or Content.Pet:GetSkillLevel())
   self.Text_SkillDesc:SetText(GText(Content.SkillDesc) or "")
   if self.SkillData and self.SkillData.CD then
     self.Num_CD:SetText((self.SkillData.CD or "") .. "s")
@@ -33,6 +33,13 @@ function M:OnListItemObjectSet(Content)
   else
     self.Num_CD:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.Text_CD:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  local ExtraLevel = Content.ExtraLevel
+  if ExtraLevel and ExtraLevel > 0 then
+    self.Text_Extra:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Text_Extra:SetText(string.format(GText("Pet_Affix_LevelAdd"), ExtraLevel))
+  else
+    self.Text_Extra:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
   self:UpdateKeyInfo(self.Content)
   self:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)

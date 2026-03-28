@@ -1429,5 +1429,475 @@ return ReadOnly("BattlePassTask", {
     QuestReward = T.RT_19,
     Target = 8,
     TargetId = T.RT_28
+  },
+  [100007001] = {
+    BattlePassId = 100007,
+    BattlePassTaskDes = "BattlePass_Task_Des_100001001",
+    BattlePassTaskId = 100007001,
+    BattlePassType = "Daily",
+    QuestReward = T.RT_1,
+    Target = 1,
+    TargetId = T.RT_28
+  },
+  [100007002] = {
+    BattlePassId = 100007,
+    BattlePassTaskDes = "BattlePass_Task_Des_100003002",
+    BattlePassTaskId = 100007002,
+    BattlePassType = "Daily",
+    JumpUIId = 19,
+    QuestReward = T.RT_24,
+    Target = 10,
+    TargetId = T.RT_12
+  },
+  [100007003] = {
+    BattlePassId = 100007,
+    BattlePassTaskDes = "BattlePass_Task_Des_100001003",
+    BattlePassTaskId = 100007003,
+    BattlePassType = "Daily",
+    JumpUIId = 31,
+    QuestReward = T.RT_3,
+    Target = 200,
+    TargetId = T.RT_4
+  },
+  [100007004] = {
+    BattlePassId = 100007,
+    BattlePassTaskDes = "BattlePass_Task_Des_100001004",
+    BattlePassTaskId = 100007004,
+    BattlePassType = "Daily",
+    JumpUIId = 20,
+    QuestReward = T.RT_3,
+    Target = 3,
+    TargetId = T.RT_5
+  },
+  [100007005] = {
+    BattlePassId = 100007,
+    BattlePassTaskDes = "BattlePass_Task_Des_100001005",
+    BattlePassTaskId = 100007005,
+    BattlePassType = "Daily",
+    QuestReward = T.RT_3,
+    Target = 1,
+    TargetId = T.RT_6
+  },
+  [100007006] = {
+    BattlePassId = 100007,
+    BattlePassTaskDes = "BattlePass_Task_Des_100001006",
+    BattlePassTaskId = 100007006,
+    BattlePassType = "Daily",
+    JumpUIId = 21,
+    QuestReward = T.RT_7,
+    Target = 1,
+    TargetId = T.RT_8
+  },
+  [100007101] = {
+    BattlePassId = 100007,
+    BattlePassTaskDes = "BattlePass_Task_Des_100001101",
+    BattlePassTaskId = 100007101,
+    BattlePassType = "Weekly",
+    JumpUIId = 20,
+    QuestReward = T.RT_9,
+    Target = 30,
+    TargetId = T.RT_5
+  },
+  [100007102] = {
+    BattlePassId = 100007,
+    BattlePassTaskDes = "BattlePass_Task_Des_100001102",
+    BattlePassTaskId = 100007102,
+    BattlePassType = "Weekly",
+    QuestReward = T.RT_10,
+    Target = 300000,
+    TargetId = T.RT_11
+  },
+  [100007103] = {
+    BattlePassId = 100007,
+    BattlePassTaskDes = "BattlePass_Task_Des_100001103",
+    BattlePassTaskId = 100007103,
+    BattlePassType = "Weekly",
+    JumpUIId = 19,
+    QuestReward = T.RT_10,
+    Target = 10,
+    TargetId = T.RT_12
+  },
+  [100007104] = {
+    BattlePassId = 100007,
+    BattlePassTaskDes = "BattlePass_Task_Des_100003104",
+    BattlePassTaskId = 100007104,
+    BattlePassType = "Weekly",
+    JumpUIId = 19,
+    QuestReward = T.RT_19,
+    Target = 50,
+    TargetId = T.RT_12
+  },
+  [100007105] = {
+    BattlePassId = 100007,
+    BattlePassTaskDes = "BattlePass_Task_Des_100001104",
+    BattlePassTaskId = 100007105,
+    BattlePassType = "Weekly",
+    JumpUIId = 13,
+    QuestReward = T.RT_13,
+    Target = 1,
+    TargetId = T.RT_14
+  },
+  [100007106] = {
+    BattlePassId = 100007,
+    BattlePassTaskDes = "BattlePass_Task_Des_100001106",
+    BattlePassTaskId = 100007106,
+    BattlePassType = "Weekly",
+    QuestReward = T.RT_13,
+    Target = 10,
+    TargetId = T.RT_6
+  },
+  [100007107] = {
+    BattlePassId = 100007,
+    BattlePassTaskDes = "BattlePass_Task_Des_100001108",
+    BattlePassTaskId = 100007107,
+    BattlePassType = "Weekly",
+    JumpUIId = 22,
+    QuestReward = T.RT_13,
+    Target = 1,
+    TargetId = T.RT_17
+  },
+  [100007108] = {
+    BattlePassId = 100007,
+    BattlePassTaskDes = "BattlePass_Task_Des_100001109",
+    BattlePassTaskId = 100007108,
+    BattlePassType = "Weekly",
+    JumpUIId = 21,
+    QuestReward = T.RT_18,
+    Target = 6,
+    TargetId = T.RT_8
+  },
+  [100007109] = {
+    BattlePassId = 100007,
+    BattlePassTaskDes = "BattlePass_Task_Des_100001110",
+    BattlePassTaskId = 100007109,
+    BattlePassType = "Weekly",
+    JumpUIId = 21,
+    QuestReward = T.RT_18,
+    Target = 12,
+    TargetId = T.RT_8
+  },
+  [100007110] = {
+    BattlePassId = 100007,
+    BattlePassTaskDes = "BattlePass_Task_Des_100001111",
+    BattlePassTaskId = 100007110,
+    BattlePassType = "Weekly",
+    JumpUIId = 21,
+    QuestReward = T.RT_18,
+    Target = 18,
+    TargetId = T.RT_8
+  },
+  [100007111] = {
+    BattlePassId = 100007,
+    BattlePassTaskDes = "BattlePass_Task_Des_100003113",
+    BattlePassTaskId = 100007111,
+    BattlePassType = "Weekly",
+    JumpUIId = 70,
+    QuestReward = T.RT_9,
+    Target = 10,
+    TargetId = T.RT_25
+  },
+  [100007112] = {
+    BattlePassId = 100007,
+    BattlePassTaskDes = "BattlePass_Task_Des_100003114",
+    BattlePassTaskId = 100007112,
+    BattlePassType = "Weekly",
+    JumpUIId = 70,
+    QuestReward = T.RT_9,
+    Target = 30,
+    TargetId = T.RT_25
+  },
+  [100007113] = {
+    BattlePassId = 100007,
+    BattlePassTaskDes = "BattlePass_Task_Des_100003115",
+    BattlePassTaskId = 100007113,
+    BattlePassType = "Weekly",
+    JumpUIId = 70,
+    QuestReward = T.RT_9,
+    Target = 60,
+    TargetId = T.RT_25
+  },
+  [100007201] = {
+    BattlePassId = 100007,
+    BattlePassTaskDes = "BattlePass_Task_Des_100001201",
+    BattlePassTaskId = 100007201,
+    BattlePassType = "Version",
+    JumpUIId = 14,
+    QuestReward = T.RT_19,
+    Target = 1,
+    TargetId = T.RT_20
+  },
+  [100007202] = {
+    BattlePassId = 100007,
+    BattlePassTaskDes = "BattlePass_Task_Des_100003202",
+    BattlePassTaskId = 100007202,
+    BattlePassType = "Version",
+    JumpUIId = 14,
+    QuestReward = T.RT_19,
+    Target = 1,
+    TargetId = T.RT_26
+  },
+  [100007203] = {
+    BattlePassId = 100007,
+    BattlePassTaskDes = "BattlePass_Task_Des_100004203",
+    BattlePassTaskId = 100007203,
+    BattlePassType = "Version",
+    JumpUIId = 14,
+    QuestReward = T.RT_21,
+    Target = 1,
+    TargetId = T.RT_27
+  },
+  [100007204] = {
+    BattlePassId = 100007,
+    BattlePassTaskDes = "BattlePass_Task_Des_100005204",
+    BattlePassTaskId = 100007204,
+    BattlePassType = "Version",
+    JumpUIId = 19,
+    QuestReward = T.RT_19,
+    Target = 70,
+    TargetId = T.RT_12
+  },
+  [100007205] = {
+    BattlePassId = 100007,
+    BattlePassTaskDes = "BattlePass_Task_Des_100001206",
+    BattlePassTaskId = 100007205,
+    BattlePassType = "Version",
+    QuestReward = T.RT_19,
+    Target = 8,
+    TargetId = T.RT_28
+  },
+  [100008001] = {
+    BattlePassId = 100008,
+    BattlePassTaskDes = "BattlePass_Task_Des_100001001",
+    BattlePassTaskId = 100008001,
+    BattlePassType = "Daily",
+    QuestReward = T.RT_1,
+    Target = 1,
+    TargetId = T.RT_28
+  },
+  [100008002] = {
+    BattlePassId = 100008,
+    BattlePassTaskDes = "BattlePass_Task_Des_100003002",
+    BattlePassTaskId = 100008002,
+    BattlePassType = "Daily",
+    JumpUIId = 19,
+    QuestReward = T.RT_24,
+    Target = 10,
+    TargetId = T.RT_12
+  },
+  [100008003] = {
+    BattlePassId = 100008,
+    BattlePassTaskDes = "BattlePass_Task_Des_100001003",
+    BattlePassTaskId = 100008003,
+    BattlePassType = "Daily",
+    JumpUIId = 31,
+    QuestReward = T.RT_3,
+    Target = 200,
+    TargetId = T.RT_4
+  },
+  [100008004] = {
+    BattlePassId = 100008,
+    BattlePassTaskDes = "BattlePass_Task_Des_100001004",
+    BattlePassTaskId = 100008004,
+    BattlePassType = "Daily",
+    JumpUIId = 20,
+    QuestReward = T.RT_3,
+    Target = 3,
+    TargetId = T.RT_5
+  },
+  [100008005] = {
+    BattlePassId = 100008,
+    BattlePassTaskDes = "BattlePass_Task_Des_100001005",
+    BattlePassTaskId = 100008005,
+    BattlePassType = "Daily",
+    QuestReward = T.RT_3,
+    Target = 1,
+    TargetId = T.RT_6
+  },
+  [100008006] = {
+    BattlePassId = 100008,
+    BattlePassTaskDes = "BattlePass_Task_Des_100001006",
+    BattlePassTaskId = 100008006,
+    BattlePassType = "Daily",
+    JumpUIId = 21,
+    QuestReward = T.RT_7,
+    Target = 1,
+    TargetId = T.RT_8
+  },
+  [100008101] = {
+    BattlePassId = 100008,
+    BattlePassTaskDes = "BattlePass_Task_Des_100001101",
+    BattlePassTaskId = 100008101,
+    BattlePassType = "Weekly",
+    JumpUIId = 20,
+    QuestReward = T.RT_9,
+    Target = 30,
+    TargetId = T.RT_5
+  },
+  [100008102] = {
+    BattlePassId = 100008,
+    BattlePassTaskDes = "BattlePass_Task_Des_100001102",
+    BattlePassTaskId = 100008102,
+    BattlePassType = "Weekly",
+    QuestReward = T.RT_10,
+    Target = 300000,
+    TargetId = T.RT_11
+  },
+  [100008103] = {
+    BattlePassId = 100008,
+    BattlePassTaskDes = "BattlePass_Task_Des_100001103",
+    BattlePassTaskId = 100008103,
+    BattlePassType = "Weekly",
+    JumpUIId = 19,
+    QuestReward = T.RT_10,
+    Target = 10,
+    TargetId = T.RT_12
+  },
+  [100008104] = {
+    BattlePassId = 100008,
+    BattlePassTaskDes = "BattlePass_Task_Des_100003104",
+    BattlePassTaskId = 100008104,
+    BattlePassType = "Weekly",
+    JumpUIId = 19,
+    QuestReward = T.RT_19,
+    Target = 50,
+    TargetId = T.RT_12
+  },
+  [100008105] = {
+    BattlePassId = 100008,
+    BattlePassTaskDes = "BattlePass_Task_Des_100001104",
+    BattlePassTaskId = 100008105,
+    BattlePassType = "Weekly",
+    JumpUIId = 13,
+    QuestReward = T.RT_13,
+    Target = 1,
+    TargetId = T.RT_14
+  },
+  [100008106] = {
+    BattlePassId = 100008,
+    BattlePassTaskDes = "BattlePass_Task_Des_100001106",
+    BattlePassTaskId = 100008106,
+    BattlePassType = "Weekly",
+    QuestReward = T.RT_13,
+    Target = 10,
+    TargetId = T.RT_6
+  },
+  [100008107] = {
+    BattlePassId = 100008,
+    BattlePassTaskDes = "BattlePass_Task_Des_100001108",
+    BattlePassTaskId = 100008107,
+    BattlePassType = "Weekly",
+    JumpUIId = 22,
+    QuestReward = T.RT_13,
+    Target = 1,
+    TargetId = T.RT_17
+  },
+  [100008108] = {
+    BattlePassId = 100008,
+    BattlePassTaskDes = "BattlePass_Task_Des_100001109",
+    BattlePassTaskId = 100008108,
+    BattlePassType = "Weekly",
+    JumpUIId = 21,
+    QuestReward = T.RT_18,
+    Target = 6,
+    TargetId = T.RT_8
+  },
+  [100008109] = {
+    BattlePassId = 100008,
+    BattlePassTaskDes = "BattlePass_Task_Des_100001110",
+    BattlePassTaskId = 100008109,
+    BattlePassType = "Weekly",
+    JumpUIId = 21,
+    QuestReward = T.RT_18,
+    Target = 12,
+    TargetId = T.RT_8
+  },
+  [100008110] = {
+    BattlePassId = 100008,
+    BattlePassTaskDes = "BattlePass_Task_Des_100001111",
+    BattlePassTaskId = 100008110,
+    BattlePassType = "Weekly",
+    JumpUIId = 21,
+    QuestReward = T.RT_18,
+    Target = 18,
+    TargetId = T.RT_8
+  },
+  [100008111] = {
+    BattlePassId = 100008,
+    BattlePassTaskDes = "BattlePass_Task_Des_100003113",
+    BattlePassTaskId = 100008111,
+    BattlePassType = "Weekly",
+    JumpUIId = 70,
+    QuestReward = T.RT_9,
+    Target = 10,
+    TargetId = T.RT_25
+  },
+  [100008112] = {
+    BattlePassId = 100008,
+    BattlePassTaskDes = "BattlePass_Task_Des_100003114",
+    BattlePassTaskId = 100008112,
+    BattlePassType = "Weekly",
+    JumpUIId = 70,
+    QuestReward = T.RT_9,
+    Target = 30,
+    TargetId = T.RT_25
+  },
+  [100008113] = {
+    BattlePassId = 100008,
+    BattlePassTaskDes = "BattlePass_Task_Des_100003115",
+    BattlePassTaskId = 100008113,
+    BattlePassType = "Weekly",
+    JumpUIId = 70,
+    QuestReward = T.RT_9,
+    Target = 60,
+    TargetId = T.RT_25
+  },
+  [100008201] = {
+    BattlePassId = 100008,
+    BattlePassTaskDes = "BattlePass_Task_Des_100001201",
+    BattlePassTaskId = 100008201,
+    BattlePassType = "Version",
+    JumpUIId = 14,
+    QuestReward = T.RT_19,
+    Target = 1,
+    TargetId = T.RT_20
+  },
+  [100008202] = {
+    BattlePassId = 100008,
+    BattlePassTaskDes = "BattlePass_Task_Des_100003202",
+    BattlePassTaskId = 100008202,
+    BattlePassType = "Version",
+    JumpUIId = 14,
+    QuestReward = T.RT_19,
+    Target = 1,
+    TargetId = T.RT_26
+  },
+  [100008203] = {
+    BattlePassId = 100008,
+    BattlePassTaskDes = "BattlePass_Task_Des_100004203",
+    BattlePassTaskId = 100008203,
+    BattlePassType = "Version",
+    JumpUIId = 14,
+    QuestReward = T.RT_21,
+    Target = 1,
+    TargetId = T.RT_27
+  },
+  [100008204] = {
+    BattlePassId = 100008,
+    BattlePassTaskDes = "BattlePass_Task_Des_100005204",
+    BattlePassTaskId = 100008204,
+    BattlePassType = "Version",
+    JumpUIId = 19,
+    QuestReward = T.RT_19,
+    Target = 70,
+    TargetId = T.RT_12
+  },
+  [100008205] = {
+    BattlePassId = 100008,
+    BattlePassTaskDes = "BattlePass_Task_Des_100001206",
+    BattlePassTaskId = 100008205,
+    BattlePassType = "Version",
+    QuestReward = T.RT_19,
+    Target = 8,
+    TargetId = T.RT_28
   }
 })

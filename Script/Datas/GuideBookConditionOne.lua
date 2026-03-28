@@ -310,6 +310,14 @@ return ReadOnly("GuideBookConditionOne", {
         GuideNoteId = 130,
         GuideNoteTab = 3,
         RewardId = 7000
+      },
+      [3] = {
+        CompleteUIGuideId = 129,
+        FinishQuest = 12010406,
+        GuideId = 129,
+        GuideNoteId = 146,
+        GuideNoteTab = 3,
+        RewardId = 7000
       }
     },
     [12010415] = {
@@ -319,6 +327,36 @@ return ReadOnly("GuideBookConditionOne", {
         GuideId = 97,
         GuideNoteId = 122,
         GuideNoteTab = 5,
+        RewardId = 7000
+      }
+    },
+    [12020208] = {
+      [1] = {
+        CompleteUIGuideId = 126,
+        FinishQuest = 12020208,
+        GuideId = 126,
+        GuideNoteId = 143,
+        GuideNoteTab = 3,
+        RewardId = 7000
+      }
+    },
+    [12020410] = {
+      [1] = {
+        CompleteUIGuideId = 123,
+        FinishQuest = 12020410,
+        GuideId = 123,
+        GuideNoteId = 140,
+        GuideNoteTab = 3,
+        RewardId = 7000
+      }
+    },
+    [12030202] = {
+      [1] = {
+        CompleteUIGuideId = 139,
+        FinishQuest = 12030202,
+        GuideId = 139,
+        GuideNoteId = 156,
+        GuideNoteTab = 3,
         RewardId = 7000
       }
     }
@@ -544,6 +582,26 @@ return ReadOnly("GuideBookConditionOne", {
     }
   },
   MechanismTag = {
+    Container = {
+      [1] = {
+        CompleteUIGuideId = 132,
+        GuideId = 132,
+        GuideNoteId = 149,
+        GuideNoteTab = 3,
+        MechanismTag = "Container",
+        RewardId = 7000
+      }
+    },
+    DarkClouds = {
+      [1] = {
+        CompleteUIGuideId = 147,
+        GuideId = 147,
+        GuideNoteId = 160,
+        GuideNoteTab = 3,
+        MechanismTag = "DarkClouds",
+        RewardId = 7000
+      }
+    },
     DongGuoBuffItem = {
       [1] = {
         GuideId = 107,
@@ -563,12 +621,42 @@ return ReadOnly("GuideBookConditionOne", {
         RewardId = 7000
       }
     },
+    ExpYanque = {
+      [1] = {
+        CompleteUIGuideId = 145,
+        GuideId = 145,
+        GuideNoteId = 158,
+        GuideNoteTab = 3,
+        MechanismTag = "ExpYanque",
+        RewardId = 7000
+      }
+    },
+    ExtractionPoint = {
+      [1] = {
+        CompleteUIGuideId = 140,
+        GuideId = 140,
+        GuideNoteId = 157,
+        GuideNoteTab = 3,
+        MechanismTag = "ExtractionPoint",
+        RewardId = 7000
+      }
+    },
     FlowerLantern = {
       [1] = {
         GuideId = 98,
         GuideNoteId = 123,
         GuideNoteTab = 3,
         MechanismTag = "FlowerLantern",
+        RewardId = 7000
+      }
+    },
+    GambleMech = {
+      [1] = {
+        CompleteUIGuideId = 135,
+        GuideId = 135,
+        GuideNoteId = 152,
+        GuideNoteTab = 3,
+        MechanismTag = "GambleMech",
         RewardId = 7000
       }
     },
@@ -585,6 +673,26 @@ return ReadOnly("GuideBookConditionOne", {
     GravityBall = {
       [1] = T.RT_5
     },
+    GuardMech = {
+      [1] = {
+        CompleteUIGuideId = 138,
+        GuideId = 138,
+        GuideNoteId = 155,
+        GuideNoteTab = 3,
+        MechanismTag = "GuardMech",
+        RewardId = 7000
+      }
+    },
+    HJWuyou = {
+      [1] = {
+        CompleteUIGuideId = 124,
+        GuideId = 124,
+        GuideNoteId = 141,
+        GuideNoteTab = 3,
+        MechanismTag = "HJWuyou",
+        RewardId = 7000
+      }
+    },
     HuaRui = {
       [1] = {
         CompleteUIGuideId = 109,
@@ -592,6 +700,16 @@ return ReadOnly("GuideBookConditionOne", {
         GuideNoteId = 134,
         GuideNoteTab = 3,
         MechanismTag = "HuaRui",
+        RewardId = 7000
+      }
+    },
+    IntDrone = {
+      [1] = {
+        CompleteUIGuideId = 128,
+        GuideId = 128,
+        GuideNoteId = 145,
+        GuideNoteTab = 3,
+        MechanismTag = "IntDrone",
         RewardId = 7000
       }
     },
@@ -627,8 +745,58 @@ return ReadOnly("GuideBookConditionOne", {
     MoInteractive = {
       [1] = T.RT_4
     },
+    Niudan = {
+      [1] = {
+        CompleteUIGuideId = 133,
+        GuideId = 133,
+        GuideNoteId = 150,
+        GuideNoteTab = 3,
+        MechanismTag = "Niudan",
+        RewardId = 7000
+      }
+    },
     Petal = {
       [1] = T.RT_3
+    },
+    PoisonMech = {
+      [1] = {
+        CompleteUIGuideId = 137,
+        GuideId = 137,
+        GuideNoteId = 154,
+        GuideNoteTab = 3,
+        MechanismTag = "PoisonMech",
+        RewardId = 7000
+      }
+    },
+    SubRebsign = {
+      [1] = {
+        CompleteUIGuideId = 127,
+        GuideId = 127,
+        GuideNoteId = 144,
+        GuideNoteTab = 3,
+        MechanismTag = "SubRebsign",
+        RewardId = 7000
+      }
+    },
+    TRLMTerra = {
+      [1] = {
+        CompleteUIGuideId = 125,
+        GuideId = 125,
+        GuideNoteId = 142,
+        GuideNoteTab = 3,
+        MechanismTag = "TRLMTerra",
+        RewardId = 7000
+      }
+    },
+    TreasureRoom = {
+      [1] = {
+        CompleteUIGuideId = 136,
+        GuideId = 136,
+        GuideNoteId = 153,
+        GuideNoteTab = 3,
+        MechanismTag = "TreasureRoom",
+        RewardId = 7000
+      }
     },
     WindBell = {
       [1] = {
@@ -640,12 +808,52 @@ return ReadOnly("GuideBookConditionOne", {
         RewardId = 7000
       }
     },
+    WuyouFind = {
+      [1] = {
+        CompleteUIGuideId = 146,
+        GuideId = 146,
+        GuideNoteId = 159,
+        GuideNoteTab = 3,
+        MechanismTag = "WuyouFind",
+        RewardId = 7000
+      }
+    },
     XingShiBei = {
       [1] = {
         GuideId = 102,
         GuideNoteId = 127,
         GuideNoteTab = 3,
         MechanismTag = "XingShiBei",
+        RewardId = 7000
+      }
+    },
+    YYGFan = {
+      [1] = {
+        CompleteUIGuideId = 130,
+        GuideId = 130,
+        GuideNoteId = 147,
+        GuideNoteTab = 3,
+        MechanismTag = "YYGFan",
+        RewardId = 7000
+      }
+    },
+    YYGPanel = {
+      [1] = {
+        CompleteUIGuideId = 121,
+        GuideId = 121,
+        GuideNoteId = 138,
+        GuideNoteTab = 3,
+        MechanismTag = "YYGPanel",
+        RewardId = 7000
+      }
+    },
+    YYGPinTu = {
+      [1] = {
+        CompleteUIGuideId = 122,
+        GuideId = 122,
+        GuideNoteId = 139,
+        GuideNoteTab = 3,
+        MechanismTag = "YYGPinTu",
         RewardId = 7000
       }
     }
@@ -1090,6 +1298,16 @@ return ReadOnly("GuideBookConditionOne", {
         GuideNoteTab = 5,
         RewardId = 7000,
         SysGuideId = 2081
+      }
+    },
+    [2095] = {
+      [1] = {
+        CompleteUIGuideId = 144,
+        GuideId = 144,
+        GuideNoteId = 148,
+        GuideNoteTab = 5,
+        RewardId = 7000,
+        SysGuideId = 2095
       }
     }
   }

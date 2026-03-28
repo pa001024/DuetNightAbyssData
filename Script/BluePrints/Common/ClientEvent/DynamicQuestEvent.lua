@@ -148,6 +148,9 @@ function DynamicQuestEvent:OnFinishEvent(Result, Callback, DialogueId, ForbidAni
       TaskBar.Tips:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
       if CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" then
         TaskBar:PlayAnimation(TaskBar.Tooltip_In)
+        if TaskBar.Panel_Tips2:GetVisibility() == UE4.ESlateVisibility.SelfHitTestInvisible then
+          TaskBar:PlayAnimation(TaskBar.Tooltip2_Out)
+        end
       end
       if TaskBar.VBox_SubTasks:GetChildrenCount() > 0 then
         TaskBar.VBox_SubTasks:SetVisibility(ESlateVisibility.SelfHitTestInvisible)

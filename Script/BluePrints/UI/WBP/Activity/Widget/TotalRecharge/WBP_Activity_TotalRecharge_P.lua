@@ -238,6 +238,7 @@ function M:ViewInfoBtnClick()
   }
   Params.EventId = self.CurActivityId
   self.DetailPopupUI = UIManager(self):ShowCommonPopupUI(100306, Params, self)
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", nil, nil)
 end
 
 function M:JumpBtnClick()

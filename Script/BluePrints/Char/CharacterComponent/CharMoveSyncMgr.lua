@@ -209,7 +209,7 @@ function Component:SendVisibleMessage(ShouldHide)
   if Avatar.CurrentOnlineType < 0 then
     return
   end
-  ActionBaseInfo = self:GetPlayerLocationAndRotation()
+  local ActionBaseInfo = self:GetPlayerLocationAndRotation()
   Avatar:SendSyncInfo(SyncInfo, ActionBaseInfo)
 end
 

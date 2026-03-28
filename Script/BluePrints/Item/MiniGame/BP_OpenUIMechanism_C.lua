@@ -20,6 +20,18 @@ function M:CommonInitInfo(Info)
   end
 end
 
+function M:OnActorReady(Info)
+  M.Super.OnActorReady(self, Info)
+  local StateData = DataMgr.MechanismState[self.StateId]
+  if StateData and StateData.StateEvent then
+    for i, v in pairs(StateData.StateEvent) do
+      if v.TypeNextState and v.TypeNextState.Type == "InteractDone" then
+        self:ChangeState("InteractDone", 0)
+      end
+    end
+  end
+end
+
 function M:OpenMechanism(PlayerId)
 end
 

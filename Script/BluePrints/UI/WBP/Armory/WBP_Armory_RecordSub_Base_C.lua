@@ -179,7 +179,6 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, ...)
   local ArmoryMain = UIManager(self):GetArmoryUIObj()
   if ArmoryMain then
     self.ArmoryPlayer = ArmoryMain.ArmoryPlayer
-    self.ArmoryHelper = ArmoryMain.ArmoryHelper
   end
   self:Init(self.Char)
   self:BlockAllUIInput(true, "SP_DisplayOnly")

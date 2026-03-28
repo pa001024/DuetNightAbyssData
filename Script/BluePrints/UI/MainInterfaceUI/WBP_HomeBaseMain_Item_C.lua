@@ -184,6 +184,13 @@ function WBP_HomeBaseMain_Item_C:InitWidgetInfoInGamePad(IsUseGamePad)
   end
 end
 
+function WBP_HomeBaseMain_Item_C:RebindClickEvent(Owner, Callback)
+  if Owner and Callback then
+    self.Btn_top.OnClicked:Clear()
+    self.Btn_top.OnClicked:Add(Owner, Callback)
+  end
+end
+
 function WBP_HomeBaseMain_Item_C:LoadImage(MainUIId)
   self.Common_Item_Subsize_New_PC:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Reddot:SetVisibility(UE4.ESlateVisibility.Collapsed)

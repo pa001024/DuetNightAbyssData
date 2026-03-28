@@ -23,6 +23,16 @@ function M:Construct()
   self.List_Skill:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
   self.List_Skill.bIsFocusable = false
   self:AddDispatcher(EventID.OnSwitchPet, self, self.OnSwitchPet)
+  self.Button_Preview:Init({
+    ClickCallback = self.OnBtn_PreviewClicked,
+    SoundFunc = function()
+      AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", nil, nil)
+    end,
+    SoundFuncReceiver = self,
+    OwnerWidget = self,
+    OnAddedToFocusPath = self.OnEntryWidgetAddedToFocusPath
+  })
+  self.Text_Preview:SetText(GText("UI_Preview_Title"))
 end
 
 function M:OnIntensifyBtnClicked()
@@ -113,6 +123,30 @@ function M:UpdateButtonStyle(CurPet, Pet)
   end
 end
 
+function M:OnBtn_PreviewClicked()
+  if not self.Pet then
+    return
+  end
+  local Params = {
+    Pet = self.Pet,
+    TabConfigData = {
+      LeftGamePadKey = "LeftShoulder",
+      RightGamePadKey = "RightShoulder",
+      Tabs = {
+        {
+          Text = GText("UI_Armory_Pet_Positive"),
+          TabId = 1
+        },
+        {
+          Text = GText("UI_Armory_Pet_Passive"),
+          TabId = 2
+        }
+      }
+    }
+  }
+  UIManager(self):ShowCommonPopupUI(100346, Params, self)
+end
+
 function M:GetButtonStyleInfo()
   return self.ButtonStyleInfo
 end
@@ -174,14 +208,18 @@ function M:UpdateSkillInfos(Pet)
   if not Data then
     return
   end
+  local AdditionalLevel = Pet:GetSkillLevelUp()
+  local CurPetSkillLevel = Pet.BreakNum + AdditionalLevel
   if Data.SupportSkillId then
-    local SkillDesc = SkillUtils.GetSkillDesc(Data.SupportSkillId, ArmoryUtils:GetPetSkillLevel(Pet.BreakNum))
+    local SkillDesc = SkillUtils.GetSkillDesc(Data.SupportSkillId, ArmoryUtils:GetPetSkillLevel(CurPetSkillLevel))
     local Obj = NewObject(UIUtils.GetCommonItemContentClass())
     Obj.Owner = self
     Obj.Pet = Pet
     Obj.SkillId = Data.SupportSkillId
     Obj.SkillName = GText("UI_Armory_Pet_Positive")
     Obj.SkillDesc = SkillDesc
+    Obj.SkillLevel = Pet.BreakNum + 1
+    Obj.ExtraLevel = AdditionalLevel
     local SkillData = DataMgr.Skill[Data.SupportSkillId]
     if SkillData and SkillData[1] and SkillData[1][0] then
       SkillData = SkillData[1][0]
@@ -190,7 +228,7 @@ function M:UpdateSkillInfos(Pet)
     end
     self.List_Skill:AddItem(Obj)
   end
-  local PassiveEffectDesc = ArmoryUtils:GenPetPassiveEffectDesc(Data, ArmoryUtils:GetPetSkillLevel(Pet.BreakNum))
+  local PassiveEffectDesc = ArmoryUtils:GenPetPassiveEffectDesc(Data, ArmoryUtils:GetPetSkillLevel(CurPetSkillLevel))
   if PassiveEffectDesc and "" ~= PassiveEffectDesc then
     local Obj = NewObject(UIUtils.GetCommonItemContentClass())
     Obj.Owner = self
@@ -198,6 +236,7 @@ function M:UpdateSkillInfos(Pet)
     Obj.SkillLevel = Pet.BreakNum + 1
     Obj.SkillName = GText("UI_Armory_Pet_Passive")
     Obj.SkillDesc = PassiveEffectDesc
+    Obj.ExtraLevel = AdditionalLevel
     self.List_Skill:AddItem(Obj)
   end
 end

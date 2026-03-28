@@ -1,6 +1,6 @@
 require("UnLua")
 local M = Class({
-  "Blueprints.UI.BP_UIState_C"
+  "BluePrints.UI.BP_EMUserWidget_C"
 })
 
 function M:Init(Params)
@@ -37,7 +37,6 @@ end
 
 function M:Destruct()
   self:RemoveInputMethodChangedListen()
-  self.Super.Destruct(self)
 end
 
 function M:SetText(Text)

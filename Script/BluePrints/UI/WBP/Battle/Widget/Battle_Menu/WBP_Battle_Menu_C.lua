@@ -167,7 +167,13 @@ function M:SetWheelScheme(SchemIdx)
 end
 
 function M:SetWheelMiddleStyle(Style)
-  self.WidgetSwitcher_0:SetActiveWidgetIndex(Style)
+  if 2 == Style then
+    if not self.CurrentHoveredSlot then
+      self.WidgetSwitcher_0:SetActiveWidgetIndex(Style)
+    end
+  else
+    self.WidgetSwitcher_0:SetActiveWidgetIndex(Style)
+  end
 end
 
 function M:CreateCommonKey(Params)

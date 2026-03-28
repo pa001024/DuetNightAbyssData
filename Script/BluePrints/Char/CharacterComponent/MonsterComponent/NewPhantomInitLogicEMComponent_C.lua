@@ -24,10 +24,6 @@ end
 function M:NewPhantomInitComponent_CallBlueprintCharacterReadyAndBeginPlay(Owner)
   Owner.Overridden.OnCharacterReady(Owner)
   Owner.Overridden.ReceiveBeginPlay(Owner)
-  if (IsStandAlone(Owner) or IsClient(Owner)) and Owner:IsPhantom() and Owner.Mesh then
-    print(_G.LogTag, "wzj: 强制魅影LOD0, " .. Owner:GetName())
-    Owner.Mesh:SetForcedLOD(1)
-  end
 end
 
 function M:NewPhantomInitComponent_GetDataInfo(Owner)

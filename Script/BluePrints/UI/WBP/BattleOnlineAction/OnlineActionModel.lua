@@ -236,16 +236,11 @@ function M:FindPlayerAround()
   if -1 == self._Avatar.CurrentOnlineType then
     return
   end
-  local now = os.time()
-  if self.LastNearbyQueryTime and now - self.LastNearbyQueryTime < OnlineActionCommon.NearbySearchCooldown and self.NearbyPlayerInfos and #self.NearbyPlayerInfos > 0 then
-    return
-  end
   self.NearbyPlayerInfos = {}
   if OnlineActionCommon.UseSyncNearbyPlayers then
     local Sync = UE4.URegionSyncSubsystem.GetInstance(GWorld.GameInstance)
     if not Sync or Sync:IsNearbyResultUninitialized() then
-      ScreenPrint("::意外错误，多线程查找附近玩家失败，退化成在Lua层寻找")
-      self:FindPlayerAroundOld()
+      ScreenPrint("::意外错误，多线程查找附近玩家失败,多线程数据没有准备好")
       return
     end
     local NearbyIds = Sync:GetNearbyPlayersIDs()
@@ -278,62 +273,10 @@ function M:FindPlayerAround()
         end
       end
     end
-    self.LastNearbyQueryTime = now
     return
   else
     DebugPrint("关闭多线程查找附近玩家，在Lua层寻找")
-    self:FindPlayerAroundOld()
   end
-end
-
-function M:FindPlayerAroundOld()
-  local MainPlayer = UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
-  if not MainPlayer then
-    ScreenPrint("FindPlayerAround: MainPlayer is nil")
-    return
-  end
-  local MainPlayerLocation = MainPlayer:K2_GetActorLocation()
-  local CalDistanceFunc = UE4.UKismetMathLibrary.Vector_Distance
-  local SelfRegionId = self._Avatar.CurrentRegionId
-  for ObjId, AvatarData in pairs(self._Avatar.RegionAvatars) do
-    DebugPrint("FindPlayerAround: Checking player with ObjId: " .. tostring(ObjId))
-    local OtherPlayer = self._Avatar:GetBornedChar(ObjId)
-    if OtherPlayer and AvatarData.AvatarInfo.CurrentRegionId == self._Avatar.CurrentRegionId then
-      DebugPrint("FindPlayerAround: OtherPlayer found for ObjId: " .. tostring(ObjId))
-      local OtherPlayerLocation = OtherPlayer:K2_GetActorLocation()
-      DebugPrint("FindPlayerAround: OtherPlayerLocation for ObjId " .. tostring(ObjId) .. ": " .. tostring(OtherPlayerLocation))
-      local Distance = CalDistanceFunc(MainPlayerLocation, OtherPlayerLocation)
-      DebugPrint("FindPlayerAround: Distance to ObjId " .. tostring(ObjId) .. ": " .. tostring(Distance))
-      if Distance < OnlineActionCommon.NearbtPlayDistance then
-        DebugPrint("FindPlayerAround: Player with ObjId " .. tostring(AvatarData.AvatarInfo.Nickname) .. " is nearby")
-        if not OtherPlayer:CharacterInTag("Seating") then
-          DebugPrint("FindPlayerAround: Player with ObjId " .. tostring(AvatarData.AvatarInfo.Nickname) .. " is not in the same region")
-          table.insert(self.NearbyPlayerInfos, {
-            Uid = AvatarData.AvatarInfo.Uid,
-            NickName = AvatarData.AvatarInfo.Nickname,
-            Eid = ObjId,
-            Actor = OtherPlayer,
-            Level = AvatarData.AvatarInfo.Level or 1,
-            TitleBefore = AvatarData.AvatarInfo.TitleBefore,
-            TitleAfter = AvatarData.AvatarInfo.TitleAfter,
-            TitleFrame = AvatarData.AvatarInfo.TitleFrame or 10001,
-            HeadIconId = AvatarData.AvatarInfo.HeadIconId,
-            HeadFrameId = AvatarData.AvatarInfo.HeadFrameId
-          })
-          if #self.NearbyPlayerInfos >= EMLuaConst.RegionOnlineNearbyMaxCount then
-            DebugPrint("FindPlayerAround: RegionOnlineNearbyMaxCount reached 达到最大玩家人数，不再搜索")
-            break
-          end
-        end
-      else
-        DebugPrint("FindPlayerAround: Player with ObjId " .. tostring(ObjId) .. " is too far")
-      end
-    else
-      DebugPrint("FindPlayerAround: OtherPlayer is nil for ObjId: " .. tostring(ObjId))
-    end
-  end
-  DebugPrint("FindPlayerAround: Found " .. tostring(#self.NearbyPlayerInfos) .. " nearby players")
-  self.LastNearbyQueryTime = os.time()
 end
 
 function M:CheckNearbyInfoVaild(NearbyInfo, Index)

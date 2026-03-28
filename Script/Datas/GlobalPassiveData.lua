@@ -99,6 +99,62 @@ return ReadOnly("GlobalPassiveData", {
       LastTime = 15
     }
   },
+  [13111] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_SkillAddBuff.BP_AbyssGP_SkillAddBuff",
+    Camp = "Player",
+    ID = 13111,
+    Vars = {Buff = 2013111, LastTime = 12}
+  },
+  [13112] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_AddBuff.BP_AbyssGP_AddBuff",
+    Camp = "Player",
+    ID = 13112,
+    Vars = {Buff = 2013112}
+  },
+  [13121] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_BuffInAir.BP_AbyssGP_BuffInAir",
+    Camp = "Player",
+    ID = 13121,
+    Vars = {Buff = 2013121, LastTime = 1}
+  },
+  [13122] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_AddBuff.BP_AbyssGP_AddBuff",
+    Camp = "Player",
+    ID = 13122,
+    Vars = {Buff = 2013122}
+  },
+  [13211] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_SpAddBuff.BP_AbyssGP_SpAddBuff",
+    Camp = "Player",
+    ID = 13211,
+    Vars = {
+      Buff = 2013211,
+      LastTime = 24,
+      SpCost = 300
+    }
+  },
+  [13212] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_AddBuff.BP_AbyssGP_AddBuff",
+    Camp = "Player",
+    ID = 13212,
+    Vars = {Buff = 2013212}
+  },
+  [13221] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_HitCountBuff.BP_AbyssGP_HitCountBuff",
+    Camp = "Player",
+    ID = 13221,
+    Vars = {
+      Buff = 2013221,
+      HitCount = 3,
+      LastTime = 20
+    }
+  },
+  [13222] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_AddBuff.BP_AbyssGP_AddBuff",
+    Camp = "Player",
+    ID = 13222,
+    Vars = {Buff = 2013222}
+  },
   [20030] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_HitCountBuff.BP_AbyssGP_HitCountBuff",
     Camp = "Player",
@@ -296,6 +352,19 @@ return ReadOnly("GlobalPassiveData", {
       Divider = 0.3,
       MaxSkillInten = 4.6,
       Penetration = 0.035
+    }
+  },
+  [30103] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Raid/BP_RaidGP_013.BP_RaidGP_013",
+    Camp = "Player",
+    ID = 30103,
+    Vars = {
+      Divider1 = 0.1,
+      Divider2 = 0.2,
+      MaxRange = 0.6,
+      MaxSustain = 1,
+      Penetration1 = 0.07,
+      Penetration2 = 0.1
     }
   },
   [30101001] = {

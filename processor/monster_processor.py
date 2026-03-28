@@ -6,7 +6,7 @@ class MonsterProcessor(BaseProcessor):
         super().__init__(data_loader)
         self.file_type = "Monster"
         self.battle_monster_data = data_loader.load_json("BattleMonster.json")
-        self.tab_data = data_loader.load_json("ArchiveTab.json", use_i18n=True)
+        self.tab_data = data_loader.load_json("ArchiveTab.json")
         self.tab_trans = dict()
         for tab in self.tab_data:
             tab_id = tab.get("TabPara", 0)
@@ -70,6 +70,11 @@ class MonsterProcessor(BaseProcessor):
                 dungeon_monsters = dungeon_info.get("DungeonMonsters", [])
                 for monster_id in dungeon_monsters:
                     self.valid_monster_ids.add(monster_id)
+                bp_override_vars = dungeon_info.get("BPOverrideVars", {})
+                for key in ("BossID", "Elite1", "Elite2"):
+                    monster_id = bp_override_vars.get(key)
+                    if monster_id:
+                        self.valid_monster_ids.add(monster_id)
                 # 提取DungeonInitGuideUnitId字段中的怪物ID
                 dungeon_init_guide_unit_id = dungeon_info.get(
                     "DungeonInitGuideUnitId", []
@@ -87,7 +92,12 @@ class MonsterProcessor(BaseProcessor):
         for hard_boss_info in hard_boss_main_data:
             monster_id = hard_boss_info.get("MonsterId")
             if monster_id:
-                self.valid_monster_ids.add(monster_id)
+                if isinstance(monster_id, list):
+                    for monster_id_item in monster_id:
+                        if monster_id_item:
+                            self.valid_monster_ids.add(monster_id_item)
+                else:
+                    self.valid_monster_ids.add(monster_id)
 
         # 仅补充Dungeon.spawn.m/sm中会用到的怪物ID
         self._add_dungeon_spawn_monster_ids(data_loader, dungeon_data)
@@ -116,6 +126,7 @@ class MonsterProcessor(BaseProcessor):
 
         tags = monster_data.get("GamePlayTags", [])
         fact = [tag for tag in tags if tag in self.tab_trans]
+        strong_tags = [tag for tag in tags if isinstance(tag, str) and tag.startswith("Mon.Strong.") and tag != "Mon.Strong.Double"]
         # fact = [self.get_translated_text(fact) for fact in facts]
         if len(fact) == 0:
             fact = [""]
@@ -165,6 +176,8 @@ class MonsterProcessor(BaseProcessor):
             del processed["f"]
         if processed["es"] == 0:
             del processed["es"]
+        if strong_tags:
+            processed["tags"] = strong_tags
 
         return processed
 

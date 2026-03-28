@@ -10,10 +10,20 @@ function WBP_SoloTreasure_CountDown_C:InitUIInfo(Name, IsInUIMode, EventList, ..
   if UIBattleMain then
     UIBattleMain.Btn_Task:SetVisibility(ESlateVisibility.Collapsed)
     UIBattleMain.Pos_TaskBar:SetVisibility(ESlateVisibility.Collapsed)
-    UIBattleMain.HBox:SetVisibility(ESlateVisibility.Collapsed)
+    if UIBattleMain.Group_ChatEntry then
+      UIBattleMain.Group_ChatEntry:SetVisibility(ESlateVisibility.Collapsed)
+    end
+    if UIBattleMain.Pos_OnlineAction then
+      UIBattleMain.Pos_OnlineAction:SetVisibility(ESlateVisibility.Collapsed)
+    end
+    if UIBattleMain.Chat_Entry then
+      UIBattleMain.Chat_Entry:SetVisibility(ESlateVisibility.Collapsed)
+    end
   end
   EventManager:FireEvent(EventID.OnSoloTreasureScoreAndBagUI)
+  EventManager:AddEvent(EventID.ShowCountDownTips, self, self.ShowCountDownTips)
   self:PlayInAnimation()
+  self:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
 end
 
 function WBP_SoloTreasure_CountDown_C:OnLoaded(...)
@@ -24,6 +34,10 @@ function WBP_SoloTreasure_CountDown_C:OnLoaded(...)
   end
   self:InitData()
   self:InitText()
+end
+
+function WBP_SoloTreasure_CountDown_C:ShowCountDownTips()
+  self:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
 end
 
 function WBP_SoloTreasure_CountDown_C:PlayInAnimation()
@@ -52,14 +66,13 @@ function WBP_SoloTreasure_CountDown_C:InitData()
 end
 
 function WBP_SoloTreasure_CountDown_C:InitText()
-  self.Text_Evacuation:SetText("撤离剩余（待包装）")
+  self.Text_Evacuation:SetText(GText("UI_Extraction_GameCountdown"))
 end
 
 function WBP_SoloTreasure_CountDown_C:InitTaskStartTip()
   local Parmas = {}
   Parmas.TipType = "GameStart"
   Parmas.Owner = self
-  Parmas.GameTotalTime = self.GameTotalTime
   
   function Parmas.Callback()
     self:PlayAnimation(self.In)
@@ -70,13 +83,13 @@ function WBP_SoloTreasure_CountDown_C:InitTaskStartTip()
   else
     self.TimeTip:RealLoaded(Parmas)
   end
+  AudioManager(self):PlayUISound(self, "event:/ui/activity/sdc_toast_game_start", nil, nil)
 end
 
 function WBP_SoloTreasure_CountDown_C:InitWarningTimeTip()
   local Parmas = {}
   Parmas.TipType = "TimeWarning"
   Parmas.Owner = self
-  Parmas.WarningTime = self.WarningTime
   
   function Parmas.Callback()
     self:PlayAnimation(self.In)
@@ -88,19 +101,17 @@ function WBP_SoloTreasure_CountDown_C:InitWarningTimeTip()
   else
     self.TimeTip:RealLoaded(Parmas)
   end
+  AudioManager(self):PlayUISound(self, "event:/ui/activity/sdc_toast_game_overtime", nil, nil)
 end
 
 function WBP_SoloTreasure_CountDown_C:InitCountDown()
   self.Switch_TimeType:SetActiveWidgetIndex(0)
   self.IsRed = false
-  self:AddTimer(1, self.UpdateCountDownUI, true, 0, "CountDown", true)
 end
 
-function WBP_SoloTreasure_CountDown_C:UpdateCountDownUI()
-  local DisplayRemainTime = CommonUtils.GetClientTimerStructRemainTime(self.TimerHandleName)
+function WBP_SoloTreasure_CountDown_C:UpdateCountDownUI(DisplayRemainTime)
   if DisplayRemainTime <= 0 then
     DisplayRemainTime = 0
-    self:RemoveTimer("CountDown")
     self:PlayAnimation(self.Out)
     self:GameOver()
   elseif DisplayRemainTime < 10 then
@@ -108,7 +119,9 @@ function WBP_SoloTreasure_CountDown_C:UpdateCountDownUI()
       self.Switch_TimeType:SetActiveWidgetIndex(1)
       self.IsRed = true
     end
-    self:PlayAnimation(self.Warning)
+    if not self:IsPlayingAnimation(self.Warning) then
+      self:PlayAnimation(self.Warning)
+    end
   elseif DisplayRemainTime < self.WarningTime and not self.IsRed then
     self.Switch_TimeType:SetActiveWidgetIndex(1)
     self:InitWarningTimeTip()

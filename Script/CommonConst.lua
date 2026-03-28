@@ -29,7 +29,6 @@ local CommonConst = {
   CLIENT_LOSE_DESTROY_DELAY_TIME = 300,
   DEFAULT_SAVE_TIME = 900,
   ConnectTimeout = 5,
-  MAX_PLAYER_NUMS = 4,
   ONLINE_MATCH_TIME = 10,
   ONLINE_TEAM_VOTE_TIME = 10,
   AddCollectorTime = 0.5,
@@ -100,6 +99,7 @@ local CommonConst = {
     SurvivalPro = "DungenonSurviveFloat",
     SurvivalMini = "DungenonSurviveFloat",
     SurvivalMiniPro = "DungenonSurviveFloat",
+    SurvivalUltra = "DungenonSurviveFloat",
     Defence = "DungenonDefenseFloat",
     DefenceMove = "DungenonDefenseFloat",
     DefencePro = "DungenonDefenseProFloat",
@@ -124,7 +124,8 @@ local CommonConst = {
     SoloRaid = "WidgetUI",
     MonsterRush = "WidgetUI",
     AutoChess = "Disable",
-    SoloTreasure = "SoloTreasureCountDownTip"
+    SoloTreasure = "SoloTreasureCountDownTip",
+    SynthesisII = "DungenonDefenseFloat"
   },
   DungeonEMWidgetUINameMap = {
     SoloRaid = "SoloRaidScore",
@@ -149,7 +150,8 @@ local CommonConst = {
     MonsterRush = "MonsterRush",
     HardBossDg = "HardBossDg",
     SoloRaid = "SoloRaid",
-    AutoChess = "AutoChess"
+    AutoChess = "AutoChess",
+    SoloTreasure = "SoloTreasure"
   },
   SubRegionType = {Field = "field", Home = "home"},
   AvatarStatus = {
@@ -415,6 +417,8 @@ local CommonConst = {
   TargetTypeWeaponModSlotPolarity = 10405,
   TargetTypeWeaponRarityGrade = 10406,
   TargetTypeWeaponGrade = 10407,
+  TargetTypeRarityWeaponHyperCardLevel = 10408,
+  TargetTypeWeaponHyperCardLevel = 10409,
   TargetTypeMechanismId = 10501,
   TargetTypeDungeonId = 10502,
   TargetTypeDungeonIdAndTime = 10503,
@@ -509,6 +513,7 @@ local CommonConst = {
   ZhiliuEventId = 103005,
   RaidEventId = 111001,
   AutoChessEventId = 103016,
+  SoloTreasureEventId = 103014,
   TargetCheckAll = {
     9001,
     9002,
@@ -595,7 +600,9 @@ local CommonConst = {
     10406,
     10407,
     10504,
-    22002
+    22002,
+    10408,
+    10409
   },
   TargetCheckLastAndMore = {
     12002,
@@ -758,14 +765,16 @@ local CommonConst = {
     PersonInfo = 2,
     BattlePass = 3,
     PreviewCommon = 4,
-    PreviewMVP = 5
+    PreviewMVP = 5,
+    PreviewSoloTreasure = 6
   },
   PreviewScenePaths = {
     "/Game/UI/LevelMap/Armory_BGSkySphere.Armory_BGSkySphere",
     "/Game/UI/LevelMap/Map_Preview.Map_Preview'",
     "/Game/UI/LevelMap/Map_BattleOrder.Map_BattleOrder",
     "/Game/UI/LevelMap/UI_Background_Art.UI_Background_Art",
-    "/Game/UI/LevelMap/MVPShow_BGSkySphere.MVPShow_BGSkySphere"
+    "/Game/UI/LevelMap/MVPShow_BGSkySphere.MVPShow_BGSkySphere",
+    "/Game/UI/LevelMap/Map_Huaxu_Haojing_Poi.Map_Huaxu_Haojing_Poi"
   },
   NonePolarity = -1,
   ModSlotUnequipped = "",
@@ -801,8 +810,22 @@ local CommonConst = {
     Tail = 13,
     MVP = 14
   },
-  WeaponAccessoryType = {Head = "Head", Waist = "Waist"},
-  WeaponAccessoryTypeIndex = {Head = 1, Waist = 2},
+  WeaponAccessoryTypes = {
+    Accessory = "Accessory",
+    RunAttack = "RunAttack",
+    HeavyAttack = "HeavyAttack",
+    FallAttack = "FallAttack",
+    SlideAttack = "SlideAttack"
+  },
+  WeaponAccessoryTypeIndex = {
+    Accessory = 1,
+    RunAttack = 2,
+    HeavyAttack = 3,
+    FallAttack = 4,
+    SlideAttack = 5
+  },
+  MountAccessoryType = {Head = "Head", Waist = "Waist"},
+  MountAccessoryTypeIndex = {Head = 1, Waist = 2},
   ActionAccessoryTypes = {
     FX_Dead = "FX_Dead",
     FX_Teleport = "FX_Teleport",
@@ -889,6 +912,7 @@ local CommonConst = {
     Weight = "AddRareFishProb"
   },
   ArmoryEnterId = 1,
+  CommonSetId = 26,
   GachaEnterId = 5,
   AbyssTeamNoChar = "",
   AbyssTeamNoPet = -1,
@@ -913,7 +937,9 @@ local CommonConst = {
   DungeonUnCostItems = {
     ActionPoint = 1,
     Ticket = 2,
-    Walnut = 3
+    Walnut = 3,
+    DoubleDrop = 4,
+    EliteRush = 5
   },
   WalnutUser = {
     Depute = "Depute",
@@ -1007,6 +1033,7 @@ local CommonConst = {
     AlreadyClaimed = 2,
     CanClaim = 3
   },
+  EntrustFameTaskState = {ReadyClaim = 0, AlreadyClaimed = 2},
   FameRewardState = {
     NotClaimable = 0,
     ReadyClaim = 1,
@@ -1037,6 +1064,9 @@ local CommonConst = {
   },
   INIT_WORLD_CHANNEL_COUNT = 1,
   MAX_WORLD_CHANNEL_MEMBER = 200,
+  INIT_WORLD_CHANNEL_NUM = 50,
+  MAX_WORLD_CHANNEL_NUM = 99,
+  MAX_WORLD_HISTORY_CHANNEL = 5,
   CHAT_INTERVAL = 0.5,
   MAX_QUICK_MESSAGE_COUNT = 8,
   MAX_EMOTION_COUNT = 10,
@@ -1436,7 +1466,8 @@ CommonConst.RegionMapTrackingType = {
   RegionPoint = 2,
   MarkPoint = 3,
   MiniDispatchPoint = 4,
-  SpecialSideQuest = 5
+  SpecialSideQuest = 5,
+  SoloTreasure = 6
 }
 CommonConst.WebJumpState = {
   Zero = 0,
@@ -1463,6 +1494,7 @@ CommonConst.MonitorCheatPeriod = {
 CommonConst.MonitorTimeCheatSecond = 5
 CommonConst.MonitorTimeCheckTimes = 15
 CommonConst.WarningCollectionPeriod = 60
+CommonConst.ClientLogCollectionPeriod = 1
 CommonConst.CheatKey = {
   MaxDamage = "MaxDamage",
   DamageLog = "DamageLog",
@@ -1499,4 +1531,14 @@ CommonConst.PlayerTag = {
   ComeBack = 3
 }
 CommonConst.DailyProgressNeed = 200
+CommonConst.ForbidDungeonRewardCD = 3600
+CommonConst.ForbidDungeonRewardCount = 30
+CommonConst.RegionOnlineState = {
+  NotExist = -1,
+  Normal = 1,
+  Busy = 2,
+  Full = 3
+}
+CommonConst.WeaponSubType = {Normal = "Normal", Hyper = "Hyper"}
+CommonConst.SynthesisIIHostageUnitId = 7017051
 return CommonConst

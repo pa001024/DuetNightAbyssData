@@ -3117,58 +3117,248 @@
   {
     "id": 104501,
     "rid": 1045,
-    "name": "UI_SUBREGION_NAME_104501",
+    "name": "东城",
     "desc": "UI_SUBREGION_DES_104501",
-    "map": "Huaxu_Haojing_Eas"
+    "map": "Huaxu_Haojing_Eas",
+    "rc": [
+      {
+        "id": 9050101,
+        "info": [
+          {
+            "id": 4121,
+            "w": 333
+          },
+          {
+            "id": 4122,
+            "w": 333
+          },
+          {
+            "id": 4123,
+            "w": 167
+          },
+          {
+            "id": 4021,
+            "w": 778
+          },
+          {
+            "id": 4022,
+            "w": 778
+          },
+          {
+            "id": 4023,
+            "w": 389
+          },
+          {
+            "id": 4941,
+            "w": 7222
+          }
+        ],
+        "count": 2
+      }
+    ]
   },
   {
     "id": 104502,
     "rid": 1045,
-    "name": "UI_SUBREGION_NAME_104502",
+    "name": "西城",
     "desc": "UI_SUBREGION_DES_104502",
-    "map": "Huaxu_Haojing_Wes"
+    "map": "Huaxu_Haojing_Wes",
+    "rc": [
+      {
+        "id": 9050201,
+        "info": [
+          {
+            "id": 4161,
+            "w": 333
+          },
+          {
+            "id": 4162,
+            "w": 333
+          },
+          {
+            "id": 4163,
+            "w": 167
+          },
+          {
+            "id": 4061,
+            "w": 778
+          },
+          {
+            "id": 4062,
+            "w": 778
+          },
+          {
+            "id": 4063,
+            "w": 389
+          },
+          {
+            "id": 4941,
+            "w": 7222
+          }
+        ],
+        "count": 3
+      }
+    ]
   },
   {
     "id": 104503,
     "rid": 1045,
-    "name": "UI_SUBREGION_NAME_104503",
+    "name": "内城",
     "desc": "UI_SUBREGION_DES_104503",
-    "map": "Huaxu_Haojing_Inn"
+    "map": "Huaxu_Haojing_Inn",
+    "rc": [
+      {
+        "id": 9050501,
+        "info": [
+          {
+            "id": 4131,
+            "w": 333
+          },
+          {
+            "id": 4132,
+            "w": 333
+          },
+          {
+            "id": 4133,
+            "w": 167
+          },
+          {
+            "id": 4031,
+            "w": 778
+          },
+          {
+            "id": 4032,
+            "w": 778
+          },
+          {
+            "id": 4033,
+            "w": 389
+          },
+          {
+            "id": 4941,
+            "w": 7222
+          }
+        ],
+        "count": 3
+      }
+    ]
   },
   {
     "id": 104504,
     "rid": 1045,
-    "name": "UI_SUBREGION_NAME_104504",
+    "name": "西郊",
     "desc": "UI_SUBREGION_DES_104504",
-    "map": "Huaxu_Haojing_Jlc"
+    "map": "Huaxu_Haojing_Jlc",
+    "rc": [
+      {
+        "id": 9050301,
+        "info": [
+          {
+            "id": 4081,
+            "w": 133
+          },
+          {
+            "id": 4082,
+            "w": 133
+          },
+          {
+            "id": 4083,
+            "w": 67
+          },
+          {
+            "id": 4151,
+            "w": 322
+          },
+          {
+            "id": 4152,
+            "w": 322
+          },
+          {
+            "id": 4153,
+            "w": 161
+          },
+          {
+            "id": 4051,
+            "w": 752
+          },
+          {
+            "id": 4052,
+            "w": 752
+          },
+          {
+            "id": 4053,
+            "w": 376
+          },
+          {
+            "id": 4941,
+            "w": 6981
+          }
+        ],
+        "count": 3
+      }
+    ]
   },
   {
     "id": 104505,
     "rid": 1045,
-    "name": "UI_SUBREGION_NAME_104505",
+    "name": "东郊",
     "desc": "UI_SUBREGION_DES_104505",
-    "map": "Huaxu_Haojing_Sub"
+    "map": "Huaxu_Haojing_Sub",
+    "rc": [
+      {
+        "id": 9050401,
+        "info": [
+          {
+            "id": 4091,
+            "w": 133
+          },
+          {
+            "id": 4092,
+            "w": 133
+          },
+          {
+            "id": 4093,
+            "w": 67
+          },
+          {
+            "id": 4141,
+            "w": 322
+          },
+          {
+            "id": 4142,
+            "w": 322
+          },
+          {
+            "id": 4143,
+            "w": 161
+          },
+          {
+            "id": 4041,
+            "w": 752
+          },
+          {
+            "id": 4042,
+            "w": 752
+          },
+          {
+            "id": 4043,
+            "w": 376
+          },
+          {
+            "id": 4941,
+            "w": 6981
+          }
+        ],
+        "count": 3
+      }
+    ]
   },
   {
     "id": 104506,
     "rid": 1045,
-    "name": "UI_SUBREGION_NAME_104506",
+    "name": "执律阁",
     "desc": "UI_SUBREGION_DES_104506",
     "map": "Huaxu_Haojing_Top"
-  },
-  {
-    "id": 104507,
-    "rid": 1045,
-    "name": "UI_SUBREGION_NAME_104507",
-    "desc": "UI_SUBREGION_DES_104507",
-    "map": "Huaxu_Haojing_IQ12020122"
-  },
-  {
-    "id": 104508,
-    "rid": 1045,
-    "name": "UI_SUBREGION_NAME_104508",
-    "desc": "UI_SUBREGION_DES_104508",
-    "map": "Huaxu_Haojing_IQ12020212"
   },
   {
     "id": 104601,
@@ -3197,7 +3387,7 @@
   {
     "id": 104801,
     "rid": 1048,
-    "name": "UI_SUBREGION_NAME_104801",
+    "name": "偃隐宫",
     "desc": "UI_SUBREGION_DES_104801",
     "map": "Huaxu_Haojing_YYG"
   },
@@ -3228,70 +3418,133 @@
   {
     "id": 105101,
     "rid": 1051,
-    "name": "测试区域",
+    "name": "执律阁内",
     "desc": "测试区域",
     "map": "Huaxu_Haojing_Int"
   },
   {
-    "id": 105102,
-    "rid": 1051,
-    "name": "测试区域",
-    "desc": "测试区域",
-    "map": "Huaxu_Haojing_Int_IQ12020208_DesignTask"
-  },
-  {
-    "id": 105103,
-    "rid": 1051,
-    "name": "测试区域",
-    "desc": "测试区域",
-    "map": "Huaxu_Haojing_Int_IQ12020208_Task"
-  },
-  {
     "id": 105201,
     "rid": 1052,
-    "name": "测试区域",
+    "name": "山外山",
     "desc": "测试区域",
-    "map": "Huaxu_Haojing_Reb"
+    "map": "Huaxu_Haojing_Reb",
+    "rc": [
+      {
+        "id": 9050601,
+        "info": [
+          {
+            "id": 4131,
+            "w": 333
+          },
+          {
+            "id": 4132,
+            "w": 333
+          },
+          {
+            "id": 4133,
+            "w": 167
+          },
+          {
+            "id": 4031,
+            "w": 778
+          },
+          {
+            "id": 4032,
+            "w": 778
+          },
+          {
+            "id": 4033,
+            "w": 389
+          },
+          {
+            "id": 4941,
+            "w": 7222
+          }
+        ],
+        "count": 3
+      }
+    ]
   },
   {
     "id": 105301,
     "rid": 1053,
-    "name": "测试区域",
+    "name": "太虚陵",
     "desc": "测试区域",
     "map": "Huaxu_Haojing_TRLM"
   },
   {
-    "id": 105302,
-    "rid": 1053,
-    "name": "测试区域",
-    "desc": "测试区域",
-    "map": "Huaxu_Haojing_TRLM_IQ12020515"
-  },
-  {
     "id": 105401,
     "rid": 1054,
-    "name": "测试区域",
+    "name": "？？？",
     "desc": "测试区域",
     "map": "Huaxu_Haojing_TXJ"
   },
   {
     "id": 105501,
     "rid": 1055,
-    "name": "测试区域",
+    "name": "由来巷",
     "desc": "测试区域",
-    "map": "Huaxu_Haojing_YLX"
+    "map": "Huaxu_Haojing_YLX",
+    "rc": [
+      {
+        "id": 9050701,
+        "info": [
+          {
+            "id": 4071,
+            "w": 133
+          },
+          {
+            "id": 4072,
+            "w": 133
+          },
+          {
+            "id": 4073,
+            "w": 67
+          },
+          {
+            "id": 4111,
+            "w": 322
+          },
+          {
+            "id": 4112,
+            "w": 322
+          },
+          {
+            "id": 4113,
+            "w": 161
+          },
+          {
+            "id": 4011,
+            "w": 752
+          },
+          {
+            "id": 4012,
+            "w": 752
+          },
+          {
+            "id": 4013,
+            "w": 376
+          },
+          {
+            "id": 4941,
+            "w": 6981
+          }
+        ],
+        "count": 3
+      }
+    ]
   },
   {
     "id": 105601,
     "rid": 1056,
-    "name": "测试区域",
+    "name": "？？？",
     "desc": "测试区域",
     "map": "Huaxu_Haojing_ZhiliuHJ_Door"
   },
   {
     "id": 105602,
     "rid": 1056,
-    "name": "测试区域",
+    "name": "？？？",
     "desc": "测试区域",
     "map": "Huaxu_Haojing_ZhiliuHJ_Talk"
   },
@@ -3376,11 +3629,67 @@
     "map": "Haiboliya_Chezhan_ZZZ"
   },
   {
+    "id": 106008,
+    "rid": 1060,
+    "name": "测试区域",
+    "desc": "测试区域",
+    "map": "Haiboliya_Chezhan_YWS"
+  },
+  {
     "id": 106101,
     "rid": 1061,
     "name": "测试区域",
     "desc": "测试区域",
     "map": "Haiboliya_Chezhan_YW01"
+  },
+  {
+    "id": 107001,
+    "rid": 1070,
+    "name": "UI_SUBREGION_NAME_107001",
+    "desc": "UI_SUBREGION_DES_107001",
+    "map": "Haiboliya_FTNew"
+  },
+  {
+    "id": 107101,
+    "rid": 1071,
+    "name": "UI_SUBREGION_NAME_107101",
+    "desc": "UI_SUBREGION_DES_107101",
+    "map": "Haiboliya_FTOld"
+  },
+  {
+    "id": 107201,
+    "rid": 1072,
+    "name": "UI_SUBREGION_NAME_107201",
+    "desc": "UI_SUBREGION_DES_107201",
+    "map": "Haiboliya_FTLake"
+  },
+  {
+    "id": 107301,
+    "rid": 1073,
+    "name": "UI_SUBREGION_NAME_107301",
+    "desc": "UI_SUBREGION_DES_107301",
+    "map": "Haiboliya_FTOld_NPark"
+  },
+  {
+    "id": 107401,
+    "rid": 1074,
+    "name": "UI_SUBREGION_NAME_107401",
+    "desc": "UI_SUBREGION_DES_107401",
+    "map": "Haiboliya_FTLake_BF_Main"
+  },
+  {
+    "id": 107501,
+    "rid": 1075,
+    "name": "UI_SUBREGION_NAME_107501",
+    "desc": "UI_SUBREGION_DES_107501",
+    "map": "Haiboliya_FTNew_Home"
+  },
+  {
+    "id": 107601,
+    "rid": 1076,
+    "name": "UI_SUBREGION_NAME_107601",
+    "desc": "UI_SUBREGION_DES_107601",
+    "map": "Haiboliya_FTNew_Boss"
   },
   {
     "id": 200101,

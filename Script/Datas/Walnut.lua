@@ -91,6 +91,8 @@ return ReadOnly("Walnut", {
       [5] = 2008,
       [6] = 211
     },
+    MainRewardId = 1101,
+    MainRewardType = "Char",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_1000",
     Param = T.RT_6,
@@ -118,6 +120,8 @@ return ReadOnly("Walnut", {
       [5] = 2008,
       [6] = 211
     },
+    MainRewardId = 1103,
+    MainRewardType = "Char",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_1001",
     Param = T.RT_6,
@@ -145,6 +149,8 @@ return ReadOnly("Walnut", {
       [5] = 2008,
       [6] = 211
     },
+    MainRewardId = 1501,
+    MainRewardType = "Char",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_1002",
     Param = T.RT_6,
@@ -172,6 +178,8 @@ return ReadOnly("Walnut", {
       [5] = 2008,
       [6] = 211
     },
+    MainRewardId = 1502,
+    MainRewardType = "Char",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_1003",
     Param = T.RT_6,
@@ -199,6 +207,8 @@ return ReadOnly("Walnut", {
       [5] = 2008,
       [6] = 211
     },
+    MainRewardId = 1503,
+    MainRewardType = "Char",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_1004",
     Param = T.RT_6,
@@ -226,6 +236,8 @@ return ReadOnly("Walnut", {
       [5] = 2008,
       [6] = 211
     },
+    MainRewardId = 1801,
+    MainRewardType = "Char",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_1005",
     Param = T.RT_6,
@@ -253,6 +265,8 @@ return ReadOnly("Walnut", {
       [5] = 2008,
       [6] = 211
     },
+    MainRewardId = 2101,
+    MainRewardType = "Char",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_1006",
     Param = T.RT_6,
@@ -280,6 +294,8 @@ return ReadOnly("Walnut", {
       [5] = 2008,
       [6] = 211
     },
+    MainRewardId = 2301,
+    MainRewardType = "Char",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_1007",
     Param = T.RT_6,
@@ -307,6 +323,8 @@ return ReadOnly("Walnut", {
       [5] = 2008,
       [6] = 211
     },
+    MainRewardId = 2401,
+    MainRewardType = "Char",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_1008",
     Param = T.RT_6,
@@ -334,6 +352,8 @@ return ReadOnly("Walnut", {
       [5] = 2008,
       [6] = 211
     },
+    MainRewardId = 3101,
+    MainRewardType = "Char",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_1009",
     Param = T.RT_6,
@@ -361,6 +381,8 @@ return ReadOnly("Walnut", {
       [5] = 2008,
       [6] = 211
     },
+    MainRewardId = 3102,
+    MainRewardType = "Char",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_1010",
     Param = T.RT_6,
@@ -388,6 +410,8 @@ return ReadOnly("Walnut", {
       [5] = 2008,
       [6] = 211
     },
+    MainRewardId = 3103,
+    MainRewardType = "Char",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_1011",
     Param = T.RT_6,
@@ -415,6 +439,8 @@ return ReadOnly("Walnut", {
       [5] = 2008,
       [6] = 211
     },
+    MainRewardId = 3201,
+    MainRewardType = "Char",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_1012",
     Param = T.RT_6,
@@ -442,11 +468,13 @@ return ReadOnly("Walnut", {
       [5] = 2008,
       [6] = 211
     },
+    MainRewardId = 3202,
+    MainRewardType = "Char",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_1013",
     Param = T.RT_6,
     Rarity = 5,
-    ReleaseVersion = 140,
+    ReleaseVersion = 130,
     ResourceToCoinType = 211,
     ResourceValue = 5,
     RewardLv = T.RT_7,
@@ -469,6 +497,8 @@ return ReadOnly("Walnut", {
       [5] = 2008,
       [6] = 211
     },
+    MainRewardId = 3301,
+    MainRewardType = "Char",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_1014",
     Param = T.RT_6,
@@ -496,6 +526,8 @@ return ReadOnly("Walnut", {
       [5] = 2008,
       [6] = 211
     },
+    MainRewardId = 4101,
+    MainRewardType = "Char",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_1015",
     Param = T.RT_6,
@@ -523,6 +555,8 @@ return ReadOnly("Walnut", {
       [5] = 2008,
       [6] = 211
     },
+    MainRewardId = 4102,
+    MainRewardType = "Char",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_1016",
     Param = T.RT_6,
@@ -550,6 +584,8 @@ return ReadOnly("Walnut", {
       [5] = 2008,
       [6] = 211
     },
+    MainRewardId = 4201,
+    MainRewardType = "Char",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_1017",
     Param = T.RT_6,
@@ -577,6 +613,8 @@ return ReadOnly("Walnut", {
       [5] = 2008,
       [6] = 211
     },
+    MainRewardId = 4202,
+    MainRewardType = "Char",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_1018",
     Param = T.RT_6,
@@ -604,6 +642,8 @@ return ReadOnly("Walnut", {
       [5] = 2008,
       [6] = 211
     },
+    MainRewardId = 4301,
+    MainRewardType = "Char",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_1019",
     Param = T.RT_6,
@@ -631,6 +671,8 @@ return ReadOnly("Walnut", {
       [5] = 2008,
       [6] = 211
     },
+    MainRewardId = 5101,
+    MainRewardType = "Char",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_1020",
     Param = T.RT_6,
@@ -658,6 +700,8 @@ return ReadOnly("Walnut", {
       [5] = 2008,
       [6] = 211
     },
+    MainRewardId = 5102,
+    MainRewardType = "Char",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_1021",
     Param = T.RT_6,
@@ -685,6 +729,8 @@ return ReadOnly("Walnut", {
       [5] = 2008,
       [6] = 211
     },
+    MainRewardId = 5301,
+    MainRewardType = "Char",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_1022",
     Param = T.RT_6,
@@ -712,6 +758,8 @@ return ReadOnly("Walnut", {
       [5] = 2008,
       [6] = 211
     },
+    MainRewardId = 5401,
+    MainRewardType = "Char",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_1023",
     Param = T.RT_6,
@@ -723,6 +771,35 @@ return ReadOnly("Walnut", {
     Sound = "SOUND_ITEM_MIHAN",
     Type = T.RT_8,
     WalnutId = 1023,
+    WalnutIndex = "A",
+    WalnutNumber = 1,
+    WalnutType = 1
+  },
+  [1024] = {
+    AccessKey = T.RT_1,
+    Count = T.RT_5,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Avatar/T_Walnut_Char_Suyi.T_Walnut_Char_Suyi",
+    Id = {
+      [1] = 1001504,
+      [2] = 1001504,
+      [3] = 30001,
+      [4] = 2012,
+      [5] = 2008,
+      [6] = 211
+    },
+    MainRewardId = 1504,
+    MainRewardType = "Char",
+    Mode = "SequenceCeiling",
+    Name = "UI_Name_Walnut_1024",
+    Param = T.RT_6,
+    Rarity = 5,
+    ReleaseVersion = 130,
+    ResourceToCoinType = 211,
+    ResourceValue = 5,
+    RewardLv = T.RT_7,
+    Sound = "SOUND_ITEM_MIHAN",
+    Type = T.RT_8,
+    WalnutId = 1024,
     WalnutIndex = "A",
     WalnutNumber = 1,
     WalnutType = 1
@@ -739,6 +816,8 @@ return ReadOnly("Walnut", {
       [5] = 211,
       [6] = 2008
     },
+    MainRewardId = 10101,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2001",
     Param = T.RT_6,
@@ -766,6 +845,8 @@ return ReadOnly("Walnut", {
       [5] = 211,
       [6] = 2008
     },
+    MainRewardId = 10103,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2002",
     Param = T.RT_6,
@@ -793,6 +874,8 @@ return ReadOnly("Walnut", {
       [5] = 211,
       [6] = 2008
     },
+    MainRewardId = 10104,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2003",
     Param = T.RT_6,
@@ -820,6 +903,8 @@ return ReadOnly("Walnut", {
       [5] = 211,
       [6] = 2008
     },
+    MainRewardId = 10201,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2004",
     Param = T.RT_6,
@@ -847,6 +932,8 @@ return ReadOnly("Walnut", {
       [5] = 211,
       [6] = 2008
     },
+    MainRewardId = 10206,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2005",
     Param = T.RT_6,
@@ -874,6 +961,8 @@ return ReadOnly("Walnut", {
       [5] = 211,
       [6] = 2008
     },
+    MainRewardId = 10302,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2006",
     Param = T.RT_6,
@@ -901,6 +990,8 @@ return ReadOnly("Walnut", {
       [5] = 211,
       [6] = 2008
     },
+    MainRewardId = 10303,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2007",
     Param = T.RT_6,
@@ -928,6 +1019,8 @@ return ReadOnly("Walnut", {
       [5] = 12046,
       [6] = 211
     },
+    MainRewardId = 10401,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2008",
     Param = T.RT_6,
@@ -955,6 +1048,8 @@ return ReadOnly("Walnut", {
       [5] = 12089,
       [6] = 211
     },
+    MainRewardId = 10403,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2009",
     Param = T.RT_6,
@@ -982,6 +1077,8 @@ return ReadOnly("Walnut", {
       [5] = 211,
       [6] = 2008
     },
+    MainRewardId = 10501,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2010",
     Param = T.RT_6,
@@ -1009,6 +1106,8 @@ return ReadOnly("Walnut", {
       [5] = 211,
       [6] = 2008
     },
+    MainRewardId = 10503,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2011",
     Param = T.RT_6,
@@ -1036,6 +1135,8 @@ return ReadOnly("Walnut", {
       [5] = 12005,
       [6] = 211
     },
+    MainRewardId = 10601,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2012",
     Param = T.RT_6,
@@ -1063,6 +1164,8 @@ return ReadOnly("Walnut", {
       [5] = 12118,
       [6] = 211
     },
+    MainRewardId = 10602,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2013",
     Param = T.RT_6,
@@ -1090,6 +1193,8 @@ return ReadOnly("Walnut", {
       [5] = 12030,
       [6] = 211
     },
+    MainRewardId = 20101,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2014",
     Param = T.RT_6,
@@ -1117,6 +1222,8 @@ return ReadOnly("Walnut", {
       [5] = 12121,
       [6] = 211
     },
+    MainRewardId = 20102,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2015",
     Param = T.RT_6,
@@ -1144,6 +1251,8 @@ return ReadOnly("Walnut", {
       [5] = 211,
       [6] = 2008
     },
+    MainRewardId = 20201,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2016",
     Param = T.RT_6,
@@ -1171,6 +1280,8 @@ return ReadOnly("Walnut", {
       [5] = 211,
       [6] = 2008
     },
+    MainRewardId = 20203,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2017",
     Param = T.RT_6,
@@ -1198,6 +1309,8 @@ return ReadOnly("Walnut", {
       [5] = 12126,
       [6] = 211
     },
+    MainRewardId = 20303,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2018",
     Param = T.RT_6,
@@ -1225,6 +1338,8 @@ return ReadOnly("Walnut", {
       [5] = 12078,
       [6] = 211
     },
+    MainRewardId = 20305,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2019",
     Param = T.RT_6,
@@ -1252,6 +1367,8 @@ return ReadOnly("Walnut", {
       [5] = 12129,
       [6] = 211
     },
+    MainRewardId = 20401,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2020",
     Param = T.RT_6,
@@ -1279,6 +1396,8 @@ return ReadOnly("Walnut", {
       [5] = 12011,
       [6] = 211
     },
+    MainRewardId = 20402,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2021",
     Param = T.RT_6,
@@ -1306,6 +1425,8 @@ return ReadOnly("Walnut", {
       [5] = 12132,
       [6] = 211
     },
+    MainRewardId = 20501,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2022",
     Param = T.RT_6,
@@ -1333,6 +1454,8 @@ return ReadOnly("Walnut", {
       [5] = 12081,
       [6] = 211
     },
+    MainRewardId = 20503,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2023",
     Param = T.RT_6,
@@ -1360,6 +1483,8 @@ return ReadOnly("Walnut", {
       [5] = 12108,
       [6] = 211
     },
+    MainRewardId = 20601,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2024",
     Param = T.RT_6,
@@ -1387,6 +1512,8 @@ return ReadOnly("Walnut", {
       [5] = 12105,
       [6] = 211
     },
+    MainRewardId = 20604,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2025",
     Param = T.RT_6,
@@ -1414,6 +1541,8 @@ return ReadOnly("Walnut", {
       [5] = 211,
       [6] = 2008
     },
+    MainRewardId = 10102,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2026",
     Param = T.RT_6,
@@ -1441,6 +1570,8 @@ return ReadOnly("Walnut", {
       [5] = 211,
       [6] = 2008
     },
+    MainRewardId = 10105,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2027",
     Param = T.RT_6,
@@ -1468,6 +1599,8 @@ return ReadOnly("Walnut", {
       [5] = 211,
       [6] = 2008
     },
+    MainRewardId = 10202,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2028",
     Param = T.RT_6,
@@ -1495,6 +1628,8 @@ return ReadOnly("Walnut", {
       [5] = 211,
       [6] = 2008
     },
+    MainRewardId = 10204,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2029",
     Param = T.RT_6,
@@ -1522,6 +1657,8 @@ return ReadOnly("Walnut", {
       [5] = 211,
       [6] = 2008
     },
+    MainRewardId = 10301,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2030",
     Param = T.RT_6,
@@ -1549,6 +1686,8 @@ return ReadOnly("Walnut", {
       [5] = 12084,
       [6] = 211
     },
+    MainRewardId = 10402,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2031",
     Param = T.RT_6,
@@ -1576,6 +1715,8 @@ return ReadOnly("Walnut", {
       [5] = 211,
       [6] = 2008
     },
+    MainRewardId = 10504,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2032",
     Param = T.RT_6,
@@ -1603,6 +1744,8 @@ return ReadOnly("Walnut", {
       [5] = 12094,
       [6] = 211
     },
+    MainRewardId = 10603,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2033",
     Param = T.RT_6,
@@ -1630,6 +1773,8 @@ return ReadOnly("Walnut", {
       [5] = 12097,
       [6] = 211
     },
+    MainRewardId = 20103,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2034",
     Param = T.RT_6,
@@ -1657,6 +1802,8 @@ return ReadOnly("Walnut", {
       [5] = 211,
       [6] = 2008
     },
+    MainRewardId = 20205,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2035",
     Param = T.RT_6,
@@ -1684,6 +1831,8 @@ return ReadOnly("Walnut", {
       [5] = 12008,
       [6] = 211
     },
+    MainRewardId = 20301,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2036",
     Param = T.RT_6,
@@ -1711,6 +1860,8 @@ return ReadOnly("Walnut", {
       [5] = 211,
       [6] = 2008
     },
+    MainRewardId = 20304,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2037",
     Param = T.RT_6,
@@ -1738,6 +1889,8 @@ return ReadOnly("Walnut", {
       [5] = 12102,
       [6] = 211
     },
+    MainRewardId = 20403,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2038",
     Param = T.RT_6,
@@ -1765,6 +1918,8 @@ return ReadOnly("Walnut", {
       [5] = 12035,
       [6] = 211
     },
+    MainRewardId = 20405,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2039",
     Param = T.RT_6,
@@ -1792,6 +1947,8 @@ return ReadOnly("Walnut", {
       [5] = 12014,
       [6] = 211
     },
+    MainRewardId = 20502,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2040",
     Param = T.RT_6,
@@ -1819,6 +1976,8 @@ return ReadOnly("Walnut", {
       [5] = 12017,
       [6] = 211
     },
+    MainRewardId = 20504,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2041",
     Param = T.RT_6,
@@ -1846,6 +2005,8 @@ return ReadOnly("Walnut", {
       [5] = 12052,
       [6] = 211
     },
+    MainRewardId = 20507,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2042",
     Param = T.RT_6,
@@ -1873,6 +2034,8 @@ return ReadOnly("Walnut", {
       [5] = 12038,
       [6] = 211
     },
+    MainRewardId = 20602,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2043",
     Param = T.RT_6,
@@ -1900,6 +2063,8 @@ return ReadOnly("Walnut", {
       [5] = 12020,
       [6] = 211
     },
+    MainRewardId = 20603,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2044",
     Param = T.RT_6,
@@ -1927,6 +2092,8 @@ return ReadOnly("Walnut", {
       [5] = 211,
       [6] = 2008
     },
+    MainRewardId = 10203,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2045",
     Param = T.RT_6,
@@ -1954,6 +2121,8 @@ return ReadOnly("Walnut", {
       [5] = 211,
       [6] = 2008
     },
+    MainRewardId = 10304,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2046",
     Param = T.RT_6,
@@ -1981,6 +2150,8 @@ return ReadOnly("Walnut", {
       [5] = 211,
       [6] = 2008
     },
+    MainRewardId = 10502,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2047",
     Param = T.RT_6,
@@ -2008,6 +2179,8 @@ return ReadOnly("Walnut", {
       [5] = 12061,
       [6] = 211
     },
+    MainRewardId = 20302,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2048",
     Param = T.RT_6,
@@ -2035,6 +2208,8 @@ return ReadOnly("Walnut", {
       [5] = 12064,
       [6] = 211
     },
+    MainRewardId = 20510,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2049",
     Param = T.RT_6,
@@ -2062,6 +2237,8 @@ return ReadOnly("Walnut", {
       [5] = 12067,
       [6] = 211
     },
+    MainRewardId = 20509,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2050",
     Param = T.RT_6,
@@ -2089,6 +2266,8 @@ return ReadOnly("Walnut", {
       [5] = 211,
       [6] = 2008
     },
+    MainRewardId = 10208,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2051",
     Param = T.RT_6,
@@ -2116,6 +2295,8 @@ return ReadOnly("Walnut", {
       [5] = 12137,
       [6] = 211
     },
+    MainRewardId = 20506,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2052",
     Param = T.RT_6,
@@ -2143,6 +2324,8 @@ return ReadOnly("Walnut", {
       [5] = 12140,
       [6] = 211
     },
+    MainRewardId = 10404,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2053",
     Param = T.RT_6,
@@ -2170,6 +2353,8 @@ return ReadOnly("Walnut", {
       [5] = 12143,
       [6] = 211
     },
+    MainRewardId = 20505,
+    MainRewardType = "Weapon",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_2054",
     Param = T.RT_6,
@@ -2181,6 +2366,122 @@ return ReadOnly("Walnut", {
     Sound = "SOUND_ITEM_MIHAN",
     Type = T.RT_15,
     WalnutId = 2054,
+    WalnutIndex = "A",
+    WalnutNumber = 1,
+    WalnutType = 2
+  },
+  [2055] = {
+    AccessKey = T.RT_9,
+    Count = T.RT_16,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Range/T_Walnut_Shotgun_Guchu.T_Walnut_Shotgun_Guchu",
+    Id = {
+      [1] = 920407,
+      [2] = 12144,
+      [3] = 30002,
+      [4] = 12145,
+      [5] = 12146,
+      [6] = 211
+    },
+    MainRewardId = 20407,
+    MainRewardType = "Weapon",
+    Mode = "SequenceCeiling",
+    Name = "UI_Name_Walnut_2055",
+    Param = T.RT_6,
+    Rarity = 5,
+    ReleaseVersion = 130,
+    ResourceToCoinType = 211,
+    ResourceValue = 5,
+    RewardLv = T.RT_7,
+    Sound = "SOUND_ITEM_MIHAN",
+    Type = T.RT_15,
+    WalnutId = 2055,
+    WalnutIndex = "A",
+    WalnutNumber = 1,
+    WalnutType = 2
+  },
+  [2056] = {
+    AccessKey = T.RT_9,
+    Count = T.RT_16,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Range/T_Walnut_Machinegun_Beizhong.T_Walnut_Machinegun_Beizhong",
+    Id = {
+      [1] = 920512,
+      [2] = 12147,
+      [3] = 30002,
+      [4] = 12148,
+      [5] = 12149,
+      [6] = 211
+    },
+    MainRewardId = 20512,
+    MainRewardType = "Weapon",
+    Mode = "SequenceCeiling",
+    Name = "UI_Name_Walnut_2056",
+    Param = T.RT_6,
+    Rarity = 5,
+    ReleaseVersion = 130,
+    ResourceToCoinType = 211,
+    ResourceValue = 5,
+    RewardLv = T.RT_7,
+    Sound = "SOUND_ITEM_MIHAN",
+    Type = T.RT_15,
+    WalnutId = 2056,
+    WalnutIndex = "A",
+    WalnutNumber = 1,
+    WalnutType = 2
+  },
+  [2057] = {
+    AccessKey = T.RT_9,
+    Count = T.RT_16,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Range/T_Walnut_Claymore_Mingjin.T_Walnut_Claymore_Mingjin",
+    Id = {
+      [1] = 910305,
+      [2] = 12150,
+      [3] = 30002,
+      [4] = 12151,
+      [5] = 211,
+      [6] = 211
+    },
+    MainRewardId = 10305,
+    MainRewardType = "Weapon",
+    Mode = "SequenceCeiling",
+    Name = "UI_Name_Walnut_2057",
+    Param = T.RT_6,
+    Rarity = 5,
+    ReleaseVersion = 130,
+    ResourceToCoinType = 211,
+    ResourceValue = 5,
+    RewardLv = T.RT_7,
+    Sound = "SOUND_ITEM_MIHAN",
+    Type = T.RT_15,
+    WalnutId = 2057,
+    WalnutIndex = "A",
+    WalnutNumber = 1,
+    WalnutType = 2
+  },
+  [2058] = {
+    AccessKey = T.RT_9,
+    Count = T.RT_16,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Range/T_Walnut_Shotgun_Qiege.T_Walnut_Shotgun_Qiege",
+    Id = {
+      [1] = 920406,
+      [2] = 12152,
+      [3] = 30002,
+      [4] = 12153,
+      [5] = 12154,
+      [6] = 211
+    },
+    MainRewardId = 20406,
+    MainRewardType = "Weapon",
+    Mode = "SequenceCeiling",
+    Name = "UI_Name_Walnut_2058",
+    Param = T.RT_6,
+    Rarity = 5,
+    ReleaseVersion = 130,
+    ResourceToCoinType = 211,
+    ResourceValue = 5,
+    RewardLv = T.RT_7,
+    Sound = "SOUND_ITEM_MIHAN",
+    Type = T.RT_15,
+    WalnutId = 2058,
     WalnutIndex = "A",
     WalnutNumber = 1,
     WalnutType = 2
@@ -2197,6 +2498,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51321,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151321",
     Param = T.RT_6,
@@ -2224,6 +2527,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51322,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151322",
     Param = T.RT_6,
@@ -2251,6 +2556,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51323,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151323",
     Param = T.RT_6,
@@ -2278,6 +2585,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51324,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151324",
     Param = T.RT_6,
@@ -2305,6 +2614,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51325,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151325",
     Param = T.RT_6,
@@ -2332,6 +2643,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51326,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151326",
     Param = T.RT_6,
@@ -2359,6 +2672,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51331,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151331",
     Param = T.RT_6,
@@ -2386,6 +2701,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51332,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151332",
     Param = T.RT_6,
@@ -2413,6 +2730,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51333,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151333",
     Param = T.RT_6,
@@ -2440,6 +2759,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51334,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151334",
     Param = T.RT_6,
@@ -2467,6 +2788,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51335,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151335",
     Param = T.RT_6,
@@ -2494,6 +2817,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51336,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151336",
     Param = T.RT_6,
@@ -2521,6 +2846,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51411,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151411",
     Param = T.RT_6,
@@ -2548,6 +2875,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51412,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151412",
     Param = T.RT_6,
@@ -2575,6 +2904,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51413,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151413",
     Param = T.RT_6,
@@ -2602,6 +2933,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51414,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151414",
     Param = T.RT_6,
@@ -2629,6 +2962,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51415,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151415",
     Param = T.RT_6,
@@ -2656,6 +2991,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51421,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151421",
     Param = T.RT_6,
@@ -2683,6 +3020,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51422,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151422",
     Param = T.RT_6,
@@ -2710,6 +3049,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51423,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151423",
     Param = T.RT_6,
@@ -2737,6 +3078,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51424,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151424",
     Param = T.RT_6,
@@ -2764,6 +3107,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51425,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151425",
     Param = T.RT_6,
@@ -2791,6 +3136,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51431,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151431",
     Param = T.RT_6,
@@ -2818,6 +3165,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51432,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151432",
     Param = T.RT_6,
@@ -2845,6 +3194,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51433,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151433",
     Param = T.RT_6,
@@ -2872,6 +3223,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51434,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151434",
     Param = T.RT_6,
@@ -2899,6 +3252,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51435,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151435",
     Param = T.RT_6,
@@ -2926,6 +3281,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51441,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151441",
     Param = T.RT_6,
@@ -2953,6 +3310,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51442,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151442",
     Param = T.RT_6,
@@ -2980,6 +3339,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51443,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151443",
     Param = T.RT_6,
@@ -3007,6 +3368,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51444,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151444",
     Param = T.RT_6,
@@ -3034,6 +3397,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51445,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151445",
     Param = T.RT_6,
@@ -3061,6 +3426,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51451,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151451",
     Param = T.RT_6,
@@ -3088,6 +3455,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51452,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151452",
     Param = T.RT_6,
@@ -3115,6 +3484,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51453,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151453",
     Param = T.RT_6,
@@ -3142,6 +3513,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51454,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151454",
     Param = T.RT_6,
@@ -3169,6 +3542,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51455,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151455",
     Param = T.RT_6,
@@ -3196,6 +3571,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51461,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151461",
     Param = T.RT_6,
@@ -3223,6 +3600,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51462,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151462",
     Param = T.RT_6,
@@ -3250,6 +3629,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51463,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151463",
     Param = T.RT_6,
@@ -3277,6 +3658,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51464,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151464",
     Param = T.RT_6,
@@ -3304,6 +3687,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51465,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151465",
     Param = T.RT_6,
@@ -3331,6 +3716,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51711,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151711",
     Param = T.RT_6,
@@ -3358,6 +3745,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51712,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151712",
     Param = T.RT_6,
@@ -3385,6 +3774,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51713,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151713",
     Param = T.RT_6,
@@ -3412,6 +3803,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51714,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151714",
     Param = T.RT_6,
@@ -3439,6 +3832,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51721,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151721",
     Param = T.RT_6,
@@ -3466,6 +3861,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51722,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151722",
     Param = T.RT_6,
@@ -3493,6 +3890,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51723,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151723",
     Param = T.RT_6,
@@ -3520,6 +3919,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51724,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151724",
     Param = T.RT_6,
@@ -3547,6 +3948,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51731,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151731",
     Param = T.RT_6,
@@ -3574,6 +3977,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51732,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151732",
     Param = T.RT_6,
@@ -3601,6 +4006,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51733,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151733",
     Param = T.RT_6,
@@ -3628,6 +4035,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51734,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151734",
     Param = T.RT_6,
@@ -3655,6 +4064,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51741,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151741",
     Param = T.RT_6,
@@ -3682,6 +4093,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51742,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151742",
     Param = T.RT_6,
@@ -3709,6 +4122,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51743,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151743",
     Param = T.RT_6,
@@ -3736,6 +4151,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51744,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151744",
     Param = T.RT_6,
@@ -3763,6 +4180,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51745,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151745",
     Param = T.RT_6,
@@ -3790,6 +4209,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51746,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151746",
     Param = T.RT_6,
@@ -3817,6 +4238,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51751,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151751",
     Param = T.RT_6,
@@ -3844,6 +4267,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51752,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151752",
     Param = T.RT_6,
@@ -3871,6 +4296,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51753,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151753",
     Param = T.RT_6,
@@ -3898,6 +4325,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51754,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151754",
     Param = T.RT_6,
@@ -3925,6 +4354,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51755,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151755",
     Param = T.RT_6,
@@ -3952,6 +4383,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51756,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151756",
     Param = T.RT_6,
@@ -3979,6 +4412,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51761,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151761",
     Param = T.RT_6,
@@ -4006,6 +4441,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51762,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151762",
     Param = T.RT_6,
@@ -4033,6 +4470,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51763,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151763",
     Param = T.RT_6,
@@ -4060,6 +4499,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51764,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151764",
     Param = T.RT_6,
@@ -4071,6 +4512,64 @@ return ReadOnly("Walnut", {
     Sound = "SOUND_ITEM_MIHAN",
     Type = T.RT_15,
     WalnutId = 151764,
+    WalnutIndex = "A",
+    WalnutNumber = 1,
+    WalnutType = 3
+  },
+  [151765] = {
+    AccessKey = T.RT_9,
+    Count = T.RT_14,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_FeatheredSnake01_Orange",
+    Id = {
+      [1] = 151765,
+      [2] = 102,
+      [3] = 102,
+      [4] = 102,
+      [5] = 102,
+      [6] = 102
+    },
+    MainRewardId = 51765,
+    MainRewardType = "Mod",
+    Mode = "SequenceCeiling",
+    Name = "UI_Name_Walnut_151765",
+    Param = T.RT_6,
+    Rarity = 5,
+    ReleaseVersion = 130,
+    ResourceToCoinType = 211,
+    ResourceValue = 5,
+    RewardLv = T.RT_7,
+    Sound = "SOUND_ITEM_MIHAN",
+    Type = T.RT_15,
+    WalnutId = 151765,
+    WalnutIndex = "A",
+    WalnutNumber = 1,
+    WalnutType = 3
+  },
+  [151766] = {
+    AccessKey = T.RT_9,
+    Count = T.RT_14,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Walnut/Mod/T_Walnut_Mod_FeatheredSnake01_Orange",
+    Id = {
+      [1] = 151766,
+      [2] = 102,
+      [3] = 102,
+      [4] = 102,
+      [5] = 102,
+      [6] = 102
+    },
+    MainRewardId = 51766,
+    MainRewardType = "Mod",
+    Mode = "SequenceCeiling",
+    Name = "UI_Name_Walnut_151766",
+    Param = T.RT_6,
+    Rarity = 5,
+    ReleaseVersion = 130,
+    ResourceToCoinType = 211,
+    ResourceValue = 5,
+    RewardLv = T.RT_7,
+    Sound = "SOUND_ITEM_MIHAN",
+    Type = T.RT_15,
+    WalnutId = 151766,
     WalnutIndex = "A",
     WalnutNumber = 1,
     WalnutType = 3
@@ -4087,6 +4586,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51911,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151911",
     Param = T.RT_6,
@@ -4114,6 +4615,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51921,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151921",
     Param = T.RT_6,
@@ -4141,6 +4644,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51922,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151922",
     Param = T.RT_6,
@@ -4168,6 +4673,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51931,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151931",
     Param = T.RT_6,
@@ -4195,6 +4702,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51941,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151941",
     Param = T.RT_6,
@@ -4222,6 +4731,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51951,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151951",
     Param = T.RT_6,
@@ -4249,6 +4760,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51952,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151952",
     Param = T.RT_6,
@@ -4276,6 +4789,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51961,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151961",
     Param = T.RT_6,
@@ -4303,6 +4818,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 51962,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_151962",
     Param = T.RT_6,
@@ -4330,6 +4847,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 53011,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_153011",
     Param = T.RT_6,
@@ -4357,6 +4876,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 53013,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_153013",
     Param = T.RT_6,
@@ -4384,6 +4905,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 56151,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_156151",
     Param = T.RT_6,
@@ -4411,6 +4934,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 56152,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_156152",
     Param = T.RT_6,
@@ -4438,6 +4963,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 56153,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_156153",
     Param = T.RT_6,
@@ -4465,6 +4992,8 @@ return ReadOnly("Walnut", {
       [5] = 102,
       [6] = 102
     },
+    MainRewardId = 56154,
+    MainRewardType = "Mod",
     Mode = "SequenceCeiling",
     Name = "UI_Name_Walnut_156154",
     Param = T.RT_6,

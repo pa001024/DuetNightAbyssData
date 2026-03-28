@@ -284,7 +284,7 @@ return ReadOnly("EventTab", {
     EventTabId = 34,
     EventTabName = "Event_Tab_1020012",
     ReddotNode = "Acti_DongGuo02",
-    Sequence = 93
+    Sequence = 1306
   },
   [35] = {
     EventId = {105102014},
@@ -340,14 +340,23 @@ return ReadOnly("EventTab", {
     ReddotNode = "Acti_WuyoushengTab",
     Sequence = 89
   },
+  [41] = {
+    EventId = {103015},
+    EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_BagGame.T_Activity_Tab_Head_BagGame",
+    EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_BagGame.T_Activity_Tab_Sign_BagGame",
+    EventTabId = 41,
+    EventTabName = "Event_Tab_103015",
+    ReddotNode = "Acti_BagGame",
+    Sequence = 1309
+  },
   [42] = {
     EventId = {103017},
     EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_Camera.T_Activity_Tab_Head_Camera",
     EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_Camera.T_Activity_Tab_Sign_Camera",
     EventTabId = 42,
-    EventTabName = "Event_Tab_103015",
+    EventTabName = "Event_Title_103017",
     ReddotNode = "Acti_CameraGame",
-    Sequence = 94
+    Sequence = 1305
   },
   [43] = {
     EventId = {103016},
@@ -430,6 +439,15 @@ return ReadOnly("EventTab", {
     ReddotNode = "Acti_OnlineTime",
     Sequence = 87
   },
+  [52] = {
+    EventId = {113001},
+    EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_Recharge.T_Activity_Tab_Head_Recharge",
+    EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_Recharge.T_Activity_Tab_Sign_Recharge",
+    EventTabId = 52,
+    EventTabName = "Event_Tab_113001",
+    ReddotNode = "Acti_TotalRecharge",
+    Sequence = 92
+  },
   [53] = {
     EventId = {114001},
     EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_Return.T_Activity_Tab_Head_Return",
@@ -492,6 +510,141 @@ return ReadOnly("EventTab", {
     ReddotNode = "Acti_DobuleMod",
     Sequence = 88
   },
+  [60] = {
+    EventId = {103014},
+    EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_SoloTreasure.T_Activity_Tab_Head_SoloTreasure",
+    EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_SoloTreasure.T_Activity_Tab_Sign_SoloTreasure",
+    EventTabId = 60,
+    EventTabName = "Event_Tab_103014",
+    ReddotNode = "Acti_SoloTreasureTab",
+    Sequence = 1312
+  },
+  [61] = {
+    EventId = {103020},
+    EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_AccessoryDrop.T_Activity_Tab_Head_AccessoryDrop",
+    EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_AccessoryDrop.T_Activity_Tab_Sign_AccessoryDrop",
+    EventTabId = 61,
+    EventTabName = "Event_Title_103020",
+    ReddotNode = "Acti_AccessoryDrop01",
+    Sequence = 1303
+  },
+  [62] = {
+    EventId = {105102016},
+    EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_TryOut_Suyi01",
+    EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_TryOut_Suyi01",
+    EventTabId = 62,
+    EventTabName = "Event_Tab_SuyiSkinTrialEvent",
+    ReddotNode = "Acti_TrailSuyiSkin01",
+    Sequence = 1317
+  },
+  [63] = {
+    EventId = {105101018},
+    EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_TryOut_Suyi.T_Activity_Tab_Head_TryOut_Suyi",
+    EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_TryOut_Suyi.T_Activity_Tab_Sign_TryOut_Suyi",
+    EventTabId = 63,
+    EventTabName = "Event_Tab_CharTrialEvent",
+    ReddotNode = "Acti_TrailSuyiChar",
+    Sequence = 1316
+  },
+  [64] = {
+    EventId = {105101019},
+    EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_TryOut_Kami",
+    EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_TryOut_Kami",
+    EventTabId = 64,
+    EventTabName = "Event_Tab_CharTrialEvent",
+    ReddotNode = "Acti_TrailKamiChar",
+    Sequence = 1314
+  },
+  [65] = {
+    EventId = {112002},
+    EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_OnlineTime.T_Activity_Tab_Head_OnlineTime",
+    EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_OnlineTime.T_Activity_Tab_Sign_OnlineTime",
+    EventTabId = 65,
+    EventTabName = "Event_Tab_112001",
+    ReddotNode = "Acti_OnlineTime",
+    Sequence = 1311
+  },
+  [66] = {
+    EventId = {101009},
+    EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_Warmup_Fuluo.T_Activity_Tab_Head_Warmup_Fuluo",
+    EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_Warmup_Fuluo.T_Activity_Tab_Sign_Warmup_Fuluo",
+    EventTabId = 66,
+    EventTabName = "Event_Tab_101009",
+    ReddotNode = "Acti_SignInYure",
+    Sequence = 1308
+  },
+  [67] = {
+    EventId = {103009004},
+    EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_DoubleMod.T_Activity_Tab_Head_DoubleMod",
+    EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_DoubleMod.T_Activity_Tab_Sign_DoubleMod",
+    EventTabId = 67,
+    EventTabName = "Event_Tab_103009001",
+    ReddotNode = "Acti_DoubleMod130",
+    Sequence = 1304
+  },
+  [68] = {
+    EventId = {103009005},
+    EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_DoubleMod.T_Activity_Tab_Head_DoubleMod",
+    EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_DoubleMod.T_Activity_Tab_Sign_DoubleMod",
+    EventTabId = 68,
+    EventTabName = "Event_Tab_103009001",
+    ReddotNode = "Acti_DoubleMod135",
+    Sequence = 1310
+  },
+  [69] = {
+    EventId = {101010},
+    EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_SevenDaySuyi.T_Activity_Tab_Head_SevenDaySuyi",
+    EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_SevenDaySuyi.T_Activity_Tab_Sign_SevenDaySuyi",
+    EventTabId = 69,
+    EventTabName = "Event_Tab_101010",
+    ReddotNode = "Acti_SignInSuyi",
+    Sequence = 1319
+  },
+  [70] = {
+    EventId = {101011},
+    EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_SevenDayKami.T_Activity_Tab_Head_SevenDayKami",
+    EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_SevenDayKami.T_Activity_Tab_Sign_SevenDayKami",
+    EventTabId = 70,
+    EventTabName = "Event_Tab_101011",
+    ReddotNode = "Acti_SignInKami",
+    Sequence = 1318
+  },
+  [71] = {
+    EventId = {103021},
+    EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_LimitedPrizePool.T_Activity_Tab_Head_LimitedPrizePool",
+    EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_LimitedPrizePool.T_Activity_Tab_Sign_LimitedPrizePool",
+    EventTabId = 71,
+    EventTabName = "Event_Title_103021",
+    ReddotNode = "Acti_LimitedPrizeTab",
+    Sequence = 1315
+  },
+  [72] = {
+    EventId = {109002},
+    EventTabBg = "Texture2D'/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_SpecialPage_Fuluo.T_Activity_Tab_Head_SpecialPage_Fuluo'",
+    EventTabIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_SpecialPage_Fuluo.T_Activity_Tab_Sign_SpecialPage_Fuluo'",
+    EventTabId = 72,
+    EventTabName = "Event_Tab_109002",
+    ReddotNode = "Acti_WebJumpEvent01",
+    Sequence = 1307
+  },
+  [73] = {
+    EventId = {1030027},
+    EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_Abyss.T_Activity_Tab_Head_Abyss",
+    EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_Abyss.T_Activity_Tab_Sign_Abyss",
+    EventTabId = 73,
+    EventTabName = "Abyss_entry",
+    ReddotNode = "Acti_Abyss02",
+    Sequence = 1302
+  },
+  [74] = {
+    EventId = {1030028},
+    EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_Abyss.T_Activity_Tab_Head_Abyss",
+    EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_Abyss.T_Activity_Tab_Sign_Abyss",
+    EventTabId = 74,
+    EventTabName = "Abyss_entry",
+    ReddotNode = "Acti_Abyss02",
+    Sequence = 1301
+  },
   [111002] = {
     EventId = {111002},
     EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_GuildWar.T_Activity_Tab_Head_GuildWar",
@@ -500,5 +653,14 @@ return ReadOnly("EventTab", {
     EventTabName = "Event_Raid_Title",
     ReddotNode = "Acti_SoloRaid",
     Sequence = 93
+  },
+  [111003] = {
+    EventId = {111003},
+    EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_GuildWar.T_Activity_Tab_Head_GuildWar",
+    EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_GuildWar.T_Activity_Tab_Sign_GuildWar",
+    EventTabId = 111003,
+    EventTabName = "Event_Raid_Title",
+    ReddotNode = "Acti_SoloRaid",
+    Sequence = 1313
   }
 })

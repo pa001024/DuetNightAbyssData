@@ -70,6 +70,22 @@ return ReadOnly("SkillGrow", {
           Type = "BattlePet",
           Value = 0.06
         }
+      },
+      [5] = {
+        [1] = {
+          ID = 401,
+          Index = 1,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.03
+        },
+        [2] = {
+          ID = 401,
+          Index = 2,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.24
+        }
       }
     },
     [402] = {
@@ -135,6 +151,22 @@ return ReadOnly("SkillGrow", {
           Level = 4,
           Type = "BattlePet",
           Value = 0.06
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 402,
+          Index = 1,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.03
+        },
+        [2] = {
+          ID = 402,
+          Index = 2,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.24
         }
       }
     },
@@ -202,6 +234,22 @@ return ReadOnly("SkillGrow", {
           Type = "BattlePet",
           Value = 0.06
         }
+      },
+      [5] = {
+        [1] = {
+          ID = 403,
+          Index = 1,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.03
+        },
+        [2] = {
+          ID = 403,
+          Index = 2,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.24
+        }
       }
     },
     [404] = {
@@ -267,6 +315,22 @@ return ReadOnly("SkillGrow", {
           Level = 4,
           Type = "BattlePet",
           Value = 0.06
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 404,
+          Index = 1,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.03
+        },
+        [2] = {
+          ID = 404,
+          Index = 2,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.24
         }
       }
     },
@@ -334,6 +398,22 @@ return ReadOnly("SkillGrow", {
           Type = "BattlePet",
           Value = 0.06
         }
+      },
+      [5] = {
+        [1] = {
+          ID = 405,
+          Index = 1,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.03
+        },
+        [2] = {
+          ID = 405,
+          Index = 2,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.24
+        }
       }
     },
     [406] = {
@@ -400,6 +480,22 @@ return ReadOnly("SkillGrow", {
           Type = "BattlePet",
           Value = 0.06
         }
+      },
+      [5] = {
+        [1] = {
+          ID = 406,
+          Index = 1,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.03
+        },
+        [2] = {
+          ID = 406,
+          Index = 2,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.24
+        }
       }
     },
     [407] = {
@@ -417,6 +513,13 @@ return ReadOnly("SkillGrow", {
           Level = 1,
           Type = "BattlePet",
           Value = 0.075
+        },
+        [3] = {
+          ID = 407,
+          Index = 3,
+          Level = 1,
+          Type = "BattlePet",
+          Value = 2000
         }
       },
       [2] = {
@@ -433,6 +536,13 @@ return ReadOnly("SkillGrow", {
           Level = 2,
           Type = "BattlePet",
           Value = 0.1
+        },
+        [3] = {
+          ID = 407,
+          Index = 3,
+          Level = 2,
+          Type = "BattlePet",
+          Value = 2000
         }
       },
       [3] = {
@@ -449,6 +559,13 @@ return ReadOnly("SkillGrow", {
           Level = 3,
           Type = "BattlePet",
           Value = 0.125
+        },
+        [3] = {
+          ID = 407,
+          Index = 3,
+          Level = 3,
+          Type = "BattlePet",
+          Value = 2000
         }
       },
       [4] = {
@@ -465,6 +582,36 @@ return ReadOnly("SkillGrow", {
           Level = 4,
           Type = "BattlePet",
           Value = 0.15
+        },
+        [3] = {
+          ID = 407,
+          Index = 3,
+          Level = 4,
+          Type = "BattlePet",
+          Value = 2000
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 407,
+          Index = 1,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.175
+        },
+        [2] = {
+          ID = 407,
+          Index = 2,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.175
+        },
+        [3] = {
+          ID = 407,
+          Index = 3,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 4000
         }
       }
     },
@@ -560,6 +707,29 @@ return ReadOnly("SkillGrow", {
           Type = "BattlePet",
           Value = -0.2
         }
+      },
+      [5] = {
+        [1] = {
+          ID = 408,
+          Index = 1,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.175
+        },
+        [2] = {
+          ID = 408,
+          Index = 2,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.175
+        },
+        [3] = {
+          ID = 408,
+          Index = 3,
+          Level = 5,
+          Type = "BattlePet",
+          Value = -0.25
+        }
       }
     },
     [409] = {
@@ -654,6 +824,29 @@ return ReadOnly("SkillGrow", {
           Type = "BattlePet",
           Value = 0.036
         }
+      },
+      [5] = {
+        [1] = {
+          ID = 409,
+          Index = 1,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.072
+        },
+        [2] = {
+          ID = 409,
+          Index = 2,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.072
+        },
+        [3] = {
+          ID = 409,
+          Index = 3,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.072
+        }
       }
     },
     [411] = {
@@ -719,6 +912,22 @@ return ReadOnly("SkillGrow", {
           Level = 4,
           Type = "BattlePet",
           Value = 0.009
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 411,
+          Index = 1,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.048
+        },
+        [2] = {
+          ID = 411,
+          Index = 2,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.036
         }
       }
     },
@@ -786,6 +995,22 @@ return ReadOnly("SkillGrow", {
           Type = "BattlePet",
           Value = 0.009
         }
+      },
+      [5] = {
+        [1] = {
+          ID = 412,
+          Index = 1,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.048
+        },
+        [2] = {
+          ID = 412,
+          Index = 2,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.036
+        }
       }
     },
     [413] = {
@@ -851,6 +1076,22 @@ return ReadOnly("SkillGrow", {
           Level = 4,
           Type = "BattlePet",
           Value = 0.009
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 413,
+          Index = 1,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.048
+        },
+        [2] = {
+          ID = 413,
+          Index = 2,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.036
         }
       }
     },
@@ -918,6 +1159,22 @@ return ReadOnly("SkillGrow", {
           Type = "BattlePet",
           Value = 0.009
         }
+      },
+      [5] = {
+        [1] = {
+          ID = 414,
+          Index = 1,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.048
+        },
+        [2] = {
+          ID = 414,
+          Index = 2,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.036
+        }
       }
     },
     [415] = {
@@ -983,6 +1240,22 @@ return ReadOnly("SkillGrow", {
           Level = 4,
           Type = "BattlePet",
           Value = 0.009
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 415,
+          Index = 1,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.048
+        },
+        [2] = {
+          ID = 415,
+          Index = 2,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.036
         }
       }
     },
@@ -1050,6 +1323,104 @@ return ReadOnly("SkillGrow", {
           Type = "BattlePet",
           Value = 0.009
         }
+      },
+      [5] = {
+        [1] = {
+          ID = 416,
+          Index = 1,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.048
+        },
+        [2] = {
+          ID = 416,
+          Index = 2,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.036
+        }
+      }
+    },
+    [417] = {
+      [1] = {
+        [1] = {
+          ID = 417,
+          Index = 1,
+          Level = 1,
+          Type = "BattlePet",
+          Value = 0.024
+        },
+        [2] = {
+          ID = 417,
+          Index = 2,
+          Level = 1,
+          Type = "BattlePet",
+          Value = 0.024
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 417,
+          Index = 1,
+          Level = 2,
+          Type = "BattlePet",
+          Value = 0.032
+        },
+        [2] = {
+          ID = 417,
+          Index = 2,
+          Level = 2,
+          Type = "BattlePet",
+          Value = 0.032
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 417,
+          Index = 1,
+          Level = 3,
+          Type = "BattlePet",
+          Value = 0.04
+        },
+        [2] = {
+          ID = 417,
+          Index = 2,
+          Level = 3,
+          Type = "BattlePet",
+          Value = 0.04
+        }
+      },
+      [4] = {
+        [1] = {
+          ID = 417,
+          Index = 1,
+          Level = 4,
+          Type = "BattlePet",
+          Value = 0.048
+        },
+        [2] = {
+          ID = 417,
+          Index = 2,
+          Level = 4,
+          Type = "BattlePet",
+          Value = 0.048
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 417,
+          Index = 1,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.096
+        },
+        [2] = {
+          ID = 417,
+          Index = 2,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.096
+        }
       }
     },
     [421] = {
@@ -1115,6 +1486,22 @@ return ReadOnly("SkillGrow", {
           Level = 4,
           Type = "BattlePet",
           Value = 0.018
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 421,
+          Index = 1,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.096
+        },
+        [2] = {
+          ID = 421,
+          Index = 2,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.072
         }
       }
     },
@@ -1182,6 +1569,22 @@ return ReadOnly("SkillGrow", {
           Type = "BattlePet",
           Value = 0.018
         }
+      },
+      [5] = {
+        [1] = {
+          ID = 422,
+          Index = 1,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.096
+        },
+        [2] = {
+          ID = 422,
+          Index = 2,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.072
+        }
       }
     },
     [423] = {
@@ -1247,6 +1650,22 @@ return ReadOnly("SkillGrow", {
           Level = 4,
           Type = "BattlePet",
           Value = 0.018
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 423,
+          Index = 1,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.096
+        },
+        [2] = {
+          ID = 423,
+          Index = 2,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.072
         }
       }
     },
@@ -1314,6 +1733,22 @@ return ReadOnly("SkillGrow", {
           Type = "BattlePet",
           Value = 0.018
         }
+      },
+      [5] = {
+        [1] = {
+          ID = 424,
+          Index = 1,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.096
+        },
+        [2] = {
+          ID = 424,
+          Index = 2,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.072
+        }
       }
     },
     [425] = {
@@ -1380,6 +1815,22 @@ return ReadOnly("SkillGrow", {
           Type = "BattlePet",
           Value = 0.018
         }
+      },
+      [5] = {
+        [1] = {
+          ID = 425,
+          Index = 1,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.096
+        },
+        [2] = {
+          ID = 425,
+          Index = 2,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.072
+        }
       }
     },
     [426] = {
@@ -1445,6 +1896,22 @@ return ReadOnly("SkillGrow", {
           Level = 4,
           Type = "BattlePet",
           Value = 0.018
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 426,
+          Index = 1,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.096
+        },
+        [2] = {
+          ID = 426,
+          Index = 2,
+          Level = 5,
+          Type = "BattlePet",
+          Value = 0.072
         }
       }
     },
@@ -1851,6 +2318,267 @@ return ReadOnly("SkillGrow", {
           Level = 3,
           Type = "BattlePet",
           Value = 0.6
+        }
+      }
+    },
+    [1019] = {
+      [1] = {
+        [1] = {
+          ID = 1019,
+          Index = 1,
+          Level = 1,
+          Type = "BattlePet",
+          Value = 0.032
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 1019,
+          Index = 1,
+          Level = 2,
+          Type = "BattlePet",
+          Value = 0.064
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 1019,
+          Index = 1,
+          Level = 3,
+          Type = "BattlePet",
+          Value = 0.096
+        }
+      }
+    },
+    [1020] = {
+      [1] = {
+        [1] = {
+          ID = 1020,
+          Index = 1,
+          Level = 1,
+          Type = "BattlePet",
+          Value = 0.048
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 1020,
+          Index = 1,
+          Level = 2,
+          Type = "BattlePet",
+          Value = 0.096
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 1020,
+          Index = 1,
+          Level = 3,
+          Type = "BattlePet",
+          Value = 0.144
+        }
+      }
+    },
+    [1021] = {
+      [1] = {
+        [1] = {
+          ID = 1021,
+          Index = 1,
+          Level = 1,
+          Type = "BattlePet",
+          Value = 0.024
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 1021,
+          Index = 1,
+          Level = 2,
+          Type = "BattlePet",
+          Value = 0.048
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 1021,
+          Index = 1,
+          Level = 3,
+          Type = "BattlePet",
+          Value = 0.072
+        }
+      }
+    },
+    [1022] = {
+      [1] = {
+        [1] = {
+          ID = 1022,
+          Index = 1,
+          Level = 1,
+          Type = "BattlePet",
+          Value = 0.02
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 1022,
+          Index = 1,
+          Level = 2,
+          Type = "BattlePet",
+          Value = 0.04
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 1022,
+          Index = 1,
+          Level = 3,
+          Type = "BattlePet",
+          Value = 0.06
+        }
+      }
+    },
+    [1023] = {
+      [1] = {
+        [1] = {
+          ID = 1023,
+          Index = 1,
+          Level = 1,
+          Type = "BattlePet",
+          Value = 0.024
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 1023,
+          Index = 1,
+          Level = 2,
+          Type = "BattlePet",
+          Value = 0.048
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 1023,
+          Index = 1,
+          Level = 3,
+          Type = "BattlePet",
+          Value = 0.072
+        }
+      }
+    },
+    [1024] = {
+      [1] = {
+        [1] = {
+          ID = 1024,
+          Index = 1,
+          Level = 1,
+          Type = "BattlePet",
+          Value = 0.008
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 1024,
+          Index = 1,
+          Level = 2,
+          Type = "BattlePet",
+          Value = 0.016
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 1024,
+          Index = 1,
+          Level = 3,
+          Type = "BattlePet",
+          Value = 0.024
+        }
+      }
+    },
+    [1025] = {
+      [1] = {
+        [1] = {
+          ID = 1025,
+          Index = 1,
+          Level = 1,
+          Type = "BattlePet",
+          Value = 0.08
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 1025,
+          Index = 1,
+          Level = 2,
+          Type = "BattlePet",
+          Value = 0.16
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 1025,
+          Index = 1,
+          Level = 3,
+          Type = "BattlePet",
+          Value = 0.24
+        }
+      }
+    },
+    [1026] = {
+      [1] = {
+        [1] = {
+          ID = 1026,
+          Index = 1,
+          Level = 1,
+          Type = "BattlePet",
+          Value = 0.1
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 1026,
+          Index = 1,
+          Level = 2,
+          Type = "BattlePet",
+          Value = 0.2
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 1026,
+          Index = 1,
+          Level = 3,
+          Type = "BattlePet",
+          Value = 0.3
+        }
+      }
+    },
+    [1027] = {
+      [1] = {
+        [1] = {
+          ID = 1027,
+          Index = 1,
+          Level = 1,
+          Type = "BattlePet",
+          Value = 0.06
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 1027,
+          Index = 1,
+          Level = 2,
+          Type = "BattlePet",
+          Value = 0.12
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 1027,
+          Index = 1,
+          Level = 3,
+          Type = "BattlePet",
+          Value = 0.18
         }
       }
     }
@@ -2693,6 +3421,62 @@ return ReadOnly("SkillGrow", {
           Level = 6,
           Type = "BattleWeapon",
           Value = 0.3
+        }
+      }
+    },
+    [10305] = {
+      [1] = {
+        [1] = {
+          ID = 10305,
+          Index = 1,
+          Level = 1,
+          Type = "BattleWeapon",
+          Value = 0.75
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 10305,
+          Index = 1,
+          Level = 2,
+          Type = "BattleWeapon",
+          Value = 0.9
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 10305,
+          Index = 1,
+          Level = 3,
+          Type = "BattleWeapon",
+          Value = 1.05
+        }
+      },
+      [4] = {
+        [1] = {
+          ID = 10305,
+          Index = 1,
+          Level = 4,
+          Type = "BattleWeapon",
+          Value = 1.2
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 10305,
+          Index = 1,
+          Level = 5,
+          Type = "BattleWeapon",
+          Value = 1.35
+        }
+      },
+      [6] = {
+        [1] = {
+          ID = 10305,
+          Index = 1,
+          Level = 6,
+          Type = "BattleWeapon",
+          Value = 1.5
         }
       }
     },
@@ -4152,6 +4936,118 @@ return ReadOnly("SkillGrow", {
         }
       }
     },
+    [20406] = {
+      [1] = {
+        [1] = {
+          ID = 20406,
+          Index = 1,
+          Level = 1,
+          Type = "BattleWeapon",
+          Value = 0.625
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 20406,
+          Index = 1,
+          Level = 2,
+          Type = "BattleWeapon",
+          Value = 0.75
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 20406,
+          Index = 1,
+          Level = 3,
+          Type = "BattleWeapon",
+          Value = 0.875
+        }
+      },
+      [4] = {
+        [1] = {
+          ID = 20406,
+          Index = 1,
+          Level = 4,
+          Type = "BattleWeapon",
+          Value = 1
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 20406,
+          Index = 1,
+          Level = 5,
+          Type = "BattleWeapon",
+          Value = 1.125
+        }
+      },
+      [6] = {
+        [1] = {
+          ID = 20406,
+          Index = 1,
+          Level = 6,
+          Type = "BattleWeapon",
+          Value = 1.25
+        }
+      }
+    },
+    [20407] = {
+      [1] = {
+        [1] = {
+          ID = 20407,
+          Index = 1,
+          Level = 1,
+          Type = "BattleWeapon",
+          Value = 0.9
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 20407,
+          Index = 1,
+          Level = 2,
+          Type = "BattleWeapon",
+          Value = 1.08
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 20407,
+          Index = 1,
+          Level = 3,
+          Type = "BattleWeapon",
+          Value = 1.26
+        }
+      },
+      [4] = {
+        [1] = {
+          ID = 20407,
+          Index = 1,
+          Level = 4,
+          Type = "BattleWeapon",
+          Value = 1.44
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 20407,
+          Index = 1,
+          Level = 5,
+          Type = "BattleWeapon",
+          Value = 1.62
+        }
+      },
+      [6] = {
+        [1] = {
+          ID = 20407,
+          Index = 1,
+          Level = 6,
+          Type = "BattleWeapon",
+          Value = 1.8
+        }
+      }
+    },
     [20501] = {
       [1] = {
         [1] = {
@@ -4653,6 +5549,62 @@ return ReadOnly("SkillGrow", {
           Level = 6,
           Type = "BattleWeapon",
           Value = 0.3
+        }
+      }
+    },
+    [20512] = {
+      [1] = {
+        [1] = {
+          ID = 20512,
+          Index = 1,
+          Level = 1,
+          Type = "BattleWeapon",
+          Value = 0.375
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 20512,
+          Index = 1,
+          Level = 2,
+          Type = "BattleWeapon",
+          Value = 0.45
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 20512,
+          Index = 1,
+          Level = 3,
+          Type = "BattleWeapon",
+          Value = 0.525
+        }
+      },
+      [4] = {
+        [1] = {
+          ID = 20512,
+          Index = 1,
+          Level = 4,
+          Type = "BattleWeapon",
+          Value = 0.6
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 20512,
+          Index = 1,
+          Level = 5,
+          Type = "BattleWeapon",
+          Value = 0.675
+        }
+      },
+      [6] = {
+        [1] = {
+          ID = 20512,
+          Index = 1,
+          Level = 6,
+          Type = "BattleWeapon",
+          Value = 0.75
         }
       }
     },
@@ -5178,6 +6130,15 @@ return ReadOnly("SkillGrow", {
           Type = "Buff",
           Value = 0.15
         }
+      },
+      [5] = {
+        [1] = {
+          ID = 402,
+          Index = 1,
+          Level = 5,
+          Type = "Buff",
+          Value = 0.3
+        }
       }
     },
     [406] = {
@@ -5215,6 +6176,15 @@ return ReadOnly("SkillGrow", {
           Level = 4,
           Type = "Buff",
           Value = -0.036
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 406,
+          Index = 1,
+          Level = 5,
+          Type = "Buff",
+          Value = -0.042
         }
       }
     },
@@ -5254,6 +6224,15 @@ return ReadOnly("SkillGrow", {
           Type = "Buff",
           Value = -0.9
         }
+      },
+      [5] = {
+        [1] = {
+          ID = 408,
+          Index = 1,
+          Level = 5,
+          Type = "Buff",
+          Value = -1
+        }
       }
     },
     [409] = {
@@ -5291,6 +6270,15 @@ return ReadOnly("SkillGrow", {
           Level = 4,
           Type = "Buff",
           Value = 0.054
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 409,
+          Index = 1,
+          Level = 5,
+          Type = "Buff",
+          Value = 0.063
         }
       }
     },
@@ -5330,6 +6318,15 @@ return ReadOnly("SkillGrow", {
           Type = "Buff",
           Value = -0.06
         }
+      },
+      [5] = {
+        [1] = {
+          ID = 411,
+          Index = 1,
+          Level = 5,
+          Type = "Buff",
+          Value = -0.07
+        }
       }
     },
     [412] = {
@@ -5367,6 +6364,15 @@ return ReadOnly("SkillGrow", {
           Level = 4,
           Type = "Buff",
           Value = 0.18
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 412,
+          Index = 1,
+          Level = 5,
+          Type = "Buff",
+          Value = 0.36
         }
       }
     },
@@ -5406,6 +6412,15 @@ return ReadOnly("SkillGrow", {
           Type = "Buff",
           Value = 0.3
         }
+      },
+      [5] = {
+        [1] = {
+          ID = 413,
+          Index = 1,
+          Level = 5,
+          Type = "Buff",
+          Value = 0.6
+        }
       }
     },
     [415] = {
@@ -5443,6 +6458,15 @@ return ReadOnly("SkillGrow", {
           Level = 4,
           Type = "Buff",
           Value = 0.12
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 415,
+          Index = 1,
+          Level = 5,
+          Type = "Buff",
+          Value = 0.24
         }
       }
     },
@@ -5482,6 +6506,15 @@ return ReadOnly("SkillGrow", {
           Type = "Buff",
           Value = 0.072
         }
+      },
+      [5] = {
+        [1] = {
+          ID = 416,
+          Index = 1,
+          Level = 5,
+          Type = "Buff",
+          Value = 0.084
+        }
       }
     },
     [421] = {
@@ -5519,6 +6552,15 @@ return ReadOnly("SkillGrow", {
           Level = 4,
           Type = "Buff",
           Value = 0.12
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 421,
+          Index = 1,
+          Level = 5,
+          Type = "Buff",
+          Value = 0.24
         }
       }
     },
@@ -5558,6 +6600,15 @@ return ReadOnly("SkillGrow", {
           Type = "Buff",
           Value = 0.081
         }
+      },
+      [5] = {
+        [1] = {
+          ID = 422,
+          Index = 1,
+          Level = 5,
+          Type = "Buff",
+          Value = 0.162
+        }
       }
     },
     [423] = {
@@ -5595,6 +6646,15 @@ return ReadOnly("SkillGrow", {
           Level = 4,
           Type = "Buff",
           Value = 0.21
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 423,
+          Index = 1,
+          Level = 5,
+          Type = "Buff",
+          Value = 0.42
         }
       }
     },
@@ -5634,6 +6694,15 @@ return ReadOnly("SkillGrow", {
           Type = "Buff",
           Value = 0.21
         }
+      },
+      [5] = {
+        [1] = {
+          ID = 424,
+          Index = 1,
+          Level = 5,
+          Type = "Buff",
+          Value = 0.42
+        }
       }
     },
     [425] = {
@@ -5672,6 +6741,15 @@ return ReadOnly("SkillGrow", {
           Type = "Buff",
           Value = 0.12
         }
+      },
+      [5] = {
+        [1] = {
+          ID = 425,
+          Index = 1,
+          Level = 5,
+          Type = "Buff",
+          Value = 0.24
+        }
       }
     },
     [426] = {
@@ -5709,6 +6787,15 @@ return ReadOnly("SkillGrow", {
           Level = 4,
           Type = "Buff",
           Value = 0.063
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 426,
+          Index = 1,
+          Level = 5,
+          Type = "Buff",
+          Value = 0.126
         }
       }
     },
@@ -10009,6 +11096,208 @@ return ReadOnly("SkillGrow", {
         }
       }
     },
+    [6161] = {
+      [0] = {
+        [1] = {
+          ID = 6161,
+          Index = 1,
+          Level = 0,
+          Type = "Buff",
+          Value = 0.06
+        }
+      },
+      [1] = {
+        [1] = {
+          ID = 6161,
+          Index = 1,
+          Level = 1,
+          Type = "Buff",
+          Value = 0.12
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 6161,
+          Index = 1,
+          Level = 2,
+          Type = "Buff",
+          Value = 0.18
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 6161,
+          Index = 1,
+          Level = 3,
+          Type = "Buff",
+          Value = 0.24
+        }
+      },
+      [4] = {
+        [1] = {
+          ID = 6161,
+          Index = 1,
+          Level = 4,
+          Type = "Buff",
+          Value = 0.3
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 6161,
+          Index = 1,
+          Level = 5,
+          Type = "Buff",
+          Value = 0.36
+        }
+      },
+      [6] = {
+        [1] = {
+          ID = 6161,
+          Index = 1,
+          Level = 6,
+          Type = "Buff",
+          Value = 0.42
+        }
+      },
+      [7] = {
+        [1] = {
+          ID = 6161,
+          Index = 1,
+          Level = 7,
+          Type = "Buff",
+          Value = 0.48
+        }
+      },
+      [8] = {
+        [1] = {
+          ID = 6161,
+          Index = 1,
+          Level = 8,
+          Type = "Buff",
+          Value = 0.54
+        }
+      },
+      [9] = {
+        [1] = {
+          ID = 6161,
+          Index = 1,
+          Level = 9,
+          Type = "Buff",
+          Value = 0.6
+        }
+      },
+      [10] = {
+        [1] = {
+          ID = 6161,
+          Index = 1,
+          Level = 10,
+          Type = "Buff",
+          Value = 0.66
+        }
+      }
+    },
+    [6164] = {
+      [0] = {
+        [1] = {
+          ID = 6164,
+          Index = 1,
+          Level = 0,
+          Type = "Buff",
+          Value = 0.09
+        }
+      },
+      [1] = {
+        [1] = {
+          ID = 6164,
+          Index = 1,
+          Level = 1,
+          Type = "Buff",
+          Value = 0.18
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 6164,
+          Index = 1,
+          Level = 2,
+          Type = "Buff",
+          Value = 0.27
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 6164,
+          Index = 1,
+          Level = 3,
+          Type = "Buff",
+          Value = 0.36
+        }
+      },
+      [4] = {
+        [1] = {
+          ID = 6164,
+          Index = 1,
+          Level = 4,
+          Type = "Buff",
+          Value = 0.45
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 6164,
+          Index = 1,
+          Level = 5,
+          Type = "Buff",
+          Value = 0.54
+        }
+      },
+      [6] = {
+        [1] = {
+          ID = 6164,
+          Index = 1,
+          Level = 6,
+          Type = "Buff",
+          Value = 0.63
+        }
+      },
+      [7] = {
+        [1] = {
+          ID = 6164,
+          Index = 1,
+          Level = 7,
+          Type = "Buff",
+          Value = 0.72
+        }
+      },
+      [8] = {
+        [1] = {
+          ID = 6164,
+          Index = 1,
+          Level = 8,
+          Type = "Buff",
+          Value = 0.81
+        }
+      },
+      [9] = {
+        [1] = {
+          ID = 6164,
+          Index = 1,
+          Level = 9,
+          Type = "Buff",
+          Value = 0.9
+        }
+      },
+      [10] = {
+        [1] = {
+          ID = 6164,
+          Index = 1,
+          Level = 10,
+          Type = "Buff",
+          Value = 0.99
+        }
+      }
+    },
     [10102] = {
       [1] = {
         [1] = {
@@ -11448,6 +12737,62 @@ return ReadOnly("SkillGrow", {
           Level = 6,
           Type = "Buff",
           Value = 0.35
+        }
+      }
+    },
+    [20512] = {
+      [1] = {
+        [1] = {
+          ID = 20512,
+          Index = 1,
+          Level = 1,
+          Type = "Buff",
+          Value = 0.025
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 20512,
+          Index = 1,
+          Level = 2,
+          Type = "Buff",
+          Value = 0.03
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 20512,
+          Index = 1,
+          Level = 3,
+          Type = "Buff",
+          Value = 0.035
+        }
+      },
+      [4] = {
+        [1] = {
+          ID = 20512,
+          Index = 1,
+          Level = 4,
+          Type = "Buff",
+          Value = 0.04
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 20512,
+          Index = 1,
+          Level = 5,
+          Type = "Buff",
+          Value = 0.045
+        }
+      },
+      [6] = {
+        [1] = {
+          ID = 20512,
+          Index = 1,
+          Level = 6,
+          Type = "Buff",
+          Value = 0.05
         }
       }
     },
@@ -20450,6 +21795,188 @@ return ReadOnly("SkillGrow", {
           Level = 20,
           Type = "Buff",
           Value = 1
+        }
+      }
+    },
+    [320203] = {
+      [1] = {
+        [1] = {
+          ID = 320203,
+          Index = 1,
+          Level = 1,
+          Type = "Buff",
+          Value = 0.042
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 320203,
+          Index = 1,
+          Level = 2,
+          Type = "Buff",
+          Value = 0.044
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 320203,
+          Index = 1,
+          Level = 3,
+          Type = "Buff",
+          Value = 0.046
+        }
+      },
+      [4] = {
+        [1] = {
+          ID = 320203,
+          Index = 1,
+          Level = 4,
+          Type = "Buff",
+          Value = 0.048
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 320203,
+          Index = 1,
+          Level = 5,
+          Type = "Buff",
+          Value = 0.05
+        }
+      },
+      [6] = {
+        [1] = {
+          ID = 320203,
+          Index = 1,
+          Level = 6,
+          Type = "Buff",
+          Value = 0.052
+        }
+      },
+      [7] = {
+        [1] = {
+          ID = 320203,
+          Index = 1,
+          Level = 7,
+          Type = "Buff",
+          Value = 0.054
+        }
+      },
+      [8] = {
+        [1] = {
+          ID = 320203,
+          Index = 1,
+          Level = 8,
+          Type = "Buff",
+          Value = 0.056
+        }
+      },
+      [9] = {
+        [1] = {
+          ID = 320203,
+          Index = 1,
+          Level = 9,
+          Type = "Buff",
+          Value = 0.058
+        }
+      },
+      [10] = {
+        [1] = {
+          ID = 320203,
+          Index = 1,
+          Level = 10,
+          Type = "Buff",
+          Value = 0.06
+        }
+      },
+      [11] = {
+        [1] = {
+          ID = 320203,
+          Index = 1,
+          Level = 11,
+          Type = "Buff",
+          Value = 0.062
+        }
+      },
+      [12] = {
+        [1] = {
+          ID = 320203,
+          Index = 1,
+          Level = 12,
+          Type = "Buff",
+          Value = 0.064
+        }
+      },
+      [13] = {
+        [1] = {
+          ID = 320203,
+          Index = 1,
+          Level = 13,
+          Type = "Buff",
+          Value = 0.066
+        }
+      },
+      [14] = {
+        [1] = {
+          ID = 320203,
+          Index = 1,
+          Level = 14,
+          Type = "Buff",
+          Value = 0.068
+        }
+      },
+      [15] = {
+        [1] = {
+          ID = 320203,
+          Index = 1,
+          Level = 15,
+          Type = "Buff",
+          Value = 0.07
+        }
+      },
+      [16] = {
+        [1] = {
+          ID = 320203,
+          Index = 1,
+          Level = 16,
+          Type = "Buff",
+          Value = 0.072
+        }
+      },
+      [17] = {
+        [1] = {
+          ID = 320203,
+          Index = 1,
+          Level = 17,
+          Type = "Buff",
+          Value = 0.074
+        }
+      },
+      [18] = {
+        [1] = {
+          ID = 320203,
+          Index = 1,
+          Level = 18,
+          Type = "Buff",
+          Value = 0.076
+        }
+      },
+      [19] = {
+        [1] = {
+          ID = 320203,
+          Index = 1,
+          Level = 19,
+          Type = "Buff",
+          Value = 0.078
+        }
+      },
+      [20] = {
+        [1] = {
+          ID = 320203,
+          Index = 1,
+          Level = 20,
+          Type = "Buff",
+          Value = 0.08
         }
       }
     },
@@ -54265,6 +55792,118 @@ return ReadOnly("SkillGrow", {
         }
       }
     },
+    [41765] = {
+      [0] = {
+        [1] = {
+          ID = 41765,
+          Index = 1,
+          Level = 0,
+          Type = "Mod",
+          Value = 0.06
+        }
+      },
+      [1] = {
+        [1] = {
+          ID = 41765,
+          Index = 1,
+          Level = 1,
+          Type = "Mod",
+          Value = 0.12
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 41765,
+          Index = 1,
+          Level = 2,
+          Type = "Mod",
+          Value = 0.18
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 41765,
+          Index = 1,
+          Level = 3,
+          Type = "Mod",
+          Value = 0.24
+        }
+      },
+      [4] = {
+        [1] = {
+          ID = 41765,
+          Index = 1,
+          Level = 4,
+          Type = "Mod",
+          Value = 0.3
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 41765,
+          Index = 1,
+          Level = 5,
+          Type = "Mod",
+          Value = 0.36
+        }
+      }
+    },
+    [41766] = {
+      [0] = {
+        [1] = {
+          ID = 41766,
+          Index = 1,
+          Level = 0,
+          Type = "Mod",
+          Value = 0.08
+        }
+      },
+      [1] = {
+        [1] = {
+          ID = 41766,
+          Index = 1,
+          Level = 1,
+          Type = "Mod",
+          Value = 0.16
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 41766,
+          Index = 1,
+          Level = 2,
+          Type = "Mod",
+          Value = 0.24
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 41766,
+          Index = 1,
+          Level = 3,
+          Type = "Mod",
+          Value = 0.32
+        }
+      },
+      [4] = {
+        [1] = {
+          ID = 41766,
+          Index = 1,
+          Level = 4,
+          Type = "Mod",
+          Value = 0.4
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 41766,
+          Index = 1,
+          Level = 5,
+          Type = "Mod",
+          Value = 0.48
+        }
+      }
+    },
     [41911] = {
       [0] = {
         [1] = {
@@ -78652,6 +80291,208 @@ return ReadOnly("SkillGrow", {
         }
       }
     },
+    [51765] = {
+      [0] = {
+        [1] = {
+          ID = 51765,
+          Index = 1,
+          Level = 0,
+          Type = "Mod",
+          Value = 0.06
+        }
+      },
+      [1] = {
+        [1] = {
+          ID = 51765,
+          Index = 1,
+          Level = 1,
+          Type = "Mod",
+          Value = 0.12
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 51765,
+          Index = 1,
+          Level = 2,
+          Type = "Mod",
+          Value = 0.18
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 51765,
+          Index = 1,
+          Level = 3,
+          Type = "Mod",
+          Value = 0.24
+        }
+      },
+      [4] = {
+        [1] = {
+          ID = 51765,
+          Index = 1,
+          Level = 4,
+          Type = "Mod",
+          Value = 0.3
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 51765,
+          Index = 1,
+          Level = 5,
+          Type = "Mod",
+          Value = 0.36
+        }
+      },
+      [6] = {
+        [1] = {
+          ID = 51765,
+          Index = 1,
+          Level = 6,
+          Type = "Mod",
+          Value = 0.42
+        }
+      },
+      [7] = {
+        [1] = {
+          ID = 51765,
+          Index = 1,
+          Level = 7,
+          Type = "Mod",
+          Value = 0.48
+        }
+      },
+      [8] = {
+        [1] = {
+          ID = 51765,
+          Index = 1,
+          Level = 8,
+          Type = "Mod",
+          Value = 0.54
+        }
+      },
+      [9] = {
+        [1] = {
+          ID = 51765,
+          Index = 1,
+          Level = 9,
+          Type = "Mod",
+          Value = 0.6
+        }
+      },
+      [10] = {
+        [1] = {
+          ID = 51765,
+          Index = 1,
+          Level = 10,
+          Type = "Mod",
+          Value = 0.66
+        }
+      }
+    },
+    [51766] = {
+      [0] = {
+        [1] = {
+          ID = 51766,
+          Index = 1,
+          Level = 0,
+          Type = "Mod",
+          Value = 0.08
+        }
+      },
+      [1] = {
+        [1] = {
+          ID = 51766,
+          Index = 1,
+          Level = 1,
+          Type = "Mod",
+          Value = 0.16
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 51766,
+          Index = 1,
+          Level = 2,
+          Type = "Mod",
+          Value = 0.24
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 51766,
+          Index = 1,
+          Level = 3,
+          Type = "Mod",
+          Value = 0.32
+        }
+      },
+      [4] = {
+        [1] = {
+          ID = 51766,
+          Index = 1,
+          Level = 4,
+          Type = "Mod",
+          Value = 0.4
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 51766,
+          Index = 1,
+          Level = 5,
+          Type = "Mod",
+          Value = 0.48
+        }
+      },
+      [6] = {
+        [1] = {
+          ID = 51766,
+          Index = 1,
+          Level = 6,
+          Type = "Mod",
+          Value = 0.56
+        }
+      },
+      [7] = {
+        [1] = {
+          ID = 51766,
+          Index = 1,
+          Level = 7,
+          Type = "Mod",
+          Value = 0.64
+        }
+      },
+      [8] = {
+        [1] = {
+          ID = 51766,
+          Index = 1,
+          Level = 8,
+          Type = "Mod",
+          Value = 0.72
+        }
+      },
+      [9] = {
+        [1] = {
+          ID = 51766,
+          Index = 1,
+          Level = 9,
+          Type = "Mod",
+          Value = 0.8
+        }
+      },
+      [10] = {
+        [1] = {
+          ID = 51766,
+          Index = 1,
+          Level = 10,
+          Type = "Mod",
+          Value = 0.88
+        }
+      }
+    },
     [51911] = {
       [0] = {
         [1] = {
@@ -85795,6 +87636,362 @@ return ReadOnly("SkillGrow", {
         }
       }
     },
+    [56162] = {
+      [0] = {
+        [1] = {
+          ID = 56162,
+          Index = 1,
+          Level = 0,
+          Type = "Mod",
+          Value = 0.15
+        },
+        [2] = {
+          ID = 56162,
+          Index = 2,
+          Level = 0,
+          Type = "Mod",
+          Value = 0.04
+        }
+      },
+      [1] = {
+        [1] = {
+          ID = 56162,
+          Index = 1,
+          Level = 1,
+          Type = "Mod",
+          Value = 0.3
+        },
+        [2] = {
+          ID = 56162,
+          Index = 2,
+          Level = 1,
+          Type = "Mod",
+          Value = 0.08
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 56162,
+          Index = 1,
+          Level = 2,
+          Type = "Mod",
+          Value = 0.45
+        },
+        [2] = {
+          ID = 56162,
+          Index = 2,
+          Level = 2,
+          Type = "Mod",
+          Value = 0.12
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 56162,
+          Index = 1,
+          Level = 3,
+          Type = "Mod",
+          Value = 0.6
+        },
+        [2] = {
+          ID = 56162,
+          Index = 2,
+          Level = 3,
+          Type = "Mod",
+          Value = 0.16
+        }
+      },
+      [4] = {
+        [1] = {
+          ID = 56162,
+          Index = 1,
+          Level = 4,
+          Type = "Mod",
+          Value = 0.75
+        },
+        [2] = {
+          ID = 56162,
+          Index = 2,
+          Level = 4,
+          Type = "Mod",
+          Value = 0.2
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 56162,
+          Index = 1,
+          Level = 5,
+          Type = "Mod",
+          Value = 0.9
+        },
+        [2] = {
+          ID = 56162,
+          Index = 2,
+          Level = 5,
+          Type = "Mod",
+          Value = 0.24
+        }
+      },
+      [6] = {
+        [1] = {
+          ID = 56162,
+          Index = 1,
+          Level = 6,
+          Type = "Mod",
+          Value = 1.05
+        },
+        [2] = {
+          ID = 56162,
+          Index = 2,
+          Level = 6,
+          Type = "Mod",
+          Value = 0.28
+        }
+      },
+      [7] = {
+        [1] = {
+          ID = 56162,
+          Index = 1,
+          Level = 7,
+          Type = "Mod",
+          Value = 1.2
+        },
+        [2] = {
+          ID = 56162,
+          Index = 2,
+          Level = 7,
+          Type = "Mod",
+          Value = 0.32
+        }
+      },
+      [8] = {
+        [1] = {
+          ID = 56162,
+          Index = 1,
+          Level = 8,
+          Type = "Mod",
+          Value = 1.35
+        },
+        [2] = {
+          ID = 56162,
+          Index = 2,
+          Level = 8,
+          Type = "Mod",
+          Value = 0.36
+        }
+      },
+      [9] = {
+        [1] = {
+          ID = 56162,
+          Index = 1,
+          Level = 9,
+          Type = "Mod",
+          Value = 1.5
+        },
+        [2] = {
+          ID = 56162,
+          Index = 2,
+          Level = 9,
+          Type = "Mod",
+          Value = 0.4
+        }
+      },
+      [10] = {
+        [1] = {
+          ID = 56162,
+          Index = 1,
+          Level = 10,
+          Type = "Mod",
+          Value = 1.65
+        },
+        [2] = {
+          ID = 56162,
+          Index = 2,
+          Level = 10,
+          Type = "Mod",
+          Value = 0.44
+        }
+      }
+    },
+    [56164] = {
+      [0] = {
+        [1] = {
+          ID = 56164,
+          Index = 1,
+          Level = 0,
+          Type = "Mod",
+          Value = 0.15
+        },
+        [2] = {
+          ID = 56164,
+          Index = 2,
+          Level = 0,
+          Type = "Mod",
+          Value = 0.04
+        }
+      },
+      [1] = {
+        [1] = {
+          ID = 56164,
+          Index = 1,
+          Level = 1,
+          Type = "Mod",
+          Value = 0.3
+        },
+        [2] = {
+          ID = 56164,
+          Index = 2,
+          Level = 1,
+          Type = "Mod",
+          Value = 0.08
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 56164,
+          Index = 1,
+          Level = 2,
+          Type = "Mod",
+          Value = 0.45
+        },
+        [2] = {
+          ID = 56164,
+          Index = 2,
+          Level = 2,
+          Type = "Mod",
+          Value = 0.12
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 56164,
+          Index = 1,
+          Level = 3,
+          Type = "Mod",
+          Value = 0.6
+        },
+        [2] = {
+          ID = 56164,
+          Index = 2,
+          Level = 3,
+          Type = "Mod",
+          Value = 0.16
+        }
+      },
+      [4] = {
+        [1] = {
+          ID = 56164,
+          Index = 1,
+          Level = 4,
+          Type = "Mod",
+          Value = 0.75
+        },
+        [2] = {
+          ID = 56164,
+          Index = 2,
+          Level = 4,
+          Type = "Mod",
+          Value = 0.2
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 56164,
+          Index = 1,
+          Level = 5,
+          Type = "Mod",
+          Value = 0.9
+        },
+        [2] = {
+          ID = 56164,
+          Index = 2,
+          Level = 5,
+          Type = "Mod",
+          Value = 0.24
+        }
+      },
+      [6] = {
+        [1] = {
+          ID = 56164,
+          Index = 1,
+          Level = 6,
+          Type = "Mod",
+          Value = 1.05
+        },
+        [2] = {
+          ID = 56164,
+          Index = 2,
+          Level = 6,
+          Type = "Mod",
+          Value = 0.28
+        }
+      },
+      [7] = {
+        [1] = {
+          ID = 56164,
+          Index = 1,
+          Level = 7,
+          Type = "Mod",
+          Value = 1.2
+        },
+        [2] = {
+          ID = 56164,
+          Index = 2,
+          Level = 7,
+          Type = "Mod",
+          Value = 0.32
+        }
+      },
+      [8] = {
+        [1] = {
+          ID = 56164,
+          Index = 1,
+          Level = 8,
+          Type = "Mod",
+          Value = 1.35
+        },
+        [2] = {
+          ID = 56164,
+          Index = 2,
+          Level = 8,
+          Type = "Mod",
+          Value = 0.36
+        }
+      },
+      [9] = {
+        [1] = {
+          ID = 56164,
+          Index = 1,
+          Level = 9,
+          Type = "Mod",
+          Value = 1.5
+        },
+        [2] = {
+          ID = 56164,
+          Index = 2,
+          Level = 9,
+          Type = "Mod",
+          Value = 0.4
+        }
+      },
+      [10] = {
+        [1] = {
+          ID = 56164,
+          Index = 1,
+          Level = 10,
+          Type = "Mod",
+          Value = 1.65
+        },
+        [2] = {
+          ID = 56164,
+          Index = 2,
+          Level = 10,
+          Type = "Mod",
+          Value = 0.44
+        }
+      }
+    },
     [101001] = {
       [0] = {
         [1] = {
@@ -85848,6 +88045,107 @@ return ReadOnly("SkillGrow", {
           Level = 5,
           Type = "Mod",
           Value = 0
+        }
+      }
+    },
+    [150401] = {
+      [0] = {
+        [1] = {
+          ID = 150401,
+          Index = 1,
+          Level = 0,
+          Type = "Mod",
+          Value = 0.05
+        }
+      },
+      [1] = {
+        [1] = {
+          ID = 150401,
+          Index = 1,
+          Level = 1,
+          Type = "Mod",
+          Value = 0.1
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 150401,
+          Index = 1,
+          Level = 2,
+          Type = "Mod",
+          Value = 0.15
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 150401,
+          Index = 1,
+          Level = 3,
+          Type = "Mod",
+          Value = 0.2
+        }
+      },
+      [4] = {
+        [1] = {
+          ID = 150401,
+          Index = 1,
+          Level = 4,
+          Type = "Mod",
+          Value = 0.25
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 150401,
+          Index = 1,
+          Level = 5,
+          Type = "Mod",
+          Value = 0.3
+        }
+      },
+      [6] = {
+        [1] = {
+          ID = 150401,
+          Index = 1,
+          Level = 6,
+          Type = "Mod",
+          Value = 0.35
+        }
+      },
+      [7] = {
+        [1] = {
+          ID = 150401,
+          Index = 1,
+          Level = 7,
+          Type = "Mod",
+          Value = 0.4
+        }
+      },
+      [8] = {
+        [1] = {
+          ID = 150401,
+          Index = 1,
+          Level = 8,
+          Type = "Mod",
+          Value = 0.45
+        }
+      },
+      [9] = {
+        [1] = {
+          ID = 150401,
+          Index = 1,
+          Level = 9,
+          Type = "Mod",
+          Value = 0.5
+        }
+      },
+      [10] = {
+        [1] = {
+          ID = 150401,
+          Index = 1,
+          Level = 10,
+          Type = "Mod",
+          Value = 0.55
         }
       }
     },
@@ -90112,6 +92410,62 @@ return ReadOnly("SkillGrow", {
         }
       }
     },
+    [10305] = {
+      [1] = {
+        [1] = {
+          ID = 10305,
+          Index = 1,
+          Level = 1,
+          Type = "PassiveEffect",
+          Value = 0.5
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 10305,
+          Index = 1,
+          Level = 2,
+          Type = "PassiveEffect",
+          Value = 0.6
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 10305,
+          Index = 1,
+          Level = 3,
+          Type = "PassiveEffect",
+          Value = 0.7
+        }
+      },
+      [4] = {
+        [1] = {
+          ID = 10305,
+          Index = 1,
+          Level = 4,
+          Type = "PassiveEffect",
+          Value = 0.8
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 10305,
+          Index = 1,
+          Level = 5,
+          Type = "PassiveEffect",
+          Value = 0.9
+        }
+      },
+      [6] = {
+        [1] = {
+          ID = 10305,
+          Index = 1,
+          Level = 6,
+          Type = "PassiveEffect",
+          Value = 1
+        }
+      }
+    },
     [10401] = {
       [1] = {
         [1] = {
@@ -90991,6 +93345,118 @@ return ReadOnly("SkillGrow", {
           Level = 6,
           Type = "PassiveEffect",
           Value = 15
+        }
+      }
+    },
+    [20406] = {
+      [1] = {
+        [1] = {
+          ID = 20406,
+          Index = 1,
+          Level = 1,
+          Type = "PassiveEffect",
+          Value = 0.35
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 20406,
+          Index = 1,
+          Level = 2,
+          Type = "PassiveEffect",
+          Value = 0.42
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 20406,
+          Index = 1,
+          Level = 3,
+          Type = "PassiveEffect",
+          Value = 0.49
+        }
+      },
+      [4] = {
+        [1] = {
+          ID = 20406,
+          Index = 1,
+          Level = 4,
+          Type = "PassiveEffect",
+          Value = 0.56
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 20406,
+          Index = 1,
+          Level = 5,
+          Type = "PassiveEffect",
+          Value = 0.63
+        }
+      },
+      [6] = {
+        [1] = {
+          ID = 20406,
+          Index = 1,
+          Level = 6,
+          Type = "PassiveEffect",
+          Value = 0.7
+        }
+      }
+    },
+    [20407] = {
+      [1] = {
+        [1] = {
+          ID = 20407,
+          Index = 1,
+          Level = 1,
+          Type = "PassiveEffect",
+          Value = 0.0025
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 20407,
+          Index = 1,
+          Level = 2,
+          Type = "PassiveEffect",
+          Value = 0.003
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 20407,
+          Index = 1,
+          Level = 3,
+          Type = "PassiveEffect",
+          Value = 0.0035
+        }
+      },
+      [4] = {
+        [1] = {
+          ID = 20407,
+          Index = 1,
+          Level = 4,
+          Type = "PassiveEffect",
+          Value = 0.004
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 20407,
+          Index = 1,
+          Level = 5,
+          Type = "PassiveEffect",
+          Value = 0.0045
+        }
+      },
+      [6] = {
+        [1] = {
+          ID = 20407,
+          Index = 1,
+          Level = 6,
+          Type = "PassiveEffect",
+          Value = 0.005
         }
       }
     },
@@ -92503,6 +94969,188 @@ return ReadOnly("SkillGrow", {
           Level = 20,
           Type = "PassiveEffect",
           Value = 0.17
+        }
+      }
+    },
+    [150401] = {
+      [1] = {
+        [1] = {
+          ID = 150401,
+          Index = 1,
+          Level = 1,
+          Type = "PassiveEffect",
+          Value = 0.81
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 150401,
+          Index = 1,
+          Level = 2,
+          Type = "PassiveEffect",
+          Value = 1
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 150401,
+          Index = 1,
+          Level = 3,
+          Type = "PassiveEffect",
+          Value = 1.19
+        }
+      },
+      [4] = {
+        [1] = {
+          ID = 150401,
+          Index = 1,
+          Level = 4,
+          Type = "PassiveEffect",
+          Value = 1.38
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 150401,
+          Index = 1,
+          Level = 5,
+          Type = "PassiveEffect",
+          Value = 1.57
+        }
+      },
+      [6] = {
+        [1] = {
+          ID = 150401,
+          Index = 1,
+          Level = 6,
+          Type = "PassiveEffect",
+          Value = 1.76
+        }
+      },
+      [7] = {
+        [1] = {
+          ID = 150401,
+          Index = 1,
+          Level = 7,
+          Type = "PassiveEffect",
+          Value = 1.95
+        }
+      },
+      [8] = {
+        [1] = {
+          ID = 150401,
+          Index = 1,
+          Level = 8,
+          Type = "PassiveEffect",
+          Value = 2.14
+        }
+      },
+      [9] = {
+        [1] = {
+          ID = 150401,
+          Index = 1,
+          Level = 9,
+          Type = "PassiveEffect",
+          Value = 2.33
+        }
+      },
+      [10] = {
+        [1] = {
+          ID = 150401,
+          Index = 1,
+          Level = 10,
+          Type = "PassiveEffect",
+          Value = 2.52
+        }
+      },
+      [11] = {
+        [1] = {
+          ID = 150401,
+          Index = 1,
+          Level = 11,
+          Type = "PassiveEffect",
+          Value = 2.71
+        }
+      },
+      [12] = {
+        [1] = {
+          ID = 150401,
+          Index = 1,
+          Level = 12,
+          Type = "PassiveEffect",
+          Value = 2.9
+        }
+      },
+      [13] = {
+        [1] = {
+          ID = 150401,
+          Index = 1,
+          Level = 13,
+          Type = "PassiveEffect",
+          Value = 3.09
+        }
+      },
+      [14] = {
+        [1] = {
+          ID = 150401,
+          Index = 1,
+          Level = 14,
+          Type = "PassiveEffect",
+          Value = 3.28
+        }
+      },
+      [15] = {
+        [1] = {
+          ID = 150401,
+          Index = 1,
+          Level = 15,
+          Type = "PassiveEffect",
+          Value = 3.47
+        }
+      },
+      [16] = {
+        [1] = {
+          ID = 150401,
+          Index = 1,
+          Level = 16,
+          Type = "PassiveEffect",
+          Value = 3.66
+        }
+      },
+      [17] = {
+        [1] = {
+          ID = 150401,
+          Index = 1,
+          Level = 17,
+          Type = "PassiveEffect",
+          Value = 3.85
+        }
+      },
+      [18] = {
+        [1] = {
+          ID = 150401,
+          Index = 1,
+          Level = 18,
+          Type = "PassiveEffect",
+          Value = 4.04
+        }
+      },
+      [19] = {
+        [1] = {
+          ID = 150401,
+          Index = 1,
+          Level = 19,
+          Type = "PassiveEffect",
+          Value = 4.23
+        }
+      },
+      [20] = {
+        [1] = {
+          ID = 150401,
+          Index = 1,
+          Level = 20,
+          Type = "PassiveEffect",
+          Value = 4.42
         }
       }
     },
@@ -94281,6 +96929,188 @@ return ReadOnly("SkillGrow", {
           Level = 20,
           Type = "PassiveEffect",
           Value = 14.56
+        }
+      }
+    },
+    [320201] = {
+      [1] = {
+        [1] = {
+          ID = 320201,
+          Index = 1,
+          Level = 1,
+          Type = "PassiveEffect",
+          Value = 0.265
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 320201,
+          Index = 1,
+          Level = 2,
+          Type = "PassiveEffect",
+          Value = 0.28
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 320201,
+          Index = 1,
+          Level = 3,
+          Type = "PassiveEffect",
+          Value = 0.295
+        }
+      },
+      [4] = {
+        [1] = {
+          ID = 320201,
+          Index = 1,
+          Level = 4,
+          Type = "PassiveEffect",
+          Value = 0.31
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 320201,
+          Index = 1,
+          Level = 5,
+          Type = "PassiveEffect",
+          Value = 0.325
+        }
+      },
+      [6] = {
+        [1] = {
+          ID = 320201,
+          Index = 1,
+          Level = 6,
+          Type = "PassiveEffect",
+          Value = 0.34
+        }
+      },
+      [7] = {
+        [1] = {
+          ID = 320201,
+          Index = 1,
+          Level = 7,
+          Type = "PassiveEffect",
+          Value = 0.355
+        }
+      },
+      [8] = {
+        [1] = {
+          ID = 320201,
+          Index = 1,
+          Level = 8,
+          Type = "PassiveEffect",
+          Value = 0.37
+        }
+      },
+      [9] = {
+        [1] = {
+          ID = 320201,
+          Index = 1,
+          Level = 9,
+          Type = "PassiveEffect",
+          Value = 0.385
+        }
+      },
+      [10] = {
+        [1] = {
+          ID = 320201,
+          Index = 1,
+          Level = 10,
+          Type = "PassiveEffect",
+          Value = 0.4
+        }
+      },
+      [11] = {
+        [1] = {
+          ID = 320201,
+          Index = 1,
+          Level = 11,
+          Type = "PassiveEffect",
+          Value = 0.415
+        }
+      },
+      [12] = {
+        [1] = {
+          ID = 320201,
+          Index = 1,
+          Level = 12,
+          Type = "PassiveEffect",
+          Value = 0.43
+        }
+      },
+      [13] = {
+        [1] = {
+          ID = 320201,
+          Index = 1,
+          Level = 13,
+          Type = "PassiveEffect",
+          Value = 0.445
+        }
+      },
+      [14] = {
+        [1] = {
+          ID = 320201,
+          Index = 1,
+          Level = 14,
+          Type = "PassiveEffect",
+          Value = 0.46
+        }
+      },
+      [15] = {
+        [1] = {
+          ID = 320201,
+          Index = 1,
+          Level = 15,
+          Type = "PassiveEffect",
+          Value = 0.475
+        }
+      },
+      [16] = {
+        [1] = {
+          ID = 320201,
+          Index = 1,
+          Level = 16,
+          Type = "PassiveEffect",
+          Value = 0.49
+        }
+      },
+      [17] = {
+        [1] = {
+          ID = 320201,
+          Index = 1,
+          Level = 17,
+          Type = "PassiveEffect",
+          Value = 0.505
+        }
+      },
+      [18] = {
+        [1] = {
+          ID = 320201,
+          Index = 1,
+          Level = 18,
+          Type = "PassiveEffect",
+          Value = 0.52
+        }
+      },
+      [19] = {
+        [1] = {
+          ID = 320201,
+          Index = 1,
+          Level = 19,
+          Type = "PassiveEffect",
+          Value = 0.535
+        }
+      },
+      [20] = {
+        [1] = {
+          ID = 320201,
+          Index = 1,
+          Level = 20,
+          Type = "PassiveEffect",
+          Value = 0.55
         }
       }
     },
@@ -97440,6 +100270,15 @@ return ReadOnly("SkillGrow", {
           Type = "SkillEffects",
           Value = 9.36
         }
+      },
+      [5] = {
+        [1] = {
+          ID = 40101,
+          Index = 1,
+          Level = 5,
+          Type = "SkillEffects",
+          Value = 18.72
+        }
       }
     },
     [40301] = {
@@ -97477,6 +100316,15 @@ return ReadOnly("SkillGrow", {
           Level = 4,
           Type = "SkillEffects",
           Value = 18
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 40301,
+          Index = 1,
+          Level = 5,
+          Type = "SkillEffects",
+          Value = 21
         }
       }
     },
@@ -97516,6 +100364,15 @@ return ReadOnly("SkillGrow", {
           Type = "SkillEffects",
           Value = 240
         }
+      },
+      [5] = {
+        [1] = {
+          ID = 40401,
+          Index = 1,
+          Level = 5,
+          Type = "SkillEffects",
+          Value = 480
+        }
       }
     },
     [40501] = {
@@ -97553,6 +100410,15 @@ return ReadOnly("SkillGrow", {
           Level = 4,
           Type = "SkillEffects",
           Value = 0.3
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 40501,
+          Index = 1,
+          Level = 5,
+          Type = "SkillEffects",
+          Value = 0.35
         }
       }
     },
@@ -97592,6 +100458,15 @@ return ReadOnly("SkillGrow", {
           Type = "SkillEffects",
           Value = 9.36
         }
+      },
+      [5] = {
+        [1] = {
+          ID = 40601,
+          Index = 1,
+          Level = 5,
+          Type = "SkillEffects",
+          Value = 18.72
+        }
       }
     },
     [40701] = {
@@ -97629,6 +100504,15 @@ return ReadOnly("SkillGrow", {
           Level = 4,
           Type = "SkillEffects",
           Value = 23.4
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 40701,
+          Index = 1,
+          Level = 5,
+          Type = "SkillEffects",
+          Value = 46.8
         }
       }
     },
@@ -97668,6 +100552,15 @@ return ReadOnly("SkillGrow", {
           Type = "SkillEffects",
           Value = 1.8
         }
+      },
+      [5] = {
+        [1] = {
+          ID = 40801,
+          Index = 1,
+          Level = 5,
+          Type = "SkillEffects",
+          Value = 2.4
+        }
       }
     },
     [41101] = {
@@ -97705,6 +100598,15 @@ return ReadOnly("SkillGrow", {
           Level = 4,
           Type = "SkillEffects",
           Value = 11.7
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 41101,
+          Index = 1,
+          Level = 5,
+          Type = "SkillEffects",
+          Value = 23.4
         }
       }
     },
@@ -97772,6 +100674,22 @@ return ReadOnly("SkillGrow", {
           Type = "SkillEffects",
           Value = 18
         }
+      },
+      [5] = {
+        [1] = {
+          ID = 41401,
+          Index = 1,
+          Level = 5,
+          Type = "SkillEffects",
+          Value = 900
+        },
+        [2] = {
+          ID = 41401,
+          Index = 2,
+          Level = 5,
+          Type = "SkillEffects",
+          Value = 21
+        }
       }
     },
     [41501] = {
@@ -97809,6 +100727,15 @@ return ReadOnly("SkillGrow", {
           Level = 4,
           Type = "SkillEffects",
           Value = 0.36
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 41501,
+          Index = 1,
+          Level = 5,
+          Type = "SkillEffects",
+          Value = 0.42
         }
       }
     },
@@ -97848,6 +100775,62 @@ return ReadOnly("SkillGrow", {
           Type = "SkillEffects",
           Value = 11.7
         }
+      },
+      [5] = {
+        [1] = {
+          ID = 41601,
+          Index = 1,
+          Level = 5,
+          Type = "SkillEffects",
+          Value = 23.4
+        }
+      }
+    },
+    [41701] = {
+      [1] = {
+        [1] = {
+          ID = 41701,
+          Index = 1,
+          Level = 1,
+          Type = "SkillEffects",
+          Value = 5.85
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 41701,
+          Index = 1,
+          Level = 2,
+          Type = "SkillEffects",
+          Value = 7.8
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 41701,
+          Index = 1,
+          Level = 3,
+          Type = "SkillEffects",
+          Value = 9.75
+        }
+      },
+      [4] = {
+        [1] = {
+          ID = 41701,
+          Index = 1,
+          Level = 4,
+          Type = "SkillEffects",
+          Value = 11.7
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 41701,
+          Index = 1,
+          Level = 5,
+          Type = "SkillEffects",
+          Value = 23.4
+        }
       }
     },
     [42101] = {
@@ -97885,6 +100868,15 @@ return ReadOnly("SkillGrow", {
           Level = 4,
           Type = "SkillEffects",
           Value = 23.4
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 42101,
+          Index = 1,
+          Level = 5,
+          Type = "SkillEffects",
+          Value = 46.8
         }
       }
     },
@@ -97924,6 +100916,15 @@ return ReadOnly("SkillGrow", {
           Type = "SkillEffects",
           Value = 23.4
         }
+      },
+      [5] = {
+        [1] = {
+          ID = 42301,
+          Index = 1,
+          Level = 5,
+          Type = "SkillEffects",
+          Value = 46.8
+        }
       }
     },
     [42401] = {
@@ -97962,6 +100963,15 @@ return ReadOnly("SkillGrow", {
           Type = "SkillEffects",
           Value = 30
         }
+      },
+      [5] = {
+        [1] = {
+          ID = 42401,
+          Index = 1,
+          Level = 5,
+          Type = "SkillEffects",
+          Value = 35
+        }
       }
     },
     [42601] = {
@@ -97999,6 +101009,15 @@ return ReadOnly("SkillGrow", {
           Level = 4,
           Type = "SkillEffects",
           Value = 23.4
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 42601,
+          Index = 1,
+          Level = 5,
+          Type = "SkillEffects",
+          Value = 46.8
         }
       }
     },
@@ -112478,6 +115497,1462 @@ return ReadOnly("SkillGrow", {
         }
       }
     },
+    [150414] = {
+      [1] = {
+        [1] = {
+          ID = 150414,
+          Index = 1,
+          Level = 1,
+          Type = "SkillEffects",
+          Value = 8.56
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 150414,
+          Index = 1,
+          Level = 2,
+          Type = "SkillEffects",
+          Value = 10.47
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 150414,
+          Index = 1,
+          Level = 3,
+          Type = "SkillEffects",
+          Value = 12.38
+        }
+      },
+      [4] = {
+        [1] = {
+          ID = 150414,
+          Index = 1,
+          Level = 4,
+          Type = "SkillEffects",
+          Value = 14.29
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 150414,
+          Index = 1,
+          Level = 5,
+          Type = "SkillEffects",
+          Value = 16.2
+        }
+      },
+      [6] = {
+        [1] = {
+          ID = 150414,
+          Index = 1,
+          Level = 6,
+          Type = "SkillEffects",
+          Value = 18.11
+        }
+      },
+      [7] = {
+        [1] = {
+          ID = 150414,
+          Index = 1,
+          Level = 7,
+          Type = "SkillEffects",
+          Value = 20.02
+        }
+      },
+      [8] = {
+        [1] = {
+          ID = 150414,
+          Index = 1,
+          Level = 8,
+          Type = "SkillEffects",
+          Value = 21.93
+        }
+      },
+      [9] = {
+        [1] = {
+          ID = 150414,
+          Index = 1,
+          Level = 9,
+          Type = "SkillEffects",
+          Value = 23.84
+        }
+      },
+      [10] = {
+        [1] = {
+          ID = 150414,
+          Index = 1,
+          Level = 10,
+          Type = "SkillEffects",
+          Value = 25.75
+        }
+      },
+      [11] = {
+        [1] = {
+          ID = 150414,
+          Index = 1,
+          Level = 11,
+          Type = "SkillEffects",
+          Value = 27.66
+        }
+      },
+      [12] = {
+        [1] = {
+          ID = 150414,
+          Index = 1,
+          Level = 12,
+          Type = "SkillEffects",
+          Value = 29.57
+        }
+      },
+      [13] = {
+        [1] = {
+          ID = 150414,
+          Index = 1,
+          Level = 13,
+          Type = "SkillEffects",
+          Value = 31.48
+        }
+      },
+      [14] = {
+        [1] = {
+          ID = 150414,
+          Index = 1,
+          Level = 14,
+          Type = "SkillEffects",
+          Value = 33.39
+        }
+      },
+      [15] = {
+        [1] = {
+          ID = 150414,
+          Index = 1,
+          Level = 15,
+          Type = "SkillEffects",
+          Value = 35.3
+        }
+      },
+      [16] = {
+        [1] = {
+          ID = 150414,
+          Index = 1,
+          Level = 16,
+          Type = "SkillEffects",
+          Value = 37.21
+        }
+      },
+      [17] = {
+        [1] = {
+          ID = 150414,
+          Index = 1,
+          Level = 17,
+          Type = "SkillEffects",
+          Value = 39.12
+        }
+      },
+      [18] = {
+        [1] = {
+          ID = 150414,
+          Index = 1,
+          Level = 18,
+          Type = "SkillEffects",
+          Value = 41.03
+        }
+      },
+      [19] = {
+        [1] = {
+          ID = 150414,
+          Index = 1,
+          Level = 19,
+          Type = "SkillEffects",
+          Value = 42.94
+        }
+      },
+      [20] = {
+        [1] = {
+          ID = 150414,
+          Index = 1,
+          Level = 20,
+          Type = "SkillEffects",
+          Value = 44.85
+        }
+      }
+    },
+    [150427] = {
+      [1] = {
+        [1] = {
+          ID = 150427,
+          Index = 1,
+          Level = 1,
+          Type = "SkillEffects",
+          Value = 20.91
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 150427,
+          Index = 1,
+          Level = 2,
+          Type = "SkillEffects",
+          Value = 25.56
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 150427,
+          Index = 1,
+          Level = 3,
+          Type = "SkillEffects",
+          Value = 30.21
+        }
+      },
+      [4] = {
+        [1] = {
+          ID = 150427,
+          Index = 1,
+          Level = 4,
+          Type = "SkillEffects",
+          Value = 34.86
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 150427,
+          Index = 1,
+          Level = 5,
+          Type = "SkillEffects",
+          Value = 39.51
+        }
+      },
+      [6] = {
+        [1] = {
+          ID = 150427,
+          Index = 1,
+          Level = 6,
+          Type = "SkillEffects",
+          Value = 44.16
+        }
+      },
+      [7] = {
+        [1] = {
+          ID = 150427,
+          Index = 1,
+          Level = 7,
+          Type = "SkillEffects",
+          Value = 48.81
+        }
+      },
+      [8] = {
+        [1] = {
+          ID = 150427,
+          Index = 1,
+          Level = 8,
+          Type = "SkillEffects",
+          Value = 53.46
+        }
+      },
+      [9] = {
+        [1] = {
+          ID = 150427,
+          Index = 1,
+          Level = 9,
+          Type = "SkillEffects",
+          Value = 58.11
+        }
+      },
+      [10] = {
+        [1] = {
+          ID = 150427,
+          Index = 1,
+          Level = 10,
+          Type = "SkillEffects",
+          Value = 62.76
+        }
+      },
+      [11] = {
+        [1] = {
+          ID = 150427,
+          Index = 1,
+          Level = 11,
+          Type = "SkillEffects",
+          Value = 67.41
+        }
+      },
+      [12] = {
+        [1] = {
+          ID = 150427,
+          Index = 1,
+          Level = 12,
+          Type = "SkillEffects",
+          Value = 72.06
+        }
+      },
+      [13] = {
+        [1] = {
+          ID = 150427,
+          Index = 1,
+          Level = 13,
+          Type = "SkillEffects",
+          Value = 76.71
+        }
+      },
+      [14] = {
+        [1] = {
+          ID = 150427,
+          Index = 1,
+          Level = 14,
+          Type = "SkillEffects",
+          Value = 81.36
+        }
+      },
+      [15] = {
+        [1] = {
+          ID = 150427,
+          Index = 1,
+          Level = 15,
+          Type = "SkillEffects",
+          Value = 86.01
+        }
+      },
+      [16] = {
+        [1] = {
+          ID = 150427,
+          Index = 1,
+          Level = 16,
+          Type = "SkillEffects",
+          Value = 90.66
+        }
+      },
+      [17] = {
+        [1] = {
+          ID = 150427,
+          Index = 1,
+          Level = 17,
+          Type = "SkillEffects",
+          Value = 95.31
+        }
+      },
+      [18] = {
+        [1] = {
+          ID = 150427,
+          Index = 1,
+          Level = 18,
+          Type = "SkillEffects",
+          Value = 99.96
+        }
+      },
+      [19] = {
+        [1] = {
+          ID = 150427,
+          Index = 1,
+          Level = 19,
+          Type = "SkillEffects",
+          Value = 104.61
+        }
+      },
+      [20] = {
+        [1] = {
+          ID = 150427,
+          Index = 1,
+          Level = 20,
+          Type = "SkillEffects",
+          Value = 109.26
+        }
+      }
+    },
+    [150428] = {
+      [1] = {
+        [1] = {
+          ID = 150428,
+          Index = 1,
+          Level = 1,
+          Type = "SkillEffects",
+          Value = 20.91
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 150428,
+          Index = 1,
+          Level = 2,
+          Type = "SkillEffects",
+          Value = 25.56
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 150428,
+          Index = 1,
+          Level = 3,
+          Type = "SkillEffects",
+          Value = 30.21
+        }
+      },
+      [4] = {
+        [1] = {
+          ID = 150428,
+          Index = 1,
+          Level = 4,
+          Type = "SkillEffects",
+          Value = 34.86
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 150428,
+          Index = 1,
+          Level = 5,
+          Type = "SkillEffects",
+          Value = 39.51
+        }
+      },
+      [6] = {
+        [1] = {
+          ID = 150428,
+          Index = 1,
+          Level = 6,
+          Type = "SkillEffects",
+          Value = 44.16
+        }
+      },
+      [7] = {
+        [1] = {
+          ID = 150428,
+          Index = 1,
+          Level = 7,
+          Type = "SkillEffects",
+          Value = 48.81
+        }
+      },
+      [8] = {
+        [1] = {
+          ID = 150428,
+          Index = 1,
+          Level = 8,
+          Type = "SkillEffects",
+          Value = 53.46
+        }
+      },
+      [9] = {
+        [1] = {
+          ID = 150428,
+          Index = 1,
+          Level = 9,
+          Type = "SkillEffects",
+          Value = 58.11
+        }
+      },
+      [10] = {
+        [1] = {
+          ID = 150428,
+          Index = 1,
+          Level = 10,
+          Type = "SkillEffects",
+          Value = 62.76
+        }
+      },
+      [11] = {
+        [1] = {
+          ID = 150428,
+          Index = 1,
+          Level = 11,
+          Type = "SkillEffects",
+          Value = 67.41
+        }
+      },
+      [12] = {
+        [1] = {
+          ID = 150428,
+          Index = 1,
+          Level = 12,
+          Type = "SkillEffects",
+          Value = 72.06
+        }
+      },
+      [13] = {
+        [1] = {
+          ID = 150428,
+          Index = 1,
+          Level = 13,
+          Type = "SkillEffects",
+          Value = 76.71
+        }
+      },
+      [14] = {
+        [1] = {
+          ID = 150428,
+          Index = 1,
+          Level = 14,
+          Type = "SkillEffects",
+          Value = 81.36
+        }
+      },
+      [15] = {
+        [1] = {
+          ID = 150428,
+          Index = 1,
+          Level = 15,
+          Type = "SkillEffects",
+          Value = 86.01
+        }
+      },
+      [16] = {
+        [1] = {
+          ID = 150428,
+          Index = 1,
+          Level = 16,
+          Type = "SkillEffects",
+          Value = 90.66
+        }
+      },
+      [17] = {
+        [1] = {
+          ID = 150428,
+          Index = 1,
+          Level = 17,
+          Type = "SkillEffects",
+          Value = 95.31
+        }
+      },
+      [18] = {
+        [1] = {
+          ID = 150428,
+          Index = 1,
+          Level = 18,
+          Type = "SkillEffects",
+          Value = 99.96
+        }
+      },
+      [19] = {
+        [1] = {
+          ID = 150428,
+          Index = 1,
+          Level = 19,
+          Type = "SkillEffects",
+          Value = 104.61
+        }
+      },
+      [20] = {
+        [1] = {
+          ID = 150428,
+          Index = 1,
+          Level = 20,
+          Type = "SkillEffects",
+          Value = 109.26
+        }
+      }
+    },
+    [150434] = {
+      [1] = {
+        [1] = {
+          ID = 150434,
+          Index = 1,
+          Level = 1,
+          Type = "SkillEffects",
+          Value = 5.21
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 150434,
+          Index = 1,
+          Level = 2,
+          Type = "SkillEffects",
+          Value = 6.36
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 150434,
+          Index = 1,
+          Level = 3,
+          Type = "SkillEffects",
+          Value = 7.51
+        }
+      },
+      [4] = {
+        [1] = {
+          ID = 150434,
+          Index = 1,
+          Level = 4,
+          Type = "SkillEffects",
+          Value = 8.66
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 150434,
+          Index = 1,
+          Level = 5,
+          Type = "SkillEffects",
+          Value = 9.81
+        }
+      },
+      [6] = {
+        [1] = {
+          ID = 150434,
+          Index = 1,
+          Level = 6,
+          Type = "SkillEffects",
+          Value = 10.96
+        }
+      },
+      [7] = {
+        [1] = {
+          ID = 150434,
+          Index = 1,
+          Level = 7,
+          Type = "SkillEffects",
+          Value = 12.11
+        }
+      },
+      [8] = {
+        [1] = {
+          ID = 150434,
+          Index = 1,
+          Level = 8,
+          Type = "SkillEffects",
+          Value = 13.26
+        }
+      },
+      [9] = {
+        [1] = {
+          ID = 150434,
+          Index = 1,
+          Level = 9,
+          Type = "SkillEffects",
+          Value = 14.41
+        }
+      },
+      [10] = {
+        [1] = {
+          ID = 150434,
+          Index = 1,
+          Level = 10,
+          Type = "SkillEffects",
+          Value = 15.56
+        }
+      },
+      [11] = {
+        [1] = {
+          ID = 150434,
+          Index = 1,
+          Level = 11,
+          Type = "SkillEffects",
+          Value = 16.71
+        }
+      },
+      [12] = {
+        [1] = {
+          ID = 150434,
+          Index = 1,
+          Level = 12,
+          Type = "SkillEffects",
+          Value = 17.86
+        }
+      },
+      [13] = {
+        [1] = {
+          ID = 150434,
+          Index = 1,
+          Level = 13,
+          Type = "SkillEffects",
+          Value = 19.01
+        }
+      },
+      [14] = {
+        [1] = {
+          ID = 150434,
+          Index = 1,
+          Level = 14,
+          Type = "SkillEffects",
+          Value = 20.16
+        }
+      },
+      [15] = {
+        [1] = {
+          ID = 150434,
+          Index = 1,
+          Level = 15,
+          Type = "SkillEffects",
+          Value = 21.31
+        }
+      },
+      [16] = {
+        [1] = {
+          ID = 150434,
+          Index = 1,
+          Level = 16,
+          Type = "SkillEffects",
+          Value = 22.46
+        }
+      },
+      [17] = {
+        [1] = {
+          ID = 150434,
+          Index = 1,
+          Level = 17,
+          Type = "SkillEffects",
+          Value = 23.61
+        }
+      },
+      [18] = {
+        [1] = {
+          ID = 150434,
+          Index = 1,
+          Level = 18,
+          Type = "SkillEffects",
+          Value = 24.76
+        }
+      },
+      [19] = {
+        [1] = {
+          ID = 150434,
+          Index = 1,
+          Level = 19,
+          Type = "SkillEffects",
+          Value = 25.91
+        }
+      },
+      [20] = {
+        [1] = {
+          ID = 150434,
+          Index = 1,
+          Level = 20,
+          Type = "SkillEffects",
+          Value = 27.06
+        }
+      }
+    },
+    [150435] = {
+      [1] = {
+        [1] = {
+          ID = 150435,
+          Index = 1,
+          Level = 1,
+          Type = "SkillEffects",
+          Value = 5.21
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 150435,
+          Index = 1,
+          Level = 2,
+          Type = "SkillEffects",
+          Value = 6.36
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 150435,
+          Index = 1,
+          Level = 3,
+          Type = "SkillEffects",
+          Value = 7.51
+        }
+      },
+      [4] = {
+        [1] = {
+          ID = 150435,
+          Index = 1,
+          Level = 4,
+          Type = "SkillEffects",
+          Value = 8.66
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 150435,
+          Index = 1,
+          Level = 5,
+          Type = "SkillEffects",
+          Value = 9.81
+        }
+      },
+      [6] = {
+        [1] = {
+          ID = 150435,
+          Index = 1,
+          Level = 6,
+          Type = "SkillEffects",
+          Value = 10.96
+        }
+      },
+      [7] = {
+        [1] = {
+          ID = 150435,
+          Index = 1,
+          Level = 7,
+          Type = "SkillEffects",
+          Value = 12.11
+        }
+      },
+      [8] = {
+        [1] = {
+          ID = 150435,
+          Index = 1,
+          Level = 8,
+          Type = "SkillEffects",
+          Value = 13.26
+        }
+      },
+      [9] = {
+        [1] = {
+          ID = 150435,
+          Index = 1,
+          Level = 9,
+          Type = "SkillEffects",
+          Value = 14.41
+        }
+      },
+      [10] = {
+        [1] = {
+          ID = 150435,
+          Index = 1,
+          Level = 10,
+          Type = "SkillEffects",
+          Value = 15.56
+        }
+      },
+      [11] = {
+        [1] = {
+          ID = 150435,
+          Index = 1,
+          Level = 11,
+          Type = "SkillEffects",
+          Value = 16.71
+        }
+      },
+      [12] = {
+        [1] = {
+          ID = 150435,
+          Index = 1,
+          Level = 12,
+          Type = "SkillEffects",
+          Value = 17.86
+        }
+      },
+      [13] = {
+        [1] = {
+          ID = 150435,
+          Index = 1,
+          Level = 13,
+          Type = "SkillEffects",
+          Value = 19.01
+        }
+      },
+      [14] = {
+        [1] = {
+          ID = 150435,
+          Index = 1,
+          Level = 14,
+          Type = "SkillEffects",
+          Value = 20.16
+        }
+      },
+      [15] = {
+        [1] = {
+          ID = 150435,
+          Index = 1,
+          Level = 15,
+          Type = "SkillEffects",
+          Value = 21.31
+        }
+      },
+      [16] = {
+        [1] = {
+          ID = 150435,
+          Index = 1,
+          Level = 16,
+          Type = "SkillEffects",
+          Value = 22.46
+        }
+      },
+      [17] = {
+        [1] = {
+          ID = 150435,
+          Index = 1,
+          Level = 17,
+          Type = "SkillEffects",
+          Value = 23.61
+        }
+      },
+      [18] = {
+        [1] = {
+          ID = 150435,
+          Index = 1,
+          Level = 18,
+          Type = "SkillEffects",
+          Value = 24.76
+        }
+      },
+      [19] = {
+        [1] = {
+          ID = 150435,
+          Index = 1,
+          Level = 19,
+          Type = "SkillEffects",
+          Value = 25.91
+        }
+      },
+      [20] = {
+        [1] = {
+          ID = 150435,
+          Index = 1,
+          Level = 20,
+          Type = "SkillEffects",
+          Value = 27.06
+        }
+      }
+    },
+    [150445] = {
+      [1] = {
+        [1] = {
+          ID = 150445,
+          Index = 1,
+          Level = 1,
+          Type = "SkillEffects",
+          Value = 10.34
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 150445,
+          Index = 1,
+          Level = 2,
+          Type = "SkillEffects",
+          Value = 12.65
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 150445,
+          Index = 1,
+          Level = 3,
+          Type = "SkillEffects",
+          Value = 14.96
+        }
+      },
+      [4] = {
+        [1] = {
+          ID = 150445,
+          Index = 1,
+          Level = 4,
+          Type = "SkillEffects",
+          Value = 17.27
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 150445,
+          Index = 1,
+          Level = 5,
+          Type = "SkillEffects",
+          Value = 19.58
+        }
+      },
+      [6] = {
+        [1] = {
+          ID = 150445,
+          Index = 1,
+          Level = 6,
+          Type = "SkillEffects",
+          Value = 21.89
+        }
+      },
+      [7] = {
+        [1] = {
+          ID = 150445,
+          Index = 1,
+          Level = 7,
+          Type = "SkillEffects",
+          Value = 24.2
+        }
+      },
+      [8] = {
+        [1] = {
+          ID = 150445,
+          Index = 1,
+          Level = 8,
+          Type = "SkillEffects",
+          Value = 26.51
+        }
+      },
+      [9] = {
+        [1] = {
+          ID = 150445,
+          Index = 1,
+          Level = 9,
+          Type = "SkillEffects",
+          Value = 28.82
+        }
+      },
+      [10] = {
+        [1] = {
+          ID = 150445,
+          Index = 1,
+          Level = 10,
+          Type = "SkillEffects",
+          Value = 31.13
+        }
+      },
+      [11] = {
+        [1] = {
+          ID = 150445,
+          Index = 1,
+          Level = 11,
+          Type = "SkillEffects",
+          Value = 33.44
+        }
+      },
+      [12] = {
+        [1] = {
+          ID = 150445,
+          Index = 1,
+          Level = 12,
+          Type = "SkillEffects",
+          Value = 35.75
+        }
+      },
+      [13] = {
+        [1] = {
+          ID = 150445,
+          Index = 1,
+          Level = 13,
+          Type = "SkillEffects",
+          Value = 38.06
+        }
+      },
+      [14] = {
+        [1] = {
+          ID = 150445,
+          Index = 1,
+          Level = 14,
+          Type = "SkillEffects",
+          Value = 40.37
+        }
+      },
+      [15] = {
+        [1] = {
+          ID = 150445,
+          Index = 1,
+          Level = 15,
+          Type = "SkillEffects",
+          Value = 42.68
+        }
+      },
+      [16] = {
+        [1] = {
+          ID = 150445,
+          Index = 1,
+          Level = 16,
+          Type = "SkillEffects",
+          Value = 44.99
+        }
+      },
+      [17] = {
+        [1] = {
+          ID = 150445,
+          Index = 1,
+          Level = 17,
+          Type = "SkillEffects",
+          Value = 47.3
+        }
+      },
+      [18] = {
+        [1] = {
+          ID = 150445,
+          Index = 1,
+          Level = 18,
+          Type = "SkillEffects",
+          Value = 49.61
+        }
+      },
+      [19] = {
+        [1] = {
+          ID = 150445,
+          Index = 1,
+          Level = 19,
+          Type = "SkillEffects",
+          Value = 51.92
+        }
+      },
+      [20] = {
+        [1] = {
+          ID = 150445,
+          Index = 1,
+          Level = 20,
+          Type = "SkillEffects",
+          Value = 54.23
+        }
+      }
+    },
+    [150455] = {
+      [1] = {
+        [1] = {
+          ID = 150455,
+          Index = 1,
+          Level = 1,
+          Type = "SkillEffects",
+          Value = 41.83
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 150455,
+          Index = 1,
+          Level = 2,
+          Type = "SkillEffects",
+          Value = 51.13
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 150455,
+          Index = 1,
+          Level = 3,
+          Type = "SkillEffects",
+          Value = 60.43
+        }
+      },
+      [4] = {
+        [1] = {
+          ID = 150455,
+          Index = 1,
+          Level = 4,
+          Type = "SkillEffects",
+          Value = 69.73
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 150455,
+          Index = 1,
+          Level = 5,
+          Type = "SkillEffects",
+          Value = 79.03
+        }
+      },
+      [6] = {
+        [1] = {
+          ID = 150455,
+          Index = 1,
+          Level = 6,
+          Type = "SkillEffects",
+          Value = 88.33
+        }
+      },
+      [7] = {
+        [1] = {
+          ID = 150455,
+          Index = 1,
+          Level = 7,
+          Type = "SkillEffects",
+          Value = 97.63
+        }
+      },
+      [8] = {
+        [1] = {
+          ID = 150455,
+          Index = 1,
+          Level = 8,
+          Type = "SkillEffects",
+          Value = 106.93
+        }
+      },
+      [9] = {
+        [1] = {
+          ID = 150455,
+          Index = 1,
+          Level = 9,
+          Type = "SkillEffects",
+          Value = 116.23
+        }
+      },
+      [10] = {
+        [1] = {
+          ID = 150455,
+          Index = 1,
+          Level = 10,
+          Type = "SkillEffects",
+          Value = 125.53
+        }
+      },
+      [11] = {
+        [1] = {
+          ID = 150455,
+          Index = 1,
+          Level = 11,
+          Type = "SkillEffects",
+          Value = 134.83
+        }
+      },
+      [12] = {
+        [1] = {
+          ID = 150455,
+          Index = 1,
+          Level = 12,
+          Type = "SkillEffects",
+          Value = 144.13
+        }
+      },
+      [13] = {
+        [1] = {
+          ID = 150455,
+          Index = 1,
+          Level = 13,
+          Type = "SkillEffects",
+          Value = 153.43
+        }
+      },
+      [14] = {
+        [1] = {
+          ID = 150455,
+          Index = 1,
+          Level = 14,
+          Type = "SkillEffects",
+          Value = 162.73
+        }
+      },
+      [15] = {
+        [1] = {
+          ID = 150455,
+          Index = 1,
+          Level = 15,
+          Type = "SkillEffects",
+          Value = 172.03
+        }
+      },
+      [16] = {
+        [1] = {
+          ID = 150455,
+          Index = 1,
+          Level = 16,
+          Type = "SkillEffects",
+          Value = 181.33
+        }
+      },
+      [17] = {
+        [1] = {
+          ID = 150455,
+          Index = 1,
+          Level = 17,
+          Type = "SkillEffects",
+          Value = 190.63
+        }
+      },
+      [18] = {
+        [1] = {
+          ID = 150455,
+          Index = 1,
+          Level = 18,
+          Type = "SkillEffects",
+          Value = 199.93
+        }
+      },
+      [19] = {
+        [1] = {
+          ID = 150455,
+          Index = 1,
+          Level = 19,
+          Type = "SkillEffects",
+          Value = 209.23
+        }
+      },
+      [20] = {
+        [1] = {
+          ID = 150455,
+          Index = 1,
+          Level = 20,
+          Type = "SkillEffects",
+          Value = 218.53
+        }
+      }
+    },
+    [150456] = {
+      [1] = {
+        [1] = {
+          ID = 150456,
+          Index = 1,
+          Level = 1,
+          Type = "SkillEffects",
+          Value = 41.83
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 150456,
+          Index = 1,
+          Level = 2,
+          Type = "SkillEffects",
+          Value = 51.13
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 150456,
+          Index = 1,
+          Level = 3,
+          Type = "SkillEffects",
+          Value = 60.43
+        }
+      },
+      [4] = {
+        [1] = {
+          ID = 150456,
+          Index = 1,
+          Level = 4,
+          Type = "SkillEffects",
+          Value = 69.73
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 150456,
+          Index = 1,
+          Level = 5,
+          Type = "SkillEffects",
+          Value = 79.03
+        }
+      },
+      [6] = {
+        [1] = {
+          ID = 150456,
+          Index = 1,
+          Level = 6,
+          Type = "SkillEffects",
+          Value = 88.33
+        }
+      },
+      [7] = {
+        [1] = {
+          ID = 150456,
+          Index = 1,
+          Level = 7,
+          Type = "SkillEffects",
+          Value = 97.63
+        }
+      },
+      [8] = {
+        [1] = {
+          ID = 150456,
+          Index = 1,
+          Level = 8,
+          Type = "SkillEffects",
+          Value = 106.93
+        }
+      },
+      [9] = {
+        [1] = {
+          ID = 150456,
+          Index = 1,
+          Level = 9,
+          Type = "SkillEffects",
+          Value = 116.23
+        }
+      },
+      [10] = {
+        [1] = {
+          ID = 150456,
+          Index = 1,
+          Level = 10,
+          Type = "SkillEffects",
+          Value = 125.53
+        }
+      },
+      [11] = {
+        [1] = {
+          ID = 150456,
+          Index = 1,
+          Level = 11,
+          Type = "SkillEffects",
+          Value = 134.83
+        }
+      },
+      [12] = {
+        [1] = {
+          ID = 150456,
+          Index = 1,
+          Level = 12,
+          Type = "SkillEffects",
+          Value = 144.13
+        }
+      },
+      [13] = {
+        [1] = {
+          ID = 150456,
+          Index = 1,
+          Level = 13,
+          Type = "SkillEffects",
+          Value = 153.43
+        }
+      },
+      [14] = {
+        [1] = {
+          ID = 150456,
+          Index = 1,
+          Level = 14,
+          Type = "SkillEffects",
+          Value = 162.73
+        }
+      },
+      [15] = {
+        [1] = {
+          ID = 150456,
+          Index = 1,
+          Level = 15,
+          Type = "SkillEffects",
+          Value = 172.03
+        }
+      },
+      [16] = {
+        [1] = {
+          ID = 150456,
+          Index = 1,
+          Level = 16,
+          Type = "SkillEffects",
+          Value = 181.33
+        }
+      },
+      [17] = {
+        [1] = {
+          ID = 150456,
+          Index = 1,
+          Level = 17,
+          Type = "SkillEffects",
+          Value = 190.63
+        }
+      },
+      [18] = {
+        [1] = {
+          ID = 150456,
+          Index = 1,
+          Level = 18,
+          Type = "SkillEffects",
+          Value = 199.93
+        }
+      },
+      [19] = {
+        [1] = {
+          ID = 150456,
+          Index = 1,
+          Level = 19,
+          Type = "SkillEffects",
+          Value = 209.23
+        }
+      },
+      [20] = {
+        [1] = {
+          ID = 150456,
+          Index = 1,
+          Level = 20,
+          Type = "SkillEffects",
+          Value = 218.53
+        }
+      }
+    },
     [160113] = {
       [1] = {
         [1] = {
@@ -118988,6 +123463,328 @@ return ReadOnly("SkillGrow", {
         }
       }
     },
+    [320113] = {
+      [1] = {
+        [1] = {
+          ID = 320113,
+          Index = 1,
+          Level = 1,
+          Type = "SkillEffects",
+          Value = 0.36
+        },
+        [2] = {
+          ID = 320113,
+          Index = 2,
+          Level = 1,
+          Type = "SkillEffects",
+          Value = 128
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 320113,
+          Index = 1,
+          Level = 2,
+          Type = "SkillEffects",
+          Value = 0.45
+        },
+        [2] = {
+          ID = 320113,
+          Index = 2,
+          Level = 2,
+          Type = "SkillEffects",
+          Value = 155
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 320113,
+          Index = 1,
+          Level = 3,
+          Type = "SkillEffects",
+          Value = 0.54
+        },
+        [2] = {
+          ID = 320113,
+          Index = 2,
+          Level = 3,
+          Type = "SkillEffects",
+          Value = 182
+        }
+      },
+      [4] = {
+        [1] = {
+          ID = 320113,
+          Index = 1,
+          Level = 4,
+          Type = "SkillEffects",
+          Value = 0.63
+        },
+        [2] = {
+          ID = 320113,
+          Index = 2,
+          Level = 4,
+          Type = "SkillEffects",
+          Value = 209
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 320113,
+          Index = 1,
+          Level = 5,
+          Type = "SkillEffects",
+          Value = 0.72
+        },
+        [2] = {
+          ID = 320113,
+          Index = 2,
+          Level = 5,
+          Type = "SkillEffects",
+          Value = 236
+        }
+      },
+      [6] = {
+        [1] = {
+          ID = 320113,
+          Index = 1,
+          Level = 6,
+          Type = "SkillEffects",
+          Value = 0.81
+        },
+        [2] = {
+          ID = 320113,
+          Index = 2,
+          Level = 6,
+          Type = "SkillEffects",
+          Value = 263
+        }
+      },
+      [7] = {
+        [1] = {
+          ID = 320113,
+          Index = 1,
+          Level = 7,
+          Type = "SkillEffects",
+          Value = 0.9
+        },
+        [2] = {
+          ID = 320113,
+          Index = 2,
+          Level = 7,
+          Type = "SkillEffects",
+          Value = 290
+        }
+      },
+      [8] = {
+        [1] = {
+          ID = 320113,
+          Index = 1,
+          Level = 8,
+          Type = "SkillEffects",
+          Value = 0.99
+        },
+        [2] = {
+          ID = 320113,
+          Index = 2,
+          Level = 8,
+          Type = "SkillEffects",
+          Value = 317
+        }
+      },
+      [9] = {
+        [1] = {
+          ID = 320113,
+          Index = 1,
+          Level = 9,
+          Type = "SkillEffects",
+          Value = 1.08
+        },
+        [2] = {
+          ID = 320113,
+          Index = 2,
+          Level = 9,
+          Type = "SkillEffects",
+          Value = 344
+        }
+      },
+      [10] = {
+        [1] = {
+          ID = 320113,
+          Index = 1,
+          Level = 10,
+          Type = "SkillEffects",
+          Value = 1.17
+        },
+        [2] = {
+          ID = 320113,
+          Index = 2,
+          Level = 10,
+          Type = "SkillEffects",
+          Value = 371
+        }
+      },
+      [11] = {
+        [1] = {
+          ID = 320113,
+          Index = 1,
+          Level = 11,
+          Type = "SkillEffects",
+          Value = 1.26
+        },
+        [2] = {
+          ID = 320113,
+          Index = 2,
+          Level = 11,
+          Type = "SkillEffects",
+          Value = 398
+        }
+      },
+      [12] = {
+        [1] = {
+          ID = 320113,
+          Index = 1,
+          Level = 12,
+          Type = "SkillEffects",
+          Value = 1.35
+        },
+        [2] = {
+          ID = 320113,
+          Index = 2,
+          Level = 12,
+          Type = "SkillEffects",
+          Value = 425
+        }
+      },
+      [13] = {
+        [1] = {
+          ID = 320113,
+          Index = 1,
+          Level = 13,
+          Type = "SkillEffects",
+          Value = 1.44
+        },
+        [2] = {
+          ID = 320113,
+          Index = 2,
+          Level = 13,
+          Type = "SkillEffects",
+          Value = 452
+        }
+      },
+      [14] = {
+        [1] = {
+          ID = 320113,
+          Index = 1,
+          Level = 14,
+          Type = "SkillEffects",
+          Value = 1.53
+        },
+        [2] = {
+          ID = 320113,
+          Index = 2,
+          Level = 14,
+          Type = "SkillEffects",
+          Value = 479
+        }
+      },
+      [15] = {
+        [1] = {
+          ID = 320113,
+          Index = 1,
+          Level = 15,
+          Type = "SkillEffects",
+          Value = 1.62
+        },
+        [2] = {
+          ID = 320113,
+          Index = 2,
+          Level = 15,
+          Type = "SkillEffects",
+          Value = 506
+        }
+      },
+      [16] = {
+        [1] = {
+          ID = 320113,
+          Index = 1,
+          Level = 16,
+          Type = "SkillEffects",
+          Value = 1.71
+        },
+        [2] = {
+          ID = 320113,
+          Index = 2,
+          Level = 16,
+          Type = "SkillEffects",
+          Value = 533
+        }
+      },
+      [17] = {
+        [1] = {
+          ID = 320113,
+          Index = 1,
+          Level = 17,
+          Type = "SkillEffects",
+          Value = 1.8
+        },
+        [2] = {
+          ID = 320113,
+          Index = 2,
+          Level = 17,
+          Type = "SkillEffects",
+          Value = 560
+        }
+      },
+      [18] = {
+        [1] = {
+          ID = 320113,
+          Index = 1,
+          Level = 18,
+          Type = "SkillEffects",
+          Value = 1.89
+        },
+        [2] = {
+          ID = 320113,
+          Index = 2,
+          Level = 18,
+          Type = "SkillEffects",
+          Value = 587
+        }
+      },
+      [19] = {
+        [1] = {
+          ID = 320113,
+          Index = 1,
+          Level = 19,
+          Type = "SkillEffects",
+          Value = 1.98
+        },
+        [2] = {
+          ID = 320113,
+          Index = 2,
+          Level = 19,
+          Type = "SkillEffects",
+          Value = 614
+        }
+      },
+      [20] = {
+        [1] = {
+          ID = 320113,
+          Index = 1,
+          Level = 20,
+          Type = "SkillEffects",
+          Value = 2.07
+        },
+        [2] = {
+          ID = 320113,
+          Index = 2,
+          Level = 20,
+          Type = "SkillEffects",
+          Value = 641
+        }
+      }
+    },
     [320123] = {
       [1] = {
         [1] = {
@@ -119629,6 +124426,552 @@ return ReadOnly("SkillGrow", {
           Level = 20,
           Type = "SkillEffects",
           Value = 547
+        }
+      }
+    },
+    [320215] = {
+      [1] = {
+        [1] = {
+          ID = 320215,
+          Index = 1,
+          Level = 1,
+          Type = "SkillEffects",
+          Value = 1.67
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 320215,
+          Index = 1,
+          Level = 2,
+          Type = "SkillEffects",
+          Value = 2.04
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 320215,
+          Index = 1,
+          Level = 3,
+          Type = "SkillEffects",
+          Value = 2.41
+        }
+      },
+      [4] = {
+        [1] = {
+          ID = 320215,
+          Index = 1,
+          Level = 4,
+          Type = "SkillEffects",
+          Value = 2.78
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 320215,
+          Index = 1,
+          Level = 5,
+          Type = "SkillEffects",
+          Value = 3.15
+        }
+      },
+      [6] = {
+        [1] = {
+          ID = 320215,
+          Index = 1,
+          Level = 6,
+          Type = "SkillEffects",
+          Value = 3.52
+        }
+      },
+      [7] = {
+        [1] = {
+          ID = 320215,
+          Index = 1,
+          Level = 7,
+          Type = "SkillEffects",
+          Value = 3.89
+        }
+      },
+      [8] = {
+        [1] = {
+          ID = 320215,
+          Index = 1,
+          Level = 8,
+          Type = "SkillEffects",
+          Value = 4.26
+        }
+      },
+      [9] = {
+        [1] = {
+          ID = 320215,
+          Index = 1,
+          Level = 9,
+          Type = "SkillEffects",
+          Value = 4.63
+        }
+      },
+      [10] = {
+        [1] = {
+          ID = 320215,
+          Index = 1,
+          Level = 10,
+          Type = "SkillEffects",
+          Value = 5
+        }
+      },
+      [11] = {
+        [1] = {
+          ID = 320215,
+          Index = 1,
+          Level = 11,
+          Type = "SkillEffects",
+          Value = 5.37
+        }
+      },
+      [12] = {
+        [1] = {
+          ID = 320215,
+          Index = 1,
+          Level = 12,
+          Type = "SkillEffects",
+          Value = 5.74
+        }
+      },
+      [13] = {
+        [1] = {
+          ID = 320215,
+          Index = 1,
+          Level = 13,
+          Type = "SkillEffects",
+          Value = 6.11
+        }
+      },
+      [14] = {
+        [1] = {
+          ID = 320215,
+          Index = 1,
+          Level = 14,
+          Type = "SkillEffects",
+          Value = 6.48
+        }
+      },
+      [15] = {
+        [1] = {
+          ID = 320215,
+          Index = 1,
+          Level = 15,
+          Type = "SkillEffects",
+          Value = 6.85
+        }
+      },
+      [16] = {
+        [1] = {
+          ID = 320215,
+          Index = 1,
+          Level = 16,
+          Type = "SkillEffects",
+          Value = 7.22
+        }
+      },
+      [17] = {
+        [1] = {
+          ID = 320215,
+          Index = 1,
+          Level = 17,
+          Type = "SkillEffects",
+          Value = 7.59
+        }
+      },
+      [18] = {
+        [1] = {
+          ID = 320215,
+          Index = 1,
+          Level = 18,
+          Type = "SkillEffects",
+          Value = 7.96
+        }
+      },
+      [19] = {
+        [1] = {
+          ID = 320215,
+          Index = 1,
+          Level = 19,
+          Type = "SkillEffects",
+          Value = 8.33
+        }
+      },
+      [20] = {
+        [1] = {
+          ID = 320215,
+          Index = 1,
+          Level = 20,
+          Type = "SkillEffects",
+          Value = 8.7
+        }
+      }
+    },
+    [320236] = {
+      [1] = {
+        [1] = {
+          ID = 320236,
+          Index = 1,
+          Level = 1,
+          Type = "SkillEffects",
+          Value = 0.27
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 320236,
+          Index = 1,
+          Level = 2,
+          Type = "SkillEffects",
+          Value = 0.32
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 320236,
+          Index = 1,
+          Level = 3,
+          Type = "SkillEffects",
+          Value = 0.37
+        }
+      },
+      [4] = {
+        [1] = {
+          ID = 320236,
+          Index = 1,
+          Level = 4,
+          Type = "SkillEffects",
+          Value = 0.42
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 320236,
+          Index = 1,
+          Level = 5,
+          Type = "SkillEffects",
+          Value = 0.47
+        }
+      },
+      [6] = {
+        [1] = {
+          ID = 320236,
+          Index = 1,
+          Level = 6,
+          Type = "SkillEffects",
+          Value = 0.52
+        }
+      },
+      [7] = {
+        [1] = {
+          ID = 320236,
+          Index = 1,
+          Level = 7,
+          Type = "SkillEffects",
+          Value = 0.57
+        }
+      },
+      [8] = {
+        [1] = {
+          ID = 320236,
+          Index = 1,
+          Level = 8,
+          Type = "SkillEffects",
+          Value = 0.62
+        }
+      },
+      [9] = {
+        [1] = {
+          ID = 320236,
+          Index = 1,
+          Level = 9,
+          Type = "SkillEffects",
+          Value = 0.67
+        }
+      },
+      [10] = {
+        [1] = {
+          ID = 320236,
+          Index = 1,
+          Level = 10,
+          Type = "SkillEffects",
+          Value = 0.72
+        }
+      },
+      [11] = {
+        [1] = {
+          ID = 320236,
+          Index = 1,
+          Level = 11,
+          Type = "SkillEffects",
+          Value = 0.77
+        }
+      },
+      [12] = {
+        [1] = {
+          ID = 320236,
+          Index = 1,
+          Level = 12,
+          Type = "SkillEffects",
+          Value = 0.82
+        }
+      },
+      [13] = {
+        [1] = {
+          ID = 320236,
+          Index = 1,
+          Level = 13,
+          Type = "SkillEffects",
+          Value = 0.87
+        }
+      },
+      [14] = {
+        [1] = {
+          ID = 320236,
+          Index = 1,
+          Level = 14,
+          Type = "SkillEffects",
+          Value = 0.92
+        }
+      },
+      [15] = {
+        [1] = {
+          ID = 320236,
+          Index = 1,
+          Level = 15,
+          Type = "SkillEffects",
+          Value = 0.97
+        }
+      },
+      [16] = {
+        [1] = {
+          ID = 320236,
+          Index = 1,
+          Level = 16,
+          Type = "SkillEffects",
+          Value = 1.02
+        }
+      },
+      [17] = {
+        [1] = {
+          ID = 320236,
+          Index = 1,
+          Level = 17,
+          Type = "SkillEffects",
+          Value = 1.07
+        }
+      },
+      [18] = {
+        [1] = {
+          ID = 320236,
+          Index = 1,
+          Level = 18,
+          Type = "SkillEffects",
+          Value = 1.12
+        }
+      },
+      [19] = {
+        [1] = {
+          ID = 320236,
+          Index = 1,
+          Level = 19,
+          Type = "SkillEffects",
+          Value = 1.17
+        }
+      },
+      [20] = {
+        [1] = {
+          ID = 320236,
+          Index = 1,
+          Level = 20,
+          Type = "SkillEffects",
+          Value = 1.22
+        }
+      }
+    },
+    [320242] = {
+      [1] = {
+        [1] = {
+          ID = 320242,
+          Index = 1,
+          Level = 1,
+          Type = "SkillEffects",
+          Value = 0.24
+        }
+      },
+      [2] = {
+        [1] = {
+          ID = 320242,
+          Index = 1,
+          Level = 2,
+          Type = "SkillEffects",
+          Value = 0.3
+        }
+      },
+      [3] = {
+        [1] = {
+          ID = 320242,
+          Index = 1,
+          Level = 3,
+          Type = "SkillEffects",
+          Value = 0.36
+        }
+      },
+      [4] = {
+        [1] = {
+          ID = 320242,
+          Index = 1,
+          Level = 4,
+          Type = "SkillEffects",
+          Value = 0.42
+        }
+      },
+      [5] = {
+        [1] = {
+          ID = 320242,
+          Index = 1,
+          Level = 5,
+          Type = "SkillEffects",
+          Value = 0.48
+        }
+      },
+      [6] = {
+        [1] = {
+          ID = 320242,
+          Index = 1,
+          Level = 6,
+          Type = "SkillEffects",
+          Value = 0.54
+        }
+      },
+      [7] = {
+        [1] = {
+          ID = 320242,
+          Index = 1,
+          Level = 7,
+          Type = "SkillEffects",
+          Value = 0.6
+        }
+      },
+      [8] = {
+        [1] = {
+          ID = 320242,
+          Index = 1,
+          Level = 8,
+          Type = "SkillEffects",
+          Value = 0.66
+        }
+      },
+      [9] = {
+        [1] = {
+          ID = 320242,
+          Index = 1,
+          Level = 9,
+          Type = "SkillEffects",
+          Value = 0.72
+        }
+      },
+      [10] = {
+        [1] = {
+          ID = 320242,
+          Index = 1,
+          Level = 10,
+          Type = "SkillEffects",
+          Value = 0.78
+        }
+      },
+      [11] = {
+        [1] = {
+          ID = 320242,
+          Index = 1,
+          Level = 11,
+          Type = "SkillEffects",
+          Value = 0.84
+        }
+      },
+      [12] = {
+        [1] = {
+          ID = 320242,
+          Index = 1,
+          Level = 12,
+          Type = "SkillEffects",
+          Value = 0.9
+        }
+      },
+      [13] = {
+        [1] = {
+          ID = 320242,
+          Index = 1,
+          Level = 13,
+          Type = "SkillEffects",
+          Value = 0.96
+        }
+      },
+      [14] = {
+        [1] = {
+          ID = 320242,
+          Index = 1,
+          Level = 14,
+          Type = "SkillEffects",
+          Value = 1.02
+        }
+      },
+      [15] = {
+        [1] = {
+          ID = 320242,
+          Index = 1,
+          Level = 15,
+          Type = "SkillEffects",
+          Value = 1.08
+        }
+      },
+      [16] = {
+        [1] = {
+          ID = 320242,
+          Index = 1,
+          Level = 16,
+          Type = "SkillEffects",
+          Value = 1.14
+        }
+      },
+      [17] = {
+        [1] = {
+          ID = 320242,
+          Index = 1,
+          Level = 17,
+          Type = "SkillEffects",
+          Value = 1.2
+        }
+      },
+      [18] = {
+        [1] = {
+          ID = 320242,
+          Index = 1,
+          Level = 18,
+          Type = "SkillEffects",
+          Value = 1.26
+        }
+      },
+      [19] = {
+        [1] = {
+          ID = 320242,
+          Index = 1,
+          Level = 19,
+          Type = "SkillEffects",
+          Value = 1.32
+        }
+      },
+      [20] = {
+        [1] = {
+          ID = 320242,
+          Index = 1,
+          Level = 20,
+          Type = "SkillEffects",
+          Value = 1.38
         }
       }
     },

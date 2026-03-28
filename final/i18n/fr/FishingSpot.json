@@ -310,5 +310,122 @@
     "extraRewardProb": 0.1,
     "petId": 4941,
     "petProb": 0.5
+  },
+  {
+    "id": 10450201,
+    "name": "Point de pêche : Quartier Ouest",
+    "icon": "",
+    "waterType": 1,
+    "fishCountLimit": 100,
+    "replenishDay": 24,
+    "fishIds": [
+      1101,
+      1102,
+      1103,
+      2901,
+      2902,
+      2903,
+      2904,
+      2905
+    ],
+    "showFishIds": [
+      2901,
+      2902,
+      2903,
+      2904,
+      2905
+    ],
+    "weights": [
+      40,
+      40,
+      40,
+      15,
+      15,
+      10,
+      0,
+      0
+    ],
+    "extraReward": 301007,
+    "extraRewardProb": 0.1,
+    "petId": 4941,
+    "petProb": 0.5
+  },
+  {
+    "id": 10450501,
+    "name": "Point de pêche : Faubourgs Est",
+    "icon": "",
+    "waterType": 2,
+    "fishCountLimit": 100,
+    "replenishDay": 24,
+    "fishIds": [
+      1201,
+      1202,
+      1203,
+      3001,
+      3002,
+      3003,
+      3004,
+      3005
+    ],
+    "showFishIds": [
+      3001,
+      3002,
+      3003,
+      3004,
+      3005
+    ],
+    "weights": [
+      40,
+      40,
+      40,
+      15,
+      15,
+      10,
+      0,
+      0
+    ],
+    "extraReward": 301006,
+    "extraRewardProb": 0.1,
+    "petId": 4941,
+    "petProb": 0.5
+  },
+  {
+    "id": 10550101,
+    "name": "Point de pêche : Ruelle Youlai",
+    "icon": "",
+    "waterType": 3,
+    "fishCountLimit": 100,
+    "replenishDay": 24,
+    "fishIds": [
+      1301,
+      1302,
+      1303,
+      3101,
+      3102,
+      3103,
+      3104,
+      3105
+    ],
+    "showFishIds": [
+      3101,
+      3102,
+      3103,
+      3104,
+      3105
+    ],
+    "weights": [
+      40,
+      40,
+      40,
+      15,
+      15,
+      10,
+      0,
+      0
+    ],
+    "extraReward": 301008,
+    "extraRewardProb": 0.1,
+    "petId": 4941,
+    "petProb": 0.5
   }
 ]

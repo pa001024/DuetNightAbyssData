@@ -168,22 +168,26 @@ function TouchComponent:MouseOrTouchButtonDown(InGeometry, InGestureEvent)
   local SubTouchItem, SubTouchItemName, SubTouchItemStartPos, SubTouchParentWidget
   for k, v in pairs(self.AllTouchItems) do
     local WidgetWorldPos, WidgetWorldSize = self:GetWorldPos(v)
-    local WidgetWorldPos = UE4.USlateBlueprintLibrary.AbsoluteToLocal(InGeometry, WidgetWorldPos) * Scale
+    local WidgetLocalPos = UE4.USlateBlueprintLibrary.AbsoluteToLocal(InGeometry, WidgetWorldPos) * Scale
     local ParentWidgetNode = self.AllParentWidget[k]
     local WidgetLocalScale = ParentWidgetNode and ParentWidgetNode.RenderTransform.Scale.X or 1.0
-    if thisPos.X > WidgetWorldPos.X and thisPos.X < WidgetWorldPos.X + WidgetWorldSize.X * WidgetLocalScale * Scale and thisPos.Y > WidgetWorldPos.Y and thisPos.Y < WidgetWorldPos.Y + WidgetWorldSize.Y * WidgetLocalScale * Scale then
+    local ParentSlot = UE4.UWidgetLayoutLibrary.SlotAsCanvasSlot(ParentWidgetNode)
+    local ParentAlignment = ParentSlot:GetAlignment()
+    local StartCamparePosX = WidgetWorldPos.X + WidgetWorldSize.X * WidgetLocalScale * (ParentAlignment.X - 1)
+    local EndCamparePosX = WidgetWorldPos.X + WidgetWorldSize.X * WidgetLocalScale * ParentAlignment.X
+    if StartCamparePosX <= ScreenSpacePosition.X and EndCamparePosX >= ScreenSpacePosition.X and ScreenSpacePosition.Y >= WidgetWorldPos.Y and ScreenSpacePosition.Y <= WidgetWorldPos.Y + WidgetWorldSize.Y * WidgetLocalScale then
       if nil == SubTouchItem then
         SubTouchItem = v
         SubTouchItemName = k
-        SubTouchItemStartPos = FVector2D(WidgetWorldPos.X + WidgetWorldSize.X * 0.5 * Scale * WidgetLocalScale, WidgetWorldPos.Y + WidgetWorldSize.Y * 0.5 * Scale * WidgetLocalScale)
+        SubTouchItemStartPos = FVector2D(WidgetLocalPos.X + WidgetWorldSize.X * 0.5 * Scale * WidgetLocalScale, WidgetLocalPos.Y + WidgetWorldSize.Y * 0.5 * Scale * WidgetLocalScale)
         SubTouchParentWidget = self.AllParentWidget[k]
       else
         local ChooseCanvasSlot = UE4.UWidgetLayoutLibrary.SlotAsCanvasSlot(SubTouchItem)
         local TouchCanvasSlot = UE4.UWidgetLayoutLibrary.SlotAsCanvasSlot(v)
-        if TouchCanvasSlot.ZOrder > ChooseCanvasSlot.ZOrder then
+        if ChooseCanvasSlot and TouchCanvasSlot and TouchCanvasSlot.ZOrder > ChooseCanvasSlot.ZOrder then
           SubTouchItem = v
           SubTouchItemName = k
-          SubTouchItemStartPos = FVector2D(WidgetWorldPos.X + WidgetWorldSize.X * 0.5 * Scale * WidgetLocalScale, WidgetWorldPos.Y + WidgetWorldSize.Y * 0.5 * Scale * WidgetLocalScale)
+          SubTouchItemStartPos = FVector2D(WidgetLocalPos.X + WidgetWorldSize.X * 0.5 * Scale * WidgetLocalScale, WidgetLocalPos.Y + WidgetWorldSize.Y * 0.5 * Scale * WidgetLocalScale)
           SubTouchParentWidget = self.AllParentWidget[k]
         end
       end
@@ -282,7 +286,7 @@ function TouchComponent:MouseOrTouchButtonMove(InGeometry, InGestureEvent)
         if type(AllSingleMoveCallBack) == "table" then
           for k, v in pairs(AllSingleMoveCallBack) do
             if v.Name == self.SubTouchItemsName[PointerIndex + 1] and type(v.Value) == "function" and NowTime - self.MultiTouchLastTimeStamp >= 0.2 then
-              v.Value(self, TotalTouchCount, PointerIndex, self.WidgetCurPos, thisPos - self.SubTouchItemsStartPos[PointerIndex + 1], thisPos - self.NowTouchPos[PointerIndex + 1], thisPos)
+              v.Value(self, TotalTouchCount, PointerIndex, self.WidgetCurPos, thisPos - self.SubTouchItemsStartPos[PointerIndex + 1], thisPos - self.NowTouchPos[PointerIndex + 1], thisPos, ScreenSpacePosition)
               break
             end
           end
@@ -305,7 +309,7 @@ function TouchComponent:MouseOrTouchButtonMove(InGeometry, InGestureEvent)
         elseif type(AllSingleMoveCallBack) == "table" then
           for k, v in pairs(AllSingleMoveCallBack) do
             if v.Name == self.SubTouchItemsName[PointerIndex + 1] and type(v.Value) == "function" and NowTime - self.MultiTouchLastTimeStamp >= 0.2 then
-              v.Value(self, TotalTouchCount, PointerIndex, self.WidgetCurPos, thisPos - self.SubTouchItemsStartPos[PointerIndex + 1], thisPos - self.NowTouchPos[PointerIndex + 1], thisPos)
+              v.Value(self, TotalTouchCount, PointerIndex, self.WidgetCurPos, thisPos - self.SubTouchItemsStartPos[PointerIndex + 1], thisPos - self.NowTouchPos[PointerIndex + 1], thisPos, ScreenSpacePosition)
               break
             end
           end
@@ -362,7 +366,7 @@ function TouchComponent:MouseOrTouchButtonUp(InGeometry, InGestureEvent, TargetP
         local Scale = UE4.UWidgetLayoutLibrary.GetViewportScale(self)
         local ScreenSpacePosition = UE4.UKismetInputLibrary.PointerEvent_GetScreenSpacePosition(InGestureEvent)
         local thisPos = UE4.USlateBlueprintLibrary.AbsoluteToLocal(InGeometry, ScreenSpacePosition) * Scale
-        v.Value(self, PointerIndex, self.WidgetCurPos, self.m_LastPosTable[PointerIndex + 1], self.NowTouchPos[PointerIndex + 1], thisPos - self.SubTouchItemsStartPos[PointerIndex + 1])
+        v.Value(self, PointerIndex, self.WidgetCurPos, self.m_LastPosTable[PointerIndex + 1], self.NowTouchPos[PointerIndex + 1], thisPos - self.SubTouchItemsStartPos[PointerIndex + 1], ScreenSpacePosition)
         break
       end
     end

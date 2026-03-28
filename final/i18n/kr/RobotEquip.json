@@ -106,7 +106,7 @@
     "rarity": 4,
     "cost": 8,
     "buffId": 4020501,
-    "extraBuffDesc": "옵션 효과: HP가 20% 감소할 때마다 자신의 방어력이 #2 상승한다.",
+    "extraBuffDesc": "옵션 효과: 대미지를 입힐 시, 대상의 방어력이 45.0% 감소한다. 지속 시간 10초.",
     "extraBuffId": 4020201,
     "unlockQuestId": 10300104,
     "atk": 0.3

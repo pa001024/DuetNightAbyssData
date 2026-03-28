@@ -558,8 +558,9 @@ function M:ShowMoreSkillDetails()
     ModData = {}
   }
   for key, ModUuid in pairs(ModSuit) do
-    if Avatar.Mods[ModUuid] then
-      table.insert(ExtraInfo.ModData, Avatar.Mods[ModUuid])
+    local Mod = Avatar.Mods[ModUuid]
+    if Mod then
+      table.insert(ExtraInfo.ModData, Mod)
     end
   end
   local SkillInfo = self.Target:DumpSkillInfos(Avatar, ExtraInfo)
@@ -582,7 +583,8 @@ function M:ShowMoreSkillDetails()
     if Data then
       table.insert(SortedSkills, {
         SkillId = SkillId,
-        Priority = SkillPriority[Data.SkillType] or SkillPriority.Others
+        Priority = SkillPriority[Data.SkillType] or SkillPriority.Others,
+        Level = _SkillInfo.Level
       })
     end
   end
@@ -590,7 +592,7 @@ function M:ShowMoreSkillDetails()
     return a.Priority < b.Priority
   end)
   for _, value in ipairs(SortedSkills) do
-    local Attrs = SkillUtils.GetSkillAllDesc(value.SkillId, 1, math.min(DataMgr.DataConst.MaxSkillLevel, (self.Target.GradeLevel or 0) + 1), Avatar, self.Target)
+    local Attrs = SkillUtils.GetSkillAllDesc(value.SkillId, value.Level or 1, math.min(DataMgr.DataConst.MaxSkillLevel, (self.Target.GradeLevel or 0) + 1), Avatar, self.Target)
     Attrs = Attrs or {}
     for _, Item in pairs(Attrs) do
       table.insert(AttrsList, {

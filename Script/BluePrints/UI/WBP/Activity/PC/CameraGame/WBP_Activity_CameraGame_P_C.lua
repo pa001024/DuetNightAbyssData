@@ -31,7 +31,7 @@ function M:Initialize(Initializer)
     Desc = GText("UI_BACK")
   })
   rawset(self, "TabConfigData", {
-    TitleName = GText("姣姣摄影展（未配）"),
+    TitleName = GText("Event_Title_103017"),
     DynamicNode = {
       "Back",
       "ResourceBar",
@@ -103,20 +103,25 @@ function M:UpdateKeyStyle()
   elseif StateName == FocusStates.RewardList and self.IsGamepadInput then
     self.Key_Go:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
+  if not self.IsGamepadInput then
+    self.Key_Go:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
 end
 
-function M:UpdateBottomKeyInfo(NewState)
+function M:UpdateBottomKeyInfo()
   local BottomKeyInfo = {}
   if self.IsGamepadInput then
     local State = self.FSM:Peak()
     local StateName = State.Name
     if StateName == FocusStates.PhotoList then
-      table.insert(BottomKeyInfo, {
-        GamePadInfoList = {
-          {Type = "Img", ImgShortPath = "LS"}
-        },
-        Desc = GText("UI_Controller_CheckReward")
-      })
+      if self.CurQuestState ~= self.QCS.lock then
+        table.insert(BottomKeyInfo, {
+          GamePadInfoList = {
+            {Type = "Img", ImgShortPath = "LS"}
+          },
+          Desc = GText("UI_Controller_CheckReward")
+        })
+      end
       local ScrolOffsetEnd = self.ScrollBox_Message:GetScrollOffsetOfEnd()
       if ScrolOffsetEnd > 0 then
         table.insert(BottomKeyInfo, {
@@ -174,7 +179,7 @@ function M:GetDesiredFocusTarget()
     self.ListView_Left:BP_SetSelectedItem(State.Content)
     self.ListView_Left:BP_NavigateToItem(State.Content)
     if rawget(State.Content, "SelfWidget") then
-      return State.Content.Widget
+      return State.Content.SelfWidget
     end
     return self.ListView_Left
   else
@@ -204,9 +209,14 @@ function M:OnPhotoListItemAddedToFocusPath(Content)
 end
 
 function M:OnRewardListContentCreated(Content)
-  rawset(Content, "OnAddedToFocusPathEvent", {
+  rawset(Content, "OnFocusReceivedEvent", {
     Obj = self,
-    Callback = self.OnRewardListItemAddedToFocusPath,
+    Callback = self.OnRewardListItemFocusReceived,
+    Params = Content
+  })
+  rawset(Content, "OnMouseButtonUpEvents", {
+    Obj = self,
+    Callback = self.OnRewardListItemClicked,
     Params = Content
   })
   rawset(Content, "OnRemovedFromFocusPathEvent", {
@@ -216,14 +226,18 @@ function M:OnRewardListContentCreated(Content)
   })
 end
 
-function M:OnRewardListItemAddedToFocusPath(Content)
-  self.FSM:Push({
-    Name = FocusStates.RewardList,
-    Content = Content
-  })
+function M:OnRewardListItemFocusReceived(Content)
+  self:UpdateBottomKeyInfo()
+end
+
+function M:OnRewardListItemClicked(Content)
+  if self.IsGamepadInput then
+    self.Tab:UpdateBottomKeyInfo({})
+  end
 end
 
 function M:OnRewardListItemRemovedFromFocusPath(Content)
+  self:UpdateBottomKeyInfo()
 end
 
 function M:OnAddedToFocusPath()
@@ -244,8 +258,11 @@ end
 function M:OnKeyDown(MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  if InKeyName == UIConst.GamePadKey.FaceButtonRight then
+  if "Escape" == InKeyName or InKeyName == UIConst.GamePadKey.FaceButtonRight then
     self:OnBackKeyDown()
+    return UIUtils.Handled
+  end
+  if self.CurQuestState == self.QCS.lock then
     return UIUtils.Handled
   end
   local StateName = self.FSM:Peak().Name
@@ -266,8 +283,11 @@ end
 function M:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InAnalogInputEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+  if InKeyName ~= UIConst.GamePadKey.RightAnalogY then
+    return UE4.UWidgetBlueprintLibrary.UnHandled()
+  end
   local StateName = self.FSM:Peak().Name
-  if StateName == FocusStates.PhotoList and InKeyName == UIConst.GamePadKey.RightAnalogY then
+  if StateName == FocusStates.PhotoList then
     UIUtils.ScrollBoxByGamepad(self.ScrollBox_Message, InAnalogInputEvent)
   end
   return UE4.UWidgetBlueprintLibrary.Handled()
@@ -277,7 +297,7 @@ function M:OnBackKeyDown()
   local StateName = self.FSM:Peak().Name
   if StateName == FocusStates.RewardList then
     self.FSM:Pop()
-    return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), self:GetDesiredFocusTarget()), true
+    UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), self:GetDesiredFocusTarget())
   else
     self:CloseSelf()
   end

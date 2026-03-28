@@ -381,6 +381,7 @@ CustomDict.ValueType = nil
 function CustomDict:Init(inner, ...)
   assert(BaseTypes[self.KeyType.__Name__])
   self._inner = inner or {}
+  self._length = 0
   setmetatable(self, ClassModule.DictInstanceMeta)
 end
 
@@ -884,6 +885,7 @@ function CustomSet:AddElement(key)
     return
   end
   self:AddValue(key, 1)
+  self._length = self._length + 1
 end
 
 function CustomSet:RemoveElement(key)
@@ -892,11 +894,16 @@ function CustomSet:RemoveElement(key)
     return
   end
   self:RemoveValue(key)
+  self._length = self._length - 1
 end
 
 function CustomSet:HasElement(key)
   local v = self:Get(key, 0)
   return v > 0
+end
+
+function CustomSet:Length()
+  return self._length
 end
 
 local IntSet = Class("IntSet", CustomSet)

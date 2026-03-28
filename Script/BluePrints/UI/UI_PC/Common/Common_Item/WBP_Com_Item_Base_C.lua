@@ -75,7 +75,9 @@ function M:InitData(Content)
   self.bUnrevealed = Content.bUnrevealed
   self.bRare = Content.bRare
   self.bInGear = Content.bInGear
+  self.WeaponMiniPhantomIconCharId = Content.WeaponMiniPhantomIconCharId
   self.TryOutText = Content.TryOutText
+  self.SquadBuildTryOutText = Content.SquadBuildTryOutText
   self.TimeLimitData = Content.TimeLimitData
   self.bAdd = Content.bAdd
   self.HandleMouseDown = Content.HandleMouseDown
@@ -141,7 +143,14 @@ function M:SetIcon(IconPath)
     self:SetWalnutNum(self.Id)
   end
   if self.Item.SetBgMaterialByItemType then
-    self.Item:SetBgMaterialByItemType(self.ItemType, "HeadSculpture")
+    if self.ItemType == "Hair" and 0 == self.Rarity then
+      local Material = self.Item.HairMatIns
+      if Material then
+        self.Item.Item_BG:SetBrushFromMaterial(Material)
+      end
+    else
+      self.Item:SetBgMaterialByItemType(self.ItemType, "HeadSculpture")
+    end
   end
   if self.bAsyncLoadIcon then
     self:LoadTextureAsync(IconPath, function(Texture)
@@ -153,6 +162,7 @@ function M:SetIcon(IconPath)
         local __IconDynaMaterial = self.Item.Item_BG:GetDynamicMaterial()
         if __IconDynaMaterial then
           __IconDynaMaterial:SetTextureParameterValue("IconMap", Texture)
+          __IconDynaMaterial:SetScalarParameterValue("IconOpacity", 1)
         end
       end
     end, "LoadIcon")
@@ -173,6 +183,7 @@ function M:SetIcon(IconPath)
       DebugPrint("ZDX_DynamicMaterial不合法")
     end
     DynamicMaterial:SetTextureParameterValue("IconMap", Icon)
+    DynamicMaterial:SetScalarParameterValue("IconOpacity", 1)
   end
 end
 
@@ -182,7 +193,7 @@ function M:SetDraftType(IsDraftType)
       self.WidgetMap[self.DraftItemWidget] = nil
     end
     if IsDraftType then
-      if not self.WidgetMap[self.DraftItemWidget] then
+      if not self.WidgetMap[self.DraftItemWidget] and not IsValid(self.DraftItemWidget) then
         self.DraftItemWidget = self:CreateWidgetAsync("DraftCompendiumItem", CoroutineObj)
       end
       self:AddWidgetToNode(self.DraftItemWidget)
@@ -211,7 +222,8 @@ function M:LoadTextureAsync(TexturePath, cb, TaskName)
 end
 
 function M:SetRarity(Rarity)
-  local DynamicMaterial = self.Item.Item_BG:GetDynamicMaterial()
+  local Item_BG = self.Item.Item_BGPanel or self.Item.Item_BG
+  local DynamicMaterial = Item_BG:GetDynamicMaterial()
   DynamicMaterial:SetScalarParameterValue("IconOpacity", 1)
   if not IsValid(DynamicMaterial) then
     DebugPrint("ZDX_DynamicMaterial不合法")
@@ -225,7 +237,10 @@ function M:SetRarity(Rarity)
 end
 
 function M:_SetMostRarityFX(Rarity, DynamicMaterial)
-  DynamicMaterial = DynamicMaterial or self.Item.Item_BG:GetDynamicMaterial()
+  if not DynamicMaterial then
+    local Item_BG = self.Item.Item_BGPanel or self.Item.Item_BG
+    DynamicMaterial = Item_BG:GetDynamicMaterial()
+  end
   if 6 ~= Rarity then
     if self.WidgetMap[self._MostRarityFX] then
       self:RemoveWidgetFromNode(self._MostRarityFX)
@@ -326,7 +341,7 @@ function M:OnMouseButtonUp(MyGeometry, MouseEvent)
   else
     AudioManager(self):PlayItemSound(self, self.Id, "Click", self.ItemType)
   end
-  if not self.bDisableCommonClick then
+  if not self.bDisableCommonClick and not self.OwningList then
     if self.ItemType == "Walnut" then
       self:OpenWalnutRewardDialog()
       return UWidgetBlueprintLibrary.Handled()
@@ -429,6 +444,9 @@ function M:OnRemovedFromFocusPath(InFocusEvent)
 end
 
 function M:Construct()
+  if self.Node_Widget then
+    self.Node_Widget:ClearChildren()
+  end
   self.WidgetMap = {}
   self.Item.ItemDetails_MenuAnchor.ItemDetailsMenuAnchor.OnMenuOpenChanged:Add(self, self.OnMenuOpenChanged)
 end
@@ -475,8 +493,10 @@ function M:AddWidgetToNode(Widget, WidgetPtr)
   if Widget then
     if self.WidgetMap[Widget] == nil then
       local Slot = self.Node_Widget:AddChild(Widget)
-      Slot:SetVerticalAlignment(EVerticalAlignment.HAlign_Fill)
-      Slot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
+      if nil ~= Slot then
+        Slot:SetVerticalAlignment(EVerticalAlignment.HAlign_Fill)
+        Slot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
+      end
     end
     Widget:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.WidgetMap[Widget] = true
@@ -537,6 +557,29 @@ end
 function M:OnOwningListItemClicked(Content)
   if Content ~= self.Content or self.NotInteractive then
     return
+  end
+  if not self.bDisableCommonClick then
+    if self.ItemType == "Walnut" then
+      self:OpenWalnutRewardDialog()
+      return
+    end
+    if (self.ItemType == "Skin" or self.ItemType == "WeaponSkin" or self.ItemType == "Mount") and not self.bNoJumpPreview then
+      if DataMgr.SystemUI[self.UIName] and DataMgr.SystemUI[self.UIName].IsBanAccess then
+        UIManager(self):ShowUITip("CommonToastMain", GText("UI_COMMONPOP_TITLE_100059"))
+        return UWidgetBlueprintLibrary.Handled()
+      end
+      if not self.Id or not self.ItemType then
+        return
+      end
+      PageJumpUtils:CloseFrontDialog()
+      local Content = {}
+      Content.TypeId = self.Id
+      Content.ItemType = self.ItemType
+      Content.SinglePreview = true
+      Content.HidePurchase = true
+      UIManager(self):LoadUINew("SkinPreview", Content, self.ParentWidget)
+      return
+    end
   end
   if self.IsShowDetails then
     self:OpenItemMenu()
@@ -604,7 +647,7 @@ function M:SetIsGot(IsGot)
     self.Content.bHasGot = IsGot
     
     if IsGot then
-      if not self.WidgetMap[self.IsGotWidget] then
+      if not self.WidgetMap[self.IsGotWidget] and not IsValid(self.IsGotWidget) then
         self.IsGotWidget = self:CreateWidgetAsync("ComItemHasGot", CoroutineObj)
       end
       self:AddWidgetToNode(self.IsGotWidget)
@@ -626,7 +669,7 @@ function M:SetIsCanGet(IsCanGet, StyleStr)
     
     self.Content.CanGetStyle = StyleStr
     if IsCanGet then
-      if not self.WidgetMap[self.CanGetWidget] then
+      if not self.WidgetMap[self.CanGetWidget] and not IsValid(self.CanGetWidget) then
         self.CanGetWidget = self:CreateWidgetAsync("ComItemCanGet", CoroutineObj)
       end
       self:AddWidgetToNode(self.CanGetWidget)
@@ -749,7 +792,7 @@ end
 function M:SetName(Name)
   self:AsyncLoadWidgetCommon("NameWidget", "SetNameTask", function(CoroutineObj)
     if Name then
-      if not self.WidgetMap[self.NameWidget] then
+      if not self.WidgetMap[self.NameWidget] and not IsValid(self.NameWidget) then
         self.NameWidget = self:CreateWidgetAsync("ComItemName", CoroutineObj)
       end
       if type(Name) == "number" then
@@ -768,10 +811,8 @@ end
 
 function M:SetLevel(Level)
   local function Callback(CoroutineObj)
-    if not self.WidgetMap[self.LevelWidget] then
+    if not self.WidgetMap[self.LevelWidget] and not IsValid(self.LevelWidget) then
       self.LevelWidget = self:CreateWidgetAsync("ComItemLevel", CoroutineObj)
-      
-      self:AddWidgetToNode(self.LevelWidget)
     end
     if Level then
       self.LevelWidget.Text_Lv:SetText(Level)
@@ -828,7 +869,7 @@ function M:SetShadow(bShadow)
       self:RemoveWidgetFromNode(self.ShadowWidget, true)
     end
     if bShadow then
-      if not self.WidgetMap[self.ShadowWidget] then
+      if not self.WidgetMap[self.ShadowWidget] and not IsValid(self.ShadowWidget) then
         self.ShadowWidget = self:CreateWidgetAsync("ComItemShadow", CoroutineObj)
       end
       self:AddWidgetToNode(self.ShadowWidget)
@@ -866,7 +907,7 @@ end
 function M:SetSelectNum(SelectNeedCount, SelectTotalCount)
   local function Callback(CoroutineObj)
     if SelectNeedCount or SelectTotalCount then
-      if not self.WidgetMap[self.SelectCountWidget] then
+      if not self.WidgetMap[self.SelectCountWidget] and not IsValid(self.SelectCountWidget) then
         self.SelectCountWidget = self:CreateWidgetAsync("ComItemSelectCount", CoroutineObj)
       end
       self.SelectCountWidget.Text_Hold:SetText(SelectNeedCount)
@@ -948,7 +989,7 @@ end
 function M:_SetItemConflictImpl(bConflict, Text)
   local function Callback(CoroutineObj)
     if bConflict then
-      if not self.WidgetMap[self.ConflictWidget] then
+      if not self.WidgetMap[self.ConflictWidget] and not IsValid(self.ConflictWidget) then
         self.ConflictWidget = self:CreateWidgetAsync("ComItemConflict", CoroutineObj)
       end
       self.ConflictWidget.Text_SoldOut:SetText(Text)
@@ -956,6 +997,7 @@ function M:_SetItemConflictImpl(bConflict, Text)
     elseif self.WidgetMap[self.ConflictWidget] then
       self:RemoveWidgetFromNode(self.ConflictWidget)
     end
+    self:CheckWidgetIsTop(self.ComItemReddot)
   end
   
   if self.bAllUseAsyncLoadWidget then
@@ -968,7 +1010,7 @@ end
 function M:SetItemSold(bSold)
   self:AsyncLoadWidgetCommon("SoldWidget", "SetItemSoldTask", function(CoroutineObj)
     if bSold then
-      if not self.WidgetMap[self.SoldWidget] then
+      if not self.WidgetMap[self.SoldWidget] and not IsValid(self.SoldWidget) then
         self.SoldWidget = self:CreateWidgetAsync("ComItemConflict", CoroutineObj)
       end
       self.SoldWidget.Text_SoldOut:SetText(GText("UI_Fishing_BuyFishingLure"))
@@ -982,7 +1024,7 @@ end
 function M:SetItemMinus(bMinus)
   local function Callback(CoroutineObj)
     if bMinus then
-      if not self.WidgetMap[self.MinusWidget] then
+      if not self.WidgetMap[self.MinusWidget] and not IsValid(self.MinusWidget) then
         self.MinusWidget = self:CreateWidgetAsync("ComItemMinus", CoroutineObj)
       end
       self:AddWidgetToNode(self.MinusWidget)
@@ -1036,7 +1078,7 @@ end
 function M:SetItemSelect(bSelect)
   local function Callback(CoroutineObj)
     if bSelect then
-      if not self.WidgetMap[self.SelectWidget] then
+      if not self.WidgetMap[self.SelectWidget] and not IsValid(self.SelectWidget) then
         self.SelectWidget = self:CreateWidgetAsync("ComItemSelect", CoroutineObj)
       end
       self:AddWidgetToNode(self.SelectWidget)
@@ -1055,7 +1097,7 @@ end
 function M:SetItemSet(bSet, TipText)
   self:AsyncLoadWidgetCommon("SetWidget", "SetItemSetTask", function(CoroutineObj)
     if bSet then
-      if not self.WidgetMap[self.SetWidget] then
+      if not self.WidgetMap[self.SetWidget] and not IsValid(self.SetWidget) then
         self.SetWidget = self:CreateWidgetAsync("ComItemSet", CoroutineObj)
       end
       self:AddWidgetToNode(self.SetWidget)
@@ -1069,7 +1111,7 @@ end
 function M:SetItemUnrevealed(bUnrevealed)
   self:AsyncLoadWidgetCommon("UnrevealedWidget", "SetItemUnrevealedTask", function(CoroutineObj)
     if bUnrevealed then
-      if not self.WidgetMap[self.UnrevealedWidget] then
+      if not self.WidgetMap[self.UnrevealedWidget] and not IsValid(self.UnrevealedWidget) then
         self.UnrevealedWidget = self:CreateWidgetAsync("ComItemUnreveal", CoroutineObj)
       end
       self:AddWidgetToNode(self.UnrevealedWidget)
@@ -1110,7 +1152,7 @@ end
 function M:SetPhantomWeaponIcon(UnitId, IsPhantom)
   local function Callback(CoroutineObj)
     if IsPhantom then
-      if not self.WidgetMap[self.PhantomWidget] then
+      if not self.WidgetMap[self.PhantomWidget] and not IsValid(self.PhantomWidget) then
         self.PhantomWidget = self:CreateWidgetAsync("ComItemPhantomTag", CoroutineObj)
       end
       local Avatar = GWorld:GetAvatar()
@@ -1142,7 +1184,7 @@ end
 function M:SetAttrIcon(AttrIcon)
   self:AsyncLoadWidgetCommon("AttrIconWidget", "SetAttrIconTask", function(CoroutineObj)
     if AttrIcon then
-      if not self.WidgetMap[self.AttrIconWidget] then
+      if not self.WidgetMap[self.AttrIconWidget] and not IsValid(self.AttrIconWidget) then
         self.AttrIconWidget = self:CreateWidgetAsync("ComItemAttributeTag", CoroutineObj)
       end
       if type(AttrIcon) == "string" then
@@ -1177,7 +1219,7 @@ function M:SetTeamIcon(TeamIdx, CharId)
         self:RemoveWidgetFromNode(self.TeamCharWidget)
       end
     else
-      if not self.WidgetMap[self.TeamCharWidget] then
+      if not self.WidgetMap[self.TeamCharWidget] and not IsValid(self.TeamCharWidget) then
         self.TeamCharWidget = self:CreateWidgetAsync("ComItemPhantomTag", CoroutineObj)
       end
       self.TeamCharWidget.Switch_Type:SetActiveWidgetIndex(1)
@@ -1189,7 +1231,7 @@ function M:SetTeamIcon(TeamIdx, CharId)
       end, "SetTeamIcon_LoadIcon")
       self:AddWidgetToNode(self.TeamCharWidget)
     end
-    if not self.WidgetMap[self.TeamWidget] then
+    if not self.WidgetMap[self.TeamWidget] and not IsValid(self.TeamWidget) then
       self.TeamWidget = self:CreateWidgetAsync("ComItemAbyssTeam", CoroutineObj)
     end
     local Color = self.TeamWidget["Color_BG_" .. TeamIdx]
@@ -1203,7 +1245,7 @@ end
 function M:SetRareTag(bRare)
   self:AsyncLoadWidgetCommon("RareWidget", "SetRareTagTask", function(CoroutineObj)
     if bRare then
-      if not self.WidgetMap[self.RareWidget] then
+      if not self.WidgetMap[self.RareWidget] and not IsValid(self.RareWidget) then
         self.RareWidget = self:CreateWidgetAsync("ComItemRareTag", CoroutineObj)
       end
       self:AddWidgetToNode(self.RareWidget)
@@ -1216,7 +1258,7 @@ end
 function M:SetInGear(bInGear)
   self:AsyncLoadWidgetCommon("InGearWidget", "SetInGearTask", function(CoroutineObj)
     if bInGear then
-      if not self.WidgetMap[self.InGearWidget] then
+      if not self.WidgetMap[self.InGearWidget] and not IsValid(self.InGearWidget) then
         self.InGearWidget = self:CreateWidgetAsync("ComItemInGear", CoroutineObj)
       end
       self:AddWidgetToNode(self.InGearWidget)
@@ -1229,14 +1271,28 @@ end
 function M:SetTryOutText(TryOutText)
   self:AsyncLoadWidgetCommon("TryOutWidget", "SetTryOutTextTask", function(CoroutineObj)
     if TryOutText then
-      if not self.WidgetMap[self.TryOutWidget] then
+      if not self.WidgetMap[self.TryOutWidget] and not IsValid(self.TryOutWidget) then
         self.TryOutWidget = self:CreateWidgetAsync("ComItemTryOut", CoroutineObj)
-        self:AddWidgetToNode(self.TryOutWidget)
       end
       self.TryOutWidget.TipText:SetTexT(GText(TryOutText))
       self:AddWidgetToNode(self.TryOutWidget)
     else
       self:RemoveWidgetFromNode(self.TryOutWidget)
+    end
+  end)
+end
+
+function M:SetSquadBuildTryOutText(SquadBuildTryOutText)
+  self:AsyncLoadWidgetCommon("SquadBuildTryOutWidget", "SetSquadBuildTryOutTextTask", function(CoroutineObj)
+    if SquadBuildTryOutText then
+      if not self.WidgetMap[self.SquadBuildTryOutWidget] and not IsValid(self.SquadBuildTryOutWidget) then
+        self.SquadBuildTryOutWidget = self:CreateWidgetAsync("ComItemSquadBuildTryOut", CoroutineObj)
+      end
+      self.SquadBuildTryOutWidget.Text_TryOut:SetText(GText(SquadBuildTryOutText))
+      self.SquadBuildTryOutWidget.SizeBox_TryOut:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      self:AddWidgetToNode(self.SquadBuildTryOutWidget)
+    else
+      self:RemoveWidgetFromNode(self.SquadBuildTryOutWidget)
     end
   end)
 end
@@ -1248,10 +1304,11 @@ function M:SetPetPremium(bPremium)
       
       return
     end
-    local DynamicMat = self.Item.Item_BG:GetDynamicMaterial()
+    local Item_BG = self.Item.Item_BGPanel or self.Item.Item_BG
+    local DynamicMat = Item_BG:GetDynamicMaterial()
     if bPremium then
       DynamicMat:SetScalarParameterValue("Colorful_Alpha", self.Item.Colorful_Pet)
-      if not self.WidgetMap[self.PetRareWidget] then
+      if not self.WidgetMap[self.PetRareWidget] and not IsValid(self.PetRareWidget) then
         self.PetRareWidget = self:CreateWidgetAsync("ComItemPetRare", CoroutineObj)
       end
       self:AddWidgetToNode(self.PetRareWidget)
@@ -1287,7 +1344,7 @@ end
 function M:SetPetEntryId(PetEntries)
   local function Callback(CoroutineObj)
     if PetEntries then
-      if not self.WidgetMap[self.PetEntryIdWidget] then
+      if not self.WidgetMap[self.PetEntryIdWidget] and not IsValid(self.PetEntryIdWidget) then
         self.PetEntryIdWidget = self:CreateWidgetAsync("ComItemPetEntry", CoroutineObj)
       end
       self:AddWidgetToNode(self.PetEntryIdWidget)
@@ -1337,7 +1394,7 @@ function M:SetPetStarLevel(PetStarLevel)
       return
     end
     if PetStarLevel > 0 then
-      if not self.WidgetMap[self.PetStarLevelWidget] then
+      if not self.WidgetMap[self.PetStarLevelWidget] and not IsValid(self.PetStarLevelWidget) then
         self.PetStarLevelWidget = self:CreateWidgetAsync("ComItemPetStarLevel", CoroutineObj)
       end
       self:AddWidgetToNode(self.PetStarLevelWidget)
@@ -1360,7 +1417,7 @@ end
 function M:SetItemPolarity(Polarity, PolarityNum)
   local function Callback(CoroutineObj)
     if Polarity and (Polarity ~= CommonConst.NonePolarity or PolarityNum) then
-      if not self.WidgetMap[self.PolarityWidget] then
+      if not self.WidgetMap[self.PolarityWidget] and not IsValid(self.PolarityWidget) then
         self.PolarityWidget = self:CreateWidgetAsync("ComItemPolarity", CoroutineObj)
       end
       self.PolarityWidget:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
@@ -1395,7 +1452,7 @@ function M:SetAura(bAura)
       end
     end
     if bAura then
-      if not self.WidgetMap[self.AuraWidget] then
+      if not self.WidgetMap[self.AuraWidget] and not IsValid(self.AuraWidget) then
         self.AuraWidget = self:CreateWidgetAsync("ComItemAura", CoroutineObj)
       end
       self:AddWidgetToNode(self.AuraWidget)
@@ -1408,7 +1465,7 @@ function M:SetAura(bAura)
 end
 
 function M:GetOrCreateGroupWidget(WidgetName, CoroutineObj)
-  if not self.ItemGroup then
+  if not self.ItemGroup or not IsValid(self.ItemGroup) then
     self.ItemGroup = self:CreateWidgetNew("ComItemGroup")
   end
   self:AddWidgetToNode(self.ItemGroup)
@@ -1416,7 +1473,7 @@ function M:GetOrCreateGroupWidget(WidgetName, CoroutineObj)
 end
 
 function M:RemoveGroupWidget(WidgetName)
-  if not self.ItemGroup then
+  if not self.ItemGroup or not IsValid(self.ItemGroup) then
     return
   end
   self.ItemGroup:RemoveWidget(WidgetName)
@@ -1440,7 +1497,7 @@ function M:SetTimeLimitData(TimeLimitData)
         EndTime = EndTime.GetTime()
       end
       local NowTime = TimeUtils.NowTime()
-      if not self.WidgetMap[self.TimeLimitWidget] then
+      if not self.WidgetMap[self.TimeLimitWidget] and not IsValid(self.TimeLimitWidget) then
         self.TimeLimitWidget = self:CreateWidgetAsync("ComItemTimeLimit", CoroutineObj)
       end
       self:AddWidgetToNode(self.TimeLimitWidget)

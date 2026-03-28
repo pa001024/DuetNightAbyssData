@@ -5,6 +5,15 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("StoryVariable", {
+  ["12020320KID"] = {
+    IsGlobal = true,
+    VarName = "12020320KID"
+  },
+  ["120206_TRLM_PC_OnlyOne"] = {
+    IsGlobal = true,
+    VarName = "120206_TRLM_PC_OnlyOne"
+  },
+  ["1202BOSS"] = {IsGlobal = true, VarName = "1202BOSS"},
   AltEnd = {IsGlobal = true, VarName = "AltEnd"},
   AltFight = {IsGlobal = true, VarName = "AltFight"},
   AltStart = {IsGlobal = true, VarName = "AltStart"},
@@ -16,6 +25,7 @@ return ReadOnly("StoryVariable", {
     IsGlobal = true,
     VarName = "BaiJLFirstTalk"
   },
+  BaiLongXX = {IsGlobal = true, VarName = "BaiLongXX"},
   BakeInferenceFinish = {
     IsGlobal = true,
     VarName = "BakeInferenceFinish"
@@ -130,9 +140,26 @@ return ReadOnly("StoryVariable", {
     IsGlobal = true,
     VarName = "East02Kezhou"
   },
+  East02STONE = {
+    IsGlobal = true,
+    VarName = "East02STONE"
+  },
   East02Start = {
     IsGlobal = true,
     VarName = "East02Start"
+  },
+  East02TR = {IsGlobal = true, VarName = "East02TR"},
+  East02YYG2Phase = {
+    IsGlobal = true,
+    VarName = "East02YYG2Phase"
+  },
+  East02YYG2XZ = {
+    IsGlobal = true,
+    VarName = "East02YYG2XZ"
+  },
+  East02YYGPhase = {
+    IsGlobal = true,
+    VarName = "East02YYGPhase"
   },
   EastGodPre = {IsGlobal = true, VarName = "EastGodPre"},
   Entrance110101 = {
@@ -276,6 +303,26 @@ return ReadOnly("StoryVariable", {
     IsGlobal = true,
     VarName = "FeinaDay04Walk02"
   },
+  FengxiangBaoming = {
+    IsGlobal = true,
+    VarName = "FengxiangBaoming"
+  },
+  FengxiangBoss = {
+    IsGlobal = true,
+    VarName = "FengxiangBoss"
+  },
+  FengxiangBossFinish = {
+    IsGlobal = true,
+    VarName = "FengxiangBossFinish"
+  },
+  FengxiangXiaochi = {
+    IsGlobal = true,
+    VarName = "FengxiangXiaochi"
+  },
+  FengxiangXiaoxiang = {
+    IsGlobal = true,
+    VarName = "FengxiangXiaoxiang"
+  },
   FilFan = {IsGlobal = true, VarName = "FilFan"},
   FilJingGou1 = {
     IsGlobal = true,
@@ -310,10 +357,16 @@ return ReadOnly("StoryVariable", {
     QuestChainId = 120001,
     VarName = "FirstGotoIceCity12000103"
   },
+  FirstKezhou_12020201 = {
+    IsGlobal = true,
+    VarName = "FirstKezhou_12020201"
+  },
+  FirstMark = {IsGlobal = true, VarName = "FirstMark"},
   FirstXiangge_12020125 = {
     IsGlobal = true,
     VarName = "FirstXiangge_12020125"
   },
+  Fish200317 = {QuestChainId = 200317, VarName = "Fish200317"},
   FollowEnlike100206 = {
     IsGlobal = true,
     VarName = "FollowEnlike100206"
@@ -387,7 +440,18 @@ return ReadOnly("StoryVariable", {
     IsGlobal = true,
     VarName = "IQ12010513_fu"
   },
+  IQ12020401 = {IsGlobal = true, VarName = "IQ12020401"},
+  IQ12020517 = {IsGlobal = true, VarName = "IQ12020517"},
+  IQ12030706 = {IsGlobal = true, VarName = "IQ12030706"},
+  IQ12030706_jlc = {
+    IsGlobal = true,
+    VarName = "IQ12030706_jlc"
+  },
   IQ120315 = {IsGlobal = true, VarName = "IQ120315"},
+  Int12020208 = {
+    IsGlobal = true,
+    VarName = "Int12020208"
+  },
   JiShuvar1 = {IsGlobal = true, VarName = "JiShuvar1"},
   JiShuvar2 = {IsGlobal = true, VarName = "JiShuvar2"},
   JiShuvar3 = {IsGlobal = true, VarName = "JiShuvar3"},
@@ -459,6 +523,10 @@ return ReadOnly("StoryVariable", {
     IsGlobal = true,
     VarName = "Prologue_optimization"
   },
+  Qianxing12020208 = {
+    IsGlobal = true,
+    VarName = "Qianxing12020208"
+  },
   SaiqiWalk100206 = {
     IsGlobal = true,
     VarName = "SaiqiWalk100206"
@@ -486,6 +554,74 @@ return ReadOnly("StoryVariable", {
   Scenpc_511276 = {
     IsGlobal = true,
     VarName = "Scenpc_511276"
+  },
+  Scenpc_511565 = {
+    IsGlobal = true,
+    VarName = "Scenpc_511565"
+  },
+  Scenpc_511576 = {
+    IsGlobal = true,
+    VarName = "Scenpc_511576"
+  },
+  Scenpc_511579 = {
+    IsGlobal = true,
+    VarName = "Scenpc_511579"
+  },
+  Scenpc_511582 = {
+    IsGlobal = true,
+    VarName = "Scenpc_511582"
+  },
+  Scenpc_511586 = {
+    IsGlobal = true,
+    VarName = "Scenpc_511586"
+  },
+  Scenpc_511589 = {
+    IsGlobal = true,
+    VarName = "Scenpc_511589"
+  },
+  Scenpc_511592 = {
+    IsGlobal = true,
+    VarName = "Scenpc_511592"
+  },
+  Scenpc_511593 = {
+    IsGlobal = true,
+    VarName = "Scenpc_511593"
+  },
+  Scenpc_511599 = {
+    IsGlobal = true,
+    VarName = "Scenpc_511599"
+  },
+  Scenpc_511618 = {
+    IsGlobal = true,
+    VarName = "Scenpc_511618"
+  },
+  Scenpc_511626 = {
+    IsGlobal = true,
+    VarName = "Scenpc_511626"
+  },
+  Scenpc_511680 = {
+    IsGlobal = true,
+    VarName = "Scenpc_511680"
+  },
+  Scenpc_511702 = {
+    IsGlobal = true,
+    VarName = "Scenpc_511702"
+  },
+  Scenpc_511710 = {
+    IsGlobal = true,
+    VarName = "Scenpc_511710"
+  },
+  Scenpc_511717 = {
+    IsGlobal = true,
+    VarName = "Scenpc_511717"
+  },
+  Scenpc_511721 = {
+    IsGlobal = true,
+    VarName = "Scenpc_511721"
+  },
+  Scenpc_511750 = {
+    IsGlobal = true,
+    VarName = "Scenpc_511750"
   },
   ShenPan1st = {IsGlobal = true, VarName = "ShenPan1st"},
   ShenPan2nd = {IsGlobal = true, VarName = "ShenPan2nd"},
@@ -530,6 +666,30 @@ return ReadOnly("StoryVariable", {
     QuestChainId = 100102,
     VarName = "TestVar6"
   },
+  WangchuanFushu01 = {
+    IsGlobal = true,
+    VarName = "WangchuanFushu01"
+  },
+  WangchuanFushu02 = {
+    IsGlobal = true,
+    VarName = "WangchuanFushu02"
+  },
+  WangchuanFushu03 = {
+    IsGlobal = true,
+    VarName = "WangchuanFushu03"
+  },
+  WangchuanFushu04 = {
+    IsGlobal = true,
+    VarName = "WangchuanFushu04"
+  },
+  WangchuanFushu05 = {
+    IsGlobal = true,
+    VarName = "WangchuanFushu05"
+  },
+  WangchuanNpc = {
+    IsGlobal = true,
+    VarName = "WangchuanNpc"
+  },
   Weike110103 = {
     IsGlobal = true,
     VarName = "Weike110103"
@@ -547,6 +707,23 @@ return ReadOnly("StoryVariable", {
     IsGlobal = true,
     VarName = "XimengNPC110105"
   },
+  YYG_ReStart4 = {
+    IsGlobal = true,
+    VarName = "YYG_ReStart4"
+  },
+  YYG_branch = {IsGlobal = true, VarName = "YYG_branch"},
+  ZhiliuA12020414 = {
+    IsGlobal = true,
+    VarName = "ZhiliuA12020414"
+  },
+  ZhilvStealth_Robot = {
+    IsGlobal = true,
+    VarName = "ZhilvStealth_Robot"
+  },
+  ZhilvTopBattle_Danger = {
+    IsGlobal = true,
+    VarName = "ZhilvTopBattle_Danger"
+  },
   icl100303 = {IsGlobal = true, VarName = "icl100303"},
   icl100303bf = {
     IsGlobal = true,
@@ -557,5 +734,6 @@ return ReadOnly("StoryVariable", {
     VarName = "jingweiduihua"
   },
   sew100303 = {IsGlobal = true, VarName = "sew100303"},
-  thea100306 = {IsGlobal = true, VarName = "thea100306"}
+  thea100306 = {IsGlobal = true, VarName = "thea100306"},
+  xiangge = {IsGlobal = true, VarName = "xiangge"}
 })

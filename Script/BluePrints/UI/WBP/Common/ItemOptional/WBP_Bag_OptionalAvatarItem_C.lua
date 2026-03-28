@@ -30,6 +30,10 @@ function M:Init(ItemType, ItemData, ChooseCallback, ParentWidget, ...)
       self._components = {
         "BluePrints.UI.WBP.Common.ItemOptional.Components.WBP_Pet_Item_Comp_C"
       }
+    elseif ItemType == BagCommon.OptionalItemType.LimitedPrizePool then
+      self._components = {
+        "BluePrints.UI.WBP.Common.ItemOptional.Components.WBP_LimitedPool_Item_Comp_C"
+      }
     end
     AssembleComponents(self)
   end
@@ -51,6 +55,8 @@ function M:Init(ItemType, ItemData, ChooseCallback, ParentWidget, ...)
   elseif ItemType == BagCommon.OptionalItemType.Avatar then
     self:InitSpecialView(ItemData, ...)
   elseif ItemType == BagCommon.OptionalItemType.Pet then
+    self:InitSpecialView(ItemData, ...)
+  elseif ItemType == BagCommon.OptionalItemType.LimitedPrizePool then
     self:InitSpecialView(ItemData, ...)
   end
 end
@@ -284,7 +290,6 @@ function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   local IsEventHandled = false
   if "Gamepad_FaceButton_Bottom" == InKeyName then
-    IsEventHandled = true
   end
   return IsEventHandled
 end

@@ -3,6 +3,7 @@ local AvatarEntity = require("BluePrints.Client.Wrapper.Entity").AvatarEntity
 local Assemble = require("NetworkEngine.Common.Assemble")
 local HeroUSDKUtils = require("Utils.HeroUSDKUtils")
 local MiscUtils = require("Utils.MiscUtils")
+local EMLuaConst = require("EMLuaConst")
 local Account = Class("Account", AvatarEntity)
 Account.__Component__ = {
   "BluePrints.Client.Entities.Components.EntityBase",
@@ -35,6 +36,8 @@ function Account:SdkLogin()
   local HeroUSDKSubsystem = HeroUSDKSubsystem()
   local HotUpdateSubsystem = USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, UHotUpdateSubsystem)
   local PatchKey, PatchVersion, ClientVersion = HotUpdateSubsystem:GetClientVersion()
+  local bIsPlayInEditor = URuntimeCommonFunctionLibrary.IsInUEEditor()
+  local PatchIds = (not bIsPlayInEditor or EMLuaConst.bIsEditorEnableHotUpdate) and HotUpdateSubsystem:GetDownloadedPatchIds():ToTable() or nil
   local ClientInfo = {
     Hostnum = GWorld.NetworkMgr.hostnum,
     ConnectType = GWorld.NetworkMgr.ConnectType,
@@ -44,7 +47,8 @@ function Account:SdkLogin()
     },
     PatchVersion = {
       [PatchKey] = PatchVersion
-    }
+    },
+    PatchIds = PatchIds
   }
   local SdkInfo = {
     AccessToken = SdkUserInfo.accessToken,
@@ -117,6 +121,8 @@ function Account:QuickLogin(account_name, password)
   local ImgChannelId = GWorld.SdkImgChannel or 0
   local HotUpdateSubsystem = USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, UHotUpdateSubsystem)
   local PatchKey, PatchVersion, ClientVersion = HotUpdateSubsystem:GetClientVersion()
+  local bIsPlayInEditor = URuntimeCommonFunctionLibrary.IsInUEEditor()
+  local PatchIds = (not bIsPlayInEditor or EMLuaConst.bIsEditorEnableHotUpdate) and HotUpdateSubsystem:GetDownloadedPatchIds():ToTable() or nil
   local ClientInfo = {
     Hostnum = GWorld.NetworkMgr.hostnum,
     Account = account_name,
@@ -128,7 +134,8 @@ function Account:QuickLogin(account_name, password)
     },
     PatchVersion = {
       [PatchKey] = PatchVersion
-    }
+    },
+    PatchIds = PatchIds
   }
   local BDC_Info = {
     appkey = HeroUSDKSubsystem:GetAppKey(),
@@ -169,7 +176,16 @@ function Account:OnPatchForceUpdate()
   end
 end
 
+function Account:OnPatchResourceNotComplete()
+  local HotUpdateUtils = require("Utils.HotUpdateUtils")
+  local HotUpdateSubsystem = USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, UHotUpdateSubsystem)
+  local NecessoryPatchSigns = HotUpdateUtils.GetNecessoryPatchSigns()
+  HotUpdateSubsystem:JumpToOptionalDownloadLevel(Const.DefaultOptionalPatchSceneFile, NecessoryPatchSigns)
+end
+
 function Account:LoginResult(ret_code, info)
+  GWorld.bShouldShowWaterMark = nil
+  GWorld.WaterMarkContent = nil
   self.LoginQueuePopUI = nil
   info = info or {}
   local Reason = info.Reason or ""
@@ -218,6 +234,16 @@ function Account:LoginResult(ret_code, info)
       end
     elseif ret_code == ErrorCode.RET_LOGIN_AUTH_FAILED then
       HeroUSDKSubsystem():HeroSDKLogout()
+    elseif ret_code == ErrorCode.RET_LOGIN_PATCH_RESOURCE_NOT_COMPLETE then
+      local MissingPatchIds = string.split(Reason, ",")
+      local HotUpdateUtils = require("Utils.HotUpdateUtils")
+      HotUpdateUtils.MergeNecessoryPatchSigns(MissingPatchIds)
+      local Params = {}
+      Params.CloseBtnCallbackFunction = self.OnPatchResourceNotComplete
+      Params.LeftCallbackFunction = self.OnPatchResourceNotComplete
+      Params.RightCallbackFunction = self.OnPatchResourceNotComplete
+      local UIManager = GWorld.GameInstance:GetGameUIManager()
+      UIManager:ShowCommonPopupUI(100151, Params, self)
     elseif not bSimpleDisconnect then
       info.ErrorCode = ret_code
       GWorld.NetworkMgr:DisconnectAndShowUI(info)

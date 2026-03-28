@@ -23,7 +23,7 @@ function HasDetectiveResultNode:Execute(Callback)
       Callback()
     end
     
-    function HasDetectiveResultNodeCallback(ResultId)
+    local function HasDetectiveResultNodeCallback(ResultId)
       DebugPrint("HasDetectiveResultNode HasDetectiveResultNodeCallback ResultId: " .. ResultId)
       self.FinishResultTable[ResultId] = true
       for _, IsFinish in pairs(self.FinishResultTable) do

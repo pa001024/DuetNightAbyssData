@@ -963,6 +963,70 @@ function ConditionUtils:JudgeGachaCount(Params)
   return false
 end
 
+function ConditionUtils:JudgeInteractTriggerFinished(Params)
+  return self:CheckInteractTriggerRewardIsGot(Params)
+end
+
+function ConditionUtils:JudgeForgeLevel(Params)
+  if GWorld:IsSkynetServer() then
+    return Params < self.WeaponForgeLevel
+  end
+  return false
+end
+
+function ConditionUtils:JudgeHyperCardLevel(Params)
+  if GWorld:IsSkynetServer() then
+    local WeaponId = Params[1]
+    local NeedHyperLevel = Params[2]
+    local WeaponConf = DataMgr.Weapon[WeaponId]
+    if WeaponConf.WeaponSubType == CommonConst.WeaponSubType.Normal then
+      return false
+    end
+    local bFinishCond = false
+    for _, Weapon in pairs(self.Weapons) do
+      if Weapon.WeaponId == WeaponId and NeedHyperLevel <= Weapon.HyperCardLevel then
+        bFinishCond = true
+        break
+      end
+    end
+    return bFinishCond
+  end
+  return false
+end
+
+function ConditionUtils:JudgeInteractTriggerFinished(Params)
+  if GWorld:IsSkynetServer() or not IsDedicatedServer(GWorld.GameInstance) then
+    local InteractTriggerId = Params
+    if self.InteractTriggerRewardRecords and self.InteractTriggerRewardRecords[InteractTriggerId] then
+      return true
+    end
+    return false
+  end
+  return false
+end
+
+function ConditionUtils:JudgeHaveGotSoloTreasureScore(Params)
+  if GWorld:IsSkynetServer() or not IsDedicatedServer(GWorld.GameInstance) then
+    local EventId, Score = Params[1], Params[2]
+    local TreasureHunt = self.TreasureHunts[EventId]
+    if not TreasureHunt then
+      return false
+    end
+    return Score <= TreasureHunt.TotalScore
+  end
+  return false
+end
+
+function ConditionUtils:JudgeComeBackEventScore(Params)
+  local NowTime = TimeUtils.NowTime()
+  if NowTime >= self.ComeBackExpireTime then
+    return false
+  end
+  local CurrentEventId = DataMgr.ComeBackEventConstant.CurrentEventId.ConstantValue
+  local ComeBackData = self.ComeBacks[CurrentEventId]
+  return Params <= ComeBackData.QuestProgress
+end
+
 function ConditionUtils:PackParams(ConditionName, Params)
   local ResultStr = ConditionName .. ","
   if type(Params) == "table" then

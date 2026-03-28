@@ -41,7 +41,8 @@ function Component:OnAnchorGetUserMenuContent(Anchor)
   end
   
   local function AddFriend(Content, AvatarInfo)
-    if not FriendModel:GetFriendDict()[AvatarInfo.Uid] then
+    local TargetUid = FriendController:GetSocialUid(AvatarInfo.Uid, AvatarInfo)
+    if not FriendModel:GetFriendDict()[TargetUid] then
       Content.Text = GText("UI_Friend_AddFriend")
       
       function Content.Callback()
@@ -52,7 +53,7 @@ function Component:OnAnchorGetUserMenuContent(Anchor)
       Content.Text = GText("UI_Chat_SendMsg")
       
       function Content.Callback()
-        ChatController:SelectPlayerToChat(AvatarInfo.Uid)
+        ChatController:SelectPlayerToChat(TargetUid)
         self.HeadAnchor:Close()
       end
     end
@@ -67,70 +68,7 @@ function Component:OnAnchorGetUserMenuContent(Anchor)
     end
   end
   
-  local function AddBlackList(Content, AvatarInfo)
-    if FriendModel:GetBlackListDict()[AvatarInfo.Uid] then
-      Content.Text = GText("UI_Friend_DelBlackList")
-      
-      function Content.Callback()
-        FriendController:SendCancelBlackList(AvatarInfo.Uid)
-        self.HeadAnchor:Close()
-      end
-    else
-      Content.Text = GText("UI_Friend_AddBlackList")
-      
-      function Content.Callback()
-        FriendController:OpenAddBlacklistDialog(self, AvatarInfo)
-        self.HeadAnchor:Close()
-      end
-    end
-  end
-  
-  local function AccusePlayer(Content, AvatarInfo)
-    Content.Text = GText("UI_Chat_Accuse")
-    
-    function Content.Callback()
-      local Params = {
-        Nickname = AvatarInfo.Nickname,
-        UID = AvatarInfo.Uid,
-        Level = AvatarInfo.Level,
-        TextLenMax = 50,
-        ChatMessage = self._MessageContent,
-        ForbidRightBtn = true,
-        DontCloseWhenRightBtnClicked = true
-      }
-      
-      function Params.HideItemTips()
-        self:BroadcastDialogEvent(DialogEvent.HideDialogItem, {
-          bHideDialogItem = true,
-          DialogItemIndex = 1,
-          bShouldPlayAnim = false
-        })
-        self:BroadcastDialogEvent(DialogEvent.HideDialogItem, {
-          bHideDialogItem = true,
-          DialogItemIndex = 2,
-          bShouldPlayAnim = false
-        })
-      end
-      
-      Params.EditTextConfig = {
-        Owner = self,
-        TextLimit = 50,
-        Events = {
-          OnTextChanged = self.OnTextChange,
-          OnTextComposing = self.OnTextComposing,
-          OnEditTextFocusReceived = function()
-            if self.bTipsShowed then
-              self.Owner:HideDialogTip(2, false)
-              self.bTipsShowed = false
-            end
-          end
-        }
-      }
-      ChatController:OpenChatReportDialog(Params)
-      self.HeadAnchor:Close()
-    end
-  end
-  
+  local AddBlackList = FriendController:GenAddBlackListFunc(self, self.HeadAnchor)
   local Switch = {}
   local Avatar = ChatController:GetAvatar()
   local IsYourSelf = self._AvatarInfo.Uid == Avatar.Uid
@@ -142,6 +80,23 @@ function Component:OnAnchorGetUserMenuContent(Anchor)
   bNotInvitable = bNotInvitable or 4 == (TeamData and #TeamData.Members)
   local Channel = ChatController:GetModel():GetCurrentChannel()
   local InviteTeamIdx
+  local AccusePlayer = FriendController:GenAccusePlayerFunc(self, self.HeadAnchor, self._MessageContent, function()
+    self:BroadcastDialogEvent(DialogEvent.HideDialogItem, {
+      bHideDialogItem = true,
+      DialogItemIndex = 1,
+      bShouldPlayAnim = false
+    })
+    self:BroadcastDialogEvent(DialogEvent.HideDialogItem, {
+      bHideDialogItem = true,
+      DialogItemIndex = 2,
+      bShouldPlayAnim = false
+    })
+  end, self.OnTextChange, self.OnTextComposing, function()
+    if self.bTipsShowed then
+      self.Owner:HideDialogTip(2, false)
+      self.bTipsShowed = false
+    end
+  end)
   if IsInHardBoss then
     if InBounsScene then
       InviteTeamIdx = 2
@@ -161,11 +116,20 @@ function Component:OnAnchorGetUserMenuContent(Anchor)
     end
   elseif InBounsScene or IsInDungeon then
     InviteTeamIdx = 2
-    Switch = IsYourSelf and {} or {
-      AddFriend,
-      InviteTeam,
-      AddBlackList
-    }
+    if InBounsScene then
+      Switch = IsYourSelf and {} or {
+        AddFriend,
+        AddBlackList,
+        AccusePlayer
+      }
+    else
+      Switch = IsYourSelf and {} or {
+        AddFriend,
+        InviteTeam,
+        AddBlackList,
+        AccusePlayer
+      }
+    end
   else
     InviteTeamIdx = 3
     Switch = IsYourSelf and {InitShowRecordBtn} or {
@@ -176,13 +140,13 @@ function Component:OnAnchorGetUserMenuContent(Anchor)
     }
   end
   if not IsYourSelf and not table.isempty(Switch) then
-    if self._MessageContent then
+    if self._MessageContent and not IsInDungeon and not InBounsScene then
       table.insert(Switch, AccusePlayer)
     end
     if bNotInvitable then
       table.remove(Switch, InviteTeamIdx)
     end
-    if Channel == ChatCommon.ChannelDef.InTeam or Channel == ChatCommon.ChannelDef.Friend then
+    if (Channel == ChatCommon.ChannelDef.InTeam or Channel == ChatCommon.ChannelDef.Friend) and FriendModel:GetFriendDict()[self._AvatarInfo.Uid] then
       table.remove(Switch, 1)
     end
   end

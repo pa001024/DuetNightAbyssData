@@ -8,6 +8,7 @@ function WBP_Play_HardBoss_Root_C:Construct()
   self.CurTeleportId = nil
   self.CurTabId = nil
   self.TitleWidget = nil
+  self.BossBackGround = nil
   self.IsInSelectState = false
   self.AllTabInfo = {}
   self.HardBossId2Index = {}
@@ -176,9 +177,17 @@ function WBP_Play_HardBoss_Root_C:RefreshListBossInfo(Index, IsFirstTime)
   local BossInfo = BtnInfo[CurSelectBossContent.Id]
   self.CurBossId = CurSelectBossContent.Id
   self.CurTeleportId = BossInfo.TeleportId
-  local BossBackGround = LoadObject(BossInfo.MainIcon)
-  local ImgMat = self.Image_Boss:GetDynamicMaterial()
-  ImgMat:SetTextureParameterValue("IconMap", BossBackGround)
+  self.Group_BossAnchor:ClearChildren()
+  self.BossBackGround = nil
+  if BossInfo.MainIcon then
+    self.BossBackGround = UIManager(self):CreateWidget(BossInfo.MainIcon, false)
+    if self.BossBackGround then
+      self.Group_BossAnchor:AddChild(self.BossBackGround)
+      local OverlaySlot = UE4.UWidgetLayoutLibrary.SlotAsOverlaySlot(self.BossBackGround)
+      OverlaySlot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
+      OverlaySlot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
+    end
+  end
   self.Group_Title:ClearChildren()
   self.TitleWidget = nil
   if BossInfo.TitleBp then
@@ -193,7 +202,22 @@ function WBP_Play_HardBoss_Root_C:RefreshListBossInfo(Index, IsFirstTime)
   if self.TitleWidget then
     self.TitleWidget:PlayAnimation(self.TitleWidget.In)
   end
+  self:PlayBGInAnimation()
   self:RefreshRewardsList(BossInfo)
+end
+
+function WBP_Play_HardBoss_Root_C:PlayBGInAnimation()
+  if self.BossBackGround and self.BossBackGround.WBP_AreaCoop_LoadingBG then
+    self.BossBackGround.WBP_AreaCoop_LoadingBG:UnbindAllFromAnimationFinished(self.BossBackGround.WBP_AreaCoop_LoadingBG.In)
+    self.BossBackGround.WBP_AreaCoop_LoadingBG:BindToAnimationFinished(self.BossBackGround.WBP_AreaCoop_LoadingBG.In, {
+      self,
+      function()
+        self.BossBackGround.WBP_AreaCoop_LoadingBG:PlayAnimation(self.BossBackGround.WBP_AreaCoop_LoadingBG.Loop)
+      end
+    })
+    self.BossBackGround.WBP_AreaCoop_LoadingBG:StopAllAnimations()
+    self.BossBackGround.WBP_AreaCoop_LoadingBG:PlayAnimation(self.BossBackGround.WBP_AreaCoop_LoadingBG.In)
+  end
 end
 
 function WBP_Play_HardBoss_Root_C:RefreshRewardsList(BossInfo)
@@ -598,6 +622,7 @@ function WBP_Play_HardBoss_Root_C:SwitchIn()
   if self.TitleWidget then
     self.TitleWidget:PlayAnimation(self.TitleWidget.In)
   end
+  self:PlayBGInAnimation()
 end
 
 function WBP_Play_HardBoss_Root_C:TrySelectFirstTime(Entry)

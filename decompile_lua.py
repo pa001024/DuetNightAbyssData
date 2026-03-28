@@ -65,6 +65,12 @@ def decompile_lua_files(threads=6):
     # 创建输出目录
     os.makedirs(output_dir, exist_ok=True)
 
+    # 先镜像整个目录树，避免后续步骤因为空目录缺失而找不到路径
+    for root, dirs, _files in os.walk(input_dir):
+        relative_path = os.path.relpath(root, input_dir)
+        output_subdir = os.path.join(output_dir, relative_path)
+        os.makedirs(output_subdir, exist_ok=True)
+
     # 收集所有需要反编译的文件
     tasks = []
     for root, dirs, files in os.walk(input_dir):

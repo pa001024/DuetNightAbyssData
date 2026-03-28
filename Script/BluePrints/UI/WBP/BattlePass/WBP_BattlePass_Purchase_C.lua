@@ -3,6 +3,7 @@ local M = Class("BluePrints.UI.BP_UIState_C")
 local HeroUSDKUtils = require("Utils.HeroUSDKUtils")
 local TimeUtils = require("Utils.TimeUtils")
 local BattlePassController = require("BluePrints.UI.WBP.BattlePass.Controller.BattlePassController")
+local BattlePassUtils = require("BluePrints.UI.WBP.BattlePass.BattlePassUtils")
 M._components = {
   "BluePrints.UI.WBP.Armory.MainComponent.Armory_PointerInputComponent",
   "BluePrints.UI.WBP.Armory.ActorController.PreviewActorComponent"
@@ -218,12 +219,6 @@ function M:RefreshCloudTimeText(BattlePassPayType)
       if self.Text_Present_1 then
         self.Text_Present_1:SetText(GText("UI_BattlePass_CloudGameTime_UpdatetoRank3"))
       end
-      if self.Text_Info then
-        self.Text_Info:SetText(GText("UI_BattlePass_CloudGameTime_Rank2"))
-      end
-      if self.Text_Info_1 then
-        self.Text_Info_1:SetText(GText("UI_BattlePass_CloudGameTime_UpdatetoRank3"))
-      end
     elseif BattlePassPayType == CommonConst.BattlePassPayType.RANK3 and bHasRank3 then
       if self.Text_Present then
         self.Text_Present:SetText(GText("UI_BattlePass_CloudGameTime_Rank2"))
@@ -231,24 +226,12 @@ function M:RefreshCloudTimeText(BattlePassPayType)
       if self.Text_Present_1 then
         self.Text_Present_1:SetText(GText("UI_BattlePass_CloudGameTime_Rank3"))
       end
-      if self.Text_Info then
-        self.Text_Info:SetText(GText("UI_BattlePass_CloudGameTime_Rank2"))
-      end
-      if self.Text_Info_1 then
-        self.Text_Info_1:SetText(GText("UI_BattlePass_CloudGameTime_Rank3"))
-      end
     elseif BattlePassPayType == CommonConst.BattlePassPayType.RANK2_UPGRADE_RANK3 and bHasRank3 then
       if self.Text_Present then
         self.Text_Present:SetText(GText("UI_BattlePass_CloudGameTime_Rank2"))
       end
       if self.Text_Present_1 then
         self.Text_Present_1:SetText(GText("UI_BattlePass_CloudGameTime_UpdatetoRank3"))
-      end
-      if self.Text_Info then
-        self.Text_Info:SetText(GText("UI_BattlePass_CloudGameTime_Rank2"))
-      end
-      if self.Text_Info_1 then
-        self.Text_Info_1:SetText(GText("UI_BattlePass_CloudGameTime_UpdatetoRank3"))
       end
     end
   elseif not bHasRank2 and not bHasRank3 then
@@ -258,12 +241,6 @@ function M:RefreshCloudTimeText(BattlePassPayType)
     if self.Text_Present_1 then
       self.Text_Present_1:SetText(GText("UI_BattlePass_CloudGameTime_Rank3"))
     end
-    if self.Text_Info then
-      self.Text_Info:SetText(GText("UI_BattlePass_CloudGameTime_Rank2"))
-    end
-    if self.Text_Info_1 then
-      self.Text_Info_1:SetText(GText("UI_BattlePass_CloudGameTime_Rank3"))
-    end
   elseif bHasRank2 and not bHasRank3 then
     if self.Text_Present then
       self.Text_Present:SetText(GText("UI_BattlePass_CloudGameTime_Rank2"))
@@ -271,24 +248,12 @@ function M:RefreshCloudTimeText(BattlePassPayType)
     if self.Text_Present_1 then
       self.Text_Present_1:SetText(GText("UI_BattlePass_CloudGameTime_UpdatetoRank3"))
     end
-    if self.Text_Info then
-      self.Text_Info:SetText(GText("UI_BattlePass_CloudGameTime_Rank2"))
-    end
-    if self.Text_Info_1 then
-      self.Text_Info_1:SetText(GText("UI_BattlePass_CloudGameTime_UpdatetoRank3"))
-    end
   elseif bHasRank2 and bHasRank3 then
     if self.Text_Present then
       self.Text_Present:SetText(GText("UI_BattlePass_CloudGameTime_Rank2"))
     end
     if self.Text_Present_1 then
       self.Text_Present_1:SetText(GText("UI_BattlePass_CloudGameTime_Rank3"))
-    end
-    if self.Text_Info then
-      self.Text_Info:SetText(GText("UI_BattlePass_CloudGameTime_Rank2"))
-    end
-    if self.Text_Info_1 then
-      self.Text_Info_1:SetText(GText("UI_BattlePass_CloudGameTime_Rank3"))
     end
   end
 end
@@ -303,18 +268,20 @@ function M:StartPayRank2()
   if bHasRank2 then
     return
   end
-  AudioManager(self):PlayUISound(self, "event:/ui/common/battle_pass_btn_click_normal", nil, nil)
-  Avatar:BattlePassReuqestPay(CommonConst.BattlePassPayType.RANK2, function(ret, OrderId, CallbackUrl, goodsId)
-    DebugPrint("gmy@WBP_BattlePass_Purchase_C M:BattlePassReuqestPay", ret, OrderId, CallbackUrl, goodsId, os.time())
-    if ret == ErrorCode.RET_SUCCESS then
-      local PaymentParameters = FHeroUPaymentParameters()
-      PaymentParameters.goodsId = goodsId
-      PaymentParameters.cpOrder = OrderId
-      PaymentParameters.callbackUrl = CallbackUrl
-      local GameRoleInfo = HeroUSDKUtils.GenHeroHDCGameRoleInfo()
-      HeroUSDKSubsystem():HeroSDKPay(PaymentParameters, GameRoleInfo)
-      self:TrackPayInfo(goodsId, OrderId)
-    end
+  BattlePassUtils:TryOpenWithEndTimeReminder(self, function()
+    AudioManager(self):PlayUISound(self, "event:/ui/common/battle_pass_btn_click_normal", nil, nil)
+    Avatar:BattlePassReuqestPay(CommonConst.BattlePassPayType.RANK2, function(ret, OrderId, CallbackUrl, goodsId)
+      DebugPrint("gmy@WBP_BattlePass_Purchase_C M:BattlePassReuqestPay", ret, OrderId, CallbackUrl, goodsId, os.time())
+      if ret == ErrorCode.RET_SUCCESS then
+        local PaymentParameters = FHeroUPaymentParameters()
+        PaymentParameters.goodsId = goodsId
+        PaymentParameters.cpOrder = OrderId
+        PaymentParameters.callbackUrl = CallbackUrl
+        local GameRoleInfo = HeroUSDKUtils.GenHeroHDCGameRoleInfo()
+        HeroUSDKSubsystem():HeroSDKPay(PaymentParameters, GameRoleInfo)
+        self:TrackPayInfo(goodsId, OrderId)
+      end
+    end)
   end)
 end
 
@@ -332,16 +299,18 @@ function M:StartPayRank3()
   if Avatar.BattlePassUnlockRank2 then
     BattlePassPayType = CommonConst.BattlePassPayType.RANK2_UPGRADE_RANK3
   end
-  AudioManager(self):PlayUISound(self, "event:/ui/common/battle_pass_btn_click_special", nil, nil)
-  Avatar:BattlePassReuqestPay(BattlePassPayType, function(ret, OrderId, CallbackUrl, goodsId)
-    DebugPrint("gmy@WBP_BattlePass_Purchase_C M:BattlePassReuqestPay", ret, OrderId, CallbackUrl, goodsId)
-    local PaymentParameters = FHeroUPaymentParameters()
-    PaymentParameters.goodsId = goodsId
-    PaymentParameters.cpOrder = OrderId
-    PaymentParameters.callbackUrl = CallbackUrl
-    local GameRoleInfo = HeroUSDKUtils.GenHeroHDCGameRoleInfo()
-    HeroUSDKSubsystem():HeroSDKPay(PaymentParameters, GameRoleInfo)
-    self:TrackPayInfo(goodsId, OrderId)
+  BattlePassUtils:TryOpenWithEndTimeReminder(self, function()
+    AudioManager(self):PlayUISound(self, "event:/ui/common/battle_pass_btn_click_special", nil, nil)
+    Avatar:BattlePassReuqestPay(BattlePassPayType, function(ret, OrderId, CallbackUrl, goodsId)
+      DebugPrint("gmy@WBP_BattlePass_Purchase_C M:BattlePassReuqestPay", ret, OrderId, CallbackUrl, goodsId)
+      local PaymentParameters = FHeroUPaymentParameters()
+      PaymentParameters.goodsId = goodsId
+      PaymentParameters.cpOrder = OrderId
+      PaymentParameters.callbackUrl = CallbackUrl
+      local GameRoleInfo = HeroUSDKUtils.GenHeroHDCGameRoleInfo()
+      HeroUSDKSubsystem():HeroSDKPay(PaymentParameters, GameRoleInfo)
+      self:TrackPayInfo(goodsId, OrderId)
+    end)
   end)
 end
 

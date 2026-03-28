@@ -65,6 +65,18 @@ return ReadOnly("CharacterData", {
     CvJPName = "CVName3020",
     CvKRName = "CVName4020"
   },
+  [1504] = {
+    CharBirth = "UI_CHAR_BIRTH_1504",
+    CharBirthday = "46274.0",
+    CharForce = "UI_CHAR_FORCE_1504",
+    CharId = 1504,
+    CharName = "UI_CHAR_NAME_1504",
+    CharSex = true,
+    CvCNName = "CVName1025",
+    CvENName = "CVName2025",
+    CvJPName = "CVName3025",
+    CvKRName = "CVName4025"
+  },
   [1801] = {
     CharBirth = "UI_CHAR_BIRTH_1801",
     CharBirthday = "45384.0",
@@ -160,6 +172,18 @@ return ReadOnly("CharacterData", {
     CvENName = "CVName2007",
     CvJPName = "CVName3007",
     CvKRName = "CVName4007"
+  },
+  [3202] = {
+    CharBirth = "UI_CHAR_BIRTH_3202",
+    CharBirthday = "46347.0",
+    CharForce = "UI_CHAR_FORCE_3202",
+    CharId = 3202,
+    CharName = "UI_CHAR_NAME_3202",
+    CharSex = true,
+    CvCNName = "CVName1024",
+    CvENName = "CVName2024",
+    CvJPName = "CVName3024",
+    CvKRName = "CVName4024"
   },
   [3301] = {
     CharBirth = "UI_CHAR_BIRTH_3301",

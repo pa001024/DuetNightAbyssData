@@ -696,6 +696,8 @@ end
 function M:BP_GetDesiredFocusTarget()
   if self.CurrentDesiredFocusTarget and IsValid(self.CurrentDesiredFocusTarget) then
     return self.CurrentDesiredFocusTarget
+  else
+    return self
   end
 end
 

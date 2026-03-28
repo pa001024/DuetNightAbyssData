@@ -8,6 +8,11 @@ function BP_DefenceMechanism_C:AuthorityInitInfo(Info)
   self.bDamaged = false
 end
 
+function BP_DefenceMechanism_C:ClientInitInfo(Info)
+  BP_DefenceMechanism_C.Super.ClientInitInfo(self, Info)
+  EventManager:AddEvent(EventID.OnArtLevelLoaded, self, self.OnArtLevelLoaded)
+end
+
 function BP_DefenceMechanism_C:ShowDamage_Lua(DamageEvent)
   if self:CheckHited(DamageEvent) then
     if DamageEvent.DamageTag:Find("Melee") then

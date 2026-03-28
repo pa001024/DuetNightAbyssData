@@ -43,7 +43,7 @@ function ShowOrHideTaskIndicatorNode:CreateOrDestoryEffect(bCreate)
     return
   end
   if bCreate then
-    NewTargetPoint:SetTargetRangeEffect()
+    NewTargetPoint:SetTargetRangeEffect(self.bIsDynamicEvent)
   else
     NewTargetPoint:DestoryTargetRangeEffect()
   end

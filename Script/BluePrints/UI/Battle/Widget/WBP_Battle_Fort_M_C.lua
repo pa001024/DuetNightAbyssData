@@ -21,6 +21,10 @@ function WBP_Battle_Fort_M_C:OnLoaded(...)
   self.PowLimit = self.Limit * self.Limit
   self:InitTouchLayer(self.OwnerPlayer, 0, 0)
   self.DelayAddTouchLayerTimer = self:AddTimer(0.1, self.DelayAddTouchLayer, true)
+  if self.Btn_Exit then
+    self.Btn_Exit:BindEventOnClicked(self, self.OnPressQuit_LeaveBtn)
+    self.Btn_Exit:SetText(GText("UI_Mechanism_ExitPaotai"))
+  end
 end
 
 function WBP_Battle_Fort_M_C:DelayAddTouchLayer()

@@ -14,8 +14,9 @@ return ReadOnly("WeaponAccessory", {
     Rarity = 5,
     RegainItemId = 110,
     RegainItemNum = 10,
-    SortPriority = 1,
+    SortPriority = 17,
     Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10001
   },
@@ -29,8 +30,9 @@ return ReadOnly("WeaponAccessory", {
     Rarity = 5,
     RegainItemId = 110,
     RegainItemNum = 10,
-    SortPriority = 2,
+    SortPriority = 18,
     Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10002
   },
@@ -44,8 +46,9 @@ return ReadOnly("WeaponAccessory", {
     Rarity = 5,
     RegainItemId = 110,
     RegainItemNum = 10,
-    SortPriority = 3,
+    SortPriority = 19,
     Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10003
   },
@@ -59,8 +62,9 @@ return ReadOnly("WeaponAccessory", {
     Rarity = 5,
     RegainItemId = 110,
     RegainItemNum = 10,
-    SortPriority = 4,
+    SortPriority = 20,
     Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10004
   },
@@ -75,6 +79,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 5,
     Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10005
   },
@@ -90,6 +95,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 6,
     Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10006
   },
@@ -105,6 +111,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 7,
     Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10007
   },
@@ -120,6 +127,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 8,
     Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10008
   },
@@ -134,6 +142,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 9,
     Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10009
   },
@@ -149,6 +158,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 10,
     Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10010
   },
@@ -164,6 +174,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 11,
     Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10011
   },
@@ -179,6 +190,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 12,
     Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10012
   },
@@ -193,6 +205,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 13,
     Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10013
   },
@@ -208,6 +221,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 14,
     Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10014
   },
@@ -223,6 +237,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 15,
     Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10015
   },
@@ -238,6 +253,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 16,
     Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10016
   },
@@ -250,8 +266,9 @@ return ReadOnly("WeaponAccessory", {
     Rarity = 4,
     RegainItemId = 110,
     RegainItemNum = 10,
-    SortPriority = 17,
+    SortPriority = 4,
     Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
     UnlockOption = "UI_Accessory_Unlock_Impression",
     WeaponAccessoryId = 10017
   },
@@ -265,8 +282,9 @@ return ReadOnly("WeaponAccessory", {
     Rarity = 4,
     RegainItemId = 110,
     RegainItemNum = 10,
-    SortPriority = 18,
+    SortPriority = 3,
     Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
     UnlockOption = "UI_Accessory_Unlock_RegionReputation",
     WeaponAccessoryId = 10018
   },
@@ -280,8 +298,9 @@ return ReadOnly("WeaponAccessory", {
     Rarity = 4,
     RegainItemId = 110,
     RegainItemNum = 10,
-    SortPriority = 19,
+    SortPriority = 2,
     Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10019
   },
@@ -295,8 +314,9 @@ return ReadOnly("WeaponAccessory", {
     Rarity = 4,
     RegainItemId = 110,
     RegainItemNum = 10,
-    SortPriority = 20,
+    SortPriority = 1,
     Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
     UnlockOption = "UI_Accessory_Unlock_RegionReputation",
     WeaponAccessoryId = 10020
   },
@@ -311,6 +331,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 21,
     Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
     UnlockOption = "UI_Accessory_Unlock_Impression",
     WeaponAccessoryId = 10021
   },
@@ -325,6 +346,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 22,
     Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
     UnlockOption = "UI_Accessory_Unlock_Impression",
     WeaponAccessoryId = 10022
   },
@@ -339,6 +361,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 23,
     Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10023
   },
@@ -353,6 +376,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 23,
     Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10024
   },
@@ -368,6 +392,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 23,
     Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10025
   },
@@ -383,6 +408,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 23,
     Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10026
   },
@@ -397,6 +423,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 23,
     Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10027
   },
@@ -412,6 +439,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 23,
     Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10028
   },
@@ -427,6 +455,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 23,
     Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10029
   },
@@ -441,6 +470,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 24,
     Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10030
   },
@@ -456,6 +486,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 24,
     Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10031
   },
@@ -471,6 +502,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 24,
     Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10032
   },
@@ -485,6 +517,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 24,
     Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10033
   },
@@ -500,6 +533,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 24,
     Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10034
   },
@@ -515,7 +549,182 @@ return ReadOnly("WeaponAccessory", {
     RegainItemNum = 10,
     SortPriority = 24,
     Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
     WeaponAccessoryId = 10035
+  },
+  [10036] = {
+    AccessorySocket = "Wp_Accessory",
+    Des = "UI_WeaponAccessory_Desc_10034",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Weapon38_02.T_Fashion_Weapon38_02'",
+    ModelPath = "/Game/Asset/Char/Player/Common/Part/Weapon/Mesh/Player_WP_Part16_SM",
+    Name = "UI_WeaponAccessory_Name_10036",
+    Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
+    SortPriority = 24,
+    Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
+    UnlockOption = "UI_Accessory_Unlock_Event",
+    WeaponAccessoryId = 10036
+  },
+  [10037] = {
+    AccessorySocket = "Wp_Accessory",
+    ChangeColor = 2,
+    Des = "UI_WeaponAccessory_Desc_10034",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Weapon38_01.T_Fashion_Weapon38_01'",
+    ModelPath = "/Game/Asset/Char/Player/Common/Part/Weapon/Mesh/Player_WP_Part16_SM",
+    Name = "UI_WeaponAccessory_Name_10037",
+    Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
+    SortPriority = 24,
+    Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
+    UnlockOption = "UI_Accessory_Unlock_Event",
+    WeaponAccessoryId = 10037
+  },
+  [10038] = {
+    AccessorySocket = "Wp_Accessory",
+    ChangeColor = 3,
+    Des = "UI_WeaponAccessory_Desc_10034",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Weapon38_03.T_Fashion_Weapon38_03'",
+    ModelPath = "/Game/Asset/Char/Player/Common/Part/Weapon/Mesh/Player_WP_Part16_SM",
+    Name = "UI_WeaponAccessory_Name_10038",
+    Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
+    SortPriority = 24,
+    Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
+    UnlockOption = "UI_Accessory_Unlock_Event",
+    WeaponAccessoryId = 10038
+  },
+  [10039] = {
+    AccessorySocket = "Wp_Accessory",
+    Des = "UI_WeaponAccessory_Desc_10035",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Weapon39_03.T_Fashion_Weapon39_03'",
+    ModelPath = "/Game/Asset/Char/Player/Common/Part/Weapon/Mesh/Player_WP_Part13_SM",
+    Name = "UI_WeaponAccessory_Name_10039",
+    NiagaraPath = "NiagaraSystem'/Game/Asset/Effect/Niagara/Costume/09Weapon/Part/NS_WP_Part13_001.NS_WP_Part13_001'",
+    Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
+    SocketName = "Player_WpPart01_d",
+    SortPriority = 24,
+    Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
+    UnlockOption = "UI_Accessory_Unlock_Exchange",
+    WeaponAccessoryId = 10039
+  },
+  [10040] = {
+    AccessorySocket = "Wp_Accessory",
+    ChangeColor = 2,
+    Des = "UI_WeaponAccessory_Desc_10035",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Weapon39_01.T_Fashion_Weapon39_01'",
+    ModelPath = "/Game/Asset/Char/Player/Common/Part/Weapon/Mesh/Player_WP_Part13_SM",
+    Name = "UI_WeaponAccessory_Name_10040",
+    NiagaraPath = "NiagaraSystem'/Game/Asset/Effect/Niagara/Costume/09Weapon/Part/NS_WP_Part13_002.NS_WP_Part13_002'",
+    Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
+    SocketName = "Player_WpPart01_d",
+    SortPriority = 24,
+    Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
+    UnlockOption = "UI_Accessory_Unlock_Exchange",
+    WeaponAccessoryId = 10040
+  },
+  [10041] = {
+    AccessorySocket = "Wp_Accessory",
+    ChangeColor = 3,
+    Des = "UI_WeaponAccessory_Desc_10035",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Weapon39_02.T_Fashion_Weapon39_02'",
+    ModelPath = "/Game/Asset/Char/Player/Common/Part/Weapon/Mesh/Player_WP_Part13_SM",
+    Name = "UI_WeaponAccessory_Name_10041",
+    NiagaraPath = "NiagaraSystem'/Game/Asset/Effect/Niagara/Costume/09Weapon/Part/NS_WP_Part13_003.NS_WP_Part13_003'",
+    Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
+    SocketName = "Player_WpPart01_d",
+    SortPriority = 24,
+    Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
+    UnlockOption = "UI_Accessory_Unlock_Exchange",
+    WeaponAccessoryId = 10041
+  },
+  [10042] = {
+    AccessorySocket = "Wp_Accessory",
+    Des = "UI_WeaponAccessory_Desc_10036",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Weapon36_03.T_Fashion_Weapon36_03'",
+    ModelPath = "/Game/Asset/Char/Player/Common/Part/Weapon/Mesh/Player_WP_Part14_SM",
+    Name = "UI_WeaponAccessory_Name_10042",
+    Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
+    SortPriority = 24,
+    Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
+    UnlockOption = "UI_Accessory_Unlock_Exchange",
+    WeaponAccessoryId = 10042
+  },
+  [10043] = {
+    AccessorySocket = "Wp_Accessory",
+    ChangeColor = 2,
+    Des = "UI_WeaponAccessory_Desc_10036",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Weapon36_02.T_Fashion_Weapon36_02'",
+    ModelPath = "/Game/Asset/Char/Player/Common/Part/Weapon/Mesh/Player_WP_Part14_SM",
+    Name = "UI_WeaponAccessory_Name_10043",
+    Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
+    SortPriority = 24,
+    Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
+    UnlockOption = "UI_Accessory_Unlock_Exchange",
+    WeaponAccessoryId = 10043
+  },
+  [10044] = {
+    AccessorySocket = "Wp_Accessory",
+    ChangeColor = 3,
+    Des = "UI_WeaponAccessory_Desc_10036",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Weapon36_01.T_Fashion_Weapon36_01'",
+    ModelPath = "/Game/Asset/Char/Player/Common/Part/Weapon/Mesh/Player_WP_Part14_SM",
+    Name = "UI_WeaponAccessory_Name_10044",
+    Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
+    SortPriority = 24,
+    Sound = "SOUND_ITEM_CUTE",
+    StanceFXType = "Accessory",
+    UnlockOption = "UI_Accessory_Unlock_Exchange",
+    WeaponAccessoryId = 10044
+  },
+  [20001] = {
+    AuSplice = "btc_assessory01",
+    Des = "UI_WeaponAccessory_Desc_20001",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Fx20.T_Fashion_Fx20'",
+    Name = "UI_WeaponAccessory_Name_20001",
+    Rarity = 5,
+    StanceFXTag = "1030301",
+    StanceFXType = "RunAttack",
+    Video = "FileMediaSource'/Game/Asset/UIVideo/Weapon/Claymore_Baolie.Claymore_Baolie'",
+    VideoCover = "Texture2D'/Game/UI/Texture/Dynamic/Image/SkinVideo/T_SkinVideo_Fx20.T_SkinVideo_Fx20'",
+    WeaponAccessoryId = 20001
+  },
+  [30001] = {
+    IsHide = true,
+    StanceFXType = "HeavyAttack",
+    WeaponAccessoryId = 30001
+  },
+  [40001] = {
+    IsHide = true,
+    StanceFXType = "FallAttack",
+    WeaponAccessoryId = 40001
+  },
+  [50001] = {
+    IsHide = true,
+    StanceFXType = "SlideAttack",
+    WeaponAccessoryId = 50001
   }
 })

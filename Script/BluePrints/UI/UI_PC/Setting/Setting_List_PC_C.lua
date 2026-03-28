@@ -135,7 +135,8 @@ function S:OnNavigateDown()
 end
 
 function S:GetFirstWidgetToNavigate()
-  if self.Panel_Title:GetVisibility() == UE4.ESlateVisibility.Collapsed then
+  local Entry = UE4.URuntimeCommonFunctionLibrary.GetEntryWidgetFromItem(self.List_Options, 0)
+  if Entry and self.Panel_Title:GetVisibility() == UE4.ESlateVisibility.Collapsed then
     local Entry = UE4.URuntimeCommonFunctionLibrary.GetEntryWidgetFromItem(self.List_Options, 0)
     return Entry:GetFirstWidgetToNavigate()
   else
@@ -712,7 +713,7 @@ function S:OnKeyDownCallbackFunction(NewKeyName)
   if nil == KeyData[NewKeyName] then
     self.KeyIsChanged = false
     Params.StateName = "ChangeSecond"
-    Params.NewKeyText = NewKeyName
+    Params.NewKeyText = CommonUtils:GetKeyText(NewKeyName)
     Params.NewKey = NewKeyName
     Params.ForbidRightBtn = true
     Params.DialogItemIndex = 3

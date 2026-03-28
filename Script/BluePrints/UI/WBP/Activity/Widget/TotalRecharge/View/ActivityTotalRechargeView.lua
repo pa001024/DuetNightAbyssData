@@ -86,6 +86,11 @@ function M:RefreshPageStaticView(ActivityConfigData, PageConfigData, InfoClickFu
   local BtnQaConfigData = {}
   BtnQaConfigData.ClickCallback = InfoClickFunction
   BtnQaConfigData.OwnerWidget = self
+  
+  function BtnQaConfigData.SoundFunc()
+  end
+  
+  BtnQaConfigData.SoundFuncReceiver = self
   self.Btn_Qa:Init(BtnQaConfigData)
   self.Num_Money:SetText(tostring(0))
   self.Btn_Confirm:SetText(GText("UI_Event_CumulativeTopUpEvent_Jump"))
@@ -206,7 +211,7 @@ function M:ScrollToRewardSmoothly()
   local TargetIdx = self:GetTargetScrollIndex()
   local ItemObject = self.List_Reward:GetItemAt(TargetIdx - 1)
   if ItemObject then
-    self.List_Reward:ScrollItemIntoViewWithAnim(ItemObject, true, UE.EDescendantScrollDestination.Center)
+    self.List_Reward:ScrollItemIntoViewWithAnim(ItemObject, true, UE4.EDescendantScrollDestination.Center)
   end
 end
 

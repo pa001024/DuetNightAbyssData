@@ -34,7 +34,7 @@ function M:FadeIn(FadeTime, Callback)
         self:OnFadeInFinished()
       end
     })
-    self:StopAllAnimations()
+    self:DestroyAllAnmations()
     self:PlayAnimation(self.AlphaChange, 0, 1, EUMGSequencePlayMode.Forward, AnimationTime / FadeTime)
   end
   AudioManager(self):PlayUISound(self, "event:/snapshot/ui/filter_fade_ui", "BlackScreenBorder", nil)
@@ -59,7 +59,7 @@ function M:FadeOut(FadeTime, Callback)
         self.bFadeOut = false
       end
     })
-    self:StopAllAnimations()
+    self:DestroyAllAnmations()
     self:PlayAnimation(self.AlphaChange, 0, 1, EUMGSequencePlayMode.Reverse, AnimationTime / FadeTime)
   end
   AudioManager(self):StopSound(self, "BlackScreenBorder")
@@ -67,13 +67,13 @@ end
 
 function M:SetToBlack()
   DebugPrint("BP_BlackScreenBorder_C:SetToBlack", "FrameCount:", UKismetSystemLibrary.GetFrameCount(), self)
-  self:StopAllAnimations()
+  self:DestroyAllAnmations()
   self:PlayAnimation(self.Black)
 end
 
 function M:SetToTransparent()
   DebugPrint("BP_BlackScreenBorder_C:SetToTransparent", "FrameCount:", UKismetSystemLibrary.GetFrameCount(), self)
-  self:StopAllAnimations()
+  self:DestroyAllAnmations()
   self:PlayAnimation(self.Transparent)
 end
 

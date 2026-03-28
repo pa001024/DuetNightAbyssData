@@ -74,7 +74,13 @@ function FSwitchToMasterComponent:Execute()
     self.PlayerController:Possess(Player)
   end
   Player:EnableRimLightModel(false)
-  local AvatarInfo = {}
+  local bUseSkin = EMCache:Get("AutoFashion") or false
+  local DefaultAppearanceSuit = {
+    AccessorySuit = Player.CharacterFashion:GetDefaultAccessorySuit()
+  }
+  local AvatarInfo = {
+    AppearanceSuit = bUseSkin and self:GetServerAppearanceSuitByCharId(MasterRoleId) or DefaultAppearanceSuit
+  }
   Player:ChangeRole(MasterRoleId, AvatarInfo)
   Player:RealChangeUsingWeapon(nil)
   Player:BanSkills()

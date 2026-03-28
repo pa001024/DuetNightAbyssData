@@ -61,7 +61,6 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = true,
@@ -69,6 +68,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -371,10 +371,9 @@ return {
               FlowAssetPath = "",
               TalkType = "FreeSimple",
               BlendInTime = 0.5,
-              BlendOutTime = 2,
+              BlendOutTime = 0.5,
               InType = "BlendIn",
-              OutType = "FadeOut",
-              ShowFadeDetail = false,
+              OutType = "BlendOut",
               BlendEaseExp = 2,
               UseProceduralCamera = false,
               ProceduralCameraId = 1,
@@ -412,8 +411,10 @@ return {
             pos = {x = 3559.4915785968415, y = -333.3600478468896},
             propsData = {
               DialogueId = 0,
-              UseTalkFadeOut = false,
-              TalkFadeOutTime = 0
+              UseTalkFadeOut = true,
+              TalkFadeOutTime = 1,
+              UseTalkFadeIn = true,
+              TalkFadeInTime = 1
             }
           },
           ["17429713515991043799"] = {
@@ -499,10 +500,9 @@ return {
               FlowAssetPath = "",
               TalkType = "FreeSimple",
               BlendInTime = 0.5,
-              BlendOutTime = 2,
+              BlendOutTime = 0.5,
               InType = "BlendIn",
-              OutType = "FadeOut",
-              ShowFadeDetail = false,
+              OutType = "BlendOut",
               BlendEaseExp = 2,
               UseProceduralCamera = false,
               ProceduralCameraId = 1,
@@ -540,8 +540,10 @@ return {
             pos = {x = 3586.4005740506436, y = 32.065801768393726},
             propsData = {
               DialogueId = 0,
-              UseTalkFadeOut = false,
-              TalkFadeOutTime = 0
+              UseTalkFadeOut = true,
+              TalkFadeOutTime = 1,
+              UseTalkFadeIn = true,
+              TalkFadeInTime = 1
             }
           },
           ["17498997048213387"] = {
@@ -613,10 +615,9 @@ return {
               FlowAssetPath = "",
               TalkType = "FreeSimple",
               BlendInTime = 0.5,
-              BlendOutTime = 2,
+              BlendOutTime = 0.5,
               InType = "BlendIn",
-              OutType = "FadeOut",
-              ShowFadeDetail = false,
+              OutType = "BlendOut",
               BlendEaseExp = 2,
               UseProceduralCamera = false,
               ProceduralCameraId = 1,
@@ -654,8 +655,10 @@ return {
             pos = {x = 3648.902954825495, y = 443.6465682486849},
             propsData = {
               DialogueId = 0,
-              UseTalkFadeOut = false,
-              TalkFadeOutTime = 0
+              UseTalkFadeOut = true,
+              TalkFadeOutTime = 1,
+              UseTalkFadeIn = true,
+              TalkFadeInTime = 1
             }
           },
           ["17501470335791267048"] = {

@@ -106,7 +106,7 @@ function SkillUtils.GetSkillAllDesc(SkillId, SkillLevel, SkillGrade, Avatar, Tar
   if DataMgr.Skill[SkillId] and DataMgr.Skill[SkillId][SkillLevel] then
     local SkillData = DataMgr.Skill[SkillId][SkillLevel][SkillGrade]
     if SkillData and SkillData.SkillDescKeys then
-      for Index, DescKey in ipairs(SkillData.SkillDescKeys) do
+      for Index, DescKey in pairs(SkillData.SkillDescKeys) do
         local AttrConfigIdList = SkillData.SkillDescHints and SkillData.SkillDescHints[Index] or {}
         local AttrDesc = GText(DescKey)
         local Args = {Attrs = Attrs, ImpactAttrs = AttrConfigIdList}
@@ -126,6 +126,7 @@ function SkillUtils.GetSkillAllDesc(SkillId, SkillLevel, SkillGrade, Avatar, Tar
           end
         end
         table.insert(Result, {
+          Index = Index,
           Desc = AttrDesc,
           Value = ValueStr,
           Hint = AttrHint
@@ -133,6 +134,9 @@ function SkillUtils.GetSkillAllDesc(SkillId, SkillLevel, SkillGrade, Avatar, Tar
       end
     end
   end
+  table.sort(Result, function(a, b)
+    return a.Index < b.Index
+  end)
   return Result
 end
 
@@ -150,7 +154,7 @@ function SkillUtils.GetSkillDesc(SkillId, SkillLevel, ExpectLevel, SkillGrade)
       local CastTo
       if SkillData.SkillDescValues then
         for i, DescValue in pairs(SkillData.SkillDescValues) do
-          Desc, CastTo = SkillUtils.ReplaceDescValueTypeCast(Desc, i)
+          Desc, CastTo = SkillUtils.ReplaceAndChekDescValueCast(Desc, i)
           local Percent = string.match(DescValue, "%%") or ""
           local ValStr = ""
           
@@ -454,7 +458,7 @@ function SkillUtils.CalcWeaponPassiveEffectsDesc(WeaponData, GradeLevel, Compare
     if data.PassiveEffectsDescValues then
       local CastTo
       for i, value in ipairs(data.PassiveEffectsDescValues) do
-        SkillDesc, CastTo = SkillUtils.ReplaceDescValueTypeCast(SkillDesc, i)
+        SkillDesc, CastTo = SkillUtils.ReplaceAndChekDescValueCast(SkillDesc, i)
         local valueStr = SkillUtils.CalcSkillDesc(value, math.min(DataMgr.DataConst.MaxSkillLevel, (GradeLevel or WeaponData.GradeLevel or 0) + 1), nil, true)
         valueStr = SkillUtils.FormatDescValue1(valueStr, CastTo)
         if ComparedGradeLevel then
@@ -524,23 +528,42 @@ function SkillUtils.CalcPetEntryEnhanceDesc(EntryId, NewEntryId)
   end
 end
 
-function SkillUtils.ReplaceDescValueTypeCast(Desc, Idx)
+function SkillUtils.ReplaceAndChekDescValueCast(Desc, Idx)
   if string.find(Desc, "{[I|i][N|n][T|t]}#" .. Idx) then
-    return string.gsub(Desc, "{[I|i][N|n][T|t]}#" .. Idx, "#" .. Idx), true
+    return string.gsub(Desc, "{[I|i][N|n][T|t]}#" .. Idx, "#" .. Idx), {"int"}
+  elseif string.find(Desc, "{[F|f][L|l][O|o][A|a][T|t][0-9]}#" .. Idx) then
+    local Start, End = string.find(Desc, "{[F|f][L|l][O|o][A|a][T|t][0-9]}#")
+    local Decimal = string.sub(Desc, Start + 6, End - 2)
+    return string.gsub(Desc, "{[F|f][L|l][O|o][A|a][T|t][0-9]}#" .. Idx, "#" .. Idx), {"float", Decimal}
   else
     return Desc, false
   end
 end
 
-function SkillUtils.FormatDescValue1(str, bToInt)
+function SkillUtils.FormatDescValue1(str, CastTo)
   local Res = str
   local value = string.match(str, "(%d+%.?%d*)")
   if value then
     local newValue = tonumber(value)
-    local _pattern = "%.1f"
-    if bToInt then
-      value = math.floor(tonumber(value))
-      _pattern = "%d"
+    local _pattern
+    if CastTo then
+      if "int" == CastTo[1] then
+        value = math.floor(tonumber(value))
+        _pattern = "%d"
+      elseif "float" == CastTo[1] and CastTo[2] then
+        if string.sub(str, -1) == "%" then
+          local d = tonumber(CastTo[2]) or 0
+          d = d - 2
+          if d < 0 then
+            d = 0
+          end
+          _pattern = "%." .. d .. "f"
+        else
+          _pattern = "%." .. CastTo[2] .. "f"
+        end
+      end
+    else
+      _pattern = "%.1f"
     end
     if string.sub(str, -1) == "%" then
       newValue = string.format(_pattern .. "%%", value)

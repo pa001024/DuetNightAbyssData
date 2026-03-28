@@ -814,5 +814,14 @@ return ReadOnly("Music", {
     MusicScoreId = 1011,
     PathDes = "HomePianoAcc_1011007",
     Resource = 31011007
+  },
+  [1012001] = {
+    Event = "event:/bgm/1_3/musicbox/0148_theme_song_hyb",
+    MusicDes = "HomePianoDes_1012001",
+    MusicId = 1012001,
+    MusicName = "HomePianoName_1012001",
+    MusicScoreId = 1012,
+    PathDes = "HomePianoAcc_1012001",
+    Resource = 31012001
   }
 })

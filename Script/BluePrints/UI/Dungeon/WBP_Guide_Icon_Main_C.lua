@@ -8,6 +8,20 @@ function M:Initialize(Initializer)
   self.GuideIcons = {}
 end
 
+function M:AddChildToMain(GuideIconObj)
+  if not GuideIconObj then
+    return
+  end
+  local WidgetName = GuideIconObj.WidgetName
+  DebugPrint("WBP_Guide_Icon_Main_C AddChildToMain", WidgetName)
+  if self.GuideIcons[WidgetName] then
+    DebugPrint("WBP_Guide_Icon_Main_C AddChildToMain", WidgetName, "Already Exists")
+    return
+  end
+  self.GuideIconMain:AddChild(GuideIconObj)
+  self:AddGuideIcon(GuideIconObj)
+end
+
 function M:AddGuideIcon(GuideIconObj)
   DebugPrint("WBP_Guide_Icon_Main_C AddGuideIcon", GuideIconObj.WidgetName)
   self.GuideIcons[GuideIconObj.WidgetName] = GuideIconObj

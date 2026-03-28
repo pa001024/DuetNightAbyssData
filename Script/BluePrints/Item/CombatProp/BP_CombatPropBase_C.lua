@@ -109,7 +109,7 @@ function BP_CombatPropBase_C:PropUseSkill(SkillId, TargetActor)
 end
 
 function BP_CombatPropBase_C:ExecuteTask(EffectId, Target)
-  Battle(self):ExecuteSkillEffect(self, EffectId, Target, nil, self)
+  Battle(self):ExecuteSkillEffectWithType(self, EffectId, Target, nil, self)
 end
 
 function BP_CombatPropBase_C:PropAttack(TargetActor)
@@ -218,7 +218,7 @@ function BP_CombatPropBase_C:StateCreateReward(PlayerId, NextStateId)
     end
     local ExtraInfo = {
       UniqueSign = self.Eid,
-      SourceEid = KillMineRoleEid
+      SourceEid = PlayerId
     }
     if GameMode:IsInRegion() then
       ExtraInfo.WorldRegionEid = self.WorldRegionEid

@@ -10,7 +10,6 @@ M._components = {
   "BluePrints.UI.WBP.Armory.ActorController.Armory_MountActorComponent"
 }
 local SelfObjCount = 0
-local HitResult = FHitResult()
 
 function M:SwitchArmoryCamera(IsArmoryCamera, Duration)
   if not self.ArmoryHelper then
@@ -123,6 +122,7 @@ function M:LoadCloseArmoryCameraInfo()
 end
 
 function M:OnHelperBecomeViewTarget(PC)
+  DebugPrint("CY@ OnHelperBecomeViewTarget:", self.ObjId, "FirstBeComeViewTarget:", self.OnFirstBecomeViewTarget, "SequencePlaying:", self.IsPlayingSequence)
   self.IsControled = true
   self.bTryDestroyActorsWhenDestruct = false
   if self.OnFirstBecomeViewTarget then
@@ -131,12 +131,12 @@ function M:OnHelperBecomeViewTarget(PC)
     self:HidePlayerActor("ActorController_ChangeViewTarget", false)
     self:HideWeaponActor("ActorController_ChangeViewTarget", false)
     self:HidePetActor("ActorController_ChangeViewTarget", false)
-    self:UpdateSceneLighting()
+    self:RefreshEnvironment(true)
     return
   end
   if self.IsPlayingSequence then
-    if self.MVPActorController then
-      self.MVPActorController:ViewTarget()
+    if self.SequenceActorController then
+      self.SequenceActorController:ViewTarget()
     end
     return
   end
@@ -155,7 +155,7 @@ function M:OnHelperBecomeViewTarget(PC)
   else
     self:SetNoActorCamera()
   end
-  self:DelayUpdateSceneLighting()
+  self:RefreshEnvironment(true)
 end
 
 function M:RecoverToPlayerActor()
@@ -177,31 +177,31 @@ function M:RecoverToPlayerActor()
     self:ChangePetModel(self.CurrentPetInfo)
   end
   if self.LastArmoryPlayerLoc then
-    self.ArmoryPlayer:K2_SetActorLocation(self.LastArmoryPlayerLoc, false, HitResult, false)
+    self:SetPlayerLocation(self.LastArmoryPlayerLoc)
   end
   if self.LastArmoryPlayerRot then
-    self.ArmoryPlayer:K2_SetActorRotation(self.LastArmoryPlayerRot, false, HitResult, false)
+    self:SetPlayerRotation(self.LastArmoryPlayerRot)
   end
   if self.CurrentWeaponInfo then
-    self:ChangeWeaponModel(self.CurrentWeaponInfo)
+    self:ChangeWeaponModel(self.CurrentWeaponInfo, true, true)
     if self.LastWeaponAppearanceInfo then
       self:ChangeWeaponAppearance(self.LastWeaponAppearanceInfo)
     end
   end
   self.ArmoryHelper:OnRoleChanged()
-  if self.PlayMVPInfo then
-    self:ReplayMVPSequence()
+  if self.SequenceInfo then
+    self:ReplaySequence()
   elseif self.CurRiddingMount then
     self:RefreshMount()
   else
     self.bPlaySameMontage = true
-    self:SetArmoryMontageTag(self.ArmoryPlayer, self.CurMontageTag, self.LastShowOrHideWeapon)
+    self:SetArmoryMontageTag(self.CurMontageTag, self.LastShowOrHideWeapon)
   end
 end
 
 function M:RecoverToSingleWeapon()
   if self.CurrentWeaponInfo then
-    self:ChangeWeaponModel(self.CurrentWeaponInfo, nil, true, true)
+    self:ChangeWeaponModel(self.CurrentWeaponInfo, true, true)
     if self.LastWeaponAppearanceInfo then
       self:ChangeWeaponAppearance(self.LastWeaponAppearanceInfo)
     end
@@ -237,8 +237,7 @@ function M:OnOpened(Duration)
   local GameInstance = UE4.UGameplayStatics.GetGameInstance(self.ViewUI)
   local UIManager = GameInstance:GetGameUIManager()
   if not IsValid(self.ArmoryHelper) then
-    local bDontAttach = self.UIName == "MountsMain"
-    self.ArmoryHelper = UIManager:CreateUIActorCameraHelper(UE4.UGameplayStatics.GetPlayerCharacter(self.ViewUI, 0), bDontAttach)
+    self.ArmoryHelper = UIManager:CreateUIActorCameraHelper(UE4.UGameplayStatics.GetPlayerCharacter(self.ViewUI, 0))
   end
   if IsValid(self.ArmoryHelper) then
     self.ArmoryHelper:BindViewTargetEvents({
@@ -436,10 +435,10 @@ function M:SetMontageAndCamera(Type, Tag, Behavior, ExtraTag)
       end
       self:PlayAppearFX(ArmoryPlayer.FXComponent)
       self:HidePlayerActor(self.UIName, false)
-      self:RealPlayMontageAndCamera(ArmoryPlayer, self.LastMontageTag, self.bShowOrHideWeapon, self.LastDelayCameraTags)
+      self:RealPlayMontageAndCamera(self.LastMontageTag, self.bShowOrHideWeapon, self.LastDelayCameraTags)
     end)
   else
-    self:RealPlayMontageAndCamera(ArmoryPlayer)
+    self:RealPlayMontageAndCamera()
   end
 end
 
@@ -461,6 +460,15 @@ function M:PlayDisappearFX(FXComponent, OnFXFinished)
       }
     end
     FXComponent:PlayEffectByIDParams(302, Params)
+    local ReflectionActor = self:GetReflectionActor()
+    if ReflectionActor and ReflectionActor.FXComponent then
+      Params.scale = {
+        1,
+        1,
+        -1
+      }
+      ReflectionActor.FXComponent:PlayEffectByIDParams(302, Params)
+    end
     self.DisappearFXPlaying = true
   end
   if IsLastDisappearFXPlaying then
@@ -495,14 +503,23 @@ function M:PlayAppearFX(FXComponent)
       }
     end
     FXComponent:PlayEffectByIDParams(301, Params)
+    local ReflectionActor = self:GetReflectionActor()
+    if ReflectionActor and ReflectionActor.FXComponent then
+      Params.scale = {
+        1,
+        1,
+        -1
+      }
+      ReflectionActor.FXComponent:PlayEffectByIDParams(301, Params)
+    end
   end
 end
 
-function M:RealPlayMontageAndCamera(ArmoryPlayer, MontageTag, bShowOrHideWeapon, CameraTags)
+function M:RealPlayMontageAndCamera(MontageTag, bShowOrHideWeapon, CameraTags)
   if nil == MontageTag then
     MontageTag, bShowOrHideWeapon = self:CalcArmoryMontageTag(self.LastMontageAndCameraType, self.LastMontageAndCameraTag, self.LastMontageAndCameraBehavior)
   end
-  self:SetArmoryMontageTag(ArmoryPlayer, MontageTag, bShowOrHideWeapon)
+  self:SetArmoryMontageTag(MontageTag, bShowOrHideWeapon)
   if CameraTags then
     self:SetArmoryCameraTag(table.unpack(CameraTags))
   else
@@ -516,8 +533,8 @@ function M:RealPlayMontageAndCamera(ArmoryPlayer, MontageTag, bShowOrHideWeapon,
 end
 
 function M:ResetActorRotation()
-  if self.MVPActorController then
-    self.MVPActorController:ResetActorRotation()
+  if self.SequenceActorController then
+    self.SequenceActorController:ResetActorRotation()
     return
   end
   self.ArmoryHelper:ResetRotation()
@@ -525,6 +542,23 @@ function M:ResetActorRotation()
   if ArmoryPet and ArmoryPet.SkeletalMesh then
     ArmoryPet.SkeletalMesh:K2_SetRelativeRotation(FRotator(0, 0, 0), false, nil, false)
   end
+  local ReflectionActor = self:GetReflectionActor(self.ArmoryHelper:GetViewActor())
+  if ReflectionActor then
+    ReflectionActor:K2_SetActorRotation(self.ArmoryHelper:GetViewActorRotation(), false, nil, false)
+  end
+end
+
+function M:GetReflectionActor(Owner)
+  return self.Reflections[Owner]
+end
+
+function M:GetReflectionOwner(ReflectionActor)
+  return self.ReflectionOwners[ReflectionActor]
+end
+
+function M:SetReflectionActor(Owner, ReflectionActor)
+  self.Reflections[Owner] = ReflectionActor
+  self.ReflectionOwners[ReflectionActor] = Owner
 end
 
 function M:BindEvent(Obj, Events)
@@ -534,7 +568,7 @@ function M:BindEvent(Obj, Events)
   self.OnCharModelChanged = Events.OnCharModelChanged
 end
 
-function M:SetArmoryMontageTag(Player, Tag, bShowOrHideWeapon)
+function M:SetArmoryMontageTag(Tag, bShowOrHideWeapon)
   self.bShowOrHideWeapon = bShowOrHideWeapon
   Tag = Tag or "None"
   self.LastMontageTag = Tag
@@ -545,25 +579,45 @@ function M:SetArmoryMontageTag(Player, Tag, bShowOrHideWeapon)
   if self.LastMontageTag == self.CurMontageTag and not self.bPlaySameMontage then
     bPlay = false
   end
+  local Player = self:GetPlayerActor()
+  local PlayerReflection = self:GetReflectionActor(Player)
   if bPlay then
     self:ResetActorRotation()
     self.bPlaySameMontage = false
     self.CurMontageTag = Tag
-    Player.UsingWeapon = nil
-    if "Ultra" == Tag and not Player:GetWeaponByWeaponTag(Tag, 1) then
-      self:AddPlayerUltraWeapons(Player)
+    
+    local function SetArmoryTag(PlayerCharacter)
+      if not PlayerCharacter then
+        return
+      end
+      PlayerCharacter.UsingWeapon = nil
+      if "Ultra" == Tag and not PlayerCharacter:GetWeaponByWeaponTag(Tag, 1) then
+        self:AddPlayerUltraWeapons(PlayerCharacter)
+      end
+      PlayerCharacter:SetArmoryTag(Tag)
     end
-    Player:SetArmoryTag(Tag)
+    
+    SetArmoryTag(Player)
+    SetArmoryTag(PlayerReflection)
   end
   self.LastShowOrHideWeapon = self.bShowOrHideWeapon
-  if self.bShowOrHideWeapon == true then
-    self:ChangePlayerWeaponByType(self.LastMontageAndCameraTag, Player)
-    if Player.UsingWeapon then
-      Player:UnBindWeaponFromHand()
+  
+  local function ChangeWeapon(PlayerCharacter)
+    if nil == PlayerCharacter then
+      return
     end
-  elseif self.bShowOrHideWeapon == false then
-    self:ChangePlayerWeaponByType(nil, Player)
+    if self.bShowOrHideWeapon == true then
+      self:ChangePlayerWeaponByType(self.LastMontageAndCameraTag, PlayerCharacter)
+      if PlayerCharacter.UsingWeapon then
+        PlayerCharacter:UnBindWeaponFromHand()
+      end
+    elseif self.bShowOrHideWeapon == false then
+      self:ChangePlayerWeaponByType(nil, PlayerCharacter)
+    end
   end
+  
+  ChangeWeapon(Player)
+  ChangeWeapon(PlayerReflection)
   if self.bPlayRoleChangedSound and Tag == Const.ArmoryIdleTags.Armory then
     AudioManager(self.ViewUI):PlayFMODSoundByID(Player, 213, Player, "None", {
       bFollowSocket = true,
@@ -573,19 +627,27 @@ function M:SetArmoryMontageTag(Player, Tag, bShowOrHideWeapon)
   end
   self.bPlayRoleChangedSound = false
   if bPlay or self.bShowOrHideWeapon then
-    CommonUtils:SetActorTickableWhenPaused(Player, true)
-    if Player.MeleeWeapon then
-      CommonUtils:SetActorTickableWhenPaused(Player.MeleeWeapon, true)
-      self:SetAccessoriesTickableWhenPaused(Player.MeleeWeapon.Accessories)
+    local function SetWeaponTickableWhenPaused(PlayerCharacter)
+      if nil == PlayerCharacter then
+        return
+      end
+      CommonUtils:SetActorTickableWhenPaused(PlayerCharacter, true)
+      if PlayerCharacter.MeleeWeapon then
+        CommonUtils:SetActorTickableWhenPaused(PlayerCharacter.MeleeWeapon, true)
+        self:SetAccessoriesTickableWhenPaused(PlayerCharacter.MeleeWeapon.Accessories)
+      end
+      if PlayerCharacter.RangedWeapon then
+        CommonUtils:SetActorTickableWhenPaused(PlayerCharacter.RangedWeapon, true)
+        self:SetAccessoriesTickableWhenPaused(PlayerCharacter.RangedWeapon.Accessories)
+      end
+      if PlayerCharacter.UltraWeapon then
+        CommonUtils:SetActorTickableWhenPaused(PlayerCharacter.UltraWeapon, true)
+        self:SetAccessoriesTickableWhenPaused(PlayerCharacter.UltraWeapon.Accessories)
+      end
     end
-    if Player.RangedWeapon then
-      CommonUtils:SetActorTickableWhenPaused(Player.RangedWeapon, true)
-      self:SetAccessoriesTickableWhenPaused(Player.RangedWeapon.Accessories)
-    end
-    if Player.UltraWeapon then
-      CommonUtils:SetActorTickableWhenPaused(Player.UltraWeapon, true)
-      self:SetAccessoriesTickableWhenPaused(Player.UltraWeapon.Accessories)
-    end
+    
+    SetWeaponTickableWhenPaused(Player)
+    SetWeaponTickableWhenPaused(PlayerReflection)
   end
 end
 
@@ -599,6 +661,14 @@ end
 
 function M:SetExCameraOffset(Offset)
   self.ExCameraOffset = Offset
+end
+
+function M:EnableCameraScrolling(bEnable)
+  self.ArmoryHelper.EnableCameraScrolling = bEnable
+end
+
+function M:IsEnableCameraScrolling()
+  return self.ArmoryHelper.EnableCameraScrolling
 end
 
 function M:SetArmoryCameraTag(Tag1, Tag2, Tag3, Tag4)
@@ -619,9 +689,10 @@ function M:SetArmoryCameraTag(Tag1, Tag2, Tag3, Tag4)
     return
   end
   self.LastDelayCameraTags = nil
-  if self.ArmoryPlayer then
+  local PlayerActor = self:GetPlayerActor()
+  if PlayerActor then
     Tag1 = Tag1 or ""
-    Tag2 = "0" == Tag2 and "_" .. self.ArmoryPlayer.PlayerAnimInstance.IdleTag or Tag2 and "" ~= Tag2 and "_" .. Tag2 or ""
+    Tag2 = "0" == Tag2 and "_" .. PlayerActor.PlayerAnimInstance.IdleTag or Tag2 and "" ~= Tag2 and "_" .. Tag2 or ""
     Tag3 = Tag3 and "" ~= Tag3 and "_" .. Tag3 or ""
     Tag4 = Tag4 and "" ~= Tag4 and "_" .. Tag4
   local Tag = Tag1 .. Tag2 .. Tag3 .. Tag4
@@ -635,7 +706,7 @@ function M:SetArmoryCameraTag(Tag1, Tag2, Tag3, Tag4)
   local Rotation = FRotator(Data.Rotation[2], Data.Rotation[3], Data.Rotation[1])
   local OffsetVector = FVector(0, 0, 0)
   local OffsetRotator = FRotator(0, 0, 0)
-  local CurrentRoleId = (not self.ArmoryPlayer or not self.ArmoryPlayer.CurrentRoleId) and self.ArmoryWeapon and self.ArmoryWeapon.WeaponId
+  local CurrentRoleId = (not PlayerActor or not PlayerActor.CurrentRoleId) and self.ArmoryWeapon and self.ArmoryWeapon.WeaponId
   if Data.LocationOffset then
     local OffsetData = Data.LocationOffset[CurrentRoleId]
     if OffsetData then
@@ -697,9 +768,9 @@ function M:SetArmoryCameraTag(Tag1, Tag2, Tag3, Tag4)
     BackwardLocation = BackwardLocation + OffsetVector
     ForwardLocation = ForwardLocation + OffsetVector
     self.ArmoryHelper:SetCameraScrollRange(ForwardLocation, BackwardLocation, 0.5, Data.Ease)
-    self.ArmoryHelper.EnableCameraScrolling = true
+    self:EnableCameraScrolling(true)
   else
-    self.ArmoryHelper.EnableCameraScrolling = false
+    self:EnableCameraScrolling(false)
   end
   local FOV = CommonUtils:FocalLengthToFOV(Data.CameraFocal or 22)
   self.ArmoryHelper:StartFOVAnim(FOV, Time, Data.Ease)
@@ -730,7 +801,7 @@ function M:UpdateCameraPPSetting(Params)
     return
   end
   Params = Params or {}
-  self.ViewUI:AddTimer(0.1, function()
+  self.ArmoryHelper:AddTimer(0.1, function()
     self.ArmoryHelper:ClearPPSetting()
     if Params.IsAccessoryPPSetting then
       self.ArmoryHelper:OnOpenAccessory()
@@ -755,8 +826,10 @@ local CameraDataConfig = {
   [SystemUI.CharSkinPreview.UIName] = DataMgr.BattlePassCameraData,
   [SystemUI.SkinPreview.UIName] = DataMgr.SkinPreviewCameraData,
   [SystemUI.GuildWarRank.UIName] = DataMgr.GuildWarRankCameraData,
+  [SystemUI.PersonalInfoDataRanking.UIName] = DataMgr.GuildWarRankCameraData,
   [SystemUI.ShopMain.UIName] = DataMgr.RecommendCameraData,
-  [SystemUI.MountsMain.UIName] = DataMgr.MountCameraData
+  [SystemUI.MountsMain.UIName] = DataMgr.MountCameraData,
+  [SystemUI.ActivitySoloTreasureMain.UIName] = DataMgr.SoloTreasureCameraData
 }
 
 function M:GetCameraData()
@@ -766,14 +839,18 @@ function M:GetCameraData()
   return DataMgr.ArmoryCameraData
 end
 
-function M:OnDragging(CursorDelta)
+function M:OnDragViewActor(CursorDelta)
   local ArmoryPet = self:GetPetActor()
   if ArmoryPet and ArmoryPet.SkeletalMesh then
     CursorDelta = CursorDelta or {X = 0}
     local DeltaRotation = FRotator(0, math.clamp(-CursorDelta.X, -20, 20), 0)
     ArmoryPet.SkeletalMesh:K2_AddRelativeRotation(DeltaRotation, false, nil, false)
   else
-    self.ArmoryHelper:OnDragging(CursorDelta)
+    self.ArmoryHelper:OnDragViewActor(CursorDelta)
+    local PlayerReflection = self:GetReflectionActor(self.ArmoryHelper:GetViewActor())
+    if PlayerReflection then
+      PlayerReflection:K2_SetActorRotation(self.ArmoryHelper:GetViewActorRotation(), false, nil, false)
+    end
   end
 end
 
@@ -918,7 +995,7 @@ function M:GetAvatar()
   return self.Avatar
 end
 
-function M:DestoryCreature(Key)
+function M:DestroyCreature(Key)
   if self.Creatures[Key] then
     self.Creatures[Key]:DestroyEffectCreature()
     self.Creatures[Key] = nil
@@ -932,21 +1009,27 @@ function M:Init(Params)
   self.IsPreviewMode = Params.IsPreviewMode
   self.EPreviewSceneType = Params.EPreviewSceneType
   self.PreviewSceneLocation = Params.PreviewSceneLocation
-  self.SkyBoxColor = Params.SkyBoxColor
+  self.SkyBoxIndex = Params.SkyBoxIndex
   self.bNeedEndCamera = Params.bNeedEndCamera
   self.Avatar = Params.Avatar or ArmoryUtils:GetAvatar()
   self.CurrentCharInfo = Params.Char
   self.CurrentWeaponInfo = Params.Weapon
   self.CurrentPetInfo = Params.Pet
+  self.bEnableReflection = Params.bEnableReflection
+  if self.EPreviewSceneType and self.bEnableReflection == nil then
+    self.bEnableReflection = true
+  end
   self.Event_OnRecorverCameraStart = Params.OnRecorverCameraStart
   self.Event_OnRecorverCameraEnd = Params.OnRecorverCameraEnd
   self.Event_AfterEndViewTarget = Params.AfterEndViewTarget
-  self.SmoothLoad = Params.SmoothLoad or false
   self.ViewActorTypes = {Player = 1, SingleWeapon = 2}
   self.Creatures = {}
+  self.Reflections = {}
+  self.ReflectionOwners = {}
+  self.ObjId = SelfObjCount
   self.IsSecondary = SelfObjCount > 1
   self.UIName = self.ViewUI:GetUIConfigName()
-  if Params.bPlayRoleChangedSound ~= nil then
+  if nil ~= Params.bPlayRoleChangedSound then
     self.bPlayRoleChangedSound = Params.bPlayRoleChangedSound
   else
     self.bPlayRoleChangedSound = true

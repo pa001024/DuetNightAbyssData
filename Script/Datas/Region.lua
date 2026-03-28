@@ -1,5 +1,6 @@
 local T = {}
 T.RT_1 = {0.5, 1.25}
+T.RT_2 = {0.3, 1}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -170,7 +171,7 @@ return ReadOnly("Region", {
     RegionMapFile = "/Game/Maps/Levels/Huaxu/Huaxu_Yanjindu_Main/Huaxu_Yanjindu_Main",
     RegionMapId = 400,
     RegionMapImage = "/Game/UI/WBP/Map/Widget/RegionMap/East/WBP_Map_Reg_East_Yanjindu.WBP_Map_Reg_East_Yanjindu",
-    RegionMapWheelScale = {0.3, 1},
+    RegionMapWheelScale = T.RT_2,
     RegionName = "UI_REGION_NAME_1041",
     RegionType = "Main"
   },
@@ -200,6 +201,7 @@ return ReadOnly("Region", {
   },
   [1045] = {
     AlertDisable = true,
+    IsBlackBg = true,
     IsRandom = {
       104501,
       104502,
@@ -210,12 +212,13 @@ return ReadOnly("Region", {
       104507,
       104508
     },
+    RegionDispCondition = 120206,
     RegionId = 1045,
     RegionMapFile = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_Main/Huaxu_Haojing_Main",
     RegionMapId = 500,
-    RegionMapImage = "/Game/UI/WBP/Map/Widget/RegionMap/WBP_Map_Reg_Chapter01.WBP_Map_Reg_Chapter01",
-    RegionMapImageCenter = {20000, -20000},
-    RegionMapWheelScale = T.RT_1,
+    RegionMapImage = "/Game/UI/WBP/Map/Widget/RegionMap/East/WBP_Map_Reg_East_Haojing.WBP_Map_Reg_East_Haojing",
+    RegionMapImageCenter = {20670, -49970},
+    RegionMapWheelScale = T.RT_2,
     RegionName = "UI_REGION_NAME_1045",
     RegionType = "Main"
   },
@@ -262,6 +265,7 @@ return ReadOnly("Region", {
     RegionType = "Main"
   },
   [1051] = {
+    AlertDisable = true,
     IsRandom = {
       105101,
       105102,
@@ -269,29 +273,35 @@ return ReadOnly("Region", {
     },
     RegionId = 1051,
     RegionMapFile = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_Int/Huaxu_Haojing_Int_Main",
-    RegionMapWheelScale = T.RT_1,
-    RegionName = "UI_REGION_NAME_1051"
+    RegionMapId = 500,
+    RegionMapWheelScale = T.RT_2,
+    RegionName = "UI_REGION_NAME_1051",
+    RegionType = "Main"
   },
   [1052] = {
     AlertDisable = true,
+    IsBlackBg = true,
     IsRandom = {105201},
     RegionId = 1052,
     RegionMapFile = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_Reb/Huaxu_Haojing_Reb_Main",
     RegionMapId = 501,
-    RegionMapImage = "/Game/UI/WBP/Map/Widget/RegionMap/WBP_Map_Reg_Chapter01_KK.WBP_Map_Reg_Chapter01_KK",
+    RegionMapImage = "/Game/UI/WBP/Map/Widget/RegionMap/East/WBP_Map_Reg_East_Shanwaishan.WBP_Map_Reg_East_Shanwaishan",
+    RegionMapImageCenter = {5820, -7930},
     RegionMapWheelScale = T.RT_1,
     RegionName = "UI_REGION_NAME_1052",
     RegionType = "Main"
   },
   [1053] = {
     AlertDisable = true,
+    CloseBlock = true,
+    IsBlackBg = true,
     IsRandom = {105301, 105302},
     RegionId = 1053,
     RegionMapFile = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_TRLM/Huaxu_Haojing_TRLM_Main",
     RegionMapId = 502,
-    RegionMapImage = "/Game/UI/WBP/Map/Widget/RegionMap/WBP_Map_Reg_Chapter01_Sew.WBP_Map_Reg_Chapter01_Sew",
-    RegionMapImageCenter = {0, 20000},
-    RegionMapWheelScale = T.RT_1,
+    RegionMapImage = "/Game/UI/WBP/Map/Widget/RegionMap/East/WBP_Map_Reg_East_Tianrenlingmu.WBP_Map_Reg_East_Tianrenlingmu",
+    RegionMapImageCenter = {19500, 23500},
+    RegionMapWheelScale = T.RT_2,
     RegionName = "UI_REGION_NAME_1053",
     RegionRotation = 270,
     RegionType = "Main"
@@ -305,13 +315,15 @@ return ReadOnly("Region", {
   },
   [1055] = {
     AlertDisable = true,
+    CloseBlock = true,
+    IsBlackBg = true,
     IsRandom = {105501},
     RegionId = 1055,
     RegionMapFile = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_YLX/Huaxu_Haojing_YLX_Main",
     RegionMapId = 503,
-    RegionMapImage = "/Game/UI/WBP/Map/Widget/RegionMap/WBP_Map_Reg_EXChapter01.WBP_Map_Reg_EXChapter01",
-    RegionMapImageCenter = {20000, 0},
-    RegionMapWheelScale = T.RT_1,
+    RegionMapImage = "/Game/UI/WBP/Map/Widget/RegionMap/East/WBP_Map_Reg_East_Youlaixiang.WBP_Map_Reg_East_Youlaixiang",
+    RegionMapImageCenter = {16050, 1925},
+    RegionMapWheelScale = {1, 2},
     RegionName = "UI_REGION_NAME_1055",
     RegionType = "Main"
   },
@@ -359,7 +371,8 @@ return ReadOnly("Region", {
       106004,
       106005,
       106006,
-      106007
+      106007,
+      106008
     },
     RegionId = 1060,
     RegionMapFile = "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_Main/Haiboliya_Chezhan_Main",
@@ -373,6 +386,62 @@ return ReadOnly("Region", {
     RegionMapFile = "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_YW/Haiboliya_Chezhan_YW_Main",
     RegionMapWheelScale = T.RT_1,
     RegionName = "第三章野外",
+    RegionType = "Main"
+  },
+  [1070] = {
+    IsRandom = {107001, 107002},
+    RegionId = 1070,
+    RegionMapFile = "/Game/Maps/Levels/Haiboliya/Haiboliya_FTNew_Main/Haiboliya_FTNew_Main",
+    RegionMapWheelScale = T.RT_1,
+    RegionName = "EX02-新村庄",
+    RegionType = "Main"
+  },
+  [1071] = {
+    IsRandom = {107101},
+    RegionId = 1071,
+    RegionMapFile = "/Game/Maps/Levels/Haiboliya/Haiboliya_FTOld_Main/Haiboliya_FTOld_Main",
+    RegionMapWheelScale = T.RT_1,
+    RegionName = "EX02-旧村庄",
+    RegionType = "Main"
+  },
+  [1072] = {
+    IsRandom = {707201},
+    RegionId = 1072,
+    RegionMapFile = "/Game/Maps/Levels/Haiboliya/Haiboliya_FTLake_Main/Haiboliya_FTLake_Main",
+    RegionMapWheelScale = T.RT_1,
+    RegionName = "EX02-湖区",
+    RegionType = "Main"
+  },
+  [1073] = {
+    IsRandom = {107301},
+    RegionId = 1073,
+    RegionMapFile = "/Game/Maps/Levels/Haiboliya/Haiboliya_FTOld_NPark/Haiboliya_FTOld_NPark_Main",
+    RegionMapWheelScale = T.RT_1,
+    RegionName = "EX02-旧村庄-噩梦游乐园",
+    RegionType = "Main"
+  },
+  [1074] = {
+    IsRandom = {107401},
+    RegionId = 1074,
+    RegionMapFile = "/Game/Maps/Levels/Haiboliya/Haiboliya_FTLake_BF/Haiboliya_FTLake_BF_Main",
+    RegionMapWheelScale = T.RT_1,
+    RegionName = "EX02-湖区-战场幻境",
+    RegionType = "Main"
+  },
+  [1075] = {
+    IsRandom = {107501},
+    RegionId = 1075,
+    RegionMapFile = "/Game/Maps/Levels/Haiboliya/Haiboliya_FTNew_Home/Haiboliya_FTNew_Home_Main",
+    RegionMapWheelScale = T.RT_1,
+    RegionName = "EX02-新村庄-主角家",
+    RegionType = "Main"
+  },
+  [1076] = {
+    IsRandom = {107601},
+    RegionId = 1076,
+    RegionMapFile = "/Game/Maps/Levels/Haiboliya/Haiboliya_FTNew_Boss/Haiboliya_FTNew_Boss_Main",
+    RegionMapWheelScale = T.RT_1,
+    RegionName = "EX02-新村庄-Boss战",
     RegionType = "Main"
   },
   [2001] = {

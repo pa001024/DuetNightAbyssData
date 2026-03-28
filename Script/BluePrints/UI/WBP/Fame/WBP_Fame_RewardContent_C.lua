@@ -17,7 +17,8 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, ...)
   self.Super.InitUIInfo(self, Name, IsInUIMode, EventList, ...)
   local CurRegionId = (...)
   rawset(self, "CurRegionId", CurRegionId and tonumber(CurRegionId) or 1001)
-  self:InitTitleDetail()
+  rawset(self, "CurRegionTabId", self.CurRegionId)
+  self:InitRegionTab()
   self:RefreshRewardList()
   if IsValid(self.GameInputModeSubsystem) then
     self:RefreshOpInfoByInputDevice(self.GameInputModeSubsystem:GetCurrentInputType(), self.GameInputModeSubsystem:GetCurrentGamepadName())
@@ -65,10 +66,120 @@ function M:InitTitleDetail()
       }
     },
     StyleName = "Text",
-    TitleName = string.format("%s·%s", GText(CurRegionName), GText("ReputationLevelReward_Title")),
+    TitleName = GText("ReputationLevelReward_Title"),
     OwnerPanel = self,
     BackCallback = self.CloseSelf
   })
+end
+
+function M:InitRegionTab()
+  self:InitRegionTabInfo()
+  self.Com_Tab:Init({
+    LeftKey = "Q",
+    RightKe = "E",
+    Tabs = self.AllRegionTabInfo,
+    DynamicNode = {
+      "Back",
+      "ResourceBar",
+      "BottomKey"
+    },
+    BottomKeyInfo = {
+      {
+        GamePadInfoList = {
+          {
+            Type = "Img",
+            ImgShortPath = "A",
+            Owner = self
+          }
+        },
+        Desc = GText("UI_Tips_Ensure")
+      },
+      {
+        KeyInfoList = {
+          {
+            Type = "Text",
+            Text = "Esc",
+            ClickCallback = self.CloseSelf,
+            Owner = self
+          }
+        },
+        GamePadInfoList = {
+          {
+            Type = "Img",
+            ImgShortPath = "B",
+            ClickCallback = self.CloseSelf,
+            Owner = self
+          }
+        },
+        Desc = GText("UI_BACK")
+      }
+    },
+    StyleName = "Text",
+    TitleName = GText("ReputationLevelReward_Title"),
+    OwnerPanel = self,
+    BackCallback = self.CloseSelf,
+    LastFocusWidget = self.List_Item
+  })
+  self.Com_Tab:BindEventOnTabSelected(self, self.OnRegionTabItemClick)
+  self:AddDelayFrameFunc(function()
+    self.Com_Tab:SelectTabById(self.CurRegionTabId)
+  end, 1, "FillWithRegionInfo")
+end
+
+function M:InitRegionTabInfo()
+  local AllRegionTabInfo = {}
+  for RegionId, TabData in pairs(DataMgr.RegionReputation) do
+    local Locked = not RegionFameModel:CheckTabCondition(TabData.Condition)
+    local LockToast = TabData.LockToast
+    local TabName = GText(TabData.RegionName)
+    table.insert(AllRegionTabInfo, {
+      Text = TabName,
+      IconPath = TabData.RegionIconPath,
+      TabId = RegionId,
+      IsLocked = Locked,
+      LockReasonText = LockToast
+    })
+  end
+  rawset(self, "AllRegionTabInfo", AllRegionTabInfo)
+end
+
+function M:OnRegionTabItemClick(TabWidget)
+  local NewTabId = TabWidget:GetTabId()
+  local OldTabId = self.CurRegionTabId
+  local NewData = DataMgr.RegionReputation[NewTabId]
+  if not NewData then
+    return
+  end
+  if not self:CheckDungeonCondition(NewData.Condition) then
+    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText(NewData.LockToast))
+    local FallbackId = OldTabId or self.AllRegionTabInfo[1] and self.AllRegionTabInfo[1].TabId
+    if FallbackId and FallbackId ~= NewTabId then
+      self.Com_Tab:SelectTabById(FallbackId)
+    end
+    return
+  end
+  if OldTabId == NewTabId then
+    return
+  end
+  rawset(self, "CurRegionTabId", NewTabId)
+  rawset(self, "CurRegionId", NewTabId)
+  rawset(self, "CurRegionName", nil)
+  self:RefreshRewardList()
+  self:SetFocus()
+end
+
+function M:CheckDungeonCondition(Condition)
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return false
+  end
+  if not Condition then
+    return true
+  end
+  if ConditionUtils.CheckCondition(Avatar, Condition) == false then
+    return false
+  end
+  return true
 end
 
 function M:InitLeftReward()
@@ -89,6 +200,9 @@ function M:RefreshRewardList()
   end
   local FirstReadyClaimIndex, FirstNotClaimableIndex
   local AllReadyClaimRewards = {}
+  local ReadyClaimContents = {}
+  local NotClaimableContents = {}
+  local AlreadyClaimedContents = {}
   local FinishedRewardNum = 0
   local TotalRewardNum = #AllRewardsData
   self.List_Item:ClearListItems()
@@ -100,7 +214,6 @@ function M:RefreshRewardList()
     Content.FameModel = RegionFameModel
     Content.RegionId = self.CurRegionId
     Content.Parent = self
-    Content.Index = Index - 1
     
     function Content.OnReceiveRewardCallBack(Ret, RewardReturn, ReputationId, LevelInfo)
       if Ret and Ret == ErrorCode.RET_SUCCESS then
@@ -119,14 +232,33 @@ function M:RefreshRewardList()
     end
     
     Content.OnMenuOpenChanged = self.OnMenuOpenChanged
-    self.List_Item:AddItem(Content)
     if Content.State == CommonConst.FameRewardState.AlreadyClaimed then
       FinishedRewardNum = FinishedRewardNum + 1
+      table.insert(AlreadyClaimedContents, Content)
     elseif Content.State == CommonConst.FameRewardState.ReadyClaim then
-      FirstReadyClaimIndex = FirstReadyClaimIndex or Index
       table.insert(AllReadyClaimRewards, Content.Level)
+      table.insert(ReadyClaimContents, Content)
+    elseif Content.State == CommonConst.FameRewardState.NotClaimable then
+      table.insert(NotClaimableContents, Content)
+    end
+  end
+  local OrderedContents = {}
+  for _, Content in ipairs(ReadyClaimContents) do
+    table.insert(OrderedContents, Content)
+  end
+  for _, Content in ipairs(NotClaimableContents) do
+    table.insert(OrderedContents, Content)
+  end
+  for _, Content in ipairs(AlreadyClaimedContents) do
+    table.insert(OrderedContents, Content)
+  end
+  for DisplayIndex, Content in ipairs(OrderedContents) do
+    Content.Index = DisplayIndex - 1
+    self.List_Item:AddItem(Content)
+    if Content.State == CommonConst.FameRewardState.ReadyClaim and not FirstReadyClaimIndex then
+      FirstReadyClaimIndex = DisplayIndex
     elseif Content.State == CommonConst.FameRewardState.NotClaimable and not FirstNotClaimableIndex then
-      FirstNotClaimableIndex = Index
+      FirstNotClaimableIndex = DisplayIndex
     end
   end
   rawset(self, "AllReadyClaimRewards", AllReadyClaimRewards)
@@ -138,11 +270,11 @@ function M:RefreshRewardList()
   self.Fame_CompletionProgress.Text01:SetText(string.format(GText("UI_Party_Parkour_FinishingRate") .. ": "))
   self.Fame_CompletionProgress.Text_Now:SetText(string.format("%d", FinishedRewardNum))
   self.Fame_CompletionProgress.Text_Total:SetText(string.format("%d", TotalRewardNum))
+  self.Fame_CompletionProgress.Btn_Reward:SetText(GText("UI_Mail_Recieveall"))
   if 0 == #self.AllReadyClaimRewards then
-    self.Fame_CompletionProgress.Btn_Reward:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Fame_CompletionProgress.Btn_Reward:ForbidBtn(true)
   else
-    self.Fame_CompletionProgress.Btn_Reward:SetText(GText("UI_Mail_Recieveall"))
-    self.Fame_CompletionProgress.Btn_Reward:SetVisibility(UIConst.VisibilityOp.Visible)
+    self.Fame_CompletionProgress.Btn_Reward:ForbidBtn(false)
   end
   self:InitLeftReward()
 end
@@ -158,7 +290,7 @@ function M:RewardListAutoScroll()
 end
 
 function M:OnGetAllRewardsBtnClicked()
-  if self.Fame_CompletionProgress.Btn_Reward:GetVisibility() == ESlateVisibility.Collapsed then
+  if self.Fame_CompletionProgress.Btn_Reward:IsBtnForbidden() then
     return
   end
   local Avatar = GWorld:GetAvatar()
@@ -244,15 +376,7 @@ function M:Handle_OnGamePadButtonDown(InKeyName)
 end
 
 function M:Handle_OnPCButtonDown(InKeyName)
-  local IsEventHandled = false
-  if "A" == InKeyName then
-    self.Fame_Tab:TabToLeft()
-    IsEventHandled = true
-  elseif "D" == InKeyName then
-    self.Fame_Tab:TabToRight()
-    IsEventHandled = true
-  end
-  return IsEventHandled
+  return false
 end
 
 function M:SetFocus()

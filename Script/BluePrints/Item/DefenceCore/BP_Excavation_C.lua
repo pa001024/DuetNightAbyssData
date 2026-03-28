@@ -182,6 +182,7 @@ end
 
 function BP_Excavation_C:ShowDeath()
   BP_Excavation_C.Super.ShowDeath(self)
+  print(_G.LogTag, "LXZ ShowDeath", self:GetName())
   EventManager:FireEvent(EventID.OnExcavationItemChange, "Remove", self.Eid)
 end
 

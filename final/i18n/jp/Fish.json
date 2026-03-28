@@ -1273,6 +1273,396 @@
     "varProb": 0.1
   },
   {
+    "id": 2901,
+    "name": "ホシマダラスズキ",
+    "level": 4,
+    "type": 1,
+    "rarity": 3,
+    "length": [
+      30,
+      50
+    ],
+    "icon": "Sea_East_11",
+    "price": [
+      70,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 2905,
+    "var": [
+      290101
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2902,
+    "name": "ミズチゴンズイ",
+    "level": 4,
+    "type": 1,
+    "rarity": 3,
+    "length": [
+      20,
+      40
+    ],
+    "icon": "Sea_East_12",
+    "price": [
+      70,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 2904,
+    "var": [
+      290201
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2903,
+    "name": "ルビウミウマ",
+    "level": 5,
+    "type": 1,
+    "rarity": 4,
+    "length": [
+      28,
+      33
+    ],
+    "icon": "Sea_East_13",
+    "price": [
+      120,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      290301
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 2904,
+    "name": "イカンナゴ",
+    "level": 5,
+    "type": 1,
+    "rarity": 4,
+    "length": [
+      6,
+      16
+    ],
+    "icon": "Sea_East_14",
+    "price": [
+      120,
+      5,
+      2
+    ],
+    "appear": [
+      2,
+      3
+    ],
+    "var": [
+      290401
+    ],
+    "varProb": 0.1
+  },
+  {
+    "id": 2905,
+    "name": "オオフウセイ",
+    "level": 6,
+    "type": 3,
+    "rarity": 5,
+    "length": [
+      30,
+      100
+    ],
+    "icon": "Sea_East_15",
+    "price": [
+      500,
+      5,
+      14
+    ],
+    "appear": [
+      3
+    ],
+    "var": [
+      290501
+    ],
+    "varProb": 0.1
+  },
+  {
+    "id": 3001,
+    "name": "ドウザガニ",
+    "level": 4,
+    "type": 1,
+    "rarity": 3,
+    "length": [
+      9,
+      11
+    ],
+    "icon": "FreshWater_East_11",
+    "price": [
+      70,
+      5,
+      0
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      300101
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 3002,
+    "name": "ガァフナ",
+    "level": 4,
+    "type": 1,
+    "rarity": 3,
+    "length": [
+      15,
+      30
+    ],
+    "icon": "FreshWater_East_12",
+    "price": [
+      70,
+      5,
+      3
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 3004,
+    "var": [
+      300201
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 3003,
+    "name": "ハスノハウオ",
+    "level": 5,
+    "type": 1,
+    "rarity": 4,
+    "length": [
+      40,
+      60
+    ],
+    "icon": "FreshWater_East_13",
+    "price": [
+      120,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 3005,
+    "var": [
+      300301
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 3004,
+    "name": "ドウルーサ",
+    "level": 5,
+    "type": 1,
+    "rarity": 4,
+    "length": [
+      225,
+      275
+    ],
+    "icon": "FreshWater_East_14",
+    "price": [
+      120,
+      5,
+      10
+    ],
+    "appear": [
+      1,
+      3
+    ],
+    "var": [
+      300401
+    ],
+    "varProb": 0.1
+  },
+  {
+    "id": 3005,
+    "name": "アカメンコイ",
+    "level": 6,
+    "type": 3,
+    "rarity": 5,
+    "length": [
+      8,
+      40
+    ],
+    "icon": "FreshWater_East_15",
+    "price": [
+      500,
+      5,
+      6
+    ],
+    "appear": [
+      1
+    ],
+    "var": [
+      300501
+    ],
+    "varProb": 0.1
+  },
+  {
+    "id": 3101,
+    "name": "クサイコイ",
+    "level": 4,
+    "type": 1,
+    "rarity": 3,
+    "length": [
+      20,
+      40
+    ],
+    "icon": "DirtyWater_East_6",
+    "price": [
+      70,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      310101
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 3102,
+    "name": "イモパール",
+    "level": 4,
+    "type": 1,
+    "rarity": 3,
+    "length": [
+      30,
+      50
+    ],
+    "icon": "DirtyWater_East_7",
+    "price": [
+      70,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 3104,
+    "var": [
+      310201
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 3103,
+    "name": "ホソホシムシ",
+    "level": 5,
+    "type": 1,
+    "rarity": 4,
+    "length": [
+      5,
+      25
+    ],
+    "icon": "DirtyWater_East_8",
+    "price": [
+      120,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 3105,
+    "var": [
+      310301
+    ],
+    "varProb": 0.2
+  },
+  {
+    "id": 3104,
+    "name": "スズムネエソ",
+    "level": 5,
+    "type": 1,
+    "rarity": 4,
+    "length": [
+      4,
+      8
+    ],
+    "icon": "DirtyWater_East_9",
+    "price": [
+      120,
+      5,
+      0
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      310401
+    ],
+    "varProb": 0.1
+  },
+  {
+    "id": 3105,
+    "name": "カクシトラザメ",
+    "level": 6,
+    "type": 3,
+    "rarity": 5,
+    "length": [
+      26,
+      49
+    ],
+    "icon": "DirtyWater_East_10",
+    "price": [
+      500,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "var": [
+      310501
+    ],
+    "varProb": 0.1
+  },
+  {
     "id": 110101,
     "name": "カイユウギョ‐変異種",
     "level": 2,
@@ -2346,6 +2736,336 @@
       4
     ],
     "appear": [
+      3
+    ]
+  },
+  {
+    "id": 290101,
+    "name": "ホシマダラスズキ・変異種",
+    "level": 4,
+    "type": 2,
+    "rarity": 3,
+    "length": [
+      30,
+      50
+    ],
+    "icon": "Sea_East_11_1",
+    "price": [
+      105,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 290501
+  },
+  {
+    "id": 290201,
+    "name": "ミズチゴンズイ・変異種",
+    "level": 4,
+    "type": 2,
+    "rarity": 3,
+    "length": [
+      20,
+      40
+    ],
+    "icon": "Sea_East_12_1",
+    "price": [
+      105,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 290401
+  },
+  {
+    "id": 290301,
+    "name": "ルビウミウマ・変異種",
+    "level": 5,
+    "type": 2,
+    "rarity": 4,
+    "length": [
+      28,
+      33
+    ],
+    "icon": "Sea_East_13_1",
+    "price": [
+      240,
+      5,
+      1
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 290401,
+    "name": "イカンナゴ・変異種",
+    "level": 5,
+    "type": 2,
+    "rarity": 4,
+    "length": [
+      6,
+      16
+    ],
+    "icon": "Sea_East_14_1",
+    "price": [
+      240,
+      5,
+      2
+    ],
+    "appear": [
+      2,
+      3
+    ]
+  },
+  {
+    "id": 290501,
+    "name": "オオフウセイ・変異種",
+    "level": 6,
+    "type": 4,
+    "rarity": 5,
+    "length": [
+      30,
+      100
+    ],
+    "icon": "Sea_East_15_1",
+    "price": [
+      500,
+      5,
+      14
+    ],
+    "appear": [
+      3
+    ]
+  },
+  {
+    "id": 300101,
+    "name": "ドウザガニ・変異種",
+    "level": 4,
+    "type": 2,
+    "rarity": 3,
+    "length": [
+      9,
+      11
+    ],
+    "icon": "FreshWater_East_11_1",
+    "price": [
+      105,
+      5,
+      0
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 300201,
+    "name": "ガァフナ・変異種",
+    "level": 4,
+    "type": 2,
+    "rarity": 3,
+    "length": [
+      15,
+      30
+    ],
+    "icon": "FreshWater_East_12_1",
+    "price": [
+      105,
+      5,
+      3
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 300401
+  },
+  {
+    "id": 300301,
+    "name": "ハスノハウオ・変異種",
+    "level": 5,
+    "type": 2,
+    "rarity": 4,
+    "length": [
+      40,
+      60
+    ],
+    "icon": "FreshWater_East_13_1",
+    "price": [
+      240,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 300501
+  },
+  {
+    "id": 300401,
+    "name": "ドウルーサ・変異種",
+    "level": 5,
+    "type": 2,
+    "rarity": 4,
+    "length": [
+      225,
+      275
+    ],
+    "icon": "FreshWater_East_14_1",
+    "price": [
+      240,
+      5,
+      10
+    ],
+    "appear": [
+      1,
+      3
+    ]
+  },
+  {
+    "id": 300501,
+    "name": "アカメンコイ・変異種",
+    "level": 6,
+    "type": 4,
+    "rarity": 5,
+    "length": [
+      8,
+      40
+    ],
+    "icon": "FreshWater_East_15_1",
+    "price": [
+      500,
+      5,
+      6
+    ],
+    "appear": [
+      1
+    ]
+  },
+  {
+    "id": 310101,
+    "name": "クサイコイ・変異種",
+    "level": 4,
+    "type": 2,
+    "rarity": 3,
+    "length": [
+      20,
+      40
+    ],
+    "icon": "DirtyWater_East_6_1",
+    "price": [
+      105,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 310201,
+    "name": "イモパール・変異種",
+    "level": 4,
+    "type": 2,
+    "rarity": 3,
+    "length": [
+      30,
+      50
+    ],
+    "icon": "DirtyWater_East_7_1",
+    "price": [
+      105,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 310401
+  },
+  {
+    "id": 310301,
+    "name": "ホソホシムシ・変異種",
+    "level": 5,
+    "type": 2,
+    "rarity": 4,
+    "length": [
+      5,
+      25
+    ],
+    "icon": "DirtyWater_East_8_1",
+    "price": [
+      240,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ],
+    "s2b": 310501
+  },
+  {
+    "id": 310401,
+    "name": "スズムネエソ・変異種",
+    "level": 5,
+    "type": 2,
+    "rarity": 4,
+    "length": [
+      4,
+      8
+    ],
+    "icon": "DirtyWater_East_9_1",
+    "price": [
+      240,
+      5,
+      0
+    ],
+    "appear": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 310501,
+    "name": "カクシトラザメ・変異種",
+    "level": 6,
+    "type": 4,
+    "rarity": 5,
+    "length": [
+      26,
+      49
+    ],
+    "icon": "DirtyWater_East_10_1",
+    "price": [
+      500,
+      5,
+      4
+    ],
+    "appear": [
+      1,
+      2,
       3
     ]
   }

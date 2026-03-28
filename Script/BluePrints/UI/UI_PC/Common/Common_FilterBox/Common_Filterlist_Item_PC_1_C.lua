@@ -36,8 +36,10 @@ function M:OnBtnReleased()
   end
 end
 
-function M:OnBtnClick()
-  AudioManager(self):PlayUISound(self, "event:/ui/common/click_level_02", nil, nil)
+function M:OnBtnClick(bNotPlaySound)
+  if not bNotPlaySound then
+    AudioManager(self):PlayUISound(self, "event:/ui/common/click_level_02", nil, nil)
+  end
   self.Obj.IsSelected = true
   self:PlayAnimation(self.Click)
   self.Obj.Owner:OnListItemClicked(self.Obj)

@@ -23,7 +23,7 @@ function M:Construct()
       OnTextChanged = function(self, Text)
         if "" == Text then
           self.Btn_Sent:SetForbidden()
-        elseif self.Btn_Sent:IsForbidden() and not ChatController:IsSendCDTimerExist(self.CurrChannel) then
+        elseif self.Btn_Sent:IsChatBtnForbidden() and not ChatController:IsSendCDTimerExist(self.CurrChannel) then
           self.Btn_Sent:SetNormal()
         end
         if self.Com_Input:Utf8StrLen(Text) > self.Com_Input.TextLimit then

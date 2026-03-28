@@ -887,6 +887,11 @@ function WBP_NpcSwitchMain_PC_C:SwitchNpcPose(NpcId, IsSet, PlayAppear, PlayDisa
       Npc.FXComponent:PlayEffectByIDParams(302, {bTickEvenWhenPaused = true, NotAttached = true})
       AudioManager(self):PlayUISound(self, "event:/ui/common/role_disappear", nil, nil)
     end
+    Npc:AddTimer(0.5, function()
+      if IsValid(Npc) and IsValid(Npc.Mesh) then
+        Npc.Mesh.VisibilityBasedAnimTickOption = EVisibilityBasedAnimTickOption.AlwaysTickPoseAndRefreshBones
+      end
+    end)
   end)
 end
 

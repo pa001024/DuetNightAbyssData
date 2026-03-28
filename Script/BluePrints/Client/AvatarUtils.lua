@@ -805,6 +805,7 @@ function AvatarUtils:GetPlayerPersonalInfoChar(Avatar, FromDb)
           Level = Char.Level or 1,
           EnhanceLevel = Char.EnhanceLevel or 0,
           GradeLevel = Char.GradeLevel or 0,
+          ExtraGradeLevel = Char.ExtraGradeLevel or 0,
           Skills = SkillInfo,
           SkillTree = SkillTree,
           Appearance = Appearance,
@@ -1262,6 +1263,34 @@ function AvatarUtils:GetCurWeaponRankInfo(Avatar, FromDb)
     Accessory = AppearanceSuit and AppearanceSuit.Accessory or {},
     SkinColors = SkinColors
   }
+end
+
+function AvatarUtils:GetRaidSeasonsRecord(Avatar, FromDb)
+  local RaidSeasons = Avatar.RaidSeasons
+  if not next(RaidSeasons) then
+    return {}
+  end
+  local Ret = {}
+  local TimeUtils = require("src.utils.TimeUtils")
+  local NowTime = TimeUtils.NowTime()
+  for k, v in pairs(RaidSeasons) do
+    local RaidSeasonId = k
+    if FromDb then
+      RaidSeasonId = tonumber(RaidSeasonId)
+    end
+    local RaidSeasonConf = DataMgr.RaidSeason[RaidSeasonId]
+    if RaidSeasonConf then
+      local RaidSeasonEventConf = DataMgr.EventId2RaidSeason[RaidSeasonConf.EventId]
+      if RaidSeasonEventConf and not (NowTime <= TimeUtils.EastEightToLocalTimestamp(RaidSeasonEventConf.EventEndTime)) and not (v.BanState > 0) and v.PreRaidGroupId and v.RaidGroupId and not (v.PreRaidGroupId <= 0) and not (v.RaidGroupId <= 0) and v.MaxRaidScore and not (v.MaxRaidScore <= 0) then
+        table.insert(Ret, {
+          RaidSeasonId = RaidSeasonId,
+          PreRaidGroupId = v.PreRaidGroupId,
+          RaidGroupId = v.RaidGroupId
+        })
+      end
+    end
+  end
+  return Ret
 end
 
 return AvatarUtils

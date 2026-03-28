@@ -1,6 +1,6 @@
 local PropUtils = require("BluePrints.Client.PropUtils")
-Classes = {}
-Types = {}
+local Classes = {}
+local Types = {}
 local ClassMgr = {}
 
 function ClassMgr:RegisterClass(Name, Type)
@@ -17,7 +17,7 @@ function ClassMgr:GetClass(Name)
 end
 
 function ClassMgr:GetType(Name)
-  if Types[Name] ~= nil then
+  if nil ~= Types[Name] then
     return Types[Name]
   end
   if not self.BaseTypes then

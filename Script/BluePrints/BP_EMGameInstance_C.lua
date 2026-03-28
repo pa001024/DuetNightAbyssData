@@ -24,11 +24,6 @@ local BP_EMGameInstance_C = Class({
   "BluePrints.Common.DelayFrameComponent"
 })
 
-function BP_EMGameInstance_C:Initialize(Initializer)
-  print(_G.LogTag, "BP_EMGameInstance_C:Initialize")
-  GWorld.GameInstance = self
-end
-
 function BP_EMGameInstance_C:OnLoginSuccess()
   local StorySubsystem = UE4.USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, UStorySubsystem:StaticClass())
   StorySubsystem:TryInitVars()
@@ -300,6 +295,7 @@ function BP_EMGameInstance_C:OnPlayerControllerGameEnd(IsWin, BattleInfo, SceneP
     WalnutChoiceUI:Close()
   end
   self:OnPlayerControllerGameEnd_Internal(IsWin, BattleInfo, ScenePlayers)
+  GameState:CheckPreloadRecordData_Lua()
 end
 
 function BP_EMGameInstance_C:CalculatePhantom()
@@ -479,6 +475,17 @@ function BP_EMGameInstance_C:RecordCombatData()
     self.CombatData.PhantomNum = Player:GetPhantomAttrInfos() and Player:GetPhantomAttrInfos():Num() or 0
     self.GameEndTime = TimeUtils.NowTime()
     self:FillTempTeamInfo(GameState, Player)
+    local ServerEntity = GWorld:GetServerEntity()
+    if not ServerEntity then
+      DebugPrint("ServerEntity get nil")
+      return
+    end
+    local DungeonObject = ServerEntity:GetDungeonObject()
+    if not DungeonObject then
+      DebugPrint("DungeonObject get nil")
+      return
+    end
+    self.CombatData.EvacuationTime = DungeonObject.EvacuationTime or 0
   end
   PrintTable(self.CombatData, 5)
 end
@@ -608,6 +615,7 @@ function BP_EMGameInstance_C:CalculateMVP()
         IsCurrentMVP = true
       end
     end
+    DebugPrint("CalculateMVP PlayerIndex: ", i, "PlayerName: ", Player.ScenePlayerName, "PlayerDamage: ", Damage, "PlayerScore: ", CurScore)
     if IsCurrentMVP then
       self.MVPInfo.MVPScore = CurScore
       self.MVPInfo.MVPDamage = Damage
@@ -624,7 +632,6 @@ function BP_EMGameInstance_C:CalculateMVP()
       self.MVPInfo.MVPFolder = MVPFolder
       self.MVPInfo.MVPMontage = MVPMontage
     end
-    DebugPrint("CalculateMVP PlayerIndex: ", i, "PlayerName: ", Player.ScenePlayerName, "PlayerDamage: ", Damage, "PlayerScore: ", CurScore)
   end
   DebugPrint("CalculateMVP MVPScore: ", self.MVPInfo.MVPScore, "MVPIndex", self.MVPInfo.MVPIndex, "MVPName", self.MVPInfo.MVPName)
 end
@@ -767,7 +774,7 @@ function BP_EMGameInstance_C:TryDungeonSettlement()
     if DungeonData and DungeonData.ForcePlayWinMontage then
       ForcePlayWinMontage = true
     end
-    local DoMvp = IsWin and (not Avatar or not Avatar:IsInRougeLike()) and (not CurDungeonType or CurDungeonType ~= CommonConst.DungeonType.Abyss and CurDungeonType ~= CommonConst.DungeonType.Party) and (not DataMgr.Dungeon[CurrentDungeonId] or not DataMgr.Dungeon[CurrentDungeonId].IsGameEventDungeon)
+    local DoMvp = IsWin and (not Avatar or not Avatar:IsInRougeLike()) and (not CurDungeonType or CurDungeonType ~= CommonConst.DungeonType.Abyss and CurDungeonType ~= CommonConst.DungeonType.Party) and (not DataMgr.Dungeon[CurrentDungeonId] or not DataMgr.Dungeon[CurrentDungeonId].IsGameEventDungeon) and "SoloTreasure" ~= CurDungeonType
     self:CalculateMVP()
     if DoMvp and nil == self.MVPInfo.MVPFolder then
       DoMvp = false
@@ -810,6 +817,16 @@ function BP_EMGameInstance_C:TryDungeonSettlement()
         self:LoadGameEventSettlementUI(CurrentDungeonId, CurDungeonType, LogicServerInfo)
       elseif 80401 == CurrentDungeonId then
         self:LoadGameEventSettlementUI(CurrentDungeonId, CurDungeonType, LogicServerInfo)
+      elseif "SoloTreasure" == CurDungeonType then
+        local IsSoloWin = false
+        if LogicServerInfo then
+          IsSoloWin = LogicServerInfo[1]
+        end
+        if IsSoloWin and LogicServerInfo[7] and LogicServerInfo[7].ItemList and LogicServerInfo[7].ItemList[1] then
+          UIManager:LoadUINew("SoloTreasureItemSettlement", LogicServerInfo)
+        else
+          UIManager:LoadUINew("SoloTreasureEvacuation", LogicServerInfo)
+        end
       else
         UIManager:LoadUINew("DungeonSettlement", LogicServerInfo, self.DungeonIdCache, self.CombatData)
       end
@@ -830,6 +847,10 @@ function BP_EMGameInstance_C:TryDungeonSettlement()
     
     local bSkipOutAnim = false
     if DataMgr.Dungeon[CurrentDungeonId] and DataMgr.Dungeon[CurrentDungeonId].IsGameEventDungeon then
+      bSkipOutAnim = true
+    end
+    local GameState = UE4.UGameplayStatics.GetGameState(self)
+    if GameState and GameState.GameModeType == "SoloTreasure" then
       bSkipOutAnim = true
     end
     local BlackUI = UIManager:GetUI("DungeonBlackScreen")
@@ -1011,7 +1032,9 @@ function BP_EMGameInstance_C:CalculateSettlementOriginLoc(IsMoveToTempScene)
   else
     local EMGameState = UE4.UGameplayStatics.GetGameState(self)
     local Avatar = GWorld:GetAvatar()
-    if Avatar and Avatar:IsInHardBoss() then
+    local WorldCompositionSubSystem = UE4.USubsystemBlueprintLibrary.GetWorldSubsystem(self, UE4.UWorldCompositionSubSystem)
+    local WCIsInDungeon = WorldCompositionSubSystem and WorldCompositionSubSystem:WCIsInDungeon()
+    if Avatar and Avatar:IsInHardBoss() and not WCIsInDungeon then
       if Avatar.HardBossInfo then
         local HardBossId = Avatar.HardBossInfo.HardBossId
         if DataMgr.HardBossMain[HardBossId] then
@@ -1027,19 +1050,15 @@ function BP_EMGameInstance_C:CalculateSettlementOriginLoc(IsMoveToTempScene)
           return EndPointLocation, EndPointRotation
         end
       end
-    else
-      local WorldCompositionSubSystem = UE4.USubsystemBlueprintLibrary.GetWorldSubsystem(self, UE4.UWorldCompositionSubSystem)
-      local WCIsInDungeon = WorldCompositionSubSystem and WorldCompositionSubSystem:WCIsInDungeon()
-      if WCIsInDungeon then
-        local GameState = UE4.UGameplayStatics.GetGameState(self)
-        if GameState then
-          local SettlementPoint = GameState:GetNearestSettlementPoint(MainPlayer:K2_GetActorLocation())
-          if SettlementPoint then
-            local SettlementPointLoc = SettlementPoint:K2_GetActorLocation()
-            local SettlementPointRot = SettlementPoint:K2_GetActorRotation()
-            DebugPrint("CalculateSettlementOriginLoc Find Nearest Settlement Point:", SettlementPointLoc, SettlementPointRot)
-            return SettlementPointLoc, SettlementPointRot
-          end
+    elseif WCIsInDungeon then
+      local GameState = UE4.UGameplayStatics.GetGameState(self)
+      if GameState then
+        local SettlementPoint = GameState:GetNearestSettlementPoint(MainPlayer:K2_GetActorLocation())
+        if SettlementPoint then
+          local SettlementPointLoc = SettlementPoint:K2_GetActorLocation()
+          local SettlementPointRot = SettlementPoint:K2_GetActorRotation()
+          DebugPrint("CalculateSettlementOriginLoc Find Nearest Settlement Point:", SettlementPointLoc, SettlementPointRot)
+          return SettlementPointLoc, SettlementPointRot
         end
       end
     end
@@ -1093,7 +1112,8 @@ function BP_EMGameInstance_C:LoadGameEventSettlementUI(CurrentDungeonId, CurDung
       Text_GetReward = "UI_Dungeon_First_Reward",
       ActivityId = DungeonInfo.SettlementId,
       IsNewRecord = CurScore > MaxScore,
-      DungeonId = CurrentDungeonId
+      DungeonId = CurrentDungeonId,
+      CheckOpenActivityId = DataMgr.EventConstant.FeinaEventId.ConstantValue
     }
     Params.ScoreInfo = {
       {
@@ -1811,6 +1831,7 @@ function BP_EMGameInstance_C:ReceiveShutdown()
   if IsDedicatedServer(self) then
     return
   end
+  UE.UAnnounceHttpServerSubsystem.GetInstance(self):StopAnnouncementServer()
   local ShundownCount = EMCache:Get("ShundownCount") or 0
   EMCache:Set("ShundownCount", ShundownCount + 1)
   ShundownCount = EMCache:Get("ShundownCount") or 0
@@ -1829,6 +1850,7 @@ function BP_EMGameInstance_C:InitGameSetting()
   self:InitGameMuteBackstage()
   self:InitHideBackWeapons()
   self:InitVoiceGuide()
+  self:InitAutoFashionSwitch()
 end
 
 function BP_EMGameInstance_C:InitVoiceGuide()
@@ -1845,6 +1867,23 @@ function BP_EMGameInstance_C:InitVoiceGuide()
     end
   end
   AudioManager(self):SetTalkVoiceTurnOff(not Value)
+end
+
+function BP_EMGameInstance_C:InitAutoFashionSwitch()
+  local OptionConfig = DataMgr.Option.AutoFashion
+  if not OptionConfig then
+    self.IsAutoFashionSwitch = false
+    return
+  end
+  local Value = EMCache:Get(OptionConfig.EMCacheName)
+  if nil == Value then
+    if CommonUtils.GetRuntimePlatform(self) == "Mobile" and OptionConfig.DefaultValueM then
+      Value = OptionConfig.DefaultValueM == "True"
+    else
+      Value = "True" == OptionConfig.DefaultValue
+    end
+  end
+  self.IsAutoFashionSwitch = Value
 end
 
 function BP_EMGameInstance_C:InitGameSystemLanguage()
@@ -1907,8 +1946,6 @@ function BP_EMGameInstance_C:InitGameSystemLanguage()
     self:SetCurrentLanguage()
   end
   self:SetUsdkLanguage()
-  local AnnounceUtils = require("BluePrints.UI.WBP.Announcement.AnnounceUtils")
-  AnnounceUtils:Init(self)
 end
 
 function BP_EMGameInstance_C:SetCurrentLanguage()
@@ -2156,6 +2193,27 @@ function BP_EMGameInstance_C:GetPlayerMVPDataByIndex(PlayerIndex)
     end
     return
   end
+  local Players = self:CalcPlayersMVPData()
+  if Players and Players[PlayerIndex] then
+    local NumText = Players[PlayerIndex][1].Value
+    if NumText < 1000000000 then
+      NumText = Utils.FormatNumber(NumText, false)
+      if Players[PlayerIndex][1].DataName == "Damage" or Players[PlayerIndex][1].DataName == "Damaged" then
+        NumText = string.format("%s", NumText) .. "%"
+      end
+    else
+      NumText = Utils.FormatNumber(NumText, true)
+    end
+    DebugPrint("MvpData", PlayerIndex, Players[PlayerIndex][1].DataName, NumText)
+    return {
+      Textmap = self.SwitchBattleDataTypeToText[Players[PlayerIndex][1].DataName],
+      Value = NumText,
+      IsPercent = Players[PlayerIndex][1].DataName == "Damage" or Players[PlayerIndex][1].DataName == "Damaged"
+    }
+  end
+end
+
+function BP_EMGameInstance_C:CalcPlayersMVPData()
   if not self.LevelDataPriority then
     local LevelEnterData = DataMgr.LevelEnterData
     self.LevelDataPriority = {}
@@ -2270,7 +2328,7 @@ function BP_EMGameInstance_C:GetPlayerMVPDataByIndex(PlayerIndex)
             Value = self.CombatData.MaxComboCount
           }
         elseif PhantomsData and #PhantomsData > 0 then
-          local PhantomData = self:GetPhantomInfo(Player.RoleId, PhantomsData)
+          local PhantomData = self:GetPhantomInfo(Player.RoleId, PhantomsData, Player.IsMainPlayerPhantom)
           if PhantomData then
             AllPlayerBattleData[1].Damage[CurPlayerIndex] = {
               PlayerIndex = PlayerIndex,
@@ -2363,7 +2421,7 @@ function BP_EMGameInstance_C:GetPlayerMVPDataByIndex(PlayerIndex)
             }
           end
         else
-          local Phantom = self:GetPhantomInfo(Player.RoleId, PhantomsData)
+          local Phantom = self:GetPhantomInfo(Player.RoleId, PhantomsData, Player.IsMainPlayerPhantom)
           if Phantom then
             AllPlayerBattleData[1].Damage[CurPlayerIndex] = {
               PlayerIndex = PlayerIndex,
@@ -2467,6 +2525,13 @@ function BP_EMGameInstance_C:GetPlayerMVPDataByIndex(PlayerIndex)
       })
     end
   end
+  for i = 1, #ScenePlayers do
+    if Players[PlayerOrder[i]] and not ScenePlayers[i].IsPhantom then
+      Players[PlayerOrder[i]][1].PlayerName = ScenePlayers[i].ScenePlayerName
+      Players[PlayerOrder[i]][1].Uid = ScenePlayers[i].Uid
+      Players[PlayerOrder[i]][1].IsMainPlayer = ScenePlayers[i].IsMainPlayer
+    end
+  end
   local LevelEnterData = DataMgr.LevelEnterData
   self.SwitchBattleDataTypeToText = {
     Damage = LevelEnterData.Damage.HighLightName,
@@ -2477,28 +2542,15 @@ function BP_EMGameInstance_C:GetPlayerMVPDataByIndex(PlayerIndex)
     Destroy = LevelEnterData.Destroy.HighLightName,
     HitCount = LevelEnterData.HitCount.HighLightName
   }
-  if Players[PlayerIndex] then
-    local NumText = Players[PlayerIndex][1].Value
-    if NumText < 1000000000 then
-      NumText = Utils.FormatNumber(NumText, false)
-      if "Damage" == Players[PlayerIndex][1].DataName or "Damaged" == Players[PlayerIndex][1].DataName then
-        NumText = string.format("%s", NumText) .. "%"
-      end
-    else
-      NumText = Utils.FormatNumber(NumText, true)
-    end
-    return {
-      Textmap = self.SwitchBattleDataTypeToText[Players[PlayerIndex][1].DataName],
-      Value = NumText,
-      IsPercent = "Damage" == Players[PlayerIndex][1].DataName or "Damaged" == Players[PlayerIndex][1].DataName
-    }
-  end
+  return Players
 end
 
-function BP_EMGameInstance_C:GetPhantomInfo(PlayerRoleId, PhantomsData)
-  for _, value in pairs(PhantomsData) do
-    if PlayerRoleId == value.PhantomRoleId then
-      return value
+function BP_EMGameInstance_C:GetPhantomInfo(PlayerRoleId, PhantomsData, IsMainPlayerPhantom)
+  if IsMainPlayerPhantom then
+    for _, value in pairs(PhantomsData) do
+      if PlayerRoleId == value.PhantomRoleId then
+        return value
+      end
     end
   end
   return nil

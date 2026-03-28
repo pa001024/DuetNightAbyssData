@@ -851,7 +851,7 @@ function Utils.ByteArrayToString(ByteArray)
 end
 
 function Utils.GetGameReviewPlatform()
-  local PlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName(self)
+  local PlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName()
   if "IOS" == PlatformName then
     return "IOS"
   end

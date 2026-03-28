@@ -23,7 +23,9 @@ function SkipRegionNode:Delivery()
   
   self.Callback = Callback
   Avatar:AddRegionSkipCallback(self.Id, self, self.Callback)
-  local Res = GameMode:HandleLevelDeliver(self.ModeType, self.Id, self.StartIndex, self.IsWhite, self:GetPayload("bIsInvitation"))
+  local bIsFromMap
+  local bShouldReturnAndDownloadPatch = true
+  local Res = GameMode:HandleLevelDeliver(self.ModeType, self.Id, self.StartIndex, self.IsWhite, self:GetPayload("bIsInvitation"), bIsFromMap, bShouldReturnAndDownloadPatch)
   DebugPrint("ZJT_ AddRegionSkipCallBack SkipRegionNode ", self.Id, Res, self.ModeType, self.StartIndex)
   local WCSubsystem = GameMode:GetWCSubSystem()
   if not WCSubsystem then

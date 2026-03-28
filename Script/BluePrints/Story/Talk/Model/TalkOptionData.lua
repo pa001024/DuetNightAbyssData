@@ -10,11 +10,11 @@ local ETalkOptionType = {
 }
 local TalkOptionData_C = {}
 
-function TalkOptionData_C.New(OptionType, TalkNodeData, DialogueOptionData, DialogueIterationComponent)
+function TalkOptionData_C.New(OptionType, TalkNodeData, DialogueOptionData, DialogueIterComp)
   local Obj = setmetatable({}, {__index = TalkOptionData_C})
   Obj.OptionType = OptionType
-  Obj.bHasFinalDialogue = DialogueIterationComponent and DialogueIterationComponent:HasFinalDialogue()
-  Obj.SavedOptions = DialogueIterationComponent and DialogueIterationComponent:GetSavedOptions() or {}
+  Obj.bHasFinalDialogue = DialogueIterComp and DialogueIterComp:HasFinalDialogue()
+  Obj.SavedOptions = DialogueIterComp and DialogueIterComp:GetSavedOptions() or {}
   Obj.Options = {}
   Obj.OptionId2Idx = {}
   if not TalkNodeData and not DialogueOptionData then
@@ -24,11 +24,13 @@ function TalkOptionData_C.New(OptionType, TalkNodeData, DialogueOptionData, Dial
   local Avatar = GWorld:GetAvatar()
   if OptionType == ETalkOptionType.Dialogue then
     for idx, Option in ipairs(DialogueOptionData) do
+      local bIsClientSelected = Obj.bHasFinalDialogue and DialogueIterComp and DialogueIterComp:IsOptionSelected(Option)
+      local bIsServerSaved = TalkUtils:IsOptionSavedOnServer(Option)
       local OptionInfo = {
         Index = idx,
         OptionId = Option,
         OptionText = TalkUtils:OptionIdToContent(Option),
-        bIsSelected = DialogueIterationComponent and DialogueIterationComponent:IsSelectedOption(Option)
+        bIsSelected = bIsClientSelected or bIsServerSaved
       }
       table.insert(Obj.Options, OptionInfo)
       Obj.OptionId2Idx[Option] = idx
@@ -36,12 +38,14 @@ function TalkOptionData_C.New(OptionType, TalkNodeData, DialogueOptionData, Dial
   elseif OptionType == ETalkOptionType.Normal then
     Obj.RandomOptionNum = TalkNodeData.RandomOptionNum
     for idx, Option in ipairs(TalkNodeData.NormalOptions) do
+      local bIsServerSaved = TalkUtils:IsOptionSavedOnServer(Option.OptionText)
       table.insert(Obj.Options, {
         OptionId = tonumber(Option.OptionText),
         OptionText = TalkUtils:OptionIdToContent(Option.OptionText),
         OverrideBlend = Option.OverrideBlend,
         OverrideOutype = Option.OverrideOutype,
         OverrideOutTime = Option.OverrideOutTime,
+        bIsSelected = bIsServerSaved,
         Index = idx
       })
       Obj.OptionId2Idx[tonumber(Option.OptionText)] = idx
@@ -49,12 +53,14 @@ function TalkOptionData_C.New(OptionType, TalkNodeData, DialogueOptionData, Dial
   elseif OptionType == ETalkOptionType.Random then
     Obj.RandomOptionNum = TalkNodeData.RandomOptionNum
     for idx, Option in ipairs(TalkNodeData.RandomOptions) do
+      local bIsServerSaved = TalkUtils:IsOptionSavedOnServer(Option.OptionText)
       table.insert(Obj.Options, {
         OptionId = tonumber(Option.OptionText),
         OptionText = TalkUtils:OptionIdToContent(Option.OptionText),
         OverrideBlend = Option.OverrideBlend,
         OverrideOutype = Option.OverrideOutype,
         OverrideOutTime = Option.OverrideOutTime,
+        bIsSelected = bIsServerSaved,
         Index = idx
       })
     end
@@ -137,6 +143,13 @@ function TalkOptionData_C.New(OptionType, TalkNodeData, DialogueOptionData, Dial
       end
     else
     end
+  end
+  for _, Option in ipairs(Obj.Options) do
+    local OptionId = Option.OptionId
+    local Template = TalkUtils:OptionIdToTemplate(OptionId)
+    Option.OptionStyle = Template.OptionStyle
+    Option.bSaveToServer = Template.bSaveToServer
+    Option.bCanReselect = Template.bCanReselect
   end
   return Obj
 end

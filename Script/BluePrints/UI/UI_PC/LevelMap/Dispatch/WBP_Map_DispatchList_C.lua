@@ -520,7 +520,12 @@ function M:InitPCKeyInfo()
   end
   Key_Esc:CreateCommonKey({
     KeyInfoList = {
-      {Type = "Text", Text = "Esc"}
+      {
+        Type = "Text",
+        Text = "Esc",
+        Owner = self,
+        ClickCallback = self.Close
+      }
     },
     Desc = GText("Impression_UI_Back")
   })

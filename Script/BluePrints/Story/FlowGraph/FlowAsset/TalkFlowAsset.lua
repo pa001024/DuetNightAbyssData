@@ -82,9 +82,13 @@ function M:CloseTalkActorsOptimization()
     local UnitId = NpcData.TalkActorId
     local TalkActorData = TalkContext:GetTalkActorData(TalkTask, UnitId)
     local TalkActor = TalkActorData and TalkActorData.TalkActor
-    if TalkActor and IsValid(TalkActor.Mesh) then
+    if IsValid(TalkActor) and IsValid(TalkActor.Mesh) then
       SaveTickOptimizations[TalkActor] = TalkActor.Mesh.VisibilityBasedAnimTickOption
       TalkActor.Mesh.VisibilityBasedAnimTickOption = UE4.EVisibilityBasedAnimTickOption.AlwaysTickPoseAndRefreshBones
+      if TalkActor.ForceResetDynamics and not TalkActor.Mesh:WasRecentlyRendered(0.05) then
+        TalkActor:ForceResetDynamics()
+        USequenceMontageLibrary.ForceRefreshAnimation(TalkActor)
+      end
     end
   end
 end

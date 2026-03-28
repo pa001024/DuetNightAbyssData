@@ -4,4 +4,11 @@ end
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
-return ReadOnly("FrenchCorrect", {})
+return ReadOnly("FrenchCorrect", {
+  ["^"] = {
+    Key = "LeftBracket",
+    RawKey = "^"
+  },
+  ["²"] = {Key = "Tilde", RawKey = "²"},
+  ["ù"] = {Key = "Apostrophe", RawKey = "ù"}
+})

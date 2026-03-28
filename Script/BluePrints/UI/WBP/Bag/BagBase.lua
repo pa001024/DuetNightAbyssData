@@ -465,7 +465,12 @@ function M:RealToJumpToSelectItem()
     end
     if self.CurSelectStuffContent.StuffType ~= "EmptyGrid" then
       self.List_Item:SetSelectedIndex(self.NeedSelectGridIndex)
-      self.List_Item:ScrollIndexIntoView(self.NeedSelectGridIndex)
+      if self.ListJumpOffset ~= nil then
+        self.List_Item:SetScrollOffset(self.ListJumpOffset)
+        self.ListJumpOffset = nil
+      else
+        self.List_Item:ScrollIndexIntoView(self.NeedSelectGridIndex)
+      end
       self:RefreshDetail(self.CurSelectGridIndex, self.CurSelectStuffContent.Uuid)
     else
       self:RefreshDetail(-1, nil)
@@ -1120,46 +1125,18 @@ function M:OnClickGoToUseConsume(StuffConfigData)
     CommonDialogParams.OptionalItemsList = ResultData
   end
   DebugPrint("ayff test use resourceID:" .. StuffConfigData.ResourceId)
-  if UseEffectType == CommonConst.ResUseEffectType.SelectGeneralSkin then
-    DebugPrint("gmy@BagBase M:OnClickGoToUseConsume", StuffConfigData.UseParam)
+  local CharSkinPreviewTypeList = {
+    [CommonConst.ResUseEffectType.SelectGeneralSkin] = "SelectGeneralSkin",
+    [CommonConst.ResUseEffectType.SelectCharAccessory] = "SelectCharAccessory",
+    [CommonConst.ResUseEffectType.SelectWeaponSkin] = "SelectWeaponSkin",
+    [CommonConst.ResUseEffectType.SelectWeaponAccessory] = "SelectWeaponAccessory",
+    [CommonConst.ResUseEffectType.SelectSkin] = "SelectSkin",
+    [CommonConst.ResUseEffectType.SelectGestureItem] = "SelectGestureItem"
+  }
+  if CharSkinPreviewTypeList[UseEffectType] then
     UIManager(self):LoadUINew("CharSkinPreview", {
-      Type = "SkinSelect",
-      SkinOptRewardId = StuffConfigData.UseParam,
-      ResourceId = StuffConfigData.ResourceId
-    })
-    return
-  elseif UseEffectType == CommonConst.ResUseEffectType.SelectCharAccessory then
-    UIManager(self):LoadUINew("CharSkinPreview", {
-      Type = "SelectCharAccessory",
-      AccessoryOptRewardId = StuffConfigData.UseParam,
-      ResourceId = StuffConfigData.ResourceId
-    })
-    return
-  elseif UseEffectType == CommonConst.ResUseEffectType.SelectWeaponSkin then
-    UIManager(self):LoadUINew("CharSkinPreview", {
-      Type = "SelectWeaponSkin",
-      WeaponSkinOptRewardId = StuffConfigData.UseParam,
-      ResourceId = StuffConfigData.ResourceId
-    })
-    return
-  elseif UseEffectType == CommonConst.ResUseEffectType.SelectWeaponAccessory then
-    UIManager(self):LoadUINew("CharSkinPreview", {
-      Type = "SelectWeaponAccessory",
-      AccessoryOptRewardId = StuffConfigData.UseParam,
-      ResourceId = StuffConfigData.ResourceId
-    })
-    return
-  elseif UseEffectType == CommonConst.ResUseEffectType.SelectSkin then
-    UIManager(self):LoadUINew("CharSkinPreview", {
-      Type = "SelectSkin",
-      CharSkinOptRewardId = StuffConfigData.UseParam,
-      ResourceId = StuffConfigData.ResourceId
-    })
-    return
-  elseif UseEffectType == CommonConst.ResUseEffectType.SelectGestureItem then
-    UIManager(self):LoadUINew("CharSkinPreview", {
-      Type = "SelectGestureItem",
-      GestureOptRewardId = StuffConfigData.UseParam,
+      Type = UseEffectType,
+      OptRewardId = StuffConfigData.UseParam,
       ResourceId = StuffConfigData.ResourceId
     })
     return
@@ -1182,11 +1159,12 @@ function M:OnClickGoToUseConsume(StuffConfigData)
   CommonDialogParams.DontCloseWhenRightBtnClicked = true
   CommonDialogParams.FunctionCallbackObj = self
   CommonDialogParams.ChooseCallbackFunction = self.TryToChooseConsumableItems
-  CommonDialogParams.RightGamepadImg = EKeys.X.KeyName
+  CommonDialogParams.RightGamepadImg = EKeys.A.KeyName
+  CommonDialogParams.RightGamepadKey = Const.GamepadFaceButtonBottom
   CommonDialogParams.ParentWidget = self
-  CommonDialogParams.RightGamepadKey = Const.GamepadFaceButtonLeft
   CommonDialogParams.HideItemTips = true
   CommonDialogParams.ResourceId = StuffConfigData.ResourceId
+  CommonDialogParams.UseParam = StuffConfigData.UseParam
   
   function CommonDialogParams.RightCallbackFunction(_, FirstData, FirstPopUIWidget)
     local ConfirmParams, TargetStuffName, PopConfirmUIId = {}, "", 100210
@@ -1215,6 +1193,7 @@ function M:OnClickGoToUseConsume(StuffConfigData)
     elseif "SelectResource" == UseEffectType then
     elseif "ResourcePack" == UseEffectType then
       self.ConsumeCount = self.CurrentChooseInfo.ConsumeCount or 1
+    elseif "RandomSelectPack" == UseEffectType then
     end
     if "ResourcePack" == UseEffectType then
       FirstPopUIWidget.DontFocusParentWidget = true
@@ -1226,6 +1205,11 @@ function M:OnClickGoToUseConsume(StuffConfigData)
       FirstPopUIWidget:RemoveFirstItemInPopupQueue()
       FirstPopUIWidget:OnCloseBtnClicked()
       self:ConfirmDealWithConsumableResource(UseEffectType)
+    elseif "RandomSelectPack" == UseEffectType then
+      FirstPopUIWidget.DontFocusParentWidget = true
+      FirstPopUIWidget:RemoveFirstItemInPopupQueue()
+      FirstPopUIWidget:OnCloseBtnClicked()
+      self:ConfirmDealWithConsumableRandomBox(UseEffectType)
     elseif ConfirmParams.ShortText then
       FirstPopUIWidget.DontFocusParentWidget = true
       ConfirmParams.AutoFocus = true
@@ -1247,6 +1231,8 @@ function M:OnClickGoToUseConsume(StuffConfigData)
     UIManager(self):ShowCommonPopupUI(100207, CommonDialogParams, self)
   elseif "SelectResource" == UseEffectType then
     UIManager(self):ShowCommonPopupUI(100208, CommonDialogParams, self)
+  elseif "RandomSelectPack" == UseEffectType then
+    UIManager(self):ShowCommonPopupUI(100343, CommonDialogParams, self)
   else
     UIManager(self):ShowCommonPopupUI(100209, CommonDialogParams, self)
   end
@@ -1478,6 +1464,54 @@ function M:ConfirmDealWithConsumableResource(UseEffectType)
   end
   
   PlayerAvatar:UseOptResourceInBag(ResourceId, OptIdxList, DealWithConsumableItemsCallback)
+  self.CurrentChooseInfo = nil
+end
+
+function M:ConfirmDealWithConsumableRandomBox()
+  local PlayerAvatar = GWorld:GetAvatar()
+  if nil == PlayerAvatar then
+    DebugPrint("ConfirmDealWithConsumableItems PlayerAvatar is nil, Not Connect to Server")
+    return
+  end
+  local ResourceId = self.CurrentChooseInfo.ResourceId
+  local ConsumeCount = self.CurrentChooseInfo.ConsumeCount or 1
+  
+  local function DealWithConsumableItemsCallback(RewardInfo)
+    UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, RewardInfo, false, function()
+    end, self, false)
+    local AllItemCount = self.List_Item:GetNumItems()
+    for i = 0, AllItemCount - 1 do
+      local ItemObj = self.List_Item:GetItemAt(i)
+      if ItemObj and ItemObj.StuffId == ResourceId then
+        local StuffServerData = self:GetStuffServerData(ItemObj.Uuid, BagCommon.StuffType.Resource)
+        if nil == StuffServerData or type(StuffServerData.Count) == "number" and StuffServerData.Count <= 0 then
+          self.List_Item:RemoveItem(ItemObj)
+          local EmptyStuffObj = StuffIconObject:CreateBagItemContent({
+            Uuid = "",
+            StuffType = "EmptyGrid",
+            StuffCount = 0,
+            StuffIcon = nil,
+            ParentWidget = self
+          })
+          self.List_Item:AddItem(EmptyStuffObj)
+          self.List_Item:AddEmptyGridItemCount(1)
+          self.NeedSelectGridIndex = 0
+          self:JumpToSelectItem(false)
+          self:RefreshAllGridIndex()
+        else
+          ItemObj.Count = StuffServerData.Count
+          if ItemObj.SelfWidget then
+            ItemObj.SelfWidget:SetCount(StuffServerData.Count)
+          end
+        end
+      end
+    end
+    if self.Panel_Detail:IsVisible() then
+      self.Panel_Detail:UpdateItemNumber()
+    end
+  end
+  
+  PlayerAvatar:UseResourceInBag(ResourceId, ConsumeCount, DealWithConsumableItemsCallback)
   self.CurrentChooseInfo = nil
 end
 
@@ -1793,10 +1827,10 @@ function M:RealToUnLockItems()
   if self.CurSelectStuffContent then
     if self.CurSelectStuffContent.StuffType == BagCommon.StuffType.Weapon then
       local StuffUuid = self:GetStuffObjId(self.CurSelectStuffContent.Uuid)
-      PlayerAvatar:UnLockResourceInBag(CommonConst.AllType.Weapon, StuffUuid)
+      self:Unlock_OpenSeconderyPassword(CommonConst.AllType.Weapon, StuffUuid, PlayerAvatar)
     elseif self.CurSelectStuffContent.StuffType == BagCommon.StuffType.Mod then
       local StuffUuid = self:GetStuffObjId(self.CurSelectStuffContent.Uuid)
-      PlayerAvatar:UnLockResourceInBag(CommonConst.AllType.Mod, StuffUuid)
+      self:Unlock_OpenSeconderyPassword(CommonConst.AllType.Mod, StuffUuid, PlayerAvatar)
     else
       local StuffUnitId = self.CurSelectStuffContent.UnitId
       if BagCommon:IsFishResource(StuffUnitId) then
@@ -1804,9 +1838,23 @@ function M:RealToUnLockItems()
       else
         PlayerAvatar:UnLockResourceInBag(CommonConst.AllType.Resource, StuffUnitId)
       end
+      self:BlockAllUIInput(true)
     end
-    self:BlockAllUIInput(true)
   end
+end
+
+function M:Unlock_OpenSeconderyPassword(Type, Uuid, PlayerAvatar)
+  local Callback = {
+    OnSuccess = function(Password)
+      self:SetFocus()
+      self:BlockAllUIInput(true)
+      PlayerAvatar:UnLockResourceInBag(Type, Uuid)
+    end,
+    OnCancel = function()
+      self:SetFocus()
+    end
+  }
+  SecondaryPasswordController:RequestSecPasswordValidation(Callback)
 end
 
 function M:OnUpdateBagItemByAction(OpAction, ErrCode, ...)

@@ -6,7 +6,7 @@
     "rarity": 3,
     "cost": 2,
     "buffId": 4020101,
-    "extraBuffDesc": "Runes de base",
+    "extraBuffDesc": "Rune de base",
     "hp": 0.3
   },
   {
@@ -16,7 +16,7 @@
     "rarity": 3,
     "cost": 2,
     "buffId": 4020102,
-    "extraBuffDesc": "Runes de base",
+    "extraBuffDesc": "Rune de base",
     "def": 0.45
   },
   {
@@ -26,7 +26,7 @@
     "rarity": 3,
     "cost": 2,
     "buffId": 4020103,
-    "extraBuffDesc": "Runes de base",
+    "extraBuffDesc": "Rune de base",
     "atk": 0.3
   },
   {
@@ -36,7 +36,7 @@
     "rarity": 3,
     "cost": 2,
     "buffId": 4020104,
-    "extraBuffDesc": "Runes de base",
+    "extraBuffDesc": "Rune de base",
     "shield": 0.4
   },
   {
@@ -46,7 +46,7 @@
     "rarity": 3,
     "cost": 4,
     "buffId": 4020105,
-    "extraBuffDesc": "Runes de base",
+    "extraBuffDesc": "Rune de base",
     "unlockQuestId": 10300117,
     "def": 0.45,
     "hp": 0.3
@@ -58,7 +58,7 @@
     "rarity": 3,
     "cost": 4,
     "buffId": 4020106,
-    "extraBuffDesc": "Runes de base",
+    "extraBuffDesc": "Rune de base",
     "unlockQuestId": 10300103,
     "atk": 0.3,
     "def": 0.45
@@ -70,7 +70,7 @@
     "rarity": 3,
     "cost": 4,
     "buffId": 4020107,
-    "extraBuffDesc": "Runes de base",
+    "extraBuffDesc": "Rune de base",
     "unlockQuestId": 10300102,
     "atk": 0.3,
     "hp": 0.3
@@ -82,7 +82,7 @@
     "rarity": 3,
     "cost": 4,
     "buffId": 4020108,
-    "extraBuffDesc": "Runes de base",
+    "extraBuffDesc": "Rune de base",
     "unlockQuestId": 10300117,
     "hp": 0.65,
     "shield": 0.6
@@ -94,7 +94,7 @@
     "rarity": 3,
     "cost": 4,
     "buffId": 4020109,
-    "extraBuffDesc": "Runes de base",
+    "extraBuffDesc": "Rune de base",
     "unlockQuestId": 10300101,
     "atk": 0.3,
     "shield": 0.4

@@ -402,6 +402,11 @@ function M:GoToMoreClick()
     Params.DataMap.Tabs[2] = DataMap
     UIManager(self):ShowCommonPopupUI(100257, Params)
     return true
+  elseif ActivityUtils.IsAccessoryDropActivity(self.CurActivityId) then
+    local BPBg = self.ParentWidget.WidgetBGAnchor:GetChildAt(0)
+    if BPBg.OpenRewardDetails then
+      BPBg:OpenRewardDetails()
+    end
   end
   return false
 end

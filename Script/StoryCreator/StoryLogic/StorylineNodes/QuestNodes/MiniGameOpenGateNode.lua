@@ -17,7 +17,7 @@ function MiniGameOpenGateNode:MiniGame(Callback)
   DebugPrint("------------ MiniGameOpenGateNode ------------------", self.StaticCreatorId)
   local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
   
-  function MiniGameOpenGateNodeCallback()
+  local function MiniGameOpenGateNodeCallback()
     GameMode:RemoveMiniGameSuccessCallback(self.StaticCreatorId)
     self:FinishAction(Callback)
   end

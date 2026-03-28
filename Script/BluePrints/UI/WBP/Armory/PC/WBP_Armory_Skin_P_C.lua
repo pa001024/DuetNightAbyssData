@@ -6,7 +6,8 @@ local FocusAreas = {
   AccessoryTab = "AccessoryTab",
   HiddenSelf = "HiddenSelf",
   Resource = "Resource",
-  MVPList = "MVPList"
+  MVPList = "MVPList",
+  SkinLevelUp = "SkinLevelUp"
 }
 local M = Class("BluePrints.UI.WBP.Armory.Appearance.WBP_Armory_Skin_Base_C")
 M._components = {
@@ -82,11 +83,17 @@ function M:Construct()
     Desc = GText("UI_CTL_RotatePreview")
   }
   self.Btn_Function:SetDefaultGamePadImg("A")
-  self.Key_Check:CreateCommonKey({
+  self.Btn_Package_Open:SetDefaultGamePadImg("A")
+  self.Btn_Package_Buy:SetDefaultGamePadImg("Y")
+  self.Key_Mod:CreateCommonKey({
+    KeyInfoList = {
+      {Type = "Img", ImgShortPath = "LS"}
+    }
+  })
+  self.Key_Show:CreateCommonKey({
     KeyInfoList = {
       {Type = "Img", ImgShortPath = "View"}
-    },
-    Desc = GText("UI_Controller_Check")
+    }
   })
   self.Key_Dye:CreateCommonKey({
     KeyInfoList = {
@@ -105,6 +112,12 @@ function M:Construct()
     CheckFunction = self.IsFocusStateValid
   }))
   self.WBP_Com_Cost:SwitchToPC()
+  self.Key_LevelUp:CreateCommonKey({
+    KeyInfoList = {
+      {Type = "Img", ImgShortPath = "LS"}
+    },
+    SkipRefreshInputType = true
+  })
 end
 
 function M:OnTabConfigCreated(TabConfig)
@@ -158,13 +171,20 @@ function M:UpdateKeySetting()
       self:AddKeyDownEvent(UIConst.GamePadKey.FaceButtonLeft, self.OnHideUIKeyDown)
       if not self.bSelfHidden and not self.IsPreviewMode and not self.IsCharacterTrialMode then
         if self.CurrentTopTabIdx == self.SkinTabIdx or self.CurrentTopTabIdx == self.HairTabIdx then
-          self:AddKeyDownEvent(UIConst.GamePadKey.FaceButtonTop, self.OnGamePadGotoDyeKeyDown)
+          self:AddKeyDownEvent(UIConst.GamePadKey.FaceButtonTop, self.OnGamePadFaceButtonTopKeyDown)
         elseif self.CurrentTopTabIdx == self.AccessoryTabIdx then
           self:AddKeyDownEvent(UIConst.GamePadKey.FaceButtonTop, self.OnGamePadAccessoryCustomKeyDown)
         end
+        if self.CurrentTopTabIdx == self.WeaponStanceFXTabIdx then
+          self:AddKeyDownEvent(UIConst.GamePadKey.FaceButtonTop, self.OnModBtnClicked)
+          self:AddKeyDownEvent(UIConst.GamePadKey.LeftThumb, self.OnGamePadFocusToModDetailsKeyDown)
+        end
+      end
+      if self.Panel_LevelUp:IsVisible() then
+        self:AddKeyDownEvent(UIConst.GamePadKey.LeftThumb, self.OnGamePadLeftThumbKeyDown)
       end
       table.insert(self.BottomKeyInfo, self.HideUI_KeyInfoList)
-      if self.EnableMouseWheel then
+      if self.EnableMouseWheel and self.ActorController:IsEnableCameraScrolling() then
         self.RepeatKeyDownEvents[Const.GamepadLeftTrigger] = self.OnCameraScrollBackwardKeyDown
         self.RepeatKeyDownEvents[Const.GamepadRightTrigger] = self.OnCameraScrollForwardKeyDown
         table.insert(self.BottomKeyInfo, self.ZoomKeyInfoList)
@@ -182,7 +202,7 @@ function M:UpdateKeySetting()
     self:AddKeyDownEvent(self.EscapeKey, self.OnBackKeyDown)
     self:AddKeyDownEvent(EKeys.U.KeyName, self.OnHideUIKeyDown)
     table.insert(self.BottomKeyInfo, self.HideUI_KeyInfoList)
-    if self.EnableMouseWheel then
+    if self.EnableMouseWheel and self.ActorController:IsEnableCameraScrolling() then
       table.insert(self.BottomKeyInfo, self.ZoomKeyInfoList)
     end
     if self.EnableDrag then
@@ -199,7 +219,11 @@ function M:OnFocusToResourceKeyDown()
 end
 
 function M:OnOpenVideoKeyDown()
-  self:OpenSkinVideo()
+  if self.CurrentTopTabIdx == self.SkinTabIdx then
+    self:OpenSkinVideo()
+  elseif self.CurrentTopTabIdx == self.WeaponStanceFXTabIdx then
+    self:OpenAccessoryVideo()
+  end
 end
 
 function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
@@ -217,9 +241,11 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
     if rawget(self, "bAccessoryCustomOpened") then
       self:SetIsDealWithVirtualAccept(true)
     end
-    self.GamePad_Check:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+    self.Key_Show:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
     self.Panel_Key_Dye:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
     self.Panel_Key_Custom:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+    self.Key_LevelUp:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+    self.Key_Mod:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
     if not self.IsInFocusPath then
       return
     end
@@ -231,10 +257,15 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
     if Widget and not UIUtils.HasAnyFocus(Widget) then
       Widget:SetFocus()
     end
+    if State and State.Name == FocusAreas.SkinLevelUp then
+      self.Key_LevelUp:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
   else
     self.Panel_Key_Dye:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    self.GamePad_Check:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Key_Show:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.Panel_Key_Custom:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Key_LevelUp:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Key_Mod:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
   self:UpdateKeySetting()
 end
@@ -261,6 +292,8 @@ function M:IsFocusStateValid(State)
     return self.bSelfHidden
   elseif StateName == FocusAreas.Resource then
     return true
+  elseif StateName == FocusAreas.SkinLevelUp then
+    return self.Panel_LevelUp:IsVisible()
   end
 end
 
@@ -276,7 +309,11 @@ function M:GetDesiredFocusTarget()
   if self.bSelfHidden then
     return self
   elseif self.CurrentTopTabIdx == self.SkinTabIdx then
-    return self:NavigateToSkinList()
+    if StateName == FocusAreas.SkinLevelUp then
+      return self["WBP_Armory_Skin_LevelUp_" .. self.SelectedSkinLevel]
+    else
+      return self:NavigateToSkinList()
+    end
   elseif self.CurrentTopTabIdx == self.MVPTabIdx then
     return self:NavigateToMVPList()
   elseif StateName == FocusAreas.AccessoryTab then
@@ -432,6 +469,12 @@ end
 function M:OnCharAccessoryTabClicked(...)
   M.Super.OnCharAccessoryTabClicked(self, ...)
   self:InitAccessoryNavigationRules()
+  self:UpdateKeySetting()
+end
+
+function M:OnWeaponAccessoryTabClicked(...)
+  M.Super.OnWeaponAccessoryTabClicked(self, ...)
+  self:InitAccessoryNavigationRules()
 end
 
 function M:InitAccessoryNavigationRules()
@@ -511,14 +554,21 @@ function M:OnGamePadConfirKeyDown()
   if self.IsPreviewMode or self.IsCharacterTrialMode then
     return UIUtils.Handled, true
   end
-  if self.Btn_Function:IsVisible() and not self.Btn_Function:IsBtnForbidden() and 0 == self.WidgetSwitcher_BtnState:GetActiveWidgetIndex() and self.ConfirmBtnFunc then
-    self.ConfirmBtnFunc(self)
+  if self.Btn_Function:IsVisible() and not self.Btn_Function:IsBtnForbidden() and 0 == self.WidgetSwitcher_BtnState:GetActiveWidgetIndex() and self.RightConfirmBtnFunc then
+    self.RightConfirmBtnFunc(self)
   end
   return UIUtils.Handled, true
 end
 
-function M:OnGamePadGotoDyeKeyDown()
-  if self.IsPreviewMode or self.IsCharacterTrialMode or self.IsTargetUnowned then
+function M:OnGamePadFaceButtonTopKeyDown()
+  if self.IsPreviewMode or self.IsCharacterTrialMode then
+    return UIUtils.Handled, true
+  end
+  if self.LeftConfirmBtnFunc then
+    self.LeftConfirmBtnFunc(self)
+    return
+  end
+  if self.IsTargetUnowned then
     return UIUtils.Handled, true
   end
   local Content
@@ -534,6 +584,32 @@ function M:OnGamePadGotoDyeKeyDown()
     self:OpenDye()
   end
   return UIUtils.Handled, true
+end
+
+function M:OnGamePadLeftThumbKeyDown()
+  if self.IsPreviewMode or self.IsCharacterTrialMode then
+    return UIUtils.Handled, true
+  end
+  if not self.Panel_LevelUp:IsVisible() then
+    return UIUtils.Handled, true
+  end
+  self.Key_LevelUp:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  local CurLevelUpWidget = self["WBP_Armory_Skin_LevelUp_" .. self.SelectedSkinLevel]
+  if CurLevelUpWidget then
+    CurLevelUpWidget:SetFocus()
+    self.FSM:Push({
+      Name = FocusAreas.SkinLevelUp,
+      Content = CurLevelUpWidget
+    })
+  end
+  return UIUtils.Handled, true
+end
+
+function M:OnGamePadFocusToModDetailsKeyDown()
+  if self.Type ~= CommonConst.DataType.Weapon then
+    return
+  end
+  self.WBP_Armory_SkinMod:OnBtnClicked()
 end
 
 function M:OnGamePadAccessoryCustomKeyDown()
@@ -609,7 +685,7 @@ function M:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
   if "Gamepad_RightX" == InKeyName then
     if self.ActorController then
       local DeltaX = UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent) * 10
-      self.ActorController:OnDragging({X = DeltaX})
+      self.ActorController:OnDragViewActor({X = DeltaX})
     end
     return UIUtils.Handled
   elseif "Gamepad_RightY" == InKeyName and rawget(self, "bAccessoryCustomOpened") then
@@ -640,7 +716,17 @@ function M:GetReplyOnBack()
 end
 
 function M:OnBackKeyDown()
-  return M.Super.OnBackKeyDown(self)
+  if self:IsAnimationPlaying(self.In) then
+    return
+  end
+  local StateName = self.FSM:Peak().Name
+  if StateName == FocusAreas.SkinLevelUp then
+    self.FSM:Pop()
+    self.Key_LevelUp:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+    return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), self:GetDesiredFocusTarget()), true
+  else
+    return M.Super.OnBackKeyDown(self)
+  end
 end
 
 AssembleComponents(M)

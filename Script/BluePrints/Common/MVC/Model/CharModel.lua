@@ -136,6 +136,7 @@ function M:Init(Avatar)
   MappingReward(Avatar)
   EventManager:AddEvent(EventID.OnCharCardLevelResourcesChanged, self, self.OnCharCardLevelResourcesChanged)
   EventManager:AddEvent(EventID.OnCharDeleted, self, self.OnCharDeleted)
+  EventManager:AddEvent(EventID.OnCharExtraGradeItemClick, self, self.OnCharExtraGradeItemClick)
   try({
     exec = function()
       ArmoryUtils:CreateReddotInfos(CommonConst.DataType.Char)
@@ -150,6 +151,7 @@ function M:Init(Avatar)
       DebugPrint("Error: 角色红点数据创建失败！" .. "\n" .. trace)
     end
   })
+  self.Inited = true
 end
 
 function M:GetCardLevelResourceByUuid(Uuid)
@@ -160,9 +162,11 @@ function M:OnCharCardLevelResourcesChanged(ResourceId, CharId, CharUuid)
   local Avatar = GWorld:GetAvatar()
   local Char = Avatar.Chars[CharUuid]
   if Char then
+    local IsNew = ArmoryUtils:TryAddNewUltraGradeCharReddot(Char)
     ArmoryUtils:SetItemReddotRead({
       ItemType = CommonConst.DataType.Char,
-      Uuid = CharUuid
+      Uuid = CharUuid,
+      IsNew = IsNew
     }, false, true)
     ArmoryUtils:TryAddNewCharReddot(Char, CommonUtils.ObjId2Str(CharUuid))
   else
@@ -171,7 +175,22 @@ function M:OnCharCardLevelResourcesChanged(ResourceId, CharId, CharUuid)
   end
 end
 
+function M:OnCharExtraGradeItemClick(CharUuid)
+  local Avatar = GWorld:GetAvatar()
+  local Char = Avatar.Chars[CharUuid]
+  if Char then
+    ArmoryUtils:SetItemReddotRead({
+      ItemType = CommonConst.DataType.Char,
+      Uuid = CharUuid,
+      IsNew = false
+    }, false, true)
+  end
+end
+
 function M:OnNewCharObtained(CharUuid)
+  if not self.Inited then
+    return
+  end
   local Avatar = GWorld:GetAvatar()
   local Char = Avatar.Chars[CharUuid]
   if Char then
@@ -182,6 +201,9 @@ function M:OnNewCharObtained(CharUuid)
 end
 
 function M:OnCharDeleted(CharUuid)
+  if not self.Inited then
+    return
+  end
   local CharId = _UuidToCharId[CharUuid]
   local CardLevelResourceId = _UuidToCardLevelResourceId[CharUuid]
   if CharId then
@@ -206,6 +228,9 @@ function M:OnCharDeleted(CharUuid)
 end
 
 function M:OnNewCharSkinObtained(SkinId, CharId)
+  if not self.Inited then
+    return
+  end
   _SkinIdToCharId[SkinId] = CharId
   if not CommonUtils.IsCurrentVersionRealease(CommonConst.DataType.Skin, SkinId) then
     return
@@ -216,6 +241,9 @@ function M:OnNewCharSkinObtained(SkinId, CharId)
 end
 
 function M:OnNewCharHairObtained(HairId, CharId)
+  if not self.Inited then
+    return
+  end
   _HairIdToCharId[HairId] = CharId
   if not CommonUtils.IsCurrentVersionRealease(CommonConst.DataType.Hair, HairId) then
     return
@@ -226,6 +254,9 @@ function M:OnNewCharHairObtained(HairId, CharId)
 end
 
 function M:OnNewCharAccessoryObtained(AccessoryId)
+  if not self.Inited then
+    return
+  end
   _CharAccessoryMap[AccessoryId] = true
   local CharAccessoryData = DataMgr.CharAccessory[AccessoryId]
   if not CharAccessoryData or _DefaultAccessories[CharAccessoryData.AccessoryType] == AccessoryId then
@@ -244,6 +275,9 @@ function M:OnNewCharAccessoryObtained(AccessoryId)
 end
 
 function M:OnPropChangeStoredCollectReward(Strings)
+  if not self.Inited then
+    return
+  end
   if _CharReward[Strings[1]] and Strings[2] and Strings[3] then
     local CharId = tonumber(Strings[2])
     if not DataMgr.Char[CharId] then
@@ -269,6 +303,7 @@ function M:IsCharAccessoryExist(AccessoryId)
 end
 
 function M:Destory()
+  self.Inited = false
   _CardLevelResourceToUuids = {}
   _CardLevelResourceToCharIds = {}
   _UuidToCardLevelResourceId = {}

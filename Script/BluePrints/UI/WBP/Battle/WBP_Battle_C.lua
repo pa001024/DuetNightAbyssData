@@ -2,13 +2,16 @@ require("UnLua")
 local UIUtils = require("Utils.UIUtils")
 local ChatCommon = require("BluePrints.UI.WBP.Chat.ChatCommon")
 local ClientEventUtils = require("BluePrints.Common.ClientEvent.ClientEventUtils")
+local BattleHUDCommonConst = require("BluePrints.UI.UI_Phone.Battle.BattleHUDCommonConst")
 local TaskUtils = require("BluePrints.UI.TaskPanel.TaskUtils")
 local AllPlayerBloodState = require("BluePrints.UI.BloodBar.BloodBarUtils").AllBloodState
 local EMCache = require("EMCache.EMCache")
 local WBP_Battle_C = Class("BluePrints.UI.BP_UIState_C")
 WBP_Battle_C._components = {
   "BluePrints.UI.WBP.Chat.View.WBP_Battle_C_ChatComp",
-  "BluePrints.UI.WBP.Team.View.WBP_Battle_C_TeamComp"
+  "BluePrints.UI.WBP.Team.View.WBP_Battle_C_TeamComp",
+  "BluePrints.UI.WBP.Common.WBP_Battle_C_WaterMarkComp",
+  "BluePrints.UI.HotUpdate.WBP_Battle_C_HotUpdateComp"
 }
 
 function WBP_Battle_C:Construct()
@@ -18,6 +21,10 @@ function WBP_Battle_C:Construct()
   end
   self.OnVisibilityChanged:Add(self, function(self, Visibility)
     if self:IsVisible() then
+      if self.LastSkillFeatureHideTag then
+        self.LastSkillFeatureHideTag = nil
+        return
+      end
       UIManager():TryResumeAfterLoadingMgr({
         "TriggerGuide",
         "MainLineQuest",
@@ -126,6 +133,8 @@ function WBP_Battle_C:OnLoaded(...)
   self:AddDispatcher(EventID.OnTheaterJoinPerformGameFail, self, self.TheaterJoinPerformGameFail)
   self:AddDispatcher(EventID.OnTheaterPerformGameStart, self, self.TheaterPerformGameStart)
   self:AddDispatcher(EventID.OnTheaterPerformGameNotice, self, self.OnTheaterPerformGameNotice)
+  self:AddDispatcher(EventID.OnSettingSystemLanguageChanged, self, self.OnGameLanguageChanged)
+  self:AddDispatcher(EventID.OnMobileHudPlanChanged, self, self.UpdateMobileLayoutInfoByServerData)
   self:AddDispatcher(EventID.OnTeleportReady, self, self.TeleportReady)
   local NodeName = DataMgr.ReddotNode.Quest.Name
   local Avatar = GWorld:GetAvatar()
@@ -143,7 +152,11 @@ function WBP_Battle_C:OnLoaded(...)
   end
   self.SystemHideTags = {}
   self.IsPlayOutAnim = false
-  self.HideGuideBookBtn = false
+  if Avatar and Avatar.Suits and Avatar.Suits.PlayerCharacterSuit and Avatar.Suits.PlayerCharacterSuit.HideUIInScreen and Avatar.Suits.PlayerCharacterSuit.HideUIInScreen.GuideBook then
+    self.HideGuideBookBtn = true
+  else
+    self.HideGuideBookBtn = false
+  end
   self.HideSystemEntrance = false
   self:InitConditionMapSystem()
   self.VB_Teammate_Phantom:ClearChildren()
@@ -186,6 +199,34 @@ function WBP_Battle_C:OnLoaded(...)
   self.Btn_Task.IsBtnTask = true
   self:InitGameJumpWord()
   self:CheckTheaterEventState()
+  self:UpdateMobileLayoutInfoByServerData("Update")
+end
+
+function WBP_Battle_C:CloseOpenBagListening()
+  self:StopListeningForInputAction("OpenBag", EInputEvent.IE_Pressed)
+end
+
+function WBP_Battle_C:CloseOpenGuideMainListening()
+  self:StopListeningForInputAction("OpenGuideBook", EInputEvent.IE_Pressed)
+end
+
+function WBP_Battle_C:OnGameLanguageChanged()
+  self:InitMainUIInBigWorld()
+  self:RefreshTeamWhenEnterGame(not GWorld:IsStandAlone())
+  local Avatar = GWorld:GetAvatar()
+  local QuestChainId = Avatar.TrackingQuestChainId
+  if QuestChainId then
+    local QuestId
+    if Avatar.QuestChains[QuestChainId] and Avatar.QuestChains[QuestChainId].DoingQuestId then
+      QuestId = Avatar.QuestChains[QuestChainId].DoingQuestId
+    end
+    if QuestId then
+      local TaskDetailInfo = TaskUtils:GetQuestDetail(QuestChainId, QuestId)
+      local STLTaskInfo = TaskUtils:TaskDetailInfo2STLTaskInfo(TaskDetailInfo)
+      local TaskBar = TaskUtils.GetTaskBarWidget()
+      TaskBar:UpdateTaskInfo(STLTaskInfo, "Add")
+    end
+  end
 end
 
 function WBP_Battle_C:GetOrAddWidget(WidgetName, NodeToAdd)
@@ -997,6 +1038,10 @@ function WBP_Battle_C:OpenSystemByAction(ActionName, bEscMenu, ...)
   if Avatar and Avatar:IsInHardBoss() and "OpenChat" ~= ActionName then
     return
   end
+  local GameState = UE4.UGameplayStatics.GetGameState(self)
+  if GameState and GameState.GameModeType == "SoloTreasure" and "OpenChat" == ActionName then
+    return
+  end
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
   if Player:CheckForbidTags(ActionName) then
     return
@@ -1375,7 +1420,11 @@ function WBP_Battle_C:SetSignBoardNpcIdle()
       end
     end
   end
+  local SignBoardController = require("BluePrints.UI.WBP.SignBoardBubble.SignBoardBubbleTalkController")
   self.SignBoardNpcLoadComplete = true
+  if SignBoardController then
+    SignBoardController:StartHomeBase()
+  end
 end
 
 function WBP_Battle_C:OnCharAccessoryChange(Ret, CharUuid)
@@ -1511,12 +1560,70 @@ function WBP_Battle_C:OnHomeBaseBtnPlayAnim(UIName, AnimationName)
   end, nil, nil, nil, false)
 end
 
-function WBP_Battle_C:OnSwitchRole()
+function WBP_Battle_C:OnSwitchRole(CharUuid)
   for i = 0, self.ListView:GetNumItems() - 1 do
     local Item = self.ListView:GetItemAt(i)
     if Item and Item.BtnId == CommonConst.ArmoryEnterId and Item.SelfWidget then
       Item.SelfWidget:UpdateArmoryIcon()
     end
+  end
+  local PlayerAvatar = GWorld:GetAvatar()
+  local PlayerCharData = PlayerAvatar.Chars[CharUuid]
+  if PlayerCharData then
+    local PlayerCharId = PlayerCharData.CharId
+    if 1504 == PlayerCharId then
+      self:DealWithServerDataForManualAdditionNode(PlayerAvatar, CommonUtils.GetDeviceTypeByPlatformName(self) == "PC", true)
+      local LayoutPlanIndex = PlayerAvatar:GetCurrentMobileHudPlanIndex()
+      if 2 ~= LayoutPlanIndex then
+        PlayerAvatar:SwitchMobileHudPlan(2)
+      end
+      DebugPrint("HUDWidgetDesignComponent:OnSwitchRole PlayerMainRoleId 切换到了苏乙角色，强制设置一下自定义布局方案之中的外显逻辑")
+    else
+      self:DealWithServerDataForManualAdditionNode(PlayerAvatar, CommonUtils.GetDeviceTypeByPlatformName(self) == "PC", false)
+      DebugPrint("HUDWidgetDesignComponent:OnSwitchRole PlayerMainRoleId 切换到了其他角色，自定义布局外显逻辑去除")
+    end
+  end
+end
+
+function WBP_Battle_C:DealWithServerDataForManualAdditionNode(PlayerAvatar, bIsInPCPlatform, bShow)
+  local AllManualAddWidget = {}
+  for key, value in pairs(BattleHUDCommonConst.DesignBaseConfigInHUD) do
+    if value.bIsNeedManualAdd then
+      table.insert(AllManualAddWidget, key)
+    end
+  end
+  if bIsInPCPlatform then
+    local PlanIndex, IsDataNeedSendToServer = 2, false
+    local WidgetPlanData = PlayerAvatar:GetMobileHudPlan(PlanIndex) or {}
+    for _, ParentName in ipairs(AllManualAddWidget) do
+      if nil ~= WidgetPlanData[ParentName] then
+        if not WidgetPlanData[ParentName].bHasAddInHUDSetting then
+          WidgetPlanData[ParentName].bHasAddInHUDSetting = true
+          IsDataNeedSendToServer = true
+        end
+      else
+        local DesignBaseConfigData = BattleHUDCommonConst.DesignBaseConfigInHUD[ParentName]
+        local DesignManualNodeConfigData = BattleHUDCommonConst.ManualAdditionConfigInHUD[DesignBaseConfigData.WidgetName]
+        if DesignManualNodeConfigData then
+          WidgetPlanData[ParentName] = {
+            PosX = DesignManualNodeConfigData.DefaultDesignPosition.X,
+            PosY = DesignManualNodeConfigData.DefaultDesignPosition.Y,
+            ScaleX = DesignManualNodeConfigData.DefaultDesignScale,
+            ScaleY = DesignManualNodeConfigData.DefaultDesignScale,
+            bHasAddInHUDSetting = true
+          }
+          IsDataNeedSendToServer = true
+        end
+      end
+    end
+    if IsDataNeedSendToServer then
+      DebugPrint("HUDWidgetDesignComponent: DealWithServerDataForManualAdditionNode Call Rpc UpdateMobileHudPlan!, PlanIndex is ", PlanIndex)
+      PlayerAvatar:UpdateMobileHudPlan(PlanIndex, WidgetPlanData)
+    end
+  elseif bShow then
+    self.Char_Skill:ForceShowManualAdditionNode(AllManualAddWidget)
+  else
+    self.Char_Skill:ForceHideManualAdditionNode(AllManualAddWidget)
   end
 end
 
@@ -1552,6 +1659,7 @@ function WBP_Battle_C:UnLoadSystem(UIName)
       end
     end
   end
+  self:CheckNeedPlayDownloadSignEffect()
   self:InitChatSimple()
   return IsPlayInAnim
 end
@@ -1563,6 +1671,16 @@ function WBP_Battle_C:CheckNeedPlayInOutAnim(SystemId)
     return false
   end
   return true
+end
+
+function WBP_Battle_C:CheckNeedPlayDownloadSignEffect()
+  DebugPrint("WBP_Battle_C:CheckNeedPlayDownloadSignEffect OptionalPatches:== Check")
+  local HotUpdateSubsystem = USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, UHotUpdateSubsystem)
+  if HotUpdateSubsystem and HotUpdateSubsystem:HasDownloadTask() then
+    self:AddDownloadSignEffect()
+  else
+    self:RemoveDownloadSignEffect()
+  end
 end
 
 function WBP_Battle_C:TryRecoverUI()
@@ -1741,7 +1859,7 @@ function WBP_Battle_C:HidePlayerDeadUI()
 end
 
 function WBP_Battle_C:ShowBattleFortUI()
-  local BattleFortUI = UIManager(self):GetUI("BattleFort")
+  local BattleFortUI = UIManager(self):GetUI("BattleFort") or UIManager(self):GetUI("BattleFort02")
   if BattleFortUI then
     if BattleFortUI.HideUITable then
       for Name, _ in pairs(BattleFortUI.HideUITable) do
@@ -1764,7 +1882,7 @@ function WBP_Battle_C:ShowBattleFortUI()
 end
 
 function WBP_Battle_C:HideBattleFortUI()
-  local BattleFortUI = UIManager(self):GetUI("BattleFort")
+  local BattleFortUI = UIManager(self):GetUI("BattleFort") or UIManager(self):GetUI("BattleFort02")
   if BattleFortUI then
     if BattleFortUI.HideUITable then
       for Name, VisibleState in pairs(BattleFortUI.HideUITable) do
@@ -1864,6 +1982,7 @@ function WBP_Battle_C:SetUIVisibilityTag(HideTag, Invisible)
   if self.HideTags == nil then
     self.HideTags = {}
   end
+  self.LastSkillFeatureHideTag = self.HideTags[Const.SkillFeatureHideTag]
   if Invisible then
     self.HideTags[HideTag] = 1
   else
@@ -2060,8 +2179,8 @@ function WBP_Battle_C:OnSoloTreasureScoreAndBagUI()
   self.Pos_SoloTreasure_Score:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self.Pos_SoloTreasure_Score:ClearChildren()
   self.SoloTreasureScoreAndBagUI = self:CreateWidgetNew("SoloTreasureScoreAndBag")
-  self.SoloTreasureScoreAndBagUI:InitWidgetUI()
   self.Pos_SoloTreasure_Score:AddChild(self.SoloTreasureScoreAndBagUI)
+  self.SoloTreasureScoreAndBagUI:InitWidgetUI()
 end
 
 function WBP_Battle_C:OnPartyEnter()
@@ -2463,6 +2582,95 @@ function WBP_Battle_C:TeleportRelease()
     TaskBar.Key_Tips03:OnButtonReleased()
     TaskBar.Key_Controller_Tips03:OnButtonReleased()
   end
+end
+
+function WBP_Battle_C:AddDownloadSignEffect()
+  if not self.DownloadSign_EffectWidget then
+    self.DownloadSign_EffectWidget = UIManager(self):CreateWidget("WidgetBlueprint'/Game/UI/WBP/Battle/Widget/WBP_Battle_EntryDownloadSign.WBP_Battle_EntryDownloadSign'", false)
+    self.Pos_DownloadSign:AddChild(self.DownloadSign_EffectWidget)
+  end
+  if not self.Pos_DownloadSign:IsVisible() then
+    self.Pos_DownloadSign:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  end
+  DebugPrint("WBP_Battle_C:AddDownloadSignEffect OptionalPatches:== Add")
+end
+
+function WBP_Battle_C:RemoveDownloadSignEffect(bIsNeedRealRemove)
+  if bIsNeedRealRemove and self.DownloadSign_EffectWidget then
+    self.Pos_DownloadSign:RemoveChild(self.DownloadSign_EffectWidget)
+    self.DownloadSign_EffectWidget = nil
+  end
+  self.Pos_DownloadSign:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  DebugPrint("WBP_Battle_C:RemoveDownloadSignEffect OptionalPatches:== Remove")
+end
+
+function WBP_Battle_C:UpdateMobileLayoutInfoByServerData(OpType, LayoutPlan)
+  local Platform = CommonUtils:GetDeviceTypeByPlatformName(self)
+  if Platform == CommonConst.CLIENT_DEVICE_TYPE.PC then
+    return
+  end
+  local PlayerAvatar = GWorld:GetAvatar()
+  if not PlayerAvatar then
+    return
+  end
+  if nil == LayoutPlan then
+    LayoutPlan = PlayerAvatar:GetCurrentMobileHudPlanIndex() or 2
+  end
+  if "Update" == OpType then
+    for NodeName, WidgetConfig in pairs(BattleHUDCommonConst.ExtraNodeConfigInHUD) do
+      local WidgetPlanData = PlayerAvatar:GetMobileHudPlan(LayoutPlan) or {}
+      local TargetNodeWidget, TargetNodeSlot = self[NodeName]
+      local SaveDataInHUD = WidgetPlanData[WidgetConfig.SettingNodeName]
+      SaveDataInHUD = SaveDataInHUD or self:GetDefaultLayoutInfoFromDesign(LayoutPlan, WidgetConfig.DefaultLayoutIndex)
+      if TargetNodeWidget then
+        if WidgetConfig.bUseParentSlot then
+          TargetNodeSlot = TargetNodeWidget:GetParent().Slot
+        else
+          TargetNodeSlot = TargetNodeWidget.Slot
+        end
+        if TargetNodeSlot then
+          TargetNodeSlot:SetPosition(FVector2D(SaveDataInHUD.PosX, SaveDataInHUD.PosY))
+        end
+        if WidgetConfig.bUseParentSlot then
+          TargetNodeWidget:GetParent():SetRenderScale(FVector2D(SaveDataInHUD.ScaleX, SaveDataInHUD.ScaleY))
+        else
+          TargetNodeWidget:SetRenderScale(FVector2D(SaveDataInHUD.ScaleX, SaveDataInHUD.ScaleY))
+        end
+      end
+    end
+  end
+end
+
+function WBP_Battle_C:GetDefaultLayoutInfoFromDesign(LayoutPlan, LayoutIndex)
+  local ResultDesignData = {}
+  local DefaultPositionPlan = self["DefaultPosition0" .. tostring(LayoutPlan)]
+  local DefaultScalePlan = self["DefaultPosScale0" .. tostring(LayoutPlan)]
+  local ChildIndex = math.max(0, LayoutIndex)
+  if DefaultPositionPlan and DefaultPositionPlan:Get(ChildIndex) then
+    ResultDesignData.PosX = DefaultPositionPlan:Get(ChildIndex).X
+    ResultDesignData.PosY = DefaultPositionPlan:Get(ChildIndex).Y
+  else
+    DebugPrint("WBP_Battle_C: GetDefaultLayoutInfoFromDesign Error Cannot find DefaultPositionPlan for this ChildIndex!", LayoutIndex)
+  end
+  if DefaultScalePlan and DefaultScalePlan:Get(ChildIndex) then
+    ResultDesignData.ScaleX = DefaultScalePlan:Get(ChildIndex).X
+    ResultDesignData.ScaleY = DefaultScalePlan:Get(ChildIndex).Y
+  else
+    DebugPrint("WBP_Battle_C: GetDefaultLayoutInfoFromDesign Error Cannot find ResultDesignData for this ChildIndex!", LayoutIndex)
+  end
+  return ResultDesignData
+end
+
+function WBP_Battle_C:GetLayoutInfoFromServer(LayoutWidgetName, EditPlanIndex)
+  local PlayerAvatar = GWorld:GetAvatar()
+  if not PlayerAvatar then
+    return
+  end
+  if nil == EditPlanIndex then
+    EditPlanIndex = PlayerAvatar:GetCurrentMobileHudPlanIndex()
+  end
+  local WidgetPlanData = PlayerAvatar:GetMobileHudPlan(EditPlanIndex) or {}
+  return WidgetPlanData[LayoutWidgetName]
 end
 
 AssembleComponents(WBP_Battle_C)

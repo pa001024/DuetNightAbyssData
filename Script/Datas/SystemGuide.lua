@@ -763,5 +763,132 @@ return ReadOnly("SystemGuide", {
     PlayerInControl = 1,
     SysGuideId = 2092,
     UIUnlockRule = "Mount"
+  },
+  [2093] = {
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideSkip = 1,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_ZhengLi.story",
+    OpenInterface = "BagGamePlay",
+    SysGuideId = 2093
+  },
+  [2094] = {
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideSkip = 1,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_AddBtn.story",
+    OpenInterface = "CustomHUDSetting",
+    SysGuideId = 2094
+  },
+  [2095] = {
+    ConditionCheck = 10301404,
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideSkip = 1,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_TeYao.story",
+    OpenInterface = "ActivitySoloTreasureMain",
+    SysGuideId = 2095
+  },
+  [2096] = {
+    FirstSeenTag = "Container",
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideSkip = 1,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_SouDaChe_RongQi.story",
+    SysGuideId = 2096
+  },
+  [2097] = {
+    FirstSeenTag = "Niudan",
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideSkip = 1,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_SouDaChe_NiuDan.story",
+    SysGuideId = 2097
+  },
+  [2098] = {
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideSkip = 1,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_SouDaChe_TianQi.story",
+    SpecialCondition = "FirstRain",
+    SysGuideId = 2098
+  },
+  [2099] = {
+    FirstSeenTag = "GambleMech",
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideSkip = 1,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_SouDaChe_GongFeng.story",
+    SysGuideId = 2099
+  },
+  [2100] = {
+    FirstSeenTag = "TreasureRoom",
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideSkip = 1,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_SouDaChe_MiShi.story",
+    SysGuideId = 2100
+  },
+  [2101] = {
+    FirstSeenTag = "PoisonMech",
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideSkip = 1,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_SouDaChe_XianJing.story",
+    SysGuideId = 2101
+  },
+  [2102] = {
+    FirstSeenTag = "GuardMech",
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideSkip = 1,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_SouDaChe_ShouHu.story",
+    SysGuideId = 2102
+  },
+  [2103] = {
+    FirstSeenTag = "ExtractionPoint",
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideSkip = 1,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_SouDaChe_JieSuan.story",
+    SysGuideId = 2103
+  },
+  [2104] = {
+    FirstSeenTag = "ExpYanque",
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideSkip = 1,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_YanQue.story",
+    SysGuideId = 2104
+  },
+  [2105] = {
+    FirstSeenTag = "WuyouFind",
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideSkip = 1,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_WuyouFind.story",
+    SysGuideId = 2105
+  },
+  [2106] = {
+    FirstSeenTag = "DarkClouds",
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideSkip = 1,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_YuBo.story",
+    SysGuideId = 2106
   }
 })

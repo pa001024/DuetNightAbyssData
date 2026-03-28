@@ -17,7 +17,7 @@
   },
   {
     "id": 3010103,
-    "name": "UI_WeaponSkin_Name_3010103",
+    "name": "荣耀撕裂者",
     "desc": "UI_WeaponSkin_Des_3010103",
     "icon": "T_Head_Claymore_Rongyao",
     "rarity": 5,
@@ -64,6 +64,14 @@
     "unlock": "Disponible dans la boutique"
   },
   {
+    "id": 3010109,
+    "name": "碧霄吟·重剑",
+    "desc": "",
+    "icon": "T_Head_Claymore_Bixiao",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
     "id": 3010201,
     "name": "Second hameçon",
     "desc": "La Truite des glaces congelée : ferme, savoureuse... et impérissable. Même les conserves et le film alimentaire finiront avant elle — peut-être même avant votre bon sens.",
@@ -104,12 +112,20 @@
     "unlock": "Disponible dans la boutique"
   },
   {
+    "id": 3010206,
+    "name": "碧霄吟·单手剑",
+    "desc": "Indemne de la poussière du monde, elle fend les flots d’azur sans jamais faiblir.",
+    "icon": "T_Head_Sword_Bixiao",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
     "id": 3010301,
     "name": "Scherzo de l’aurore",
     "desc": "Où se cache le soleil ? Là, regarde... il danse au creux de ma paume.",
     "icon": "T_Head_Bow_Huanri",
     "rarity": 5,
-    "unlock": "Disponible via la Myriade"
+    "unlock": "Disponible dans la boutique"
   },
   {
     "id": 3010302,
@@ -128,6 +144,22 @@
     "unlock": "Disponible dans la boutique"
   },
   {
+    "id": 3010304,
+    "name": "碧霄吟·弓（长弓）",
+    "desc": "Indemne de la poussière du monde, elle fend les flots d’azur sans jamais faiblir.",
+    "icon": "T_Head_Bow_Bixiao",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010305,
+    "name": "碧霄吟·弓（短弓）",
+    "desc": "Indemne de la poussière du monde, elle fend les flots d’azur sans jamais faiblir.",
+    "icon": "T_Head_Bow_Bixiao",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
     "id": 3010401,
     "name": "Nocturne d’été",
     "desc": "Une note cristalline fend le silence, tire une jeune fille de son rêve d’été... et vient frôler les cordes sensibles de son cœur.",
@@ -141,7 +173,7 @@
     "desc": "Sous les pas de la danseuse, l’écume bondit. Le vent salé charrie tout un été, et le sommet de la vague se fige ici — éclatant, indompté.",
     "icon": "T_Head_Polearm_Talang",
     "rarity": 5,
-    "unlock": "Disponible via la Myriade"
+    "unlock": "Disponible dans la boutique"
   },
   {
     "id": 3010403,
@@ -240,6 +272,14 @@
     "unlock": "Disponible dans la boutique"
   },
   {
+    "id": 3010609,
+    "name": "碧霄吟·双刀",
+    "desc": "Indemne de la poussière du monde, elle fend les flots d’azur sans jamais faiblir.",
+    "icon": "T_Head_Dualblade_Bixiao",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
     "id": 3010701,
     "name": "Héritage paternel – Katana",
     "desc": "Un katana singulier, censé incarner l’autorité d’un père : ferme, formateur... et traumatisant juste ce qu’il faut.",
@@ -269,6 +309,14 @@
     "desc": "Une brochette de douceurs cristallisées.",
     "icon": "T_Head_Katana_Tangfu",
     "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010709,
+    "name": "碧霄吟·太刀",
+    "desc": "Indemne de la poussière du monde, elle fend les flots d’azur sans jamais faiblir.",
+    "icon": "T_Head_Katana_Bixiao",
+    "rarity": 5,
     "unlock": "Disponible dans la boutique"
   },
   {
@@ -320,10 +368,34 @@
     "unlock": "Disponible dans la boutique"
   },
   {
+    "id": 3010902,
+    "name": "",
+    "desc": "Indemne de la poussière du monde, elle fend les flots d’azur sans jamais faiblir.",
+    "icon": "T_Head_Cannon_Bixiao",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
     "id": 3011001,
     "name": "Guitare miaou n° 2",
     "desc": "Miaouuu ♪ miaou-miaou-miaou ♪ miaou-miaou ♪♪",
     "icon": "T_Head_Shotgun_Dianju",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3011002,
+    "name": "火力全开",
+    "desc": "疾书凝玄甲，谈笑烬千军。",
+    "icon": "T_Head_Shotgun_Huoli",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3011003,
+    "name": "碧霄吟·霰弹枪",
+    "desc": "Indemne de la poussière du monde, elle fend les flots d’azur sans jamais faiblir.",
+    "icon": "T_Head_Shotgun_Bixiao",
     "rarity": 5,
     "unlock": "Disponible dans la boutique"
   },

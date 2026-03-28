@@ -283,6 +283,7 @@ function M:UpdateState(DataTableIndex, DataName, DataValue)
     Info.State = Info.State or {}
     SomethingDiff = Info.State[DataName] ~= DataValue
     Info.State[DataName] = DataValue
+    self.RegionDataMgr:ExeRegionDataUpdateCallback(Info)
   end
   return SomethingDiff, Info
 end
@@ -300,6 +301,9 @@ function M:UpdateStateByTable(DataTableIndex, NewState)
     end
   else
     GWorld.logger.error("M:UpdateStateByTable SomethingDiff : Info Error " .. DataTableIndex)
+  end
+  if SomethingDiff then
+    self.RegionDataMgr:ExeRegionDataUpdateCallback(Info)
   end
   return SomethingDiff
 end
@@ -546,6 +550,16 @@ end
 
 function M:AddUnitRegionCacheData(Index)
   self.RegionDataMgr.DataLibrary:AddUnitRegionCacheData(self.RegionData[Index])
+end
+
+function M:GetAllRegionDataByUnitType(UnitType)
+  local NewTable = {}
+  for _, Data in pairs(self.RegionData) do
+    if Data.UnitType == UnitType then
+      table.insert(NewTable, Data)
+    end
+  end
+  return NewTable
 end
 
 return M

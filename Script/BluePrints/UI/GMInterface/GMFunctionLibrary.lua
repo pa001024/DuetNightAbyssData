@@ -121,6 +121,20 @@ function GMFunctionLibrary.ShowDamageDetails(WorldContext, IsEnable)
   GMFunctionLibrary.ExecConsoleCommand(WorldContext, "gm ShowDamageDetails")
 end
 
+function GMFunctionLibrary.ToggleCustomTitleBar(WorldContext, IsEnable)
+  local EMLuaConst = require("EMLuaConst")
+  EMLuaConst.bEnableCustomTitleBar = IsEnable
+  UE.UWindowTitleBarFunctionLibrary.RefreshBorderlessWindowSetting()
+  return IsEnable
+end
+
+function GMFunctionLibrary.ToggleForceCustomTitleBar(WorldContext, IsEnable)
+  local EMLuaConst = require("EMLuaConst")
+  EMLuaConst.ForceUseCustomTitleBar = IsEnable
+  UE.UWindowTitleBarFunctionLibrary.RefreshBorderlessWindowSetting()
+  return IsEnable
+end
+
 function GMFunctionLibrary.SwitchIgnoreGiftShopFriendLimit(WorldContext, IsEnable)
   return IsEnable
 end
@@ -459,13 +473,13 @@ function GMFunctionLibrary.ChangeDLSSQuality(WorldContext, Quality)
     return
   end
   local QualityValueList = {
-    [0] = UDLSSMode.Off,
-    [1] = UDLSSMode.Auto,
-    [2] = UDLSSMode.UltraQuality,
-    [3] = UDLSSMode.Balanced,
-    [4] = UDLSSMode.Performance,
-    [5] = UDLSSMode.UltraPerformance,
-    [6] = UDLSSMode.DLAA
+    [0] = UE4.UDLSSMode.Off,
+    [1] = UE4.UDLSSMode.Auto,
+    [2] = UE4.UDLSSMode.UltraQuality,
+    [3] = UE4.UDLSSMode.Balanced,
+    [4] = UE4.UDLSSMode.Performance,
+    [5] = UE4.UDLSSMode.UltraPerformance,
+    [6] = UE4.UDLSSMode.DLAA
   }
   print("ChangeDLSSQuality", tonumber(Quality))
   UDLSSLibrary.SetDLSSMode(QualityValueList[tonumber(Quality)])
@@ -978,6 +992,10 @@ function GMFunctionLibrary.HideJumpWord()
   else
     require("EMLuaConst").IsHideJumpWord = false
   end
+end
+
+function GMFunctionLibrary.SetShowLevelLoadingInfo(WorldContext, bEnabled)
+  _G.EnableShowLevelLoadingInfo = bEnabled
 end
 
 function GMFunctionLibrary.NetDelay(WorldContext, Delay)

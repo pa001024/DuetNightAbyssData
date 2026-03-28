@@ -634,7 +634,7 @@ function WBP_Bag_Detail_View_C:UpdateBottomSingleBtnInfo(FromStr, Callback, Pare
   elseif "ConsumableItem" == FromStr then
     self.Btn01:UnBindEventOnClickedByObj(ParentWidget)
     self.Btn01:SetText(GText("UI_Consumable_Open"))
-    self.Btn01:SetReddot(false)
+    self:SetConsumableItemButtonReddot(ReddotTreeNode)
     self.Btn01.AudioEventPath = "event:/ui/common/click_btn_confirm"
     self.Btn01:BindEventOnClicked(ParentWidget, Callback)
     self.Img_Yes:SetBrushResourceObject(LoadObject("/Game/UI/Texture/Static/Atlas/Common/T_Com_IconYes.T_Com_IconYes"))
@@ -643,6 +643,12 @@ function WBP_Bag_Detail_View_C:UpdateBottomSingleBtnInfo(FromStr, Callback, Pare
   else
     self.Panel_Button:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
+end
+
+function WBP_Bag_Detail_View_C:SetConsumableItemButtonReddot(ReddotTreeNode)
+  DebugPrint("Yihan@ SetConsumableItemButtonReddot", self.StuffId)
+  local BagConsumeNodeDetails = ReddotManager.GetLeafNodeCacheDetail(ReddotTreeNode)
+  self.Btn01:SetReddot(false, BagConsumeNodeDetails[self.StuffId].ShowReddot)
 end
 
 function WBP_Bag_Detail_View_C:AddSingleBtnReddotListener(ReddotTreeNode)

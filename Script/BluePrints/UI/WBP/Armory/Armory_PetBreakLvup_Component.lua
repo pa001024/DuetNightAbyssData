@@ -488,14 +488,7 @@ function Component:LockOrUnlockPet()
     end
     
     local function ConfirmFunc()
-      self:SetFocus()
-      local Avatar = GWorld:GetAvatar()
-      self:BlockAllUIInputWithDelayUnblock(5)
-      Avatar:UnLockPet(self.ItemDetailsContent.UniqueId)
-      self.BreakLvupLockTimer = self:AddTimer(5, function()
-        UIManager(self):ShowUITip(UIConst.Tip_CommonToast, "解锁请求超时", 1.5)
-        self:BlockAllUIInput(false)
-      end)
+      SecondaryPasswordController:Pet_OpenSeconderyPassword(self.ItemDetailsContent.UniqueId, self)
     end
     
     UIManager(self):ShowCommonPopupUI(100019, {
@@ -835,7 +828,7 @@ function Component:BlockAllUIInputWithDelayUnblock(DelayTime)
     if not self:IsAllUIInputBlocked() then
       return
     end
-    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, "超时解锁输入", 1.5)
+    ScreenPrint("宠物突破超时解锁输入")
     self:BlockAllUIInput(false)
   end)
 end

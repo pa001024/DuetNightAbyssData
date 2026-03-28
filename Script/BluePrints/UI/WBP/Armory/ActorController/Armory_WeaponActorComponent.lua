@@ -11,10 +11,12 @@ local function MakeUncalculatedTrans(self)
   return UE4.UKismetMathLibrary.MakeTransform(self.UncalculatedTrans.Translation, self.UncalculatedTrans.Rotation:ToRotator(), FVector(1, 1, 1))
 end
 
+local WeaponHelperZOffset = 90
+
 local function _InitWeaponHelperTrans(self)
   local TargetTrans = MakeUncalculatedTrans(self)
   if self.bPreviewSceneLoaded then
-    TargetTrans.Translation.Z = TargetTrans.Translation.Z + 90
+    TargetTrans.Translation.Z = TargetTrans.Translation.Z + WeaponHelperZOffset
   end
   local OriginalRotation = FRotator(0, 0, 0)
   self.ArmoryHelper:SetOriginalRotation(OriginalRotation)
@@ -23,6 +25,13 @@ local function _InitWeaponHelperTrans(self)
   local WeaponHelper = self.ArmoryHelper:CreateOrGetWeaponHelper()
   WeaponHelper:K2_SetActorTransform(TargetTrans, false, HitResult, false)
   self.ArmoryHelper:SetViewActor(WeaponHelper)
+  if self.bEnableReflection then
+    local WeaponReflectionHelper = self.ArmoryHelper:CreateOrGetWeaponReflectionHelper()
+    local ReflectionTrans = UE4.UKismetMathLibrary.MakeTransform(TargetTrans.Translation, TargetTrans.Rotation:ToRotator(), TargetTrans.Scale3D)
+    ReflectionTrans.Translation.Z = ReflectionTrans.Translation.Z - WeaponHelperZOffset * 2
+    ReflectionTrans.Scale3D.Z = ReflectionTrans.Scale3D.Z * -1
+    WeaponReflectionHelper:K2_SetActorTransform(ReflectionTrans, false, HitResult, false)
+  end
 end
 
 local function _RemoveWeaponCoroutine(self, CoroutineName)
@@ -81,9 +90,9 @@ function M:IsWeaponActorLoading()
   return self.IsArmoryWeaponLoading
 end
 
-function M:ChangeWeaponModel(WeaponData, PlayCharacter, bIfNoDelay, bForceChange)
+function M:ChangeWeaponModel(WeaponData, bIfNoDelay, bForceChange)
   self:ResetActorRotation()
-  PlayCharacter = PlayCharacter or self.ArmoryPlayer
+  local PlayCharacter = self:GetPlayerActor()
   if self.CurrentWeaponInfo == WeaponData and PlayCharacter then
     local WeaponTag = WeaponData:HasTag("Melee") and "Melee" or "Ranged"
     local PlayerWeapon = PlayCharacter[WeaponTag .. "Weapon"]
@@ -92,7 +101,7 @@ function M:ChangeWeaponModel(WeaponData, PlayCharacter, bIfNoDelay, bForceChange
     end
   end
   local OldWeaponData = self.CurrentWeaponInfo
-  if self.IsPreviewMode and (not PlayCharacter or PlayCharacter.bHidden) then
+  if self.IsPreviewMode and (not PlayCharacter or PlayCharacter.bHidden) and self.ViewActorType == self.ViewActorTypes.SingleWeapon then
     if OldWeaponData == WeaponData and not bForceChange then
       return
     end
@@ -114,32 +123,41 @@ function M:PlayWeaponAppearFX()
   self:DoSomethingWithWeapon("PlayWeaponAppearFX", _PlayWeaponAppearFX)
 end
 
-function M:ChangePlayerWeapon(WeaponData, PlayCharacter)
+function M:ChangePlayerWeapon(WeaponData, Player)
   self.CurrentWeaponInfo = WeaponData
   self.CurrentWeaponAppearanceInfo = WeaponData:DumpAppearanceInfo()
-  PlayCharacter = PlayCharacter or self.ArmoryPlayer
   local WeaponTag = WeaponData:HasTag("Melee") and "Melee" or "Ranged"
-  self:DestroyPlayerWeapon(PlayCharacter, WeaponTag)
-  local Avatar = self:GetAvatar()
-  if not Avatar then
-    return
+  
+  local function ChangePlayerWeaponInternal(PlayCharacter)
+    if nil == PlayCharacter then
+      return
+    end
+    self:DestroyPlayerWeapon(PlayCharacter, WeaponTag)
+    local Avatar = self:GetAvatar()
+    if not Avatar then
+      return
+    end
+    local WeaponInfos = AvatarUtils:GetWeaponBattleInfo(Avatar, WeaponData)
+    WeaponInfos = WeaponInfos and WeaponInfos[WeaponTag .. "Weapon"]
+    local Weapon = PlayCharacter:AddWeapon(WeaponData.WeaponId, WeaponInfos)
+    Weapon:InitWeaponAppearance(WeaponData:DumpAppearanceInfo())
+    PlayCharacter.UsingWeapon = Weapon
+    Weapon:SetWeaponTypeChanged(true)
+    Weapon:SetActorHiddenInGame(true)
+    Weapon:OnWeaponReady()
   end
-  local WeaponInfos = AvatarUtils:GetWeaponBattleInfo(Avatar, WeaponData)
-  WeaponInfos = WeaponInfos and WeaponInfos[WeaponTag .. "Weapon"]
-  local Weapon = PlayCharacter:AddWeapon(WeaponData.WeaponId, WeaponInfos)
-  Weapon:InitWeaponAppearance(WeaponData:DumpAppearanceInfo())
-  PlayCharacter.UsingWeapon = Weapon
-  Weapon:SetWeaponTypeChanged(true)
-  Weapon:SetActorHiddenInGame(true)
-  Weapon:OnWeaponReady()
-  return Weapon
+  
+  ChangePlayerWeaponInternal(Player)
+  local PlayerReflection = self:GetReflectionActor(Player)
+  ChangePlayerWeaponInternal(PlayerReflection)
 end
 
-function M:DestoryPlayerMeleeWeapon(PlayCharacter)
+function M:DestroyPlayerMeleeWeapon(PlayCharacter)
   self:DestroyPlayerWeapon(PlayCharacter, "Melee")
 end
 
 function M:DestroyPlayerWeapon(PlayCharacter, WeaponTag)
+  WeaponTag = WeaponTag or "Melee"
   PlayCharacter = PlayCharacter or self.ArmoryPlayer
   local PlayerWeapon = PlayCharacter[WeaponTag .. "Weapon"]
   if PlayerWeapon then
@@ -212,10 +230,10 @@ function M:ChangeSingleWeapon(WeaponData, bNoFX)
   local UIManager = UIManager(self.ViewUI)
   UIManager:CreateShowWeapon(self, {
     WeaponId = WeaponData.WeaponId,
-    nil,
-    AppearanceInfo = WeaponData:DumpAppearanceInfo()
-  }, function(WeaponActor)
-    self:OnArmoryWeaponLoaded(WeaponActor)
+    AppearanceInfo = WeaponData:DumpAppearanceInfo(),
+    bEnableReflection = self.bEnableReflection
+  }, function(WeaponActor, WeaponReflection)
+    self:OnArmoryWeaponLoaded(WeaponActor, WeaponReflection)
     self:SetWeaponActorEnhanceLevel(WeaponData.EnhanceLevel)
   end)
   if bNoFX then
@@ -301,7 +319,7 @@ function M:SetSingleWeaponCamera(WeaponData, bKeepTransform)
   end
 end
 
-function M:OnArmoryWeaponLoaded(WeaponActor)
+function M:OnArmoryWeaponLoaded(WeaponActor, WeaponReflection)
   self.IsArmoryWeaponLoading = false
   if self.bDestructed then
     DebugPrint("Error: 预览武器加载完成回调错误，可能是ActorController没有正确销毁")
@@ -312,11 +330,17 @@ function M:OnArmoryWeaponLoaded(WeaponActor)
     return
   end
   self.ArmoryWeapon = WeaponActor
+  self:SetReflectionActor(WeaponActor, WeaponReflection)
+  self:SetReflectionActor(self.ArmoryHelper:CreateOrGetWeaponHelper(), self.ArmoryHelper:CreateOrGetWeaponReflectionHelper())
   CommonUtils:SetActorTickableWhenPaused(WeaponActor, true)
   self:SetAccessoriesTickableWhenPaused(WeaponActor.Accessories)
-  self:ResetActorRotation()
-  self.ArmoryHelper:SetWeapon(self.ArmoryWeapon)
+  self.ArmoryHelper:SetWeapon(self.ArmoryWeapon, self:GetReflectionActor(self.ArmoryWeapon))
   self.ArmoryHelper:SetViewActor(self.ArmoryWeapon)
+  if WeaponReflection then
+    CommonUtils:SetActorTickableWhenPaused(WeaponReflection, true)
+    self:SetAccessoriesTickableWhenPaused(WeaponReflection.Accessories)
+  end
+  self:ResetActorRotation()
   self:DoDeferedWeaponBehavior()
   if self.ViewActorType ~= self.ViewActorTypes.SingleWeapon then
     self:HideWeaponActor(self.UIName, true)
@@ -369,6 +393,9 @@ function M:GetSingleWeaponActor()
   end
 end
 
+function M:GetSingleWeaponReflection()
+end
+
 function M:GetPlayerWeaponActor()
   if self.IsArmoryWeaponLoading then
     if coroutine.isyieldable() then
@@ -391,13 +418,18 @@ function M:HideWeaponActor(Tag, IsHidden)
   local function _HideWeaponActor(...)
     local WeaponActor = self:GetWeaponActor()
     
-    if WeaponActor then
-      if Tag then
-        WeaponActor:SetActorHideTag(Tag, IsHidden)
-      else
-        WeaponActor:SetActorHiddenInGame(IsHidden)
+    local function func(Actor)
+      if Actor then
+        if Tag then
+          Actor:SetActorHideTag(Tag, IsHidden)
+        else
+          Actor:SetActorHiddenInGame(IsHidden)
+        end
       end
     end
+    
+    func(WeaponActor)
+    func(self:GetReflectionActor(WeaponActor))
   end
   
   self:DoSomethingWithWeapon("HideWeaponActor", _HideWeaponActor)
@@ -414,8 +446,15 @@ function M:AfterViewActorChanged()
 end
 
 function M:WeaponLvUpOrBreakUp()
-  local ArmoryWeapon = self.ArmoryPlayer.UsingWeapon
-  ArmoryWeapon.FXComponent:PlayEffectByIDParams(304, {bTickEvenWhenPaused = true, NotAttached = true})
+  local function WeaponLvUpOrBreakUpInternal(WeaponActor)
+    if nil == WeaponActor then
+      return
+    end
+    WeaponActor.FXComponent:PlayEffectByIDParams(304, {bTickEvenWhenPaused = true, NotAttached = true})
+  end
+  
+  WeaponLvUpOrBreakUpInternal(self.ArmoryPlayer.UsingWeapon)
+  WeaponLvUpOrBreakUpInternal(self:GetReflectionActor(self.ArmoryPlayer.UsingWeapon))
 end
 
 function M:Component_DestroyActors()

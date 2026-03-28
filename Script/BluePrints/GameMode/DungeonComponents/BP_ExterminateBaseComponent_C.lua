@@ -155,7 +155,7 @@ function BP_ExterminateBaseComponent_C:TryUpdateGuidePoint(PlayerEid)
   end
 end
 
-function BP_ExterminateBaseComponent_C:OnUnitDeadEvent(MonsterC)
+function BP_ExterminateBaseComponent_C:OnUnitDeadEvent(MonsterC, KillMineRoleEid, KillMineSkillId, DeathReason)
   if self.Success then
     return
   end

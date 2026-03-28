@@ -35,6 +35,7 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, ...)
   self:CheckIsWalnutMode()
   self:CheckIsNoExpMode()
   self:CheckIsAutoNextRoundMode()
+  self:CheckIsAutoBanMode()
   self.HideUITag = "DungeonSettlement"
   self.IsAllowPropInAnimation = true
   DebugPrint("DungeonSettlement: OnLoaded, IsWin", self.IsWin, "PlayerTime", self.PlayerTime, "GameTime", self.GameTime, "DungeonId", self.DungeonId)
@@ -130,6 +131,10 @@ function M:InitRewardPanel()
   else
     self.Switcher:SetActiveWidgetIndex(1)
   end
+  local _DeputeType = self:GetDeputeType()
+  if _DeputeType or self.IsWeeklyDungeon then
+    self:InitBanReward()
+  end
 end
 
 function M:InitPlayersHighLightData()
@@ -138,40 +143,38 @@ function M:InitPlayersHighLightData()
       self["Data0" .. i]:SetVisibility(ESlateVisibility.Collapsed)
     end
     local ScenePlayers = GWorld.GameInstance.ScenePlayers
-    if ScenePlayers and #ScenePlayers <= 1 then
+    if not ScenePlayers or #ScenePlayers <= 1 then
       return
     end
     for CurPlayerIndex, Player in ipairs(ScenePlayers) do
-      if self["TempleData0" .. CurPlayerIndex] then
-        self["TempleData0" .. CurPlayerIndex]:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-        self["TempleData0" .. CurPlayerIndex].Text_Index:SetText(CurPlayerIndex)
+      local widget = self["TempleData0" .. CurPlayerIndex]
+      if widget then
+        widget:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+        widget.Text_Index:SetText(CurPlayerIndex)
         if Player.IsMainPlayer then
-          self["TempleData0" .. CurPlayerIndex]:PlayAnimation(self["TempleData0" .. CurPlayerIndex].Player)
+          widget:PlayAnimation(widget.Player)
         else
-          self["TempleData0" .. CurPlayerIndex]:PlayAnimation(self["TempleData0" .. CurPlayerIndex].Other)
+          widget:PlayAnimation(widget.Other)
         end
-        if self.CombatData.PartyPlayerCompleteTime[CurPlayerIndex] then
-          self["TempleData0" .. CurPlayerIndex]:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-          self["TempleData0" .. CurPlayerIndex].Text_Time:SetText(self:GetTimeStr(self.CombatData.PartyPlayerCompleteTime[CurPlayerIndex]))
+        local completeTime = self.CombatData.PartyPlayerCompleteTime[CurPlayerIndex]
+        if completeTime then
+          widget:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+          widget.Text_Time:SetText(self:GetTimeStr(completeTime))
         else
-          self["TempleData0" .. CurPlayerIndex].SizeBox_77:SetVisibility(ESlateVisibility.Collapsed)
-          self["TempleData0" .. CurPlayerIndex].Text_Time:SetText(GText("UI_PARTY_PARKOUR_UNFINISH"))
+          widget.SizeBox_77:SetVisibility(ESlateVisibility.Collapsed)
+          widget.Text_Time:SetText(GText("UI_PARTY_PARKOUR_UNFINISH"))
         end
+        local Slot = UE4.UWidgetLayoutLibrary.SlotAsCanvasSlot(widget.Text_Index)
+        local Pos = Slot:GetPosition()
+        local Font = widget.Text_Index.Font
         if 1 == CurPlayerIndex then
-          local Slot = UE4.UWidgetLayoutLibrary.SlotAsCanvasSlot(self["TempleData0" .. CurPlayerIndex].Text_Index)
-          local Pos = Slot:GetPosition()
-          Slot:SetPosition(FVector2D(Pos.X, self["TempleData0" .. CurPlayerIndex].TextPosY_No1))
-          local Font = self["TempleData0" .. CurPlayerIndex].Text_Index.Font
-          Font.Size = self["TempleData0" .. CurPlayerIndex].TextSize_No1
-          self["TempleData0" .. CurPlayerIndex].Text_Index:SetFont(Font)
+          Slot:SetPosition(FVector2D(Pos.X, widget.TextPosY_No1))
+          Font.Size = widget.TextSize_No1
         else
-          local Slot = UE4.UWidgetLayoutLibrary.SlotAsCanvasSlot(self["TempleData0" .. CurPlayerIndex].Text_Index)
-          local Pos = Slot:GetPosition()
-          Slot:SetPosition(FVector2D(Pos.X, self["TempleData0" .. CurPlayerIndex].TextPosY_Other))
-          local Font = self["TempleData0" .. CurPlayerIndex].Text_Index.Font
-          Font.Size = self["TempleData0" .. CurPlayerIndex].TextSize_Other
-          self["TempleData0" .. CurPlayerIndex].Text_Index:SetFont(Font)
+          Slot:SetPosition(FVector2D(Pos.X, widget.TextPosY_Other))
+          Font.Size = widget.TextSize_Other
         end
+        widget.Text_Index:SetFont(Font)
       end
     end
     return
@@ -185,372 +188,38 @@ function M:InitPlayersHighLightData()
   for i = 1, 4 do
     self["Data0" .. i]:SetRenderOpacity(0)
   end
-  if not self.LevelDataPriority then
-    local LevelEnterData = DataMgr.LevelEnterData
-    self.LevelDataPriority = {}
-    for key, value in pairs(LevelEnterData) do
-      local LevelData = {}
-      LevelData.Name = key
-      LevelData.Priority = value.Priority
-      table.insert(self.LevelDataPriority, LevelData)
+  self.Players = GWorld.GameInstance:CalcPlayersMVPData()
+  self.IsCanAddFriend = false
+  for Index, value in pairs(self.Players) do
+    if 0 ~= CommonUtils.Size(value) and value[1].Uid and self:CheckAddFriend(value[1].Uid) then
+      self.IsCanAddFriend = true
+      self.FriendIndex = Index
     end
   end
-  table.sort(self.LevelDataPriority, function(a, b)
-    return a.Priority < b.Priority
-  end)
-  local Players = {
-    [1] = {},
-    [2] = {},
-    [3] = {},
-    [4] = {}
-  }
-  local AllPlayerBattleData = {}
-  for index, value in ipairs(self.LevelDataPriority) do
-    table.insert(AllPlayerBattleData, {
-      [value.Name] = {}
-    })
-  end
-  local BattleNameByIndex = {}
-  for index, value in ipairs(self.LevelDataPriority) do
-    BattleNameByIndex[index] = value.Name
-  end
-  local TeamTotalDamage = 0
-  local TeamTotalTakedDamage = 0
-  local PlayerOrder = {
-    1,
-    2,
-    3,
-    4
-  }
-  local ScenePlayers = GWorld.GameInstance.ScenePlayers
-  local PhantomsData = self.CombatData.PhantomAttrInfos
-  local TeammateData = self.CombatData.TeammateDamageInfos or {}
-  local TeammateNum = self.CombatData.TeammateNum or 0
-  DebugPrint("thy   ScenePlayers")
-  PrintTable(ScenePlayers, 3)
-  DebugPrint("thy   PhantomsData")
-  PrintTable(PhantomsData, 5)
-  DebugPrint("thy   TeammateData")
-  PrintTable(TeammateData, 5)
-  local CurTeammateNum = 0
-  local DamageOffset = 0
-  TeamTotalDamage = self.CombatData.TotalDamage
-  TeamTotalTakedDamage = self.CombatData.TakedDamage
-  if PhantomsData then
-    for _, PhantomData in pairs(PhantomsData) do
-      if PhantomData then
-        TeamTotalDamage = TeamTotalDamage + PhantomData.FinalDamage
-        TeamTotalTakedDamage = TeamTotalTakedDamage + PhantomData.TakedDamage
-      end
-    end
-  end
-  if TeammateData then
-    for _, Teammate in pairs(TeammateData) do
-      if Teammate then
-        TeamTotalDamage = TeamTotalDamage + Teammate.FinalDamage
-        TeamTotalTakedDamage = TeamTotalTakedDamage + Teammate.TakedDamage
-        if Teammate.PhantomAttrInfo then
-          if Teammate.PhantomAttrInfo.FinalDamage > 0 then
-            TeamTotalDamage = TeamTotalDamage + Teammate.PhantomAttrInfo.FinalDamage
-          end
-          if Teammate.PhantomAttrInfo.TakedDamage > 0 then
-            TeamTotalTakedDamage = TeamTotalTakedDamage + Teammate.PhantomAttrInfo.TakedDamage
-          end
-        end
-      end
-    end
-  end
-  local RealPlayerNun = 0
-  for CurPlayerIndex, Player in ipairs(ScenePlayers) do
-    if Player.IsMainPlayer or not Player.IsPhantom then
-      RealPlayerNun = RealPlayerNun + 1
-    end
-  end
-  if RealPlayerNun > 1 then
-    self.CombatData.IsInOnlineDungeon = true
-  else
-    self.CombatData.IsInOnlineDungeon = false
-  end
-  if not self.CombatData.IsInOnlineDungeon then
-    for CurPlayerIndex, Player in ipairs(ScenePlayers) do
-      local PlayerIndex = PlayerOrder[CurPlayerIndex]
-      if not Player.IsNPCPhantom then
-        if Player.IsMainPlayer then
-          AllPlayerBattleData[1].Damage[CurPlayerIndex] = {
-            PlayerIndex = PlayerIndex,
-            Value = 0 ~= TeamTotalDamage and math.floor(self.CombatData.TotalDamage / TeamTotalDamage * 100 + 0.5) or 0
-          }
-          AllPlayerBattleData[2].Kill[CurPlayerIndex] = {
-            PlayerIndex = PlayerIndex,
-            Value = self.CombatData.TotalKill
-          }
-          AllPlayerBattleData[3].Damaged[CurPlayerIndex] = {
-            PlayerIndex = PlayerIndex,
-            Value = 0 ~= TeamTotalTakedDamage and math.floor(self.CombatData.TakedDamage / TeamTotalTakedDamage * 100 + 0.5) or 0
-          }
-          AllPlayerBattleData[4].Heal[CurPlayerIndex] = {
-            PlayerIndex = PlayerIndex,
-            Value = self.CombatData.GiveHealing
-          }
-          AllPlayerBattleData[5].DamageSingle[CurPlayerIndex] = {
-            PlayerIndex = PlayerIndex,
-            Value = self.CombatData.MaxDamage
-          }
-          AllPlayerBattleData[6].Destroy[CurPlayerIndex] = {
-            PlayerIndex = PlayerIndex,
-            Value = self.CombatData.BreakableItemCount
-          }
-          AllPlayerBattleData[7].HitCount[CurPlayerIndex] = {
-            PlayerIndex = PlayerIndex,
-            Value = self.CombatData.MaxComboCount
-          }
-        elseif PhantomsData and #PhantomsData > 0 then
-          local PhantomData = self:GetPhantomInfo(Player.RoleId, PhantomsData, Player.IsMainPlayerPhantom)
-          if PhantomData then
-            AllPlayerBattleData[1].Damage[CurPlayerIndex] = {
-              PlayerIndex = PlayerIndex,
-              Value = 0 ~= TeamTotalDamage and math.floor(PhantomData.FinalDamage / TeamTotalDamage * 100 + 0.5) or 0
-            }
-            AllPlayerBattleData[2].Kill[CurPlayerIndex] = {
-              PlayerIndex = PlayerIndex,
-              Value = PhantomData.TotalKillCount
-            }
-            AllPlayerBattleData[3].Damaged[CurPlayerIndex] = {
-              PlayerIndex = PlayerIndex,
-              Value = 0 ~= TeamTotalTakedDamage and math.floor(PhantomData.TakedDamage / TeamTotalTakedDamage * 100 + 0.5) or 0
-            }
-            AllPlayerBattleData[4].Heal[CurPlayerIndex] = {
-              PlayerIndex = PlayerIndex,
-              Value = PhantomData.GiveHealing
-            }
-            AllPlayerBattleData[5].DamageSingle[CurPlayerIndex] = {
-              PlayerIndex = PlayerIndex,
-              Value = PhantomData.MaxDamage
-            }
-          else
-            DebugPrint("thy   PhantomData is nil", Player.RoleId)
-            self:CloseHighLightDataShow()
-            return
-          end
-        end
-      end
-    end
-  else
-    for CurPlayerIndex, Player in ipairs(ScenePlayers) do
-      local PlayerIndex = PlayerOrder[CurPlayerIndex]
-      if not Player.IsNPCPhantom then
-        if Player.IsMainPlayer then
-          AllPlayerBattleData[1].Damage[CurPlayerIndex] = {
-            PlayerIndex = PlayerIndex,
-            Value = 0 ~= TeamTotalDamage and math.floor(self.CombatData.TotalDamage / TeamTotalDamage * 100 + 0.5) or 0
-          }
-          AllPlayerBattleData[2].Kill[CurPlayerIndex] = {
-            PlayerIndex = PlayerIndex,
-            Value = self.CombatData.TotalKill
-          }
-          AllPlayerBattleData[3].Damaged[CurPlayerIndex] = {
-            PlayerIndex = PlayerIndex,
-            Value = 0 ~= TeamTotalTakedDamage and math.floor(self.CombatData.TakedDamage / TeamTotalTakedDamage * 100 + 0.5) or 0
-          }
-          AllPlayerBattleData[4].Heal[CurPlayerIndex] = {
-            PlayerIndex = PlayerIndex,
-            Value = self.CombatData.GiveHealing
-          }
-          AllPlayerBattleData[5].DamageSingle[CurPlayerIndex] = {
-            PlayerIndex = PlayerIndex,
-            Value = self.CombatData.MaxDamage
-          }
-          AllPlayerBattleData[6].Destroy[CurPlayerIndex] = {
-            PlayerIndex = PlayerIndex,
-            Value = self.CombatData.BreakableItemCount
-          }
-          AllPlayerBattleData[7].HitCount[CurPlayerIndex] = {
-            PlayerIndex = PlayerIndex,
-            Value = self.CombatData.MaxComboCount
-          }
-        elseif not Player.IsPhantom then
-          CurTeammateNum = CurTeammateNum + 1
-          local Teammate = TeammateData[CurTeammateNum]
-          if Teammate then
-            AllPlayerBattleData[1].Damage[CurPlayerIndex] = {
-              PlayerIndex = PlayerIndex,
-              Value = 0 ~= TeamTotalDamage and math.floor(Teammate.FinalDamage / TeamTotalDamage * 100 + 0.5) or 0
-            }
-            AllPlayerBattleData[2].Kill[CurPlayerIndex] = {
-              PlayerIndex = PlayerIndex,
-              Value = Teammate.TotalKillCount
-            }
-            AllPlayerBattleData[3].Damaged[CurPlayerIndex] = {
-              PlayerIndex = PlayerIndex,
-              Value = 0 ~= TeamTotalTakedDamage and math.floor(Teammate.TakedDamage / TeamTotalTakedDamage * 100 + 0.5) or 0
-            }
-            AllPlayerBattleData[4].Heal[CurPlayerIndex] = {
-              PlayerIndex = PlayerIndex,
-              Value = Teammate.GiveHealing
-            }
-            AllPlayerBattleData[5].DamageSingle[CurPlayerIndex] = {
-              PlayerIndex = PlayerIndex,
-              Value = Teammate.MaxDamage
-            }
-            AllPlayerBattleData[6].Destroy[CurPlayerIndex] = {
-              PlayerIndex = PlayerIndex,
-              Value = Teammate.BreakableItemCount
-            }
-            AllPlayerBattleData[7].HitCount[CurPlayerIndex] = {
-              PlayerIndex = PlayerIndex,
-              Value = Teammate.MaxComboCount
-            }
-          end
-        else
-          local Phantom = self:GetPhantomInfo(Player.RoleId, PhantomsData, Player.IsMainPlayerPhantom)
-          if Phantom then
-            AllPlayerBattleData[1].Damage[CurPlayerIndex] = {
-              PlayerIndex = PlayerIndex,
-              Value = 0 ~= TeamTotalDamage and math.floor(Phantom.FinalDamage / TeamTotalDamage * 100 + 0.5) or 0
-            }
-            AllPlayerBattleData[2].Kill[CurPlayerIndex] = {
-              PlayerIndex = PlayerIndex,
-              Value = Phantom.TotalKillCount
-            }
-            AllPlayerBattleData[3].Damaged[CurPlayerIndex] = {
-              PlayerIndex = PlayerIndex,
-              Value = 0 ~= TeamTotalTakedDamage and math.floor(Phantom.TakedDamage / TeamTotalTakedDamage * 100 + 0.5) or 0
-            }
-            AllPlayerBattleData[4].Heal[CurPlayerIndex] = {
-              PlayerIndex = PlayerIndex,
-              Value = Phantom.GiveHealing
-            }
-            AllPlayerBattleData[5].DamageSingle[CurPlayerIndex] = {
-              PlayerIndex = PlayerIndex,
-              Value = Phantom.MaxDamage
-            }
-          else
-            local TeammatePhantomData = TeammateData[1] and TeammateData[1].PhantomAttrInfo
-            if TeammatePhantomData then
-              AllPlayerBattleData[1].Damage[CurPlayerIndex] = {
-                PlayerIndex = PlayerIndex,
-                Value = 0 ~= TeamTotalDamage and math.floor(TeammatePhantomData.FinalDamage / TeamTotalDamage * 100 + 0.5) or 0
-              }
-              AllPlayerBattleData[2].Kill[CurPlayerIndex] = {
-                PlayerIndex = PlayerIndex,
-                Value = TeammatePhantomData.TotalKillCount
-              }
-              AllPlayerBattleData[3].Damaged[CurPlayerIndex] = {
-                PlayerIndex = PlayerIndex,
-                Value = 0 ~= TeamTotalTakedDamage and math.floor(TeammatePhantomData.TakedDamage / TeamTotalTakedDamage * 100 + 0.5) or 0
-              }
-              AllPlayerBattleData[4].Heal[CurPlayerIndex] = {
-                PlayerIndex = PlayerIndex,
-                Value = TeammatePhantomData.GiveHealing
-              }
-              AllPlayerBattleData[5].DamageSingle[CurPlayerIndex] = {
-                PlayerIndex = PlayerIndex,
-                Value = TeammatePhantomData.MaxDamage
-              }
-            else
-              DebugPrint("thy   TeammatePhantomData is nil", Player.RoleId)
-              self:CloseHighLightDataShow()
-              return
-            end
-          end
-        end
-      end
-    end
-  end
-  for Index, Data in ipairs(AllPlayerBattleData) do
-    local key = BattleNameByIndex[Index]
-    local targetArray = Data[key]
-    if targetArray and #targetArray > 1 then
-      table.sort(targetArray, function(a, b)
-        if not a then
-          return false
-        end
-        if not b then
-          return true
-        end
-        return a.Value > b.Value
-      end)
-    end
-  end
-  for index, value in ipairs(AllPlayerBattleData[1].Damage) do
-    DamageOffset = DamageOffset + value.Value
-  end
-  if DamageOffset > 0 then
-    DamageOffset = 100 - DamageOffset
-    AllPlayerBattleData[1].Damage[1].Value = AllPlayerBattleData[1].Damage[1].Value + DamageOffset
-  end
-  local AlreadyRankedType = {
-    Damage = false,
-    Kill = false,
-    Damaged = false,
-    Heal = false,
-    DamageSingle = false,
-    Destroy = false,
-    HitCount = false
-  }
-  for i = 1, #ScenePlayers do
-    for Index, BattleData in ipairs(AllPlayerBattleData) do
-      local DataType = BattleNameByIndex[Index]
-      local PlayerData = BattleData[DataType][i]
-      if not AlreadyRankedType[DataType] and PlayerData and 0 ~= PlayerData.Value then
-        Players[PlayerData.PlayerIndex][#Players[PlayerData.PlayerIndex] + 1] = {
-          DataName = BattleNameByIndex[Index],
-          Value = PlayerData.Value
-        }
-        AlreadyRankedType[DataType] = true
-        DebugPrint("thy   PlayersCompensateTip", PlayerData.PlayerIndex, BattleNameByIndex[Index], PlayerData.Value)
-      end
-    end
-  end
-  for i = 1, #ScenePlayers do
-    if Players[PlayerOrder[i]] and 0 == #Players[PlayerOrder[i]] then
-      table.insert(Players[PlayerOrder[i]], {
-        DataName = "Damage",
-        Value = self:GetDamageData(PlayerOrder[i], AllPlayerBattleData[1].Damage)
-      })
-    end
-  end
-  for Index, value in pairs(Players) do
+  for Index, value in pairs(self.Players) do
     if 0 ~= CommonUtils.Size(value) then
       self["Data0" .. Index]:Init(value[1])
     else
       self["Data0" .. Index]:SetVisibility(ESlateVisibility.Collapsed)
     end
   end
-  for key, value in ipairs(ScenePlayers) do
-    DebugPrint("thy   ScenePlayers", key, value.RoleId)
+end
+
+function M:SwitchFocusablePerHighLightWidget(bEnableFocus)
+  if not self.Players then
+    return
   end
-  for key, value in ipairs(Players) do
+  for Index, value in pairs(self.Players) do
     if 0 ~= CommonUtils.Size(value) then
-      DebugPrint("thy PlayersShowTip", key, value[1].DataName, value[1].Value)
+      self["Data0" .. Index]:SwitchFocusable(bEnableFocus)
     end
   end
 end
 
-function M:CloseHighLightDataShow()
-  for i = 1, 4 do
-    self["Data0" .. i]:SetVisibility(ESlateVisibility.Collapsed)
-  end
-end
-
-function M:GetPhantomInfo(PlayerRoleId, PhantomsData, IsMainPlayerPhantom)
-  if IsMainPlayerPhantom then
-    for _, value in pairs(PhantomsData) do
-      if PlayerRoleId == value.PhantomRoleId then
-        return value
-      end
-    end
-  end
-  return nil
-end
-
-function M:GetDamageData(PlayerIndex, PlayerDamageData)
-  for Index, value in ipairs(PlayerDamageData) do
-    if PlayerIndex == value.PlayerIndex then
-      return value.Value
-    end
-  end
-  return 0
+function M:CheckAddFriend(Uid)
+  local FriendController = require("BluePrints.UI.WBP.Friend.FriendController")
+  DebugPrint("DungeonSettlement: CheckAddFriend", Uid, FriendController:GetModel():GetBlackListDict()[Uid], FriendController:GetModel():GetFriendDict()[Uid])
+  return FriendController:GetModel():GetBlackListDict()[Uid] == nil and FriendController:GetModel():GetFriendDict()[Uid] == nil
 end
 
 function M:InitHeadline()
@@ -888,6 +557,10 @@ function M:OnBtnChangePanelClicked()
 end
 
 function M:OnCombatDataClosed()
+  if self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad and self.CurInputDeviceType ~= ECommonInputType.Gamepad then
+    self.CurInputDeviceType = self.GameInputModeSubsystem:GetCurrentInputType()
+    self:UpdateMainUIWithGamePad()
+  end
 end
 
 function M:CreateCombatData()
@@ -936,7 +609,6 @@ function M:OnInAnimationFinished()
     if self.CurInputDeviceType == ECommonInputType.Gamepad then
       self:AddTimer(1.5, function()
         self:SetFocusInGamePad()
-        self.bOpenBattleDataTip = true
       end)
     end
     self.IsFirstFocus = false
@@ -1161,7 +833,9 @@ function M:CalcRoleInfo(Avatar)
 end
 
 function M:PreInitPropInfo()
-  self.Switcher:SetActiveWidgetIndex(0)
+  if not self.IsAutoBan then
+    self.Switcher:SetActiveWidgetIndex(0)
+  end
   self.TileView_Reward:ClearListItems()
   self.TileView_Prop:ClearListItems()
 end
@@ -1222,6 +896,9 @@ end
 function M:CalcPropInfo()
   self:ShowCountDown()
   if self.IsTemple then
+    return
+  end
+  if self.IsAutoBan then
     return
   end
   self.TileView_Reward:DisableScroll(true)
@@ -1709,7 +1386,11 @@ function M:ItemMenuAnchorChanged()
     self:SwitchMainUIPCToGamePad()
     self:SetFocusInGamePad()
     if 1 ~= self.Switcher:GetActiveWidgetIndex() then
-      self:UpdateBottomTabsInfo(GText("UI_Controller_CheckDetails"))
+      if self.IsCanAddFriend then
+        self:UpdateBottomTabsInfo(GText("UI_Friend_AddFriend"), GText("UI_Controller_CheckDetails"), true, true)
+      else
+        self:UpdateBottomTabsInfo(GText("UI_Controller_CheckDetails"))
+      end
     end
   else
     self:UpdateMainUIWithPCOrMoble()
@@ -1733,7 +1414,11 @@ function M:TempleMenuAnchorChanged()
       self.WidgetRewards.Key_Controller_Qa:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     end
     self:SwitchMainUIPCToGamePad()
-    self:UpdateBottomTabsInfo(GText("UI_Controller_CheckDetails"))
+    if self.IsCanAddFriend then
+      self:UpdateBottomTabsInfo(GText("UI_Friend_AddFriend"), GText("UI_Controller_CheckDetails"), true, true)
+    else
+      self:UpdateBottomTabsInfo(GText("UI_Controller_CheckDetails"))
+    end
   else
     self:UpdateMainUIWithPCOrMoble()
   end
@@ -1920,6 +1605,18 @@ function M:CheckAgainAvailable()
     end
   end
   return false
+end
+
+function M:CheckIsAutoBanMode()
+  self.IsAutoBan = false
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  self.ForbidDungeonRewardCount = Avatar.ForbidDungeonRewardCount or 0
+  if self.ForbidDungeonRewardCount > 0 then
+    self.IsAutoBan = true
+  end
 end
 
 function M:CheckIsTempleMode()
@@ -2368,10 +2065,6 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
   if not self:HasFocusedDescendants() and not self:HasAnyUserFocus() and self.CurInputDeviceType then
     return
   end
-  if self.CurInputDeviceType == CurInputDevice then
-    DebugPrint("thy    已经显示的是该输入模式，不需要进行刷新")
-    return
-  end
   self.CurInputDeviceType = CurInputDevice
   self.CurGamepadName = CurGamepadName
   self.IsSwitchDevice = true
@@ -2379,6 +2072,13 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
 end
 
 function M:UpdateMainUI()
+  if self.IsAddFriendWindowOpening then
+    self:SwitchFocusablePerHighLightWidget(true)
+    self.IsInAddFriendMode = true
+  else
+    self:SwitchFocusablePerHighLightWidget(false)
+    self.IsInAddFriendMode = false
+  end
   if not self.IsNotFirstUpdateMainUI then
     self.IsNotFirstUpdateMainUI = true
     return
@@ -2387,7 +2087,7 @@ function M:UpdateMainUI()
     self.CurInputDeviceType = UIUtils.UtilsGetCurrentInputType()
   end
   if self.CurInputDeviceType == ECommonInputType.Touch then
-    DebugPrint("thy    IsMoblie")
+    DebugPrint("IsMoblie")
     return
   end
   if not self:HasFocusedDescendants() and not self:HasAnyUserFocus() then
@@ -2395,11 +2095,12 @@ function M:UpdateMainUI()
     return
   end
   self:SetFocus()
+  DebugNetPrint("LogSlateDebugger2")
   if self.CurInputDeviceType == ECommonInputType.MouseAndKeyboard then
-    DebugPrint("thy   IsPC")
+    DebugPrint("IsPC")
     self:UpdateMainUIWithPCOrMoble()
   else
-    DebugPrint("thy   IsGamePad")
+    DebugPrint("IsGamePad")
     self:UpdateMainUIWithGamePad()
   end
 end
@@ -2426,6 +2127,12 @@ function M:SetFocusInGamePad()
     end
     return
   end
+  if self.IsInAddFriendMode then
+    self:AddTimer(0.1, function()
+      self["Data0" .. self.FriendIndex]:SetFocus()
+    end, false, 0.1)
+    return
+  end
   if 0 == #self.SpRewardsArray then
     if 0 ~= #self.RewardsArray then
       if self.TileView_Prop:GetItemAt(0) and self.TileView_Prop:GetItemAt(0).SelfWidget then
@@ -2448,7 +2155,17 @@ function M:SetFocusInGamePad()
       self.TileView_Prop.bIsFocusable = true
     end
   end
-  self:UpdateBottomTabsInfo(GText("UI_Controller_CheckDetails"))
+  if self.IsCanAddFriend then
+    if 0 ~= #self.SpRewardsArray or 0 ~= #self.RewardsArray then
+      self:UpdateBottomTabsInfo(GText("UI_Friend_AddFriend"), GText("UI_Controller_CheckDetails"), true, true)
+    else
+      self:UpdateBottomTabsInfo(GText("UI_Friend_AddFriend"), nil, true)
+    end
+  elseif 0 ~= #self.SpRewardsArray or 0 ~= #self.RewardsArray then
+    self:UpdateBottomTabsInfo(GText("UI_Controller_CheckDetails"))
+  else
+    self:UpdateBottomTabsInfo()
+  end
 end
 
 function M:SetFocusOnTileViewDelay(TileView)
@@ -2482,29 +2199,49 @@ function M:SetFoucsOnTileView(TileView)
   item:PlayAnimation(item.Hover)
 end
 
-function M:UpdateBottomTabsInfo(ATipName, BTipName)
+function M:UpdateBottomTabsInfo(ATipName, BTipName, AddFriendModeA, AddFriendModeB)
   if self.CurInputDeviceType ~= ECommonInputType.Gamepad then
     return
   end
   if ATipName then
-    local KeyInfo1 = {
-      KeyInfoList = {
-        {Type = "Img", ImgShortPath = "A"}
-      },
-      Desc = ATipName
-    }
+    local KeyInfo1 = {}
+    if AddFriendModeA then
+      KeyInfo1 = {
+        KeyInfoList = {
+          {Type = "Img", ImgShortPath = "X"}
+        },
+        Desc = ATipName
+      }
+    else
+      KeyInfo1 = {
+        KeyInfoList = {
+          {Type = "Img", ImgShortPath = "A"}
+        },
+        Desc = ATipName
+      }
+    end
     self.Key_Confirm:SetVisibility(ESlateVisibility.Visible)
     self.Key_Confirm:CreateCommonKey(KeyInfo1)
   else
     self.Key_Confirm:SetVisibility(ESlateVisibility.Collapsed)
   end
   if BTipName then
-    local KeyInfo2 = {
-      KeyInfoList = {
-        {Type = "Img", ImgShortPath = "B"}
-      },
-      Desc = BTipName
-    }
+    local KeyInfo2 = {}
+    if AddFriendModeB then
+      KeyInfo2 = {
+        KeyInfoList = {
+          {Type = "Img", ImgShortPath = "A"}
+        },
+        Desc = BTipName
+      }
+    else
+      KeyInfo2 = {
+        KeyInfoList = {
+          {Type = "Img", ImgShortPath = "B"}
+        },
+        Desc = BTipName
+      }
+    end
     self.Key_Cancel:SetVisibility(ESlateVisibility.Visible)
     self.Key_Cancel:CreateCommonKey(KeyInfo2)
   else
@@ -2565,7 +2302,13 @@ function M:UpdateMainUIWithGamePad()
   self.Panel_Key:SetVisibility(ESlateVisibility.Collapsed)
   if not self.IsTemple then
     if #self.SpRewardsArray > 0 or #self.RewardsArray > 0 then
-      self:UpdateBottomTabsInfo(GText("UI_Controller_CheckDetails"))
+      if self.IsCanAddFriend then
+        self:UpdateBottomTabsInfo(GText("UI_Friend_AddFriend"), GText("UI_Controller_CheckDetails"), true, true)
+      else
+        self:UpdateBottomTabsInfo(GText("UI_Controller_CheckDetails"))
+      end
+    elseif self.IsCanAddFriend then
+      self:UpdateBottomTabsInfo(GText("UI_Friend_AddFriend"), nil, true)
     else
       self:UpdateBottomTabsInfo()
     end
@@ -2692,7 +2435,13 @@ function M:SwitchMainUIPCToGamePad()
   end
   if not self.IsTemple then
     if #self.SpRewardsArray > 0 or #self.RewardsArray > 0 then
-      self:UpdateBottomTabsInfo(GText("UI_Controller_CheckDetails"))
+      if self.IsCanAddFriend then
+        self:UpdateBottomTabsInfo(GText("UI_Friend_AddFriend"), GText("UI_Controller_CheckDetails"), true, true)
+      else
+        self:UpdateBottomTabsInfo(GText("UI_Controller_CheckDetails"))
+      end
+    elseif self.IsCanAddFriend then
+      self:UpdateBottomTabsInfo(GText("UI_Friend_AddFriend"), nil, true)
     else
       self:UpdateBottomTabsInfo()
     end
@@ -2753,16 +2502,29 @@ function M:Handle_OnGamePadDown(InKeyName)
   local IsDpadUp = true == self.GamePadPressingKeys[Const.GamepadDPadUp]
   DebugPrint("thy    Handle_OnGamePadDown", InKeyName, "CurrentFocusType", self.CurrentFocusType, "IsDpadUp", IsDpadUp)
   if "Gamepad_FaceButton_Top" == InKeyName then
+    if self.IsInAddFriendMode then
+      return false
+    end
     if self.CurrentFocusType == "AutoNextRound" then
       return false
     end
     self:OnBtnContinueClicked()
     return true
+  elseif "Gamepad_FaceButton_Left" == InKeyName then
+    if self.IsCanAddFriend then
+      self.IsInAddFriendMode = true
+      self:SwitchFocusablePerHighLightWidget(true)
+      self:AddTimer(0.1, function()
+        self["Data0" .. self.FriendIndex]:SetFocus()
+      end, false, 0.1)
+      self:UpdateBottomTabsInfo(GText("UI_Tips_Ensure"), GText("UI_Tips_Close"))
+    end
+    return true
   elseif "Gamepad_Special_Right" == InKeyName then
-    if UIManager(self):GetUIObj("CommonDialog") then
+    if self.IsInAddFriendMode then
       return false
     end
-    if not self.bOpenBattleDataTip then
+    if UIManager(self):GetUIObj("CommonDialog") then
       return false
     end
     if self.CurrentFocusType == "AutoNextRound" then
@@ -2804,6 +2566,12 @@ function M:Handle_OnGamePadDown(InKeyName)
       return true
     end
   elseif "Gamepad_FaceButton_Right" == InKeyName then
+    if self.IsInAddFriendMode then
+      self.IsInAddFriendMode = false
+      self:SwitchFocusablePerHighLightWidget(false)
+      self:SetFocusInGamePad()
+      return true
+    end
     if self.CurrentFocusType == "AutoNextRound" then
       self.AutoNextRound:SetAutoNextRoundFocus(false)
       self.AutoNextRound:UpdateUIStyleInPlatform(false)
@@ -2821,10 +2589,16 @@ function M:Handle_OnGamePadDown(InKeyName)
       self.Refund:CancelItemListFocus()
       self:SetFocusInGamePad()
     end
-    self:UpdateBottomTabsInfo(GText("UI_Tips_Ensure"), GText("UI_Tips_Close"))
     self:SwitchMainUIPCToGamePad()
     return true
   elseif "Gamepad_LeftThumbstick" == InKeyName then
+    if self.IsAutoBan then
+      local Params = {}
+      local PunishCountText = string.format(GText("UI_DungeonPunish_Times"), self.ForbidDungeonRewardCount)
+      Params.Tips = {PunishCountText}
+      AudioManager(self):PlayUISound(self, "event:/ui/activity/baned_click", nil, nil)
+      UIManager(self):ShowCommonPopupUI(100333, Params)
+    end
     if self.CurrentFocusType == "AutoNextRound" then
       return false
     end
@@ -2963,7 +2737,7 @@ function M:TryEnterDungeonAgain()
     else
       Avatar:EnterDungeonAgain(function(Ret)
         DebugPrint("gmy@WBP_DungeonSettlement_C M:EnterDungeonAgain Callback2", Ret)
-        if Ret == ErrorCode.RET_SUCCESS then
+        if Ret == ErrorCode.RET_SUCCESS and not DungeonData.IsWalnutDungeon then
           UIManager(self):LoadUINew("DungeonMatchTimingBar", self.DungeonId, Const.DUNGEON_MATCH_BAR_STATE.WAITING_MATCHING_WITH_CANCEL, true)
         end
       end)
@@ -2971,7 +2745,7 @@ function M:TryEnterDungeonAgain()
   else
     Avatar:EnterDungeonAgain(function(Ret)
       DebugPrint("gmy@WBP_DungeonSettlement_C M:EnterDungeonAgain Callback", Ret)
-      if Ret == ErrorCode.RET_SUCCESS then
+      if Ret == ErrorCode.RET_SUCCESS and not DungeonData.IsWalnutDungeon then
         UIManager(self):LoadUINew("DungeonMatchTimingBar", self.DungeonId, Const.DUNGEON_MATCH_BAR_STATE.SPONSOR_WAITING_CONFIRM, false)
       end
     end)
@@ -3110,6 +2884,13 @@ function M:InitAutoNextRoundContent()
   end
   self.AutoNextRound:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self.AutoNextRound:Init(DataMgr.Dungeon[self.DungeonId])
+end
+
+function M:InitBanReward()
+  if self.IsAutoBan then
+    self.Switcher:SetActiveWidgetIndex(2)
+    self.WBP_Ban:InitPunishCount(self.ForbidDungeonRewardCount)
+  end
 end
 
 AssembleComponents(M)

@@ -36,7 +36,6 @@ function M:ReceiveEnterState(StackAction)
   local ArmoryMain = UIManager(self):GetArmoryUIObj()
   if ArmoryMain then
     self.ArmoryPlayer = ArmoryMain.ActorController.ArmoryPlayer
-    self.ArmoryHelper = ArmoryMain.ActorController.ArmoryHelper
     self.ArmoryPlayer:SetActorHideTag("PetMix", true)
   end
 end

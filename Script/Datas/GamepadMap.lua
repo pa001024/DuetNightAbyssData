@@ -343,18 +343,8 @@ return ReadOnly("GamepadMap", {
   },
   LeaveCannon = {
     ActionName = "LeaveCannon",
-    GamepadIcon = {
-      [1] = T.RT_23,
-      [2] = T.RT_23,
-      [3] = T.RT_3,
-      [4] = T.RT_3
-    },
-    GamepadKey = {
-      [1] = "FaceButton_Top",
-      [2] = "FaceButton_Top",
-      [3] = "FaceButton_Left",
-      [4] = "FaceButton_Left"
-    }
+    GamepadIcon = T.RT_24,
+    GamepadKey = T.RT_25
   },
   LockMonster = {
     ActionName = "LockMonster",

@@ -92,7 +92,7 @@ function BP_NetworkManager_C:DisconnectAndShowUI(info)
     self:EndReConnect(false)
     if not GWorld.bLoginConnectFailed then
       EventManager:FireEvent(EventID.OnNetDisconnect)
-      self:ShowNetDisconnectUIConfirm(RetCode)
+      self:ShowNetDisconnectUIConfirm(RetCode, info.NecessoryPatch)
     end
   else
     local UIManager = GWorld.GameInstance:GetGameUIManager()
@@ -134,16 +134,22 @@ function BP_NetworkManager_C:DisconnectAndShowUI(info)
   end
 end
 
-function BP_NetworkManager_C:DisconnectAndReturnLogin()
+function BP_NetworkManager_C:DisconnectAndReturnLogin(ExtraParams)
+  local bHasNecessoryPatch = false
+  if ExtraParams and ExtraParams.Necessorypatch and #ExtraParams.Necessorypatch > 0 then
+    local HotUpdateUtils = require("Utils.HotUpdateUtils")
+    HotUpdateUtils.MergeNecessoryPatchSigns(ExtraParams.Necessorypatch)
+    bHasNecessoryPatch = true
+  end
   self:Disconnect()
-  self:TryToGoToLoginScene()
+  self:TryToGoToLoginScene(nil, nil, bHasNecessoryPatch)
   self:LogoutEvent()
 end
 
-function BP_NetworkManager_C:TryToGoToLoginScene()
+function BP_NetworkManager_C:TryToGoToLoginScene(_, _, bHasNecessoryPatch)
   GWorld.GameInstance:ClearExitDungeonData()
   self:EndReConnect(false)
-  HeroUSDKSubsystem():TryToGoToLoginScene()
+  HeroUSDKSubsystem():TryToGoToLoginScene(nil, nil, bHasNecessoryPatch)
 end
 
 function BP_NetworkManager_C:SendResolutionTrack()
@@ -176,8 +182,15 @@ function BP_NetworkManager_C:OnDisconnectAndLoginAgain()
   WorldTravelSubsystem():ChangeSceneByAssetPath(Const.DefaultLoginSceneFile)
 end
 
-function BP_NetworkManager_C:ShowNetDisconnectUIConfirm(RetCode)
-  DebugPrint("lgc@BP_NetworkManager_C:ShowNetDisconnectUIConfirm RetCode", tostring(RetCode))
+function BP_NetworkManager_C:OnJumpToOptionalPatchDownload()
+  local HotUpdateUtils = require("Utils.HotUpdateUtils")
+  local HotUpdateSubsystem = USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, UHotUpdateSubsystem)
+  local NecessoryPatchSigns = HotUpdateUtils.GetNecessoryPatchSigns()
+  HotUpdateSubsystem:JumpToOptionalDownloadLevel(Const.DefaultOptionalPatchSceneFile, NecessoryPatchSigns)
+end
+
+function BP_NetworkManager_C:ShowNetDisconnectUIConfirm(RetCode, NecessoryPatch)
+  DebugPrint("lgc@BP_NetworkManager_C:ShowNetDisconnectUIConfirm RetCode", tostring(RetCode), NecessoryPatch)
   local IsStopGame = true
   if GWorld.GameInstance:GetLoadingUI() then
     IsStopGame = false
@@ -198,6 +211,12 @@ function BP_NetworkManager_C:ShowNetDisconnectUIConfirm(RetCode)
     }
     if RetCode == CommonConst.KickAvatarType.KICK_AVATAR_CHECK_SCRIPT then
       Params.ShortText = GText("UI_COMMONPOP_TEXT_100078")
+    elseif NecessoryPatch and type(NecessoryPatch) == "table" and #NecessoryPatch > 0 then
+      local HotUpdateUtils = require("Utils.HotUpdateUtils")
+      HotUpdateUtils.MergeNecessoryPatchSigns(NecessoryPatch)
+      Params.ShortText = GText("UI_Patch_Logout")
+      Params.LeftCallbackFunction = self.OnJumpToOptionalPatchDownload
+      Params.RightCallbackFunction = self.OnJumpToOptionalPatchDownload
     else
       Params.ShortText = GText("UI_COMMONPOP_TEXT_100074")
     end

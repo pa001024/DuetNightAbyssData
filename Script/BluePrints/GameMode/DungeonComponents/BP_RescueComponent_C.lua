@@ -1,5 +1,6 @@
 require("UnLua")
 local BattleUtils = require("Utils.BattleUtils")
+local EMLuaConst = require("EMLuaConst")
 local BP_RescueComponent_C = Class({
   "BluePrints.Common.TimerMgr"
 })
@@ -52,11 +53,18 @@ function BP_RescueComponent_C:TriggerSpawnHostage(Player)
     HostageExtraInfo.PhantomOwnerEid = Player.Eid
   end
   HostageExtraInfo.EventName = "RescueHostage"
-  Creator:RealActiveStaticCreator(HostageExtraInfo)
+  if EMLuaConst.IsOpenEscortNPCPhantomOpt == false then
+    Creator:RealActiveStaticCreator(HostageExtraInfo)
+  else
+    local HostageChar = GameState(self):GetHostagePhantomAIFromPreLoadCache(Creator.UnitId, self.HostageStaticId)
+    if HostageChar then
+      DebugPrint("LHQ@@@RescueComponent: 救援玩法 UseSpawnedHostage")
+    end
+  end
   DebugPrint("RescueComponent: 救援玩法 TriggerSpawnHostage")
 end
 
-function BP_RescueComponent_C:OnStaticCreatorEvent(EventName, Eid, UnitId, UnitType)
+function BP_RescueComponent_C:OnStaticCreatorEvent(EventName, Eid, UnitId, UnitType, CreatorId)
   if "RescueHostage" == EventName then
     self:SetHostageEid(Eid)
     DebugPrint("RescueComponent: 救援玩法 生成人质，当前人质Eid为： ", self:GetHostageEid())

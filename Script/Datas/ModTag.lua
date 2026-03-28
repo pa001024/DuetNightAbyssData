@@ -1,15 +1,18 @@
 local T = {}
 T.RT_1 = {
-  "UI_Armory_Meleeweapon"
+  "UI_Armory_Char"
 }
 T.RT_2 = {
-  "UI_Armory_LongrangeUltra"
+  "UI_Armory_Meleeweapon"
 }
 T.RT_3 = {
   "UI_Armory_Longrange"
 }
 T.RT_4 = {
   "UI_Armory_MeleeweaponUltra"
+}
+T.RT_5 = {
+  "UI_Armory_LongrangeUltra"
 }
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
@@ -20,13 +23,11 @@ end
 return ReadOnly("ModTag", {
   [1] = {
     ApplicationType = 1,
-    ModTagText = {
-      "UI_Armory_Char"
-    }
+    ModTagText = T.RT_1
   },
   [2] = {
     ApplicationType = 2,
-    ModTagText = T.RT_1
+    ModTagText = T.RT_2
   },
   [3] = {
     ApplicationType = 3,
@@ -38,7 +39,7 @@ return ReadOnly("ModTag", {
   },
   [5] = {
     ApplicationType = 5,
-    ModTagText = T.RT_2
+    ModTagText = T.RT_5
   },
   [11] = {
     ApplicationType = 11,
@@ -84,15 +85,15 @@ return ReadOnly("ModTag", {
   },
   [21] = {
     ApplicationType = 21,
-    ModTagText = T.RT_1
+    ModTagText = T.RT_2
   },
   [22] = {
     ApplicationType = 22,
-    ModTagText = T.RT_1
+    ModTagText = T.RT_2
   },
   [23] = {
     ApplicationType = 23,
-    ModTagText = T.RT_1
+    ModTagText = T.RT_2
   },
   [31] = {
     ApplicationType = 31,
@@ -128,38 +129,38 @@ return ReadOnly("ModTag", {
   },
   [51] = {
     ApplicationType = 51,
-    ModTagText = T.RT_2
+    ModTagText = T.RT_5
   },
   [52] = {
     ApplicationType = 52,
-    ModTagText = T.RT_2
+    ModTagText = T.RT_5
   },
   [53] = {
     ApplicationType = 53,
-    ModTagText = T.RT_2
+    ModTagText = T.RT_5
   },
   [101] = {
     ApplicationType = 101,
-    ModTagText = T.RT_1
+    ModTagText = T.RT_2
   },
   [102] = {
     ApplicationType = 102,
-    ModTagText = T.RT_1
+    ModTagText = T.RT_2
   },
   [103] = {
     ApplicationType = 103,
-    ModTagText = T.RT_1
+    ModTagText = T.RT_2
   },
   [104] = {
     ApplicationType = 104,
-    ModTagText = T.RT_1
+    ModTagText = T.RT_2
   },
   [106] = {
     ApplicationType = 106,
-    ModTagText = T.RT_1
+    ModTagText = T.RT_2
   },
   [1504] = {
     ApplicationType = 1504,
-    ModTagText = T.RT_2
+    ModTagText = T.RT_1
   }
 })

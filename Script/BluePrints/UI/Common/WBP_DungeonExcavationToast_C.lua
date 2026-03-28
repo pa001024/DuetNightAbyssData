@@ -48,7 +48,6 @@ function WBP_DungeonExcavationToast_C:Close()
   if nil ~= UITipList then
     UITipList.VerticalBox_Toast:RemoveChild(self)
   end
-  self.Super.Close(self)
 end
 
 return WBP_DungeonExcavationToast_C

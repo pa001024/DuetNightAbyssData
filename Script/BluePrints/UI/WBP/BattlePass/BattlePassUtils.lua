@@ -1,5 +1,6 @@
 local BattlePassUtils = {}
 local BattlePassController = require("BluePrints.UI.WBP.BattlePass.Controller.BattlePassController")
+local TimeUtils = require("Utils.TimeUtils")
 
 function BattlePassUtils:GetLevel()
   local Avatar = GWorld:GetAvatar()
@@ -133,6 +134,41 @@ function BattlePassUtils:IsReachWeeklyMaxExp()
   local WeeklyMaxExp = BattlePassInfo.WeeklyMaxExp or 0
   local WeeklyNowExp = Avatar.BattlePassWeeklyExp or 0
   return WeeklyMaxExp <= WeeklyNowExp
+end
+
+local BATTLE_PASS_END_TIME_REMIND_POPUP = 100010
+
+function BattlePassUtils:TryOpenWithEndTimeReminder(Owner, OpenFunc)
+  if self:ShouldShowEndTimeReminder() then
+    local RemainTimeStr = self:GetBattlePassRemainTimeStr()
+    local Params = {
+      ShortText = string.format(GText("UI_BattlePass_EndTimeReminder"), RemainTimeStr),
+      RightCallbackFunction = function()
+        OpenFunc()
+      end
+    }
+    UIManager(Owner):ShowCommonPopupUI(BATTLE_PASS_END_TIME_REMIND_POPUP, Params)
+  else
+    OpenFunc()
+  end
+end
+
+function BattlePassUtils:ShouldShowEndTimeReminder()
+  local EndTime = BattlePassController:GetModelData("BattlePassEndTime")
+  if not EndTime then
+    return false
+  end
+  local RemindHours = DataMgr.GlobalConstant.BattlePassEndRemindTime.ConstantValue
+  local RemainSeconds = EndTime - TimeUtils.NowTime()
+  return RemainSeconds > 0 and RemainSeconds < RemindHours * 3600
+end
+
+function BattlePassUtils:GetBattlePassRemainTimeStr()
+  local EndTime = BattlePassController:GetModelData("BattlePassEndTime")
+  if not EndTime then
+    return ""
+  end
+  return UIUtils.GetLeftTimeStrStyle1(EndTime)
 end
 
 return BattlePassUtils

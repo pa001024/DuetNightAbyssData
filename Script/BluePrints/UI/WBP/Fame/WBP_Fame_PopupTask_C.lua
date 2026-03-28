@@ -23,6 +23,7 @@ function M:Init(Content)
   rawset(self, "RegionId", Content.RegionId)
   rawset(self, "MaxLevel", Content.MaxLevel)
   rawset(self, "DoingTaskId", Content.DoingTaskId)
+  rawset(self, "HasCanClaimTask", Content.HasCanClaimTask)
   rawset(self, "CurrentLevel", Content.CurrentLevel)
   rawset(self, "AbandonRecurringTaskCallback", Content.AbandonRecurringTaskCallback)
   rawset(self, "GetRecurringTaskRewardCallback", Content.GetRecurringTaskRewardCallback)
@@ -31,8 +32,7 @@ function M:Init(Content)
   rawset(self, "OnMenuOpenChanged", Content.OnMenuOpenChanged)
   local TaskProgress = RegionFameModel:GetTargetRecurringTaskProgress(self.RegionId, self.TaskId)
   rawset(self, "TaskProgress", TaskProgress)
-  local TaskState = RegionFameModel:GetTargetRecurringTaskStat(self.RegionId, self.TaskId)
-  rawset(self, "TaskState", TaskState)
+  rawset(self, "TaskState", Content.TaskState)
   self:InitTaskDetail()
   self:UpdateGamePadStyle()
 end
@@ -116,11 +116,11 @@ function M:InitTaskDetail()
       StarReward:SetVisibility(UIConst.VisibilityOp.Collapsed)
     end
   end
-  if (self.DoingTaskId == nil or self.DoingTaskId == self.TaskId) and self.CurrentLevel >= self.MaxLevel or self.TaskState == CommonConst.RecurringTaskState.CanClaim then
-    self.Done:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  else
-    self.Done:SetVisibility(UIConst.VisibilityOp.Visible)
-  end
+  local bIsCurrentOrNoTask = self.DoingTaskId == nil or self.DoingTaskId == self.TaskId
+  local bShouldHideMask = bIsCurrentOrNoTask and self.CurrentLevel >= self.MaxLevel or self.TaskState == CommonConst.RecurringTaskState.CanClaim
+  local bForceShowMask = self.HasCanClaimTask and self.TaskState == CommonConst.RecurringTaskState.NotAccept
+  local bShowDone = not bShouldHideMask or bForceShowMask
+  self.Done:SetVisibility(bShowDone and UIConst.VisibilityOp.Visible or UIConst.VisibilityOp.Collapsed)
   self:RefreshBtnState()
   self:RefreshCountdown()
 end
@@ -143,12 +143,13 @@ function M:RefreshCountdown()
 end
 
 function M:RefreshBtnState()
+  local ActiveBtnIndex = 0
   if self.CurrentLevel < self.MaxLevel and self.TaskState == CommonConst.RecurringTaskState.NotAccept then
-    self.WidgetSwitcher_0:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    ActiveBtnIndex = 4
+    self.BtnDisable:SetText(GText("RecurringTask_CantAccept"))
+    self.WidgetSwitcher_0:SetActiveWidgetIndex(ActiveBtnIndex)
     return
   end
-  local ActiveBtnIndex = 0
-  local HideAllBtn = false
   if self.TaskState == CommonConst.RecurringTaskState.AlreadyClaimed then
     ActiveBtnIndex = 3
     self.HintDone:SetText(GText("RecurringTask_Completed"))
@@ -159,22 +160,19 @@ function M:RefreshBtnState()
     ActiveBtnIndex = 1
     self.BtnAbandon:SetTextColor(self.AbandonText_Color)
     self.BtnAbandon:SetText(GText("RecurringTask_Abandon"))
-  elseif self.DoingTaskId == nil then
+  elseif self.DoingTaskId == nil and not self.HasCanClaimTask then
     ActiveBtnIndex = 0
     self.BtnAccept:SetText(GText("RecurringTask_Accept"))
   else
-    HideAllBtn = true
+    ActiveBtnIndex = 4
+    self.BtnDisable:SetText(GText("RecurringTask_CantAccept"))
   end
-  if HideAllBtn then
-    self.WidgetSwitcher_0:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  else
-    self.WidgetSwitcher_0:SetActiveWidgetIndex(ActiveBtnIndex)
-    self.WidgetSwitcher_0:SetVisibility(UIConst.VisibilityOp.Visible)
-  end
+  self.WidgetSwitcher_0:SetActiveWidgetIndex(ActiveBtnIndex)
+  self.WidgetSwitcher_0:SetVisibility(UIConst.VisibilityOp.Visible)
 end
 
 function M:OnAcceptBtnClicked()
-  if self.DoingTaskId ~= nil then
+  if self.DoingTaskId ~= nil or self.HasCanClaimTask then
     return
   end
   local Avatar = GWorld:GetAvatar()

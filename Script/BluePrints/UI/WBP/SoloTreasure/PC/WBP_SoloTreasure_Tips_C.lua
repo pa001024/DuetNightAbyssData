@@ -25,9 +25,9 @@ function WBP_SoloTreasure_HudTips_C:InitData()
   if not self.TipType then
     self:SetVisibility(UE4.ESlateVisibility.Collapsed)
     return
+  else
+    self:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
   end
-  self.GameTotalTime = self.Parmas.GameTotalTime
-  self.WarningTime = self.Parmas.WarningTime
   self.Owner = self.Parmas.Owner
   self.Callback = self.Parmas.Callback
 end
@@ -81,13 +81,13 @@ function WBP_SoloTreasure_HudTips_C:TipPlayAnimation()
   end
 end
 
-function WBP_SoloTreasure_HudTips_C:InitText()
+function WBP_SoloTreasure_HudTips_C:InitText(RemainTime)
   if self.TipType == "GameStart" then
-    self.Text_Task02:SetText("搜索并撤离(待包装)")
-    self.Text_Task:SetText(self:GetTimeStr_Cpp(self.GameTotalTime))
+    self.Text_Task02:SetText(GText("UI_Extraction_MissionDescription"))
+    self.Text_Task:SetText(self:GetTimeStr_Cpp(RemainTime))
   elseif self.TipType == "TimeWarning" then
-    self.Text_Task02:SetText("超时将导致撤离失败(待包装)")
-    self.Text_Task_1:SetText(self:GetTimeStr_Cpp(self.WarningTime))
+    self.Text_Task02:SetText(GText("UI_Extraction_TimeoutWarning"))
+    self.Text_Task_1:SetText(self:GetTimeStr_Cpp(RemainTime))
   else
     self:SetVisibility(UE4.ESlateVisibility.Collapsed)
     return

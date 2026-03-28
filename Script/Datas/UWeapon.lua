@@ -136,6 +136,7 @@ return ReadOnly("UWeapon", {
     BigIcon = "/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Baonu_WP.T_Bust_Baonu_WP",
     GachaIcon = "/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Broadsword_Baonu.T_Gacha_Broadsword_Baonu",
     Icon = "/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Heitao_WP.T_Head_Heitao_WP",
+    IsInvisible = true,
     ModSlot = T.RT_1,
     ModSlotUnlock = T.RT_2,
     WeaponDescribe = "UI_WEAPON_DESC_150304",

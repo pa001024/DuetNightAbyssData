@@ -1,13 +1,10 @@
 require("UnLua")
 local M = Class({
-  "BluePrints.UI.BP_UIState_C"
+  "BluePrints.UI.BP_EMUserWidget_C",
+  "BluePrints.UI.BP_EMUserWidgetUtils_C"
 })
 
-function M:Initialize(Initializer)
-end
-
 function M:Construct()
-  M.Super.Construct(self)
   self.IsPC = CommonUtils.GetDeviceTypeByPlatformName(self) == "PC"
   self.Btn_Click.OnClicked:Add(self, self.OnClicked)
   self.Btn_Click.OnPressed:Add(self, self.OnPressed)
@@ -59,6 +56,7 @@ end
 
 function M:InitItemContent()
   if self.DungeonData then
+    self.Text_LvNum_1:SetText(GText("UI_DUNGEON_LevelLimit"))
     self.Text_LvNum:SetText(GText(self.DungeonData.Name))
     if PageJumpUtils:CheckDungeonCondition(self.DungeonData.Condition) then
       self.IsUnLocked = false

@@ -3012,7 +3012,14 @@
     "icon": "Suyi",
     "名称": "Su Yi",
     "版本": "1.3",
-    "别名": "Fledgling Kite",
+    "别名": "Plumes of Gilded Dawn",
+    "出生地": "Huaxu",
+    "势力": "Outer Peaks – Drifter",
+    "生日": "09-09",
+    "中文CV": "江月",
+    "日文CV": "竹達 彩奈",
+    "英文CV": "Elizabeth Chu",
+    "韩文CV": "정유정",
     "阵营": "Huaxu",
     "属性": "光",
     "精通": [
@@ -3023,11 +3030,15 @@
       "DPS",
       "Skill DMG"
     ],
-    "基础攻击": 28,
+    "基础攻击": 29,
     "基础生命": 70,
-    "基础防御": 252,
+    "基础防御": 220,
     "基础护盾": 140,
     "基础神智": 150,
+    "加成": {
+      "Skill Range": 0.3,
+      "Morale": 0.15
+    },
     "突破": [
       {
         "Coin": 5200,
@@ -3064,28 +3075,109 @@
       {
         "id": 150401,
         "名称": "Cruise",
-        "类型": "Passive",
-        "描述": "Enters [Cruise], gaining high-speed flight and dealing Lumino DMG to enemies along the path. This state continuously drains [Artificer Energy] and ends when Energy reaches 0 or when the skill is recast.",
-        "icon": "Passive",
+        "类型": "Buff",
+        "描述": "Enters [Cruise], gaining high-speed flight and dealing Lumino DMG to enemies along the path. This state continuously drains [Artificer Energy] and ends when Energy reaches 0 or when the skill is recast.\nHold the jump button to enter [Climb], gaining vertical flight capability. This state continuously drains [Artificer Energy] and ends when Energy reaches 0 or when the jump button is released.\nRestores [Artificer Energy] continuously while not in Cruise or Climb.",
+        "icon": "Suyi01_On",
         "cd": 1,
         "字段": [
           {
             "名称": "[Artificer Energy] consumed per second during Cruise",
-            "影响": "技能效益",
             "值": 1,
-            "格式": "{}"
+            "值2": 0.2,
+            "格式": "{}/{}s"
           },
           {
-            "名称": "[Artificer Energy] consumed per second while ascending",
-            "影响": "技能效益",
+            "名称": "[Artificer Energy] consumed per second during Climb",
             "值": 1,
-            "格式": "{}"
+            "值2": 0.2,
+            "格式": "{}/{}s"
+          },
+          {
+            "名称": "[Artificer Energy] Recovery",
+            "值": 2,
+            "值2": 0.2,
+            "格式": "{}/{}s"
           },
           {
             "名称": "DMG",
             "影响": "技能威力",
-            "值": 1,
+            "值": [
+              8.56,
+              10.47,
+              12.38,
+              14.29,
+              16.2,
+              18.11,
+              20.02,
+              21.93,
+              23.84,
+              25.75,
+              27.66,
+              29.57
+            ],
             "削韧": 50
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Filthoid Clot": 3,
+            "Statue Debris": 1
+          },
+          {
+            "Coin": 2600,
+            "Filthoid Clot": 6,
+            "Statue Debris": 2
+          },
+          {
+            "Coin": 3200,
+            "Filthoid Clot": 9,
+            "Statue Debris": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Filthoid Clot": 15,
+            "Statue Debris": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Filthoid Clot": 30,
+            "Statue Debris": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 90000,
+            "Filthoid Polymer": 1,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Filthoid Polymer": 2,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          }
+        ],
+        "子技能": [
+          {
+            "id": 150411,
+            "类型": "Buff",
+            "icon": "Suyi01_Off",
+            "cd": 1
           }
         ]
       },
@@ -3093,15 +3185,173 @@
         "id": 150402,
         "名称": "Artificer Armament",
         "类型": "Buff",
-        "描述": "Consumes all Sanity to summon the [Artificer Arsenal]. For a certain amount of Sanity consumed, grants 1 stack of [Artificer Supply], up to 10 stacks. Su Yi's melee weapon becomes the [Artificer Greatsword], and the ranged weapon becomes the [Artificer Cannon].\n While the Arsenal is active, Su Yi becomes immune to Hitstun. Recasting the skill retracts the Arsenal.",
-        "icon": "Saiqi02_On",
+        "描述": "Activates [Starfall Mode] by consuming all Sanity with Fengshi Type Ⅲ. Gain 1 stack of [Soar] for every 40 Sanity consumed, up to 10 stacks. Gain [Artificer Powder] based on the maximum ammo capacity of the equipped ranged weapon, up to 300 rounds.\nWhile in [Starfall Mode], weapons become unavailable, and Su Yi becomes immune to Hitstun. Recasting the skill deactivates [Starfall Mode].\nWhile in this mode, melee attacks are replaced with [Sword Aflash], and ranged attacks are replaced with [Stars Ashower].",
+        "icon": "Suyi02_On",
         "cd": 2,
+        "字段": [
+          {
+            "名称": "[天工火药]转化比例",
+            "值": 0.5,
+            "格式": "远程武器最大弹药量*{%}"
+          },
+          {
+            "名称": "[Artificer Greatsword] Damage",
+            "影响": "技能威力",
+            "值": [
+              41.83,
+              51.13,
+              60.43,
+              69.73,
+              79.03,
+              88.33,
+              97.63,
+              106.93,
+              116.23,
+              125.53,
+              134.83,
+              144.13
+            ],
+            "削韧": 100
+          },
+          {
+            "名称": "[Artificer Greatsword] Area of Effect",
+            "影响": "技能范围",
+            "值": 25,
+            "格式": "{}m"
+          },
+          {
+            "名称": "[Artificer Cannon] Projectile Damage",
+            "影响": "技能威力",
+            "值": [
+              5.21,
+              6.36,
+              7.51,
+              8.66,
+              9.81,
+              10.96,
+              12.11,
+              13.26,
+              14.41,
+              15.56,
+              16.71,
+              17.86
+            ],
+            "削韧": 20
+          },
+          {
+            "名称": "[Artificer Greatsword] Projectile Area of Effect",
+            "影响": "技能范围",
+            "值": 3,
+            "格式": "{}m"
+          },
+          {
+            "名称": "[Artificer Cannon] Fused Round Damage",
+            "影响": "技能威力",
+            "值": [
+              10.34,
+              12.65,
+              14.96,
+              17.27,
+              19.58,
+              21.89,
+              24.2,
+              26.51,
+              28.82,
+              31.13,
+              33.44,
+              35.75
+            ],
+            "削韧": 20
+          },
+          {
+            "名称": "[Artificer Greatsword] Fused Shell AoE Radius",
+            "影响": "技能范围",
+            "值": 3,
+            "格式": "{}m"
+          },
+          {
+            "名称": "[遨游]持续时间",
+            "影响": "技能耐久",
+            "值": 24,
+            "格式": "{}"
+          },
+          {
+            "名称": "Morale Boost",
+            "值": 0.06
+          },
+          {
+            "名称": "Minimum Sanity Cost",
+            "影响": "技能效益",
+            "值": 30,
+            "格式": "{}"
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Filthoid Clot": 3,
+            "Statue Debris": 1
+          },
+          {
+            "Coin": 2600,
+            "Filthoid Clot": 6,
+            "Statue Debris": 2
+          },
+          {
+            "Coin": 3200,
+            "Filthoid Clot": 9,
+            "Statue Debris": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Filthoid Clot": 15,
+            "Statue Debris": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Filthoid Clot": 30,
+            "Statue Debris": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 90000,
+            "Filthoid Polymer": 1,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Filthoid Polymer": 2,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          }
+        ],
+        "术语解释": {
+          "Artificer Supply": "Gains Morale Boost.",
+          "Artificer Sword": "Melee Attacks with this weapon consume 5 rounds and deal Lumino DMG to enemies along the path.",
+          "Artificer Cannon": "Each attack consumes 1 [Artificer Ammo] to fire a projectile that deals AoE Lumino DMG on hit.\nWhen equipped with Demon Wedge [Artificer Reconfiguration], the projectile is replaced with a fuse-type round that travels towards random enemies, dealing AoE Lumino DMG every 0.1 seconds along its path."
+        },
         "子技能": [
           {
             "id": 150421,
             "类型": "Buff",
-            "icon": "Feina02_Off",
-            "cd": 2
+            "icon": "Suyi02_Off",
+            "cd": 2,
+            "名称": "Artificer Supply"
           }
         ]
       },
@@ -3109,41 +3359,157 @@
         "id": 150403,
         "名称": "Artificer Kinetics",
         "类型": "Passive",
-        "描述": "Each bullet fired by the [Artificer Arsenal] grants 1 stack of [Overheat], stacking up to 400 times. Retracting the Arsenal consumes all Overheat stacks. If 200 or more stacks are consumed, the Arsenal launches forward and explodes on impact, dealing AoE Lumino DMG.",
-        "icon": "Passive"
+        "描述": "Each round fired by the [Artificer Armament] grants 1 stack of [Overheat], stacking up to 400 times. Retracting the Armament consumes all Overheat stacks. If 50 or more stacks are consumed, the Armament launches forward and explodes on impact, dealing AoE Lumino DMG.",
+        "icon": "Suyi03",
+        "字段": [
+          {
+            "名称": "每层[蓄势]回复神智",
+            "值": 1,
+            "格式": "{}"
+          },
+          {
+            "名称": "DMG",
+            "影响": "技能威力",
+            "值": [
+              20.91,
+              25.56,
+              30.21,
+              34.86,
+              39.51,
+              44.16,
+              48.81,
+              53.46,
+              58.11,
+              62.76,
+              67.41,
+              72.06
+            ],
+            "削韧": 50
+          },
+          {
+            "名称": "DMG Radius",
+            "影响": "技能范围",
+            "值": 20,
+            "格式": "{}m"
+          },
+          {
+            "名称": "每层[蓄势]增加伤害倍率",
+            "值": [
+              0.81,
+              1,
+              1.19,
+              1.38,
+              1.57,
+              1.76,
+              1.95,
+              2.14,
+              2.33,
+              2.52,
+              2.71,
+              2.9
+            ]
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Filthoid Clot": 3,
+            "Statue Debris": 1
+          },
+          {
+            "Coin": 2600,
+            "Filthoid Clot": 6,
+            "Statue Debris": 2
+          },
+          {
+            "Coin": 3200,
+            "Filthoid Clot": 9,
+            "Statue Debris": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Filthoid Clot": 15,
+            "Statue Debris": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Filthoid Clot": 30,
+            "Statue Debris": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 90000,
+            "Filthoid Polymer": 1,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Filthoid Polymer": 2,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          }
+        ],
+        "术语解释": {
+          "Overheat": "Each Overheat stack consumed restores Sanity and increases the base multiplier of the [Artificer Armament]'s resulting explosion damage."
+        },
+        "子技能": [
+          {
+            "id": 150405,
+            "类型": "",
+            "icon": "",
+            "名称": "Overheat"
+          }
+        ]
       },
       {
         "id": 150404,
         "名称": "Offense–Defense Integration",
         "类型": "Passive",
-        "描述": "Generates an [Artificer Shield] when the [Artificer Arsenal] is summoned.",
-        "icon": "ExtraPassive"
+        "描述": "When the [Artificer Armament] is summoned, converts a certain amount of Sanity consumed into Ultra Shield.",
+        "icon": "ExtraPassive",
+        "字段": [
+          {
+            "名称": "转化比例",
+            "值": 5
+          }
+        ]
+      },
+      {
+        "id": 150003,
+        "名称": "When the Sky Ran Gold",
+        "类型": "Support",
+        "描述": "[Available only when deployed as a Combat Partner]\nIncreases ATK for self and Lumino allies.",
+        "icon": "PhantomPassive",
+        "字段": [
+          {
+            "名称": "ATK Boost",
+            "值": 0.5
+          }
+        ]
       }
     ],
     "溯源": [
-      "When the [Artificer Greatsword] or [Artificer Cannon] deals damage, triggers an additional instance of AoE Lumino DMG at the target's location. This effect can trigger once every 0.5s.",
-      "[Artificer Supply] additionally increases Skill DMG.",
+      "Maximum [Overheat] stacks increased to 200. Gain 2 [Overheat] stacks for each round consumed by [Artificer Armament].",
+      "While [Artificer Armament] is active, [Artificer Cannon] automatically performs 4 ranged attacks every 5 seconds and grants the user 8 stacks of [Overheat]. These attacks do not consume [Artificer Ammo].",
       "[Cruise] Level ＋2, [Artificer Kinetics] Level ＋1.",
-      "Each bullet fired by the [Artificer Arsenal] restores HP to the [Artificer Shield]. While the Shield is active, damage taken is reduced.",
+      "When dealing Skill DMG, there is a chance to trigger Bonus Effect: Lumino based on the Trigger Probability of the equipped ranged weapon.\nWhen triggered, this effect pulls targets within a radius of 10 towards the centre of the affected area. This effect can trigger at most once per second.",
       "[Artificer Armament] Level ＋2, [Artificer Kinetics] Level ＋1.",
-      "For 10s after casting the Ultimate, each bullet fired by the [Artificer Arsenal] restores 1 bullet, and the Overheat cap increases to 600."
-    ],
-    "同律武器": [
-      {
-        "id": 150401,
-        "名称": "UI_WEAPON_NAME_150304",
-        "类型": [
-          "同律",
-          "近战",
-          "远程"
-        ],
-        "icon": "Heitao_WP",
-        "伤害类型": "震荡",
-        "攻击": 7,
-        "暴击": 0.3,
-        "暴伤": 2,
-        "触发": 0.3
-      }
+      "Each stack of [Artificer Supply] additionally increases All-Element Penetration by 6%. When an [Artificer Drone] is launched, two extra drones are generated, each dealing 50% of the original DMG."
     ]
   },
   {
@@ -4451,7 +4817,8 @@
       "[Aurelian Caress] Level +2; [Truelove Trial] Level +1.",
       "Takes 30% less damage from targets inflicted with [Poison of Love].",
       "[Lada Lovedew] Level +2; [Truelove Trial] Level +1.",
-      "When defeating a target inflicted with [Poison of Love], Rebecca gains 1 stack that increases Attack by 3% for 15s, up to 50 stacks. The remaining time of the effect is refreshed with each new stack gained."
+      "When defeating a target inflicted with [Poison of Love], Rebecca gains 1 stack that increases Attack by 3% for 15s, up to 50 stacks. The remaining time of the effect is refreshed with each new stack gained.",
+      "[召唤物·海月水母]攻击时，有概率直接附加8层[爱之毒]，概率为自身近战武器暴击率的100%。\n[召唤物·海月水母]攻击时有30%概率额外结算1次目标的[爱之毒]伤害。\n场上每存在1个[召唤物·海月水母]，自身和[召唤物·海月水母]造成的伤害提高12%。"
     ]
   },
   {
@@ -7251,7 +7618,8 @@
       "[Raging Inferno] Level +2; [Retributive Resolve] Level +1.",
       "Decreases the interval of dealing [Puncture Retribution] Pyro Damage to 1.4s.",
       "[Cage of Despair] Level +2; [Retributive Resolve] Level +1.",
-      "For every 5 Sanity-consuming skill uses by nearby allies, Hellfire automatically unleashes [Cage of Despair]. Can trigger once every 5s."
+      "For every 5 Sanity-consuming skill uses by nearby allies, Hellfire automatically unleashes [Cage of Despair]. Can trigger once every 5s.",
+      "While [Retribution] is active, dealing Skill DMG or Melee Weapon DMG to enemies has a 60% chance to trigger an additional [Puncture Retribution] centred on the target and grant 1 stack of [Reckoning]. This effect can trigger up to 8 times within 2s.\nIf HP is full, the user takes damage equal to 0.1% of Max HP.\nEach stack of [Reckoning] increases Morale by 1% and DMG dealt by [Cage of Despair] is multiplied by an additional 2% per stack, up to 150 stacks."
     ]
   },
   {
@@ -7259,7 +7627,14 @@
     "icon": "Kami",
     "名称": "Camilla",
     "版本": "1.3",
-    "别名": "UI_CHAR_SUBTITLE_3202",
+    "别名": "Scarlet Nectar",
+    "出生地": "Hyperborean Empire",
+    "势力": "None",
+    "生日": "11-21",
+    "中文CV": "苏染",
+    "日文CV": "沢城みゆき",
+    "英文CV": "Violet Patton-Ryder",
+    "韩文CV": "김예림",
     "阵营": "The Hyperborean Empire",
     "属性": "火",
     "精通": [
@@ -7271,11 +7646,15 @@
       "Skill DMG",
       "Support"
     ],
-    "基础攻击": 13,
-    "基础生命": 185,
-    "基础防御": 345,
+    "基础攻击": 25,
+    "基础生命": 120,
+    "基础防御": 330,
     "基础护盾": 120,
-    "基础神智": 200,
+    "基础神智": 160,
+    "加成": {
+      "ATK": 0.5,
+      "Skill Intensity": 0.2
+    },
     "突破": [
       {
         "Coin": 4160,
@@ -7314,18 +7693,31 @@
         "名称": "Burgundy Flurry",
         "类型": "DMG",
         "描述": "Launches all [Spinblades], dealing Pyro DMG to enemies in front and granting 1 stack of [Inebriation] to the user. Tap repeatedly or hold the normal skill or melee attack button to unleash a flurry of attacks.",
-        "icon": "Haier01",
+        "icon": "Kami01",
         "字段": [
           {
             "名称": "[Burgundy Flurry] Sanity Cost per Strike",
             "影响": "技能效益",
-            "值": 1,
+            "值": 10,
             "格式": "{}"
           },
           {
             "名称": "[Burgundy Flurry] Damage",
             "影响": "技能威力",
-            "值": 1,
+            "值": [
+              1.67,
+              2.04,
+              2.41,
+              2.78,
+              3.15,
+              3.52,
+              3.89,
+              4.26,
+              4.63,
+              5,
+              5.37,
+              5.74
+            ],
             "削韧": 25
           },
           {
@@ -7336,11 +7728,37 @@
           },
           {
             "名称": "Skill Speed Bonus per [Inebriation] Stack",
-            "值": 0.06
+            "值": [
+              0.042,
+              0.044,
+              0.046,
+              0.048,
+              0.05,
+              0.052,
+              0.054,
+              0.056,
+              0.058,
+              0.06,
+              0.062,
+              0.064
+            ]
           },
           {
             "名称": "+[Spinblade] Launch Speed per [Inebriation] Stack",
-            "值": 0.4
+            "值": [
+              0.265,
+              0.28,
+              0.295,
+              0.31,
+              0.325,
+              0.34,
+              0.355,
+              0.37,
+              0.385,
+              0.4,
+              0.415,
+              0.43
+            ]
           }
         ],
         "升级": [
@@ -7405,27 +7823,40 @@
             "id": 320211,
             "名称": "Inebriation",
             "类型": "DMG",
-            "icon": "Haier01"
+            "icon": "Kami01"
           }
         ]
       },
       {
         "id": 320202,
         "名称": "Claret Waltz",
-        "类型": "Summon",
+        "类型": "Buff",
         "描述": "Summon 8 [Spinblades] that orbit around you.",
-        "icon": "Haier02",
+        "icon": "Kami02",
         "字段": [
           {
             "名称": "Sanity Cost",
             "影响": "技能效益",
-            "值": 40,
+            "值": 100,
             "格式": "{}"
           },
           {
             "名称": "[Spinblade] Damage",
             "影响": "技能威力",
-            "值": 0.15,
+            "值": [
+              0.27,
+              0.32,
+              0.37,
+              0.42,
+              0.47,
+              0.52,
+              0.57,
+              0.62,
+              0.67,
+              0.72,
+              0.77,
+              0.82
+            ],
             "削韧": 1
           },
           {
@@ -7438,12 +7869,6 @@
             "名称": "[Spinblade] Launch Speed",
             "值": 20,
             "格式": "{}m/s"
-          },
-          {
-            "名称": "[Spinblade] Launch Distance",
-            "值": 37,
-            "值2": 43,
-            "格式": "{}-{}m"
           }
         ],
         "升级": [
@@ -7509,12 +7934,27 @@
         "名称": "Blood Upon Wine",
         "类型": "Passive",
         "描述": "Damage from [Spinblades] inflicts 1 stack of [Laceration], stacking up to 20 times.",
-        "icon": "Passive",
+        "icon": "Kami03",
         "字段": [
           {
             "名称": "[Laceration] Detonation Damage",
             "影响": "技能威力",
-            "值": 0.1
+            "值": [
+              0.24,
+              0.3,
+              0.36,
+              0.42,
+              0.48,
+              0.54,
+              0.6,
+              0.66,
+              0.72,
+              0.78,
+              0.84,
+              0.9
+            ],
+            "格式": "{%}*远程武器多重射击属性值",
+            "削韧": 25
           }
         ],
         "升级": [
@@ -7572,7 +8012,7 @@
           }
         ],
         "术语解释": {
-          "Laceration": "All Weapon and Skill DMG (excluding [Spinblades] and [Laceration]) detonates 1 stack of [Laceration], dealing additional Pyro damage. Max 30 detonations per second."
+          "Laceration": "Dealing Pyro Damage (excluding [Spinblades] and [Laceration] DMG) to targets with [Laceration] removes 1 stack of [Laceration] and deals 1 instance of additional Pyro DMG from [Camilla]. No more than 20 stacks can be removed from the same target per second."
         }
       },
       {
@@ -7584,32 +8024,32 @@
         "字段": [
           {
             "名称": "Sanity Recovery",
-            "值": 4,
+            "值": 5,
             "格式": "{}"
           }
         ]
       },
       {
-        "id": 310001,
-        "名称": "Aetherflame",
+        "id": 320291,
+        "名称": "瑰色裙",
         "类型": "Support",
-        "描述": "[Available only when deployed as a Combat Partner]\nIncreases ATK for self and Pyro allies.",
+        "描述": "[仅在作为协战同伴登场时生效]\n自身和火属性队友昂扬提高。",
         "icon": "PhantomPassive",
         "字段": [
           {
-            "名称": "ATK Boost",
-            "值": 0.4
+            "名称": "Morale Boost",
+            "值": 0.15
           }
         ]
       }
     ],
     "溯源": [
       "Damage from [Spinblades] has a 30% chance to inflict 1 additional stack of [Laceration].",
-      "When orbited by [Spinblades], reduces Damage Taken by 30% and increases Damage Dealt by 30%.",
+      "When orbited by [Spinblades], reduces Damage Taken by 15% and increases Damage Dealt by 55%.",
       "[Burgundy Flurry] Level +2, [Claret Waltz] Level +1.",
       "Damage from [Laceration] detonation is increased by 30%, [Spinblade] Launch Speed is increased by 25.",
       "[Claret Waltz] Level +2, [Burgundy Flurry] Level +1.",
-      "All Weapon and Skill DMG (excluding [Spinblades] and [Laceration]) detonates 2 stacks of [Laceration]."
+      "All Pyro Weapon and Skill DMG (excluding [Spinblades] and [Laceration]) detonates 2 stacks of [Laceration] and deals Pyro Damage 2 times. While [Spinblades] is active, additionally grants 45% PEN stats."
     ]
   },
   {
@@ -8322,8 +8762,7 @@
               4.16,
               4.45
             ],
-            "削韧": 33,
-            "取消": 1.0925
+            "削韧": 33
           },
           {
             "名称": "[Positive Charge] Effect Radius",
@@ -9378,7 +9817,7 @@
           "Starlight Descent": "Plunges at high speed, dealing AoE Electro Damage on impact. This attack is regarded as a melee weapon Plunging Attack. Using this skill in [Xuanjiao Manifest] state triggers [Wyrmcall Clouds].",
           "Reverse Scale": "Reverse Scale persists, with a maximum of 6 scales existing at the same time. The scales are removed when the [Xuanjiao Manifest] state ends.",
           "Wyrmcall Clouds": "Spawns [Raging Thunders] at targets struck by [Starlight Descent] or [Starstorm Descent], dealing Electro AoE Damage. A maximum of 5 targets can be selected.",
-          "Starstorm Descent": "Consumes all [Reverse Scales] to grant a Damage Dealt Increase to self.\nThen plunges at high speed, dealing Electro AoE Damage on impact. Counts as a Plunging Attack from a melee weapon. While in [Xuanjiao Manifest], also triggers [Wyrmcall Clouds]."
+          "Starstorm Descent": "Consumes all [Reverse Scales] to grant a Damage Dealt Increase to self.\n Then plunges at high speed, dealing Electro AoE Damage on impact. Counts as a Plunging Attack from a melee weapon. While in [Xuanjiao Manifest], also triggers [Wyrmcall Clouds]."
         }
       },
       {

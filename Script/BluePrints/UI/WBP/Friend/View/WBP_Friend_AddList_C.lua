@@ -191,9 +191,6 @@ function M:GetListData()
   for K, V in pairs(Dict) do
     table.insert(self.ListDatas, K)
   end
-  if not self.bSearchState and not next(self.ListDatas) then
-    self:OnRefreshReleased()
-  end
 end
 
 function M:SetupListContent(Uid, Content)
@@ -209,11 +206,11 @@ end
 
 function M:InitWidget(Parent)
   self.Parent = Parent
-  self:RefreshList()
-  self:SetKeyboardFocus()
   if FriendController.RefreshRecommandTimer then
     self:OnRecommandCdUpdate(false, 1)
   end
+  self:RefreshList()
+  self:SetKeyboardFocus()
 end
 
 function M:OnLoaded(...)

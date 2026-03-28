@@ -112,7 +112,8 @@ BagCommon.LastWeaponTooMoreWarningTimeStamp = "LastWeaponNoMoreWarningTimeStamp"
 BagCommon.OptionalItemType = {
   Avatar = "Avatar",
   Weapon = "Weapon",
-  Pet = "Pet"
+  Pet = "Pet",
+  LimitedPrizePool = "LimitedPrizePool"
 }
 
 function BagCommon:IsFishResource(ResourceId)

@@ -106,6 +106,9 @@ function EMCache:_GetCacheName(bUseUUID)
     if Avatar.Uid then
       local Hostnum = tonumber(Avatar.Uid) // 10000000 // 10
       Tag = tostring(Hostnum) .. "_" .. Tag
+    else
+      DebugPrint(ErrorTag, "[EMCache Error] Avatar有问题，Uid为空！！！")
+      return
     end
     return FileNamePart .. "_" .. Tag
   end

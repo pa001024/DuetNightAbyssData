@@ -177,6 +177,19 @@ function MissionIndicatorManager:SetIndicatorDataBy_MiniGameOpenGateNode(InData,
   InData.StaticCreatorKey = InNode.GuidePointName
 end
 
+function MissionIndicatorManager:SetIndicatorDataBy_SubmitItemNode(InData, InNode)
+  InData.GuideType = InNode.GuideType
+  InData.PointKey = InNode.GuidePointName
+  if InData.GuideType == "N" then
+    local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
+    local TargetStaticCreator = GameState.StaticCreatorStringNameMap:FindRef(InNode.GuidePointName)
+    if TargetStaticCreator then
+      InData.PointKey = TargetStaticCreator.UnitId
+    end
+  end
+  InData.StaticCreatorKey = InNode.GuidePointName
+end
+
 function MissionIndicatorManager:SetIndicatorDataBy_PickUpNode(InData, InNode)
   InData.GuideType = InNode.GuideType
   InData.PointKey = InNode.GuidePointName

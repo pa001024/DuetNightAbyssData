@@ -164,7 +164,7 @@ return ReadOnly("BossSkillToast", {
   [8510001] = {
     Duration = 1.5,
     ID = 8510001,
-    TextMapKey = "血量均摊伤害（带包装）",
+    TextMapKey = "BossSkillToast_Heilong_Skill13",
     TipsStyle = "Common"
   },
   [8510002] = {
@@ -231,6 +231,12 @@ return ReadOnly("BossSkillToast", {
     Duration = 3,
     ID = 8515002,
     TextMapKey = "BossSkillToast_Jushi_Skill08",
+    TipsStyle = "Common"
+  },
+  [8518001] = {
+    Duration = 3,
+    ID = 8518001,
+    TextMapKey = "BossSkillToast_Juque_Skill15",
     TipsStyle = "Common"
   },
   [8519001] = {

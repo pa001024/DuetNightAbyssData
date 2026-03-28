@@ -17,6 +17,7 @@ return ReadOnly("ShopMainTab2ShopType", {
   [702] = "ExploreBadgeShop",
   [703] = "ExploreBadgeShop",
   [704] = "ExploreBadgeShop",
+  [705] = "ExploreBadgeShop",
   [801] = "FishingShop",
   [802] = "FishingShop",
   [10000] = "AbyssShop",
@@ -26,6 +27,8 @@ return ReadOnly("ShopMainTab2ShopType", {
   [10004] = "RaidShopSeason01",
   [10005] = "HuaxuExploreShop",
   [10006] = "AutoChessShop",
+  [10007] = "SoloTreasureShop",
+  [10008] = "AccessoryDropShop",
   [90001] = "GiftShop",
   [90002] = "GiftShop",
   [90003] = "GiftShop"

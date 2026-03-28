@@ -21,28 +21,14 @@ function Component:AddStaticCreatorInfo()
     return
   end
   local GameState = UE4.UGameplayStatics.GetGameState(self)
+  if not GameState then
+    return
+  end
   self:RealAddAddStaticCreatorInfo(GameState)
   if 0 ~= self.FlexibleActiveInactive:Length() then
     EventManager:AddEvent(EventID.TriggerFlexibleActive, self, self.TriggerFlexibleActiveStaticCreator)
     EventManager:AddEvent(EventID.ConditionComplete, self, self.TriggerFlexibleActiveStaticCreator)
     EventManager:AddEvent(EventID.OnDailyRefresh, self, self.TriggerFlexibleActiveStaticCreator)
-  end
-end
-
-function Component:RealAddAddStaticCreatorInfo(GameState)
-  if self.PrivateEnable then
-    local GameMode = UE4.UGameplayStatics.GetGameMode(self)
-    if GameMode:IsInDungeon() and GameMode:GetLevelLoader() then
-      local LevelName = GameMode:GetActorLevelName(self)
-      GameState:SetPrivateEnableStaticCreatorInfo(LevelName, self)
-      return
-    end
-  end
-  local FlexibleRet, IsActive = self:TryGetFlexibleActiveResult()
-  GameState.StaticCreatorMap:Add(self.StaticCreatorId, self)
-  GameState.StaticCreatorStringNameMap:Add(self.DisplayName, self)
-  if false == FlexibleRet and self.AutoActive then
-    GameState.AutoActiveStaticIds:AddUnique(self.StaticCreatorId)
   end
 end
 
@@ -363,13 +349,16 @@ function Component:GetUnitLevel()
 end
 
 function Component:GetUnitLevel_Lua()
-  if self.LevelAdaptDisable and UE4.UGameplayStatics.GetGameMode(self):IsInRegion() then
+  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+  if self.LevelAdaptDisable and GameMode:IsInRegion() then
     return math.max(1, self.Level)
   else
-    local MonsterCurLevel = self.Level + UE4.UGameplayStatics.GetGameMode(self):GetFixedGamemodeLevel()
-    local GameMode = UE4.UGameplayStatics.GetGameMode(self)
-    if GameMode and GameMode:IsEndlessDungeon() or GameMode.EMGameState.GameModeType == "Abyss" then
+    local MonsterCurLevel = self.Level + GameMode:GetFixedGamemodeLevel()
+    if GameMode:IsEndlessDungeon() then
       local MonsterMaxLevel = DataMgr.GlobalConstant.MonsterLevelUpperLimit.ConstantValue
+      return math.min(MonsterMaxLevel, MonsterCurLevel)
+    elseif GameMode.EMGameState.GameModeType == "Abyss" then
+      local MonsterMaxLevel = DataMgr.GlobalConstant.AbyssMonsterLevelLimit.ConstantValue
       return math.min(MonsterMaxLevel, MonsterCurLevel)
     else
       return MonsterCurLevel
@@ -651,6 +640,13 @@ function Component:SetNpcShowHide_Lua(QuestId)
 end
 
 function Component:TriggerFlexibleActiveStaticCreator()
+  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+  if not GameMode then
+    return
+  end
+  if not GameMode:IsInRegion() then
+    return
+  end
   local FlexibleRet, IsActive = self:TryGetFlexibleActiveResult()
   local GameState = UE4.UGameplayStatics.GetGameState(self)
   if GameState and true == FlexibleRet then
@@ -664,12 +660,11 @@ function Component:TriggerFlexibleActiveStaticCreator()
       GameState.FlexibleActiveStaticIds:Add(self.StaticCreatorId, IsActive)
     end
   end
-  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
-  if GameMode and FlexibleRet and IsActive then
+  if FlexibleRet and IsActive then
     local TempArray = TArray(0)
     TempArray:Add(self.StaticCreatorId)
     GameMode:TriggerActiveStaticCreator(TempArray, "FlexibleActiveInactive")
-  elseif GameMode and FlexibleRet and not IsActive then
+  elseif FlexibleRet and not IsActive then
     for _, NpcChar in pairs(GameState.NpcMap) do
       if NpcChar.UnitId == self.UnitId and NpcChar.CreatorId and NpcChar.CreatorId == self.StaticCreatorId then
         NpcChar:EMActorDestroy(EDestroyReason.Flexible)

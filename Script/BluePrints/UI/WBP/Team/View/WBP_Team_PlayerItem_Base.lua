@@ -25,6 +25,7 @@ function M:Construct()
   self.Head_Anchor.OnGetMenuContentEvent:Bind(self, self.OnGetMenuContent)
   self.Head_Anchor.OnMenuOpenChanged:Add(self, self.OnMenuOpenChanged)
   self.Button_Area:SetChecked(false)
+  self.GameInputModeSubsystem:SetNavigateWidgetOpacity(1)
   EventManager:AddEvent(EventID.ShowTeammateBloodUI, self, self.AddPhantomUI)
   EventManager:AddEvent(EventID.CloseTeammateBloodUI, self, self.DelPhantomUI)
 end
@@ -53,7 +54,6 @@ function M:Init(Owner, Member, Index, bAnim)
     RangedWId = EntityState.RangedWeaponId
     MeleeWLevel = EntityState.MeleeWeaponLevel
     RangedWLevel = EntityState.RangedWeaponLevel
-    self:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
   elseif Member.Char then
     CharId = Member.Char.CharId
     CharLevel = Member.Char.Level
@@ -120,7 +120,7 @@ function M:Init(Owner, Member, Index, bAnim)
   else
     self:PlayAnimation(self.Normal)
   end
-  if not GWorld:IsStandAlone() then
+  if not GWorld:IsStandAlone() and TeamModel:IsYourself(Member.Uid) then
     self:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
   else
     self:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
@@ -258,6 +258,8 @@ function M:OnGetMenuContent(Anchor)
     end
   end
   
+  local AddBlackList = FriendController:GenAddBlackListFunc(self, self.Head_Anchor)
+  local AccusePlayer = FriendController:GenAccusePlayerFunc(self, self.Head_Anchor)
   local Switch = {}
   if TeamModel:IsYourself(self.Member.Uid) then
     Switch = {InitShowRecordBtn}
@@ -268,18 +270,23 @@ function M:OnGetMenuContent(Anchor)
         InitTeamLeaderTransBtn,
         InitShowRecordBtn
       }
-    else
+    elseif GWorld:IsStandAlone() then
       Switch = {InitShowRecordBtn}
     end
     if not FriendController:GetModel():GetFriendDict()[self.Member.Uid] then
       table.insert(Switch, InitAddFriendBtn)
     end
+    if not FriendController:GetModel():GetBlackListDict()[self.Member.Uid] then
+      table.insert(Switch, AddBlackList)
+    end
+    table.insert(Switch, AccusePlayer)
   end
   if IsEmptyTable(Switch) then
     self.bOpenMenu = false
     return nil
   end
   self.bOpenMenu = true
+  self.InGameOnly = true
   local Widget = ChatController:OpenPlayerBtnList(self, self.Member, Switch)
   Widget:DontShowBottom()
   return Widget

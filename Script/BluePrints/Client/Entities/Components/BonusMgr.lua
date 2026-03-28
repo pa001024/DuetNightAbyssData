@@ -88,6 +88,19 @@ function Component:OnPickUp(GameMode, Reward, Reason, ExtraInfo, bInDungeon)
   end
 end
 
+function Component:ServerOnPickUp(Reward, ExtraInfo)
+  local GameMode = GWorld.GameInstance:GetCurrentGameMode()
+  self:OnPickUp(GameMode, Reward, CommonConst.RewardReason.PickUp, ExtraInfo, false)
+end
+
+function Component:ServerOnGetRewardInDungeon(Rewards, Reason, ExtraInfo)
+  local GameMode = GWorld.GameInstance:GetCurrentGameMode()
+  GameMode:ResolveRewardsInBattle(Rewards, Reason, nil, ExtraInfo, {
+    Avatar = CommonUtils.ObjId2Str(self.Eid)
+  })
+  self:CacheDungeonRewards(Rewards)
+end
+
 function Component:OnShowRewardInDungeon(ClientResult)
   DebugPrint("OnShowRewardInDungeon")
   for i = 1, #ClientResult do

@@ -157,6 +157,55 @@ T.RT_32 = {
 T.RT_33 = {
   RegionTarget = T.RT_32
 }
+T.RT_34 = {
+  104501,
+  104502,
+  104503,
+  104504,
+  104505,
+  104506
+}
+T.RT_35 = {
+  105201,
+  "TargetPoint_FromWesToReb",
+  1
+}
+T.RT_36 = {
+  105301,
+  "TargetPoint_FromTopToTXL",
+  1
+}
+T.RT_37 = {
+  105501,
+  "TargetPoint_FromInnToYLX",
+  1
+}
+T.RT_38 = {
+  105501,
+  "TargetPoint_FromSubToYLX",
+  1
+}
+T.RT_39 = {
+  105101,
+  "TargetPoint_FromTopToZLG1F",
+  1
+}
+T.RT_40 = {
+  105101,
+  "TargetPoint_FromTopToZLG2F",
+  1
+}
+T.RT_41 = {
+  T.RT_35,
+  T.RT_36,
+  T.RT_37,
+  T.RT_38,
+  T.RT_39,
+  T.RT_40
+}
+T.RT_42 = {
+  RegionTarget = T.RT_41
+}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -380,6 +429,36 @@ return ReadOnly("RegionGraph", {
     SubRegionStart = 104110,
     SubRegionTarget = T.RT_33
   },
+  [104501] = {
+    RegionStart = T.RT_34,
+    SubRegionStart = 104501,
+    SubRegionTarget = T.RT_42
+  },
+  [104502] = {
+    RegionStart = T.RT_34,
+    SubRegionStart = 104502,
+    SubRegionTarget = T.RT_42
+  },
+  [104503] = {
+    RegionStart = T.RT_34,
+    SubRegionStart = 104503,
+    SubRegionTarget = T.RT_42
+  },
+  [104504] = {
+    RegionStart = T.RT_34,
+    SubRegionStart = 104504,
+    SubRegionTarget = T.RT_42
+  },
+  [104505] = {
+    RegionStart = T.RT_34,
+    SubRegionStart = 104505,
+    SubRegionTarget = T.RT_42
+  },
+  [104506] = {
+    RegionStart = T.RT_34,
+    SubRegionStart = 104506,
+    SubRegionTarget = T.RT_42
+  },
   [104901] = {
     SubRegionStart = 104901,
     SubRegionTarget = {
@@ -387,6 +466,67 @@ return ReadOnly("RegionGraph", {
         {
           104109,
           "TargetPoint_LeaveQiuOffice",
+          1
+        }
+      }
+    }
+  },
+  [105101] = {
+    SubRegionStart = 105101,
+    SubRegionTarget = {
+      RegionTarget = {
+        {
+          104506,
+          "TargetPoint_FromZLGToTop1F",
+          1
+        },
+        {
+          104506,
+          "TargetPoint_FromZLGToTop2F",
+          1
+        }
+      }
+    }
+  },
+  [105201] = {
+    RegionStart = {105201},
+    SubRegionStart = 105201,
+    SubRegionTarget = {
+      RegionTarget = {
+        {
+          104502,
+          "TargetPoint_FromRebToWes",
+          1
+        }
+      }
+    }
+  },
+  [105301] = {
+    RegionStart = {105301},
+    SubRegionStart = 105301,
+    SubRegionTarget = {
+      RegionTarget = {
+        {
+          104506,
+          "TargetPoint_FromTRLMToTop",
+          1
+        }
+      }
+    }
+  },
+  [105501] = {
+    RegionStart = {105501},
+    SubRegionStart = 105501,
+    SubRegionTarget = {
+      RegionTarget = {
+        {
+          104503,
+          "TargetPoint_FromYLXToInn",
+          1
+        },
+        {
+          104505,
+          "TargetPoint_FromYLXToSub",
           1
         }
       }

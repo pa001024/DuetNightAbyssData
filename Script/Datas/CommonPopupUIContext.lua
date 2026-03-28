@@ -6,15 +6,19 @@ T.RT_2 = {
 T.RT_3 = {
   [1] = "UI_SHOP_SOLDOUT"
 }
-T.RT_4 = {FixTipHeight = 1}
-T.RT_5 = {
+T.RT_4 = {
+  [1] = "UI_COMMONPOP_TEXT_100076_2"
+}
+T.RT_5 = {FixTipHeight = 1}
+T.RT_6 = {
   [1] = "UI_REGISTER_OVERLENGTH",
   [2] = "UI_REGISTER_ILLEGALINPUT"
 }
-T.RT_6 = {
+T.RT_7 = {
   [1] = "UI_ArmoryMod_Enhance_Unequip"
 }
-T.RT_7 = {101}
+T.RT_8 = {NoButtonPCKey = "Escape", YesButtonPCKey = "SpaceBar"}
+T.RT_9 = {101}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -594,9 +598,7 @@ return ReadOnly("CommonPopupUIContext", {
     Id = 100076,
     PopoverText = "UI_COMMONPOP_TEXT_100076",
     Style = "ShortTextDefault_2",
-    Tip = {
-      [1] = "UI_COMMONPOP_TEXT_100076_2"
-    },
+    Tip = T.RT_4,
     Title = "UI_COMMONPOP_TITLE_100010"
   },
   [100077] = {
@@ -612,13 +614,13 @@ return ReadOnly("CommonPopupUIContext", {
     Title = "UI_COMMONPOP_TITLE_100010"
   },
   [100085] = {
-    ExtraParams = T.RT_4,
+    ExtraParams = T.RT_5,
     Id = 100085,
     Style = "common_dialog_input",
     Title = "UI_COMMONPOP_TITLE_100078"
   },
   [100086] = {
-    ExtraParams = T.RT_4,
+    ExtraParams = T.RT_5,
     Id = 100086,
     Style = "common_dialog_input",
     Title = "UI_COMMONPOP_TITLE_100082"
@@ -636,20 +638,21 @@ return ReadOnly("CommonPopupUIContext", {
     Title = "UI_COMMONPOP_TITLE_100010"
   },
   [100090] = {
-    ExtraParams = T.RT_4,
+    ExtraParams = T.RT_5,
+    HintText = "UI_Friend_AddBlackList",
     Id = 100090,
     NoButtonText = "UI_PATCH_CANCEL",
     Style = "Chat_Report",
-    Tip = T.RT_5,
+    Tip = T.RT_6,
     Title = "UI_COMMONPOP_TITLE_100090",
     YesButtonText = "UI_COMMONPOP_TITLE_100090"
   },
   [100091] = {
-    ExtraParams = T.RT_4,
+    ExtraParams = T.RT_5,
     Id = 100091,
     NoButtonText = "UI_PATCH_CANCEL",
     Style = "Chat_QuickAnswerEdit",
-    Tip = T.RT_5,
+    Tip = T.RT_6,
     Title = "UI_COMMONPOP_TITLE_100091",
     YesButtonText = "UI_RegionMap_Save"
   },
@@ -858,7 +861,7 @@ return ReadOnly("CommonPopupUIContext", {
     NoButtonText = "UI_PATCH_CANCEL",
     PopoverText = "UI_COMMONPOP_TEXT_100118",
     Style = "ShortTextDefault_2",
-    Tip = T.RT_6,
+    Tip = T.RT_7,
     Title = "UI_FUNC_INCREASE",
     YesButtonText = "UI_PATCH_ENSURE"
   },
@@ -867,7 +870,7 @@ return ReadOnly("CommonPopupUIContext", {
     NoButtonText = "UI_PATCH_CANCEL",
     PopoverText = "UI_COMMONPOP_TEXT_100119",
     Style = "ShortTextDefault_2",
-    Tip = T.RT_6,
+    Tip = T.RT_7,
     Title = "UI_FUNC_INCREASE",
     YesButtonText = "UI_PATCH_ENSURE"
   },
@@ -897,6 +900,7 @@ return ReadOnly("CommonPopupUIContext", {
     YesButtonText = "UI_Advanced_Emotions_Exchange"
   },
   [100123] = {
+    ExtraParams = T.RT_8,
     Id = 100123,
     NoButtonText = "UI_PATCH_CANCEL",
     Style = "Depute_Ticket",
@@ -957,7 +961,7 @@ return ReadOnly("CommonPopupUIContext", {
     Style = "Friend_Information"
   },
   [100133] = {
-    ExtraParams = T.RT_4,
+    ExtraParams = T.RT_5,
     Id = 100133,
     NoButtonText = "UI_PATCH_CANCEL",
     Style = "common_dialog_input",
@@ -1114,7 +1118,7 @@ return ReadOnly("CommonPopupUIContext", {
     Id = 100153,
     NoButtonText = "UI_PATCH_CANCEL",
     Style = "Forging_BatchDialog",
-    TabCoin = T.RT_7,
+    TabCoin = T.RT_9,
     Title = "UI_COMMONPOP_TITLE_100014",
     YesButtonText = "UI_FORGING_START"
   },
@@ -1218,7 +1222,7 @@ return ReadOnly("CommonPopupUIContext", {
     YesButtonText = "UI_PATCH_ENSURE"
   },
   [100168] = {
-    ExtraParams = T.RT_4,
+    ExtraParams = T.RT_5,
     Id = 100168,
     Style = "common_dialog_input",
     Title = "UI_Mod_SuitNamePopUpTitle"
@@ -1277,7 +1281,7 @@ return ReadOnly("CommonPopupUIContext", {
     YesButtonText = "UI_PATCH_ENSURE"
   },
   [100176] = {
-    ExtraParams = T.RT_4,
+    ExtraParams = T.RT_5,
     Id = 100176,
     Style = "common_dialog_input",
     Title = "UI_Mod_SuitNamePopUpTitle"
@@ -1849,6 +1853,7 @@ return ReadOnly("CommonPopupUIContext", {
     Title = "UI_Armory_BreakReward"
   },
   [100252] = {
+    ExtraParams = T.RT_8,
     Id = 100252,
     NoButtonText = "UI_PATCH_CANCEL",
     NotShowCloseButton = 1,
@@ -2211,11 +2216,14 @@ return ReadOnly("CommonPopupUIContext", {
     Id = 100300,
     NoButtonText = "UI_PATCH_CANCEL",
     Style = "WBP_Forging_ExchangePart",
-    TabCoin = T.RT_7,
+    TabCoin = T.RT_9,
     Title = "UI_COMMONPOP_TITLE_100010",
     YesButtonText = "UI_PATCH_ENSURE"
   },
   [100301] = {
+    ExtraParams = {
+      BindScript = "BluePrints.UI.UI_PC.Common.Common_Dialog.Common_Dialog_LuaModel.Common_Dialog_LuaModel_SubmitItem"
+    },
     Id = 100301,
     NoButtonText = "UI_PATCH_CANCEL",
     Style = "ResourceUseConfirm",
@@ -2271,6 +2279,14 @@ return ReadOnly("CommonPopupUIContext", {
     Title = "UI_COMMONPOP_TITLE_100010",
     YesButtonText = "UI_Shader_Skip"
   },
+  [100309] = {
+    Id = 100309,
+    NoButtonText = "UI_ResetLangLater",
+    PopoverText = "UI_COMMONPOP_TEXT_100309",
+    Style = "ShortTextDefault",
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_ResetLangNow"
+  },
   [100310] = {
     Id = 100310,
     PopoverText = "UI_CommonQuestRefresh",
@@ -2286,6 +2302,42 @@ return ReadOnly("CommonPopupUIContext", {
     Style = "ShortTextComfirm",
     Title = "UI_COMMONPOP_TITLE_100010"
   },
+  [100312] = {
+    Id = 100312,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "UI_SecPwd_PopUpContent_SetConfirm",
+    Style = "ShortTextDefault_2",
+    Tip = {
+      [1] = "UI_SecPwd_PopUpContent_SetAlert"
+    },
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_SecPwd_PopUpContent_SetButton"
+  },
+  [100313] = {
+    ExtraParams = T.RT_1,
+    Id = 100313,
+    NotShowCloseButton = 1,
+    PopoverText = "UI_SecPwd_PopUpContent_SetSucc",
+    Style = "ShortTextComfirm",
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100314] = {
+    Id = 100314,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "UI_SecPwd_PopUpContent_TurnoffConfirm",
+    Style = "ShortTextDefault",
+    Title = "UI_COMMONPOP_TITLE_100010"
+  },
+  [100315] = {
+    ExtraParams = T.RT_1,
+    Id = 100315,
+    NotShowCloseButton = 1,
+    PopoverText = "UI_SecPwd_WrongPwdLock",
+    Style = "ShortTextComfirm",
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
   [100316] = {
     Id = 100316,
     NoButtonText = "UI_PATCH_CANCEL",
@@ -2293,5 +2345,235 @@ return ReadOnly("CommonPopupUIContext", {
     Style = "ShortTextDefault",
     Title = "UI_COMMONPOP_TITLE_100010",
     YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100317] = {
+    HintText = "UI_Bag_Decompose_NotToday",
+    Id = 100317,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "UI_SoloTreasure_EntryDungeonConfirm",
+    Style = "CheckDefault",
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100318] = {
+    Id = 100318,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "UI_SoloTreasure_ClearArmoryPreset",
+    Style = "ShortTextDefault",
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100319] = {
+    HintText = "UI_Bag_Decompose_NotToday",
+    Id = 100319,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "UI_SoloTreasure_Evacuation_PlayAgainConfirm",
+    Style = "CheckDefault",
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100320] = {
+    Id = 100320,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "UI_Quest_AbandonQuest_Text",
+    Style = "AlertDefault",
+    Tip = {
+      [1] = "UI_Quest_AbandonQuest_Tips"
+    },
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100321] = {
+    Id = 100321,
+    NoButtonText = "UI_PATCH_CANCEL",
+    Style = "common_dialog_input_LayoutCustom",
+    Title = "UI_CustomLayout_PopupTittle02",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100322] = {
+    Id = 100322,
+    Style = "MobileLayoutplayManage",
+    Title = "UI_CustomLayout_PopupTittle01"
+  },
+  [100323] = {
+    Id = 100323,
+    NoButtonText = "UI_CommonPopup_SaveLayout_Button01",
+    PopoverText = "UI_CommonPopup_SaveLayout_Content",
+    Style = "ShortTextDefault",
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_CommonPopup_SaveLayout_Button02"
+  },
+  [100324] = {
+    Id = 100324,
+    NoButtonText = "UI_CustomLayout_PopupBtn02",
+    PopoverText = "UI_CommonPopup_SaveLayout_Content",
+    Style = "ShortTextDefault",
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_CustomLayout_PopupBtn01"
+  },
+  [100325] = {
+    Id = 100325,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "UI_Patch_StartNow",
+    Style = "ShortTextDefault",
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100326] = {
+    Id = 100326,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "UI_Patch_DataUsage",
+    Style = "ShortTextDefault",
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100327] = {
+    Id = 100327,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "UI_Patch_Interrup",
+    Style = "ShortTextDefault",
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100328] = {
+    Id = 100328,
+    PopoverText = "UI_COMMONPOP_TEXT_100076_3",
+    Style = "ShortTextDefault_2",
+    Tip = T.RT_4,
+    Title = "UI_COMMONPOP_TITLE_100010"
+  },
+  [100329] = {
+    Id = 100329,
+    NoButtonIconPath = "Texture2D'/Game/UI/Texture/Static/Atlas/Common/T_Com_IconGetAll.T_Com_IconGetAll'",
+    NoButtonRGBA = "e1b454ff",
+    NoButtonText = "UI_CTL_QuickStart",
+    NotShowCloseButton = 1,
+    PopoverText = "UI_Patch_QuickStart",
+    Style = "ShortTextDefault",
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonIconPath = "Texture2D'/Game/UI/Texture/Static/Atlas/Common/T_Com_IconGetAll.T_Com_IconGetAll'",
+    YesButtonRGBA = "e1b454ff",
+    YesButtonText = "UI_CTL_DownloadAll"
+  },
+  [100330] = {
+    Id = 100330,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "UI_GameEvent_BagGame_ExitConfirm",
+    Style = "ShortTextDefault",
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100331] = {
+    Id = 100331,
+    Style = "DeputeDetailDialog",
+    Title = "Event_FreeAppearance_RewardPreview"
+  },
+  [100332] = {
+    Id = 100332,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "UI_GameEvent_BagGame_ResetConfirm",
+    Style = "ShortTextDefault",
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100333] = {
+    Id = 100333,
+    NotShowCloseButton = 1,
+    PopoverText = "UI_DungeonPunish_Warning",
+    Style = "ShortTextComfirm_2",
+    Tip = {
+      [1] = "UI_DungeonPunish_Times"
+    },
+    Title = "UI_DungeonPunish_Title",
+    YesButtonText = "UI_BTN_Got_It"
+  },
+  [100334] = {
+    Id = 100334,
+    Style = "LimitedPrizePool_DetailHistory",
+    Title = "UI_GACHA_LIST"
+  },
+  [100335] = {
+    Id = 100335,
+    NoButtonText = "UI_PATCH_CANCEL",
+    Style = "LimitedPrizePool_OptionalAvatar",
+    YesButtonForbiddenToast = "UI_Consumable_NotChoose",
+    YesButtonText = "UI_CONFIRM_SELECTION"
+  },
+  [100336] = {
+    Id = 100336,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "UI_LimitedPrizePool_BuyTicket",
+    Style = "Invitation_Exchange",
+    Title = "UI_COMMONPOP_TITLE_100136",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100337] = {
+    Id = 100337,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "UI_LimitedPrizePool_Use99",
+    Style = "ResourceUseConfirm",
+    Title = "UI_COMMONPOP_TITLE_100136",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100338] = {
+    HintText = "UI_Shop_TW_NotRemind",
+    Id = 100338,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "UI_LimitedPrizePool_BeginCheck",
+    Style = "CheckDefault",
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100339] = {
+    Id = 100339,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "UI_SoloTreasure_PopUpText_LackTicket",
+    Style = "ShortTextDefault",
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100340] = {
+    Id = 100340,
+    PopoverText = "UI_SoloTreasureTicketLevelTips",
+    ShowQuitTip = 1,
+    Style = "LongTextDefault_1",
+    Title = "UI_GACHA_DESDETAIL"
+  },
+  [100341] = {
+    HintText = "UI_Extraction_TM_16",
+    Id = 100341,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "UI_Extraction_TM_15",
+    Style = "CheckDefault",
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100342] = {
+    Id = 100342,
+    PopoverText = "UI_Skin_Upgrade_Confirm",
+    Style = "Skin_Upgrade_Confirm"
+  },
+  [100343] = {
+    Id = 100343,
+    NoButtonText = "UI_PATCH_CANCEL",
+    Style = "Reward_RandomBox_Open",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100344] = {
+    Id = 100344,
+    ShowQuitTip = 1,
+    Style = "Reward_RandomBox_Preview"
+  },
+  [100345] = {
+    Id = 100345,
+    NoButtonText = "UI_PATCH_CANCEL",
+    Style = "Chat_ChannelContent",
+    YesButtonForbiddenToast = "NoChannelSelected",
+    YesButtonText = "ConfirmSwitch"
+  },
+  [100346] = {
+    Id = 100346,
+    ShowQuitTip = 1,
+    Style = "Pet_Skill_Preview"
   }
 })

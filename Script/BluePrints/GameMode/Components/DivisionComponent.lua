@@ -50,7 +50,7 @@ end
 
 function DivisionComponent:GetAroundDivisionInfos(Loc)
   local Res = TMap(0, FMonsterSpawnPointParam)
-  local Index = 1
+  local Index = 0
   local AroundKeys = self:GetAroundKeys(self.MonsterSpawnDivSize, Loc)
   for i, Key in pairs(AroundKeys) do
     local Points = self.MonsterSpawnDivisions[Key] or {}

@@ -24,12 +24,6 @@ function M:ReceiveBeginPlay()
   self:SetCustomNpcFlexibShowOrHide()
   EventManager:AddEvent(EventID.CloseLoading, self, self.ResetLocation)
   self.IsDestroied = false
-  if self.LightBubbleTalkSetting then
-    local HeadUISubsystem = UNpcHeadUISubsystem.GetHeadUISubsystem(self)
-    if HeadUISubsystem and HeadUISubsystem.LightBubbleTalkMgr then
-      HeadUISubsystem.LightBubbleTalkMgr:RegisterTalkCharacter(self, self.LightBubbleTalkSetting)
-    end
-  end
   self.Overridden.ReceiveBeginPlay(self)
 end
 
@@ -71,12 +65,7 @@ function M:ReceiveEndPlay()
   EventManager:RemoveEvent(EventID.SetCustomNpcFlexibShowOrHideDynamic, self)
   EventManager:RemoveEvent(EventID.CloseLoading, self)
   self.IsDestroied = true
-  if self.LightBubbleTalkSetting and self.LightBubbleTalkSetting.EnableBubbleTalk then
-    local HeadUISubsystem = UNpcHeadUISubsystem.GetHeadUISubsystem(self)
-    if HeadUISubsystem and HeadUISubsystem.LightBubbleTalkMgr then
-      HeadUISubsystem.LightBubbleTalkMgr:UnregisterTalkCharacter(self)
-    end
-  end
+  self:DeInitLightBubbleTalk()
 end
 
 function M:SetCustomNpcFlexibShowOrHide()
@@ -230,6 +219,10 @@ end
 
 function M:EnableBubbleWidget(bEnable, Content)
   self:EnableHeadWidget("Long_Bubble", bEnable, Content)
+end
+
+function M:EnableNameWidget(bEnable, Name)
+  self:EnableHeadWidget("Name", bEnable, GText(Name))
 end
 
 return M

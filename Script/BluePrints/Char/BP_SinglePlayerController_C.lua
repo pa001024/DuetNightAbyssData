@@ -1,6 +1,7 @@
 require("UnLua")
 local EMCache = require("EMCache.EMCache")
 local msgpack = require("msgpack_core")
+local SettingUtils = require("Utils.SettingUtils")
 local BP_SinglePlayerController_C = Class()
 BP_SinglePlayerController_C._components = {
   "BluePrints.Char.CharacterComponent.DedicatedServerGMComponent"
@@ -507,7 +508,7 @@ end
 
 function BP_SinglePlayerController_C:OnRealDisconnect_Lua()
   local GameMode = GWorld.GameInstance:GetCurrentGameMode()
-  GameMode:TriggerPlayerFailed({
+  GameMode:ForceFinishPlayerByFailed({
     self.AvatarEidStr
   })
 end
@@ -519,14 +520,14 @@ function BP_SinglePlayerController_C:SetBornTrans()
   end
 end
 
-function BP_SinglePlayerController_C:NotifyClientGameEnd_Lua(IsWin, ScenePlayers)
+function BP_SinglePlayerController_C:NotifyClientGameEnd_Lua(IsWin, ScenePlayers, PlayerEndReason)
   local PlayerCharacter = self:GetMyPawn()
   PlayerCharacter:DisableInput(self)
   local MessageStr = ScenePlayers:GetBytes()
   GWorld.GameInstance.IsDSOnDungeonFinish = true
   
   local function RealNotifyClientGameEnd_Lua()
-    print(_G.LogTag, "DedicatedServer_OnDungeonFinish RealNotifyClientGameEnd_Lua  IsWin", IsWin, MessageStr)
+    print(_G.LogTag, "DedicatedServer_OnDungeonFinish RealNotifyClientGameEnd_Lua  IsWin", IsWin, MessageStr, PlayerEndReason)
     if self.ReconnectTag then
       EventManager:RemoveEvent(EventID.CloseLoading, self)
     end
@@ -545,6 +546,9 @@ function BP_SinglePlayerController_C:NotifyClientGameEnd_Lua(IsWin, ScenePlayers
     end
     local msgpack = require("msgpack_core")
     GWorld.GameInstance:OnPlayerControllerGameEnd(IsWin, BattleInfo, msgpack.unpack(MessageStr))
+    if "OnTimeoutInit" == PlayerEndReason then
+      GameState(self):ShowDungeonToast_Lua("UI_HardBossDg_LoadingTimeOut", 2, EToastType.Common)
+    end
   end
   
   if GWorld.GameInstance:GetLoadingUI() then
@@ -743,6 +747,16 @@ function BP_SinglePlayerController_C:SwitchForceFeedbackScale(Scale)
   if ForceEffectObject then
     self:K2_ClientPlayForceFeedback(ForceEffectObject, "SettingTest", false, true, false)
   end
+end
+
+function BP_SinglePlayerController_C:GetEmCache(OptionId)
+  local Res = SettingUtils.GetEMCacheForBL(OptionId)
+  if type(Res) == "number" then
+    return Res, false
+  elseif type(Res) == "boolean" then
+    return -1, Res
+  end
+  return -1, false
 end
 
 AssembleComponents(BP_SinglePlayerController_C)

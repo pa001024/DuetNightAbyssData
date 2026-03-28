@@ -24,7 +24,7 @@ function HasDetectiveAnswerNode:Execute(Callback)
       Callback()
     end
     
-    function HasDetectiveAnswerNodeCallback(AnswerId)
+    local function HasDetectiveAnswerNodeCallback(AnswerId)
       DebugPrint("HasDetectiveAnswerNode HasDetectiveAnswerNodeCallback AnswersId: " .. AnswerId)
       self.FinishAnswerTable[AnswerId] = true
       for _, IsFinish in pairs(self.FinishAnswerTable) do
@@ -52,10 +52,10 @@ function HasDetectiveAnswerNode:Execute(Callback)
       end
     end
     
-    local DetectiveGameUnlockedAnswers = ReasoningUtils:GetInferredAnswersAndDependencies()
+    local DetectiveGameUnlockedAnswersRecord = Avatar.DetectiveGameUnlockedAnswersRecord
     local AllAnswerUnlocked = true
     for _, Id in pairs(self.AnswerIds) do
-      local AnswerV = DetectiveGameUnlockedAnswers[Id]
+      local AnswerV = DetectiveGameUnlockedAnswersRecord[Id]
       if nil == AnswerV then
         DebugPrint("HasDetectiveAnswerNode: False AnswersId: " .. Id)
         self.FinishAnswerTable[Id] = false

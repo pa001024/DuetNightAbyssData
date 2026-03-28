@@ -106,7 +106,7 @@ function M:OnSinglePointerMove(MyGeometry, MouseEvent)
     end
     self.MovedWhileDragging = true
     if self.ActorController then
-      self.ActorController:OnDragging(CursorDelta)
+      self.ActorController:OnDragViewActor(CursorDelta)
     end
     if not self:HasMouseCapture() then
       return UWidgetBlueprintLibrary.CaptureMouse(UWidgetBlueprintLibrary.Handled(), self)

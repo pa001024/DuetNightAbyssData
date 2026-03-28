@@ -131,7 +131,7 @@ function M:AddComsumerItem(InModContent)
   self:_AddUuid2Count(ItemUI.Content)
   InModContent.IndexInEnhance = self.ComsumerCount
   if self.ComsumerCount >= self.MaxComsumerCount then
-    self:CallOnPreviewLevelChangedCallback(self.PreviewLevel + 1)
+    self:CallOnPreviewLevelChangedCallback(self.PreviewLevel)
   end
   return true
 end
@@ -172,11 +172,11 @@ function M:CallOnPreviewLevelChangedCallback(InPreviewLevel, bRemoveAll)
   if not self.OnPreviewLevelChangedCallback then
     return
   end
-  local Attrs, ComparedAttrs, Desc = self.OnPreviewLevelChangedCallback(self.Parent, InPreviewLevel)
+  local Attrs, ComparedAttrs, Desc = self.OnPreviewLevelChangedCallback(self.Parent, InPreviewLevel + 1)
   local bNotAnim = bRemoveAll and InPreviewLevel == self.PreviewLevel
   self:UpdateModEnhanceLevel(InPreviewLevel)
   if Attrs then
-    self:UpdataAttrListView(Attrs, ComparedAttrs, not bNotAnim)
+    self:UpdataAttrListView(Attrs, ComparedAttrs, false, true)
   end
   self:UpdateDesc(Desc)
 end
@@ -196,6 +196,7 @@ function M:OnItemMinusBtnClick(DelContent)
     return
   end
   local IndexInEnhance = DelContent.IndexInEnhance
+  local bDeleted = false
   for i = IndexInEnhance, self.MaxComsumerCount do
     local ItemUI = self["Item_" .. i]
     if i + 1 <= self.MaxComsumerCount then
@@ -209,11 +210,13 @@ function M:OnItemMinusBtnClick(DelContent)
         if self.OnModItemMoveCallback then
           self.OnModItemMoveCallback(self.Parent, ItemUI.Content)
         end
-      else
+      elseif not bDeleted then
         self:_ResetItemUI(ItemUI, i, DelContent)
+        bDeleted = true
       end
-    else
+    elseif not bDeleted then
       self:_ResetItemUI(ItemUI, i, DelContent)
+      bDeleted = true
     end
   end
   self:_SetComsumerCount(self.ComsumerCount - 1)
@@ -242,6 +245,11 @@ function M:_SetComsumerCount(InComsumerCount)
     self.OnComsumerCountChangeCb(self.Parent, self.ComsumerCount, InComsumerCount)
   end
   self.ComsumerCount = InComsumerCount
+  if self.ComsumerCount > 0 then
+    self.Text_NextLevel:SetText(GText("UI_Armory_ModAttrAfterEnchance"))
+  else
+    self.Text_NextLevel:SetText(GText("UI_Armory_ModNextLevelAttr"))
+  end
   self.Text_Num:SetText(self.ComsumerCount)
 end
 
@@ -329,7 +337,7 @@ function M:InitModStart()
     local StarContent = NewObject(UIUtils.GetCommonItemContentClass())
     StarContent.Idx = i
     StarContent.bActivate = i <= self.NowLevel
-    StarContent.bGolden = false
+    StarContent.bGolden = i == self.NowLevel + 1
     self.List_ModStar:AddItem(StarContent)
   end
 end
@@ -340,7 +348,7 @@ function M:UpdateModEnhanceLevel(InPreviewLevel)
       self:_SetGoldStar(i, true)
     end
   elseif InPreviewLevel < self.PreviewLevel then
-    for i = InPreviewLevel + 1, self.PreviewLevel do
+    for i = InPreviewLevel + 2, self.PreviewLevel do
       self:_SetActiveStar(i, false)
     end
   end
@@ -357,7 +365,7 @@ function M:_SetActiveStar(Index, bActivate)
 end
 
 function M:_SetGoldStar(Index, bGloden, bNoFlick)
-  local StarContent = self.List_ModStar:GetItemAt(Index - 1)
+  local StarContent = self.List_ModStar:GetItemAt(Index)
   StarContent.bGolden = bGloden
   if IsValid(StarContent.UI) then
     local StarUI = StarContent.UI
@@ -401,11 +409,11 @@ function M:OnLevelUpSuccess()
   end
   local Attr, Desc = self.OnLevelUpSuccessCallback(self.Parent)
   if Attr then
-    self:UpdataAttrListView(Attr, nil, true)
+    self:UpdataAttrListView(Attr, nil, true, true)
   end
   self:UpdateDesc(Desc)
   self:UpdateCostBar(self.NowLevel)
-  self.bFinal = self.PreviewLevel == self.MaxLevel
+  self.bFinal = self.PreviewLevel + 1 == self.MaxLevel
   if not self.bFinal then
     self.SuccessToast.Text_Success:SetText(GText("Mod_CardUp_Success"))
   else

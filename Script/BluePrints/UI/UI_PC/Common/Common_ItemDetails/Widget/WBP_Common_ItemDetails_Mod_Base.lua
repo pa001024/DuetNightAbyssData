@@ -53,6 +53,8 @@ function M:InitItemInfo(ItemType, ItemId, UnitId)
     ModCost = ModServerData.CostMod
     ModCardLvel = ModServerData.CurrentModCardLevel or 0
   else
+    self.ParentWidget.Line.Switch_Bg:SetActiveWidgetIndex(0)
+    self.ParentWidget.Line.Switch_Text:SetActiveWidgetIndex(0)
     self.ParentWidget:SetConflictLine(true, GText("UI_ModTips_MaxLvPreview"), 2)
     ModLevel = ModInfo.MaxLevel
     ModCost = ModInfo.Cost + ModInfo.MaxLevel * ModInfo.CostChange
@@ -75,6 +77,7 @@ function M:InitItemInfo(ItemType, ItemId, UnitId)
   end
   self.Text_Polarity02:SetText(ModCost)
   self:UpdataEffectDetails(ModInfo, ModLevel, ModServerData)
+  self.ParentWidget.Panel_Hold:SetVisibility(ESlateVisibility.Visible)
   self.ParentWidget.Text_Hold02:SetText(Count)
   if self.Text_Tag then
     self.Text_Tag:SetVisibility(UIConst.VisibilityOp.Visible)

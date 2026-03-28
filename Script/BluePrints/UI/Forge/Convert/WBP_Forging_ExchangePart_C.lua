@@ -46,6 +46,8 @@ function M:InitMaterialCost()
       Obj = self,
       Callback = self.OnItemTipsOpenChanged
     }
+    Content.LockType = Data.LockType
+    Content.IsLocked = Data.IsLocked
     self.List_Item_1:AddItem(Content)
   end
 end

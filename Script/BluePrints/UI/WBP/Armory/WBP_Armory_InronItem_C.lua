@@ -119,9 +119,27 @@ function M:SetReddotState(IsShow)
     self.HasReddot = true
     self.Reddot:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     self:SetActivatableState()
+    if self.New then
+      self.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
   else
     self.HasReddot = false
     self.Reddot:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+end
+
+function M:SetNewState(IsShow)
+  if not self.New then
+    return
+  end
+  if self.HasReddot then
+    self.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    return
+  end
+  if IsShow then
+    self.New:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  else
+    self.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
 end
 

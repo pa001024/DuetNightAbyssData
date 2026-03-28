@@ -23,7 +23,7 @@ function M:SphereOverlap(OverlappedComponent, OtherActor, OtherComp, OtherBodyIn
   if self.IsActive then
     self:OnCrash()
     if self.SpecialEffect and self.SpecialEffect > 0 then
-      Battle(self):ExecuteSkillEffect(self, self.SpecialEffect, nil, nil, self)
+      Battle(self):ExecuteSkillEffectWithType(self, self.SpecialEffect, nil, nil, self)
     end
   end
 end
@@ -56,10 +56,10 @@ end
 
 function M:CrashEffect()
   if self.PlayerEffect and self.PlayerEffect > 0 then
-    Battle(self):ExecuteSkillEffect(self, self.PlayerEffect, nil, nil, self)
+    Battle(self):ExecuteSkillEffectWithType(self, self.PlayerEffect, nil, nil, self)
   end
   if self.MonEffect and self.MonEffect > 0 then
-    Battle(self):ExecuteSkillEffect(self, self.MonEffect, nil, nil, self)
+    Battle(self):ExecuteSkillEffectWithType(self, self.MonEffect, nil, nil, self)
   end
 end
 
@@ -80,7 +80,7 @@ function M:ActiveCombat()
   if Actors:Length() > 0 then
     self:OnCrash()
     if self.SpecialEffect and self.SpecialEffect > 0 then
-      Battle(self):ExecuteSkillEffect(self, self.SpecialEffect, nil, nil, self)
+      Battle(self):ExecuteSkillEffectWithType(self, self.SpecialEffect, nil, nil, self)
     end
   end
 end
@@ -94,7 +94,7 @@ function M:Lanuch(DeltaSeconds)
       DebugPrint("zwk 撞到物体停下来", HitResult.Actor:GetName())
       self:OnCrash()
       if HitResult.Actor and HitResult.Actor.IsPureMonster and HitResult.Actor:IsPureMonster() and self.SpecialEffect and self.SpecialEffect > 0 then
-        Battle(self):ExecuteSkillEffect(self, self.SpecialEffect, nil, nil, self)
+        Battle(self):ExecuteSkillEffectWithType(self, self.SpecialEffect, nil, nil, self)
       end
     end
   end

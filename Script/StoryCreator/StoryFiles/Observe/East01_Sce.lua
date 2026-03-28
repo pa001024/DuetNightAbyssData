@@ -3,22 +3,22 @@ return {
   storyDescription = "",
   lineData = {
     {
-      startStory = "17621594112288576",
+      startStory = "1773662292085678833",
       startPort = "StoryStart",
-      endStory = "17621594165108737",
+      endStory = "1773662292085678835",
       endPort = "In"
     },
     {
-      startStory = "17621594165108737",
+      startStory = "1773662292085678835",
       startPort = "Success",
-      endStory = "17621594112288579",
+      endStory = "1773662292085678834",
       endPort = "StoryEnd"
     }
   },
   storyNodeData = {
-    ["17621594112288576"] = {
+    ["1773662292085678833"] = {
       isStoryNode = true,
-      key = "17621594112288576",
+      key = "1773662292085678833",
       type = "StoryStartNode",
       name = "StoryStart",
       pos = {x = 800, y = 300},
@@ -29,9 +29,9 @@ return {
         commentData = {}
       }
     },
-    ["17621594112288579"] = {
+    ["1773662292085678834"] = {
       isStoryNode = true,
-      key = "17621594112288579",
+      key = "1773662292085678834",
       type = "StoryEndNode",
       name = "StoryEnd",
       pos = {x = 1789.375, y = 337.5},
@@ -42,9 +42,9 @@ return {
         commentData = {}
       }
     },
-    ["17621594165108737"] = {
+    ["1773662292085678835"] = {
       isStoryNode = true,
-      key = "17621594165108737",
+      key = "1773662292085678835",
       type = "StoryNode",
       name = "任务节点",
       pos = {x = 1288, y = 302},
@@ -61,7 +61,6 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
@@ -69,6 +68,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -78,7 +78,7 @@ return {
       questNodeData = {
         lineData = {
           {
-            startQuest = "17621594165108738",
+            startQuest = "1773662292085678836",
             startPort = "QuestStart",
             endQuest = "17621594429279789",
             endPort = "In"
@@ -86,13 +86,13 @@ return {
           {
             startQuest = "17621594429279789",
             startPort = "Branch_1",
-            endQuest = "176215948245810500",
+            endQuest = "1773662292085678839",
             endPort = "In"
           },
           {
-            startQuest = "176215948245810500",
+            startQuest = "1773662292085678839",
             startPort = "Out",
-            endQuest = "17621594165108741",
+            endQuest = "1773662292085678837",
             endPort = "Success"
           },
           {
@@ -104,32 +104,11 @@ return {
           {
             startQuest = "1762160259399694925",
             startPort = "Out",
-            endQuest = "17621594165108741",
+            endQuest = "1773662292085678837",
             endPort = "Success"
           }
         },
         nodeData = {
-          ["17621594165108738"] = {
-            key = "17621594165108738",
-            type = "QuestStartNode",
-            name = "QuestStart",
-            pos = {x = 800, y = 300},
-            propsData = {ModeType = 0}
-          },
-          ["17621594165108741"] = {
-            key = "17621594165108741",
-            type = "QuestSuccessNode",
-            name = "QuestSuccess",
-            pos = {x = 2098.75, y = 306.75},
-            propsData = {ModeType = 0}
-          },
-          ["17621594165108744"] = {
-            key = "17621594165108744",
-            type = "QuestFailNode",
-            name = "QuestFail",
-            pos = {x = 2800, y = 700},
-            propsData = {}
-          },
           ["17621594429279789"] = {
             key = "17621594429279789",
             type = "BranchTriggerNode",
@@ -139,16 +118,16 @@ return {
               Branches = {700184, 700185}
             }
           },
-          ["176215948245810500"] = {
-            key = "176215948245810500",
+          ["1762160259399694925"] = {
+            key = "1762160259399694925",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1592, y = 286},
+            pos = {x = 1622.1480908152737, y = 478.919246646027},
             propsData = {
               IsNpcNode = false,
               IsPlayerTurnToNPC = true,
               IsNPCTurnToPlayer = true,
-              FirstDialogueId = 51128301,
+              FirstDialogueId = 51128401,
               FlowAssetPath = "",
               TalkType = "FreeSimple",
               BlendInTime = 1,
@@ -185,16 +164,37 @@ return {
               OverrideFailBlend = false
             }
           },
-          ["1762160259399694925"] = {
-            key = "1762160259399694925",
+          ["1773662292085678836"] = {
+            key = "1773662292085678836",
+            type = "QuestStartNode",
+            name = "QuestStart",
+            pos = {x = 800, y = 300},
+            propsData = {ModeType = 0}
+          },
+          ["1773662292085678837"] = {
+            key = "1773662292085678837",
+            type = "QuestSuccessNode",
+            name = "QuestSuccess",
+            pos = {x = 2098.75, y = 306.75},
+            propsData = {ModeType = 0}
+          },
+          ["1773662292085678838"] = {
+            key = "1773662292085678838",
+            type = "QuestFailNode",
+            name = "QuestFail",
+            pos = {x = 2800, y = 700},
+            propsData = {}
+          },
+          ["1773662292085678839"] = {
+            key = "1773662292085678839",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1622.1480908152737, y = 478.919246646027},
+            pos = {x = 1592, y = 286},
             propsData = {
               IsNpcNode = false,
               IsPlayerTurnToNPC = true,
               IsNPCTurnToPlayer = true,
-              FirstDialogueId = 51128401,
+              FirstDialogueId = 51128301,
               FlowAssetPath = "",
               TalkType = "FreeSimple",
               BlendInTime = 1,

@@ -36,6 +36,10 @@ function WBP_DungeonDefenseFloat_C:UIStateChange_OnTarget()
   if self.TempleMode then
     return
   end
+  if self.IsSynthesisIIMode then
+    self.CurTargetActor = nil
+    self.IsActive = false
+  end
   local GameState = UE4.UGameplayStatics.GetGameState(self)
   if not GameState then
     return
@@ -57,8 +61,21 @@ function WBP_DungeonDefenseFloat_C:UIStateChange_OnTarget()
   end
   if self.IsSynthesisMode then
     self:HideUselessWidget()
+  elseif self.IsSynthesisIIMode then
+    self:HideSynthesisIIUselessWidget()
+    self.DefenseCoreName:SetText(GText("DUNGEON_SYNTHESIS2_112"))
   end
   self.BattlePanel:SetVisibility(UE4.ESlateVisibility.Visible)
+end
+
+function WBP_DungeonDefenseFloat_C:UIStateChange_None()
+  if self.IsSynthesisIIMode then
+    self:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    local LowHealthUI = UIManager(self):GetUIObj("DefenseLowHealth")
+    if LowHealthUI then
+      UIManager(self):UnLoadUINew("DefenseLowHealth")
+    end
+  end
 end
 
 function WBP_DungeonDefenseFloat_C:CloseDungeonUI()
@@ -341,6 +358,9 @@ function WBP_DungeonDefenseFloat_C:LoadLowHealthUI(CurrentPercent)
   if not CurrentPercent then
     return
   end
+  if self.IsSynthesisIIMode and self:GetVisibility() == UE4.ESlateVisibility.Collapsed then
+    return
+  end
   local UIManager = GWorld.GameInstance:GetGameUIManager()
   if CurrentPercent <= 0.3 then
     if self.LastHpPercent > 0.3 then
@@ -405,6 +425,20 @@ function WBP_DungeonDefenseFloat_C:HideUselessWidget()
     SafeHide(self.Defensivewave, UE4.ESlateVisibility.Collapsed)
     SafeHide(self.LeftWave, UE4.ESlateVisibility.Collapsed)
   end
+end
+
+function WBP_DungeonDefenseFloat_C:HideSynthesisIIUselessWidget()
+  local function SafeHide(Target, Level)
+    if Target and Level then
+      Target:SetVisibility(Level)
+    end
+  end
+  
+  SafeHide(self.Panel_Wave, UE4.ESlateVisibility.Collapsed)
+  SafeHide(self.Deduct_Blood, UE4.ESlateVisibility.Collapsed)
+  SafeHide(self.Panel_Wave_Now, UE4.ESlateVisibility.Collapsed)
+  SafeHide(self.Defensivewave, UE4.ESlateVisibility.Collapsed)
+  SafeHide(self.LeftWave, UE4.ESlateVisibility.Collapsed)
 end
 
 function WBP_DungeonDefenseFloat_C:GetTargetActor()
@@ -480,6 +514,9 @@ function WBP_DungeonDefenseFloat_C:CheckDungeonMode()
   end
   if self.DungeonInfo.DungeonType == "Synthesis" then
     self.IsSynthesisMode = true
+  end
+  if self.DungeonInfo.DungeonType == "SynthesisII" then
+    self.IsSynthesisIIMode = true
   end
 end
 

@@ -93,7 +93,7 @@ function M:UpdateCountdown()
   end
   local RegionId = Avatar.CurrentRegionId
   local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
-  if not GameState:IsInRegion() or 101901 ~= RegionId then
+  if not GameState:IsInRegion() or 101901 ~= RegionId or Avatar:IsInHardBoss() then
     self:Close()
   elseif Avatar:IsInHardBoss() then
     self:SetVisibility(UE4.ESlateVisibility.Collapsed)
@@ -112,6 +112,7 @@ function M:Close()
     self:RemoveTimer(self.CountdownTimer)
     self.CountdownTimer = nil
   end
+  self.IsInit = true
   self.Super.Close(self)
 end
 

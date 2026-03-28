@@ -59,6 +59,19 @@ function TaskUtils:CreateRewardContent(Content)
   return Object
 end
 
+function TaskUtils:TaskDetailInfo2STLTaskInfo(TaskDetailInfo)
+  local ChainInfo = DataMgr.QuestChain[TaskDetailInfo.QuestChainId]
+  local STLTaskInfo = {
+    TaskChainId = TaskDetailInfo.QuestChainId,
+    TaskId = TaskDetailInfo.QuestId,
+    TaskName = GText(ChainInfo and ChainInfo.QuestChainName),
+    TaskDescription = GText(TaskDetailInfo.QuestDescription),
+    IsChainFirstTask = TaskDetailInfo.bIsStartQuest,
+    IsChapterStart = TaskDetailInfo.bIsStartChapter
+  }
+  return STLTaskInfo
+end
+
 function TaskUtils:GetQuestDetail(QuestChainId, QuestId)
   QuestDataInStoryLine[QuestChainId] = QuestDataInStoryLine[QuestChainId] or {}
   if QuestDataInStoryLine[QuestChainId] and QuestDataInStoryLine[QuestChainId][QuestId] then
@@ -225,6 +238,13 @@ function TaskUtils:SetQuestExtraInfo(QuestChainId, QuestId, Data)
   QuestExtraInfo[ChainId] = QuestExtraInfo[ChainId] or {}
   QuestExtraInfo[ChainId][DoingQuestId] = QuestExtraInfo[ChainId][DoingQuestId] or {}
   if Data.NodeKey then
+    if Data.Node.Type == "UpdateTaskBarAndTaskMainNode" and QuestExtraInfo[ChainId][DoingQuestId] then
+      for _, NodeData in pairs(QuestExtraInfo[ChainId][DoingQuestId]) do
+        if NodeData and NodeData.Node.Type == "UpdateTaskBarAndTaskMainNode" then
+          NodeData.CurNode = NodeData.CurNode + 1
+        end
+      end
+    end
     QuestExtraInfo[ChainId][DoingQuestId][Data.NodeKey] = Data
   end
 end
@@ -569,6 +589,10 @@ function TaskUtils:QuestOpenMainMapByQuestTrack()
       MainMap.RealWildMap:ChangeRegionForSmartIndicator(TargetSubRegionId, Avatar.TrackingQuestChainId)
     end
   elseif CurrentRegionId ~= TaskRegionId or true == IsFairyLand then
+    if DataMgr.SubRegion[Avatar.CurrentRegionId] == DataMgr.SubRegion[TargetSubRegionId] and true == IsFairyLand then
+      return
+    end
+    
     local function CancelDeliverTo()
     end
     

@@ -448,6 +448,7 @@ function M:RefreshEntryList(bNotEnhanced)
   local SkillLevel = Target:GetSkillLevel()
   self.List_Item:ClearListItems()
   local Content = NewObject(UIUtils.GetCommonItemContentClass())
+  local ExtraLevel = Target:GetSkillLevelUp()
   Content.bEnhanced = not bNotEnhanced
   Content.Name = GText("Attr_LevelLimit_Name")
   Content.Value = BreakData[Target.BreakNum].PetBreakLevel
@@ -462,7 +463,7 @@ function M:RefreshEntryList(bNotEnhanced)
   Content.Value = BreakData[Target.BreakNum].EntryNum
   Content.CmpValue = BreakData[bNotEnhanced and Target.BreakNum + 1 or Target.BreakNum].EntryNum
   self.List_Item:AddItem(Content)
-  local PassiveDesc = ArmoryUtils:GenPetPassiveEffectDesc(BattleData, SkillLevel, bNotEnhanced and SkillLevel + 1 or nil)
+  local PassiveDesc = ArmoryUtils:GenPetPassiveEffectDesc(BattleData, SkillLevel + ExtraLevel, bNotEnhanced and SkillLevel + ExtraLevel + 1 or nil)
   if "" ~= PassiveDesc then
     local Content = NewObject(UIUtils.GetCommonItemContentClass())
     Content.bEnhanced = not bNotEnhanced
@@ -470,9 +471,10 @@ function M:RefreshEntryList(bNotEnhanced)
     Content.Name = GText("UI_Armory_Pet_Passive")
     Content.Value = "Lv." .. SkillLevel
     Content.CmpValue = "Lv." .. (bNotEnhanced and SkillLevel + 1 or SkillLevel)
+    Content.ExtraLevel = ExtraLevel
     self.List_Item:AddItem(Content)
   end
-  local SkillDesc = SkillUtils.GetSkillDesc(BattleData.SupportSkillId, SkillLevel, bNotEnhanced and SkillLevel + 1 or nil)
+  local SkillDesc = SkillUtils.GetSkillDesc(BattleData.SupportSkillId, SkillLevel + ExtraLevel, bNotEnhanced and SkillLevel + ExtraLevel + 1 or nil)
   if "" ~= SkillDesc then
     local Content = NewObject(UIUtils.GetCommonItemContentClass())
     Content.bEnhanced = not bNotEnhanced
@@ -480,6 +482,7 @@ function M:RefreshEntryList(bNotEnhanced)
     Content.Name = GText("UI_Armory_Pet_Positive")
     Content.Value = "Lv." .. SkillLevel
     Content.CmpValue = "Lv." .. (bNotEnhanced and SkillLevel + 1 or SkillLevel)
+    Content.ExtraLevel = ExtraLevel
     self.List_Item:AddItem(Content)
   end
   local SupportSkillId = BattleData.SupportSkillId

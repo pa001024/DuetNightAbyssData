@@ -30,12 +30,9 @@ function M:UpdateIndex()
 end
 
 function M:SetPosText(NewIndex)
-  if NewIndex == self.PosIdx then
-    DebugPrint(LXYTag, "WBP_Team_Tag_C 队伍成员索引没有变化，不更新索引", NewIndex, self.PosIdx)
-    return
-  end
   self.PosIdx = NewIndex
-  self.Num_Player:SetText(string.format("%sP", self.PosIdx))
+  local PosText = GText(string.format("UI_STAT_Online_P%s", self.PosIdx))
+  self.Num_Player:SetText(PosText)
 end
 
 function M:Init(bCaption, Pos, TeamMemberUid)

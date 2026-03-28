@@ -6,7 +6,7 @@ function ActivityReddotHelper.RefreshReddotNode(ActivityId)
     return
   end
   local Node = ReddotManager.GetTreeNode(NodeName)
-  if Node then
+  if Node and Node.OnRefreshNodeData then
     Node:OnRefreshNodeData(ActivityId)
   end
 end

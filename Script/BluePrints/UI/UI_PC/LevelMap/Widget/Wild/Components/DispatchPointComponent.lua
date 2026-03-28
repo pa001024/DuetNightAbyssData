@@ -160,6 +160,9 @@ function Component:InitDispatchPoint(CoroutineIndex)
 end
 
 function Component:OnScaleChange_Component(Percent)
+  if not self.DispatchPoint or not self.DispatchSelect then
+    return
+  end
   for Id, Point in pairs(self.DispatchPoint) do
     local UIPos = DataMgr.DispatchUI[Id].UIPos
     local Pos = self:TransformWorldLocToUILoc(UIPos[1], UIPos[2])

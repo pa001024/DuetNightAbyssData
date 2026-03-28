@@ -179,19 +179,21 @@ function M:UpdateShopDetail(SubTabData)
   local ShopDataList = {}
   for ShopItemId, ShopData in pairs(DataMgr.ShopItem) do
     if ShopData.SubTabId == SubTabData.SubTabId and ShopUtils:GetShopItemCanShow(ShopItemId) then
-      if not self.bFilterOwned then
-        table.insert(ShopDataList, ShopData)
-      elseif ShopData.ItemType == "Reward" then
-        table.insert(ShopDataList, ShopData)
-      else
+      local bNotCheckWalnut = false
+      local bNotCheckOwn = false
+      if self.bFilterWalnutOwned and ShopData.ItemType == "Walnut" and ShopUtils:GetCharWeaponHasLevelMax(ShopItemId) then
+        bNotCheckWalnut = true
+      end
+      if self.bFilterOwned and ShopData.ItemType ~= "Reward" then
         local CheckFuncName = "Check" .. ShopData.ItemType .. "Enough"
         local CheckMethod = Avatar[CheckFuncName]
         local bOwn = CheckMethod(Avatar, {
           [ShopData.TypeId] = 1
         })
-        if not bOwn then
-          table.insert(ShopDataList, ShopData)
-        end
+        bNotCheckOwn = bOwn
+      end
+      if not bNotCheckWalnut and not bNotCheckOwn then
+        table.insert(ShopDataList, ShopData)
       end
     end
   end
@@ -406,7 +408,7 @@ function M:UpdateShopDetail(SubTabData)
       self.ItemIndex = nil
     end)
   else
-    if self.bFilterOwned then
+    if self.bFilterOwned or self.bFilterWalnutOwned then
       self.Text_ShopItemEmpty:SetText(GText("UI_SHOP_NOITEM"))
     else
       self.Text_ShopItemEmpty:SetText(GText("UI_SHOP_SOLDOUT"))
@@ -415,7 +417,7 @@ function M:UpdateShopDetail(SubTabData)
     self.VB_ItemList:SetVisibility(ESlateVisibility.Collapsed)
     self.Group_Empty:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.Common_SortList_PC:SetVisibility(ESlateVisibility.Collapsed)
-    if self.bFilterOwned then
+    if self.bFilterOwned or self.bFilterWalnutOwned then
       self.Group_Bottom:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     else
       self.Group_Bottom:SetVisibility(ESlateVisibility.Collapsed)
@@ -434,6 +436,20 @@ function M:OnClickFilterOwned()
   end
   AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", nil, nil)
   self.bFilterOwned = not self.bFilterOwned
+  self:UpdateShopDetail(self.CurSubTabMap, true)
+end
+
+function M:OnClickFilterWalnutOwned()
+  if self:IsAnimationPlaying(self.Filtrate) then
+    return
+  end
+  if self.bFilterWalnutOwned then
+    self:PlayAnimationReverse(self.Filtrate)
+  else
+    self:PlayAnimation(self.Filtrate)
+  end
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", nil, nil)
+  self.bFilterWalnutOwned = not self.bFilterWalnutOwned
   self:UpdateShopDetail(self.CurSubTabMap, true)
 end
 

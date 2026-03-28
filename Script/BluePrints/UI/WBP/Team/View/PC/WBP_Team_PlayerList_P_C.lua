@@ -9,21 +9,17 @@ function M:InitUIInfo(Name, bInUIMode, EventList, ...)
   M.Super.InitUIInfo(self, Name, bInUIMode, EventList, ...)
   local PlayerChar = GWorld:GetMainPlayer()
   PlayerChar:FlushInputKeyExceptMove()
-  if GWorld:IsStandAlone() then
-    if not PlayerChar:CheckForbidTags("BattleWheelForbid") then
-      PlayerChar:AddForbidTag("BattleWheelForbid")
-    end
-    PlayerChar.Controller:AddDisableRotationInputTag("OpenTeamInfoUI")
-    local GameInputSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(self)
-    if IsValid(GameInputSubsystem) then
-      local Params = FGameInputModeParams()
-      Params.WidgetToFocus = self
-      Params.bShowMouseCursor = true
-      Params.MouseLockMode = EMouseLockMode.DoNotLock
-      GameInputSubsystem:EnableInputMode(self.WidgetName or self.ConfigName, EGameInputMode.GameAndUI, Params)
-    end
-  else
-    self:SetFocus()
+  if not PlayerChar:CheckForbidTags("BattleWheelForbid") then
+    PlayerChar:AddForbidTag("BattleWheelForbid")
+  end
+  PlayerChar.Controller:AddDisableRotationInputTag("OpenTeamInfoUI")
+  local GameInputSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(self)
+  if IsValid(GameInputSubsystem) then
+    local Params = FGameInputModeParams()
+    Params.WidgetToFocus = self
+    Params.bShowMouseCursor = true
+    Params.MouseLockMode = EMouseLockMode.DoNotLock
+    GameInputSubsystem:EnableInputMode(self.WidgetName or self.ConfigName, EGameInputMode.GameAndUI, Params)
   end
   self:OnMenuOpenChanged(false)
   self.Key_Select:CreateSubKeyDesc({
@@ -138,11 +134,9 @@ function M:Close()
   local BattleMain = UIManager(self):GetUIObj("BattleMain")
   BattleMain:PlayAnimation(BattleMain.Team_In)
   local PlayerChar = GWorld:GetMainPlayer()
-  if GWorld:IsStandAlone() then
-    PlayerChar:MinusForbidTag("BattleWheelForbid")
-    PlayerChar.Controller:RemoveDisableRotationInputTag("OpenTeamInfoUI")
-    self:SetInputUIOnly(false)
-  end
+  PlayerChar:MinusForbidTag("BattleWheelForbid")
+  PlayerChar.Controller:RemoveDisableRotationInputTag("OpenTeamInfoUI")
+  self:SetInputUIOnly(false)
   UIManager(self):GetGameInputModeSubsystem().OnInputMethodChanged:Remove(self, self.OnInputDeviceChange)
   UIManager(self):SetDisableAnalongNavigation(false)
   self.IsInit = true
@@ -177,6 +171,7 @@ function M:OnPreviewKeyDown(MyGeo, InKeyEvent)
   if InKeyName == "Gamepad_" .. InputAction.GamepadKey[1] then
     DebugPrint(DebugTag, LXYTag, "关闭TeamInfoUI")
     self:StopAnimation(self.Auto_In)
+    self.GameInputModeSubsystem:SetNavigateWidgetVisibility(false)
     self:Close()
   end
   return UIUtils.Unhandled

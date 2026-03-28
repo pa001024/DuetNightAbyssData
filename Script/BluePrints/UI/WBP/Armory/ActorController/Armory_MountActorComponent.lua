@@ -33,6 +33,9 @@ function M:CreateMount(MountId)
   Player:EnableBattleMountOnDisplay(MountConfig.BattleMountId)
   self:PlayMountMontageOnDisplay()
   self.CurRiddingMount = MountId
+  self:HidePlayerActorInternal(self:GetReflectionActor(Player), "ReflectionHideByMount", true)
+  self.bEnableReflectionBeforeMount = self.bEnableReflection
+  self.bEnableReflection = false
 end
 
 function M:RefreshMount()
@@ -137,11 +140,17 @@ end
 
 function M:DestroyMount()
   local Player = self:GetPlayerActor()
-  if not Player then
+  if not Player or not self.CurRiddingMount then
     return
   end
   Player:DisableBattleMount(true)
+  if Player.OriginalLocation then
+    Player:K2_SetActorLocation(Player.OriginalLocation, false, nil, false)
+    Player.OriginalLocation = nil
+  end
   self.CurRiddingMount = nil
+  self.bEnableReflection = self.bEnableReflectionBeforeMount
+  self:HidePlayerActorInternal(self:GetReflectionActor(Player), "ReflectionHideByMount", false)
 end
 
 function M:GetMountActor()
@@ -210,7 +219,7 @@ function M:StartMountPartHighLight(LastColor, PartIdx, HighLightColor, Curve)
   local _, MaxTime = Curve:GetTimeRange()
   local PassedTime = 0
   local Alpha
-  self.ViewUI:AddTimer(_TickFrequency, function()
+  self.ArmoryHelper:AddTimer(_TickFrequency, function()
     PassedTime = PassedTime + _TickFrequency
     if PassedTime >= MaxTime then
       self:StopMountPartHighLight(PartIdx)
@@ -225,7 +234,7 @@ end
 
 function M:StopMountPartHighLight(PartIdx)
   local FunctionName = "SetMountTintColor" .. PartIdx
-  self.ViewUI:RemoveTimer(FunctionName)
+  self.ArmoryHelper:RemoveTimer(FunctionName)
 end
 
 function M:Component_DestroyActors()

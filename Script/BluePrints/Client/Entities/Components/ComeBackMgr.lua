@@ -36,7 +36,7 @@ function Component:ComeBackGetLoginReward(InCallBack, TargetWidget, AllValidInde
     DebugPrint("ComeBackGetLoginReward", ErrorCode:Name(ErrCode))
     if ErrCode == ErrorCode.RET_SUCCESS then
       TargetWidget:RefreshRewardByState()
-      ReturnUtils.ShowReturnActiGetItemPage(AllValidIndex)
+      ReturnUtils.ShowReturnActiGetItemPage(AllValidIndex, TargetWidget)
       local SignNode = ReddotManager.GetTreeNode("ComeBackSignIn")
       if SignNode then
         local CurCount = SignNode and SignNode.Count or 0

@@ -26,6 +26,15 @@ function M:Init(Content)
   IconContent.Icon = ResourceInfo.Icon
   self.Icon:Init(IconContent)
   self.Text_Num:SetText(self.Expend)
+  local Avatar = GWorld:GetAvatar()
+  if Avatar and ResourceInfo then
+    local Item = Avatar.Resources[self.Id] or {Count = 0}
+    if Item.Count >= self.Expend then
+      self.Text_Num:SetColorAndOpacity(UE4.UUIFunctionLibrary.StringToSlateColor("FFFFFFFF"))
+    else
+      self.Text_Num:SetColorAndOpacity(UE4.UUIFunctionLibrary.StringToSlateColor("D82E30FF"))
+    end
+  end
   self.Text_Re:SetText(GText("RegionReputation_Refresh"))
   local RemainCount = math.max(0, self.MaxRefreshCount - self.AlreadyRefreshCount)
   self.Text_Number:SetText(string.format("%d/%d", RemainCount, self.MaxRefreshCount))

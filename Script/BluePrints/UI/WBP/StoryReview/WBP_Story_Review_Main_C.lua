@@ -153,7 +153,7 @@ function M:CreateImpressionValueOption(TalkData)
   local WidgetSizeX = WidgetSize.X
   local DialogueConfig = DataMgr.Dialogue[HighLightDialogueId]
   local ImpressionPlusConfig = DataMgr.ImpressionPlus[DialogueConfig.ImprPlusId]
-  local RegionConfig = DataMgr.Region[ImpressionPlusConfig.RegionId]
+  local RegionConfig = DataMgr.ImpressionRegion[ImpressionPlusConfig.RegionId]
   TalkWidget.Panel.Slot:SetSize(FVector2D(WidgetSizeX, TalkWidget.ImpressionPanelSizeY))
   TalkWidget.Text_Name:SetText(GText(RegionConfig.RegionName))
   local ImpressionConfig = DataMgr.ImpressionConfig[TalkData.ImpressionConfigId]

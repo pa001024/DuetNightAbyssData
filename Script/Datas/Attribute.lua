@@ -30,6 +30,7 @@ return ReadOnly("Attribute", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_Light.T_Armory_Light",
     Textmap = "UI_Attr_Light_Name"
   },
+  Psionic = {DamageType = "Psionic", ID = "Psionic"},
   Slash = {DamageType = "Slash", ID = "Slash"},
   Smash = {DamageType = "Smash", ID = "Smash"},
   Spike = {DamageType = "Spike", ID = "Spike"},

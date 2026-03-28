@@ -1,7 +1,6 @@
 local Component = {}
 local HeroUSDKUtils = require("Utils.HeroUSDKUtils")
 local MiscUtils = require("Utils.MiscUtils")
-local AnnouncementUtils = require("BluePrints.UI.WBP.Announcement.AnnounceUtils")
 local Decorator = require("BluePrints.Client.Wrapper.Decorator")
 Decorator:ApplyDecorator(Component)
 
@@ -30,7 +29,7 @@ function Component:InitPortraitReddotNode()
     for UniqueId, CacheData in pairs(CacheDetail) do
       local Find = false
       for index, value in ipairs(Avatar.HeadIconList) do
-        if tostring(value) == UniqueId then
+        if value == UniqueId then
           Find = true
         end
       end
@@ -40,8 +39,10 @@ function Component:InitPortraitReddotNode()
     end
     for _, Value in pairs(Avatar.HeadIconList or {}) do
       local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("Portrait")
-      if CacheDetail[tostring(Value)] then
+      if CacheDetail[Value] then
         ReddotManager.IncreaseLeafNodeCount("Portrait")
+      elseif nil == CacheDetail[Value] then
+        CacheDetail[Value] = false
       end
     end
   end
@@ -62,7 +63,7 @@ function Component:InitPortraitFrameReddotNode()
     for UniqueId, CacheData in pairs(CacheDetail) do
       local Find = false
       for index, value in ipairs(Avatar.HeadFrameList) do
-        if tostring(value) == UniqueId then
+        if value == UniqueId then
           Find = true
         end
       end
@@ -72,8 +73,10 @@ function Component:InitPortraitFrameReddotNode()
     end
     for _, Value in pairs(Avatar.HeadFrameList or {}) do
       local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("PortraitFrame")
-      if CacheDetail[tostring(Value)] then
+      if CacheDetail[Value] then
         ReddotManager.IncreaseLeafNodeCount("PortraitFrame")
+      elseif nil == CacheDetail[Value] then
+        CacheDetail[Value] = false
       end
     end
   end
@@ -97,11 +100,7 @@ end
 
 function Component:NotifyDiscoverNewNotice()
   self.logger.info("NotifyDiscoverNewNotice")
-  local AnnouncementUtils = require("BluePrints.UI.WBP.Announcement.AnnounceUtils")
-  if not AnnouncementUtils then
-    return
-  end
-  AnnouncementUtils:MarkDirty(true)
+  AnnounceController:GetModel():MarkDirty(true)
 end
 
 function Component:NotifyDiscoverNewGameUICtrl()
@@ -147,10 +146,10 @@ end
 
 function Component:_OnPropChangeHeadIconList()
   for _, Value in ipairs(self.HeadIconList) do
-    local CacheKey = tostring(Value)
+    local CacheKey = Value
     local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("Portrait")
-    if nil == CacheDetail[CacheKey] and "10001" ~= CacheKey then
-      UIUtils.TryAddReddotCacheDetail(CacheKey, "Portrait")
+    if nil == CacheDetail[CacheKey] and 10001 ~= CacheKey then
+      UIUtils.TryAddReddotCacheDetailNumber(CacheKey, "Portrait")
     end
   end
 end
@@ -162,10 +161,10 @@ end
 
 function Component:_OnPropChangeHeadFrameList()
   for _, Value in ipairs(self.HeadFrameList) do
-    local CacheKey = tostring(Value)
+    local CacheKey = Value
     local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("PortraitFrame")
-    if nil == CacheDetail[CacheKey] and "-1" ~= CacheKey then
-      UIUtils.TryAddReddotCacheDetail(CacheKey, "PortraitFrame")
+    if nil == CacheDetail[CacheKey] and -1 ~= CacheKey then
+      UIUtils.TryAddReddotCacheDetailNumber(CacheKey, "PortraitFrame")
     end
   end
 end

@@ -14,6 +14,7 @@ local BP_EMGameMode_C = Class({
   "BluePrints.GameMode.Components.GameModeLogin",
   "BluePrints.GameMode.Components.RewardComponent",
   "BluePrints.GameMode.Components.GameModeEventComponent",
+  "BluePrints.GameMode.Components.DungeonObjectComponent",
   "BluePrints.GameMode.Components.RougeLikeComponent",
   "BluePrints.GameMode.Components.GameModeRegionMgr",
   "BluePrints.GameMode.Components.GameModeQuestMgr",
@@ -58,6 +59,7 @@ function BP_EMGameMode_C:SetGameModeBaseInfo(DungeonId)
     self:UpdateQuestArtLevel()
     self.EMGameState.CurDungeonUIParamID = 0
     self:SetGameStatePetRandomDailyCount()
+    self:InitSTLMonsterEvent()
   elseif self:IsInDungeon() then
     print(_G.LogTag, "Init Dungeon")
     local DungeonInfo = DataMgr.Dungeon[DungeonId]
@@ -66,12 +68,17 @@ function BP_EMGameMode_C:SetGameModeBaseInfo(DungeonId)
     end
     self.DungeonId = DungeonId
     local Level = DungeonInfo.DungeonLevel or 1
+    local PreInitGameLevel = self.PreInitInfo and self.PreInitInfo.GameLevel
+    if PreInitGameLevel then
+      Level = PreInitGameLevel
+    end
     self.BattleProgressLevel = DungeonInfo.DungeonFixLevel or 0
     self:SetGameModeLevel(Level)
     self.CommonAlertDisable = DungeonInfo.AlertDisable or self.CommonAlertDisable
     self.EMGameState:SetGameModeType("Blank")
     if DungeonInfo.DungeonType and DungeonInfo.DungeonType ~= "" then
       self.EMGameState:SetGameModeType(DungeonInfo.DungeonType)
+      self:InitDungeonObject(DungeonId)
     end
     self:InitDungeonComponent()
     if DungeonInfo.EnableTacmap then
@@ -125,6 +132,10 @@ function BP_EMGameMode_C:TryRegisterPlayerToTacmap()
   end
 end
 
+function BP_EMGameMode_C:InitSTLMonsterEvent()
+  self.EMGameState:RegisterGameModeEvent("OnDeadStaticUnit", self, self.OnStaticUnitDeadEvent)
+end
+
 function BP_EMGameMode_C:GMInitGameModeInfo(Id)
   self:InitGameModeInfo(Id)
 end
@@ -142,16 +153,6 @@ function BP_EMGameMode_C:ReceiveBeginPlay()
   self:AIBattleMgrReceiveBeginPlay()
   self:BindTalkSubsystem()
   self.GameModeIndex = GWorld:AddGameMode(self)
-  local V1 = UE4.UNavigationSystemV1.GetNavigationSystem(self)
-  if V1 then
-    if IsDedicatedServer(self) then
-      DebugPrint("DS BP_EMGameMode_C: ReceiveBeginPlay 关闭 LevelStreamingNav 分帧")
-      V1.bEnableFramingAttachTiles = false
-    else
-      DebugPrint("Not DS BP_EMGameMode_C: ReceiveBeginPlay 恢复 LevelStreamingNav 分帧")
-      V1.bEnableFramingAttachTiles = true
-    end
-  end
 end
 
 function BP_EMGameMode_C:NewAuthorityGameMode_BeginPlay_Lua()
@@ -168,6 +169,7 @@ function BP_EMGameMode_C:ReceiveEndPlay(EndPlayReason)
   self.Overridden.ReceiveEndPlay(self, EndPlayReason)
   self.OnDestroyDelegates:Broadcast()
   self:UnbindTalkSubsystem()
+  self.EMGameState:RemoveGameModeEvent("OnDeadStaticUnit", self, self.OnStaticUnitDeadEvent)
   GWorld:RemoveGameMode(self.GameModeIndex)
 end
 
@@ -291,9 +293,13 @@ function BP_EMGameMode_C:OnInit()
   end
   if self:IsInDungeon() and self.DungeonId and self.DungeonId > 0 then
     self:SetDungeonBGMState(0)
+    self:NotifyServerOnInit()
   end
   self.OnInitDelegates:Broadcast()
   ClientEventUtils:ClearCurrentDoingDynamicEvent(true, true)
+  if self.EMGameState then
+    self.EMGameState:CheckPreloadRecordData_Lua()
+  end
 end
 
 function BP_EMGameMode_C:InitDungeonBaseInfo()
@@ -466,19 +472,40 @@ function BP_EMGameMode_C:OnEnd(Result)
     end
   end
   self.Overridden.OnEnd(self, Result)
-end
-
-function BP_EMGameMode_C:OnStaticCreatorEvent(EventName, Eid, UnitId, UnitType)
-  if not self:IsSubGameMode() then
-    self:TriggerDungeonComponentFun("OnStaticCreatorEvent", EventName, Eid, UnitId, UnitType)
+  if self.EMGameState then
+    self.EMGameState:CheckPreloadRecordData_Lua()
   end
-  self.Overridden.OnStaticCreatorEvent(self, EventName, Eid, UnitId, UnitType)
 end
 
-function BP_EMGameMode_C:OnUnitDeadEvent(MonsterC)
+function BP_EMGameMode_C:OnStaticCreatorEvent(EventName, Eid, UnitId, UnitType, CreatorId)
   if not self:IsSubGameMode() then
-    self:TriggerDungeonComponentFun("OnUnitDeadEvent", MonsterC)
+    self:TriggerDungeonComponentFun("OnStaticCreatorEvent", EventName, Eid, UnitId, UnitType, CreatorId)
+  end
+  self.Overridden.OnStaticCreatorEvent(self, EventName, Eid, UnitId, UnitType, CreatorId)
+end
+
+function BP_EMGameMode_C:OnMechanismStateChange(Mechanism, StateId, LeaveStateId)
+  if not self:IsSubGameMode() then
+    self:TriggerDungeonComponentFun("OnMechanismStateChange", Mechanism, StateId, LeaveStateId)
+  end
+  self.Overridden.OnMechanismStateChange(self, Mechanism, StateId, LeaveStateId)
+end
+
+function BP_EMGameMode_C:OnUnitDeadEvent(MonsterC, KillMineRoleEid, KillMineSkillId, DeathReason)
+  if not self:IsSubGameMode() then
+    self:TriggerDungeonComponentFun("OnUnitDeadEvent", MonsterC, KillMineRoleEid, KillMineSkillId, DeathReason)
     self:TriggerDungeonAchieve("OnMonsterDeadAchieve", MonsterC, -1)
+  end
+end
+
+function BP_EMGameMode_C:OnStaticUnitDeadEvent(MonsterC, KillMineRoleEid, KillMineSkillId, DeathReason)
+  if self:IsSubGameMode() then
+    return
+  end
+  if MonsterC then
+    self:TriggerSTLEvent("OnSTLMonsterdDeath", MonsterC, KillMineRoleEid, KillMineSkillId, DeathReason)
+  else
+    DebugPrint("BP_EMGameMode_C:OnUnitDestoryEvent 传入的Monster为空！")
   end
 end
 
@@ -543,7 +570,7 @@ function BP_EMGameMode_C:STLUnRegisterKillMonsterNode(KillMonsterNodeKey)
   end
 end
 
-function BP_EMGameMode_C:STLOnMonsterKilled(Monster)
+function BP_EMGameMode_C:STLOnMonsterKilled(Monster, KillMineRoleEid, KillMineSkillId, DeathReason)
   if not self.KillMonsterNodeMap then
     return
   end
@@ -578,7 +605,7 @@ function BP_EMGameMode_C:STLUnRegisterKillMonsterNode_Creator(KillMonsterNodeKey
   end
 end
 
-function BP_EMGameMode_C:STLOnMonsterKilled_Creator(Monster)
+function BP_EMGameMode_C:STLOnMonsterKilled_Creator(Monster, KillMineRoleEid, KillMineSkillId, DeathReason)
   if not self.KillMonsterNodeMap_Creator then
     return
   end
@@ -746,6 +773,9 @@ function BP_EMGameMode_C:InitCustomActor()
 end
 
 function BP_EMGameMode_C:InitAutoActiveStaticCreator()
+  if self:CheckServerDungeonEnable() then
+    return
+  end
   self:TriggerActiveStaticCreator(self.EMGameState.AutoActiveStaticIds)
   self:TriggerActiveAutoPrivateStaticCreator()
   self:TriggerFlexibleActiveStaticCreator()
@@ -1376,6 +1406,9 @@ function BP_EMGameMode_C:DungeonFinish_OnPlayerRealDead(AvatarEids)
       return
     end
     self:TriggerPlayerFailed(AvatarEids)
+  elseif self.EMGameState.GameModeType == "SoloTreasure" then
+    DebugPrint("EMGameMode:DungeonFinish_OnPlayerRealDead SoloTreasure")
+    self:TriggerDungeonComponentFun("FinishSolotreasure", false, "PlayerRealDead")
   else
     DebugPrint("EMGameMode:DungeonFinish_OnPlayerRealDead Default")
     self:TriggerPlayerFailed(AvatarEids)
@@ -1444,13 +1477,13 @@ function BP_EMGameMode_C:TriggerPlayerFailed(AvatarEids)
   self.LevelGameMode:TriggerPlayerFinish(false, AvatarEids)
 end
 
-function BP_EMGameMode_C:ForceFinishPlayerByFailed(AvatarEids)
+function BP_EMGameMode_C:ForceFinishPlayerByFailed(AvatarEids, PlayerEndReason)
   DebugPrint("BP_EMGameMode_C:ForceFinishPlayerByFailed 强制玩家以失败结算")
-  self.LevelGameMode:TriggerPlayerFinish(false, AvatarEids)
+  self.LevelGameMode:TriggerPlayerFinish(false, AvatarEids, PlayerEndReason)
 end
 
-function BP_EMGameMode_C:ForceFinishPlayer(IsWin, AvatarEid)
-  self:ForceFinishPlayerByFailed({AvatarEid})
+function BP_EMGameMode_C:ForceFinishPlayer(IsWin, AvatarEid, PlayerEndReason)
+  self:ForceFinishPlayerByFailed({AvatarEid}, PlayerEndReason)
 end
 
 function BP_EMGameMode_C:TriggerDungeFinish(IsWin)
@@ -1483,7 +1516,7 @@ function BP_EMGameMode_C:TriggerRealDungeFinish(IsWin)
   self:TriggerPlayerFinish(IsWin)
 end
 
-function BP_EMGameMode_C:TriggerPlayerFinish(IsWin, AvatarEids)
+function BP_EMGameMode_C:TriggerPlayerFinish(IsWin, AvatarEids, PlayerEndReason)
   GWorld:DSBLog("Info", "TriggerPlayerFinish IsWin:" .. tostring(IsWin), "GameMode")
   DebugPrint("TriggerPlayerFinish 玩家结算，结算状态：", IsWin)
   if IsStandAlone(self) or MiscUtils.IsListenServer(self) then
@@ -1493,7 +1526,7 @@ function BP_EMGameMode_C:TriggerPlayerFinish(IsWin, AvatarEids)
       self:TriggerPlayerFinishDungeon(IsWin)
       Avatar:BattleFinish(IsWin)
     end
-    self:NotifyClientGameEnd(IsWin, AvatarEids)
+    self:NotifyClientGameEnd(IsWin, AvatarEids, PlayerEndReason)
     self:OnPlayersDungeonEnd(AvatarEids)
   elseif IsDedicatedServer(self) then
     print(_G.LogTag, "Server TriggerPlayerFinish", IsWin)
@@ -1502,7 +1535,7 @@ function BP_EMGameMode_C:TriggerPlayerFinish(IsWin, AvatarEids)
     end
     local DSEntity = GWorld:GetDSEntity()
     if DSEntity then
-      DSEntity:BattleFinish(IsWin, AvatarEids)
+      DSEntity:BattleFinish(IsWin, AvatarEids, PlayerEndReason)
     end
   end
 end
@@ -1595,7 +1628,7 @@ function BP_EMGameMode_C:NotifyClientFightAttributeData(PlayerCharacter)
   FightAttributeSet:RefreshFightAttributeData()
 end
 
-function BP_EMGameMode_C:NotifyClientGameEnd(IsWin, AvatarEids)
+function BP_EMGameMode_C:NotifyClientGameEnd(IsWin, AvatarEids, PlayerEndReason)
   if not AvatarEids or 0 == #AvatarEids then
     for i = 1, self:GetPlayerNum() do
       local ControllerIndex = i - 1
@@ -1611,11 +1644,11 @@ function BP_EMGameMode_C:NotifyClientGameEnd(IsWin, AvatarEids)
       local MyPawn = Controller:GetMyPawn()
       if IsStandAlone(self) then
         DebugPrint("StartAndEndPoint AllSuccess NotifyClientGameEnd_Lua")
-        Controller:NotifyClientGameEnd_Lua(IsWin, self:GetScenePlayersInfo(MyPawn))
+        Controller:NotifyClientGameEnd_Lua(IsWin, self:GetScenePlayersInfo(MyPawn), PlayerEndReason)
       else
         DebugPrint("StartAndEndPoint AllSuccess NotifyClientGameEnd")
         self:NotifyClientFightAttributeData(MyPawn)
-        Controller:NotifyClientGameEnd(IsWin, self:GetScenePlayersInfo(MyPawn))
+        Controller:NotifyClientGameEnd(IsWin, self:GetScenePlayersInfo(MyPawn), PlayerEndReason)
       end
     end
   else
@@ -1634,7 +1667,7 @@ function BP_EMGameMode_C:NotifyClientGameEnd(IsWin, AvatarEids)
       DebugPrint("StartAndEndPoint PartSuccess NotifyClientGameEnd")
       local MyPawn = Controller:GetMyPawn()
       self:NotifyClientFightAttributeData(MyPawn)
-      Controller:NotifyClientGameEnd(IsWin, self:GetScenePlayersInfo(MyPawn))
+      Controller:NotifyClientGameEnd(IsWin, self:GetScenePlayersInfo(MyPawn), PlayerEndReason)
     end
     
     for _, AvatarEid in ipairs(AvatarEids) do
@@ -1718,6 +1751,8 @@ function BP_EMGameMode_C:GetScenePlayersInfo(MainPlayer)
             PlayersInfo[#PlayersInfo].IsNPCPhantom = PhantomCharacter.IsNPCPhantom
           end
           PlayersInfo[#PlayersInfo].IsMainPlayerPhantom = v.PhantomOwner == MainPlayer
+        else
+          PlayersInfo[#PlayersInfo].Uid = self:GetPlayerUidByEid(v.Eid)
         end
         PlayersInfo[#PlayersInfo].IsMainPlayer = false
         PlayersInfo[#PlayersInfo].IsSettlementOtherRole = true
@@ -1742,6 +1777,12 @@ function BP_EMGameMode_C:GetScenePlayersInfo(MainPlayer)
   local RewardsMessage = FMessage()
   RewardsMessage:SetBytes(MsgStr, #MsgStr)
   return RewardsMessage
+end
+
+function BP_EMGameMode_C:GetPlayerUidByEid(Eid)
+  local Players = self.EMGameState:GetPlayerState(Eid)
+  DebugPrint("BP_EMGameMode_C:GetPlayerUidByEid", Eid, Players, Players and Players.Uid or nil)
+  return Players and Players.Uid or nil
 end
 
 function BP_EMGameMode_C:GetScenePlayerName(Eid, IsPhantom, RoleId)
@@ -2105,11 +2146,11 @@ function BP_EMGameMode_C:TriggerMechanismFieldCreature(TrapArrayId, Grade, TrapS
   end
 end
 
-function BP_EMGameMode_C:HideUIInScreen(UIPath, IsHide)
+function BP_EMGameMode_C:HideUIInScreen(UIPath, IsHide, HideUIInScreenSuitRecover)
   if not self.EMGameState then
     return
   end
-  self.EMGameState:HideUIInScreen(UIPath, IsHide)
+  self.EMGameState:HideUIInScreen(UIPath, IsHide, HideUIInScreenSuitRecover)
 end
 
 function BP_EMGameMode_C:SetContinuedPCGuideVisibility(ActionName, IsHide)
@@ -2272,7 +2313,7 @@ function BP_EMGameMode_C:GetMonsterCustomLoc(Monster)
     local CheckInfo = FPointCheckInfo()
     CheckInfo:SetCheckInfo(1000, 5000, true, true, true)
     local ResLoc = self.FixedMonsterSpawn:GetSpawnPointLocations(PlayerTarget, CheckInfo)
-    if 0 == ResLoc:Num() then
+    if 0 == #ResLoc then
       return FVector(0, 0, 0)
     end
     return ResLoc[1]
@@ -2466,27 +2507,23 @@ function BP_EMGameMode_C:InitDungeonRandomEvent(AvatarBattleInfos)
     return
   end
   local EventId = Avatar.DungeonRandomEvent.CurrentEventId
+  if 0 == EventId then
+    DebugPrint("[BP_EMGameMode_C:InitDungeonEvent] not happen event")
+    return
+  end
   local RandomEventExcel = DataMgr.DungeonRandomEvent[EventId]
   if not RandomEventExcel then
     DebugPrint("[BP_EMGameMode_C:InitDungeonEvent] not find event excel <EventId>", EventId)
     return
   end
   local EventType = RandomEventExcel.EventType
-  local EventDetail = Avatar.DungeonRandomEvent[EventType]
   DebugPrint("[BP_EMGameMode_C:InitDungeonEvent] <EventId,EventType>", EventId, EventType)
-  if 0 == EventId then
-    DebugPrint("[BP_EMGameMode_C:InitDungeonEvent] not happen event")
-    return
-  end
-  if not EventDetail then
-    DebugPrint("[BP_EMGameMode_C:InitDungeonEvent] not find event detail <EventId,EventType>", EventId, EventType)
-    return
-  end
   if self["InitDungeonRandomEvent" .. EventType] then
-    self["InitDungeonRandomEvent" .. EventType](self, EventDetail)
+    self["InitDungeonRandomEvent" .. EventType](self, Avatar.DungeonRandomEvent[EventType])
   else
     DebugPrint("[BP_EMGameMode_C:InitDungeonEvent] not find event type")
   end
+  self:OnDungeonRandomEventInit(EventId)
   local DSEntity = GWorld:GetDSEntity()
   if DSEntity then
     DSEntity:ServerMulticast("DungeonEventRealHappend", EventId, Avatar.Uid)
@@ -2866,6 +2903,26 @@ function BP_EMGameMode_C:PausePhantomBTByPlayer(Player, IsPause, Reason)
       end
     end
   end
+end
+
+function BP_EMGameMode_C:KeepAliveSpecialLevel(GroupLevelId)
+  local LevelLoader = self:GetLevelLoader()
+  if not LevelLoader then
+    return
+  end
+  LevelLoader:SwitchLoadingGroupId(GroupLevelId)
+end
+
+function BP_EMGameMode_C:UnloadingAliveSpecialLevel()
+  local LevelLoader = self:GetLevelLoader()
+  if not LevelLoader then
+    return
+  end
+  LevelLoader:SwitchLoadingGroupId(-1)
+end
+
+function BP_EMGameMode_C:GetNextSynthesis2Loc(Hostage)
+  return self:TriggerDungeonComponentFun("GetNextHostageLoc")
 end
 
 AssembleComponents(BP_EMGameMode_C)

@@ -245,6 +245,31 @@ function M:InitNavigationRules()
     Widget4:SetNavigationRuleExplicit(EUINavigation.Left, Widget3)
     Widget4:SetNavigationRuleBase(EUINavigation.Right, EUINavigationRule.Stop)
   end
+  if self.Button_Preview then
+    local Widget = self.EntryItem_1
+    if #self.DisplayEntryItemWidgets > 1 then
+      Widget = self.EntryItem_2
+    end
+    Widget:SetNavigationRuleExplicit(EUINavigation.Right, self.Button_Preview)
+    self:InitBtnPreviewNavigationRules()
+  end
+end
+
+function M:InitBtnPreviewNavigationRules()
+  if not self.Button_Preview then
+    return
+  end
+  if #self.DisplayEntryItemWidgets < 1 then
+    return
+  end
+  self.Button_Preview:SetNavigationRuleBase(EUINavigation.Up, EUINavigationRule.Stop)
+  self.Button_Preview:SetNavigationRuleBase(EUINavigation.Down, EUINavigationRule.Stop)
+  self.Button_Preview:SetNavigationRuleExplicit(EUINavigation.Right, EUINavigationRule.Stop)
+  if 1 == #self.DisplayEntryItemWidgets then
+    self.Button_Preview:SetNavigationRuleExplicit(EUINavigation.Left, self.EntryItem_1)
+  else
+    self.Button_Preview:SetNavigationRuleExplicit(EUINavigation.Left, self.EntryItem_2)
+  end
 end
 
 function M:PlayEntriesInAnim()

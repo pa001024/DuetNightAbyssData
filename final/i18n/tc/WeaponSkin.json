@@ -17,7 +17,7 @@
   },
   {
     "id": 3010103,
-    "name": "UI_WeaponSkin_Name_3010103",
+    "name": "荣耀撕裂者",
     "desc": "UI_WeaponSkin_Des_3010103",
     "icon": "T_Head_Claymore_Rongyao",
     "rarity": 5,
@@ -64,6 +64,14 @@
     "unlock": "通過商店獲得"
   },
   {
+    "id": 3010109,
+    "name": "碧霄吟·重剑",
+    "desc": "",
+    "icon": "T_Head_Claymore_Bixiao",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
     "id": 3010201,
     "name": "空軍二號",
     "desc": "適用於單手劍。\n冷凍後兼具力量和味道的雪紋魚，重點是──就算肉罐頭和保鮮紙會過期，它也不會過期。",
@@ -104,12 +112,20 @@
     "unlock": "通過商店獲得"
   },
   {
+    "id": 3010206,
+    "name": "碧霄吟·单手剑",
+    "desc": "塵囂無染，碧波破浪。",
+    "icon": "T_Head_Sword_Bixiao",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
     "id": 3010301,
     "name": "喚日急板",
     "desc": "太陽在哪裡呀太陽在哪裡？太陽就在我們的手心裡。",
     "icon": "T_Head_Bow_Huanri",
     "rarity": 5,
-    "unlock": "通過萬華獲得"
+    "unlock": "通過商店獲得"
   },
   {
     "id": 3010302,
@@ -128,6 +144,22 @@
     "unlock": "通過商店獲得"
   },
   {
+    "id": 3010304,
+    "name": "碧霄吟·弓（长弓）",
+    "desc": "塵囂無染，碧波破浪。",
+    "icon": "T_Head_Bow_Bixiao",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010305,
+    "name": "碧霄吟·弓（短弓）",
+    "desc": "塵囂無染，碧波破浪。",
+    "icon": "T_Head_Bow_Bixiao",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
     "id": 3010401,
     "name": "夏夜弦音",
     "desc": "一抹清音，驚醒了少女的淺夢，撥動了夏日的心弦。",
@@ -141,7 +173,7 @@
     "desc": "浪花在舞者的足尖躍動，海風裹挾著一整個盛夏，將高潮在此定格。",
     "icon": "T_Head_Polearm_Talang",
     "rarity": 5,
-    "unlock": "通過萬華獲得"
+    "unlock": "通過商店獲得"
   },
   {
     "id": 3010403,
@@ -240,6 +272,14 @@
     "unlock": "通過商店獲得"
   },
   {
+    "id": 3010609,
+    "name": "碧霄吟·双刀",
+    "desc": "塵囂無染，碧波破浪。",
+    "icon": "T_Head_Dualblade_Bixiao",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
     "id": 3010701,
     "name": "父輩餘蔭·太刀",
     "desc": "一柄頗為特殊的太刀，象徵著父親的鞭策——呃，我的意思是說，父愛如山。",
@@ -269,6 +309,14 @@
     "desc": "冰糖葫蘆竹籤兒串。",
     "icon": "T_Head_Katana_Tangfu",
     "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010709,
+    "name": "碧霄吟·太刀",
+    "desc": "塵囂無染，碧波破浪。",
+    "icon": "T_Head_Katana_Bixiao",
+    "rarity": 5,
     "unlock": "通過商店獲得"
   },
   {
@@ -320,10 +368,34 @@
     "unlock": "通過商店獲得"
   },
   {
+    "id": 3010902,
+    "name": "",
+    "desc": "塵囂無染，碧波破浪。",
+    "icon": "T_Head_Cannon_Bixiao",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
     "id": 3011001,
     "name": "電橘他二號",
     "desc": "喵嗚♪喵喵喵♪喵喵♪♪",
     "icon": "T_Head_Shotgun_Dianju",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3011002,
+    "name": "火力全开",
+    "desc": "疾书凝玄甲，谈笑烬千军。",
+    "icon": "T_Head_Shotgun_Huoli",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3011003,
+    "name": "碧霄吟·霰弹枪",
+    "desc": "塵囂無染，碧波破浪。",
+    "icon": "T_Head_Shotgun_Bixiao",
     "rarity": 5,
     "unlock": "通過商店獲得"
   },

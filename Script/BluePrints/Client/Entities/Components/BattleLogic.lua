@@ -25,6 +25,16 @@ function Component:PrepareToBattleRegion(RegionId, StartIndex, EnterRegionType, 
   if not DataMgr.Region[MainReginonId] then
     return
   end
+  if DataMgr.RegionPatchCondition[MainReginonId] then
+    local SubSystem = USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, UHotUpdateSubsystem:StaticClass())
+    local Patch = DataMgr.RegionPatchCondition[MainReginonId].NecessaryPatch
+    DebugPrint("PrepareToBattleRegion, RegionPatchCondition", getmetatable(Patch), Patch, RegionId)
+    PrintTable(Patch)
+    if not SubSystem:IsAllPatchOptionalSignsDownloaded(Patch) then
+      GWorld.NetworkMgr:DisconnectAndReturnLogin({Necessorypatch = Patch})
+      return
+    end
+  end
   self.CurrentRegionId = RegionId
   self.StartIndex = tonumber(StartIndex)
   self.EnterRegionType = EnterRegionType
@@ -96,6 +106,10 @@ function Component:RequestLeaveBattle(IsWin, bInterrupt)
       if self:IsInRougeLike() then
         print(_G.LogTag, "Avatar RequestLeaveBattle RougeLike", IsWin)
         GameMode:FinishRougeLike(IsWin)
+        return
+      end
+      if GameMode.EMGameState.GameModeType == "SoloTreasure" then
+        GameMode:TriggerDungeonComponentFun("FinishSolotreasure", IsWin, "RequestLeaveBattle")
         return
       end
       if GameMode.EMGameState.GameModeType == "Training" then

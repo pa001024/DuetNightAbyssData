@@ -109,6 +109,7 @@ function M.ButtonFireUp(Battle_Button_Phone, Index, WidgetLocalPos, LastWidgetTo
       FireBtn.CurrentTime = UE4.UGameplayStatics.GetRealTimeSeconds(FireBtn)
       if FireBtn.CurrentTime - FireBtn.StartTime > FireBtn.BtnHoldCD then
         FireBtn.IsLockingShoot = true
+        UIManager(self):ShowUITip_BattleCommonTop(UIConst.Tip_CommonTop, GText("UI_Toast_FireLocked"))
         return
       end
     end

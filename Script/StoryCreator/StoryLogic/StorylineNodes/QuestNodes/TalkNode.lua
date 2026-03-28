@@ -118,7 +118,8 @@ function TalkNode:CreateTalkNodeData()
     PlayerSwitchEmoIdle = self.PlayerSwitchEmoIdle,
     bNpcActionKeepIn = self.bNpcActionKeepIn,
     bNpcActionKeepOut = self.bNpcActionKeepOut,
-    bUseFlowAssetActors = self.bUseFlowAssetActors
+    bUseFlowAssetActors = self.bUseFlowAssetActors,
+    bForceWaitNavLoaded = self.bForceWaitNavLoaded
   }
   local NativeTalkActors = {}
   for _, ActorData in pairs(self.TalkNodeData.TalkActors) do
@@ -167,8 +168,6 @@ function TalkNode:SwitchStart()
       GuideUIEnable = self.GuideUIEnable,
       Func = function(NPC, OnTalkEndCallback)
         GWorld.StoryMgr:UnbindNPCInteractiveTalk(NpcIdWithGender, BindId)
-        local PlayerCharacter = UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
-        self.TalkContext:AddTalkActor("Player", 0, PlayerCharacter, true)
         self:TalkNodeStartInternal(function(TalkNodeFinishType, OptionIndex)
           if OnTalkEndCallback then
             OnTalkEndCallback.Func(OnTalkEndCallback.Obj)

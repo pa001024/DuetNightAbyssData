@@ -1,4 +1,5 @@
 local Component = {}
+local HeroUSDKUtils = require("Utils.HeroUSDKUtils")
 
 function Component:OnProgressChange(OldIndex, NewIndex, AchvId, CurrentCount)
   self.logger.debug("ZJT_ OldIndex NewIndex AchvId CurrentCount", OldIndex, NewIndex, AchvId, CurrentCount)
@@ -74,6 +75,37 @@ end
 function Component:OnAchvFinish(AchvId)
   self.logger.debug("OnAchvFinish", AchvId)
   EventManager:FireEvent(EventID.OnAchvFinished, AchvId)
+  self:SyncSteamAchievementOnFinish(AchvId)
+end
+
+function Component:SyncSteamAchievementOnFinish(AchvId)
+  if not HeroUSDKUtils.IsSteamChannel() then
+    return
+  end
+  local AchvData = DataMgr.Achievement[AchvId]
+  if not AchvData then
+    return
+  end
+  local SteamAPIName = AchvData.SteamAchievementAPIName
+  if not SteamAPIName or "" == SteamAPIName then
+    return
+  end
+  DebugPrint("SyncSteamAchievementOnFinish:", AchvId, "SteamAPIName:", SteamAPIName)
+  
+  local function OnStoreStatsComplete(bSuccess)
+    if bSuccess then
+      DebugPrint("Steam achievement synced on finish:", AchvId, SteamAPIName)
+    else
+      DebugPrint("Steam achievement sync failed on finish:", AchvId, SteamAPIName)
+    end
+  end
+  
+  local Result = HeroUSDKUtils.SetAchievement_Steam(SteamAPIName)
+  if Result then
+    HeroUSDKUtils.StoreStats_Steam(OnStoreStatsComplete)
+  else
+    DebugPrint("SetAchievement_Steam failed on finish:", SteamAPIName)
+  end
 end
 
 function Component:GetAchvReward(AchvId, cb)
@@ -114,6 +146,26 @@ end
 
 function Component:EnterWorld()
   self:RefreshAchieveReddot()
+  self:SyncSteamAchievements()
+end
+
+function Component:SyncSteamAchievements()
+  if not HeroUSDKUtils.IsSteamChannel() then
+    return
+  end
+  
+  local function OnSyncComplete(SyncedAchievements, bSuccess)
+    if bSuccess then
+      DebugPrint("Steam achievements sync completed, synced count:", #SyncedAchievements)
+      for _, Item in ipairs(SyncedAchievements) do
+        DebugPrint("Synced achievement to Steam:", Item.AchvId, Item.SteamAPIName)
+      end
+    else
+      DebugPrint("Steam achievements sync failed or no achievements need sync")
+    end
+  end
+  
+  HeroUSDKUtils.SyncSteamAchievements(self, OnSyncComplete)
 end
 
 function Component:RefreshAchieveReddot()

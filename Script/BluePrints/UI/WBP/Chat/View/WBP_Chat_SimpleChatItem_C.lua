@@ -23,6 +23,7 @@ function M:BP_OnEntryReleased()
 end
 
 function M:Open(MsgWrap, bSound)
+  local ChannelName = ChatController:ParseChannelHeader(MsgWrap)
   local Spacker, RawSpacker = ChatController:ParseSpeakerHeader(MsgWrap)
   local Content = ChatController:ParseEmojiToText(MsgWrap)
   local ModSuitContent = ChatController:ParseModSuitText(MsgWrap)
@@ -33,7 +34,7 @@ function M:Open(MsgWrap, bSound)
   if DyePlanContent then
     Content = DyePlanContent
   end
-  local RawContent = RawSpacker .. Content
+  local RawContent = ChannelName .. RawSpacker .. Content
   local RawContentTable = StringUtils.Utf8ToTable(RawContent)
   local HalfLength = #RawContentTable
   local LeftHalf, RightHalf = nil, RawContentTable
@@ -66,7 +67,7 @@ function M:Open(MsgWrap, bSound)
         self.Text_Dialog.DefaultTextStyleOverride.OverflowPolicy = ETextOverflowPolicy.Ellipsis
         self.Text_Dialog:SetDefaultTextStyle(self.Text_Dialog.DefaultTextStyleOverride)
       end
-      self.Text_Dialog:SetText(Spacker .. Content)
+      self.Text_Dialog:SetText(ChannelName .. Spacker .. Content)
       self:RemoveTicker()
       return
     end
@@ -77,7 +78,7 @@ function M:Open(MsgWrap, bSound)
     elseif NowLineWidth < TargetLineWidth and HalfLength > 0 then
       if not RightHalf or not LeftHalf then
         self.SizeBox_Dialog:SetVisibility(UIConst.VisibilityOp.Collapsed)
-        self.Text_DialogSingle:SetText(Spacker .. Content)
+        self.Text_DialogSingle:SetText(ChannelName .. Spacker .. Content)
         self:RemoveTicker()
         return
       else

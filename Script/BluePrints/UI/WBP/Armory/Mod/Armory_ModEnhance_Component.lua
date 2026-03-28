@@ -63,8 +63,7 @@ function Component:OnDetailLockBtnClickComp()
     end
     
     local function ConfirmFunc()
-      self:BlockAllUIInput(true)
-      Avatar:UnLockResourceInBag(CommonConst.AllType.Mod, self.ItemDetailsContent.Uuid)
+      ModController:OpenSeconderyPassword(self.ItemDetailsContent.Uuid, self)
     end
     
     UIManager(self):ShowCommonPopupUI(100019, {RightCallbackFunction = ConfirmFunc, CloseBtnCallbackFunction = CancelFunc}, self)
@@ -189,6 +188,11 @@ end
 
 function Component:OnComsumerCountChangeCb(_, NowComsumerCount)
   self:SetAutoBtnText(NowComsumerCount)
+  if NowComsumerCount >= self.EnhanceWidget.MaxComsumerCount then
+    self.Btn_Enhance:ForbidBtn(false)
+  else
+    self.Btn_Enhance:ForbidBtn(true)
+  end
 end
 
 function Component:SetAutoBtnText(NowComsumerCount)
@@ -436,11 +440,6 @@ function Component:OnPreviewLevelChangedCallback(InPreviewLevel)
   self:UpdateAttrListUI(Attrs, ComparedAttrs, DesireLevel)
   local RealLevel = self.Target.CurrentModCardLevel + self.Target.MaxLevel
   local Desc = ArmoryUtils:GenModPassiveEffectDesc(self.Target:Data(), RealLevel, DesireLevel)
-  if InPreviewLevel > self.Target.CurrentModCardLevel then
-    self.Btn_Enhance:ForbidBtn(false)
-  else
-    self.Btn_Enhance:ForbidBtn(true)
-  end
   self:SetAutoBtnText(self.EnhanceWidget.ComsumerCount)
   self.EnhanceWidget:UpdateCostBar(InPreviewLevel)
   return Attrs, ComparedAttrs, Desc
@@ -453,7 +452,9 @@ function Component:OnItemMinusBtnClickCallback(DelContent)
   self:SetAutoBtnText(self.EnhanceWidget.ComsumerCount)
   local Content = self.IncId2ModContent[DelContent.IncId]
   Content.IndexInEnhance = nil
-  if not self.EnhanceWidget.Uuid2Count[DelContent.Uuid] then
+  if Content.Type == "Mod" then
+    SetItemChosen(Content, false)
+  elseif not self.EnhanceWidget.Uuid2Count[Content.ItemId] then
     SetItemChosen(Content, false)
   end
 end

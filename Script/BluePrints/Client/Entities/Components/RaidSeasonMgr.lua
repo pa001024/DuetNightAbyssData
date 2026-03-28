@@ -1,4 +1,5 @@
 local Component = {}
+local PersonInfoModel = require("BluePrints.UI.WBP.PersonInfo.PersonInfoModel")
 
 function Component:OnRaidSeasonEnd()
   self.logger.debug("ZJT_ OnRaidSeasonEnd 赛季结束 ")
@@ -78,6 +79,26 @@ function Component:RaidSeasonGetPreRankReward(InCallBack)
   end
   
   self:CallServer("RaidSeasonGetPreRankReward", Cb)
+end
+
+function Component:OnPlayerRaidRankRecord(RankInfo)
+  DebugPrintTable(RankInfo)
+  self.logger.debug("OnPlayerRaidRankRecord", RankInfo)
+  PersonInfoModel.OtherRaidSeasonRankRecord = RankInfo
+  DebugPrint("PersonInfoModel.OtherRaidSeasonRankRecord updated:", RankInfo)
+end
+
+function Component:GetRaidSeasonRankRecord(InCallBack)
+  self.logger.info("GetRaidSeasonRankRecord")
+  
+  local function Cb(ErrCode, Ret)
+    DebugPrint("GetRaidSeasonRankRecord", ErrorCode:Name(ErrCode))
+    if InCallBack then
+      InCallBack(ErrCode, Ret)
+    end
+  end
+  
+  self:CallServer("GetRaidSeasonRankRecord", Cb)
 end
 
 return Component

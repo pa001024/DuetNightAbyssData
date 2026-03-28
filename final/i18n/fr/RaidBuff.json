@@ -34,5 +34,17 @@
       "3.5%",
       "42%"
     ]
+  },
+  {
+    "RaidBuffID": 13,
+    "RaidBuffDes": "Lorsque la Portée de compétence d’un personnage Lumino dépasse sa Durée de compétence, chaque tranche supplémentaire de 10% permet aux Dégâts de compétence d’ignorer 7% de la DÉF de la cible, jusqu’à un maximum de 42% ignorés.\nLorsque la Durée de compétence dépasse la Portée de compétence, chaque tranche supplémentaire de 20% augmente la Pénétration de tous les attributs de 10%, jusqu’à un maximum de 50%.",
+    "RaidBuffParameter": [
+      "10%",
+      "7%",
+      "42%",
+      "20%",
+      "10%",
+      "50%"
+    ]
   }
 ]

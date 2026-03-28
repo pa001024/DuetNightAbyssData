@@ -30,7 +30,7 @@ end
 function M:Construct()
   M.Super.Construct(self)
   self.LastMousePos = nil
-  ChatController:OverrideButtonSound(self.Btn_Min, "event:/ui/common/click_btn_small")
+  AudioManager(self):PlayUISound(self.Btn_Min, "event:/ui/common/click_btn_small", nil, nil)
   self.Btn_Min:BindEventOnReleased(self, self.BtnMinOnReleased)
   self.Btn_DragRT.OnMouseButtonDownEvent:Bind(self, self.BtnDragOnMouseButtonDownRT)
   self.Btn_DragRB.OnMouseButtonDownEvent:Bind(self, self.BtnDragOnMouseButtonDownRB)
@@ -53,10 +53,10 @@ function M:Construct()
       OnTextChanged = function(self, Text)
         if "" == Text then
           self.Btn_Sent:SetForbidden()
-        elseif self.Btn_Sent:IsForbidden() and not ChatController:IsSendCDTimerExist(self.CurrChannel) then
+        elseif self.Btn_Sent:IsChatBtnForbidden() and not ChatController:IsSendCDTimerExist(self.CurrChannel) then
           self.Btn_Sent:SetNormal()
         end
-        self.Btn_Sent.Key_Text:SetForbidKey(self.Btn_Sent:IsForbidden())
+        self.Btn_Sent.Key_Text:SetForbidKey(self.Btn_Sent:IsChatBtnForbidden())
         if self.Com_Input:Utf8StrLen(Text) > self.Com_Input.TextLimit then
           self.PanelAnchor:Close()
           self.PanelAnchor_Face:Close()
@@ -73,6 +73,8 @@ function M:Construct()
       end
     }
   })
+  self.Key_ChangeChannel:CreateGamepadKey(UIConst.GamePadImgKey.SpecialRight)
+  self.Key_ChangeChannel:PlayAnimation(self.Key_ChangeChannel.Normal)
   self.Com_Input.Text_Input:BP_SetClearKeyboardFocusOnCommit(false)
   ChatController:RegisterEvent(self, function(self, EventId, ...)
     if EventId == ChatCommon.EventID.EnterChatChannel then
@@ -125,7 +127,11 @@ function M:Construct()
     end
     self:InitDefaultFocusWidget(ChatEventType.Team, EventId)
   end)
-  self.Key_DontDisturb:CreateGamepadKey("View")
+  if self.Key_DontDisturb then
+    self.Key_DontDisturb:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  self.Btn_DontDisturb:PlayAnimation(self.Btn_DontDisturb.Normal)
+  self.Btn_DontDisturb.Key_Text:CreateGamepadKey("View")
   self.Btn_DontDisturb.Button_Area.OnClicked:Add(self, self.OpenDisturbWindows)
 end
 
@@ -161,7 +167,8 @@ function M:InitUIInfo(Name, bInUIMode, EventList, ...)
         Text = Text,
         TabId = Index,
         IconPath = ChannelInfo.Icon,
-        ChannelType = Id
+        ChannelType = Id,
+        HideText = true
       })
       ChannelType2Index[Id] = Index
     end
@@ -253,6 +260,11 @@ function M:OnTabSelected(TabWidget, TabItemInfo)
   Switch[self.CurrChannel](self, TabWidget, TabItemInfo)
   self:UpdateUIStyleInPlatform()
   self:SetFocus()
+  if self.CurSelectTabWidget then
+    self.CurSelectTabWidget:ShowText(false)
+  end
+  self.CurSelectTabWidget = TabWidget
+  TabWidget:ShowText(true)
 end
 
 function M:_AddReddotListenInner(ChannelName, ChannelType)
@@ -358,12 +370,11 @@ function M:HandleSelectPlayerToChat(Uid)
 end
 
 function M:FreshGamePadView()
-  self.Group_DontDisturb:SetVisibility(UIConst.VisibilityOp.Visible)
-  self.Key_DontDisturb:PlayAnimation(self.Key_DontDisturb.Normal)
+  self.Btn_DontDisturb.Key_Text:SetVisibility(UIConst.VisibilityOp.Visible)
 end
 
 function M:FreshMouseAndKeyboardView()
-  self.Group_DontDisturb:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Btn_DontDisturb.Key_Text:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end
 
 function M:OnPreviewKeyDown(MyGeo, InKeyEvent)
@@ -400,7 +411,7 @@ function M:OnPreviewKeyDown(MyGeo, InKeyEvent)
         end
       end,
       [Const.GamepadSpecialLeft] = function()
-        if self.Group_DontDisturb:IsVisible() and self.IsForBidDisturb == false and not self:IsAnimationPlaying(self.Auto_Out) then
+        if self.Btn_DontDisturb:IsVisible() and not self.IsOpenMenu and self.IsForBidDisturb == false and not self:IsAnimationPlaying(self.Auto_Out) then
           UIUtils.PlayCommonBtnSe(self)
           self:OpenDisturbWindows()
           return true
@@ -594,6 +605,9 @@ function M:InitGamepadKeyTable(InKeyName)
         self:RefreshFocusWidget(ChatFocusType.PlayerList)
         return true
       end
+      if self.Key_ChangeChannel:IsVisible() and (self.CurrChannel == ChatCommon.ChannelDef.Public or self.CurrChannel == ChatCommon.ChannelDef.Region and ChatModel:IsInRegionOnline()) then
+        self:BtnChangeChannelOnPressed()
+      end
       return false
     end,
     [Const.GamepadLeftThumbstick] = function()
@@ -709,6 +723,7 @@ function M:RefreshUIReset()
   IsShowKeyReset = IsShowKeyReset and self.FocusStateType ~= ChatFocusType.SelectChat and (self.FocusStateType ~= ChatFocusType.PlayerList or self.CurrChannel ~= ChatCommon.ChannelDef.InTeam)
   self.Btn_Reset:SetVisibility(IsShowReset and UIConst.VisibilityOp.Visible or UIConst.VisibilityOp.Hidden)
   self.Key_Reset:SetVisibility(IsShowKeyReset and UIConst.VisibilityOp.Visible or UIConst.VisibilityOp.Hidden)
+  self.Group_ChangeChannelKey:SetVisibility(IsGamepad and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
 end
 
 function M:RefreshUIPlayerItem()
@@ -915,7 +930,7 @@ function M:UpdateUIStyleInPlatform()
   self.Group_FaceKey:SetVisibility(BottomKeyVisibilty)
   self.Group_QuickReplyKey:SetVisibility(BottomKeyVisibilty)
   self.Btn_Sent.Key_Text:SetVisibility(BottomKeyVisibilty)
-  self.Btn_Sent.Key_Text:SetForbidKey(self.Btn_Sent:IsForbidden())
+  self.Btn_Sent.Key_Text:SetForbidKey(self.Btn_Sent:IsChatBtnForbidden())
   self:RefreshUIReset()
   self:RefreshUIPlayerItem()
 end

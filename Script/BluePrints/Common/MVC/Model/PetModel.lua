@@ -26,6 +26,7 @@ function M:Init(Pets)
       DebugPrint("Error: 宠物红点数据创建失败！" .. "\n" .. trace)
     end
   })
+  self.Inited = true
 end
 
 function M:IsPetExist(UniqueID)
@@ -33,6 +34,9 @@ function M:IsPetExist(UniqueID)
 end
 
 function M:OnNewPetObtained(UniqueID)
+  if not self.Inited then
+    return
+  end
   local Avatar = GWorld:GetAvatar()
   local Pet = Avatar.Pets[UniqueID]
   if Pet then
@@ -45,6 +49,9 @@ function M:OnNewPetObtained(UniqueID)
 end
 
 function M:OnPetDeleted(UniqueID)
+  if not self.Inited then
+    return
+  end
   _PetMap[UniqueID] = nil
   _ResourcePetMap[UniqueID] = nil
   ArmoryUtils:SetItemReddotRead({
@@ -54,6 +61,7 @@ function M:OnPetDeleted(UniqueID)
 end
 
 function M:Destory()
+  self.Inited = false
   _PetMap = {}
   _ResourcePetMap = {}
   EventManager:RemoveEvent(EventID.OnNewPetObtained, self)

@@ -280,7 +280,7 @@ function WBP_TaskIndicatorUI_C:CreateAndMoveFollowingPath()
   if not IsValid(self) then
     return
   end
-  if self.Guide_Node.Visibility ~= UE4.ESlateVisibility.Collapsed then
+  if self.CurGuideChainId == self.AvatarTrackingId then
     local UIObjs = MissionIndicatorManager:GetIndicatorUIObjByQuestChainIdWithType(self.CurGuideChainId, "Task")
     if #UIObjs > 1 then
       return

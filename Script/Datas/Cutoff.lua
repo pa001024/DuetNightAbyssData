@@ -780,12 +780,84 @@ return ReadOnly("Cutoff", {
     CutoffStartTime = LocalTimeProxy(1773712800),
     ItemId = 1211010
   },
+  [101] = {
+    CutoffEndTime = LocalTimeProxy(1780304400),
+    CutoffId = 101,
+    CutoffPrice = 300,
+    CutoffShow = 44,
+    CutoffStartTime = LocalTimeProxy(1775440800),
+    ItemId = 1211012
+  },
+  [102] = {
+    CutoffEndTime = LocalTimeProxy(1780304400),
+    CutoffId = 102,
+    CutoffPrice = 180,
+    CutoffShow = 37,
+    CutoffStartTime = LocalTimeProxy(1775440800),
+    ItemId = 120336
+  },
   [103] = {
     CutoffId = 103,
     CutoffPrice = 1000,
     CutoffShow = 40,
     CutoffStartTime = LocalTimeProxy(1672545600),
     ItemId = 10000106
+  },
+  [104] = {
+    CutoffEndTime = LocalTimeProxy(1780304400),
+    CutoffId = 104,
+    CutoffPrice = 120,
+    CutoffShow = 25,
+    CutoffStartTime = LocalTimeProxy(1775440800),
+    ItemId = 120349
+  },
+  [105] = {
+    CutoffEndTime = LocalTimeProxy(1780304400),
+    CutoffId = 105,
+    CutoffPrice = 300,
+    CutoffShow = 30,
+    CutoffStartTime = LocalTimeProxy(1775440800),
+    ItemId = 1211015
+  },
+  [106] = {
+    CutoffEndTime = LocalTimeProxy(1780304400),
+    CutoffId = 106,
+    CutoffPrice = 120,
+    CutoffShow = 25,
+    CutoffStartTime = LocalTimeProxy(1775440800),
+    ItemId = 120343
+  },
+  [107] = {
+    CutoffEndTime = LocalTimeProxy(1780304400),
+    CutoffId = 107,
+    CutoffPrice = 120,
+    CutoffShow = 25,
+    CutoffStartTime = LocalTimeProxy(1775440800),
+    ItemId = 120344
+  },
+  [108] = {
+    CutoffEndTime = LocalTimeProxy(1780304400),
+    CutoffId = 108,
+    CutoffPrice = 120,
+    CutoffShow = 25,
+    CutoffStartTime = LocalTimeProxy(1775440800),
+    ItemId = 120345
+  },
+  [109] = {
+    CutoffEndTime = LocalTimeProxy(1780304400),
+    CutoffId = 109,
+    CutoffPrice = 120,
+    CutoffShow = 25,
+    CutoffStartTime = LocalTimeProxy(1775440800),
+    ItemId = 120346
+  },
+  [110] = {
+    CutoffEndTime = LocalTimeProxy(1780304400),
+    CutoffId = 110,
+    CutoffPrice = 60,
+    CutoffShow = 20,
+    CutoffStartTime = LocalTimeProxy(1775440800),
+    ItemId = 13110001
   },
   [111] = {
     CutoffId = 111,
@@ -807,6 +879,22 @@ return ReadOnly("Cutoff", {
     CutoffShow = 20,
     CutoffStartTime = LocalTimeProxy(1672545600),
     ItemId = 801202
+  },
+  [114] = {
+    CutoffEndTime = LocalTimeProxy(1780304400),
+    CutoffId = 114,
+    CutoffPrice = 180,
+    CutoffShow = 60,
+    CutoffStartTime = LocalTimeProxy(1775440800),
+    ItemId = 13110002
+  },
+  [115] = {
+    CutoffEndTime = LocalTimeProxy(1780304400),
+    CutoffId = 115,
+    CutoffPrice = 120,
+    CutoffShow = 40,
+    CutoffStartTime = LocalTimeProxy(1776909600),
+    ItemId = 120351
   },
   [116] = {
     CutoffId = 116,
@@ -929,6 +1017,149 @@ return ReadOnly("Cutoff", {
     CutoffStartTime = LocalTimeProxy(1770602400),
     ItemId = 150317
   },
+  [133] = {
+    CutoffEndTime = LocalTimeProxy(1780304400),
+    CutoffId = 133,
+    CutoffPrice = 180,
+    CutoffShow = 60,
+    CutoffStartTime = LocalTimeProxy(1775440800),
+    ItemId = 13110003
+  },
+  [134] = {
+    CutoffEndTime = LocalTimeProxy(1780304400),
+    CutoffId = 134,
+    CutoffPrice = 180,
+    CutoffShow = 37,
+    CutoffStartTime = LocalTimeProxy(1777946400),
+    ItemId = 120354
+  },
+  [135] = {
+    CutoffEndTime = LocalTimeProxy(1780304400),
+    CutoffId = 135,
+    CutoffPrice = 120,
+    CutoffShow = 40,
+    CutoffStartTime = LocalTimeProxy(1777946400),
+    ItemId = 120358
+  },
+  [136] = {
+    CutoffEndTime = LocalTimeProxy(1780304400),
+    CutoffId = 136,
+    CutoffPrice = 300,
+    CutoffShow = 44,
+    CutoffStartTime = LocalTimeProxy(1777946400),
+    ItemId = 1211018
+  },
+  [137] = {
+    CutoffEndTime = LocalTimeProxy(1780304400),
+    CutoffId = 137,
+    CutoffPrice = 980,
+    CutoffShow = 76,
+    CutoffStartTime = LocalTimeProxy(1777946400),
+    ItemId = 1211022
+  },
+  [138] = {
+    CutoffEndTime = LocalTimeProxy(1780304400),
+    CutoffId = 138,
+    CutoffPrice = 980,
+    CutoffShow = 76,
+    CutoffStartTime = LocalTimeProxy(1777946400),
+    ItemId = 1211023
+  },
+  [139] = {
+    CutoffEndTime = LocalTimeProxy(1780304400),
+    CutoffId = 139,
+    CutoffPrice = 980,
+    CutoffShow = 76,
+    CutoffStartTime = LocalTimeProxy(1777946400),
+    ItemId = 1211024
+  },
+  [140] = {
+    CutoffEndTime = LocalTimeProxy(1780304400),
+    CutoffId = 140,
+    CutoffPrice = 980,
+    CutoffShow = 76,
+    CutoffStartTime = LocalTimeProxy(1777946400),
+    ItemId = 1211025
+  },
+  [141] = {
+    CutoffEndTime = LocalTimeProxy(1780304400),
+    CutoffId = 141,
+    CutoffPrice = 300,
+    CutoffShow = 44,
+    CutoffStartTime = LocalTimeProxy(1779328800),
+    ItemId = 1211026
+  },
+  [142] = {
+    CutoffEndTime = LocalTimeProxy(1780304400),
+    CutoffId = 142,
+    CutoffPrice = 480,
+    CutoffShow = 70,
+    CutoffStartTime = LocalTimeProxy(1779328800),
+    ItemId = 1211027
+  },
+  [143] = {
+    CutoffEndTime = LocalTimeProxy(1780304400),
+    CutoffId = 143,
+    CutoffPrice = 480,
+    CutoffShow = 70,
+    CutoffStartTime = LocalTimeProxy(1779328800),
+    ItemId = 1211028
+  },
+  [144] = {
+    CutoffEndTime = LocalTimeProxy(1780304400),
+    CutoffId = 144,
+    CutoffPrice = 480,
+    CutoffShow = 70,
+    CutoffStartTime = LocalTimeProxy(1779328800),
+    ItemId = 1211029
+  },
+  [145] = {
+    CutoffEndTime = LocalTimeProxy(1780304400),
+    CutoffId = 145,
+    CutoffPrice = 980,
+    CutoffShow = 58,
+    CutoffStartTime = LocalTimeProxy(1775440800),
+    ItemId = 1208003
+  },
+  [146] = {
+    CutoffEndTime = LocalTimeProxy(1780304400),
+    CutoffId = 146,
+    CutoffPrice = 980,
+    CutoffShow = 58,
+    CutoffStartTime = LocalTimeProxy(1775440800),
+    ItemId = 1208004
+  },
+  [147] = {
+    CutoffEndTime = LocalTimeProxy(1780304400),
+    CutoffId = 147,
+    CutoffPrice = 980,
+    CutoffShow = 58,
+    CutoffStartTime = LocalTimeProxy(1775440800),
+    ItemId = 1208005
+  },
+  [148] = {
+    CutoffEndTime = LocalTimeProxy(1780304400),
+    CutoffId = 148,
+    CutoffPrice = 680,
+    CutoffShow = 40,
+    CutoffStartTime = LocalTimeProxy(1775440800),
+    ItemId = 1208006
+  },
+  [149] = {
+    CutoffId = 149,
+    CutoffPrice = 700,
+    CutoffShow = 14,
+    CutoffStartTime = LocalTimeProxy(1770688800),
+    ItemId = 10000620
+  },
+  [150] = {
+    CutoffEndTime = LocalTimeProxy(1780866000),
+    CutoffId = 150,
+    CutoffPrice = 1,
+    CutoffShow = 16,
+    CutoffStartTime = LocalTimeProxy(1775440800),
+    ItemId = 140302
+  },
   [10001] = {
     CutoffEndTime = LocalTimeProxy(1775466000),
     CutoffId = 10001,
@@ -984,5 +1215,45 @@ return ReadOnly("Cutoff", {
     CutoffShow = 63,
     CutoffStartTime = LocalTimeProxy(1772503200),
     ItemId = 120149
+  },
+  [10008] = {
+    CutoffEndTime = LocalTimeProxy(1780304400),
+    CutoffId = 10008,
+    CutoffPrice = 780,
+    CutoffShow = 60,
+    CutoffStartTime = LocalTimeProxy(1775440800),
+    ItemId = 120152
+  },
+  [10009] = {
+    CutoffEndTime = LocalTimeProxy(1780304400),
+    CutoffId = 10009,
+    CutoffPrice = 980,
+    CutoffShow = 76,
+    CutoffStartTime = LocalTimeProxy(1775440800),
+    ItemId = 120153
+  },
+  [10010] = {
+    CutoffEndTime = LocalTimeProxy(1780304400),
+    CutoffId = 10010,
+    CutoffPrice = 680,
+    CutoffShow = 53,
+    CutoffStartTime = LocalTimeProxy(1776909600),
+    ItemId = 120155
+  },
+  [10011] = {
+    CutoffEndTime = LocalTimeProxy(1780304400),
+    CutoffId = 10011,
+    CutoffPrice = 680,
+    CutoffShow = 53,
+    CutoffStartTime = LocalTimeProxy(1776909600),
+    ItemId = 120157
+  },
+  [10012] = {
+    CutoffEndTime = LocalTimeProxy(1780304400),
+    CutoffId = 10012,
+    CutoffPrice = 680,
+    CutoffShow = 53,
+    CutoffStartTime = LocalTimeProxy(1777946400),
+    ItemId = 120158
   }
 })

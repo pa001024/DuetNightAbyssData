@@ -14,6 +14,7 @@ local QuestChainTypeEnum = {
   Normal = 2,
   Side = 3
 }
+local TEXT_MAX_TASK_CONTENT_WIDTH_FR = 400
 
 function WBP_TaskSubItem_C:Initialize(Initializer)
   self.Super.Initialize(self)
@@ -112,19 +113,33 @@ function WBP_TaskSubItem_C:RefreshTaskSubItemInfo(Content)
     self.Common_Item_Subsize_New_PC:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
   if -1 == self.QuestChainId then
-    self.Text_TaskName:SetText(GText("Quest_ToBeContinued"))
+    if CommonConst.SystemLanguage == CommonConst.SystemLanguages.FR then
+      self.Text_TaskName:SetText(GText("Quest_ToBeContinued"))
+    else
+      self.Text_TaskName:SetText(GText("Quest_ToBeContinued"))
+    end
     self.Text_TaskPosition:SetVisibility(UE4.ESlateVisibility.Collapsed)
   else
     local UnlockTitle = DataMgr.QuestChain[self.QuestChainId].UnlockTitle
     if self.State == QuestRealStateEnum.Lock and UnlockTitle then
-      self.Text_TaskName:SetText(GText(UnlockTitle))
+      if CommonConst.SystemLanguage == CommonConst.SystemLanguages.FR then
+        self.Text_TaskName:SetText(GText(UnlockTitle))
+      else
+        self.Text_TaskName:SetText(GText(UnlockTitle))
+      end
+    elseif CommonConst.SystemLanguage == CommonConst.SystemLanguages.FR then
+      self.Text_TaskName:SetText(self.QuestName)
     else
       self.Text_TaskName:SetText(self.QuestName)
     end
   end
   if "" ~= self.QuestPosition then
     self.Text_TaskPosition:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-    self.Text_TaskPosition:SetText(self.QuestPosition)
+    if CommonConst.SystemLanguage == CommonConst.SystemLanguages.FR then
+      self.Text_TaskPosition:SetText(self.QuestPosition)
+    else
+      self.Text_TaskPosition:SetText(self.QuestPosition)
+    end
   else
     self.Text_TaskPosition:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
@@ -166,6 +181,9 @@ function WBP_TaskSubItem_C:OnQuestSelected()
     self.Common_List_Subcell_PC:OnCellClicked()
   end
   EventManager:FireEvent(EventID.OnSelectQuestSubItem, self.QuestChainId)
+  if self.OwnerWidget then
+    self.OwnerWidget:RefreshSelectionAnimation()
+  end
 end
 
 function WBP_TaskSubItem_C:OnQuestUnSelect()
@@ -270,7 +288,7 @@ function WBP_TaskSubItem_C:TrySetSTLDetail(InQuestChain, InQuestId)
   local NewDetail = ""
   local NewDescription = ""
   for _, Data in pairs(QuestExtraInfo) do
-    if Data.Node and Data.Node.Type == "UpdateTaskBarAndTaskMainNode" and 0 == Data.SubTaskIndex then
+    if Data.Node and Data.Node.Type == "UpdateTaskBarAndTaskMainNode" and 0 == Data.SubTaskIndex and 0 == Data.CurNode then
       NewDetail = Data.Detail
       HasNewDetail = true
       if Data.Description then

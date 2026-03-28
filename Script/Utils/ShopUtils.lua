@@ -124,7 +124,7 @@ function M:GetShopItemCutoffData(ShopItemId)
   end
 end
 
-function M:GetShopItemPrice(ShopItemId)
+function M:GetShopItemPrice(ShopItemId, VoucherId)
   local ShopItemData = DataMgr.ShopItem[ShopItemId]
   assert(ShopItemData, "商品不存在：" .. ShopItemId)
   if DataMgr.ShopItem2PayGoods[ShopItemId] then
@@ -135,11 +135,12 @@ function M:GetShopItemPrice(ShopItemId)
     return Price
   end
   local CutoffData = self:GetShopItemCutoffData(ShopItemId)
+  local ShopItemPrice = ShopItemData.Price or 0
   if CutoffData then
-    return CutoffData.CutoffPrice or ShopItemData.Price
-  else
-    return ShopItemData.Price
+    ShopItemPrice = CutoffData.CutoffPrice or ShopItemData.Price
   end
+  ShopItemPrice = self:GetPriceAfterDiscount(ShopItemId, ShopItemPrice, VoucherId)
+  return ShopItemPrice
 end
 
 function M:GetShopItemPurchaseLimit(ShopItemId)
@@ -669,12 +670,12 @@ function M:Purchase(ShopItemData, ParentWidget)
   Avatar:PurchaseShopItem(ShopItemData.ItemId, 1)
 end
 
-function M:SendPurchaseRequest(ShopItemId, CurrentCount)
+function M:SendPurchaseRequest(ShopItemId, CurrentCount, VoucherId)
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return
   end
-  Avatar:PurchaseShopItem(ShopItemId, CurrentCount)
+  Avatar:PurchaseShopItem(ShopItemId, CurrentCount, nil, nil, VoucherId)
   local ShopMain = UIManager(self):GetUIObj("ShopMain")
   local ShopActivity = UIManager(self):GetUIObj("ActivityShop")
   local CommonShopActivity = UIManager(self):GetUIObj("ShopActivity")
@@ -841,7 +842,7 @@ function M:ShowPurchaseDialog(ItemType, ItemId, ShopType, UIName)
   end
 end
 
-function M:GetNeedRechargeCount(ShopItemId, PriceType, CostNum)
+function M:GetNeedRechargeCount(ShopItemId, PriceType, CostNum, VoucherId)
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return
@@ -853,7 +854,7 @@ function M:GetNeedRechargeCount(ShopItemId, PriceType, CostNum)
     Cost = CostNum
   end
   if ShopItemId then
-    Cost = ShopUtils:GetShopItemPrice(ShopItemId) or 0
+    Cost = ShopUtils:GetShopItemPrice(ShopItemId, VoucherId) or 0
   end
   if CommonConst.Coins.Coin1 == PriceType then
     local Coin4Data = Avatar.Resources[CommonConst.Coins.Coin4]
@@ -867,7 +868,7 @@ function M:GetNeedRechargeCount(ShopItemId, PriceType, CostNum)
   return NeedCount
 end
 
-function M:GetRechargeItem(ShopItemId, PriceType, CostNum)
+function M:GetRechargeItem(ShopItemId, PriceType, CostNum, VoucherId)
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return
@@ -884,7 +885,7 @@ function M:GetRechargeItem(ShopItemId, PriceType, CostNum)
     Cost = CostNum
   end
   if ShopItemId then
-    Cost = ShopUtils:GetShopItemPrice(ShopItemId) or 0
+    Cost = ShopUtils:GetShopItemPrice(ShopItemId, VoucherId) or 0
   end
   local NeedCount = Cost - OwnedCurrencyAmount
   if NeedCount <= 0 then
@@ -918,11 +919,45 @@ function M:GetCloseGetItemPageCallback()
   return Callback
 end
 
+function M:GetCharWeaponHasLevelMax(ShopItemId)
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  local ShopItemData = DataMgr.ShopItem[ShopItemId]
+  if ShopItemData.ItemType == "Walnut" then
+    local WalnutData = DataMgr.Walnut[ShopItemData.TypeId]
+    local GradeLevel = 0
+    if WalnutData.MainRewardType == "Char" then
+      for CharUid, Data in pairs(Avatar.Chars) do
+        if Data.CharId == WalnutData.MainRewardId then
+          if DataMgr.UltraCharCardLevelUp[Data.CharId] and Data.ExtraGradeLevel > 0 then
+            return true
+          end
+          GradeLevel = Data.GradeLevel
+          break
+        end
+      end
+      if not DataMgr.UltraCharCardLevelUp[WalnutData.MainRewardId] and GradeLevel == DataMgr.GlobalConstant.CharCardLevelMax.ConstantValue then
+        return true
+      end
+    elseif WalnutData.MainRewardType == "Weapon" then
+      for WeaponUid, Data in pairs(Avatar.Weapons) do
+        if Data.WeaponId == WalnutData.MainRewardId and Data.GradeLevel >= DataMgr.WeaponCardLevel[Data.WeaponId].CardLevelMax then
+          return true
+        end
+      end
+    end
+  end
+  return false
+end
+
 local ForbiddenBannerBp = {WBP_Shop_Banner_MonthCard = true}
 
 function M:GetBannerInfo(bSwitchTab)
   local BannerIdDict = {}
   local BannerData = {}
+  local SmallBannerData = {}
   local SoldOutBannerData = {}
   local Time = TimeUtils.NowTime()
   local bForbiddenPurchase = not self:IsCanOpenPay(true)
@@ -930,19 +965,23 @@ function M:GetBannerInfo(bSwitchTab)
     if v.IsSwitchTab == bSwitchTab and (not bForbiddenPurchase or not ForbiddenBannerBp[v.Bp]) and Time >= v.StartTime then
       local isExpired = v.EndTime and Time > v.EndTime
       if not isExpired then
-        if v.BannerType == UIConst.ShopBannerType.DailyPack then
-          local DisplayableItems = self:GetDailyPackShopItemInfo(v.Id)
-          if 0 == #DisplayableItems then
-        end
+        if v.ShortTabSequence then
+          table.insert(SmallBannerData, v)
         else
-          local DailyPackSoldOut = v.BannerType == UIConst.ShopBannerType.DailyPack and self:ShouldSinkDailyPackTab(v)
-          local MonthCardSoldOut = v.BannerType == UIConst.ShopBannerType.MonthCard and MonthCardModel:IsMonthCardPurchased()
-          if v.SoldOutSinkBanner and v.ItemId and 0 == self:GetShopItemPurchaseLimit(v.ItemId) or MonthCardSoldOut or DailyPackSoldOut then
-            table.insert(SoldOutBannerData, v)
-          else
-            table.insert(BannerData, v)
+          if v.BannerType == UIConst.ShopBannerType.DailyPack then
+            local DisplayableItems = self:GetDailyPackShopItemInfo(v.Id)
+            if 0 == #DisplayableItems then
           end
-          BannerIdDict[v.Id] = true
+          else
+            local DailyPackSoldOut = v.BannerType == UIConst.ShopBannerType.DailyPack and self:ShouldSinkDailyPackTab(v)
+            local MonthCardSoldOut = v.BannerType == UIConst.ShopBannerType.MonthCard and MonthCardModel:IsMonthCardPurchased()
+            if v.SoldOutSinkBanner and v.ItemId and 0 == self:GetShopItemPurchaseLimit(v.ItemId) or MonthCardSoldOut or DailyPackSoldOut then
+              table.insert(SoldOutBannerData, v)
+            else
+              table.insert(BannerData, v)
+            end
+            BannerIdDict[v.Id] = true
+          end
         end
       elseif v.BannerType == UIConst.ShopBannerType.DailyPack and not self:ShouldHideDailyPackTab(v) then
         table.insert(SoldOutBannerData, v)
@@ -950,6 +989,22 @@ function M:GetBannerInfo(bSwitchTab)
       end
     end
   end
+  if #SmallBannerData > 4 then
+    local SmallBannerDataSort = {}
+    local MonthBanner
+    for index, data in ipairs(SmallBannerData) do
+      if data.BannerType == UIConst.ShopBannerType.MonthCard then
+        MonthBanner = data
+      elseif #SmallBannerDataSort < 4 then
+        table.insert(SmallBannerDataSort, data)
+      end
+    end
+    table.insert(SmallBannerDataSort, MonthBanner)
+    SmallBannerData = SmallBannerDataSort
+  end
+  table.sort(SmallBannerData, function(a, b)
+    return a.ShortTabSequence < b.ShortTabSequence
+  end)
   table.sort(BannerData, function(a, b)
     return a.Sequence < b.Sequence
   end)
@@ -963,7 +1018,7 @@ function M:GetBannerInfo(bSwitchTab)
   for _, ShopData in ipairs(SoldOutBannerData) do
     table.insert(Res, ShopData)
   end
-  return Res, BannerIdDict
+  return Res, BannerIdDict, SmallBannerData
 end
 
 function M:GetComplexInfo(SubTabId)
@@ -1265,6 +1320,136 @@ function M:OpenLockConditionPopup(ShopItemData)
   local Params = {}
   Params.ItemConditions = ShopItemData.ItemCondition
   UIManager(self):ShowCommonPopupUI(100292, Params)
+end
+
+function M:GetValidVouchers(ShopItemData)
+  local ValidVouchers = {}
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return ValidVouchers
+  end
+  if DataMgr.ShopItem2PayGoods and DataMgr.ShopItem2PayGoods[ShopItemData.ItemId] then
+    return ValidVouchers
+  end
+  if 1 ~= ShopItemData.PurchaseLimit then
+    return ValidVouchers
+  end
+  local RealPrice = self:GetShopItemPrice(ShopItemData.ItemId)
+  for VoucherId, VoucherInfo in pairs(DataMgr.Voucher) do
+    local ResId = VoucherInfo.ResourceId
+    local PlayerRes = Avatar.Resources[ResId]
+    local LimitedInfo = ItemUtils.GetItemLimitedInfo(ResId)
+    if PlayerRes and PlayerRes.Count > 0 then
+      local bIsValidItem = false
+      if VoucherInfo.ItemId and #VoucherInfo.ItemId > 0 then
+        for _, TargetId in ipairs(VoucherInfo.ItemId) do
+          if TargetId == ShopItemData.ItemId then
+            bIsValidItem = true
+            break
+          end
+        end
+      elseif VoucherInfo.CoinResourceId == ShopItemData.PriceType then
+        bIsValidItem = true
+      end
+      if bIsValidItem then
+        local Threshold = VoucherInfo.ThresholdPrice or 0
+        if RealPrice >= Threshold then
+          local MergedData = {}
+          local ResConfig = DataMgr.Resource[ResId]
+          if ResConfig then
+            for k, v in pairs(ResConfig) do
+              MergedData[k] = v
+            end
+          end
+          for k, v in pairs(VoucherInfo) do
+            MergedData[k] = v
+          end
+          MergedData.VoucherNum = PlayerRes.Count
+          MergedData.ActualDiscount = math.min(VoucherInfo.DiscountPrice or 0, RealPrice)
+          MergedData.ExpireTime = LimitedInfo and LimitedInfo.EndTime or math.huge
+          table.insert(ValidVouchers, MergedData)
+        end
+      end
+    end
+  end
+  table.sort(ValidVouchers, function(a, b)
+    local isSpecificA = a.ItemId ~= nil and #a.ItemId > 0
+    local isSpecificB = b.ItemId ~= nil and #b.ItemId > 0
+    if isSpecificA ~= isSpecificB then
+      return isSpecificA
+    end
+    local actualA = a.ActualDiscount or 0
+    local actualB = b.ActualDiscount or 0
+    if actualA ~= actualB then
+      return actualA > actualB
+    end
+    local discountA = a.DiscountPrice or 0
+    local discountB = b.DiscountPrice or 0
+    if discountA ~= discountB then
+      return discountA < discountB
+    end
+    local timeA = a.ExpireTime
+    local timeB = b.ExpireTime
+    if timeA ~= timeB then
+      return timeA < timeB
+    end
+    return (a.VoucherId or 0) < (b.VoucherId or 0)
+  end)
+  return ValidVouchers
+end
+
+function M:GetBestVoucher(ValidVouchers)
+  if ValidVouchers and #ValidVouchers > 0 then
+    return ValidVouchers[1]
+  end
+  return nil
+end
+
+function M:GetPriceAfterDiscount(ShopItemId, ShopItemPrice, VoucherId)
+  if not VoucherId or VoucherId <= 0 then
+    return ShopItemPrice
+  end
+  local ShopItemData = DataMgr.ShopItem[ShopItemId]
+  if not ShopItemData then
+    return ShopItemPrice
+  end
+  if DataMgr.ShopItem2PayGoods[ShopItemId] or 1 ~= ShopItemData.PurchaseLimit then
+    DebugPrint(string.format("[Warning] GetPriceAfterDiscount: Item %d is NOT allowed to use vouchers!", ShopItemId))
+    return ShopItemPrice
+  end
+  local VoucherInfo = DataMgr.Voucher[VoucherId]
+  if VoucherInfo then
+    local Threshold = VoucherInfo.ThresholdPrice or 0
+    if ShopItemPrice >= Threshold then
+      local Discount = VoucherInfo.DiscountPrice or 0
+      ShopItemPrice = math.max(ShopItemPrice - Discount, 0)
+    else
+      DebugPrint(string.format("[Warning] GetPriceAfterDiscount: Voucher %d threshold (%d) not met for Item %d (Price: %d)", VoucherId, Threshold, ShopItemId, ShopItemPrice))
+    end
+  else
+    DebugPrint("[Error] GetPriceAfterDiscount: Invalid VoucherId passed: " .. tostring(VoucherId))
+  end
+  return ShopItemPrice
+end
+
+function M:HasAnyVoucherConfig(ShopItemId)
+  local ShopItemData = DataMgr.ShopItem[ShopItemId]
+  if not ShopItemData then
+    return false
+  end
+  if DataMgr.ShopItem2PayGoods[ShopItemId] or 1 ~= ShopItemData.PurchaseLimit then
+    return false
+  end
+  for _, VoucherInfo in pairs(DataMgr.Voucher or {}) do
+    if VoucherInfo.ItemId and #VoucherInfo.ItemId > 0 then
+      for _, TargetId in ipairs(VoucherInfo.ItemId) do
+        if TargetId == ShopItemId then
+          return true
+        end
+      end
+    end
+  end
+  return false
 end
 
 return M

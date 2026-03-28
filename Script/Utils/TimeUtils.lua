@@ -20,6 +20,18 @@ function TimeUtils.NowTime()
   end
 end
 
+function TimeUtils.NowTimeMs()
+  if GWorld:GetAvatar() and TimeUtils.StandardTimestamp > 0 then
+    local Elapsed = UE4.UGameplayStatics.GetRealTimeSeconds(GWorld.GameInstance) - TimeUtils.RemoveStandardOffset
+    if Elapsed < 0 then
+      Elapsed = 0
+    end
+    return math.floor((TimeUtils.StandardTimestamp + Elapsed) * 1000)
+  else
+    return (os.time() + TimeUtils.TimeOffset) * 1000
+  end
+end
+
 function TimeUtils.RealTime()
   return os.time()
 end

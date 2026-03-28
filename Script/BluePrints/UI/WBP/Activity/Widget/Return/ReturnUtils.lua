@@ -72,7 +72,7 @@ function ReturnUtils.GetSevenDayRewardValidIndex()
   return AllValidIndex
 end
 
-function ReturnUtils.ShowReturnActiGetItemPage(AllValidIndex)
+function ReturnUtils.ShowReturnActiGetItemPage(AllValidIndex, TargetWidget)
   local CurrentEventSchemeId = DataMgr.ComeBackEventConstant.CurrentEventSchemeId.ConstantValue
   assert(CurrentEventSchemeId, "lgc@CurrentEventSchemeId is nil, 需要策划检查下ComeBackEventConstant表中的CurrentEventSchemeId")
   local CurrentEventSchemeData = DataMgr.ComeBackEvent[CurrentEventSchemeId]
@@ -99,7 +99,7 @@ function ReturnUtils.ShowReturnActiGetItemPage(AllValidIndex)
     table.insert(ValidRewardIds, LoginReward[Index])
   end
   local AllRewards = RewardUtils:GetRewards(ValidRewardIds, nil)
-  UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, AllRewards, false, nil, self, false)
+  UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, AllRewards, false, nil, TargetWidget, false)
 end
 
 function ReturnUtils.ReturnAddReddotListener(TargetUI, ReddotNodeName, func)

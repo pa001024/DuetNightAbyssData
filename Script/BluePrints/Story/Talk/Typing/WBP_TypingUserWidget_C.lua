@@ -11,6 +11,7 @@ local ETypingStates = {
   Typing = 4,
   Error = 5
 }
+local OneVector2D = FVector2D(1, 1)
 
 function M:Construct()
   self.RichMatch = "<.-/>"
@@ -25,7 +26,9 @@ function M:Construct()
   self.TypingBlocks = nil
   self.CurPageIdx = 0
   
-  function self.CalcRichTextBlockSize(RichText)
+  function self.CalcRichTextBlockSize(RichText, Scale)
+    Scale = Scale or OneVector2D
+    self.RichTextBlock_Calc:SetRenderScale(Scale)
     self.RichTextBlock_Calc:SetText(RichText)
     self.RichTextBlock_Calc:ForceLayoutPrepass()
     return self.RichTextBlock_Calc:GetDesiredSize()
@@ -262,7 +265,15 @@ function M:CalculateSize()
         local SText = superscript.text
         local SBlock = FTypingTextBlock:New(SText, superscript.style or "Note")
         local SRichText = SBlock:GetRichText()
-        SBlock:SetSize(self.CalcRichTextBlockSize(SRichText))
+        local SRSize = self.CalcRichTextBlockSize(SRichText)
+        local Scale = FVector2D(1, 1)
+        if SRSize.X > Size.X and SRSize.X > 0 then
+          Scale.X = Size.X / SRSize.X
+          Scale.Y = Scale.X
+          SRSize = self.CalcRichTextBlockSize(SRichText, Scale)
+        end
+        SBlock:SetScale(Scale)
+        SBlock:SetSize(SRSize)
         Block:SetAttr("superscript_block", SBlock)
       end
     end
@@ -307,6 +318,24 @@ function M:SplitBlock(BlockArr, Text, Match)
   end
 end
 
+function M:_TryTransUpRichStyle(RichTagAndAttrs)
+  if string.startswith(RichTagAndAttrs, "up") then
+    local upList = string.split(RichTagAndAttrs, " ")
+    local NewAttrs = {}
+    for i = 2, #upList do
+      local Attr = upList[i]
+      local AttrName, Val = table.unpack(string.split(Attr, "="))
+      local Val = string.sub(Val, 2, #Val - 1)
+      if "text" == AttrName or "style" == AttrName then
+        local NewAttr = string.format("%s:%s", AttrName, Val)
+        table.insert(NewAttrs, NewAttr)
+      end
+    end
+    return string.format("Default note=\"%s\"", table.concat(NewAttrs, ","))
+  end
+  return RichTagAndAttrs
+end
+
 function M:CalcRich(BlockArr, RichStr)
   local IsMatch = string.match(RichStr, self.TextRichMatch)
   RichStr = self:RemoveSpaces(RichStr)
@@ -315,6 +344,7 @@ function M:CalcRich(BlockArr, RichStr)
     local RichTagAndAttrs = string.sub(RichStr, 2, T1 - 2)
     local T2 = string.find(RichStr, "<", T1) - 1
     local Text = string.sub(RichStr, T1, T2)
+    RichTagAndAttrs = self:_TryTransUpRichStyle(RichTagAndAttrs)
     local Tag, Attrs = self:SplitTagAndAttrs(RichTagAndAttrs)
     table.insert(BlockArr, FTypingTextBlock:New(Text, Tag, Attrs))
   end
@@ -456,6 +486,8 @@ function M:InitLineTyping(Page, Index, LinePosY)
     end
     SuperscriptUI:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
     SuperscriptUI:SetText(SuperscriptBlock:GetRichText())
+    local Scale = SuperscriptBlock:GetScale()
+    SuperscriptUI:SetRenderScale(Scale)
     local SSize = SuperscriptBlock:GetSize()
     MaxSuperscriptHeight = math.max(MaxSuperscriptHeight, SSize.Y)
     local SPos = FVector2D(SuperscriptBlock.RelativePosX, 0)
@@ -465,6 +497,7 @@ function M:InitLineTyping(Page, Index, LinePosY)
       SPos.X = LineSize.X - SSize.X
     end
     local SSlot = UE4.UWidgetLayoutLibrary.SlotAsCanvasSlot(SuperscriptUI)
+    SSlot:SetAutoSize(true)
     SSlot:SetPosition(SPos)
   end
   Widget.MainRichText:SetText(Line:GetRichText())

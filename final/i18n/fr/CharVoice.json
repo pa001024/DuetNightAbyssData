@@ -142,7 +142,7 @@
   {
     "id": 10022,
     "charId": 1101,
-    "name": "Vœux d'anniversaire",
+    "name": "Vœux d’anniversaire",
     "res": "char_Heitao_vo_birthday",
     "text": "Tu m’as dit vouloir fêter ton anniversaire... comme tout le monde. Alors, j’ai essayé de faire comme eux : je t’ai préparé un gâteau. On dit qu’un anniversaire sans gâteau... ce n’est pas vraiment un anniversaire. J’espère qu’à l’avenir, quand tu repenseras à ce mot, \"anniversaire\", ton cœur ne retiendra que la joie."
   },
@@ -249,28 +249,28 @@
     "charId": 2101,
     "name": "Apparence de personnage : Première rencontre",
     "res": "char_Shuimu01_vo_gain",
-    "text": "Avant l’aube, dansons ensemble, pour toujours, pour l’éternité... jusqu’à ce que j’embrasse tes lèvres pâles, jusqu’à ce que la mort nous sépare."
+    "text": "Bevor die Morgendämmerung anbricht, lass uns tanzen, für immer und ewig, bis ich deine blassen Lippen küsse, bis der Tod uns scheidet."
   },
   {
     "id": 10038,
     "charId": 2101,
     "name": "Apparence de personnage : Prêt à l’action",
     "res": "char_Shuimu01_vo_appear",
-    "text": "« Boum... boum... » Tu entends ? C’est mon cœur qui bat, chaque battement exprime mon manque pour toi."
+    "text": "Poch ... poch ... Hörst du das? Es ist mein Herzschlag. Jeder Schlag eine Silbe des Vermissens."
   },
   {
     "id": 10039,
     "charId": 2101,
     "name": "Apparence de personnage : Début du combat",
     "res": "char_Shuimu01_vo_battlestart",
-    "text": "Commençons par un petit pas de valse... un, et deux..."
+    "text": "Sollen wir mit einem Walzer beginnen? Genau so ... eins, und zwei ..."
   },
   {
     "id": 10040,
     "charId": 2101,
     "name": "Apparence de personnage : Compétence ultime",
     "res": "char_Shuimu01_vo_skill02_r01",
-    "text": "Que ce voile de sept couches, tel un saphir, se teigne de cramoisi."
+    "text": "Lasst uns den siebenfachen Saphirschleier mit Karmesin färben."
   },
   {
     "id": 10041,
@@ -312,7 +312,7 @@
     "charId": 2101,
     "name": "DiscussionÀ propos de l’amourI",
     "res": "char_Shuimu_vo_topic_02_1",
-    "text": "Ah, tu t'engages dans une conversation sur l'amour avec moi, comme c'est inattendu."
+    "text": "Ah, tu t’engages dans une conversation sur l’amour avec moi, comme c’est inattendu."
   },
   {
     "id": 10047,
@@ -361,14 +361,14 @@
     "charId": 2101,
     "name": "DiscussionÀ propos de ton veninI",
     "res": "char_Shuimu_vo_topic_04_1",
-    "text": "Je vais très bien. Mon venin fait partie de moi, comme un cadeau du Dieu de l'Amour, il est inoffensif pour moi et m’aidera à trouver l’amour de ma vie."
+    "text": "Je vais très bien. Mon venin fait partie de moi, comme un cadeau du Dieu de l’Amour, il est inoffensif pour moi et m’aidera à trouver l’amour de ma vie."
   },
   {
     "id": 10054,
     "charId": 2101,
     "name": "DiscussionÀ propos de ton veninII",
     "res": "char_Shuimu_vo_topic_04_2",
-    "text": "Bien sûr. Même si cela me fait souvent passer pour un monstre, cela me distingue également des autres. Je pense que le partenaire destiné à un monstre doit être quelqu'un de très spécial, tu ne crois pas ?"
+    "text": "Bien sûr. Même si cela me fait souvent passer pour un monstre, cela me distingue également des autres. Je pense que le partenaire destiné à un monstre doit être quelqu’un de très spécial, tu ne crois pas ?"
   },
   {
     "id": 10055,
@@ -408,7 +408,7 @@
   {
     "id": 10061,
     "charId": 2101,
-    "name": "Vœux d'anniversaire",
+    "name": "Vœux d’anniversaire",
     "res": "char_Shuimu_vo_birthday",
     "text": "J’ai entendu dire que c’était ton anniversaire aujourd’hui. Tu veux m’accompagner dans mon jardin aromatique ? J’y ai cultivé des plantes rien que pour toi. Chacune renferme le pur arôme de l’amour, pensé pour nous deux, et rien que nous. Quoi ? Toxique ? <I>rire léger</> Viens, tu verras bien."
   },
@@ -459,7 +459,7 @@
     "charId": 2101,
     "name": "Blessé : I",
     "res": "char_Shuimu_vo_be_hit_heavy_r01",
-    "text": "C'est vraiment cruel."
+    "text": "C’est vraiment cruel."
   },
   {
     "id": 10069,
@@ -487,7 +487,7 @@
     "charId": 2101,
     "name": "Compétence ultime : III",
     "res": "char_Shuimu_vo_skill02_r03",
-    "text": "N'ayez crainte, car je vous enverrai au Pays de l'Amour."
+    "text": "N’ayez crainte, car je vous enverrai au Pays de l’Amour."
   },
   {
     "id": 10073,
@@ -522,7 +522,7 @@
     "charId": 2101,
     "name": "Retraite",
     "res": "char_Shuimu_vo_fail",
-    "text": "C’est trop triste... J'aurais vraiment besoin d'un peu de réconfort de ta part..."
+    "text": "C’est trop triste... J’aurais vraiment besoin d’un peu de réconfort de ta part..."
   },
   {
     "id": 10078,
@@ -557,7 +557,7 @@
     "charId": 2301,
     "name": "DiscussionÀ propos de l’imitationIII",
     "res": "char_Zhangyu_vo_topic_01_3",
-    "text": "Tu es en colère ? Hihihi, cette grimace sur ton visage me donne encore plus envie de t'imiter !"
+    "text": "Tu es en colère ? Hihihi, cette grimace sur ton visage me donne encore plus envie de t’imiter !"
   },
   {
     "id": 10083,
@@ -641,7 +641,7 @@
     "charId": 2301,
     "name": "DiscussionRencontre aléatoire : II",
     "res": "char_Zhangyu_vo_companio_02",
-    "text": "C’est pour moi ? Hmm... t’as une tête louche, toi... Oh non, ce parfum... j’ai la tête qui tourne, et mes tentacules picotent ! T’es vraiment trop suspecte !"
+    "text": "C’est pour moi ? <I>Hmm...</> t’as une tête louche, toi... Oh non, ce parfum... j’ai la tête qui tourne, et mes tentacules picotent ! T’es vraiment trop suspecte !"
   },
   {
     "id": 10095,
@@ -653,7 +653,7 @@
   {
     "id": 10096,
     "charId": 2301,
-    "name": "Vœux d'anniversaire",
+    "name": "Vœux d’anniversaire",
     "res": "char_Zhangyu_vo_birthday",
     "text": "Moi j’ai jamais eu d’anniversaire, tu sais ? Alors, je te souhaite de jamais avoir faim. Que tu sois toujours comblé. Comme ça, t’auras jamais besoin de voler... promiiiis ?"
   },
@@ -795,7 +795,7 @@
     "charId": 3101,
     "name": "DiscussionÀ propos de SibylleII",
     "res": "char_Linen_vo_topic_01_2",
-    "text": "Pff, qu’est-ce que tu veux que je sache ? C’est elle qui décide, moi je fais le boulot. C’est tout."
+    "text": "<I>Pff</>, qu’est-ce que tu veux que je sache ? C’est elle qui décide, moi je fais le boulot. C’est tout."
   },
   {
     "id": 10117,
@@ -877,16 +877,16 @@
   {
     "id": 10128,
     "charId": 3101,
-    "name": "Vœux d'anniversaire",
+    "name": "Vœux d’anniversaire",
     "res": "char_Linen_vo_birthday",
-    "text": "Joyeux anniversaire. Je ne suis pas du genre à faire dans le sentimental, alors je te souhaite juste de ne jamais manquer d'argent. Et pour la mission d’aujourd’hui, je t’offre une ristourne de 20 %. C’est pas mal, non ?"
+    "text": "Joyeux anniversaire. Je ne suis pas du genre à faire dans le sentimental, alors je te souhaite juste de ne jamais manquer d’argent. Et pour la mission d’aujourd’hui, je t’offre une ristourne de 20 %. C’est pas mal, non ?"
   },
   {
     "id": 10129,
     "charId": 3101,
     "name": "Prêt à l’action",
     "res": "char_Linen_vo_appear",
-    "text": "Qui est la cible aujourd'hui ?"
+    "text": "Qui est la cible aujourd’hui ?"
   },
   {
     "id": 10130,
@@ -1003,7 +1003,7 @@
   {
     "id": 10186,
     "charId": 4201,
-    "name": "Première rencontre(Doublage à venir)",
+    "name": "Première rencontre",
     "res": "char_Yuming_vo_gain",
     "text": "Tu fais appel à moi... En tant qu’ami ? Ou bien comme une arme à manipuler à ta guise ?"
   },
@@ -1054,7 +1054,7 @@
     "charId": 4201,
     "name": "DiscussionÀ propos de ton humeurII",
     "res": "char_Yuming_vo_topic_03_2",
-    "text": "Je te remercie de ta sollicitude, mais je ne voudrais pas accabler quelqu'un d’autre avec mes malheurs. Ce n’est pas nécessaire."
+    "text": "Je te remercie de ta sollicitude, mais je ne voudrais pas accabler quelqu’un d’autre avec mes malheurs. Ce n’est pas nécessaire."
   },
   {
     "id": 10194,
@@ -1101,7 +1101,7 @@
   {
     "id": 10200,
     "charId": 4201,
-    "name": "Vœux d'anniversaire",
+    "name": "Vœux d’anniversaire",
     "res": "char_Yuming_vo_birthday",
     "text": "Un anniversaire ? Je n’ai jamais accordé d’importance à ce genre de choses, ma fidélité aux Neuf Chapitres de Dafeng relègue vie et mort au rang de simples notes en bas de page. Mais... peut-être qu’un vœu sincère peut faire naître un sourire. Joyeux anniversaire."
   },
@@ -1285,7 +1285,7 @@
     "charId": 5301,
     "name": "DiscussionÀ propos de l’Empire et des CharonsII",
     "res": "char_Saiqi_vo_topic_02_2",
-    "text": "Probablement. On dit que « la magie est la source de tous les maux ». Les livres d'histoire affirment que nos ancêtres l’ont utilisée pour régner sur les Solariens il y a plus de mille ans, commettant des actes terribles."
+    "text": "Probablement. On dit que « la magie est la source de tous les maux ». Les livres d’histoire affirment que nos ancêtres l’ont utilisée pour régner sur les Solariens il y a plus de mille ans, commettant des actes terribles."
   },
   {
     "id": 10227,
@@ -1379,6 +1379,13 @@
     "text": "J’ai entendu dire que tu avais prévu une grande fête d’anniversaire pour Fina. Je savais que tu avais un cœur attentionné, malgré ton franc-parler. Est-ce que je peux me joindre à toi la prochaine fois que tu lui prépareras une grande surprise pour son anniversaire ?"
   },
   {
+    "id": 10240,
+    "charId": 5301,
+    "name": "DiscussionRencontre aléatoire : II",
+    "res": "char_Saiqi_vo_companio_02",
+    "text": "En voyant Camilla, je pense à cette taverne animée et accueillante... Quelle chance de vous connaître."
+  },
+  {
     "id": 10241,
     "charId": 5301,
     "name": "DiscussionRencontre aléatoire : III",
@@ -1388,7 +1395,7 @@
   {
     "id": 10242,
     "charId": 5301,
-    "name": "Vœux d'anniversaire",
+    "name": "Vœux d’anniversaire",
     "res": "char_Saiqi_vo_birthday",
     "text": "Joyeux anniversaire ! J’ai un cadeau pour toi... J’espère qu’il te plaira. C’est un lotus des neiges. Il symbolise la renaissance. Tu sais, depuis notre rencontre, nous avons vécu tant d’aventures ensemble, et j’ai vu ton évolution, ta transformation. C’est pour ça que je trouve que ce lotus est le cadeau parfait pour toi !"
   },
@@ -1544,7 +1551,7 @@
     "charId": 2401,
     "name": "Salutation",
     "res": "char_Baiheng_vo_welcome",
-    "text": "L'environnement façonne l'esprit, et prendre soin de soi renforce le corps. Peut-être qu'une promenade sous ce ciel clément pourrait te faire du bien."
+    "text": "L’environnement façonne l’esprit, et prendre soin de soi renforce le corps. Peut-être qu’une promenade sous ce ciel clément pourrait te faire du bien."
   },
   {
     "id": 10265,
@@ -1600,7 +1607,7 @@
     "charId": 2401,
     "name": "DiscussionÀ propos de ta patrieII",
     "res": "char_Baiheng_vo_topic_03_2",
-    "text": "Sa mission est unique : guérir. Chaque médecin plante un abricotier en commençant sa formation. Cependant, au fil du temps, les intempéries ont emporté beaucoup d'entre eux. Aujourd’hui, il en reste moins de la moitié."
+    "text": "Sa mission est unique : guérir. Chaque médecin plante un abricotier en commençant sa formation. Cependant, au fil du temps, les intempéries ont emporté beaucoup d’entre eux. Aujourd’hui, il en reste moins de la moitié."
   },
   {
     "id": 10273,
@@ -1649,7 +1656,7 @@
     "charId": 2401,
     "name": "DiscussionRencontre aléatoire : I",
     "res": "char_Baiheng_vo_companio_01",
-    "text": "Monsieur Randy, à mon humble avis, la léthargie et le laxisme ne sont pas moins des symptômes de maladie. Ils ne vous dérangent peut-être pas pour l'instant, mais ils sèment les graines de futurs maux. Peut-être pourrions-nous faire un peu d’entraînement physique ? Un peu d'exercice pourrait vous faire du bien."
+    "text": "Monsieur Randy, à mon humble avis, la léthargie et le laxisme ne sont pas moins des symptômes de maladie. Ils ne vous dérangent peut-être pas pour l’instant, mais ils sèment les graines de futurs maux. Peut-être pourrions-nous faire un peu d’entraînement physique ? Un peu d’exercice pourrait vous faire du bien."
   },
   {
     "id": 10280,
@@ -1668,7 +1675,7 @@
   {
     "id": 10282,
     "charId": 2401,
-    "name": "Vœux d'anniversaire",
+    "name": "Vœux d’anniversaire",
     "res": "char_Baiheng_vo_birthday",
     "text": "Aujourd’hui est un jour spécial pour toi. En l’honneur de cette journée, je t’ai préparé un modeste cadeau : une collection de remèdes à base de plantes pour soulager les petits maux que l’on peut rencontrer en voyage. Que ce soit un rhume, une égratignure ou une contusion, ces remèdes te seront très utiles. Cependant, j’espère sincèrement que tu resteras en bonne santé et en sécurité et que tu n’auras jamais besoin de les utiliser."
   },
@@ -1698,7 +1705,7 @@
     "charId": 2401,
     "name": "Repos",
     "res": "char_Baiheng_vo_battleidle",
-    "text": "Je perçois des appels à l'aide au loin... Il faut y aller sans tarder."
+    "text": "Je perçois des appels à l’aide au loin... Il faut y aller sans tarder."
   },
   {
     "id": 10287,
@@ -1859,7 +1866,7 @@
     "charId": 5101,
     "name": "DiscussionÀ propos du combatI",
     "res": "char_Songlu_vo_topic_02_1",
-    "text": "Bah, peut-être ? Je ne sais pas trop. Mais Filbert ne fonce que sur les vilains qui crient et se bagarrent ! Ils l'ont bien cherché !"
+    "text": "Bah, peut-être ? Je ne sais pas trop. Mais Filbert ne fonce que sur les vilains qui crient et se bagarrent ! Ils l’ont bien cherché !"
   },
   {
     "id": 10310,
@@ -1894,7 +1901,7 @@
     "charId": 5101,
     "name": "DiscussionÀ propos de FilbertII",
     "res": "char_Songlu_vo_topic_03_2",
-    "text": "T’en fais pas ! Filbert apporte toujours plus de nourriture. Alors ne te moque jamais d'elle, ça la blesserait, et moi aussi."
+    "text": "T’en fais pas ! Filbert apporte toujours plus de nourriture. Alors ne te moque jamais d’elle, ça la blesserait, et moi aussi."
   },
   {
     "id": 10315,
@@ -1908,7 +1915,7 @@
     "charId": 5101,
     "name": "DiscussionÀ propos des vêtementsII",
     "res": "char_Songlu_vo_topic_04_2",
-    "text": "Parce que courir en robe, c’est pas pratique. Une fois, j'ai trébuché sur l'ourlet et tout le pain que je portais est tombé."
+    "text": "Parce que courir en robe, c’est pas pratique. Une fois, j’ai trébuché sur l’ourlet et tout le pain que je portais est tombé."
   },
   {
     "id": 10317,
@@ -1922,14 +1929,14 @@
     "charId": 5101,
     "name": "DiscussionÀ propos de la gourmandiseI",
     "res": "char_Songlu_vo_topic_05_1",
-    "text": "Pas du tout ! Je médite. Je fais partie de l’Église Élyséenne, après tout, alors j'essaie de réfléchir profondément de temps en temps."
+    "text": "Pas du tout ! Je médite. Je fais partie de l’Église Élyséenne, après tout, alors j’essaie de réfléchir profondément de temps en temps."
   },
   {
     "id": 10319,
     "charId": 5101,
     "name": "DiscussionÀ propos de la gourmandiseII",
     "res": "char_Songlu_vo_topic_05_2",
-    "text": "Je me posais souvent la question, mais les prêtres disait que c'était... blasphématoire ou quelque chose comme ça. Alors j'ai arrêté d'y penser."
+    "text": "Je me posais souvent la question, mais les prêtres disait que c’était... blasphématoire ou quelque chose comme ça. Alors j’ai arrêté d’y penser."
   },
   {
     "id": 10320,
@@ -1969,7 +1976,7 @@
   {
     "id": 10325,
     "charId": 5101,
-    "name": "Vœux d'anniversaire",
+    "name": "Vœux d’anniversaire",
     "res": "char_Songlu_vo_birthday",
     "text": "Joyeux anniversaire ! J’avais préparé un énorme gâteau à la crème, avec des noix et de la confiture. Mais son odeur a attiré beaucoup de monde... alors... euh... je l’ai partagé avec eux aussi. Mais ne t’inquiète pas, je t’ai gardé une part ! Regarde, j’ai choisi la plus grosse, avec plein de confiture et des baies boréales dessus. Goûte-la, elle est bien meilleure que nos rations militaires !"
   },
@@ -2062,7 +2069,7 @@
     "charId": 5101,
     "name": "Ressuscité",
     "res": "char_Songlu_vo_revive",
-    "text": "La nourriture d'urgence est dégoûtante... Mais au moins, elle me remplit l'estomac."
+    "text": "La nourriture d’urgence est dégoûtante... Mais au moins, elle me remplit l’estomac."
   },
   {
     "id": 10339,
@@ -2298,7 +2305,7 @@
   {
     "id": 10372,
     "charId": 4202,
-    "name": "Vœux d'anniversaire",
+    "name": "Vœux d’anniversaire",
     "res": "char_Landi_vo_birthday",
     "text": "Aujourd’hui, j’ai sacrifié mon précieux temps de repos, de mon plein gré, hein, juste pour que ton anniversaire soit inoubliable. Hum hum... J’ai aussi amélioré un peu tes ustensiles de cuisine pour te faire un gâteau. Bon, il ressemble vaguement à un gâteau... mais sois {性别:indulgent|indulgente}, c’est ma première fois, et c’était un sacré chantier."
   },
@@ -2517,7 +2524,7 @@
     "charId": 4301,
     "name": "Ressuscité",
     "res": "char_Xibi_vo_revive",
-    "text": "L'enfer n'est pas si terrible. J'y suis déjà allé."
+    "text": "L’enfer n’est pas si terrible. J’y suis déjà allé."
   },
   {
     "id": 10406,
@@ -2536,9 +2543,9 @@
   {
     "id": 10408,
     "charId": 4301,
-    "name": "Vœux d'anniversaire",
+    "name": "Vœux d’anniversaire",
     "res": "char_Xibi_vo_birthday",
-    "text": "Qu'est-ce que tu attends ? Tu espérais un gâteau ? Rêve toujours. Mais à notre prochaine rencontre, je te laisserai peut-être une ouverture..."
+    "text": "Qu’est-ce que tu attends ? Tu espérais un gâteau ? Rêve toujours. Mais à notre prochaine rencontre, je te laisserai peut-être une ouverture..."
   },
   {
     "id": 10409,
@@ -2622,7 +2629,7 @@
     "charId": 3301,
     "name": "DiscussionÀ propos des champs de neigeI",
     "res": "char_Maer_vo_topic_03_1",
-    "text": "Non, pas du tout ! J’adore Givrelac de tout mon cœur. C’est juste que je repense souvent aux jours où je parcourais les champs de neige avec mon père, c'est comme ça que j’ai grandi."
+    "text": "Non, pas du tout ! J’adore Givrelac de tout mon cœur. C’est juste que je repense souvent aux jours où je parcourais les champs de neige avec mon père, c’est comme ça que j’ai grandi."
   },
   {
     "id": 10421,
@@ -2685,7 +2692,7 @@
     "charId": 3301,
     "name": "Monologue",
     "res": "char_Maer_vo_idle",
-    "text": "Hmm, quel temps magnifique, parfait pour cueillir des fleurs et sentir bon après ! {nickname}, tu veux venir te balader avec moi ?"
+    "text": "<I>Hmm</>, quel temps magnifique, parfait pour cueillir des fleurs et sentir bon après ! {nickname}, tu veux venir te balader avec moi ?"
   },
   {
     "id": 10431,
@@ -2707,6 +2714,13 @@
     "name": "DiscussionRencontre aléatoire : IV",
     "res": "char_Maer_vo_companio_04",
     "text": "Tu vis au jour le jour, n’est-ce pas... ? C’est vraiment difficile. Tu veux venir avec moi faire un peu de récupération ? Ça pourrait te faciliter un peu les choses..."
+  },
+  {
+    "id": 10434,
+    "charId": 3301,
+    "name": "DiscussionRencontre aléatoire : V",
+    "res": "char_Maer_vo_companio_05",
+    "text": "Camilla ! Toi, la plus gentille et la plus belle de Givrelac ! J’ai un tout petit, tout petit problème, tu pourrais m’aider à m’en sortir... Promis, c’est la dernière fois ! Euh, enfin, la dernière fois ce mois-ci ! Tu vas pas me dire non, hein ?"
   },
   {
     "id": 10435,
@@ -2823,7 +2837,7 @@
   {
     "id": 10451,
     "charId": 3301,
-    "name": "Vœux d'anniversaire",
+    "name": "Vœux d’anniversaire",
     "res": "char_Maer_vo_birthday",
     "text": "Joyeux anniversaire ! Tiens, je t’ai fabriqué une petite poupée de Touffu, assortie à la mienne. Je sais que tu meurs d’envie de la serrer dans tes bras depuis longtemps, hein ? Hé hé, cette détective taciturne t’a bien cernée !"
   },
@@ -2895,7 +2909,7 @@
     "charId": 1801,
     "name": "DiscussionÀ propos des rêvesI",
     "res": "char_Feina_vo_topic_03_1",
-    "text": "Oui... ! J'ai rêvé d’un rossignol, pur comme la neige immaculée, qui se posait sur ma main un instant, puis jouait à cache-cache avec moi l’instant d’après... Hmm, est-ce moi qui ai rêvé, ou est-ce lui qui a rêvé de moi, je me le demande ?"
+    "text": "Oui... ! J’ai rêvé d’un rossignol, pur comme la neige immaculée, qui se posait sur ma main un instant, puis jouait à cache-cache avec moi l’instant d’après... Hmm, est-ce moi qui ai rêvé, ou est-ce lui qui a rêvé de moi, je me le demande ?"
   },
   {
     "id": 10462,
@@ -3082,7 +3096,7 @@
   {
     "id": 10489,
     "charId": 1801,
-    "name": "Vœux d'anniversaire",
+    "name": "Vœux d’anniversaire",
     "res": "char_Feina_vo_birthday",
     "text": "Le jour de son anniversaire, {性别:Monsieur|Mademoiselle} Licorne blanche retrouva son petit foyer douillet. Un oiseau aux plumes neigeuses apporta des feuilles de laurier, le magicien chanta des sortilèges qui faisaient éclore les rires, et le preux chevalier resta fidèlement à ses côtés, comme autrefois. Dans la cheminée, les flammes dansaient de joie, tandis que les flocons portaient depuis le ciel de lointaines bénédictions. Le petit foyer, lui, débordait de bonheur..."
   },
@@ -3341,7 +3355,7 @@
   {
     "id": 10526,
     "charId": 3103,
-    "name": "Vœux d'anniversaire",
+    "name": "Vœux d’anniversaire",
     "res": "char_Yeer_vo_birthday",
     "text": "耶尔：生日快乐！我……我本来是准备了礼物的，是新型号的“小可爱”，我还在上面画了我们两个并肩作战的样子……\n耶尔：但每次画上去奥利弗都要抢着擦掉……最后就……爆炸。唔，我保证今天再给你造一个！\n奥利弗：别丢人了，耶尔。你那糟糕的品味，就像画了两个半死不活的秽兽！听我的，让本天才来画个“炸弹战神”上去，让{nickname}看看什么叫大艺术家！"
   },
@@ -3392,7 +3406,7 @@
     "charId": 3201,
     "name": "DiscussionÀ propos des vœuxI",
     "res": "char_Haier_vo_topic_02_1",
-    "text": "Depuis la création de l'Empire, ma famille veille sur les pires détenus, rendant justice et supprimant les dangers."
+    "text": "Depuis la création de l’Empire, ma famille veille sur les pires détenus, rendant justice et supprimant les dangers."
   },
   {
     "id": 10534,
@@ -3427,7 +3441,7 @@
     "charId": 3201,
     "name": "DiscussionÀ propos du travailIII",
     "res": "char_Haier_vo_topic_03_3",
-    "text": "Certains chercheurs ont imaginé un monde sans crime. Si un tel jour venait à arriver, ma raison d'être disparaîtrait, car le mal nécessite l’existence d’une geôlière. D’ici là, je m’engage à maintenir l’ordre."
+    "text": "Certains chercheurs ont imaginé un monde sans crime. Si un tel jour venait à arriver, ma raison d’être disparaîtrait, car le mal nécessite l’existence d’une geôlière. D’ici là, je m’engage à maintenir l’ordre."
   },
   {
     "id": 10539,
@@ -3441,7 +3455,7 @@
     "charId": 3201,
     "name": "DiscussionÀ propos de la justiceII",
     "res": "char_Haier_vo_topic_04_2",
-    "text": "Hmpf, tranché ? Je ne m’attendrais pas à ce {性别:qu’un enfant naïf|qu’une enfant naïve} comprenne. Nous ne vivons pas dans une utopie où les gens se tiennent simplement la main et s’aiment les uns les autres. Ce n'est que par le pouvoir absolu et l’ordre que la véritable justice peut être garantie !"
+    "text": "Hmpf, tranché ? Je ne m’attendrais pas à ce {性别:qu’un enfant naïf|qu’une enfant naïve} comprenne. Nous ne vivons pas dans une utopie où les gens se tiennent simplement la main et s’aiment les uns les autres. Ce n’est que par le pouvoir absolu et l’ordre que la véritable justice peut être garantie !"
   },
   {
     "id": 10541,
@@ -3607,7 +3621,7 @@
   {
     "id": 10564,
     "charId": 3201,
-    "name": "Vœux d'anniversaire",
+    "name": "Vœux d’anniversaire",
     "res": "char_Haier_vo_birthday",
     "text": "Un anniversaire ? Ridicule ! Comme si une geôlière se souciait de telles futilités. Ah, recevoir des vœux te rend heureux, pauvre créature ? Très bien, joyeux anniversaire alors. Je vais faire une exception et boire avec toi, mais seulement aujourd’hui."
   },
@@ -3637,14 +3651,14 @@
     "charId": 1502,
     "name": "DiscussionÀ propos de ta patrieII",
     "res": "char_Nifu_vo_topic_01_2",
-    "text": "Quand on a vu assez d’endroits, on réalise que les paysages sont semblables. Qu’il s'agisse des neiges du Nord, des sables de Khemet ou de la fumée qui s’échappe des cheminées de Huaxu, ce ne sont que différentes nuances de brume flottant à travers la forêt."
+    "text": "Quand on a vu assez d’endroits, on réalise que les paysages sont semblables. Qu’il s’agisse des neiges du Nord, des sables de Khemet ou de la fumée qui s’échappe des cheminées de Huaxu, ce ne sont que différentes nuances de brume flottant à travers la forêt."
   },
   {
     "id": 10569,
     "charId": 1502,
     "name": "DiscussionÀ propos de ta patrieIII",
     "res": "char_Nifu_vo_topic_01_3",
-    "text": "Si je devais choisir... Ce serait les montagnes et les forêts d’Aethyrie. L’air qui y règne m'apporte la paix."
+    "text": "Si je devais choisir... Ce serait les montagnes et les forêts d’Aethyrie. L’air qui y règne m’apporte la paix."
   },
   {
     "id": 10570,
@@ -3936,7 +3950,7 @@
   {
     "id": 10613,
     "charId": 1502,
-    "name": "Vœux d'anniversaire",
+    "name": "Vœux d’anniversaire",
     "res": "char_Nifu_vo_birthday",
     "text": "{性别:Mon enfant, une année de plus s’est écoulée, et je me réjouis sincèrement de ta survie.\nFais un vœu, car c’est en rêvant que l’on éclaire l’avenir. À ton âge, il est naturel de porter en soi des espoirs qui guident le chemin devant toi.\nAucune rivière ne coule sans rencontrer de tourments. Même blessé par les épines ou égaré par le courant, je souhaite que tu avances avec courage.\nEt lorsque tu atteindras enfin ta rive, puisses-tu chérir chaque instant du voyage qui t’y a mené.\nSi jamais le doute t’étreint, ou que tu cherches simplement une histoire, viens trouver refuge dans mes bras. Je prierai pour toi, je te bénirai, aujourd’hui, demain, et pour toujours.|Ma chère enfant, une année de plus s’est écoulée, et je me réjouis sincèrement de ta survie. \nFais un vœu, car c’est en rêvant que l’on éclaire l’avenir. À ton âge, il est naturel de porter en soi des espoirs qui guident le chemin devant toi. \nAucune rivière ne coule sans rencontrer de tourments. Même blessée par les épines ou égarée par le courant, je souhaite que tu avances avec courage.Et lorsque tu atteindras enfin ta rive, puisses-tu chérir chaque instant du voyage qui t’y a menée. Si jamais le doute t’étreint, ou que tu cherches simplement une histoire, viens trouver refuge dans mes bras. Je prierai pour toi, je te bénirai, aujourd’hui, demain, et pour toujours.}"
   },
@@ -3973,7 +3987,7 @@
     "charId": 4101,
     "name": "DiscussionÀ propos de son harmonica III",
     "res": "char_Lise_vo_topic_01_2",
-    "text": "En vérité, je ne connais qu’une seule chanson. Celle que ce proche m’a apprise. Je n’ai pas été très rapide à l’apprendre à l'époque... Peut-être parce que je n’ai jamais été doué pour les choses qui nécessitent une certaine expression émotionnelle..."
+    "text": "En vérité, je ne connais qu’une seule chanson. Celle que ce proche m’a apprise. Je n’ai pas été très rapide à l’apprendre à l’époque... Peut-être parce que je n’ai jamais été doué pour les choses qui nécessitent une certaine expression émotionnelle..."
   },
   {
     "id": 10619,
@@ -4237,7 +4251,7 @@
   {
     "id": 10658,
     "charId": 4101,
-    "name": "Vœux d'anniversaire",
+    "name": "Vœux d’anniversaire",
     "res": "char_Lise_vo_birthday",
     "text": "Un anniversaire ? Ça fait si longtemps que je n’ai pas fêté quoi que ce soit... Quand j’étais petite, on préparait les anniversaires en famille, longtemps à l’avance. Mais en grandissant, mon frère et moi avons fini par à peine nous croiser... et les anniversaires ont perdu tout leur sens.\nJ’ai longtemps rêvé qu’un jour, quand on aurait réussi notre vie, on organiserait une vraie fête, comme celles de la cité intérieure : lustres en cristal, gâteau à la crème, robes en soie... rien ne manquerait. Mais ce rêve ne se réalisera jamais...\nAh, désolée. Ce n’est pas le moment de parler de tout ça. C’est un jour de fête, après tout.\nMême si je ne peux pas célébrer mon propre anniversaire, je tiens à t’adresser mes vœux les plus sincères. J’espère que tu passeras une journée heureuse, entouré des gens que tu aimes, et que tu en garderas des souvenirs précieux."
   },
@@ -4407,7 +4421,7 @@
     "charId": 1103,
     "name": "DiscussionÀ propos du théâtreIV",
     "res": "char_Tuosi_vo_topic_05_4",
-    "text": "Et c'est ainsi que se dresse notre Théâtre Galea, pris entre ces deux mondes, entendant tout mais ne comprenant rien."
+    "text": "Et c’est ainsi que se dresse notre Théâtre Galea, pris entre ces deux mondes, entendant tout mais ne comprenant rien."
   },
   {
     "id": 10683,
@@ -4608,7 +4622,7 @@
   {
     "id": 10713,
     "charId": 1103,
-    "name": "Vœux d'anniversaire",
+    "name": "Vœux d’anniversaire",
     "res": "char_Tuosi_vo_birthday",
     "text": "Joyeux anniversaire, {nickname}. Merci de m’avoir invité.\nDepuis le jour où j’ai été chassé de la scène, les anniversaires sont devenus pour moi un rappel douloureux, comme des projecteurs éteints qu’on ne pourra jamais rallumer, ou d’anciens manuscrits froissés oubliés au fond d’une corbeille.\nPourtant aujourd’hui, je me surprends à imaginer ce qu’est un anniversaire ordinaire, fait de ces petites choses simples et chaleureuses que seuls ceux qui les vivent savent chérir : une boîte cadeau un peu grossièrement fabriquée, un gâteau dont une fleur de crème est tombée en soufflant les bougies, et...\n...Une chanson d’anniversaire chantée par des amis ? Tu veux que je chante ? Très bien. Mais je t’avoue que je ne connais pas la mélodie qui se chante dans ta région. Il faudra me l’apprendre. Ne t’inquiète pas, j’apprends vite."
   },
@@ -4841,7 +4855,7 @@
     "charId": 5401,
     "name": "Prêt à l’action",
     "res": "char_Dafu_vo_appear",
-    "text": "Les fournitures d'urgence sont prêtes, je peux partir à tout moment."
+    "text": "Les fournitures d’urgence sont prêtes, je peux partir à tout moment."
   },
   {
     "id": 10747,
@@ -4951,7 +4965,7 @@
   {
     "id": 10762,
     "charId": 5401,
-    "name": "Vœux d'anniversaire",
+    "name": "Vœux d’anniversaire",
     "res": "char_Dafu_vo_birthday",
     "text": "Sais-tu ce qui rend ce jour si spécial ? Oui, c’est ton anniversaire.\nJe sais qu’en grandissant, la vie nous emporte dans mille directions. Toujours à courir après des objectifs, à jongler avec des responsabilités, à se précipiter d’un endroit à un autre.\nÇa peut paraître un peu enfantin, mais je crois sincèrement que les anniversaires devraient être différents. Juste pour une journée, on mérite de laisser tomber ces lourds fardeaux, de redevenir des enfants insouciants, baignés dans l’amour et les vœux chaleureux de ceux qui tiennent à nous.\nAlors aujourd’hui, mets tes soucis de côté. Sois ce petit enfant heureux : savoure le gâteau, souffle les bougies, fais un vœu...\nEt si tu es {性别:seul|seule} en ce moment, laisse-moi endosser le rôle de \"l’adulte\" pour toi.\nJoyeux anniversaire."
   },
@@ -5065,14 +5079,14 @@
     "charId": 1503,
     "name": "DiscussionÀ propos de ton surnomI",
     "res": "char_Kezhou_vo_topic_04_1",
-    "text": "C'est vrai. Maintenant que tu le dis, je peux t’en citer pas mal. Des « Roi Untel », « Seigneur Machin », ou des « Immortels Bidule ». Les animaux sont populaires comme surnoms : dragon, tigre, lion, grue... un vrai zoo !"
+    "text": "C’est vrai. Maintenant que tu le dis, je peux t’en citer pas mal. Des « Roi Untel », « Seigneur Machin », ou des « Immortels Bidule ». Les animaux sont populaires comme surnoms : dragon, tigre, lion, grue... un vrai zoo !"
   },
   {
     "id": 10779,
     "charId": 1503,
     "name": "DiscussionÀ propos de ton surnomII",
     "res": "char_Kezhou_vo_topic_04_2",
-    "text": "Et tu sais comment ça marche ? Plus le surnom est long, moins le gars est doué. Quatre mots ? Un débutant. Trois ? Pas mal. Deux ? Quelqu’un avec qui il vaut mieux ne pas chercher des ennuis. Et ceux qui n'ont pas de surnom du tout ? Ce sont les véritables grands maîtres."
+    "text": "Et tu sais comment ça marche ? Plus le surnom est long, moins le gars est doué. Quatre mots ? Un débutant. Trois ? Pas mal. Deux ? Quelqu’un avec qui il vaut mieux ne pas chercher des ennuis. Et ceux qui n’ont pas de surnom du tout ? Ce sont les véritables grands maîtres."
   },
   {
     "id": 10780,
@@ -5224,7 +5238,7 @@
   {
     "id": 10802,
     "charId": 1503,
-    "name": "Vœux d'anniversaire",
+    "name": "Vœux d’anniversaire",
     "res": "char_Kezhou_vo_birthday",
     "text": "Aujourd’hui serait parfait pour boire et chanter... Quoi ? C’est ton anniversaire ?\nNous, vagabonds, ne prêtons pas vraiment attention à ce genre de choses.\nQuand on vit au gré du vent et de la neige, sans savoir si demain on sera encore en vie, on finit par oublier ce que c’est, un anniversaire.\nMais toi, tu viens d’ailleurs... et tu t’entraînes avec moi chaque jour. Alors, fêtons ça un peu.\nChantons ! Chantons la bravoure {性别:du jeune Chasseur de Phoxène, lié par l’honneur et la parole donnée !|de la jeune Chasseuse de Phoxène, liée par l’honneur et la parole donnée !}"
   },
@@ -5310,7 +5324,7 @@
     "charId": 5102,
     "name": "DiscussionÀ propos des récompensesII",
     "res": "char_Aote_vo_topic_05_2",
-    "text": "Mais... Peu importe, c’est tout toi, toujours {性别:prêt|prête} à aider les autres. Fais-moi signe si jamais tu as besoin d'argent."
+    "text": "Mais... Peu importe, c’est tout toi, toujours {性别:prêt|prête} à aider les autres. Fais-moi signe si jamais tu as besoin d’argent."
   },
   {
     "id": 10815,
@@ -5346,6 +5360,20 @@
     "name": "DiscussionRencontre aléatoire : II",
     "res": "char_Aote_vo_companio_02_2",
     "text": "Si t’as faim, soif, ou besoin de quoi que ce soit, dis-le-moi. J’ai l’habitude de veiller sur les autres... Ma petite sœur est malade, alors tu sais, je gère. Et puis, une amie de {nickname}, c’est aussi une amie à moi."
+  },
+  {
+    "id": 10820,
+    "charId": 5102,
+    "name": "DiscussionRencontre aléatoire : III",
+    "res": "char_Aote_vo_companio_03_1",
+    "text": "Eh, Madame Camilla ? Vous ici ? Me dites pas que c’est encore une urgence... {nickname} est déjà sur les rotules. Donnez-nous au moins une pause."
+  },
+  {
+    "id": 10821,
+    "charId": 5102,
+    "name": "DiscussionRencontre aléatoire : III",
+    "res": "char_Aote_vo_companio_03_2",
+    "text": "Cela dit... si c’est bien payé, je veux bien écouter."
   },
   {
     "id": 10823,
@@ -5462,7 +5490,7 @@
   {
     "id": 10839,
     "charId": 5102,
-    "name": "Vœux d'anniversaire",
+    "name": "Vœux d’anniversaire",
     "res": "char_Aote_vo_birthday",
     "text": "Joyeux anniversaire ! Joyeux anniversaire ! Ah, tu sais, ça m’a juste fait penser... Notre première rencontre, c’était aussi autour d’un \"anniversaire\", un cadeau à chercher. Et aujourd’hui, après tout ce temps, on célèbre un autre \"anniversaire\" ensemble, toujours là, côte à côte. Qui l’aurait cru ? Le destin est vraiment plein de surprises, hein ?"
   },
@@ -5520,7 +5548,7 @@
     "charId": 4102,
     "name": "DiscussionÀ propos du prix à payerII",
     "res": "char_Zhiliu_vo_topic_01_2",
-    "text": "Exactement. La tienne, la mienne, ou celle de milliers d'autres... face à des enjeux plus grands, elles ne sont que des jetons à miser."
+    "text": "Exactement. La tienne, la mienne, ou celle de milliers d’autres... face à des enjeux plus grands, elles ne sont que des jetons à miser."
   },
   {
     "id": 10848,
@@ -5633,6 +5661,13 @@
     "name": "DiscussionRencontre aléatoire : III",
     "res": "char_Zhiliu_vo_companio_03",
     "text": "J’ai cru voir en toi un reflet de quelqu’un que j’ai connu autrefois... Non, je dois me tromper. Oublie ce que je viens de dire. "
+  },
+  {
+    "id": 10866,
+    "charId": 4102,
+    "name": "DiscussionRencontre aléatoire : IV",
+    "res": "char_Zhiliu_vo_companio_04",
+    "text": "Cela fait longtemps que je n’ai pas eu le plaisir de déguster une boisson que tu as préparée. Si tu as un moment aujourd’hui, pourrais-tu m’en servir un petit verre pour accompagner l’après-midi ?"
   },
   {
     "id": 10867,
@@ -5749,7 +5784,7 @@
   {
     "id": 10883,
     "charId": 4102,
-    "name": "Vœux d'anniversaire",
+    "name": "Vœux d’anniversaire",
     "res": "char_Zhiliu_vo_birthday",
     "text": "Aujourd’hui, c’est ton anniversaire. J’ai préparé un modeste présent que tu pourras ouvrir plus tard. {性别:Surpris|Surprise} que je sois au courant ? Disons simplement que j’ai tiré quelques ficelles pour obtenir ton dossier. Les détails, bien sûr, restent gravés dans ma mémoire.\nBeaucoup de choses ont changé avec le temps, mais mon souhait pour ta santé et ton bonheur ne s’est jamais altéré. Si tu veux bien l’entendre de ma part... Joyeux anniversaire."
   },
@@ -5983,5 +6018,614 @@
     "name": "Retraite",
     "res": "char_Baonu_vo_fail",
     "text": "Endurer, endurer, endurer... pas s’énerver, pas s’énerver..."
+  },
+  {
+    "id": 10919,
+    "charId": 3202,
+    "name": "Première rencontre",
+    "res": "char_Kami_vo_gain",
+    "text": "Tu veux faire appel à la patronne des Asphodèles ? Il faudra payer une commission... conséquente. Bien sûr, l’argent n’est pas la seule monnaie que j’accepte. Mon instinct de marchande me dit que tu caches peut-être... des secrets bien plus précieux que quelques pièces."
+  },
+  {
+    "id": 10920,
+    "charId": 3202,
+    "name": "Salutation",
+    "res": "char_Kami_vo_welcome",
+    "text": "Ce qui me tire du lit, c’est le commerce. Et toi, qu’est-ce qui te réveille le matin ?"
+  },
+  {
+    "id": 10921,
+    "charId": 3202,
+    "name": "Discussion关于水仙平原的生意I",
+    "res": "char_Kami_vo_topic_01_1",
+    "text": "Des tonneaux ? À conserver du bon alcool, évidemment. Contes de Givrelac, frais et léger. Sang-de-Loup de la Légion, puissant et corsé. L’Ivresse du Dragon Azur, importée de Huaxu, clair et persistant. Et la Rhapsodie du Bal masqué... un mélange de dix saveurs. Chaque personne y goûte quelque chose de différent."
+  },
+  {
+    "id": 10922,
+    "charId": 3202,
+    "name": "Discussion关于水仙平原的生意II",
+    "res": "char_Kami_vo_topic_01_2",
+    "text": "Alors ? Tu en veux un verre ?"
+  },
+  {
+    "id": 10923,
+    "charId": 3202,
+    "name": "Discussion关于水仙平原的生意III",
+    "res": "char_Kami_vo_topic_01_3",
+    "text": "Héhé. Tu es {性别:devenu bien plus perspicace. Rien à voir avec l’ignorant|devenue bien plus perspicace. Rien à voir avec l’ignorante} qui débarquait à Givrelac à ses débuts."
+  },
+  {
+    "id": 10924,
+    "charId": 3202,
+    "name": "Discussion关于水仙平原的生意IV",
+    "res": "char_Kami_vo_topic_01_4",
+    "text": "À un peu plus de cent kilomètres au nord de Givrelac, en franchissant les Monts Vidofnir, on atteint les Fjords d’Askard. La véritable patrie des Charons, dit-on."
+  },
+  {
+    "id": 10925,
+    "charId": 3202,
+    "name": "Discussion关于水仙平原的生意V",
+    "res": "char_Kami_vo_topic_01_5",
+    "text": "Pour beaucoup de Charons de Givrelac... cent kilomètres et une montagne ne sont peut-être pas un obstacle insurmontable. La terre promise n’est peut-être pas si inaccessible... tu ne crois pas ?"
+  },
+  {
+    "id": 10926,
+    "charId": 3202,
+    "name": "Discussion关于水仙平原的生意VI",
+    "res": "char_Kami_vo_topic_01_6",
+    "text": "Chut. Je n’ai jamais rien dit de tel."
+  },
+  {
+    "id": 10927,
+    "charId": 3202,
+    "name": "Discussion关于“水仙平原”I",
+    "res": "char_Kami_vo_topic_02_1",
+    "text": "Tu me flattes. Les Chasseurs de Phoxène existaient bien avant mon établissement. Ils ont simplement besoin d’un endroit pour discuter, fanfaronner et échanger leurs « affaires ». S’il n’y avait pas eu les Asphodèles, ça aurait été le Muguet... ou la Tulipe."
+  },
+  {
+    "id": 10928,
+    "charId": 3202,
+    "name": "Discussion关于“水仙平原”II",
+    "res": "char_Kami_vo_topic_02_2",
+    "text": "Quant à savoir pourquoi ils ont fini par se réunir ici... rien de mystérieux. Un bon alcool. Un intermédiaire qui traite ses affaires équitablement. Et quelques petits coups de main quand quelqu’un traverse une mauvaise passe."
+  },
+  {
+    "id": 10929,
+    "charId": 3202,
+    "name": "Discussion关于金钱的重要性I",
+    "res": "char_Kami_vo_topic_03_1",
+    "text": "Plutôt que de me poser la question, tu devrais te la poser à toi-même. Je me souviens très bien de ton arrivée à Givrelac. Tu n’avais nulle part où aller. Tu sais donc parfaitement que l’argent est la base pour survivre dans ce monde."
+  },
+  {
+    "id": 10930,
+    "charId": 3202,
+    "name": "Discussion关于金钱的重要性II",
+    "res": "char_Kami_vo_topic_03_2",
+    "text": "Accumule assez de richesse... et même si tu ne peux pas changer d’origine, tu trouveras le courage d’affronter ton destin. Quand le vent et la pluie s’abattent sur toi, tu peux au moins t’offrir un verre pour te réchauffer... ou en partager une gorgée avec quelqu’un. Et gagner ainsi une faveur."
+  },
+  {
+    "id": 10931,
+    "charId": 3202,
+    "name": "Discussion关于金钱的重要性III",
+    "res": "char_Kami_vo_topic_03_3",
+    "text": "Alors dis-moi... l’argent n’est-il pas important ?"
+  },
+  {
+    "id": 10932,
+    "charId": 3202,
+    "name": "Discussion关于神秘人I",
+    "res": "char_Kami_vo_topic_04_1",
+    "text": "Pas grand-chose, malheureusement. Je vis à Givrelac depuis des années, et c’est la première fois que je voyais cette personne. Elle était entièrement enveloppée dans une cape, et utilisait un dispositif modifiant la voix. D’où elle venait... si c’était un homme ou une femme... son âge... Je n’en sais rien."
+  },
+  {
+    "id": 10933,
+    "charId": 3202,
+    "name": "Discussion关于神秘人II",
+    "res": "char_Kami_vo_topic_04_2",
+    "text": "La seule chose dont je sois certaine... c’est que sa puissance était insondable. Nous avons échangé quelques coups. Cela m’a suffi pour comprendre que je n’avais aucune chance de gagner."
+  },
+  {
+    "id": 10934,
+    "charId": 3202,
+    "name": "Discussion关于神秘人III",
+    "res": "char_Kami_vo_topic_04_3",
+    "text": "Héhé. Pour un marchand, la chose la plus importante est de savoir quelles cartes chacun tient en main. Bluffer n’a d’intérêt que lorsque les mises sont équivalentes. Je sais parfaitement évaluer ce genre de choses."
+  },
+  {
+    "id": 10935,
+    "charId": 3202,
+    "name": "Discussion关于神秘人IV",
+    "res": "char_Kami_vo_topic_04_4",
+    "text": "Ah... j’y pense. Avant de partir, cette personne a dit une chose."
+  },
+  {
+    "id": 10936,
+    "charId": 3202,
+    "name": "Discussion关于神秘人V",
+    "res": "char_Kami_vo_topic_04_5",
+    "text": "Elle espère obtenir de toi... une réponse."
+  },
+  {
+    "id": 10937,
+    "charId": 3202,
+    "name": "Monologue",
+    "res": "char_Kami_vo_idle",
+    "text": "Un bon alcool doit rester pur. Si on y mélange trop de saveurs, son arôme disparaît. Les êtres humains sont exactement pareils."
+  },
+  {
+    "id": 10938,
+    "charId": 3202,
+    "name": "DiscussionRencontre aléatoire : I",
+    "res": "char_Kami_vo_companio_02",
+    "text": "Chaque personne possède ses propres talents. Certains naissent avec le don d’apaiser les autres... comme toi. Tu es quelqu’un de bien."
+  },
+  {
+    "id": 10939,
+    "charId": 3202,
+    "name": "DiscussionRencontre aléatoire : II",
+    "res": "char_Kami_vo_companio_03",
+    "text": "C’est rare que tu fasses tout ce chemin jusqu’à Givrelac. Alors dis-moi... tu viens chercher des produits rares de l’Empire ? Ou simplement assister au spectacle ?"
+  },
+  {
+    "id": 10940,
+    "charId": 3202,
+    "name": "DiscussionRencontre aléatoire : III",
+    "res": "char_Kami_vo_companio_04",
+    "text": "Cette cicatrice... tu as encore accepté une mission dangereuse ? Hah... J’ai de la pommade derrière le comptoir. Va en mettre. S’il t’arrivait quelque chose ici, ça nuirait à mon commerce. Alors ? Tu comptes rester planté là longtemps ? Ou tu attends que j’aille te la chercher moi-même ?"
+  },
+  {
+    "id": 10941,
+    "charId": 3202,
+    "name": "Prêt à l’action",
+    "res": "char_Kami_vo_appear",
+    "text": "Il est temps de remplir la cave des Asphodèles."
+  },
+  {
+    "id": 10942,
+    "charId": 3202,
+    "name": "Ascension",
+    "res": "char_Kami_vo_lvup",
+    "text": "Tu veux investir dans les Asphodèles ? Pas mal. Tu as un bon flair pour les affaires."
+  },
+  {
+    "id": 10943,
+    "charId": 3202,
+    "name": "Début du combat",
+    "res": "char_Kami_vo_battlestart",
+    "text": "Très bien. Je vais vous montrer... à ma manière, comment ce monde fonctionne vraiment."
+  },
+  {
+    "id": 10944,
+    "charId": 3202,
+    "name": "Repos",
+    "res": "char_Kami_vo_battleidle",
+    "text": "Le temps, c’est de l’argent. On se reposera quand cette affaire sera conclue."
+  },
+  {
+    "id": 10945,
+    "charId": 3202,
+    "name": "Blessé : I",
+    "res": "char_Kami_vo_be_hit_heavy_r01",
+    "text": "Tu veux la jouer comme ça ?"
+  },
+  {
+    "id": 10946,
+    "charId": 3202,
+    "name": "Blessé : II",
+    "res": "char_Kami_vo_be_hit_heavy_r02",
+    "text": "Merde !"
+  },
+  {
+    "id": 10947,
+    "charId": 3202,
+    "name": "Compétence de combat : I",
+    "res": "char_Kami_vo_skill01_r01",
+    "text": "Alors, tu veux négocier ?"
+  },
+  {
+    "id": 10948,
+    "charId": 3202,
+    "name": "Compétence de combat : II",
+    "res": "char_Kami_vo_skill01_r02",
+    "text": "Je ne te raccompagne pas."
+  },
+  {
+    "id": 10949,
+    "charId": 3202,
+    "name": "Compétence ultime : I",
+    "res": "char_Kami_vo_skill02_r01",
+    "text": "Le bar est fermé pour aujourd’hui."
+  },
+  {
+    "id": 10950,
+    "charId": 3202,
+    "name": "Compétence ultime : II",
+    "res": "char_Kami_vo_skill02_r02",
+    "text": "Tu as froid ? Laisse-moi te réchauffer."
+  },
+  {
+    "id": 10951,
+    "charId": 3202,
+    "name": "Compétence ultime : III",
+    "res": "char_Kami_vo_skill02_r03",
+    "text": "Le feu a la même couleur que le vin... regarde ce rouge magnifique."
+  },
+  {
+    "id": 10952,
+    "charId": 3202,
+    "name": "Vaincu : I",
+    "res": "char_Kami_vo_die_r01",
+    "text": "Tout ça... pour rien..."
+  },
+  {
+    "id": 10953,
+    "charId": 3202,
+    "name": "Vaincu : II",
+    "res": "char_Kami_vo_die_r02",
+    "text": "Encore une transaction avec la Mort."
+  },
+  {
+    "id": 10954,
+    "charId": 3202,
+    "name": "Ressuscité",
+    "res": "char_Kami_vo_revive",
+    "text": "Je me demande... qu’est-ce qui est pire ? L’enfer... ou une patrie qu’on ne peut plus rejoindre ?"
+  },
+  {
+    "id": 10955,
+    "charId": 3202,
+    "name": "Victoire",
+    "res": "char_Kami_vo_victory",
+    "text": "Marchandise livrée. Paiement reçu. Transaction conclue."
+  },
+  {
+    "id": 10956,
+    "charId": 3202,
+    "name": "Retraite",
+    "res": "char_Kami_vo_fail",
+    "text": "La prochaine fois... la chance sera de mon côté."
+  },
+  {
+    "id": 10957,
+    "charId": 1504,
+    "name": "Apparence de personnage : Première rencontre",
+    "res": "char_Suyi01_vo_gain",
+    "text": "Les oisillons ont besoin de temps pour que leurs ailes s’épanouissent, tout comme les habitants de Huaxu ont besoin des années pour sortir du berceau tissé par les divinités. Je guiderai cette longue croissance, jusqu’au jour où toutes les armes, y compris ce Surveillant céleste Q7, ne seront plus nécessaires."
+  },
+  {
+    "id": 10958,
+    "charId": 1504,
+    "name": "Apparence de personnage : Prêt à l’action",
+    "res": "char_Suyi01_vo_appear",
+    "text": "Surveillant céleste Q7, prête à l’action."
+  },
+  {
+    "id": 10959,
+    "charId": 1504,
+    "name": "Apparence de personnage : Début du combat",
+    "res": "char_Suyi01_vo_battlestart",
+    "text": "Ceux qui cherchent à semer le trouble... je les chasserai."
+  },
+  {
+    "id": 10960,
+    "charId": 1504,
+    "name": "Apparence de personnage : Compétence ultime",
+    "res": "char_Suyi01_vo_skill02_r01",
+    "text": "Que la maîtrise de tous mes arts se change en poussière d’étoiles !"
+  },
+  {
+    "id": 10961,
+    "charId": 1504,
+    "name": "Première rencontre",
+    "res": "char_Suyi_vo_gain",
+    "text": "Les disciples de la Secte Jishu se serrent toujours les coudes. Si tu as des ennuis à Huaxu, appelle-moi. Je m’en occupe !"
+  },
+  {
+    "id": 10962,
+    "charId": 1504,
+    "name": "Salutation",
+    "res": "char_Suyi_vo_welcome",
+    "text": "Ah, te voilà ! Tu viens voir la nouvelle modification du Qingluan Type II, pas vrai ? Regarde ça— Hein ? Tu voulais juste discuter ?"
+  },
+  {
+    "id": 10963,
+    "charId": 1504,
+    "name": "Discussion关于爱好I",
+    "res": "char_Suyi_vo_topic_01_1",
+    "text": "Assembler des mécanismes, polir des engrenages, chercher de nouveaux matériaux... et bricoler jusqu’à obtenir une version encore meilleure."
+  },
+  {
+    "id": 10964,
+    "charId": 1504,
+    "name": "Discussion关于爱好II",
+    "res": "char_Suyi_vo_topic_01_2",
+    "text": "Tu te souviens quand Oncle Tang s’est cassé la jambe ? Comme j’avais un peu de temps, j’ai commencé à travailler sur une monture capable de décoller plus doucement. Les disciples de la Secte Jishu veulent toujours des résultats, quitte à y laisser leur peau... Je ne vais pas laisser cette mentalité continuer."
+  },
+  {
+    "id": 10965,
+    "charId": 1504,
+    "name": "Discussion关于爱好III",
+    "res": "char_Suyi_vo_topic_01_3",
+    "text": "Me fatiguer ? Qu’est-ce qui pourrait être plus intéressant que ça ? Il suffit de démonter un mécanisme en composants dans sa tête... puis de le reconstruire dans la réalité. Le moment où tout s’assemble et fonctionne enfin... c’est le meilleur sentiment du monde !"
+  },
+  {
+    "id": 10966,
+    "charId": 1504,
+    "name": "Discussion关于爱好IV",
+    "res": "char_Suyi_vo_topic_01_4",
+    "text": "Tu veux essayer aussi ? Le meilleur artisan de tous les Pics Extérieurs est justement libre pour t’apprendre."
+  },
+  {
+    "id": 10967,
+    "charId": 1504,
+    "name": "Discussion关于辈分I",
+    "res": "char_Suyi_vo_topic_02_1",
+    "text": "Dans la Secte Jishu, comme chez les vagabonds, la lignée compte énormément. Par exemple, si un maître de quatre-vingt-dix ans prend un enfant de dix ans comme dernier disciple... la moitié de la secte devra ensuite appeler cet enfant « oncle »."
+  },
+  {
+    "id": 10968,
+    "charId": 1504,
+    "name": "Discussion关于辈分II",
+    "res": "char_Suyi_vo_topic_02_2",
+    "text": "Moi, j’ai eu de la chance. Mon maître — enfin, ma tante — a un rang très élevé. Donc par extension, le mien l’est aussi."
+  },
+  {
+    "id": 10969,
+    "charId": 1504,
+    "name": "Discussion关于辈分III",
+    "res": "char_Suyi_vo_topic_02_3",
+    "text": "Kezhou, lui, a moins de chance. Son maître Yan Shanting est plus bas dans la hiérarchie... Donc selon les règles, il doit m’appeler grande-tante~"
+  },
+  {
+    "id": 10970,
+    "charId": 1504,
+    "name": "Discussion关于辈分IV",
+    "res": "char_Suyi_vo_topic_02_4",
+    "text": "Maître Gongshang a aussi un rang très élevé... Attends que je calcule... Oh ! On est de la même génération !"
+  },
+  {
+    "id": 10971,
+    "charId": 1504,
+    "name": "Discussion关于辈分V",
+    "res": "char_Suyi_vo_topic_02_5",
+    "text": "Héhé. Si Kezhou te manque de respect, tu peux exiger qu’il t’appelle {性别:grand-père|grand-mère}."
+  },
+  {
+    "id": 10972,
+    "charId": 1504,
+    "name": "Discussion关于辈分VI",
+    "res": "char_Suyi_vo_topic_02_6",
+    "text": "Attends... Je me souviens que Snow t’appelle son petit larbin... Ça veut dire qu’elle est ton maître ? ... Attends une seconde. Ne me dis pas que la personne la plus haut placée parmi nous est en réalité une toute petite Luno ?!"
+  },
+  {
+    "id": 10973,
+    "charId": 1504,
+    "name": "Discussion关于宠物I",
+    "res": "char_Suyi_vo_topic_03_1",
+    "text": "Oh, ça ? C’est Qingluan Type III, mon nouveau compagnon !"
+  },
+  {
+    "id": 10974,
+    "charId": 1504,
+    "name": "Discussion关于宠物II",
+    "res": "char_Suyi_vo_topic_03_2",
+    "text": "Regarde, on dirait presque une vraie mouette nuageuse, non ? J’ai simplifié la procédure d’activation. Il suffit d’appuyer sur le dessus de la tête pour activer le mode de vol mimétique. En parlant de vol—"
+  },
+  {
+    "id": 10975,
+    "charId": 1504,
+    "name": "Discussion关于宠物III",
+    "res": "char_Suyi_vo_topic_03_3",
+    "text": "Et ces plumes aussi, c’est tout un travail ! Je récupère les plumes naturellement tombées des mouettes nuageuses, puis je les scelle avec une technique hydrofuge améliorée. Ça n’ajoute presque aucun poids."
+  },
+  {
+    "id": 10976,
+    "charId": 1504,
+    "name": "Discussion关于宠物IV",
+    "res": "char_Suyi_vo_topic_03_4",
+    "text": "Les couleurs ne s’altèrent pas, il reste toujours tout doux... et au moins elle ne te lacère pas le bras comme un vrai oiseau. Tout le charme, sans les griffures. Le compagnon parfait."
+  },
+  {
+    "id": 10977,
+    "charId": 1504,
+    "name": "Discussion关于宠物V",
+    "res": "char_Suyi_vo_topic_03_5",
+    "text": "Les mouettes nuageuses appartiennent au ciel. Si on en élève une, il faut la garder dans une cage. Et si je capturais un animal juste pour le regarder... En quoi serais-je différente de l’ancienne Secte Xuanheng ?"
+  },
+  {
+    "id": 10978,
+    "charId": 1504,
+    "name": "Discussion关于宠物VI",
+    "res": "char_Suyi_vo_topic_03_6",
+    "text": "Certains animaux peuvent vivre aux côtés des humains. Mais les mouettes nuageuses n’en font clairement pas partie. Leur bec acéré, leur longue queue, leurs ailes faites pour fendre le vent... tout montre une chose. Elles appartiennent au ciel. Pas à la paume de quelqu’un."
+  },
+  {
+    "id": 10979,
+    "charId": 1504,
+    "name": "Discussion关于家I",
+    "res": "char_Suyi_vo_topic_04_1",
+    "text": "Hmm... bonne question."
+  },
+  {
+    "id": 10980,
+    "charId": 1504,
+    "name": "Discussion关于家II",
+    "res": "char_Suyi_vo_topic_04_2",
+    "text": "On s’est rassemblés parce qu’on partageait les mêmes difficultés. Et maintenant on lutte pour le même objectif. On se comprend. On se fait confiance. Au combat, on se couvre mutuellement... et quand on est fatigués, on avance ensemble. C’est... vraiment un endroit formidable."
+  },
+  {
+    "id": 10981,
+    "charId": 1504,
+    "name": "Discussion关于家III",
+    "res": "char_Suyi_vo_topic_04_3",
+    "text": "Pour beaucoup ici, les Pics Extérieurs sont comme une maison."
+  },
+  {
+    "id": 10982,
+    "charId": 1504,
+    "name": "Discussion关于家IV",
+    "res": "char_Suyi_vo_topic_04_4",
+    "text": "Moi ? Euh... bien sûr que c’est chez moi !"
+  },
+  {
+    "id": 10983,
+    "charId": 1504,
+    "name": "Discussion关于家V",
+    "res": "char_Suyi_vo_topic_04_5",
+    "text": "Tu es vraiment perspicace. C’est l’instinct d’un Chasseur de Phoxène ? Et ça ne sert pas seulement au combat... tu arrives aussi à comprendre les gens. Si seulement mon système de navigation mécanique était aussi précis que toi..."
+  },
+  {
+    "id": 10984,
+    "charId": 1504,
+    "name": "Discussion关于家VI",
+    "res": "char_Suyi_vo_topic_04_6",
+    "text": "Je suis juste... un peu perdue. À quoi ressemble vraiment un foyer ?"
+  },
+  {
+    "id": 10985,
+    "charId": 1504,
+    "name": "Discussion关于家VII",
+    "res": "char_Suyi_vo_topic_04_7",
+    "text": "Alors... si on ne peut plus y retourner... est-ce que ça reste un foyer ? ... Désolée. Oublie ce que je viens de dire."
+  },
+  {
+    "id": 10986,
+    "charId": 1504,
+    "name": "Monologue",
+    "res": "char_Suyi_vo_idle",
+    "text": "Tu sors {性别:tout seul ... ? Tu es sûr|toute seule... ? Tu es sûre} que ça ira sans moi ?"
+  },
+  {
+    "id": 10987,
+    "charId": 1504,
+    "name": "DiscussionRencontre aléatoire : I",
+    "res": "char_Suyi_vo_companio_01",
+    "text": "Les gens de Luca sont toujours aussi directs ? On vient à peine de commencer à discuter et tu veux déjà me prendre dans tes bras— N-Non ! Pas maintenant !"
+  },
+  {
+    "id": 10988,
+    "charId": 1504,
+    "name": "DiscussionRencontre aléatoire : II",
+    "res": "char_Suyi_vo_companio_02",
+    "text": "Encore une nouvelle épée ?! Tu crois que le budget des Pics Extérieurs est illimité ? Non ! Même à genoux ça ne marchera pas ! Et m’appeler « grande-tante » ne changera rien ! Cette fois, je ne me laisserai pas convaincre !"
+  },
+  {
+    "id": 10989,
+    "charId": 1504,
+    "name": "DiscussionRencontre aléatoire : III",
+    "res": "char_Suyi_vo_companio_03",
+    "text": "Tes ailes... elles sont magnifiques. Mais les miennes ne sont pas mal non plus. On fait la course ?"
+  },
+  {
+    "id": 10990,
+    "charId": 1504,
+    "name": "Prêt à l’action",
+    "res": "char_Suyi_vo_appear",
+    "text": "Comme on dit : mieux vaut demander de l’aide que lutter seul. Tu as bien fait de venir me voir !"
+  },
+  {
+    "id": 10991,
+    "charId": 1504,
+    "name": "Ascension",
+    "res": "char_Suyi_vo_lvup",
+    "text": "Exactement. Je suis la partenaire idéale pour combattre à tes côtés."
+  },
+  {
+    "id": 10992,
+    "charId": 1504,
+    "name": "Début du combat",
+    "res": "char_Suyi_vo_battlestart",
+    "text": "Fengshi n° 3, configuration défensive déployée. Début des tests."
+  },
+  {
+    "id": 10993,
+    "charId": 1504,
+    "name": "Repos",
+    "res": "char_Suyi_vo_battleidle",
+    "text": "Aucune menace immédiate... Fengshi n° 3, active le mode veille."
+  },
+  {
+    "id": 10994,
+    "charId": 1504,
+    "name": "Blessé : I",
+    "res": "char_Suyi_vo_be_hit_heavy_r01",
+    "text": "Je n’ai rien perdu comme pièce... ?"
+  },
+  {
+    "id": 10995,
+    "charId": 1504,
+    "name": "Blessé : II",
+    "res": "char_Suyi_vo_be_hit_heavy_r02",
+    "text": "Mince !"
+  },
+  {
+    "id": 10996,
+    "charId": 1504,
+    "name": "Compétence de combat : I",
+    "res": "char_Suyi_vo_skill01_r01",
+    "text": "Mode Poursuite du soleil activé."
+  },
+  {
+    "id": 10997,
+    "charId": 1504,
+    "name": "Compétence de combat : II",
+    "res": "char_Suyi_vo_skill01_r02",
+    "text": "Équilibre... stable."
+  },
+  {
+    "id": 10998,
+    "charId": 1504,
+    "name": "Compétence ultime : I",
+    "res": "char_Suyi_vo_skill02_r01",
+    "text": "Mode annihilation stellaire activé."
+  },
+  {
+    "id": 10999,
+    "charId": 1504,
+    "name": "Compétence ultime : II",
+    "res": "char_Suyi_vo_skill02_r02",
+    "text": "Feu concentré !"
+  },
+  {
+    "id": 11000,
+    "charId": 1504,
+    "name": "Compétence ultime : III",
+    "res": "char_Suyi_vo_skill02_r03",
+    "text": "Collecte des données terminée. Il faut que je note ça..."
+  },
+  {
+    "id": 11001,
+    "charId": 1504,
+    "name": "Vaincu : I",
+    "res": "char_Suyi_vo_die_r01",
+    "text": "Tante... pardon... je n’ai pas réussi..."
+  },
+  {
+    "id": 11002,
+    "charId": 1504,
+    "name": "Vaincu : II",
+    "res": "char_Suyi_vo_die_r02",
+    "text": "Un oiseau... doit retourner au ciel..."
+  },
+  {
+    "id": 11003,
+    "charId": 1504,
+    "name": "Ressuscité",
+    "res": "char_Suyi_vo_revive",
+    "text": "Ce n’est pas fini... Ne me sous-estime pas !"
+  },
+  {
+    "id": 11004,
+    "charId": 1504,
+    "name": "Victoire",
+    "res": "char_Suyi_vo_victory",
+    "text": "Très bien. Test en conditions réelles réussi. Passons maintenant à l’analyse des données."
+  },
+  {
+    "id": 11005,
+    "charId": 1504,
+    "name": "Retraite",
+    "res": "char_Suyi_vo_fail",
+    "text": "Puissance... modules... moteur... Où est l’erreur... ?"
   }
 ]

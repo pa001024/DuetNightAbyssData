@@ -106,7 +106,7 @@
     "rarity": 4,
     "cost": 8,
     "buffId": 4020501,
-    "extraBuffDesc": "詞條效果: 生命值每降低20%，提升自身#2防禦力。",
+    "extraBuffDesc": "詞條效果: 造成傷害時，降低目標防禦力45.0%，持續10秒。",
     "extraBuffId": 4020201,
     "unlockQuestId": 10300104,
     "atk": 0.3

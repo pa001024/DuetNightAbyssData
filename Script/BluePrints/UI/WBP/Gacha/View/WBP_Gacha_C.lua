@@ -14,12 +14,12 @@ function M:Construct()
   self.Btn_History:SetDefaultGamePadImg(DataMgr.KeyboardText[UIConst.GamePadKey.SpecialLeft].KeyText)
   self.Btn_Detail:SetDefaultGamePadImg(DataMgr.KeyboardText[UIConst.GamePadKey.SpecialRight].KeyText)
   self.Btn_Once:SetDefaultGamePadImg(DataMgr.KeyboardText[UIConst.GamePadKey.FaceButtonLeft].KeyText)
-  self.Btn_Tentimes:SetDefaultGamePadImg(DataMgr.KeyboardText[UIConst.GamePadKey.FaceButtonRight].KeyText)
+  self.Btn_TenTimes:SetDefaultGamePadImg(DataMgr.KeyboardText[UIConst.GamePadKey.FaceButtonRight].KeyText)
   if self.Key_Exchange then
     self.Key_Exchange:CreateGamepadKey(DataMgr.KeyboardText[UIConst.GamePadKey.LeftThumb].KeyText)
   end
   self.Btn_Once:SetGamePadIconVisible(true)
-  self.Btn_Tentimes:SetGamePadIconVisible(true)
+  self.Btn_TenTimes:SetGamePadIconVisible(true)
   self.Btn_History:BindEventOnClicked(self, self.OnClickBtnHistory)
   self.Btn_Once:SetText(GText("UI_SkinGacha_One"))
   self.Btn_Once:BindEventOnClicked(self, self.OnClickBtnGachaOnce)
@@ -28,10 +28,10 @@ function M:Construct()
     AudioManager(self):PlayUISound(self, "event:/ui/common/gacha_btn_click_normal", nil, nil)
   end
   
-  self.Btn_Tentimes:SetText(GText("UI_SkinGacha_Ten"))
-  self.Btn_Tentimes:BindEventOnClicked(self, self.OnClickBtnGachaTentimes)
+  self.Btn_TenTimes:SetText(GText("UI_SkinGacha_Ten"))
+  self.Btn_TenTimes:BindEventOnClicked(self, self.OnClickBtnGachaTentimes)
   
-  function self.Btn_Tentimes.SoundFunc()
+  function self.Btn_TenTimes.SoundFunc()
     AudioManager(self):PlayUISound(self, "event:/ui/common/gacha_btn_click_normal", nil, nil)
   end
   
@@ -183,11 +183,7 @@ function M:FillGachaItem()
   for i, GachaInfo in ipairs(self.GachaTabInfoLst) do
     if self.GachaPoolDict[GachaInfo.TabId] then
       local Content = NewObject(UIUtils.GetCommonItemContentClass())
-      if self.TabId == GachaInfo.TabId then
-        Content.bSelected = true
-      else
-        Content.bSelected = false
-      end
+      Content.bSelected = self.TabId == GachaInfo.TabId
       Content.TabId = GachaInfo.TabId
       Content.TabName = GachaInfo.TabName
       Content.Icon = GachaInfo.Icon
@@ -197,9 +193,7 @@ function M:FillGachaItem()
         Callback = self.OnGachaTypeItemClick
       }
       local GachaId = self.GachaPoolDict[GachaInfo.TabId][1]
-      if GachaId and GachaModel:IsGachaNew(GachaId) then
-        Content.bShowNew = true
-      end
+      Content.bShowNew = GachaModel:IsGachaNew(GachaId)
       self.PoolItemMap[GachaInfo.TabId] = Content
       self.List_Pool:AddItem(Content)
     end
@@ -235,9 +229,8 @@ function M:RefreshGachaInfo(TabId, bIsAutoSelect)
   end
   local GachaData = DataMgr.SkinGacha[GachaLstData[1]]
   assert(GachaData, "抽卡信息不存在:" .. GachaLstData[1])
-  local GachaBGM = GachaData.BgBGM
-  if GachaBGM then
-    AudioManager(self):PlaySystemUIBGM(GachaBGM, nil, GachaLstData[1])
+  if GachaData.BgBGM then
+    AudioManager(self):PlaySystemUIBGM(GachaData.BgBGM, nil, GachaLstData[1])
   end
   if self.CurrentGachaId ~= GachaLstData[1] then
     AudioManager(self):StopSystemUIBGM(self.CurrentGachaId)
@@ -315,77 +308,13 @@ function M:RefreshGachaCostInfo()
       ShowResourceCount = Avatar:GetResourceNum(ShowResourceId)
     end
   end
+  GachaModel:UpdateGachaBtnPrice(self.Btn_Once, GachaData.GachaTimes, TimeLimitResourceCount, ShowResourceId, TimeLimitResourceId)
   if TimeLimitResourceCount >= GachaData.GachaCostNum10 then
-    self.Com_CostOnce:InitContent({
-      ResourceId = TimeLimitResourceId,
-      bShowDenominator = false,
-      Numerator = GachaData.GachaTimes,
-      IsGamePadIconVisible = false,
-      NotInteractive = true
-    })
-    self.Com_CostTenTimes_1:InitContent({
-      ResourceId = TimeLimitResourceId,
-      bShowDenominator = false,
-      Numerator = GachaData.GachaCostNum10,
-      IsGamePadIconVisible = false,
-      NotInteractive = true
-    })
-    self.Panel_TimeLimit:SetVisibility(ESlateVisibility.Collapsed)
+    GachaModel:UpdateGachaBtnPrice(self.Btn_TenTimes, GachaData.GachaCostNum10, TimeLimitResourceCount, ShowResourceId, TimeLimitResourceId)
   elseif TimeLimitResourceCount > 0 and TimeLimitResourceCount + ShowResourceCount >= GachaData.GachaCostNum10 then
-    self.Com_CostOnce:InitContent({
-      ResourceId = TimeLimitResourceId,
-      bShowDenominator = false,
-      Numerator = GachaData.GachaTimes,
-      IsGamePadIconVisible = false,
-      NotInteractive = true
-    })
-    self.Com_CostTenTimes_1:InitContent({
-      ResourceId = ShowResourceId,
-      bShowDenominator = false,
-      Numerator = GachaData.GachaCostNum10 - TimeLimitResourceCount,
-      IsGamePadIconVisible = false,
-      NotInteractive = true
-    })
-    self.Panel_TimeLimit:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    self.Com_CostTenTimes_2:InitContent({
-      ResourceId = TimeLimitResourceId,
-      bShowDenominator = false,
-      Numerator = TimeLimitResourceCount,
-      IsGamePadIconVisible = false,
-      NotInteractive = true
-    })
-  elseif TimeLimitResourceCount > 0 and TimeLimitResourceCount + ShowResourceCount < GachaData.GachaCostNum10 then
-    self.Com_CostOnce:InitContent({
-      ResourceId = TimeLimitResourceId,
-      bShowDenominator = false,
-      Numerator = GachaData.GachaTimes,
-      IsGamePadIconVisible = false,
-      NotInteractive = true
-    })
-    self.Com_CostTenTimes_1:InitContent({
-      ResourceId = ShowResourceId,
-      bShowDenominator = false,
-      Numerator = GachaData.GachaCostNum10,
-      IsGamePadIconVisible = false,
-      NotInteractive = true
-    })
-    self.Panel_TimeLimit:SetVisibility(ESlateVisibility.Collapsed)
+    GachaModel:UpdateGachaBtnComplex(self.Btn_TenTimes, GachaData.GachaCostNum10, TimeLimitResourceCount, ShowResourceCount, ShowResourceId, TimeLimitResourceId)
   else
-    self.Com_CostOnce:InitContent({
-      ResourceId = ShowResourceId,
-      bShowDenominator = false,
-      Numerator = GachaData.GachaTimes,
-      IsGamePadIconVisible = false,
-      NotInteractive = true
-    })
-    self.Com_CostTenTimes_1:InitContent({
-      ResourceId = ShowResourceId,
-      bShowDenominator = false,
-      Numerator = GachaData.GachaCostNum10,
-      IsGamePadIconVisible = false,
-      NotInteractive = true
-    })
-    self.Panel_TimeLimit:SetVisibility(ESlateVisibility.Collapsed)
+    GachaModel:UpdateGachaBtnPrice(self.Btn_TenTimes, GachaData.GachaCostNum10, TimeLimitResourceCount, ShowResourceId, TimeLimitResourceId)
   end
 end
 
@@ -462,9 +391,9 @@ end
 function M:RefreshRemainGachaTimes()
   local GachaInfo = DataMgr.SkinGacha[self.CurrentGachaId]
   if DataMgr.GachaProbability[GachaInfo.ProbabilityId].ShowGetStar5Times == nil or GachaInfo.GachaLimitIsShow then
-    self.Text_RemainTimes:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.Text_RemainTimes:SetVisibility(ESlateVisibility.Collapsed)
   else
-    self.Text_RemainTimes:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.Text_RemainTimes:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     local Avatar = GWorld:GetAvatar()
     if Avatar then
       local AdditionalCount = GachaModel:GetSkinGachaAlreadyTimes(GachaInfo.GachaType) or 0
@@ -582,7 +511,7 @@ function M:GetGachaAnime()
   CanvasSlot:SetAnchors(Anchors)
   CanvasSlot:SetOffsets(FMargin(0, 0, 0, 0))
   GachaAnime:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  CanvasSlot:SetZOrder(5)
+  CanvasSlot:SetZOrder(6)
   self.GachaAnime = GachaAnime
   self.GachaAnime.Parent = self
   return self.GachaAnime
@@ -616,80 +545,29 @@ function M:GetGachaResultPage(Data, RebateData)
   self.bSpecialShow = false
   self.bGachaing = false
   self.bGachaRes = true
-  self.GetItemPage = nil
-  local Type, Id = self:GetShowSkin(Data)
-  if Type then
-    if not self.GachaGetItemPageSP then
-      self.GachaGetItemPageSP = self:CreateWidgetNew("GachaGetItemPageSP")
-      self.LoadUIAnchor:AddChild(self.GachaGetItemPageSP)
-      local CanvasSlot = UE4.UWidgetLayoutLibrary.SlotAsCanvasSlot(self.GachaGetItemPageSP)
-      local Anchors = FAnchors()
-      Anchors.Minimum = FVector2D(0, 0)
-      Anchors.Maximum = FVector2D(1, 1)
-      CanvasSlot:SetAnchors(Anchors)
-      CanvasSlot:SetOffsets(FMargin(0, 0, 0, 0))
-      self.GachaGetItemPageSP:SetVisibility(UIConst.VisibilityOp.Collapsed)
-      CanvasSlot:SetZOrder(5)
-    end
-    self.GachaGetItemPageSP:Init(Data, RebateData, self.CurrentGachaId, Type, Id, self, function()
-      self.bGachaRes = false
-      if not self.bGachaing and not self.bGachaRes and not self.bSpecialShow then
-        self:SetAnimationCurrentTime(self.Gacha, self.Gacha:GetEndTime())
-        self:PlayAnimationReverse(self.Gacha)
-        self.List_Pool:SetFocus()
-        self:RefreshGachaInfo(self.TabId)
-        self.bInGachaMain = true
-        self:CheckBubbleShow()
-      end
-    end)
-    self.GetItemPage = self.GachaGetItemPageSP
-  else
-    if not self.GachaGetItemPage then
-      self.GachaGetItemPage = self:CreateWidgetNew("GachaGetItemPage")
-      self.LoadUIAnchor:AddChild(self.GachaGetItemPage)
-      local CanvasSlot = UE4.UWidgetLayoutLibrary.SlotAsCanvasSlot(self.GachaGetItemPage)
-      local Anchors = FAnchors()
-      Anchors.Minimum = FVector2D(0, 0)
-      Anchors.Maximum = FVector2D(1, 1)
-      CanvasSlot:SetAnchors(Anchors)
-      CanvasSlot:SetOffsets(FMargin(0, 0, 0, 0))
-      self.GachaGetItemPage:SetVisibility(UIConst.VisibilityOp.Collapsed)
-      CanvasSlot:SetZOrder(5)
-    end
-    self.GachaGetItemPage:Init(Data, RebateData, self.CurrentGachaId, nil, nil, self, function()
-      self.bGachaRes = false
-      if not self.bGachaing and not self.bGachaRes and not self.bSpecialShow then
-        self:SetAnimationCurrentTime(self.Gacha, self.Gacha:GetEndTime())
-        self:PlayAnimationReverse(self.Gacha)
-        self.List_Pool:SetFocus()
-        self:RefreshGachaInfo(self.TabId)
-        self.bInGachaMain = true
-        self:CheckBubbleShow()
-      end
-    end)
-    self.GetItemPage = self.GachaGetItemPage
+  if not self.GetItemPage then
+    self.GetItemPage = self:CreateWidgetNew("GachaGetItemPageSP")
+    self.LoadUIAnchor:AddChild(self.GetItemPage)
+    local CanvasSlot = UE4.UWidgetLayoutLibrary.SlotAsCanvasSlot(self.GetItemPage)
+    local Anchors = FAnchors()
+    Anchors.Minimum = FVector2D(0, 0)
+    Anchors.Maximum = FVector2D(1, 1)
+    CanvasSlot:SetAnchors(Anchors)
+    CanvasSlot:SetOffsets(FMargin(0, 0, 0, 0))
+    self.GetItemPage:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    CanvasSlot:SetZOrder(5)
   end
-end
-
-function M:GetShowSkin(Data)
-  local GachaInfo = DataMgr.SkinGacha[self.CurrentGachaId]
-  local UpItemId, UpItemType = GachaModel:GetSkinGachaUpInfo(self.CurrentGachaId)
-  local MaxRarity = -1
-  local ResType, ResId
-  for _, RewardData in ipairs(Data) do
-    local Type = GachaCommon.GachaItemTypeMap[RewardData.Sign]
-    local Id = RewardData.ResultId
-    if DataMgr.GachaRewardType[Type] and DataMgr.GachaRewardType[Type].HighlightDisplay or Type == UpItemType and Id == UpItemId then
-      local ItemData = DataMgr[Type][Id]
-      local Rarity = ItemData.Rarity or ItemData[Type .. "Rarity"]
-      if MaxRarity < Rarity then
-        MaxRarity = Rarity
-        ResType = Type
-        ResId = Id
-      end
+  self.GetItemPage:Init(Data, RebateData, self.CurrentGachaId, self, function()
+    self.bGachaRes = false
+    if not self.bGachaing and not self.bGachaRes and not self.bSpecialShow then
+      self:SetAnimationCurrentTime(self.Gacha, self.Gacha:GetEndTime())
+      self:PlayAnimationReverse(self.Gacha)
+      self.List_Pool:SetFocus()
+      self:RefreshGachaInfo(self.TabId)
+      self.bInGachaMain = true
+      self:CheckBubbleShow()
     end
-  end
-  return ResType, ResId
+  end)
 end
 
 function M:CheckShopLockState()
@@ -700,9 +578,9 @@ function M:CheckShopLockState()
     self.ShopIsUnlock = Avatar:CheckUIUnlocked(UIUnlockRuleId)
   end
   if self.ShopIsUnlock then
-    self.Group_ShopExchange:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.Group_ShopExchange:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   else
-    self.Group_ShopExchange:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.Group_ShopExchange:SetVisibility(ESlateVisibility.Collapsed)
   end
 end
 
@@ -816,26 +694,10 @@ function M:PurchaseGachaResource(IsSingleGacha, bFromGachaRes)
           return
         end
       end
-      
-      local function JumpToShop()
-        if self.ShopIsUnlock then
-          PageJumpUtils:JumpToShopPage(CommonConst.GachaJumpToShopMainTabId, nil, nil, "Shop")
-        else
-          local UIUnlockRuleName = "Shop"
-          local UIUnlockDesc = DataMgr.UIUnlockRule[UIUnlockRuleName].UIUnlockDesc
-          UIManager(self):ShowUITip("CommonToastMain", GText(UIUnlockDesc), 1.5)
-        end
-      end
-      
-      local PopupId = 100290
       local Params = {}
       Params.CostType = CoinId
       Params.CostNum = CoinNeededCount
-      Params.LeftCallbackObj = self
-      Params.RightCallbackObj = self
-      Params.LeftGamepadKey = Const.GamepadFaceButtonUp
-      Params.ShowBKeyClose = true
-      self.PopupUI = UIManager(self):ShowCommonPopupUI(PopupId, Params, self)
+      UIManager(self):LoadUINew("ShopTargetPay", Params)
     else
       local function Confirm()
         self.CantClick = true
@@ -1433,8 +1295,8 @@ function M:Close()
     GachaModel:CheckNew()
     self.autoSelectedNewGacha = nil
   end
-  if self.GachaGetItemPage then
-    self.GachaGetItemPage:RemoveFromParent()
+  if self.GetItemPage then
+    self.GetItemPage:RemoveFromParent()
   end
   self.Group_TitleAnchor:ClearChildren()
   self.LoadUIAnchor:ClearChildren()

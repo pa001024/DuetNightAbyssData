@@ -23,52 +23,49 @@ T.RT_15 = {
 T.RT_16 = {150205}
 T.RT_17 = {BuffId = 150221}
 T.RT_18 = {
-  BuffId = 150402,
-  CompareBaseInt = 100,
-  CompareLogic = "NotLess"
+  Int = 50,
+  Key = "OverheatLayer"
 }
-T.RT_19 = {71}
-T.RT_20 = {BuffId = 150406}
-T.RT_21 = {
+T.RT_19 = {
   CompareBase = 1000,
   CompareBaseInt = 1,
   Key = "Default",
   SummonId = 180101
 }
-T.RT_22 = {CompareBaseInt = 1, Int = 20405}
-T.RT_23 = {901}
-T.RT_24 = {BuffId = 210202}
-T.RT_25 = {CompareBaseInt = 0, CompareLogic = "Equal"}
-T.RT_26 = {310124}
-T.RT_27 = {BuffId = 310301}
-T.RT_28 = {BuffId = 310303}
-T.RT_29 = {Key = "ToExplode"}
-T.RT_30 = {BuffId = 320111}
-T.RT_31 = {BuffId = 320113}
-T.RT_32 = {BuffId = 410101}
-T.RT_33 = {
+T.RT_20 = {CompareBaseInt = 1, Int = 20405}
+T.RT_21 = {901}
+T.RT_22 = {BuffId = 210202}
+T.RT_23 = {CompareBaseInt = 0, CompareLogic = "Equal"}
+T.RT_24 = {310124}
+T.RT_25 = {BuffId = 310301}
+T.RT_26 = {BuffId = 310303}
+T.RT_27 = {Key = "ToExplode"}
+T.RT_28 = {BuffId = 320111}
+T.RT_29 = {BuffId = 320113}
+T.RT_30 = {BuffId = 410101}
+T.RT_31 = {
   Key = "SuperFallAttack"
 }
-T.RT_34 = {KeyName = "Hook"}
-T.RT_35 = {BuffId = 510106}
-T.RT_36 = {BuffId = 530100}
-T.RT_37 = {CompareBase = 0.15}
-T.RT_38 = {BuffId = 106}
-T.RT_39 = {SkillGrade = 1}
-T.RT_40 = {SkillGrade = 2}
-T.RT_41 = {SkillGrade = 4}
-T.RT_42 = {SkillGrade = 6}
-T.RT_43 = {PartId = 1}
-T.RT_44 = {PartId = 2}
-T.RT_45 = {PartId = 3}
-T.RT_46 = {PartId = 4}
-T.RT_47 = {RelativeAngle = 180}
-T.RT_48 = {HpPercent = 0.45}
-T.RT_49 = {
+T.RT_32 = {KeyName = "Hook"}
+T.RT_33 = {BuffId = 510106}
+T.RT_34 = {BuffId = 530100}
+T.RT_35 = {CompareBase = 0.15}
+T.RT_36 = {BuffId = 106}
+T.RT_37 = {SkillGrade = 1}
+T.RT_38 = {SkillGrade = 2}
+T.RT_39 = {SkillGrade = 4}
+T.RT_40 = {SkillGrade = 6}
+T.RT_41 = {PartId = 1}
+T.RT_42 = {PartId = 2}
+T.RT_43 = {PartId = 3}
+T.RT_44 = {PartId = 4}
+T.RT_45 = {RelativeAngle = 180}
+T.RT_46 = {HpPercent = 0.45}
+T.RT_47 = {
   KeyName = "PartIsAlive"
 }
-T.RT_50 = {KeyName = "IsInPhase2"}
-T.RT_51 = {RelativeDis = 2300}
+T.RT_48 = {KeyName = "IsInPhase2"}
+T.RT_49 = {RelativeDis = 2300}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -95,6 +92,11 @@ return ReadOnly("CombatCondition", {
   [6] = {
     FuncName = "Is_In_SkillFeature",
     Id = 6,
+    Not = true
+  },
+  [7] = {
+    FuncName = "Not_HpMax",
+    Id = 7,
     Not = true
   },
   [8] = {FuncName = "Sp_Zero", Id = 8},
@@ -141,7 +143,7 @@ return ReadOnly("CombatCondition", {
     Id = 24
   },
   [25] = {
-    ConditionVars = T.RT_25,
+    ConditionVars = T.RT_23,
     FuncName = "Check_No_Bullet",
     Id = 25
   },
@@ -176,7 +178,7 @@ return ReadOnly("CombatCondition", {
     FuncName = "Not_Shoot_Hold",
     Id = 32,
     Not = true,
-    Or = T.RT_23
+    Or = T.RT_21
   },
   [33] = {
     FuncName = "Has_Movement_Input",
@@ -197,13 +199,13 @@ return ReadOnly("CombatCondition", {
   [39] = {
     FuncName = "Press_AnyAttack",
     Id = 39,
-    Or = T.RT_23
+    Or = T.RT_21
   },
   [40] = {
     FuncName = "Not_Attack_Hold",
     Id = 40,
     Not = true,
-    Or = T.RT_23
+    Or = T.RT_21
   },
   [41] = {
     FuncName = "Magazine_Zero",
@@ -220,9 +222,15 @@ return ReadOnly("CombatCondition", {
     Not = true
   },
   [44] = {
-    ConditionVars = T.RT_25,
+    ConditionVars = T.RT_23,
     FuncName = "Check_No_Bullet",
     Id = 44,
+    Not = true
+  },
+  [45] = {
+    ConditionVars = T.RT_23,
+    FuncName = "Check_No_Bullet_Ultra",
+    Id = 45,
     Not = true
   },
   [52] = {
@@ -259,7 +267,7 @@ return ReadOnly("CombatCondition", {
     Id = 64
   },
   [65] = {
-    ConditionVars = T.RT_38,
+    ConditionVars = T.RT_36,
     FuncName = "Check_Buff",
     Id = 65
   },
@@ -281,24 +289,31 @@ return ReadOnly("CombatCondition", {
     Not = true
   },
   [71] = {
-    ConditionVars = T.RT_39,
+    ConditionVars = T.RT_37,
     FuncName = "Check_Skill_Grade",
     Id = 71
   },
   [72] = {
-    ConditionVars = T.RT_40,
+    ConditionVars = T.RT_38,
     FuncName = "Check_Skill_Grade",
     Id = 72
   },
   [74] = {
-    ConditionVars = T.RT_41,
+    ConditionVars = T.RT_39,
     FuncName = "Check_Skill_Grade",
     Id = 74
   },
   [76] = {
-    ConditionVars = T.RT_42,
+    ConditionVars = T.RT_40,
     FuncName = "Check_Skill_Grade",
     Id = 76
+  },
+  [77] = {
+    ConditionVars = {
+      Key = "UnlockUltraPassive"
+    },
+    FuncName = "Check_Key_Bool",
+    Id = 77
   },
   [81] = {
     FuncName = "Is_PlayerCharacter",
@@ -313,25 +328,25 @@ return ReadOnly("CombatCondition", {
     Id = 83
   },
   [91] = {
-    ConditionVars = T.RT_39,
+    ConditionVars = T.RT_37,
     FuncName = "Check_Skill_Grade",
     Id = 91,
     Not = true
   },
   [92] = {
-    ConditionVars = T.RT_40,
+    ConditionVars = T.RT_38,
     FuncName = "Check_Skill_Grade",
     Id = 92,
     Not = true
   },
   [94] = {
-    ConditionVars = T.RT_41,
+    ConditionVars = T.RT_39,
     FuncName = "Check_Skill_Grade",
     Id = 94,
     Not = true
   },
   [96] = {
-    ConditionVars = T.RT_42,
+    ConditionVars = T.RT_40,
     FuncName = "Check_Skill_Grade",
     Id = 96,
     Not = true
@@ -353,6 +368,11 @@ return ReadOnly("CombatCondition", {
   [104] = {
     FuncName = "Check_TriggerProb_Ranged",
     Id = 104
+  },
+  [105] = {
+    ConditionVars = {Prob = 1},
+    FuncName = "Check_Prob",
+    Id = 105
   },
   [110] = {
     ConditionVars = T.RT_3,
@@ -462,25 +482,31 @@ return ReadOnly("CombatCondition", {
     Not = true
   },
   [505] = {
-    ConditionVars = T.RT_34,
+    ConditionVars = T.RT_32,
     FuncName = "Is_InCharacterTag",
     Id = 505
   },
   [506] = {
-    ConditionVars = T.RT_34,
+    ConditionVars = T.RT_32,
     FuncName = "Is_InCharacterTag",
     Id = 506,
     Not = true
   },
   [507] = {FuncName = "Can_Mount", Id = 507},
+  [508] = {
+    FuncName = "CheckInSDC",
+    Id = 508,
+    Not = true
+  },
+  [509] = {FuncName = "CheckInSDC", Id = 509},
   [900] = {
-    ConditionVars = T.RT_51,
+    ConditionVars = T.RT_49,
     FuncName = "Phantom_OwnerDis",
     Id = 900
   },
   [901] = {FuncName = "Is_Phantom", Id = 901},
   [902] = {
-    ConditionVars = T.RT_51,
+    ConditionVars = T.RT_49,
     FuncName = "Phantom_OwnerDis",
     Id = 902,
     Not = true
@@ -669,6 +695,10 @@ return ReadOnly("CombatCondition", {
     Id = 10005,
     Not = true
   },
+  [10006] = {
+    FuncName = "Check_Mon_EscapingFromBattle_SoloTreasure",
+    Id = 10006
+  },
   [110101] = {
     ConditionVars = {BuffId = 110101},
     FuncName = "Check_Buff",
@@ -757,10 +787,10 @@ return ReadOnly("CombatCondition", {
     Id = 120102,
     Not = true
   },
-  [120201] = {
-    ConditionVars = {CompareBase = 0.251},
+  [120111] = {
+    ConditionVars = {CompareBase = 0.3},
     FuncName = "Is_Hp_Above",
-    Id = 120201
+    Id = 120111
   },
   [150101] = {
     ConditionVars = {Key = "BaonuEnd"},
@@ -850,7 +880,7 @@ return ReadOnly("CombatCondition", {
   },
   [150402] = {
     ConditionVars = T.RT_18,
-    FuncName = "Check_Buff_Layer",
+    FuncName = "Check_Key_Int_NotLess",
     Id = 150402
   },
   [150403] = {
@@ -864,22 +894,21 @@ return ReadOnly("CombatCondition", {
     Id = 150404
   },
   [150405] = {
-    And = T.RT_19,
-    ConditionVars = T.RT_20,
+    ConditionVars = {BuffId = 150410},
     FuncName = "Check_Buff",
     Id = 150405
   },
   [150406] = {
-    And = T.RT_19,
-    ConditionVars = T.RT_20,
-    FuncName = "Check_Buff",
-    Id = 150406,
-    Not = true
+    ConditionVars = {
+      Key = "SuyiPassive2"
+    },
+    FuncName = "Check_Key_Bool",
+    Id = 150406
   },
   [150421] = {
     And = {76},
     ConditionVars = T.RT_18,
-    FuncName = "Check_Buff_Layer",
+    FuncName = "Check_Key_Int_NotLess",
     Id = 150421
   },
   [150501] = {
@@ -893,18 +922,18 @@ return ReadOnly("CombatCondition", {
     Id = 150502
   },
   [180101] = {
-    ConditionVars = T.RT_21,
+    ConditionVars = T.RT_19,
     FuncName = "SummonInRange",
     Id = 180101,
     Not = true
   },
   [180102] = {
-    ConditionVars = T.RT_21,
+    ConditionVars = T.RT_19,
     FuncName = "SummonInRange",
     Id = 180102
   },
   [180104] = {
-    ConditionVars = T.RT_21,
+    ConditionVars = T.RT_19,
     FuncName = "SummonInRange",
     Id = 180104
   },
@@ -922,6 +951,16 @@ return ReadOnly("CombatCondition", {
     FuncName = "SummonInRange",
     Id = 210101
   },
+  [210102] = {
+    ConditionVars = {MonsterId = 210101},
+    FuncName = "Check_Mon_UnitId",
+    Id = 210102
+  },
+  [210103] = {
+    ConditionVars = {MonsterId = 210101, int = 2101},
+    FuncName = "Check_Shuimu_Summon",
+    Id = 210103
+  },
   [210201] = {
     ConditionVars = {
       Int = 0,
@@ -932,12 +971,12 @@ return ReadOnly("CombatCondition", {
     Not = true
   },
   [210202] = {
-    ConditionVars = T.RT_24,
+    ConditionVars = T.RT_22,
     FuncName = "CheckCreaterBuff",
     Id = 210202
   },
   [210203] = {
-    ConditionVars = T.RT_24,
+    ConditionVars = T.RT_22,
     FuncName = "Check_Buff",
     Id = 210203
   },
@@ -968,7 +1007,7 @@ return ReadOnly("CombatCondition", {
     ConditionVars = {BuffId = 310120},
     FuncName = "Check_Buff",
     Id = 310120,
-    Or = T.RT_26
+    Or = T.RT_24
   },
   [310121] = {
     ConditionVars = {
@@ -1023,33 +1062,33 @@ return ReadOnly("CombatCondition", {
     Id = 310203
   },
   [310301] = {
-    ConditionVars = T.RT_27,
+    ConditionVars = T.RT_25,
     FuncName = "Check_Buff",
     Id = 310301
   },
   [310302] = {
-    ConditionVars = T.RT_27,
+    ConditionVars = T.RT_25,
     FuncName = "Check_Buff",
     Id = 310302,
     Not = true
   },
   [310303] = {
-    ConditionVars = T.RT_28,
+    ConditionVars = T.RT_26,
     FuncName = "Check_Yeer_Skill01A",
     Id = 310303
   },
   [310304] = {
-    ConditionVars = T.RT_28,
+    ConditionVars = T.RT_26,
     FuncName = "Check_Yeer_Skill01B",
     Id = 310304
   },
   [310305] = {
-    ConditionVars = T.RT_29,
+    ConditionVars = T.RT_27,
     FuncName = "Check_Key_Bool",
     Id = 310305
   },
   [310306] = {
-    ConditionVars = T.RT_29,
+    ConditionVars = T.RT_27,
     FuncName = "Check_Key_Bool",
     Id = 310306,
     Not = true
@@ -1060,31 +1099,37 @@ return ReadOnly("CombatCondition", {
     Id = 320101
   },
   [320111] = {
-    ConditionVars = T.RT_30,
+    ConditionVars = T.RT_28,
     FuncName = "Check_Buff",
     Id = 320111
   },
   [320112] = {
-    ConditionVars = T.RT_30,
+    ConditionVars = T.RT_28,
     FuncName = "Check_Buff",
     Id = 320112,
     Not = true
   },
   [320113] = {
-    ConditionVars = T.RT_31,
+    ConditionVars = T.RT_29,
     FuncName = "Check_Buff",
     Id = 320113
   },
   [320114] = {
-    ConditionVars = T.RT_31,
+    ConditionVars = T.RT_29,
     FuncName = "Check_Buff",
     Id = 320114,
     Not = true
   },
   [320201] = {
-    ConditionVars = {BuffId = 320202},
-    FuncName = "Check_Buff",
+    ConditionVars = {CompareBaseInt = 1, SummonId = 320202},
+    FuncName = "Check_SkillCreature",
     Id = 320201
+  },
+  [320202] = {
+    And = {71},
+    ConditionVars = {Prob = 0.3},
+    FuncName = "Check_Prob",
+    Id = 320202
   },
   [330101] = {
     FuncName = "Check_Maer_Skill01_Grade2",
@@ -1132,19 +1177,19 @@ return ReadOnly("CombatCondition", {
     ConditionVars = {BuffId = 410111},
     FuncName = "Check_Buff",
     Id = 410101,
-    Or = T.RT_26
+    Or = T.RT_24
   },
   [410102] = {
     FuncName = "Is_OnGround",
     Id = 410102
   },
   [410103] = {
-    ConditionVars = T.RT_32,
+    ConditionVars = T.RT_30,
     FuncName = "Check_Buff",
     Id = 410103
   },
   [410104] = {
-    ConditionVars = T.RT_32,
+    ConditionVars = T.RT_30,
     FuncName = "Check_Buff",
     Id = 410104,
     Not = true
@@ -1171,12 +1216,12 @@ return ReadOnly("CombatCondition", {
     Id = 420102
   },
   [420103] = {
-    ConditionVars = T.RT_33,
+    ConditionVars = T.RT_31,
     FuncName = "Check_Key_Bool",
     Id = 420103
   },
   [420104] = {
-    ConditionVars = T.RT_33,
+    ConditionVars = T.RT_31,
     FuncName = "Check_Key_Bool",
     Id = 420104,
     Not = true
@@ -1247,12 +1292,12 @@ return ReadOnly("CombatCondition", {
     Id = 430121
   },
   [510101] = {
-    ConditionVars = T.RT_35,
+    ConditionVars = T.RT_33,
     FuncName = "Check_Buff",
     Id = 510101
   },
   [510102] = {
-    ConditionVars = T.RT_35,
+    ConditionVars = T.RT_33,
     FuncName = "Summoner_Check_Buff",
     Id = 510102
   },
@@ -1266,25 +1311,25 @@ return ReadOnly("CombatCondition", {
     Id = 510104
   },
   [530102] = {
-    ConditionVars = T.RT_36,
+    ConditionVars = T.RT_34,
     FuncName = "Check_Buff",
     Id = 530102,
     Or = {530123}
   },
   [530121] = {
-    ConditionVars = T.RT_37,
+    ConditionVars = T.RT_35,
     FuncName = "Is_Hp_Above",
     Id = 530121
   },
   [530122] = {
-    ConditionVars = T.RT_37,
+    ConditionVars = T.RT_35,
     FuncName = "Is_Hp_Above",
     Id = 530122,
     Not = true
   },
   [530123] = {
     And = {530122},
-    ConditionVars = T.RT_36,
+    ConditionVars = T.RT_34,
     FuncName = "Check_Buff",
     Id = 530123
   },
@@ -1333,7 +1378,7 @@ return ReadOnly("CombatCondition", {
     Id = 600501
   },
   [600502] = {
-    ConditionVars = T.RT_38,
+    ConditionVars = T.RT_36,
     FuncName = "Check_Buff",
     Id = 600502,
     Or = {
@@ -1448,46 +1493,46 @@ return ReadOnly("CombatCondition", {
     Id = 850081
   },
   [850201] = {
-    ConditionVars = T.RT_43,
+    ConditionVars = T.RT_41,
     FuncName = "PartIsBroken",
     Id = 850201,
     Not = true
   },
   [850202] = {
-    ConditionVars = T.RT_44,
+    ConditionVars = T.RT_42,
     FuncName = "PartIsBroken",
     Id = 850202,
     Not = true
   },
   [850203] = {
-    ConditionVars = T.RT_45,
+    ConditionVars = T.RT_43,
     FuncName = "PartIsBroken",
     Id = 850203,
     Not = true
   },
   [850204] = {
-    ConditionVars = T.RT_46,
+    ConditionVars = T.RT_44,
     FuncName = "PartIsBroken",
     Id = 850204,
     Not = true
   },
   [850205] = {
-    ConditionVars = T.RT_43,
+    ConditionVars = T.RT_41,
     FuncName = "BrokenPart",
     Id = 850205
   },
   [850206] = {
-    ConditionVars = T.RT_44,
+    ConditionVars = T.RT_42,
     FuncName = "BrokenPart",
     Id = 850206
   },
   [850207] = {
-    ConditionVars = T.RT_45,
+    ConditionVars = T.RT_43,
     FuncName = "BrokenPart",
     Id = 850207
   },
   [850208] = {
-    ConditionVars = T.RT_46,
+    ConditionVars = T.RT_44,
     FuncName = "BrokenPart",
     Id = 850208
   },
@@ -1529,22 +1574,22 @@ return ReadOnly("CombatCondition", {
     Id = 850213
   },
   [850301] = {
-    ConditionVars = T.RT_43,
+    ConditionVars = T.RT_41,
     FuncName = "BrokenPart",
     Id = 850301
   },
   [850302] = {
-    ConditionVars = T.RT_44,
+    ConditionVars = T.RT_42,
     FuncName = "BrokenPart",
     Id = 850302
   },
   [850303] = {
-    ConditionVars = T.RT_45,
+    ConditionVars = T.RT_43,
     FuncName = "BrokenPart",
     Id = 850303
   },
   [850304] = {
-    ConditionVars = T.RT_46,
+    ConditionVars = T.RT_44,
     FuncName = "BrokenPart",
     Id = 850304
   },
@@ -1579,7 +1624,7 @@ return ReadOnly("CombatCondition", {
     Not = true
   },
   [850902] = {
-    ConditionVars = T.RT_47,
+    ConditionVars = T.RT_45,
     FuncName = "Check_BTTargetAngle",
     Id = 850902,
     Not = true
@@ -1590,7 +1635,7 @@ return ReadOnly("CombatCondition", {
     Id = 850903
   },
   [850904] = {
-    ConditionVars = T.RT_48,
+    ConditionVars = T.RT_46,
     FuncName = "Check_Mon_HpPercentUnder",
     Id = 850904
   },
@@ -1649,25 +1694,29 @@ return ReadOnly("CombatCondition", {
     Id = 851602
   },
   [851701] = {
-    ConditionVars = T.RT_49,
+    ConditionVars = T.RT_47,
     FuncName = "Check_Mon_BBValue",
     Id = 851701
   },
   [851702] = {
-    ConditionVars = T.RT_49,
+    ConditionVars = T.RT_47,
     FuncName = "Check_Mon_BBValue",
     Id = 851702,
     Not = true
   },
   [851801] = {
-    ConditionVars = T.RT_43,
+    ConditionVars = T.RT_41,
     FuncName = "BrokenPart",
     Id = 851801
   },
   [851802] = {
-    ConditionVars = T.RT_44,
+    ConditionVars = T.RT_42,
     FuncName = "BrokenPart",
     Id = 851802
+  },
+  [851901] = {
+    FuncName = "BossLieche_DieInBeingFixedState",
+    Id = 851901
   },
   [852001] = {
     ConditionVars = {HpPercent = 0.8},
@@ -1675,7 +1724,7 @@ return ReadOnly("CombatCondition", {
     Id = 852001
   },
   [852002] = {
-    ConditionVars = T.RT_48,
+    ConditionVars = T.RT_46,
     FuncName = "Check_Mon_HpPercentUnder",
     Id = 852002
   },
@@ -1695,7 +1744,7 @@ return ReadOnly("CombatCondition", {
     Not = true
   },
   [852202] = {
-    ConditionVars = T.RT_47,
+    ConditionVars = T.RT_45,
     FuncName = "Check_BTTargetAngle",
     Id = 852202,
     Not = true
@@ -1727,13 +1776,13 @@ return ReadOnly("CombatCondition", {
     Id = 852301
   },
   [852401] = {
-    ConditionVars = T.RT_50,
+    ConditionVars = T.RT_48,
     FuncName = "Check_Mon_BBValue",
     Id = 852401,
     Not = true
   },
   [852402] = {
-    ConditionVars = T.RT_50,
+    ConditionVars = T.RT_48,
     FuncName = "Check_Mon_BBValue",
     Id = 852402
   },
@@ -1957,12 +2006,12 @@ return ReadOnly("CombatCondition", {
     Id = 2040204
   },
   [2040501] = {
-    ConditionVars = T.RT_22,
+    ConditionVars = T.RT_20,
     FuncName = "Check_HeavyCharge_Grade",
     Id = 2040501
   },
   [2040502] = {
-    ConditionVars = T.RT_22,
+    ConditionVars = T.RT_20,
     FuncName = "Check_HeavyCharge_Grade",
     Id = 2040502,
     Not = true
@@ -1989,7 +2038,13 @@ return ReadOnly("CombatCondition", {
   [2050601] = {
     ConditionVars = {CompareBaseInt = 1, Int = 20506},
     FuncName = "Check_HeavyCharge_Grade",
-    Id = 2050601
+    Id = 2050601,
+    Or = {2051201}
+  },
+  [2051201] = {
+    ConditionVars = {CompareBaseInt = 1, Int = 20512},
+    FuncName = "Check_HeavyCharge_Grade",
+    Id = 2051201
   },
   [2060100] = {
     ConditionVars = {CompareBaseInt = 0, Int = 20601},
@@ -2012,7 +2067,7 @@ return ReadOnly("CombatCondition", {
     Id = 2060103
   },
   [2060111] = {
-    And = T.RT_23,
+    And = T.RT_21,
     FuncName = "Not_PerfectHeavyShooting",
     Id = 2060111
   },

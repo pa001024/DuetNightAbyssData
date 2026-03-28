@@ -511,13 +511,10 @@ function M:CreateMount()
   self.ActorController = ActorController:New({
     ViewUI = self,
     EPreviewSceneType = CommonConst.EPreviewSceneType.PreviewCommon,
-    Char = Avatar.Chars[Avatar.CurrentChar]
+    Char = Avatar.Chars[Avatar.CurrentChar],
+    bEnableReflection = false
   })
   self.ActorController:OnOpened()
-  local Player = self.ActorController:GetPlayerActor()
-  self.ActorController:ChangeCharAppearance({
-    SkinId = Player.CurrentRoleId
-  })
   self.ActorController:SetArmoryCameraTag(CommonConst.ArmoryType.Char)
   self.ActorController:HidePlayerOnMount(not self.IsRiderMount)
   self.ActorController:CreateMount(self.DisplayMountId)
@@ -690,7 +687,7 @@ function M:HandleGamepadInput(InKeyName, InAnalogInputEvent)
   elseif "Gamepad_RightX" == InKeyName then
     if self.ActorController then
       local DeltaX = UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent) * 10
-      self.ActorController:OnDragging({X = DeltaX})
+      self.ActorController:OnDragViewActor({X = DeltaX})
     end
     return true
   end

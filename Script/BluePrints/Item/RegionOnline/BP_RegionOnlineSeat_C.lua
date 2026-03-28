@@ -233,13 +233,18 @@ function M:IsForbidden(Player)
   local CurrentName = self.ChestInteractiveComponent.InteractiveName
   for i, v in pairs(PointIndex) do
     if v.Valid or v.Eid == Player.Eid then
-      local Data = DataMgr.CommonUIConfirm[self.ChestInteractiveComponent.CommonUIConfirmID]
-      self.ChestInteractiveComponent.InteractiveName = GText(Data.ConfirmText)
       return false
     end
   end
-  self.ChestInteractiveComponent.InteractiveName = "UI_RegionOnline_SitOccupied"
   return true
+end
+
+function M:GetInteractiveName(Player)
+  if self.ChestInteractiveComponent:IsForbidden(Player) then
+    return GText("UI_RegionOnline_SitOccupied")
+  end
+  local Data = DataMgr.CommonUIConfirm[self.ChestInteractiveComponent.CommonUIConfirmID]
+  return GText(Data.ConfirmText)
 end
 
 return M

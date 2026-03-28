@@ -10,7 +10,6 @@ local TalkUtils = require("BluePrints.Story.Talk.View.TalkUtils")
 local ETalkType = require("BluePrints.Story.Talk.Base.ETalkType")
 local EDialogueNodeType = TalkUtils.EDialogueNodeType
 local FStoryIterationGraph = {}
-local RecordChainComponent = "BluePrints.Story.StoryIteration.Components.RecordChainComponent"
 
 function FStoryIterationGraph:New(Dialogues, InitialDialogueId, TalkTask)
   local StoryIterationGraph = setmetatable({}, {__index = FStoryIterationGraph})
@@ -32,7 +31,6 @@ function FStoryIterationGraph:Init(Dialogues, InitialDialogueId)
   self.Dialogues = Dialogues
   self.EndNode = FIterationEndNode:New(self)
   self.CurrentNode = FIterationStartNode:New(Dialogues, InitialDialogueId, self)
-  self:SetComponent(RecordChainComponent)
 end
 
 function FStoryIterationGraph:InitNodeMaps()
@@ -124,51 +122,6 @@ function FStoryIterationGraph:GetDesiredNode(Node)
   return nil
 end
 
-function FStoryIterationGraph:RecordOption(OptionData, bTalkOption)
-  DebugPrint("lhr@RecordOption", TalkUtils:DialogueIdToContent(OptionData.SelectedOption))
-  if OptionData then
-    local DialogueData = DataMgr.Dialogue[OptionData.SelectedOption]
-    if OptionData.bImpression then
-      local OptionType = OptionData.OptionType
-      local ImpressionId = DialogueData["Impr" .. OptionType .. "Id"]
-      local OptionInfo = DataMgr["Impression" .. OptionType][ImpressionId]
-      local ImpressionConfigId, OptionValue = "Common", 0
-      for _, ImpressionType in pairs(ImpressionTypes) do
-        OptionValue = OptionInfo[ImpressionType .. OptionType]
-        if OptionValue > 0 then
-          ImpressionConfigId = ImpressionType
-          break
-        end
-      end
-      if OptionData.OptionType == "Check" then
-        local AreaId = OptionInfo.RegionId
-        local Avatar = GWorld:GetAvatar()
-        if not Avatar then
-          DebugPrint("FStoryIterationGraph@RecordOption时，Avatar不存在")
-          return
-        end
-        local ImpressionInfo = Avatar:GetRegionImpression(AreaId)
-        local PlayerValue = ImpressionInfo:GetImpressionValueByType(ImpressionConfigId)
-        self.CheckHandle = ReviewUtils.AddOptionWithImpressionCheck(ImpressionConfigId, PlayerValue, OptionData.Options, OptionData.SelectedOption, OptionData.VisitedOptions)
-      elseif OptionData.OptionType == "Plus" then
-        if "Common" ~= ImpressionConfigId then
-          ReviewUtils.AddOptionWithImpressionValue(ImpressionConfigId, OptionValue, OptionData.Options, OptionData.SelectedOption, OptionData.VisitedOptions)
-        else
-          ReviewUtils.AddOptionWithNormal(OptionData.Options, OptionData.SelectedOption, OptionData.VisitedOptions)
-        end
-      end
-      if bTalkOption then
-        self:OnNodeRecord({
-          NodeType = EDialogueNodeType.Option,
-          IsImpression = true
-        }, OptionData.SelectedOption)
-      end
-    else
-      ReviewUtils.AddOptionWithNormal(OptionData.Options, OptionData.SelectedOption, OptionData.VisitedOptions)
-    end
-  end
-end
-
 function FStoryIterationGraph:RecordCheckResult(CheckRes, CheckValue)
   if self.CheckHandle then
     self.CheckHandle:InsertCheckData(CheckRes, CheckValue)
@@ -181,15 +134,6 @@ end
 
 function FStoryIterationGraph:GetRestartTag()
   return self.RestartDialogueId
-end
-
-function FStoryIterationGraph:SetComponent(CompModulePath)
-  self.assembledComponents = self.assembledComponents or {}
-  if not self.assembledComponents[CompModulePath] then
-    self._components = {CompModulePath}
-    AssembleComponents(self)
-    self.assembledComponents[CompModulePath] = true
-  end
 end
 
 return FStoryIterationGraph

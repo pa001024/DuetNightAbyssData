@@ -115,7 +115,14 @@ local function make_sandbox()
     __index = _G,
     __newindex = _G
   })
-  local env_mt = {__index = proxy, __newindex = proxy}
+  local env_mt = {
+    __index = proxy,
+    __newindex = function(t, k, v)
+      local _print = ScreenPrint or print
+      _print("禁止在代码中写入_G表，请通过_G.XXX = XXX的形式,Key:" .. tostring(k) .. ",Value:" .. tostring(v) .. ",traceback:" .. tostring(debug.traceback()))
+      proxy[k] = v
+    end
+  }
   
   local function load(module_name)
     local found, chunk

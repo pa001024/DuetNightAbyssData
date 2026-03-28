@@ -108,6 +108,7 @@ function M:InitImpressionShop(MainTabIdx, SubTabIdx, ShopItemId, bNotPlayBgBlend
     local Avatar = GWorld:GetAvatar()
     if Avatar then
       local RegionId = Avatar:GetSubRegionId2RegionId()
+      RegionId = Avatar:GetImpressionAreaIdFromRegionId(RegionId)
       MainTabIdx = DataMgr.RegionId2ImpressionMainTab[RegionId]
     end
   end
@@ -162,6 +163,7 @@ function M:InitRegionInfo(MainTabIdx)
     local Avatar = GWorld:GetAvatar()
     if Avatar then
       RegionId = Avatar:GetSubRegionId2RegionId()
+      RegionId = Avatar:GetImpressionAreaIdFromRegionId(RegionId)
     end
   end
   RegionId = RegionId and tonumber(RegionId)
@@ -221,7 +223,8 @@ function M:UpdateResource(ResourceId)
   local Avatar = GWorld:GetAvatar()
   if Avatar then
     local SubRegionId = Avatar:GetSubRegionId2RegionId()
-    local Data = DataMgr.ImpressionResource[SubRegionId]
+    local ImpressionRegionId = Avatar:GetImpressionAreaIdFromRegionId(SubRegionId)
+    local Data = DataMgr.ImpressionResource[ImpressionRegionId]
     ResourceId = ResourceId or Data and Data.ResourceId
   end
   ResourceId = ResourceId or {3001}

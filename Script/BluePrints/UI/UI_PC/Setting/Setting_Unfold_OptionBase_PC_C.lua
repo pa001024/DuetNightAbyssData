@@ -337,17 +337,36 @@ function S:RestoreDefaultSystemLanguage()
   self:SaveSystemLanguageOptionSetting()
 end
 
+local DONT_REBOOT_ONLANG_CHANGED = false
+
 function S:SaveSystemLanguageOptionSetting()
-  self.OptionCache = self.SystemLanguageList[self.NowOptionId]
-  SettingUtils.SaveEMCache(self.EMCacheName, self.EMCacheKey, self.OptionCache)
   if self:CheckSettingIsChange() then
     local Params = {}
-    
-    function Params.RightCallbackFunction()
-      self:OnClickConfirmReconnect()
+    if DONT_REBOOT_ONLANG_CHANGED then
+      self.OptionCache = self.SystemLanguageList[self.NowOptionId]
+      SettingUtils.SaveEMCache(self.EMCacheName, self.EMCacheKey, self.OptionCache)
+      
+      function Params.RightCallbackFunction()
+        self:OnClickConfirmReconnect()
+      end
+      
+      UIManager(self):ShowCommonPopupUI(100075, Params, self.Parent)
+    else
+      function Params.RightCallbackFunction()
+        self.OptionCache = self.SystemLanguageList[self.NowOptionId]
+        
+        SettingUtils.SaveEMCache(self.EMCacheName, self.EMCacheKey, self.OptionCache)
+        GWorld.GameInstance:InitGameSystemLanguage()
+        UIManager():GetUI("Setting"):Close()
+        UIManager():CloseAllUI_EX({}, "Delivery")
+        collectgarbage("collect")
+        UE4.UKismetSystemLibrary.CollectGarbage()
+        GWorld:GetMainPlayer():InitSceneStartUI()
+        EventManager:FireEvent(EventID.OnSettingSystemLanguageChanged)
+      end
+      
+      UIManager(self):ShowCommonPopupUI(100309, Params, self.Parent)
     end
-    
-    UIManager(self):ShowCommonPopupUI(100075, Params, self.Parent)
   end
 end
 
@@ -436,6 +455,7 @@ function S:SaveInterfaceModeOptionSetting()
   end
   if self.OptionCache == EWindowMode.Windowed then
   else
+    DebugPrint("ResizeWindow 调用点: Setting_Unfold_OptionBase_PC_C.SaveInterfaceModeOptionSetting", self.OptionCache)
     SceneManager:ResizeWindow(self.OptionCache)
   end
 end
@@ -1296,54 +1316,54 @@ function S:SetMobileResolutionOldOptionId()
       [1] = {
         80,
         65,
-        648
+        576
       },
       [2] = {
         85,
         65,
-        684
+        648
       },
       [3] = {
         90,
         70,
-        720
+        684
       },
       [4] = {
         95,
         75,
-        764
+        720
       },
       [5] = {
         115,
         80,
-        900
+        800
       }
     }
   elseif "IOS" == PlatformName then
     self.MobileResolutionList = {
       [1] = {
-        55,
-        55,
+        48,
+        48,
         0
       },
       [2] = {
-        60,
-        60,
+        52,
+        52,
         0
       },
       [3] = {
-        65,
-        65,
+        55,
+        55,
         0
       },
       [4] = {
-        70,
-        70,
+        65,
+        65,
         0
       },
       [5] = {
-        85,
-        85,
+        70,
+        70,
         0
       }
     }
@@ -1386,9 +1406,9 @@ function S:SaveRayTracingOptionSetting()
   end
   local LastOptionId = SettingUtils.GetEMCache(self.CacheName, self.EMCacheKey, tonumber(self.DefaultValue))
   local IsOpen = self.NowOptionId > 1 and true or false
-  local RayTracingShadowsEnabled = UE4.URuntimeCommonFunctionLibrary.GetRayTracingShadowsEnabled()
-  UE4.URuntimeCommonFunctionLibrary.SetRayTracingShadowsEnabled(IsOpen)
-  if IsOpen ~= RayTracingShadowsEnabled and IsOpen and 1 == LastOptionId then
+  local RayTracingEnabled = UE4.URuntimeCommonFunctionLibrary.GetRayTracingEnabled()
+  UE4.URuntimeCommonFunctionLibrary.SetRayTracingEnabled(IsOpen and 1 or 0)
+  if IsOpen ~= RayTracingEnabled and IsOpen and 1 == LastOptionId then
     self:ShowRebootPop()
   end
   SettingUtils.SaveEMCache(self.CacheName, self.EMCacheKey, self.NowOptionId)

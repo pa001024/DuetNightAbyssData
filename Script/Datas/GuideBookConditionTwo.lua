@@ -420,6 +420,235 @@ return ReadOnly("GuideBookConditionTwo", {
         RewardId = 7000
       }
     },
+    [121] = {
+      [1] = {
+        CompleteUIGuideId = 121,
+        GuideId = 121,
+        GuideNoteId = 138,
+        GuideNoteTab = 3,
+        MechanismTag = "YYGPanel",
+        RewardId = 7000
+      }
+    },
+    [122] = {
+      [1] = {
+        CompleteUIGuideId = 122,
+        GuideId = 122,
+        GuideNoteId = 139,
+        GuideNoteTab = 3,
+        MechanismTag = "YYGPinTu",
+        RewardId = 7000
+      }
+    },
+    [123] = {
+      [1] = {
+        CompleteUIGuideId = 123,
+        FinishQuest = 12020410,
+        GuideId = 123,
+        GuideNoteId = 140,
+        GuideNoteTab = 3,
+        RewardId = 7000
+      }
+    },
+    [124] = {
+      [1] = {
+        CompleteUIGuideId = 124,
+        GuideId = 124,
+        GuideNoteId = 141,
+        GuideNoteTab = 3,
+        MechanismTag = "HJWuyou",
+        RewardId = 7000
+      }
+    },
+    [125] = {
+      [1] = {
+        CompleteUIGuideId = 125,
+        GuideId = 125,
+        GuideNoteId = 142,
+        GuideNoteTab = 3,
+        MechanismTag = "TRLMTerra",
+        RewardId = 7000
+      }
+    },
+    [126] = {
+      [1] = {
+        CompleteUIGuideId = 126,
+        FinishQuest = 12020208,
+        GuideId = 126,
+        GuideNoteId = 143,
+        GuideNoteTab = 3,
+        RewardId = 7000
+      }
+    },
+    [127] = {
+      [1] = {
+        CompleteUIGuideId = 127,
+        GuideId = 127,
+        GuideNoteId = 144,
+        GuideNoteTab = 3,
+        MechanismTag = "SubRebsign",
+        RewardId = 7000
+      }
+    },
+    [128] = {
+      [1] = {
+        CompleteUIGuideId = 128,
+        GuideId = 128,
+        GuideNoteId = 145,
+        GuideNoteTab = 3,
+        MechanismTag = "IntDrone",
+        RewardId = 7000
+      }
+    },
+    [129] = {
+      [1] = {
+        CompleteUIGuideId = 129,
+        FinishQuest = 12010406,
+        GuideId = 129,
+        GuideNoteId = 146,
+        GuideNoteTab = 3,
+        RewardId = 7000
+      }
+    },
+    [130] = {
+      [1] = {
+        CompleteUIGuideId = 130,
+        GuideId = 130,
+        GuideNoteId = 147,
+        GuideNoteTab = 3,
+        MechanismTag = "YYGFan",
+        RewardId = 7000
+      }
+    },
+    [132] = {
+      [1] = {
+        CompleteUIGuideId = 132,
+        GuideId = 132,
+        GuideNoteId = 149,
+        GuideNoteTab = 3,
+        MechanismTag = "Container",
+        RewardId = 7000
+      }
+    },
+    [133] = {
+      [1] = {
+        CompleteUIGuideId = 133,
+        GuideId = 133,
+        GuideNoteId = 150,
+        GuideNoteTab = 3,
+        MechanismTag = "Niudan",
+        RewardId = 7000
+      }
+    },
+    [134] = {
+      [1] = {
+        CompleteUIGuideId = 134,
+        GuideId = 134,
+        GuideNoteId = 151,
+        GuideNoteTab = 3,
+        RewardId = 7000
+      }
+    },
+    [135] = {
+      [1] = {
+        CompleteUIGuideId = 135,
+        GuideId = 135,
+        GuideNoteId = 152,
+        GuideNoteTab = 3,
+        MechanismTag = "GambleMech",
+        RewardId = 7000
+      }
+    },
+    [136] = {
+      [1] = {
+        CompleteUIGuideId = 136,
+        GuideId = 136,
+        GuideNoteId = 153,
+        GuideNoteTab = 3,
+        MechanismTag = "TreasureRoom",
+        RewardId = 7000
+      }
+    },
+    [137] = {
+      [1] = {
+        CompleteUIGuideId = 137,
+        GuideId = 137,
+        GuideNoteId = 154,
+        GuideNoteTab = 3,
+        MechanismTag = "PoisonMech",
+        RewardId = 7000
+      }
+    },
+    [138] = {
+      [1] = {
+        CompleteUIGuideId = 138,
+        GuideId = 138,
+        GuideNoteId = 155,
+        GuideNoteTab = 3,
+        MechanismTag = "GuardMech",
+        RewardId = 7000
+      }
+    },
+    [139] = {
+      [1] = {
+        CompleteUIGuideId = 139,
+        FinishQuest = 12030202,
+        GuideId = 139,
+        GuideNoteId = 156,
+        GuideNoteTab = 3,
+        RewardId = 7000
+      }
+    },
+    [140] = {
+      [1] = {
+        CompleteUIGuideId = 140,
+        GuideId = 140,
+        GuideNoteId = 157,
+        GuideNoteTab = 3,
+        MechanismTag = "ExtractionPoint",
+        RewardId = 7000
+      }
+    },
+    [144] = {
+      [1] = {
+        CompleteUIGuideId = 144,
+        GuideId = 144,
+        GuideNoteId = 148,
+        GuideNoteTab = 5,
+        RewardId = 7000,
+        SysGuideId = 2095
+      }
+    },
+    [145] = {
+      [1] = {
+        CompleteUIGuideId = 145,
+        GuideId = 145,
+        GuideNoteId = 158,
+        GuideNoteTab = 3,
+        MechanismTag = "ExpYanque",
+        RewardId = 7000
+      }
+    },
+    [146] = {
+      [1] = {
+        CompleteUIGuideId = 146,
+        GuideId = 146,
+        GuideNoteId = 159,
+        GuideNoteTab = 3,
+        MechanismTag = "WuyouFind",
+        RewardId = 7000
+      }
+    },
+    [147] = {
+      [1] = {
+        CompleteUIGuideId = 147,
+        GuideId = 147,
+        GuideNoteId = 160,
+        GuideNoteTab = 3,
+        MechanismTag = "DarkClouds",
+        RewardId = 7000
+      }
+    },
     [1001] = {
       [1] = {
         CompleteUIGuideId = 1001,
@@ -533,6 +762,15 @@ return ReadOnly("GuideBookConditionTwo", {
         CompleteUIGuideId = 1013,
         GuideId = 1013,
         GuideNoteId = 106,
+        GuideNoteTab = 6,
+        RewardId = 7000
+      }
+    },
+    [1014] = {
+      [1] = {
+        CompleteUIGuideId = 1014,
+        GuideId = 1014,
+        GuideNoteId = 137,
         GuideNoteTab = 6,
         RewardId = 7000
       }

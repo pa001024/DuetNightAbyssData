@@ -21,7 +21,7 @@
       },
       {
         "id": 80040102,
-        "content": "Hmm... d’accord...",
+        "content": "<I>Hmm...</> d’accord...",
         "voice": "inv/Heitao/001/C85F3B3C",
         "npc": 790007,
         "next": 80040103
@@ -435,7 +435,7 @@
       },
       {
         "id": 80040222,
-        "content": "Toi... Non, c'est différent pour toi !",
+        "content": "Toi... Non, c’est différent pour toi !",
         "voice": "inv/Heitao/002/C85F4EEC",
         "npc": 790007,
         "next": 80040223
@@ -505,7 +505,7 @@
       },
       {
         "id": 80040316,
-        "content": "J’y pense souvent… Peut-être qu’un jour, on pourra quitter l'Île du Purgatoire. Qu’est-ce que t’en penses ?",
+        "content": "J’y pense souvent… Peut-être qu’un jour, on pourra quitter l’Île du Purgatoire. Qu’est-ce que t’en penses ?",
         "voice": "inv/Heitao/003/C85F5E58",
         "npc": 790008,
         "next": 80040317
@@ -1336,7 +1336,7 @@
       },
       {
         "id": 80140206,
-        "content": "Voici une broche commémorative célébrant les 200 ans du théâtre. Nous serions honorés que vous l'acceptiez.",
+        "content": "Voici une broche commémorative célébrant les 200 ans du théâtre. Nous serions honorés que vous l’acceptiez.",
         "voice": "inv/Tuosi/002/C89F628C",
         "npc": 790043,
         "next": 80140207
@@ -2297,6 +2297,15 @@
         "npc": 790029
       }
     ]
+  },
+  {
+    "id": 150101,
+    "charId": 1501,
+    "name": "",
+    "reward": 7050,
+    "consume": {
+      "19006": 2
+    }
   },
   {
     "id": 150201,
@@ -5352,6 +5361,47 @@
     ]
   },
   {
+    "id": 150401,
+    "charId": 1504,
+    "name": "Ne plus errer au loin",
+    "desc": "Les feuilles portées par le vent finissent par retomber sur la terre. Ceux qui ont longtemps erré trouvent, eux aussi, le chemin du retour.",
+    "memoryName": "Oiseau à câlins au parfum de soleil",
+    "memoryDesc": "Un petit oiseau rondouillard dont nul ne connaît le nom, gros comme un avant-bras. En le serrant contre soi, on peut enfouir son visage dans son ventre moelleux et laisser s’envoler la fatigue de la journée.",
+    "reward": 7050,
+    "consume": {
+      "19003": 3,
+      "19006": 3
+    }
+  },
+  {
+    "id": 150402,
+    "charId": 1504,
+    "name": "Des chemins qui se séparent",
+    "desc": "La route qui s’éloigne de la maison est longue et tortueuse. Et tu n’oses pas te retourner pour regarder derrière toi.",
+    "memoryName": "Valise de voyage portable",
+    "memoryDesc": "L’œuvre méticuleuse d’une jeune artisane. Ses poulies ont été améliorées et un moteur de propulsion y a été ajouté, réduisant considérablement l’effort nécessaire pour la transporter. Idéale pour partir de chez soi.",
+    "reward": 7051,
+    "consume": {
+      "19002": 6,
+      "19004": 6,
+      "19006": 6
+    }
+  },
+  {
+    "id": 150403,
+    "charId": 1504,
+    "name": "Impossible de trancher l’eau",
+    "desc": "Les liens du sang sont de ces choses qu’on ne peut jamais vraiment couper. Comme lorsqu’on tente de fendre l’eau avec une lame : la coupure ne tient pas, et le courant poursuit sa course.",
+    "memoryName": "Lettre de famille froissée",
+    "memoryDesc": "Une lettre dissimulée depuis des années dans la doublure d’un oiseau à câlins. Le papier est couvert de plis, chargé de nostalgie et d’affection.",
+    "reward": 7052,
+    "consume": {
+      "19002": 9,
+      "19005": 9,
+      "19008": 9
+    }
+  },
+  {
     "id": 180101,
     "charId": 1801,
     "name": "Le vœu de magie",
@@ -7657,7 +7707,7 @@
       },
       {
         "id": 80090108,
-        "content": "Pff, tu te prends trop au sérieux, je voulais juste te faire peur ! Bouh !",
+        "content": "<I>Pff</>, tu te prends trop au sérieux, je voulais juste te faire peur ! Bouh !",
         "voice": "inv/Zhangyu/001/C87F4758",
         "npc": 92301,
         "next": 80090109
@@ -7879,7 +7929,7 @@
       },
       {
         "id": 80090141,
-        "content": "Hmpf ! Exactement !",
+        "content": "<I>Hmpf</> ! Exactement !",
         "voice": "inv/Zhangyu/001/C87F4CC2",
         "npc": 92301,
         "next": 80090142
@@ -7957,7 +8007,7 @@
       },
       {
         "id": 80090207,
-        "content": "Hmpf ! Et alors ? Si j’avais été gentille, je serais plus Tabethe ! Ce trou à rats, je pouvais pas y rester une journée de plus. Alors, quand ces riches sont venus, je me suis transformée en une de leurs valises.",
+        "content": "<I>Hmpf</> ! Et alors ? Si j’avais été gentille, je serais plus Tabethe ! Ce trou à rats, je pouvais pas y rester une journée de plus. Alors, quand ces riches sont venus, je me suis transformée en une de leurs valises.",
         "voice": "inv/Zhangyu/002/C87F5796",
         "npc": 92301,
         "next": 80090208
@@ -7970,7 +8020,7 @@
         "options": [
           {
             "id": 80090209,
-            "content": "Aïe, ça devait faire mal ! Je vais faire super gaffe à tes oreilles maintenant !",
+            "content": "<I>Aïe, ça devait faire mal ! Je vais faire super gaffe à tes oreilles maintenant !</>",
             "next": 80090210
           },
           {
@@ -8480,7 +8530,7 @@
       },
       {
         "id": 80090401,
-        "content": "Mmmh, c’est trop bon ! Je peux en boire des litres, je m’en lasse jamais ! Et attention, c’est pas souvent que je dit du bien des gens... alors merci pour tout ce que tu prépares rien que pour moi.",
+        "content": "<I>Mmmh</>, c’est trop bon ! Je peux en boire des litres, je m’en lasse jamais ! Et attention, c’est pas souvent que je dit du bien des gens... alors merci pour tout ce que tu prépares rien que pour moi.",
         "voice": "inv/Zhangyu/004/C87F776A",
         "npc": 92301,
         "next": 80090402
@@ -8499,7 +8549,7 @@
       },
       {
         "id": 80090404,
-        "content": "Tadaaa ! Voici ma création exclusive, « Démon Tabethe, la Main Rouge » ! Eh ouais, je l’ai appelée comme moi ! J’ai mis tout mon cœur dedans, si si, je te jure !",
+        "content": "<I>Tadaaa</> ! Voici ma création exclusive, « Démon Tabethe, la Main Rouge » ! Eh ouais, je l’ai appelée comme moi ! J’ai mis tout mon cœur dedans, si si, je te jure !",
         "voice": "inv/Zhangyu/004/C87F77E8",
         "npc": 92301,
         "options": [
@@ -9092,7 +9142,7 @@
       },
       {
         "id": 80200036,
-        "content": "Hmm... ton corps est en excellente santé. Du moins, à ce que je peux constater. Mais...",
+        "content": "<I>Hmm...</> ton corps est en excellente santé. Du moins, à ce que je peux constater. Mais...",
         "voice": "inv/Fushu/001/C8C5BA68",
         "npc": 790053,
         "next": 80200037
@@ -9437,7 +9487,7 @@
       },
       {
         "id": 80200129,
-        "content": "Hmm...",
+        "content": "<I>Hmm...</>",
         "voice": "inv/Fushu/002/C8C5C9AA",
         "npc": 790053,
         "next": 80200130
@@ -10701,7 +10751,7 @@
       },
       {
         "id": 80110133,
-        "content": "Pff, ce genre de blabla, ça peut peut-être passer avec les bleus, mais pas avec moi...",
+        "content": "<I>Pff</>, ce genre de blabla, ça peut peut-être passer avec les bleus, mais pas avec moi...",
         "voice": "inv/Linen/001/C88C1CB2",
         "npc": 93101,
         "next": 80110134
@@ -11270,7 +11320,7 @@
       },
       {
         "id": 80110133,
-        "content": "Pff, ce genre de blabla, ça peut peut-être passer avec les bleus, mais pas avec moi...",
+        "content": "<I>Pff</>, ce genre de blabla, ça peut peut-être passer avec les bleus, mais pas avec moi...",
         "voice": "inv/Linen/001/C88C1CB2",
         "npc": 93101,
         "next": 80110134
@@ -11405,7 +11455,7 @@
           },
           {
             "id": 801103032,
-            "content": "<I>Je ne veux pas livrer quelque chose d'illégal et finir {性别:grillé|grillée}.</>",
+            "content": "<I>Je ne veux pas livrer quelque chose d’illégal et finir {性别:grillé|grillée}.</>",
             "next": 80110304
           }
         ]
@@ -12728,7 +12778,7 @@
       },
       {
         "id": 80130125,
-        "content": "Pff, je te l’ai déjà dit mille fois, les acheteurs veulent du BOUM, pas des dessins mignons.",
+        "content": "<I>Pff</>, je te l’ai déjà dit mille fois, les acheteurs veulent du BOUM, pas des dessins mignons.",
         "voice": "inv/Yeer/001/C898ECA2",
         "npc": 93103,
         "next": 80130126
@@ -13659,7 +13709,7 @@
       },
       {
         "id": 80130427,
-        "content": "Je te comprends. Moi non plus j’aime pas avoir des dettes. Quand t’as demandé à Jones de virer ce foutu tourne-disque, je me suis dit que tu m'avais déjà rendu la moitié de ma vie.",
+        "content": "Je te comprends. Moi non plus j’aime pas avoir des dettes. Quand t’as demandé à Jones de virer ce foutu tourne-disque, je me suis dit que tu m’avais déjà rendu la moitié de ma vie.",
         "voice": "inv/Yeer/004/C8991E2E",
         "npc": 790024,
         "next": 80130428
@@ -15190,6 +15240,47 @@
         "npc": 93201
       }
     ]
+  },
+  {
+    "id": 320201,
+    "charId": 3202,
+    "name": "Une affaire à prix affiché",
+    "desc": "Aujourd’hui aux Asphodèles : promotion spéciale — toutes les boissons à –20 % ! Même les Charon peuvent en profiter !",
+    "memoryName": "« Vérité Absolue »",
+    "memoryDesc": "La vérité change toujours selon ce que les gens sont prêts à croire. Il n’existe pas de vérité absolue. Il en va de même pour les relations humaines : il n’existe pas d’ennemis éternels — seulement des intérêts éternels.",
+    "reward": 7050,
+    "consume": {
+      "19003": 3,
+      "19006": 3
+    }
+  },
+  {
+    "id": 320202,
+    "charId": 3202,
+    "name": "Un choix dans l’ombre",
+    "desc": "Au moment où elle décida de mourir, Camilla fit elle aussi son choix.",
+    "memoryName": "Miel et pain",
+    "memoryDesc": "Un pain qui glisse facilement dans la gorge... du miel encore tiède qui n’a pas figé. Dans l’esprit des Charons, c’est l’image même d’une vie digne. Ils avalent cette illusion amère comme si c’était la réalité.",
+    "reward": 7051,
+    "consume": {
+      "19002": 6,
+      "19004": 6,
+      "19006": 6
+    }
+  },
+  {
+    "id": 320203,
+    "charId": 3202,
+    "name": "Un investissement involontaire",
+    "desc": "Des années ont passé : les Asphodèles n’ont pas changé, et sa propriétaire non plus. Seule une ancienne habituée est devenue presque méconnaissable.",
+    "memoryName": "« Adieu à Hier »",
+    "memoryDesc": "Une gorgée tiède descend doucement dans la gorge. L’espace d’un instant, on s’imagine pouvoir laisser derrière soi les regrets d’hier.",
+    "reward": 7052,
+    "consume": {
+      "19002": 9,
+      "19005": 9,
+      "19008": 9
+    }
   },
   {
     "id": 330101,
@@ -17430,24 +17521,106 @@
   {
     "id": 410201,
     "charId": 4102,
-    "name": "",
+    "name": "Sur la Voie",
+    "desc": "Une Voie que l’on peut nommer n’est jamais la Voie véritable. Ce qui soutient l’ordre de toute chose relève d’un principe qui dépasse les mots.",
+    "memoryName": "La Voie Céleste",
+    "memoryDesc": "Les Neuf Chapitres de Dafeng suivent leur cours immuable, identiques hier comme aujourd’hui. Telle est la Voie Céleste.",
+    "reward": 7050,
+    "consume": {
+      "19005": 2,
+      "19006": 2
+    }
+  },
+  {
+    "id": 410202,
+    "charId": 4102,
+    "name": "Sur le gouvernement",
+    "desc": "Gouverner n’est, au fond, qu’une affaire de décision. Depuis l’aube des temps, ceux qui ont accompli de grandes œuvres se sont-ils jamais laissés entraver par des détails insignifiants ?",
+    "memoryName": "Rumeurs et calomnies",
+    "memoryDesc": "Les injustices d’hier et les griefs tus ne sont plus que des ombres du passé, ensevelies sous les rumeurs et les calomnies.",
     "reward": 7051,
     "consume": {
       "19002": 5,
-      "19003": 5,
-      "19008": 5
+      "19004": 5
+    }
+  },
+  {
+    "id": 410203,
+    "charId": 4102,
+    "name": "Sur le cœur",
+    "desc": "Cultiver la vertu au sein du royaume, et elle s’épanouit. La cultiver en soi-même, et elle révèle sa véritable nature.",
+    "memoryName": "Trancher le passé",
+    "memoryDesc": "Ce qui m’abandonne appartient à hier et ne saurait être retenu. Ce qui trouble mon cœur nourrit les tourments d’aujourd’hui.",
+    "reward": 7052,
+    "consume": {
+      "19007": 8,
+      "19008": 8
+    }
+  },
+  {
+    "id": 410204,
+    "charId": 4102,
+    "name": "Mon cœur n’est pas de pierre",
+    "desc": "Mon cœur n’est point de pierre, il ne saurait être détourné. Mon cœur n’est point de tissu, il ne saurait être plié.",
+    "memoryName": "Promesse",
+    "memoryDesc": "Les années usent toute chose. Mais certaines volontés demeurent inchangées, sans jamais vaciller.",
+    "reward": 7053,
+    "consume": {
+      "19001": 10,
+      "19002": 10
     }
   },
   {
     "id": 420101,
     "charId": 4201,
-    "name": "",
+    "name": "La flûte de jade aux échos lointains",
+    "desc": "Une mélodie de flûte s’élève, portée par le vent. Avec elle se dissipent des souvenirs où l’amertume et la joie s’entrelacent.",
+    "memoryName": "Cri du phénix",
+    "memoryDesc": "Une flûte de bambou. Sur son corps se devinent encore les traces d’une fracture ancienne, puis d’une réparation maladroite. Nul ne saurait dire ce que ces cicatrices ont altéré dans la pureté de sa voix.",
+    "reward": 7050,
+    "consume": {
+      "19005": 2,
+      "19006": 2
+    },
+    "conditionId": 120206
+  },
+  {
+    "id": 420102,
+    "charId": 4201,
+    "name": "Nulle part où revenir",
+    "desc": "Le foyer d’autrefois s’est effondré sous le vent et la pluie. Où donc se trouve encore le véritable havre ?",
+    "memoryName": "Écharpe du Ciel",
+    "memoryDesc": "Un élément de la tenue officielle des Magistrats de Yingtian. Poètes et chanteurs la décrivent comme un lien noué avec la Voie Céleste... mais n’est-elle pas, en vérité, une chaîne de plus ?",
     "reward": 7051,
     "consume": {
-      "19001": 5,
       "19002": 5,
-      "19006": 5,
-      "19007": 5
+      "19004": 5
+    }
+  },
+  {
+    "id": 420103,
+    "charId": 4201,
+    "name": "La pluie nocturne du Jianghu, dix ans sous la lampe",
+    "desc": "Lorsque la lame se teinte de sang, en se retournant, il devient déjà impossible de retrouver le chemin parcouru.",
+    "memoryName": "Agrafe de ceinture de jade brisée",
+    "memoryDesc": "Une agrafe de ceinture en jade. Quelqu’un a tenté, après sa rupture, d’en rassembler les fragments et de la conserver avec soin. Mais la profonde fissure qui la traverse ne pourra jamais retrouver son état d’origine.",
+    "reward": 7052,
+    "consume": {
+      "19007": 8,
+      "19008": 8
+    }
+  },
+  {
+    "id": 420104,
+    "charId": 4201,
+    "name": "En se retournant vers la désolation passée",
+    "desc": "Lorsque la poussière retombe et que les nuages se dissipent, où donc s’avance celui qui s’était égaré ?",
+    "memoryName": "Vieux grelot",
+    "memoryDesc": "Trois adolescents avaient autrefois attaché ce petit grelot au cou d’un renard sauvage, en lui disant : « Ici, c’est chez toi. » Après une errance trop longue, il est peut-être temps, pour le voyageur, de rentrer jeter un dernier regard.",
+    "reward": 7053,
+    "consume": {
+      "19001": 10,
+      "19002": 10
     }
   },
   {
@@ -17960,7 +18133,7 @@
       },
       {
         "id": 80030407,
-        "content": "Pour être honnête, j’ai fait un cauchemar cette nuit, alors je ne me sens pas très bien aujourd'hui.",
+        "content": "Pour être honnête, j’ai fait un cauchemar cette nuit, alors je ne me sens pas très bien aujourd’hui.",
         "voice": "inv/Landi/004/C85904A6",
         "npc": 94202,
         "options": [
@@ -18738,7 +18911,7 @@
       },
       {
         "id": 80070134,
-        "content": "Alors les autres s'en sont tirés comme ça, sans autre forme de procès ?",
+        "content": "Alors les autres s’en sont tirés comme ça, sans autre forme de procès ?",
         "voice": "inv/Xibi/001/C8727A5C",
         "npc": 790014,
         "next": 80070135
@@ -18932,7 +19105,7 @@
       },
       {
         "id": 80070119,
-        "content": "Hmm... En fait, tu ferais mieux de continuer. Ça m’évitera de t’escorter, je peux te descendre ici et maintenant. Vas-y, parle.",
+        "content": "<I>Hmm...</> En fait, tu ferais mieux de continuer. Ça m’évitera de t’escorter, je peux te descendre ici et maintenant. Vas-y, parle.",
         "voice": "inv/Xibi/001/C87277E6",
         "npc": 790015,
         "next": 80070120
@@ -19811,7 +19984,7 @@
     "dialogues": [
       {
         "id": 80060201,
-        "content": "Mmh... mmmh...",
+        "content": "<I>Mmh... mmmh...</>",
         "voice": "inv/Songlu/002/C86C1CBA",
         "npc": 95101,
         "next": 80060202
@@ -20353,7 +20526,7 @@
         "options": [
           {
             "id": 80060402,
-            "content": "<I>Bien sûr. Qu'y a-t-il ?</>",
+            "content": "<I>Bien sûr. Qu’y a-t-il ?</>",
             "next": 80060403
           }
         ]
@@ -21023,7 +21196,7 @@
       },
       {
         "id": 80190319,
-        "content": "C’est justement parce que tu es mon {性别:ami|amie} que je ne peux pas te confier mon passé. Je ne cherche pas à jouer les mystérieux, d'accord ? Considère ça comme un conseil de quelqu'un qui tient à toi :",
+        "content": "C’est justement parce que tu es mon {性别:ami|amie} que je ne peux pas te confier mon passé. Je ne cherche pas à jouer les mystérieux, d’accord ? Considère ça comme un conseil de quelqu’un qui tient à toi :",
         "npc": 95102,
         "next": 80190320
       },
@@ -21250,7 +21423,7 @@
       },
       {
         "id": 80190424,
-        "content": "Comme d'habitude ? Mon moi habituel ne tiendrait pas cinq minutes face à ces fous sans foi ni loi.",
+        "content": "Comme d’habitude ? Mon moi habituel ne tiendrait pas cinq minutes face à ces fous sans foi ni loi.",
         "npc": 95102,
         "next": 80190425
       },
@@ -21355,7 +21528,7 @@
       },
       {
         "id": 80190438,
-        "content": "Hmm, pas faux. À la tienne, à moi dans le futur. Qu’il soit plus sage que celui d’aujourd’hui. Et à toi, mon {性别:ami|amie}.",
+        "content": "<I>Hmm</>, pas faux. À la tienne, à moi dans le futur. Qu’il soit plus sage que celui d’aujourd’hui. Et à toi, mon {性别:ami|amie}.",
         "npc": 95102,
         "next": 80190439
       },

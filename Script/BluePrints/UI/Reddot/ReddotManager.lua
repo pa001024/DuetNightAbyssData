@@ -376,7 +376,7 @@ function ReddotManager.DecreaseLeafNodeCount(NodeName, SubValue, CacheDetailChan
     if DataMgr.ReddotNode[NodeName] then
       LeafNode = ReddotManager.AddNodeEx(NodeName)
     else
-      GWorld.logger.error("ReddotManager.IncreaseLeafNodeCount: 该节点尚未创建，检查业务层是否有时序问题 " .. NodeName)
+      GWorld.logger.error("ReddotManager.DecreaseLeafNodeCount: 该节点尚未创建，检查业务层是否有时序问题 " .. NodeName)
       Traceback(ErrorTag)
       return
     end

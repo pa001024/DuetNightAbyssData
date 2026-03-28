@@ -149,6 +149,12 @@ function Component:TryLimitAttr(Data, Attr)
     local AttrLimitData = DataMgr.AttrLimit[Data.AttrLimit]
     return math.min(AttrLimitData.LimitValue, Attr)
   end
+  if Data.Id == "MagazineCapacity" then
+    local bulletMax = self.Attrs and self.Attrs.BulletMax or nil
+    if bulletMax and type(bulletMax) == "number" then
+      Attr = math.min(bulletMax, Attr)
+    end
+  end
   return Attr
 end
 

@@ -660,6 +660,11 @@ function M:AvatarCompleteFish(IsSuccess, LastFishId)
             FishingSpotId = self.RootPage.FishingSpotId,
             Rewards = RewardReturn
           })
+          local UnLockData = EMCache:Get("FishUnLockData", true)
+          UnLockData = UnLockData or {}
+          UnLockData[LastFishId] = 2
+          EMCache:Set("FishUnLockData", UnLockData, true)
+          ReddotManager.IncreaseLeafNodeCount("AnglingMap", 1)
         else
           UIManager(self):LoadUINew("AnglingNewFish", {
             FishId = LastFishId,
@@ -669,17 +674,6 @@ function M:AvatarCompleteFish(IsSuccess, LastFishId)
             FishingSpotId = self.RootPage.FishingSpotId,
             Rewards = RewardReturn
           })
-        end
-        local UnLockData = EMCache:Get("FishUnLockData", true)
-        if not UnLockData then
-          UnLockData = {}
-          UnLockData[LastFishId] = 2
-          EMCache:Set("FishUnLockData", UnLockData, true)
-          ReddotManager.IncreaseLeafNodeCount("AnglingMap", 1)
-        elseif 1 == UnLockData[LastFishId] or nil == UnLockData[LastFishId] then
-          UnLockData[LastFishId] = 2
-          EMCache:Set("FishUnLockData", UnLockData, true)
-          ReddotManager.IncreaseLeafNodeCount("AnglingMap", 1)
         end
       else
         UIManager(self):LoadUINew("ExploreToastFail", "UI_Fishing_Fail")

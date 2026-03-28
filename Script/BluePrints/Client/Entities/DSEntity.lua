@@ -10,7 +10,10 @@ DSEntity.__Component__ = {
   "BluePrints.Client.Entities.CommonComponents.ResourceUseComponent",
   "BluePrints.Client.Entities.CommonComponents.AutoBattleTestComponent",
   "BluePrints.Client.Entities.DSComponents.DSTargetComponent",
-  "Blueprints.Client.Entities.CommonComponents.GameModeWalnutComponent"
+  "Blueprints.Client.Entities.CommonComponents.GameModeWalnutComponent",
+  "Blueprints.Client.Entities.CommonComponents.DungeonGameObjectComponent",
+  "Blueprints.Client.Entities.CommonComponents.ServerGameControlComponent",
+  "Blueprints.Client.Entities.DSComponents.DSServerDungeonComponent"
 }
 local bStatusInPreloading = false
 
@@ -149,6 +152,7 @@ end
 
 function DSEntity:ChangeMap(DungeonId)
   ServerPrint("Change to Map: ", DungeonId)
+  self:TryCreateServerDungeon(DungeonId)
   self.HasLeaveAvatars = {}
   self.bBlock = false
   GWorld.GameInstance:ChangeMapAsDedicatedServer(DungeonId)

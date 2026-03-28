@@ -29,6 +29,7 @@ function M:Init(Params)
   self.InputCallback = Params.InputCallback or nil
   self.OwnerPanel = Params.OwnerPanel or nil
   self.TextLimit = Params.TextLimit or 9999
+  self.OnDataChangedCallback = Params.OnDataChanged or nil
 end
 
 function M:SetTextLimit(Limit)
@@ -52,9 +53,15 @@ function M:OnInputTextChanged(Text)
     self.bIsLimitTipShowing = false
   end
   if FilteredText ~= Text then
+    local RestorePos = self.CursorOffset
     self.Text_Input:SetText(FilteredText)
+    self:SetCursorPosition(0, RestorePos)
+    return
   end
   self.CurrentText = FilteredText
+  if self.OnDataChangedCallback then
+    self.OnDataChangedCallback(FilteredText)
+  end
 end
 
 function M:OnTextComposing(Text)
@@ -118,9 +125,9 @@ function M:SetText(Text)
     self.CurrentText = Text
     if not UIUtils.IsGamepadInput() then
       self.Text_Input:SetKeyboardFocus()
-      self.CursorOffset = string.len(Text)
-      self:SetCursorPosition(0, self.CursorOffset)
     end
+    self.CursorOffset = string.len(Text)
+    self:SetCursorPosition(0, self.CursorOffset)
   end
 end
 
@@ -145,8 +152,8 @@ function M:InsertTextAtCursor(InStr)
     end
     if not UIUtils.IsGamepadInput() then
       self.Text_Input:SetKeyboardFocus()
-      self:SetCursorPosition(0, Position)
     end
+    self:SetCursorPosition(0, Position)
     return
   else
   end
@@ -162,8 +169,8 @@ function M:InsertTextAtCursor(InStr)
   self.CursorOffset = NewCursorPos
   if not UIUtils.IsGamepadInput() then
     self.Text_Input:SetKeyboardFocus()
-    self:SetCursorPosition(0, NewCursorPos)
   end
+  self:SetCursorPosition(0, NewCursorPos)
 end
 
 function M:DeleteTextBack()
@@ -175,8 +182,8 @@ function M:DeleteTextBack()
   if Position <= 0 or "" == SelfStr then
     if not UIUtils.IsGamepadInput() then
       self.Text_Input:SetKeyboardFocus()
-      self:SetCursorPosition(0, Position)
     end
+    self:SetCursorPosition(0, Position)
     return
   end
   local LeftStr = string.sub(SelfStr, 1, Position - 1)
@@ -188,8 +195,8 @@ function M:DeleteTextBack()
   self.CursorOffset = NewCursorPos
   if not UIUtils.IsGamepadInput() then
     self.Text_Input:SetKeyboardFocus()
-    self:SetCursorPosition(0, NewCursorPos)
   end
+  self:SetCursorPosition(0, NewCursorPos)
 end
 
 return M

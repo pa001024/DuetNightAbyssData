@@ -105,6 +105,12 @@ function M:InitAccess(AccessKey, ItemId)
     end
     PageJumpUtils:SortAccessItem(self.Method)
   end
+  local Length = self.Method:GetChildrenCount()
+  if 0 == Length then
+    self.HB_Hint_Access:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  else
+    self.HB_Hint_Access:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  end
 end
 
 function M:UpdateCommonKeys(...)

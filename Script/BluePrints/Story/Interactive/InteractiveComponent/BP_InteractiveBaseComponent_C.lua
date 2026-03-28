@@ -115,7 +115,12 @@ end
 
 function BP_InteractiveBaseComponent_C:GetInteractiveName()
   if self.InteractiveName ~= "" then
-    return GText(self.InteractiveName)
+    local Language = CommonConst.SystemLanguage or CommonConst.SystemLanguages.Default
+    local TextMap = DataMgr["TextMap_" .. Language]
+    local TextMapData = TextMap[self.InteractiveName]
+    if nil ~= TextMapData then
+      return GText(self.InteractiveName)
+    end
   end
   local Data = DataMgr.CommonUIConfirm[self.CommonUIConfirmID]
   if not Data then
@@ -394,6 +399,14 @@ end
 
 function BP_InteractiveBaseComponent_C:GetLongPressingText()
   return self:GetInteractiveName()
+end
+
+function BP_InteractiveBaseComponent_C:GetCostItemInfo()
+  return nil
+end
+
+function BP_InteractiveBaseComponent_C:GetShowTagNew()
+  return false
 end
 
 return BP_InteractiveBaseComponent_C

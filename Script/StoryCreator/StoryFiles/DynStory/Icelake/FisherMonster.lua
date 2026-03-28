@@ -61,7 +61,6 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = true,
@@ -69,6 +68,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -336,7 +336,9 @@ return {
             propsData = {
               DialogueId = 0,
               UseTalkFadeOut = false,
-              TalkFadeOutTime = 0
+              TalkFadeOutTime = 0,
+              UseTalkFadeIn = false,
+              TalkFadeInTime = 0
             }
           },
           ["17388120551251771207"] = {

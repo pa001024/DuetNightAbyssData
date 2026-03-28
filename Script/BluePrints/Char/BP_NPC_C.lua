@@ -2,7 +2,7 @@ require("DataMgr")
 require("UnLua")
 local MiscUtils = require("Utils.MiscUtils")
 local TalkAudioComp_C = require("BluePrints.Story.Talk.Controller.TalkAudioComp")
-local StoryPlayableUtils = require("BluePrints.Story.StoryPlayableUtils").StoryPlayableUtils
+local StoryPlayableUtils = require("BluePrints.Story.StoryPlayableUtils")
 local ClientEventUtils = require("BluePrints.Common.ClientEvent.ClientEventUtils")
 local BP_NPC_C = Class({
   "BluePrints.Char.BP_NpcCharacterBase_C"
@@ -273,9 +273,9 @@ function BP_NPC_C:SetSitPoseWithoutInteractive(CallBackFunc, IsImmediately, Mont
         if self:GetMovementComponent() and self:GetMovementComponent().OnNpcSeatingEnd then
           self:GetMovementComponent():OnNpcSeatingEnd(EMovementMode.MOVE_NavWalking)
         end
-        self:RemoveTimer("DelayCloseNpcMovementTickBySit")
+        self:SetNpcMovementTickEnable(false)
       end
-      self:SetNpcMovementTickEnable(false)
+      self:RemoveTimer("DelayCloseNpcMovementTickBySit")
     end, true, 0, "DelayCloseNpcMovementTickBySit")
     return
   end
@@ -293,8 +293,8 @@ function BP_NPC_C:SetSitPoseWithoutInteractive(CallBackFunc, IsImmediately, Mont
           end
           if HasSection then
             self:SetNpcMovementTickEnable(false)
-            self:RemoveTimer("DelayCloseNpcMovementTickBySit")
           end
+          self:RemoveTimer("DelayCloseNpcMovementTickBySit")
         end, true, 0, "DelayCloseNpcMovementTickBySit")
         EventManager:FireEvent(EventID.OnNpcPoseChange)
       end
@@ -339,9 +339,9 @@ function BP_NPC_C:SetSitPoseWithoutInteractive(CallBackFunc, IsImmediately, Mont
   self:AddTimer(0.1, function()
     local Section = self.Mesh:GetAnimInstance():Montage_GetCurrentSection()
     if "SitLoop" == Section then
-      self:RemoveTimer("SitToLoop")
       EventManager:FireEvent(EventID.OnNpcPoseChange)
     end
+    self:RemoveTimer("SitToLoop")
   end, true, 0, "SitToLoop")
 end
 
@@ -546,7 +546,6 @@ function BP_NPC_C:RealSetIdlePoseBySpecialSit(Callback, IsImmediately, Montage)
       self:SetNpcMovementTickEnable(false)
     end
     self.Mesh:GetAnimInstance().OnMontageEnded:Remove(self, self.StandCallBack)
-    self:GetMovementComponent():LockMovementMode(false, EMovementMode.Move_Walking)
   end
   
   self.Mesh:GetAnimInstance().OnMontageEnded:Add(self, self.StandCallBack)
@@ -693,7 +692,7 @@ function BP_NPC_C:GetStartOrEndAnimtionName(AnimName, Postfix)
   end
 end
 
-function BP_NPC_C:CleanAllTimer()
+function BP_NPC_C:OnLuaCleanAllTimer()
   local NpcData = DataMgr[self.UnitType][self.UnitId]
   if NpcData and NpcData.InteractiveInfo then
     for InteractiveType, CommonUIConfirmID in pairs(NpcData.InteractiveInfo) do
@@ -703,7 +702,6 @@ function BP_NPC_C:CleanAllTimer()
     end
   end
   self.BiographyComponent = nil
-  self.Overridden.CleanAllTimer(self)
 end
 
 function BP_NPC_C:OnInteractiveComponentClassLoaded(ClassObject, CommonUIConfirmID, InteractiveType)
@@ -926,36 +924,45 @@ function BP_NPC_C:TriggerNpcGlobalTimeDilation(IsPause)
 end
 
 function BP_NPC_C:PreEnterStory(OnFinished, bCacheMeshMaterials, bPauseBT)
-  self.bInStory = true
+  if self.bEnterStory then
+    StoryPlayableUtils:ExecuteStoryDelegate(OnFinished)
+    return
+  end
+  self.bEnterStory = true
   if bCacheMeshMaterials then
     self.CharacterFashion:CacheMeshMaterials(self.Mesh)
     self.CharacterFashion:ReplaceMeshAllDynamicMaterialAsParent(self.Mesh)
   end
   self:AddTimer(0.01, function()
     self.NativeMeshTickOptions = {}
+    self.NativeInSetShadow = {}
     local SKMeshComps = self:K2_GetComponentsByClass(USkeletalMeshComponent):ToTable()
     for _, SKMeshComp in pairs(SKMeshComps) do
       if IsValid(SKMeshComp) then
         self.NativeMeshTickOptions[SKMeshComp] = SKMeshComp.VisibilityBasedAnimTickOption
         SKMeshComp.VisibilityBasedAnimTickOption = EVisibilityBasedAnimTickOption.AlwaysTickPoseAndRefreshBones
+        self.NativeInSetShadow[SKMeshComp] = SKMeshComp.bCastInsetShadow
+        SKMeshComp:SetCastInsetShadow(true)
       end
     end
   end)
   if bPauseBT and self.StopBT then
     self:StopBT("Talk")
   end
+  local WorldCompositionSubSystem = USubsystemBlueprintLibrary.GetWorldSubsystem(self, UWorldCompositionSubSystem)
+  if IsValid(WorldCompositionSubSystem) then
+    WorldCompositionSubSystem:UnregisterEntryToWorldComposition(self)
+  end
+  self.bInStory = true
   StoryPlayableUtils:ExecuteStoryDelegate(OnFinished)
 end
 
-function BP_NPC_C:PreExitStory(OnFinished, bStartBT)
-  self.bInStory = false
-  if bStartBT and self.RestartBT then
-    self:RestartBT()
+function BP_NPC_C:PreExitStory(OnFinished, bStartBT, bIsExternal)
+  if not self.bEnterStory then
+    StoryPlayableUtils:ExecuteStoryDelegate(OnFinished)
+    return
   end
-  local Controller = self:GetController()
-  if Controller and Controller.BrainComponent and Controller.BrainComponent:IsRunning() then
-    self:SwitchEnableAnimInstanceIK(false)
-  end
+  self.bEnterStory = false
   local MaterialArray = TArray(UMaterialInterface)
   self.CharacterFashion:UncacheMeshMaterials(self.Mesh, MaterialArray)
   self.CharacterFashion:SetMeshMaterials(self.Mesh, MaterialArray)
@@ -965,6 +972,30 @@ function BP_NPC_C:PreExitStory(OnFinished, bStartBT)
     end
   end
   self.NativeMeshTickOptions = nil
+  for SKMeshComp, bCastInsetShadow in pairs(self.NativeInSetShadow or {}) do
+    if IsValid(SKMeshComp) then
+      SKMeshComp:SetCastInsetShadow(bCastInsetShadow)
+    end
+  end
+  self.NativeInSetShadow = nil
+  if bStartBT and self.RestartBT then
+    self:RestartBT()
+  end
+  local Controller = self:GetController()
+  if Controller and Controller.BrainComponent and Controller.BrainComponent:IsRunning() then
+    self:SwitchEnableAnimInstanceIK(false)
+  end
+  local EMGameState = UE4.UGameplayStatics.GetGameState(self)
+  EMGameState:HideNpc(false, Const.TalkHideTag, self)
+  if bIsExternal then
+    local WorldCompositionSubSystem = USubsystemBlueprintLibrary.GetWorldSubsystem(self, UWorldCompositionSubSystem)
+    if IsValid(WorldCompositionSubSystem) then
+      WorldCompositionSubSystem:RegisterEntryToWorldComposition(self)
+    end
+  else
+    self:EMActorDestroy(EDestroyReason.TalkContext)
+  end
+  self.bInStory = false
   StoryPlayableUtils:ExecuteStoryDelegate(OnFinished)
 end
 
@@ -981,6 +1012,7 @@ function BP_NPC_C:InitNpcAccessories(CharId)
         if self.CurrentCompositeMesh then
           self.CurrentCompositeMesh = nil
         end
+        self:LoadCurrentModel()
         self:InitAppearanceSuit(AppearanceSuit)
         break
       end
@@ -1002,6 +1034,18 @@ function BP_NPC_C:RefreshNpcAccessories(Char)
     self:LoadCurrentModel()
     self:InitAppearanceSuit(AppearanceSuit)
   end
+end
+
+function BP_NPC_C:RefreshNpcAccessoriesInStory()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  local CharAvatar = Avatar.Chars[Avatar.CurrentChar]
+  if not CharAvatar then
+    return
+  end
+  self:InitAppearanceSuit({})
 end
 
 function BP_NPC_C:CommonOnEMActorDestroy(DestroyReason)
@@ -1114,19 +1158,11 @@ function BP_NPC_C:EnableNameWidget(bEnable)
 end
 
 function BP_NPC_C:EnableBubbleWidget(bEnable, Content, Style)
-  if self.IsNeedCollapsedOtherBubble == false then
-    self:EnableHeadWidget("Bubble", bEnable, Content, Style)
-  else
-    self:EnableHeadWidget("Bubble", false, Content, Style)
-  end
+  self:EnableHeadWidget("Bubble", bEnable, Content, Style)
 end
 
 function BP_NPC_C:EnableBubbleRewardWidget(bEnable)
-  if self.IsNeedCollapsedOtherBubble == false then
-    self:EnableHeadWidget("Bubble_Reward", bEnable)
-  else
-    self:EnableHeadWidget("Bubble", false)
-  end
+  self:EnableHeadWidget("Bubble_Reward", bEnable)
 end
 
 function BP_NPC_C:GetHitMontageRule()
@@ -1192,6 +1228,24 @@ end
 function BP_NPC_C:ClearCharacterBattleInfo(NormalDeath, DeathReason)
   BP_NPC_C.Super.ClearCharacterBattleInfo(self, NormalDeath, DeathReason)
   self.IsSitting = false
+end
+
+function BP_NPC_C:EnableSkeletalMeshActorRules(bEnable)
+  if bEnable then
+    self.NativeMeshName = self.Mesh:GetName()
+    self.NativeMeshTransform = self.Mesh:GetRelativeTransform()
+    self.SequenceFixLocation = false
+    UE4.URuntimeCommonFunctionLibrary.ObjectRename(self.Mesh, "SkeletalMeshComponent0")
+    self.Mesh:ResetRelativeTransform()
+    self:SetNpcMovementTickEnable(false)
+  else
+    UE4.URuntimeCommonFunctionLibrary.ObjectRename(self.Mesh, self.NativeMeshName)
+    self.Mesh:K2_SetRelativeTransform(self.NativeMeshTransform, false, nil, true)
+    self:SetNpcMovementTickEnable(true)
+    self.SequenceFixLocation = true
+    self.NativeMeshName = nil
+    self.NativeMeshTransform = nil
+  end
 end
 
 return BP_NPC_C

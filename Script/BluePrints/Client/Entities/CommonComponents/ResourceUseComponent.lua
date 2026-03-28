@@ -32,6 +32,7 @@ function Component:UseItemInBattle(AvatarEid, ResourceId, Info, Reason)
   end
   if UseBPFunction or PlayAnim or PlayArmoryAnim then
     DebugPrint("gmy@Component:UseItemInBattle UseBPFunction", UseBPFunction, self.IsInRegionOnline, self.CurrentOnlineType)
+    PlayerCharacter.FlyMount = false
     PlayerCharacter:InvokeResourceBPFunction(ResourceId)
     EventManager:FireEvent(EventID.OnTheaterPerform, ResourceId)
     local TrackInfo = {}
@@ -120,6 +121,7 @@ function Component:BattleTestUseItemInBattle(AvatarEid, ResourceId, Info, Reason
     end
     if UseBPFunction then
       DebugPrint("gmy@Component:UseItemInBattle UseBPFunction", UseBPFunction)
+      PlayerCharacter.FlyMount = false
       PlayerCharacter:InvokeResourceBPFunction(ResourceId)
     end
   end

@@ -1608,7 +1608,7 @@ local Data = {
   },
   {
     MinKey = "BattlePass_Task_Des_100001202",
-    MaxKey = "CVName3014",
+    MaxKey = "CVName3003",
     Loader = function()
       return {
         BattlePass_Task_Des_100001202 = {
@@ -1907,6 +1907,34 @@ local Data = {
           ContentFR = "Toutes les #1 instances de dégâts infligées par un allié confèrent 1 cumul de +#2 de dégâts infligés pendant #3 s, cumulable jusqu’à #4 fois.",
           TextMapId = "Buff_Content_12221"
         },
+        Buff_Content_13111 = {
+          ContentFR = "Lorsqu’un allié utilise une Compétence de combat ou une Compétence ultime, il gagne #1 de Vigueur pendant #2 s, cumulable jusqu’à #3 fois.",
+          TextMapId = "Buff_Content_13111"
+        },
+        Buff_Content_13112 = {
+          ContentFR = "La Durée de compétence des alliés diminue de #1 et leur Portée de compétence augmente de #2.",
+          TextMapId = "Buff_Content_13112"
+        },
+        Buff_Content_13121 = {
+          ContentFR = "Lorsque des dégâts sont infligés en l’air, les Dégâts infligés augmentent de #1. Cet effet est supprimé #2 s après l’atterrissage.",
+          TextMapId = "Buff_Content_13121"
+        },
+        Buff_Content_13122 = {
+          ContentFR = "L’ATQ des alliés diminue de #1, mais leur Puissance de compétence augmente de #2.",
+          TextMapId = "Buff_Content_13122"
+        },
+        Buff_Content_13211 = {
+          ContentFR = "Chaque tranche cumulée de #1 de Lucidité consommée par un allié confère 1 cumul de Dégâts infligés +#2 pendant #3 s, jusqu’à un maximum de #4 cumuls.",
+          TextMapId = "Buff_Content_13211"
+        },
+        Buff_Content_13212 = {
+          ContentFR = "Les PV max des alliés diminuent de #1, mais leur Lucidité max augmente de #2.",
+          TextMapId = "Buff_Content_13212"
+        },
+        Buff_Content_13222 = {
+          ContentFR = "L’ATQ des alliés diminue de #1, mais leur Tir multiple augmente de #2.",
+          TextMapId = "Buff_Content_13222"
+        },
         Buff_Content_201 = {
           ContentFR = "Les ennemis subissent #1 de dégâts en moins, mais cette réduction diminue de #2 à chaque fois qu’ils reçoivent des dégâts.",
           TextMapId = "Buff_Content_201"
@@ -2197,6 +2225,8 @@ local Data = {
         CVName1021 = {ContentFR = "钟可", TextMapId = "CVName1021"},
         CVName1022 = {ContentFR = "龟娘", TextMapId = "CVName1022"},
         CVName1023 = {ContentFR = "Cai Shujin", TextMapId = "CVName1023"},
+        CVName1024 = {ContentFR = "Su Ran", TextMapId = "CVName1024"},
+        CVName1025 = {ContentFR = "Jiang Yue", TextMapId = "CVName1025"},
         CVName2001 = {
           ContentFR = "Alexandra Guelff",
           TextMapId = "CVName2001"
@@ -2283,6 +2313,14 @@ local Data = {
           ContentFR = "Penelope Rawlins",
           TextMapId = "CVName2023"
         },
+        CVName2024 = {
+          ContentFR = "Violet Patton-Ryder",
+          TextMapId = "CVName2024"
+        },
+        CVName2025 = {
+          ContentFR = "Elizabeth Chu",
+          TextMapId = "CVName2025"
+        },
         CVName3001 = {
           ContentFR = "石川由依",
           TextMapId = "CVName3001"
@@ -2291,7 +2329,15 @@ local Data = {
         CVName3003 = {
           ContentFR = "新井里美",
           TextMapId = "CVName3003"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "CVName3004",
+    MaxKey = "Condition_Toast_PlayerLv_49",
+    Loader = function()
+      return {
         CVName3004 = {
           ContentFR = "南條愛乃",
           TextMapId = "CVName3004"
@@ -2332,15 +2378,7 @@ local Data = {
         CVName3014 = {
           ContentFR = "黒沢ともよ",
           TextMapId = "CVName3014"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "CVName3015",
-    MaxKey = "Condition_Toast_PlayerLv_8",
-    Loader = function()
-      return {
+        },
         CVName3015 = {
           ContentFR = "長縄まりあ",
           TextMapId = "CVName3015"
@@ -2368,6 +2406,14 @@ local Data = {
           TextMapId = "CVName3022"
         },
         CVName3023 = {ContentFR = "Asumi Kana", TextMapId = "CVName3023"},
+        CVName3024 = {
+          ContentFR = "Miyuki Sawashiro",
+          TextMapId = "CVName3024"
+        },
+        CVName3025 = {
+          ContentFR = "Ayana Taketatsu",
+          TextMapId = "CVName3025"
+        },
         CVName4001 = {ContentFR = "김하영", TextMapId = "CVName4001"},
         CVName4002 = {ContentFR = "조경이", TextMapId = "CVName4002"},
         CVName4003 = {ContentFR = "성예원", TextMapId = "CVName4003"},
@@ -2393,6 +2439,11 @@ local Data = {
         CVName4023 = {
           ContentFR = "Kim Suyoung",
           TextMapId = "CVName4023"
+        },
+        CVName4024 = {ContentFR = "Kim Yerim", TextMapId = "CVName4024"},
+        CVName4025 = {
+          ContentFR = "Jung Yoo-jung",
+          TextMapId = "CVName4025"
         },
         Caesura = {ContentFR = ",", TextMapId = "Caesura"},
         Camp_Name_Diguo = {
@@ -2477,11 +2528,11 @@ local Data = {
           TextMapId = "CharTrialEvent_Des_Songlu"
         },
         CharTrialEvent_Des_Yuming = {
-          ContentFR = "Le Magistrat de Yingtian est accablé par la solitude et le poids du jugement.\nIl parcourt les plaines infinies, placées sous le Mandat Céleste...\nSes seuls compagnons sont le devoir du jour et la flûte d'antan.\nLa vieille mélodie flotte dans le vent, emportant ses doutes sans jamais les effacer complètement.",
+          ContentFR = "Le Magistrat de Yingtian est accablé par la solitude et le poids du jugement.\nIl parcourt les plaines infinies, placées sous le Mandat Céleste...\nSes seuls compagnons sont le devoir du jour et la flûte d’antan.\nLa vieille mélodie flotte dans le vent, emportant ses doutes sans jamais les effacer complètement.",
           TextMapId = "CharTrialEvent_Des_Yuming"
         },
         CharTrialEvent_Des_Zhiliu = {
-          ContentFR = "La pièce de cuivre lancée, la Patronne Zhiliu mise ses jetons.\nLa pièce retombée, le Haut Chancelier de Longyuan connaît déjà l'issue du jeu.\nEntre pile et face, son regard traverse le trou central,\nScrutant les subtilités de la nature humaine passée, et anticipant les bouleversements futurs.",
+          ContentFR = "La pièce de cuivre lancée, la Patronne Zhiliu mise ses jetons.\nLa pièce retombée, le Haut Chancelier de Longyuan connaît déjà l’issue du jeu.\nEntre pile et face, son regard traverse le trou central,\nScrutant les subtilités de la nature humaine passée, et anticipant les bouleversements futurs.",
           TextMapId = "CharTrialEvent_Des_Zhiliu"
         },
         CharTrialEvent_Title = {
@@ -2996,7 +3047,15 @@ local Data = {
         Condition_Toast_PlayerLv_49 = {
           ContentFR = "Se débloque au Niveau d’Aventure 49",
           TextMapId = "Condition_Toast_PlayerLv_49"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Condition_Toast_PlayerLv_5",
+    MaxKey = "Content_120112_5",
+    Loader = function()
+      return {
         Condition_Toast_PlayerLv_5 = {
           ContentFR = "Se débloque au Niveau d’Aventure 5",
           TextMapId = "Condition_Toast_PlayerLv_5"
@@ -3056,15 +3115,7 @@ local Data = {
         Condition_Toast_PlayerLv_8 = {
           ContentFR = "Se débloque au Niveau d’Aventure 8",
           TextMapId = "Condition_Toast_PlayerLv_8"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Condition_Toast_PlayerLv_9",
-    MaxKey = "Content_120114_10_1",
-    Loader = function()
-      return {
+        },
         Condition_Toast_PlayerLv_9 = {
           ContentFR = "Se débloque au Niveau d’Aventure 9",
           TextMapId = "Condition_Toast_PlayerLv_9"
@@ -3804,7 +3855,15 @@ local Data = {
         Content_120112_5 = {
           ContentFR = "{性别:Monsieur|Mademoiselle} Licorne semble savoir où se cache l’indice — {性别:suivez-le|suivez-la}.",
           TextMapId = "Content_120112_5"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Content_120112_5_1",
+    MaxKey = "Content_20020606_5",
+    Loader = function()
+      return {
         Content_120112_5_1 = {
           ContentFR = "{性别:Guidé|Guidée} par {性别:Monsieur|Mademoiselle} Licorne, vous atteignez l’endroit indiqué. Examinez les environs avec attention.",
           TextMapId = "Content_120112_5_1"
@@ -3864,15 +3923,7 @@ local Data = {
         Content_120114_10_1 = {
           ContentFR = "Le petit Rossignol a enfin trouvé son courage — il déploie ses ailes.",
           TextMapId = "Content_120114_10_1"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Content_120114_10_2",
-    MaxKey = "Content_200231_2",
-    Loader = function()
-      return {
+        },
         Content_120114_10_2 = {
           ContentFR = "L’aventure se termine en beauté. Rentrez à la maison avec vos compagnons.",
           TextMapId = "Content_120114_10_2"
@@ -3942,52 +3993,436 @@ local Data = {
           TextMapId = "Content_120114_9_1"
         },
         Content_120201_1 = {
-          ContentFR = "Entrer dans la chambre sombre",
+          ContentFR = "Au moment où Zhuyin a été scellé, Zhiliu s’est soudain retournée contre vous et vous a emprisonné. Grâce à l’aide de Fushu et de Kezhou, arrivés à temps, vous avez réussi à briser l’emprise de son sort.\nVous pensiez la crise temporairement écartée... mais à peine un danger dissipé qu’un autre surgit. En quittant la Mer de Poussière, Snow et vous avez été frappés par un talisman dissimulé à un tournant. Votre mémoire s’interrompt brusquement à cet instant.",
           TextMapId = "Content_120201_1"
         },
         Content_120201_10 = {
-          ContentFR = "Se rendre au Pavillon des Artisans pour récupérer l’encensoir",
+          ContentFR = "Contrairement au Pavillon de l’Encens, bondé de monde, le Pavillon des Artisans est presque désert.\nCherchez un employé du Pavillon des Artisans.",
           TextMapId = "Content_120201_10"
         },
         Content_120201_11 = {
-          ContentFR = "Récupérer l’encensoir",
+          ContentFR = "Vous trouvez finalement l’artisan. Il a déjà déposé le brûle-encens sur les marches voisines.",
           TextMapId = "Content_120201_11"
         },
         Content_120201_12 = {
-          ContentFR = "Consulter le tableau d’affichage pour comprendre la situation",
+          ContentFR = "La cloche du Pavillon de l’Arbitrage retentit soudain. D’après l’artisan, c’est un événement rarissime qui ne se produit qu’une fois par siècle. Elle ne sonne que lorsqu’un crime d’une complexité exceptionnelle apparaît.\nSi vous souhaitez en savoir plus, rendez-vous sur la place devant le Pavillon de l’Arbitrage et allez jeter un œil au panneau d’affichage.",
           TextMapId = "Content_120201_12"
         },
         Content_120201_2 = {
-          ContentFR = "Entrer dans Huaxu — Phase II",
+          ContentFR = "Alors que vous quittiez la Mer de Poussière, Snow et vous avez été pris au piège d’un talisman à un tournant, et votre mémoire s’est arrêtée net à ce moment-là. Il semble que Zhiliu et vous vous soyez violemment affrontés quelque part, pour une raison inconnue. Était-ce réellement arrivé... ou bien une illusion forgée par votre esprit ?",
           TextMapId = "Content_120201_2"
         },
+        Content_120201_22 = {
+          ContentFR = "Après avoir quitté Zhiliu, Snow et vous devez vous rendre au Port des Astres Séparés, au Pavillon de l’Encens et au Pavillon des Artisans afin de récupérer les fournitures nécessaires à la Cérémonie de l’Encens.\nLe responsable du port vous informe que la soie de première qualité est stockée dans un entrepôt voisin. Allez trouver la caisse correspondante.",
+          TextMapId = "Content_120201_22"
+        },
+        Content_120201_23 = {
+          ContentFR = "Vous avez retrouvé le sachet d’encens emporté par le vent sur un toit. Allez maintenant le rendre à sa propriétaire.",
+          TextMapId = "Content_120201_23"
+        },
+        Content_120201_24 = {
+          ContentFR = "Ce petit malentendu désormais dissipé, vous obtenez l’encens de Fumée Argentée et laissez derrière vous une belle histoire de bonté et de vertu. Rendez-vous au Pavillon des Artisans, juste en face, afin de poursuivre votre mission.",
+          TextMapId = "Content_120201_24"
+        },
+        Content_120201_25 = {
+          ContentFR = "À l’approche de la Cérémonie de l’Encens, le Pavillon de l’Encens est noir de monde.\nUne petite mésentente éclate entre vous et une femme persuadée que vous avez tenté de lui passer devant dans la file. Au beau milieu de la dispute, une bourrasque emporte son précieux sachet d’encens, édition limitée du festival. Soyez magnanime et allez l’aider à le retrouver.",
+          TextMapId = "Content_120201_25"
+        },
         Content_120201_3 = {
-          ContentFR = "Aller se reposer",
+          ContentFR = "Lorsque vous reprenez vos esprits, Snow, Zhiliu et vous marchez dans les rues animées de Haojing. D’après Snow, après le banquet célébrant la défaite de Zhuyin, vous avez décidé de venir vous promener à Haojing. Mais avant même de commencer la visite, vous sembliez déjà mal en point.\nÀ la remarque de Snow, quelques souvenirs flous refont surface, sans que vous puissiez les saisir clairement. Voyant votre teint pâle, Zhiliu propose de s’arrêter dans une pharmacie un peu plus loin afin de vous procurer quelques remèdes. Vous pourrez reprendre votre promenade une fois rétabli.",
           TextMapId = "Content_120201_3"
         },
         Content_120201_4 = {
-          ContentFR = "Acheter des médicaments",
+          ContentFR = "Le marché de l’Est est noir de monde, envahi par une foule de visiteurs. Sur votre insistance, Snow part d’abord chercher des places tandis que Zhiliu et vous vous rendez à la Pharmacie Zesheng pour acheter des médicaments.",
           TextMapId = "Content_120201_4"
         },
         Content_120201_5 = {
-          ContentFR = "Retourner voir Snow avec les médicaments",
+          ContentFR = "Zhiliu ne semble montrer aucun signe étrange. Seriez-vous simplement trop méfiant ? La décoction fumante est désormais prête. Il est temps de retourner voir Snow.",
           TextMapId = "Content_120201_5"
         },
         Content_120201_6 = {
-          ContentFR = "Passer par le Pavillon de l’Arbitrage pour se rendre au Bureau des Sources",
+          ContentFR = "Alors que vous vous reposez, les discussions animées de quelques passants au sujet du Pavillon de l’Arbitrage éveillent votre curiosité et celle de Snow.\nJustement, Zhiliu a une mission à vous confier en lien avec la Cérémonie de l’Encens, qui vous permettra d’admirer le Pavillon de l’Arbitrage de plus près.\nAccompagnez Zhiliu jusqu’au Pavillon des Sources, dans le quartier ouest, afin de récupérer un gage.",
           TextMapId = "Content_120201_6"
         },
         Content_120201_7 = {
-          ContentFR = "Se rendre au Bureau des Sources",
+          ContentFR = "Alors que vous vous reposez, les discussions animées de quelques passants au sujet du Pavillon de l’Arbitrage éveillent votre curiosité et celle de Snow.\nJustement, Zhiliu a une mission à vous confier en lien avec la Cérémonie de l’Encens, qui vous permettra d’admirer le Pavillon de l’Arbitrage de plus près.\nAccompagnez Zhiliu jusqu’au Pavillon des Sources, dans le quartier ouest, afin de récupérer un gage.",
           TextMapId = "Content_120201_7"
         },
         Content_120201_8 = {
-          ContentFR = "Livrer la marchandise",
+          ContentFR = "Après avoir quitté Zhiliu, Snow et vous décidez de vous rendre au Port des Astres Séparés, au Pavillon de l’Encens et au Pavillon des Artisans afin de récupérer les fournitures nécessaires à la Cérémonie de l’Encens.\nCommencez par vous rendre au Port des Astres Séparés et cherchez le responsable du port.",
           TextMapId = "Content_120201_8"
         },
         Content_120201_9 = {
-          ContentFR = "Se rendre au Pavillon de l’Encens",
+          ContentFR = "Après quelques péripéties, vous parvenez à récupérer la soie de première qualité des mains d’un Wishen espiègle nommé Xiaoyao.\nRendez-vous maintenant au Pavillon de l’Encens, dans la cité intérieure, afin de poursuivre votre mission.",
           TextMapId = "Content_120201_9"
+        },
+        Content_120202_1 = {
+          ContentFR = "Quelque temps plus tôt, par une nuit de pluie... Kezhou affrontait seul des Bi’an.",
+          TextMapId = "Content_120202_1"
+        },
+        Content_120202_10 = {
+          ContentFR = "Dans ce moment critique, vous n’avez d’autre choix que d’intervenir pour bloquer l’attaque du dragon.\nAu moment décisif de l’affrontement, votre pouvoir se libère soudainement hors de votre contrôle. Blessé, le Seigneur Dragon d’Argent pousse un cri et s’envole.\nVous n’avez même pas le temps de comprendre ce qui vient de se produire qu’un blocus tombe du ciel. Brisez l’encerclement avant d’être complètement pris au piège.",
+          TextMapId = "Content_120202_10"
+        },
+        Content_120202_11 = {
+          ContentFR = "Vous et Kezhou sautez à temps et quittez le sommet du Pavillon de l’Arbitrage avant que le blocus ne se referme.\nÀ cause de vos actions, la ville entière est désormais en état d’alerte. Des Bi’an et des Magistrats de Yingtian patrouillent partout.\nTrouvez un moyen de quitter les lieux avant que votre trace ne soit découverte.",
+          TextMapId = "Content_120202_11"
+        },
+        Content_120202_12 = {
+          ContentFR = "À cause de vos actions, la ville entière est désormais en état d’alerte. Des Bi’an et des Magistrats de Yingtian patrouillent partout.\nAlors que toute issue semble vous être fermée, Xiaoyao apparaît soudain devant vous et promet de vous aider à fuir.",
+          TextMapId = "Content_120202_12"
+        },
+        Content_120202_13 = {
+          ContentFR = "Les escaliers menant au sommet du Pavillon de l’Arbitrage sont étroitement surveillés par les gardes.\nÀ proximité, une méchapoupée émet des bruits étranges, comme si elle était endommagée. Cette agitation inhabituelle vous donne une idée.",
+          TextMapId = "Content_120202_13"
+        },
+        Content_120202_2 = {
+          ContentFR = "La cloche du Pavillon de l’Arbitrage se met soudain à sonner. D’après un artisan, c’est un phénomène rarissime qui ne se produit qu’une fois par siècle : elle ne résonne que lorsque l’affaire jugée est d’une complexité telle que nul ne peut en démêler aisément le bien du mal.\nEn vous frayant un chemin dans la foule, vous apercevez l’avis placardé sur le panneau. Le visage du criminel représenté est pourtant celui d’une connaissance inattendue — Kezhou.",
+          TextMapId = "Content_120202_2"
+        },
+        Content_120202_3 = {
+          ContentFR = "En vous frayant un chemin dans la foule, vous apercevez l’avis placardé sur le panneau. Le visage du criminel représenté est pourtant celui d’une connaissance inattendue — Kezhou.\nVous avez quelque chose d’important à discuter avec Snow. Cet endroit est trop fréquenté : trouvez un lieu plus discret.",
+          TextMapId = "Content_120202_3"
+        },
+        Content_120202_4 = {
+          ContentFR = "Depuis ce matin, une étrange sensation d’inquiétude vous tenaille. Vous avez le pressentiment que retrouver Kezhou pourrait être la clé de cette énigme.\nL’avis annonce que le « Rite de Délibération » aura lieu demain à midi. D’ici là, préparez-vous soigneusement.",
+          TextMapId = "Content_120202_4"
+        },
+        Content_120202_5 = {
+          ContentFR = "Le « Rite de Délibération » approche, et la personne que vous venez sauver est actuellement détenue au sommet du Pavillon de l’Arbitrage.\nN’oubliez pas la tâche que Zhiliu vous a confiée : commencez par remettre les fournitures destinées à la Cérémonie de l’Encens à l’intendant du pavillon.",
+          TextMapId = "Content_120202_5"
+        },
+        Content_120202_6 = {
+          ContentFR = "Le « Rite de Délibération » approche, et la personne que vous venez sauver est actuellement détenue au sommet du Pavillon de l’Arbitrage.\nGrâce à la mission confiée par Zhiliu, vous avez réussi à vous infiltrer dans le pavillon. Trouvez maintenant un moyen d’atteindre l’étage supérieur.",
+          TextMapId = "Content_120202_6"
+        },
+        Content_120202_7 = {
+          ContentFR = "Les escaliers menant au sommet du Pavillon de l’Arbitrage sont étroitement surveillés par les gardes.\nImpossible de trouver une ouverture : vous décidez de discuter d’un plan avec Snow.",
+          TextMapId = "Content_120202_7"
+        },
+        Content_120202_8 = {
+          ContentFR = "Vous manipulez légèrement la méchapoupée, attirant ainsi l’attention des gardes. Profitez de leur distraction pour vous faufiler jusqu’au sommet du Pavillon de l’Arbitrage.",
+          TextMapId = "Content_120202_8"
+        },
+        Content_120202_9 = {
+          ContentFR = "Après bien des difficultés, vous atteignez enfin le sommet du Pavillon de l’Arbitrage — au moment même où apparaît Taihao, le Seigneur Dragon d’Argent.\nAprès un échange d’arguments avec lui, Kezhou tente d’assassiner le Seigneur Dragon. Mais la force d’un mortel ne saurait rivaliser avec celle d’un dieu. Projeté violemment en arrière, Kezhou révèle involontairement votre présence et celle de Snow.\nDans ce moment critique, vous n’avez d’autre choix que d’intervenir pour bloquer l’attaque du dragon.",
+          TextMapId = "Content_120202_9"
+        },
+        Content_120203_1 = {
+          ContentFR = "Avec l’aide de Xiaoyao, vous vous réfugiez dans la Ruelle Youlai, un endroit où peu de gens s’aventurent. Vous pouvez enfin reprendre votre souffle.",
+          TextMapId = "Content_120203_1"
+        },
+        Content_120203_10 = {
+          ContentFR = "Après bien des échanges, vous parvenez enfin à entrer en contact avec celle que Kezhou surnomme « Grande-tante » : une jeune fille vive nommée Su Yi.\nSous sa conduite, vous atteignez la base secrète des Vagabonds — les Pics Extérieurs.",
+          TextMapId = "Content_120203_10"
+        },
+        Content_120203_11 = {
+          ContentFR = "D’après Oncle Tang, Kezhou est déjà rentré aux Pics Extérieurs avant vous. Allez le rejoindre.",
+          TextMapId = "Content_120203_11"
+        },
+        Content_120203_12 = {
+          ContentFR = "Le chaos que Kezhou a provoqué à l’extérieur met Su Yi hors d’elle. Vous assistez à une scène où elle le réprimande sévèrement.\nAvec son habituel sourire insolent, Kezhou vous demande de plaider sa cause auprès d’elle. Vous décidez alors...",
+          TextMapId = "Content_120203_12"
+        },
+        Content_120203_13 = {
+          ContentFR = "Après avoir discuté d’un plan, Fushu part en premier et retourne à Haojing afin de chercher des traces de la Secte de l’Insondable Trésor.\nPendant votre séjour aux Pics Extérieurs, vous décidez de prêter main-forte aux diverses tâches quotidiennes. C’est aussi une bonne occasion de mieux découvrir cet endroit.",
+          TextMapId = "Content_120203_13"
+        },
+        Content_120203_14 = {
+          ContentFR = "La jambe d’Oncle Tang est récemment blessée. Vous accompagnez Su Yi pour aller cueillir des herbes médicinales afin de l’aider à se rétablir plus rapidement.\nPrès du champ d’herbes, vous rencontrez Pei Chen et Lu Ye, qui se disputent encore sur la façon de corriger la mouette nuageuse qui sème le trouble. Montrez-leur ce dont vous êtes capable.",
+          TextMapId = "Content_120203_14"
+        },
+        Content_120203_15 = {
+          ContentFR = "Ce petit incident avec la mouette nuageuse est désormais réglé. Le mauvais oiseau qui ravageait sans cesse les champs d’herbes a enfin été maîtrisé. Allez maintenant cueillir quelques herbes médicinales.",
+          TextMapId = "Content_120203_15"
+        },
+        Content_120203_16 = {
+          ContentFR = "La jambe d’Oncle Tang est récemment blessée. Vous accompagnez Su Yi pour aller cueillir des herbes médicinales afin de l’aider à se rétablir plus rapidement.\nLes herbes ont été récoltées. Apportez-les à Oncle Tang.",
+          TextMapId = "Content_120203_16"
+        },
+        Content_120203_17 = {
+          ContentFR = "En apportant les herbes à Oncle Tang, vous récupérez également les outils nécessaires à l’ajustement du Voile de Tianluo.\nIl s’agit d’un dispositif développé par la Secte Jishu pour couper la capacité de détection des Neuf Chapitres de Dafeng.\nSuivez maintenant Su Yi afin d’ajuster le Voile de Tianluo.",
+          TextMapId = "Content_120203_17"
+        },
+        Content_120203_18 = {
+          ContentFR = "En apportant les herbes à Oncle Tang, vous récupérez également les outils nécessaires à l’ajustement du Voile de Tianluo.\nIl s’agit d’un dispositif développé par la Secte Jishu pour couper la capacité de détection des Neuf Chapitres de Dafeng.\nSuivez maintenant Su Yi afin d’ajuster le Voile de Tianluo.",
+          TextMapId = "Content_120203_18"
+        },
+        Content_120203_19 = {
+          ContentFR = "Shen Han vous arrête pour vous confier son inquiétude au sujet d’un jeune nommé Zhu Pu.\nCes derniers temps, il s’entraîne aux arts martiaux avec une obsession inquiétante. Vous acceptez d’aller vérifier ce qu’il en est.",
+          TextMapId = "Content_120203_19"
+        },
+        Content_120203_2 = {
+          ContentFR = "Vous voilà enfin hors de danger. Discutez avec Kezhou pour comprendre ce qui se passe réellement.",
+          TextMapId = "Content_120203_2"
+        },
+        Content_120203_20 = {
+          ContentFR = "Vous trouvez Zhu Pu dans une grotte, en train de s’entraîner jusqu’à l’épuisement. Il n’écoute plus les conseils de personne.\nSu Yi lui offre alors une « occasion de faire ses preuves ». Donnez quelques conseils à ce jeune obstiné.",
+          TextMapId = "Content_120203_20"
+        },
+        Content_120203_21 = {
+          ContentFR = "Sous vos coups, Zhu Pu ne tient même pas dix coups avant d’être vaincu. Parlez-lui de nouveau.",
+          TextMapId = "Content_120203_21"
+        },
+        Content_120203_22 = {
+          ContentFR = "Vous trouvez le contact des Pics Extérieurs, mais son attitude reste froide et distante.\nD’après les indications laissées par Kezhou, vous devez d’abord trouver le signal du jour pour qu’elle accepte de vous reconnaître.",
+          TextMapId = "Content_120203_22"
+        },
+        Content_120203_23 = {
+          ContentFR = "Vous trouvez le contact des Pics Extérieurs, mais son attitude reste froide et distante.\nD’après les indications laissées par Kezhou, vous devez d’abord trouver le signal du jour pour qu’elle accepte de vous reconnaître.",
+          TextMapId = "Content_120203_23"
+        },
+        Content_120203_3 = {
+          ContentFR = "Alors que vous parlez avec Kezhou, des pas résonnent soudain au loin. Vous ignorez qui approche. Trouvez vite un endroit où vous cacher et observez la situation.",
+          TextMapId = "Content_120203_3"
+        },
+        Content_120203_4 = {
+          ContentFR = "La personne qui arrive n’est autre que Fushu. Le danger semble écarté pour le moment : discutez de la situation avec Fushu et Kezhou.",
+          TextMapId = "Content_120203_4"
+        },
+        Content_120203_5 = {
+          ContentFR = "Sous les paroles de Fushu, vos souvenirs commencent peu à peu à revenir...",
+          TextMapId = "Content_120203_5"
+        },
+        Content_120203_6 = {
+          ContentFR = "Sous les paroles de Fushu, vos souvenirs commencent peu à peu à revenir...\nAprès la bataille contre Zhuyin, Zhiliu vous a plongé dans l’inconscience et vous a emmené dans un lieu inconnu. Là, elle vous a révélé l’avenir prédit par trois présages divinatoires.\nL’affrontement contre le Seigneur Dragon d’Argent au sommet du Pavillon de l’Arbitrage en était le premier.",
+          TextMapId = "Content_120203_6"
+        },
+        Content_120203_7 = {
+          ContentFR = "Vous devez arrêter Zhiliu avant que les deux autres « prophéties » ne se réalisent. Après avoir discuté avec Fushu et Kezhou, vous décidez de vous rendre aux Pics Extérieurs, afin d’échapper à la traque lancée dans toute la ville et de chercher un moyen de lever le sortilège de Zhiliu.\nKezhou se porte volontaire pour attirer les poursuivants et part en éclaireur. Suivez les indications qu’il a laissées et trouvez le contact des Pics Extérieurs.",
+          TextMapId = "Content_120203_7"
+        },
+        Content_120203_8 = {
+          ContentFR = "Vous trouvez le contact des Pics Extérieurs, mais son attitude reste froide et distante.\nD’après les indications laissées par Kezhou, vous devez d’abord trouver le signal du jour pour qu’elle accepte de vous reconnaître.",
+          TextMapId = "Content_120203_8"
+        },
+        Content_120203_9 = {
+          ContentFR = "Vous avez obtenu le signal. Retournez parler au contact.",
+          TextMapId = "Content_120203_9"
+        },
+        Content_120204_1 = {
+          ContentFR = "Soudain, un tumulte inquiétant se fait entendre à l’extérieur. Allez vérifier ce qui se passe.",
+          TextMapId = "Content_120204_1"
+        },
+        Content_120204_10 = {
+          ContentFR = "Au cœur du Labyrinthe de Yanyin, vous découvrez par hasard un ancien secret... et découvrez la clé de la victoire : la méthode d’activation du Canon Céleste.\nAvec ce nouvel atout en main, retournez sur le champ de bataille pour renverser la situation.",
+          TextMapId = "Content_120204_10"
+        },
+        Content_120204_11 = {
+          ContentFR = "Avec votre retour dans la bataille, la situation s’inverse immédiatement. En un instant, les Sentinelles de Fer de Juntian montrent des signes de défaite.",
+          TextMapId = "Content_120204_11"
+        },
+        Content_120204_12 = {
+          ContentFR = "Avec votre retour dans la bataille, la situation s’inverse immédiatement. En un instant, les Sentinelles de Fer de Juntian montrent des signes de défaite.\nSoudain, une violente secousse secoue la cité, et les Magistrats de Yingtian battent tous en retraite d’un même mouvement.\nLa crise est terminée. Allez parler aux autres.",
+          TextMapId = "Content_120204_12"
+        },
+        Content_120204_13 = {
+          ContentFR = "Avec la retraite des Sentinelles de Fer de Juntian, le sceau qui retenait vos souvenirs commence à se fissurer...",
+          TextMapId = "Content_120204_13"
+        },
+        Content_120204_14 = {
+          ContentFR = "Se servir de vous pour blesser Taihao et détourner les Sentinelles de Fer de Juntian faisait partie du plan de Zhiliu.\nLe dispositif se met peu à peu en place, attendant simplement que chaque pièce entre en jeu.\nPendant ce temps, au sommet du Pavillon de l’Arbitrage, Zhiliu conspire déjà avec Zhuyin...",
+          TextMapId = "Content_120204_14"
+        },
+        Content_120204_2 = {
+          ContentFR = "La position des Pics Extérieurs a été soudainement révélée. Les Magistrats de Yingtian ont lancé l’assaut et tous sont en danger.\nLa situation est critique : aidez les Vagabonds à repousser la première vague.",
+          TextMapId = "Content_120204_2"
+        },
+        Content_120204_3 = {
+          ContentFR = "La position des Pics Extérieurs a été soudainement révélée. Les Magistrats de Yingtian ont lancé l’assaut et tous sont en danger.\nLa situation est critique : allez vérifier la situation avec les Vagabonds.",
+          TextMapId = "Content_120204_3"
+        },
+        Content_120204_4 = {
+          ContentFR = "La position des Pics Extérieurs a été révélée et les Magistrats de Yingtian ont lancé l’assaut. Leur chef n’est autre que Yuming, autrefois proche des Pics Extérieurs.\nIl semble hésiter à lever les armes contre ses anciens compagnons. Mais les paroles de Kezhou produisent l’effet inverse. Les armes sont déjà dégainées. Il ne reste plus qu’à combattre.",
+          TextMapId = "Content_120204_4"
+        },
+        Content_120204_5 = {
+          ContentFR = "La position des Pics Extérieurs a été révélée et les Magistrats de Yingtian ont lancé l’assaut. Leur chef n’est autre que Yuming, autrefois proche des Pics Extérieurs.\nIl semble hésiter à lever les armes contre ses anciens compagnons. Mais les paroles de Kezhou produisent l’effet inverse. Les armes sont déjà dégainées. Il ne reste plus qu’à combattre.",
+          TextMapId = "Content_120204_5"
+        },
+        Content_120204_6 = {
+          ContentFR = "Dans son affrontement contre Yuming, Kezhou commence à perdre l’avantage. Impuissante face à la situation, Su Yi est profondément inquiète. Après avoir pris sa décision, elle vous entraîne dans un ancien souterrain de la Secte Jishu situé à proximité et vous demande de chercher avec elle une autre solution.",
+          TextMapId = "Content_120204_6"
+        },
+        Content_120204_9 = {
+          ContentFR = "Au cœur du Labyrinthe de Yanyin, vous découvrez par hasard un ancien secret... et découvrez la clé de la victoire : la méthode d’activation du Canon Céleste.\nAvec ce nouvel atout en main, retournez sur le champ de bataille pour renverser la situation.",
+          TextMapId = "Content_120204_9"
+        },
+        Content_120205_1 = {
+          ContentFR = "Après la grande bataille, vous prenez quelque temps pour vous reposer aux Pics Extérieurs.\nFushu est revenue en toute hâte, inquiète de votre état. Allez discuter avec elle.",
+          TextMapId = "Content_120205_1"
+        },
+        Content_120205_10 = {
+          ContentFR = "Le chef du village vous indique enfin la bonne direction : la personne que vous cherchez, Maître Jingyuan, vit en ermite sur la falaise, de l’autre côté du pont brisé.",
+          TextMapId = "Content_120205_10"
+        },
+        Content_120205_11 = {
+          ContentFR = "Maître Jingyuan vous attendait déjà. Elle refuse de juger les actes de son élève, mais vous raconte un épisode du passé de Zhiliu lorsqu’elle était enfant.\nLorsque vous serez prêt à lever le sortilège et à briser le sceau qui entrave vos souvenirs, adressez-vous à Maître Jingyuan.",
+          TextMapId = "Content_120205_11"
+        },
+        Content_120205_12 = {
+          ContentFR = "Grâce à l’aide de Maître Jingyuan, vous parvenez enfin à reconstituer la dernière pièce manquante de vos souvenirs...",
+          TextMapId = "Content_120205_12"
+        },
+        Content_120205_13 = {
+          ContentFR = "Tout est désormais en place. Pendant ce temps, au cœur du Mausolée de Taixu, un Haut Chancelier de Longyuan s’avance vers la fin de son existence...",
+          TextMapId = "Content_120205_13"
+        },
+        Content_120205_14 = {
+          ContentFR = "Tout est désormais en place. Pendant ce temps, au cœur du Mausolée de Taixu, un Haut Chancelier de Longyuan s’avance vers la fin de son existence...",
+          TextMapId = "Content_120205_14"
+        },
+        Content_120205_15 = {
+          ContentFR = "Tout est désormais en place. Pendant ce temps, au cœur du Mausolée de Taixu, un Haut Chancelier de Longyuan s’avance vers la fin de son existence...",
+          TextMapId = "Content_120205_15"
+        },
+        Content_120205_16 = {
+          ContentFR = "Tout est désormais en place. Pendant ce temps, au cœur du Mausolée de Taixu, un Haut Chancelier de Longyuan s’avance vers la fin de son existence...",
+          TextMapId = "Content_120205_16"
+        },
+        Content_120205_17 = {
+          ContentFR = "Le plan de Zhiliu pour tuer un dieu est désormais en marche. Les ondes de choc de l’affrontement entre Taihao et Zhuyin plongent toute la ville de Haojing dans le chaos.",
+          TextMapId = "Content_120205_17"
+        },
+        Content_120205_2 = {
+          ContentFR = "La nuit est tombée, et les Pics Extérieurs paraissent étrangement silencieux après la bataille. Allez chercher Su Yi.",
+          TextMapId = "Content_120205_2"
+        },
+        Content_120205_3 = {
+          ContentFR = "Vous surprenez une scène où un Vagabond critique votre présence, tandis que Su Yi prend votre défense avec vigueur. Allez lui parler.",
+          TextMapId = "Content_120205_3"
+        },
+        Content_120205_4 = {
+          ContentFR = "Bien qu’elle regrette votre départ, Su Yi finit par accepter que vous quittiez les Pics Extérieurs.\nElle vous conseille d’emmener Kezhou avec vous comme allié. Après sa violente dispute avec Yuming, Kezhou a disparu toute la nuit.\nFait inhabituel, Snow est restée sur place : elle dit vouloir interroger Su Yi au sujet d’un ancien secret. Allez écouter ce qu’elle souhaite lui demander.",
+          TextMapId = "Content_120205_4"
+        },
+        Content_120205_5 = {
+          ContentFR = "Bien qu’elle regrette votre départ, Su Yi finit par accepter que vous quittiez les Pics Extérieurs.\nElle vous conseille d’emmener Kezhou avec vous comme allié. Après sa violente dispute avec Yuming, Kezhou a disparu toute la nuit. Allez le chercher.",
+          TextMapId = "Content_120205_5"
+        },
+        Content_120205_6 = {
+          ContentFR = "Kezhou vous confie le passé tragique qui le lie à son frère d’armes et à Buxia. Vous parvenez à lui redonner courage. Retournez maintenant avec lui afin de discuter d’un plan avec les autres.",
+          TextMapId = "Content_120205_6"
+        },
+        Content_120205_7 = {
+          ContentFR = "D’après les informations rapportées par Fushu, la Secte de l’Insondable Trésor vivrait recluse au Village de Jiaolan, dans la Banlieue Ouest de Haojing. Cela pourrait être la clé pour lever le sortilège de Zhiliu.\nNe perdons pas de temps : rendez-vous immédiatement au Village de Jiaolan.",
+          TextMapId = "Content_120205_7"
+        },
+        Content_120205_8 = {
+          ContentFR = "D’après les informations rapportées par Fushu, la Secte de l’Insondable Trésor vivrait recluse au Village de Jiaolan, dans la Banlieue Ouest de Haojing. Cela pourrait être la clé pour lever le sortilège de Zhiliu.\nRenseignez-vous auprès des villageois afin d’en apprendre davantage.",
+          TextMapId = "Content_120205_8"
+        },
+        Content_120205_9 = {
+          ContentFR = "Malgré vos recherches, vous n’obtenez aucune information — certains habitants vont même jusqu’à vous fermer leur porte. Kezhou propose alors d’aller directement interroger le chef du village.",
+          TextMapId = "Content_120205_9"
+        },
+        Content_120206_1 = {
+          ContentFR = "Le plan de Zhiliu pour tuer un dieu est désormais en marche. Les ondes de choc de l’affrontement entre Taihao et Zhuyin plongent toute la ville de Haojing dans le chaos.",
+          TextMapId = "Content_120206_1"
+        },
+        Content_120206_10 = {
+          ContentFR = "Avec l’aide de Maître Jingyuan, vous découvrez enfin l’intégralité du plan de Zhiliu — ainsi que le moyen de le contrecarrer. Il est encore temps de l’arrêter. Avant que tout ne soit scellé, rendez-vous au Pavillon de l’Arbitrage.",
+          TextMapId = "Content_120206_10"
+        },
+        Content_120206_11 = {
+          ContentFR = "Avec l’aide de Maître Jingyuan, vous découvrez enfin l’intégralité du plan de Zhiliu — ainsi que le moyen de le contrecarrer.\nEn chemin, vous retrouvez Su Yi. Elle s’occupe de vos arrières afin que vous puissiez poursuivre sans entrave. Avant que tout ne soit scellé, rendez-vous au Pavillon de l’Arbitrage.",
+          TextMapId = "Content_120206_11"
+        },
+        Content_120206_12 = {
+          ContentFR = "Avec l’aide de Maître Jingyuan, vous découvrez enfin l’intégralité du plan de Zhiliu — ainsi que le moyen de le contrecarrer.\nIl est encore temps. Hâtez-vous vers les profondeurs du Mausolée de Taixu.",
+          TextMapId = "Content_120206_12"
+        },
+        Content_120206_13 = {
+          ContentFR = "Avec l’aide de Maître Jingyuan, vous découvrez enfin l’intégralité du plan de Zhiliu — ainsi que le moyen de le contrecarrer.\nIl est encore temps. Hâtez-vous vers les profondeurs du Mausolée de Taixu.",
+          TextMapId = "Content_120206_13"
+        },
+        Content_120206_14 = {
+          ContentFR = "L’affrontement entre Taihao et Zhuyin atteint son paroxysme. Au plus profond du Mausolée de Taixu, vous découvrez Zhiliu au bord de l’effondrement.\nDéterminée à mourir, elle vous supplie de transpercer sa poitrine avec votre épée afin d’achever le sacrifice final.",
+          TextMapId = "Content_120206_14"
+        },
+        Content_120206_15 = {
+          ContentFR = "Vous refusez d’accéder à la demande de Zhiliu — vous êtes venu lui prouver qu’il existe toujours une autre voie.\nGrâce à la Résonance, vous transférez sur vous-même le pouvoir du Pacte d’âme qui la liait.\nDéjà proches de la démence, Taihao et Zhuyin sentent cette intervention et tournent leur regard vers vous. Vainquez-les, et prouvez la force de votre volonté.",
+          TextMapId = "Content_120206_15"
+        },
+        Content_120206_16 = {
+          ContentFR = "Vous refusez d’accéder à la demande de Zhiliu — vous êtes venu lui prouver qu’il existe toujours une autre voie.\nGrâce à la Résonance, vous transférez brièvement sur vous-même le pouvoir du Pacte d’âme qui la liait.\nDéjà proches de la démence, Taihao et Zhuyin sentent cette intervention et tournent leur regard vers vous. Vainquez-les, et prouvez la force de votre volonté.",
+          TextMapId = "Content_120206_16"
+        },
+        Content_120206_17 = {
+          ContentFR = "Vous refusez d’accéder à la demande de Zhiliu — vous êtes venu lui prouver qu’il existe toujours une autre voie.\nGrâce à la Résonance, vous transférez brièvement sur vous-même le pouvoir du Pacte d’âme qui la liait.\nDéjà proches de la démence, Taihao et Zhuyin sentent cette intervention et tournent leur regard vers vous. Vainquez-les, et prouvez la force de votre volonté.",
+          TextMapId = "Content_120206_17"
+        },
+        Content_120206_18 = {
+          ContentFR = "Vous refusez d’accéder à la demande de Zhiliu — vous êtes venu lui prouver qu’il existe toujours une autre voie.\nGrâce à la Résonance, vous transférez brièvement sur vous-même le pouvoir du Pacte d’âme qui la liait.\nDéjà proches de la démence, Taihao et Zhuyin sentent cette intervention et tournent leur regard vers vous. Vainquez-les, et prouvez la force de votre volonté.",
+          TextMapId = "Content_120206_18"
+        },
+        Content_120206_19 = {
+          ContentFR = "Vous refusez d’accéder à la demande de Zhiliu — vous êtes venu lui prouver qu’il existe toujours une autre voie.\nGrâce à la Résonance, vous transférez brièvement sur vous-même le pouvoir du Pacte d’âme qui la liait.\nDéjà proches de la démence, Taihao et Zhuyin sentent cette intervention et tournent leur regard vers vous. Vainquez-les, et prouvez la force de votre volonté.",
+          TextMapId = "Content_120206_19"
+        },
+        Content_120206_2 = {
+          ContentFR = "Le plan de Zhiliu pour tuer un dieu est désormais en marche. Les ondes de choc de l’affrontement entre Taihao et Zhuyin plongent toute la ville de Haojing dans le chaos.",
+          TextMapId = "Content_120206_2"
+        },
+        Content_120206_20 = {
+          ContentFR = "Après avoir vaincu les deux dragons, le Jade de l’Équilibre émet une lumière éclatante qui engloutit tout autour de vous et vous transporte dans un espace irréel et vaporeux...",
+          TextMapId = "Content_120206_20"
+        },
+        Content_120206_21 = {
+          ContentFR = "Après avoir vaincu les deux dragons, le Jade de l’Équilibre émet une lumière éclatante qui engloutit tout autour de vous et vous transporte dans un espace irréel et vaporeux...",
+          TextMapId = "Content_120206_21"
+        },
+        Content_120206_22 = {
+          ContentFR = "Après avoir vaincu les deux dragons, le Jade de l’Équilibre émet une lumière éclatante qui engloutit tout autour de vous et vous transporte dans un espace irréel et vaporeux...",
+          TextMapId = "Content_120206_22"
+        },
+        Content_120206_23 = {
+          ContentFR = "Après avoir vaincu les deux dragons, le Jade de l’Équilibre émet une lumière éclatante qui engloutit tout autour de vous et vous transporte dans un espace irréel et vaporeux...",
+          TextMapId = "Content_120206_23"
+        },
+        Content_120206_24 = {
+          ContentFR = "Vous atteignez le cœur du Mausolée de Taixu et vous entretenez avec les anciens Ju et Yang. Les Neuf Chapitres de Dafeng, arrachés à leur ordre originel, s’apprêtent enfin à retrouver leur état d’origine.",
+          TextMapId = "Content_120206_24"
+        },
+        Content_120206_25 = {
+          ContentFR = "Les Neuf Chapitres de Dafeng, arrachés à leur ordre originel, s’apprêtent enfin à retrouver leur état d’origine. Et vous êtes {性别:celui|celle} qui a rendu cela possible. Taihao vous adresse sa gratitude et vous fait une promesse. Allez maintenant discuter avec les autres.",
+          TextMapId = "Content_120206_25"
+        },
+        Content_120206_26 = {
+          ContentFR = "Zhiliu semble avoir quelque chose à vous dire...",
+          TextMapId = "Content_120206_26"
+        },
+        Content_120206_27 = {
+          ContentFR = "Zhiliu vous demande de l’accompagner pour une promenade...",
+          TextMapId = "Content_120206_27"
+        },
+        Content_120206_28 = {
+          ContentFR = "Zhiliu vous demande de l’accompagner pour une promenade...",
+          TextMapId = "Content_120206_28"
+        },
+        Content_120206_3 = {
+          ContentFR = "Haojing est plongée dans le chaos. Des Bi’an et des Bi’an obscurs, pris de frénésie, se mettent à attaquer les habitants sans distinction. Une petite fille manque d’être blessée lorsqu’un Bi’an surgit — mais Su Yi intervient à temps.",
+          TextMapId = "Content_120206_3"
+        },
+        Content_120206_5 = {
+          ContentFR = "Haojing est plongée dans le chaos. Des Bi’an et des Bi’an obscurs, pris de frénésie, se mettent à attaquer les habitants sans distinction. Repoussez les Bi’an dans la ville afin de protéger la population.",
+          TextMapId = "Content_120206_5"
+        },
+        Content_120206_6 = {
+          ContentFR = "Haojing est plongée dans le chaos. Des Bi’an et des Bi’an obscurs sèment toujours la destruction dans les rues. Continuer ainsi ne résoudra rien. Discutez d’un plan.",
+          TextMapId = "Content_120206_6"
+        },
+        Content_120206_7 = {
+          ContentFR = "Su Yi reçoit un message de {nickname} et s’apprête à lui porter secours. Mais avant de partir, elle insiste pour distribuer les armes de réserve qu’elle a apportées afin que les habitants puissent aussi se défendre.",
+          TextMapId = "Content_120206_7"
+        },
+        Content_120206_8 = {
+          ContentFR = "Les Vagabonds tentent de distribuer des armes, mais se heurtent à la méfiance des habitants. Pourtant, Su Yi ne semble pas prête à abandonner...",
+          TextMapId = "Content_120206_8"
+        },
+        Content_120206_9 = {
+          ContentFR = "Avec l’aide de Maître Jingyuan, vous découvrez enfin l’intégralité du plan de Zhiliu — ainsi que le moyen de le contrecarrer. Il est encore temps de l’arrêter. Avant que tout ne soit scellé, rendez-vous au Pavillon de l’Arbitrage.",
+          TextMapId = "Content_120206_9"
         },
         Content_200101_1 = {
           ContentFR = "Une silhouette familière vous attend devant le Sanctuaire, elle ressemble étrangement à Snow.",
@@ -4228,7 +4663,15 @@ local Data = {
         Content_20020606_5 = {
           ContentFR = "Près du Théâtre Galea, vous repérez trois silhouettes suspectes : un ivrogne, une jeune fille curieuse et un garçon vendeur de friandises. Tous ont un lien — même ténu — avec l’alcool ou le pop-corn.\nÀ vous de réfléchir : qui est le plus susceptible d’avoir enivré Buck ?",
           TextMapId = "Content_20020606_5"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Content_200206_1",
+    MaxKey = "Content_200313_2",
+    Loader = function()
+      return {
         Content_200206_1 = {
           ContentFR = "Comme à votre habitude, vous vous rendez aux Asphodèles pour consulter les nouvelles missions. Mais aujourd’hui, l’endroit semble plus animé qu’à l’ordinaire — une agitation inhabituelle flotte dans l’air.",
           TextMapId = "Content_200206_1"
@@ -4672,15 +5115,7 @@ local Data = {
         Content_200231_2 = {
           ContentFR = "Suivez Lars jusqu’à Brumelac pour trouver la maison de Donat.",
           TextMapId = "Content_200231_2"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Content_200231_3",
-    MaxKey = "DROP_NAME_1020",
-    Loader = function()
-      return {
+        },
         Content_200231_3 = {
           ContentFR = "Donat n’est pas chez lui. Lars se souvient qu’il parlait de retourner à la Fosse de Glevum — allez l’y chercher.",
           TextMapId = "Content_200231_3"
@@ -5036,7 +5471,15 @@ local Data = {
         Content_200313_2 = {
           ContentFR = "Devant la maison de thé, Chen Baisha se dispute sans fin avec le marchand au sujet du goût du thé servi en grand bol. Qui a raison... ou s’agit-il d’un simple malentendu ?",
           TextMapId = "Content_200313_2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Content_200313_3",
+    MaxKey = "DROP_QUEST_MUBEI",
+    Loader = function()
+      return {
         Content_200313_3 = {
           ContentFR = "Chen Baisha propose de se rendre à Éternel Printemps pour y retrouver un ami négociant en thé. Et sans trop savoir pourquoi, vous acceptez cette mission... La route ne sera pas paisible : repoussez les Souillés et le Bi’an obscur.",
           TextMapId = "Content_200313_3"
@@ -5273,6 +5716,154 @@ local Data = {
           ContentFR = "L’esprit de Fushu restait envahi par le doute. Privée de la réponse du Carillon des Vents, elle manqua de rester prisonnière de la Faille de l’Oubli. Grâce à l’aide du Wishen, elle parvint finalement à retrouver le chemin du retour, et un souvenir longtemps enfoui refit surface. À présent, Fushu et {nickname} sont réunis... mais le danger n’est pas écarté. Hâtez-vous de quitter cet endroit et de trouver une voie de survie.",
           TextMapId = "Content_Nai03_01_01"
         },
+        Content__120301_1 = {
+          ContentFR = "Une fois le tumulte apaisé, la paix est enfin revenue à Huaxu. Dans les rues et les ruelles de Haojing, certains vont même jusqu’à chanter vos louanges... Peut-être est-ce un peu exagéré. Mais il est vrai que votre voyage mouvementé à travers Huaxu, aux côtés de Snow, touche enfin à sa paisible conclusion.\nAvant d’embarquer à bord du dirigeable qui vous ramènera à Givrelac, profitez encore un peu de vos derniers instants à Huaxu.",
+          TextMapId = "Content__120301_1"
+        },
+        Content__120301_2 = {
+          ContentFR = "Snow et vous dégustez tranquillement un thé matinal au marché de l’Est lorsqu’une agitation soudaine éclate au fond d’une ruelle toute proche. Poussée par la curiosité, Snow file aussitôt à toute vitesse et disparaît de votre vue... Allez voir ce qui se passe.",
+          TextMapId = "Content__120301_2"
+        },
+        Content__120301_3 = {
+          ContentFR = "Attirés par le vacarme, Snow et vous vous approchez pour voir ce qui se passe, et tombez sur une vieille connaissance : Su Yi, en pleine discussion avec un coéquipier potentiel qui vient de la repousser.\nVous apprenez alors que le Tournoi de l’Encens va bientôt commencer. Mais au beau milieu de votre conversation, la précieuse invention de Su Yi, Qingluan Type II, est dérobée sous vos yeux par un voleur. Vite, rattrapez-le !",
+          TextMapId = "Content__120301_3"
+        },
+        Content__120301_4 = {
+          ContentFR = "Le voleur prend l’apparence de Su Yi pour tenter de vous tromper et de s’enfuir, mais vous percez son stratagème à jour. Maîtrisez-le avant qu’il ne vous échappe !",
+          TextMapId = "Content__120301_4"
+        },
+        Content__120301_5 = {
+          ContentFR = "Cette rencontre avec celle qui se présente comme Démon Tabethe, la Main Rouge commence dans l’affrontement... mais se termine presque en camaraderie. Après quelques explications, elle accepte finalement de rendre le Qingluan Type II à Su Yi.",
+          TextMapId = "Content__120301_5"
+        },
+        Content__120302_1 = {
+          ContentFR = "Par un concours de circonstances, vous avez aidé Su Yi à récupérer son Qingluan Type II dérobé, et avez même fini par former une équipe de trois avec la coupable elle-même : Démon Tabethe, la Main Rouge. Votre équipe étant désormais complète, vous pouvez vous inscrire au Tournoi de l’Encens.\nIl se fait tard. Rendez-vous vite au point d’inscription pour enregistrer votre participation.",
+          TextMapId = "Content__120302_1"
+        },
+        Content__120302_2 = {
+          ContentFR = "L’équipe des Chasseurs d’Encens est officiellement formée. Il est temps de commencer votre première épreuve !",
+          TextMapId = "Content__120302_2"
+        },
+        Content__120302_3 = {
+          ContentFR = "Vous remportez largement l’épreuve préliminaire. Après avoir convaincu Su Yi de ne pas passer toute la pause à préparer la prochaine manche, vous décidez de retourner aux échoppes du Quartier Est pour déguster quelques spécialités afin de célébrer votre première victoire en équipe.",
+          TextMapId = "Content__120302_3"
+        },
+        Content__120302_4 = {
+          ContentFR = "Vous remportez largement l’épreuve préliminaire. Après avoir convaincu Su Yi de ne pas passer toute la pause à préparer la prochaine manche, vous décidez de retourner aux échoppes du Quartier Est pour déguster quelques spécialités afin de célébrer votre première victoire en équipe.\nPrenez une photo pour immortaliser ce moment.",
+          TextMapId = "Content__120302_4"
+        },
+        Content__120302_5 = {
+          ContentFR = "Vous remportez largement l’épreuve préliminaire. Après avoir convaincu Su Yi de ne pas passer toute la pause à préparer la prochaine manche, vous décidez de retourner aux échoppes du Quartier Est pour déguster quelques spécialités afin de célébrer votre première victoire en équipe.",
+          TextMapId = "Content__120302_5"
+        },
+        Content__120302_6 = {
+          ContentFR = "Alors que vous flânez au marché de l’Est, vous tombez sur une dispute animée entre un conteur et un homme arrogant au sujet des Quatre Vagabonds.\nCertaines de ses paroles semblent raviver de douloureux souvenirs chez Su Yi. Allez lui parler.",
+          TextMapId = "Content__120302_6"
+        },
+        Content__120303_1 = {
+          ContentFR = "Le cerf-volant mécanique que Tabethe a « emprunté par accident » plonge Su Yi dans une profonde réflexion. Elle décide de rester pour l’examiner de plus près et vous propose d’aller vous promener pendant ce temps. Une fois vos visites terminées, retrouvez-la au point d’inscription.",
+          TextMapId = "Content__120303_1"
+        },
+        Content__120303_2 = {
+          ContentFR = "Peu avant le début de la seconde épreuve du Tournoi de l’Encens, la jeune équipe des Chasseurs d’Encens se retrouve confrontée à sa première crise : Tabethe est introuvable. Heureusement, Yuming apparaît au bon moment pour vous tirer d’affaire, même si son arrivée semble réveiller quelques tensions avec Su Yi. Surmontez ces imprévus et remportez l’épreuve de qualification.",
+          TextMapId = "Content__120303_2"
+        },
+        Content__120303_3 = {
+          ContentFR = "Vous vous qualifiez pour la suite du tournoi, mais l’atmosphère au sein de l’équipe reste tendue. De mauvaise humeur, Su Yi décide de sortir prendre l’air. Au cours de sa conversation avec Yuming, un nom revient plusieurs fois : Su Muzhe. Il semble lié au trouble qui agite Su Yi.\nTrouvez-la et essayez de la réconforter.",
+          TextMapId = "Content__120303_3"
+        },
+        Content__120303_4 = {
+          ContentFR = "Après votre conversation, le poids qui pesait sur le cœur de Su Yi semble s’être quelque peu allégé. La pause touche à sa fin. Il est temps de retourner au point d’inscription et de vous préparer pour la prochaine épreuve.",
+          TextMapId = "Content__120303_4"
+        },
+        Content__120303_5 = {
+          ContentFR = "Sur le chemin du retour vers l’arène, vous entendez les appels à l’aide d’un enfant. Les conséquences du chaos qui a récemment secoué Haojing ne se sont pas encore totalement dissipées, et des Bi’an obscurs continuent d’attaquer les passants. Repoussez ces créatures avant que quelqu’un ne soit blessé.",
+          TextMapId = "Content__120303_5"
+        },
+        Content__120303_6 = {
+          ContentFR = "Vous avez repoussé les Bi’an obscurs. Parlez avec l’enfant que vous avez secouru et assurez-vous qu’il n’est pas blessé.",
+          TextMapId = "Content__120303_6"
+        },
+        Content__120304_1 = {
+          ContentFR = "Sur le chemin du retour vers le point d’inscription, vous sauvez un garçon nommé An d’une attaque de Bi’an obscur. Vous faites également la connaissance de sa tante, Xiaoxiang, qui travaille au Bureau des Travaux. C’est elle qui vous apprend que An a gardé une blessure permanente à la jambe à la suite d’un terrible accident.\nAprès leur avoir dit au revoir, retournez au point d’inscription du Tournoi de l’Encens.",
+          TextMapId = "Content__120304_1"
+        },
+        Content__120304_2 = {
+          ContentFR = "Yuming et Su Yi parviennent finalement à dissiper leur malentendu. En l’absence de Tabethe, Yuming rejoint temporairement l’équipe. Maintenant que vous comprenez mieux les ambitions de Su Yi, prenez la tête des Chasseurs d’Encens et remportez la troisième épreuve !",
+          TextMapId = "Content__120304_2"
+        },
+        Content__120304_3 = {
+          ContentFR = "Les épreuves du jour touchent à leur fin, mais de nouveaux ennuis surgissent aussitôt. Quelqu’un a dénoncé Su Yi pour son statut de Vagabonde, plaçant votre équipe sous le feu des critiques. Heureusement, Zhiliu intervient à temps pour calmer la situation et empêcher le conflit de s’aggraver. Rassemblez l’équipe et allez parler avec elle.",
+          TextMapId = "Content__120304_3"
+        },
+        Content__120304_4 = {
+          ContentFR = "En présence de tant de témoins, Zhiliu a retenu certaines paroles. Elle vous demande de rester un moment pour discuter en privé. Écoutez ce qu’elle souhaite vous dire.",
+          TextMapId = "Content__120304_4"
+        },
+        Content__120305_2 = {
+          ContentFR = "Les épreuves du jour touchent à leur fin. Les événements de la journée vous laissent inquiet pour Su Yi. Avant d’aller vous reposer, allez lui parler une dernière fois.",
+          TextMapId = "Content__120305_2"
+        },
+        Content__120305_3 = {
+          ContentFR = "À votre grande surprise, Su Yi semble de bonne humeur. Mais cette attitude inhabituelle ne fait qu’accroître votre inquiétude. Un bruit étrange interrompt soudain votre conversation. Su Yi vous demande d’aller vérifier d’où il provient, même si vous avez l’impression qu’elle cherche simplement à détourner la discussion...",
+          TextMapId = "Content__120305_3"
+        },
+        Content__120305_4 = {
+          ContentFR = "Étrange... Lorsque vous êtes arrivé tout à l’heure... cette caisse était-elle déjà là ?",
+          TextMapId = "Content__120305_4"
+        },
+        Content__120305_5 = {
+          ContentFR = "Oncle Tang se cache à l’intérieur de la caisse. Que fait-il ici ? Parlez-lui pour comprendre.",
+          TextMapId = "Content__120305_5"
+        },
+        Content__120305_6 = {
+          ContentFR = "Oncle Tang se cachait dans la caisse, inquiet pour Su Yi... Mais, aussi surprenant que soit son comportement, il n’est pas à l’origine du bruit. Allez plutôt vérifier du côté de l’entrée des Pics Extérieurs.",
+          TextMapId = "Content__120305_6"
+        },
+        Content__120306_1 = {
+          ContentFR = "Yuming apporte une mauvaise nouvelle : Qingluan Type II a été endommagé. Cette révélation vous laisse entrevoir l’ombre d’un complot, et l’état de Su Yi vous inquiète également. Mais inutile de trop y penser pour l’instant. Après une nuit de repos, la quatrième épreuve du Tournoi de l’Encens est sur le point de commencer. Rendez-vous au point d’inscription et retrouvez vos compagnons.",
+          TextMapId = "Content__120306_1"
+        },
+        Content__120306_2 = {
+          ContentFR = "Tabethe réapparaît enfin dans un nuage de fumée. La raison de sa disparition ? Un simple mal de ventre... Peut-être que les piments de Huaxu devraient être considérés comme des armes biologiques. De son côté, Su Yi a passé toute la nuit à réparer et modifier Qingluan Type II, et son attitude paraît désormais plus froide. Remportez d’abord la quatrième épreuve, puis allez prendre de ses nouvelles.",
+          TextMapId = "Content__120306_2"
+        },
+        Content__120306_3 = {
+          ContentFR = "La détermination inhabituelle de Su Yi à remporter la victoire finit par se retourner contre elle. Pendant l’épreuve, Qingluan Type II explose soudainement, prenant tout le monde au dépourvu. Les Chasseurs d’Encens sont déclarés vaincus. La foule s’emporte et la situation devient rapidement chaotique. Quoi qu’il en soit, quittez cet endroit au plus vite.",
+          TextMapId = "Content__120306_3"
+        },
+        Content__120306_4 = {
+          ContentFR = "Xiaoxiang apparaît de nouveau — et révèle qu’elle faisait partie des victimes de l’incident provoqué autrefois par Su Muzhe. Ses accusations contre les Vagabonds blessent profondément Su Yi, qui reste incapable de répondre. Accompagnez Su Yi chez An et voyez de vos propres yeux la blessure permanente qu’il garde à la jambe depuis que Miemeng a perdu le contrôle.",
+          TextMapId = "Content__120306_4"
+        },
+        Content__120307_1 = {
+          ContentFR = "Chez An, vous tombez par hasard sur Fushu, venue examiner sa blessure. Après cette conversation, Su Yi parvient enfin à se libérer du poids qui pesait sur son cœur. Elle n’est plus perdue et comprend désormais dans quelle direction avancer. Même si vous avez perdu la quatrième épreuve, l’épreuve de repêchage vous offre encore une chance de renverser la situation.\nRetournez au point d’inscription du Tournoi de l’Encens et retrouvez vos compagnons qui vous attendent.",
+          TextMapId = "Content__120307_1"
+        },
+        Content__120307_2 = {
+          ContentFR = "Même si Su Yi n’a pas pu revenir à temps, sa détermination reste avec vous. Chacun de vous se bat pour le même objectif, simplement sur des fronts différents. Ressaisissez-vous et remportez l’épreuve de repêchage.",
+          TextMapId = "Content__120307_2"
+        },
+        Content__120307_3 = {
+          ContentFR = "Su Yi a fabriqué en urgence un certain « cadeau » pour An. Rendez-vous chez lui et remettez-lui ce présent chargé de sens.",
+          TextMapId = "Content__120307_3"
+        },
+        Content__120307_4 = {
+          ContentFR = "En apportant une prothèse à Xiao An, Su Yi découvre par hasard le complot que prépare Xiaoxiang. Au même moment, sur le terrain de l’épreuve, le Terracolosse surgit soudain de la montagne, interrompant brutalement la compétition. Vous parvenez à empêcher la créature d’attaquer les participants, mais Yuming se retrouve piégé derrière la porte du complexe souterrain. Vous devez retrouver au plus vite la personne à l’origine de tout cela et sauver Yuming.\nSuivez le Qingluan Type II et retrouvez Xiaoxiang.",
+          TextMapId = "Content__120307_4"
+        },
+        Content__120307_5 = {
+          ContentFR = "Su Yi et An parviennent à convaincre Xiaoxiang, et vous obtenez la clé du complexe souterrain. Entrez à l’intérieur et sauvez Yuming !",
+          TextMapId = "Content__120307_5"
+        },
+        Content__120307_6 = {
+          ContentFR = "La crise est résolue. Et plus encore : tous ont été témoins de vos actions. Peu à peu, l’opinion des habitants envers les Vagabonds commence à changer.\nZhiliu annonce alors que les Chasseurs d’Encens ont remporté la première place et la victoire finale.\nMais au cœur des célébrations, une personne manque à l’appel... Trouvez Su Yi et voyez ce qu’elle fait.",
+          TextMapId = "Content__120307_6"
+        },
+        Content__120308_1 = {
+          ContentFR = "Avec la conclusion du Tournoi de l’Encens, l’heure de quitter Huaxu est arrivée.\nVous avez vu de vos propres yeux les changements qui traversent ce pays et rencontré des compagnons de tous horizons.\nEn repensant à ces jours passés ici, un sentiment de nostalgie vous gagne. Avant de partir, prenez un moment pour leur dire au revoir.",
+          TextMapId = "Content__120308_1"
+        },
         Convert_AddResources = {
           ContentFR = "Ajoutez d’abord des matériaux",
           TextMapId = "Convert_AddResources"
@@ -5480,15 +6071,7 @@ local Data = {
         DROP_NAME_1020 = {
           ContentFR = "Quelques Vrilles rampantes",
           TextMapId = "DROP_NAME_1020"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "DROP_QUEST_200209D",
-    MaxKey = "DUNGEON_NAME_81001",
-    Loader = function()
-      return {
+        },
         DROP_QUEST_200209D = {
           ContentFR = "Ordonnance",
           TextMapId = "DROP_QUEST_200209D"
@@ -5696,7 +6279,15 @@ local Data = {
         DROP_QUEST_MUBEI = {
           ContentFR = "Dresser une tombe",
           TextMapId = "DROP_QUEST_MUBEI"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "DROP_QUEST_Naxianglu",
+    MaxKey = "DUNGEON_PAOTAI_108",
+    Loader = function()
+      return {
         DROP_QUEST_Naxianglu = {
           ContentFR = "Récupérer l’encensoir",
           TextMapId = "DROP_QUEST_Naxianglu"
@@ -6288,15 +6879,7 @@ local Data = {
         DUNGEON_NAME_81001 = {
           ContentFR = "Épreuve intégrale I",
           TextMapId = "DUNGEON_NAME_81001"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "DUNGEON_NAME_81002",
-    MaxKey = "Description_100101_4",
-    Loader = function()
-      return {
+        },
         DUNGEON_NAME_81002 = {
           ContentFR = "Épreuve intégrale II",
           TextMapId = "DUNGEON_NAME_81002"
@@ -6504,7 +7087,15 @@ local Data = {
         DUNGEON_PAOTAI_108 = {
           ContentFR = "Porte de confinement endommagée à 30 %",
           TextMapId = "DUNGEON_PAOTAI_108"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "DUNGEON_PAOTAI_109",
+    MaxKey = "Description_110106_1_2",
+    Loader = function()
+      return {
         DUNGEON_PAOTAI_109 = {
           ContentFR = "Porte de confinement endommagée à 20 %",
           TextMapId = "DUNGEON_PAOTAI_109"
@@ -6778,7 +7369,7 @@ local Data = {
           TextMapId = "DUNGEON_SYNTHESIS_103"
         },
         DUNGEON_SYNTHESIS_104 = {
-          ContentFR = "Progression du Coffre de récompense (%d/%d)",
+          ContentFR = "Progression du Coffre de récompense （%d/%d）",
           TextMapId = "DUNGEON_SYNTHESIS_104"
         },
         DUNGEON_SYNTHESIS_105 = {
@@ -6814,7 +7405,7 @@ local Data = {
           TextMapId = "DUNGEON_SYNTHESIS_112"
         },
         DUNGEON_SYNTHESIS_113 = {
-          ContentFR = "Champions adverses trouvées (%d/%d)",
+          ContentFR = "Champions adverses trouvées （%d/%d）",
           TextMapId = "DUNGEON_SYNTHESIS_113"
         },
         DUNGEON_SYNTHESIS_114 = {
@@ -6822,7 +7413,7 @@ local Data = {
           TextMapId = "DUNGEON_SYNTHESIS_114"
         },
         DUNGEON_SYNTHESIS_115 = {
-          ContentFR = "Zones désignées sécurisées (%d/%d)",
+          ContentFR = "Zones désignées sécurisées （%d/%d）",
           TextMapId = "DUNGEON_SYNTHESIS_115"
         },
         DUNGEON_SYNTHESIS_116 = {
@@ -7090,15 +7681,7 @@ local Data = {
         Description_100101_4 = {
           ContentFR = "Repoussez les Souillés qui approchent.",
           TextMapId = "Description_100101_4"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Description_100101_5",
-    MaxKey = "Description_120103_2",
-    Loader = function()
-      return {
+        },
         Description_100101_5 = {
           ContentFR = "Continuez votre chemin vers le village.",
           TextMapId = "Description_100101_5"
@@ -7306,7 +7889,15 @@ local Data = {
         Description_110106_1_2 = {
           ContentFR = "Repérer et désactiver la Roue Phoxynamo active",
           TextMapId = "Description_110106_1_2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Description_110106_1_3",
+    MaxKey = "Description_120106_8",
+    Loader = function()
+      return {
         Description_110106_1_3 = {
           ContentFR = "Activer la Roue Phoxynamo de secours n° 2",
           TextMapId = "Description_110106_1_3"
@@ -7898,15 +8489,7 @@ local Data = {
         Description_120103_2 = {
           ContentFR = "Parler au marchand du marché noir",
           TextMapId = "Description_120103_2"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Description_120103_3",
-    MaxKey = "Description_200207_1",
-    Loader = function()
-      return {
+        },
         Description_120103_3 = {
           ContentFR = "Aller voir ce qui se passe",
           TextMapId = "Description_120103_3"
@@ -8114,7 +8697,15 @@ local Data = {
         Description_120106_8 = {
           ContentFR = "Quitter l’Autel de Zhuyin",
           TextMapId = "Description_120106_8"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Description_120111_0",
+    MaxKey = "Description_120307_3",
+    Loader = function()
+      return {
         Description_120111_0 = {
           ContentFR = "Commencer l’histoire",
           TextMapId = "Description_120111_0"
@@ -8352,52 +8943,592 @@ local Data = {
           TextMapId = "Description_120114_9_1"
         },
         Description_120201_1 = {
-          ContentFR = "Entrer dans la chambre sombre",
+          ContentFR = "Se rendre à Haojing via la carte",
           TextMapId = "Description_120201_1"
         },
         Description_120201_10 = {
-          ContentFR = "Se rendre au Pavillon des Artisans pour récupérer l’encensoir",
+          ContentFR = "Chercher un employé du Pavillon des Artisans",
           TextMapId = "Description_120201_10"
         },
         Description_120201_11 = {
-          ContentFR = "Récupérer l’encensoir",
+          ContentFR = "Récupérer le brûle-encens",
           TextMapId = "Description_120201_11"
         },
         Description_120201_12 = {
-          ContentFR = "Consulter le tableau d’affichage pour comprendre la situation",
+          ContentFR = "Se rendre sur la place devant le Pavillon de l’Arbitrage",
           TextMapId = "Description_120201_12"
         },
         Description_120201_2 = {
-          ContentFR = "Entrer dans Huaxu — Phase II",
+          ContentFR = "Se rendre à Haojing",
           TextMapId = "Description_120201_2"
         },
+        Description_120201_22 = {
+          ContentFR = "Récupérer de la soie de première qualité",
+          TextMapId = "Description_120201_22"
+        },
+        Description_120201_23 = {
+          ContentFR = "Parler à la femme dans la file",
+          TextMapId = "Description_120201_23"
+        },
+        Description_120201_24 = {
+          ContentFR = "Se rendre au Pavillon des Artisans",
+          TextMapId = "Description_120201_24"
+        },
+        Description_120201_25 = {
+          ContentFR = "Chercher le sachet d’encens emporté par le vent",
+          TextMapId = "Description_120201_25"
+        },
         Description_120201_3 = {
-          ContentFR = "Aller se reposer",
+          ContentFR = "Trouver un endroit où se reposer",
           TextMapId = "Description_120201_3"
         },
         Description_120201_4 = {
-          ContentFR = "Acheter des médicaments",
+          ContentFR = "Acheter des médicaments à la Pharmacie Zesheng",
           TextMapId = "Description_120201_4"
         },
         Description_120201_5 = {
-          ContentFR = "Retourner voir Snow avec les médicaments",
+          ContentFR = "Retourner voir Snow",
           TextMapId = "Description_120201_5"
         },
         Description_120201_6 = {
-          ContentFR = "Passer par le Pavillon de l’Arbitrage pour se rendre au Bureau des Sources",
+          ContentFR = "Se rendre au Pavillon des Sources",
           TextMapId = "Description_120201_6"
         },
         Description_120201_7 = {
-          ContentFR = "Se rendre au Bureau des Sources",
+          ContentFR = "Se rendre au Pavillon des Sources",
           TextMapId = "Description_120201_7"
         },
         Description_120201_8 = {
-          ContentFR = "Livrer la marchandise",
+          ContentFR = "Chercher le responsable du port",
           TextMapId = "Description_120201_8"
         },
         Description_120201_9 = {
           ContentFR = "Se rendre au Pavillon de l’Encens",
           TextMapId = "Description_120201_9"
+        },
+        Description_120202_1 = {
+          ContentFR = "Vaincre le Bi’an",
+          TextMapId = "Description_120202_1"
+        },
+        Description_120202_10 = {
+          ContentFR = "Détruire les Sentinelles d’obsidienne et briser le blocus",
+          TextMapId = "Description_120202_10"
+        },
+        Description_120202_11 = {
+          ContentFR = "S’échapper du Pavillon de l’Arbitrage",
+          TextMapId = "Description_120202_11"
+        },
+        Description_120202_12 = {
+          ContentFR = "Suivre Xiaoyao pour s’échapper",
+          TextMapId = "Description_120202_12"
+        },
+        Description_120202_13 = {
+          ContentFR = "« Réparer » la méchapoupée",
+          TextMapId = "Description_120202_13"
+        },
+        Description_120202_2 = {
+          ContentFR = "Examiner le panneau d’affichage",
+          TextMapId = "Description_120202_2"
+        },
+        Description_120202_3 = {
+          ContentFR = "Parler à Snow sous l’arbre",
+          TextMapId = "Description_120202_3"
+        },
+        Description_120202_4 = {
+          ContentFR = "Attendre jusqu’au lendemain à midi",
+          TextMapId = "Description_120202_4"
+        },
+        Description_120202_5 = {
+          ContentFR = "Parler à l’intendant",
+          TextMapId = "Description_120202_5"
+        },
+        Description_120202_6 = {
+          ContentFR = "Trouver un moyen d’atteindre le sommet du Pavillon de l’Arbitrage",
+          TextMapId = "Description_120202_6"
+        },
+        Description_120202_7 = {
+          ContentFR = "Discuter d’un plan avec Snow",
+          TextMapId = "Description_120202_7"
+        },
+        Description_120202_8 = {
+          ContentFR = "Se faufiler jusqu’au sommet du Pavillon de l’Arbitrage",
+          TextMapId = "Description_120202_8"
+        },
+        Description_120202_9 = {
+          ContentFR = "Secourir Kezhou",
+          TextMapId = "Description_120202_9"
+        },
+        Description_120203_1 = {
+          ContentFR = "Remercier Xiaoyao",
+          TextMapId = "Description_120203_1"
+        },
+        Description_120203_10 = {
+          ContentFR = "S’enfoncer dans les Pics Extérieurs",
+          TextMapId = "Description_120203_10"
+        },
+        Description_120203_11 = {
+          ContentFR = "Parler à Kezhou",
+          TextMapId = "Description_120203_11"
+        },
+        Description_120203_12 = {
+          ContentFR = "Parler à Su Yi",
+          TextMapId = "Description_120203_12"
+        },
+        Description_120203_13 = {
+          ContentFR = "Suivre Su Yi",
+          TextMapId = "Description_120203_13"
+        },
+        Description_120203_14 = {
+          ContentFR = "Donner une leçon à la mouette nuageuse",
+          TextMapId = "Description_120203_14"
+        },
+        Description_120203_15 = {
+          ContentFR = "Récolter des herbes",
+          TextMapId = "Description_120203_15"
+        },
+        Description_120203_16 = {
+          ContentFR = "Apporter les herbes à Oncle Tang",
+          TextMapId = "Description_120203_16"
+        },
+        Description_120203_17 = {
+          ContentFR = "Calibrer le Voile de Tianluo",
+          TextMapId = "Description_120203_17"
+        },
+        Description_120203_18 = {
+          ContentFR = "Calibrer le Voile de Tianluo",
+          TextMapId = "Description_120203_18"
+        },
+        Description_120203_19 = {
+          ContentFR = "Vérifier l’état de Zhu Pu",
+          TextMapId = "Description_120203_19"
+        },
+        Description_120203_2 = {
+          ContentFR = "Parler à Kezhou",
+          TextMapId = "Description_120203_2"
+        },
+        Description_120203_20 = {
+          ContentFR = "Donner des conseils à Zhu Pu",
+          TextMapId = "Description_120203_20"
+        },
+        Description_120203_21 = {
+          ContentFR = "Parler à Zhu Pu",
+          TextMapId = "Description_120203_21"
+        },
+        Description_120203_22 = {
+          ContentFR = "Trouver le signal",
+          TextMapId = "Description_120203_22"
+        },
+        Description_120203_23 = {
+          ContentFR = "Activer le mécanisme devant la grotte",
+          TextMapId = "Description_120203_23"
+        },
+        Description_120203_3 = {
+          ContentFR = "Se cacher",
+          TextMapId = "Description_120203_3"
+        },
+        Description_120203_4 = {
+          ContentFR = "Parler à Fushu",
+          TextMapId = "Description_120203_4"
+        },
+        Description_120203_5 = {
+          ContentFR = "Briser le sceau",
+          TextMapId = "Description_120203_5"
+        },
+        Description_120203_6 = {
+          ContentFR = "Parler à Fushu",
+          TextMapId = "Description_120203_6"
+        },
+        Description_120203_7 = {
+          ContentFR = "Chercher le contact des Pics Extérieurs",
+          TextMapId = "Description_120203_7"
+        },
+        Description_120203_8 = {
+          ContentFR = "Trouver le signal",
+          TextMapId = "Description_120203_8"
+        },
+        Description_120203_9 = {
+          ContentFR = "Parler avec le contact",
+          TextMapId = "Description_120203_9"
+        },
+        Description_120204_1 = {
+          ContentFR = "Observer l’agitation à l’extérieur",
+          TextMapId = "Description_120204_1"
+        },
+        Description_120204_10 = {
+          ContentFR = "Utiliser le Canon Céleste pour repousser les Sentinelles de Fer de Juntian",
+          TextMapId = "Description_120204_10"
+        },
+        Description_120204_11 = {
+          ContentFR = "Parler à tout le monde",
+          TextMapId = "Description_120204_11"
+        },
+        Description_120204_12 = {
+          ContentFR = "Parler à tout le monde",
+          TextMapId = "Description_120204_12"
+        },
+        Description_120204_13 = {
+          ContentFR = "Briser le sceau",
+          TextMapId = "Description_120204_13"
+        },
+        Description_120204_14 = {
+          ContentFR = "Entrer dans le Mausolée de Taixu",
+          TextMapId = "Description_120204_14"
+        },
+        Description_120204_2 = {
+          ContentFR = "Repousser les Magistrats de Yingtian",
+          TextMapId = "Description_120204_2"
+        },
+        Description_120204_3 = {
+          ContentFR = "Évaluer la situation",
+          TextMapId = "Description_120204_3"
+        },
+        Description_120204_4 = {
+          ContentFR = "Vaincre Yuming",
+          TextMapId = "Description_120204_4"
+        },
+        Description_120204_5 = {
+          ContentFR = "Vaincre Yuming",
+          TextMapId = "Description_120204_5"
+        },
+        Description_120204_6 = {
+          ContentFR = "Parler à Su Yi",
+          TextMapId = "Description_120204_6"
+        },
+        Description_120204_9 = {
+          ContentFR = "Rejoindre la bataille",
+          TextMapId = "Description_120204_9"
+        },
+        Description_120205_1 = {
+          ContentFR = "Parler à Fushu",
+          TextMapId = "Description_120205_1"
+        },
+        Description_120205_10 = {
+          ContentFR = "Chercher Maître Jingyuan",
+          TextMapId = "Description_120205_10"
+        },
+        Description_120205_11 = {
+          ContentFR = "Lever le sortilège de Zhiliu",
+          TextMapId = "Description_120205_11"
+        },
+        Description_120205_12 = {
+          ContentFR = "Briser le sceau",
+          TextMapId = "Description_120205_12"
+        },
+        Description_120205_13 = {
+          ContentFR = "S’enfoncer dans le Mausolée de Taixu",
+          TextMapId = "Description_120205_13"
+        },
+        Description_120205_14 = {
+          ContentFR = "S’enfoncer dans le Mausolée de Taixu",
+          TextMapId = "Description_120205_14"
+        },
+        Description_120205_15 = {
+          ContentFR = "S’enfoncer dans le Mausolée de Taixu",
+          TextMapId = "Description_120205_15"
+        },
+        Description_120205_16 = {
+          ContentFR = "S’enfoncer dans le Mausolée de Taixu",
+          TextMapId = "Description_120205_16"
+        },
+        Description_120205_17 = {
+          ContentFR = "La tempête approche",
+          TextMapId = "Description_120205_17"
+        },
+        Description_120205_2 = {
+          ContentFR = "Chercher Su Yi",
+          TextMapId = "Description_120205_2"
+        },
+        Description_120205_3 = {
+          ContentFR = "Parler à Su Yi",
+          TextMapId = "Description_120205_3"
+        },
+        Description_120205_4 = {
+          ContentFR = "Découvrir ce que Snow veut dire à Su Yi",
+          TextMapId = "Description_120205_4"
+        },
+        Description_120205_5 = {
+          ContentFR = "Chercher Kezhou",
+          TextMapId = "Description_120205_5"
+        },
+        Description_120205_6 = {
+          ContentFR = "Retourner discuter d’un plan avec les autres",
+          TextMapId = "Description_120205_6"
+        },
+        Description_120205_7 = {
+          ContentFR = "Se rendre au Village de Jiaolan",
+          TextMapId = "Description_120205_7"
+        },
+        Description_120205_8 = {
+          ContentFR = "Se renseigner sur la Secte de l’Insondable Trésor",
+          TextMapId = "Description_120205_8"
+        },
+        Description_120205_9 = {
+          ContentFR = "Parler au chef du village",
+          TextMapId = "Description_120205_9"
+        },
+        Description_120206_1 = {
+          ContentFR = "La tempête approche",
+          TextMapId = "Description_120206_1"
+        },
+        Description_120206_10 = {
+          ContentFR = "Se rendre au Pavillon de l’Arbitrage",
+          TextMapId = "Description_120206_10"
+        },
+        Description_120206_11 = {
+          ContentFR = "Se rendre au Pavillon de l’Arbitrage",
+          TextMapId = "Description_120206_11"
+        },
+        Description_120206_12 = {
+          ContentFR = "Entrer dans le Mausolée de Taixu",
+          TextMapId = "Description_120206_12"
+        },
+        Description_120206_13 = {
+          ContentFR = "Atteindre l’extrémité du Mausolée de Taixu",
+          TextMapId = "Description_120206_13"
+        },
+        Description_120206_14 = {
+          ContentFR = "Atteindre l’extrémité du Mausolée de Taixu",
+          TextMapId = "Description_120206_14"
+        },
+        Description_120206_15 = {
+          ContentFR = "Vaincre les deux dragons",
+          TextMapId = "Description_120206_15"
+        },
+        Description_120206_16 = {
+          ContentFR = "Vaincre les deux dragons",
+          TextMapId = "Description_120206_16"
+        },
+        Description_120206_17 = {
+          ContentFR = "Vaincre les deux dragons",
+          TextMapId = "Description_120206_17"
+        },
+        Description_120206_18 = {
+          ContentFR = "Vaincre les deux dragons",
+          TextMapId = "Description_120206_18"
+        },
+        Description_120206_19 = {
+          ContentFR = "Vaincre les deux dragons",
+          TextMapId = "Description_120206_19"
+        },
+        Description_120206_2 = {
+          ContentFR = "La tempête approche",
+          TextMapId = "Description_120206_2"
+        },
+        Description_120206_20 = {
+          ContentFR = "???",
+          TextMapId = "Description_120206_20"
+        },
+        Description_120206_21 = {
+          ContentFR = "???",
+          TextMapId = "Description_120206_21"
+        },
+        Description_120206_22 = {
+          ContentFR = "???",
+          TextMapId = "Description_120206_22"
+        },
+        Description_120206_23 = {
+          ContentFR = "???",
+          TextMapId = "Description_120206_23"
+        },
+        Description_120206_24 = {
+          ContentFR = "Parler à Taihao",
+          TextMapId = "Description_120206_24"
+        },
+        Description_120206_25 = {
+          ContentFR = "Parler à tout le monde",
+          TextMapId = "Description_120206_25"
+        },
+        Description_120206_26 = {
+          ContentFR = "Parler à Zhiliu",
+          TextMapId = "Description_120206_26"
+        },
+        Description_120206_27 = {
+          ContentFR = "Se promener avec Zhiliu",
+          TextMapId = "Description_120206_27"
+        },
+        Description_120206_28 = {
+          ContentFR = "Se promener avec Zhiliu",
+          TextMapId = "Description_120206_28"
+        },
+        Description_120206_3 = {
+          ContentFR = "Repousser les Bi’an",
+          TextMapId = "Description_120206_3"
+        },
+        Description_120206_5 = {
+          ContentFR = "Repousser les Bi’an et protéger les habitants",
+          TextMapId = "Description_120206_5"
+        },
+        Description_120206_6 = {
+          ContentFR = "Discuter d’un plan",
+          TextMapId = "Description_120206_6"
+        },
+        Description_120206_7 = {
+          ContentFR = "Distribuer les armes",
+          TextMapId = "Description_120206_7"
+        },
+        Description_120206_8 = {
+          ContentFR = "Encourager tout le monde",
+          TextMapId = "Description_120206_8"
+        },
+        Description_120206_9 = {
+          ContentFR = "Se rendre au Pavillon de l’Arbitrage",
+          TextMapId = "Description_120206_9"
+        },
+        Description_120301_1 = {
+          ContentFR = "Se rendre au Quartier Est",
+          TextMapId = "Description_120301_1"
+        },
+        Description_120301_2 = {
+          ContentFR = "Voir ce qui se passe",
+          TextMapId = "Description_120301_2"
+        },
+        Description_120301_3 = {
+          ContentFR = "Rattraper le voleur",
+          TextMapId = "Description_120301_3"
+        },
+        Description_120301_4 = {
+          ContentFR = "Maîtriser le voleur",
+          TextMapId = "Description_120301_4"
+        },
+        Description_120301_5 = {
+          ContentFR = "Récupérer le Qingluan Type II",
+          TextMapId = "Description_120301_5"
+        },
+        Description_120302_1 = {
+          ContentFR = "Se rendre au point d’inscription du tournoi",
+          TextMapId = "Description_120302_1"
+        },
+        Description_120302_2 = {
+          ContentFR = "Terminer l’épreuve préliminaire",
+          TextMapId = "Description_120302_2"
+        },
+        Description_120302_3 = {
+          ContentFR = "Se rendre au Quartier Est",
+          TextMapId = "Description_120302_3"
+        },
+        Description_120302_4 = {
+          ContentFR = "Prendre une photo souvenir",
+          TextMapId = "Description_120302_4"
+        },
+        Description_120302_5 = {
+          ContentFR = "Continuer à se promener",
+          TextMapId = "Description_120302_5"
+        },
+        Description_120302_6 = {
+          ContentFR = "Parler à Su Yi",
+          TextMapId = "Description_120302_6"
+        },
+        Description_120303_1 = {
+          ContentFR = "Se rendre au point d’inscription du tournoi",
+          TextMapId = "Description_120303_1"
+        },
+        Description_120303_2 = {
+          ContentFR = "Remporter l’épreuve de qualification",
+          TextMapId = "Description_120303_2"
+        },
+        Description_120303_3 = {
+          ContentFR = "Chercher Su Yi",
+          TextMapId = "Description_120303_3"
+        },
+        Description_120303_4 = {
+          ContentFR = "Se rendre au point d’inscription du tournoi",
+          TextMapId = "Description_120303_4"
+        },
+        Description_120303_5 = {
+          ContentFR = "Repousser les Bi’an obscurs",
+          TextMapId = "Description_120303_5"
+        },
+        Description_120303_6 = {
+          ContentFR = "Parler à l’enfant secouru",
+          TextMapId = "Description_120303_6"
+        },
+        Description_120304_1 = {
+          ContentFR = "Se rendre au point d’inscription du tournoi",
+          TextMapId = "Description_120304_1"
+        },
+        Description_120304_2 = {
+          ContentFR = "Remporter la troisième épreuve",
+          TextMapId = "Description_120304_2"
+        },
+        Description_120304_3 = {
+          ContentFR = "Parler à Zhiliu",
+          TextMapId = "Description_120304_3"
+        },
+        Description_120304_4 = {
+          ContentFR = "Parler seul à seul avec Zhiliu",
+          TextMapId = "Description_120304_4"
+        },
+        Description_120305_2 = {
+          ContentFR = "Chercher Su Yi",
+          TextMapId = "Description_120305_2"
+        },
+        Description_120305_3 = {
+          ContentFR = "Chercher l’origine du bruit étrange",
+          TextMapId = "Description_120305_3"
+        },
+        Description_120305_4 = {
+          ContentFR = "Attaquer la caisse étrange",
+          TextMapId = "Description_120305_4"
+        },
+        Description_120305_5 = {
+          ContentFR = "Parler à Oncle Tang",
+          TextMapId = "Description_120305_5"
+        },
+        Description_120305_6 = {
+          ContentFR = "Examiner l’entrée des Pics Extérieurs",
+          TextMapId = "Description_120305_6"
+        },
+        Description_120306_1 = {
+          ContentFR = "Se rendre au point d’inscription du tournoi",
+          TextMapId = "Description_120306_1"
+        },
+        Description_120306_2 = {
+          ContentFR = "Remporter la quatrième épreuve",
+          TextMapId = "Description_120306_2"
+        },
+        Description_120306_3 = {
+          ContentFR = "Quitter les lieux",
+          TextMapId = "Description_120306_3"
+        },
+        Description_120306_4 = {
+          ContentFR = "Se rendre chez An",
+          TextMapId = "Description_120306_4"
+        },
+        Description_120307_1 = {
+          ContentFR = "Se rendre au point d’inscription du tournoi",
+          TextMapId = "Description_120307_1"
+        },
+        Description_120307_2 = {
+          ContentFR = "Remporter l’épreuve de repêchage",
+          TextMapId = "Description_120307_2"
+        },
+        Description_120307_3 = {
+          ContentFR = "Se rendre chez An",
+          TextMapId = "Description_120307_3"
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Description_120307_4",
+    MaxKey = "Description_200232_6",
+    Loader = function()
+      return {
+        Description_120307_4 = {
+          ContentFR = "Suivre le Qingluan Type II pour retrouver Xiaoxiang",
+          TextMapId = "Description_120307_4"
+        },
+        Description_120307_5 = {
+          ContentFR = "Vaincre le Terracolosse",
+          TextMapId = "Description_120307_5"
+        },
+        Description_120307_6 = {
+          ContentFR = "Chercher Su Yi",
+          TextMapId = "Description_120307_6"
+        },
+        Description_120308_1 = {
+          ContentFR = "Quitter Huaxu",
+          TextMapId = "Description_120308_1"
         },
         Description_200101_1 = {
           ContentFR = "Une silhouette familière se tient à l’extérieur du Sanctuaire...",
@@ -8706,15 +9837,7 @@ local Data = {
         Description_200207_1 = {
           ContentFR = "Parler à Lisse",
           TextMapId = "Description_200207_1"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Description_200207_2",
-    MaxKey = "Description_200312_1",
-    Loader = function()
-      return {
+        },
         Description_200207_2 = {
           ContentFR = "Parler à Emma",
           TextMapId = "Description_200207_2"
@@ -9190,7 +10313,15 @@ local Data = {
         Description_200232_6 = {
           ContentFR = "Éliminer les Souillés regroupés près des herbes",
           TextMapId = "Description_200232_6"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Description_200233_1",
+    MaxKey = "Description_Nai03_02_05",
+    Loader = function()
+      return {
         Description_200233_1 = {
           ContentFR = "Relier les événements et démêler la vérité cachée",
           TextMapId = "Description_200233_1"
@@ -9514,15 +10645,7 @@ local Data = {
         Description_200312_1 = {
           ContentFR = "Vérifier l’état de la petite fille",
           TextMapId = "Description_200312_1"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Description_200312_2",
-    MaxKey = "DynQuest_FortPet_Title",
-    Loader = function()
-      return {
+        },
         Description_200312_2 = {
           ContentFR = "Rattraper l’homme qui a déposé le cadeau",
           TextMapId = "Description_200312_2"
@@ -9696,7 +10819,7 @@ local Data = {
           TextMapId = "Description_Batt02_02_01"
         },
         Description_Batt02_02_02 = {
-          ContentFR = "Repousser les Gardes de Yingtian frénétiques",
+          ContentFR = "Repousser les Gardes de Yingtian frénétique",
           TextMapId = "Description_Batt02_02_02"
         },
         Description_Batt02_02_03 = {
@@ -9704,7 +10827,7 @@ local Data = {
           TextMapId = "Description_Batt02_02_03"
         },
         Description_Batt02_02_04 = {
-          ContentFR = "Repousser les Gardes de Yingtian frénétique",
+          ContentFR = "Repousser les Gardes de Yingtian frénétiques",
           TextMapId = "Description_Batt02_02_04"
         },
         Description_Batt02_02_05 = {
@@ -9998,7 +11121,15 @@ local Data = {
         Description_Nai03_02_05 = {
           ContentFR = "Parler au Wishen devant vous",
           TextMapId = "Description_Nai03_02_05"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Description_Nai03_03_01",
+    MaxKey = "DynQuest_SewFishClear_Title",
+    Loader = function()
+      return {
         Description_Nai03_03_01 = {
           ContentFR = "Avancer aux côtés du Wishen",
           TextMapId = "Description_Nai03_03_01"
@@ -10116,6 +11247,14 @@ local Data = {
         DynQuest_BalconyHuishoulaixi_Title = {
           ContentFR = "Attaque des Souillés",
           TextMapId = "DynQuest_BalconyHuishoulaixi_Title"
+        },
+        DynQuest_BianFight_Des = {
+          ContentFR = "Vaincre les Bi’an",
+          TextMapId = "DynQuest_BianFight_Des"
+        },
+        DynQuest_BianFight_Title = {
+          ContentFR = "Assaut des Bi’an",
+          TextMapId = "DynQuest_BianFight_Title"
         },
         DynQuest_Bian_Des = {
           ContentFR = "Repousser le Bi’an obscur",
@@ -10237,6 +11376,14 @@ local Data = {
           ContentFR = "Tempête cérébrale",
           TextMapId = "DynQuest_Dati_Title"
         },
+        DynQuest_Dream_Des = {
+          ContentFR = "Allumer le brûle-encens",
+          TextMapId = "DynQuest_Dream_Des"
+        },
+        DynQuest_Dream_Title = {
+          ContentFR = "Rencontre au parfum d’encens",
+          TextMapId = "DynQuest_Dream_Title"
+        },
         DynQuest_EastPet_Des = {
           ContentFR = "Vaincre les ennemis et secourir le Géniemon",
           TextMapId = "DynQuest_EastPet_Des"
@@ -10316,15 +11463,7 @@ local Data = {
         DynQuest_FortPet_Title = {
           ContentFR = "Sauvetage de Géniemon !",
           TextMapId = "DynQuest_FortPet_Title"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "DynQuest_FortXianjing_Des",
-    MaxKey = "EntryTitle_301002",
-    Loader = function()
-      return {
+        },
         DynQuest_FortXianjing_Des = {
           ContentFR = "Examiner la lueur au loin",
           TextMapId = "DynQuest_FortXianjing_Des"
@@ -10356,6 +11495,30 @@ local Data = {
         DynQuest_Gift_Title = {
           ContentFR = "Intentions entremêlées",
           TextMapId = "DynQuest_Gift_Title"
+        },
+        DynQuest_Haiou_Des = {
+          ContentFR = "Chasser les mouettes nuageuses des environs",
+          TextMapId = "DynQuest_Haiou_Des"
+        },
+        DynQuest_Haiou_Title = {
+          ContentFR = "Une histoire de patates",
+          TextMapId = "DynQuest_Haiou_Title"
+        },
+        DynQuest_HaojingFish_Des = {
+          ContentFR = "Aider le pêcheur",
+          TextMapId = "DynQuest_HaojingFish_Des"
+        },
+        DynQuest_HaojingFish_Title = {
+          ContentFR = "Le pêcheur étourdi",
+          TextMapId = "DynQuest_HaojingFish_Title"
+        },
+        DynQuest_HaojingPet_Des = {
+          ContentFR = "Vaincre les ennemis et secourir le Géniemon",
+          TextMapId = "DynQuest_HaojingPet_Des"
+        },
+        DynQuest_HaojingPet_Title = {
+          ContentFR = "Secourir le Géniemon",
+          TextMapId = "DynQuest_HaojingPet_Title"
         },
         DynQuest_Helpfisher_Des = {
           ContentFR = "Aider le pêcheur",
@@ -10725,6 +11888,22 @@ local Data = {
           ContentFR = "La demande de Luno, l’exploratrice",
           TextMapId = "DynQuest_Protectjiaojiao_Title"
         },
+        DynQuest_RaceBetting_Des = {
+          ContentFR = "Superviser l’entraînement des enfants",
+          TextMapId = "DynQuest_RaceBetting_Des"
+        },
+        DynQuest_RaceBetting_Title = {
+          ContentFR = "Les enfants en pleine course",
+          TextMapId = "DynQuest_RaceBetting_Title"
+        },
+        DynQuest_RiverChest_Des = {
+          ContentFR = "Aider la jeune fille à retrouver ses coffres",
+          TextMapId = "DynQuest_RiverChest_Des"
+        },
+        DynQuest_RiverChest_Title = {
+          ContentFR = "Les coffres d’or, d’argent et de bronze",
+          TextMapId = "DynQuest_RiverChest_Title"
+        },
         DynQuest_SewClearsew_Des = {
           ContentFR = "Dégager les égouts obstrués",
           TextMapId = "DynQuest_SewClearsew_Des"
@@ -10744,7 +11923,15 @@ local Data = {
         DynQuest_SewFishClear_Title = {
           ContentFR = "Le pêcheur étourdi",
           TextMapId = "DynQuest_SewFishClear_Title"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "DynQuest_SewFishDuju_Des",
+    MaxKey = "Episode_01_04",
+    Loader = function()
+      return {
         DynQuest_SewFishDuju_Des = {
           ContentFR = "Remonter à la source du bruit étrange",
           TextMapId = "DynQuest_SewFishDuju_Des"
@@ -10804,6 +11991,14 @@ local Data = {
         DynQuest_TakePhoto_Title = {
           ContentFR = "Souvenir de Givrelac",
           TextMapId = "DynQuest_TakePhoto_Title"
+        },
+        DynQuest_Tongzhen_Des = {
+          ContentFR = "Aider l’enfant à trouver le trésor",
+          TextMapId = "DynQuest_Tongzhen_Des"
+        },
+        DynQuest_Tongzhen_Title = {
+          ContentFR = "Le trésor du père",
+          TextMapId = "DynQuest_Tongzhen_Title"
         },
         DynQuest_TrafficElevator_Des = {
           ContentFR = "Descendre à l’étage inférieur",
@@ -10896,6 +12091,22 @@ local Data = {
         DynQuest_Xunxiang_Title = {
           ContentFR = "Choix difficile",
           TextMapId = "DynQuest_Xunxiang_Title"
+        },
+        DynQuest_Yingtian_Des = {
+          ContentFR = "Vaincre les Magistrats de Yingtian",
+          TextMapId = "DynQuest_Yingtian_Des"
+        },
+        DynQuest_Yingtian_Title = {
+          ContentFR = "Assaut des Magistrats de Yingtian",
+          TextMapId = "DynQuest_Yingtian_Title"
+        },
+        DynQuest_Zhentan_Des = {
+          ContentFR = "Aider le commerçant à enquêter sur son employé",
+          TextMapId = "DynQuest_Zhentan_Des"
+        },
+        DynQuest_Zhentan_Title = {
+          ContentFR = "D’un naturel soupçonneux",
+          TextMapId = "DynQuest_Zhentan_Title"
         },
         DynQuest_Zhiyao_Des = {
           ContentFR = "Aider l’enseignante à surveiller les élèves",
@@ -11115,15 +12326,7 @@ local Data = {
         EntryTitle_301002 = {
           ContentFR = "Monts Vidofnir",
           TextMapId = "EntryTitle_301002"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "EntryTitle_301003",
-    MaxKey = "Event_Des_101002",
-    Loader = function()
-      return {
+        },
         EntryTitle_301003 = {
           ContentFR = "Arbres Célestes",
           TextMapId = "EntryTitle_301003"
@@ -11519,7 +12722,15 @@ local Data = {
         Episode_01_04 = {
           ContentFR = "Fer noir, fleur blanche (IV)",
           TextMapId = "Episode_01_04"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Episode_01_05",
+    MaxKey = "Event_Tab_107002",
+    Loader = function()
+      return {
         Episode_01_05 = {
           ContentFR = "Fer noir, fleur blanche (V)",
           TextMapId = "Episode_01_05"
@@ -11672,8 +12883,12 @@ local Data = {
           ContentFR = "Port-des-Brumes – Voile parfumé : Final",
           TextMapId = "Episode_1201_06"
         },
+        Episode_1202 = {
+          ContentFR = "Là où se lève le vent, interroger l’Azur",
+          TextMapId = "Episode_1202"
+        },
         Episode_1203 = {
-          ContentFR = "Cérémonie de l’Encens",
+          ContentFR = "Tournoi de l’Encens",
           TextMapId = "Episode_1203"
         },
         Episode_Feina = {
@@ -11752,6 +12967,10 @@ local Data = {
           ContentFR = "Mer de Poussière",
           TextMapId = "Episode_Region_Huaxu_Fil_Trans"
         },
+        Episode_Region_Huaxu_Haojing = {
+          ContentFR = "Haojing",
+          TextMapId = "Episode_Region_Huaxu_Haojing"
+        },
         Episode_Region_Huaxu_Hos = {
           ContentFR = "Pavillon de l’Éphémère",
           TextMapId = "Episode_Region_Huaxu_Hos"
@@ -11759,6 +12978,10 @@ local Data = {
         Episode_Region_Huaxu_Hos_Trans = {
           ContentFR = "Pavillon de l’Éphémère",
           TextMapId = "Episode_Region_Huaxu_Hos_Trans"
+        },
+        Episode_Region_Huaxu_Jlc = {
+          ContentFR = "Village de Jiaolan",
+          TextMapId = "Episode_Region_Huaxu_Jlc"
         },
         Episode_Region_Huaxu_Nai01 = {
           ContentFR = "Faille de l’Oubli",
@@ -11800,6 +13023,10 @@ local Data = {
           ContentFR = "Quai-aux-Étoiles",
           TextMapId = "Episode_Region_Huaxu_Por_Trans"
         },
+        Episode_Region_Huaxu_Reb = {
+          ContentFR = "Les Pics Extérieurs",
+          TextMapId = "Episode_Region_Huaxu_Reb"
+        },
         Episode_Region_Huaxu_Shi = {
           ContentFR = "Marché Voilé",
           TextMapId = "Episode_Region_Huaxu_Shi"
@@ -11816,6 +13043,14 @@ local Data = {
           ContentFR = "Éternel Printemps",
           TextMapId = "Episode_Region_Huaxu_Spr_Trans"
         },
+        Episode_Region_Huaxu_Sub = {
+          ContentFR = "Banlieue Est",
+          TextMapId = "Episode_Region_Huaxu_Sub"
+        },
+        Episode_Region_Huaxu_YYG = {
+          ContentFR = "Labyrinthe de Yanyin",
+          TextMapId = "Episode_Region_Huaxu_YYG"
+        },
         Episode_Region_Huaxu_Yanjindu = {
           ContentFR = "Port-des-Brumes",
           TextMapId = "Episode_Region_Huaxu_Yanjindu"
@@ -11827,6 +13062,10 @@ local Data = {
         Episode_Region_None_Trans = {
           ContentFR = "HUAXU",
           TextMapId = "Episode_Region_None_Trans"
+        },
+        Episode_Region_YLX = {
+          ContentFR = "Ruelle Youlai",
+          TextMapId = "Episode_Region_YLX"
         },
         Equals = {ContentFR = "=", TextMapId = "Equals"},
         Escape = {ContentFR = "Esc", TextMapId = "Escape"},
@@ -11865,6 +13104,26 @@ local Data = {
         EventPortal_UnlockTips_Common = {
           ContentFR = "Terminez les quêtes préalables pour débloquer",
           TextMapId = "EventPortal_UnlockTips_Common"
+        },
+        EventProgress_01 = {
+          ContentFR = "Épreuve préliminaire",
+          TextMapId = "EventProgress_01"
+        },
+        EventProgress_02 = {
+          ContentFR = "Seconde épreuve",
+          TextMapId = "EventProgress_02"
+        },
+        EventProgress_03 = {
+          ContentFR = "Épreuve qualificative",
+          TextMapId = "EventProgress_03"
+        },
+        EventProgress_04 = {
+          ContentFR = "Épreuve finale",
+          TextMapId = "EventProgress_04"
+        },
+        EventProgress_05 = {
+          ContentFR = "Grande finale",
+          TextMapId = "EventProgress_05"
         },
         Event_102001_Quest01_Tips = {
           ContentFR = "Progressez dans l’histoire principale pour accomplir les quêtes de ce chapitre",
@@ -11917,15 +13176,7 @@ local Data = {
         Event_Des_101002 = {
           ContentFR = "Connectez-vous pendant 7 jours pour recevoir des récompenses",
           TextMapId = "Event_Des_101002"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Event_Des_101003",
-    MaxKey = "FeinaEvent_Exit_Content",
-    Loader = function()
-      return {
+        },
         Event_Des_101003 = {
           ContentFR = "Connectez-vous pendant 7 jours pour recevoir des récompenses",
           TextMapId = "Event_Des_101003"
@@ -12006,8 +13257,12 @@ local Data = {
           ContentFR = "Accomplissez les quêtes secondaires « En avant, Géniemon ! » et « Tutoriel : Mandats scellés » pour obtenir des récompenses, dont « Fragment de pensée : Truffle et Filbert ».",
           TextMapId = "Event_Des_103013"
         },
+        Event_Des_103014 = {
+          ContentFR = "Les habitants qui dormaient paisiblement furent tirés de leur sommeil par un coup de tonnerre soudain. Ils comprirent alors que cette nouvelle pluie allait apporter un bouleversement profond à ce royaume millénaire. Le prélude du changement se leva d’abord lors de la très attendue Cérémonie de l’Encens.\n\nC’est dans ce Tournoi de l’Encens, organisé à la fois pour apaiser le cœur du peuple et pour explorer la voie des réformes, que vous apercevez une silhouette familière vêtue de vert jade...",
+          TextMapId = "Event_Des_103014"
+        },
         Event_Des_103016 = {
-          ContentFR = "1) Dans le Grand chaos des Méchapoupées, équipez les méchapoupées de runes de manière stratégique et déployez-les avec discernement afin de terminer les plateaux. En accomplissant les Réflexions stratégiques, vous obtiendrez de généreuses récompenses.\n2) Les Plateaux de Maître Gongshang se débloquent progressivement. Terminer un plateau permet de débloquer de nouvelles méchapoupées et runes dans les Réflexions stratégiques. Certains plateaux augmentent également la limite de rang une fois terminés.\n3) En terminant les Parties sans fin, vous obtenez des points de partie. L’accumulation de ces points permet d’augmenter votre rang. Chaque montée de rang octroie des récompenses via les Réflexions stratégiques et débloque des Parties sans fin plus exigeantes, offrant de meilleures récompenses de réussite.\n4) En complétant les Réflexions de plateau, vous débloquez des méchapoupées et des runes plus puissantes, facilitant la progression dans des plateaux de difficulté supérieure. Pour consulter l’ensemble des objectifs disponibles, rendez-vous dans les Réflexions stratégiques.\n5) Cette saison du Grand chaos des Méchapoupées comprend 9 rangs, listés ci-dessous :\n- Initiation au jeu\n- Coups mesurés\n- Quête d’ouverture\n- Duel au milieu de partie\n- Coups inspirés\n- Assaut irrésistible\n- Maîtrise absolue\n- Au-delà du plateau\n- Grand maître",
+          ContentFR = "1) Dans le Grand chaos des Méchapoupées, équipez les méchapoupées de runes de manière stratégique et déployez-les avec discernement afin de terminer les plateaux. En accomplissant les Réflexions stratégiques, vous obtiendrez de généreuses récompenses.\n2) Les Plateaux de Maître Gongshang se débloquent progressivement. Terminer un plateau permet de débloquer de nouvelles méchapoupées et runes dans les Réflexions stratégiques. Certains plateaux augmentent également la limite de rang une fois terminés.\n3) En terminant les Parties sans fin, vous obtenez des points de partie. L’accumulation de ces points permet d’augmenter votre rang. Chaque montée de rang octroie des récompenses via les Réflexions stratégiques et débloque des Parties sans fin plus exigeantes, offrant de meilleures récompenses de réussite. Vous disposez de 5 tentatives quotidiennes pour actualiser les Parties sans fin.\n4) En complétant les Réflexions de plateau, vous débloquez des méchapoupées et des runes plus puissantes, facilitant la progression dans des plateaux de difficulté supérieure. Pour consulter l’ensemble des objectifs disponibles, rendez-vous dans les Réflexions stratégiques.\n5) Cette saison du Grand chaos des Méchapoupées comprend 9 rangs, listés ci-dessous :\n- Initiation au jeu\n- Coups mesurés\n- Quête d’ouverture\n- Duel au milieu de partie\n- Coups inspirés\n- Assaut irrésistible\n- Maîtrise absolue\n- Au-delà du plateau\n- Grand maître",
           TextMapId = "Event_Des_103016"
         },
         Event_Des_103018 = {
@@ -12095,7 +13350,7 @@ local Data = {
           TextMapId = "Event_Raid_Des"
         },
         Event_Raid_Rule = {
-          ContentFR = "Règles du tournoi :\n1) Le Sommet du Chasseur de Phoxène se déroule en deux phases : la Phase de groupes et le Classement suprême. À l’ouverture de l’événement, la Phase de groupes débute immédiatement.\n\n2) Durant la Phase de groupes, les escouades de Chasseurs de Phoxène obtiennent des points selon leurs performances en combat. Le meilleur score détermine leur répartition en groupes. À la fin de la phase, les récompenses sont attribuées selon le groupe atteint — pensez à les récupérer depuis la page de l’événement. Une fois la Phase de groupes terminée, le Classement suprême débute immédiatement.\n\n3) Durant la phase de Classement suprême, les escouades obtiennent des points de classement selon leurs performances à chaque défi. Le meilleur score détermine le classement au sein du groupe. Les défis du Classement suprême nécessitent un Laissez-passer d’escouade, et chaque tentative permet d’obtenir un certain nombre de Jetons de Phoxène en fonction des points gagnés.\n\n4) Les Jetons de Phoxène peuvent être échangés contre des objets dans la boutique de classement. Certains articles se débloquent selon le meilleur score atteint durant la phase de Classement suprême.\n\n5) Les escouades n’ayant pas participé à la Phase de groupes ne seront ni réparties en groupes ni classées durant le Classement suprême. Elles peuvent toutefois relever les défis du Classement suprême pour obtenir des Jetons de Phoxène et effectuer des échanges dans la boutique de classement, y compris pour les objets débloqués par les paliers de score.\n\nRègles des défis :\n1) Durant les défis de la Phase de groupes, vaincre le nombre d’ennemis requis dans le temps imparti permet de réussir le défi.\n\n2) Durant les défis du Classement suprême, vaincre des ennemis standards inflige des dégâts supplémentaires à la menace majeure. Éliminez cet ennemi dans le temps imparti pour réussir le défi.\n\n3) Lors des défis de la Phase de groupes et du Classement suprême, des points bonus sont accordés en fonction du temps restant.\n\n4) En cas d’échec, des points sont attribués à la fin du temps imparti selon un pourcentage du score estimé.",
+          ContentFR = "Règles du tournoi :\n1) Le Sommet du Chasseur de Phoxène se déroule en deux phases : la Phase de groupes et le Classement suprême. À l’ouverture de l’événement, la Phase de groupes débute immédiatement.\n\n2) Durant la Phase de groupes, les escouades de Chasseurs de Phoxène obtiennent des points selon leurs performances en combat. Le meilleur score détermine leur répartition en groupes. À la fin de la phase, les récompenses sont attribuées selon le groupe atteint — pensez à les récupérer depuis la page de l’événement. Une fois la Phase de groupes terminée, le Classement suprême débute immédiatement.\n\n3) Durant la phase de Classement suprême, les escouades obtiennent des points de classement selon leurs performances à chaque défi. Le meilleur score détermine le classement au sein du groupe. Les défis du Classement suprême nécessitent un Laissez-passer d’escouade, et chaque tentative permet d’obtenir un certain nombre de Jetons de Phoxène en fonction des points gagnés.\n\n4) Les Jetons de Phoxène peuvent être échangés contre des objets dans la boutique de classement. Certains articles se débloquent selon le meilleur score atteint durant la phase de Classement suprême.\n\n5) Les escouades n’ayant pas participé à la Phase de groupes ne seront ni réparties en groupes ni classées durant le Classement suprême. Elles peuvent toutefois relever les défis du Classement suprême pour obtenir des Jetons de Phoxène et effectuer des échanges dans la boutique de classement, y compris pour les objets débloqués par les paliers de score.\n\nRègles des défis :\n1) Durant les défis de la Phase de groupes, vaincre le nombre d’ennemis requis dans le temps imparti permet de réussir le défi.\n\n2) Durant les défis du Classement suprême, vaincre des ennemis de type Menace mineure inflige des dégâts supplémentaires aux ennemis de type Menace majeure. Éliminer les ennemis de type Menace majeure dans le temps imparti permet de réussir le défi.\n\n3) Lors des défis de la Phase de groupes et du Classement suprême, des points bonus sont accordés en fonction du temps restant.\n\n4) En cas d’échec, des points sont attribués à la fin du temps imparti selon un pourcentage du score estimé.",
           TextMapId = "Event_Raid_Rule"
         },
         Event_Raid_Rule_Dungeon = {
@@ -12226,6 +13481,10 @@ local Data = {
           ContentFR = "Opération ventre plein",
           TextMapId = "Event_Tab_103013"
         },
+        Event_Tab_103014 = {
+          ContentFR = "Tournoi de l’Encens",
+          TextMapId = "Event_Tab_103014"
+        },
         Event_Tab_103016 = {
           ContentFR = "Grand chaos des Méchapoupées",
           TextMapId = "Event_Tab_103016"
@@ -12265,7 +13524,15 @@ local Data = {
         Event_Tab_107002 = {
           ContentFR = "Spirale des liens",
           TextMapId = "Event_Tab_107002"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Event_Tab_107003",
+    MaxKey = "GRADEUP_1103_05",
+    Loader = function()
+      return {
         Event_Tab_107003 = {
           ContentFR = "Chemins qui se croisent",
           TextMapId = "Event_Tab_107003"
@@ -12279,7 +13546,7 @@ local Data = {
           TextMapId = "Event_Tab_108001"
         },
         Event_Tab_109001 = {
-          ContentFR = "Où se lève le vent, questionner l’Azur",
+          ContentFR = "Là où se lève le vent, interroger l’Azur",
           TextMapId = "Event_Tab_109001"
         },
         Event_Tab_110001 = {
@@ -12466,6 +13733,10 @@ local Data = {
           ContentFR = "Opération ventre plein",
           TextMapId = "Event_Title_103013"
         },
+        Event_Title_103014 = {
+          ContentFR = "Tournoi de l’Encens",
+          TextMapId = "Event_Title_103014"
+        },
         Event_Title_103016 = {
           ContentFR = "Grand chaos des Méchapoupées",
           TextMapId = "Event_Title_103016"
@@ -12503,7 +13774,7 @@ local Data = {
           TextMapId = "Event_Title_108001"
         },
         Event_Title_109001 = {
-          ContentFR = "Où se lève le vent, questionner l’Azur",
+          ContentFR = "Là où se lève le vent, interroger l’Azur",
           TextMapId = "Event_Title_109001"
         },
         Event_Title_110001 = {
@@ -12725,15 +13996,7 @@ local Data = {
         FeinaEvent_Exit_Content = {
           ContentFR = "Quitter le défi vous fera perdre les récompenses. Voulez-vous vraiment partir ?",
           TextMapId = "FeinaEvent_Exit_Content"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "FeinaEvent_Exit_Title",
-    MaxKey = "GRADEUP_4301_05",
-    Loader = function()
-      return {
+        },
         FeinaEvent_Exit_Title = {
           ContentFR = "Quitter le défi",
           TextMapId = "FeinaEvent_Exit_Title"
@@ -12782,6 +14045,10 @@ local Data = {
           ContentFR = "Port-des-Brumes",
           TextMapId = "FishingRegion_Name_3"
         },
+        FishingRegion_Name_4 = {
+          ContentFR = "Haojing",
+          TextMapId = "FishingRegion_Name_4"
+        },
         FishingSpot_Name_10010101 = {
           ContentFR = "Point de pêche : Île du Purgatoire",
           TextMapId = "FishingSpot_Name_10010101"
@@ -12814,9 +14081,21 @@ local Data = {
           ContentFR = "Point de pêche : Éternel Printemps",
           TextMapId = "FishingSpot_Name_10411001"
         },
+        FishingSpot_Name_10450201 = {
+          ContentFR = "Point de pêche : Quartier Ouest",
+          TextMapId = "FishingSpot_Name_10450201"
+        },
+        FishingSpot_Name_10450501 = {
+          ContentFR = "Point de pêche : Faubourgs Est",
+          TextMapId = "FishingSpot_Name_10450501"
+        },
         FishingSpot_Name_10490101 = {
           ContentFR = "Point de pêche : Demeure du Dragon Caché",
           TextMapId = "FishingSpot_Name_10490101"
+        },
+        FishingSpot_Name_10550101 = {
+          ContentFR = "Point de pêche : Ruelle Youlai",
+          TextMapId = "FishingSpot_Name_10550101"
         },
         Five = {ContentFR = "5.0", TextMapId = "Five"},
         FlyLicense_NotEnough_Tips = {
@@ -13044,7 +14323,15 @@ local Data = {
         GRADEUP_1103_05 = {
           ContentFR = "[Lever de rideau] niveau +2 ; [Sous les projecteurs] niveau +1.",
           TextMapId = "GRADEUP_1103_05"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "GRADEUP_1103_06",
+    MaxKey = "Guide_Message_ModArchiveUI_6_Pad",
+    Loader = function()
+      return {
         GRADEUP_1103_06 = {
           ContentFR = "[Presto] confère un bonus supplémentaire de +#4 en Vigueur. Lorsque l’effet de [Duo] génère de la [Fusion], la durée de [Presto] est prolongée de 0,2 s.",
           TextMapId = "GRADEUP_1103_06"
@@ -13122,27 +14409,27 @@ local Data = {
           TextMapId = "GRADEUP_1503_06"
         },
         GRADEUP_1504_01 = {
-          ContentFR = "Lorsque la [Grande épée d’artifice] ou le [Canon d’artifice] inflige des dégâts, déclenche une instance supplémentaire de Dégâts Lumino de zone à l’emplacement de la cible. Cet effet peut se déclencher une fois toutes les 0,5 s.",
+          ContentFR = "Le nombre maximal de cumuls d’[Accumulation] est augmenté à #1.\nChaque [Poudre d’artifice] consommée confère 2 cumuls d’[Accumulation].",
           TextMapId = "GRADEUP_1504_01"
         },
         GRADEUP_1504_02 = {
-          ContentFR = "[Ravitaillement d’artifice] confère en plus une augmentation des Dégâts de compétence infligés.",
+          ContentFR = "Pendant l’état [Mode annihilation stellaire], [Pluie d’étoiles] effectue automatiquement 4 attaques à distance toutes les 5 secondes et confère 8 cumuls d’[Accumulation], sans consommer de [Poudre d’artifice].",
           TextMapId = "GRADEUP_1504_02"
         },
         GRADEUP_1504_03 = {
-          ContentFR = "[Croisière] niveau +2 ; [Potentiel d’artifice] niveau +1.",
+          ContentFR = "[Poursuite du soleil] niveau +2 ; [Puissance accumulée] niveau +1.",
           TextMapId = "GRADEUP_1504_03"
         },
         GRADEUP_1504_04 = {
-          ContentFR = "Chaque projectile consommé par la [Plateforme d’artifice] restaure des PV au [Bouclier d’artifice]. Tant que le [Bouclier d’artifice] est actif, les dégâts subis sont réduits.",
+          ContentFR = "Lorsque vous infligez des Dégâts de compétence, une probabilité basée sur votre arme à distance peut déclencher un Effet supplémentaire Lumino.\nLorsque cet effet est déclenché, les ennemis dans un rayon de #2 sont attirés vers le centre de l’impact.\nCet effet peut se déclencher au maximum une fois par seconde.",
           TextMapId = "GRADEUP_1504_04"
         },
         GRADEUP_1504_05 = {
-          ContentFR = "[Armement d’artifice] niveau +2 ; [Potentiel d’artifice] niveau +1.",
+          ContentFR = "[Mode annihilation stellaire] niveau +2 ; [Puissance accumulée] niveau +1.",
           TextMapId = "GRADEUP_1504_05"
         },
         GRADEUP_1504_06 = {
-          ContentFR = "Pendant 10 s après l’activation de la compétence ultime, chaque projectile consommé par la [Plateforme d’artifice] restitue 1 projectile.\nLa limite de cumuls de [Surchauffe] passe alors à 600.",
+          ContentFR = "Chaque cumul d’[Errance céleste] confère #3 de Pénétration tous attributs supplémentaire.\nLorsque la méchapoupée Fengshi est projetée, 2 unités supplémentaires sont générées. Chacune inflige #4 des dégâts initiaux.",
           TextMapId = "GRADEUP_1504_06"
         },
         GRADEUP_1601_01 = {
@@ -13382,7 +14669,7 @@ local Data = {
           TextMapId = "GRADEUP_3202_05"
         },
         GRADEUP_3202_06 = {
-          ContentFR = "Tous les DGT d’arme et tous les Dégâts de compétence (hors [Lames tournoyantes] et [Lacération]) détonent 2 [Lacérations].",
+          ContentFR = "Lorsque [Lame du sommelier] est active, votre Pénétration tous attributs augmente de #6.\nLorsque [Blessure écarlate] est supprimée, 1 cumul supplémentaire est retiré et une instance de dégâts supplémentaire est infligée.",
           TextMapId = "GRADEUP_3202_06"
         },
         GRADEUP_3301_01 = {
@@ -13434,7 +14721,7 @@ local Data = {
           TextMapId = "GRADEUP_4101_06"
         },
         GRADEUP_4102_01 = {
-          ContentFR = "Lors de l’utilisation d’[Oracle du tonnerre], prolonge de #1 s la durée de l’effet d’augmentation des Dégâts de compétence conféré par [Clarté du destin].\nDe plus, [Harmonie des Quatre Royaumes] déclenche une occurrence supplémentaire de [Convergence Zhen-Xun], chacune infligeant 60 % des dégâts de base.",
+          ContentFR = "Lors de l’utilisation d’[Oracle du tonnerre], [Harmonie des Quatre Royaumes] déclenche une occurrence supplémentaire de [Convergence Zhen-Xun], chacune infligeant 60 % des dégâts de base.",
           TextMapId = "GRADEUP_4102_01"
         },
         GRADEUP_4102_02 = {
@@ -13446,7 +14733,7 @@ local Data = {
           TextMapId = "GRADEUP_4102_03"
         },
         GRADEUP_4102_04 = {
-          ContentFR = "Utiliser [Révélation céleste] augmente l’ATQ de Zhiliu et des alliés proches de #3 pendant #4 s.",
+          ContentFR = "Lorsqu’un gain supplémentaire de Régénération de Lucidité entraîne un débordement, confère à vous et à vos alliés 1 cumul d’augmentation d’ATQ de #3 pendant #4 s, cumulable jusqu’à 5 fois.",
           TextMapId = "GRADEUP_4102_04"
         },
         GRADEUP_4102_05 = {
@@ -13524,15 +14811,7 @@ local Data = {
         GRADEUP_4301_05 = {
           ContentFR = "[Appel de la tempête] niveau +2 ; [Puissance foudroyante] niveau +1.",
           TextMapId = "GRADEUP_4301_05"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "GRADEUP_4301_06",
-    MaxKey = "HomePianoDes_1003001",
-    Loader = function()
-      return {
+        },
         GRADEUP_4301_06 = {
           ContentFR = "Lorsqu’un ennemi est lié pour la première fois à [Invocation : Orbe chaotique], [Sibylle] lui inflige une instance supplémentaire de dégâts de [Châtiment de la Légion] à 500 % de la valeur de base, déclenchant automatiquement l’Effet supplémentaire Électro.",
           TextMapId = "GRADEUP_4301_06"
@@ -13852,7 +15131,15 @@ local Data = {
         Guide_Message_ModArchiveUI_6_Pad = {
           ContentFR = "Appuyer pour sélectionner le <H>Codex des Sceaux démoniaques</>",
           TextMapId = "Guide_Message_ModArchiveUI_6_Pad"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Guide_Message_ModArchiveUI_7",
+    MaxKey = "HomePianoDes_1011007",
+    Loader = function()
+      return {
         Guide_Message_ModArchiveUI_7 = {
           ContentFR = "Le <H>Codex des Sceaux démoniaques</> répertorie toutes les catégories et ensembles de Sceaux démoniaques. Compléter un ensemble octroie du Phoxène.",
           TextMapId = "Guide_Message_ModArchiveUI_7"
@@ -14329,15 +15616,7 @@ local Data = {
         HomePianoDes_1003001 = {
           ContentFR = "Main dans la main, ils fuient, à la poursuite d’un mince fil d’espoir.",
           TextMapId = "HomePianoDes_1003001"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "HomePianoDes_1003002",
-    MaxKey = "ImpressionRegionName_1011",
-    Loader = function()
-      return {
+        },
         HomePianoDes_1003002 = {
           ContentFR = "Avancer, c’est marcher sur le fil tranchant du passé.",
           TextMapId = "HomePianoDes_1003002"
@@ -14657,7 +15936,15 @@ local Data = {
         HomePianoDes_1011007 = {
           ContentFR = "La pêche n’a d’autre sens que la pêche elle-même.",
           TextMapId = "HomePianoDes_1011007"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "HomePianoNAme_1001001",
+    MaxKey = "MAINUIGUIDE_TITLE_Capture",
+    Loader = function()
+      return {
         HomePianoNAme_1001001 = {
           ContentFR = "Duet Night Abyss Main Theme — Thème principal",
           TextMapId = "HomePianoNAme_1001001"
@@ -15035,7 +16322,7 @@ local Data = {
           TextMapId = "HomePiano_HandleViewing"
         },
         HomePiano_HomePiano = {
-          ContentFR = "Sonate entre les doigts",
+          ContentFR = "Sonate intérieure",
           TextMapId = "HomePiano_HomePiano"
         },
         HomePiano_MusicDetails = {
@@ -15134,15 +16421,7 @@ local Data = {
         ImpressionRegionName_1011 = {
           ContentFR = "Hyperborea",
           TextMapId = "ImpressionRegionName_1011"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "ImpressionRegionName_1041",
-    MaxKey = "MAINUIGUIDE_TITLE_WIKI",
-    Loader = function()
-      return {
+        },
         ImpressionRegionName_1041 = {
           ContentFR = "Huaxu",
           TextMapId = "ImpressionRegionName_1041"
@@ -15404,7 +16683,7 @@ local Data = {
           TextMapId = "MAINUIGUIDE_TITLE_AutoChess_2"
         },
         MAINUIGUIDE_TITLE_AutoChess_3 = {
-          ContentFR = "Initiative",
+          ContentFR = "Avantage du plateau",
           TextMapId = "MAINUIGUIDE_TITLE_AutoChess_3"
         },
         MAINUIGUIDE_TITLE_AutoChess_4 = {
@@ -15450,7 +16729,15 @@ local Data = {
         MAINUIGUIDE_TITLE_Capture = {
           ContentFR = "Mission : [Capture]",
           TextMapId = "MAINUIGUIDE_TITLE_Capture"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "MAINUIGUIDE_TITLE_ChenMo_1",
+    MaxKey = "MESSAGE_BULLETCHARGE_PC",
+    Loader = function()
+      return {
         MAINUIGUIDE_TITLE_ChenMo_1 = {
           ContentFR = "Poussière-corrompue",
           TextMapId = "MAINUIGUIDE_TITLE_ChenMo_1"
@@ -15930,15 +17217,7 @@ local Data = {
         MAINUIGUIDE_TITLE_WIKI = {
           ContentFR = "Atlasium",
           TextMapId = "MAINUIGUIDE_TITLE_WIKI"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "MAINUIGUIDE_TITLE_WangXi_1",
-    MaxKey = "MESSAGE_MOVEFORWARD_PHONE",
-    Loader = function()
-      return {
+        },
         MAINUIGUIDE_TITLE_WangXi_1 = {
           ContentFR = "Faille de l’Oubli",
           TextMapId = "MAINUIGUIDE_TITLE_WangXi_1"
@@ -16255,7 +17534,15 @@ local Data = {
         MESSAGE_BULLETCHARGE_PC = {
           ContentFR = "Appuyez sur &ChargeBullet& pour recharger",
           TextMapId = "MESSAGE_BULLETCHARGE_PC"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "MESSAGE_BULLETCHARGE_Phone",
+    MaxKey = "MESSAGE_TITLE_LOADING_211_PC",
+    Loader = function()
+      return {
         MESSAGE_BULLETCHARGE_Phone = {
           ContentFR = "Touchez le bouton pour recharger vos munitions",
           TextMapId = "MESSAGE_BULLETCHARGE_Phone"
@@ -16735,15 +18022,7 @@ local Data = {
         MESSAGE_MOVEFORWARD_PHONE = {
           ContentFR = "Poussez le joystick gauche vers l’avant pour avancer",
           TextMapId = "MESSAGE_MOVEFORWARD_PHONE"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "MESSAGE_MOVE_GAMEPAD",
-    MaxKey = "MOD_DESC_2302",
-    Loader = function()
-      return {
+        },
         MESSAGE_MOVE_GAMEPAD = {
           ContentFR = "Faites glisser &L& pour vous déplacer",
           TextMapId = "MESSAGE_MOVE_GAMEPAD"
@@ -17063,7 +18342,15 @@ local Data = {
         MESSAGE_TITLE_LOADING_211_PC = {
           ContentFR = "Zhuyin",
           TextMapId = "MESSAGE_TITLE_LOADING_211_PC"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "MESSAGE_TITLE_LOADING_212_PC",
+    MaxKey = "MOD_NAME_1214",
+    Loader = function()
+      return {
         MESSAGE_TITLE_LOADING_212_PC = {
           ContentFR = "Magistrat de Yingtian",
           TextMapId = "MESSAGE_TITLE_LOADING_212_PC"
@@ -17305,7 +18592,7 @@ local Data = {
           TextMapId = "MOD_DESC_103002"
         },
         MOD_DESC_103003 = {
-          ContentFR = "Modifie l’Attaque normale de l’Espadon : invoque des engrenages tournoyants qui assènent une volée de coups. Inflige 100 % de dégâts supplémentaires par rapport à l’attaque de base.",
+          ContentFR = "Modifie l’Attaque normale de l’Espadon : les attaques normales de l’espadon gagnent en puissance et permettent d’enchaîner les coups à l’aide d’engrenages. Inflige 100 % de dégâts supplémentaires par rapport à l’attaque de base.",
           TextMapId = "MOD_DESC_103003"
         },
         MOD_DESC_104001 = {
@@ -17543,15 +18830,7 @@ local Data = {
         MOD_DESC_2302 = {
           ContentFR = "Augmente la Chance de déclenchement de #1 pour chaque niveau de Combo.",
           TextMapId = "MOD_DESC_2302"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "MOD_DESC_2311",
-    MaxKey = "MOD_NAME_2112",
-    Loader = function()
-      return {
+        },
         MOD_DESC_2311 = {
           ContentFR = "Vaincre un ennemi octroie 1 cumul augmentant la Vitesse d’attaque de #2 pendant #1 s, jusqu’à #3 cumuls.",
           TextMapId = "MOD_DESC_2311"
@@ -17820,6 +19099,10 @@ local Data = {
           ContentFR = "Charge sauvage",
           TextMapId = "MOD_NAME_103002"
         },
+        MOD_NAME_103003 = {
+          ContentFR = "Entaille rugissante",
+          TextMapId = "MOD_NAME_103003"
+        },
         MOD_NAME_104001 = {
           ContentFR = "Floraison incisive",
           TextMapId = "MOD_NAME_104001"
@@ -17867,7 +19150,15 @@ local Data = {
         MOD_NAME_1214 = {
           ContentFR = "Pouvoir · Présage",
           TextMapId = "MOD_NAME_1214"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "MOD_NAME_1215",
+    MaxKey = "MOD_NAME_4203",
+    Loader = function()
+      return {
         MOD_NAME_1215 = {
           ContentFR = "Inspiration · Évanescence",
           TextMapId = "MOD_NAME_1215"
@@ -17991,26 +19282,6 @@ local Data = {
         MOD_NAME_150401 = {
           ContentFR = "Drone de Su Yi : Canon détonateur",
           TextMapId = "MOD_NAME_150401"
-        },
-        MOD_NAME_150402 = {
-          ContentFR = "Drone de Su Yi : Espadon",
-          TextMapId = "MOD_NAME_150402"
-        },
-        MOD_NAME_150403 = {
-          ContentFR = "Tourelle de Su Yi : Projecteur de bouclier",
-          TextMapId = "MOD_NAME_150403"
-        },
-        MOD_NAME_150404 = {
-          ContentFR = "Tourelle de Su Yi : Canon lévitant",
-          TextMapId = "MOD_NAME_150404"
-        },
-        MOD_NAME_150405 = {
-          ContentFR = "Module de mobilité de Su Yi : Amplificateur de capacité énergétique",
-          TextMapId = "MOD_NAME_150405"
-        },
-        MOD_NAME_150406 = {
-          ContentFR = "Module de mobilité de Su Yi : Amplificateur de régénération d’énergie",
-          TextMapId = "MOD_NAME_150406"
         },
         MOD_NAME_1512 = {
           ContentFR = "Essor",
@@ -18351,15 +19622,7 @@ local Data = {
         MOD_NAME_2112 = {
           ContentFR = "Pénétration · Entrave",
           TextMapId = "MOD_NAME_2112"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "MOD_NAME_2113",
-    MaxKey = "Mail_Content_102001",
-    Loader = function()
-      return {
+        },
         MOD_NAME_2113 = {
           ContentFR = "Écrasement · Entrave",
           TextMapId = "MOD_NAME_2113"
@@ -18695,7 +19958,15 @@ local Data = {
         MOD_NAME_4203 = {
           ContentFR = "Éclair · Frappe-lumière",
           TextMapId = "MOD_NAME_4203"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "MOD_NAME_4204",
+    MaxKey = "Message_Guide_AutoChess_7_Pad",
+    Loader = function()
+      return {
         MOD_NAME_4204 = {
           ContentFR = "Répit",
           TextMapId = "MOD_NAME_4204"
@@ -18980,14 +20251,6 @@ local Data = {
           ContentFR = "Composant de Su Yi",
           TextMapId = "MOD_Type_Name_Suyi01"
         },
-        MOD_Type_Name_Suyi02 = {
-          ContentFR = "Composant de Su Yi",
-          TextMapId = "MOD_Type_Name_Suyi02"
-        },
-        MOD_Type_Name_Suyi03 = {
-          ContentFR = "Composant de Su Yi",
-          TextMapId = "MOD_Type_Name_Suyi03"
-        },
         MOD_Type_Name_Typhon01 = {
           ContentFR = "du Typhon",
           TextMapId = "MOD_Type_Name_Typhon01"
@@ -19152,6 +20415,10 @@ local Data = {
           ContentFR = "Nous avons détecté une utilisation abusive du système de remboursement sur votre compte. Un montant équivalent de {Count} Gemmes de Phoxène a été déduit. Veuillez rétablir un solde positif de Gemmes de Phoxène dans un délai de 7 jours à compter de la réception de ce message. À défaut, le compte sera définitivement suspendu.\nDuet Night Abyss applique une politique de tolérance zéro à l’égard des recharges illégales via des plateformes tierces et des abus de remboursement. Ces comportements continueront d’être surveillés. Veuillez éviter toute recharge non autorisée afin de prévenir les pertes financières et les risques pour la sécurité de votre compte.",
           TextMapId = "Mail_Content_10070"
         },
+        Mail_Content_10071 = {
+          ContentFR = "Votre compte a été placé sous mesure disciplinaire pour utilisation d’un logiciel tiers non autorisé. Les récompenses des 30 prochaines missions seront confisquées. Vous ne recevrez aucune récompense lors des prochains règlements de missions. Veuillez respecter les règles du jeu.",
+          TextMapId = "Mail_Content_10071"
+        },
         Mail_Content_101001 = {
           ContentFR = "Chasseur de Phoxène,\n \n Vous aviez des récompenses non réclamées dans l’événement %s.\n Elles vous ont été envoyées par courrier. Veuillez les récupérer sans tarder.",
           TextMapId = "Mail_Content_101001"
@@ -19159,15 +20426,7 @@ local Data = {
         Mail_Content_102001 = {
           ContentFR = "Chasseur de Phoxène,\n \n Vous aviez des récompenses non réclamées dans l’événement Guide du Chasseur de Phoxène.\n Elles vous ont été envoyées par courrier. Veuillez les récupérer sans tarder.",
           TextMapId = "Mail_Content_102001"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Mail_Content_19101",
-    MaxKey = "Message_Guide_Dungeon_19_Pad",
-    Loader = function()
-      return {
+        },
         Mail_Content_19101 = {
           ContentFR = "« Enfin ! Te voilà, mon petit larbin ! J’allais avoir des cheveux blancs à force de t’attendre !\nAllez, tout est prêt pour l’équipe des Chasseurs de Phoxène. Prends cette avance, et partons secouer le continent d’Atlasia ! »",
           TextMapId = "Mail_Content_19101"
@@ -19301,7 +20560,7 @@ local Data = {
           TextMapId = "Mail_Title_10058"
         },
         Mail_Title_10059 = {
-          ContentFR = "Récompenses de l'événement : « Luno, la voyante – Rencontre du destin »",
+          ContentFR = "Récompenses de l’événement : « Luno, la voyante – Rencontre du destin »",
           TextMapId = "Mail_Title_10059"
         },
         Mail_Title_10060 = {
@@ -19332,6 +20591,10 @@ local Data = {
           ContentFR = "Remerciements de Liesse – À don rendu, courtoisie rendue",
           TextMapId = "Mail_Title_10066"
         },
+        Mail_Title_10067 = {
+          ContentFR = "Cadeau d’un ami",
+          TextMapId = "Mail_Title_10067"
+        },
         Mail_Title_10068 = {
           ContentFR = "Récompenses de l’événement web « Voyage en Atlasia »",
           TextMapId = "Mail_Title_10068"
@@ -19339,6 +20602,10 @@ local Data = {
         Mail_Title_10069 = {
           ContentFR = "Avis de récupération de remboursement",
           TextMapId = "Mail_Title_10069"
+        },
+        Mail_Title_10071 = {
+          ContentFR = "Votre compte a été placé sous mesure disciplinaire",
+          TextMapId = "Mail_Title_10071"
         },
         Mail_Title_101001 = {
           ContentFR = "Réattribution des récompenses de « %s »",
@@ -19442,7 +20709,7 @@ local Data = {
           TextMapId = "Message_Guide_AutoChess_13"
         },
         Message_Guide_AutoChess_14 = {
-          ContentFR = "Consulter les méchapoupées adverses, l’initiative et les récompenses",
+          ContentFR = "Consulter les méchapoupées adverses, l’avantage du plateau et les récompenses",
           TextMapId = "Message_Guide_AutoChess_14"
         },
         Message_Guide_AutoChess_15 = {
@@ -19496,7 +20763,15 @@ local Data = {
         Message_Guide_AutoChess_7_Pad = {
           ContentFR = "Sélectionner « Équiper »",
           TextMapId = "Message_Guide_AutoChess_7_Pad"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Message_Guide_AutoChess_8",
+    MaxKey = "Message_Guide_Mail_7",
+    Loader = function()
+      return {
         Message_Guide_AutoChess_8 = {
           ContentFR = "Rune équipée !",
           TextMapId = "Message_Guide_AutoChess_8"
@@ -19964,15 +21239,7 @@ local Data = {
         Message_Guide_Dungeon_19_Pad = {
           ContentFR = "Appuyez pour entrer dans <H>Mission : Précaution</>",
           TextMapId = "Message_Guide_Dungeon_19_Pad"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Message_Guide_Dungeon_1_PC",
-    MaxKey = "Message_Guide_RougeContract_4",
-    Loader = function()
-      return {
+        },
         Message_Guide_Dungeon_1_PC = {
           ContentFR = "Maintenez <H>&ShowCursor&</> pour afficher le curseur, puis sélectionnez <H>Aventure</> pour ouvrir l’interface d’aventure",
           TextMapId = "Message_Guide_Dungeon_1_PC"
@@ -20304,7 +21571,15 @@ local Data = {
         Message_Guide_Mail_7 = {
           ContentFR = "Retour",
           TextMapId = "Message_Guide_Mail_7"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Message_Guide_Mail_8",
+    MaxKey = "MidTermGoal_Des_1_3",
+    Loader = function()
+      return {
         Message_Guide_Mail_8 = {
           ContentFR = "Ouvrir l’écran <H>Arsenal</>",
           TextMapId = "Message_Guide_Mail_8"
@@ -20772,15 +22047,7 @@ local Data = {
         Message_Guide_RougeContract_4 = {
           ContentFR = "Sélectionner <H>Confirmer</> pour enregistrer votre configuration de profondeur.",
           TextMapId = "Message_Guide_RougeContract_4"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Message_Guide_RougeContract_5",
-    MaxKey = "Minigame_Textmap_BaiTips09",
-    Loader = function()
-      return {
+        },
         Message_Guide_RougeContract_5 = {
           ContentFR = "Sélectionner <H>Réinitialiser</> pour annuler et restaurer les réglages précédents.",
           TextMapId = "Message_Guide_RougeContract_5"
@@ -21112,7 +22379,15 @@ local Data = {
         MidTermGoal_Des_1_3 = {
           ContentFR = "Utiliser <highlight>1</> Carnet de mission",
           TextMapId = "MidTermGoal_Des_1_3"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "MidTermGoal_Des_1_4",
+    MaxKey = "ModArchive_Name_Melee_2070",
+    Loader = function()
+      return {
         MidTermGoal_Des_1_4 = {
           ContentFR = "Obtenir <highlight>3</> Carnets de mission — Tome I",
           TextMapId = "MidTermGoal_Des_1_4"
@@ -21580,15 +22855,7 @@ local Data = {
         Minigame_Textmap_BaiTips09 = {
           ContentFR = "Il manque encore quelque chose... mais quoi ?",
           TextMapId = "Minigame_Textmap_BaiTips09"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Minigame_Textmap_BaiTips10",
-    MaxKey = "Mon_DesDetail_7010001",
-    Loader = function()
-      return {
+        },
         Minigame_Textmap_BaiTips10 = {
           ContentFR = "Hmmm... réfléchissons un peu...",
           TextMapId = "Minigame_Textmap_BaiTips10"
@@ -21810,27 +23077,27 @@ local Data = {
           TextMapId = "ModArchive_Name_Char_1500"
         },
         ModArchive_Name_Char_1510 = {
-          ContentFR = "Typhon : Lumino",
+          ContentFR = "Pactisant : Lumino",
           TextMapId = "ModArchive_Name_Char_1510"
         },
         ModArchive_Name_Char_1520 = {
-          ContentFR = "Typhon : Anémo",
+          ContentFR = "Pactisant : Anémo",
           TextMapId = "ModArchive_Name_Char_1520"
         },
         ModArchive_Name_Char_1530 = {
-          ContentFR = "Typhon : Électro",
+          ContentFR = "Pactisant : Électro",
           TextMapId = "ModArchive_Name_Char_1530"
         },
         ModArchive_Name_Char_1540 = {
-          ContentFR = "Typhon : Pyro",
+          ContentFR = "Pactisant : Pyro",
           TextMapId = "ModArchive_Name_Char_1540"
         },
         ModArchive_Name_Char_1550 = {
-          ContentFR = "Typhon : Hydro",
+          ContentFR = "Pactisant : Hydro",
           TextMapId = "ModArchive_Name_Char_1550"
         },
         ModArchive_Name_Char_1560 = {
-          ContentFR = "Typhon : Umbro",
+          ContentFR = "Pactisant : Umbro",
           TextMapId = "ModArchive_Name_Char_1560"
         },
         ModArchive_Name_Char_1570 = {
@@ -21920,7 +23187,15 @@ local Data = {
         ModArchive_Name_Melee_2070 = {
           ContentFR = "Fenrir V",
           TextMapId = "ModArchive_Name_Melee_2070"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "ModArchive_Name_Melee_2080",
+    MaxKey = "Mon_Guide_Title_6006001",
+    Loader = function()
+      return {
         ModArchive_Name_Melee_2080 = {
           ContentFR = "Fenrir VI",
           TextMapId = "ModArchive_Name_Melee_2080"
@@ -22388,15 +23663,7 @@ local Data = {
         Mon_DesDetail_7010001 = {
           ContentFR = "Les alchimistes standard des Spathatoi, déployés au sein des Légions hyperboréennes. Outre le fait de combattre aux côtés des troupes, certains alchimistes prennent également en charge l’entretien de l’arsenal, les soins prodigués aux soldats et la mise au point de nouveaux équipements. Avec les Légions, ils alimentent sans relâche le grondement du moteur de guerre impérial.",
           TextMapId = "Mon_DesDetail_7010001"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Mon_DesDetail_7011001",
-    MaxKey = "Mon_Name_6004013",
-    Loader = function()
-      return {
+        },
         Mon_DesDetail_7011001 = {
           ContentFR = "Les tireurs de précision spécialisés des Légions hyperboréennes, experts en suppression à longue distance. Ils apportent un appui-feu à leurs camarades de première ligne. La plupart sont des femmes, dont l’endurance remarquable, la vigilance et la stabilité en ont fait l’élite du corps. Les capes de camouflage sur mesure qu’elles portent ne servent pas qu’à dissimuler leur silhouette : ce sont aussi les insignes de leurs capacités hors du commun.",
           TextMapId = "Mon_DesDetail_7011001"
@@ -22728,7 +23995,15 @@ local Data = {
         Mon_Guide_Title_6006001 = {
           ContentFR = "Souillé glouton",
           TextMapId = "Mon_Guide_Title_6006001"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Mon_Guide_Title_6007001",
+    MaxKey = "Mon_Name_6013024",
+    Loader = function()
+      return {
         Mon_Guide_Title_6007001 = {
           ContentFR = "Souillé brûle-âme",
           TextMapId = "Mon_Guide_Title_6007001"
@@ -23045,6 +24320,10 @@ local Data = {
           ContentFR = "Souillé fulgurant — Sacrifice, Flétrissure et Déflagration",
           TextMapId = "Mon_Name_6001301"
         },
+        Mon_Name_6001701 = {
+          ContentFR = "Souillé fulgurant — Éclair foudroyant et Sacrifice",
+          TextMapId = "Mon_Name_6001701"
+        },
         Mon_Name_6002001 = {
           ContentFR = "Souillé errant",
           TextMapId = "Mon_Name_6002001"
@@ -23112,6 +24391,10 @@ local Data = {
         Mon_Name_6002301 = {
           ContentFR = "Souillé errant — Pourriture cramoisie, Morsure de givre et Gardien",
           TextMapId = "Mon_Name_6002301"
+        },
+        Mon_Name_6002701 = {
+          ContentFR = "Souillé errant — Représailles et Feu résiduel",
+          TextMapId = "Mon_Name_6002701"
         },
         Mon_Name_6003001 = {
           ContentFR = "Souillé flottant",
@@ -23196,15 +24479,7 @@ local Data = {
         Mon_Name_6004013 = {
           ContentFR = "Souillé déchaîné — Corrosion",
           TextMapId = "Mon_Name_6004013"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Mon_Name_6004014",
-    MaxKey = "Mon_Name_7004018",
-    Loader = function()
-      return {
+        },
         Mon_Name_6004014 = {
           ContentFR = "Souillé déchaîné — Éclair foudroyant",
           TextMapId = "Mon_Name_6004014"
@@ -23528,7 +24803,15 @@ local Data = {
         Mon_Name_6013024 = {
           ContentFR = "Souillé flottant II — Spectre",
           TextMapId = "Mon_Name_6013024"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Mon_Name_6013201",
+    MaxKey = "Mon_Name_7012001",
+    Loader = function()
+      return {
         Mon_Name_6013201 = {
           ContentFR = "Souillé flottant II — Morsure de givre et Gardien",
           TextMapId = "Mon_Name_6013201"
@@ -24004,15 +25287,7 @@ local Data = {
         Mon_Name_7004018 = {
           ContentFR = "Soldat d’assaut — Représailles",
           TextMapId = "Mon_Name_7004018"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Mon_Name_7004019",
-    MaxKey = "Mon_Name_8003024",
-    Loader = function()
-      return {
+        },
         Mon_Name_7004019 = {
           ContentFR = "Soldat d’assaut — Geôle de givre",
           TextMapId = "Mon_Name_7004019"
@@ -24336,7 +25611,15 @@ local Data = {
         Mon_Name_7012001 = {
           ContentFR = "Soldat brise-lames II",
           TextMapId = "Mon_Name_7012001"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Mon_Name_7012011",
+    MaxKey = "Mon_Name_8521001",
+    Loader = function()
+      return {
         Mon_Name_7012011 = {
           ContentFR = "Soldat brise-lames II — Morsure de givre",
           TextMapId = "Mon_Name_7012011"
@@ -24812,15 +26095,7 @@ local Data = {
         Mon_Name_8003024 = {
           ContentFR = "Prêtre béni — Spectre",
           TextMapId = "Mon_Name_8003024"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Mon_Name_8003201",
-    MaxKey = "Mon_Name_9806001",
-    Loader = function()
-      return {
+        },
         Mon_Name_8003201 = {
           ContentFR = "Prêtre béni — Pourriture cramoisie et Gardien",
           TextMapId = "Mon_Name_8003201"
@@ -25144,6 +26419,18 @@ local Data = {
         Mon_Name_8521001 = {
           ContentFR = "Pyromancien",
           TextMapId = "Mon_Name_8521001"
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Mon_Name_8522701",
+    MaxKey = "Name_100304",
+    Loader = function()
+      return {
+        Mon_Name_8522701 = {
+          ContentFR = "Mutant — Morsure de givre",
+          TextMapId = "Mon_Name_8522701"
         },
         Mon_Name_9001001 = {
           ContentFR = "Lame de l’Essaim",
@@ -25620,15 +26907,7 @@ local Data = {
         Mon_Name_9806001 = {
           ContentFR = "Pinson d’émeraude",
           TextMapId = "Mon_Name_9806001"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Mon_Name_9807001",
-    MaxKey = "NpcBiography_Information_Giselle",
-    Loader = function()
-      return {
+        },
         Mon_Name_9807001 = {
           ContentFR = "Sanglier pygmée",
           TextMapId = "Mon_Name_9807001"
@@ -25945,7 +27224,15 @@ local Data = {
         Name_100304 = {
           ContentFR = "Acte IV",
           TextMapId = "Name_100304"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Name_100305",
+    MaxKey = "PET_414_PASSIVE",
+    Loader = function()
+      return {
         Name_100305 = {
           ContentFR = "Acte V",
           TextMapId = "Name_100305"
@@ -26047,35 +27334,35 @@ local Data = {
           TextMapId = "Name_120114"
         },
         Name_120301 = {
-          ContentFR = "Cérémonie de l’Encens",
+          ContentFR = "Apaiser la tourmente",
           TextMapId = "Name_120301"
         },
         Name_120302 = {
-          ContentFR = "Cérémonie de l’Encens",
+          ContentFR = "Rivalité entre héros",
           TextMapId = "Name_120302"
         },
         Name_120303 = {
-          ContentFR = "Cérémonie de l’Encens",
+          ContentFR = "Le vent soulève le lotus",
           TextMapId = "Name_120303"
         },
         Name_120304 = {
-          ContentFR = "Cérémonie de l’Encens",
+          ContentFR = "Errance sans chute",
           TextMapId = "Name_120304"
         },
         Name_120305 = {
-          ContentFR = "Cérémonie de l’Encens",
+          ContentFR = "L’oiseau nocturne murmure aux branches",
           TextMapId = "Name_120305"
         },
         Name_120306 = {
-          ContentFR = "Cérémonie de l’Encens",
+          ContentFR = "Pluie persistante",
           TextMapId = "Name_120306"
         },
         Name_120307 = {
-          ContentFR = "Cérémonie de l’Encens",
+          ContentFR = "L’assaut du Terracolosse",
           TextMapId = "Name_120307"
         },
         Name_120308 = {
-          ContentFR = "Cérémonie de l’Encens",
+          ContentFR = "Adieux au Port-des-Brumes",
           TextMapId = "Name_120308"
         },
         Name_200101 = {
@@ -26422,15 +27709,7 @@ local Data = {
         NpcBiography_Information_Giselle = {
           ContentFR = "Giselle est une femme franche, généreuse et pleine de cœur — une grande sœur à la fois directe et attentive, prompte à protéger autrui.\nOn dit qu’elle a autrefois servi parmi les Veilleurs de Givrelac, mais nul ne sait pourquoi elle a finalement quitté ses fonctions.",
           TextMapId = "NpcBiography_Information_Giselle"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "NpcBiography_Information_Hainuo",
-    MaxKey = "Pack_Name_Collect_Dispatch_5",
-    Loader = function()
-      return {
+        },
         NpcBiography_Information_Hainuo = {
           ContentFR = "Soldat subalterne chargé de patrouiller dans Givrelac et de veiller au maintien de l’ordre. D’un tempérament colérique, il nourrit une profonde aversion pour les siens.\nDepuis l’enfance, son rêve est d’intégrer l’armée afin de gagner les beaux quartiers de la cité intérieure et d’y mener une vie prospère.\nMais après plus de dix ans de service, il n’a jamais obtenu la moindre promotion.\nHeino en est convaincu : s’il n’était pas un Charon, ses supérieurs l’auraient déjà remarqué et récompensé.\nAussi, il cherche désespérément à s’assimiler aux Solariens, allant jusqu’à profiter de son statut militaire pour opprimer ses semblables dès qu’une occasion se présente.",
           TextMapId = "NpcBiography_Information_Hainuo"
@@ -26723,7 +28002,15 @@ local Data = {
         PET_414_PASSIVE = {
           ContentFR = "Augmente l’ATQ Électro du personnage principal et des Partenaires de combat de #1.\nAugmente de #2 les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
           TextMapId = "PET_414_PASSIVE"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "PET_414_SKILL",
+    MaxKey = "Pack_Name_Resource_Fuma",
+    Loader = function()
+      return {
         PET_414_SKILL = {
           ContentFR = "Octroie à vous et vos alliés #1 points d’Ultra-bouclier et restaure #2 de Lucidité.",
           TextMapId = "PET_414_SKILL"
@@ -27203,15 +28490,7 @@ local Data = {
         Pack_Name_Collect_Dispatch_5 = {
           ContentFR = "Coffret de récompenses — Collecte Niv. 5",
           TextMapId = "Pack_Name_Collect_Dispatch_5"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Pack_Name_Collect_Dispatch_6",
-    MaxKey = "PartyReward_Description_230104",
-    Loader = function()
-      return {
+        },
         Pack_Name_Collect_Dispatch_6 = {
           ContentFR = "Coffret de récompenses — Collecte Niv. 6",
           TextMapId = "Pack_Name_Collect_Dispatch_6"
@@ -27531,7 +28810,15 @@ local Data = {
         Pack_Name_Resource_Fuma = {
           ContentFR = "Plan de fabrication inconnu (Module de transfert d’affinité)",
           TextMapId = "Pack_Name_Resource_Fuma"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Pack_Name_Shop_Accessory_01",
+    MaxKey = "PartyReward_Name_150403",
+    Loader = function()
+      return {
         Pack_Name_Shop_Accessory_01 = {
           ContentFR = "Coffret de Versets en suspens – Bleu indigo",
           TextMapId = "Pack_Name_Shop_Accessory_01"
@@ -27747,19 +29034,19 @@ local Data = {
           TextMapId = "PaotaiGame_Prop"
         },
         PaotaiGame_PropDes_1 = {
-          ContentFR = "Modifie le mode d’attaque des obus à tir rapide pour les faire ricocher entre les cibles.",
+          ContentFR = "Réduit le coût en chaleur des obus à tir rapide",
           TextMapId = "PaotaiGame_PropDes_1"
         },
         PaotaiGame_PropDes_2 = {
-          ContentFR = "Modifie le mode d’attaque des obus à tir rapide en un rayon continu.",
+          ContentFR = "Augmente les dégâts de base des obus à tir rapide",
           TextMapId = "PaotaiGame_PropDes_2"
         },
         PaotaiGame_PropDes_3 = {
-          ContentFR = "Modifie le mode d’attaque des obus explosifs pour appliquer un effet de Brûlure en zone.",
+          ContentFR = "Réduit le temps de rechargement des obus explosifs",
           TextMapId = "PaotaiGame_PropDes_3"
         },
         PaotaiGame_PropDes_4 = {
-          ContentFR = "Modifie le mode d’attaque des obus explosifs pour appliquer un effet de Gel en zone.",
+          ContentFR = "Les obus à tir rapide infligent Ralentissement",
           TextMapId = "PaotaiGame_PropDes_4"
         },
         PaotaiGame_PropDes_5 = {
@@ -27831,19 +29118,19 @@ local Data = {
           TextMapId = "PaotaiGame_Weapon"
         },
         PaotaiGame_WeaponDes_1 = {
-          ContentFR = "Tire des projectiles ricochants",
+          ContentFR = "Modifie le mode d’attaque des obus à tir rapide pour les faire ricocher entre les cibles.",
           TextMapId = "PaotaiGame_WeaponDes_1"
         },
         PaotaiGame_WeaponDes_2 = {
-          ContentFR = "Émet un rayon",
+          ContentFR = "Modifie le mode d’attaque des obus à tir rapide en un rayon continu.",
           TextMapId = "PaotaiGame_WeaponDes_2"
         },
         PaotaiGame_WeaponDes_3 = {
-          ContentFR = "Lance des obus incendiaires en zone",
+          ContentFR = "Modifie le mode d’attaque des obus explosifs pour appliquer un effet de Brûlure en zone.",
           TextMapId = "PaotaiGame_WeaponDes_3"
         },
         PaotaiGame_WeaponDes_4 = {
-          ContentFR = "Lance des obus cryogéniques en zone",
+          ContentFR = "Modifie le mode d’attaque des obus explosifs pour appliquer un effet de Gel en zone.",
           TextMapId = "PaotaiGame_WeaponDes_4"
         },
         PaotaiGame_WeaponName_1 = {
@@ -27958,6 +29245,18 @@ local Data = {
           ContentFR = "Un recueil de récits à demi vrais, jadis en vogue. Combien de passés tourmentés et de lames croisées y sommeillent, nul ne saurait le dire.",
           TextMapId = "PartyReward_Description_150304"
         },
+        PartyReward_Description_150401 = {
+          ContentFR = "Un petit oiseau rondouillard dont nul ne connaît le nom, gros comme un avant-bras. En le serrant contre soi, on peut enfouir son visage dans son ventre moelleux et laisser s’envoler la fatigue de la journée.",
+          TextMapId = "PartyReward_Description_150401"
+        },
+        PartyReward_Description_150402 = {
+          ContentFR = "L’œuvre méticuleuse d’une jeune artisane. Ses poulies ont été améliorées et un moteur de propulsion y a été ajouté, réduisant considérablement l’effort nécessaire pour la transporter. Idéale pour partir de chez soi.",
+          TextMapId = "PartyReward_Description_150402"
+        },
+        PartyReward_Description_150403 = {
+          ContentFR = "Une lettre dissimulée depuis des années dans la doublure d’un oiseau à câlins. Le papier est couvert de plis, chargé de nostalgie et d’affection.",
+          TextMapId = "PartyReward_Description_150403"
+        },
         PartyReward_Description_180101 = {
           ContentFR = "Une pile de douilles usagées qui, avec un peu d’imagination, deviennent pistolets, canons, dirigeables ou robots géants — les clés d’un monde de rêves.",
           TextMapId = "PartyReward_Description_180101"
@@ -28005,15 +29304,7 @@ local Data = {
         PartyReward_Description_230104 = {
           ContentFR = "%$^&!@#%^^Y&!#(%^%?!",
           TextMapId = "PartyReward_Description_230104"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "PartyReward_Description_240101",
-    MaxKey = "PartyTopic_Name_110103",
-    Loader = function()
-      return {
+        },
         PartyReward_Description_240101 = {
           ContentFR = "Un traité répertoriant mille huit cent quatre-vingt-dix remèdes, dont la moitié sont des herbes.\nL’auteur y appose un nom ancien : « Fufeng ».",
           TextMapId = "PartyReward_Description_240101"
@@ -28090,6 +29381,18 @@ local Data = {
           ContentFR = "Un alcool bon marché — stimulant pour certains, anesthésiant pour d’autres.\nEt chaque fois que les verres s’entrechoquent, la même formule : « À l’Inflexible — à ceux qui ne ploient jamais. »",
           TextMapId = "PartyReward_Description_320104"
         },
+        PartyReward_Description_320201 = {
+          ContentFR = "La vérité change toujours selon ce que les gens sont prêts à croire. Il n’existe pas de vérité absolue. Il en va de même pour les relations humaines : il n’existe pas d’ennemis éternels — seulement des intérêts éternels.",
+          TextMapId = "PartyReward_Description_320201"
+        },
+        PartyReward_Description_320202 = {
+          ContentFR = "Un pain qui glisse facilement dans la gorge... du miel encore tiède qui n’a pas figé. Dans l’esprit des Charons, c’est l’image même d’une vie digne. Ils avalent cette illusion amère comme si c’était la réalité.",
+          TextMapId = "PartyReward_Description_320202"
+        },
+        PartyReward_Description_320203 = {
+          ContentFR = "Une gorgée tiède descend doucement dans la gorge. L’espace d’un instant, on s’imagine pouvoir laisser derrière soi les regrets d’hier.",
+          TextMapId = "PartyReward_Description_320203"
+        },
         PartyReward_Description_330101 = {
           ContentFR = "Après une journée entière à vider le manoir de Kossak avec Margie, vous repartez les bras chargés.\nEspérons que la douleur dans vos épaules en valait la peine.",
           TextMapId = "PartyReward_Description_330101"
@@ -28117,6 +29420,38 @@ local Data = {
         PartyReward_Description_410103 = {
           ContentFR = "Chaque difficulté est entourée, commentée, accompagnée de notes de travail.\nOn y lit l’application d’une musicienne encore novice, mais acharnée.\nDans un coin, un petit éclair dessiné — charmant, presque timide.",
           TextMapId = "PartyReward_Description_410103"
+        },
+        PartyReward_Description_410201 = {
+          ContentFR = "Les Neuf Chapitres de Dafeng suivent leur cours immuable, identiques hier comme aujourd’hui. Telle est la Voie Céleste.",
+          TextMapId = "PartyReward_Description_410201"
+        },
+        PartyReward_Description_410202 = {
+          ContentFR = "Les injustices d’hier et les griefs tus ne sont plus que des ombres du passé, ensevelies sous les rumeurs et les calomnies.",
+          TextMapId = "PartyReward_Description_410202"
+        },
+        PartyReward_Description_410203 = {
+          ContentFR = "Ce qui m’abandonne appartient à hier et ne saurait être retenu. Ce qui trouble mon cœur nourrit les tourments d’aujourd’hui.",
+          TextMapId = "PartyReward_Description_410203"
+        },
+        PartyReward_Description_410204 = {
+          ContentFR = "Les années usent toute chose. Mais certaines volontés demeurent inchangées, sans jamais vaciller.",
+          TextMapId = "PartyReward_Description_410204"
+        },
+        PartyReward_Description_420101 = {
+          ContentFR = "Une flûte de bambou. Sur son corps se devinent encore les traces d’une fracture ancienne, puis d’une réparation maladroite. Nul ne saurait dire ce que ces cicatrices ont altéré dans la pureté de sa voix.",
+          TextMapId = "PartyReward_Description_420101"
+        },
+        PartyReward_Description_420102 = {
+          ContentFR = "Un élément de la tenue officielle des Magistrats de Yingtian. Poètes et chanteurs la décrivent comme un lien noué avec la Voie Céleste... mais n’est-elle pas, en vérité, une chaîne de plus ?",
+          TextMapId = "PartyReward_Description_420102"
+        },
+        PartyReward_Description_420103 = {
+          ContentFR = "Une agrafe de ceinture en jade. Quelqu’un a tenté, après sa rupture, d’en rassembler les fragments et de la conserver avec soin. Mais la profonde fissure qui la traverse ne pourra jamais retrouver son état d’origine.",
+          TextMapId = "PartyReward_Description_420103"
+        },
+        PartyReward_Description_420104 = {
+          ContentFR = "Trois adolescents avaient autrefois attaché ce petit grelot au cou d’un renard sauvage, en lui disant : « Ici, c’est chez toi. » Après une errance trop longue, il est peut-être temps, pour le voyageur, de rentrer jeter un dernier regard.",
+          TextMapId = "PartyReward_Description_420104"
         },
         PartyReward_Description_420201 = {
           ContentFR = "Laissez là le travail, laissez là l’épuisement.\nCommencez vos vacances avec une gorgée glacée de douceur.",
@@ -28266,6 +29601,26 @@ local Data = {
           ContentFR = "Chroniques d’un errant",
           TextMapId = "PartyReward_Name_150304"
         },
+        PartyReward_Name_150401 = {
+          ContentFR = "Oiseau à câlins au parfum de soleil",
+          TextMapId = "PartyReward_Name_150401"
+        },
+        PartyReward_Name_150402 = {
+          ContentFR = "Valise de voyage portable",
+          TextMapId = "PartyReward_Name_150402"
+        },
+        PartyReward_Name_150403 = {
+          ContentFR = "Lettre de famille froissée",
+          TextMapId = "PartyReward_Name_150403"
+        }
+      }
+    end
+  },
+  {
+    MinKey = "PartyReward_Name_180101",
+    MaxKey = "PartyTopic_Name_310203",
+    Loader = function()
+      return {
         PartyReward_Name_180101 = {
           ContentFR = "\"Blocs de construction\" usés",
           TextMapId = "PartyReward_Name_180101"
@@ -28390,6 +29745,18 @@ local Data = {
           ContentFR = "« L’Inflexible »",
           TextMapId = "PartyReward_Name_320104"
         },
+        PartyReward_Name_320201 = {
+          ContentFR = "« Vérité Absolue »",
+          TextMapId = "PartyReward_Name_320201"
+        },
+        PartyReward_Name_320202 = {
+          ContentFR = "Miel et pain",
+          TextMapId = "PartyReward_Name_320202"
+        },
+        PartyReward_Name_320203 = {
+          ContentFR = "« Adieu à Hier »",
+          TextMapId = "PartyReward_Name_320203"
+        },
         PartyReward_Name_330101 = {
           ContentFR = "Butin de récupération",
           TextMapId = "PartyReward_Name_330101"
@@ -28417,6 +29784,38 @@ local Data = {
         PartyReward_Name_410103 = {
           ContentFR = "Partition annotée",
           TextMapId = "PartyReward_Name_410103"
+        },
+        PartyReward_Name_410201 = {
+          ContentFR = "La Voie Céleste",
+          TextMapId = "PartyReward_Name_410201"
+        },
+        PartyReward_Name_410202 = {
+          ContentFR = "Rumeurs et calomnies",
+          TextMapId = "PartyReward_Name_410202"
+        },
+        PartyReward_Name_410203 = {
+          ContentFR = "Trancher le passé",
+          TextMapId = "PartyReward_Name_410203"
+        },
+        PartyReward_Name_410204 = {
+          ContentFR = "Promesse",
+          TextMapId = "PartyReward_Name_410204"
+        },
+        PartyReward_Name_420101 = {
+          ContentFR = "Cri du phénix",
+          TextMapId = "PartyReward_Name_420101"
+        },
+        PartyReward_Name_420102 = {
+          ContentFR = "Écharpe du Ciel",
+          TextMapId = "PartyReward_Name_420102"
+        },
+        PartyReward_Name_420103 = {
+          ContentFR = "Agrafe de ceinture de jade brisée",
+          TextMapId = "PartyReward_Name_420103"
+        },
+        PartyReward_Name_420104 = {
+          ContentFR = "Vieux grelot",
+          TextMapId = "PartyReward_Name_420104"
         },
         PartyReward_Name_420201 = {
           ContentFR = "Boisson : Pause du héros",
@@ -28566,6 +29965,18 @@ local Data = {
           ContentFR = "Dans la jeunesse, on apprend l’épée en visant toujours plus haut. On marche, on marche encore — les compagnons se font rares. Parvenu au sommet, il ne reste plus personne. Seule la neige demeure, s’accumulant sur la tête.",
           TextMapId = "PartyTopic_Description_150304"
         },
+        PartyTopic_Description_150401 = {
+          ContentFR = "Les feuilles portées par le vent finissent par retomber sur la terre. Ceux qui ont longtemps erré trouvent, eux aussi, le chemin du retour.",
+          TextMapId = "PartyTopic_Description_150401"
+        },
+        PartyTopic_Description_150402 = {
+          ContentFR = "La route qui s’éloigne de la maison est longue et tortueuse. Et tu n’oses pas te retourner pour regarder derrière toi.",
+          TextMapId = "PartyTopic_Description_150402"
+        },
+        PartyTopic_Description_150403 = {
+          ContentFR = "Les liens du sang sont de ces choses qu’on ne peut jamais vraiment couper. Comme lorsqu’on tente de fendre l’eau avec une lame : la coupure ne tient pas, et le courant poursuit sa course.",
+          TextMapId = "PartyTopic_Description_150403"
+        },
         PartyTopic_Description_180101 = {
           ContentFR = "Elle confia ses souhaits magiques à ses amis.",
           TextMapId = "PartyTopic_Description_180101"
@@ -28690,6 +30101,18 @@ local Data = {
           ContentFR = "Il brûle la gorge comme une lame — et seuls ceux qui le boivent savent ce qu’il vient ouvrir au fond d’eux.",
           TextMapId = "PartyTopic_Description_320104"
         },
+        PartyTopic_Description_320201 = {
+          ContentFR = "Aujourd’hui aux Asphodèles : promotion spéciale — toutes les boissons à –20 % ! Même les Charon peuvent en profiter !",
+          TextMapId = "PartyTopic_Description_320201"
+        },
+        PartyTopic_Description_320202 = {
+          ContentFR = "Au moment où elle décida de mourir, Camilla fit elle aussi son choix.",
+          TextMapId = "PartyTopic_Description_320202"
+        },
+        PartyTopic_Description_320203 = {
+          ContentFR = "Des années ont passé : les Asphodèles n’ont pas changé, et sa propriétaire non plus. Seule une ancienne habituée est devenue presque méconnaissable.",
+          TextMapId = "PartyTopic_Description_320203"
+        },
         PartyTopic_Description_330101 = {
           ContentFR = "Un bon moral décuple l’efficacité.\nEt garder le moral, c’est aussi savoir quand prendre soin de soi.",
           TextMapId = "PartyTopic_Description_330101"
@@ -28717,6 +30140,38 @@ local Data = {
         PartyTopic_Description_410103 = {
           ContentFR = "Ne plus courir entre les notes que d’autres ont tracées — mais ouvrir une page blanche, et y écrire son propre mouvement.",
           TextMapId = "PartyTopic_Description_410103"
+        },
+        PartyTopic_Description_410201 = {
+          ContentFR = "Une Voie que l’on peut nommer n’est jamais la Voie véritable. Ce qui soutient l’ordre de toute chose relève d’un principe qui dépasse les mots.",
+          TextMapId = "PartyTopic_Description_410201"
+        },
+        PartyTopic_Description_410202 = {
+          ContentFR = "Gouverner n’est, au fond, qu’une affaire de décision. Depuis l’aube des temps, ceux qui ont accompli de grandes œuvres se sont-ils jamais laissés entraver par des détails insignifiants ?",
+          TextMapId = "PartyTopic_Description_410202"
+        },
+        PartyTopic_Description_410203 = {
+          ContentFR = "Cultiver la vertu au sein du royaume, et elle s’épanouit. La cultiver en soi-même, et elle révèle sa véritable nature.",
+          TextMapId = "PartyTopic_Description_410203"
+        },
+        PartyTopic_Description_410204 = {
+          ContentFR = "Mon cœur n’est point de pierre, il ne saurait être détourné. Mon cœur n’est point de tissu, il ne saurait être plié.",
+          TextMapId = "PartyTopic_Description_410204"
+        },
+        PartyTopic_Description_420101 = {
+          ContentFR = "Une mélodie de flûte s’élève, portée par le vent. Avec elle se dissipent des souvenirs où l’amertume et la joie s’entrelacent.",
+          TextMapId = "PartyTopic_Description_420101"
+        },
+        PartyTopic_Description_420102 = {
+          ContentFR = "Le foyer d’autrefois s’est effondré sous le vent et la pluie. Où donc se trouve encore le véritable havre ?",
+          TextMapId = "PartyTopic_Description_420102"
+        },
+        PartyTopic_Description_420103 = {
+          ContentFR = "Lorsque la lame se teinte de sang, en se retournant, il devient déjà impossible de retrouver le chemin parcouru.",
+          TextMapId = "PartyTopic_Description_420103"
+        },
+        PartyTopic_Description_420104 = {
+          ContentFR = "Lorsque la poussière retombe et que les nuages se dissipent, où donc s’avance celui qui s’était égaré ?",
+          TextMapId = "PartyTopic_Description_420104"
         },
         PartyTopic_Description_420201 = {
           ContentFR = "Chez les gens intelligents, chaque phrase sert un but. On pourrait appeler cela de la manipulation. Ou, si l’on est indulgent, une forme de franchise.",
@@ -28813,15 +30268,7 @@ local Data = {
         PartyTopic_Name_110103 = {
           ContentFR = "Au-delà",
           TextMapId = "PartyTopic_Name_110103"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "PartyTopic_Name_110104",
-    MaxKey = "Pet_Name_4162",
-    Loader = function()
-      return {
+        },
         PartyTopic_Name_110104 = {
           ContentFR = "Demain",
           TextMapId = "PartyTopic_Name_110104"
@@ -28873,6 +30320,18 @@ local Data = {
         PartyTopic_Name_150304 = {
           ContentFR = "Jeunesse aux tempes fanées",
           TextMapId = "PartyTopic_Name_150304"
+        },
+        PartyTopic_Name_150401 = {
+          ContentFR = "Ne plus errer au loin",
+          TextMapId = "PartyTopic_Name_150401"
+        },
+        PartyTopic_Name_150402 = {
+          ContentFR = "Des chemins qui se séparent",
+          TextMapId = "PartyTopic_Name_150402"
+        },
+        PartyTopic_Name_150403 = {
+          ContentFR = "Impossible de trancher l’eau",
+          TextMapId = "PartyTopic_Name_150403"
         },
         PartyTopic_Name_180101 = {
           ContentFR = "Le vœu de magie",
@@ -28961,7 +30420,15 @@ local Data = {
         PartyTopic_Name_310203 = {
           ContentFR = "Les gestes d’une jardinière",
           TextMapId = "PartyTopic_Name_310203"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "PartyTopic_Name_310204",
+    MaxKey = "Pet_Name_4932",
+    Loader = function()
+      return {
         PartyTopic_Name_310204 = {
           ContentFR = "Adieu tardif",
           TextMapId = "PartyTopic_Name_310204"
@@ -28998,6 +30465,18 @@ local Data = {
           ContentFR = "Brûlot",
           TextMapId = "PartyTopic_Name_320104"
         },
+        PartyTopic_Name_320201 = {
+          ContentFR = "Une affaire à prix affiché",
+          TextMapId = "PartyTopic_Name_320201"
+        },
+        PartyTopic_Name_320202 = {
+          ContentFR = "Un choix dans l’ombre",
+          TextMapId = "PartyTopic_Name_320202"
+        },
+        PartyTopic_Name_320203 = {
+          ContentFR = "Un investissement involontaire",
+          TextMapId = "PartyTopic_Name_320203"
+        },
         PartyTopic_Name_330101 = {
           ContentFR = "Le travail de la récupératrice",
           TextMapId = "PartyTopic_Name_330101"
@@ -29025,6 +30504,38 @@ local Data = {
         PartyTopic_Name_410103 = {
           ContentFR = "Le sens de « Rythme »",
           TextMapId = "PartyTopic_Name_410103"
+        },
+        PartyTopic_Name_410201 = {
+          ContentFR = "Sur la Voie",
+          TextMapId = "PartyTopic_Name_410201"
+        },
+        PartyTopic_Name_410202 = {
+          ContentFR = "Sur le gouvernement",
+          TextMapId = "PartyTopic_Name_410202"
+        },
+        PartyTopic_Name_410203 = {
+          ContentFR = "Sur le cœur",
+          TextMapId = "PartyTopic_Name_410203"
+        },
+        PartyTopic_Name_410204 = {
+          ContentFR = "Mon cœur n’est pas de pierre",
+          TextMapId = "PartyTopic_Name_410204"
+        },
+        PartyTopic_Name_420101 = {
+          ContentFR = "La flûte de jade aux échos lointains",
+          TextMapId = "PartyTopic_Name_420101"
+        },
+        PartyTopic_Name_420102 = {
+          ContentFR = "Nulle part où revenir",
+          TextMapId = "PartyTopic_Name_420102"
+        },
+        PartyTopic_Name_420103 = {
+          ContentFR = "La pluie nocturne du Jianghu, dix ans sous la lampe",
+          TextMapId = "PartyTopic_Name_420103"
+        },
+        PartyTopic_Name_420104 = {
+          ContentFR = "En se retournant vers la désolation passée",
+          TextMapId = "PartyTopic_Name_420104"
         },
         PartyTopic_Name_420201 = {
           ContentFR = "Intentions cachées",
@@ -29612,15 +31123,7 @@ local Data = {
         Pet_Name_4162 = {
           ContentFR = "Ballabeille ardent",
           TextMapId = "Pet_Name_4162"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Pet_Name_4163",
-    MaxKey = "QuestDesc_10020316",
-    Loader = function()
-      return {
+        },
         Pet_Name_4163 = {
           ContentFR = "Ballabeille scintillant",
           TextMapId = "Pet_Name_4163"
@@ -29716,7 +31219,15 @@ local Data = {
         Pet_Name_4932 = {
           ContentFR = "Gélidou ardent",
           TextMapId = "Pet_Name_4932"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Pet_Name_4933",
+    MaxKey = "QuestDesc_10020603",
+    Loader = function()
+      return {
         Pet_Name_4933 = {
           ContentFR = "Gélidou onirique",
           TextMapId = "Pet_Name_4933"
@@ -30420,15 +31931,7 @@ local Data = {
         QuestDesc_10020316 = {
           ContentFR = "Votre première expédition dans la Fosse de Glevum s’achève — malgré la fâcheuse apparition de l’Étranger. L’Étranger est parti avec l’Éclat stellaire. Il semble vouloir vous parler, et vous avez convenu de le retrouver chez lui.\nPendant ce temps, quelqu’un vous attend aux portes de Givrelac... et il n’a pas l’air ravi.",
           TextMapId = "QuestDesc_10020316"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "QuestDesc_10020401",
-    MaxKey = "QuestName_10020211",
-    Loader = function()
-      return {
+        },
         QuestDesc_10020401 = {
           ContentFR = "L’Étranger a insisté pour vous rencontrer {性别:seul|seule}, et Snow est repartie en avance.\nIl habite dans les taudis — selon ses dires, sa porte est ornée d’un petit oiseau.",
           TextMapId = "QuestDesc_10020401"
@@ -30524,7 +32027,15 @@ local Data = {
         QuestDesc_10020603 = {
           ContentFR = "Henrik s’arrête chez un fleuriste, achète un bouquet, puis reprend sa route. Suivez-le.",
           TextMapId = "QuestDesc_10020603"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "QuestDesc_10020604",
+    MaxKey = "QuestName_10020308_1",
+    Loader = function()
+      return {
         QuestDesc_10020604 = {
           ContentFR = "L’Étranger s’est faufilé par la cheminée pour pénétrer dans la pièce verrouillée.\nExaminez les lieux et découvrez ce qu’ils recèlent.",
           TextMapId = "QuestDesc_10020604"
@@ -31020,11 +32531,11 @@ Allez voir ce qui se passe.]],
           TextMapId = "QuestDesc_1003plus19"
         },
         QuestDesc_1003plus20 = {
-          ContentFR = "Rhythm fredonne une mélodie — étrangement proche de celle entonnée par l’agresseur la nuit de l’attaque. Elle provient de l’opéra Né du blizzard. Vous élaboriez à peine un plan pour attirer le coupable grâce à ce nouvel indice... quand celui-ci se présente de lui-même.",
+          ContentFR = "Rhythm fredonne une mélodie — étrangement proche de celle entonnée par l’agresseur la nuit de l’attaque. Elle provient de l’opéra <I>Né du blizzard</>. Vous élaboriez à peine un plan pour attirer le coupable grâce à ce nouvel indice... quand celui-ci se présente de lui-même.",
           TextMapId = "QuestDesc_1003plus20"
         },
         QuestDesc_1003plus20_1 = {
-          ContentFR = "Rhythm fredonne une mélodie — étrangement proche de celle entonnée par l’agresseur la nuit de l’attaque. Elle provient de l’opéra Né du blizzard. Vous élaboriez à peine un plan pour attirer le coupable grâce à ce nouvel indice... quand celui-ci se présente de lui-même.",
+          ContentFR = "Rhythm fredonne une mélodie — étrangement proche de celle entonnée par l’agresseur la nuit de l’attaque. Elle provient de l’opéra <I>Né du blizzard</>. Vous élaboriez à peine un plan pour attirer le coupable grâce à ce nouvel indice... quand celui-ci se présente de lui-même.",
           TextMapId = "QuestDesc_1003plus20_1"
         },
         QuestDesc_1003plus21 = {
@@ -31230,15 +32741,7 @@ Allez voir ce qui se passe.]],
         QuestName_10020211 = {
           ContentFR = "Suivre le voleur dans les égouts",
           TextMapId = "QuestName_10020211"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "QuestName_10020212",
-    MaxKey = "QuestName_400101",
-    Loader = function()
-      return {
+        },
         QuestName_10020212 = {
           ContentFR = "Désactiver le mécanisme pour abaisser le niveau d’eau",
           TextMapId = "QuestName_10020212"
@@ -31334,7 +32837,15 @@ Allez voir ce qui se passe.]],
         QuestName_10020308_1 = {
           ContentFR = "Vaincre le Souillé qui bloque le passage",
           TextMapId = "QuestName_10020308_1"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "QuestName_10020309",
+    MaxKey = "READSERIES_1006",
+    Loader = function()
+      return {
         QuestName_10020309 = {
           ContentFR = "S’enfoncer dans la Fosse de Glevum pour trouver l’Éclat stellaire",
           TextMapId = "QuestName_10020309"
@@ -32038,15 +33549,7 @@ Allez voir ce qui se passe.]],
         QuestName_400101 = {
           ContentFR = "Se rendre à l’emplacement indiqué et vaincre les Souillés",
           TextMapId = "QuestName_400101"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "QuestName_400102",
-    MaxKey = "READ_NAME_2000076",
-    Loader = function()
-      return {
+        },
         QuestName_400102 = {
           ContentFR = "Se rendre à l’emplacement indiqué et vaincre les Souillés",
           TextMapId = "QuestName_400102"
@@ -32142,7 +33645,15 @@ Allez voir ce qui se passe.]],
         READSERIES_1006 = {
           ContentFR = "Journal égaré",
           TextMapId = "READSERIES_1006"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "READSERIES_1013",
+    MaxKey = "READ_NAME_2000080",
+    Loader = function()
+      return {
         READSERIES_1013 = {
           ContentFR = "L’Invincible Commandant de Légion",
           TextMapId = "READSERIES_1013"
@@ -32187,6 +33698,10 @@ Allez voir ce qui se passe.]],
           ContentFR = "Registres de jurisprudence de Luoxiang",
           TextMapId = "READSERIES_1084"
         },
+        READSERIES_1085 = {
+          ContentFR = "Chroniques de voyage à Huaxu",
+          TextMapId = "READSERIES_1085"
+        },
         READSERIES_1088 = {
           ContentFR = "Les ficelles du commerce de Luno, la carpe",
           TextMapId = "READSERIES_1088"
@@ -32202,6 +33717,10 @@ Allez voir ce qui se passe.]],
         READSERIES_1097 = {
           ContentFR = "Feuille perdue — Port-des-Brumes",
           TextMapId = "READSERIES_1097"
+        },
+        READSERIES_1114 = {
+          ContentFR = "Chronique matinale de Haojing",
+          TextMapId = "READSERIES_1114"
         },
         READSERIES_DESC_1039 = {
           ContentFR = "Retirés d’un amas de dossiers entassés dans une armoire, ces fichiers portent les photos et les comptes rendus méticuleux du quotidien des enfants qui vécurent autrefois à la Maison d’Hypnos.",
@@ -32412,7 +33931,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "READ_DESC_2000052"
         },
         READ_DESC_2000053 = {
-          ContentFR = "(Des feuillets épars, retrouvés dans un coin de la troupe. Ils portent l’écriture de Parsifal : visiblement un script qu’il relisait sans cesse, espérant peut-être monter un jour sur scène.)\n\nAux confins nord-ouest de la sphère d’influence de l’Église Élyséenne, s’élevait autrefois un petit duché nommé Yashnia, qui faisait face, par-delà les flots, à l’Empire Hyperboréen.\nProspère grâce au commerce, il naviguait entre l’Église et l’Empire, jusqu’à ce que la première l’annexe il y a plus de trois siècles.\n\nBien que modeste, le duché survécut durant des générations. Ses ducs maintinrent leur pouvoir au prix d’intrigues sanglantes : crimes de palais, assassinats politiques, complots étouffés.\nNombre de ménestrels s’inspirèrent de cette saga pour composer pièces et ballades. Et parce que son territoire fut entièrement annexé par l’Église, même l’Empire — qui interdit d’ordinaire toute représentation d’assassinats royaux — considère ces œuvres comme un juste témoignage de la noirceur du passé de l’Église Élyséenne, et en autorise donc les représentations.\n\nParmi ces pièces, Momiji : Récits du soulèvement demeure la plus célèbre, renommée pour ses chœurs grandioses, ses chorégraphies foisonnantes et ses combats savamment orchestrés.",
+          ContentFR = "(Des feuillets épars, retrouvés dans un coin de la troupe. Ils portent l’écriture de Parsifal : visiblement un script qu’il relisait sans cesse, espérant peut-être monter un jour sur scène.)\n\nAux confins nord-ouest de la sphère d’influence de l’Église Élyséenne, s’élevait autrefois un petit duché nommé Yashnia, qui faisait face, par-delà les flots, à l’Empire Hyperboréen.\nProspère grâce au commerce, il naviguait entre l’Église et l’Empire, jusqu’à ce que la première l’annexe il y a plus de trois siècles.\n\nBien que modeste, le duché survécut durant des générations. Ses ducs maintinrent leur pouvoir au prix d’intrigues sanglantes : crimes de palais, assassinats politiques, complots étouffés.\nNombre de ménestrels s’inspirèrent de cette saga pour composer pièces et ballades. Et parce que son territoire fut entièrement annexé par l’Église, même l’Empire — qui interdit d’ordinaire toute représentation d’assassinats royaux — considère ces œuvres comme un juste témoignage de la noirceur du passé de l’Église Élyséenne, et en autorise donc les représentations.\n\nParmi ces pièces, <I>Momiji : Récits du soulèvement</> demeure la plus célèbre, renommée pour ses chœurs grandioses, ses chorégraphies foisonnantes et ses combats savamment orchestrés.",
           TextMapId = "READ_DESC_2000053"
         },
         READ_DESC_2000057 = {
@@ -32420,7 +33939,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "READ_DESC_2000057"
         },
         READ_DESC_2000067 = {
-          ContentFR = "Un feuillet recopié à la hâte, à l’écriture si rageuse qu’on croirait l’entendre hurler. Ligne après ligne, il contredit mot pour mot l’Hymne de la Chandelle d’Argent et raconte une version diamétralement opposée des faits.",
+          ContentFR = "Un feuillet recopié à la hâte, à l’écriture si rageuse qu’on croirait l’entendre hurler. Ligne après ligne, il contredit mot pour mot l’<I>Hymne de la Chandelle d’Argent</> et raconte une version diamétralement opposée des faits.",
           TextMapId = "READ_DESC_2000067"
         },
         READ_DESC_2000068 = {
@@ -32488,7 +34007,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "READ_DESC_2000084"
         },
         READ_DESC_2000085 = {
-          ContentFR = "Un volume extrait des Registres de jurisprudence de Luoxiang. Médiatrice populaire, Luoxiang y applique sa lecture personnelle des Neuf Chapitres de Dafeng à des affaires du quotidien. Grâce à un langage accessible et à un contenu proche de la vie courante, la série est devenue, de manière inattendue, une lecture domestique très en vogue.",
+          ContentFR = "Un volume extrait des <I>Registres de jurisprudence de Luoxiang</>. Médiatrice populaire, Luoxiang y applique sa lecture personnelle des Neuf Chapitres de Dafeng à des affaires du quotidien. Grâce à un langage accessible et à un contenu proche de la vie courante, la série est devenue, de manière inattendue, une lecture domestique très en vogue.",
           TextMapId = "READ_DESC_2000085"
         },
         READ_DESC_2000086 = {
@@ -32530,6 +34049,78 @@ Allez voir ce qui se passe.]],
         READ_DESC_2000098 = {
           ContentFR = "Une note manuscrite, à l’écriture ferme et vigoureuse, dont chaque trait trahit l’autorité solennelle d’un aîné.",
           TextMapId = "READ_DESC_2000098"
+        },
+        READ_DESC_2000099 = {
+          ContentFR = "Un traité qui semble consigner les règles régissant la Cérémonie de l’Encens de Huaxu. L’ouvrage détaille avec minutie les différents rites sacrificiels pratiqués lors des antiques cérémonies d’offrande d’encens. En conclusion figurent quelques annotations laissées par une main inconnue.",
+          TextMapId = "READ_DESC_2000099"
+        },
+        READ_DESC_2000100 = {
+          ContentFR = "Des notes laissées par un érudit étranger ayant étudié les origines historiques de la Cérémonie de l’Encens de Huaxu. La date de rédaction demeure inconnue. Toutefois, nombre des hypothèses avancées par l’auteur ne reposent sur aucune source historique ni preuve matérielle, si bien que la majorité de ses thèses ne sont pas reconnues par les historiens contemporains.",
+          TextMapId = "READ_DESC_2000100"
+        },
+        READ_DESC_2000101 = {
+          ContentFR = "Un récit consacré à Yin Qing, poète de l’antique Huaxu, tiré du recueil d’essais <I>Fragments de Cangxi</>, rédigé par le lettré postérieur Cang Xian. L’histoire raconte comment un jeune voyageur nommé Feng — dont le nom de famille s’est perdu avec le temps — arriva par hasard à Haojing. Près de la demeure de la famille Yin, il trouva dans un canal une feuille verte portant un poème, découverte fortuite qui scella sa rencontre avec Yin Qing.\n\n<I>Fragments de Cangxi</> rassemble de nombreuses anecdotes littéraires remontant à environ cinq siècles. Si l’authenticité historique de l’ouvrage reste sujette à débat, sa valeur en tant qu’œuvre littéraire est largement reconnue.",
+          TextMapId = "READ_DESC_2000101"
+        },
+        READ_DESC_2000102 = {
+          ContentFR = "Un article issu de la série <I>Traces de voyage</> du célèbre explorateur Xu Xingke, rédigé à la demande des autorités. Il y consigne ses réflexions et impressions sur les différentes régions de sa terre natale.",
+          TextMapId = "READ_DESC_2000102"
+        },
+        READ_DESC_2000103 = {
+          ContentFR = "<I>Tendances de Huaxu</> recense les lieux et modes de vie les plus en vogue à Huaxu : restaurants et tavernes populaires, vêtements et marchandises diverses, ainsi que les nouvelles tendances venues de contrées étrangères.\nLe numéro spécial Haojing paraît chaque année un mois avant la Cérémonie de l’Encens et présente les derniers endroits à la mode de la capitale pour manger, se divertir et profiter de la vie nocturne.",
+          TextMapId = "READ_DESC_2000103"
+        },
+        READ_DESC_2000104 = {
+          ContentFR = "Un poème consacré aux Neuf Chapitres de Dafeng, rédigé dans le style littéraire propre à Huaxu, appelé « ode ».\nÀ en juger par le style du texte et les annotations laissées en marge, son auteur semble être un étudiant encore novice dans l’art de l’écriture.",
+          TextMapId = "READ_DESC_2000104"
+        },
+        READ_DESC_2000105 = {
+          ContentFR = "Un ouvrage célèbre à Huaxu, que l’on dit rédigé par un maître éminent de la Secte Xuanheng. L’œuvre compte au total dix-sept volumes et a été enrichie de nombreux ajouts par les générations suivantes.\nLe passage ci-dessous est tiré de la préface de l’ouvrage original.",
+          TextMapId = "READ_DESC_2000105"
+        },
+        READ_DESC_2000106 = {
+          ContentFR = "Un livret d’opéra populaire circulant parmi le peuple de Huaxu. Il raconte l’histoire d’un jeune couple, depuis leur rencontre jusqu’à leur mariage, avant que leur union ne se dégrade peu à peu à cause de multiples querelles et contrariétés du quotidien.\nL’œuvre serait inspirée d’un fait réel survenu à Haojing, bien que son authenticité n’ait jamais été confirmée. Extrait.",
+          TextMapId = "READ_DESC_2000106"
+        },
+        READ_DESC_2000107 = {
+          ContentFR = "Les notes personnelles d’un jeune artisan, dans lesquelles sont consignées quelques méthodes de fabrication de sachets parfumés. Il ne s’agit nullement d’un manuel d’encensologie digne d’autorité, et les étapes de fabrication n’y sont pas décrites avec précision. Une lecture à parcourir avec légèreté.",
+          TextMapId = "READ_DESC_2000107"
+        },
+        READ_DESC_2000108 = {
+          ContentFR = "Un épais registre consignant les projets récemment entrepris par le Bureau des Travaux.",
+          TextMapId = "READ_DESC_2000108"
+        },
+        READ_DESC_2000109 = {
+          ContentFR = "Un recueil rassemblant les paroles de Maître Zhuxi, consignées par ses disciples.\nAu fil de sa vie, nombre de ses idées évoluèrent avec l’âge. Pourtant, qu’elles datent de sa jeunesse ou de ses dernières années, toutes ses réflexions furent soigneusement mises par écrit par ses élèves. Le passage suivant en est un court extrait.",
+          TextMapId = "READ_DESC_2000109"
+        },
+        READ_DESC_2000110 = {
+          ContentFR = "De nombreux nouveaux venus rejoignant les Pics Extérieurs entendent le même conseil dès leur premier jour : « Si vous avez terminé votre travail pour aujourd’hui, allez donc faire un tour au terrain d’entraînement. »\nÀ l’origine, ce lieu avait été aménagé afin de permettre aux Vagabonds de s’exercer aux arts martiaux. Avec le temps, toutefois, il a peu à peu trouvé d’autres usages.",
+          TextMapId = "READ_DESC_2000110"
+        },
+        READ_DESC_2000111 = {
+          ContentFR = "Un carnet dans lequel les artisans des Pics Extérieurs consignent leurs idées les plus originales. Fidèles au principe de « l’apprentissage mutuel », ils ont, sur la suggestion de l’Oncle Tang, ajouté une section de commentaires afin que chacun puisse laisser ses remarques.",
+          TextMapId = "READ_DESC_2000111"
+        },
+        READ_DESC_2000112 = {
+          ContentFR = "Un texte anonyme provenant de Huaxu, qui décrit en détail les règles et le déroulement du Tournoi de l’Encens.",
+          TextMapId = "READ_DESC_2000112"
+        },
+        READ_DESC_2000113 = {
+          ContentFR = "Un essai disparate consacré au processus de sélection du Haut Chancelier de Longyuan. Le ton du texte est si exagéré et désinvolte qu’il devient difficile de distinguer ce qui relève du fait ou de l’invention.",
+          TextMapId = "READ_DESC_2000113"
+        },
+        READ_DESC_2000114 = {
+          ContentFR = "Un journal publié quotidiennement à Haojing, imprimé et vendu par le Pavillon des Artisans. On y trouve principalement des anecdotes et nouvelles locales, ainsi que quelques avis destinés aux habitants. En vérité, le journal ne compte guère de lecteurs.",
+          TextMapId = "READ_DESC_2000114"
+        },
+        READ_DESC_2000115 = {
+          ContentFR = "Un journal publié quotidiennement à Haojing, imprimé et vendu par le Pavillon des Artisans. On y trouve principalement des anecdotes et nouvelles locales, ainsi que quelques avis destinés aux habitants. En vérité, le journal ne compte guère de lecteurs.",
+          TextMapId = "READ_DESC_2000115"
+        },
+        READ_DESC_2000116 = {
+          ContentFR = "Une histoire rédigée par un lettré de la ville portant le nom de Shen. Son authenticité ne peut être vérifiée, mais le récit demeure très divertissant à lire. En raison de son ancienneté, une grande partie du texte s’est malheureusement perdue au fil du temps. Il s’agit ici du deuxième récit.",
+          TextMapId = "READ_DESC_2000116"
         },
         READ_DESC_20600 = {
           ContentFR = "Une collection de feuillets énigmatiques trouvés au hasard de vos pérégrinations.\nCertains sont de délicats rouleaux de parchemin, d’autres encore portent l’odeur fraîche d’une encre à peine sèche ; quelques-uns ne sont que des lambeaux arrachés à la hâte d’un vieux carnet.\nOrdonnées ou illisibles, détaillées ou brouillonnes, toutes partagent pourtant un même trait manifeste : chacune indique, à sa manière, l’emplacement d’un \"trésor\".",
@@ -32846,15 +34437,7 @@ Allez voir ce qui se passe.]],
         READ_NAME_2000076 = {
           ContentFR = "Peinture contrefaite",
           TextMapId = "READ_NAME_2000076"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "READ_NAME_2000077",
-    MaxKey = "RESOURCE_DESC_10023",
-    Loader = function()
-      return {
+        },
         READ_NAME_2000077 = {
           ContentFR = "Contes de l’Oncle Feng (extrait)",
           TextMapId = "READ_NAME_2000077"
@@ -32870,7 +34453,15 @@ Allez voir ce qui se passe.]],
         READ_NAME_2000080 = {
           ContentFR = "Page arrachée d’un journal intime",
           TextMapId = "READ_NAME_2000080"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "READ_NAME_2000081",
+    MaxKey = "READ_TEXT_20633",
+    Loader = function()
+      return {
         READ_NAME_2000081 = {
           ContentFR = "La conception huaxienne de la vie et de la mort",
           TextMapId = "READ_NAME_2000081"
@@ -32892,7 +34483,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "READ_NAME_2000085"
         },
         READ_NAME_2000086 = {
-          ContentFR = "Chroniques de voyage en Huaxu — Port-des-Brumes",
+          ContentFR = "Chroniques de voyage à Huaxu — Port-des-Brumes",
           TextMapId = "READ_NAME_2000086"
         },
         READ_NAME_2000087 = {
@@ -32942,6 +34533,78 @@ Allez voir ce qui se passe.]],
         READ_NAME_2000098 = {
           ContentFR = "L’Admonition d’un aîné",
           TextMapId = "READ_NAME_2000098"
+        },
+        READ_NAME_2000099 = {
+          ContentFR = "Études sur l’Offrande d’Encens — Rites du Sacrifice",
+          TextMapId = "READ_NAME_2000099"
+        },
+        READ_NAME_2000100 = {
+          ContentFR = "Notes d’étude sur la Cérémonie de l’Encens (extrait)",
+          TextMapId = "READ_NAME_2000100"
+        },
+        READ_NAME_2000101 = {
+          ContentFR = "Le Vœu de Qing",
+          TextMapId = "READ_NAME_2000101"
+        },
+        READ_NAME_2000102 = {
+          ContentFR = "Chroniques de voyage à Huaxu — Haojing",
+          TextMapId = "READ_NAME_2000102"
+        },
+        READ_NAME_2000103 = {
+          ContentFR = "Tendances de Huaxu — Édition spéciale de Haojing",
+          TextMapId = "READ_NAME_2000103"
+        },
+        READ_NAME_2000104 = {
+          ContentFR = "Ode aux Neuf Chapitres",
+          TextMapId = "READ_NAME_2000104"
+        },
+        READ_NAME_2000105 = {
+          ContentFR = "Traité de l’Encens",
+          TextMapId = "READ_NAME_2000105"
+        },
+        READ_NAME_2000106 = {
+          ContentFR = "Les Époux Scellés",
+          TextMapId = "READ_NAME_2000106"
+        },
+        READ_NAME_2000107 = {
+          ContentFR = "Sachets parfumés originaux — Carnet de fabrication",
+          TextMapId = "READ_NAME_2000107"
+        },
+        READ_NAME_2000108 = {
+          ContentFR = "Annales du Pavillon des Artisans — Chronique des travaux",
+          TextMapId = "READ_NAME_2000108"
+        },
+        READ_NAME_2000109 = {
+          ContentFR = "Paroles de Maître Zhuxi",
+          TextMapId = "READ_NAME_2000109"
+        },
+        READ_NAME_2000110 = {
+          ContentFR = "Registre d’utilisation du terrain d’entraînement",
+          TextMapId = "READ_NAME_2000110"
+        },
+        READ_NAME_2000111 = {
+          ContentFR = "Registre détaillé des expériences",
+          TextMapId = "READ_NAME_2000111"
+        },
+        READ_NAME_2000112 = {
+          ContentFR = "Le Tournoi de l’Encens : la sélection des fonctionnaires",
+          TextMapId = "READ_NAME_2000112"
+        },
+        READ_NAME_2000113 = {
+          ContentFR = "Comment devenir Haut Chancelier de Longyuan",
+          TextMapId = "READ_NAME_2000113"
+        },
+        READ_NAME_2000114 = {
+          ContentFR = "Chronique matinale de Haojing (I)",
+          TextMapId = "READ_NAME_2000114"
+        },
+        READ_NAME_2000115 = {
+          ContentFR = "Chronique matinale de Haojing (II)",
+          TextMapId = "READ_NAME_2000115"
+        },
+        READ_NAME_2000116 = {
+          ContentFR = "Notes sur la Cité mirage — II",
+          TextMapId = "READ_NAME_2000116"
         },
         READ_NAME_20602 = {
           ContentFR = "Île du Purgatoire : Tome I",
@@ -33056,7 +34719,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "READ_TEXT_2000001"
         },
         READ_TEXT_2000002 = {
-          ContentFR = "...\nTous les lecteurs le savent : l’auteur a toujours mené une vie solitaire.\nLes avantages de la solitude sont évidents. Tout d’abord, nous pouvons broyer et raffiner sans hésiter les pierres précieuses achetées à prix d’or, sans avoir à nous demander s’il ne vaudrait pas mieux les offrir pour gagner la faveur de quelqu’un.\n(Annotation : En effet, les gemmes ne révèlent leur pleine valeur que dans les mains d’un alchimiste.)\n\nEnsuite, vivre seul permet de consacrer plus d’énergie aux merveilles de l’alchimie, plutôt que d’éprouver des regrets profonds en découvrant son premier cheveu blanc — et de comprendre qu’il ne faut pas s’obstiner dans des amours stériles, comme ce fut mon cas.\n(Annotation : Un peu extrême... mais dans l’Empire actuel, qui ne l’est pas ?)\n\nEnfin, la vie de célibataire permet d’éviter certains malheurs, comme celui-ci :\n\nAu nord de l’Empire Hyperboréen, se trouve une cité appelée Givrelac (Annotation : Mon maître s’y est rendu autrefois, apparemment pour consulter un médecin nommé Henrik, mais je ne lui ai jamais demandé les détails). Elle produit de l’Éclat stellaire et son climat froid se prête particulièrement bien à la recherche sur l’élément Pyro.\n\nLe protagoniste de ce drame ? Vagim, un alchimiste parmi tant d’autres travaillant le feu dans cette région. Il avait quarante ans — l’âge où nombre d’alchimistes atteignent leur apogée — mais son plus grand « chef-d’œuvre » n’était autre qu’un enfant brillant et passionné d’alchimie.\n(Annotation : C’est un peu cruel.)\n\nUn matin d’hiver, à la demande insistante de son fils Igor, Vagim l’amena dans son atelier. Un enfant et un atelier d’alchimie — deux sources d’instabilité, de danger et d’imprévisibilité — la suite ne pouvait qu’être explosive.\n\nNul n’a été témoin direct de la scène, mais selon les témoignages et les indices retrouvés, voici ce qui se serait passé :\n\nVagim avait préparé les ingrédients les plus basiques : un peu de Grumeau de Souillé, de la poudre de Phoxène et un creuset chauffé. Sous sa direction, le jeune Igor suivit les étapes classiques, créant un petit feu sphérique qui brûlait continuellement dans le creuset.\n(Annotation : Très basique, mais une réussite qui prouve le talent du garçon.)\n\nFier de son fils, Vagim le félicita. Malheureusement, Igor en tira une mauvaise leçon : plus le feu est grand, plus les félicitations seront nombreuses.\n\nAlors que son père préparait sa propre expérience, Igor — probablement désireux de lui faire une surprise — ajouta un bloc entier de Grumeau de Souillé dans le creuset.\n(Annotation : Compréhensible... mais impardonnable.)\n\nCe jour-là, Givrelac connut l’incendie le plus dévastateur de son histoire. Son épicentre : l’atelier de Vagim. La cause probable : l’ajout excessif de réactifs. Aucun alchimiste, même novice, n’aurait commis une telle erreur après avoir lu le Guide de sécurité de l’alchimiste. Mais peut-on vraiment blâmer un enfant ?\n\nSans le moindre doute, Vagim était responsable.\nOn peut seulement dire qu’en tant qu’alchimiste, mener une vie solitaire est une vertu — bénéfique à la science comme au bien commun.\n(Annotation : Une leçon douloureuse... je devrais moi-même redoubler de prudence.)",
+          ContentFR = "...\nTous les lecteurs le savent : l’auteur a toujours mené une vie solitaire.\nLes avantages de la solitude sont évidents. Tout d’abord, nous pouvons broyer et raffiner sans hésiter les pierres précieuses achetées à prix d’or, sans avoir à nous demander s’il ne vaudrait pas mieux les offrir pour gagner la faveur de quelqu’un.\n(Annotation : En effet, les gemmes ne révèlent leur pleine valeur que dans les mains d’un alchimiste.)\n\nEnsuite, vivre seul permet de consacrer plus d’énergie aux merveilles de l’alchimie, plutôt que d’éprouver des regrets profonds en découvrant son premier cheveu blanc — et de comprendre qu’il ne faut pas s’obstiner dans des amours stériles, comme ce fut mon cas.\n(Annotation : Un peu extrême... mais dans l’Empire actuel, qui ne l’est pas ?)\n\nEnfin, la vie de célibataire permet d’éviter certains malheurs, comme celui-ci :\n\nAu nord de l’Empire Hyperboréen, se trouve une cité appelée Givrelac (Annotation : Mon maître s’y est rendu autrefois, apparemment pour consulter un médecin nommé Henrik, mais je ne lui ai jamais demandé les détails). Elle produit de l’Éclat stellaire et son climat froid se prête particulièrement bien à la recherche sur l’élément Pyro.\n\nLe protagoniste de ce drame ? Vagim, un alchimiste parmi tant d’autres travaillant le feu dans cette région. Il avait quarante ans — l’âge où nombre d’alchimistes atteignent leur apogée — mais son plus grand « chef-d’œuvre » n’était autre qu’un enfant brillant et passionné d’alchimie.\n(Annotation : C’est un peu cruel.)\n\nUn matin d’hiver, à la demande insistante de son fils Igor, Vagim l’amena dans son atelier. Un enfant et un atelier d’alchimie — deux sources d’instabilité, de danger et d’imprévisibilité — la suite ne pouvait qu’être explosive.\n\nNul n’a été témoin direct de la scène, mais selon les témoignages et les indices retrouvés, voici ce qui se serait passé :\n\nVagim avait préparé les ingrédients les plus basiques : un peu de Grumeau de Souillé, de la poudre de Phoxène et un creuset chauffé. Sous sa direction, le jeune Igor suivit les étapes classiques, créant un petit feu sphérique qui brûlait continuellement dans le creuset.\n(Annotation : Très basique, mais une réussite qui prouve le talent du garçon.)\n\nFier de son fils, Vagim le félicita. Malheureusement, Igor en tira une mauvaise leçon : plus le feu est grand, plus les félicitations seront nombreuses.\n\nAlors que son père préparait sa propre expérience, Igor — probablement désireux de lui faire une surprise — ajouta un bloc entier de Grumeau de Souillé dans le creuset.\n(Annotation : Compréhensible... mais impardonnable.)\n\nCe jour-là, Givrelac connut l’incendie le plus dévastateur de son histoire. Son épicentre : l’atelier de Vagim. La cause probable : l’ajout excessif de réactifs. Aucun alchimiste, même novice, n’aurait commis une telle erreur après avoir lu le <I>Guide de sécurité de l’alchimiste</>. Mais peut-on vraiment blâmer un enfant ?\n\nSans le moindre doute, Vagim était responsable.\nOn peut seulement dire qu’en tant qu’alchimiste, mener une vie solitaire est une vertu — bénéfique à la science comme au bien commun.\n(Annotation : Une leçon douloureuse... je devrais moi-même redoubler de prudence.)",
           TextMapId = "READ_TEXT_2000002"
         },
         READ_TEXT_2000003 = {
@@ -33244,7 +34907,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "READ_TEXT_2000048"
         },
         READ_TEXT_2000049 = {
-          ContentFR = "Affaire : Bagarre au Théâtre Galea\nDate : 9 octobre, 20 h 30\n\nDépositaire de plainte : Letizia Putsch, directrice de la troupe de la Flûte Enchantée\n\nParties impliquées :\nParsifal Snowfield (comédien principal)\nSusanna Rossi (comédienne principale)\nMathew Bernard (spectateur)\nFeeley Francisco (spectateur)\n...\nRésumé de l’incident : Une altercation aurait éclaté entre des membres de la troupe et des spectateurs du premier rang. Témoignages évoquant des coups portés aux comédiens par les spectateurs. (Certaines pages du rapport officiel ont été arrachées.)\n\nConclusion : Preuves insuffisantes. Aucune suite judiciaire.\n\nRemarques : Les représentations de Né du blizzard sont suspendues jusqu’à nouvel ordre, sans date de reprise annoncée.\nJ’aurais tant voulu voir cette pièce avec Blues, pour effacer le regret de ne pas l’avoir vue autrefois. Mais il semble que ce ne soit pas pour bientôt...\"",
+          ContentFR = "Affaire : Bagarre au Théâtre Galea\nDate : 9 octobre, 20 h 30\n\nDépositaire de plainte : Letizia Putsch, directrice de la troupe de la Flûte Enchantée\n\nParties impliquées :\nParsifal Snowfield (comédien principal)\nSusanna Rossi (comédienne principale)\nMathew Bernard (spectateur)\nFeeley Francisco (spectateur)\n...\nRésumé de l’incident : Une altercation aurait éclaté entre des membres de la troupe et des spectateurs du premier rang. Témoignages évoquant des coups portés aux comédiens par les spectateurs. (Certaines pages du rapport officiel ont été arrachées.)\n\nConclusion : Preuves insuffisantes. Aucune suite judiciaire.\n\nRemarques : Les représentations de <I>Né du blizzard</> sont suspendues jusqu’à nouvel ordre, sans date de reprise annoncée.\nJ’aurais tant voulu voir cette pièce avec Blues, pour effacer le regret de ne pas l’avoir vue autrefois. Mais il semble que ce ne soit pas pour bientôt...\"",
           TextMapId = "READ_TEXT_2000049"
         },
         READ_TEXT_2000050 = {
@@ -33252,7 +34915,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "READ_TEXT_2000050"
         },
         READ_TEXT_2000051 = {
-          ContentFR = "Chapitre 235 — Mon cœur n’appartient qu’à Hyperborea\n\nLe banquet de célébration était terminé. Hormis les patrouilleurs, chacun dormait du sommeil lourd des soldats exténués. L’adjudante glissait entre les tentes, prenant garde que ses pas n’interrompent pas le repos de ses camarades.\n\nFinalement, elle souleva la tenture de la tente qu’elle cherchait.\nLà, assis dans la pénombre, se tenait celui dont la simple présence inspirait confiance : le Commandant. Il insérait les balles une à une dans son chargeur, d’un geste méthodique.\n— « Commandant, nous sommes revenus du front. Vous n’avez plus besoin d’être aussi tendu. »\n— « Quand aura lieu le prochain combat ? »\nIl n’avait pas relevé la tête.\nIl n’avait pas entendu — ou plutôt, il avait refusé d’entendre.\n— « Lors de la dernière bataille, vous avez écrasé l’assaut élyséen. Ils ne tenteront rien de sitôt. »\n\nSilence. Une goutte de sueur glissa le long de la tempe de l’adjudante.\nEnfin, elle prit son courage à deux mains et sortit de sa veste une liasse de lettres richement décorées.\n— « Commandant... ne pourriez-vous pas, comme les autres, prendre un moment pour simplement vivre ? Voici une invitation au bal de la duchesse, une autre pour la partie de chasse de la princesse, et... »\n— « Mille affaires pressantes, infiltration élyséenne à surveiller. Répondez cela pour toutes. »\n— « Mais... vous avez déjà utilisé cette excuse dix-huit fois... »\nZssh—\nLe Commandant posa son arme, se leva et marcha jusqu’à l’étendard des Trois Loups.\nD’un geste lent, il effleura les marques brûlées laissées par la guerre.\n— « Je comprends ton inquiétude. Et je respecte leur sollicitude. Mais pendant que nous nous reposons, les sbires d’Élysium harcèlent nos frontières. Ils chassent des milliers de Solariens de leurs foyers. Ils brandissent la bannière de leurs faux dieux, prétendant purifier les hérétiques, tout en massacrant nos camarades et nos frères.\nMais nous savons la vérité : <H>les gens de l’Empire ne sont pas des hérétiques — seulement des êtres libérés des chaînes divines, avides de liberté et de délivrance.</> »\n\nSa main se crispa. L’étendard claqua comme une flamme prise dans le vent.\n— « Leurs dieux mensongers occupent encore notre antique patrie. Tant que leur tour sacrée ne sera pas abattue, mon cœur ne connaîtra pas la paix. Si je dois goûter au repos... que ce soit lorsque je serai enveloppé dans ce drapeau, afin que même mort, je puisse encore l’embrasser... »\n— « Ne dites pas de telles choses ! »\nElle l’avait interrompu. Il se retourna, surpris. Mais elle ne baissa pas les yeux.\nCette fois, elle le regarda droit dans les siens.\n\n— « Commandant, je... »\nMême le légendaire Commandant invincible doit faire face un jour… au champ de bataille des mondanités ! Que voulait-elle lui avouer ?\nLa suite dans le prochain numéro de L’Invincible Commandant de Légion.",
+          ContentFR = "Chapitre 235 — Mon cœur n’appartient qu’à Hyperborea\n\nLe banquet de célébration était terminé. Hormis les patrouilleurs, chacun dormait du sommeil lourd des soldats exténués. L’adjudante glissait entre les tentes, prenant garde que ses pas n’interrompent pas le repos de ses camarades.\n\nFinalement, elle souleva la tenture de la tente qu’elle cherchait.\nLà, assis dans la pénombre, se tenait celui dont la simple présence inspirait confiance : le Commandant. Il insérait les balles une à une dans son chargeur, d’un geste méthodique.\n— « Commandant, nous sommes revenus du front. Vous n’avez plus besoin d’être aussi tendu. »\n— « Quand aura lieu le prochain combat ? »\nIl n’avait pas relevé la tête.\nIl n’avait pas entendu — ou plutôt, il avait refusé d’entendre.\n— « Lors de la dernière bataille, vous avez écrasé l’assaut élyséen. Ils ne tenteront rien de sitôt. »\n\nSilence. Une goutte de sueur glissa le long de la tempe de l’adjudante.\nEnfin, elle prit son courage à deux mains et sortit de sa veste une liasse de lettres richement décorées.\n— « Commandant... ne pourriez-vous pas, comme les autres, prendre un moment pour simplement vivre ? Voici une invitation au bal de la duchesse, une autre pour la partie de chasse de la princesse, et... »\n— « Mille affaires pressantes, infiltration élyséenne à surveiller. Répondez cela pour toutes. »\n— « Mais... vous avez déjà utilisé cette excuse dix-huit fois... »\n<I>Zssh—</>\nLe Commandant posa son arme, se leva et marcha jusqu’à l’étendard des Trois Loups.\nD’un geste lent, il effleura les marques brûlées laissées par la guerre.\n— « Je comprends ton inquiétude. Et je respecte leur sollicitude. Mais pendant que nous nous reposons, les sbires d’Élysium harcèlent nos frontières. Ils chassent des milliers de Solariens de leurs foyers. Ils brandissent la bannière de leurs faux dieux, prétendant purifier les hérétiques, tout en massacrant nos camarades et nos frères.\nMais nous savons la vérité : <H>les gens de l’Empire ne sont pas des hérétiques — seulement des êtres libérés des chaînes divines, avides de liberté et de délivrance.</> »\n\nSa main se crispa. L’étendard claqua comme une flamme prise dans le vent.\n— « Leurs dieux mensongers occupent encore notre antique patrie. Tant que leur tour sacrée ne sera pas abattue, mon cœur ne connaîtra pas la paix. Si je dois goûter au repos... que ce soit lorsque je serai enveloppé dans ce drapeau, afin que même mort, je puisse encore l’embrasser... »\n— « Ne dites pas de telles choses ! »\nElle l’avait interrompu. Il se retourna, surpris. Mais elle ne baissa pas les yeux.\nCette fois, elle le regarda droit dans les siens.\n\n— « Commandant, je... »\nMême le légendaire Commandant invincible doit faire face un jour… au champ de bataille des mondanités ! Que voulait-elle lui avouer ?\nLa suite dans le prochain numéro de <I>L’Invincible Commandant de Légion</>.",
           TextMapId = "READ_TEXT_2000051"
         },
         READ_TEXT_2000052 = {
@@ -33316,7 +34979,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "READ_TEXT_2000066"
         },
         READ_TEXT_2000067 = {
-          ContentFR = "Frères et sœurs Charons, souvenez-vous du poème qu’on nous faisait lire quand nous étions enfants ?\n« As-tu jamais entendu parler d’une telle liesse, où soldats sacrilèges et Enfants du Démon se tiennent la main ? »\nOui, celui-là. L’Hymne de la Chandelle d’Argent. Celui qu’on nous a tant fait entendre que nos oreilles en ont fait des cals.\n\nChaque année, au moment de la Fête de la Chandelle d’Argent, nous autres Charons, qui tirons le diable par la queue, préparons masques et costumes. Car ce n’est qu’en ce jour-là que les Solariens daignent, vaguement, faire semblant de nous traiter comme des êtres humains. Ce jour-là seulement, ils retiennent un peu leur mépris, dansent, rient... et nous font avaler cent fois de suite l’Hymne de la Chandelle d’Argent.\n\nJe sais que beaucoup d’entre vous en connaissent des passages par cœur, et vont même jusqu’à trouver touchants Dis Ier et son frère Soranus. J’en ai même vus, parmi nos frères Charons, persuadés que, parce que nos ancêtres auraient, par erreur, tué le frère du premier Empereur Dis, nous devrions, nous, Charons, servir les Solariens comme esclaves pour l’éternité. On parle de « dette de sang », de « justice du ciel et de la terre », et de prétendus « destins auxquels on ne peut rien ».\n\nNe les croyez pas !\nNe les croyez pas !\nNe les croyez pas !\n\nLa Fête de la Chandelle d’Argent est un mensonge de bout en bout. Il n’y a jamais eu de « fête » — seulement un massacre. Et Soranus n’a rien d’une victime innocente : il était le boucher, le pire de tous.\n\nLaissez-moi vous raconter une autre histoire. La vraie.\n\nNos ancêtres, le peuple Charon, vivaient depuis toujours dans le Nord. À cause de la Dégradation, ils ne bâtissaient pas de grandes cités, mais de petits villages épars. L’une de ces lignées s’était fixée près du Lac du Deuil, vivant de peu, se réchauffant grâce au Phoxène tiré de l’Arbre Céleste de Glevum.\n\nUn jour, des rumeurs sont montées du Sud : troubles au sein de l’Église Élyséenne, des rebelles chassés et poussés vers les terres du Nord. Au début, ce n’étaient que quelques mots, trop lointains pour nous concerner. Jusqu’à ce que ces Solariens en armes apparaissent sur la rive du lac.\n\nNos ancêtres les prirent en pitié. Ils craignaient que ces gens-là ne survivent pas à l’hiver nordique. Alors ils les conduisirent jusqu’au village, leur offrirent à manger.\n\nCet hiver-là fut d’une âpreté telle qu’on aurait dit une punition du Père Ask et de la Mère Embla eux-mêmes. Le vent et la neige n’ont pourtant pas réussi à les tuer ; ils n’ont fait qu’attiser leur convoitise. Le chef des réfugiés Solariens, Galea, n’avait pas mauvaise mine. Mais son frère, lui, était un véritable vautour. La première fois qu’il fut invité dans le village de nos ancêtres, ses yeux se sont posés tout droit sur des greniers pourtant à peine garnis. Et, dans sa tête, déjà, il tissait des plans sanglants.\n\nLa nuit qui aurait dû célébrer la paix, Soranus, cette brute sans scrupules, avait affûté ses lames et préparé ses boucliers. Au beau milieu du festin préparé par nos anciens, il lança l’attaque.\n\nEn une seule nuit, à part quelques chasseurs partis au loin, personne ne survécut...\nSur les ossements de nos frères et sœurs, Galea érigea Givrelac et l’Empire Hyperboréen, nous réduisit en esclavage, forgea une histoire mensongère pour nous faire croire que nous étions les coupables.\n\nRéfléchissez bien. Tout l’Hymne de la Chandelle d’Argent parle des Solariens, rien que d’eux. Pas une seule fois il ne prononce le nom d’un ancêtre Charon. Est-ce par oubli ? Ou parce qu’ils n’ont jamais jugé utile de nous voir, de nous reconnaître ?\n\nLa Fête de la Chandelle d’Argent, ce poème, ces lumières soi-disant « partagées », ne sont que mise en scène. On nous dit qu’un jour par an, tous seraient égaux dans la fête, que Charons et Solariens se mêleraient sans distinction. Mais cette hiérarchie entre eux et nous, c’est eux qui l’ont inventée, eux qui la perpétuent.\n\nSoranus n’est pas un héros tragique. C’est un boucher infâme.\n\nNe vous laissez plus berner. Boycottez la Fête de la Chandelle d’Argent.",
+          ContentFR = "Frères et sœurs Charons, souvenez-vous du poème qu’on nous faisait lire quand nous étions enfants ?\n« As-tu jamais entendu parler d’une telle liesse, où soldats sacrilèges et Enfants du Démon se tiennent la main ? »\nOui, celui-là. <I>L’Hymne de la Chandelle d’Argent</>. Celui qu’on nous a tant fait entendre que nos oreilles en ont fait des cals.\n\nChaque année, au moment de la Fête de la Chandelle d’Argent, nous autres Charons, qui tirons le diable par la queue, préparons masques et costumes. Car ce n’est qu’en ce jour-là que les Solariens daignent, vaguement, faire semblant de nous traiter comme des êtres humains. Ce jour-là seulement, ils retiennent un peu leur mépris, dansent, rient... et nous font avaler cent fois de suite l’Hymne de la Chandelle d’Argent.\n\nJe sais que beaucoup d’entre vous en connaissent des passages par cœur, et vont même jusqu’à trouver touchants Dis Ier et son frère Soranus. J’en ai même vus, parmi nos frères Charons, persuadés que, parce que nos ancêtres auraient, par erreur, tué le frère du premier Empereur Dis, nous devrions, nous, Charons, servir les Solariens comme esclaves pour l’éternité. On parle de « dette de sang », de « justice du ciel et de la terre », et de prétendus « destins auxquels on ne peut rien ».\n\nNe les croyez pas !\nNe les croyez pas !\nNe les croyez pas !\n\nLa Fête de la Chandelle d’Argent est un mensonge de bout en bout. Il n’y a jamais eu de « fête » — seulement un massacre. Et Soranus n’a rien d’une victime innocente : il était le boucher, le pire de tous.\n\nLaissez-moi vous raconter une autre histoire. La vraie.\n\nNos ancêtres, le peuple Charon, vivaient depuis toujours dans le Nord. À cause de la Dégradation, ils ne bâtissaient pas de grandes cités, mais de petits villages épars. L’une de ces lignées s’était fixée près du Lac du Deuil, vivant de peu, se réchauffant grâce au Phoxène tiré de l’Arbre Céleste de Glevum.\n\nUn jour, des rumeurs sont montées du Sud : troubles au sein de l’Église Élyséenne, des rebelles chassés et poussés vers les terres du Nord. Au début, ce n’étaient que quelques mots, trop lointains pour nous concerner. Jusqu’à ce que ces Solariens en armes apparaissent sur la rive du lac.\n\nNos ancêtres les prirent en pitié. Ils craignaient que ces gens-là ne survivent pas à l’hiver nordique. Alors ils les conduisirent jusqu’au village, leur offrirent à manger.\n\nCet hiver-là fut d’une âpreté telle qu’on aurait dit une punition du Père Ask et de la Mère Embla eux-mêmes. Le vent et la neige n’ont pourtant pas réussi à les tuer ; ils n’ont fait qu’attiser leur convoitise. Le chef des réfugiés Solariens, Galea, n’avait pas mauvaise mine. Mais son frère, lui, était un véritable vautour. La première fois qu’il fut invité dans le village de nos ancêtres, ses yeux se sont posés tout droit sur des greniers pourtant à peine garnis. Et, dans sa tête, déjà, il tissait des plans sanglants.\n\nLa nuit qui aurait dû célébrer la paix, Soranus, cette brute sans scrupules, avait affûté ses lames et préparé ses boucliers. Au beau milieu du festin préparé par nos anciens, il lança l’attaque.\n\nEn une seule nuit, à part quelques chasseurs partis au loin, personne ne survécut...\nSur les ossements de nos frères et sœurs, Galea érigea Givrelac et l’Empire Hyperboréen, nous réduisit en esclavage, forgea une histoire mensongère pour nous faire croire que nous étions les coupables.\n\nRéfléchissez bien. Tout l’Hymne de la Chandelle d’Argent parle des Solariens, rien que d’eux. Pas une seule fois il ne prononce le nom d’un ancêtre Charon. Est-ce par oubli ? Ou parce qu’ils n’ont jamais jugé utile de nous voir, de nous reconnaître ?\n\nLa Fête de la Chandelle d’Argent, ce poème, ces lumières soi-disant « partagées », ne sont que mise en scène. On nous dit qu’un jour par an, tous seraient égaux dans la fête, que Charons et Solariens se mêleraient sans distinction. Mais cette hiérarchie entre eux et nous, c’est eux qui l’ont inventée, eux qui la perpétuent.\n\nSoranus n’est pas un héros tragique. C’est un boucher infâme.\n\nNe vous laissez plus berner. Boycottez la Fête de la Chandelle d’Argent.",
           TextMapId = "READ_TEXT_2000067"
         },
         READ_TEXT_2000068 = {
@@ -33388,7 +35051,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "READ_TEXT_2000084"
         },
         READ_TEXT_2000085 = {
-          ContentFR = "...\nDixième affaire — Un voisin malveillant impossible à chasser, ou comment Le Compendium des Cent Essences fit des merveilles\n\nIl y a quelques années, un homme du nom de Zhao Da vint me trouver pour se plaindre de son nouveau voisin, Zhang San. Celui-ci se présentait régulièrement à sa porte pour l’accuser de troubler son sommeil par des « chants nocturnes au cœur de la nuit ». Or je connaissais Zhao Da de longue date : le jour, il portait des charges sur les quais ; une fois rentré chez lui, il s’effondrait aussitôt dans un sommeil profond. Comment aurait-il pu importuner qui que ce soit en pleine nuit ?\n\nZhang San, toutefois, resta campé sur ses positions. Jour après jour, avant même l’aube, il venait frapper violemment à la porte de Zhao Da. Jusqu’au matin où ce dernier, les yeux encore embués de sommeil, à bout de patience, ouvrit et leva le poing.\nOr les Neuf Chapitres de Dafeng enseignent :\n« La grande vertu du Ciel porte le nom de Vie ; Attenter au corps ou ôter la vie — cela est proscrit. »\nSelon la loi, Zhao Da devait donc être puni.\n\nCertes, frapper autrui était une faute. Mais Zhang San, qui s’était rendu coupable de harcèlement en premier lieu, ne pouvait être laissé sans réponse. Argumenter avec un tel homme était vain, et se battre davantage ne ferait qu’aggraver les choses. Après mûre réflexion, je décidai donc de prêter à Zhao Da un ouvrage qu’un ami m’avait autrefois offert : Le Compendium des Cent Essences, afin qu’il en tire enseignement.\nLe lendemain, quoi que Zhang San criât et invectivât, Zhao Da demeura derrière le seuil de sa porte. À chaque insulte, il ne répondit que par quatre mots : Joie, Référence, Piété, Urgence.\nEn quelques échanges à peine, Zhang San, hors de lui, s’apprêta à lever la main. Zhao Da, sans s’émouvoir, releva calmement sa manche et dévoila les marques encore visibles de la punition reçue la veille. À cette vue, Zhang San dut battre en retraite, dépité.\n\nLe jour suivant, il revint. Zhao Da usa des mêmes quatre mots.\nAprès plusieurs jours de ce manège, Zhang San disparut sans laisser de trace.",
+          ContentFR = "...\nDixième affaire — Un voisin malveillant impossible à chasser, ou comment <I>Le Compendium des Cent Essences</> fit des merveilles\n\nIl y a quelques années, un homme du nom de Zhao Da vint me trouver pour se plaindre de son nouveau voisin, Zhang San. Celui-ci se présentait régulièrement à sa porte pour l’accuser de troubler son sommeil par des « chants nocturnes au cœur de la nuit ». Or je connaissais Zhao Da de longue date : le jour, il portait des charges sur les quais ; une fois rentré chez lui, il s’effondrait aussitôt dans un sommeil profond. Comment aurait-il pu importuner qui que ce soit en pleine nuit ?\n\nZhang San, toutefois, resta campé sur ses positions. Jour après jour, avant même l’aube, il venait frapper violemment à la porte de Zhao Da. Jusqu’au matin où ce dernier, les yeux encore embués de sommeil, à bout de patience, ouvrit et leva le poing.\nOr les Neuf Chapitres de Dafeng enseignent :\n« La grande vertu du Ciel porte le nom de Vie ; Attenter au corps ou ôter la vie — cela est proscrit. »\nSelon la loi, Zhao Da devait donc être puni.\n\nCertes, frapper autrui était une faute. Mais Zhang San, qui s’était rendu coupable de harcèlement en premier lieu, ne pouvait être laissé sans réponse. Argumenter avec un tel homme était vain, et se battre davantage ne ferait qu’aggraver les choses. Après mûre réflexion, je décidai donc de prêter à Zhao Da un ouvrage qu’un ami m’avait autrefois offert : <I>Le Compendium des Cent Essences</>, afin qu’il en tire enseignement.\nLe lendemain, quoi que Zhang San criât et invectivât, Zhao Da demeura derrière le seuil de sa porte. À chaque insulte, il ne répondit que par quatre mots : Joie, Référence, Piété, Urgence.\nEn quelques échanges à peine, Zhang San, hors de lui, s’apprêta à lever la main. Zhao Da, sans s’émouvoir, releva calmement sa manche et dévoila les marques encore visibles de la punition reçue la veille. À cette vue, Zhang San dut battre en retraite, dépité.\n\nLe jour suivant, il revint. Zhao Da usa des mêmes quatre mots.\nAprès plusieurs jours de ce manège, Zhang San disparut sans laisser de trace.",
           TextMapId = "READ_TEXT_2000085"
         },
         READ_TEXT_2000086 = {
@@ -33440,8 +35103,80 @@ Allez voir ce qui se passe.]],
           TextMapId = "READ_TEXT_2000097"
         },
         READ_TEXT_2000098 = {
-          ContentFR = "Réveille-toi, jeune homme, et garde les pieds sur terre ! Il n’existe pas de raccourci miraculeux en ce monde. Aucun des maîtres de la Secte de l’Insondable Trésor n’a atteint les sommets sans de longues années d’entraînement acharné.\n\nNe te laisse surtout pas abuser par des balivernes comme Le Dragon au Firmament, ces récits creux qui corrompent l’esprit des jeunes ignorants. N’espère pas qu’une chance démesurée te tombe du ciel sans le moindre effort et te propulse d’un coup au sommet.\n\nPrends cette modeste somme comme frais de consultation et fais-toi examiner correctement ; une chute de falaise n’est pas anodine. À l’avenir, entraîne-toi avec assiduité, garde l’esprit clair et cesse de t’abandonner aux illusions et aux voies dévoyées !",
+          ContentFR = "Réveille-toi, jeune homme, et garde les pieds sur terre ! Il n’existe pas de raccourci miraculeux en ce monde. Aucun des maîtres de la Secte de l’Insondable Trésor n’a atteint les sommets sans de longues années d’entraînement acharné.\n\nNe te laisse surtout pas abuser par des balivernes comme <I>Le Dragon au Firmament</>, ces récits creux qui corrompent l’esprit des jeunes ignorants. N’espère pas qu’une chance démesurée te tombe du ciel sans le moindre effort et te propulse d’un coup au sommet.\n\nPrends cette modeste somme comme frais de consultation et fais-toi examiner correctement ; une chute de falaise n’est pas anodine. À l’avenir, entraîne-toi avec assiduité, garde l’esprit clair et cesse de t’abandonner aux illusions et aux voies dévoyées !",
           TextMapId = "READ_TEXT_2000098"
+        },
+        READ_TEXT_2000099 = {
+          ContentFR = "Préparer un veau roux et le brûler au sud, en offrande au Ciel suprême.\nPrendre mouton et porc, puis les enfouir au nord, en offrande à la Terre féconde.\nÀ l’est, sacrifier au Soleil ; à l’ouest, à la Lune.\n\nÉlever la fosse rituelle et l’autel, puis célébrer séparément les rites dédiés aux Quatre Orients et aux Quatre Saisons.\nLors du sacrifice, les Trois Maîtres des Rites en assurent l’office.\n\nCelui qui reçoit la faveur de Taihao porte l’encens de Lune Profonde, se tient au centre et rend hommage au Seigneur Divin.\nCelui dont le savoir embrasse les cent écoles porte l’encens de Sumei, se tient à gauche et rend hommage aux ancêtres.\nCelui qui excelle dans les arts multiples porte l’encens de Bois d’Or, se tient à droite et rend hommage aux esprits de la Terre et des Moissons.\n\nQue nul vêtement ne soit orné d’indigo sombre ni de pourpre obscure ; que nul habit intime ne soit de rouge ni de violet.\nDurant le rite, nul ne doit parler. Une fois les offrandes achevées, il convient de veiller le feu sacrificiel durant un quart d’heure.\n\nLes mets sacrificiels ne doivent pas être conservés durant la nuit ; passés trois jours, ils ne doivent plus être utilisés.\n\nNote : Ces prescriptions sont complexes et fastueuses, et ne correspondent plus aux usages de Huaxu aujourd’hui. Elles ne sont consignées ici qu’à titre de témoignage des temps anciens et ne doivent pas être rétablies.",
+          TextMapId = "READ_TEXT_2000099"
+        },
+        READ_TEXT_2000100 = {
+          ContentFR = "...\n\nEn résumé, la Cérémonie de l’Encens constitue la fête cyclique la plus importante de Huaxu. Bien que sa forme rituelle ait continuellement évolué au fil d’une longue histoire, les étapes de cette évolution demeurent remarquablement claires, chacune correspondant au niveau économique, technologique et artistique atteint par le pays à l’époque concernée.\n\nUne hypothèse raisonnable serait que cette célébration dérive d’un grand rituel sacrificiel propre à cette région. Au cours de son évolution, elle s’est adaptée aux conditions sociales et nationales de chaque époque, abandonnant certains éléments pour n’en conserver que le cœur essentiel, devenu le support d’un sentiment particulier partagé par le peuple de Huaxu.\n\nLes « divinités » auxquelles croient les habitants de Huaxu existent bel et bien, et influencent concrètement l’écosystème à l’intérieur des frontières du pays. J’ai moi-même assisté, lors de la Cérémonie de l’Encens, à la descente d’une entité appelée Taihao, et cette vision m’a profondément bouleversé.\n\n...\n\nJe commence à penser que mes recherches reposaient peut-être sur une erreur fondamentale. Je supposais jusqu’ici que la Cérémonie de l’Encens ressemblait aux fêtes d’autres nations : des pratiques culturelles issues de rites commémoratifs ou sacrificiels, dont certaines coutumes se seraient perpétuées sous forme de traditions.\nEn règle générale, ces coutumes tendent à se simplifier et à se séculariser avec le passage du temps.\n\nPourtant, après avoir examiné tous les documents existants concernant la cérémonie à Huaxu, j’ai constaté que son rite central — l’acte même d’« offrir l’encens » — est demeuré inchangé depuis près d’un millénaire, tant dans les matériaux employés que dans les quantités requises.\n\nCompte tenu de la manifestation tangible du pouvoir des « divinités » au sein du territoire de Huaxu, j’ai de bonnes raisons de penser que la Cérémonie de l’Encens n’est pas simplement un acte culturel ou politique de vénération. Elle pourrait remplir une fonction spécifique.\nAutrement dit : à Huaxu, et à Huaxu seulement, un rituel consistant à offrir des sacrifices en échange de la protection d’une divinité pourrait véritablement fonctionner comme une forme de transaction.\n\nMais pourquoi Taihao aurait-il besoin de ces encens ? Et quelle est véritablement la nature de Taihao ? Aucun autre pays d’Atlasia ne possède de traces comparables, et l’encens utilisé pour ces offrandes n’est produit qu’à Huaxu...\nUn encens qui n’existe qu’ici — et une « divinité » qui n’apparaît qu’ici et s’en nourrit ? Tout cela paraît étrangement cohérent... presque comme si tout avait été arrangé à l’avance.\n\n...\n\nCette hypothèse fonctionnelle m’a conduit à une idée intrigante. Peut-être que les « divinités » de Huaxu ne sont pas réellement ces êtres supérieurs que l’imagination populaire décrit, mais plutôt quelque chose de comparable à une machine. Une « machine » capable de réguler l’environnement dans sa zone d’influence, d’affecter — voire de contrôler — les Souillés, et de les utiliser comme instruments de coercition.\nDans ce cas, la Cérémonie de l’Encens ne serait pas tant une cérémonie qu’une procédure régulière : une opération consistant à alimenter cette immense « machine » avec le combustible appelé « encens », selon des intervalles et des quantités précis.\n\nSi cette hypothèse s’avérait exacte, cela signifierait que les habitants de Huaxu maîtrisaient déjà, il y a mille ans, une technologie capable de « créer des divinités ». Si cette technologie pouvait être déchiffrée, peut-être serait-il possible d’étendre les Neuf Chapitres de Dafeng à l’ensemble d’Atlasia, ou d’en réduire le champ d’action jusqu’à l’échelle individuelle afin de fabriquer des dispositifs de protection particuliers.\n\nPourtant, si une telle technologie existe réellement, pourquoi ne fonctionne-t-elle qu’à l’intérieur des frontières de Huaxu ? Même les Tisse-Étoiles originaires de Huaxu n’ont jamais été mentionnés comme ayant utilisé une technologie similaire en dehors du pays.\n\nQuelle pourrait bien être la cause profonde d’une telle limitation ?\n\n...",
+          TextMapId = "READ_TEXT_2000100"
+        },
+        READ_TEXT_2000101 = {
+          ContentFR = "...\n\nLa feuille avait jauni depuis longtemps, mais les traces d’encre qui y figuraient demeuraient encore nettes.\nQing la contempla, poussa un long soupir mélancolique, puis esquissa un léger sourire.\n« Autrefois, je rêvais de parcourir le monde, dit-il à Feng. Mais mes parents ne me l’ont jamais permis. Alors j’ai inscrit ces mots sur une feuille verte et je l’ai laissée partir au fil de l’eau, pour apaiser mon cœur. Puisque c’est vous qui l’avez trouvée, emportez-la avec vous dans vos voyages, afin que mon désir puisse voyager à vos côtés. »\n\nFeng resta silencieux un long moment avant de répondre :\n« Pourquoi ne partirions-nous pas ensemble ? »\n\n...\n\nLorsqu’ils atteignirent les rives de la rivière Lin, Feng tomba gravement malade et demeura longtemps cloué au lit. Qing lui dit :\n« Reposez-vous et reprenez des forces. Je resterai ici jusqu’à votre guérison, et nous reprendrons alors la route ensemble. »\nMais Feng refusa. Il sortit l’ancienne feuille et la plaça dans la main de Qing.\n« Emportez cette feuille avec vous, dit-il. Allez vers les terres lointaines... et considérez que nous voyageons encore côte à côte. »\n\n...\n\nQing parcourut montagnes et fleuves, et ses poèmes finirent par remplir tout un coffre. Partout où il passait, certains tentaient de le retenir, mais il déclinait toujours leurs invitations.\nDans ses dernières années, il revint finalement sur les rives de la Lin.\nDevant la tombe de Feng, il enterra l’ancienne feuille dans la terre et déposa au-dessus d’elle de nouvelles feuilles vertes.\n\nSur l’une d’elles, il écrivit ces deux vers :\n« La feuille verte repose sur tes os ; Mon tendre chagrin suit le courant de l’eau. »",
+          TextMapId = "READ_TEXT_2000101"
+        },
+        READ_TEXT_2000102 = {
+          ContentFR = "Pavillon de l’Arbitrage\n\nAux débuts des Neuf Chapitres de Dafeng, le Pavillon de l’Arbitrage jouait un rôle bien plus essentiel qu’aujourd’hui. La fonction originelle pour laquelle il fut établi s’est toutefois perdue avec le temps, et seuls quelques rares historiens en ont encore vaguement connaissance.\n\nSous l’édifice s’étend une structure arquée semblable à un pont suspendu, qui traverse les airs tel un arc-en-ciel. La légende raconte que le Seigneur Taihao lui-même traverse parfois le ciel et s’arrête là pour écouter en silence le tumulte du monde des hommes, signe que le Ciel prête l’oreille aux voix du peuple et que la loi divine veille sur toutes choses.\n\nAujourd’hui, le Pavillon de l’Arbitrage constitue le centre politique de Huaxu. Il se dresse avec majesté au-dessus des nuages et, où que l’on se trouve à Haojing, il suffit de lever les yeux pour l’apercevoir. Ainsi en est-il des Neuf Chapitres de Dafeng pour le peuple : une présence claire et impossible à ignorer.\n\nPharmacie Zesheng\n\nAutrefois, lorsque la maladie frappait, les habitants de Huaxu faisaient souvent appel aux guérisseurs pratiquant les rituels de Zhuyou. Avec le passage du temps, de nouveaux médecins se consacrèrent à l’étude de la pharmacologie, et des officines spécialisées dans la préparation de remèdes virent le jour.\n\nLa Pharmacie Zesheng est aujourd’hui l’établissement le plus réputé de Haojing dans ce domaine. Selon la rumeur, sa fondatrice était elle-même autrefois une praticienne de Zhuyou, avant d’abandonner ces méthodes pour se consacrer à l’étude des remèdes et développer cet art jusqu’à un niveau remarquable.\n\nOn y trouve une grande variété d’herbes médicinales rares, et la pharmacie est particulièrement célèbre pour ses formules secrètes. Elle propose également des programmes de bien-être adaptés aux saisons.\n\nSi, au cours de votre promenade en ville, la soif se fait sentir, vous pouvez aussi y faire halte : la maison offre gratuitement aux passants des boissons médicinales destinées à préserver la santé.\n\nRuelle Youlai\n\nCertains récits populaires largement répandus à Huaxu racontent qu’après la mort, il arrive que certaines personnes demeurent dans ce monde sous la forme d’un Wishen.\n\nContrairement aux représentations inquiétantes que d’autres pays associent aux esprits ou aux fantômes, les Wishen de Huaxu apparaissent dans les légendes comme des êtres plutôt bienveillants et attachants. Ils provoquent parfois de petits incidents, mais le plus souvent par gentillesse, cherchant simplement à aider ceux qui vivent encore.\n\nSelon le folklore de Haojing, il existerait un endroit appelé Ruelle Youlai, où se rassembleraient les Wishen dont les attachements terrestres ne se sont pas encore dissipés.\nLa plupart des gens considèrent cette histoire comme une simple superstition. Pourtant, certains murmurent que si l’on parcourt suffisamment longtemps les ruelles sinueuses du quartier est de la ville, il arrive qu’au détour d’un chemin l’on pénètre, sans même s’en rendre compte, dans ce mystérieux domaine...\n\nVillage de Jiaolan\n\nSi l’animation et l’agitation de Haojing commencent à vous lasser, il vous suffit de prendre la route vers l’ouest : le village de Jiaolan offre un havre de tranquillité à l’écart du tumulte du monde. Ce petit village se situe dans la banlieue occidentale de Haojing et peut facilement être rejoint à pied.\n\nLa culture de l’encens à Huaxu possède une histoire très ancienne, et Jiaolan est considéré comme le lieu où cette tradition prit naissance. Avec le temps, l’art de fabriquer l’encens s’est répandu dans tout le pays, et le village a peu à peu perdu son caractère exclusif. Il demeure cependant l’endroit où l’on trouve les plus vastes aires de séchage d’encens dans toute la région de Haojing.\n\nLorsque certaines plantes aromatiques entrent en floraison, les habitants les récoltent, les lavent soigneusement puis les étendent au soleil pour les faire sécher. Par temps clair, lorsque souffle une brise légère, leur parfum se répand à des kilomètres à la ronde, créant une atmosphère à la fois douce et irréelle.\n\nAvant de quitter les lieux, si vous souhaitez offrir un présent chargé de sens à un proche, les encens artisanaux fabriqués par les villageois constituent un choix idéal : leur parfum est délicat, et ils portent en eux une part de la culture propre à Huaxu.",
+          TextMapId = "READ_TEXT_2000102"
+        },
+        READ_TEXT_2000103 = {
+          ContentFR = "Restaurant le plus populaire : Pavillon des Huit Trésors\n\nLors des votes du mois dernier, le Pavillon des Huit Trésors a devancé le deuxième établissement de près d’une centaine de voix — preuve évidente de sa popularité. Fidèles à notre principe selon lequel « il faut avoir goûté soi-même pour pouvoir juger », nous nous sommes rendus sur place en simples clients pour tester leurs plats.\n\nLe très apprécié Tofu des Huit Trésors s’est révélé à la hauteur de sa réputation : un tofu délicat et fondant, aux saveurs riches et harmonieuses, relevé de quelques grains de maïs qui lui donnent en plus une présentation remarquable.\n\nQuant à la Carpe au vinaigre de Yanjin, bien qu’elle soit un classique de la cuisine traditionnelle, son acidité prononcée ne convient pas à tous les palais. Dans notre groupe, certains ont même eu du mal à terminer leur assiette.\n\n...\n\nContribution d’un lecteur :\nLe savoir-faire du chef Bai au Pavillon des Huit Trésors est irréprochable. Quant au chef Li, il n’est pas en reste : non seulement il cuisine admirablement bien, mais on dit aussi qu’il écrit de très beaux poèmes.\n\nContribution d’un lecteur :\nQuand j’étais enfant, ma famille organisait toujours mon anniversaire au Pavillon des Huit Trésors... Les années ont passé. Les personnes avec qui je fêtais ces moments ne sont plus là aujourd’hui, mais les plats ont toujours la même saveur. Et quelque part, cela suffit.\n\nContribution d’un lecteur :\nQuand des amis ou de la famille viennent à Haojing, le premier endroit que je leur recommande est toujours le Pavillon des Huit Trésors. Cela dit, les nouveaux plats proposés récemment sont à goûter avec prudence : on dirait qu’ils cherchent un peu trop à plaire aux visiteurs venus d’ailleurs. (Je ne dis pas ça contre les touristes, bien sûr.)\n\n...",
+          TextMapId = "READ_TEXT_2000103"
+        },
+        READ_TEXT_2000104 = {
+          ContentFR = "Ah ! Que les Neuf Chapitres de Dafeng sont grandioses !\nLorsque le chaos se sépara pour la première fois, les Neuf Chapitres furent établis ;\nPar le pacte des Deux Seigneurs, la norme fut forgée ;\nLe Dragon d’Argent fit respecter la loi et grava la voie droite ;\nHauts et majestueux !\nInébranlables à jamais !\n\n...\n\nGrandioses, vraiment grandioses !\n\nAnnotation laissée par une autre main :\nL’introduction et la conclusion restent assez convenues, et le milieu n’offre rien de particulièrement remarquable. À réécrire.",
+          TextMapId = "READ_TEXT_2000104"
+        },
+        READ_TEXT_2000105 = {
+          ContentFR = "La voie de l’encens, autrefois, consistait à brûler des aromates afin que leur parfum s’élève vers les divinités. Aujourd’hui, l’encens se mesure, ses vapeurs se mêlent et s’harmonisent, afin que par cet art l’ordre du Mandat Céleste demeure stable.\n\nLe <I>Registre de la vie de Yang</> rapporte qu’au moment de la fondation des Neuf Chapitres, Yang déclara :\n« Lorsque les voies du destin céleste s’entrelacent, les chemins se trouvent entravés et ce qui est noué ne peut être aisément délié. »\nElle envoya alors des hommes rassembler mille mesures d’aromates et les amonceler au Mausolée de Taixu, où ils furent brûlés jour et nuit sans interruption. Yang elle-même demeura assise à leurs côtés.\nLorsque la fumée devint si dense qu’aucun homme ne pouvait s’en approcher, et qu’enfin elle se dissipa... Yang avait disparu.\n\nCe récit ne saurait toutefois être tenu pour entièrement véridique. Les versions diffèrent selon les sources, et bien des détails ont changé au fil du temps. Si j’ai entrepris de composer cet ouvrage, ce n’est pas pour trancher ces débats, mais pour consigner les arts de l’encens de Huaxu tels qu’ils se sont transmis au fil des siècles. J’y ai rassemblé autant que possible les connaissances relatives au ciel et à la terre, aux affaires humaines comme aux productions du monde. L’ancien y côtoie le présent, dans l’espoir que les générations futures poursuivront cette tradition et l’enrichiront à leur tour.\n\nL’ouvrage se compose de dix-sept volumes.\n\nLes neuf premiers volumes recensent les matières aromatiques : orchidées et herbes parfumées, poivre et cannelle, bois d’aloès, bois de santal, camphre et musc — anciennes essences de Huaxu — auxquelles s’ajoutent divers parfums rares venus de contrées étrangères en guise de tribut.\n\nAnnotation : depuis l’expansion des routes des Tisse-Étoiles, des aromates jadis inconnus sont désormais accessibles.\n\nLes quatre volumes suivants traitent des usages de l’encens. L’encens est un, mais ses applications sont multiples : il peut servir aux offrandes, être porté sur soi ou entrer dans la composition de remèdes. Ces usages sont détaillés ci-après.\n\nLes trois derniers volumes exposent l’art de composer les mélanges d’encens. Bien que cet art puisse sembler simple en apparence, il constitue en réalité le plus difficile de tous. Il convient d’abord d’étudier avec soin les treize volumes précédents et d’en maîtriser parfaitement le contenu avant d’entreprendre l’apprentissage de cet art.\n\nLes usages des aromates sont aussi vastes que la mer, et leurs subtilités restent encore aujourd’hui loin d’être entièrement explorées. Pour ma part, je n’ai fait que rassembler quelques formules remarquables laissées par les sages d’autrefois, afin d’en préserver la méthode.",
+          TextMapId = "READ_TEXT_2000105"
+        },
+        READ_TEXT_2000106 = {
+          ContentFR = "Nul besoin que l’Ancien de la Lune presse davantage les choses : un fil rouge suffit à lier deux destinées, et déjà le palanquin nuptial écarlate s’arrête devant la porte.\nQu’importe que la jeune fille y consente ou non : robe revêtue, voile abaissé, dès qu’elle monte dans le palanquin, l’union est scellée. Mille mains le soulèvent et l’emportent, tandis que le jeune marié, l’esprit troublé, croit avoir aperçu en rêve une déesse céleste.\n\n(Une voix répond en hâte hors scène.)\nJing (rayonnant) : Merveilleux ! Que les bonnes nouvelles s’enchaînent ! Voilà qui mérite trois grandes coupes !\nMo : La nuit est déjà avancée. Ma promise m’attend. Je vais donc prendre congé.\nJing : Quelle absurdité ! Au Pavillon des Huit Trésors, tu as bu cent jarres sans jamais vaciller, et voilà que tu recules devant une simple coupe ? Tu vas devenir la risée de tous !\nMo : Les temps ne sont plus les mêmes. Ne t’en offense pas, frère.\n(Mo salue respectueusement.)\nJing (riant) : Ha ! Et moi qui te croyais un homme au cœur d’acier... te voilà qui baisses la tête dès que l’on parle de boire !\nJing : Enfin, soit. Puisqu’il préfère se dérober, inutile d’insister.\nMo (surpris) : Que veux-tu dire par là ? Après tant d’années d’amitié, laisserais-tu naître une querelle pour une simple coupe de vin ?\nJing : Une simple coupe ? Aujourd’hui tu te maries, les félicitations viennent de toutes parts... et tu refuses de boire avec tes frères ?\nTous : Exactement !\nJing : Quelle fraternité ! Quels frères !\nTous : Exactement !\nMo (soupirant) : Les fleurs de grenadier flambent comme le feu... mais que valent-elles face à la fumée amère de l’armoise... Eh bien, soit.\nMo (élevant la voix) : Aujourd’hui, je boirai avec vous, dussé-je y laisser ma vie ! Messieurs, je vous en prie !\n(Tous boivent.)\n\nLa lune naît au-dessus du petit pavillon, douce et courbe — mais sa lumière claire tombe dans le fossé.\n\nLa chevelure est coiffée en vain, la pipa serrée contre la poitrine... pour qui donc jouera-t-elle sa mélodie ?",
+          TextMapId = "READ_TEXT_2000106"
+        },
+        READ_TEXT_2000107 = {
+          ContentFR = "Un sachet parfumé pour rendre le travail plus agréable aux amis passionnés par leur métier — Une mesure de Bois Blanc, trois mesures de Printemps d’Excellence.\n\nLe Printemps d’Excellence possède un parfum vif et limpide, idéal pour donner à celui qui le porte une allure professionnelle et soignée, tandis que le Bois Blanc aide à conserver son calme même dans les moments de travail les plus tendus.\nUn sachet parfumé pour que même les chats des rues m’aiment — Une petite pincée de Long Qiqi, quatre mesures de Bois Blanc.\n\nLe secret réside dans cette légère odeur saline et animale que contient le Long Qiqi, qui rappelle vaguement celle d’un autre animal. Associée à la chaleur du Bois Blanc, elle peut amener les petits chats à croire que nous sommes, nous aussi... de leur espèce.\n\nUn sachet parfumé pour que l’auteur que je soutiens écrive plus vite\n— Autant de Givrefeuille que possible.\nLa Givrefeuille rafraîchit l’esprit et maintient l’éveil, ce qui permettra à mon auteur préféré d’écrire toute la nuit avec une inspiration débordante...\n\nAlors il faut en mettre beaucoup... héhé...",
+          TextMapId = "READ_TEXT_2000107"
+        },
+        READ_TEXT_2000108 = {
+          ContentFR = "À compter de ce jour, les projets suivants sont placés sous la responsabilité du Bureau des Travaux :\n\nI. Réfection des routes officielles\nSur ordre impérial, les grandes voies de la ville ainsi que les chemins secondaires seront restaurés et consolidés. Les fondations des routes seront renforcées et les chaussées élargies afin de faciliter la circulation des chariots et des montures, de favoriser les déplacements des voyageurs et d’assurer la fluidité des voies menant aux quatre directions.\n\nII. Construction d’appareils de manutention des marchandises\nDe nouveaux mécanismes destinés au transport et au transfert des marchandises seront installés. Leur structure reposera sur une ossature de fer raffiné et des dispositifs mécaniques ingénieux, afin d’améliorer leur efficacité et d’assurer un fonctionnement stable.\nCes installations permettront d’accélérer la circulation des marchandises et de favoriser la prospérité du commerce.\n\nIII. Renforcement et réparation des quais\nLes anciens embarcadères feront l’objet d’une inspection complète et de travaux de restauration. Les berges seront consolidées, les structures détériorées remplacées et de nouvelles protections mises en place afin d’assurer la sécurité des embarcations et la stabilité du transport fluvial des denrées.\n\n...\n\nTous ces travaux seront menés conformément aux règlements établis : fondés sur les méthodes traditionnelles tout en intégrant les techniques nouvelles. Le Bureau des Travaux remplit ainsi avec diligence sa mission, afin de consolider les fondements de l’État et d’apporter bénéfice et commodité au peuple.\n\nToute personne souhaitant consulter les documents détaillés relatifs à ces projets peut se rendre aux archives de l’administration.",
+          TextMapId = "READ_TEXT_2000108"
+        },
+        READ_TEXT_2000109 = {
+          ContentFR = "En observant l’intention avec laquelle les sages d’autrefois enseignaient l’étude, il apparaît clairement qu’ils cherchaient avant tout à pousser les hommes à explorer en profondeur les principes du monde, à lire largement les écrits anciens comme contemporains, afin d’élargir l’esprit et d’ouvrir le regard. Ce n’est qu’ainsi que l’on peut discerner le vrai du faux, examiner les choses avec discernement et comprendre les lois qui régissent le monde — et non se contenter d’accumuler des connaissances ou de polir son style pour rechercher la renommée, les honneurs ou la richesse.\n\nCeux qui étudient aujourd’hui endurent depuis longtemps de grandes difficultés. Les méthodes transmises par les anciens se trouvent pour la plupart consignées dans les textes classiques, mais elles demeurent souvent éloignées des réalités du monde. Celui qui possède une véritable volonté d’apprendre doit les lire attentivement, y réfléchir profondément et les interroger avec esprit critique.\n\nCar lorsqu’on prend conscience de l’immensité du ciel et de la terre et de la complexité des affaires humaines, et que l’on observe les choses avec objectivité et esprit d’analyse, alors les principes qui doivent guider notre conduite dans la vie apparaissent d’eux-mêmes. Pourquoi attendre que d’autres les établissent pour nous avant de pouvoir nous y conformer ?\n\nQuant à ce que j’ai moi-même écrit, je ne prétends pas pouvoir guider tous les élèves. Les méthodes que j’y propose ne correspondent peut-être pas entièrement à l’objectif véritable de l’étude, qui est d’élargir l’intelligence et d’éveiller la réflexion.\n\nC’est pourquoi je ne les impose plus désormais dans cette école. J’ai simplement sélectionné les principes essentiels par lesquels les sages d’autrefois enseignaient l’étude, et les ai présentés sous forme d’articles afin qu’ils soient affichés ici.\nQue chacun d’entre vous les étudie avec sérieux, en discute le sens et s’efforce de les appliquer à lui-même. Ainsi, dans vos pensées comme dans vos actions, votre jugement deviendra plus rigoureux : vous réfléchirez avec soin, discernerez avec clarté et examinerez les choses afin d’approfondir votre connaissance.\n\nTels sont les fondements véritables d’une conduite droite dans le monde, et les racines de la cultivation de la vertu et de l’aspiration au bien.\n\nCe n’est qu’en gardant ces principes pour guide que l’on peut contempler le monde avec justesse, faire naître une compréhension nouvelle et ouvrir de nouvelles voies.",
+          TextMapId = "READ_TEXT_2000109"
+        },
+        READ_TEXT_2000110 = {
+          ContentFR = "4 juin\nDemandeur : Wang Quan\nMotif : Je soutiens que le tofu soyeux sucré est le meilleur, mais Zhang Fu affirme que le salé est supérieur. Il ne reste qu’une solution : un duel pour trancher la question !\n\n28 juin\nDemandeur : Xu Hong\nMotif : Je souhaite tester un nouveau mécanisme explosif. Le terrain d’entraînement étant assez dégagé, il s’y prête parfaitement.\n\n15 juillet\nDemandeur : Su Yi\nMotif : Lu Ye et Pei Jing veulent s’exercer au tir à l’arc et à l’arbalète. On m’a donc demandé de venir les superviser.\n\n16 juillet\nDemandeur : Su Yi\nMotif : Même raison qu’hier. (Ces enfants progressent vraiment bien !)\n\n6 août\nDemandeur : Oncle Tang\nMotif : Un nouveau dispositif d’amplification sonore pour le combat vient d’être achevé. Je voudrais que chacun vienne chanter à tour de rôle sur le terrain d’entraînement afin d’en tester la portée.\n\n20 août\nDemandeur : Oncle Tang\nMotif : Zhu Pu s’est blessé à la jambe à force de s’entraîner. Je voudrais aujourd’hui tester l’attelle de soutien que j’ai conçue pour lui et relever quelques données.",
+          TextMapId = "READ_TEXT_2000110"
+        },
+        READ_TEXT_2000111 = {
+          ContentFR = "I) La Machine Miaou-veilleuse\n\nConsigné par : Oncle Tang, qui aime tous les habitants des Pics Extérieurs\nContenu de l’expérience :\nLes enfants participants ont été divisés en deux groupes. Le premier groupe a reçu des encouragements grâce à la Machine Miaou-veilleuse, tandis que l’autre servait de groupe témoin.\n\nUne fois l’expérience commencée, tous ont lu <I>Principes de mécanique que tous les enfants de Huaxu peuvent apprendre</>.\nAprès le temps d’un bâton d’encens, un examen leur a été donné.\n\nRésultats :\nCertains enfants ayant utilisé la Machine Miaou-veilleuse (comme Zhu Pu) se sont classés dans les dix premiers, mais d’autres sont arrivés parmi les derniers.\nParmi ceux qui ne l’avaient pas utilisée (comme Pei Jing), les résultats se situent globalement dans la moyenne.\n\nMessages :\nSu Yi : Si l’on considère leurs aptitudes, les enfants ne sont peut-être pas tous au même niveau. Les résultats de cette expérience ne peuvent donc pas être considérés comme concluants.\nXu Hong : Je pense simplement que certains enfants ont été effrayés par l’apparence de la machine.\nKezhou : Le résultat de l’expérience m’importe peu. Je veux surtout savoir... qu’est-ce que c’est que ce nom dans la signature ? Oncle Tang aurait-il pris le mauvais remède ?\n\nII) « Cours, Canard ! »\n\nConsigné par : Oncle Tang, qui vous aime encore aujourd’hui\nContenu de l’expérience :\nAprès avoir pris les mesures de sécurité nécessaires, les participants se rendent à l’extérieur. Lorsqu’ils rencontrent un Bi’an obscur isolé, ils doivent remonter le mécanisme de « Cours, Canard ! » puis le lancer.\n\nRésultats :\nLes participants ont indiqué que le bruit produit par « Cours, Canard ! » ne fait pas fuir le Bi’an obscur. Au contraire, il semble attirer davantage de Bi’an obscurs et augmenter leur agressivité.\n\nMesures d’amélioration :\nTenter d’augmenter encore le volume de l’alarme de « Cours, Canard ! ».\n\nMessages :\nSu Yi : Pourquoi ne pas y ajouter quelques charges explosives ? Comme les pétards du Nouvel An : on les lance vers le Bi’an obscur, et pendant que ça crépite, on prend la fuite.\nOncle Tang : Cet objet est destiné aux enfants qui rentrent seuls de l’école pour se défendre sur le chemin du retour. Si on y ajoute des explosifs, j’ai peur qu’ils ne sachent pas l’utiliser correctement et se blessent.\nShen Han : Les enfants vont bien ? Personne n’a été blessé, j’espère ? Oncle Tang, la prochaine fois, évitez d’emmener les enfants dans ce genre d’expériences dangereuses !",
+          TextMapId = "READ_TEXT_2000111"
+        },
+        READ_TEXT_2000112 = {
+          ContentFR = "Au sein du système de gouvernance de Huaxu, le Tournoi de l’Encens constitue sans conteste l’un des modes de sélection des fonctionnaires les plus singuliers. Afin de découvrir, parmi les jeunes générations, des individus talentueux et ambitieux, le Bureau des Rites a institué un examen de sélection organisé chaque année. Cette institution, fondée sur la tradition propre à Huaxu de la culture de l’encens, se déroule en plusieurs étapes successives. Elle évalue ouvertement les connaissances des candidats tout en examinant plus discrètement leur caractère et leur aptitude à exercer des fonctions publiques. Au fil du temps, elle est devenue l’un des symboles les plus distinctifs du système administratif de Huaxu.\n\nÉpreuve des Temples — la fumée pour limite, l’érudition pour critère\nLa sélection débute par l’Épreuve des Temples, un examen régional de petite ampleur organisé à travers tout Huaxu. Chaque session se déroule dans un Temple du Dragon d’Argent, dont le périmètre sert de cadre à l’épreuve. Il s’agit à la fois d’une première étape de sélection et d’un témoignage de respect envers le Seigneur Dragon d’Argent.\nL’examen se tient à l’intérieur même du temple et est surveillé par les officiants de l’encens qui y servent. Ceux-ci assurent la surveillance de l’épreuve avec rigueur et impartialité du début à la fin.\n\nÀ ce stade, aucune entrevue n’est prévue : l’épreuve vise exclusivement à évaluer les connaissances des candidats. Le jour de l’examen, les participants prennent place dans la salle sur présentation de leur autorisation d’inscription. Les pinceaux, l’encre, le papier et la pierre à encre sont distribués, mais personne n’est autorisé à écrire avant le signal officiel.\nCe n’est qu’après que l’officiant chargé de la surveillance a allumé l’Encens de Lune Profonde, et que les candidats ont accompli le rite de gratitude envers le Seigneur Dragon d’Argent, que l’épreuve commence véritablement.\nLa durée de l’examen correspond exactement au temps nécessaire pour qu’un bâton d’Encens de Lune Profonde se consume entièrement.\nLes trois meilleurs candidats de chaque session accèdent à l’étape suivante et doivent se rendre à la capitale de Huaxu, Haojing, afin de participer à une sélection bien plus exigeante.\n\nÉpreuve de Répartition — aptitude au poste et jugement du caractère\nLes candidats parvenus à Haojing affrontent ensuite l’Épreuve de Répartition, centrée sur l’adéquation entre les compétences du candidat et les fonctions qu’il souhaite exercer.\nContrairement à l’Épreuve des Temples, qui repose principalement sur l’examen écrit, cette étape accorde une place plus importante aux aptitudes concrètes et à la compatibilité avec les responsabilités du poste. Les entretiens permettent aux examinateurs d’évaluer plus directement l’expression, la réflexion et la personnalité des candidats.\nAvant de passer l’épreuve, les candidats doivent indiquer l’institution dans laquelle ils souhaitent exercer leurs fonctions, choisissant ainsi parmi les trois grandes administrations et leurs différents services. Le contenu de l’évaluation est alors adapté aux missions de l’institution choisie.\n\nLa conclusion de l’Épreuve de Répartition marque la fin du Tournoi de l’Encens pour l’année en cours. Une fois la liste des candidats retenus établie, le Bureau des Rites convoque les lauréats au Pavillon de l’Arbitrage afin qu’ils prennent leurs fonctions.\nToutefois, les candidats dont le talent et les qualités morales se distinguent particulièrement peuvent également attirer l’attention du Seigneur Dragon d’Argent. Dans ce cas, un Bi’an, messager du Seigneur Dragon d’Argent, vient leur transmettre une convocation spéciale leur permettant d’accéder à une troisième étape : la sélection pour la prestigieuse fonction de Haut Chancelier de Longyuan.\n\nPendant ce temps, le Pavillon de l’Arbitrage entre dans une courte période de réorganisation afin de préparer les affectations et les sélections de haut rang.\nParallèlement, le Pavillon de l’Encens intensifie ses préparatifs et rassemble divers encens rares qui seront utilisés exclusivement lors de la sélection du Haut Chancelier de Longyuan.\nQuant à la manière dont ce dernier est finalement choisi, les avis divergent largement au sein même de Huaxu. L’auteur n’a pu apprendre qu’une chose : il existerait en interne une procédure relativement complète.\n\nCependant, faute de place, nous aborderons la question du Haut Chancelier de Longyuan dans le prochain numéro.",
+          TextMapId = "READ_TEXT_2000112"
+        },
+        READ_TEXT_2000113 = {
+          ContentFR = "Souhaitez-vous devenir Haut Chancelier de Longyuan ?\nAutrement dit : si l’on met de côté toutes les affaires administratives complexes qu’implique réellement cette fonction, et que l’on imagine simplement posséder ce titre prestigieux, admiré par tout Huaxu, sans avoir rien à faire... aimeriez-vous devenir Haut Chancelier de Longyuan ?\n\nLa plupart des réponses seraient sans doute : bien sûr !\n\nLa question suivante est donc inévitable : comment devient-on réellement Haut Chancelier de Longyuan ?\nDans notre précédent numéro, nous avons brièvement évoqué le fonctionnement du Tournoi de l’Encens, système d’examen destiné à la majorité des citoyens de Huaxu.\nMais qu’en est-il de ces prodiges que l’on qualifie de génies hors du commun ? Existe-t-il un système spécial pour eux ? Sont-ils choisis dès leur naissance pour devenir Haut Chancelier de Longyuan ?\n\nBien sûr que non.\nDevenir Haut Chancelier de Longyuan est loin d’être simple.\n\nLa plupart d’entre vous l’auront deviné : les personnes sélectionnées reçoivent effectivement un message du Seigneur Dragon d’Argent, transmis par un Bi’an, envoyé du Seigneur Dragon d’Argent. Cependant, recevoir ce message ne signifie pas que vous êtes déjà devenu Haut Chancelier de Longyuan. Cela signifie seulement que vous obtenez un nouveau titre : candidat au poste de Haut Chancelier de Longyuan. Vous répondez alors à l’appel et vous rendez à Haojing.\nL’actuel Haut Chancelier de Longyuan vous accueille chaleureusement et vous vous réunissez dans la grande salle du Pavillon de l’Arbitrage. Vous y discutez parfois de politique ou d’affaires publiques, parfois simplement de sujets de la vie quotidienne.\n\nCette étape porte un nom : l’Épreuve de la Voie.\nUne fois cette étape terminée, vous êtes reconduit à l’auberge où vous logez temporairement afin d’attendre la convocation suivante.\nLes jours passent.\nVous attendez dans une agitation permanente, incapable de tenir en place. Toutes les quelques minutes, vous ouvrez la porte pour vérifier si quelqu’un est venu vous apporter un message.\nLa bonne nouvelle, c’est que le message finit par arriver. Après tout, s’il n’arrivait jamais, cet article s’arrêterait ici...\nRempli d’espoir, vous retournez au Pavillon de l’Arbitrage.\nVous vous dites : la dernière fois, l’examinateur était déjà le Haut Chancelier ; cette fois-ci, je vais sûrement rencontrer le Seigneur Dragon d’Argent !\nMais lorsque vous arrivez, il n’y a ni Seigneur Dragon d’Argent, ni Haut Chancelier.\nSeuls quelques fonctionnaires du Pavillon de l’Arbitrage vous attendent. Ils vous remettent à la hâte une énorme pile de dossiers... puis disparaissent aussitôt.\nVotre tâche consiste alors à parcourir cet océan d’archives, à retrouver les liens entre divers événements désignés et à formuler vos propres conclusions.\nPendant ce temps, quelqu’un s’occupe de votre nourriture et de votre logement.\nMais attention : toute tentative de tricherie ou de paresse vous ferait immédiatement rayer de la liste des candidats.\n\nCette étape s’appelle l’Épreuve des Stratégies.\nNaturellement, vous êtes une exception.\nAprès avoir passé ce qui vous semble des années à lire ces dossiers — jusqu’à mémoriser la moindre anecdote des vingt dernières années — vous recevez enfin une bonne nouvelle un matin : vous avez réussi.\nL’Épreuve des Stratégies est terminée.\nLa prochaine étape consiste à rencontrer le Seigneur Dragon d’Argent.\n\nVous êtes fou de joie.\nVous vous précipitez au Pavillon des Mille Broderies pour commander une tenue éclatante. Combien de personnes passent toute leur vie sans jamais entendre une seule parole du Seigneur Dragon d’Argent ? Et vous, vous pourriez le voir de vos propres yeux !\nEn racontant avec enthousiasme votre projet à la vendeuse, la jeune fille vous regarde, voit votre visage rayonnant... et ne peut s’empêcher de rire.\n« Vous ne le savez donc pas ? Tous les candidats au poste de Haut Chancelier de Longyuan ne rencontrent pas forcément le Seigneur Dragon d’Argent... »\nVous êtes stupéfait et vous vous apprêtez à demander des explications lorsqu’un messager arrive avec une convocation urgente : vous devez immédiatement vous rendre au Pavillon de l’Arbitrage pour préparer l’Épreuve du Cœur.\nVous vous empressez alors de remettre de l’ordre dans vos vêtements avant de repartir vers ce lieu que vous connaissez désormais si bien.\n\nÀ l’intérieur, une épaisse fumée d’encens flotte dans l’air.\nPourtant, vous ne percevez aucune odeur.\nOn vous demande de vous asseoir sur un coussin de méditation et de vous concentrer sur votre respiration.\nLa fumée tourne autour de vos yeux et de votre nez... et peu à peu, une étrange somnolence vous gagne.\nVous fermez les yeux.\nEt vous vous endormez.\n\nVous faites un très long rêve.\nDans ce rêve, vous voyez votre passé : votre mère vous tenant dans ses bras, votre père vous soulevant au-dessus de sa tête. Puis votre avenir : vous devenez Haut Chancelier de Longyuan, consacrez toute votre vie au peuple de Huaxu, et êtes finalement enterré dans le Mausolée de Taixu.\nPuis apparaissent d’innombrables visages.\nDes regards vous fixent, des voix vous interrogent sans cesse.\nVous êtes submergé, couvert de sueur... et soudain vous vous réveillez.\nL’encens qui avait été allumé au début n’est même pas encore entièrement consumé. Bien sûr, au final, vous ne réussissez pas la sélection pour devenir Haut Chancelier de Longyuan.\nIl semble que votre comportement dans ce rêve n’ait pas satisfait le Seigneur Dragon d’Argent.\nCependant, même si vous n’avez pas été choisi, vous décidez finalement de rejoindre le Pavillon de l’Encens afin de continuer à servir le peuple de Huaxu.\n\nUne fin heureuse, après tout.\n\nAinsi, chers lecteurs, vous savez désormais comment devenir Haut Chancelier de Longyuan. Et si l’un d’entre vous y parvient un jour... j’espère que vous vous souviendrez de l’auteur de ce modeste article.\nUn petit présent de remerciement ne serait pas de refus, n’est-ce pas ?",
+          TextMapId = "READ_TEXT_2000113"
+        },
+        READ_TEXT_2000114 = {
+          ContentFR = "I) Le Temple du Dragon submergé : l’enseigne du Seigneur Dragon d’Argent de l’Est de la ville inondée par la montée des eaux\n\nCes derniers jours, des pluies incessantes se sont abattues sur Haojing, faisant brusquement monter le niveau du lac et déborder les rives jusqu’aux digues du Marché de l’Est.\nDans ce quartier se trouve une boutique tenue par un homme réputé pour sa grande dévotion. Dans l’entrée de son établissement trône une statue en bois du Seigneur Dragon d’Argent, haute d’environ trois pieds. Chaque jour, il lui offre de l’encens et des prières, si bien que l’autel ne manque jamais de fumée sacrée.\nUn matin, alors que le garçon de boutique, un certain Zhang, ouvrait la porte pour balayer le seuil, il découvrit que l’eau avait déjà atteint les marches et que la moitié inférieure de la statue se trouvait immergée.\nPris de panique, Zhang appela aussitôt les voisins à l’aide, et tous ensemble ils transportèrent la statue à l’intérieur.\nOn entend déjà les commentaires :\n« Les intentions du Seigneur Dragon sont insondables. »\n\nCertains affirment que le Dragon n’apprécie pas les offrandes privées et qu’il a manifesté sa volonté en submergeant lui-même son image — un avertissement clair rappelant aux hommes qu’ils doivent respecter l’ordre du ciel et les saisons.\n\nII) Fait étrange : une vieille femme de soixante ans donne naissance à un enfant\nÀ Haojing, une certaine Madame Liu, âgée de soixante-deux ans, vit seule depuis la mort précoce de son mari. N’ayant jamais eu d’enfant, elle menait une existence solitaire.\nCes derniers temps, elle se plaignait souvent de fatigue et son appétit avait considérablement augmenté. Les voisins y voyaient simplement les signes du vieillissement.\nMais le dix-neuvième jour de ce mois, contre toute attente, elle donna naissance à un garçon. L’enfant criait d’une voix vigoureuse et présentait des traits délicats et bien formés.\nLa nouvelle parvint bientôt au Pavillon des Sources, qui dépêcha un officier pour vérifier les faits.\nMadame Liu raconta alors qu’il y a trois mois, elle avait rêvé d’une femme vêtue de bleu lui offrant une pêche. Elle l’avait trouvée d’une douceur incomparable. Après son réveil, elle avait senti son corps changer peu à peu. Or l’enfant porte à la taille une légère tache de naissance rougeâtre, dont la forme rappelle celle d’une pêche.\n\nÉtrange histoire, vraiment.\n\nBeaucoup disent que de tels récits n’appartiennent d’ordinaire qu’aux livres de contes. Mais les voisins affirment que Madame Liu a toujours été connue pour sa bonté. Certains murmurent donc que le Ciel récompense peut-être les bonnes actions.\nLe Bureau de la Fortune Céleste a finalement inscrit l’enfant sur les registres officiels et offert du grain ainsi que des étoffes pour soutenir la mère.\nDepuis, parents et voisins viennent présenter leurs félicitations, et les curieux se succèdent sans interruption devant la maison.\n\nIII) Étrange affaire : un chien du Marché de l’Ouest chasse les rats\n\nAu Marché de l’Ouest, au Pavillon des Cent Saveurs, le propriétaire Li Sanlang élève un chien jaune nommé Ahuang, chargé de garder la boutique la nuit. L’animal est habituellement calme et n’a jamais causé de désordre.\nLe premier jour de ce mois, dans l’après-midi, les employés faisaient sécher des provisions devant la boutique lorsqu’Ahuang se mit soudain à aboyer frénétiquement.\nEn accourant, ils virent le chien bondir vers un trou de souris au pied du mur. Un instant plus tard, il ressortit avec un rat gris déjà mort entre les crocs.\nLes employés, stupéfaits, rapportèrent l’affaire à Li Sanlang.\nCelui-ci refusa d’abord d’y croire. Mais le lendemain, il vit la scène de ses propres yeux : Ahuang attendait immobile devant le trou, puis se jetait sur chaque rat qui apparaissait.\n\nEn une seule journée, il en captura trois.\nUn habitué de la boutique plaisanta alors : « On dit que le chien qui attrape les rats se mêle de ce qui ne le regarde pas. Mais celui-ci, au moins, s’occupe des bonnes affaires ! »\n\nDepuis ce jour, Ahuang chasse les rats le jour et garde la boutique la nuit. Et l’on dit que le Pavillon des Cent Saveurs n’a plus connu le moindre problème de rats.",
+          TextMapId = "READ_TEXT_2000114"
+        },
+        READ_TEXT_2000115 = {
+          ContentFR = "(La feuille a été piétinée ; l’encre est brouillée et une grande partie du texte est difficile à lire.)\n\n...\n\nII. Activité suspecte dans les faubourgs de l’Ouest — possible réapparition des Vagabonds\n\nCes derniers jours, de nombreux habitants se sont rendus au Bureau de la Fortune Céleste pour signaler qu’« une silhouette sombre rôde parfois le long des sentiers sauvages des faubourgs de l’Ouest ».\nCertains affirment avoir échangé quelques mots avec ces individus : leurs réponses semblaient fuyantes, leur regard hésitant — rien qui inspire confiance. On craint qu’ils ne préparent quelque mauvais coup dans l’ombre.\nBien que Huaxu bénéficie de la protection des Neuf Chapitres de Dafeng, des Vagabonds continuent de se cacher dans Haojing, commettant toutes sortes de méfaits.\nOn raconte qu’autrefois un brûle-encens qui avait brûlé sans interruption pendant cent ans fut éteint par l’un des membres les plus notoires de leur bande, qui y versa de l’eau.\nUn autre aurait lancé une méchapoupée contre le Pavillon de l’Arbitrage.\nCertains criminels ont même suspendu des tiges de bambou devant les portes de leurs victimes avant de les attaquer. Leurs crimes sont innombrables et ils ne montrent aucun repentir.\n\nMalgré cela, certains individus continuent de prendre leur défense dans l’ombre et de les protéger, allant jusqu’à les appeler les Quatre Vagabonds. Heureusement, les Magistrats de Yingtian sont intervenus et ont finalement capturé puis exécuté ces fauteurs de trouble.\nToutefois, même si les Quatre Vagabonds et leurs principaux complices ont été éliminés, il subsisterait encore des survivants.\nLes habitants craignent que ces restes de la bande ne se regroupent à nouveau et ne provoquent d’autres calamités.\n\nLe Pavillon de l’Arbitrage a donc ordonné aux Magistrats de Yingtian de renforcer immédiatement les patrouilles et a annoncé une récompense :\n« Toute information confirmée permettant de localiser ces individus sera récompensée de douze mille pièces. »\n\nLes habitants sont également avertis :\n« Après la tombée de la nuit, évitez de vous aventurer dans les lieux isolés. » Tous les moyens seront employés pour extirper ces Vagabonds jusqu’à la racine.\n\n...\n\n(La seconde moitié du document est déchirée ; les caractères restants sont illisibles.)",
+          TextMapId = "READ_TEXT_2000115"
+        },
+        READ_TEXT_2000116 = {
+          ContentFR = "Sur la surface du lac de Haojing, il arrive parfois que des nuées de brume se rassemblent pour prendre des formes étranges : tours, pavillons, palais, immortels ou créatures spectrales, tous visibles avec une étonnante netteté. Les gens appellent ce phénomène la Cité mirage. Certains affirment qu’il s’agit du souffle du Seigneur Dragon d’Argent ; d’autres prétendent que ce sont les Huit Immortels qui servent sous ses ordres qui en sont responsables. Les explications abondent, mais pour ma part, je n’y crois guère.\n\nJ’ai interrogé toutes les rumeurs possibles sans jamais parvenir à une conclusion certaine. J’ai alors parcouru la ville pour consulter les anciens, leur demandant comment l’on pouvait atteindre la Cité mirage. Je commençai par les bateliers, espérant qu’ils accepteraient de me conduire sur le lac afin de la rechercher. Ils se moquèrent d’abord de ma folie, mais, moyennant une récompense convenable, acceptèrent de m’accompagner à plusieurs reprises. Nous avons parcouru le lac encore et encore, sans jamais rien découvrir.\n\nJe poursuivis mes recherches chaque jour, jusqu’à épuiser toutes mes maigres économies. Quelques bateliers, pris de pitié, acceptèrent parfois de m’accompagner durant leur temps libre, mais leur enthousiasme d’autrefois avait disparu. Je ne leur en voulus point ; c’était plutôt moi qui éprouvais de la honte. Finalement, je dépensai les dernières pièces qui me restaient pour acheter un radeau de bambou, décidé à poursuivre seul la recherche de la Cité mirage.\n\nJe ne suis qu’un humble lettré, mais dans mon enfance je grimpais souvent aux collines et nageais dans les rivières avec les autres enfants du voisinage. Je ne suis donc pas entièrement dénué de vigueur, bien que mes talents s’arrêtent là. Au début, manier la perche pour diriger le radeau se révéla fort maladroit, mais à force de pratique je finis par m’y habituer.\n\nLa quête de la Cité mirage s’avéra toutefois extrêmement difficile. Au début, je tentais de mesurer les distances et de déterminer une direction précise. Plus tard, je me contentais de dériver au gré des flots dans cette immensité sans limites. Malgré tous mes efforts, je ne parvins jamais à voir la véritable forme de la Cité.\n\nAvec le temps, mon ardeur s’émoussa. Je commençai à penser que je poursuivais une illusion vaine, gaspillant mes jours et mes forces pour rien. Il m’arrivait parfois d’apercevoir une vision lointaine et de ramer vers elle avec toute mon énergie, mais dès que je m’en approchais, elle se dissipait aussitôt, disparaissant sans laisser de trace, telle la fleur du miroir et la lune dans l’eau.\n\nUn jour, une brume épaisse enveloppa Haojing, si dense que l’on ne distinguait plus personne à quelques pas. Tous tentèrent de me dissuader de sortir, craignant que je ne me perde sur le lac et n’y laisse la vie. Je soupirai alors :\n\n« À part ma vie… qu’ai-je encore à perdre ? »\n\nMes économies étaient déjà épuisées et nous survivions péniblement grâce aux travaux de couture de mon épouse. Par bonheur, nous n’avions pas d’enfants ; autrement, comment aurais-je pu me considérer comme un mari digne de ce nom ?\nJe persistai pourtant à vouloir partir. Mon épouse, en larmes, tenta de m’en empêcher :\n\n« Si tu franchis cette porte, je ne vivrai plus jamais avec toi. »\n\nMon cœur hésita un instant, mais je finis par agir avec la détermination de quelqu’un qui n’a plus rien à perdre. Je rejetai ma manche en arrière et franchis la porte.\nCe jour-là, la brume couvrait le ciel et la terre. Lorsque la perche plongeait dans l’eau, je ne pouvais même pas voir l’endroit où elle touchait la surface. Je ne pouvais guider le radeau qu’en me fiant à la sensation de mes bras.\nLe froid était plus mordant que d’ordinaire. Ma barbe se couvrit de givre ; je le dissipais d’un souffle, et il se reformait aussitôt.\n\nLa scène ne présentait rien d’extraordinaire à première vue. Peut-être y eut-il quelque chose d’étrange, mais mon esprit était trop confus pour s’en souvenir clairement. Je me rappelle seulement qu’à un moment donné, la perche ne semblait plus rencontrer l’eau du lac. La sensation était plutôt celle de fendre des nuages ou de disperser de la brume, si légère qu’elle paraissait irréelle.\nJe ne sais combien de temps je continuai à pousser le radeau. Peu à peu, la brume se dissipa.\nDevant moi apparurent alors des halos de lumière superposés, au sein desquels se dressaient de splendides pavillons et palais aux teintes écarlates, resplendissant d’un éclat surnaturel.\n\nUne joie immense m’envahit.\n\nRassemblant mes dernières forces, je poussai le radeau vers l’avant. Au moment même où mon énergie me quittait, le radeau heurta la rive. Mon cœur se calma aussitôt, comme si un énorme poids venait de tomber de ma poitrine.\n\nJe laissai le radeau derrière moi et posai le pied sur la terre ferme.\n\nSous mes pieds, le sol était aussi souple que l’eau du printemps, mais je ne m’enfonçais pas et mes chaussures ne se mouillaient pas. À chaque pas, de légères ondulations se formaient autour de moi.\n\nC’était une vision d’une étrangeté et d’une beauté indescriptibles.\n\n...",
+          TextMapId = "READ_TEXT_2000116"
         },
         READ_TEXT_20602 = {
           ContentFR = "1er janvier\nAujourd’hui, ▇▇▇▇ m’a donné quelques éclats de Phoxène en guise « d’argent de poche ».\nElle m’a expliqué qu’à la Capitale, les enfants reçoivent régulièrement de l’argent de leurs aînés jusqu’à leur majorité — pour acheter ce qu’ils désirent : nourriture, jouets, et autres babioles.\n\nIl n’y a aucune boutique dans la zone des ruines ; elle m’a donc dit de les économiser. Ainsi, le jour où j’aurai envie de quelque chose, ou que je voudrai accomplir quelque chose, je pourrai lui remettre une partie de cet « argent de poche » pour qu’elle m’aide.\n\nMais... je ne sais pas vraiment ce que je veux.\n\n2 janvier\nJ’ai trouvé ! Je pourrais offrir un « cadeau d’anniversaire » à {nickname} !\nDans les livres, il est écrit que les enfants de la Capitale mangent un gâteau pour célébrer leur anniversaire. Cela a l’air très précieux... mais si j’économise assez, je pourrai demander à ▇▇▇▇ de m’aider à en obtenir un.\n\nJ’ai trouvé une vieille jarre en argile dans la cuisine : parfaite pour y garder mes économies.\n\n16 janvier\nAujourd’hui, alors que nous jouions à cache-cache, {nickname} a découvert ma jarre et a failli l’ouvrir... Je dois lui trouver une meilleure cachette.\nDemain, je me faufilerai dans la salle d’alchimie de ▇▇▇▇ pour chercher un endroit sûr. Il y a là-bas plein d’appareils impressionnants, et ▇▇▇▇ ne laisse jamais {nickname} y entrer.\n\n17 janvier\nJ’ai caché ma tirelire <H>près de la cascade, dans la salle d’alchimie</>.\nAinsi, ni {nickname} ni ▇▇▇▇ ne tomberont dessus.\n\n...\n\n▇▇ ▇▇\nL’anniversaire de {nickname} approche, et j’ai économisé assez pour remplir toute une caisse d’« argent de poche ». Cela devrait suffire pour échanger contre un gâteau. Mais ▇▇▇▇ semble préoccupée ces derniers temps. Elle se couche très tard... Peut-être que ce n’est pas le bon moment pour lui demander quoi que ce soit.\n\nL’an prochain, je pourrai demander un gâteau encore plus grand — tellement grand que nous pourrons tous les trois en manger jusqu’à ne plus avoir faim.",
@@ -33526,7 +35261,15 @@ Allez voir ce qui se passe.]],
         READ_TEXT_20633 = {
           ContentFR = "Depuis notre débat ce jour-là, une chose m’est devenue claire : si nous restons au Marché Voilé, nous ne comprendrons jamais la véritable signification de la liberté, ni le prix qu’elle exige.\n\nLes jeux de mots et les combines du Marché Voilé ne sont que des compromissions sous couvert de règles. Je refuse une liberté née de la ruse et de l’évitement. Il doit exister, quelque part, une liberté droite et franche, sans calcul ni faux-semblants... Je veux en apporter la preuve.\n\nC’est pourquoi je pars — au-delà de la montagne que nous avons tant de fois contemplée, vers des sommets plus hauts encore. Même si le prix à payer est l’errance et la rupture avec le monde.\n\nLorsque tu liras cette lettre, je serai déjà loin. J’ai laissé quelques présents <H>sur la vieille barque au bord de l’eau</> où nous jouions autrefois. Pardonne mon départ sans adieu. Je te le promets : nous nous reverrons... le jour où j’aurai trouvé ma réponse.",
           TextMapId = "READ_TEXT_20633"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "READ_TEXT_20634",
+    MaxKey = "RESOURCE_DESC_12119",
+    Loader = function()
+      return {
         READ_TEXT_20634 = {
           ContentFR = "J’avais entendu dire que la Mer de Poussière était d’une dangerosité extrême. Après cette exploration, je ne peux que confirmer : c’est terrifiant, mais exaltant. À y regarder de plus près, le paysage possède même une beauté singulière ; sans l’invasion des Souillés, ce lieu pourrait presque devenir un site renommé.\n\nMais partout s’étendent rochers et arbres morts, au point qu’il est facile de perdre tout sens de l’orientation. Lors d’une pause, j’ai égaré un paquet — je crois qu’il se trouvait dans une <H>certaine grotte</>... J’ai beau chercher depuis des heures, je n’en trouve pas l’entrée. La nuit va bientôt tomber.\n\nTant pis. Qu’un heureux élu le découvre...",
           TextMapId = "READ_TEXT_20634"
@@ -33654,15 +35397,7 @@ Allez voir ce qui se passe.]],
         RESOURCE_DESC_10023 = {
           ContentFR = "Les adeptes du Noctilunisme, tournant le dos aux Neuf, ont rassemblé leurs doctrines dans un ouvrage naturellement jugé hérétique. Pourtant, la connaissance interdite attire toujours — pour les curieux, elle ouvre les portes d’un monde nouveau.",
           TextMapId = "RESOURCE_DESC_10023"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_DESC_10024",
-    MaxKey = "RESOURCE_DESC_19003",
-    Loader = function()
-      return {
+        },
         RESOURCE_DESC_10024 = {
           ContentFR = "Un récipient scellé de l’Empire Hyperboréen, contenant l’essence cellulaire des Souillés. Avant ouverture, il demeure une boîte noire aux résultats imprévisibles : parfois décevants, parfois porteurs de merveilles ou d’horreurs.",
           TextMapId = "RESOURCE_DESC_10024"
@@ -34334,7 +36069,15 @@ Allez voir ce qui se passe.]],
         RESOURCE_DESC_12119 = {
           ContentFR = "Assemblé selon les plans du Dépouilleur, ce verrou marque l’instant où l’on abandonne toute hésitation — un tir lancé, sans retour possible.",
           TextMapId = "RESOURCE_DESC_12119"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_DESC_12120",
+    MaxKey = "RESOURCE_DESC_4030005",
+    Loader = function()
+      return {
         RESOURCE_DESC_12120 = {
           ContentFR = "Forgé selon les plans du Dépouilleur, son corps d’acier devient un outil brutal une fois vide — le poids froid d’un jugement arraché.",
           TextMapId = "RESOURCE_DESC_12120"
@@ -34462,15 +36205,7 @@ Allez voir ce qui se passe.]],
         RESOURCE_DESC_19003 = {
           ContentFR = "Là où se rejoignent les traces du cœur, une Empreinte d’âme se tisse — Peur.",
           TextMapId = "RESOURCE_DESC_19003"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_DESC_19004",
-    MaxKey = "RESOURCE_DESC_41032",
-    Loader = function()
-      return {
+        },
         RESOURCE_DESC_19004 = {
           ContentFR = "Là où se rejoignent les traces du cœur, une Empreinte d’âme se tisse — Colère.",
           TextMapId = "RESOURCE_DESC_19004"
@@ -34784,12 +36519,16 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_DESC_29003"
         },
         RESOURCE_DESC_29004 = {
-          ContentFR = "Sphères d’exploration recueillies dans tout Huaxu. Une fois un certain nombre rassemblé, vous pouvez les remettre à Luno, l’exploratrice, au Marché Voilé.\nElles témoignent du courage, de la sagesse et de la patience dont vous avez fait preuve au cours de vos aventures, et peuvent être échangés contre diverses récompenses.",
+          ContentFR = "Sphères d’exploration recueillies dans tout Huaxu. Une fois un certain nombre rassemblé, vous pouvez les remettre à Luno, l’exploratrice, au Marché Voilé.\nElles témoignent du courage, de la sagesse et de la patience dont vous avez fait preuve au cours de vos aventures, et peuvent être échangées contre diverses récompenses.",
           TextMapId = "RESOURCE_DESC_29004"
         },
         RESOURCE_DESC_29005 = {
           ContentFR = "Runes lumineuses flottant dans les airs à travers Huaxu, que l’on dit issues du Taixu une fois éveillé par l’encens.\nElles peuvent être collectées grâce à la force d’aspiration du Nexus mécanique.",
           TextMapId = "RESOURCE_DESC_29005"
+        },
+        RESOURCE_DESC_29006 = {
+          ContentFR = "Sphères d’exploration recueillies aux quatre coins de Haojing. Une fois un certain nombre rassemblé, vous pouvez les remettre à Luno, l’exploratrice, dans Haojing. Elles témoignent du courage, de la sagesse et de la patience dont vous avez fait preuve au cours de vos explorations, et peuvent être échangées contre diverses récompenses.",
+          TextMapId = "RESOURCE_DESC_29006"
         },
         RESOURCE_DESC_3000001 = {
           ContentFR = "Une boîte d’étoiles en papier pliées à partir de billets périmés. On raconte qu’un nombre suffisant d’étoiles exauce les vœux... pourtant, aucun n’a jamais semblé se réaliser.",
@@ -35138,7 +36877,15 @@ Allez voir ce qui se passe.]],
         RESOURCE_DESC_4030005 = {
           ContentFR = "Objets décoratifs fournis par Luno, l’exploratrice. Efficaces à distance... mais en y regardant de plus près, il s’agit surtout de pierres, coquillages et feuilles ramassés au fil de ses voyages. Utilisés pour renforcer l’ambiance festive de l’événement « Un Instant de Liesse ».",
           TextMapId = "RESOURCE_DESC_4030005"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_DESC_4030006",
+    MaxKey = "RESOURCE_FUNCTION_FISH_3",
+    Loader = function()
+      return {
         RESOURCE_DESC_4030006 = {
           ContentFR = "Textiles précieux originaires de Huaxu, offerts par Luno, la Tisse-Étoiles invitée. Lisses, éclatants et rarissimes à Givrelac. Utilisés pour renforcer l’ambiance festive de l’événement « Un Instant de Liesse ».",
           TextMapId = "RESOURCE_DESC_4030006"
@@ -35248,7 +36995,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_DESC_41026"
         },
         RESOURCE_DESC_41027 = {
-          ContentFR = "Un geste du quotidien servant à acclamer",
+          ContentFR = "Un geste du quotidien servant à acclamer.",
           TextMapId = "RESOURCE_DESC_41027"
         },
         RESOURCE_DESC_41028 = {
@@ -35270,15 +37017,7 @@ Allez voir ce qui se passe.]],
         RESOURCE_DESC_41032 = {
           ContentFR = "Je me tiens déjà au sommet des montagnes.",
           TextMapId = "RESOURCE_DESC_41032"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_DESC_41033",
-    MaxKey = "RESOURCE_NAME_10013",
-    Loader = function()
-      return {
+        },
         RESOURCE_DESC_41033 = {
           ContentFR = "Posture : Écran électronique",
           TextMapId = "RESOURCE_DESC_41033"
@@ -35356,7 +37095,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_DESC_49998"
         },
         RESOURCE_DESC_49999 = {
-          ContentFR = "Monture mécanisée développée par Gongshang, reproduisant fidèlement un Bi’an obscur. Le chevaucher à toute allure dans Port-des-Brumes ne manquera pas de laisser les passants bouche bée.",
+          ContentFR = "Monture mécanisée développée par Maître Gongshang, reproduisant fidèlement un Bi’an obscur. Le chevaucher à toute allure dans Port-des-Brumes ne manquera pas de laisser les passants bouche bée.",
           TextMapId = "RESOURCE_DESC_49999"
         },
         RESOURCE_DESC_5000000 = {
@@ -35559,6 +37298,66 @@ Allez voir ce qui se passe.]],
           ContentFR = "Créature des milieux obscurs et humides, dotée de nageoires pectorales immenses munies d’éperons osseux. Ses couleurs vives et sa nage rappellent le battement d’ailes d’un papillon de nuit. Extrêmement toxique ; selon les légendes antiques, ses ailes servaient autrefois à façonner des armes.",
           TextMapId = "RESOURCE_DESC_5028050"
         },
+        RESOURCE_DESC_5029010 = {
+          ContentFR = "Le Chabot étoilé vit dans les eaux saumâtres où les rivières de Huaxu rencontrent la mer. Son corps est constellé de taches semblables à des nébuleuses. Lorsqu’on en pêche un à la tombée de la nuit, c’est comme si l’on avait remonté hors de l’eau un fragment de ciel étoilé.",
+          TextMapId = "RESOURCE_DESC_5029010"
+        },
+        RESOURCE_DESC_5029020 = {
+          ContentFR = "Petit poisson-chat marin, le Silure venépine ressemble à première vue à une anguille, jusqu’à ce que ses moustaches trahissent sa véritable nature. D’un tempérament agressif et querelleur malgré sa taille, il vit pourtant en bancs serrés. Leur activité favorite consiste à se piquer mutuellement à l’aide des dards venimeux durcis qui couvrent leur corps.",
+          TextMapId = "RESOURCE_DESC_5029020"
+        },
+        RESOURCE_DESC_5029030 = {
+          ContentFR = "Sous-espèce d’hippocampe dont le corps rappelle une gemme brute à l’état naturel. L’Hippocampe prismatique est davantage apprécié pour l’ornement et l’usage médicinal que pour la consommation.",
+          TextMapId = "RESOURCE_DESC_5029030"
+        },
+        RESOURCE_DESC_5029040 = {
+          ContentFR = "Petit poisson marin élancé que l’on rencontre le long des côtes de Huaxu. Sa chair tendre et riche en nutriments en fait un appât idéal pour nourrir d’autres poissons. Son regard mélancolique donne pourtant l’impression qu’il connaît déjà l’issue inévitable de son existence.",
+          TextMapId = "RESOURCE_DESC_5029040"
+        },
+        RESOURCE_DESC_5029050 = {
+          ContentFR = "Poisson que l’on trouve le long des côtes de Huaxu. Bien qu’il vive dans les profondeurs, son corps entier brille d’un éclat doré, comme s’il apportait au fond obscur de la mer la lueur du crépuscule ou celle de l’aube.\nLes individus de petite taille sont bon marché, mais leur valeur augmente considérablement à mesure qu’ils grandissent. Pour cette raison, les habitants de Huaxu l’appellent souvent « l’or flottant à la surface de l’eau ».",
+          TextMapId = "RESOURCE_DESC_5029050"
+        },
+        RESOURCE_DESC_5030010 = {
+          ContentFR = "L’un des crabes les plus réputés des eaux de Haojing. De grande taille et riche en saveur, il est également très nutritif. On le déguste de préférence lorsque souffle le vent d’automne, accompagné de vinaigre au gingembre. Un mets particulièrement apprécié à Huaxu.",
+          TextMapId = "RESOURCE_DESC_5030010"
+        },
+        RESOURCE_DESC_5030020 = {
+          ContentFR = "Poisson d’eau douce sauvage extrêmement répandu à Huaxu. Sa capacité d’adaptation à l’environnement est remarquable. Sa petite taille et ses nombreuses arêtes le rendent peu adapté à la cuisson directe, mais il se prête parfaitement aux soupes et aux bouillons. Lorsqu’il remonte à la surface pour avaler de l’air, il émet souvent un bruit semblable à un « croa-croa », ce qui lui a valu le nom de Carpe croasseuse.",
+          TextMapId = "RESOURCE_DESC_5030020"
+        },
+        RESOURCE_DESC_5030030 = {
+          ContentFR = "Poisson singulier coiffé d’une feuille de lotus sur la tête, ce qui lui permet de se camoufler avec une efficacité remarquable. Même les pêcheurs les plus expérimentés ont bien du mal à distinguer d’un simple coup d’œil les véritables lotus des Feuilles-de-lotus dissimulées à leur surface.",
+          TextMapId = "RESOURCE_DESC_5030030"
+        },
+        RESOURCE_DESC_5030040 = {
+          ContentFR = "Poisson propre à Huaxu dont les écailles brillent comme du bronze poli. Dans les temps anciens, certaines personnes utilisaient même ces écailles comme monnaie.\nCertains membres de la Secte Jishu considèrent également ce poisson comme un présage favorable et lui rendent parfois hommage.",
+          TextMapId = "RESOURCE_DESC_5030040"
+        },
+        RESOURCE_DESC_5030050 = {
+          ContentFR = "L’un des poissons d’eau douce les plus précieux de Huaxu. De nature féroce, il se distingue par sa crête rouge vif.\nLorsqu’il chasse, il ne se précipite pas immédiatement sur sa proie : il commence par tourner autour d’elle jusqu’à l’étourdir, avant de porter une morsure décisive. Son allure évoque celle d’un général arborant fièrement un casque écarlate.",
+          TextMapId = "RESOURCE_DESC_5030050"
+        },
+        RESOURCE_DESC_5031010 = {
+          ContentFR = "Le Puantinet est un poisson charognard rare. Son régime alimentaire lui laisse une odeur persistante qu’aucun nettoyage ne parvient à faire disparaître complètement. À Huaxu, il est réputé être l’un des poissons les moins appétissants qui soient.",
+          TextMapId = "RESOURCE_DESC_5031010"
+        },
+        RESOURCE_DESC_5031020 = {
+          ContentFR = "Coquillage vivant dans les eaux troubles, souvent couvert de vase et d’impuretés. Pourtant, sous cette coquille sale se cache une chair rosée et délicate qui devient étonnamment parfumée et sucrée une fois cuite — d’où son nom de Palourde taro.",
+          TextMapId = "RESOURCE_DESC_5031020"
+        },
+        RESOURCE_DESC_5031030 = {
+          ContentFR = "Créature vivant dans des environnements sombres, rappelant quelque peu un ver de terre. Son corps rond et charnu, presque couleur chair, possède de nombreuses propriétés médicinales. Les pêcheurs l’utilisent également comme appât de grande qualité.",
+          TextMapId = "RESOURCE_DESC_5031030"
+        },
+        RESOURCE_DESC_5031040 = {
+          ContentFR = "Petit poisson des eaux dépourvues de lumière, reconnaissable à ses yeux gigantesques. Même dans les eaux troubles chargées de vase et de sédiments, ses grandes prunelles brillent d’un éclat visible à distance.",
+          TextMapId = "RESOURCE_DESC_5031040"
+        },
+        RESOURCE_DESC_5031050 = {
+          ContentFR = "Poisson d’eau douce vivant dans les eaux troubles. Il se tapit dans la vase en attendant que sa proie s’approche avant de surgir brusquement pour l’attaquer. Dans certaines régions de Huaxu, il compte parmi les prédateurs dominants des milieux aquatiques.",
+          TextMapId = "RESOURCE_DESC_5031050"
+        },
         RESOURCE_DESC_5110100 = {
           ContentFR = "Forgée par la talentueuse Luno, la forgeronne, chacune de ses cannes est équipée d’un moniteur flottant à l’effigie de son assistant, Cinder. À chaque prise, Cinder s’illumine... au risque de distraire les novices, qui rentrent parfois avec un seau vide malgré une soirée entière à admirer sa lumière.",
           TextMapId = "RESOURCE_DESC_5110100"
@@ -35611,6 +37410,10 @@ Allez voir ce qui se passe.]],
           ContentFR = "« Transformation ! » Peut être équipé et utilisé depuis le Sac tactique.",
           TextMapId = "RESOURCE_DESC_6000002"
         },
+        RESOURCE_DESC_6000004 = {
+          ContentFR = "Les Jetons stratégiques et martiaux sont une monnaie préparée par la Cérémonie de l’Encens afin de comptabiliser les scores des participants pendant les épreuves.\nAvant l’interdiction des arts martiaux en Huaxu, les compétitions étaient divisées entre épreuves stratégiques et martiales. Deux types de jetons étaient alors utilisés pour distinguer les scores correspondants. Par la suite, bien que l’usage des armes ait été interdit dans tout le royaume, ce système de comptage des points fut conservé, seule la distinction entre jetons stratégiques et martiaux ayant disparu.\n\nAujourd’hui, avec l’instauration d’un nouveau format de compétition, les jetons martiaux ont été réintroduits. Le score final des participants est désormais calculé à partir du total combiné des jetons stratégiques et martiaux.",
+          TextMapId = "RESOURCE_DESC_6000004"
+        },
         RESOURCE_DESC_6100001 = {
           ContentFR = "Outil de renforcement conçu par Maître Gongshang pour améliorer les méchapoupées.",
           TextMapId = "RESOURCE_DESC_6100001"
@@ -35626,6 +37429,10 @@ Allez voir ce qui se passe.]],
         RESOURCE_DESC_99 = {
           ContentFR = "Un cristal prélevé sur un Arbre Céleste, l’un des minéraux les plus polyvalents du continent d’Atlasia.\nIl doit son nom à l’éclat doux et laiteux qu’il diffuse, semblable à celui d’une pleine lune.",
           TextMapId = "RESOURCE_DESC_99"
+        },
+        RESOURCE_DESC_BACKPACKUNLOCK = {
+          ContentFR = "Permet de débloquer l’utilisation du Sac aux trésors correspondant.",
+          TextMapId = "RESOURCE_DESC_BACKPACKUNLOCK"
         },
         RESOURCE_DESC_CANCELPHANTOM = {
           ContentFR = "Un emblème permettant d’annuler une invocation.\nMême si la rencontre est éphémère, le lien perdure. Peut-être que la prochaine retrouvaille n’est qu’à un battement de cœur.",
@@ -35747,6 +37554,10 @@ Allez voir ce qui se passe.]],
           ContentFR = "Échangeable contre des objets auprès de Luno, la carpe.",
           TextMapId = "RESOURCE_FUNCTION_29005"
         },
+        RESOURCE_FUNCTION_29006 = {
+          ContentFR = "Échangeable contre des récompenses auprès de Luno, l’exploratrice.",
+          TextMapId = "RESOURCE_FUNCTION_29006"
+        },
         RESOURCE_FUNCTION_30001 = {
           ContentFR = "Permet de fabriquer un Module de transfert d’affinité.",
           TextMapId = "RESOURCE_FUNCTION_30001"
@@ -35770,6 +37581,10 @@ Allez voir ce qui se passe.]],
         RESOURCE_FUNCTION_APRecovery = {
           ContentFR = "Sert à restaurer de l’Énergie",
           TextMapId = "RESOURCE_FUNCTION_APRecovery"
+        },
+        RESOURCE_FUNCTION_BACKPACKUNLOCK = {
+          ContentFR = "Chaque participant ne reçoit au départ qu’un Sac aux trésors de base. En collectant des Jetons stratégiques et martiaux durant la compétition, il est possible de demander au Bureau des Travaux un certificat d’amélioration afin d’échanger son sac contre un modèle offrant davantage d’espace.",
+          TextMapId = "RESOURCE_FUNCTION_BACKPACKUNLOCK"
         },
         RESOURCE_FUNCTION_BATTLEPASSEXP = {
           ContentFR = "Permet de progresser dans la Ballade du Ménestrel afin d’obtenir des récompenses.",
@@ -35870,7 +37685,15 @@ Allez voir ce qui se passe.]],
         RESOURCE_FUNCTION_FISH_3 = {
           ContentFR = "Poisson d’eaux polluées. Peut être vendu contre des Jetons de Grande Pêche.",
           TextMapId = "RESOURCE_FUNCTION_FISH_3"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_FUNCTION_FORGE",
+    MaxKey = "RESOURCE_NAME_12023",
+    Loader = function()
+      return {
         RESOURCE_FUNCTION_FORGE = {
           ContentFR = "Matériau de forge",
           TextMapId = "RESOURCE_FUNCTION_FORGE"
@@ -36063,6 +37886,10 @@ Allez voir ce qui se passe.]],
           ContentFR = "Fragment de pensée : Berenica",
           TextMapId = "RESOURCE_NAME_1001101"
         },
+        RESOURCE_NAME_1001102 = {
+          ContentFR = "Fragment de pensée : Flora",
+          TextMapId = "RESOURCE_NAME_1001102"
+        },
         RESOURCE_NAME_1001103 = {
           ContentFR = "Fragment de pensée : Phantasio",
           TextMapId = "RESOURCE_NAME_1001103"
@@ -36078,15 +37905,7 @@ Allez voir ce qui se passe.]],
         RESOURCE_NAME_10013 = {
           ContentFR = "Aiguille de foudre",
           TextMapId = "RESOURCE_NAME_10013"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_NAME_10014",
-    MaxKey = "RESOURCE_NAME_12077",
-    Loader = function()
-      return {
+        },
         RESOURCE_NAME_10014 = {
           ContentFR = "Jade tempétueux",
           TextMapId = "RESOURCE_NAME_10014"
@@ -36290,6 +38109,10 @@ Allez voir ce qui se passe.]],
         RESOURCE_NAME_1011101 = {
           ContentFR = "Emblème : Berenica",
           TextMapId = "RESOURCE_NAME_1011101"
+        },
+        RESOURCE_NAME_1011102 = {
+          ContentFR = "Emblème : Flora",
+          TextMapId = "RESOURCE_NAME_1011102"
         },
         RESOURCE_NAME_1011103 = {
           ContentFR = "Emblème : Phantasio",
@@ -36670,7 +38493,15 @@ Allez voir ce qui se passe.]],
         RESOURCE_NAME_12023 = {
           ContentFR = "Baiser de la sirène : Lame",
           TextMapId = "RESOURCE_NAME_12023"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_NAME_12024",
+    MaxKey = "RESOURCE_NAME_208",
+    Loader = function()
+      return {
         RESOURCE_NAME_12024 = {
           ContentFR = "Péché impardonnable : Poignée",
           TextMapId = "RESOURCE_NAME_12024"
@@ -36886,15 +38717,7 @@ Allez voir ce qui se passe.]],
         RESOURCE_NAME_12077 = {
           ContentFR = "Édit argenté : Armature",
           TextMapId = "RESOURCE_NAME_12077"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_NAME_12078",
-    MaxKey = "RESOURCE_NAME_30116",
-    Loader = function()
-      return {
+        },
         RESOURCE_NAME_12078 = {
           ContentFR = "Édit argenté : Canon",
           TextMapId = "RESOURCE_NAME_12078"
@@ -37478,7 +39301,15 @@ Allez voir ce qui se passe.]],
         RESOURCE_NAME_208 = {
           ContentFR = "Carnet de mission — Tome III",
           TextMapId = "RESOURCE_NAME_208"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_NAME_209",
+    MaxKey = "RESOURCE_NAME_41003",
+    Loader = function()
+      return {
         RESOURCE_NAME_209 = {
           ContentFR = "Carnet de mission — Tome IV",
           TextMapId = "RESOURCE_NAME_209"
@@ -37534,6 +39365,10 @@ Allez voir ce qui se passe.]],
         RESOURCE_NAME_29005 = {
           ContentFR = "Rune de Taixu",
           TextMapId = "RESOURCE_NAME_29005"
+        },
+        RESOURCE_NAME_29006 = {
+          ContentFR = "Sphère d’exploration — Haojing",
+          TextMapId = "RESOURCE_NAME_29006"
         },
         RESOURCE_NAME_3000001 = {
           ContentFR = "Boîte d’étoiles en papier",
@@ -37694,15 +39529,7 @@ Allez voir ce qui se passe.]],
         RESOURCE_NAME_30116 = {
           ContentFR = "Teinture intermédiaire : Pin ancien",
           TextMapId = "RESOURCE_NAME_30116"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_NAME_30117",
-    MaxKey = "RESOURCE_NAME_5011021",
-    Loader = function()
-      return {
+        },
         RESOURCE_NAME_30117 = {
           ContentFR = "Teinture avancée : Fleur de pêcher",
           TextMapId = "RESOURCE_NAME_30117"
@@ -38282,7 +40109,15 @@ Allez voir ce qui se passe.]],
         RESOURCE_NAME_41003 = {
           ContentFR = "Apprenti sorcier",
           TextMapId = "RESOURCE_NAME_41003"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_NAME_41004",
+    MaxKey = "RESOURCE_NAME_6100122",
+    Loader = function()
+      return {
         RESOURCE_NAME_41004 = {
           ContentFR = "Refuge secret",
           TextMapId = "RESOURCE_NAME_41004"
@@ -38502,15 +40337,7 @@ Allez voir ce qui se passe.]],
         RESOURCE_NAME_5011021 = {
           ContentFR = "Épine prismatique variant",
           TextMapId = "RESOURCE_NAME_5011021"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_NAME_5011030",
-    MaxKey = "RESOURCE_TEXT_20006",
-    Loader = function()
-      return {
+        },
         RESOURCE_NAME_5011030 = {
           ContentFR = "Argentilé",
           TextMapId = "RESOURCE_NAME_5011030"
@@ -38887,6 +40714,126 @@ Allez voir ce qui se passe.]],
           ContentFR = "Fluttille variante",
           TextMapId = "RESOURCE_NAME_5028051"
         },
+        RESOURCE_NAME_5029010 = {
+          ContentFR = "Chabot étoilé",
+          TextMapId = "RESOURCE_NAME_5029010"
+        },
+        RESOURCE_NAME_5029011 = {
+          ContentFR = "Chabot étoilé variant",
+          TextMapId = "RESOURCE_NAME_5029011"
+        },
+        RESOURCE_NAME_5029020 = {
+          ContentFR = "Silure venépine",
+          TextMapId = "RESOURCE_NAME_5029020"
+        },
+        RESOURCE_NAME_5029021 = {
+          ContentFR = "Silure venépine variant",
+          TextMapId = "RESOURCE_NAME_5029021"
+        },
+        RESOURCE_NAME_5029030 = {
+          ContentFR = "Hippocampe prismatique",
+          TextMapId = "RESOURCE_NAME_5029030"
+        },
+        RESOURCE_NAME_5029031 = {
+          ContentFR = "Hippocampe prismatique variant",
+          TextMapId = "RESOURCE_NAME_5029031"
+        },
+        RESOURCE_NAME_5029040 = {
+          ContentFR = "Jadécailles",
+          TextMapId = "RESOURCE_NAME_5029040"
+        },
+        RESOURCE_NAME_5029041 = {
+          ContentFR = "Jadécailles variant",
+          TextMapId = "RESOURCE_NAME_5029041"
+        },
+        RESOURCE_NAME_5029050 = {
+          ContentFR = "Écaille d’Aurore",
+          TextMapId = "RESOURCE_NAME_5029050"
+        },
+        RESOURCE_NAME_5029051 = {
+          ContentFR = "Écaille d’Aurore variant",
+          TextMapId = "RESOURCE_NAME_5029051"
+        },
+        RESOURCE_NAME_5030010 = {
+          ContentFR = "Crabe mitaine de Haojing",
+          TextMapId = "RESOURCE_NAME_5030010"
+        },
+        RESOURCE_NAME_5030011 = {
+          ContentFR = "Crabe mitaine de Haojing variant",
+          TextMapId = "RESOURCE_NAME_5030011"
+        },
+        RESOURCE_NAME_5030020 = {
+          ContentFR = "Carpe croasseuse",
+          TextMapId = "RESOURCE_NAME_5030020"
+        },
+        RESOURCE_NAME_5030021 = {
+          ContentFR = "Carpe croasseuse variante",
+          TextMapId = "RESOURCE_NAME_5030021"
+        },
+        RESOURCE_NAME_5030030 = {
+          ContentFR = "Feuille-de-lotus",
+          TextMapId = "RESOURCE_NAME_5030030"
+        },
+        RESOURCE_NAME_5030031 = {
+          ContentFR = "Feuille-de-lotus variante",
+          TextMapId = "RESOURCE_NAME_5030031"
+        },
+        RESOURCE_NAME_5030040 = {
+          ContentFR = "Tambour de bronze",
+          TextMapId = "RESOURCE_NAME_5030040"
+        },
+        RESOURCE_NAME_5030041 = {
+          ContentFR = "Tambour de bronze variant",
+          TextMapId = "RESOURCE_NAME_5030041"
+        },
+        RESOURCE_NAME_5030050 = {
+          ContentFR = "Masque écarlate",
+          TextMapId = "RESOURCE_NAME_5030050"
+        },
+        RESOURCE_NAME_5030051 = {
+          ContentFR = "Masque écarlate variant",
+          TextMapId = "RESOURCE_NAME_5030051"
+        },
+        RESOURCE_NAME_5031010 = {
+          ContentFR = "Puantinet",
+          TextMapId = "RESOURCE_NAME_5031010"
+        },
+        RESOURCE_NAME_5031011 = {
+          ContentFR = "Puantinet variant",
+          TextMapId = "RESOURCE_NAME_5031011"
+        },
+        RESOURCE_NAME_5031020 = {
+          ContentFR = "Palourde taro",
+          TextMapId = "RESOURCE_NAME_5031020"
+        },
+        RESOURCE_NAME_5031021 = {
+          ContentFR = "Palourde taro variante",
+          TextMapId = "RESOURCE_NAME_5031021"
+        },
+        RESOURCE_NAME_5031030 = {
+          ContentFR = "Ver des rivières",
+          TextMapId = "RESOURCE_NAME_5031030"
+        },
+        RESOURCE_NAME_5031031 = {
+          ContentFR = "Ver des rivières variant",
+          TextMapId = "RESOURCE_NAME_5031031"
+        },
+        RESOURCE_NAME_5031040 = {
+          ContentFR = "Œil-lanterne",
+          TextMapId = "RESOURCE_NAME_5031040"
+        },
+        RESOURCE_NAME_5031041 = {
+          ContentFR = "Œil-lanterne variant",
+          TextMapId = "RESOURCE_NAME_5031041"
+        },
+        RESOURCE_NAME_5031050 = {
+          ContentFR = "Requin des fonds",
+          TextMapId = "RESOURCE_NAME_5031050"
+        },
+        RESOURCE_NAME_5031051 = {
+          ContentFR = "Requin des fonds variant",
+          TextMapId = "RESOURCE_NAME_5031051"
+        },
         RESOURCE_NAME_5110100 = {
           ContentFR = "Canne d’entraînement",
           TextMapId = "RESOURCE_NAME_5110100"
@@ -38939,10 +40886,46 @@ Allez voir ce qui se passe.]],
           ContentFR = "Coffre merveilleux",
           TextMapId = "RESOURCE_NAME_6000002"
         },
+        RESOURCE_NAME_6000004 = {
+          ContentFR = "Jetons stratégiques et martiaux",
+          TextMapId = "RESOURCE_NAME_6000004"
+        },
+        RESOURCE_NAME_60000041 = {
+          ContentFR = "Certificat d’amélioration I",
+          TextMapId = "RESOURCE_NAME_60000041"
+        },
+        RESOURCE_NAME_60000042 = {
+          ContentFR = "Certificat d’amélioration II",
+          TextMapId = "RESOURCE_NAME_60000042"
+        },
+        RESOURCE_NAME_60000043 = {
+          ContentFR = "Certificat d’amélioration III",
+          TextMapId = "RESOURCE_NAME_60000043"
+        },
+        RESOURCE_NAME_60000044 = {
+          ContentFR = "Certificat d’amélioration IV",
+          TextMapId = "RESOURCE_NAME_60000044"
+        },
+        RESOURCE_NAME_60000045 = {
+          ContentFR = "Certificat d’amélioration V",
+          TextMapId = "RESOURCE_NAME_60000045"
+        },
+        RESOURCE_NAME_60000046 = {
+          ContentFR = "Certificat d’amélioration VI",
+          TextMapId = "RESOURCE_NAME_60000046"
+        },
         RESOURCE_NAME_6100122 = {
           ContentFR = "Points de partie",
           TextMapId = "RESOURCE_NAME_6100122"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_NAME_99",
+    MaxKey = "RESOURCE_TEXT_4020005",
+    Loader = function()
+      return {
         RESOURCE_NAME_99 = {
           ContentFR = "Gemme de Phoxène",
           TextMapId = "RESOURCE_NAME_99"
@@ -38968,7 +40951,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_10001"
         },
         RESOURCE_TEXT_10002 = {
-          ContentFR = "« L’humanité n’a cessé de chercher à s’approprier la puissance — une soif qui a engendré d’innombrables tragédies, mais aussi bâti sa place dans l’histoire. À travers les âges, elle a allumé des feux dans les terres sauvages, extrait la glace des glaciers, semé les champs, dompté les vents. Ainsi, les éléments de la nature sont devenus, peu à peu, des outils au service de son existence, facilitant son quotidien et façonnant sa mémoire. »\n\n— Comnena, conservatrice en chef de la Bibliothèque des Nuages d’Aethyrie, Feuilles et Lune - Chroniques d’Atlasia",
+          ContentFR = "« L’humanité n’a cessé de chercher à s’approprier la puissance — une soif qui a engendré d’innombrables tragédies, mais aussi bâti sa place dans l’histoire. À travers les âges, elle a allumé des feux dans les terres sauvages, extrait la glace des glaciers, semé les champs, dompté les vents. Ainsi, les éléments de la nature sont devenus, peu à peu, des outils au service de son existence, facilitant son quotidien et façonnant sa mémoire. »\n\n— Comnena, conservatrice en chef de la Bibliothèque des Nuages d’Aethyrie, <I>Feuilles et Lune - Chroniques d’Atlasia</>",
           TextMapId = "RESOURCE_TEXT_10002"
         },
         RESOURCE_TEXT_10003 = {
@@ -38976,15 +40959,15 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_10003"
         },
         RESOURCE_TEXT_10004 = {
-          ContentFR = "« Aux premiers jours de Huaxu, le ciel présagea le malheur : Vénus brilla en plein jour, et les étoiles s’écrasèrent dans l’océan sans rivage. À travers les terres sauvages, les Souillés proliféraient, et la Dégradation se répandait.\n\nAlors Yang parcourut le monde pour sa grande chasse : il abattit la Bête aux Dents-Taillées dans les Eaux Maudites, captura le Grand Sanglier dans les Bois de Mûriers. Il remit des flèches à ses vassaux et leur ordonna d’abattre dix-neuf bêtes géantes. Ainsi, nul ne résista : tous se soumirent et reconnurent Yang comme souverain. »\n\n— Ban Ye, Grand Historiographe, Annales de Huaxu",
+          ContentFR = "« Aux premiers jours de Huaxu, le ciel présagea le malheur : Vénus brilla en plein jour, et les étoiles s’écrasèrent dans l’océan sans rivage. À travers les terres sauvages, les Souillés proliféraient, et la Dégradation se répandait.\n\nAlors Yang parcourut le monde pour sa grande chasse : il abattit la Bête aux Dents-Taillées dans les Eaux Maudites, captura le Grand Sanglier dans les Bois de Mûriers. Il remit des flèches à ses vassaux et leur ordonna d’abattre dix-neuf bêtes géantes. Ainsi, nul ne résista : tous se soumirent et reconnurent Yang comme souverain. »\n\n— Ban Ye, <I>Grand Historiographe, Annales de Huaxu</>",
           TextMapId = "RESOURCE_TEXT_10004"
         },
         RESOURCE_TEXT_10005 = {
-          ContentFR = "« Même à cent mètres de distance, son éclat ne saurait passer inaperçu. Cette cape, patiemment cousue à partir de milliers d’écailles de lézard de feu, est sans conteste une œuvre d’art. Conçue à l’âge d’or de Khemet, son rouge incandescent, miroitant au soleil tel un brasier vivant, incarne l’âme même de cette terre ardente.\n\nDes années plus tard, la reine Lamia la revêtit sur le champ de bataille, immobile au milieu des déflagrations magiques et du fracas des canons. La longue guerre d’usure dura des jours et des nuits : nul ne se retourna, nul ne recula. Et, aujourd’hui encore, le feu ne s’est jamais éteint. »\n\n— Réfractions, par Fiama",
+          ContentFR = "« Même à cent mètres de distance, son éclat ne saurait passer inaperçu. Cette cape, patiemment cousue à partir de milliers d’écailles de lézard de feu, est sans conteste une œuvre d’art. Conçue à l’âge d’or de Khemet, son rouge incandescent, miroitant au soleil tel un brasier vivant, incarne l’âme même de cette terre ardente.\n\nDes années plus tard, la reine Lamia la revêtit sur le champ de bataille, immobile au milieu des déflagrations magiques et du fracas des canons. La longue guerre d’usure dura des jours et des nuits : nul ne se retourna, nul ne recula. Et, aujourd’hui encore, le feu ne s’est jamais éteint. »\n\n— <I>Réfractions</>, par Fiama",
           TextMapId = "RESOURCE_TEXT_10005"
         },
         RESOURCE_TEXT_10006 = {
-          ContentFR = "« Lorsqu’un enfant de Khemet voit le jour, il est accueilli par le baptême des flammes, et lorsqu’il quitte ce monde, c’est le feu qui libère son âme de ses chaînes charnelles. La vie se flétrit avec le temps, mais l’âme, elle, demeure éternellement unie au feu. »\n\n— Seth, Roi de Khemet, Proclamation au peuple de Khemet",
+          ContentFR = "« Lorsqu’un enfant de Khemet voit le jour, il est accueilli par le baptême des flammes, et lorsqu’il quitte ce monde, c’est le feu qui libère son âme de ses chaînes charnelles. La vie se flétrit avec le temps, mais l’âme, elle, demeure éternellement unie au feu. »\n\n— Seth, Roi de Khemet, <I>Proclamation au peuple de Khemet</>",
           TextMapId = "RESOURCE_TEXT_10006"
         },
         RESOURCE_TEXT_10007 = {
@@ -39000,7 +40983,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_10009"
         },
         RESOURCE_TEXT_1001 = {
-          ContentFR = "« Ô fuseau du destin !\nCe que tu files n’est que sable, corde de verre et de poussière —\nSeule elle connaît ni commencement ni fin. »\n\n— Extrait du Fuseau de la Déesse du Destin, poème d’un auteur anonyme",
+          ContentFR = "« Ô fuseau du destin !\nCe que tu files n’est que sable, corde de verre et de poussière —\nSeule elle connaît ni commencement ni fin. »\n\n— Extrait du <I>Fuseau de la Déesse du Destin</>, poème d’un auteur anonyme",
           TextMapId = "RESOURCE_TEXT_1001"
         },
         RESOURCE_TEXT_10010 = {
@@ -39016,19 +40999,19 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_10012"
         },
         RESOURCE_TEXT_10013 = {
-          ContentFR = "« L’architecture de Huaxu repose principalement sur des structures en bois, ce qui explique leur maîtrise remarquable dans l’art de la prévention des incendies. J’ai eu la chance de consulter quelques-unes de leurs théories en mécanismes arcanotechniques : ils envisageaient d’intégrer un dispositif de stockage d’énergie à leurs aiguilles de foudre, afin de transformer l’électricité naturelle en une nouvelle source de puissance... Je me demande s’ils y sont parvenus. »\n\n— Dylan, surnommé Monsieur-Je-Sais-Tout, dans Territoires inexplorés",
+          ContentFR = "« L’architecture de Huaxu repose principalement sur des structures en bois, ce qui explique leur maîtrise remarquable dans l’art de la prévention des incendies. J’ai eu la chance de consulter quelques-unes de leurs théories en mécanismes arcanotechniques : ils envisageaient d’intégrer un dispositif de stockage d’énergie à leurs aiguilles de foudre, afin de transformer l’électricité naturelle en une nouvelle source de puissance... Je me demande s’ils y sont parvenus. »\n\n— Dylan, surnommé Monsieur-Je-Sais-Tout, dans <I>Territoires inexplorés</>",
           TextMapId = "RESOURCE_TEXT_10013"
         },
         RESOURCE_TEXT_10014 = {
-          ContentFR = "« Dans l’histoire de Huaxu, les météores n’ont jamais été synonymes de chance ni de vœux exaucés. On les appelait des \"comètes funestes\", présages de désastre et de péril. Pourtant — ironie du sort — Huaxu fut le premier pays connu à exploiter des objets fabriqués à partir de météorites. Il faut croire que, face à la nécessité, même les plus solides croyances peuvent être renversées. »\n\n— Tachitus, historien d’Élysium, Chroniques",
+          ContentFR = "« Dans l’histoire de Huaxu, les météores n’ont jamais été synonymes de chance ni de vœux exaucés. On les appelait des \"comètes funestes\", présages de désastre et de péril. Pourtant — ironie du sort — Huaxu fut le premier pays connu à exploiter des objets fabriqués à partir de météorites. Il faut croire que, face à la nécessité, même les plus solides croyances peuvent être renversées. »\n\n— Tachitus, historien d’Élysium, <I>Chroniques</>",
           TextMapId = "RESOURCE_TEXT_10014"
         },
         RESOURCE_TEXT_10015 = {
-          ContentFR = "« Ô fuseau du destin,\nDe quels fils la déesse impitoyable tisse-t-elle ta trame ?\nDe la soie ténue que l’araignée suspend aux profondeurs ?\nDe la toison dorée qui orne les plus hauts sommets ?\nOu de ce péché originel, si subtil, qui coule dans nos veines ? »\n\n— Poète anonyme, Le Fuseau de la Déesse du Destin (extrait)",
+          ContentFR = "« Ô fuseau du destin,\nDe quels fils la déesse impitoyable tisse-t-elle ta trame ?\nDe la soie ténue que l’araignée suspend aux profondeurs ?\nDe la toison dorée qui orne les plus hauts sommets ?\nOu de ce péché originel, si subtil, qui coule dans nos veines ? »\n\n— Poète anonyme, <I>Le Fuseau de la Déesse du Destin</> (extrait)",
           TextMapId = "RESOURCE_TEXT_10015"
         },
         RESOURCE_TEXT_10016 = {
-          ContentFR = "« Aucun enfant ne saurait résister à l’envie d’un petit flacon de foudre — ses éclairs qui dansent au bout des doigts, comme un génie minuscule enfermé dans le verre. En des temps ravagés par la guerre, lorsque famille, amis et animaux de compagnie ont disparu, beaucoup d’enfants n’avaient plus que ce petit flacon pour confident. »\n\n— Dylan, surnommé Monsieur-Je-Sais-Tout, dans Territoires inexplorés",
+          ContentFR = "« Aucun enfant ne saurait résister à l’envie d’un petit flacon de foudre — ses éclairs qui dansent au bout des doigts, comme un génie minuscule enfermé dans le verre. En des temps ravagés par la guerre, lorsque famille, amis et animaux de compagnie ont disparu, beaucoup d’enfants n’avaient plus que ce petit flacon pour confident. »\n\n— Dylan, surnommé Monsieur-Je-Sais-Tout, dans <I>Territoires inexplorés</>",
           TextMapId = "RESOURCE_TEXT_10016"
         },
         RESOURCE_TEXT_10017 = {
@@ -39040,7 +41023,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_10018"
         },
         RESOURCE_TEXT_10019 = {
-          ContentFR = "« Le premier dieu t’accorde la vie, pour que tu respires et prospères sur cette terre.\nLe second t’offre l’abondance, pour enrichir les années à venir.\nLe troisième t’illumine de sagesse, guidant ton âme dans la nuit.\n...\nEt moi, je t’apporte la mort, pour que ton pénible voyage trouve enfin sa fin. »\n\n— Extrait des Écritures Élyséennes, Hymnes sacrés – Tome I",
+          ContentFR = "« Le premier dieu t’accorde la vie, pour que tu respires et prospères sur cette terre.\nLe second t’offre l’abondance, pour enrichir les années à venir.\nLe troisième t’illumine de sagesse, guidant ton âme dans la nuit.\n...\nEt moi, je t’apporte la mort, pour que ton pénible voyage trouve enfin sa fin. »\n\n— Extrait des Écritures Élyséennes, <I>Hymnes sacrés – Tome I</>",
           TextMapId = "RESOURCE_TEXT_10019"
         },
         RESOURCE_TEXT_1002 = {
@@ -39060,7 +41043,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_10022"
         },
         RESOURCE_TEXT_10023 = {
-          ContentFR = "« La pleine lune verse son désespoir,\nL’abysse berce la folie.\nLe royaume des dieux se cache sur la face cachée du miroir lunaire,\nTandis que de pâles copies s’égarent dans une vaine confusion. »\n\n— Rituel du Noctilunisme, hérésie d’Élysium, Au-delà du voile lunaire – Chapitre II",
+          ContentFR = "« La pleine lune verse son désespoir,\nL’abysse berce la folie.\nLe royaume des dieux se cache sur la face cachée du miroir lunaire,\nTandis que de pâles copies s’égarent dans une vaine confusion. »\n\n— Rituel du Noctilunisme, hérésie d’Élysium, <I>Au-delà du voile lunaire – Chapitre II</>",
           TextMapId = "RESOURCE_TEXT_10023"
         },
         RESOURCE_TEXT_10024 = {
@@ -39068,7 +41051,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_10024"
         },
         RESOURCE_TEXT_1003 = {
-          ContentFR = "« Ô fuseau du destin !\nCe que tu files n’est que sable, corde de verre et de poussière —\nSeule elle connaît ni commencement ni fin. »\n— Extrait du Fuseau de la Déesse du Destin, poème d’un auteur anonyme",
+          ContentFR = "« Ô fuseau du destin !\nCe que tu files n’est que sable, corde de verre et de poussière —\nSeule elle connaît ni commencement ni fin. »\n— Extrait du <I>Fuseau de la Déesse du Destin</>, poème d’un auteur anonyme",
           TextMapId = "RESOURCE_TEXT_1003"
         },
         RESOURCE_TEXT_1006 = {
@@ -39100,7 +41083,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_10104"
         },
         RESOURCE_TEXT_1011101 = {
-          ContentFR = "« Voici notre histoire, vieille de plus de deux millénaires : une épopée faite d’étreintes et de massacres, d’élans de ferveur et d’élans de compassion. L’Histoire, tel le ballet céleste du soleil et de la lune, s’élève et s’abaisse, éternelle et cyclique.\nDans la grande tapisserie du temps relatée dans ces pages, je ne suis qu’une simple observatrice, insignifiante comme un flocon d’Hyperborea, une feuille d’Aethyrie, une goutte des eaux de Luca ou un grain des sables de Khemet.\nEt pourtant, dans cet immense cosmos, j’espère que les flocons se rassembleront en une vaste étendue de neige, que les feuilles formeront des forêts, que les gouttes se joindront pour devenir fleuves, et que les grains s’uniront pour façonner des déserts. Car lorsque toutes les individualités se relient, l’Histoire s’incline en notre faveur. »\n\n— Comnena, conservatrice en chef de la Bibliothèque des Nuages d’Aethyrie, Feuilles et Lune - Chroniques d’Atlasia",
+          ContentFR = "« Voici notre histoire, vieille de plus de deux millénaires : une épopée faite d’étreintes et de massacres, d’élans de ferveur et d’élans de compassion. L’Histoire, tel le ballet céleste du soleil et de la lune, s’élève et s’abaisse, éternelle et cyclique.\nDans la grande tapisserie du temps relatée dans ces pages, je ne suis qu’une simple observatrice, insignifiante comme un flocon d’Hyperborea, une feuille d’Aethyrie, une goutte des eaux de Luca ou un grain des sables de Khemet.\nEt pourtant, dans cet immense cosmos, j’espère que les flocons se rassembleront en une vaste étendue de neige, que les feuilles formeront des forêts, que les gouttes se joindront pour devenir fleuves, et que les grains s’uniront pour façonner des déserts. Car lorsque toutes les individualités se relient, l’Histoire s’incline en notre faveur. »\n\n— Comnena, conservatrice en chef de la Bibliothèque des Nuages d’Aethyrie, <I>Feuilles et Lune - Chroniques d’Atlasia</>",
           TextMapId = "RESOURCE_TEXT_1011101"
         },
         RESOURCE_TEXT_102 = {
@@ -39132,15 +41115,15 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_10205"
         },
         RESOURCE_TEXT_10206 = {
-          ContentFR = "« Biru, d’un vert profond et d’un goût astringent, laisse poindre une légère douceur un instant après ingestion. Pris en quantité raisonnable, il apaise l’esprit, calme le cœur et favorise la cicatrisation. À trop forte dose, toutefois, il peut entraîner un engourdissement. »\n\n— Fufeng, apothicaire de Huaxu, Guide des plantes médicinales",
+          ContentFR = "« Biru, d’un vert profond et d’un goût astringent, laisse poindre une légère douceur un instant après ingestion. Pris en quantité raisonnable, il apaise l’esprit, calme le cœur et favorise la cicatrisation. À trop forte dose, toutefois, il peut entraîner un engourdissement. »\n\n— Fufeng, apothicaire de Huaxu, <I>Guide des plantes médicinales</>",
           TextMapId = "RESOURCE_TEXT_10206"
         },
         RESOURCE_TEXT_10207 = {
-          ContentFR = "« Biru, d’un vert profond et d’un goût astringent, laisse poindre une légère douceur un instant après ingestion. Pris en quantité raisonnable, il apaise l’esprit, calme le cœur et favorise la cicatrisation. À trop forte dose, toutefois, il peut entraîner un engourdissement. »\n\n— Fufeng, apothicaire de Huaxu, Guide des plantes médicinales",
+          ContentFR = "« Biru, d’un vert profond et d’un goût astringent, laisse poindre une légère douceur un instant après ingestion. Pris en quantité raisonnable, il apaise l’esprit, calme le cœur et favorise la cicatrisation. À trop forte dose, toutefois, il peut entraîner un engourdissement. »\n\n— Fufeng, apothicaire de Huaxu, <I>Guide des plantes médicinales</>",
           TextMapId = "RESOURCE_TEXT_10207"
         },
         RESOURCE_TEXT_10208 = {
-          ContentFR = "« Biru, d’un vert profond et d’un goût astringent, laisse poindre une légère douceur un instant après ingestion. Pris en quantité raisonnable, il apaise l’esprit, calme le cœur et favorise la cicatrisation. À trop forte dose, toutefois, il peut entraîner un engourdissement. »\n\n— Fufeng, apothicaire de Huaxu, Guide des plantes médicinales",
+          ContentFR = "« Biru, d’un vert profond et d’un goût astringent, laisse poindre une légère douceur un instant après ingestion. Pris en quantité raisonnable, il apaise l’esprit, calme le cœur et favorise la cicatrisation. À trop forte dose, toutefois, il peut entraîner un engourdissement. »\n\n— Fufeng, apothicaire de Huaxu, <I>Guide des plantes médicinales</>",
           TextMapId = "RESOURCE_TEXT_10208"
         },
         RESOURCE_TEXT_10209 = {
@@ -39168,15 +41151,15 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_110"
         },
         RESOURCE_TEXT_11001 = {
-          ContentFR = "« Il avance,\nIl avance !\nJ’entends gronder ses pas,\nJ’entends l’Épée du Torrent racler le sol !\nIl vient réclamer la vie des injustes,\nNul ici n’échappera à la tempête !\nCe soir, nul ne résistera à la mort descendue des cieux,\nPas plus qu’on ne saurait lui arracher l’épée des mains ! »\n\n— Extrait de Sous le Courroux des Flots, par Alexandre Dumas, dramaturge de la faction du Deuil",
+          ContentFR = "« Il avance,\nIl avance !\nJ’entends gronder ses pas,\nJ’entends l’Épée du Torrent racler le sol !\nIl vient réclamer la vie des injustes,\nNul ici n’échappera à la tempête !\nCe soir, nul ne résistera à la mort descendue des cieux,\nPas plus qu’on ne saurait lui arracher l’épée des mains ! »\n\n— Extrait de <I>Sous le Courroux des Flots</>, par Alexandre Dumas, dramaturge de la faction du Deuil",
           TextMapId = "RESOURCE_TEXT_11001"
         },
         RESOURCE_TEXT_11002 = {
-          ContentFR = "« Il avance,\nIl avance !\nJ’entends gronder ses pas,\nJ’entends l’Épée du Torrent racler le sol !\nIl vient réclamer la vie des injustes,\nNul ici n’échappera à la tempête !\nCe soir, nul ne résistera à la mort descendue des cieux,\nPas plus qu’on ne saurait lui arracher l’épée des mains ! »\n\n— Extrait de Sous le Courroux des Flots, par Alexandre Dumas, dramaturge de la faction du Deuil",
+          ContentFR = "« Il avance,\nIl avance !\nJ’entends gronder ses pas,\nJ’entends l’Épée du Torrent racler le sol !\nIl vient réclamer la vie des injustes,\nNul ici n’échappera à la tempête !\nCe soir, nul ne résistera à la mort descendue des cieux,\nPas plus qu’on ne saurait lui arracher l’épée des mains ! »\n\n— Extrait de <I>Sous le Courroux des Flots</>, par Alexandre Dumas, dramaturge de la faction du Deuil",
           TextMapId = "RESOURCE_TEXT_11002"
         },
         RESOURCE_TEXT_11003 = {
-          ContentFR = "« Il avance,\nIl avance !\nJ’entends gronder ses pas,\nJ’entends l’Épée du Torrent racler le sol !\nIl vient réclamer la vie des injustes,\nNul ici n’échappera à la tempête !\nCe soir, nul ne résistera à la mort descendue des cieux,\nPas plus qu’on ne saurait lui arracher l’épée des mains ! »\n\n— Extrait de Sous le Courroux des Flots, par Alexandre Dumas, dramaturge de la faction du Deuil",
+          ContentFR = "« Il avance,\nIl avance !\nJ’entends gronder ses pas,\nJ’entends l’Épée du Torrent racler le sol !\nIl vient réclamer la vie des injustes,\nNul ici n’échappera à la tempête !\nCe soir, nul ne résistera à la mort descendue des cieux,\nPas plus qu’on ne saurait lui arracher l’épée des mains ! »\n\n— Extrait de <I>Sous le Courroux des Flots</>, par Alexandre Dumas, dramaturge de la faction du Deuil",
           TextMapId = "RESOURCE_TEXT_11003"
         },
         RESOURCE_TEXT_11004 = {
@@ -39184,11 +41167,11 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_11004"
         },
         RESOURCE_TEXT_11005 = {
-          ContentFR = "« Le sabre, c’est l’union du corps et de l’esprit.\nQuand l’âme s’y consacre tout entière, le fil d’acier peut trancher la foudre, fendre les flots, et abattre les monstres des mers. »\n\n— Un bretteur anonyme de Huaxu, Par-delà la Lame",
+          ContentFR = "« Le sabre, c’est l’union du corps et de l’esprit.\nQuand l’âme s’y consacre tout entière, le fil d’acier peut trancher la foudre, fendre les flots, et abattre les monstres des mers. »\n\n— Un bretteur anonyme de Huaxu, <I>Par-delà la Lame</>",
           TextMapId = "RESOURCE_TEXT_11005"
         },
         RESOURCE_TEXT_11006 = {
-          ContentFR = "« Le sabre, c’est l’union du corps et de l’esprit.\nQuand l’âme s’y consacre tout entière, le fil d’acier peut trancher la foudre, fendre les flots, et abattre les monstres des mers. »\n\n— Un bretteur anonyme de Huaxu, Par-delà la Lame",
+          ContentFR = "« Le sabre, c’est l’union du corps et de l’esprit.\nQuand l’âme s’y consacre tout entière, le fil d’acier peut trancher la foudre, fendre les flots, et abattre les monstres des mers. »\n\n— Un bretteur anonyme de Huaxu, <I>Par-delà la Lame</>",
           TextMapId = "RESOURCE_TEXT_11006"
         },
         RESOURCE_TEXT_11007 = {
@@ -39308,27 +41291,19 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_20005"
         },
         RESOURCE_TEXT_20006 = {
-          ContentFR = "« Chevaliers de l’Ordre Sacré de l’Iris ! Vous êtes les plus dévots d’Élysium, revêtus d’armures éclatantes, lances en main, combattant pour votre foi ! En servant une cause si grande, vous serez bénis par Sa main, protégés par Sa volonté, invincibles sur le champ de bataille, et vous rentrerez victorieux ! »\n\n— Eilon, 132ᵉ commandant de l’Ordre Sacré de l’Iris, Discours avant la bataille",
+          ContentFR = "« Chevaliers de l’Ordre Sacré de l’Iris ! Vous êtes les plus dévots d’Élysium, revêtus d’armures éclatantes, lances en main, combattant pour votre foi ! En servant une cause si grande, vous serez bénis par Sa main, protégés par Sa volonté, invincibles sur le champ de bataille, et vous rentrerez victorieux ! »\n\n— Eilon, 132ᵉ commandant de l’Ordre Sacré de l’Iris, <I>Discours avant la bataille</>",
           TextMapId = "RESOURCE_TEXT_20006"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_TEXT_20007",
-    MaxKey = "RLArchive_ID",
-    Loader = function()
-      return {
+        },
         RESOURCE_TEXT_20007 = {
           ContentFR = "« Hé, gamin, jamais vu de feu d’artifice ? Laisse ce génie t’apprendre — allume ce câble, et je te promets le plus beau spectacle pyrotechnique de ta vie ! »\n\n— Oliver, Expert en Explosifs",
           TextMapId = "RESOURCE_TEXT_20007"
         },
         RESOURCE_TEXT_20008 = {
-          ContentFR = "« L’histoire de l’humanité est une longue lutte contre les Souillés. Pendant quinze siècles, nous n’avons fait que les repousser, sans jamais les vaincre... parce que nous n’avons jamais vraiment appris à les comprendre. Mais aujourd’hui, tout change. La découverte du Cristal répulsif est, j’en suis convaincu, notre tout premier pas vers une véritable victoire. »\n\n— Ting Bergen, fondateur de la souillologie au Spathatoi, Histoire des Souillés : de la Tour à la Mer du Maelström",
+          ContentFR = "« L’histoire de l’humanité est une longue lutte contre les Souillés. Pendant quinze siècles, nous n’avons fait que les repousser, sans jamais les vaincre... parce que nous n’avons jamais vraiment appris à les comprendre. Mais aujourd’hui, tout change. La découverte du Cristal répulsif est, j’en suis convaincu, notre tout premier pas vers une véritable victoire. »\n\n— Ting Bergen, fondateur de la souillologie au Spathatoi, <I>Histoire des Souillés : de la Tour à la Mer du Maelström</>",
           TextMapId = "RESOURCE_TEXT_20008"
         },
         RESOURCE_TEXT_20009 = {
-          ContentFR = "« À travers les étendues sauvages, les épines lacéraient ses pieds nus, mais jamais elles ne purent ralentir sa course. Il continuait de chercher l’être disparu, jusqu’à ce que ses bras levés deviennent des montagnes, et que son sang et ses larmes s’épanouissent en fleurs pourpres. »\n\n— Lirico, ménestrelle, Voyage au cœur de la Mer du Silence",
+          ContentFR = "« À travers les étendues sauvages, les épines lacéraient ses pieds nus, mais jamais elles ne purent ralentir sa course. Il continuait de chercher l’être disparu, jusqu’à ce que ses bras levés deviennent des montagnes, et que son sang et ses larmes s’épanouissent en fleurs pourpres. »\n\n— Lirico, ménestrelle, <I>Voyage au cœur de la Mer du Silence</>",
           TextMapId = "RESOURCE_TEXT_20009"
         },
         RESOURCE_TEXT_2001 = {
@@ -39336,7 +41311,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_2001"
         },
         RESOURCE_TEXT_20010 = {
-          ContentFR = "« Aussi appelé Bois Sans-Cendre, noir de teinte, feuilles blanches comme l’os, il ressemble à du bois pourri, mais le feu le refuse. Son écorce, comestible, a un goût âpre, froid et non toxique. En décoction, deux fois par jour, il apaise les gorges enflammées et dissipe les chaleurs internes. »\n\n— Fufeng, apothicaire de Huaxu, Guide des plantes médicinales",
+          ContentFR = "« Aussi appelé Bois Sans-Cendre, noir de teinte, feuilles blanches comme l’os, il ressemble à du bois pourri, mais le feu le refuse. Son écorce, comestible, a un goût âpre, froid et non toxique. En décoction, deux fois par jour, il apaise les gorges enflammées et dissipe les chaleurs internes. »\n\n— Fufeng, apothicaire de Huaxu, <I>Guide des plantes médicinales</>",
           TextMapId = "RESOURCE_TEXT_20010"
         },
         RESOURCE_TEXT_20011 = {
@@ -39344,7 +41319,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_20011"
         },
         RESOURCE_TEXT_20012 = {
-          ContentFR = "« L’Église Élyséenne semblait prête à la guerre : des centaines d’ordres de chevaliers, murmurant silencieusement le nom divin, marchaient vers la frontière, leurs cottes de mailles argentées et leurs casques dorés étincelant sous le soleil. Quand ils se rassemblèrent, la vaste plaine scintilla comme un lac d’or et d’argent. Beaucoup jurèrent avoir vu, dans la lumière de ce jour, l’ombre des dieux guider Élysium vers la victoire. »\n\n— Tachitus, historien d’Élysium, Chroniques",
+          ContentFR = "« L’Église Élyséenne semblait prête à la guerre : des centaines d’ordres de chevaliers, murmurant silencieusement le nom divin, marchaient vers la frontière, leurs cottes de mailles argentées et leurs casques dorés étincelant sous le soleil. Quand ils se rassemblèrent, la vaste plaine scintilla comme un lac d’or et d’argent. Beaucoup jurèrent avoir vu, dans la lumière de ce jour, l’ombre des dieux guider Élysium vers la victoire. »\n\n— Tachitus, historien d’Élysium, <I>Chroniques</>",
           TextMapId = "RESOURCE_TEXT_20012"
         },
         RESOURCE_TEXT_20013 = {
@@ -39364,11 +41339,11 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_20016"
         },
         RESOURCE_TEXT_20017 = {
-          ContentFR = "« Les blizzards du Nord sont assez puissants pour briser l’esprit des hommes... et assez lourds pour effondrer les maisons mal construites. La mortalité hivernale restait très élevée, jusqu’à ce que les Éolipyliens appliquée conçoive ces \"toits de fer\" : d’immenses plaques métalliques, grossières et rudimentaires, mais capables de supporter le poids mortel de la neige. Depuis cette année-là, presque plus personne n’a péri sous les avalanches. Cette technologie a ensuite été adaptée à un usage militaire... mais d’après la rumeur, l’armée n’a jamais payé les droits de brevet. »\n\n— Dylan, surnommé Monsieur-Je-Sais-Tout, dans Territoires inexplorés",
+          ContentFR = "« Les blizzards du Nord sont assez puissants pour briser l’esprit des hommes... et assez lourds pour effondrer les maisons mal construites. La mortalité hivernale restait très élevée, jusqu’à ce que les Éolipyliens appliquée conçoive ces \"toits de fer\" : d’immenses plaques métalliques, grossières et rudimentaires, mais capables de supporter le poids mortel de la neige. Depuis cette année-là, presque plus personne n’a péri sous les avalanches. Cette technologie a ensuite été adaptée à un usage militaire... mais d’après la rumeur, l’armée n’a jamais payé les droits de brevet. »\n\n— Dylan, surnommé Monsieur-Je-Sais-Tout, dans <I>Territoires inexplorés</>",
           TextMapId = "RESOURCE_TEXT_20017"
         },
         RESOURCE_TEXT_20018 = {
-          ContentFR = "« Ta source de jeunesse est tarie — elle ne reviendra jamais. »\n\n« Mais ce n’est pas une raison pour rengainer ton épée. »\n\n« Ta lumière de sagesse s’est éteinte — elle ne reviendra jamais. »\n\n« Mais ce n’est pas une raison pour faire taire ta voix. »\n\n« Le chemin du retour s’efface sous tes pas — tu ne l’arpenteras plus jamais. »\n\n« Mais ce n’est pas une raison pour t’arrêter. »\n\n« Ô toi, héros privé de force, de mémoire et de foyer ! Toi, à qui la guerre n’a laissé plus rien à sacrifier ! Réponds à l’interrogation de la Tisseuse du destin : quel est ton véritable désir ? Vers quel horizon pointe le fil de ta lame ? »\n\n— Poète anonyme, Le Fuseau de la Déesse du Destin (extrait)",
+          ContentFR = "« Ta source de jeunesse est tarie — elle ne reviendra jamais. »\n\n« Mais ce n’est pas une raison pour rengainer ton épée. »\n\n« Ta lumière de sagesse s’est éteinte — elle ne reviendra jamais. »\n\n« Mais ce n’est pas une raison pour faire taire ta voix. »\n\n« Le chemin du retour s’efface sous tes pas — tu ne l’arpenteras plus jamais. »\n\n« Mais ce n’est pas une raison pour t’arrêter. »\n\n« Ô toi, héros privé de force, de mémoire et de foyer ! Toi, à qui la guerre n’a laissé plus rien à sacrifier ! Réponds à l’interrogation de la Tisseuse du destin : quel est ton véritable désir ? Vers quel horizon pointe le fil de ta lame ? »\n\n— Poète anonyme, <I>Le Fuseau de la Déesse du Destin</> (extrait)",
           TextMapId = "RESOURCE_TEXT_20018"
         },
         RESOURCE_TEXT_20019 = {
@@ -39388,11 +41363,11 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_20021"
         },
         RESOURCE_TEXT_20022 = {
-          ContentFR = "« Cela me rappelle l’écoulement du temps... Tout comme lui, il comble les fissures, dissimule le passé, et donne l’illusion que tout va bien. En vérité, sa fonction première était de renforcer les structures vieillissantes. Mais tout a ses limites : soumis à une chaleur extrême, il explose violemment, anéantissant tout — ancien comme nouveau. »\n\n— Émeraude, chercheuse en matériaux des Éolipyliens, Manuel des nouveaux matériaux : Théories et applications",
+          ContentFR = "« Cela me rappelle l’écoulement du temps... Tout comme lui, il comble les fissures, dissimule le passé, et donne l’illusion que tout va bien. En vérité, sa fonction première était de renforcer les structures vieillissantes. Mais tout a ses limites : soumis à une chaleur extrême, il explose violemment, anéantissant tout — ancien comme nouveau. »\n\n— Émeraude, chercheuse en matériaux des Éolipyliens, <I>Manuel des nouveaux matériaux : Théories et applications</>",
           TextMapId = "RESOURCE_TEXT_20022"
         },
         RESOURCE_TEXT_20023 = {
-          ContentFR = "« Ici je repose pour l’éternité,\nenseveli sous des milliards de grains de sable.\nNul tombeau somptueux pour m’accueillir,\nmais lorsque l’aube se lèvera,\ntu verras briller d’or le lieu de mon dernier repos. »\n\n— La Cloche du Chercheur d’Or, ballade de Khemet",
+          ContentFR = "« Ici je repose pour l’éternité,\nenseveli sous des milliards de grains de sable.\nNul tombeau somptueux pour m’accueillir,\nmais lorsque l’aube se lèvera,\ntu verras briller d’or le lieu de mon dernier repos. »\n\n— <I>La Cloche du Chercheur d’Or</>, ballade de Khemet",
           TextMapId = "RESOURCE_TEXT_20023"
         },
         RESOURCE_TEXT_20024 = {
@@ -39408,15 +41383,15 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_20026"
         },
         RESOURCE_TEXT_20027 = {
-          ContentFR = "« Le dieu à la faux descend à mes côtés.\nIl m’interdit la retraite, le doute, l’hésitation.\nJe serai l’extension de sa lame.\nJe serai l’incarnation de sa volonté.\nJe tuerai sans la moindre pitié,\njusqu’à ce que tous les ennemis reposent sous ses ailes nommées Mort. »\n\n— Extrait des Écritures Élyséennes, Hymnes sacrés – Tome II",
+          ContentFR = "« Le dieu à la faux descend à mes côtés.\nIl m’interdit la retraite, le doute, l’hésitation.\nJe serai l’extension de sa lame.\nJe serai l’incarnation de sa volonté.\nJe tuerai sans la moindre pitié,\njusqu’à ce que tous les ennemis reposent sous ses ailes nommées Mort. »\n\n— Extrait des Écritures Élyséennes, <I>Hymnes sacrés – Tome II</>",
           TextMapId = "RESOURCE_TEXT_20027"
         },
         RESOURCE_TEXT_20028 = {
-          ContentFR = "« Mon inspiration vient de la chasse. Ma famille était autrefois composée de chasseurs, et il fallait répondre à toutes sortes de demandes. Si seule la taille de la proie comptait, il suffisait d’une puissance de feu suffisante. Si l’on voulait préserver la fourrure, l’impact de la balle devait se concentrer à l’intérieur, sans endommager l’extérieur. Et s’il s’agissait d’un animal de compagnie, il fallait que les blessures puissent être soignées — un vrai casse-tête !\nAu départ, je voulais juste faciliter la vie de mon père, sans ambition de créer quoi que ce soit de révolutionnaire. Hélas, ces balles ont fini sur les champs de bataille... et pas même une douille n’est jamais revenue jusqu’à lui. »\n\n— Nisaya, Maître d’armes des Éolipyliens, conversation informelle lors d’un goûter secret, consignée dans Réunions sous le Jasmin Nocturne",
+          ContentFR = "« Mon inspiration vient de la chasse. Ma famille était autrefois composée de chasseurs, et il fallait répondre à toutes sortes de demandes. Si seule la taille de la proie comptait, il suffisait d’une puissance de feu suffisante. Si l’on voulait préserver la fourrure, l’impact de la balle devait se concentrer à l’intérieur, sans endommager l’extérieur. Et s’il s’agissait d’un animal de compagnie, il fallait que les blessures puissent être soignées — un vrai casse-tête !\nAu départ, je voulais juste faciliter la vie de mon père, sans ambition de créer quoi que ce soit de révolutionnaire. Hélas, ces balles ont fini sur les champs de bataille... et pas même une douille n’est jamais revenue jusqu’à lui. »\n\n— Nisaya, Maître d’armes des Éolipyliens, conversation informelle lors d’un goûter secret, consignée dans <I>Réunions sous le Jasmin Nocturne</>",
           TextMapId = "RESOURCE_TEXT_20028"
         },
         RESOURCE_TEXT_20029 = {
-          ContentFR = "« Peu de gens savent que le support auxiliaire de Gad fut la toute première invention à recevoir un brevet. Lorsque le système fut mis en place, personne n’osait risquer ses secrets professionnels. Le support de Gad, d’une conception très simple, fut donc présenté comme essai — et ce fut, bien sûr, un immense succès.\nLe vieux Gad aurait pu faire fortune avec ce brevet, mais il déclara : \"J’ai passé ma vie à fabriquer un simple support. Tant mieux s’il vous plaît — servez-vous, il est désormais gratuit !\" Touchant, n’est-ce pas ? »\n\n— Dylan, surnommé Monsieur-Je-Sais-Tout, dans Territoires inexplorés",
+          ContentFR = "« Peu de gens savent que le support auxiliaire de Gad fut la toute première invention à recevoir un brevet. Lorsque le système fut mis en place, personne n’osait risquer ses secrets professionnels. Le support de Gad, d’une conception très simple, fut donc présenté comme essai — et ce fut, bien sûr, un immense succès.\nLe vieux Gad aurait pu faire fortune avec ce brevet, mais il déclara : \"J’ai passé ma vie à fabriquer un simple support. Tant mieux s’il vous plaît — servez-vous, il est désormais gratuit !\" Touchant, n’est-ce pas ? »\n\n— Dylan, surnommé Monsieur-Je-Sais-Tout, dans <I>Territoires inexplorés</>",
           TextMapId = "RESOURCE_TEXT_20029"
         },
         RESOURCE_TEXT_2003 = {
@@ -39424,11 +41399,11 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_2003"
         },
         RESOURCE_TEXT_20030 = {
-          ContentFR = "« Même parmi nous, c’est elle la plus étrange. J’ai longtemps cru que quand on disait que nous considérions nos recherches comme notre vie, ce n’était qu’une métaphore... jusqu’à ce qu’elle le prenne littéralement. Tu sais pourquoi elle injecte l’agent antirouille avec une seringue ? Parce que, selon elle, \"les appareils sont des êtres vivants, et l’antirouille est leur sérum. Quand il faut injecter un sérum, à part une seringue, que veux-tu que j’utilise ?\" Franchement... impressionnant. »\n\n— Propos d’un alchimiste anonyme lors d’un goûter secret, consignés dans Réunions sous le Jasmin Nocturne",
+          ContentFR = "« Même parmi nous, c’est elle la plus étrange. J’ai longtemps cru que quand on disait que nous considérions nos recherches comme notre vie, ce n’était qu’une métaphore... jusqu’à ce qu’elle le prenne littéralement. Tu sais pourquoi elle injecte l’agent antirouille avec une seringue ? Parce que, selon elle, \"les appareils sont des êtres vivants, et l’antirouille est leur sérum. Quand il faut injecter un sérum, à part une seringue, que veux-tu que j’utilise ?\" Franchement... impressionnant. »\n\n— Propos d’un alchimiste anonyme lors d’un goûter secret, consignés dans <I>Réunions sous le Jasmin Nocturne</>",
           TextMapId = "RESOURCE_TEXT_20030"
         },
         RESOURCE_TEXT_20031 = {
-          ContentFR = "« Quand un être humain subit un choc violent, ses muscles et sa graisse servent d’amortisseurs. De même, lorsque des matériaux réagissent trop violemment au point de s’annihiler mutuellement, des structures semblables à celles des tissus des Souillés peuvent ralentir ce processus. On peut appeler ça du recyclage, d’une certaine façon.\nPeut-être devrions-nous ériger un monument à la mémoire de ces créatures qui se sont sacrifiées pour l’avancée de l’alchimie. »\n\n— Ecodna, chef du département d’applications biologiques des Spathatoi, Désassemblage et recomposition : biologie des Souillés",
+          ContentFR = "« Quand un être humain subit un choc violent, ses muscles et sa graisse servent d’amortisseurs. De même, lorsque des matériaux réagissent trop violemment au point de s’annihiler mutuellement, des structures semblables à celles des tissus des Souillés peuvent ralentir ce processus. On peut appeler ça du recyclage, d’une certaine façon.\nPeut-être devrions-nous ériger un monument à la mémoire de ces créatures qui se sont sacrifiées pour l’avancée de l’alchimie. »\n\n— Ecodna, chef du département d’applications biologiques des Spathatoi, <I>Désassemblage et recomposition : biologie des Souillés</>",
           TextMapId = "RESOURCE_TEXT_20031"
         },
         RESOURCE_TEXT_20032 = {
@@ -39444,7 +41419,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_2004"
         },
         RESOURCE_TEXT_2007 = {
-          ContentFR = "« Des étincelles brûlantes embrasent tes joues, le fracas de l’acier résonne jusque dans tes os.\nSi ton cœur bat la chamade, si ton sang s’embrase à cet appel,\nalors franchis ce seuil, saisis ton arme\net embrasse le destin du combat, jusqu’au point de non-retour. »\n\n— Auteur inconnu, page de garde de L’Art du combat",
+          ContentFR = "« Des étincelles brûlantes embrasent tes joues, le fracas de l’acier résonne jusque dans tes os.\nSi ton cœur bat la chamade, si ton sang s’embrase à cet appel,\nalors franchis ce seuil, saisis ton arme\net embrasse le destin du combat, jusqu’au point de non-retour. »\n\n— Auteur inconnu, page de garde de <I>L’Art du combat</>",
           TextMapId = "RESOURCE_TEXT_2007"
         },
         RESOURCE_TEXT_201 = {
@@ -39480,15 +41455,15 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_210"
         },
         RESOURCE_TEXT_211 = {
-          ContentFR = "« L’or enfoui sous terre réclame des mains pour le déterrer.\nLes joyaux cachés sous les eaux ne se révèlent qu’aux yeux avertis.\nIl en va de même pour les Chasseurs de Phoxène :\nleurs trésors se nichent entre les lignes, dans le murmure des mots. »\n\n— Percy Ballard, ménestrel errant, Chant des Chasseurs de Phoxène",
+          ContentFR = "« L’or enfoui sous terre réclame des mains pour le déterrer.\nLes joyaux cachés sous les eaux ne se révèlent qu’aux yeux avertis.\nIl en va de même pour les Chasseurs de Phoxène :\nleurs trésors se nichent entre les lignes, dans le murmure des mots. »\n\n— Percy Ballard, ménestrel errant, <I>Chant des Chasseurs de Phoxène</>",
           TextMapId = "RESOURCE_TEXT_211"
         },
         RESOURCE_TEXT_215 = {
-          ContentFR = "« Par nuit de pleine lune, la lumière argentée baigne chaque recoin de la tour.\nAlors, la Déesse du Destin, douce et sereine, recueille ces rayons pour en filer de fins fils d’argent, tissant un voile d’une blancheur céleste. Un fil si ténu qu’aucun œil mortel ne saurait le discerner... et pourtant si vaste qu’il renferme toutes les destinées du monde. »\n\n— Contes de la Tour, extrait d’un recueil de contes d’Élysium pour enfants",
+          ContentFR = "« Par nuit de pleine lune, la lumière argentée baigne chaque recoin de la tour.\nAlors, la Déesse du Destin, douce et sereine, recueille ces rayons pour en filer de fins fils d’argent, tissant un voile d’une blancheur céleste. Un fil si ténu qu’aucun œil mortel ne saurait le discerner... et pourtant si vaste qu’il renferme toutes les destinées du monde. »\n\n— Contes de la Tour, extrait d’un recueil de contes d’<I>Élysium pour enfants</>",
           TextMapId = "RESOURCE_TEXT_215"
         },
         RESOURCE_TEXT_216 = {
-          ContentFR = "« Remplissez les coupes de votre vin de raisin le plus généreux !\nCette nuit appartient aux Chasseurs de Phoxène.\nN’épargnez ni fleurs ni pièces de cuivre :\ndevant vous marche une légende, digne à cet instant de sa couronne ! »\n\n— Percy Ballard, ménestrel errant, Chant des Chasseurs de Phoxène",
+          ContentFR = "« Remplissez les coupes de votre vin de raisin le plus généreux !\nCette nuit appartient aux Chasseurs de Phoxène.\nN’épargnez ni fleurs ni pièces de cuivre :\ndevant vous marche une légende, digne à cet instant de sa couronne ! »\n\n— Percy Ballard, ménestrel errant, <I>Chant des Chasseurs de Phoxène</>",
           TextMapId = "RESOURCE_TEXT_216"
         },
         RESOURCE_TEXT_217 = {
@@ -39520,7 +41495,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_29005"
         },
         RESOURCE_TEXT_30001 = {
-          ContentFR = "« La pureté est une lame à double tranchant : un seul composant en accroît la puissance, mais en abrège aussi la durée. Mon travail consiste simplement à ajuster le ratio des impuretés, à trouver l’équilibre entre force et pérennité. En réalité, cette loi ne s’applique pas seulement à l’alchimie, mais aussi à tout groupe humain. »\n\n— Ecodna, chef du département d’applications biologiques des Spathatoi, Désassemblage et recomposition : biologie des Souillés",
+          ContentFR = "« La pureté est une lame à double tranchant : un seul composant en accroît la puissance, mais en abrège aussi la durée. Mon travail consiste simplement à ajuster le ratio des impuretés, à trouver l’équilibre entre force et pérennité. En réalité, cette loi ne s’applique pas seulement à l’alchimie, mais aussi à tout groupe humain. »\n\n— Ecodna, chef du département d’applications biologiques des Spathatoi, <I>Désassemblage et recomposition : biologie des Souillés</>",
           TextMapId = "RESOURCE_TEXT_30001"
         },
         RESOURCE_TEXT_30002 = {
@@ -39648,7 +41623,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_40001"
         },
         RESOURCE_TEXT_40003 = {
-          ContentFR = "« La balle est l’instrument le plus cruel... et le plus clément. Elle est les lèvres et les crocs du dieu de la guerre, embrassant et déchirant sans distinction toute chair chaude et vivante. Qu’ils soient moines ou roturiers, marchands ou mendiants, seigneurs ou courtisanes. »\n\n— Comnena, conservatrice en chef de la Bibliothèque des Nuages d’Aethyrie, Feuilles et Lune - Chroniques d’Atlasia",
+          ContentFR = "« La balle est l’instrument le plus cruel... et le plus clément. Elle est les lèvres et les crocs du dieu de la guerre, embrassant et déchirant sans distinction toute chair chaude et vivante. Qu’ils soient moines ou roturiers, marchands ou mendiants, seigneurs ou courtisanes. »\n\n— Comnena, conservatrice en chef de la Bibliothèque des Nuages d’Aethyrie, <I>Feuilles et Lune - Chroniques d’Atlasia</>",
           TextMapId = "RESOURCE_TEXT_40003"
         },
         RESOURCE_TEXT_4010001 = {
@@ -39672,7 +41647,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_4010005"
         },
         RESOURCE_TEXT_4010006 = {
-          ContentFR = "« Pétales violets, doubles fleurs d’un bleu profond, tige élancée.\nNi le vent ni la neige ne peuvent l’abattre.\nInutile de la consommer crue — elle glace le cœur et les membres.\nMais portée à haute température, elle se fait douce et purifie le corps. »\n\n— Fufeng, apothicaire de Huaxu, Guide des plantes médicinales",
+          ContentFR = "« Pétales violets, doubles fleurs d’un bleu profond, tige élancée.\nNi le vent ni la neige ne peuvent l’abattre.\nInutile de la consommer crue — elle glace le cœur et les membres.\nMais portée à haute température, elle se fait douce et purifie le corps. »\n\n— Fufeng, apothicaire de Huaxu, <I>Guide des plantes médicinales</>",
           TextMapId = "RESOURCE_TEXT_4010006"
         },
         RESOURCE_TEXT_4010007 = {
@@ -39684,15 +41659,15 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_4010008"
         },
         RESOURCE_TEXT_4010009 = {
-          ContentFR = "« Tout le monde sait que le Phoxichor enfermé dans des capsules portatives finit toujours par fuir. Bien sûr, nous avons optimisé au maximum le conteneur — on a vraiment fait de notre mieux. Mais, pour une étanchéité parfaite, il faudrait des matériaux qui valent plus cher que le Phoxichor qu’ils protègent. Pas contents ? Allez voir le département des matériaux !\n... Bref. Le plus important, c’est qu’on a dit à l’intendance que ces unités périmaient au bout de deux ans. En réalité... elles tiennent trois. »\n\n« Et donc, où veux-tu en venir ? »\n« Eh bien... les deux ans sont passés. Qui veut aller récupérer un peu de Phoxichor \"périmé\" dans l’entrepôt de la Légion ? »\n« ... Génie. Voilà pourquoi votre labo ne dépose jamais de demande de ravitaillement. »\n\n— Propos d’un alchimiste anonyme lors d’un goûter secret, consignés dans Réunions sous le Jasmin Nocturne",
+          ContentFR = "« Tout le monde sait que le Phoxichor enfermé dans des capsules portatives finit toujours par fuir. Bien sûr, nous avons optimisé au maximum le conteneur — on a vraiment fait de notre mieux. Mais, pour une étanchéité parfaite, il faudrait des matériaux qui valent plus cher que le Phoxichor qu’ils protègent. Pas contents ? Allez voir le département des matériaux !\n... Bref. Le plus important, c’est qu’on a dit à l’intendance que ces unités périmaient au bout de deux ans. En réalité... elles tiennent trois. »\n\n« Et donc, où veux-tu en venir ? »\n« Eh bien... les deux ans sont passés. Qui veut aller récupérer un peu de Phoxichor \"périmé\" dans l’entrepôt de la Légion ? »\n« ... Génie. Voilà pourquoi votre labo ne dépose jamais de demande de ravitaillement. »\n\n— Propos d’un alchimiste anonyme lors d’un goûter secret, consignés dans <I>Réunions sous le Jasmin Nocturne</>",
           TextMapId = "RESOURCE_TEXT_4010009"
         },
         RESOURCE_TEXT_4010010 = {
-          ContentFR = "« Une fleur sans nom. Une espèce que personne n’aime vraiment — peut-être l’a-t-on aimée un jour, brièvement, avant de l’oublier. La légende dit qu’elle fut jadis une personne punie pour son arrogance envers les dieux : privée de son nom, de son amour, de tout ce qu’on loue habituellement... privée même d’avenir.\nEt pourtant, elle fleurit. Sans relâche. Les fleurs ne parlent pas — mais il semble que même les dieux n’aient pu réduire cette voix au silence. »\n\n— Maître jardinier Mendir, Jardin, Cercle et Destin",
+          ContentFR = "« Une fleur sans nom. Une espèce que personne n’aime vraiment — peut-être l’a-t-on aimée un jour, brièvement, avant de l’oublier. La légende dit qu’elle fut jadis une personne punie pour son arrogance envers les dieux : privée de son nom, de son amour, de tout ce qu’on loue habituellement... privée même d’avenir.\nEt pourtant, elle fleurit. Sans relâche. Les fleurs ne parlent pas — mais il semble que même les dieux n’aient pu réduire cette voix au silence. »\n\n— Maître jardinier Mendir, <I>Jardin, Cercle et Destin</>",
           TextMapId = "RESOURCE_TEXT_4010010"
         },
         RESOURCE_TEXT_4010011 = {
-          ContentFR = "« La Sacraline incline toujours la tête. Ses fleurs, semblables à de minuscules trompettes, ne sont ni rares ni difficiles à cultiver.\nÀ Élysium, on la voit comme une messagère de modestie, un porte-voix miniature laissé par les dieux pour murmurer leurs préceptes. On raconte que si l’on écoute sous ses clochettes une journée et une nuit entières, on peut recevoir la bénédiction des Neuf. Personnellement, je ne le conseille pas : son pollen colle affreusement aux vêtements. »\n\n— Maître jardinier Mendir, Jardin, Cercle et Destin",
+          ContentFR = "« La Sacraline incline toujours la tête. Ses fleurs, semblables à de minuscules trompettes, ne sont ni rares ni difficiles à cultiver.\nÀ Élysium, on la voit comme une messagère de modestie, un porte-voix miniature laissé par les dieux pour murmurer leurs préceptes. On raconte que si l’on écoute sous ses clochettes une journée et une nuit entières, on peut recevoir la bénédiction des Neuf. Personnellement, je ne le conseille pas : son pollen colle affreusement aux vêtements. »\n\n— Maître jardinier Mendir, <I>Jardin, Cercle et Destin</>",
           TextMapId = "RESOURCE_TEXT_4010011"
         },
         RESOURCE_TEXT_4010012 = {
@@ -39700,19 +41675,19 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_4010012"
         },
         RESOURCE_TEXT_4010013 = {
-          ContentFR = "« En Hyperborea, les champignons marinés sont l’accompagnement roi de l’hiver ;\nà Huaxu, familles et anciens partent en montagne dès qu’il a plu ; à Luca, les pâtes au ragoût ou à la crème de champignons constituent — selon mon collègue — la moitié de notre religion nationale (l’autre moitié étant la pizza sans fruits) ; à Élysium, aucun repas familial ne se passe d’une tourte aux champignons ; et en Aethyrie, le gâteau aux champignons est réputé stimuler l’inspiration — il disparaît systématiquement des étals à chaque semaine d’examen.\n\nNous avons parcouru le continent pour la cuisine... mais ce que nous y avons gagné dépasse tout ce que nous espérions. »\n\n— Wym, journaliste culinaire de Luca, À la recherche des saveurs d’Atlasia",
+          ContentFR = "« En Hyperborea, les champignons marinés sont l’accompagnement roi de l’hiver ;\nà Huaxu, familles et anciens partent en montagne dès qu’il a plu ; à Luca, les pâtes au ragoût ou à la crème de champignons constituent — selon mon collègue — la moitié de notre religion nationale (l’autre moitié étant la pizza sans fruits) ; à Élysium, aucun repas familial ne se passe d’une tourte aux champignons ; et en Aethyrie, le gâteau aux champignons est réputé stimuler l’inspiration — il disparaît systématiquement des étals à chaque semaine d’examen.\n\nNous avons parcouru le continent pour la cuisine... mais ce que nous y avons gagné dépasse tout ce que nous espérions. »\n\n— Wym, journaliste culinaire de Luca, <I>À la recherche des saveurs d’Atlasia</>",
           TextMapId = "RESOURCE_TEXT_4010013"
         },
         RESOURCE_TEXT_4010014 = {
-          ContentFR = "« C’est la toute première plante que j’ai consignée dans Guide des plantes médicinales. Le lys céleste possède peu de vertus médicinales à proprement parler, mais son importance est indiscutable. Hélas... on se moque souvent de mes travaux. Et pourtant, tout le monde profite des bienfaits des plantes. Quelle étroitesse d’esprit. Si l’on sait extraire des végétaux des encens destinés à honorer les Neuf Chapitres de Dafeng, pourquoi les employer à soigner et sauver des vies serait-il si compliqué ? »\n\n— Notes de Fufeng, apothicaire de Huaxu",
+          ContentFR = "« C’est la toute première plante que j’ai consignée dans <I>Guide des plantes médicinales</>. Le lys céleste possède peu de vertus médicinales à proprement parler, mais son importance est indiscutable. Hélas... on se moque souvent de mes travaux. Et pourtant, tout le monde profite des bienfaits des plantes. Quelle étroitesse d’esprit. Si l’on sait extraire des végétaux des encens destinés à honorer les Neuf Chapitres de Dafeng, pourquoi les employer à soigner et sauver des vies serait-il si compliqué ? »\n\n— Notes de Fufeng, apothicaire de Huaxu",
           TextMapId = "RESOURCE_TEXT_4010014"
         },
         RESOURCE_TEXT_4010015 = {
-          ContentFR = "« Mon cœur n’est point pierre rétive, il ne peut se détourner. Ce qui est teint peut pâlir, mais ce qui touche la pierre rétive ne change jamais. »\n« Note : j’ai appris récemment que ma compréhension de cette ballade populaire comportait une légère erreur — la pierre rétive est bel et bien une roche particulière. Le sens réel de ces vers est le suivant : une résolution, à l’image de la pierre rétive, ne peut être inversée. Une teinture finit par s’estomper, mais ce qui a été marqué par la pierre rétive demeure inchangé, même après de longues années. »\n\n— Wangchun, secrétaire de Zhiliu, Index des teintures courantes",
+          ContentFR = "« Mon cœur n’est point pierre rétive, il ne peut se détourner. Ce qui est teint peut pâlir, mais ce qui touche la pierre rétive ne change jamais. »\n« Note : j’ai appris récemment que ma compréhension de cette ballade populaire comportait une légère erreur — la pierre rétive est bel et bien une roche particulière. Le sens réel de ces vers est le suivant : une résolution, à l’image de la pierre rétive, ne peut être inversée. Une teinture finit par s’estomper, mais ce qui a été marqué par la pierre rétive demeure inchangé, même après de longues années. »\n\n— Wangchun, secrétaire de Zhiliu,<I> Index des teintures courantes</>",
           TextMapId = "RESOURCE_TEXT_4010015"
         },
         RESOURCE_TEXT_4010016 = {
-          ContentFR = "« La vérité historique n’est parfois qu’un brouillard impossible à dissiper. L’événement qui a scellé le destin de Huaxu ne fait toujours pas l’objet d’un récit unanimement accepté. Certains Huaxiens estiment que le Ciel suivait un dessein précis : selon cette lecture, la Secte Xuanheng aurait mené avec succès une série d’actions contre la Secte Jishu, aboutissant à l’exil de Zhuyin et à sa propre victoire finale. Dès lors, le Dragon d’Argent Taihao serait devenu l’unique porte-parole du \"Ciel\", gouvernant Huaxu pendant près d’un millénaire. »\n\n— Tachitus, historien d’Élysium, Chroniques",
+          ContentFR = "« La vérité historique n’est parfois qu’un brouillard impossible à dissiper. L’événement qui a scellé le destin de Huaxu ne fait toujours pas l’objet d’un récit unanimement accepté. Certains Huaxiens estiment que le Ciel suivait un dessein précis : selon cette lecture, la Secte Xuanheng aurait mené avec succès une série d’actions contre la Secte Jishu, aboutissant à l’exil de Zhuyin et à sa propre victoire finale. Dès lors, le Dragon d’Argent Taihao serait devenu l’unique porte-parole du \"Ciel\", gouvernant Huaxu pendant près d’un millénaire. »\n\n— Tachitus, historien d’Élysium, <I>Chroniques</>",
           TextMapId = "RESOURCE_TEXT_4010016"
         },
         RESOURCE_TEXT_4010017 = {
@@ -39724,7 +41699,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_4010018"
         },
         RESOURCE_TEXT_4010019 = {
-          ContentFR = "La grenouille guette-pluie ne chante que lorsque les nuages s’empilent comme de l’encre dans le ciel. C’est pourquoi les anciens la surnomment la « Messagère des nuées.\nEntre le solstice d’été et la Fin des Chaleurs, son cri se révèle particulièrement fiable — période où les souffles du Ciel et de la Terre entrent en résonance.\n\n— Principes essentiels de l’agriculture",
+          ContentFR = "La grenouille guette-pluie ne chante que lorsque les nuages s’empilent comme de l’encre dans le ciel. C’est pourquoi les anciens la surnomment la « Messagère des nuées.\nEntre le solstice d’été et la Fin des Chaleurs, son cri se révèle particulièrement fiable — période où les souffles du Ciel et de la Terre entrent en résonance.\n\n— <I>Principes essentiels de l’agriculture</>",
           TextMapId = "RESOURCE_TEXT_4010019"
         },
         RESOURCE_TEXT_4010020 = {
@@ -39750,7 +41725,15 @@ Allez voir ce qui se passe.]],
         RESOURCE_TEXT_4020005 = {
           ContentFR = "« Malheurs, chagrins, changez en pierre,\nplouf, plouf... au fond du Lac du Deuil, allez-vous taire. »\n\n— Chanson populaire de Givrelac",
           TextMapId = "RESOURCE_TEXT_4020005"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_TEXT_4020006",
+    MaxKey = "RLBlessing_Desc_310",
+    Loader = function()
+      return {
         RESOURCE_TEXT_4020006 = {
           ContentFR = "« Voici le broyeur commandé par la Pharmacie Zesheng. Avant que je ne mette cet engin au point, ils n’avaient d’autre choix que d’engager des Descendants draconiques pour réduire à la main les ingrédients médicinaux les plus coriaces. Mais un Descendant draconique respectable a toujours sa propre activité... ceux qui acceptaient ce genre de besogne étaient souvent de provenance douteuse. À Zesheng, on fermait donc les yeux. L’un d’eux est même devenu célèbre récemment... Ke... Ke quelque chose, non ? »\n\n— Maître Gongshang, mécanicien de la Secte Jishu",
           TextMapId = "RESOURCE_TEXT_4020006"
@@ -39788,23 +41771,23 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_5000000"
         },
         RESOURCE_TEXT_5011010 = {
-          ContentFR = "La migration du Pérégrin des marées ne manque jamais son rendez-vous. Chaque année, au même mois, malgré les flots contraires, les bancs entament leur voyage vers les eaux peu profondes. Leur ponctualité inspira même les artisans, qui façonnèrent les aiguilles de leurs horloges à l’image de ce poisson fidèle à sa route.\n\n— Dylan, surnommé Monsieur-Je-Sais-Tout, dans Territoires inexplorés",
+          ContentFR = "La migration du Pérégrin des marées ne manque jamais son rendez-vous. Chaque année, au même mois, malgré les flots contraires, les bancs entament leur voyage vers les eaux peu profondes. Leur ponctualité inspira même les artisans, qui façonnèrent les aiguilles de leurs horloges à l’image de ce poisson fidèle à sa route.\n\n— Dylan, surnommé Monsieur-Je-Sais-Tout, dans <I>Territoires inexplorés</>",
           TextMapId = "RESOURCE_TEXT_5011010"
         },
         RESOURCE_TEXT_5011020 = {
-          ContentFR = "Autrefois, ses couleurs vives et ses épines dorsales avaient fait croire aux pêcheurs qu’il était venimeux. On le faisait sécher pour en vendre des spécimens décoratifs... jusqu’au jour où un \"courageux\", ou peut-être un inconscient, osa y goûter. Depuis, l’Épine prismatique a conquis les tables — et ses épines éclatantes ont rejoint la longue liste des déchets impossibles à recycler.\n\n— Réfractions, par Fiama",
+          ContentFR = "Autrefois, ses couleurs vives et ses épines dorsales avaient fait croire aux pêcheurs qu’il était venimeux. On le faisait sécher pour en vendre des spécimens décoratifs... jusqu’au jour où un \"courageux\", ou peut-être un inconscient, osa y goûter. Depuis, l’Épine prismatique a conquis les tables — et ses épines éclatantes ont rejoint la longue liste des déchets impossibles à recycler.\n\n— <I>Réfractions</>, par Fiama",
           TextMapId = "RESOURCE_TEXT_5011020"
         },
         RESOURCE_TEXT_5011030 = {
-          ContentFR = "Dans toutes les cités côtières, un plat de fête à base d’Argentilé trône au repas du Nouvel An. Certaines régions perpétuent même la coutume de glisser une pièce d’argent dans son ventre : celui qui la découvre jouirait d’une année entière de chance.\n\n— Dylan, surnommé Monsieur-Je-Sais-Tout, dans Territoires inexplorés",
+          ContentFR = "Dans toutes les cités côtières, un plat de fête à base d’Argentilé trône au repas du Nouvel An. Certaines régions perpétuent même la coutume de glisser une pièce d’argent dans son ventre : celui qui la découvre jouirait d’une année entière de chance.\n\n— Dylan, surnommé Monsieur-Je-Sais-Tout, dans <I>Territoires inexplorés</>",
           TextMapId = "RESOURCE_TEXT_5011030"
         },
         RESOURCE_TEXT_5012010 = {
-          ContentFR = "Son régime alimentaire est si extravagant que les parents des villages de pêche prennent cet exemple pour sermonner leurs enfants : « Qui ne fait pas la fine bouche vivra cent ans ! »\n\n— Dylan, surnommé Monsieur-Je-Sais-Tout, dans Territoires inexplorés",
+          ContentFR = "Son régime alimentaire est si extravagant que les parents des villages de pêche prennent cet exemple pour sermonner leurs enfants : « Qui ne fait pas la fine bouche vivra cent ans ! »\n\n— Dylan, surnommé Monsieur-Je-Sais-Tout, dans <I>Territoires inexplorés</>",
           TextMapId = "RESOURCE_TEXT_5012010"
         },
         RESOURCE_TEXT_5012020 = {
-          ContentFR = "Il faut bien l’admettre : ce n’est pas l’espèce la plus vive d’esprit. Les alevins confondent régulièrement n’importe quel grand poisson avec leurs parents. Avec un peu d’adresse, vous pourriez les faire vous suivre un long moment... à vos risques et périls si les vrais parents vous retrouvent.\n\n— Harriet, autrice scientifique, Le monde sous les flots",
+          ContentFR = "Il faut bien l’admettre : ce n’est pas l’espèce la plus vive d’esprit. Les alevins confondent régulièrement n’importe quel grand poisson avec leurs parents. Avec un peu d’adresse, vous pourriez les faire vous suivre un long moment... à vos risques et périls si les vrais parents vous retrouvent.\n\n— Harriet, autrice scientifique, <I>Le monde sous les flots</>",
           TextMapId = "RESOURCE_TEXT_5012020"
         },
         RESOURCE_TEXT_5012030 = {
@@ -39816,7 +41799,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_5013010"
         },
         RESOURCE_TEXT_5013020 = {
-          ContentFR = "Une espèce franchement immangeable — pour nous comme pour les autres poissons. J’ai vu une Murène ronge-os y goûter, puis tout recracher avec un air de dégoût... du moins, autant que peut en afficher un poisson.\nQuant au Gouliphage, il n’avait rien de cassé, mais il a lentement dérivé vers la surface, raide comme une planche. Oui... littéralement mort de peur.\n\n— Harriet, autrice scientifique, Le monde sous les flots",
+          ContentFR = "Une espèce franchement immangeable — pour nous comme pour les autres poissons. J’ai vu une Murène ronge-os y goûter, puis tout recracher avec un air de dégoût... du moins, autant que peut en afficher un poisson.\nQuant au Gouliphage, il n’avait rien de cassé, mais il a lentement dérivé vers la surface, raide comme une planche. Oui... littéralement mort de peur.\n\n— Harriet, autrice scientifique, <I>Le monde sous les flots</>",
           TextMapId = "RESOURCE_TEXT_5013020"
         },
         RESOURCE_TEXT_5013030 = {
@@ -39828,7 +41811,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_5021010"
         },
         RESOURCE_TEXT_5021020 = {
-          ContentFR = "Le Chasse-marée se savoure cru. Sa fraîcheur ne se contente pas d’envahir votre langue : elle file droit de vos dents à votre esprit. L’espace d’un instant, vous sentez sa queue battre, l’océan se fendre sous son élan. Et presque tous les gourmets disent la même chose : « On y goûte la vie elle-même. »\n\n— Ethans, critique gastronomique, L’Art de bien manger",
+          ContentFR = "Le Chasse-marée se savoure cru. Sa fraîcheur ne se contente pas d’envahir votre langue : elle file droit de vos dents à votre esprit. L’espace d’un instant, vous sentez sa queue battre, l’océan se fendre sous son élan. Et presque tous les gourmets disent la même chose : « On y goûte la vie elle-même. »\n\n— Ethans, critique gastronomique, <I>L’Art de bien manger</>",
           TextMapId = "RESOURCE_TEXT_5021020"
         },
         RESOURCE_TEXT_5021030 = {
@@ -39840,11 +41823,11 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_5021040"
         },
         RESOURCE_TEXT_5021050 = {
-          ContentFR = "Un cœur trop longtemps en cage s’emplit de brume,\nEt nul ne pousse à la chute celui qui se consume.\nLa mer obscure pourrait servir de tombeau,\nPourtant, dans ses profondeurs, veille un être d’en haut.\n\nLes branches brisées de l’Arbre Céleste sont ses ailes,\nSes fleurs et ses feuilles, un voile de lumière irréelle.\nJ’ai entendu Son chant, résonner dans le flot profond,\nEt mon corps défait s’est vu guider vers l’horizon...\nNon vers la chute — mais vers un renouveau.\n\n— Extrait de Sous le Courroux des Flots, par Alexandre Dumas, dramaturge de la faction du Deuil",
+          ContentFR = "Un cœur trop longtemps en cage s’emplit de brume,\nEt nul ne pousse à la chute celui qui se consume.\nLa mer obscure pourrait servir de tombeau,\nPourtant, dans ses profondeurs, veille un être d’en haut.\n\nLes branches brisées de l’Arbre Céleste sont ses ailes,\nSes fleurs et ses feuilles, un voile de lumière irréelle.\nJ’ai entendu Son chant, résonner dans le flot profond,\nEt mon corps défait s’est vu guider vers l’horizon...\nNon vers la chute — mais vers un renouveau.\n\n— Extrait de <I>Sous le Courroux des Flots</>, par Alexandre Dumas, dramaturge de la faction du Deuil",
           TextMapId = "RESOURCE_TEXT_5021050"
         },
         RESOURCE_TEXT_5022010 = {
-          ContentFR = "La bête dépassait deux toises, griffes brandies, crocs ruisselants, rage aux aguets.\nEn un éclair, elle frappa — mais le Magistrat de Yingtian l’attendait déjà.\nSans un mot, sans un souffle, la lame fendit l’air... et son visage.\n\nQuel sabre ! Ainsi dit la chanson :\n\nCuir de Requin perligrane serré entre les doigts,\nAcier de maîtres forgé dans la flamme et le poids.\nPar grâce céleste et pour l’honneur du Dragon d’Argent,\nJe trancherai ta tête — serment éclatant.\n\n— Chroniques de Yingtian, classique des conteurs de Huaxu",
+          ContentFR = "La bête dépassait deux toises, griffes brandies, crocs ruisselants, rage aux aguets.\nEn un éclair, elle frappa — mais le Magistrat de Yingtian l’attendait déjà.\nSans un mot, sans un souffle, la lame fendit l’air... et son visage.\n\nQuel sabre ! Ainsi dit la chanson :\n\nCuir de Requin perligrane serré entre les doigts,\nAcier de maîtres forgé dans la flamme et le poids.\nPar grâce céleste et pour l’honneur du Dragon d’Argent,\nJe trancherai ta tête — serment éclatant.\n\n— <I>Chroniques de Yingtian</>, classique des conteurs de Huaxu",
           TextMapId = "RESOURCE_TEXT_5022010"
         },
         RESOURCE_TEXT_5022020 = {
@@ -39856,7 +41839,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_5022030"
         },
         RESOURCE_TEXT_5022040 = {
-          ContentFR = "Les anciens croyaient que la petite lanterne du Pendiperle n’était autre que la mythique Perle Nocturne. Mais sitôt la créature morte, sa lueur s’éteignait. De là vient, dit-on, le proverbe : « La perle jetée perd son éclat. »\n\n— Rovetta, autrice de voyage, Rovetta à Huaxu",
+          ContentFR = "Les anciens croyaient que la petite lanterne du Pendiperle n’était autre que la mythique Perle Nocturne. Mais sitôt la créature morte, sa lueur s’éteignait. De là vient, dit-on, le proverbe : « La perle jetée perd son éclat. »\n\n— Rovetta, autrice de voyage, <I>Rovetta à Huaxu</>",
           TextMapId = "RESOURCE_TEXT_5022040"
         },
         RESOURCE_TEXT_5022050 = {
@@ -39868,7 +41851,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_5023010"
         },
         RESOURCE_TEXT_5023020 = {
-          ContentFR = "La Dame du Lac est bien plus dangereuse que sa grâce ne le laisse croire. Même en chasse, sa silhouette reste souveraine. Un simple \"baiser\", et une proie trois fois plus lourde s’effondre. Curieusement, jamais elle n’a porté atteinte à un humain, allant même jusqu’à partager ses prises avec les pêcheurs.\n\n— Harriet, autrice scientifique, Le monde sous les flots",
+          ContentFR = "La Dame du Lac est bien plus dangereuse que sa grâce ne le laisse croire. Même en chasse, sa silhouette reste souveraine. Un simple \"baiser\", et une proie trois fois plus lourde s’effondre. Curieusement, jamais elle n’a porté atteinte à un humain, allant même jusqu’à partager ses prises avec les pêcheurs.\n\n— Harriet, autrice scientifique, <I>Le monde sous les flots</>",
           TextMapId = "RESOURCE_TEXT_5023020"
         },
         RESOURCE_TEXT_5023030 = {
@@ -39880,7 +41863,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_5023040"
         },
         RESOURCE_TEXT_5023050 = {
-          ContentFR = "Je l’ai vu partir. Une cicatrice après l’autre, il s’est dépouillé de son passé. Il avait grandi, dépassé la baignoire qui l’avait vu naître.\nEt pour la première fois, il a nagé libre — son échine lumineuse traçant une comète sous les vagues.\n\n— Consul, romancier, Le Luminépine des Égouts",
+          ContentFR = "Je l’ai vu partir. Une cicatrice après l’autre, il s’est dépouillé de son passé. Il avait grandi, dépassé la baignoire qui l’avait vu naître.\nEt pour la première fois, il a nagé libre — son échine lumineuse traçant une comète sous les vagues.\n\n— Consul, romancier, <I>Le Luminépine des Égouts</>",
           TextMapId = "RESOURCE_TEXT_5023050"
         },
         RESOURCE_TEXT_5024010 = {
@@ -39888,11 +41871,11 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_5024010"
         },
         RESOURCE_TEXT_5024020 = {
-          ContentFR = "On raconte qu’un Wishen immémorial avait vu sa tête enfler sous le poids de souvenirs trop lourds. Incapable de les porter davantage, il implora le Dragon d’Argent. Celui-ci jeta ses mémoires à la mer, où elles se muèrent en une myriade de calmars à grosse tête.\nÀ mesure que les souvenirs coulaient, le Wishen s’effaça... jusqu’à renaître sous les traits d’un enfant, vierge de tout passé, prêt à recommencer le cycle.\n\n— Qiu Ci, folkloriste de Huaxu, Dits & Légendes",
+          ContentFR = "On raconte qu’un Wishen immémorial avait vu sa tête enfler sous le poids de souvenirs trop lourds. Incapable de les porter davantage, il implora le Dragon d’Argent. Celui-ci jeta ses mémoires à la mer, où elles se muèrent en une myriade de calmars à grosse tête.\nÀ mesure que les souvenirs coulaient, le Wishen s’effaça... jusqu’à renaître sous les traits d’un enfant, vierge de tout passé, prêt à recommencer le cycle.\n\n— Qiu Ci, folkloriste de Huaxu, <I>Dits & Légendes</>",
           TextMapId = "RESOURCE_TEXT_5024020"
         },
         RESOURCE_TEXT_5024030 = {
-          ContentFR = "Mourir d’un Globe-épines mal préparé... Un grand classique du roman policier huaxien. Le coupable y compte toujours sur le poison, et le détective conclut immanquablement par cette formule solennelle : « Les Neuf Chapitres de Dafeng n’ont point de loi pour ton forfait — mais la justice, elle, ne manque jamais son heure. »\n\n— Rovetta, autrice de voyage, Rovetta à Huaxu",
+          ContentFR = "Mourir d’un Globe-épines mal préparé... Un grand classique du roman policier huaxien. Le coupable y compte toujours sur le poison, et le détective conclut immanquablement par cette formule solennelle : « Les Neuf Chapitres de Dafeng n’ont point de loi pour ton forfait — mais la justice, elle, ne manque jamais son heure. »\n\n— Rovetta, autrice de voyage, <I>Rovetta à Huaxu</>",
           TextMapId = "RESOURCE_TEXT_5024030"
         },
         RESOURCE_TEXT_5024040 = {
@@ -39904,7 +41887,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_5024050"
         },
         RESOURCE_TEXT_5025010 = {
-          ContentFR = "Le Sourifin sert bien souvent de casse-croûte aux prédateurs, ce qui explique sa frayeur permanente. Au moindre souffle, il se tapit dans un recoin, immobile. Si vous souhaitez en élever quelques-uns, veillez à leur aménager des cachettes dans l’aquarium : sans refuge, ils mourraient d’angoisse.\n\n— Harriet, autrice scientifique, Le monde sous les flots",
+          ContentFR = "Le Sourifin sert bien souvent de casse-croûte aux prédateurs, ce qui explique sa frayeur permanente. Au moindre souffle, il se tapit dans un recoin, immobile. Si vous souhaitez en élever quelques-uns, veillez à leur aménager des cachettes dans l’aquarium : sans refuge, ils mourraient d’angoisse.\n\n— Harriet, autrice scientifique, <I>Le monde sous les flots</>",
           TextMapId = "RESOURCE_TEXT_5025010"
         },
         RESOURCE_TEXT_5025020 = {
@@ -39912,7 +41895,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_5025020"
         },
         RESOURCE_TEXT_5025030 = {
-          ContentFR = "« Ce matériau possède une plasticité remarquable et d’excellentes propriétés d’étanchéité. Un jour, peut-être, permettra-t-il de concevoir des outils capables d’explorer les profondeurs... jusqu’aux racines enfouies de l’Arbre Céleste. Alors, peut-être, toucherons-nous du doigt l’origine du monde. »\n\n— Émeraude, chercheuse en matériaux des Éolipyliens, Manuel des nouveaux matériaux : Théories et applications",
+          ContentFR = "« Ce matériau possède une plasticité remarquable et d’excellentes propriétés d’étanchéité. Un jour, peut-être, permettra-t-il de concevoir des outils capables d’explorer les profondeurs... jusqu’aux racines enfouies de l’Arbre Céleste. Alors, peut-être, toucherons-nous du doigt l’origine du monde. »\n\n— Émeraude, chercheuse en matériaux des Éolipyliens, <I>Manuel des nouveaux matériaux : Théories et applications</>",
           TextMapId = "RESOURCE_TEXT_5025030"
         },
         RESOURCE_TEXT_5025040 = {
@@ -39928,7 +41911,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_5026010"
         },
         RESOURCE_TEXT_5026020 = {
-          ContentFR = "J’ai toujours pensé que la cuisine huaxienne oscillait entre deux extrêmes : soit l’on multiplie les ingrédients, comme on orne une mélodie de notes d’agrément, soit l’on poursuit avec une obstination presque maniaque la saveur originelle des aliments.\n\nLe premier courant s’illustre par une soupe de chou concentrant l’essence de multiples mets ; le second par un poulet découpé dont l’os est encore sanguin, ou par le crabe-orchidée, simplement bouilli et servi avec une sauce unique.\n\n— Wym, journaliste culinaire de Luca, À la recherche des saveurs d’Atlasia",
+          ContentFR = "J’ai toujours pensé que la cuisine huaxienne oscillait entre deux extrêmes : soit l’on multiplie les ingrédients, comme on orne une mélodie de notes d’agrément, soit l’on poursuit avec une obstination presque maniaque la saveur originelle des aliments.\n\nLe premier courant s’illustre par une soupe de chou concentrant l’essence de multiples mets ; le second par un poulet découpé dont l’os est encore sanguin, ou par le crabe-orchidée, simplement bouilli et servi avec une sauce unique.\n\n— Wym, journaliste culinaire de Luca, <I>À la recherche des saveurs d’Atlasia</>",
           TextMapId = "RESOURCE_TEXT_5026020"
         },
         RESOURCE_TEXT_5026030 = {
@@ -39948,7 +41931,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_5027010"
         },
         RESOURCE_TEXT_5027020 = {
-          ContentFR = "Les pétales de pêcher s’éparpillent, dansant au vent,\nle fleuve de printemps se teinte d’une pluie incarnate.\n\nUn enfant joue sur sa frêle barque,\nla perche fleurie suit le sillage de l’aviron parfumé.\n\nLes clapotis s’invitent dans les rêves, éveillant le vieil homme aux tempes blanches.\nÀ la vue de la perche dodue,\nil en oublie presque le poids des ans.\n\n— Anonyme, Chant de pêche sous les pêchers en fleurs",
+          ContentFR = "Les pétales de pêcher s’éparpillent, dansant au vent,\nle fleuve de printemps se teinte d’une pluie incarnate.\n\nUn enfant joue sur sa frêle barque,\nla perche fleurie suit le sillage de l’aviron parfumé.\n\nLes clapotis s’invitent dans les rêves, éveillant le vieil homme aux tempes blanches.\nÀ la vue de la perche dodue,\nil en oublie presque le poids des ans.\n\n— Anonyme, <I>Chant de pêche sous les pêchers en fleurs</>",
           TextMapId = "RESOURCE_TEXT_5027020"
         },
         RESOURCE_TEXT_5027030 = {
@@ -39956,19 +41939,19 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_5027030"
         },
         RESOURCE_TEXT_5027040 = {
-          ContentFR = "« La légende raconte que Yang parcourut Huaxu et abattit vingt-et-une bêtes funestes, apportant la paix au monde. L’une d’elles était un gigantesque oiseau aux plumes multicolores, planant sans cesse hors d’atteinte.\nYang ordonna alors la forge des Flèches-Ouragan et confia un arc colossal à son vassal Shan. Shan tira neuf flèches — neuf coups au but.\n\nLorsque l’oiseau s’effondra, ses plumes se dispersèrent :\ncelles tombées sur la terre devinrent fleurs de phénix,\ncelles tombées dans l’eau se changèrent en cichlidés-phénix aux couleurs éclatantes. »\n\n— Qiu Ci, folkloriste de Huaxu, Dits & Légendes",
+          ContentFR = "« La légende raconte que Yang parcourut Huaxu et abattit vingt-et-une bêtes funestes, apportant la paix au monde. L’une d’elles était un gigantesque oiseau aux plumes multicolores, planant sans cesse hors d’atteinte.\nYang ordonna alors la forge des Flèches-Ouragan et confia un arc colossal à son vassal Shan. Shan tira neuf flèches — neuf coups au but.\n\nLorsque l’oiseau s’effondra, ses plumes se dispersèrent :\ncelles tombées sur la terre devinrent fleurs de phénix,\ncelles tombées dans l’eau se changèrent en cichlidés-phénix aux couleurs éclatantes. »\n\n— Qiu Ci, folkloriste de Huaxu, <I>Dits & Légendes</>",
           TextMapId = "RESOURCE_TEXT_5027040"
         },
         RESOURCE_TEXT_5027050 = {
-          ContentFR = "« La méthode recommandée pour capturer un Signe de l’Empereur\nest de rassembler le plus de monde possible — idéalement trois cents personnes.\n\nVingt pour aider à hisser le poisson hors de l’eau ;\nvingt autres pour l’arroser sans cesse et en mesurer la longueur ;\nencore vingt pour le reconduire au fleuve et le relâcher.\n\nQuant aux deux cent quarante restants, ils sont là pour attester que vous n’exagérez pas.\n\nPour être honnête, je n’en ai jamais pêché moi-même.\nMais le jour où cela arrivera, je suivrai ces instructions à la lettre. »\n\n— Guide de pêche de Huaxu",
+          ContentFR = "« La méthode recommandée pour capturer un Signe de l’Empereur\nest de rassembler le plus de monde possible — idéalement trois cents personnes.\n\nVingt pour aider à hisser le poisson hors de l’eau ;\nvingt autres pour l’arroser sans cesse et en mesurer la longueur ;\nencore vingt pour le reconduire au fleuve et le relâcher.\n\nQuant aux deux cent quarante restants, ils sont là pour attester que vous n’exagérez pas.\n\nPour être honnête, je n’en ai jamais pêché moi-même.\nMais le jour où cela arrivera, je suivrai ces instructions à la lettre. »\n\n— <I>Guide de pêche de Huaxu</>",
           TextMapId = "RESOURCE_TEXT_5027050"
         },
         RESOURCE_TEXT_5028010 = {
-          ContentFR = "« Le groupe embarqua sur une petite barque et pénétra dans une caverne souterraine. En quête des reliques d’un grand général au service de Dafeng, ils avaient déjà traversé d’innombrables périls, au point que leurs armes étaient ébréchées.\n\nDans l’obscurité totale, les nerfs étaient à vif, lorsqu’un cri fendit le silence.\nQuelque chose de luminescent émergea de l’eau — un visage spectral, surmonté de deux yeux bleu-vert luisants. »\n\n— Roman d’aventure de Huaxu, Les Douze tombes enchaînées",
+          ContentFR = "« Le groupe embarqua sur une petite barque et pénétra dans une caverne souterraine. En quête des reliques d’un grand général au service de Dafeng, ils avaient déjà traversé d’innombrables périls, au point que leurs armes étaient ébréchées.\n\nDans l’obscurité totale, les nerfs étaient à vif, lorsqu’un cri fendit le silence.\nQuelque chose de luminescent émergea de l’eau — un visage spectral, surmonté de deux yeux bleu-vert luisants. »\n\n— Roman d’aventure de Huaxu, <I>Les Douze tombes enchaînées</>",
           TextMapId = "RESOURCE_TEXT_5028010"
         },
         RESOURCE_TEXT_5028020 = {
-          ContentFR = "On coupe le blé doré pour le replanter,\ngardénias, magnolias — l’air s’emplit de parfum.\nPapillons et abeilles s’attardent sur les fleurs,\nsur l’eau, le sauteur de vase frôle les roseaux.\n\nVoyez les canards mandarins jouer à la surface —\ndevinez ce que murmure le cœur de l’aimé.\n\n— Chanson populaire de Huaxu, Veillée du sauteur de vase",
+          ContentFR = "On coupe le blé doré pour le replanter,\ngardénias, magnolias — l’air s’emplit de parfum.\nPapillons et abeilles s’attardent sur les fleurs,\nsur l’eau, le sauteur de vase frôle les roseaux.\n\nVoyez les canards mandarins jouer à la surface —\ndevinez ce que murmure le cœur de l’aimé.\n\n— Chanson populaire de Huaxu, <I>Veillée du sauteur de vase</>",
           TextMapId = "RESOURCE_TEXT_5028020"
         },
         RESOURCE_TEXT_5028030 = {
@@ -39982,6 +41965,66 @@ Allez voir ce qui se passe.]],
         RESOURCE_TEXT_5028050 = {
           ContentFR = "« Aaaah ! C’est le plus beau souvenir que ce vieil artisan ait jamais reçu ! Hé hé hé... un jour viendra où tu manieras une lame que j’aurai forgée moi-même, enduite d’un poison mortel.\nAh, et quand ce jour arrivera, surtout... évite de la lécher pour faire le malin. »\n\n— Luno, la forgeronne",
           TextMapId = "RESOURCE_TEXT_5028050"
+        },
+        RESOURCE_TEXT_5029010 = {
+          ContentFR = "À Huaxu, on raconte l’histoire des singes qui tentent de repêcher la lune.\nMais qui sait ? Peut-être ces singes ne cherchaient-ils pas la lune...\nPeut-être essayaient-ils simplement de recueillir une poignée de la Voie lactée brisée à la surface de l’eau.\n\n— Revue de Huaxu, <I>Nouvelle lecture des récits anciens</>",
+          TextMapId = "RESOURCE_TEXT_5029010"
+        },
+        RESOURCE_TEXT_5029020 = {
+          ContentFR = "Lorsque les habitants de Huaxu m’ont annoncé qu’ils allaient me préparer un festin de Silure venépine, j’ai immédiatement refusé. J’ai même commencé à me demander si l’un de mes articles n’avait pas offensé la cuisine locale, et s’ils n’essayaient pas tout simplement de m’empoisonner avec ce poisson.\nMais il s’est avéré que je me trompais complètement. La chair est d’une douceur remarquable, avec un léger picotement sur la langue. J’ai d’abord cru qu’on avait ajouté du poivre aromatique... avant d’apprendre que cela venait en réalité du venin lui-même !\n\nComment les habitants de Huaxu parviennent-ils à rendre une chose aussi toxique aussi délicieuse ?\n\n— Wym, journaliste culinaire de Luca, <I>À la recherche des saveurs d’Atlasia</>",
+          TextMapId = "RESOURCE_TEXT_5029020"
+        },
+        RESOURCE_TEXT_5029030 = {
+          ContentFR = "« Sapristi... Voilà toute une vie que je pêche, et je n’ai toujours pas compris si cet Hippocampe prismatique est vraiment un poisson ou non. »\n\n— Un vieux pêcheur, plongé dans ses réflexions",
+          TextMapId = "RESOURCE_TEXT_5029030"
+        },
+        RESOURCE_TEXT_5029040 = {
+          ContentFR = "« Une bouchée de Jadécailles, une gorgée d’alcool fort — et me voilà prêt à marcher de travers entre ciel et terre ! »\n\n— Un ivrogne de Huaxu, allongé sur le sol, chassant les mouettes tout en mâchonnant des Jadécailles frites",
+          TextMapId = "RESOURCE_TEXT_5029040"
+        },
+        RESOURCE_TEXT_5029050 = {
+          ContentFR = "« Regardez ! Là-bas, dans cette mer, il y a tout un banc d’or ! On va devenir riches ! Hahahaha ! Hein ? Comment ça, cet or est en train de sauter et de s’agiter ? »\n\n— Un marin étranger surexcité",
+          TextMapId = "RESOURCE_TEXT_5029050"
+        },
+        RESOURCE_TEXT_5030010 = {
+          ContentFR = "« Bien sûr qu’il est cher, mon Crabe mitaine de Haojing ! Ne me demandez pas d’où il vient ni dans quelles eaux il a été pêché. Tant qu’il a fait un petit tour dans les eaux de Haojing, c’est un authentique Crabe mitaine de Haojing, parfaitement local ! »\n\n— Un poissonnier criant sa marchandise au Marché Voilé",
+          TextMapId = "RESOURCE_TEXT_5030010"
+        },
+        RESOURCE_TEXT_5030020 = {
+          ContentFR = "« Qui l’aurait cru ? Cette Carpe croasseuse, avec son air tout à fait ordinaire, serait en réalité l’ancêtre de bon nombre de poissons d’ornement. »\n\n— Un érudit anonyme, retirant des arêtes coincées entre ses dents tout en feuilletant un recueil d’anecdotes de Huaxu",
+          TextMapId = "RESOURCE_TEXT_5030020"
+        },
+        RESOURCE_TEXT_5030030 = {
+          ContentFR = "« Je ne sais pas pourquoi, mais rien qu’en la regardant, j’ai l’impression que tout est paisible. Même un poisson aussi petit possède sa propre feuille de lotus pour s’abriter du vent et de la pluie. Quoi ? Tu veux dire que ce n’est pas une vraie feuille, mais son propre camouflage ? Comment ça se fait ? Même les poissons doivent intriguer et ruser pour survivre ? »\n\n— Un trentenaire épuisé par le travail",
+          TextMapId = "RESOURCE_TEXT_5030030"
+        },
+        RESOURCE_TEXT_5030040 = {
+          ContentFR = "Le Tambour de bronze tire son nom de son apparence qui rappelle les anciens objets de bronze. Après cuisson, ses écailles prennent une légère teinte rougeâtre qui ouvre l’appétit.\n\nVerser une louche d’huile brûlante juste avant de servir révèle une chair ferme et élastique, dont la saveur reste longtemps en bouche.\n\n— Wym, journaliste culinaire de Luca, <I>À la recherche des saveurs d’Atlasia</>",
+          TextMapId = "RESOURCE_TEXT_5030040"
+        },
+        RESOURCE_TEXT_5030050 = {
+          ContentFR = "« Crête écarlate flamboyant sur l’eau,\nÉcailles rouges poursuivant les vagues. »\n\n— Extrait d’un recueil de poésie anonyme circulant à Huaxu",
+          TextMapId = "RESOURCE_TEXT_5030050"
+        },
+        RESOURCE_TEXT_5031010 = {
+          ContentFR = "« Beurk... C’est quoi ce truc ? Un instrument de torture ? Franchement, manger ça ou manger de la bouse, quelle différence ? »\n\n— Wym, journaliste culinaire de Luca",
+          TextMapId = "RESOURCE_TEXT_5031010"
+        },
+        RESOURCE_TEXT_5031020 = {
+          ContentFR = "« Ces Palourdes taro viennent tout juste d’être pêchées ! C’est normal qu’il reste un peu de boue dessus. Rassurez-vous, je tiens cette échoppe depuis des années — je ne vais tout de même pas vous vendre de la boue en prétendant que c’est de la Palourde taro ! »\n\n— Un poissonnier criant sa marchandise dans un marché de Haojing",
+          TextMapId = "RESOURCE_TEXT_5031020"
+        },
+        RESOURCE_TEXT_5031030 = {
+          ContentFR = "« À la base, je voulais juste finir mes appâts et rentrer. Mais j’ai fini par attraper un Ver des rivières. Alors je me suis dit : puisque je l’ai déjà pêché, autant l’utiliser comme appât... puis encore une fois... puis encore une fois... Et voilà pourquoi il est déjà si tard... »\n\n— Un pêcheur d’âge mûr expliquant son retard à sa femme",
+          TextMapId = "RESOURCE_TEXT_5031030"
+        },
+        RESOURCE_TEXT_5031040 = {
+          ContentFR = "« Pour être honnête, quand j’ai entendu quelqu’un comparer ce truc à une clochette de bronze, j’étais plutôt sceptique. Mais à force de le regarder... je dois bien admettre qu’il y a peut-être quelque chose d’un peu mignon là-dedans. »\n\n— Un pêcheur, plongé dans ses réflexions",
+          TextMapId = "RESOURCE_TEXT_5031040"
+        },
+        RESOURCE_TEXT_5031050 = {
+          ContentFR = "« Sapristi... Voilà toute une vie que je pêche, et je n’avais jamais réalisé que le Requin des fonds n’était pas vraiment un requin. Peut-être qu’à l’origine on l’appelait \"poisson des sables profonds\", et qu’à force de le dire trop vite, on a fini par oublier le mot \"poisson\". Et voilà comment tout le monde s’est mis à croire que c’était un requin ! »\n\n— Un vieux pêcheur, plongé dans ses réflexions",
+          TextMapId = "RESOURCE_TEXT_5031050"
         },
         RESOURCE_TEXT_5110100 = {
           ContentFR = "Une bonne formation de pêcheur, c’est mille lancers par jour. Et quand bien même vous ne ferreriez pas le moindre poisson, vous aurez au moins gagné le bras d’un excellent bretteur.\n\n— Un pêcheur chevronné préférant garder l’anonymat",
@@ -40028,7 +42071,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_5210400"
         },
         RESOURCE_TEXT_99 = {
-          ContentFR = "« Les Arbres Célestes, dont les fruits lunaires éclairaient jadis les tours du Sud, ont engendré les premières croyances humaines. Un millénaire plus tard, les chercheurs qui sondèrent leurs secrets en tirèrent une substance — le Phoxichor — qui ouvrit l’ère de l’Or Bleu et des engrenages. Ainsi progresse l’humanité... Car toute l’histoire d’Atlasia n’est, en vérité, que celle des Arbres Célestes. »\n\n— Tachitus, historien d’Élysium, Chroniques",
+          ContentFR = "« Les Arbres Célestes, dont les fruits lunaires éclairaient jadis les tours du Sud, ont engendré les premières croyances humaines. Un millénaire plus tard, les chercheurs qui sondèrent leurs secrets en tirèrent une substance — le Phoxichor — qui ouvrit l’ère de l’Or Bleu et des engrenages. Ainsi progresse l’humanité... Car toute l’histoire d’Atlasia n’est, en vérité, que celle des Arbres Célestes. »\n\n— Tachitus, historien d’Élysium, <I>Chroniques</>",
           TextMapId = "RESOURCE_TEXT_99"
         },
         RESOURCE_TEXT_CANCELPHANTOM = {
@@ -40040,7 +42083,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_MUSIC"
         },
         RESOURCE_TEXT_PHANTOM = {
-          ContentFR = "« Voici notre histoire, vieille de plus de deux millénaires : une épopée faite d’étreintes et de massacres, d’élans de ferveur et d’élans de compassion. L’Histoire, tel le ballet céleste du soleil et de la lune, s’élève et s’abaisse, éternelle et cyclique.\nDans la grande tapisserie du temps relatée dans ces pages, je ne suis qu’une simple observatrice, insignifiante comme un flocon d’Hyperborea, une feuille d’Aethyrie, une goutte des eaux de Luca ou un grain des sables de Khemet.\nEt pourtant, dans cet immense cosmos, j’espère que les flocons se rassembleront en une vaste étendue de neige, que les feuilles formeront des forêts, que les gouttes se joindront pour devenir fleuves, et que les grains s’uniront pour façonner des déserts. Car lorsque toutes les individualités se relient, l’Histoire s’incline en notre faveur. »\n\n— Comnena, conservatrice en chef de la Bibliothèque des Nuages d’Aethyrie, Feuilles et Lune - Chroniques d’Atlasia",
+          ContentFR = "« Voici notre histoire, vieille de plus de deux millénaires : une épopée faite d’étreintes et de massacres, d’élans de ferveur et d’élans de compassion. L’Histoire, tel le ballet céleste du soleil et de la lune, s’élève et s’abaisse, éternelle et cyclique.\nDans la grande tapisserie du temps relatée dans ces pages, je ne suis qu’une simple observatrice, insignifiante comme un flocon d’Hyperborea, une feuille d’Aethyrie, une goutte des eaux de Luca ou un grain des sables de Khemet.\nEt pourtant, dans cet immense cosmos, j’espère que les flocons se rassembleront en une vaste étendue de neige, que les feuilles formeront des forêts, que les gouttes se joindront pour devenir fleuves, et que les grains s’uniront pour façonner des déserts. Car lorsque toutes les individualités se relient, l’Histoire s’incline en notre faveur. »\n\n— Comnena, conservatrice en chef de la Bibliothèque des Nuages d’Aethyrie, <I>Feuilles et Lune - Chroniques d’Atlasia</>",
           TextMapId = "RESOURCE_TEXT_PHANTOM"
         },
         RESOURCE_TEXT_ROOT = {
@@ -40052,7 +42095,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_Reputation"
         },
         RESOURCE_TEXT_daoren = {
-          ContentFR = "« Le sabre, c’est l’union du corps et de l’esprit.\nQuand l’âme s’y consacre tout entière, le fil d’acier peut trancher la foudre, fendre les flots, et abattre les monstres des mers. »\n\n— Un bretteur anonyme de Huaxu, Par-delà la Lame",
+          ContentFR = "« Le sabre, c’est l’union du corps et de l’esprit.\nQuand l’âme s’y consacre tout entière, le fil d’acier peut trancher la foudre, fendre les flots, et abattre les monstres des mers. »\n\n— Un bretteur anonyme de Huaxu, <I>Par-delà la Lame</>",
           TextMapId = "RESOURCE_TEXT_daoren"
         },
         RESOURCE_TEXT_gongbi = {
@@ -40084,7 +42127,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_TEXT_shiwu"
         },
         RESOURCE_TEXT_wobing = {
-          ContentFR = "« Il avance,\nIl avance !\nJ’entends gronder ses pas,\nJ’entends l’Épée du Torrent racler le sol !\nIl vient réclamer la vie des injustes,\nNul ici n’échappera à la tempête !\nCe soir, nul ne résistera à la mort descendue des cieux,\nPas plus qu’on ne saurait lui arracher l’épée des mains ! »\n\n— Extrait de Sous le Courroux des Flots, par Alexandre Dumas, dramaturge de la faction du Deuil",
+          ContentFR = "« Il avance,\nIl avance !\nJ’entends gronder ses pas,\nJ’entends l’Épée du Torrent racler le sol !\nIl vient réclamer la vie des injustes,\nNul ici n’échappera à la tempête !\nCe soir, nul ne résistera à la mort descendue des cieux,\nPas plus qu’on ne saurait lui arracher l’épée des mains ! »\n\n— Extrait de <I>Sous le Courroux des Flots</>, par Alexandre Dumas, dramaturge de la faction du Deuil",
           TextMapId = "RESOURCE_TEXT_wobing"
         },
         RLArchive_ArchiveUnlock = {
@@ -40118,15 +42161,7 @@ Allez voir ce qui se passe.]],
         RLArchive_ID = {
           ContentFR = "N° %s",
           TextMapId = "RLArchive_ID"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RLArchive_StorySubtitle",
-    MaxKey = "RLBlessing_Name_312",
-    Loader = function()
-      return {
+        },
         RLArchive_StorySubtitle = {
           ContentFR = "Histoire : %s",
           TextMapId = "RLArchive_StorySubtitle"
@@ -40498,7 +42533,15 @@ Allez voir ce qui se passe.]],
         RLBlessing_Desc_310 = {
           ContentFR = "Lors de l’utilisation d’une compétence, confère <Highlight>$1</> cumuls de [Lueur].",
           TextMapId = "RLBlessing_Desc_310"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RLBlessing_Desc_311",
+    MaxKey = "RLBlessing_SimpleDesc_214",
+    Loader = function()
+      return {
         RLBlessing_Desc_311 = {
           ContentFR = "Sous [Éclat], restaure <Highlight>$1</> de Lucidité par seconde.",
           TextMapId = "RLBlessing_Desc_311"
@@ -40926,15 +42969,7 @@ Allez voir ce qui se passe.]],
         RLBlessing_Name_312 = {
           ContentFR = "Résonance de spinelle",
           TextMapId = "RLBlessing_Name_312"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RLBlessing_Name_313",
-    MaxKey = "RLBlessing_UnlockCon_308",
-    Loader = function()
-      return {
+        },
         RLBlessing_Name_313 = {
           ContentFR = "Réfraction lumineuse",
           TextMapId = "RLBlessing_Name_313"
@@ -41306,7 +43341,15 @@ Allez voir ce qui se passe.]],
         RLBlessing_SimpleDesc_214 = {
           ContentFR = "Les armes à distance infligent davantage de dégâts plus la cible est éloignée.",
           TextMapId = "RLBlessing_SimpleDesc_214"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RLBlessing_SimpleDesc_215",
+    MaxKey = "RLTalent_Desc_202",
+    Loader = function()
+      return {
         RLBlessing_SimpleDesc_215 = {
           ContentFR = "Après avoir maintenu le mouvement pendant plus de <Highlight>2</> secondes, les dégâts subis diminuent jusqu’à l’arrêt.\nAprès être resté immobile pendant plus de <Highlight>2</> secondes, les dégâts infligés augmentent jusqu’à la reprise du mouvement.",
           TextMapId = "RLBlessing_SimpleDesc_215"
@@ -41734,15 +43777,7 @@ Allez voir ce qui se passe.]],
         RLBlessing_UnlockCon_308 = {
           ContentFR = "Lucimèche non débloquée",
           TextMapId = "RLBlessing_UnlockCon_308"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RLBlessing_UnlockCon_309",
-    MaxKey = "RLTreasure_Desc_10305",
-    Loader = function()
-      return {
+        },
         RLBlessing_UnlockCon_309 = {
           ContentFR = "Lucimèche non débloquée",
           TextMapId = "RLBlessing_UnlockCon_309"
@@ -42114,7 +44149,15 @@ Allez voir ce qui se passe.]],
         RLTalent_Desc_202 = {
           ContentFR = "DÉF +<Highlight>#1</>",
           TextMapId = "RLTalent_Desc_202"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RLTalent_Desc_203",
+    MaxKey = "RLTreasure_Name_10102",
+    Loader = function()
+      return {
         RLTalent_Desc_203 = {
           ContentFR = "Bouclier +<Highlight>#1</>",
           TextMapId = "RLTalent_Desc_203"
@@ -42542,15 +44585,7 @@ Allez voir ce qui se passe.]],
         RLTreasure_Desc_10305 = {
           ContentFR = "Remplace tous les Artéfacts par des Artéfacts aléatoires. Peut obtenir des Artéfacts de rareté supérieure.",
           TextMapId = "RLTreasure_Desc_10305"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RLTreasure_Desc_10306",
-    MaxKey = "RLTreasure_SimpleDesc_10311",
-    Loader = function()
-      return {
+        },
         RLTreasure_Desc_10306 = {
           ContentFR = "Augmente les dégâts infligés de <Highlight>$1</> pour chaque Artéfact possédé.",
           TextMapId = "RLTreasure_Desc_10306"
@@ -42922,7 +44957,15 @@ Allez voir ce qui se passe.]],
         RLTreasure_Name_10102 = {
           ContentFR = "Coupon de réduction du Marchand abyssal",
           TextMapId = "RLTreasure_Name_10102"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RLTreasure_Name_10103",
+    MaxKey = "RL_Event317_Select_2",
+    Loader = function()
+      return {
         RLTreasure_Name_10103 = {
           ContentFR = "Savon purificateur du fidèle béni",
           TextMapId = "RLTreasure_Name_10103"
@@ -43350,15 +45393,7 @@ Allez voir ce qui se passe.]],
         RLTreasure_SimpleDesc_10311 = {
           ContentFR = "Les compétences déclenchent une explosion autour du personnage, infligeant des Dégâts Umbro aux ennemis proches.",
           TextMapId = "RLTreasure_SimpleDesc_10311"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RLTreasure_SimpleDesc_10312",
-    MaxKey = "RegionReputation_EntrustTitle01",
-    Loader = function()
-      return {
+        },
         RLTreasure_SimpleDesc_10312 = {
           ContentFR = "Infliger des dégâts tire des projectiles à tête chercheuse, infligeant des Dégâts Anémo.",
           TextMapId = "RLTreasure_SimpleDesc_10312"
@@ -43730,7 +45765,15 @@ Allez voir ce qui se passe.]],
         RL_Event317_Select_2 = {
           ContentFR = "Obtenir aléatoirement un Artéfact <Highlight>épique</> ou <Highlight>légendaire</>.",
           TextMapId = "RL_Event317_Select_2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RL_Event317_Select_3",
+    MaxKey = "RougeLike_Room318_Char01",
+    Loader = function()
+      return {
         RL_Event317_Select_3 = {
           ContentFR = "Obtenir aléatoirement une Lucimèche <Highlight>épique</> ou <Highlight>légendaire</>.",
           TextMapId = "RL_Event317_Select_3"
@@ -43987,6 +46030,10 @@ Allez voir ce qui se passe.]],
           ContentFR = "Lorsque la Puissance de compétence d’un personnage d’Attribut Électro dépasse 100 %, chaque tranche supplémentaire de #1 permet aux Dégâts de compétence d’ignorer #2 de la DÉF de la cible, jusqu’à un maximum de #3 ignorés.",
           TextMapId = "Raid_Buff_12"
         },
+        Raid_Buff_13 = {
+          ContentFR = "Lorsque la Portée de compétence d’un personnage Lumino dépasse sa Durée de compétence, chaque tranche supplémentaire de #1 permet aux Dégâts de compétence d’ignorer #2 de la DÉF de la cible, jusqu’à un maximum de #3 ignorés.\nLorsque la Durée de compétence dépasse la Portée de compétence, chaque tranche supplémentaire de #4 augmente la Pénétration de tous les attributs de #5, jusqu’à un maximum de #6.",
+          TextMapId = "Raid_Buff_13"
+        },
         Ranged = {
           ContentFR = "À distance",
           TextMapId = "Ranged"
@@ -43996,7 +46043,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "Reading_Content_101223"
         },
         Reading_Content_200208 = {
-          ContentFR = "Quand vous lirez cette lettre, nous aurons déjà quitté la Maison d’Hypnos.\nLa tragédie de Psyche a alerté les Veilleurs. Nous ne pouvions plus rester à Givrelac.\nAvant qu’ils n’arrivent, j’ai conduit tout le monde loin d’ici.\nNe soyez pas triste pour nous, et ne craignez pas que nous perdions le contrôle en sombrant dans la Dégradation.\n\nNous partons vers les terres sauvages, vers l’inconnu.\nPeut-être la mort nous attend-elle, ou bien un miracle encore invisible.\nMais jusqu’au bout, nous garderons espoir.\nC’est ce qu’elle nous a appris.\n\nEt... merci. Merci pour tout ce que vous avez fait.\n\nElisa Taylor",
+          ContentFR = "Quand vous lirez cette lettre, nous aurons déjà quitté la Maison d’Hypnos.\nLa tragédie de Psyche a alerté les Veilleurs. Nous ne pouvions plus rester à Givrelac.\nAvant qu’ils n’arrivent, j’ai conduit tout le monde loin d’ici.\nNe soyez pas triste pour nous, et ne craignez pas que nous perdions le contrôle en sombrant dans la Dégradation.\n\nNous partons vers les terres sauvages, vers l’inconnu.\nPeut-être la mort nous attend-elle, ou bien un miracle encore invisible.\nMais jusqu’au bout, nous garderons espoir.\nC’est ce qu’elle nous a appris.\n\nEt... merci. Merci pour tout ce que vous avez fait.\n\n<I>Elisa Taylor</>",
           TextMapId = "Reading_Content_200208"
         },
         Reading_Title_101223 = {
@@ -44158,15 +46205,7 @@ Allez voir ce qui se passe.]],
         RegionReputation_EntrustTitle01 = {
           ContentFR = "Collecte de matériaux pour Camilla",
           TextMapId = "RegionReputation_EntrustTitle01"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RegionReputation_EntrustTitle02",
-    MaxKey = "SKILL_10602_DESC",
-    Loader = function()
-      return {
+        },
         RegionReputation_EntrustTitle02 = {
           ContentFR = "Collecte de ressources pour Luno, la livreuse",
           TextMapId = "RegionReputation_EntrustTitle02"
@@ -44335,6 +46374,30 @@ Allez voir ce qui se passe.]],
           ContentFR = "Huaxu",
           TextMapId = "RegionReputation_Title02"
         },
+        RepeatDungeon01_Des = {
+          ContentFR = "Port-des-Brumes, plus grand port de transport de Haojing, constitue également le principal point de passage par lequel les Tisse-Étoiles entrent et sortent de Huaxu.\nRépondant à l’appel de la Cérémonie de l’Encens, les Tisse-Étoiles ont offert d’importantes richesses et de nombreux trésors afin de soutenir le Tournoi de l’Encens. En reconnaissance de cette contribution, les organisateurs ont choisi d’établir la première arène de la compétition au Port-des-Brumes.",
+          TextMapId = "RepeatDungeon01_Des"
+        },
+        RepeatDungeon01_Title = {
+          ContentFR = "Port-des-Brumes",
+          TextMapId = "RepeatDungeon01_Title"
+        },
+        RepeatDungeon02_Des = {
+          ContentFR = "La Mer de Poussière fut autrefois réduite à un territoire inhabité par le Fléau de Zhuyin, un nom qui suffit encore à glacer le sang des habitants de Huaxu. Bien que Zhuyin ait depuis retrouvé sa place, le phénomène de Poussière-corrompue qui marque ces terres ne peut être entièrement éradiqué. Afin d’apaiser les craintes persistantes de la population et d’éliminer les Souillés qui y rôdent encore, les organisateurs ont établi ici la deuxième arène de la compétition.",
+          TextMapId = "RepeatDungeon02_Des"
+        },
+        RepeatDungeon02_Title = {
+          ContentFR = "Mer de Poussière",
+          TextMapId = "RepeatDungeon02_Title"
+        },
+        RepeatDungeon03_Des = {
+          ContentFR = "La Banlieue Ouest de Haojing est principalement constituée de zones forestières et demeure peu habitée.\nÀ la suite des dégâts subis par plusieurs bâtiments de la ville lors du chaos des deux Seigneurs Dragons, cette région a été choisie comme arène finale de la compétition.",
+          TextMapId = "RepeatDungeon03_Des"
+        },
+        RepeatDungeon03_Title = {
+          ContentFR = "Banlieue Ouest de Haojing",
+          TextMapId = "RepeatDungeon03_Title"
+        },
         ReputationEntrust_Required = {
           ContentFR = "Objets requis",
           TextMapId = "ReputationEntrust_Required"
@@ -44501,7 +46564,15 @@ Allez voir ce qui se passe.]],
         RougeLike_Room318_Char01 = {
           ContentFR = "Vieil homme chaleureux",
           TextMapId = "RougeLike_Room318_Char01"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RougeLike_Room319_Char01",
+    MaxKey = "SKILL_20305_DESC",
+    Loader = function()
+      return {
         RougeLike_Room319_Char01 = {
           ContentFR = "Vieil homme égaré",
           TextMapId = "RougeLike_Room319_Char01"
@@ -44957,15 +47028,7 @@ Allez voir ce qui se passe.]],
         SKILL_10602_DESC = {
           ContentFR = "Portée de compétence +<H>#1</>.",
           TextMapId = "SKILL_10602_DESC"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "SKILL_10603_DESC",
-    MaxKey = "SKILL_410202_DESC",
-    Loader = function()
-      return {
+        },
         SKILL_10603_DESC = {
           ContentFR = "ATQ du personnage +<H>#1</>. Les Attaques chargées avec cette arme confèrent +<H>#2</> de DGT CRIT pendant <H>#3</> s. L’effet est annulé lors du changement d’arme.",
           TextMapId = "SKILL_10603_DESC"
@@ -45163,35 +47226,35 @@ Allez voir ce qui se passe.]],
           TextMapId = "SKILL_150304_NAME"
         },
         SKILL_150401_DESC = {
-          ContentFR = "Entre en état [Croisière], conférant une capacité de vol à grande vitesse et infligeant des Dégâts Lumino aux ennemis sur la trajectoire. Cet état consomme continuellement de l’[Énergie d’artifice]. Il prend fin lorsque l’énergie atteint 0 ou lorsque la compétence est réutilisée.",
+          ContentFR = "Entre en état [Poursuite du soleil], conférant une capacité de vol à grande vitesse et infligeant des Dégâts Lumino aux ennemis sur la trajectoire. Cet état consomme continuellement de l’[Énergie d’artifice] et prend fin lorsque celle-ci atteint 0 ou lorsque la compétence est utilisée à nouveau.\nMaintenez la touche de saut pour entrer en état [Patrouille céleste], permettant un vol vertical. Cet état consomme également de l’[Énergie d’artifice] et prend fin lorsque celle-ci atteint 0 ou lorsque la touche de saut est relâchée.\nLorsque vous n’êtes ni en état [Poursuite du soleil] ni en état [Patrouille céleste], l’[Énergie d’artifice] se régénère progressivement.",
           TextMapId = "SKILL_150401_DESC"
         },
         SKILL_150401_NAME = {
-          ContentFR = "Croisière",
+          ContentFR = "Poursuite du soleil",
           TextMapId = "SKILL_150401_NAME"
         },
         SKILL_150402_DESC = {
-          ContentFR = "Consomme toute la Lucidité pour invoquer la [Plateforme d’artifice]. Pour chaque quantité de Lucidité consommée, confère 1 cumul de [Ravitaillement d’artifice], jusqu’à un maximum de 10 cumuls. L’arme de mêlée est remplacée par la [Grande épée d’artifice], et l’arme à distance par le [Canon d’artifice].\nTant que la [Plateforme d’artifice] est active, les dégâts reçus n’infligent pas d’interruptions. Réutiliser cette compétence rappelle la [Plateforme d’artifice].",
+          ContentFR = "Contrôle le Fengshi n° 3 et consomme toute la Lucidité pour entrer en état [Mode annihilation stellaire].\nChaque tranche de 40 de Lucidité consommée confère 1 cumul d’[Errance céleste], jusqu’à 10 cumuls.\nEn fonction de la capacité maximale de munitions de votre arme à distance, vous obtenez de la [Poudre d’artifice], jusqu’à un maximum de 300 charges.\nPendant l’état [Mode annihilation stellaire], les armes ne peuvent pas être utilisées et les dégâts subis n’interrompent pas vos actions. Réutiliser cette compétence met fin à l’état [Mode annihilation stellaire].\nLes attaques de mêlée sont remplacées par [Lame irisée], et les attaques à distance par [Pluie d’étoiles].",
           TextMapId = "SKILL_150402_DESC"
         },
         SKILL_150402_NAME = {
-          ContentFR = "Armement d’artifice",
+          ContentFR = "Mode annihilation stellaire",
           TextMapId = "SKILL_150402_NAME"
         },
         SKILL_150403_DESC = {
-          ContentFR = "Chaque projectile consommé par la [Plateforme d’artifice] confère 1 cumul de [Surchauffe], cumulable jusqu’à 400 fois. Lorsque la [Plateforme d’artifice] est rappelée, tous les cumuls de [Surchauffe] sont consommés.\nSi au moins 200 cumuls sont consommés, la [Plateforme d’artifice] est projetée vers l’avant et explose au contact d’un obstacle, infligeant des Dégâts Lumino de zone.",
+          ContentFR = "Chaque [Poudre d’artifice] consommée confère 1 cumul permanent d’[Accumulation], cumulable jusqu’à 100 fois.\nLorsque vous quittez l’état [Mode annihilation stellaire], tous les cumuls d’[Accumulation] sont supprimés.\nSi 50 cumuls ou plus sont retirés, vous ordonnez à une méchapoupée Fengshi de foncer vers l’avant et d’exploser à l’impact, infligeant des Dégâts Lumino de zone.",
           TextMapId = "SKILL_150403_DESC"
         },
         SKILL_150403_NAME = {
-          ContentFR = "Potentiel d’artifice",
+          ContentFR = "Puissance accumulée",
           TextMapId = "SKILL_150403_NAME"
         },
         SKILL_150404_DESC = {
-          ContentFR = "Lors de l’invocation de la [Plateforme d’artifice], génère un [Bouclier d’artifice].",
+          ContentFR = "En entrant en état [Mode annihilation stellaire], vous obtenez un bouclier excédentaire basé sur la quantité de Lucidité consommée.",
           TextMapId = "SKILL_150404_DESC"
         },
         SKILL_150404_NAME = {
-          ContentFR = "Intégration offensive et défensive",
+          ContentFR = "Défense offensive",
           TextMapId = "SKILL_150404_NAME"
         },
         SKILL_160101_DESC = {
@@ -45309,7 +47372,15 @@ Allez voir ce qui se passe.]],
         SKILL_20305_DESC = {
           ContentFR = "Vitesse d’attaque +<H>#1</>. Lorsque cette arme déclenche un Effet supplémentaire, confère +<H>#2</> d’augmentation de la Vitesse d’attaque pendant <H>#3</> s (jusqu’à <H>#4</> cumuls). L’effet est annulé lors du changement d’arme.",
           TextMapId = "SKILL_20305_DESC"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "SKILL_20401_DESC",
+    MaxKey = "SKILL_DESC_1103MarkRate",
+    Loader = function()
+      return {
         SKILL_20401_DESC = {
           ContentFR = "Durée de compétence +<H>#1</>.",
           TextMapId = "SKILL_20401_DESC"
@@ -45642,8 +47713,12 @@ Allez voir ce qui se passe.]],
           ContentFR = "Sentence prononcée",
           TextMapId = "SKILL_320104_NAME"
         },
+        SKILL_320105_DESC = {
+          ContentFR = "Pendant la durée de l’effet [Châtiment], lorsque vous infligez des Dégâts de compétence ou d’arme de mêlée à un ennemi, vous avez #1 de chances de déclencher une fois supplémentaire [Châtiment transperçant] centré sur la cible et d’obtenir 1 cumul de [Décompte des péchés], cumulable jusqu’à #6 fois.\nSi vos PV sont à 100 %, vous subissez en plus des dégâts équivalents à 0,1 % de vos PV max. Cet effet peut se déclencher au maximum #3 fois toutes les #2 s.\nChaque cumul de [Décompte des péchés] augmente la [Vigueur] de #4 et augmente le multiplicateur de dégâts de [Cage du désespoir] de #5.",
+          TextMapId = "SKILL_320105_DESC"
+        },
         SKILL_320201_DESC = {
-          ContentFR = "Projette toutes les [Lames tournoyantes], inflige des Dégâts Pyro aux ennemis devant et confère 1 cumul d’[Ébriété].\nMaintenir l’attaque ou utiliser une compétence normale ou une attaque de mêlée permet d'enchaîner des attaques successives.",
+          ContentFR = "Projette toutes les [Lames tournoyantes], inflige des Dégâts Pyro aux ennemis devant et confère 1 cumul d’[Ébriété].\nMaintenir l’attaque ou utiliser une compétence normale ou une attaque de mêlée permet d’enchaîner des attaques successives.",
           TextMapId = "SKILL_320201_DESC"
         },
         SKILL_320201_NAME = {
@@ -45667,7 +47742,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "SKILL_320203_NAME"
         },
         SKILL_320204_DESC = {
-          ContentFR = "Détonner [Lacération] accorde 1 [Marque d’ivresse]. Toutes les 20 [Marques d’ivresse], restaure de la Lucidité.",
+          ContentFR = "Détonner [Lacération] accorde 1 [Marque d’ivresse]. Toutes les 20 [Marques d’ivresse], la Lucidité est restaurée.",
           TextMapId = "SKILL_320204_DESC"
         },
         SKILL_320204_NAME = {
@@ -45765,15 +47840,7 @@ Allez voir ce qui se passe.]],
         SKILL_410202_DESC = {
           ContentFR = "Inflige des Dégâts Électro aux ennemis proches lorsque vous possédez moins de 2 [Talismans].\nLorsque vous détenez 2 [Talismans] ou plus, cette compétence est remplacée par une autre selon leur combinaison.",
           TextMapId = "SKILL_410202_DESC"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "SKILL_410202_NAME",
-    MaxKey = "SKILL_DESC_3202Skill01Buff01",
-    Loader = function()
-      return {
+        },
         SKILL_410202_NAME = {
           ContentFR = "Divination cosmique",
           TextMapId = "SKILL_410202_NAME"
@@ -46113,7 +48180,15 @@ Allez voir ce qui se passe.]],
         SKILL_DESC_1103MarkRate = {
           ContentFR = "Bonus de dégâts par cumul d’[Adagio]",
           TextMapId = "SKILL_DESC_1103MarkRate"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "SKILL_DESC_1103MarkRestore1",
+    MaxKey = "SKILL_DESC_5102Skill01Buff",
+    Loader = function()
+      return {
         SKILL_DESC_1103MarkRestore1 = {
           ContentFR = "Régénération de Lucidité via [Fermata]",
           TextMapId = "SKILL_DESC_1103MarkRestore1"
@@ -46359,12 +48434,16 @@ Allez voir ce qui se passe.]],
           TextMapId = "SKILL_DESC_1503Skill02_Weapon_Other"
         },
         SKILL_DESC_1504_Skill01_SecondSpChangeScd01 = {
-          ContentFR = "Coût d’Énergie d’artifice par seconde pendant [Croisière]",
+          ContentFR = "Coût d’[Énergie d’artifice] en [Poursuite du soleil]",
           TextMapId = "SKILL_DESC_1504_Skill01_SecondSpChangeScd01"
         },
         SKILL_DESC_1504_Skill01_SecondSpChangeScd02 = {
-          ContentFR = "Coût d’Énergie d’artifice par seconde lors de l’ascension",
+          ContentFR = "Coût d’[Énergie d’artifice] en [Patrouille céleste]",
           TextMapId = "SKILL_DESC_1504_Skill01_SecondSpChangeScd02"
+        },
+        SKILL_DESC_1504_Skill01_SecondSpRecover = {
+          ContentFR = "Récupération d’[Énergie d’artifice]",
+          TextMapId = "SKILL_DESC_1504_Skill01_SecondSpRecover"
         },
         SKILL_DESC_1601Skill01Damage = {
           ContentFR = "Dégâts de l’onde tranchante",
@@ -46573,15 +48652,7 @@ Allez voir ce qui se passe.]],
         SKILL_DESC_3202Skill01Buff01 = {
           ContentFR = "Bonus de Vitesse de compétence par cumul d’[Ébriété]",
           TextMapId = "SKILL_DESC_3202Skill01Buff01"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "SKILL_DESC_3202Skill01Buff02",
-    MaxKey = "SKILL_DESC_ShootingRate",
-    Loader = function()
-      return {
+        },
         SKILL_DESC_3202Skill01Buff02 = {
           ContentFR = "Vitesse de projection des [Lames tournoyantes] par cumul d’[Ébriété]",
           TextMapId = "SKILL_DESC_3202Skill01Buff02"
@@ -46594,17 +48665,9 @@ Allez voir ce qui se passe.]],
           ContentFR = "Dégâts des [Lames tournoyantes]",
           TextMapId = "SKILL_DESC_3202Skill02Damage01"
         },
-        SKILL_DESC_3202Skill02Distance = {
-          ContentFR = "Distance de projection des [Lames tournoyantes]",
-          TextMapId = "SKILL_DESC_3202Skill02Distance"
-        },
         SKILL_DESC_3202Skill02LastTime = {
           ContentFR = "Durée des [Lames tournoyantes]",
           TextMapId = "SKILL_DESC_3202Skill02LastTime"
-        },
-        SKILL_DESC_3202Skill02Radius = {
-          ContentFR = "Portée de ciblage des [Lames tournoyantes]",
-          TextMapId = "SKILL_DESC_3202Skill02Radius"
         },
         SKILL_DESC_3202Skill02Speed = {
           ContentFR = "Vitesse de projection des [Lames tournoyantes]",
@@ -46925,7 +48988,15 @@ Allez voir ce qui se passe.]],
         SKILL_DESC_5102Skill01Buff = {
           ContentFR = "Durée de [Furtivité]",
           TextMapId = "SKILL_DESC_5102Skill01Buff"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "SKILL_DESC_5102Skill02Buff",
+    MaxKey = "SKILL_WPASSIVE_NAME",
+    Loader = function()
+      return {
         SKILL_DESC_5102Skill02Buff = {
           ContentFR = "Durée de [Chasse inlassable]",
           TextMapId = "SKILL_DESC_5102Skill02Buff"
@@ -47381,15 +49452,7 @@ Allez voir ce qui se passe.]],
         SKILL_DESC_ShootingRate = {
           ContentFR = "Intervalle de tir",
           TextMapId = "SKILL_DESC_ShootingRate"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "SKILL_DESC_ShootingRate2",
-    MaxKey = "StoryNPC_Calista",
-    Loader = function()
-      return {
+        },
         SKILL_DESC_ShootingRate2 = {
           ContentFR = "Intervalle de tir — Phase 2",
           TextMapId = "SKILL_DESC_ShootingRate2"
@@ -47402,33 +49465,33 @@ Allez voir ce qui se passe.]],
           ContentFR = "Intervalle de tir — Phase 4",
           TextMapId = "SKILL_DESC_ShootingRate4"
         },
+        SKILL_DESC_Skill01_Damage01 = {
+          ContentFR = "Dégâts le long de la trajectoire de [Croisière]",
+          TextMapId = "SKILL_DESC_Skill01_Damage01"
+        },
         SKILL_DESC_Skill02_Damage01 = {
-          ContentFR = "Dégâts de [Grande épée d’artifice]",
+          ContentFR = "Dégâts de [Lame irisée]",
           TextMapId = "SKILL_DESC_Skill02_Damage01"
         },
         SKILL_DESC_Skill02_Damage02 = {
-          ContentFR = "Dégâts des projectiles du [Canon d’artifice]",
+          ContentFR = "Dégâts de [Pluie d’étoiles]",
           TextMapId = "SKILL_DESC_Skill02_Damage02"
         },
         SKILL_DESC_Skill02_Damage03 = {
-          ContentFR = "Dégâts des obus à détonation différée du [Canon d’artifice]",
+          ContentFR = "Dégâts du projectile traqueur de [Pluie d’étoiles]",
           TextMapId = "SKILL_DESC_Skill02_Damage03"
         },
-        SKILL_DESC_Skill02_PerSp = {
-          ContentFR = "Coût en Lucidité pour obtenir un cumul de [Ravitaillement d’artifice]",
-          TextMapId = "SKILL_DESC_Skill02_PerSp"
-        },
-        ["SKILL_DESC_Skill02_Range+A5+528:562"] = {
-          ContentFR = "Zone d’effet des obus à détonation différée de [Grande épée d’artifice]",
-          TextMapId = "SKILL_DESC_Skill02_Range+A5+528:562"
-        },
         SKILL_DESC_Skill02_Range01 = {
-          ContentFR = "Zone d’effet de [Grande épée d’artifice]",
+          ContentFR = "Longueur de [Lame irisée]",
           TextMapId = "SKILL_DESC_Skill02_Range01"
         },
         SKILL_DESC_Skill02_Range02 = {
-          ContentFR = "Zone d’effet des projectiles de [Grande épée d’artifice]",
+          ContentFR = "Zone d’effet de [Pluie d’étoiles]",
           TextMapId = "SKILL_DESC_Skill02_Range02"
+        },
+        SKILL_DESC_Skill02_Range03 = {
+          ContentFR = "Zone d’effet des obus à détonation différée de [Grande épée d’artifice]",
+          TextMapId = "SKILL_DESC_Skill02_Range03"
         },
         SKILL_DESC_SkillDmgUp = {
           ContentFR = "Augmentation des Dégâts de compétence",
@@ -47489,6 +49552,10 @@ Allez voir ce qui se passe.]],
         SKILL_DESC_SpCost = {
           ContentFR = "Coût en Lucidité",
           TextMapId = "SKILL_DESC_SpCost"
+        },
+        SKILL_DESC_SpCost_Min = {
+          ContentFR = "Coût minimum en Lucidité",
+          TextMapId = "SKILL_DESC_SpCost_Min"
         },
         SKILL_DESC_SpIncrease = {
           ContentFR = "Régénération de Lucidité",
@@ -47729,7 +49796,15 @@ Allez voir ce qui se passe.]],
         SKILL_WPASSIVE_NAME = {
           ContentFR = "Effet passif de l’arme",
           TextMapId = "SKILL_WPASSIVE_NAME"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "SURVIVALPRO_LONGPRESS_PC",
+    MaxKey = "System_Des_SwitchMaster",
+    Loader = function()
+      return {
         SURVIVALPRO_LONGPRESS_PC = {
           ContentFR = "Approchez du Poste d’Alchimie, puis maintenez &Interactive& pour en extraire le Sérum",
           TextMapId = "SURVIVALPRO_LONGPRESS_PC"
@@ -47785,6 +49860,10 @@ Allez voir ce qui se passe.]],
           ContentFR = "Veillée des confidences",
           TextMapId = "SkinGacha_Name_Special_3"
         },
+        SkinGacha_Name_Special_4 = {
+          ContentFR = "L’Envol vers l’azur",
+          TextMapId = "SkinGacha_Name_Special_4"
+        },
         SkinGacha_Warning_Normal = {
           ContentFR = "<Title>Objet légendaire garanti</>\nNombres d’évocations en cours : <highlight>%d</>/90\n\n<Title>Probabilités de la Myriade permanente</>\nTaux de base d’obtention d’un objet légendaire par évocation : <highlight>0,3 %%</>. \nTaux global (incluant la garantie) : <highlight>1,42 %%</>.\nUn objet légendaire est garanti dans un maximum de <highlight>90</> évocations.\n\nTaux individuels :\n— Rhapsodie des vagues : <highlight>0,427 %%</>\n— Scherzo de l’aurore : <highlight>0,427 %%</>\n— Voiles et murmures : <highlight>0,285 %%</>\n— Moulin d’or : <highlight>0,285 %%</>\n\nTaux de base d’obtention d’un objet épique : <highlight>5,1 %%</>. \nTaux global (incluant la garantie) : <highlight>12,46 %%</>.\nUn objet épique est garanti dans un maximum de <highlight>10</> évocations.\nLorsque la garantie s’active, la probabilité d’obtenir un objet épique est de <highlight>99,7 %%</>, et un objet légendaire de <highlight>0,3 %%</>.\nEn cas de bonus de taux ou d’ajustement de garantie, veuillez vous référer aux règles spécifiques de la bannière.\n\n<Title>À propos des doublons</>\nLes apparences (tenues, armes et accessoires) déjà obtenues sont automatiquement converties en Prismes azurés :\n— Apparence de personnage légendaire → ×<highlight>60</> \n— Apparence d’arme légendaire → ×<highlight>40</> \n— Apparence épique → ×<highlight>4</> \n— Apparence rare → ×<highlight>1</> \n\n<Title>Transfert de progression entre Myriades</>\nLes évocations de <highlight>Rhapsodie stellaire</> sont comptabilisés séparément et ne sont pas partagés avec les autres bannières de la Myriade.",
           TextMapId = "SkinGacha_Warning_Normal"
@@ -47830,6 +49909,30 @@ Allez voir ce qui se passe.]],
           TextMapId = "SkipMVP"
         },
         Slash = {ContentFR = "/", TextMapId = "Slash"},
+        SoloTreasure_Backpack01 = {
+          ContentFR = "Sac aux trésors I",
+          TextMapId = "SoloTreasure_Backpack01"
+        },
+        SoloTreasure_Backpack02 = {
+          ContentFR = "Sac aux trésors II",
+          TextMapId = "SoloTreasure_Backpack02"
+        },
+        SoloTreasure_Backpack03 = {
+          ContentFR = "Sac aux trésors III",
+          TextMapId = "SoloTreasure_Backpack03"
+        },
+        SoloTreasure_Backpack04 = {
+          ContentFR = "Sac aux trésors IV",
+          TextMapId = "SoloTreasure_Backpack04"
+        },
+        SoloTreasure_Backpack05 = {
+          ContentFR = "Sac aux trésors V",
+          TextMapId = "SoloTreasure_Backpack05"
+        },
+        SoloTreasure_Backpack06 = {
+          ContentFR = "Sac aux trésors VI",
+          TextMapId = "SoloTreasure_Backpack06"
+        },
         SpQuestDesc_KKPart02 = {
           ContentFR = "Repousser les Souillés approchant",
           TextMapId = "SpQuestDesc_KKPart02"
@@ -48177,15 +50280,7 @@ Allez voir ce qui se passe.]],
         StoryNPC_Calista = {
           ContentFR = "Calista",
           TextMapId = "StoryNPC_Calista"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "StoryNPC_Flynn",
-    MaxKey = "TERMEXP_4201_FallAttack",
-    Loader = function()
-      return {
+        },
         StoryNPC_Flynn = {
           ContentFR = "Flynn",
           TextMapId = "StoryNPC_Flynn"
@@ -48293,6 +50388,10 @@ Allez voir ce qui se passe.]],
         SubType_4_Society = {
           ContentFR = "Société",
           TextMapId = "SubType_4_Society"
+        },
+        SubType_4_Story = {
+          ContentFR = "Histoire",
+          TextMapId = "SubType_4_Story"
         },
         SubType_4_Technology = {
           ContentFR = "Technologie",
@@ -48490,7 +50589,15 @@ Allez voir ce qui se passe.]],
         System_Des_SwitchMaster = {
           ContentFR = "La fonction <Highlight>Changement de protagoniste</> est désormais disponible. Vous pouvez maintenant contrôler le protagoniste.",
           TextMapId = "System_Des_SwitchMaster"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "System_Des_Temple",
+    MaxKey = "TERM_4102_Skill02_02",
+    Loader = function()
+      return {
         System_Des_Temple = {
           ContentFR = "<Highlight>Épreuves de l’Oiseau onirique</> débloquées — plongez en méditation et relevez les défis oniriques.",
           TextMapId = "System_Des_Temple"
@@ -48863,24 +50970,20 @@ Allez voir ce qui se passe.]],
           ContentFR = "Peut être détenue jusqu’à 7 fois.\nLorsqu’elle est libérée, choisit un ennemi aléatoire comme cible, orbite autour de lui et fond régulièrement vers lui pour attaquer, infligeant des Dégâts Lumino aux ennemis sur sa trajectoire.\nAprès 3 attaques sur la cible, la [Phanoplume] disparaît.\nChaque attaque inflige en plus une portion des Dégâts sur la durée de l’Effet supplémentaire : Lumino, calculée selon la Chance de déclenchement de l’arme de mêlée.",
           TextMapId = "TERMEXP_1503_Skill02_02"
         },
-        TERMEXP_1504_ExtraPassive_01 = {
-          ContentFR = "Se déploie automatiquement lors des attaques de mêlée ou à distance.\nLorsque Su Yi subit des dégâts de PV, le [Bouclier d’artifice] absorbe cette instance de dégâts. Après avoir absorbé des dégâts équivalents à un certain pourcentage des PV max de Su Yi, le bouclier se dissipe.",
-          TextMapId = "TERMEXP_1504_ExtraPassive_01"
-        },
         TERMEXP_1504_Passive_01 = {
-          ContentFR = "Chaque cumul consommé restaure de la Lucidité et augmente les dégâts de l’explosion générée par la [Plateforme d’artifice].",
+          ContentFR = "Chaque cumul retiré restaure de la Lucidité et augmente le multiplicateur de dégâts de la méchapoupée Fengshi pour cette activation.",
           TextMapId = "TERMEXP_1504_Passive_01"
         },
         TERMEXP_1504_Skill02_01 = {
-          ContentFR = "Fournit des projectiles à la [Plateforme d’artifice] et augmente la Vitesse d’attaque. L’effet est supprimé lorsque la plateforme est rappelée.",
+          ContentFR = "Confère une augmentation de Vigueur.",
           TextMapId = "TERMEXP_1504_Skill02_01"
         },
         TERMEXP_1504_Skill02_02 = {
-          ContentFR = "Les attaques normales avec la [Grande épée d’artifice] consomment 5 projectiles de la [Plateforme d’artifice] et infligent des Dégâts Lumino aux ennemis sur la trajectoire.",
+          ContentFR = "Chaque attaque consomme 5 [Poudre d’artifice] et balaie l’ennemi d’un immense sabre de lumière, infligeant des Dégâts Lumino aux ennemis sur la trajectoire.",
           TextMapId = "TERMEXP_1504_Skill02_02"
         },
         TERMEXP_1504_Skill02_03 = {
-          ContentFR = "Tire un projectile vers l’avant qui explose au contact d’un obstacle, infligeant des Dégâts Lumino de zone.\nSi le Sceau démoniaque [Reconfiguration d’artifice] est équipé, tire à la place un projectile à mèche qui se dirige vers des ennemis aléatoires, infligeant des Dégâts Lumino de zone toutes les 0,5 s sur son passage.",
+          ContentFR = "Chaque attaque consomme 1 [Poudre d’artifice] et tire un projectile qui inflige des Dégâts Lumino de zone à l’impact.\nSi le Sceau démoniaque [Mode de poursuite du Fengshi n° 3] est équipé, tire à la place un projectile traqueur qui se dirige vers une cible aléatoire et inflige des Dégâts Lumino de zone toutes les 0,1 s sur sa trajectoire.",
           TextMapId = "TERMEXP_1504_Skill02_03"
         },
         TERMEXP_1601_Skill02 = {
@@ -48944,7 +51047,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "TERMEXP_3201_Skill01"
         },
         TERMEXP_3202_Passive01 = {
-          ContentFR = "Tous les DGT d’arme et les Dégâts de compétence (à l’exception de [Lames tournoyantes] et [Lacération]) détonent 1 [Lacération] et infligent des dégâts supplémentaires de l’attribut Pyro. Jusqu’à 40 détonations par seconde.",
+          ContentFR = "Lorsqu’une cible affectée par [Blessure écarlate] subit des Dégâts Pyro (à l’exception des dégâts de [Lame du sommelier] et de [Blessure écarlate]), 1 cumul de [Blessure écarlate] est retiré et inflige une instance supplémentaire de Dégâts Pyro provenant de Camilla.\nChaque cible peut perdre jusqu’à 20 cumuls par seconde.",
           TextMapId = "TERMEXP_3202_Passive01"
         },
         TERMEXP_3202_Skill01 = {
@@ -48952,7 +51055,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "TERMEXP_3202_Skill01"
         },
         TERMEXP_3202_Skill02 = {
-          ContentFR = "Chaque [Lames tournoyantes] inflige des dégâts aux ennemis tous les 2 s pendant qu’elle orbite autour du personnage.\nLorsqu’elle est projetée, elle vole sur une certaine distance avant de revenir. Si elle est touchée par [Rafale pourpre] durant son retour, elle est projetée à nouveau vers un ennemi aléatoire dans la portée.\nÀ chaque projection, sa vitesse est mise à jour en fonction des cumuls de [Ébriété].\nElle inflige des dégâts 1 fois sur son passage, et jusqu'à 8 [Lames tournoyantes] peuvent être présentes à la fois.",
+          ContentFR = "Chaque [Lames tournoyantes] inflige des dégâts aux ennemis tous les 2 s pendant qu’elle orbite autour du personnage.\nLorsqu’elle est projetée, elle vole sur une certaine distance avant de revenir. Si elle est touchée par [Rafale pourpre] durant son retour, elle est projetée à nouveau vers un ennemi aléatoire dans la portée.\nÀ chaque projection, sa vitesse est mise à jour en fonction des cumuls de [Ébriété].\nElle inflige des dégâts 1 fois sur son passage, et jusqu’à 8 [Lames tournoyantes] peuvent être présentes à la fois.",
           TextMapId = "TERMEXP_3202_Skill02"
         },
         TERMEXP_4101_Skill02_01 = {
@@ -48982,15 +51085,7 @@ Allez voir ce qui se passe.]],
         TERMEXP_4201_FallAttack = {
           ContentFR = "Tombe en piqué à grande vitesse et inflige des Dégâts Électro de zone à l’impact.\nCette attaque est considérée comme une Attaque plongeante d’arme de mêlée.\nSous l’état [Éveil de Xuanjiao], déclenche également [Nuées du dragon].",
           TextMapId = "TERMEXP_4201_FallAttack"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "TERMEXP_4201_Marks",
-    MaxKey = "TextMap_AnswerDetail_100202",
-    Loader = function()
-      return {
+        },
         TERMEXP_4201_Marks = {
           ContentFR = "Effet permanent pouvant atteindre 6 cumuls. Tous les cumuls d’[Écaille inversée] sont dissipés à la fin de l’état [Éveil de Xuanjiao].",
           TextMapId = "TERMEXP_4201_Marks"
@@ -49199,24 +51294,20 @@ Allez voir ce qui se passe.]],
           ContentFR = "Phanoplume",
           TextMapId = "TERM_1503_Skill02_02"
         },
-        TERM_1504_ExtraPassive_01 = {
-          ContentFR = "Bouclier d’artifice",
-          TextMapId = "TERM_1504_ExtraPassive_01"
-        },
         TERM_1504_Passive_01 = {
-          ContentFR = "Surchauffe",
+          ContentFR = "Puissance accumulée",
           TextMapId = "TERM_1504_Passive_01"
         },
         TERM_1504_Skill02_01 = {
-          ContentFR = "Ravitaillement d’artifice",
+          ContentFR = "Errance céleste",
           TextMapId = "TERM_1504_Skill02_01"
         },
         TERM_1504_Skill02_02 = {
-          ContentFR = "Grande épée d’artifice",
+          ContentFR = "Lame irisée",
           TextMapId = "TERM_1504_Skill02_02"
         },
         TERM_1504_Skill02_03 = {
-          ContentFR = "Canon d’artifice",
+          ContentFR = "Pluie d’étoiles",
           TextMapId = "TERM_1504_Skill02_03"
         },
         TERM_1601_Skill02 = {
@@ -49288,7 +51379,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "TERM_3202_Skill01"
         },
         TERM_3202_Skill02 = {
-          ContentFR = "Lames tournoyantes",
+          ContentFR = "Lame du sommelier",
           TextMapId = "TERM_3202_Skill02"
         },
         TERM_4101_Skill02_01 = {
@@ -49306,7 +51397,15 @@ Allez voir ce qui se passe.]],
         TERM_4102_Skill02_02 = {
           ContentFR = "Convergence primordiale",
           TextMapId = "TERM_4102_Skill02_02"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "TERM_4102_Skill02_03",
+    MaxKey = "TextMap_AnswerName_200303",
+    Loader = function()
+      return {
         TERM_4102_Skill02_03 = {
           ContentFR = "Clarté du destin",
           TextMapId = "TERM_4102_Skill02_03"
@@ -49763,15 +51862,7 @@ Allez voir ce qui se passe.]],
         TextMap_AnswerDetail_100202 = {
           ContentFR = "Le socle de la girouette est tordu en direction du sud-ouest. Avec d’autres indices, cela pourrait éclairer la fuite de l’agresseur.",
           TextMapId = "TextMap_AnswerDetail_100202"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "TextMap_AnswerDetail_100203",
-    MaxKey = "Title_10033",
-    Loader = function()
-      return {
+        },
         TextMap_AnswerDetail_100203 = {
           ContentFR = "Les marques de rupture du socle et de la girouette coïncident parfaitement : l’agresseur l’a heurtée en s’échappant par les toits.\nRéassemblé, l’ensemble pointe vers le sud-ouest — confirmant la direction de la fuite.",
           TextMapId = "TextMap_AnswerDetail_100203"
@@ -50087,7 +52178,15 @@ Allez voir ce qui se passe.]],
         TextMap_AnswerName_200303 = {
           ContentFR = "Album de famille",
           TextMapId = "TextMap_AnswerName_200303"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "TextMap_AnswerName_200304",
+    MaxKey = "Title_10112",
+    Loader = function()
+      return {
         TextMap_AnswerName_200304 = {
           ContentFR = "Lettre parlant du déménagement",
           TextMapId = "TextMap_AnswerName_200304"
@@ -50565,15 +52664,7 @@ Allez voir ce qui se passe.]],
         Title_10033 = {
           ContentFR = "chevronné",
           TextMapId = "Title_10033"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Title_10034",
-    MaxKey = "UIGUIDE_PARTIALDAMAGE_08",
-    Loader = function()
-      return {
+        },
         Title_10034 = {
           ContentFR = "chanceux",
           TextMapId = "Title_10034"
@@ -50889,10 +52980,26 @@ Allez voir ce qui se passe.]],
         Title_10112 = {
           ContentFR = "de Daphne",
           TextMapId = "Title_10112"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Title_10113",
+    MaxKey = "UIGuide_ExplorationMechanism_3",
+    Loader = function()
+      return {
         Title_10113 = {
           ContentFR = "de la Secte Jishu",
           TextMapId = "Title_10113"
+        },
+        Title_10114 = {
+          ContentFR = "façon Hu",
+          TextMapId = "Title_10114"
+        },
+        Title_10115 = {
+          ContentFR = "du clan Hu",
+          TextMapId = "Title_10115"
         },
         Title_20001 = {
           ContentFR = "Force",
@@ -51370,15 +53477,7 @@ Allez voir ce qui se passe.]],
         UIGUIDE_PARTIALDAMAGE_08 = {
           ContentFR = "Une fois toute son armure détruite, le Cristallophage sera <Highlight>étourdi</> et sa <Highlight>faiblesse exposée</>.\nUtilisez « <Highlight>Châtiment d’Ask</> » sur sa <Highlight>tête</> pour le <Highlight>vaincre immédiatement</>.",
           TextMapId = "UIGUIDE_PARTIALDAMAGE_08"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UIGUIDE_SKILL2_01",
-    MaxKey = "UIGuide_Rouge_2_3",
-    Loader = function()
-      return {
+        },
         UIGUIDE_SKILL2_01 = {
           ContentFR = "Inspirée par la puissance de la Résonance, Berenica a éveillé sa <Highlight>Compétence ultime</>.\nAppuyez sur &Skill2& pour déclencher [Lame infernale].\nTant qu’elle est active, [Lame infernale] <Highlight>consume la Lucidité</> et projette des vagues d’énergie dans la direction de l’attaque.\nAppuyez de nouveau sur &Skill2& pour <Highlight>mettre fin à la compétence</>.",
           TextMapId = "UIGUIDE_SKILL2_01"
@@ -51492,7 +53591,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UIGuide_AutoChess_2_3"
         },
         UIGuide_AutoChess_3 = {
-          ContentFR = "L’<H>Initiative</> de chaque plateau peut être consultée ici.",
+          ContentFR = "L’<H>Avantage du plateau</> peut être consulté ici.",
           TextMapId = "UIGuide_AutoChess_3"
         },
         UIGuide_AutoChess_4_1 = {
@@ -51686,7 +53785,15 @@ Allez voir ce qui se passe.]],
         UIGuide_ExplorationMechanism_3 = {
           ContentFR = "Terminez le défi en suivant les indications pour abattre les cibles désignées dans le temps imparti.",
           TextMapId = "UIGuide_ExplorationMechanism_3"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UIGuide_FanZhuan_1",
+    MaxKey = "UIGuide_Title_ImpressionCheck_2",
+    Loader = function()
+      return {
         UIGuide_FanZhuan_1 = {
           ContentFR = "Interagir avec le mécanisme de rotation fait pivoter à l’horizontale les blocs de pierre de part et d’autre de la porte, révélant leur face ornée de motifs.",
           TextMapId = "UIGuide_FanZhuan_1"
@@ -52178,15 +54285,7 @@ Allez voir ce qui se passe.]],
         UIGuide_Rouge_2_3 = {
           ContentFR = "Secteur du Repos : une zone sûre. Vous pouvez y échanger des Braises contre des provisions, restaurer vos PV et retrouver de la Lucidité avant de repartir.",
           TextMapId = "UIGuide_Rouge_2_3"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UIGuide_Run_PC",
-    MaxKey = "UI_Accessory_Desc_10001",
-    Loader = function()
-      return {
+        },
         UIGuide_Run_PC = {
           ContentFR = "Maintenir &Avoid& pour courir",
           TextMapId = "UIGuide_Run_PC"
@@ -52494,7 +54593,15 @@ Allez voir ce qui se passe.]],
         UIGuide_Title_ImpressionCheck_2 = {
           ContentFR = "Échec du Test d’Impression",
           TextMapId = "UIGuide_Title_ImpressionCheck_2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UIGuide_Title_ImpressionShop",
+    MaxKey = "UI_Accessory_Desc_30002",
+    Loader = function()
+      return {
         UIGuide_Title_ImpressionShop = {
           ContentFR = "Impression : Boutique de Lunoeggy",
           TextMapId = "UIGuide_Title_ImpressionShop"
@@ -52975,17 +55082,9 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_Accessory_Custom_Scale"
         },
         UI_Accessory_Desc_10001 = {
-          ContentFR = "Héros du célèbre conte « L’Étrange Aventure de Pioupiou », répandu sur tout le continent d’Atlasia. Chaque jour, le petit poussin s’éveille dans un lieu différent, rencontre de nouveaux compagnons et s’élance dans une odyssée singulière pour découvrir le sens de sa vie — et déjouer les complots des méchants.",
+          ContentFR = "Héros du célèbre conte « <I>L’Étrange Aventure de Pioupiou</> », répandu sur tout le continent d’Atlasia. Chaque jour, le petit poussin s’éveille dans un lieu différent, rencontre de nouveaux compagnons et s’élance dans une odyssée singulière pour découvrir le sens de sa vie — et déjouer les complots des méchants.",
           TextMapId = "UI_Accessory_Desc_10001"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Accessory_Desc_10002",
-    MaxKey = "UI_Accessory_Name_10061",
-    Loader = function()
-      return {
+        },
         UI_Accessory_Desc_10002 = {
           ContentFR = "À ne surtout pas consommer !",
           TextMapId = "UI_Accessory_Desc_10002"
@@ -53293,7 +55392,15 @@ Allez voir ce qui se passe.]],
         UI_Accessory_Desc_30002 = {
           ContentFR = "Les nuées se tordent et emportent soleil et lune, dispersant mille pensées. Dans cette gourde repose un univers miniature, où se cachent des myriades d’harmonies.",
           TextMapId = "UI_Accessory_Desc_30002"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Accessory_Desc_30003",
+    MaxKey = "UI_Accessory_Name_20014",
+    Loader = function()
+      return {
         UI_Accessory_Desc_30003 = {
           ContentFR = "La vie est une barque solitaire dérivant dans la nuit sans fin. Des ronces serrent ses rives, et la rivière déborde d’un chagrin ancien.",
           TextMapId = "UI_Accessory_Desc_30003"
@@ -53785,15 +55892,7 @@ Allez voir ce qui se passe.]],
         UI_Accessory_Name_10061 = {
           ContentFR = "Trophée de chasse de Zhuyin – Doré",
           TextMapId = "UI_Accessory_Name_10061"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Accessory_Name_10062",
-    MaxKey = "UI_Accessory_Name_40043",
-    Loader = function()
-      return {
+        },
         UI_Accessory_Name_10062 = {
           ContentFR = "Trophée de chasse de Zhuyin – Blanc ivoire",
           TextMapId = "UI_Accessory_Name_10062"
@@ -54101,7 +56200,15 @@ Allez voir ce qui se passe.]],
         UI_Accessory_Name_20014 = {
           ContentFR = "Papillon des brumes – Rouille",
           TextMapId = "UI_Accessory_Name_20014"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Accessory_Name_20015",
+    MaxKey = "UI_Accessory_Unlock_Forge",
+    Loader = function()
+      return {
         UI_Accessory_Name_20015 = {
           ContentFR = "Papillon des brumes – Gris plomb",
           TextMapId = "UI_Accessory_Name_20015"
@@ -54593,15 +56700,7 @@ Allez voir ce qui se passe.]],
         UI_Accessory_Name_40043 = {
           ContentFR = "Accessoire de taille de Plume Porte-Lumière – Rouille",
           TextMapId = "UI_Accessory_Name_40043"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Accessory_Name_40044",
-    MaxKey = "UI_Achievement_Des_17003007",
-    Loader = function()
-      return {
+        },
         UI_Accessory_Name_40044 = {
           ContentFR = "Accessoire dorsal Plumacier – Menthe",
           TextMapId = "UI_Accessory_Name_40044"
@@ -54909,7 +57008,15 @@ Allez voir ce qui se passe.]],
         UI_Accessory_Unlock_Forge = {
           ContentFR = "Disponible via la forge",
           TextMapId = "UI_Accessory_Unlock_Forge"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Accessory_Unlock_Gacha",
+    MaxKey = "UI_Achievement_Des_3011",
+    Loader = function()
+      return {
         UI_Accessory_Unlock_Gacha = {
           ContentFR = "Disponible via la Myriade",
           TextMapId = "UI_Accessory_Unlock_Gacha"
@@ -55401,15 +57508,7 @@ Allez voir ce qui se passe.]],
         UI_Achievement_Des_17003007 = {
           ContentFR = "Inviter Fina au Sanctuaire et lui parler une fois",
           TextMapId = "UI_Achievement_Des_17003007"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Des_17003008",
-    MaxKey = "UI_Achievement_Des_50921",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Des_17003008 = {
           ContentFR = "Inviter Rebecca au Sanctuaire et lui parler une fois",
           TextMapId = "UI_Achievement_Des_17003008"
@@ -55717,7 +57816,15 @@ Allez voir ce qui se passe.]],
         UI_Achievement_Des_3011 = {
           ContentFR = "Accorder un total de <highlight>#1</> points d’Ultra-bouclier à des coéquipiers",
           TextMapId = "UI_Achievement_Des_3011"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Des_3012",
+    MaxKey = "UI_Achievement_Des_70136",
+    Loader = function()
+      return {
         UI_Achievement_Des_3012 = {
           ContentFR = "Porter secours à un allié à <highlight>#1</> reprises",
           TextMapId = "UI_Achievement_Des_3012"
@@ -56209,15 +58316,7 @@ Allez voir ce qui se passe.]],
         UI_Achievement_Des_50921 = {
           ContentFR = "Terminer la mission [Défense] un total de <highlight>#1</> fois",
           TextMapId = "UI_Achievement_Des_50921"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Des_50922",
-    MaxKey = "UI_Achievement_Name_101602",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Des_50922 = {
           ContentFR = "Terminer la mission [Excavation ∞] un total de <highlight>#1</> fois",
           TextMapId = "UI_Achievement_Des_50922"
@@ -56525,7 +58624,15 @@ Allez voir ce qui se passe.]],
         UI_Achievement_Des_70136 = {
           ContentFR = "« Je ne regarderai plus jamais quelqu’un mourir à cause d’un Souillé. »",
           TextMapId = "UI_Achievement_Des_70136"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Des_70137",
+    MaxKey = "UI_Achievement_Name_17002012",
+    Loader = function()
+      return {
         UI_Achievement_Des_70137 = {
           ContentFR = "Pêcher un gros poisson pour les habitants de Brumelac.",
           TextMapId = "UI_Achievement_Des_70137"
@@ -57017,15 +59124,7 @@ Allez voir ce qui se passe.]],
         UI_Achievement_Name_101602 = {
           ContentFR = "Déchirure des dimensions II",
           TextMapId = "UI_Achievement_Name_101602"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Name_101603",
-    MaxKey = "UI_Achievement_Name_201814",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Name_101603 = {
           ContentFR = "Déchirure des dimensions III",
           TextMapId = "UI_Achievement_Name_101603"
@@ -57333,7 +59432,15 @@ Allez voir ce qui se passe.]],
         UI_Achievement_Name_17002012 = {
           ContentFR = "Instants figés : Lynn",
           TextMapId = "UI_Achievement_Name_17002012"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Name_17002013",
+    MaxKey = "UI_Achievement_Name_304101",
+    Loader = function()
+      return {
         UI_Achievement_Name_17002013 = {
           ContentFR = "Instants figés : Hilda",
           TextMapId = "UI_Achievement_Name_17002013"
@@ -57825,15 +59932,7 @@ Allez voir ce qui se passe.]],
         UI_Achievement_Name_201814 = {
           ContentFR = "Victoire implacable : Spectre",
           TextMapId = "UI_Achievement_Name_201814"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Name_201901",
-    MaxKey = "UI_Achievement_Name_5090101",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Name_201901 = {
           ContentFR = "Victoire implacable : Camouflage",
           TextMapId = "UI_Achievement_Name_201901"
@@ -58141,7 +60240,15 @@ Allez voir ce qui se passe.]],
         UI_Achievement_Name_304101 = {
           ContentFR = "J’ai beaucoup d’amis I",
           TextMapId = "UI_Achievement_Name_304101"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Name_304102",
+    MaxKey = "UI_Achievement_Name_7010701",
+    Loader = function()
+      return {
         UI_Achievement_Name_304102 = {
           ContentFR = "J’ai beaucoup d’amis II",
           TextMapId = "UI_Achievement_Name_304102"
@@ -58633,15 +60740,7 @@ Allez voir ce qui se passe.]],
         UI_Achievement_Name_5090101 = {
           ContentFR = "Gardien Éternel des Luno I",
           TextMapId = "UI_Achievement_Name_5090101"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Name_5090201",
-    MaxKey = "UI_ActionPoint_NextRecover",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Name_5090201 = {
           ContentFR = "Gardien des Luno I",
           TextMapId = "UI_Achievement_Name_5090201"
@@ -58949,7 +61048,15 @@ Allez voir ce qui se passe.]],
         UI_Achievement_Name_7010701 = {
           ContentFR = "Le prix de la vérité",
           TextMapId = "UI_Achievement_Name_7010701"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Name_7010801",
+    MaxKey = "UI_Armory_Dye_Default",
+    Loader = function()
+      return {
         UI_Achievement_Name_7010801 = {
           ContentFR = "Terre aux fleurs épanouies",
           TextMapId = "UI_Achievement_Name_7010801"
@@ -59441,15 +61548,7 @@ Allez voir ce qui se passe.]],
         UI_ActionPoint_NextRecover = {
           ContentFR = "Prochaine récupération",
           TextMapId = "UI_ActionPoint_NextRecover"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_ActionPoint_Purchase",
-    MaxKey = "UI_AutoChess_ExtraBuffDesc_17",
-    Loader = function()
-      return {
+        },
         UI_ActionPoint_Purchase = {
           ContentFR = "Acheter",
           TextMapId = "UI_ActionPoint_Purchase"
@@ -59754,7 +61853,15 @@ Allez voir ce qui se passe.]],
         UI_Armory_Dye_Default = {
           ContentFR = "Par défaut",
           TextMapId = "UI_Armory_Dye_Default"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Armory_Dye_Special",
+    MaxKey = "UI_AutoChess_TotalCost",
+    Loader = function()
+      return {
         UI_Armory_Dye_Special = {
           ContentFR = "Teinte globale",
           TextMapId = "UI_Armory_Dye_Special"
@@ -59819,9 +61926,17 @@ Allez voir ce qui se passe.]],
           ContentFR = "Sceau démoniaque",
           TextMapId = "UI_Armory_Mod"
         },
+        UI_Armory_ModAttrAfterEnchance = {
+          ContentFR = "Attributs après amplification",
+          TextMapId = "UI_Armory_ModAttrAfterEnchance"
+        },
         UI_Armory_ModListIsEmpty = {
           ContentFR = "Aucun matériau d’amplification disponible",
           TextMapId = "UI_Armory_ModListIsEmpty"
+        },
+        UI_Armory_ModNextLevelAttr = {
+          ContentFR = "Attributs du palier suivant",
+          TextMapId = "UI_Armory_ModNextLevelAttr"
         },
         UI_Armory_Mod_After = {
           ContentFR = "Effets passifs après amplification",
@@ -60092,7 +62207,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_AutoChess_BeginTips"
         },
         UI_AutoChess_BuffDes1 = {
-          ContentFR = "vÀ l’expiration du temps imparti, toutes les méchapoupées perdent des PV chaque seconde.",
+          ContentFR = "À l’expiration du temps imparti, toutes les méchapoupées perdent des PV chaque seconde.",
           TextMapId = "UI_AutoChess_BuffDes1"
         },
         UI_AutoChess_BuffDes2 = {
@@ -60100,7 +62215,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_AutoChess_BuffDes2"
         },
         UI_AutoChess_BuffInfo = {
-          ContentFR = "Initiative",
+          ContentFR = "Avantage du plateau",
           TextMapId = "UI_AutoChess_BuffInfo"
         },
         UI_AutoChess_BuffName1 = {
@@ -60156,7 +62271,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_AutoChess_CoverLineup"
         },
         UI_AutoChess_CurrentBuff = {
-          ContentFR = "Initiative",
+          ContentFR = "Avantage du plateau",
           TextMapId = "UI_AutoChess_CurrentBuff"
         },
         UI_AutoChess_DamageView = {
@@ -60208,7 +62323,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_AutoChess_EquipTitle"
         },
         UI_AutoChess_ExtraBuffDesc_0 = {
-          ContentFR = "Runes de base",
+          ContentFR = "Rune de base",
           TextMapId = "UI_AutoChess_ExtraBuffDesc_0"
         },
         UI_AutoChess_ExtraBuffDesc_1 = {
@@ -60246,15 +62361,7 @@ Allez voir ce qui se passe.]],
         UI_AutoChess_ExtraBuffDesc_17 = {
           ContentFR = "<Title>Effet du trait :</> obtient l’aptitude d’Ordonnateur — Corrosion",
           TextMapId = "UI_AutoChess_ExtraBuffDesc_17"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_AutoChess_ExtraBuffDesc_18",
-    MaxKey = "UI_BattlePass_ClaimConfirmButton",
-    Loader = function()
-      return {
+        },
         UI_AutoChess_ExtraBuffDesc_18 = {
           ContentFR = "<Title>Effet du trait :</> obtient l’aptitude d’Ordonnateur — Éclair foudroyant",
           TextMapId = "UI_AutoChess_ExtraBuffDesc_18"
@@ -60554,7 +62661,15 @@ Allez voir ce qui se passe.]],
         UI_AutoChess_TotalCost = {
           ContentFR = "Charge totale",
           TextMapId = "UI_AutoChess_TotalCost"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_AutoChess_UnlockInfo",
+    MaxKey = "UI_CHAR_BIRTH_1501",
+    Loader = function()
+      return {
         UI_AutoChess_UnlockInfo = {
           ContentFR = "Conditions de déblocage",
           TextMapId = "UI_AutoChess_UnlockInfo"
@@ -61051,15 +63166,7 @@ Allez voir ce qui se passe.]],
         UI_BattlePass_ClaimConfirmButton = {
           ContentFR = "Confirmer",
           TextMapId = "UI_BattlePass_ClaimConfirmButton"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_BattlePass_ClaimConfirmTitle",
-    MaxKey = "UI_CHAR_DATA_TEXT_18010201",
-    Loader = function()
-      return {
+        },
         UI_BattlePass_ClaimConfirmTitle = {
           ContentFR = "Sélection du Géniemon",
           TextMapId = "UI_BattlePass_ClaimConfirmTitle"
@@ -61359,7 +63466,15 @@ Allez voir ce qui se passe.]],
         UI_CHAR_BIRTH_1501 = {
           ContentFR = "Église Élyséenne",
           TextMapId = "UI_CHAR_BIRTH_1501"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CHAR_BIRTH_1502",
+    MaxKey = "UI_CHAR_DATA_TEXT_24010105",
+    Loader = function()
+      return {
         UI_CHAR_BIRTH_1502 = {
           ContentFR = "Église Élyséenne",
           TextMapId = "UI_CHAR_BIRTH_1502"
@@ -61367,6 +63482,10 @@ Allez voir ce qui se passe.]],
         UI_CHAR_BIRTH_1503 = {
           ContentFR = "Huaxu",
           TextMapId = "UI_CHAR_BIRTH_1503"
+        },
+        UI_CHAR_BIRTH_1504 = {
+          ContentFR = "Huaxu",
+          TextMapId = "UI_CHAR_BIRTH_1504"
         },
         UI_CHAR_BIRTH_1801 = {
           ContentFR = "Empire Hyperboréen",
@@ -61399,6 +63518,10 @@ Allez voir ce qui se passe.]],
         UI_CHAR_BIRTH_3201 = {
           ContentFR = "Empire Hyperboréen",
           TextMapId = "UI_CHAR_BIRTH_3201"
+        },
+        UI_CHAR_BIRTH_3202 = {
+          ContentFR = "Empire Hyperboréen",
+          TextMapId = "UI_CHAR_BIRTH_3202"
         },
         UI_CHAR_BIRTH_3301 = {
           ContentFR = "Empire Hyperboréen",
@@ -61485,7 +63608,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_CHAR_DATA_TEXT_11010202"
         },
         UI_CHAR_DATA_TEXT_11010203 = {
-          ContentFR = "Le premier soir, les deux enfants restaient blottis dans l’herbe, leurs souffles faibles et laborieux étaient les seuls signes de vie. Abigail avait déjà vu ce genre de scène, enfant, lors de ses chasses en montagne avec son père, des petits animaux orphelins, seuls, apeurés, sans leur mère pour les protéger.\nElle déposa une outre d’eau fraîche près de la fille aînée, ajoutant quelques morceaux de poisson séché et du pain dur sur un vieux chiffon. C’était tout ce qu’elle pouvait faire. Quand elle avait supplié les villageois de venir en aide aux enfants, elle s’était heurtée à un mur d’indifférence. Les plus cléments lui avaient expliqué que le village manquait déjà de ressources et ne pouvait nourrir deux bouches de plus, les plus durs l’avaient sermonnée pour s’être aventurée en montagne. Certains avaient même reconnu les cornes sur leurs têtes, un signe mal vu dans leur terre natale, Hyperborea. Sa propre mère, d’ordinaire si douce, avait froncé les sourcils, lui disant que leur famille était déjà en difficulté et ne pouvait rien faire.\n« Je souhaite que vous soyez en sécurité, » murmura Abigail, posant le panier et jetant un dernier regard inquiet avant de s’éloigner.\n\nLa nuit suivante, la fille aînée semblait avoir retrouvé un peu de force. Elle réussit à se lever péniblement, portant l’enfant plus jeune dans ses bras, et tituba vers une petite grotte non loin de là, qui les protégerait de la pluie nocturne. Sans nourriture, certes, mais au moins un abri. Après avoir installé le plus petit, elle s’écroula au sol, épuisée. Après un court repos, elle retourna chancelante vers l’endroit où Abigail avait laissé la nourriture. Elle ouvrit l’outre et but à grandes gorgées, mais soudain sembla se raviser. Elle referma le récipient et se hâta vers la grotte, préservant ainsi la majeure partie de l’eau pour l’autre enfant.\n\nLe troisième matin, quand Abigail revint discrètement, elle trouva la fille appuyée contre la paroi rocheuse, en train de panser ses blessures avec le chiffon. Malgré les marques visibles sur tout son corps, elle paraissait plus vivante, ses yeux rougeâtres brillaient d’un éclat nouveau. Abigail vit ses lèvres bouger comme si elle voulait parler, mais elle ne prononça rien, fixant l’outre désormais vide. Elle devait avoir soif, pensa Abigail en prenant l’outre pour aller chercher de l’eau à la rivière. Mais brusquement, la fille attrapa son bras et secoua la tête avec force. « Je... viens avec toi », dit-elle d’une voix rauque.\nAbigail l’aida à se relever et la suivit jusqu’au ruisseau, où elle l’observa pencher la tête avec difficulté pour remplir l’outre. La fille ne semblait pas vouloir dépendre des autres, malgré ses blessures, elle voulait tout faire seule. Abigail sentit une pointe de compassion, même si les enfants du village apprenaient tôt à aider leurs parents, voir une si jeune fille blessée et si courageuse l’émut profondément.\n\nLe quatrième après-midi, un groupe de pêcheurs revint au village, chargé d’une belle pêche vendue à bon prix au port de l’Empire, qui leur permit de rapporter étoffes et provisions. C’était normalement le jour le plus joyeux des enfants du village, mais Abigail ne cessait de penser à la fille sur la montagne. Elle emballa précautionneusement sa part de gâteaux dans un panier. Elle retrouva la fille, qui venait de se laver le visage dans le ruisseau. Une fois la boue retirée, Abigail remarqua à quel point elle était belle.\n« M-Merci... » La voix de la fille était moins rauque, comme si elle n’avait pas parlé depuis longtemps. Elle prononça soigneusement chaque syllabe. « Merci. » Elle prit le panier solennellement. « Avec ça... elle ira mieux. » Curieuse, Abigail demanda : \n« D’où venez-vous ? Je ne vous ai jamais {性别:vus|vues} ici. Oh, et... »\nLa curiosité la gagna. « On dit qu’une femme vivait sur cette montagne. C’est votre mère ? Que lui est-il arrivé ? Et ce bruit fort il y a quelques jours, vous savez ce que c’était ? » À la mention de la femme de la montagne, la fille tressaillit. « Je... ne peux pas... en parler », murmura-t-elle en mordant sa lèvre inférieure.\n« D’accord, c’est comme tu veux. » Abigail se sentit un peu découragée. \n« Le village est plus peuplé ces jours-ci, je ne pourrai peut-être plus venir si souvent. Prenez soin de vous, d’accord ? »\n\nLe dixième soir, Abigail retrouva les deux enfants au bord de la mer. Ils semblaient complètement rétablis. Les deux silhouettes se tenaient sur le sable découvert par la mer, leurs cheveux d’argent étincelant sous le soleil couchant qui baignait aussi la plage d’une lumière dorée. En voyant Abigail, l’aînée prit la main {性别:du plus jeune|de la plus jeune} et s’approcha lentement, portant le panier laissé auparavant, maintenant rempli de petits poissons, crevettes et crabes. \n« C’est pour toi, » dit-elle. « En remerciement. »\nAbigail voulut refuser d’un geste, mais la détermination dans le regard de la fille la fit changer d’avis. En acceptant le panier, elle remarqua un léger sourire sur ses lèvres. Abigail sourit aussi, rassurée : Ils étaient désormais capables de survivre seuls.\n\nDes années plus tard, lors d’une interview accordée au journal Les Courants, Abigail Morley, devenue une figure majeure de la pêche, se laissa emporter par un souvenir en répondant à une question du journaliste :\n« Madame Morley, j’ai encore une question. On dit que vous avez bâti votre empire à partir de rien. Qu’est-ce qui a changé votre vie ? Ou plutôt, quels sont les trois événements les plus marquants qui l’ont façonnée ? »\n« Le premier, ce fut la destruction de mon île natale par les Souillés. Mes parents ont survécu à la fuite, mais étaient déjà malades et blessés, et ils sont vite décédés. Seule, j’ai appris à tout faire par moi-même. Quant au second événement... il a peut-être eu plus d’importance pour le monde que pour moi. »\nAbigail s’interrompit un instant, son regard perdu dans le passé. Ce jour-là, quand les pêcheurs partaient en mer, elle était montée seule en montagne pour cueillir des herbes afin de soulager sa mère malade.\n« Ce jour-là, sur la montagne de mon village natal, j’ai sauvé deux enfants plus jeunes que moi. À cet instant, je ne savais pas encore que le cours de l’histoire... que la roue du destin... venait de basculer, entraînée par mes mains. »",
+          ContentFR = "Le premier soir, les deux enfants restaient blottis dans l’herbe, leurs souffles faibles et laborieux étaient les seuls signes de vie. Abigail avait déjà vu ce genre de scène, enfant, lors de ses chasses en montagne avec son père, des petits animaux orphelins, seuls, apeurés, sans leur mère pour les protéger.\nElle déposa une outre d’eau fraîche près de la fille aînée, ajoutant quelques morceaux de poisson séché et du pain dur sur un vieux chiffon. C’était tout ce qu’elle pouvait faire. Quand elle avait supplié les villageois de venir en aide aux enfants, elle s’était heurtée à un mur d’indifférence. Les plus cléments lui avaient expliqué que le village manquait déjà de ressources et ne pouvait nourrir deux bouches de plus, les plus durs l’avaient sermonnée pour s’être aventurée en montagne. Certains avaient même reconnu les cornes sur leurs têtes, un signe mal vu dans leur terre natale, Hyperborea. Sa propre mère, d’ordinaire si douce, avait froncé les sourcils, lui disant que leur famille était déjà en difficulté et ne pouvait rien faire.\n« Je souhaite que vous soyez en sécurité, » murmura Abigail, posant le panier et jetant un dernier regard inquiet avant de s’éloigner.\n\nLa nuit suivante, la fille aînée semblait avoir retrouvé un peu de force. Elle réussit à se lever péniblement, portant l’enfant plus jeune dans ses bras, et tituba vers une petite grotte non loin de là, qui les protégerait de la pluie nocturne. Sans nourriture, certes, mais au moins un abri. Après avoir installé le plus petit, elle s’écroula au sol, épuisée. Après un court repos, elle retourna chancelante vers l’endroit où Abigail avait laissé la nourriture. Elle ouvrit l’outre et but à grandes gorgées, mais soudain sembla se raviser. Elle referma le récipient et se hâta vers la grotte, préservant ainsi la majeure partie de l’eau pour l’autre enfant.\n\nLe troisième matin, quand Abigail revint discrètement, elle trouva la fille appuyée contre la paroi rocheuse, en train de panser ses blessures avec le chiffon. Malgré les marques visibles sur tout son corps, elle paraissait plus vivante, ses yeux rougeâtres brillaient d’un éclat nouveau. Abigail vit ses lèvres bouger comme si elle voulait parler, mais elle ne prononça rien, fixant l’outre désormais vide. Elle devait avoir soif, pensa Abigail en prenant l’outre pour aller chercher de l’eau à la rivière. Mais brusquement, la fille attrapa son bras et secoua la tête avec force. « Je... viens avec toi », dit-elle d’une voix rauque.\nAbigail l’aida à se relever et la suivit jusqu’au ruisseau, où elle l’observa pencher la tête avec difficulté pour remplir l’outre. La fille ne semblait pas vouloir dépendre des autres, malgré ses blessures, elle voulait tout faire seule. Abigail sentit une pointe de compassion, même si les enfants du village apprenaient tôt à aider leurs parents, voir une si jeune fille blessée et si courageuse l’émut profondément.\n\nLe quatrième après-midi, un groupe de pêcheurs revint au village, chargé d’une belle pêche vendue à bon prix au port de l’Empire, qui leur permit de rapporter étoffes et provisions. C’était normalement le jour le plus joyeux des enfants du village, mais Abigail ne cessait de penser à la fille sur la montagne. Elle emballa précautionneusement sa part de gâteaux dans un panier. Elle retrouva la fille, qui venait de se laver le visage dans le ruisseau. Une fois la boue retirée, Abigail remarqua à quel point elle était belle.\n« M-Merci... » La voix de la fille était moins rauque, comme si elle n’avait pas parlé depuis longtemps. Elle prononça soigneusement chaque syllabe. « Merci. » Elle prit le panier solennellement. « Avec ça... elle ira mieux. » Curieuse, Abigail demanda : \n« D’où venez-vous ? Je ne vous ai jamais {性别:vus|vues} ici. Oh, et... »\nLa curiosité la gagna. « On dit qu’une femme vivait sur cette montagne. C’est votre mère ? Que lui est-il arrivé ? Et ce bruit fort il y a quelques jours, vous savez ce que c’était ? » À la mention de la femme de la montagne, la fille tressaillit. « Je... ne peux pas... en parler », murmura-t-elle en mordant sa lèvre inférieure.\n« D’accord, c’est comme tu veux. » Abigail se sentit un peu découragée. \n« Le village est plus peuplé ces jours-ci, je ne pourrai peut-être plus venir si souvent. Prenez soin de vous, d’accord ? »\n\nLe dixième soir, Abigail retrouva les deux enfants au bord de la mer. Ils semblaient complètement rétablis. Les deux silhouettes se tenaient sur le sable découvert par la mer, leurs cheveux d’argent étincelant sous le soleil couchant qui baignait aussi la plage d’une lumière dorée. En voyant Abigail, l’aînée prit la main {性别:du plus jeune|de la plus jeune} et s’approcha lentement, portant le panier laissé auparavant, maintenant rempli de petits poissons, crevettes et crabes. \n« C’est pour toi, » dit-elle. « En remerciement. »\nAbigail voulut refuser d’un geste, mais la détermination dans le regard de la fille la fit changer d’avis. En acceptant le panier, elle remarqua un léger sourire sur ses lèvres. Abigail sourit aussi, rassurée : Ils étaient désormais capables de survivre seuls.\n\nDes années plus tard, lors d’une interview accordée au journal <I>Les Courants</>, Abigail Morley, devenue une figure majeure de la pêche, se laissa emporter par un souvenir en répondant à une question du journaliste :\n« Madame Morley, j’ai encore une question. On dit que vous avez bâti votre empire à partir de rien. Qu’est-ce qui a changé votre vie ? Ou plutôt, quels sont les trois événements les plus marquants qui l’ont façonnée ? »\n« Le premier, ce fut la destruction de mon île natale par les Souillés. Mes parents ont survécu à la fuite, mais étaient déjà malades et blessés, et ils sont vite décédés. Seule, j’ai appris à tout faire par moi-même. Quant au second événement... il a peut-être eu plus d’importance pour le monde que pour moi. »\nAbigail s’interrompit un instant, son regard perdu dans le passé. Ce jour-là, quand les pêcheurs partaient en mer, elle était montée seule en montagne pour cueillir des herbes afin de soulager sa mère malade.\n« Ce jour-là, sur la montagne de mon village natal, j’ai sauvé deux enfants plus jeunes que moi. À cet instant, je ne savais pas encore que le cours de l’histoire... que la roue du destin... venait de basculer, entraînée par mes mains. »",
           TextMapId = "UI_CHAR_DATA_TEXT_11010203"
         },
         UI_CHAR_DATA_TEXT_11010204 = {
@@ -61605,7 +63728,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_CHAR_DATA_TEXT_11030402"
         },
         UI_CHAR_DATA_TEXT_11030403 = {
-          ContentFR = "Après avoir été interdit de scène, j’ai demandé à ma professeure de m’emmener dans la cité intérieure, pour retrouver mon père biologique, Morris Glenville.\nJ’avais découvert son nom parmi les affaires de ma mère. Elle ne m’en avait jamais parlé de son vivant. Bien sûr, enfant, j’avais posé la question, mais elle m’avait seulement répondu, d’un air absent : « Je ne sais pas. » Je supposais qu’il y avait derrière ce silence des secrets trop douloureux à révéler. Jamais, si je n’avais été au pied du mur, je n’aurais songé à me tourner vers cet homme.\nMais je n’avais plus de choix. Nous rêvons tous d’un art pur, débarrassé des hypocrisies et des mesquineries du monde. À Givrelac, ce n’était qu’un rêve fragile comme un flocon de neige : délicat, éphémère, prêt à disparaître.\nDevant cette somptueuse demeure, je restai longuement à hésiter, rassemblant mon courage avant d’appuyer sur la sonnette. Une servante ouvrit. Elle me dit que Monsieur Glenville n’était pas là et ne reviendrait pas avant la fin de la journée. Puis elle referma la porte, comme un couperet. Je restai un instant, hébété, tandis que le vent d’hiver me mordait les joues. Je m’apprêtais à partir quand j’entendis une voix de fille :\n« Rendez-moi Monsieur l’Oiseau blanc... s’il vous plaît... »\nSa voix n’était pas joyeuse, elle sonnait désespérée. Je connaissais ce ton par cœur. Sans réfléchir, je me précipitai vers l’origine du son, contournant la maison par l’arrière. Soudain, un objet blanc tomba du haut. Je le rattrapai instinctivement, comme pour l’envelopper d’un tendre élan : c’était une peluche d’oiseau blanc, presque de ma taille, ronde et dodue, sortie tout droit d’un conte. Certainement le fameux \"Monsieur l’Oiseau blanc\".\n\n« Ah, il s’est échappé ! On dirait qu’il ne t’aime pas beaucoup », lança une voix aiguë, moqueuse, du balcon. La servante d’avant.\nJ’entendis des petits pas précipités, des portes claquer, puis un silence, interrompu seulement par de faibles sanglots.\n« Monsieur l’Oiseau blanc... »\nJe sortis de l’ombre, serrant la peluche contre moi, et m’avançai jusqu’à ce qu’elle apparaisse à ma vue. Elle ne devait pas avoir plus de douze ou treize ans, cheveux blancs comme sa peluche, yeux bleu saphir, l’héroïne d’un conte de fées. À ma surprise, elle était une Charon. Monsieur Glenville étant un Sola, il avait dû épouser une femme Charon. Un mince espoir me traversa l’esprit : s’il avait déjà un enfant Charon... peut-être qu’il n’aurait pas de préjugé à mon égard.\nLa fille me vit et sursauta. Je lui fis signe de se taire, puis, rassemblant mon souffle, je lançai la peluche vers le balcon. \nMerci, Dennis, de m’avoir entraîné aux interminables jeux de balle avec tes frères et sœurs. Sans ça, je n’aurais jamais réussi un lancer aussi précis.\nElle attrapa Monsieur l’Oiseau blanc contre elle. La peluche était légère, mais le lancer la fit basculer. Elle chancela un instant, puis se redressa en serrant le jouet contre sa poitrine, le visage illuminé de joie.\n« Merci. » Elle me fit un geste muet pour me le dire.\nJe hochai la tête et m’apprêtai à partir. Mais elle fit soudain une série de gestes frénétiques que je ne compris pas, puis disparut à l’intérieur. Un instant plus tard, elle réapparut sur le balcon et lança vers moi un petit papier carré, soigneusement plié. Je le ramassai et l’ouvris avec précaution : à l’intérieur se trouvait un simple dessin, un petit garçon brandissant un oiseau blanc. Il fallut quelques secondes pour comprendre que c’était moi. En bas, une inscription soigneusement calligraphiée : \n« Merci, grand frère, tu es si gentil ! »\n\nGrand frère.\nCes mots me frappèrent avec plus de force que je ne l’aurais cru. Sur-le-champ, je compris... oui, elle pouvait vraiment être considérée comme ma petite sœur.\nJe glissai le dessin dans ma poche et inclinai un profond salut théâtral, comme la fée d’un conte exauçant le vœu de l’héroïne.\nElle rit.\nÀ cet instant, je me promis que je serais un bon grand frère. Je lui lirais des contes, je jouerais avec elle, je louerais ses dessins, je lui chanterais des berceuses. Et si elle voulait, je lui apprendrais même à chanter.\nMais toutes ces illusions s’évanouirent le jour où je croisai Monsieur Glenville... plus vite que la neige fondant au creux de ma main. Avec du recul, j’aurais dû le savoir. Si cette fille avait été vraiment chérie dans la maison Glenville, aucune servante n’aurait osé la malmener.\n\nJe ne pourrais jamais être son grand frère. Je ne pouvais rien faire pour elle. Nous étions deux enfants piégés dans des cages séparées, chacun rêvant d’un ciel inaccessible.",
+          ContentFR = "Après avoir été interdit de scène, j’ai demandé à ma professeure de m’emmener dans la cité intérieure, pour retrouver mon père biologique, Morris Glenville.\nJ’avais découvert son nom parmi les affaires de ma mère. Elle ne m’en avait jamais parlé de son vivant. Bien sûr, enfant, j’avais posé la question, mais elle m’avait seulement répondu, d’un air absent : « Je ne sais pas. » Je supposais qu’il y avait derrière ce silence des secrets trop douloureux à révéler. Jamais, si je n’avais été au pied du mur, je n’aurais songé à me tourner vers cet homme.\nMais je n’avais plus de choix. Nous rêvons tous d’un art pur, débarrassé des hypocrisies et des mesquineries du monde. À Givrelac, ce n’était qu’un rêve fragile comme un flocon de neige : délicat, éphémère, prêt à disparaître.\nDevant cette somptueuse demeure, je restai longuement à hésiter, rassemblant mon courage avant d’appuyer sur la sonnette. Une servante ouvrit. Elle me dit que Monsieur Glenville n’était pas là et ne reviendrait pas avant la fin de la journée. Puis elle referma la porte, comme un couperet. Je restai un instant, hébété, tandis que le vent d’hiver me mordait les joues. Je m’apprêtais à partir quand j’entendis une voix de fille :\n« Rendez-moi Monsieur l’Oiseau blanc... s’il vous plaît... »\nSa voix n’était pas joyeuse, elle sonnait désespérée. Je connaissais ce ton par cœur. Sans réfléchir, je me précipitai vers l’origine du son, contournant la maison par l’arrière. Soudain, un objet blanc tomba du haut. Je le rattrapai instinctivement, comme pour l’envelopper d’un tendre élan : c’était une peluche d’oiseau blanc, presque de ma taille, ronde et dodue, sortie tout droit d’un conte. Certainement le fameux \"Monsieur l’Oiseau blanc\".\n\n« Ah, il s’est échappé ! On dirait qu’il ne t’aime pas beaucoup », lança une voix aiguë, moqueuse, du balcon. La servante d’avant.\nJ’entendis des petits pas précipités, des portes claquer, puis un silence, interrompu seulement par de faibles sanglots.\n« Monsieur l’Oiseau blanc... »\nJe sortis de l’ombre, serrant la peluche contre moi, et m’avançai jusqu’à ce qu’elle apparaisse à ma vue. Elle ne devait pas avoir plus de douze ou treize ans, cheveux blancs comme sa peluche, yeux bleu saphir, l’héroïne d’un conte de fées. À ma surprise, elle était une Charon. Monsieur Glenville étant un Sola, il avait dû épouser une femme Charon. Un mince espoir me traversa l’esprit : s’il avait déjà un enfant Charon... peut-être qu’il n’aurait pas de préjugé à mon égard.\nLa fille me vit et sursauta. Je lui fis signe de se taire, puis, rassemblant mon souffle, je lançai la peluche vers le balcon. \n<I>Merci, Dennis, de m’avoir entraîné aux interminables jeux de balle avec tes frères et sœurs. Sans ça, je n’aurais jamais réussi un lancer aussi précis.\n</>Elle attrapa Monsieur l’Oiseau blanc contre elle. La peluche était légère, mais le lancer la fit basculer. Elle chancela un instant, puis se redressa en serrant le jouet contre sa poitrine, le visage illuminé de joie.\n« Merci. » Elle me fit un geste muet pour me le dire.\nJe hochai la tête et m’apprêtai à partir. Mais elle fit soudain une série de gestes frénétiques que je ne compris pas, puis disparut à l’intérieur. Un instant plus tard, elle réapparut sur le balcon et lança vers moi un petit papier carré, soigneusement plié. Je le ramassai et l’ouvris avec précaution : à l’intérieur se trouvait un simple dessin, un petit garçon brandissant un oiseau blanc. Il fallut quelques secondes pour comprendre que c’était moi. En bas, une inscription soigneusement calligraphiée : \n« Merci, grand frère, tu es si gentil ! »\n\nGrand frère.\nCes mots me frappèrent avec plus de force que je ne l’aurais cru. Sur-le-champ, je compris... oui, elle pouvait vraiment être considérée comme ma petite sœur.\nJe glissai le dessin dans ma poche et inclinai un profond salut théâtral, comme la fée d’un conte exauçant le vœu de l’héroïne.\nElle rit.\nÀ cet instant, je me promis que je serais un bon grand frère. Je lui lirais des contes, je jouerais avec elle, je louerais ses dessins, je lui chanterais des berceuses. Et si elle voulait, je lui apprendrais même à chanter.\nMais toutes ces illusions s’évanouirent le jour où je croisai Monsieur Glenville... plus vite que la neige fondant au creux de ma main. Avec du recul, j’aurais dû le savoir. Si cette fille avait été vraiment chérie dans la maison Glenville, aucune servante n’aurait osé la malmener.\n\nJe ne pourrais jamais être son grand frère. Je ne pouvais rien faire pour elle. Nous étions deux enfants piégés dans des cages séparées, chacun rêvant d’un ciel inaccessible.",
           TextMapId = "UI_CHAR_DATA_TEXT_11030403"
         },
         UI_CHAR_DATA_TEXT_11030404 = {
@@ -61613,7 +63736,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_CHAR_DATA_TEXT_11030404"
         },
         UI_CHAR_DATA_TEXT_11030405 = {
-          ContentFR = "Ainsi, l’histoire était arrivée à son dernier acte : notre rencontre. \n\nSi j’avais pu choisir, j’aurais préféré te voir autrement, sous un visage moins grotesque. Je croyais mon déguisement infaillible, et pourtant, tu l’as percé à jour. Tes raisons m’ont désarmé.\nJe savais reproduire ses gestes, ses intonations, ses regards, mais je ne pouvais pas être lui. Son ardeur, sa foi en l’avenir, son attention aux autres... tout cela m’était impossible à imiter.\nJamais je n’aurais imaginé que quelqu’un réécrirait Né du blizzard, sacrifiant la finesse des dialogues, brisant l’équilibre dramatique, bafouant la logique de l’intrigue... simplement pour offrir à la fée des neiges une fin douce et heureuse.\nJ’avais toujours cru qu’être démasqué devant le public était le pire cauchemar d’un comédien. Pourtant, lorsque tu as levé le masque, j’ai ressenti un apaisement inédit.\nPeut-être qu’après tant d’années passées dans la peau des autres, j’espérais qu’un jour, quelqu’un reconnaisse enfin la mienne.\n\nTu voulais connaître mon histoire. Je ne sais si ces éclats de mémoire te suffiront.\nMa vie n’a jamais été une grande fresque. Chaque chapitre s’arrêtait avant même de commencer, comme des brouillons abandonnés par un dramaturge médiocre... toujours tenté de tourner la page, jamais capable d’aller jusqu’au bout.\n\nAu premier baisser de rideau, j’ai perdu la scène.\nAu second, mon visage.\nAu troisième, mon nom.\n\nJe suis heureux que tu aies vu ce dernier acte, car cette fois, c’était mon choix, et je n’ai rien à me reprocher.\nNe pleure pas pour moi... le rideau est tombé, à l’instant parfait.",
+          ContentFR = "Ainsi, l’histoire était arrivée à son dernier acte : notre rencontre. Si j’avais pu choisir, j’aurais préféré te voir autrement, sous un visage moins grotesque.\nJe croyais mon déguisement infaillible, et pourtant, tu l’as percé à jour. Tes raisons m’ont désarmé.\nJe savais reproduire ses gestes, ses intonations, ses regards, mais je ne pouvais pas être lui. Son ardeur, sa foi en l’avenir, son attention aux autres... tout cela m’était impossible à imiter.\nJamais je n’aurais imaginé que quelqu’un réécrirait <I>Né du blizzard,</> sacrifiant la finesse des dialogues, brisant l’équilibre dramatique, bafouant la logique de l’intrigue... simplement pour offrir à la fée des neiges une fin douce et heureuse.\nJ’avais toujours cru qu’être démasqué devant le public était le pire cauchemar d’un comédien. Pourtant, lorsque tu as levé le masque, j’ai ressenti un apaisement inédit.\nPeut-être qu’après tant d’années passées dans la peau des autres, j’espérais qu’un jour, quelqu’un reconnaisse enfin la mienne.\n\nTu voulais connaître mon histoire. Je ne sais si ces éclats de mémoire te suffiront.\nMa vie n’a jamais été une grande fresque. Chaque chapitre s’arrêtait avant même de commencer, comme des brouillons abandonnés par un dramaturge médiocre... toujours tenté de tourner la page, jamais capable d’aller jusqu’au bout.\nAu premier baisser de rideau, j’ai perdu la scène.\nAu second, mon visage.\nAu troisième, mon nom.\nJe suis heureux que tu aies vu ce dernier acte, car cette fois, c’était mon choix, et je n’ai rien à me reprocher.\nNe pleure pas pour moi... le rideau est tombé, à l’instant parfait.",
           TextMapId = "UI_CHAR_DATA_TEXT_11030405"
         },
         UI_CHAR_DATA_TEXT_15010101 = {
@@ -61677,7 +63800,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_CHAR_DATA_TEXT_15010305"
         },
         UI_CHAR_DATA_TEXT_15010401 = {
-          ContentFR = "Lisbell fit un jour trembler tout Élysium d’une nouvelle retentissante : à douze ans, elle avait tiré Samaël, l’épée sacrée restée si longtemps sans maître. Comme une huître livrant sa perle, comme du sable révélant l’or, Lisbell cessa d’être une simple demoiselle noble : elle obtenait le droit d’accéder aux Sept Vertus. Elle tiendrait l’autorité entre ses mains, et se dresserait au sommet de cet antique royaume divin.\n\nPour les adultes qui l’entouraient, pourtant, rien là de si surprenant. La couronne de Résilience circulait depuis des générations au sein de la maison ancienne et prestigieuse des Evangelinos ; tôt ou tard, elle reviendrait à Lisbell, unique héritière. Mais Lisbell, trop jeune, ne comprenait pas encore. Le lendemain du jour où elle tira l’épée, elle s’assit comme d’habitude à table, les yeux lourds de sommeil, tapotant le rebord de son bol avec sa cuillère. Elle avait les caprices ordinaires d’une enfant : elle n’aimait ni le quinoa, ni les tourtes à la viande, ni l’esturgeon, ni le brochet. Pourtant, pour sa santé, le vieux majordome persistait à déposer ces plats dans son assiette.\n\nElle ne pouvait pas se fâcher contre lui ; alors, par ce petit geste contraire à l’étiquette — la porcelaine heurtée d’un tintement boudeur — elle faisait entendre son mécontentement. Décidément, ce matin n’était pas heureux... Elle força tout de même son petit-déjeuner, puis, selon les consignes de ses parents, vint l’inévitable temps de lecture. Sur la pointe des pieds, elle tira d’une bibliothèque haute comme quatre fois elle un paquet de journaux : La Cloche Matinale de la Tour Sacrée — une nouveauté venue du nord, et, au moins, une lecture moins somnifère que les ouvrages habituels. Lisbell, se frottant les yeux, déplia le journal : si petite sur sa chaise que ses pieds pendaient dans le vide, elle ouvrait une feuille presque aussi large que l’envergure de ses bras.\n\nElle s’échina à étendre ce papier jauni et ennuyeux. Frouf... et soudain, elle tomba nez à nez avec elle-même.\n\n« Hein — ?! » Un cri énorme, confus, indigne d’une jeune demoiselle, jaillit de sa gorge. Il lui fallut un instant pour accepter la nouvelle ; puis bientôt, sa voix résonna dans tout le manoir : « Monsieur le majordome ! Monsieur le majordome ! Pourquoi je suis dans le journal ?! » Elle courut à travers la maison, tirant maladroitement un coin de la feuille froissée. Elle ne comprenait pas encore ce qui se passait... mais le vieil homme à la barbe toute-puissante, lui, saurait forcément.\n\nOr le majordome, lui, n’avait presque pas dormi.\n\nServiteur fidèle de la maison Evangelinos, fils d’Élysium, il le savait : cette enfant favorisée par les dieux n’était autre que Résilience, dont le siège restait vacant depuis si longtemps. Il pria les Neuf Dieux pour que le temps recule, pour qu’il puisse retenir sa jeune maîtresse lancée comme un cheval sans bride — au moins... au moins quelques années de plus, ce n’était pas trop demander. Si les dieux, si le maître de maison, voulaient qu’elle devienne une Vertu, pourquoi ne pas se montrer plus indulgents, plus patients ? Pourquoi ne pas attendre qu’elle ait vécu toute son enfance... qu’elle apprenne peu à peu le sens des choses... qu’elle sache ranger sa perplexité, étouffer son insatisfaction... qu’elle oublie cette compassion trop vaste, cette pitié sans refuge... et qu’elle apprenne enfin à accepter, à endurer le destin que les Neuf assignent à chacun.\n\nLes pas et les appels de Lisbell se rapprochaient. Le vieux majordome le savait : la porte du salon s’ouvrirait d’un instant à l’autre.\n\nIl venait à peine de raccompagner l’émissaire du Patriarche. Entre ses mains reposaient désormais la couronne de fleurs d’or offerte par l’Église et l’édit ordonnant à Lisbell de se présenter en audience. Si légers qu’ils fussent, ces objets pesaient pour lui comme du plomb ; il n’osait imaginer déposer un fardeau si lourd sur des épaules si frêles.\n\nAh... les pas de la petite demoiselle restaient, comme toujours, légers — privilège de ceux qui ne portent encore rien. Il écouta, jusqu’à ce que Lisbell pousse la porte, le journal tout froissé à la main, et lui demande avec des yeux ronds : « Monsieur le majordome... c’est quoi, ce que vous tenez ? »\n\nEt à cet instant, il sut : la légèreté de sa jeune maîtresse venait de s’achever.",
+          ContentFR = "Lisbell fit un jour trembler tout Élysium d’une nouvelle retentissante : à douze ans, elle avait tiré Samaël, l’épée sacrée restée si longtemps sans maître. Comme une huître livrant sa perle, comme du sable révélant l’or, Lisbell cessa d’être une simple demoiselle noble : elle obtenait le droit d’accéder aux Sept Vertus. Elle tiendrait l’autorité entre ses mains, et se dresserait au sommet de cet antique royaume divin.\n\nPour les adultes qui l’entouraient, pourtant, rien là de si surprenant. La couronne de Résilience circulait depuis des générations au sein de la maison ancienne et prestigieuse des Evangelinos ; tôt ou tard, elle reviendrait à Lisbell, unique héritière. Mais Lisbell, trop jeune, ne comprenait pas encore. Le lendemain du jour où elle tira l’épée, elle s’assit comme d’habitude à table, les yeux lourds de sommeil, tapotant le rebord de son bol avec sa cuillère. Elle avait les caprices ordinaires d’une enfant : elle n’aimait ni le quinoa, ni les tourtes à la viande, ni l’esturgeon, ni le brochet. Pourtant, pour sa santé, le vieux majordome persistait à déposer ces plats dans son assiette.\n\nElle ne pouvait pas se fâcher contre lui ; alors, par ce petit geste contraire à l’étiquette — la porcelaine heurtée d’un tintement boudeur — elle faisait entendre son mécontentement. Décidément, ce matin n’était pas heureux... Elle força tout de même son petit-déjeuner, puis, selon les consignes de ses parents, vint l’inévitable temps de lecture. Sur la pointe des pieds, elle tira d’une bibliothèque haute comme quatre fois elle un paquet de journaux : <I>La Cloche Matinale de la Tour Sacrée</> — une nouveauté venue du nord, et, au moins, une lecture moins somnifère que les ouvrages habituels. Lisbell, se frottant les yeux, déplia le journal : si petite sur sa chaise que ses pieds pendaient dans le vide, elle ouvrait une feuille presque aussi large que l’envergure de ses bras.\n\nElle s’échina à étendre ce papier jauni et ennuyeux. <I>Frouf</>... et soudain, elle tomba nez à nez avec elle-même.\n\n« Hein — ?! » Un cri énorme, confus, indigne d’une jeune demoiselle, jaillit de sa gorge. Il lui fallut un instant pour accepter la nouvelle ; puis bientôt, sa voix résonna dans tout le manoir : « Monsieur le majordome ! Monsieur le majordome ! Pourquoi je suis dans le journal ?! » Elle courut à travers la maison, tirant maladroitement un coin de la feuille froissée. Elle ne comprenait pas encore ce qui se passait... mais le vieil homme à la barbe toute-puissante, lui, saurait forcément.\n\nOr le majordome, lui, n’avait presque pas dormi.\n\nServiteur fidèle de la maison Evangelinos, fils d’Élysium, il le savait : cette enfant favorisée par les dieux n’était autre que Résilience, dont le siège restait vacant depuis si longtemps. Il pria les Neuf Dieux pour que le temps recule, pour qu’il puisse retenir sa jeune maîtresse lancée comme un cheval sans bride — au moins... au moins quelques années de plus, ce n’était pas trop demander. Si les dieux, si le maître de maison, voulaient qu’elle devienne une Vertu, pourquoi ne pas se montrer plus indulgents, plus patients ? Pourquoi ne pas attendre qu’elle ait vécu toute son enfance... qu’elle apprenne peu à peu le sens des choses... qu’elle sache ranger sa perplexité, étouffer son insatisfaction... qu’elle oublie cette compassion trop vaste, cette pitié sans refuge... et qu’elle apprenne enfin à accepter, à endurer le destin que les Neuf assignent à chacun.\n\nLes pas et les appels de Lisbell se rapprochaient. Le vieux majordome le savait : la porte du salon s’ouvrirait d’un instant à l’autre.\n\nIl venait à peine de raccompagner l’émissaire du Patriarche. Entre ses mains reposaient désormais la couronne de fleurs d’or offerte par l’Église et l’édit ordonnant à Lisbell de se présenter en audience. Si légers qu’ils fussent, ces objets pesaient pour lui comme du plomb ; il n’osait imaginer déposer un fardeau si lourd sur des épaules si frêles.\n\nAh... les pas de la petite demoiselle restaient, comme toujours, légers — privilège de ceux qui ne portent encore rien. Il écouta, jusqu’à ce que Lisbell pousse la porte, le journal tout froissé à la main, et lui demande avec des yeux ronds : « Monsieur le majordome... c’est quoi, ce que vous tenez ? »\n\nEt à cet instant, il sut : la légèreté de sa jeune maîtresse venait de s’achever.",
           TextMapId = "UI_CHAR_DATA_TEXT_15010401"
         },
         UI_CHAR_DATA_TEXT_15010402 = {
@@ -61797,7 +63920,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_CHAR_DATA_TEXT_15030202"
         },
         UI_CHAR_DATA_TEXT_15030203 = {
-          ContentFR = "On raconte que, dans sa jeunesse, Yan Shanting, errant de renom surnommé « Celui qui purifie mille montagnes », fut longtemps associé à trois autres figures martiales sous le nom des Quatre Vagabonds.\n\nAu cours de sa vie, Yan Shanting accepta trois disciples : son aîné Yuming, son cadet Kezhou, et enfin une dernière disciple — une jeune fille qui, pour des raisons demeurées obscures, mourut prématurément.\nCertains ont tenté d’interroger Kezhou sur les circonstances de cette histoire, mais il se montre peu enclin à en parler. Il préfère raconter qu’avant d’être officiellement admis comme disciple, il passa une année entière à alterner querelles et affrontements avec son maître, avant que celui-ci ne consente enfin à l’accepter — preuve, s’il en fallait, du peu de considération que les Vagabonds portent aux convenances et aux règles établies.\n\nQuant au destin de cette jeune fille disparue, la question se perd bien souvent dans l’esprit de ceux qui l’avaient posée.",
+          ContentFR = "On raconte que, dans sa jeunesse, Yan Shanting, errant de renom surnommé « Purificateur des Mille Montagnes », fut longtemps associé à trois autres figures martiales sous le nom des Quatre Vagabonds.\n\nAu cours de sa vie, Yan Shanting accepta trois disciples : son aîné Yuming, son cadet Kezhou, et enfin une dernière disciple — une jeune fille qui, pour des raisons demeurées obscures, mourut prématurément.\nCertains ont tenté d’interroger Kezhou sur les circonstances de cette histoire, mais il se montre peu enclin à en parler. Il préfère raconter qu’avant d’être officiellement admis comme disciple, il passa une année entière à alterner querelles et affrontements avec son maître, avant que celui-ci ne consente enfin à l’accepter — preuve, s’il en fallait, du peu de considération que les Vagabonds portent aux convenances et aux règles établies.\n\nQuant au destin de cette jeune fille disparue, la question se perd bien souvent dans l’esprit de ceux qui l’avaient posée.",
           TextMapId = "UI_CHAR_DATA_TEXT_15030203"
         },
         UI_CHAR_DATA_TEXT_15030204 = {
@@ -61825,51 +63948,123 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_CHAR_DATA_TEXT_15030401"
         },
         UI_CHAR_DATA_TEXT_15030402 = {
-          ContentFR = "Yan Shanting était encore ivre. Depuis qu’il avait dépassé la cinquantaine, cela lui arrivait de plus en plus souvent.\n« Les jeunes d’aujourd’hui... leur talent laisse vraiment à désirer. Chaque génération est pire que la précédente ! » songea-t-il avec amertume, ponctuant sa pensée d’un rot alcoolisé. Il savait pourtant très bien que cette situation ne datait pas d’hier.\n\nAux yeux de la majorité des habitants de Huaxu, les Vagabonds n’étaient qu’un assemblage chaotique d’adolescents débordant d’énergie et de vieillards obstinés refusant de se corriger — certainement pas une voie d’avenir enviable. Les jeunes réellement doués étaient donc d’une rareté extrême. Aussi, les Vagabonds d’aujourd’hui n’étaient plus aussi prompts qu’autrefois à dégainer les uns contre les autres ; ils préféraient désormais se flatter mutuellement, prônant l’harmonie et la conciliation.\nC’est pour cette raison que Yan Shanting se voyait contraint d’assister fréquemment à des banquets célébrant l’acceptation de nouveaux disciples par tel ou tel « grand héros ». Il y allait, donnait le change, faisait bonne figure, afin que les novices se sentent honorés, persuadés d’avoir choisi le bon maître et que la voie des Vagabonds n’était pas une impasse. Quant à leur talent réel... en obtenir un était déjà une bénédiction ; on ne pouvait se permettre d’être exigeant.\n\nAinsi, malgré les conseils répétés de son propre disciple, qui l’exhortait à boire moins, Yan Shanting ne parvenait pas à se modérer. Depuis qu’il s’était forgé un nom parmi les Vagabonds et avait hérité du sobriquet de « Celui qui purifie mille montagnes », amis comme anciens rivaux semblaient s’être accordés pour se montrer excessivement respectueux. Les duels étaient devenus des échanges polis, les lames s’étaient changées en courtoisie, et il finissait chaque banquet entouré de révérences, le corps saturé d’alcool.\n« Les fleurs s’épanouissent, puis se fanent. Les jeunes entrent dans le monde et y vieillissent. Quand je serai devenu un vieillard à part entière... à quoi ressemblera donc ce monde martial ? »\n\nPeut-être était-ce l’oie rôtie trop grasse du banquet, ou le poisson cru dont l’odeur persistait encore. Quoi qu’il en soit, Yan Shanting n’avait pas terminé sa phrase qu’une vague acide lui remonta à la gorge. Il vomit tout ce qu’il avait avalé — mets rouges, verts, aigres et sucrés — sur un tas de feuilles mortes amassées sur le flanc de la montagne.\nAussi élégant fût-il en combat, Yan Shanting ne différait guère d’un paysan ivre lorsqu’il vomissait : le spectacle n’avait rien de gracieux et l’odeur était pestilentielle. Et avant même qu’il n’ait fini, une silhouette jaillit du tas de feuilles, effectua une pirouette en plein air, se débarrassa des immondices qui la souillaient et tira une épée étincelante.\nYan Shanting sursauta, mais le souffle lui manquait encore ; incapable de contre-attaquer, il ne put qu’esquiver. La lame effleura néanmoins sa manche et en trancha un pan.\n\nSon disciple vêtu de noir s’interposa aussitôt, lance en main, et barra le passage devant son maître.\n« Qui êtes-vous ? Pourquoi attaquez-vous mon maître ? »\nL’individu sorti des feuilles répondit avec désinvolture :\n« Je ne me bats pas contre toi, tu ne m’as rien fait. Ce vieux m’a vomi dessus. C’est avec lui que je veux me battre. »\nLe disciple fronça les sourcils. En face de lui se tenait un garçon d’une douzaine d’années, à peu près son âge, les cheveux emmêlés, les vêtements crasseux — manifestement habitué à errer sans abri. Il reprit d’un ton sévère :\n« Ne manque pas de respect à mon maître ! »\nYan Shanting, ayant enfin repris son souffle, leva la main pour arrêter son disciple.\n« J’ai sali tes vêtements. C’est ma faute. Je te présente mes excuses. »\nLe garçon ne se montra nullement intimidé.\n« Bien. Tu sais donc parler correctement. Alors dis-moi : comment comptes-tu te faire pardonner ? »\nYan Shanting sourit.\n« Tu sembles avoir un certain talent. Que dirais-tu si je t’enseignais quelques techniques de sabre ? »\nLe garçon secoua la tête avec dédain.\n« Tu n’es pas si fort. J’ai découpé tes habits sans effort. Je n’ai aucune envie d’apprendre avec toi. »\nYan Shanting resta sans voix. Son disciple, lui, n’y tint plus : faisant tournoyer sa lance, il bondit en avant, jaillissant comme un éclair noir violacé.\n\nLe garçon éclata de rire et recula sans hâte. La pointe de la lance sembla sur le point de le transpercer... avant d’être déviée d’un geste précis de son épée, laissant une ouverture béante. Pourtant, le disciple ne paniqua pas ; il ramena le manche devant lui. La lame frappa, projetant des étincelles, et l’attaque fut neutralisée.\nMais il ne s’agissait que d’une feinte. Le garçon avait déjà reculé jusqu’à une paroi rocheuse ; il s’en servit pour prendre appui, bondit par-dessus son adversaire et fonça droit sur Yan Shanting.\nUne lueur d’admiration passa dans les yeux du vieil homme, mais il ne se permit aucune négligence. Il tira son épée et se projeta en avant pour accueillir l’assaut de front — seule réponse possible à cette technique. À gauche, à droite ou en arrière, toute autre option l’aurait conduit à une contre-attaque fatale. Cette manœuvre était connue sous le nom de l’Épée des trois calamités enchaînées.\n\nVoyant Yan Shanting adopter cette posture, le garçon laissa échapper une exclamation surprise, interrompit son attaque en plein vol et atterrit avec assurance.\n« Pas mal, gamin », lança Yan Shanting. « Qui est ton maître ? »\n« J’ai appris en imitant les singes dans la montagne. Si tu veux vraiment un nom, disons que le roi des singes au derrière le plus rouge est mon maître. »\nYan Shanting resta bouche bée. Son disciple Yuming, déjà sur le point d’intervenir, brûlait visiblement d’enseigner une leçon à ce morveux insolent. Mais le vieil homme n’en prit pas ombrage ; il afficha au contraire un sourire encore plus large.\n« Tu es vif d’esprit. Que dirais-tu de devenir mon disciple ? »\n« Non. Je l’ai déjà dit : tu n’es pas si fort. »\nSur ces mots, Kezhou ramassa son épée et s’apprêta à partir.\nYan Shanting, imperturbable, ajouta :\n« Nous étions à égalité à l’instant, sans vainqueur. Que dirais-tu d’un pari ? Autant de combats que tu veux. Si tu parviens à me toucher, je te reconnaîtrai comme mon maître. »\nKezhou se retourna enfin, dévisagea le vieil homme au sourire légèrement malicieux, puis accepta le pari.\n\nPlus tard, chaque fois qu’il repenserait à cet instant, Kezhou aurait l’impression de s’être fait duper.\nMais à cet instant précis, il ignorait encore tout de ce que l’avenir lui réservait.",
+          ContentFR = "Yan Shanting était encore ivre. Depuis qu’il avait dépassé la cinquantaine, cela lui arrivait de plus en plus souvent.\n« Les jeunes d’aujourd’hui... leur talent laisse vraiment à désirer. Chaque génération est pire que la précédente ! » songea-t-il avec amertume, ponctuant sa pensée d’un rot alcoolisé. Il savait pourtant très bien que cette situation ne datait pas d’hier.\n\nAux yeux de la majorité des habitants de Huaxu, les Vagabonds n’étaient qu’un assemblage chaotique d’adolescents débordant d’énergie et de vieillards obstinés refusant de se corriger — certainement pas une voie d’avenir enviable. Les jeunes réellement doués étaient donc d’une rareté extrême. Aussi, les Vagabonds d’aujourd’hui n’étaient plus aussi prompts qu’autrefois à dégainer les uns contre les autres ; ils préféraient désormais se flatter mutuellement, prônant l’harmonie et la conciliation.\nC’est pour cette raison que Yan Shanting se voyait contraint d’assister fréquemment à des banquets célébrant l’acceptation de nouveaux disciples par tel ou tel « grand héros ». Il y allait, donnait le change, faisait bonne figure, afin que les novices se sentent honorés, persuadés d’avoir choisi le bon maître et que la voie des Vagabonds n’était pas une impasse. Quant à leur talent réel... en obtenir un était déjà une bénédiction ; on ne pouvait se permettre d’être exigeant.\n\nAinsi, malgré les conseils répétés de son propre disciple, qui l’exhortait à boire moins, Yan Shanting ne parvenait pas à se modérer. Depuis qu’il s’était forgé un nom parmi les Vagabonds et avait hérité du sobriquet de « Purificateur des Mille Montagnes », amis comme anciens rivaux semblaient s’être accordés pour se montrer excessivement respectueux. Les duels étaient devenus des échanges polis, les lames s’étaient changées en courtoisie, et il finissait chaque banquet entouré de révérences, le corps saturé d’alcool.\n« Les fleurs s’épanouissent, puis se fanent. Les jeunes entrent dans le monde et y vieillissent. Quand je serai devenu un vieillard à part entière... à quoi ressemblera donc ce monde martial ? »\n\nPeut-être était-ce l’oie rôtie trop grasse du banquet, ou le poisson cru dont l’odeur persistait encore. Quoi qu’il en soit, Yan Shanting n’avait pas terminé sa phrase qu’une vague acide lui remonta à la gorge. Il vomit tout ce qu’il avait avalé — mets rouges, verts, aigres et sucrés — sur un tas de feuilles mortes amassées sur le flanc de la montagne.\nAussi élégant fût-il en combat, Yan Shanting ne différait guère d’un paysan ivre lorsqu’il vomissait : le spectacle n’avait rien de gracieux et l’odeur était pestilentielle. Et avant même qu’il n’ait fini, une silhouette jaillit du tas de feuilles, effectua une pirouette en plein air, se débarrassa des immondices qui la souillaient et tira une épée étincelante.\nYan Shanting sursauta, mais le souffle lui manquait encore ; incapable de contre-attaquer, il ne put qu’esquiver. La lame effleura néanmoins sa manche et en trancha un pan.\n\nSon disciple vêtu de noir s’interposa aussitôt, lance en main, et barra le passage devant son maître.\n« Qui êtes-vous ? Pourquoi attaquez-vous mon maître ? »\nL’individu sorti des feuilles répondit avec désinvolture :\n« Je ne me bats pas contre toi, tu ne m’as rien fait. Ce vieux m’a vomi dessus. C’est avec lui que je veux me battre. »\nLe disciple fronça les sourcils. En face de lui se tenait un garçon d’une douzaine d’années, à peu près son âge, les cheveux emmêlés, les vêtements crasseux — manifestement habitué à errer sans abri. Il reprit d’un ton sévère :\n« Ne manque pas de respect à mon maître ! »\nYan Shanting, ayant enfin repris son souffle, leva la main pour arrêter son disciple.\n« J’ai sali tes vêtements. C’est ma faute. Je te présente mes excuses. »\nLe garçon ne se montra nullement intimidé.\n« Bien. Tu sais donc parler correctement. Alors dis-moi : comment comptes-tu te faire pardonner ? »\nYan Shanting sourit.\n« Tu sembles avoir un certain talent. Que dirais-tu si je t’enseignais quelques techniques de sabre ? »\nLe garçon secoua la tête avec dédain.\n« Tu n’es pas si fort. J’ai découpé tes habits sans effort. Je n’ai aucune envie d’apprendre avec toi. »\nYan Shanting resta sans voix. Son disciple, lui, n’y tint plus : faisant tournoyer sa lance, il bondit en avant, jaillissant comme un éclair noir violacé.\n\nLe garçon éclata de rire et recula sans hâte. La pointe de la lance sembla sur le point de le transpercer... avant d’être déviée d’un geste précis de son épée, laissant une ouverture béante. Pourtant, le disciple ne paniqua pas ; il ramena le manche devant lui. La lame frappa, projetant des étincelles, et l’attaque fut neutralisée.\nMais il ne s’agissait que d’une feinte. Le garçon avait déjà reculé jusqu’à une paroi rocheuse ; il s’en servit pour prendre appui, bondit par-dessus son adversaire et fonça droit sur Yan Shanting.\nUne lueur d’admiration passa dans les yeux du vieil homme, mais il ne se permit aucune négligence. Il tira son épée et se projeta en avant pour accueillir l’assaut de front — seule réponse possible à cette technique. À gauche, à droite ou en arrière, toute autre option l’aurait conduit à une contre-attaque fatale. Cette manœuvre était connue sous le nom de l’Épée des trois calamités enchaînées.\n\nVoyant Yan Shanting adopter cette posture, le garçon laissa échapper une exclamation surprise, interrompit son attaque en plein vol et atterrit avec assurance.\n« Pas mal, gamin », lança Yan Shanting. « Qui est ton maître ? »\n« J’ai appris en imitant les singes dans la montagne. Si tu veux vraiment un nom, disons que le roi des singes au derrière le plus rouge est mon maître. »\nYan Shanting resta bouche bée. Son disciple Yuming, déjà sur le point d’intervenir, brûlait visiblement d’enseigner une leçon à ce morveux insolent. Mais le vieil homme n’en prit pas ombrage ; il afficha au contraire un sourire encore plus large.\n« Tu es vif d’esprit. Que dirais-tu de devenir mon disciple ? »\n« Non. Je l’ai déjà dit : tu n’es pas si fort. »\nSur ces mots, Kezhou ramassa son épée et s’apprêta à partir.\nYan Shanting, imperturbable, ajouta :\n« Nous étions à égalité à l’instant, sans vainqueur. Que dirais-tu d’un pari ? Autant de combats que tu veux. Si tu parviens à me toucher, je te reconnaîtrai comme mon maître. »\nKezhou se retourna enfin, dévisagea le vieil homme au sourire légèrement malicieux, puis accepta le pari.\n\nPlus tard, chaque fois qu’il repenserait à cet instant, Kezhou aurait l’impression de s’être fait duper.\nMais à cet instant précis, il ignorait encore tout de ce que l’avenir lui réservait.",
           TextMapId = "UI_CHAR_DATA_TEXT_15030402"
         },
         UI_CHAR_DATA_TEXT_15030403 = {
-          ContentFR = "Les débuts entre Kezhou et son maître Yan Shanting furent loin d’être harmonieux — et nul besoin d’en chercher longuement la raison.\nLa fougue de la jeunesse est semblable à une flamme qui jaillit ou à une pousse de bambou tout juste sortie de terre : elle ne rêve que de hauteur, d’élévation, d’aller toujours plus haut, plus haut encore, jusqu’à dépasser les oiseaux et percer le ciel lui-même.\nOr cette ardeur se heurta de plein fouet à Yan Shanting. Autant dire que, dans le cœur du jeune Kezhou, l’insoumission atteignait des sommets.\n\nAprès avoir conclu ce pari absurde — celui où le perdant devrait appeler l’autre « Maître » — Kezhou suivit Yan Shanting dans les montagnes. Là, il décréta unilatéralement que ce vieillard à l’allure desséchée était l’ennemi juré qu’il lui faudrait abattre dans cette vie. Il alla même jusqu’à jurer qu’un jour, il lui couperait la barbe pour en faire une houppette nouée à la poignée de son épée.\nTout excité par ce grand dessein, Kezhou alla l’exposer à Yuming, tentant de l’entraîner dans une attaque conjointe contre Yan Shanting. Yuming se contenta de sourire. Kezhou y vit l’approbation de son plan magistral. Yuming, lui, le trouvait simplement bruyant et stupide — pareil à un énorme macaque des montagnes.\n\nAinsi, à partir de ce printemps-là, autour de la chaumière de Yan Shanting, aux chants des oiseaux printaniers vinrent s’ajouter, jour après jour, des tintements métalliques. Ceux qui n’étaient pas au fait croyaient que le fameux « Celui qui purifie mille montagnes » s’était mis à forger des épées, ouvrant quelque échoppe de forgeron. Certains allaient même jusqu’à penser que, puisque son art du sabre était sans égal, les lames qu’il forgerait ne pourraient être que des trésors incomparables.\nHélas, en traversant le bosquet de bambous, ils ne découvraient que deux silhouettes : un jeune homme maniant deux lames courtes, virevoltant sans cesse autour d’une forme sèche et immobile.\nEn cette douce saison printanière, pareille scène aurait pu évoquer un papillon dansant autour d’une fleur — mais les attaques du jeune homme étaient d’une férocité telle que l’image évoquait plutôt une guêpe. Quant à la silhouette décharnée au centre, elle n’avait rien d’une fleur fragile : elle évoquait plutôt un vieil arbre noueux aux branches tordues.\n\nIl va sans dire que l’un, tout en mouvement, et l’autre, presque immobile, n’étaient autres que Kezhou et Yan Shanting. Par moments, Kezhou se rapprochait brusquement, faisant tournoyer ses lames comme un vent furieux, tranchant jusqu’aux pétales portés par la brise. À d’autres instants, il reculait de plusieurs pas avant de bondir en avant d’un seul élan, cherchant à concentrer toute sa force dans une attaque écrasante.\nYan Shanting, lui, n’évoluait jamais hors d’un carré de terrain grand comme trois pieds. Lorsque les attaques de Kezhou devenaient trop rapides, il discernait aussitôt qu’elles manquaient de puissance et les écartait d’un simple coup d’épée. Lorsqu’au contraire Kezhou frappait de toutes ses forces, il lisait sans peine la trajectoire et la suite du mouvement, et se contentait d’esquiver.\nChaque jour, Kezhou avait quatre ou cinq fois l’impression d’être à un souffle de le renverser. Mais ce souffle restait toujours hors d’atteinte — semblable à une montagne visible au loin, que l’on n’atteint jamais malgré la course.\nÀ la tombée du jour, Kezhou s’allongeait sur une dalle de pierre propre, à l’extérieur de la palissade, prenant le ciel pour couverture et la terre pour couche, avant de recommencer dès l’aube suivante.\n\nQuant à la raison pour laquelle il avait délaissé l’épée au profit de lames courtes, elle était simple. Kezhou avait beau afficher parfois une certaine naïveté, il n’était pas sot. Après quelques échanges seulement, il comprit que Yan Shanting était un maître redoutable, habile à dissimuler sa véritable force. En matière d’escrime pure, il n’avait aucune chance. Miser sur d’autres armes offrait peut-être une possibilité de surprise — tout en évitant, accessoirement, de blesser gravement le vieil homme et de provoquer la colère du sévère Yuming.\nMais Kezhou se faisait des illusions.\nLorsque l’été arriva, ses doubles lames coulaient déjà comme de l’eau vive, et pourtant il demeurait incapable de franchir cet infime écart qui le séparait de Yan Shanting. Toujours... ce maudit rien de trop peu.\n\nAllongé sur la pierre, il repassait sans cesse les combats du jour, mais les moustiques bourdonnant à ses oreilles troublaient sa concentration. Agacé, il se leva et se mit à les trancher un à un. Plus il en abattait, plus il soupirait : s’il pouvait fendre un insecte en plein vol, pourquoi ne parvenait-il pas à effleurer ce vieillard ? La nuit était d’un noir d’encre, et Kezhou, dans cette obscurité, semblait presque fou, comme s’il nourrissait une rancune profonde contre l’été lui-même.\nÉpuisé, il finit par se laisser retomber sur le sol et contempla le ciel étoilé. Le murmure des insectes l’emporta vers un souvenir d’enfance — une nuit où il observait la lune avec son père.\n« Père, dis... entre Hyperborea et la lune, qu’est-ce qui est le plus loin ? »\n« La lune, bien sûr. On a déjà vu des gens venir d’Hyperborea, mais jamais de la lune. » Kezhou pencha la tête.\n« Pourtant je vois la lune quand je lève les yeux, et pas Hyperborea. Alors Hyperborea devrait être plus loin, non ? »\nSon père éclata de rire, puis lui expliqua que la lune était bel et bien plus éloignée — simplement si lointaine que, où que l’on aille, elle semblait toujours à la même distance.\nKezhou, fasciné, fixa la lune sans ciller, se demandant s’il rencontrerait un jour quelqu’un venu de là-haut, afin de lui demander ce que signifiaient les motifs visibles à sa surface. À force de regarder, ces motifs semblèrent se transformer... prenant peu à peu la forme du vieux visage de Yan Shanting.\n\n« Par tous les cieux ! Quelle frayeur... »\nKezhou se réveilla en sursaut. Le jour était déjà levé. De la chaumière s’élevait une fumée de cuisine, et le vieil homme, celui-là même qui avait pris la place de la lune dans son rêve, le regardait de loin avec ce sourire indéchiffrable. Kezhou en frissonna, avec une furieuse envie de saisir ses lames pour lui porter encore quelques coups.\nMais il savait que, même ainsi, la distance resterait la même : ce pouce éternel entre la pointe de son arme et le nez souriant de Yan Shanting. Une distance qui n’avait rien à voir avec lui, mais tout avec ce vieux renard plein de malice.\nComme la lune, qui ne se rapproche jamais, quels que soient les monts et les fleuves traversés.\nCette pensée le surprit lui-même... puis il éclata de rire.\nJusqu’alors, il croyait déjà entrevoir la fin de la voie martiale — pensant que les maîtres supérieurs n’étaient que plus rapides ou plus forts. Il comprit enfin que, par-delà une montagne, s’en dressait toujours une autre.\n\nIl prit alors sa décision.\nS’avançant vers Yan Shanting, il déclara avec le plus grand respect : « Maître, veuillez accepter la révérence de votre disciple. »\nYan Shanting resta interdit un instant, puis sourit.\nMalheureusement, ce sourire n’avait rien de la bienveillance d’un ancien accueillant un élève... mais tout du rictus d’un vieil escroc indigne.\n« Trop tard. Je n’ai plus envie de te prendre comme disciple. À moins que tu ne maîtrises chaque arme existante. »\nSur ces mots, il saisit la longue lance de sept pieds que Yuming utilisait habituellement et la lança à Kezhou.\nKezhou resta figé, puis la colère explosa. Il attrapa la lance d’un geste sec et rugit : « Vieil escroc, prends ça ! »\nIl bondit en avant, visant le visage de Yan Shanting.\nCelui-ci souriait toujours. À un pouce de son visage, il immobilisa la pointe de la lance entre deux doigts.\n\nAux oreilles des curieux, la chaumière était, ce jour-là encore, aussi bruyante et animée que toujours.",
+          ContentFR = "Les débuts entre Kezhou et son maître Yan Shanting furent loin d’être harmonieux — et nul besoin d’en chercher longuement la raison.\nLa fougue de la jeunesse est semblable à une flamme qui jaillit ou à une pousse de bambou tout juste sortie de terre : elle ne rêve que de hauteur, d’élévation, d’aller toujours plus haut, plus haut encore, jusqu’à dépasser les oiseaux et percer le ciel lui-même.\nOr cette ardeur se heurta de plein fouet à Yan Shanting. Autant dire que, dans le cœur du jeune Kezhou, l’insoumission atteignait des sommets.\n\nAprès avoir conclu ce pari absurde — celui où le perdant devrait appeler l’autre « Maître » — Kezhou suivit Yan Shanting dans les montagnes. Là, il décréta unilatéralement que ce vieillard à l’allure desséchée était l’ennemi juré qu’il lui faudrait abattre dans cette vie. Il alla même jusqu’à jurer qu’un jour, il lui couperait la barbe pour en faire une houppette nouée à la poignée de son épée.\nTout excité par ce grand dessein, Kezhou alla l’exposer à Yuming, tentant de l’entraîner dans une attaque conjointe contre Yan Shanting. Yuming se contenta de sourire. Kezhou y vit l’approbation de son plan magistral. Yuming, lui, le trouvait simplement bruyant et stupide — pareil à un énorme macaque des montagnes.\n\nAinsi, à partir de ce printemps-là, autour de la chaumière de Yan Shanting, aux chants des oiseaux printaniers vinrent s’ajouter, jour après jour, des tintements métalliques. Ceux qui n’étaient pas au fait croyaient que le fameux « Purificateur des Mille Montagnes » s’était mis à forger des épées, ouvrant quelque échoppe de forgeron. Certains allaient même jusqu’à penser que, puisque son art du sabre était sans égal, les lames qu’il forgerait ne pourraient être que des trésors incomparables.\nHélas, en traversant le bosquet de bambous, ils ne découvraient que deux silhouettes : un jeune homme maniant deux lames courtes, virevoltant sans cesse autour d’une forme sèche et immobile.\nEn cette douce saison printanière, pareille scène aurait pu évoquer un papillon dansant autour d’une fleur — mais les attaques du jeune homme étaient d’une férocité telle que l’image évoquait plutôt une guêpe. Quant à la silhouette décharnée au centre, elle n’avait rien d’une fleur fragile : elle évoquait plutôt un vieil arbre noueux aux branches tordues.\n\nIl va sans dire que l’un, tout en mouvement, et l’autre, presque immobile, n’étaient autres que Kezhou et Yan Shanting. Par moments, Kezhou se rapprochait brusquement, faisant tournoyer ses lames comme un vent furieux, tranchant jusqu’aux pétales portés par la brise. À d’autres instants, il reculait de plusieurs pas avant de bondir en avant d’un seul élan, cherchant à concentrer toute sa force dans une attaque écrasante.\nYan Shanting, lui, n’évoluait jamais hors d’un carré de terrain grand comme trois pieds. Lorsque les attaques de Kezhou devenaient trop rapides, il discernait aussitôt qu’elles manquaient de puissance et les écartait d’un simple coup d’épée. Lorsqu’au contraire Kezhou frappait de toutes ses forces, il lisait sans peine la trajectoire et la suite du mouvement, et se contentait d’esquiver.\nChaque jour, Kezhou avait quatre ou cinq fois l’impression d’être à un souffle de le renverser. Mais ce souffle restait toujours hors d’atteinte — semblable à une montagne visible au loin, que l’on n’atteint jamais malgré la course.\nÀ la tombée du jour, Kezhou s’allongeait sur une dalle de pierre propre, à l’extérieur de la palissade, prenant le ciel pour couverture et la terre pour couche, avant de recommencer dès l’aube suivante.\n\nQuant à la raison pour laquelle il avait délaissé l’épée au profit de lames courtes, elle était simple. Kezhou avait beau afficher parfois une certaine naïveté, il n’était pas sot. Après quelques échanges seulement, il comprit que Yan Shanting était un maître redoutable, habile à dissimuler sa véritable force. En matière d’escrime pure, il n’avait aucune chance. Miser sur d’autres armes offrait peut-être une possibilité de surprise — tout en évitant, accessoirement, de blesser gravement le vieil homme et de provoquer la colère du sévère Yuming.\nMais Kezhou se faisait des illusions.\nLorsque l’été arriva, ses doubles lames coulaient déjà comme de l’eau vive, et pourtant il demeurait incapable de franchir cet infime écart qui le séparait de Yan Shanting. Toujours... ce maudit rien de trop peu.\n\nAllongé sur la pierre, il repassait sans cesse les combats du jour, mais les moustiques bourdonnant à ses oreilles troublaient sa concentration. Agacé, il se leva et se mit à les trancher un à un. Plus il en abattait, plus il soupirait : s’il pouvait fendre un insecte en plein vol, pourquoi ne parvenait-il pas à effleurer ce vieillard ? La nuit était d’un noir d’encre, et Kezhou, dans cette obscurité, semblait presque fou, comme s’il nourrissait une rancune profonde contre l’été lui-même.\nÉpuisé, il finit par se laisser retomber sur le sol et contempla le ciel étoilé. Le murmure des insectes l’emporta vers un souvenir d’enfance — une nuit où il observait la lune avec son père.\n« Père, dis... entre Hyperborea et la lune, qu’est-ce qui est le plus loin ? »\n« La lune, bien sûr. On a déjà vu des gens venir d’Hyperborea, mais jamais de la lune. » Kezhou pencha la tête.\n« Pourtant je vois la lune quand je lève les yeux, et pas Hyperborea. Alors Hyperborea devrait être plus loin, non ? »\nSon père éclata de rire, puis lui expliqua que la lune était bel et bien plus éloignée — simplement si lointaine que, où que l’on aille, elle semblait toujours à la même distance.\nKezhou, fasciné, fixa la lune sans ciller, se demandant s’il rencontrerait un jour quelqu’un venu de là-haut, afin de lui demander ce que signifiaient les motifs visibles à sa surface. À force de regarder, ces motifs semblèrent se transformer... prenant peu à peu la forme du vieux visage de Yan Shanting.\n\n« Par tous les cieux ! Quelle frayeur... »\nKezhou se réveilla en sursaut. Le jour était déjà levé. De la chaumière s’élevait une fumée de cuisine, et le vieil homme, celui-là même qui avait pris la place de la lune dans son rêve, le regardait de loin avec ce sourire indéchiffrable. Kezhou en frissonna, avec une furieuse envie de saisir ses lames pour lui porter encore quelques coups.\nMais il savait que, même ainsi, la distance resterait la même : ce pouce éternel entre la pointe de son arme et le nez souriant de Yan Shanting. Une distance qui n’avait rien à voir avec lui, mais tout avec ce vieux renard plein de malice.\nComme la lune, qui ne se rapproche jamais, quels que soient les monts et les fleuves traversés.\nCette pensée le surprit lui-même... puis il éclata de rire.\nJusqu’alors, il croyait déjà entrevoir la fin de la voie martiale — pensant que les maîtres supérieurs n’étaient que plus rapides ou plus forts. Il comprit enfin que, par-delà une montagne, s’en dressait toujours une autre.\n\nIl prit alors sa décision.\nS’avançant vers Yan Shanting, il déclara avec le plus grand respect : « Maître, veuillez accepter la révérence de votre disciple. »\nYan Shanting resta interdit un instant, puis sourit.\nMalheureusement, ce sourire n’avait rien de la bienveillance d’un ancien accueillant un élève... mais tout du rictus d’un vieil escroc indigne.\n« Trop tard. Je n’ai plus envie de te prendre comme disciple. À moins que tu ne maîtrises chaque arme existante. »\nSur ces mots, il saisit la longue lance de sept pieds que Yuming utilisait habituellement et la lança à Kezhou.\nKezhou resta figé, puis la colère explosa. Il attrapa la lance d’un geste sec et rugit : « Vieil escroc, prends ça ! »\nIl bondit en avant, visant le visage de Yan Shanting.\nCelui-ci souriait toujours. À un pouce de son visage, il immobilisa la pointe de la lance entre deux doigts.\n\nAux oreilles des curieux, la chaumière était, ce jour-là encore, aussi bruyante et animée que toujours.",
           TextMapId = "UI_CHAR_DATA_TEXT_15030403"
         },
         UI_CHAR_DATA_TEXT_15030404 = {
           ContentFR = "Le printemps s’était écoulé depuis longtemps, et pourtant les longs affrontements entre Kezhou et Yan Shanting n’avaient toujours pas livré de vainqueur — ni sur le plan des armes, ni sur celui du caractère.\nLorsque Yan Shanting s’était d’abord montré disposé à accepter Kezhou comme disciple, celui-ci avait opposé un refus catégorique, refusant de plier l’échine. Plus tard, à force d’échanges, Kezhou en vint à admirer sincèrement la maîtrise martiale de Yan Shanting et souhaita finalement entrer sous sa tutelle. Mais le vieil homme, à moitié par esprit de malice, à moitié par pure obstination, lui rendit alors la pareille en le rejetant ouvertement.\nAinsi, tous deux poursuivirent cet aller-retour peu amène. Jusqu’au cœur de l’hiver, lorsque la neige recouvrit tout, Kezhou avait fini par se familiariser avec toutes les armes imaginables, et la distance séparant le tranchant de sa lame de Yan Shanting s’était réduite d’un pouce à une demi-largeur de doigt.\nEncore six mois, estima-t-il en son for intérieur, et le jour où il pourrait enfin atteindre Yan Shanting serait à portée de main. Sur cette pensée, il regagna l’espace devant la chaumière.\nLa dalle de pierre sur laquelle il dormait s’était refroidie peu à peu après les ardeurs de l’été. Aussi, à l’automne finissant, lorsque les oies sauvages prenaient leur envol, Kezhou avait-il cueilli des plumets de roseaux pour les étendre sur la pierre, puis échangé quelques biens contre une toile huilée. À l’aide de bambous, il avait dressé un abri sommaire — incapable de couper le vent, mais suffisant pour arrêter la pluie.\nÀ présent que l’hiver battait son plein, la neige s’était accumulée sur la toile, courbant dangereusement les tiges de bambou. Voyant cela, Kezhou se hâta de dégager la neige, mais força trop : l’abri s’effondra, et la neige blanche s’abattit sur la toile et le bambou encore vert, dans un enchevêtrement confus.\n\nLe vent et la neige portaient jusqu’à lui le son lointain d’une cloche, étiré et solennel. Kezhou se rendit soudain compte que l’année touchait à sa fin.\nSans trop savoir pourquoi, il eut une envie soudaine de soupe de mouton — une bonne soupe, avec à la surface de fines perles de graisse semblables à des flocons, ponctuées de quelques éclats d’oignon vert. Il secoua la tête pour chasser cette pensée : voilà des années qu’il avait quitté son foyer, et jamais ce genre de nostalgie ne l’avait effleuré. Sans doute était-ce le froid inhabituel qui troublait son esprit.\nIl soupira, laissant échapper un nuage de buée, puis se pencha pour redresser l’abri. Une main se posa alors sur son épaule. Lorsqu’il se retourna, il découvrit Yuming, le disciple aîné de Yan Shanting. Toujours aussi froid dans son ton, il prononça pourtant une invitation : « Maître a préparé une marmite de yuanxiao. Il m’a envoyé te chercher pour manger avec nous. »\nKezhou resta un instant interdit, puis répondit avec la même froideur : « Je te remercie, mais mangez sans moi. Je ne suis, après tout, qu’un étranger. »\nLe visage de Yuming ne trahit aucune émotion, comme s’il s’était attendu à cette réponse. Sans ajouter un mot, il repartit vers la chaumière.\n\nKezhou, de son côté, fit comme si Yuming n’était jamais apparu et reprit la réparation de son abri. Mais à peine s’était-il penché qu’il perçut un léger parfum d’alcool.\nIl se retourna : une cruche d’alcool en porcelaine blanche reposait là, un mince filet de vapeur s’échappant encore de son bec. À côté, un paquet enveloppé dans une feuille de lotus, lui aussi encore tiède.\n\n« Une aumône... » pensa-t-il avec amertume, avant de se détourner pour poursuivre son ouvrage.\nL’abri restait rudimentaire, même remis sur pied. Kezhou s’y assit, faisant face à l’alcool et à la nourriture laissés là. Il ramassa une poignée de neige et la porta à sa bouche pour tromper la faim, mais le froid ne fit que s’intensifier.\nIl soupira de nouveau — cette fois, sans même produire de buée. Ses mains finirent par céder. Il déchira l’enveloppe de feuilles de lotus : à l’intérieur se trouvait un poulet entier, longuement mijoté, la chair si tendre qu’elle se détachait d’elle-même des os. Kezhou le dévora jusqu’au dernier morceau.\nQuant à l’alcool, bien qu’il eût déjà refroidi, il fit naître une chaleur discrète au creux de sa poitrine.\n\nLe lendemain, la neige s’était arrêtée et le ciel s’était éclairci.\nKezhou se présenta de nouveau devant Yan Shanting pour demander à devenir son disciple — et cette fois, le vieil homme accepta avec satisfaction.",
           TextMapId = "UI_CHAR_DATA_TEXT_15030404"
         },
+        UI_CHAR_DATA_TEXT_15040101 = {
+          ContentFR = "Un Vagabond vous confia un secret :\nLorsque vous couvrez Su Yi de compliments, elle passe généralement par trois phases bien distinctes.\nPremière phase : elle relève fièrement la tête et acquiesce avec enthousiasme — « Oui, oui, évidemment. »\nDeuxième phase : le bout de ses oreilles devient rouge, sa voix se met à hésiter, et elle marmonne doucement :\n« Bon... je ne suis pas si incroyable que ça non plus... »\nTroisième phase : elle détourne brusquement la tête et hausse le ton :\n« Ça suffit ! Arrêtez maintenant ! »\n« C’est le moment idéal pour lui demander un service », ajoute le Vagabond en agitant un doigt avec un sourire satisfait. « Tant que ce n’est pas contraire au ciel et à la morale, notre petite Su acceptera presque toujours. »\n\nRougir facilement est probablement la faiblesse la plus évidente de Su Yi.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15040101"
+        },
+        UI_CHAR_DATA_TEXT_15040102 = {
+          ContentFR = "Su Yi transporte toujours avec elle une boîte à outils pliable qu’elle a conçue elle-même.\nElle ne mesure guère plus qu’une paume de main, mais contient tous les outils et pièces de base dont elle a besoin. Grâce à elle, Su Yi peut réparer à tout moment les installations mécaniques des Pics Extérieurs ou commencer à expérimenter dès qu’une idée lui vient.\nBien que son volume ait été réduit, son poids n’a pas changé. Su Yi y ajouta donc un module de lévitation, modifia sa forme et y intégra même un système d’armement...\n\nC’est ainsi que naquit le Module de Patrouille Céleste.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15040102"
+        },
+        UI_CHAR_DATA_TEXT_15040103 = {
+          ContentFR = "Le cerf-volant mécanique est une structure classique transmise depuis longtemps par la Secte Jishu. Comment permettre à des ailes mécaniques de se libérer de la gravité et de s’élancer dans les cieux ? Tous les apprentis de la Secte Jishu qui rêvent de voler doivent, à leurs débuts, étudier et analyser la structure du cerf-volant.\n\nDans sa jeunesse, Su Yi en améliora une version, lui conférant une certaine capacité de vol à longue distance, permettant de transmettre des renseignements. C’était le premier cadeau qu’elle offrit à sa tante...\n\nVous remarquez que Su Yi — qui d’ordinaire parle des mécanismes avec des yeux brillants et un flot de paroles ininterrompu — semble cette fois inhabituellement silencieuse.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15040103"
+        },
+        UI_CHAR_DATA_TEXT_15040104 = {
+          ContentFR = "Vous traversez l’endroit où Miemeng s’est écrasé. Aujourd’hui, les jeunes pousses de riz y sont vertes et ordonnées, les sillons parfaitement alignés. Seules les gigantesques tranchées creusées dans la terre témoignent encore de ce qui s’est produit ici. La Rivière de la Haine continue de gronder et de s’écouler sans fin.\nElle a emporté les débris de Miemeng — et avec eux le passé d’un artisan de génie.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15040104"
+        },
+        UI_CHAR_DATA_TEXT_15040105 = {
+          ContentFR = "Après la bataille de Haojing, la menace qui pesait depuis si longtemps sur les Vagabonds disparut enfin. Les artisans de la Secte Jishu purent désormais se consacrer pleinement à leurs recherches, sans plus aucune crainte.\nLe Bureau des Travaux tenta à plusieurs reprises d’attirer à lui la branche de la Secte Jishu qui avait quitté l’institution pour rejoindre les Pics Extérieurs. Avis officiels et récompenses toujours plus élevées se succédèrent... mais les volontaires restèrent rares.\nLa plupart ne voulaient pas partir. Ils s’étaient habitués à cet endroit.\nAu fond d’eux-mêmes, ils le considéraient déjà comme leur foyer.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15040105"
+        },
+        UI_CHAR_DATA_TEXT_15040201 = {
+          ContentFR = "Les Pics Extérieurs — ce bastion des Vagabonds que l’on dit caché quelque part dans les montagnes embrumées — nourrissent dans l’imaginaire du monde quantité de fantasmes invraisemblables.\n\nCertains prétendent que les Vagabonds ont non seulement échappé aux lois des Neuf Chapitres de Dafeng, mais aussi quitté le cycle même des Cinq Voies. Dans les Pics Extérieurs, disent-ils, ils se nourrissent du vent et de la rosée, ne touchent pas aux céréales et vivent uniquement de l’énergie spirituelle du ciel et de la terre. Les plus redoutables parmi eux seraient même capables de parcourir les cieux et la terre, affrontant les Magistrats de Yingtian d’égal à égal.\nD’autres racontent que les Vagabonds passent leurs journées à disserter sur la voie martiale. Chacun occuperait un sommet différent, méditant immobile, retenant son souffle dans une concentration absolue. Puis, soudain, les yeux flamboyants, ils bondiraient pour tirer leur épée et défier le sommet de la montagne. Les falaises ébranlées par leurs affrontements s’effriteraient en pluie de pierres, formant au fond des vallées des monceaux de gravats.\n\nS’ils apprenaient que les « grands héros » de leurs romans doivent eux aussi se demander ce qu’ils mangeront au prochain repas, ils secoueraient probablement la tête avant de repartir.\nEt si quelqu’un ajoutait que l’ensemble de l’organisation — nourriture, vêtements, logement et finances — est en réalité confié à une jeune fille à peine sortie de l’enfance... ils en viendraient sans doute à s’emporter, moustaches frémissantes, prêts à argumenter avec véhémence.\nCar sans l’avoir vu de ses propres yeux, il est difficile de croire que ces Vagabonds si « libres et indomptables », si « robustes et puissants », acceptent de se plier aux décisions de leur intendante, Su Yi — une jeune fille aux cheveux noirs et à la robe bleu-vert, coiffée de deux longues couettes.\n\n« Pas question ! »\n\nAux Pics Extérieurs, les matins commencent souvent par ce cri plein de vigueur.\nLes Vagabonds qui tentaient de chaparder quelques jarres d’alcool et un peu de viande séchée dans l’entrepôt se retrouvent alors à lever les mains avec un sourire gêné, implorant le pardon de leur « Grande-tante ».\nSu Yi se tient sur le seuil du dépôt, les mains sur les hanches. Ses joues légèrement rougies par la colère, elle dégage pourtant une autorité telle que personne n’ose la contester.\nSi tous lui obéissent de bon gré, ce n’est pas seulement en raison de son ancienneté. C’est aussi parce que Su Yi organise chaque chose avec un soin méticuleux, toujours parfaitement ordonné.\n\nLes activités des Vagabonds reposent en grande partie sur les renseignements, et nul ne connaît mieux qu’elle les moindres mouvements de la ville de Haojing. Les oiseaux mécaniques qu’elle fabrique s’infiltrent silencieusement dans la cité, devenant ses yeux et ses oreilles. Grâce à eux, la moindre information — aussi infime qu’un brin d’herbe — lui est rapportée.\nDotée d’une mémoire exceptionnelle, Su Yi assemble ensuite ces fragments de renseignements en un tout cohérent. Depuis qu’elle est arrivée aux Pics Extérieurs, les pertes parmi les Vagabonds ont considérablement diminué.\n\nAinsi, la jeune fille en est persuadée : c’est de cette manière qu’elle peut protéger la terre que sa tante, Su Muzhe, a autrefois aimée et habitée.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15040201"
+        },
+        UI_CHAR_DATA_TEXT_15040202 = {
+          ContentFR = "Aux Pics Extérieurs, l’empreinte de Su Yi se trouve partout.\n\nDes grandes machines agricoles — comme le modèle Kui Niu Type I — jusqu’au plus petit oiseau horloge, leurs formes sont toutes différentes. Les mécanismes conçus par Su Yi portent toujours, dans l’angle inférieur droit, un petit sceau représentant un oiseau Yi, afin que chacun puisse reconnaître ses inventions.\nOutre ces mécanismes pratiques aux fonctions bien définies, Su Yi a également fabriqué de petites méchapoupées réalistes qu’elle qualifie elle-même de « pas très utiles ». Elles servent principalement à embellir les paysages des Pics Extérieurs.\nMais il suffit d’installer un minuscule module d’enregistrement dans leurs yeux noirs pour qu’elles deviennent des sentinelles de patrouille, capables de surveiller les forêts et de transmettre les informations au centre de contrôle.\n\nUne seule invention, plusieurs usages.\n\nLa plupart de ces créatures mécaniques possèdent une fourrure d’un réalisme saisissant. Sous les mains habiles de Su Yi, elles ont été sculptées avec soin et précision. Elles volent ou se posent à travers toute la montagne, ajoutant une touche de liberté et de vitalité à ce lieu où se rassemblent les Vagabonds indomptables.\n« J’aime beaucoup ces oiseaux mécaniques... Su Yi les fabrique vraiment très bien. Parfois je me dis que j’aimerais pouvoir voler moi aussi. »\n« Si tu les aimes tant, pourquoi tu les descends avec ta fronde ? »\n« <I>Ouin...</> ce n’était pas fait exprès ! J’ai cru que c’était un vrai oiseau...»\n« Même un vrai oiseau, tu n’as pas le droit de tirer dessus avec une fronde ! »",
+          TextMapId = "UI_CHAR_DATA_TEXT_15040202"
+        },
+        UI_CHAR_DATA_TEXT_15040203 = {
+          ContentFR = "Su Jianyin était une collègue de Su Muzhe. Elle n’appartenait pas aux Artisans Célestes du clan Su ; leurs noms de famille identiques n’étaient qu’une coïncidence. Elles n’avaient échangé que quelques mots.\nDans ses souvenirs, Su Muzhe était quelqu’un doté d’une aura impressionnante. De nature timide, Su Jianyin avait déjà reçu son aide à plusieurs reprises.\nLe Bureau des Travaux rassemblait certes de nombreux artisans, mais restait malgré tout une institution officielle. Les personnes au tempérament agréable et douées pour les relations y évoluaient aisément. Quelqu’un comme Su Jianyin, peu douée pour s’exprimer, voyait inévitablement son talent passer inaperçu — même lorsqu’elle possédait de réelles compétences.\nEt puis, à vrai dire, elle n’avait jamais été particulièrement brillante non plus. Si elle était parvenue jusque-là, c’était uniquement grâce à ses efforts.\nUn soir, peu avant la fin de la journée, plusieurs collègues plaisantaient en disant qu’ils allaient assister à un débat à l’Académie Fenshu, lui demandant de terminer à leur place les documents restants.\nSu Jianyin avait l’habitude de terminer le travail des autres. Cela ne la surprit donc pas.\nC’est à ce moment-là qu’elle entendit pour la première fois la voix de Su Muzhe — une voix calme, agréable et résolue.\n\n« Hé, vous là. Occupez-vous donc de votre propre travail. »\n\nSu Muzhe régla le problème sur-le-champ.\nCes gens n’osaient rien lui dire en face. Mais une fois qu’elle était partie, ils auraient certainement redoublé d’acharnement pour laver l’affront.\nÀ cet instant-là, le cœur de Su Jianyin s’était même rempli d’amertume.\nPourquoi m’aider ? As-tu seulement pensé à ce qui m’arrivera après ton départ ? Ta générosité ne fera que m’attirer des ennuis.\n\nEt pourtant...\n\nUne fois Su Muzhe partie, elle découvrit avec stupéfaction que tout avait déjà été réglé. Elle fut transférée dans un département dédié à la recherche. En termes de rang, elle devint même la subordonnée de Su Muzhe. Elle n’eut plus jamais à subir ces collègues tyranniques.\n\n... Une subordonnée.\n\nÀ dix-neuf ans, Su Muzhe était déjà vice-commissaire des Cent Métiers.\nUne personne comme elle... Pourquoi abandonner un avenir si prometteur, pourtant à portée de main, pour entretenir des liens secrets avec les Vagabonds et poursuivre un idéal impossible ?\n\nSu Jianyin ne comprenait pas.\n\nPeut-être était-ce là la différence entre elle et un génie : Su Muzhe tentait de toucher le ciel, tandis qu’elle ne pouvait que regarder son dos s’éloigner.\nLe jour où la nouvelle des liens secrets entre Su Muzhe et les Vagabonds parvint à Haojing, Su Jianyin dessinait des plans.\nAutour d’elle, le tumulte était confus. Quelqu’un avait fait irruption dans le Bureau des Travaux ; des bruits de fracas et de destruction retentissaient. Ils semblaient chercher quelque chose.\nSu Jianyin tourna la tête.\nSur une table non loin, il y avait un plan inachevé.\n« Su Jianyin, à ton avis... si un objet devait voler longtemps, quelle structure serait la plus adaptée ? »\nSu Muzhe était assise à l’envers sur une chaise, un pinceau coincé entre les lèvres. La joue appuyée contre le dossier, elle semblait hésitante.\nTu es un génie... pourquoi me poser cette question ?\nSu Jianyin répondit vaguement :\n« Sans doute... le plus léger possible. »\n« Oh... la matière, donc. »\nComme si elle venait de comprendre quelque chose, Su Muzhe replongea aussitôt dans son dessin. Elle n’avait jamais emporté ce plan.\nIl reposait toujours sur cette table — un croquis grossier représentant l’esquisse d’un oiseau.\nÀ cette heure-ci, le travail était terminé. Elle était la seule encore présente.\n\nCet oiseau... Bien sûr qu’elle le connaissait.\nSu Muzhe était un génie. Tout ce qu’elle concevait fonctionnait parfaitement. Ce cerf-volant mécanique avait une valeur technique révolutionnaire ; aucun artisan n’aurait pu résister à l’envie de l’étudier.\nMais il n’était pas encore assez abouti.\nEt c’est précisément parce qu’il ne l’était pas qu’il fut intercepté par le Pavillon de l’Arbitrage, révélant l’identité de Su Muzhe comme agente infiltrée des Vagabonds.\n\nMerde.\nPourquoi ne l’a-t-elle pas emporté ?\nEt s’ils pensent que je suis liée à Su Muzhe... et à ces Vagabonds ?\n\n« C’était le bureau de Su Muzhe ? Apportez tout ce qu’elle a laissé. »\nCes gens venaient d’entrer.\n« ... Il n’y a que ces livres. »\nSu Jianyin baissa la tête, parlant d’une voix faible.\nDans sa paume, elle serrait fermement une feuille froissée.\n\nTrois jours plus tard, devant la demeure du clan Su apparut une lettre anonyme. À l’intérieur se trouvait un plan.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15040203"
+        },
+        UI_CHAR_DATA_TEXT_15040204 = {
+          ContentFR = "Aux Pics Extérieurs, beaucoup pensent que les rumeurs selon lesquelles Miemeng aurait détruit des champs et blessé des habitants n’étaient qu’un stratagème destiné à faire sortir quelqu’un de sa cachette.\nCe n’était pas la saison des crues, et Miemeng était l’œuvre dont Su Muzhe était la plus fière. Les matériaux employés comptaient parmi les meilleurs de tout Haojing. Avant de quitter la capitale, Su Muzhe avait même ajouté un nouveau cœur énergétique, puis procédé à une dernière inspection complète, éliminant tous les risques possibles. Dans des conditions normales, l’installation pouvait fonctionner au moins cinquante ans.\n\nDès que l’affaire éclata, les discussions sur Su Muzhe et l’art des méchapoupées se répandirent comme une traînée de poudre. Les accusations visaient directement les Vagabonds — preuve que tout avait été préparé à l’avance.\nMais Su Muzhe insistait : quoi qu’il en soit, les dégâts causés par Miemeng étaient déjà une réalité. Même s’il n’existait qu’une chance sur mille que sa présence puisse aider, elle devait retourner voir par elle-même.\nLes eaux de la Rivière de la Haine étaient impétueuses, et les inondations n’attendaient personne. Un jour gagné pouvait signifier un peu moins de souffrances pour le peuple.\nElle promit à plusieurs reprises qu’elle avait toutes les chances de s’en sortir. Elle connaissait la géographie de Haojing mieux que quiconque et comptait seulement inspecter la périphérie pour constater l’état de Miemeng.\nContre toute attente, Yan Shanting, habituellement conciliant, fut celui qui s’opposa le plus fermement à cette décision.\nPersonne ne sut jamais ce qui se passa cette nuit-là. On entendit seulement, de loin, leurs voix s’élever dans une dispute.\nLe lendemain matin, Su Muzhe quitta les Pics Extérieurs — comme elle y était venue, sans rien emporter.\nSi Su Muzhe, l’Hirondelle de la Plaine Apaisée, venait à mourir, on pourrait soupirer de regret.\nMais si mourait Su Muzhe, coupable de la catastrophe de Miemeng, alors les gens applaudiraient, louant avec encore plus de ferveur la justice du Seigneur Dragon d’Argent.\n\n« Si les méchapoupées se sont emballées, c’est forcément volontaire ! Elle voulait provoquer les Neuf Chapitres de Dafeng ! On ne peut pas céder face à quelqu’un comme elle ! »\n« Si elle n’avait pas insisté pour imposer une invention aussi dangereuse, autant de vies auraient-elles été perdues ? »\n« Être mise en pièces serait encore trop clément ! Les Bi’an lui ont déjà fait trop d’honneur en lui accordant une mort rapide ! Une vie aussi misérable ne suffirait même pas à payer sa dette ! »\n« Ces maudits Vagabonds... encore eux... »\n« Maudite soit Su Muzhe... »\n\nLes quelques voix qui tentaient de protester furent noyées sous la clameur de la condamnation. En un instant, Su Muzhe devint la cible de tous les crachats et de toutes les injures, son nom traîné dans la boue.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15040204"
+        },
+        UI_CHAR_DATA_TEXT_15040205 = {
+          ContentFR = "Le grand chaos à Haojing était terminé. Huaxu semblait avoir connu des bouleversements capables de renverser ciel et terre... et pourtant, il semblait aussi que rien n’avait vraiment changé.\nLes avis de recherche visant les Pics Extérieurs furent annulés d’un trait de plume. Mais les gens continuaient malgré tout à regarder les Vagabonds avec crainte.\nDans cette atmosphère encore troublée, une rumeur inhabituelle commença pourtant à circuler discrètement : celle de la jeune fille qui était apparue ce jour-là lors du chaos de Haojing.\n\n« Finalement... les Vagabonds ne sont peut-être pas aussi terrifiants qu’on l’imaginait... »\n« C’est cette personne qui a sauvé ma petite fille ! »\n« Elle m’a fait comprendre que tant qu’on a du courage dans le cœur, n’importe qui peut saisir une arme et se battre pour ce qui compte pour lui. »\n\nMême faibles, même lentes, même incapables de tout renverser d’un seul coup... certaines transformations commençaient malgré tout à naître, silencieusement.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15040205"
+        },
+        UI_CHAR_DATA_TEXT_15040301 = {
+          ContentFR = "Su Muzhe a laissé derrière elle de nombreux héritages : des biens matériels de valeur... et des connaissances inestimables.\nSu Yi conserve précieusement les notes de recherche de sa tante, qu’elle consulte encore et encore.\nMais plus que tout cela, elle chérit un souvenir très particulier — son propre nom.\n\n« Tu t’appelles Su Yi ? »\n\nCe jour-là, Su Yi se tenait à l’entrée des Pics Extérieurs pour se présenter aux autres Vagabonds. En entendant ce nom inconnu, Yan Shanting lui lança un regard surpris.\n\n« Oui. Je m’appelle Su Yi. Le Yi de l’oiseau Yi. »\n\nÀ partir de ce jour, Su Yi des Artisans Célestes du clan Su cessa d’exister.\nAux Pics Extérieurs, il ne resta plus que Su Yi.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15040301"
+        },
+        UI_CHAR_DATA_TEXT_15040302 = {
+          ContentFR = "Lorsqu’elle vivait encore chez elle, Su Yi ne s’était jamais souciée de subsister.\nSes parents s’occupaient de tout : nourriture, vêtements, logement, déplacements. Elle n’avait qu’à rester dans sa chambre chaude et confortable, ne pas aller là où ses parents le lui interdisaient et ne pas faire ce qu’ils lui défendaient. Tout était déjà arrangé pour elle.\nCe n’est qu’après avoir quitté sa maison qu’elle découvrit combien la vie d’une personne seule demandait de réflexion.\nElle ne voulait pas que les autres la considèrent comme une jeune demoiselle gâtée et incapable, alors elle fit beaucoup d’erreurs en apprenant.\n\nAllumer un feu pour cuisiner : se brûler les doigts ou rater le goût arrivait souvent.\nLaver et faire sécher le linge : les vêtements récupérés étaient toujours tout froissés.\nÀ quelle fréquence changer les draps ?\nComment tresser correctement ses cheveux ?\n\nSu Yi serrait les dents et refusait de demander de l’aide. Elle essayait de résoudre chaque problème seule. Erreur après erreur, elle accumulait de l’expérience et finissait par obtenir des résultats. Au début, c’était épuisant. Mais tout cela en valait la peine. Car elle avait enfin quitté ce petit jardin clos.\n\nElle pouvait désormais diriger sa propre vie.\nElle était libre.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15040302"
+        },
+        UI_CHAR_DATA_TEXT_15040303 = {
+          ContentFR = "Su Muzhe et Su Yi avaient un jour scellé une promesse en entrecroisant leurs petits doigts. Ensemble, elles feraient renaître le nom des Artisans Célestes du clan Su. C’était leur secret à toutes les deux.\nMais ce qu’elles voulaient restaurer, c’était le véritable clan Su — pas celui d’aujourd’hui, paralysé, qui n’ose même plus fabriquer la moindre méchapoupée.\nElles voulaient créer de véritables inventions capables d’apporter le bien-être au peuple : des machines capables de déplacer les montagnes et de dompter les mers, mais aussi de simples instruments mesurant le temps ou observant les astres. Pas les jouets décoratifs du Pavillon des Artisans.\n\nEn écoutant sa tante parler, Su Yi était transportée d’enthousiasme. Elle aurait voulu partir immédiatement parcourir le monde à ses côtés. Mais Su Muzhe était quelqu’un qui ne tenait pas ses promesses.\n\nElle s’envola seule pour poursuivre son rêve, laissant Su Yi derrière elle — comme une méchapoupée privée de son cœur mécanique — enfermée dans la grande boîte qu’était Haojing.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15040303"
+        },
+        UI_CHAR_DATA_TEXT_15040304 = {
+          ContentFR = "La nuit où Su Muzhe mourut, Su Yi enfouit sa tête dans son oreiller et pleura longtemps. Ses sanglots étouffés se perdirent dans le coton, sans produire le moindre son. Su Yi ne s’accorda qu’une seule nuit.\nCette nuit-là seulement, elle s’autorisa à être faible, à s’arrêter, à se noyer dans la douleur d’avoir perdu sa tante.\nLorsque le soleil se lèverait, les manches mouillées sècheraient elles aussi. Et toute cette souffrance devrait prendre fin.\nElle continuerait d’avancer, marchant dans les traces de sa tante, allant là où celle-ci n’était jamais allée. Lorsque les empreintes de Su Muzhe disparaîtraient, les siennes prendraient le relais, prolongeant le même chemin.\n\nL’une dans l’autre, l’autre dans l’une — leurs chemins ne feraient plus qu’un.\n\nÀ partir de ce jour, partout où se trouverait Su Yi, la volonté de Su Muzhe serait aussi présente.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15040304"
+        },
+        UI_CHAR_DATA_TEXT_15040305 = {
+          ContentFR = "Su Yi n’avait jamais confié cette ambition démesurée. Elle voulait que ses méchapoupées se répandent à travers les quatre mers — pas seulement à Huaxu.\n\nElle avait entendu dire qu’au-delà de ces terres, d’innombrables peuples vivaient encore dans la souffrance. Qu’ils soient les Descendants draconiques aux cornes, appelés aussi Charon... ou les peuples sans cornes, comme les Enfants de la Terre ou les Solariens...\nTous avaient le droit de franchir le seuil de leur maison. Le ciel appartenait à toute créature qui levait les yeux vers lui. La liberté devrait être quelque chose que l’on peut saisir du bout des doigts — non un luxe réservé à quelques-uns.\nPeut-être ne pourrait-elle pas transformer le monde entier en peu de temps. Mais même si ce n’était qu’une infime étincelle... elle ferait tout pour la transmettre.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15040305"
+        },
+        UI_CHAR_DATA_TEXT_15040401 = {
+          ContentFR = "L’aube commençait à peine à poindre, et Su Yi n’avait toujours pas trouvé le sommeil.\nElle renonça finalement à dormir et se leva.\nCela faisait tout juste un mois qu’elle était arrivée aux Pics Extérieurs. Elle s’était déjà habituée à la plupart des choses ici, mais sa difficulté à dormir dans un lit inconnu persistait.\nIl était encore tôt. Tout le domaine reposait dans un silence paisible, imprégné d’une atmosphère libre et détendue. Beaucoup de disciples de la Secte Jishu aux Pics Extérieurs avaient en effet l’habitude de vivre la nuit et de dormir le jour : certaines idées, si on ne les saisit pas immédiatement, peuvent disparaître à jamais.\n\n« Une bande de noctambules », écrivait Su Muzhe dans ses lettres.\n\nSu Yi n’avait jamais mis les pieds aux Pics Extérieurs auparavant, et pourtant cet endroit lui semblait étrangement familier, comme si elle y était déjà venue mille fois. Les quelques lettres secrètes que sa tante lui avait envoyées, après qu’elle les eut suppliées à maintes reprises, étaient devenues pour elle un trésor : chaque mot y était gravé dans sa mémoire.\nDurant les longues périodes de séparation, Su Yi avait survécu en s’appuyant sur cette imagination.\nÀ présent, cette imagination était devenue réalité. Mais sa tante n’était plus là.\n\nCarte en main, Su Yi avançait lentement, prenant soin de poser le pied aussi légèrement que possible afin de ne réveiller personne. Cette carte, elle l’avait dessinée elle-même, petit à petit, à partir des descriptions de sa tante. Les artisans spécialisés dans les mécanismes possèdent souvent un bon sens de l’espace ; à partir de ces quelques fragments laissés par Su Muzhe, la carte de Su Yi ressemblait déjà à l’original pour moitié, peut-être même davantage.\nTout en marchant, elle corrigeait et retouchait son ancienne carte pour la rendre plus exacte. À chaque pas, lorsqu’un paysage correspondait à ce que décrivait le journal, Su Yi s’arrêtait un instant.\nComme si une silhouette invisible lui tenait la main, lui montrant chaque chose avec une voix douce et souriante.\n\n« Les Pics Extérieurs sont remplis de chemins escarpés et étroits. Si l’on veut construire des routes, il faut forcément compter sur les artisans de la Secte Jishu. Comment planter les clous pour qu’ils tiennent solidement... »\n\nSu Yi leva les yeux. Devant elle s’étirait un chemin étroit et sinueux, disparaissant dans les nuages lointains. Apparemment, la route avait déjà été construite.\n« Des pierres, il y en a partout ! On pourrait presque en faire des matériaux pour les méchapoupées. Il n’existe donc pas de pierres un peu plus souples ? »\nElle posa doucement la main sur la roche de la falaise : dure, rugueuse.\nEst-ce que cela pourrait servir de matériau pour une méchapoupée... ?\n\nSoudain, Su Yi remarqua que de la mousse poussait dans les fissures de la roche, d’où surgissait timidement une fine tige d’herbe. Elle caressa la mousse veloutée, puis souffla doucement sur la petite feuille.\nFinalement, elle renonça.\nVous avez déjà tant de mal à pousser ici.\nSu Yi reprit sa marche et arriva à l’entrée des Pics Extérieurs.\n\n« Juste après l’entrée, il y a une clairière. Chaque fois que je n’arrive pas à dormir, je viens ici regarder le lever du soleil. »\n\nSu Yi s’assit en tailleur, puis se laissa basculer en arrière, prenant appui sur ses bras pour regarder le ciel.\nLe moment était parfait. Le soleil se levait lentement entre les montagnes, sa lumière encore douce, comme voilée d’un fin tissu.\nSu Yi fixa sans ciller le soleil levant que sa tante avait contemplé autrefois. Elle continua à regarder jusqu’à ce que la lumière jaillisse soudain, brûlant ses yeux.\nLes larmes, provoquées par l’éblouissement, glissèrent silencieusement hors de ses paupières.\n\nCe n’est qu’alors que Su Yi détourna enfin le regard.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15040401"
+        },
+        UI_CHAR_DATA_TEXT_15040402 = {
+          ContentFR = "Dans les souvenirs de Su Yi, sa première rencontre privée avec Su Muzhe ne fut pas vraiment élégante.\nÀ cette époque, elle ne s’appelait pas encore Su Yi, mais Su Keyi. Un nom choisi par ses parents pour exprimer leurs espoirs : respecter les règles, parler avec prudence, mener une vie irréprochable.\nMais depuis le jour de sa naissance, Su Yi était destinée à trahir ces attentes.\nLe talent exceptionnel qu’elle manifesta pour les méchapoupées dès l’âge de trois ans terrifia sa mère. Dans cette époque où les mécanismes déclinaient, posséder un tel talent signifiait potentiellement menacer l’ordre établi par les Neuf Chapitres de Dafeng.\n\nSon don devint ainsi son premier péché.\n\nLa petite Su Yi ne comprenait pas pourquoi sa mère voulait lui arracher ces petites pièces fascinantes qu’elle tenait dans les mains. Elle protesta pour les récupérer et fut aussitôt grondée, ce qui la remplit d’un profond chagrin.\n\nC’est à ce moment-là que Su Muzhe ouvrit la porte.\n\nLa jeune fille de quatorze ans resta un instant figée sur le seuil, embarrassée. Entrer ou repartir ? Interrompre une scène familiale n’était pas son intention ; elle était simplement arrivée au mauvais moment.\nEn entendant la porte s’ouvrir, Su Yi tourna instinctivement la tête. Elle avait déjà vu cette sœur élégante quelques fois, lors des repas familiaux des fêtes, mais elles n’avaient jamais vraiment parlé.\nLa belle grande sœur s’appelait Su Muzhe — la plus jeune sœur de son père, autrement dit sa tante.\n\nDevant la mère de Su Yi, la tante déclara :\n« Les méchapoupées ne sont pas une bonne chose. Elles blessent les autres autant qu’elles-mêmes. Si tu veux apprendre quelque chose, apprends plutôt la véritable mécanique. Plus tard, tu pourras devenir une grande officielle au Bureau des Travaux ! »\n\nSu Yi fit la moue et détourna la tête, refusant de parler à cette méchante personne qui semblait s’être alliée à sa mère.\nMais dès que la mère quitta la maison pour son travail et que la porte se referma...\nLa jeune fille sérieuse et droite changea aussitôt de visage.\nSu Muzhe esquissa un sourire, se pencha vers elle et murmura d’un ton conspirateur :\n\n« Petite, tu veux apprendre à fabriquer des méchapoupées ? »\nSu Yi ouvrit de grands yeux.\n« Mais... tante, tu viens de dire que... »\nSu Muzhe éclata de rire.\n« Petite fille trop sérieuse. Je disais ça parce que ta mère était là. Maintenant qu’elle est partie, on peut parler en secret. »\nSu Yi fronça les sourcils comme un petit pain mal cuit.\n« Mais maman a dit... qu’il ne faut pas mentir ! »\n« Je vais le lui dire tout de suite ! »\nElle se leva pour ouvrir la porte, mais Su Muzhe s’y adossa, bloquant complètement le passage. Su Yi ne pouvait même pas atteindre la poignée qu’elle cachait derrière son dos.\n\n« Réfléchis bien », dit tranquillement Su Muzhe.\n« Tu veux vraiment arrêter de jouer avec ces jouets fascinants ? Tu es heureuse quand tu les assembles, n’est-ce pas ? Et quand tu as fini, tu te sens fière de toi. Ta tante te comprend. J’étais exactement comme toi quand j’étais petite. »\n« Comme on dit : quand on a soi-même été trempé par la pluie, on doit tenir un parapluie pour ceux qui viennent après. Quand j’apprenais la mécanique des méchapoupées, je devais étudier en cachette sous ma couverture à la lumière d’une lampe. Toi, tu n’auras pas besoin de faire ça. »\nLes yeux de Su Yi s’agrandirent peu à peu.\nLes paroles de Su Muzhe lui ouvraient un monde entièrement nouveau.\nLe cœur battant à tout rompre, Su Yi se trouvait en plein conflit intérieur. Elle savait qu’elle devrait refuser et rester une enfant sage qui écoute sa mère.\n\nMais certaines pensées... sont impossibles à retenir.\n\nLes enfants ne comprennent pas grand-chose au monde. Elle voulait simplement un compagnon — quelqu’un qui partage ses secrets et ses passions.\nVoyant son hésitation, Su Muzhe continua :\n« Je vois bien que tu as du talent. Tes mains sont même plus habiles que les miennes à ton âge. »\n« Avec moi, tu éviteras beaucoup d’erreurs. Après tout, je suis la meilleure fabricante de méchapoupées de tout Haojing. Tu es sûre que tu ne veux pas apprendre avec moi ? »\n« Et puis ces temps-ci, je suis très libre. Je pourrai venir jouer avec toi souvent. Tu n’en as pas envie ? »\n\nSu Yi...\nSu Yi succomba honteusement à la tentation.\n\nAvec un air grave, elle prit la première grande décision de sa vie.\n« Très bien ! J’apprendrai avec toi. »",
+          TextMapId = "UI_CHAR_DATA_TEXT_15040402"
+        },
+        UI_CHAR_DATA_TEXT_15040403 = {
+          ContentFR = "Lorsque Su Yi était encore très jeune, un événement majeur se produisit à Haojing.\n— Yan Shanting, officier des encens, détourna les eaux de la Rivière de la Haine et éteignit l’encensoir centenaire, détruisant ainsi la Cérémonie de l’Encens. Il bondit sur un toit et lança ces mots :\n« Cet endroit n’est pas digne de me retenir. » Puis il s’éloigna avec désinvolture.\n\nIssu d’une grande famille, Yan Shanting jouissait d’une grande réputation. On le surnommait « Mille Coupes de la Rivière de la Haine ». Il avait officié pendant des années au Pavillon de l’Encens, présidant d’innombrables rituels sans jamais commettre la moindre erreur.\nSous l’ordre des Neuf Chapitres de Dafeng, tous vénéraient le Seigneur Dragon d’Argent. Personne n’aurait imaginé qu’un tel homme commettrait un acte aussi rebelle sous les yeux de tous.\nL’incident fut si soudain que même les Sentinelles de Fer de Juntian, envoyées par le Pavillon de l’Arbitrage, ne purent l’arrêter. Une prime fut affichée avec rage.\nCe n’est que bien plus tard que Haojing apprit qu’il était devenu un Vagabond.\n\nCe n’était guère surprenant. Puisque Haojing ne pouvait plus le tolérer, il était naturel qu’il rejoigne les Pics Extérieurs — ce repaire que beaucoup qualifiaient de « nid de vipères ».\nDes années avaient déjà passé.\nNul ne savait plus si son acte avait été prémédité ou impulsif. Yan Shanting avait ruiné sa carrière... et l’honneur du Pavillon de l’Encens.\nSon nom devint presque tabou.\nSes anciens amis furent eux aussi réduits au silence sous la pression. Parmi eux se trouvait Su Muzhe, autrefois promise à Yan Shanting depuis l’enfance.\nElle, pourtant, était restée à Haojing.\nAinsi, chaque fois que l’on évoquait Yan Shanting, on mentionnait inévitablement Su Muzhe.\n\nSu Yi ne connaissait pas très bien Yan Shanting. Elle ne l’avait rencontré que deux fois. Le reste venait des récits de sa tante.\n« Peu fiable. »\n« Tête brûlée. »\n« Trop téméraire. »\nVoilà comment Su Muzhe le décrivait.\n\nMais la courbe de ses sourcils et l’éclat dans ses yeux révélaient autre chose : ce n’était pas un reproche, mais une plainte affectueuse. Elle racontait comment il se déconcentrait pendant les rituels, comment il détestait les vêtements au col trop serré, et comment il tenait toujours ses promesses, quelles qu’en soient les conséquences.\nPeu à peu, toutes ces histoires dessinèrent dans l’esprit de Su Yi l’image d’un homme complexe mais familier.\nMême avec si peu de rencontres, il lui avait laissé une impression profonde.\nDevant elle, ces deux-là restaient mesurés. Mais leur complicité était impossible à dissimuler.\nSu Yi en fut même jalouse.\n\nUn jour, elle lança à Yan Shanting :\n« Attends un peu ! Quand je serai grande, la place aux côtés de ma tante sera à moi ! » Yan Shanting éclata de rire.\n« Petite Su veut déjà me chasser ? Alors partageons : une place à gauche, une place à droite. »\nSu Muzhe répondit en riant :\n« Je ne crois pas avoir besoin de deux gardiens. »\nEn présence de Yan Shanting, sa tante paraissait toujours détendue — ce qui inquiétait énormément Su Yi.\nChaque jour, elle mesurait sa taille, impatiente de grandir pour pouvoir elle aussi soutenir sa tante. Mais avant qu’elle ne puisse rivaliser avec cet obstacle humain...\nYan Shanting quitta Haojing et devint, aux yeux de ses parents, un criminel impardonnable. Durant cette période, Su Muzhe semblait profondément affectée.\nQuand elle enseignait les mécanismes à Su Yi, elle s’interrompait souvent en plein milieu, perdue dans ses pensées.\nAlors Su Yi s’entraînait seule, lisait des livres, notait les caractères qu’elle ne comprenait pas et les apportait à sa tante pour lui demander des explications.\nSa tante avait besoin de temps.\nSu Yi le savait.\nElle ne pouvait rien faire d’autre que détourner son attention et espérer qu’elle retrouverait courage.\n\nPuis, un jour, Su Muzhe revint avec une humeur bien plus légère. Quelqu’un avait manifestement dissipé le nœud qui pesait sur son cœur.\n« Qingyu, dis-moi... si un jour les Neuf Chapitres de Dafeng n’étaient plus comme aujourd’hui... qu’est-ce que cela changerait ? »\nÀ dix-neuf ans, les yeux de Su Muzhe brillaient d’une joie audacieuse.\nSu Yi répondit, très sérieusement :\n« Si cela arrivait... je crois que je serais heureuse. Parce que nous ne serions plus obligées de rester enfermées dans notre chambre. »\nElle baissa la tête.\n« Maman dit que la technique des méchapoupées est dangereuse. Selon les lois des Neuf Chapitres de Dafeng, je ne devrais pas l’étudier. Pour me protéger, ils m’ont toujours gardée à la maison. »\nSes doigts froissèrent la manche de sa robe.\n« Je... ne veux pas abandonner ce que j’aime. Mais je ne veux pas non plus rendre maman triste. »\nSu Muzhe demanda doucement :\n« Alors tu veux être heureuse... et que tes parents le soient aussi ? »\nSu Yi hocha la tête.\n« Je veux... »\nElle prit une grande inspiration.\n« Je veux utiliser l’art des méchapoupées pour que tous les habitants de Huaxu puissent être heureux. »\nCette année-là, le projet hydraulique Miemeng vit le jour.\nContre l’avis de tous, Su Muzhe utilisa une gigantesque méchapoupée pour maîtriser les inondations.\nLorsque les travaux furent achevés, le gigantesque oiseau mécanique Miemeng se posa sur la Rivière de la Haine. Ses ailes battaient lentement, comme une apparition divine.\nGrâce à un système de pompes, il redirigeait les eaux débordantes vers des cours d’eau voisins encore calmes. La rivière, qui inondait les terres depuis des années, fut enfin maîtrisée. Les habitants des deux rives louèrent ses mérites.\nÀ Haojing, les conteurs changèrent rapidement leurs histoires pour raconter les exploits de Su Muzhe, l’Hirondelle de la Plaine Apaisée.\nPeu après, à seulement dix-neuf ans, elle fut promue vice-commissaire des Cent Métiers, à un pas du rang suprême.\n\n...\n\nMais les jours heureux ne durèrent pas.\nAprès cette visite de sa tante, Su Yi ressentit un pressentiment.\nPeut-être... que sa tante partirait bientôt.\nEt elle partit.\nCette année-là, Su Yi avait neuf ans. Su Muzhe en avait vingt.\nDepuis ce jour, Su Yi n’a cessé de se poser une question : Comment changer les Neuf Chapitres de Dafeng ?\nElle prit alors une décision. Elle retrouverait Su Muzhe. Et elle irait lui demander la réponse en face.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15040403"
+        },
+        UI_CHAR_DATA_TEXT_15040404 = {
+          ContentFR = "Après le départ de Su Muzhe, Su Yi n’abandonna jamais l’idée de retrouver sa trace. Elle voulait se présenter devant elle grâce à ses propres efforts et la surprendre, au point qu’elle n’oserait plus jamais la sous-estimer.\nMais Su Yi ne pouvait pas quitter sa maison. Elle devait répondre aux attentes de ses parents, tout en utilisant les cerfs-volants mécaniques comme extension de son regard, cherchant obstinément des indices.\nLorsque Su Yi avait neuf ans, Su Muzhe quitta Haojing.\nEn se basant sur les quelques paroles laissées derrière elle et sur les rumeurs fragmentaires circulant dans la capitale, Su Yi finit, après cinq années entières de recherches, par trouver les abords des Pics Extérieurs. Elle avait imaginé d’innombrables fois leurs retrouvailles.\nSu Muzhe était partie alors qu’elle n’avait que neuf ans. À présent, elle en avait quatorze — cet âge où l’on change le plus. La petite fille était devenue une jeune adolescente. Sa tante serait certainement surprise. Peut-être la féliciterait-elle d’avoir enfin réussi à la rejoindre. Ou peut-être lui prendrait-elle la main, présentant fièrement sa nièce à ses compagnons avec ce sourire à la fois rusé et orgueilleux.\n\n... Mais jamais elle n’avait imaginé que leurs retrouvailles prendraient cette forme. Su Yi avait elle aussi entendu les rumeurs concernant la catastrophe de Miemeng.\nGrâce au poste de sa mère, Yun Fangshui, au Bureau des Rites, elle parvint à obtenir une information fiable : tout cela n’était qu’un piège.\nPersonne ne laisserait Su Muzhe approcher de Miemeng. Dès qu’elle quitterait les Pics Extérieurs, les Bi’an fondraient sur elle pour exécuter la sentence céleste.\nSu Yi fut prise de panique.\nElle voulait transmettre cette information au plus vite, mais ne disposait d’aucun moyen de contacter les Vagabonds. Elle ne pouvait qu’envoyer ses cerfs-volants mécaniques tourner sans cesse autour des Pics Extérieurs, espérant trouver une entrée... ou attirer l’attention de quelqu’un.\n\nFinalement, Yuming intercepta l’un de ces oiseaux mécaniques et le message fut transmis.\n... Mais il était déjà trop tard.\nJe suis arrivée trop tard.\nCette pensée tournait sans cesse dans l’esprit de Su Yi.\nSi seulement j’étais arrivée un peu plus tôt...\nLes « si » sont les hypothèses les plus impuissantes.\nLorsque Su Yi arriva avec Yan Shanting, Yuming et les autres Vagabonds, les Bi’an avaient déjà exécuté la sentence.\n\nTout était irréversible.\n\nSous le châtiment des Neuf Chapitres de Dafeng, Su Muzhe s’était transformée en un corps cristallisé — mais elle demeurait debout. Cet oiseau fier, qui avait vécu toute sa vie avec noblesse, refusait de s’agenouiller, de s’asseoir ou de tomber, même après avoir rendu son dernier souffle.\nSi elle avait encore pu lever la main, elle aurait sans doute tapoté l’épaule tendue de Su Yi avant de serrer sa nièce dans ses bras.\nYan Shanting se tenait silencieusement devant elle, semblable à une statue à la tête baissée. Parmi les débris de Miemeng, les Vagabonds retrouvèrent un coffret de données contenant les dernières paroles de Su Muzhe.\nDans les derniers instants de sa vie, elle avait annoncé trois choses avec la même détermination que toujours.\nD’abord, elle confia l’emplacement des ouvrages anciens du clan Su qu’elle avait découverts dans la bibliothèque, ainsi que ses propres carnets de recherches.\nEnsuite, elle déclara en riant que, puisque tant de personnes étaient réunies en ce jour et que le ciel et la terre en étaient témoins, si la mort devait les séparer, elle ne voulait pas quitter ce monde avec des regrets. Même si Yan Shanting refusait leur promesse de mariage d’enfance, elle le prendrait de force aujourd’hui.\nEnfin, elle confia Su Yi aux Vagabonds, demandant à Yan Shanting de retenir sa nièce téméraire et de l’empêcher de chercher vengeance.\n\nSa tante était morte.\nSu Yi s’effondra au sol.\nUn silence terrible se répandit dans la foule.\nElle ne sut jamais vraiment comment elle était rentrée chez elle. Elle resta enfermée dans sa chambre pendant des jours, refusant d’ouvrir la porte à qui que ce soit. Quelques mois plus tard, elle prit sa décision.\nElle irait aux Pics Extérieurs — là où Su Muzhe s’était rendue autrefois.\nAvant de partir, elle se disputa violemment avec sa mère. Pourtant, elle serra les dents et refusa de céder. La route quittant la capitale était à la fois longue et courte.\nArrivée à l’entrée de la ruelle menant hors de la ville, Su Yi se retourna une dernière fois pour regarder, de loin, la silhouette de sa maison.\nL’aube se levait à peine lorsque Su Yi entreprit seule l’ascension des marches menant aux Pics Extérieurs.\nUne marche.\nPuis une autre.\nElle n’avançait pas vite.\nLe vent de montagne soufflait avec la force d’un torrent, cherchant à la repousser vers la vallée.\nMais jamais il ne parvint à ébranler sa détermination.\n\nÀ partir de ce jour, après avoir dérivé au-delà de mille voiles, elle ne serait plus Su Keyi.\nElle serait Su Yi.\nEt lorsque les marches prendraient fin, la véritable route commencerait.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15040404"
+        },
+        UI_CHAR_DATA_TEXT_15040405 = {
+          ContentFR = "De nouveaux arrivants, attirés par la renommée des Pics Extérieurs, suivirent les traces de ceux qui les avaient précédés et se jetèrent dans la lutte avec la même générosité.\nLes Vagabonds des Pics Extérieurs se succédèrent, génération après génération.\nLes sacrifices offerts sans attendre de récompense pavèrent peu à peu une route rouge de sang... jusqu’à ce que cette longue lutte atteigne enfin son terme.\nSu Yi se tenait au bord de la falaise.\nEn se retournant, elle vit que la montagne était toujours la même — et qu’au pied de celle-ci reposaient tant de personnes mortes en alimentant le feu du sacrifice.\nCes âmes obstinées... étaient-elles revenues ? Et si elles ne revenaient pas... où pouvaient-elles bien aller ?\nSon regard se perdit au loin, et ses pensées dérivèrent avec lui. Oui... la montagne était toujours la même.\nLes nuages et la brume s’enroulaient autour de ses flancs, tournoyaient, s’étiraient, semblables à une écharpe de soie flottant dans les bras de quelqu’un.\nEn regardant vers le bas, les marches de pierre brillaient encore d’une fine pellicule d’eau : la pluie venait de tomber. Elles avaient été réparées avec soin et ne retiendraient plus jamais la boue.\nDe nombreuses maisons neuves avaient été construites. Une école pour les enfants, un terrain d’entraînement...\nDe nouveaux visages s’étaient installés aux Pics Extérieurs, et d’autres encore arrivaient, attirés par la réputation de ces lieux pour apprendre la voie des Vagabonds.\nCe jour était venu trop tard — car ceux qui avaient tout donné ne pouvaient plus le voir. Et pourtant, il semblait aussi être arrivé trop tôt : les sacrifices encore tièdes paraissaient soudain légers, presque irréels... comme un rêve dont on pourrait se réveiller l’instant suivant.\n\nSu Yi ferma les yeux.\nElle sentit la rugosité de la pierre, la douceur de la mousse et le froid de l’air.\nCes sensations étaient réelles. Elles ne pouvaient pas mentir. Le vent passa entre les montagnes, gémissant doucement, comme un soupir.\nElle eut l’impression de voir de nombreuses silhouettes se tenir dans la mer de nuages et la brume.\nElle n’avait pourtant pas rouvert les yeux — et pourtant ces apparitions traversaient les couches du passé avec une clarté parfaite, sans jamais perdre leurs couleurs.\nElle vit sa tante, Su Muzhe, appuyée contre le premier rocher couvert de mousse, toujours avec cette expression malicieuse et fière, levant le menton vers elle.\nElle vit Yan Shanting se tenir un peu plus loin, droit comme un pin.\nElle vit Buxia... et bien d’autres visages, déjà flous, mais dont les regards brillaient toujours.\n\n—\n\n« Tante... oncle Yan... Buxia... »\n« Zheng Xihe, Tian Shuo, Zhou Sui... »\n« Beaucoup de choses se sont passées récemment. Les Pics Extérieurs ont énormément changé. »\n« La vérité sur la Bataille de Shuli a été révélée. La Secte Jishu a été innocentée, et ces techniques ne sont plus considérées comme des tabous. »\n« Et moi aussi... je suis devenue une adulte digne de confiance ! Il y a tant de choses qui m’attendent maintenant. »\n« Tante... je peux désormais me débrouiller seule. »\n« Oncle Yan, Buxia... les Neuf Chapitres de Dafeng sont devenus meilleurs. Nos idéaux se sont réalisés. »\n« Ah, et ces deux imbéciles qui se disputaient tout le temps... ils se sont finalement réconciliés récemment. »\n\n...\n\nSu Yi parlait sans s’arrêter.\nElle n’avait rien préparé à l’avance. Elle laissait simplement ses pensées suivre leur cours, disant tout ce qui lui venait à l’esprit.\nDevant elle comme derrière elle, seules les nappes de brume montantes et descendantes restaient ses auditeurs fidèles.\nEt chaque fois qu’elle parlait avec plus d’enthousiasme, le vent soulevait les nuages épais qui affluaient vers elle comme des vagues.\nEn regardant les brumes des montagnes glisser et se transformer, Su Yi sourit doucement.\nUne pensée étrange lui traversa soudain l’esprit : Et si les morts continuaient d’exister sous une autre forme ?\nS’ils s’étaient fondus dans les montagnes et les rivières... dans chaque pierre, chaque parcelle de terre ?\nAlors eux — ces Vagabonds disparus — se trouvaient certainement ici.\nLes Pics Extérieurs étaient leur première demeure... et leur dernière.\nIls reviendraient forcément ici.\nQuand le vent se levait, c’était leur acclamation silencieuse.\nQuand il retombait, c’était leur écoute paisible.\nÀ leur manière... ils répondaient à sa voix.\n\n—\n\n« Tante... »\n« J’ai encore une bonne nouvelle à te dire. »\n« Papa et maman ont fini par me comprendre et par me soutenir. Bon... il leur aura fallu cinq ans. Ce n’est pas si long. »\n« Tu avais dit qu’un jour... quand j’aurais réussi à construire la machine dessinée sur ce plan... tu viendrais me chercher. »\n« Cette promesse... peut-elle encore être tenue ? »\nSu Yi regarda dans la direction où le vent s’était levé.\n... Et soudain, une rafale surgit.\nElle dispersa la brume et se dirigea droit vers elle.\nElle effleura les mèches de cheveux qui bordaient son visage — comme des mains douces — puis, au moment de la toucher, se dispersa en d’innombrables courants d’air qui retombèrent autour d’elle. Comme une étreinte légère.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15040405"
+        },
         UI_CHAR_DATA_TEXT_18010101 = {
-          ContentFR = "Extrait de Chant du Rossignol Blanc, page 2 :\n\nQuand elle était petite, le petit rossignol vivait dans un nid bien chaud, avec papa et maman rossignol. Papa rossignol avait de grandes ailes pour la protéger du vent et de la pluie. Maman rossignol chantait des berceuses très douces, qui faisaient fuir les cauchemars. Grâce à eux, le petit rossignol grandissait de jour en jour. Son duvet tombait, et de jolies plumes toutes blanches poussaient à la place. Elle avait hâte de pouvoir voler avec ses parents, dans le ciel tout bleu, quand ses ailes seraient prêtes.\n\n« Les jours passés avec papa et maman étaient les plus heureux de toute la vie du petit rossignol. »",
+          ContentFR = "Extrait de<I> Chant du Rossignol Blanc</>, page 2 :\n\nQuand elle était petite, le petit rossignol vivait dans un nid bien chaud, avec papa et maman rossignol. Papa rossignol avait de grandes ailes pour la protéger du vent et de la pluie. Maman rossignol chantait des berceuses très douces, qui faisaient fuir les cauchemars. Grâce à eux, le petit rossignol grandissait de jour en jour. Son duvet tombait, et de jolies plumes toutes blanches poussaient à la place. Elle avait hâte de pouvoir voler avec ses parents, dans le ciel tout bleu, quand ses ailes seraient prêtes.\n\n« Les jours passés avec papa et maman étaient les plus heureux de toute la vie du petit rossignol. »",
           TextMapId = "UI_CHAR_DATA_TEXT_18010101"
         },
         UI_CHAR_DATA_TEXT_18010102 = {
-          ContentFR = "Extrait de Chant du Rossignol Blanc, page 6 :\n\n... Un jour, sans prévenir, des étrangers appelés \"les chasseurs\" firent irruption dans la forêt. Ils détruisirent le nid douillet de la famille rossignol et capturèrent le père, aux plumes épaisses et chaleureuses.\nLa mère, effrayée, s’enfuit avec son petit, dont les ailes n’étaient pas encore formées, et chercha refuge dans les terres des bêtes. Mais là-bas, nul ne voulait d’elles. Le petit rossignol vécut dans la peur, chaque jour. Il ne trouvait un peu de paix que blotti sous l’aile de sa mère, seul souvenir tiède de l’ancien foyer.\n\n« Comme dans tous les contes tristes... Les plus belles choses qu’on voit au début... sont toujours celles qu’on détruit à la fin. »",
+          ContentFR = "Extrait de<I> Chant du Rossignol Blanc</>, page 6 :\n\n... Un jour, sans prévenir, des étrangers appelés \"les chasseurs\" firent irruption dans la forêt. Ils détruisirent le nid douillet de la famille rossignol et capturèrent le père, aux plumes épaisses et chaleureuses.\nLa mère, effrayée, s’enfuit avec son petit, dont les ailes n’étaient pas encore formées, et chercha refuge dans les terres des bêtes. Mais là-bas, nul ne voulait d’elles. Le petit rossignol vécut dans la peur, chaque jour. Il ne trouvait un peu de paix que blotti sous l’aile de sa mère, seul souvenir tiède de l’ancien foyer.\n\n« Comme dans tous les contes tristes... Les plus belles choses qu’on voit au début... sont toujours celles qu’on détruit à la fin. »",
           TextMapId = "UI_CHAR_DATA_TEXT_18010102"
         },
         UI_CHAR_DATA_TEXT_18010103 = {
-          ContentFR = "Extrait de Chant du Rossignol Blanc, page 16 :\nUne nuit terrible, une tempête déchaînée détruisit le nid où vivaient le petit rossignol et sa maman.\nLes bêtes sauvages, qui rôdaient depuis longtemps autour d’elles, finirent par attaquer. Elles jaillirent des ombres, rugissant, et se lancèrent à leur poursuite. Pour protéger son enfant, la maman rossignol fit face aux monstres. Elle ne recula pas. Elle leur tint tête jusqu’au bout... puis ferma les yeux à jamais.\nSeul, le petit rossignol blessé se débattit dans la boue de la lande. Il haletait, trempé, ses ailes blanches souillées de sang et de terre, incapable de ressentir à nouveau la caresse du vent.\n\n« La pluie, c’est cruel. Elle mouille les ailes des oiseaux, et les empêche de voler. »",
+          ContentFR = "Extrait de <I>Chant du Rossignol Blanc</>, page 16 :\nUne nuit terrible, une tempête déchaînée détruisit le nid où vivaient le petit rossignol et sa maman.\nLes bêtes sauvages, qui rôdaient depuis longtemps autour d’elles, finirent par attaquer. Elles jaillirent des ombres, rugissant, et se lancèrent à leur poursuite. Pour protéger son enfant, la maman rossignol fit face aux monstres. Elle ne recula pas. Elle leur tint tête jusqu’au bout... puis ferma les yeux à jamais.\nSeul, le petit rossignol blessé se débattit dans la boue de la lande. Il haletait, trempé, ses ailes blanches souillées de sang et de terre, incapable de ressentir à nouveau la caresse du vent.\n\n« La pluie, c’est cruel. Elle mouille les ailes des oiseaux, et les empêche de voler. »",
           TextMapId = "UI_CHAR_DATA_TEXT_18010103"
         },
         UI_CHAR_DATA_TEXT_18010104 = {
-          ContentFR = "Extrait de Chant du Rossignol Blanc, page 19 :\n\nAinsi commença la vie du petit rossignol blanc auprès du Grand Magicien. Leur maison était minuscule, presque vide de jouets, mais elle regorgeait de merveilles insoupçonnées : une horloge qui chantait des berceuses chaque soir à neuf heures pile, une cheminée qui allumait des flammes dans son ventre dès que le froid s’installait, et une boîte en fer blanc qui faisait pousser des bonbons chaque fois qu’on détournait les yeux...\nMais la plus grande des magies, c’était encore le Grand Magicien lui-même, le plus vaillant des chasseurs, un aventurier hors pair, gardien du foyer, protecteur du petit rossignol, et rapporteur d’histoires fabuleuses, de mets délicieux et de cadeaux inattendus.\n« Le petit rossignol qui croise la route d’un Grand Magicien... quelle chance il a eue, hein. »",
+          ContentFR = "Extrait de<I> Chant du Rossignol Blanc</>, page 19 :\n\nAinsi commença la vie du petit rossignol blanc auprès du Grand Magicien. Leur maison était minuscule, presque vide de jouets, mais elle regorgeait de merveilles insoupçonnées : une horloge qui chantait des berceuses chaque soir à neuf heures pile, une cheminée qui allumait des flammes dans son ventre dès que le froid s’installait, et une boîte en fer blanc qui faisait pousser des bonbons chaque fois qu’on détournait les yeux...\nMais la plus grande des magies, c’était encore le Grand Magicien lui-même, le plus vaillant des chasseurs, un aventurier hors pair, gardien du foyer, protecteur du petit rossignol, et rapporteur d’histoires fabuleuses, de mets délicieux et de cadeaux inattendus.\n« Le petit rossignol qui croise la route d’un Grand Magicien... quelle chance il a eue, hein. »",
           TextMapId = "UI_CHAR_DATA_TEXT_18010104"
         },
         UI_CHAR_DATA_TEXT_18010105 = {
-          ContentFR = "Extrait de Chant du Rossignol Blanc, page 23 :\n\n... Près de l’âtre tiède, le petit Rossignol ne cessait de faire de nouvelles rencontres.\nCe jour-là, il reçut la visite d’une Licorne, aussi blanc que lui, venue de très loin.\n{性别:Bienveillant|Bienveillante} et digne de confiance, {性别:Monsieur|Mademoiselle} Licorne rejoignit le Grand Magicien pour affronter les sorciers maléfiques et défendre la paix de leur foyer...\n\nFina referma le livre. Dans ses yeux bleus limpides se reflétaient tes cheveux d’un blanc neigeux et ta corne rouge. Tu le sais : ce conte ne s’est pas terminé.\nTu vas en écrire la suite, chapitre après chapitre... jusqu’au bout du temps.",
+          ContentFR = "Extrait de<I> Chant du Rossignol Blanc</>, page 23 :\n\n... Près de l’âtre tiède, le petit Rossignol ne cessait de faire de nouvelles rencontres.\nCe jour-là, il reçut la visite d’une Licorne, aussi blanc que lui, venue de très loin.\n{性别:Bienveillant|Bienveillante} et digne de confiance, {性别:Monsieur|Mademoiselle} Licorne rejoignit le Grand Magicien pour affronter les sorciers maléfiques et défendre la paix de leur foyer...\n\nFina referma le livre. Dans ses yeux bleus limpides se reflétaient tes cheveux d’un blanc neigeux et ta corne rouge. Tu le sais : ce conte ne s’est pas terminé.\nTu vas en écrire la suite, chapitre après chapitre... jusqu’au bout du temps.",
           TextMapId = "UI_CHAR_DATA_TEXT_18010105"
         },
         UI_CHAR_DATA_TEXT_18010201 = {
           ContentFR = "À un âge où les enfants délaissent depuis longtemps leurs contes de fées, Fina, elle, continue de les lire, inlassablement. Sa voix, même au quotidien, semble calquée sur ces récits : douce, hésitante, pleine d’images magiques.\nCeux qui croisent son chemin se surprennent à lui répondre sur le même ton, mimant ses mots. Par moquerie, parfois, parce qu’elle est une Charon. Par pitié, aussi, devant sa fragilité.\nOu peut-être... parce que ses mots ont réellement quelque chose d’ensorcelant. Comme une incantation douce qui les ferait glisser, sans qu’ils ne s’en rendent compte, dans son monde à elle.",
           TextMapId = "UI_CHAR_DATA_TEXT_18010201"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CHAR_DATA_TEXT_18010202",
-    MaxKey = "UI_CHAR_DATA_TEXT_42010201",
-    Loader = function()
-      return {
+        },
         UI_CHAR_DATA_TEXT_18010202 = {
-          ContentFR = "Parmi les senteurs mêlées d’alcool et les confidences murmurées à demi-mot, une rumeur s’est répandue de taverne en taverne : Morris Glenville, le célèbre industriel de Givrelac, allait se marier.\nIssu du peuple, Glenville avait bâti sa fortune grâce à son usine sidérurgique, devenant l’un des jeunes partis les plus convoités de la ville. Tout le beau monde spéculait sur l'identité de sa future épouse. Mais à la surprise générale, il choisit une veuve sans fortune ni soutien. Certes, cette femme appartenait jadis à une ancienne lignée noble de Givrelac, mais son nom n’était plus qu’un titre vide, vestige d’un passé révolu. Pire encore : son défunt mari avait été condamné pour avoir pratiqué la foi interdite d’Élysium, et sa fille, une enfant Charon, était vue comme une paria.\n\nLes ragots allèrent bon train. Les romantiques prétendaient que la veuve était aussi belle qu’une diva d’opéra. Les commerçants plus cyniques évoquaient une fortune secrète bien cachée. Les chroniqueurs à scandales disaient que, rejeté par les vieux aristocrates à cause de ses origines modestes, Glenville avait opté pour la seule \"noblesse\" qu’il pouvait épouser. Et dans les tavernes plus sombres, on racontait que l’enfant Charon avait ensorcelé l’industriel avec sa magie, dans le but de voler son héritage.\n\nLa vérité, elle, demeure floue. On sait seulement qu’à peine deux ans après le mariage, la veuve donna naissance à un enfant de Glenville. Et que Serafina, la petite fille qui était venue avec elle... disparut à jamais des yeux du public.",
+          ContentFR = "Parmi les senteurs mêlées d’alcool et les confidences murmurées à demi-mot, une rumeur s’est répandue de taverne en taverne : Morris Glenville, le célèbre industriel de Givrelac, allait se marier.\nIssu du peuple, Glenville avait bâti sa fortune grâce à son usine sidérurgique, devenant l’un des jeunes partis les plus convoités de la ville. Tout le beau monde spéculait sur l’identité de sa future épouse. Mais à la surprise générale, il choisit une veuve sans fortune ni soutien. Certes, cette femme appartenait jadis à une ancienne lignée noble de Givrelac, mais son nom n’était plus qu’un titre vide, vestige d’un passé révolu. Pire encore : son défunt mari avait été condamné pour avoir pratiqué la foi interdite d’Élysium, et sa fille, une enfant Charon, était vue comme une paria.\n\nLes ragots allèrent bon train. Les romantiques prétendaient que la veuve était aussi belle qu’une diva d’opéra. Les commerçants plus cyniques évoquaient une fortune secrète bien cachée. Les chroniqueurs à scandales disaient que, rejeté par les vieux aristocrates à cause de ses origines modestes, Glenville avait opté pour la seule \"noblesse\" qu’il pouvait épouser. Et dans les tavernes plus sombres, on racontait que l’enfant Charon avait ensorcelé l’industriel avec sa magie, dans le but de voler son héritage.\n\nLa vérité, elle, demeure floue. On sait seulement qu’à peine deux ans après le mariage, la veuve donna naissance à un enfant de Glenville. Et que Serafina, la petite fille qui était venue avec elle... disparut à jamais des yeux du public.",
           TextMapId = "UI_CHAR_DATA_TEXT_18010202"
         },
         UI_CHAR_DATA_TEXT_18010203 = {
@@ -61917,7 +64112,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_CHAR_DATA_TEXT_18010403"
         },
         UI_CHAR_DATA_TEXT_18010404 = {
-          ContentFR = "« Fina, je suis rentré »\nLa nuit tombait, et le vent faisait rage dans la neige tourbillonnante lorsque l’Étranger poussa la porte de bois ornée d’un petit oiseau peint, les bras chargés de quelques ingrédients bon marché dénichés sur un étal.\nCette maison, étroite et modeste, c’était désormais chez Fina.\nIci, il n’y avait ni jolies robes, ni vaisselle précieuse, ni or étincelant... mais justement pour cela, elle n’avait plus à craindre de trébucher dans une tenue trop luxueuse pour elle, ni d’avaler des restes froids dans une assiette d’apparat, ni de se faire battre à coups de canne dorée pour une révérence mal exécutée. À la place, il y avait de simples habits cousus avec soin dans du tissu rêche, de la soupe fumante servie dans un bol ébréché, et une petite veilleuse transparente faite d’un bout de verre récupéré.\nLa neige avait fondu sur les épaules de l’Étranger, laissant perler des gouttes d’eau. Il s’essuya vaguement avec une serviette, puis se dirigea vers la cuisine pour préparer le repas. Très vite, un parfum alléchant se répandit dans la pièce. Fina referma doucement le livre d’images qu’elle dessinait, le posa avec précaution sur ses genoux pour libérer la table, et accueillir la soupe qu’il lui apportait.\nC’était un soir comme tant d’autres... Jusqu’à ce que quelqu’un frappe brutalement à la vieille porte de bois.\nSur le seuil se tenait un homme élégant, vêtu avec richesse. À la vue de la canne dorée qu’il tenait en main, Fina lâcha ses couverts dans un bruit métallique, cling, et ses crayons ainsi que son carnet s’éparpillèrent sur le sol.\n\n« Monsieur l’Étranger, je présume ? » dit l’homme d’un ton affable en ôtant son chapeau.\n« Je suis Morris Glenville. Je vous remercie d’avoir hébergé Serafina, ma fille disparue. Je suis venu la ramener à la maison. »\nL’Étranger se retourna. Fina s’était réfugiée dans un coin de la pièce, recroquevillée sur elle-même comme un tout petit enfant. Lorsqu’elle leva les yeux vers lui, son regard était noyé de larmes et de terreur. Alors l’Étranger comprit ce qu’il devait faire. Il fit un pas en avant et se posta devant elle.\n« Veuillez partir. Cette fille est ma sœur. Elle n’est pas votre fille. »\nLe sourire de Morris s’élargit, tandis que son regard se glaçait.\n« Il semble qu’il y ait un malentendu, monsieur. Après tout... ce n’est pas à un vulgaire Charon de décider de l’identité d’un enfant. »\nIl sortit alors une arme de la poche de son manteau, et braqua le canon sur le front de l’Étranger.\n« Vous avez sans doute entendu parler de moi. Je ne suis pas amateur de longues négociations. Si vous savez rester à votre place, il ne vous arrivera rien. Mieux : je suis même prêt à vous offrir une belle somme pour avoir pris soin de ma fille ces derniers jours. »\nPuis il se tourna vers Fina, toujours tapie dans l’ombre.\n« Ma chérie... sois raisonnable. Redonne à Papa la boîte que Maman t’a confiée. Et rentrons ensemble. »\nNi l’Étranger ni Fina ne répondirent. Peut-être lassé de jouer seul sa scène, Morris haussa le ton et appuya l’arme contre le front de l’Étranger.\n« Ne m’obligez pas à perdre patience. Je vais compter jusqu’à dix. Si, à la fin, vous ne vous êtes pas montrés coopératifs... je devrai employer des méthodes moins courtoises. »\n\n« Dix. »\nFina fixait l’arme. Elle se souvenait. Cette nuit d’orage, deux semaines plus tôt, c’était cette même arme qui avait ôté la vie de sa mère. La balle lui était destinée, à elle. Mais sa mère s’était interposée. Elle s’était écroulée, le sang jaillissant de sa poitrine, comme une fleur rouge éclatant dans une flaque de pluie. Et jusqu’au dernier instant, elle avait murmuré :\n« Fina, cours. Ne te retourne pas. »\n\n« Neuf. »\nFina regarda l’Étranger. Sa main, derrière son dos, frôlait discrètement le manche d’un couteau. Mais il tremblait. Même elle, qui n’avait presque jamais quitté la maison, avait entendu les domestiques dire ce qu’il arrivait aux Charons qui osaient lever la main sur un Sola.\n\n« Huit. »\nElle se souvint de sa fuite, ce soir-là. Elle avait couru, de toutes ses forces, sous la pluie. Derrière elle, les pas de son beau-père et des domestiques résonnaient sans relâche. Elle avait appelé Monsieur l’Oiseau blanc, comme dans ses contes, et l’apparition avait brièvement retenu ses poursuivants. Elle avait cru être sauvée. Elle haletait. Puis, tout à coup, son pied avait glissé. Le noir l’avait engloutie. Dans l’obscurité, elle avait senti l’eau glacée l’enserrer, la tirer vers le fond. Elle se débattait, désespérée, cherchant à saisir quelque chose, une planche, des morceaux de bois flottant... mais rien ne pouvait la porter. Ses mains frôlaient des légumes pourris, des arêtes de poisson tranchantes, et une étrange viscosité gluante entre les os. Puis, peu à peu, ses forces l’avaient abandonnée. Elle avait cessé de lutter. Elle s’était laissée emporter, dans ce courant glacé qui l’avalait.\nVers un endroit plus sombre encore que cette nuit de pluie.\n\n« Sept. »\nFina se revit, cette nuit-là, sous la pluie.\n« Moi aussi, je vais rejoindre Papa et Maman... dans un autre monde », pensa-t-elle.\nElle sentait que bien des choses l’abandonnaient peu à peu : sa conscience, ses souvenirs... et la vie elle-même.\n« Maman... » appela-t-elle, d’une voix de plus en plus faible. « Maman... »\nPeut-être ses mots avaient-ils franchi les frontières du réel. Elle crut entendre des pas s’arrêter près d’elle, puis sentit des bras doux et chauds la soulever hors des ténèbres.\nC’est sûrement Maman, pensa-t-elle. Et elle sombra dans un profond sommeil.\n\n« Six. »\nFina se rappela ce matin-là, celui où elle s’était éveillée dans une pièce inconnue. La chambre était minuscule, plus petite encore que le grenier où elle vivait autrefois.\nLe lit était dur, plus dur que ceux des domestiques. Mais un rayon de lumière avait percé un trou dans le toit, et la poussière flottait joyeusement dans l’air avant de se déposer sur le dos d’un inconnu. Elle ne le connaissait pas. Et pourtant, elle n’eut pas peur. Parce que, très loin dans ses souvenirs, à l’époque où elle avait encore un \"chez-elle\", elle se souvenait s’être réveillée souvent ainsi : le matin, avec la silhouette de sa mère qui s’activait doucement dans la lumière.\n« Maman... » murmura-t-elle d’une voix rauque, les yeux fixés sur ce dos. « Maman... »\n\n« Cinq. »\nFina se souvint du jour où elle avait appelé l’Étranger « Maman ». Il avait croisé les bras, complètement déconcerté.\n« Tu veux dire Papa, non ? Enfin... je suis pas si vieux que ça... Dis plutôt Grand frère, ce sera mieux. »\nMais sa tête était encore embrouillée, alors elle n’avait pas réussi à se corriger.\n« Maman... » répéta-t-elle, en boucle.\nl’Étranger avait soupiré, résigné :\n« Bon, si tu veux... appelle-moi comme tu veux. »\n\n« Quatre. »\nSa main fouilla à tâtons autour d’elle. Depuis qu’elle avait été gravement blessée en tombant dans les égouts, sa petite réserve de magie n’était toujours pas revenue.\nElle chercha à tâtons, priant pour trouver quelque chose qui pourrait l’aider. Soudain, ses doigts touchèrent un objet froid et métallique.\nElle s’en souvint : c’était le pistolet de l’Étranger.\n\n« Trois. »\nFina se rappela ses premiers jours dans cette maison. L’Étranger ne savait pas s’occuper d’un enfant. Elle pleurait souvent, repensant à sa mère, incapable de s’arrêter. Désespéré, il s’était gratté la tête jusqu’à en décoiffer ses cheveux, puis, comme illuminé par une idée géniale, avait claqué des doigts, fouillé dans un tiroir, et en avait sorti une arme. Il en avait retiré les balles une à une, puis lui avait tendu le pistolet vide :\n« Tiens, joue avec ça. C’était mon jouet préféré quand j’étais gosse. »\nMais pour Fina, ce n’était pas un jouet. C’était ce genre d’objet qui avait pris la vie de sa mère. Alors elle avait pleuré encore plus fort.\n\n« Deux. »\nElle se souvint du silence de l’Étranger quand elle avait rejeté l’arme. Mais, au final, il l’avait quand même ramassée... et lui avait tendue à nouveau. Il avait longuement réfléchi, puis s’était accroupi, le regard grave mais doux.\n« N’en aie pas peur », dit-il. « Je vais t’apprendre à la dompter. Oui, elle peut ôter une vie... Mais c’est aussi la seule chose qui puisse protéger la tienne, et celle de ceux que tu veux protéger. »\n\n« Un. »\nFina se souvint de son petit anniversaire. Ce jour-là, elle avait enveloppé sa mère avec les ailes de son doudou Monsieur l’Oiseau blanc.\n« Fina protégera Maman. »\n\n« Zéro. »\nLes plumes de l’oiseau en peluche tombèrent comme des flocons de neige, voilant sa vision.\n\nBANG...\nLa détonation retentit. Morris Glenville bascula en arrière, son corps s’effondra lourdement au sol dans un bruit sourd. Son visage figé dans la stupeur, incrédule.\nUn couteau lui transperçait le cœur. Une balle lui avait transpercé la poitrine.\nClac. Le pistolet tomba des mains de Fina, encore fumant. Elle leva les yeux vers l’Étranger. Un sourire doux, empreint de tristesse, fleurit sur ses lèvres.\n« L’Étranger... maintenant, on est tous les deux des \"mauvais sorciers\", hein ? »",
+          ContentFR = "« Fina, je suis rentré »\nLa nuit tombait, et le vent faisait rage dans la neige tourbillonnante lorsque l’Étranger poussa la porte de bois ornée d’un petit oiseau peint, les bras chargés de quelques ingrédients bon marché dénichés sur un étal.\nCette maison, étroite et modeste, c’était désormais chez Fina.\nIci, il n’y avait ni jolies robes, ni vaisselle précieuse, ni or étincelant... mais justement pour cela, elle n’avait plus à craindre de trébucher dans une tenue trop luxueuse pour elle, ni d’avaler des restes froids dans une assiette d’apparat, ni de se faire battre à coups de canne dorée pour une révérence mal exécutée. À la place, il y avait de simples habits cousus avec soin dans du tissu rêche, de la soupe fumante servie dans un bol ébréché, et une petite veilleuse transparente faite d’un bout de verre récupéré.\nLa neige avait fondu sur les épaules de l’Étranger, laissant perler des gouttes d’eau. Il s’essuya vaguement avec une serviette, puis se dirigea vers la cuisine pour préparer le repas. Très vite, un parfum alléchant se répandit dans la pièce. Fina referma doucement le livre d’images qu’elle dessinait, le posa avec précaution sur ses genoux pour libérer la table, et accueillir la soupe qu’il lui apportait.\nC’était un soir comme tant d’autres... Jusqu’à ce que quelqu’un frappe brutalement à la vieille porte de bois.\nSur le seuil se tenait un homme élégant, vêtu avec richesse. À la vue de la canne dorée qu’il tenait en main, Fina lâcha ses couverts dans un bruit métallique, <I>cling</>, et ses crayons ainsi que son carnet s’éparpillèrent sur le sol.\n\n« Monsieur l’Étranger, je présume ? » dit l’homme d’un ton affable en ôtant son chapeau.\n« Je suis Morris Glenville. Je vous remercie d’avoir hébergé Serafina, ma fille disparue. Je suis venu la ramener à la maison. »\nL’Étranger se retourna. Fina s’était réfugiée dans un coin de la pièce, recroquevillée sur elle-même comme un tout petit enfant. Lorsqu’elle leva les yeux vers lui, son regard était noyé de larmes et de terreur. Alors l’Étranger comprit ce qu’il devait faire. Il fit un pas en avant et se posta devant elle.\n« Veuillez partir. Cette fille est ma sœur. Elle n’est pas votre fille. »\nLe sourire de Morris s’élargit, tandis que son regard se glaçait.\n« Il semble qu’il y ait un malentendu, monsieur. Après tout... ce n’est pas à un vulgaire Charon de décider de l’identité d’un enfant. »\nIl sortit alors une arme de la poche de son manteau, et braqua le canon sur le front de l’Étranger.\n« Vous avez sans doute entendu parler de moi. Je ne suis pas amateur de longues négociations. Si vous savez rester à votre place, il ne vous arrivera rien. Mieux : je suis même prêt à vous offrir une belle somme pour avoir pris soin de ma fille ces derniers jours. »\nPuis il se tourna vers Fina, toujours tapie dans l’ombre.\n« Ma chérie... sois raisonnable. Redonne à Papa la boîte que Maman t’a confiée. Et rentrons ensemble. »\nNi l’Étranger ni Fina ne répondirent. Peut-être lassé de jouer seul sa scène, Morris haussa le ton et appuya l’arme contre le front de l’Étranger.\n« Ne m’obligez pas à perdre patience. Je vais compter jusqu’à dix. Si, à la fin, vous ne vous êtes pas montrés coopératifs... je devrai employer des méthodes moins courtoises. »\n\n« Dix. »\nFina fixait l’arme. Elle se souvenait. Cette nuit d’orage, deux semaines plus tôt, c’était cette même arme qui avait ôté la vie de sa mère. La balle lui était destinée, à elle. Mais sa mère s’était interposée. Elle s’était écroulée, le sang jaillissant de sa poitrine, comme une fleur rouge éclatant dans une flaque de pluie. Et jusqu’au dernier instant, elle avait murmuré :\n« Fina, cours. Ne te retourne pas. »\n\n« Neuf. »\nFina regarda l’Étranger. Sa main, derrière son dos, frôlait discrètement le manche d’un couteau. Mais il tremblait. Même elle, qui n’avait presque jamais quitté la maison, avait entendu les domestiques dire ce qu’il arrivait aux Charons qui osaient lever la main sur un Sola.\n\n« Huit. »\nElle se souvint de sa fuite, ce soir-là. Elle avait couru, de toutes ses forces, sous la pluie. Derrière elle, les pas de son beau-père et des domestiques résonnaient sans relâche. Elle avait appelé Monsieur l’Oiseau blanc, comme dans ses contes, et l’apparition avait brièvement retenu ses poursuivants. Elle avait cru être sauvée. Elle haletait. Puis, tout à coup, son pied avait glissé. Le noir l’avait engloutie. Dans l’obscurité, elle avait senti l’eau glacée l’enserrer, la tirer vers le fond. Elle se débattait, désespérée, cherchant à saisir quelque chose, une planche, des morceaux de bois flottant... mais rien ne pouvait la porter. Ses mains frôlaient des légumes pourris, des arêtes de poisson tranchantes, et une étrange viscosité gluante entre les os. Puis, peu à peu, ses forces l’avaient abandonnée. Elle avait cessé de lutter. Elle s’était laissée emporter, dans ce courant glacé qui l’avalait.\nVers un endroit plus sombre encore que cette nuit de pluie.\n\n« Sept. »\nFina se revit, cette nuit-là, sous la pluie.\n« Moi aussi, je vais rejoindre Papa et Maman... dans un autre monde », pensa-t-elle.\nElle sentait que bien des choses l’abandonnaient peu à peu : sa conscience, ses souvenirs... et la vie elle-même.\n« Maman... » appela-t-elle, d’une voix de plus en plus faible. « Maman... »\nPeut-être ses mots avaient-ils franchi les frontières du réel. Elle crut entendre des pas s’arrêter près d’elle, puis sentit des bras doux et chauds la soulever hors des ténèbres.\nC’est sûrement Maman, pensa-t-elle. Et elle sombra dans un profond sommeil.\n\n« Six. »\nFina se rappela ce matin-là, celui où elle s’était éveillée dans une pièce inconnue. La chambre était minuscule, plus petite encore que le grenier où elle vivait autrefois.\nLe lit était dur, plus dur que ceux des domestiques. Mais un rayon de lumière avait percé un trou dans le toit, et la poussière flottait joyeusement dans l’air avant de se déposer sur le dos d’un inconnu. Elle ne le connaissait pas. Et pourtant, elle n’eut pas peur. Parce que, très loin dans ses souvenirs, à l’époque où elle avait encore un \"chez-elle\", elle se souvenait s’être réveillée souvent ainsi : le matin, avec la silhouette de sa mère qui s’activait doucement dans la lumière.\n« Maman... » murmura-t-elle d’une voix rauque, les yeux fixés sur ce dos. « Maman... »\n\n« Cinq. »\nFina se souvint du jour où elle avait appelé l’Étranger « Maman ». Il avait croisé les bras, complètement déconcerté.\n« Tu veux dire Papa, non ? Enfin... je suis pas si vieux que ça... Dis plutôt Grand frère, ce sera mieux. »\nMais sa tête était encore embrouillée, alors elle n’avait pas réussi à se corriger.\n« Maman... » répéta-t-elle, en boucle.\nl’Étranger avait soupiré, résigné :\n« Bon, si tu veux... appelle-moi comme tu veux. »\n\n« Quatre. »\nSa main fouilla à tâtons autour d’elle. Depuis qu’elle avait été gravement blessée en tombant dans les égouts, sa petite réserve de magie n’était toujours pas revenue.\nElle chercha à tâtons, priant pour trouver quelque chose qui pourrait l’aider. Soudain, ses doigts touchèrent un objet froid et métallique.\nElle s’en souvint : c’était le pistolet de l’Étranger.\n\n« Trois. »\nFina se rappela ses premiers jours dans cette maison. L’Étranger ne savait pas s’occuper d’un enfant. Elle pleurait souvent, repensant à sa mère, incapable de s’arrêter. Désespéré, il s’était gratté la tête jusqu’à en décoiffer ses cheveux, puis, comme illuminé par une idée géniale, avait claqué des doigts, fouillé dans un tiroir, et en avait sorti une arme. Il en avait retiré les balles une à une, puis lui avait tendu le pistolet vide :\n« Tiens, joue avec ça. C’était mon jouet préféré quand j’étais gosse. »\nMais pour Fina, ce n’était pas un jouet. C’était ce genre d’objet qui avait pris la vie de sa mère. Alors elle avait pleuré encore plus fort.\n\n« Deux. »\nElle se souvint du silence de l’Étranger quand elle avait rejeté l’arme. Mais, au final, il l’avait quand même ramassée... et lui avait tendue à nouveau. Il avait longuement réfléchi, puis s’était accroupi, le regard grave mais doux.\n« N’en aie pas peur », dit-il. « Je vais t’apprendre à la dompter. Oui, elle peut ôter une vie... Mais c’est aussi la seule chose qui puisse protéger la tienne, et celle de ceux que tu veux protéger. »\n\n« Un. »\nFina se souvint de son petit anniversaire. Ce jour-là, elle avait enveloppé sa mère avec les ailes de son doudou Monsieur l’Oiseau blanc.\n« Fina protégera Maman. »\n\n« Zéro. »\nLes plumes de l’oiseau en peluche tombèrent comme des flocons de neige, voilant sa vision.\n\n<I>BANG...\n</>La détonation retentit. Morris Glenville bascula en arrière, son corps s’effondra lourdement au sol dans un bruit sourd. Son visage figé dans la stupeur, incrédule.\nUn couteau lui transperçait le cœur. Une balle lui avait transpercé la poitrine.\n<I>Clac. </>Le pistolet tomba des mains de Fina, encore fumant. Elle leva les yeux vers l’Étranger. Un sourire doux, empreint de tristesse, fleurit sur ses lèvres.\n« L’Étranger... maintenant, on est tous les deux des \"mauvais sorciers\", hein ? »",
           TextMapId = "UI_CHAR_DATA_TEXT_18010404"
         },
         UI_CHAR_DATA_TEXT_18010405 = {
@@ -61941,7 +64136,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_CHAR_DATA_TEXT_21010104"
         },
         UI_CHAR_DATA_TEXT_21010105 = {
-          ContentFR = "Tu écoutais Rebecca te raconter une histoire, un vieux conte de fées transmis dans sa contrée natale.\nIl parlait d'une princesse sirène tombée amoureuse d’un humain. Pour le rejoindre, elle avala un poison qui transforma sa queue en jambes humaines. Mais chaque pas qu’elle faisait devenait un supplice, comme si elle dansait sur des lames.\n« Ce conte est affreusement cruel », as-tu murmuré. « Et à la fin ? Est-ce que l’humain l’a aimée en retour ? Tout ce qu’elle a enduré... ça en valait vraiment la peine ? »\nRebecca sourit avec tendresse.\n« La fin n’a aucune importance, pas plus que ce que l’humain a ressenti », a-t-elle dit, les yeux sombres et profonds comme l’océan.\n« Ce qui compte, c’est que la princesse sirène a aimé, follement, celle qu’elle devenait en poursuivant l’amour. »",
+          ContentFR = "Tu écoutais Rebecca te raconter une histoire, un vieux conte de fées transmis dans sa contrée natale.\nIl parlait d’une princesse sirène tombée amoureuse d’un humain. Pour le rejoindre, elle avala un poison qui transforma sa queue en jambes humaines. Mais chaque pas qu’elle faisait devenait un supplice, comme si elle dansait sur des lames.\n« Ce conte est affreusement cruel », as-tu murmuré. « Et à la fin ? Est-ce que l’humain l’a aimée en retour ? Tout ce qu’elle a enduré... ça en valait vraiment la peine ? »\nRebecca sourit avec tendresse.\n« La fin n’a aucune importance, pas plus que ce que l’humain a ressenti », a-t-elle dit, les yeux sombres et profonds comme l’océan.\n« Ce qui compte, c’est que la princesse sirène a aimé, follement, celle qu’elle devenait en poursuivant l’amour. »",
           TextMapId = "UI_CHAR_DATA_TEXT_21010105"
         },
         UI_CHAR_DATA_TEXT_21010201 = {
@@ -62057,7 +64252,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_CHAR_DATA_TEXT_23010403"
         },
         UI_CHAR_DATA_TEXT_23010404 = {
-          ContentFR = "Avoir. Perdre. Tabethe avait connu cela deux fois.\nD’abord, elle avait eu l’amour inconditionnel de ses parents... avant que la mer impitoyable ne le lui arrache.\nPuis, elle avait goûté à la chaleur d’un lien fraternel avec la fillette... avant qu’un père revenu de loin ne l’emmène ailleurs.\nL'a-t-on enlevée ? Non. Ce père était revenu du front pour l’emmener loin, vers une vie meilleure. C’était ce qu’il y avait de mieux pour elle, se répéta Tabethe. Elle ne devait pas rester dans l’ombre, pas comme elle. Elle méritait la lumière.\nAlors, elle força un sourire. Elle voulait offrir un vrai sourire pour lui dire au revoir. Mais son cœur se mit à chauffer, puis à picoter, jusque dans son nez, jusque dans ses yeux.\n« Merci, grande sœur Tabethe. »\nCes mots d’adieu vinrent heurter tout ce qu’elle tentait de retenir.\nSi seulement... Elle aurait voulu porter des vêtements qu’on choisit soi-même. Se promener main dans la main avec elle. Goûter de nouveaux desserts. Parler de l’école, grimper par-dessus les murs pour rentrer, faire des bêtises... puis se faire gronder, ensemble.\n« Si seulement je pouvais être ta vraie grande sœur », cria-t-elle en silence.\nMais ses lèvres, après s’être entrouvertes, se refermèrent. Lentement. Fermement.\n« Prends soin de toi. »\nC’était peut-être, après tout, le plus beau des adieux.",
+          ContentFR = "Avoir. Perdre. Tabethe avait connu cela deux fois.\nD’abord, elle avait eu l’amour inconditionnel de ses parents... avant que la mer impitoyable ne le lui arrache.\nPuis, elle avait goûté à la chaleur d’un lien fraternel avec la fillette... avant qu’un père revenu de loin ne l’emmène ailleurs.\nL’a-t-on enlevée ? Non. Ce père était revenu du front pour l’emmener loin, vers une vie meilleure. C’était ce qu’il y avait de mieux pour elle, se répéta Tabethe. Elle ne devait pas rester dans l’ombre, pas comme elle. Elle méritait la lumière.\nAlors, elle força un sourire. Elle voulait offrir un vrai sourire pour lui dire au revoir. Mais son cœur se mit à chauffer, puis à picoter, jusque dans son nez, jusque dans ses yeux.\n« Merci, grande sœur Tabethe. »\nCes mots d’adieu vinrent heurter tout ce qu’elle tentait de retenir.\nSi seulement... Elle aurait voulu porter des vêtements qu’on choisit soi-même. Se promener main dans la main avec elle. Goûter de nouveaux desserts. Parler de l’école, grimper par-dessus les murs pour rentrer, faire des bêtises... puis se faire gronder, ensemble.\n« Si seulement je pouvais être ta vraie grande sœur », cria-t-elle en silence.\nMais ses lèvres, après s’être entrouvertes, se refermèrent. Lentement. Fermement.\n« Prends soin de toi. »\nC’était peut-être, après tout, le plus beau des adieux.",
           TextMapId = "UI_CHAR_DATA_TEXT_23010404"
         },
         UI_CHAR_DATA_TEXT_24010101 = {
@@ -62073,13 +64268,21 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_CHAR_DATA_TEXT_24010103"
         },
         UI_CHAR_DATA_TEXT_24010104 = {
-          ContentFR = "Tous les disciples de la Pharmacie Zesheng le savent : dans le jardin arrière repose un sarcophage de pierre, dont le froid ne se dissipe jamais.\n\nLa personne qui y dort est la sœur jumelle de la fondatrice : la dernière Zhuyou du Pavillon de l’Éphémère. Elle avait couru sans relâche au cœur d’une épidémie, et le contrecoup de l’Art l’avait presque emportée — destin tragique. Pourtant, même une figure telle que la fondatrice, capable d’ériger une école entière, ne pouvait alors renverser ce contrecoup. Tout ce qu’elle put faire fut de préparer à l’avance un sarcophage de pierre, une chambre glacée, et — avant que sa sœur n’entre en quiétude — de suspendre de force toutes les fonctions de son corps, dans l’attente d’un avenir.\n\n« La fondatrice a misé tout son espoir sur le futur. »\nLe maître actuel de Zesheng, éventail en main, le dit ainsi aux nouveaux apprentis :\n« Ce futur, il y a moi, il y a vous, vos aînés... et il y aura vos propres disciples, un jour. »\nLes enfants ne comprennent pas forcément le sens de ces mots. Ils se hissent sur la pointe des pieds, veulent voir de leurs yeux cette médecin d’il y a cent ans. Le maître exauce leur curiosité : la femme dans le sarcophage a la peau pâle comme du plâtre, à peine un souffle, les articulations figées comme une statue de glace. À la regarder, on jurerait qu’elle a quitté le monde depuis longtemps. Certains, rien qu’en soutenant ce regard, se sentent gagner par la peur.\nIls dévisagent cette silhouette trop parfaite, puis se tournent vers le maître, incrédules.\nIl comprend, et son visage se ferme.\n« Vous pensez qu’elle ne peut plus être sauvée, n’est-ce pas ? »\nD’ordinaire, il est d’un naturel nonchalant ; il est rare qu’il prenne un ton aussi grave. Les apprentis se taisent aussitôt.\n\nIl balaie l’assemblée du regard et dit : « Les Neuf Chapitres de Dafeng enseignent : \"Tromper les foules par des paroles mensongères — cela est proscrit.\" Alors, pour votre premier jour, je vais parler clairement. La fondatrice, Fufeng, s’est consacrée à la médecine dès sa jeunesse. Elle a écrit l’Essentiel de botanique médicale et fondé la Pharmacie Zesheng. En cent ans, nous avons sauvé un nombre incalculable de vies ; vos familles sont sans doute venues ici consulter, obtenir des remèdes. C’est pourquoi ceux qui nous doivent quelque chose savent rendre la pareille : ils dissimulent nos torts et louent nos mérites. Mais cela n’efface pas un fait : la fondatrice est née Zhuyou, et n’a pas mené cette voie jusqu’au bout. En vérité, elle a commis le crime d’irrespect. »\n\nLes apprentis aspirent un souffle. Beaucoup restent interdits, perdus. Le maître songe au chemin parcouru ; une longue lassitude traverse ses traits. Il leur laisse le temps d’absorber, puis reprend : « La médecine, en soi, consiste à défier le destin. Elle change le sort de ceux qui n’ont commis aucune faute, mais qui meurent simplement parce qu’ils n’ont pas eu la chance d’attendre une Zhuyou. Et pourtant, les Neuf Chapitres disent aussi : \"La grande vertu du Ciel porte le nom de Vie.\" Si le Ciel peut l’incarner, pourquoi les hommes, qui en suivent l’intention, seraient-ils condamnés ? Seulement... cette route est plus difficile que les étrangers ne peuvent l’imaginer. Chaque potion que vous avez déjà bue n’existe qu’après des essais sans fin, des recherches patientes — et parfois des épreuves frôlant la frontière de la vie et de la mort. »\n\nLe jardin est muet.\nUn pétale pâle porté par le vent tombe dans le sarcophage ; le maître l’en chasse avec soin. Puis il regarde ces visages — certains méditatifs, d’autres hésitants, d’autres bouleversés — et dit d’une voix lourde : « Cent ans de tumulte, cent ans d’errance. Zesheng a toujours été un lieu où l’on soigne, même au prix de se dresser contre les Neuf Chapitres. Nos prédécesseurs ont franchi un à un les obstacles, brisé des impasses que d’autres jugeaient impossibles. Et c’est pour cela que la fondatrice nous a confié sa seule parente : parce qu’elle croyait que ses héritiers renverseraient l’impasse qui l’avait vaincue ; que nous atteindrions un horizon que ses doigts ne pouvaient toucher ; que l’ombre de la maladie reculerait grâce à nous — et que les vies interrompues reprendraient, grâce à nous. »\nLa femme dans le sarcophage dort toujours. Son visage n’a pas changé depuis cent ans.\nMais aux yeux de ces enfants, elle n’est plus une curiosité glacée : elle est une montagne immobile — une montagne qu’ils devront un jour dépasser, et qui, en silence, a vu la médecine traverser un siècle.\n\nLe maître conclut : « La Pharmacie Zesheng n’abandonnera jamais aucun malade. »",
+          ContentFR = "Tous les disciples de la Pharmacie Zesheng le savent : dans le jardin arrière repose un sarcophage de pierre, dont le froid ne se dissipe jamais.\n\nLa personne qui y dort est la sœur jumelle de la fondatrice : la dernière Zhuyou du Pavillon de l’Éphémère. Elle avait couru sans relâche au cœur d’une épidémie, et le contrecoup de l’Art l’avait presque emportée — destin tragique. Pourtant, même une figure telle que la fondatrice, capable d’ériger une école entière, ne pouvait alors renverser ce contrecoup. Tout ce qu’elle put faire fut de préparer à l’avance un sarcophage de pierre, une chambre glacée, et — avant que sa sœur n’entre en quiétude — de suspendre de force toutes les fonctions de son corps, dans l’attente d’un avenir.\n\n« La fondatrice a misé tout son espoir sur le futur. »\nLe maître actuel de Zesheng, éventail en main, le dit ainsi aux nouveaux apprentis :\n« Ce futur, il y a moi, il y a vous, vos aînés... et il y aura vos propres disciples, un jour. »\nLes enfants ne comprennent pas forcément le sens de ces mots. Ils se hissent sur la pointe des pieds, veulent voir de leurs yeux cette médecin d’il y a cent ans. Le maître exauce leur curiosité : la femme dans le sarcophage a la peau pâle comme du plâtre, à peine un souffle, les articulations figées comme une statue de glace. À la regarder, on jurerait qu’elle a quitté le monde depuis longtemps. Certains, rien qu’en soutenant ce regard, se sentent gagner par la peur.\nIls dévisagent cette silhouette trop parfaite, puis se tournent vers le maître, incrédules.\nIl comprend, et son visage se ferme.\n« Vous pensez qu’elle ne peut plus être sauvée, n’est-ce pas ? »\nD’ordinaire, il est d’un naturel nonchalant ; il est rare qu’il prenne un ton aussi grave. Les apprentis se taisent aussitôt.\n\nIl balaie l’assemblée du regard et dit : « Les Neuf Chapitres de Dafeng enseignent : \"Tromper les foules par des paroles mensongères — cela est proscrit.\" Alors, pour votre premier jour, je vais parler clairement. La fondatrice, Fufeng, s’est consacrée à la médecine dès sa jeunesse. Elle a écrit l’<I>Essentiel de botanique médicale</> et fondé la Pharmacie Zesheng. En cent ans, nous avons sauvé un nombre incalculable de vies ; vos familles sont sans doute venues ici consulter, obtenir des remèdes. C’est pourquoi ceux qui nous doivent quelque chose savent rendre la pareille : ils dissimulent nos torts et louent nos mérites. Mais cela n’efface pas un fait : la fondatrice est née Zhuyou, et n’a pas mené cette voie jusqu’au bout. En vérité, elle a commis le crime d’irrespect. »\n\nLes apprentis aspirent un souffle. Beaucoup restent interdits, perdus. Le maître songe au chemin parcouru ; une longue lassitude traverse ses traits. Il leur laisse le temps d’absorber, puis reprend : « La médecine, en soi, consiste à défier le destin. Elle change le sort de ceux qui n’ont commis aucune faute, mais qui meurent simplement parce qu’ils n’ont pas eu la chance d’attendre une Zhuyou. Et pourtant, les Neuf Chapitres disent aussi : \"La grande vertu du Ciel porte le nom de Vie.\" Si le Ciel peut l’incarner, pourquoi les hommes, qui en suivent l’intention, seraient-ils condamnés ? Seulement... cette route est plus difficile que les étrangers ne peuvent l’imaginer. Chaque potion que vous avez déjà bue n’existe qu’après des essais sans fin, des recherches patientes — et parfois des épreuves frôlant la frontière de la vie et de la mort. »\n\nLe jardin est muet.\nUn pétale pâle porté par le vent tombe dans le sarcophage ; le maître l’en chasse avec soin. Puis il regarde ces visages — certains méditatifs, d’autres hésitants, d’autres bouleversés — et dit d’une voix lourde : « Cent ans de tumulte, cent ans d’errance. Zesheng a toujours été un lieu où l’on soigne, même au prix de se dresser contre les Neuf Chapitres. Nos prédécesseurs ont franchi un à un les obstacles, brisé des impasses que d’autres jugeaient impossibles. Et c’est pour cela que la fondatrice nous a confié sa seule parente : parce qu’elle croyait que ses héritiers renverseraient l’impasse qui l’avait vaincue ; que nous atteindrions un horizon que ses doigts ne pouvaient toucher ; que l’ombre de la maladie reculerait grâce à nous — et que les vies interrompues reprendraient, grâce à nous. »\nLa femme dans le sarcophage dort toujours. Son visage n’a pas changé depuis cent ans.\nMais aux yeux de ces enfants, elle n’est plus une curiosité glacée : elle est une montagne immobile — une montagne qu’ils devront un jour dépasser, et qui, en silence, a vu la médecine traverser un siècle.\n\nLe maître conclut : « La Pharmacie Zesheng n’abandonnera jamais aucun malade. »",
           TextMapId = "UI_CHAR_DATA_TEXT_24010104"
         },
         UI_CHAR_DATA_TEXT_24010105 = {
           ContentFR = "Au cours de ce voyage à Huaxu, vous aviez déjà une idée générale de ce qui occupait l’esprit de Fushu. Mais vous ne cherchiez pas à en savoir davantage.\nVous et Fushu, vous portiez chacun une personne que vous ne pouviez vous résoudre à abandonner. Tout comme vous n’auriez reculé devant aucun prix pour retrouver Berry, vous n’aviez ni l’envie — ni la légitimité — de l’entraver.\nIl vous arrivait de craindre qu’une telle obstination ne mène à une issue tragique. Heureusement, cela n’advint pas.",
           TextMapId = "UI_CHAR_DATA_TEXT_24010105"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CHAR_DATA_TEXT_24010201",
+    MaxKey = "UI_CHAR_DATA_TEXT_43010205",
+    Loader = function()
+      return {
         UI_CHAR_DATA_TEXT_24010201 = {
           ContentFR = "Les Neuf Chapitres de Dafeng enseignent ceci : « La grande vertu du Ciel se nomme Vie. »\nLa naissance, la vieillesse, la maladie et la mort relèvent d’un droit suprême, un pouvoir absolu qui n’appartient qu’au Seigneur Dragon d’Argent.\nPar compassion, Taihao accorda pourtant aux mortels une seconde chance de vivre, afin d’honorer la valeur de la Vie. Il éleva alors certains Descendants draconiques, leur conférant des arts capables de purifier les maladies. Ainsi naquit la lignée des Zhuyou.\n\nLe Ciel suit ses cycles : tension et relâchement, naissance et disparition, flétrissement et renouveau. Depuis toujours, les lois de Huaxu reposent sur l’équilibre.\nLa magie des Zhuyou incarne le principe même de la guérison : nul mal, nulle blessure ne peut lui résister.\nMais ce pouvoir exige un tribut. La maladie extraite se transfère dans le corps du soigneur. Même s’ils possèdent des méthodes pour expulser l’impur et restaurer le clair, ils ne peuvent échapper à un destin de vie écourtée. Cette magie, où une vie en prolonge une autre, fut appelée l’Art de l’Éphémère.\n\n— Mais cela appartient désormais à un passé vieux de cent ans.\n\nAujourd’hui, à Port-des-Brumes, la lignée des Zhuyou s’est éteinte avec le déclin du Pavillon de l’Éphémère, reléguée aux notes de bas de page de l’histoire.\nÀ moins d’une rencontre exceptionnelle, les gens ordinaires n’auront sans doute plus jamais affaire aux Zhuyou.",
           TextMapId = "UI_CHAR_DATA_TEXT_24010201"
@@ -62173,7 +64376,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_CHAR_DATA_TEXT_31010204"
         },
         UI_CHAR_DATA_TEXT_31010301 = {
-          ContentFR = "Bien qu’elle compte parmi les subordonnées les plus dignes de confiance de Sibylle, Lynn ne jouit pas d’une grande aisance financière.",
+          ContentFR = "Bien que Lynn soit la subordonnée la plus fiable de Sibylle, elle manque d’argent.",
           TextMapId = "UI_CHAR_DATA_TEXT_31010301"
         },
         UI_CHAR_DATA_TEXT_31010302 = {
@@ -62309,7 +64512,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_CHAR_DATA_TEXT_31030202"
         },
         UI_CHAR_DATA_TEXT_31030203 = {
-          ContentFR = "« Récemment, un violent incendie s’est déclaré en périphérie de Rougerive, attirant l’attention de toute la ville. Voici le rapport détaillé.\nDans la nuit du 13 juillet, le laboratoire des Spathatoi de la IXᵉ Légion, situé en dehors des murs de la ville, a brusquement explosé puis pris feu. Selon plusieurs témoins, les flammes ont rapidement envahi les bâtiments alentours, dégageant une épaisse fumée noire. La situation sur place était critique. La IXᵉ Légion est rapidement intervenue pour organiser les secours, tandis que les habitants des environs s’organisaient spontanément pour évacuer les blessés et transporter des vivres.\nAprès plus de vingt-quatre heures d’efforts, le feu a été maîtrisé, mais le bilan humain reste encore incertain.\nD’après les premières investigations, un accident s’est produit lors de recherches sur des matériaux instables. Une erreur de manipulation a provoqué la fuite de substances dangereuses, qui ont pris feu et causé une puissante explosion. Plusieurs personnes liées à l’incident font l’objet d’une enquête. »\n\nLa Gazette de Rougerive, édition n° 1012 – Première page",
+          ContentFR = "« Récemment, un violent incendie s’est déclaré en périphérie de Rougerive, attirant l’attention de toute la ville. Voici le rapport détaillé.\nDans la nuit du 13 juillet, le laboratoire des Spathatoi de la IXᵉ Légion, situé en dehors des murs de la ville, a brusquement explosé puis pris feu. Selon plusieurs témoins, les flammes ont rapidement envahi les bâtiments alentours, dégageant une épaisse fumée noire. La situation sur place était critique. La IXᵉ Légion est rapidement intervenue pour organiser les secours, tandis que les habitants des environs s’organisaient spontanément pour évacuer les blessés et transporter des vivres.\nAprès plus de vingt-quatre heures d’efforts, le feu a été maîtrisé, mais le bilan humain reste encore incertain.\nD’après les premières investigations, un accident s’est produit lors de recherches sur des matériaux instables. Une erreur de manipulation a provoqué la fuite de substances dangereuses, qui ont pris feu et causé une puissante explosion. Plusieurs personnes liées à l’incident font l’objet d’une enquête. »\n\n<I>La Gazette de Rougerive</>, édition n° 1012 – Première page",
           TextMapId = "UI_CHAR_DATA_TEXT_31030203"
         },
         UI_CHAR_DATA_TEXT_31030204 = {
@@ -62329,15 +64532,15 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_CHAR_DATA_TEXT_31030302"
         },
         UI_CHAR_DATA_TEXT_31030303 = {
-          ContentFR = "Parfois, juste avant de s’endormir, Oliver s’asseyait au rebord de la fenêtre du balcon et jouait doucement une berceuse sur sa flûte d’os... une mélodie que seuls les Charons connaissaient.\nDans ces instants-là, Oliver était d’une telle tranquillité qu’on aurait dit qu’il ne faisait plus qu’un avec Yale.\nMais comment et quand Oliver avait appris à jouer de cette flûte... ça, personne ne le saurait jamais.",
+          ContentFR = "Parfois, juste avant de s’endormir, Oliver s’asseyait au rebord de la fenêtre du balcon et jouait doucement une berceuse sur sa flûte d’os... une mélodie que seuls les Charons connaissaient.\nDans ces instants-là, Oliver était d’une telle tranquillité qu’on aurait dit qu’il ne faisait plus qu’un avec Yale.\nMais comment et quand Oliver avait appris à jouer de cette flûte... ça, personne ne le saurait jamais. ",
           TextMapId = "UI_CHAR_DATA_TEXT_31030303"
         },
         UI_CHAR_DATA_TEXT_31030304 = {
-          ContentFR = "Yale avait un jour appris l’existence d’un comportement animal étrange : celui du coucou. Cet oiseau pond ses œufs dans le nid d’autres oiseaux, et à l’éclosion, son poussin expulse les véritables petits pour se faire nourrir exclusivement par les parents adoptifs.\nMême en comprenant que c’était un phénomène naturel, Yale ressentait une colère difficile à expliquer. S’incruster dans le nid des autres, voler leur nourriture, c’était une trahison impardonnable. Cela ne devrait pas être l’innocent petit oiseau qui tombe et se blesse, mais le vil coucou.\nCette perception resta gravée en lui longtemps, intacte même lorsqu’un jour, il découvrit un dossier confidentiel intitulé « Expérimentation de personnalité contrôlée ».",
+          ContentFR = "Yale avait un jour appris l’existence d’un comportement animal étrange : celui du coucou. Cet oiseau pond ses œufs dans le nid d’autres oiseaux, et à l’éclosion, son poussin expulse les véritables petits pour se faire nourrir exclusivement par les parents adoptifs.\nMême en comprenant que c’était un phénomène naturel, Yale ressentait une colère difficile à expliquer. S’incruster dans le nid des autres, voler leur nourriture, c’était une trahison impardonnable. Cela ne devrait pas être l’innocent petit oiseau qui tombe et se blesse, mais le vil coucou.\nCette perception resta gravée en lui longtemps, intacte même lorsqu’un jour, il découvrit un dossier confidentiel intitulé <I>Expérimentation de personnalité contrôlée</>.",
           TextMapId = "UI_CHAR_DATA_TEXT_31030304"
         },
         UI_CHAR_DATA_TEXT_31030305 = {
-          ContentFR = "Expérimentation de personnalité contrôlée — Sujet : Yale\n\nSujet expérimental : Personnalité originelle – Oliver / Personnalité secondaire – Yale\nLieu de recherche : Spathatoi, Section souterraine de la IXᵉ Légion, Rougerive\nResponsable du projet : Équipe du Docteur Jones Bryan\nObjectif : Domestiquer le sujet Charon, doté d’un potentiel magique exceptionnel mais d’une agressivité incontrôlable, en développant une seconde personnalité docile. Cette personnalité secondaire doit hériter pleinement des capacités magiques de la personnalité principale, et être capable de la contenir sans faille.\nEn cas de réussite, le processus permettra la création en série de soldats contrôlables, destinés à l’exploitation militaire.\nProtocole de sécurité : Si la personnalité secondaire échoue à dominer l’originale, elle devra, après assimilation complète de ses capacités, procéder à l’élimination de celle-ci.\nEn cas d’échec de suppression, l’intégralité du sujet expérimental sera détruite sans appel.",
+          ContentFR = "<I>Expérimentation de personnalité contrôlée — Sujet : Yale</>\n\nSujet expérimental : Personnalité originelle – Oliver / Personnalité secondaire – Yale\nLieu de recherche : Spathatoi, Section souterraine de la IXᵉ Légion, Rougerive\nResponsable du projet : Équipe du Docteur Jones Bryan\nObjectif : Domestiquer le sujet Charon, doté d’un potentiel magique exceptionnel mais d’une agressivité incontrôlable, en développant une seconde personnalité docile. Cette personnalité secondaire doit hériter pleinement des capacités magiques de la personnalité principale, et être capable de la contenir sans faille.\nEn cas de réussite, le processus permettra la création en série de soldats contrôlables, destinés à l’exploitation militaire.\nProtocole de sécurité : Si la personnalité secondaire échoue à dominer l’originale, elle devra, après assimilation complète de ses capacités, procéder à l’élimination de celle-ci.\nEn cas d’échec de suppression, l’intégralité du sujet expérimental sera détruite sans appel.",
           TextMapId = "UI_CHAR_DATA_TEXT_31030305"
         },
         UI_CHAR_DATA_TEXT_31030401 = {
@@ -62345,7 +64548,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_CHAR_DATA_TEXT_31030401"
         },
         UI_CHAR_DATA_TEXT_31030402 = {
-          ContentFR = "« Copie. »\nYale se souvenait encore parfaitement de ce moment. Cette voix, lorsqu’il l’avait entendue pour la première fois, lui avait fait l’effet d’un caillou lancé dans un lac limpide : un choc net, suivi de remous. Il s’était réveillé en sursaut, mais autour de lui, il n’y avait rien d’autre que les murs blancs. L’homme en blouse blanche était revenu, une fois de plus, avec sa cargaison de pièces noires. Et comme à chaque fois, il s’était contenté de lâcher un simple : « Assemble-les. » Toujours cette même phrase, usée jusqu’à l’absurde, qui ouvrait chacun de ses souvenirs.\nYale avait pris les pièces dans ses mains, les avait fait rouler entre ses doigts. Mais cette fois-ci... il ne s’était pas senti perdu. Ses gestes lui semblaient guidés par une mémoire invisible. Les éléments complexes s’emboîtaient avec une aisance déconcertante, comme de simples blocs d’enfants. L’un après l’autre, ils trouvaient leur place, comme s’il les avait toujours connus.\nQuand la dernière pièce s’imbriqua dans un petit clic clair, le son parfait d’une clé tournant dans une serrure, Yale resta figé, fasciné par l’objet noir devant lui.\nEn face, l’homme en blouse blanche laissa tomber son stylo. Ses yeux, d’ordinaire si froids, brillaient d’un éclat de joie fiévreuse, comme ceux d’un vautour affamé tombant sur une proie vulnérable. Il se jeta sur Yale et l’enlaça avec force.\n\n« Parfait. C’est parfait. Tu y es arrivé. »\nIl répétait cette phrase, encore et encore. Yale prit enfin son courage à deux mains :\n« Qui êtes-vous ? »\n« Je suis chercheur, » répondit-il. « Tu peux m’appeler Monsieur Jones. »\n« Monsieur Jones. Chercheur. » Yale répéta le nom à voix basse. Puis il demanda :\n« Et moi... qui suis-je ? »\n« Tu es Yale, » répondit Monsieur Jones. « Tu es ma création. »\nYale hocha la tête. Puis la secoua. Il n’avait pas compris. Pas encore. Pas vraiment.\nÀ l’époque, il ne savait pas encore ce que signifiait vraiment être une \"création\".",
+          ContentFR = "« Copie. »\nYale se souvenait encore parfaitement de ce moment. Cette voix, lorsqu’il l’avait entendue pour la première fois, lui avait fait l’effet d’un caillou lancé dans un lac limpide : un choc net, suivi de remous. Il s’était réveillé en sursaut, mais autour de lui, il n’y avait rien d’autre que les murs blancs. L’homme en blouse blanche était revenu, une fois de plus, avec sa cargaison de pièces noires. Et comme à chaque fois, il s’était contenté de lâcher un simple : « Assemble-les. » Toujours cette même phrase, usée jusqu’à l’absurde, qui ouvrait chacun de ses souvenirs.\nYale avait pris les pièces dans ses mains, les avait fait rouler entre ses doigts. Mais cette fois-ci... il ne s’était pas senti perdu. Ses gestes lui semblaient guidés par une mémoire invisible. Les éléments complexes s’emboîtaient avec une aisance déconcertante, comme de simples blocs d’enfants. L’un après l’autre, ils trouvaient leur place, comme s’il les avait toujours connus.\nQuand la dernière pièce s’imbriqua dans un petit <I>clic</> clair, le son parfait d’une clé tournant dans une serrure, Yale resta figé, fasciné par l’objet noir devant lui.\nEn face, l’homme en blouse blanche laissa tomber son stylo. Ses yeux, d’ordinaire si froids, brillaient d’un éclat de joie fiévreuse, comme ceux d’un vautour affamé tombant sur une proie vulnérable. Il se jeta sur Yale et l’enlaça avec force.\n\n« Parfait. C’est parfait. Tu y es arrivé. »\nIl répétait cette phrase, encore et encore. Yale prit enfin son courage à deux mains :\n« Qui êtes-vous ? »\n« Je suis chercheur, » répondit-il. « Tu peux m’appeler Monsieur Jones. »\n« Monsieur Jones. Chercheur. » Yale répéta le nom à voix basse. Puis il demanda :\n« Et moi... qui suis-je ? »\n« Tu es Yale, » répondit Monsieur Jones. « Tu es ma création. »\nYale hocha la tête. Puis la secoua. Il n’avait pas compris. Pas encore. Pas vraiment.\nÀ l’époque, il ne savait pas encore ce que signifiait vraiment être une \"création\".",
           TextMapId = "UI_CHAR_DATA_TEXT_31030402"
         },
         UI_CHAR_DATA_TEXT_31030403 = {
@@ -62353,7 +64556,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_CHAR_DATA_TEXT_31030403"
         },
         UI_CHAR_DATA_TEXT_31030404 = {
-          ContentFR = "Yale ne chercha pas à se défaire des sangles noires qui l’immobilisaient sur la table d’opération. Il ne comprenait pas pourquoi il fallait l’attacher aussi fermement, lui qui n’avait aucune intention de résister.\nSur le sol, des dizaines de dossiers marqués « confidentiel » en rouge étaient éparpillés. Quand le chercheur Jones remarqua que Yale avait lu ces documents, il perdit de nouveau le contrôle. D’un geste brusque, il le fixa à la table et injecta dans son corps un catalyseur prévu pour la dernière phase de l’expérience, dans plusieurs mois.\n« Maudit gosse, tu as vu ce que tu ne devais pas voir, je veux que tu le tues, tout de suite ! »\nDe la lave sembla envahir ses veines, une douleur insupportable le força à pousser un cri perçant, inhabituel chez le garçon si doux d’ordinaire.\n« Hé, copie. »\nUne voix familière mais étrangère surgit dans son esprit. Yale ouvrit brusquement les yeux, mais il ne vit pas la table d’opération, seulement un regard aussi calme que le sien, un garçon identique à lui-même. Sous leurs pieds, une mer de lave rouge comme le sang coulait.\n« Qui es-tu ? »\nL’autre ne répondit pas, mais lui saisit la gorge avec une force inhumaine, coupant le souffle à Yale qui se débattait vainement. Puis, d’un ton lent et haineux :\n« Je suis Oliver... le vrai maître de ce corps. Toi, tu n’es qu’une copie, arrête de faire semblant, tu sais tout. »\nYale regarda dans ses yeux et se souvint du dossier « Expérimentation de personnalité contrôlée ». Chaque page racontait l’expérience, chaque donnée portait le nom « Oliver ». Jusqu’à la dernière, où soudain apparut le nom de Yale, marquant la réussite du remplacement de personnalité.\n« Yale, tu seras ma création parfaite. »\nC’était donc ça, le vrai sens de « création ». L’enfance heureuse, les souvenirs en dehors du laboratoire, la famille aimante, tout cela était absent, non pas parce que Yale avait oublié, mais parce qu’il n’avait jamais eu.\n\nAlors, qui était-il vraiment ? Yale. Mais Yale, c’était un lâche, une vilaine petite créature obéissant aux chercheurs, une création imparfaite, un parasite dans un nid qui n’était pas le sien. Cette fois, Yale décida d’aider ce pauvre œuf abandonné. Il lâcha la main d’Oliver, prêt à se laisser engloutir par la lave, à embrasser la mort brûlante.\nMais l’étouffement attendu ne vint pas. Il fut violemment soulevé. Tandis que les jurons d’Oliver éclataient autour d’eux, d’innombrables explosions retentirent, un bourdonnement intense transperça ses oreilles, son cerveau bouillonnait.\nToute cette colère, cette peur, cette haine éclatèrent en une déflagration, avant de s’éteindre dans un dernier fracas.\nYale leva les yeux vers Oliver, dont le visage restait dur. Pourtant, quelque chose avait changé, sans qu’on puisse dire quoi.\n« Hé, copie, y’a un moyen pour qu’on s’en sorte tous les deux. Tu viens ? »",
+          ContentFR = "Yale ne chercha pas à se défaire des sangles noires qui l’immobilisaient sur la table d’opération. Il ne comprenait pas pourquoi il fallait l’attacher aussi fermement, lui qui n’avait aucune intention de résister.\nSur le sol, des dizaines de dossiers marqués « confidentiel » en rouge étaient éparpillés. Quand le chercheur Jones remarqua que Yale avait lu ces documents, il perdit de nouveau le contrôle. D’un geste brusque, il le fixa à la table et injecta dans son corps un catalyseur prévu pour la dernière phase de l’expérience, dans plusieurs mois.\n« Maudit gosse, tu as vu ce que tu ne devais pas voir, je veux que tu le tues, tout de suite ! »\nDe la lave sembla envahir ses veines, une douleur insupportable le força à pousser un cri perçant, inhabituel chez le garçon si doux d’ordinaire.\n« Hé, copie. »\nUne voix familière mais étrangère surgit dans son esprit. Yale ouvrit brusquement les yeux, mais il ne vit pas la table d’opération, seulement un regard aussi calme que le sien, un garçon identique à lui-même. Sous leurs pieds, une mer de lave rouge comme le sang coulait.\n« Qui es-tu ? »\nL’autre ne répondit pas, mais lui saisit la gorge avec une force inhumaine, coupant le souffle à Yale qui se débattait vainement. Puis, d’un ton lent et haineux :\n« Je suis Oliver... le vrai maître de ce corps. Toi, tu n’es qu’une copie, arrête de faire semblant, tu sais tout. »\nYale regarda dans ses yeux et se souvint du dossier <I>Expérimentation de personnalité contrôlée</>. Chaque page racontait l’expérience, chaque donnée portait le nom « Oliver ». Jusqu’à la dernière, où soudain apparut le nom de Yale, marquant la réussite du remplacement de personnalité.\n« Yale, tu seras ma création parfaite. »\nC’était donc ça, le vrai sens de « création ». L’enfance heureuse, les souvenirs en dehors du laboratoire, la famille aimante, tout cela était absent, non pas parce que Yale avait oublié, mais parce qu’il n’avait jamais eu.\n\nAlors, qui était-il vraiment ? Yale. Mais Yale, c’était un lâche, une vilaine petite créature obéissant aux chercheurs, une création imparfaite, un parasite dans un nid qui n’était pas le sien. Cette fois, Yale décida d’aider ce pauvre œuf abandonné. Il lâcha la main d’Oliver, prêt à se laisser engloutir par la lave, à embrasser la mort brûlante.\nMais l’étouffement attendu ne vint pas. Il fut violemment soulevé. Tandis que les jurons d’Oliver éclataient autour d’eux, d’innombrables explosions retentirent, un bourdonnement intense transperça ses oreilles, son cerveau bouillonnait.\nToute cette colère, cette peur, cette haine éclatèrent en une déflagration, avant de s’éteindre dans un dernier fracas.\nYale leva les yeux vers Oliver, dont le visage restait dur. Pourtant, quelque chose avait changé, sans qu’on puisse dire quoi.\n« Hé, copie, y’a un moyen pour qu’on s’en sorte tous les deux. Tu viens ? »",
           TextMapId = "UI_CHAR_DATA_TEXT_31030404"
         },
         UI_CHAR_DATA_TEXT_31030405 = {
@@ -62432,6 +64635,74 @@ Allez voir ce qui se passe.]],
           ContentFR = "L’échec de laisser filer cette criminelle des années auparavant ne fut pas qu’une honte pour Vulcera, mais la graine d’une obsession. Elle se torture sans cesse d’une question : qu’est-ce qui l’a poussée à renier les principes qu’elle défendait depuis toujours, à trahir les lois qu’elle chérissait, en accordant son pardon à une coupable ?\n\nVulcera se souvient de tout concernant cette femme : ses méthodes, ses crimes, ses mensonges répétés, jusqu’aux petits gestes qui trahissaient sa culpabilité. Ces souvenirs restent gravés dans son esprit. Pourtant, quand elle tente d’oublier tout cela au fond d’un verre, les images s’effacent peu à peu, ne laissant que la nuit fatidique de sa décision erronée. La nuit embrasée, les preuves consumées en cendres, la neige tourbillonnante incapable d’éteindre l’incendie. Lorsqu’elle se retourne, le visage de la criminelle se reflète clairement dans ses yeux. Cette femme, elle aussi qualifiée de monstre, lui raconte son histoire, et pour la première fois, Vulcera comprend ce que signifie être \"semblable\". Dans le brouillard de son ivresse, elle entrevoit que certaines choses sont plus difficiles à pardonner que la haine, comme cette solitude qui ronge l’âme.",
           TextMapId = "UI_CHAR_DATA_TEXT_32010405"
         },
+        UI_CHAR_DATA_TEXT_32020101 = {
+          ContentFR = "Une fois les Asphodèles fermés, les lumières du bar s’éteignent rarement en même temps que celles de la salle. Sous leur lueur douce se dessine la silhouette droite de Camilla, derrière le comptoir, face à toute une variété de visiteurs attardés. Pour Camilla, la nuit est le moment où le véritable travail commence.\n\nElle laisse à ses employés le soin de réapprovisionner les réserves, tandis qu’elle mène ses rendez-vous au comptoir avec ceux qui l’attendent déjà. Dans leurs conversations à voix basse, quelques mots filtrent parfois.\nComme par exemple : « passer la frontière ».",
+          TextMapId = "UI_CHAR_DATA_TEXT_32020101"
+        },
+        UI_CHAR_DATA_TEXT_32020102 = {
+          ContentFR = "Même durant ses rares jours de repos, Camilla ne se relâche jamais vraiment. On la voit souvent penchée sur son livre de comptes, vérifiant soigneusement chaque pièce qui entre. Elle aime dire que l’argent est une eau vive : si on le fait circuler, il continue d’affluer ; mais ceux qui le considèrent seulement comme une richesse à accumuler finissent par le voir perdre toute vitalité, se tarissant peu à peu.\nLorsqu’on lui demande quand elle a compris l’importance de l’argent, Camilla esquisse un sourire ambigu. « Très tôt », répond-elle. « La faim est une excellente enseignante. Tout comme une mère que vous ne souhaiteriez à personne. »",
+          TextMapId = "UI_CHAR_DATA_TEXT_32020102"
+        },
+        UI_CHAR_DATA_TEXT_32020103 = {
+          ContentFR = "Dans l’entrepôt de Camilla, il n’y a guère d’argent. On n’y trouve que quelques objets anciens... et deux lettres jaunies. L’une d’elles est très ancienne, visiblement relue et manipulée d’innombrables fois. \nSur l’enveloppe est écrit : « À ma très chère Bertha ».\nL’autre lettre, plus récente, est écrite de la même main — mais elle est remplie d’injures grossières et d’insultes ignobles.\nSelon Camilla, ces deux lettres ont été écrites par son père à sa mère.\n\nPlacées côte à côte, la tendresse de la première devient presque ironique. Les mots ressemblent à un vin parfumé mêlé de poison : ils attirent Bertha... pour mieux lui porter un coup fatal. Camilla raconte tout cela sans la moindre émotion, comme si elle évoquait une vieille histoire qui ne la concernait pas.\n\nPeut-être faut-il plonger au fond de ses yeux, profonds comme un lac, pour apercevoir — à la surface troublée de leurs reflets — l’ombre fugace des sentiments qu’elle dissimule.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32020103"
+        },
+        UI_CHAR_DATA_TEXT_32020201 = {
+          ContentFR = "À Givrelac, le nom de Camilla Scarlet est connu de tous.\nCertains jurent par les cocktails qu’elle prépare. D’autres admirent l’aisance avec laquelle elle traite ses clients. Et pour beaucoup, ce sont les mystères qui l’entourent qui les attirent encore et encore.\nCamilla semble entourée d’un voile d’énigmes. Derrière elle se cache une histoire que l’on ne finit jamais de creuser. Même ceux qui la connaissent le mieux peuvent démêler fil après fil, observer, écouter, chercher — et ne saisir malgré tout qu’un fragment de ce qu’elle est réellement.\n\nPour la plupart des gens, Camilla reste une énigme.\nLe plus sage est peut-être de ne voir en elle que la patronne des Asphodèles.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32020201"
+        },
+        UI_CHAR_DATA_TEXT_32020202 = {
+          ContentFR = "Parmi les Charons de Givrelac circule une rumeur persistante : En y mettant le prix, on peut parfois acheter « la liberté » auprès de Camilla. Le montant dépend entièrement de son humeur. Parfois une somme astronomique d’or et d’argent. Parfois simplement... une étreinte.\nBien sûr, aucune garantie n’accompagne ce marché. Camilla ne promet rien, et elle n’assume aucune responsabilité pour ce qui peut arriver en chemin. Malgré cela, beaucoup sont prêts à tenter leur chance.\nIls placent leur espoir de quitter l’Empire Hyperboréen entre les mains de Camilla.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32020202"
+        },
+        UI_CHAR_DATA_TEXT_32020203 = {
+          ContentFR = "Lors des nuits glaciales d’hiver, le bruit d’une bouteille tombant sur le sol résonnait avec une netteté particulière. La vapeur des respirations, mêlée à la chaleur de l’alcool, semblait presque brûlante dans l’air. Et parmi les quelques buveurs attablés, on apercevait souvent la silhouette de Bertha — la mère de Camilla. \n\nLa suite des événements était devenue une scène familière.\nLa petite Camilla venait chercher sa mère, ivre morte. Encore trop petite, elle devait hisser l’aisselle de Bertha sur son épaule, agrippant fermement son manteau. Dans le creux de son bras restait coincée la bouteille à moitié vide de sa mère, tandis que son autre main serrait de toutes ses forces le bras de Bertha.\nPour éviter de tomber toutes les deux, Camilla avançait péniblement, pas après pas, soutenant ce corps trop lourd pour elle.\nLorsqu’elles atteignaient enfin la maison, elle était déjà à bout de forces.\nAlors, derrière la porte, retentissaient : le fracas d’une bouteille brisée, les insultes pâteuses de sa mère, et le claquement sec d’une gifle.\n\nPersonne n’entendait jamais la voix de la petite Camilla.\n\nOn ne voyait que son ombre, agenouillée devant Bertha, se détachant dans la lumière jaune et vacillante.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32020203"
+        },
+        UI_CHAR_DATA_TEXT_32020204 = {
+          ContentFR = "Dans Anarchos, personne ne renonce à l’idée de devenir un jour « chef de famille ». Un simple froncement de sourcils suffit pour que les subordonnés accourent, tremblants, pour en connaître la raison. Quelques mots prononcés à voix basse peuvent décider de la vie ou de la mort d’un homme.\nDans ce territoire sans loi, le chef d’un gang agit comme le patriarche d’une maison : c’est lui qui définit les règles selon lesquelles tout le monde doit vivre.\n\nLe père de Camilla était l’un de ces chefs de famille.\nBien sûr, personne ne naît avec un tel titre. Dans sa jeunesse, lui aussi aimait courir en tête, une arme lourde entre les mains, suivi de ses compagnons. Et comme beaucoup d’hommes de cet âge, il avait aussi son histoire d’amour. La femme au cœur de cette histoire était sa fiancée d’alors — la mère de Camilla.\nQu’est-ce qu’un jeune homme ? Un feu ardent qui brûle sans retenue.\nQu’est-ce qu’une jeune fille ? Une glace silencieuse enfermant les désirs du cœur.\nCet amour, autrefois doux comme le miel, finit pourtant par devenir amer comme la bile.\nLors d’une négociation déjà prête à exploser, emportée par l’élan irréfléchi de l’amour, la mère de Camilla tira sur l’ennemi qui avait insulté son fiancé.\nCe coup de feu fut l’étincelle.\nDeux gangs, déjà chargés de rancunes anciennes, se lancèrent dans une guerre que personne n’avait prévue. L’ennemi finit par tomber, dans la peur et les cris. Mais la faction du père de Camilla paya elle aussi un prix terrible.\nIls perdirent des amis. Des frères. Des mères. Et leur chef de famille.\nAinsi, avant même la naissance de Camilla, son père prit la tête du gang.\n\nLa fumée de la poudre n’avait pas encore quitté l’air lorsqu’il prononça le verdict concernant la mère de Camilla. Pour mettre un terme à cette victoire que personne n’avait désirée... elle devait partir.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32020204"
+        },
+        UI_CHAR_DATA_TEXT_32020205 = {
+          ContentFR = "Jeff Ethan était un facteur. À Givrelac, on disait souvent qu’il était le plus fiable de tous. Car il était le seul à accepter de traverser les étendues enneigées année après année, transportant le courrier entre la froide Givrelac et Anarchos, encore plus glaciale. La route à travers les plaines de neige était d’une rudesse extrême, et les Souillés qui y rôdaient rendaient le voyage encore plus dangereux. Même pour un Charon, c’était un travail éprouvant.\n\nChaque fois que Jeff franchissait les plaines enneigées pour rapporter à Givrelac les lettres venues de « l’autre côté », la nouvelle se répandait rapidement dans Brumelac : « Jeff est revenu. »\nEn peu de temps, plusieurs cercles de personnes se formaient autour de lui. Jeff se retrouvait entouré de rires, de larmes et de soupirs.\nCertains apprenaient enfin que leurs proches passés clandestinement de l’autre côté étaient arrivés sains et saufs et avaient réussi à s’y installer. Fous de joie, ils tournaient sur eux-mêmes sans pouvoir s’arrêter.\nD’autres apprenaient qu’un ami ou un parent avait péri dans une guerre entre gangs, et laissaient échapper des cris déchirants.\nMais la plupart du temps, les gens ne recevaient aucune nouvelle — seulement un long soupir vide.\nAujourd’hui pourtant, Jeff Ethan n’avait plus besoin d’écouter ces voix.\nAprès vingt années passées comme facteur, il avait enfin économisé assez d’argent.\nUne somme suffisante pour acheter des billets pour toute sa famille et embarquer à bord d’un train express vers le sud, afin de s’y installer. Il n’aurait plus jamais à conduire sa vieille charrette délabrée à travers les plaines enneigées.\nAu cours de ces vingt années de service, la plus grosse somme qu’il ait jamais reçue provenait d’une noble dame d’Anarchos. Dans ses gestes et son port, elle ressemblait étrangement à l’un de ces « chefs de famille » capables de décider de la vie ou de la mort d’un homme.\nElle avait glissé dans les mains de Jeff une lourde bourse de pièces d’or.\nSa demande était simple : elle souhaitait punir son mari infidèle.\nJeff devait simplement intercepter toutes les lettres que cet homme échangeait avec une femme de Givrelac nommée Bertha, remettre ces lettres à la noble dame, puis livrer à chacun les lettres qu’elle avait elle-même préparées. La récompense était telle qu’elle lui épargnerait dix années de travail.\nÀ force de transporter ces lettres, Jeff Ethan comprit peu à peu ce qui se passait réellement.\nCertaines nuits, il dormait dans sa charrette sans parvenir à fermer l’œil, hésitant à révéler la vérité à ces deux anciens amants malheureux.\nMais cette nuit-là, la neige tomba si abondamment que le poids de la poudre blanche fit s’effondrer le toit de la charrette.\nJeff pesta contre cette maudite tempête, calculant s’il pourrait encore atteindre Givrelac en sécurité et combien coûteraient les réparations. Puis il pensa à sa femme et à sa fille, à Givrelac.\nDormaient-elles à cet instant ? Ou grelottaient-elles dans leur lit, incapables de trouver le sommeil à cause du froid, comme lui ?\nFinalement, Jeff choisit de garder le silence.\n\nOui, la véritable manipulatrice était cette noble dame malveillante — et son mari ne lui était pas plus fidèle. Quant à cette folle de Bertha, elle battait et insultait sans cesse sa pauvre fille. Aucun des trois n’était quelqu’un de bien. Et lui, Jeff Ethan, qu’avait-il fait de mal ?\nIl n’était qu’un homme ordinaire.\nUn simple facteur.\nTout ce qu’il pouvait faire, c’était livrer le courrier. Et il n’avait pas besoin d’en faire davantage.\n\n« Chéri... »\nSa femme passa ses bras autour de sa taille et leva les yeux vers lui.\n« L’endroit où nous allons... c’est bien un endroit très chaud, n’est-ce pas ? »\nSans savoir pourquoi, en voyant le sourire paisible et plein d’espoir de sa femme, une image traversa soudain l’esprit de Jeff. Cette folle nommée Bertha. Elle était morte depuis des années.\nLe corps de Jeff trembla brusquement, comme s’il venait de frissonner de froid. Sa femme le regarda avec inquiétude. Le facteur lui tapota doucement l’épaule et serra plus fort les billets qu’il tenait dans sa main.\nSur le ticket était imprimé : Givrelac — Gare des Cent-Fleurs — Express Aurora\n« Oui », répondit-il.\n« À partir de maintenant, toi, moi... et notre fille... nous n’aurons plus jamais froid. »\n\nDans son esprit, il semblait déjà voir au loin une lumière douce et chaleureuse. Le soleil brillait, et les fleurs étaient en pleine éclosion.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32020205"
+        },
+        UI_CHAR_DATA_TEXT_32020301 = {
+          ContentFR = "Bien que Camilla soit née à Givrelac, ce n’est pas réellement sa terre d’origine.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32020301"
+        },
+        UI_CHAR_DATA_TEXT_32020302 = {
+          ContentFR = "Camilla suit un principe très simple : les affaires sont les affaires, et les sentiments sont autre chose. Et pourtant, lorsqu’un habitué tombe dans une mauvaise passe, Camilla finit toujours par poser devant lui son verre habituel. De quoi chasser quelques soupirs pour un moment.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32020302"
+        },
+        UI_CHAR_DATA_TEXT_32020303 = {
+          ContentFR = "Au début, Camilla détestait l’alcool. Son odeur lui rappelait les coups et les cris de sa mère lorsqu’elle était enfant. Quand Bertha retrouvait finalement ses esprits après avoir trop bu, la petite Camilla était déjà couverte de blessures. Sa mère se mettait alors à pleurer et à s’excuser, mais ces excuses ne changeaient jamais rien.\nCe n’est que lorsque la vente d’alcool lui permit enfin de manger à sa faim que Camilla commença peu à peu à accepter cette odeur.\nAvec le temps, elle finit même par trouver certains alcools... à son goût.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32020303"
+        },
+        UI_CHAR_DATA_TEXT_32020304 = {
+          ContentFR = "La cicatrice sur le visage de Camilla fut laissée par sa mère, qui la blessa avec l’arête métallique de l’emblème familial. À l’époque, la petite Camilla ne voyait dans cet insigne qu’un objet brillant et scintillant. Elle était bien trop jeune pour comprendre ce qu’il représentait réellement pour sa mère.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32020304"
+        },
+        UI_CHAR_DATA_TEXT_32020305 = {
+          ContentFR = "Camilla avait autrefois envisagé d’en finir avec la vie — la sienne et celle de sa mère — pour mettre un terme à leurs souffrances. Mais au dernier moment, elle avait reculé.\nDes années plus tard, lorsque sa mère mourut, personne ne pleura sa mort autant que Camilla. Et personne ne ressentit autant de soulagement qu’elle.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32020305"
+        },
+        UI_CHAR_DATA_TEXT_32020401 = {
+          ContentFR = "Le vent apportait une légère odeur de sang. Camilla descendit du véhicule et fixa l’horizon. Elle connaissait parfaitement le nom de la terre qui s’étendait dans cette direction.\n\n« Le pays natal. »\n\nCe n’était pas une bonne terre. Désolée et stérile, plus froide encore que Givrelac, elle ne possédait presque aucune richesse digne d’être mentionnée. On aurait dit qu’elle n’existait que pour prouver que l’être humain pouvait survivre dans un climat aussi impitoyable.\nLes tribus d’Askard, retranchées dans leurs fjords isolés du monde ; les habitants de Khemet, habitués aux oasis fertiles ; et même l’Empire Hyperboréen, pourtant si avide d’étendre ses frontières — tous n’avaient guère d’intérêt pour cette lointaine étendue sauvage.\nMais l’absence de pouvoir signifie aussi que la terre peut accueillir ceux que le pouvoir rejette. Peu à peu, les pauvres écrasés par les lourdes taxes, certains Charons désireux d’échapper aux injustices, ainsi que des vagabonds, des criminels et des contrebandiers vinrent s’y rassembler.\nLorsque l’ordre disparaît, les hommes créent leurs propres lois.\nDes lois primitives.\nDes lois brutales.\n\nLe vent semblait l’accueillir, glissant dans ses cheveux comme un vieil ami, l’invitant à rentrer rendre visite — Camilla avait déjà longé cette frontière indistincte à plusieurs reprises. Pourtant, elle n’avait jamais franchi la limite.\nPourquoi donc ?\nUne part d’elle voulait voir de ses propres yeux quel genre de terre pouvait engendrer une mère folle... et un père au cœur de pierre.\nEt pourtant, Camilla hésitait.\nCe pays natal et les gens qui y vivaient n’existaient pour elle qu’à travers les plaintes de sa mère — comme une vieille lettre qu’elle n’aurait jamais dû ouvrir.\nCamilla en sentait le danger.\nSi elle décidait de chercher la vérité, tout ce qu’elle possédait aujourd’hui pourrait bien se révéler aussi fragile qu’un vieux papier jauni, prêt à se réduire en poussière au moindre contact.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32020401"
+        },
+        UI_CHAR_DATA_TEXT_32020402 = {
+          ContentFR = "Camilla se souvient encore du crépuscule où elle reçut la première lettre des mains du facteur. Elle n’était alors qu’une adolescente. Serrant l’enveloppe contre sa poitrine, elle courut jusqu’à la maison. Les phrases de la lettre résonnaient sans cesse dans son esprit : son père y exprimait combien sa mère lui manquait, et la joie qu’il avait ressentie en apprenant qu’il avait une fille. Son cœur battait si fort qu’elle crut un instant qu’il allait jaillir hors de sa poitrine.\nAinsi donc, ce « pays natal » dont sa mère parlait depuis des années existait vraiment. Ce n’était pas une illusion née de la folie de Bertha.\n\nDans les souvenirs de sa mère, ce pays était une terre dominée par les gangs, où régnaient en permanence le chaos et les affrontements : un territoire sans maître, privé de toute autorité, où la violence et le crime prospéraient. Comparé à l’Empire Hyperboréen, c’était une autre forme de malheur. Et pourtant, Bertha semblait y être attachée avec une obstination presque étrange.\nPeut-être parce qu’elle n’était pas partie de son plein gré. Elle en avait été chassée par le père de Camilla.\nDésespérée, Bertha avait erré jusqu’à Givrelac, où elle donna naissance à Camilla, le cœur rempli d’humiliation et d’amertume.\nMais dans la lettre de cet homme, l’histoire était toute différente.\nIl disait n’avoir eu aucun choix.\n\n« Famille ».\n« Rivalités ».\n« Règles ».\n\nCamilla savait lire ces mots, mais elle ne comprenait pas encore ce qu’ils signifiaient réellement. Pourtant, elle sentait confusément qu’ils avaient été comme des lames acérées, gravant dans le cœur de sa mère des blessures impossibles à effacer. Et malgré tout, la lettre laissait entendre que tout cela appartenait désormais au passé.\nCe soir-là, Bertha ne but pas. Mais ses mains tremblaient en ouvrant la lettre, plus violemment encore que lorsqu’elle tenait une bouteille. Elle pleura, puis se mit à rire, puis pleura de nouveau — comme une enfant incapable de contenir ses émotions. Elle passa la nuit entière à rédiger sa réponse.\nÀ l’aube, dans la brume matinale, elle glissa dans la boîte aux lettres une enveloppe remplie d’espoir.\nMais aucune réponse ne vint.\nBertha se persuada que le facteur avait dû égarer la lettre sur la route. Elle en écrivit une autre. Puis encore une autre. Lorsque Camilla lui posait des questions, sa mère lui caressait doucement la joue en murmurant les mêmes paroles : Son père était un homme important. Lorsqu’il aurait réglé les affaires de sa famille... il viendrait les chercher.\nPendant un temps, Bertha cessa même de boire.\nElle trouva une place de domestique dans une maison aisée. Et lorsqu’elle avait un moment de liberté, elle se rendait près des portes de la cité, fixant la route qui s’étendait au-delà des murailles — persuadée qu’un jour, une silhouette familière apparaîtrait au bout de la route, surgissant du vent et de la neige.\n\nTout semblait enfin aller mieux.\nJusqu’au jour où, la veille des dix-huit ans de Camilla, arriva la deuxième lettre.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32020402"
+        },
+        UI_CHAR_DATA_TEXT_32020403 = {
+          ContentFR = "La veille des dix-huit ans de Camilla, une nouvelle lettre arriva enfin. Elle venait de ce pays qu’elles appelaient leur terre natale. L’expéditeur était son père — le nom que sa mère répétait sans cesse depuis tant d’années. Bertha était folle de joie. Elle courait sur le chemin boueux en agitant la lettre au-dessus de sa tête, tournoyant comme une enfant.\nCamilla lui cria de ralentir, de faire attention. Mais sa mère n’écoutait pas. Elle parlait sans s’arrêter — du passé, bien sûr... mais surtout de l’avenir.\nElles allaient tout avoir : de l’argent en abondance, et de l’amour à profusion.\nSous les lampadaires jaunâtres, son ombre s’étirait sur la route comme celle d’une jeune fille en pleine danse.\nCamilla soupira doucement en souriant.\nPour un instant, les rôles semblaient inversés : elle était devenue la mère... et Bertha, la jeune fille amoureuse.\nLorsqu’elles rentrèrent enfin à la maison, Bertha alluma une bougie et ouvrit soigneusement l’enveloppe.\nPuis ses paroles s’arrêtèrent brusquement. La flamme vacilla légèrement. La lumière brûlante se refléta dans ses yeux. Sa bouche resta ouverte, son sourire figé. Camilla ne distinguait pas encore les mots. Mais elle comprit aussitôt : ce n’était pas une lettre d’amour.\nUn instant de silence suivit.\nPuis Bertha poussa un cri rauque — un hurlement de bête blessée que Camilla n’avait jamais entendu auparavant. La chaise fut renversée d’un coup de pied. Une assiette vola contre le mur. Puis un bol de soupe. Les plats se brisèrent les uns après les autres, éclaboussant les murs de taches sombres.\nCamilla soupira et commença à nettoyer.\nElle faisait cela depuis l’enfance. Lorsque son balai poussa la lettre tombée sur le sol, elle y jeta un regard. C’était la même écriture que la première lettre. Mais il n’y restait plus aucune trace de tendresse. Les phrases étaient glaciales, remplies d’injures. Il leur ordonnait de rester dans l’Empire et de se débrouiller seules. De cesser de lui écrire. De ne plus jamais l’importuner. Dans sa patrie, il avait déjà une femme et un fils.\n\nMême après la mort de sa femme, il ne souhaitait toujours pas reconnaître Camilla et sa mère. La première lettre n’était qu’une folie écrite sous l’emprise de l’alcool. Il n’en avait jamais pensé un mot. L’affaire de Bertha était une tache sur l’honneur de la famille. Il n’avait aucune intention de ramener cette honte à la lumière.\n\nOui.\nLeur simple existence était une honte. Camilla regarda sa mère, effondrée sur la table, sanglotant comme si toute vie l’avait quittée. Elle retourna silencieusement dans sa chambre. Elle n’avait jamais espéré recevoir une étreinte de sa mère. Elle souhaitait seulement ne plus être le réceptacle de sa colère et de sa douleur. Le lendemain matin, la maison était étrangement silencieuse.\nComme d’habitude, Camilla alla réveiller sa mère.\nLorsqu’elle posa la main sur elle, son corps était déjà froid — froid comme la neige de Givrelac. Autour d’elle, sept ou huit bouteilles vides gisaient renversées.\nCamilla ne fut pas surprise.\nDepuis l’enfance, cette scène apparaissait déjà dans ses cauchemars. Elle se mordit la lèvre. Mais aucune larme ne vint.\nAprès un long moment, Camilla s’assit près de sa mère et la prit doucement dans ses bras. Puis elle se leva avec difficulté, réfléchissant à ce qu’elle devait faire pour organiser les funérailles.\nC’est alors qu’elle remarqua quelque chose sur la table qu’elle avait nettoyée la veille.\n\nUn gâteau d’anniversaire.\nLa chose qu’elle avait toujours désirée... sans jamais avoir la chance d’y goûter.\nAinsi commença l’âge adulte de Camilla Scarlet.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32020403"
+        },
+        UI_CHAR_DATA_TEXT_32020404 = {
+          ContentFR = "Les longues nuits de Givrelac faisaient trembler les gens de froid. Le vent glacial coupait les oreilles jusqu’à les rendre rouges. Les lèvres se raidissaient au point de ne plus pouvoir former correctement les mots. Chaque inspiration emplissait les poumons d’un air si froid qu’il donnait le vertige. La petite Camilla n’en pouvait presque plus.\n\nSi seulement sa mère buvait un peu moins... Peut-être auraient-elles un manteau plus épais. Peut-être Camilla serait-elle moins souvent battue. Peut-être ne vivraient-elles pas à crédit. Peut-être n’auraient-elles pas à se demander chaque jour comment trouver le prochain repas.\nMais suffirait-il vraiment d’arrêter de boire ?\nLa petite Camilla esquissa un sourire amer. L’alcool n’était qu’une partie de leur malheur. La véritable cause était la douleur que sa mère ne pouvait ni résoudre ni fuir. En cet instant, ce poids était même littéral.\nLe corps ivre de sa mère pesait sur elle, l’écrasant presque. Camilla n’avait d’autre choix que de serrer les dents et de la ramener chez elles.\nLe vent devenait de plus en plus violent.\nSes doigts, crispés autour du bras de sa mère, étaient déjà engourdis. La corde de la bouteille suspendue à sa main frottait contre son poignet à chaque pas, rouvrant peu à peu les anciennes blessures que sa mère lui avait infligées. Et la coupable de toutes ces douleurs — sa mère — était là, à moitié endormie, comme si tout cela ne la concernait pas.\nCamilla ne supportait plus cette vie.\nElle entraîna sa mère vers le lac. La glace à la surface s’était légèrement fissurée — suffisamment pour engloutir deux silhouettes maigres. Étrangement, elle marchait d’un pas rapide. Comme si ce qui l’attendait devant elle n’était pas une impasse... mais une délivrance. Lorsqu’elles atteignirent la rive, sa mère se réveilla un instant.\n\n« ... Tu as froid ? »\nLes yeux à moitié fermés, elle attrapa maladroitement son manteau et le posa sur la tête de Camilla en titubant.\n« Rentrons... je vais allumer un feu... »\nAprès avoir marmonné ces mots, elle se rendormit aussitôt.\nOui.\nSe jeter dans le lac serait trop froid, ce soir.\nPeut-être valait-il mieux rentrer. Allumer un feu. Se réchauffer un peu. Et réfléchir ensuite.\n\nLe vent et la neige s’adoucirent.\nIls les enveloppèrent doucement... comme pour les ramener toutes les deux vers la maison.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32020404"
+        },
         UI_CHAR_DATA_TEXT_33010101 = {
           ContentFR = "Tu l’as rencontrée pour la première fois dans les Asphodèles. Face au calme de l’aubergiste, la jeune fille semblait pressée, décoiffée... visiblement en quête d’une aide urgente.\nPeut-être venait-elle de perdre la recette du jour, se condamnant à passer la nuit le ventre vide, peut-être sortait-elle d’une dispute stérile et cherchait désespérément quelqu’un pour prendre sa défense, ou peut-être, comme toi, n’était-elle qu’une étrangère égarée, sans savoir quelle route emprunter.\nCe que tu ignorais alors, c’est que cette inconnue avait bel et bien perdu une somme importante, qu’elle était réellement en difficulté, et qu’elle était, tout comme toi, une étrangère ici. Mais ses pas ne couraient pas pour elle-même : ils couraient pour une poignée de parfaits inconnus, dont la vie dépendait de son aide.",
           TextMapId = "UI_CHAR_DATA_TEXT_33010101"
@@ -62465,7 +64736,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_CHAR_DATA_TEXT_33010203"
         },
         UI_CHAR_DATA_TEXT_33010204 = {
-          ContentFR = "On raconte que...\nQuand la célèbre Princesse des Déchets était encore petite,\nSon regard s’échappait déjà bien au-delà des hautes murailles.\nL’intérieur de Givrelac, telle une prairie verdoyante et luxuriante,\nNotre Princesse Poubelle rêvait de grimper ces murs imposants.\nMais elle était trop frêle, trop jeune encore.\nElle s’interrogeait, souffrait, se rebellait, ruminait !\nAlors elle quitta la cité, jurant de ne jamais revenir en ce lieu douloureux !\nElle courait, fulminait, combattait, et gardait ses souvenirs en mémoire !\nSur son passage, les dégoûtants Souillés disparaissaient !\nMais fatiguée, elle sombra dans un sommeil doux au cœur de la neige.\nAccompagnée par ses petites bêtes, elle dormit jours et nuits,\nEt même en rêve, secourait les affligés, humains ou animaux.\nEnfin, le distrait Roi des Déchets, sur son trône, s’alarma de la fuite de sa fille chérie,\nEt ramena notre Princesse des Déchets, de retour dans sa fidèle cité de Givrelac !\n\nLa légende de la Princesse des Déchets, de Buck, le dramaturge.",
+          ContentFR = "On raconte que...\nQuand la célèbre Princesse des Déchets était encore petite,\nSon regard s’échappait déjà bien au-delà des hautes murailles.\nL’intérieur de Givrelac, telle une prairie verdoyante et luxuriante,\nNotre Princesse Poubelle rêvait de grimper ces murs imposants.\nMais elle était trop frêle, trop jeune encore.\nElle s’interrogeait, souffrait, se rebellait, ruminait !\nAlors elle quitta la cité, jurant de ne jamais revenir en ce lieu douloureux !\nElle courait, fulminait, combattait, et gardait ses souvenirs en mémoire !\nSur son passage, les dégoûtants Souillés disparaissaient !\nMais fatiguée, elle sombra dans un sommeil doux au cœur de la neige.\nAccompagnée par ses petites bêtes, elle dormit jours et nuits,\nEt même en rêve, secourait les affligés, humains ou animaux.\nEnfin, le distrait Roi des Déchets, sur son trône, s’alarma de la fuite de sa fille chérie,\nEt ramena notre Princesse des Déchets, de retour dans sa fidèle cité de Givrelac !\n\n<I>La légende de la Princesse des Déchets</>, de Buck, le dramaturge.",
           TextMapId = "UI_CHAR_DATA_TEXT_33010204"
         },
         UI_CHAR_DATA_TEXT_33010301 = {
@@ -62477,7 +64748,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_CHAR_DATA_TEXT_33010302"
         },
         UI_CHAR_DATA_TEXT_33010303 = {
-          ContentFR = "Margie adore tirer la queue des petits animaux. Elle a même essayé avec certains Souillés, ces créatures répugnantes, ce qui lui a valu un rare sermon du vieux Martin.\nVexée, Margie a juré de ne jamais lui pardonner ce « manque total de respect, de compréhension et d’acceptation de ses goûts personnels »... jusqu’à ce qu’il en ait une, comme les petits animaux.\nLe conflit a pris fin quand Martin, dans une mise en scène un peu folle, s’est mis à sauter sur un balai, affirmant qu'il avait fait pousser une queue magique en forme de sapin. Margie, ne pouvant retenir son rire, a alors prononcé un discours passionné intitulé « Les plus mignonnes sont les plus touffues », ce qui a brisé leur silence d’un mois et mis fin à leur communication faite uniquement de gestes.",
+          ContentFR = "Margie adore tirer la queue des petits animaux. Elle a même essayé avec certains Souillés, ces créatures répugnantes, ce qui lui a valu un rare sermon du vieux Martin.\nVexée, Margie a juré de ne jamais lui pardonner ce « manque total de respect, de compréhension et d’acceptation de ses goûts personnels »... jusqu’à ce qu’il en ait une, comme les petits animaux.\nLe conflit a pris fin quand Martin, dans une mise en scène un peu folle, s’est mis à sauter sur un balai, affirmant qu’il avait fait pousser une queue magique en forme de sapin. Margie, ne pouvant retenir son rire, a alors prononcé un discours passionné intitulé <I>Les plus mignonnes sont les plus touffues</>, ce qui a brisé leur silence d’un mois et mis fin à leur communication faite uniquement de gestes.",
           TextMapId = "UI_CHAR_DATA_TEXT_33010303"
         },
         UI_CHAR_DATA_TEXT_33010304 = {
@@ -62489,7 +64760,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_CHAR_DATA_TEXT_33010305"
         },
         UI_CHAR_DATA_TEXT_33010401 = {
-          ContentFR = "Le printemps est rare à Givrelac, et c’est peut-être pour cela qu’il a tant de valeur.\nLes fleurs s’ouvrent, les oiseaux migrateurs reviennent, des papillons d’un vert émeraude dansent dans l’air doux... et si tu restes le nez plongé dans ton travail, laissant filer cette saison entre tes doigts, tu t’en mordras les doigts quand reviendra le long hiver.\nCe jour-là, Margie s’était aisément convaincue qu’une pause ne ferait pas de mal. Au lieu de tournoyer comme une toupie d’un coin à l’autre de la cité, elle s’était affalée paresseusement sur un banc, les yeux entrouverts sous la tiédeur du soleil.\nUne conversation flotta alors jusqu’à ses oreilles...\n« Regarde, maman, il me lèche la main ! Ce petit chat sans maison est si triste... je peux le ramener ? »\n« D’accord, mon trésor. Mais tu sais, dehors il y a tant de chats et de chiens errants... on ne peut pas tous les recueillir. Alors je ne peux dire oui qu’une seule fois. Tu es sûre que ce sera lui ? »\nLa suite se perdit dans le flou, non pas parce que la discussion s’achevait, mais parce que Margie, partagée entre un petit sentiment de culpabilité et le plaisir d’un rare moment de détente, s’assoupit.\n\nQuand elle rouvrit les yeux, le soleil s’était presque noyé derrière les murailles de Givrelac. Elle sentit sur sa main un poids chaud et soyeux : un minuscule chat noir, si maigre qu’on aurait dit un chaton nouveau-né, mais affublé de deux longs sourcils blancs en forme de huit, comme un vieux sage miniature. Sans doute la mère et l’enfant n’avaient-ils pas voulu de lui à cause de cette allure étrange. Margie le recueillit dans sa veste, traversa les ruelles du taudis en répondant aux salutations des habitants, et rentra chez elle. Câlinant la petite boule de poils, elle murmura avec un sourire :\n« Qu’on soit Sola, Charon... ou chaton, on a toujours besoin de quelqu’un pour veiller sur nous. » \nLe chat, mi-jeune, mi-vieux, ne comprenait pas ses mots mais se laissa faire, rentrant ses griffes. Margie, elle, attrapa sa queue qui battait l’air et déclara :\n« À partir d’aujourd’hui, tu t’appelleras Sourcil-Blanc... Aïe ! »\nLe lendemain, trois belles griffures marquaient son visage. Même le soleil de Givrelac n’arrivait pas à lui arracher un sourire. Mais tous savaient qu’avant l’heure du déjeuner, la Margie rieuse serait déjà de retour.",
+          ContentFR = "Le printemps est rare à Givrelac, et c’est peut-être pour cela qu’il a tant de valeur.\nLes fleurs s’ouvrent, les oiseaux migrateurs reviennent, des papillons d’un vert émeraude dansent dans l’air doux... et si tu restes le nez plongé dans ton travail, laissant filer cette saison entre tes doigts, tu t’en mordras les doigts quand reviendra le long hiver.\nCe jour-là, Margie s’était aisément convaincue qu’une pause ne ferait pas de mal. Au lieu de tournoyer comme une toupie d’un coin à l’autre de la cité, elle s’était affalée paresseusement sur un banc, les yeux entrouverts sous la tiédeur du soleil.\nUne conversation flotta alors jusqu’à ses oreilles...\n « Regarde, maman, il me lèche la main ! Ce petit chat sans maison est si triste... je peux le ramener ? »\n« D’accord, mon trésor. Mais tu sais, dehors il y a tant de chats et de chiens errants... on ne peut pas tous les recueillir. Alors je ne peux dire oui qu’une seule fois. Tu es sûre que ce sera lui ? »\nLa suite se perdit dans le flou, non pas parce que la discussion s’achevait, mais parce que Margie, partagée entre un petit sentiment de culpabilité et le plaisir d’un rare moment de détente, s’assoupit.\n\nQuand elle rouvrit les yeux, le soleil s’était presque noyé derrière les murailles de Givrelac. Elle sentit sur sa main un poids chaud et soyeux : un minuscule chat noir, si maigre qu’on aurait dit un chaton nouveau-né, mais affublé de deux longs sourcils blancs en forme de huit, comme un vieux sage miniature. Sans doute la mère et l’enfant n’avaient-ils pas voulu de lui à cause de cette allure étrange. Margie le recueillit dans sa veste, traversa les ruelles du taudis en répondant aux salutations des habitants, et rentra chez elle. Câlinant la petite boule de poils, elle murmura avec un sourire :\n« Qu’on soit Sola, Charon... ou chaton, on a toujours besoin de quelqu’un pour veiller sur nous. » \nLe chat, mi-jeune, mi-vieux, ne comprenait pas ses mots mais se laissa faire, rentrant ses griffes. Margie, elle, attrapa sa queue qui battait l’air et déclara :\n« À partir d’aujourd’hui, tu t’appelleras Sourcil-Blanc... Aïe ! »\nLe lendemain, trois belles griffures marquaient son visage. Même le soleil de Givrelac n’arrivait pas à lui arracher un sourire. Mais tous savaient qu’avant l’heure du déjeuner, la Margie rieuse serait déjà de retour.",
           TextMapId = "UI_CHAR_DATA_TEXT_33010401"
         },
         UI_CHAR_DATA_TEXT_33010402 = {
@@ -62509,7 +64780,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_CHAR_DATA_TEXT_33010405"
         },
         UI_CHAR_DATA_TEXT_41010101 = {
-          ContentFR = "Rhythm n’a jamais été portée sur la musique, elle ne peut même pas suivre les notations les plus simples d’une partition. Et pourtant, d’une manière ou d’une autre, elle parvient à jouer Requiem pour les sans-noms à l’harmonica.",
+          ContentFR = "Rhythm n’a jamais été portée sur la musique, elle ne peut même pas suivre les notations les plus simples d’une partition. Et pourtant, d’une manière ou d’une autre, elle parvient à jouer <I>Requiem pour les sans-noms</> à l’harmonica.",
           TextMapId = "UI_CHAR_DATA_TEXT_41010101"
         },
         UI_CHAR_DATA_TEXT_41010102 = {
@@ -62541,7 +64812,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_CHAR_DATA_TEXT_41010204"
         },
         UI_CHAR_DATA_TEXT_41010301 = {
-          ContentFR = "UI_CHAR_DATA_TEXT_41010301",
+          ContentFR = "Rhythm a une préférence inébranlable pour la symétrie. Elle dispose toutes ses affaires avec une précision méticuleuse, chaque objet aligné, parfaitement espacé, impeccablement ordonné. Ses tenues suivent la même règle, toujours structurées et équilibrées. C’est pourquoi une chose la tracasse particulièrement : ses cornes ne sont pas symétriques. Chaque fois qu’elle se regarde dans un miroir, elle ne peut s’empêcher d’imaginer une seconde corne poussant pour que ses cornes soient parfaitement symétriques.\nEnfant, elle avait trouvé un petit branchage ressemblant étonnamment à sa corne. Elle le porta fièrement sur sa tête pendant plusieurs jours, jusqu’à ce qu’il soit entraîné dans une presse d’usine lors d’un travail, réduit en poussière et perdu à jamais, devenu partie intégrante des fondations sous les rues de Givrelac.\nSi l’Empire venait à inventer des techniques de correction ou de greffe de cornes, Rhythm serait sans doute la première volontaire.",
           TextMapId = "UI_CHAR_DATA_TEXT_41010301"
         },
         UI_CHAR_DATA_TEXT_41010302 = {
@@ -62557,7 +64828,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_CHAR_DATA_TEXT_41010304"
         },
         UI_CHAR_DATA_TEXT_41010305 = {
-          ContentFR = "La musique a toujours eu quelque chose de magique, le pouvoir d’apaiser la peine, de relever ceux qui vacillent. Chaque fois que Rhythm sentait ses forces l’abandonner, elle jouait Requiem pour les sans-noms. La mélodie ne manquait jamais de l’ancrer, de lui rendre assez de courage pour poursuivre.\nMais ces derniers temps... peu importe combien de fois elle la joue, la tristesse ne se dissipe plus. Pire encore, elle s’intensifie. Aujourd’hui, seule une succession sans fin de missions parvient à étouffer un peu la douleur. Elle s’y plonge corps et âme, traquant ces rares instants où l’engourdissement s’installe... et où, l’espace d’un souffle, la peine se tient à distance.",
+          ContentFR = "La musique a toujours eu quelque chose de magique, le pouvoir d’apaiser la peine, de relever ceux qui vacillent. Chaque fois que Rhythm sentait ses forces l’abandonner, elle jouait <I>Requiem pour les sans-noms</>. La mélodie ne manquait jamais de l’ancrer, de lui rendre assez de courage pour poursuivre.\nMais ces derniers temps... peu importe combien de fois elle la joue, la tristesse ne se dissipe plus. Pire encore, elle s’intensifie. Aujourd’hui, seule une succession sans fin de missions parvient à étouffer un peu la douleur. Elle s’y plonge corps et âme, traquant ces rares instants où l’engourdissement s’installe... et où, l’espace d’un souffle, la peine se tient à distance.",
           TextMapId = "UI_CHAR_DATA_TEXT_41010305"
         },
         UI_CHAR_DATA_TEXT_41010401 = {
@@ -62585,7 +64856,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_CHAR_DATA_TEXT_41020104"
         },
         UI_CHAR_DATA_TEXT_41020105 = {
-          ContentFR = "Bientôt disponible",
+          ContentFR = "Vous vous souvenez de cette promenade au coucher du soleil. La lumière du crépuscule, telle un manteau posé sur le monde, rendait toute chose douce et étrangère — y compris l’expression de son visage.\nLe masque de perfection qu’elle avait façonné avec tant de soin se dissolvait dans cette lueur orangée. Peu à peu, vous parveniez à distinguer ce qu’elle gardait enfoui : les regrets, la mélancolie, le refus d’abdiquer... et, plus que tout, une gratitude d’une pureté absolue.",
           TextMapId = "UI_CHAR_DATA_TEXT_41020105"
         },
         UI_CHAR_DATA_TEXT_41020201 = {
@@ -62605,7 +64876,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_CHAR_DATA_TEXT_41020204"
         },
         UI_CHAR_DATA_TEXT_41020205 = {
-          ContentFR = "Bientôt disponible",
+          ContentFR = "La Grande Émeute de Haojing a laissé une empreinte profonde dans la mémoire de nombreux habitants de Huaxu. Elle éclata brusquement, s’évanouit tout aussi vite, et ne causa finalement que peu de pertes humaines.\nDe cet événement aussi soudain qu’éphémère, beaucoup se souviennent de l’apparition fulgurante de {nickname}, ou encore des silhouettes infatigables des Vagabonds allant et venant à travers la cité.\nMais concernant l’instigatrice de ce tumulte — celle qui fut autrefois adulée par des foules entières, l’actuelle Haut Chancelier de Longyuan, Zhiliu — la majorité choisit le silence.\nDans la proclamation officielle publiée par les Trois Bureaux après les faits, les actes de Zhiliu furent qualifiés de moteur de la réforme des Neuf Chapitres de Dafeng. Toutefois, ses méthodes furent jugées excessivement radicales, et son choix d’agir seule, en contournant les Trois Bureaux, constitua une violation du principe de justice procédurale.\nSans l’intervention fortuite de {nickname} et des Vagabonds, qui parvinrent à récupérer le Jade de l’Équilibre, quelles conséquences cette réforme menée dans la tourmente aurait-elle engendrées ?\nL’inquiétude, la crainte, voire le ressentiment se propagèrent silencieusement parmi la population.\nC’est à ce moment-là que Zhiliu sembla parvenir à une forme d’entente tacite avec le peuple. De sa propre initiative, elle demanda à être déchue de ses fonctions et renonça à son poste de cheffe du Bureau de la Fortune Céleste.\n\nMais Huaxu entrait alors dans une période de réformes profondes, où tout restait à reconstruire. Il fallait des esprits aguerris, dotés d’expérience et de discernement, pour tracer une voie à suivre. Zhiliu continua donc d’être sollicitée par les Trois Bureaux afin de conseiller certaines décisions majeures.\n\nElle aurait pu refuser. Mais elle accepta chaque demande, s’y consacrant sans relâche, veillant tard dans la nuit pour résoudre ces affaires complexes. Au fil du temps, les regards froids qu’on lui adressait se muèrent peu à peu en respect — puis en sentiments plus ambigus encore.\nElle accueillit tout cela avec le même calme.\nPeut-être s’agissait-il, pour elle, d’une forme de rédemption.\nOu peut-être nourrissait-elle encore, au fond d’elle-même, l’espoir de ce que Huaxu pourrait devenir.",
           TextMapId = "UI_CHAR_DATA_TEXT_41020205"
         },
         UI_CHAR_DATA_TEXT_41020301 = {
@@ -62617,7 +64888,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_CHAR_DATA_TEXT_41020302"
         },
         UI_CHAR_DATA_TEXT_41020303 = {
-          ContentFR = "Bientôt disponible",
+          ContentFR = "Zhiliu ne s’est rendue que deux fois sur la tombe de Keming.\n\nLa première fois, lorsque le tertre venait tout juste d’être dressé. Sous la pluie, elle s’était contentée de l’observer de loin, sans jamais s’en approcher.\nLa seconde fois eut lieu le jour où elle prit sa décision. Face à la pierre désormais marquée par la mousse, elle déposa doucement au sol le pendentif de jade qu’elle portait depuis l’enfance, puis s’en alla sans se retourner.",
           TextMapId = "UI_CHAR_DATA_TEXT_41020303"
         },
         UI_CHAR_DATA_TEXT_41020304 = {
@@ -62625,7 +64896,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_CHAR_DATA_TEXT_41020304"
         },
         UI_CHAR_DATA_TEXT_41020305 = {
-          ContentFR = "Bientôt disponible",
+          ContentFR = "Mettre un terme aux Neuf Chapitres de Dafeng, mettre fin à l’ère des dieux : tel fut l’objectif poursuivi par Zhiliu toute sa vie.\nMais au fil de ces longues années de complots et de calculs, elle finit par ne plus savoir si ce qu’elle accomplissait pouvait encore porter le nom de justice.\nPlus elle voyait, plus elle comprenait que le bien et le mal naissent l’un de l’autre, et que la morale s’entremêle souvent à des intérêts personnels. La justice elle-même vacille ; les raisons et les convictions qui l’avaient portée s’amincissaient, couche après couche.\n\nAlors, en définitive, elle se dit ceci : qu’elle considérerait tout cela comme l’unique caprice qu’elle s’autoriserait au cours de son existence.",
           TextMapId = "UI_CHAR_DATA_TEXT_41020305"
         },
         UI_CHAR_DATA_TEXT_41020401 = {
@@ -62633,7 +64904,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_CHAR_DATA_TEXT_41020401"
         },
         UI_CHAR_DATA_TEXT_41020402 = {
-          ContentFR = "Bientôt disponible",
+          ContentFR = "Après être restée enfermée dans ma chambre durant des mois, je finis par franchir de nouveau le seuil.\nLa lumière du soleil me frappa de plein fouet. Les feuilles du paulownia frémissaient dans l’éclat, leurs nervures presque translucides. J’éprouvai une étrange sensation de décalage, comme si je revenais d’un autre monde. Plusieurs mois s’étaient écoulés depuis la mort de cet homme. Le monde, lui, n’avait pas changé. Il continuait de tourner, bruyant et affairé.\nIl manquait simplement une personne prête à se dresser dans une galerie effondrée pour protéger une petite fille.\nDans la cour, Oncle Li balayait les feuilles mortes. En me voyant sortir, il s’approcha, visiblement surpris.\n« Demoiselle Zhiliu... vous sortez enfin. Comment... comment vous sentez-vous ? »\n\nSa question était prudente, hésitante. Avec le temps, j’avais compris ce que les autres attendaient : des échanges normaux. Ils rejetaient tout propos qui risquait de fissurer leur quotidien. Si je disais la vérité, ces visages souriants changeraient aussitôt d’expression.\nLa vérité perce les apparences comme du métal en fusion traversant la glace.\n\nAlors je lui rendis son sourire. « Oncle Li, je vais bien. Tout cela est derrière moi. »\nIl resta un instant interdit, puis son visage s’illumina d’un soulagement sincère. Il laissa tomber son balai et courut prévenir mes parents.\nCe soir-là, nous nous sommes enfin retrouvés tous autour de la table familiale. Père et mère ne dirent presque rien. Ils se contentèrent de remplir mon bol de mes plats préférés.\nAvant de se retirer, père passa dans ma chambre. Il posa une main sur mon épaule et murmura simplement : « Mon enfant, tu as beaucoup souffert. »\nUn peu plus tard, mère entra à son tour. Je remarquai les nouvelles ridules sur son front, quelques mèches blanches à ses tempes. Elle s’assit près de moi, me prit les mains et me parla à voix basse :\n« Chérie... oublie tout cela. Pour nous. Tu penseras peut-être que je te demande de te protéger au détriment de la justice, que tu ne comprends pas pourquoi le monde est si injuste... mais c’est ainsi qu’il fonctionne. Oublier est parfois la seule façon d’avancer. »\nJe souris et acquiesçai à chacune de ses paroles.\nJusqu’alors, les enseignements de Maître Jingyuan n’étaient pour moi qu’un savoir abstrait. J’imitais sans réfléchir ces manières de vivre et de se comporter. Mais à cet instant, j’en compris enfin le poids véritable.\nLorsque je me rendais sans relâche au Pavillon de l’Arbitrage pour réclamer justice au nom de Keming, je ne rencontrai que regards froids et indifférence. Puis, lorsque je me retirai du monde, la déception, l’inquiétude et l’impatience de mes proches me transpercèrent comme des aiguilles.\n\nJ’avais toujours vécu en paix avec le monde sans jamais le comprendre réellement.\nDésormais, je saisis ce que mère voulait dire : je devais comprendre comment ce monde est construit, comment les opinions façonnent les hommes, comment les pouvoirs invisibles orientent la réalité. Je devais regarder en face l’origine du pouvoir, sa conquête, son fonctionnement — même si tout cela m’inspire un profond dégoût.\n\nOui. Je devais d’abord l’accepter, m’y fondre.\nC’est seulement ainsi que je pourrais le combattre. Et le détruire.\nJ’avais pris ma décision.",
           TextMapId = "UI_CHAR_DATA_TEXT_41020402"
         },
         UI_CHAR_DATA_TEXT_41020403 = {
@@ -62641,7 +64912,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_CHAR_DATA_TEXT_41020403"
         },
         UI_CHAR_DATA_TEXT_41020404 = {
-          ContentFR = "Bientôt disponible",
+          ContentFR = "Devant moi, les soldats de terre cuite se brisaient en fragments, tandis que les Bi’an affluaient comme une marée. Les Neuf Chapitres de Dafeng avaient senti leur cœur même menacé et ripostaient sans se soucier du prix à payer. Le Mausolée de Taixu tout entier vibrait sous le choc de la colère et de la peur.\nMais tout cela restait gérable — qu’il faille y consacrer du temps ou y laisser ses forces.\nJe ne saurais dire combien de temps passa avant que les entités spirituelles alentour ne cessent tout mouvement. Le silence revint alors dans ce lieu suprême, retrouvant la solennité qui lui était due.\nJ’évaluai calmement l’état de mes blessures, puis avançai à travers les ruines vers l’ultime terme de ma vie.\nC’est ici que s’achevait mon projet de toute une existence : le meurtre d’un dieu.\n\nÀ mesure que la magie se retirait de mon corps, ma vie s’éteignait avec elle. Le murmure indistinct dans mon esprit devint d’une clarté presque douloureuse.\nIl me demandait : pour quoi un être humain devrait-il vivre ?\nLa peur de la mort n’avait jamais disparu. Elle ne m’avait jamais quittée.\nMême en sachant que ma disparition renverserait Huaxu et corrigerait ce qui devait l’être, je ne pouvais empêcher le frisson qui remontait du plus profond de mes os.\nLa brume m’enveloppait.\nAlors que l’étreinte glacée de la mort se refermait sur moi, j’aperçus sa silhouette.\n\n{性别:Il était venu|Elle était venue} me dire : Vis. Sois témoin de tout cela.\n\nIl y a sept ans, j’avais connu le premier salut de mon existence.\nSept ans plus tard, un second me fut accordé.\nAprès ce que j’avais vécu dans mon enfance, je ne pouvais qualifier ma vie de « chanceuse ». Mais je n’avais pas non plus le droit de me dire malheureuse.\n\nCar j’ai rencontré {nickname}.",
           TextMapId = "UI_CHAR_DATA_TEXT_41020404"
         },
         UI_CHAR_DATA_TEXT_42010101 = {
@@ -62660,22 +64931,10 @@ Allez voir ce qui se passe.]],
           ContentFR = "Lorsque vous apprenez que cette plante rouge d’apparence anodine constitue l’une des preuves laissées par le massacre des Pics Extérieurs, vous ne pouvez cacher votre stupeur.\nD’après leurs explications, Buxia, en tant que Dégradé, ne possédait qu’une force de combat dérisoire. Son véritable danger résidait ailleurs : elle pouvait disséminer des spores. D’un rouge éclatant, elles flottaient dans l’air. Quiconque les inhalait sans se couvrir le visage voyait ses forces décliner rapidement, devenant une proie facile. Là où les spores se déposaient, la végétation prenait la même teinte rouge sinistre.\n\nVous êtes surpris que les Pics Extérieurs aient conservé une plante aussi dangereuse. Mais, selon eux, le nettoyage du site s’étira sur une longue période, et la plante ne fut découverte qu’un mois plus tard. Avant le drame, elle n’était qu’un végétal vert banal, commun et sans particularité. Lorsqu’on la retrouva, la vie avait déjà repris son cours, sans nouvelles contaminations. Après une longue phase d’observation prudente, ils conclurent qu’elle ne présentait plus de toxicité immédiate et décidèrent de la sceller pour étude.\n\nKezhou avait d’abord voulu la réduire en miettes d’un coup d’épée. Un disciple de la Secte Jishu l’en empêcha sur-le-champ. Kezhou faillit en venir aux mains avec lui, avant de ravaler sa colère et de partir, furieux.",
           TextMapId = "UI_CHAR_DATA_TEXT_42010104"
         },
-        UI_CHAR_DATA_TEXT_42010105 = {
-          ContentFR = "Bientôt disponible",
-          TextMapId = "UI_CHAR_DATA_TEXT_42010105"
-        },
         UI_CHAR_DATA_TEXT_42010201 = {
           ContentFR = "La réputation des Magistrats de Yingtian est éclatante à travers tout Huaxu. En tant qu’exécuteurs de la volonté céleste, ils suscitent partout où ils passent des élans d’enthousiasme et d’admiration — mais plus encore un respect teinté de crainte. À leur approche, la foule s’écarte comme une mer qui se fend : chacun profite de la protection qu’ils apportent, tout en évitant avec soin la mort et les conflits qui les accompagnent inévitablement.\nLes gens aiment raconter les hauts faits des Magistrats de Yingtian, mais nul n’a jamais connu le véritable nom de l’un d’entre eux. Lorsqu’on les interroge à ce sujet, ils froncent les sourcils, tentent de se souvenir d’un proche autrefois « appelé » par les Neuf Chapitres de Dafeng, puis renoncent à fouiller en vain dans leur mémoire. Ils concluent alors d’un soupir : la puissance du Ciel ne saurait être sondée.\nLa plupart des Magistrats portent des heaumes bestiaux à l’effigie des Bi’an, dissimulant leurs traits de Descendants draconiques derrière des visages monstrueux, ce qui ne fait qu’accentuer leur caractère insaisissable.\n\nDans ce cortège de silhouettes masquées, Yuming fait figure d’exception. Cheveux noirs, robe sombre, visage découvert : il détonne parmi les siens. Toujours impassible, il agit seul, se rendant directement sur les lieux des affaires à traiter sans jamais s’attarder auprès d’autrui. Une distance naturelle émane de lui, tenant les autres à l’écart. À force de le voir passer, les gens finissent par retenir cette silhouette sans même s’en rendre compte.\nPeu nombreux sont ceux qui l’ont entendu parler. Le plus souvent, il s’agissait de personnes s’étant égarées au cœur d’une scène de traque ou de châtiment, qu’il congédiait avec une politesse froide et mesurée.\nIl n’existe qu’une seule exception.\n\nUn enfant, ayant croisé Yuming un jour, affirma avec conviction :\n« Le grand monsieur en noir, il est gentil. »\n« Ce jour-là, Bao’er courait après une abeille. En levant la tête, il a vu des gens se battre avec des armes. Il est resté figé... puis le grand monsieur est apparu d’un coup devant lui. Il s’est placé entre Bao’er et les méchants, et a arrêté leur attaque. »\n« C’était la première fois que Bao’er voyait un Magistrat de Yingtian. Bao’er lui a dit qu’il était trop impressionnant, et que plus tard, il deviendrait un Magistrat comme lui ! »\n« Mais... le grand monsieur n’a pas félicité Bao’er. Il a dit des choses étranges, difficiles à comprendre. Il a dit que devenir Magistrat, c’était être enfermé pour toujours, lié à des choses qu’on ne peut pas voir... et il a demandé à Bao’er de ne jamais suivre ce chemin. »\n« Être lié à des choses qu’on ne peut pas voir... Tu veux dire emprisonné... ?\n« Non, non, voyons ! Pourquoi un Magistrat dirait une chose pareille ? Servir Taihao, c’est un honneur ! C’est glorifier sa famille, il n’y a que de quoi se réjouir ! »\n\nCes paroles furent attribuées à l’imagination d’un enfant. On en rit, on échangea quelques plaisanteries, puis la petite foule se dispersa.\nL’enfant resta un instant à bouder, les larmes aux yeux, avant que l’odeur sucrée d’une figurine en sucre ne détourne son attention.\nL’incident ne fut plus jamais évoqué, englouti dans l’oubli d’un banal après-midi d’automne.",
           TextMapId = "UI_CHAR_DATA_TEXT_42010201"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CHAR_DATA_TEXT_42010202",
-    MaxKey = "UI_CHAR_SUBTITLE_1503",
-    Loader = function()
-      return {
+        },
         UI_CHAR_DATA_TEXT_42010202 = {
           ContentFR = "À Haojing, s’il est un thème de récits populaires qui ne manque jamais de séduire le public, ce sont bien les histoires consacrées aux Magistrats de Yingtian. Leur aura mystérieuse laisse une large place à l’imaginaire, et l’adhésion populaire est telle qu’ils s’imposent sans conteste comme le sujet le plus prisé. Chaque mois voient le jour de nouveaux récits à leur sujet, mais la plupart ne sont que des œuvres médiocres, accumulations stériles de mots, vite jouées puis retirées de l’affiche sans jamais provoquer la moindre émotion chez les auditeurs.\nOr, dans cette concurrence féroce où les histoires se renouvellent sans cesse, un récit récemment mis en scène fit exception, déclenchant une agitation inhabituelle dans la cité de Haojing dès sa première représentation.\nS’inscrivant dans la tendance récente des intrigues audacieuses et provocantes, ce récit prenait pour modèle le Magistrat à la robe noire. Il racontait l’histoire d’une femme mortelle éprise de lui, multipliant les stratagèmes pour l’épouser. Alors que tout semblait enfin tourner en sa faveur, elle aurait recours à des voies interdites, enfreignant les Neuf Chapitres de Dafeng — et serait finalement exécutée de la main même du Magistrat qu’elle aimait.\n\nAu point culminant du récit, le conteur déclara sur scène d’une voix théâtrale :\n« Ce Magistrat à la robe noire est sans cœur ni attache, né tel un roc arraché à la pierre. Comment pourrait-il éprouver la moindre affection pour une simple mortelle ? Sans même cligner des yeux, il l’abattit d’un seul coup de lance ! »\nÀ ces mots, un homme dans l’assistance frappa violemment la table et se leva d’un bond : « Mensonges ! Mon frère d’armes n’est pas l’homme que tu décris ! »\nL’objet qu’il portait à la taille tomba lourdement au sol. Le tissu se défit, révélant l’éclat glacé d’une lame. L’homme, au regard farouche et à l’allure indisciplinée, était sans équivoque un Vagabond.\nLa foule pâlit. Que pouvait bien avoir dit ce conteur pour provoquer la colère d’un Vagabond ? Craignant d’être entraînés dans l’incident, les spectateurs se dispersèrent aussitôt dans un désordre paniqué. À côté d’une table renversée, graines de tournesol et fruits confits jonchaient le sol.\nSur scène, le conteur tremblait de tous ses membres. En tentant de reculer, il trébucha lourdement. Lorsqu’il essaya de se relever pour fuir, ses jambes refusèrent d’obéir, molles comme de la pâte. Résigné, il ferma les yeux et se mit à marmonner à toute vitesse : « Que Taihao me protège... que Taihao me protège... » comme si ces mots pouvaient encore lui servir de talisman.\n\nQuelques instants plus tard, les Bi’an en patrouille arrivèrent sur les lieux. Mais le Vagabond n’avait pas encore vidé sa colère : encaissant les attaques, il continua de proférer insultes et imprécations, avant de battre en retraite sous la pression croissante des renforts. D’après les témoins, plus d’une dizaine de Bi’an le poursuivirent ce jour-là à travers plus de la moitié de Haojing. Le spectacle fut si saisissant qu’on le qualifia de rare curiosité — un événement qu’on n’avait pas vu depuis des mois aux abords mêmes du Pavillon de l’Arbitrage.",
           TextMapId = "UI_CHAR_DATA_TEXT_42010202"
@@ -62687,10 +64946,6 @@ Allez voir ce qui se passe.]],
         UI_CHAR_DATA_TEXT_42010204 = {
           ContentFR = "Bien que l’on dise communément que les Pics Extérieurs sont introuvables, ils n’ont jamais été totalement coupés du monde. Tous les quelques mois, certains marchands itinérants et médecins voyageurs s’y rendaient encore, apportant les denrées essentielles à la vie quotidienne. C’est ainsi que la nouvelle du massacre survenu quatre ans plus tôt finit par s’échapper, fragmentaire et déformée, vers l’extérieur — et plus elle circulait, plus elle perdait toute ressemblance avec la vérité.\nCertains affirmaient qu’une guerre interne avait éclaté : deux factions en désaccord s’étaient affrontées armes à la main, depuis le pied de la montagne jusqu’à son sommet, combattant du lever du jour jusqu’au crépuscule. La bataille finale aurait eu lieu dans la zone des assemblées, d’une violence inouïe. Armes brisées et cadavres de Vagabonds jonchaient le sentier, et presque plus personne n’était en état de tenir debout.\nD’autres racontaient qu’une invention de la Secte Jishu avait mal tourné : un gigantesque automate aurait perdu le contrôle et, tel une machine à broyer l’acier, aurait exterminé les Pics Extérieurs pendant la nuit, profitant du sommeil des habitants.\nUne troisième rumeur évoquait l’intervention des Sentinelles de Fer de Juntian, qui auraient enfin localisé les Pics Extérieurs et éradiqué ce fléau niché à l’ombre des Neuf Chapitres de Dafeng. Mais faute de proclamation officielle, et les activités des Vagabonds n’ayant pas cessé par la suite, cette version perdit rapidement toute crédibilité.\n\nLes versions divergeaient, mais un fait demeurait incontestable : ce jour-là, les Pics Extérieurs subirent des pertes effroyables. Grâce à l’entremise d’un intermédiaire, les cercueils de la famille Yan furent presque tous achetés et transportés dans la montagne. Par la suite, de nombreux prétendus témoins surgirent, brodant des récits extravagants pour attirer l’attention.\nLe seul véritable survivant connu — un apothicaire de la Pharmacie Zesheng —, lui, garda le silence.\nCe ne fut que lors d’un banquet de fin d’année, alors qu’une neige fine tombait du ciel et que le charbon crépitait dans le brasero, que le sujet refit surface. Après plusieurs tournées, l’alcool échauffant les esprits, la conversation dériva par hasard sur les Pics Extérieurs. Un jeune apprenti, amateur de récits sur les Vagabonds, apprit alors que l’aîné assis près de lui avait été impliqué dans l’affaire. Les yeux brillants, il insista pour connaître la vérité. Ce n’est qu’alors que l’apothicaire âgé parla enfin.\n« Ils se trompent tous. Ce n’était qu’une tragédie causée par la Dégradation. »\n« La Dégradation ? Qu’est-ce que c’est ? »\nL’aîné observa le visage encore juvénile de l’apprenti, rosé par l’alcool, soupira doucement et secoua la tête.\n« Tu as grandi à Haojing et n’as jamais voyagé au loin. Comment le saurais-tu ? Si tu allais dans le monde extérieur — ne serait-ce que jusqu’à l’Empire Hyperboréen, au-delà de la mer — tu verrais que là-bas, on pâlit au seul mot de Dégradation. »\n« Même notre fondatrice de la Pharmacie Zesheng n’en a percé les mystères qu’après une vie entière d’études. Tu n’en es qu’aux débuts. Avec le temps, tu comprendras l’ampleur du phénomène. »\n« Nous autres, habitants de Huaxu, avons eu la chance d’être protégés par le Seigneur Taihao. La Dégradation a été isolée depuis longtemps. Quant aux Vagabonds... ils ont attiré le malheur sur eux-mêmes. Ils ont voulu créer un mécanisme pour couper l’influence des Neuf Chapitres de Dafeng. Une fois cette protection levée, comment la Dégradation aurait-elle pu ne pas revenir ? »\n« Mais... les Vagabonds ne sont-ils pas tous des combattants aguerris ? Cette Dégradation est-elle vraiment si redoutable ? »\n« Face à quelque chose que l’on ne comprend pas, et qui frappe sans prévenir, même la maîtrise martiale ne sert à rien. Les habitants de Huaxu avaient cessé de se méfier depuis longtemps. Et cette jeune fille était légèrement malentendante depuis l’enfance. Lorsque les premiers signes de perte sensorielle apparurent, personne ne réalisa le danger. »\n« La bête corrompue qu’elle devint était particulièrement féroce. Une suite de coïncidences tragiques fit le reste... et tant de vies furent perdues. »\n« Pourtant... à mes yeux, ces Vagabonds n’étaient pas des gens mauvais. Ils cherchaient seulement à sortir des sentiers battus, à entrevoir un autre monde possible. Sans le vouloir, ils ont payé un prix bien trop cruel. »\n« Ce n’étaient, au fond, que des êtres pitoyables. »",
           TextMapId = "UI_CHAR_DATA_TEXT_42010204"
-        },
-        UI_CHAR_DATA_TEXT_42010205 = {
-          ContentFR = "Bientôt disponible",
-          TextMapId = "UI_CHAR_DATA_TEXT_42010205"
         },
         UI_CHAR_DATA_TEXT_42010301 = {
           ContentFR = "Depuis que Yuming est devenu Magistrat de Yingtian, presque plus personne ne connaît son véritable nom. Comme si cette fonction avait effacé jusqu’à la moindre trace de son passé.\nIroniquement, ceux qui se souviennent encore du nom « Yuming » sont les habitués du Marché Voilé — ces esprits vifs qui vivent en permanence à la lisière des Neuf Chapitres de Dafeng, à l’affût de la moindre faille exploitable.\n\nAprès plusieurs rencontres, ces acteurs du marché noir ont commencé à diffuser son nom, sa tenue caractéristique, et même à exhumer une bonne partie de son passé en tant que Vagabond des Pics Extérieurs. Le passage brutal d’un hors-la-loi armé à un exécuteur céleste suscita rapidement une agitation fébrile dans le Marché Voilé, mêlée d’exclamations teintées d’amère empathie. Certains y virent le reflet de leur propre destinée.\nAlors qu’ils s’apprêtaient à exploiter cette information à leur avantage, Maître Qiu intervint, arborant ce sourire aux intentions indéchiffrables, et mit fin à toute velléité avant qu’elle ne prenne forme.\n\nD’une certaine manière, ces figures du marché noir connaissent davantage Yuming en tant qu’« homme » que les citoyens respectueux des lois qui admirent les Magistrats de Yingtian de loin, en toute sécurité.",
@@ -62708,10 +64963,6 @@ Allez voir ce qui se passe.]],
           ContentFR = "Bien que le commun des mortels évoque les Vagabonds avec une emphase outrancière, les dépeignant comme des criminels sanguinaires aux mains couvertes de sang, la réalité est bien plus nuancée. La plupart d’entre eux aspirent avant tout à punir l’injustice et à vivre libres, affranchis des carcans — sans pour autant avoir jamais pris de vie.\nLors du massacre des Pics Extérieurs, le fait de porter la main sur sa propre sœur d’apprentissage fut pour Yuming la toute première fois qu’il tua quelqu’un. La légère résistance ressentie lorsque la pointe de sa lance transperça une poitrine — cette infime hésitation de la chair — s’imprima en lui pour le reste de son existence.\nPar la suite, devenu exécuteur de la volonté de Taihao, ôter la vie ne fut plus pour Yuming qu’un geste mécanique, vidé de toute émotion. Il avait depuis longtemps perdu le compte des âmes tombées sous sa lance.\nEt pourtant, chaque fois qu’il retirait l’arme de la chair, son esprit retournait immanquablement à cet instant originel : le premier meurtre.",
           TextMapId = "UI_CHAR_DATA_TEXT_42010304"
         },
-        UI_CHAR_DATA_TEXT_42010305 = {
-          ContentFR = "Bientôt disponible",
-          TextMapId = "UI_CHAR_DATA_TEXT_42010305"
-        },
         UI_CHAR_DATA_TEXT_42010401 = {
           ContentFR = "Pour Yuming, l’état de veille tient d’un supplice interminable ; le sommeil n’est qu’une simple note de bas de page entre deux longues périodes de lucidité. Ce n’est que lorsqu’il sombre, à de rares occasions, dans le monde des rêves, qu’il parvient à tout oublier, retombant comme par mégarde dans les souvenirs d’autrefois.\nCeux qui rejoignent les Pics Extérieurs portent, pour la plupart, soit une haine ancienne et profonde, soit des idéaux si élevés qu’ils refusent de plier.\nYuming n’appartenait à aucune de ces catégories.\nÀ cette époque, il n’était qu’un adolescent à peine sorti de l’enfance. Sa taille avait déjà beaucoup grandi ; il parlait peu, respectait scrupuleusement les règles, et gardait presque toujours le visage fermé. Seule sa voix trahissait encore son jeune âge : en pleine mue, elle se brisait parfois en sons rauques et disgracieux. Il en concevait un malaise secret, et se mit dès lors à parler encore moins.\nSes parents étaient des gens ordinaires, des citoyens respectueux des règles parmi la multitude des Tisse-Étoiles de Huaxu. Depuis l’enfance, Yuming avait entendu parler des Vagabonds à travers eux, sans jamais imaginer que leurs chemins puissent se croiser.\nCe ne fut qu’à l’approche de leur mort qu’il apprit la vérité : dans leur jeunesse, ses parents avaient aidé les Vagabonds dans certaines de leurs actions. Lorsque sa mère était tombée enceinte, son père s’était retiré pour protéger sa famille, choisissant dès lors la prudence et la discrétion.\nDans leurs dernières paroles, ils confièrent Yuming à un compagnon de vie et de mort rencontré à cette époque : Yan Shanting. Ils ne laissèrent pas à Yuming l’occasion de refuser — et lui n’eut pas le cœur de trahir leur ultime volonté. Après avoir réglé les affaires funéraires, il s’inclina trois fois devant la tombe de ses parents aux côtés de cet homme encore étranger, puis le suivit vers le territoire marginal et hérétique des Pics Extérieurs.\n\nLoin de chez lui, plongé dans un environnement inconnu, Yuming devint encore plus taciturne. Il livrait rarement ses pensées, dissimulant son monde intérieur avec soin — du moins le croyait-il. Yan Shanting, lui, voyait clair sans effort.\nIl lui dit de ne pas s’embarrasser des usages formels hérités des traditions classiques. Yuming acquiesça sur le moment... mais continua comme avant. Pire encore : il redoubla de rigueur. Saluts matin et soir, posture irréprochable, aucun manquement.\nCette affectation de droiture finit par irriter les autres jeunes des Pics Extérieurs. La plupart étaient des orphelins, souvent sensibles, parfois excessifs. Ils virent dans ce nouveau venu au visage fermé un « chien sans foyer » qui les méprisait de haut. Les frictions dégénérèrent rapidement en rixe.\nCertains d’entre eux avaient déjà des bases en combat. Il ne fallut pas longtemps pour que Yuming goûte à sa première défaite.\nLorsque tout le monde se dispersa, il resta seul, étendu au sol. La pluie était tombée la veille ; la terre humide, mêlée de brindilles et de feuilles, couvrait son corps. L’odeur lourde de l’humus envahissait ses narines. Une dent, heurtée durant l’affrontement, pulsait douloureusement.\nDes pas froissèrent les feuilles mortes. Quelqu’un approchait.\nUne paire de chaussures entra dans son champ de vision et s’arrêta devant lui.\n\nYuming leva les yeux : Yan Shanting s’était accroupi devant lui, le regard empreint d’une ironie tranquille.\n« Perdu ? » demanda-t-il. Yuming le fixa sans répondre.\n« Ça fait mal, hein ? Tu veux que ton maître aille leur donner une leçon ? » Yuming serra les dents, se redressa péniblement et secoua la tête.\n« Non. » Alors je vais t’apprendre deux ou trois choses. Tu t’entraîneras, et la prochaine fois, tu reprendras l’avantage.\nAprès un long silence, Yuming lâcha : « Les préceptes célestes disent que se battre est mal. » Yan Shanting soupira.\n« Quel entêtement... »\n« Si tu ne te bats pas, d’autres le feront. À ce moment-là, à quoi servent le juste et l’injuste ? À quoi bon crier ton injustice au monde ? Le vent brise les branches fines, les tigres chassent les lapins — ont-ils jamais demandé leur avis ? »\n« Ce n’est que lorsque tu peux plaquer quelqu’un au sol et choisis de ne pas le faire que tu peux dire que la violence est mauvaise. »\nYuming baissa la tête. Était-il convaincu ? Ou simplement résigné ? Difficile à dire.\n« Écoute, gamin. Tes parents t’ont confié à moi, et je n’ai pas encore vraiment rempli mon rôle. Alors voici ta première leçon. »\n« Dans une vie, le plus difficile, c’est de vivre sans regrets. »\n« Et comment y parvenir ? Si quelqu’un qui t’est cher est blessé sous tes yeux et que tu ne peux rien faire... haïr ton impuissance ne serait-il pas déjà trop tard ? »\n« Commence par te tenir debout. Aie une compétence sur laquelle t’appuyer. Fais tout ce qui est en ton pouvoir, afin de pouvoir te regarder sans honte. »\nYuming resta silencieux longtemps. Juste au moment où Yan Shanting pensait qu’il ne répondrait plus, il se releva avec effort, épousseta soigneusement la boue de ses vêtements, puis s’inclina profondément.\n« Le disciple est ignorant. Je remercie le maître pour son enseignement. » Yan Shanting éclata de rire et accepta le salut sans fausse modestie. Cette fois, il ne corrigea pas ses manières.\n\nLes saisons passèrent. Sans s’en rendre compte, Yuming devint un jeune homme élancé et droit. Sa voix s’était stabilisée, et son comportement gagnait en assurance. Il s’entraîna à la lance sous la direction de son maître, progressant à grande vitesse. Plus tard, un autre disciple vint les rejoindre : Kezhou.\nIl fronçait davantage les sourcils... et, sans qu’il s’en aperçoive, souriait aussi plus souvent.\nPeu à peu, lorsqu’il se présentait, Yuming ajoutait toujours un préfixe à son nom.\nDésormais, il disait : Yuming des Pics Extérieurs .",
           TextMapId = "UI_CHAR_DATA_TEXT_42010401"
@@ -62723,10 +64974,6 @@ Allez voir ce qui se passe.]],
         UI_CHAR_DATA_TEXT_42010403 = {
           ContentFR = "Le soleil couchant était rouge comme le sang.\nBien que les Pics Extérieurs soient nichés au cœur des montagnes et offrent d’ordinaire un horizon dégagé, un crépuscule d’une telle splendeur demeurait chose rare.\nLa lumière du jour, encore persistante, se déversait sans retenue sur toute chose. Le ciel et la terre semblaient se fondre en une même teinte écarlate, au point que l’éclat donnait l’illusion d’être plus intense que celui du plein midi. Sous cette clarté aveuglante, Yuming peinait à distinguer la nature du liquide qui s’écoulait sur le sol : il s’insinuait lentement dans les creux de la terre, formant de minces ruisseaux.\nDes spores d’un rouge éclatant dérivaient dans l’air, irréelles, presque oniriques... presque belles.\nS’il avait pu s’y abandonner, traiter cette vision comme un rêve grotesque et chimérique, peut-être aurait-il échappé à l’horreur de la scène.\nMais Yuming savait, avec une lucidité implacable, qu’il n’en avait pas le droit.\nIl <H>devait affronter la réalité</>.\n\nDans le coin de son champ de vision, son maître gisait à la renverse contre un bloc de roche. Son abdomen, transpercé de part en part, était béant ; des lambeaux de chair et de sang maculaient le sol alentour, parmi lesquels se distinguait même un fragment d’intestin. La robe qu’il chérissait tant n’était plus qu’un amas de tissus déchirés et gorgés de sang, et la gourde qu’il portait toujours sur lui avait disparu.\nYuming avait vu cet homme ivre mort à d’innombrables reprises, l’avait ramené chez lui plus d’une fois, porté sur l’épaule comme un sac inerte. Jamais encore il n’avait vu sur son visage une expression aussi grave. Même privé de souffle, ses yeux demeuraient ouverts, comme s’il n’avait pu trouver le repos qu’après avoir vu son disciple une dernière fois.\nQuelques jours plus tôt, il avait été blessé lors d’un affrontement avec les Magistrats de Yingtian. Il aurait dû être alité, en convalescence — non pas étendu ici, en haillons, tombé au combat.\nLes tempes de Yuming pulsaient violemment ; ses yeux semblaient sur le point de se fendre sous une pression insoutenable.\n\nIl ignorait tout des causes exactes.\nIl savait seulement que la créature abominable qui agitait ses tentacules devant lui était à l’origine de tout.\n« Yuming... »\nUn Vagabond à l’agonie agrippa le pan de sa tunique et, dans un dernier souffle, murmura un avertissement :\n« N’y va pas... c’est... c’est Buxia... »\nDeux heures plus tôt, Yuming se rendait encore à Haojing pour chercher un apothicaire de la Pharmacie Zesheng, inquiet des douleurs répétées dont se plaignait sa sœur d’apprentissage. Mais dès qu’il avait aperçu les traces au pied de la montagne, l’apothicaire avait pâli et pris congé à la hâte. En ultime geste de bonne volonté, il avait laissé derrière lui une mise en garde au sujet de la Dégradation.\nMême avec cet avertissement, Yuming n’arrivait pas à relier la petite sœur vive et rieuse qu’il connaissait à cette créature froide et impitoyable, responsable de la mort de plus d’une dizaine de personnes.\nCe qui s’était produit ne laissait guère de doute : ce qui avait autrefois été sa sœur d’apprentissage n’était plus qu’une « <H>chose</> ».\n< H>Elle</> s’était éveillée à l’intérieur de son corps et s’en était prise aux vieillards, aux femmes et aux enfants sans défense. Son maître, tentant de les protéger, avait dû livrer bataille — et y avait laissé la vie.\nLa seule inconnue restait l’absence de Kezhou. Où était-il passé ?\nUne pensée indigne surgit alors : heureusement... heureusement qu’il n’était pas là.\nLa créature n’avait plus rien d’humain. Pourtant, de ce qui tenait lieu de bouche s’échappait encore, en boucle, une phrase brisée, à peine intelligible :\n« Grand frère... Yuming... sauve-moi... »\n\nYuming eut un haut-le-cœur.\nC’est à cet instant seulement qu’il réalisa qu’il avait inhalé une quantité considérable de spores sans s’en apercevoir. Sa force physique déclinait rapidement.\nIl avait entendu ces mots de la bouche de Buxia d’innombrables fois : tantôt sur le ton de la plaisanterie, tantôt lorsqu’elle cherchait à échapper à une punition, tantôt dans des caprices bruyants, et parfois — plus récemment — lorsqu’elle suppliait qu’on aille chercher un apothicaire alors que son ouïe se dégradait.\nLa plupart du temps, il n’y avait pas prêté attention.\nÀ présent, il allait payer le prix de son inaction.\nC’était sa faute. Son péché.\n\nEt même s’il était déjà trop tard, Yuming se mit en mouvement.\nAvant que les spores n’engourdissent totalement ses membres, il leva lentement mais résolument sa lance et la planta dans la créature. Elle poussa un cri déchirant, sans chercher à esquiver. Yuming força, vrilla la hampe, enfonçant la pointe plus profondément encore. La bête entra alors dans une convulsion incontrôlable ; ses tentacules acérées lacérèrent à plusieurs reprises les bras de Yuming, produisant des détonations stridentes qui semblaient vouloir percer les tympans. Une nuée de spores jaillit de son appareil buccal, plus dense que jamais, obstruant presque entièrement son champ de vision.\nÀ cet instant, l’esprit de Yuming était vide.\nIl ne tenta même pas de se protéger.\nIl mobilisa toutes ses forces pour clouer la lance contre la paroi rocheuse.\nÀ un moment, il crut avoir échoué. Ses bras lui semblaient soudés à l’arme, comme fondus dans le métal. Le temps perdit toute consistance. Puis, peu à peu, la résistance s’affaiblit. La créature cessa de se débattre.\n\nYuming expira longuement.\n\nIl s’aperçut alors qu’il ne savait plus comment lâcher sa lance. La peau entre ses doigts s’était fendue sous l’effort, et la sueur rendait la hampe glissante, collée à sa paume.\nSon regard se fixa sur le ruisseau qui s’amassait à ses pieds. Le soleil était presque entièrement couché.\nÀ présent, il en était certain : c’était du sang.\nLe sang de ceux qui avaient été ses compagnons.\n\nEt désormais, des scènes semblables hanteraient son esprit encore et encore.\nUn cauchemar dont il ne se libérerait jamais.",
           TextMapId = "UI_CHAR_DATA_TEXT_42010403"
-        },
-        UI_CHAR_DATA_TEXT_42010404 = {
-          ContentFR = "Bientôt disponible",
-          TextMapId = "UI_CHAR_DATA_TEXT_42010404"
         },
         UI_CHAR_DATA_TEXT_42020101 = {
           ContentFR = "Chaque matin, Randy classe ses tâches par ordre de priorité, un rituel qui lui permet de distinguer l’urgent de... l’oubliable.\n« Les missions sans importance ? Laisse-les traîner, elles finiront peut-être par disparaître toutes seules. » C’est un de ses principes de vie.\nSelon lui, il faut concentrer ses efforts sur ce qui compte vraiment, et consacrer le reste de son temps à savourer le repos.\nIl se sert souvent de cette philosophie pour esquiver quelques-unes de tes requêtes. Et, bien souvent, tu découvres qu’il avait raison : ces petites missions se sont, comme par magie, évaporées d’elles-mêmes.",
@@ -62757,7 +65004,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_CHAR_DATA_TEXT_42020202"
         },
         UI_CHAR_DATA_TEXT_42020203 = {
-          ContentFR = "Issu d’une éducation d’élite, Randy ne se montre guère exigeant... sauf en matière de thé. Il ne boit que du Baihao Fleur d’Oranger, une variété précieuse vendue uniquement par les Tisse-Étoiles de Huaxu.\nMais ce n’est pas une affaire de palais raffiné : cette infusion n’a absolument aucun effet stimulant. Ainsi, il peut donner l’illusion de boire du thé pour rester alerte lors de nuits de travail... alors qu’en vérité, rien ne viendra troubler son sommeil sacré.",
+          ContentFR = "Issu d’une éducation d’élite, Randy ne se montre guère exigeant... sauf en matière de thé. Il ne boit que du Baihao Fleur d’Oranger, une variété précieuse vendue uniquement par les Tisses-Étoiles de Huaxu.\nMais ce n’est pas une affaire de palais raffiné : cette infusion n’a absolument aucun effet stimulant. Ainsi, il peut donner l’illusion de boire du thé pour rester alerte lors de nuits de travail... alors qu’en vérité, rien ne viendra troubler son sommeil sacré.",
           TextMapId = "UI_CHAR_DATA_TEXT_42020203"
         },
         UI_CHAR_DATA_TEXT_42020301 = {
@@ -62835,7 +65082,15 @@ Allez voir ce qui se passe.]],
         UI_CHAR_DATA_TEXT_43010205 = {
           ContentFR = "Sibylle a bien eu quelques amis, autrefois, mais ils ont disparu depuis longtemps. Il fut un temps où elle riait aux éclats avec eux, ou pleurait en partageant leur douleur. Aujourd’hui, elle estime que ce sont là des émotions inutiles, des distractions dont elle se passe volontiers.",
           TextMapId = "UI_CHAR_DATA_TEXT_43010205"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CHAR_DATA_TEXT_43010301",
+    MaxKey = "UI_CMName_Name_SaiqiPhantom",
+    Loader = function()
+      return {
         UI_CHAR_DATA_TEXT_43010301 = {
           ContentFR = "L’arme de prédilection de Sibylle est une épée-fouet forgée sur mesure, un chef-d’œuvre aussi complexe à manier qu’à entretenir.\nMalgré les contraintes de son entretien, elle s’en occupe toujours elle-même, ne confiant cette tâche à personne.\nElle en est convaincue : quiconque peut trahir, mais une arme entretenue de ses propres mains ne vous trahira jamais.",
           TextMapId = "UI_CHAR_DATA_TEXT_43010301"
@@ -62861,11 +65116,11 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_CHAR_DATA_TEXT_43010402"
         },
         UI_CHAR_DATA_TEXT_43010403 = {
-          ContentFR = "La lame d’un couteau était pressée contre la gorge de Flamel. La savante, plus habituée au silence de son laboratoire qu’aux menaces, poussa un long soupir.\n« Gamins... j’espère que vous mesurez ce que vous faites », dit-elle d’un ton calme.\n« Chaque millimètre de blessure que vous m’infligerez se changera en couperet prêt à s’abattre sur vous et sur ceux qui vous sont chers. »\nLes deux brigands n’écoutèrent pas. Ils lui enfoncèrent un chiffon humide dans la bouche, la ligotèrent avec une corde rêche, puis la jetèrent dans un coin comme un vulgaire colis. La porte du hangar se referma dans un fracas métallique. L’odeur de moisi du tissu faillit l’étouffer, lui coupant sa dernière phrase, celle qu’elle n’eut pas le temps de prononcer :\n« Laissez-moi partir, et vous aurez plus d’or que dans vos rêves les plus fous. »\nFlamel ferma les yeux, économisant ses forces. Plus tard, au cœur de la nuit, un bruit discret lui fit lever la tête. Une silhouette agile se laissa tomber par la lucarne. Dans la faible lumière des étoiles, elle distingua une gamine crasseuse, aux cheveux violets coupés court et au regard perçant.\n« Chut », murmura-t-elle en retirant le bâillon. Elle tendit à Flamel son sac à dos volé.\n« N’ayez crainte, ils dorment. Je suis venue vous faire sortir. Désolée... mes frères ont perdu la tête en voyant une personne importante de la capitale. »\n« Merci. Mais j’ai encore quelque chose à faire », répondit Flamel. \n« Peux-tu me ramener là où j’ai été enlevée hier ? Je te donnerai dix pièces d’or en échange. Je suis savante, et je ne peux repartir avant d’avoir terminé mes observations. »\n\nElles s’enfoncèrent dans la vallée, la nuit les enveloppant. Les lieux, encore inexplorés, exigeaient des heures de marche avant le premier village. Flamel n’aurait jamais risqué seule un tel trajet si un rapport ne mentionnait pas la présence d’une espèce de Souillé encore inconnue.\nLe vent d’automne leur mordait la peau. Flamel ralentissait à chaque pas, forçant la gamine à l’attendre de plus en plus souvent.\n« Connais-tu un type de Souillé qu’on appelle \"Souillé physalis\" ? », demanda Flamel. \n« Peut-être qu’ici, vous l’appelez autrement... »\n« On l’appelle \"Griffe-Fleur\", répondit la fille. On dirait une plante, mais elle dévore tout ce qui s’approche. Vous voulez vraiment la voir ? »\nFlamel hocha la tête, et elles prirent la direction de la forêt de l’ouest.\n« Tu n’as pas peur des Souillés », remarqua Flamel, admirative. \n« Tu es une Daimon, n’est-ce pas ? »\n« Oui. Et je trouve les Souillés fascinants », dit la jeune fille en se retournant, le regard aigu. \n« Si vous aviez lu l’ouvrage de Maxima Flamel, Étude des origines des Souillés et du peuple des Charons, vous seriez aussi passionnée que moi... ah, non, bien sûr : si vous cherchez la Griffe-Fleur, c’est que vous l’avez déjà lu. Ce livre explique que la Griffe-Fleur est le plus ancien Souillé connu. »\nFlamel sourit, mais garda le silence. Elles traversèrent un chaos rocheux, jusqu’à ce que la fille l’arrête brusquement d’un geste. L’air nocturne sembla se fendre, zébré par des éclairs bleutés.\n« La Griffe-Fleur vient de se replier dans le sol. Si on avait continué, elle nous aurait tuées. Mais elle est paralysée, maintenant. Vous pouvez l’étudier. »\nFlamel la remercia, sortit ses outils et commença à découper la créature avec précision, rangeant ses échantillons dans des fioles.\n« Tu connais donc ce livre... tu sais que la découverte de la \"Spirale\" a confirmé que tous les Charons descendent des Souillés. Cela ne t’effraie pas ? Pas seulement les Dégradés : tous les Charons portent du sang de Souillé dans leurs veines. Toi aussi. »\n« Rien qui mérite d’avoir peur. Je me moque de ce que j’ai été. Je ne m’intéresse qu’à ce que je deviendrai », répondit la fille, ses yeux violets brillants de détermination. \n« Et puis... on ne maîtrise sa force qu’en la connaissant. »\n« C’est fini », dit Flamel en rangeant ses outils. \n« Merci. C’est une sous-espèce très rare de Souillé physalis. Maintenant, conduis-moi au village le plus proche. Au fait... comment t’appelles-tu ? »\n« Sibylle Mason. »\n« Bien. Sibylle Mason. » Flamel sourit, son long manteau claquant au vent glacé.\n« Je vais te donner une adresse : si les Souillés et le pouvoir des Daimons t’intéressent, rends-toi à ce manoir et dis ton nom. Je t’y attendrai. »\n\n« Traîtresse ! Sibylle, c’est toi qui nous as dit d’attraper cette femme, et c’est toi qui la relâches ? Tu fous quoi, là ?! »\n« Dix pièces d’or, ça ne vous suffit pas ? »\n« Tu nous avais dit que c’était un gros bonnet de la capitale ! Qu’on allait se faire un pactole ! Et maintenant tu te dégonfles ? Dix malheureuses pièces ? On aurait mieux fait de la buter tout de suite ! »\nLes deux bandits, attachés dos à dos sur un banc branlant, s’agitaient en jurant, des bouteilles vides roulant à leurs pieds.\n« T’as du cran seulement quand on dort, hein ? Petite vermine... toujours à hésiter, jamais foutue d’agir. Attends un peu... on te crèvera, comme on a crevé ton foutu corbeau ! »\nSibylle se leva, leva les yeux au ciel et força la mâchoire du plus bruyant. Un craquement sec résonna : l’os venait de céder. Elle enfourna pièce après pièce dans leur bouche, étouffant leurs insultes dans des grognements sourds.\n« Crétins. Vos misérables vies s’arrêtent ici. La mienne ne fait que commencer. »\n\nSerrant contre elle le morceau de papier arraché du carnet de Flamel, Sibylle prit la route du retour vers la capitale, Dismania.",
+          ContentFR = "La lame d’un couteau était pressée contre la gorge de Flamel. La savante, plus habituée au silence de son laboratoire qu’aux menaces, poussa un long soupir.\n« Gamins... j’espère que vous mesurez ce que vous faites », dit-elle d’un ton calme.\n« Chaque millimètre de blessure que vous m’infligerez se changera en couperet prêt à s’abattre sur vous et sur ceux qui vous sont chers. »\nLes deux brigands n’écoutèrent pas. Ils lui enfoncèrent un chiffon humide dans la bouche, la ligotèrent avec une corde rêche, puis la jetèrent dans un coin comme un vulgaire colis. La porte du hangar se referma dans un fracas métallique. L’odeur de moisi du tissu faillit l’étouffer, lui coupant sa dernière phrase, celle qu’elle n’eut pas le temps de prononcer :\n« Laissez-moi partir, et vous aurez plus d’or que dans vos rêves les plus fous. »\nFlamel ferma les yeux, économisant ses forces. Plus tard, au cœur de la nuit, un bruit discret lui fit lever la tête. Une silhouette agile se laissa tomber par la lucarne. Dans la faible lumière des étoiles, elle distingua une gamine crasseuse, aux cheveux violets coupés court et au regard perçant.\n« Chut », murmura-t-elle en retirant le bâillon. Elle tendit à Flamel son sac à dos volé.\n« N’ayez crainte, ils dorment. Je suis venue vous faire sortir. Désolée... mes frères ont perdu la tête en voyant une personne importante de la capitale. »\n« Merci. Mais j’ai encore quelque chose à faire », répondit Flamel. \n« Peux-tu me ramener là où j’ai été enlevée hier ? Je te donnerai dix pièces d’or en échange. Je suis savante, et je ne peux repartir avant d’avoir terminé mes observations. »\n\nElles s’enfoncèrent dans la vallée, la nuit les enveloppant. Les lieux, encore inexplorés, exigeaient des heures de marche avant le premier village. Flamel n’aurait jamais risqué seule un tel trajet si un rapport ne mentionnait pas la présence d’une espèce de Souillé encore inconnue.\nLe vent d’automne leur mordait la peau. Flamel ralentissait à chaque pas, forçant la gamine à l’attendre de plus en plus souvent.\n« Connais-tu un type de Souillé qu’on appelle \"Souillé physalis\" ? », demanda Flamel. \n« Peut-être qu’ici, vous l’appelez autrement... »\n« On l’appelle \"Griffe-Fleur\", répondit la fille. On dirait une plante, mais elle dévore tout ce qui s’approche. Vous voulez vraiment la voir ? »\nFlamel hocha la tête, et elles prirent la direction de la forêt de l’ouest.\n« Tu n’as pas peur des Souillés », remarqua Flamel, admirative. \n« Tu es une Daimon, n’est-ce pas ? »\n« Oui. Et je trouve les Souillés fascinants », dit la jeune fille en se retournant, le regard aigu. \n« Si vous aviez lu l’ouvrage de Maxima Flamel, <I>Étude des origines des Souillés et du peuple des Charons</>, vous seriez aussi passionnée que moi... ah, non, bien sûr : si vous cherchez la Griffe-Fleur, c’est que vous l’avez déjà lu. Ce livre explique que la Griffe-Fleur est le plus ancien Souillé connu. »\nFlamel sourit, mais garda le silence. Elles traversèrent un chaos rocheux, jusqu’à ce que la fille l’arrête brusquement d’un geste. L’air nocturne sembla se fendre, zébré par des éclairs bleutés.\n« La Griffe-Fleur vient de se replier dans le sol. Si on avait continué, elle nous aurait tuées. Mais elle est paralysée, maintenant. Vous pouvez l’étudier. »\nFlamel la remercia, sortit ses outils et commença à découper la créature avec précision, rangeant ses échantillons dans des fioles.\n« Tu connais donc ce livre... tu sais que la découverte de la \"Spirale\" a confirmé que tous les Charons descendent des Souillés. Cela ne t’effraie pas ? Pas seulement les Dégradés : tous les Charons portent du sang de Souillé dans leurs veines. Toi aussi. »\n« Rien qui mérite d’avoir peur. Je me moque de ce que j’ai été. Je ne m’intéresse qu’à ce que je deviendrai », répondit la fille, ses yeux violets brillants de détermination. \n« Et puis... on ne maîtrise sa force qu’en la connaissant. »\n« C’est fini », dit Flamel en rangeant ses outils. \n« Merci. C’est une sous-espèce très rare de Souillé physalis. Maintenant, conduis-moi au village le plus proche. Au fait... comment t’appelles-tu ? »\n« Sibylle Mason. »\n« Bien. Sibylle Mason. » Flamel sourit, son long manteau claquant au vent glacé.\n« Je vais te donner une adresse : si les Souillés et le pouvoir des Daimons t’intéressent, rends-toi à ce manoir et dis ton nom. Je t’y attendrai. »\n\n« Traîtresse ! Sibylle, c’est toi qui nous as dit d’attraper cette femme, et c’est toi qui la relâches ? Tu fous quoi, là ?! »\n« Dix pièces d’or, ça ne vous suffit pas ? »\n« Tu nous avais dit que c’était un gros bonnet de la capitale ! Qu’on allait se faire un pactole ! Et maintenant tu te dégonfles ? Dix malheureuses pièces ? On aurait mieux fait de la buter tout de suite ! »\nLes deux bandits, attachés dos à dos sur un banc branlant, s’agitaient en jurant, des bouteilles vides roulant à leurs pieds.\n« T’as du cran seulement quand on dort, hein ? Petite vermine... toujours à hésiter, jamais foutue d’agir. Attends un peu... on te crèvera, comme on a crevé ton foutu corbeau ! »\nSibylle se leva, leva les yeux au ciel et força la mâchoire du plus bruyant. Un craquement sec résonna : l’os venait de céder. Elle enfourna pièce après pièce dans leur bouche, étouffant leurs insultes dans des grognements sourds.\n« Crétins. Vos misérables vies s’arrêtent ici. La mienne ne fait que commencer. »\n\nSerrant contre elle le morceau de papier arraché du carnet de Flamel, Sibylle prit la route du retour vers la capitale, Dismania.",
           TextMapId = "UI_CHAR_DATA_TEXT_43010403"
         },
         UI_CHAR_DATA_TEXT_43010404 = {
-          ContentFR = "Sibylle se considère comme une rescapée... d’un enfer.\nEt à quoi ressemble l’enfer ?\n\nC’est une mer de flammes qui se rue sur vous, quoi que vous fassiez pour fuir, engloutissant tout sur son passage. L’air brûlant s’infiltre dans vos narines comme un liquide poisseux, s’accrochant à vos poumons, tandis qu’autour de vous, ça crépite, ça gronde, ça hurle. Au-dessus de cet océan incandescent, tous les oiseaux assez fous pour tenter le vol se changent en corbeaux aveugles, retombant sur la terre calcinée et soulevant des ondes de feu.\n\nEt pourtant, c’est sur le bord de cet enfer que Sibylle se tenait.\n\nCette mission devait rester strictement confidentielle. Le commandant avait envisagé des dizaines de scénarios... mais personne ne connaissait réellement la puissance défensive tapie au cœur du bastion ennemi.\n\nAprès trois jours et trois nuits de réflexion, il choisit de tout miser : lancer une frappe éclair avec une poignée d’élites, transportées à grande vitesse par les tout nouveaux dirigeables impériaux, pour abattre la tête du serpent en un coup.\n\nC’était risqué, mais de tous les plans, c’était celui qui frôlait le plus la victoire.\nTreize Daimons, camouflés en simples soldats, furent envoyés comme une cargaison banale vers le front — pas d’adieux, pas de discours, juste un départ froid et silencieux vers une mission qui pouvait les engloutir à tout instant.\nIls s’étaient préparés au pire... mais rien ne les avait préparés au poids du regard des Dieux.\n\nDes gerbes de lumière brûlante éventraient la nuit, dévorant tout sur leur trajectoire comme un feu éternel. Sibylle, postée à la lisière de cet enfer, ne distinguait plus dans la fournaise que des silhouettes calcinées — branches mortes, ou carcasses d’animaux ? Elle n’avait plus la force de faire la différence.\n\nElle n’avait pas été assignée à l’assaut : elle était l’ultime recours. Si tout se déroulait comme prévu, ses camarades s’infiltreraient dans la tour, accompliraient la mission, et elle les exfiltrerait depuis les ombres, avant que l’ennemi ne comprenne ce qui s’était passé. Et si tout tournait mal, elle devait au moins sauver les blessés, réduire les pertes.\n\nMais la scène devant elle... c’était la pire issue.\nElle ne savait pas ce que ses camarades avaient affronté dans les profondeurs de la tour — mais ce qu’elle voyait suffisait.\nSur les douze entrés, trois seulement ressortirent. Et derrière eux, cette lumière qui vous fait trembler rien qu’en la regardant les pourchassait sans relâche : là où elle frappait, tout prenait feu — même la pierre se faisait transpercer. Ce n’était pas l’arme d’un chevalier... c’était comme si les Dieux avaient abattu un châtiment.\n\nDeux camarades jetèrent le commandant — inconscient, brisé — dans les bras de Sibylle, puis, traînant leurs corps en miettes, partirent au loin. Ils avaient choisi de couvrir la retraite.\n\nLes Daimons blessés, soutenus par leur constitution inhumaine, tenaient encore debout, épées en main. Les flammes avaient reculé, et leur respiration, bien que sifflante, n’arrachait plus de giclées de sang brûlant à chaque souffle. Mais à la place du feu, ce fut une phalange de chevaliers en armure complète qui surgit. Le bruit de leurs pas suffisait à comprendre : c’étaient des vétérans. Ils n’avaient pas ordre de capturer. Ils étaient venus tuer.\n\nOrdinairement, un Daimon en pleine possession de ses forces aurait dispersé ces ennemis comme des lièvres devant un loup. Mais avec les ailes brisées, même un aigle finit dévoré par les fourmis.\n\nLes rafales de balles éventrèrent leurs parades, perçant leurs corps comme on déchire un drap. Les chevaliers élysiens, d’abord prudents, s’approchèrent toujours plus... encore quelques pas, et ils seraient assez près pour trancher l’échine de ces géants à bout de forces.\n\nSibylle, figée dans l’ombre, observait une scène irréelle. Ces silhouettes, il y a encore quelques jours, partageaient avec elle les plans d’attaque, les repas sous la lumière vacillante des lampes. Dans sa vie où elle se targuait de n’avoir aucun ami, ils avaient été… ce qui s’en rapprochait le plus.\n\nEt maintenant, ces presque-amis se tenaient là, adossés l’un à l’autre pour rester debout, le regard déviant — presque malgré eux — vers la direction où Sibylle montait dans le dirigeable.\n\nÉtait-ce un appel ?\nUn reproche ?\nUn adieu ?\n\nTout en elle hurlait de respecter les ordres. Et pourtant, une voix ténue criait l’inverse.\n\nPuis, sans qu’elle ait le temps de décider, ils tranchèrent le nœud à sa place : chacun sortit un poignard, le planta dans la gorge de l’autre. Pas d’hésitation. Pas de tremblement. Comme s’ils l’avaient toujours su.\nIls tombèrent, un sourire aux lèvres.\n\nAu même instant, Sibylle lança les moteurs du dirigeable.\n\nDans le grondement de la machine, elle expira enfin l’air qu’elle retenait depuis trop longtemps. Elle cligna des yeux... et sentit sur sa joue une larme, la première depuis des années. Elle n’en comprenait pas le sens — pas plus qu’elle ne comprenait ce que leurs regards avaient vraiment voulu dire, à la toute dernière seconde.\n\nPeut-être un soulagement : celui de ne pas avoir eu à trahir les ordres.\nOu peut-être... autre chose.\n...\nParce qu’ils avaient mis le pied dans la Tour des Dieux, l’Empire déclara l’opération victorieuse. Dans l’avis officiel, il fut écrit : parmi les treize, seule Sibylle était revenue.\n\nSibylle fut promue au rang de Commandante de Légion.\nEt pour le reste de sa vie, elle appela cette nuit-là : sa survie de l’enfer.",
+          ContentFR = "Sibylle se considère comme une rescapée... d’un enfer.\nEt à quoi ressemble l’enfer ?\nC’est une mer de flammes qui se rue sur vous, quoi que vous fassiez pour fuir, engloutissant tout sur son passage. L’air brûlant s’infiltre dans vos narines comme un liquide poisseux, s’accrochant à vos poumons, tandis qu’autour de vous, ça crépite, ça gronde, ça hurle. Au-dessus de cet océan incandescent, tous les oiseaux assez fous pour tenter le vol se changent en corbeaux aveugles, retombant sur la terre calcinée et soulevant des ondes de feu.\nCette mission devait rester strictement confidentielle. Le commandant avait envisagé des dizaines de scénarios... mais personne ne connaissait réellement la puissance défensive tapie au cœur du bastion ennemi, la cité sacrée de l’Église Élyséenne.\nAprès trois jours et trois nuits de réflexion, il choisit de tout miser : lancer une frappe éclair avec une poignée d’élites, transportées à grande vitesse par les tout nouveaux dirigeables impériaux, pour abattre la tête du serpent en un coup.\nC’était risqué, mais de tous les plans, c’était celui qui frôlait le plus la victoire.\nTreize Daimons, camouflés en simples soldats, furent envoyés comme une cargaison banale vers le front, pas d’adieux, pas de discours, juste un départ froid et silencieux vers une mission qui pouvait les engloutir à tout instant.\nIls s’étaient préparés au pire... mais rien ne les avait préparés au poids du regard des Dieux.\n\nDes gerbes de lumière brûlante éventraient la nuit, dévorant tout sur leur trajectoire comme un feu éternel. Sibylle, postée à la lisière de cet enfer, ne distinguait plus dans la fournaise que des silhouettes calcinées, branches mortes ou carcasses d’animaux ? Elle n’avait plus la force de faire la différence. \nElle n’avait pas été assignée à l’assaut : elle était l’ultime recours. Si tout se déroulait comme prévu, ses camarades pénétreraient dans la tour, accompliraient la mission, et elle les exfiltrerait depuis les ombres, avant que l’ennemi comprenne ce qui s’était passé. Et si tout tournait mal, elle devait au moins sauver les blessés, réduire les pertes.\nMais la scène devant elle... c’était le pire des scénarios.\nDes treize Daimons, douze atteignirent la zone ciblée. Deux furent frappés dès leur arrivée par ces faisceaux meurtriers, gravement touchés. Le commandant n’hésita pas : il laissa les blessés couvrir la retraite et s’enfonça dans le cœur en feu de la cité avec les neuf restants.\nSibylle comprenait. Face à un ennemi d’une telle puissance, concentrer ses forces et abandonner les fardeaux était la seule chance de succès. Elle aurait pris la même décision. La seule différence, c’est qu’elle, tapie dans l’ombre, devait regarder ces deux soldats affronter leur fin.\n\nLes Daimons blessés, soutenus par leur constitution inhumaine, tenaient encore debout, épées en main. Les flammes avaient reculé, et leur respiration, bien que sifflante, n’arrachait plus de giclées de sang brûlant à chaque souffle. Mais à la place du feu, ce fut une phalange de chevaliers en armure complète qui surgit. Le bruit de leurs pas suffisait à comprendre : c’étaient des vétérans, et ils n’avaient pas ordre de capturer. Ils étaient venus tuer.\nOrdinairement, un Daimon en pleine possession de ses forces aurait dispersé ces ennemis comme des lièvres devant un loup. Mais avec les ailes brisées, même un aigle finit dévoré par les fourmis.\nLes rafales de balles éventrèrent leurs parades, perçant leurs corps comme on déchire un drap. Les assaillants avancèrent pas à pas, jusqu’à se trouver assez proches pour trancher leurs colonnes vertébrales.\n\nSibylle, figée dans l’ombre, observait une scène irréelle. Ces silhouettes, il y a encore quelques jours, partageaient avec elle les plans d’attaque, les repas sous la lumière vacillante des lampes. Dans sa vie où elle se targuait de n’avoir aucun ami, ils avaient été... ce qui s’en rapprochait le plus.\nEt maintenant, ces presque-amis se tenaient là, adossés l’un à l’autre pour rester debout, les yeux braqués vers elle.\nÉtait-ce un appel ? Un reproche ? Un adieu ?\nTout en elle hurlait de respecter les ordres. Et pourtant, une voix ténue criait l’inverse. Puis, sans qu’elle ait le temps de décider, ils tranchèrent le nœud à sa place : chacun sortit un poignard, le planta dans la gorge de l’autre. Pas d’hésitation, pas de tremblement... comme s’ils l’avaient toujours su. Et ils tombèrent, un sourire aux lèvres.\n\nLes chevaliers battirent en retraite, pourchassant le commandant et les autres dans les profondeurs. Sibylle, enfin, expira l’air qu’elle retenait depuis trop longtemps.\nElle cligna des yeux... et sentit sur sa joue une larme, la première depuis des années. Elle n’en comprenait pas le sens... pas plus qu’elle n’avait compris leurs regards. Peut-être un soulagement : celui de ne pas avoir eu à trahir les ordres.\nOu peut-être... autre chose.\n\n...\nLa mission réussit. Mais à part Sibylle et le commandant, aucun des treize ne revint.\nSibylle fut promue au rang de Commandante de Légion.\nEt pour le reste de sa vie, elle appela cette nuit-là : sa survie de l’enfer.",
           TextMapId = "UI_CHAR_DATA_TEXT_43010404"
         },
         UI_CHAR_DATA_TEXT_43010405 = {
@@ -62873,7 +65128,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_CHAR_DATA_TEXT_43010405"
         },
         UI_CHAR_DATA_TEXT_51010101 = {
-          ContentFR = "Lorsque les citadins parlent de Filbert, ce n’est pas seulement l’image d’un cochon chargé de vivres qui leur vient en tête... mais le grondement du sol et le souffle du vent qu’il laisse dans son sillage.\nPourquoi ?\nLa réponse se trouve dans ces murs penchés et ces étals écrasés que l’on voit parfois dans la cité, preuves irréfutables du passage de Filbert. Et, bien sûr, quelques lettres de plainte adressées à l’Église s’ensuivaient.\nMais chaque \"accident\" annonçait aussi le retour triomphal de Filbert, les sacs remplis à ras bord... Ce qui expliquait que, dans ces lettres, les mots de joie dépassaient souvent les récriminations :\n« Ce vieux mur, c’était comme un membre de notre famille... et voilà qu’il a mal ! Dites à Truffle de nous donner quelques pains de plus pour apaiser sa peine ! »\nOh... et déjà, au loin, retentit un nouveau BOUM...",
+          ContentFR = "Lorsque les citadins parlent de Filbert, ce n’est pas seulement l’image d’un cochon chargé de vivres qui leur vient en tête... mais le grondement du sol et le souffle du vent qu’il laisse dans son sillage.\nPourquoi ?\nLa réponse se trouve dans ces murs penchés et ces étals écrasés que l’on voit parfois dans la cité, preuves irréfutables du passage de Filbert. Et, bien sûr, quelques lettres de plainte adressées à l’Église s’ensuivaient.\nMais chaque \"accident\" annonçait aussi le retour triomphal de Filbert, les sacs remplis à ras bord... Ce qui expliquait que, dans ces lettres, les mots de joie dépassaient souvent les récriminations :\n« Ce vieux mur, c’était comme un membre de notre famille... et voilà qu’il a mal ! Dites à Truffle de nous donner quelques pains de plus pour apaiser sa peine ! »\nOh... et déjà, au loin, retentit un nouveau <I>BOUM</>...",
           TextMapId = "UI_CHAR_DATA_TEXT_51010101"
         },
         UI_CHAR_DATA_TEXT_51010102 = {
@@ -62893,7 +65148,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_CHAR_DATA_TEXT_51010105"
         },
         UI_CHAR_DATA_TEXT_51010201 = {
-          ContentFR = "« ... Cher ami, si un jour vous croisez, dans les rues de cette cité, une frêle jeune fille filant à toute allure aux côtés d’un gigantesque cochon, ne soyez pas surpris. La vraie surprise, c’est qu’ici... personne ne trouve cela étrange.\nDans cette ville, tout le monde les connaît : Commissaire au Ravitaillement Truffle, et la Famille Filbert, ses inséparables compagnons, honorés du titre de Commissaires d’élite. Leur silhouette se détache sur la cité comme deux fraises éclatantes posées sur une crêpe dorée.\nPrononcez le nom de Truffle au sein de l’Église Élyséenne, et vous verrez quelques visages se froncer en évoquant ses mille espiègleries. Mais, dans leurs yeux, vous ne lirez jamais de vraie colère, tout au plus l’étonnement amusé de celui qui vient de se faire cogner la tête par un fruit mûr tombé de l’arbre... et qui, au fond, n’y voit rien de grave.\nSa voix claire et sincère se glisse dans les oreilles de ceux qui rêvent d’un peu de bonheur :\n« Que chacun, en ce monde, ait le ventre plein... et l’esprit en paix ! » »\n\nViviane, écrivaine et voyageuse de Luca, Chroniques des Terres du Sud",
+          ContentFR = "« ... Cher ami, si un jour vous croisez, dans les rues de cette cité, une frêle jeune fille filant à toute allure aux côtés d’un gigantesque cochon, ne soyez pas surpris. La vraie surprise, c’est qu’ici... personne ne trouve cela étrange.\nDans cette ville, tout le monde les connaît : Commissaire au Ravitaillement Truffle, et la Famille Filbert, ses inséparables compagnons, honorés du titre de Commissaires d’élite. Leur silhouette se détache sur la cité comme deux fraises éclatantes posées sur une crêpe dorée.\nPrononcez le nom de Truffle au sein de l’Église Élyséenne, et vous verrez quelques visages se froncer en évoquant ses mille espiègleries. Mais, dans leurs yeux, vous ne lirez jamais de vraie colère, tout au plus l’étonnement amusé de celui qui vient de se faire cogner la tête par un fruit mûr tombé de l’arbre... et qui, au fond, n’y voit rien de grave.\nSa voix claire et sincère se glisse dans les oreilles de ceux qui rêvent d’un peu de bonheur :\n« Que chacun, en ce monde, ait le ventre plein... et l’esprit en paix ! » »\n\nViviane, écrivaine et voyageuse de Luca, <I>Chroniques des Terres du Sud</>",
           TextMapId = "UI_CHAR_DATA_TEXT_51010201"
         },
         UI_CHAR_DATA_TEXT_51010202 = {
@@ -62941,7 +65196,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_CHAR_DATA_TEXT_51010402"
         },
         UI_CHAR_DATA_TEXT_51010403 = {
-          ContentFR = "Peu de temps après que Truffle ait rejoint l’Église Élyséenne, la petite ville fut frappée par une famine sévère. Les réserves de nourriture de l’Église s’amenuisaient dangereusement, et les orphelins sous leur protection n’avaient presque plus rien à manger.\nChaque nuit, les bruits des estomacs affamés résonnaient dans le dortoir, créant une sorte de symphonie de la faim dans le silence de la nuit.\nLes plus jeunes, trop affamés pour trouver le sommeil, se blottissaient sous leurs couvertures en pleurant doucement. Truffle, dont le ventre était tout aussi vide, allait les consoler, fatiguée mais réconfortante :\n« Ne pleure pas, essaie de dormir, quand on dort on ne sent plus la faim. »\n« Mais j’ai trop faim pour dormir... Toi, tu n’as pas faim ? »\nTruffle posa une main sur son propre ventre creux, fronça les sourcils et soupira :\n« Moi aussi j’ai faim, mais ne t’inquiète pas, je vais te montrer comment s’endormir. Ferme les yeux ! »\nElle couvrit doucement les yeux de son amie de ses mains chaudes et murmura une comptine inventée sur le moment, pleine d’erreurs mais rassurante :\n« Imagine un immense champ de blé, et toi, tu es une petite taupe. Dans ton terrier, il y a plein de pommes de terre ! Tu les comptes : une pomme de terre, deux pommes de terre, trois pommes de terre, quatre pommes de terre... »\n« Vingt-sept pommes de terre, vingt-huit pommes de terre, vingt-neuf pommes de terre... »\n« Cinquante-trois pommes de terre... cinquante-quatre pommes de terre... cinquante-six... cinquante-sept... ronflement... »\nPeu à peu, la symphonie des ventres affamés s’estompa, la dernière note venant du ventre de Truffle elle-même.\nDans le silence, Truffle repensa à ses jours d’errance avec Filbert et prit la ferme résolution de changer les choses... pour elle, mais aussi pour tous les autres.",
+          ContentFR = "Peu de temps après que Truffle ait rejoint l’Église Élyséenne, la petite ville fut frappée par une famine sévère. Les réserves de nourriture de l’Église s’amenuisaient dangereusement, et les orphelins sous leur protection n’avaient presque plus rien à manger.\nChaque nuit, les bruits des estomacs affamés résonnaient dans le dortoir, créant une sorte de symphonie de la faim dans le silence de la nuit.\nLes plus jeunes, trop affamés pour trouver le sommeil, se blottissaient sous leurs couvertures en pleurant doucement. Truffle, dont le ventre était tout aussi vide, allait les consoler, fatiguée mais réconfortante :\n« Ne pleure pas, essaie de dormir, quand on dort on ne sent plus la faim. »\n« Mais j’ai trop faim pour dormir... Toi, tu n’as pas faim ? »\nTruffle posa une main sur son propre ventre creux, fronça les sourcils et soupira :\n« Moi aussi j’ai faim, mais ne t’inquiète pas, je vais te montrer comment s’endormir. Ferme les yeux ! »\nElle couvrit doucement les yeux de son amie de ses mains chaudes et murmura une comptine inventée sur le moment, pleine d’erreurs mais rassurante :\n« Imagine un immense champ de blé, et toi, tu es une petite taupe. Dans ton terrier, il y a plein de pommes de terre ! Tu les comptes : une pomme de terre, deux pommes de terre, trois pommes de terre, quatre pommes de terre... »\n« Vingt-sept pommes de terre, vingt-huit pommes de terre, vingt-neuf pommes de terre... »\n« Cinquante-trois pommes de terre... cinquante-quatre pommes de terre... cinquante-six... cinquante-sept... <I>ronflement...</> »\nPeu à peu, la symphonie des ventres affamés s’estompa, la dernière note venant du ventre de Truffle elle-même.\nDans le silence, Truffle repensa à ses jours d’errance avec Filbert et prit la ferme résolution de changer les choses... pour elle, mais aussi pour tous les autres.",
           TextMapId = "UI_CHAR_DATA_TEXT_51010403"
         },
         UI_CHAR_DATA_TEXT_51010404 = {
@@ -62957,7 +65212,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_CHAR_DATA_TEXT_51020102"
         },
         UI_CHAR_DATA_TEXT_51020103 = {
-          ContentFR = "L’Étranger connaît une foule de petits trucs, utiles... ou franchement discutables.\nLes trois règles d’or pour entrer dans une taverne, comment faire semblant d’être ivre, l’art de tenir compagnie à un buveur, la couture pour que les vêtements durent le plus longtemps possible, ou encore la manière d’assommer quelqu’un sans séquelles...\nUn jour, il prétend qu’il écrira un livre intitulé Cent astuces de vie par l’Étranger, certain qu’il deviendra un véritable succès sur tout le continent, avec des fans partout sur son passage. \n« Autant m’entraîner à faire des signatures élégantes dès maintenant », plaisante-t-il souvent.\nDifficile de dire, en l’écoutant, s’il parle sous l’effet de la boisson ou s’il invente tout simplement. Mais si un tel livre voyait le jour, il y a fort à parier qu’il ferait causer dans toutes les tavernes.",
+          ContentFR = "L’Étranger connaît une foule de petits trucs, utiles... ou franchement discutables.\nLes trois règles d’or pour entrer dans une taverne, comment faire semblant d’être ivre, l’art de tenir compagnie à un buveur, la couture pour que les vêtements durent le plus longtemps possible, ou encore la manière d’assommer quelqu’un sans séquelles...\nUn jour, il prétend qu’il écrira un livre intitulé <I>Cent astuces de vie par l’Étranger</>, certain qu’il deviendra un véritable succès sur tout le continent, avec des fans partout sur son passage. \n« Autant m’entraîner à faire des signatures élégantes dès maintenant », plaisante-t-il souvent.\nDifficile de dire, en l’écoutant, s’il parle sous l’effet de la boisson ou s’il invente tout simplement. Mais si un tel livre voyait le jour, il y a fort à parier qu’il ferait causer dans toutes les tavernes.",
           TextMapId = "UI_CHAR_DATA_TEXT_51020103"
         },
         UI_CHAR_DATA_TEXT_51020104 = {
@@ -63081,7 +65336,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_CHAR_DATA_TEXT_53010402"
         },
         UI_CHAR_DATA_TEXT_53010403 = {
-          ContentFR = "« À demain, Psyche ! »\n« Oui, à demain ! »\nC’était une soirée banale. Psyche a salué {性别:ce nouvel ami Chasseur de Phoxène|cette nouvelle amie Chasseuse de Phoxène}, l’a regardé franchir les portes de la Maison d’Hypnos... et elle n’a pas bougé. Elle est restée longtemps à fixer la rue vide, bien après que sa silhouette ait disparu. Puis elle est rentrée dans sa chambre, lentement, à regret.\n« À demain », une promesse qu’on fait sans y penser. Mais pour Psyche, ces mots-là sont lourds de crainte. Car chaque soir, quand elle ferme les yeux, elle ignore si elle les rouvrira vraiment un jour.\nJuste avant de sombrer dans le sommeil, elle murmure une prière, discrète mais sincère. « S’il vous plaît... faites que je me réveille demain. »\n\nPuis la nuit passe. L’aube effleure la terre. Psyche ouvre les yeux.\nElle se redresse, touche son bras, et sent la chaleur de son propre corps. Elle est encore là. Elle n’est pas devenue un monstre. Elle sourit.\n« C’est bon... j’ai tenu ma promesse. »",
+          ContentFR = "« À demain, Psyche ! »\n« Oui, à demain ! »\nC’était une soirée banale. Psyche a salué {性别:ce nouvel ami Chasseur de Phoxène|cette nouvelle amie Chasseuse de Phoxène}, l’a regardé franchir les portes de la Maison d’Hypnos... et elle n’a pas bougé. Elle est restée longtemps à fixer la rue vide, bien après que sa silhouette ait disparu. Puis elle est rentrée dans sa chambre, lentement, à regret.\n« À demain », une promesse qu’on fait sans y penser. Mais pour Psyche, ces mots-là sont lourds de crainte. Car chaque soir, quand elle ferme les yeux, elle ignore si elle les rouvrira vraiment un jour.\n Juste avant de sombrer dans le sommeil, elle murmure une prière, discrète mais sincère. « S’il vous plaît... faites que je me réveille demain. »\n\nPuis la nuit passe. L’aube effleure la terre. Psyche ouvre les yeux.\nElle se redresse, touche son bras, et sent la chaleur de son propre corps. Elle est encore là. Elle n’est pas devenue un monstre. Elle sourit.\n« C’est bon... j’ai tenu ma promesse. »",
           TextMapId = "UI_CHAR_DATA_TEXT_53010403"
         },
         UI_CHAR_DATA_TEXT_53010404 = {
@@ -63137,7 +65392,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_CHAR_DATA_TEXT_54010301"
         },
         UI_CHAR_DATA_TEXT_54010302 = {
-          ContentFR = "Daphne raffole en secret des romans d’amour — surtout des plus classiques, avec princesses et chevaliers. Chez les jeunes de Dismania, et plus encore chez les iconoclastes des Spathatoi, ce genre d’histoires passe pour affreusement démodé. Alors elle glisse ses livres sous de fausses couvertures : Recueil de discours de Sa Majesté Julius, Études sur l’origine commune des Souillés et des Charons, et autres titres tout aussi sérieux.",
+          ContentFR = "Daphne raffole en secret des romans d’amour — surtout des plus classiques, avec princesses et chevaliers. Chez les jeunes de Dismania, et plus encore chez les iconoclastes des Spathatoi, ce genre d’histoires passe pour affreusement démodé. Alors elle glisse ses livres sous de fausses couvertures : <I>Recueil de discours de Sa Majesté Julius</>, <I>Études sur l’origine commune des Souillés et des Charons</>, et autres titres tout aussi sérieux.",
           TextMapId = "UI_CHAR_DATA_TEXT_54010302"
         },
         UI_CHAR_DATA_TEXT_54010303 = {
@@ -63153,7 +65408,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_CHAR_DATA_TEXT_54010305"
         },
         UI_CHAR_DATA_TEXT_54010401 = {
-          ContentFR = "La pluie de Dismania martelait les vitres. Dans la pâleur d’une chambre d’hôpital, une fillette de quatre ans était en train de mourir.\nOn avait déjà changé d’innombrables serviettes posées sur son front ; la potion s’écoulait, goutte après goutte, au long d’un tube de caoutchouc jusque dans ses veines — et pourtant, la fièvre ne tombait pas.\n\nLe premier jour, son père enferma sa petite main maigre et enfantine dans sa large paume, puis la pressa contre sa barbe rêche, trempée de larmes. Elle ne se réveilla pas.\nLe deuxième, sa mère fit venir le meilleur médecin de Dismania — un homme qui avait autrefois servi l’Empereur lui-même. Mais l’homme, malgré l’or qu’on lui versait, ne fit que secouer la tête : une chance sur dix. Elle ne se réveilla pas.\nLe troisième, la jeune infirmière chargée de la veiller alluma une bougie, posa les deux mains sur sa poitrine et pria tout bas. Elle ne se réveilla pas.\nLe quatrième, un maître de pompes funèbres entra avec un sourire servile et se mit à parler du nombre de carrosses somptueux qu’il faudrait pour l’enterrement ; le père, hors de lui, l’expulsa en brandissant une chaise. Elle ne se réveilla pas.\nLe cinquième, la grand-mère maternelle — déjà très âgée — arriva du domaine rural. Devant la petite fille toujours inconsciente, elle se contenta de tirer un livre de son sac et se mit à lire, doucement, au bord du lit...\n\n« Il y a très longtemps, les hommes rêvaient, comme par magie, de changer la pierre en or. Ils essayèrent de mêler soufre, sel et mercure... Et, bien des années plus tard, nous avons eu le Phoxène. »\n« Il y a très longtemps, les hommes rêvaient de mesurer le ciel comme les oiseaux. Ils tentèrent de soulever des ballons par le feu... Et, bien des années plus tard, nous avons eu les dirigeables. »\n— « Et à quoi bon raconter ces histoires, maintenant ? » protesta la mère, les yeux rougis. « Elle est toujours inconsciente, elle n’entend rien... Je... je t’ai fait venir pour que tu la vois une dernière fois, maman. »\n— « Non, Claudia. » La vieille femme sourit, à peine. « Daphne a toujours aimé ces récits. Elle va se réveiller. »\n« Il y a très longtemps, les hommes rêvaient de chasser la maladie comme le feraient les dieux. Ils broyèrent chaque herbe, chaque racine... Et, bien des années plus tard, nous avons eu les potions. Voilà notre alchimie — ce que les gens de Huaxu appellent \"gezhi\", et ceux d’Aethyrie \"science\". »\n\nElle déposa un baiser sur la joue exsangue de l’enfant.\n\n« Crois au pouvoir de la grande alchimie, Daphne. Tu vas te réveiller. Parce que l’alchimie est— »\n« ... le savoir... qui apporte... le bonheur... aux gens. »\n\nDans la chambre, les regards s’écarquillèrent d’abord, puis se noyèrent de larmes. Les lèvres pâles de la petite fille bougèrent : elle venait de prononcer le « mot de passe » qu’elle partageait avec sa grand-mère.\nL’aiguille du destin s’arrêta sur le dixième de la roue. Daphne Theodore, quatre ans, se réveilla.\n\nBien qu’elle sache que tout cela n’était qu’un hasard, Daphne plaisante souvent, en repensant à cette maladie d’enfance : ce seraient les histoires d’alchimie de sa grand-mère qui lui auraient offert une seconde vie. Et c’est aussi cette traversée, au bord de la mort, qui la décida à reprendre le vœu de sa lignée — comme sa mère, comme ses grands-parents — et à devenir une alchimiste accomplie.\nComme dans les récits, génération après génération, elle apporterait le bonheur aux autres par ce savoir... de la même manière qu’une fillette pâle et desséchée avait été ramenée, goutte après goutte, des portes de la mort par une potion.\n\nElle y a cru, longtemps. De tout son cœur.",
+          ContentFR = "La pluie de Dismania martelait les vitres. Dans la pâleur d’une chambre d’hôpital, une fillette de quatre ans était en train de mourir.\nOn avait déjà changé d’innombrables serviettes posées sur son front ; la potion s’écoulait, goutte après goutte, au long d’un tube de caoutchouc jusque dans ses veines — et pourtant, la fièvre ne tombait pas.\n\nLe premier jour, son père enferma sa petite main maigre et enfantine dans sa large paume, puis la pressa contre sa barbe rêche, trempée de larmes. Elle ne se réveilla pas.\nLe deuxième, sa mère fit venir le meilleur médecin de Dismania — un homme qui avait autrefois servi l’Empereur lui-même. Mais l’homme, malgré l’or qu’on lui versait, ne fit que secouer la tête : une chance sur dix. Elle ne se réveilla pas.\nLe troisième, la jeune infirmière chargée de la veiller alluma une bougie, posa les deux mains sur sa poitrine et pria tout bas. Elle ne se réveilla pas.\nLe quatrième, un maître de pompes funèbres entra avec un sourire servile et se mit à parler du nombre de carrosses somptueux qu’il faudrait pour l’enterrement ; le père, hors de lui, l’expulsa en brandissant une chaise. Elle ne se réveilla pas.\nLe cinquième, la grand-mère maternelle — déjà très âgée — arriva du domaine rural. Devant la petite fille toujours inconsciente, elle se contenta de tirer un livre de son sac et se mit à lire, doucement, au bord du lit...\n\n« Il y a très longtemps, les hommes rêvaient, comme par magie, de changer la pierre en or. Ils essayèrent de mêler soufre, sel et mercure... Et, bien des années plus tard, nous avons eu le Phoxène. »\n« Il y a très longtemps, les hommes rêvaient de mesurer le ciel comme les oiseaux. Ils tentèrent de soulever des ballons par le feu... Et, bien des années plus tard, nous avons eu les dirigeables. »\n— « Et à quoi bon raconter ces histoires, maintenant ? » protesta la mère, les yeux rougis. « Elle est toujours inconsciente, elle n’entend rien... Je... je t’ai fait venir pour que tu la vois une dernière fois, maman. »\n— « Non, Claudia. » La vieille femme sourit, à peine. « Daphne a toujours aimé ces récits. Elle va se réveiller. »\n« Il y a très longtemps, les hommes rêvaient de chasser la maladie comme le feraient les dieux. Ils broyèrent chaque herbe, chaque racine... Et, bien des années plus tard, nous avons eu les potions. Voilà notre alchimie — ce que les gens de Huaxu appellent \"<I>gezhi</>\", et ceux d’Aethyrie \"science\". »\n\nElle déposa un baiser sur la joue exsangue de l’enfant.\n\n« Crois au pouvoir de la grande alchimie, Daphne. Tu vas te réveiller. Parce que l’alchimie est— »\n« ... le savoir... qui apporte... le bonheur... aux gens. »\n\nDans la chambre, les regards s’écarquillèrent d’abord, puis se noyèrent de larmes. Les lèvres pâles de la petite fille bougèrent : elle venait de prononcer le « mot de passe » qu’elle partageait avec sa grand-mère.\nL’aiguille du destin s’arrêta sur le dixième de la roue. Daphne Theodore, quatre ans, se réveilla.\n\nBien qu’elle sache que tout cela n’était qu’un hasard, Daphne plaisante souvent, en repensant à cette maladie d’enfance : ce seraient les histoires d’alchimie de sa grand-mère qui lui auraient offert une seconde vie. Et c’est aussi cette traversée, au bord de la mort, qui la décida à reprendre le vœu de sa lignée — comme sa mère, comme ses grands-parents — et à devenir une alchimiste accomplie.\nComme dans les récits, génération après génération, elle apporterait le bonheur aux autres par ce savoir... de la même manière qu’une fillette pâle et desséchée avait été ramenée, goutte après goutte, des portes de la mort par une potion.\n\nElle y a cru, longtemps. De tout son cœur.",
           TextMapId = "UI_CHAR_DATA_TEXT_54010401"
         },
         UI_CHAR_DATA_TEXT_54010402 = {
@@ -63161,7 +65416,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_CHAR_DATA_TEXT_54010402"
         },
         UI_CHAR_DATA_TEXT_54010403 = {
-          ContentFR = "Daphne remit son sac sans un mot, se soumit à la fouille des soldats, puis franchit deux lourdes portes successives. On disait que ces portes, forgées à partir de puissants aimants, pouvaient révéler la moindre arme dissimulée — protégeant ainsi les hauts gradés de la Légion de la plupart des tentatives d’assassinat.\n\nPourtant, une fois passée la dernière porte, Daphne ne put réprimer un léger étonnement. Comparée à ces procédures de sécurité complexes, la résidence privée de Sibylle Mason se révélait d’une simplicité presque austère.\n\nLes murs, d’un gris crayeux et rugueux, étaient nus, sans la moindre décoration. Une large table, quelques chaises droites suffisaient à meubler l’espace. Leur bois massif, anguleux, sans ornement, rappelait l’équipement d’une caserne ; elles n’étaient faites que pour supporter un poids — rien de plus.\n\n— « Vous êtes venue, Daphne. »\nLa voix de Sibylle lui parvint, étouffée par le couloir.\n— « Je suis dans la cuisine. Entrez. »\nDaphne répondit à voix basse et s’exécuta. Son pas était hésitant : elle ignorait pourquoi cette aînée, si haut placée, avait tenu à la convoquer chez elle.\nLa cuisine, comme le salon, baignait dans des tons gris et blancs. Une seule couleur y tranchait : le rouge éclatant d’une grenade, tenue dans la main de la femme aux cheveux violets. La pointe du couteau en entamait la peau lisse et tendue.\n\n— « Vous êtes arrivée avec quinze minutes d’avance. Je n’avais pas encore terminé. »\nSibylle se concentrait sur le fruit, découvrant ses graines charnues.\n— « Je n’aime pas employer de domestiques. Ici, je fais tout moi-même. »\n— « Veuillez m’excuser... »\nLes mains de Daphne se tordaient l’une contre l’autre.\n— « Peut-être... peut-être puis-je vous aider— »\nDring—\nLa sonnerie du téléphone coupa net sa phrase.\n— « Daphne, prenez l’appel. »\nSibylle versait déjà les graines dans une assiette de porcelaine blanche.\n— « Approchez et tenez le combiné. »\nDaphne obéit, portant le combiné à l’oreille de Sibylle. Une voix masculine jeune s’éleva, parfaitement audible.\n— « Commandante Sibylle, au sujet des deux espions des Déchus. Quatre jours d’interrogatoire, et toujours aucun aveu. Ils sont à bout. »\n— « Pour beaucoup, la douleur physique n’a aucun sens. Vous êtes encore trop tendre. Ne frappez pas ce qu’ils ont de plus dur... mais ce qu’ils ont de plus fragile. »\nLes graines de grenade tombèrent une à une dans l’assiette, tintant doucement.\n— « Si je me souviens bien, ces deux-là sont frères. »\n— « Nous avons déjà menacé leur vie mutuellement. Aucun n’a cédé. Ils semblaient prêts à mourir ensemble. »\n— « Alors vous n’avez pas compris ce qu’est le véritable point faible. »\nSibylle versa les graines dans un tamis de cuivre fin, posé sur une carafe de verre. Puis elle pressa — lentement, fermement. Ses doigts se contractaient, blanchissaient, tandis que le jus écarlate s’écoulait en un mince filet.\n— « Ne les menacez pas de mort. Offrez-leur l’espoir. Dites-leur que celui qui parlera mourra... mais que son frère vivra. »\n\nUn « Oui, Commandante » retentit, puis la ligne se coupa. Les graines, dans le tamis, n’étaient plus que pulpe pâle et desséchée. Sibylle répartit le jus dans deux verres.\nLa main de Daphne, toujours figée autour du combiné, tremblait légèrement. Une sueur froide perlait sur son front. Elles gagnèrent le salon.\n— « Vous voulez connaître le sort de ces frères, n’est-ce pas ? »\nSibylle lui tendit un verre.\n— « Alors restez. Assistez à leur fin. »\n\nDaphne hésita, mordit sa lèvre, puis acquiesça. Elle fit mine de rester calme, faisant tourner le liquide rouge dans le verre. La grenade lui était chère ; enfant, elle se promenait souvent avec ses parents dans des vergers de grenadiers. Mais aujourd’hui, ce rouge familier éveillait en elle une crainte sourde.\nUne heure et demie plus tard, le téléphone sonna de nouveau.\n— « L’aîné a parlé. Nous avons déjà lancé l’arrestation. Comme promis, nous avons libéré le cadet et lui avons rendu son arme. »\nDaphne laissa échapper un soupir de soulagement... qui se figea aussitôt.\n— « Mais le cadet n’a pas supporté que son frère échange des secrets contre sa vie. À peine sorti, il s’est tiré une balle dans la tête. »\n— « Quel gâchis... un jeune homme à la volonté d’acier. »\nLa voix de Sibylle était parfaitement indifférente. Son regard se posa sur Daphne, énigmatique.\n— « Vous aviez prévu cette issue dès le départ. C’est pour cela que vous m’avez fait venir. »\nLa voix de Daphne tremblait malgré elle.\n— « C’est le Doyen Silas qui vous a demandé de me convaincre, n’est-ce pas ? De m’expliquer comment servir l’Empire ? »\n— « Les plaintes de Silas ne méritent pas mon temps. »\nSibylle répondit calmement.\n— « Je voulais seulement vous apprendre à survivre — dans la Légion comme à l’Académie.\nL’empathie doit être mesurée : assez vive pour percevoir les failles de l’ennemi, jamais au point de vous submerger. »\n— « Trop d’empathie, Daphne, ne vous rendra pas seulement impuissante. Elle vous condamnera. »\n\nDaphne ne se souvenait plus très bien de la façon dont elle avait remercié son aînée, ni comment elle avait presque fui cette demeure grise et silencieuse. Ce qui demeurait, c’était l’image de deux verres de jus de grenade : celui de Sibylle, vidé d’un trait, et le sien, intact.\n\nParfois, elle rêvait de ce verre. Du liquide qu’il contenait — couleur de la grenade, couleur de la vie — débordant lentement, encore et encore, jusqu’à former un fleuve écarlate... qui finissait par l’engloutir.",
+          ContentFR = "Daphne remit son sac sans un mot, se soumit à la fouille des soldats, puis franchit deux lourdes portes successives. On disait que ces portes, forgées à partir de puissants aimants, pouvaient révéler la moindre arme dissimulée — protégeant ainsi les hauts gradés de la Légion de la plupart des tentatives d’assassinat.\n\nPourtant, une fois passée la dernière porte, Daphne ne put réprimer un léger étonnement. Comparée à ces procédures de sécurité complexes, la résidence privée de Sibylle Mason se révélait d’une simplicité presque austère.\n\nLes murs, d’un gris crayeux et rugueux, étaient nus, sans la moindre décoration. Une large table, quelques chaises droites suffisaient à meubler l’espace. Leur bois massif, anguleux, sans ornement, rappelait l’équipement d’une caserne ; elles n’étaient faites que pour supporter un poids — rien de plus.\n\n— « Vous êtes venue, Daphne. »\nLa voix de Sibylle lui parvint, étouffée par le couloir.\n— « Je suis dans la cuisine. Entrez. »\nDaphne répondit à voix basse et s’exécuta. Son pas était hésitant : elle ignorait pourquoi cette aînée, si haut placée, avait tenu à la convoquer chez elle.\nLa cuisine, comme le salon, baignait dans des tons gris et blancs. Une seule couleur y tranchait : le rouge éclatant d’une grenade, tenue dans la main de la femme aux cheveux violets. La pointe du couteau en entamait la peau lisse et tendue.\n\n— « Vous êtes arrivée avec quinze minutes d’avance. Je n’avais pas encore terminé. »\nSibylle se concentrait sur le fruit, découvrant ses graines charnues.\n— « Je n’aime pas employer de domestiques. Ici, je fais tout moi-même. »\n— « Veuillez m’excuser... »\nLes mains de Daphne se tordaient l’une contre l’autre.\n— « Peut-être... peut-être puis-je vous aider— »\n<I>Dring—</>\nLa sonnerie du téléphone coupa net sa phrase.\n— « Daphne, prenez l’appel. »\nSibylle versait déjà les graines dans une assiette de porcelaine blanche.\n— « Approchez et tenez le combiné. »\nDaphne obéit, portant le combiné à l’oreille de Sibylle. Une voix masculine jeune s’éleva, parfaitement audible.\n— « Commandante Sibylle, au sujet des deux espions des Déchus. Quatre jours d’interrogatoire, et toujours aucun aveu. Ils sont à bout. »\n— « Pour beaucoup, la douleur physique n’a aucun sens. Vous êtes encore trop tendre. Ne frappez pas ce qu’ils ont de plus dur... mais ce qu’ils ont de plus fragile. »\nLes graines de grenade tombèrent une à une dans l’assiette, tintant doucement.\n— « Si je me souviens bien, ces deux-là sont frères. »\n— « Nous avons déjà menacé leur vie mutuellement. Aucun n’a cédé. Ils semblaient prêts à mourir ensemble. »\n— « Alors vous n’avez pas compris ce qu’est le véritable point faible. »\nSibylle versa les graines dans un tamis de cuivre fin, posé sur une carafe de verre. Puis elle pressa — lentement, fermement. Ses doigts se contractaient, blanchissaient, tandis que le jus écarlate s’écoulait en un mince filet.\n— « Ne les menacez pas de mort. Offrez-leur l’espoir. Dites-leur que celui qui parlera mourra... mais que son frère vivra. »\n\nUn « Oui, Commandante » retentit, puis la ligne se coupa. Les graines, dans le tamis, n’étaient plus que pulpe pâle et desséchée. Sibylle répartit le jus dans deux verres.\nLa main de Daphne, toujours figée autour du combiné, tremblait légèrement. Une sueur froide perlait sur son front. Elles gagnèrent le salon.\n— « Vous voulez connaître le sort de ces frères, n’est-ce pas ? »\nSibylle lui tendit un verre.\n— « Alors restez. Assistez à leur fin. »\n\nDaphne hésita, mordit sa lèvre, puis acquiesça. Elle fit mine de rester calme, faisant tourner le liquide rouge dans le verre. La grenade lui était chère ; enfant, elle se promenait souvent avec ses parents dans des vergers de grenadiers. Mais aujourd’hui, ce rouge familier éveillait en elle une crainte sourde.\nUne heure et demie plus tard, le téléphone sonna de nouveau.\n— « L’aîné a parlé. Nous avons déjà lancé l’arrestation. Comme promis, nous avons libéré le cadet et lui avons rendu son arme. »\nDaphne laissa échapper un soupir de soulagement... qui se figea aussitôt.\n— « Mais le cadet n’a pas supporté que son frère échange des secrets contre sa vie. À peine sorti, il s’est tiré une balle dans la tête. »\n— « Quel gâchis... un jeune homme à la volonté d’acier. »\nLa voix de Sibylle était parfaitement indifférente. Son regard se posa sur Daphne, énigmatique.\n— « Vous aviez prévu cette issue dès le départ. C’est pour cela que vous m’avez fait venir. »\nLa voix de Daphne tremblait malgré elle.\n— « C’est le Doyen Silas qui vous a demandé de me convaincre, n’est-ce pas ? De m’expliquer comment servir l’Empire ? »\n— « Les plaintes de Silas ne méritent pas mon temps. »\nSibylle répondit calmement.\n— « Je voulais seulement vous apprendre à survivre — dans la Légion comme à l’Académie.\nL’empathie doit être mesurée : assez vive pour percevoir les failles de l’ennemi, jamais au point de vous submerger. »\n— « Trop d’empathie, Daphne, ne vous rendra pas seulement impuissante. Elle vous condamnera. »\n\nDaphne ne se souvenait plus très bien de la façon dont elle avait remercié son aînée, ni comment elle avait presque fui cette demeure grise et silencieuse. Ce qui demeurait, c’était l’image de deux verres de jus de grenade : celui de Sibylle, vidé d’un trait, et le sien, intact.\n\nParfois, elle rêvait de ce verre. Du liquide qu’il contenait — couleur de la grenade, couleur de la vie — débordant lentement, encore et encore, jusqu’à former un fleuve écarlate... qui finissait par l’engloutir.",
           TextMapId = "UI_CHAR_DATA_TEXT_54010403"
         },
         UI_CHAR_DATA_TEXT_54010404 = {
@@ -63248,6 +65503,10 @@ Allez voir ce qui se passe.]],
           ContentFR = "Les Pics Extérieurs – Vagabond",
           TextMapId = "UI_CHAR_FORCE_1503"
         },
+        UI_CHAR_FORCE_1504 = {
+          ContentFR = "Les Pics Extérieurs – Vagabond",
+          TextMapId = "UI_CHAR_FORCE_1504"
+        },
         UI_CHAR_FORCE_1801 = {
           ContentFR = "Aucune affiliation",
           TextMapId = "UI_CHAR_FORCE_1801"
@@ -63279,6 +65538,10 @@ Allez voir ce qui se passe.]],
         UI_CHAR_FORCE_3201 = {
           ContentFR = "Prison Militaire Royale",
           TextMapId = "UI_CHAR_FORCE_3201"
+        },
+        UI_CHAR_FORCE_3202 = {
+          ContentFR = "Aucune affiliation",
+          TextMapId = "UI_CHAR_FORCE_3202"
         },
         UI_CHAR_FORCE_3301 = {
           ContentFR = "Aucune affiliation",
@@ -63475,17 +65738,9 @@ Allez voir ce qui se passe.]],
         UI_CHAR_SUBTITLE_1503 = {
           ContentFR = "Lame Vagabonde",
           TextMapId = "UI_CHAR_SUBTITLE_1503"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CHAR_SUBTITLE_1504",
-    MaxKey = "UI_CMNpc_Name_Xiao",
-    Loader = function()
-      return {
+        },
         UI_CHAR_SUBTITLE_1504 = {
-          ContentFR = "Jeune Milan",
+          ContentFR = "Premier Envol",
           TextMapId = "UI_CHAR_SUBTITLE_1504"
         },
         UI_CHAR_SUBTITLE_1801 = {
@@ -63519,6 +65774,10 @@ Allez voir ce qui se passe.]],
         UI_CHAR_SUBTITLE_3201 = {
           ContentFR = "Juge des Cendres",
           TextMapId = "UI_CHAR_SUBTITLE_3201"
+        },
+        UI_CHAR_SUBTITLE_3202 = {
+          ContentFR = "Cru Écarlate",
+          TextMapId = "UI_CHAR_SUBTITLE_3202"
         },
         UI_CHAR_SUBTITLE_3301 = {
           ContentFR = "Exploratrice Citadine",
@@ -63631,7 +65890,15 @@ Allez voir ce qui se passe.]],
         UI_CMName_Name_SaiqiPhantom = {
           ContentFR = "Fantôme de Psyche",
           TextMapId = "UI_CMName_Name_SaiqiPhantom"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CMName_Name_SanRenTongShi",
+    MaxKey = "UI_CMNpc_Yanjindu_Name_LuoYan",
+    Loader = function()
+      return {
         UI_CMName_Name_SanRenTongShi = {
           ContentFR = "Luno, la forgeronne – Luno, la servante – Luno, l’exploratrice",
           TextMapId = "UI_CMName_Name_SanRenTongShi"
@@ -63776,6 +66043,10 @@ Allez voir ce qui se passe.]],
           ContentFR = "Paul",
           TextMapId = "UI_CMNpc_Name_Baoluo"
         },
+        UI_CMNpc_Name_BaoziNvhai = {
+          ContentFR = "Jeune vendeuse de baozi",
+          TextMapId = "UI_CMNpc_Name_BaoziNvhai"
+        },
         UI_CMNpc_Name_Beierde = {
           ContentFR = "Baird",
           TextMapId = "UI_CMNpc_Name_Beierde"
@@ -63864,6 +66135,10 @@ Allez voir ce qui se passe.]],
           ContentFR = "Réalisateur",
           TextMapId = "UI_CMNpc_Name_DaoYan"
         },
+        UI_CMNpc_Name_DashuJJiaolan = {
+          ContentFR = "Passant",
+          TextMapId = "UI_CMNpc_Name_DashuJJiaolan"
+        },
         UI_CMNpc_Name_DeTiWoman = {
           ContentFR = "Dame élégante",
           TextMapId = "UI_CMNpc_Name_DeTiWoman"
@@ -63931,6 +66206,10 @@ Allez voir ce qui se passe.]],
         UI_CMNpc_Name_Giselle = {
           ContentFR = "Giselle",
           TextMapId = "UI_CMNpc_Name_Giselle"
+        },
+        UI_CMNpc_Name_Gong = {
+          ContentFR = "Maître Gong",
+          TextMapId = "UI_CMNpc_Name_Gong"
         },
         UI_CMNpc_Name_Goushu = {
           ContentFR = "Monsieur Chien",
@@ -64144,6 +66423,10 @@ Allez voir ce qui se passe.]],
           ContentFR = "Citoyen jovial",
           TextMapId = "UI_CMNpc_Name_Openopen"
         },
+        UI_CMNpc_Name_Padi = {
+          ContentFR = "Patty",
+          TextMapId = "UI_CMNpc_Name_Padi"
+        },
         UI_CMNpc_Name_Porter = {
           ContentFR = "Porteur",
           TextMapId = "UI_CMNpc_Name_Porter"
@@ -64151,6 +66434,10 @@ Allez voir ce qui se passe.]],
         UI_CMNpc_Name_Puqi = {
           ContentFR = "Putsch",
           TextMapId = "UI_CMNpc_Name_Puqi"
+        },
+        UI_CMNpc_Name_QingShang = {
+          ContentFR = "Qingshang",
+          TextMapId = "UI_CMNpc_Name_QingShang"
         },
         UI_CMNpc_Name_QunYan = {
           ContentFR = "Figurant",
@@ -64283,15 +66570,7 @@ Allez voir ce qui se passe.]],
         UI_CMNpc_Name_Xiao = {
           ContentFR = "Theo",
           TextMapId = "UI_CMNpc_Name_Xiao"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CMNpc_Name_XiaoAZhuang",
-    MaxKey = "UI_COMMONPOP_TITLE_100078",
-    Loader = function()
-      return {
+        },
         UI_CMNpc_Name_XiaoAZhuang = {
           ContentFR = "Xiao Azhuang",
           TextMapId = "UI_CMNpc_Name_XiaoAZhuang"
@@ -64307,6 +66586,10 @@ Allez voir ce qui se passe.]],
         UI_CMNpc_Name_XiaoWu = {
           ContentFR = "Wu",
           TextMapId = "UI_CMNpc_Name_XiaoWu"
+        },
+        UI_CMNpc_Name_Xiaoyao = {
+          ContentFR = "Xiaoyao",
+          TextMapId = "UI_CMNpc_Name_Xiaoyao"
         },
         UI_CMNpc_Name_Xilin = {
           ContentFR = "Dame Hilin",
@@ -64415,7 +66698,15 @@ Allez voir ce qui se passe.]],
         UI_CMNpc_Yanjindu_Name_LuoYan = {
           ContentFR = "Yan",
           TextMapId = "UI_CMNpc_Yanjindu_Name_LuoYan"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CMNpc_Yanjindu_Name_MrCheng",
+    MaxKey = "UI_CONFIRM_FISHING",
+    Loader = function()
+      return {
         UI_CMNpc_Yanjindu_Name_MrCheng = {
           ContentFR = "Vieux Cheng",
           TextMapId = "UI_CMNpc_Yanjindu_Name_MrCheng"
@@ -64657,7 +66948,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_COMMONPOP_TEXT_100050"
         },
         UI_COMMONPOP_TEXT_100051 = {
-          ContentFR = "Votre compte (UID : %d) a été suspendu jusqu’au %s pour comportement inapproprié.\n En cas de question, veuillez contacter le service client officiel.",
+          ContentFR = "Votre compte (UID : %d) a été suspendu jusqu’au %s pour comportement inapproprié.\nEn cas de question, veuillez contacter le service client officiel.",
           TextMapId = "UI_COMMONPOP_TEXT_100051"
         },
         UI_COMMONPOP_TEXT_100052 = {
@@ -64751,6 +67042,10 @@ Allez voir ce qui se passe.]],
         UI_COMMONPOP_TEXT_100076_2 = {
           ContentFR = "Bloquer un joueur le retirera également de votre liste d’amis.",
           TextMapId = "UI_COMMONPOP_TEXT_100076_2"
+        },
+        UI_COMMONPOP_TEXT_100076_3 = {
+          ContentFR = "Signaler et bloquer cet utilisateur ?",
+          TextMapId = "UI_COMMONPOP_TEXT_100076_3"
         },
         UI_COMMONPOP_TEXT_100077 = {
           ContentFR = "Souhaitez-vous retirer ce joueur de votre liste d’amis ?",
@@ -64960,6 +67255,10 @@ Allez voir ce qui se passe.]],
           ContentFR = "Vous êtes sur le point d’ignorer le tutoriel en cours",
           TextMapId = "UI_COMMONPOP_TEXT_100279"
         },
+        UI_COMMONPOP_TEXT_100309 = {
+          ContentFR = "Changer de langue rechargera l’interface. Voulez-vous changer de langue maintenant ?",
+          TextMapId = "UI_COMMONPOP_TEXT_100309"
+        },
         UI_COMMONPOP_TIPS_100275 = {
           ContentFR = "Cette action est irréversible. Vous serez automatiquement renvoyé à l’écran de connexion.",
           TextMapId = "UI_COMMONPOP_TIPS_100275"
@@ -65091,15 +67390,7 @@ Allez voir ce qui se passe.]],
         UI_COMMONPOP_TITLE_100078 = {
           ContentFR = "Modifier le pseudonyme",
           TextMapId = "UI_COMMONPOP_TITLE_100078"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_COMMONPOP_TITLE_100082",
-    MaxKey = "UI_CharVoice_Tab",
-    Loader = function()
-      return {
+        },
         UI_COMMONPOP_TITLE_100082 = {
           ContentFR = "Envoyer une demande d’ami",
           TextMapId = "UI_COMMONPOP_TITLE_100082"
@@ -65215,7 +67506,15 @@ Allez voir ce qui se passe.]],
         UI_CONFIRM_FISHING = {
           ContentFR = "Pêcher",
           TextMapId = "UI_CONFIRM_FISHING"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CONFIRM_OPENBOX",
+    MaxKey = "UI_Chardata_Data_Num_7",
+    Loader = function()
+      return {
         UI_CONFIRM_OPENBOX = {
           ContentFR = "Activer le mécanisme",
           TextMapId = "UI_CONFIRM_OPENBOX"
@@ -65893,15 +68192,7 @@ Allez voir ce qui se passe.]],
         UI_CharVoice_Tab = {
           ContentFR = "Voix",
           TextMapId = "UI_CharVoice_Tab"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Char_Accessory",
-    MaxKey = "UI_Consumable_NotOwned",
-    Loader = function()
-      return {
+        },
         UI_Char_Accessory = {
           ContentFR = "Accessoires de personnage",
           TextMapId = "UI_Char_Accessory"
@@ -66017,7 +68308,15 @@ Allez voir ce qui se passe.]],
         UI_Chardata_Data_Num_7 = {
           ContentFR = "VII",
           TextMapId = "UI_Chardata_Data_Num_7"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Chardata_Data_Of",
+    MaxKey = "UI_CustomLayout_LockToast",
+    Loader = function()
+      return {
         UI_Chardata_Data_Of = {
           ContentFR = "·",
           TextMapId = "UI_Chardata_Data_Of"
@@ -66701,15 +69000,7 @@ Allez voir ce qui se passe.]],
         UI_Consumable_NotOwned = {
           ContentFR = "Non possédé",
           TextMapId = "UI_Consumable_NotOwned"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Consumable_Open",
-    MaxKey = "UI_DUNGEON_AUTOCHESS_8",
-    Loader = function()
-      return {
+        },
         UI_Consumable_Open = {
           ContentFR = "Ouvrir",
           TextMapId = "UI_Consumable_Open"
@@ -66822,6 +69113,22 @@ Allez voir ce qui se passe.]],
         UI_CustomLayout_LockToast = {
           ContentFR = "Bientôt disponible",
           TextMapId = "UI_CustomLayout_LockToast"
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CustomLayout_PopupBtn01",
+    MaxKey = "UI_DUNGEON_CONTENT_DEFENCE_2",
+    Loader = function()
+      return {
+        UI_CustomLayout_PopupBtn01 = {
+          ContentFR = "Sauvegarder",
+          TextMapId = "UI_CustomLayout_PopupBtn01"
+        },
+        UI_CustomLayout_PopupBtn02 = {
+          ContentFR = "Annuler les modifications",
+          TextMapId = "UI_CustomLayout_PopupBtn02"
         },
         UI_CustomLayout_Save = {
           ContentFR = "Enregistrer",
@@ -66838,6 +69145,10 @@ Allez voir ce qui se passe.]],
         UI_CustomLayout_Skill = {
           ContentFR = "Compétence",
           TextMapId = "UI_CustomLayout_Skill"
+        },
+        UI_CustomLayout_Trial_Save = {
+          ContentFR = "Sauvegarder",
+          TextMapId = "UI_CustomLayout_Trial_Save"
         },
         UI_CustomLayout_WithdrawToast = {
           ContentFR = "Retour à l’état précédemment enregistré",
@@ -67503,15 +69814,7 @@ Allez voir ce qui se passe.]],
         UI_DUNGEON_AUTOCHESS_8 = {
           ContentFR = "Plateau de Maître Gongshang 08",
           TextMapId = "UI_DUNGEON_AUTOCHESS_8"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_DUNGEON_AUTOCHESS_80",
-    MaxKey = "UI_Deteal_Rouge_1",
-    Loader = function()
-      return {
+        },
         UI_DUNGEON_AUTOCHESS_80 = {
           ContentFR = "Partie sans fin 060",
           TextMapId = "UI_DUNGEON_AUTOCHESS_80"
@@ -67615,7 +69918,15 @@ Allez voir ce qui se passe.]],
         UI_DUNGEON_CONTENT_DEFENCE_2 = {
           ContentFR = "« La plupart des gens considèrent les Éclats stellaires comme de simples ornements. Ils ignorent toute la valeur scientifique cachée derrière leur formation et leur luminescence. J’ai entendu dire qu’un lot d’Éclats stellaires particulièrement puissants a été découvert — comment pourrais-je rester en place après ça ? Hmm... Toute grande recherche mérite de puissants Chasseurs de Phoxène ! Tu me protégeras pendant mes travaux, pas vrai ? Pas vrai ? Pas vrai ! » — Luno, l’exploratrice",
           TextMapId = "UI_DUNGEON_CONTENT_DEFENCE_2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_DUNGEON_CONTENT_DEFENCE_3",
+    MaxKey = "UI_Disabled_Des_ModArchive",
+    Loader = function()
+      return {
         UI_DUNGEON_CONTENT_DEFENCE_3 = {
           ContentFR = "« J’ai entendu dire que quelqu’un avait mis la main sur une série d’appareils incroyablement puissants — comment pourrais-je rester en place après ça ?! Hmm... Toute grande recherche mérite de formidables Chasseurs de Phoxène ! Tu me protégeras pendant mes analyses, pas vrai ? Pas vrai ? Pas vraiiiii ?! »\n\n— Luno, l’exploratrice",
           TextMapId = "UI_DUNGEON_CONTENT_DEFENCE_3"
@@ -68241,11 +70552,11 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_DailyPack_Rule"
         },
         UI_DailyPack_RuleDes_1 = {
-          ContentFR = "Après l’achat, vous recevrez immédiatement Gemme de Phoxène ×<highlight>150</> et Marteau-jouet ×<highlight>5</>.\nÀ partir du jour de l’achat, connectez-vous chaque jour pour recevoir par courrier Fragments de pensée de Fushu ×<highlight>1</> et Marteau-jouet ×<highlight>1</>, pendant 5 jours.\nPensées entrelacées est limité à 6 achats ; chaque achat supplémentaire prolonge la durée de réception.",
+          ContentFR = "Après l’achat, vous recevrez immédiatement Gemme de Phoxène ×<highlight>150</> et Marteau-jouet ×<highlight>5</>.\nÀ partir du jour de l’achat, connectez-vous chaque jour pour recevoir par courrier Fragment de pensée de Fushu ×<highlight>1</> et Marteau-jouet ×<highlight>1</>, pendant 5 jours.\nPensées entrelacées est limité à 6 achats ; chaque achat supplémentaire prolonge la durée de réception.",
           TextMapId = "UI_DailyPack_RuleDes_1"
         },
         UI_DailyPack_RuleDes_2 = {
-          ContentFR = "Après l’achat, vous recevrez immédiatement Gemme de Phoxène ×<highlight>100</> et Marteau-jouet ×<highlight>5</>.\nÀ partir du jour de l’achat, connectez-vous chaque jour pour recevoir par courrier Fragments de pensée de Kezhou ×<highlight>1</> et Marteau-jouet ×<highlight>1</>, pendant 5 jours.\nPensées entrelacées est limité à 6 achats ; chaque achat supplémentaire prolonge la durée de réception.",
+          ContentFR = "Après l’achat, vous recevrez immédiatement Gemme de Phoxène ×<highlight>100</> et Marteau-jouet ×<highlight>5</>.\nÀ partir du jour de l’achat, connectez-vous chaque jour pour recevoir par courrier Fragment de pensée de Kezhou ×<highlight>1</> et Marteau-jouet ×<highlight>1</>, pendant 5 jours.\nPensées entrelacées est limité à 6 achats ; chaque achat supplémentaire prolonge la durée de réception.",
           TextMapId = "UI_DailyPack_RuleDes_2"
         },
         UI_DailyPack_RuleDes_3 = {
@@ -68311,15 +70622,7 @@ Allez voir ce qui se passe.]],
         UI_Deteal_Rouge_1 = {
           ContentFR = "Dédale mystique – Difficulté",
           TextMapId = "UI_Deteal_Rouge_1"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Deteal_Rouge_2",
-    MaxKey = "UI_Dye_Delete_Content",
-    Loader = function()
-      return {
+        },
         UI_Deteal_Rouge_2 = {
           ContentFR = "Difficulté complétée",
           TextMapId = "UI_Deteal_Rouge_2"
@@ -68423,7 +70726,15 @@ Allez voir ce qui se passe.]],
         UI_Disabled_Des_ModArchive = {
           ContentFR = "Codex démoniaque temporairement indisponible",
           TextMapId = "UI_Disabled_Des_ModArchive"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Disabled_Des_ModDungeon",
+    MaxKey = "UI_Dye_Zoom",
+    Loader = function()
+      return {
         UI_Disabled_Des_ModDungeon = {
           ContentFR = "Manuel des Vagabonds de la Nuit temporairement indisponible",
           TextMapId = "UI_Disabled_Des_ModDungeon"
@@ -69119,15 +71430,7 @@ Allez voir ce qui se passe.]],
         UI_Dye_Delete_Content = {
           ContentFR = "Supprimer le brouillon actuel ?",
           TextMapId = "UI_Dye_Delete_Content"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Dye_Delete_Title",
-    MaxKey = "UI_FORGING_CANTFORGE",
-    Loader = function()
-      return {
+        },
         UI_Dye_Delete_Title = {
           ContentFR = "Supprimer le brouillon",
           TextMapId = "UI_Dye_Delete_Title"
@@ -69231,7 +71534,15 @@ Allez voir ce qui se passe.]],
         UI_Dye_Zoom = {
           ContentFR = "Zoom avant / arrière",
           TextMapId = "UI_Dye_Zoom"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_DynInteract_1",
+    MaxKey = "UI_FUNC_LEVELUP",
+    Loader = function()
+      return {
         UI_DynInteract_1 = {
           ContentFR = "Examiner",
           TextMapId = "UI_DynInteract_1"
@@ -69733,7 +72044,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_Event_ModDrop_Reset"
         },
         UI_Event_ModDrop_Rule = {
-          ContentFR = "Pendant l’événement, les missions du Manuel des Vagabonds de la Nuit bénéficient chaque jour d’un bonus de récompenses jusqu’à <highlight>6</> fois. Ce bonus se cumule avec celui du Manuel. En lançant une mission sous cet effet, vous obtiendrez davantage de récompenses.\n\nPendant l’événement, la connexion quotidienne permet de tenter <highlight>1</> mission temporaire de Sceaux démoniaques. Chaque mission liée aux Sceaux démoniaques dans le Manuel des Vagabonds de la Nuit possède une variante temporaire, dans laquelle les Ordonnateurs apparaissent en grand nombre.\n\nLes tentatives et les bonus de récompenses ne se cumulent pas d’un jour à l’autre et sont réinitialisés le lendemain.",
+          ContentFR = "Pendant l’événement, les missions du Manuel des Vagabonds de la Nuit accordent un bonus de Sceaux démoniaques (jusqu’à <highlight>6</> fois par jour). Ce bonus se cumule avec celui du Manuel. En lançant une mission pendant cette période, vous obtiendrez davantage de Sceaux démoniaques.\n\nChaque jour, vous pouvez tenter jusqu’à <highlight>3</> missions temporaires de Sceaux démoniaques. Les tentatives ne se cumulent pas et sont réinitialisées lors du reset quotidien.\n\nChaque mission de Sceaux démoniaques du Manuel des Vagabonds de la Nuit possède une variante temporaire où les Ordonnateurs apparaissent en grand nombre.",
           TextMapId = "UI_Event_ModDrop_Rule"
         },
         UI_Event_ModDrop_Tips = {
@@ -69811,6 +72122,30 @@ Allez voir ce qui se passe.]],
         UI_Explore_Treasure_Complete = {
           ContentFR = "Énigme résolue",
           TextMapId = "UI_Explore_Treasure_Complete"
+        },
+        UI_ExtreactionTreasure_Name_30 = {
+          ContentFR = "Clé Jishu n° 1",
+          TextMapId = "UI_ExtreactionTreasure_Name_30"
+        },
+        UI_ExtreactionTreasure_Type_1 = {
+          ContentFR = "Domino",
+          TextMapId = "UI_ExtreactionTreasure_Type_1"
+        },
+        UI_ExtreactionTreasure_Type_2 = {
+          ContentFR = "Accessoire",
+          TextMapId = "UI_ExtreactionTreasure_Type_2"
+        },
+        UI_ExtreactionTreasure_Type_3 = {
+          ContentFR = "Objet du quotidien",
+          TextMapId = "UI_ExtreactionTreasure_Type_3"
+        },
+        UI_ExtreactionTreasure_Type_4 = {
+          ContentFR = "Objet de collection",
+          TextMapId = "UI_ExtreactionTreasure_Type_4"
+        },
+        UI_ExtreactionTreasure_Type_5 = {
+          ContentFR = "Clé Jishu",
+          TextMapId = "UI_ExtreactionTreasure_Type_5"
         },
         UI_FAKEQUEST_TEXT = {
           ContentFR = "Les quêtes de ce chapitre ont déjà été finalisées par anticipation.",
@@ -69927,15 +72262,7 @@ Allez voir ce qui se passe.]],
         UI_FORGING_CANTFORGE = {
           ContentFR = "Cet objet ne peut pas être obtenu par la forge",
           TextMapId = "UI_FORGING_CANTFORGE"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_FORGING_CASH_NOTENOUGH",
-    MaxKey = "UI_HardBoss_Des_4",
-    Loader = function()
-      return {
+        },
         UI_FORGING_CASH_NOTENOUGH = {
           ContentFR = "Pièces insuffisantes",
           TextMapId = "UI_FORGING_CASH_NOTENOUGH"
@@ -70012,7 +72339,15 @@ Allez voir ce qui se passe.]],
         UI_FUNC_LEVELUP = {
           ContentFR = "Améliorer",
           TextMapId = "UI_FUNC_LEVELUP"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_FailureTips_JumpText",
+    MaxKey = "UI_HardBoss_Difficulty_Des_1041",
+    Loader = function()
+      return {
         UI_FailureTips_JumpText = {
           ContentFR = "Aller",
           TextMapId = "UI_FailureTips_JumpText"
@@ -70166,7 +72501,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_Fishing_SmallToBig"
         },
         UI_Fishing_SmallToBigChance = {
-          ContentFR = "Une chance d’obtenir une prise plus rare !",
+          ContentFR = "Une chance d’obtenir une prise plus rare",
           TextMapId = "UI_Fishing_SmallToBigChance"
         },
         UI_Fishing_StartFishing = {
@@ -70174,7 +72509,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_Fishing_StartFishing"
         },
         UI_Fishing_Success = {
-          ContentFR = "Vous avez attrapé un poisson !",
+          ContentFR = "Vous avez attrapé un poisson",
           TextMapId = "UI_Fishing_Success"
         },
         UI_Fishing_Toast_NoFish = {
@@ -70705,6 +73040,10 @@ Allez voir ce qui se passe.]],
           ContentFR = "Échos nocturnes",
           TextMapId = "UI_HardBossDg_BattleStart"
         },
+        UI_HardBossDg_LoadingTimeOut = {
+          ContentFR = "Temps d’accès au mode dépassé. Le défi des Échos nocturnes a échoué.",
+          TextMapId = "UI_HardBossDg_LoadingTimeOut"
+        },
         UI_HardBoss_Abandon_Text = {
           ContentFR = "Abandonner le défi ?",
           TextMapId = "UI_HardBoss_Abandon_Text"
@@ -70732,15 +73071,7 @@ Allez voir ce qui se passe.]],
         UI_HardBoss_Des_4 = {
           ContentFR = "Geôlière de la Prison Militaire Royale : ses chaînes châtient le péché, et ses flammes veillent sur la justice.",
           TextMapId = "UI_HardBoss_Des_4"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_HardBoss_Des_5",
-    MaxKey = "UI_Keyboard_TeamInfo",
-    Loader = function()
-      return {
+        },
         UI_HardBoss_Des_5 = {
           ContentFR = "C’est la Bête née du blizzard, celle qui ravagea le Nord, détruisant les foyers d’enfants et dissipant les rêves des fées endormies.",
           TextMapId = "UI_HardBoss_Des_5"
@@ -70816,7 +73147,15 @@ Allez voir ce qui se passe.]],
         UI_HardBoss_Difficulty_Des_1041 = {
           ContentFR = "C’est la Bête née du blizzard, celle qui ravagea le Nord, détruisant les foyers d’enfants et dissipant les rêves des fées endormies.",
           TextMapId = "UI_HardBoss_Difficulty_Des_1041"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_HardBoss_Difficulty_Des_Open_1",
+    MaxKey = "UI_LOGIN_ACCOUNT",
+    Loader = function()
+      return {
         UI_HardBoss_Difficulty_Des_Open_1 = {
           ContentFR = "Cauchemar I",
           TextMapId = "UI_HardBoss_Difficulty_Des_Open_1"
@@ -71274,7 +73613,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_ImpressionShop_ShopName"
         },
         UI_ImpressionShop_ShopName_1011 = {
-          ContentFR = "Boutique d’Impressions de Lunoeggy",
+          ContentFR = "Boutique d’Impressions – Hyperborea",
           TextMapId = "UI_ImpressionShop_ShopName_1011"
         },
         UI_ImpressionShop_ShopName_1041 = {
@@ -71540,15 +73879,7 @@ Allez voir ce qui se passe.]],
         UI_Keyboard_TeamInfo = {
           ContentFR = "Composition d’équipe",
           TextMapId = "UI_Keyboard_TeamInfo"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Keyboard_UpSelect",
-    MaxKey = "UI_MECHANISM_10625",
-    Loader = function()
-      return {
+        },
         UI_Keyboard_UpSelect = {
           ContentFR = "Sélection précédente",
           TextMapId = "UI_Keyboard_UpSelect"
@@ -71624,7 +73955,15 @@ Allez voir ce qui se passe.]],
         UI_LOGIN_ACCOUNT = {
           ContentFR = "Saisir votre identifiant",
           TextMapId = "UI_LOGIN_ACCOUNT"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_LOGIN_ENSURE",
+    MaxKey = "UI_MECHANISM_10458",
+    Loader = function()
+      return {
         UI_LOGIN_ENSURE = {
           ContentFR = "Confirmer",
           TextMapId = "UI_LOGIN_ENSURE"
@@ -72065,6 +74404,174 @@ Allez voir ce qui se passe.]],
           ContentFR = "Les serveurs sont actuellement pleins. Vous êtes dans la file d’attente. Merci de patienter ou de réessayer plus tard.",
           TextMapId = "UI_Login_Waiting"
         },
+        UI_LotteryDescription_3001 = {
+          ContentFR = "Les ressources peu communes valent ×2 cette manche",
+          TextMapId = "UI_LotteryDescription_3001"
+        },
+        UI_LotteryDescription_3002 = {
+          ContentFR = "Les ressources peu communes valent ×4 cette manche",
+          TextMapId = "UI_LotteryDescription_3002"
+        },
+        UI_LotteryDescription_3003 = {
+          ContentFR = "Les ressources peu communes valent ×6 cette manche",
+          TextMapId = "UI_LotteryDescription_3003"
+        },
+        UI_LotteryDescription_3004 = {
+          ContentFR = "Les ressources épiques valent ×2 cette manche",
+          TextMapId = "UI_LotteryDescription_3004"
+        },
+        UI_LotteryDescription_3005 = {
+          ContentFR = "Les ressources épiques valent ×3 cette manche",
+          TextMapId = "UI_LotteryDescription_3005"
+        },
+        UI_LotteryDescription_3006 = {
+          ContentFR = "Les ressources épiques valent ×5 cette manche",
+          TextMapId = "UI_LotteryDescription_3006"
+        },
+        UI_LotteryDescription_3007 = {
+          ContentFR = "Les ressources légendaires valent ×1,5 cette manche",
+          TextMapId = "UI_LotteryDescription_3007"
+        },
+        UI_LotteryDescription_3008 = {
+          ContentFR = "Les ressources légendaires valent ×2,5 cette manche",
+          TextMapId = "UI_LotteryDescription_3008"
+        },
+        UI_LotteryDescription_3009 = {
+          ContentFR = "Les ressources légendaires valent ×4 cette manche",
+          TextMapId = "UI_LotteryDescription_3009"
+        },
+        UI_LotteryDescription_3010 = {
+          ContentFR = "Les accessoires valent ×1,5 cette manche",
+          TextMapId = "UI_LotteryDescription_3010"
+        },
+        UI_LotteryDescription_3011 = {
+          ContentFR = "Les accessoires valent ×2 cette manche",
+          TextMapId = "UI_LotteryDescription_3011"
+        },
+        UI_LotteryDescription_3012 = {
+          ContentFR = "Les accessoires valent ×3 cette manche",
+          TextMapId = "UI_LotteryDescription_3012"
+        },
+        UI_LotteryDescription_3013 = {
+          ContentFR = "Les objets du quotidien valent ×1,5 cette manche",
+          TextMapId = "UI_LotteryDescription_3013"
+        },
+        UI_LotteryDescription_3014 = {
+          ContentFR = "Les objets du quotidien valent ×2 cette manche",
+          TextMapId = "UI_LotteryDescription_3014"
+        },
+        UI_LotteryDescription_3015 = {
+          ContentFR = "Les objets du quotidien valent ×3 cette manche",
+          TextMapId = "UI_LotteryDescription_3015"
+        },
+        UI_LotteryDescription_3016 = {
+          ContentFR = "Les objets de collection valent ×1,5 cette manche",
+          TextMapId = "UI_LotteryDescription_3016"
+        },
+        UI_LotteryDescription_3017 = {
+          ContentFR = "Les objets de collection valent ×2 cette manche",
+          TextMapId = "UI_LotteryDescription_3017"
+        },
+        UI_LotteryDescription_3018 = {
+          ContentFR = "Les objets de collection valent ×3 cette manche",
+          TextMapId = "UI_LotteryDescription_3018"
+        },
+        UI_LotteryDescription_3019 = {
+          ContentFR = "Les cartes valent ×1,5 cette manche",
+          TextMapId = "UI_LotteryDescription_3019"
+        },
+        UI_LotteryDescription_3020 = {
+          ContentFR = "Les cartes valent ×2 cette manche",
+          TextMapId = "UI_LotteryDescription_3020"
+        },
+        UI_LotteryDescription_3021 = {
+          ContentFR = "Les cartes valent ×3 cette manche",
+          TextMapId = "UI_LotteryDescription_3021"
+        },
+        UI_LotteryDescription_3022 = {
+          ContentFR = "Si les points de recherche atteignent 10 000 : score total ×1,2",
+          TextMapId = "UI_LotteryDescription_3022"
+        },
+        UI_LotteryDescription_3023 = {
+          ContentFR = "Si les points de recherche atteignent 50 000 : score total ×1,4",
+          TextMapId = "UI_LotteryDescription_3023"
+        },
+        UI_LotteryDescription_3024 = {
+          ContentFR = "Si les points de recherche atteignent 100 000 : score total ×1,6",
+          TextMapId = "UI_LotteryDescription_3024"
+        },
+        UI_LotteryDescription_3025 = {
+          ContentFR = "Au moins 3 accessoires dans l’inventaire (configurable) : score total ×1,5",
+          TextMapId = "UI_LotteryDescription_3025"
+        },
+        UI_LotteryDescription_3026 = {
+          ContentFR = "Au moins 4 accessoires dans l’inventaire (configurable) : score total ×2",
+          TextMapId = "UI_LotteryDescription_3026"
+        },
+        UI_LotteryDescription_3027 = {
+          ContentFR = "Au moins 5 accessoires dans l’inventaire (configurable) : score total ×2,5",
+          TextMapId = "UI_LotteryDescription_3027"
+        },
+        UI_LotteryDescription_3028 = {
+          ContentFR = "Au moins 3 objets du quotidien dans l’inventaire (configurable) : score total ×1,5",
+          TextMapId = "UI_LotteryDescription_3028"
+        },
+        UI_LotteryDescription_3029 = {
+          ContentFR = "Au moins 4 objets du quotidien dans l’inventaire (configurable) : score total ×2",
+          TextMapId = "UI_LotteryDescription_3029"
+        },
+        UI_LotteryDescription_3030 = {
+          ContentFR = "Au moins 5 objets du quotidien dans l’inventaire (configurable) : score total ×2,5",
+          TextMapId = "UI_LotteryDescription_3030"
+        },
+        UI_LotteryDescription_3031 = {
+          ContentFR = "Au moins 3 objets de collection dans l’inventaire (configurable) : score total ×1,5",
+          TextMapId = "UI_LotteryDescription_3031"
+        },
+        UI_LotteryDescription_3032 = {
+          ContentFR = "Au moins 4 objets de collection dans l’inventaire (configurable) : score total ×2",
+          TextMapId = "UI_LotteryDescription_3032"
+        },
+        UI_LotteryDescription_3033 = {
+          ContentFR = "Au moins 5 objets de collection dans l’inventaire (configurable) : score total ×2,5",
+          TextMapId = "UI_LotteryDescription_3033"
+        },
+        UI_LotteryDescription_3034 = {
+          ContentFR = "Au moins 2 trésors peu communs dans l’inventaire (configurable) : score total ×2",
+          TextMapId = "UI_LotteryDescription_3034"
+        },
+        UI_LotteryDescription_3035 = {
+          ContentFR = "Au moins 3 trésors peu communs dans l’inventaire (configurable) : score total ×2,5",
+          TextMapId = "UI_LotteryDescription_3035"
+        },
+        UI_LotteryDescription_3036 = {
+          ContentFR = "Au moins 4 trésors peu communs dans l’inventaire (configurable) : score total ×3",
+          TextMapId = "UI_LotteryDescription_3036"
+        },
+        UI_LotteryDescription_3037 = {
+          ContentFR = "Au moins 2 trésors épiques dans l’inventaire (configurable) : score total ×2",
+          TextMapId = "UI_LotteryDescription_3037"
+        },
+        UI_LotteryDescription_3038 = {
+          ContentFR = "Au moins 3 trésors épiques dans l’inventaire (configurable) : score total ×2,5",
+          TextMapId = "UI_LotteryDescription_3038"
+        },
+        UI_LotteryDescription_3039 = {
+          ContentFR = "Au moins 4 trésors épiques dans l’inventaire (configurable) : score total ×3",
+          TextMapId = "UI_LotteryDescription_3039"
+        },
+        UI_LotteryDescription_3040 = {
+          ContentFR = "Au moins 2 trésors légendaires dans l’inventaire (configurable) : score total ×2",
+          TextMapId = "UI_LotteryDescription_3040"
+        },
+        UI_LotteryDescription_3041 = {
+          ContentFR = "Au moins 3 trésors légendaires dans l’inventaire (configurable) : score total ×2,5",
+          TextMapId = "UI_LotteryDescription_3041"
+        },
+        UI_LotteryDescription_3042 = {
+          ContentFR = "Au moins 4 trésors légendaires dans l’inventaire (configurable) : score total ×3",
+          TextMapId = "UI_LotteryDescription_3042"
+        },
         UI_MECHANISM_100 = {
           ContentFR = "Ouvrir",
           TextMapId = "UI_MECHANISM_100"
@@ -72256,7 +74763,15 @@ Allez voir ce qui se passe.]],
         UI_MECHANISM_10458 = {
           ContentFR = "Sac à dos usé",
           TextMapId = "UI_MECHANISM_10458"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_MECHANISM_10459",
+    MaxKey = "UI_ModGuideBook_Task_Title_Collect_03",
+    Loader = function()
+      return {
         UI_MECHANISM_10459 = {
           ContentFR = "Vieux sac à dos",
           TextMapId = "UI_MECHANISM_10459"
@@ -72348,15 +74863,7 @@ Allez voir ce qui se passe.]],
         UI_MECHANISM_10625 = {
           ContentFR = "Armoire à remèdes",
           TextMapId = "UI_MECHANISM_10625"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_MECHANISM_10626",
-    MaxKey = "UI_Mod_Polarity_Btn",
-    Loader = function()
-      return {
+        },
         UI_MECHANISM_10626 = {
           ContentFR = "Lit de malade",
           TextMapId = "UI_MECHANISM_10626"
@@ -72428,6 +74935,46 @@ Allez voir ce qui se passe.]],
         UI_MECHANISM_118006 = {
           ContentFR = "Activer",
           TextMapId = "UI_MECHANISM_118006"
+        },
+        UI_MECHANISM_118007 = {
+          ContentFR = "Activer le tourne-encens",
+          TextMapId = "UI_MECHANISM_118007"
+        },
+        UI_MECHANISM_118008 = {
+          ContentFR = "Chambre Jishu n° 1",
+          TextMapId = "UI_MECHANISM_118008"
+        },
+        UI_MECHANISM_118009 = {
+          ContentFR = "Panier de bambou aux trésors",
+          TextMapId = "UI_MECHANISM_118009"
+        },
+        UI_MECHANISM_118010 = {
+          ContentFR = "Petit panier de bambou",
+          TextMapId = "UI_MECHANISM_118010"
+        },
+        UI_MECHANISM_118011 = {
+          ContentFR = "Gourde mystique",
+          TextMapId = "UI_MECHANISM_118011"
+        },
+        UI_MECHANISM_118012 = {
+          ContentFR = "Panier d’osier aux trésors",
+          TextMapId = "UI_MECHANISM_118012"
+        },
+        UI_MECHANISM_118013 = {
+          ContentFR = "Coffret mystique",
+          TextMapId = "UI_MECHANISM_118013"
+        },
+        UI_MECHANISM_118014 = {
+          ContentFR = "Panier de bambou moyen",
+          TextMapId = "UI_MECHANISM_118014"
+        },
+        UI_MECHANISM_118015 = {
+          ContentFR = "Brasero aux trésors",
+          TextMapId = "UI_MECHANISM_118015"
+        },
+        UI_MECHANISM_118016 = {
+          ContentFR = "Triple vase rituel",
+          TextMapId = "UI_MECHANISM_118016"
         },
         UI_MECHANISM_119 = {
           ContentFR = "Se reposer ici",
@@ -73024,7 +75571,15 @@ Allez voir ce qui se passe.]],
         UI_ModGuideBook_Task_Title_Collect_03 = {
           ContentFR = "Collection de Sceaux démoniaques III",
           TextMapId = "UI_ModGuideBook_Task_Title_Collect_03"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_ModGuideBook_Task_Title_Collect_04",
+    MaxKey = "UI_Name_Walnut_151733",
+    Loader = function()
+      return {
         UI_ModGuideBook_Task_Title_Collect_04 = {
           ContentFR = "Collection de Sceaux démoniaques IV",
           TextMapId = "UI_ModGuideBook_Task_Title_Collect_04"
@@ -73156,15 +75711,7 @@ Allez voir ce qui se passe.]],
         UI_Mod_Polarity_Btn = {
           ContentFR = "Modifier l’affinité",
           TextMapId = "UI_Mod_Polarity_Btn"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Mod_Polarity_Content",
-    MaxKey = "UI_Name_Walnut_2002",
-    Loader = function()
-      return {
+        },
         UI_Mod_Polarity_Content = {
           ContentFR = "La modification d’affinité de cet emplacement affectera tous les ensembles de Sceaux démoniaques de ce personnage ou de cette arme.",
           TextMapId = "UI_Mod_Polarity_Content"
@@ -73511,6 +76058,10 @@ Allez voir ce qui se passe.]],
           ContentFR = "Voix inconnue",
           TextMapId = "UI_NPC_Name_mosheng_Sce"
         },
+        UI_NPC_Name_zehan_Sce = {
+          ContentFR = "Zehan",
+          TextMapId = "UI_NPC_Name_zehan_Sce"
+        },
         UI_NUM_NAME = {
           ContentFR = "Possédés",
           TextMapId = "UI_NUM_NAME"
@@ -73822,7 +76373,15 @@ Allez voir ce qui se passe.]],
         UI_Name_Walnut_151733 = {
           ContentFR = "Mandat scellé : Ardeur du Pactisant · Inspiration",
           TextMapId = "UI_Name_Walnut_151733"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Name_Walnut_151734",
+    MaxKey = "UI_Npc_Name_Dog",
+    Loader = function()
+      return {
         UI_Name_Walnut_151734 = {
           ContentFR = "Mandat scellé : Nirvana du Pactisant · Pouvoir",
           TextMapId = "UI_Name_Walnut_151734"
@@ -73904,7 +76463,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_Name_Walnut_151922"
         },
         UI_Name_Walnut_151931 = {
-          ContentFR = "Mandat scellé : Brasier dévorant d'Ifrit",
+          ContentFR = "Mandat scellé : Brasier dévorant d’Ifrit",
           TextMapId = "UI_Name_Walnut_151931"
         },
         UI_Name_Walnut_151941 = {
@@ -73958,15 +76517,7 @@ Allez voir ce qui se passe.]],
         UI_Name_Walnut_2002 = {
           ContentFR = "Mandat scellé : Écho du passé",
           TextMapId = "UI_Name_Walnut_2002"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Name_Walnut_2003",
-    MaxKey = "UI_Npc_Name_Fulanke",
-    Loader = function()
-      return {
+        },
         UI_Name_Walnut_2003 = {
           ContentFR = "Mandat scellé : Stratagème habile",
           TextMapId = "UI_Name_Walnut_2003"
@@ -74120,7 +76671,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_Name_Walnut_2040"
         },
         UI_Name_Walnut_2041 = {
-          ContentFR = "Mandat scellé : Hymne de l'aube",
+          ContentFR = "Mandat scellé : Hymne de l’aube",
           TextMapId = "UI_Name_Walnut_2041"
         },
         UI_Name_Walnut_2042 = {
@@ -74468,6 +77019,10 @@ Allez voir ce qui se passe.]],
           ContentFR = "Petite fille",
           TextMapId = "UI_Npc_Name_250025"
         },
+        UI_Npc_Name_250029 = {
+          ContentFR = "Su Yi ?",
+          TextMapId = "UI_Npc_Name_250029"
+        },
         UI_Npc_Name_Ada = {
           ContentFR = "Ada",
           TextMapId = "UI_Npc_Name_Ada"
@@ -74503,6 +77058,14 @@ Allez voir ce qui se passe.]],
         UI_Npc_Name_Anni = {
           ContentFR = "Annie",
           TextMapId = "UI_Npc_Name_Anni"
+        },
+        UI_Npc_Name_Aoman = {
+          ContentFR = "Homme arrogant",
+          TextMapId = "UI_Npc_Name_Aoman"
+        },
+        UI_Npc_Name_AomanT = {
+          ContentFR = "Homme arrogant ?",
+          TextMapId = "UI_Npc_Name_AomanT"
         },
         UI_Npc_Name_Aote = {
           ContentFR = "L’Étranger",
@@ -74588,6 +77151,14 @@ Allez voir ce qui se passe.]],
           ContentFR = "Daphne",
           TextMapId = "UI_Npc_Name_Dafu"
         },
+        UI_Npc_Name_DianzhangA = {
+          ContentFR = "Commerçant soupçonneux",
+          TextMapId = "UI_Npc_Name_DianzhangA"
+        },
+        UI_Npc_Name_DianzhangB = {
+          ContentFR = "Commerçant autoritaire",
+          TextMapId = "UI_Npc_Name_DianzhangB"
+        },
         UI_Npc_Name_Diaoxiang = {
           ContentFR = "Statue",
           TextMapId = "UI_Npc_Name_Diaoxiang"
@@ -74607,6 +77178,18 @@ Allez voir ce qui se passe.]],
         UI_Npc_Name_Dog = {
           ContentFR = "Chien féroce",
           TextMapId = "UI_Npc_Name_Dog"
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Npc_Name_DreamWuyousheng",
+    MaxKey = "UI_Npc_Name_Weisheng",
+    Loader = function()
+      return {
+        UI_Npc_Name_DreamWuyousheng = {
+          ContentFR = "Wishen éthéré",
+          TextMapId = "UI_Npc_Name_DreamWuyousheng"
         },
         UI_Npc_Name_DrunkSoldier = {
           ContentFR = "Soldat ivre",
@@ -74748,6 +77331,14 @@ Allez voir ce qui se passe.]],
           ContentFR = "Fleuriste",
           TextMapId = "UI_Npc_Name_FlowerShoper"
         },
+        UI_Npc_Name_FuShuKeZhou = {
+          ContentFR = "Fushu et Kezhou",
+          TextMapId = "UI_Npc_Name_FuShuKeZhou"
+        },
+        UI_Npc_Name_FuShuSuYi = {
+          ContentFR = "Fushu et Su Yi",
+          TextMapId = "UI_Npc_Name_FuShuSuYi"
+        },
         UI_Npc_Name_Fuer = {
           ContentFR = "Fulvis",
           TextMapId = "UI_Npc_Name_Fuer"
@@ -74763,15 +77354,7 @@ Allez voir ce qui se passe.]],
         UI_Npc_Name_Fulanke = {
           ContentFR = "Frank",
           TextMapId = "UI_Npc_Name_Fulanke"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Npc_Name_Fuluo",
-    MaxKey = "UI_Npc_Name_lesuo",
-    Loader = function()
-      return {
+        },
         UI_Npc_Name_Fuluo = {
           ContentFR = "Flora",
           TextMapId = "UI_Npc_Name_Fuluo"
@@ -74855,6 +77438,10 @@ Allez voir ce qui se passe.]],
         UI_Npc_Name_Hunhun1 = {
           ContentFR = "Voyou embusqué",
           TextMapId = "UI_Npc_Name_Hunhun1"
+        },
+        UI_Npc_Name_Huoji = {
+          ContentFR = "Commis timide",
+          TextMapId = "UI_Npc_Name_Huoji"
         },
         UI_Npc_Name_IceFisher = {
           ContentFR = "Pêcheur étourdi",
@@ -75172,6 +77759,10 @@ Allez voir ce qui se passe.]],
           ContentFR = "Serveur enthousiaste",
           TextMapId = "UI_Npc_Name_ReqingWaiter"
         },
+        UI_Npc_Name_RookieFisher = {
+          ContentFR = "Pêcheur étourdi",
+          TextMapId = "UI_Npc_Name_RookieFisher"
+        },
         UI_Npc_Name_RougeLike_Shop1 = {
           ContentFR = "Marchand abyssal",
           TextMapId = "UI_Npc_Name_RougeLike_Shop1"
@@ -75223,6 +77814,10 @@ Allez voir ce qui se passe.]],
         UI_Npc_Name_SaveFisher = {
           ContentFR = "Pêcheur étourdi",
           TextMapId = "UI_Npc_Name_SaveFisher"
+        },
+        UI_Npc_Name_SearchChestMan = {
+          ContentFR = "Jeune fille tourmentée",
+          TextMapId = "UI_Npc_Name_SearchChestMan"
         },
         UI_Npc_Name_Shangdian = {
           ContentFR = "Luno, la servante",
@@ -75280,6 +77875,10 @@ Allez voir ce qui se passe.]],
           ContentFR = "Client exigeant",
           TextMapId = "UI_Npc_Name_Subscriber"
         },
+        UI_Npc_Name_Sumuo = {
+          ContentFR = "Su Muzhe",
+          TextMapId = "UI_Npc_Name_Sumuo"
+        },
         UI_Npc_Name_SuspiciousMan = {
           ContentFR = "Jeune homme suspect",
           TextMapId = "UI_Npc_Name_SuspiciousMan"
@@ -75291,6 +77890,10 @@ Allez voir ce qui se passe.]],
         UI_Npc_Name_Tanlandeshangren = {
           ContentFR = "Marchand sincère",
           TextMapId = "UI_Npc_Name_Tanlandeshangren"
+        },
+        UI_Npc_Name_Tanxianjiajiaojiao = {
+          ContentFR = "Luno, l’exploratrice",
+          TextMapId = "UI_Npc_Name_Tanxianjiajiaojiao"
         },
         UI_Npc_Name_Tanxianjiaojiao = {
           ContentFR = "Luno, l’exploratrice",
@@ -75315,6 +77918,10 @@ Allez voir ce qui se passe.]],
         UI_Npc_Name_TitieKuanggong = {
           ContentFR = "Géologue dévoué",
           TextMapId = "UI_Npc_Name_TitieKuanggong"
+        },
+        UI_Npc_Name_Tongzhenkid = {
+          ContentFR = "Enfant chasseur de trésor",
+          TextMapId = "UI_Npc_Name_Tongzhenkid"
         },
         UI_Npc_Name_Toudu = {
           ContentFR = "Toxiné",
@@ -75379,7 +77986,15 @@ Allez voir ce qui se passe.]],
         UI_Npc_Name_Weisheng = {
           ContentFR = "Wei Shen",
           TextMapId = "UI_Npc_Name_Weisheng"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Npc_Name_Wenhao",
+    MaxKey = "UI_OPTION_PlantEnhance",
+    Loader = function()
+      return {
         UI_Npc_Name_Wenhao = {
           ContentFR = "???",
           TextMapId = "UI_Npc_Name_Wenhao"
@@ -75476,6 +78091,10 @@ Allez voir ce qui se passe.]],
           ContentFR = "Jeune alchimiste",
           TextMapId = "UI_Npc_Name_XiaoLianjin"
         },
+        UI_Npc_Name_Xiaochitanfan = {
+          ContentFR = "Vendeur d’encas",
+          TextMapId = "UI_Npc_Name_Xiaochitanfan"
+        },
         UI_Npc_Name_Xiaocilang = {
           ContentFR = "Chasseur de Géniemon, ami des chiens",
           TextMapId = "UI_Npc_Name_Xiaocilang"
@@ -75552,6 +78171,14 @@ Allez voir ce qui se passe.]],
           ContentFR = "Luno au marteau",
           TextMapId = "UI_Npc_Name_ZhixianDuanzao"
         },
+        UI_Npc_Name_ZhuJueBai = {
+          ContentFR = "{nickname} et Snow",
+          TextMapId = "UI_Npc_Name_ZhuJueBai"
+        },
+        UI_Npc_Name_Zhuchi = {
+          ContentFR = "Fille stricte",
+          TextMapId = "UI_Npc_Name_Zhuchi"
+        },
         UI_Npc_Name_Zhuomicang_F1 = {
           ContentFR = "Enfant ennuyée",
           TextMapId = "UI_Npc_Name_Zhuomicang_F1"
@@ -75571,15 +78198,7 @@ Allez voir ce qui se passe.]],
         UI_Npc_Name_lesuo = {
           ContentFR = "Garçon insolent",
           TextMapId = "UI_Npc_Name_lesuo"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Npc_Name_lingsheng",
-    MaxKey = "UI_OnlineRegion_Enter",
-    Loader = function()
-      return {
+        },
         UI_Npc_Name_lingsheng = {
           ContentFR = "Ling Shen",
           TextMapId = "UI_Npc_Name_lingsheng"
@@ -75696,6 +78315,22 @@ Allez voir ce qui se passe.]],
           ContentFR = "Luminosité",
           TextMapId = "UI_OPTION_Brightness"
         },
+        UI_OPTION_BulletJumpCamAdjust = {
+          ContentFR = "Maintenir pour ajuster la direction du Bond Cyclonique",
+          TextMapId = "UI_OPTION_BulletJumpCamAdjust"
+        },
+        UI_OPTION_BulletJumpCamReset = {
+          ContentFR = "Recentrer la caméra après un Bond Cyclonique",
+          TextMapId = "UI_OPTION_BulletJumpCamReset"
+        },
+        UI_OPTION_BulletJumpXsensitivity = {
+          ContentFR = "Sensibilité horizontale lors de l’ajustement du Bond Cyclonique",
+          TextMapId = "UI_OPTION_BulletJumpXsensitivity"
+        },
+        UI_OPTION_BulletJumpYsensitivity = {
+          ContentFR = "Sensibilité verticale lors de l’ajustement du Bond cyclonique",
+          TextMapId = "UI_OPTION_BulletJumpYsensitivity"
+        },
         UI_OPTION_CONTROLLER = {
           ContentFR = "Commandes",
           TextMapId = "UI_OPTION_CONTROLLER"
@@ -75707,6 +78342,10 @@ Allez voir ce qui se passe.]],
         UI_OPTION_CameraDistance = {
           ContentFR = "Distance de caméra par défaut",
           TextMapId = "UI_OPTION_CameraDistance"
+        },
+        UI_OPTION_CameraShakeRate = {
+          ContentFR = "Intensité des secousses",
+          TextMapId = "UI_OPTION_CameraShakeRate"
         },
         UI_OPTION_CameraYawFollow = {
           ContentFR = "Caméra de combat intelligente",
@@ -76148,10 +78787,22 @@ Allez voir ce qui se passe.]],
           ContentFR = "Préréglage de qualité",
           TextMapId = "UI_OPTION_OverallPreset"
         },
+        UI_OPTION_PasswordVerifyPerLogin = {
+          ContentFR = "Exiger une vérification lors de la première action après connexion",
+          TextMapId = "UI_OPTION_PasswordVerifyPerLogin"
+        },
         UI_OPTION_PlantEnhance = {
           ContentFR = "Amélioration de la végétation",
           TextMapId = "UI_OPTION_PlantEnhance"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_OPTION_PostEffect",
+    MaxKey = "UI_PersonInfo_Detail_Weapon",
+    Loader = function()
+      return {
         UI_OPTION_PostEffect = {
           ContentFR = "Effets de post-traitement",
           TextMapId = "UI_OPTION_PostEffect"
@@ -76223,6 +78874,10 @@ Allez voir ce qui se passe.]],
         UI_OPTION_ScreenQuality = {
           ContentFR = "Qualité des captures d’écran",
           TextMapId = "UI_OPTION_ScreenQuality"
+        },
+        UI_OPTION_SecondaryPassword = {
+          ContentFR = "Activer le mot de passe secondaire",
+          TextMapId = "UI_OPTION_SecondaryPassword"
         },
         UI_OPTION_ShadowQuality = {
           ContentFR = "Qualité des ombres",
@@ -76379,15 +79034,7 @@ Allez voir ce qui se passe.]],
         UI_OnlineRegion_Enter = {
           ContentFR = "Vous êtes entré dans une zone en coop",
           TextMapId = "UI_OnlineRegion_Enter"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Opition_Clean",
-    MaxKey = "UI_PlayerHead_Des_10006",
-    Loader = function()
-      return {
+        },
         UI_Opition_Clean = {
           ContentFR = "Appuyer pour vider",
           TextMapId = "UI_Opition_Clean"
@@ -76888,9 +79535,65 @@ Allez voir ce qui se passe.]],
           ContentFR = "Notification de réparation",
           TextMapId = "UI_PatchFix_Title"
         },
+        UI_Patch_AllowData = {
+          ContentFR = "Autoriser le téléchargement via données mobiles",
+          TextMapId = "UI_Patch_AllowData"
+        },
+        UI_Patch_DataUsage = {
+          ContentFR = "Le téléchargement via les données mobiles est désactivé. Activer et lancer le téléchargement ?",
+          TextMapId = "UI_Patch_DataUsage"
+        },
+        UI_Patch_DownloadFinish = {
+          ContentFR = "Téléchargement terminé",
+          TextMapId = "UI_Patch_DownloadFinish"
+        },
+        UI_Patch_DownloadingNecessory = {
+          ContentFR = "Les ressources requises sont en cours de téléchargement. Les autres téléchargements sont temporairement indisponibles.",
+          TextMapId = "UI_Patch_DownloadingNecessory"
+        },
         UI_Patch_Fix_Fail = {
           ContentFR = "Échec de la réparation du patch. Veuillez réessayer ou contacter le service client.",
           TextMapId = "UI_Patch_Fix_Fail"
+        },
+        UI_Patch_Interrup = {
+          ContentFR = "Interrompre le téléchargement actuel et lancer le nouveau ?",
+          TextMapId = "UI_Patch_Interrup"
+        },
+        UI_Patch_Logout = {
+          ContentFR = "Vous êtes déconnecté. Vous pourrez continuer à jouer une fois %s téléchargé.",
+          TextMapId = "UI_Patch_Logout"
+        },
+        UI_Patch_Manage = {
+          ContentFR = "Gestion des téléchargements",
+          TextMapId = "UI_Patch_Manage"
+        },
+        UI_Patch_Necessory = {
+          ContentFR = "Ressources requises",
+          TextMapId = "UI_Patch_Necessory"
+        },
+        UI_Patch_NeedDownload = {
+          ContentFR = "Terminez le téléchargement de %s pour continuer à jouer",
+          TextMapId = "UI_Patch_NeedDownload"
+        },
+        UI_Patch_NeedNecessory = {
+          ContentFR = "Les ressources requises doivent être téléchargées avant les autres.",
+          TextMapId = "UI_Patch_NeedNecessory"
+        },
+        UI_Patch_StartNow = {
+          ContentFR = "Cette ressource peut être téléchargée en arrière-plan. Télécharger maintenant ?",
+          TextMapId = "UI_Patch_StartNow"
+        },
+        UI_Patch_Toast_Finish = {
+          ContentFR = "%s téléchargé",
+          TextMapId = "UI_Patch_Toast_Finish"
+        },
+        UI_Patch_Toast_Start = {
+          ContentFR = "%s a commencé à se télécharger en arrière-plan. Vous pouvez le gérer dans les paramètres.",
+          TextMapId = "UI_Patch_Toast_Start"
+        },
+        UI_Patch_Toast_Wait = {
+          ContentFR = "La mission commencera une fois %s téléchargé",
+          TextMapId = "UI_Patch_Toast_Wait"
         },
         UI_PersonInfo_Detail_Char = {
           ContentFR = "Détails du personnage",
@@ -76899,7 +79602,15 @@ Allez voir ce qui se passe.]],
         UI_PersonInfo_Detail_Weapon = {
           ContentFR = "Détails de l’arme",
           TextMapId = "UI_PersonInfo_Detail_Weapon"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_PersonInfo_Held",
+    MaxKey = "UI_PlayerHead_Name_30053",
+    Loader = function()
+      return {
         UI_PersonInfo_Held = {
           ContentFR = "Obtenu",
           TextMapId = "UI_PersonInfo_Held"
@@ -77073,8 +79784,56 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_PetEntry_Title17"
         },
         UI_PetEntry_Title18 = {
-          ContentFR = "Assidu",
+          ContentFR = "Discipliné",
           TextMapId = "UI_PetEntry_Title18"
+        },
+        UI_PetEntry_Title19 = {
+          ContentFR = "Brutal",
+          TextMapId = "UI_PetEntry_Title19"
+        },
+        UI_PetEntry_Title20 = {
+          ContentFR = "Cupide",
+          TextMapId = "UI_PetEntry_Title20"
+        },
+        UI_PetEntry_Title21 = {
+          ContentFR = "Endurant",
+          TextMapId = "UI_PetEntry_Title21"
+        },
+        UI_PetEntry_Title22 = {
+          ContentFR = "Efficace",
+          TextMapId = "UI_PetEntry_Title22"
+        },
+        UI_PetEntry_Title23 = {
+          ContentFR = "Exalté",
+          TextMapId = "UI_PetEntry_Title23"
+        },
+        UI_PetEntry_Title24 = {
+          ContentFR = "Obstiné",
+          TextMapId = "UI_PetEntry_Title24"
+        },
+        UI_PetEntry_Title25 = {
+          ContentFR = "Téméraire",
+          TextMapId = "UI_PetEntry_Title25"
+        },
+        UI_PetEntry_Title26 = {
+          ContentFR = "Revigoré",
+          TextMapId = "UI_PetEntry_Title26"
+        },
+        UI_PetEntry_Title27 = {
+          ContentFR = "Fantomatique",
+          TextMapId = "UI_PetEntry_Title27"
+        },
+        UI_PetEntry_Title28 = {
+          ContentFR = "Avide",
+          TextMapId = "UI_PetEntry_Title28"
+        },
+        UI_PetEntry_Title29 = {
+          ContentFR = "Fugitif",
+          TextMapId = "UI_PetEntry_Title29"
+        },
+        UI_PetEntry_Title30 = {
+          ContentFR = "Vétéran",
+          TextMapId = "UI_PetEntry_Title30"
         },
         UI_Pet_Affix_Without = {
           ContentFR = "Aucun trait n’a été ajouté à cet emplacement",
@@ -77187,15 +79946,7 @@ Allez voir ce qui se passe.]],
         UI_PlayerHead_Des_10006 = {
           ContentFR = "Permet de remplacer l’icône d’avatar par celle de Randy.",
           TextMapId = "UI_PlayerHead_Des_10006"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_PlayerHead_Des_10007",
-    MaxKey = "UI_QUEST_CONDITION_FINISHQUEST",
-    Loader = function()
-      return {
+        },
         UI_PlayerHead_Des_10007 = {
           ContentFR = "Permet de remplacer l’icône d’avatar par celle de Lynn.",
           TextMapId = "UI_PlayerHead_Des_10007"
@@ -77659,7 +80410,15 @@ Allez voir ce qui se passe.]],
         UI_PlayerHead_Name_30053 = {
           ContentFR = "Fina : Hors combat",
           TextMapId = "UI_PlayerHead_Name_30053"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_PlayerHead_Name_30054",
+    MaxKey = "UI_Raid_Pre_Detail",
+    Loader = function()
+      return {
         UI_PlayerHead_Name_30054 = {
           ContentFR = "Fina : Soutien",
           TextMapId = "UI_PlayerHead_Name_30054"
@@ -77995,15 +80754,7 @@ Allez voir ce qui se passe.]],
         UI_QUEST_CONDITION_FINISHQUEST = {
           ContentFR = "Quête requise :",
           TextMapId = "UI_QUEST_CONDITION_FINISHQUEST"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_QUEST_CONDITION_PLAYERLEVEL",
-    MaxKey = "UI_Rou_Toast_27021",
-    Loader = function()
-      return {
+        },
         UI_QUEST_CONDITION_PLAYERLEVEL = {
           ContentFR = "Niveau d’Aventure :",
           TextMapId = "UI_QUEST_CONDITION_PLAYERLEVEL"
@@ -78135,6 +80886,10 @@ Allez voir ce qui se passe.]],
         UI_Quest_QuestFail_200313 = {
           ContentFR = "Vous avez perdu la course contre Chen Baisha. La course va recommencer.",
           TextMapId = "UI_Quest_QuestFail_200313"
+        },
+        UI_Quest_StartTime = {
+          ContentFR = "Débloqué dans :{空格}",
+          TextMapId = "UI_Quest_StartTime"
         },
         UI_Quest_TakeQuest = {
           ContentFR = "Accepter la quête",
@@ -78445,7 +81200,15 @@ Allez voir ce qui se passe.]],
         UI_Raid_Pre_Detail = {
           ContentFR = "Vaincre le nombre d’ennemis requis avant la fin du temps imparti",
           TextMapId = "UI_Raid_Pre_Detail"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Raid_Ready",
+    MaxKey = "UI_SHOP_MAINTAB_PACK",
+    Loader = function()
+      return {
         UI_Raid_Ready = {
           ContentFR = "Se rendre à l’objectif pour lancer le défi",
           TextMapId = "UI_Raid_Ready"
@@ -78522,6 +81285,10 @@ Allez voir ce qui se passe.]],
         UI_RegionMap_NotInSameRegion = {
           ContentFR = "La cible se trouve dans une autre zone. Rendez-vous d’abord dans la zone correspondante.",
           TextMapId = "UI_RegionMap_NotInSameRegion"
+        },
+        UI_RegionMap_OpenTagPanel = {
+          ContentFR = "Afficher / masquer les repères",
+          TextMapId = "UI_RegionMap_OpenTagPanel"
         },
         UI_RegionMap_Save = {
           ContentFR = "Sauvegarder",
@@ -78676,6 +81443,26 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_Rematch_Fail_TimeOut"
         },
         UI_Replay = {ContentFR = "Rejouer", TextMapId = "UI_Replay"},
+        UI_Report_Tab1 = {
+          ContentFR = "Nom d’utilisateur / Signature",
+          TextMapId = "UI_Report_Tab1"
+        },
+        UI_Report_Tab2 = {
+          ContentFR = "Chat",
+          TextMapId = "UI_Report_Tab2"
+        },
+        UI_Report_Tab3 = {
+          ContentFR = "Conduite en jeu",
+          TextMapId = "UI_Report_Tab3"
+        },
+        UI_ResetLangLater = {
+          ContentFR = "Pas maintenant",
+          TextMapId = "UI_ResetLangLater"
+        },
+        UI_ResetLangNow = {
+          ContentFR = "Changer",
+          TextMapId = "UI_ResetLangNow"
+        },
         UI_Resources_Exchange = {
           ContentFR = "Échanger des Empreintes d’âme",
           TextMapId = "UI_Resources_Exchange"
@@ -78779,15 +81566,7 @@ Allez voir ce qui se passe.]],
         UI_Rou_Toast_27021 = {
           ContentFR = "Vous devez d’abord éveiller tous les nœuds préalables de la Lanterne pour pouvoir éveiller celui-ci.",
           TextMapId = "UI_Rou_Toast_27021"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Rou_Toast_27022",
-    MaxKey = "UI_STAT_Healing",
-    Loader = function()
-      return {
+        },
         UI_Rou_Toast_27022 = {
           ContentFR = "Une exploration de l’Abysse est en cours. Impossible d’enregistrer la configuration d’éveil de la Lanterne.",
           TextMapId = "UI_Rou_Toast_27022"
@@ -79223,7 +82002,15 @@ Allez voir ce qui se passe.]],
         UI_SHOP_MAINTAB_PACK = {
           ContentFR = "Coffrets",
           TextMapId = "UI_SHOP_MAINTAB_PACK"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_SHOP_MAINTAB_PACK_ACCESSORY",
+    MaxKey = "UI_SelectLayoutPopup_Tittle02",
+    Loader = function()
+      return {
         UI_SHOP_MAINTAB_PACK_ACCESSORY = {
           ContentFR = "Lot de cosmétiques",
           TextMapId = "UI_SHOP_MAINTAB_PACK_ACCESSORY"
@@ -79587,15 +82374,7 @@ Allez voir ce qui se passe.]],
         UI_STAT_Healing = {
           ContentFR = "Soins prodigués",
           TextMapId = "UI_STAT_Healing"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_STAT_KILL_CHAR",
-    MaxKey = "UI_SkinGacha_Again_Ten",
-    Loader = function()
-      return {
+        },
         UI_STAT_KILL_CHAR = {
           ContentFR = "Par compétences",
           TextMapId = "UI_STAT_KILL_CHAR"
@@ -79933,6 +82712,78 @@ Allez voir ce qui se passe.]],
           ContentFR = "Rechercher...",
           TextMapId = "UI_Search"
         },
+        UI_SecPwd_ConfirmSetButton = {
+          ContentFR = "Activer",
+          TextMapId = "UI_SecPwd_ConfirmSetButton"
+        },
+        UI_SecPwd_ConfirmTurnoffButton = {
+          ContentFR = "Désactiver",
+          TextMapId = "UI_SecPwd_ConfirmTurnoffButton"
+        },
+        UI_SecPwd_ForgetPwd = {
+          ContentFR = "Mot de passe oublié ?",
+          TextMapId = "UI_SecPwd_ForgetPwd"
+        },
+        UI_SecPwd_PopUpContent_SetAlert = {
+          ContentFR = "Si vous oubliez votre mot de passe secondaire, veuillez contacter le Service client. Il ne peut pas être récupéré automatiquement.",
+          TextMapId = "UI_SecPwd_PopUpContent_SetAlert"
+        },
+        UI_SecPwd_PopUpContent_SetButton = {
+          ContentFR = "Définir le mot de passe",
+          TextMapId = "UI_SecPwd_PopUpContent_SetButton"
+        },
+        UI_SecPwd_PopUpContent_SetConfirm = {
+          ContentFR = "Êtes-vous sûr de vouloir activer le mot de passe secondaire ? (Celui-ci sera requis pour déverrouiller des objets, utiliser des objets importants, envoyer des cadeaux et effectuer d’autres actions sensibles.)",
+          TextMapId = "UI_SecPwd_PopUpContent_SetConfirm"
+        },
+        UI_SecPwd_PopUpContent_SetSucc = {
+          ContentFR = "Mot de passe secondaire activé. Si vous l’oubliez, il ne pourra pas être récupéré automatiquement. Veuillez le conserver précieusement.",
+          TextMapId = "UI_SecPwd_PopUpContent_SetSucc"
+        },
+        UI_SecPwd_PopUpContent_TurnoffConfirm = {
+          ContentFR = "Une fois désactivée, la protection par mot de passe secondaire sera supprimée. Si vous l’activez de nouveau plus tard, vous devrez définir un nouveau mot de passe. Confirmez-vous la désactivation ?",
+          TextMapId = "UI_SecPwd_PopUpContent_TurnoffConfirm"
+        },
+        UI_SecPwd_PwdConflictAlert = {
+          ContentFR = "Les mots de passe ne correspondent pas",
+          TextMapId = "UI_SecPwd_PwdConflictAlert"
+        },
+        UI_SecPwd_PwdVerifyTitle = {
+          ContentFR = "Vérification du mot de passe secondaire",
+          TextMapId = "UI_SecPwd_PwdVerifyTitle"
+        },
+        UI_SecPwd_SetPwdTitle = {
+          ContentFR = "Activer le mot de passe secondaire",
+          TextMapId = "UI_SecPwd_SetPwdTitle"
+        },
+        UI_SecPwd_TextInPwd = {
+          ContentFR = "Saisir le mot de passe",
+          TextMapId = "UI_SecPwd_TextInPwd"
+        },
+        UI_SecPwd_TextInPwdAgain = {
+          ContentFR = "Saisir à nouveau",
+          TextMapId = "UI_SecPwd_TextInPwdAgain"
+        },
+        UI_SecPwd_Toast_TextInCompletePwd = {
+          ContentFR = "Veuillez saisir le mot de passe en entier",
+          TextMapId = "UI_SecPwd_Toast_TextInCompletePwd"
+        },
+        UI_SecPwd_TurnoffPwdTitle = {
+          ContentFR = "Désactiver le mot de passe secondaire",
+          TextMapId = "UI_SecPwd_TurnoffPwdTitle"
+        },
+        UI_SecPwd_TurnoffToast = {
+          ContentFR = "Mot de passe secondaire désactivé",
+          TextMapId = "UI_SecPwd_TurnoffToast"
+        },
+        UI_SecPwd_WrongPwdAlert = {
+          ContentFR = "Mot de passe secondaire incorrect (%s tentatives restantes)",
+          TextMapId = "UI_SecPwd_WrongPwdAlert"
+        },
+        UI_SecPwd_WrongPwdLock = {
+          ContentFR = "Trop de tentatives incorrectes. L’accès a été temporairement verrouillé. (Déverrouillage dans : %s)",
+          TextMapId = "UI_SecPwd_WrongPwdLock"
+        },
         UI_SelectLayoutPopup_Button = {
           ContentFR = "Confirmer le choix",
           TextMapId = "UI_SelectLayoutPopup_Button"
@@ -79956,7 +82807,15 @@ Allez voir ce qui se passe.]],
         UI_SelectLayoutPopup_Tittle02 = {
           ContentFR = "Configuration 2",
           TextMapId = "UI_SelectLayoutPopup_Tittle02"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_SelectLayoutPopup_Tittle03",
+    MaxKey = "UI_Skin_Des_5102",
+    Loader = function()
+      return {
         UI_SelectLayoutPopup_Tittle03 = {
           ContentFR = "Sélection de disposition",
           TextMapId = "UI_SelectLayoutPopup_Tittle03"
@@ -80392,15 +83251,7 @@ Allez voir ce qui se passe.]],
         UI_SkinGacha_Again_Ten = {
           ContentFR = "Encore 10 fois",
           TextMapId = "UI_SkinGacha_Again_Ten"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_SkinGacha_Blue",
-    MaxKey = "UI_TAB_NAME_TASKITEM",
-    Loader = function()
-      return {
+        },
         UI_SkinGacha_Blue = {
           ContentFR = "Taux d’obtention d’un objet rare : <highlight>%s %%</>",
           TextMapId = "UI_SkinGacha_Blue"
@@ -80764,7 +83615,15 @@ Allez voir ce qui se passe.]],
         UI_Skin_Des_5102 = {
           ContentFR = "Une tenue modeste ne fait pas taire les plaintes écarlates des ruelles... mais elle protège une lueur d’étoile au cœur de la brutalité du monde.",
           TextMapId = "UI_Skin_Des_5102"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Skin_Des_5301",
+    MaxKey = "UI_TELEPORTPOINT_NAME_104301_1",
+    Loader = function()
+      return {
         UI_Skin_Des_5301 = {
           ContentFR = "Un papillon posé dans le creux de son bras apporte une multitude de rêves ayant traversé l’hiver.",
           TextMapId = "UI_Skin_Des_5301"
@@ -80956,6 +83815,182 @@ Allez voir ce qui se passe.]],
         UI_Slot_Empty = {
           ContentFR = "L’emplacement sélectionné est vide",
           TextMapId = "UI_Slot_Empty"
+        },
+        UI_SoloTreasureEvent_ArmorySet = {
+          ContentFR = "Préparatifs avant départ",
+          TextMapId = "UI_SoloTreasureEvent_ArmorySet"
+        },
+        UI_SoloTreasureEvent_BagCost = {
+          ContentFR = "Coût du sac aux trésors",
+          TextMapId = "UI_SoloTreasureEvent_BagCost"
+        },
+        UI_SoloTreasureEvent_CleanUpSet = {
+          ContentFR = "Vider la formation",
+          TextMapId = "UI_SoloTreasureEvent_CleanUpSet"
+        },
+        UI_SoloTreasureEvent_EntryArmory = {
+          ContentFR = "Préparatifs avant départ",
+          TextMapId = "UI_SoloTreasureEvent_EntryArmory"
+        },
+        UI_SoloTreasureEvent_EntryCost = {
+          ContentFR = "Coût d’inscription",
+          TextMapId = "UI_SoloTreasureEvent_EntryCost"
+        },
+        UI_SoloTreasureEvent_EntryDungeon = {
+          ContentFR = "Lancer le défi",
+          TextMapId = "UI_SoloTreasureEvent_EntryDungeon"
+        },
+        UI_SoloTreasureEvent_NoReturnTips = {
+          ContentFR = "(Le coût d’entrée ne sera pas remboursé.)",
+          TextMapId = "UI_SoloTreasureEvent_NoReturnTips"
+        },
+        UI_SoloTreasureEvent_TotalCost = {
+          ContentFR = "Coût total",
+          TextMapId = "UI_SoloTreasureEvent_TotalCost"
+        },
+        UI_SoloTreasureEvent_WeaponNotExist = {
+          ContentFR = "L’arme sélectionnée est introuvable",
+          TextMapId = "UI_SoloTreasureEvent_WeaponNotExist"
+        },
+        UI_SoloTreasure_ArmoryEmptyComponent = {
+          ContentFR = "Aucune formation configurée",
+          TextMapId = "UI_SoloTreasure_ArmoryEmptyComponent"
+        },
+        UI_SoloTreasure_ArmoryLackEntryFee = {
+          ContentFR = "Jetons insuffisants",
+          TextMapId = "UI_SoloTreasure_ArmoryLackEntryFee"
+        },
+        UI_SoloTreasure_ArmoryLackNecessaryComponent = {
+          ContentFR = "Conditions de déploiement non remplies",
+          TextMapId = "UI_SoloTreasure_ArmoryLackNecessaryComponent"
+        },
+        UI_SoloTreasure_BagInUse = {
+          ContentFR = "Équipé",
+          TextMapId = "UI_SoloTreasure_BagInUse"
+        },
+        UI_SoloTreasure_BagLocked = {
+          ContentFR = "Accès non encore débloqué",
+          TextMapId = "UI_SoloTreasure_BagLocked"
+        },
+        UI_SoloTreasure_ClearArmoryPreset = {
+          ContentFR = "Vider la formation actuelle ?",
+          TextMapId = "UI_SoloTreasure_ClearArmoryPreset"
+        },
+        UI_SoloTreasure_EntryDungeonConfirm = {
+          ContentFR = "Commencer le défi ? (Le coût d’entrée <H>ne sera pas remboursé</>.)",
+          TextMapId = "UI_SoloTreasure_EntryDungeonConfirm"
+        },
+        UI_SoloTreasure_Evacuation_BagEmptyTip = {
+          ContentFR = "Aucun butin",
+          TextMapId = "UI_SoloTreasure_Evacuation_BagEmptyTip"
+        },
+        UI_SoloTreasure_Evacuation_ExitCountDown = {
+          ContentFR = "Sortie automatique dans %s s",
+          TextMapId = "UI_SoloTreasure_Evacuation_ExitCountDown"
+        },
+        UI_SoloTreasure_Evacuation_ExitLevel = {
+          ContentFR = "Quitter",
+          TextMapId = "UI_SoloTreasure_Evacuation_ExitLevel"
+        },
+        UI_SoloTreasure_Evacuation_Fail = {
+          ContentFR = "Extraction échouée",
+          TextMapId = "UI_SoloTreasure_Evacuation_Fail"
+        },
+        UI_SoloTreasure_Evacuation_FightGains = {
+          ContentFR = "Points de combat",
+          TextMapId = "UI_SoloTreasure_Evacuation_FightGains"
+        },
+        UI_SoloTreasure_Evacuation_GainsDetails = {
+          ContentFR = "Détail du butin",
+          TextMapId = "UI_SoloTreasure_Evacuation_GainsDetails"
+        },
+        UI_SoloTreasure_Evacuation_MaterialGains = {
+          ContentFR = "Points de ressources",
+          TextMapId = "UI_SoloTreasure_Evacuation_MaterialGains"
+        },
+        UI_SoloTreasure_Evacuation_PlayAgain = {
+          ContentFR = "Rejouer",
+          TextMapId = "UI_SoloTreasure_Evacuation_PlayAgain"
+        },
+        UI_SoloTreasure_Evacuation_PlayAgainConfirm = {
+          ContentFR = "Commencer le défi ? (Les points d’entrée ne seront pas remboursés en cas d’échec de l’extraction.)",
+          TextMapId = "UI_SoloTreasure_Evacuation_PlayAgainConfirm"
+        },
+        UI_SoloTreasure_Evacuation_PointsNotEnoughTips = {
+          ContentFR = "Points insuffisants",
+          TextMapId = "UI_SoloTreasure_Evacuation_PointsNotEnoughTips"
+        },
+        UI_SoloTreasure_Evacuation_Success = {
+          ContentFR = "Extraction réussie",
+          TextMapId = "UI_SoloTreasure_Evacuation_Success"
+        },
+        UI_SoloTreasure_Evacuation_TotalGains = {
+          ContentFR = "Total des gains{空格}",
+          TextMapId = "UI_SoloTreasure_Evacuation_TotalGains"
+        },
+        UI_SoloTreasure_EventProgress = {
+          ContentFR = "Progression du tournoi",
+          TextMapId = "UI_SoloTreasure_EventProgress"
+        },
+        UI_SoloTreasure_EventShop = {
+          ContentFR = "Récompenses en Jetons stratégiques et martiaux",
+          TextMapId = "UI_SoloTreasure_EventShop"
+        },
+        UI_SoloTreasure_FinalProgress = {
+          ContentFR = "Dernière manche atteinte",
+          TextMapId = "UI_SoloTreasure_FinalProgress"
+        },
+        UI_SoloTreasure_GoToUnlockBag = {
+          ContentFR = "Débloquer",
+          TextMapId = "UI_SoloTreasure_GoToUnlockBag"
+        },
+        UI_SoloTreasure_GuardTask_RepairText = {
+          ContentFR = "(Maintenir) Réparer le conteneur",
+          TextMapId = "UI_SoloTreasure_GuardTask_RepairText"
+        },
+        UI_SoloTreasure_HardMode = {
+          ContentFR = "Difficile",
+          TextMapId = "UI_SoloTreasure_HardMode"
+        },
+        UI_SoloTreasure_HaveStoryToFinish = {
+          ContentFR = "Objectif de progression atteint. Poursuivez l’histoire.",
+          TextMapId = "UI_SoloTreasure_HaveStoryToFinish"
+        },
+        UI_SoloTreasure_LevelChooseTitle = {
+          ContentFR = "Sélection de l’arène",
+          TextMapId = "UI_SoloTreasure_LevelChooseTitle"
+        },
+        UI_SoloTreasure_LevelDes = {
+          ContentFR = "Présentation de l’arène",
+          TextMapId = "UI_SoloTreasure_LevelDes"
+        },
+        UI_SoloTreasure_LimitTime = {
+          ContentFR = "Limite de temps",
+          TextMapId = "UI_SoloTreasure_LimitTime"
+        },
+        UI_SoloTreasure_LimitedReward = {
+          ContentFR = "Récompenses à durée limitée",
+          TextMapId = "UI_SoloTreasure_LimitedReward"
+        },
+        UI_SoloTreasure_NextProgress = {
+          ContentFR = "Jetons requis pour progresser",
+          TextMapId = "UI_SoloTreasure_NextProgress"
+        },
+        UI_SoloTreasure_NormalMode = {
+          ContentFR = "Normal",
+          TextMapId = "UI_SoloTreasure_NormalMode"
+        },
+        UI_SoloTreasure_PermanentReward = {
+          ContentFR = "Récompenses permanentes",
+          TextMapId = "UI_SoloTreasure_PermanentReward"
+        },
+        UI_SoloTreasure_ProgressFinished = {
+          ContentFR = "Tournoi terminé",
+          TextMapId = "UI_SoloTreasure_ProgressFinished"
+        },
+        UI_SoloTreasure_UseBag = {
+          ContentFR = "Équiper",
+          TextMapId = "UI_SoloTreasure_UseBag"
         },
         UI_SpecialQuest_GiveUp = {
           ContentFR = "Abandonner la quête",
@@ -81197,15 +84232,7 @@ Allez voir ce qui se passe.]],
         UI_TAB_NAME_TASKITEM = {
           ContentFR = "Objets de quête",
           TextMapId = "UI_TAB_NAME_TASKITEM"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_TALK_AUTO_1",
-    MaxKey = "UI_TEMPLE_TIPS_81301",
-    Loader = function()
-      return {
+        },
         UI_TALK_AUTO_1 = {
           ContentFR = "Auto",
           TextMapId = "UI_TALK_AUTO_1"
@@ -81393,6 +84420,86 @@ Allez voir ce qui se passe.]],
         UI_TELEPORTPOINT_NAME_104301_1 = {
           ContentFR = "Faille de l’Oubli",
           TextMapId = "UI_TELEPORTPOINT_NAME_104301_1"
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_TELEPORTPOINT_NAME_104501_1",
+    MaxKey = "UI_Team_Join",
+    Loader = function()
+      return {
+        UI_TELEPORTPOINT_NAME_104501_1 = {
+          ContentFR = "Quartier Est",
+          TextMapId = "UI_TELEPORTPOINT_NAME_104501_1"
+        },
+        UI_TELEPORTPOINT_NAME_104501_3 = {
+          ContentFR = "Académie Fenshu",
+          TextMapId = "UI_TELEPORTPOINT_NAME_104501_3"
+        },
+        UI_TELEPORTPOINT_NAME_104502_1 = {
+          ContentFR = "Port des Astres Séparés",
+          TextMapId = "UI_TELEPORTPOINT_NAME_104502_1"
+        },
+        UI_TELEPORTPOINT_NAME_104502_3 = {
+          ContentFR = "Quartier Ouest",
+          TextMapId = "UI_TELEPORTPOINT_NAME_104502_3"
+        },
+        UI_TELEPORTPOINT_NAME_104503_1 = {
+          ContentFR = "Place centrale de Haojing",
+          TextMapId = "UI_TELEPORTPOINT_NAME_104503_1"
+        },
+        UI_TELEPORTPOINT_NAME_104503_2 = {
+          ContentFR = "Esplanade des Neuf Chapitres",
+          TextMapId = "UI_TELEPORTPOINT_NAME_104503_2"
+        },
+        UI_TELEPORTPOINT_NAME_104504_1 = {
+          ContentFR = "Pavillon de l’Encens — Abords",
+          TextMapId = "UI_TELEPORTPOINT_NAME_104504_1"
+        },
+        UI_TELEPORTPOINT_NAME_104504_2 = {
+          ContentFR = "Village de Jiaolan",
+          TextMapId = "UI_TELEPORTPOINT_NAME_104504_2"
+        },
+        UI_TELEPORTPOINT_NAME_104504_3 = {
+          ContentFR = "Village de Jiaolan — Hauteurs",
+          TextMapId = "UI_TELEPORTPOINT_NAME_104504_3"
+        },
+        UI_TELEPORTPOINT_NAME_104504_4 = {
+          ContentFR = "Banlieue Ouest",
+          TextMapId = "UI_TELEPORTPOINT_NAME_104504_4"
+        },
+        UI_TELEPORTPOINT_NAME_104505_1 = {
+          ContentFR = "Banlieue Est",
+          TextMapId = "UI_TELEPORTPOINT_NAME_104505_1"
+        },
+        UI_TELEPORTPOINT_NAME_104505_2 = {
+          ContentFR = "Banlieue Est — Extérieur",
+          TextMapId = "UI_TELEPORTPOINT_NAME_104505_2"
+        },
+        UI_TELEPORTPOINT_NAME_104505_3 = {
+          ContentFR = "Esplanade des Neuf Chapitres — Est",
+          TextMapId = "UI_TELEPORTPOINT_NAME_104505_3"
+        },
+        UI_TELEPORTPOINT_NAME_104506_1 = {
+          ContentFR = "Pavillon de l’Arbitrage",
+          TextMapId = "UI_TELEPORTPOINT_NAME_104506_1"
+        },
+        UI_TELEPORTPOINT_NAME_105201_1 = {
+          ContentFR = "Pics Extérieurs — Entrée",
+          TextMapId = "UI_TELEPORTPOINT_NAME_105201_1"
+        },
+        UI_TELEPORTPOINT_NAME_105201_2 = {
+          ContentFR = "Pics Extérieurs — Profondeurs",
+          TextMapId = "UI_TELEPORTPOINT_NAME_105201_2"
+        },
+        UI_TELEPORTPOINT_NAME_105301_1 = {
+          ContentFR = "Mausolée de Taixu",
+          TextMapId = "UI_TELEPORTPOINT_NAME_105301_1"
+        },
+        UI_TELEPORTPOINT_NAME_105501_1 = {
+          ContentFR = "Ruelle Youlai",
+          TextMapId = "UI_TELEPORTPOINT_NAME_105501_1"
         },
         UI_TELEPORTPOINT_NAME_105701_1 = {
           ContentFR = "Autel de Zhuyin",
@@ -81723,7 +84830,7 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "UI_TEMPLE_DES_80402"
         },
         UI_TEMPLE_DES_80403 = {
-          ContentFR = "Il est recommandé d’utiliser des armes à distance tirant des projectiles (hors lance-grenades). Observez attentivement les variations des mécanismes.",
+          ContentFR = "Il est recommandé d’utiliser des armes à distance tirant des projectiles  (hors lance-grenades). Observez attentivement les variations des mécanismes.",
           TextMapId = "UI_TEMPLE_DES_80403"
         },
         UI_TEMPLE_DES_80404 = {
@@ -82013,15 +85120,7 @@ Tirer sur les cibles pour marquer des points.
         UI_TEMPLE_TIPS_81301 = {
           ContentFR = "Afficher les cristaux restants",
           TextMapId = "UI_TEMPLE_TIPS_81301"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_TEMPLE_TIPS_81302",
-    MaxKey = "UI_Vote_Finish_Continued",
-    Loader = function()
-      return {
+        },
         UI_TEMPLE_TIPS_81302 = {
           ContentFR = "Afficher les cristaux restants",
           TextMapId = "UI_TEMPLE_TIPS_81302"
@@ -82137,7 +85236,15 @@ Tirer sur les cibles pour marquer des points.
         UI_Team_Join = {
           ContentFR = "Rejoindre l’équipe",
           TextMapId = "UI_Team_Join"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Team_JoinSent",
+    MaxKey = "UI_WEAPON_DESC_10208",
+    Loader = function()
+      return {
         UI_Team_JoinSent = {
           ContentFR = "Demande pour rejoindre l’équipe envoyée",
           TextMapId = "UI_Team_JoinSent"
@@ -82373,6 +85480,10 @@ Tirer sur les cibles pour marquer des points.
         UI_Temple_WindMonster = {
           ContentFR = "Des ennemis à grande vitesse approchent !",
           TextMapId = "UI_Temple_WindMonster"
+        },
+        UI_Testing_Watermark = {
+          ContentFR = "Serveur de test — Duet Night Abyss",
+          TextMapId = "UI_Testing_Watermark"
         },
         UI_TextMap_Cat_Inter01 = {
           ContentFR = "Jouer avec",
@@ -82654,6 +85765,14 @@ Tirer sur les cibles pour marquer des points.
           ContentFR = "Règles générales :\n1) Utiliser de la <Highlight>Lumistella</> pour réparer la <Highlight>Lanterne</> permet de réduire la difficulté de l’exploration.\n2) Les Points d’empreinte ne sont soumis à aucune limite globale. Chaque <Highlight>semaine</>, ils peuvent être échangés contre des récompenses d’exploration. Plus le <Highlight>Niveau d’Aventure</> est élevé, plus le coût hebdomadaire augmente, mais meilleures sont les récompenses.\n3) Les effets des <Highlight>Sceaux démoniaques</> sont désactivés dans le Dédale mystique (les modifications de compétences déjà équipées restent actives).\n4) Il est impossible d’invoquer des <Highlight>Partenaires de combat</> dans le Dédale mystique.\n\nSecteurs :\n\n1) Les <Highlight>Umbrés</> sont des secteurs de combat, divisés en plusieurs niveaux de difficulté croissante : vacillant, dispersé, insondable et abyssal. Traverser un <Highlight>Umbré abyssal</> met fin à l’exploration. Tous les autres Umbrés garantissent l’obtention de <Highlight>Braises</>.\n2) Le <Highlight>Secteur du Repos</> permet d’échanger des <Highlight>Braises</> auprès du <Highlight>Marchand abyssal</> et de se restaurer grâce aux <Highlight>Oiseaux oniriques</>.\n3) Les <Highlight>Rencontres</> sont des secteurs spéciaux où peuvent survenir divers événements.",
           TextMapId = "UI_Toast_Rouge_Detail"
         },
+        UI_Toast_SoloTreasure_RemainUnlockTime = {
+          ContentFR = "Déblocage dans : %s",
+          TextMapId = "UI_Toast_SoloTreasure_RemainUnlockTime"
+        },
+        UI_Toast_SoloTreasure_UnlockCondition = {
+          ContentFR = "Progressez dans l’événement pour débloquer",
+          TextMapId = "UI_Toast_SoloTreasure_UnlockCondition"
+        },
         UI_Toast_WeaponStrength_NoAuto = {
           ContentFR = "Aucun matériau disponible pour le placement automatique",
           TextMapId = "UI_Toast_WeaponStrength_NoAuto"
@@ -82815,15 +85934,7 @@ Tirer sur les cibles pour marquer des points.
         UI_Vote_Finish_Continued = {
           ContentFR = "Vous avez choisi de poursuivre le combat",
           TextMapId = "UI_Vote_Finish_Continued"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Vote_Finish_Continuing",
-    MaxKey = "UI_WEAPON_NAME_AutoChess_26",
-    Loader = function()
-      return {
+        },
         UI_Vote_Finish_Continuing = {
           ContentFR = "La Vague %d va commencer",
           TextMapId = "UI_Vote_Finish_Continuing"
@@ -82927,7 +86038,15 @@ Tirer sur les cibles pour marquer des points.
         UI_WEAPON_DESC_10208 = {
           ContentFR = "Colombe immaculée qui vole pour défendre la dignité, elle jure de consacrer chaque plume à la voûte céleste appelée Avenir.",
           TextMapId = "UI_WEAPON_DESC_10208"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_WEAPON_DESC_10209",
+    MaxKey = "UI_WEAPON_PASSIVE",
+    Loader = function()
+      return {
         UI_WEAPON_DESC_10209 = {
           ContentFR = "Sa lame sanglante vise le cœur sans détour.\nTant que la lave brûlante n’a pas figé, il vous reste un instant — un seul — pour fuir votre destin.",
           TextMapId = "UI_WEAPON_DESC_10209"
@@ -82955,6 +86074,10 @@ Tirer sur les cibles pour marquer des points.
         UI_WEAPON_DESC_10304 = {
           ContentFR = "Tranche l’écho des âges révolus, et ouvre la voie à des siècles de paix.",
           TextMapId = "UI_WEAPON_DESC_10304"
+        },
+        UI_WEAPON_DESC_10305 = {
+          ContentFR = "Soudain, une note limpide traverse les nuages ; la lune emplit mille passes, la neige recouvre la robe.",
+          TextMapId = "UI_WEAPON_DESC_10305"
         },
         UI_WEAPON_DESC_10398 = {
           ContentFR = "Traitée avec les procédés les plus modernes, cette épée lourde est l’outil silencieux des serviteurs qui obéissent sans question.",
@@ -83124,6 +86247,14 @@ Tirer sur les cibles pour marquer des points.
           ContentFR = "— Hein ? Atlasia court à sa perte ? Bah. Tant qu’on peut faire tout sauter, ça me va.",
           TextMapId = "UI_WEAPON_DESC_20405"
         },
+        UI_WEAPON_DESC_20406 = {
+          ContentFR = "Certains ennemis fuient devant les obus explosifs ; d’autres devant les dents d’acier d’un engrenage.",
+          TextMapId = "UI_WEAPON_DESC_20406"
+        },
+        UI_WEAPON_DESC_20407 = {
+          ContentFR = "Ombre solitaire séparée du vol, elle fait tourner l’axe du destin ; au-delà des montagnes, une plume trace son sillage dans le ciel.",
+          TextMapId = "UI_WEAPON_DESC_20407"
+        },
         UI_WEAPON_DESC_20498 = {
           ContentFR = "Raffiné par les techniques actuelles de surface : le compagnon fidèle des chasseurs aguerris.",
           TextMapId = "UI_WEAPON_DESC_20498"
@@ -83167,6 +86298,10 @@ Tirer sur les cibles pour marquer des points.
         UI_WEAPON_DESC_20510 = {
           ContentFR = "En rêve, ma lame décroche la lune glacée qui se mire dans le fleuve ; sous l’éclair de son acier, un nouvel automne déjà s’éteint.",
           TextMapId = "UI_WEAPON_DESC_20510"
+        },
+        UI_WEAPON_DESC_20512 = {
+          ContentFR = "Une lueur ambrée vacille entre veille et ivresse, reflétant encore la tiédeur d’un foyer presque éteint.",
+          TextMapId = "UI_WEAPON_DESC_20512"
         },
         UI_WEAPON_DESC_20598 = {
           ContentFR = "Un fusil d’assaut façonné selon les procédés les plus récents, prisé des éclaireurs robustes qui ouvrent la voie.",
@@ -83295,6 +86430,10 @@ Tirer sur les cibles pour marquer des points.
         UI_WEAPON_NAME_10304 = {
           ContentFR = "Adieu éternel",
           TextMapId = "UI_WEAPON_NAME_10304"
+        },
+        UI_WEAPON_NAME_10305 = {
+          ContentFR = "Écho d’or lointain",
+          TextMapId = "UI_WEAPON_NAME_10305"
         },
         UI_WEAPON_NAME_10398 = {
           ContentFR = "Espadon d’écuyer",
@@ -83464,6 +86603,14 @@ Tirer sur les cibles pour marquer des points.
           ContentFR = "Art de la détonation",
           TextMapId = "UI_WEAPON_NAME_20405"
         },
+        UI_WEAPON_NAME_20406 = {
+          ContentFR = "Engrenage déchiqueté",
+          TextMapId = "UI_WEAPON_NAME_20406"
+        },
+        UI_WEAPON_NAME_20407 = {
+          ContentFR = "Sillage solitaire",
+          TextMapId = "UI_WEAPON_NAME_20407"
+        },
         UI_WEAPON_NAME_20498 = {
           ContentFR = "Fusil du chasseur",
           TextMapId = "UI_WEAPON_NAME_20498"
@@ -83507,6 +86654,10 @@ Tirer sur les cibles pour marquer des points.
         UI_WEAPON_NAME_20510 = {
           ContentFR = "Lumière éphémère",
           TextMapId = "UI_WEAPON_NAME_20510"
+        },
+        UI_WEAPON_NAME_20512 = {
+          ContentFR = "Braise du calice",
+          TextMapId = "UI_WEAPON_NAME_20512"
         },
         UI_WEAPON_NAME_20598 = {
           ContentFR = "Fusil d’assaut du pionnier",
@@ -83623,15 +86774,7 @@ Tirer sur les cibles pour marquer des points.
         UI_WEAPON_NAME_AutoChess_26 = {
           ContentFR = "Rune de corrosion",
           TextMapId = "UI_WEAPON_NAME_AutoChess_26"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_WEAPON_NAME_AutoChess_27",
-    MaxKey = "UI_WeaponStrength_After",
-    Loader = function()
-      return {
+        },
         UI_WEAPON_NAME_AutoChess_27 = {
           ContentFR = "Rune d’éclair foudroyant",
           TextMapId = "UI_WEAPON_NAME_AutoChess_27"
@@ -83703,7 +86846,15 @@ Tirer sur les cibles pour marquer des points.
         UI_WEAPON_PASSIVE = {
           ContentFR = "Compétences d’arme",
           TextMapId = "UI_WEAPON_PASSIVE"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_WORLDMAP_CURRENTLOCATION",
+    MaxKey = "UI_Weapon_Preview",
+    Loader = function()
+      return {
         UI_WORLDMAP_CURRENTLOCATION = {
           ContentFR = "Ma position",
           TextMapId = "UI_WORLDMAP_CURRENTLOCATION"
@@ -83933,7 +87084,7 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "UI_WeaponAccessory_Desc_10013"
         },
         UI_WeaponAccessory_Desc_10017 = {
-          ContentFR = "Héros du célèbre conte « L’Étrange Aventure de Pioupiou », répandu sur tout le continent d’Atlasia. Chaque jour, le petit poussin s’éveille dans un lieu différent, rencontre de nouveaux compagnons et s’élance dans une odyssée singulière pour découvrir le sens de sa vie — et déjouer les complots des méchants.",
+          ContentFR = "Héros du célèbre conte « <I>L’Étrange Aventure de Pioupiou</> », répandu sur tout le continent d’Atlasia. Chaque jour, le petit poussin s’éveille dans un lieu différent, rencontre de nouveaux compagnons et s’élance dans une odyssée singulière pour découvrir le sens de sa vie — et déjouer les complots des méchants.",
           TextMapId = "UI_WeaponAccessory_Desc_10017"
         },
         UI_WeaponAccessory_Desc_10021 = {
@@ -84431,15 +87582,7 @@ Tirer sur les cibles pour marquer des points.
         UI_WeaponStrength_After = {
           ContentFR = "Effets passifs après fusion",
           TextMapId = "UI_WeaponStrength_After"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_WeaponStrength_Auto",
-    MaxKey = "VoiceDes121",
-    Loader = function()
-      return {
+        },
         UI_WeaponStrength_Auto = {
           ContentFR = "Sélection auto",
           TextMapId = "UI_WeaponStrength_Auto"
@@ -84511,7 +87654,15 @@ Tirer sur les cibles pour marquer des points.
         UI_Weapon_Preview = {
           ContentFR = "Aperçu de l’arme",
           TextMapId = "UI_Weapon_Preview"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Weapon_Skin",
+    MaxKey = "VoiceDes138",
+    Loader = function()
+      return {
         UI_Weapon_Skin = {
           ContentFR = "Apparences d’arme",
           TextMapId = "UI_Weapon_Skin"
@@ -84619,6 +87770,10 @@ Tirer sur les cibles pour marquer des points.
         UI_Wonder_DefaultNpcInter = {
           ContentFR = "Se rendre à la quête « <highlight>%s</> »",
           TextMapId = "UI_Wonder_DefaultNpcInter"
+        },
+        UI_WuyouPuzzle = {
+          ContentFR = "Toucher",
+          TextMapId = "UI_WuyouPuzzle"
         },
         UI_WuyoushengEvent_EditTeam = {
           ContentFR = "Composition d’équipe",
@@ -84786,7 +87941,7 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "VoiceDes004"
         },
         VoiceDes005 = {
-          ContentFR = "Vœux d'anniversaire",
+          ContentFR = "Vœux d’anniversaire",
           TextMapId = "VoiceDes005"
         },
         VoiceDes006 = {
@@ -85236,15 +88391,7 @@ Tirer sur les cibles pour marquer des points.
         VoiceDes121 = {
           ContentFR = "À propos de la Légion I",
           TextMapId = "VoiceDes121"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "VoiceDes122",
-    MaxKey = "WikiText_40300401",
-    Loader = function()
-      return {
+        },
         VoiceDes122 = {
           ContentFR = "À propos de la Légion II",
           TextMapId = "VoiceDes122"
@@ -85312,7 +88459,15 @@ Tirer sur les cibles pour marquer des points.
         VoiceDes138 = {
           ContentFR = "Blessé : IV",
           TextMapId = "VoiceDes138"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "VoiceDes139",
+    MaxKey = "WikiText_40500301",
+    Loader = function()
+      return {
         VoiceDes139 = {
           ContentFR = "Compétence de combat : III",
           TextMapId = "VoiceDes139"
@@ -85702,7 +88857,7 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "WikiText_20102301"
         },
         WikiText_20102302 = {
-          ContentFR = "De son vrai nom Enola Ruthford, elle est la fille de Fabrice Ruthford, ancien officier en charge de la Fosse de Glevum.\n\nUne affaire d’enlèvement la conduisit à croiser la route de Violette, une jeune fille issue des taudis qui rêvait de devenir dramaturge. À la mort de cette dernière, afin d’exaucer son dernier vœu, Enola simula sa propre disparition avec l’aide de Sig, le frère aîné de Violette, prit le nom de Violetta et s’enfuit à Luca pour étudier l’art lyrique.\nAujourd’hui chanteuse de renom, Violetta revient sur la scène de sa terre natale avec Putini, l’opéra qu’elle a coécrit avec son amie disparue. Elle se consacre également à la formation de la jeune génération d’artistes lyriques, sans distinction d’origine ou de rang.\n\nSelon des informations circulant parmi les Chasseurs de Phoxène, elle mènerait aussi en secret des recherches sur un élève porté disparu du nom de Parsifal.",
+          ContentFR = "De son vrai nom Enola Ruthford, elle est la fille de Fabrice Ruthford, ancien officier en charge de la Fosse de Glevum.\n\nUne affaire d’enlèvement la conduisit à croiser la route de Violette, une jeune fille issue des taudis qui rêvait de devenir dramaturge. À la mort de cette dernière, afin d’exaucer son dernier vœu, Enola simula sa propre disparition avec l’aide de Sig, le frère aîné de Violette, prit le nom de Violetta et s’enfuit à Luca pour étudier l’art lyrique.\nAujourd’hui chanteuse de renom, Violetta revient sur la scène de sa terre natale avec <I>Putini</>, l’opéra qu’elle a coécrit avec son amie disparue. Elle se consacre également à la formation de la jeune génération d’artistes lyriques, sans distinction d’origine ou de rang.\n\nSelon des informations circulant parmi les Chasseurs de Phoxène, elle mènerait aussi en secret des recherches sur un élève porté disparu du nom de Parsifal.",
           TextMapId = "WikiText_20102302"
         },
         WikiText_20102401 = {
@@ -85722,7 +88877,7 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "WikiText_20102601"
         },
         WikiText_20102602 = {
-          ContentFR = "Né sous le nom de Parsifal Snowfield.\nIl interpréta autrefois le rôle de la fée des neiges dans la dernière représentation de Né du blizzard.\n\nÀ la fin de l’affaire de la Traque des Charons, il assomma Rhythm et la confia à {nickname}.\nPour effacer toute trace du combat ayant opposé {nickname} et les siens à la XIIIᵉ Légion, il resta en arrière pour couvrir leur retraite.\nGravement blessé lors de son affrontement avec Lynn et ses troupes, il fut capturé — nul ne sait ce qu’il advint de lui par la suite.",
+          ContentFR = "Né sous le nom de Parsifal Snowfield.\nIl interpréta autrefois le rôle de la fée des neiges dans la dernière représentation de <I>Né du blizzard</>.\n\nÀ la fin de l’affaire de la Traque des Charons, il assomma Rhythm et la confia à {nickname}.\nPour effacer toute trace du combat ayant opposé {nickname} et les siens à la XIIIᵉ Légion, il resta en arrière pour couvrir leur retraite.\nGravement blessé lors de son affrontement avec Lynn et ses troupes, il fut capturé — nul ne sait ce qu’il advint de lui par la suite.",
           TextMapId = "WikiText_20102602"
         },
         WikiText_20102701 = {
@@ -86044,15 +89199,7 @@ Tirer sur les cibles pour marquer des points.
         WikiText_40300401 = {
           ContentFR = "Sous couvert de recrutement militaire, la VIᵉ Légion enrôlait depuis longtemps des Charons robustes dans un programme d’entraînement fermé, promettant que les meilleurs pourraient devenir des Charons Couronnés.\n\nEn réalité, la VIᵉ Légion collaborait avec les Spathatoi de Givrelac pour sélectionner des individus présentant des aptitudes particulières et les soumettre à des expérimentations alchimiques destinées à créer des armes vivantes.",
           TextMapId = "WikiText_40300401"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "WikiText_40300402",
-    MaxKey = "voice_ch_char_Baonu_vo_skill02_r02",
-    Loader = function()
-      return {
+        },
         WikiText_40300402 = {
           ContentFR = "Au cours de l’enquête sur la Traque des Charons, Lynn découvrit la vérité sur ces expérimentations et en informa Sibylle, Commandante de la XIIIᵉ Légion.\nCette dernière lui ordonna immédiatement de cesser toute investigation.",
           TextMapId = "WikiText_40300402"
@@ -86118,9 +89265,17 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "WikiText_40500204"
         },
         WikiText_40500301 = {
-          ContentFR = "La taverne la plus animée de Givrelac, fréquentée aussi bien par les nobles de la Vieille ville que par les vagabonds des taudis. Parmi eux se trouvent parfois des individus dangereux ; disputes et altercations y sont monnaie courante.\nCependant, grâce au tact et au talent diplomatique de Camilla, peu de ces tensions dégénèrent en véritables conflits.\nEn ce sens, Les Asphodèles sont à la fois l’endroit le moins paisible — et paradoxalement le plus paisible — de toute la cité.\n\nOutre son activité de taverne, l’établissement sert également de centre d’intermédiation pour les Chasseurs de Phoxène. Clients et chasseurs y déposent ou y acceptent des missions, Camilla assurant le rôle d’intermédiaire neutre pour garantir paiement, sécurité et confidentialité.\n\nCertains prétendent que la taverne abriterait aussi des activités illicites, mais faute de preuves, ces propos demeurent au rang de rumeurs de comptoir — sans attirer l’attention des Veilleurs.",
+          ContentFR = "La taverne la plus animée de Givrelac, fréquentée aussi bien par les nobles de la Vieille ville que par les vagabonds des taudis. Parmi eux se trouvent parfois des individus dangereux ; disputes et altercations y sont monnaie courante.\nCependant, grâce au tact et au talent diplomatique de Camilla, peu de ces tensions dégénèrent en véritables conflits.\nEn ce sens, <I>Les Asphodèles</> sont à la fois l’endroit le moins paisible — et paradoxalement le plus paisible — de toute la cité.\n\nOutre son activité de taverne, l’établissement sert également de centre d’intermédiation pour les Chasseurs de Phoxène. Clients et chasseurs y déposent ou y acceptent des missions, Camilla assurant le rôle d’intermédiaire neutre pour garantir paiement, sécurité et confidentialité.\n\nCertains prétendent que la taverne abriterait aussi des activités illicites, mais faute de preuves, ces propos demeurent au rang de rumeurs de comptoir — sans attirer l’attention des Veilleurs.",
           TextMapId = "WikiText_40500301"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "WikiText_40500401",
+    MaxKey = "voice_ch_char_Dafu_vo_battleidle",
+    Loader = function()
+      return {
         WikiText_40500401 = {
           ContentFR = "Profession née à Givrelac, proche des chasseurs de primes. À l’origine, ils vivaient de contrats visant à collecter le Phoxène, d’où leur nom : « Chasseur de Phoxène ».\n\nLorsque le commerce de Phoxène fut monopolisé par l’Empire et les grandes guildes marchandes, ce métier ne disparut pas : il se diversifia.\nAujourd’hui, les Chasseurs de Phoxène acceptent presque n’importe quelle tâche — des petites besognes quotidiennes jusqu’aux missions les plus périlleuses. Si la rémunération est suffisante, quelqu’un acceptera toujours de prendre le risque.\n\nIls se rassemblent généralement aux Asphodèles, où Camilla fait office d’agente intermédiaire.\nMétier dangereux mais accessible à tous, il attire de nombreux Charons grâce à ses gains élevés.\n\nParce qu’ils ne filtrent guère leurs clients, bien des Charons défavorisés se tournent vers eux lorsqu’ils ne peuvent obtenir l’aide des autorités.\nAinsi, les Chasseurs de Phoxène comblent en partie les défaillances du Bureau de la Sécurité, contribuant à maintenir un semblant de sécurité dans Givrelac.",
           TextMapId = "WikiText_40500401"
@@ -86587,7 +89742,7 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "voice_ch_char_Aote_vo_topic_05_1"
         },
         voice_ch_char_Aote_vo_topic_05_2 = {
-          ContentFR = "Mais... Peu importe, c’est tout toi, toujours {性别:prêt|prête} à aider les autres. Fais-moi signe si jamais tu as besoin d'argent.",
+          ContentFR = "Mais... Peu importe, c’est tout toi, toujours {性别:prêt|prête} à aider les autres. Fais-moi signe si jamais tu as besoin d’argent.",
           TextMapId = "voice_ch_char_Aote_vo_topic_05_2"
         },
         voice_ch_char_Aote_vo_topic_05_3 = {
@@ -86623,7 +89778,7 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "voice_ch_char_Baiheng_vo_appear"
         },
         voice_ch_char_Baiheng_vo_battleidle = {
-          ContentFR = "Je perçois des appels à l'aide au loin... Il faut y aller sans tarder.",
+          ContentFR = "Je perçois des appels à l’aide au loin... Il faut y aller sans tarder.",
           TextMapId = "voice_ch_char_Baiheng_vo_battleidle"
         },
         voice_ch_char_Baiheng_vo_battlestart = {
@@ -86643,7 +89798,7 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "voice_ch_char_Baiheng_vo_birthday"
         },
         voice_ch_char_Baiheng_vo_companio_01 = {
-          ContentFR = "Monsieur Randy, à mon humble avis, la léthargie et le laxisme ne sont pas moins des symptômes de maladie. Ils ne vous dérangent peut-être pas pour l'instant, mais ils sèment les graines de futurs maux. Peut-être pourrions-nous faire un peu d’entraînement physique ? Un peu d'exercice pourrait vous faire du bien.",
+          ContentFR = "Monsieur Randy, à mon humble avis, la léthargie et le laxisme ne sont pas moins des symptômes de maladie. Ils ne vous dérangent peut-être pas pour l’instant, mais ils sèment les graines de futurs maux. Peut-être pourrions-nous faire un peu d’entraînement physique ? Un peu d’exercice pourrait vous faire du bien.",
           TextMapId = "voice_ch_char_Baiheng_vo_companio_01"
         },
         voice_ch_char_Baiheng_vo_companio_02 = {
@@ -86735,7 +89890,7 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "voice_ch_char_Baiheng_vo_topic_03_1"
         },
         voice_ch_char_Baiheng_vo_topic_03_2 = {
-          ContentFR = "Sa mission est unique : guérir. Chaque médecin plante un abricotier en commençant sa formation. Cependant, au fil du temps, les intempéries ont emporté beaucoup d'entre eux. Aujourd’hui, il en reste moins de la moitié.",
+          ContentFR = "Sa mission est unique : guérir. Chaque médecin plante un abricotier en commençant sa formation. Cependant, au fil du temps, les intempéries ont emporté beaucoup d’entre eux. Aujourd’hui, il en reste moins de la moitié.",
           TextMapId = "voice_ch_char_Baiheng_vo_topic_03_2"
         },
         voice_ch_char_Baiheng_vo_topic_03_3 = {
@@ -86763,7 +89918,7 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "voice_ch_char_Baiheng_vo_victory"
         },
         voice_ch_char_Baiheng_vo_welcome = {
-          ContentFR = "L'environnement façonne l'esprit, et prendre soin de soi renforce le corps. Peut-être qu'une promenade sous ce ciel clément pourrait te faire du bien.",
+          ContentFR = "L’environnement façonne l’esprit, et prendre soin de soi renforce le corps. Peut-être qu’une promenade sous ce ciel clément pourrait te faire du bien.",
           TextMapId = "voice_ch_char_Baiheng_vo_welcome"
         },
         voice_ch_char_Baonu_vo_appear = {
@@ -86849,15 +90004,7 @@ Tirer sur les cibles pour marquer des points.
         voice_ch_char_Baonu_vo_skill02_r02 = {
           ContentFR = "Samaël, réponds à mon appel !",
           TextMapId = "voice_ch_char_Baonu_vo_skill02_r02"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Baonu_vo_skill02_r03",
-    MaxKey = "voice_ch_char_Kezhou_vo_topic_01_3",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Baonu_vo_skill02_r03 = {
           ContentFR = "Samaël, accorde-moi ta « colère » !",
           TextMapId = "voice_ch_char_Baonu_vo_skill02_r03"
@@ -86919,13 +90066,21 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "voice_ch_char_Baonu_vo_welcome"
         },
         voice_ch_char_Dafu_vo_appear = {
-          ContentFR = "Les fournitures d'urgence sont prêtes, je peux partir à tout moment.",
+          ContentFR = "Les fournitures d’urgence sont prêtes, je peux partir à tout moment.",
           TextMapId = "voice_ch_char_Dafu_vo_appear"
         },
         voice_ch_char_Dafu_vo_battleidle = {
           ContentFR = "Le cours de la bataille change vite, mais je fais confiance à votre jugement.",
           TextMapId = "voice_ch_char_Dafu_vo_battleidle"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Dafu_vo_battlestart",
+    MaxKey = "voice_ch_char_Kezhou_vo_battleidle",
+    Loader = function()
+      return {
         voice_ch_char_Dafu_vo_battlestart = {
           ContentFR = "Cette fois encore, rentrons tous sains et saufs.",
           TextMapId = "voice_ch_char_Dafu_vo_battlestart"
@@ -87231,7 +90386,7 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "voice_ch_char_Feina_vo_topic_02_4"
         },
         voice_ch_char_Feina_vo_topic_03_1 = {
-          ContentFR = "Oui... ! J'ai rêvé d’un rossignol, pur comme la neige immaculée, qui se posait sur ma main un instant, puis jouait à cache-cache avec moi l’instant d’après... Hmm, est-ce moi qui ai rêvé, ou est-ce lui qui a rêvé de moi, je me le demande ?",
+          ContentFR = "Oui... ! J’ai rêvé d’un rossignol, pur comme la neige immaculée, qui se posait sur ma main un instant, puis jouait à cache-cache avec moi l’instant d’après... Hmm, est-ce moi qui ai rêvé, ou est-ce lui qui a rêvé de moi, je me le demande ?",
           TextMapId = "voice_ch_char_Feina_vo_topic_03_1"
         },
         voice_ch_char_Feina_vo_topic_03_2 = {
@@ -87367,7 +90522,7 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "voice_ch_char_Haier_vo_topic_01_4"
         },
         voice_ch_char_Haier_vo_topic_02_1 = {
-          ContentFR = "Depuis la création de l'Empire, ma famille veille sur les pires détenus, rendant justice et supprimant les dangers.",
+          ContentFR = "Depuis la création de l’Empire, ma famille veille sur les pires détenus, rendant justice et supprimant les dangers.",
           TextMapId = "voice_ch_char_Haier_vo_topic_02_1"
         },
         voice_ch_char_Haier_vo_topic_02_2 = {
@@ -87387,7 +90542,7 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "voice_ch_char_Haier_vo_topic_03_2"
         },
         voice_ch_char_Haier_vo_topic_03_3 = {
-          ContentFR = "Certains chercheurs ont imaginé un monde sans crime. Si un tel jour venait à arriver, ma raison d'être disparaîtrait, car le mal nécessite l’existence d’une geôlière. D’ici là, je m’engage à maintenir l’ordre.",
+          ContentFR = "Certains chercheurs ont imaginé un monde sans crime. Si un tel jour venait à arriver, ma raison d’être disparaîtrait, car le mal nécessite l’existence d’une geôlière. D’ici là, je m’engage à maintenir l’ordre.",
           TextMapId = "voice_ch_char_Haier_vo_topic_03_3"
         },
         voice_ch_char_Haier_vo_topic_04_1 = {
@@ -87395,7 +90550,7 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "voice_ch_char_Haier_vo_topic_04_1"
         },
         voice_ch_char_Haier_vo_topic_04_2 = {
-          ContentFR = "Hmpf, tranché ? Je ne m’attendrais pas à ce {性别:qu’un enfant naïf|qu’une enfant naïve} comprenne. Nous ne vivons pas dans une utopie où les gens se tiennent simplement la main et s’aiment les uns les autres. Ce n'est que par le pouvoir absolu et l’ordre que la véritable justice peut être garantie !",
+          ContentFR = "Hmpf, tranché ? Je ne m’attendrais pas à ce {性别:qu’un enfant naïf|qu’une enfant naïve} comprenne. Nous ne vivons pas dans une utopie où les gens se tiennent simplement la main et s’aiment les uns les autres. Ce n’est que par le pouvoir absolu et l’ordre que la véritable justice peut être garantie !",
           TextMapId = "voice_ch_char_Haier_vo_topic_04_2"
         },
         voice_ch_char_Haier_vo_topic_05_1 = {
@@ -87562,6 +90717,162 @@ Tirer sur les cibles pour marquer des points.
           ContentFR = "Tu es de retour. Qu’est-ce que tu comptes faire aujourd’hui ? Te reposer à la maison, peut-être ?",
           TextMapId = "voice_ch_char_Heitao_vo_welcome"
         },
+        voice_ch_char_Kami_vo_appear = {
+          ContentFR = "Il est temps de remplir la cave des Asphodèles.",
+          TextMapId = "voice_ch_char_Kami_vo_appear"
+        },
+        voice_ch_char_Kami_vo_battleidle = {
+          ContentFR = "Le temps, c’est de l’argent. On se reposera quand cette affaire sera conclue.",
+          TextMapId = "voice_ch_char_Kami_vo_battleidle"
+        },
+        voice_ch_char_Kami_vo_battlestart = {
+          ContentFR = "Très bien. Je vais vous montrer... à ma manière, comment ce monde fonctionne vraiment.",
+          TextMapId = "voice_ch_char_Kami_vo_battlestart"
+        },
+        voice_ch_char_Kami_vo_be_hit_heavy_r01 = {
+          ContentFR = "Tu veux la jouer comme ça ?",
+          TextMapId = "voice_ch_char_Kami_vo_be_hit_heavy_r01"
+        },
+        voice_ch_char_Kami_vo_be_hit_heavy_r02 = {
+          ContentFR = "Merde !",
+          TextMapId = "voice_ch_char_Kami_vo_be_hit_heavy_r02"
+        },
+        voice_ch_char_Kami_vo_birthday = {
+          ContentFR = "Passe donc aux Asphodèles aujourd’hui. Nous t’y attendons. « Nous », tu demandes ? Les habitants de Givrelac que tu as aidés depuis que tu es devenu Chasseur de Phoxène, bien sûr. Aujourd’hui, c’est ton anniversaire. Tu es peut-être trop occupé pour t’en souvenir... mais eux ne l’ont pas oublié. \nAujourd’hui, toutes les boissons sont offertes. Bois autant que tu veux. Discute avec tout le monde. Et reste aussi longtemps que tu en as envie.",
+          TextMapId = "voice_ch_char_Kami_vo_birthday"
+        },
+        voice_ch_char_Kami_vo_companio_02 = {
+          ContentFR = "Chaque personne possède ses propres talents. Certains naissent avec le don d’apaiser les autres... comme toi. Tu es quelqu’un de bien.",
+          TextMapId = "voice_ch_char_Kami_vo_companio_02"
+        },
+        voice_ch_char_Kami_vo_companio_03 = {
+          ContentFR = "C’est rare que tu fasses tout ce chemin jusqu’à Givrelac. Alors dis-moi... tu viens chercher des produits rares de l’Empire ? Ou simplement assister au spectacle ?",
+          TextMapId = "voice_ch_char_Kami_vo_companio_03"
+        },
+        voice_ch_char_Kami_vo_companio_04 = {
+          ContentFR = "Cette cicatrice... tu as encore accepté une mission dangereuse ? Hah... J’ai de la pommade derrière le comptoir. Va en mettre. S’il t’arrivait quelque chose ici, ça nuirait à mon commerce. Alors ? Tu comptes rester planté là longtemps ? Ou tu attends que j’aille te la chercher moi-même ?",
+          TextMapId = "voice_ch_char_Kami_vo_companio_04"
+        },
+        voice_ch_char_Kami_vo_die_r01 = {
+          ContentFR = "Tout ça... pour rien...",
+          TextMapId = "voice_ch_char_Kami_vo_die_r01"
+        },
+        voice_ch_char_Kami_vo_die_r02 = {
+          ContentFR = "Encore une transaction avec la Mort.",
+          TextMapId = "voice_ch_char_Kami_vo_die_r02"
+        },
+        voice_ch_char_Kami_vo_fail = {
+          ContentFR = "La prochaine fois... la chance sera de mon côté.",
+          TextMapId = "voice_ch_char_Kami_vo_fail"
+        },
+        voice_ch_char_Kami_vo_gain = {
+          ContentFR = "Tu veux faire appel à la patronne des Asphodèles ? Il faudra payer une commission... conséquente. Bien sûr, l’argent n’est pas la seule monnaie que j’accepte. Mon instinct de marchande me dit que tu caches peut-être... des secrets bien plus précieux que quelques pièces.",
+          TextMapId = "voice_ch_char_Kami_vo_gain"
+        },
+        voice_ch_char_Kami_vo_idle = {
+          ContentFR = "Un bon alcool doit rester pur. Si on y mélange trop de saveurs, son arôme disparaît. Les êtres humains sont exactement pareils.",
+          TextMapId = "voice_ch_char_Kami_vo_idle"
+        },
+        voice_ch_char_Kami_vo_lvup = {
+          ContentFR = "Tu veux investir dans les Asphodèles ? Pas mal. Tu as un bon flair pour les affaires.",
+          TextMapId = "voice_ch_char_Kami_vo_lvup"
+        },
+        voice_ch_char_Kami_vo_revive = {
+          ContentFR = "Je me demande... qu’est-ce qui est pire ? L’enfer... ou une patrie qu’on ne peut plus rejoindre ?",
+          TextMapId = "voice_ch_char_Kami_vo_revive"
+        },
+        voice_ch_char_Kami_vo_skill01_r01 = {
+          ContentFR = "Alors, tu veux négocier ?",
+          TextMapId = "voice_ch_char_Kami_vo_skill01_r01"
+        },
+        voice_ch_char_Kami_vo_skill01_r02 = {
+          ContentFR = "Je ne te raccompagne pas.",
+          TextMapId = "voice_ch_char_Kami_vo_skill01_r02"
+        },
+        voice_ch_char_Kami_vo_skill02_r01 = {
+          ContentFR = "Le bar est fermé pour aujourd’hui.",
+          TextMapId = "voice_ch_char_Kami_vo_skill02_r01"
+        },
+        voice_ch_char_Kami_vo_skill02_r02 = {
+          ContentFR = "Tu as froid ? Laisse-moi te réchauffer.",
+          TextMapId = "voice_ch_char_Kami_vo_skill02_r02"
+        },
+        voice_ch_char_Kami_vo_skill02_r03 = {
+          ContentFR = "Le feu a la même couleur que le vin... regarde ce rouge magnifique.",
+          TextMapId = "voice_ch_char_Kami_vo_skill02_r03"
+        },
+        voice_ch_char_Kami_vo_topic_01_1 = {
+          ContentFR = "Des tonneaux ? À conserver du bon alcool, évidemment. Contes de Givrelac, frais et léger. Sang-de-Loup de la Légion, puissant et corsé. L’Ivresse du Dragon Azur, importée de Huaxu, clair et persistant. Et la Rhapsodie du Bal masqué... un mélange de dix saveurs. Chaque personne y goûte quelque chose de différent.",
+          TextMapId = "voice_ch_char_Kami_vo_topic_01_1"
+        },
+        voice_ch_char_Kami_vo_topic_01_2 = {
+          ContentFR = "Alors ? Tu en veux un verre ?",
+          TextMapId = "voice_ch_char_Kami_vo_topic_01_2"
+        },
+        voice_ch_char_Kami_vo_topic_01_3 = {
+          ContentFR = "Héhé. Tu es {性别:devenu bien plus perspicace. Rien à voir avec l’ignorant|devenue bien plus perspicace. Rien à voir avec l’ignorante} qui débarquait à Givrelac à ses débuts.",
+          TextMapId = "voice_ch_char_Kami_vo_topic_01_3"
+        },
+        voice_ch_char_Kami_vo_topic_01_4 = {
+          ContentFR = "À un peu plus de cent kilomètres au nord de Givrelac, en franchissant les Monts Vidofnir, on atteint les Fjords d’Askard. La véritable patrie des Charons, dit-on.",
+          TextMapId = "voice_ch_char_Kami_vo_topic_01_4"
+        },
+        voice_ch_char_Kami_vo_topic_01_5 = {
+          ContentFR = "Pour beaucoup de Charons de Givrelac... cent kilomètres et une montagne ne sont peut-être pas un obstacle insurmontable. La terre promise n’est peut-être pas si inaccessible... tu ne crois pas ?",
+          TextMapId = "voice_ch_char_Kami_vo_topic_01_5"
+        },
+        voice_ch_char_Kami_vo_topic_01_6 = {
+          ContentFR = "Chut. Je n’ai jamais rien dit de tel.",
+          TextMapId = "voice_ch_char_Kami_vo_topic_01_6"
+        },
+        voice_ch_char_Kami_vo_topic_02_1 = {
+          ContentFR = "Tu me flattes. Les Chasseurs de Phoxène existaient bien avant mon établissement. Ils ont simplement besoin d’un endroit pour discuter, fanfaronner et échanger leurs « affaires ». S’il n’y avait pas eu les Asphodèles, ça aurait été le Muguet... ou la Tulipe.",
+          TextMapId = "voice_ch_char_Kami_vo_topic_02_1"
+        },
+        voice_ch_char_Kami_vo_topic_02_2 = {
+          ContentFR = "Quant à savoir pourquoi ils ont fini par se réunir ici... rien de mystérieux. Un bon alcool. Un intermédiaire qui traite ses affaires équitablement. Et quelques petits coups de main quand quelqu’un traverse une mauvaise passe.",
+          TextMapId = "voice_ch_char_Kami_vo_topic_02_2"
+        },
+        voice_ch_char_Kami_vo_topic_03_1 = {
+          ContentFR = "Plutôt que de me poser la question, tu devrais te la poser à toi-même. Je me souviens très bien de ton arrivée à Givrelac. Tu n’avais nulle part où aller. Tu sais donc parfaitement que l’argent est la base pour survivre dans ce monde.",
+          TextMapId = "voice_ch_char_Kami_vo_topic_03_1"
+        },
+        voice_ch_char_Kami_vo_topic_03_2 = {
+          ContentFR = "Accumule assez de richesse... et même si tu ne peux pas changer d’origine, tu trouveras le courage d’affronter ton destin. Quand le vent et la pluie s’abattent sur toi, tu peux au moins t’offrir un verre pour te réchauffer... ou en partager une gorgée avec quelqu’un. Et gagner ainsi une faveur.",
+          TextMapId = "voice_ch_char_Kami_vo_topic_03_2"
+        },
+        voice_ch_char_Kami_vo_topic_03_3 = {
+          ContentFR = "Alors dis-moi... l’argent n’est-il pas important ?",
+          TextMapId = "voice_ch_char_Kami_vo_topic_03_3"
+        },
+        voice_ch_char_Kami_vo_topic_04_1 = {
+          ContentFR = "Pas grand-chose, malheureusement. Je vis à Givrelac depuis des années, et c’est la première fois que je voyais cette personne. Elle était entièrement enveloppée dans une cape, et utilisait un dispositif modifiant la voix. D’où elle venait... si c’était un homme ou une femme... son âge... Je n’en sais rien.",
+          TextMapId = "voice_ch_char_Kami_vo_topic_04_1"
+        },
+        voice_ch_char_Kami_vo_topic_04_2 = {
+          ContentFR = "La seule chose dont je sois certaine... c’est que sa puissance était insondable. Nous avons échangé quelques coups. Cela m’a suffi pour comprendre que je n’avais aucune chance de gagner.",
+          TextMapId = "voice_ch_char_Kami_vo_topic_04_2"
+        },
+        voice_ch_char_Kami_vo_topic_04_3 = {
+          ContentFR = "Héhé. Pour un marchand, la chose la plus importante est de savoir quelles cartes chacun tient en main. Bluffer n’a d’intérêt que lorsque les mises sont équivalentes. Je sais parfaitement évaluer ce genre de choses.",
+          TextMapId = "voice_ch_char_Kami_vo_topic_04_3"
+        },
+        voice_ch_char_Kami_vo_topic_04_4 = {
+          ContentFR = "Ah... j’y pense. Avant de partir, cette personne a dit une chose.",
+          TextMapId = "voice_ch_char_Kami_vo_topic_04_4"
+        },
+        voice_ch_char_Kami_vo_topic_04_5 = {
+          ContentFR = "Elle espère obtenir de toi... une réponse.",
+          TextMapId = "voice_ch_char_Kami_vo_topic_04_5"
+        },
+        voice_ch_char_Kami_vo_victory = {
+          ContentFR = "Marchandise livrée. Paiement reçu. Transaction conclue.",
+          TextMapId = "voice_ch_char_Kami_vo_victory"
+        },
+        voice_ch_char_Kami_vo_welcome = {
+          ContentFR = "Ce qui me tire du lit, c’est le commerce. Et toi, qu’est-ce qui te réveille le matin ?",
+          TextMapId = "voice_ch_char_Kami_vo_welcome"
+        },
         voice_ch_char_Kezhou_vo_appear = {
           ContentFR = "L’épée en main tue, celle du cœur apaise.",
           TextMapId = "voice_ch_char_Kezhou_vo_appear"
@@ -87569,7 +90880,15 @@ Tirer sur les cibles pour marquer des points.
         voice_ch_char_Kezhou_vo_battleidle = {
           ContentFR = "Je n’ai pas encore tout montré, on y retourne !",
           TextMapId = "voice_ch_char_Kezhou_vo_battleidle"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Kezhou_vo_battlestart",
+    MaxKey = "voice_ch_char_NanzhuLight_vo_revive",
+    Loader = function()
+      return {
         voice_ch_char_Kezhou_vo_battlestart = {
           ContentFR = "Même le lion se donne à fond pour attraper un lièvre.",
           TextMapId = "voice_ch_char_Kezhou_vo_battlestart"
@@ -87657,15 +90976,7 @@ Tirer sur les cibles pour marquer des points.
         voice_ch_char_Kezhou_vo_topic_01_3 = {
           ContentFR = "Pas pour moi. Mais lui disait toujours qu’une épée, ça se manie avec la tête autant qu’avec les bras. « Dissimuler sa force en feignant la faiblesse », « vaincre sans combattre », « submerger le petit nombre par le grand nombre »... Pour lui, c’était ça, la vraie maîtrise.",
           TextMapId = "voice_ch_char_Kezhou_vo_topic_01_3"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Kezhou_vo_topic_01_4",
-    MaxKey = "voice_ch_char_Nifu_vo_lvup",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Kezhou_vo_topic_01_4 = {
           ContentFR = "Quand j’étais gosse, il me jouait toujours le même numéro : il faisait semblant d’être rouillé, pas très doué. Il disait : « Si tu arrives à me foutre au sol, t’auras plus jamais besoin de t’entraîner. » J’ai passé un an à essayer... j’ai même pas effleuré sa manche.",
           TextMapId = "voice_ch_char_Kezhou_vo_topic_01_4"
@@ -87707,11 +91018,11 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "voice_ch_char_Kezhou_vo_topic_03_3"
         },
         voice_ch_char_Kezhou_vo_topic_04_1 = {
-          ContentFR = "C'est vrai. Maintenant que tu le dis, je peux t’en citer pas mal. Des « Roi Untel », « Seigneur Machin », ou des « Immortels Bidule ». Les animaux sont populaires comme surnoms : dragon, tigre, lion, grue... un vrai zoo !",
+          ContentFR = "C’est vrai. Maintenant que tu le dis, je peux t’en citer pas mal. Des « Roi Untel », « Seigneur Machin », ou des « Immortels Bidule ». Les animaux sont populaires comme surnoms : dragon, tigre, lion, grue... un vrai zoo !",
           TextMapId = "voice_ch_char_Kezhou_vo_topic_04_1"
         },
         voice_ch_char_Kezhou_vo_topic_04_2 = {
-          ContentFR = "Et tu sais comment ça marche ? Plus le surnom est long, moins le gars est doué. Quatre mots ? Un débutant. Trois ? Pas mal. Deux ? Quelqu’un avec qui il vaut mieux ne pas chercher des ennuis. Et ceux qui n'ont pas de surnom du tout ? Ce sont les véritables grands maîtres.",
+          ContentFR = "Et tu sais comment ça marche ? Plus le surnom est long, moins le gars est doué. Quatre mots ? Un débutant. Trois ? Pas mal. Deux ? Quelqu’un avec qui il vaut mieux ne pas chercher des ennuis. Et ceux qui n’ont pas de surnom du tout ? Ce sont les véritables grands maîtres.",
           TextMapId = "voice_ch_char_Kezhou_vo_topic_04_2"
         },
         voice_ch_char_Kezhou_vo_topic_04_3 = {
@@ -87859,7 +91170,7 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "voice_ch_char_Landi_vo_welcome"
         },
         voice_ch_char_Linen_vo_appear = {
-          ContentFR = "Qui est la cible aujourd'hui ?",
+          ContentFR = "Qui est la cible aujourd’hui ?",
           TextMapId = "voice_ch_char_Linen_vo_appear"
         },
         voice_ch_char_Linen_vo_battleidle = {
@@ -87887,7 +91198,7 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "voice_ch_char_Linen_vo_be_hit_r02"
         },
         voice_ch_char_Linen_vo_birthday = {
-          ContentFR = "Joyeux anniversaire. Je ne suis pas du genre à faire dans le sentimental, alors je te souhaite juste de ne jamais manquer d'argent. Et pour la mission d’aujourd’hui, je t’offre une ristourne de 20 %. C’est pas mal, non ?",
+          ContentFR = "Joyeux anniversaire. Je ne suis pas du genre à faire dans le sentimental, alors je te souhaite juste de ne jamais manquer d’argent. Et pour la mission d’aujourd’hui, je t’offre une ristourne de 20 %. C’est pas mal, non ?",
           TextMapId = "voice_ch_char_Linen_vo_birthday"
         },
         voice_ch_char_Linen_vo_companio_01 = {
@@ -87955,7 +91266,7 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "voice_ch_char_Linen_vo_topic_01_1"
         },
         voice_ch_char_Linen_vo_topic_01_2 = {
-          ContentFR = "Pff, qu’est-ce que tu veux que je sache ? C’est elle qui décide, moi je fais le boulot. C’est tout.",
+          ContentFR = "<I>Pff</>, qu’est-ce que tu veux que je sache ? C’est elle qui décide, moi je fais le boulot. C’est tout.",
           TextMapId = "voice_ch_char_Linen_vo_topic_01_2"
         },
         voice_ch_char_Linen_vo_topic_02_1 = {
@@ -88083,7 +91394,7 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "voice_ch_char_Lise_vo_topic_01_1"
         },
         voice_ch_char_Lise_vo_topic_01_2 = {
-          ContentFR = "En vérité, je ne connais qu’une seule chanson. Celle que ce proche m’a apprise. Je n’ai pas été très rapide à l’apprendre à l'époque... Peut-être parce que je n’ai jamais été doué pour les choses qui nécessitent une certaine expression émotionnelle...",
+          ContentFR = "En vérité, je ne connais qu’une seule chanson. Celle que ce proche m’a apprise. Je n’ai pas été très rapide à l’apprendre à l’époque... Peut-être parce que je n’ai jamais été doué pour les choses qui nécessitent une certaine expression émotionnelle...",
           TextMapId = "voice_ch_char_Lise_vo_topic_01_2"
         },
         voice_ch_char_Lise_vo_topic_01_3 = {
@@ -88239,7 +91550,7 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "voice_ch_char_Maer_vo_gain_2"
         },
         voice_ch_char_Maer_vo_idle = {
-          ContentFR = "Hmm, quel temps magnifique, parfait pour cueillir des fleurs et sentir bon après ! {nickname}, tu veux venir te balader avec moi ?",
+          ContentFR = "<I>Hmm</>, quel temps magnifique, parfait pour cueillir des fleurs et sentir bon après ! {nickname}, tu veux venir te balader avec moi ?",
           TextMapId = "voice_ch_char_Maer_vo_idle"
         },
         voice_ch_char_Maer_vo_lvup = {
@@ -88303,7 +91614,7 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "voice_ch_char_Maer_vo_topic_02_4"
         },
         voice_ch_char_Maer_vo_topic_03_1 = {
-          ContentFR = "Non, pas du tout ! J’adore Givrelac de tout mon cœur. C’est juste que je repense souvent aux jours où je parcourais les champs de neige avec mon père, c'est comme ça que j’ai grandi.",
+          ContentFR = "Non, pas du tout ! J’adore Givrelac de tout mon cœur. C’est juste que je repense souvent aux jours où je parcourais les champs de neige avec mon père, c’est comme ça que j’ai grandi.",
           TextMapId = "voice_ch_char_Maer_vo_topic_03_1"
         },
         voice_ch_char_Maer_vo_topic_03_2 = {
@@ -88377,7 +91688,15 @@ Tirer sur les cibles pour marquer des points.
         voice_ch_char_NanzhuLight_vo_revive = {
           ContentFR = "Était-ce... un cauchemar ?",
           TextMapId = "voice_ch_char_NanzhuLight_vo_revive"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_NanzhuLight_vo_skill01_r01",
+    MaxKey = "voice_ch_char_Suyi_vo_companio_01",
+    Loader = function()
+      return {
         voice_ch_char_NanzhuLight_vo_skill01_r01 = {
           ContentFR = "Disparais.",
           TextMapId = "voice_ch_char_NanzhuLight_vo_skill01_r01"
@@ -88465,15 +91784,7 @@ Tirer sur les cibles pour marquer des points.
         voice_ch_char_Nifu_vo_lvup = {
           ContentFR = "Telle la douce renaissance du printemps, où les herbes percent la terre et les branches s’ornent de bourgeons.",
           TextMapId = "voice_ch_char_Nifu_vo_lvup"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Nifu_vo_revive",
-    MaxKey = "voice_ch_char_Tuosi_vo_topic_02_1",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Nifu_vo_revive = {
           ContentFR = "Il semble que mon heure ne soit pas encore venue.",
           TextMapId = "voice_ch_char_Nifu_vo_revive"
@@ -88503,11 +91814,11 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "voice_ch_char_Nifu_vo_topic_01_1"
         },
         voice_ch_char_Nifu_vo_topic_01_2 = {
-          ContentFR = "Quand on a vu assez d’endroits, on réalise que les paysages sont semblables. Qu’il s'agisse des neiges du Nord, des sables de Khemet ou de la fumée qui s’échappe des cheminées de Huaxu, ce ne sont que différentes nuances de brume flottant à travers la forêt.",
+          ContentFR = "Quand on a vu assez d’endroits, on réalise que les paysages sont semblables. Qu’il s’agisse des neiges du Nord, des sables de Khemet ou de la fumée qui s’échappe des cheminées de Huaxu, ce ne sont que différentes nuances de brume flottant à travers la forêt.",
           TextMapId = "voice_ch_char_Nifu_vo_topic_01_2"
         },
         voice_ch_char_Nifu_vo_topic_01_3 = {
-          ContentFR = "Si je devais choisir... Ce serait les montagnes et les forêts d’Aethyrie. L’air qui y règne m'apporte la paix.",
+          ContentFR = "Si je devais choisir... Ce serait les montagnes et les forêts d’Aethyrie. L’air qui y règne m’apporte la paix.",
           TextMapId = "voice_ch_char_Nifu_vo_topic_01_3"
         },
         voice_ch_char_Nifu_vo_topic_01_4 = {
@@ -88731,7 +92042,7 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "voice_ch_char_Saiqi_vo_topic_02_1"
         },
         voice_ch_char_Saiqi_vo_topic_02_2 = {
-          ContentFR = "Probablement. On dit que « la magie est la source de tous les maux ». Les livres d'histoire affirment que nos ancêtres l’ont utilisée pour régner sur les Solariens il y a plus de mille ans, commettant des actes terribles.",
+          ContentFR = "Probablement. On dit que « la magie est la source de tous les maux ». Les livres d’histoire affirment que nos ancêtres l’ont utilisée pour régner sur les Solariens il y a plus de mille ans, commettant des actes terribles.",
           TextMapId = "voice_ch_char_Saiqi_vo_topic_02_2"
         },
         voice_ch_char_Saiqi_vo_topic_02_3 = {
@@ -88787,19 +92098,19 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "voice_ch_char_Saiqi_vo_welcome"
         },
         voice_ch_char_Shuimu01_vo_appear = {
-          ContentFR = "« Boum... boum... » Tu entends ? C’est mon cœur qui bat, chaque battement exprime mon manque pour toi.",
+          ContentFR = "Poch ... poch ... Hörst du das? Es ist mein Herzschlag. Jeder Schlag eine Silbe des Vermissens.",
           TextMapId = "voice_ch_char_Shuimu01_vo_appear"
         },
         voice_ch_char_Shuimu01_vo_battlestart = {
-          ContentFR = "Commençons par un petit pas de valse... un, et deux...",
+          ContentFR = "Sollen wir mit einem Walzer beginnen? Genau so ... eins, und zwei ...",
           TextMapId = "voice_ch_char_Shuimu01_vo_battlestart"
         },
         voice_ch_char_Shuimu01_vo_gain = {
-          ContentFR = "Avant l’aube, dansons ensemble, pour toujours, pour l’éternité... jusqu’à ce que j’embrasse tes lèvres pâles, jusqu’à ce que la mort nous sépare.",
+          ContentFR = "Bevor die Morgendämmerung anbricht, lass uns tanzen, für immer und ewig, bis ich deine blassen Lippen küsse, bis der Tod uns scheidet.",
           TextMapId = "voice_ch_char_Shuimu01_vo_gain"
         },
         voice_ch_char_Shuimu01_vo_skill02_r01 = {
-          ContentFR = "Que ce voile de sept couches, tel un saphir, se teigne de cramoisi.",
+          ContentFR = "Lasst uns den siebenfachen Saphirschleier mit Karmesin färben.",
           TextMapId = "voice_ch_char_Shuimu01_vo_skill02_r01"
         },
         voice_ch_char_Shuimu_vo_appear = {
@@ -88815,7 +92126,7 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "voice_ch_char_Shuimu_vo_battlestart"
         },
         voice_ch_char_Shuimu_vo_be_hit_heavy_r01 = {
-          ContentFR = "C'est vraiment cruel.",
+          ContentFR = "C’est vraiment cruel.",
           TextMapId = "voice_ch_char_Shuimu_vo_be_hit_heavy_r01"
         },
         voice_ch_char_Shuimu_vo_be_hit_heavy_r02 = {
@@ -88855,7 +92166,7 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "voice_ch_char_Shuimu_vo_die_r02"
         },
         voice_ch_char_Shuimu_vo_fail = {
-          ContentFR = "C’est trop triste... J'aurais vraiment besoin d'un peu de réconfort de ta part...",
+          ContentFR = "C’est trop triste... J’aurais vraiment besoin d’un peu de réconfort de ta part...",
           TextMapId = "voice_ch_char_Shuimu_vo_fail"
         },
         voice_ch_char_Shuimu_vo_gain = {
@@ -88891,7 +92202,7 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "voice_ch_char_Shuimu_vo_skill02_r02"
         },
         voice_ch_char_Shuimu_vo_skill02_r03 = {
-          ContentFR = "N'ayez crainte, car je vous enverrai au Pays de l'Amour.",
+          ContentFR = "N’ayez crainte, car je vous enverrai au Pays de l’Amour.",
           TextMapId = "voice_ch_char_Shuimu_vo_skill02_r03"
         },
         voice_ch_char_Shuimu_vo_topic_01_1 = {
@@ -88907,7 +92218,7 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "voice_ch_char_Shuimu_vo_topic_01_3"
         },
         voice_ch_char_Shuimu_vo_topic_02_1 = {
-          ContentFR = "Ah, tu t'engages dans une conversation sur l'amour avec moi, comme c'est inattendu.",
+          ContentFR = "Ah, tu t’engages dans une conversation sur l’amour avec moi, comme c’est inattendu.",
           TextMapId = "voice_ch_char_Shuimu_vo_topic_02_1"
         },
         voice_ch_char_Shuimu_vo_topic_02_2 = {
@@ -88935,11 +92246,11 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "voice_ch_char_Shuimu_vo_topic_03_4"
         },
         voice_ch_char_Shuimu_vo_topic_04_1 = {
-          ContentFR = "Je vais très bien. Mon venin fait partie de moi, comme un cadeau du Dieu de l'Amour, il est inoffensif pour moi et m’aidera à trouver l’amour de ma vie.",
+          ContentFR = "Je vais très bien. Mon venin fait partie de moi, comme un cadeau du Dieu de l’Amour, il est inoffensif pour moi et m’aidera à trouver l’amour de ma vie.",
           TextMapId = "voice_ch_char_Shuimu_vo_topic_04_1"
         },
         voice_ch_char_Shuimu_vo_topic_04_2 = {
-          ContentFR = "Bien sûr. Même si cela me fait souvent passer pour un monstre, cela me distingue également des autres. Je pense que le partenaire destiné à un monstre doit être quelqu'un de très spécial, tu ne crois pas ?",
+          ContentFR = "Bien sûr. Même si cela me fait souvent passer pour un monstre, cela me distingue également des autres. Je pense que le partenaire destiné à un monstre doit être quelqu’un de très spécial, tu ne crois pas ?",
           TextMapId = "voice_ch_char_Shuimu_vo_topic_04_2"
         },
         voice_ch_char_Shuimu_vo_topic_05_1 = {
@@ -89035,7 +92346,7 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "voice_ch_char_Songlu_vo_lvup"
         },
         voice_ch_char_Songlu_vo_revive = {
-          ContentFR = "La nourriture d'urgence est dégoûtante... Mais au moins, elle me remplit l'estomac.",
+          ContentFR = "La nourriture d’urgence est dégoûtante... Mais au moins, elle me remplit l’estomac.",
           TextMapId = "voice_ch_char_Songlu_vo_revive"
         },
         voice_ch_char_Songlu_vo_skill01_r01 = {
@@ -89079,7 +92390,7 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "voice_ch_char_Songlu_vo_topic_01_5"
         },
         voice_ch_char_Songlu_vo_topic_02_1 = {
-          ContentFR = "Bah, peut-être ? Je ne sais pas trop. Mais Filbert ne fonce que sur les vilains qui crient et se bagarrent ! Ils l'ont bien cherché !",
+          ContentFR = "Bah, peut-être ? Je ne sais pas trop. Mais Filbert ne fonce que sur les vilains qui crient et se bagarrent ! Ils l’ont bien cherché !",
           TextMapId = "voice_ch_char_Songlu_vo_topic_02_1"
         },
         voice_ch_char_Songlu_vo_topic_02_2 = {
@@ -89099,7 +92410,7 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "voice_ch_char_Songlu_vo_topic_03_1"
         },
         voice_ch_char_Songlu_vo_topic_03_2 = {
-          ContentFR = "T’en fais pas ! Filbert apporte toujours plus de nourriture. Alors ne te moque jamais d'elle, ça la blesserait, et moi aussi.",
+          ContentFR = "T’en fais pas ! Filbert apporte toujours plus de nourriture. Alors ne te moque jamais d’elle, ça la blesserait, et moi aussi.",
           TextMapId = "voice_ch_char_Songlu_vo_topic_03_2"
         },
         voice_ch_char_Songlu_vo_topic_04_1 = {
@@ -89107,7 +92418,7 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "voice_ch_char_Songlu_vo_topic_04_1"
         },
         voice_ch_char_Songlu_vo_topic_04_2 = {
-          ContentFR = "Parce que courir en robe, c’est pas pratique. Une fois, j'ai trébuché sur l'ourlet et tout le pain que je portais est tombé.",
+          ContentFR = "Parce que courir en robe, c’est pas pratique. Une fois, j’ai trébuché sur l’ourlet et tout le pain que je portais est tombé.",
           TextMapId = "voice_ch_char_Songlu_vo_topic_04_2"
         },
         voice_ch_char_Songlu_vo_topic_04_3 = {
@@ -89115,11 +92426,11 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "voice_ch_char_Songlu_vo_topic_04_3"
         },
         voice_ch_char_Songlu_vo_topic_05_1 = {
-          ContentFR = "Pas du tout ! Je médite. Je fais partie de l’Église Élyséenne, après tout, alors j'essaie de réfléchir profondément de temps en temps.",
+          ContentFR = "Pas du tout ! Je médite. Je fais partie de l’Église Élyséenne, après tout, alors j’essaie de réfléchir profondément de temps en temps.",
           TextMapId = "voice_ch_char_Songlu_vo_topic_05_1"
         },
         voice_ch_char_Songlu_vo_topic_05_2 = {
-          ContentFR = "Je me posais souvent la question, mais les prêtres disait que c'était... blasphématoire ou quelque chose comme ça. Alors j'ai arrêté d'y penser.",
+          ContentFR = "Je me posais souvent la question, mais les prêtres disait que c’était... blasphématoire ou quelque chose comme ça. Alors j’ai arrêté d’y penser.",
           TextMapId = "voice_ch_char_Songlu_vo_topic_05_2"
         },
         voice_ch_char_Songlu_vo_topic_05_3 = {
@@ -89133,6 +92444,230 @@ Tirer sur les cibles pour marquer des points.
         voice_ch_char_Songlu_vo_welcome = {
           ContentFR = "Le soleil brille fort, les nuages sont tout doux, et les petits oiseaux ont bien mangé. Est-ce que ton ventre fait aussi des petits bruits ? On va manger quelque chose ?",
           TextMapId = "voice_ch_char_Songlu_vo_welcome"
+        },
+        voice_ch_char_Suyi01_vo_appear = {
+          ContentFR = "Surveillant céleste Q7, prête à l’action.",
+          TextMapId = "voice_ch_char_Suyi01_vo_appear"
+        },
+        voice_ch_char_Suyi01_vo_battlestart = {
+          ContentFR = "Ceux qui cherchent à semer le trouble... je les chasserai.",
+          TextMapId = "voice_ch_char_Suyi01_vo_battlestart"
+        },
+        voice_ch_char_Suyi01_vo_gain = {
+          ContentFR = "Les oisillons ont besoin de temps pour que leurs ailes s’épanouissent, tout comme les habitants de Huaxu ont besoin des années pour sortir du berceau tissé par les divinités. Je guiderai cette longue croissance, jusqu’au jour où toutes les armes, y compris ce Surveillant céleste Q7, ne seront plus nécessaires.",
+          TextMapId = "voice_ch_char_Suyi01_vo_gain"
+        },
+        voice_ch_char_Suyi01_vo_skill02_r01 = {
+          ContentFR = "Que la maîtrise de tous mes arts se change en poussière d’étoiles !",
+          TextMapId = "voice_ch_char_Suyi01_vo_skill02_r01"
+        },
+        voice_ch_char_Suyi_vo_appear = {
+          ContentFR = "Comme on dit : mieux vaut demander de l’aide que lutter seul. Tu as bien fait de venir me voir !",
+          TextMapId = "voice_ch_char_Suyi_vo_appear"
+        },
+        voice_ch_char_Suyi_vo_battleidle = {
+          ContentFR = "Aucune menace immédiate... Fengshi n° 3, active le mode veille.",
+          TextMapId = "voice_ch_char_Suyi_vo_battleidle"
+        },
+        voice_ch_char_Suyi_vo_battlestart = {
+          ContentFR = "Fengshi n° 3, configuration défensive déployée. Début des tests.",
+          TextMapId = "voice_ch_char_Suyi_vo_battlestart"
+        },
+        voice_ch_char_Suyi_vo_be_hit_heavy_r01 = {
+          ContentFR = "Je n’ai rien perdu comme pièce... ?",
+          TextMapId = "voice_ch_char_Suyi_vo_be_hit_heavy_r01"
+        },
+        voice_ch_char_Suyi_vo_be_hit_heavy_r02 = {
+          ContentFR = "Mince !",
+          TextMapId = "voice_ch_char_Suyi_vo_be_hit_heavy_r02"
+        },
+        voice_ch_char_Suyi_vo_be_hit_r01 = {
+          ContentFR = "Ça ne fait même pas mal !",
+          TextMapId = "voice_ch_char_Suyi_vo_be_hit_r01"
+        },
+        voice_ch_char_Suyi_vo_be_hit_r02 = {
+          ContentFR = "Hmpf !",
+          TextMapId = "voice_ch_char_Suyi_vo_be_hit_r02"
+        },
+        voice_ch_char_Suyi_vo_birthday = {
+          ContentFR = "Ton cadeau est prêt depuis longtemps déjà. Joyeux anniversaire. Quoi ? Je ne m’y suis pas prise si tôt que ça... seulement trois mois à l’avance. Hum. Bref. Après quelques ajustements, Fengshi n° 3 peut maintenant transporter un passager. Alors... ça te dirait de venir voir le ciel avec moi ?",
+          TextMapId = "voice_ch_char_Suyi_vo_birthday"
+        },
+        voice_ch_char_Suyi_vo_companio_01 = {
+          ContentFR = "Les gens de Luca sont toujours aussi directs ? On vient à peine de commencer à discuter et tu veux déjà me prendre dans tes bras— N-Non ! Pas maintenant !",
+          TextMapId = "voice_ch_char_Suyi_vo_companio_01"
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Suyi_vo_companio_02",
+    MaxKey = "voice_ch_char_Yeer_vo_topic_02_2",
+    Loader = function()
+      return {
+        voice_ch_char_Suyi_vo_companio_02 = {
+          ContentFR = "Encore une nouvelle épée ?! Tu crois que le budget des Pics Extérieurs est illimité ? Non ! Même à genoux ça ne marchera pas ! Et m’appeler « grande-tante » ne changera rien ! Cette fois, je ne me laisserai pas convaincre !",
+          TextMapId = "voice_ch_char_Suyi_vo_companio_02"
+        },
+        voice_ch_char_Suyi_vo_companio_03 = {
+          ContentFR = "Tes ailes... elles sont magnifiques. Mais les miennes ne sont pas mal non plus. On fait la course ?",
+          TextMapId = "voice_ch_char_Suyi_vo_companio_03"
+        },
+        voice_ch_char_Suyi_vo_die_r01 = {
+          ContentFR = "Tante... pardon... je n’ai pas réussi...",
+          TextMapId = "voice_ch_char_Suyi_vo_die_r01"
+        },
+        voice_ch_char_Suyi_vo_die_r02 = {
+          ContentFR = "Un oiseau... doit retourner au ciel...",
+          TextMapId = "voice_ch_char_Suyi_vo_die_r02"
+        },
+        voice_ch_char_Suyi_vo_fail = {
+          ContentFR = "Puissance... modules... moteur... Où est l’erreur... ?",
+          TextMapId = "voice_ch_char_Suyi_vo_fail"
+        },
+        voice_ch_char_Suyi_vo_gain = {
+          ContentFR = "Les disciples de la Secte Jishu se serrent toujours les coudes. Si tu as des ennuis à Huaxu, appelle-moi. Je m’en occupe !",
+          TextMapId = "voice_ch_char_Suyi_vo_gain"
+        },
+        voice_ch_char_Suyi_vo_idle = {
+          ContentFR = "Tu sors {性别:tout seul ... ? Tu es sûr|toute seule... ? Tu es sûre} que ça ira sans moi ?",
+          TextMapId = "voice_ch_char_Suyi_vo_idle"
+        },
+        voice_ch_char_Suyi_vo_lvup = {
+          ContentFR = "Exactement. Je suis la partenaire idéale pour combattre à tes côtés.",
+          TextMapId = "voice_ch_char_Suyi_vo_lvup"
+        },
+        voice_ch_char_Suyi_vo_revive = {
+          ContentFR = "Ce n’est pas fini... Ne me sous-estime pas !",
+          TextMapId = "voice_ch_char_Suyi_vo_revive"
+        },
+        voice_ch_char_Suyi_vo_skill01_r01 = {
+          ContentFR = "Mode Poursuite du soleil activé.",
+          TextMapId = "voice_ch_char_Suyi_vo_skill01_r01"
+        },
+        voice_ch_char_Suyi_vo_skill01_r02 = {
+          ContentFR = "Équilibre... stable.",
+          TextMapId = "voice_ch_char_Suyi_vo_skill01_r02"
+        },
+        voice_ch_char_Suyi_vo_skill02_r01 = {
+          ContentFR = "Mode annihilation stellaire activé.",
+          TextMapId = "voice_ch_char_Suyi_vo_skill02_r01"
+        },
+        voice_ch_char_Suyi_vo_skill02_r02 = {
+          ContentFR = "Feu concentré !",
+          TextMapId = "voice_ch_char_Suyi_vo_skill02_r02"
+        },
+        voice_ch_char_Suyi_vo_skill02_r03 = {
+          ContentFR = "Collecte des données terminée. Il faut que je note ça...",
+          TextMapId = "voice_ch_char_Suyi_vo_skill02_r03"
+        },
+        voice_ch_char_Suyi_vo_skill02_r04 = {
+          ContentFR = "Bon travail, Fengshi n° 3.",
+          TextMapId = "voice_ch_char_Suyi_vo_skill02_r04"
+        },
+        voice_ch_char_Suyi_vo_skill02_r05 = {
+          ContentFR = "Ouah... voler comme ça, c’est génial !",
+          TextMapId = "voice_ch_char_Suyi_vo_skill02_r05"
+        },
+        voice_ch_char_Suyi_vo_topic_01_1 = {
+          ContentFR = "Assembler des mécanismes, polir des engrenages, chercher de nouveaux matériaux... et bricoler jusqu’à obtenir une version encore meilleure.",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_01_1"
+        },
+        voice_ch_char_Suyi_vo_topic_01_2 = {
+          ContentFR = "Tu te souviens quand Oncle Tang s’est cassé la jambe ? Comme j’avais un peu de temps, j’ai commencé à travailler sur une monture capable de décoller plus doucement. Les disciples de la Secte Jishu veulent toujours des résultats, quitte à y laisser leur peau... Je ne vais pas laisser cette mentalité continuer.",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_01_2"
+        },
+        voice_ch_char_Suyi_vo_topic_01_3 = {
+          ContentFR = "Me fatiguer ? Qu’est-ce qui pourrait être plus intéressant que ça ? Il suffit de démonter un mécanisme en composants dans sa tête... puis de le reconstruire dans la réalité. Le moment où tout s’assemble et fonctionne enfin... c’est le meilleur sentiment du monde !",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_01_3"
+        },
+        voice_ch_char_Suyi_vo_topic_01_4 = {
+          ContentFR = "Tu veux essayer aussi ? Le meilleur artisan de tous les Pics Extérieurs est justement libre pour t’apprendre.",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_01_4"
+        },
+        voice_ch_char_Suyi_vo_topic_02_1 = {
+          ContentFR = "Dans la Secte Jishu, comme chez les vagabonds, la lignée compte énormément. Par exemple, si un maître de quatre-vingt-dix ans prend un enfant de dix ans comme dernier disciple... la moitié de la secte devra ensuite appeler cet enfant « oncle ».",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_02_1"
+        },
+        voice_ch_char_Suyi_vo_topic_02_2 = {
+          ContentFR = "Moi, j’ai eu de la chance. Mon maître — enfin, ma tante — a un rang très élevé. Donc par extension, le mien l’est aussi.",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_02_2"
+        },
+        voice_ch_char_Suyi_vo_topic_02_3 = {
+          ContentFR = "Kezhou, lui, a moins de chance. Son maître Yan Shanting est plus bas dans la hiérarchie... Donc selon les règles, il doit m’appeler grande-tante~",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_02_3"
+        },
+        voice_ch_char_Suyi_vo_topic_02_4 = {
+          ContentFR = "Maître Gongshang a aussi un rang très élevé... Attends que je calcule... Oh ! On est de la même génération !",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_02_4"
+        },
+        voice_ch_char_Suyi_vo_topic_02_5 = {
+          ContentFR = "Héhé. Si Kezhou te manque de respect, tu peux exiger qu’il t’appelle {性别:grand-père|grand-mère}.",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_02_5"
+        },
+        voice_ch_char_Suyi_vo_topic_02_6 = {
+          ContentFR = "Attends... Je me souviens que Snow t’appelle son petit larbin... Ça veut dire qu’elle est ton maître ? ... Attends une seconde. Ne me dis pas que la personne la plus haut placée parmi nous est en réalité une toute petite Luno ?!",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_02_6"
+        },
+        voice_ch_char_Suyi_vo_topic_03_1 = {
+          ContentFR = "Oh, ça ? C’est Qingluan Type III, mon nouveau compagnon !",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_03_1"
+        },
+        voice_ch_char_Suyi_vo_topic_03_2 = {
+          ContentFR = "Regarde, on dirait presque une vraie mouette nuageuse, non ? J’ai simplifié la procédure d’activation. Il suffit d’appuyer sur le dessus de la tête pour activer le mode de vol mimétique. En parlant de vol—",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_03_2"
+        },
+        voice_ch_char_Suyi_vo_topic_03_3 = {
+          ContentFR = "Et ces plumes aussi, c’est tout un travail ! Je récupère les plumes naturellement tombées des mouettes nuageuses, puis je les scelle avec une technique hydrofuge améliorée. Ça n’ajoute presque aucun poids.",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_03_3"
+        },
+        voice_ch_char_Suyi_vo_topic_03_4 = {
+          ContentFR = "Les couleurs ne s’altèrent pas, il reste toujours tout doux... et au moins elle ne te lacère pas le bras comme un vrai oiseau. Tout le charme, sans les griffures. Le compagnon parfait.",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_03_4"
+        },
+        voice_ch_char_Suyi_vo_topic_03_5 = {
+          ContentFR = "Les mouettes nuageuses appartiennent au ciel. Si on en élève une, il faut la garder dans une cage. Et si je capturais un animal juste pour le regarder... En quoi serais-je différente de l’ancienne Secte Xuanheng ?",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_03_5"
+        },
+        voice_ch_char_Suyi_vo_topic_03_6 = {
+          ContentFR = "Certains animaux peuvent vivre aux côtés des humains. Mais les mouettes nuageuses n’en font clairement pas partie. Leur bec acéré, leur longue queue, leurs ailes faites pour fendre le vent... tout montre une chose. Elles appartiennent au ciel. Pas à la paume de quelqu’un.",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_03_6"
+        },
+        voice_ch_char_Suyi_vo_topic_04_1 = {
+          ContentFR = "Hmm... bonne question.",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_04_1"
+        },
+        voice_ch_char_Suyi_vo_topic_04_2 = {
+          ContentFR = "On s’est rassemblés parce qu’on partageait les mêmes difficultés. Et maintenant on lutte pour le même objectif. On se comprend. On se fait confiance. Au combat, on se couvre mutuellement... et quand on est fatigués, on avance ensemble. C’est... vraiment un endroit formidable.",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_04_2"
+        },
+        voice_ch_char_Suyi_vo_topic_04_3 = {
+          ContentFR = "Pour beaucoup ici, les Pics Extérieurs sont comme une maison.",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_04_3"
+        },
+        voice_ch_char_Suyi_vo_topic_04_4 = {
+          ContentFR = "Moi ? Euh... bien sûr que c’est chez moi !",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_04_4"
+        },
+        voice_ch_char_Suyi_vo_topic_04_5 = {
+          ContentFR = "Tu es vraiment perspicace. C’est l’instinct d’un Chasseur de Phoxène ? Et ça ne sert pas seulement au combat... tu arrives aussi à comprendre les gens. Si seulement mon système de navigation mécanique était aussi précis que toi...",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_04_5"
+        },
+        voice_ch_char_Suyi_vo_topic_04_6 = {
+          ContentFR = "Je suis juste... un peu perdue. À quoi ressemble vraiment un foyer ?",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_04_6"
+        },
+        voice_ch_char_Suyi_vo_topic_04_7 = {
+          ContentFR = "Alors... si on ne peut plus y retourner... est-ce que ça reste un foyer ? ... Désolée. Oublie ce que je viens de dire.",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_04_7"
+        },
+        voice_ch_char_Suyi_vo_victory = {
+          ContentFR = "Très bien. Test en conditions réelles réussi. Passons maintenant à l’analyse des données.",
+          TextMapId = "voice_ch_char_Suyi_vo_victory"
+        },
+        voice_ch_char_Suyi_vo_welcome = {
+          ContentFR = "Ah, te voilà ! Tu viens voir la nouvelle modification du Qingluan Type II, pas vrai ? Regarde ça— Hein ? Tu voulais juste discuter ?",
+          TextMapId = "voice_ch_char_Suyi_vo_welcome"
         },
         voice_ch_char_Tuosi02_attack_r01 = {
           ContentFR = "Entendez leurs hurlements !",
@@ -89273,15 +92808,7 @@ Tirer sur les cibles pour marquer des points.
         voice_ch_char_Tuosi_vo_topic_02_1 = {
           ContentFR = "Pourquoi ? La vie de Parsifal est finie. Ce nom est un écho lointain, si lointain que je doute qu’il ait jamais été mien.",
           TextMapId = "voice_ch_char_Tuosi_vo_topic_02_1"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Tuosi_vo_topic_02_2",
-    MaxKey = "voice_ch_char_Zhiliu01_vo_battlestart",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Tuosi_vo_topic_02_2 = {
           ContentFR = "... Vraiment ?",
           TextMapId = "voice_ch_char_Tuosi_vo_topic_02_2"
@@ -89339,7 +92866,7 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "voice_ch_char_Tuosi_vo_topic_05_3"
         },
         voice_ch_char_Tuosi_vo_topic_05_4 = {
-          ContentFR = "Et c'est ainsi que se dresse notre Théâtre Galea, pris entre ces deux mondes, entendant tout mais ne comprenant rien.",
+          ContentFR = "Et c’est ainsi que se dresse notre Théâtre Galea, pris entre ces deux mondes, entendant tout mais ne comprenant rien.",
           TextMapId = "voice_ch_char_Tuosi_vo_topic_05_4"
         },
         voice_ch_char_Tuosi_vo_topic_05_5 = {
@@ -89383,7 +92910,7 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "voice_ch_char_Xibi_vo_be_hit_heavy_r02"
         },
         voice_ch_char_Xibi_vo_birthday = {
-          ContentFR = "Qu'est-ce que tu attends ? Tu espérais un gâteau ? Rêve toujours. Mais à notre prochaine rencontre, je te laisserai peut-être une ouverture...",
+          ContentFR = "Qu’est-ce que tu attends ? Tu espérais un gâteau ? Rêve toujours. Mais à notre prochaine rencontre, je te laisserai peut-être une ouverture...",
           TextMapId = "voice_ch_char_Xibi_vo_birthday"
         },
         voice_ch_char_Xibi_vo_companio_01 = {
@@ -89431,7 +92958,7 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "voice_ch_char_Xibi_vo_lvup"
         },
         voice_ch_char_Xibi_vo_revive = {
-          ContentFR = "L'enfer n'est pas si terrible. J'y suis déjà allé.",
+          ContentFR = "L’enfer n’est pas si terrible. J’y suis déjà allé.",
           TextMapId = "voice_ch_char_Xibi_vo_revive"
         },
         voice_ch_char_Xibi_vo_skill01_r01 = {
@@ -89571,7 +93098,7 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "voice_ch_char_Xier_vo_skill01_r01"
         },
         voice_ch_char_Xier_vo_skill01_r02 = {
-          ContentFR = "Pff.",
+          ContentFR = "<I>Pff.</>",
           TextMapId = "voice_ch_char_Xier_vo_skill01_r02"
         },
         voice_ch_char_Xier_vo_skill02_r01 = {
@@ -89655,7 +93182,7 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "voice_ch_char_Xier_vo_victory_r01"
         },
         voice_ch_char_Xier_vo_victory_r02 = {
-          ContentFR = "Nettoyage terminé ! C'est l'heure de préparer le repas.",
+          ContentFR = "Nettoyage terminé ! C’est l’heure de préparer le repas.",
           TextMapId = "voice_ch_char_Xier_vo_victory_r02"
         },
         voice_ch_char_Xier_vo_victory_r03 = {
@@ -89779,7 +93306,15 @@ Oliver : Pff. Encore une pauvre victime.]],
         voice_ch_char_Yeer_vo_topic_02_2 = {
           ContentFR = "Les P’tits Boum, c’est ce qu’on vend le plus chez Crac’n’Pop... et c’est super long à fabriquer...",
           TextMapId = "voice_ch_char_Yeer_vo_topic_02_2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Yeer_vo_topic_02_3",
+    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
+    Loader = function()
+      return {
         voice_ch_char_Yeer_vo_topic_02_3 = {
           ContentFR = "Yale : M-Mais c’est pas parce que je suis doué... C’est grâce à Oliver, il connaît tout par cœur.",
           TextMapId = "voice_ch_char_Yeer_vo_topic_02_3"
@@ -89917,7 +93452,7 @@ Oliver : Pff. Encore une pauvre victime.]],
           TextMapId = "voice_ch_char_Yuming_vo_topic_03_1"
         },
         voice_ch_char_Yuming_vo_topic_03_2 = {
-          ContentFR = "Je te remercie de ta sollicitude, mais je ne voudrais pas accabler quelqu'un d’autre avec mes malheurs. Ce n’est pas nécessaire.",
+          ContentFR = "Je te remercie de ta sollicitude, mais je ne voudrais pas accabler quelqu’un d’autre avec mes malheurs. Ce n’est pas nécessaire.",
           TextMapId = "voice_ch_char_Yuming_vo_topic_03_2"
         },
         voice_ch_char_Yuming_vo_topic_04_1 = {
@@ -89965,7 +93500,7 @@ Oliver : Pff. Encore une pauvre victime.]],
           TextMapId = "voice_ch_char_Zhangyu_vo_companio_01"
         },
         voice_ch_char_Zhangyu_vo_companio_02 = {
-          ContentFR = "C’est pour moi ? Hmm... t’as une tête louche, toi... Oh non, ce parfum... j’ai la tête qui tourne, et mes tentacules picotent ! T’es vraiment trop suspecte !",
+          ContentFR = "C’est pour moi ? <I>Hmm...</> t’as une tête louche, toi... Oh non, ce parfum... j’ai la tête qui tourne, et mes tentacules picotent ! T’es vraiment trop suspecte !",
           TextMapId = "voice_ch_char_Zhangyu_vo_companio_02"
         },
         voice_ch_char_Zhangyu_vo_companio_03 = {
@@ -90029,7 +93564,7 @@ Oliver : Pff. Encore une pauvre victime.]],
           TextMapId = "voice_ch_char_Zhangyu_vo_topic_01_2"
         },
         voice_ch_char_Zhangyu_vo_topic_01_3 = {
-          ContentFR = "Tu es en colère ? Hihihi, cette grimace sur ton visage me donne encore plus envie de t'imiter !",
+          ContentFR = "Tu es en colère ? Hihihi, cette grimace sur ton visage me donne encore plus envie de t’imiter !",
           TextMapId = "voice_ch_char_Zhangyu_vo_topic_01_3"
         },
         voice_ch_char_Zhangyu_vo_topic_02_1 = {
@@ -90083,15 +93618,7 @@ Oliver : Pff. Encore une pauvre victime.]],
         voice_ch_char_Zhiliu01_vo_battlestart = {
           ContentFR = "Hmm... J’ai consulté les augures : avant que ce vin tiède ne refroidisse, tout sera réglé.",
           TextMapId = "voice_ch_char_Zhiliu01_vo_battlestart"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Zhiliu01_vo_gain",
-    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Zhiliu01_vo_gain = {
           ContentFR = "Quoi ? Cela t’étonne tant ? Même en tant que Haut Chancelier de Longyuan, je dois revêtir un habit digne de ces banquets privés. La nuit ne fait que commencer... autant t’y accoutumer dès maintenant.",
           TextMapId = "voice_ch_char_Zhiliu01_vo_gain"
@@ -90197,7 +93724,7 @@ Oliver : Pff. Encore une pauvre victime.]],
           TextMapId = "voice_ch_char_Zhiliu_vo_topic_01_1"
         },
         voice_ch_char_Zhiliu_vo_topic_01_2 = {
-          ContentFR = "Exactement. La tienne, la mienne, ou celle de milliers d'autres... face à des enjeux plus grands, elles ne sont que des jetons à miser.",
+          ContentFR = "Exactement. La tienne, la mienne, ou celle de milliers d’autres... face à des enjeux plus grands, elles ne sont que des jetons à miser.",
           TextMapId = "voice_ch_char_Zhiliu_vo_topic_01_2"
         },
         voice_ch_char_Zhiliu_vo_topic_01_3 = {

@@ -1,19 +1,21 @@
 local Component = {}
 
-function Component:UpdataAttrListView(Attrs, ComparedAttrs, bAnim)
+function Component:UpdataAttrListView(Attrs, ComparedAttrs, bAnim, bShowAll)
   self.List_Atrr:ClearListItems()
   local Idx = 1
   for i, Attr in ipairs(Attrs) do
     if ComparedAttrs and not table.isempty(ComparedAttrs) then
-      if Attr.AttrValue ~= ComparedAttrs[i].AttrValue then
+      if Attr.AttrValue ~= ComparedAttrs[i].AttrValue or bShowAll then
         local Obj = NewObject(UIUtils.GetCommonItemContentClass())
         Obj.Name = GText(Attr.AttrName)
         Obj.Value = Attr.AttrValue or 0
-        Obj.CmpValue = ComparedAttrs[i].AttrValue or Attr.AttrValue
         Obj.Idx = Idx
-        Obj.Delta = ComparedAttrs[i].Delta
         Obj.Style = Attr.Style or "ShowValue"
-        Obj.CalcColorType = ComparedAttrs[i].CalcColorType
+        if Attr.AttrValue ~= ComparedAttrs[i].AttrValue then
+          Obj.CmpValue = ComparedAttrs[i].AttrValue or Attr.AttrValue
+          Obj.Delta = ComparedAttrs[i].Delta
+          Obj.CalcColorType = ComparedAttrs[i].CalcColorType
+        end
         self.List_Atrr:AddItem(Obj)
         Idx = Idx + 1
       end

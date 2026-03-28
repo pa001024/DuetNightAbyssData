@@ -174,7 +174,7 @@ function HeroUSDKSubSystem_C:UploadTrackLog_Lua(EventName, Properties)
   end
 end
 
-function HeroUSDKSubSystem_C:TryToGoToLoginScene(bAnti, KickOffType)
+function HeroUSDKSubSystem_C:TryToGoToLoginScene(bAnti, KickOffType, bHasNecessoryPatch)
   print("TryToGoToLogin")
   if self.bSwitchAccount then
     DebugPrint("USDK TryToGoToLoginScene return because switch account")
@@ -236,7 +236,7 @@ function HeroUSDKSubSystem_C:TryToGoToLoginScene(bAnti, KickOffType)
         end
       end
     end
-    WorldTravelSubsystem():ChangeSceneByAssetPath(Const.DefaultLoginSceneFile)
+    WorldTravelSubsystem():ChangeSceneByAssetPath(bHasNecessoryPatch and Const.DefaultOptionalPatchSceneFile or Const.DefaultLoginSceneFile)
   end
   
   if bAnti and not bIsBilibili then

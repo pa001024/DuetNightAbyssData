@@ -52,10 +52,7 @@ function M:OnCreatOnlineAction(UniqueId)
     DebugPrint("角色已停止联机动作")
     return false
   end
-  if not OnlineActionCommon.UseSyncNearbyPlayers then
-    DebugPrint("关闭多线程查找附近玩家，在Lua层寻找")
-    OnlineActionModel:FindPlayerAroundOld()
-  else
+  if OnlineActionCommon.UseSyncNearbyPlayers then
     local Sync = UE4.URegionSyncSubsystem.GetInstance(GWorld.GameInstance)
     if Sync then
       Sync:StartNearbyQuery()

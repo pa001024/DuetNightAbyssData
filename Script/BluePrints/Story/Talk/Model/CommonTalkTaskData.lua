@@ -63,6 +63,45 @@ local function AddExternTalkactors(TalkNodeData, ExternTalkActors, bUseExternAct
   TalkNodeData.TalkActors = TalkActors
 end
 
+local function AddLevelSequenceTalkActors(TalkNodeData)
+  local Tags = UE4.TArray(UE4.FName)
+  UTalkSequenceFunctionLibrary.GetLevelSequenceTags(TalkNodeData.Sequence, Tags)
+  local LevelSequenceActorDatas = {}
+  Tags = Tags:ToTable()
+  for _, Tag in pairs(Tags) do
+    local Id = tonumber(Tag)
+    if Id then
+      local DefaultPos
+      local Type = "Npc"
+      if 0 == Id then
+        Type = "Player"
+      else
+        DefaultPos = UE4.FVector(0, 0, 0)
+      end
+      table.insert(LevelSequenceActorDatas, {
+        TalkActorId = Id,
+        TalkActorType = Type,
+        TalkActorVisible = true,
+        DefaultPos = DefaultPos
+      })
+    end
+  end
+  local NewActorDatas = {}
+  local NativeTalkActorIds = {}
+  if TalkNodeData.TalkActors then
+    for _, TalkActor in pairs(TalkNodeData.TalkActors) do
+      NativeTalkActorIds[TalkActor.TalkActorId] = true
+      table.insert(NewActorDatas, TalkActor)
+    end
+  end
+  for _, ActorData in pairs(LevelSequenceActorDatas) do
+    if not NativeTalkActorIds[ActorData.TalkActorId] then
+      table.insert(NewActorDatas, ActorData)
+    end
+  end
+  TalkNodeData.TalkActors = NewActorDatas
+end
+
 local CommonTalkTaskData_C = {}
 
 function CommonTalkTaskData_C.New(TalkNodeData)
@@ -107,8 +146,8 @@ function CommonTalkTaskData_C.New(TalkNodeData)
   if TalkNodeData.CameraLookAtTartgetPoint and TalkNodeData.CameraLookAtTartgetPoint ~= "" then
     Obj.CameraLookAtTartgetPoint = TalkNodeData.CameraLookAtTartgetPoint
   end
-  Obj.Player = UE.UGameplayStatics.GetPlayerCharacter(Obj.TalkContext, 0)
-  Obj.PlayerController = UE.UGameplayStatics.GetPlayerController(Obj.TalkContext, 0)
+  Obj.Player = UE4.UGameplayStatics.GetPlayerCharacter(Obj.TalkContext, 0)
+  Obj.PlayerController = UE4.UGameplayStatics.GetPlayerController(Obj.TalkContext, 0)
   Obj.ChapterId = 1001
   Obj.bEnableRandomOption = TalkNodeData.EnableRandomOption
   Obj.OptionData = TalkOptionData_C.New(TalkNodeData.OptionType, TalkNodeData)
@@ -139,7 +178,7 @@ function CommonTalkTaskData_C.New(TalkNodeData)
     local Sequence = GetSequence(Obj.SequencePath)
     if not Sequence then
       local Message = "找不到Sequence资源" .. "\nSequence路径:" .. Obj.SequencePath .. "\n对话节点:" .. tostring(TalkNodeData.Name)
-      UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, UE.EStoryLogType.Talk, "Seqeuence资源缺失/配置错误", Message)
+      UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, UE4.EStoryLogType.Talk, "Seqeuence资源缺失/配置错误", Message)
     else
       UE4.UMovieSceneSequenceExtensions.SetClockSource(Sequence, UE4.EUpdateClockSource.Platform)
       SequenceActor:SetSequence(Sequence)
@@ -157,7 +196,7 @@ function CommonTalkTaskData_C.New(TalkNodeData)
     end
     if not FlowAsset then
       local Message = "找不到DialogueAsset资源" .. "\nSequence路径:" .. TalkNodeData.FlowAssetPath .. "\n对话节点:" .. tostring(TalkNodeData.Name)
-      UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, UE.EStoryLogType.TalkFlow, "DialogueAsset资源缺失/配置错误", Message)
+      UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, UE4.EStoryLogType.TalkFlow, "DialogueAsset资源缺失/配置错误", Message)
     elseif TS then
       Obj.FlowAsset = TS:CreateFlowTalkTask(TalkNodeData.FlowAssetPath, UE4.LoadObject(TalkNodeData.FlowAssetPath))
       Obj.FirstDialogueId = Obj.FlowAsset:GetFirstDialogueId()
@@ -168,6 +207,9 @@ function CommonTalkTaskData_C.New(TalkNodeData)
   if Obj.BasicTalkType == "Black" then
     Obj.BlendInType = "FadeIn"
     Obj.BlendOutType = "FadeOut"
+  end
+  if Obj.BasicTalkType == "Cinematic" then
+    AddLevelSequenceTalkActors(Obj)
   end
   if TalkNodeData.TalkType == "White" then
     Obj.ScreenEffectDurationSeconds = 0

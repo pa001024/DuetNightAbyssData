@@ -38,7 +38,7 @@ end
 
 function CommonUtils.BinaryDump(Prop)
   if nil == Prop then
-    return "nil"
+    return nil
   end
   if type(Prop) == "table" and Prop.binary_dump then
     return Prop:binary_dump(Prop)

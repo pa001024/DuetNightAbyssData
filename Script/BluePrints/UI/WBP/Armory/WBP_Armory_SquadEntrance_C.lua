@@ -27,6 +27,7 @@ function WBP_Build_SquadEntrance_C:Construct()
 end
 
 function WBP_Build_SquadEntrance_C:InitUI()
+  self.Text_Build:SetText(GText("UI_Squad"))
   if self.CurInputDeviceType == ECommonInputType.Gamepad then
     local KeyInfo = {
       KeyInfoList = {
@@ -35,10 +36,9 @@ function WBP_Build_SquadEntrance_C:InitUI()
     }
     self.Key_Controller:CreateCommonKey(KeyInfo)
     self.Key_Controller:SetVisibility(ESlateVisibility.Visible)
-    return
+  elseif self.Key_Controller then
+    self.Key_Controller:SetVisibility(ESlateVisibility.Collapsed)
   end
-  self.Key_Controller:SetVisibility(ESlateVisibility.Collapsed)
-  self.Text_Build:SetText(GText("UI_Squad"))
 end
 
 function WBP_Build_SquadEntrance_C:EnterSquadMainUI()

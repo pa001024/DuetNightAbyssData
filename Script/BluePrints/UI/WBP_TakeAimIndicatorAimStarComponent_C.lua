@@ -81,7 +81,7 @@ function Component:GetAimNeedChangeState(SourceActor, TargetActor)
   end
   local HideTags = TargetActor.HideTags
   local IsInvisible = false
-  if HideTags and HideTags:Length() > 0 then
+  if HideTags and (HideTags.Length and HideTags:Length() > 0 or type(HideTags) == "table" and not IsEmptyTable(HideTags)) then
     IsInvisible = true
   end
   local SceneMgrComponent = GWorld.GameInstance:GetSceneManager()

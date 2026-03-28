@@ -264,11 +264,11 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
 end
 
 function M:PCToGamepad()
-  self.Controller:SetVisibility(UE.ESlateVisibility.Visible)
+  self.Controller:SetVisibility(UE4.ESlateVisibility.Visible)
 end
 
 function M:GamepadToPC()
-  self.Controller:SetVisibility(UE.ESlateVisibility.Collapsed)
+  self.Controller:SetVisibility(UE4.ESlateVisibility.Collapsed)
 end
 
 function M:HandleKeyDownOnGamePad(InKeyName)

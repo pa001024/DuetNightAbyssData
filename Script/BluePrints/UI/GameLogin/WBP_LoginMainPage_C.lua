@@ -117,6 +117,9 @@ function WBP_GameStartMainPage_C:Construct()
   self.Common_Button_ContinueDownload:BindEventOnClicked(self, self.ResumeDownload)
   self.HB_ContinueDownload:SetVisibility(ESlateVisibility.Collapsed)
   self.HB_StopDownload:SetVisibility(ESlateVisibility.Collapsed)
+  self.Text_ResDownload:SetText(GText("UI_Patch_Manage"))
+  self.Common_Button_ResDownload:BindEventOnClicked(self, self.OnClickResDownload)
+  self:InitResDownloadVisibility()
   self.Text_Login:SetText(GText("UI_LOGIN"))
   self.EditableText_Account:SetHintText(GText("UI_LOGIN_ACCOUNT"))
   self.Text_ServerLoactionTitle:SetText(GText("UI_Server_Current"))
@@ -1264,6 +1267,28 @@ function WBP_GameStartMainPage_C:OnClickAgreeProtocol()
   end
 end
 
+function WBP_GameStartMainPage_C:InitResDownloadVisibility()
+  local HotUpdateSubsystem = USubsystemBlueprintLibrary.GetGameInstanceSubsystem(self, UHotUpdateSubsystem)
+  if HotUpdateSubsystem:IsAllDownloadingAssetsHavePakOptionalSign() then
+    self.HB_ResDownload:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  else
+    self.HB_ResDownload:SetVisibility(ESlateVisibility.Collapsed)
+  end
+end
+
+function WBP_GameStartMainPage_C:OnClickResDownload()
+  if not self.bShowPauseUI then
+    local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+    if GameMode then
+      GameMode:ReDownloadAssets()
+    end
+  end
+  local HotUpdateSubsystem = USubsystemBlueprintLibrary.GetGameInstanceSubsystem(self, UHotUpdateSubsystem)
+  if HotUpdateSubsystem then
+    HotUpdateSubsystem:JumpToOptionalDownloadLevel(Const.DefaultOptionalPatchSceneFile)
+  end
+end
+
 function WBP_GameStartMainPage_C:OnClickSet()
   AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", nil, nil)
   UIManager(self):LoadUINew("Setting", true, self)
@@ -1423,6 +1448,7 @@ function WBP_GameStartMainPage_C:OnAssetStartDownload(TotalBytes, DownloadedByte
       self.MediaPlayer:Pause()
       self.WidgetSwitcher_Bg:SetActiveWidgetIndex(1)
     end
+    self:InitResDownloadVisibility()
     self.RealPatchFinish = false
   end
   self.bStartedPatch = true
@@ -1724,6 +1750,47 @@ function WBP_GameStartMainPage_C:ShowOptionPatchPopUI(OptionalAssetsSize, TotalS
   end)
 end
 
+function WBP_GameStartMainPage_C:ShowPatchResourcePopUI(BaseSize, TotalSize)
+  local function FormatSize(Value)
+    local val, unit
+    
+    local v = Value or 0
+    if v >= 1073741824 then
+      val = v / 1073741824
+      unit = "GB"
+    elseif v >= 1048576 then
+      val = v / 1048576
+      unit = "MB"
+    else
+      val = v / 1024
+      unit = "KB"
+    end
+    return string.format("%.2f%s", val, unit)
+  end
+  
+  local Params = {}
+  
+  function Params.CloseBtnCallbackFunction()
+    local GameMode = UGameplayStatics.GetGameMode(self)
+    GameMode:EnsureDonwloadOptionAssets(true)
+  end
+  
+  function Params.LeftCallbackFunction()
+    local GameMode = UGameplayStatics.GetGameMode(self)
+    GameMode:EnsureDownloadWithPatchResourcePending()
+  end
+  
+  function Params.RightCallbackFunction()
+    local GameMode = UGameplayStatics.GetGameMode(self)
+    GameMode:EnsureDonwloadOptionAssets(true)
+  end
+  
+  Params.NoButtonText = GText("UI_Patch_Download_Complete") .. "(" .. FormatSize(TotalSize) .. ")"
+  Params.YesButtonText = GText("UI_Patch_Download_Quick") .. "(" .. FormatSize(BaseSize) .. ")"
+  local UIManager = GWorld.GameInstance:GetGameUIManager()
+  UIManager:ShowCommonPopupUI(100329, Params, self)
+end
+
 function WBP_GameStartMainPage_C:ShowDownloadBasepakUI(bLargeVersion)
   self:ShowPatchPopUI_ForceUpdate(bLargeVersion and 100020 or 100031, function()
     local NewGMHyperLink = GWorld.GameInstance.GMHyperLink
@@ -1731,7 +1798,9 @@ function WBP_GameStartMainPage_C:ShowDownloadBasepakUI(bLargeVersion)
     DebugPrint("1 ShowDownloadBasepakUI NewGMHyperLink:", NewGMHyperLink)
     if NewGMHyperLink and "" ~= NewGMHyperLink then
       DebugPrint("1 ShowDownloadBasepakUI launch NewGMHyperLink and quit game")
-      UE4.UKismetSystemLibrary.LaunchURL(NewGMHyperLink)
+      if not bLargeVersion then
+        UE4.UKismetSystemLibrary.LaunchURL(NewGMHyperLink)
+      end
       if "Android" ~= PlatformName then
         self:ForceQuitGame()
       end
@@ -1766,7 +1835,9 @@ function WBP_GameStartMainPage_C:ShowDownloadBasepakUI(bLargeVersion)
     DebugPrint("2 ShowDownloadBasepakUI NewGMHyperLink:", NewGMHyperLink)
     if NewGMHyperLink then
       DebugPrint("2 ShowDownloadBasepakUI launch NewGMHyperLink and quit game")
-      UE4.UKismetSystemLibrary.LaunchURL(NewGMHyperLink)
+      if not bLargeVersion then
+        UE4.UKismetSystemLibrary.LaunchURL(NewGMHyperLink)
+      end
       if "Android" ~= PlatformName then
         self:ForceQuitGame()
       end
@@ -1979,6 +2050,14 @@ function WBP_GameStartMainPage_C:SetInputUIOnly(IsUIOnly)
       UInputSettings.GetInputSettings().bAlwaysShowTouchInterface = false
       UE4.UUIFunctionLibrary.SetGameIsFakingTouchEvents(false)
       Params.bShowMouseCursor = true
+      local GameUserSettings = UE4.UGameUserSettings:GetGameUserSettings()
+      local Resolution = GameUserSettings:GetScreenResolution()
+      GameUserSettings:SetScreenResolution(FIntPoint(Resolution.X, Resolution.Y - 1))
+      GameUserSettings:ApplySettings(false)
+      self:AddTimer(0.5, function()
+        GameUserSettings:SetScreenResolution(FIntPoint(Resolution.X, Resolution.Y))
+        GameUserSettings:ApplySettings(false)
+      end)
     end
     Params.MouseLockMode = EMouseLockMode.DoNotLock
     self.GameInputModeSubsystem:EnableInputMode(UINameText, EGameInputMode.UI, Params)

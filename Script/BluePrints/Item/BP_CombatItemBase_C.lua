@@ -57,7 +57,6 @@ function BP_CombatItemBase_C:ClientInitInfo(Info)
   if GameState then
     GameState:TryRegisterFirstSeeMehcanism(self.UnitId, self.Eid)
   end
-  EventManager:AddEvent(EventID.OnArtLevelLoaded, self, self.OnArtLevelLoaded)
 end
 
 function BP_CombatItemBase_C:InitComponent(Info)
@@ -277,12 +276,18 @@ function BP_CombatItemBase_C:TriggerGameModeEvent(Reason)
 end
 
 function BP_CombatItemBase_C:ActiveCombat()
+  if self.IsActive then
+    return
+  end
   self.IsActive = true
   self:ActiveOnServer()
   self:OnActiveStateChange()
 end
 
 function BP_CombatItemBase_C:DeActiveCombat()
+  if self.IsActive == false then
+    return
+  end
   self.IsActive = false
   self:DeActive()
   self:OnActiveStateChange()
@@ -302,17 +307,41 @@ function BP_CombatItemBase_C:OnActiveStateChange()
   end
 end
 
-function BP_CombatItemBase_C:UpdateRegionStateId(NewStateId)
+function BP_CombatItemBase_C:UpdateRegionStateId(NewStateId, bFirstState)
   if self.BpBorn and not self:CheckManuItemRegionStorage() then
     return
   end
   if not self.RegionData or self.RegionData.StateId == nil then
     return
   end
+  print(_G.LogTag, "LXZ ChangeState UpdateRegionStateId", self:GetName(), self.RegionData.StateId, NewStateId)
   self.RegionData.StateId = NewStateId
   local GameMode = UGameplayStatics.GetGameMode(self)
   if GameMode then
-    GameMode:GetRegionDataMgrSubSystem():UpdateRegionActorData(self, self.RegionData)
+    GameMode:GetRegionDataMgrSubSystem():UpdateRegionActorData(self, self.RegionData, not bFirstState)
+  end
+end
+
+function BP_CombatItemBase_C:ServerUpdateRegionStateId(NewStateId, CallBack)
+  if self.BpBorn and not self:CheckManuItemRegionStorage() then
+    CallBack(0)
+    return
+  end
+  if not self.RegionData or self.RegionData.StateId == nil then
+    return
+  end
+  local NewRegionData = self.RegionData
+  NewRegionData.StateId = NewStateId
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    local GameState = UGameplayStatics.GetGameState(self)
+    if GameState:IsInRegion() then
+      Avatar:RegionActorUpdate(self, self.SubRegionId, self.LevelName, NewRegionData, CallBack)
+    elseif GameState:IsInDungeon() then
+      CallBack(0)
+    end
+  else
+    CallBack(0)
   end
 end
 
@@ -325,10 +354,31 @@ function BP_CombatItemBase_C:ChangeState(Type, PlayerId, NextState)
     return
   end
   if MechanismStateCpp then
-    self.CombatStateChangeComponent:TryChangeState("ChangeState_" .. Type .. "_CPP", PlayerId, NextState)
+    local GameMode = UGameplayStatics.GetGameMode(self)
+    local UseServer = false
+    if UseServer and GameMode:CheckServerDungeonEnable() then
+      print(_G.LogTag, "LXZ DungeonLogic ChangeState")
+      local Info = {
+        UnitId = self.UnitId,
+        UniqueId = self.ServerUniqueId,
+        StateId = NextState,
+        PlayerId = PlayerId,
+        Type = Type
+      }
+      GameMode:NotifyServerMechanismStateChange(Info)
+    else
+      self.CombatStateChangeComponent:TryChangeState("ChangeState_" .. Type .. "_CPP", PlayerId, NextState)
+    end
   else
     self.CombatStateChangeComponent["ChangeState_" .. Type](self.CombatStateChangeComponent, PlayerId, NextState)
   end
+end
+
+function BP_CombatItemBase_C:DungeonServerChangeState(EventInfo)
+  local Type = EventInfo.Type
+  local PlayerId = EventInfo.PlayerId
+  local NextState = EventInfo.StateId
+  self.CombatStateChangeComponent:TryChangeState("ChangeState_" .. Type .. "_CPP", PlayerId, NextState)
 end
 
 function BP_CombatItemBase_C:OnRep_StateId()
@@ -455,9 +505,6 @@ end
 
 function BP_CombatItemBase_C:GetCanOpenAndOpenState()
   return self.CanOpen and not self.OpenState
-end
-
-function BP_CombatItemBase_C:OnArtLevelLoaded(LevelId)
 end
 
 function BP_CombatItemBase_C:ReceiveEndPlay(Reason)

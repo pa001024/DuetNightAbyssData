@@ -16,6 +16,8 @@ function M:InitBaseView()
   self.Text_DetailTitleAchievement:SetText(GText("MAIN_UI_ACHIEVEMENT"))
   self.Title:SetText(GText("UI_Achievement_Title"))
   self.Text_DataTitle:SetText(GText("UI_PersonalPage_Recount_Name"))
+  self.Btn_PersonalInfo.Text_Button:SetText(GText("Event_Raid_Title"))
+  self.Btn_PersonalInfo.Button_Area.OnClicked:Add(self, self.OnClickHistoryRank)
   self:InitDetaildView()
   self:PlayAnimationForward(self.In)
   self.IsCloseing = false
@@ -71,9 +73,6 @@ function M:InitMoreDetailedTabs()
   end
 end
 
-function M:Construct()
-end
-
 function M:BP_GetDesiredFocusTarget()
   return self
 end
@@ -101,6 +100,10 @@ function M:OnReturnKeyDown()
   end)
   self:PlayAnimationForward(self.Out)
   self.IsCloseing = true
+end
+
+function M:OnClickHistoryRank()
+  PersonInfoController:OpenGuildWarHistoryRank()
 end
 
 return M

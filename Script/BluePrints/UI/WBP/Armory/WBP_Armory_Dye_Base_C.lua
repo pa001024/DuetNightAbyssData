@@ -163,6 +163,16 @@ function M:Destruct()
   M.Super.Destruct(self)
   self:RecoverActorColor()
   self.ActorController:StopSkinWeaponVFX()
+  if self.Type == CommonConst.ArmoryType.Char then
+    if self.SkinType == CommonConst.DataType.Hair then
+      self.ActorController:ChangeCharHairColor(self.Target:DumpHairColors(ArmoryUtils:GetAvatar(), self.HairId))
+    else
+      self.ActorController:ChangeCharSkinColor(self.Target:DumpColors(ArmoryUtils:GetAvatar(), self.SkinId))
+    end
+  elseif self.Type == CommonConst.ArmoryType.Mount then
+  else
+    self.ActorController:ChangeWeaponColor(self.Target:DumpColors(self.SkinId))
+  end
 end
 
 function M:On_Image_Click_MouseButtonDown(MyGeometry, MouseEvent)
@@ -344,7 +354,6 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, Params)
   local ArmoryMain = UIManager(self):GetArmoryUIObj()
   if ArmoryMain then
     self.ActorController = ArmoryMain.ActorController
-    self.ArmoryHelper = ArmoryMain.ActorController.ArmoryHelper
     self.ArmoryPlayer = ArmoryMain.ActorController.ArmoryPlayer
   end
   Params = Params or {}
@@ -404,8 +413,7 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, Params)
     self.ActorController = self.Parent.ActorController
   end
   if self.ActorController then
-    self.ArmoryHelper = self.ActorController.ArmoryHelper
-    self.ArmoryHelper.EnableCameraScrolling = true
+    self.ActorController:EnableCameraScrolling(true)
     self.ArmoryPlayer = self.ActorController.ArmoryPlayer
     local WeaponActor = self.ActorController:GetWeaponActor()
     if nil == WeaponActor then
@@ -585,7 +593,7 @@ function M:GetPlanNames()
 end
 
 function M:SwitchColorPlan(NewPlanIndex)
-  if NewPlanIndex == self.CurrentPlan then
+  if NewPlanIndex == self.CurrentPlan or self.OpenPreviewDyeFromChat then
     return
   end
   
@@ -605,7 +613,7 @@ function M:SwitchColorPlan(NewPlanIndex)
     end
   end
   
-  if self.Btn_Save:IsBtnForbidden() or self.OpenPreviewDyeFromChat then
+  if self.Btn_Save:IsBtnForbidden() then
     CallServerSwitchPlan()
   else
     UIManager(self):ShowCommonPopupUI(100231, {
@@ -995,9 +1003,8 @@ function M:CreateNormalDefaultColor()
   self.DefaultFresnel = {}
   if self.Type == CommonConst.ArmoryType.Char then
     if self.SkinType == CommonConst.DataType.Hair then
-      local MeshName = self.ArmoryPlayer.CharacterFashion:GetCurrentHairMeshName()
       self.DefaultColors = {
-        self:GetHairDefaultColorsFromDataTable(MeshName)
+        self.ArmoryPlayer.CharacterFashion:GetHiarDefaultColors()
       }
       return
     end
@@ -1734,14 +1741,18 @@ end
 function M:UpdateCurrentDyeTabSaveOrSelect()
   if self.CurrentDyeTabDraftContent then
     self.CurrentDyeTabDraftContent.IsSaveInDraft = false
-    self.CurrentDyeTabDraftContent.Widget:SetIsSaveInDraft(false)
-    self.CurrentDyeTabDraftContent.Widget:SetIsSelected(self.CurrentDyeTabDraftContent.IsSelected)
+    if self.CurrentDyeTabDraftContent.Widget then
+      self.CurrentDyeTabDraftContent.Widget:SetIsSaveInDraft(false)
+      self.CurrentDyeTabDraftContent.Widget:SetIsSelected(self.CurrentDyeTabDraftContent.IsSelected)
+    end
   end
   self.CurrentDyeTabDraftContent = self.NormalComparedContents[self.CurNormalDyeTab.Idx]
   if self.CurrentDyeTabDraftContent then
     self.CurrentDyeTabDraftContent.IsSaveInDraft = true
-    self.CurrentDyeTabDraftContent.Widget:SetIsSaveInDraft(true)
-    self.CurrentDyeTabDraftContent.Widget:SetIsSelected(self.CurrentDyeTabDraftContent.IsSelected)
+    if self.CurrentDyeTabDraftContent.Widget then
+      self.CurrentDyeTabDraftContent.Widget:SetIsSaveInDraft(true)
+      self.CurrentDyeTabDraftContent.Widget:SetIsSelected(self.CurrentDyeTabDraftContent.IsSelected)
+    end
   end
 end
 
@@ -1927,10 +1938,10 @@ function M:OnWeaponSkinColorPlanChanged(Ret, WeaponUuid, SkinId, NewPlanIndex)
     self:ApplyColorsToComparedColors(self.OpenPreviewDyeFromChatColors)
     self:ApplyColorsToNormalDyeTabs(self.OpenPreviewDyeFromChatColors)
   end
-  self:OnContrastKeyUp()
   if self.SpecialCurrentContent == self.SpecialDefaultContent then
     self:ChangeToNormalCurrentColors()
   end
+  self:OnContrastKeyUp()
 end
 
 function M:OnMountSkinColorPlanChanged(Ret, MountId, SkinId, NewPlanIndex)

@@ -1,5 +1,6 @@
 require("UnLua")
-local M = Class("BluePrints.UI.BP_EMUserWidget_C")
+local ChatController = require("BluePrints.UI.WBP.Chat.ChatController")
+local M = Class("BluePrints.UI.UI_PC.Common.Common_Button.Common_Button_PC")
 
 function M:SetText(Text)
   self.Text_Cell:SetText(Text)
@@ -11,9 +12,27 @@ function M:BindOnClick(BindObj, OnClick)
 end
 
 function M:Construct()
+  M.Super.Construct(self, self.Button_Area)
   self.Button_Area:SetVisibility(UIConst.VisibilityOp.Visible)
   self.Button_Area.OnClicked:Add(self, self.BtnAreaOnClicked)
   self.bForbidden = false
+  ChatController:RegisterEvent(self, function(self, EventId, ...)
+    if EventId == ChatCommon.EventID.SendCDTimerUpdate then
+      local RemainTime = (...)
+      self:HandleSendChatMessageCd(RemainTime)
+    end
+  end)
+end
+
+function M:HandleSendChatMessageCd(CDRemainTime)
+  if not self.WS then
+    return
+  end
+  if CDRemainTime > 0 then
+    self.WS:SetActiveWidgetIndex(1)
+  else
+    self.WS:SetActiveWidgetIndex(0)
+  end
 end
 
 function M:BtnAreaOnClicked()
@@ -58,6 +77,7 @@ function M:Destruct()
   self.BindObj = nil
   self.OnClick = nil
   self.Button_Area.OnClicked:Remove(self, self.BtnAreaOnClicked)
+  ChatController:UnRegisterEvent(self)
   if CommonUtils.GetDeviceTypeByPlatformName(self) ~= "Mobile" then
     local GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(self)
     if IsValid(GameInputModeSubsystem) then
@@ -82,7 +102,7 @@ function M:SetNormal()
   self.Button_Area:SetForbidden(false)
 end
 
-function M:IsForbidden()
+function M:IsChatBtnForbidden()
   return self.bForbidden
 end
 

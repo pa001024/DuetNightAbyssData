@@ -246,6 +246,7 @@ function M:ActivityItemClick(TabWidget)
   self:GenerateActivityPage(ActivityId, ActivityInfo, ActivityConfigData, TabId)
   ActivityUtils.TrySubActivityReddotCommon("New", ActivityId)
   self:UpdateTabRedInfoByActivityID(ActivityInfoIndex, ActivityId)
+  self.Activity_Tab:Init(self:GetTopTabInfoByActivityId(ActivityId))
 end
 
 function M:GenerateActivityPage(ActivityId, ActivityInfo, ActivityConfigData, TabId)
@@ -594,6 +595,26 @@ function M:UpdateActivityKeyTips(FocusTypeName, FocusWidgetItem)
         Desc = GText("UI_Tips_Close")
       }
     }
+  elseif "SelectRewardView" == FocusTypeName then
+    BottomKeyInfo = {
+      {
+        KeyInfoList = {
+          {Type = "Img", ImgShortPath = "A"}
+        },
+        Desc = GText("UI_Controller_SelectReward")
+      },
+      {
+        KeyInfoList = {
+          {
+            Type = "Img",
+            ImgShortPath = "B",
+            ClickCallback = self.OnReturnKeyDown,
+            Owner = self
+          }
+        },
+        Desc = GText("UI_Tips_Close")
+      }
+    }
   elseif "EmptyView" == FocusTypeName then
     BottomKeyInfo = {}
   else
@@ -736,6 +757,9 @@ function M:OnSelectActivityPageChanged(SelectActivityItem, bIsSelect)
       end, false, 0, nil, true)
     end
   end
+  if not self.LastIndex or not self.DisplayedWidgetsCount then
+    return
+  end
   if self.LastIndex == SelectActivityItem.Index then
     if self.DisplayedWidgetsCount > 0 and self.LastIndex >= self.DisplayedWidgetsCount then
       self:AddTimer(0.3, function()
@@ -743,7 +767,7 @@ function M:OnSelectActivityPageChanged(SelectActivityItem, bIsSelect)
         self.List_Tab:SetScrollOffset(NextOffset)
       end, false, 0, nil, true)
     end
-  elseif self.GameInputModeSubsystem:GetCurrentInputType() ~= ECommonInputType.Gamepad then
+  elseif self.GameInputModeSubsystem:GetCurrentInputType() ~= ECommonInputType.Gamepad and self.LastIndex >= self.DisplayedWidgetsCount then
     self:ScrollToItemWithPadding(SelectActivityItem.Index, 0.05)
   end
 end
@@ -848,6 +872,35 @@ function M:SetActivityComplete(EventID)
     end
   end
   return true
+end
+
+function M:GetActivityCoinBarInfoByActivityId(ActivityId)
+  if nil == ActivityId then
+    return nil
+  end
+  local EventConfig = DataMgr.EventMain[ActivityId]
+  if nil == EventConfig then
+    return nil
+  end
+  if nil == EventConfig.EventCoinId then
+    return nil
+  end
+  if EventConfig.EventCoinCondition then
+    local Avatar = GWorld:GetAvatar()
+    if ConditionUtils.CheckCondition(Avatar, EventConfig.EventCoinCondition) == false then
+      return nil
+    end
+  end
+  return EventConfig.EventCoinId
+end
+
+function M:GetTopTabInfoByActivityId(ActivityId)
+  local TopTabInfo = self:GetTopTabInfo()
+  local CoinBarInfo = self:GetActivityCoinBarInfoByActivityId(ActivityId)
+  if CoinBarInfo then
+    TopTabInfo.OverridenTopResouces = CoinBarInfo
+  end
+  return TopTabInfo
 end
 
 return M

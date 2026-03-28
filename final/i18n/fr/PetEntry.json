@@ -2,7 +2,7 @@
   {
     "id": 10011,
     "bid": 1001,
-    "icon": "World",
+    "icon": "World_Blue",
     "name": "Gourmand",
     "r": 3,
     "upid": 10012,
@@ -11,7 +11,7 @@
   {
     "id": 10012,
     "bid": 1001,
-    "icon": "World",
+    "icon": "World_Purple",
     "name": "Gourmand",
     "r": 4,
     "upid": 10013,
@@ -20,7 +20,7 @@
   {
     "id": 10013,
     "bid": 1001,
-    "icon": "World",
+    "icon": "World_Gold",
     "name": "Gourmand",
     "r": 5,
     "desc": "Portée ramassage auto +6 m"
@@ -28,7 +28,7 @@
   {
     "id": 10021,
     "bid": 1002,
-    "icon": "World",
+    "icon": "World_Blue",
     "name": "Économe",
     "r": 3,
     "upid": 10022,
@@ -37,7 +37,7 @@
   {
     "id": 10022,
     "bid": 1002,
-    "icon": "World",
+    "icon": "World_Purple",
     "name": "Économe",
     "r": 4,
     "upid": 10023,
@@ -46,7 +46,7 @@
   {
     "id": 10023,
     "bid": 1002,
-    "icon": "World",
+    "icon": "World_Gold",
     "name": "Économe",
     "r": 5,
     "desc": "Taux de butin augmenté de 15%"
@@ -54,7 +54,7 @@
   {
     "id": 10031,
     "bid": 1003,
-    "icon": "Battle",
+    "icon": "Battle_Blue",
     "name": "Sage",
     "r": 3,
     "upid": 10032,
@@ -63,7 +63,7 @@
   {
     "id": 10032,
     "bid": 1003,
-    "icon": "Battle",
+    "icon": "Battle_Purple",
     "name": "Sage",
     "r": 4,
     "upid": 10033,
@@ -72,7 +72,7 @@
   {
     "id": 10033,
     "bid": 1003,
-    "icon": "Battle",
+    "icon": "Battle_Gold",
     "name": "Sage",
     "r": 5,
     "desc": "EXP obtenue en vainquant des ennemis +15%"
@@ -80,7 +80,7 @@
   {
     "id": 10041,
     "bid": 1004,
-    "icon": "Battle",
+    "icon": "Battle_Gold",
     "name": "Tenace",
     "r": 5,
     "desc": "Tentatives de réanimation +1"
@@ -88,7 +88,7 @@
   {
     "id": 10061,
     "bid": 1006,
-    "icon": "Speed",
+    "icon": "Speed_Blue",
     "name": "Impulsif",
     "r": 3,
     "upid": 10062,
@@ -97,7 +97,7 @@
   {
     "id": 10062,
     "bid": 1006,
-    "icon": "Speed",
+    "icon": "Speed_Purple",
     "name": "Impulsif",
     "r": 4,
     "upid": 10063,
@@ -106,7 +106,7 @@
   {
     "id": 10063,
     "bid": 1006,
-    "icon": "Speed",
+    "icon": "Speed_Gold",
     "name": "Impulsif",
     "r": 5,
     "desc": "Vitesse de saut +6%"
@@ -114,7 +114,7 @@
   {
     "id": 10071,
     "bid": 1007,
-    "icon": "Speed",
+    "icon": "Speed_Blue",
     "name": "Rapide",
     "r": 3,
     "upid": 10072,
@@ -123,7 +123,7 @@
   {
     "id": 10072,
     "bid": 1007,
-    "icon": "Speed",
+    "icon": "Speed_Purple",
     "name": "Rapide",
     "r": 4,
     "upid": 10073,
@@ -132,7 +132,7 @@
   {
     "id": 10073,
     "bid": 1007,
-    "icon": "Speed",
+    "icon": "Speed_Gold",
     "name": "Rapide",
     "r": 5,
     "desc": "Vitesse de bond cyclonique +6%"
@@ -140,7 +140,7 @@
   {
     "id": 10081,
     "bid": 1008,
-    "icon": "Speed",
+    "icon": "Speed_Blue",
     "name": "Dodu",
     "r": 3,
     "upid": 10082,
@@ -149,7 +149,7 @@
   {
     "id": 10082,
     "bid": 1008,
-    "icon": "Speed",
+    "icon": "Speed_Purple",
     "name": "Dodu",
     "r": 4,
     "upid": 10083,
@@ -158,7 +158,7 @@
   {
     "id": 10083,
     "bid": 1008,
-    "icon": "Speed",
+    "icon": "Speed_Gold",
     "name": "Dodu",
     "r": 5,
     "desc": "Vitesse de glissade +12%"
@@ -166,7 +166,7 @@
   {
     "id": 10091,
     "bid": 1009,
-    "icon": "Speed",
+    "icon": "Speed_Blue",
     "name": "Vigilant",
     "r": 3,
     "upid": 10092,
@@ -175,7 +175,7 @@
   {
     "id": 10092,
     "bid": 1009,
-    "icon": "Speed",
+    "icon": "Speed_Purple",
     "name": "Vigilant",
     "r": 4,
     "upid": 10093,
@@ -184,7 +184,7 @@
   {
     "id": 10093,
     "bid": 1009,
-    "icon": "Speed",
+    "icon": "Speed_Gold",
     "name": "Vigilant",
     "r": 5,
     "desc": "Temps de recharge d’esquive -15%"
@@ -192,7 +192,7 @@
   {
     "id": 10101,
     "bid": 1010,
-    "icon": "Base",
+    "icon": "Base_Blue",
     "name": "Féroce",
     "r": 3,
     "upid": 10102,
@@ -201,7 +201,7 @@
   {
     "id": 10102,
     "bid": 1010,
-    "icon": "Base",
+    "icon": "Base_Purple",
     "name": "Féroce",
     "r": 4,
     "upid": 10103,
@@ -210,7 +210,7 @@
   {
     "id": 10103,
     "bid": 1010,
-    "icon": "Base",
+    "icon": "Base_Gold",
     "name": "Féroce",
     "r": 5,
     "desc": "ATQ +24%"
@@ -218,7 +218,7 @@
   {
     "id": 10111,
     "bid": 1011,
-    "icon": "Base",
+    "icon": "Base_Blue",
     "name": "Cuirassé",
     "r": 3,
     "upid": 10112,
@@ -227,7 +227,7 @@
   {
     "id": 10112,
     "bid": 1011,
-    "icon": "Base",
+    "icon": "Base_Purple",
     "name": "Cuirassé",
     "r": 4,
     "upid": 10113,
@@ -236,7 +236,7 @@
   {
     "id": 10113,
     "bid": 1011,
-    "icon": "Base",
+    "icon": "Base_Gold",
     "name": "Cuirassé",
     "r": 5,
     "desc": "DÉF +24%"
@@ -244,7 +244,7 @@
   {
     "id": 10121,
     "bid": 1012,
-    "icon": "Base",
+    "icon": "Base_Blue",
     "name": "Robuste",
     "r": 3,
     "upid": 10122,
@@ -253,7 +253,7 @@
   {
     "id": 10122,
     "bid": 1012,
-    "icon": "Base",
+    "icon": "Base_Purple",
     "name": "Robuste",
     "r": 4,
     "upid": 10123,
@@ -262,7 +262,7 @@
   {
     "id": 10123,
     "bid": 1012,
-    "icon": "Base",
+    "icon": "Base_Gold",
     "name": "Robuste",
     "r": 5,
     "desc": "PV max +24%"
@@ -270,7 +270,7 @@
   {
     "id": 10131,
     "bid": 1013,
-    "icon": "Base",
+    "icon": "Base_Blue",
     "name": "Timide",
     "r": 3,
     "upid": 10132,
@@ -279,7 +279,7 @@
   {
     "id": 10132,
     "bid": 1013,
-    "icon": "Base",
+    "icon": "Base_Purple",
     "name": "Timide",
     "r": 4,
     "upid": 10133,
@@ -288,7 +288,7 @@
   {
     "id": 10133,
     "bid": 1013,
-    "icon": "Base",
+    "icon": "Base_Gold",
     "name": "Timide",
     "r": 5,
     "desc": "Bouclier max +24%"
@@ -296,7 +296,7 @@
   {
     "id": 10141,
     "bid": 1014,
-    "icon": "Battle",
+    "icon": "Battle_Blue",
     "name": "Perspicace",
     "r": 3,
     "upid": 10142,
@@ -305,7 +305,7 @@
   {
     "id": 10142,
     "bid": 1014,
-    "icon": "Battle",
+    "icon": "Battle_Purple",
     "name": "Perspicace",
     "r": 4,
     "upid": 10143,
@@ -314,7 +314,7 @@
   {
     "id": 10143,
     "bid": 1014,
-    "icon": "Battle",
+    "icon": "Battle_Gold",
     "name": "Perspicace",
     "r": 5,
     "desc": "Temps de recharge des compétences de soutien -24%"
@@ -322,7 +322,7 @@
   {
     "id": 10151,
     "bid": 1015,
-    "icon": "World",
+    "icon": "World_Blue",
     "name": "Érudit",
     "r": 3,
     "upid": 10152,
@@ -331,7 +331,7 @@
   {
     "id": 10152,
     "bid": 1015,
-    "icon": "World",
+    "icon": "World_Purple",
     "name": "Érudit",
     "r": 4,
     "upid": 10153,
@@ -340,7 +340,7 @@
   {
     "id": 10153,
     "bid": 1015,
-    "icon": "World",
+    "icon": "World_Gold",
     "name": "Érudit",
     "r": 5,
     "desc": "EXP octroyée lorsqu’utilisé comme matériau +60%"
@@ -348,7 +348,7 @@
   {
     "id": 10161,
     "bid": 1016,
-    "icon": "World",
+    "icon": "World_Gold",
     "name": "Habile",
     "r": 5,
     "desc": "Permet de décrypter rapidement des mécanismes."
@@ -356,9 +356,275 @@
   {
     "id": 10171,
     "bid": 1017,
-    "icon": "World",
+    "icon": "World_Gold",
     "name": "Sérénité",
     "r": 5,
     "desc": "Récupération automatique en pêche"
+  },
+  {
+    "id": 10181,
+    "bid": 1018,
+    "icon": "Battle_Gold",
+    "name": "Discipliné",
+    "r": 5,
+    "desc": "Permet le déclenchement automatique des compétences de Soutien de Géniemon."
+  },
+  {
+    "id": 10191,
+    "bid": 1019,
+    "icon": "Battle_Blue",
+    "name": "Brutal",
+    "r": 3,
+    "upid": 10192,
+    "desc": "技能威力+3.2%"
+  },
+  {
+    "id": 10192,
+    "bid": 1019,
+    "icon": "Battle_Purple",
+    "name": "Brutal",
+    "r": 4,
+    "upid": 10193,
+    "desc": "技能威力+6.4%"
+  },
+  {
+    "id": 10193,
+    "bid": 1019,
+    "icon": "Battle_Gold",
+    "name": "Brutal",
+    "r": 5,
+    "desc": "技能威力+9.6%"
+  },
+  {
+    "id": 10201,
+    "bid": 1020,
+    "icon": "Battle_Blue",
+    "name": "Cupide",
+    "r": 3,
+    "upid": 10202,
+    "desc": "技能范围+4.8%"
+  },
+  {
+    "id": 10202,
+    "bid": 1020,
+    "icon": "Battle_Purple",
+    "name": "Cupide",
+    "r": 4,
+    "upid": 10203,
+    "desc": "技能范围+9.6%"
+  },
+  {
+    "id": 10203,
+    "bid": 1020,
+    "icon": "Battle_Gold",
+    "name": "Cupide",
+    "r": 5,
+    "desc": "技能范围+14.4%"
+  },
+  {
+    "id": 10211,
+    "bid": 1021,
+    "icon": "Battle_Blue",
+    "name": "Endurant",
+    "r": 3,
+    "upid": 10212,
+    "desc": "技能耐久+2.4%"
+  },
+  {
+    "id": 10212,
+    "bid": 1021,
+    "icon": "Battle_Purple",
+    "name": "Endurant",
+    "r": 4,
+    "upid": 10213,
+    "desc": "技能耐久+4.8%"
+  },
+  {
+    "id": 10213,
+    "bid": 1021,
+    "icon": "Battle_Gold",
+    "name": "Endurant",
+    "r": 5,
+    "desc": "技能耐久+7.2%"
+  },
+  {
+    "id": 10221,
+    "bid": 1022,
+    "icon": "Battle_Blue",
+    "name": "Efficace",
+    "r": 3,
+    "upid": 10222,
+    "desc": "技能效益+2%"
+  },
+  {
+    "id": 10222,
+    "bid": 1022,
+    "icon": "Battle_Purple",
+    "name": "Efficace",
+    "r": 4,
+    "upid": 10223,
+    "desc": "技能效益+4%"
+  },
+  {
+    "id": 10223,
+    "bid": 1022,
+    "icon": "Battle_Gold",
+    "name": "Efficace",
+    "r": 5,
+    "desc": "技能效益+6%"
+  },
+  {
+    "id": 10231,
+    "bid": 1023,
+    "icon": "Battle_Blue",
+    "name": "Exalté",
+    "r": 3,
+    "upid": 10232,
+    "desc": "昂扬+2.4%"
+  },
+  {
+    "id": 10232,
+    "bid": 1023,
+    "icon": "Battle_Purple",
+    "name": "Exalté",
+    "r": 4,
+    "upid": 10233,
+    "desc": "昂扬+4.8%"
+  },
+  {
+    "id": 10233,
+    "bid": 1023,
+    "icon": "Battle_Gold",
+    "name": "Exalté",
+    "r": 5,
+    "desc": "昂扬+7.2%"
+  },
+  {
+    "id": 10241,
+    "bid": 1024,
+    "icon": "Battle_Blue",
+    "name": "Obstiné",
+    "r": 3,
+    "upid": 10242,
+    "desc": "背水+0.8%"
+  },
+  {
+    "id": 10242,
+    "bid": 1024,
+    "icon": "Battle_Purple",
+    "name": "Obstiné",
+    "r": 4,
+    "upid": 10243,
+    "desc": "背水+1.6%"
+  },
+  {
+    "id": 10243,
+    "bid": 1024,
+    "icon": "Battle_Gold",
+    "name": "Obstiné",
+    "r": 5,
+    "desc": "背水+2.4%"
+  },
+  {
+    "id": 10251,
+    "bid": 1025,
+    "icon": "Battle_Blue",
+    "name": "Téméraire",
+    "r": 3,
+    "upid": 10252,
+    "desc": "暴击率+8%"
+  },
+  {
+    "id": 10252,
+    "bid": 1025,
+    "icon": "Battle_Purple",
+    "name": "Téméraire",
+    "r": 4,
+    "upid": 10253,
+    "desc": "暴击率+16%"
+  },
+  {
+    "id": 10253,
+    "bid": 1025,
+    "icon": "Battle_Gold",
+    "name": "Téméraire",
+    "r": 5,
+    "desc": "暴击率+24%"
+  },
+  {
+    "id": 10261,
+    "bid": 1026,
+    "icon": "Battle_Blue",
+    "name": "Revigoré",
+    "r": 3,
+    "upid": 10262,
+    "desc": "暴击伤害+10%"
+  },
+  {
+    "id": 10262,
+    "bid": 1026,
+    "icon": "Battle_Purple",
+    "name": "Revigoré",
+    "r": 4,
+    "upid": 10263,
+    "desc": "暴击伤害+20%"
+  },
+  {
+    "id": 10263,
+    "bid": 1026,
+    "icon": "Battle_Gold",
+    "name": "Revigoré",
+    "r": 5,
+    "desc": "暴击伤害+30%"
+  },
+  {
+    "id": 10271,
+    "bid": 1027,
+    "icon": "Battle_Blue",
+    "name": "Fantomatique",
+    "r": 3,
+    "upid": 10272,
+    "desc": "多重射击+6%"
+  },
+  {
+    "id": 10272,
+    "bid": 1027,
+    "icon": "Battle_Purple",
+    "name": "Fantomatique",
+    "r": 4,
+    "upid": 10273,
+    "desc": "多重射击+12%"
+  },
+  {
+    "id": 10273,
+    "bid": 1027,
+    "icon": "Battle_Gold",
+    "name": "Fantomatique",
+    "r": 5,
+    "desc": "多重射击+18%"
+  },
+  {
+    "id": 10281,
+    "bid": 1028,
+    "icon": "Battle_Gold",
+    "name": "Avide",
+    "r": 5,
+    "desc": "释放魔灵支援后，拾取自身周围100米范围内的所有掉落物"
+  },
+  {
+    "id": 10291,
+    "bid": 1029,
+    "icon": "Battle_Gold",
+    "name": "Fugitif",
+    "r": 5,
+    "desc": "释放魔灵支援后，如果已经开启委托的撤离点，传送至撤离点"
+  },
+  {
+    "id": 10301,
+    "bid": 1030,
+    "icon": "Battle_Gold",
+    "name": "Vétéran",
+    "r": 5,
+    "desc": "魔灵支援和被动等级+1"
   }
 ]

@@ -47,7 +47,7 @@ function WBP_Com_CheckBox_C:InitCommonCheckBox()
   rawset(self, "CurrentClickIsForbid", false)
   rawset(self, "ClickLogics", {})
   EMUIAnimationSubsystem:EMPlayAnimation(self, self.Normal)
-  EMUIAnimationSubsystem:EMPlayAnimation(self, self.Check_Switch, EUMGSequencePlayMode.Reverse)
+  self.Image_Check:SetRenderOpacity(0)
   self:BindButtonPerformances()
   self:RefreshBaseInfo()
   self:InitListenEvent()
@@ -289,6 +289,25 @@ function WBP_Com_CheckBox_C:SetIsCheckedWithoutCallback(IsChecked, IsPlaySound)
       EMUIAnimationSubsystem:EMPlayAnimation(self, self.Check_Switch, EUMGSequencePlayMode.Reverse)
     else
       EMUIAnimationSubsystem:EMPlayAnimation(self, self.Check_Switch, EUMGSequencePlayMode.Reverse)
+    end
+  end
+end
+
+function WBP_Com_CheckBox_C:SetIsCheckedState(IsChecked)
+  if self.Checked == false and true == IsChecked then
+    rawset(self, "Checked", true)
+    if false == self.IsForbidden then
+      EMUIAnimationSubsystem:EMPlayAnimation(self, self.Check_Switch)
+    else
+      EMUIAnimationSubsystem:EMPlayAnimation(self, self.Check_Switch)
+    end
+  elseif self.Checked == true and false == IsChecked then
+    rawset(self, "Checked", false)
+    local Mat = self.Image_Check:GetDynamicMaterial()
+    if false == self.IsForbidden then
+      Mat:SetScalarParameterValue("percent", 0)
+    else
+      Mat:SetScalarParameterValue("percent", 0)
     end
   end
 end

@@ -737,7 +737,7 @@ local Data = {
           TextMapId = "Access_Collecting_Icelake03"
         },
         Access_Collecting_Icelake04 = {
-          ContentEN = "Found in Eastern District, Icelake - Thawing Caverns",
+          ContentEN = "Found in Eastern District, Icelake -  Thawing Caverns",
           TextMapId = "Access_Collecting_Icelake04"
         },
         Access_Collecting_Kuangkeng = {
@@ -1605,7 +1605,7 @@ local Data = {
   },
   {
     MinKey = "BattlePass_Task_Des_100001202",
-    MaxKey = "CVName3014",
+    MaxKey = "CVName3003",
     Loader = function()
       return {
         BattlePass_Task_Des_100001202 = {
@@ -1904,6 +1904,34 @@ local Data = {
           ContentEN = "For every #1 instances of damage dealt by any ally, gains 1 stack of +#2 Damage Dealt for #3s, stacking up to #4 times.",
           TextMapId = "Buff_Content_12221"
         },
+        Buff_Content_13111 = {
+          ContentEN = "When an ally uses a Combat Skill or Ultimate Skill, gains +#1 Morale for #2s, stacking up to #3 times.",
+          TextMapId = "Buff_Content_13111"
+        },
+        Buff_Content_13112 = {
+          ContentEN = "Reduces allies’ Skill Duration by #1 and increases their Skill Range by #2.",
+          TextMapId = "Buff_Content_13112"
+        },
+        Buff_Content_13121 = {
+          ContentEN = "When dealing damage while airborne, gain a #1 Damage Dealt increase. This effect is removed #2 seconds after landing.",
+          TextMapId = "Buff_Content_13121"
+        },
+        Buff_Content_13122 = {
+          ContentEN = "Reduces allies’ ATK by #1 and increases their Skill Intensity by #2.",
+          TextMapId = "Buff_Content_13122"
+        },
+        Buff_Content_13211 = {
+          ContentEN = "For every #1 Sanity Cost by any ally, gains 1 stack of +#2 Damage Dealt for #3s, stacking up to #4 times.",
+          TextMapId = "Buff_Content_13211"
+        },
+        Buff_Content_13212 = {
+          ContentEN = "Reduces allies’ Max HP by #1 and increases their Max Sanity by #2.",
+          TextMapId = "Buff_Content_13212"
+        },
+        Buff_Content_13222 = {
+          ContentEN = "Reduces allies’ ATK by #1 and increases their Multishot by #2.",
+          TextMapId = "Buff_Content_13222"
+        },
         Buff_Content_201 = {
           ContentEN = "Enemy units take #1 less damage, but each time they take damage, the damage reduction decreases by #2.",
           TextMapId = "Buff_Content_201"
@@ -2194,6 +2222,8 @@ local Data = {
         CVName1021 = {ContentEN = "钟可", TextMapId = "CVName1021"},
         CVName1022 = {ContentEN = "龟娘", TextMapId = "CVName1022"},
         CVName1023 = {ContentEN = "Cai Shujin", TextMapId = "CVName1023"},
+        CVName1024 = {ContentEN = "Su Ran", TextMapId = "CVName1024"},
+        CVName1025 = {ContentEN = "Jiang Yue", TextMapId = "CVName1025"},
         CVName2001 = {
           ContentEN = "Alexandra Guelff",
           TextMapId = "CVName2001"
@@ -2280,6 +2310,14 @@ local Data = {
           ContentEN = "Penelope Rawlins",
           TextMapId = "CVName2023"
         },
+        CVName2024 = {
+          ContentEN = "Violet Patton-Ryder",
+          TextMapId = "CVName2024"
+        },
+        CVName2025 = {
+          ContentEN = "Elizabeth Chu",
+          TextMapId = "CVName2025"
+        },
         CVName3001 = {
           ContentEN = "石川由依",
           TextMapId = "CVName3001"
@@ -2288,7 +2326,15 @@ local Data = {
         CVName3003 = {
           ContentEN = "新井里美",
           TextMapId = "CVName3003"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "CVName3004",
+    MaxKey = "Condition_Toast_PlayerLv_35",
+    Loader = function()
+      return {
         CVName3004 = {
           ContentEN = "南條愛乃",
           TextMapId = "CVName3004"
@@ -2329,15 +2375,7 @@ local Data = {
         CVName3014 = {
           ContentEN = "黒沢ともよ",
           TextMapId = "CVName3014"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "CVName3015",
-    MaxKey = "Condition_Toast_PlayerLv_49",
-    Loader = function()
-      return {
+        },
         CVName3015 = {
           ContentEN = "長縄まりあ",
           TextMapId = "CVName3015"
@@ -2365,6 +2403,14 @@ local Data = {
           TextMapId = "CVName3022"
         },
         CVName3023 = {ContentEN = "Asumi Kana", TextMapId = "CVName3023"},
+        CVName3024 = {
+          ContentEN = "Sawashiro Miyuki",
+          TextMapId = "CVName3024"
+        },
+        CVName3025 = {
+          ContentEN = "Taketatsu Ayana",
+          TextMapId = "CVName3025"
+        },
         CVName4001 = {ContentEN = "김하영", TextMapId = "CVName4001"},
         CVName4002 = {ContentEN = "조경이", TextMapId = "CVName4002"},
         CVName4003 = {ContentEN = "성예원", TextMapId = "CVName4003"},
@@ -2390,6 +2436,11 @@ local Data = {
         CVName4023 = {
           ContentEN = "Kim Suyoung",
           TextMapId = "CVName4023"
+        },
+        CVName4024 = {ContentEN = "Kim Yerim", TextMapId = "CVName4024"},
+        CVName4025 = {
+          ContentEN = "Jung Yoo-jung",
+          TextMapId = "CVName4025"
         },
         Caesura = {ContentEN = ",", TextMapId = "Caesura"},
         Camp_Name_Diguo = {
@@ -2997,7 +3048,15 @@ each elegant stroke of her prescription a quiet salve to life's impermanence.]],
         Condition_Toast_PlayerLv_35 = {
           ContentEN = "Unlocks at Trial Lv. 35",
           TextMapId = "Condition_Toast_PlayerLv_35"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Condition_Toast_PlayerLv_36",
+    MaxKey = "Content_120111_2",
+    Loader = function()
+      return {
         Condition_Toast_PlayerLv_36 = {
           ContentEN = "Unlocks at Trial Lv. 36",
           TextMapId = "Condition_Toast_PlayerLv_36"
@@ -3057,15 +3116,7 @@ each elegant stroke of her prescription a quiet salve to life's impermanence.]],
         Condition_Toast_PlayerLv_49 = {
           ContentEN = "Unlocks at Trial Lv. 49",
           TextMapId = "Condition_Toast_PlayerLv_49"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Condition_Toast_PlayerLv_5",
-    MaxKey = "Content_120112_5",
-    Loader = function()
-      return {
+        },
         Condition_Toast_PlayerLv_5 = {
           ContentEN = "Unlocks at Trial Lv. 5",
           TextMapId = "Condition_Toast_PlayerLv_5"
@@ -3888,7 +3939,15 @@ One segment of the seal falters, and Zhiliu cannot leave her post. You volunteer
         Content_120111_2 = {
           ContentEN = "A group of children are playing in a corner of Mist Aken. Go say hello.",
           TextMapId = "Content_120111_2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Content_120111_3",
+    MaxKey = "Content_200204_2",
+    Loader = function()
+      return {
         Content_120111_3 = {
           ContentEN = "The game has begun — find the hidden Roasted Potatoes!",
           TextMapId = "Content_120111_3"
@@ -3948,15 +4007,7 @@ One segment of the seal falters, and Zhiliu cannot leave her post. You volunteer
         Content_120112_5 = {
           ContentEN = "{性别:Mr|Miss} Unicorn seems to know where the clue is hidden — follow and see for yourself.",
           TextMapId = "Content_120112_5"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Content_120112_5_1",
-    MaxKey = "Content_200227_1",
-    Loader = function()
-      return {
+        },
         Content_120112_5_1 = {
           ContentEN = "Guided by {性别:Mr|Miss} Unicorn, you arrive at the spot. Look closely — the clue may be nearby.",
           TextMapId = "Content_120112_5_1"
@@ -4086,52 +4137,522 @@ One segment of the seal falters, and Zhiliu cannot leave her post. You volunteer
           TextMapId = "Content_120114_9_1"
         },
         Content_120201_1 = {
-          ContentEN = "Enter the dark chamber",
+          ContentEN = "At the moment Zhuyin was sealed, Zhiliu suddenly turned against you and trapped you. With the help of Fushu and Kezhou who arrived in time, you managed to break free from Zhiliu's spell.\nYou thought the danger had passed — but one crisis barely ends, another begins. As you were leaving the Gritblight Expanse, you and Snow were struck by a spell at a corner. Your memory ends there.",
           TextMapId = "Content_120201_1"
         },
         Content_120201_10 = {
-          ContentEN = "Go to the Hall of Craft to fetch the censer",
+          ContentEN = [[
+Unlike the bustling Hall of Incense, the Hall of Craft lies quiet and nearly empty.
+Find a staff member at the Hall of Craft.]],
           TextMapId = "Content_120201_10"
         },
         Content_120201_11 = {
-          ContentEN = "Fetch the censer",
+          ContentEN = "You find the craftsman — he's already left the Censer on the steps nearby.",
           TextMapId = "Content_120201_11"
         },
         Content_120201_12 = {
-          ContentEN = "Check the bulletin board and see what's going on",
+          ContentEN = [[
+The bell of the Hall of Adjudication suddenly tolls. According to the craftsman, this is an event unseen in centuries. It only rings when a crime so intricate, so difficult to judge, appears before them.
+If you wish to learn the truth, head to the plaza in front of the Hall of Adjudication and see what the notice board has to offer.]],
           TextMapId = "Content_120201_12"
         },
         Content_120201_2 = {
-          ContentEN = "Enter Huaxu – Phase Ⅱ",
+          ContentEN = [[
+As you were leaving the Gritblight Expanse, you and Snow were struck by a curse at a street corner. Your memory ends there.
+It seems you and Zhiliu once had a fierce confrontation somewhere, over something unknown. Was it real, or merely a hallucination woven by your mind?]],
           TextMapId = "Content_120201_2"
         },
+        Content_120201_22 = {
+          ContentEN = [[
+After parting ways with Zhiliu, you and Snow must visit the Port of Parting Stars, the Hall of Incense, and the Hall of Craft to gather supplies for the Grand Incense Rite.
+The harbormaster says the premium silk is stored in a nearby warehouse. Find the right crate.]],
+          TextMapId = "Content_120201_22"
+        },
+        Content_120201_23 = {
+          ContentEN = "You found the sachet on a rooftop. Return it to its owner.",
+          TextMapId = "Content_120201_23"
+        },
+        Content_120201_24 = {
+          ContentEN = [[
+With the misunderstanding resolved, you receive the Argent Incense, leaving behind a small, heartwarming tale of kindness.
+Proceed to the Hall of Craft opposite the Hall of Incense and continue your preparations.]],
+          TextMapId = "Content_120201_24"
+        },
+        Content_120201_25 = {
+          ContentEN = [[
+With the Grand Incense Rite approaching, the Hall of Incense is crowded.
+A misunderstanding breaks out when a woman accuses you of jumping the queue. During the argument, a sudden gust snatches away her treasured limited-edition sachet. Be the bigger person and help her retrieve it.]],
+          TextMapId = "Content_120201_25"
+        },
         Content_120201_3 = {
-          ContentEN = "Take a rest",
+          ContentEN = "When you come to, you find yourself walking with Snow and Zhiliu through the bustling streets of Haojing. According to Snow, after the celebration of defeating Zhuyin, you all decided to visit Haojing — but before you could even start, you seemed unwell. At Snow's reminder, vague fragments of memory surface, though nothing clear.\nSeeing your pale face, Zhiliu suggests stopping by a pharmacy ahead to get some medicine and help you rest and recover before continuing your trip.",
           TextMapId = "Content_120201_3"
         },
         Content_120201_4 = {
-          ContentEN = "Buy medicine",
+          ContentEN = "The East Market is crowded with streams of visitors. Insisting you're fine, you send Snow ahead to save seats while you and Zhiliu go to Zesheng Pharmacy for the medicine.",
           TextMapId = "Content_120201_4"
         },
         Content_120201_5 = {
-          ContentEN = "Return to Snow with the medicine",
+          ContentEN = [[
+Zhiliu seems perfectly normal. Are you just being paranoid?
+The steaming medicine is now in hand. Time to head back to Snow.]],
           TextMapId = "Content_120201_5"
         },
         Content_120201_6 = {
-          ContentEN = "Pass the Hall of Adjudication on your way to the Hall of Founts",
+          ContentEN = "As you rest, a few passersby nearby are loudly discussing the Hall of Adjudication — and both you and Snow grow curious.\nAs it happens, Zhiliu has an errand for you regarding the Grand Incense Rite — one that will grant you a view from the Hall of Adjudication itself.\nAccompany Zhiliu to the Hall of Founts in the West District to collect a token.",
           TextMapId = "Content_120201_6"
         },
         Content_120201_7 = {
-          ContentEN = "Head to the Hall of Founts",
+          ContentEN = "As you rest, a few passersby nearby are loudly discussing the Hall of Adjudication — and both you and Snow grow curious.\nAs it happens, Zhiliu has an errand for you regarding the Grand Incense Rite — one that will grant you a view from the Hall of Adjudication itself.\nAccompany Zhiliu to the Hall of Founts in the West District to collect a token.",
           TextMapId = "Content_120201_7"
         },
         Content_120201_8 = {
-          ContentEN = "Deliver the goods",
+          ContentEN = [[
+After bidding Zhiliu farewell, you and Snow set out for the Port of Parting Stars, the Hall of Incense, and the Hall of Craft to gather supplies for the Grand Incense Rite.
+First, head to the Port of Parting Stars and find the port master.]],
           TextMapId = "Content_120201_8"
         },
         Content_120201_9 = {
-          ContentEN = "Head to the Hall of Incense",
+          ContentEN = [[
+After some trouble, you manage to snatch back the fine silk from a mischievous Wishen named Xiaoyao.
+Now head to the Hall of Incense in the inner city to continue your task.]],
           TextMapId = "Content_120201_9"
+        },
+        Content_120202_1 = {
+          ContentEN = "Not long ago, on a rain-soaked night, Kezhou faced Bi'an alone...",
+          TextMapId = "Content_120202_1"
+        },
+        Content_120202_10 = {
+          ContentEN = "With no time to think, you step in and fend off Lord Argent's strike.\nIn the split second before the blow lands, your power erupts without warning — and Lord Argent is wounded. With a pained cry, Lord Argent takes flight.\nBefore you can make sense of it, a blockade descends from above. Break through before you're surrounded.",
+          TextMapId = "Content_120202_10"
+        },
+        Content_120202_11 = {
+          ContentEN = [[
+You and Kezhou jump just in time, clearing the top floor of the Hall of Adjudication before the blockade seals shut.
+Thanks to your actions, the city is now on high alert. Bi'an and the Magistrates of Yingtian are patrolling the streets. Find a way out before they track you down.]],
+          TextMapId = "Content_120202_11"
+        },
+        Content_120202_12 = {
+          ContentEN = [[
+Thanks to your actions, the city is now on high alert. Bi'an and the Magistrates of Yingtian are patrolling the streets.
+You're running out of options. Just then, Xiaoyao appears, and offers to lead you out.]],
+          TextMapId = "Content_120202_12"
+        },
+        Content_120202_13 = {
+          ContentEN = [[
+The stairs to the top floor are tightly guarded.
+ Nearby, a mechapuppet rattles as if it's malfunctioning. The strange noise gives you an idea.]],
+          TextMapId = "Content_120202_13"
+        },
+        Content_120202_2 = {
+          ContentEN = "The Hall of Adjudication's bell rang out without warning. According to an artificer, it happens barely once a century — only when a case is too tangled to adjudicate.\nYou push through the crowd and spot a wanted poster on the notice board. The face staring back at you is the last one you expected: Kezhou.",
+          TextMapId = "Content_120202_2"
+        },
+        Content_120202_3 = {
+          ContentEN = [[
+You push through the crowd and spot a wanted poster on the notice board. The face staring back at you is the last one you expected: Kezhou.
+You need to talk to Snow, but not here. Find somewhere more private.]],
+          TextMapId = "Content_120202_3"
+        },
+        Content_120202_4 = {
+          ContentEN = [[
+Ever since this morning, a strange, unsettling feeling has been gnawing at you. You sense that finding Kezhou may be the key to unravelling it.
+The notice says the trial will be held at midday tomorrow. Make your preparations before then.]],
+          TextMapId = "Content_120202_4"
+        },
+        Content_120202_5 = {
+          ContentEN = [[
+With the Trial by Disputation drawing near, the person you've come to rescue is still being held at the top of the Hall of Adjudication.
+ Don't forget Zhiliu's request. Deliver the supplies for the Grand Incense Rite to the attendant inside first.]],
+          TextMapId = "Content_120202_5"
+        },
+        Content_120202_6 = {
+          ContentEN = [[
+With the Trial by Disputation drawing near, the person you've come to rescue is still being held at the top of the Hall of Adjudication.
+Using Zhiliu's request as a pretext, you slip inside. Now find a way up to the top floor.]],
+          TextMapId = "Content_120202_6"
+        },
+        Content_120202_7 = {
+          ContentEN = [[
+The stairs to the top floor are tightly guarded.
+With no way through, you decide to plan your next move with Snow.]],
+          TextMapId = "Content_120202_7"
+        },
+        Content_120202_8 = {
+          ContentEN = [[
+You tamper with the mechapuppet just enough to draw the guards' attention.
+While they're distracted, slip past and make your way up to the top floor.]],
+          TextMapId = "Content_120202_8"
+        },
+        Content_120202_9 = {
+          ContentEN = "After fighting your way through the cordons, you finally reach the top of the Hall of Adjudication — only to arrive just as Taihao manifests.\nKezhou makes a desperate strike at Lord Argent, but no mortal can stand against the divine. The blow hurls him back into the very spot where you and Snow are hiding, giving you away in an instant.\nWith no time to think, you step in and fend off Lord Argent's strike.",
+          TextMapId = "Content_120202_9"
+        },
+        Content_120203_1 = {
+          ContentEN = "With Xiaoyao's help, you slip into Youlai Alley, a place few would ever think to look. At last, you can catch your breath.",
+          TextMapId = "Content_120203_1"
+        },
+        Content_120203_10 = {
+          ContentEN = "After a fair bit of back-and-forth, you finally make contact with Su Yi, a spirited young woman Kezhou calls \"Great-aunt\".\nShe leads you to the Drifters' hidden base — the Outer Peaks.",
+          TextMapId = "Content_120203_10"
+        },
+        Content_120203_11 = {
+          ContentEN = "Uncle Tang says Kezhou is already back in the Outer Peaks. Go meet him.",
+          TextMapId = "Content_120203_11"
+        },
+        Content_120203_12 = {
+          ContentEN = "Whatever Kezhou pulled has Su Yi fuming, and you watch her give him a proper dressing-down. With a shameless grin, Kezhou asks you to put in a good word and smooth things over for him. You decide to...",
+          TextMapId = "Content_120203_12"
+        },
+        Content_120203_13 = {
+          ContentEN = "After agreeing on a plan, Fushu leaves first, heading back to Haojing to track down leads on the Wuqiongzang Sect.\nWhile you're staying in the Outer Peaks, you decide to help out with the day-to-day work — a good chance to get to know the place.",
+          TextMapId = "Content_120203_13"
+        },
+        Content_120203_14 = {
+          ContentEN = [[
+Uncle Tang has injured his leg, so you accompany Su Yi to gather herbs for his recovery.
+Near the herb fields, you run into Pei Chen and Lu Ye, still arguing over how to deal with the troublemaking Skywing Gull. Step in and show them what you can do.]],
+          TextMapId = "Content_120203_14"
+        },
+        Content_120203_15 = {
+          ContentEN = "With the Skywing Gull dealt with, the herb fields are finally safe to work in. Gather the herbs.",
+          TextMapId = "Content_120203_15"
+        },
+        Content_120203_16 = {
+          ContentEN = [[
+Uncle Tang has injured his leg, so you accompany Su Yi to gather herbs for his recovery.
+You've gathered the herbs. Deliver them to Uncle Tang.]],
+          TextMapId = "Content_120203_16"
+        },
+        Content_120203_17 = {
+          ContentEN = [[
+When you deliver the herbs, you also pick up the tools needed to calibrate the Tianluo Veil. Developed by the Jishu Sect, this device masks the Outer Peaks and blocks the Nine Chapters of Dafeng from locating it.
+Follow Su Yi and calibrate the Veil.]],
+          TextMapId = "Content_120203_17"
+        },
+        Content_120203_18 = {
+          ContentEN = [[
+When you deliver the herbs, you also pick up the tools needed to calibrate the Tianluo Veil. Developed by the Jishu Sect, this device masks the Outer Peaks and blocks the Nine Chapters of Dafeng from locating it.
+Follow Su Yi and calibrate the Veil.]],
+          TextMapId = "Content_120203_18"
+        },
+        Content_120203_19 = {
+          ContentEN = "Shen Han stops you and says she's worried about a boy named Zhu Pu. Lately, he's been training obsessively, as if something is weighing on him. You agree to check on him.",
+          TextMapId = "Content_120203_19"
+        },
+        Content_120203_2 = {
+          ContentEN = "You're safe for now. Talk to Kezhou and find out what's really going on.",
+          TextMapId = "Content_120203_2"
+        },
+        Content_120203_20 = {
+          ContentEN = "You find Zhu Pu in a cave, pushing himself to the limit. He won't listen to reason. Su Yi offers him a chance to \"prove himself\". Give him a few pointers.",
+          TextMapId = "Content_120203_20"
+        },
+        Content_120203_21 = {
+          ContentEN = "Zhu Pu can't last ten moves against you. Speak to him again.",
+          TextMapId = "Content_120203_21"
+        },
+        Content_120203_22 = {
+          ContentEN = "You find the Outer Peaks contact, but she keeps her distance and won't respond.\nAs Kezhou instructed, you'll need today's signal first — only then will she acknowledge you.",
+          TextMapId = "Content_120203_22"
+        },
+        Content_120203_23 = {
+          ContentEN = "You find the Outer Peaks contact, but she keeps her distance and won't respond.\nAs Kezhou instructed, you'll need today's signal first — only then will she acknowledge you.",
+          TextMapId = "Content_120203_23"
+        },
+        Content_120203_3 = {
+          ContentEN = [[
+As you're talking to Kezhou, you hear footsteps drawing near.
+ You can't tell who it is. Duck out of sight and see what happens.]],
+          TextMapId = "Content_120203_3"
+        },
+        Content_120203_4 = {
+          ContentEN = "It's Fushu. With the coast clear for now, talk things through with her and Kezhou.",
+          TextMapId = "Content_120203_4"
+        },
+        Content_120203_5 = {
+          ContentEN = "At Fushu's words, your memories begin to resurface...",
+          TextMapId = "Content_120203_5"
+        },
+        Content_120203_6 = {
+          ContentEN = [[
+At Fushu's words, your memories begin to resurface...
+After the battle with Zhuyin, Zhiliu knocks you out and spirits you away. There, she reveals a future foretold in three prophecies. Your clash with Lord Argent atop the Hall of Adjudication is the first of them.]],
+          TextMapId = "Content_120203_6"
+        },
+        Content_120203_7 = {
+          ContentEN = [[
+You must stop Zhiliu before the remaining two prophecies come to pass.
+After talking it over with Fushu and Kezhou, you head for the Outer Peaks, a secluded place to lie low from the citywide manhunt while you look for a way to lift Zhiliu's spell.
+Kezhou volunteers to draw the pursuers away and heads out ahead of you. Follow the trail markers and find the Outer Peaks contact.]],
+          TextMapId = "Content_120203_7"
+        },
+        Content_120203_8 = {
+          ContentEN = "You find the Outer Peaks contact, but she keeps her distance and won't respond.\nAs Kezhou instructed, you'll need today's signal first — only then will she acknowledge you.",
+          TextMapId = "Content_120203_8"
+        },
+        Content_120203_9 = {
+          ContentEN = "You have the signal. Return to the contact and speak with her.",
+          TextMapId = "Content_120203_9"
+        },
+        Content_120204_1 = {
+          ContentEN = "Without warning, an ominous commotion erupts outside. Go and see what's happening.",
+          TextMapId = "Content_120204_1"
+        },
+        Content_120204_10 = {
+          ContentEN = "Deep within the Labyrinth of Yanyin, you uncover an ancient secret — and the means to activate the Heavenwrought Cannon.\nWith that advantage in hand, return to the fight and swing the battle back in your favour.",
+          TextMapId = "Content_120204_10"
+        },
+        Content_120204_11 = {
+          ContentEN = "With you back in the fray, the tide turns at once. In moments, the Sentinels of Juntian begin to falter.",
+          TextMapId = "Content_120204_11"
+        },
+        Content_120204_12 = {
+          ContentEN = [[
+With you back in the fray, the tide turns at once. In moments, the Sentinels of Juntian begin to falter.
+Suddenly, a tremendous tremor shakes the city. The Magistrates of Yingtian withdraw in unison.
+The crisis is over. Go and speak with everyone.]],
+          TextMapId = "Content_120204_12"
+        },
+        Content_120204_13 = {
+          ContentEN = "As the battle ebbs away, the seal on your memories begins to loosen...",
+          TextMapId = "Content_120204_13"
+        },
+        Content_120204_14 = {
+          ContentEN = [[
+She used you to wound Taihao and draw the Sentinels of Juntian away. It was all part of Zhiliu's design.
+The board is almost set, waiting only for the pieces to fall into position. Meanwhile, atop the Hall of Adjudication, Zhiliu is plotting with Zhuyin...]],
+          TextMapId = "Content_120204_14"
+        },
+        Content_120204_2 = {
+          ContentEN = "The Outer Peaks' location has been exposed. The Magistrates of Yingtian are at the gates, and the Drifters are in danger.\nThere's no time to waste — help repel the first wave.",
+          TextMapId = "Content_120204_2"
+        },
+        Content_120204_3 = {
+          ContentEN = [[
+The Outer Peaks' location has been exposed. The Magistrates of Yingtian are at the gates, and the Drifters are in danger.
+Find the Drifters and assess the situation.]],
+          TextMapId = "Content_120204_3"
+        },
+        Content_120204_4 = {
+          ContentEN = "The Outer Peaks' location has been exposed. The Magistrates of Yingtian are at the gates — and their leader is Yuming, an old acquaintance of the Drifters.\nHe seems reluctant to turn his blade on old comrades, but Kezhou's attempt to reason with him only makes things worse. With weapons drawn, there's no choice but to fight.",
+          TextMapId = "Content_120204_4"
+        },
+        Content_120204_5 = {
+          ContentEN = "The Outer Peaks' location has been exposed. The Magistrates of Yingtian are at the gates — and their leader is Yuming, an old acquaintance of the Drifters.\nHe seems reluctant to turn his blade on old comrades, but Kezhou's attempt to reason with him only makes things worse. With weapons drawn, there's no choice but to fight.",
+          TextMapId = "Content_120204_5"
+        },
+        Content_120204_6 = {
+          ContentEN = "Kezhou is forced onto the back foot in his fight with Yuming, and Su Yi can only watch in mounting panic. Once she makes up her mind, she grabs you and drags you into an old Jishu Sect dungeon nearby, urging you to help her find another way.",
+          TextMapId = "Content_120204_6"
+        },
+        Content_120204_9 = {
+          ContentEN = "Deep within the Labyrinth of Yanyin, you uncover an ancient secret — and the means to activate the Heavenwrought Cannon.\nWith that advantage in hand, return to the fight and swing the battle back in your favour.",
+          TextMapId = "Content_120204_9"
+        },
+        Content_120205_1 = {
+          ContentEN = [[
+After the battle, you take some time to rest in the Outer Peaks.
+Fushu has hurried back, worried about how you're holding up. Talk to her.]],
+          TextMapId = "Content_120205_1"
+        },
+        Content_120205_10 = {
+          ContentEN = "The village chief points you in the right direction. Hermit Jingyuan lives in seclusion on the cliff beyond the broken bridge.",
+          TextMapId = "Content_120205_10"
+        },
+        Content_120205_11 = {
+          ContentEN = [[
+Hermit Jingyuan has been expecting you. She refuses to pass judgement on her disciple, but she does share a story from Zhiliu's childhood.
+When you're ready to lift Zhiliu's spell and undo the seal on your memories, speak to Hermit Jingyuan.]],
+          TextMapId = "Content_120205_11"
+        },
+        Content_120205_12 = {
+          ContentEN = "With Hermit Jingyuan's help, you finally uncover the last missing piece of your memories...",
+          TextMapId = "Content_120205_12"
+        },
+        Content_120205_13 = {
+          ContentEN = "The stage is set. Deep within the Taixu Mausoleum, the High Chancellor of Loongyuan nears her end...",
+          TextMapId = "Content_120205_13"
+        },
+        Content_120205_14 = {
+          ContentEN = "The stage is set. Deep within the Taixu Mausoleum, the High Chancellor of Loongyuan nears her end...",
+          TextMapId = "Content_120205_14"
+        },
+        Content_120205_15 = {
+          ContentEN = "The stage is set. Deep within the Taixu Mausoleum, the High Chancellor of Loongyuan nears her end...",
+          TextMapId = "Content_120205_15"
+        },
+        Content_120205_16 = {
+          ContentEN = "The stage is set. Deep within the Taixu Mausoleum, the High Chancellor of Loongyuan nears her end...",
+          TextMapId = "Content_120205_16"
+        },
+        Content_120205_17 = {
+          ContentEN = "Zhiliu's design to slay a god is already in motion. The fallout from Taihao and Zhuyin's clash is plunging Haojing into chaos.",
+          TextMapId = "Content_120205_17"
+        },
+        Content_120205_2 = {
+          ContentEN = "Night falls, and the Outer Peaks feels unusually quiet after the battle. Find Su Yi.",
+          TextMapId = "Content_120205_2"
+        },
+        Content_120205_3 = {
+          ContentEN = "You overhear a Drifter talking about you behind your back, and Su Yi rushing to your defence. Go and talk to her.",
+          TextMapId = "Content_120205_3"
+        },
+        Content_120205_4 = {
+          ContentEN = [[
+Though she hates to see you go, Su Yi accepts that you'll be leaving the Outer Peaks.
+She suggests taking Kezhou with you. After his furious row with Yuming, Kezhou has been missing all night.
+Unusually, Snow stays behind, saying she wants to ask Su Yi about an ancient secret. Go and listen in.]],
+          TextMapId = "Content_120205_4"
+        },
+        Content_120205_5 = {
+          ContentEN = [[
+Though she hates to see you go, Su Yi accepts that you'll be leaving the Outer Peaks.
+She suggests taking Kezhou with you. After his furious row with Yuming, Kezhou has been missing all night. Find him.]],
+          TextMapId = "Content_120205_5"
+        },
+        Content_120205_6 = {
+          ContentEN = "Kezhou tells you what happened to Yuming, Buxia, and him. You help him steady himself. Now return with Kezhou and decide what to do next with the others.",
+          TextMapId = "Content_120205_6"
+        },
+        Content_120205_7 = {
+          ContentEN = "Fushu brings word that a descendant of the Wuqiongzang Sect is living in seclusion in Jiaolan Village, on Haojing's western outskirts. It may be the key to lifting Zhiliu's spell.\nNo time to waste — head to Jiaolan Village.",
+          TextMapId = "Content_120205_7"
+        },
+        Content_120205_8 = {
+          ContentEN = [[
+Fushu brings word that a descendant of the Wuqiongzang Sect is living in seclusion in Jiaolan Village, on Haojing's western outskirts. It may be the key to lifting Zhiliu's spell.
+Ask the villagers what they know about the Wuqiongzang Sect.]],
+          TextMapId = "Content_120205_8"
+        },
+        Content_120205_9 = {
+          ContentEN = "Your enquiries go nowhere — you're even turned away at a few doors. Kezhou suggests going straight to the village chief for answers.",
+          TextMapId = "Content_120205_9"
+        },
+        Content_120206_1 = {
+          ContentEN = "Zhiliu's design to slay a god is already in motion. The fallout from Taihao and Zhuyin's clash is plunging Haojing into chaos.",
+          TextMapId = "Content_120206_1"
+        },
+        Content_120206_10 = {
+          ContentEN = "With Hermit Jingyuan's help, you learn the full extent of Zhiliu's plan — and how to stop her.\nHurry to the Hall of Adjudication before it's too late.",
+          TextMapId = "Content_120206_10"
+        },
+        Content_120206_11 = {
+          ContentEN = "With Hermit Jingyuan's help, you learn the full extent of Zhiliu's plan — and how to stop her.\nOn the road, you meet Su Yi. She offers to cover the rest so you can stay focused. Hurry to the Hall of Adjudication before it's too late.",
+          TextMapId = "Content_120206_11"
+        },
+        Content_120206_12 = {
+          ContentEN = "With Hermit Jingyuan's help, you learn the full extent of Zhiliu's plan — and how to stop her.\nThere's still time. Press on towards the depths of the Taixu Mausoleum.",
+          TextMapId = "Content_120206_12"
+        },
+        Content_120206_13 = {
+          ContentEN = "With Hermit Jingyuan's help, you learn the full extent of Zhiliu's plan — and how to stop her.\nThere's still time. Press on towards the depths of the Taixu Mausoleum.",
+          TextMapId = "Content_120206_13"
+        },
+        Content_120206_14 = {
+          ContentEN = [[
+Taihao and Zhuyin's clash is coming to a head. In the depths of the Taixu Mausoleum, you find Zhiliu at her breaking point.
+Desperate to die, she asks you to plunge your blade into her chest and complete the final sacrifice.]],
+          TextMapId = "Content_120206_14"
+        },
+        Content_120206_15 = {
+          ContentEN = [[
+Zhiliu begs you to end her life, but you refuse. You're here to prove that people can always forge a new path.
+Through Resonance, you draw into yourself the power the Covenant of Souls granted her.
+Sensing the intrusion, Taihao and Zhuyin, already on the brink of madness, turn on you as one. Defeat them, and prove your resolve.]],
+          TextMapId = "Content_120206_15"
+        },
+        Content_120206_16 = {
+          ContentEN = [[
+Zhiliu begs you to end her life, but you refuse. You're here to prove that people can always forge a new path.
+Through Resonance, you briefly draw into yourself the power the Covenant of Souls granted her.
+Sensing the intrusion, Taihao and Zhuyin, already on the brink of madness, turn on you as one. Defeat them, and prove your resolve.]],
+          TextMapId = "Content_120206_16"
+        },
+        Content_120206_17 = {
+          ContentEN = [[
+Zhiliu begs you to end her life, but you refuse. You're here to prove that people can always forge a new path.
+Through Resonance, you briefly draw into yourself the power the Covenant of Souls granted her.
+Sensing the intrusion, Taihao and Zhuyin, already on the brink of madness, turn on you as one. Defeat them, and prove your resolve.]],
+          TextMapId = "Content_120206_17"
+        },
+        Content_120206_18 = {
+          ContentEN = [[
+Zhiliu begs you to end her life, but you refuse. You're here to prove that people can always forge a new path.
+Through Resonance, you briefly draw into yourself the power the Covenant of Souls granted her.
+Sensing the intrusion, Taihao and Zhuyin, already on the brink of madness, turn on you as one. Defeat them, and prove your resolve.]],
+          TextMapId = "Content_120206_18"
+        },
+        Content_120206_19 = {
+          ContentEN = [[
+Zhiliu begs you to end her life, but you refuse. You're here to prove that people can always forge a new path.
+Through Resonance, you briefly draw into yourself the power the Covenant of Souls granted her.
+Sensing the intrusion, Taihao and Zhuyin, already on the brink of madness, turn on you as one. Defeat them, and prove your resolve.]],
+          TextMapId = "Content_120206_19"
+        },
+        Content_120206_2 = {
+          ContentEN = "Zhiliu's design to slay a god is already in motion. The fallout from Taihao and Zhuyin's clash is plunging Haojing into chaos.",
+          TextMapId = "Content_120206_2"
+        },
+        Content_120206_20 = {
+          ContentEN = "After you defeat the two Loong gods, the Jade of Equilibrium flares with blinding light, swallowing everything and carrying you into a hazy, unreal realm.",
+          TextMapId = "Content_120206_20"
+        },
+        Content_120206_21 = {
+          ContentEN = "After you defeat the two Loong gods, the Jade of Equilibrium flares with blinding light, swallowing everything and carrying you into a hazy, unreal realm.",
+          TextMapId = "Content_120206_21"
+        },
+        Content_120206_22 = {
+          ContentEN = "After you defeat the two Loong gods, the Jade of Equilibrium flares with blinding light, swallowing everything and carrying you into a hazy, unreal realm.",
+          TextMapId = "Content_120206_22"
+        },
+        Content_120206_23 = {
+          ContentEN = "After you defeat the two Loong gods, the Jade of Equilibrium flares with blinding light, swallowing everything and carrying you into a hazy, unreal realm.",
+          TextMapId = "Content_120206_23"
+        },
+        Content_120206_24 = {
+          ContentEN = "You reach the core of the Taixu Mausoleum and speak with the forebears, Ju and Yang. The displaced Nine Chapters of Dafeng are about to return to their rightful place.",
+          TextMapId = "Content_120206_24"
+        },
+        Content_120206_25 = {
+          ContentEN = "The displaced Nine Chapters of Dafeng are about to return to their rightful place — and you're the one who made it happen.\n Taihao offers their thanks, and a promise. Now speak with everyone.",
+          TextMapId = "Content_120206_25"
+        },
+        Content_120206_26 = {
+          ContentEN = "Zhiliu looks like she has something to say...",
+          TextMapId = "Content_120206_26"
+        },
+        Content_120206_27 = {
+          ContentEN = "Zhiliu asks you to take a walk with her.",
+          TextMapId = "Content_120206_27"
+        },
+        Content_120206_28 = {
+          ContentEN = "Zhiliu asks you to take a walk with her.",
+          TextMapId = "Content_120206_28"
+        },
+        Content_120206_3 = {
+          ContentEN = "Haojing is in chaos. Bi'an and Sable Bi'an have fallen into a frenzy, lashing out at civilians. A little girl is almost caught in the attack — until Su Yi arrives just in time to intervene.",
+          TextMapId = "Content_120206_3"
+        },
+        Content_120206_5 = {
+          ContentEN = "Haojing is in chaos. Bi'an and Sable Bi'an have fallen into a frenzy, lashing out at civilians. Repel them and protect the civilians.",
+          TextMapId = "Content_120206_5"
+        },
+        Content_120206_6 = {
+          ContentEN = "Haojing is in chaos. Bi'an and Sable Bi'an are still rampaging through the streets. This can't go on. Work out a plan.",
+          TextMapId = "Content_120206_6"
+        },
+        Content_120206_7 = {
+          ContentEN = "Su Yi receives a message from {nickname} and prepares to rush to their aid. Before she leaves, she insists on handing out the spare weapons she brought, so the residents can defend themselves.",
+          TextMapId = "Content_120206_7"
+        },
+        Content_120206_8 = {
+          ContentEN = "The Drifters' efforts to distribute weapons meet resistance at every turn, but Su Yi refuses to give up.",
+          TextMapId = "Content_120206_8"
+        },
+        Content_120206_9 = {
+          ContentEN = "With Hermit Jingyuan's help, you learn the full extent of Zhiliu's plan — and how to stop her.\nHurry to the Hall of Adjudication before it's too late.",
+          TextMapId = "Content_120206_9"
         },
         Content_200101_1 = {
           ContentEN = "There's a familiar figure reminiscent of Snow outside Sanctuary.",
@@ -4351,7 +4872,15 @@ We've chosen to keep Annie's death a secret.
         Content_200204_2 = {
           ContentEN = "Wells thinks you're capable, and he wants to complete a commission with you.",
           TextMapId = "Content_200204_2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Content_200204_3",
+    MaxKey = "Content_200309_6",
+    Loader = function()
+      return {
         Content_200204_3 = {
           ContentEN = [[
 You agreed to work with Wells on the commission.
@@ -4841,15 +5370,7 @@ Now's your chance to come up with a cool name for your new Phoxhunter team.]],
         Content_200227_1 = {
           ContentEN = "A new form of immersive theatre has made its way from Luca to Icelake. The Galea Theatre is looking for volunteers to take part in this artistic venture. If you have a moment, drop by and have a word with the troupe.",
           TextMapId = "Content_200227_1"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Content_200228_1",
-    MaxKey = "Cp2CharacterName30",
-    Loader = function()
-      return {
+        },
         Content_200228_1 = {
           ContentEN = "Lunosmith seems to have something to say. She calls out to you as you pass — best drop by when you have a moment.",
           TextMapId = "Content_200228_1"
@@ -5205,7 +5726,15 @@ Now's your chance to come up with a cool name for your new Phoxhunter team.]],
         Content_200309_6 = {
           ContentEN = "You have already examined three case records from around the same dates, yet none of the patients' details match those of Weisheng's wife — except for one... Could the patient's true identity actually be...? Think it through carefully before you decide.",
           TextMapId = "Content_200309_6"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Content_200310_1",
+    MaxKey = "DROP_QUEST_FeinaShuShu",
+    Loader = function()
+      return {
         Content_200310_1 = {
           ContentEN = "You hear someone sobbing nearby. Hurry over and see what is going on.",
           TextMapId = "Content_200310_1"
@@ -5584,6 +6113,180 @@ Separated from Mr Qiu, you meet a man named Kezhou. With your fates now intertwi
           ContentEN = "Fushu's mind was still clouded with doubt, and she failed to draw a response from the Aeolian Chime — leaving her unable to escape the Oblivion Rift. Thankfully, with the Wishen's help, she finally found her way back, and a long-forgotten memory stirred once more.\nNow that Fushu has rejoined you, there is no time to relax. Move on and find the way out of this place.",
           TextMapId = "Content_Nai03_01_01"
         },
+        Content__120301_1 = {
+          ContentEN = [[
+With the turmoil resolved, peace has finally returned to Huaxu. It might be a slight exaggeration to say that all of Haojing is singing your praises, but your time here has certainly been eventful. Now, at last, your stay is drawing to a peaceful close.
+Before boarding the airship back to Icelake, enjoy your final moments in Huaxu.]],
+          TextMapId = "Content__120301_1"
+        },
+        Content__120301_2 = {
+          ContentEN = [[
+You and Snow are enjoying a leisurely breakfast in the East Market when a sudden commotion erupts at the far end of a nearby alley.
+Snow's curiosity gets the better of her, and she dashes off, disappearing from sight in an instant. Better go and see what happened.]],
+          TextMapId = "Content__120301_2"
+        },
+        Content__120301_3 = {
+          ContentEN = "Drawn by the commotion, you and Snow head over to investigate and run into an old acquaintance, Su Yi, just as a prospective teammate turns her down. You learn from her that the Incense Proving is about to begin.\nIn the middle of your conversation, Su Yi's prized creation, Qingluan Type Ⅱ, is snatched by a thief right under your noses. Hurry and catch her!",
+          TextMapId = "Content__120301_3"
+        },
+        Content__120301_4 = {
+          ContentEN = "The thief takes on Su Yi's appearance in an attempt to fool you and slip away, but you see through her trick. Pin her down before she escapes.",
+          TextMapId = "Content__120301_4"
+        },
+        Content__120301_5 = {
+          ContentEN = "What begins as a clash ends with you gaining an unlikely ally: Demon Tabethe the Red Hand, as she calls herself. It takes some convincing, but she eventually agrees to return Qingluan Type Ⅱ to Su Yi.",
+          TextMapId = "Content__120301_5"
+        },
+        Content__120302_1 = {
+          ContentEN = "You helped Su Yi recover her stolen Qingluan Type Ⅱ and, by an unexpected twist of fate, ended up forming a three-person team with the thief, Demon Tabethe the Red Hand. With your team now complete, you can register for the Incense Proving.\nIt's getting late. Head to the registration desk and sign up.",
+          TextMapId = "Content__120302_1"
+        },
+        Content__120302_2 = {
+          ContentEN = "Your team, \"The Incensehunters\", is now official. Time to kick off your first match!",
+          TextMapId = "Content__120302_2"
+        },
+        Content__120302_3 = {
+          ContentEN = "Your team wins the preliminary round with ease. After talking Su Yi out of spending the entire break preparing for the next match, you decide to head back to the East Market and treat yourselves to some street food to celebrate your first win as a team.",
+          TextMapId = "Content__120302_3"
+        },
+        Content__120302_4 = {
+          ContentEN = [[
+Your team wins the preliminary round with ease. After talking Su Yi out of spending the entire break preparing for the next match, you decide to head back to the East Market and treat yourselves to some street food to celebrate your first win as a team.
+Take a photo to remember the moment.]],
+          TextMapId = "Content__120302_4"
+        },
+        Content__120302_5 = {
+          ContentEN = "Your team wins the preliminary round with ease. After talking Su Yi out of spending the entire break preparing for the next match, you decide to head back to the East Market and treat yourselves to some street food to celebrate your first win as a team.",
+          TextMapId = "Content__120302_5"
+        },
+        Content__120302_6 = {
+          ContentEN = "While strolling through the East Market, you happen upon a heated argument between a storyteller and an arrogant man over the Four Drifters. Something in his words seems to hit a sore spot for Su Yi. Go and check on her.",
+          TextMapId = "Content__120302_6"
+        },
+        Content__120303_1 = {
+          ContentEN = "The mech-kite Tabethe \"accidentally\" swiped has left Su Yi deep in thought. She decides to stay behind and examine it more closely, while you take the chance to look around. Once you're done, meet up with Su Yi at the registration desk.",
+          TextMapId = "Content__120303_1"
+        },
+        Content__120303_2 = {
+          ContentEN = "Just before the second match begins, the newly formed team, \"The Incensehunters\", faces its first crisis: Tabethe is nowhere to be found. Fortunately, Yuming arrives in time to help, though his reunion with Su Yi seems far from friendly. Deal with the situation and win the match.",
+          TextMapId = "Content__120303_2"
+        },
+        Content__120303_3 = {
+          ContentEN = [[
+Your team advances, but things still feel tense. In low spirits, Su Yi leaves to get some air.
+During her conversation with Yuming, one name keeps coming up: Su Muzhe, who appears to be at the heart of her frustration.
+Find Su Yi and check on her.]],
+          TextMapId = "Content__120303_3"
+        },
+        Content__120303_4 = {
+          ContentEN = "After speaking with you, some of the weight on Su Yi's mind seems to have lifted. The break is nearly over. Time to head back to the registration desk and get ready for the next match.",
+          TextMapId = "Content__120303_4"
+        },
+        Content__120303_5 = {
+          ContentEN = [[
+On your way back to the arena, you hear a child crying for help. The aftermath of Haojing's recent turmoil has yet to fully subside, and some Sable Bi'an are still attacking passers-by.
+Drive them back before anyone else gets hurt.]],
+          TextMapId = "Content__120303_5"
+        },
+        Content__120303_6 = {
+          ContentEN = "You've driven off the Sable Bi'an. Speak with the boy you rescued and make sure he is unharmed.",
+          TextMapId = "Content__120303_6"
+        },
+        Content__120304_1 = {
+          ContentEN = [[
+On the way back to the registration desk, you save a boy named An from a Sable Bi'an and meet his aunt, Xiaoxiang, who serves at the Ministry of Works. From her, you learn that An suffered a permanent leg injury in a terrible accident.
+After saying goodbye to the two of them, continue on to the registration desk.]],
+          TextMapId = "Content__120304_1"
+        },
+        Content__120304_2 = {
+          ContentEN = "Yuming and Su Yi finally clear up their misunderstanding. With Tabethe absent, he joins the team in her place. Now that you understand what Su Yi is striving for, lead the team to victory in the third match.",
+          TextMapId = "Content__120304_2"
+        },
+        Content__120304_3 = {
+          ContentEN = "The day's matches are over, but fresh trouble begins almost at once. Someone has reported Su Yi to the event organisers as a Drifter, and your team is suddenly caught up in the middle of it all. Fortunately, Zhiliu steps in before the situation can escalate any further. Gather your team and go speak with her.",
+          TextMapId = "Content__120304_3"
+        },
+        Content__120304_4 = {
+          ContentEN = "With many people around, Zhiliu held some things back. She asks you to stay behind for a private conversation. Hear her out.",
+          TextMapId = "Content__120304_4"
+        },
+        Content__120305_2 = {
+          ContentEN = [[
+The day's matches have come to an end. After everything that happened earlier, you can't help but worry about Su Yi.
+Before turning in for the night, go check on her.]],
+          TextMapId = "Content__120305_2"
+        },
+        Content__120305_3 = {
+          ContentEN = "To your surprise, Su Yi seems to be in a good mood, which only worries you more. Partway through your conversation, you hear an odd noise. Su Yi asks you to go and see what it is, though you suspect she is only using it as an excuse to change the subject.",
+          TextMapId = "Content__120305_3"
+        },
+        Content__120305_4 = {
+          ContentEN = "That's odd. Was this crate here earlier?",
+          TextMapId = "Content__120305_4"
+        },
+        Content__120305_5 = {
+          ContentEN = "Uncle Tang is hiding inside the crate. What is he doing here? Talk to him and find out.",
+          TextMapId = "Content__120305_5"
+        },
+        Content__120305_6 = {
+          ContentEN = "It turns out Uncle Tang was hiding there because he was worried about Su Yi. Surprising as that is, he is not the source of the noise. Go and check the Outer Peaks Entrance next.",
+          TextMapId = "Content__120305_6"
+        },
+        Content__120306_1 = {
+          ContentEN = "Yuming brings news that Qingluan Type Ⅱ has been damaged, and the whole thing reeks of conspiracy. There is something worrying about Su Yi, too.\nAfter a night's rest, the fourth match of the Incense Proving is about to begin. Head to the registration desk and meet up with your teammates.",
+          TextMapId = "Content__120306_1"
+        },
+        Content__120306_2 = {
+          ContentEN = "Tabethe finally reappears in a cloud of smoke, and it turns out her disappearance was simply down to an upset stomach. Maybe Huaxu's chillies ought to come with a warning label. Su Yi stayed up all night repairing and rebuilding Qingluan Type Ⅱ, and now she seems unusually distant.\nWin the fourth match first, then check on her.",
+          TextMapId = "Content__120306_2"
+        },
+        Content__120306_3 = {
+          ContentEN = "Su Yi's sudden desperation to win backfires badly. Qingluan Type Ⅱ explodes during the match, catching everyone off guard, and your team is declared defeated. The crowd is in uproar, and everything quickly descends into chaos. Leave the arena before the situation gets worse.",
+          TextMapId = "Content__120306_3"
+        },
+        Content__120306_4 = {
+          ContentEN = [[
+Xiaoxiang shows up again. She reveals that she was one of the victims of the disaster caused by Su Muzhe years ago. Her accusations against the Drifters cut deeply, leaving Su Yi with nothing to say.
+Go with Su Yi to An's home and see for yourself the lasting injury An suffered when Miemeng ran out of control.]],
+          TextMapId = "Content__120306_4"
+        },
+        Content__120307_1 = {
+          ContentEN = [[
+At An's home, you unexpectedly run into Fushu, who has come to treat An. After speaking with her, Su Yi finally begins to work through what has been weighing on her and sees a way forward.
+Although you lost the fourth match, you still have a chance to turn things around. Head back to the registration desk and meet up with your teammates.]],
+          TextMapId = "Content__120307_1"
+        },
+        Content__120307_2 = {
+          ContentEN = [[
+Although Su Yi was unable to make it back in time, you are still fighting for the same goal, just on different fronts.
+Pull yourselves together and win the second-chance round.]],
+          TextMapId = "Content__120307_2"
+        },
+        Content__120307_3 = {
+          ContentEN = "Su Yi stayed up through the night to finish a special gift for An. Go to his home and deliver it to him in person.",
+          TextMapId = "Content__120307_3"
+        },
+        Content__120307_4 = {
+          ContentEN = "While delivering the prosthetic leg to An, Su Yi inadvertently learns of Xiaoxiang's scheme.\nAt the arena, a Terracolossus suddenly emerges from the mountainside, bringing the match to a halt. You manage to stop it from attacking the contestants, but Yuming is trapped inside the dungeon. You need to find the person behind all this and rescue Yuming as quickly as possible.\nFollow Qingluan Type Ⅱ and track down Xiaoxiang.",
+          TextMapId = "Content__120307_4"
+        },
+        Content__120307_5 = {
+          ContentEN = "Su Yi and An manage to convince Xiaoxiang, and you obtain the key to the dungeon. Enter the dungeon and rescue Yuming.",
+          TextMapId = "Content__120307_5"
+        },
+        Content__120307_6 = {
+          ContentEN = [[
+The crisis has been resolved, and everyone has seen what you did. People's opinions towards the Drifters are beginning to change.
+Zhiliu announces that your team has taken first place and claimed overall victory.
+Yet amid the celebration, one person is nowhere to be seen. Find Su Yi and see what she is doing.]],
+          TextMapId = "Content__120307_6"
+        },
+        Content__120308_1 = {
+          ContentEN = [[
+With the Incense Proving now over, the time has come for you to leave Huaxu.
+Looking back on all that has happened, you have seen the changes in Huaxu with your own eyes and met friends of all kinds along the way. Before you go, take a moment to bid them farewell.]],
+          TextMapId = "Content__120308_1"
+        },
         Convert_AddResources = {
           ContentEN = "Add materials first",
           TextMapId = "Convert_AddResources"
@@ -5593,7 +6296,7 @@ Separated from Mr Qiu, you meet a man named Kezhou. With your fates now intertwi
           TextMapId = "Convert_ClearAll"
         },
         Convert_Popup_Content = {
-          ContentEN = "Consume the following items to reforge <H> %s</>?",
+          ContentEN = "Consume the following items to reforge <H>%s</>?",
           TextMapId = "Convert_Popup_Content"
         },
         Convert_ResourcesFull = {
@@ -5723,15 +6426,7 @@ Separated from Mr Qiu, you meet a man named Kezhou. With your fates now intertwi
         Cp2CharacterName30 = {
           ContentEN = "PA System",
           TextMapId = "Cp2CharacterName30"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Cp2CharacterName31",
-    MaxKey = "DUNGEON_NAME_80601",
-    Loader = function()
-      return {
+        },
         Cp2CharacterName31 = {
           ContentEN = "Captive Elysian Soldier",
           TextMapId = "Cp2CharacterName31"
@@ -5939,7 +6634,15 @@ Separated from Mr Qiu, you meet a man named Kezhou. With your fates now intertwi
         DROP_QUEST_FeinaShuShu = {
           ContentEN = "The Rat Family",
           TextMapId = "DROP_QUEST_FeinaShuShu"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "DROP_QUEST_FeinaWait",
+    MaxKey = "DUNGEON_NAME_90501",
+    Loader = function()
+      return {
         DROP_QUEST_FeinaWait = {
           ContentEN = "Wait",
           TextMapId = "DROP_QUEST_FeinaWait"
@@ -6531,15 +7234,7 @@ Separated from Mr Qiu, you meet a man named Kezhou. With your fates now intertwi
         DUNGEON_NAME_80601 = {
           ContentEN = "Tactical Shooting Ⅰ",
           TextMapId = "DUNGEON_NAME_80601"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "DUNGEON_NAME_80602",
-    MaxKey = "DailyTaskDes_10000111",
-    Loader = function()
-      return {
+        },
         DUNGEON_NAME_80602 = {
           ContentEN = "Tactical Shooting Ⅱ",
           TextMapId = "DUNGEON_NAME_80602"
@@ -6747,7 +7442,15 @@ Separated from Mr Qiu, you meet a man named Kezhou. With your fates now intertwi
         DUNGEON_NAME_90501 = {
           ContentEN = "Mediation (Ⅰ)",
           TextMapId = "DUNGEON_NAME_90501"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "DUNGEON_NAME_90502",
+    MaxKey = "Description_110104_1",
+    Loader = function()
+      return {
         DUNGEON_NAME_90502 = {
           ContentEN = "Mediation (Ⅱ)",
           TextMapId = "DUNGEON_NAME_90502"
@@ -7339,15 +8042,7 @@ Separated from Mr Qiu, you meet a man named Kezhou. With your fates now intertwi
         DailyTaskDes_10000111 = {
           ContentEN = "Obtain <Highlight>1</> fish",
           TextMapId = "DailyTaskDes_10000111"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "DailyTaskDes_10000112",
-    MaxKey = "Description_120102_4",
-    Loader = function()
-      return {
+        },
         DailyTaskDes_10000112 = {
           ContentEN = "Forge <Highlight>1</> time",
           TextMapId = "DailyTaskDes_10000112"
@@ -7549,7 +8244,15 @@ Separated from Mr Qiu, you meet a man named Kezhou. With your fates now intertwi
         Description_110104_1 = {
           ContentEN = "Advance deeper into the Fortress",
           TextMapId = "Description_110104_1"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Description_110104_2",
+    MaxKey = "Description_120104_7_1",
+    Loader = function()
+      return {
         Description_110104_2 = {
           ContentEN = "Head to the Engine Room",
           TextMapId = "Description_110104_2"
@@ -8141,15 +8844,7 @@ Separated from Mr Qiu, you meet a man named Kezhou. With your fates now intertwi
         Description_120102_4 = {
           ContentEN = "Enter the Tidesong Cavern",
           TextMapId = "Description_120102_4"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Description_120102_5",
-    MaxKey = "Description_20020605_2",
-    Loader = function()
-      return {
+        },
         Description_120102_5 = {
           ContentEN = "Repel the Sable Bi'an",
           TextMapId = "Description_120102_5"
@@ -8357,7 +9052,15 @@ Separated from Mr Qiu, you meet a man named Kezhou. With your fates now intertwi
         Description_120104_7_1 = {
           ContentEN = "Break the rocks blocking the path",
           TextMapId = "Description_120104_7_1"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Description_120104_7_2",
+    MaxKey = "Description_120303_6",
+    Loader = function()
+      return {
         Description_120104_7_2 = {
           ContentEN = "Destroy the three Foul Buds to purify the area",
           TextMapId = "Description_120104_7_2"
@@ -8659,39 +9362,55 @@ Separated from Mr Qiu, you meet a man named Kezhou. With your fates now intertwi
           TextMapId = "Description_120114_9_1"
         },
         Description_120201_1 = {
-          ContentEN = "Enter the dark chamber",
+          ContentEN = "Travel to Haojing via map",
           TextMapId = "Description_120201_1"
         },
         Description_120201_10 = {
-          ContentEN = "Go to the Hall of Craft to fetch the censer",
+          ContentEN = "Find a staff member from the Hall of Craft",
           TextMapId = "Description_120201_10"
         },
         Description_120201_11 = {
-          ContentEN = "Fetch the censer",
+          ContentEN = "Collect the Censer",
           TextMapId = "Description_120201_11"
         },
         Description_120201_12 = {
-          ContentEN = "Check the bulletin board and see what's going on",
+          ContentEN = "Head to the plaza in front of the Hall of Adjudication",
           TextMapId = "Description_120201_12"
         },
         Description_120201_2 = {
-          ContentEN = "Enter Huaxu – Phase Ⅱ",
+          ContentEN = "Travel to Haojing",
           TextMapId = "Description_120201_2"
         },
+        Description_120201_22 = {
+          ContentEN = "Collect the premium silk",
+          TextMapId = "Description_120201_22"
+        },
+        Description_120201_23 = {
+          ContentEN = "Return the sachet to the woman",
+          TextMapId = "Description_120201_23"
+        },
+        Description_120201_24 = {
+          ContentEN = "Head to the Hall of Craft",
+          TextMapId = "Description_120201_24"
+        },
+        Description_120201_25 = {
+          ContentEN = "Find the sachet that blew away",
+          TextMapId = "Description_120201_25"
+        },
         Description_120201_3 = {
-          ContentEN = "Take a rest",
+          ContentEN = "Find a place to rest",
           TextMapId = "Description_120201_3"
         },
         Description_120201_4 = {
-          ContentEN = "Buy medicine",
+          ContentEN = "Buy medicine at Zesheng Pharmacy",
           TextMapId = "Description_120201_4"
         },
         Description_120201_5 = {
-          ContentEN = "Return to Snow with the medicine",
+          ContentEN = "Return to Snow",
           TextMapId = "Description_120201_5"
         },
         Description_120201_6 = {
-          ContentEN = "Pass the Hall of Adjudication on your way to the Hall of Founts",
+          ContentEN = "Head to the Hall of Founts",
           TextMapId = "Description_120201_6"
         },
         Description_120201_7 = {
@@ -8699,12 +9418,536 @@ Separated from Mr Qiu, you meet a man named Kezhou. With your fates now intertwi
           TextMapId = "Description_120201_7"
         },
         Description_120201_8 = {
-          ContentEN = "Deliver the goods",
+          ContentEN = "Find the port master",
           TextMapId = "Description_120201_8"
         },
         Description_120201_9 = {
           ContentEN = "Head to the Hall of Incense",
           TextMapId = "Description_120201_9"
+        },
+        Description_120202_1 = {
+          ContentEN = "Defeat the Bi'an",
+          TextMapId = "Description_120202_1"
+        },
+        Description_120202_10 = {
+          ContentEN = "Destroy the Basalt Sentinels and break through the cordon",
+          TextMapId = "Description_120202_10"
+        },
+        Description_120202_11 = {
+          ContentEN = "Escape the Hall of Adjudication",
+          TextMapId = "Description_120202_11"
+        },
+        Description_120202_12 = {
+          ContentEN = "Follow Xiaoyao",
+          TextMapId = "Description_120202_12"
+        },
+        Description_120202_13 = {
+          ContentEN = "\"Fix\" the mechapuppet",
+          TextMapId = "Description_120202_13"
+        },
+        Description_120202_2 = {
+          ContentEN = "Check the notice board",
+          TextMapId = "Description_120202_2"
+        },
+        Description_120202_3 = {
+          ContentEN = "Talk to Snow under the tree",
+          TextMapId = "Description_120202_3"
+        },
+        Description_120202_4 = {
+          ContentEN = "Wait until tomorrow at midday",
+          TextMapId = "Description_120202_4"
+        },
+        Description_120202_5 = {
+          ContentEN = "Speak with the attendant",
+          TextMapId = "Description_120202_5"
+        },
+        Description_120202_6 = {
+          ContentEN = "Find a way to the top floor",
+          TextMapId = "Description_120202_6"
+        },
+        Description_120202_7 = {
+          ContentEN = "Talk to Snow and make a plan",
+          TextMapId = "Description_120202_7"
+        },
+        Description_120202_8 = {
+          ContentEN = "Sneak to the top floor of the Hall of Adjudication",
+          TextMapId = "Description_120202_8"
+        },
+        Description_120202_9 = {
+          ContentEN = "Rescue Kezhou",
+          TextMapId = "Description_120202_9"
+        },
+        Description_120203_1 = {
+          ContentEN = "Thank Xiaoyao",
+          TextMapId = "Description_120203_1"
+        },
+        Description_120203_10 = {
+          ContentEN = "Head deeper into the Outer Peaks",
+          TextMapId = "Description_120203_10"
+        },
+        Description_120203_11 = {
+          ContentEN = "Speak with Kezhou",
+          TextMapId = "Description_120203_11"
+        },
+        Description_120203_12 = {
+          ContentEN = "Speak with Su Yi",
+          TextMapId = "Description_120203_12"
+        },
+        Description_120203_13 = {
+          ContentEN = "Follow Su Yi",
+          TextMapId = "Description_120203_13"
+        },
+        Description_120203_14 = {
+          ContentEN = "Teach the Skywing Gull a lesson",
+          TextMapId = "Description_120203_14"
+        },
+        Description_120203_15 = {
+          ContentEN = "Collect herbs",
+          TextMapId = "Description_120203_15"
+        },
+        Description_120203_16 = {
+          ContentEN = "Deliver the herbs to Uncle Tang",
+          TextMapId = "Description_120203_16"
+        },
+        Description_120203_17 = {
+          ContentEN = "Calibrate the Tianluo Veil",
+          TextMapId = "Description_120203_17"
+        },
+        Description_120203_18 = {
+          ContentEN = "Calibrate the Tianluo Veil",
+          TextMapId = "Description_120203_18"
+        },
+        Description_120203_19 = {
+          ContentEN = "Check on Zhu Pu",
+          TextMapId = "Description_120203_19"
+        },
+        Description_120203_2 = {
+          ContentEN = "Speak with Kezhou",
+          TextMapId = "Description_120203_2"
+        },
+        Description_120203_20 = {
+          ContentEN = "Offer Zhu Pu some pointers",
+          TextMapId = "Description_120203_20"
+        },
+        Description_120203_21 = {
+          ContentEN = "Speak with Zhu Pu",
+          TextMapId = "Description_120203_21"
+        },
+        Description_120203_22 = {
+          ContentEN = "Find today's signal",
+          TextMapId = "Description_120203_22"
+        },
+        Description_120203_23 = {
+          ContentEN = "Operate the device outside the cave",
+          TextMapId = "Description_120203_23"
+        },
+        Description_120203_3 = {
+          ContentEN = "Hide",
+          TextMapId = "Description_120203_3"
+        },
+        Description_120203_4 = {
+          ContentEN = "Speak with Fushu",
+          TextMapId = "Description_120203_4"
+        },
+        Description_120203_5 = {
+          ContentEN = "Break the seal",
+          TextMapId = "Description_120203_5"
+        },
+        Description_120203_6 = {
+          ContentEN = "Speak with Fushu",
+          TextMapId = "Description_120203_6"
+        },
+        Description_120203_7 = {
+          ContentEN = "Look for the Outer Peaks contact",
+          TextMapId = "Description_120203_7"
+        },
+        Description_120203_8 = {
+          ContentEN = "Find today's signal",
+          TextMapId = "Description_120203_8"
+        },
+        Description_120203_9 = {
+          ContentEN = "Speak with the contact",
+          TextMapId = "Description_120203_9"
+        },
+        Description_120204_1 = {
+          ContentEN = "Investigate the commotion outside",
+          TextMapId = "Description_120204_1"
+        },
+        Description_120204_10 = {
+          ContentEN = "Defeat the Sentinels of Juntian with the Heavenwrought Cannon",
+          TextMapId = "Description_120204_10"
+        },
+        Description_120204_11 = {
+          ContentEN = "Speak with everyone",
+          TextMapId = "Description_120204_11"
+        },
+        Description_120204_12 = {
+          ContentEN = "Speak with everyone",
+          TextMapId = "Description_120204_12"
+        },
+        Description_120204_13 = {
+          ContentEN = "Break the seal",
+          TextMapId = "Description_120204_13"
+        },
+        Description_120204_14 = {
+          ContentEN = "Enter the Taixu Mausoleum",
+          TextMapId = "Description_120204_14"
+        },
+        Description_120204_2 = {
+          ContentEN = "Defeat the Magistrates of Yingtian",
+          TextMapId = "Description_120204_2"
+        },
+        Description_120204_3 = {
+          ContentEN = "Assess the situation",
+          TextMapId = "Description_120204_3"
+        },
+        Description_120204_4 = {
+          ContentEN = "Defeat Yuming",
+          TextMapId = "Description_120204_4"
+        },
+        Description_120204_5 = {
+          ContentEN = "Defeat Yuming",
+          TextMapId = "Description_120204_5"
+        },
+        Description_120204_6 = {
+          ContentEN = "Speak with Su Yi",
+          TextMapId = "Description_120204_6"
+        },
+        Description_120204_9 = {
+          ContentEN = "Join the battle",
+          TextMapId = "Description_120204_9"
+        },
+        Description_120205_1 = {
+          ContentEN = "Speak with Fushu",
+          TextMapId = "Description_120205_1"
+        },
+        Description_120205_10 = {
+          ContentEN = "Search for Hermit Jingyuan",
+          TextMapId = "Description_120205_10"
+        },
+        Description_120205_11 = {
+          ContentEN = "Lift Zhiliu's spell",
+          TextMapId = "Description_120205_11"
+        },
+        Description_120205_12 = {
+          ContentEN = "Break the seal",
+          TextMapId = "Description_120205_12"
+        },
+        Description_120205_13 = {
+          ContentEN = "Press deeper into the Taixu Mausoleum",
+          TextMapId = "Description_120205_13"
+        },
+        Description_120205_14 = {
+          ContentEN = "Press deeper into the Taixu Mausoleum",
+          TextMapId = "Description_120205_14"
+        },
+        Description_120205_15 = {
+          ContentEN = "Press deeper into the Taixu Mausoleum",
+          TextMapId = "Description_120205_15"
+        },
+        Description_120205_16 = {
+          ContentEN = "Press deeper into the Taixu Mausoleum",
+          TextMapId = "Description_120205_16"
+        },
+        Description_120205_17 = {
+          ContentEN = "A storm is coming",
+          TextMapId = "Description_120205_17"
+        },
+        Description_120205_2 = {
+          ContentEN = "Look for Su Yi",
+          TextMapId = "Description_120205_2"
+        },
+        Description_120205_3 = {
+          ContentEN = "Speak with Su Yi",
+          TextMapId = "Description_120205_3"
+        },
+        Description_120205_4 = {
+          ContentEN = "Find out what Snow wants to ask Su Yi",
+          TextMapId = "Description_120205_4"
+        },
+        Description_120205_5 = {
+          ContentEN = "Look for Kezhou",
+          TextMapId = "Description_120205_5"
+        },
+        Description_120205_6 = {
+          ContentEN = "Return and discuss a plan with everyone",
+          TextMapId = "Description_120205_6"
+        },
+        Description_120205_7 = {
+          ContentEN = "Head to Jiaolan Village",
+          TextMapId = "Description_120205_7"
+        },
+        Description_120205_8 = {
+          ContentEN = "Gather information about the Wuqiongzang Sect",
+          TextMapId = "Description_120205_8"
+        },
+        Description_120205_9 = {
+          ContentEN = "Speak with the village chief",
+          TextMapId = "Description_120205_9"
+        },
+        Description_120206_1 = {
+          ContentEN = "A storm is coming",
+          TextMapId = "Description_120206_1"
+        },
+        Description_120206_10 = {
+          ContentEN = "Head to the Hall of Adjudication",
+          TextMapId = "Description_120206_10"
+        },
+        Description_120206_11 = {
+          ContentEN = "Head to the Hall of Adjudication",
+          TextMapId = "Description_120206_11"
+        },
+        Description_120206_12 = {
+          ContentEN = "Enter the Taixu Mausoleum",
+          TextMapId = "Description_120206_12"
+        },
+        Description_120206_13 = {
+          ContentEN = "Make it to the end of the Taixu Mausoleum",
+          TextMapId = "Description_120206_13"
+        },
+        Description_120206_14 = {
+          ContentEN = "Make it to the end of the Taixu Mausoleum",
+          TextMapId = "Description_120206_14"
+        },
+        Description_120206_15 = {
+          ContentEN = "Defeat the two Loong gods",
+          TextMapId = "Description_120206_15"
+        },
+        Description_120206_16 = {
+          ContentEN = "Defeat the two Loong gods",
+          TextMapId = "Description_120206_16"
+        },
+        Description_120206_17 = {
+          ContentEN = "Defeat the two Loong gods",
+          TextMapId = "Description_120206_17"
+        },
+        Description_120206_18 = {
+          ContentEN = "Defeat the two Loong gods",
+          TextMapId = "Description_120206_18"
+        },
+        Description_120206_19 = {
+          ContentEN = "Defeat the two Loong gods",
+          TextMapId = "Description_120206_19"
+        },
+        Description_120206_2 = {
+          ContentEN = "A storm is coming",
+          TextMapId = "Description_120206_2"
+        },
+        Description_120206_20 = {
+          ContentEN = "???",
+          TextMapId = "Description_120206_20"
+        },
+        Description_120206_21 = {
+          ContentEN = "???",
+          TextMapId = "Description_120206_21"
+        },
+        Description_120206_22 = {
+          ContentEN = "???",
+          TextMapId = "Description_120206_22"
+        },
+        Description_120206_23 = {
+          ContentEN = "???",
+          TextMapId = "Description_120206_23"
+        },
+        Description_120206_24 = {
+          ContentEN = "Speak with Taihao",
+          TextMapId = "Description_120206_24"
+        },
+        Description_120206_25 = {
+          ContentEN = "Speak with everyone",
+          TextMapId = "Description_120206_25"
+        },
+        Description_120206_26 = {
+          ContentEN = "Speak with Zhiliu",
+          TextMapId = "Description_120206_26"
+        },
+        Description_120206_27 = {
+          ContentEN = "Take a Walk with Zhiliu",
+          TextMapId = "Description_120206_27"
+        },
+        Description_120206_28 = {
+          ContentEN = "Take a Walk with Zhiliu",
+          TextMapId = "Description_120206_28"
+        },
+        Description_120206_3 = {
+          ContentEN = "Repel the Bi'an",
+          TextMapId = "Description_120206_3"
+        },
+        Description_120206_5 = {
+          ContentEN = "Repel the Bi'an and protect the civilians",
+          TextMapId = "Description_120206_5"
+        },
+        Description_120206_6 = {
+          ContentEN = "Discuss a plan",
+          TextMapId = "Description_120206_6"
+        },
+        Description_120206_7 = {
+          ContentEN = "Distribute the weapons",
+          TextMapId = "Description_120206_7"
+        },
+        Description_120206_8 = {
+          ContentEN = "Rally the people",
+          TextMapId = "Description_120206_8"
+        },
+        Description_120206_9 = {
+          ContentEN = "Head to the Hall of Adjudication",
+          TextMapId = "Description_120206_9"
+        },
+        Description_120301_1 = {
+          ContentEN = "Head to the Eastern District",
+          TextMapId = "Description_120301_1"
+        },
+        Description_120301_2 = {
+          ContentEN = "See what's going on",
+          TextMapId = "Description_120301_2"
+        },
+        Description_120301_3 = {
+          ContentEN = "Catch the thief",
+          TextMapId = "Description_120301_3"
+        },
+        Description_120301_4 = {
+          ContentEN = "Pin down the thief",
+          TextMapId = "Description_120301_4"
+        },
+        Description_120301_5 = {
+          ContentEN = "Retrieve Qingluan Type Ⅱ",
+          TextMapId = "Description_120301_5"
+        },
+        Description_120302_1 = {
+          ContentEN = "Head to the registration desk",
+          TextMapId = "Description_120302_1"
+        },
+        Description_120302_2 = {
+          ContentEN = "Complete the preliminary round",
+          TextMapId = "Description_120302_2"
+        },
+        Description_120302_3 = {
+          ContentEN = "Head to the Eastern District",
+          TextMapId = "Description_120302_3"
+        },
+        Description_120302_4 = {
+          ContentEN = "Take a group photo",
+          TextMapId = "Description_120302_4"
+        },
+        Description_120302_5 = {
+          ContentEN = "Look around the East Market",
+          TextMapId = "Description_120302_5"
+        },
+        Description_120302_6 = {
+          ContentEN = "Speak with Su Yi",
+          TextMapId = "Description_120302_6"
+        },
+        Description_120303_1 = {
+          ContentEN = "Head to the registration desk",
+          TextMapId = "Description_120303_1"
+        },
+        Description_120303_2 = {
+          ContentEN = "Win the second match",
+          TextMapId = "Description_120303_2"
+        },
+        Description_120303_3 = {
+          ContentEN = "Speak with Su Yi",
+          TextMapId = "Description_120303_3"
+        },
+        Description_120303_4 = {
+          ContentEN = "Head to the registration desk",
+          TextMapId = "Description_120303_4"
+        },
+        Description_120303_5 = {
+          ContentEN = "Repel the Sable Bi'an",
+          TextMapId = "Description_120303_5"
+        },
+        Description_120303_6 = {
+          ContentEN = "Speak with the boy you rescued",
+          TextMapId = "Description_120303_6"
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Description_120304_1",
+    MaxKey = "Description_200230_3",
+    Loader = function()
+      return {
+        Description_120304_1 = {
+          ContentEN = "Head to the registration desk",
+          TextMapId = "Description_120304_1"
+        },
+        Description_120304_2 = {
+          ContentEN = "Complete the third match",
+          TextMapId = "Description_120304_2"
+        },
+        Description_120304_3 = {
+          ContentEN = "Speak with Zhiliu",
+          TextMapId = "Description_120304_3"
+        },
+        Description_120304_4 = {
+          ContentEN = "Speak with Zhiliu alone",
+          TextMapId = "Description_120304_4"
+        },
+        Description_120305_2 = {
+          ContentEN = "Look for Su Yi",
+          TextMapId = "Description_120305_2"
+        },
+        Description_120305_3 = {
+          ContentEN = "Investigate the strange noise",
+          TextMapId = "Description_120305_3"
+        },
+        Description_120305_4 = {
+          ContentEN = "Attack the strange crate",
+          TextMapId = "Description_120305_4"
+        },
+        Description_120305_5 = {
+          ContentEN = "Speak with Uncle Tang",
+          TextMapId = "Description_120305_5"
+        },
+        Description_120305_6 = {
+          ContentEN = "Investigate the Outer Peaks Entrance",
+          TextMapId = "Description_120305_6"
+        },
+        Description_120306_1 = {
+          ContentEN = "Head to the registration desk",
+          TextMapId = "Description_120306_1"
+        },
+        Description_120306_2 = {
+          ContentEN = "Win the fourth match",
+          TextMapId = "Description_120306_2"
+        },
+        Description_120306_3 = {
+          ContentEN = "Leave the arena",
+          TextMapId = "Description_120306_3"
+        },
+        Description_120306_4 = {
+          ContentEN = "Go to An's home",
+          TextMapId = "Description_120306_4"
+        },
+        Description_120307_1 = {
+          ContentEN = "Head to the registration desk",
+          TextMapId = "Description_120307_1"
+        },
+        Description_120307_2 = {
+          ContentEN = "Win the second-chance round",
+          TextMapId = "Description_120307_2"
+        },
+        Description_120307_3 = {
+          ContentEN = "Go to An's home",
+          TextMapId = "Description_120307_3"
+        },
+        Description_120307_4 = {
+          ContentEN = "Follow Qingluan Type Ⅱ and track down Xiaoxiang",
+          TextMapId = "Description_120307_4"
+        },
+        Description_120307_5 = {
+          ContentEN = "Defeat Terracolossus",
+          TextMapId = "Description_120307_5"
+        },
+        Description_120307_6 = {
+          ContentEN = "Look for Su Yi",
+          TextMapId = "Description_120307_6"
+        },
+        Description_120308_1 = {
+          ContentEN = "Leave Huaxu",
+          TextMapId = "Description_120308_1"
         },
         Description_200101_1 = {
           ContentEN = "There's a familiar figure outside Sanctuary...",
@@ -8951,15 +10194,7 @@ Complete any Phoxhunter Commission
         Description_20020605_2 = {
           ContentEN = "Check the window of Buck's house",
           TextMapId = "Description_20020605_2"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Description_20020605_3",
-    MaxKey = "Description_200309_1",
-    Loader = function()
-      return {
+        },
         Description_20020605_3 = {
           ContentEN = "Deduce the cause of Buck's blackout",
           TextMapId = "Description_20020605_3"
@@ -9435,7 +10670,15 @@ Complete any Phoxhunter Commission
         Description_200230_3 = {
           ContentEN = "Fix the old phonograph",
           TextMapId = "Description_200230_3"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Description_200230_4",
+    MaxKey = "Description_Nai02_03_02",
+    Loader = function()
+      return {
         Description_200230_4 = {
           ContentEN = "Speak with the soldier",
           TextMapId = "Description_200230_4"
@@ -9759,15 +11002,7 @@ Complete any Phoxhunter Commission
         Description_200309_1 = {
           ContentEN = "Visit Twilight Ravine to see what's going on",
           TextMapId = "Description_200309_1"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Description_200309_2",
-    MaxKey = "DynQuest_EastTakePhoto_Des",
-    Loader = function()
-      return {
+        },
         Description_200309_2 = {
           ContentEN = "Ask Fushu at the Hall of Ephemerality about Weisheng's wife",
           TextMapId = "Description_200309_2"
@@ -10243,7 +11478,15 @@ Complete any Phoxhunter Commission
         Description_Nai02_03_02 = {
           ContentEN = "Continue in the canoe",
           TextMapId = "Description_Nai02_03_02"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Description_Nai02_03_02_01",
+    MaxKey = "DynQuest_KuangkengRunning_Title",
+    Loader = function()
+      return {
         Description_Nai02_03_02_01 = {
           ContentEN = "Use a Combat Skill",
           TextMapId = "Description_Nai02_03_02_01"
@@ -10430,6 +11673,14 @@ Complete any Phoxhunter Commission
           ContentEN = "Filthoid Attack",
           TextMapId = "DynQuest_BalconyHuishoulaixi_Title"
         },
+        DynQuest_BianFight_Des = {
+          ContentEN = "Defeat the Bi'an",
+          TextMapId = "DynQuest_BianFight_Des"
+        },
+        DynQuest_BianFight_Title = {
+          ContentEN = "Bi'an Attack",
+          TextMapId = "DynQuest_BianFight_Title"
+        },
         DynQuest_Bian_Des = {
           ContentEN = "Repel the Sable Bi'an",
           TextMapId = "DynQuest_Bian_Des"
@@ -10550,6 +11801,14 @@ Complete any Phoxhunter Commission
           ContentEN = "Brainstorm Blitz",
           TextMapId = "DynQuest_Dati_Title"
         },
+        DynQuest_Dream_Des = {
+          ContentEN = "Light the incense censer",
+          TextMapId = "DynQuest_Dream_Des"
+        },
+        DynQuest_Dream_Title = {
+          ContentEN = "Incense Wonder",
+          TextMapId = "DynQuest_Dream_Title"
+        },
         DynQuest_EastPet_Des = {
           ContentEN = "Defeat the enemies and rescue the Geniemon",
           TextMapId = "DynQuest_EastPet_Des"
@@ -10561,15 +11820,7 @@ Complete any Phoxhunter Commission
         DynQuest_EastTakePhoto_Des = {
           ContentEN = "Help the tourist take a photo",
           TextMapId = "DynQuest_EastTakePhoto_Des"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "DynQuest_EastTakePhoto_Title",
-    MaxKey = "EntryTitle_201024",
-    Loader = function()
-      return {
+        },
         DynQuest_EastTakePhoto_Title = {
           ContentEN = "Photo at EverSpring",
           TextMapId = "DynQuest_EastTakePhoto_Title"
@@ -10669,6 +11920,30 @@ Complete any Phoxhunter Commission
         DynQuest_Gift_Title = {
           ContentEN = "Matters of the Heart",
           TextMapId = "DynQuest_Gift_Title"
+        },
+        DynQuest_Haiou_Des = {
+          ContentEN = "Drive off the nearby Skywing Gulls",
+          TextMapId = "DynQuest_Haiou_Des"
+        },
+        DynQuest_Haiou_Title = {
+          ContentEN = "Get Some Spuds",
+          TextMapId = "DynQuest_Haiou_Title"
+        },
+        DynQuest_HaojingFish_Des = {
+          ContentEN = "Help the fisherman",
+          TextMapId = "DynQuest_HaojingFish_Des"
+        },
+        DynQuest_HaojingFish_Title = {
+          ContentEN = "The Forgetful Fisherman",
+          TextMapId = "DynQuest_HaojingFish_Title"
+        },
+        DynQuest_HaojingPet_Des = {
+          ContentEN = "Defeat the enemies and rescue the Geniemon",
+          TextMapId = "DynQuest_HaojingPet_Des"
+        },
+        DynQuest_HaojingPet_Title = {
+          ContentEN = "Rescue the Geniemon",
+          TextMapId = "DynQuest_HaojingPet_Title"
         },
         DynQuest_Helpfisher_Des = {
           ContentEN = "Help the fisherman",
@@ -11005,7 +12280,15 @@ Complete any Phoxhunter Commission
         DynQuest_KuangkengRunning_Title = {
           ContentEN = "Fastest Dad in Town",
           TextMapId = "DynQuest_KuangkengRunning_Title"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "DynQuest_KuangkengSonghuo_Des",
+    MaxKey = "EntryTitle_408014",
+    Loader = function()
+      return {
         DynQuest_KuangkengSonghuo_Des = {
           ContentEN = "Help Lunodeliverer with her job",
           TextMapId = "DynQuest_KuangkengSonghuo_Des"
@@ -11037,6 +12320,22 @@ Complete any Phoxhunter Commission
         DynQuest_Protectjiaojiao_Title = {
           ContentEN = "Lunoxplorer's Small Request",
           TextMapId = "DynQuest_Protectjiaojiao_Title"
+        },
+        DynQuest_RaceBetting_Des = {
+          ContentEN = "Supervise the children's training",
+          TextMapId = "DynQuest_RaceBetting_Des"
+        },
+        DynQuest_RaceBetting_Title = {
+          ContentEN = "Children on the Run",
+          TextMapId = "DynQuest_RaceBetting_Title"
+        },
+        DynQuest_RiverChest_Des = {
+          ContentEN = "Help the girl find her chest",
+          TextMapId = "DynQuest_RiverChest_Des"
+        },
+        DynQuest_RiverChest_Title = {
+          ContentEN = "Gold, Silver, and Bronze",
+          TextMapId = "DynQuest_RiverChest_Title"
         },
         DynQuest_SewClearsew_Des = {
           ContentEN = "Clear the sewer blockage",
@@ -11117,6 +12416,14 @@ Complete any Phoxhunter Commission
         DynQuest_TakePhoto_Title = {
           ContentEN = "A Snapshot to Remember",
           TextMapId = "DynQuest_TakePhoto_Title"
+        },
+        DynQuest_Tongzhen_Des = {
+          ContentEN = "Help the child find the treasure",
+          TextMapId = "DynQuest_Tongzhen_Des"
+        },
+        DynQuest_Tongzhen_Title = {
+          ContentEN = "Father's Treasure",
+          TextMapId = "DynQuest_Tongzhen_Title"
         },
         DynQuest_TrafficElevator_Des = {
           ContentEN = "Ride the lift to the lower level",
@@ -11209,6 +12516,22 @@ Complete any Phoxhunter Commission
         DynQuest_Xunxiang_Title = {
           ContentEN = "Spoilt for Choice",
           TextMapId = "DynQuest_Xunxiang_Title"
+        },
+        DynQuest_Yingtian_Des = {
+          ContentEN = "Defeat the Magistrate of Yingtian",
+          TextMapId = "DynQuest_Yingtian_Des"
+        },
+        DynQuest_Yingtian_Title = {
+          ContentEN = "Magistrate of Yingtian Attack",
+          TextMapId = "DynQuest_Yingtian_Title"
+        },
+        DynQuest_Zhentan_Des = {
+          ContentEN = "Help the shopkeeper investigate the clerk",
+          TextMapId = "DynQuest_Zhentan_Des"
+        },
+        DynQuest_Zhentan_Title = {
+          ContentEN = "Born Suspicious",
+          TextMapId = "DynQuest_Zhentan_Title"
         },
         DynQuest_Zhiyao_Des = {
           ContentEN = "Help the teacher keep an eye on the students",
@@ -11360,15 +12683,7 @@ Complete any Phoxhunter Commission
         EntryTitle_201024 = {
           ContentEN = "Blues",
           TextMapId = "EntryTitle_201024"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "EntryTitle_201025",
-    MaxKey = "EventPortal_UnlockTips_103004",
-    Loader = function()
-      return {
+        },
         EntryTitle_201025 = {
           ContentEN = "Lynn",
           TextMapId = "EntryTitle_201025"
@@ -11764,7 +13079,15 @@ Complete any Phoxhunter Commission
         EntryTitle_408014 = {
           ContentEN = "Crowsong Hollow",
           TextMapId = "EntryTitle_408014"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "EntryTitle_408015",
+    MaxKey = "Event_Tab_103007",
+    Loader = function()
+      return {
         EntryTitle_408015 = {
           ContentEN = "Zhuyin Altar",
           TextMapId = "EntryTitle_408015"
@@ -11985,8 +13308,12 @@ Complete any Phoxhunter Commission
           ContentEN = "Mistwharf – Veiled in Fragrant Haze: Finale",
           TextMapId = "Episode_1201_06"
         },
+        Episode_1202 = {
+          ContentEN = "Where the Wind Rises",
+          TextMapId = "Episode_1202"
+        },
         Episode_1203 = {
-          ContentEN = "The Grand Incense Rite",
+          ContentEN = "The Incense Proving",
           TextMapId = "Episode_1203"
         },
         Episode_Feina = {
@@ -12065,6 +13392,10 @@ Complete any Phoxhunter Commission
           ContentEN = "Gritblight Expanse",
           TextMapId = "Episode_Region_Huaxu_Fil_Trans"
         },
+        Episode_Region_Huaxu_Haojing = {
+          ContentEN = "Haojing",
+          TextMapId = "Episode_Region_Huaxu_Haojing"
+        },
         Episode_Region_Huaxu_Hos = {
           ContentEN = "Hall of Ephemerality",
           TextMapId = "Episode_Region_Huaxu_Hos"
@@ -12072,6 +13403,10 @@ Complete any Phoxhunter Commission
         Episode_Region_Huaxu_Hos_Trans = {
           ContentEN = "Hall of Ephemerality",
           TextMapId = "Episode_Region_Huaxu_Hos_Trans"
+        },
+        Episode_Region_Huaxu_Jlc = {
+          ContentEN = "Jiaolan Village",
+          TextMapId = "Episode_Region_Huaxu_Jlc"
         },
         Episode_Region_Huaxu_Nai01 = {
           ContentEN = "Oblivion Rift",
@@ -12113,6 +13448,10 @@ Complete any Phoxhunter Commission
           ContentEN = "Starwharf",
           TextMapId = "Episode_Region_Huaxu_Por_Trans"
         },
+        Episode_Region_Huaxu_Reb = {
+          ContentEN = "Outer Peaks",
+          TextMapId = "Episode_Region_Huaxu_Reb"
+        },
         Episode_Region_Huaxu_Shi = {
           ContentEN = "Haze Market",
           TextMapId = "Episode_Region_Huaxu_Shi"
@@ -12129,6 +13468,14 @@ Complete any Phoxhunter Commission
           ContentEN = "EverSpring",
           TextMapId = "Episode_Region_Huaxu_Spr_Trans"
         },
+        Episode_Region_Huaxu_Sub = {
+          ContentEN = "Eastern Outskirts",
+          TextMapId = "Episode_Region_Huaxu_Sub"
+        },
+        Episode_Region_Huaxu_YYG = {
+          ContentEN = "Labyrinth of Yanyin",
+          TextMapId = "Episode_Region_Huaxu_YYG"
+        },
         Episode_Region_Huaxu_Yanjindu = {
           ContentEN = "Mistwharf",
           TextMapId = "Episode_Region_Huaxu_Yanjindu"
@@ -12140,6 +13487,10 @@ Complete any Phoxhunter Commission
         Episode_Region_None_Trans = {
           ContentEN = "HUAXU",
           TextMapId = "Episode_Region_None_Trans"
+        },
+        Episode_Region_YLX = {
+          ContentEN = "Youlai Alley",
+          TextMapId = "Episode_Region_YLX"
         },
         Equals = {ContentEN = "=", TextMapId = "Equals"},
         Escape = {ContentEN = "Esc", TextMapId = "Escape"},
@@ -12162,15 +13513,7 @@ Complete any Phoxhunter Commission
         EventPortal_UnlockTips_103004 = {
           ContentEN = "Continue with the Main Story to unlock",
           TextMapId = "EventPortal_UnlockTips_103004"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "EventPortal_UnlockTips_103012",
-    MaxKey = "FeinaEvent_DungeonFinish_Reward",
-    Loader = function()
-      return {
+        },
         EventPortal_UnlockTips_103012 = {
           ContentEN = "Complete \"On a Gentle Breeze\" to unlock",
           TextMapId = "EventPortal_UnlockTips_103012"
@@ -12186,6 +13529,26 @@ Complete any Phoxhunter Commission
         EventPortal_UnlockTips_Common = {
           ContentEN = "Complete prerequisite quests to unlock",
           TextMapId = "EventPortal_UnlockTips_Common"
+        },
+        EventProgress_01 = {
+          ContentEN = "Preliminary Trial",
+          TextMapId = "EventProgress_01"
+        },
+        EventProgress_02 = {
+          ContentEN = "Second Trial",
+          TextMapId = "EventProgress_02"
+        },
+        EventProgress_03 = {
+          ContentEN = "Selection Trial",
+          TextMapId = "EventProgress_03"
+        },
+        EventProgress_04 = {
+          ContentEN = "Final Trial",
+          TextMapId = "EventProgress_04"
+        },
+        EventProgress_05 = {
+          ContentEN = "The Championship",
+          TextMapId = "EventProgress_05"
         },
         Event_102001_Quest01_Tips = {
           ContentEN = "Progress through the main story to complete this chapter's quests",
@@ -12324,6 +13687,10 @@ In this moment of uncertainty, the self-proclaimed "Demon King of Light" burst o
         Event_Des_103013 = {
           ContentEN = "Complete the special Side Quests \"Go, Geniemons!\" and \"Tutorial: Covert Commissions\" to earn rewards, including \"Thought: Truffle and Filbert\".",
           TextMapId = "Event_Des_103013"
+        },
+        Event_Des_103014 = {
+          ContentEN = "Those who had long slept without a care were jolted awake by a sudden thunderclap. They realised the storm on the horizon would bring upheaval to their thousand-year-old realm. Change first took the stage at the long-awaited Grand Incense Rite.\n \n At the Incense Proving — held to reassure the people of Huaxu and to determine the future of the realm — there stands a familiar figure clad in jade-green...",
+          TextMapId = "Event_Des_103014"
         },
         Event_Des_103016 = {
           ContentEN = [[
@@ -12564,7 +13931,15 @@ Event Rules:
         Event_Tab_103007 = {
           ContentEN = "Roaring Drills",
           TextMapId = "Event_Tab_103007"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Event_Tab_103008",
+    MaxKey = "GACHA_Toast_Nona",
+    Loader = function()
+      return {
         Event_Tab_103008 = {
           ContentEN = "Guiding Luno",
           TextMapId = "Event_Tab_103008"
@@ -12588,6 +13963,10 @@ Event Rules:
         Event_Tab_103013 = {
           ContentEN = "Tummy Full, Hands Full",
           TextMapId = "Event_Tab_103013"
+        },
+        Event_Tab_103014 = {
+          ContentEN = "The Incense Proving",
+          TextMapId = "Event_Tab_103014"
         },
         Event_Tab_103016 = {
           ContentEN = "Great Chaos of Mechapuppets",
@@ -12670,7 +14049,7 @@ Event Rules:
           TextMapId = "Event_Tab_ZhiliuSkinTrialEvent"
         },
         Event_TargetDes_112001 = {
-          ContentEN = "Total time in Regional Co-op (min):",
+          ContentEN = "Total time in Regional Co-op (min): ",
           TextMapId = "Event_TargetDes_112001"
         },
         Event_TargetDes_11400101 = {
@@ -12726,7 +14105,7 @@ Event Rules:
           TextMapId = "Event_TargetDes_11400113"
         },
         Event_TargetDes_11400114 = {
-          ContentEN = "Complete any Covert Commission <H>12</> times",
+          ContentEN = "Complete any Commission <H>15</> times",
           TextMapId = "Event_TargetDes_11400114"
         },
         Event_TargetDes_11400115 = {
@@ -12828,6 +14207,10 @@ Event Rules:
         Event_Title_103013 = {
           ContentEN = "Tummy Full, Hands Full",
           TextMapId = "Event_Title_103013"
+        },
+        Event_Title_103014 = {
+          ContentEN = "The Incense Proving",
+          TextMapId = "Event_Title_103014"
         },
         Event_Title_103016 = {
           ContentEN = "Great Chaos of Mechapuppets",
@@ -13020,15 +14403,7 @@ Event Rules:
         FeinaEvent_DungeonFinish_Reward = {
           ContentEN = "Rewards",
           TextMapId = "FeinaEvent_DungeonFinish_Reward"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "FeinaEvent_DungeonFinish_Title",
-    MaxKey = "GRADEUP_4102_06",
-    Loader = function()
-      return {
+        },
         FeinaEvent_DungeonFinish_Title = {
           ContentEN = "Stage Complete",
           TextMapId = "FeinaEvent_DungeonFinish_Title"
@@ -13145,6 +14520,10 @@ Event Rules:
           ContentEN = "Mistwharf",
           TextMapId = "FishingRegion_Name_3"
         },
+        FishingRegion_Name_4 = {
+          ContentEN = "Haojing",
+          TextMapId = "FishingRegion_Name_4"
+        },
         FishingSpot_Name_10010101 = {
           ContentEN = "Fishing Spot: Purgatorio Island",
           TextMapId = "FishingSpot_Name_10010101"
@@ -13177,9 +14556,21 @@ Event Rules:
           ContentEN = "Fishing Spot: EverSpring",
           TextMapId = "FishingSpot_Name_10411001"
         },
+        FishingSpot_Name_10450201 = {
+          ContentEN = "Fishing Spot: Western District",
+          TextMapId = "FishingSpot_Name_10450201"
+        },
+        FishingSpot_Name_10450501 = {
+          ContentEN = "Fishing Spot: Eastern Outskirts",
+          TextMapId = "FishingSpot_Name_10450501"
+        },
         FishingSpot_Name_10490101 = {
           ContentEN = "Fishing Spot: The Hidden Loong",
           TextMapId = "FishingSpot_Name_10490101"
+        },
+        FishingSpot_Name_10550101 = {
+          ContentEN = "Fishing Spot: Youlai Alley",
+          TextMapId = "FishingSpot_Name_10550101"
         },
         Five = {ContentEN = "5.0", TextMapId = "Five"},
         FlyLicense_NotEnough_Tips = {
@@ -13339,7 +14730,15 @@ Event Rules:
         GACHA_Toast_Nona = {
           ContentEN = "No available banners",
           TextMapId = "GACHA_Toast_Nona"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "GACHA_WARNING_MUSTUP",
+    MaxKey = "Guide_Message_ModArchiveUI_11",
+    Loader = function()
+      return {
         GACHA_WARNING_MUSTUP = {
           ContentEN = "<Title>About Chrono Drop Rates</>\n The base drop rate for a 5★ character is <highlight>0.6%</>, with an overall chance (including guarantees) of <highlight>1.6%</>. You are guaranteed the featured 5★ character, <highlight>&Char&</>, within <highlight>90</> Retraces.\n The base drop rate for a 4★ character or weapon is <highlight>5.1%</> (<highlight>2.55%</> for 4★ characters and <highlight>2.55%</> for 4★ weapons). The overall chance to obtain a 4★ character or weapon (including guarantees) is <highlight>13.0%</>. You are guaranteed a 4★ or higher character or a 4★ weapon within every <highlight>10</> Retraces. When a guarantee is triggered, there is a <highlight>99.4%</> chance to obtain a 4★ character or weapon, and a <highlight>0.6%</> chance to obtain a 5★ character.\n \n <Title>About Duplicates</>\n For a 5★ character you already own: on the 2nd to 7th duplicate, you'll receive the character's Intron ×<highlight>1</> and Brilliant Grit ×<highlight>50</>; from the 8th duplicate onward, you'll receive Brilliant Grit ×<highlight>125</>.\n For a 4★ character you already own: on the 2nd to 7th duplicate, you'll receive the character's Intron ×<highlight>1</> and Brilliant Grit ×<highlight>10</>; from the 8th duplicate onward, you'll receive Brilliant Grit ×<highlight>25</>.\n Every 4★ weapon obtained from this banner comes with Brilliant Grit ×<highlight>5</>; every 3★ weapon comes with Pristine Grit ×<highlight>20</>.\n \n For any Destined Chrono, Retrace counts without a 5★ character drop will continue to accumulate within this banner type. This count is tracked separately and does not carry over to other banners. \n Once this banner ends, the event-exclusive character <highlight>&Char&</> will not be available in the Standard Chrono \"Sojourns Entwined.\"\n The Destined Chrono banner opens only when a character is featured for the first time.",
           TextMapId = "GACHA_WARNING_MUSTUP"
@@ -13489,11 +14888,11 @@ When there is/are 1/2 enemy/enemies within 20 metres, the mutual conversion poin
           TextMapId = "GRADEUP_1503_06"
         },
         GRADEUP_1504_01 = {
-          ContentEN = "When the [Artificer Greatsword] or [Artificer Cannon] deals damage, triggers an additional instance of AoE Lumino DMG at the target's location. This effect can trigger once every 0.5s.",
+          ContentEN = "Maximum [Overheat] stacks increased to 200. Gain 2 [Overheat] stacks for each round consumed by [Artificer Armament].",
           TextMapId = "GRADEUP_1504_01"
         },
         GRADEUP_1504_02 = {
-          ContentEN = "[Artificer Supply] additionally increases Skill DMG.",
+          ContentEN = "While [Artificer Armament] is active, [Artificer Cannon] automatically performs 4 ranged attacks every 5 seconds and grants the user 8 stacks of [Overheat]. These attacks do not consume [Artificer Ammo].",
           TextMapId = "GRADEUP_1504_02"
         },
         GRADEUP_1504_03 = {
@@ -13501,7 +14900,9 @@ When there is/are 1/2 enemy/enemies within 20 metres, the mutual conversion poin
           TextMapId = "GRADEUP_1504_03"
         },
         GRADEUP_1504_04 = {
-          ContentEN = "Each bullet fired by the [Artificer Arsenal] restores HP to the [Artificer Shield]. While the Shield is active, damage taken is reduced.",
+          ContentEN = [[
+When dealing Skill DMG, there is a chance to trigger Bonus Effect: Lumino based on the Trigger Probability of the equipped ranged weapon.
+When triggered, this effect pulls targets within a radius of #2 towards the centre of the affected area. This effect can trigger at most once per second.]],
           TextMapId = "GRADEUP_1504_04"
         },
         GRADEUP_1504_05 = {
@@ -13509,7 +14910,7 @@ When there is/are 1/2 enemy/enemies within 20 metres, the mutual conversion poin
           TextMapId = "GRADEUP_1504_05"
         },
         GRADEUP_1504_06 = {
-          ContentEN = "For 10s after casting the Ultimate, each bullet fired by the [Artificer Arsenal] restores 1 bullet, and the Overheat cap increases to 600.",
+          ContentEN = "Each stack of [Artificer Supply] additionally increases All-Element Penetration by #3. When an [Artificer Drone] is launched, two extra drones are generated, each dealing 50% of the original DMG.",
           TextMapId = "GRADEUP_1504_06"
         },
         GRADEUP_1601_01 = {
@@ -13751,7 +15152,7 @@ When [Hyperthermal Purgejet] deals damage, inflicts an effect to the target that
           TextMapId = "GRADEUP_3202_05"
         },
         GRADEUP_3202_06 = {
-          ContentEN = "All Weapon and Skill DMG (excluding [Spinblades] and [Laceration]) detonates 2 stacks of [Laceration].",
+          ContentEN = "All Pyro Weapon and Skill DMG (excluding [Spinblades] and [Laceration]) detonates 2 stacks of [Laceration] and deals Pyro Damage 2 times. While [Spinblades] is active, additionally grants #6 PEN stats.",
           TextMapId = "GRADEUP_3202_06"
         },
         GRADEUP_3301_01 = {
@@ -13827,15 +15228,7 @@ The transferred [Electric Charge] retains its remaining duration, allowing the e
         GRADEUP_4102_06 = {
           ContentEN = "When within [Four Realms Align]'s range, increases Zhiliu's PEN stats by #5, and gains Skill DMG Boost from [Fortune's Clarity].",
           TextMapId = "GRADEUP_4102_06"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "GRADEUP_4201_01",
-    MaxKey = "HomePianoAcc_1010020",
-    Loader = function()
-      return {
+        },
         GRADEUP_4201_01 = {
           ContentEN = "While in [Xuanjiao Manifest], each [Precipitous Thunderfall] grants 1 extra [Reverse Scale]. Using [Starstorm Descent] also increases Weapon Attack Range by #1 and Skill Range by #2 for self and allies, lasting #3s.",
           TextMapId = "GRADEUP_4201_01"
@@ -14162,7 +15555,15 @@ Press to select an Act]],
         Guide_Message_ModArchiveUI_11 = {
           ContentEN = "Select <H>Demon Wedge Codex</>",
           TextMapId = "Guide_Message_ModArchiveUI_11"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Guide_Message_ModArchiveUI_11_Pad",
+    MaxKey = "HomePianoDes_1010010",
+    Loader = function()
+      return {
         Guide_Message_ModArchiveUI_11_Pad = {
           ContentEN = "Press to select <H>Demon Wedge Codex</>",
           TextMapId = "Guide_Message_ModArchiveUI_11_Pad"
@@ -14639,15 +16040,7 @@ Press to select an Act]],
         HomePianoAcc_1010020 = {
           ContentEN = "Source: Purchase from Lunoeggy at EverSpring after completing the main quest \"Sacrilege to Bring Down Heaven\"",
           TextMapId = "HomePianoAcc_1010020"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "HomePianoAcc_1011001",
-    MaxKey = "HuaXu_Event_Des_10200108",
-    Loader = function()
-      return {
+        },
         HomePianoAcc_1011001 = {
           ContentEN = "Source: Purchase from Lunoeggy at Silverpeace Square",
           TextMapId = "HomePianoAcc_1011001"
@@ -14967,7 +16360,15 @@ Press to select an Act]],
         HomePianoDes_1010010 = {
           ContentEN = "An old dream lingers; upon waking, a century had passed.",
           TextMapId = "HomePianoDes_1010010"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "HomePianoDes_1010011",
+    MaxKey = "MAINUIGUIDE_TITLE_ABYSS_3",
+    Loader = function()
+      return {
         HomePianoDes_1010011 = {
           ContentEN = "Where Heaven's net runs thin, the cunning slip through.",
           TextMapId = "HomePianoDes_1010011"
@@ -15447,15 +16848,7 @@ Press to select an Act]],
         HuaXu_Event_Des_10200108 = {
           ContentEN = "Complete limited-time challenges in Mistwharf",
           TextMapId = "HuaXu_Event_Des_10200108"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "HuaXu_Event_Des_10200109",
-    MaxKey = "MAINUIGUIDE_TITLE_SpecialSideStoryUI",
-    Loader = function()
-      return {
+        },
         HuaXu_Event_Des_10200109 = {
           ContentEN = "Solve Jishu Sect mechanisms in Mistwharf",
           TextMapId = "HuaXu_Event_Des_10200109"
@@ -15760,7 +17153,15 @@ Press to select an Act]],
         MAINUIGUIDE_TITLE_ABYSS_3 = {
           ContentEN = "Victory & Defeat",
           TextMapId = "MAINUIGUIDE_TITLE_ABYSS_3"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "MAINUIGUIDE_TITLE_ABYSS_4",
+    MaxKey = "MECHANISM_NAME_49600",
+    Loader = function()
+      return {
         MAINUIGUIDE_TITLE_ABYSS_4 = {
           ContentEN = "Next Challenge",
           TextMapId = "MAINUIGUIDE_TITLE_ABYSS_4"
@@ -16240,15 +17641,7 @@ Press to select an Act]],
         MAINUIGUIDE_TITLE_SpecialSideStoryUI = {
           ContentEN = "Special Side Quest",
           TextMapId = "MAINUIGUIDE_TITLE_SpecialSideStoryUI"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "MAINUIGUIDE_TITLE_SurvivalMini",
-    MaxKey = "MESSAGE_LOADING_42_PC",
-    Loader = function()
-      return {
+        },
         MAINUIGUIDE_TITLE_SurvivalMini = {
           ContentEN = "Commission: Exploration ∞",
           TextMapId = "MAINUIGUIDE_TITLE_SurvivalMini"
@@ -16565,7 +17958,15 @@ Press to select an Act]],
         MECHANISM_NAME_49600 = {
           ContentEN = "Prize Chest",
           TextMapId = "MECHANISM_NAME_49600"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "MESSAGE_100005",
+    MaxKey = "MESSAGE_TITLE_LOADING_14_PC",
+    Loader = function()
+      return {
         MESSAGE_100005 = {
           ContentEN = "Danger! Retreat immediately!",
           TextMapId = "MESSAGE_100005"
@@ -17076,15 +18477,7 @@ Smash: Further weakens target's Stance.]],
         MESSAGE_LOADING_42_PC = {
           ContentEN = "Visit the Lunosmith to forge weapons and other items.",
           TextMapId = "MESSAGE_LOADING_42_PC"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "MESSAGE_LOADING_43_PC",
-    MaxKey = "MOD_DESC_1808",
-    Loader = function()
-      return {
+        },
         MESSAGE_LOADING_43_PC = {
           ContentEN = "While exploring the world, you may come across <H>Geniemons</>. Use <H>Treats</> to become friends with them. Geniemons can empower your team in battle through Geniemon Support.",
           TextMapId = "MESSAGE_LOADING_43_PC"
@@ -17404,7 +18797,15 @@ Smash: Further weakens target's Stance.]],
         MESSAGE_TITLE_LOADING_14_PC = {
           ContentEN = "Filthoids",
           TextMapId = "MESSAGE_TITLE_LOADING_14_PC"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "MESSAGE_TITLE_LOADING_15_PC",
+    MaxKey = "MOD_NAME_102001",
+    Loader = function()
+      return {
         MESSAGE_TITLE_LOADING_15_PC = {
           ContentEN = "The Lunarian",
           TextMapId = "MESSAGE_TITLE_LOADING_15_PC"
@@ -17884,15 +19285,7 @@ Smash: Further weakens target's Stance.]],
         MOD_DESC_1808 = {
           ContentEN = "Increases your Damage Dealt by #1 per Dual Pistols equipped by you or your Combat Partner (up to #2; does not apply when acting as Combat Partner).",
           TextMapId = "MOD_DESC_1808"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "MOD_DESC_1809",
-    MaxKey = "MOD_NAME_1961",
-    Loader = function()
-      return {
+        },
         MOD_DESC_1809 = {
           ContentEN = "Increases your Damage Dealt by #1 per Grenade Launcher equipped by you or your Combat Partner (up to #2; does not apply when acting as Combat Partner).",
           TextMapId = "MOD_DESC_1809"
@@ -18212,7 +19605,15 @@ Smash: Further weakens target's Stance.]],
         MOD_NAME_102001 = {
           ContentEN = "Puncture Cascade",
           TextMapId = "MOD_NAME_102001"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "MOD_NAME_102002",
+    MaxKey = "MOD_NAME_3404",
+    Loader = function()
+      return {
         MOD_NAME_102002 = {
           ContentEN = "Shockwave Echo",
           TextMapId = "MOD_NAME_102002"
@@ -18232,6 +19633,10 @@ Smash: Further weakens target's Stance.]],
         MOD_NAME_103002 = {
           ContentEN = "Savage Charge",
           TextMapId = "MOD_NAME_103002"
+        },
+        MOD_NAME_103003 = {
+          ContentEN = "Savage Cleave",
+          TextMapId = "MOD_NAME_103003"
         },
         MOD_NAME_104001 = {
           ContentEN = "In Full Bloom",
@@ -18404,26 +19809,6 @@ Smash: Further weakens target's Stance.]],
         MOD_NAME_150401 = {
           ContentEN = "Su Yi's Drone: Detonator Cannon",
           TextMapId = "MOD_NAME_150401"
-        },
-        MOD_NAME_150402 = {
-          ContentEN = "Su Yi's Drone: Greatsword",
-          TextMapId = "MOD_NAME_150402"
-        },
-        MOD_NAME_150403 = {
-          ContentEN = "Su Yi's Turret: Shield Projector",
-          TextMapId = "MOD_NAME_150403"
-        },
-        MOD_NAME_150404 = {
-          ContentEN = "Su Yi's Turret: Levitating Cannon",
-          TextMapId = "MOD_NAME_150404"
-        },
-        MOD_NAME_150405 = {
-          ContentEN = "Su Yi's Mobility Module: Energy Capacity Enhancer",
-          TextMapId = "MOD_NAME_150405"
-        },
-        MOD_NAME_150406 = {
-          ContentEN = "Su Yi's Mobility Module: Energy Regen Enhancer",
-          TextMapId = "MOD_NAME_150406"
         },
         MOD_NAME_1512 = {
           ContentEN = "Prance",
@@ -18692,15 +20077,7 @@ Smash: Further weakens target's Stance.]],
         MOD_NAME_1961 = {
           ContentEN = "Prismatic Neon",
           TextMapId = "MOD_NAME_1961"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "MOD_NAME_1962",
-    MaxKey = "Mail_Content_10038",
-    Loader = function()
-      return {
+        },
         MOD_NAME_1962 = {
           ContentEN = "Gleam & Glimmer",
           TextMapId = "MOD_NAME_1962"
@@ -19036,7 +20413,15 @@ Smash: Further weakens target's Stance.]],
         MOD_NAME_3404 = {
           ContentEN = "Speed Boost",
           TextMapId = "MOD_NAME_3404"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "MOD_NAME_3405",
+    MaxKey = "Message_Guide_AutoChess_10_Pad",
+    Loader = function()
+      return {
         MOD_NAME_3405 = {
           ContentEN = "Stall",
           TextMapId = "MOD_NAME_3405"
@@ -19393,14 +20778,6 @@ Smash: Further weakens target's Stance.]],
           ContentEN = "Su Yi's Component",
           TextMapId = "MOD_Type_Name_Suyi01"
         },
-        MOD_Type_Name_Suyi02 = {
-          ContentEN = "Su Yi's Component",
-          TextMapId = "MOD_Type_Name_Suyi02"
-        },
-        MOD_Type_Name_Suyi03 = {
-          ContentEN = "Su Yi's Component",
-          TextMapId = "MOD_Type_Name_Suyi03"
-        },
         MOD_Type_Name_Typhon01 = {
           ContentEN = "Typhon's ",
           TextMapId = "MOD_Type_Name_Typhon01"
@@ -19536,15 +20913,7 @@ Your Interwoven Thoughts daily rewards are attached to this mail. Please claim i
 Dear Phoxhunter,
  Your missing Secret Letter rewards have been recovered. As no reward option was selected, one has been assigned automatically and sent to your inventory.]],
           TextMapId = "Mail_Content_10038"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Mail_Content_100401",
-    MaxKey = "Message_Guide_DungeonSec_8",
-    Loader = function()
-      return {
+        },
         Mail_Content_100401 = {
           ContentEN = "Dear Phoxhunter, The latest volume of the Bard's Tome is now complete. All unclaimed rewards have been sent to your mailbox. Don't forget to get them!",
           TextMapId = "Mail_Content_100401"
@@ -19627,6 +20996,10 @@ We have detected refund-related abuse on your account. {Count} Phoxene Plumules,
  Please restore your Phoxene Plumule balance to a positive amount within 7 days of receiving this notice. If you fail to do so, your account will be permanently suspended.
  Duet Night Abyss has a zero-tolerance policy for refund-related abuse and unauthorised third-party top-ups. We will continue monitoring this activity and may take further action if it continues. Please do not purchase top-ups through unauthorised third-party channels, as doing so may lead to financial loss and account security risks.]],
           TextMapId = "Mail_Content_10070"
+        },
+        Mail_Content_10071 = {
+          ContentEN = "Your account has been placed under disciplinary action for using unauthorised third-party software. As a penalty, you will receive no commission rewards for the next 30 settlements. Please comply with the game rules.",
+          TextMapId = "Mail_Content_10071"
         },
         Mail_Content_101001 = {
           ContentEN = [[
@@ -19820,6 +21193,10 @@ I've got everything ready for our Phoxhunter squad. Here, take this advance, and
           ContentEN = "Refund Abuse Notice",
           TextMapId = "Mail_Title_10069"
         },
+        Mail_Title_10071 = {
+          ContentEN = "Your account has been placed under disciplinary action",
+          TextMapId = "Mail_Title_10071"
+        },
         Mail_Title_101001 = {
           ContentEN = "Unclaimed [%s] Rewards Issued",
           TextMapId = "Mail_Title_101001"
@@ -19904,7 +21281,15 @@ I've got everything ready for our Phoxhunter squad. Here, take this advance, and
         Message_Guide_AutoChess_10_Pad = {
           ContentEN = "Press to close the Mechapuppet Overview.",
           TextMapId = "Message_Guide_AutoChess_10_Pad"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Message_Guide_AutoChess_11",
+    MaxKey = "Message_Guide_MaerJ",
+    Loader = function()
+      return {
         Message_Guide_AutoChess_11 = {
           ContentEN = "Click to go to <H>Master Gongshang's Board</>.",
           TextMapId = "Message_Guide_AutoChess_11"
@@ -20374,15 +21759,7 @@ Each weapon can be assigned to only 1 Combat Partner.]],
         Message_Guide_DungeonSec_8 = {
           ContentEN = "Here you can view the possible drops for the Covert Commission of the Secret Letter. Upon completion, three of the six rewards will be randomly presented. Choose one to claim.",
           TextMapId = "Message_Guide_DungeonSec_8"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Message_Guide_DungeonSec_9",
-    MaxKey = "Message_Guide_ReplaceChar_4",
-    Loader = function()
-      return {
+        },
         Message_Guide_DungeonSec_9 = {
           ContentEN = "Click to open the Commissions screen.",
           TextMapId = "Message_Guide_DungeonSec_9"
@@ -20718,7 +22095,15 @@ Each weapon can be assigned to only 1 Combat Partner.]],
         Message_Guide_MaerJ = {
           ContentEN = "Click the Reminiscence button to combine Thoughts into a character.",
           TextMapId = "Message_Guide_MaerJ"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Message_Guide_MaerJ_2",
+    MaxKey = "Message_Guide_WalnutShop_3_Pad",
+    Loader = function()
+      return {
         Message_Guide_MaerJ_2 = {
           ContentEN = "Select Deploy to deploy your character.",
           TextMapId = "Message_Guide_MaerJ_2"
@@ -21182,15 +22567,7 @@ Each weapon can be assigned to only 1 Combat Partner.]],
         Message_Guide_ReplaceChar_4 = {
           ContentEN = "Select the newly acquired character",
           TextMapId = "Message_Guide_ReplaceChar_4"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Message_Guide_ReplaceChar_5",
-    MaxKey = "Minigame_Textmap_100332",
-    Loader = function()
-      return {
+        },
         Message_Guide_ReplaceChar_5 = {
           ContentEN = "Select\"Replace\" to confirm swapping in the new character",
           TextMapId = "Message_Guide_ReplaceChar_5"
@@ -21526,7 +22903,15 @@ Each weapon can be assigned to only 1 Combat Partner.]],
         Message_Guide_WalnutShop_3_Pad = {
           ContentEN = "Press to open the <H>Shop</>.",
           TextMapId = "Message_Guide_WalnutShop_3_Pad"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Message_Guide_WalnutShop_4",
+    MaxKey = "ModArchive_Name_Char_1600",
+    Loader = function()
+      return {
         Message_Guide_WalnutShop_4 = {
           ContentEN = "Click <H>Items</>.",
           TextMapId = "Message_Guide_WalnutShop_4"
@@ -21990,15 +23375,7 @@ Each weapon can be assigned to only 1 Combat Partner.]],
         Minigame_Textmap_100332 = {
           ContentEN = "Clue Added to Case",
           TextMapId = "Minigame_Textmap_100332"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Minigame_Textmap_100333",
-    MaxKey = "Mon_DesDetail_6011001",
-    Loader = function()
-      return {
+        },
         Minigame_Textmap_100333 = {
           ContentEN = "Different clues may lead to different outcomes. Choose carefully.",
           TextMapId = "Minigame_Textmap_100333"
@@ -22334,7 +23711,15 @@ Each weapon can be assigned to only 1 Combat Partner.]],
         ModArchive_Name_Char_1600 = {
           ContentEN = "Summanus",
           TextMapId = "ModArchive_Name_Char_1600"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "ModArchive_Name_Char_1610",
+    MaxKey = "Mon_Guide_9500001_01",
+    Loader = function()
+      return {
         ModArchive_Name_Char_1610 = {
           ContentEN = "Ifrit",
           TextMapId = "ModArchive_Name_Char_1610"
@@ -22800,15 +24185,7 @@ Guardians of Huaxu and executors of the Nine Chapters' will. They emerge from th
         Mon_DesDetail_6011001 = {
           ContentEN = "One of the most common mutated Filthoids. They excel at rushing towards the target and tearing them to pieces. Their formidable jaws and claws were once considered a significant threat to travellers. While the howl of a wolf might allow room for escape, the hoarse roar of a Filthoid often signals an inevitable demise for the unarmed.",
           TextMapId = "Mon_DesDetail_6011001"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Mon_DesDetail_6012001",
-    MaxKey = "Mon_Name_6003011",
-    Loader = function()
-      return {
+        },
         Mon_DesDetail_6012001 = {
           ContentEN = "One of the most common mutated Filthoids. They excel at ranged suppression. These creatures emit a surplus of hard inorganic matter from their gun-resembling arms, rather than regular ammunition. The details of their mutation remain a mystery, yet their adaptation to the contemporary era is evident.",
           TextMapId = "Mon_DesDetail_6012001"
@@ -23168,7 +24545,15 @@ In <Highlight>"Commission: Mediation"</>, once a Deceiver is defeated, elite ene
         Mon_Guide_9500001_01 = {
           ContentEN = "<Highlight>Lulu Lunoloot</> appears briefly before attempting to flee. Defeat her quickly to secure a bountiful treasure hoard.",
           TextMapId = "Mon_Guide_9500001_01"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Mon_Guide_Strong_Blood_01",
+    MaxKey = "Mon_Name_6012023",
+    Loader = function()
+      return {
         Mon_Guide_Strong_Blood_01 = {
           ContentEN = "Primanders are powerful entities among the hostile forces that wield unique <Highlight>Primander abilities</>.\n<Highlight>Primander – Decay</> periodically creates a [Decaying Swamp] around itself.",
           TextMapId = "Mon_Guide_Strong_Blood_01"
@@ -23557,6 +24942,10 @@ In <Highlight>"Commission: Mediation"</>, once a Deceiver is defeated, elite ene
           ContentEN = "Veloci Filthoid -  Sacrifice & Wither & Blast",
           TextMapId = "Mon_Name_6001301"
         },
+        Mon_Name_6001701 = {
+          ContentEN = "Veloci Filthoid – Thunderbolt & Sacrifice",
+          TextMapId = "Mon_Name_6001701"
+        },
         Mon_Name_6002001 = {
           ContentEN = "Guerrilla Filthoid",
           TextMapId = "Mon_Name_6002001"
@@ -23625,6 +25014,10 @@ In <Highlight>"Commission: Mediation"</>, once a Deceiver is defeated, elite ene
           ContentEN = "Guerrilla Filthoid - Decay & Frostbite & Guard",
           TextMapId = "Mon_Name_6002301"
         },
+        Mon_Name_6002701 = {
+          ContentEN = "Guerrilla Filthoid – Revenge & Glimmer",
+          TextMapId = "Mon_Name_6002701"
+        },
         Mon_Name_6003001 = {
           ContentEN = "Floating Filthoid",
           TextMapId = "Mon_Name_6003001"
@@ -23632,15 +25025,7 @@ In <Highlight>"Commission: Mediation"</>, once a Deceiver is defeated, elite ene
         Mon_Name_6003011 = {
           ContentEN = "Floating Filthoid - Frostbite",
           TextMapId = "Mon_Name_6003011"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Mon_Name_6003012",
-    MaxKey = "Mon_Name_7003016",
-    Loader = function()
-      return {
+        },
         Mon_Name_6003012 = {
           ContentEN = "Floating Filthoid - Blast",
           TextMapId = "Mon_Name_6003012"
@@ -23968,7 +25353,15 @@ In <Highlight>"Commission: Mediation"</>, once a Deceiver is defeated, elite ene
         Mon_Name_6012023 = {
           ContentEN = "Guerrilla Filthoid Ⅱ - Bloodbath",
           TextMapId = "Mon_Name_6012023"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Mon_Name_6012024",
+    MaxKey = "Mon_Name_7010301",
+    Loader = function()
+      return {
         Mon_Name_6012024 = {
           ContentEN = "Guerrilla Filthoid Ⅱ - Phantom",
           TextMapId = "Mon_Name_6012024"
@@ -24440,15 +25833,7 @@ In <Highlight>"Commission: Mediation"</>, once a Deceiver is defeated, elite ene
         Mon_Name_7003016 = {
           ContentEN = "Expedition Private - Wither",
           TextMapId = "Mon_Name_7003016"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Mon_Name_7003017",
-    MaxKey = "Mon_Name_8002024",
-    Loader = function()
-      return {
+        },
         Mon_Name_7003017 = {
           ContentEN = "Expedition Private - Guardian",
           TextMapId = "Mon_Name_7003017"
@@ -24776,7 +26161,15 @@ In <Highlight>"Commission: Mediation"</>, once a Deceiver is defeated, elite ene
         Mon_Name_7010301 = {
           ContentEN = "Spathatoi Alchemist -  Thunderstorm & Revenge & Guard",
           TextMapId = "Mon_Name_7010301"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Mon_Name_7011001",
+    MaxKey = "Mon_Name_8514701",
+    Loader = function()
+      return {
         Mon_Name_7011001 = {
           ContentEN = "Sniper Private Ⅱ",
           TextMapId = "Mon_Name_7011001"
@@ -25248,15 +26641,7 @@ In <Highlight>"Commission: Mediation"</>, once a Deceiver is defeated, elite ene
         Mon_Name_8002024 = {
           ContentEN = "Blessed Vanguard - Phantom",
           TextMapId = "Mon_Name_8002024"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Mon_Name_8002201",
-    MaxKey = "Mon_Name_9007023",
-    Loader = function()
-      return {
+        },
         Mon_Name_8002201 = {
           ContentEN = "Blessed Vanguard - Thunderbolt & Icehell",
           TextMapId = "Mon_Name_8002201"
@@ -25584,7 +26969,15 @@ In <Highlight>"Commission: Mediation"</>, once a Deceiver is defeated, elite ene
         Mon_Name_8514701 = {
           ContentEN = "Blessed Arbiter - Thunderbolt",
           TextMapId = "Mon_Name_8514701"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Mon_Name_8515001",
+    MaxKey = "MusicScoreName_1008",
+    Loader = function()
+      return {
         Mon_Name_8515001 = {
           ContentEN = "The Devourer",
           TextMapId = "Mon_Name_8515001"
@@ -25656,6 +27049,10 @@ In <Highlight>"Commission: Mediation"</>, once a Deceiver is defeated, elite ene
         Mon_Name_8521001 = {
           ContentEN = "Pyrowright",
           TextMapId = "Mon_Name_8521001"
+        },
+        Mon_Name_8522701 = {
+          ContentEN = "Eclosis – Frostbite",
+          TextMapId = "Mon_Name_8522701"
         },
         Mon_Name_9001001 = {
           ContentEN = "Wildswarm's Sword",
@@ -26056,15 +27453,7 @@ In <Highlight>"Commission: Mediation"</>, once a Deceiver is defeated, elite ene
         Mon_Name_9007023 = {
           ContentEN = "Wildswarm's Agent - Bloodbath",
           TextMapId = "Mon_Name_9007023"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Mon_Name_9007024",
-    MaxKey = "NpcBiography_Information_Aier",
-    Loader = function()
-      return {
+        },
         Mon_Name_9007024 = {
           ContentEN = "Wildswarm's Agent - Phantom",
           TextMapId = "Mon_Name_9007024"
@@ -26391,7 +27780,15 @@ What wish, you wonder, keeps them tethered to this world?]],
         MusicScoreName_1008 = {
           ContentEN = "Luno Tone Poem",
           TextMapId = "MusicScoreName_1008"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "MusicScoreName_1009",
+    MaxKey = "PET_404_PASSIVE",
+    Loader = function()
+      return {
         MusicScoreName_1009 = {
           ContentEN = "Bury Me with Melody",
           TextMapId = "MusicScoreName_1009"
@@ -26565,35 +27962,35 @@ What wish, you wonder, keeps them tethered to this world?]],
           TextMapId = "Name_120114"
         },
         Name_120301 = {
-          ContentEN = "The Grand Incense Rite",
+          ContentEN = "After the Storm",
           TextMapId = "Name_120301"
         },
         Name_120302 = {
-          ContentEN = "The Grand Incense Rite",
+          ContentEN = "The Incense Proving",
           TextMapId = "Name_120302"
         },
         Name_120303 = {
-          ContentEN = "The Grand Incense Rite",
+          ContentEN = "Her Past on the Wind",
           TextMapId = "Name_120303"
         },
         Name_120304 = {
-          ContentEN = "The Grand Incense Rite",
+          ContentEN = "Cast Adrift",
           TextMapId = "Name_120304"
         },
         Name_120305 = {
-          ContentEN = "The Grand Incense Rite",
+          ContentEN = "Whispers Beneath the Boughs",
           TextMapId = "Name_120305"
         },
         Name_120306 = {
-          ContentEN = "The Grand Incense Rite",
+          ContentEN = "Lingering Rain",
           TextMapId = "Name_120306"
         },
         Name_120307 = {
-          ContentEN = "The Grand Incense Rite",
+          ContentEN = "The Terracolossus Strikes",
           TextMapId = "Name_120307"
         },
         Name_120308 = {
-          ContentEN = "The Grand Incense Rite",
+          ContentEN = "Farewells by Mistwharf",
           TextMapId = "Name_120308"
         },
         Name_200101 = {
@@ -26864,15 +28261,7 @@ What wish, you wonder, keeps them tethered to this world?]],
         NpcBiography_Information_Aier = {
           ContentEN = "Born into nobility, Elsa is a woman of etiquette and discipline. As a mother, she imparted these values to her daughter, Annie, hoping she would grow up to become a better person. However, Elsa never anticipated that her expectations would drive her daughter away. Despite a lingering fear that her runaway daughter might have met with misfortune, Elsa tirelessly continues her search for Annie.",
           TextMapId = "NpcBiography_Information_Aier"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "NpcBiography_Information_Aier_2",
-    MaxKey = "Pack_Name_Battle_Dispatch_5",
-    Loader = function()
-      return {
+        },
         NpcBiography_Information_Aier_2 = {
           ContentEN = "Born into nobility, Elsa is a woman of etiquette and discipline. As a mother, she strove to pass these virtues on to her daughter, Annie, hoping the girl might one day outshine her. Yet Elsa never foresaw that such expectations would become the very weight that drove her daughter away.",
           TextMapId = "NpcBiography_Information_Aier_2"
@@ -27191,7 +28580,15 @@ Pyro ATK +#1, Max HP +#2]],
 The main character and Combat Partners gain:
 Electro ATK +#1, Max HP +#2]],
           TextMapId = "PET_404_PASSIVE"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "PET_404_SKILL",
+    MaxKey = "Pack_Name_Mine_Dispatch_4",
+    Loader = function()
+      return {
         PET_404_SKILL = {
           ContentEN = "Grants #2 Ultra Shield points to self and allies, and randomly applies one of the following effects for #1s: +#3 ATK, +#4 DEF, +#5 Skill Intensity, or +#6 Skill Duration.",
           TextMapId = "PET_404_SKILL"
@@ -27687,15 +29084,7 @@ Defeat 120 enemies: Damage dealt by summons +500%.]],
         Pack_Name_Battle_Dispatch_5 = {
           ContentEN = "Battle Reward Pack Lv. 5",
           TextMapId = "Pack_Name_Battle_Dispatch_5"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Pack_Name_Battle_Dispatch_6",
-    MaxKey = "PartyReward_Description_150202",
-    Loader = function()
-      return {
+        },
         Pack_Name_Battle_Dispatch_6 = {
           ContentEN = "Battle Reward Pack Lv. 6",
           TextMapId = "Pack_Name_Battle_Dispatch_6"
@@ -28048,7 +29437,15 @@ The pack may contain:
         Pack_Name_Mine_Dispatch_4 = {
           ContentEN = "Mining Reward Pack Lv. 4",
           TextMapId = "Pack_Name_Mine_Dispatch_4"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Pack_Name_Mine_Dispatch_5",
+    MaxKey = "PartyReward_Name_110102",
+    Loader = function()
+      return {
         Pack_Name_Mine_Dispatch_5 = {
           ContentEN = "Mining Reward Pack Lv. 5",
           TextMapId = "Pack_Name_Mine_Dispatch_5"
@@ -28524,15 +29921,7 @@ The pack may contain:
         PartyReward_Description_150202 = {
           ContentEN = "A scroll holding the unfulfilled dreams of a young man and woman. It is a legacy, timeless and pure, that they have entrusted to the generations that follow.",
           TextMapId = "PartyReward_Description_150202"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "PartyReward_Description_150203",
-    MaxKey = "PartyTopic_Description_430102",
-    Loader = function()
-      return {
+        },
         PartyReward_Description_150203 = {
           ContentEN = "Made from fresh game meat and vegetables, this stew once warmed a heart that had briefly ceased to beat on a cold, unforgiving winter night.",
           TextMapId = "PartyReward_Description_150203"
@@ -28556,6 +29945,18 @@ The pack may contain:
         PartyReward_Description_150304 = {
           ContentEN = "A chapbook of half-truths, once all the rage. Who now can parse the strife sealed in these characters? The book holds its silence.",
           TextMapId = "PartyReward_Description_150304"
+        },
+        PartyReward_Description_150401 = {
+          ContentEN = "A rotund, nameless bird, about the length of a forearm. Sinking into its soft belly melts away the day's fatigue.",
+          TextMapId = "PartyReward_Description_150401"
+        },
+        PartyReward_Description_150402 = {
+          ContentEN = "A young artisan's pride and joy. Upgraded wheel assembly and a small thruster take the legwork out of travel — perfect for making a clean getaway.",
+          TextMapId = "PartyReward_Description_150402"
+        },
+        PartyReward_Description_150403 = {
+          ContentEN = "A letter hidden for years inside the lining of a Cuddlebird. The paper is worn soft with creases, heavy with a parent's longing.",
+          TextMapId = "PartyReward_Description_150403"
         },
         PartyReward_Description_180101 = {
           ContentEN = "A pile of spent casings, which, with a touch of imagination, transform into pistols, cannons, airships, and mighty robots — keys to unlocking a world of dreams.",
@@ -28681,6 +30082,18 @@ The pack may contain:
           ContentEN = "A cheap spirit — some drank it to feel alive, others to dull the ache. Yet whenever their glasses were raised, the same words rang out: \"The Unyielding — to those who never yield.\"",
           TextMapId = "PartyReward_Description_320104"
         },
+        PartyReward_Description_320201 = {
+          ContentEN = "Truth changes with what people are willing to believe. There's no such thing as an \"absolute truth\". The same goes for people: no enemies are eternal — only interests.",
+          TextMapId = "PartyReward_Description_320201"
+        },
+        PartyReward_Description_320202 = {
+          ContentEN = "Bread that goes down easy, and honey that's still runny and warm — this is their idea of a decent life. The Charon kids choke down their stale crusts and pretend it's the real thing.",
+          TextMapId = "PartyReward_Description_320202"
+        },
+        PartyReward_Description_320203 = {
+          ContentEN = "A warm draught goes down easy. For a moment, you almost believe you can leave yesterday's regrets behind.",
+          TextMapId = "PartyReward_Description_320203"
+        },
         PartyReward_Description_330101 = {
           ContentEN = "After a long day's work scavenging Kossak's mansion, you and Margie have gathered a trove of treasures. Hopefully, they're worth the sore arms.",
           TextMapId = "PartyReward_Description_330101"
@@ -28708,6 +30121,38 @@ The pack may contain:
         PartyReward_Description_410103 = {
           ContentEN = "Each tricky passage is neatly marked, with careful notes in the margins. It clearly belongs to a diligent — if not yet seasoned — player. Look closer, and you'll spot a cute little lightning doodle in the corner.",
           TextMapId = "PartyReward_Description_410103"
+        },
+        PartyReward_Description_410201 = {
+          ContentEN = "The Nine Chapters of Dafeng move in their ordained cycle, unchanged from antiquity to the present. Such is Heaven's Way.",
+          TextMapId = "PartyReward_Description_410201"
+        },
+        PartyReward_Description_410202 = {
+          ContentEN = "Wrongs and unspoken grievances that once ran deep have faded into whispers, buried beneath rumour and calumny.",
+          TextMapId = "PartyReward_Description_410202"
+        },
+        PartyReward_Description_410203 = {
+          ContentEN = "What has passed belongs to yesterday. What lingers serves only to trouble the heart today.",
+          TextMapId = "PartyReward_Description_410203"
+        },
+        PartyReward_Description_410204 = {
+          ContentEN = "Time wears all things away. Yet there are some resolves that never waver.",
+          TextMapId = "PartyReward_Description_410204"
+        },
+        PartyReward_Description_420101 = {
+          ContentEN = "A bamboo flute, faint seams tracing where it was once broken and mended. No one knows what those scars have done to its voice.",
+          TextMapId = "PartyReward_Description_420101"
+        },
+        PartyReward_Description_420102 = {
+          ContentEN = "A sash from the Yingtian Magistrates' official regalia. Poets and bards liken it to a bond with the Heavenly Way — yet in truth, it is a shackle.",
+          TextMapId = "PartyReward_Description_420102"
+        },
+        PartyReward_Description_420103 = {
+          ContentEN = "A jade belt clasp. Once broken, it was pieced back together and kept for years. But the deep crack down the middle never truly healed.",
+          TextMapId = "PartyReward_Description_420103"
+        },
+        PartyReward_Description_420104 = {
+          ContentEN = "Three youngsters once tied this little bell to a wild fox and told it, \"This is your home now.\" Now a traveller who has drifted too long feels, at last, the urge to return.",
+          TextMapId = "PartyReward_Description_420104"
         },
         PartyReward_Description_420201 = {
           ContentEN = "Forget the grind and shake off your weariness — start your well-deserved break with a chilled, sweet indulgence!",
@@ -28800,7 +30245,15 @@ The pack may contain:
         PartyReward_Name_110102 = {
           ContentEN = "Sharp Feather",
           TextMapId = "PartyReward_Name_110102"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "PartyReward_Name_110103",
+    MaxKey = "PartyTopic_Name_210101",
+    Loader = function()
+      return {
         PartyReward_Name_110103 = {
           ContentEN = "Betwixt Leaves And Branches",
           TextMapId = "PartyReward_Name_110103"
@@ -28856,6 +30309,18 @@ The pack may contain:
         PartyReward_Name_150304 = {
           ContentEN = "Drifter's Tale",
           TextMapId = "PartyReward_Name_150304"
+        },
+        PartyReward_Name_150401 = {
+          ContentEN = "Sun-Scented Cuddlebird",
+          TextMapId = "PartyReward_Name_150401"
+        },
+        PartyReward_Name_150402 = {
+          ContentEN = "Powered Suitcase",
+          TextMapId = "PartyReward_Name_150402"
+        },
+        PartyReward_Name_150403 = {
+          ContentEN = "A Crumpled Letter from Home",
+          TextMapId = "PartyReward_Name_150403"
         },
         PartyReward_Name_180101 = {
           ContentEN = "Spent Casing Blocks",
@@ -28981,6 +30446,18 @@ The pack may contain:
           ContentEN = "\"The Unyielding\"",
           TextMapId = "PartyReward_Name_320104"
         },
+        PartyReward_Name_320201 = {
+          ContentEN = "The Absolute Truth",
+          TextMapId = "PartyReward_Name_320201"
+        },
+        PartyReward_Name_320202 = {
+          ContentEN = "Honey and Bread",
+          TextMapId = "PartyReward_Name_320202"
+        },
+        PartyReward_Name_320203 = {
+          ContentEN = "Farewell to Yesterday",
+          TextMapId = "PartyReward_Name_320203"
+        },
         PartyReward_Name_330101 = {
           ContentEN = "Scavenging Spoils",
           TextMapId = "PartyReward_Name_330101"
@@ -29008,6 +30485,38 @@ The pack may contain:
         PartyReward_Name_410103 = {
           ContentEN = "A Score Full of Notes",
           TextMapId = "PartyReward_Name_410103"
+        },
+        PartyReward_Name_410201 = {
+          ContentEN = "Heaven's Way",
+          TextMapId = "PartyReward_Name_410201"
+        },
+        PartyReward_Name_410202 = {
+          ContentEN = "Rumour and Calumny",
+          TextMapId = "PartyReward_Name_410202"
+        },
+        PartyReward_Name_410203 = {
+          ContentEN = "Severing the Past",
+          TextMapId = "PartyReward_Name_410203"
+        },
+        PartyReward_Name_410204 = {
+          ContentEN = "Promise",
+          TextMapId = "PartyReward_Name_410204"
+        },
+        PartyReward_Name_420101 = {
+          ContentEN = "Phoenix's Cry",
+          TextMapId = "PartyReward_Name_420101"
+        },
+        PartyReward_Name_420102 = {
+          ContentEN = "Heavenbound Sash",
+          TextMapId = "PartyReward_Name_420102"
+        },
+        PartyReward_Name_420103 = {
+          ContentEN = "A Broken Jade Clasp",
+          TextMapId = "PartyReward_Name_420103"
+        },
+        PartyReward_Name_420104 = {
+          ContentEN = "A Worn Bell",
+          TextMapId = "PartyReward_Name_420104"
         },
         PartyReward_Name_420201 = {
           ContentEN = "Drink: Day Off Delight",
@@ -29157,6 +30666,18 @@ The pack may contain:
           ContentEN = "Youth in pursuit of the sword ever climbs toward the peak. On and on, until companions grow few. At the summit, none remain, only endless snow upon bowed heads.",
           TextMapId = "PartyTopic_Description_150304"
         },
+        PartyTopic_Description_150401 = {
+          ContentEN = "Drifting leaves settle on the earth. The wandering returns home at last.",
+          TextMapId = "PartyTopic_Description_150401"
+        },
+        PartyTopic_Description_150402 = {
+          ContentEN = "The road away from home winds on — long, crooked, and far. You daren't look back.",
+          TextMapId = "PartyTopic_Description_150402"
+        },
+        PartyTopic_Description_150403 = {
+          ContentEN = "Blood binds. Cut it, and you might as well try to cut a river. The blade passes; the water does not part.",
+          TextMapId = "PartyTopic_Description_150403"
+        },
         PartyTopic_Description_180101 = {
           ContentEN = "She whispered her magical wishes to her friends.",
           TextMapId = "PartyTopic_Description_180101"
@@ -29281,6 +30802,18 @@ The pack may contain:
           ContentEN = "It burns down the throat like a blade — and only the drinker knows what it cuts open inside.",
           TextMapId = "PartyTopic_Description_320104"
         },
+        PartyTopic_Description_320201 = {
+          ContentEN = "Today only at The Asphodel: 20% off all drinks! Charon or not — everyone gets the discount!",
+          TextMapId = "PartyTopic_Description_320201"
+        },
+        PartyTopic_Description_320202 = {
+          ContentEN = "The moment she chose death, Camilla made her own choice.",
+          TextMapId = "PartyTopic_Description_320202"
+        },
+        PartyTopic_Description_320203 = {
+          ContentEN = "Years later, The Asphodel hasn't changed, and neither has its owner. Only one former regular is barely recognisable now.",
+          TextMapId = "PartyTopic_Description_320203"
+        },
         PartyTopic_Description_330101 = {
           ContentEN = "A good mood can work wonders on your efficiency, and the key to staying cheerful is knowing when to take care of yourself.",
           TextMapId = "PartyTopic_Description_330101"
@@ -29309,6 +30842,38 @@ The pack may contain:
           ContentEN = "No more chasing notes scribbled by others — turn to a blank page, and begin your own movement.",
           TextMapId = "PartyTopic_Description_410103"
         },
+        PartyTopic_Description_410201 = {
+          ContentEN = "A Way that can be articulated is never the enduring Way. What sustains the order of all things is a Way beyond words.",
+          TextMapId = "PartyTopic_Description_410201"
+        },
+        PartyTopic_Description_410202 = {
+          ContentEN = "In the end, statecraft is a matter of decisiveness. Has anyone who achieved greatness ever been constrained by trivialities?",
+          TextMapId = "PartyTopic_Description_410202"
+        },
+        PartyTopic_Description_410203 = {
+          ContentEN = "Cultivate the heart in the realm, and virtue flourishes. Cultivate the heart within oneself, and virtue proves true.",
+          TextMapId = "PartyTopic_Description_410203"
+        },
+        PartyTopic_Description_410204 = {
+          ContentEN = "My heart will not be turned. Nor will it ever bow.",
+          TextMapId = "PartyTopic_Description_410204"
+        },
+        PartyTopic_Description_420101 = {
+          ContentEN = "A jade flute's melody drifts away on the wind, carrying memories both bitter and sweet.",
+          TextMapId = "PartyTopic_Description_420101"
+        },
+        PartyTopic_Description_420102 = {
+          ContentEN = "The old hearth has gone to wind and rain. Where is there left to return to?",
+          TextMapId = "PartyTopic_Description_420102"
+        },
+        PartyTopic_Description_420103 = {
+          ContentEN = "Once a blade has tasted blood, there's no going back. Look back, and the road behind you is already gone.",
+          TextMapId = "PartyTopic_Description_420103"
+        },
+        PartyTopic_Description_420104 = {
+          ContentEN = "When the dust settles and the clouds part, where does a traveller who once lost their way go next?",
+          TextMapId = "PartyTopic_Description_420104"
+        },
         PartyTopic_Description_420201 = {
           ContentEN = "When smart people speak, there's always an agenda behind their words. Efficiency is their craft, and in a way, that's its own form of honesty.",
           TextMapId = "PartyTopic_Description_420201"
@@ -29332,15 +30897,7 @@ The pack may contain:
         PartyTopic_Description_430102 = {
           ContentEN = "War never truly ends — it merely changes form.",
           TextMapId = "PartyTopic_Description_430102"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "PartyTopic_Description_430103",
-    MaxKey = "Pet_Name_412",
-    Loader = function()
-      return {
+        },
         PartyTopic_Description_430103 = {
           ContentEN = "Since humanity first roamed forests and plains, tools have ensured survival. Whether for creation or destruction, their purpose remains unchanged.",
           TextMapId = "PartyTopic_Description_430103"
@@ -29465,6 +31022,18 @@ The pack may contain:
           ContentEN = "Of Youth's Vigor Frosted by Time's Snow",
           TextMapId = "PartyTopic_Name_150304"
         },
+        PartyTopic_Name_150401 = {
+          ContentEN = "Wandering No More",
+          TextMapId = "PartyTopic_Name_150401"
+        },
+        PartyTopic_Name_150402 = {
+          ContentEN = "A Parting of Ways",
+          TextMapId = "PartyTopic_Name_150402"
+        },
+        PartyTopic_Name_150403 = {
+          ContentEN = "Unceasing Flow",
+          TextMapId = "PartyTopic_Name_150403"
+        },
         PartyTopic_Name_180101 = {
           ContentEN = "The Wish for Magic",
           TextMapId = "PartyTopic_Name_180101"
@@ -29484,7 +31053,15 @@ The pack may contain:
         PartyTopic_Name_210101 = {
           ContentEN = "Nurturing Love",
           TextMapId = "PartyTopic_Name_210101"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "PartyTopic_Name_210102",
+    MaxKey = "Pet_Name_4231",
+    Loader = function()
+      return {
         PartyTopic_Name_210102 = {
           ContentEN = "One of a Kind",
           TextMapId = "PartyTopic_Name_210102"
@@ -29589,6 +31166,18 @@ The pack may contain:
           ContentEN = "Liquor",
           TextMapId = "PartyTopic_Name_320104"
         },
+        PartyTopic_Name_320201 = {
+          ContentEN = "Everything Has a Price",
+          TextMapId = "PartyTopic_Name_320201"
+        },
+        PartyTopic_Name_320202 = {
+          ContentEN = "A Quiet Choice in the Dark",
+          TextMapId = "PartyTopic_Name_320202"
+        },
+        PartyTopic_Name_320203 = {
+          ContentEN = "An Unintended Investment",
+          TextMapId = "PartyTopic_Name_320203"
+        },
         PartyTopic_Name_330101 = {
           ContentEN = "The Scavenger's Work",
           TextMapId = "PartyTopic_Name_330101"
@@ -29616,6 +31205,38 @@ The pack may contain:
         PartyTopic_Name_410103 = {
           ContentEN = "The Meaning of \"Rhythm\"",
           TextMapId = "PartyTopic_Name_410103"
+        },
+        PartyTopic_Name_410201 = {
+          ContentEN = "On the Way",
+          TextMapId = "PartyTopic_Name_410201"
+        },
+        PartyTopic_Name_410202 = {
+          ContentEN = "On Statecraft",
+          TextMapId = "PartyTopic_Name_410202"
+        },
+        PartyTopic_Name_410203 = {
+          ContentEN = "On the Heart",
+          TextMapId = "PartyTopic_Name_410203"
+        },
+        PartyTopic_Name_410204 = {
+          ContentEN = "A Heart Unbending",
+          TextMapId = "PartyTopic_Name_410204"
+        },
+        PartyTopic_Name_420101 = {
+          ContentEN = "Jade Flute, Lingering Echoes",
+          TextMapId = "PartyTopic_Name_420101"
+        },
+        PartyTopic_Name_420102 = {
+          ContentEN = "Nowhere Home",
+          TextMapId = "PartyTopic_Name_420102"
+        },
+        PartyTopic_Name_420103 = {
+          ContentEN = "Bloodstained Steel, Severed Bonds",
+          TextMapId = "PartyTopic_Name_420103"
+        },
+        PartyTopic_Name_420104 = {
+          ContentEN = "Clearing Skies, Untrodden Paths",
+          TextMapId = "PartyTopic_Name_420104"
         },
         PartyTopic_Name_420201 = {
           ContentEN = "Ulterior Motives",
@@ -30131,15 +31752,7 @@ The pack may contain:
         Pet_Name_412 = {
           ContentEN = "Bunniva",
           TextMapId = "Pet_Name_412"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Pet_Name_4121",
-    MaxKey = "QuestDesc_10020222",
-    Loader = function()
-      return {
+        },
         Pet_Name_4121 = {
           ContentEN = "Miraculous Bunniva",
           TextMapId = "Pet_Name_4121"
@@ -30239,7 +31852,15 @@ The pack may contain:
         Pet_Name_4231 = {
           ContentEN = "Pyrelf",
           TextMapId = "Pet_Name_4231"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Pet_Name_424",
+    MaxKey = "QuestDesc_10020407",
+    Loader = function()
+      return {
         Pet_Name_424 = {
           ContentEN = "Electrelf",
           TextMapId = "Pet_Name_424"
@@ -30983,15 +32604,7 @@ Defeat the thief and capture him.]],
         QuestDesc_10020222 = {
           ContentEN = "All Commissions for Phoxhunters are on the bulletin board in The Asphodel. Go check it out.",
           TextMapId = "QuestDesc_10020222"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "QuestDesc_10020223",
-    MaxKey = "QuestName_10020107",
-    Loader = function()
-      return {
+        },
         QuestDesc_10020223 = {
           ContentEN = "Wells misunderstood you and embarrassed himself. He decided to buy you a drink to show his apologies...",
           TextMapId = "QuestDesc_10020223"
@@ -31128,7 +32741,15 @@ Time to delve inside for a probe.]],
 Henrik went back to his office to verify the authenticity of the Crystallo. Now's the chance to explore the inn.
 Psyche just greeted you; attend to her first.]],
           TextMapId = "QuestDesc_10020407"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "QuestDesc_10020408",
+    MaxKey = "QuestName_10020222",
+    Loader = function()
+      return {
         QuestDesc_10020408 = {
           ContentEN = [[
 You received a gift from Psyche. She said that flowers would bring good luck.
@@ -31910,15 +33531,7 @@ You can earn EXP by:
         QuestName_10020107 = {
           ContentEN = "Head to the Hypnos' House for accommodations",
           TextMapId = "QuestName_10020107"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "QuestName_10020108",
-    MaxKey = "QuestName_1003plus19",
-    Loader = function()
-      return {
+        },
         QuestName_10020108 = {
           ContentEN = "Head to the house mentioned by the girl",
           TextMapId = "QuestName_10020108"
@@ -32018,7 +33631,15 @@ You can earn EXP by:
         QuestName_10020222 = {
           ContentEN = "Check the Commission bulletin board",
           TextMapId = "QuestName_10020222"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "QuestName_10020223",
+    MaxKey = "QuestName_99999801",
+    Loader = function()
+      return {
         QuestName_10020223 = {
           ContentEN = "Talk to Camila",
           TextMapId = "QuestName_10020223"
@@ -32718,15 +34339,7 @@ You can earn EXP by:
         QuestName_1003plus19 = {
           ContentEN = "Review clues and continue the Charon Hunt investigation",
           TextMapId = "QuestName_1003plus19"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "QuestName_1003plus20",
-    MaxKey = "READ_NAME_2000058",
-    Loader = function()
-      return {
+        },
         QuestName_1003plus20 = {
           ContentEN = "Confront the perpetrator",
           TextMapId = "QuestName_1003plus20"
@@ -32826,7 +34439,15 @@ You can earn EXP by:
         QuestName_99999801 = {
           ContentEN = "Head to Lakeside of Lamenting Lake",
           TextMapId = "QuestName_99999801"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "QuestName_99999802",
+    MaxKey = "READ_NAME_2000063",
+    Loader = function()
+      return {
         QuestName_99999802 = {
           ContentEN = "Head to Lakeside of Lamenting Lake and defeat the powerful enemy",
           TextMapId = "QuestName_99999802"
@@ -32939,6 +34560,10 @@ You can earn EXP by:
           ContentEN = "Luoxiang's Case Notes",
           TextMapId = "READSERIES_1084"
         },
+        READSERIES_1085 = {
+          ContentEN = "Footsteps Across Huaxu",
+          TextMapId = "READSERIES_1085"
+        },
         READSERIES_1088 = {
           ContentEN = "Lunocarp's Trade Tricks & Tips",
           TextMapId = "READSERIES_1088"
@@ -32954,6 +34579,10 @@ You can earn EXP by:
         READSERIES_1097 = {
           ContentEN = "A Lost Sheet – Mistwharf",
           TextMapId = "READSERIES_1097"
+        },
+        READSERIES_1114 = {
+          ContentEN = "Dawn of Haojing",
+          TextMapId = "READSERIES_1114"
         },
         READSERIES_DESC_1039 = {
           ContentEN = "Retrieved from among countless folders within the cabinet, these files contain photographs and meticulous daily records of each child who once lived at the Hypnos' House.",
@@ -33294,6 +34923,86 @@ Among its stories are "The Driverless Bus One Must Never Board After Ten" and "T
           ContentEN = "A handwritten note, its bold and forceful strokes carrying the unmistakable severity of an older hand.",
           TextMapId = "READ_DESC_2000098"
         },
+        READ_DESC_2000099 = {
+          ContentEN = "A treatise that appears to set down the rites governing Huaxu's Grand Incense Rite. It enumerates the sacrificial observances of antiquity in meticulous detail and concludes with marginal notes left by an unidentified hand.",
+          TextMapId = "READ_DESC_2000099"
+        },
+        READ_DESC_2000100 = {
+          ContentEN = "A set of notes left by a foreign scholar investigating the origins of Huaxu's Grand Incense Rite. The date of composition is unknown. Many of the author's conjectures lack corroborating records or material evidence, and most of the text is not recognised as credible by modern historians.",
+          TextMapId = "READ_DESC_2000100"
+        },
+        READ_DESC_2000101 = {
+          ContentEN = "A tale of Yin Qing, a poet of ancient Huaxu, drawn from Bygone Fragments, an essay collection by the later author Cang Xian. In it, a young traveller known only as Feng — his family name now lost to history — drifts into Haojing and discovers a green leaf inscribed with a poem drifting along a waterway beside the Yin residence — a small happenstance that binds their fates.\n\npreserves a number of literary anecdotes from roughly five centuries past, steeped in the flavour of legend. Its reliability as a historical source remains open to question, yet its value as literature is widely acknowledged.",
+          TextMapId = "READ_DESC_2000101"
+        },
+        READ_DESC_2000102 = {
+          ContentEN = "An excerpt from Xu Xingke's Footsteps Across Huaxu, an officially commissioned travelogue. In it, Xu sets down his impressions of his homeland — its regions, its people, and the ideas they awaken.",
+          TextMapId = "READ_DESC_2000102"
+        },
+        READ_DESC_2000103 = {
+          ContentEN = [[
+Huaxu Trends tracks what's trending across Huaxu: new places to eat and drink, clothing and everyday essentials, and lifestyles arriving from overseas and taking hold at home.
+Each year, the Haojing Special drops a month before the Grand Incense Rite, spotlighting the capital's latest go-to spots for food, leisure, and nightlife.]],
+          TextMapId = "READ_DESC_2000103"
+        },
+        READ_DESC_2000104 = {
+          ContentEN = [[
+A short piece praising the Nine Chapters of Dafeng, written in Huaxu's distinctive panegyric style.
+From the wording and the marginal note appended below, the author appears to be a student still learning the craft of writing.]],
+          TextMapId = "READ_DESC_2000104"
+        },
+        READ_DESC_2000105 = {
+          ContentEN = "A celebrated Huaxu classic, reputedly written by a master of Xuanheng Sect. The work runs to seventeen volumes, with additions made by later generations. The excerpt below is drawn from the book's preface.",
+          TextMapId = "READ_DESC_2000105"
+        },
+        READ_DESC_2000106 = {
+          ContentEN = "A folk opera script popular among Huaxu's commoners. It follows a young couple from first meeting to marriage, only for petty quarrels and everyday slights to sour things afterwards. Said to be adapted from a real case in Haojing, though this cannot be verified. Excerpt follows.",
+          TextMapId = "READ_DESC_2000106"
+        },
+        READ_DESC_2000107 = {
+          ContentEN = [[
+A young artisan's personal notes, loosely recording a few ways to make scented sachets.
+It isn't a proper how-to, and the steps aren't laid out in full. Best enjoyed as a casual read.]],
+          TextMapId = "READ_DESC_2000107"
+        },
+        READ_DESC_2000108 = {
+          ContentEN = "A substantial volume detailing the Ministry of Works' most recent public projects.",
+          TextMapId = "READ_DESC_2000108"
+        },
+        READ_DESC_2000109 = {
+          ContentEN = "A record of Master Zhuxi's sayings, written down by his students. His views shifted with age, yet his words were preserved throughout his life, from his earliest years to his last. Excerpt follows.",
+          TextMapId = "READ_DESC_2000109"
+        },
+        READ_DESC_2000110 = {
+          ContentEN = [[
+Most fresh faces in Outer Peaks get told the same thing on their first day: "Done with your errands? Go take a look at the training yard."
+It was originally set up so the Drifters could spar and hone their craft, but over time, it has picked up a few... additional uses.]],
+          TextMapId = "READ_DESC_2000110"
+        },
+        READ_DESC_2000111 = {
+          ContentEN = "A workshop logbook where Outer Peaks' artisans jot down their wild ideas and odd contraptions. In the name of \"learning from one another\", Uncle Tang later insisted on adding a comment board so everyone could leave their thoughts underneath.",
+          TextMapId = "READ_DESC_2000111"
+        },
+        READ_DESC_2000112 = {
+          ContentEN = "An anonymous miscellany from Huaxu, offering a detailed account of the rules and procedures of the Incense Trial.",
+          TextMapId = "READ_DESC_2000112"
+        },
+        READ_DESC_2000113 = {
+          ContentEN = "A tongue-in-cheek essay that claims to explain how to become High Chancellor of Loongyuan. So exaggerated and irreverent that it's hard to tell where fact ends and invention begins.",
+          TextMapId = "READ_DESC_2000113"
+        },
+        READ_DESC_2000114 = {
+          ContentEN = "A daily paper printed by the Hall of Craft and sold on the streets of Haojing. Mostly local happenings and the occasional public notice. Truth be told, it has never had many readers.",
+          TextMapId = "READ_DESC_2000114"
+        },
+        READ_DESC_2000115 = {
+          ContentEN = "A daily paper printed by the Hall of Craft and sold on the streets of Haojing. Mostly local happenings and the occasional public notice. Truth be told, it has never had many readers.",
+          TextMapId = "READ_DESC_2000115"
+        },
+        READ_DESC_2000116 = {
+          ContentEN = "A book set down by a man of letters surnamed Shen. Its authenticity cannot be verified, but it remains an entertaining read. Much of the text has been lost to time. This is Part Ⅱ.",
+          TextMapId = "READ_DESC_2000116"
+        },
         READ_DESC_20600 = {
           ContentEN = "A collection of enigmatic pages discovered by chance. Some are delicate scrolls of fine parchment; others, freshly printed sheets with ink still crisp and dark. A few are no more than torn scraps from half-used notebooks. Whether neatly penned or barely legible, they all share one thing in common — each contains a hint pointing to the whereabouts of a hidden treasure.",
           TextMapId = "READ_DESC_20600"
@@ -33537,15 +35246,7 @@ Among its stories are "The Driverless Bus One Must Never Board After Ten" and "T
         READ_NAME_2000058 = {
           ContentEN = "Silvercandle Hymns (Ⅱ)",
           TextMapId = "READ_NAME_2000058"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "READ_NAME_2000059",
-    MaxKey = "RESOURCE_DESC_10007",
-    Loader = function()
-      return {
+        },
         READ_NAME_2000059 = {
           ContentEN = "Silvercandle Hymn (Ⅲ)",
           TextMapId = "READ_NAME_2000059"
@@ -33565,7 +35266,15 @@ Among its stories are "The Driverless Bus One Must Never Board After Ten" and "T
         READ_NAME_2000063 = {
           ContentEN = "Silvercandle Hymn (Ⅶ)",
           TextMapId = "READ_NAME_2000063"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "READ_NAME_2000064",
+    MaxKey = "READ_TEXT_20605",
+    Loader = function()
+      return {
         READ_NAME_2000064 = {
           ContentEN = "Silvercandle Hymn (Ⅷ)",
           TextMapId = "READ_NAME_2000064"
@@ -33705,6 +35414,78 @@ Among its stories are "The Driverless Bus One Must Never Board After Ten" and "T
         READ_NAME_2000098 = {
           ContentEN = "An Admonishing Note",
           TextMapId = "READ_NAME_2000098"
+        },
+        READ_NAME_2000099 = {
+          ContentEN = "On Incense Offerings: Observances of Sacrifice",
+          TextMapId = "READ_NAME_2000099"
+        },
+        READ_NAME_2000100 = {
+          ContentEN = "Field Notes on the Grand Incense Rite (Excerpt)",
+          TextMapId = "READ_NAME_2000100"
+        },
+        READ_NAME_2000101 = {
+          ContentEN = "Qing's Wish",
+          TextMapId = "READ_NAME_2000101"
+        },
+        READ_NAME_2000102 = {
+          ContentEN = "Footsteps Across Huaxu – Haojing",
+          TextMapId = "READ_NAME_2000102"
+        },
+        READ_NAME_2000103 = {
+          ContentEN = "Huaxu Trends – Haojing Special",
+          TextMapId = "READ_NAME_2000103"
+        },
+        READ_NAME_2000104 = {
+          ContentEN = "Ode to the Nine Chapters",
+          TextMapId = "READ_NAME_2000104"
+        },
+        READ_NAME_2000105 = {
+          ContentEN = "A Compendium of Incense",
+          TextMapId = "READ_NAME_2000105"
+        },
+        READ_NAME_2000106 = {
+          ContentEN = "A Match Made",
+          TextMapId = "READ_NAME_2000106"
+        },
+        READ_NAME_2000107 = {
+          ContentEN = "Inventive Sachets: Notes from My Workbench",
+          TextMapId = "READ_NAME_2000107"
+        },
+        READ_NAME_2000108 = {
+          ContentEN = "Hall of Craft Annual Record: Works Digest",
+          TextMapId = "READ_NAME_2000108"
+        },
+        READ_NAME_2000109 = {
+          ContentEN = "The Sayings of Master Zhuxi",
+          TextMapId = "READ_NAME_2000109"
+        },
+        READ_NAME_2000110 = {
+          ContentEN = "Training Yard Booking Log",
+          TextMapId = "READ_NAME_2000110"
+        },
+        READ_NAME_2000111 = {
+          ContentEN = "Workshop Experiment Log",
+          TextMapId = "READ_NAME_2000111"
+        },
+        READ_NAME_2000112 = {
+          ContentEN = "The Incense Trial: The Civil Service Exam in Smoke and Scent",
+          TextMapId = "READ_NAME_2000112"
+        },
+        READ_NAME_2000113 = {
+          ContentEN = "How to Become High Chancellor of Loongyuan",
+          TextMapId = "READ_NAME_2000113"
+        },
+        READ_NAME_2000114 = {
+          ContentEN = "Dawn of Haojing — Issue Ⅰ",
+          TextMapId = "READ_NAME_2000114"
+        },
+        READ_NAME_2000115 = {
+          ContentEN = "Dawn of Haojing — Issue Ⅱ",
+          TextMapId = "READ_NAME_2000115"
+        },
+        READ_NAME_2000116 = {
+          ContentEN = "Notes on the Mirage (Ⅱ)",
+          TextMapId = "READ_NAME_2000116"
         },
         READ_NAME_20602 = {
           ContentEN = "Purgatorio Island: Volume Ⅰ",
@@ -34265,7 +36046,7 @@ All glory to our Emperor.]],
           TextMapId = "READ_TEXT_2000072"
         },
         READ_TEXT_2000073 = {
-          ContentEN = "In Huaxu, one ought not rely on brute force — yet, as we all know, words can cut just as sharply.\nThus did I spend years roaming the land, observing every quarrel, retort, and petty squabble I could find, and distilled the entire art of human rhetoric into four supreme manoeuvres: LMAO, copypasta, bootlicking, and seething. Master these, and you shall never again lose ground in an argument.\nAllow me to present a few examples. First, the proper deployment of LMAO...\n\n(The rest of the pages have been brutally crossed out. You close the book, and on the back cover you find a single bold word scrawled across it: copypasta.)",
+          ContentEN = "In Huaxu, one ought not rely on brute force — yet, as we all know, words can cut just as sharply.\nThus did I spend years roaming the land, observing every quarrel, retort, and petty squabble I could find, and distilled the entire art of human rhetoric into four supreme manoeuvres: LMAO, copypasta, bootlicking, and seething. Master these, and you shall never again lose ground in an argument.\nAllow me to present a few examples. First, the proper deployment of LMAO...\n \n(The rest of the pages have been brutally crossed out. You close the book, and on the back cover you find a single bold word scrawled across it: copypasta.)",
           TextMapId = "READ_TEXT_2000073"
         },
         READ_TEXT_2000074 = {
@@ -34315,7 +36096,7 @@ from its heights, I draw the stars down into my wine.]],
           TextMapId = "READ_TEXT_2000084"
         },
         READ_TEXT_2000085 = {
-          ContentEN = "...\nCase Ten — A Nuisance Neighbour, Settled with The Compendium of Verbal Stratagems\n\nA few years back, a man named Zhao Da came to me with a complaint. His new neighbour, Zhang San, had been pounding on his door before dawn each day, insisting that Zhao had \"sung at midnight and wouldn't let him sleep\". I'd known Zhao Da for years. He hauls cargo on the docks all day; the moment he gets home, he's out cold. The man sleeps like a stone — midnight singing wasn't even remotely possible. But Zhang San stuck to his story. Each day he came earlier, and louder. At last, one dawn when Zhao stumbled out half-asleep and thoroughly fed up, he opened the door and threw a punch. The Nine Chapters of Dafeng say: \"Heaven's great virtue bears the name of Life; To wound or kill — this must not be done.\" By the code, Zhao Da had to be punished.\nStill, Zhang San had started the trouble, and that had to be dealt with as well. Reasoning proved useless, and brawling was out of the question. So I lent Zhao a book a friend once gave me — The Compendium of Verbal Stratagems — and told him to study it. The next morning, Zhang arrived as usual, shouting. Zhao simply stood inside the threshold and replied with the book's four stock phrases: \"LMAO\", \"Copypasta\", \"Bootlicking\", and \"Seething\". Within moments, Zhang was shaking with rage and actually raised a fist to strike — and Zhao quietly pulled back his sleeve, showing the fresh welt from his punishment the day before. Zhang froze, went pale, and backed away. He came again the next morning. Zhao answered in exactly the same way. After a few days of this, Zhang San stopped coming altogether.",
+          ContentEN = "...\nCase Ten — A Nuisance Neighbour, Settled with The Compendium of Verbal Stratagems\n\nA few years back, a man named Zhao Da came to me with a complaint. His new neighbour, Zhang San, had been pounding on his door before dawn each day, insisting that Zhao had \"sung at midnight and wouldn't let him sleep\". I'd known Zhao Da for years. He hauls cargo on the docks all day; the moment he gets home, he's out cold. The man sleeps like a stone — midnight singing wasn't even remotely possible. But Zhang San stuck to his story. Each day he came earlier, and louder. At last, one dawn when Zhao stumbled out half-asleep and thoroughly fed up, he opened the door and threw a punch. The Nine Chapters of Dafeng say: \"Heaven's great virtue bears the name of Life; To wound or kill — this must not be done.\" By the code, Zhao Da had to be punished.\n Still, Zhang San had started the trouble, and that had to be dealt with as well. Reasoning proved useless, and brawling was out of the question. So I lent Zhao a book a friend once gave me — The Compendium of Verbal Stratagems — and told him to study it. The next morning, Zhang arrived as usual, shouting. Zhao simply stood inside the threshold and replied with the book's four stock phrases: \"LMAO\", \"Copypasta\", \"Bootlicking\", and \"Seething\". Within moments, Zhang was shaking with rage and actually raised a fist to strike — and Zhao quietly pulled back his sleeve, showing the fresh welt from his punishment the day before. Zhang froze, went pale, and backed away. He came again the next morning. Zhao answered in exactly the same way. After a few days of this, Zhang San stopped coming altogether.",
           TextMapId = "READ_TEXT_2000085"
         },
         READ_TEXT_2000086 = {
@@ -34382,6 +36163,112 @@ Stop swallowing nonsense like Loong in the Sky; that trashy tale has led enough 
 Take this small sum and get yourself looked at. A fall from a cliff is no small matter. From now on, train steadily. Keep your head clear. Stop daydreaming, and stop chasing shortcuts that lead nowhere!]],
           TextMapId = "READ_TEXT_2000098"
         },
+        READ_TEXT_2000099 = {
+          ContentEN = [[
+Prepare a red calf; burn it to the south, in sacrifice unto High Heaven.
+Take sheep and swine, and bury them to the north, in sacrifice unto the Bounteous Earth.
+To the east, offer unto the Sun; to the west, unto the Moon.
+Establish the pit and altar, and offer separate rites to the Four Quarters and the Four Seasons.
+At the time of sacrifice, the Three Masters of Rites shall officiate.
+Whoso Taihao favours shall bear the Lunarose Incense and stand at the centre, to make offering unto the Divine Lord.
+Whoso is broadly learned shall bear the Sumei Incense and stand to the left, to make offering unto the ancestors.
+Whoso excels in the myriad arts shall bear the Aurumwood Incense and stand to the right, to make offering unto the Spirits of Land and Grain.
+Let no garments be adorned with deep indigo or dark crimson; let neither red nor purple be worn as inner raiment.
+Speak not during the rite. When the offerings are complete, keep watch over the sacrificial fire for the space of a quarter-hour.
+Let sacrificial food not be kept overnight; should it be kept beyond three days, it shall not be used.
+
+Note: These regulations are intricate and lavish, and do not accord with the temper of Huaxu today. They are set down here only as a record of former times and ought not to be restored.]],
+          TextMapId = "READ_TEXT_2000099"
+        },
+        READ_TEXT_2000100 = {
+          ContentEN = "...\n\nIn sum, Huaxu's Grand Incense Rite is the country's most important recurring festival. Its ritual form has shifted over the centuries, yet the stages of that evolution are surprisingly well attested, each aligning with Huaxu's economic, technological, and artistic development at the time.\n\nA plausible hypothesis is that the festival began as a large-scale rite unique to Huaxu. Over time, it adapted to the needs and conditions of each era, shedding many elements while preserving its essential core — through which the people of Huaxu give shape to a distinctive cultural identity.\n\nThe \"divinities\" worshipped by the people of Huaxu are not mere symbols. They exist, and they influence the ecology within Huaxu's borders in concrete, observable ways. I have personally witnessed the descent of the deity called Taihao during the Grand Incense Rite, and the experience left me profoundly shaken.\n\n...\n\nI am beginning to suspect a flaw in my earlier line of inquiry. I once assumed the Grand Incense Rite resembled festivals in other nations: cultural practices that grew out of commemoration and sacrifice, preserving certain customs as tradition. Ordinarily, such customs become simpler and more secularised as time advances.\n\nYet after examining every extant record of the Rite within Huaxu, I found that its central custom — the act of incense offering itself — has remained unchanged in both materials and quantity for nearly a thousand years of recorded history.\n\nGiven the manifest presence of \"divine\" power within Huaxu's territory, I have reason to believe the Rite is not merely a cultural or political form of worship. It may have a distinct functional purpose. Put plainly: in Huaxu, and only in Huaxu, a rite that exchanges offerings for a deity's protection appears to function as an actual transaction.\n\nBut why would Taihao require these incenses? And what, in fact, is Taihao? No comparable records exist elsewhere in Atlasia, and the incense used for such offerings is produced only within Huaxu... Incense found only here — and a \"god\" found only here that feeds upon it? The symmetry is too neat. It feels less like coincidence than design.\n\n...\n\nThis functional reading suggests an intriguing possibility. Perhaps Huaxu's so-called \"divinities\" are not the exalted beings of popular imagination at all, but something closer to a machine — an apparatus that regulates the environment within its sphere of influence. It may even affect, or outright control, nearby Filthoids, pressing them into service as a blunt tool of enforcement. In that case, the Grand Incense Rite is less a ceremony than a scheduled procedure: refuelling this immense \"machine\" with what Huaxu calls \"incense\", at fixed intervals and in fixed amounts.\n\nIf this conjecture proves true, it would imply that, a thousand years ago, the people of Huaxu had mastered a technology capable of creating a \"god\". Should such a technology be deciphered, the Nine Chapters of Dafeng might be extended across Atlasia; or the mechanism's field of influence might be scaled down to the individual, enabling the creation of specialised protective devices.\n\nYet if such a technology truly exists, why does it function only within Huaxu's borders? Even the Starweavers have left no record of employing similar techniques beyond Huaxu’s border. What, then, is the crucial factor that imposes this limitation?\n\n...",
+          TextMapId = "READ_TEXT_2000100"
+        },
+        READ_TEXT_2000101 = {
+          ContentEN = [[
+...
+
+The leaf had long since turned yellow, yet the traces of ink upon it remained clear. Yin Qing studied it, gave a long, wistful sigh, and after a moment allowed himself a faint smile.
+"I once wished to roam the world," he said to Feng, "yet my father and mother would not permit it. So I wrote upon this green leaf and set it adrift with the current, to ease my longing. Now that you have chanced upon it, carry it with you on your travels, that my wish may journey beside you."
+Feng was silent for a long while. Then he replied,
+"Why should we not travel together?"
+
+...
+
+When they reached the Lin River, Feng was stricken with a grave illness and lay bedridden. Qing said, "Rest now, and recover your strength. I shall remain here until you are well; then we shall set out again."
+But Feng would not agree. He drew forth the withered leaf and pressed it into Qing's hand.
+"Take this leaf," he said. "Go far. Let it be as though we still travel side by side."
+
+...
+
+Qing travelled far and wide, and in time he filled an entire chest with his verses. Wherever he went, he won admirers who pressed him to remain, yet he declined them all.
+In his later years, he returned once more to the familiar banks of the Lin. Before Feng's grave, he buried the withered leaf in the soil and laid fresh green leaves above it.
+Upon a leaf he inscribed two lines:
+
+"Green leaves lie upon your grave;
+The ache in my heart drifts with the stream."]],
+          TextMapId = "READ_TEXT_2000101"
+        },
+        READ_TEXT_2000102 = {
+          ContentEN = "Hall of Adjudication\n\nIn the early days of the Nine Chapters of Dafeng, the Hall of Adjudication played a far more prominent role. Its original purpose, however, has long since faded from common memory and is now known only to a handful of dedicated historians.\n\nBeneath the Hall, a bridge-like span arches across the air like a rainbow. Legend holds that Lord Argent sometimes soars through the heavens and listens, unmoving, to the clamour of the mortal world — proof that Heaven heeds the people, and that divine law watches over all.\n\nToday, the Hall stands as Huaxu's political centre. It rises against the clouds, visible from nearly anywhere in Haojing — much as the Nine Chapters of Dafeng stand before the people: clear, enduring, and impossible to ignore.\n\n⸻\n\nZesheng Pharmacy\n\nIn former times, the people of Huaxu turned to healers of the Zhuyou clan when illness struck. In later ages, physicians devoted to pharmacology emerged, along with apothecaries to prepare and dispense medicines.\n\nZesheng Pharmacy is Haojing's most respected establishment of its kind. It is said that its founder was once herself a Zhuyou, yet she abandoned those arts in favour of pharmacology, elevating the discipline to new heights. Rare herbs and medicinal ingredients are supplied here, and the pharmacy is renowned for its proprietary prescriptions. It also offers seasonal wellness regimens to help preserve one's health.\n\nIf thirst overtakes you while wandering the streets, do stop by — herbal tonics are served free to the public.\n\n⸻\n\nYoulai Alley\n\nSome popular Huaxu tales claim that the dead may linger in a form known as Wishen. Unlike the fearful portrayals of spirits and ghosts found in other lands, Huaxu's Wishen are remembered in legend as gentle, even endearing beings. Though they may occasionally cause minor disturbances, it is often out of kindness, as if to guide the living along their path.\n\nHaojing folklore speaks of a place called Youlai Alley, where Wishen with unfinished attachments are said to gather. Most dismiss such claims as idle fancy. Yet there are whispers that if one follows the winding lanes of the eastern quarter long enough, one might, by chance, stumble into that mysterious domain...\n\n⸻\n\nJiaolan Village\n\nIf Haojing's bustle begins to wear on you, head west. Jiaolan Village offers a quiet refuge from the city's noise. This small settlement lies on Haojing's western outskirts, close enough to reach on foot.\n\nHuaxu's incense culture stretches back into antiquity, and Jiaolan Village is regarded as its birthplace. Though the craft of incense-making has long since spread across the land, and Jiaolan is no longer the only place to find it, it remains home to the largest incense-drying grounds in the region surrounding Haojing. When the aromatic plants come into bloom, villagers harvest them, rinse them clean, and lay them out beneath the sun. On fair days, when a gentle breeze passes through, the fragrance carries for miles, creating an atmosphere at once ethereal and intoxicating.\n\nBefore you depart, should you wish to bring home a thoughtful gift, the villagers' handcrafted incense makes an excellent choice: elegant in scent, and rich in Huaxu's distinctive cultural character.",
+          TextMapId = "READ_TEXT_2000102"
+        },
+        READ_TEXT_2000103 = {
+          ContentEN = "Top Dining Pick: Bazhen Pavilion\n\nIn last month's reader poll, Bazhen Pavilion beat the runner-up by nearly a hundred votes — clearly a crowd favourite.\n\nOur rule is simple: we don't recommend what we haven't tried. So we went in as ordinary diners and ordered the signature dishes. The fan-favourite Bazhen Tofu really is a standout: silky-soft, layered with flavour, and finished with a scatter of corn kernels — looks as good as it tastes.\n\nMistwharf Vinegar Fish is a classic, but the sharp vinegar tang isn't for everyone, especially with freshwater fish. A couple of us left it unfinished.\n\n...\n\nFrom Diner A: Chef Bai's cooking speaks for itself. And Chef Li isn't far behind. Word is his poems are just as good as his food.\n\nFrom Diner B: When I was young, my family always celebrated my birthday at Bazhen Pavilion... Years have gone by. Though the people who once sat beside me are no longer with me, the dishes taste the same. And perhaps that is enough.\n\nFrom Diner C: Whenever friends or relatives visit Haojing, Bazhen Pavilion is the first place I take them. That said, lately some of the new dishes feel like they're trying a little too hard to please out-of-towners. It's not quite the same as it used to be — not that there's anything wrong with catering to visitors.\n\n...",
+          TextMapId = "READ_TEXT_2000103"
+        },
+        READ_TEXT_2000104 = {
+          ContentEN = "\"Ah! How magnificent are the Nine Chapters of Dafeng!\nWhen chaos first gave way, the Nine Chapters were set in place;\nBy the covenant of the two divine lords, the standard was forged;\nThe Argent Loong upheld the law, and inscribed the righteous way;\nHigh it stands, vast and unshaken — never to be toppled!\n...\nGreat indeed — great indeed!\"\n\nMarginal note, in another hand: The opening and closing are predictably trite, and the middle offers nothing worth keeping. Rewrite.",
+          TextMapId = "READ_TEXT_2000104"
+        },
+        READ_TEXT_2000105 = {
+          ContentEN = "The art of incense has changed with the ages. In antiquity, aromatic herbs were burnt to raise fragrant smoke to reach the divine; in the present age, incense is measured and its vapours harmonised, so that by this craft the Mandate of Heaven may be set in order.\n\nThe Record of Yang's Life relates that at the founding of the Nine Chapters, Yang declared: \"When the Mandate of Heaven intermingles, all courses are impeded, and what is tangled cannot easily be loosed.\" She therefore sent men to gather a myriad of aromatics and heap them at the Taixu Mausoleum, where they were burnt without cease, day and night. Yang herself sat beside the pyre. When the smoke ran thick, none could draw near; and when at last it thinned, she had vanished.\n\nThis account need not be taken on faith. Versions differ from place to place, and much has shifted with the passing of years. I compile this book not to quarrel over such tales, but to set down the incense arts of Huaxu across the span of ages. Within these pages I have gathered, as exhaustively as I could, matters of Heaven and Earth, of human affairs and the produce of the land; what was ancient is collected, and what is current is brought within its compass. It is my hope that those who come after may follow this lineage, and enrich it in their turn.\n\nThe whole consists of seventeen volumes. The first nine record the incense materials: orchid and fragrant herb, pepper and cassia, aloeswood, sandalwood, borneol and musk — ancient varieties of Huaxu — together with rare foreign aromatics once presented as tribute.\n\nMarginal note: Since the widening of the Starweavers' routes, what was once unheard-of has become obtainable.\n\nThe next four volumes treat of the uses of incense. Incense serves many ends: for offering, for wear, and for medicine. These are set out in detail below.\n\nThe final three volumes concern the art of incense blending. Though its principles may appear simple, it is in truth the most demanding of all related crafts. One must first master the preceding thirteen volumes and commit them thoroughly to memory; only then may one properly undertake this discipline.\n\nThe uses of incense are as boundless as the sea, and their subtleties are still beyond our full grasp. I have done no more than gather and preserve a handful of remarkable formulae devised by sages of old, that their methods might endure.",
+          TextMapId = "READ_TEXT_2000105"
+        },
+        READ_TEXT_2000106 = {
+          ContentEN = "No need for the Moon Matchmaker to meddle. One red thread binds the romance. The crimson bridal sedan chair halts at the gate. Whether she wills it or no — gown on, veil down — once she mounts, the union is sealed. A hundred hands bear it onwards. The bridegroom reels, heart unmoored, as though he had glimpsed a heavenly maiden in a dream.\n\n(Offstage, a hurried reply.)\nJing (beaming): Splendid! Good luck upon good luck — three cups for that!\nMo: It's late. My lady is waiting. I'll be taking my leave.\nJing: Nonsense! You've drained more cups than I can count at the Bazhen Pavilion and never once been drunk. And now you're baulking at a single cup? You'll be the laughingstock!\nMo: Things aren't what they were. Don't take it amiss, brother.\n(Mo bows with clasped hands.)\nJing (laughing): Ha! And here I thought you were a man of mettle — turns out you go to ground the moment wine's poured.\nJing: Fine, fine. If he's that set on ducking out, no need to push it.\nMo (startled): Why would you say that? All these years of brotherhood, and you'd throw it away over one cup of wine?\nJing: Brotherhood? If that means anything to you — today's your wedding day, everyone's here to toast you. And you won't drink a single cup with us?\nAll: Hear, hear!\nJing: Some loyalty. Some brother.\nAll: Hear, hear!\nMo (sighing): Pomegranate blazes red as fire... and still, it cannot match the bitter smoke of mugwort... Ah, well.\nMo (raising his voice): Today I'll drink with you if it kills me. Gentlemen — your health!\n(All drink.)\n\nA crescent moon crests the little tower, yet its tender light falls only into the gutter. Hair dressed in vain, pipa in hand... whose ear awaits her song?",
+          TextMapId = "READ_TEXT_2000106"
+        },
+        READ_TEXT_2000107 = {
+          ContentEN = "A sachet to cheer up my workaholic friends\n— 1 part Ivorywood, 3 parts Vernal Prime.\nVernal Prime has a crisp, refreshing fragrance, perfect for a more \"put-together\" vibe. Ivorywood helps keep you steady when work gets stressful.\n\nA sachet to win the hearts of every stray cat\n— A small pinch of Loong Qiqi, 4 parts Ivorywood.\nThe secret is that tiny salty, fishy note in Loong Qiqi — it smells a little wild, in a way cats seem to love. Add the cosy warmth of Ivorywood, and they might just decide we're \"one of them\".\n\nA sachet to help my favourite author update faster\n— As much Frostleaf as you can manage.\nFrostleaf keeps you wide awake, so the writer I'm following can pull an all-nighter and get a chapter out. So yes: be generous... Teehee...",
+          TextMapId = "READ_TEXT_2000107"
+        },
+        READ_TEXT_2000108 = {
+          ContentEN = "The Ministry of Works hereby announces the following works under its charge:\n\nⅠ. Rehabilitation of Official Roads\nBy order, the city's principal roads and minor roads are to be repaired and reinforced. Roadbeds shall be strengthened and carriageways widened, easing the passage of carts and riders and improving travel throughout the city, so that the routes may run clear in all directions.\n\nⅡ. Construction of Freight-Handling Apparatus\nNew freight-handling apparatus shall be constructed, with a wrought-iron frame and precision gearing. Efficiency shall be improved and operations standardised, speeding the circulation of goods and encouraging commercial growth.\n\nⅢ. Reinforcement and Repair of the Wharves\nThe existing wharves shall undergo full inspection and repair. Riverbanks shall be reinforced, rotted timbers replaced, and additional safeguards installed, ensuring safe passage for vessels and keeping grain transport secure.\n\n...\n\nAll works shall be carried out in accordance with established codes: rooted in traditional practice, yet open to new techniques. The Ministry of Works faithfully discharges its duty, securing the foundations of the state and serving the needs of the people.\n\nThose wishing to consult the full project files may do so in the Ministry's archives.",
+          TextMapId = "READ_TEXT_2000108"
+        },
+        READ_TEXT_2000109 = {
+          ContentEN = "In considering what the sages of old intended when they taught learning, I take it to be this: to press inquiry to its limits, and to read widely in the old and the new, so as to broaden the mind and enlarge one's view. Only then may a person judge right from wrong, weigh matters with clarity, and grasp the workings of the world — not merely memorise texts and polish fine phrases for the sake of fame, profit, and preferment.\n\nThose who study in our day have borne hardships for too long. Much of what the former worthies taught is recorded in the classics, yet remains detached from worldly affairs. Anyone with resolve ought to read deeply, reflect, and question — to examine and sift what one has learned. For if one recognises the vastness of Heaven and Earth and the complexity of affairs, and strives to look upon all things with objectivity and a mind trained to weigh matters with discernment, then the standards by which one stands in the world and conducts oneself are already within one's grasp. Why wait for others to hand them over before one can hold fast to them?\n\nAs for what I have written, it cannot guide every student, and the methods it proposes may not fully accord with the true aim of opening the mind and awakening thought. Therefore I shall no longer require it in this hall. Instead, I have selected the main principles by which the sages taught learning, set them forth as articles, and posted them here for all to see. Let all of you study them together, make their meaning clear, keep them, and hold yourselves to them. Then, in the midst of your thoughts and actions, your judgement will grow more exacting: you will deliberate with care, discern with clarity, and investigate things so as to extend your knowledge. These are, in truth, the roots of conduct in the world, and the foundations of cultivating virtue and turning towards the good.\n\nOnly by keeping to this guiding framework may one contemplate all things, and so bring forth new understanding and open new paths.",
+          TextMapId = "READ_TEXT_2000109"
+        },
+        READ_TEXT_2000110 = {
+          ContentEN = "4 June\nFiled by: Wang Quan\nReason: I say sweet tofu pudding is best. Zhang Fu swears by the savoury kind. Only one way to settle it — a match!\n\n28 June\nFiled by: Xu Hong\nReason: I want to test a new explosive prototype. The yard is open enough for it.\n\n15 July\nFiled by: Su Yi\nReason: Lu Ye and Pei Jing want to practise with crossbows. I've been asked to keep an eye on them.\n\n16 July\nFiled by: Su Yi\nReason: Same as yesterday (the kids are really coming along!).\n\n6 August\nFiled by: Uncle Tang\nReason: Finished a new battlefield loudhailer. Need everyone to take turns singing in the yard for a sound test.\n\n20 August\nFiled by: Uncle Tang\nReason: Zhu Pu overtrained and hurt his leg. Want to test the support brace I made for him and log a few measurements.",
+          TextMapId = "READ_TEXT_2000110"
+        },
+        READ_TEXT_2000111 = {
+          ContentEN = "I. Meowvellous Machine\n\nLogged by: Uncle Tang (love you lot, everyone in Outer Peaks!)\n\nSetup:\nSplit the kids into two groups. One got a pep talk from the Meowvellous Machine beforehand; the other didn't.\nBoth groups then read Mechanism Basics That Every Huaxu Kid Can Learn. After one stick of incense, we gave them a quiz.\n\nResult:\nSome of the \"encouraged\" kids (Zhu Pu, for instance) made the top ten. Others landed near the bottom. The kids who didn't get the pep talk (like Pei Jing) ended up somewhere in the middle.\n\nComments:\nSu Yi: The groups weren't evenly matched to begin with. The results don't prove anything.\nXu Hong: I think some of them were just scared by how the machine looks.\nKezhou: The results aren't the point. I just want to ask... what's with that signature in the \"Logged by\" line? Has Uncle Tang been breathing in workshop fumes again?\n\n\nII. Duck and Dash\n\nLogged by: Uncle Tang (still loving you lot today)\n\nSetup:\nAfter basic safety checks, we went out into the wild. On spotting a lone Sable Bi'an, give a Duck and Dash a full wind and toss it.\n\nResult:\nDidn't scare it off. If anything, it made so much noise that it drew more of them in and made them meaner.\n\nAreas to Improve:\nTry making it even louder.\n\nComments:\nSu Yi: Why not pack it with a few small charges? Like the firecrackers we set off at New Year — toss it, then leg it while it's popping.\nUncle Tang: This is meant for schoolchildren to use for self-defence on the way home. If we add anything like that, I'm worried they'll misuse it and hurt themselves.\nShen Han: Are the children all right? No one was hurt, I hope? Uncle Tang — please don't drag them into such dangerous experiments next time!",
+          TextMapId = "READ_TEXT_2000111"
+        },
+        READ_TEXT_2000112 = {
+          ContentEN = "Within Huaxu's system of governance, few institutions are as distinctive as the Incense Trial — an annual examination established by the Ministry of Rites to seek out promising talent among the young. Built around Huaxu's own incense culture, it proceeds in stages, each stricter than the last. Learning is tested openly; character and suitability are weighed more quietly. In time, it has become a signature feature of Huaxu's governance.\n\nShrine Trial — Timed by Smoke, Judged by Learning\nThe selection begins with the Shrine Trial, a small regional examination held throughout Huaxu. Each sitting is held at the district's Argent Loong Temple: a first-round screening, and a gesture of reverence to Lord Argent. The trial is conducted inside the temple itself, overseen by the temple's incense wardens, who are charged with keeping order and impartiality from start to finish.\nThere is no interview at this stage; the focus is purely on a candidate's learning. On the appointed day, candidates enter with their admission slips and take their seats. Writing materials are issued, but no one may touch brush to paper until permitted. Only when the supervising warden lights the designated Lunarose incense, and the candidates have completed their rite of thanks to Lord Argent, does the examination begin in earnest. The time allowed is exactly the burn of a single stick of Lunarose incense.\nThe top three from each sitting advance, and must in due course travel to Huaxu's capital, Haojing, for a harsher round of selection.\n\nDepartmental Trial — Matched to Post, Weighed in Talent and Virtue\nCandidates who reach Haojing then face the Departmental Trial, where suitability is the core concern. Unlike the Shrine Trial, which leans on written testing, this stage is not centred on the brush alone. Greater weight is placed on practical ability and how well a candidate fits the duties of the post. Interviews allow examiners to judge a candidate's speech, thinking, and character at closer range. Before sitting the trial, candidates must state their intended post, making an initial choice among the Three Ministries and their subordinate departments. The assessment shifts accordingly, depending on the functions of the chosen institution.\nThe close of the Departmental Trial marks the end of that year's Incense Trial. Once the list of successful candidates is confirmed, the Ministry of Rites summons all qualified entrants to the Hall of Adjudication to take up their appointments. Those whose talent and conduct are deemed exceptional may even win the favour of Lord Argent. In such cases, a Bi'an delivers a summons, granting leave to advance to a third stage: a final selection for the office of High Chancellor of Loongyuan.\nDuring this interval, the Hall of Adjudication enters a brief recess to prepare postings and the High Chancellor selection to follow. Meanwhile, the Hall of Incense hastens its own preparations, assembling special aromatics reserved solely for the High Chancellor's selection.\n\nAs for how the High Chancellor of Loongyuan is ultimately chosen — Huaxu has no shortage of opinions. I have only learned that an internal procedure does exist, and that it is said to be fairly comprehensive.\nFor reasons of space, however, we'll leave Loongyuan for the next issue.",
+          TextMapId = "READ_TEXT_2000112"
+        },
+        READ_TEXT_2000113 = {
+          ContentEN = "Do you want to become High Chancellor of Loongyuan?\nLet me be specific: set aside the tangled official duties the post entails. Imagine instead that you keep the title and bask in universal admiration across Huaxu without having to lift a finger. Under those conditions, do you want it?\nI expect most answers would be: of course!\nWhich brings us to the real question: how does one actually become High Chancellor of Loongyuan?\n\nIn last issue, we touched on the Incense Trial — the examination system by which the state selects officials from among the common run of Huaxu's citizens. But what of those so-called prodigies, the dazzling geniuses beyond the common measure? Is there a special track reserved for them? Are they appointed the moment they first wail into the world?\nCertainly not.\nBecoming High Chancellor of Loongyuan is no simple matter. Most readers will have guessed correctly: those singled out do indeed receive a message from Lord Argent — delivered, of course, by a Bi'an. But don't celebrate just yet. Receiving the message does not mean you've already made it. All it gives you is a new label: Candidate for High Chancellor of Loongyuan.\nYou answer the summons and travel to Haojing. There, the sitting High Chancellor receives you with great warmth. You gather in the Hall of Adjudication and talk — perhaps of state affairs, perhaps simply of daily life. This stage has a name: \"The Trial of the Way.\"\nWhen it ends, you are escorted back to your temporary quarters at the posting station to await the next summons.\nAnd you wait.\nDays pass. You pace like a cat on a hot tin roof, opening the door every few moments to see whether someone has come with news. The good news is that someone eventually does. If they didn't, this essay would end here — and then what would you do with your evening?\n\nFilled with anticipation, you return once more to the Hall of Adjudication. You assume that since your previous examiner was the sitting High Chancellor of Loongyuan, this time you must surely meet Lord Argent themselves. But upon arrival, you notice there is no Lord Argent, nor the High Chancellor. Instead, a handful of Hall staffers hurriedly thrust an enormous stack of dossiers into your arms and then flee at once, as if the building is about to collapse.\nNow comes your task: in this sea of records, you must trace the links between designated incidents and present your own reasoned conclusions. Someone will see to your meals, your lodging, your daily needs. You, however, are strictly forbidden from cutting corners. Try to slack off and you will be struck from the candidate list without ceremony.\nThis stage is called \"The Trial of Statecraft.\"\nNaturally, you are exceptional. After what feels like years poring over records — memorising every last petty detail from the past twenty years — you finally receive word one morning: you passed. The Trial of Statecraft is complete. Next comes, supposedly, an audience with Lord Argent.\nYou are beside yourself. You rush to Qianxiu Pavilion to have a new set of robes made — something bright and showy for the occasion. How many people go their entire lives without hearing even a single true word from Lord Argent? And you — you might see Them with your own eyes. What fortune beyond measure!\nUnable to contain your excitement, you tell the shop assistant exactly why you are having clothes made. The girl takes one look at your glowing face and cannot help it: she covers her mouth and giggles.\n\"You know,\" she says, \"not every candidate gets to see Lord Argent.\"\nYou go pale. You are just about to seek a further explanation when a messenger arrives with urgent orders: report to the Hall of Adjudication at once and prepare for the Trial of the Heart. With no time to dig, you hurriedly straighten your robes and make your way back to that now-familiar place.\n\nInside, incense smoke curls through the Hall — thick enough to be seen, yet without the faintest scent. This seems odd. An attendant arrives and has you sit on a cushion with the other candidates, instructing you to meditate and regulate your breath. Suspicious but obedient, you sit. Smoke coils around your eyes and nose. Your thoughts grow heavy. Drowsiness steals over you. You think you might as well close your eyes for a moment. So you do.\nAnd you fall asleep.\nYou dream a long dream.\nIn it, you see your past: your mother cradling you, your father lifting you high above his head.\nIn it, you see your future: you succeed to the post of High Chancellor of Loongyuan, spend a lifetime wringing yourself dry for the people of Huaxu, and at last are laid to rest in the Taixu Mausoleum.\nIn it, you see others — countless faces, countless eyes fixed upon you. Questions rise, one after another, pressing and demanding. You are flustered, drenched in sweat, pushed to the brink — and then you jolt awake.\nYou look up. The incense lit at the beginning has not yet burned out.\n\nIn the end, you do not pass the selection. Presumably, your performance in the dream failed to please Lord Argent. Still, though not chosen, you ultimately join the Hall of Incense and continue serving the people of Huaxu. A happy ending all the same, wouldn't you say?\n\nAnd so, dear readers, you now know exactly how to become High Chancellor of Loongyuan. And if one of you actually does make it to High Chancellor someday... well, I trust you'll remember me, the humble author who wrote this helpful little piece. A little token of appreciation sent my way would not go amiss. Don't you think?",
+          TextMapId = "READ_TEXT_2000113"
+        },
+        READ_TEXT_2000114 = {
+          ContentEN = "Ⅰ. East Market: Floodwater Half-Drowns a Lord Argent Statue\n\nAfter days of relentless rain, Haojing Lake rose fast enough to spill over the East Market embankment. One shopkeeper, known locally for his devotion, kept a three-foot wooden statue of Lord Argent at his shopfront and burnt incense to it each day without fail.\nEarly one morning, a shophand named Zhang opened up the shop to sweep the threshold — only to find the water already lapping at the steps, the statue's lower half swallowed up. Startled, Zhang shouted for help, and the neighbours together hauled the image further inside.\nTongues wag: \"Lord Argent's ways are inscrutable.\" Surely this is Their doing — making plain Their displeasure at private offerings by flooding Their own image, a stark reminder to respect the seasons and Heaven's will.\n\n\nⅡ. Astonishing: Sixty-Two-Year-Old Widow Gives Birth\n\nMrs Liu of Haojing, a widow of sixty-two, has long lived alone and childless, and in her quiet days was often lonely.\nIn recent months, she complained frequently of fatigue and found her appetite greatly increased. Neighbours took it for the usual signs of age. No one expected what came after: on the nineteenth of this month, she gave birth to a baby boy — loud-voiced when he cried, bright-eyed, and fine-featured.\nWord soon reached the Hall of Founts, which sent an officer to verify the matter. Mrs Liu claims that three months ago she dreamt of a woman in blue who offered her a peach, sweet beyond telling; upon waking, she felt her body begin to change. The child bears a faint red birthmark at the waist, shaped unmistakably like a peach — proof that the dream was no mere fancy.\nStrange indeed. Such tales belong, people say, to storybooks — not to everyday life. The neighbours insist Mrs Liu has always been known for kindness, and some whisper that Heaven, in its own way, repays the virtuous.\nThe Hall of Founts has registered the child and granted assistance in grain and bolts of cloth. Friends and relations arrive daily with congratulations, and curious onlookers have been gathering in no small numbers.\n\n\nⅢ. West Market Oddity: A Dog That Hunts Rats\n\nAt the West Market eatery Baiwei House, the proprietor Li Sanlang keeps a yellow dog named Rusty to mind the place at night. He has been a good dog: quiet, steady, and has never caused trouble.\nOn the afternoon of the first of this month, the shophands were airing out dried ingredients in the sun when Rusty suddenly wouldn't stop barking. They hurried over and saw him dart to a rat hole at the base of the wall. A moment later he came back out with a grey rat clenched in his jaws, already dead.\nTaken aback, the hands reported it to Li Sanlang. Li wouldn't believe a word of it — until the next day, when he saw it with his own eyes: Rusty crouched by the hole, and the moment a rat poked its head out, he lunged. Before the day was out, he'd caught three. One regular laughed: \"The old saying compares a dog that catches mice to nosy folk who meddle in other people's business — but it's a blessing when your place is full of rats.\"\nSince then, Rusty has hunted rats by day and kept watch by night. Baiwei House, it is said, has had no trouble with rats since.",
+          TextMapId = "READ_TEXT_2000114"
+        },
+        READ_TEXT_2000115 = {
+          ContentEN = "(The sheet has been trampled and scuffed; much of the text is blurred.)\n...\n...\n...\n\nⅡ. Unrest on the Western Outskirts — Drifters Sighted Again?\n\nIn recent days, citizens have been arriving at the Ministry of Fortune in growing numbers, reporting that along the back paths of the western outskirts, shadowy figures have been seen lingering. Those who claim to have spoken with them describe shifty replies and evasive eyes — hardly the bearing of decent folk. It is feared some mischief is being plotted in secret.\nThough Huaxu stands under the protection of the Nine Chapters of Dafeng, Drifters have long been said to lurk even within Haojing, committing offence upon offence. A censer that had burned unbroken for a hundred years was once extinguished — doused with water by the most notorious of their lot. Another drove a mechapuppet straight into the Hall of Adjudication. Others have hung wenzhu fronds outside people's doors to mark their targets, then ambushed them and left them bleeding. Their crimes are many; their wickedness unrepentant.\nEven so, there are always those who make excuses for them, shielding them in the dark and dressing them up with fine names like the Four Drifters. Fortunately, the Magistrates of Yingtian took action, and the so-called Four Drifters were seized and put to death.\nYet though their ringleaders and close followers have been dealt with, remnants are said to remain. The people fear renewed Drifter activity may flare again and bring fresh calamity.\nThe Hall of Adjudication has therefore issued the following order: the Magistrates' patrols are to be strengthened at once. A reward of 12,000 is hereby offered for any report of Drifters' whereabouts that is verified. Residents are further warned: do not enter desolate places after nightfall. Every measure is to be taken to root out the Drifters.\n...\n...\n...\n (The latter half of the sheet is torn; the remaining text is illegible.)",
+          TextMapId = "READ_TEXT_2000115"
+        },
+        READ_TEXT_2000116 = {
+          ContentEN = "On the surface of Haojing Lake, mist sometimes gathers into shapes — towers, palaces, immortals, spectres — each outlined with startling clarity. People call such sights the Mirage. Some say it is Lord Argent's breath; others insist it is the work of Lord Argent's eight immortal attendants. Accounts multiply without end. I doubt them all.\n\nI chased down every rumour I could find, yet reached no firm conclusion. I went about the city seeking out the elders, asking how one might reach the Mirage, and I began with the boatmen, hoping they would row me across the lake in search of it. They mocked my folly — yet they agreed readily once paid, and accompanied me on several trips. Back and forth we went, again and again, and still we found nothing.\n\nI searched daily until my meagre means were spent. A few, taking pity, would join me in their spare hours, though their earlier enthusiasm was gone. I did not resent them; I felt only shame. In the end I put what little remained to my name into buying a bamboo raft, resolved to seek the Mirage on my own.\n\nThough I am but a bookish sort, I grew up climbing hills and swimming rivers with the neighbourhood boys. I am no weakling — yet my skills go no further than that. At first, poling the raft was awkward and stiff; with time I grew steadily more practised.\n\nThe search proved arduous indeed. At first I tried to take my bearings and fix a heading. Later there was only the endless expanse, drifting and bobbing with the waves. Still I never beheld the Mirage's true face. In time my spirit faltered. I began to suspect I was clinging to emptiness, wasting my days and wearing down my resolve. Now and then I would glimpse it in the distance and strain towards it, only for it to vanish the moment I drew near — like moonlight on water, dissolving into nothing at the slightest touch.\n\nOne day a thick fog rolled in over Haojing, and I could not make out a person two steps away. Everyone warned me not to go, fearing I would lose my way on the lake and die there. I sighed and said, \"Other than my life, what do I have left to lose?\" My purse was already empty. We scraped by on my wife's needlework. Thankfully we had no children; otherwise, what kind of husband would that make me?\n\nStill I insisted on leaving. My wife wept and tried to stop me. \"If you step out that door,\" she said, \"I will never be your wife again.\" My resolve faltered — yet in the end I steeled myself, flung the door wide, and went.\n\nThe fog blotted out heaven and earth. When the tip of my pole struck the water, I could not even see where it fell. I could only feel the raft's motion through my wrists. The cold was sharper than on any ordinary day; it cut to the bone. Frost gathered in my beard; I breathed it away, and moments later it formed again.\n\nNothing about the scene seemed especially strange. Perhaps there was something wondrous, yet my mind was so muddled that I could not recall it. I remember only one instant: at one point it felt as though my pole was no longer meeting water at all, but something lighter — like pushing through cloud. A feeling too surreal for words to depict.\n\nI cannot say how long I went on. Then the fog began to thin. Before me, overlapping haloes of light shimmered, and within them rose halls and pavilions, radiant beyond measure. Joy seized me like a fever. I gathered what strength remained and drove the raft forward. Just as my strength drained, the raft struck shore. It was as though a stone had finally dropped from my chest. My heart, at last, began to steady.\n\nI left the raft behind and stepped ashore. The ground beneath my feet felt soft as water, yet I neither sank nor grew wet. With each step, ripples spread outward. It was wonder that defied belief.\n\n...",
+          TextMapId = "READ_TEXT_2000116"
+        },
         READ_TEXT_20602 = {
           ContentEN = "January 1st\nToday, ▇▇▇▇ gave me some Phoxene shards as \"pocket money.\" She said that back in the capital, kids get pocket money from their elders before they come of age — to spend on treats or toys.\nThere aren't any shops around here, so she told me to save it. Then, when there's something I really want or need, I can use it to ask for her help.\nThing is... I can't really think of anything I want.\n\n\nJanuary 2nd\nI've got it! I could get {nickname} a \"birthday present\"! Maybe one of those \"birthday cakes\" kids in the capital have when they turn a year older — I read they're really tasty! They might be expensive... but if I save enough pocket money to give to ▇▇▇▇, I bet she could help me get one.\nI found an old clay jar in the kitchen. It's just right for keeping my savings.\n\n\nJanuary 16th\nWe were playing hide-and-seek today, and {nickname} found the jar and almost opened it... I need to find a better hiding spot.\nMaybe tomorrow I'll sneak into the room where ▇▇▇▇ does her alchemy work. There are loads of strange machines in there — she never lets {nickname} go near them.\n\n\nJanuary 17th\nI hid my piggy bank under the <H>waterfall, right next to the alchemy chamber</>. That way, neither {nickname} nor ▇▇▇▇ will stumble across it.\n\n\n...\n\n\n▇▇ ▇▇\n{nickname}'s birthday is coming up, and I've saved a whole box full of pocket money. It should be enough for a cake. But ▇▇▇▇ seems really busy these days. She's been staying up late a lot... Maybe it's not the right time to bother her. I guess I'll ask her next year.\nWith another year of saving, I can get an even bigger cake — big enough for all three of us.",
           TextMapId = "READ_TEXT_20602"
@@ -34402,7 +36289,15 @@ Having pierced countless illusions, the path leads under.
 Through winding stone, with divine light, to the forgotten cave.
 In lands devoid of life and hope, a new cycle takes root.]],
           TextMapId = "READ_TEXT_20605"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "READ_TEXT_20608",
+    MaxKey = "RESOURCE_DESC_12102",
+    Loader = function()
+      return {
         READ_TEXT_20608 = {
           ContentEN = [[
 Sorry, babe, there's been a hiccup at home, so I can't take you to the inner city this month as I promised. But hang tight, I'll come for you as soon as I sort things out. Trust me one more time, okay?
@@ -34574,15 +36469,7 @@ Like precious metals, they function as common currency across Atlasia, accepted 
         RESOURCE_DESC_10007 = {
           ContentEN = "Shackles of exceptional make, forged over ages and impervious to heat, crafted to bind even the wildest of captives.",
           TextMapId = "RESOURCE_DESC_10007"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_DESC_10008",
-    MaxKey = "RESOURCE_DESC_12133",
-    Loader = function()
-      return {
+        },
         RESOURCE_DESC_10008 = {
           ContentEN = "A lava stone gradually losing its heat, sheathed in a crust of cooled black rock; one can get fleet glimpses of its subsiding magma inside.",
           TextMapId = "RESOURCE_DESC_10008"
@@ -35266,7 +37153,15 @@ There is no turning back once the trigger is pulled, much like the commitment th
         RESOURCE_DESC_12102 = {
           ContentEN = "Crafted with precision from the blueprint of Day of Sacred Verdict. Bullets burst forth from here, as both the barrel and the warrior's heart blaze with unrelenting fervour.",
           TextMapId = "RESOURCE_DESC_12102"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_DESC_12103",
+    MaxKey = "RESOURCE_DESC_4010014",
+    Loader = function()
+      return {
         RESOURCE_DESC_12103 = {
           ContentEN = "Crafted with precision from the blueprint of Soulrend. Like a tightly coiled spring, a mere touch on the string is enough to unleash a torrent of pent-up energy.",
           TextMapId = "RESOURCE_DESC_12103"
@@ -35390,15 +37285,7 @@ There is no turning back once the trigger is pulled, much like the commitment th
         RESOURCE_DESC_12133 = {
           ContentEN = "Crafted with precision from the blueprint of Dove of Tomorrow. As the component closest to the wielder, the essence of its design is to ensure optimal handling.",
           TextMapId = "RESOURCE_DESC_12133"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_DESC_12134",
-    MaxKey = "RESOURCE_DESC_41014",
-    Loader = function()
-      return {
+        },
         RESOURCE_DESC_12134 = {
           ContentEN = "Crafted with precision from the blueprint of Dove of Tomorrow. Whether the blade is curved or straight, light or heavy, its edge is honed exclusively for battle.",
           TextMapId = "RESOURCE_DESC_12134"
@@ -35816,6 +37703,10 @@ As your team, The Noctoyagers, rise to prominence among the Phoxhunters, more an
           ContentEN = "Glowing runes that hover in the air throughout Huaxu, believed to manifest when Taixu is awakened by incense. They can be collected using the Mechanical Nexus.",
           TextMapId = "RESOURCE_DESC_29005"
         },
+        RESOURCE_DESC_29006 = {
+          ContentEN = "Tokens said to lie scattered across Haojing — proof of courage, wisdom, and patience, each forged through trials of adventure. Gather enough, and present them to the Lunoxplorer in Haojing to earn valuable rewards.",
+          TextMapId = "RESOURCE_DESC_29006"
+        },
         RESOURCE_DESC_3000001 = {
           ContentEN = "A box of paper stars crafted from expired tickets. It's said that a certain number of these can bless one's wishes and dreams, though this seems not to be the case.",
           TextMapId = "RESOURCE_DESC_3000001"
@@ -36115,7 +38006,15 @@ IT'S TOXIC! HIGHLY TOXIC! EXTREMELY TOXIC!]],
         RESOURCE_DESC_4010014 = {
           ContentEN = "The most common and vital flower of Huaxu. In bloom, its exotic fragrance fills the air — a primary source for Huaxu's incense. It is these delicate, easily-broken plants that became the very force sustaining the Nine Chapters of Dafeng.",
           TextMapId = "RESOURCE_DESC_4010014"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_DESC_4010015",
+    MaxKey = "RESOURCE_FUNCTION_BREAK_RANGE",
+    Loader = function()
+      return {
         RESOURCE_DESC_4010015 = {
           ContentEN = "A product of the Scourge of Zhuyin. This crystal inhibits the growth of flora within its area, causing the local ecosystem to stagnate. Due to this unreasonable nature, it is called \"Waywardstone\".",
           TextMapId = "RESOURCE_DESC_4010015"
@@ -36246,15 +38145,7 @@ An insect commonly found in Huaxu, said to chirp like the sound of a weaving loo
         RESOURCE_DESC_41014 = {
           ContentEN = "After a headlong sprint, savour a moment of stillness.",
           TextMapId = "RESOURCE_DESC_41014"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_DESC_41015",
-    MaxKey = "RESOURCE_FUNCTION_ZHUIMI",
-    Loader = function()
-      return {
+        },
         RESOURCE_DESC_41015 = {
           ContentEN = "A melody of midsummer and violets, plays upon the strings.",
           TextMapId = "RESOURCE_DESC_41015"
@@ -36615,6 +38506,66 @@ Fireworks are a salute to the heavens.]],
           ContentEN = "A denizen of the dim and dank, with large pectoral fins tipped with spines. Its bright coloration and swimming motion give it a moth-like appearance. Highly poisonous, its fins were once fashioned into weapons during the ancient era.",
           TextMapId = "RESOURCE_DESC_5028050"
         },
+        RESOURCE_DESC_5029010 = {
+          ContentEN = "A species found in the brackish waters where Huaxu's rivers meet the sea. Its flanks are mottled with pale, star-like markings that shimmer faintly in low light. When hooked after dusk, its scales catch the light with a star-like sheen, as though a fragment of a constellation has been lifted from the water.",
+          TextMapId = "RESOURCE_DESC_5029010"
+        },
+        RESOURCE_DESC_5029020 = {
+          ContentEN = "A small marine catfish that can pass for an eel at first glance, until the barbels at its mouth give it away. Aggressive and quick to pick fights despite its size, it's also highly social, gathering in schools that spend much of the day jostling and jabbing at one another with their hardened, venomous barbs.",
+          TextMapId = "RESOURCE_DESC_5029020"
+        },
+        RESOURCE_DESC_5029030 = {
+          ContentEN = "A seahorse variety whose body resembles a raw gemstone. It is prized for display and medicinal use rather than for consumption.",
+          TextMapId = "RESOURCE_DESC_5029030"
+        },
+        RESOURCE_DESC_5029040 = {
+          ContentEN = "A slender marine fish found along Huaxu's coast. Soft-fleshed and nutrient-rich, it is commonly used as bait or as feed for larger fish. Its melancholy gaze makes it look as if it already knows how its story ends.",
+          TextMapId = "RESOURCE_DESC_5029040"
+        },
+        RESOURCE_DESC_5029050 = {
+          ContentEN = "Found along Huaxu's coast, most often in deeper waters. Despite living in the depths, the Dawnscale gleams with a bright, uniform golden sheen, as though a sliver of dawn has been caught beneath the sea. Smaller specimens fetch little, but prices climb steeply with size, earning it the local nickname \"gold in the water\".",
+          TextMapId = "RESOURCE_DESC_5029050"
+        },
+        RESOURCE_DESC_5030010 = {
+          ContentEN = "One of the best-known crabs from the waters of Haojing, prized for its size and rich flavour. It's also high in protein and minerals. Best enjoyed when the autumn winds set in: steamed, then dipped in vinegar with thin shreds of ginger. A seasonal favourite across Huaxu.",
+          TextMapId = "RESOURCE_DESC_5030010"
+        },
+        RESOURCE_DESC_5030020 = {
+          ContentEN = "A small wild freshwater fish found in abundance across Huaxu, remarkably hardy and highly adaptable. Its flesh is delicate but riddled with fine bones, making it better suited to soups and broths than to frying or grilling. When it surfaces to gulp air, it often lets out a frog-like croak, hence its name.",
+          TextMapId = "RESOURCE_DESC_5030020"
+        },
+        RESOURCE_DESC_5030030 = {
+          ContentEN = "A curious fish that bears a lotus-leaf-like growth atop its head, making it exceptionally hard to spot among floating leaves. Even veteran fishermen struggle to tell, at a glance, which leaves are real and which are Lotusleaf in disguise.",
+          TextMapId = "RESOURCE_DESC_5030030"
+        },
+        RESOURCE_DESC_5030040 = {
+          ContentEN = "Native to Huaxu, its scales gleam like polished bronze. In ancient times, its scales were once used as currency. Some members of the Jishu Sect see it as an auspicious omen and make offerings in its honour.",
+          TextMapId = "RESOURCE_DESC_5030040"
+        },
+        RESOURCE_DESC_5030050 = {
+          ContentEN = "One of Huaxu's prized freshwater species, distinguished by its vivid red crest and aggressive temperament. When hunting, it doesn't strike immediately. Instead, it circles its prey until it becomes disoriented, then delivers a single decisive bite. In bearing, it resembles a swaggering general wearing a crimson helm.",
+          TextMapId = "RESOURCE_DESC_5030050"
+        },
+        RESOURCE_DESC_5031010 = {
+          ContentEN = "A rare scavenger fish whose diet leaves it with a lingering stench that no amount of cleaning can fully remove. In Huaxu, it's widely regarded as one of the worst-tasting fish ever to reach the table.",
+          TextMapId = "RESOURCE_DESC_5031010"
+        },
+        RESOURCE_DESC_5031020 = {
+          ContentEN = "A clam found in turbid waters, its shell often caked in silt and grime. Yet beneath the muck lies tender pink flesh that becomes unexpectedly sweet and aromatic when cooked — hence the name.",
+          TextMapId = "RESOURCE_DESC_5031020"
+        },
+        RESOURCE_DESC_5031030 = {
+          ContentEN = "A wormlike invertebrate resembling an earthworm, typically found in dark, stagnant waters. It is unusually plump and almost the colour of raw flesh. It is valued for its medicinal properties and prized by fishermen as bait.",
+          TextMapId = "RESOURCE_DESC_5031030"
+        },
+        RESOURCE_DESC_5031040 = {
+          ContentEN = "A small fish inhabiting lightless waters, notable for its disproportionately large, luminous eyes. Even in turbid currents heavy with silt and sediment, their glow cuts through the murk.",
+          TextMapId = "RESOURCE_DESC_5031040"
+        },
+        RESOURCE_DESC_5031050 = {
+          ContentEN = "A freshwater predator native to Huaxu's turbid waters. It buries itself in the silt and lies in wait for prey to draw near, then bursts from the mud and strikes in a single explosive motion. In parts of Huaxu, it ranks among the region's apex predators.",
+          TextMapId = "RESOURCE_DESC_5031050"
+        },
         RESOURCE_DESC_5110100 = {
           ContentEN = "A fishing rod crafted by Lunosmith, featuring a surface monitor styled after Cinder, her trusty little assistant. When a fish bites, Cinder lights up to signal it — though according to customer feedback, some folks got so mesmerised watching it glow, they ended up going home with an empty bucket.",
           TextMapId = "RESOURCE_DESC_5110100"
@@ -36669,6 +38620,13 @@ Transform!
 Can be equipped and used in your Tactical Backpack]],
           TextMapId = "RESOURCE_DESC_6000002"
         },
+        RESOURCE_DESC_6000004 = {
+          ContentEN = [[
+A set of scoring tokens prepared by the Grand Incense Rite for use in the trials. Before Huaxu's prohibition on fighting, competitions were divided into civil and martial categories, each with its own tokens for tallying points. Though martial force was later forbidden throughout the realm, the scoring system endured; only the distinction between Civil and Martial Tokens was set aside.
+ 
+ Now, under the new format, Martial Tokens have been reinstated. A competitor's final score is calculated from the combined total of Civil and Martial Tokens.]],
+          TextMapId = "RESOURCE_DESC_6000004"
+        },
         RESOURCE_DESC_6100001 = {
           ContentEN = "A tool crafted by Master Gongshang to upgrade mechapuppets.",
           TextMapId = "RESOURCE_DESC_6100001"
@@ -36684,6 +38642,10 @@ Can be equipped and used in your Tactical Backpack]],
         RESOURCE_DESC_99 = {
           ContentEN = "A crystal harvested from a Heaventree — one of the most widely used minerals across Atlasia.\nIt emits a gentle glow, reminiscent of a full moon's radiance.",
           TextMapId = "RESOURCE_DESC_99"
+        },
+        RESOURCE_DESC_BACKPACKUNLOCK = {
+          ContentEN = "Unlocks access to the corresponding Treasure Pouch",
+          TextMapId = "RESOURCE_DESC_BACKPACKUNLOCK"
         },
         RESOURCE_DESC_CANCELPHANTOM = {
           ContentEN = [[
@@ -36809,6 +38771,10 @@ Heartfelt prayers shall be answered, and the desired one shall appear by your si
           ContentEN = "Redeemable for items at Lunocarp's stall",
           TextMapId = "RESOURCE_FUNCTION_29005"
         },
+        RESOURCE_FUNCTION_29006 = {
+          ContentEN = "Exchanges for exploration rewards from Lunoxplorer in Haojing.",
+          TextMapId = "RESOURCE_FUNCTION_29006"
+        },
         RESOURCE_FUNCTION_30001 = {
           ContentEN = "Used for crafting Track-Shift Modules",
           TextMapId = "RESOURCE_FUNCTION_30001"
@@ -36832,6 +38798,10 @@ Heartfelt prayers shall be answered, and the desired one shall appear by your si
         RESOURCE_FUNCTION_APRecovery = {
           ContentEN = "Restores Sanergy",
           TextMapId = "RESOURCE_FUNCTION_APRecovery"
+        },
+        RESOURCE_FUNCTION_BACKPACKUNLOCK = {
+          ContentEN = "Each participant initially receives a standard Treasure Pouch. Pouches can be upgraded to larger sizes by exchanging Civil & Martial Tokens earned during the event for Upgrade Vouchers at the Ministry of Works.",
+          TextMapId = "RESOURCE_FUNCTION_BACKPACKUNLOCK"
         },
         RESOURCE_FUNCTION_BATTLEPASSEXP = {
           ContentEN = "Used to complete [Bard's Tome] progress in exchange for rewards",
@@ -36864,7 +38834,15 @@ Heartfelt prayers shall be answered, and the desired one shall appear by your si
         RESOURCE_FUNCTION_BREAK_RANGE = {
           ContentEN = "Ascension Material for Ranged Weapons",
           TextMapId = "RESOURCE_FUNCTION_BREAK_RANGE"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_FUNCTION_BREAK_THUNDER",
+    MaxKey = "RESOURCE_NAME_12006",
+    Loader = function()
+      return {
         RESOURCE_FUNCTION_BREAK_THUNDER = {
           ContentEN = "Electro Ascension Material",
           TextMapId = "RESOURCE_FUNCTION_BREAK_THUNDER"
@@ -37068,15 +39046,7 @@ Heartfelt prayers shall be answered, and the desired one shall appear by your si
         RESOURCE_FUNCTION_ZHUIMI = {
           ContentEN = "Grants one chance of Myriad Weave.",
           TextMapId = "RESOURCE_FUNCTION_ZHUIMI"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_NAME_100",
-    MaxKey = "RESOURCE_NAME_12059",
-    Loader = function()
-      return {
+        },
         RESOURCE_NAME_100 = {
           ContentEN = "Phoxene",
           TextMapId = "RESOURCE_NAME_100"
@@ -37132,6 +39102,10 @@ Heartfelt prayers shall be answered, and the desired one shall appear by your si
         RESOURCE_NAME_1001101 = {
           ContentEN = "Thought: Berenica",
           TextMapId = "RESOURCE_NAME_1001101"
+        },
+        RESOURCE_NAME_1001102 = {
+          ContentEN = "Thought: Flora",
+          TextMapId = "RESOURCE_NAME_1001102"
         },
         RESOURCE_NAME_1001103 = {
           ContentEN = "Thought: Phantasio",
@@ -37352,6 +39326,10 @@ Heartfelt prayers shall be answered, and the desired one shall appear by your si
         RESOURCE_NAME_1011101 = {
           ContentEN = "Sigil: Berenica",
           TextMapId = "RESOURCE_NAME_1011101"
+        },
+        RESOURCE_NAME_1011102 = {
+          ContentEN = "Sigil: Flora",
+          TextMapId = "RESOURCE_NAME_1011102"
         },
         RESOURCE_NAME_1011103 = {
           ContentEN = "Sigil: Phantasio",
@@ -37664,7 +39642,15 @@ Heartfelt prayers shall be answered, and the desired one shall appear by your si
         RESOURCE_NAME_12006 = {
           ContentEN = "Stellar Finality: Bolt",
           TextMapId = "RESOURCE_NAME_12006"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_NAME_12007",
+    MaxKey = "RESOURCE_NAME_202",
+    Loader = function()
+      return {
         RESOURCE_NAME_12007 = {
           ContentEN = "Stellar Finality: Frame",
           TextMapId = "RESOURCE_NAME_12007"
@@ -37876,15 +39862,7 @@ Heartfelt prayers shall be answered, and the desired one shall appear by your si
         RESOURCE_NAME_12059 = {
           ContentEN = "Firearm Feast: Bolt",
           TextMapId = "RESOURCE_NAME_12059"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_NAME_12060",
-    MaxKey = "RESOURCE_NAME_301",
-    Loader = function()
-      return {
+        },
         RESOURCE_NAME_12060 = {
           ContentEN = "Firearm Feast: Frame",
           TextMapId = "RESOURCE_NAME_12060"
@@ -38472,7 +40450,15 @@ Heartfelt prayers shall be answered, and the desired one shall appear by your si
         RESOURCE_NAME_202 = {
           ContentEN = "Weapon Track-Shift Module",
           TextMapId = "RESOURCE_NAME_202"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_NAME_203",
+    MaxKey = "RESOURCE_NAME_4010018",
+    Loader = function()
+      return {
         RESOURCE_NAME_203 = {
           ContentEN = "Embers",
           TextMapId = "RESOURCE_NAME_203"
@@ -38597,6 +40583,10 @@ Heartfelt prayers shall be answered, and the desired one shall appear by your si
           ContentEN = "Taixu Rune",
           TextMapId = "RESOURCE_NAME_29005"
         },
+        RESOURCE_NAME_29006 = {
+          ContentEN = "Advensphere: Haojing",
+          TextMapId = "RESOURCE_NAME_29006"
+        },
         RESOURCE_NAME_3000001 = {
           ContentEN = "A Box of Paper Stars",
           TextMapId = "RESOURCE_NAME_3000001"
@@ -38684,15 +40674,7 @@ Heartfelt prayers shall be answered, and the desired one shall appear by your si
         RESOURCE_NAME_301 = {
           ContentEN = "Reputation Perk: Icelake",
           TextMapId = "RESOURCE_NAME_301"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_NAME_3010",
-    MaxKey = "RESOURCE_NAME_41040",
-    Loader = function()
-      return {
+        },
         RESOURCE_NAME_3010 = {
           ContentEN = "Impression in Icelake: Benefit",
           TextMapId = "RESOURCE_NAME_3010"
@@ -39276,7 +41258,15 @@ Heartfelt prayers shall be answered, and the desired one shall appear by your si
         RESOURCE_NAME_4010018 = {
           ContentEN = "Skink",
           TextMapId = "RESOURCE_NAME_4010018"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_NAME_4010019",
+    MaxKey = "RESOURCE_NAME_5110400",
+    Loader = function()
+      return {
         RESOURCE_NAME_4010019 = {
           ContentEN = "Rainseer Frog",
           TextMapId = "RESOURCE_NAME_4010019"
@@ -39492,15 +41482,7 @@ Heartfelt prayers shall be answered, and the desired one shall appear by your si
         RESOURCE_NAME_41040 = {
           ContentEN = "Throne Above All: Leaden Grey",
           TextMapId = "RESOURCE_NAME_41040"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_NAME_41041",
-    MaxKey = "RESOURCE_TEXT_11018",
-    Loader = function()
-      return {
+        },
         RESOURCE_NAME_41041 = {
           ContentEN = "Throne Above All: Violet",
           TextMapId = "RESOURCE_NAME_41041"
@@ -39949,6 +41931,126 @@ Heartfelt prayers shall be answered, and the desired one shall appear by your si
           ContentEN = "Flutterfin Variant",
           TextMapId = "RESOURCE_NAME_5028051"
         },
+        RESOURCE_NAME_5029010 = {
+          ContentEN = "Star-Spotted Sculpin",
+          TextMapId = "RESOURCE_NAME_5029010"
+        },
+        RESOURCE_NAME_5029011 = {
+          ContentEN = "Star-Spotted Sculpin Variant",
+          TextMapId = "RESOURCE_NAME_5029011"
+        },
+        RESOURCE_NAME_5029020 = {
+          ContentEN = "Venomspine Catfish",
+          TextMapId = "RESOURCE_NAME_5029020"
+        },
+        RESOURCE_NAME_5029021 = {
+          ContentEN = "Venomspine Catfish Variant",
+          TextMapId = "RESOURCE_NAME_5029021"
+        },
+        RESOURCE_NAME_5029030 = {
+          ContentEN = "Prismatic Seahorse",
+          TextMapId = "RESOURCE_NAME_5029030"
+        },
+        RESOURCE_NAME_5029031 = {
+          ContentEN = "Prismatic Seahorse Variant",
+          TextMapId = "RESOURCE_NAME_5029031"
+        },
+        RESOURCE_NAME_5029040 = {
+          ContentEN = "Jade Sprat",
+          TextMapId = "RESOURCE_NAME_5029040"
+        },
+        RESOURCE_NAME_5029041 = {
+          ContentEN = "Jade Sprat Variant",
+          TextMapId = "RESOURCE_NAME_5029041"
+        },
+        RESOURCE_NAME_5029050 = {
+          ContentEN = "Dawnscale",
+          TextMapId = "RESOURCE_NAME_5029050"
+        },
+        RESOURCE_NAME_5029051 = {
+          ContentEN = "Dawnscale Variant",
+          TextMapId = "RESOURCE_NAME_5029051"
+        },
+        RESOURCE_NAME_5030010 = {
+          ContentEN = "Haojing Mitten Crab",
+          TextMapId = "RESOURCE_NAME_5030010"
+        },
+        RESOURCE_NAME_5030011 = {
+          ContentEN = "Haojing Mitten Crab Variant",
+          TextMapId = "RESOURCE_NAME_5030011"
+        },
+        RESOURCE_NAME_5030020 = {
+          ContentEN = "Croaker Carp",
+          TextMapId = "RESOURCE_NAME_5030020"
+        },
+        RESOURCE_NAME_5030021 = {
+          ContentEN = "Croaker Carp Variant",
+          TextMapId = "RESOURCE_NAME_5030021"
+        },
+        RESOURCE_NAME_5030030 = {
+          ContentEN = "Lotusleaf",
+          TextMapId = "RESOURCE_NAME_5030030"
+        },
+        RESOURCE_NAME_5030031 = {
+          ContentEN = "Lotusleaf Variant",
+          TextMapId = "RESOURCE_NAME_5030031"
+        },
+        RESOURCE_NAME_5030040 = {
+          ContentEN = "Bronze Drum",
+          TextMapId = "RESOURCE_NAME_5030040"
+        },
+        RESOURCE_NAME_5030041 = {
+          ContentEN = "Bronze Drum Variant",
+          TextMapId = "RESOURCE_NAME_5030041"
+        },
+        RESOURCE_NAME_5030050 = {
+          ContentEN = "Crimson Crest",
+          TextMapId = "RESOURCE_NAME_5030050"
+        },
+        RESOURCE_NAME_5030051 = {
+          ContentEN = "Crimson Crest Variant",
+          TextMapId = "RESOURCE_NAME_5030051"
+        },
+        RESOURCE_NAME_5031010 = {
+          ContentEN = "Stinker",
+          TextMapId = "RESOURCE_NAME_5031010"
+        },
+        RESOURCE_NAME_5031011 = {
+          ContentEN = "Stinker Variant",
+          TextMapId = "RESOURCE_NAME_5031011"
+        },
+        RESOURCE_NAME_5031020 = {
+          ContentEN = "Taroheart Clam",
+          TextMapId = "RESOURCE_NAME_5031020"
+        },
+        RESOURCE_NAME_5031021 = {
+          ContentEN = "Taroheart Clam Variant",
+          TextMapId = "RESOURCE_NAME_5031021"
+        },
+        RESOURCE_NAME_5031030 = {
+          ContentEN = "Riverworm",
+          TextMapId = "RESOURCE_NAME_5031030"
+        },
+        RESOURCE_NAME_5031031 = {
+          ContentEN = "Riverworm Variant",
+          TextMapId = "RESOURCE_NAME_5031031"
+        },
+        RESOURCE_NAME_5031040 = {
+          ContentEN = "Lanterneye",
+          TextMapId = "RESOURCE_NAME_5031040"
+        },
+        RESOURCE_NAME_5031041 = {
+          ContentEN = "Lanterneye Variant",
+          TextMapId = "RESOURCE_NAME_5031041"
+        },
+        RESOURCE_NAME_5031050 = {
+          ContentEN = "Siltshark",
+          TextMapId = "RESOURCE_NAME_5031050"
+        },
+        RESOURCE_NAME_5031051 = {
+          ContentEN = "Siltshark Variant",
+          TextMapId = "RESOURCE_NAME_5031051"
+        },
         RESOURCE_NAME_5110100 = {
           ContentEN = "Training Rod",
           TextMapId = "RESOURCE_NAME_5110100"
@@ -39964,7 +42066,15 @@ Heartfelt prayers shall be answered, and the desired one shall appear by your si
         RESOURCE_NAME_5110400 = {
           ContentEN = "Expert Rod",
           TextMapId = "RESOURCE_NAME_5110400"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_NAME_5110500",
+    MaxKey = "RESOURCE_TEXT_4010008",
+    Loader = function()
+      return {
         RESOURCE_NAME_5110500 = {
           ContentEN = "Grandmaster Rod",
           TextMapId = "RESOURCE_NAME_5110500"
@@ -40000,6 +42110,34 @@ Heartfelt prayers shall be answered, and the desired one shall appear by your si
         RESOURCE_NAME_6000002 = {
           ContentEN = "Wonder Box",
           TextMapId = "RESOURCE_NAME_6000002"
+        },
+        RESOURCE_NAME_6000004 = {
+          ContentEN = "Civil & Martial Tokens",
+          TextMapId = "RESOURCE_NAME_6000004"
+        },
+        RESOURCE_NAME_60000041 = {
+          ContentEN = "Upgrade Voucher Ⅰ",
+          TextMapId = "RESOURCE_NAME_60000041"
+        },
+        RESOURCE_NAME_60000042 = {
+          ContentEN = "Upgrade Voucher Ⅱ",
+          TextMapId = "RESOURCE_NAME_60000042"
+        },
+        RESOURCE_NAME_60000043 = {
+          ContentEN = "Upgrade Voucher Ⅲ",
+          TextMapId = "RESOURCE_NAME_60000043"
+        },
+        RESOURCE_NAME_60000044 = {
+          ContentEN = "Upgrade Voucher Ⅳ",
+          TextMapId = "RESOURCE_NAME_60000044"
+        },
+        RESOURCE_NAME_60000045 = {
+          ContentEN = "Upgrade Voucher Ⅴ",
+          TextMapId = "RESOURCE_NAME_60000045"
+        },
+        RESOURCE_NAME_60000046 = {
+          ContentEN = "Upgrade Voucher Ⅵ",
+          TextMapId = "RESOURCE_NAME_60000046"
         },
         RESOURCE_NAME_6100122 = {
           ContentEN = "Match Points",
@@ -40300,15 +42438,7 @@ Heartfelt prayers shall be answered, and the desired one shall appear by your si
         RESOURCE_TEXT_11018 = {
           ContentEN = "\"Sure, the legion gives us some freedom to customise our weapons, but painting my gun pink? That's where I draw the line! I don't care if you're my sister, that's still a no. And take that teddy bear charm off!\"\n\n— Lynn, an officer of the Hyperborean Legion",
           TextMapId = "RESOURCE_TEXT_11018"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_TEXT_111",
-    MaxKey = "RESOURCE_TEXT_ROOT",
-    Loader = function()
-      return {
+        },
         RESOURCE_TEXT_111 = {
           ContentEN = "\"This is the 'Rainbow.' It's right there in your palm, hidden inside this small, glittering tube. Turn it, and you can see forests, constellations, snow stretching like an endless desert... Berry, {nickname}, even if we have to stay hidden in these ruins for now, I still want you both to see a world far more vast and wondrous.\"\n\n— ???",
           TextMapId = "RESOURCE_TEXT_111"
@@ -40744,7 +42874,15 @@ Heartfelt prayers shall be answered, and the desired one shall appear by your si
         RESOURCE_TEXT_4010008 = {
           ContentEN = "\"Please be cautious around unfamiliar wild plants and fungi. Avoid picking, buying, or selling species like Frostungus and Eclipta Grass, commonly known as 'Snowcap' and 'Bubble Bean.'\"\n\n— Rhythm Fischer, Garrison Officer of Icelake",
           TextMapId = "RESOURCE_TEXT_4010008"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_TEXT_4010009",
+    MaxKey = "RLBlessing_Desc_208",
+    Loader = function()
+      return {
         RESOURCE_TEXT_4010009 = {
           ContentEN = "\"Everyone knows Phoxichor in portable canisters tends to leak over time. Sure, we've optimised the container to minimise that — we really did our best. But if you want a fully sealed casing, the materials alone would cost more than the Phoxichor inside. Don't like it? File a complaint with Materials. But that's not the point. The point is — we told the quartermaster these things expire after two years. Technically, though... they could last three.\"\n\n\"What's your point?\"\n\n\"The time has come — it's been two years. Anyone fancy grabbing some 'expired' Phoxichor from the Legion depot?\"\n\n\"...You're a genius! No wonder your lab never files requisitions.\"\n\n— Anonymous alchemist, overheard at a secret tea party, as collected in Gatherings Under the Night-Blooming Jasmine",
           TextMapId = "RESOURCE_TEXT_4010009"
@@ -41048,6 +43186,66 @@ Let go of the troubles beyond your reach.
           ContentEN = "\"Hah! This is the best gift I've ever received! Heh-heh... One of these days you're going to swing a blade I forged myself — its edge smeared thick with poison. Oh — and when that day comes, do try not to lick it to play cool.\"\n\n— Lunosmith",
           TextMapId = "RESOURCE_TEXT_5028050"
         },
+        RESOURCE_TEXT_5029010 = {
+          ContentEN = "Huaxu is home to a well-known tale: Monkeys Scooping the Moon. Yet it may not have been the moon the monkeys reached for, but a patch of starlight scattered across the pond's surface.\n\n— Huaxu journal, Classical Tales Revisited",
+          TextMapId = "RESOURCE_TEXT_5029010"
+        },
+        RESOURCE_TEXT_5029020 = {
+          ContentEN = "When the people of Huaxu first told me they were preparing a Venomspine Catfish feast for me, I flat-out refused. For a moment, I wondered whether I'd slighted Huaxu cuisine in one of my pieces, and they meant to poison me with the fish. As it turned out, I was entirely mistaken. Silky-smooth, with a faint tingle on the tongue — I assumed they'd used peppercorns, only to learn it came from the venom itself. How do the Huaxu manage to make something poisonous taste this good!?\n\n— Wym, food journalist from Luca, A Taste of Atlasia",
+          TextMapId = "RESOURCE_TEXT_5029020"
+        },
+        RESOURCE_TEXT_5029030 = {
+          ContentEN = "\"Good grief... I've been fishing all my life, and I still can't tell if this Prismatic Seahorse even counts as a fish.\"\n\n— An old fisherman, deep in thought",
+          TextMapId = "RESOURCE_TEXT_5029030"
+        },
+        RESOURCE_TEXT_5029040 = {
+          ContentEN = "\"Jade Sprat in my mouth, booze in my gut — I strut this shore like I own the lot!\"\n\n— A drunken Huaxu local, sprawled on the sand, shooing gulls from his fried fish",
+          TextMapId = "RESOURCE_TEXT_5029040"
+        },
+        RESOURCE_TEXT_5029050 = {
+          ContentEN = "\"Look! A whole patch of gold out there — we're gonna be rich! Hahahaha... Huh? What do you mean it's darting and leaping?\"\n\n— An overexcited foreign sailor",
+          TextMapId = "RESOURCE_TEXT_5029050"
+        },
+        RESOURCE_TEXT_5030010 = {
+          ContentEN = "\"'Course it's pricey! Real Haojing Mitten Crab, this. Don't be asking where it was raised or where I hauled it up— long as it's had a little swim in Haojing's waters, it counts as the real thing.\"\n\n— A fishmonger at Haze Market, calling out to passers-by",
+          TextMapId = "RESOURCE_TEXT_5030010"
+        },
+        RESOURCE_TEXT_5030020 = {
+          ContentEN = "\"Well, I'll be — turns out this plain little Croaker Carp is the ancestor of quite a few ornamental breeds.\"\n\n— An unnamed scholar, picking fish bones from between his teeth while leafing through a compendium of Huaxu anecdotes",
+          TextMapId = "RESOURCE_TEXT_5030020"
+        },
+        RESOURCE_TEXT_5030030 = {
+          ContentEN = "\"Not sure why, but just looking at it makes everything feel... peaceful. Even a fish this tiny still gets its own little leaf to shelter under.\n\nWhat? You're telling me that isn't a real leaf — it's the fish's own camouflage? ...So even fish don't get peace for free? They have to grow it just to survive!?\"\n\n— A burnt-out thirty-something office drone",
+          TextMapId = "RESOURCE_TEXT_5030030"
+        },
+        RESOURCE_TEXT_5030040 = {
+          ContentEN = "The Bronze Drum takes its name from its resemblance to ancient bronze vessels. Once cooked, its scales take on a faint reddish glow that whets the appetite. Drizzle hot oil over it just before serving, and the flesh turns firm and springy — utterly moreish.\n\n— Wym, food journalist from Luca, A Taste of Atlasia",
+          TextMapId = "RESOURCE_TEXT_5030040"
+        },
+        RESOURCE_TEXT_5030050 = {
+          ContentEN = "Crimson crests flare on the water;\nscarlet scales ride the restless tide.\n\n— From an anonymous Huaxu poetry collection",
+          TextMapId = "RESOURCE_TEXT_5030050"
+        },
+        RESOURCE_TEXT_5031010 = {
+          ContentEN = "\"Yuck! What is this — some kind of torture device? How's eating this any different from chewing on manure?\"\n\n— Wym, food journalist from Luca",
+          TextMapId = "RESOURCE_TEXT_5031010"
+        },
+        RESOURCE_TEXT_5031020 = {
+          ContentEN = "\"Freshly dredged Taroheart Clams! Bit of mud's only natural. Don't you worry — old family trade, this. No way I'm ruining my name by slapping mud on any old shell and calling it 'Taroheart'!\"\n\n— A fishmonger calling out in a Haojing market",
+          TextMapId = "RESOURCE_TEXT_5031020"
+        },
+        RESOURCE_TEXT_5031030 = {
+          ContentEN = "\"I only meant to use up the bait and head home. Next thing I know, I reel in a Riverworm. Figured I might as well use it as bait. Then I caught another. So I used that one. Caught another. ...And now look at the time.\"\n\n— A middle-aged fisherman, explaining his late return to his wife",
+          TextMapId = "RESOURCE_TEXT_5031030"
+        },
+        RESOURCE_TEXT_5031040 = {
+          ContentEN = "\"They call it Lanterneye. At first I thought that was a bit generous — more like two bulbs stuck on a sorry excuse for a fish. But look at it long enough... and you start to see the charm.\"\n\n— A fisherman, deep in thought",
+          TextMapId = "RESOURCE_TEXT_5031040"
+        },
+        RESOURCE_TEXT_5031050 = {
+          ContentEN = "\"Good grief... I've been fishing all my life and never once questioned it. Turns out the Siltshark isn't a shark at all. Reckon 'Siltshark' sounds a fair bit better than 'mudfish' when you're bragging about your catch. No wonder it stuck.\"\n\n— An old fisherman, deep in thought",
+          TextMapId = "RESOURCE_TEXT_5031050"
+        },
         RESOURCE_TEXT_5110100 = {
           ContentEN = "A thousand casts a day — that's just the basics for any beginner. And by the time you're done, even if you've caught no fish, you'll at least have the arm of a decent swordsman.\n\n— A veteran angler who prefers to stay anonymous",
           TextMapId = "RESOURCE_TEXT_5110100"
@@ -41111,15 +43309,7 @@ Let go of the troubles beyond your reach.
         RESOURCE_TEXT_ROOT = {
           ContentEN = "\"You have three lives.\n\nYour first life is breath and heartbeat. You measure and perceive the world with your flesh and blood.\nYour second life is connection and bond. Your soul dwells in the nourishment of family, a lover's kiss, and the embrace of friends.\nYour third life is thought and memory. When a reader sees your name upon a page, when a traveler hears it in a bard's song, when a child draws wisdom and courage from your story—your life echoes once more in this world.\n\nAll return to the Misty Sea, but not all truly die.\"\n\n— Lady Nifle, Ferrywoman of the Misty Sea",
           TextMapId = "RESOURCE_TEXT_ROOT"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_TEXT_Reputation",
-    MaxKey = "RLBlessing_Name_209",
-    Loader = function()
-      return {
+        },
         RESOURCE_TEXT_Reputation = {
           ContentEN = "Once you've amassed enough reputation, society will turn a blind eye — even to the most unreasonable behaviour.",
           TextMapId = "RESOURCE_TEXT_Reputation"
@@ -41513,7 +43703,15 @@ Defeating an enemy increases Max HP by <Highlight>0.5%</> (max <Highlight>50%</>
         RLBlessing_Desc_208 = {
           ContentEN = "Increases Ranged Weapon <Highlight>CRIT Damage</> by <Highlight>#1</>.",
           TextMapId = "RLBlessing_Desc_208"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RLBlessing_Desc_209",
+    MaxKey = "RLBlessing_SimpleDesc_112",
+    Loader = function()
+      return {
         RLBlessing_Desc_209 = {
           ContentEN = [[
 When HP or Sanity drops below <Highlight>$2</>, <Highlight>[Stash of the Ocean]</> is more likely to generate matching supplies (boosted chance: <Highlight>$1</>).
@@ -41941,15 +44139,7 @@ Standing still for over <Highlight>2</>s increases Damage Dealt by <Highlight>$2
         RLBlessing_Name_209 = {
           ContentEN = "Gift of the Ocean",
           TextMapId = "RLBlessing_Name_209"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RLBlessing_Name_210",
-    MaxKey = "RLBlessing_UnlockCon_201",
-    Loader = function()
-      return {
+        },
         RLBlessing_Name_210 = {
           ContentEN = "Vitality of the Ocean",
           TextMapId = "RLBlessing_Name_210"
@@ -42325,7 +44515,15 @@ Standing still for over <Highlight>2</>s increases Damage Dealt by <Highlight>$2
         RLBlessing_SimpleDesc_112 = {
           ContentEN = "Increases Melee Weapon <Highlight>ATK Speed</> and <Highlight>ATK Range</>.",
           TextMapId = "RLBlessing_SimpleDesc_112"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RLBlessing_SimpleDesc_113",
+    MaxKey = "RLContract_Name_108",
+    Loader = function()
+      return {
         RLBlessing_SimpleDesc_113 = {
           ContentEN = "Deals <Highlight>additional</> damage when any damage reduces a target's HP to a <Highlight>lower level</>.",
           TextMapId = "RLBlessing_SimpleDesc_113"
@@ -42751,15 +44949,7 @@ Standing still for over <Highlight>2</>s increases Damage Dealt (until moving).]
         RLBlessing_UnlockCon_201 = {
           ContentEN = "Lampwick not unlocked",
           TextMapId = "RLBlessing_UnlockCon_201"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RLBlessing_UnlockCon_202",
-    MaxKey = "RLTreasure_Desc_10206",
-    Loader = function()
-      return {
+        },
         RLBlessing_UnlockCon_202 = {
           ContentEN = "Lampwick not unlocked",
           TextMapId = "RLBlessing_UnlockCon_202"
@@ -43135,7 +45325,15 @@ Standing still for over <Highlight>2</>s increases Damage Dealt (until moving).]
         RLContract_Name_108 = {
           ContentEN = "Domain of Clamor",
           TextMapId = "RLContract_Name_108"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RLContract_Name_109",
+    MaxKey = "RLTreasure_IPDesc_10316",
+    Loader = function()
+      return {
         RLContract_Name_109 = {
           ContentEN = "Domain of Construction",
           TextMapId = "RLContract_Name_109"
@@ -43563,15 +45761,7 @@ Restores <Highlight>$1</> Sanity after using a skill. Cooldown: <Highlight>$2</>
         RLTreasure_Desc_10206 = {
           ContentEN = "Skill DMG ignores <Highlight>$1</> of the target's DEF. For each type of Lampwick owned, this effect is reduced by <Highlight>$3</>, to a minimum of <Highlight>$2</>.",
           TextMapId = "RLTreasure_Desc_10206"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RLTreasure_Desc_10207",
-    MaxKey = "RLTreasure_SimpleDesc_10212",
-    Loader = function()
-      return {
+        },
         RLTreasure_Desc_10207 = {
           ContentEN = [[
 On entering a new depth, consumes <Highlight>@1</> Ember to grant -<Highlight>$1</> Damage Taken on that floor. 
@@ -43968,7 +46158,15 @@ A knight with a silver blade cut through the enemy ranks, his radiance spilling 
         RLTreasure_IPDesc_10316 = {
           ContentEN = "She saw the darkness creeping in. But the path was already lost — how could she bear to take anything more from them?\n So she offered a glimmering candy — a fleeting dream, perhaps a lie — anything that might bring a smile to her friend's face.\n If it did, even once, that was enough.",
           TextMapId = "RLTreasure_IPDesc_10316"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RLTreasure_IPDesc_11101",
+    MaxKey = "RL_Event310_Select_1",
+    Loader = function()
+      return {
         RLTreasure_IPDesc_11101 = {
           ContentEN = [[
 At nineteen, war claimed him the moment the claws of a Filthoid tore through a fellow teammate he just met before his shield could rise, leaving a crimson bloom and a faint scratch no scrubbing could erase. 
@@ -44409,15 +46607,7 @@ Restores Sanity after using a skill.
         RLTreasure_SimpleDesc_10212 = {
           ContentEN = "Acquiring this Artefact grants <Highlight>1</> extra Lampwick of your most abundant category.",
           TextMapId = "RLTreasure_SimpleDesc_10212"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RLTreasure_SimpleDesc_10213",
-    MaxKey = "RegionReputation_EntrustContent_07",
-    Loader = function()
-      return {
+        },
         RLTreasure_SimpleDesc_10213 = {
           ContentEN = "Immediately grants <Highlight>1</> [Core Flame] Lampwick and slightly increases your chance of discovering them.",
           TextMapId = "RLTreasure_SimpleDesc_10213"
@@ -44793,7 +46983,15 @@ Restores Sanity after using a skill.
         RL_Event310_Select_1 = {
           ContentEN = "Grants a <Highlight>Blue</>-tier or <Highlight>Purple</>-tier [Lampwick] of your choice.",
           TextMapId = "RL_Event310_Select_1"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RL_Event310_Select_2",
+    MaxKey = "RougeLike_LoseTreasure",
+    Loader = function()
+      return {
         RL_Event310_Select_2 = {
           ContentEN = "Grants a random <Highlight>Purple</>-tier [Lampwick].",
           TextMapId = "RL_Event310_Select_2"
@@ -45118,6 +47316,10 @@ Restores Sanity after using a skill.
           ContentEN = "When an Electro Character's Skill Intensity exceeds 100%, for every additional #1, Skill DMG ignores an extra #2 of the target's DEF, up to #3.",
           TextMapId = "Raid_Buff_12"
         },
+        Raid_Buff_13 = {
+          ContentEN = "When a Lumino character's Skill Range exceeds their Skill Duration, for every #1 excess, they ignore #2 DEF when dealing Skill DMG, up to a maximum of #3 DEF. When Skill Duration exceeds Skill Range, for every #4 excess, their PEN stats are increased by #5, up to a maximum of #6.",
+          TextMapId = "Raid_Buff_13"
+        },
         Ranged = {ContentEN = "Ranged", TextMapId = "Ranged"},
         Reading_Content_101223 = {
           ContentEN = "(A journal recovered from Glevum Pit. Based on the writing style, it appears to belong to a scholar.)\n ...\n 16 April\n We discovered a curious <H>yellow crystal cluster</> in this long-abandoned mine. Its composition suggests it is neither the Crystallo of Stella — said to lie hidden deep within the mountain caverns — nor residual Phoxene from past excavations. It appears to be an entirely undocumented mineral.\n ...\n 18 April\n To our surprise, Bob observed that the dimly glowing yellow crystals had <H>grown</>. What was once no larger than a handspan had developed into squat, shrub-like clusters.\n ...\n 20 April\n The clusters had grown again — this time into jagged, spire-like forms that blocked off several inner passageways. They seemed almost... alive. Fortunately, the crystals are extremely brittle; only a modest amount of <H>gunpowder</> is needed to blast them apart.\n Bob has put forward a hypothesis: these formations may not be minerals at all, but a type of <H>Filthoid secretion</> — perhaps even a form of \"progeny.\" Like sponges left in water, they appear to swell and expand over time. It remains a bold theory, even for someone of Bob's expertise in Filthoid biology.\n ...\n 21 April\n To test Bob's theory, we've decided to press deeper into the mine. If his conjecture proves correct, then somewhere within this forsaken pit lies a unique strain of Filthoid, distinct from those found in the wild — a <H>progenitor</>, perhaps...\n ...",
@@ -45214,15 +47416,7 @@ Restores Sanity after using a skill.
         RegionReputation_EntrustContent_07 = {
           ContentEN = "\"My research suggests there are energy fluctuations within Demon Wedges that I overlooked before. I'd like to purchase some from you...\"",
           TextMapId = "RegionReputation_EntrustContent_07"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RegionReputation_EntrustContent_08",
-    MaxKey = "SKILL_10202_DESC",
-    Loader = function()
-      return {
+        },
         RegionReputation_EntrustContent_08 = {
           ContentEN = "\"I've heard Demon Wedges can make you stronger. I'd like to study how they work — could you gather a few for me?\"",
           TextMapId = "RegionReputation_EntrustContent_08"
@@ -45428,7 +47622,7 @@ Restores Sanity after using a skill.
           TextMapId = "RegionReputation_RecurringTask_25"
         },
         RegionReputation_RecurringTask_26 = {
-          ContentEN = "Within 1 hour, complete any Character Covert Commission:",
+          ContentEN = "Within 1 hour, complete any Character Covert Commission: ",
           TextMapId = "RegionReputation_RecurringTask_26"
         },
         RegionReputation_RecurringTask_27 = {
@@ -45462,6 +47656,30 @@ Restores Sanity after using a skill.
         RegionReputation_Title02 = {
           ContentEN = "Huaxu",
           TextMapId = "RegionReputation_Title02"
+        },
+        RepeatDungeon01_Des = {
+          ContentEN = "Mistwharf is Haojing's largest shipping port and the main hub through which Starweavers enter and depart Huaxu. Heeding the summons of the Grand Incense Rite, they have donated vast sums and precious goods in support of the Proving. In recognition of this, the organisers have designated Mistwharf as the first arena.",
+          TextMapId = "RepeatDungeon01_Des"
+        },
+        RepeatDungeon01_Title = {
+          ContentEN = "Mistwharf",
+          TextMapId = "RepeatDungeon01_Title"
+        },
+        RepeatDungeon02_Des = {
+          ContentEN = "Once laid waste by the Scourge of Zhuyin, the Gritblight Expanse became a name spoken with dread. Though Zhuyin has since returned, the Gritblight that scars this land cannot be fully undone. To dispel lingering fear among the populace, and to purge the Filthoids still roaming the area, the organisers have established the second arena upon this desolate ground.",
+          TextMapId = "RepeatDungeon02_Des"
+        },
+        RepeatDungeon02_Title = {
+          ContentEN = "Gritblight Expanse",
+          TextMapId = "RepeatDungeon02_Title"
+        },
+        RepeatDungeon03_Des = {
+          ContentEN = "The western outskirts of Haojing are largely forested and sparsely populated. After parts of the city were damaged in the wake of the two Loongs' clash, the area was chosen as the final arena of the Incense Proving.",
+          TextMapId = "RepeatDungeon03_Des"
+        },
+        RepeatDungeon03_Title = {
+          ContentEN = "Western Outskirts of Haojing",
+          TextMapId = "RepeatDungeon03_Title"
         },
         ReputationEntrust_Required = {
           ContentEN = "Required Items",
@@ -45508,7 +47726,7 @@ Restores Sanity after using a skill.
           TextMapId = "ReputationLevel_RewardPreview"
         },
         ReputationLevel_Title = {
-          ContentEN = "Reputation Level:",
+          ContentEN = "Reputation Level: ",
           TextMapId = "ReputationLevel_Title"
         },
         ReputationLevel_Title01 = {
@@ -45561,7 +47779,15 @@ Restores Sanity after using a skill.
         RougeLike_LoseTreasure = {
           ContentEN = "Lose the Artefact!",
           TextMapId = "RougeLike_LoseTreasure"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RougeLike_Room301_Char01",
+    MaxKey = "SKILL_180102_NAME",
+    Loader = function()
+      return {
         RougeLike_Room301_Char01 = {
           ContentEN = "The Beautiful Woman",
           TextMapId = "RougeLike_Room301_Char01"
@@ -46023,15 +48249,7 @@ Restores Sanity after using a skill.
         SKILL_10202_DESC = {
           ContentEN = "ATK Speed‍ +<H>#1</>. Deals +<H>#2</> damage to targets afflicted with bonus effects.",
           TextMapId = "SKILL_10202_DESC"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "SKILL_10203_DESC",
-    MaxKey = "SKILL_330103_DESC",
-    Loader = function()
-      return {
+        },
         SKILL_10203_DESC = {
           ContentEN = "Skill Intensity +<H>#1</>. When an Electro character deals damage using a Plunging Attack with this weapon, grants self and Electro allies +<H>#2</> Skill DMG for <H>#3</>s (up to <H>5</> stacks).",
           TextMapId = "SKILL_10203_DESC"
@@ -46340,7 +48558,10 @@ Upon ending [Aspect Manifestation] state, records the current [String Intent] po
           TextMapId = "SKILL_150304_NAME"
         },
         SKILL_150401_DESC = {
-          ContentEN = "Enters [Cruise], gaining high-speed flight and dealing Lumino DMG to enemies along the path. This state continuously drains [Artificer Energy] and ends when Energy reaches 0 or when the skill is recast.",
+          ContentEN = [[
+Enters [Cruise], gaining high-speed flight and dealing Lumino DMG to enemies along the path. This state continuously drains [Artificer Energy] and ends when Energy reaches 0 or when the skill is recast.
+Hold the jump button to enter [Climb], gaining vertical flight capability. This state continuously drains [Artificer Energy] and ends when Energy reaches 0 or when the jump button is released.
+Restores [Artificer Energy] continuously while not in Cruise or Climb.]],
           TextMapId = "SKILL_150401_DESC"
         },
         SKILL_150401_NAME = {
@@ -46348,9 +48569,7 @@ Upon ending [Aspect Manifestation] state, records the current [String Intent] po
           TextMapId = "SKILL_150401_NAME"
         },
         SKILL_150402_DESC = {
-          ContentEN = [[
-Consumes all Sanity to summon the [Artificer Arsenal]. For a certain amount of Sanity consumed, grants 1 stack of [Artificer Supply], up to 10 stacks. Su Yi's melee weapon becomes the [Artificer Greatsword], and the ranged weapon becomes the [Artificer Cannon].
- While the Arsenal is active, Su Yi becomes immune to Hitstun. Recasting the skill retracts the Arsenal.]],
+          ContentEN = "Activates [Starfall Mode] by consuming all Sanity with Fengshi Type Ⅲ. Gain 1 stack of [Soar] for every 40 Sanity consumed, up to 10 stacks. Gain [Artificer Powder] based on the maximum ammo capacity of the equipped ranged weapon, up to 300 rounds.\nWhile in [Starfall Mode], weapons become unavailable, and Su Yi becomes immune to Hitstun. Recasting the skill deactivates [Starfall Mode].\nWhile in this mode, melee attacks are replaced with [Sword Aflash], and ranged attacks are replaced with [Stars Ashower].",
           TextMapId = "SKILL_150402_DESC"
         },
         SKILL_150402_NAME = {
@@ -46358,7 +48577,7 @@ Consumes all Sanity to summon the [Artificer Arsenal]. For a certain amount of S
           TextMapId = "SKILL_150402_NAME"
         },
         SKILL_150403_DESC = {
-          ContentEN = "Each bullet fired by the [Artificer Arsenal] grants 1 stack of [Overheat], stacking up to 400 times. Retracting the Arsenal consumes all Overheat stacks. If 200 or more stacks are consumed, the Arsenal launches forward and explodes on impact, dealing AoE Lumino DMG.",
+          ContentEN = "Each round fired by the [Artificer Armament] grants 1 stack of [Overheat], stacking up to 400 times. Retracting the Armament consumes all Overheat stacks. If 50 or more stacks are consumed, the Armament launches forward and explodes on impact, dealing AoE Lumino DMG.",
           TextMapId = "SKILL_150403_DESC"
         },
         SKILL_150403_NAME = {
@@ -46366,7 +48585,7 @@ Consumes all Sanity to summon the [Artificer Arsenal]. For a certain amount of S
           TextMapId = "SKILL_150403_NAME"
         },
         SKILL_150404_DESC = {
-          ContentEN = "Generates an [Artificer Shield] when the [Artificer Arsenal] is summoned.",
+          ContentEN = "When the [Artificer Armament] is summoned, converts a certain amount of Sanity consumed into Ultra Shield.",
           TextMapId = "SKILL_150404_DESC"
         },
         SKILL_150404_NAME = {
@@ -46422,7 +48641,15 @@ While [Boisterous Tea Party] is active, using this skill relocates the field to 
         SKILL_180102_NAME = {
           ContentEN = "\"Let the Tea Party Begin!\"",
           TextMapId = "SKILL_180102_NAME"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "SKILL_180103_DESC",
+    MaxKey = "SKILL_540104_DESC",
+    Loader = function()
+      return {
         SKILL_180103_DESC = {
           ContentEN = "Grants additional Lumino Damage that lasts throughout the battle. Each time [\"On a Warm Afternoon\"] is used, grants 6 stacks of [Taleweaver Quill]. While [Boisterous Tea Party] is active, generates 1 stack of [Taleweaver Quill] per second (up to 30 stacks).",
           TextMapId = "SKILL_180103_DESC"
@@ -46855,6 +49082,13 @@ Each time a [Tot Popper] is deployed, Yale and Oliver gains 1 stack of [Bombing 
           ContentEN = "Guilty Verdict",
           TextMapId = "SKILL_320104_NAME"
         },
+        SKILL_320105_DESC = {
+          ContentEN = [[
+While [Retribution] is active, dealing Skill DMG or Melee Weapon DMG to enemies has a #1 chance to trigger an additional [Puncture Retribution] centred on the target and grant 1 stack of [Reckoning]. This effect can trigger up to #3 times within #2s.
+If HP is full, the user takes damage equal to 0.1% of Max HP.
+Each stack of [Reckoning] increases Morale by #4 and DMG dealt by [Cage of Despair] is multiplied by an additional #5 per stack, up to #6 stacks.]],
+          TextMapId = "SKILL_320105_DESC"
+        },
         SKILL_320201_DESC = {
           ContentEN = "Launches all [Spinblades], dealing Pyro DMG to enemies in front and granting 1 stack of [Inebriation] to the user. Tap repeatedly or hold the normal skill or melee attack button to unleash a flurry of attacks.",
           TextMapId = "SKILL_320201_DESC"
@@ -46910,15 +49144,7 @@ When consuming 9 stacks of [Jackpot!]: Deals additional AoE Pyro Damage 2 times 
         SKILL_330103_DESC = {
           ContentEN = "When the user or allies pick up loot, the user gains 1 stack of [Jackpot!], lasting for the rest of the battle. Each stack increases Skill Intensity, up to 20 stacks.",
           TextMapId = "SKILL_330103_DESC"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "SKILL_330103_NAME",
-    MaxKey = "SKILL_DESC_3103DomainDamage",
-    Loader = function()
-      return {
+        },
         SKILL_330103_NAME = {
           ContentEN = "Margie's Recycling Sack",
           TextMapId = "SKILL_330103_NAME"
@@ -47325,7 +49551,15 @@ Daphne can hold up to 30 [Azoth Projectiles], and each ranged weapon attack cons
         SKILL_540104_DESC = {
           ContentEN = "When Daphne possesses [Azoth Projectile] and her ranged weapon attack deals damage, target hit by the ranged weapon attack incurs the DoT of [Decay Formula] 1 time. The damage is based on a certain percentage of Daphne's Ranged Weapon Trigger Probability.",
           TextMapId = "SKILL_540104_DESC"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "SKILL_540104_NAME",
+    MaxKey = "SKILL_DESC_4301Skill02ExploreDamage",
+    Loader = function()
+      return {
         SKILL_540104_NAME = {
           ContentEN = "Argent Lacrima",
           TextMapId = "SKILL_540104_NAME"
@@ -47649,8 +49883,12 @@ Conversion Percentage]],
           TextMapId = "SKILL_DESC_1504_Skill01_SecondSpChangeScd01"
         },
         SKILL_DESC_1504_Skill01_SecondSpChangeScd02 = {
-          ContentEN = "[Artificer Energy] consumed per second while ascending",
+          ContentEN = "[Artificer Energy] consumed per second during Climb",
           TextMapId = "SKILL_DESC_1504_Skill01_SecondSpChangeScd02"
+        },
+        SKILL_DESC_1504_Skill01_SecondSpRecover = {
+          ContentEN = "[Artificer Energy] Recovery",
+          TextMapId = "SKILL_DESC_1504_Skill01_SecondSpRecover"
         },
         SKILL_DESC_1601Skill01Damage = {
           ContentEN = "Swordwave DMG",
@@ -47791,15 +50029,7 @@ per stack of [Poison of Love]]=],
         SKILL_DESC_3103DomainDamage = {
           ContentEN = "Explosion DMG",
           TextMapId = "SKILL_DESC_3103DomainDamage"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "SKILL_DESC_3103DomainDebuff",
-    MaxKey = "SKILL_DESC_Multi",
-    Loader = function()
-      return {
+        },
         SKILL_DESC_3103DomainDebuff = {
           ContentEN = "Movement Speed Decrease",
           TextMapId = "SKILL_DESC_3103DomainDebuff"
@@ -47884,17 +50114,9 @@ per stack of [Poison of Love]]=],
           ContentEN = "[Spinblade] Damage",
           TextMapId = "SKILL_DESC_3202Skill02Damage01"
         },
-        SKILL_DESC_3202Skill02Distance = {
-          ContentEN = "[Spinblade] Launch Distance",
-          TextMapId = "SKILL_DESC_3202Skill02Distance"
-        },
         SKILL_DESC_3202Skill02LastTime = {
           ContentEN = "[Spinblade] Duration",
           TextMapId = "SKILL_DESC_3202Skill02LastTime"
-        },
-        SKILL_DESC_3202Skill02Radius = {
-          ContentEN = "[Spinblade] Targeting Range",
-          TextMapId = "SKILL_DESC_3202Skill02Radius"
         },
         SKILL_DESC_3202Skill02Speed = {
           ContentEN = "[Spinblade] Launch Speed",
@@ -48147,7 +50369,15 @@ per stack of [Poison of Love]]=],
         SKILL_DESC_4301Skill02ExploreDamage = {
           ContentEN = "Damage",
           TextMapId = "SKILL_DESC_4301Skill02ExploreDamage"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "SKILL_DESC_4301Skill02ExploreRange",
+    MaxKey = "SKILL_SECTIONDESC_4101_Skill02_01",
+    Loader = function()
+      return {
         SKILL_DESC_4301Skill02ExploreRange = {
           ContentEN = "Damage Radius",
           TextMapId = "SKILL_DESC_4301Skill02ExploreRange"
@@ -48599,15 +50829,7 @@ per stack of [Poison of Love]]=],
         SKILL_DESC_Multi = {
           ContentEN = "×",
           TextMapId = "SKILL_DESC_Multi"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "SKILL_DESC_MultiShootUpLayer",
-    MaxKey = "StoryEventName_23",
-    Loader = function()
-      return {
+        },
         SKILL_DESC_MultiShootUpLayer = {
           ContentEN = "Multishot Boost per stack",
           TextMapId = "SKILL_DESC_MultiShootUpLayer"
@@ -48692,6 +50914,10 @@ per stack of [Poison of Love]]=],
           ContentEN = "Firing Interval - Phase 4",
           TextMapId = "SKILL_DESC_ShootingRate4"
         },
+        SKILL_DESC_Skill01_Damage01 = {
+          ContentEN = "[Cruise] Damage Along Path",
+          TextMapId = "SKILL_DESC_Skill01_Damage01"
+        },
         SKILL_DESC_Skill02_Damage01 = {
           ContentEN = "[Artificer Greatsword] Damage",
           TextMapId = "SKILL_DESC_Skill02_Damage01"
@@ -48701,16 +50927,8 @@ per stack of [Poison of Love]]=],
           TextMapId = "SKILL_DESC_Skill02_Damage02"
         },
         SKILL_DESC_Skill02_Damage03 = {
-          ContentEN = "[Artificer Cannon] Fused Shell Damage",
+          ContentEN = "[Artificer Cannon] Fused Round Damage",
           TextMapId = "SKILL_DESC_Skill02_Damage03"
-        },
-        SKILL_DESC_Skill02_PerSp = {
-          ContentEN = "Sanity Cost per [Artificer Supply] stack",
-          TextMapId = "SKILL_DESC_Skill02_PerSp"
-        },
-        ["SKILL_DESC_Skill02_Range+A5+528:562"] = {
-          ContentEN = "[Artificer Greatsword] Fused Shell Area of Effect",
-          TextMapId = "SKILL_DESC_Skill02_Range+A5+528:562"
         },
         SKILL_DESC_Skill02_Range01 = {
           ContentEN = "[Artificer Greatsword] Area of Effect",
@@ -48719,6 +50937,10 @@ per stack of [Poison of Love]]=],
         SKILL_DESC_Skill02_Range02 = {
           ContentEN = "[Artificer Greatsword] Projectile Area of Effect",
           TextMapId = "SKILL_DESC_Skill02_Range02"
+        },
+        SKILL_DESC_Skill02_Range03 = {
+          ContentEN = "[Artificer Greatsword] Fused Shell AoE Radius",
+          TextMapId = "SKILL_DESC_Skill02_Range03"
         },
         SKILL_DESC_SkillDmgUp = {
           ContentEN = "Skill DMG Boost",
@@ -48779,6 +51001,10 @@ per stack of [Poison of Love]]=],
         SKILL_DESC_SpCost = {
           ContentEN = "Sanity Cost",
           TextMapId = "SKILL_DESC_SpCost"
+        },
+        SKILL_DESC_SpCost_Min = {
+          ContentEN = "Minimum Sanity Cost",
+          TextMapId = "SKILL_DESC_SpCost_Min"
         },
         SKILL_DESC_SpIncrease = {
           ContentEN = "Sanity Recovery",
@@ -48951,7 +51177,15 @@ per stack of [Poison of Love]]=],
         SKILL_SECTIONDESC_4101_Skill02_01 = {
           ContentEN = "Electro Surge",
           TextMapId = "SKILL_SECTIONDESC_4101_Skill02_01"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "SKILL_SECTIONDESC_4101_Skill02_02",
+    MaxKey = "System_Des_ModDungeon",
+    Loader = function()
+      return {
         SKILL_SECTIONDESC_4101_Skill02_02 = {
           ContentEN = "Electric Charge",
           TextMapId = "SKILL_SECTIONDESC_4101_Skill02_02"
@@ -49117,6 +51351,30 @@ per stack of [Poison of Love]]=],
           TextMapId = "SkipMVP"
         },
         Slash = {ContentEN = "/", TextMapId = "Slash"},
+        SoloTreasure_Backpack01 = {
+          ContentEN = "Treasure Pouch Ⅰ",
+          TextMapId = "SoloTreasure_Backpack01"
+        },
+        SoloTreasure_Backpack02 = {
+          ContentEN = "Treasure Pouch Ⅱ",
+          TextMapId = "SoloTreasure_Backpack02"
+        },
+        SoloTreasure_Backpack03 = {
+          ContentEN = "Treasure Pouch Ⅲ",
+          TextMapId = "SoloTreasure_Backpack03"
+        },
+        SoloTreasure_Backpack04 = {
+          ContentEN = "Treasure Pouch Ⅳ",
+          TextMapId = "SoloTreasure_Backpack04"
+        },
+        SoloTreasure_Backpack05 = {
+          ContentEN = "Treasure Pouch Ⅴ",
+          TextMapId = "SoloTreasure_Backpack05"
+        },
+        SoloTreasure_Backpack06 = {
+          ContentEN = "Treasure Pouch Ⅵ",
+          TextMapId = "SoloTreasure_Backpack06"
+        },
         SpQuestDesc_KKPart02 = {
           ContentEN = "Fend off the approaching Filthoids",
           TextMapId = "SpQuestDesc_KKPart02"
@@ -49389,15 +51647,7 @@ per stack of [Poison of Love]]=],
         StoryEventName_23 = {
           ContentEN = "Wails Toward the Dawn (Ⅱ)",
           TextMapId = "StoryEventName_23"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "StoryEventName_31",
-    MaxKey = "TERMEXP_2401_Skill02Buff",
-    Loader = function()
-      return {
+        },
         StoryEventName_31 = {
           ContentEN = "Falling Birds, Bottomless Depths (Ⅲ)",
           TextMapId = "StoryEventName_31"
@@ -49578,6 +51828,10 @@ per stack of [Poison of Love]]=],
           ContentEN = "Society",
           TextMapId = "SubType_4_Society"
         },
+        SubType_4_Story = {
+          ContentEN = "Story",
+          TextMapId = "SubType_4_Story"
+        },
         SubType_4_Technology = {
           ContentEN = "Technology",
           TextMapId = "SubType_4_Technology"
@@ -49710,7 +51964,15 @@ per stack of [Poison of Love]]=],
         System_Des_ModDungeon = {
           ContentEN = "<Highlight>Noctoyager Manual</> is now unlocked — a key source of Demon Wedges.",
           TextMapId = "System_Des_ModDungeon"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "System_Des_ModDungeon_CBT3",
+    MaxKey = "TERM_2301_Summon",
+    Loader = function()
+      return {
         System_Des_ModDungeon_CBT3 = {
           ContentEN = "<Highlight>Noctoyager Manual</> now unlocked",
           TextMapId = "System_Des_ModDungeon_CBT3"
@@ -50159,26 +52421,22 @@ Kezhou can have a maximum of 7 [Phanoplumes] at the same time. When launched, ea
 Targets hit by [Phanoplume] take additional damage, which is equivalent to a certain percentage of the DoT of Bonus Effect: Lumino multiplied by Kezhou's Melee Weapon Trigger Probability.]],
           TextMapId = "TERMEXP_1503_Skill02_02"
         },
-        TERMEXP_1504_ExtraPassive_01 = {
-          ContentEN = "Automatically deploys during melee or ranged attacks. When Su Yi takes HP damage, the Shield absorbs that instance of damage. The Shield breaks after absorbing damage equal to a percentage of Su Yi's Max HP.",
-          TextMapId = "TERMEXP_1504_ExtraPassive_01"
-        },
         TERMEXP_1504_Passive_01 = {
-          ContentEN = "Each Overheat stack consumed restores Sanity and increases the damage of the Arsenal's resulting explosion.",
+          ContentEN = "Each Overheat stack consumed restores Sanity and increases the base multiplier of the [Artificer Armament]'s resulting explosion damage.",
           TextMapId = "TERMEXP_1504_Passive_01"
         },
         TERMEXP_1504_Skill02_01 = {
-          ContentEN = "Provides bullets to the [Artificer Arsenal] and grants increased ATK Speed. Cleared when the Arsenal is retracted.",
+          ContentEN = "Gains Morale Boost.",
           TextMapId = "TERMEXP_1504_Skill02_01"
         },
         TERMEXP_1504_Skill02_02 = {
-          ContentEN = "Normal Attacks with the [Artificer Greatsword] consume 5 bullets from the [Artificer Arsenal] and deal Lumino DMG to enemies along the path.",
+          ContentEN = "Melee Attacks with this weapon consume 5 rounds and deal Lumino DMG to enemies along the path.",
           TextMapId = "TERMEXP_1504_Skill02_02"
         },
         TERMEXP_1504_Skill02_03 = {
           ContentEN = [[
-Fires an Artificer Shell forward with [Artificer Cannon] that explodes on impact, dealing AoE Lumino DMG.
-When equipped with Demon Wedge [Artificer Reconfiguration], instead fires a fuse-type shell that travels towards random enemies, dealing AoE Lumino DMG every 0.5 seconds along its path.]],
+Each attack consumes 1 [Artificer Ammo] to fire a projectile that deals AoE Lumino DMG on hit.
+When equipped with Demon Wedge [Artificer Reconfiguration], the projectile is replaced with a fuse-type round that travels towards random enemies, dealing AoE Lumino DMG every 0.1 seconds along its path.]],
           TextMapId = "TERMEXP_1504_Skill02_03"
         },
         TERMEXP_1601_Skill02 = {
@@ -50210,15 +52468,7 @@ When defeated, enemies inflicted with [Poison of Love] transfer their [Poison of
         TERMEXP_2401_Skill02Buff = {
           ContentEN = "Increases Skill Intensity by a percentage of [Fushu]'s Skill Intensity.",
           TextMapId = "TERMEXP_2401_Skill02Buff"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "TERMEXP_2401_Summon",
-    MaxKey = "Target_Theater_10",
-    Loader = function()
-      return {
+        },
         TERMEXP_2401_Summon = {
           ContentEN = [[
 Inherits 100% of Fushu's stats and deals Hydro Damage to the nearest 5 enemies once every second.
@@ -50262,7 +52512,7 @@ If Hellfire takes damage during [Retribution], extends the state duration and de
           TextMapId = "TERMEXP_3201_Skill01"
         },
         TERMEXP_3202_Passive01 = {
-          ContentEN = "All Weapon and Skill DMG (excluding [Spinblades] and [Laceration]) detonates 1 stack of [Laceration], dealing additional Pyro damage. Max 30 detonations per second.",
+          ContentEN = "Dealing Pyro Damage (excluding [Spinblades] and [Laceration] DMG) to targets with [Laceration] removes 1 stack of [Laceration] and deals 1 instance of additional Pyro DMG from [Camilla]. No more than 20 stacks can be removed from the same target per second.",
           TextMapId = "TERMEXP_3202_Passive01"
         },
         TERMEXP_3202_Skill01 = {
@@ -50328,7 +52578,7 @@ Xuanjiao absorbs HP damage inflicted on [Yuming]. When the absorbed amount reach
         TERMEXP_4201_SuperFallAttack = {
           ContentEN = [[
 Consumes all [Reverse Scales] to grant a Damage Dealt Increase to self.
-Then plunges at high speed, dealing Electro AoE Damage on impact. Counts as a Plunging Attack from a melee weapon. While in [Xuanjiao Manifest], also triggers [Wyrmcall Clouds].]],
+ Then plunges at high speed, dealing Electro AoE Damage on impact. Counts as a Plunging Attack from a melee weapon. While in [Xuanjiao Manifest], also triggers [Wyrmcall Clouds].]],
           TextMapId = "TERMEXP_4201_SuperFallAttack"
         },
         TERMEXP_4202_Skill01 = {
@@ -50536,10 +52786,6 @@ When a new [Phantasm] is created, the existing [Phantasm] immediately deals Anem
           ContentEN = "Phanoplume",
           TextMapId = "TERM_1503_Skill02_02"
         },
-        TERM_1504_ExtraPassive_01 = {
-          ContentEN = "Artificer Shield",
-          TextMapId = "TERM_1504_ExtraPassive_01"
-        },
         TERM_1504_Passive_01 = {
           ContentEN = "Overheat",
           TextMapId = "TERM_1504_Passive_01"
@@ -50549,7 +52795,7 @@ When a new [Phantasm] is created, the existing [Phantasm] immediately deals Anem
           TextMapId = "TERM_1504_Skill02_01"
         },
         TERM_1504_Skill02_02 = {
-          ContentEN = "Artificer Greatsword",
+          ContentEN = "Artificer Sword",
           TextMapId = "TERM_1504_Skill02_02"
         },
         TERM_1504_Skill02_03 = {
@@ -50579,7 +52825,15 @@ When a new [Phantasm] is created, the existing [Phantasm] immediately deals Anem
         TERM_2301_Summon = {
           ContentEN = "Summon: Tentacles",
           TextMapId = "TERM_2301_Summon"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "TERM_2401_Skill02Buff",
+    MaxKey = "TextMap_AnswerName_200106",
+    Loader = function()
+      return {
         TERM_2401_Skill02Buff = {
           ContentEN = "Nine-Needle Therapy",
           TextMapId = "TERM_2401_Skill02Buff"
@@ -51034,15 +53288,7 @@ When a new [Phantasm] is created, the existing [Phantasm] immediately deals Anem
         Target_Theater_10 = {
           ContentEN = "Deliver a total of <H>%s</> Green-tier materials",
           TextMapId = "Target_Theater_10"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Target_Theater_11",
-    MaxKey = "Title_10015",
-    Loader = function()
-      return {
+        },
         Target_Theater_11 = {
           ContentEN = "Deliver a total of <H>%s</> Blue-tier materials",
           TextMapId = "Target_Theater_11"
@@ -51368,7 +53614,15 @@ While she fits the profile of a child, it's clear the popcorn beneath Buck's win
         TextMap_AnswerName_200106 = {
           ContentEN = "A child broke into Mr Buck's home and got him drunk",
           TextMapId = "TextMap_AnswerName_200106"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "TextMap_AnswerName_200107",
+    MaxKey = "Title_10096",
+    Loader = function()
+      return {
         TextMap_AnswerName_200107 = {
           ContentEN = "A drunkard lies slumped by the bin, shouting for more alcohol",
           TextMapId = "TextMap_AnswerName_200107"
@@ -51843,15 +54097,7 @@ You can earn Trial EXP by:
         Title_10015 = {
           ContentEN = "Classic",
           TextMapId = "Title_10015"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Title_10016",
-    MaxKey = "Toast_PaoJi",
-    Loader = function()
-      return {
+        },
         Title_10016 = {
           ContentEN = "Epic",
           TextMapId = "Title_10016"
@@ -52175,7 +54421,15 @@ You can earn Trial EXP by:
         Title_10096 = {
           ContentEN = "Lynn's",
           TextMapId = "Title_10096"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Title_10097",
+    MaxKey = "UIGuide_DianFeng_1",
+    Loader = function()
+      return {
         Title_10097 = {
           ContentEN = "Hilda's",
           TextMapId = "Title_10097"
@@ -52243,6 +54497,14 @@ You can earn Trial EXP by:
         Title_10113 = {
           ContentEN = "Jishu Sect's",
           TextMapId = "Title_10113"
+        },
+        Title_10114 = {
+          ContentEN = "Tiger-Lit",
+          TextMapId = "Title_10114"
+        },
+        Title_10115 = {
+          ContentEN = "Tiger-Toned",
+          TextMapId = "Title_10115"
         },
         Title_20001 = {
           ContentEN = " Strength",
@@ -52651,15 +54913,7 @@ You can earn Trial EXP by:
         Toast_PaoJi = {
           ContentEN = "Passage opened. Leave the turret and proceed to the central control room.",
           TextMapId = "Toast_PaoJi"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Toast_SewWarning",
-    MaxKey = "UIGuide_Pet_2",
-    Loader = function()
-      return {
+        },
         Toast_SewWarning = {
           ContentEN = "Stay clear of the steam!",
           TextMapId = "Toast_SewWarning"
@@ -52992,7 +55246,15 @@ The additional damage may trigger the corresponding Bonus Effect based on the <H
         UIGuide_DianFeng_1 = {
           ContentEN = "In Apex Rankings, Phoxhunters face <H>extreme-threat enemies</> alongside waves of <H>foes far more dangerous than usual</>.",
           TextMapId = "UIGuide_DianFeng_1"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UIGuide_DianFeng_2",
+    MaxKey = "UIGuide_Title_Delivery_02",
+    Loader = function()
+      return {
         UIGuide_DianFeng_2 = {
           ContentEN = "Extreme-threat enemies have exceptionally high HP. Defeating standard units reduces their health.",
           TextMapId = "UIGuide_DianFeng_2"
@@ -53485,15 +55747,7 @@ The cap of Ultra Shield increases as the <H>Character Level</> rises.]],
         UIGuide_Pet_2 = {
           ContentEN = "Use high-quality Treats and time your feeding attempts wisely to greatly increase your chances of befriending a Geniemon.",
           TextMapId = "UIGuide_Pet_2"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UIGuide_Phantom_1_1",
-    MaxKey = "UI_Abyss_Toast_MoveToNextRoom",
-    Loader = function()
-      return {
+        },
         UIGuide_Phantom_1_1 = {
           ContentEN = "During <H>world exploration</> or a <H>Solo Commission</>, you can summon up to <H>2</> Combat Partners at the same time.",
           TextMapId = "UIGuide_Phantom_1_1"
@@ -53820,7 +56074,15 @@ Some objects can only be destroyed by <H>specific Bonus Effects</> or <H>Combat 
         UIGuide_Title_Delivery_02 = {
           ContentEN = "Teleport",
           TextMapId = "UIGuide_Title_Delivery_02"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UIGuide_Title_Destructible",
+    MaxKey = "UI_Accessory_Desc_20028",
+    Loader = function()
+      return {
         UIGuide_Title_Destructible = {
           ContentEN = "Destructibles",
           TextMapId = "UIGuide_Title_Destructible"
@@ -54306,15 +56568,7 @@ Some objects can only be destroyed by <H>specific Bonus Effects</> or <H>Combat 
         UI_Abyss_Toast_MoveToNextRoom = {
           ContentEN = "Start the next Trial",
           TextMapId = "UI_Abyss_Toast_MoveToNextRoom"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Abyss_Toast_NextRoom",
-    MaxKey = "UI_Accessory_Name_10040",
-    Loader = function()
-      return {
+        },
         UI_Abyss_Toast_NextRoom = {
           ContentEN = "Current Trial clear. Entering the next Trial",
           TextMapId = "UI_Abyss_Toast_NextRoom"
@@ -54630,7 +56884,15 @@ Some objects can only be destroyed by <H>specific Bonus Effects</> or <H>Combat 
         UI_Accessory_Desc_20028 = {
           ContentEN = "Bubbly, bright, and impossible to ignore.",
           TextMapId = "UI_Accessory_Desc_20028"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Accessory_Desc_20029",
+    MaxKey = "UI_Accessory_Name_13016",
+    Loader = function()
+      return {
         UI_Accessory_Desc_20029 = {
           ContentEN = "For those who'd like to avoid any eye contact.",
           TextMapId = "UI_Accessory_Desc_20029"
@@ -55133,15 +57395,7 @@ Lynn's Headpiece
         UI_Accessory_Name_10040 = {
           ContentEN = "Mood: Resigned",
           TextMapId = "UI_Accessory_Name_10040"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Accessory_Name_10041",
-    MaxKey = "UI_Accessory_Name_40022",
-    Loader = function()
-      return {
+        },
         UI_Accessory_Name_10041 = {
           ContentEN = "Mood: Angry",
           TextMapId = "UI_Accessory_Name_10041"
@@ -55457,7 +57711,15 @@ Lynn's Headpiece
         UI_Accessory_Name_13016 = {
           ContentEN = "Swing Kitty Waistpiece: Leaden Grey",
           TextMapId = "UI_Accessory_Name_13016"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Accessory_Name_13017",
+    MaxKey = "UI_Accessory_Rotation_Left",
+    Loader = function()
+      return {
         UI_Accessory_Name_13017 = {
           ContentEN = "Fluffy Bunny Waistpiece: Opaque White",
           TextMapId = "UI_Accessory_Name_13017"
@@ -55941,15 +58203,7 @@ Lynn's Headpiece
         UI_Accessory_Name_40022 = {
           ContentEN = "Reverse Scale of Zhuyin: Opaque White",
           TextMapId = "UI_Accessory_Name_40022"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Accessory_Name_40023",
-    MaxKey = "UI_Achievement_Des_17002018",
-    Loader = function()
-      return {
+        },
         UI_Accessory_Name_40023 = {
           ContentEN = "Reverse Scale of Zhuyin: Rust Red",
           TextMapId = "UI_Accessory_Name_40023"
@@ -56265,7 +58519,15 @@ Lynn's Headpiece
         UI_Accessory_Rotation_Left = {
           ContentEN = "Left/Right",
           TextMapId = "UI_Accessory_Rotation_Left"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Accessory_Rotation_Pitch",
+    MaxKey = "UI_Achievement_Des_2052",
+    Loader = function()
+      return {
         UI_Accessory_Rotation_Pitch = {
           ContentEN = "Axis: Horizontal",
           TextMapId = "UI_Accessory_Rotation_Pitch"
@@ -56749,15 +59011,7 @@ Lynn's Headpiece
         UI_Achievement_Des_17002018 = {
           ContentEN = "Go to Ripples of Talk at the Sanctuary and finish Sojourns of the Pages of Time: Rhythm",
           TextMapId = "UI_Achievement_Des_17002018"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Des_17002019",
-    MaxKey = "UI_Achievement_Des_5065003",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Des_17002019 = {
           ContentEN = "Go to Ripples of Talk at the Sanctuary and finish Sojourns of the Pages of Time: Zhiliu",
           TextMapId = "UI_Achievement_Des_17002019"
@@ -57073,7 +59327,15 @@ Lynn's Headpiece
         UI_Achievement_Des_2052 = {
           ContentEN = "Defeat 1 <H>Expedition Private - Armed Assault</> without taking any damage from Landmine placed by them in a solo-mode Commission ",
           TextMapId = "UI_Achievement_Des_2052"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Des_2053",
+    MaxKey = "UI_Achievement_Des_70121",
+    Loader = function()
+      return {
         UI_Achievement_Des_2053 = {
           ContentEN = "Inflict Paralysis on any enemy <H>#1</> times in solo-mode [Commission: Capture]",
           TextMapId = "UI_Achievement_Des_2053"
@@ -57557,15 +59819,7 @@ Lynn's Headpiece
         UI_Achievement_Des_5065003 = {
           ContentEN = "Secured victory within <highlight>180</>s in solo-mode \"Commission: Expulsion\" on the highest difficulty",
           TextMapId = "UI_Achievement_Des_5065003"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Des_5071",
-    MaxKey = "UI_Achievement_Name_101203",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Des_5071 = {
           ContentEN = "Neutralise a total of <H>#1</> barrages in [Nocturnal Echoes: Sibylle] on the highest difficulty",
           TextMapId = "UI_Achievement_Des_5071"
@@ -57881,7 +60135,15 @@ Lynn's Headpiece
         UI_Achievement_Des_70121 = {
           ContentEN = "Overload the Phoxichor Tanks to destroy the engine room.",
           TextMapId = "UI_Achievement_Des_70121"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Des_70122",
+    MaxKey = "UI_Achievement_Name_170010102",
+    Loader = function()
+      return {
         UI_Achievement_Des_70122 = {
           ContentEN = "Use the turrets to blast open a path to the Central Control Room.",
           TextMapId = "UI_Achievement_Des_70122"
@@ -58365,15 +60627,7 @@ Lynn's Headpiece
         UI_Achievement_Name_101203 = {
           ContentEN = "The Discontent of Water Ⅲ",
           TextMapId = "UI_Achievement_Name_101203"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Name_1012501",
-    MaxKey = "UI_Achievement_Name_201702",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Name_1012501 = {
           ContentEN = "Memory Archive",
           TextMapId = "UI_Achievement_Name_1012501"
@@ -58689,7 +60943,15 @@ Lynn's Headpiece
         UI_Achievement_Name_170010102 = {
           ContentEN = "Chronicle of Time Ⅱ",
           TextMapId = "UI_Achievement_Name_170010102"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Name_170010103",
+    MaxKey = "UI_Achievement_Name_303302",
+    Loader = function()
+      return {
         UI_Achievement_Name_170010103 = {
           ContentEN = "Chronicle of Time Ⅲ",
           TextMapId = "UI_Achievement_Name_170010103"
@@ -59173,15 +61435,7 @@ Lynn's Headpiece
         UI_Achievement_Name_201702 = {
           ContentEN = "Blooming Fireworks Ⅱ",
           TextMapId = "UI_Achievement_Name_201702"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Name_201703",
-    MaxKey = "UI_Achievement_Name_506201",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Name_201703 = {
           ContentEN = "Blooming Fireworks Ⅲ",
           TextMapId = "UI_Achievement_Name_201703"
@@ -59497,7 +61751,15 @@ Lynn's Headpiece
         UI_Achievement_Name_303302 = {
           ContentEN = "Twitching Time Ⅱ",
           TextMapId = "UI_Achievement_Name_303302"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Name_303303",
+    MaxKey = "UI_Achievement_Name_6050101",
+    Loader = function()
+      return {
         UI_Achievement_Name_303303 = {
           ContentEN = "Twitching Time Ⅲ",
           TextMapId = "UI_Achievement_Name_303303"
@@ -59981,15 +62243,7 @@ Lynn's Headpiece
         UI_Achievement_Name_506201 = {
           ContentEN = "Physical Mediation - Speedrun Ⅰ",
           TextMapId = "UI_Achievement_Name_506201"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Name_506202",
-    MaxKey = "UI_Achievement_Type_JuQing",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Name_506202 = {
           ContentEN = "Physical Mediation - Speedrun Ⅱ",
           TextMapId = "UI_Achievement_Name_506202"
@@ -60305,7 +62559,15 @@ Lynn's Headpiece
         UI_Achievement_Name_6050101 = {
           ContentEN = "Hit the Limit of Strength - Berenica",
           TextMapId = "UI_Achievement_Name_6050101"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Name_6060101",
+    MaxKey = "UI_Armory_CharPieceGetByWalnut",
+    Loader = function()
+      return {
         UI_Achievement_Name_6060101 = {
           ContentEN = "My DNA Is Responding Ⅰ",
           TextMapId = "UI_Achievement_Name_6060101"
@@ -60789,15 +63051,7 @@ Lynn's Headpiece
         UI_Achievement_Type_JuQing = {
           ContentEN = "Between the Shores",
           TextMapId = "UI_Achievement_Type_JuQing"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Type_RouGe",
-    MaxKey = "UI_AutoChess_Equip",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Type_RouGe = {
           ContentEN = "Labyrinthine Garden",
           TextMapId = "UI_Achievement_Type_RouGe"
@@ -61110,7 +63364,15 @@ Lynn's Headpiece
         UI_Armory_CharPieceGetByWalnut = {
           ContentEN = "Open Secret Letters",
           TextMapId = "UI_Armory_CharPieceGetByWalnut"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Armory_CharPurchaseConfirm",
+    MaxKey = "UI_AutoChess_RemainTime",
+    Loader = function()
+      return {
         UI_Armory_CharPurchaseConfirm = {
           ContentEN = "Redeem",
           TextMapId = "UI_Armory_CharPurchaseConfirm"
@@ -61223,9 +63485,17 @@ Lynn's Headpiece
           ContentEN = "Demon Wedges",
           TextMapId = "UI_Armory_Mod"
         },
+        UI_Armory_ModAttrAfterEnchance = {
+          ContentEN = "Attributes after Amplification",
+          TextMapId = "UI_Armory_ModAttrAfterEnchance"
+        },
         UI_Armory_ModListIsEmpty = {
           ContentEN = "No amplification materials available",
           TextMapId = "UI_Armory_ModListIsEmpty"
+        },
+        UI_Armory_ModNextLevelAttr = {
+          ContentEN = "Next Phase Attributes",
+          TextMapId = "UI_Armory_ModNextLevelAttr"
         },
         UI_Armory_Mod_After = {
           ContentEN = "Post-Amplification Passive Effects",
@@ -61544,7 +63814,7 @@ Lynn's Headpiece
           TextMapId = "UI_AutoChess_ClearAll"
         },
         UI_AutoChess_CompleteText = {
-          ContentEN = "Complete the match",
+          ContentEN = "Complete the match ",
           TextMapId = "UI_AutoChess_CompleteText"
         },
         UI_AutoChess_Cost = {
@@ -61594,15 +63864,7 @@ Lynn's Headpiece
         UI_AutoChess_Equip = {
           ContentEN = "Equip",
           TextMapId = "UI_AutoChess_Equip"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_AutoChess_EquipRarity1",
-    MaxKey = "UI_Banner_Tab_Sale121",
-    Loader = function()
-      return {
+        },
         UI_AutoChess_EquipRarity1 = {
           ContentEN = "Blue Tier",
           TextMapId = "UI_AutoChess_EquipRarity1"
@@ -61624,7 +63886,7 @@ Lynn's Headpiece
           TextMapId = "UI_AutoChess_ExtraBuffDesc_0"
         },
         UI_AutoChess_ExtraBuffDesc_1 = {
-          ContentEN = "<Title>Buff Effect:</> Gains <H>+#2 DEF</> for every <H>20%</> HP lost.",
+          ContentEN = "<Title>Buff Effect:</> When dealing damage, reduces the target's DEF by <H>#1</> for <H>10</>s.",
           TextMapId = "UI_AutoChess_ExtraBuffDesc_1"
         },
         UI_AutoChess_ExtraBuffDesc_10 = {
@@ -61892,7 +64154,7 @@ Lynn's Headpiece
           TextMapId = "UI_AutoChess_Rank9"
         },
         UI_AutoChess_RankLimitUp = {
-          ContentEN = "Increases rank cap to:",
+          ContentEN = "Increases rank cap to: ",
           TextMapId = "UI_AutoChess_RankLimitUp"
         },
         UI_AutoChess_RankLimitUpAfter = {
@@ -61910,7 +64172,15 @@ Lynn's Headpiece
         UI_AutoChess_RemainTime = {
           ContentEN = "Remaining Time",
           TextMapId = "UI_AutoChess_RemainTime"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_AutoChess_RemoveEquip",
+    MaxKey = "UI_BreakItemTriggerSuc",
+    Loader = function()
+      return {
         UI_AutoChess_RemoveEquip = {
           ContentEN = "Unequip",
           TextMapId = "UI_AutoChess_RemoveEquip"
@@ -62401,15 +64671,7 @@ Please go to the [Cosmetics] screen to purchase the Skin Selection Chest.]],
         UI_Banner_Tab_Sale121 = {
           ContentEN = "Limited-Time Offer: 94% Off",
           TextMapId = "UI_Banner_Tab_Sale121"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Banner_Tab_Sale122",
-    MaxKey = "UI_CHAR_DATA_TEXT_15030204",
-    Loader = function()
-      return {
+        },
         UI_Banner_Tab_Sale122 = {
           ContentEN = "Limited-Time Offer: 40% Off",
           TextMapId = "UI_Banner_Tab_Sale122"
@@ -62717,7 +64979,15 @@ Please go to the [Cosmetics] screen to purchase the Skin Selection Chest.]],
         UI_BreakItemTriggerSuc = {
           ContentEN = "Triggered",
           TextMapId = "UI_BreakItemTriggerSuc"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Button01_SaiqiBossWarning",
+    MaxKey = "UI_CHAR_DATA_TEXT_23010302",
+    Loader = function()
+      return {
         UI_Button01_SaiqiBossWarning = {
           ContentEN = "Confirm",
           TextMapId = "UI_Button01_SaiqiBossWarning"
@@ -62771,6 +65041,10 @@ Please go to the [Cosmetics] screen to purchase the Skin Selection Chest.]],
           ContentEN = "Huaxu",
           TextMapId = "UI_CHAR_BIRTH_1503"
         },
+        UI_CHAR_BIRTH_1504 = {
+          ContentEN = "Huaxu",
+          TextMapId = "UI_CHAR_BIRTH_1504"
+        },
         UI_CHAR_BIRTH_1801 = {
           ContentEN = "Hyperborean Empire",
           TextMapId = "UI_CHAR_BIRTH_1801"
@@ -62802,6 +65076,10 @@ Please go to the [Cosmetics] screen to purchase the Skin Selection Chest.]],
         UI_CHAR_BIRTH_3201 = {
           ContentEN = "Hyperborean Empire",
           TextMapId = "UI_CHAR_BIRTH_3201"
+        },
+        UI_CHAR_BIRTH_3202 = {
+          ContentEN = "Hyperborean Empire",
+          TextMapId = "UI_CHAR_BIRTH_3202"
         },
         UI_CHAR_BIRTH_3301 = {
           ContentEN = "Hyperborean Empire",
@@ -63023,11 +65301,11 @@ This leaves Berenica frustrated, with no choice but to wrap an arm around your h
           TextMapId = "UI_CHAR_DATA_TEXT_11030404"
         },
         UI_CHAR_DATA_TEXT_11030405 = {
-          ContentEN = "So the story has reached its final act: our meeting. If I had a choice, I would have rather met you another way, wearing a face less grotesque.\n\nI thought my disguise flawless. Yet you saw through it — and your deduction left no room for denial.\n\nI could mimic his mannerisms perfectly — the tilt of his head, the cadence of his voice — but I could never be him. His warmth, his love for life, his faith in tomorrow, the way he cared for others — these were things I could never recreate, no matter how hard I tried. I never imagined anyone would rewrite Children From the Snowfield — stripping away its polished elegance, disrupting its arc, compromising its internal logic — simply to give the frost fairy a happy ending.\n\nI once believed the worst thing for a performer was to be caught slipping before the audience. And yet, when you unmasked me... I felt a peace I had never known.\nPerhaps I spent so long pretending to be someone else, I forgot how much I longed to be seen as myself.\n\nYou said you wished to hear my story. I don't know if these scattered memories will suffice — but they're all I have.\n\nMy life was never a grand voyage. Every chapter ended half-written, like drafts abandoned by a mediocre playwright — always reaching for the next scene, never quite arriving.\n\nAfter my first curtain call, I lost my stage.\nAfter the second, I lost my human face.\nAfter the third, even my name.\n\nI am glad you witnessed this final curtain call — for this time, I walked a path of my own choosing, and I carry no regrets.\n\nO, weep not for me — for the curtain has fallen, and it fell at its perfect cue.",
+          ContentEN = "So the story has reached its final act: our meeting. If I had a choice, I would have rather met you another way, wearing a face less grotesque.\nI thought my disguise flawless, yet you saw through it, and your deduction left no room for denial.\nI could mimic his mannerisms perfectly — the tilt of his head, the cadence of his voice — but I could never be him. His warmth, his love of life, his faith in tomorrow, the way he cared for others — those are things I could never recreate, no matter how hard I tried. I never imagined anyone would rewrite Children From the Snowfield — stripping away its polished elegance, disrupting its dramatic arc, compromising its internal logic — simply to grant the frost fairy a happy ending.\nI always thought the worst thing for a performer was to be seen slipping by the audience. And yet, when you unmasked me... I felt more at peace than I ever had. Perhaps I spent so long pretending to be someone else, that I forgot how deeply I longed to be seen for who I truly am.\n\nYou said you wanted to hear my story. I don't know if these scattered memories are enough. But they're all I have to offer.\nMy life was never a grand voyage. Every chapter ended half-written, like drafts abandoned by a mediocre playwright — ever reaching for the next scene, never quite arriving.\nAfter my first curtain call, I lost my stage. After the second, I lost my human face. After the third, even my name.\nI am glad you witnessed this final curtain call — for this time, I walked a path of my own choosing, and I carry no regrets.\nO, weep not for me — for my curtain has fallen at its perfect cue.",
           TextMapId = "UI_CHAR_DATA_TEXT_11030405"
         },
         UI_CHAR_DATA_TEXT_15010101 = {
-          ContentEN = "While idly leafing through an old newspaper in a tavern, you come upon a headline from far-off Elysium in the south. Across the front page sprawls a vast photograph of a girl named Lisbell.\n \nThe Empire's press, of course, heaps scorn upon that ancient land: Look! How far Elysium has fallen, that it should entrust the supreme name of the Seven Virtues to a mere slip of a little girl! So low has the realm of the divine decayed!\n \nYet such derision cannot dim the radiance of the girl in the picture. A slight figure lifts high a sacred sword taller than herself, its brilliance overflowing to illuminate her face. Her gaze burns with unfeigned candour, and her stance resounds with unshakable conviction. In that instant captured, the noonday sun hung above her — as though crowning her with a brilliance none could endure to behold.\n \nThis Lisbell seemed almost a stranger, and for the first time you understood: the Seven Virtues is no mere title for a girl to mention in passing, but the living embodiment of Elysium's faith — the Gods' Favoured.",
+          ContentEN = "While idly leafing through an old newspaper in a tavern, you come upon a headline from far-off Elysium in the south. Across the front page sprawls a vast photograph of a girl named Lisbell.\n\nThe Empire's press, of course, heaps scorn upon that ancient land: Look! How far Elysium has fallen, that it should entrust the supreme name of the Seven Virtues to a mere slip of a little girl! So low has the realm of the divine decayed!\n\nYet such derision cannot dim the radiance of the girl in the picture. A slight figure lifts high a sacred sword taller than herself, its brilliance overflowing to illuminate her face. Her gaze burns with unfeigned candour, and her stance resounds with unshakable conviction. In that instant captured, the noonday sun hung above her — as though crowning her with a brilliance none could endure to behold.\n\nThis Lisbell seemed almost a stranger, and for the first time you understood: the Seven Virtues is no mere title for a girl to mention in passing, but the living embodiment of Elysium's faith — the Gods' Favoured.",
           TextMapId = "UI_CHAR_DATA_TEXT_15010101"
         },
         UI_CHAR_DATA_TEXT_15010102 = {
@@ -63047,7 +65325,7 @@ This leaves Berenica frustrated, with no choice but to wrap an arm around your h
           TextMapId = "UI_CHAR_DATA_TEXT_15010105"
         },
         UI_CHAR_DATA_TEXT_15010201 = {
-          ContentEN = "Across the streets and alleys of the Continent of Atlasia, when talk turns to the Elysian Church, it is not the Great Nine — lofty as the sun and moon — nor the star-scattered ranks of priests that linger on people's lips. The heavens of the gods lie far beyond the reach of common folk, and the priests' prayers, disputes, and fiscal minutiae prove all too dull.\n  \nWhat they speak of, always, is the group known as the Seven Virtues — a body born with humanity's first nation, Elysium, and shrouded in legend. Church records tell that two millennia past, the gods descended from the high tower, bringing an end to the Age of Darkness — a time steeped in bloodshed and strife. Into sacred relics they poured their divine power, bestowing them upon the Patriarch and seven chosen ones — those who first bore the name Seven Virtues.\n \nBathed in holy radiance, they became agents of the divine will, safeguarding the harmony and prosperity of Elysium. Clad in gleaming arms, they repelled the tides of Filthoids and the fallen heretics, that the people might dwell in safety. And when a Virtue's mortal vessel fades, the relic falls silent — awaiting the hand of its next bearer. Thus has the mercy and might of the gods flowed through the dawns and dusks of Elysium, unbroken across the ages.",
+          ContentEN = "Across the streets and alleys of the Continent of Atlasia, when talk turns to the Elysian Church, it is not the Great Nine — lofty as the sun and moon — nor the star-scattered ranks of priests that linger on people's lips. The heavens of the gods lie far beyond the reach of common folk, and the priests' prayers, disputes, and fiscal minutiae prove all too dull.\n\nWhat they speak of, always, is the group known as the Seven Virtues — a body born with humanity's first nation, Elysium, and shrouded in legend. Church records tell that two millennia past, the gods descended from the high tower, bringing an end to the Age of Darkness — a time steeped in bloodshed and strife. Into sacred relics they poured their divine power, bestowing them upon the Patriarch and seven chosen ones — those who first bore the name Seven Virtues.\n\nBathed in holy radiance, they became agents of the divine will, safeguarding the harmony and prosperity of Elysium. Clad in gleaming arms, they repelled the tides of Filthoids and the fallen heretics, that the people might dwell in safety. And when a Virtue's mortal vessel fades, the relic falls silent — awaiting the hand of its next bearer. Thus has the mercy and might of the gods flowed through the dawns and dusks of Elysium, unbroken across the ages.",
           TextMapId = "UI_CHAR_DATA_TEXT_15010201"
         },
         UI_CHAR_DATA_TEXT_15010202 = {
@@ -63067,7 +65345,7 @@ This leaves Berenica frustrated, with no choice but to wrap an arm around your h
           TextMapId = "UI_CHAR_DATA_TEXT_15010205"
         },
         UI_CHAR_DATA_TEXT_15010301 = {
-          ContentEN = "The young Lisbell, having drawn the sacred sword Samael, was duly named candidate for Patience among the Seven Virtues of the Elysian Church.\n \nShe did not at once assume the vacant seat of Patience — not merely because her years were too tender for so great a burden, but more so because Samael, from that moment on, never again deigned to answer her.\n \nThus, to rouse the slumbering spirit within the sacred blade, Lisbell set forth upon her path of cultivation.",
+          ContentEN = "The young Lisbell, having drawn the sacred sword Samael, was duly named candidate for Patience among the Seven Virtues of the Elysian Church.\n\nShe did not at once assume the vacant seat of Patience — not merely because her years were too tender for so great a burden, but more so because Samael, from that moment on, never again deigned to answer her.\n\nThus, to rouse the slumbering spirit within the sacred blade, Lisbell set forth upon her path of cultivation.",
           TextMapId = "UI_CHAR_DATA_TEXT_15010301"
         },
         UI_CHAR_DATA_TEXT_15010302 = {
@@ -63087,7 +65365,7 @@ This leaves Berenica frustrated, with no choice but to wrap an arm around your h
           TextMapId = "UI_CHAR_DATA_TEXT_15010305"
         },
         UI_CHAR_DATA_TEXT_15010401 = {
-          ContentEN = "Lisbell once set all of Elysium astir — for at the tender age of twelve, she drew the long-unclaimed sacred sword, Samael. In that instant, the young noblewoman shone like a diamond newly unearthed, no longer merely a child of lineage, but one deemed worthy to stand among the Seven Virtues — to wield authority and ascend to the very pinnacle of that ancient divine nation.\n \nTo the adults about her, however, there was little astonishment. The mantle of Patience had ever been borne by the ancient and honourable house of Evangelinos. Sooner or later, it was fated to rest upon Lisbell, their sole heir. Yet, still but a child, she understood nothing of it. The morning after she drew the sacred sword, Lisbell sat at the dining table as always, drowsily tapping the rim of her bowl with a spoon. Like any child, she had her fussy dislikes — quinoa, meat pies, sturgeon, pike. Yet for the sake of her health, the old steward unfailingly set those very dishes before her.\n \nUnable to vent her anger at him, she showed her displeasure in the only way she could — a small breach of etiquette, the clink of a spoon against porcelain. The day was already shaping into an irksome one... She forced her way through breakfast, then, as her parents required, turned to the customary post-meal reading. Stretching on tiptoe, she tugged a stack of newspapers from a shelf four times her height — The Morning Bell of the Sacred Tower, a novelty of the northern lands, and at least less soporific than the usual tomes. Rubbing her eyes, Lisbell unfolded the paper. Petite as she was, her feet swung above the floor, and the paper, once unfolded, spanned nearly the breadth of her arms.\n \nShe wrestled with its yellowed, crinkling pages, which rustled faintly, when suddenly she came face to face with her own likeness.\n \n\"Huh!!?\" A loud, bewildered cry rang out — wholly unfitting for a young lady of her station. It took her a heartbeat to grasp what she saw. Then her voice went echoing through the manor halls: \"Mr Steward! Mr Steward! How did I end up in the newspaper!?\" Still astonished, she dragged the unwieldy sheet along behind her as she ran, not fully understanding what had happened — but certain that the ever-reliable steward with the long white beard would have the answer.The steward, however, had scarcely slept all night.\n \nAs a son of Elysium and loyal servant of the house of Evangelinos, he knew full well: the girl in the paper, favoured by the gods, must be the long-vacant Patience. Yet he prayed to the Great Nine that time might be turned back — that he might somehow have stayed the hand of fate, held back his headstrong young mistress. If only it could have been a few years later! If the gods, or the family head, willed that she must join the Seven Virtues, why could they not show greater generosity, greater patience? At least until she had lived out the fullness of her childhood... until she came to understand the world's ways... until she learned to temper bewilderment with restraint, discontent with discipline... until she outgrew her wayward sympathy and compassion, and learned to accept and endure the fate bestowed upon all by the Great Nine.\n \nLisbell's shouts and hurried footsteps rang closer and closer. The old steward knew too well — in a moment, his young mistress would come bursting through the drawing-room door.\n \nHe had only just seen off the Patriarch's envoy. In his hands he now held the golden laurel crown bestowed by the Church, together with the summons calling Lisbell to an audience. They weighed almost nothing, yet in his grasp they felt heavy as lead. He could scarcely bring himself to imagine laying such burdens upon those slight, unready shoulders.\n \nAh, her footsteps — still brisk — the privilege of one unburdened by duty. He listened as they drew near, until Lisbell burst into the room, a crumpled newspaper clutched in her hands, her eyes wide with innocent wonder. \"Mr Steward — what's that you're holding?\"\n \nAnd in that moment, he knew: the carefree days of his young mistress had come to their end.",
+          ContentEN = "Lisbell once set all of Elysium astir — for at the tender age of twelve, she drew the long-unclaimed sacred sword, Samael. In that instant, the young noblewoman shone like a diamond newly unearthed, no longer merely a child of lineage, but one deemed worthy to stand among the Seven Virtues — to wield authority and ascend to the very pinnacle of that ancient divine nation.\n\nTo the adults about her, however, there was little astonishment. The mantle of Patience had ever been borne by the ancient and honourable house of Evangelinos. Sooner or later, it was fated to rest upon Lisbell, their sole heir. Yet, still but a child, she understood nothing of it. The morning after she drew the sacred sword, Lisbell sat at the dining table as always, drowsily tapping the rim of her bowl with a spoon. Like any child, she had her fussy dislikes — quinoa, meat pies, sturgeon, pike. Yet for the sake of her health, the old steward unfailingly set those very dishes before her.\n\nUnable to vent her anger at him, she showed her displeasure in the only way she could — a small breach of etiquette, the clink of a spoon against porcelain. The day was already shaping into an irksome one... She forced her way through breakfast, then, as her parents required, turned to the customary post-meal reading. Stretching on tiptoe, she tugged a stack of newspapers from a shelf four times her height — The Morning Bell of the Sacred Tower, a novelty of the northern lands, and at least less soporific than the usual tomes. Rubbing her eyes, Lisbell unfolded the paper. Petite as she was, her feet swung above the floor, and the paper, once unfolded, spanned nearly the breadth of her arms.\n\nShe wrestled with its yellowed, crinkling pages, which rustled faintly, when suddenly she came face to face with her own likeness.\n\n\"Huh!!?\" A loud, bewildered cry rang out — wholly unfitting for a young lady of her station. It took her a heartbeat to grasp what she saw. Then her voice went echoing through the manor halls: \"Mr Steward! Mr Steward! How did I end up in the newspaper!?\" Still astonished, she dragged the unwieldy sheet along behind her as she ran, not fully understanding what had happened — but certain that the ever-reliable steward with the long white beard would have the answer.\n\nThe steward, however, had scarcely slept all night.\n\nAs a son of Elysium and loyal servant of the house of Evangelinos, he knew full well: the girl in the paper, favoured by the gods, must be the long-vacant Patience. Yet he prayed to the Great Nine that time might be turned back — that he might somehow have stayed the hand of fate, held back his headstrong young mistress. If only it could have been a few years later! If the gods, or the family head, willed that she must join the Seven Virtues, why could they not show greater generosity, greater patience? At least until she had lived out the fullness of her childhood... until she came to understand the world's ways... until she learned to temper bewilderment with restraint, discontent with discipline... until she outgrew her wayward sympathy and compassion, and learned to accept and endure the fate bestowed upon all by the Great Nine.\n\nLisbell's shouts and hurried footsteps rang closer and closer. The old steward knew too well — in a moment, his young mistress would come bursting through the drawing-room door.\n\nHe had only just seen off the Patriarch's envoy. In his hands he now held the golden laurel crown bestowed by the Church, together with the summons calling Lisbell to an audience. They weighed almost nothing, yet in his grasp they felt heavy as lead. He could scarcely bring himself to imagine laying such burdens upon those slight, unready shoulders.\n\nAh, her footsteps — still brisk — the privilege of one unburdened by duty. He listened as they drew near, until Lisbell burst into the room, a crumpled newspaper clutched in her hands, her eyes wide with innocent wonder. \"Mr Steward — what's that you're holding?\"\n\nAnd in that moment, he knew: the carefree days of his young mistress had come to their end.",
           TextMapId = "UI_CHAR_DATA_TEXT_15010401"
         },
         UI_CHAR_DATA_TEXT_15010402 = {
@@ -63137,7 +65415,7 @@ And when your thoughts are troubled, she simply offers a quiet smile, watching y
           TextMapId = "UI_CHAR_DATA_TEXT_15020202"
         },
         UI_CHAR_DATA_TEXT_15020203 = {
-          ContentEN = "Sacred Tower Era, Year 998 — known also as Year One of the New Era — stands as a boundary no historian dares overlook. Some scholars divide the continent's past into two distinct eras: Before 998, and After 998. For it was in that year that the disillusioned cast aside the gods. They tore down the icons they once revered, raised blades in defiance, and abandoned the lands they had long called home. Marching northward into hardship and uncertainty, they began what would come to be known as the Great Migration — an event forever bound to the name Erika.\n \nDaughter of Lord Generous, Erika could have lived a life of comfort and privilege. Instead, she chose to fight — for freedom, for equality — even if it meant standing against her own blood. Records describe her as valiant and passionate — a warrior who led from the front, spear in hand; her unshakable back a banner for others to follow.\n \nAs for Erika's closest companion, the chronicles mention only one name: Alexis — the sage who would one day found the Free State of Aethyrie. Yet in stories passed down by those who walked the Great Migration themselves, there is always mention of another — a young woman, rarely seen apart from Erika. The two were like sisters, inseparable in both step and spirit. Yet their temperaments could not have been more different: Erika shone with the brilliance of the noonday sun, while the other girl was quiet, reserved — a gentle soul, more akin to the aurora that softly graces the polar night.",
+          ContentEN = "Sacred Tower Era, Year 998 — known also as Year One of the New Era — stands as a boundary no historian dares overlook. Some scholars divide the continent's past into two distinct eras: Before 998, and After 998. For it was in that year that the disillusioned cast aside the gods. They tore down the icons they once revered, raised blades in defiance, and abandoned the lands they had long called home. Marching northward into hardship and uncertainty, they began what would come to be known as the Great Migration — an event forever bound to the name Erika.\nDaughter of Lord Generous, Erika could have lived a life of comfort and privilege. Instead, she chose to fight — for freedom, for equality — even if it meant standing against her own blood. Records describe her as valiant and passionate — a warrior who led from the front, spear in hand; her unshakable back a banner for others to follow.\nAs for Erika's closest companion, the chronicles mention only one name: Alexis — the sage who would one day found the Free State of Aethyrie. Yet in stories passed down by those who walked the Great Migration themselves, there is always mention of another — a young woman, rarely seen apart from Erika. The two were like sisters, inseparable in both step and spirit. Yet their temperaments could not have been more different: Erika shone with the brilliance of the noonday sun, while the other girl was quiet, reserved — a gentle soul, more akin to the aurora that softly graces the polar night.",
           TextMapId = "UI_CHAR_DATA_TEXT_15020203"
         },
         UI_CHAR_DATA_TEXT_15020204 = {
@@ -63173,7 +65451,7 @@ And when your thoughts are troubled, she simply offers a quiet smile, watching y
           TextMapId = "UI_CHAR_DATA_TEXT_15020401"
         },
         UI_CHAR_DATA_TEXT_15020402 = {
-          ContentEN = "\"Who is that Ferrywoman?\"\n\"She's Lady Aletheia's mother.\"\n\"What...? But she looks so young.\"\n\"That's because she bears the magic of longevity. She never ages.\"\n\"Wait — that's real? That's... incredible. Must be nice.\"\n\"But... to outlive your own child — to say goodbye with your own hands... that must hurt more than anything.\"\nThough the whispers were hushed, they still reached Nifle's ears, carried on the evening breeze. Yet the words stirred nothing in her. She had long grown used to the awe, the envy, the wonder — and the quiet sighs that followed wherever she walked.\n\"It's time,\" said the young attendant beside her. \"The rite is ready.\"\nNifle gave a slight nod. She lifted her lantern and stepped towards the river, where the water glowed faintly beneath the night sky. Moored at the bank was a slender boat — and resting upon it, a delicately carved coffin.\nThe woman within lay surrounded by blossoms, her eyes peacefully closed — as if merely dozing in a sunlit chair. The years had carved themselves into her: fine lines by her eyes and lips, skin dulled and weathered, strands of grey falling soft beside her temples. To any other, she was a woman well into her twilight years. But to Nifle, she was still a child. Through that aged face, she could still see all her past selves — the bright-eyed little girl with laughter full of wonder, the quiet student lost in the lamp-lit hush of the library, the slender figure crossing battle lines for her nation's survival, the silver-haired scholar who stood at the lectern, her eyes softened by time, yet shining still.\nNifle had expected deep grief — the kind she had once felt when guiding old friends to the other shore. But in this moment, what rose within her was something quieter: a strange sense of calm and release.\nOne by one, she lit the candles arranged around the coffin. Then, from the folds of her robe, she drew a small stone — its surface ridged and grooved with cracks — and placed it gently upon the woman's chest.\nIt was a fragment of a meteor — and the fulfilment of a promise long kept. That day, Nifle had planned a rare visit to the market — and asked if her child wanted anything. The girl — truly just a little one then — had lit up, eyes sparkling as she clutched at Nifle's sleeve. \"A talking star,\" she'd said.\nOf course, no market could offer up a star — let alone one that spoke. The child had always been full of whimsical, impossible ideas. But Nifle had promised she would find one, someday.\nChildren forget the promises made to them when they are very young. But Nifle never forgot the one she made to her daughter.\n\"I've brought you your talking star, Aletha,\" she whispered.\nNifle had once read Aletheia's journals. As a child, Aletheia held fast to her own odd beliefs. She didn't believe the priests of Elysium, who said the stars were gemstones set into a vast glass dome — arching over the world, and known to all as \"the sky.\" Nor did she accept the tales of the Charon, who claimed the stars were golden leaves hanging from the limbs of a great world tree. She believed that each distant star was its own world — like Atlasia itself. And perhaps, to those stars, Atlasia was also just a \"star\" — a single speck of light, twinkling back across the void.\nIf that were true, then this meteor shard — lined with ancient veins — might still whisper of a distant world, across time and space.\nNifle looked down, one last time, at the elderly woman who had once been her child. Then, gently, she closed the coffin. With steady hands, she pushed the boat into the river, letting the current carry it away. She rose — and with the same grace etched into every motion, began the Dance of Departure.\nBehind her, soft sobbing stirred the air. In the edge of her gaze, the crowd stood still upon the riverbank — their eyes fixed on the drifting boat in silent reverence. Candlelight shimmered in their eyes, a scattering of stars upon the earth.\nAnd in that moment, Nifle understood: The child had stopped asking for stars — not because she had forgotten, but because she had become one. A quiet light above Aethyrie's sky, eternal and unwavering, illuminating the path ahead.",
+          ContentEN = "\"Who is that Ferrywoman?\"\n\"She's Lady Aletheia's mother.\"\n\"What...? But she looks so young.\"\n\"That's because she bears the magic of longevity. She never ages.\"\n\"Wait — that's real? That's... incredible. Must be nice.\"\n\"But... to outlive your own child — to say goodbye with your own hands... that must hurt more than anything.\"\nThough the whispers were hushed, they still reached Nifle's ears, carried on the evening breeze. Yet the words stirred nothing in her. She had long grown used to the awe, the envy, the wonder — and the quiet sighs that followed wherever she walked.\n\"It's time,\" said the young attendant beside her. \"The rite is ready.\"\nNifle gave a slight nod. She lifted her lantern and stepped towards the river, where the water glowed faintly beneath the night sky. Moored at the bank was a slender boat — and resting upon it, a delicately carved coffin.\nThe woman within lay surrounded by blossoms, her eyes peacefully closed — as if merely dozing in a sunlit chair. The years had carved themselves into her: fine lines by her eyes and lips, skin dulled and weathered, strands of grey falling soft beside her temples. To any other, she was a woman well into her twilight years. But to Nifle, she was still a child. Through that aged face, she could still see all her past selves — the bright-eyed little girl with laughter full of wonder, the quiet student lost in the lamp-lit hush of the library, the slender figure crossing battle lines for her nation's survival, the silver-haired scholar who stood at the lectern, her eyes softened by time, yet shining still.\nNifle had expected deep grief — the kind she had once felt when guiding old friends to the other shore. But in this moment, what rose within her was something quieter: a strange sense of calm and release.\nOne by one, she lit the candles arranged around the coffin. Then, from the folds of her robe, she drew a small stone — its surface ridged and grooved with cracks — and placed it gently upon the woman's chest.\nIt was a fragment of a meteor — and the fulfilment of a promise long kept. That day, Nifle had planned a rare visit to the market — and asked if her child wanted anything. The girl — truly just a little one then — had lit up, eyes sparkling as she clutched at Nifle's sleeve. \"A talking star,\" she'd said.\nOf course, no market could offer up a star — let alone one that spoke. The child had always been full of whimsical, impossible ideas. But Nifle had promised she would find one, someday.\nChildren forget the promises made to them when they are very young. But Nifle never forgot the one she made to her daughter.\n\"I've brought you your talking star, Aletha,\" she whispered.\nNifle had once read Aletheia's journals. As a child, Aletheia held fast to her own odd beliefs. She didn't believe the priests of Elysium, who said the stars were gemstones set into a vast glass dome — arching over the world, and known to all as \"the sky.\" Nor did she accept the tales of the Charon, who claimed the stars were golden leaves hanging from the limbs of a great world tree. She believed that each distant star was its own world — like Atlasia itself. And perhaps, to those stars, Atlasia was also just a \"star\" — a single speck of light, twinkling back across the void.\nIf that were true, then this meteor shard — lined with ancient veins — might still whisper of a distant world, across time and space.\nNifle looked down, one last time, at the elderly woman who had once been her child. Then, gently, she closed the coffin. With steady hands, she pushed the boat into the river, letting the current carry it away. She rose — and with the same grace etched into every motion, began the Dance of Departure.\nBehind her, soft sobbing stirred the air. In the edge of her gaze, the crowd stood still upon the riverbank —  their eyes fixed on the drifting boat in silent reverence. Candlelight shimmered in their eyes, a scattering of stars upon the earth.\nAnd in that moment, Nifle understood: The child had stopped asking for stars — not because she had forgotten, but because she had become one. A quiet light above Aethyrie's sky, eternal and unwavering, illuminating the path ahead.",
           TextMapId = "UI_CHAR_DATA_TEXT_15020402"
         },
         UI_CHAR_DATA_TEXT_15020403 = {
@@ -63201,7 +65479,7 @@ And when your thoughts are troubled, she simply offers a quiet smile, watching y
           TextMapId = "UI_CHAR_DATA_TEXT_15030103"
         },
         UI_CHAR_DATA_TEXT_15030201 = {
-          ContentEN = "At the far eastern reaches of Atlasia lies the land of Huaxu, a region shaped by its own customs and governed by a legal doctrine known as the Nine Chapters of Dafeng. Its judicial order operates with uncompromising precision: violators of the code are pursued by enforcer-beasts known as Bi'an, or by the Magistrates of Yingtian, an elite corps of enforcers. Unarmed civilians stand no chance against them, and even trained martial adepts rarely survive an encounter. As a result, open violence within Huaxu is exceedingly rare.\n \nEven so, a small number of individuals continue to reject the Nine Chapters of Dafeng entirely. Some refuse imprisonment; others are driven by inborn defiance; and a few simply cannot accept a life bound to imposed order. They live without fixed settlement, travelling from region to region with no allegiance but their own. They are known collectively as Drifters — a dwindling presence in a system that shows little tolerance for those who exist beyond its design.\n \nKezhou is one of them.",
+          ContentEN = "At the far eastern reaches of Atlasia lies the land of Huaxu, a region shaped by its own customs and governed by a legal doctrine known as the Nine Chapters of Dafeng. Its judicial order operates with uncompromising precision: violators of the code are pursued by enforcer-beasts known as Bi'an, or by the Magistrates of Yingtian, an elite corps of enforcers. Unarmed civilians stand no chance against them, and even trained martial adepts rarely survive an encounter. As a result, open violence within Huaxu is exceedingly rare.\n \nEven so, a small number of individuals continue to reject the Nine Chapters of Dafeng entirely. Some refuse imprisonment; others are driven by inborn defiance; and a few simply cannot accept a life bound to imposed order. They live without fixed settlement, travelling from region to region with no allegiance but their own. They are known collectively as Drifters — a dwindling presence in a system that shows little tolerance for those who exist beyond its design.\n\nKezhou is one of them.",
           TextMapId = "UI_CHAR_DATA_TEXT_15030201"
         },
         UI_CHAR_DATA_TEXT_15030202 = {
@@ -63215,15 +65493,7 @@ And when your thoughts are troubled, she simply offers a quiet smile, watching y
         UI_CHAR_DATA_TEXT_15030204 = {
           ContentEN = "Kezhou has an extraordinary gift for martial arts: every kind of weapon answers his hand as naturally as if it were part of his own arm. Because of this, rumour has it that even a blade of grass or a twig turns lethal in his hand. Kezhou himself did try some rather unusual training methods, such as catching flying insects with his chopsticks at mealtimes to sharpen his fingers and his aim. He made a certain amount of progress, but his shifu and fellow disciples soon put a stop to it.\nHis shifu argued that chopsticks were only good for throwing as hidden weapons and were nowhere near as practical as a sword. His shixiong Yuming maintained that doing anything unrelated while eating was bad manners, and that mealtimes were for meals and nothing else. And his shimei Buxia absolutely forbade him from using chopsticks that had just caught a fly to touch the dishes again.\nA pity — had he succeeded, the martial world might have gained a legendary new figure: the Chopstick Outlaw.",
           TextMapId = "UI_CHAR_DATA_TEXT_15030204"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CHAR_DATA_TEXT_15030301",
-    MaxKey = "UI_CHAR_DATA_TEXT_41020301",
-    Loader = function()
-      return {
+        },
         UI_CHAR_DATA_TEXT_15030301 = {
           ContentEN = "Kezhou is adept with all manner of weapons, yet the one he treasures most is a light wooden sword. Its blade is wrapped in silver foil, so to anyone unaware of the truth it looks like a cold, gleaming iron sword — every inch the real thing. In truth, it is only a practice blade, the kind given to beginners.",
           TextMapId = "UI_CHAR_DATA_TEXT_15030301"
@@ -63237,7 +65507,7 @@ And when your thoughts are troubled, she simply offers a quiet smile, watching y
           TextMapId = "UI_CHAR_DATA_TEXT_15030303"
         },
         UI_CHAR_DATA_TEXT_15030304 = {
-          ContentEN = "Inwardly, Kezhou was more than a little envious of his shixiong Yuming — of the way he could throw himself into anything without a single stray thought, as steady and precise as the spearwork he excelled at, never wasting words and never letting any useless emotion get in the way.\nKezhou, on the other hand, was nothing like that. He was forever trying out all manner of martial arts — you could say he was good at most things he picked up, but in spearplay alone he could never surpass Yuming.\nSo he went to his shifu and asked how he might learn to wield the spear with the same undivided focus as Yuming.\nYan Shanting's answer was deceptively simple: \"You are who you are; he is who he is. The two of you were born with opposite temperaments. Between you, one is like a high mountain — meticulous, but not quick to improvise. The other is like flowing water — quick-witted and flexible, but not quite steady. So long as you both stay true to your own nature, each of you completes what the other lacks.\"\n \nKezhou shot back at once, \"What if the two of us don't get along?\"\nYan Shanting replied with a question of his own, a knowing smile on his face. \"Have you ever seen Yuming smile?\"\nKezhou shook his head. He had not.\n \nYan Shanting told him that the last time Yuming had truly smiled was on that winter's day when Kezhou bowed to become Yan Shanting's disciple.\n\"So no, I'm not the least bit worried about the two of you turning on each other,\" he said. \"I know my boys — I never misjudge them.\"\nMany years later, Kezhou had forgotten most of his shifu's teachings. But those words he never forgot.",
+          ContentEN = "Inwardly, Kezhou was more than a little envious of his shixiong Yuming — of the way he could throw himself into anything without a single stray thought, as steady and precise as the spearwork he excelled at, never wasting words and never letting any useless emotion get in the way.\nKezhou, on the other hand, was nothing like that. He was forever trying out all manner of martial arts — you could say he was good at most things he picked up, but in spearplay alone he could never surpass Yuming.\n So he went to his shifu and asked how he might learn to wield the spear with the same undivided focus as Yuming.\nYan Shanting's answer was deceptively simple: \"You are who you are; he is who he is. The two of you were born with opposite temperaments. Between you, one is like a high mountain — meticulous, but not quick to improvise. The other is like flowing water — quick-witted and flexible, but not quite steady. So long as you both stay true to your own nature, each of you completes what the other lacks.\"\n \nKezhou shot back at once, \"What if the two of us don't get along?\"\nYan Shanting replied with a question of his own, a knowing smile on his face. \"Have you ever seen Yuming smile?\"\nKezhou shook his head. He had not.\n \nYan Shanting told him that the last time Yuming had truly smiled was on that winter's day when Kezhou bowed to become Yan Shanting's disciple.\n\"So no, I'm not the least bit worried about the two of you turning on each other,\" he said. \"I know my boys — I never misjudge them.\"\nMany years later, Kezhou had forgotten most of his shifu's teachings. But those words he never forgot.",
           TextMapId = "UI_CHAR_DATA_TEXT_15030304"
         },
         UI_CHAR_DATA_TEXT_15030401 = {
@@ -63249,12 +65519,158 @@ And when your thoughts are troubled, she simply offers a quiet smile, watching y
           TextMapId = "UI_CHAR_DATA_TEXT_15030402"
         },
         UI_CHAR_DATA_TEXT_15030403 = {
-          ContentEN = "Kezhou didn't get on with his shifu at first — for reasons that hardly need saying. Young blood is like leaping flame or fresh bamboo shoots, always straining upwards, itching to break past the treetops and stab a hole in the sky. When that kind of momentum crashed headlong into Yan Shanting, Kezhou bristled in every way imaginable.\nAfter striking that wager with Yan Shanting that whoever lost would have to call the other shifu, Kezhou followed him into the mountains. There, he announced — to no one but himself — that this scrawny old man was his fated enemy, the one he simply had to beat in this lifetime. He even swore that one day he'd lop off the old man's beard and tie it to his sword-hilt as a tassel.\n \nKezhou launched into his great scheme before Yuming, trying his best to drag him into a joint attack on Yan Shanting. Yuming merely smiled. Kezhou took that smile as praise for his grand plan. Yuming, for his part, only thought him noisy and ridiculous — like one of the hill monkeys.\n \nFrom that spring onward, the sparrows outside Yan Shanting's thatched cottage were no longer the only ones making noise — there was the constant clang of metal as well. Those who didn't know better assumed the \"Master of Thousand Peaks\" must be hammering out swords and running a little forge on the side. A few even fancied that if his swordsmanship was that extraordinary, any blade he forged must be a treasure in its own right. Yet when they pushed through the bamboo grove and reached the cottage, all they ever saw were two figures: a young man, twin blades flashing as he circled a gaunt old figure who scarcely moved. On such a bright spring day, that little \"duel\" might have suggested a butterfly dancing around a flower... but the young man's strikes were far too fierce and deadly — enough to make one think of wasps instead. As for the gaunt figure in the centre, he was no flower either, but more like a weathered, gnarled old tree.\nIt goes without saying that the two figures — one all motion, the other barely stirring — were Kezhou and Yan Shanting. At times, Kezhou would close in, his twin blades whirling like a sudden gale, sharp enough that even drifting petals were cut clean into three. At other times he'd spring back, then hurl himself forward like an arrow loosed from a bow — as if trying to drive all the strength in his body into one decisive blow. Yan Shanting, however, never strayed beyond a patch of ground barely three feet across, merely turning and shifting his weight. When Kezhou's blades came in a flurry, he knew at a glance they carried more speed than power, and simply brushed them aside with his sword. And when Kezhou gathered himself for a full-force strike, Yan Shanting would read the path of the blow, and the one after it, and step neatly out of harm's way. Each day, there were always four or five moments when Kezhou felt he was no more than a hair's breadth from bringing Yan Shanting down. Yet that decisive strike was always just out of reach — close enough to glimpse, but never close enough to land. At dusk, Kezhou would stretch out on a smooth stone slab outside the cottage fence and sleep under the open sky, only to rise the next morning and begin the challenge anew.\nAs for why Kezhou set aside his sword and took up twin blades instead, the reason was simple. He might look a little simple-minded at times, but he was no fool. After crossing swords with Yan Shanting only a handful of times, he realised the old man was a master who kept his true edge well hidden. In pure swordsmanship, he was no match at all. His only chance was to switch to another weapon and try to gain the upper hand. His only worry was that if he struck too hard and actually felled the old man, that cold-faced disciple of his would come after him looking for payback.\n \nIn truth, he needn't have worried about that at all. By the time summer came, he was still no closer to laying a blade on Yan Shanting, even though he had grown far more skilled with the twin blades. Somehow, he was always just that little bit short.\nLying on the stone slab, he would replay every move of the day's bouts in his mind — only to have his thoughts scattered again and again by mosquitoes whining in his ears. In the end, he simply got up and set his blades moving, cutting the insects down one by one. The more mosquitoes he cut down, the more he sighed. If he was quick enough to slice a mosquito out of the air, then why couldn't he so much as graze that old man? The night was thick and inky, and in that darkness Kezhou seemed half mad, as if he bore some great grudge against the summer night itself.\nAt last, when his arms were sore and his strength spent, he let himself fall back onto the ground and stared up at the stars. The chirping of insects in the grass carried him back to a night from his childhood — a night when he and his father had sat together looking at the moon.\n\"Dad, which is farther away — that Hyperborea we read about, or the moon?\"\n\"The moon, of course. We've heard of people coming from Hyperborea, but never from the moon.\"\nKezhou tilted his head and protested, \"But when I look up I can see the moon — and I can't see Hyperborea at all. So it has to be farther away than the moon, right?\"\nHis father burst out laughing, and told him that the moon really was farther. It was just so far away that, wherever you went, it always looked the same distance from you.\nKezhou had been utterly taken with his father's words, staring up at the moon without blinking and wondering whether, one day, he might meet someone from up there and ask what those strange patterns on its surface really meant. As he stared and stared, the patterns on the moon seemed to shift, slowly turning into Yan Shanting's old face...\n \n\"Blimey! That nearly scared me to death...\" Kezhou gasped as he jolted awake, only then realising it had all been a dream. The sun was already up. Smoke curled from the thatched cottage in the distance, and the old man whose face had just appeared in his dream was standing there, watching him from afar with that same subtle smile. The sight made him itch to grab his twin blades and give the old man a couple more hacks.\nBut he knew perfectly well that even if he struck now, his blades would get no closer than that same inch from Yan Shanting's nose. That distance had nothing to do with him; it was entirely in the hands of that sly old fox. Just as, no matter how many mountains and rivers he crossed, the distance between him and the moon would never shrink by even a fraction.\nThe thought startled him for a moment — and then he burst out laughing. Until then, he had believed he could already glimpse the end of the path, that anyone whose swordplay surpassed his was simply faster, or just stronger in brute force. Now he realised that the peak he'd been aiming for was only one hill among many — and that there were always higher peaks beyond it.\n \nAt last, he made up his mind. He walked up to Yan Shanting and, in as respectful a tone as he could manage, said, \"Shifu, please accept your disciple's bow.\"\nYan Shanting was taken aback for a moment, then broke into a smile.\nRegrettably, it was not the warm, kindly smile of an old master welcoming a disciple he approved of, but the wicked grin of an incorrigible old rogue.\n\"Too late. I don't feel like taking you as a disciple now — not unless you master every weapon under heaven first.\"\nWith that, Yan Shanting picked up the seven-foot spear Yuming usually wielded and tossed it to Kezhou.\nKezhou froze for a heartbeat, then his temper flared. He caught the spear in one smooth motion and roared, \"Take this, you old fox!\" Then he leapt forward, thrusting straight at Yan Shanting's face.\nYan Shanting's smile didn't even waver. A mere inch from his face, he caught the oncoming spearhead between two fingers.\nTo any outsider, the thatched cottage was as lively and noisy that day as ever. ",
+          ContentEN = "Kezhou didn't get on with his shifu at first — for reasons that hardly need saying. Young blood is like leaping flame or fresh bamboo shoots, always straining upwards, itching to break past the treetops and stab a hole in the sky. When that kind of momentum crashed headlong into Yan Shanting, Kezhou bristled in every way imaginable.\nAfter striking that wager with Yan Shanting that whoever lost would have to call the other shifu, Kezhou followed him into the mountains. There, he announced — to no one but himself — that this scrawny old man was his fated enemy, the one he simply had to beat in this lifetime. He even swore that one day he'd lop off the old man's beard and tie it to his sword-hilt as a tassel.\n \nKezhou launched into his great scheme before Yuming, trying his best to drag him into a joint attack on Yan Shanting. Yuming merely smiled. Kezhou took that smile as praise for his grand plan. Yuming, for his part, only thought him noisy and ridiculous — like one of the hill monkeys.\n \nFrom that spring onward, the sparrows outside Yan Shanting's thatched cottage were no longer the only ones making noise — there was the constant clang of metal as well. Those who didn't know better assumed the \"Master of Thousand Peaks\" must be hammering out swords and running a little forge on the side. A few even fancied that if his swordsmanship was that extraordinary, any blade he forged must be a treasure in its own right. Yet when they pushed through the bamboo grove and reached the cottage, all they ever saw were two figures: a young man, twin blades flashing as he circled a gaunt old figure who scarcely moved. On such a bright spring day, that little \"duel\" might have suggested a butterfly dancing around a flower... but the young man's strikes were far too fierce and deadly — enough to make one think of wasps instead. As for the gaunt figure in the centre, he was no flower either, but more like a weathered, gnarled old tree.\nIt goes without saying that the two figures — one all motion, the other barely stirring — were Kezhou and Yan Shanting. At times, Kezhou would close in, his twin blades whirling like a sudden gale, sharp enough that even drifting petals were cut clean into three. At other times he'd spring back, then hurl himself forward like an arrow loosed from a bow — as if trying to drive all the strength in his body into one decisive blow. Yan Shanting, however, never strayed beyond a patch of ground barely three feet across, merely turning and shifting his weight. When Kezhou's blades came in a flurry, he knew at a glance they carried more speed than power, and simply brushed them aside with his sword. And when Kezhou gathered himself for a full-force strike, Yan Shanting would read the path of the blow, and the one after it, and step neatly out of harm's way. Each day, there were always four or five moments when Kezhou felt he was no more than a hair's breadth from bringing Yan Shanting down. Yet that decisive strike was always just out of reach — close enough to glimpse, but never close enough to land. At dusk, Kezhou would stretch out on a smooth stone slab outside the cottage fence and sleep under the open sky, only to rise the next morning and begin the challenge anew.\nAs for why Kezhou set aside his sword and took up twin blades instead, the reason was simple. He might look a little simple-minded at times, but he was no fool. After crossing swords with Yan Shanting only a handful of times, he realised the old man was a master who kept his true edge well hidden. In pure swordsmanship, he was no match at all. His only chance was to switch to another weapon and try to gain the upper hand. His only worry was that if he struck too hard and actually felled the old man, that cold-faced disciple of his would come after him looking for payback.\n \nIn truth, he needn't have worried about that at all. By the time summer came, he was still no closer to laying a blade on Yan Shanting, even though he had grown far more skilled with the twin blades. Somehow, he was always just that little bit short.\nLying on the stone slab, he would replay every move of the day's bouts in his mind — only to have his thoughts scattered again and again by mosquitoes whining in his ears. In the end, he simply got up and set his blades moving, cutting the insects down one by one. The more mosquitoes he cut down, the more he sighed. If he was quick enough to slice a mosquito out of the air, then why couldn't he so much as graze that old man? The night was thick and inky, and in that darkness Kezhou seemed half mad, as if he bore some great grudge against the summer night itself.\nAt last, when his arms were sore and his strength spent, he let himself fall back onto the ground and stared up at the stars. The chirping of insects in the grass carried him back to a night from his childhood — a night when he and his father had sat together looking at the moon.\n\"Dad, which is farther away — that Hyperborea we read about, or the moon?\"\n\"The moon, of course. We've heard of people coming from Hyperborea, but never from the moon.\"\nKezhou tilted his head and protested, \"But when I look up I can see the moon — and I can't see Hyperborea at all. So it has to be farther away than the moon, right?\"\nHis father burst out laughing, and told him that the moon really was farther. It was just so far away that, wherever you went, it always looked the same distance from you.\nKezhou had been utterly taken with his father's words, staring up at the moon without blinking and wondering whether, one day, he might meet someone from up there and ask what those strange patterns on its surface really meant. As he stared and stared, the patterns on the moon seemed to shift, slowly turning into Yan Shanting's old face...\n \n\"Blimey! That nearly scared me to death...\" Kezhou gasped as he jolted awake, only then realising it had all been a dream. The sun was already up. Smoke curled from the thatched cottage in the distance, and the old man whose face had just appeared in his dream was standing there, watching him from afar with that same subtle smile. The sight made him itch to grab his twin blades and give the old man a couple more hacks.\nBut he knew perfectly well that even if he struck now, his blades would get no closer than that same inch from Yan Shanting's nose. That distance had nothing to do with him; it was entirely in the hands of that sly old fox. Just as, no matter how many mountains and rivers he crossed, the distance between him and the moon would never shrink by even a fraction.\nThe thought startled him for a moment — and then he burst out laughing. Until then, he had believed he could already glimpse the end of the path, that anyone whose swordplay surpassed his was simply faster, or just stronger in brute force. Now he realised that the peak he'd been aiming for was only one hill among many — and that there were always higher peaks beyond it.\n \nAt last, he made up his mind. He walked up to Yan Shanting and, in as respectful a tone as he could manage, said, \"Shifu, please accept your disciple's bow.\"\nYan Shanting was taken aback for a moment, then broke into a smile.\nRegrettably, it was not the warm, kindly smile of an old master welcoming a disciple he approved of, but the wicked grin of an incorrigible old rogue.\n\"Too late. I don't feel like taking you as a disciple now — not unless you master every weapon under heaven first.\"\nWith that, Yan Shanting picked up the seven-foot spear Yuming usually wielded and tossed it to Kezhou.\nKezhou froze for a heartbeat, then his temper flared. He caught the spear in one smooth motion and roared, \"Take this, you old fox!\" Then he leapt forward, thrusting straight at Yan Shanting's face.\nYan Shanting's smile didn't even waver. A mere inch from his face, he caught the oncoming spearhead between two fingers.\nTo any outsider, the thatched cottage was as lively and noisy that day as ever.",
           TextMapId = "UI_CHAR_DATA_TEXT_15030403"
         },
         UI_CHAR_DATA_TEXT_15030404 = {
-          ContentEN = "Spring had long since passed, yet the contest between Kezhou and Yan Shanting still had no clear victor — neither in skill nor in sheer stubbornness. At first, when Yan Shanting offered to take him as a disciple, Kezhou refused outright. Later, after their bouts left him in genuine awe of Yan Shanting's skill and he finally wanted to train under the old man, Yan Shanting — half out of mischief and half out of sheer obstinacy — turned him down right to his face.\nAnd so the two of them kept trading blows and sharp words. By the time winter arrived and the snow lay thick on the ground, Kezhou had mastered an entire armoury of weapons. And when he struck now, the edge of his blade came no closer than half an inch from Yan Shanting, instead of a full inch as before.\nHe reckoned that in another half-year or so, he would finally be able to land a proper blow on Yan Shanting. With that thought in mind, he made his way back to the space outside the thatched cottage.\nAfter the burning heat of summer had faded, the old stone slab he used as a bed at night had grown steadily colder. So, in late autumn when the wild geese were flying south, Kezhou spread a layer of reed down over the stone, then traded for some oilcloth and propped up a makeshift shelter with bamboo poles. It could not keep out the wind, but it kept off the rain well enough. By now, it was deep winter. Snow had piled on the oilcloth, bending the bamboo almost double. Seeing this, Kezhou hastened to brush the snow off. But he pushed a little too hard, and the whole shelter collapsed, white drifts tumbling down over oilcloth and bamboo in a messy heap.\n \nWind and snow swept past him, carrying the slow, distant tolling of a bell. All at once, Kezhou realised that it was New Year's Eve.\nHe wasn't sure why, but he suddenly found himself craving mutton soup — the good kind, with tiny beads of fat floating on top like scattered snow, dotted here and there with chopped spring onion. Kezhou shook his head, dismissing the thought. He had been away from home for years and had never paid such things much mind before. It was probably just the strange, biting cold that made him nostalgic.\nHe let out a sigh, his breath misting in the air. He bent to prop the shelter back up — only to feel a hand come to rest on his shoulder. When he turned, he found Yan Shanting's disciple, Yuming, standing there.\nHis tone was as cool as ever, but the words themselves were an invitation: \"Shifu's cooked a pot of yuanxiao. He told me to call you in to eat with us.\"\nKezhou froze for a moment, then turned him down just as coolly. \"I appreciate the invitation, but I'll pass. I'm only an outsider, after all.\"\nYuming's expression did not shift in the slightest. It was as if he had expected exactly that answer. He said nothing more and went straight back to the cottage.\n \nKezhou, for his part, acted as though nothing had happened and went back to fixing his humble shelter. But as soon as he bent down, he caught the faintest whiff of wine.\nHe turned and found a white porcelain wine pot, a thread of steam still curling from its spout, and beside it a parcel of food wrapped in a lotus leaf, giving off a wisp of warmth.\n\"Scraps out of pity, is it?\" he thought, indignant, turning back to fix his little shelter.\nEven fixed up, the shelter was still crude. When Kezhou finally had it standing again, he went inside and sat down, with the wine and food Yuming had brought laid out before him. He scooped up a handful of snow and held it in his mouth, thinking to stave off his hunger, but it only left him feeling colder.\nHe sighed again, his breath so cold it didn't even mist in the air. At last he couldn't hold back any longer — he reached for the lotus-leaf parcel and tore it open. Inside was a whole braised chicken, simmered until the meat fell from the bone at the lightest touch. Kezhou stripped it clean, not leaving so much as a scrap.\nAs for the wine, though it had cooled a fair bit, it sent a small, steady warmth through Kezhou's chest.\n \nThe next day, the snow ceased and the sky cleared. Kezhou once again asked Yan Shanting to take him as a disciple — and this time, Yan Shanting accepted with a smile.",
+          ContentEN = "Spring had long since passed, yet the contest between Kezhou and Yan Shanting still had no clear victor — neither in skill nor in sheer stubbornness. At first, when Yan Shanting offered to take him as a disciple, Kezhou refused outright. Later, after their bouts left him in genuine awe of Yan Shanting's skill and he finally wanted to train under the old man, Yan Shanting — half out of mischief and half out of sheer obstinacy — turned him down right to his face.\nAnd so the two of them kept trading blows and sharp words. By the time winter arrived and the snow lay thick on the ground, Kezhou had mastered an entire armoury of weapons. And when he struck now, the edge of his blade came no closer than half an inch from Yan Shanting, instead of a full inch as before.\nHe reckoned that in another half-year or so, he would finally be able to land a proper blow on Yan Shanting. With that thought in mind, he made his way back to the space outside the thatched cottage.\nAfter the burning heat of summer had faded, the old stone slab he used as a bed at night had grown steadily colder. So, in late autumn when the wild geese were flying south, Kezhou spread a layer of reed down over the stone, then traded for some oilcloth and propped up a makeshift shelter with bamboo poles. It could not keep out the wind, but it kept off the rain well enough. By now, it was deep winter. Snow had piled on the oilcloth, bending the bamboo almost double. Seeing this, Kezhou hastened to brush the snow off. But he pushed a little too hard, and the whole shelter collapsed, white drifts tumbling down over oilcloth and bamboo in a messy heap.\n \nWind and snow swept past him, carrying the slow, distant tolling of a bell. All at once, Kezhou realised that it was New Year's Eve.\nHe wasn't sure why, but he suddenly found himself craving mutton soup — the good kind, with tiny beads of fat floating on top like scattered snow, dotted here and there with chopped spring onion. Kezhou shook his head, dismissing the thought. He had been away from home for years and had never paid such things much mind before. It was probably just the strange, biting cold that made him nostalgic.\nHe let out a sigh, his breath misting in the air. He bent to prop the shelter back up — only to feel a hand come to rest on his shoulder. When he turned, he found Yan Shanting's disciple, Yuming, standing there.\nHis tone was as cool as ever, but the words themselves were an invitation: \"Shifu's cooked a pot of yuanxiao. He told me to call you in to eat with us.\"\n Kezhou froze for a moment, then turned him down just as coolly. \"I appreciate the invitation, but I'll pass. I'm only an outsider, after all.\"\nYuming's expression did not shift in the slightest. It was as if he had expected exactly that answer. He said nothing more and went straight back to the cottage.\n \nKezhou, for his part, acted as though nothing had happened and went back to fixing his humble shelter. But as soon as he bent down, he caught the faintest whiff of wine.\nHe turned and found a white porcelain wine pot, a thread of steam still curling from its spout, and beside it a parcel of food wrapped in a lotus leaf, giving off a wisp of warmth.\n\"Scraps out of pity, is it?\" he thought, indignant, turning back to fix his little shelter.\nEven fixed up, the shelter was still crude. When Kezhou finally had it standing again, he went inside and sat down, with the wine and food Yuming had brought laid out before him. He scooped up a handful of snow and held it in his mouth, thinking to stave off his hunger, but it only left him feeling colder.\nHe sighed again, his breath so cold it didn't even mist in the air. At last he couldn't hold back any longer — he reached for the lotus-leaf parcel and tore it open. Inside was a whole braised chicken, simmered until the meat fell from the bone at the lightest touch. Kezhou stripped it clean, not leaving so much as a scrap.\nAs for the wine, though it had cooled a fair bit, it sent a small, steady warmth through Kezhou's chest.\n \nThe next day, the snow ceased and the sky cleared. Kezhou once again asked Yan Shanting to take him as a disciple — and this time, Yan Shanting accepted with a smile.",
           TextMapId = "UI_CHAR_DATA_TEXT_15030404"
+        },
+        UI_CHAR_DATA_TEXT_15040101 = {
+          ContentEN = "A Drifter once let you in on a little secret: if you keep showering Su Yi with praise, she goes through three distinct stages.\n\nStage One: her chin lifts proudly, and she nods. \"Mm-hm~ Exactly.\"\n\nStage Two: the tips of her ears begin to redden, and her voice catches. \"Well... I'm not that amazing...\"\n\nStage Three: she looks away, her voice rising a notch. \"All right, that's enough! Stop it already!\"\n\n\"That's when you ask for what you want,\" the Drifter says, raising one finger and wagging it smugly. \"So long as it's nothing outrageous, she will usually say yes.\"\n\nSo yes — Su Yi's most obvious weakness is how easily praise flusters her.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15040101"
+        },
+        UI_CHAR_DATA_TEXT_15040102 = {
+          ContentEN = [[
+Su Yi carries a folding toolbox of her own design wherever she goes. Small enough to fit in the palm of her hand, it is packed with the tools and spare parts she needs for repairs. It lets her tend to the facilities around Outer Peaks whenever needed, and start tinkering on the spot whenever inspiration strikes.
+
+Small as it is, it is still surprisingly heavy. To solve that, Su Yi fitted it with a levitation module, redesigned the casing, and even gave it a weapons system... The result was the Yinxiao Patrol Nexus.]],
+          TextMapId = "UI_CHAR_DATA_TEXT_15040102"
+        },
+        UI_CHAR_DATA_TEXT_15040103 = {
+          ContentEN = [[
+The mech-kite is a classic Jishu design, passed down through the sect for generations. For any Jishu apprentice drawn to the dream of flight, studying the mech-kite is a rite of passage. It is where they first begin to grapple with the question of how mechanical wings might defy gravity and take to the open sky.
+
+When she was younger, Su Yi once modified the mech-kite so that it could travel over long distances and carry messages. It was the first gift she had ever given her aunt...
+
+You notice that Su Yi, usually bright-eyed and full of chatter whenever Jishu comes up, has gone unusually quiet.]],
+          TextMapId = "UI_CHAR_DATA_TEXT_15040103"
+        },
+        UI_CHAR_DATA_TEXT_15040104 = {
+          ContentEN = [[
+You walk past the site of Miemeng's crash. Now the rice seedlings stand in neat green rows, and the ridges between the fields lie in perfect order. Only the great scars left in the earth remain, marking what happened here.
+
+The River of Resentment still rushes on, carrying away the wreckage of Miemeng and the last traces of a brilliant artificer lost too soon.]],
+          TextMapId = "UI_CHAR_DATA_TEXT_15040104"
+        },
+        UI_CHAR_DATA_TEXT_15040105 = {
+          ContentEN = [[
+After the battle in Haojing, the threat hanging over the Drifters was finally lifted. The craftsmen of the Jishu Sect were no longer held back, and could finally devote themselves fully to their craft.
+
+The Ministry of Works wanted to win over the branch of the Jishu Sect that had broken away to Outer Peaks. Notice after notice was issued, each offering a larger reward than the last, yet still few answered the call. Most were unwilling to leave. They had grown used to this place, and deep down already thought of it as home.]],
+          TextMapId = "UI_CHAR_DATA_TEXT_15040105"
+        },
+        UI_CHAR_DATA_TEXT_15040201 = {
+          ContentEN = "Outer Peaks is the Drifters' hidden stronghold, said to lie deep among the mist-shrouded mountains. Over the years, people have spun all manner of outlandish tales about it.\n\nSome say the Drifters who dwell there have stepped beyond not only the strictures of the Nine Chapters of Dafeng, but even the Five Paths of Rebirth. According to these stories, they live on wind and dew, feeding on the spiritual essence of the universe instead of grain. The most formidable among them, it is said, can soar to the heavens and delve into the earth, even trading blows as equals with the Magistrates of Yingtian.\n\nOthers say the Drifters spend their days in pursuit of the martial path. Each keeps to a height of their own, sitting in silent meditation, breath stilled and mind focused. Then, at times, a sharp light flashes in their eyes; they spring up in an instant, draw their swords, and challenge whoever sits highest of all. Their clashes send rock crashing from the cliffs into the valley below, where it gathers in mounds like small hills.\n\nIf those storytellers ever learnt that the \"great heroes\" of their tales still had to worry about their next meal like anyone else, they would probably just shake their heads and walk away. And if anyone were to say that everything at Outer Peaks — food, clothing, lodging, and even the purse strings — was managed by a teenage girl, they would likely bristle and argue with them on the spot.\n\nUnless they saw it with their own eyes, few would believe that these supposedly free-spirited, battle-hardened Drifters would willingly answer to their quartermaster, Su Yi — a black-haired girl in viridian with twin ponytails.\n\n\"Absolutely not!\"\n\nAt Outer Peaks, the morning often begins with a full-throated shout. Any Drifter trying to sneak some good wine or cured meat out of the storeroom would usually end up with both hands raised and a sheepish grin, currying favour and begging mercy from their \"young matriarch\". Su Yi stands in the storeroom doorway, hands on hips and cheeks faintly flushed with indignation, yet somehow radiating an authority no one would dare challenge.\n\nThe Drifters' wholehearted respect for Su Yi stems not only from her standing in the lineage, but also from the meticulous care with which she sees to every matter, keeping Outer Peaks in impeccable order. The Drifters' movements often depend on intelligence, and no one has a firmer grasp of every stir within Haojing than Su Yi. The mech-kites she builds slip silently through the skies above the city, serving as her eyes and ears and carrying back every scrap of intelligence, however small. With her extraordinary memory, she pieces together every clue and fragment of information. Since Su Yi came to Outer Peaks, casualties among the Drifters have fallen dramatically.\n\nThis, she firmly believes, is how she can protect Outer Peaks, the place her aunt Su Muzhe once loved and called home.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15040201"
+        },
+        UI_CHAR_DATA_TEXT_15040202 = {
+          ContentEN = "Outer Peaks is dotted with Su Yi's work. They range from the size of the Kuiniu Type Ⅰ used for farming to something as small as a timekeeping bird, and no two are ever quite the same. Her devices all bear a tiny Yi-Bird stamp in the lower right corner, so people can recognise her inventions at a glance.\n\nBut practical devices are not all she makes. Su Yi has also built a number of small decorative mechapuppets — the sort she dismisses as \"not much use\" — simply to brighten Outer Peaks. Add a tiny recording module to those little black bead eyes, however, and they can also serve as sentinels for Outer Peaks, sending information back to the hub whenever needed — a neat way to make one design serve several purposes. Most of these creations are finished with lifelike fur and feathers, each one painstakingly shaped by Su Yi's deft hands. Scattered across the hills, whether in flight or at rest, they lend Outer Peaks an even greater air of freedom and ease.\n\n\"I love those Jishu birds that Sister Yi made. They're so beautiful. Sometimes I find myself wishing I could fly as well.\"\n\"Then why did you shoot them down with a slingshot?\"\n\"I—I didn't mean to... I already said I was sorry. I thought it was a real bird...\"\n\"You can't go shooting real birds with a slingshot either!\"",
+          TextMapId = "UI_CHAR_DATA_TEXT_15040202"
+        },
+        UI_CHAR_DATA_TEXT_15040203 = {
+          ContentEN = "Su Jianyin was a colleague of Su Muzhe's. She was not one of the Heavenly Artisans; they merely happened to share a surname, and had exchanged a few words because of it.\n\nTo Su Jianyin, Su Muzhe was an imposing figure. Timid by nature, Su Jianyin had occasionally found herself in need of Su Muzhe's help.\n\nThe Ministry of Works might have been a place where down-to-earth craftsmen gathered, but it was still, in the end, part of officialdom. People with agreeable temperaments and a knack for dealing with others found it far easier to thrive there. For someone like Su Jianyin, who was poor at speaking up for herself, even genuine ability could easily go unnoticed. And she was no prodigy to begin with, having come this far through hard work alone.\n\nNear the end of one workday, a few colleagues were laughing and joking about going to the Academy of Reflections to watch a debate. They asked her to finish the rest of the paperwork for them. By then, she was used to picking up other people's work. It was then that she first heard Su Muzhe's voice: calm, pleasant, and quietly assertive.\n\n\"You lot, do your own work.\"\n\nSu Muzhe had got her out of an awkward spot. Of course, those people would never have dared say anything to Su Muzhe. But once she was gone, they would only take it out on Su Jianyin all the more viciously. At the time, Su Jianyin had even resented her. Why help me? Had you thought about what I would have to face afterwards? Your pity would only make things harder for me.\n\nAnd yet, after Su Muzhe left, she was astonished to discover that the matter had already been settled. Su Muzhe had arranged for her transfer to a department devoted to research. In terms of rank, she was now under Su Muzhe's authority, and never again had to deal with those overbearing colleagues.\n\n...And now she served under Su Muzhe, who had become Deputy Commissioner of Works at the age of nineteen.\n\nWhy would someone like that give up such a bright future, enter into secret dealings with the Drifters, and chase after an ideal that could never be realised? Su Jianyin did not understand. Perhaps that was the difference between her and a genius: Su Muzhe would always reach for what lay beyond her grasp, while she could only look up at her from a distance.\n\nOn the day news of Su Muzhe's secret collusion with the Drifters reached Haojing, Su Jianyin was drawing up plans. Noise erupted all around her, loud and chaotic. Someone had stormed into the Ministry of Works. Crashes rang out on all sides, and it was clear they were tearing the place apart in search of something.\n\nSu Jianyin turned her head and saw an unfinished drawing on a nearby desk.\n\n\"Jianyin, if something needed to stay in the air for a long time, what sort of structure do you think would work best?\"\n\nSu Muzhe was sitting astride a chair, a pen caught between her teeth. Her cheek rested against the chair back, and she looked faintly troubled.\n\nYou're the genius, she thought. Why are you asking me? Even so, she answered perfunctorily: \"Probably... the lighter, the better.\"\n\n\"Hm... so it comes down to the materials, then.\" Su Muzhe seemed to realise something and bent back over her drawing.\n\nSu Muzhe had not taken that drawing with her. It was still on the desk, bearing the rough outline of a bird. It was already after hours, and Jianyin was the only one left.\n\nShe knew that bird. Of course she knew that bird. Su Muzhe was a genius; everything she worked on proved useful in the end. This mech-kite held enormous technical promise, and no true craftsman could have resisted studying it. It simply had not yet been perfected, and that was why the Hall of Adjudication managed to intercept it in flight, exposing Su Muzhe as a Drifter spy.\n\nDamn it. Why hadn't she taken it with her? What if they decided she was mixed up with Su Muzhe — with the Drifters as well?\n\nThe people who had been tearing the place apart burst in. \"This used to be Su Muzhe's office, right? Hand over everything she left behind.\"\n\n\"...Just those books,\" Su Jianyin murmured, lowering her head. Hidden in her palm, she clutched a crumpled sheet of paper.\n\nThree days later, an unmarked envelope was left outside the gates of the Su residence. Inside was a design sketch.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15040203"
+        },
+        UI_CHAR_DATA_TEXT_15040204 = {
+          ContentEN = "Many in Outer Peaks believed the reports — that Miemeng had destroyed farmland and injured people — were a trap, carefully laid to lure a certain person out into the open. It was not flood season, and Miemeng was Su Muzhe's proudest work, built from some of the finest materials in all Haojing. Before leaving, she had topped up its energy core and given it one last thorough inspection, checking for any possible faults. Under normal conditions, it should have kept running for at least fifty years. As soon as the reports spread, an uproar broke out over Su Muzhe and Jishu, and the blame was laid squarely at the Drifters' door. The whole thing had clearly been orchestrated. But Su Muzhe insisted that, whatever the truth of it, the damage Miemeng had caused was already done. Even if there was only the faintest chance that her help was truly needed, she had to go back and see what could still be done. The waters of the River of Resentment ran wild, and the flood damage could worsen by the hour. If she got back even a day earlier, that might spare people a little more suffering. She insisted, again and again, that she could get back out safely. No one knew Haojing's terrain better than she did. She would go no farther than the outskirts of Haojing and check on Miemeng from there. To everyone's surprise, Yan Shanting — usually the easiest of them to talk round — was the one most firmly opposed to her going back. No one ever learned exactly what happened that night, though some said they heard the two of them arguing. The next morning, Su Muzhe left Outer Peaks much as she had arrived: with little more than the clothes on her back.\n\nHad she died as Su Muzhe, the River-Taming Swallow, her death might have been mourned. But as the one blamed for the Miemeng disaster, her death drew only applause, and still more fervent praise for the righteousness of Lord Argent's judgement.\n\n\"A Jishu contraption running wild? She must have done it on purpose! She was trying to spit in the face of the Nine Chapters of Dafeng, that's what it was. We can't let the likes of her walk all over us!\"\n\"If she hadn't been so headstrong on forcing through something this dangerous, would so many people have died?\"\n\"A clean death was too good for her! Lord Bi'an was merciful to let her off so easily. How could a single wretched life ever pay for what she'd done?\"\n\"Those vicious Drifters again...\"\n\"Damn you, Su Muzhe...\"\n\nThe few voices raised in her defence were drowned out by the tide of condemnation. For a time, Su Muzhe's name was spat out with contempt wherever it was spoken. With every curse and every gob of spit, her name was ground deeper into the mud.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15040204"
+        },
+        UI_CHAR_DATA_TEXT_15040205 = {
+          ContentEN = [[
+The turmoil in Haojing had come to an end. Huaxu seemed to have changed completely, and yet somehow not changed at all. The warrants against those of Outer Peaks were lifted outright, yet people still feared crossing paths with a Drifter. Even with fear and unease still hanging in the air, people began speaking among themselves about the girl who had stepped forward that day.
+
+"Maybe the Drifters aren't as bad after all..."
+"She's the one who saved my little girl!"
+"She made me realise that anyone can stand up and fight for what matters to them, if they've got the courage."
+
+The change was slight and slow, and it would not come overnight. But it had already begun.]],
+          TextMapId = "UI_CHAR_DATA_TEXT_15040205"
+        },
+        UI_CHAR_DATA_TEXT_15040301 = {
+          ContentEN = "Su Muzhe left many things behind: worldly possessions, and knowledge of inestimable value. Su Yi has carefully preserved her aunt's research notes, poring over them time and again.\n\nBut to Su Yi, the most precious keepsake of all is her name.\n\n\"Your name is Su Yi?\"\n\nAt the entrance to Outer Peaks, Su Yi was introducing herself to the other Drifters when Yan Shanting heard the unfamiliar name and gave her a surprised look.\n\n\"Yes. Su Yi. Yi — as in the Yi-Bird.\"\n\nFrom that day on, she would no longer be the successor of the Heavenly Artisans clan. At Outer Peaks, she would simply be Su Yi.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15040301"
+        },
+        UI_CHAR_DATA_TEXT_15040302 = {
+          ContentEN = [[
+When Su Yi still lived at home, she never had to concern herself with the practical side of life. Her parents saw to everything. All she had to do was stay in her warm, comfortable room, keep away from forbidden places, avoid doing anything they would disapprove of, and leave everything else to them.
+
+Only after leaving home did she realise how much there was to figure out about living on her own. She did not want anyone to take her for some pampered girl who had never had to fend for herself, so she usually ended up learning the hard way. When she cooked, burnt fingers and meals that never quite tasted right were common enough. When she washed and hung out her clothes, they always came back crumpled and creased. Even changing the sheets or braiding her hair properly took time to learn.
+
+Su Yi gritted her teeth, asked no one for help, and tried to figure things out on her own.
+
+She learnt by trial and error, slowly piecing things together. At first it was exhausting, often leaving her drained, but it was worth it. She had finally stepped beyond that little courtyard and claimed her life for herself. She was free.]],
+          TextMapId = "UI_CHAR_DATA_TEXT_15040302"
+        },
+        UI_CHAR_DATA_TEXT_15040303 = {
+          ContentEN = "Su Muzhe once made a pinky promise with Su Yi that the two of them would restore the Su clan of Heavenly Artisans to its former glory. It was a secret between them.\n\nWhat they wanted to bring back was the true Su clan of Heavenly Artisans, not what it had become — hemmed in on all sides and afraid even to make mechapuppets. They wanted to make things that would truly improve ordinary people's lives. That meant everything from great works that could reshape the land itself to humble devices for everyday use, from telling the time to marking the hours of the day — not the Hall of Craft's gaudy toys, all show and no substance.\n\nSu Muzhe's words left Su Yi exhilarated, almost light-headed with excitement. She wanted, that very instant, to follow her aunt out into the world and make those ambitions real. But Su Muzhe had gone and broken her promise. She went off alone to pursue that dream, leaving Su Yi behind like a mechapuppet with its core torn out — abandoned inside Haojing, that great sealed box.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15040303"
+        },
+        UI_CHAR_DATA_TEXT_15040304 = {
+          ContentEN = [[
+On the night Su Muzhe died, Su Yi cried into her pillow for a long time. Her sobs, raw and hoarse, were smothered by the pillow until not a sound escaped.
+
+She gave herself only one night.
+
+For tonight alone, she would allow herself to be weak, to falter, to grieve for Su Muzhe.
+
+Once the sun rose and her sleeves had dried, she would allow herself no more grief. She would keep going, following in her aunt's footsteps and carrying that road on to the places Su Muzhe had never reached. Where her aunt's footsteps ended, Su Yi's would take up the road and carry it on. From that day on, wherever Su Yi went, she would carry Su Muzhe's will with her.]],
+          TextMapId = "UI_CHAR_DATA_TEXT_15040304"
+        },
+        UI_CHAR_DATA_TEXT_15040305 = {
+          ContentEN = "Su Yi carries a grand ambition she has never spoken aloud: she wants her creations to benefit more than just the people of Huaxu.\n\nShe has heard that beyond her homeland, countless people still live in hardship. Whether they are horned — called Loongscion in Huaxu and Charon elsewhere — or hornless Earthborn and Solarian alike, all should have the right to step outside and look up at the sky. The sky belongs to everyone. Freedom should be within everyone's reach, not a luxury reserved for the few. Perhaps she cannot change the whole world at once. But even if all she has is the faintest spark, she will still do everything she can to pass it on.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15040305"
+        },
+        UI_CHAR_DATA_TEXT_15040401 = {
+          ContentEN = [[
+Dawn was only just beginning to break, and Su Yi was still awake. She gave up on sleep altogether and got out of bed.
+
+It had been just over a month since she arrived at Outer Peaks. By now she had adjusted to most things here, but she still could not sleep well in an unfamiliar bed.
+
+It was still early, and all of Outer Peaks lay quiet, wrapped in an air of freedom and ease. Many disciples of the Jishu Sect kept late hours, for if an idea was not seized the moment it struck, it might be lost for good.
+
+"Every one of them is a night owl," Su Muzhe had written in one of her letters.
+
+Su Yi had never set foot in Outer Peaks before, yet she knew it as well as if she had been there countless times already. After much pleading, her aunt had managed to send her several letters in secret, and Su Yi knew every word of them by heart. During the days she spent apart from her aunt, it was the Outer Peaks she imagined that kept her going.
+
+Now that imagination had finally become reality, her aunt was no longer by her side. Holding a map, Su Yi walked slowly, treading as lightly as possible so as not to wake the others. She had drawn the map bit by bit from her aunt's descriptions. Those versed in the workings of Jishu often possessed a keen sense of space, and from the fragments Su Muzhe had left behind, Su Yi had managed to piece together a map that was already fairly close to the real layout.
+
+As she walked, she kept marking up the old map, correcting it little by little. Each time she came upon a sight that matched what had been described in those letters, she would pause for a while. It was as if an unseen figure were leading her by the hand, showing her every blade of grass and every tree, her voice warm with a smile.
+
+"Outer Peaks is full of steep, narrow passes. If roads are to be built here, the work can only fall to the artisans of the Jishu Sect. The question is how the nails should be driven so they'll hold under the weight..."
+
+Su Yi lifted her head. Before her stretched a long, narrow path, winding into the distance until it disappeared into the mountain mist. It seemed the road here had already been built.
+
+"There's nothing here but stone! We might as well use stone for mechapuppet parts at this rate. Isn't there any stone with a bit more give to it?"
+
+She reached out and pressed a hand to the cliff face. Hard. Rough. Could this really be used as material for a mechapuppet?
+
+Then Su Yi noticed moss growing in the cracks of the rock, with a thin blade of grass forcing its way out beside it. She touched the soft moss, then blew gently on the blade of grass. Better leave it be, she thought. It's had a hard enough time growing here as it is.
+
+Su Yi continued on until she reached the entrance to Outer Peaks.
+
+"Just inside the entrance, there's a clearing. Whenever I can't sleep, I come here to watch the sunrise."
+
+Su Yi sat down cross-legged and leaned back on her hands, gazing up at the sky. She had arrived just in time. The sun was rising between the mountains, its light still soft behind a veil of haze.
+
+Su Yi gazed at the same morning sun her aunt had once watched, until its light swelled and stung her eyes. Only then did the unbidden tears come, spilling from her eyes without a sound. At last, she turned away.]],
+          TextMapId = "UI_CHAR_DATA_TEXT_15040401"
+        },
+        UI_CHAR_DATA_TEXT_15040402 = {
+          ContentEN = "Su Yi's first meeting alone with Su Muzhe was far from a proper one. Back then, she was not yet called Su Yi, but Su Keyi — a name that in Huaxu suggested propriety, restraint, and careful self-discipline. It was the name her parents had chosen in the earnest hope that she would grow into exactly that sort of person. But from the day she was born, she was already destined to turn away from those hopes.\n\nAt the age of three, the talent she showed for making mechapuppets terrified her mother. At a time when Jishu was in decline, talent like that could one day threaten the authority of the Nine Chapters of Dafeng. In an age like that, talent like hers was almost a sin from birth. Young Su Yi could not understand why her mother insisted on taking away the little parts she found so fascinating. She fussed and demanded them back, only to be sharply scolded and left in tears.\n\nThat was when Su Muzhe pushed open the door. The fourteen-year-old girl stood awkwardly in the doorway, not knowing whether to go in or back away. The last thing she had meant to do was intrude on another family's private affairs; she had simply arrived at the wrong moment.\n\nAt the sound of the door, Su Yi glanced over despite herself. She had seen this striking older girl a few times before, though only across the dinner table during New Year and festival gatherings. They had never really spoken. The pretty young woman was Su Muzhe, her father's youngest sister — her aunt.\n\nIn front of Su Yi's mother, her aunt said, \"Mechapuppets are nothing but trouble. They can harm others, and they can harm you. If you're going to study anything, it ought to be orthodox Jishu. Learn that properly, and one day you might earn a post at the Ministry of Works.\"\n\nSu Yi pouted and turned away, refusing to look at this awful aunt who had so clearly taken her mother's side.\n\nBut the moment her mother left for work and the door shut behind her, the serious, self-possessed girl of a moment ago vanished completely. Su Muzhe's lips curled into a grin. She bent down and lowered her voice.\n\n\"Hey there, little one. Want to make a mechapuppet of your own?\"\n\nSu Yi's eyes widened. \"But, Auntie, you just said...\"\n\nSu Muzhe laughed. \"You little goody-goody. I only said that because your mother was here. Now that she's gone, we can speak properly.\"\n\nSu Yi scrunched up her little face in indignation. \"But Mum said lying is bad!\"\n\n\"I'm going to tell Mum right now!\"\n\nShe spun round and made for the door. But Su Muzhe was already leaning against it, blocking the way completely. There was no getting out. With Su Muzhe leaning against the door and the handle hidden behind her back, Su Yi could not even reach it.\n\n\"Now think about it,\" Su Muzhe said lightly. \"Do you really want to give up all those interesting toys for good? You liked putting them together, didn't you? And when you finished one, you felt proud of yourself, didn't you? I know the feeling. I was exactly the same when I was little.\"\n\n\"I had to figure all this out the hard way, so the least I can do is make it easier for you. When I was learning to make mechapuppets, I had to hide under the covers with a lamp and study in secret. You won't have to do any of that.\"\n\nSu Yi's eyes widened. Su Muzhe's words seemed to open up an entirely new world. Her heart was pounding, and she was torn. She knew she ought to refuse her aunt and be the good girl who listened to her mother, but she could not bring herself to turn it down.\n\nA child's way of thinking is simple. What she needed was simply a companion: someone on her side, someone who shared the same secret and loved the same thing she did.\n\nSu Muzhe saw her wavering and pressed on at once. \"I can tell you've got talent. You're even better with your hands than I was at your age. If I teach you, you'll save yourself a lot of trial and error. After all, no one in Haojing is better at making mechapuppets than I am. Are you sure you don't want to learn from me?\"\n\n\"And besides, I've plenty of time these days. I could come and play with you often. Don't you want that?\"\n\nThough she felt guilty, Su Yi was tempted all the same. Her little face solemn, she made the first major decision of her life.\n\n\"All right! I'll learn from you.\"",
+          TextMapId = "UI_CHAR_DATA_TEXT_15040402"
+        },
+        UI_CHAR_DATA_TEXT_15040403 = {
+          ContentEN = "When Su Yi was just old enough to remember things, a major incident shook Haojing.\n\nYan Shanting, an incense warden, drew water from the River of Resentment, snuffing out the century-old censer and bringing the Grand Incense Rite to an abrupt end. He vaulted onto the roof, tossed down a single remark — \"This place is beneath me now\" — and left without once looking back.\n\nYan Shanting came from a distinguished family and was long famed for being able to drink a thousand cups without falling. For years he had served in the Hall of Incense, presiding over rites great and small without a single mishap. Under the Nine Chapters of Dafeng, everyone revered Lord Argent. No one had imagined that a man like him would dare such open defiance. The incident came without warning. Even after the Hall of Adjudication hastily deployed the Sentinels of Juntian, they failed to take him. In the end, they could do no more than issue wanted notices in impotent fury.\n\nOnly much later did people in Haojing learn that Yan Shanting had become one of the Drifters. That was only to be expected. Once Haojing had cast him out, it was hardly surprising that he ended up in Outer Peaks, among that notorious band of outlaws. By then, years had passed, and no one could say whether quenching the censer with the river had been his plan all along, or whether he had acted on impulse. Yan Shanting ruined his own future and disgraced the Hall of Incense as well. After that, his name went unspoken. With the authorities coming down hard, even those who had once called him a friend quietly kept their heads down and slipped out of sight.\n\nSu Muzhe, however, was different. They came from families of equal standing, and the two had been betrothed long before. Yet she remained in Haojing, and whenever Yan Shanting's name was mentioned, hers inevitably followed.\n\nSu Yi was not especially close to Yan Shanting. She had only met him twice, and most of what she knew about him came from her aunt. \"Unreliable\", \"headstrong\", \"reckless\" — that was how Su Muzhe described him, though there was always fondness in her eyes when she did. They were not real reproaches, only the sort of teasing kept for someone dear. From those scattered remarks — how he lost focus during incense rites, hated tight collars, and always did exactly what he said he would, for better or worse — Su Yi pieced together an image of him: complicated, yet oddly familiar.\n\nEven though she had met him only a handful of times, Yan Shanting still left a deep impression on her. They were more restrained around Su Yi, but the affection between them was impossible to miss. Once, jealous of how close they were, Su Yi rounded on him with a fierce little warning: \"Just you wait. When I grow up, the place beside Auntie will be mine alone.\" That made Yan Shanting burst out laughing. \"Our little Su's not even grown up yet, and she's already trying to edge me out? Your aunt has two sides, doesn't she? We can take one each. What do you say?\" \"...Since when did I need two bodyguards?\"\n\nWhenever Yan Shanting was around, Su Muzhe seemed especially at ease, and that only made Su Yi all the more eager to grow up. Every day she measured her height, hoping she would grow up quickly and become someone her aunt could rely on too. \n\nBut before Su Yi had the chance to grow up and truly measure herself against Yan Shanting for that place beside her aunt, he had already left Haojing and become, in her parents' eyes, a man beyond redemption.During that time, Su Muzhe was plainly out of sorts. When she was teaching Su Yi about Jishu, she would often stop mid-sentence and drift off, her mind clearly elsewhere. Whenever that happened, Su Yi would read on by herself, note down any characters she did not recognise, then take them to her aunt and ask what they meant. She just needed time; Su Yi understood that. At the time, there was little Su Yi could do except try, in her own clumsy way, to cheer her up and hope the gloom would pass.\n\nThen one day, when her aunt came by again, she was plainly in far better spirits. Whatever had been weighing on her seemed to have eased; even her step was lighter.\n\n\"Qingyu,\" Su Muzhe said, her eyes bright with excitement. \"Tell me... what do you think would happen if one day the Nine Chapters of Dafeng were no longer the way they are now?\"\n\nIf her parents had heard her say something so outrageous, they would certainly have been furious. Su Yi drew herself up as sternly as her little round face would allow and clasped her hands behind her back. She was still so small she had to tip her head right back just to deliver the warning in her gravest voice. \"Auntie, you can say things like that to me, but you mustn't say them to anyone else.\"\n\n\"You love Auntie best, don't you? You wouldn't tell anyone. We already share so many little secrets — one more won't hurt.\"\n\n\"...Auntie, don't do anything reckless!\"\n\n\"Answer my question first. If the Nine Chapters changed one day, would that make you happy?\"\n\nSu Yi thought about it seriously. \"I think... I would. If it changed, we wouldn't have to stay shut up in the house all the time any more.\"\n\nHer voice grew quieter, and she never noticed the resolve settling over Su Muzhe's face. \"Mother says the art of mechapuppets is dangerous, and under the laws of the Nine Chapters, I'm not allowed to study it. That's why they keep me at home all the time — to protect me.\" Her fingers picked at her sleeve as she lowered her head. \"I... don't want to give up the things I love, but I also don't want to make Mother sad.\"\n\n\"If the Nine Chapters changed... then maybe I could have both. Father wouldn't have to keep sighing every time he spoke of our family's past.\"\n\n\"So you want to be happy yourself, and you want your parents to be happy too?\"\n\n\"I...\"\n\n\"I want to use Jishu to make everyone in Huaxu happy.\"\n\nThat same year, work began on the Miemeng waterworks project. Against fierce opposition, Su Muzhe used a giant mechapuppet to bring the floods under control. When the project was complete, the Miemeng Giant Bird came to rest upon the River of Resentment, its wings rising and falling like something out of legend. Using a specialised pumping system, it diverted the floodwaters into nearby channels that had not yet burst their banks. At last, the River of Resentment, which had flooded year after year, was brought under control.\n\nPeople on both banks could not praise her enough. For a time, every storyteller in Haojing seemed to have set aside the old tales in favour of new ones about Su Muzhe, \"the River-Taming Swallow\". Before long, those achievements had earned her an exceptional promotion: at nineteen, she was made Deputy Commissioner of Works, second only to the Commissioner himself.\n\nBut the good times did not last.\n\nAfter that visit, Su Yi could not shake the feeling that perhaps her aunt, too, would soon leave.\n\nSu Muzhe did indeed leave. That year, Su Yi was nine, and Su Muzhe was twenty.\n\nAfter her aunt left, Su Yi kept turning one question over in her mind: how could the Nine Chapters of Dafeng be changed?\n\nShe resolved to find Su Muzhe, stand before her in person, and keep asking until she got a clear answer.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15040403"
+        },
+        UI_CHAR_DATA_TEXT_15040404 = {
+          ContentEN = "After Su Muzhe left, Su Yi never gave up searching for any sign of her. She was determined to find Su Muzhe on her own, stand before her in person, and make her see that she had been wrong to underestimate her. All Su Yi could do was stay at home, endure her parents' expectations, and secretly send her mech-kites far beyond the city to continue the search in her stead. Su Muzhe left Haojing when Su Yi was nine. Relying on the fragments Su Muzhe had left behind and the rumours that drifted through Haojing, she spent five full years piecing things together, until somehow she truly found her way to the outer fringes of Outer Peaks.\n\nSu Yi had imagined their reunion in all sorts of ways, and all sorts of reactions from Su Muzhe when it came. Su Muzhe had left when she was only nine. Now she was fourteen, at that age when a child can change almost beyond recognition in the span of a few years. Surely Auntie would be surprised. What would she say? Would she praise her for finally catching up, or take her by the hand and introduce her to her companions with that sly, proud smile?\n...She had never imagined their reunion would be like this.\n\nSu Yi had also heard the rumours spreading through the capital about Miemeng. Through her mother, Yun Fangshui, who held a post in the Ministry of Rites, she obtained reliable information: it had been a trap all along. No one was ever going to let Su Muzhe get anywhere near the construct she had poured her heart into making. The moment she left Outer Peaks, the Bi'an on her trail would descend on her and bring down heavenly punishment.\n\nPanic set in, and she became desperate to get word to them. With no way to reach the Drifters directly, she could only send her mech-kites circling the outskirts of Outer Peaks, hoping to find a way in — or else to have one of them spotted by some sharp-eyed Drifter. In the end, Yuming intercepted one of them, and the message got through... but it was still a step too late.\n\nOnly one thought kept turning over in Su Yi's mind: I came too late. If only I had arrived a little sooner...\n\nBut there was nothing more useless than an \"if only\".\n\nBy the time Su Yi arrived with Yan Shanting, Yuming, and the other Drifters, the Bi'an had already carried out the punishment, and there was no undoing what had happened.\n\nThe Nine Chapters of Dafeng had left her body crystallised in death — yet she still stood. This proud bird, defiant to the very end, had long since breathed her last, and still she would neither kneel nor sit, let alone fall. She could no longer raise a hand. Otherwise, she would surely have patted Su Yi's rigid shoulder, then gathered her favourite niece into her arms and held her close. Yan Shanting stood before Su Muzhe in silence, head bowed, all expression drained from his face.\n\nAmong Miemeng's remains, the Drifters found a message box containing Su Muzhe's final words. In the last moments of her life, Su Muzhe laid out three final matters with her usual brisk decisiveness.\n\nFirst, she told them where to find the Su clan texts she had uncovered in the library, along with her own craft notes.\nSecond, she said that with all of them there to witness it, the day was auspicious enough. If death was about to part them anyway, then she saw no reason to leave regrets behind. Let Heaven and Earth bear witness: whether Yan Shanting acknowledged their betrothal or not, she meant to marry him that very day — by force if she had to.\nThird, she entrusted Su Yi to the Drifters, asking Yan Shanting to keep her reckless niece in check and not let her throw her life away trying to avenge her.\n\nAuntie was gone. Su Yi sank to the ground, and a dreadful silence fell over the crowd.\n\nShe did not know how she got home in that daze, or how long she shut herself away in her room afterwards. She would not come out, no matter who called for her.\n\nSeveral months later, she made up her mind: she would go to Outer Peaks, where Su Muzhe had once been. Before leaving, she had a fierce argument with her mother, but still refused to back down. The road away from home felt endlessly long, and yet all too short. At the end of the alley, Su Yi turned back one last time and looked back at her home in the distance.\n\nDawn was just beginning to break. Alone, Su Yi stepped onto the long mountain road leading to Outer Peaks. Step by step, she climbed on without haste. The mountain wind came howling down, as though it meant to drive her back, but not once did she waver.\n\nFrom that day on, she left her old life behind for good. She was no longer Su Keyi, but Su Yi.\n\nOnly when that long mountain road came to an end did her real journey begin.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15040404"
+        },
+        UI_CHAR_DATA_TEXT_15040405 = {
+          ContentEN = "Drawn by the same ideals, newcomers followed in the footsteps of those before them and gave their lives for the same cause. At Outer Peaks, one generation of Drifters gave way to the next, again and again. So many had given their lives without asking anything in return, and at last the long resistance was over.\n\nSu Yi stood at the cliff's edge and looked back. The mountain was unchanged, and at its foot lay so many who had given their lives to keep the fire alive.\nHad those stubborn souls returned at last? If not, where else could they go?\nHer gaze drifted into the distance, and her thoughts drifted with it.\n\nThe mountain was still the same. Mist curled around its slopes and stretched on and on, trailing like lengths of silk in the wind.\nBelow, a thin sheen of water lay over the stone steps. It had just rained, yet the steps had been mended so neatly that mud no longer pooled there. Many new houses had been built, along with a school for children and a training yard. There were many new faces now: some had come to settle there, while others were drawn by what Outer Peaks stood for and wanted to see that spirit for themselves...\n\nThis day had come too late. The people who had waited and paid for it were no longer here to see it. And yet it had also come too soon, as though the cost of it had barely settled before the world had already begun to move on. There was something unreal about it, like a dream one might wake from at any moment.\n\nSu Yi closed her eyes and felt the roughness of the rock, the softness of the moss, and the chill of the air. These things were real. There was no mistaking them. The wind moved through the mountains with a low, mournful sound, like someone letting out a sigh.\n\nIt was as if she could see them there in the cloud and mist, their figures wavering like something out of a dream. Her eyes were still closed, yet the years between them seemed to fall away, and each face came back to her clear and vivid, as if it had never left.\nAt the front stood her aunt, Su Muzhe, leaning against the nearest stone, wearing that same sly, proud look, and tipping her chin up at her in greeting.\nA little farther off stood Yan Shanting, still and straight as a pine.\nAnd there was Buxia too, and so many other Drifters whose faces had blurred with time, though the brightness in their eyes had never dimmed.\n\n\"Auntie... Uncle Yan... Buxia...\"\n\"Zheng Xihe... Tian Shuo... Zhou Sui...\"\n\"So much has happened lately. Outer Peaks has changed a great deal.\"\n\"The truth behind the Battle of Shuli has finally come out. The injustice done to the Jishu Sect has finally been set right. And Jishu is no longer treated as forbidden.\"\n\"I'm grown up now, you know. There's so much I can take on.\"\n\"Auntie... I can stand on my own now.\"\n\"Uncle Yan, Buxia... the Nine Chapters of Dafeng have finally changed. What we hoped for has finally come true.\"\n\"Oh, and those two had a terrible row, but they finally made up.\"\n...\n\nSu Yi went on talking, following her thoughts wherever they led. Around her, only the drifting mist seemed to listen. Whenever her voice lifted with excitement, a gust of wind would send the thick fog rolling towards her in waves. Watching the mountain mist swirl and thin before her, Su Yi smiled softly.\n\nA thought came to her then: what if the dead did not truly vanish? What if they had only changed form and remained in this world — in the mountains and rivers, in every stone, in every stretch of earth? If so, then surely the Drifters who had died were still here. Outer Peaks had been their first home — and their final resting place. Surely they would all return here. When the wind rose, it was as if they were cheering her on. When it fell quiet again, it was as if they were listening. In that way, she could almost believe they were still with her.\n\n\"Auntie...\"\n\"I have more good news.\"\n\"My parents finally understand me now. They support what I'm doing.\"\n\"It took five years. I suppose that isn't so long.\"\n\"You once said that when I finally built the mechapuppet from your plans, you'd come back and take me with you.\"\n\"...Will you ever come back and keep that promise?\"\n\nShe looked towards the place where the wind was gathering. A sudden gust rose there and came sweeping straight towards her, scattering the thick mist in its wake. It brushed the loose hair at her temples like gentle hands. The moment it touched her, the gust softened into countless light currents that gathered round her like an embrace.",
+          TextMapId = "UI_CHAR_DATA_TEXT_15040405"
         },
         UI_CHAR_DATA_TEXT_18010101 = {
           ContentEN = [[
@@ -63327,7 +65743,7 @@ The truth, however, remained shrouded in mystery. All that was known was that wi
           TextMapId = "UI_CHAR_DATA_TEXT_18010305"
         },
         UI_CHAR_DATA_TEXT_18010401 = {
-          ContentEN = "From the hazy memories of her early childhood, Fina recalls a phrase her parents often mentioned with profound reverence — \"The Elysian Canon.\"\nUnaware of its meaning, she asked with the lisp of a toddler, \"What is that, Mommy?\"\n”It's what Mommy and Daddy believe in,\" her mother explained, \"All of us — Solas and Charons alike — were sculpted by the earliest deities from the sacred tree. The tree's branches formed our bodies, its leaves our hair, and its sap our souls. Every sentient creature in this world possesses a soul of equal worth.\"\nLittle Fina, with confusion clouding her young face, struggled with the concepts of \"Solas,\" \"Charons,\" and \"souls\" — words far too complex for a three-year-old to grasp. Sensing Fina's bewilderment, her mother gently stroked her hair and picked up a storybook from the shelf. She sketched two figures: one with a regular head and another with two horns protruding from the forehead.\n\"See, this one is a Sola, and this one is a sprite. They come from different families. Their families told them they were born to be enemies because they look different.\"\n\"But... why can't they be friends?\" Fina asked softly, biting her lower lip.\n\"They couldn't do that, at least not at first. But one day, a fairy gave them each a book called the Elysian Canon. Through it, they realised that their souls were no different from each other's, and that they were meant to cherish and love each other instead of fighting.\"\n\"Ah... so it's like Mommy and Daddy!” Fina exclaimed, beginning to understand. \"Daddy has horns, and Mommy doesn't. But you still love each other, and you had me.\"\n\"Yes, my dear,\" her mother smiled, tenderly kissing Fina on the forehead. \"Just like how Mommy loves Daddy, and how we love you.\"\nFina's fairy tale began with the \"Elysian Canon,\" but in the end, it was also the very reason things fell apart.\nOne night, the guards of Icelake burst into Fina's home unannounced, ransacking the place with brutal efficiency. Fina's mother hid with her in a cramped space beneath the basement, listening as the soldiers' boots pounded the floor above like a relentless storm. Fina could hear her father arguing desperately with the guards, fragments of heated words reaching her ears — something about \"illegal possession of Elysian scriptures\" and \"worshipping false Elysian gods\"... Then came sounds of a scuffle and the heavy thud of a body hitting the floor... Her mother clamped a hand over her mouth, silencing her screams and cries as Fina held her breath, clutching her fear tightly.\n\"Daddy's gone to a faraway place. He's not coming back,\" Fina's mother whispered to her, her voice trembling as she looked around the house left in shambles after the search that night.\nIt was then that Fina understood — Papa Nightingale had fallen. Her fairy tale had come to an end.",
+          ContentEN = "From the hazy memories of her early childhood, Fina recalls a phrase her parents often mentioned with profound reverence — \"The Elysian Canon.\"\nUnaware of its meaning, she asked with the lisp of a toddler, \"What is that, Mommy?\"\n\"It's what Mommy and Daddy believe in,\" her mother explained, \"All of us — Solas and Charons alike — were sculpted by the earliest deities from the sacred tree. The tree's branches formed our bodies, its leaves our hair, and its sap our souls. Every sentient creature in this world possesses a soul of equal worth.\"\nLittle Fina, with confusion clouding her young face, struggled with the concepts of \"Solas,\" \"Charons,\" and \"souls\" — words far too complex for a three-year-old to grasp. Sensing Fina's bewilderment, her mother gently stroked her hair and picked up a storybook from the shelf. She sketched two figures: one with a regular head and another with two horns protruding from the forehead.\n\"See, this one is a Sola, and this one is a sprite. They come from different families. Their families told them they were born to be enemies because they look different.\"\n\"But... why can't they be friends?\" Fina asked softly, biting her lower lip.\n\"They couldn't do that, at least not at first. But one day, a fairy gave them each a book called the Elysian Canon. Through it, they realised that their souls were no different from each other's, and that they were meant to cherish and love each other instead of fighting.\"\n\"Ah... so it's like Mommy and Daddy!\" Fina exclaimed, beginning to understand. \"Daddy has horns, and Mommy doesn't. But you still love each other, and you had me.\"\n\"Yes, my dear,\" her mother smiled, tenderly kissing Fina on the forehead. \"Just like how Mommy loves Daddy, and how we love you.\"\nFina's fairy tale began with the \"Elysian Canon,\" but in the end, it was also the very reason things fell apart.\nOne night, the guards of Icelake burst into Fina's home unannounced, ransacking the place with brutal efficiency. Fina's mother hid with her in a cramped space beneath the basement, listening as the soldiers' boots pounded the floor above like a relentless storm. Fina could hear her father arguing desperately with the guards, fragments of heated words reaching her ears — something about \"illegal possession of Elysian scriptures\" and \"worshipping false Elysian gods\"... Then came sounds of a scuffle and the heavy thud of a body hitting the floor... Her mother clamped a hand over her mouth, silencing her screams and cries as Fina held her breath, clutching her fear tightly.\n\"Daddy's gone to a faraway place. He's not coming back,\" Fina's mother whispered to her, her voice trembling as she looked around the house left in shambles after the search that night.\nIt was then that Fina understood — Papa Nightingale had fallen. Her fairy tale had come to an end.",
           TextMapId = "UI_CHAR_DATA_TEXT_18010401"
         },
         UI_CHAR_DATA_TEXT_18010402 = {
@@ -63343,7 +65759,7 @@ The truth, however, remained shrouded in mystery. All that was known was that wi
           TextMapId = "UI_CHAR_DATA_TEXT_18010404"
         },
         UI_CHAR_DATA_TEXT_18010405 = {
-          ContentEN = "Fina and Outsider together buried her stepfather and his golden cane beneath a pine tree by Lamenting Lake.\nShe closed her eyes. Once, she had been consumed by deep hatred and fear for the man who had brought so much misfortune into her life. But now, memories of him had melted away like snowflakes caught in her hair, dissolving into distant oblivion.\nHer hair had grown longer, and Outsider had helped to dye her silver locks a beautiful shade of azure, like the waters of Lamenting Lake or the colour of her eyes. This new appearance allowed her to walk among the crowd without being recognised. The name \"Serafina Glenville\" had been carried away by the winds over Icelake, leaving behind only Fina, Outsider's sister. A new chapter of her story was ready to unfold.\n\nOn a clear afternoon, Fina opened a blank notebook, picked up a quill, and carefully wrote down the title of her new story: The Song of the Niveous Nightingale.\nSuddenly, a clattering noise interrupted her thoughts. She set down the pen, intending to ask her brother to be a bit quieter, only to see him approaching with a cardboard box in his hands. \"You might want to go over these,\" Outsider said as he placed the box on the table. \"I forgot to mention — I found this bundle near you in the sewer. Thought it might belong to you.\"\n\"This is...\" Fina gasped as she lifted a small box from the carton. Though caked in mud and dust, the intricate craftsmanship was evident. \"The family heirloom Mommy left to me.\"\n\"Wow, that sounds awesome! Let's see what's inside — maybe it'll turn us into rich folks, so we can buy a bigger house.\" Outsider joked as he wiped away the grime. \"Huh, there's a combination lock on it...\"\n\"Wait!\" Fina suddenly remembered her mother's warning. \"Don't open it! Mommy said it could explode if the wrong password is entered!\"\nShe jumped up, trying to grab the box, but before she could, there was a soft click.\n\"It didn't explode,\" Outsider said, puzzled. \"I just tried a random number and it opened. But there's nothing much inside, just a piece of paper.\" Realising the potential significance of this thing, he immediately handed the box to Fina. \"Maybe you should read it yourself.\"\n\n—What could it be?\n\"Could it be... a treasure map?\" Fina wondered, tilting her head as she unfolded the paper. Suddenly, she choked up, and her hands began to tremble. Outsider leaned over, only to find a thin letter, with just one line of elegant handwriting:\n<H>My dearest child, may you find your own happiness.</>\n\nFina's thoughts drifted back to a night many years ago, when she had been jolted awake by a nightmare. Frantically, she had run downstairs in search of her mother, only to pause outside the bedroom, overhearing a conversation between her mother and stepfather.\n\"Morris, I promised I would give you the treasure in the box someday. But it’s not today — it'll be the day when Serafina comes of age,\" her mother said, her voice calm and resolute. \"In exchange, I'll need your assurance — you must ensure Serafina grows up safe and well.\"",
+          ContentEN = "Fina and Outsider together buried her stepfather and his golden cane beneath a pine tree by Lamenting Lake.\nShe closed her eyes. Once, she had been consumed by deep hatred and fear for the man who had brought so much misfortune into her life. But now, memories of him had melted away like snowflakes caught in her hair, dissolving into distant oblivion.\nHer hair had grown longer, and Outsider had helped to dye her silver locks a beautiful shade of azure, like the waters of Lamenting Lake or the colour of her eyes. This new appearance allowed her to walk among the crowd without being recognised. The name \"Serafina Glenville\" had been carried away by the winds over Icelake, leaving behind only Fina, Outsider's sister. A new chapter of her story was ready to unfold.\n\nOn a clear afternoon, Fina opened a blank notebook, picked up a quill, and carefully wrote down the title of her new story: The Song of the Niveous Nightingale.\nSuddenly, a clattering noise interrupted her thoughts. She set down the pen, intending to ask her brother to be a bit quieter, only to see him approaching with a cardboard box in his hands. \"You might want to go over these,\" Outsider said as he placed the box on the table. \"I forgot to mention — I found this bundle near you in the sewer. Thought it might belong to you.\"\n\"This is...\" Fina gasped as she lifted a small box from the carton. Though caked in mud and dust, the intricate craftsmanship was evident. \"The family heirloom Mommy left to me.\"\n\"Wow, that sounds awesome! Let's see what's inside — maybe it'll turn us into rich folks, so we can buy a bigger house.\" Outsider joked as he wiped away the grime. \"Huh, there's a combination lock on it...\"\n\"Wait!\" Fina suddenly remembered her mother's warning. \"Don't open it! Mommy said it could explode if the wrong password is entered!\"\nShe jumped up, trying to grab the box, but before she could, there was a soft click.\n\"It didn't explode,\" Outsider said, puzzled. \"I just tried a random number and it opened. But there's nothing much inside, just a piece of paper.\" Realising the potential significance of this thing, he immediately handed the box to Fina. \"Maybe you should read it yourself.\"\n\n—What could it be?\n\"Could it be... a treasure map?\" Fina wondered, tilting her head as she unfolded the paper. Suddenly, she choked up, and her hands began to tremble. Outsider leaned over, only to find a thin letter, with just one line of elegant handwriting:\n<H>My dearest child, may you find your own happiness.</>\n\nFina's thoughts drifted back to a night many years ago, when she had been jolted awake by a nightmare. Frantically, she had run downstairs in search of her mother, only to pause outside the bedroom, overhearing a conversation between her mother and stepfather.\n\"Morris, I promised I would give you the treasure in the box someday. But it's not today — it'll be the day when Serafina comes of age,\" her mother said, her voice calm and resolute. \"In exchange, I'll need your assurance — you must ensure Serafina grows up safe and well.\"",
           TextMapId = "UI_CHAR_DATA_TEXT_18010405"
         },
         UI_CHAR_DATA_TEXT_21010101 = {
@@ -63398,7 +65814,7 @@ Second, to find her destined one.]],
           TextMapId = "UI_CHAR_DATA_TEXT_21010302"
         },
         UI_CHAR_DATA_TEXT_21010303 = {
-          ContentEN = "Rebecca favours little creatures that look strange and do not fit in with others.",
+          ContentEN = "Rebecca favours little creatures that look strange and do not fit in with others. ",
           TextMapId = "UI_CHAR_DATA_TEXT_21010303"
         },
         UI_CHAR_DATA_TEXT_21010304 = {
@@ -63501,7 +65917,15 @@ Tabethe is not a native Hyperborean. She originates from the Republic of Luca, w
 She does not remember much about her childhood, just dark and rough seas seared within her memory. That's when her family was shipwrecked.
 Perhaps the sea showed her mercy, and carried her to the coast of Hyperborea. When she woke up, she was no longer the apple of her parents' eye, but an orphan in a welfare house.]],
           TextMapId = "UI_CHAR_DATA_TEXT_23010302"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CHAR_DATA_TEXT_23010303",
+    MaxKey = "UI_CHAR_DATA_TEXT_42020402",
+    Loader = function()
+      return {
         UI_CHAR_DATA_TEXT_23010303 = {
           ContentEN = [[
 One day, the orphanage received several guests in white coats. In order to welcome these supposedly esteemed visitors from a place called the "Alchademy", preparations started early in the morning. At that time, Tabethe thought that her opportunity had come.
@@ -63562,10 +65986,10 @@ Newly arrived in Huaxu, you know Fushu only as a stranger in every sense.
 You came to this mysterious land under commission. Before ever meeting her, you had already crossed paths with Zhiliu of EverSpring, whose wealth defies measure; with Yuming, the austere and stoic Magistrate of Yingtian; and with Mr Qiu, the astute master of the black market, always turning his designs within.
 As your journey carried you through Mistwharf, you came to know its ways, its customs, and its people. Yet in all that time, not once did her name arise. Who is she, and from what place did she come? Why would one of such rare power remain wholly unspoken in this land?
 Then, without warning or sign, she appeared before you, drawn only by someone nearby in dire need of healing.
-
+ 
 From her attire and her speech, you could see she was unmistakably of Huaxu. Yet in her bearing there was a subtle dissonance, something unlike any Huaxu native you had met.
 You watched her move through the crowd in plain white robes, untouched by the clamour around her. The noise seemed to recede of its own accord, and by her presence alone she stood apart from the world.
-
+ 
 In that moment one truth became clear to you: one such as she could never belong to the black market. Her origin lay somewhere wholly her own.]],
           TextMapId = "UI_CHAR_DATA_TEXT_24010101"
         },
@@ -63585,27 +66009,27 @@ You wondered whether such magic had once belonged to a Zhuyou healer she had kno
           TextMapId = "UI_CHAR_DATA_TEXT_24010103"
         },
         UI_CHAR_DATA_TEXT_24010104 = {
-          ContentEN = "Everyone at Zesheng Pharmacy knew of the stone coffin in the rear garden — a coffin so cold that frost clung to it even in midsummer.\n\nWithin it lay the Founding Master's twin sister, the last Zhuyou of the Hall of Ephemerality. During the Great Plague that had once swept across Huaxu, she had moved among the dying without pause, her life ebbing with every invocation of the Art of Ephemerality — a devotion as admirable as it was heartrending. When the recoil of her healing finally consumed her strength, even someone as gifted as Master Fufeng, who had laid the foundations of her own discipline, could find no way to undo it. All she could do was prepare: a stone coffin, an ice chamber, and — at the very brink of her sister's quietus — a working that stilled every function of her body, holding her in suspension, awaiting a future in which a remedy might at last be found.\n\n\"Master Fufeng wagered all her hopes upon the years to come.\" So said the current head of Zesheng Pharmacy, his fan stirring lightly in his hand as he addressed the new apprentices. \"This wager concerns you and me, your senior apprentices, and those who will one day follow after you.\"\n The young apprentices, of course, understood little of what he meant. They craned their necks in curiosity, hoping to glimpse the healer from a century past. The head pharmacist allowed it. The woman within was pale as white jade, her breath all but imperceptible, her joints stiff as sculpted ice. To any ordinary eye, she looked long parted from the living. A few apprentices recoiled after only a glance.\nTheir gazes wavered between the woman in the coffin — so lifelike that her stillness seemed unreal — and the head pharmacist, who remained perfectly composed.\nHe caught their doubt at once. \"You think she is already gone, do you?\" He was a man who moved through life with an air of easy nonchalance; rare did he wear such solemnity. The new apprentices fell silent beneath the weight of his gaze.\nThe head pharmacist surveyed them and said, \"The Nine Chapters of Dafeng state: 'To deceive and mislead the many — this must not be done.' So let me speak plainly, on your first day. When Master Fufeng was young, she devoted herself to the study of medicine, compiled The Essence of Herbs, and founded Zesheng Pharmacy. For a hundred years we have saved lives beyond counting. Your own families, no doubt, have sought remedy here. In gratitude, people speak well of us and gloss over our flaws. Yet even so, nothing can efface the fact that Master Fufeng was born a Zhuyou... and did not see that calling through to its end. By the law of the Divine, that alone is a transgression.\"\nThe apprentices gasped. Many stared in stunned confusion.\nThe head pharmacist let out a quiet breath, as though recalling the long and difficult road behind them. He allowed the apprentices a moment to take in his words, then continued:\n\"Medicine has always been a defiance of the order of life and death. It alters the endings of those who have committed no wrongdoing, yet simply lacked the fortune to meet a Zhuyou before death claimed them. And yet the Nine Chapters also proclaim: 'Heaven's great virtue bears the name of Life.' If Heaven may uphold that virtue, then why should mortals who labour towards the same purpose be condemned? But this path is harsher than any outsider can fathom. Every draught you have ever taken to restore health came from tireless experiments — from trials that often brushed the very edge of death before proving true.\"\nThe garden had fallen utterly still. No one dared make a sound. A pale petal drifted on the wind and settled inside the stone coffin. The head pharmacist brushed it away with gentle care, then lifted his gaze to the young faces before him — some thoughtful, some uncertain, some quietly moved. When he spoke again, his voice was low and steady:\n\"A hundred years... and each step has been hard-won. Zesheng Pharmacy was founded to save lives, even when the Nine Chapters disapproved of it. Our predecessors overcame each obstacle with resolve, pushing through dead ends no one else dared to face. And that is why Master Fufeng entrusted her twin sister to us — because she believed that those who came after her would break the impasse she could not, that they would reach the far shore she herself could not cross; that through us, the shadow of illness will recede... and lives once cut short will begin anew.\"\nWithin the coffin, the woman in her deep slumber had not changed in a century. Yet to the young apprentices, she was no longer the cold enigma she had seemed only moments before, but the very impasse their craft must one day overcome — the unmoving heart of a century's medical endeavour.\n\nAt last, the head pharmacist said, softly yet with unwavering conviction:\n\"Zesheng Pharmacy forsakes none.\"",
+          ContentEN = "Everyone at Zesheng Pharmacy knew of the stone coffin in the rear garden — a coffin so cold that frost clung to it even in midsummer.\n\nWithin it lay the Founding Master's twin sister, the last Zhuyou of the Hall of Ephemerality. During the Great Plague that had once swept across Huaxu, she had moved among the dying without pause, her life ebbing with every invocation of the Art of Ephemerality — a devotion as admirable as it was heartrending. When the recoil of her healing finally consumed her strength, even someone as gifted as Master Fufeng, who had laid the foundations of her own discipline, could find no way to undo it. All she could do was prepare: a stone coffin, an ice chamber, and — at the very brink of her sister's quietus — a working that stilled every function of her body, holding her in suspension, awaiting a future in which a remedy might at last be found.\n\n\"Master Fufeng wagered all her hopes upon the years to come.\" So said the current head of Zesheng Pharmacy, his fan stirring lightly in his hand as he addressed the new apprentices. \"This wager concerns you and me, your senior apprentices, and those who will one day follow after you.\"\nThe young apprentices, of course, understood little of what he meant. They craned their necks in curiosity, hoping to glimpse the healer from a century past. The head pharmacist allowed it. The woman within was pale as white jade, her breath all but imperceptible, her joints stiff as sculpted ice. To any ordinary eye, she looked long parted from the living. A few apprentices recoiled after only a glance.\nTheir gazes wavered between the woman in the coffin — so lifelike that her stillness seemed unreal — and the head pharmacist, who remained perfectly composed.\nHe caught their doubt at once. \"You think she is already gone, do you?\" He was a man who moved through life with an air of easy nonchalance; rare did he wear such solemnity. The new apprentices fell silent beneath the weight of his gaze.\nThe head pharmacist surveyed them and said, \"The Nine Chapters of Dafeng state: 'To deceive and mislead the many — this must not be done.' So let me speak plainly, on your first day. When Master Fufeng was young, she devoted herself to the study of medicine, compiled The Essence of Herbs, and founded Zesheng Pharmacy. For a hundred years we have saved lives beyond counting. Your own families, no doubt, have sought remedy here. In gratitude, people speak well of us and gloss over our flaws. Yet even so, nothing can efface the fact that Master Fufeng was born a Zhuyou... and did not see that calling through to its end. By the law of the Divine, that alone is a transgression.\"\nThe apprentices gasped. Many stared in stunned confusion.\nThe head pharmacist let out a quiet breath, as though recalling the long and difficult road behind them. He allowed the apprentices a moment to take in his words, then continued:\n\"Medicine has always been a defiance of the order of life and death. It alters the endings of those who have committed no wrongdoing, yet simply lacked the fortune to meet a Zhuyou before death claimed them. And yet the Nine Chapters also proclaim: 'Heaven's great virtue bears the name of Life.' If Heaven may uphold that virtue, then why should mortals who labour towards the same purpose be condemned? But this path is harsher than any outsider can fathom. Every draught you have ever taken to restore health came from tireless experiments — from trials that often brushed the very edge of death before proving true.\"\nThe garden had fallen utterly still. No one dared make a sound. A pale petal drifted on the wind and settled inside the stone coffin. The head pharmacist brushed it away with gentle care, then lifted his gaze to the young faces before him — some thoughtful, some uncertain, some quietly moved. When he spoke again, his voice was low and steady:\n\"A hundred years... and each step has been hard-won. Zesheng Pharmacy was founded to save lives, even when the Nine Chapters disapproved of it. Our predecessors overcame each obstacle with resolve, pushing through dead ends no one else dared to face. And that is why Master Fufeng entrusted her twin sister to us — because she believed that those who came after her would break the impasse she could not, that they would reach the far shore she herself could not cross; that through us, the shadow of illness will recede... and lives once cut short will begin anew.\"\nWithin the coffin, the woman in her deep slumber had not changed in a century. Yet to the young apprentices, she was no longer the cold enigma she had seemed only moments before, but the very impasse their craft must one day overcome — the unmoving heart of a century's medical endeavour.\n\nAt last, the head pharmacist said, softly yet with unwavering conviction:\n\"Zesheng Pharmacy forsakes none.\"",
           TextMapId = "UI_CHAR_DATA_TEXT_24010104"
         },
         UI_CHAR_DATA_TEXT_24010105 = {
           ContentEN = [[
 During your journey through Huaxu, you had already sensed what weighed on Fushu's mind.
- But you never pried. You and Fushu each held on to someone you could never bear to lose. Just as you would go to any lengths for the chance to see Berry again, you had neither the wish nor the right to stand in her way.
+But you never pried. You and Fushu each held on to someone you could never bear to lose. Just as you would go to any lengths for the chance to see Berry again, you had neither the wish nor the right to stand in her way.
 
 There were moments when you feared her resolve might lead her to ruin. But that fear, at least, never came to pass.]],
           TextMapId = "UI_CHAR_DATA_TEXT_24010105"
         },
         UI_CHAR_DATA_TEXT_24010201 = {
-          ContentEN = "The Nine Chapters of Dafeng decree: \"Heaven's great virtue bears the name of Life.\" Birth, ageing, and death rest solely within the dominion of Lord Argent — a divine authority beyond mortal grasp. In their boundless compassion, Taihao granted humankind a chance to live on, that those struck by illness need not be surrendered to death. To uphold the sanctity of life, they raised several Loongscions and entrusted them with sacred arts able to banish every affliction. Thus was the Zhuyou clan established.\n\nHeaven moves in ordained cycles — decay and renewal, rise and decline. The laws of Huaxu have long upheld this sacred balance.\nThe healing arts of the Zhuyou are the purest expression of restoration — no ailment or injury lies beyond their reach. Yet the price is grave: whatever sickness they draw from another settles upon the healer's own flesh. Though they command higher workings to purge this blight, no divine art can spare them from lives foreshortened by its toll. Thus was this life-for-life magic known as the Art of Ephemerality.\nYet all this now lies in an age long past — its tales faded with a hundred years.\n\nToday, in Mistwharf, the Zhuyou have near vanished with the waning of the Hall of Ephemerality. Unless fortune greatly favours them, common folk may pass their lives without ever crossing paths with one again.",
+          ContentEN = "The Nine Chapters of Dafeng decree: \"Heaven's great virtue bears the name of Life.\" Birth, ageing, and death rest solely within the dominion of Lord Argent — a divine authority beyond mortal grasp. In their boundless compassion, Taihao granted humankind a chance to live on, that those struck by illness need not be surrendered to death. To uphold the sanctity of life, they raised several Loongscions and entrusted them with sacred arts able to banish every affliction. Thus was the Zhuyou clan established.\n \nHeaven moves in ordained cycles — decay and renewal, rise and decline. The laws of Huaxu have long upheld this sacred balance.\n The healing arts of the Zhuyou are the purest expression of restoration — no ailment or injury lies beyond their reach. Yet the price is grave: whatever sickness they draw from another settles upon the healer's own flesh. Though they command higher workings to purge this blight, no divine art can spare them from lives foreshortened by its toll. Thus was this life-for-life magic known as the Art of Ephemerality.\nYet all this now lies in an age long past — its tales faded with a hundred years.\n \nToday, in Mistwharf, the Zhuyou have near vanished with the waning of the Hall of Ephemerality. Unless fortune greatly favours them, common folk may pass their lives without ever crossing paths with one again.",
           TextMapId = "UI_CHAR_DATA_TEXT_24010201"
         },
         UI_CHAR_DATA_TEXT_24010202 = {
-          ContentEN = "In Haojing, Zesheng Pharmacy has long been a household name. Its founder, Fufeng, is remembered with deep respect and admiration. She tested countless herbs upon herself, set her knowledge to paper, and guided those around her as she slowly reshaped the meaning of healing — turning it from the long-revered Art of Ephemerality practised only by the Zhuyou into the grounded and widely taught medicine known today.\n\nYet this apothecary, who lived almost a century and witnessed with her own eyes the decline of that ancient art, had begun life as a scion of House Fu, one lineage among the once-venerable Zhuyou.",
+          ContentEN = "In Haojing, Zesheng Pharmacy has long been a household name. Its founder, Fufeng, is remembered with deep respect and admiration. She tested countless herbs upon herself, set her knowledge to paper, and guided those around her as she slowly reshaped the meaning of healing — turning it from the long-revered Art of Ephemerality practised only by the Zhuyou into the grounded and widely taught medicine known today.\n \nYet this apothecary, who lived almost a century and witnessed with her own eyes the decline of that ancient art, had begun life as a scion of House Fu, one lineage among the once-venerable Zhuyou.",
           TextMapId = "UI_CHAR_DATA_TEXT_24010202"
         },
         UI_CHAR_DATA_TEXT_24010203 = {
-          ContentEN = "In the north-east corner of Mistwharf stood an old residence known as the Hall of Ephemerality — once a family home, now long fallen silent. Though someone still tended to it from time to time, without the breath of daily living, even a well-kept dwelling grows cold and desolate. Its former owners had been greatly respected. Their names had faded from common memory, yet parents continued to warn their children to keep a respectful distance and not wander too close to what remained of their home.\nThe harvest season, however, was an exception.\nTwo or three months after the apricot blossoms had fallen, the branches would hang heavy with fruit. Small groups of children would slip inside to pick apricots as little treats. In those moments they forgot their parents' warnings, thinking only of the thrill of climbing trees and the sweetness of the fruit — until the call from home reached them across the courtyard.\n\nBut that year, a lantern glowed within the empty residence. It meant someone had returned to live there. And the children knew at once that they could no longer help themselves to the apricots that had always seemed theirs for the taking.\n\nTheir days of play had lost something essential. They dared not defy the teachings of the Nine Chapters of Dafeng by climbing the walls to slip inside for fruit; all they could do was watch from afar, left with only their memories.\nUntil one afternoon, a Loongscion stepped out from the residence. She set down a great basket of apricots and met the eyes of the little rascals dangling from the branches. Then she gestured towards the apricot grove behind the courtyard and said quietly, \"Go on. Have fun.\"\nThat day, the apricot grove shook with joyful uproar. Laughter rang through the branches until nightfall, and the children lingered long after the sky had grown dark.\nThe last boy climbing down from the treetop saw, from afar, a white-clad Loongscion standing at the window with a lantern in hand, quietly seeing the children off.\n\nHe froze for a moment, and their eyes met by accident. She blinked and shaped the silent words: \"Go home.\"\nJust before he left the grove, he looked back at the house. The evening breeze was soft; the lanternlight flickered gently. The Loongscion stood alone by the railing, a faint smile on her lips, watching the distant threads of chimney smoke drift through the dimming light.",
+          ContentEN = "In the north-east corner of Mistwharf stood an old residence known as the Hall of Ephemerality — once a family home, now long fallen silent. Though someone still tended to it from time to time, without the breath of daily living, even a well-kept dwelling grows cold and desolate. Its former owners had been greatly respected. Their names had faded from common memory, yet parents continued to warn their children to keep a respectful distance and not wander too close to what remained of their home.\nThe harvest season, however, was an exception.\nTwo or three months after the apricot blossoms had fallen, the branches would hang heavy with fruit. Small groups of children would slip inside to pick apricots as little treats. In those moments they forgot their parents' warnings, thinking only of the thrill of climbing trees and the sweetness of the fruit — until the call from home reached them across the courtyard.\n \nBut that year, a lantern glowed within the empty residence. It meant someone had returned to live there. And the children knew at once that they could no longer help themselves to the apricots that had always seemed theirs for the taking.\n \nTheir days of play had lost something essential. They dared not defy the teachings of the Nine Chapters of Dafeng by climbing the walls to slip inside for fruit; all they could do was watch from afar, left with only their memories.\nUntil one afternoon, a Loongscion stepped out from the residence. She set down a great basket of apricots and met the eyes of the little rascals dangling from the branches. Then she gestured towards the apricot grove behind the courtyard and said quietly, \"Go on. Have fun.\"\nThat day, the apricot grove shook with joyful uproar. Laughter rang through the branches until nightfall, and the children lingered long after the sky had grown dark.\nThe last boy climbing down from the treetop saw, from afar, a white-clad Loongscion standing at the window with a lantern in hand, quietly seeing the children off.\n\nHe froze for a moment, and their eyes met by accident. She blinked and shaped the silent words: \"Go home.\"\nJust before he left the grove, he looked back at the house. The evening breeze was soft; the lanternlight flickered gently. The Loongscion stood alone by the railing, a faint smile on her lips, watching the distant threads of chimney smoke drift through the dimming light.",
           TextMapId = "UI_CHAR_DATA_TEXT_24010203"
         },
         UI_CHAR_DATA_TEXT_24010204 = {
@@ -63619,13 +66043,13 @@ There were moments when you feared her resolve might lead her to ruin. But that 
         UI_CHAR_DATA_TEXT_24010301 = {
           ContentEN = [[
 The Hall of Ephemerality in Mistwharf was Fushu's first home.
-
+ 
 After a century of dreamless slumber, she awoke in Haojing. Her elder sister's disciples were the ones who roused her, tending to her with warmth and utmost care. They told her of the century she had missed, introduced the medicine of this new age, nursed her back to strength, and guided her through the bustling city she had never truly known.
 Newly awakened, it was only natural that Fushu felt unmoored at first. No expectations were placed upon her, nor did anyone urge her to resume the path she once walked.
 Only in time did she realise that the Zhuyou were no longer a calling the world turned to. A hundred years had reshaped all things. The world felt strange, and she learned slowly, both the ways of this age and the medicine that had grown so distant from the healing arts she once practised. When at last she had regained enough knowledge to take up her work again, her first resolve was to return to the Hall of Ephemerality in Mistwharf.
-
+ 
 Perhaps it was the unease of living a second life. Perhaps she wished to witness, with her own eyes, the fate of House Fu and the waning line of the Zhuyou. Perhaps it was simply the quiet pull of the soil she once called home. Whatever the truth, she bore countless reasons to remain in Haojing and just as many to return, yet in the end her steps chose for her.
-
+ 
 As if drawn by an old vow or by threads of fate, Fushu found herself upon the road that would lead her back.]],
           TextMapId = "UI_CHAR_DATA_TEXT_24010301"
         },
@@ -63634,7 +66058,7 @@ As if drawn by an old vow or by threads of fate, Fushu found herself upon the ro
           TextMapId = "UI_CHAR_DATA_TEXT_24010302"
         },
         UI_CHAR_DATA_TEXT_24010303 = {
-          ContentEN = "Long ago, Fufeng and Fushu planted an apricot sapling together in the courtyard of the Hall of Ephemerality.\nThat year, a Loongscion whom their mother had once healed returned in gratitude. Possessing little else, he laid a blessing upon the courtyard soil — a quiet working of magic that bestowed enduring abundance. He told them that any plant rooted in that blessed earth would bloom and bear fruit twice each year, and never lose its vitality.\nIntrigued by this wondrous blessing, young Fufeng begged their mother to buy an apricot sapling. Finding a bare patch of ground in the courtyard, she pulled Fushu along to help her plant it. Restless and playful as ever, Fufeng gave the newly planted sapling a careless nudge, knocking it askew. Seeing Fushu fight back tears, she rushed indoors, rummaged out her treasured tin of preserved sweets, and poured a small handful into her sister's palms in apology. Only then did Fushu's tears subside.\nAnd so the little tree went into the earth — crooked, but theirs all the same.\n\n\"Make a wish,\" their mother said with a gentle smile. \"Whatever you wish for will come true, just as this tree will one day bear its sweet fruit.\"\n\nTo this day, Fushu still does not know what her elder sister wished for.\nBut she remembers her own: If my life is destined to be brief, then let this apricot tree live in my stead. Let it witness generations rise and fall, oceans shift, and time remake the world.\n\nFleeting light, O fleeting light, take from me my borrowed time.\nLet the old live out their years, let the young be spared all tears.\nFrom withered bone let green life rise, and barren boughs give rise to tender shoots.\nUnder the Divine's unending gaze, may this vow endure beyond our days.",
+          ContentEN = "Long ago, Fufeng and Fushu planted an apricot sapling together in the courtyard of the Hall of Ephemerality.\nThat year, a Loongscion whom their mother had once healed returned in gratitude. Possessing little else, he laid a blessing upon the courtyard soil — a quiet working of magic that bestowed enduring abundance. He told them that any plant rooted in that blessed earth would bloom and bear fruit twice each year, and never lose its vitality.\nIntrigued by this wondrous blessing, young Fufeng begged their mother to buy an apricot sapling. Finding a bare patch of ground in the courtyard, she pulled Fushu along to help her plant it. Restless and playful as ever, Fufeng gave the newly planted sapling a careless nudge, knocking it askew. Seeing Fushu fight back tears, she rushed indoors, rummaged out her treasured tin of preserved sweets, and poured a small handful into her sister's palms in apology. Only then did Fushu's tears subside.\nAnd so the little tree went into the earth — crooked, but theirs all the same.\n\n\"Make a wish,\" their mother said with a gentle smile. \"Whatever you wish for will come true, just as this tree will one day bear its sweet fruit.\"\n\nTo this day, Fushu still does not know what her elder sister wished for.\n But she remembers her own: If my life is destined to be brief, then let this apricot tree live in my stead. Let it witness generations rise and fall, oceans shift, and time remake the world.\n\nFleeting light, O fleeting light, take from me my borrowed time.\nLet the old live out their years, let the young be spared all tears.\nFrom withered bone let green life rise, and barren boughs give rise to tender shoots.\nUnder the Divine's unending gaze, may this vow endure beyond our days.",
           TextMapId = "UI_CHAR_DATA_TEXT_24010303"
         },
         UI_CHAR_DATA_TEXT_24010304 = {
@@ -63646,7 +66070,7 @@ As if drawn by an old vow or by threads of fate, Fushu found herself upon the ro
           TextMapId = "UI_CHAR_DATA_TEXT_24010305"
         },
         UI_CHAR_DATA_TEXT_24010401 = {
-          ContentEN = "Fushu sat aboard the vessel that bore her home.\n\nThe travellers' clothing no longer resembled anything from a century past, and even the ship itself was built with a complexity unknown in her time. Among the passengers were foreigners speaking quietly of their work: merchants carrying goods from Luca to trade in Mistwharf.\nThey seemed well acquainted with Huaxu. When their business talk faded, their voices turned to stories from the road. They spoke of Mistwharf's scenery, finer than anything in Haojing, and of plans to go hiking together when time allowed. One mentioned seeing an Emeraldfinch pass over a valley. Another laughed and corrected her, saying that Emeraldfinches only glide, their heavy tail feathers making true flight impossible. Their talk then drifted to EverSpring and to how, during the festival season, Proprietress Zhiliu sent lavish gift boxes to her partners, each holding a commemorative gold coin. A man nearby remarked with a quiet laugh that he preferred the cured Petit Boar strips within, an ideal companion for the long miles of travel.\n\nFushu listened in silence, drawn in despite herself. Their words felt at once strange and familiar. Her thoughts drifted toward the frayed edge of memory. Had she, a century ago, watched an Emeraldfinch glide across the sky? Had she walked every street and alley of Mistwharf, watching its seasons come and go? And the snacks she had cherished as a child — were they the very ones these travellers spoke of? Were they spicy, sweet, or savoury?\n\nPerhaps she had; perhaps not. She could no longer say.\n\nSo many of her memories had grown indistinct. Like footprints pressed deep into sand, even the clearest traces flattened when the tide of time swept over them, leaving the shore smooth and leaving her unsure of the road she had once walked.\nShe sat in quiet reflection, unsure and thoughtful in equal measure, and the question rose unbidden: Perhaps this is why I return to Mistwharf, why I must set my steps towards the Hall of Ephemerality.\nPerhaps her gaze lingered too long upon the merchants, for they soon noticed her and looked her way with curiosity. One of the businesswomen, dressed in foreign fashion, smiled and stepped towards her. \"Your attire is lovely. I have only seen clothing like that in Huaxu's history books, so we could not help staring. It is a pleasure to travel with such a beautiful lady. If you do not mind my asking, are you bound for Mistwharf as well?\"\n\nFushu was silent for a moment before answering softly, \"I once lived there.\"\n\nThe woman drew a light breath, affecting a note of surprise. \"Truly? What a coincidence. We are headed to Mistwharf for trade. Along with spirits and glassware, we have brought a few small curios.\"\nShe opened her palm to reveal a finely crafted pocket watch. Its case was embossed with a great tree, its canopy encircling a luminous moon — a familiar sight to Fushu — though beneath the branches lay flared eaves and covered walkways she did not recognise, belonging to the century that had passed without her.\nWith a soft click the woman opened the case, showing the turning hands — second, minute, hour — each keeping steady time. She adjusted the crown with practised ease. \"Our customers often complain that setting the time is troublesome, so we added a few improvements to this model. I wonder whether the people of Mistwharf will— oh!\"\nThe hands began to turn backwards somehow. \"I am terribly sorry,\" she said, flushing with embarrassment. \"This one must be defective. The others work perfectly. I can fetch you another—\"\n\"No need.\"\nFushu's gaze remained on the reversing hands.\n\"I prefer this one,\" she said.\n\"Would you sell it to me?\"",
+          ContentEN = "Fushu sat aboard the vessel that bore her home.\n \nThe travellers' clothing no longer resembled anything from a century past, and even the ship itself was built with a complexity unknown in her time. Among the passengers were foreigners speaking quietly of their work: merchants carrying goods from Luca to trade in Mistwharf.\nThey seemed well acquainted with Huaxu. When their business talk faded, their voices turned to stories from the road. They spoke of Mistwharf's scenery, finer than anything in Haojing, and of plans to go hiking together when time allowed. One mentioned seeing an Emeraldfinch pass over a valley. Another laughed and corrected her, saying that Emeraldfinches only glide, their heavy tail feathers making true flight impossible. Their talk then drifted to EverSpring and to how, during the festival season, Proprietress Zhiliu sent lavish gift boxes to her partners, each holding a commemorative gold coin. A man nearby remarked with a quiet laugh that he preferred the cured Petit Boar strips within, an ideal companion for the long miles of travel.\n \nFushu listened in silence, drawn in despite herself. Their words felt at once strange and familiar. Her thoughts drifted toward the frayed edge of memory. Had she, a century ago, watched an Emeraldfinch glide across the sky? Had she walked every street and alley of Mistwharf, watching its seasons come and go? And the snacks she had cherished as a child — were they the very ones these travellers spoke of? Were they spicy, sweet, or savoury?\n \nPerhaps she had; perhaps not. She could no longer say.\n \nSo many of her memories had grown indistinct. Like footprints pressed deep into sand, even the clearest traces flattened when the tide of time swept over them, leaving the shore smooth and leaving her unsure of the road she had once walked.\nShe sat in quiet reflection, unsure and thoughtful in equal measure, and the question rose unbidden: Perhaps this is why I return to Mistwharf, why I must set my steps towards the Hall of Ephemerality.\nPerhaps her gaze lingered too long upon the merchants, for they soon noticed her and looked her way with curiosity. One of the businesswomen, dressed in foreign fashion, smiled and stepped towards her. \"Your attire is lovely. I have only seen clothing like that in Huaxu's history books, so we could not help staring. It is a pleasure to travel with such a beautiful lady. If you do not mind my asking, are you bound for Mistwharf as well?\"\n\nFushu was silent for a moment before answering softly, \"I once lived there.\"\n \nThe woman drew a light breath, affecting a note of surprise. \"Truly? What a coincidence. We are headed to Mistwharf for trade. Along with spirits and glassware, we have brought a few small curios.\"\n She opened her palm to reveal a finely crafted pocket watch. Its case was embossed with a great tree, its canopy encircling a luminous moon — a familiar sight to Fushu — though beneath the branches lay flared eaves and covered walkways she did not recognise, belonging to the century that had passed without her.\nWith a soft click the woman opened the case, showing the turning hands — second, minute, hour — each keeping steady time. She adjusted the crown with practised ease. \"Our customers often complain that setting the time is troublesome, so we added a few improvements to this model. I wonder whether the people of Mistwharf will— oh!\"\nThe hands began to turn backwards somehow. \"I am terribly sorry,\" she said, flushing with embarrassment. \"This one must be defective. The others work perfectly. I can fetch you another—\"\n\"No need.\"\nFushu's gaze remained on the reversing hands.\n\"I prefer this one,\" she said.\n\"Would you sell it to me?\"",
           TextMapId = "UI_CHAR_DATA_TEXT_24010401"
         },
         UI_CHAR_DATA_TEXT_24010402 = {
@@ -63654,15 +66078,15 @@ As if drawn by an old vow or by threads of fate, Fushu found herself upon the ro
           TextMapId = "UI_CHAR_DATA_TEXT_24010402"
         },
         UI_CHAR_DATA_TEXT_24010403 = {
-          ContentEN = "When Fushu's mother reached her quietus, Fushu was taking her midday rest.\n\nZhuyou lived brief lives, and so they guarded their strength with great care: rising with the sun, resting with its fall, keeping their breath steady and their hearts at peace.\nA light sleep of two quarters at noon was a fixed part of their daily regimen.\nFushu always kept to the rules. Fufeng, free-spirited as she was, rarely did. Yet even she yielded beneath their mother's stern gaze. At ten, the worst she would do was pick at her meals, toss and turn when she should have been asleep, or slip away to play where neither mother nor sister could find her.\nThat day was no different.\n\nWhen Fushu was shaken awake, she felt a spark of irritation — but anger harmed the spirit, and violating the family's \"Thirteen Maxims of Vital Care\" was unthinkable. She swallowed the impulse and merely asked why Fufeng had disturbed her.\nFufeng's face had lost all colour, cold sweat running down her temples. She said nothing; she only gripped Fushu's hand and pulled her down the winding corridor.\nFushu recognised that look at once — not only fear, but bewilderment. Like a fox run to exhaustion, the trap before it and the hounds behind, a struggling bird clenched in its jaws and its kits waiting helplessly in the den — with nowhere to flee, nowhere to hide. Such a creature must feel exactly as Fufeng did now: trembling, cornered, lost.\nWhat could terrify even Fufeng, who laughed even through a harsh scolding?\nFushu bit her lower lip.\n\nShe had always believed she would face such moments with calm.\nFrom early childhood, she had understood the fate that awaited a Zhuyou.\nShe lived by the rules, never once entertaining the thought of resisting Lord Argent's design. If she had entered the world in quiet acceptance, then she ought to leave it in the same way.\nFlowers bloom and fall. The moon waxes and wanes. Those who are healed live on; those who save them pay the price. Such was the will of the Divine, and such had been the way of all ages. What, then, was there to fear?\nWhen she was five, her father died before their eyes, spent like a lamp whose oil had run dry.\nShe had thought herself fearless. But in truth, it felt as though her soul had been torn from her body. Eyes wide, she forced herself to remain still, tracing the lines of her father's palm as he murmured casually, as if speaking of the most trivial daily matters: \"Your father's got a weak spot for good drink. When my death anniversary comes, remember to pour a pot of decent wine at my grave.\"\nHis tone was wry, almost playful. Only later did Fushu realise: Fufeng had taken after him.\nDarkened blood began to seep from the openings of his face. Pointless as she knew it was, she still tried with all her strength to wipe it away, but it would not come clean. Then harsh sunlight struck through the window, turning that sullied blood into blinding gold — a final tribute to a great Zhuyou.\n\nShe had thought she would face such moments with calm.\nHer mother, ever strict, now sat slumped beneath the blazing sun, nursing a cup of strong tea. A paper packet lay open beside her, holding more than a dozen pastries. She was tasting each one with earnest concentration, crumbs of sesame clinging to her lips.\nFushu had never seen her so at ease. Nor had she seen her grin, sheepish as a child caught stealing sweets: \"Ah. You caught me.\"\nFushu watched her mother's eyes grow slowly glassy, though the woman herself seemed unaware. She rambled softly: \"The walnut shortbread is too dry... it scratches the throat. Almond cakes... I've never really taken to them. The lotus pastries are crisp, but all show, no substance. After all these years, I still like sugar sponge cakes best. They taste just as they did when I was little.\"\nShe brushed the crumbs from her hands, gathered both her children onto her lap, and gazed towards the mountains and birds in the distance.\nFufeng stared straight into the noon sun, refusing to blink until she sneezed again and again.\nFushu, meanwhile, tightened her grip on her sleeve and spoke softly to her mother, whose nails were already sharpening beyond human shape: \"Mother... don't worry. I'll behave, just as I always have. I'll look after Fufeng. We'll keep this place going... just as you and Father did.\"\nThis time she shed no tears. She felt no fear either. Unlike her sister, who wished only to deny what was happening, Fushu wanted their mother to leave unburdened.\nBut the woman only smiled. She did not answer Fushu. Instead, she asked: \"Sweetheart... what pastry do you like best?\"\nFushu froze. She had no idea how to respond — a life lived by strict rules had left her with almost no memory of such treats.\nHer mother did not press her. Her voice was already breaking, and these were the last words she spoke:\n\n\"Forget all that. Live your lives... in whatever way your hearts truly wish.\"",
+          ContentEN = "When Fushu's mother reached her quietus, Fushu was taking her midday rest.\n\nZhuyou lived brief lives, and so they guarded their strength with great care: rising with the sun, resting with its fall, keeping their breath steady and their hearts at peace.\nA light sleep of two quarters at noon was a fixed part of their daily regimen.\nFushu always kept to the rules. Fufeng, free-spirited as she was, rarely did. Yet even she yielded beneath their mother's stern gaze. At ten, the worst she would do was pick at her meals, toss and turn when she should have been asleep, or slip away to play where neither mother nor sister could find her.\nThat day was no different.\n \nWhen Fushu was shaken awake, she felt a spark of irritation — but anger harmed the spirit, and violating the family's \"Thirteen Maxims of Vital Care\" was unthinkable. She swallowed the impulse and merely asked why Fufeng had disturbed her.\nFufeng's face had lost all colour, cold sweat running down her temples. She said nothing; she only gripped Fushu's hand and pulled her down the winding corridor.\nFushu recognised that look at once — not only fear, but bewilderment. Like a fox run to exhaustion, the trap before it and the hounds behind, a struggling bird clenched in its jaws and its kits waiting helplessly in the den — with nowhere to flee, nowhere to hide. Such a creature must feel exactly as Fufeng did now: trembling, cornered, lost.\nWhat could terrify even Fufeng, who laughed even through a harsh scolding?\nFushu bit her lower lip.\n \nShe had always believed she would face such moments with calm.\nFrom early childhood, she had understood the fate that awaited a Zhuyou.\nShe lived by the rules, never once entertaining the thought of resisting Lord Argent's design. If she had entered the world in quiet acceptance, then she ought to leave it in the same way.\nFlowers bloom and fall. The moon waxes and wanes. Those who are healed live on; those who save them pay the price. Such was the will of the Divine, and such had been the way of all ages. What, then, was there to fear?\nWhen she was five, her father died before their eyes, spent like a lamp whose oil had run dry.\nShe had thought herself fearless. But in truth, it felt as though her soul had been torn from her body. Eyes wide, she forced herself to remain still, tracing the lines of her father's palm as he murmured casually, as if speaking of the most trivial daily matters: \"Your father's got a weak spot for good drink. When my death anniversary comes, remember to pour a pot of decent wine at my grave.\"\n His tone was wry, almost playful. Only later did Fushu realise: Fufeng had taken after him.\nDarkened blood began to seep from the openings of his face. Pointless as she knew it was, she still tried with all her strength to wipe it away, but it would not come clean. Then harsh sunlight struck through the window, turning that sullied blood into blinding gold — a final tribute to a great Zhuyou.\n \nShe had thought she would face such moments with calm.\nHer mother, ever strict, now sat slumped beneath the blazing sun, nursing a cup of strong tea. A paper packet lay open beside her, holding more than a dozen pastries. She was tasting each one with earnest concentration, crumbs of sesame clinging to her lips.\nFushu had never seen her so at ease. Nor had she seen her grin, sheepish as a child caught stealing sweets: \"Ah. You caught me.\"\nFushu watched her mother's eyes grow slowly glassy, though the woman herself seemed unaware. She rambled softly: \"The walnut shortbread is too dry... it scratches the throat. Almond cakes... I've never really taken to them. The lotus pastries are crisp, but all show, no substance. After all these years, I still like sugar sponge cakes best. They taste just as they did when I was little.\"\nShe brushed the crumbs from her hands, gathered both her children onto her lap, and gazed towards the mountains and birds in the distance.\nFufeng stared straight into the noon sun, refusing to blink until she sneezed again and again.\nFushu, meanwhile, tightened her grip on her sleeve and spoke softly to her mother, whose nails were already sharpening beyond human shape: \"Mother... don't worry. I'll behave, just as I always have. I'll look after Fufeng. We'll keep this place going... just as you and Father did.\"\nThis time she shed no tears. She felt no fear either. Unlike her sister, who wished only to deny what was happening, Fushu wanted their mother to leave unburdened.\nBut the woman only smiled. She did not answer Fushu. Instead, she asked: \"Sweetheart... what pastry do you like best?\"\nFushu froze. She had no idea how to respond — a life lived by strict rules had left her with almost no memory of such treats.\nHer mother did not press her. Her voice was already breaking, and these were the last words she spoke:\n\n\"Forget all that. Live your lives... in whatever way your hearts truly wish.\"",
           TextMapId = "UI_CHAR_DATA_TEXT_24010403"
         },
         UI_CHAR_DATA_TEXT_24010404 = {
-          ContentEN = "The Hall of Ephemerality once took in a young girl burdened with a rare, stubborn illness. Even when the Art of Ephemerality managed to restore her, the sickness returned unfailingly each spring — a rash spreading across her skin, a burning fever, and a swollen throat that left her struggling for breath.\nHer parents moved their entire household near the Hall so she would always be within reach of a Zhuyou's care, praying she would not die young. Yet even the most seasoned Zhuyou could only shake their heads in helpless silence.\nEach spring, Fushu's parents kept a bed ready for the girl and guarded her night and day. That was as far as a Zhuyou's power could reach; anything more lay beyond their grasp.\nAs the years passed, the girl became the Hall's longest-staying patient. She remained there through the seasons when Fushu's parents passed away one after another, and watched countless quarrels flare and fade between Fushu and Fufeng — until the day Fufeng left, looking back at every step, yet still walking away.\n\nThat spring, only Fushu remained by the girl's side. And so the girl witnessed the hardest days Fushu had ever endured.\nPatients filled the Hall throughout the year, and Fushu bore the burden alone. She hurried from one bedside to the next, her strength stretched thin; the cleansing arts she relied upon weakened with every use, the backlash eating deeper into her. Her complexion grew greyer with each sunrise.\nUnder such strain, the Art of Ephemerality saved fewer lives each day. The order the Hall once took pride in slowly collapsed. More and more patients crowded its grounds. The groans of the gravely ill, the pleas and curses of their families — all of it swept through the Hall like a relentless wind, filling every pavilion and corridor until the place she had known all her life became almost unbearable to remain in.\n\nEven so, she never forgot the girl with the strange illness. Each night, she went to see whether the symptoms had returned. And when the girl burned with fever once more, Fushu's own body could endure no further.\nEven so, she forced the Art of Ephemerality, determined to heal the girl. It failed twice — each attempt leaving her reeling with dizziness, ringing ears, blood at her lips, and darkness closing in at the edges of her sight. Even now, she does not know whether the third attempt truly succeeded, for she collapsed before she could witness the outcome. As she sank into deep darkness, she thought she heard someone calling her name, but the roaring in her ears drowned everything else away.\nWhen she opened her eyes again, she could not move. But someone was holding her hand. The girl's hand — warm, not cold.\nShe had survived.\nYet it was Fushu who felt as though she had been dragged back from the brink. With what little strength remained, she held the girl's hand as though clutching the final thread that kept her in this world.\nThe girl woke soon after. Though Fushu's strength was so depleted that the Art of Ephemerality could not take full hold, leaving the girl still pale and unsteady, she smiled as though nothing were wrong.\n\"Fushu,\" she said softly, \"you were burning up just now. I truly couldn't tell which of us was the patient hanging by a thread. You kept murmuring in your sleep. You said, 'Please don't take her away.'\"\nShe looked at Fushu's ashen face and went on, \"I'm not a Zhuyou. I'm not your kin. I'm only one of your patients. If I had died just now, I would not have blamed you. I would have prayed to Taihao all the same: Please do not take her. Please spare her. Even if you were the only one left in the Hall of Ephemerality, I would still beg Lord Argent not to take you.\"\n\"So please... don't push yourself any further. All right?\" Her gaze did not waver, untouched by the cries and chaos outside the Hall. \"Call it selfish, if you must. It's just that... I truly want to see next spring's apricot blossoms.\"\nFushu closed her eyes in pain.\n\nNo one knows what passed through Fushu's heart as she made her choice. But she endured that year.\nAnd the girl lived to see many more springs — growing old under Fufeng's care, long after Fushu had fallen into her final slumber during the Great Plague.\nEvery spring, she travelled to Haojing and laid a sprig of Mistwharf apricot blossom beside the stone coffin. Then, with quiet devotion, she prayed: \"Lord Argent... please do not take her. Please... return her to us.\"",
+          ContentEN = "The Hall of Ephemerality once took in a young girl burdened with a rare, stubborn illness. Even when the Art of Ephemerality managed to restore her, the sickness returned unfailingly each spring — a rash spreading across her skin, a burning fever, and a swollen throat that left her struggling for breath.\nHer parents moved their entire household near the Hall so she would always be within reach of a Zhuyou's care, praying she would not die young. Yet even the most seasoned Zhuyou could only shake their heads in helpless silence.\nEach spring, Fushu's parents kept a bed ready for the girl and guarded her night and day. That was as far as a Zhuyou's power could reach; anything more lay beyond their grasp.\nAs the years passed, the girl became the Hall's longest-staying patient. She remained there through the seasons when Fushu's parents passed away one after another, and watched countless quarrels flare and fade between Fushu and Fufeng — until the day Fufeng left, looking back at every step, yet still walking away.\n\nThat spring, only Fushu remained by the girl's side. And so the girl witnessed the hardest days Fushu had ever endured.\nPatients filled the Hall throughout the year, and Fushu bore the burden alone. She hurried from one bedside to the next, her strength stretched thin; the cleansing arts she relied upon weakened with every use, the backlash eating deeper into her. Her complexion grew greyer with each sunrise.\nUnder such strain, the Art of Ephemerality saved fewer lives each day. The order the Hall once took pride in slowly collapsed. More and more patients crowded its grounds. The groans of the gravely ill, the pleas and curses of their families — all of it swept through the Hall like a relentless wind, filling every pavilion and corridor until the place she had known all her life became almost unbearable to remain in.\n\nEven so, she never forgot the girl with the strange illness. Each night, she went to see whether the symptoms had returned. And when the girl burned with fever once more, Fushu's own body could endure no further.\n Even so, she forced the Art of Ephemerality, determined to heal the girl. It failed twice — each attempt leaving her reeling with dizziness, ringing ears, blood at her lips, and darkness closing in at the edges of her sight. Even now, she does not know whether the third attempt truly succeeded, for she collapsed before she could witness the outcome. As she sank into deep darkness, she thought she heard someone calling her name, but the roaring in her ears drowned everything else away.\nWhen she opened her eyes again, she could not move. But someone was holding her hand. The girl's hand — warm, not cold.\nShe had survived.\nYet it was Fushu who felt as though she had been dragged back from the brink. With what little strength remained, she held the girl's hand as though clutching the final thread that kept her in this world.\nThe girl woke soon after. Though Fushu's strength was so depleted that the Art of Ephemerality could not take full hold, leaving the girl still pale and unsteady, she smiled as though nothing were wrong.\n\"Fushu,\" she said softly, \"you were burning up just now. I truly couldn't tell which of us was the patient hanging by a thread. You kept murmuring in your sleep. You said, 'Please don't take her away.'\"\nShe looked at Fushu's ashen face and went on, \"I'm not a Zhuyou. I'm not your kin. I'm only one of your patients. If I had died just now, I would not have blamed you. I would have prayed to Taihao all the same: Please do not take her. Please spare her. Even if you were the only one left in the Hall of Ephemerality, I would still beg Lord Argent not to take you.\"\n\"So please... don't push yourself any further. All right?\" Her gaze did not waver, untouched by the cries and chaos outside the Hall. \"Call it selfish, if you must. It's just that... I truly want to see next spring's apricot blossoms.\"\nFushu closed her eyes in pain.\n\nNo one knows what passed through Fushu's heart as she made her choice. But she endured that year.\nAnd the girl lived to see many more springs — growing old under Fufeng's care, long after Fushu had fallen into her final slumber during the Great Plague.\n Every spring, she travelled to Haojing and laid a sprig of Mistwharf apricot blossom beside the stone coffin. Then, with quiet devotion, she prayed: \"Lord Argent... please do not take her. Please... return her to us.\"",
           TextMapId = "UI_CHAR_DATA_TEXT_24010404"
         },
         UI_CHAR_DATA_TEXT_24010405 = {
-          ContentEN = "Fufeng did not remain forever young — not as she appears in my memories. She was the first among the Zhuyou to grow old. And though I often try to picture how the years must have settled upon her, the truth is that I cannot.\nWe Zhuyou are born white-haired; age leaves no mark there. But it must have shown itself in other ways: in the fine lines gathering at the corners of her eyes; in the coarsening of her skin; in joints that stiffened with each passing year; and in the gradual bow of her back, until the lively child who once leapt and scampered through the Hall could no longer move as she once did.\nI imagine these signs one by one, yet no clear image emerges. But there is no need for haste. When age comes for me as it once came for her, I will only need to look upon my reflection. Across a century, I shall finally glimpse the face that age once granted her — and the age-worn visage she had long hoped I might one day live to bear.\n\nSince my awakening, my mother's final words have returned to me time and again:\nLive your lives in whatever way your hearts truly wish.\nBut what life is it that my own heart desires?\n\nFor many years, I did not know. Now, I believe that Fufeng's life may serve as the mirror by which my own may be measured.\n\nIn this age, when the world has little need of the Zhuyou, I at last possess the years to reflect:\nWas my devotion to the Zhuyou path born of duty — to my parents, to the Hall of Ephemerality — or from teachings of the Nine Chapters of Dafeng carved too deeply into my bones to question? And if all that is set aside — if I am simply Fushu, no longer Zhuyou in name or role — what do I truly cherish? What could I serve with the whole of my remaining life?\n\nNight after night, I study the notes that Fufeng left behind across long decades. In my youth, I believed her impatient; yet every line she wrote on herbs and illnesses is meticulous and exact. Dry though such records may seem, she entrusted herself to them wholly, never allowing carelessness to take root. Her hand remains steady and precise, until she reaches the words \"The patient has recovered!\" There, her strokes loosen — swift and unrestrained. A century has passed, yet as I read those yellowed pages, the same quiet stirring rises in my chest.\n\nThrough them, I trace back the moments of simple, genuine joy, and I have come to understand this:\nThe joy of preserving a life was real — warm, steady, and bright. For one fated to die young, each life I managed to prolong became a fragment of the future I might never claim. And now, after a hundred years of sleep, to behold another rise restored and return to their own path in sound health... is enough to bring tears to my eyes. I know too well the sorrow of a life cut short before it begins — like a silkworm stifled within its cocoon, a bud struck down before bloom, a mayfly denied the dawn.\n\nI have tasted that fear. I shall not forget it. And I wish — simply as myself, not out of a Zhuyou's duty — that no one in this world should meet such an end.\nSo I will continue as a healer. Yet this time, I will allow myself to grow old — and watch, with my own eyes, how far healing may carry itself in the span of my years.",
+          ContentEN = "Fufeng did not remain forever young — not as she appears in my memories. She was the first among the Zhuyou to grow old. And though I often try to picture how the years must have settled upon her, the truth is that I cannot.\nWe Zhuyou are born white-haired; age leaves no mark there. But it must have shown itself in other ways: in the fine lines gathering at the corners of her eyes; in the coarsening of her skin; in joints that stiffened with each passing year; and in the gradual bow of her back, until the lively child who once leapt and scampered through the Hall could no longer move as she once did.\nI imagine these signs one by one, yet no clear image emerges. But there is no need for haste. When age comes for me as it once came for her, I will only need to look upon my reflection. Across a century, I shall finally glimpse the face that age once granted her — and the age-worn visage she had long hoped I might one day live to bear.\n\nSince my awakening, my mother's final words have returned to me time and again:\nLive your lives in whatever way your hearts truly wish.\nBut what life is it that my own heart desires?\n\nFor many years, I did not know. Now, I believe that Fufeng's life may serve as the mirror by which my own may be measured.\n\nIn this age, when the world has little need of the Zhuyou, I at last possess the years to reflect:\nWas my devotion to the Zhuyou path born of duty — to my parents, to the Hall of Ephemerality — or from teachings of the Nine Chapters of Dafeng carved too deeply into my bones to question? And if all that is set aside — if I am simply Fushu, no longer Zhuyou in name or role — what do I truly cherish? What could I serve with the whole of my remaining life?\n\nNight after night, I study the notes that Fufeng left behind across long decades. In my youth, I believed her impatient; yet every line she wrote on herbs and illnesses is meticulous and exact. Dry though such records may seem, she entrusted herself to them wholly, never allowing carelessness to take root. Her hand remains steady and precise, until she reaches the words \"The patient has recovered!\" There, her strokes loosen — swift and unrestrained. A century has passed, yet as I read those yellowed pages, the same quiet stirring rises in my chest.\n\nThrough them, I trace back the moments of simple, genuine joy, and I have come to understand this:\nThe joy of preserving a life was real — warm, steady, and bright. For one fated to die young, each life I managed to prolong became a fragment of the future I might never claim. And now, after a hundred years of sleep, to behold another rise restored and return to their own path in sound health... is enough to bring tears to my eyes. I know too well the sorrow of a life cut short before it begins — like a silkworm stifled within its cocoon, a bud struck down before bloom, a mayfly denied the dawn.\n\nI have tasted that fear. I shall not forget it. And I wish — simply as myself, not out of a Zhuyou's duty — that no one in this world should meet such an end.\n So I will continue as a healer. Yet this time, I will allow myself to grow old — and watch, with my own eyes, how far healing may carry itself in the span of my years.",
           TextMapId = "UI_CHAR_DATA_TEXT_24010405"
         },
         UI_CHAR_DATA_TEXT_31010101 = {
@@ -63706,7 +66130,7 @@ But when faced with the power of a bullet, everyone is equal. When she lifted a 
           TextMapId = "UI_CHAR_DATA_TEXT_31010204"
         },
         UI_CHAR_DATA_TEXT_31010301 = {
-          ContentEN = "Though counted among Sibylle's most trusted subordinates, Lynn lives with modest means.",
+          ContentEN = "Though Lynn is one of the most trusted subordinates of Sibylle, she is somewhat strapped for money.",
           TextMapId = "UI_CHAR_DATA_TEXT_31010301"
         },
         UI_CHAR_DATA_TEXT_31010302 = {
@@ -64060,6 +66484,97 @@ But no matter how her appearance altered, or how others viewed her, Hellfire kne
           ContentEN = "Hellfire's decision to let that sinner go years ago wasn't just a moment of shame for her but a seed that germinated within her, which later grew into an obsession. She constantly tortured herself with one question: What had driven her to abandon the principles she had upheld her entire life, to turn her back on the laws she revered, and to show mercy to a criminal?\n\nHellfire remembers everything about the sinner — her patterns, her crimes, her habitual lies, even the subtle gestures that betrayed her guilt. These memories are vivid in Hellfire's mind. Yet, as she tries to drown her thoughts in strong liquor, those sharp memories begin to blur, leaving only the night of her fateful mistake. The night was ablaze, the sinner's damning evidence reduced to ashes, and not even the snowfall could extinguish the flames. When Hellfire turned around, the sinner's face was clearly reflected in her eyes. The sinner, also labelled a monster, shared her story, and for the first time, Hellfire understood what it felt like to have someone to relate to. In the haze of her stupor, Hellfire briefly grasped that some things are harder to let go of than hatred — like the gnawing loneliness that erodes the soul.",
           TextMapId = "UI_CHAR_DATA_TEXT_32010405"
         },
+        UI_CHAR_DATA_TEXT_32020101 = {
+          ContentEN = [[
+After The Asphodel closes, the lights over the bar rarely go out with it. In their soft glow, Camilla stays behind the bar while all sorts linger at the counter. For Camilla, the night is when the work truly starts.
+She leaves the restocking to her staff and keeps her appointments at the counter. Now and then, a few words slip through the hush, "over the border" among them.]],
+          TextMapId = "UI_CHAR_DATA_TEXT_32020101"
+        },
+        UI_CHAR_DATA_TEXT_32020102 = {
+          ContentEN = "Even on her rare days off, Camilla never truly relaxes. More often than not, she is bent over her ledger, tallying every coin that comes in. She likes to say money is water: keep it moving and it keeps coming; hoard it, and it goes stagnant, seeping away a little at a time. When asked when she first understood the importance of money, she gives a faint, unreadable smile. \"At an early age,\" she says. \"Hunger teaches fast. So does a mother you wouldn't wish on anyone.\"",
+          TextMapId = "UI_CHAR_DATA_TEXT_32020102"
+        },
+        UI_CHAR_DATA_TEXT_32020103 = {
+          ContentEN = "Camilla's personal vault holds no real valuables. There is nothing but a few old keepsakes and two yellowed letters. One is older, worn and thumbed through from countless readings. The envelope reads: \"To my dearest Bertha\". The other is newer, in the same hand, and packed with venomous abuse.\nCamilla says both were written by her father, addressed to her mother. Set side by side, the tenderness of the first turns bitterly ironic, like wine sweetened to hide the poison — meant to draw Bertha close, only to hurt her all the more. Camilla recounts it without a flicker of emotion, as if it were an old story that happened to someone else entirely. Only her eyes betray anything at all: a faint ripple in their lake-dark depths, there and gone again.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32020103"
+        },
+        UI_CHAR_DATA_TEXT_32020201 = {
+          ContentEN = [[
+In Icelake, everyone knows the name Camilla Scarlet.
+Some swear by the drinks she mixes. Others marvel at her way with people. And for many, it is the secrets around her that keep them coming back. Camilla is a woman shrouded in mystery. Even those closest to her can tease apart every thread, watching, listening, prying, and still catch only a sliver of who she really is. To most, she remains an enigma. Best, perhaps, to think of her simply as the proprietress of The Asphodel.]],
+          TextMapId = "UI_CHAR_DATA_TEXT_32020201"
+        },
+        UI_CHAR_DATA_TEXT_32020202 = {
+          ContentEN = "Among Icelake's Charons, a quiet rumour makes the rounds: pay enough, and you may be able to buy \"freedom\" from Camilla. Her price depends entirely on her mood — anything from a king's ransom to a single, simple embrace. Naturally, there is no guarantee you will make it out safely. Camilla does not make promises, and she will not answer for whatever happens on the road. Even so, many are willing to gamble, placing their hopes of leaving Hyperborea in her hands.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32020202"
+        },
+        UI_CHAR_DATA_TEXT_32020203 = {
+          ContentEN = "On hushed winter nights, even a bottle striking the floor rang out sharp and clear. Tavern regulars' breath fogged the air, thick with the bite of spirits. Even on the quietest nights, Bertha — Camilla's mother — was there.\nIt was the same story every time. Little Camilla would come to haul her mother home once Bertha had drunk herself into a stupor. She was not tall enough, so she had to wedge her shoulder under Bertha's armpit, her fist knotted in the fabric of Bertha's coat. The half-finished bottle was tucked into the crook of her elbow; her free hand locked around Bertha's forearm. She inched them along, one step at a time, terrified they would go down together. By the time they reached the door, she was utterly spent. Then came the sounds from within: a bottle shattering, slurred curses, and the hard crack of a slap. No one ever heard the child's voice. All anyone saw was her silhouette, kneeling before Bertha in the dim amber light.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32020203"
+        },
+        UI_CHAR_DATA_TEXT_32020204 = {
+          ContentEN = "In the no-man's-land of Anarchos, everyone wants to be a Patriarch.\nA single frown can send his men scrambling. A few quiet words can decide who eats and who bleeds. In lawless Anarchos, a Patriarch runs things like the head of a household, laying down the rules the whole place lives by.\nCamilla's father was a Patriarch.\nHe was not born into the title. No one ever is. In his younger days, he was the one out front, heavy steel in his hands, his brothers-in-arms at his heels.\nAnd for all his hard edges, he did love someone. His fiancée — Camilla's mother.\nWhat is a young man? Fire that catches fast and burns on.\nWhat is a young woman? Ice that seals desire beneath a still surface.\nWhat began honey-sweet curdled into something bitter enough to burn.\nAt a sit-down that was already one wrong word from turning bloody, love-drunk and reckless, she shot the man who had insulted her fiancé.\nThat single shot lit the fuse. Two factions burdened with old grudges erupted into a war no one had planned. The other side eventually broke in fear and blood, but Camilla's father's faction paid dearly too. They lost friends, brothers, mothers, and their Patriarch.\nSo, before Camilla was even born, her father took the title for himself. With gunpowder still hanging in the air, he decreed her mother's fate. To bring a bitter victory to an end, she was sent away.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32020204"
+        },
+        UI_CHAR_DATA_TEXT_32020205 = {
+          ContentEN = "Jeff Ethan was a courier. In Icelake, people used to say he was the most reliable of the lot. Because he was the only one willing to cross the snowfields year after year, carrying letters between the cold streets of Icelake and the even colder wasteland of Anarchos. The road out there was vicious, the cold biting to the bone, and the Filthoids that prowled it were worse. Even for a Charon, it was punishing work.\nWhenever Jeff brought letters from the \"other side\" back into Icelake, word ran through Mist Aken that he was back. Within minutes, people would be two or three rows deep around him. At the centre of it all, Jeff was hemmed in by laughter, by tears, by long-held breaths finally let go. Some at last learned that their family who had slipped across the border were safe and had managed to make a life there, and they turned in circles, giddy with relief. Some learnt a friend, or a brother, had been killed in a clash between rival factions, and a raw, ragged cry tore out of them. Most, though, received no word at all, and left with nothing but a long, hollow sigh.\nNow Jeff no longer had to listen to any of it. After twenty years of hard work, he had finally saved enough for three seats on the southbound express — enough to take him, his wife, and his daughter somewhere warm. He would never have to haul that battered old cart across the snowfields again.\nIn all those years, the biggest payment he ever received came from a noblewoman in Anarchos. She had the air of someone who could decide whether you lived or died without ever raising her voice. She pressed a heavy pouch of gold into Jeff's hands and named her price. She meant to punish her unfaithful husband. Jeff was to intercept every letter he carried between the husband and a woman in Icelake named Bertha, hand the originals over to her, and deliver, in their place, the letters she had prepared. The money was enough to buy him ten years off the road.\nIn carrying letters between the three of them, Jeff learnt more than they ever meant him to know, and slowly pieced the story together. At night he lay awake in his cart, staring into the dark, wondering whether he ought to tell those star-crossed lovers the truth. But the snow came down hard that night. It piled up until its weight bowed the cart's canvas roof and collapsed it. Jeff muttered a curse at the storm, turning the same thoughts over and over. Could he still reach Icelake with the cart half-broken? How much would repairs cost? And then, as always, his mind slid back to his wife and little girl at home. Were they asleep? Or lying awake too, cold in their bones?\nIn the end, he kept his mouth shut. The one deceiving both sides was that spiteful noblewoman, and her husband had brought it on himself. And Bertha, that madwoman, always took it out on her poor daughter. None of them deserved happiness. And what was it to Jeff, really? He was only a courier. He delivered letters. That was all he could do, and all he needed to do.\n \n\"Darling,\" his wife said, wrapping her arms around his waist and looking up at him. \"The place we're going to... it's much warmer there, isn't it?\"\nFor some reason, the quiet longing in her smile made a name flicker through his mind. Bertha. The madwoman who had died years ago. Jeff gave a sharp, sudden shudder, as though the cold had found a way under his skin. His wife watched him, worry tightening her face.\nHe patted her shoulder reassuringly and tightened his grip on the tickets. They read: Icelake – Bloomfield Station, Aurora Express.\n\"Yes,\" he said. \"From now on, you and me, and our daughter, we'll never be cold again.\" As he spoke, he seemed to see it: Sunlight somewhere far away, warm on his face, and fields alive with flowers.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32020205"
+        },
+        UI_CHAR_DATA_TEXT_32020301 = {
+          ContentEN = "Camilla was born in Icelake, but her origins lie elsewhere.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32020301"
+        },
+        UI_CHAR_DATA_TEXT_32020302 = {
+          ContentEN = "Camilla draws a strict line between business and personal ties. Even so, when an old regular falls on hard times, she still sets their usual in front of them — on the house, just enough to take the edge off for a while.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32020302"
+        },
+        UI_CHAR_DATA_TEXT_32020303 = {
+          ContentEN = "In her early years, Camilla despised alcohol. Its smell did nothing but remind her of her mother's abuse. By the time her mother sobered up, Camilla was already bruised all over. Tearful apologies would follow, but they never made any difference. It was not until serving drinks finally put food on the table that she began to make her peace with it. In time, she even developed a taste for it.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32020303"
+        },
+        UI_CHAR_DATA_TEXT_32020304 = {
+          ContentEN = "Camilla's scar came from her mother, who slashed her with the metal edge of the family crest badge. Camilla was too young to understand what it meant. All she remembered was how it glittered in the light, cold and almost beautiful.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32020304"
+        },
+        UI_CHAR_DATA_TEXT_32020305 = {
+          ContentEN = "Camilla once came close to ending her own life, and her mother's with it, to put a stop to the misery. At the last moment, she changed her mind. Years later, when her mother died, no one mourned her more deeply than Camilla. And no one felt more relieved.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32020305"
+        },
+        UI_CHAR_DATA_TEXT_32020401 = {
+          ContentEN = "The wind carried a faint tang of blood. Camilla stepped out of the carriage and stared into the distance. She knew what lay beyond the horizon. She knew the name of that place.\n \"Home.\"\nIt was no good land. Barren and desolate, colder even than Icelake, it seemed to exist only to prove that people could survive in a climate this harsh. That was why no one cared to fight over it: not the Askard tribes, keeping to their fjords and cut off from the world; not the Khemet, who had long since built their lives around oases; not even the Hyperborean Empire, for all its appetite for new territory. But with no one in charge, the place could open its arms to the unwanted. Over time, it drew people in: the poor ground down by taxes, Charons trying to get out from under Hyperborea's boot, and the usual runaways — vagrants, criminals, smugglers. Where order is absent, people make their own rules. Crude rules. Survival rules.\nThe wind combed through her hair like an old friend, welcoming her back for a visit. She'd skirted that grey borderland more than once. She just never crossed it.\nWhy not? Part of her wanted to see for herself what kind of place could shape its people into that: a mother hysterical, a father cold and heartless.\nAnd yet she hesitated.\nEverything she knew about that home, and the people in it, came from her mother's complaints, like an old letter she was never meant to read. She could almost sense the danger in it. If she ever opened it, she feared everything she had now might be as fragile as yellowed paper, ready to crumble at a touch.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32020401"
+        },
+        UI_CHAR_DATA_TEXT_32020402 = {
+          ContentEN = [[
+Camilla still remembers the evening the first letter arrived, and the moment she took it from the courier. She was a teenager then. She hugged it to her chest and ran home as fast as her legs would carry her. She could not stop thinking about what it said: that her father missed her mother dearly, and that he had only just learnt he had a daughter. He could not have been happier. Her heart raced so hard it hurt. So the "home" her mother had spoken of for years was real after all, not just something she had invented in desperation.
+In Bertha's telling, that "home" was a place of rival factions, forever mired in chaos and clashes: lawless ground where violence and crime had taken root. Compared with Hyperborea, it sounded like a different kind of curse. And yet Bertha was obsessed with it for some reason. Perhaps because she had not left of her own will. She had been driven out by Camilla's father. Desperate, she drifted until she reached Icelake, and there, with humiliation and bitterness coiled inside her, she gave birth to Camilla.
+The man's letter told a different story. He had had no choice. Family. Feuds. Rules. Camilla could read the words, but she did not understand the weight they carried. Even so, she could feel them cutting into her mother, leaving wounds that would not close. Still, the letter made it sound as if the worst was over.
+That night Bertha did not drink. But her hands shook as she unfolded the page, harder than they ever had on a bottle. She cried, then laughed, then cried again, lost and helpless as a child. She wrote back through the night, and at dawn, in the mist, she slipped an envelope heavy with hope into the post box.
+Nothing came back.
+She told herself the postman must have lost it somewhere on the road, so she wrote again, and again. Whenever Camilla asked, her mother would stroke her cheek and murmur the same reassurance: her father was an important man with too much on his plate. Once he had dealt with the family business, he would come for them.
+ For a while, she even stopped drinking. She took work as a maid in a wealthy household. And whenever she had a spare moment, she would wander to the city gates and stare down the road beyond the walls, certain that one day a familiar figure would emerge from wind and snow.
+ It felt like things were finally turning around. Then the second letter arrived, the day before Camilla came of age.]],
+          TextMapId = "UI_CHAR_DATA_TEXT_32020402"
+        },
+        UI_CHAR_DATA_TEXT_32020403 = {
+          ContentEN = "The day before Camilla's eighteenth birthday, she and her mother finally received another letter from the place they called \"home\". It was from her father, the man her mother had missed until it hurt. She almost burst with joy. Waving the letter above her head, she hurried along the muddy track with her arms spread wide, spinning as she went, light-headed with happiness.\nCamilla called after her to slow down, to watch her step. Her mother did not hear. She just kept talking — about what had been, and, more than anything, what would be. They would have everything. Money to spare. Love enough to drown in. Under the dim streetlamps, her shadow stretched long across the ground, like a girl caught mid-dance. Camilla smiled and let out a quiet breath. For a moment, the roles felt reversed: she the parent, her mother the besotted teenager.\nWhen they finally made it home, her mother lit a candle, then opened the envelope with careful hands and unfolded the letter.\n Her voice cut off mid-sentence. The flame gave a small, nervous flutter, throwing harsh light across her eyes. Her mouth fell open. The smile froze in place. Camilla could not see the page, but she knew at once: this was not a letter written in love.\nFor a heartbeat there was silence. Then her mother made a sound Camilla had never heard before — hoarse and raw, like the howl of a wounded beast.\nA chair toppled as the woman kicked it over. A plate hit the wall. Then a bowl of soup. One dish after another smashed and splattered, bursting into stains that clung to the plaster. Camilla sighed and started cleaning. She had been doing it since she was little. When the broomhead nudged the letter on the floor, she glanced down.\nIt was the same familiar hand, the one they had seen in the first letter. Only now there was no warmth in it at all. The lines were cold, shot through with obscenities. He told them to rot in Hyperborea and never write to him again. Their letters were nothing but a nuisance, and he was finished with them. Back home he already had a wife and a son. Even after his wife died, he still wanted nothing to do with them. That first letter, he said, was drunken rambling. He had not meant a word of it. Bertha was a stain on the family name, and he would not drag that stain into the light again.\nYes. Their very existence was the disgrace.\nCamilla looked at her mother slumped over the table, sobbing herself hollow. She went back to her room without a word. She never expected the warmth of a hug from her mother. She only wished her mother would not lash out at her when pain soured into rage.\nThe next morning, the house was too quiet. Camilla went to wake her mother as usual. She touched her shoulder, only to find her cold as the snow falling over Icelake. Empty bottles littered the floor around her bed.\nCamilla was not surprised. She had watched this moment play out in her nightmares for years. She bit her lower lip, but no tears came. After a long while, she sat down beside her mother and held her gently, as if she might fall apart.\nWhen she finally forced herself to her feet and began to think about what had to be done next, her eyes caught on the table she had scrubbed clean the night before. There, sitting quietly, was a birthday cake — something she had always longed for and never once tasted.\nThat was how Camilla Scarlet came of age.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32020403"
+        },
+        UI_CHAR_DATA_TEXT_32020404 = {
+          ContentEN = [[
+In Icelake, the long nights were bitter enough to make anyone shiver. The wind bit at little Camilla's ears until they burned red. Her lips were so stiff she could barely form words, and every breath filled her lungs with air so cold it made her dizzy. She was close to breaking.
+If her mother drank less, maybe they would have a decent coat between them. Maybe her mother would not hit her so often. Maybe they would not have to live on credit, wondering where the next meal would come from.
+But would giving up drink be enough? Camilla could only manage a bitter half-smile. Alcohol was only part of their misery. The real weight was the pain her mother could neither live with nor escape. Tonight, it was a literal weight: the slumped body Camilla had to half-carry home, her mother dead drunk in her arms. The wind only grew sharper. Her fingers went numb around her mother's arm. The strap of the half-empty bottle cut into her wrist with every step, reopening old wounds her mother had left there years ago. And her mother, half-asleep, sagged against her as if none of it had anything to do with her.
+Camilla could not live like this any longer.
+ She steered her mother towards the lake. The ice had thinned in places, thin enough to give way under two bony women.
+She found herself moving fast, almost eager, as if what waited ahead was not an abyss but salvation.
+At the water's edge, her mother stirred, briefly awake.
+"...Are you cold?" Her eyes were half-lidded as she fumbled for her coat and, swaying, draped it over Camilla's head. "Let's go home. I'll make a fire." She mumbled, and slipped back into sleep.
+She was right. The lake would be too cold on a night like this.
+Maybe they should go home. Make a fire. Warm their numb fingers first. Then she could think again.
+The wind eased. The snow softened, wrapping them up, as if ushering them back towards home.]],
+          TextMapId = "UI_CHAR_DATA_TEXT_32020404"
+        },
         UI_CHAR_DATA_TEXT_33010101 = {
           ContentEN = [[
 You first met Margie in The Asphodel. In stark contrast to the tavernkeeper's unruffled demeanour, the girl appeared frantic and dishevelled, evidently in urgent need of help.
@@ -64194,7 +66709,7 @@ The feud eventually came to a close when Old Martin, in a display of theatrical 
           TextMapId = "UI_CHAR_DATA_TEXT_41010204"
         },
         UI_CHAR_DATA_TEXT_41010301 = {
-          ContentEN = "Rhythm has an unshakable preference for symmetry.\nShe arranges her belongings with a meticulous eye: everything neatly aligned, evenly spaced, perfectly ordered. Her outfits follow suit — structured, balanced, never a thread out of place. Which is precisely why one thing has always bothered her: her horns are asymmetrical. Every time she looks in the mirror, she imagines a second one sprouting to match the first.\n\nAs a child, she once found a twig curved just like her horn. She wore it proudly for days, delighting in the fleeting illusion of symmetry — until it was caught in a factory press during a shift, ground into dust, and paved into the foundations beneath Icelake's streets.\n\nIf the Empire ever develops cosmetic horn enhancements or transplants, Rhythm would almost certainly be first in line.",
+          ContentEN = "Rhythm has an unshakable preference for symmetry. She arranges her belongings with a meticulous eye — everything neatly lined up, evenly spaced, immaculately ordered. Her outfits follow suit, always structured and balanced. Which is precisely why one thing has always troubled her: her horns aren't symmetrical. Every time she looks in the mirror, she can't help but imagine a second horn sprouting to match the first.\nAs a child, she once found a twig shaped remarkably like her horn. She wore it proudly for days — until it was dragged into a factory press during a shift, ground to dust, and lost forever, part of the foundation beneath Icelake's streets.\nIf the Empire ever pioneers cosmetic horn enhancements or transplants, Rhythm would almost certainly be first in line.",
           TextMapId = "UI_CHAR_DATA_TEXT_41010301"
         },
         UI_CHAR_DATA_TEXT_41010302 = {
@@ -64240,7 +66755,7 @@ It made you wonder: without that incident, would Zhiliu have walked a different 
           TextMapId = "UI_CHAR_DATA_TEXT_41020104"
         },
         UI_CHAR_DATA_TEXT_41020105 = {
-          ContentEN = "Coming Soon",
+          ContentEN = "You recall that walk at sunset. Twilight settled over the world like a cloak, rendering everything soft and strange — even her expression.\nThe flawless mask she wore melted away in the amber glow. Bit by bit, her true heart surfaced: regret, sorrow, defiance... and above all, pure gratitude.",
           TextMapId = "UI_CHAR_DATA_TEXT_41020105"
         },
         UI_CHAR_DATA_TEXT_41020201 = {
@@ -64268,7 +66783,7 @@ After much deliberation, they decided they valued a peaceful, happy life for her
           TextMapId = "UI_CHAR_DATA_TEXT_41020204"
         },
         UI_CHAR_DATA_TEXT_41020205 = {
-          ContentEN = "Coming Soon",
+          ContentEN = "The Great Turmoil of Haojing is burned into the collective memory of Huaxu. It was a storm that raged and vanished within a single day, miraculously leaving few casualties in its wake.\nIn the retelling of those fleeting hours, many praise the striking arrival of {nickname} or the Drifters' tireless heroism. Yet, when it comes to the architect of the chaos — Zhiliu, the once-revered High Chancellor of Loongyuan — most fall silent.\nThe Three Ministries later ruled that while Zhiliu intended to reform the Nine Chapters of Dafeng, her methods were reckless. By bypassing authority and acting alone, she had violated the fundamental principles of justice.\nIf {nickname} and the Drifters hadn't recovered the Jade of Equilibrium in time, how deadly would the fallout have been? As anxiety and resentment simmered in the streets, Zhiliu seemed to sense the shifting tide. In a silent acknowledgement of the public mood, she voluntarily resigned as Head of the Ministry of Fortune.\nHowever, a reforming Huaxu was fragile. The nation needed sharp, experienced minds to navigate the wreckage. The Three Ministries continued to consult Zhiliu on grave matters. She could have turned them away, yet she accepted every task, burning the midnight oil to untangle the nation's thorniest problems. Over time, the public's cold scrutiny turned into grudging respect, and then something deeper. She bore it all with characteristic calm. \nPerhaps this service is her penance. Or perhaps, she simply hasn't given up hope for the future of Huaxu.",
           TextMapId = "UI_CHAR_DATA_TEXT_41020205"
         },
         UI_CHAR_DATA_TEXT_41020301 = {
@@ -64280,21 +66795,16 @@ Yet, few realised that Zhiliu herself was the one fanning these flames.
 Far from suppressing the gossip, she allowed it to spread. Her reasoning was cold and pragmatic: "fear" was a bargaining chip that could be put to good use.
 If people held her in high regard but felt no trepidation, they might eventually overstep their bounds. By subtly manipulating public perception, Zhiliu ensured she could navigate the treacherous web of power with absolute control.]],
           TextMapId = "UI_CHAR_DATA_TEXT_41020301"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CHAR_DATA_TEXT_41020302",
-    MaxKey = "UI_CHAR_NAME_4102",
-    Loader = function()
-      return {
+        },
         UI_CHAR_DATA_TEXT_41020302 = {
           ContentEN = "The Wuqiongzang Sect boasts of arts that can glimpse the Mandate of Heaven. Yet, during Zhiliu's very first lesson, Master Jingyuan offered a blunt truth: \"The Mandate cannot be known.\"\nWe may deduce and calculate, exhausting every possibility to sketch the outline of fate, but destiny remains cruel and elusive. To believe one can truly anchor the future is nothing but a fool's fantasy.\nJingyuan then shared a second maxim: \"Though the Mandate is unknowable, human agency remains.\"\nIf a diviner can deceive the world — and even themselves — they might just be able to bend fate to their desire.",
           TextMapId = "UI_CHAR_DATA_TEXT_41020302"
         },
         UI_CHAR_DATA_TEXT_41020303 = {
-          ContentEN = "Coming Soon",
+          ContentEN = [[
+Zhiliu paid only two visits to Keming's grave.
+The first was when the mound was fresh; she stood in the rain, watching from afar, never daring to draw close.
+The second was the day she steeled her heart. Standing before the now moss-covered stone, she gently laid down the jade pendant she had kept since childhood, then walked away without looking back.]],
           TextMapId = "UI_CHAR_DATA_TEXT_41020303"
         },
         UI_CHAR_DATA_TEXT_41020304 = {
@@ -64302,7 +66812,10 @@ If people held her in high regard but felt no trepidation, they might eventually
           TextMapId = "UI_CHAR_DATA_TEXT_41020304"
         },
         UI_CHAR_DATA_TEXT_41020305 = {
-          ContentEN = "Coming Soon",
+          ContentEN = [[
+Zhiliu devoted her life to a single goal: ending the Nine Chapters of Dafeng and the Age of Gods. Yet, deep in her long conspiracy, she struggled to say if her path was still one of justice.
+The more she witnessed, the more she saw good and evil as twins, and high principles as veils for private desire. With the definition of righteousness blurring, her old justifications grew frail under scrutiny.
+In the end, she decided to stop searching for a moral defense. She would simply accept this deed as the one act of willfulness allowed in her lifetime.]],
           TextMapId = "UI_CHAR_DATA_TEXT_41020305"
         },
         UI_CHAR_DATA_TEXT_41020401 = {
@@ -64310,7 +66823,7 @@ If people held her in high regard but felt no trepidation, they might eventually
           TextMapId = "UI_CHAR_DATA_TEXT_41020401"
         },
         UI_CHAR_DATA_TEXT_41020402 = {
-          ContentEN = "Coming Soon",
+          ContentEN = "After months of locking myself away, I finally stepped out of my room.\nThe sunlight was blinding. As I watched the plane tree leaves shivering in the breeze, their veins nearly transparent against the glare, I felt utterly alienated — like a ghost returning to the living. It had been months since he died, yet the world hadn't changed at all. It kept spinning, busy and loud as ever. The only difference was that the man who gave his life to shield a little girl in a collapsing cave was gone.\nUncle Li was sweeping the courtyard. When he saw me, he dropped his broom and rushed over, eyes wide with surprise. \"You finally came out. How... how are you holding up?\"\nHe asked cautiously, terrified of the answer. Over these last few months, I've learned that people only want \"normal\" conversations. They can't handle anything that breaks the script. If I spoke the ugly truth, those kind smiles would vanish instantly. Truth is like molten lead dropped on ice — it burns right through the comfortable surface of their lives. So, I gave him the smile he wanted to see. \"Uncle Li, I'm okay. It's all in the past now.\"\nUncle Li looked stunned for a moment before his face lit up with sheer relief. He abandoned his broom and ran to the main house to break the news to Father and Mother.\nThat night, we sat around the dinner table as a family for the first time in ages. Father and Mother didn't say much. They just kept piling my bowl with my favorite foods.\nBefore I slept, Father came to sit with me. On his way out, he squeezed my shoulder and sighed, \"You've suffered enough.\"\nMother came in a while later. I could see new lines etched into her forehead and fresh grey at her temples. She sat close on the edge of the bed, holding my hand, and whispered, \"Please... just forget it happened. Do it for us. You might think I'm asking you to be a coward, or that it's unfair, but this is just how the world works... You have to let it go to have a future.\"\nI smiled and agreed to every word.\nI used to memorize Master Jingyuan's teachings like dead facts, mindlessly copying her social graces without understanding the \"why.\" But now, the true weight of her lessons finally hit me.\nWhen I was running myself ragged at the Hall of Adjudication, begging for justice for Keming, all I got were cold stares. Then, when I gave up and locked myself away, I could feel the silent judgment of those around me pricking my skin like thorns — their disappointment, their worry, their impatience. I used to live in a bubble, blind to the way things really are. But Mother's plea woke me up. I finally see the truth: I have to understand the machinery of this world. I need to see how public opinion is manipulated and how invisible authority shapes reality. I have to study where power comes from, how to grab it, and how to use it — even if the injustice of it makes me sick.\nYes. I must learn the system and become part of it. Only then can I fight it — and burn it to the ground. My mind is made up.",
           TextMapId = "UI_CHAR_DATA_TEXT_41020402"
         },
         UI_CHAR_DATA_TEXT_41020403 = {
@@ -64318,11 +66831,11 @@ If people held her in high regard but felt no trepidation, they might eventually
           TextMapId = "UI_CHAR_DATA_TEXT_41020403"
         },
         UI_CHAR_DATA_TEXT_41020404 = {
-          ContentEN = "Coming Soon",
+          ContentEN = "Terracotta soldiers shattered into dust as the Bi'an swarmed like a rising tide. Sensing a threat to its inner sanctum, the Nine Chapters of Dafeng lashed out in desperation, shaking the Taixu Mausoleum with tremors of shock and fury. Yet, every defence has a breaking point, provided one is willing to bleed for it.\nI lost all sense of time before the spiritual guardians finally went still. Silence reclaimed this high and solemn hall, just as it should be.\nI took stock of my wounds and stepped past the wreckage, moving toward my end. Here, my lifelong plot to slay a god would finally come to fruition.\nAs magic ebbed from my veins, taking my life force with it, the shadowy whispers in my mind sharpened into clarity. \"What is a life worth living for?\" they asked. \"The fear of death hadn't vanished. It never truly leaves.\"\nEven knowing my death would topple Huaxu and right every wrong, I couldn't stop the trembling deep in my bones.\nMist curled around me. Just as death's cold grip began to tighten, I saw {性别：his|her} silhouette.\n{性别：He|She} had come with a command: Live. Bear witness.\nSeven years ago, I was saved for the first time. Seven years later, I found salvation once again.\nGiven the horrors of my childhood, I could hardly call my life \"lucky.\"\nYet, I cannot call myself unfortunate, either — for I have met {nickname}.",
           TextMapId = "UI_CHAR_DATA_TEXT_41020404"
         },
         UI_CHAR_DATA_TEXT_42010101 = {
-          ContentEN = "Once, you happened to catch a glimpse of the scars criss-crossing Yuming's skin.\n \n The Nine Chapters of Dafeng can mend its enforcers' injuries — but only the ones that would hinder them in battle. The rest remain, etched into the skin for good. Over time, the marks layer over one another until they stop looking like wounds at all, but a permanent part of him.\n \n In Icelake's taverns, some of the more boisterous Phoxhunters wear their scars like badges of honour, flashing them whenever the ale starts flowing. Yuming is clearly not that sort. Yet there are so many that it's hard to believe they're all chance.\n \n You've heard that, in the far south where the Elysian Church holds sway, some ascetics flog themselves — offering pain as a testament to their faith. Yet you see none of that steadfast devotion in Yuming. Quite the opposite: gloom and doubt always gather in his eyes. The way he throws himself into danger makes you suspect those scars come from something darker than duty — self-loathing and self-reproach, perhaps — as if he's trying to atone for something that won't forgive him.",
+          ContentEN = "Once, you happened to catch a glimpse of the scars criss-crossing Yuming's skin.\n\nThe Nine Chapters of Dafeng can mend its enforcers' injuries — but only the ones that would hinder them in battle. The rest remain, etched into the skin for good. Over time, the marks layer over one another until they stop looking like wounds at all, but a permanent part of him.\n\nIn Icelake's taverns, some of the more boisterous Phoxhunters wear their scars like badges of honour, flashing them whenever the ale starts flowing. Yuming is clearly not that sort. Yet there are so many that it's hard to believe they're all chance.\n\nYou've heard that, in the far south where the Elysian Church holds sway, some ascetics flog themselves — offering pain as a testament to their faith. Yet you see none of that steadfast devotion in Yuming. Quite the opposite: gloom and doubt always gather in his eyes. The way he throws himself into danger makes you suspect those scars come from something darker than duty — self-loathing and self-reproach, perhaps — as if he's trying to atone for something that won't forgive him.",
           TextMapId = "UI_CHAR_DATA_TEXT_42010101"
         },
         UI_CHAR_DATA_TEXT_42010102 = {
@@ -64344,12 +66857,8 @@ It's hard to believe Outer Peaks kept anything like it. The explanation is that 
 Kezhou wanted to cut it down and be done with it, but a Jishu Sect disciple stopped him at once. He almost came to blows with the man. In the end, he swallowed it, lowered his sword, and stalked off.]],
           TextMapId = "UI_CHAR_DATA_TEXT_42010104"
         },
-        UI_CHAR_DATA_TEXT_42010105 = {
-          ContentEN = "Coming Soon",
-          TextMapId = "UI_CHAR_DATA_TEXT_42010105"
-        },
         UI_CHAR_DATA_TEXT_42010201 = {
-          ContentEN = "The Magistrates of Yingtian are renowned throughout Huaxu. As enforcers of Heaven's mandate, they inspire awe and admiration wherever they go. More often, though, the prevailing feeling is wary reverence, edged with fear. Wherever they pass, the crowd parts like water: grateful for the protection they offer, yet eager to keep its distance from the death and strife that follow in their wake.\n \n People relish tales of their deeds, yet no one has ever known the true name of even a single Magistrate of Yingtian. Ask about it, and they'll knit their brows, trying to dredge up some vivid example — someone they knew who was once summoned into the Nine Chapters of Dafeng. In the end, they abandon the effort as a fool's errand. A sigh, then a muttered line: \"Heaven's authority cannot be fathomed.\" Most Magistrates of Yingtian wear ferocious beast-helms fashioned after Bi'an. Their Loongscion features hidden behind the mask, and the mystery only deepens.\n \n Yuming stands out among them: black hair, dark robes, and his face left uncovered. His expression is always impassive. He comes and goes alone, heading straight to wherever trouble strikes within his jurisdiction and keeping dealings with others to a minimum. There is an air about him that keeps everyone at arm's length. See that silhouette often enough, and you remember it without meaning to.\n \n Few have ever heard him speak. Most who have were passers-by who blundered into the middle of his work and were sent away with brief, formal courtesy. There is only one exception: a child who saw Yuming once and insisted, \"The officer in black was really nice!\"\n \n \"That day I was chasing a bee, and when I looked up, people were fighting with spears and blades. I just froze. Then he came out of nowhere and stood in front of me — he blocked the bad guy's attack!\"\n \"It was the first time I'd ever seen a Magistrate of Yingtian! I was so excited. I told him he was amazing, and that I wanted to become a Magistrate of Yingtian like him one day!\"\n \"But... he didn't seem happy to hear that. He said things I couldn't understand. Something like, being a Magistrate of Yingtian means getting in a car... cerated? And he told me not to do it...\"\n \"What? ...Do you mean 'incarcerated'...?\"\n \"Nah-uh, it can't be that. Why would a Magistrate of Yingtian say something like that? Serving Lord Argent is an honour! Your whole family would be proud of you. You'd be happy — not warning people away!\"\n \n The crowd dismissed it as a child's imagination. A few people chuckled, and the onlookers soon dispersed. The boy lingered, pouting and on the verge of tears, until the scent of a freshly made sugar figurine tickled his nose and drew him away. No one spoke of it again. It slipped quietly out of memory, lost to an otherwise ordinary autumn afternoon.",
+          ContentEN = "The Magistrates of Yingtian are renowned throughout Huaxu. As enforcers of Heaven's mandate, they inspire awe and admiration wherever they go. More often, though, the prevailing feeling is wary reverence, edged with fear. Wherever they pass, the crowd parts like water: grateful for the protection they offer, yet eager to keep its distance from the death and strife that follow in their wake.\n\nPeople relish tales of their deeds, yet no one has ever known the true name of even a single Magistrate of Yingtian. Ask about it, and they'll knit their brows, trying to dredge up some vivid example — someone they knew who was once summoned into the Nine Chapters of Dafeng. In the end, they abandon the effort as a fool's errand. A sigh, then a muttered line: \"Heaven's authority cannot be fathomed.\" Most Magistrates of Yingtian wear ferocious beast-helms fashioned after Bi'an. Their Loongscion features hidden behind the mask, and the mystery only deepens.\n\nYuming stands out among them: black hair, dark robes, and his face left uncovered. His expression is always impassive. He comes and goes alone, heading straight to wherever trouble strikes within his jurisdiction and keeping dealings with others to a minimum. There is an air about him that keeps everyone at arm's length. See that silhouette often enough, and you remember it without meaning to.\n\nFew have ever heard him speak. Most who have were passers-by who blundered into the middle of his work and were sent away with brief, formal courtesy. There is only one exception: a child who saw Yuming once and insisted, \"The officer in black was really nice!\"\n\n\"That day I was chasing a bee, and when I looked up, people were fighting with spears and blades. I just froze. Then he came out of nowhere and stood in front of me — he blocked the bad guy's attack!\"\n\"It was the first time I'd ever seen a Magistrate of Yingtian! I was so excited. I told him he was amazing, and that I wanted to become a Magistrate of Yingtian like him one day!\"\n\"But... he didn't seem happy to hear that. He said things I couldn't understand. Something like, being a Magistrate of Yingtian means getting in a car... cerated? And he told me not to do it...\"\n\"What? ...Do you mean 'incarcerated'...?\"\n\"Nah-uh, it can't be that. Why would a Magistrate of Yingtian say something like that? Serving Lord Argent is an honour! Your whole family would be proud of you. You'd be happy — not warning people away!\"\n\nThe crowd dismissed it as a child's imagination. A few people chuckled, and the onlookers soon dispersed. The boy lingered, pouting and on the verge of tears, until the scent of a freshly made sugar figurine tickled his nose and drew him away. No one spoke of it again. It slipped quietly out of memory, lost to an otherwise ordinary autumn afternoon.",
           TextMapId = "UI_CHAR_DATA_TEXT_42010201"
         },
         UI_CHAR_DATA_TEXT_42010202 = {
@@ -64363,10 +66872,6 @@ Kezhou wanted to cut it down and be done with it, but a Jishu Sect disciple stop
         UI_CHAR_DATA_TEXT_42010204 = {
           ContentEN = "Outer Peaks was rumoured to be unreachable. But it was never wholly cut off from the outside world. Every few months, a handful of traders and itinerant physicians would still make the climb, bringing the necessities of daily life. That was how word of the massacre four years ago slipped out — piecemeal, in fragments and whispers. And the farther it travelled, the less it resembled the truth.\n\nOne version claimed it had been an internal feud. Two factions turned on each other, blades drawn, fighting from the mountain's foot to its summit, from first light until the sun dropped for the last time. In the end, they said, the worst of it played out around the assembly grounds. When it was over, broken weapons and Drifters' bodies lay strewn along the mountain path, and few were left able to stand.\n\nAnother tale blamed the Jishu Sect's construct: a failed invention, they said — a massive mechapuppet that went wrong and cut through Outer Peaks in the dead of night, scouring the place clean while everyone slept, like a machine built for slaughter.\n\nThere was even a third story: that the Sentinels of Juntian had finally found the place and wiped it out in a single sweep, cutting away a long-festering threat near the Nine Chapters. But no proclamation ever followed, and the Drifters did not vanish. That version quickly lost what little credibility it had.\n\nNo one could agree on what had really happened. But one thing was beyond dispute: Outer Peaks bled that day. With a go-between to make the arrangements, the Yan family's coffin shop was nearly cleaned out. Coffins were hauled deep into the mountains. Afterwards, self-proclaimed \"witnesses\" started turning up, each peddling a tale more outlandish than the last, all for the sake of attention. As for the one person who had truly been there — an apothecary from Zesheng Pharmacy — he said nothing at all.\n\nIt was not until the year-end gathering that the subject surfaced again. Light snow drifted down outside. Charcoal crackled softly in the brazier. After several rounds of drinking, with tongues loosened and cheeks faintly flushed, someone mentioned Outer Peaks in passing. A young apprentice, fond of Drifter storybooks, froze when he realised the older apothecary at his table had been involved. His eyes lit up. He wouldn't let it go, pressing for the truth — until, at last, the elder spoke.\n\n\"The stories are all wrong. It was Deterioration.\"\n\"Deterioration?\" The apprentice frowned. \"What's that?\"\nThe elder studied the fresh-faced apprentice for a moment, then let out a quiet sigh, shaking his head gently.\n\"You were born and raised in Haojing. You've never travelled far. Of course you wouldn't know.\" He paused. \"Go beyond Huaxu. Cross the sea to the Hyperborean Empire, and you'll see people blanch at the word.\"\n\"Even our founding master, Fufeng, spent half her life studying it before she grasped even the barest outline. You're only just starting out. Keep learning, and one day you'll understand.\"\n\"We Huaxu folk have been fortunate. Under Lord Taihao's protection, Deterioration was cut off long ago. As for the Drifters... they brought it on themselves. They tried to build some contrivance to shut out the Nine Chapters' reach. What do you think happens once that protection is gone?\"\n\"But... aren't the Drifters all good fighters? Is Deterioration really that dangerous... that it could kill them all...?\"\n\"Being good with a weapon won't save you from something you don't understand — something that strikes without warning. Huaxu hasn't had to fear Deterioration for a long time. People stopped watching for it. And that girl had been slightly hard of hearing since childhood. When the early signs appeared and her senses began to dull, no one recognised the danger in time.\"\n\"To make matters worse, the Filthoid she became was exceptionally vicious. And through a chain of accidents and missteps... that's how so many ended up dead.\"\n\"Still... I don't think the Drifters were villains. They only wanted to step off the beaten path, to see whether there was another way to live. And without meaning to, they paid a price far, far too cruel.\"\n\"In the end, they were only poor souls.\"",
           TextMapId = "UI_CHAR_DATA_TEXT_42010204"
-        },
-        UI_CHAR_DATA_TEXT_42010205 = {
-          ContentEN = "Coming Soon",
-          TextMapId = "UI_CHAR_DATA_TEXT_42010205"
         },
         UI_CHAR_DATA_TEXT_42010301 = {
           ContentEN = "Ever since Yuming became a Magistrate of Yingtian, almost no one has known his true name any longer, as if the title erased everything that came before.\n\nIronically, the few who still remember the name \"Yuming\" are the shrewd types in Haze Market: people who operate on the Nine Chapters' fringes, always hunting for loopholes to exploit.\n\nAfter crossing paths with him a few times, the black-market crowd began passing his name around, along with his distinctive manner of dress. They even managed to unearth much of his history from his days as a Drifter in Outer Peaks. The leap from violent offender to Heaven's enforcer was so absurd it sent a buzz through the whole black market. A few even gave a rueful sigh, as if the turn of fate struck a little too close to home. They were already looking for ways to use it to their advantage — until Mr Qiu stepped in with that signature, unreadable smile and quashed the notion before it could take shape.\n\nIn a sense, the Haze Market crowd knew the man called \"Yuming\" better than the law-abiding citizens who admired the Magistrates of Yingtian from a safe distance.",
@@ -64386,16 +66891,12 @@ After he left Outer Peaks, the Drifters changed every route and entry he once kn
           TextMapId = "UI_CHAR_DATA_TEXT_42010302"
         },
         UI_CHAR_DATA_TEXT_42010303 = {
-          ContentEN = "Yuming was forever covering for Buxia — against his better judgment. That meant keeping more of her secrets than he wanted to. But there was one thing she told only Su Yi. They hadn't known each other long, and they were separated by several generations in the lineage. Even so, they were the same age, and they took to each other at once.\n \n Buxia said she was preparing a \"big surprise\" for Yuming at her coming-of-age ceremony. As for what it was, she only smiled and refused to tell.\n \n \"What about Kezhou?\" Su Yi asked.\n \"Not a chance,\" Buxia said at once. \"He doesn't get one.\"\n \n After a moment, she admitted — awkwardly, as if forcing the words out — that she'd caused one trouble after another and put her shixiong Yuming through no end of it. Kezhou was always the one getting into mischief with her; it was Yuming who had to clean up afterwards. She never said it outright, but she'd always felt guilty. To her, Yuming was like the big brother she'd never had. She wanted to give him something really good — something that might repay even a fraction of what she owed.\n \n But she never lived to see her coming-of-age ceremony. And Su Yi never told anyone else about Buxia's unfinished plan. She kept it to herself, and never spoke of it again.",
+          ContentEN = "Yuming was forever covering for Buxia — against his better judgment. That meant keeping more of her secrets than he wanted to. But there was one thing she told only Su Yi. They hadn't known each other long, and they were separated by several generations in the lineage. Even so, they were the same age, and they took to each other at once.\n\nBuxia said she was preparing a \"big surprise\" for Yuming at her coming-of-age ceremony. As for what it was, she only smiled and refused to tell.\n\n\"What about Kezhou?\" Su Yi asked.\n\"Not a chance,\" Buxia said at once. \"He doesn't get one.\"\n\nAfter a moment, she admitted — awkwardly, as if forcing the words out — that she'd caused one trouble after another and put her shixiong Yuming through no end of it. Kezhou was always the one getting into mischief with her; it was Yuming who had to clean up afterwards. She never said it outright, but she'd always felt guilty. To her, Yuming was like the big brother she'd never had. She wanted to give him something really good — something that might repay even a fraction of what she owed.\n\nBut she never lived to see her coming-of-age ceremony. And Su Yi never told anyone else about Buxia's unfinished plan. She kept it to herself, and never spoke of it again.",
           TextMapId = "UI_CHAR_DATA_TEXT_42010303"
         },
         UI_CHAR_DATA_TEXT_42010304 = {
           ContentEN = "People speak of Drifters in the most exaggerated terms, as though they were all butchers, drenched in blood. In truth, most are the sort to draw steel when they see wrongdoing, and to live by their own rules — and most have never had a death to answer for.\n\nIn the Outer Peaks massacre, when Yuming killed his shimei with his own hands, it was the first time he had ever taken a life. The slight resistance as his spear went in — that tiny, dreadful hitch — stayed with him for the rest of his life.\n\nAfter he became an enforcer of Taihao's will, killing turned into work done by rote. He had long since lost count of how many had fallen to his spear. And yet, each time he drew it free, his mind would snap back to that first moment, as vivid as ever.",
           TextMapId = "UI_CHAR_DATA_TEXT_42010304"
-        },
-        UI_CHAR_DATA_TEXT_42010305 = {
-          ContentEN = "Coming Soon",
-          TextMapId = "UI_CHAR_DATA_TEXT_42010305"
         },
         UI_CHAR_DATA_TEXT_42010401 = {
           ContentEN = "To Yuming, wakefulness is an unending punishment; sleep is only a brief reprieve. Only when a dream takes hold does he forget everything, slipping back into the past as if the years fall away.\n\nMost who came to Outer Peaks carried either a vendetta that ran to the bone, or ideals too stubborn to bend. Yuming belonged to neither.\nHe was in his teens then: already tall, unsmiling, and sparing with words — always with that set, rule-bound air. The only thing that betrayed his age was his voice: it hadn't finished breaking. Now and then it cracked into a harsh, humiliating rasp, and he hated it. So he became even more reticent.\nHis parents were law-abiding citizens — two ordinary people among Huaxu's countless Starweavers. Growing up, Yuming had picked up scraps about Drifters from his parents, but never once imagined he would have anything to do with them. Not until his parents lay dying did he learn the truth: when they were young, they had helped the Drifters in their work. That connection ended when his mother became pregnant; his father withdrew for the family's safety and never involved himself again.\nWith their last words, they entrusted Yuming to a comrade they had once trusted with their lives: Yan Shanting. They left Yuming no chance to speak, and he couldn't bring himself to defy their final wish. After the funeral rites, he bowed three times before his parents' grave, beside a down-at-heel man he had only just met. Then that man took him to Outer Peaks — where the law held no sway.\n\nLeaving home for the first time, thrown in among strangers, Yuming grew even quieter by the day. He shared less, showed less. He thought he was hiding it well enough, but Yan Shanting saw through him at a glance.\nYan Shanting told him to stop fussing over the so-called traditions and manners. Yuming agreed on the spot, yet carried on exactly as before. If anything, he grew even more exacting about it. Morning and night he came to pay his respects, standing straight with his hands folded, never missing a step of the ritual.\nIt did not take long to grate on the other boys. Most of the young men that Outer Peaks took in were orphans, and many were sensitive — quick to take offence. To them, this tight-lipped new boy with a sour face only acted that way because he thought he was better than the rest of them. The sniping turned into shoving. The shoving turned into a brawl.\nSome of them knew how to throw a punch. It didn't take long for Yuming to taste defeat for the first time in his life.\nWhen it was over, everyone else slunk away, leaving him where he'd fallen, sprawled in the dirt. It had rained the night before. Wet earth and snapped twigs clung to him, and the sour stench of rot clogged his nose. Somewhere in the scuffle his teeth had knocked hard against something, and the ache now came in sharp pulses.\nLeaves crunched underfoot. Someone was coming. A pair of boots came into view and stopped in front of him. Yuming looked up to find Yan Shanting, crouched there, watching him with a faint, amused tilt to his lips.\n\"Lost the fight?\" Yan Shanting asked.\nYuming stared back coldly and said nothing.\n\"Hurt pretty bad, eh? Want me to teach those brats a lesson?\"\nYuming gritted his teeth and pushed himself up enough to meet his gaze. He shook his head. \"No.\"\n\"Then I'll teach you a few moves. Practise, and next time you'll make them regret it.\"\nAfter a long pause, Yuming said flatly, \"The Admonitions say fighting is wrong.\"\nYan Shanting snorted. \"You're a stubborn one, boy.\"\n\"If you won't fight, someone else will. And when that happens, what use is right and wrong? You can shout at the world all you like — do you think it'll listen? The wind snaps branches. Tigers take hares. Does the wind care? Do the tigers stop to ask how the hare feels?\"\n\"If you can put a man on the ground and make him cry, and still choose not to, then you can say fighting is wrong. Only then will anyone hear you.\"\nYuming lowered his head. It was hard to tell whether he'd taken it in, or whether he was simply enduring the words.\n\"Listen, boy. Your parents left you in my care. I've not done much of what a teacher ought to — so here's your first lesson.\"\n\"A man's got one job in this world: live without regret.\"\n\"And how do you do that? Say someone you care about gets hurt right in front of you, and all you can do is watch. You curse yourself for being powerless. Tell me that isn't regret.\"\n\"Stand on your own feet first. Learn something you can rely on. Do what you can while you can — so you don't spend the rest of your life eating regret.\"\nYuming stayed silent for a long time. Just as Yan Shanting began to think he'd get nothing more, Yuming hauled himself upright. He brushed the mud from his clothes with careful, almost fussy precision, then bowed — deep, formal, full of respect.\n\"I was ignorant. Thank you for your teaching, Shifu.\"\nYan Shanting let out a hearty laugh and accepted the bow. This time, he didn't correct Yuming's formality.\n\nSeasons came and went, and before he knew it, Yuming had grown into a fine young man. His voice had finished breaking, and the way he carried himself grew steadier with each passing year.\nHe trained in the polearm under his master, and improved quickly. In time, Yan Shanting took on another disciple named Kezhou.\nYuming found himself frowning more often. And somehow, without ever noticing when it began, he smiled more too.\nSomewhere along the way, he began to introduce himself as Yuming of Outer Peaks.",
@@ -64408,10 +66909,6 @@ After he left Outer Peaks, the Drifters changed every route and entry he once kn
         UI_CHAR_DATA_TEXT_42010403 = {
           ContentEN = "The setting sun was blood-red.\n\nDeep in the mountains, Outer Peaks always had an open view. Even so, a sunset like this was rare.\n\nThe light poured over everything before it faded, washing sky and land in the same red. It was so fierce it could almost pass for noon. Under that searing glare, Yuming couldn't tell what the red liquid on the ground was. It ran in thin rivulets, pooling in shallow hollows. Crimson motes drifted through the air, turning the world hazy. It was almost beautiful.\n\nIf he could lose himself in it — take it for nothing more than some grotesque dream — perhaps he could escape the horror in front of him. But he knew, with brutal clarity, that he had no such luxury. He <H>had to face what was there</>.\n\nAt the edge of his vision, his shifu lay on his back beside a rock. Yan Shanting's abdomen had been pierced straight through, torn open. Blood and flesh were spattered across the ground; a length of intestine lay among it all. His favourite robe was in tatters, soaked dark with blood. The wine flask he always carried was gone. Yuming had carried this man home more times than he could count, slung over his shoulder, dead drunk. He had never once seen an expression like this on his face. Even in death, Yan Shanting's eyes were still open, as though he were waiting to see his disciples one last time. Only days ago, he had been wounded in a clash with a Magistrate of Yingtian. He should have been in bed, recovering — not lying here in rags, dead in the dirt. Yuming's temples throbbed. The pressure behind his eyes felt like it might split his skull.\n\nHe didn't know how it had come to this. He only knew that the thing ahead of him — writhing, its tentacles lashing — was to blame.\n\n\"Yuming...\"\nA dying Drifter clutched at the hem of his clothes, forcing out a final warning through failing breath.\n\"Don't go... that's... that's Buxia...\"\n\nTwo hours earlier, Yuming had been on the road to Haojing to fetch a Zesheng apothecary. Buxia had been complaining of pain again. The apothecary took one look at the signs at the foot of the mountain, went pale, and made his excuses at once. As a last courtesy, he left Yuming with a warning about Deterioration.\n\nEven with that warning, Yuming couldn't bring himself to believe it. He couldn't square the cheeky, ever-laughing girl with what stood in front of him now: a horrifying, bloodstained monster that had already taken more than a dozen lives.\n\nWhat had happened was clear enough. <H>Something</> monstrous had awakened inside Buxia. <H>It</> had gone after the defenceless: the old, the weak, women and children. His shifu, trying to protect them, had been forced to fight, and had died here. The only thing Yuming couldn't account for was Kezhou. Where was he? And then, in spite of everything, a flicker of relief rose in his chest. Thank goodness Kezhou wasn't here.\n\nThe creature had nothing human left of it. And yet it kept forcing out the same broken words, again and again, from what passed for a mouth.\n\"Yuming... Shixiong... help me...\"\nYuming's stomach lurched. Only then did he realise how much he had been breathing in the motes without noticing. The spores were already taking hold, draining his strength with every second.\nHe had heard those words from Buxia countless times. Sometimes she tossed them out with a cheeky grin. Sometimes they were flustered when she'd been caught skiving and wanted him to smooth things over. Sometimes she whined them like a spoiled brat. And sometimes, more recently, they were real: her hearing worsening again, asking him to bring back an apothecary. Most of the time, he hadn't taken her cries for help seriously. Now came the price. This was his sin. His punishment. And now, even if it was already too late, he moved.\n\nBefore the spores could numb his limbs completely, he lifted his spear, slow but unwavering, and drove it into the creature. It wailed, but did not try to dodge. He leaned his weight into the shaft and twisted the head, forcing it deeper. The thing convulsed at once, writhing hard enough to wrench at his arms. Barbed tendrils raked his skin again and again. A shriek tore through the air, sharp enough to make his ears ring. Spores poured from its mouthparts in a torrent, throwing up a red haze so thick it blurred the world.\n\nIn that moment, Yuming's mind went blank. He didn't even try to cover his mouth and nose. He drove the spear on, bracing it against the rock face with everything he had left. For a while he was sure he was losing. His arms felt fused to the shaft. He couldn't tell how long it went on — minutes, perhaps, or longer than he could measure. Then the resistance along the spear began to ebb. At last, the creature stopped struggling. Yuming let out a breath he hadn't realised he was holding. Only then did he understand that he had forgotten how to let go. The skin at the base of his fingers had split under the strain, and sweat soaked the shaft, his palm clinging stubbornly to the wood.\n\nHe stared at the thin stream pooling around his feet. The sun was almost gone now. Only then could he see it for what it was.\nIt was blood. Blood spilt from the bodies of those who were once at his side.\n\nFrom that day on, scenes like this returned to him again and again. A nightmare he would never be rid of.",
           TextMapId = "UI_CHAR_DATA_TEXT_42010403"
-        },
-        UI_CHAR_DATA_TEXT_42010404 = {
-          ContentEN = "Coming Soon",
-          TextMapId = "UI_CHAR_DATA_TEXT_42010404"
         },
         UI_CHAR_DATA_TEXT_42020101 = {
           ContentEN = "Randy's daily routine includes prioritising tasks first thing in the morning, a strategy that helps him distinguish between urgent duties and those that can wait. \"Ignore the trivial tasks long enough, and they might just sort themselves out,\" Randy often preaches this life philosophy to you in earnest. He believes life is best lived when you focus only on the truly important tasks and enjoy the rest of your time at leisure — an attitude he often uses to dodge some of your requests. Surprisingly, things usually play out just as he predicts, with the smaller problems disappearing on their own.",
@@ -64476,7 +66973,15 @@ The only one unimpressed by these reports is Lynn. After looking them over, she 
         UI_CHAR_DATA_TEXT_42020402 = {
           ContentEN = "Every summer, Randy is haunted by memories of playing hide-and-seek with his two older sisters. What they recall fondly as sunny, laughter-filled days is, for Randy, a headache-inducing ordeal — a battle of dignity.\nAs a young boy, Randy desperately tried to outwit his sisters inside the house. He resorted to using a mini noise radar to track their movements and set booby traps with ropes in his bedroom to fend off his ever-vibrant eldest sister. But after narrowly escaping her clutches, he soon found himself at the mercy of his smiling, poised second sister, who played him like a fiddle until he conceded defeat. As punishment, he had to try on new dresses for his sisters and pose for pictures, which were then framed and proudly hung in the family's main hall for all to see.\nThankfully, the photo's display was short-lived. Its reign ended the moment their father returned home, marking the abrupt end of that embarrassing episode in Randy's childhood. It was also that summer when Randy and his sisters learned just how unforgiving a military officer's belt could be.",
           TextMapId = "UI_CHAR_DATA_TEXT_42020402"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CHAR_DATA_TEXT_42020403",
+    MaxKey = "UI_CMName_Name_FuJinChuanLai",
+    Loader = function()
+      return {
         UI_CHAR_DATA_TEXT_42020403 = {
           ContentEN = "Rebellion against a father is often a rite of passage for sons. What begins as a reaction to perceived neglect matures into the recognition of an inevitable clash between two too-similar souls.\nRandy joined the military expressly to prove he was nothing like his father. But as he stood amidst the disciplined ranks of Hyperborean soldiers, terror gripped him — a force that seemed to pull him in, seeking to bind him to the armoured tanks, artillery, and hulking airships surrounding him. It was as though the machinery was trying to absorb him into its cold, unfeeling core.\nIn that moment, Randy understood what his horns and inherited magic powers truly meant. They weren't for decoration or pulling off party tricks. They were a cruel curse, a mark of damnation placed on him from birth. Though his stern father had pushed him through gruelling combat training, he had also shielded him from the Empire's darkest truths.\nThe gleaming medals his father had once cherished suddenly made sense to him — they were mere bones tossed to sheepdogs by wolves. Scraps that spared the dogs from the predators' jaws and occasionally gave them the illusion of power.\nRandy now grasped the full weight of his father's insistence on training him. He was meant to take up the mantle, to uphold the Howard name — the model family of Laurel Charons. To protect everything that came with that title: a comfortable life, dignity, his sisters' carefree laughter, and, ultimately, survival itself.\nTo preserve those things, Randy would have to become part of the Hyperborean war machine, just another cog in the empire's iron will. Or, if fortune smiled on him, perhaps rise above it all, a cresting wave amidst the tide.\nHe was meant to be the next iteration of his father.\nBut... what would that make him? Who exactly is this Randy Howard?\n\"Wake up, old man,\" Randy muttered, sitting by his father's bedside, staring at the man who now was little more than an unresponsive husk. \"You know the answer, don't you? Please... tell me.\"\nBut the man in the bed remained silent.\nWith a heavy sigh, Randy placed a small toy pistol on his father's chest — the very keepsake his father had carried in the pocket closest to his heart, the one he had tried desperately to protect as he fell critically wounded. It had been the first gift Randy had ever given him as a child. Randy turned to leave, then paused, returning to adjust the pistol's position one last time.",
           TextMapId = "UI_CHAR_DATA_TEXT_42020403"
@@ -64510,7 +67015,7 @@ Yet, it remains uncertain whether these actions are purely calculated or driven 
           TextMapId = "UI_CHAR_DATA_TEXT_43010105"
         },
         UI_CHAR_DATA_TEXT_43010201 = {
-          ContentEN = "Ask around the Hyperborean Empire about Sibylle Mason, and you'll hear a thousand different stories.\nHistorians in their ivory towers will tell you she's the first Charon-born ever to rise to the rank of Legion Chief — a milestone of great significance in the Empire's long history.\nAspiring Charons, eager to claim their place among the Laurelled, see Sibylle as an icon of inspiration — a figure who rose from meagre beginnings to wield a sceptre traditionally reserved for the Solarian.\nBut among the bitter and resentful Charons — those who harbour a deep hatred for the Empire — she is scorned as a traitor who abandoned her own kind for a scrap of power. They brand her a lapdog of the regime, reviled and cursed by many.\nHer peers in the Legion are similarly divided: some admire her decisive methods and unwavering loyalty, while others whisper behind closed doors, viewing her as a dormant threat — a coiled viper, waiting for the right moment to strike.\nYet despite these varied narratives, one piece of advice holds true: crossing Sibylle Mason is a perilous game.",
+          ContentEN = "If you were to ask around the Hyperborean Empire about Sibylle Mason, you'd hear a thousand different stories.\nHistorians in their ivory towers will tell you that she's the first Charon-born ever to rise to the rank of Legion Chief — a milestone of great significance in the Empire's long history. \nAspiring Charons, eager to claim their place among the Laurelled, see Sibylle as an icon of inspiration — a figure who rose from meagre beginnings to wield a sceptre traditionally reserved for the Solarian.\nBut among the bitter and resentful Charons, those who harbour a deep hatred for the Empire, she is scorned as a traitor who abandoned her own kind for a scrap of power. They label her a lapdog of the regime, reviled and cursed by many.\nHer peers in the Legion are similarly divided: some admire her decisive methods and unwavering loyalty, while others whisper behind closed doors, viewing her as a dormant threat — a coiled viper, waiting for the right moment to strike.\nYet, despite these varied narratives, one shared piece of advice remains true: crossing Sibylle Mason is a perilous game.",
           TextMapId = "UI_CHAR_DATA_TEXT_43010201"
         },
         UI_CHAR_DATA_TEXT_43010202 = {
@@ -64550,7 +67055,7 @@ Yet, it remains uncertain whether these actions are purely calculated or driven 
           TextMapId = "UI_CHAR_DATA_TEXT_43010401"
         },
         UI_CHAR_DATA_TEXT_43010402 = {
-          ContentEN = "As a child, Sibylle once cared for a raven.\nOne day, the raven plummeted from the sky, crashing into the dirt in front of her shabby shack. Startled, Sibylle found the bird injured, its teary eyes gazing up at her. Her kind heart led her to take it in. She bandaged its wounds, fed it, and cared for it as best she could. As its wounds slowly healed, the raven began to peck gently at her palm, then to walk, and eventually, to fly — awkwardly at first, but still, it flew. Seeing its recovery filled Sibylle with genuine joy. \"Even the ugliest of ravens,\" she thought, \"even one that's fallen into the mud, can one day soar in the skies again.\"\nOne evening, a group of street children, about Sibylle's age, knocked on her door, begging for food. Like the raven, they were teary-eyed. With the same kindness she had shown the bird, Sibylle shared her modest meal of bread and water with them. However, once fed, they didn't leave. Instead, they forced their way into her home, taking what little food she had left and even her parents' keepsakes. Sibylle tried to fight back, but the children overpowered her, dragging her down and beating her until she was covered in bruises.\nSensing the danger, the raven flapped its wings and attacked the intruders, pecking at their heads in a desperate attempt to defend its home. But the bird, still recovering, wasn't strong enough. The ringleader grabbed it tightly, sneering, \"A feisty little thing, aren't you?\"\n\"Please, let her go!\" Sibylle's voice cracked with desperation. \"Take everything you want, just don't hurt her!\"\nHer frantic pleas fell on deaf ears. Pinned to the ground by two stronger kids, her tears mingled with the dirt as she watched in horror.\nThrough bloodshot eyes, she saw the raven slammed into the ground, followed by the sickening crunch of boots crushing its fragile body.\nWhen the intruders finally left, Sibylle, battered and bruised, crawled over to the raven. Cradling its lifeless body in her arms, she kissed its cold feathers. She could not tell how much blood it had lost — the bird's jet-black plumage hid the stains. A tiny life had slipped away into the shadows, its death as silent as its suffering.\n\nYears later, as a graduate of the Spathatoi Alchademy and a rising star in the Legion, Sibylle returned to that shack. She thought she heard the flutter of raven's wings, but perhaps it was just a trick of memory — the house was empty, save for the echo of her footsteps. Distant memories flooded back. That night, she had wailed miserably, mourning both the loss of a fragile life and her own helplessness. It was the last time she ever cried. The darkness had swallowed her tears, and no one had heard the sobs of that powerless eight-year-old girl.",
+          ContentEN = "As a child, Sibylle once cared for a raven.\nOne day, the raven plummeted from the sky, crashing into the dirt in front of her shabby shack. Startled, Sibylle found the bird injured, its teary eyes gazing up at her. Her kind heart led her to take it in. She bandaged its wounds, fed it, and cared for it as best she could. As its wounds slowly healed, the raven began to peck gently at her palm, then to walk, and eventually, to fly — awkwardly at first, but still, it flew. Seeing its recovery filled Sibylle with genuine joy. \"Even the ugliest of ravens,\" she thought, \"even one that's fallen into the mud, can one day soar in the skies again.\"\nOne evening, a group of street children, about Sibylle's age, knocked on her door, begging for food. Like the raven, they were teary-eyed. With the same kindness she had shown the bird, Sibylle shared her modest meal of bread and water with them. However, once fed, they didn't leave. Instead, they forced their way into her home, taking what little food she had left and even her parents' keepsakes. Sibylle tried to fight back, but the children overpowered her, dragging her down and beating her until she was covered in bruises.\nSensing the danger, the raven flapped its wings and attacked the intruders, pecking at their heads in a desperate attempt to defend its home. But the bird, still recovering, wasn't strong enough. The ringleader grabbed it tightly, sneering, \"A feisty little thing, aren't you?\"\n\"Please, let her go!\" Sibylle's voice cracked with desperation. \"Take everything you want, just don't hurt her!\"\nHer frantic pleas fell on deaf ears. Pinned to the ground by two stronger kids, her tears mingled with the dirt as she watched in horror.\nThrough bloodshot eyes, she saw the raven slammed into the ground, followed by the sickening crunch of boots crushing its fragile body.\nThrough bloodshot eyes, she saw the raven slammed into the ground, followed by the sickening crunch of boots crushing its fragile body.\nWhen the intruders finally left, Sibylle, battered and bruised, crawled over to the raven. Cradling its lifeless body in her arms, she kissed its cold feathers. She could not tell how much blood it had lost — the bird's jet-black plumage hid the stains. A tiny life had slipped away into the shadows, its death as silent as its suffering.\n\nYears later, as a graduate of the Spathatoi Alchademy and a rising star in the Legion, Sibylle returned to that shack. She thought she heard the flutter of raven's wings, but perhaps it was just a trick of memory — the house was empty, save for the echo of her footsteps. Distant memories flooded back. That night, she had wailed miserably, mourning both the loss of a fragile life and her own helplessness. It was the last time she ever cried. The darkness had swallowed her tears, and no one had heard the sobs of that powerless eight-year-old girl.",
           TextMapId = "UI_CHAR_DATA_TEXT_43010402"
         },
         UI_CHAR_DATA_TEXT_43010403 = {
@@ -64558,7 +67063,7 @@ Yet, it remains uncertain whether these actions are purely calculated or driven 
           TextMapId = "UI_CHAR_DATA_TEXT_43010403"
         },
         UI_CHAR_DATA_TEXT_43010404 = {
-          ContentEN = "Sibylle believes herself a survivor of what can only be likened to hell.\nWhat does hell look like? It's an expanse of flame that surges toward you no matter how desperately you try to escape, engulfing everything. Scalding air seeps into your nostrils — viscous, oppressive — while it crackles and roars around your ears.\n Above this fiery sea, any bird brave enough to soar becomes a blind raven, plummeting into scorched earth, stirring ripples of flame.\n \nThe operation was meant to be highly classified. The commander had run through countless scenarios before departure — yet no one truly grasped the defensive might at the heart of the enemy stronghold.\nAfter three days and nights of contemplation, the commander decided to roll the dice. A small but elite team would be deployed via the Empire's newest airships, aiming for a swift, decisive strike at the enemy's core — to \"decapitate\" their force.\nIt seemed a desperate gamble — but also their best shot at victory. Thirteen Daimons, clad in the same uniforms as ordinary soldiers, were quietly dispatched without farewell or ceremony — sent off as plainly as one might deliver rations to the front, on what might well have been a one-way mission.\nThough mentally prepared for the worst, it wasn't until they stood beneath the gaze of the divine that they truly understood the terror of facing the gods.\n \nBeams of searing light tore through the night, burning as they streaked across the sky like eternal fire, devouring everything in their path.\nAt that moment, Sibylle stood at the edge of the inferno. The most she could make out beyond the blaze were charred branches, or the remains of what might once have been wildlife — though she no longer had the strength to tell them apart.\nSibylle was fortunate not to be part of the strike team — she had been held back as their last resort. If all went according to plan, once the others reached the tower's heart and completed their task, she would spirit them away under cover of shadows, before the enemy ever took notice. And if the mission failed, she would carry off as many of the wounded as she could, to lessen the toll.\nShe didn't know what her comrades had faced deep within the tower — but the hellish scene before her could only be the worst of all their countless reckonings.\nOf the twelve who had entered, only three emerged. Behind them, a dreadful light pursued relentlessly: wherever it fell, flames erupted — even stone was pierced through. Yet that radiance was no knight's weapon; it was as though the gods themselves had cast down divine punishment.\nTwo comrades thrust the unconscious, grievously wounded commander into Sibylle's care, then dragged their battered bodies toward the distance — choosing to stay behind and cover the rear.\n \nThanks to the Daimons' resilient constitution, the two could still — barely — draw their swords to support themselves.\nAs the flames around them subsided, their laboured breathing eased slightly, and they no longer spat hot blood with every breath.\nBut as the fire faded, a battalion of heavily armed knights appeared. Their footsteps alone, echoing across the battlefield, spoke of their elite status — soldiers sent not to take prisoners, but to eradicate every intruder.\nOrdinarily, Daimons could scatter foes like rabbits before a hound — but incapacitated, they were helpless prey.\nGunfire tore through the air, ripping apart the already feeble arcs of their blades and tearing through their bodies.\nInitially hesitant, the Elysian knights advanced, growing bolder with each step. Within moments, they were close enough to drive their blades into the spines of the wounded Daimons.\n \nWatching the brutal scene unfold, Sibylle felt a surreal detachment. These were her comrades — soldiers who had trained alongside her mere days before. Now they stood at death's door, as she watched from afar.\nWith the last of their strength, they leaned on each other for support, their bodies swaying, their gaze turning — perhaps by chance, perhaps by will — toward Sibylle's airship.\nSibylle's rational mind, honed by years of discipline, told her to obey orders — to let her comrades die. But deep within, a faint voice desperately protested.\nThey had never treated her poorly. Like her, they were fiercely loyal to the Empire, determined to earn glory, each burdened by their own troubled pasts. Many nights had passed in the dim barracks, filled with stories of the past and dreams of the future. For someone who claimed to have no friends, they had come the closest.\nAnd now, these almost-friends stood before her, gazing at her as they faced death.\nBut what did their gaze mean? A plea for help? Doubt? Resentment? Or something else entirely?\n \nSibylle knew she should ignore these thoughts. She had to follow orders without question — to snuff out the last remnants of emotion within her, emotions that shouldn't have existed in the first place.\nBut... could she? Could she stand by and let her comrades — her almost-friends — die?\nIn a futile attempt to escape the weight of her decision, she closed her eyes, hoping the nightmare would disappear.\nBut in that very moment, her comrades made the decision for her. They drew their daggers and, with grim determination, plunged them into each other's throats. No hesitation. No second thoughts. As if they had made this choice long ago. Smiling, they fell. At that same moment, Sibylle set the airship's engines to life.\n \nAmidst the roar of the machinery, she let out the breath she had held for so long. Blinking, she found a tear upon her cheek — a tear no one had ever seen from her. She did not know what it meant, just as she did not know what their final gaze had meant.\nPerhaps it was relief — that she hadn't needed to wrestle with breaking her orders. Or perhaps... it was something else entirely.\n \n...\nFor setting foot upon the tower of the gods, the Empire declared the mission a victory. In the official obituary, it was written: of the thirteen who had gone, only Sibylle returned.\nShe was soon elevated to Legion Chief, and ever after she would call the operation her \"Survival from Hell.\"",
+          ContentEN = "Sibylle believes she's a survivor of what can only be likened to hell.\nWhat does hell look like? It's an expanse of flames that surge towards you no matter how desperately you try to escape, engulfing everything. The scalding air seeps into your nostrils, viscous and oppressive, while it crackles and roars around your ears. \nAbove this fiery sea, any birds brave enough to soar are reduced to blind ravens, plummeting into the scorched earth, stirring ripples of flame.\n\nThis operation was meant to be highly classified. The commander had run through countless scenarios before departure, yet no one truly understood the defensive might at the heart of the enemy's stronghold — the Elysian Church.\nAfter three days and nights of contemplation, the commander decided to roll the dice. A small but elite team would be deployed via the Empire's newest airships, aiming for a swift, decisive strike at the core of the enemy to \"decapitate\" their force.\nIt seemed a desperate gamble, but also their best shot at victory. Thirteen Daimons, disguised as regular soldiers, were dispatched quietly as provisions to the front, embarking on what might well be a one-way mission.\nThough they were mentally prepared for the worst, it wasn't until they stood under the gaze of the divine that they truly understood the terror of facing the gods.\n\nBeams of searing light tore through the night, burning as they streaked across the sky like an eternal fire, devouring everything in their path.\nAt that moment, Sibylle stood on the brink of this inferno. The most she could make out beyond the blaze were charred branches, or remnants of what might have been wildlife — though she no longer had the strength to tell them apart.\nLucky for Sibylle, she wasn't part of the commando unit but was reserved as the last resort. If all went to plan, once the team reached the heart of the tower and completed their mission, she would extract them from the shadows before the enemy even realized what had happened. If the mission failed, she would rescue as many wounded as possible to minimize losses.\nBut what unfolded was far beyond their darkest expectations.\nOut of the thirteen Daimons deployed, twelve reached the target area. Two were critically injured by the horrifying beams of light upon arrival. The commander quickly assessed the situation and made the grim decision to leave them behind, leading the remaining nine deeper into the stronghold.\nSibylle understood the harsh necessity — abandoning the wounded was the only viable strategy in the face of overwhelming enemy strength. Had she been in command, she would have made the same call.\nBut unlike the commander, who didn't look back after giving the order, Sibylle, stationed as a last resort outside the battlefield, had to watch her comrades confront their fate.\n\nThe two injured Daimons, thanks to their resilient nature, managed to prop themselves up with their swords.\nAs the flames around them subsided, their laboured breathing eased slightly, and they no longer spat hot blood with every breath.\nBut as the fire faded, a battalion of heavily armed knights appeared. Their footsteps alone, echoing through the battlefield, spoke of their elite status — soldiers sent not to take prisoners, but to eradicate every intruder.\nOrdinarily, Daimons could scatter foes like rabbits before a hound, but incapacitated, they were helpless prey.\nGunfire tore through the air, shredding the already feeble defences of sword arcs and tearing through the bodies of the two soldiers.\nInitially hesitant, the knights advanced, growing bolder with each step. Within moments, they were close enough to drive their blades into the spines of the fallen.\n\nWatching this brutal scene unfold, Sibylle felt a surreal detachment. These were her comrades, soldiers who had trained alongside her mere days before. Now, they stood at death's door, as she watched from afar.\nWith their last strength, they leaned on each other for support. Whether by chance or intent, their eyes met Sibylle's, where she lay hidden in the shadows.\nSibylle's rational mind, honed by years of discipline, told her to obey orders, to let her comrades die. But deep within, a faint voice desperately protested.\nThey had never treated her poorly. Like her, they were fiercely loyal to the Empire, determined to earn glory, each burdened by their own troubled pasts. Many nights had passed in the dim barracks, filled with exchanges of stories about the past and dreams for the future. For someone who claimed to have no friends, these soldiers had come the closest.\nAnd now, these almost-friends stood before her, gazing at her as they faced death. \nBut what did their gaze mean? Was it a plea for help? Doubt? Resentment? Or something else entirely?\n\nSibylle knew she should ignore these thoughts. She had to follow orders without question, to snuff out the last remnants of emotion within her, emotions that shouldn't have existed in the first place.\nBut... could she? Could she stand by and let her comrades, her almost-friends, die?\nIn a futile attempt to escape the weight of her decision, she closed her eyes, hoping the nightmare would disappear.\nBut in that very moment, her comrades made the decision for her — they drew their daggers, and with grim determination, plunged them into each other's throats. No hesitation, no second thoughts, as if they had made this choice long before. Smiling, they fell.\n\nAs the enemy troops pulled back to pursue the deeper intrusion within the tower, Sibylle exhaled a breath she hadn't even realized she was holding.\nBlinking, she felt something unexpected on her face — a single tear, something no one had ever seen from her. She didn't know what the tear meant, just as she hadn't understood the meaning behind her comrades' final gaze.\nPerhaps it was a tear of relief that she no longer had to make such a cruel, agonizing choice. Or perhaps it was something else entirely.\n\n...\nThe mission was ultimately a success — though all but Sibylle and the commander perished.\nShortly after, Sibylle was promoted to legion chief, and she would forever refer to this operation as her \"survival from hell.\"",
           TextMapId = "UI_CHAR_DATA_TEXT_43010404"
         },
         UI_CHAR_DATA_TEXT_43010405 = {
@@ -64813,11 +67318,11 @@ Instead, she rejoiced in having met you and in having lived a life that was trul
           TextMapId = "UI_CHAR_DATA_TEXT_53010405"
         },
         UI_CHAR_DATA_TEXT_54010101 = {
-          ContentEN = "\"Alchemy\" — in the Hyperborean Empire, the word is synonymous with \"miracle.\"\n \nThe Empire's first alchemists were eccentric scholars, steeped in cryptic philosophies and convinced they could transmute common metals into gold. Gold they never found — but through ceaseless study, they drew from Phoxene a substance known as Phoxichor. This faintly luminous blue fluid fuelled the rise of cities wrought from gears, furnaces, and steel. As looms devoured cotton to spin endless cloth, as railways spread like veins of iron across the land, as steel-clad ships soared like migrating birds into the sky, as cannons roared in human hands like the thunder of fallen gods — who could deny that Solarian alchemy had wrought miracles greater than any Charon sorcery?\n \nIt was only natural that alchemists became the Empire's most coveted profession. As the saying goes: \"Between a pauper and a noble lies but a single Emerald Medal.\" Countless youths — hungry for knowledge, glory, or the chance to rise above their station — poured years into study and experiment, spent fortunes, and bartered honeyed words — all for a place at one of the Empire's alchemical institutes. Yet above them all towered the Royal Alchemy Academy in the capital, Dismania: a citadel of learning, admired from afar yet all but unattainable.\n \nThus, when Daphne Theodore renounced her place at the Academy and chose instead the life of an ordinary field medic, all agreed: she had lost her mind.",
+          ContentEN = "\"Alchemy\" — in the Hyperborean Empire, the word is synonymous with \"miracle.\"\n\nThe Empire's first alchemists were eccentric scholars, steeped in cryptic philosophies and convinced they could transmute common metals into gold. Gold they never found — but through ceaseless study, they drew from Phoxene a substance known as Phoxichor. This faintly luminous blue fluid fuelled the rise of cities wrought from gears, furnaces, and steel. As looms devoured cotton to spin endless cloth, as railways spread like veins of iron across the land, as steel-clad ships soared like migrating birds into the sky, as cannons roared in human hands like the thunder of fallen gods — who could deny that Solarian alchemy had wrought miracles greater than any Charon sorcery?\n\nIt was only natural that alchemists became the Empire's most coveted profession. As the saying goes: \"Between a pauper and a noble lies but a single Emerald Medal.\" Countless youths — hungry for knowledge, glory, or the chance to rise above their station — poured years into study and experiment, spent fortunes, and bartered honeyed words — all for a place at one of the Empire's alchemical institutes. Yet above them all towered the Royal Alchemy Academy in the capital, Dismania: a citadel of learning, admired from afar yet all but unattainable.",
           TextMapId = "UI_CHAR_DATA_TEXT_54010101"
         },
         UI_CHAR_DATA_TEXT_54010102 = {
-          ContentEN = "Daphne was known as one of the finest students ever to attend the Spathatoi. Every course she took, every project she completed, earned an A — for no higher grade existed.\n \nBut after enlisting with the Legion, she received the first truly dismal mark of her life: a mere C in physical training — only just enough to pass, even for a medic.\n \nPerhaps that's why she's so often found stealing moments to exercise whenever she can.",
+          ContentEN = "Daphne was known as one of the finest students ever to attend the Spathatoi. Every course she took, every project she completed, earned an A — for no higher grade existed.\n\nBut after enlisting with the Legion, she received the first truly dismal mark of her life: a mere C in physical training — only just enough to pass, even for a medic.\n\nPerhaps that's why she's so often found stealing moments to exercise whenever she can.",
           TextMapId = "UI_CHAR_DATA_TEXT_54010102"
         },
         UI_CHAR_DATA_TEXT_54010103 = {
@@ -64829,31 +67334,31 @@ Instead, she rejoiced in having met you and in having lived a life that was trul
           TextMapId = "UI_CHAR_DATA_TEXT_54010104"
         },
         UI_CHAR_DATA_TEXT_54010105 = {
-          ContentEN = "On the day you departed for Flagson, Daphne came to see you off. No words were exchanged — only a silence laden with meaning, and the bittersweet curve of a smile.\n \n\"Stay safe.\" She held you in a soft embrace. \"I will always be praying for you.\"\n \nYou're not one to make promises where certainty is scarce. Yet you took her hand, and with steady resolve, said: \"I will find the truth... and bring it back to you.\"",
+          ContentEN = "On the day you departed for Flagson, Daphne came to see you off. No words were exchanged — only a silence laden with meaning, and the bittersweet curve of a smile.\n\n\"Stay safe.\" She held you in a soft embrace. \"I will always be praying for you.\"\n\nYou're not one to make promises where certainty is scarce. Yet you took her hand, and with steady resolve, said: \"I will find the truth... and bring it back to you.\"",
           TextMapId = "UI_CHAR_DATA_TEXT_54010105"
         },
         UI_CHAR_DATA_TEXT_54010201 = {
-          ContentEN = "To reach the wards from the treatment wing at Riverside Hospital, one had to walk a long, narrow corridor.\nUnlike the other hospitals in Dismania, Riverside housed mostly patients with lingering chronic illnesses — the sort that brought no swift end, only slow suffering. These were not ailments that made corpses of people overnight, but over long years turned them into what the doctors came to call \"madmen.\"\nSince the age of seven, I'd been running back and forth along that corridor. My hands were quick, my feet quicker — faster even than most grown Solarian orderlies. And because all I ever asked for was a meal and a place to sleep, they graciously allowed me — a lowborn little Charon girl with horns on her head — to work in their domain. My tasks were almost always the lowest sort: hauling off soiled bedding, sweeping up shards of glass dropped by patients, dragging them to the washroom or the refuse yard. Now and then, a passing nurse would shove a crate of medicine or a bundle of vials into my arms to deliver. Most of the time, you'd find me staggering down that corridor with boxes taller than I was. They blocked my view, so I often bumped into people rushing past — and every time, I'd catch a torrent of curses for it.\nI once heard a bard in the square say Hyperboreans were the most short-tempered folk in all of Atlasia. If that's true, then by my reckoning, the ones at Riverside Hospital were the angriest of the lot — patients, doctors, nurses, even the kin who came to visit. Later I came to understand it was those long, drawn-out illnesses that drove them to the edge. But still, whenever someone barked at me, I'd raise a defiant middle finger at their retreating back.\nOnly once did someone bump into me and not curse, but apologise. Her name, I would learn much later, was Daphne Theodore.\nI remember it clearly. One afternoon, I was carrying a stack of underpads to the washroom when I collided at the far corner of the corridor with a young blonde woman. My underpads and her flowers both went flying, then scattered across the floor. Without missing a beat, I squatted down and wailed at the top of my lungs — louder than the most tormented patient. I wasn't hurt, not even upset about the mess. It was just a trick: if I howled like that, the adults who might scold or strike me would flinch and back off, like they'd brushed up against something filthy.\nBut the blonde woman didn't curse and scurry off like I expected. Instead, she knelt beside me, stroked my back with a gentle hand, and asked in a worried voice if I was hurt. She sounded more unsettled than I was. When I didn't reply, she tried again — even softer this time — though the tremble in her fingers gave her away.\nI don't remember what I said in reply — perhaps only, \"It doesn't hurt.\" Whatever it was, it eased the crease in her brow. She helped me to my feet, and together we picked up the scattered underpads and crushed flowers.\n\"I'm sorry,\" she said, giving my head a light pat. \"Little one, what flavour of sweets do you like? I'll bring you some next time, shall I?\"\n\"Strawberry,\" I told her. I shouldn't have accepted her apology — after all, it was me who hadn't been looking. But her question stirred something in me. I remembered the last thing my bedridden mother had murmured before she died: that there were strawberry boiled sweets in the cupboard drawer. When I looked, there was nothing. Only later did I find out my greedy brother had taken them all.\n\"Strawberry. I'll remember.\" The blonde woman gathered up her flowers and walked on toward the far end of the corridor. She was of middling height, slim and slight. The afternoon sun caught her matte hairpin, and for a moment it shimmered with a faint golden glow.\nI never knew her name, so in my heart I gave her one: Miss Strawberry Sweets.\nOther than my mother, no one had ever asked me so gently if I was in pain.\n \n— From the diary of Tiori Stone",
+          ContentEN = "To reach the wards from the treatment wing at Riverside Hospital, one had to walk a long, narrow corridor.\nUnlike the other hospitals in Dismania, Riverside housed mostly patients with lingering chronic illnesses — the sort that brought no swift end, only slow suffering. These were not ailments that made corpses of people overnight, but over long years turned them into what the doctors came to call \"madmen.\"\nSince the age of seven, I'd been running back and forth along that corridor. My hands were quick, my feet quicker — faster even than most grown Solarian orderlies. And because all I ever asked for was a meal and a place to sleep, they graciously allowed me — a lowborn little Charon girl with horns on her head — to work in their domain. My tasks were almost always the lowest sort: hauling off soiled bedding, sweeping up shards of glass dropped by patients, dragging them to the washroom or the refuse yard. Now and then, a passing nurse would shove a crate of medicine or a bundle of vials into my arms to deliver. Most of the time, you'd find me staggering down that corridor with boxes taller than I was. They blocked my view, so I often bumped into people rushing past — and every time, I'd catch a torrent of curses for it.\nI once heard a bard in the square say Hyperboreans were the most short-tempered folk in all of Atlasia. If that's true, then by my reckoning, the ones at Riverside Hospital were the angriest of the lot — patients, doctors, nurses, even the kin who came to visit. Later I came to understand it was those long, drawn-out illnesses that drove them to the edge. But still, whenever someone barked at me, I'd raise a defiant middle finger at their retreating back.\nOnly once did someone bump into me and not curse, but apologise. Her name, I would learn much later, was Daphne Theodore.\nI remember it clearly. One afternoon, I was carrying a stack of underpads to the washroom when I collided at the far corner of the corridor with a young blonde woman. My underpads and her flowers both went flying, then scattered across the floor. Without missing a beat, I squatted down and wailed at the top of my lungs — louder than the most tormented patient. I wasn't hurt, not even upset about the mess. It was just a trick: if I howled like that, the adults who might scold or strike me would flinch and back off, like they'd brushed up against something filthy.\nBut the blonde woman didn't curse and scurry off like I expected. Instead, she knelt beside me, stroked my back with a gentle hand, and asked in a worried voice if I was hurt. She sounded more unsettled than I was. When I didn't reply, she tried again — even softer this time — though the tremble in her fingers gave her away.\nI don't remember what I said in reply — perhaps only, \"It doesn't hurt.\" Whatever it was, it eased the crease in her brow. She helped me to my feet, and together we picked up the scattered underpads and crushed flowers.\n\"I'm sorry,\" she said, giving my head a light pat. \"Little one, what flavour of sweets do you like? I'll bring you some next time, shall I?\"\n\"Strawberry,\" I told her. I shouldn't have accepted her apology — after all, it was me who hadn't been looking. But her question stirred something in me. I remembered the last thing my bedridden mother had murmured before she died: that there were strawberry boiled sweets in the cupboard drawer. When I looked, there was nothing. Only later did I find out my greedy brother had taken them all.\n\"Strawberry. I'll remember.\" The blonde woman gathered up her flowers and walked on toward the far end of the corridor. She was of middling height, slim and slight. The afternoon sun caught her matte hairpin, and for a moment it shimmered with a faint golden glow.\nI never knew her name, so in my heart I gave her one: Miss Strawberry Sweets.\nOther than my mother, no one had ever asked me so gently if I was in pain.\n\n— From the diary of Dewiolee Stone",
           TextMapId = "UI_CHAR_DATA_TEXT_54010201"
         },
         UI_CHAR_DATA_TEXT_54010202 = {
-          ContentEN = "The second time I met Daphne Theodore, I was being scolded by a young nurse named Madeleine. She grabbed me by the collar like I was some stray kitten, lifting me clean off the floor. I'd had no idea she was that strong. She shouted in my face, demanding to know why I'd brought her the wrong medicine.\nI couldn't read, but I remembered every label by the shape of its letters — and beyond that, I recognised each medicine by its colour. Lots of medicines were blue, but only this one had that bright, glassy blue — the same shade as Phoxichor.\nI denied the accusation, but Nurse Madeleine raised her hand to strike me. I shut my eyes, wondering whether silence or sobbing might spare me another slap. But the first one never came. When I opened my eyes, the hand clutching my collar had been pried loose — her wrist caught fast in a slender, elegant hand.\nIt was Miss Strawberry Sweets.\n\"Pardon me. I couldn't help but overhear your quarrel. Madam — before reproaching this Charon child, might I first see the medicine in question?\"\nNurse Madeleine tried to jerk her arm free, but Miss Strawberry Sweets's slender fingers held fast with surprising strength. With a muttered curse, the nurse shoved the vial into her hand.\nShe held it up, gave it a slow swirl, then pulled the stopper and took a careful sniff.\n\"There's no mistake. The girl gave you the correct medicine. This is AP-1718, as the label clearly states. You shouldn't lie in front of a child who cannot read.\"\n\"That's not the right colour for AP-1718! This little twerp switched the labels!\" Madeleine shrieked. \"She's been sulking ever since her last punishment — trying to trip me up!\"\n\"The Alchemy Academy recently revised the formula. The latest batch differs from what you remember.\" She lifted her gaze, meeting the nurse's furious stare. \"Rather than accusing an innocent child, Madam... perhaps you should spend more time familiarising yourself with your own medicines.\"\n\"What new formula? You're just here visiting someone — how would you know? Who's to say you're not just covering for this little twerp?\"\n\"Oh, I know very well,\" she replied calmly. \"My name is Daphne Theodore. AP-1718 was developed under my supervision. Here — this is my insignia from the Alchemy Academy. I trust you recognise it.\"\n \n— From the diary of Tiori Stone",
+          ContentEN = "The second time I met Daphne Theodore, I was being scolded by a young nurse named Madeleine. She grabbed me by the collar like I was some stray kitten, lifting me clean off the floor. I'd had no idea she was that strong. She shouted in my face, demanding to know why I'd brought her the wrong medicine.\nI couldn't read, but I remembered every label by the shape of its letters — and beyond that, I recognised each medicine by its colour. Lots of medicines were blue, but only this one had that bright, glassy blue — the same shade as Phoxichor.\nI denied the accusation, but Nurse Madeleine raised her hand to strike me. I shut my eyes, wondering whether silence or sobbing might spare me another slap. But the first one never came. When I opened my eyes, the hand clutching my collar had been pried loose — her wrist caught fast in a slender, elegant hand.\nIt was Miss Strawberry Sweets.\n\"Pardon me. I couldn't help but overhear your quarrel. Madam — before reproaching this Charon child, might I first see the medicine in question?\"\nNurse Madeleine tried to jerk her arm free, but Miss Strawberry Sweets's slender fingers held fast with surprising strength. With a muttered curse, the nurse shoved the vial into her hand.\nShe held it up, gave it a slow swirl, then pulled the stopper and took a careful sniff.\n\"There's no mistake. The girl gave you the correct medicine. This is AP-1718, as the label clearly states. You shouldn't lie in front of a child who cannot read.\"\n\"That's not the right colour for AP-1718! This little twerp switched the labels!\" Madeleine shrieked. \"She's been sulking ever since her last punishment — trying to trip me up!\"\n\"The Alchemy Academy recently revised the formula. The latest batch differs from what you remember.\" She lifted her gaze, meeting the nurse's furious stare. \"Rather than accusing an innocent child, Madam... perhaps you should spend more time familiarising yourself with your own medicines.\"\n\"What new formula? You're just here visiting someone — how would you know? Who's to say you're not just covering for this little twerp?\"\n\"Oh, I know very well,\" she replied calmly. \"My name is Daphne Theodore. AP-1718 was developed under my supervision. Here — this is my insignia from the Alchemy Academy. I trust you recognise it.\"\n\n— From the diary of Dewiolee Stone",
           TextMapId = "UI_CHAR_DATA_TEXT_54010202"
         },
         UI_CHAR_DATA_TEXT_54010203 = {
-          ContentEN = "The day Daphne Theodore saved me from the nasty nurse, I was so happy I thought I might burst. She gave me some boiled sweets — I tore off the wrappers, stuffed a few into my mouth, and pulled faces at Madeleine's back as she slunk away.\n \n\"What's your name?\" Daphne asked, as we sat together on the bench outside the ward.\n\"Tiori.\"\n\"Do you know how it's spelled?\"\nI shook my head. She picked up a twig and traced a few letters in the sand.\n\"This is your name. It means 'Dewiolet.'\"\nFor most of my life, my name had only ever come paired with words like \"twerp\" or \"lowborn wretch.\" I never imagined it could mean something so beautiful.\n\"Miss Dewiolet, may I teach you to write?\" she asked gently.\n\"Why should I learn to write?\" I said, confused. Most of us Charons could only ever do hard labour, and I had no special gift that might make me a Laurelled Charon someday. I knew that much.\n\"If you could read, what happened today might never have happened,\" Daphne replied, smiling softly. \"Knowledge is a kind of strength — a weapon to protect ourselves.\"\nI shook my head, still confused... then nodded, hard. I didn't understand what she meant, not really. But it was her advice — and that meant I couldn't say no.\nThat afternoon, Daphne Theodore taught me the whole alphabet. I copied it down into the little notepad she gave me — my letters crooked and uneven, but all my own. Before she left, I hesitated... then called out after her.\n\"Miss Theodore — I remember you said you were an alchemist.\"\n\"I am.\"\n\"What is alchemy?\"\n\"It's a study meant to make people's lives better.\"\nAs she spoke, her eyes lit up. It was as if some flame had kindled behind them, making them shine.\n\"So then... the Alchemy Academy is where people study alchemy?\"\n\"...Yes.\"\n\"If I learn to write well,\" I asked, \"could I go to the Academy too? Could I study alchemy with you, Miss Theodore?\"\nI'd always known my place. And I could read the way people looked at things. Even without asking, I could tell from the nurse's reaction that the Academy must be some grand, untouchable place. But just for a heartbeat — with the fire in Daphne's eyes — I let myself believe that maybe, just maybe, I had the right to walk towards it too.\nBut it wasn't what I imagined. That fire in her eyes vanished at once. Her expression grew distant... conflicted. She turned away, no longer meeting my gaze.\n\"No, Tiori,\" she said quietly. \"Don't go there.\"\n\"Hyperborea's Alchemy Academy has lost its way,\" she whispered. \"It's no longer the great tower I once dreamed of.\"\n \n— From the diary of Tiori Stone",
+          ContentEN = "The day Daphne Theodore saved me from the nasty nurse, I was so happy I thought I might burst. She gave me some boiled sweets — I tore off the wrappers, stuffed a few into my mouth, and pulled faces at Madeleine's back as she slunk away.\n\n\"What's your name?\" Daphne asked, as we sat together on the bench outside the ward.\n\"Dewiolee.\"\n\"Do you know how it's spelled?\"\nI shook my head. She picked up a twig and traced a few letters in the sand.\n\"This is your name. It means 'Dewiolet.'\"\nFor most of my life, my name had only ever come paired with words like \"twerp\" or \"lowborn wretch.\" I never imagined it could mean something so beautiful.\n\"Miss Dewiolet, may I teach you to write?\" she asked gently.\n\"Why should I learn to write?\" I said, confused. Most of us Charons could only ever do hard labour, and I had no special gift that might make me a Laurelled Charon someday. I knew that much.\n\"If you could read, what happened today might never have happened,\" Daphne replied, smiling softly. \"Knowledge is a kind of strength — a weapon to protect ourselves.\"\nI shook my head, still confused... then nodded, hard. I didn't understand what she meant, not really. But it was her advice — and that meant I couldn't say no.\nThat afternoon, Daphne Theodore taught me the whole alphabet. I copied it down into the little notepad she gave me — my letters crooked and uneven, but all my own. Before she left, I hesitated... then called out after her.\n\"Miss Theodore — I remember you said you were an alchemist.\"\n\"I am.\"\n\"What is alchemy?\"\n\"It's a study meant to make people's lives better.\"\nAs she spoke, her eyes lit up. It was as if some flame had kindled behind them, making them shine.\n\"So then... the Alchemy Academy is where people study alchemy?\"\n\"...Yes.\"\n\"If I learn to write well,\" I asked, \"could I go to the Academy too? Could I study alchemy with you, Miss Theodore?\"\nI'd always known my place. And I could read the way people looked at things. Even without asking, I could tell from the nurse's reaction that the Academy must be some grand, untouchable place. But just for a heartbeat — with the fire in Daphne's eyes — I let myself believe that maybe, just maybe, I had the right to walk towards it too.\nBut it wasn't what I imagined. That fire in her eyes vanished at once. Her expression grew distant... conflicted. She turned away, no longer meeting my gaze.\n\"No, Dewiolee,\" she said quietly. \"Don't go there.\"\n\"Hyperborea's Alchemy Academy has lost its way,\" she whispered. \"It's no longer the great tower I once dreamed of.\"\n\n— From the diary of Dewiolee Stone",
           TextMapId = "UI_CHAR_DATA_TEXT_54010203"
         },
         UI_CHAR_DATA_TEXT_54010204 = {
-          ContentEN = "After I filled up the notepad Daphne had given me, I finally saw her again at Riverside Hospital.\nI'd known she'd come back.\nThe last time we met, I'd begged her to help me find someone — a man named Gary Stone. I told her, tears in my eyes, that Gary was my brother — my only family in the world. I said I hadn't heard from him in ages, and that the last I knew, he'd gone to the Alchemy Academy.\nJust as I'd hoped, Daphne agreed without hesitation.\nMost of what I told her was true. But in one thing, I lied:\nI didn't miss Gary Stone at all. He was my brother, yes — but not all siblings are born to love each other. When I was still no taller than his thigh, Gary would grab me by the neck and squeeze until I couldn't breathe — all because I'd dared to steal a scrap of \"his\" food.\nI couldn't care less where Gary had gone. What I wanted was simply to see Daphne again. I thought she must've grown up in a loving family — because the moment she heard Gary was my brother, she assumed he must be someone dear to me.\n \nDaphne came back, bringing news about Gary Stone.\nBut this time, she looked exhausted. The dark circles under her eyes were plain to see, and it looked like she'd been crying — faint streaks still marked her cheeks.\nI saw her pacing at the far end of the corridor for ages before she finally walked over. I figured she must've brought bad news. Was she hesitating? Unsure whether to tell me? Or just trying to find the right way to say it?\n\"Tiori,\" she said, kneeling and gripping my shoulders, \"I found out what happened to your brother. Please... promise me you'll stay strong, no matter what. Will you?\"\nAh — so she was going to tell me everything after all. Maybe she wasn't any good at lying. Or maybe she just believed that even a child had the right to know the truth.\n\"Gary Stone won't be coming back,\" Daphne said, her voice hoarse. \"He was caught in an alchemical accident.\"\nI didn't feel a thing. But I still had questions. I didn't care about Gary — what I wanted to know was: What kinds of endings waited for people like us — the ones they treated like rubbish?\n\"...An accident? Did someone die?\"\n\"Yes.\"\n\"Did the alchemist kill them?\"\n\"No.\"\n\"Did Gary kill them?\"\n\"...No.\"\n\"Then who was the killer?\"\n\"It was a ghost no one could see,\" she said. \"Or perhaps... it was all of us.\"\nI shook my head. I didn't understand.\n\"Then... Miss Theodore,\" I asked, \"will I die like Gary someday too?\"\n\"If I learn enough words — enough to understand all the books you gave me, enough to master alchemy — will that keep me from ending up like my brother?\"\n\"I wish I could tell you yes. I used to believe it. I knew people like you — who rose from nothing, and climbed to the top through what they'd learned.\" Daphne said softly, brushing her hand over the horn on my head. \"But now... I've seen far more fall before they ever reached the peak — shattered to pieces on the way up. There are more of them than the ones who made it.\"\n\"There's one thing you must remember, Tiori,\" she said, enunciating every word. \"Stay away from the Academy. Even if you come to love alchemy — never go near that place.\"\nI nodded, slowly and with all the seriousness I could muster.\nDaphne rose and took out the notepad she always carried. She tore out a blank page.\nI thought she was going to write something — but instead, she folded the paper into a tiny boat.\n\"I've heard that among the Charon people, every soul is bound to the water. Tell this boat what you want to say, then set it adrift on the Whisper River. It will carry your thoughts to your brother.\"\nI held the little boat in both hands and watched her walk away. After that, a long time passed — and I never saw Daphne again.\nOne day, when an Academy staffer came to deliver medicine to Riverside Hospital, I gathered my courage and asked where she'd gone — why she never came anymore.\nHe told me she'd gone to the battlefield. A place where those who go may never return. Perhaps she would never come back.\nThe box of strawberry sweets slipped from my hand and fell to the floor.\n \n— From the diary of Tiori Stone",
+          ContentEN = "After I filled up the notepad Daphne had given me, I finally saw her again at Riverside Hospital.\nI'd known she'd come back.\nThe last time we met, I'd begged her to help me find someone — a man named Gary Stone. I told her, tears in my eyes, that Gary was my brother — my only family in the world. I said I hadn't heard from him in ages, and that the last I knew, he'd gone to the Alchemy Academy.\nJust as I'd hoped, Daphne agreed without hesitation.\nMost of what I told her was true. But in one thing, I lied:\nI didn't miss Gary Stone at all. He was my brother, yes — but not all siblings are born to love each other. When I was still no taller than his thigh, Gary would grab me by the neck and squeeze until I couldn't breathe — all because I'd dared to steal a scrap of \"his\" food.\nI couldn't care less where Gary had gone. What I wanted was simply to see Daphne again. I thought she must've grown up in a loving family — because the moment she heard Gary was my brother, she assumed he must be someone dear to me.\n\nDaphne came back, bringing news about Gary Stone.\nBut this time, she looked exhausted. The dark circles under her eyes were plain to see, and it looked like she'd been crying — faint streaks still marked her cheeks.\nI saw her pacing at the far end of the corridor for ages before she finally walked over. I figured she must've brought bad news. Was she hesitating? Unsure whether to tell me? Or just trying to find the right way to say it?\n\"Dewiolee,\" she said, kneeling and gripping my shoulders, \"I found out what happened to your brother. Please... promise me you'll stay strong, no matter what. Will you?\"\nAh — so she was going to tell me everything after all. Maybe she wasn't any good at lying. Or maybe she just believed that even a child had the right to know the truth.\n\"Gary Stone won't be coming back,\" Daphne said, her voice hoarse. \"He was caught in an alchemical accident.\"\nI didn't feel a thing. But I still had questions. I didn't care about Gary — what I wanted to know was: What kinds of endings waited for people like us — the ones they treated like rubbish?\n\"...An accident? Did someone die?\"\n\"Yes.\"\n\"Did the alchemist kill them?\"\n\"No.\"\n\"Did Gary kill them?\"\n\"...No.\"\n\"Then who was the killer?\"\n\"It was a ghost no one could see,\" she said. \"Or perhaps... it was all of us.\"\nI shook my head. I didn't understand.\n\"Then... Miss Theodore,\" I asked, \"will I die like Gary someday too?\"\n\"If I learn enough words — enough to understand all the books you gave me, enough to master alchemy — will that keep me from ending up like my brother?\"\n\"I wish I could tell you yes. I used to believe it. I knew people like you — who rose from nothing, and climbed to the top through what they'd learned.\" Daphne said softly, brushing her hand over the horn on my head. \"But now... I've seen far more fall before they ever reached the peak — shattered to pieces on the way up. There are more of them than the ones who made it.\"\n\"There's one thing you must remember, Dewiolee,\" she said, enunciating every word. \"Stay away from the Academy. Even if you come to love alchemy — never go near that place.\"\nI nodded, slowly and with all the seriousness I could muster.\nDaphne rose and took out the notepad she always carried. She tore out a blank page.\nI thought she was going to write something — but instead, she folded the paper into a tiny boat.\n\"I've heard that among the Charon people, every soul is bound to the water. Tell this boat what you want to say, then set it adrift on the Whisper River. It will carry your thoughts to your brother.\"\nI held the little boat in both hands and watched her walk away. After that, a long time passed — and I never saw Daphne again.\nOne day, when an Academy staffer came to deliver medicine to Riverside Hospital, I gathered my courage and asked where she'd gone — why she never came anymore.\nHe told me she'd gone to the battlefield. A place where those who go may never return. Perhaps she would never come back.\nThe box of strawberry sweets slipped from my hand and fell to the floor.\n\n— From the diary of Dewiolee Stone",
           TextMapId = "UI_CHAR_DATA_TEXT_54010204"
         },
         UI_CHAR_DATA_TEXT_54010205 = {
-          ContentEN = "By the time I'd learned to read the simpler newspapers, Daphne came back.\nShe still held a bouquet of flowers — but this time, she looked gaunt, hollowed out. As if the lightest breeze could blow her straight into the Whisper River.\nAs she walked down the corridor, all talk ceased. Every gaze turned to her — full of hatred, disgust, envy, and fear. Then someone sneered, spitting out the word \"traitor.\" Others followed, repeating it.\nSo that was it. I'd overheard the nurses' gossip a few days ago — that Daphne Theodore was suspected of betraying her country in the war.\n—But so what?\nIf a country could drive someone like Daphne Theodore to betrayal, then surely the fault lies with the country... not with her.\n \nDaphne gave no reply to the slurs. She didn't even glance at them — only kept her thin back straight as she walked on towards the wards.\n\"How is Mr Gaston?\" she asked the nurse on duty.\n\"If you mean Roger Gaston — he's already dead,\" the nurse replied. \"Not long ago, after another bout of pain, he smashed a glass when no one was watching and slit his wrist.\"\n\"But I had the medicine sent — the one that could cure him!\" It was the first time I'd ever seen Daphne lose control. Her voice cracked with despair. \"Did AG-1899 not work?\"\n\"You were a little too late, Miss. He killed himself the night before it arrived.\" The nurse's voice was cool, with a mocking curl at her lips. \"And anyway... Mr Gaston was a decorated veteran. Even if he'd survived the night, once he heard of your 'heroics' at Lonza Fortress... he wouldn't have dared take your medicine.\"\nDaphne's face went even paler. The nail of her thumb dug deep into the flesh of her index finger.\n\"No! I didn't—\"\nShe looked ready to defend herself — but in the end, she said nothing.\nI reached out and took her hand, gently prising her fingers apart. Her skin was ice-cold — like a corpse in the morgue.\n\"Miss Theodore... no, Daphne.\"\nIt was the first time I'd ever called her that. I almost dragged her down to the bench below — the one where she once taught me to write.\nCopying her, I snapped off a twig and scratched two clumsy words into the dirt:\n\"Cheer up.\"\nThen I took her hand and placed something in it — a paper boat I had folded.\n\"Tell this boat what you want to say, then set it adrift on the Whisper River. It'll carry your thoughts to your father — let him know how much you miss him.\"\nAt the mention of her father, Daphne looked astonished. But then the shock softened in her green eyes... and became a faint smile.\n\"Thank you, Tiori,\" she said. \"I'll do that.\"\nSuddenly, as if remembering something, she rummaged through her backpack and pulled out a few books. She pressed them into my arms — she hadn't forgotten that I once told her I wanted to read more. We sat on the bench together for a while. Then she rose, and walked away into the crimson sunset.\n \nWhen I could read every section of the newspaper, Daphne Theodore still hadn't come back.\nWhen the design on the candy box she gave me had worn away, Daphne Theodore still hadn't come back.\nWhen I'd grown tall enough that the underpads I carried no longer hid my face, Daphne Theodore still hadn't come back.\nWhen I could read even the most complex alchemical texts, Daphne Theodore still hadn't come back.\nWhen I learned how to extract potion from Dewiolet blossoms, Daphne Theodore still hadn't come back.\nWhen I'd saved enough to leave Hyperborea and study in Aethyrie, Daphne Theodore still hadn't come back.\nWell... the family she came to visit was gone. She had no reason to return.\n \nAt dusk, I stood in the corridor, bidding farewell to the hospital where I had lived and worked for nearly twenty years. The dusk that day was a vivid crimson — just like the last time I saw Daphne.\nThen I saw a figure approaching from the far end of the corridor. She looked like a young, slender girl with blonde hair. My suitcase slipped from my hand. But when I bent to pick it up and looked again... there was no one there.\n\"Did you see a girl just now?\" I asked Nurse Madeleine. \"Tall, thin — blonde hair...\"\n\"What blonde girl?\" she muttered. \"And here I thought it was us old ladies who needed glasses.\"\n\"Oh. I must've been mistaken.\"\nI walked downstairs with my suitcase, and never looked back.\n \n— From the diary of Tiori Stone",
+          ContentEN = "By the time I'd learned to read the simpler newspapers, Daphne came back.\nShe still held a bouquet of flowers — but this time, she looked gaunt, hollowed out. As if the lightest breeze could blow her straight into the Whisper River.\nAs she walked down the corridor, all talk ceased. Every gaze turned to her — full of hatred, disgust, envy, and fear. Then someone sneered, spitting out the word \"traitor.\" Others followed, repeating it.\nSo that was it. I'd overheard the nurses' gossip a few days ago — that Daphne Theodore was suspected of betraying her country in the war.\n—But so what?\nIf a country could drive someone like Daphne Theodore to betrayal, then surely the fault lies with the country... not with her.\n\nDaphne gave no reply to the slurs. She didn't even glance at them — only kept her thin back straight as she walked on towards the wards.\n\"How is Mr Gaston?\" she asked the nurse on duty.\n\"If you mean Roger Gaston — he's already dead,\" the nurse replied. \"Not long ago, after another bout of pain, he smashed a glass when no one was watching and slit his wrist.\"\n\"But I had the medicine sent — the one that could cure him!\" It was the first time I'd ever seen Daphne lose control. Her voice cracked with despair. \"Did AG-1899 not work?\"\n\"You were a little too late, Miss. He killed himself the night before it arrived.\" The nurse's voice was cool, with a mocking curl at her lips. \"And anyway... Mr Gaston was a decorated veteran. Even if he'd survived the night, once he heard of your 'heroics' at Lonza Fortress... he wouldn't have dared take your medicine.\"\nDaphne's face went even paler. The nail of her thumb dug deep into the flesh of her index finger.\n\"No! I didn't—\"\nShe looked ready to defend herself — but in the end, she said nothing.\nI reached out and took her hand, gently prising her fingers apart. Her skin was ice-cold — like a corpse in the morgue.\n\"Miss Theodore... no, Daphne.\"\nIt was the first time I'd ever called her that. I almost dragged her down to the bench below — the one where she once taught me to write.\nCopying her, I snapped off a twig and scratched two clumsy words into the dirt:\n\"Cheer up.\"\nThen I took her hand and placed something in it — a paper boat I had folded.\n\"Tell this boat what you want to say, then set it adrift on the Whisper River. It'll carry your thoughts to your father — let him know how much you miss him.\"\nAt the mention of her father, Daphne looked astonished. But then the shock softened in her green eyes... and became a faint smile.\n\"Thank you, Dewiolee,\" she said. \"I'll do that.\"\nSuddenly, as if remembering something, she rummaged through her backpack and pulled out a few books. She pressed them into my arms — she hadn't forgotten that I once told her I wanted to read more. We sat on the bench together for a while. Then she rose, and walked away into the crimson sunset.\n\nWhen I could read every section of the newspaper, Daphne Theodore still hadn't come back.\nWhen the design on the candy box she gave me had worn away, Daphne Theodore still hadn't come back.\nWhen I'd grown tall enough that the underpads I carried no longer hid my face, Daphne Theodore still hadn't come back.\nWhen I could read even the most complex alchemical texts, Daphne Theodore still hadn't come back.\nWhen I learned how to extract potion from Dewiolet blossoms, Daphne Theodore still hadn't come back.\nWhen I'd saved enough to leave Hyperborea and study in Aethyrie, Daphne Theodore still hadn't come back.\nWell... the family she came to visit was gone. She had no reason to return.\n\nAt dusk, I stood in the corridor, bidding farewell to the hospital where I had lived and worked for nearly twenty years. The dusk that day was a vivid crimson — just like the last time I saw Daphne.\nThen I saw a figure approaching from the far end of the corridor. She looked like a young, slender girl with blonde hair. My suitcase slipped from my hand. But when I bent to pick it up and looked again... there was no one there.\n\"Did you see a girl just now?\" I asked Nurse Madeleine. \"Tall, thin — blonde hair...\"\n\"What blonde girl?\" she muttered. \"And here I thought it was us old ladies who needed glasses.\"\n\"Oh. I must've been mistaken.\"\nI walked downstairs with my suitcase, and never looked back.\n\n— From the diary of Dewiolee Stone",
           TextMapId = "UI_CHAR_DATA_TEXT_54010205"
         },
         UI_CHAR_DATA_TEXT_54010301 = {
-          ContentEN = "You once watched Daphne lay out the contents of her emergency kit. Its compartments held no secrets from your eyes.\n \nIn the upper tier, she kept disinfectant, gauze, and bandages; in the middle, needles and thread, anaesthetic, painkillers, and a set of simple surgical tools. She had reworked the case's structure with care, so it could hold as many supplies as possible — yet it was never enough. Against wounds and deaths that multiplied with every passing moment, what could a single medic — with a single box — truly fix?\n \nThe lowest tier carried more personal things: a handkerchief, a comb, and a sidearm. Once, she asked you in quiet dismay — if the worst came to pass, should the final bullet be spared for the enemy... or for herself?",
+          ContentEN = "You once watched Daphne lay out the contents of her emergency kit. Its compartments held no secrets from your eyes.\n\nIn the upper tier, she kept disinfectant, gauze, and bandages; in the middle, needles and thread, anaesthetic, painkillers, and a set of simple surgical tools. She had reworked the case's structure with care, so it could hold as many supplies as possible — yet it was never enough. Against wounds and deaths that multiplied with every passing moment, what could a single medic — with a single box — truly fix?\n\nThe lowest tier carried more personal things: a handkerchief, a comb, and a sidearm. Once, she asked you in quiet dismay — if the worst came to pass, should the final bullet be spared for the enemy... or for herself?",
           TextMapId = "UI_CHAR_DATA_TEXT_54010301"
         },
         UI_CHAR_DATA_TEXT_54010302 = {
@@ -64861,35 +67366,35 @@ Instead, she rejoiced in having met you and in having lived a life that was trul
           TextMapId = "UI_CHAR_DATA_TEXT_54010302"
         },
         UI_CHAR_DATA_TEXT_54010303 = {
-          ContentEN = "On humanitarian grounds, Daphne Theodore refused to participate in the Spathatoi's Intensification Project — a programme designed to forcibly unlock the magical potential of the Charon. For this, she openly defied the Spathatoi's dean not once, but twice.\n \nYet as the final disciple of Madame Flamel — the Spathatoi's revered founder — and a fellow pupil of Chief Sibylle, Daphne was spared formal reprimand. By now, the matter has become an open secret within the Spathatoi's halls.",
+          ContentEN = "On humanitarian grounds, Daphne Theodore refused to participate in the Spathatoi's Intensification Project — a programme designed to forcibly unlock the magical potential of the Charon. For this, she openly defied the Spathatoi's dean not once, but twice.\n\nYet as the final disciple of Madame Flamel — the Spathatoi's revered founder — and a fellow pupil of Chief Sibylle, Daphne was spared formal reprimand. By now, the matter has become an open secret within the Spathatoi's halls.",
           TextMapId = "UI_CHAR_DATA_TEXT_54010303"
         },
         UI_CHAR_DATA_TEXT_54010304 = {
-          ContentEN = "Back in her Academy days, Daphne displayed an unusual sensitivity to the wars. Whenever a battle broke out, she would find a way to obtain the list of the fallen.\n \nEach time, she scanned it in anxious silence for one particular name — and each time, let out the faintest sigh of relief when it was not there.\n \nBut now... she no longer needs to look.",
+          ContentEN = "Back in her Academy days, Daphne displayed an unusual sensitivity to the wars. Whenever a battle broke out, she would find a way to obtain the list of the fallen.\n\nEach time, she scanned it in anxious silence for one particular name — and each time, let out the faintest sigh of relief when it was not there.\n\nBut now... she no longer needs to look.",
           TextMapId = "UI_CHAR_DATA_TEXT_54010304"
         },
         UI_CHAR_DATA_TEXT_54010305 = {
-          ContentEN = "Daphne's world was once a simple one — everything she could observe obeyed logic and cause. Step by step, through analysis, deduction, and experiment, even the most intricate of problems would come undone, like a cat teasing apart a ball of yarn. For a time, she believed there was nothing beyond human reach.\n \nBut later, she came to understand: even a mind vast enough to chart the laws of stars could be ended in an instant — by a stray bullet, a common stone, or an ordinary brick.\n \nDaphne Theodore stays true to her ideals. But the road that once led to that great tower... she can no longer find.",
+          ContentEN = "Daphne's world was once a simple one — everything she could observe obeyed logic and cause. Step by step, through analysis, deduction, and experiment, even the most intricate of problems would come undone, like a cat teasing apart a ball of yarn. For a time, she believed there was nothing beyond human reach.\n\nBut later, she came to understand: even a mind vast enough to chart the laws of stars could be ended in an instant — by a stray bullet, a common stone, or an ordinary brick.\n\nDaphne Theodore stays true to her ideals. But the road that once led to that great tower... she can no longer find.",
           TextMapId = "UI_CHAR_DATA_TEXT_54010305"
         },
         UI_CHAR_DATA_TEXT_54010401 = {
-          ContentEN = "Dismania's Rain beat against the windows of the pallid hospital ward, where a four-year-old girl lay dying.\nThe cloth on her brow had been changed countless times. Medicines dripped through rubber tubes into her veins — yet the fever would not break.\n \nOn the first day, her father clasped her frail, small hand in his own broad palm and pressed it to his tear-soaked stubble. She did not wake.\nOn the second, her mother brought the finest physician in Dismania — a man who had once served the Emperor himself. Yet for all the gold he was paid, he merely shook his head and murmured there was only one chance in ten. She did not wake.\nOn the third, the young nurse tending her lit a candle, folded her hands to her chest, and prayed in a low voice. She did not wake.\nOn the fourth, a funeral director barged in with a sycophant's smile, speaking to the parents of splendid hearses and grand processions. The girl's enraged father seized a chair and drove him out. She did not wake.\nOn the fifth day, the girl's ageing grandmother arrived from her country estate. She looked down at the child, still unconscious, and drew a worn book from her purse. Settling beside the bed, she began to read in a gentle murmur.\n\"Long, long ago, mankind dreamed of transmuting base metals into gold as if by magic. They mixed sulphur, salt, and mercury... and many years later, we gained Phoxene.\"\n\"Long, long ago, mankind dreamed of soaring through the skies like birds. They strove to lift balloons with fire... and many years later, we gained the airship.\"\n\"Why are you telling these stories now?\" the girl's mother protested, eyes red with grief. \"She's still unconscious — she can't hear you! I... I only asked you here to see her one last time, Mother.\"\n\"No, Claudia.' The old woman smiled faintly. \"Daphne always loved to hear these tales. She will wake.\"\n\"Long, long ago, mankind dreamed of driving out sickness like the gods themselves. They ground every herb and root they could find... and many years later, we gained the draughts and tonics we call medicine. These are our alchemy — what is called gezhi in Huaxu, and science in Aethyrie.\"\nShe kissed the girl's pallid cheek. \"Believe in the power of great alchemy, Daphne. You will wake. For alchemy is—\"\n\"...an art that brings... happiness... to humankind.\"\nIn the ward, eyes first widened in shock, then filled with tears of joy, as the girl's pale lips stirred with the secret phrase she shared with her grandmother.\nThe needle of fate spun — and came to rest on its slender tenth. Four-year-old Daphne Theodore awoke.\n \nThough she has long known it was no more than coincidence, Daphne often jokes that it was her grandmother's stories of alchemy that granted her a second life. It was also that brush with death that set her resolve: to take up the family calling, to become an alchemist worthy of her mother and the grandparents. Like the generations of alchemists who came before her, she would use this discipline to bring happiness to others — just as the frail, pale child she once was had been drawn back from death, drop by drop, by its medicines.\n \nOnce, she believed this with all her heart.",
+          ContentEN = "Dismania's Rain beat against the windows of the pallid hospital ward, where a four-year-old girl lay dying.\nThe cloth on her brow had been changed countless times. Medicines dripped through rubber tubes into her veins — yet the fever would not break.\n\nOn the first day, her father clasped her frail, small hand in his own broad palm and pressed it to his tear-soaked stubble. She did not wake.\nOn the second, her mother brought the finest physician in Dismania — a man who had once served the Emperor himself. Yet for all the gold he was paid, he merely shook his head and murmured there was only one chance in ten. She did not wake.\nOn the third, the young nurse tending her lit a candle, folded her hands to her chest, and prayed in a low voice. She did not wake.\nOn the fourth, a funeral director barged in with a sycophant's smile, speaking to the parents of splendid hearses and grand processions. The girl's enraged father seized a chair and drove him out. She did not wake.\nOn the fifth day, the girl's ageing grandmother arrived from her country estate. She looked down at the child, still unconscious, and drew a worn book from her purse. Settling beside the bed, she began to read in a gentle murmur.\n\"Long, long ago, mankind dreamed of transmuting base metals into gold as if by magic. They mixed sulphur, salt, and mercury... and many years later, we gained Phoxene.\"\n\"Long, long ago, mankind dreamed of soaring through the skies like birds. They strove to lift balloons with fire... and many years later, we gained the airship.\"\n\"Why are you telling these stories now?\" the girl's mother protested, eyes red with grief. \"She's still unconscious — she can't hear you! I... I only asked you here to see her one last time, Mother.\"\n\"No, Claudia.' The old woman smiled faintly. \"Daphne always loved to hear these tales. She will wake.\"\n\"Long, long ago, mankind dreamed of driving out sickness like the gods themselves. They ground every herb and root they could find... and many years later, we gained the draughts and tonics we call medicine. These are our alchemy — what is called gezhi in Huaxu, and science in Aethyrie.\"\nShe kissed the girl's pallid cheek. \"Believe in the power of great alchemy, Daphne. You will wake. For alchemy is—\"\n\"...an art that brings... happiness... to humankind.\"\nIn the ward, eyes first widened in shock, then filled with tears of joy, as the girl's pale lips stirred with the secret phrase she shared with her grandmother.\nThe needle of fate spun — and came to rest on its slender tenth. Four-year-old Daphne Theodore awoke.\n\nThough she has long known it was no more than coincidence, Daphne often jokes that it was her grandmother's stories of alchemy that granted her a second life. It was also that brush with death that set her resolve: to take up the family calling, to become an alchemist worthy of her mother and the grandparents. Like the generations of alchemists who came before her, she would use this discipline to bring happiness to others — just as the frail, pale child she once was had been drawn back from death, drop by drop, by its medicines.\n\nOnce, she believed this with all her heart.",
           TextMapId = "UI_CHAR_DATA_TEXT_54010401"
         },
         UI_CHAR_DATA_TEXT_54010402 = {
-          ContentEN = "The Royal Alchemy Academy stood atop the highest of Dismania's seven hills. From the tower at its summit, the Whisper River stretched out below like a drawn horizon, dividing the city in two — the old town of white brick on one side, the new town of black iron on the other. And the people looked so small, like ants scurrying with grains of rice. This was the daily view of the Academy's alchemists — and for many, it became their view of the world: that great alchemists were the architects of a prosperous nation, and thus its rightful overseers.\n \nMeanwhile, in the grand hall of the Spathatoi, Sibylle Mason looked down on the assembled alchemists. It was the entrance ceremony of Azoth College — the Academy's subordinate school — and time for the customary speeches from the new intake. Sibylle stifled a yawn. To her, the hall was no different from a ballroom, and these speeches — whether stiff or flamboyant — were just another kind of social currency. She didn't need to listen to know what they'd say. The safest speech was a pledge of loyalty to Hyperborea: a vow to sacrifice all for the Emperor's glory. The fashionable choice was to pose as an eccentric researcher, rhapsodising about their love for the \"mysteries of life\" — usually Filthoids, Charons, and other magical beings. The more outlandish the tone, the more peculiar the manner, the better. The more they resembled lunatics, the louder the applause.\n \nThe final student's florid speech came to an end, and the hall broke into applause. Sibylle caught only part of the next name — some Daphne Theo-something — before a thin girl stepped onto the stage. Among students dressed to make themselves look as bizarre as possible, the girl in a plain white blouse and black skirt was almost invisible.\n She began to speak. Her voice sounded younger than the others'. And suddenly, Sibylle remembered where she'd heard the name before — from Madame Flamel, who was her mentor. She had once pointed to an essay and said to Sibylle: This girl, Daphne Theodore, is bright — as clever as you were once. Only fifteen, but certain to become a fine alchemist one day.\n \nBut what use was brilliance? Hyperborea's Alchemy Academy had never lacked for geniuses. Still bored, Sibylle turned another page of her book. The new student speeches were drawing to a close. The girl was already delivering her final words:\n \n\"So, let me end with my true ideal: Alchemy is the study that brings happiness to humankind. That is why I stand here today.\"\n \nA smattering of applause followed — laced with soft laughter and scattered jeers. Sibylle closed her book. She understood the age they lived in — one growing steadily more vulgar, where people had learned to sneer at ideals and dreams. And here, in a hall where madness and cold-bloodedness were the fashion, Daphne's words were nothing short of a declaration: That she was a relic of the past. Or a naive child, blind to how the world truly worked.\n \nThe freshmen laughed — but their smiles soon froze. From the dais came the sharp sound of applause. It was Sibylle Mason, senior officer of the Legion and honorary dean of the Academy. The Laurelled Charon they scorned for her blood, yet still bowed to in fear. And so, begrudgingly, they followed her lead and clapped along.\n \nOn the stage, Daphne turned her face toward Sibylle. A shaft of light caught her — and for a moment, Sibylle could see only a silhouette, haloed in brightness. What expression lay behind it? A smile? Bewilderment? Gratitude? Or the same calm resolve she had shown in her words?\n \nAt the time, Sibylle paid it no mind. What stirred in her was only a trace of cruel amusement. It had been a long time since the Spathatoi had seen one who still carried such outdated, guileless ideals. And all Sibylle wished to know was this: Once the Academy's gilding was stripped away — when all that remained was bare flesh and bone — how long would the \"ideal\" of this girl, Daphne Theodore, endure?",
+          ContentEN = "The Royal Alchemy Academy stood atop the highest of Dismania's seven hills. From the tower at its summit, the Whisper River stretched out below like a drawn horizon, dividing the city in two — the old town of white brick on one side, the new town of black iron on the other. And the people looked so small, like ants scurrying with grains of rice. This was the daily view of the Academy's alchemists — and for many, it became their view of the world: that great alchemists were the architects of a prosperous nation, and thus its rightful overseers.\n\nMeanwhile, in the grand hall of the Spathatoi, Sibylle Mason looked down on the assembled alchemists. It was the entrance ceremony of Azoth College — the Academy's subordinate school — and time for the customary speeches from the new intake. Sibylle stifled a yawn. To her, the hall was no different from a ballroom, and these speeches — whether stiff or flamboyant — were just another kind of social currency. She didn't need to listen to know what they'd say. The safest speech was a pledge of loyalty to Hyperborea: a vow to sacrifice all for the Emperor's glory. The fashionable choice was to pose as an eccentric researcher, rhapsodising about their love for the \"mysteries of life\" — usually Filthoids, Charons, and other magical beings. The more outlandish the tone, the more peculiar the manner, the better. The more they resembled lunatics, the louder the applause.\n\nThe final student's florid speech came to an end, and the hall broke into applause. Sibylle caught only part of the next name — some Daphne Theo-something — before a thin girl stepped onto the stage. Among students dressed to make themselves look as bizarre as possible, the girl in a plain white blouse and black skirt was almost invisible.\nShe began to speak. Her voice sounded younger than the others'. And suddenly, Sibylle remembered where she'd heard the name before — from Madame Flamel, who was her mentor. She had once pointed to an essay and said to Sibylle: This girl, Daphne Theodore, is bright — as clever as you were once. Only fifteen, but certain to become a fine alchemist one day.\n\nBut what use was brilliance? Hyperborea's Alchemy Academy had never lacked for geniuses. Still bored, Sibylle turned another page of her book. The new student speeches were drawing to a close. The girl was already delivering her final words:\n\n\"So, let me end with my true ideal: Alchemy is the study that brings happiness to humankind. That is why I stand here today.\"\n\nA smattering of applause followed — laced with soft laughter and scattered jeers. Sibylle closed her book. She understood the age they lived in — one growing steadily more vulgar, where people had learned to sneer at ideals and dreams. And here, in a hall where madness and cold-bloodedness were the fashion, Daphne's words were nothing short of a declaration: That she was a relic of the past. Or a naive child, blind to how the world truly worked.\n\nThe freshmen laughed — but their smiles soon froze. From the dais came the sharp sound of applause. It was Sibylle Mason, senior officer of the Legion and honorary dean of the Academy. The Laurelled Charon they scorned for her blood, yet still bowed to in fear. And so, begrudgingly, they followed her lead and clapped along.\n\nOn the stage, Daphne turned her face toward Sibylle. A shaft of light caught her — and for a moment, Sibylle could see only a silhouette, haloed in brightness. What expression lay behind it? A smile? Bewilderment? Gratitude? Or the same calm resolve she had shown in her words?\n\nAt the time, Sibylle paid it no mind. What stirred in her was only a trace of cruel amusement. It had been a long time since the Spathatoi had seen one who still carried such outdated, guileless ideals. And all Sibylle wished to know was this: Once the Academy's gilding was stripped away — when all that remained was bare flesh and bone — how long would the \"ideal\" of this girl, Daphne Theodore, endure?",
           TextMapId = "UI_CHAR_DATA_TEXT_54010402"
         },
         UI_CHAR_DATA_TEXT_54010403 = {
-          ContentEN = "Daphne handed over her rucksack without a word, submitted to the soldier's search, and passed through two heavy doors. It was said the doors were forged with powerful magnets, designed to expose any concealed blade or firearm — a safeguard against assassination for the Legion's high command. Yet upon crossing the final threshold, Daphne found herself faintly taken aback: beyond all that elaborate security, Sibylle Mason's private residence was stark to the point of austerity. The walls were coarse and grey, stripped of paintings or adornment. A broad dining table and a scattering of hard-backed chairs were all that furnished the space — angular, unembellished, as bare and functional as barrack stock, crafted for nothing but to bear the weight of a body.\n \n\"You've come, Daphne.\" Sibylle's voice reached her, muffled through the corridor. \"I'm in the kitchen. Come in.\"\n \nDaphne responded softly and made her way towards the sound. Her steps were cautious — she had no idea why a senior Legion officer, who had once studied above her at the Alchemy Academy, had summoned her to a private home.\n \nThe kitchen, like the parlour, was framed in bare grey walls. The only trace of colour lay in the vivid red of a pomegranate resting in the violet-haired woman's palm. The tip of her knife traced the fruit's smooth, taut skin.\n \n\"You're fifteen minutes early. I wasn't yet prepared to receive you.\" Sibylle's blade slipped through the rind, revealing the glistening cluster of translucent seeds. \"I dislike hiring servants. Everything here is done by my own hand.\"\n \n\"I'm sorry to trouble you.\" Daphne clasped her hands, uneasy. \"Perhaps... perhaps you'd like me to hel—\"\n \nRing—ring.\nThe telephone rang, abruptly cutting her short.\n \n\"Daphne.\" Sibylle began dropping the seeds into a white porcelain dish. \"Pick it up. Hold the receiver for me.\" She showed no sign of concern over her guest's presence.\n \nDaphne complied, gently raising the earpiece to Sibylle's ear. A young man's voice came through — clear enough for them both to hear.\n \n\"Chief Sibylle, it's about the two Forsakens spies. They've been under torture for four days now, but still refuse to name their accomplices. I believe they're reaching their limit.\"\n \n\"For many, the body's pain means little. You are still green. Do not strike what is hardest in them — strike what is softest.\"\n \nThe pomegranate seeds landed in the dish with soft, brittle clinks. Sibylle didn't lift her gaze. \"As I recall, those two are brothers.\"\n \n\"We've already threatened them with each other's lives, but neither gave in. It appears they made a pact — resolved to die from the start.\"\n \n\"No. You still haven't grasped what I meant by 'the softest part.'\"\n \nShe tipped the pale seeds into a fine copper sieve resting over a glass jug. With a steady, unrelenting grip, she began to press — knuckles whitening as juice seeped crimson through the mesh in a slow, thin stream.\n \n\"Do not threaten them with death. Tempt them with hope. Say this: the one who speaks will die — but his brother will live.\"\n \nA crisp \"Yes, ma'am\" crackled down the line, and the call ended. In the sieve, the seeds had turned pale and shrivelled. Sibylle poured the half-jug of juice into two glasses. Daphne's hand, still holding the receiver, remained suspended mid-air. A fine film of sweat gathered on her brow. Without a glance back, Sibylle turned and walked ahead. Daphne followed in silence, a few steps behind.\n \n\"Daphne. You wish to know the brothers' fate, do you not?\" Sibylle held out a glass of pomegranate juice. \"Then stay — and witness their end.\"\n \nDaphne faltered, then gave a small nod, biting her lower lip. She feigned calm as she swirled the glass, eyes fixed on the red within. Pomegranates had once been dear to her; as a child, she would walk the orchards hand in hand with her parents. But now, in that same familiar crimson, she felt only a creeping dread.\n \nThe minute hand had turned a full circuit and a half when the telephone rang again. It was the same young man's voice. \"The elder brother has confessed his contact. We're already moving to make the arrest. As promised, we released the younger — even returned his sidearm.\"\n \nDaphne exhaled in quiet relief, only for her smile to falter at the next words. \"The younger couldn't bear the thought that his brother had traded such precious secrets for his life. Once free, he raised the pistol to his own head and pulled the trigger.\"\n \n\"Ah, such a pity... a will of iron, in one so young.\" The words were spoken — but not a trace of pity coloured her voice. Her gaze lingered on Daphne, lips curved in a subtle, unreadable smile.\n \n\"You knew this would happen. That's why you're not surprised. You brought me here today so I'd hear it with my own ears.\" Daphne's lips were dry; her voice wavered despite her effort to steady it. \"It was... Dean Silas who asked you to persuade me — to tell me how I should serve the Empire. Wasn't it?\"\n \n\"Silas's grievances don't concern me,\" Sibylle said flatly. \"Daphne, I brought you here for one reason: to show you what it takes to survive — whether in the Legion or the Academy. Empathy must be kept in measure. Sharp enough to sense weakness... never so unchecked that it renders you useless.\"\n \n\"Excess empathy won't just make you useless, Daphne — it will drag you into your own misfortune.\"\n \nDaphne could scarcely recall how she had managed to feign thanks for Sibylle's lesson, nor how she had all but fled that stark house of grey and white. What lingered was the memory of two glasses of pomegranate juice: Sibylle's, drained in a single draught, and her own, left untouched. Sometimes, she dreamt of that glass — of the liquid within it: the colour of the pomegranate, the colour of life itself. In her dreams, it spilled over the rim, more and more, until it rose into a crimson river that closed over her... and swallowed her whole.",
+          ContentEN = "Daphne handed over her rucksack without a word, submitted to the soldier's search, and passed through two heavy doors. It was said the doors were forged with powerful magnets, designed to expose any concealed blade or firearm — a safeguard against assassination for the Legion's high command. Yet upon crossing the final threshold, Daphne found herself faintly taken aback: beyond all that elaborate security, Sibylle Mason's private residence was stark to the point of austerity. The walls were coarse and grey, stripped of paintings or adornment. A broad dining table and a scattering of hard-backed chairs were all that furnished the space — angular, unembellished, as bare and functional as barrack stock, crafted for nothing but to bear the weight of a body.\n\n\"You've come, Daphne.\" Sibylle's voice reached her, muffled through the corridor. \"I'm in the kitchen. Come in.\"\n\nDaphne responded softly and made her way towards the sound. Her steps were cautious — she had no idea why a senior Legion officer, who had once studied above her at the Alchemy Academy, had summoned her to a private home.\n\nThe kitchen, like the parlour, was framed in bare grey walls. The only trace of colour lay in the vivid red of a pomegranate resting in the violet-haired woman's palm. The tip of her knife traced the fruit's smooth, taut skin.\n\n\"You're fifteen minutes early. I wasn't yet prepared to receive you.\" Sibylle's blade slipped through the rind, revealing the glistening cluster of translucent seeds. \"I dislike hiring servants. Everything here is done by my own hand.\"\n\n\"I'm sorry to trouble you.\" Daphne clasped her hands, uneasy. \"Perhaps... perhaps you'd like me to hel—\"\n\nRing—ring.\nThe telephone rang, abruptly cutting her short.\n\n\"Daphne.\" Sibylle began dropping the seeds into a white porcelain dish. \"Pick it up. Hold the receiver for me.\" She showed no sign of concern over her guest's presence.\n\nDaphne complied, gently raising the earpiece to Sibylle's ear. A young man's voice came through — clear enough for them both to hear.\n\n\"Chief Sibylle, it's about the two Forsakens spies. They've been under torture for four days now, but still refuse to name their accomplices. I believe they're reaching their limit.\"\n\n\"For many, the body's pain means little. You are still green. Do not strike what is hardest in them — strike what is softest.\"\n\nThe pomegranate seeds landed in the dish with soft, brittle clinks. Sibylle didn't lift her gaze. \"As I recall, those two are brothers.\"\n\n\"We've already threatened them with each other's lives, but neither gave in. It appears they made a pact — resolved to die from the start.\"\n\n\"No. You still haven't grasped what I meant by 'the softest part.'\"\n\nShe tipped the pale seeds into a fine copper sieve resting over a glass jug. With a steady, unrelenting grip, she began to press — knuckles whitening as juice seeped crimson through the mesh in a slow, thin stream.\n\n\"Do not threaten them with death. Tempt them with hope. Say this: the one who speaks will die — but his brother will live.\"\n\nA crisp \"Yes, ma'am\" crackled down the line, and the call ended. In the sieve, the seeds had turned pale and shrivelled. Sibylle poured the half-jug of juice into two glasses. Daphne's hand, still holding the receiver, remained suspended mid-air. A fine film of sweat gathered on her brow. Without a glance back, Sibylle turned and walked ahead. Daphne followed in silence, a few steps behind.\n\n\"Daphne. You wish to know the brothers' fate, do you not?\" Sibylle held out a glass of pomegranate juice. \"Then stay — and witness their end.\"\n\nDaphne faltered, then gave a small nod, biting her lower lip. She feigned calm as she swirled the glass, eyes fixed on the red within. Pomegranates had once been dear to her; as a child, she would walk the orchards hand in hand with her parents. But now, in that same familiar crimson, she felt only a creeping dread.\n\nThe minute hand had turned a full circuit and a half when the telephone rang again. It was the same young man's voice. \"The elder brother has confessed his contact. We're already moving to make the arrest. As promised, we released the younger — even returned his sidearm.\"\n\nDaphne exhaled in quiet relief, only for her smile to falter at the next words. \"The younger couldn't bear the thought that his brother had traded such precious secrets for his life. Once free, he raised the pistol to his own head and pulled the trigger.\"\n\n\"Ah, such a pity... a will of iron, in one so young.\" The words were spoken — but not a trace of pity coloured her voice. Her gaze lingered on Daphne, lips curved in a subtle, unreadable smile.\n\n\"You knew this would happen. That's why you're not surprised. You brought me here today so I'd hear it with my own ears.\" Daphne's lips were dry; her voice wavered despite her effort to steady it. \"It was... Dean Silas who asked you to persuade me — to tell me how I should serve the Empire. Wasn't it?\"\n\n\"Silas's grievances don't concern me,\" Sibylle said flatly. \"Daphne, I brought you here for one reason: to show you what it takes to survive — whether in the Legion or the Academy. Empathy must be kept in measure. Sharp enough to sense weakness... never so unchecked that it renders you useless.\"\n\n\"Excess empathy won't just make you useless, Daphne — it will drag you into your own misfortune.\"\n\nDaphne could scarcely recall how she had managed to feign thanks for Sibylle's lesson, nor how she had all but fled that stark house of grey and white. What lingered was the memory of two glasses of pomegranate juice: Sibylle's, drained in a single draught, and her own, left untouched. Sometimes, she dreamt of that glass — of the liquid within it: the colour of the pomegranate, the colour of life itself. In her dreams, it spilled over the rim, more and more, until it rose into a crimson river that closed over her... and swallowed her whole.",
           TextMapId = "UI_CHAR_DATA_TEXT_54010403"
         },
         UI_CHAR_DATA_TEXT_54010404 = {
-          ContentEN = "It was still raining in Dismania.\nThudding knocks and angry shouts echoed through the rain-streaked glass. Someone was calling Daphne's name at the top of their lungs.\n \nShe sat curled in a velvet chair by the window. Four days had passed since her release from the Royal Military Prison — and for four days straight, the rain had not let up. A sudden creak from the door made her jolt like a startled kitten, the book slipping from her hands to the floor.\n \n\"Forgive me — did I startle you?\" The maid stammered. \"I only came to bring your supper. You... you haven't eaten all day again, Miss Daphne.\"\n \n\"I'm fine.\" Daphne's gaze remained fixed on the rain-smeared window. Beyond the glass, shadowy figures gathered at the estate gates, umbrellas tilted against the downpour. \"More rabble. Is it the same lot as yesterday?\"\n \n\"They look different — younger, maybe.\" The maid frowned, trying to recall. \"Ah — the one leading them... I think he was one of your classmates from the Alchemic Academy.\"\n Daphne rose, bracing herself against the armrest. \"I'll go and see.\"\n \n\"No, Miss Daphne...\" The maid seized her hand in fright. \"You know they've come for you.\"\n \nDaphne sighed. \"Then what other choice do I have? Shall I let them wake my mother again — and watch her faint a second time?\"\n \nShe remembered, two nights ago, standing at this very window as her mother stepped out to face the crowd. She had worn a corset — long out of fashion, but lending her frail frame a touch of dignity. The rain had drowned her words, yet Daphne had seen her curtsey again and again. Always proud, never had she bowed so low. At last, to the maid's cry of alarm, her mother collapsed — and only then did the crowd disperse. She had fallen hard on the courtyard stones, her face smeared with mud. Pride and grief had pulled her down, and not even the whalebone corset could keep her upright. Daphne had cradled her where she lay, her own tears vanishing soundlessly into the rain.\n \nNow, the scene beyond the window remained unchanged. And Daphne knew she could not bear to lose another of her kin.\n \nShe pulled her arm free from the maid's grasp, went downstairs, and stepped outside without an umbrella. The uproar beyond the gate faltered — the crowd stunned that she had truly come out.\n \n\"What is it you want to say?\" Daphne unlatched the gate and stepped into the street. The walls of the Theodore estate were smeared with graffiti — \"traitor,\" \"demon-spawn,\" scrawled in harsh, uneven strokes. She forced her eyes away. \"Do not wake my mother. We'll talk elsewhere.\"\n \n\"You betrayed Hyperborea — just like you betrayed the Alchemy Academy!\"\n\"Because of you, our brothers and sisters died young!\"\n\"How can you still wear that calm face? Why haven't you knelt and repented?\"\n\"Always the same pious mask. Now we see your true face!\"\n \nHer former classmates drove her back into a corner of the street. She tried to speak, but her voice was lost in the downpour — and in their fury. Someone gave a sharp whistle. Hands seized her shoulders. Overhead, thunder rumbled, low and heavy.\n \nWhy do people cling so stubbornly to the \"truth\" they choose to believe?\nHer spine slammed against a metal bin with a hollow clang. A fist struck her in the gut. The world spun; she curled in on herself like a shrimp. A boot came down on the hand she had braced against the ground — pain shuddered through her knuckles, as if they might snap beneath the weight.\n \nWhy does it take only a single excuse for people to bare their fangs at their own kind?\nShe thought of the corpses at Lonza Fortress — some comrades, some foes. Some still faintly warm, others already cold. Yes... for a single reason, they had slaughtered one another.\n \nWhy do people shut their eyes to the suffering of others?\nShe thought of the white rabbits she once kept. Pinned to the pristine-white lab bench, they struggled helplessly. Until at last, the syringe in her hand delivered its contents — and the small bodies stilled. She thought of Emilia, her friend from years past. The girl lay sprawled on a snow-white floor, blood blooming from her chest — like a pomegranate burst across a clean white cloth.\n \n\"What's the point in talking to her? She's nothing but demon-spawn — like her traitor father, Avar!\"\nThat familiar name wrenched her back to the rain-drenched streets of Dismania.\n\"Exactly. Even if you crown them in laurels and keep them on a tight leash, these mongrels still—\"\n \nThe ringleader never finished. His smug grin froze. A moment later, he clutched his ear with a cry. The crowd reeled back as lightning split the sky — casting Daphne's face in stark, searing relief. She stood with pistol raised, fury blazing in her eyes — a fire no rain could quench.\n \n\"Insult my father again, and the next shot won't just graze your ear.\" She forced each word through clenched teeth. \"Now get lost.\"\n \nStudents of the Academy weren't allowed to carry firearms in the capital. Though their mouths still spat curses, their feet carried them away at a full run. Daphne leaned against the wall, using the bin at her back to push herself upright. Behind her lay the street leading home, where the maids had likely prepared some fresh dessert to cheer her. But she would not return. Not like this. She couldn't bear for the maids to worry — nor let them see her in such disgrace.\n But then... where else could she go?\n \nShe wandered aimlessly through the rain. Night had fully fallen, and she had no idea how long she'd walked before a bridge loomed ahead — vaguely familiar. She strained to recall. Yes — Sibylle lived near this bridge. They had once spoken in her house... a meeting that ended bitterly.\n \nNow the woman in violet stood on the bridge, a long-handled umbrella in hand. She's here to see me at my lowest, Daphne thought. No doubt she'll sneer and ask what she asked before — Do you still stay true to your ideals? But she had no answer. The unrelenting rain had rusted her thoughts.\n \nYet Sibylle's face held no scorn, no anger. It was as calm as the Whisper River when no wind stirred its surface. She handed Daphne an umbrella, almost casually.\n \n\"Go home. Take a hot bath. Change your clothes.\"",
+          ContentEN = "It was still raining in Dismania.\nThudding knocks and angry shouts echoed through the rain-streaked glass. Someone was calling Daphne's name at the top of their lungs.\n\nShe sat curled in a velvet chair by the window. Four days had passed since her release from the Royal Military Prison — and for four days straight, the rain had not let up. A sudden creak from the door made her jolt like a startled kitten, the book slipping from her hands to the floor.\n\n\"Forgive me — did I startle you?\" The maid stammered. \"I only came to bring your supper. You... you haven't eaten all day again, Miss Daphne.\"\n\n\"I'm fine.\" Daphne's gaze remained fixed on the rain-smeared window. Beyond the glass, shadowy figures gathered at the estate gates, umbrellas tilted against the downpour. \"More rabble. Is it the same lot as yesterday?\"\n\n\"They look different — younger, maybe.\" The maid frowned, trying to recall. \"Ah — the one leading them... I think he was one of your classmates from the Alchemic Academy.\"\nDaphne rose, bracing herself against the armrest. \"I'll go and see.\"\n\n\"No, Miss Daphne...\" The maid seized her hand in fright. \"You know they've come for you.\"\n\nDaphne sighed. \"Then what other choice do I have? Shall I let them wake my mother again — and watch her faint a second time?\"\n\nShe remembered, two nights ago, standing at this very window as her mother stepped out to face the crowd. She had worn a corset — long out of fashion, but lending her frail frame a touch of dignity. The rain had drowned her words, yet Daphne had seen her curtsey again and again. Always proud, never had she bowed so low. At last, to the maid's cry of alarm, her mother collapsed — and only then did the crowd disperse. She had fallen hard on the courtyard stones, her face smeared with mud. Pride and grief had pulled her down, and not even the whalebone corset could keep her upright. Daphne had cradled her where she lay, her own tears vanishing soundlessly into the rain.\n\nNow, the scene beyond the window remained unchanged. And Daphne knew she could not bear to lose another of her kin.\n\nShe pulled her arm free from the maid's grasp, went downstairs, and stepped outside without an umbrella. The uproar beyond the gate faltered — the crowd stunned that she had truly come out.\n\n\"What is it you want to say?\" Daphne unlatched the gate and stepped into the street. The walls of the Theodore estate were smeared with graffiti — \"traitor,\" \"demon-spawn,\" scrawled in harsh, uneven strokes. She forced her eyes away. \"Do not wake my mother. We'll talk elsewhere.\"\n\n\"You betrayed Hyperborea — just like you betrayed the Alchemy Academy!\"\n\"Because of you, our brothers and sisters died young!\"\n\"How can you still wear that calm face? Why haven't you knelt and repented?\"\n\"Always the same pious mask. Now we see your true face!\"\n\nHer former classmates drove her back into a corner of the street. She tried to speak, but her voice was lost in the downpour — and in their fury. Someone gave a sharp whistle. Hands seized her shoulders. Overhead, thunder rumbled, low and heavy.\n\nWhy do people cling so stubbornly to the \"truth\" they choose to believe?\nHer spine slammed against a metal bin with a hollow clang. A fist struck her in the gut. The world spun; she curled in on herself like a shrimp. A boot came down on the hand she had braced against the ground — pain shuddered through her knuckles, as if they might snap beneath the weight.\n\nWhy does it take only a single excuse for people to bare their fangs at their own kind?\nShe thought of the corpses at Lonza Fortress — some comrades, some foes. Some still faintly warm, others already cold. Yes... for a single reason, they had slaughtered one another.\n\nWhy do people shut their eyes to the suffering of others?\nShe thought of the white rabbits she once kept. Pinned to the pristine-white lab bench, they struggled helplessly. Until at last, the syringe in her hand delivered its contents — and the small bodies stilled. She thought of Emilia, her friend from years past. The girl lay sprawled on a snow-white floor, blood blooming from her chest — like a pomegranate burst across a clean white cloth.\n\n\"What's the point in talking to her? She's nothing but demon-spawn — like her traitor father, Avar!\"\nThat familiar name wrenched her back to the rain-drenched streets of Dismania.\n\"Exactly. Even if you crown them in laurels and keep them on a tight leash, these mongrels still—\"\n\nThe ringleader never finished. His smug grin froze. A moment later, he clutched his ear with a cry. The crowd reeled back as lightning split the sky — casting Daphne's face in stark, searing relief. She stood with pistol raised, fury blazing in her eyes — a fire no rain could quench.\n\n\"Insult my father again, and the next shot won't just graze your ear.\" She forced each word through clenched teeth. \"Now get lost.\"\n\nStudents of the Academy weren't allowed to carry firearms in the capital. Though their mouths still spat curses, their feet carried them away at a full run. Daphne leaned against the wall, using the bin at her back to push herself upright. Behind her lay the street leading home, where the maids had likely prepared some fresh dessert to cheer her. But she would not return. Not like this. She couldn't bear for the maids to worry — nor let them see her in such disgrace.\nBut then... where else could she go?\n\nShe wandered aimlessly through the rain. Night had fully fallen, and she had no idea how long she'd walked before a bridge loomed ahead — vaguely familiar. She strained to recall. Yes — Sibylle lived near this bridge. They had once spoken in her house... a meeting that ended bitterly.\n\nNow the woman in violet stood on the bridge, a long-handled umbrella in hand. She's here to see me at my lowest, Daphne thought. No doubt she'll sneer and ask what she asked before — Do you still stay true to your ideals? But she had no answer. The unrelenting rain had rusted her thoughts.\n\nYet Sibylle's face held no scorn, no anger. It was as calm as the Whisper River when no wind stirred its surface. She handed Daphne an umbrella, almost casually.\n\n\"Go home. Take a hot bath. Change your clothes.\"",
           TextMapId = "UI_CHAR_DATA_TEXT_54010404"
         },
         UI_CHAR_DATA_TEXT_54010405 = {
-          ContentEN = "Daphne dreamed a long dream — one that seemed to have no end.\nShe wandered the streets of Dismania, where the air clung heavy with damp. Rain slid from the mouths of stone gargoyles, leaving dark brown trails along the walls.\nFamiliar figures lined both sides of the street, each standing beneath a long-handled umbrella.\n \n\"Alchemy is a science meant to bring happiness to the people,\" said an elderly woman.\n\"Daphne, you will be my pride,\" said a bright-eyed woman.\n\"All I ever wanted was for you to be happy,\" said a man with a gentle smile.\nShe tried to draw closer, to see if they truly bore the faces she remembered — but their features had blurred, as if the rain had soaked right through their skin.\n\n\"Those who suffer in pain — will we ever truly find relief for them?\" asked a young researcher.\n\"If I learn enough words... if I master alchemy one day — will that keep me from ending up like my brother?\" asked a little girl in a hospital orderly's uniform.\n\"Dismania's too far... The rain's pouring. The roads are all mud. Will we ever make it back...?\" asked a dying soldier.\nDaphne opened her lips to answer — to shape a single \"yes.\" But her throat closed. It was as though her voice had been torn away. No sound came.\n \n\"Do you still stay true to your ideals?\" The Legion Chief's gaze bore down from above.\n The stare seared her eyes. She wanted to flee — but as she turned, a vast chasm yawned before her, bottomless and black.\n\"We need to focus on this battle — and on surviving.\" Her silver-haired, red-eyed comrade laid a steady hand on her shoulder. \"Remember what you once said.\"\nYes... that we might all live on. That was all she'd wanted then.\n \n\"Daphne, do you still remember the dream you had as a child?\" A little girl stepped from the corner of the street. Her voice was soft, her brows and eyes uncannily familiar — yes, it was herself, long ago.\n\"To bring happiness to people, through alchemy,\" she replied. \"I've never forgotten.\"\n\"But every dream comes at a price,\" said another voice behind her. It was her own — but cold, in a way she had never heard before. \"To gain something, you must give something up. Daphne, ideals are also a luxury for the strong.\"\n\"Then what am I supposed to do?\" Daphne asked.\n\"Abandon your hollow principles and your useless empathy. Go among them. Become one of them,\" said the cold voice.\n\"No! Befriend beasts — and how can you be sure you won't become one yourself?\" the child's voice cried.\n\"Only from a great enough height can you wield the power to change anything,\" said the cold voice.\n\"But once you take that step, there's no turning back!\" the child's voice protested.\n \nTheir voices tangled in endless argument. Daphne's head throbbed as though it might split — she felt herself about to be torn in two. She sank to her knees, clutching her head. Slowly, the voices faded, and the last light drained from Dismania's sky.\n \nDaphne Theodore awoke in her bedchamber. The rain had stopped; sunlight gleamed on the ivy leaves outside her window.\n \"Miss Daphne, someone from the Legion has come to see you.\" A maid knocked gently at the door. \"She... doesn't seem to mean any harm.\"\n \nDaphne rose, put on her coat, and stepped into the courtyard. A young man in a Legion officer's uniform stood waiting. Daphne recognised him at once — Sibylle Mason's adjutant.\n \n\"Miss Theodore,\" the man said, \"Chief Sibylle has asked me to invite you to join a project — if you're willing.\"\n \"It's called the Second Scion Program.\"",
+          ContentEN = "Daphne dreamed a long dream — one that seemed to have no end.\nShe wandered the streets of Dismania, where the air clung heavy with damp. Rain slid from the mouths of stone gargoyles, leaving dark brown trails along the walls.\nFamiliar figures lined both sides of the street, each standing beneath a long-handled umbrella.\n\n\"Alchemy is a science meant to bring happiness to the people,\" said an elderly woman.\n\"Daphne, you will be my pride,\" said a bright-eyed woman.\n\"All I ever wanted was for you to be happy,\" said a man with a gentle smile.\nShe tried to draw closer, to see if they truly bore the faces she remembered — but their features had blurred, as if the rain had soaked right through their skin.\n\n\"Those who suffer in pain — will we ever truly find relief for them?\" asked a young researcher.\n\"If I learn enough words... if I master alchemy one day — will that keep me from ending up like my brother?\" asked a little girl in a hospital orderly's uniform.\n\"Dismania's too far... The rain's pouring. The roads are all mud. Will we ever make it back...?\" asked a dying soldier.\nDaphne opened her lips to answer — to shape a single \"yes.\" But her throat closed. It was as though her voice had been torn away. No sound came.\n\n\"Do you still stay true to your ideals?\" The Legion Chief's gaze bore down from above.\nThe stare seared her eyes. She wanted to flee — but as she turned, a vast chasm yawned before her, bottomless and black.\n\"We need to focus on this battle — and on surviving.\" Her silver-haired, red-eyed comrade laid a steady hand on her shoulder. \"Remember what you once said.\"\nYes... that we might all live on. That was all she'd wanted then.\n\n\"Daphne, do you still remember the dream you had as a child?\" A little girl stepped from the corner of the street. Her voice was soft, her brows and eyes uncannily familiar — yes, it was herself, long ago.\n\"To bring happiness to people, through alchemy,\" she replied. \"I've never forgotten.\"\n\"But every dream comes at a price,\" said another voice behind her. It was her own — but cold, in a way she had never heard before. \"To gain something, you must give something up. Daphne, ideals are also a luxury for the strong.\"\n\"Then what am I supposed to do?\" Daphne asked.\n\"Abandon your hollow principles and your useless empathy. Go among them. Become one of them,\" said the cold voice.\n\"No! Befriend beasts — and how can you be sure you won't become one yourself?\" the child's voice cried.\n\"Only from a great enough height can you wield the power to change anything,\" said the cold voice.\n\"But once you take that step, there's no turning back!\" the child's voice protested.\n\nTheir voices tangled in endless argument. Daphne's head throbbed as though it might split — she felt herself about to be torn in two. She sank to her knees, clutching her head. Slowly, the voices faded, and the last light drained from Dismania's sky.\n\nDaphne Theodore awoke in her bedchamber. The rain had stopped; sunlight gleamed on the ivy leaves outside her window.\n\"Miss Daphne, someone from the Legion has come to see you.\" A maid knocked gently at the door. \"She... doesn't seem to mean any harm.\"\n\nDaphne rose, put on her coat, and stepped into the courtyard. A young man in a Legion officer's uniform stood waiting. Daphne recognised him at once — Sibylle Mason's adjutant.\n\n\"Miss Theodore,\" the man said, \"Chief Sibylle has asked me to invite you to join a project — if you're willing.\"\n\"It's called the Second Scion Program.\"",
           TextMapId = "UI_CHAR_DATA_TEXT_54010405"
         },
         UI_CHAR_DATA_UNLOCK_20 = {
@@ -64986,6 +67491,10 @@ Complete Quest: Requiem for the Nameless]],
           ContentEN = "Outer Peaks – Drifter",
           TextMapId = "UI_CHAR_FORCE_1503"
         },
+        UI_CHAR_FORCE_1504 = {
+          ContentEN = "Outer Peaks – Drifter",
+          TextMapId = "UI_CHAR_FORCE_1504"
+        },
         UI_CHAR_FORCE_1801 = {
           ContentEN = "Unaffiliated",
           TextMapId = "UI_CHAR_FORCE_1801"
@@ -65017,6 +67526,10 @@ Complete Quest: Requiem for the Nameless]],
         UI_CHAR_FORCE_3201 = {
           ContentEN = "Imperial Military Prison",
           TextMapId = "UI_CHAR_FORCE_3201"
+        },
+        UI_CHAR_FORCE_3202 = {
+          ContentEN = "None",
+          TextMapId = "UI_CHAR_FORCE_3202"
         },
         UI_CHAR_FORCE_3301 = {
           ContentEN = "Unaffiliated",
@@ -65157,15 +67670,7 @@ Complete Quest: Requiem for the Nameless]],
         UI_CHAR_NAME_4102 = {
           ContentEN = "Zhiliu",
           TextMapId = "UI_CHAR_NAME_4102"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CHAR_NAME_4201",
-    MaxKey = "UI_CMNpc_Name_Sushan",
-    Loader = function()
-      return {
+        },
         UI_CHAR_NAME_4201 = {
           ContentEN = "Yuming",
           TextMapId = "UI_CHAR_NAME_4201"
@@ -65223,7 +67728,7 @@ Complete Quest: Requiem for the Nameless]],
           TextMapId = "UI_CHAR_SUBTITLE_1503"
         },
         UI_CHAR_SUBTITLE_1504 = {
-          ContentEN = "Fledgling Kite",
+          ContentEN = "Plumes of Gilded Dawn",
           TextMapId = "UI_CHAR_SUBTITLE_1504"
         },
         UI_CHAR_SUBTITLE_1601 = {
@@ -65265,6 +67770,10 @@ Complete Quest: Requiem for the Nameless]],
         UI_CHAR_SUBTITLE_3201 = {
           ContentEN = "Inferno Penitentiary",
           TextMapId = "UI_CHAR_SUBTITLE_3201"
+        },
+        UI_CHAR_SUBTITLE_3202 = {
+          ContentEN = "Scarlet Nectar",
+          TextMapId = "UI_CHAR_SUBTITLE_3202"
         },
         UI_CHAR_SUBTITLE_3301 = {
           ContentEN = "Cityscape Roamer",
@@ -65321,7 +67830,15 @@ Complete Quest: Requiem for the Nameless]],
         UI_CMName_Name_FuJinChuanLai = {
           ContentEN = "Voice from Nearby",
           TextMapId = "UI_CMName_Name_FuJinChuanLai"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CMName_Name_FufengPhantom",
+    MaxKey = "UI_CMNpc_Yanjindu_Name_FengDeng",
+    Loader = function()
+      return {
         UI_CMName_Name_FufengPhantom = {
           ContentEN = "Phantom of Fufeng",
           TextMapId = "UI_CMName_Name_FufengPhantom"
@@ -65890,6 +68407,10 @@ Complete Quest: Requiem for the Nameless]],
           ContentEN = "Cheerful Citizen",
           TextMapId = "UI_CMNpc_Name_Openopen"
         },
+        UI_CMNpc_Name_Padi = {
+          ContentEN = "Patty",
+          TextMapId = "UI_CMNpc_Name_Padi"
+        },
         UI_CMNpc_Name_Porter = {
           ContentEN = "Porter",
           TextMapId = "UI_CMNpc_Name_Porter"
@@ -65965,15 +68486,7 @@ Complete Quest: Requiem for the Nameless]],
         UI_CMNpc_Name_Sushan = {
           ContentEN = "Susanna",
           TextMapId = "UI_CMNpc_Name_Sushan"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CMNpc_Name_Teacher",
-    MaxKey = "UI_COMMONPOP_TITLE_100019",
-    Loader = function()
-      return {
+        },
         UI_CMNpc_Name_Teacher = {
           ContentEN = "Miss Lisse",
           TextMapId = "UI_CMNpc_Name_Teacher"
@@ -66125,7 +68638,15 @@ Complete Quest: Requiem for the Nameless]],
         UI_CMNpc_Yanjindu_Name_FengDeng = {
           ContentEN = "Fengdeng",
           TextMapId = "UI_CMNpc_Yanjindu_Name_FengDeng"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CMNpc_Yanjindu_Name_JiangZhengyi",
+    MaxKey = "UI_COMMON_REWARD",
+    Loader = function()
+      return {
         UI_CMNpc_Yanjindu_Name_JiangZhengyi = {
           ContentEN = "Jiang Zhengyi",
           TextMapId = "UI_CMNpc_Yanjindu_Name_JiangZhengyi"
@@ -66498,6 +69019,10 @@ Complete Quest: Requiem for the Nameless]],
           ContentEN = "Blocking a player will also remove them from your friends list.",
           TextMapId = "UI_COMMONPOP_TEXT_100076_2"
         },
+        UI_COMMONPOP_TEXT_100076_3 = {
+          ContentEN = "Report and block this player?",
+          TextMapId = "UI_COMMONPOP_TEXT_100076_3"
+        },
         UI_COMMONPOP_TEXT_100077 = {
           ContentEN = "Are you sure you want to remove this player from your friends list?",
           TextMapId = "UI_COMMONPOP_TEXT_100077"
@@ -66712,6 +69237,10 @@ Do you want to start a <H>%s Check</> attempt to acquire this item?
           ContentEN = "You're about to skip the current tutorial",
           TextMapId = "UI_COMMONPOP_TEXT_100279"
         },
+        UI_COMMONPOP_TEXT_100309 = {
+          ContentEN = "Switching languages will reload the interface. Switch now?",
+          TextMapId = "UI_COMMONPOP_TEXT_100309"
+        },
         UI_COMMONPOP_TIPS_100275 = {
           ContentEN = "This action cannot be undone. You will be returned to the login screen.",
           TextMapId = "UI_COMMONPOP_TIPS_100275"
@@ -66779,15 +69308,7 @@ Do you want to start a <H>%s Check</> attempt to acquire this item?
         UI_COMMONPOP_TITLE_100019 = {
           ContentEN = "Unlock",
           TextMapId = "UI_COMMONPOP_TITLE_100019"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_COMMONPOP_TITLE_100020",
-    MaxKey = "UI_CharPreview_Accessory_In_Trial",
-    Loader = function()
-      return {
+        },
         UI_COMMONPOP_TITLE_100020 = {
           ContentEN = "Download Failed",
           TextMapId = "UI_COMMONPOP_TITLE_100020"
@@ -66931,7 +69452,15 @@ Do you want to start a <H>%s Check</> attempt to acquire this item?
         UI_COMMON_REWARD = {
           ContentEN = "Rewards granted",
           TextMapId = "UI_COMMON_REWARD"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CONFIRM_90200",
+    MaxKey = "UI_Chardata_Char_Sex",
+    Loader = function()
+      return {
         UI_CONFIRM_90200 = {
           ContentEN = "Penumbral Abyssoid",
           TextMapId = "UI_CONFIRM_90200"
@@ -67581,15 +70110,7 @@ Do you want to start a <H>%s Check</> attempt to acquire this item?
         UI_CharPreview_Accessory_In_Trial = {
           ContentEN = "Free Trial",
           TextMapId = "UI_CharPreview_Accessory_In_Trial"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CharPreview_Cannot_Dye",
-    MaxKey = "UI_CommonQuest_11100112",
-    Loader = function()
-      return {
+        },
         UI_CharPreview_Cannot_Dye = {
           ContentEN = "Cannot colour in Preview Mode",
           TextMapId = "UI_CharPreview_Cannot_Dye"
@@ -67733,7 +70254,15 @@ Do you want to start a <H>%s Check</> attempt to acquire this item?
         UI_Chardata_Char_Sex = {
           ContentEN = "Gender",
           TextMapId = "UI_Chardata_Char_Sex"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Chardata_Char_Year",
+    MaxKey = "UI_Convert",
+    Loader = function()
+      return {
         UI_Chardata_Char_Year = {
           ContentEN = "Year",
           TextMapId = "UI_Chardata_Char_Year"
@@ -68391,15 +70920,7 @@ Copy your account data from the live server to join this test?
         UI_CommonQuest_11100112 = {
           ContentEN = "Complete any Apex Rankings stage <highlight>20</> times",
           TextMapId = "UI_CommonQuest_11100112"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Common_Rule",
-    MaxKey = "UI_DUNGEON_AUTOCHESS_66",
-    Loader = function()
-      return {
+        },
         UI_Common_Rule = {
           ContentEN = "Rules",
           TextMapId = "UI_Common_Rule"
@@ -68540,7 +71061,15 @@ Copy your account data from the live server to join this test?
           ContentEN = "Switch",
           TextMapId = "UI_Controller_Switch"
         },
-        UI_Convert = {ContentEN = "Reforge", TextMapId = "UI_Convert"},
+        UI_Convert = {ContentEN = "Reforge", TextMapId = "UI_Convert"}
+      }
+    end
+  },
+  {
+    MinKey = "UI_Convert_AddResources",
+    MaxKey = "UI_DUNGEON_AUTOCHESS_96",
+    Loader = function()
+      return {
         UI_Convert_AddResources = {
           ContentEN = "Add materials",
           TextMapId = "UI_Convert_AddResources"
@@ -68573,6 +71102,14 @@ Copy your account data from the live server to join this test?
           ContentEN = "Coming Soon",
           TextMapId = "UI_CustomLayout_LockToast"
         },
+        UI_CustomLayout_PopupBtn01 = {
+          ContentEN = "Save",
+          TextMapId = "UI_CustomLayout_PopupBtn01"
+        },
+        UI_CustomLayout_PopupBtn02 = {
+          ContentEN = "Discard Changes",
+          TextMapId = "UI_CustomLayout_PopupBtn02"
+        },
         UI_CustomLayout_Save = {
           ContentEN = "Save",
           TextMapId = "UI_CustomLayout_Save"
@@ -68588,6 +71125,10 @@ Copy your account data from the live server to join this test?
         UI_CustomLayout_Skill = {
           ContentEN = "Skill",
           TextMapId = "UI_CustomLayout_Skill"
+        },
+        UI_CustomLayout_Trial_Save = {
+          ContentEN = "Save",
+          TextMapId = "UI_CustomLayout_Trial_Save"
         },
         UI_CustomLayout_WithdrawToast = {
           ContentEN = "Restored to previous state",
@@ -69193,15 +71734,7 @@ Copy your account data from the live server to join this test?
         UI_DUNGEON_AUTOCHESS_66 = {
           ContentEN = "Endless Game 046",
           TextMapId = "UI_DUNGEON_AUTOCHESS_66"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_DUNGEON_AUTOCHESS_67",
-    MaxKey = "UI_DailyPack_RuleDes_3",
-    Loader = function()
-      return {
+        },
         UI_DUNGEON_AUTOCHESS_67 = {
           ContentEN = "Endless Game 047",
           TextMapId = "UI_DUNGEON_AUTOCHESS_67"
@@ -69333,7 +71866,15 @@ Copy your account data from the live server to join this test?
         UI_DUNGEON_AUTOCHESS_96 = {
           ContentEN = "Endless Game 076",
           TextMapId = "UI_DUNGEON_AUTOCHESS_96"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_DUNGEON_AUTOCHESS_97",
+    MaxKey = "UI_Disabled_Des_GameEvent",
+    Loader = function()
+      return {
         UI_DUNGEON_AUTOCHESS_97 = {
           ContentEN = "Endless Game 077",
           TextMapId = "UI_DUNGEON_AUTOCHESS_97"
@@ -69787,7 +72328,7 @@ Copy your account data from the live server to join this test?
           TextMapId = "UI_DUNGEON_JUNTUAN2"
         },
         UI_DUNGEON_LevelLimit = {
-          ContentEN = "Lv.",
+          ContentEN = "Lv. ",
           TextMapId = "UI_DUNGEON_LevelLimit"
         },
         UI_DUNGEON_Locked = {
@@ -70001,15 +72542,7 @@ Copy your account data from the live server to join this test?
         UI_DailyPack_RuleDes_3 = {
           ContentEN = "Upon purchase, you will immediately receive Phoxene Plumule × <highlight>100</> and Toy Hammer × <highlight>5</> .\nFrom the day of purchase onward, log in each day to claim Zhiliu's Thought ×<highlight>1</> and Toy Hammer ×<highlight>1</> via Mail, for a total of 5 days.\nInterwoven Thoughts may be purchased up to 6 times. Repeated purchases will extend the reward period accordingly.\nThe removal of this item will not affect the ongoing duration.",
           TextMapId = "UI_DailyPack_RuleDes_3"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_DailyPack_RuleDes_4",
-    MaxKey = "UI_Dungeon_RewardDetailTitle",
-    Loader = function()
-      return {
+        },
         UI_DailyPack_RuleDes_4 = {
           ContentEN = "Upon purchase, you will immediately receive Phoxene Plumule ×<highlight>100</> and Toy Hammer ×<highlight>5</>.\nFrom the day of purchase onward, log in each day to claim Yuming's Thought ×<highlight>1</> and Toy Hammer ×<highlight>1</> via Mail, for a total of 5 days.\nInterwoven Thoughts may be purchased up to 6 times. Repeated purchases will extend the reward period accordingly.\nThe removal of this item will not affect the ongoing duration.",
           TextMapId = "UI_DailyPack_RuleDes_4"
@@ -70141,7 +72674,15 @@ Copy your account data from the live server to join this test?
         UI_Disabled_Des_GameEvent = {
           ContentEN = "Events temporarily unavailable",
           TextMapId = "UI_Disabled_Des_GameEvent"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Disabled_Des_GuideBook",
+    MaxKey = "UI_Dye_Output_Temporary",
+    Loader = function()
+      return {
         UI_Disabled_Des_GuideBook = {
           ContentEN = "Tutorials temporarily unavailable",
           TextMapId = "UI_Disabled_Des_GuideBook"
@@ -70735,43 +73276,43 @@ Copy your account data from the live server to join this test?
           TextMapId = "UI_DungeonFail_Tips2"
         },
         UI_DungeonMod_Tab_10 = {
-          ContentEN = "10",
+          ContentEN = "10.0",
           TextMapId = "UI_DungeonMod_Tab_10"
         },
         UI_DungeonMod_Tab_20 = {
-          ContentEN = "20",
+          ContentEN = "20.0",
           TextMapId = "UI_DungeonMod_Tab_20"
         },
         UI_DungeonMod_Tab_30 = {
-          ContentEN = "30",
+          ContentEN = "30.0",
           TextMapId = "UI_DungeonMod_Tab_30"
         },
         UI_DungeonMod_Tab_40 = {
-          ContentEN = "40",
+          ContentEN = "40.0",
           TextMapId = "UI_DungeonMod_Tab_40"
         },
         UI_DungeonMod_Tab_50 = {
-          ContentEN = "50",
+          ContentEN = "50.0",
           TextMapId = "UI_DungeonMod_Tab_50"
         },
         UI_DungeonMod_Tab_55 = {
-          ContentEN = "55",
+          ContentEN = "55.0",
           TextMapId = "UI_DungeonMod_Tab_55"
         },
         UI_DungeonMod_Tab_60 = {
-          ContentEN = "60",
+          ContentEN = "60.0",
           TextMapId = "UI_DungeonMod_Tab_60"
         },
         UI_DungeonMod_Tab_65 = {
-          ContentEN = "65",
+          ContentEN = "65.0",
           TextMapId = "UI_DungeonMod_Tab_65"
         },
         UI_DungeonMod_Tab_70 = {
-          ContentEN = "70",
+          ContentEN = "70.0",
           TextMapId = "UI_DungeonMod_Tab_70"
         },
         UI_DungeonMod_Tab_80 = {
-          ContentEN = "80",
+          ContentEN = "80.0",
           TextMapId = "UI_DungeonMod_Tab_80"
         },
         UI_Dungeon_Detail = {
@@ -70809,15 +73350,7 @@ Copy your account data from the live server to join this test?
         UI_Dungeon_RewardDetailTitle = {
           ContentEN = "Commission Rewards",
           TextMapId = "UI_Dungeon_RewardDetailTitle"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Dungeon_Reward_Detail",
-    MaxKey = "UI_FNNpc_Name_FNThief02",
-    Loader = function()
-      return {
+        },
         UI_Dungeon_Reward_Detail = {
           ContentEN = "Rewards",
           TextMapId = "UI_Dungeon_Reward_Detail"
@@ -70949,7 +73482,15 @@ Copy your account data from the live server to join this test?
         UI_Dye_Output_Temporary = {
           ContentEN = "Unapplied drafts cannot be shared",
           TextMapId = "UI_Dye_Output_Temporary"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Dye_Previewing",
+    MaxKey = "UI_FORGING_SPEEDUP",
+    Loader = function()
+      return {
         UI_Dye_Previewing = {
           ContentEN = "Cannot switch in preview",
           TextMapId = "UI_Dye_Previewing"
@@ -71572,6 +74113,26 @@ The list below shows how many points each item awards:]],
           ContentEN = "Puzzle solved",
           TextMapId = "UI_Explore_Treasure_Complete"
         },
+        UI_ExtreactionTreasure_Type_1 = {
+          ContentEN = "Card",
+          TextMapId = "UI_ExtreactionTreasure_Type_1"
+        },
+        UI_ExtreactionTreasure_Type_2 = {
+          ContentEN = "Accessory",
+          TextMapId = "UI_ExtreactionTreasure_Type_2"
+        },
+        UI_ExtreactionTreasure_Type_3 = {
+          ContentEN = "Daily Necessity",
+          TextMapId = "UI_ExtreactionTreasure_Type_3"
+        },
+        UI_ExtreactionTreasure_Type_4 = {
+          ContentEN = "Curio",
+          TextMapId = "UI_ExtreactionTreasure_Type_4"
+        },
+        UI_ExtreactionTreasure_Type_5 = {
+          ContentEN = "Jishu Key",
+          TextMapId = "UI_ExtreactionTreasure_Type_5"
+        },
         UI_FAKEQUEST_TEXT = {
           ContentEN = "This chapter's quests have already been fast-forwarded",
           TextMapId = "UI_FAKEQUEST_TEXT"
@@ -71627,15 +74188,7 @@ The list below shows how many points each item awards:]],
         UI_FNNpc_Name_FNThief02 = {
           ContentEN = "Bandit Henchman",
           TextMapId = "UI_FNNpc_Name_FNThief02"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_FNNpc_Name_Freida",
-    MaxKey = "UI_GameReview_Title_2",
-    Loader = function()
-      return {
+        },
         UI_FNNpc_Name_Freida = {
           ContentEN = "Freda",
           TextMapId = "UI_FNNpc_Name_Freida"
@@ -71747,7 +74300,15 @@ The list below shows how many points each item awards:]],
         UI_FORGING_SPEEDUP = {
           ContentEN = "Speed Up Forging",
           TextMapId = "UI_FORGING_SPEEDUP"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_FORGING_START",
+    MaxKey = "UI_HardBoss_Difficulty_Des_1022",
+    Loader = function()
+      return {
         UI_FORGING_START = {
           ContentEN = "Start Forging",
           TextMapId = "UI_FORGING_START"
@@ -71928,7 +74489,7 @@ The list below shows how many points each item awards:]],
           TextMapId = "UI_Fishing_SmallToBig"
         },
         UI_Fishing_SmallToBigChance = {
-          ContentEN = "A chance for a bigger fish!",
+          ContentEN = "A chance for a bigger fish",
           TextMapId = "UI_Fishing_SmallToBigChance"
         },
         UI_Fishing_StartFishing = {
@@ -71936,7 +74497,7 @@ The list below shows how many points each item awards:]],
           TextMapId = "UI_Fishing_StartFishing"
         },
         UI_Fishing_Success = {
-          ContentEN = "Got a fish!",
+          ContentEN = "Got a fish",
           TextMapId = "UI_Fishing_Success"
         },
         UI_Fishing_Toast_NoFish = {
@@ -72434,15 +74995,7 @@ The list below shows how many points each item awards:]],
         UI_GameReview_Title_2 = {
           ContentEN = "Please leave a review",
           TextMapId = "UI_GameReview_Title_2"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_GestureItem_Goto_Bag",
-    MaxKey = "UI_Keyboard_Map_QuitChallenge",
-    Loader = function()
-      return {
+        },
         UI_GestureItem_Goto_Bag = {
           ContentEN = "Go to Armoury – Tactical Backpack to equip Postures",
           TextMapId = "UI_GestureItem_Goto_Bag"
@@ -72474,6 +75027,10 @@ The list below shows how many points each item awards:]],
         UI_HardBossDg_BattleStart = {
           ContentEN = "[Nocturnal Echoes",
           TextMapId = "UI_HardBossDg_BattleStart"
+        },
+        UI_HardBossDg_LoadingTimeOut = {
+          ContentEN = "Entry timed out. Failed to complete Nocturnal Echoes.",
+          TextMapId = "UI_HardBossDg_LoadingTimeOut"
         },
         UI_HardBoss_Abandon_Text = {
           ContentEN = "Are you sure you want to give up the challenge?",
@@ -72550,7 +75107,15 @@ The list below shows how many points each item awards:]],
         UI_HardBoss_Difficulty_Des_1022 = {
           ContentEN = "The seed in the frozen soil that has forfeited the opportunity for a gentle descent into the night.",
           TextMapId = "UI_HardBoss_Difficulty_Des_1022"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_HardBoss_Difficulty_Des_1023",
+    MaxKey = "UI_LIMITEXPLORE_ONGOING",
+    Loader = function()
+      return {
         UI_HardBoss_Difficulty_Des_1023 = {
           ContentEN = "The seed in the frozen soil that has forfeited the opportunity for a gentle descent into the night.",
           TextMapId = "UI_HardBoss_Difficulty_Des_1023"
@@ -73242,15 +75807,7 @@ The list below shows how many points each item awards:]],
         UI_Keyboard_Map_QuitChallenge = {
           ContentEN = "Quit Challenge",
           TextMapId = "UI_Keyboard_Map_QuitChallenge"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Keyboard_Map_Recovery",
-    MaxKey = "UI_MECHANISM_10612",
-    Loader = function()
-      return {
+        },
         UI_Keyboard_Map_Recovery = {
           ContentEN = "Revive",
           TextMapId = "UI_Keyboard_Map_Recovery"
@@ -73358,7 +75915,15 @@ The list below shows how many points each item awards:]],
         UI_LIMITEXPLORE_ONGOING = {
           ContentEN = "Currently in Limited-Time Challenge",
           TextMapId = "UI_LIMITEXPLORE_ONGOING"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_LIMITEXPLORE_START",
+    MaxKey = "UI_MECHANISM_10445",
+    Loader = function()
+      return {
         UI_LIMITEXPLORE_START = {
           ContentEN = "Challenge begins. Follow the instructions to complete the challenge!",
           TextMapId = "UI_LIMITEXPLORE_START"
@@ -73830,6 +76395,174 @@ If you or your family have a history of epilepsy or have experienced similar sym
           ContentEN = "The game server is currently full and you have been placed in the login queue. Please wait patiently or try again later.",
           TextMapId = "UI_Login_Waiting"
         },
+        UI_LotteryDescription_3001 = {
+          ContentEN = "All Green-tier supplies are worth ×2 this run",
+          TextMapId = "UI_LotteryDescription_3001"
+        },
+        UI_LotteryDescription_3002 = {
+          ContentEN = "All Green-tier supplies are worth ×4 this run",
+          TextMapId = "UI_LotteryDescription_3002"
+        },
+        UI_LotteryDescription_3003 = {
+          ContentEN = "All Green-tier supplies are worth ×6 this run",
+          TextMapId = "UI_LotteryDescription_3003"
+        },
+        UI_LotteryDescription_3004 = {
+          ContentEN = "All Purple-tier supplies are worth ×2 this run",
+          TextMapId = "UI_LotteryDescription_3004"
+        },
+        UI_LotteryDescription_3005 = {
+          ContentEN = "All Purple-tier supplies are worth ×3 this run",
+          TextMapId = "UI_LotteryDescription_3005"
+        },
+        UI_LotteryDescription_3006 = {
+          ContentEN = "All Purple-tier supplies are worth ×5 this run",
+          TextMapId = "UI_LotteryDescription_3006"
+        },
+        UI_LotteryDescription_3007 = {
+          ContentEN = "All Golden-tier supplies are worth ×1.5 this run",
+          TextMapId = "UI_LotteryDescription_3007"
+        },
+        UI_LotteryDescription_3008 = {
+          ContentEN = "All Golden-tier supplies are worth ×2.5 this run",
+          TextMapId = "UI_LotteryDescription_3008"
+        },
+        UI_LotteryDescription_3009 = {
+          ContentEN = "All Golden-tier supplies are worth ×4 this run",
+          TextMapId = "UI_LotteryDescription_3009"
+        },
+        UI_LotteryDescription_3010 = {
+          ContentEN = "Accessories are worth ×1.5 this run",
+          TextMapId = "UI_LotteryDescription_3010"
+        },
+        UI_LotteryDescription_3011 = {
+          ContentEN = "Accessories are worth ×2 this run",
+          TextMapId = "UI_LotteryDescription_3011"
+        },
+        UI_LotteryDescription_3012 = {
+          ContentEN = "Accessories are worth ×3 this run",
+          TextMapId = "UI_LotteryDescription_3012"
+        },
+        UI_LotteryDescription_3013 = {
+          ContentEN = "Daily Necessities are worth ×1.5 this run",
+          TextMapId = "UI_LotteryDescription_3013"
+        },
+        UI_LotteryDescription_3014 = {
+          ContentEN = "Daily Necessities are worth ×2 this run",
+          TextMapId = "UI_LotteryDescription_3014"
+        },
+        UI_LotteryDescription_3015 = {
+          ContentEN = "Daily Necessities are worth ×3 this run",
+          TextMapId = "UI_LotteryDescription_3015"
+        },
+        UI_LotteryDescription_3016 = {
+          ContentEN = "Curios are worth ×1.5 this run",
+          TextMapId = "UI_LotteryDescription_3016"
+        },
+        UI_LotteryDescription_3017 = {
+          ContentEN = "Curios are worth ×2 this run",
+          TextMapId = "UI_LotteryDescription_3017"
+        },
+        UI_LotteryDescription_3018 = {
+          ContentEN = "Curios are worth ×3 this run",
+          TextMapId = "UI_LotteryDescription_3018"
+        },
+        UI_LotteryDescription_3019 = {
+          ContentEN = "Cards are worth ×1.5 this run",
+          TextMapId = "UI_LotteryDescription_3019"
+        },
+        UI_LotteryDescription_3020 = {
+          ContentEN = "Cards are worth ×2 this run",
+          TextMapId = "UI_LotteryDescription_3020"
+        },
+        UI_LotteryDescription_3021 = {
+          ContentEN = "Cards are worth ×3 this run",
+          TextMapId = "UI_LotteryDescription_3021"
+        },
+        UI_LotteryDescription_3022 = {
+          ContentEN = "Search Points ≥ 10,000 this run: Total Inventory Points ×1.2",
+          TextMapId = "UI_LotteryDescription_3022"
+        },
+        UI_LotteryDescription_3023 = {
+          ContentEN = "Search Points ≥ 50,000 this run: Total Inventory Points ×1.4",
+          TextMapId = "UI_LotteryDescription_3023"
+        },
+        UI_LotteryDescription_3024 = {
+          ContentEN = "Search Points ≥ 100,000 this run: Total Inventory Points ×1.6",
+          TextMapId = "UI_LotteryDescription_3024"
+        },
+        UI_LotteryDescription_3025 = {
+          ContentEN = "At least 3 Accessories in Inventory (Customisable): Total Inventory Points ×1.5",
+          TextMapId = "UI_LotteryDescription_3025"
+        },
+        UI_LotteryDescription_3026 = {
+          ContentEN = "At least 4 Accessories in Inventory (Customisable): Total Inventory Points ×2",
+          TextMapId = "UI_LotteryDescription_3026"
+        },
+        UI_LotteryDescription_3027 = {
+          ContentEN = "At least 5 Accessories in Inventory (Customisable): Total Inventory Points ×2.5",
+          TextMapId = "UI_LotteryDescription_3027"
+        },
+        UI_LotteryDescription_3028 = {
+          ContentEN = "At least 3 Daily Necessities in Inventory (Customisable): Total Inventory Points ×1.5",
+          TextMapId = "UI_LotteryDescription_3028"
+        },
+        UI_LotteryDescription_3029 = {
+          ContentEN = "At least 4 Daily Necessities in Inventory (Customisable): Total Inventory Points ×2",
+          TextMapId = "UI_LotteryDescription_3029"
+        },
+        UI_LotteryDescription_3030 = {
+          ContentEN = "At least 5 Daily Necessities in Inventory (Customisable): Total Inventory Points ×2.5",
+          TextMapId = "UI_LotteryDescription_3030"
+        },
+        UI_LotteryDescription_3031 = {
+          ContentEN = "At least 3 Curios in Inventory (Customisable): Total Inventory Points ×1.5",
+          TextMapId = "UI_LotteryDescription_3031"
+        },
+        UI_LotteryDescription_3032 = {
+          ContentEN = "At least 4 Curios in Inventory (Customisable): Total Inventory Points ×2",
+          TextMapId = "UI_LotteryDescription_3032"
+        },
+        UI_LotteryDescription_3033 = {
+          ContentEN = "At least 5 Curios in Inventory (Customisable): Total Inventory Points ×2.5",
+          TextMapId = "UI_LotteryDescription_3033"
+        },
+        UI_LotteryDescription_3034 = {
+          ContentEN = "At least 2 Green-tier items in Inventory (Customisable): Total Inventory Points ×2",
+          TextMapId = "UI_LotteryDescription_3034"
+        },
+        UI_LotteryDescription_3035 = {
+          ContentEN = "At least 3 Green-tier items in Inventory (Customisable): Total Inventory Points ×2.5",
+          TextMapId = "UI_LotteryDescription_3035"
+        },
+        UI_LotteryDescription_3036 = {
+          ContentEN = "At least 4 Green-tier items in Inventory (Customisable): Total Inventory Points ×3",
+          TextMapId = "UI_LotteryDescription_3036"
+        },
+        UI_LotteryDescription_3037 = {
+          ContentEN = "At least 2 Purple-tier items in Inventory (Customisable): Total Inventory Points ×2",
+          TextMapId = "UI_LotteryDescription_3037"
+        },
+        UI_LotteryDescription_3038 = {
+          ContentEN = "At least 3 Purple-tier items in Inventory (Customisable): Total Inventory Points ×2.5",
+          TextMapId = "UI_LotteryDescription_3038"
+        },
+        UI_LotteryDescription_3039 = {
+          ContentEN = "At least 4 Purple-tier items in Inventory (Customisable): Total Inventory Points ×3",
+          TextMapId = "UI_LotteryDescription_3039"
+        },
+        UI_LotteryDescription_3040 = {
+          ContentEN = "At least 2 Golden-tier items in Inventory (Customisable): Total Inventory Points ×2",
+          TextMapId = "UI_LotteryDescription_3040"
+        },
+        UI_LotteryDescription_3041 = {
+          ContentEN = "At least 3 Golden-tier items in Inventory (Customisable): Total Inventory Points ×2.5",
+          TextMapId = "UI_LotteryDescription_3041"
+        },
+        UI_LotteryDescription_3042 = {
+          ContentEN = "At least 4 Golden-tier items in Inventory (Customisable): Total Inventory Points ×3",
+          TextMapId = "UI_LotteryDescription_3042"
+        },
         UI_MECHANISM_100 = {
           ContentEN = "Open",
           TextMapId = "UI_MECHANISM_100"
@@ -73989,7 +76722,15 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_MECHANISM_10445 = {
           ContentEN = "Drilling Rig",
           TextMapId = "UI_MECHANISM_10445"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_MECHANISM_10446",
+    MaxKey = "UI_ModGuideBook_Task_Des_09",
+    Loader = function()
+      return {
         UI_MECHANISM_10446 = {
           ContentEN = "Rubbish Bin",
           TextMapId = "UI_MECHANISM_10446"
@@ -74049,15 +76790,7 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_MECHANISM_10612 = {
           ContentEN = "Crane",
           TextMapId = "UI_MECHANISM_10612"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_MECHANISM_106124",
-    MaxKey = "UI_ModToast_EmptyCanNotRemoveAll",
-    Loader = function()
-      return {
+        },
         UI_MECHANISM_106124 = {
           ContentEN = "Access Lift Controls",
           TextMapId = "UI_MECHANISM_106124"
@@ -74193,6 +76926,46 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_MECHANISM_118006 = {
           ContentEN = "Start",
           TextMapId = "UI_MECHANISM_118006"
+        },
+        UI_MECHANISM_118007 = {
+          ContentEN = "Start the Gashapon Machine",
+          TextMapId = "UI_MECHANISM_118007"
+        },
+        UI_MECHANISM_118008 = {
+          ContentEN = "Jishu Chamber Ⅰ",
+          TextMapId = "UI_MECHANISM_118008"
+        },
+        UI_MECHANISM_118009 = {
+          ContentEN = "Bamboo Chest of Treasures",
+          TextMapId = "UI_MECHANISM_118009"
+        },
+        UI_MECHANISM_118010 = {
+          ContentEN = "Small Bamboo Basket",
+          TextMapId = "UI_MECHANISM_118010"
+        },
+        UI_MECHANISM_118011 = {
+          ContentEN = "Mystic Gourd",
+          TextMapId = "UI_MECHANISM_118011"
+        },
+        UI_MECHANISM_118012 = {
+          ContentEN = "Wicker Basket of Treasures",
+          TextMapId = "UI_MECHANISM_118012"
+        },
+        UI_MECHANISM_118013 = {
+          ContentEN = "Mystic Box",
+          TextMapId = "UI_MECHANISM_118013"
+        },
+        UI_MECHANISM_118014 = {
+          ContentEN = "Medium Bamboo Basket",
+          TextMapId = "UI_MECHANISM_118014"
+        },
+        UI_MECHANISM_118015 = {
+          ContentEN = "Custom Treasure Stove",
+          TextMapId = "UI_MECHANISM_118015"
+        },
+        UI_MECHANISM_118016 = {
+          ContentEN = "Triple Ritual Vessel",
+          TextMapId = "UI_MECHANISM_118016"
         },
         UI_MECHANISM_119 = {
           ContentEN = "Rest here",
@@ -74757,7 +77530,15 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_ModGuideBook_Task_Des_09 = {
           ContentEN = "Collect all the following <highlight>Character Demon Wedges</>",
           TextMapId = "UI_ModGuideBook_Task_Des_09"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_ModGuideBook_Task_Des_10",
+    MaxKey = "UI_Name_Walnut_151714",
+    Loader = function()
+      return {
         UI_ModGuideBook_Task_Des_10 = {
           ContentEN = "Collect all the following <highlight>Ranged Weapon Demon Wedges</>",
           TextMapId = "UI_ModGuideBook_Task_Des_10"
@@ -74857,15 +77638,7 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_ModToast_EmptyCanNotRemoveAll = {
           ContentEN = "No removable Demon Wedges",
           TextMapId = "UI_ModToast_EmptyCanNotRemoveAll"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Mod_AddPolarity",
-    MaxKey = "UI_Name_Walnut_151911",
-    Loader = function()
-      return {
+        },
         UI_Mod_AddPolarity = {
           ContentEN = "Add a Track for the slot",
           TextMapId = "UI_Mod_AddPolarity"
@@ -75556,7 +78329,15 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_Name_Walnut_151714 = {
           ContentEN = "Secret Letter: Covenanter's Standfast – Inspo",
           TextMapId = "UI_Name_Walnut_151714"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Name_Walnut_151721",
+    MaxKey = "UI_Npc_Name_Dafu",
+    Loader = function()
+      return {
         UI_Name_Walnut_151721 = {
           ContentEN = "Secret Letter: Covenanter's Blaze – Nirvana",
           TextMapId = "UI_Name_Walnut_151721"
@@ -75656,15 +78437,7 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_Name_Walnut_151911 = {
           ContentEN = "Secret Letter: Arbiter's Illusionary Sacrifice",
           TextMapId = "UI_Name_Walnut_151911"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Name_Walnut_151921",
-    MaxKey = "UI_Npc_Name_FindSaiqiNpc5",
-    Loader = function()
-      return {
+        },
         UI_Name_Walnut_151921 = {
           ContentEN = "Secret Letter: Bahamut's Misty Veil",
           TextMapId = "UI_Name_Walnut_151921"
@@ -76230,6 +79003,10 @@ If you or your family have a history of epilepsy or have experienced similar sym
           ContentEN = "Little Girl",
           TextMapId = "UI_Npc_Name_250025"
         },
+        UI_Npc_Name_250029 = {
+          ContentEN = "\"Su Yi\"",
+          TextMapId = "UI_Npc_Name_250029"
+        },
         UI_Npc_Name_Ada = {
           ContentEN = "Ada",
           TextMapId = "UI_Npc_Name_Ada"
@@ -76265,6 +79042,14 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_Npc_Name_Anni = {
           ContentEN = "Annie",
           TextMapId = "UI_Npc_Name_Anni"
+        },
+        UI_Npc_Name_Aoman = {
+          ContentEN = "Arrogant Man",
+          TextMapId = "UI_Npc_Name_Aoman"
+        },
+        UI_Npc_Name_AomanT = {
+          ContentEN = "\"Arrogant Man\"",
+          TextMapId = "UI_Npc_Name_AomanT"
         },
         UI_Npc_Name_Aote = {
           ContentEN = "Outsider",
@@ -76349,6 +79134,22 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_Npc_Name_Dafu = {
           ContentEN = "Daphne",
           TextMapId = "UI_Npc_Name_Dafu"
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Npc_Name_DianzhangA",
+    MaxKey = "UI_Npc_Name_Wanzu1",
+    Loader = function()
+      return {
+        UI_Npc_Name_DianzhangA = {
+          ContentEN = "Suspicious Shopkeeper",
+          TextMapId = "UI_Npc_Name_DianzhangA"
+        },
+        UI_Npc_Name_DianzhangB = {
+          ContentEN = "Domineering Shopkeeper",
+          TextMapId = "UI_Npc_Name_DianzhangB"
         },
         UI_Npc_Name_Diaoxiang = {
           ContentEN = "Statue",
@@ -76369,6 +79170,10 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_Npc_Name_Dog = {
           ContentEN = "Fierce Dog",
           TextMapId = "UI_Npc_Name_Dog"
+        },
+        UI_Npc_Name_DreamWuyousheng = {
+          ContentEN = "Ethereal Wishen",
+          TextMapId = "UI_Npc_Name_DreamWuyousheng"
         },
         UI_Npc_Name_DrunkSoldier = {
           ContentEN = "Drunken Soldier",
@@ -76461,15 +79266,7 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_Npc_Name_FindSaiqiNpc5 = {
           ContentEN = "Panicked Civilian",
           TextMapId = "UI_Npc_Name_FindSaiqiNpc5"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Npc_Name_FindSaiqiNpc6",
-    MaxKey = "UI_Npc_Name_Ximeng",
-    Loader = function()
-      return {
+        },
         UI_Npc_Name_FindSaiqiNpc6 = {
           ContentEN = "Angry Civilian",
           TextMapId = "UI_Npc_Name_FindSaiqiNpc6"
@@ -76521,6 +79318,14 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_Npc_Name_FlowerShoper = {
           ContentEN = "Florist Owner",
           TextMapId = "UI_Npc_Name_FlowerShoper"
+        },
+        UI_Npc_Name_FuShuKeZhou = {
+          ContentEN = "Fushu & Kezhou",
+          TextMapId = "UI_Npc_Name_FuShuKeZhou"
+        },
+        UI_Npc_Name_FuShuSuYi = {
+          ContentEN = "Fushu & Su Yi",
+          TextMapId = "UI_Npc_Name_FuShuSuYi"
         },
         UI_Npc_Name_Fuer = {
           ContentEN = "Fulvis",
@@ -76621,6 +79426,10 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_Npc_Name_Hunhun1 = {
           ContentEN = "Thug in Ambush",
           TextMapId = "UI_Npc_Name_Hunhun1"
+        },
+        UI_Npc_Name_Huoji = {
+          ContentEN = "Timid Clerk",
+          TextMapId = "UI_Npc_Name_Huoji"
         },
         UI_Npc_Name_IceFisher = {
           ContentEN = "Forgetful Fisherman",
@@ -76938,6 +79747,10 @@ If you or your family have a history of epilepsy or have experienced similar sym
           ContentEN = "Cheerful Server",
           TextMapId = "UI_Npc_Name_ReqingWaiter"
         },
+        UI_Npc_Name_RookieFisher = {
+          ContentEN = "Forgetful Fisherman",
+          TextMapId = "UI_Npc_Name_RookieFisher"
+        },
         UI_Npc_Name_RougeLike_Shop1 = {
           ContentEN = "Abyssal Merchant",
           TextMapId = "UI_Npc_Name_RougeLike_Shop1"
@@ -76989,6 +79802,10 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_Npc_Name_SaveFisher = {
           ContentEN = "Forgetful Fisherman",
           TextMapId = "UI_Npc_Name_SaveFisher"
+        },
+        UI_Npc_Name_SearchChestMan = {
+          ContentEN = "Distressed Girl",
+          TextMapId = "UI_Npc_Name_SearchChestMan"
         },
         UI_Npc_Name_Shangdian = {
           ContentEN = "Lunotress",
@@ -77046,6 +79863,10 @@ If you or your family have a history of epilepsy or have experienced similar sym
           ContentEN = "Picky Customer",
           TextMapId = "UI_Npc_Name_Subscriber"
         },
+        UI_Npc_Name_Sumuo = {
+          ContentEN = "Su Muzhe",
+          TextMapId = "UI_Npc_Name_Sumuo"
+        },
         UI_Npc_Name_SuspiciousMan = {
           ContentEN = "Suspicious Young Man",
           TextMapId = "UI_Npc_Name_SuspiciousMan"
@@ -77057,6 +79878,10 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_Npc_Name_Tanlandeshangren = {
           ContentEN = "Sincere Merchant",
           TextMapId = "UI_Npc_Name_Tanlandeshangren"
+        },
+        UI_Npc_Name_Tanxianjiajiaojiao = {
+          ContentEN = "Lunoxplorer",
+          TextMapId = "UI_Npc_Name_Tanxianjiajiaojiao"
         },
         UI_Npc_Name_Tanxianjiaojiao = {
           ContentEN = "Lunoxplorer",
@@ -77081,6 +79906,10 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_Npc_Name_TitieKuanggong = {
           ContentEN = "Dedicated Geologist",
           TextMapId = "UI_Npc_Name_TitieKuanggong"
+        },
+        UI_Npc_Name_Tongzhenkid = {
+          ContentEN = "Treasure-Seeking Child",
+          TextMapId = "UI_Npc_Name_Tongzhenkid"
         },
         UI_Npc_Name_Toudu = {
           ContentEN = "Poisonoid",
@@ -77113,7 +79942,15 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_Npc_Name_Wanzu1 = {
           ContentEN = "Tentacle #1",
           TextMapId = "UI_Npc_Name_Wanzu1"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Npc_Name_Wanzu2",
+    MaxKey = "UI_OPTION_NeedLog",
+    Loader = function()
+      return {
         UI_Npc_Name_Wanzu2 = {
           ContentEN = "Tentacle #2",
           TextMapId = "UI_Npc_Name_Wanzu2"
@@ -77242,6 +80079,10 @@ If you or your family have a history of epilepsy or have experienced similar sym
           ContentEN = "Young Alchemist",
           TextMapId = "UI_Npc_Name_XiaoLianjin"
         },
+        UI_Npc_Name_Xiaochitanfan = {
+          ContentEN = "Snack Vendor",
+          TextMapId = "UI_Npc_Name_Xiaochitanfan"
+        },
         UI_Npc_Name_Xiaocilang = {
           ContentEN = "Dog-Loving Geniemon Hunter",
           TextMapId = "UI_Npc_Name_Xiaocilang"
@@ -77269,15 +80110,7 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_Npc_Name_Ximeng = {
           ContentEN = "Simon",
           TextMapId = "UI_Npc_Name_Ximeng"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Npc_Name_XuanSeBiAn",
-    MaxKey = "UI_OPTION_ThisKeyIsUsed",
-    Loader = function()
-      return {
+        },
         UI_Npc_Name_XuanSeBiAn = {
           ContentEN = "Sable Bi'an",
           TextMapId = "UI_Npc_Name_XuanSeBiAn"
@@ -77325,6 +80158,14 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_Npc_Name_ZhixianDuanzao = {
           ContentEN = "Luno with a Hammer",
           TextMapId = "UI_Npc_Name_ZhixianDuanzao"
+        },
+        UI_Npc_Name_ZhuJueBai = {
+          ContentEN = "{nickname} & Snow",
+          TextMapId = "UI_Npc_Name_ZhuJueBai"
+        },
+        UI_Npc_Name_Zhuchi = {
+          ContentEN = "Strict Girl",
+          TextMapId = "UI_Npc_Name_Zhuchi"
         },
         UI_Npc_Name_Zhuomicang_F1 = {
           ContentEN = "Bored Child",
@@ -77462,6 +80303,22 @@ If you or your family have a history of epilepsy or have experienced similar sym
           ContentEN = "Brightness",
           TextMapId = "UI_OPTION_Brightness"
         },
+        UI_OPTION_BulletJumpCamAdjust = {
+          ContentEN = "Hold to adjust the Helix Leap direction",
+          TextMapId = "UI_OPTION_BulletJumpCamAdjust"
+        },
+        UI_OPTION_BulletJumpCamReset = {
+          ContentEN = "Re-centre camera after Helix Leap",
+          TextMapId = "UI_OPTION_BulletJumpCamReset"
+        },
+        UI_OPTION_BulletJumpXsensitivity = {
+          ContentEN = "Horizontal Sensitivity when adjusting Helix Leap direction",
+          TextMapId = "UI_OPTION_BulletJumpXsensitivity"
+        },
+        UI_OPTION_BulletJumpYsensitivity = {
+          ContentEN = "Vertical Sensitivity when adjusting Helix Leap direction",
+          TextMapId = "UI_OPTION_BulletJumpYsensitivity"
+        },
         UI_OPTION_CONTROLLER = {
           ContentEN = "Controls",
           TextMapId = "UI_OPTION_CONTROLLER"
@@ -77473,6 +80330,10 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_OPTION_CameraDistance = {
           ContentEN = "Default Camera Distance",
           TextMapId = "UI_OPTION_CameraDistance"
+        },
+        UI_OPTION_CameraShakeRate = {
+          ContentEN = "Camera Shake Intensity",
+          TextMapId = "UI_OPTION_CameraShakeRate"
         },
         UI_OPTION_CameraYawFollow = {
           ContentEN = "Smart Combat Camera",
@@ -77889,7 +80750,15 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_OPTION_NeedLog = {
           ContentEN = "Please enable Enhanced Logging first",
           TextMapId = "UI_OPTION_NeedLog"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_OPTION_NotYetDevelop",
+    MaxKey = "UI_Patch_Necessory",
+    Loader = function()
+      return {
         UI_OPTION_NotYetDevelop = {
           ContentEN = "This function has not been developed yet",
           TextMapId = "UI_OPTION_NotYetDevelop"
@@ -77913,6 +80782,10 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_OPTION_OverallPreset = {
           ContentEN = "Quality Preset",
           TextMapId = "UI_OPTION_OverallPreset"
+        },
+        UI_OPTION_PasswordVerifyPerLogin = {
+          ContentEN = "Require verification for the first sensitive action after login",
+          TextMapId = "UI_OPTION_PasswordVerifyPerLogin"
         },
         UI_OPTION_PlantEnhance = {
           ContentEN = "Foliage Enhancement",
@@ -77989,6 +80862,10 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_OPTION_ScreenQuality = {
           ContentEN = "Screenshot Quality",
           TextMapId = "UI_OPTION_ScreenQuality"
+        },
+        UI_OPTION_SecondaryPassword = {
+          ContentEN = "Enable Secondary Password verification",
+          TextMapId = "UI_OPTION_SecondaryPassword"
         },
         UI_OPTION_ShadowQuality = {
           ContentEN = "Shadow Quality",
@@ -78077,15 +80954,7 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_OPTION_ThisKeyIsUsed = {
           ContentEN = "Already in use by the uneditable <Highlight>%s</>",
           TextMapId = "UI_OPTION_ThisKeyIsUsed"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_OPTION_TotalVolume",
-    MaxKey = "UI_Pet_LevelUp",
-    Loader = function()
-      return {
+        },
         UI_OPTION_TotalVolume = {
           ContentEN = "Volume",
           TextMapId = "UI_OPTION_TotalVolume"
@@ -78656,9 +81525,73 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
           ContentEN = "Notice",
           TextMapId = "UI_PatchFix_Title"
         },
+        UI_Patch_AllowData = {
+          ContentEN = "Allow Downloads over Mobile Data",
+          TextMapId = "UI_Patch_AllowData"
+        },
+        UI_Patch_DataUsage = {
+          ContentEN = "Downloading over mobile data is disabled. Enable it and download now?",
+          TextMapId = "UI_Patch_DataUsage"
+        },
+        UI_Patch_DownloadFinish = {
+          ContentEN = "Download Complete",
+          TextMapId = "UI_Patch_DownloadFinish"
+        },
+        UI_Patch_DownloadingNecessory = {
+          ContentEN = "Required resources are currently being downloaded. Other resources cannot be downloaded until this is complete.",
+          TextMapId = "UI_Patch_DownloadingNecessory"
+        },
         UI_Patch_Fix_Fail = {
           ContentEN = "Patch repair failed. Please try again or contact support.",
           TextMapId = "UI_Patch_Fix_Fail"
+        },
+        UI_Patch_Interrup = {
+          ContentEN = "Stop the current download and start the new one?",
+          TextMapId = "UI_Patch_Interrup"
+        },
+        UI_Patch_Logout = {
+          ContentEN = "You have logged out. You can continue playing once %s finishes downloading.",
+          TextMapId = "UI_Patch_Logout"
+        },
+        UI_Patch_Manage = {
+          ContentEN = "Manage Downloads",
+          TextMapId = "UI_Patch_Manage"
+        },
+        UI_Patch_Necessory = {
+          ContentEN = "Required Resources",
+          TextMapId = "UI_Patch_Necessory"
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Patch_NeedDownload",
+    MaxKey = "UI_PlayerHead_Name_30047",
+    Loader = function()
+      return {
+        UI_Patch_NeedDownload = {
+          ContentEN = "Finish downloading %s to continue playing",
+          TextMapId = "UI_Patch_NeedDownload"
+        },
+        UI_Patch_NeedNecessory = {
+          ContentEN = "You must download the required resources before downloading other resources",
+          TextMapId = "UI_Patch_NeedNecessory"
+        },
+        UI_Patch_StartNow = {
+          ContentEN = "This resource can be downloaded in the background. Start now?",
+          TextMapId = "UI_Patch_StartNow"
+        },
+        UI_Patch_Toast_Finish = {
+          ContentEN = "%s downloaded successfully",
+          TextMapId = "UI_Patch_Toast_Finish"
+        },
+        UI_Patch_Toast_Start = {
+          ContentEN = "%s has started downloading in the background. You can manage it in Settings.",
+          TextMapId = "UI_Patch_Toast_Start"
+        },
+        UI_Patch_Toast_Wait = {
+          ContentEN = "Quest starts once %s has finished downloading",
+          TextMapId = "UI_Patch_Toast_Wait"
         },
         UI_PersonInfo_Detail_Char = {
           ContentEN = "Character Info",
@@ -78841,8 +81774,56 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
           TextMapId = "UI_PetEntry_Title17"
         },
         UI_PetEntry_Title18 = {
-          ContentEN = "Diligent",
+          ContentEN = "Disciplined",
           TextMapId = "UI_PetEntry_Title18"
+        },
+        UI_PetEntry_Title19 = {
+          ContentEN = "Brutal",
+          TextMapId = "UI_PetEntry_Title19"
+        },
+        UI_PetEntry_Title20 = {
+          ContentEN = "Greedy",
+          TextMapId = "UI_PetEntry_Title20"
+        },
+        UI_PetEntry_Title21 = {
+          ContentEN = "Enduring",
+          TextMapId = "UI_PetEntry_Title21"
+        },
+        UI_PetEntry_Title22 = {
+          ContentEN = "Efficient",
+          TextMapId = "UI_PetEntry_Title22"
+        },
+        UI_PetEntry_Title23 = {
+          ContentEN = "Passionate",
+          TextMapId = "UI_PetEntry_Title23"
+        },
+        UI_PetEntry_Title24 = {
+          ContentEN = "Stubborn",
+          TextMapId = "UI_PetEntry_Title24"
+        },
+        UI_PetEntry_Title25 = {
+          ContentEN = "Aggressive",
+          TextMapId = "UI_PetEntry_Title25"
+        },
+        UI_PetEntry_Title26 = {
+          ContentEN = "Energised",
+          TextMapId = "UI_PetEntry_Title26"
+        },
+        UI_PetEntry_Title27 = {
+          ContentEN = "Phantom",
+          TextMapId = "UI_PetEntry_Title27"
+        },
+        UI_PetEntry_Title28 = {
+          ContentEN = "Desirous",
+          TextMapId = "UI_PetEntry_Title28"
+        },
+        UI_PetEntry_Title29 = {
+          ContentEN = "Fleeing",
+          TextMapId = "UI_PetEntry_Title29"
+        },
+        UI_PetEntry_Title30 = {
+          ContentEN = "Veteran",
+          TextMapId = "UI_PetEntry_Title30"
         },
         UI_Pet_Affix_Without = {
           ContentEN = "No Trait added to this slot",
@@ -78887,15 +81868,7 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
         UI_Pet_LevelUp = {
           ContentEN = "Geniemon Upgrade",
           TextMapId = "UI_Pet_LevelUp"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Pet_Locked",
-    MaxKey = "UI_PowerSeat",
-    Loader = function()
-      return {
+        },
         UI_Pet_Locked = {
           ContentEN = "This Geniemon is locked and cannot be used",
           TextMapId = "UI_Pet_Locked"
@@ -79395,7 +82368,15 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
         UI_PlayerHead_Name_30047 = {
           ContentEN = "Fushu: Fallen",
           TextMapId = "UI_PlayerHead_Name_30047"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_PlayerHead_Name_30048",
+    MaxKey = "UI_Raid_BattleCountDown",
+    Loader = function()
+      return {
         UI_PlayerHead_Name_30048 = {
           ContentEN = "Fushu: Assist",
           TextMapId = "UI_PlayerHead_Name_30048"
@@ -79695,15 +82676,7 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
         UI_PowerSeat = {
           ContentEN = "Take a seat",
           TextMapId = "UI_PowerSeat"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_PretextTasks",
-    MaxKey = "UI_Reward_Walnut_Preview",
-    Loader = function()
-      return {
+        },
         UI_PretextTasks = {
           ContentEN = "Prerequisite Quest",
           TextMapId = "UI_PretextTasks"
@@ -79895,6 +82868,10 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
         UI_Quest_QuestFail_200313 = {
           ContentEN = "You lost to Chen Baisha. The race will restart.",
           TextMapId = "UI_Quest_QuestFail_200313"
+        },
+        UI_Quest_StartTime = {
+          ContentEN = "Unlocks in: ",
+          TextMapId = "UI_Quest_StartTime"
         },
         UI_Quest_TakeQuest = {
           ContentEN = "Accept the quest",
@@ -80199,7 +83176,15 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
         UI_Raid_BattleCountDown = {
           ContentEN = "Challenge ends in: ",
           TextMapId = "UI_Raid_BattleCountDown"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Raid_Boss_Battle",
+    MaxKey = "UI_SHOP_MAINTAB_GACHA",
+    Loader = function()
+      return {
         UI_Raid_Boss_Battle = {
           ContentEN = "Apex Rankings",
           TextMapId = "UI_Raid_Boss_Battle"
@@ -80300,6 +83285,10 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
         UI_RegionMap_NotInSameRegion = {
           ContentEN = "Target is in another area. Head there first.",
           TextMapId = "UI_RegionMap_NotInSameRegion"
+        },
+        UI_RegionMap_OpenTagPanel = {
+          ContentEN = "Show/Hide",
+          TextMapId = "UI_RegionMap_OpenTagPanel"
         },
         UI_RegionMap_Save = {
           ContentEN = "Save",
@@ -80454,6 +83443,26 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
           TextMapId = "UI_Rematch_Fail_TimeOut"
         },
         UI_Replay = {ContentEN = "Replay", TextMapId = "UI_Replay"},
+        UI_Report_Tab1 = {
+          ContentEN = "Username/Profile",
+          TextMapId = "UI_Report_Tab1"
+        },
+        UI_Report_Tab2 = {
+          ContentEN = "Chat",
+          TextMapId = "UI_Report_Tab2"
+        },
+        UI_Report_Tab3 = {
+          ContentEN = "Fair Play",
+          TextMapId = "UI_Report_Tab3"
+        },
+        UI_ResetLangLater = {
+          ContentEN = "Not now",
+          TextMapId = "UI_ResetLangLater"
+        },
+        UI_ResetLangNow = {
+          ContentEN = "Switch now",
+          TextMapId = "UI_ResetLangNow"
+        },
         UI_Resources_Exchange = {
           ContentEN = "Redeem Soulprints",
           TextMapId = "UI_Resources_Exchange"
@@ -80497,15 +83506,7 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
         UI_Reward_Walnut_Preview = {
           ContentEN = "Possible Rewards",
           TextMapId = "UI_Reward_Walnut_Preview"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Reward_Walnut_Select_Success",
-    MaxKey = "UI_SQUAD_SELECT_CONFIRM",
-    Loader = function()
-      return {
+        },
         UI_Reward_Walnut_Select_Success = {
           ContentEN = "Selected",
           TextMapId = "UI_Reward_Walnut_Select_Success"
@@ -80980,7 +83981,15 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
         UI_SHOP_MAINTAB_GACHA = {
           ContentEN = "Prism",
           TextMapId = "UI_SHOP_MAINTAB_GACHA"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_SHOP_MAINTAB_ITEM",
+    MaxKey = "UI_SecPwd_WrongPwdLock",
+    Loader = function()
+      return {
         UI_SHOP_MAINTAB_ITEM = {
           ContentEN = "Items",
           TextMapId = "UI_SHOP_MAINTAB_ITEM"
@@ -81290,7 +84299,7 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
           TextMapId = "UI_SPECIALPOP_COMMON_TIPS_3"
         },
         UI_SPECIALPOP_COMMON_TITLE = {
-          ContentEN = "Select a quest mode:",
+          ContentEN = "Select a quest mode: ",
           TextMapId = "UI_SPECIALPOP_COMMON_TITLE"
         },
         UI_SPECIALPOP_TEXT_CONTENT_1_1 = {
@@ -81317,15 +84326,7 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
         UI_SQUAD_SELECT_CONFIRM = {
           ContentEN = "Confirm",
           TextMapId = "UI_SQUAD_SELECT_CONFIRM"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_SQUAD_SELECT_FOLD",
-    MaxKey = "UI_Shop_KR_Link",
-    Loader = function()
-      return {
+        },
         UI_SQUAD_SELECT_FOLD = {
           ContentEN = "Collapse",
           TextMapId = "UI_SQUAD_SELECT_FOLD"
@@ -81723,6 +84724,90 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
           ContentEN = "Searching...",
           TextMapId = "UI_Search"
         },
+        UI_SecPwd_ConfirmSetButton = {
+          ContentEN = "Enable",
+          TextMapId = "UI_SecPwd_ConfirmSetButton"
+        },
+        UI_SecPwd_ConfirmTurnoffButton = {
+          ContentEN = "Disable",
+          TextMapId = "UI_SecPwd_ConfirmTurnoffButton"
+        },
+        UI_SecPwd_ForgetPwd = {
+          ContentEN = "Forgot password?",
+          TextMapId = "UI_SecPwd_ForgetPwd"
+        },
+        UI_SecPwd_PopUpContent_SetAlert = {
+          ContentEN = "If you forget your Secondary Password, please contact Customer Service. It can't be recovered through self-service.",
+          TextMapId = "UI_SecPwd_PopUpContent_SetAlert"
+        },
+        UI_SecPwd_PopUpContent_SetButton = {
+          ContentEN = "Set Password",
+          TextMapId = "UI_SecPwd_PopUpContent_SetButton"
+        },
+        UI_SecPwd_PopUpContent_SetConfirm = {
+          ContentEN = [[
+Are you sure you want to enable Secondary Password?
+ (You'll need it to unlock items, use key items, send gifts, and perform other sensitive actions.)]],
+          TextMapId = "UI_SecPwd_PopUpContent_SetConfirm"
+        },
+        UI_SecPwd_PopUpContent_SetSucc = {
+          ContentEN = "Secondary Password enabled. If you forget it, you can't recover it through self-service. Please keep it safe.",
+          TextMapId = "UI_SecPwd_PopUpContent_SetSucc"
+        },
+        UI_SecPwd_PopUpContent_TurnoffConfirm = {
+          ContentEN = "Disabling the Secondary Password removes this extra layer of protection. If you enable it again later, you'll need to set a new password. Are you sure you want to disable Secondary Password?",
+          TextMapId = "UI_SecPwd_PopUpContent_TurnoffConfirm"
+        },
+        UI_SecPwd_PwdConflictAlert = {
+          ContentEN = "Passwords don't match",
+          TextMapId = "UI_SecPwd_PwdConflictAlert"
+        },
+        UI_SecPwd_PwdVerifyTitle = {
+          ContentEN = "Secondary Password Verification",
+          TextMapId = "UI_SecPwd_PwdVerifyTitle"
+        },
+        UI_SecPwd_SetPwdTitle = {
+          ContentEN = "Enable Secondary Password",
+          TextMapId = "UI_SecPwd_SetPwdTitle"
+        },
+        UI_SecPwd_TextInPwd = {
+          ContentEN = "Enter password",
+          TextMapId = "UI_SecPwd_TextInPwd"
+        },
+        UI_SecPwd_TextInPwdAgain = {
+          ContentEN = "Confirm password",
+          TextMapId = "UI_SecPwd_TextInPwdAgain"
+        },
+        UI_SecPwd_Toast_TextInCompletePwd = {
+          ContentEN = "Please enter the full password",
+          TextMapId = "UI_SecPwd_Toast_TextInCompletePwd"
+        },
+        UI_SecPwd_TurnoffPwdTitle = {
+          ContentEN = "Disable Secondary Password",
+          TextMapId = "UI_SecPwd_TurnoffPwdTitle"
+        },
+        UI_SecPwd_TurnoffToast = {
+          ContentEN = "Secondary Password disabled",
+          TextMapId = "UI_SecPwd_TurnoffToast"
+        },
+        UI_SecPwd_WrongPwdAlert = {
+          ContentEN = "Incorrect Secondary Password (%s attempts remaining)",
+          TextMapId = "UI_SecPwd_WrongPwdAlert"
+        },
+        UI_SecPwd_WrongPwdLock = {
+          ContentEN = [[
+Too many incorrect attempts. Access has been locked.
+ (Unlocks in: %s)]],
+          TextMapId = "UI_SecPwd_WrongPwdLock"
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_SelectLayoutPopup_Button",
+    MaxKey = "UI_Skin_Des_410201",
+    Loader = function()
+      return {
         UI_SelectLayoutPopup_Button = {
           ContentEN = "Confirm Selection",
           TextMapId = "UI_SelectLayoutPopup_Button"
@@ -82122,15 +85207,7 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
         UI_Shop_KR_Link = {
           ContentEN = "Korean Payment Regulations",
           TextMapId = "UI_Shop_KR_Link"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Shop_More",
-    MaxKey = "UI_SubTitle_EnemyArchive",
-    Loader = function()
-      return {
+        },
         UI_Shop_More = {
           ContentEN = "Bonus",
           TextMapId = "UI_Shop_More"
@@ -82530,7 +85607,15 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
         UI_Skin_Des_410201 = {
           ContentEN = "Over wine and words, fates are drawn and fortunes unfold.",
           TextMapId = "UI_Skin_Des_410201"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Skin_Des_4201",
+    MaxKey = "UI_TELEPORTPOINT_NAME_104101_6",
+    Loader = function()
+      return {
         UI_Skin_Des_4201 = {
           ContentEN = "Heaven's thunder courses through his form. Upholding Dafeng's mandate, sin finds no refuge — nor does he.",
           TextMapId = "UI_Skin_Des_4201"
@@ -82747,6 +85832,182 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
           ContentEN = "Selected slot is empty",
           TextMapId = "UI_Slot_Empty"
         },
+        UI_SoloTreasureEvent_ArmorySet = {
+          ContentEN = "Pre-Battle Preparation",
+          TextMapId = "UI_SoloTreasureEvent_ArmorySet"
+        },
+        UI_SoloTreasureEvent_BagCost = {
+          ContentEN = "Treasure Pouch Fee",
+          TextMapId = "UI_SoloTreasureEvent_BagCost"
+        },
+        UI_SoloTreasureEvent_CleanUpSet = {
+          ContentEN = "Clear Lineup",
+          TextMapId = "UI_SoloTreasureEvent_CleanUpSet"
+        },
+        UI_SoloTreasureEvent_EntryArmory = {
+          ContentEN = "Pre-Battle Preparation",
+          TextMapId = "UI_SoloTreasureEvent_EntryArmory"
+        },
+        UI_SoloTreasureEvent_EntryCost = {
+          ContentEN = "Entry Fee",
+          TextMapId = "UI_SoloTreasureEvent_EntryCost"
+        },
+        UI_SoloTreasureEvent_EntryDungeon = {
+          ContentEN = "Start Challenge",
+          TextMapId = "UI_SoloTreasureEvent_EntryDungeon"
+        },
+        UI_SoloTreasureEvent_NoReturnTips = {
+          ContentEN = "(Non-refundable after entry)",
+          TextMapId = "UI_SoloTreasureEvent_NoReturnTips"
+        },
+        UI_SoloTreasureEvent_TotalCost = {
+          ContentEN = "Total Cost",
+          TextMapId = "UI_SoloTreasureEvent_TotalCost"
+        },
+        UI_SoloTreasureEvent_WeaponNotExist = {
+          ContentEN = "Selected weapon not found",
+          TextMapId = "UI_SoloTreasureEvent_WeaponNotExist"
+        },
+        UI_SoloTreasure_ArmoryEmptyComponent = {
+          ContentEN = "No lineup set",
+          TextMapId = "UI_SoloTreasure_ArmoryEmptyComponent"
+        },
+        UI_SoloTreasure_ArmoryLackEntryFee = {
+          ContentEN = "Insufficient Tokens",
+          TextMapId = "UI_SoloTreasure_ArmoryLackEntryFee"
+        },
+        UI_SoloTreasure_ArmoryLackNecessaryComponent = {
+          ContentEN = "Entry requirements not met",
+          TextMapId = "UI_SoloTreasure_ArmoryLackNecessaryComponent"
+        },
+        UI_SoloTreasure_BagInUse = {
+          ContentEN = "Equipped",
+          TextMapId = "UI_SoloTreasure_BagInUse"
+        },
+        UI_SoloTreasure_BagLocked = {
+          ContentEN = "Access not unlocked",
+          TextMapId = "UI_SoloTreasure_BagLocked"
+        },
+        UI_SoloTreasure_ClearArmoryPreset = {
+          ContentEN = "Clear current lineup?",
+          TextMapId = "UI_SoloTreasure_ClearArmoryPreset"
+        },
+        UI_SoloTreasure_EntryDungeonConfirm = {
+          ContentEN = "Start the challenge? ((Entry fee is <H>non-refundable</>.)",
+          TextMapId = "UI_SoloTreasure_EntryDungeonConfirm"
+        },
+        UI_SoloTreasure_Evacuation_BagEmptyTip = {
+          ContentEN = "No Loot",
+          TextMapId = "UI_SoloTreasure_Evacuation_BagEmptyTip"
+        },
+        UI_SoloTreasure_Evacuation_ExitCountDown = {
+          ContentEN = "Exiting in %ss",
+          TextMapId = "UI_SoloTreasure_Evacuation_ExitCountDown"
+        },
+        UI_SoloTreasure_Evacuation_ExitLevel = {
+          ContentEN = "Exit",
+          TextMapId = "UI_SoloTreasure_Evacuation_ExitLevel"
+        },
+        UI_SoloTreasure_Evacuation_Fail = {
+          ContentEN = "Retreat Failed",
+          TextMapId = "UI_SoloTreasure_Evacuation_Fail"
+        },
+        UI_SoloTreasure_Evacuation_FightGains = {
+          ContentEN = "Combat Points",
+          TextMapId = "UI_SoloTreasure_Evacuation_FightGains"
+        },
+        UI_SoloTreasure_Evacuation_GainsDetails = {
+          ContentEN = "Loot Breakdown",
+          TextMapId = "UI_SoloTreasure_Evacuation_GainsDetails"
+        },
+        UI_SoloTreasure_Evacuation_MaterialGains = {
+          ContentEN = "Supply Points",
+          TextMapId = "UI_SoloTreasure_Evacuation_MaterialGains"
+        },
+        UI_SoloTreasure_Evacuation_PlayAgain = {
+          ContentEN = "Play Again",
+          TextMapId = "UI_SoloTreasure_Evacuation_PlayAgain"
+        },
+        UI_SoloTreasure_Evacuation_PlayAgainConfirm = {
+          ContentEN = "Start the challenge? (Entry points will not be refunded if you fail to retreat.)",
+          TextMapId = "UI_SoloTreasure_Evacuation_PlayAgainConfirm"
+        },
+        UI_SoloTreasure_Evacuation_PointsNotEnoughTips = {
+          ContentEN = "Not enough points",
+          TextMapId = "UI_SoloTreasure_Evacuation_PointsNotEnoughTips"
+        },
+        UI_SoloTreasure_Evacuation_Success = {
+          ContentEN = "Retreat Successful",
+          TextMapId = "UI_SoloTreasure_Evacuation_Success"
+        },
+        UI_SoloTreasure_Evacuation_TotalGains = {
+          ContentEN = "Total Value Earned: ",
+          TextMapId = "UI_SoloTreasure_Evacuation_TotalGains"
+        },
+        UI_SoloTreasure_EventProgress = {
+          ContentEN = "Event Progress",
+          TextMapId = "UI_SoloTreasure_EventProgress"
+        },
+        UI_SoloTreasure_EventShop = {
+          ContentEN = "Token Rewards",
+          TextMapId = "UI_SoloTreasure_EventShop"
+        },
+        UI_SoloTreasure_FinalProgress = {
+          ContentEN = "Final Round Unlocked",
+          TextMapId = "UI_SoloTreasure_FinalProgress"
+        },
+        UI_SoloTreasure_GoToUnlockBag = {
+          ContentEN = "Unlock",
+          TextMapId = "UI_SoloTreasure_GoToUnlockBag"
+        },
+        UI_SoloTreasure_GuardTask_RepairText = {
+          ContentEN = "(Hold) Repair Container",
+          TextMapId = "UI_SoloTreasure_GuardTask_RepairText"
+        },
+        UI_SoloTreasure_HardMode = {
+          ContentEN = "Hard",
+          TextMapId = "UI_SoloTreasure_HardMode"
+        },
+        UI_SoloTreasure_HaveStoryToFinish = {
+          ContentEN = "Advancement requirements met. Continue the story.",
+          TextMapId = "UI_SoloTreasure_HaveStoryToFinish"
+        },
+        UI_SoloTreasure_LevelChooseTitle = {
+          ContentEN = "Arena Selection",
+          TextMapId = "UI_SoloTreasure_LevelChooseTitle"
+        },
+        UI_SoloTreasure_LevelDes = {
+          ContentEN = "Arena Overview",
+          TextMapId = "UI_SoloTreasure_LevelDes"
+        },
+        UI_SoloTreasure_LimitTime = {
+          ContentEN = "Time Limit",
+          TextMapId = "UI_SoloTreasure_LimitTime"
+        },
+        UI_SoloTreasure_LimitedReward = {
+          ContentEN = "Limited-Time Prizes",
+          TextMapId = "UI_SoloTreasure_LimitedReward"
+        },
+        UI_SoloTreasure_NextProgress = {
+          ContentEN = "Tokens Required to Advance",
+          TextMapId = "UI_SoloTreasure_NextProgress"
+        },
+        UI_SoloTreasure_NormalMode = {
+          ContentEN = "Normal",
+          TextMapId = "UI_SoloTreasure_NormalMode"
+        },
+        UI_SoloTreasure_PermanentReward = {
+          ContentEN = "Permanent Prizes",
+          TextMapId = "UI_SoloTreasure_PermanentReward"
+        },
+        UI_SoloTreasure_ProgressFinished = {
+          ContentEN = "Event Concluded",
+          TextMapId = "UI_SoloTreasure_ProgressFinished"
+        },
+        UI_SoloTreasure_UseBag = {
+          ContentEN = "Equip",
+          TextMapId = "UI_SoloTreasure_UseBag"
+        },
         UI_SpecialQuest_GiveUp = {
           ContentEN = "Abort Quest",
           TextMapId = "UI_SpecialQuest_GiveUp"
@@ -82927,15 +86188,7 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
         UI_SubTitle_EnemyArchive = {
           ContentEN = "Opponents",
           TextMapId = "UI_SubTitle_EnemyArchive"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_SubTitle_ItemArchive",
-    MaxKey = "UI_TEMPLE_RULE_NoRanged",
-    Loader = function()
-      return {
+        },
         UI_SubTitle_ItemArchive = {
           ContentEN = "Items",
           TextMapId = "UI_SubTitle_ItemArchive"
@@ -83159,7 +86412,15 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
         UI_TELEPORTPOINT_NAME_104101_6 = {
           ContentEN = "Tidesong Cavern Heart",
           TextMapId = "UI_TELEPORTPOINT_NAME_104101_6"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_TELEPORTPOINT_NAME_104101_7",
+    MaxKey = "UI_Team_InTeam",
+    Loader = function()
+      return {
         UI_TELEPORTPOINT_NAME_104101_7 = {
           ContentEN = "Haze Market",
           TextMapId = "UI_TELEPORTPOINT_NAME_104101_7"
@@ -83175,6 +86436,78 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
         UI_TELEPORTPOINT_NAME_104301_1 = {
           ContentEN = "Oblivion Rift",
           TextMapId = "UI_TELEPORTPOINT_NAME_104301_1"
+        },
+        UI_TELEPORTPOINT_NAME_104501_1 = {
+          ContentEN = "Eastern District",
+          TextMapId = "UI_TELEPORTPOINT_NAME_104501_1"
+        },
+        UI_TELEPORTPOINT_NAME_104501_3 = {
+          ContentEN = "Academy of Expressions",
+          TextMapId = "UI_TELEPORTPOINT_NAME_104501_3"
+        },
+        UI_TELEPORTPOINT_NAME_104502_1 = {
+          ContentEN = "Port of Parting Stars",
+          TextMapId = "UI_TELEPORTPOINT_NAME_104502_1"
+        },
+        UI_TELEPORTPOINT_NAME_104502_3 = {
+          ContentEN = "Western District",
+          TextMapId = "UI_TELEPORTPOINT_NAME_104502_3"
+        },
+        UI_TELEPORTPOINT_NAME_104503_1 = {
+          ContentEN = "Haojing Central Square",
+          TextMapId = "UI_TELEPORTPOINT_NAME_104503_1"
+        },
+        UI_TELEPORTPOINT_NAME_104503_2 = {
+          ContentEN = "Hall of Adjudication: Forecourt",
+          TextMapId = "UI_TELEPORTPOINT_NAME_104503_2"
+        },
+        UI_TELEPORTPOINT_NAME_104504_1 = {
+          ContentEN = "Hall of Incense: Outskirts",
+          TextMapId = "UI_TELEPORTPOINT_NAME_104504_1"
+        },
+        UI_TELEPORTPOINT_NAME_104504_2 = {
+          ContentEN = "Jiaolan Village",
+          TextMapId = "UI_TELEPORTPOINT_NAME_104504_2"
+        },
+        UI_TELEPORTPOINT_NAME_104504_3 = {
+          ContentEN = "Jiaolan Heights",
+          TextMapId = "UI_TELEPORTPOINT_NAME_104504_3"
+        },
+        UI_TELEPORTPOINT_NAME_104504_4 = {
+          ContentEN = "Western Outskirts",
+          TextMapId = "UI_TELEPORTPOINT_NAME_104504_4"
+        },
+        UI_TELEPORTPOINT_NAME_104505_1 = {
+          ContentEN = "Eastern Outskirts",
+          TextMapId = "UI_TELEPORTPOINT_NAME_104505_1"
+        },
+        UI_TELEPORTPOINT_NAME_104505_2 = {
+          ContentEN = "Eastern Wilds",
+          TextMapId = "UI_TELEPORTPOINT_NAME_104505_2"
+        },
+        UI_TELEPORTPOINT_NAME_104505_3 = {
+          ContentEN = "Hall of Adjudication: East Forecourt",
+          TextMapId = "UI_TELEPORTPOINT_NAME_104505_3"
+        },
+        UI_TELEPORTPOINT_NAME_104506_1 = {
+          ContentEN = "Hall of Adjudication",
+          TextMapId = "UI_TELEPORTPOINT_NAME_104506_1"
+        },
+        UI_TELEPORTPOINT_NAME_105201_1 = {
+          ContentEN = "Outer Peaks Entrance",
+          TextMapId = "UI_TELEPORTPOINT_NAME_105201_1"
+        },
+        UI_TELEPORTPOINT_NAME_105201_2 = {
+          ContentEN = "Outer Peaks Depths",
+          TextMapId = "UI_TELEPORTPOINT_NAME_105201_2"
+        },
+        UI_TELEPORTPOINT_NAME_105301_1 = {
+          ContentEN = "Taixu Mausoleum",
+          TextMapId = "UI_TELEPORTPOINT_NAME_105301_1"
+        },
+        UI_TELEPORTPOINT_NAME_105501_1 = {
+          ContentEN = "Youlai Alley",
+          TextMapId = "UI_TELEPORTPOINT_NAME_105501_1"
         },
         UI_TELEPORTPOINT_NAME_105701_1 = {
           ContentEN = "Zhuyin Altar",
@@ -83760,15 +87093,7 @@ Don't let up until she reaches the finish!]],
         UI_TEMPLE_RULE_NoRanged = {
           ContentEN = "Ranged Weapons Disabled",
           TextMapId = "UI_TEMPLE_RULE_NoRanged"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_TEMPLE_RULE_NoSkill",
-    MaxKey = "UI_Unlock_Topic",
-    Loader = function()
-      return {
+        },
         UI_TEMPLE_RULE_NoSkill = {
           ContentEN = "Skills Disabled",
           TextMapId = "UI_TEMPLE_RULE_NoSkill"
@@ -83920,7 +87245,15 @@ Don't let up until she reaches the finish!]],
         UI_Team_InTeam = {
           ContentEN = "On the Team",
           TextMapId = "UI_Team_InTeam"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Team_Invitation",
+    MaxKey = "UI_WEAPON_DESC_10204",
+    Loader = function()
+      return {
         UI_Team_Invitation = {
           ContentEN = "Team Invite",
           TextMapId = "UI_Team_Invitation"
@@ -84172,6 +87505,10 @@ Don't let up until she reaches the finish!]],
         UI_Temple_WindMonster = {
           ContentEN = "High-speed enemies approaching!",
           TextMapId = "UI_Temple_WindMonster"
+        },
+        UI_Testing_Watermark = {
+          ContentEN = "Duet Night Abyss Test Server",
+          TextMapId = "UI_Testing_Watermark"
         },
         UI_TextMap_Cat_Inter01 = {
           ContentEN = "Play with",
@@ -84467,6 +87804,14 @@ About Zones
 3. <Highlight>Encounter</> is a special zone where a variety of events may occur.]],
           TextMapId = "UI_Toast_Rouge_Detail"
         },
+        UI_Toast_SoloTreasure_RemainUnlockTime = {
+          ContentEN = "Unlocks in %s",
+          TextMapId = "UI_Toast_SoloTreasure_RemainUnlockTime"
+        },
+        UI_Toast_SoloTreasure_UnlockCondition = {
+          ContentEN = "Progress through the event to unlock",
+          TextMapId = "UI_Toast_SoloTreasure_UnlockCondition"
+        },
         UI_Toast_WeaponStrength_NoAuto = {
           ContentEN = "No materials available for auto-selecting",
           TextMapId = "UI_Toast_WeaponStrength_NoAuto"
@@ -84576,15 +87921,7 @@ About Zones
         UI_Unlock_Topic = {
           ContentEN = "Unlock",
           TextMapId = "UI_Unlock_Topic"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Unselect",
-    MaxKey = "UI_WEAPON_NAME_AutoChess_14",
-    Loader = function()
-      return {
+        },
         UI_Unselect = {
           ContentEN = "Cancel",
           TextMapId = "UI_Unselect"
@@ -84724,7 +88061,15 @@ About Zones
         UI_WEAPON_DESC_10204 = {
           ContentEN = "I buried a seed in the frozen earth, hoping for a harvest moon that may never come.",
           TextMapId = "UI_WEAPON_DESC_10204"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_WEAPON_DESC_10205",
+    MaxKey = "UI_WEAPON_NAME_AutoChess_6",
+    Loader = function()
+      return {
         UI_WEAPON_DESC_10205 = {
           ContentEN = "A scythe wielded by the Holy Iris Knights of the Elysian Church. \"Holy exaltation! Hallowed be the light of divine mercy that shatters the prolonged folly of the unwise.\"",
           TextMapId = "UI_WEAPON_DESC_10205"
@@ -84768,6 +88113,10 @@ About Zones
         UI_WEAPON_DESC_10304 = {
           ContentEN = "Sever the echoes of aeons long fled; let peace of the ages rise in their stead.",
           TextMapId = "UI_WEAPON_DESC_10304"
+        },
+        UI_WEAPON_DESC_10305 = {
+          ContentEN = "A clear note fades beyond the clouds, a frosted robe bathed in the moonlight.",
+          TextMapId = "UI_WEAPON_DESC_10305"
         },
         UI_WEAPON_DESC_10398 = {
           ContentEN = "A greatsword refined with the latest surface-treatment techniques — favoured by silent retainers who serve without question.",
@@ -84937,6 +88286,14 @@ About Zones
           ContentEN = "Atlasia's ending? So be it. There are worse fates than going out in flames and fireworks.",
           TextMapId = "UI_WEAPON_DESC_20405"
         },
+        UI_WEAPON_DESC_20406 = {
+          ContentEN = "Some flee from explosive shells. Others, from the jagged growl of steel teeth.",
+          TextMapId = "UI_WEAPON_DESC_20406"
+        },
+        UI_WEAPON_DESC_20407 = {
+          ContentEN = "A solitary figure, separated from the flock, turns the pivot of destiny; beyond the mountains, a feather traces across the vast sky.",
+          TextMapId = "UI_WEAPON_DESC_20407"
+        },
         UI_WEAPON_DESC_20498 = {
           ContentEN = "A shotgun refined with the latest surface-treatment techniques — favoured by seasoned hunters of the wilds.",
           TextMapId = "UI_WEAPON_DESC_20498"
@@ -84980,6 +88337,10 @@ About Zones
         UI_WEAPON_DESC_20510 = {
           ContentEN = "My sword stirred the argent moon mirrored in a river of dream; in time's hush, yet another autumn waned beneath its silver gleam.",
           TextMapId = "UI_WEAPON_DESC_20510"
+        },
+        UI_WEAPON_DESC_20512 = {
+          ContentEN = "Amber light caught between waking and dreaming, the last warmth of a dying hearth.",
+          TextMapId = "UI_WEAPON_DESC_20512"
         },
         UI_WEAPON_DESC_20598 = {
           ContentEN = "An assault Rifle refined with the latest surface-treatment techniques — favoured by tough vanguards who lead from the front.",
@@ -85108,6 +88469,10 @@ About Zones
         UI_WEAPON_NAME_10304 = {
           ContentEN = "Eternal Farewell",
           TextMapId = "UI_WEAPON_NAME_10304"
+        },
+        UI_WEAPON_NAME_10305 = {
+          ContentEN = "Aureate Drift",
+          TextMapId = "UI_WEAPON_NAME_10305"
         },
         UI_WEAPON_NAME_10398 = {
           ContentEN = "Squire Greatsword",
@@ -85277,6 +88642,14 @@ About Zones
           ContentEN = "Blast Artistry",
           TextMapId = "UI_WEAPON_NAME_20405"
         },
+        UI_WEAPON_NAME_20406 = {
+          ContentEN = "Jagged Growl",
+          TextMapId = "UI_WEAPON_NAME_20406"
+        },
+        UI_WEAPON_NAME_20407 = {
+          ContentEN = "Fledgling's Gleam",
+          TextMapId = "UI_WEAPON_NAME_20407"
+        },
         UI_WEAPON_NAME_20498 = {
           ContentEN = "Hunter Shotgun",
           TextMapId = "UI_WEAPON_NAME_20498"
@@ -85320,6 +88693,10 @@ About Zones
         UI_WEAPON_NAME_20510 = {
           ContentEN = "Ephemeral Lumina",
           TextMapId = "UI_WEAPON_NAME_20510"
+        },
+        UI_WEAPON_NAME_20512 = {
+          ContentEN = "Dregs of Glimmer",
+          TextMapId = "UI_WEAPON_NAME_20512"
         },
         UI_WEAPON_NAME_20598 = {
           ContentEN = "Pioneer Assault Rifle",
@@ -85384,15 +88761,7 @@ About Zones
         UI_WEAPON_NAME_AutoChess_14 = {
           ContentEN = "Rune: Restoration",
           TextMapId = "UI_WEAPON_NAME_AutoChess_14"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_WEAPON_NAME_AutoChess_15",
-    MaxKey = "UI_WeaponSkin_Name_3010703",
-    Loader = function()
-      return {
+        },
         UI_WEAPON_NAME_AutoChess_15 = {
           ContentEN = "Rune: Inspiration",
           TextMapId = "UI_WEAPON_NAME_AutoChess_15"
@@ -85500,7 +88869,15 @@ About Zones
         UI_WEAPON_NAME_AutoChess_6 = {
           ContentEN = "ATK·DEF Rune",
           TextMapId = "UI_WEAPON_NAME_AutoChess_6"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_WEAPON_NAME_AutoChess_7",
+    MaxKey = "UI_Weapon_Accessory",
+    Loader = function()
+      return {
         UI_WEAPON_NAME_AutoChess_7 = {
           ContentEN = "ATK·HP Rune",
           TextMapId = "UI_WEAPON_NAME_AutoChess_7"
@@ -86200,15 +89577,7 @@ Gaming services will only be available to minors for 1 hour between 20:00 and 21
         UI_WeaponSkin_Name_3010703 = {
           ContentEN = "I Am a Cat",
           TextMapId = "UI_WeaponSkin_Name_3010703"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_WeaponSkin_Name_3010705",
-    MaxKey = "VoiceDes108",
-    Loader = function()
-      return {
+        },
         UI_WeaponSkin_Name_3010705 = {
           ContentEN = "Vigor Rise – Katana",
           TextMapId = "UI_WeaponSkin_Name_3010705"
@@ -86316,7 +89685,15 @@ Gaming services will only be available to minors for 1 hour between 20:00 and 21
         UI_Weapon_Accessory = {
           ContentEN = "Weapon Ornaments",
           TextMapId = "UI_Weapon_Accessory"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Weapon_BreakRewardAutoCollect",
+    MaxKey = "VoiceDes134",
+    Loader = function()
+      return {
         UI_Weapon_BreakRewardAutoCollect = {
           ContentEN = "Unclaimed Ascension rewards for <H>%s</> have been automatically collected",
           TextMapId = "UI_Weapon_BreakRewardAutoCollect"
@@ -86440,6 +89817,10 @@ Gaming services will only be available to minors for 1 hour between 20:00 and 21
         UI_Wonder_DefaultNpcInter = {
           ContentEN = "Head to quest <highlight>%s</>",
           TextMapId = "UI_Wonder_DefaultNpcInter"
+        },
+        UI_WuyouPuzzle = {
+          ContentEN = "Touch",
+          TextMapId = "UI_WuyouPuzzle"
         },
         UI_WuyoushengEvent_EditTeam = {
           ContentEN = "Battle Lineup",
@@ -87005,15 +90386,7 @@ Gaming services will only be available to minors for 1 hour between 20:00 and 21
         VoiceDes108 = {
           ContentEN = "About Your Skin",
           TextMapId = "VoiceDes108"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "VoiceDes109",
-    MaxKey = "WikiText_30400502",
-    Loader = function()
-      return {
+        },
         VoiceDes109 = {
           ContentEN = "About Work",
           TextMapId = "VoiceDes109"
@@ -87117,7 +90490,15 @@ Gaming services will only be available to minors for 1 hour between 20:00 and 21
         VoiceDes134 = {
           ContentEN = "About Rebellion",
           TextMapId = "VoiceDes134"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "VoiceDes135",
+    MaxKey = "WikiText_40500201",
+    Loader = function()
+      return {
         VoiceDes135 = {
           ContentEN = "About Weapon Mastery",
           TextMapId = "VoiceDes135"
@@ -87873,15 +91254,7 @@ The Scourge manifests chiefly in two forms: the Sable Bi'an and Gritblight.]],
         WikiText_30400502 = {
           ContentEN = "The Art of Ephemerality works by using Zhuyous' own vitality as a conduit to purge impurities from the patient. Frequent use places a heavy physical burden on the practitioner.",
           TextMapId = "WikiText_30400502"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "WikiText_30400601",
-    MaxKey = "voice_ch_char_Baonu_vo_companio_01",
-    Loader = function()
-      return {
+        },
         WikiText_30400601 = {
           ContentEN = "A hypothetical entity in natural philosophy. Huaxu scholars believe the air is permeated by a colorless, odorless substance that provides energy for all things. When activated by incense, this substance becomes the medium through which the Nine Chapters operate. Gritblight is considered the tangible form of condensed Taixu — a physical manifestation of its existence.",
           TextMapId = "WikiText_30400601"
@@ -87997,7 +91370,15 @@ Within Huaxu, two methods ensure its continuity: daily offerings made voluntaril
         WikiText_40500201 = {
           ContentEN = "A grand, stately inn located in northern Icelake. Its gates have long remained closed to the public.\n\nThough known as an inn, it seldom — if ever — welcomes travellers.\n\nLocals whisper of strange odours drifting from its upper windows and ghostly sobs echoing through the night. Many have come to call it a haunted house.",
           TextMapId = "WikiText_40500201"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "WikiText_40500202",
+    MaxKey = "voice_ch_char_Baonu_vo_topic_04_1",
+    Loader = function()
+      return {
         WikiText_40500202 = {
           ContentEN = "All its lodgers are youths under the age of twenty, each personally selected by Henrik. Once brought in, none ever leave.",
           TextMapId = "WikiText_40500202"
@@ -88718,15 +92099,7 @@ While a healer may ease affliction, defying fate is beyond us. I can offer a rem
         voice_ch_char_Baonu_vo_companio_01 = {
           ContentEN = "Samael? Oh, it's alright. It wakes me up every morning, cheers me on during combat, and even has a dozen bedtime stories lined up for me! So, there's nothing to worry about.",
           TextMapId = "voice_ch_char_Baonu_vo_companio_01"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Baonu_vo_companio_02",
-    MaxKey = "voice_ch_char_Kezhou_vo_die_r01",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Baonu_vo_companio_02 = {
           ContentEN = [[
 "Patience is one of the Seven Virtues. Those gifted with patience can discover hidden secrets and accomplish extraordinary... feats..."
@@ -88834,7 +92207,15 @@ Well... I, a candidate of the Seven Virtues, order you to show me your anger! No
         voice_ch_char_Baonu_vo_topic_04_1 = {
           ContentEN = "The \"Seven Virtues\" are the most noble, most powerful, and most drop-dead dazzling champions in all of Elysium! Naturally, they're also the most virtuous — it's in the name!",
           TextMapId = "voice_ch_char_Baonu_vo_topic_04_1"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Baonu_vo_topic_04_2",
+    MaxKey = "voice_ch_char_Kami_vo_topic_04_4",
+    Loader = function()
+      return {
         voice_ch_char_Baonu_vo_topic_04_2 = {
           ContentEN = "What's with that look...? How dare you doubt me! I hereby sentence you to copy the Codex thirty — no, a hundred times!",
           TextMapId = "voice_ch_char_Baonu_vo_topic_04_2"
@@ -89495,6 +92876,174 @@ I am Hellfire, and I'll show you what hell is truly like!]],
           ContentEN = "Welcome back. What are your plans for today? Or are you planning to rest at home?",
           TextMapId = "voice_ch_char_Heitao_vo_welcome"
         },
+        voice_ch_char_Kami_vo_appear = {
+          ContentEN = "Time to stock up on a few bottles for The Asphodel.",
+          TextMapId = "voice_ch_char_Kami_vo_appear"
+        },
+        voice_ch_char_Kami_vo_battleidle = {
+          ContentEN = "Time is money. You can rest when the deal's settled.",
+          TextMapId = "voice_ch_char_Kami_vo_battleidle"
+        },
+        voice_ch_char_Kami_vo_battlestart = {
+          ContentEN = "Then we do this my way... and you'll learn just how cold the world is.",
+          TextMapId = "voice_ch_char_Kami_vo_battlestart"
+        },
+        voice_ch_char_Kami_vo_be_hit_heavy_r01 = {
+          ContentEN = "Playing dirty?",
+          TextMapId = "voice_ch_char_Kami_vo_be_hit_heavy_r01"
+        },
+        voice_ch_char_Kami_vo_be_hit_heavy_r02 = {
+          ContentEN = "Damn it!",
+          TextMapId = "voice_ch_char_Kami_vo_be_hit_heavy_r02"
+        },
+        voice_ch_char_Kami_vo_birthday = {
+          ContentEN = [[
+Come by The Asphodel today. We'll be waiting.
+Who's "we", you ask? The people of Icelake you've helped since you became a Phoxhunter, of course.
+It's your birthday. Busy as you are, you might've forgotten. They didn't.
+Everything's on the house today. Have whatever you like, catch up with everyone, and stay as long as you want.]],
+          TextMapId = "voice_ch_char_Kami_vo_birthday"
+        },
+        voice_ch_char_Kami_vo_companio_02 = {
+          ContentEN = "Everyone's gifted in their own way. Some are born with a knack for comforting others... like you.",
+          TextMapId = "voice_ch_char_Kami_vo_companio_02"
+        },
+        voice_ch_char_Kami_vo_companio_03 = {
+          ContentEN = "You don't often make the journey to Icelake. So — what is it this time? After some local specialities? Or just here to catch a show?",
+          TextMapId = "voice_ch_char_Kami_vo_companio_03"
+        },
+        voice_ch_char_Kami_vo_companio_04 = {
+          ContentEN = "That scar... don't tell me you've taken another dangerous job. I've got ointment behind the bar. Go and put some on. If anything happens to you in here, it's bad for business. Well? What are you waiting for — do you expect me to bring it over?",
+          TextMapId = "voice_ch_char_Kami_vo_companio_04"
+        },
+        voice_ch_char_Kami_vo_die_r01 = {
+          ContentEN = "All for nothing...",
+          TextMapId = "voice_ch_char_Kami_vo_die_r01"
+        },
+        voice_ch_char_Kami_vo_die_r02 = {
+          ContentEN = "Just another deal with Death.",
+          TextMapId = "voice_ch_char_Kami_vo_die_r02"
+        },
+        voice_ch_char_Kami_vo_fail = {
+          ContentEN = "Next time, I'll tip the odds in my favour.",
+          TextMapId = "voice_ch_char_Kami_vo_fail"
+        },
+        voice_ch_char_Kami_vo_gain = {
+          ContentEN = "It doesn't come cheap to get the proprietress of The Asphodel to step in — and money isn't the only currency I take. A merchant's intuition tells me you're carrying secrets worth far more than coin.",
+          TextMapId = "voice_ch_char_Kami_vo_gain"
+        },
+        voice_ch_char_Kami_vo_idle = {
+          ContentEN = "Spirits are best kept pure. Too many flavours, and you lose the nose. Same goes for people.",
+          TextMapId = "voice_ch_char_Kami_vo_idle"
+        },
+        voice_ch_char_Kami_vo_lvup = {
+          ContentEN = "Thinking of investing in The Asphodel? Not bad. You've got a good nose for business.",
+          TextMapId = "voice_ch_char_Kami_vo_lvup"
+        },
+        voice_ch_char_Kami_vo_revive = {
+          ContentEN = "I do wonder which is worse — hell, or a homeland you can't reach.",
+          TextMapId = "voice_ch_char_Kami_vo_revive"
+        },
+        voice_ch_char_Kami_vo_skill01_r01 = {
+          ContentEN = "Now you want to talk terms?",
+          TextMapId = "voice_ch_char_Kami_vo_skill01_r01"
+        },
+        voice_ch_char_Kami_vo_skill01_r02 = {
+          ContentEN = "See yourself out.",
+          TextMapId = "voice_ch_char_Kami_vo_skill01_r02"
+        },
+        voice_ch_char_Kami_vo_skill02_r01 = {
+          ContentEN = "The bar's closed.",
+          TextMapId = "voice_ch_char_Kami_vo_skill02_r01"
+        },
+        voice_ch_char_Kami_vo_skill02_r02 = {
+          ContentEN = "You look cold. Let's fix that.",
+          TextMapId = "voice_ch_char_Kami_vo_skill02_r02"
+        },
+        voice_ch_char_Kami_vo_skill02_r03 = {
+          ContentEN = "Fire's the same colour as wine. Look at that lovely crimson...",
+          TextMapId = "voice_ch_char_Kami_vo_skill02_r03"
+        },
+        voice_ch_char_Kami_vo_topic_01_1 = {
+          ContentEN = "Barrels? For keeping the good stuff, naturally. Tales of Icelake — crisp, refreshing. Legion Wolfblood — bold, with a kick. Azure Loong's Draught, brought in from Huaxu — clean, with a long finish. And Luca's Masquerade Rhapsody... ten flavours in one. Everyone swears it tastes different.",
+          TextMapId = "voice_ch_char_Kami_vo_topic_01_1"
+        },
+        voice_ch_char_Kami_vo_topic_01_2 = {
+          ContentEN = "Well? Fancy a glass?",
+          TextMapId = "voice_ch_char_Kami_vo_topic_01_2"
+        },
+        voice_ch_char_Kami_vo_topic_01_3 = {
+          ContentEN = "Heh. You've gotten a lot sharper — not like that wide-eyed greenhorn who first wandered into Icelake.",
+          TextMapId = "voice_ch_char_Kami_vo_topic_01_3"
+        },
+        voice_ch_char_Kami_vo_topic_01_4 = {
+          ContentEN = "Go a little over a hundred kilometres north of Icelake. Cross the Vidofnir Mountains and you'll reach the fjordlands of Askard — the Charons' homeland, if the stories are true.",
+          TextMapId = "voice_ch_char_Kami_vo_topic_01_4"
+        },
+        voice_ch_char_Kami_vo_topic_01_5 = {
+          ContentEN = "For many Charons in Icelake, what's a hundred-odd kilometres and a mountain range? The promised land isn't so far out of reach after all... wouldn't you say?",
+          TextMapId = "voice_ch_char_Kami_vo_topic_01_5"
+        },
+        voice_ch_char_Kami_vo_topic_01_6 = {
+          ContentEN = "Shh. I never said that.",
+          TextMapId = "voice_ch_char_Kami_vo_topic_01_6"
+        },
+        voice_ch_char_Kami_vo_topic_02_1 = {
+          ContentEN = "You flatter me. Phoxhunters have been around far longer than my tavern. They just need somewhere to chat, brag, and pass work around. If it weren't The Asphodel, it would be some other name on the sign.",
+          TextMapId = "voice_ch_char_Kami_vo_topic_02_1"
+        },
+        voice_ch_char_Kami_vo_topic_02_2 = {
+          ContentEN = "As for why they come here... it's nothing more than good drinks, a broker who plays fair, and a small favour now and then when someone's down on their luck.",
+          TextMapId = "voice_ch_char_Kami_vo_topic_02_2"
+        },
+        voice_ch_char_Kami_vo_topic_03_1 = {
+          ContentEN = "Instead of asking me, shouldn't you ask yourself? I still remember you turning up in Icelake with nowhere to go. You know perfectly well money's what keeps you on your feet in this world.",
+          TextMapId = "voice_ch_char_Kami_vo_topic_03_1"
+        },
+        voice_ch_char_Kami_vo_topic_03_2 = {
+          ContentEN = "Get enough money behind you and, even if you can't change where you came from, you'll have the nerve to take on whatever fate throws at you. When times are rough, you can at least buy yourself a warm drink... maybe even share a sip, do someone a good turn, and bank a favour for later.",
+          TextMapId = "voice_ch_char_Kami_vo_topic_03_2"
+        },
+        voice_ch_char_Kami_vo_topic_03_3 = {
+          ContentEN = "Now, does that answer your question?",
+          TextMapId = "voice_ch_char_Kami_vo_topic_03_3"
+        },
+        voice_ch_char_Kami_vo_topic_04_1 = {
+          ContentEN = "Not much, I'm afraid. I've been in Icelake for years, and I've never seen them before. They were wrapped head to toe in a cloak, and they spoke through a voice modulator. Where they came from, whether they were a man or a woman, even their age — I've no idea.",
+          TextMapId = "voice_ch_char_Kami_vo_topic_04_1"
+        },
+        voice_ch_char_Kami_vo_topic_04_2 = {
+          ContentEN = "The only thing I can be certain of is that they were far stronger than they had any right to be. We exchanged a few moves. That was enough to tell me I wouldn't have come out on top.",
+          TextMapId = "voice_ch_char_Kami_vo_topic_04_2"
+        },
+        voice_ch_char_Kami_vo_topic_04_3 = {
+          ContentEN = "Heh. In my line of work, you learn to count your chips — and size up what the other side is holding. Bluffing only works when you're playing for similar stakes. I pick my fights. That's how you stay alive.",
+          TextMapId = "voice_ch_char_Kami_vo_topic_04_3"
+        },
+        voice_ch_char_Kami_vo_topic_04_4 = {
+          ContentEN = "Actually... there was one thing they said before they left.",
+          TextMapId = "voice_ch_char_Kami_vo_topic_04_4"
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Kami_vo_topic_04_5",
+    MaxKey = "voice_ch_char_NanzhuLight_vo_battlestart",
+    Loader = function()
+      return {
+        voice_ch_char_Kami_vo_topic_04_5 = {
+          ContentEN = "They said what they wanted from you... was an \"answer\".",
+          TextMapId = "voice_ch_char_Kami_vo_topic_04_5"
+        },
+        voice_ch_char_Kami_vo_victory = {
+          ContentEN = "Payment received. Goods delivered.",
+          TextMapId = "voice_ch_char_Kami_vo_victory"
+        },
+        voice_ch_char_Kami_vo_welcome = {
+          ContentEN = "Business is what gets me out of bed. What about you?",
+          TextMapId = "voice_ch_char_Kami_vo_welcome"
+        },
         voice_ch_char_Kezhou_vo_appear = {
           ContentEN = "To kill, use a sword in hand; to find peace, sharpen the sword within.",
           TextMapId = "voice_ch_char_Kezhou_vo_appear"
@@ -89534,15 +93083,7 @@ I am Hellfire, and I'll show you what hell is truly like!]],
         voice_ch_char_Kezhou_vo_die_r01 = {
           ContentEN = "A wise man knows when to retreat — til we meet again.",
           TextMapId = "voice_ch_char_Kezhou_vo_die_r01"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Kezhou_vo_die_r02",
-    MaxKey = "voice_ch_char_Nifu_vo_battleidle",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Kezhou_vo_die_r02 = {
           ContentEN = "Skill sharpens with effort… slacks dull the blade…",
           TextMapId = "voice_ch_char_Kezhou_vo_die_r02"
@@ -90292,7 +93833,15 @@ so I suppose I could lend a hand. In my own personal capacity, of course.]],
         voice_ch_char_NanzhuLight_vo_battlestart = {
           ContentEN = "This sword still fulfils its duty.",
           TextMapId = "voice_ch_char_NanzhuLight_vo_battlestart"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_NanzhuLight_vo_die_r01",
+    MaxKey = "voice_ch_char_Songlu_vo_topic_04_2",
+    Loader = function()
+      return {
         voice_ch_char_NanzhuLight_vo_die_r01 = {
           ContentEN = "I can't stop... not now...",
           TextMapId = "voice_ch_char_NanzhuLight_vo_die_r01"
@@ -90344,15 +93893,7 @@ so I suppose I could lend a hand. In my own personal capacity, of course.]],
         voice_ch_char_Nifu_vo_battleidle = {
           ContentEN = "If weariness weighs on you, rest here awhile. No need to strain yourself.",
           TextMapId = "voice_ch_char_Nifu_vo_battleidle"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Nifu_vo_battlestart",
-    MaxKey = "voice_ch_char_Tuosi_vo_battleidle",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Nifu_vo_battlestart = {
           ContentEN = "I stand watch upon the shore of the River of Life.",
           TextMapId = "voice_ch_char_Nifu_vo_battlestart"
@@ -91108,7 +94649,15 @@ After all, even if I gave you a thousand chances, I would still escape from your
         voice_ch_char_Songlu_vo_topic_04_2 = {
           ContentEN = "Because dresses aren't the best for all the running around I do. One time, I tripped over the hem and all the bread in my arms went flying.",
           TextMapId = "voice_ch_char_Songlu_vo_topic_04_2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Songlu_vo_topic_04_3",
+    MaxKey = "voice_ch_char_Yeer_vo_companio_01",
+    Loader = function()
+      return {
         voice_ch_char_Songlu_vo_topic_04_3 = {
           ContentEN = "But if the day comes, when no one's starving anymore, I'll have them changed back into a dress!",
           TextMapId = "voice_ch_char_Songlu_vo_topic_04_3"
@@ -91132,6 +94681,222 @@ After all, even if I gave you a thousand chances, I would still escape from your
         voice_ch_char_Songlu_vo_welcome = {
           ContentEN = "The sun is shining bright, and the little birdies are chirping with joy after a hearty meal. Are you hungry too? Wanna grab something to eat as well?",
           TextMapId = "voice_ch_char_Songlu_vo_welcome"
+        },
+        voice_ch_char_Suyi01_vo_appear = {
+          ContentEN = "Skypatroller Sapta, ready and raring.",
+          TextMapId = "voice_ch_char_Suyi01_vo_appear"
+        },
+        voice_ch_char_Suyi01_vo_battlestart = {
+          ContentEN = "Those who seek to stir up conflict, shall be expelled by me.",
+          TextMapId = "voice_ch_char_Suyi01_vo_battlestart"
+        },
+        voice_ch_char_Suyi01_vo_gain = {
+          ContentEN = "Fledglings need time to spread their wings, just as Huaxu people need time to leave the cradle woven by the God. I will navigate them through this long, arduous journey — until the day my hands and my weapons, including this Skypatroller Sapta, are no longer needed. ",
+          TextMapId = "voice_ch_char_Suyi01_vo_gain"
+        },
+        voice_ch_char_Suyi01_vo_skill02_r01 = {
+          ContentEN = "Hundred crafts grant this might — into dust in a single strike!",
+          TextMapId = "voice_ch_char_Suyi01_vo_skill02_r01"
+        },
+        voice_ch_char_Suyi_vo_appear = {
+          ContentEN = "They say it pays to ask for help — good thing you asked me! (confident, lively)",
+          TextMapId = "voice_ch_char_Suyi_vo_appear"
+        },
+        voice_ch_char_Suyi_vo_battleidle = {
+          ContentEN = "No immediate threats... Fengshi Type Ⅲ, enter standby. (thoughtful, serious)",
+          TextMapId = "voice_ch_char_Suyi_vo_battleidle"
+        },
+        voice_ch_char_Suyi_vo_battlestart = {
+          ContentEN = "Defensive Nexus: Fengshi Type Ⅲ deployed. Test commencing. (serious)",
+          TextMapId = "voice_ch_char_Suyi_vo_battlestart"
+        },
+        voice_ch_char_Suyi_vo_be_hit_heavy_r01 = {
+          ContentEN = "Still got all my parts... right?",
+          TextMapId = "voice_ch_char_Suyi_vo_be_hit_heavy_r01"
+        },
+        voice_ch_char_Suyi_vo_be_hit_heavy_r02 = {
+          ContentEN = "Damn it...",
+          TextMapId = "voice_ch_char_Suyi_vo_be_hit_heavy_r02"
+        },
+        voice_ch_char_Suyi_vo_be_hit_r01 = {
+          ContentEN = "Didn't even hurt!",
+          TextMapId = "voice_ch_char_Suyi_vo_be_hit_r01"
+        },
+        voice_ch_char_Suyi_vo_be_hit_r02 = {
+          ContentEN = "Ngh!",
+          TextMapId = "voice_ch_char_Suyi_vo_be_hit_r02"
+        },
+        voice_ch_char_Suyi_vo_birthday = {
+          ContentEN = "Your present's been ready for ages — and now I finally get to give it to you. Happy birthday. Huh? Well, it wasn't that long actually — I started three months ago. Ahem... anyway, after some fine-tuning, Fengshi Type Ⅲ can take a passenger now. So... would you like to go up and see the sky with me?",
+          TextMapId = "voice_ch_char_Suyi_vo_birthday"
+        },
+        voice_ch_char_Suyi_vo_companio_01 = {
+          ContentEN = "Are people from Luca always this forward? We've only just started talking and you're already going in for a hug... N—No! Not yet! (muttering under her breath at first, then snaps into a firm refusal)",
+          TextMapId = "voice_ch_char_Suyi_vo_companio_01"
+        },
+        voice_ch_char_Suyi_vo_companio_02 = {
+          ContentEN = "Another new sword!? Do you think we're made of money!? Uh-uh. Begging on your knees won't work. And calling me \"Great-Auntie\" won't save you, either! Not. This. Time. (strong opposition, but with the familiarity of someone close; comes out like playful, huffy scolding you'd give a younger family member.)",
+          TextMapId = "voice_ch_char_Suyi_vo_companio_02"
+        },
+        voice_ch_char_Suyi_vo_companio_03 = {
+          ContentEN = "Your wings... wow. They're gorgeous. But mine aren't bad either. Wanna race? (impressed and genuinely admiring at first; then perks up and gets competitive)",
+          TextMapId = "voice_ch_char_Suyi_vo_companio_03"
+        },
+        voice_ch_char_Suyi_vo_die_r01 = {
+          ContentEN = "I'm sorry, Auntie... I... let you down...",
+          TextMapId = "voice_ch_char_Suyi_vo_die_r01"
+        },
+        voice_ch_char_Suyi_vo_die_r02 = {
+          ContentEN = "A Yi-bird... belongs to the sky...",
+          TextMapId = "voice_ch_char_Suyi_vo_die_r02"
+        },
+        voice_ch_char_Suyi_vo_fail = {
+          ContentEN = "Power output... modules... engine... where did it go wrong?",
+          TextMapId = "voice_ch_char_Suyi_vo_fail"
+        },
+        voice_ch_char_Suyi_vo_gain = {
+          ContentEN = "Jishu disciples look out for our own. If you run into trouble in Huaxu, just let me know — I've got your back! (confident, upbeat)",
+          TextMapId = "voice_ch_char_Suyi_vo_gain"
+        },
+        voice_ch_char_Suyi_vo_idle = {
+          ContentEN = "You're heading out on your own...? Are you sure you'll be alright without me? (worried, genuinely checking in)",
+          TextMapId = "voice_ch_char_Suyi_vo_idle"
+        },
+        voice_ch_char_Suyi_vo_lvup = {
+          ContentEN = "That's right — I'm your best partner in a fight. (confident, proud)",
+          TextMapId = "voice_ch_char_Suyi_vo_lvup"
+        },
+        voice_ch_char_Suyi_vo_revive = {
+          ContentEN = "Not over yet... don't underestimate me!",
+          TextMapId = "voice_ch_char_Suyi_vo_revive"
+        },
+        voice_ch_char_Suyi_vo_skill01_r01 = {
+          ContentEN = "Sunchaser Mode: engaged.",
+          TextMapId = "voice_ch_char_Suyi_vo_skill01_r01"
+        },
+        voice_ch_char_Suyi_vo_skill01_r02 = {
+          ContentEN = "Easy... steady.",
+          TextMapId = "voice_ch_char_Suyi_vo_skill01_r02"
+        },
+        voice_ch_char_Suyi_vo_skill02_r01 = {
+          ContentEN = "Starbreaker Mode: engaged.",
+          TextMapId = "voice_ch_char_Suyi_vo_skill02_r01"
+        },
+        voice_ch_char_Suyi_vo_skill02_r02 = {
+          ContentEN = "Focus fire!",
+          TextMapId = "voice_ch_char_Suyi_vo_skill02_r02"
+        },
+        voice_ch_char_Suyi_vo_skill02_r03 = {
+          ContentEN = "Data capture complete. I've got to jot this down...",
+          TextMapId = "voice_ch_char_Suyi_vo_skill02_r03"
+        },
+        voice_ch_char_Suyi_vo_skill02_r04 = {
+          ContentEN = "Good work, Fengshi Type Ⅲ.",
+          TextMapId = "voice_ch_char_Suyi_vo_skill02_r04"
+        },
+        voice_ch_char_Suyi_vo_skill02_r05 = {
+          ContentEN = "Woo! This feels great!",
+          TextMapId = "voice_ch_char_Suyi_vo_skill02_r05"
+        },
+        voice_ch_char_Suyi_vo_topic_01_1 = {
+          ContentEN = "Hmm... Putting mechanisms together, polishing gears, tracking down new materials... and tinkering until the next version's better. (pauses to think; contemplative)",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_01_1"
+        },
+        voice_ch_char_Suyi_vo_topic_01_2 = {
+          ContentEN = "Remember when Uncle Tang took that fall and hurt his leg? I've been free lately, so I've been working on a vehicle with smoother, steadier takeoffs. Jishu disciples like to push for results like they've got a spare life. I'm not letting that carry on. (thinking aloud, worried)",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_01_2"
+        },
+        voice_ch_char_Suyi_vo_topic_01_3 = {
+          ContentEN = "Tired? How could I be? What could be more fun than this? You break a mechanism down in your head, piece by piece — then you build it in the real world. That moment it all clicks into place and actually works? Best feeling in the world. (earnest, cheerful)",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_01_3"
+        },
+        voice_ch_char_Suyi_vo_topic_01_4 = {
+          ContentEN = "That's what makes it so good. So — want to try? The best Artificer in the Outer Peaks happens to be free right now. I can teach you hands-on.",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_01_4"
+        },
+        voice_ch_char_Suyi_vo_topic_02_1 = {
+          ContentEN = "Both the Jishu Sect and the Drifters take lineage seriously. Say a ninety-year-old master takes a ten-year-old as his last disciple — suddenly half the sect has to treat that child as an elder. (matter-of-fact, explanatory)",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_02_1"
+        },
+        voice_ch_char_Suyi_vo_topic_02_2 = {
+          ContentEN = "I got lucky — my teacher was my aunt, and she was way up in the sect. So yeah, that still bumps me up too. (bright, explanatory)",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_02_2"
+        },
+        voice_ch_char_Suyi_vo_topic_02_3 = {
+          ContentEN = "Kezhou's the unlucky one. His master, Yan Shanting, is lower in the lineage — so by the rules, he has to call me \"Great-Auntie\". (light, smug)",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_02_3"
+        },
+        voice_ch_char_Suyi_vo_topic_02_4 = {
+          ContentEN = "Master Gongshang's pretty high up too. Let me do the maths... oh! We're the same generation. (mulling it over; then cheerful)",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_02_4"
+        },
+        voice_ch_char_Suyi_vo_topic_02_5 = {
+          ContentEN = "Heehee. If Kezhou ever gets cheeky with you, you can make him call you {性别：Grandpa|Grandma}. (playful, smug)",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_02_5"
+        },
+        voice_ch_char_Suyi_vo_topic_02_6 = {
+          ContentEN = "Hang on... Snow calls you her \"Little Minion\", right? So she's your master...? No way. Don't tell me the one who outranks all of us is a tiny Luno! (stunned)",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_02_6"
+        },
+        voice_ch_char_Suyi_vo_topic_03_1 = {
+          ContentEN = "Oh, that's Qingluan Type Ⅲ — my new pet! (proud)",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_03_1"
+        },
+        voice_ch_char_Suyi_vo_topic_03_2 = {
+          ContentEN = "See? Doesn't it look just like a real Skywing Gull? I simplified the boot-up — press and hold the top of its head and it'll go into mimic-flight mode. And speaking of flying— (proud, rambling)",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_03_2"
+        },
+        voice_ch_char_Suyi_vo_topic_03_3 = {
+          ContentEN = "Look at the feathers! I used naturally shed Skywing Gull feathers, then sealed them with an improved water-repellent finish — it hardly adds any weight. (proud, rambling)",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_03_3"
+        },
+        voice_ch_char_Suyi_vo_topic_03_4 = {
+          ContentEN = "Its colours won't fade, it stays fluffy forever — and when it perches on your arm, it won't dig its claws in like a real bird. All the cuteness, none of the scratches. Perfect pet. (proud, rambling)",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_03_4"
+        },
+        voice_ch_char_Suyi_vo_topic_03_5 = {
+          ContentEN = "Skywing Gulls belong in the sky. If you keep one, you're basically shutting it in a cage. And if I caught one just for my own enjoyment... how would I be any different from the Xuanheng Sect back then? (serious)",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_03_5"
+        },
+        voice_ch_char_Suyi_vo_topic_03_6 = {
+          ContentEN = "Some animals make good companions, but a Skywing Gull clearly isn't one of them. That sharp beak, that long tail, those wings built to cut through the wind... it says it all. It belongs in the sky, not in anyone's palm. (serious)",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_03_6"
+        },
+        voice_ch_char_Suyi_vo_topic_04_1 = {
+          ContentEN = "The Outer Peaks, huh... that's a good question.",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_04_1"
+        },
+        voice_ch_char_Suyi_vo_topic_04_2 = {
+          ContentEN = "We found each other because we'd been through similar things, and we're fighting for the same goal. We understand each other. We trust each other. In a fight, we've got each other's backs. And when you're worn out, you're not on your own. It's... a really good place. (earnest)",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_04_2"
+        },
+        voice_ch_char_Suyi_vo_topic_04_3 = {
+          ContentEN = "To a lot of people here, the Outer Peaks feel like home.",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_04_3"
+        },
+        voice_ch_char_Suyi_vo_topic_04_4 = {
+          ContentEN = "It... yeah. Of course it is! (hesitates, then insists)",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_04_4"
+        },
+        voice_ch_char_Suyi_vo_topic_04_5 = {
+          ContentEN = "You're sharp. Is that the instinct of a mercenary— no, a Phoxhunter? And it's not just for fights... you can read people too? If only my mechapuppet's nav system were as quick as you... (impressed)",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_04_5"
+        },
+        voice_ch_char_Suyi_vo_topic_04_6 = {
+          ContentEN = "I'm just... a bit lost. What's a home supposed to feel like, anyway? (lost)",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_04_6"
+        },
+        voice_ch_char_Suyi_vo_topic_04_7 = {
+          ContentEN = "Then... if you can't go back... is it still home? ...Sorry. That was silly. Just forget I said anything.",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_04_7"
+        },
+        voice_ch_char_Suyi_vo_victory = {
+          ContentEN = "Good. Field test successful. Now for the data review.",
+          TextMapId = "voice_ch_char_Suyi_vo_victory"
+        },
+        voice_ch_char_Suyi_vo_welcome = {
+          ContentEN = "There you are! You heard I refitted Qingluan Type Ⅱ again, right? Come on, I'll show you... Huh? You're just here to chat? (fast, affectionate; then surprised)",
+          TextMapId = "voice_ch_char_Suyi_vo_welcome"
         },
         voice_ch_char_Tuosi02_attack_r01 = {
           ContentEN = "Hear them wail!",
@@ -91160,15 +94925,7 @@ After all, even if I gave you a thousand chances, I would still escape from your
         voice_ch_char_Tuosi_vo_battleidle = {
           ContentEN = "What did I used to look like, I wonder...",
           TextMapId = "voice_ch_char_Tuosi_vo_battleidle"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Tuosi_vo_battlestart",
-    MaxKey = "voice_ch_char_Zhangyu_vo_be_hit_r01",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Tuosi_vo_battlestart = {
           ContentEN = "Now presenting: a tale of adventure and grandeur.",
           TextMapId = "voice_ch_char_Tuosi_vo_battlestart"
@@ -91710,7 +95467,15 @@ Yale: Shh, we need to stick to the plan.]],
 Yale: H-hello... Your singing is really b-beautiful.
 Oliver: Hmph, just another victim.]],
           TextMapId = "voice_ch_char_Yeer_vo_companio_01"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Yeer_vo_companio_02",
+    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
+    Loader = function()
+      return {
         voice_ch_char_Yeer_vo_companio_02 = {
           ContentEN = [[
 Yale: Is Filbert... your friend? I have a good friend too. He's as r-reliable as F-Filbert.
@@ -91859,7 +95624,7 @@ Yale: Peter Piker p-picked a peck of p-p-peckled peppers...
           TextMapId = "voice_ch_char_Yuming_vo_be_hit_r02"
         },
         voice_ch_char_Yuming_vo_birthday = {
-          ContentEN = "Birthdays? I hardly paid attention to such occasions — my allegiance to the Nine Chapters renders life and death mere footnotes.\nYet, a kind wish can bring a smile, perhaps. ...Happy Birthday.",
+          ContentEN = "Birthdays? I hardly paid attention to such occasions — my allegiance to the Nine Chapters renders life and death mere footnotes.\nYet, a kind wish can bring a smile, perhaps... Happy Birthday.",
           TextMapId = "voice_ch_char_Yuming_vo_birthday"
         },
         voice_ch_char_Yuming_vo_companio_01 = {
@@ -91985,15 +95750,7 @@ Yale: Peter Piker p-picked a peck of p-p-peckled peppers...
         voice_ch_char_Zhangyu_vo_be_hit_r01 = {
           ContentEN = "Ah!",
           TextMapId = "voice_ch_char_Zhangyu_vo_be_hit_r01"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Zhangyu_vo_be_hit_r02",
-    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Zhangyu_vo_be_hit_r02 = {
           ContentEN = "Uh!",
           TextMapId = "voice_ch_char_Zhangyu_vo_be_hit_r02"
@@ -92249,7 +96006,7 @@ Hey, what's up with you, getting all riled up? Haha, you're a proper laugh!]],
           TextMapId = "voice_ch_char_Zhiliu_vo_topic_02_1"
         },
         voice_ch_char_Zhiliu_vo_topic_02_2 = {
-          ContentEN = "Heh. Goods have fixed prices, but human connections are a different currency altogether. Those who haggle over every coin will remain forever bound to their little corner of the market. Only by mastering the art of influence can one rise above mere trade and ascend to true greatness.",
+          ContentEN = "Heh. Goods have fixed prices, but human connections are a different currency altogether. Those who haggle over every coin will remain forever bound to their little corner of the market. Only by mastering the art of influence can one rise above the mere trade and ascend to true greatness.",
           TextMapId = "voice_ch_char_Zhiliu_vo_topic_02_2"
         },
         voice_ch_char_Zhiliu_vo_topic_03_1 = {

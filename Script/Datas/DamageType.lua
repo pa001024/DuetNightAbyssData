@@ -54,6 +54,14 @@ return ReadOnly("DamageType", {
     WeaknessIcon = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_Dark.T_Armory_Dark",
     WeaknessTypeID = 6
   },
+  Psionic = {
+    CounterRate = 10,
+    DamageTypeUIIconPath = "/Game/UI/Texture/Dynamic/Atlas/Battle/T_Battle_Type_Thunder02.T_Battle_Type_Thunder02",
+    DamageTypeUIIndex = 8,
+    ID = "Psionic",
+    ParticipationTrigger = true,
+    ShildCalPriority = 2
+  },
   SaiqiHpConsume = {
     DisableAddColor = 1,
     DisableUIEffect = 1,

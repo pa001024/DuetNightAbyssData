@@ -1,5 +1,6 @@
 local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
 local M = {}
+local MAX_SKIN_LEVEL = 3
 
 function M:Construct()
   self:AddDispatcher(EventID.OnCharAccessorySetted, self, self.OnCharAccessoryChanged)
@@ -88,11 +89,12 @@ function M:AddTopTabReddotListen()
   })
 end
 
-local function SetTopTabReddot(self, TabIdx, IsNew)
+local function SetTopTabReddot(self, TabIdx, IsNew, IsNormal)
   local Content = self.TopTabs[TabIdx]
   Content.IsNew = IsNew
+  Content.IsNormal = IsNormal
   if IsValid(Content.UI) then
-    Content.UI:SetReddot(Content.IsNew)
+    Content.UI:SetReddot(Content.IsNew, Content.IsNormal)
   end
 end
 
@@ -102,12 +104,18 @@ function M:UpdateTopTabReddot()
   if not CommonChar then
     return
   end
+  local LeafNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Skin .. "LevelUp" .. self.Target.CharId
+  local SkinLevelUpNode = ReddotManager.GetTreeNode(LeafNodeName)
+  local SkinLevelUpCount = SkinLevelUpNode and SkinLevelUpNode.Count or 0
   local LeafNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Skin .. self.Target.CharId
   local NewSkinNode = ReddotManager.GetTreeNode(LeafNodeName)
   local NewSkinCount = NewSkinNode and NewSkinNode.Count or 0
   local LeafNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair .. self.Target.CharId
   local NewHairNode = ReddotManager.GetTreeNode(LeafNodeName)
   local NewHairCount = NewHairNode and NewHairNode.Count or 0
+  local LeafNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair
+  local NewCommonHairNode = ReddotManager.GetTreeNode(LeafNodeName)
+  local NewCommonHairCount = NewCommonHairNode and NewCommonHairNode.Count or 0
   local NewAccessoryCount = 0
   local NewMVPCount = 0
   for _, Type in pairs(CommonConst.CharAccessoryTypes) do
@@ -124,8 +132,12 @@ function M:UpdateTopTabReddot()
       end
     end
   end
-  SetTopTabReddot(self, 1, NewSkinCount > 0)
-  SetTopTabReddot(self, 2, NewHairCount > 0)
+  if SkinLevelUpCount > 0 then
+    SetTopTabReddot(self, 1, false, true)
+  else
+    SetTopTabReddot(self, 1, NewSkinCount > 0)
+  end
+  SetTopTabReddot(self, 2, NewHairCount + NewCommonHairCount > 0)
   SetTopTabReddot(self, 3, NewAccessoryCount > 0)
   SetTopTabReddot(self, 4, NewMVPCount > 0)
 end
@@ -150,6 +162,7 @@ function M:InitCharSkin()
   self.WidgetSwitcher_State:SetActiveWidgetIndex(1)
   self:InitCharSkinList(self.Target)
   self:SelectSkinById(SkinId)
+  self:RefreshLevelUpReddot()
 end
 
 function M:InitCharSkinList(Char)
@@ -191,8 +204,14 @@ function M:InitCharSkinList(Char)
       rawset(Obj, "Owner", self)
       rawset(Obj, "OnClicked", self.OnSkinItemClicked)
       rawset(Obj, "bDyeable", SkinId ~= DefaultSkinId)
-      rawset(Obj, "RedDotType", 1 == CacheDetail[SkinId] and UIConst.RedDotType.NewRedDot)
       rawset(Obj, "IsTargetUnowned", self.IsTargetUnowned)
+      rawset(Obj, "IsNew", 1 == CacheDetail[SkinId])
+      if ArmoryUtils:CanSkinUpgrade(SkinId) then
+        rawset(Obj, "Upgradeable", true)
+        rawset(Obj, "RedDotType", UIConst.RedDotType.CommonRedDot)
+      elseif 1 == CacheDetail[SkinId] then
+        rawset(Obj, "RedDotType", UIConst.RedDotType.NewRedDot)
+      end
       if Char:GetSkin(SkinId, Avatar) then
         rawset(Obj, "LockType", false)
       elseif OtherOwnedSkins[SkinId] then
@@ -238,9 +257,12 @@ function M:OnCharSkinConfirmBtnClicked()
   if not self.SelectedSkinId or self.SelectedSkinId <= 0 then
     return
   end
-  self:BlockAllUIInput(true)
-  local Avatar = GWorld:GetAvatar()
-  Avatar:ChangeCharAppearanceSkin(self.Target.Uuid, self.AppearanceSuitIndex, self.SelectedSkinId)
+  if not self:IsEquipedSelectedSkin() then
+    self:BlockAllUIInput(true, "ChangeCharAppearanceSkin")
+    local Avatar = GWorld:GetAvatar()
+    Avatar:ChangeCharAppearanceSkin(self.Target.Uuid, self.AppearanceSuitIndex, self.SelectedSkinId)
+  end
+  self:ChangeCharSkinLevel()
 end
 
 function M:OnCharSkinGotoBagBtnClicked()
@@ -306,7 +328,7 @@ function M:OnCharHairGoToShopBtnClicked()
 end
 
 function M:OnCharSkinChanged(Ret, CharUuid, AppearanceIndex, SkinId)
-  self:BlockAllUIInput(false)
+  self:BlockAllUIInput(false, "ChangeCharAppearanceSkin")
   if not ErrorCode:Check(Ret) then
     return
   end
@@ -347,10 +369,13 @@ function M:CreateHairContents(Target)
   local Avatar = GWorld:GetAvatar()
   local DefaultHairId = Char:GetDefaultHairId()
   rawset(self, "DefaultHairId", DefaultHairId)
-  local LeafNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair .. Char.CharId
-  local CacheDetail = {}
+  local CharHairNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair .. Char.CharId
+  local CommonCharHairNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair
+  local CharHairCacheDetail = {}
+  local CommonCharHairCacheDetail = {}
   if not self.NoReddot then
-    CacheDetail = ReddotManager.GetLeafNodeCacheDetail(LeafNodeName) or {}
+    CharHairCacheDetail = ReddotManager.GetLeafNodeCacheDetail(CharHairNodeName) or {}
+    CommonCharHairCacheDetail = ReddotManager.GetLeafNodeCacheDetail(CommonCharHairNodeName) or {}
   end
   local OtherCharHairs = Avatar.OtherCharHairs[Char.CharId] or {}
   local OtherOwnedHairs = {}
@@ -359,53 +384,66 @@ function M:CreateHairContents(Target)
   end
   self.BP_HairContents:Clear()
   for HairId, Data in pairs(DataMgr.Hair) do
-    if Data.CharId ~= Char.CharId then
-    elseif not OtherOwnedHairs[HairId] and not Char:GetHair(HairId, Avatar) and not UIUtils.ShouldDisplayItem(CommonConst.DataType.Hair, HairId) then
-    else
-      local Obj = NewObject(UIUtils.GetCommonItemContentClass())
-      rawset(Obj, "IsCharacterTrialMode", self.IsCharacterTrialMode)
-      rawset(Obj, "HairId", HairId)
-      rawset(Obj, "ItemId", HairId)
-      rawset(Obj, "Id", HairId)
-      rawset(Obj, "IconPath", Data.Icon)
-      rawset(Obj, "Icon", Data.Icon)
-      rawset(Obj, "Rarity", Data.Rarity)
-      rawset(Obj, "Name", GText(Data.Name))
-      rawset(Obj, "Name_World", EnText(Data.Name))
-      rawset(Obj, "Rarity", Data.Rarity)
-      rawset(Obj, "Text", GText(Data.HairDescribe))
-      rawset(Obj, "CharId", Char.CharId)
-      rawset(Obj, "ItemType", CommonConst.DataType.Hair)
-      rawset(Obj, "Owner", self)
-      rawset(Obj, "bDyeable", HairId ~= DefaultHairId)
-      rawset(Obj, "RedDotType", 1 == CacheDetail[HairId] and UIConst.RedDotType.NewRedDot)
-      rawset(Obj, "IsTargetUnowned", self.IsTargetUnowned)
-      if Char:GetHair(HairId, Avatar) then
-        rawset(Obj, "LockType", false)
-      elseif OtherOwnedHairs[HairId] then
-        rawset(Obj, "LockType", false)
+    if not Data.IsCommon then
+      if Data.CharId ~= Char.CharId then
       else
-        rawset(Obj, "LockType", HairId ~= DefaultHairId and 2)
+        if not OtherOwnedHairs[HairId] and not Char:GetHair(HairId, Avatar) and not UIUtils.ShouldDisplayItem(CommonConst.DataType.Hair, HairId) then
+          goto lbl_320
+        end
+        elseif not UIUtils.ShouldDisplayItem(CommonConst.DataType.Hair, HairId) then
+          goto lbl_320
+        end
+        local Obj = NewObject(UIUtils.GetCommonItemContentClass())
+        rawset(Obj, "IsCharacterTrialMode", self.IsCharacterTrialMode)
+        rawset(Obj, "HairId", HairId)
+        rawset(Obj, "ItemId", HairId)
+        rawset(Obj, "Id", HairId)
+        rawset(Obj, "IconPath", Data.Icon)
+        rawset(Obj, "Icon", Data.Icon)
+        rawset(Obj, "Rarity", Data.Rarity)
+        rawset(Obj, "Name", GText(Data.Name))
+        rawset(Obj, "Name_World", EnText(Data.Name))
+        rawset(Obj, "Rarity", Data.Rarity)
+        rawset(Obj, "Text", GText(Data.HairDescribe))
+        rawset(Obj, "CharId", Char.CharId)
+        rawset(Obj, "ItemType", CommonConst.DataType.Hair)
+        rawset(Obj, "Owner", self)
+        rawset(Obj, "bDyeable", HairId ~= DefaultHairId)
+        if 1 == CharHairCacheDetail[HairId] or 1 == CommonCharHairCacheDetail[HairId] then
+          rawset(Obj, "RedDotType", UIConst.RedDotType.NewRedDot)
+        end
+        rawset(Obj, "IsTargetUnowned", self.IsTargetUnowned)
+        if Avatar:CheckHairEnough({
+          [HairId] = 1
+        }) then
+          rawset(Obj, "LockType", false)
+        else
+          rawset(Obj, "LockType", HairId ~= DefaultHairId and 2)
+        end
+        local CharInfo = DataMgr.BattleChar[Char.CharId]
+        if CharInfo then
+          rawset(Obj, "ElementType", CharInfo.Attribute)
+          rawset(Obj, "CharName", GText(CharInfo.CharName))
+        end
+        if Avatar and not Avatar:CheckCharEnough({
+          [Char.CharId] = 1
+        }) then
+          rawset(Obj, "NotOwned", true)
+        end
+        rawset(Obj, "bSelectTag", false)
+        self.HairMap[HairId] = Obj
+        self.BP_HairContents:Add(Obj)
+        self:OnHairContentCreated(Obj)
+        table.insert(self.HairArray, Obj)
       end
-      local CharInfo = DataMgr.BattleChar[Data.CharId]
-      if CharInfo then
-        rawset(Obj, "ElementType", CharInfo.Attribute)
-        rawset(Obj, "CharName", GText(CharInfo.CharName))
-      end
-      if Avatar and not Avatar:CheckCharEnough({
-        [Data.CharId] = 1
-      }) then
-        rawset(Obj, "NotOwned", true)
-      end
-      rawset(Obj, "bSelectTag", false)
-      self.HairMap[HairId] = Obj
-      self.BP_HairContents:Add(Obj)
-      self:OnHairContentCreated(Obj)
-      table.insert(self.HairArray, Obj)
-    end
+    ::lbl_320::
   end
   table.sort(self.HairArray, function(a, b)
-    return a.HairId < b.HairId
+    if a.LockType and b.LockType or not a.LockType and not b.LockType then
+      return a.HairId < b.HairId
+    else
+      return b.LockType
+    end
   end)
   local AppearanceSuit = Char:GetAppearance()
   local HairId = AppearanceSuit and AppearanceSuit.HairId
@@ -519,9 +557,9 @@ function M:UpdateHairDetails(Content)
   self.Panel_Buy:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.SelectedHairId = Content.HairId
   if Content.Name and Content.Name ~= "" then
-    self.VB_Info:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self:HideAllInfoExceptButton(false)
   else
-    self.VB_Info:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self:HideAllInfoExceptButton(true)
   end
   if Content.Rarity and self.NameFont[Content.Rarity] and self[self.NameFont[Content.Rarity]] then
     self.Text_Name:SetFont(self[self.NameFont[Content.Rarity]])
@@ -553,7 +591,9 @@ function M:UpdateHairDetails(Content)
   end
   self.Panel_Video:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self:UpdateFunctionBtn(Content, self.CurrentHairContent)
-  self:UpdateActorAppearance(self.SelectedSkinId, self.SelectedHairId)
+  self.ActorController:ChangeCharHair(self.SelectedHairId)
+  self.ActorController:ChangeCharHairColor(self.Target:DumpHairColors(ArmoryUtils:GetAvatar(), self.SelectedHairId))
+  self.ActorController:SetArmoryCameraTag(CommonConst.ArmoryType.Char, "Hair")
   if Content.RedDotType and not self.NoReddot then
     ArmoryUtils:SetItemReddotRead(Content, true)
   end
@@ -799,11 +839,7 @@ function M:CreateCharAccessoryContent(Data)
       rawset(Obj, "ItemType", CommonConst.DataType.CharAccessory)
       rawset(Obj, "Icon", Data.Icon or "")
       if Data.AccessoryType == CommonConst.CharAccessoryTypes.MVP then
-        if Data.AccessoryId == 31002 then
-          rawset(Obj, "Icon", "Texture2D'/Game/UI/Texture/Dynamic/Image/SettlementAction/T_SettlementAction_02.T_SettlementAction_02'")
-        elseif Data.AccessoryId == 31001 then
-          rawset(Obj, "Icon", "Texture2D'/Game/UI/Texture/Dynamic/Image/SettlementAction/T_SettlementAction_01.T_SettlementAction_01'")
-        end
+        rawset(Obj, "Icon", Data.LongIcon or Data.Icon or "")
       end
       rawset(Obj, "Id", Data.AccessoryId)
       rawset(Obj, "AccessoryId", Data.AccessoryId)
@@ -900,7 +936,7 @@ function M:OnCharAccessoryTabClicked(TabWidget)
     self.ComparedContent.IsSelect = false
   end
   self.ComparedContent = nil
-  self:InitCharAccessoryList()
+  self:InitAccessoryListCommon()
   self.JumpToAccessoryId = nil
   self.JumpToCharAccessoryType = nil
   self.CurrentContent.bSelectTag = true
@@ -913,54 +949,14 @@ function M:OnCharAccessoryTabClicked(TabWidget)
   self.List_Accessory:BP_ScrollItemIntoView(self.ComparedContent)
 end
 
-function M:InitCharAccessoryList()
-  local Tab = self.AccessoryTabsArray[self.CurrentAccessoryTabIdx]
-  local Len = self.BP_AccessoryContents:Length()
-  local FilteredContents = {}
-  for i = 1, Len do
-    local Content = self.BP_AccessoryContents[i]
-    if Content.AccessoryId and Content.AccessoryType == Tab.AccessoryType and Content.AccessoryId ~= self.NoneAccessory.Id and not Content.IsHide then
-      table.insert(FilteredContents, Content)
-    end
-  end
-  self.FilteredContents = FilteredContents
-  self.List_Accessory:ClearListItems()
-  table.sort(FilteredContents, function(a, b)
-    if a.LockType and b.LockType or not a.LockType and not b.LockType then
-      if a.SortPriority == b.SortPriority then
-        return a.AccessoryId > b.AccessoryId
-      end
-      return a.SortPriority > b.SortPriority
-    else
-      return b.LockType
-    end
-  end)
-  self.List_Accessory:SetVisibility(UIConst.VisibilityOp.Visible)
-  self.List_Accessory:AddItem(self.NoneAccessory)
-  for _, Content in ipairs(FilteredContents) do
-    if self.JumpToAccessoryId and self.JumpToAccessoryId == Content.AccessoryId then
-      self.ComparedContent = Content
-    end
-    if Content.bSelectTag then
-      self.CurrentContent = Content
-      if self.IsCharacterTrialMode then
-        Content.TryOutText = GText("UI_CharPreview_Accessory_In_Trial")
-      end
-    end
-    self.List_Accessory:AddItem(Content)
-  end
-  self.List_Accessory:RequestFillEmptyContent()
-  self.List_Accessory:RequestPlayEntriesAnim()
-end
-
 function M:RecoverAccessory(Params)
   if self.Type ~= CommonConst.ArmoryType.Char then
     return
   end
-  self.ActorController:DestoryCreature(CommonConst.CharAccessoryTypes.FX_Dead)
+  self.ActorController:DestroyCreature(CommonConst.CharAccessoryTypes.FX_Dead)
   self.ActorController:StopPlayerFX()
   self.ActorController:StopPlayerMontage(Params)
-  self.ActorController:DestoryPlayerMeleeWeapon()
+  self.ActorController:DestroyPlayerMeleeWeapon()
   if not self.ComparedContent or self.ComparedContent == self.CurrentContent then
     return
   end
@@ -1154,10 +1150,12 @@ function M:InitMVPList()
     self.ComparedContent = self.Map_MVPContents[self.JumpToAccessoryId]
   end
   for _, Content in ipairs(MVPContents) do
-    if Content.bSelectTag then
-      self.CurrentContent = Content
+    if not Content.IsHide then
+      if Content.bSelectTag then
+        self.CurrentContent = Content
+      end
+      self.List_SettlementAction:AddItem(Content)
     end
-    self.List_SettlementAction:AddItem(Content)
   end
   self.List_SettlementAction:RequestFillEmptyContent()
   self.List_SettlementAction:RequestPlayEntriesAnim()
@@ -1184,7 +1182,7 @@ function M:OnTopTabSelected(TabWidget, Content)
   end)
   self.EnableDrag = true
   self.EnableMouseWheel = true
-  self.ActorController:TryDestroyMVPActorController()
+  self.ActorController:TryDestroySequenceActorController()
   if self.CurrentTopTabIdx == self.SkinTabIdx then
     rawset(self, "bRecoverAppearanceWhenDestruct", true)
     if self.IsAccessoryContentsCreated then
@@ -1210,13 +1208,16 @@ function M:OnTopTabSelected(TabWidget, Content)
       self:RecoverAccessory()
     end
     self.ActorController:ResetActorRotation()
-    self.ActorController:TryCreateMVPActorController()
+    self.ActorController:TryCreateSequenceActorController()
     self:InitCharMVP()
   end
   self:UpdateCharAppearanceResourceBar()
 end
 
 function M:UpdateCharAppearanceResourceBar()
+  if self.IsPreviewMode then
+    return
+  end
   if self.CurrentTopTabIdx == self.MVPTabIdx then
     for _, Content in pairs(self.Map_MVPContents or {}) do
       local ShopItemId = self:GetShopItemByAccessoryId(Content.AccessoryId)
@@ -1232,23 +1233,10 @@ function M:UpdateCharAppearanceResourceBar()
   end
 end
 
-local function IsSkinSupportAccessory(SkinId, AccessoryId)
-  local Data = DataMgr.CharAccessory[AccessoryId] or DataMgr.CharPartMesh[AccessoryId]
-  if not Data or not Data.Skin then
-    return true
-  end
-  for key, value in pairs(Data.Skin) do
-    if value == SkinId then
-      return true
-    end
-  end
-  return false
-end
-
 local function RemoveUnsupportedAccessories(SkinId, AccessorySuit)
   local UnsupportedAcceesoryIdx = {}
   for key, value in pairs(AccessorySuit) do
-    if not IsSkinSupportAccessory(SkinId, value) then
+    if not ArmoryUtils:IsSkinSupportAccessory(SkinId, value) then
       table.insert(UnsupportedAcceesoryIdx, key)
     end
   end
@@ -1268,6 +1256,7 @@ function M:UpdateActorAppearance(SkinId, HairId)
   local AppearanceSuitInfo = self.Target:DumpAppearanceSuit(Avatar, self.AppearanceSuitIndex)
   AppearanceSuitInfo.SkinId = SkinId or AppearanceSuitInfo.SkinId
   AppearanceSuitInfo.HairId = HairId or AppearanceSuitInfo.HairId
+  AppearanceSuitInfo.SkinLevel = self.SelectedSkinLevel or AppearanceSuitInfo.SkinLevel
   AppearanceSuitInfo.Colors = self.Target:DumpColors(Avatar, AppearanceSuitInfo.SkinId)
   AppearanceSuitInfo.HairColors = self.Target:DumpHairColors(Avatar, AppearanceSuitInfo.HairId)
   AppearanceSuitInfo.AccessorySuit = AppearanceSuitInfo.AccessorySuit or {}
@@ -1275,15 +1264,25 @@ function M:UpdateActorAppearance(SkinId, HairId)
   self.ActorController:ChangeCharAppearance(AppearanceSuitInfo)
   if self.LastCharSkinId and AppearanceSuitInfo.SkinId ~= self.LastCharSkinId then
     self.ActorController.DelayFrame = 30
-    self.ActorController.bPlaySameMontage = true
-  else
-    self.ActorController.bPlaySameMontage = false
   end
   self.LastCharSkinId = SkinId
   self.ActorController:SetMontageAndCamera(CommonConst.ArmoryType.Char, "", "", "")
 end
 
-function M:OnConfirmBtnClicked()
+function M:OnLeftConfirmBtnClicked()
+  if self.Type ~= CommonConst.ArmoryType.Char then
+    return
+  end
+  if self.CurrentTopTabIdx == self.SkinTabIdx then
+    if self.CurrentLockContent and self.UseParamsInOpt then
+      self:OnCharSkinGoToShopBtnClicked()
+    end
+  elseif self.CurrentTopTabIdx == self.HairTabIdx and self.CurrentLockContent and self.UseParamsInOpt then
+    self:OnCharHairGoToShopBtnClicked()
+  end
+end
+
+function M:OnRightConfirmBtnClicked()
   if self.Type ~= CommonConst.ArmoryType.Char then
     return
   end
@@ -1309,6 +1308,308 @@ function M:OnConfirmBtnClicked()
     end
   else
     self:OnCharAccessoryConfirmBtnClicked()
+  end
+end
+
+function M:HideSkinLevelUpWidget()
+  self.Panel_LevelUp:SetVisibility(UIConst.VisibilityOp.Collapsed)
+end
+
+function M:UpdateSkinLevelInfo(SkinId)
+  local IsDisplay = DataMgr.SkinUpgrade and DataMgr.SkinUpgrade[SkinId]
+  if not IsDisplay then
+    self.Panel_LevelUp:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Btn_Function.Reddot:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    return
+  end
+  
+  local function IsLocked(CurLevel)
+    if self.IsPreviewMode then
+      return false
+    end
+    local Skin = self:GetOwnedSkinData(SkinId)
+    if not Skin then
+      return true
+    end
+    return CurLevel > Skin.Level
+  end
+  
+  self.Panel_LevelUp:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  local MaxLevel = self.WB_LevelUp:GetChildrenCount()
+  for Index = 1, MaxLevel do
+    local LevelUpWidget = self["WBP_Armory_Skin_LevelUp_" .. Index]
+    if LevelUpWidget then
+      local Params = {
+        Level = Index,
+        IsLocked = IsLocked(Index),
+        IsShowReddot = ArmoryUtils:CanSkinUpgrade(SkinId, Index),
+        Obj = self,
+        ClickedCallback = self.OnLevelUpWidgetClicked
+      }
+      LevelUpWidget:InitContent(Params)
+    end
+  end
+  if self.IsPreviewMode then
+    self["WBP_Armory_Skin_LevelUp_" .. MAX_SKIN_LEVEL]:OnButonClicked()
+    return
+  end
+  self.SelectedSkinLevel = 1
+  local Skin = self:GetOwnedSkinData(SkinId)
+  local IsOwned = nil ~= Skin
+  if IsOwned then
+    local IsEquiped = self:IsEquipedSelectedSkin()
+    self.SelectedSkinLevel = IsEquiped and Skin.SelectedLevel or Skin.Level
+  end
+  self["WBP_Armory_Skin_LevelUp_" .. self.SelectedSkinLevel]:PlaySelectedAnimation()
+end
+
+function M:GetOwnedSkinData(SkinId)
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar or not Avatar.CommonChars then
+    return
+  end
+  local CommonChar = Avatar.CommonChars[self.Target.CharId]
+  local Skin = CommonChar and CommonChar.OwnedSkins[SkinId]
+  return Skin
+end
+
+function M:IsEquipedSelectedSkin()
+  local Char = self.Target
+  if not self.SelectedSkinId and not Char then
+    return false
+  end
+  local Skin = self:GetOwnedSkinData(self.SelectedSkinId)
+  local AppearanceSuit = Char:GetAppearance()
+  if not Skin and not AppearanceSuit then
+    return false
+  end
+  return AppearanceSuit.SkinId == self.SelectedSkinId
+end
+
+function M:OnLevelUpWidgetClicked(Level)
+  if Level == self.SelectedSkinLevel then
+    return
+  end
+  if self.SelectedSkinLevel then
+    local LastLevelUpWidget = self["WBP_Armory_Skin_LevelUp_" .. self.SelectedSkinLevel]
+    if LastLevelUpWidget then
+      LastLevelUpWidget:PlayNormalAnimation()
+    end
+  end
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_mid", nil, nil)
+  self.SelectedSkinLevel = Level
+  self.Panel_Buy:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Btn_Function.Reddot:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self:UpdateActorAppearance(self.SelectedSkinId, self.SelectedHairId)
+  if self.IsPreviewMode then
+    if 1 == Level then
+      self.Panel_Buy:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      return
+    end
+    local SkinLevelUpData = DataMgr.SkinUpgrade[self.SelectedSkinId][Level]
+    self.Panel_Buy:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.WBP_Com_Cost:InitContent({
+      CostText = GText("UI_Skin_Upgrade_Cost"),
+      ResourceId = SkinLevelUpData.UnlockCurrency,
+      Numerator = SkinLevelUpData.UnlockAmount
+    })
+    return
+  end
+  local SkinData = self:GetOwnedSkinData(self.SelectedSkinId)
+  local IsEquiped = SkinData and self:IsEquipedSelectedSkin()
+  if IsEquiped and SkinData.SelectedLevel == Level then
+    self.WidgetSwitcher_BtnState:SetActiveWidgetIndex(self.BtnWidgetState.Equipped)
+    self.Text_Desc:SetText(GText("UI_Accessory_Equipped"))
+    return
+  end
+  local SkinData = self:GetOwnedSkinData(self.SelectedSkinId)
+  local IsOwned = SkinData and Level <= SkinData.Level
+  if IsOwned then
+    self.WidgetSwitcher_BtnState:SetActiveWidgetIndex(self.BtnWidgetState.Unequipped)
+    self.Btn_Function:ForbidBtn(false)
+    self.Btn_Function:SetText(GText("UI_Accessory_Equip"))
+    self.Btn_Function:BindSingleEventOnClicked(self, self.OnRightConfirmBtnClicked)
+    self.RightConfirmBtnFunc = self.OnRightConfirmBtnClicked
+    return
+  else
+    if 1 == Level then
+      local SelectedContent = self.SkinMap[self.SelectedSkinId]
+      self:UpdateFunctionBtn(SelectedContent, self.CurrentSkinContent)
+      return
+    end
+    if not SkinData or SkinData.Level < Level - 1 then
+      self.WidgetSwitcher_BtnState:SetActiveWidgetIndex(self.BtnWidgetState.Locked)
+      self.Text_Lock:SetText(GText("UI_Skin_Upgrade_Locked"))
+      self.Btn_Function:ForbidBtn(true)
+      return
+    end
+    local SkinLevelUpData = DataMgr.SkinUpgrade[self.SelectedSkinId][Level]
+    self.Panel_Buy:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.WBP_Com_Cost:InitContent({
+      CostText = GText("UI_Skin_Upgrade_Cost"),
+      ResourceId = SkinLevelUpData.UnlockCurrency,
+      Numerator = SkinLevelUpData.UnlockAmount
+    })
+    self.WidgetSwitcher_BtnState:SetActiveWidgetIndex(self.BtnWidgetState.Unequipped)
+    self.Btn_Function:SetText(GText("UI_FUNC_LEVELUP"))
+    local Avatar = GWorld:GetAvatar()
+    local OwnedAmount = Avatar:GetResourceNum(SkinLevelUpData.UnlockCurrency)
+    if OwnedAmount < SkinLevelUpData.UnlockAmount then
+      self.Btn_Function:ForbidBtn(true)
+      return
+    else
+      self.Btn_Function:ForbidBtn(false)
+      self.Btn_Function:BindSingleEventOnClicked(self, self.OnUpgradeSkinLevelClicked)
+      self.RightConfirmBtnFunc = self.OnUpgradeSkinLevelClicked
+      self.Btn_Function.Reddot:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    end
+  end
+end
+
+function M:ChangeCharSkinLevel()
+  if not self.SelectedSkinLevel then
+    return
+  end
+  local SKinUpData = DataMgr.SkinUpgrade[self.SelectedSkinId]
+  if not SKinUpData then
+    return
+  end
+  local SkinData = self:GetOwnedSkinData(self.SelectedSkinId)
+  if not SkinData then
+    return
+  end
+  if SkinData.SelectedLevel == self.SelectedSkinLevel then
+    return
+  end
+  
+  local function Callback(Ret, SkinId, NewLevel)
+    self:BlockAllUIInput(false, "SwitchCharSkinSelectedLevel")
+    if not ErrorCode:Check(Ret) then
+      return
+    end
+    self.WidgetSwitcher_BtnState:SetActiveWidgetIndex(self.BtnWidgetState.Equipped)
+    self.Text_Desc:SetText(GText("UI_Accessory_Equipped"))
+    local SelectedContent = self.SkinMap[SkinId]
+    if SelectedContent and SelectedContent.Widget then
+      SelectedContent.Widget:UpdateSKinLevel(NewLevel)
+    end
+  end
+  
+  self:BlockAllUIInput(true, "SwitchCharSkinSelectedLevel")
+  local Avatar = GWorld:GetAvatar()
+  Avatar:SwitchCharSkinSelectedLevel(Callback, self.SelectedSkinId, self.SelectedSkinLevel)
+end
+
+function M:OnUpgradeSkinLevelClicked()
+  if not self.SelectedSkinId and not self.SelectedSkinLevel then
+    return
+  end
+  local UpgradeDatas = DataMgr.SkinUpgrade[self.SelectedSkinId]
+  local SelectedUpgradeData = UpgradeDatas and UpgradeDatas[self.SelectedSkinLevel]
+  if not SelectedUpgradeData then
+    return
+  end
+  
+  local function Callback(ErrCode)
+    self:BlockAllUIInput(false)
+    if not ErrorCode:Check(ErrCode) and self then
+      return
+    end
+    local CurLevelUpWidget = self["WBP_Armory_Skin_LevelUp_" .. self.SelectedSkinLevel]
+    CurLevelUpWidget:UnlockLevel()
+    self.Panel_Buy:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.WidgetSwitcher_BtnState:SetActiveWidgetIndex(self.BtnWidgetState.Unequipped)
+    self.Btn_Function:ForbidBtn(false)
+    self.Btn_Function:SetText(GText("UI_Accessory_Equip"))
+    self.Btn_Function:BindSingleEventOnClicked(self, self.OnRightConfirmBtnClicked)
+    self.RightConfirmBtnFunc = self.OnRightConfirmBtnClicked
+    self:RefreshLevelUpReddot()
+  end
+  
+  local Avatar = GWorld:GetAvatar()
+  local Params = {
+    ShortText = "UI_Skin_Upgrade_Confirm",
+    ItemList = {
+      {
+        ItemId = SelectedUpgradeData.UnlockCurrency,
+        ItemType = CommonConst.ItemType.Resource,
+        ItemNum = Avatar:GetResourceNum(SelectedUpgradeData.UnlockCurrency),
+        ItemNeed = SelectedUpgradeData.UnlockAmount
+      }
+    },
+    RightCallbackFunction = function(Obj, Data)
+      self:BlockAllUIInput(true, "SP_DisplayOnly")
+      Avatar:UpCharSkinLevel(Callback, self.SelectedSkinId, self.SelectedSkinLevel)
+    end
+  }
+  UIManager(self):ShowCommonPopupUI(100342, Params, self)
+end
+
+function M:RefreshLevelUpReddot()
+  if self.NoReddot then
+    return
+  end
+  if self.Type ~= CommonConst.DataType.Char then
+    return
+  end
+  if not self.SkinMap then
+    return
+  end
+  local CharId = self.Target.CharId
+  local NodeName = CommonConst.DataType.Char .. CommonConst.DataType.Skin .. "LevelUp" .. CharId
+  local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(NodeName)
+  if not CacheDetail then
+    return
+  end
+  local Avatar = GWorld:GetAvatar()
+  local IsShowTabReddot = false
+  for SkinId, _ in pairs(CacheDetail) do
+    local UpgradeData = DataMgr.SkinUpgrade[SkinId]
+    local SkinData = self:GetOwnedSkinData(SkinId)
+    if not UpgradeData or not SkinData then
+    else
+      local CurLevel = SkinData.Level
+      local NewLevel = CurLevel
+      if CurLevel < MAX_SKIN_LEVEL then
+        local NextLevel = CurLevel + 1
+        local ResourceId = UpgradeData[NextLevel].UnlockCurrency
+        local UnlockAmount = UpgradeData[NextLevel].UnlockAmount
+        local ResourceNum = Avatar:GetResourceNum(ResourceId)
+        NewLevel = UnlockAmount <= ResourceNum and NextLevel or NewLevel
+      end
+      local IsShowReddot = CurLevel < NewLevel
+      if IsShowReddot then
+        IsShowTabReddot = true
+      end
+      local CurContent = self.SkinMap[SkinId]
+      if CurContent and CurContent.Widget then
+        rawset(CurContent, "Upgradeable", not IsShowReddot)
+        CurContent.Widget:SetReddot(IsShowReddot and UIConst.RedDotType.CommonRedDot)
+      end
+      self["WBP_Armory_Skin_LevelUp_" .. NewLevel]:SetReddotState(IsShowReddot)
+      if CurLevel ~= NewLevel then
+        self["WBP_Armory_Skin_LevelUp_" .. CurLevel]:SetReddotState(false)
+      end
+      if NewLevel == self.SelectedSkinLevel then
+        if IsShowReddot then
+          self.Btn_Function.Reddot:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+        else
+          self.Btn_Function.Reddot:SetVisibility(UIConst.VisibilityOp.Collapsed)
+        end
+      else
+        self.Btn_Function.Reddot:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      end
+      CacheDetail[SkinId] = SkinData.Level
+    end
+  end
+  local SkinLevelUpNode = ReddotManager.GetTreeNode(NodeName)
+  local SkinLevelUpCount = SkinLevelUpNode and SkinLevelUpNode.Count or 0
+  if IsShowTabReddot then
+    if 0 == SkinLevelUpCount then
+      ReddotManager.IncreaseLeafNodeCount(NodeName)
+    end
+  else
+    ReddotManager.ClearLeafNodeCount(NodeName)
   end
 end
 

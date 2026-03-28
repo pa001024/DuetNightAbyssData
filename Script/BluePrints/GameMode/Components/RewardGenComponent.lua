@@ -249,7 +249,7 @@ function Component:HandleRewardDrop(Drops, Reason, Transform, ExtraInfo, OtherPa
   end
 end
 
-function Component:TriggerGenerateRewardForMonsterDeath(UnitId, Transform, UniqueSign, KillerEid, bKilledByPlayer, WeaponType, Level, IsSummonMonster, MonEid, DamageCauserLocation)
+function Component:TriggerGenerateRewardForMonsterDeath(UnitId, Transform, UniqueSign, KillerEid, bKilledByPlayer, WeaponType, Level, IsSummonMonster, MonEid, DamageCauserLocation, UniqueId, CreatorType, CreatorId, RelationSpawn, DeathReason, IsFallTrigger, bCreateByUnitButNoSummon)
   Transform = UE4.FTransform(Transform.Rotation, Transform.Translation)
   if "" == WeaponType then
     WeaponType = nil
@@ -280,6 +280,28 @@ function Component:TriggerGenerateRewardForMonsterDeath(UnitId, Transform, Uniqu
     DebugPrint("Component:TriggerGenerateRewardForMonsterDeath", ExpNum)
   end
   
+  if Const.bServerMonsterDead and self:CheckServerDungeonEnable() then
+    local Info = {}
+    Info.UnitId = UnitId
+    Info.UniqueId = UniqueId
+    Info.Reason = CommonConst.RewardReason.MonsterDead
+    Info.Transform = CommonUtils:SerializeFTransform(Transform)
+    Info.CreatorType = CreatorType
+    Info.CreatorId = CreatorId
+    Info.RelationSpawn = RelationSpawn
+    Info.DeathReason = DeathReason
+    Info.IsFallTrigger = IsFallTrigger
+    Info.bCreateByUnitButNoSummon = bCreateByUnitButNoSummon
+    local AvatarEid = self:GetAvatarEidByBattleEid(rawget(ExtraInfo, "SourceEid"))
+    if not AvatarEid then
+      ExtraInfo.Avatar = -1
+    else
+      ExtraInfo.Avatar = AvatarEid
+    end
+    Info.ExtraInfo = ExtraInfo
+    self:NotifyServerMonsterDead(Callback, Info)
+    return
+  end
   self:TriggerRewardEvent(UnitId, CommonConst.RewardReason.MonsterDead, Transform, ExtraInfo, Callback)
 end
 

@@ -33,4 +33,9 @@ function M:OnViewportSizeChanged_Lua()
   EventManager:FireEvent(EventID.GameViewportSizeChanged)
 end
 
+function M:OnWindowActionChanged_Lua(WindowAction)
+  DebugPrint("BP_EMGameViewportClient_C:: OnWindowActionChanged_Lua", WindowAction)
+  EventManager:FireEvent(EventID.GameWindowActionChanged, WindowAction)
+end
+
 return M

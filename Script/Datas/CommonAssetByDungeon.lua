@@ -5,6 +5,12 @@ T.RT_1 = {
 T.RT_2 = {
   [1] = T.RT_1
 }
+T.RT_3 = {
+  Path = "WidgetBlueprint'/Game/UI/WBP/Dungeon/Excavation/WBP_Dungeon_ExcavationToast_New.WBP_Dungeon_ExcavationToast_New'"
+}
+T.RT_4 = {
+  [1] = T.RT_3
+}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -71,5 +77,33 @@ return ReadOnly("CommonAssetByDungeon", {
   [90114] = {
     AssetPath = T.RT_2,
     DungeonId = 90114
+  },
+  [90201] = {
+    AssetPath = T.RT_4,
+    DungeonId = 90201
+  },
+  [90202] = {
+    AssetPath = T.RT_4,
+    DungeonId = 90202
+  },
+  [90203] = {
+    AssetPath = T.RT_4,
+    DungeonId = 90203
+  },
+  [90204] = {
+    AssetPath = T.RT_4,
+    DungeonId = 90204
+  },
+  [90205] = {
+    AssetPath = T.RT_4,
+    DungeonId = 90205
+  },
+  [90206] = {
+    AssetPath = T.RT_4,
+    DungeonId = 90206
+  },
+  [90207] = {
+    AssetPath = T.RT_4,
+    DungeonId = 90207
   }
 })

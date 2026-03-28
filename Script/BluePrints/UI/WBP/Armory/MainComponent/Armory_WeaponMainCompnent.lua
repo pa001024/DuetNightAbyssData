@@ -984,10 +984,7 @@ function M:WeaponMain_OnLockBtnClicked()
     end
     
     local function ConfirmFunc()
-      self:SetFocus()
-      local Avatar = ArmoryUtils:GetAvatar()
-      self:BlockAllUIInput(true)
-      Avatar:UnLockResourceInBag(CommonConst.AllType.Weapon, self[self.ComparedWeaponName].Uuid)
+      SecondaryPasswordController:Weapon_OpenSeconderyPassword(self[self.ComparedWeaponName].Uuid, self)
     end
     
     UIManager(self):ShowCommonPopupUI(100019, {

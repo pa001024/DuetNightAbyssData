@@ -1,6 +1,7 @@
 require("UnLua")
 local SkillUtils = require("Utils.SkillUtils")
 local UpgradeUtils = require("Utils.UpgradeUtils")
+local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C",
   "BluePrints.Common.DelayFrameComponent"
@@ -11,6 +12,7 @@ M._components = {
 
 function M:Construct()
   self:AddDispatcher(EventID.OnCharGradeLevelUp, self, self.OnCharGradeLevelUp)
+  self:AddDispatcher(EventID.OnCharExtraGradeLevelUp, self, self.OnCharExtraGradeLevelUp)
   self:AddDispatcher(EventID.OnMenuClose, self, self.OnClickBtnFullClose)
   self.UnLockedText = GText("UI_UNLOCKED")
   self.UnLockText = GText("UI_UNLOCK")
@@ -33,6 +35,7 @@ function M:Init(Params)
   self._OnAddedToFocusPath = Params.OnAddedToFocusPath
   self._OnRemovedFromFocusPath = Params.OnRemovedFromFocusPath
   self.NewChar = false
+  self.TotalMaxGradeLevel = tonumber(DataMgr.GlobalConstant.CharCardLevelMax.ConstantValue) + 1
   self:InitTraceMain()
 end
 
@@ -48,8 +51,12 @@ function M:InitTraceMain()
   self.CharId = Char.CharId
   self.CharGradeLevel = Char.GradeLevel
   self.MaxGradeLevel = tonumber(DataMgr.GlobalConstant.CharCardLevelMax.ConstantValue)
+  self.HasUltraGrade = Char:HasUltraGradeLevel()
+  self.IsExtraGradeUnlocked = Char:IsExtraGradeLevelUnlocked()
+  self.EffectiveGradeLevel = Char:GetEffectiveGradeLevel()
   self.Attribute = DataMgr.BattleChar[self.CharId].Attribute
   self.Line_Attr:SetColorAndOpacity(self[self.Attribute])
+  self.Line_Attr_Sp:SetColorAndOpacity(self[self.Attribute])
   local BgTopAllChildren = self.Panel_BgTop:GetAllChildren():ToTable() or {}
   for index, value in ipairs(BgTopAllChildren) do
     value:SetColorAndOpacity(self[self.Attribute])
@@ -65,7 +72,7 @@ function M:InitTraceMain()
   for i = 1, self.CharGradeLevel do
     if self["InronItem_" .. i] then
       self["InronItem_" .. i]:Init(self, i, false)
-      if self.NewChar or (not (self.Details and self.SelectTraceId) or self.SelectTraceId ~= i) and (not self.LastFocusItem or self.LastFocusItem ~= self["InronItem_" .. i] or not not self["InronItem_" .. i]:HasAnyUserFocus()) then
+      if self.IsPreviewMode or self.NewChar or (not (self.Details and self.SelectTraceId) or self.SelectTraceId ~= i) and (not self.LastFocusItem or self.LastFocusItem ~= self["InronItem_" .. i] or not not self["InronItem_" .. i]:HasAnyUserFocus()) then
         self["InronItem_" .. i]:SetNormalState()
       end
       self["InronItem_" .. i].Num_Intron:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
@@ -74,16 +81,52 @@ function M:InitTraceMain()
   for j = self.CharGradeLevel + 1, self.MaxGradeLevel do
     if self["InronItem_" .. j] then
       self["InronItem_" .. j]:Init(self, j, true)
-      if self.NewChar or (not (self.Details and self.SelectTraceId) or self.SelectTraceId ~= j) and (not self.LastFocusItem or self.LastFocusItem ~= self["InronItem_" .. j] or not not self["InronItem_" .. j]:HasAnyUserFocus()) then
+      if self.IsPreviewMode or self.NewChar or (not (self.Details and self.SelectTraceId) or self.SelectTraceId ~= j) and (not self.LastFocusItem or self.LastFocusItem ~= self["InronItem_" .. j] or not not self["InronItem_" .. j]:HasAnyUserFocus()) then
         self["InronItem_" .. j]:SetNormalState()
       end
       self["InronItem_" .. j].Num_Intron:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     end
   end
-  if self["InronItem_" .. self.CharGradeLevel + 1] then
+  if self.InronItem_7 then
+    if self.HasUltraGrade then
+      self.InronItem_7:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+      local IsLock7 = not self.IsExtraGradeUnlocked
+      self.InronItem_7:Init(self, 7, IsLock7)
+      if self.NewChar or (not (self.Details and self.SelectTraceId) or 7 ~= self.SelectTraceId) and (not self.LastFocusItem or self.LastFocusItem ~= self.InronItem_7 or not not self.InronItem_7:HasAnyUserFocus()) then
+        self.InronItem_7:SetNormalState()
+      end
+      self.InronItem_7.Num_Intron:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+      self.WS_Line:SetActiveWidgetIndex(1)
+    else
+      self.InronItem_7:SetVisibility(UE4.ESlateVisibility.Collapsed)
+      self.WS_Line:SetActiveWidgetIndex(0)
+    end
+  end
+  if self["InronItem_" .. self.CharGradeLevel + 1] and self.CharGradeLevel + 1 <= self.MaxGradeLevel then
     self["InronItem_" .. self.CharGradeLevel + 1]:SetReddotState(self:CheckCharCanUpGradeLevel())
   end
-  for k = 1, self.MaxGradeLevel do
+  if self.InronItem_7 and self.HasUltraGrade then
+    if not self.IsExtraGradeUnlocked and self.CharGradeLevel >= self.MaxGradeLevel then
+      self.InronItem_7:SetReddotState(self:CheckCharCanUpUltraGradeLevel())
+    else
+      self.InronItem_7:SetReddotState(false)
+    end
+  end
+  if self.InronItem_7 and self.HasUltraGrade then
+    local IsNewUltraGrade = self:CheckUltraGradeNewState()
+    self.InronItem_7:SetNewState(IsNewUltraGrade)
+  end
+  if self.InronItem_6 then
+    if self.HasUltraGrade and self.InronItem_7 and self.InronItem_7:GetVisibility() ~= UE4.ESlateVisibility.Collapsed then
+      self.InronItem_6:SetNavigationRuleExplicit(EUINavigation.Left, self.InronItem_7)
+      self.InronItem_6:SetNavigationRuleExplicit(EUINavigation.Down, self.InronItem_7)
+      self.InronItem_7:SetNavigationRuleExplicit(EUINavigation.Up, self.Parent.EMListView_SubTab)
+    else
+      self.InronItem_6:SetNavigationRuleBase(EUINavigation.Left, EUINavigationRule.Escape)
+      self.InronItem_6:SetNavigationRuleBase(EUINavigation.Down, EUINavigationRule.Escape)
+    end
+  end
+  for k = 1, self.TotalMaxGradeLevel do
     if self["InronItem_" .. k] then
       self["InronItem_" .. k]:PlayActivatableNormal()
     end
@@ -93,6 +136,25 @@ function M:InitTraceMain()
     self.LastFocusItem:SetFocus()
     self.ShouldFocusLast = false
   end
+end
+
+function M:CheckUltraGradeNewState()
+  if self.IsPreviewMode then
+    return false
+  end
+  if self.IsExtraGradeUnlocked then
+    return false
+  end
+  local NodeName = DataMgr.ReddotNode.NewUltraGradeChar.Name
+  local UltraNode = ReddotManager.GetTreeNode(NodeName)
+  if not UltraNode or UltraNode.Count <= 0 then
+    return false
+  end
+  local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(NodeName)
+  if not CacheDetail then
+    return false
+  end
+  return 1 == CacheDetail[self.CharId]
 end
 
 function M:LoadSkillDetailsUI()
@@ -135,8 +197,25 @@ function M:OnClickTraceItem(TraceId)
   if self.SelectTraceId == TraceId then
     return
   end
+  if 7 == TraceId and self.HasUltraGrade and not self.IsPreviewMode then
+    local NodeName = DataMgr.ReddotNode.NewUltraGradeChar.Name
+    local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(NodeName)
+    if CacheDetail and 1 == CacheDetail[self.CharId] then
+      ArmoryUtils:SetUltraGradeCharReddotRead(self.CharId)
+      if self.InronItem_7 then
+        self.InronItem_7:SetNewState(false)
+      end
+      EventManager:FireEvent(EventID.OnCharExtraGradeItemClick, self.Char.Uuid)
+    end
+  end
   if not self.Details or self.Details.InFinished then
-    if TraceId <= self.CharGradeLevel then
+    local IsUnlocked = false
+    if TraceId <= self.MaxGradeLevel then
+      IsUnlocked = TraceId <= self.CharGradeLevel
+    else
+      IsUnlocked = self.IsExtraGradeUnlocked
+    end
+    if IsUnlocked then
       AudioManager(self):PlayUISound(self, "event:/ui/armory/suyuan_point_click", nil, nil)
     else
       AudioManager(self):PlayUISound(self, "event:/ui/armory/suyuan_point_click_unlock", nil, nil)
@@ -149,12 +228,24 @@ function M:OnClickTraceItem(TraceId)
     self.LastFocusItem = self["InronItem_" .. self.SelectTraceId]
   end
   self.SelectTraceId = TraceId
-  if self.SelectTraceId ~= self.CharGradeLevel + 1 and self["InronItem_" .. self.CharGradeLevel + 1] then
+  if self.SelectTraceId ~= self.CharGradeLevel + 1 and self["InronItem_" .. self.CharGradeLevel + 1] and self.CharGradeLevel + 1 <= self.MaxGradeLevel then
     self["InronItem_" .. self.CharGradeLevel + 1]:SetReddotState(self:CheckCharCanUpGradeLevel())
+  end
+  if 7 ~= self.SelectTraceId and self.InronItem_7 and self.HasUltraGrade and not self.IsExtraGradeUnlocked and self.CharGradeLevel >= self.MaxGradeLevel then
+    self.InronItem_7:SetReddotState(self:CheckCharCanUpUltraGradeLevel())
   end
   self.SelectMod = 1
   if self.IsPreviewMode then
     self.SelectMod = 4
+  elseif 7 == TraceId then
+    if self.IsExtraGradeUnlocked then
+      self.SelectMod = 1
+    else
+      self.SelectMod = 2
+      if self.CharGradeLevel < self.MaxGradeLevel then
+        self.SelectMod = 3
+      end
+    end
   elseif self.SelectTraceId <= self.CharGradeLevel then
     self.SelectMod = 1
   elseif self.SelectTraceId == self.CharGradeLevel + 1 then
@@ -176,12 +267,31 @@ function M:InitResourceNeeded()
   end
   local Char = self.Char
   local ResourceNeeded = {}
-  if DataMgr.CharCardLevelUp[Char.CharId][self.SelectTraceId - 1] then
+  local IsOrdered = false
+  if 7 == self.SelectTraceId then
+    ResourceNeeded = Char:CalculateCharUltraGradeLevelUpResources()
+    IsOrdered = true
+  elseif DataMgr.CharCardLevelUp[Char.CharId] and DataMgr.CharCardLevelUp[Char.CharId][self.SelectTraceId - 1] then
     local Data = DataMgr.CharCardLevelUp[Char.CharId][self.SelectTraceId - 1]
     ResourceNeeded = Char:CalculateCharGradeLevelUpResources(Data)
   end
   self.Details.HB_Item:ClearChildren()
-  for Key, Value in pairs(ResourceNeeded) do
+  local ResType = 1
+  local FirstResource1, FirstResource2
+  
+  local function iterateResources(resources, isOrdered, callback)
+    if isOrdered then
+      for _, entry in ipairs(resources) do
+        callback(entry.Id, entry.Num)
+      end
+    else
+      for key, value in pairs(resources) do
+        callback(key, value)
+      end
+    end
+  end
+  
+  iterateResources(ResourceNeeded, IsOrdered, function(Key, Value)
     local Resource = Avatar.Resources[Key]
     local ResourceConf = DataMgr.Resource[Key]
     local TypeId2ShopItem = DataMgr.TypeId2ShopItem[CommonConst.DataType.Resource]
@@ -204,14 +314,11 @@ function M:InitResourceNeeded()
     })
     Item.bIsFocusable = true
     self.Details.HB_Item:AddChild(Item)
-    local Res = {}
-    if Value <= FakeContent.Count then
-      Res = {
-        1,
-        FakeContent,
-        nil
-      }
-    elseif Value > FakeContent.Count then
+    Item:Init(FakeContent)
+    local CurType = 1
+    local CurResource1 = FakeContent
+    local CurResource2
+    if Value > FakeContent.Count then
       local NeedNum = Value - FakeContent.Count
       local TypeId2ShopItem2 = DataMgr.TypeId2ShopItem[CommonConst.DataType.Resource]
       local ShopItemId2 = TypeId2ShopItem2 and TypeId2ShopItem2[Key] and TypeId2ShopItem2[Key][1]
@@ -229,31 +336,31 @@ function M:InitResourceNeeded()
           Price = ShopItemData2.Price,
           IsShowDetails = true
         }
+        CurResource2 = NeedContent
         if NeedCount <= Resource2.Count then
-          Res = {
-            2,
-            FakeContent,
-            NeedContent
-          }
+          CurType = 2
         else
-          Res = {
-            3,
-            FakeContent,
-            NeedContent
-          }
+          CurType = 3
         end
       else
-        Res = {
-          4,
-          nil,
-          nil
-        }
+        CurType = 4
       end
     end
-    Item:Init(FakeContent)
-    FakeContent.NeedCount = Value
-    return Res
-  end
+    if CurType > ResType then
+      ResType = CurType
+      FirstResource1 = CurResource1
+      FirstResource2 = CurResource2
+    end
+    if nil == FirstResource1 then
+      FirstResource1 = CurResource1
+      FirstResource2 = CurResource2
+    end
+  end)
+  return {
+    ResType,
+    FirstResource1,
+    FirstResource2
+  }
 end
 
 function M:OnTipsOpenChanged(bIsOpen)
@@ -281,6 +388,33 @@ function M:GetTraceDesc()
       CharGradeDescription = string.gsub(CharGradeDescription, "#" .. param.Index, Parameter)
     end
     return CharGradeDescription
+  elseif 7 == self.SelectTraceId then
+    local SkillId = DataMgr.CharId2UltraPassiveSkillId and DataMgr.CharId2UltraPassiveSkillId[self.CharId]
+    if SkillId then
+      local SkillData = DataMgr.Skill[SkillId] and DataMgr.Skill[SkillId][1] and DataMgr.Skill[SkillId][1][0]
+      if SkillData then
+        local Desc = GText(SkillData.SkillDesc)
+        if SkillData.SkillDescValues then
+          local ReversedParameters = {}
+          for index, value in pairs(SkillData.SkillDescValues) do
+            table.insert(ReversedParameters, {Index = index, Value = value})
+          end
+          table.sort(ReversedParameters, function(a, b)
+            return tonumber(a.Index) > tonumber(b.Index)
+          end)
+          for _, param in ipairs(ReversedParameters) do
+            local Parameter = SkillUtils.CalcSkillDesc(param.Value, 1)
+            local SignIndex = string.find(Parameter, "%%", 1)
+            if SignIndex then
+              Parameter = Parameter .. "%"
+            end
+            Desc = string.gsub(Desc, "#" .. param.Index, Parameter)
+          end
+        end
+        return Desc
+      end
+    end
+    return ""
   end
   return ""
 end
@@ -293,7 +427,7 @@ function M:OnClickBtnFullClose()
       self["InronItem_" .. self.SelectTraceId].IsClick = false
       self["InronItem_" .. self.SelectTraceId]:SetNormalState()
     end
-    if self["InronItem_" .. self.CharGradeLevel + 1] then
+    if self["InronItem_" .. self.CharGradeLevel + 1] and self.CharGradeLevel + 1 <= self.MaxGradeLevel then
       self["InronItem_" .. self.CharGradeLevel + 1].IsClick = false
     end
     self.SelectTraceId = -1
@@ -301,6 +435,72 @@ function M:OnClickBtnFullClose()
 end
 
 function M:OnClickBTN(Type, Resource1, Resource2)
+  if 7 == self.SelectTraceId then
+    if self.IsExtraGradeUnlocked then
+      return
+    end
+    if 4 == Type then
+      UIManager(self):ShowUITip("CommonToastMain", "UI_FORGING_MATERIAL_NOTENOUGH")
+      return
+    end
+    if 1 == Type then
+      if self.InronItem_7 then
+        self.InronItem_7:SetReddotState(false)
+      end
+      local Avatar = GWorld:GetAvatar()
+      if Avatar then
+        self.Parent:BlockAllUIInput(true)
+        local Char = self.Char
+        DebugPrint("zwkkk OnClickBTN UpCharExtraGradeLevel")
+        local CallServerFunc = Avatar.UpCharExtraGradeLevel
+        CallServerFunc(Avatar, Char.Uuid)
+      end
+    elseif 2 == Type or 3 == Type then
+      local Avatar = GWorld:GetAvatar()
+      local Resource1Data = {}
+      Resource1Data.Count = Avatar.Resources[Resource1.Id] and Avatar.Resources[Resource1.Id].Count or 0
+      Resource1Data.ResourceName = DataMgr.Resource[Resource1.Id] and DataMgr.Resource[Resource1.Id].ResourceName or ""
+      local BuyCount = Resource1.NeedCount - Resource1.Count
+      local Params = {
+        LeftItems = {
+          {
+            ItemId = Resource2.Id,
+            ItemType = Resource2.ItemType,
+            Count = Resource2.Count
+          }
+        },
+        RightItems = {
+          {
+            ItemId = Resource1.Id,
+            ItemType = Resource2.ItemType,
+            Count = BuyCount
+          }
+        },
+        ShortTextParams = {
+          Resource2.Count,
+          BuyCount,
+          GText(Resource1Data.ResourceName)
+        },
+        RightCallbackFunction = function()
+          self.Parent:BlockAllUIInput(true)
+          self.IsWatingForBuyResource = true
+          self.IsWatingForUltraUpgrade = true
+          Avatar:PurchaseShopItem(Resource1.ShopItemId, BuyCount, true)
+        end
+      }
+      if 3 == Type then
+        function Params.RightCallbackFunction()
+          UIManager(self):ShowCommonPopupUI(100248, {
+            RightCallbackFunction = function()
+              PageJumpUtils:JumpToShopPage(CommonConst.GachaJumpToShopMainTabId, nil, nil, "Shop")
+            end
+          }, self)
+        end
+      end
+      UIManager(self):ShowCommonPopupUI(100247, Params, self)
+    end
+    return
+  end
   if self.CharGradeLevel == self.MaxGradeLevel or self.SelectTraceId ~= self.CharGradeLevel + 1 then
     return
   end
@@ -348,6 +548,7 @@ function M:OnClickBTN(Type, Resource1, Resource2)
       RightCallbackFunction = function()
         self.Parent:BlockAllUIInput(true)
         self.IsWatingForBuyResource = true
+        self.IsWatingForUltraUpgrade = false
         Avatar:PurchaseShopItem(Resource1.ShopItemId, BuyCount, true)
       end
     }
@@ -374,15 +575,20 @@ function M:OnPurchaseShopItem(Ret)
   end
   if self.IsWatingForBuyResource then
     self.IsWatingForBuyResource = false
-    if -1 ~= self.SelectTraceId then
-      self["InronItem_" .. self.CharGradeLevel + 1]:SetReddotState(false)
-    end
     local Avatar = GWorld:GetAvatar()
     if Avatar then
       self.Parent:BlockAllUIInput(true)
       local Char = self.Char
-      local CallServerFunc = Avatar.UpCharGradeLevel
-      CallServerFunc(Avatar, Char.Uuid, tonumber(Char.GradeLevel))
+      if self.IsWatingForUltraUpgrade then
+        DebugPrint("zwkkk OnPurchaseShopItem UpCharExtraGradeLevel")
+        Avatar:UpCharExtraGradeLevel(Char.Uuid)
+      else
+        if -1 ~= self.SelectTraceId and self["InronItem_" .. self.CharGradeLevel + 1] then
+          self["InronItem_" .. self.CharGradeLevel + 1]:SetReddotState(false)
+        end
+        local CallServerFunc = Avatar.UpCharGradeLevel
+        CallServerFunc(Avatar, Char.Uuid, tonumber(Char.GradeLevel))
+      end
     end
   end
 end
@@ -399,7 +605,20 @@ function M:CheckCharCanUpGradeLevel()
   return UpgradeUtils.CheckCharCanUpgradeCardLevel(Char)
 end
 
+function M:CheckCharCanUpUltraGradeLevel()
+  if self.IsPreviewMode then
+    return
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  local Char = self.Char
+  return UpgradeUtils.CheckCharCanUpgradeUltraCardLevel(Char)
+end
+
 function M:OnCharGradeLevelUp(Ret, CharUuid, CurrentGradeLevel)
+  DebugPrint("zwkkk OnCharGradeLevelUp ", Ret, CharUuid, CurrentGradeLevel)
   self.Parent:BlockAllUIInput(false)
   if ErrorCode:Check(Ret) then
     local Avatar = GWorld:GetAvatar()
@@ -409,8 +628,33 @@ function M:OnCharGradeLevelUp(Ret, CharUuid, CurrentGradeLevel)
       AudioManager(self):PlayUISound(self, "event:/ui/armory/card_level_unlock", nil, nil)
       self["InronItem_" .. self.SelectTraceId]:PlayUnLockAnim()
     end
-    if self["InronItem_" .. self.CharGradeLevel + 1] then
+    if self["InronItem_" .. self.CharGradeLevel + 1] and self.CharGradeLevel + 1 <= self.MaxGradeLevel then
       self["InronItem_" .. self.CharGradeLevel + 1]:SetReddotState(self:CheckCharCanUpGradeLevel())
+    end
+    if self.CharGradeLevel >= self.MaxGradeLevel and self.HasUltraGrade and self.InronItem_7 then
+      self.IsExtraGradeUnlocked = self.Char:IsExtraGradeLevelUnlocked()
+      if not self.IsExtraGradeUnlocked then
+        self.InronItem_7:SetReddotState(self:CheckCharCanUpUltraGradeLevel())
+      end
+    end
+    if self.Details then
+      self.Details:UpdateDetailInfo(self.SelectTraceId, 1)
+    end
+  end
+end
+
+function M:OnCharExtraGradeLevelUp(Ret, CharUuid)
+  self.Parent:BlockAllUIInput(false)
+  if ErrorCode:Check(Ret) then
+    local Avatar = GWorld:GetAvatar()
+    self.Char = Avatar.Chars[self.Char.Uuid]
+    self.IsExtraGradeUnlocked = true
+    if self["InronItem_" .. self.SelectTraceId] then
+      AudioManager(self):PlayUISound(self, "event:/ui/armory/card_level_unlock", nil, nil)
+      self["InronItem_" .. self.SelectTraceId]:PlayUnLockAnim()
+    end
+    if self.InronItem_7 then
+      self.InronItem_7:SetReddotState(false)
     end
     if self.Details then
       self.Details:UpdateDetailInfo(self.SelectTraceId, 1)
@@ -443,7 +687,7 @@ function M:PlayOutAnim()
   self:StopAllAnimations()
   self:FlushAnimations()
   self:PlayAnimation(self.Out)
-  for i = 1, self.MaxGradeLevel do
+  for i = 1, self.TotalMaxGradeLevel do
     if self["InronItem_" .. i] then
       self["InronItem_" .. i]:CollapseNiagara()
     end

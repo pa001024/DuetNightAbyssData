@@ -2,6 +2,9 @@ local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
 local ReddotTreeNode_ActivityBase = Class("BluePrints.UI.Reddot.Child.Activity.IActivityBase")
 
 function ReddotTreeNode_ActivityBase:OverrideSelfRdType()
+  if not self.Cache then
+    return
+  end
   self:_JudgeReddotType(self.Cache.Detail)
 end
 

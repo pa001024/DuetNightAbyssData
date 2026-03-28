@@ -92,6 +92,7 @@ function M:SwitchPlayInAnimation(InItem)
     self.bIsSelected = true
     self:PlayAnimation(self.Read)
   else
+    self.bIsSelected = false
     self:PlayAnimation(self.In)
   end
 end
@@ -104,7 +105,7 @@ function M:BindAnimationEvents()
 end
 
 function M:OnClickAnimationFinished()
-  if self.bIsSelected then
+  if self.bIsSelected and not self.Item.bCanReselect then
     return
   end
   self.SelectUI:OnItemClicked(self.OptionIdx)
@@ -112,7 +113,7 @@ end
 
 function M:OnItemClicked()
   DebugPrint("OnItemClicked", self)
-  if self.bIsSelected then
+  if self.bIsSelected and not self.Item.bCanReselect then
     AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_confirm", "", nil)
     self:StopAllAnimations()
     self:PlayAnimation(self.Read_Click)

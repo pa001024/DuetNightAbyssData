@@ -7,115 +7,194 @@ T.RT_1 = {
 }
 T.RT_2 = {}
 T.RT_3 = {
+  IsMultiQuest = false,
+  SubRegionId = 100101,
+  nextQuestIds = T.RT_2
+}
+T.RT_4 = {
   DeliverType = 1,
   Id = 101107,
   IsWhite = false,
   StartIndex = 1
 }
-T.RT_4 = {
+T.RT_5 = {
   IsMultiQuest = false,
   SubRegionId = 0,
   nextQuestIds = T.RT_2
 }
-T.RT_5 = {
+T.RT_6 = {
   IsMultiQuest = false,
   SubRegionId = 101107,
   nextQuestIds = T.RT_2
 }
-T.RT_6 = {
+T.RT_7 = {
   DeliverType = 1,
   Id = 210101,
   IsWhite = false,
   StartIndex = 1
 }
-T.RT_7 = {
+T.RT_8 = {
   DeliverType = 1,
   Id = 101101,
   IsWhite = false,
   StartIndex = 1
 }
-T.RT_8 = {
+T.RT_9 = {
   IsMultiQuest = false,
   SubRegionId = 0,
-  SuccQuestDeliver = T.RT_7,
+  SuccQuestDeliver = T.RT_8,
   nextQuestIds = T.RT_2
 }
-T.RT_9 = {
+T.RT_10 = {
   DeliverType = 1,
   Id = 101901,
   IsWhite = false,
   StartIndex = 1
 }
-T.RT_10 = {
+T.RT_11 = {
   IsMultiQuest = false,
   SubRegionId = 101901,
   nextQuestIds = T.RT_2
 }
-T.RT_11 = {
+T.RT_12 = {
   IsMultiQuest = false,
   SubRegionId = 102101,
   nextQuestIds = T.RT_2
 }
-T.RT_12 = {
+T.RT_13 = {
   IsMultiQuest = false,
   SubRegionId = 102102,
   nextQuestIds = T.RT_2
 }
-T.RT_13 = {
+T.RT_14 = {
   IsMultiQuest = false,
   SubRegionId = 104110,
   nextQuestIds = T.RT_2
 }
-T.RT_14 = {
+T.RT_15 = {
+  DeliverType = 1,
+  Id = 104301,
+  IsWhite = false,
+  StartIndex = 1
+}
+T.RT_16 = {
   IsMultiQuest = false,
   SubRegionId = 104104,
   nextQuestIds = T.RT_2
 }
-T.RT_15 = {
+T.RT_17 = {
   IsMultiQuest = false,
   SubRegionId = 104105,
   nextQuestIds = T.RT_2
 }
-T.RT_16 = {
+T.RT_18 = {
   IsMultiQuest = false,
   SubRegionId = 101105,
   nextQuestIds = T.RT_2
 }
-T.RT_17 = {
+T.RT_19 = {
   DeliverType = 1,
   Id = 101105,
   IsWhite = false,
   StartIndex = 1
 }
-T.RT_18 = {
+T.RT_20 = {
   DeliverType = 1,
   Id = 101101,
   IsWhite = false,
   StartIndex = 4
 }
-T.RT_19 = {
-  IsMultiQuest = false,
-  SubRegionId = 101103,
-  nextQuestIds = T.RT_2
+T.RT_21 = {
+  DeliverType = 1,
+  Id = 104501,
+  IsWhite = false,
+  StartIndex = 1
 }
-T.RT_20 = {
-  IsMultiQuest = false,
-  SubRegionId = 101101,
-  nextQuestIds = T.RT_2
-}
-T.RT_21 = {Success = 20020905}
 T.RT_22 = {
-  IsMultiQuest = false,
-  SubRegionId = 101101,
-  nextQuestId = 20020905,
-  nextQuestIds = T.RT_21
+  DeliverType = 1,
+  Id = 104506,
+  IsWhite = false,
+  StartIndex = 1
 }
 T.RT_23 = {
+  DeliverType = 1,
+  Id = 105501,
+  IsWhite = false,
+  StartIndex = 1
+}
+T.RT_24 = {
+  DeliverType = 1,
+  Id = 105601,
+  IsWhite = false,
+  StartIndex = 1
+}
+T.RT_25 = {
+  DeliverType = 1,
+  Id = 105201,
+  IsWhite = false,
+  StartIndex = 1
+}
+T.RT_26 = {
+  IsMultiQuest = false,
+  SubRegionId = 105201,
+  nextQuestIds = T.RT_2
+}
+T.RT_27 = {
+  DeliverType = 1,
+  Id = 104504,
+  IsWhite = false,
+  StartIndex = 2
+}
+T.RT_28 = {
+  DeliverType = 1,
+  Id = 105301,
+  IsWhite = false,
+  StartIndex = 1
+}
+T.RT_29 = {
+  DeliverType = 1,
+  Id = 104503,
+  IsWhite = false,
+  StartIndex = 1
+}
+T.RT_30 = {
+  IsMultiQuest = false,
+  SubRegionId = 104504,
+  nextQuestIds = T.RT_2
+}
+T.RT_31 = {
+  IsMultiQuest = false,
+  SubRegionId = 104501,
+  nextQuestIds = T.RT_2
+}
+T.RT_32 = {
+  IsMultiQuest = false,
+  SubRegionId = 104506,
+  nextQuestIds = T.RT_2
+}
+T.RT_33 = {
   IsMultiQuest = false,
   SubRegionId = 104108,
   nextQuestIds = T.RT_2
 }
-T.RT_24 = {
+T.RT_34 = {
+  IsMultiQuest = false,
+  SubRegionId = 101103,
+  nextQuestIds = T.RT_2
+}
+T.RT_35 = {
+  IsMultiQuest = false,
+  SubRegionId = 101101,
+  nextQuestIds = T.RT_2
+}
+T.RT_36 = {Success = 20020905}
+T.RT_37 = {
+  IsMultiQuest = false,
+  SubRegionId = 101101,
+  nextQuestId = 20020905,
+  nextQuestIds = T.RT_36
+}
+T.RT_38 = {
   IsMultiQuest = false,
   SubRegionId = 104107,
   nextQuestIds = T.RT_2
@@ -194,11 +273,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 10010111,
         nextQuestIds = {Success = 10010111}
       },
-      [10010111] = {
-        IsMultiQuest = false,
-        SubRegionId = 100101,
-        nextQuestIds = T.RT_2
-      }
+      [10010111] = T.RT_3
     },
     StartQuestId = 10010101
   },
@@ -321,11 +396,11 @@ return ReadOnly("STLExportQuestChain", {
       [10010307] = {
         IsMultiQuest = false,
         SubRegionId = 0,
-        SuccQuestDeliver = T.RT_3,
+        SuccQuestDeliver = T.RT_4,
         nextQuestId = 10010308,
         nextQuestIds = {Success = 10010308}
       },
-      [10010308] = T.RT_4,
+      [10010308] = T.RT_5,
       [10010310] = {
         IsMultiQuest = false,
         SubRegionId = 0,
@@ -407,7 +482,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 10020112,
         nextQuestIds = {Success = 10020112}
       },
-      [10020112] = T.RT_4
+      [10020112] = T.RT_5
     },
     StartQuestId = 10020101
   },
@@ -486,7 +561,7 @@ return ReadOnly("STLExportQuestChain", {
       [10020215] = {
         IsMultiQuest = false,
         SubRegionId = 101702,
-        SuccQuestDeliver = T.RT_3,
+        SuccQuestDeliver = T.RT_4,
         nextQuestId = 10020221,
         nextQuestIds = {Success = 10020221}
       },
@@ -502,7 +577,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 10020223,
         nextQuestIds = {Success = 10020223}
       },
-      [10020223] = T.RT_5
+      [10020223] = T.RT_6
     },
     StartQuestId = 10020201
   },
@@ -584,7 +659,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 10020316,
         nextQuestIds = {Success = 10020316}
       },
-      [10020316] = T.RT_4
+      [10020316] = T.RT_5
     },
     StartQuestId = 10020301
   },
@@ -660,7 +735,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 10020412,
         nextQuestIds = {Success = 10020412}
       },
-      [10020412] = T.RT_4
+      [10020412] = T.RT_5
     },
     StartQuestId = 10020401
   },
@@ -712,7 +787,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 10020507,
         nextQuestIds = {Success = 10020507}
       },
-      [10020507] = T.RT_4
+      [10020507] = T.RT_5
     },
     StartQuestId = 10020501
   },
@@ -782,7 +857,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 10020615,
         nextQuestIds = {Success = 10020615}
       },
-      [10020615] = T.RT_4,
+      [10020615] = T.RT_5,
       [10020651] = {
         IsMultiQuest = false,
         SubRegionId = 0,
@@ -949,7 +1024,7 @@ return ReadOnly("STLExportQuestChain", {
         IsMultiQuest = false,
         StartQuestDeliver = T.RT_1,
         SubRegionId = 0,
-        SuccQuestDeliver = T.RT_6,
+        SuccQuestDeliver = T.RT_7,
         nextQuestIds = T.RT_2
       }
     },
@@ -1045,7 +1120,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 10030116,
         nextQuestIds = {Success = 10030116}
       },
-      [10030116] = T.RT_4,
+      [10030116] = T.RT_5,
       [10030197] = {
         IsMultiQuest = false,
         SubRegionId = 101101,
@@ -1115,7 +1190,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 10030214,
         nextQuestIds = {Success = 10030214}
       },
-      [10030214] = T.RT_8,
+      [10030214] = T.RT_9,
       [10030299] = {
         IsMultiQuest = false,
         SubRegionId = 0,
@@ -1131,7 +1206,7 @@ return ReadOnly("STLExportQuestChain", {
     IsMultiEndQuest = false,
     QuestChainId = 100303,
     Quests = {
-      [10030301] = T.RT_4,
+      [10030301] = T.RT_5,
       [10030394] = {
         IsMultiQuest = false,
         SubRegionId = 101108,
@@ -1221,7 +1296,7 @@ return ReadOnly("STLExportQuestChain", {
       [10030499] = {
         IsMultiQuest = false,
         SubRegionId = 0,
-        SuccQuestDeliver = T.RT_7,
+        SuccQuestDeliver = T.RT_8,
         nextQuestId = 10030401,
         nextQuestIds = {Success = 10030401}
       }
@@ -1303,7 +1378,7 @@ return ReadOnly("STLExportQuestChain", {
       [10030510] = {
         IsMultiQuest = false,
         SubRegionId = 101101,
-        SuccQuestDeliver = T.RT_9,
+        SuccQuestDeliver = T.RT_10,
         nextQuestId = 10030511,
         nextQuestIds = {Success = 10030511}
       },
@@ -1313,7 +1388,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 10030512,
         nextQuestIds = {Success = 10030512}
       },
-      [10030512] = T.RT_10
+      [10030512] = T.RT_11
     },
     StartQuestId = 10030501
   },
@@ -1326,7 +1401,7 @@ return ReadOnly("STLExportQuestChain", {
       [10030601] = {
         IsMultiQuest = false,
         SubRegionId = 101901,
-        SuccQuestDeliver = T.RT_7,
+        SuccQuestDeliver = T.RT_8,
         nextQuestIds = T.RT_2
       }
     },
@@ -1344,7 +1419,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 10030702,
         nextQuestIds = {Success = 10030702}
       },
-      [10030702] = T.RT_8
+      [10030702] = T.RT_9
     },
     StartQuestId = 10030701
   },
@@ -1397,7 +1472,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 11010109,
         nextQuestIds = {Success = 11010109}
       },
-      [11010109] = T.RT_11
+      [11010109] = T.RT_12
     },
     StartQuestId = 11010103
   },
@@ -1437,7 +1512,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 11010303,
         nextQuestIds = {Success = 11010303}
       },
-      [11010308] = T.RT_11,
+      [11010308] = T.RT_12,
       [11010309] = {
         IsMultiQuest = false,
         SubRegionId = 102101,
@@ -1543,7 +1618,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 11010516,
         nextQuestIds = {Success = 11010516}
       },
-      [11010516] = T.RT_12,
+      [11010516] = T.RT_13,
       [11010518] = {
         IsMultiQuest = false,
         SubRegionId = 102101,
@@ -1643,7 +1718,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 11010704,
         nextQuestIds = {Success = 11010704}
       },
-      [11010706] = T.RT_12
+      [11010706] = T.RT_13
     },
     StartQuestId = 11010702
   },
@@ -1766,7 +1841,7 @@ return ReadOnly("STLExportQuestChain", {
       [11010906] = {
         IsMultiQuest = false,
         SubRegionId = 102104,
-        SuccQuestDeliver = T.RT_9,
+        SuccQuestDeliver = T.RT_10,
         nextQuestId = 11010909,
         nextQuestIds = {Success = 11010909}
       },
@@ -1785,7 +1860,7 @@ return ReadOnly("STLExportQuestChain", {
       [11010909] = {
         IsMultiQuest = false,
         SubRegionId = 101901,
-        SuccQuestDeliver = T.RT_6,
+        SuccQuestDeliver = T.RT_7,
         nextQuestIds = T.RT_2
       },
       [11010910] = {
@@ -1821,7 +1896,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 12000104,
         nextQuestIds = {Success = 12000104}
       },
-      [12000104] = T.RT_4
+      [12000104] = T.RT_5
     },
     StartQuestId = 12000101
   },
@@ -1879,7 +1954,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 12000209,
         nextQuestIds = {Success = 12000209}
       },
-      [12000209] = T.RT_5
+      [12000209] = T.RT_6
     },
     StartQuestId = 12000201
   },
@@ -1892,7 +1967,7 @@ return ReadOnly("STLExportQuestChain", {
       [12000301] = {
         IsMultiQuest = false,
         SubRegionId = 101107,
-        SuccQuestDeliver = T.RT_6,
+        SuccQuestDeliver = T.RT_7,
         nextQuestId = 12000302,
         nextQuestIds = {Success = 12000302}
       },
@@ -2018,7 +2093,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 12010112,
         nextQuestIds = {Success = 12010112}
       },
-      [12010112] = T.RT_4
+      [12010112] = T.RT_5
     },
     StartQuestId = 12010101
   },
@@ -2100,7 +2175,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 12010214,
         nextQuestIds = {Success = 12010214}
       },
-      [12010214] = T.RT_4,
+      [12010214] = T.RT_5,
       [12010250] = {
         IsMultiQuest = false,
         SubRegionId = 104110,
@@ -2236,8 +2311,8 @@ return ReadOnly("STLExportQuestChain", {
           ["虬先生"] = 12010318
         }
       },
-      [12010317] = T.RT_13,
-      [12010318] = T.RT_13,
+      [12010317] = T.RT_14,
+      [12010318] = T.RT_14,
       [12010320] = {
         IsMultiQuest = false,
         SubRegionId = 104110,
@@ -2352,12 +2427,7 @@ return ReadOnly("STLExportQuestChain", {
       [12010415] = {
         IsMultiQuest = false,
         SubRegionId = 104104,
-        SuccQuestDeliver = {
-          DeliverType = 1,
-          Id = 104301,
-          IsWhite = false,
-          StartIndex = 1
-        },
+        SuccQuestDeliver = T.RT_15,
         nextQuestId = 12010416,
         nextQuestIds = {Success = 12010416}
       },
@@ -2403,7 +2473,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 12010420,
         nextQuestIds = {Success = 12010420}
       },
-      [12010420] = T.RT_14
+      [12010420] = T.RT_16
     },
     StartQuestId = 12010401
   },
@@ -2565,7 +2635,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 12010608,
         nextQuestIds = {Success = 12010608}
       },
-      [12010608] = T.RT_15
+      [12010608] = T.RT_17
     },
     StartQuestId = 12010601
   },
@@ -2620,7 +2690,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 12011109,
         nextQuestIds = {Success = 12011109}
       },
-      [12011109] = T.RT_16,
+      [12011109] = T.RT_18,
       [12011110] = {
         IsMultiQuest = false,
         TargetMode = {TargetCount = 1, TargetId = 70151},
@@ -2681,7 +2751,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 12011207,
         nextQuestIds = {Success = 12011207}
       },
-      [12011207] = T.RT_16,
+      [12011207] = T.RT_18,
       [12011210] = {
         IsMultiQuest = false,
         TargetMode = {TargetCount = 1, TargetId = 70152},
@@ -2718,7 +2788,7 @@ return ReadOnly("STLExportQuestChain", {
       [12011303] = {
         IsMultiQuest = false,
         SubRegionId = 101101,
-        SuccQuestDeliver = T.RT_17,
+        SuccQuestDeliver = T.RT_19,
         nextQuestId = 12011305,
         nextQuestIds = {Success = 12011305}
       },
@@ -2743,7 +2813,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 12011308,
         nextQuestIds = {Success = 12011308}
       },
-      [12011308] = T.RT_16,
+      [12011308] = T.RT_18,
       [12011350] = {
         IsMultiQuest = false,
         SubRegionId = 101105,
@@ -2768,14 +2838,14 @@ return ReadOnly("STLExportQuestChain", {
       [12011403] = {
         IsMultiQuest = false,
         SubRegionId = 101101,
-        SuccQuestDeliver = T.RT_17,
+        SuccQuestDeliver = T.RT_19,
         nextQuestId = 12011404,
         nextQuestIds = {Success = 12011404}
       },
       [12011404] = {
         IsMultiQuest = false,
         SubRegionId = 101105,
-        SuccQuestDeliver = T.RT_18,
+        SuccQuestDeliver = T.RT_20,
         nextQuestId = 12011405,
         nextQuestIds = {Success = 12011405}
       },
@@ -2818,7 +2888,7 @@ return ReadOnly("STLExportQuestChain", {
       [12011411] = {
         IsMultiQuest = false,
         SubRegionId = 101105,
-        SuccQuestDeliver = T.RT_18,
+        SuccQuestDeliver = T.RT_20,
         nextQuestId = 12011415,
         nextQuestIds = {Success = 12011415}
       },
@@ -2837,11 +2907,11 @@ return ReadOnly("STLExportQuestChain", {
           ["未完成副本"] = 12011420
         }
       },
-      [12011414] = T.RT_16,
+      [12011414] = T.RT_18,
       [12011415] = {
         IsMultiQuest = false,
         SubRegionId = 101101,
-        SuccQuestDeliver = T.RT_17,
+        SuccQuestDeliver = T.RT_19,
         nextQuestId = 12011412,
         nextQuestIds = {Success = 12011412}
       },
@@ -2859,6 +2929,957 @@ return ReadOnly("STLExportQuestChain", {
       }
     },
     StartQuestId = 12011450
+  },
+  [120201] = {
+    EndQuestId = 12020112,
+    HavePreQuest = false,
+    IsMultiEndQuest = false,
+    QuestChainId = 120201,
+    Quests = {
+      [12020101] = {
+        IsMultiQuest = false,
+        SubRegionId = 105602,
+        SuccQuestDeliver = T.RT_21,
+        nextQuestId = 12020102,
+        nextQuestIds = {Success = 12020102}
+      },
+      [12020102] = {
+        IsMultiQuest = false,
+        SubRegionId = 104501,
+        nextQuestId = 12020103,
+        nextQuestIds = {Success = 12020103}
+      },
+      [12020103] = {
+        IsMultiQuest = false,
+        SubRegionId = 104501,
+        nextQuestId = 12020104,
+        nextQuestIds = {Success = 12020104}
+      },
+      [12020104] = {
+        IsMultiQuest = false,
+        SubRegionId = 104501,
+        nextQuestId = 12020105,
+        nextQuestIds = {Success = 12020105}
+      },
+      [12020105] = {
+        IsMultiQuest = false,
+        SubRegionId = 104501,
+        nextQuestId = 12020106,
+        nextQuestIds = {Success = 12020106}
+      },
+      [12020106] = {
+        IsMultiQuest = false,
+        SubRegionId = 104501,
+        nextQuestId = 12020107,
+        nextQuestIds = {Success = 12020107}
+      },
+      [12020107] = {
+        IsMultiQuest = false,
+        SubRegionId = 104503,
+        nextQuestId = 12020108,
+        nextQuestIds = {Success = 12020108}
+      },
+      [12020108] = {
+        IsMultiQuest = false,
+        SubRegionId = 104502,
+        nextQuestId = 12020122,
+        nextQuestIds = {Success = 12020122}
+      },
+      [12020109] = {
+        IsMultiQuest = false,
+        SubRegionId = 104503,
+        nextQuestId = 12020125,
+        nextQuestIds = {Success = 12020125}
+      },
+      [12020110] = {
+        IsMultiQuest = false,
+        SubRegionId = 104503,
+        nextQuestId = 12020111,
+        nextQuestIds = {Success = 12020111}
+      },
+      [12020111] = {
+        IsMultiQuest = false,
+        SubRegionId = 104503,
+        nextQuestId = 12020112,
+        nextQuestIds = {Success = 12020112}
+      },
+      [12020112] = {
+        IsMultiQuest = false,
+        SubRegionId = 104503,
+        SuccQuestDeliver = {
+          DeliverType = 1,
+          Id = 104505,
+          IsWhite = false,
+          StartIndex = 1
+        },
+        nextQuestIds = T.RT_2
+      },
+      [12020122] = {
+        IsMultiQuest = false,
+        SubRegionId = 104502,
+        nextQuestId = 12020109,
+        nextQuestIds = {Success = 12020109}
+      },
+      [12020123] = {
+        IsMultiQuest = false,
+        SubRegionId = 104503,
+        nextQuestId = 12020124,
+        nextQuestIds = {Success = 12020124}
+      },
+      [12020124] = {
+        IsMultiQuest = false,
+        SubRegionId = 104503,
+        nextQuestId = 12020110,
+        nextQuestIds = {Success = 12020110}
+      },
+      [12020125] = {
+        IsMultiQuest = false,
+        SubRegionId = 104503,
+        nextQuestId = 12020123,
+        nextQuestIds = {Success = 12020123}
+      }
+    },
+    StartQuestId = 12020101
+  },
+  [120202] = {
+    EndQuestId = 12020212,
+    HavePreQuest = false,
+    IsMultiEndQuest = false,
+    QuestChainId = 120202,
+    Quests = {
+      [12020201] = {
+        IsMultiQuest = false,
+        SubRegionId = 104505,
+        nextQuestId = 12020202,
+        nextQuestIds = {Success = 12020202}
+      },
+      [12020202] = {
+        IsMultiQuest = false,
+        SubRegionId = 104503,
+        nextQuestId = 12020203,
+        nextQuestIds = {Success = 12020203}
+      },
+      [12020203] = {
+        IsMultiQuest = false,
+        SubRegionId = 104503,
+        nextQuestId = 12020204,
+        nextQuestIds = {Success = 12020204}
+      },
+      [12020204] = {
+        IsMultiQuest = false,
+        SubRegionId = 104503,
+        nextQuestId = 12020214,
+        nextQuestIds = {Success = 12020214}
+      },
+      [12020205] = {
+        IsMultiQuest = false,
+        SubRegionId = 105101,
+        nextQuestId = 12020206,
+        nextQuestIds = {Success = 12020206}
+      },
+      [12020206] = {
+        IsMultiQuest = false,
+        SubRegionId = 105101,
+        nextQuestId = 12020207,
+        nextQuestIds = {Success = 12020207}
+      },
+      [12020207] = {
+        IsMultiQuest = false,
+        SubRegionId = 105101,
+        nextQuestId = 12020213,
+        nextQuestIds = {Success = 12020213}
+      },
+      [12020208] = {
+        IsMultiQuest = false,
+        SubRegionId = 105101,
+        SuccQuestDeliver = T.RT_22,
+        nextQuestId = 12020210,
+        nextQuestIds = {Success = 12020210}
+      },
+      [12020210] = {
+        IsMultiQuest = false,
+        SubRegionId = 104506,
+        SuccQuestDeliver = {
+          DeliverType = 1,
+          Id = 104503,
+          IsWhite = false,
+          StartIndex = 2
+        },
+        nextQuestId = 12020211,
+        nextQuestIds = {Success = 12020211}
+      },
+      [12020211] = {
+        IsMultiQuest = false,
+        SubRegionId = 104503,
+        nextQuestId = 12020212,
+        nextQuestIds = {Success = 12020212}
+      },
+      [12020212] = {
+        IsMultiQuest = false,
+        SubRegionId = 104503,
+        SuccQuestDeliver = T.RT_23,
+        nextQuestIds = T.RT_2
+      },
+      [12020213] = {
+        IsMultiQuest = false,
+        SubRegionId = 105101,
+        nextQuestId = 12020208,
+        nextQuestIds = {Success = 12020208}
+      },
+      [12020214] = {
+        IsMultiQuest = false,
+        SubRegionId = 104503,
+        SuccQuestDeliver = {
+          DeliverType = 1,
+          Id = 105101,
+          IsWhite = false,
+          StartIndex = 1
+        },
+        nextQuestId = 12020205,
+        nextQuestIds = {Success = 12020205}
+      }
+    },
+    StartQuestId = 12020201
+  },
+  [120203] = {
+    EndQuestId = 12020321,
+    HavePreQuest = false,
+    IsMultiEndQuest = false,
+    QuestChainId = 120203,
+    Quests = {
+      [12020301] = {
+        IsMultiQuest = false,
+        SubRegionId = 105501,
+        nextQuestId = 12020302,
+        nextQuestIds = {Success = 12020302}
+      },
+      [12020302] = {
+        IsMultiQuest = false,
+        SubRegionId = 105501,
+        nextQuestId = 12020303,
+        nextQuestIds = {Success = 12020303}
+      },
+      [12020303] = {
+        IsMultiQuest = false,
+        SubRegionId = 105501,
+        nextQuestId = 12020304,
+        nextQuestIds = {Success = 12020304}
+      },
+      [12020304] = {
+        IsMultiQuest = false,
+        SubRegionId = 105501,
+        SuccQuestDeliver = T.RT_24,
+        nextQuestId = 12020305,
+        nextQuestIds = {Success = 12020305}
+      },
+      [12020305] = {
+        IsMultiQuest = false,
+        SubRegionId = 105601,
+        SuccQuestDeliver = T.RT_23,
+        nextQuestId = 12020306,
+        nextQuestIds = {Success = 12020306}
+      },
+      [12020306] = {
+        IsMultiQuest = false,
+        SubRegionId = 105501,
+        nextQuestId = 12020307,
+        nextQuestIds = {Success = 12020307}
+      },
+      [12020307] = {
+        IsMultiQuest = false,
+        SubRegionId = 104505,
+        nextQuestId = 12020308,
+        nextQuestIds = {Success = 12020308}
+      },
+      [12020308] = {
+        IsMultiQuest = false,
+        SubRegionId = 104505,
+        nextQuestId = 12020323,
+        nextQuestIds = {Success = 12020323}
+      },
+      [12020309] = {
+        IsMultiQuest = false,
+        SubRegionId = 104505,
+        SuccQuestDeliver = T.RT_25,
+        nextQuestId = 12020310,
+        nextQuestIds = {Success = 12020310}
+      },
+      [12020310] = {
+        IsMultiQuest = false,
+        SubRegionId = 105201,
+        nextQuestId = 12020311,
+        nextQuestIds = {Success = 12020311}
+      },
+      [12020311] = {
+        IsMultiQuest = false,
+        SubRegionId = 105201,
+        nextQuestId = 12020312,
+        nextQuestIds = {Success = 12020312}
+      },
+      [12020312] = {
+        IsMultiQuest = false,
+        SubRegionId = 105201,
+        nextQuestId = 12020313,
+        nextQuestIds = {Success = 12020313}
+      },
+      [12020313] = {
+        IsMultiQuest = false,
+        SubRegionId = 105201,
+        nextQuestId = 12020314,
+        nextQuestIds = {Success = 12020314}
+      },
+      [12020314] = {
+        IsMultiQuest = false,
+        SubRegionId = 105201,
+        nextQuestId = 12020315,
+        nextQuestIds = {Success = 12020315}
+      },
+      [12020315] = {
+        IsMultiQuest = false,
+        SubRegionId = 105201,
+        nextQuestId = 12020316,
+        nextQuestIds = {Success = 12020316}
+      },
+      [12020316] = {
+        IsMultiQuest = false,
+        SubRegionId = 105201,
+        nextQuestId = 12020317,
+        nextQuestIds = {Success = 12020317}
+      },
+      [12020317] = {
+        IsMultiQuest = false,
+        SubRegionId = 105201,
+        nextQuestId = 12020318,
+        nextQuestIds = {Success = 12020318}
+      },
+      [12020318] = {
+        IsMultiQuest = false,
+        SubRegionId = 105201,
+        nextQuestId = 12020319,
+        nextQuestIds = {Success = 12020319}
+      },
+      [12020319] = {
+        IsMultiQuest = false,
+        SubRegionId = 105201,
+        nextQuestId = 12020320,
+        nextQuestIds = {Success = 12020320}
+      },
+      [12020320] = {
+        IsMultiQuest = false,
+        SubRegionId = 105201,
+        nextQuestId = 12020321,
+        nextQuestIds = {Success = 12020321}
+      },
+      [12020321] = T.RT_26,
+      [12020322] = {
+        IsMultiQuest = false,
+        SubRegionId = 104505,
+        nextQuestId = 12020309,
+        nextQuestIds = {Success = 12020309}
+      },
+      [12020323] = {
+        IsMultiQuest = false,
+        SubRegionId = 104505,
+        nextQuestId = 12020322,
+        nextQuestIds = {Success = 12020322}
+      }
+    },
+    StartQuestId = 12020301
+  },
+  [120204] = {
+    EndQuestId = 12020414,
+    HavePreQuest = false,
+    IsMultiEndQuest = false,
+    QuestChainId = 120204,
+    Quests = {
+      [12020401] = {
+        IsMultiQuest = false,
+        SubRegionId = 105201,
+        nextQuestId = 12020402,
+        nextQuestIds = {Success = 12020402}
+      },
+      [12020402] = {
+        IsMultiQuest = false,
+        SubRegionId = 105201,
+        nextQuestId = 12020403,
+        nextQuestIds = {Success = 12020403}
+      },
+      [12020403] = {
+        IsMultiQuest = false,
+        SubRegionId = 105201,
+        nextQuestId = 12020404,
+        nextQuestIds = {Success = 12020404}
+      },
+      [12020404] = {
+        IsMultiQuest = false,
+        SubRegionId = 105201,
+        nextQuestId = 12020405,
+        nextQuestIds = {Success = 12020405}
+      },
+      [12020405] = {
+        IsMultiQuest = false,
+        SubRegionId = 105201,
+        SuccQuestDeliver = {
+          DeliverType = 1,
+          Id = 104801,
+          IsWhite = false,
+          StartIndex = 1
+        },
+        nextQuestId = 12020406,
+        nextQuestIds = {Success = 12020406}
+      },
+      [12020406] = {
+        IsMultiQuest = false,
+        SubRegionId = 104801,
+        nextQuestId = 12020407,
+        nextQuestIds = {Success = 12020407}
+      },
+      [12020407] = {
+        IsMultiQuest = false,
+        SubRegionId = 104801,
+        SuccQuestDeliver = T.RT_25,
+        nextQuestId = 12020409,
+        nextQuestIds = {Success = 12020409}
+      },
+      [12020409] = {
+        IsMultiQuest = false,
+        SubRegionId = 105201,
+        nextQuestId = 12020410,
+        nextQuestIds = {Success = 12020410}
+      },
+      [12020410] = {
+        IsMultiQuest = false,
+        SubRegionId = 105201,
+        nextQuestId = 12020411,
+        nextQuestIds = {Success = 12020411}
+      },
+      [12020411] = {
+        IsMultiQuest = false,
+        SubRegionId = 105201,
+        nextQuestId = 12020412,
+        nextQuestIds = {Success = 12020412}
+      },
+      [12020412] = {
+        IsMultiQuest = false,
+        SubRegionId = 105201,
+        SuccQuestDeliver = T.RT_24,
+        nextQuestId = 12020413,
+        nextQuestIds = {Success = 12020413}
+      },
+      [12020413] = {
+        IsMultiQuest = false,
+        SubRegionId = 105601,
+        SuccQuestDeliver = T.RT_22,
+        nextQuestId = 12020414,
+        nextQuestIds = {Success = 12020414}
+      },
+      [12020414] = {
+        IsMultiQuest = false,
+        SubRegionId = 104506,
+        SuccQuestDeliver = T.RT_25,
+        nextQuestIds = T.RT_2
+      }
+    },
+    StartQuestId = 12020401
+  },
+  [120205] = {
+    EndQuestId = 12020517,
+    HavePreQuest = false,
+    IsMultiEndQuest = false,
+    QuestChainId = 120205,
+    Quests = {
+      [12020501] = {
+        IsMultiQuest = false,
+        SubRegionId = 105201,
+        nextQuestId = 12020502,
+        nextQuestIds = {Success = 12020502}
+      },
+      [12020502] = {
+        IsMultiQuest = false,
+        SubRegionId = 105201,
+        nextQuestId = 12020503,
+        nextQuestIds = {Success = 12020503}
+      },
+      [12020503] = {
+        IsMultiQuest = false,
+        SubRegionId = 105201,
+        nextQuestId = 12020505,
+        nextQuestIds = {Success = 12020505}
+      },
+      [12020505] = {
+        IsMultiQuest = false,
+        SubRegionId = 105201,
+        nextQuestId = 12020506,
+        nextQuestIds = {Success = 12020506}
+      },
+      [12020506] = {
+        IsMultiQuest = false,
+        SubRegionId = 105201,
+        SuccQuestDeliver = T.RT_27,
+        nextQuestId = 12020507,
+        nextQuestIds = {Success = 12020507}
+      },
+      [12020507] = {
+        IsMultiQuest = false,
+        SubRegionId = 104504,
+        nextQuestId = 12020508,
+        nextQuestIds = {Success = 12020508}
+      },
+      [12020508] = {
+        IsMultiQuest = false,
+        SubRegionId = 104504,
+        nextQuestId = 12020509,
+        nextQuestIds = {Success = 12020509}
+      },
+      [12020509] = {
+        IsMultiQuest = false,
+        SubRegionId = 104504,
+        nextQuestId = 12020510,
+        nextQuestIds = {Success = 12020510}
+      },
+      [12020510] = {
+        IsMultiQuest = false,
+        SubRegionId = 104504,
+        nextQuestId = 12020511,
+        nextQuestIds = {Success = 12020511}
+      },
+      [12020511] = {
+        IsMultiQuest = false,
+        SubRegionId = 104504,
+        SuccQuestDeliver = T.RT_24,
+        nextQuestId = 12020512,
+        nextQuestIds = {Success = 12020512}
+      },
+      [12020512] = {
+        IsMultiQuest = false,
+        SubRegionId = 105601,
+        SuccQuestDeliver = T.RT_28,
+        nextQuestId = 12020513,
+        nextQuestIds = {Success = 12020513}
+      },
+      [12020513] = {
+        IsMultiQuest = false,
+        SubRegionId = 105301,
+        nextQuestId = 12020516,
+        nextQuestIds = {Success = 12020516}
+      },
+      [12020516] = {
+        IsMultiQuest = false,
+        SubRegionId = 105301,
+        SuccQuestDeliver = T.RT_29,
+        nextQuestId = 12020517,
+        nextQuestIds = {Success = 12020517}
+      },
+      [12020517] = {
+        IsMultiQuest = false,
+        SubRegionId = 104503,
+        SuccQuestDeliver = T.RT_27,
+        nextQuestIds = T.RT_2
+      }
+    },
+    StartQuestId = 12020501
+  },
+  [120206] = {
+    EndQuestId = 12020628,
+    HavePreQuest = false,
+    IsMultiEndQuest = false,
+    QuestChainId = 120206,
+    Quests = {
+      [12020601] = {
+        IsMultiQuest = false,
+        SubRegionId = 104504,
+        SuccQuestDeliver = T.RT_21,
+        nextQuestId = 12020602,
+        nextQuestIds = {Success = 12020602}
+      },
+      [12020602] = {
+        IsMultiQuest = false,
+        SubRegionId = 104501,
+        nextQuestId = 12020603,
+        nextQuestIds = {Success = 12020603}
+      },
+      [12020603] = {
+        IsMultiQuest = false,
+        SubRegionId = 104501,
+        nextQuestId = 12020605,
+        nextQuestIds = {Success = 12020605}
+      },
+      [12020605] = {
+        IsMultiQuest = false,
+        SubRegionId = 104501,
+        nextQuestId = 12020606,
+        nextQuestIds = {Success = 12020606}
+      },
+      [12020606] = {
+        IsMultiQuest = false,
+        SubRegionId = 104503,
+        nextQuestId = 12020607,
+        nextQuestIds = {Success = 12020607}
+      },
+      [12020607] = {
+        IsMultiQuest = false,
+        SubRegionId = 104503,
+        nextQuestId = 12020608,
+        nextQuestIds = {Success = 12020608}
+      },
+      [12020608] = {
+        IsMultiQuest = false,
+        SubRegionId = 104503,
+        nextQuestId = 12020610,
+        nextQuestIds = {Success = 12020610}
+      },
+      [12020610] = {
+        IsMultiQuest = false,
+        SubRegionId = 104503,
+        nextQuestId = 12020611,
+        nextQuestIds = {Success = 12020611}
+      },
+      [12020611] = {
+        IsMultiQuest = false,
+        SubRegionId = 104503,
+        SuccQuestDeliver = T.RT_22,
+        nextQuestId = 12020612,
+        nextQuestIds = {Success = 12020612}
+      },
+      [12020612] = {
+        IsMultiQuest = false,
+        SubRegionId = 104506,
+        SuccQuestDeliver = T.RT_28,
+        nextQuestId = 12020613,
+        nextQuestIds = {Success = 12020613}
+      },
+      [12020613] = {
+        IsMultiQuest = false,
+        SubRegionId = 105301,
+        nextQuestId = 12020614,
+        nextQuestIds = {Success = 12020614}
+      },
+      [12020614] = {
+        IsMultiQuest = false,
+        SubRegionId = 105301,
+        nextQuestId = 12020615,
+        nextQuestIds = {Success = 12020615}
+      },
+      [12020615] = {
+        IsMultiQuest = false,
+        SubRegionId = 105301,
+        nextQuestId = 12020616,
+        nextQuestIds = {Success = 12020616}
+      },
+      [12020616] = {
+        IsMultiQuest = false,
+        SubRegionId = 105301,
+        SuccQuestDeliver = T.RT_29,
+        nextQuestId = 12020617,
+        nextQuestIds = {Success = 12020617}
+      },
+      [12020617] = {
+        IsMultiQuest = false,
+        SubRegionId = 104503,
+        SuccQuestDeliver = T.RT_28,
+        nextQuestId = 12020619,
+        nextQuestIds = {Success = 12020619}
+      },
+      [12020619] = {
+        IsMultiQuest = false,
+        SubRegionId = 105301,
+        SuccQuestDeliver = {
+          DeliverType = 1,
+          Id = 105401,
+          IsWhite = false,
+          StartIndex = 1
+        },
+        nextQuestId = 12020620,
+        nextQuestIds = {Success = 12020620}
+      },
+      [12020620] = {
+        IsMultiQuest = false,
+        SubRegionId = 105401,
+        nextQuestId = 12020622,
+        nextQuestIds = {Success = 12020622}
+      },
+      [12020622] = {
+        IsMultiQuest = false,
+        SubRegionId = 105401,
+        SuccQuestDeliver = {
+          DeliverType = 1,
+          Id = 104506,
+          IsWhite = true,
+          StartIndex = 1
+        },
+        nextQuestId = 12020623,
+        nextQuestIds = {Success = 12020623}
+      },
+      [12020623] = {
+        IsMultiQuest = false,
+        SubRegionId = 104506,
+        nextQuestId = 12020624,
+        nextQuestIds = {Success = 12020624}
+      },
+      [12020624] = {
+        IsMultiQuest = false,
+        SubRegionId = 104506,
+        nextQuestId = 12020625,
+        nextQuestIds = {Success = 12020625}
+      },
+      [12020625] = {
+        IsMultiQuest = false,
+        SubRegionId = 104506,
+        nextQuestId = 12020626,
+        nextQuestIds = {Success = 12020626}
+      },
+      [12020626] = {
+        IsMultiQuest = false,
+        SubRegionId = 104506,
+        SuccQuestDeliver = T.RT_27,
+        nextQuestId = 12020627,
+        nextQuestIds = {Success = 12020627}
+      },
+      [12020627] = {
+        IsMultiQuest = false,
+        SubRegionId = 104504,
+        nextQuestId = 12020628,
+        nextQuestIds = {Success = 12020628}
+      },
+      [12020628] = T.RT_30
+    },
+    StartQuestId = 12020601
+  },
+  [120301] = {
+    EndQuestId = 12030105,
+    HavePreQuest = false,
+    IsMultiEndQuest = false,
+    QuestChainId = 120301,
+    Quests = {
+      [12030101] = {
+        IsMultiQuest = false,
+        SubRegionId = 104501,
+        nextQuestId = 12030102,
+        nextQuestIds = {Success = 12030102}
+      },
+      [12030102] = {
+        IsMultiQuest = false,
+        SubRegionId = 104501,
+        nextQuestId = 12030103,
+        nextQuestIds = {Success = 12030103}
+      },
+      [12030103] = {
+        IsMultiQuest = false,
+        SubRegionId = 104501,
+        nextQuestId = 12030104,
+        nextQuestIds = {Success = 12030104}
+      },
+      [12030104] = {
+        IsMultiQuest = false,
+        SubRegionId = 104501,
+        nextQuestId = 12030105,
+        nextQuestIds = {Success = 12030105}
+      },
+      [12030105] = T.RT_31
+    },
+    StartQuestId = 12030101
+  },
+  [120302] = {
+    EndQuestId = 12030205,
+    HavePreQuest = false,
+    IsMultiEndQuest = false,
+    QuestChainId = 120302,
+    Quests = {
+      [12030201] = {
+        IsMultiQuest = false,
+        SubRegionId = 104503,
+        nextQuestId = 12030202,
+        nextQuestIds = {Success = 12030202}
+      },
+      [12030202] = {
+        IsMultiQuest = false,
+        SubRegionId = 104503,
+        nextQuestId = 12030203,
+        nextQuestIds = {Success = 12030203}
+      },
+      [12030203] = {
+        IsMultiQuest = false,
+        SubRegionId = 104501,
+        nextQuestId = 12030204,
+        nextQuestIds = {Success = 12030204}
+      },
+      [12030204] = {
+        IsMultiQuest = false,
+        SubRegionId = 104501,
+        nextQuestId = 12030205,
+        nextQuestIds = {Success = 12030205}
+      },
+      [12030205] = T.RT_31
+    },
+    StartQuestId = 12030201
+  },
+  [120303] = {
+    EndQuestId = 12030304,
+    HavePreQuest = false,
+    IsMultiEndQuest = false,
+    QuestChainId = 120303,
+    Quests = {
+      [12030301] = {
+        IsMultiQuest = false,
+        SubRegionId = 104503,
+        nextQuestId = 12030302,
+        nextQuestIds = {Success = 12030302}
+      },
+      [12030302] = {
+        IsMultiQuest = false,
+        SubRegionId = 104503,
+        nextQuestId = 12030303,
+        nextQuestIds = {Success = 12030303}
+      },
+      [12030303] = {
+        IsMultiQuest = false,
+        SubRegionId = 104504,
+        nextQuestId = 12030304,
+        nextQuestIds = {Success = 12030304}
+      },
+      [12030304] = T.RT_30
+    },
+    StartQuestId = 12030301
+  },
+  [120304] = {
+    EndQuestId = 12030403,
+    HavePreQuest = false,
+    IsMultiEndQuest = false,
+    QuestChainId = 120304,
+    Quests = {
+      [12030401] = {
+        IsMultiQuest = false,
+        SubRegionId = 104503,
+        nextQuestId = 12030402,
+        nextQuestIds = {Success = 12030402}
+      },
+      [12030402] = {
+        IsMultiQuest = false,
+        SubRegionId = 104503,
+        nextQuestId = 12030403,
+        nextQuestIds = {Success = 12030403}
+      },
+      [12030403] = {
+        IsMultiQuest = false,
+        SubRegionId = 104503,
+        SuccQuestDeliver = T.RT_25,
+        nextQuestIds = T.RT_2
+      }
+    },
+    StartQuestId = 12030401
+  },
+  [120305] = {
+    EndQuestId = 12030504,
+    HavePreQuest = false,
+    IsMultiEndQuest = false,
+    QuestChainId = 120305,
+    Quests = {
+      [12030502] = {
+        IsMultiQuest = false,
+        SubRegionId = 105201,
+        nextQuestId = 12030503,
+        nextQuestIds = {Success = 12030503}
+      },
+      [12030503] = {
+        IsMultiQuest = false,
+        SubRegionId = 105201,
+        nextQuestId = 12030504,
+        nextQuestIds = {Success = 12030504}
+      },
+      [12030504] = T.RT_26
+    },
+    StartQuestId = 12030502
+  },
+  [120306] = {
+    EndQuestId = 12030604,
+    HavePreQuest = false,
+    IsMultiEndQuest = false,
+    QuestChainId = 120306,
+    Quests = {
+      [12030601] = {
+        IsMultiQuest = false,
+        SubRegionId = 104503,
+        nextQuestId = 12030602,
+        nextQuestIds = {Success = 12030602}
+      },
+      [12030602] = {
+        IsMultiQuest = false,
+        SubRegionId = 104503,
+        nextQuestId = 12030603,
+        nextQuestIds = {Success = 12030603}
+      },
+      [12030603] = {
+        IsMultiQuest = false,
+        SubRegionId = 104503,
+        nextQuestId = 12030604,
+        nextQuestIds = {Success = 12030604}
+      },
+      [12030604] = T.RT_30
+    },
+    StartQuestId = 12030601
+  },
+  [120307] = {
+    EndQuestId = 12030707,
+    HavePreQuest = false,
+    IsMultiEndQuest = false,
+    QuestChainId = 120307,
+    Quests = {
+      [12030701] = {
+        IsMultiQuest = false,
+        SubRegionId = 104503,
+        nextQuestId = 12030702,
+        nextQuestIds = {Success = 12030702}
+      },
+      [12030702] = {
+        IsMultiQuest = false,
+        SubRegionId = 104503,
+        nextQuestId = 12030703,
+        nextQuestIds = {Success = 12030703}
+      },
+      [12030703] = {
+        IsMultiQuest = false,
+        SubRegionId = 104504,
+        nextQuestId = 12030708,
+        nextQuestIds = {Success = 12030708}
+      },
+      [12030704] = {
+        IsMultiQuest = false,
+        SubRegionId = 104504,
+        nextQuestId = 12030705,
+        nextQuestIds = {Success = 12030705}
+      },
+      [12030705] = {
+        IsMultiQuest = false,
+        SubRegionId = 104504,
+        nextQuestId = 12030706,
+        nextQuestIds = {Success = 12030706}
+      },
+      [12030706] = {
+        IsMultiQuest = false,
+        SubRegionId = 104503,
+        SuccQuestDeliver = T.RT_22,
+        nextQuestId = 12030707,
+        nextQuestIds = {Success = 12030707}
+      },
+      [12030707] = T.RT_32,
+      [12030708] = {
+        IsMultiQuest = false,
+        SubRegionId = 104504,
+        nextQuestId = 12030704,
+        nextQuestIds = {Success = 12030704}
+      }
+    },
+    StartQuestId = 12030701
+  },
+  [120308] = {
+    EndQuestId = 12030801,
+    HavePreQuest = false,
+    IsMultiEndQuest = false,
+    QuestChainId = 120308,
+    Quests = {
+      [12030801] = T.RT_33
+    },
+    StartQuestId = 12030801
   },
   [200101] = {
     EndQuestId = 20010105,
@@ -2890,7 +3911,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20010105,
         nextQuestIds = {Success = 20010105}
       },
-      [20010105] = T.RT_4
+      [20010105] = T.RT_5
     },
     StartQuestId = 20010101
   },
@@ -2924,7 +3945,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20010205,
         nextQuestIds = {Success = 20010205}
       },
-      [20010205] = T.RT_4
+      [20010205] = T.RT_5
     },
     StartQuestId = 20010201
   },
@@ -2960,11 +3981,11 @@ return ReadOnly("STLExportQuestChain", {
       },
       [20010305] = {
         IsMultiQuest = false,
-        SubRegionId = 101103,
+        TargetMode = {TargetCount = 1, TargetId = 1400401},
         nextQuestId = 20010306,
         nextQuestIds = {Success = 20010306}
       },
-      [20010306] = T.RT_19
+      [20010306] = T.RT_34
     },
     StartQuestId = 20010301
   },
@@ -2983,7 +4004,7 @@ return ReadOnly("STLExportQuestChain", {
       [20010402] = {
         IsMultiQuest = false,
         SubRegionId = 101103,
-        SuccQuestDeliver = T.RT_3,
+        SuccQuestDeliver = T.RT_4,
         nextQuestId = 20010403,
         nextQuestIds = {Success = 20010403}
       },
@@ -3017,7 +4038,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20010410,
         nextQuestIds = {Success = 20010410}
       },
-      [20010408] = T.RT_5,
+      [20010408] = T.RT_6,
       [20010409] = {
         IsMultiQuest = false,
         SubRegionId = 101103,
@@ -3033,7 +4054,7 @@ return ReadOnly("STLExportQuestChain", {
       [20010415] = {
         IsMultiQuest = false,
         SubRegionId = 101702,
-        SuccQuestDeliver = T.RT_3,
+        SuccQuestDeliver = T.RT_4,
         nextQuestId = 20010408,
         nextQuestIds = {Success = 20010408}
       }
@@ -3077,8 +4098,8 @@ return ReadOnly("STLExportQuestChain", {
           ["【分支2.2】（交出在矿坑中得到的日记）"] = 20020107
         }
       },
-      [20020106] = T.RT_4,
-      [20020107] = T.RT_4
+      [20020106] = T.RT_5,
+      [20020107] = T.RT_5
     },
     StartQuestId = 20020100
   },
@@ -3125,8 +4146,8 @@ return ReadOnly("STLExportQuestChain", {
           ["（展示爱丽丝的日记）111"] = 20020320
         }
       },
-      [20020309] = T.RT_4,
-      [20020310] = T.RT_20,
+      [20020309] = T.RT_5,
+      [20020310] = T.RT_35,
       [20020312] = {
         IsMultiQuest = false,
         SubRegionId = 101101,
@@ -3185,7 +4206,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20020405,
         nextQuestIds = {Success = 20020405}
       },
-      [20020405] = T.RT_5
+      [20020405] = T.RT_6
     },
     StartQuestId = 20020400
   },
@@ -3220,7 +4241,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20020507,
         nextQuestIds = {Success = 20020507}
       },
-      [20020506] = T.RT_20,
+      [20020506] = T.RT_35,
       [20020507] = {
         IsMultiQuest = false,
         SubRegionId = 100101,
@@ -3291,7 +4312,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20020608,
         nextQuestIds = {Success = 20020608}
       },
-      [20020608] = T.RT_5,
+      [20020608] = T.RT_6,
       [20020609] = {
         IsMultiQuest = false,
         SubRegionId = 101101,
@@ -3338,7 +4359,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20020707,
         nextQuestIds = {Success = 20020707}
       },
-      [20020706] = T.RT_20,
+      [20020706] = T.RT_35,
       [20020707] = {
         IsMultiQuest = false,
         SubRegionId = 101305,
@@ -3389,15 +4410,15 @@ return ReadOnly("STLExportQuestChain", {
           ["选项3"] = 20020904
         }
       },
-      [20020903] = T.RT_22,
-      [20020904] = T.RT_22,
+      [20020903] = T.RT_37,
+      [20020904] = T.RT_37,
       [20020905] = {
         IsMultiQuest = false,
         SubRegionId = 101106,
         nextQuestId = 20020906,
         nextQuestIds = {Success = 20020906}
       },
-      [20020906] = T.RT_20
+      [20020906] = T.RT_35
     },
     StartQuestId = 20020901
   },
@@ -3425,7 +4446,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20021004,
         nextQuestIds = {Success = 20021004}
       },
-      [20021004] = T.RT_19,
+      [20021004] = T.RT_34,
       [20021007] = {
         IsMultiQuest = false,
         SubRegionId = 101702,
@@ -3472,7 +4493,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20021105,
         nextQuestIds = {Success = 20021105}
       },
-      [20021105] = T.RT_20
+      [20021105] = T.RT_35
     },
     StartQuestId = 20021100
   },
@@ -3498,7 +4519,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20021203,
         nextQuestIds = {Success = 20021203}
       },
-      [20021203] = T.RT_20,
+      [20021203] = T.RT_35,
       [20021205] = {
         IsMultiQuest = false,
         SubRegionId = 101103,
@@ -3514,7 +4535,7 @@ return ReadOnly("STLExportQuestChain", {
           ["分支2"] = 20021202
         }
       },
-      [20021207] = T.RT_20
+      [20021207] = T.RT_35
     },
     StartQuestId = 20021200
   },
@@ -3549,7 +4570,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20021304,
         nextQuestIds = {Success = 20021304}
       },
-      [20021304] = T.RT_20
+      [20021304] = T.RT_35
     },
     StartQuestId = 20021300
   },
@@ -3602,7 +4623,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20021508,
         nextQuestIds = {Success = 20021508}
       },
-      [20021508] = T.RT_20,
+      [20021508] = T.RT_35,
       [20021509] = {
         IsMultiQuest = false,
         TargetMode = {TargetCount = 1, TargetId = 10115},
@@ -3642,7 +4663,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20021604,
         nextQuestIds = {Success = 20021604}
       },
-      [20021604] = T.RT_19
+      [20021604] = T.RT_34
     },
     StartQuestId = 20021601
   },
@@ -3682,7 +4703,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20021906,
         nextQuestIds = {Success = 20021906}
       },
-      [20021906] = T.RT_19
+      [20021906] = T.RT_34
     },
     StartQuestId = 20021904
   },
@@ -3728,7 +4749,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20022009,
         nextQuestIds = {Success = 20022009}
       },
-      [20022009] = T.RT_20
+      [20022009] = T.RT_35
     },
     StartQuestId = 20022002
   },
@@ -3756,7 +4777,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20022104,
         nextQuestIds = {Success = 20022104}
       },
-      [20022104] = T.RT_4,
+      [20022104] = T.RT_5,
       [20022105] = {
         IsMultiQuest = false,
         SubRegionId = 0,
@@ -3818,7 +4839,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20022301,
         nextQuestIds = {Success = 20022301}
       },
-      [20022301] = T.RT_20
+      [20022301] = T.RT_35
     },
     StartQuestId = 20022300
   },
@@ -3846,7 +4867,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20022404,
         nextQuestIds = {Success = 20022404}
       },
-      [20022404] = T.RT_20
+      [20022404] = T.RT_35
     },
     StartQuestId = 20022401
   },
@@ -3874,7 +4895,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20022504,
         nextQuestIds = {Success = 20022504}
       },
-      [20022504] = T.RT_20
+      [20022504] = T.RT_35
     },
     StartQuestId = 20022501
   },
@@ -3896,8 +4917,8 @@ return ReadOnly("STLExportQuestChain", {
           ["选项2"] = 20022702
         }
       },
-      [20022702] = T.RT_20,
-      [20022703] = T.RT_20
+      [20022702] = T.RT_35,
+      [20022703] = T.RT_35
     },
     StartQuestId = 20022701
   },
@@ -3925,7 +4946,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20022804,
         nextQuestIds = {Success = 20022804}
       },
-      [20022804] = T.RT_4
+      [20022804] = T.RT_5
     },
     StartQuestId = 20022801
   },
@@ -3953,7 +4974,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20022904,
         nextQuestIds = {Success = 20022904}
       },
-      [20022904] = T.RT_4
+      [20022904] = T.RT_5
     },
     StartQuestId = 20022901
   },
@@ -4000,7 +5021,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20023007,
         nextQuestIds = {Success = 20023007}
       },
-      [20023007] = T.RT_20
+      [20023007] = T.RT_35
     },
     StartQuestId = 20023000
   },
@@ -4041,7 +5062,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20023108,
         nextQuestIds = {Success = 20023108}
       },
-      [20023108] = T.RT_20
+      [20023108] = T.RT_35
     },
     StartQuestId = 20023100
   },
@@ -4075,7 +5096,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20023205,
         nextQuestIds = {Success = 20023205}
       },
-      [20023205] = T.RT_20
+      [20023205] = T.RT_35
     },
     StartQuestId = 20023201
   },
@@ -4109,8 +5130,8 @@ return ReadOnly("STLExportQuestChain", {
           ["揭发"] = 20023306
         }
       },
-      [20023305] = T.RT_20,
-      [20023306] = T.RT_20
+      [20023305] = T.RT_35,
+      [20023306] = T.RT_35
     },
     StartQuestId = 20023301
   },
@@ -4126,7 +5147,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20023402,
         nextQuestIds = {Success = 20023402}
       },
-      [20023402] = T.RT_20
+      [20023402] = T.RT_35
     },
     StartQuestId = 20023401
   },
@@ -4165,7 +5186,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20023603,
         nextQuestIds = {Success = 20023603}
       },
-      [20023602] = T.RT_4,
+      [20023602] = T.RT_5,
       [20023603] = {
         IsMultiQuest = true,
         SubRegionId = 0,
@@ -4175,7 +5196,7 @@ return ReadOnly("STLExportQuestChain", {
           ["未合成"] = 20023602
         }
       },
-      [20023604] = T.RT_4
+      [20023604] = T.RT_5
     },
     StartQuestId = 20023601
   },
@@ -4209,7 +5230,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20030103,
         nextQuestIds = {Success = 20030103}
       },
-      [20030106] = T.RT_15
+      [20030106] = T.RT_17
     },
     StartQuestId = 20030100
   },
@@ -4244,7 +5265,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20030204,
         nextQuestIds = {Success = 20030204}
       },
-      [20030204] = T.RT_23
+      [20030204] = T.RT_33
     },
     StartQuestId = 20030200
   },
@@ -4279,7 +5300,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20030304,
         nextQuestIds = {Success = 20030304}
       },
-      [20030304] = T.RT_15
+      [20030304] = T.RT_17
     },
     StartQuestId = 20030300
   },
@@ -4344,7 +5365,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20030409,
         nextQuestIds = {Success = 20030409}
       },
-      [20030409] = T.RT_23
+      [20030409] = T.RT_33
     },
     StartQuestId = 20030400
   },
@@ -4402,7 +5423,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20030508,
         nextQuestIds = {Success = 20030508}
       },
-      [20030508] = T.RT_13,
+      [20030508] = T.RT_14,
       [20030509] = {
         IsMultiQuest = false,
         SubRegionId = 104110,
@@ -4437,7 +5458,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20030603,
         nextQuestIds = {Success = 20030603}
       },
-      [20030603] = T.RT_24
+      [20030603] = T.RT_38
     },
     StartQuestId = 20030600
   },
@@ -4466,7 +5487,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20030703,
         nextQuestIds = {Success = 20030703}
       },
-      [20030703] = T.RT_24
+      [20030703] = T.RT_38
     },
     StartQuestId = 20030700
   },
@@ -4501,7 +5522,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20030803,
         nextQuestIds = {Success = 20030803}
       },
-      [20030803] = T.RT_13
+      [20030803] = T.RT_14
     },
     StartQuestId = 20030800
   },
@@ -4535,7 +5556,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20030905,
         nextQuestIds = {Success = 20030905}
       },
-      [20030905] = T.RT_14,
+      [20030905] = T.RT_16,
       [20030906] = {
         IsMultiQuest = false,
         SubRegionId = 104106,
@@ -4576,7 +5597,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20031006,
         nextQuestIds = {Success = 20031006}
       },
-      [20031006] = T.RT_13
+      [20031006] = T.RT_14
     },
     StartQuestId = 20031001
   },
@@ -4598,7 +5619,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20031103,
         nextQuestIds = {Success = 20031103}
       },
-      [20031102] = T.RT_13,
+      [20031102] = T.RT_14,
       [20031103] = {
         IsMultiQuest = false,
         SubRegionId = 104108,
@@ -4632,7 +5653,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20031203,
         nextQuestIds = {Success = 20031203}
       },
-      [20031203] = T.RT_13,
+      [20031203] = T.RT_14,
       [20031204] = {
         IsMultiQuest = false,
         SubRegionId = 104110,
@@ -4663,7 +5684,7 @@ return ReadOnly("STLExportQuestChain", {
       },
       [20031303] = {
         IsMultiQuest = false,
-        SubRegionId = 0,
+        SubRegionId = 104107,
         nextQuestId = 20031304,
         nextQuestIds = {Success = 20031304}
       },
@@ -4679,7 +5700,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 20031306,
         nextQuestIds = {Success = 20031306}
       },
-      [20031306] = T.RT_24
+      [20031306] = T.RT_38
     },
     StartQuestId = 20031301
   },
@@ -4689,7 +5710,7 @@ return ReadOnly("STLExportQuestChain", {
     IsMultiEndQuest = false,
     QuestChainId = 200314,
     Quests = {
-      [20031401] = T.RT_4
+      [20031401] = T.RT_5
     },
     StartQuestId = 20031401
   },
@@ -4732,13 +5753,131 @@ return ReadOnly("STLExportQuestChain", {
     },
     StartQuestId = 20031500
   },
+  [200317] = {
+    EndQuestId = 20031711,
+    HavePreQuest = true,
+    IsMultiEndQuest = false,
+    QuestChainId = 200317,
+    Quests = {
+      [20031700] = {
+        IsMultiQuest = false,
+        IsPreQuest = true,
+        SubRegionId = 104504,
+        nextQuestId = 20031701,
+        nextQuestIds = {Success = 20031701}
+      },
+      [20031701] = {
+        IsMultiQuest = false,
+        SubRegionId = 104504,
+        nextQuestId = 20031702,
+        nextQuestIds = {Success = 20031702}
+      },
+      [20031702] = {
+        IsMultiQuest = false,
+        SubRegionId = 104504,
+        nextQuestId = 20031703,
+        nextQuestIds = {Success = 20031703}
+      },
+      [20031703] = {
+        IsMultiQuest = false,
+        SubRegionId = 104504,
+        nextQuestId = 20031704,
+        nextQuestIds = {Success = 20031704}
+      },
+      [20031704] = {
+        IsMultiQuest = false,
+        SubRegionId = 104504,
+        nextQuestId = 20031705,
+        nextQuestIds = {Success = 20031705}
+      },
+      [20031705] = {
+        IsMultiQuest = false,
+        SubRegionId = 104504,
+        nextQuestId = 20031706,
+        nextQuestIds = {Success = 20031706}
+      },
+      [20031706] = {
+        IsMultiQuest = false,
+        SubRegionId = 104504,
+        nextQuestId = 20031707,
+        nextQuestIds = {Success = 20031707}
+      },
+      [20031707] = {
+        IsMultiQuest = false,
+        SubRegionId = 104504,
+        nextQuestId = 20031708,
+        nextQuestIds = {Success = 20031708}
+      },
+      [20031708] = {
+        IsMultiQuest = false,
+        SubRegionId = 104504,
+        nextQuestId = 20031710,
+        nextQuestIds = {Success = 20031710}
+      },
+      [20031710] = {
+        IsMultiQuest = false,
+        SubRegionId = 104504,
+        nextQuestId = 20031711,
+        nextQuestIds = {Success = 20031711}
+      },
+      [20031711] = T.RT_30
+    },
+    StartQuestId = 20031700
+  },
+  [200318] = {
+    EndQuestId = 20031808,
+    HavePreQuest = false,
+    IsMultiEndQuest = false,
+    QuestChainId = 200318,
+    Quests = {
+      [20031801] = {
+        IsMultiQuest = false,
+        SubRegionId = 104501,
+        nextQuestId = 20031803,
+        nextQuestIds = {Success = 20031803}
+      },
+      [20031803] = {
+        IsMultiQuest = false,
+        SubRegionId = 104501,
+        nextQuestId = 20031805,
+        nextQuestIds = {Success = 20031805}
+      },
+      [20031805] = {
+        IsMultiQuest = false,
+        SubRegionId = 104501,
+        nextQuestId = 20031806,
+        nextQuestIds = {Success = 20031806}
+      },
+      [20031806] = {
+        IsMultiQuest = false,
+        SubRegionId = 104501,
+        SuccQuestDeliver = T.RT_15,
+        nextQuestId = 20031807,
+        nextQuestIds = {Success = 20031807}
+      },
+      [20031807] = {
+        IsMultiQuest = false,
+        SubRegionId = 0,
+        SuccQuestDeliver = {
+          DeliverType = 1,
+          Id = 104501,
+          IsWhite = false,
+          StartIndex = 3
+        },
+        nextQuestId = 20031808,
+        nextQuestIds = {Success = 20031808}
+      },
+      [20031808] = T.RT_31
+    },
+    StartQuestId = 20031801
+  },
   [400101] = {
     EndQuestId = 4001011,
     HavePreQuest = false,
     IsMultiEndQuest = false,
     QuestChainId = 400101,
     Quests = {
-      [4001011] = T.RT_19
+      [4001011] = T.RT_34
     },
     StartQuestId = 4001011
   },
@@ -4748,7 +5887,7 @@ return ReadOnly("STLExportQuestChain", {
     IsMultiEndQuest = false,
     QuestChainId = 400102,
     Quests = {
-      [4001021] = T.RT_19
+      [4001021] = T.RT_34
     },
     StartQuestId = 4001021
   },
@@ -4758,7 +5897,7 @@ return ReadOnly("STLExportQuestChain", {
     IsMultiEndQuest = false,
     QuestChainId = 400103,
     Quests = {
-      [4001031] = T.RT_19
+      [4001031] = T.RT_34
     },
     StartQuestId = 4001031
   },
@@ -4768,7 +5907,7 @@ return ReadOnly("STLExportQuestChain", {
     IsMultiEndQuest = false,
     QuestChainId = 400104,
     Quests = {
-      [4001041] = T.RT_19
+      [4001041] = T.RT_34
     },
     StartQuestId = 4001041
   },
@@ -4778,7 +5917,7 @@ return ReadOnly("STLExportQuestChain", {
     IsMultiEndQuest = false,
     QuestChainId = 400105,
     Quests = {
-      [4001051] = T.RT_19
+      [4001051] = T.RT_34
     },
     StartQuestId = 4001051
   },
@@ -4788,7 +5927,7 @@ return ReadOnly("STLExportQuestChain", {
     IsMultiEndQuest = false,
     QuestChainId = 400106,
     Quests = {
-      [4001061] = T.RT_19
+      [4001061] = T.RT_34
     },
     StartQuestId = 4001061
   },
@@ -4798,7 +5937,7 @@ return ReadOnly("STLExportQuestChain", {
     IsMultiEndQuest = false,
     QuestChainId = 400107,
     Quests = {
-      [4001071] = T.RT_19
+      [4001071] = T.RT_34
     },
     StartQuestId = 4001071
   },
@@ -4844,8 +5983,124 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 40011107,
         nextQuestIds = {Success = 40011107}
       },
-      [40011107] = T.RT_10
+      [40011107] = T.RT_11
     },
     StartQuestId = 40011101
+  },
+  [400121] = {
+    EndQuestId = 40012104,
+    HavePreQuest = false,
+    IsMultiEndQuest = false,
+    QuestChainId = 400121,
+    Quests = {
+      [40012103] = {
+        IsMultiQuest = false,
+        SubRegionId = 210101,
+        nextQuestId = 40012104,
+        nextQuestIds = {Success = 40012104}
+      },
+      [40012104] = T.RT_3
+    },
+    StartQuestId = 40012103
+  },
+  [400122] = {
+    EndQuestId = 40012200,
+    HavePreQuest = false,
+    IsMultiEndQuest = false,
+    QuestChainId = 400122,
+    Quests = {
+      [40012200] = T.RT_35
+    },
+    StartQuestId = 40012200
+  },
+  [400123] = {
+    EndQuestId = 40012300,
+    HavePreQuest = false,
+    IsMultiEndQuest = false,
+    QuestChainId = 400123,
+    Quests = {
+      [40012300] = T.RT_34
+    },
+    StartQuestId = 40012300
+  },
+  [400124] = {
+    EndQuestId = 40012400,
+    HavePreQuest = false,
+    IsMultiEndQuest = false,
+    QuestChainId = 400124,
+    Quests = {
+      [40012400] = {
+        IsMultiQuest = false,
+        SubRegionId = 101703,
+        nextQuestIds = T.RT_2
+      }
+    },
+    StartQuestId = 40012400
+  },
+  [400125] = {
+    EndQuestId = 40012500,
+    HavePreQuest = false,
+    IsMultiEndQuest = false,
+    QuestChainId = 400125,
+    Quests = {
+      [40012500] = T.RT_11
+    },
+    StartQuestId = 40012500
+  },
+  [400126] = {
+    EndQuestId = 40012600,
+    HavePreQuest = false,
+    IsMultiEndQuest = false,
+    QuestChainId = 400126,
+    Quests = {
+      [40012600] = T.RT_14
+    },
+    StartQuestId = 40012600
+  },
+  [400127] = {
+    EndQuestId = 40012700,
+    HavePreQuest = false,
+    IsMultiEndQuest = false,
+    QuestChainId = 400127,
+    Quests = {
+      [40012700] = T.RT_32
+    },
+    StartQuestId = 40012700
+  },
+  [400128] = {
+    EndQuestId = 40012802,
+    HavePreQuest = false,
+    IsMultiEndQuest = false,
+    QuestChainId = 400128,
+    Quests = {
+      [40012800] = {
+        IsMultiQuest = false,
+        SubRegionId = 101101,
+        nextQuestId = 40012801,
+        nextQuestIds = {Success = 40012801}
+      },
+      [40012801] = {
+        IsMultiQuest = false,
+        SubRegionId = 101101,
+        nextQuestId = 40012802,
+        nextQuestIds = {Success = 40012802}
+      },
+      [40012802] = {
+        IsMultiQuest = false,
+        SubRegionId = 210101,
+        nextQuestIds = T.RT_2
+      }
+    },
+    StartQuestId = 40012800
+  },
+  [400129] = {
+    EndQuestId = 40012900,
+    HavePreQuest = false,
+    IsMultiEndQuest = false,
+    QuestChainId = 400129,
+    Quests = {
+      [40012900] = T.RT_35
+    },
+    StartQuestId = 40012900
   }
 })

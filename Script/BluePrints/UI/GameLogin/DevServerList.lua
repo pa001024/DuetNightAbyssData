@@ -17,7 +17,7 @@ return {
     area = "China",
     hostnum = 103,
     ip = "10.18.200.113",
-    name = "1.1分支内网服",
+    name = "1.3分支内网服",
     port = 8000
   },
   [104] = {
@@ -52,14 +52,14 @@ return {
     area = "China",
     hostnum = 201,
     ip = "47.98.148.238",
-    name = "跑测服1",
+    name = "1.3跑测服上",
     port = 8000
   },
   [202] = {
     area = "China",
     hostnum = 202,
     ip = "112.124.67.119",
-    name = "跑测服1.1上",
+    name = "1.3跑测服下",
     port = 8000
   },
   [203] = {
@@ -339,7 +339,7 @@ return {
     area = "China",
     hostnum = 7002,
     ip = "114.55.140.245",
-    name = "1.1国内给力服",
+    name = "1.3国内给力服",
     port = 8000
   },
   [8001] = {
@@ -353,7 +353,7 @@ return {
     area = "Asian",
     hostnum = 8002,
     ip = "101.33.109.100",
-    name = "1.1海外给力服",
+    name = "1.3海外给力服",
     port = 8000
   },
   [8003] = {
@@ -373,37 +373,37 @@ return {
   [10001] = {
     area = "China",
     hostnum = 10001,
-    ip = "pan01-obtestchina.shyxhy.com",
+    ip = "118.31.238.173",
     name = "obt国服登录1",
-    port = 8001
+    port = 8000
   },
   [10002] = {
     area = "China",
     hostnum = 10002,
-    ip = "pan01-obtestchina.shyxhy.com",
+    ip = "118.31.222.186",
     name = "obt国服登录2",
-    port = 8002
+    port = 8000
   },
   [10003] = {
     area = "China",
     hostnum = 10003,
-    ip = "pan01-obtestchina.shyxhy.com",
+    ip = "120.26.113.58",
     name = "obt国服登录3",
-    port = 8003
+    port = 8000
   },
   [10004] = {
     area = "China",
     hostnum = 10004,
-    ip = "pan01-obtestchina.shyxhy.com",
+    ip = "120.26.115.201",
     name = "obt国服登录4",
-    port = 8004
+    port = 8000
   },
   [10005] = {
     area = "China",
     hostnum = 10005,
-    ip = "pan01-obtestchina.shyxhy.com",
+    ip = "47.99.208.172",
     name = "obt国服登录5",
-    port = 8005
+    port = 8000
   },
   [10006] = {
     area = "China",
@@ -443,37 +443,37 @@ return {
   [10011] = {
     area = "China",
     hostnum = 10011,
-    ip = "pan01-obtestchina.shyxhy.com",
+    ip = "120.55.7.205",
     name = "obt国服登录11",
-    port = 8011
+    port = 8000
   },
   [10012] = {
     area = "China",
     hostnum = 10012,
-    ip = "pan01-obtestchina.shyxhy.com",
+    ip = "47.99.192.245",
     name = "obt国服登录12",
-    port = 8012
+    port = 8000
   },
   [10013] = {
     area = "China",
     hostnum = 10013,
-    ip = "pan01-obtestchina.shyxhy.com",
+    ip = "120.26.147.212",
     name = "obt国服登录13",
-    port = 8013
+    port = 8000
   },
   [10014] = {
     area = "China",
     hostnum = 10014,
-    ip = "pan01-obtestchina.shyxhy.com",
+    ip = "121.43.24.85",
     name = "obt国服登录14",
-    port = 8014
+    port = 8000
   },
   [10015] = {
     area = "China",
     hostnum = 10015,
-    ip = "pan01-obtestchina.shyxhy.com",
+    ip = "121.43.24.213",
     name = "obt国服登录15",
-    port = 8015
+    port = 8000
   },
   [10016] = {
     area = "China",
@@ -513,37 +513,37 @@ return {
   [10021] = {
     area = "China",
     hostnum = 10021,
-    ip = "pan01-obtestchina.shyxhy.com",
+    ip = "47.99.72.190",
     name = "obt国服登录21",
-    port = 8021
+    port = 8000
   },
   [10022] = {
     area = "China",
     hostnum = 10022,
-    ip = "pan01-obtestchina.shyxhy.com",
+    ip = "47.97.83.199",
     name = "obt国服登录22",
-    port = 8022
+    port = 8000
   },
   [10023] = {
     area = "China",
     hostnum = 10023,
-    ip = "pan01-obtestchina.shyxhy.com",
+    ip = "47.99.126.85",
     name = "obt国服登录23",
-    port = 8023
+    port = 8000
   },
   [10024] = {
     area = "China",
     hostnum = 10024,
-    ip = "pan01-obtestchina.shyxhy.com",
+    ip = "121.43.62.221",
     name = "obt国服登录24",
-    port = 8024
+    port = 8000
   },
   [10025] = {
     area = "China",
     hostnum = 10025,
-    ip = "pan01-obtestchina.shyxhy.com",
+    ip = "47.99.108.158",
     name = "obt国服登录25",
-    port = 8025
+    port = 8000
   },
   [10026] = {
     area = "China",
@@ -583,37 +583,37 @@ return {
   [10031] = {
     area = "China",
     hostnum = 10031,
-    ip = "pan01-obtestchina.shyxhy.com",
+    ip = "115.29.194.107",
     name = "obt国服登录31",
-    port = 8031
+    port = 8000
   },
   [10032] = {
     area = "China",
     hostnum = 10032,
-    ip = "pan01-obtestchina.shyxhy.com",
+    ip = "115.29.192.207",
     name = "obt国服登录32",
-    port = 8032
+    port = 8000
   },
   [10033] = {
     area = "China",
     hostnum = 10033,
-    ip = "pan01-obtestchina.shyxhy.com",
+    ip = "112.124.106.175",
     name = "obt国服登录33",
-    port = 8033
+    port = 8000
   },
   [10034] = {
     area = "China",
     hostnum = 10034,
-    ip = "pan01-obtestchina.shyxhy.com",
+    ip = "115.29.229.72",
     name = "obt国服登录34",
-    port = 8034
+    port = 8000
   },
   [10035] = {
     area = "China",
     hostnum = 10035,
-    ip = "pan01-obtestchina.shyxhy.com",
+    ip = "120.26.29.95",
     name = "obt国服登录35",
-    port = 8035
+    port = 8000
   },
   [10036] = {
     area = "China",
@@ -653,37 +653,37 @@ return {
   [10041] = {
     area = "China",
     hostnum = 10041,
-    ip = "pan01-obtestchina.shyxhy.com",
+    ip = "120.27.202.131",
     name = "obt国服登录41",
-    port = 8041
+    port = 8000
   },
   [10042] = {
     area = "China",
     hostnum = 10042,
-    ip = "pan01-obtestchina.shyxhy.com",
+    ip = "120.55.50.65",
     name = "obt国服登录42",
-    port = 8042
+    port = 8000
   },
   [10043] = {
     area = "China",
     hostnum = 10043,
-    ip = "pan01-obtestchina.shyxhy.com",
+    ip = "121.196.247.45",
     name = "obt国服登录43",
-    port = 8043
+    port = 8000
   },
   [10044] = {
     area = "China",
     hostnum = 10044,
-    ip = "pan01-obtestchina.shyxhy.com",
+    ip = "47.99.98.92",
     name = "obt国服登录44",
-    port = 8044
+    port = 8000
   },
   [10045] = {
     area = "China",
     hostnum = 10045,
-    ip = "pan01-obtestchina.shyxhy.com",
+    ip = "47.97.114.24",
     name = "obt国服登录45",
-    port = 8045
+    port = 8000
   },
   [10046] = {
     area = "China",
@@ -723,44 +723,44 @@ return {
   [20001] = {
     area = "Asian",
     hostnum = 20001,
-    ip = "pan01-obtestov.dna-panstudio.com",
+    ip = "43.167.223.169",
     name = "obt亚服登录1",
-    port = 8201
+    port = 8000
   },
   [20002] = {
     area = "Asian",
     hostnum = 20002,
-    ip = "pan01-obtestov.dna-panstudio.com",
+    ip = "43.133.190.127",
     name = "obt亚服登录2",
-    port = 8202
+    port = 8000
   },
   [20003] = {
     area = "Asian",
     hostnum = 20003,
-    ip = "pan01-obtestov.dna-panstudio.com",
+    ip = "43.133.221.224",
     name = "obt亚服登录3",
-    port = 8203
+    port = 8000
   },
   [20004] = {
     area = "Asian",
     hostnum = 20004,
-    ip = "pan01-obtestov.dna-panstudio.com",
+    ip = "43.133.190.76",
     name = "obt亚服登录4",
-    port = 8204
+    port = 8000
   },
   [20005] = {
     area = "Asian",
     hostnum = 20005,
-    ip = "pan01-obtestov.dna-panstudio.com",
+    ip = "43.133.196.9",
     name = "obt亚服登录5",
-    port = 8205
+    port = 8000
   },
   [20006] = {
     area = "Asian",
     hostnum = 20006,
-    ip = "pan01-obtestov.dna-panstudio.com",
+    ip = "43.167.232.80",
     name = "obt亚服登录6",
-    port = 8206
+    port = 8000
   },
   [20007] = {
     area = "Asian",
@@ -814,37 +814,37 @@ return {
   [30001] = {
     area = "America",
     hostnum = 30001,
-    ip = "pan01-obtestov.dna-panstudio.com",
+    ip = "170.106.51.104",
     name = "obt美服登录1",
-    port = 8301
+    port = 8000
   },
   [30002] = {
     area = "America",
     hostnum = 30002,
-    ip = "pan01-obtestov.dna-panstudio.com",
+    ip = "170.106.132.99",
     name = "obt美服登录2",
-    port = 8302
+    port = 8000
   },
   [30003] = {
     area = "America",
     hostnum = 30003,
-    ip = "pan01-obtestov.dna-panstudio.com",
+    ip = "43.166.142.78",
     name = "obt美服登录3",
-    port = 8303
+    port = 8000
   },
   [30004] = {
     area = "America",
     hostnum = 30004,
-    ip = "pan01-obtestov.dna-panstudio.com",
+    ip = "170.106.38.51",
     name = "obt美服登录4",
-    port = 8304
+    port = 8000
   },
   [30005] = {
     area = "America",
     hostnum = 30005,
-    ip = "pan01-obtestov.dna-panstudio.com",
+    ip = "43.166.242.242",
     name = "obt美服登录5",
-    port = 8305
+    port = 8000
   },
   [30006] = {
     area = "America",
@@ -891,23 +891,23 @@ return {
   [40001] = {
     area = "Europe",
     hostnum = 40001,
-    ip = "pan01-obtestov.dna-panstudio.com",
+    ip = "43.157.40.249",
     name = "obt欧服登录1",
-    port = 8401
+    port = 8000
   },
   [40002] = {
     area = "Europe",
     hostnum = 40002,
-    ip = "pan01-obtestov.dna-panstudio.com",
+    ip = "49.51.136.147",
     name = "obt欧服登录2",
-    port = 8402
+    port = 8000
   },
   [40003] = {
     area = "Europe",
     hostnum = 40003,
-    ip = "pan01-obtestov.dna-panstudio.com",
+    ip = "43.157.39.143",
     name = "obt欧服登录3",
-    port = 8403
+    port = 8000
   },
   [40004] = {
     area = "Europe",
@@ -933,16 +933,16 @@ return {
   [50001] = {
     area = "HMT",
     hostnum = 50001,
-    ip = "pan01-obtestov.dna-panstudio.com",
+    ip = "43.154.168.194",
     name = "obt港澳台服登录1",
-    port = 8501
+    port = 8000
   },
   [50002] = {
     area = "HMT",
     hostnum = 50002,
-    ip = "pan01-obtestov.dna-panstudio.com",
+    ip = "43.155.1.244",
     name = "obt港澳台服登录2",
-    port = 8502
+    port = 8000
   },
   [50003] = {
     area = "HMT",
@@ -968,23 +968,23 @@ return {
   [60001] = {
     area = "SEA",
     hostnum = 60001,
-    ip = "pan01-obtestov.dna-panstudio.com",
+    ip = "43.156.249.93",
     name = "obt东南亚服登录1",
-    port = 8601
+    port = 8000
   },
   [60002] = {
     area = "SEA",
     hostnum = 60002,
-    ip = "pan01-obtestov.dna-panstudio.com",
+    ip = "150.109.20.37",
     name = "obt东南亚服登录2",
-    port = 8602
+    port = 8000
   },
   [60003] = {
     area = "SEA",
     hostnum = 60003,
-    ip = "pan01-obtestov.dna-panstudio.com",
+    ip = "43.156.238.98",
     name = "obt东南亚服登录3",
-    port = 8603
+    port = 8000
   },
   [60004] = {
     area = "SEA",
@@ -1033,13 +1033,6 @@ return {
     hostnum = 70003,
     ip = "43.166.138.254",
     name = "America",
-    port = 8000
-  },
-  [70004] = {
-    area = "Europe",
-    hostnum = 70004,
-    ip = "43.157.39.61",
-    name = "Europe",
     port = 8000
   },
   [80001] = {

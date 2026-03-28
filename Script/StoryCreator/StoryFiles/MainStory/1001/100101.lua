@@ -121,7 +121,6 @@ return {
         bIsNotifyGameMode = false,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
@@ -129,6 +128,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -550,7 +550,8 @@ return {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false
+                  TalkActorVisible = false,
+                  AroundPlayer = false
                 }
               },
               FreezeWorldComposition = true,
@@ -619,7 +620,6 @@ return {
         bIsNotifyGameMode = false,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = true,
         bIsDynamicEvent = false,
@@ -627,6 +627,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -651,12 +652,6 @@ return {
             startQuest = "1704972007087288319",
             startPort = "Out",
             endQuest = "quest_168448507613755",
-            endPort = "In"
-          },
-          {
-            startQuest = "1704972007087288319",
-            startPort = "Out",
-            endQuest = "quest_168448530264261",
             endPort = "In"
           },
           {
@@ -864,42 +859,6 @@ return {
             endPort = "Stop"
           },
           {
-            startQuest = "quest_168448530264261",
-            startPort = "Out",
-            endQuest = "17542949936491317325",
-            endPort = "In"
-          },
-          {
-            startQuest = "quest_168448530264261",
-            startPort = "Out",
-            endQuest = "17562160468084354352",
-            endPort = "In"
-          },
-          {
-            startQuest = "17562160468084354352",
-            startPort = "Out",
-            endQuest = "17235499014707479115",
-            endPort = "In"
-          },
-          {
-            startQuest = "17235499014707479115",
-            startPort = "Out",
-            endQuest = "17562160115524353846",
-            endPort = "Input_1"
-          },
-          {
-            startQuest = "17542949936491317325",
-            startPort = "Out",
-            endQuest = "17562160115524353846",
-            endPort = "Input_2"
-          },
-          {
-            startQuest = "17562160115524353846",
-            startPort = "Out",
-            endQuest = "quest_168448117791612",
-            endPort = "Fail"
-          },
-          {
             startQuest = "quest_16844811779168",
             startPort = "QuestStart",
             endQuest = "17562174339469111156",
@@ -1036,18 +995,6 @@ return {
               StaticCreatorId = 1110010204,
               GuideType = "M",
               GuidePointName = "QuestTrigger0204"
-            }
-          },
-          quest_168448530264261 = {
-            key = "quest_168448530264261",
-            type = "MonitorPlayerStatusNode",
-            name = "监听玩家状态",
-            pos = {x = 401.18548540876793, y = -164.56968474608504},
-            propsData = {
-              ListenHPPercent = true,
-              ListenESPercent = true,
-              ListenSPPercent = false,
-              ListenDead = false
             }
           },
           quest_1685931704781787 = {
@@ -1204,7 +1151,8 @@ return {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false
+                  TalkActorVisible = false,
+                  AroundPlayer = false
                 }
               },
               FreezeWorldComposition = false,
@@ -1219,21 +1167,6 @@ return {
             name = "恢复角色",
             pos = {x = 3065.908909352661, y = 1063.668785049568},
             propsData = {}
-          },
-          ["17235499014707479115"] = {
-            key = "17235499014707479115",
-            type = "AsyncSetActorLocationAndRotationNode",
-            name = "异步设置玩家位置旋转",
-            pos = {x = 636.6861018491169, y = -419.08587212322544},
-            propsData = {
-              UnitId = 0,
-              NewTargetPointName = "QuestPoint3",
-              FadeIn = false,
-              FadeOut = false,
-              bResetCamera = false,
-              bForceAsyncLoading = false,
-              IsWhite = false
-            }
           },
           ["173131681365791732"] = {
             key = "173131681365791732",
@@ -1519,32 +1452,6 @@ return {
               GuideName = "Mechanism_NewGoto2_1590310"
             }
           },
-          ["17542949936491317325"] = {
-            key = "17542949936491317325",
-            type = "FailBlackScreenNode",
-            name = "失败黑屏节点",
-            pos = {x = 679.1722730334465, y = -199.71018991266598},
-            propsData = {
-              Text = "FailBlackScreenHode_1",
-              FadeInTime = 1,
-              FadeOutTime = 0,
-              ContinueTime = 2
-            }
-          },
-          ["17562160115524353846"] = {
-            key = "17562160115524353846",
-            type = "WaitQuestFinishedNode",
-            name = "等待任务完成",
-            pos = {x = 934.590393150756, y = -311.7628727385443},
-            propsData = {ListenCount = 2, NeedFinishCount = 2}
-          },
-          ["17562160468084354352"] = {
-            key = "17562160468084354352",
-            type = "WaitOfTimeNode",
-            name = "延迟等待",
-            pos = {x = 348.2560463457379, y = -406.7189906956172},
-            propsData = {WaitTime = 1.2}
-          },
           ["17562174339469111156"] = {
             key = "17562174339469111156",
             type = "ChangeRoleNode",
@@ -1603,7 +1510,6 @@ return {
         bIsNotifyGameMode = false,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
@@ -1611,6 +1517,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 100101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -2291,7 +2198,6 @@ return {
         bIsNotifyGameMode = false,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
@@ -2299,6 +2205,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 100101,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
@@ -2495,7 +2402,6 @@ return {
         bIsNotifyGameMode = false,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
@@ -2503,6 +2409,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 100101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -2769,7 +2676,6 @@ return {
         bIsNotifyGameMode = false,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = true,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
@@ -2777,6 +2683,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 100103,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -2956,7 +2863,8 @@ return {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 }
               },
               FreezeWorldComposition = false,
@@ -3181,7 +3089,8 @@ return {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false
+                  TalkActorVisible = false,
+                  AroundPlayer = false
                 }
               },
               FreezeWorldComposition = false,
@@ -3318,7 +3227,6 @@ return {
         bIsNotifyGameMode = false,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = true,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
@@ -3326,6 +3234,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -3532,7 +3441,7 @@ return {
             propsData = {
               GuideUIEnable = true,
               StaticCreatorId = 1110010111,
-              GuideType = "M",
+              GuideType = "P",
               GuidePointName = "questpoint0111"
             }
           },
@@ -3540,7 +3449,7 @@ return {
             key = "quest_1684406184798402",
             type = "PlayerSwitchWalkRunNode",
             name = "玩家走跑切换-走",
-            pos = {x = -1220.0600349140889, y = -57.65135145759774},
+            pos = {x = -1176.1207847954367, y = -40.45438895166515},
             propsData = {Rate = 0.15, Mode = "EWT_Winded"}
           },
           quest_1684406184798405 = {
@@ -3640,7 +3549,8 @@ return {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false
+                  TalkActorVisible = false,
+                  AroundPlayer = false
                 }
               },
               FreezeWorldComposition = false,
@@ -3653,7 +3563,7 @@ return {
             key = "quest_1685608031528399",
             type = "ChangeStaticCreatorNode",
             name = "生成/销毁 NPC-前男主",
-            pos = {x = 1385.653107501746, y = 121.83107526743066},
+            pos = {x = 1492.153107501746, y = 112.83107526743066},
             propsData = {
               ActiveEnable = false,
               EnableBlackScreenSync = false,
@@ -3889,7 +3799,7 @@ return {
             key = "17455513993457536",
             type = "PlayerAlongSplineMoveNode",
             name = "玩家沿路径移动节点",
-            pos = {x = -964.2015947202507, y = -65.33542782559309},
+            pos = {x = -872.3648600263731, y = -85.53950945824614},
             propsData = {
               SplineActorIndex = 10010103,
               WalkType = 2,
@@ -3937,7 +3847,8 @@ return {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 }
               },
               FreezeWorldComposition = false,
@@ -4028,7 +3939,6 @@ return {
         bIsNotifyGameMode = false,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
@@ -4036,6 +3946,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 100101,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
@@ -4906,7 +4817,8 @@ return {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 }
               },
               FreezeWorldComposition = false,
@@ -5706,7 +5618,6 @@ return {
         bIsNotifyGameMode = false,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
@@ -5714,6 +5625,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -5989,7 +5901,8 @@ return {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false
+                  TalkActorVisible = false,
+                  AroundPlayer = false
                 }
               },
               FreezeWorldComposition = true,
@@ -6114,7 +6027,8 @@ return {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false
+                  TalkActorVisible = false,
+                  AroundPlayer = false
                 }
               },
               FreezeWorldComposition = false,
@@ -6200,7 +6114,8 @@ return {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 }
               },
               FreezeWorldComposition = false,
@@ -6288,7 +6203,8 @@ return {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 }
               },
               FreezeWorldComposition = false,
@@ -6516,7 +6432,6 @@ return {
         bIsNotifyGameMode = false,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
@@ -6524,6 +6439,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 100101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -6728,17 +6644,20 @@ return {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false
+                  TalkActorVisible = false,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100003,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 }
               },
               OptionType = "normal",
@@ -6747,6 +6666,7 @@ return {
               SwitchToMaster = "None",
               bNpcActionKeepIn = true,
               bNpcActionKeepOut = false,
+              bForceWaitNavLoaded = false,
               NormalOptions = {},
               OverrideFailBlend = false
             }
@@ -6804,7 +6724,6 @@ return {
         bIsNotifyGameMode = false,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = true,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
@@ -6812,6 +6731,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",

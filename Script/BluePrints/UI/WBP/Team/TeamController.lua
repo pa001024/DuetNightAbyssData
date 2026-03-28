@@ -116,6 +116,12 @@ function M:ShutDownTeamInvite()
   if self:IsExistTimer(self.InviteRecvTimer) then
     self:StopTimer(self.InviteRecvTimer)
   end
+  self.bProcessingTeamInvite = false
+  if FriendController.bProcessingFriendReq then
+    self:AddTimer(0.1, function()
+      FriendController:SetUpFriendReqTimer(TeamCommon.LoopTimerInterval)
+    end)
+  end
   TeamModel:CleanInviteInfo()
 end
 
@@ -167,12 +173,17 @@ function M:SendTeamRefuseInvite(bAutoRefuse)
   if self:IsExistTimer(self.InviteRecvTimer) then
     self:StopTimer(self.InviteRecvTimer)
   end
-  if TeamModel:PopInviteInfo() then
+  if self:TryPopInviteInfo() then
     self:AddTimer(0.01, function()
       self:SetUpBeInviteTimer(TeamCommon.LoopTimerInterval)
     end, false, 0, nil, true)
   end
   self:GetAvatar():TeamRefuseInvite(Uid, bAutoRefuse)
+end
+
+function M:TryPopInviteInfo()
+  local InviteInfo = TeamModel:PopInviteInfo()
+  return InviteInfo
 end
 
 function M:SendSetTeamOrientation(NewTeamOrientation)
@@ -185,10 +196,6 @@ end
 
 function M:SendTeamAgreeInvite(Uid)
   self:GetAvatar():TeamAgreeInvite(Uid)
-  local InviteView = self:GetView(GWorld.GameInstance, TeamCommon.TipUIName)
-  if IsValid(InviteView) then
-    InviteView:Close()
-  end
 end
 
 function M:RecvTeamAgreeInvite(ErrCode, Uid)
@@ -198,13 +205,12 @@ function M:RecvTeamAgreeInvite(ErrCode, Uid)
     return
   end
   local InviteInfo = TeamModel:GetBackInviteInfo()
+  self:NotifyEvent(TeamCommon.EventId.TeamAgreeInvite, Uid)
   if not InviteInfo and Uid ~= InviteInfo.Uid then
     self:CheckError(ErrorCode.RET_TEAM_INVATE_NOT_EXIST, true)
-    TeamModel:PopInviteInfo()
+    self:TryPopInviteInfo()
     return
   end
-  self:ShutDownTeamInvite()
-  self:NotifyEvent(TeamCommon.EventId.TeamAgreeInvite, Uid)
 end
 
 function M:SendTeamLeave()
@@ -508,14 +514,19 @@ function M:SetUpAutoResetHeadStateTimer()
 end
 
 function M:SetUpBeInviteTimer(Interval)
+  self.bProcessingTeamInvite = true
   local CurrInvite = TeamModel:GetBackInviteInfo()
   local InviteView = self:GetView(GWorld.GameInstance, TeamCommon.TipUIName)
   if not CurrInvite then
     DebugPrint(LXYTag, "队列空了，邀请流程退出")
     if IsValid(InviteView) then
-      InviteView:Close()
+      InviteView:Close("TeamInviteQueue Empty")
       DebugPrint(LXYTag, "关闭邀请UI")
     end
+    self:ShutDownTeamInvite()
+    return
+  end
+  if FriendController.bProcessingFriendReq then
     return
   end
   DebugPrint(LXYTag, "开始组队受邀请定时器")
@@ -612,7 +623,8 @@ function M:DoCheckCanEnterDungeon(DungeonId)
     local MemberNames, WhoUids = {}, {}
     for _, TeamMember in pairs(TeamInfo.Members) do
       if CostNeed > TeamMember.ActionPoint then
-        table.insert(MemberNames, TeamMember.Index .. "P")
+        local PosText = GText(string.format("UI_STAT_Online_P%s", TeamMember.Index))
+        table.insert(MemberNames, PosText)
         table.insert(WhoUids, TeamMember.Uid)
       end
       TeamMember.HeadState = TeamCommon.HeadState.CantEnterDungeon

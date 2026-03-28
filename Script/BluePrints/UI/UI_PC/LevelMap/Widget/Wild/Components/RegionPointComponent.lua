@@ -114,10 +114,14 @@ function Component:InitRegionPoint(CoroutineIndex)
       end
     end, true, 0, "TickPointActivityTime")
   end
+  self.OnConveyGoTrace_Component = self.OnConveyGoTrace_RegionPoint
   self:InitCoroutineCheck(CoroutineIndex)
 end
 
 function Component:ShowFloor_Component(FloorId)
+  if not self.RegionPoints then
+    return
+  end
   for id, RegionPoint in pairs(self.RegionPoints) do
     if self.RegionPoint2FloorId[id] == FloorId then
       local Avatar = GWorld:GetAvatar()
@@ -131,6 +135,9 @@ function Component:ShowFloor_Component(FloorId)
 end
 
 function Component:OnScaleChange_Component(Percent)
+  if not self.RegionPoints then
+    return
+  end
   local TrackingID = self:GetTrackingId(CommonConst.RegionMapTrackingType.RegionPoint)
   local Visible = self:GetMapIconVisible("UI_SUBREGION", Percent)
   for id, point in pairs(self.RegionPoints) do
@@ -249,6 +256,10 @@ function Component:OnRegionPointTeleportClicked()
     local GameMode = UE4.UGameplayStatics.GetGameMode(self)
     local Avatar = GWorld:GetAvatar()
     if Data and Avatar and GameMode then
+      if not GameMode:CheckRegionPatchCondition(DataMgr.SubRegion[Data.TeleportSubRegion].RegionId) then
+        GameMode:HandleLevelDeliver(UE4.EModeType.ModeRegion, Data.TeleportSubRegion, Data.TeleportPointPos, nil, true, true)
+        return
+      end
       self.MainMap:BindToAnimationFinished(self.MainMap.Auto_Out, function()
         GameMode:HandleLevelDeliver(UE4.EModeType.ModeRegion, Data.TeleportSubRegion, Data.TeleportPointPos, nil, true, true)
       end)
@@ -271,7 +282,7 @@ function Component:OnRegionPointUnhover(Id)
   end
 end
 
-function Component:OnConveyGoTrace()
+function Component:OnConveyGoTrace_RegionPoint()
   if self.CurrentConveyId then
     if self:GetTrackingId(CommonConst.RegionMapTrackingType.RegionPoint) ~= self.CurrentConveyId then
       local avatar = GWorld:GetAvatar()

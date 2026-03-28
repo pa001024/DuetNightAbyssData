@@ -4,6 +4,11 @@ local MaterialImg = {
   [2] = "Texture2D'/Game/UI/WBP/Common/VX/Fame/MI_Fame_Au.MI_Fame_Au'",
   [3] = "Texture2D'/Game/UI/WBP/Common/VX/UIVX/Texture/Surface/VX_T_Surface_0010.VX_T_Surface_0010'"
 }
+local MaterialTex_A = {
+  [1] = 2,
+  [2] = 2,
+  [3] = 3
+}
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C"
 })
@@ -35,42 +40,33 @@ end
 function M:RefreshState(CurrentTaskLevel)
   self.CurrentTaskLevel = CurrentTaskLevel
   if self.CurrentTaskLevel == self.TaskLevel then
-    self:PlayAnimation(self.UnLock_Normal)
+    if self.MaxTaskLevel == self.TaskLevel then
+      self:PlayAnimation(self.UnLock_Normal)
+    else
+      self:PlayAnimation(self.Done)
+    end
     self:PlayAnimation(self.Click)
   elseif self.MaxTaskLevel < self.TaskLevel then
     self:PlayAnimation(self.Lock)
     self:PlayAnimation(self.Normal)
   elseif self.MaxTaskLevel == self.TaskLevel then
+    self:PlayAnimation(self.UnLock_Normal)
     self:PlayAnimation(self.Normal)
   else
     self:PlayAnimation(self.Done)
     self:PlayAnimation(self.Normal)
   end
-  local TextPath = MaterialImg[self.TaskLevel]
-  local TextMainTex
   local TextMainColor = self["ImgColor_0" .. self.TaskLevel]
-  if TextPath then
-    TextMainTex = LoadObject(TextPath)
-  end
-  if TextMainTex then
-    local TextDynamicMaterial = self.TextLevel:GetDynamicFontMaterial()
-    TextDynamicMaterial:SetTextureParameterValue("MainTex", TextMainTex)
+  local TextDynamicMaterial = self.TextLevel:GetDynamicFontMaterial()
+  if TextDynamicMaterial then
     TextDynamicMaterial:SetVectorParameterValue("MainColor", TextMainColor)
   end
-  local BgMainTex = TextMainTex
-  local BgMainColor = TextMainColor
-  if self.CurrentTaskLevel ~= self.TaskLevel then
-    TextPath = "Texture2D'/Game/UI/WBP/Common/VX/UIVX/Texture/Mask/VX_T_Mask_0001.VX_T_Mask_0001'"
-    BgMainTex = LoadObject(TextPath)
-    BgMainColor = self.ImgUnSelectedColor_00
+  local AddTex_A = MaterialTex_A[self.TaskLevel]
+  local BgDynamicMaterial = self.Tilte_Bg:GetDynamicMaterial()
+  if BgDynamicMaterial then
+    BgDynamicMaterial:SetVectorParameterValue("MainColor", TextMainColor)
+    BgDynamicMaterial:SetScalarParameterValue("AddTex_A", AddTex_A)
   end
-  if BgMainTex then
-    local BgDynamicMaterial = self.Tilte_Bg:GetDynamicMaterial()
-    BgDynamicMaterial:SetTextureParameterValue("MainTex", BgMainTex)
-    BgDynamicMaterial:SetVectorParameterValue("MainColor", BgMainColor)
-  end
-  local TextColor = self.CurrentTaskLevel == self.TaskLevel and self.TextSelectedColor_00 or self["TextColor_0" .. self.TaskLevel]
-  self.TextTaskName:SetColorAndOpacity(TextColor)
 end
 
 function M:ShowRedDot(bShow)

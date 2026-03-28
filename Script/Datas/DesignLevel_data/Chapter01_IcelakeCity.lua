@@ -2030,6 +2030,21 @@ return {
       UnitType = "Mechanism",
       UnitId = 1
     },
+    ["1192071"] = {
+      CreatorId = 1192071,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["1192072"] = {
+      CreatorId = 1192072,
+      UnitType = "Mechanism",
+      UnitId = 1130128
+    },
+    ["1192073"] = {
+      CreatorId = 1192073,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
     ["1191854"] = {
       CreatorId = 1191854,
       UnitType = "Npc",

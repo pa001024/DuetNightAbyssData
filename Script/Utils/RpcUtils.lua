@@ -10,11 +10,10 @@ function RpcUtils.RevertArgs(Args)
   if 0 == #Args then
     return Args
   end
-  local Result = {}
   for i = 1, #Args do
-    Result[#Result + 1] = RpcUtils.DumpArg(Args[i])
+    Args[i] = RpcUtils.DumpArg(Args[i])
   end
-  return Result
+  return Args
 end
 
 function RpcUtils.DumpArg(Arg)
@@ -35,11 +34,10 @@ function RpcUtils.ConvertArgs(Args)
   if 0 == #Args then
     return Args
   end
-  local Result = {}
   for i = 1, #Args do
-    Result[#Result + 1] = RpcUtils.LoadArg(Args[i])
+    Args[i] = RpcUtils.LoadArg(Args[i])
   end
-  return Result
+  return Args
 end
 
 function RpcUtils.LoadArg(Arg)

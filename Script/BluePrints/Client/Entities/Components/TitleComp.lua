@@ -40,10 +40,12 @@ end
 
 function Component:GmGetAllTitle()
   self:CallServerMethod("GmGetAllTitle")
+  UE4.UKismetSystemLibrary.ExecuteConsoleCommand(GWorld.GameInstance, "sgm aat", nil)
 end
 
 function Component:GmGetAllTitleFrame()
   self:CallServerMethod("GmGetAllTitleFrame")
+  UE4.UKismetSystemLibrary.ExecuteConsoleCommand(GWorld.GameInstance, "sgm aatf", nil)
 end
 
 function Component:_OnPropChangeTitles(Keys)

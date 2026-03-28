@@ -3797,6 +3797,58 @@ return ReadOnly("Draft", {
     Sound = "SOUND_ITEM_PAPER",
     Time = 30
   },
+  [151765] = {
+    AccessKey = T.RT_26,
+    Batch = true,
+    DraftId = 151765,
+    FoundryCost = T.RT_30,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Mod_Featheredsnake01_Orange.T_Draft_Mod_Featheredsnake01_Orange",
+    ProductId = 51765,
+    ProductNum = 1,
+    ProductType = "Mod",
+    Rarity = 5,
+    ReleaseVersion = 130,
+    Resource = {
+      [1] = {
+        Id = 41765,
+        Num = 5,
+        Type = "Mod"
+      },
+      [2] = T.RT_31
+    },
+    ResourceToCoinType = 102,
+    ResourceValue = 50,
+    ShowInBag = 1,
+    ShowInDraftArchive = true,
+    Sound = "SOUND_ITEM_PAPER",
+    Time = 60
+  },
+  [151766] = {
+    AccessKey = T.RT_26,
+    Batch = true,
+    DraftId = 151766,
+    FoundryCost = T.RT_30,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Mod_Featheredsnake01_Orange.T_Draft_Mod_Featheredsnake01_Orange",
+    ProductId = 51766,
+    ProductNum = 1,
+    ProductType = "Mod",
+    Rarity = 5,
+    ReleaseVersion = 130,
+    Resource = {
+      [1] = {
+        Id = 41766,
+        Num = 5,
+        Type = "Mod"
+      },
+      [2] = T.RT_31
+    },
+    ResourceToCoinType = 102,
+    ResourceValue = 50,
+    ShowInBag = 1,
+    ShowInDraftArchive = true,
+    Sound = "SOUND_ITEM_PAPER",
+    Time = 60
+  },
   [151801] = {
     AccessKey = T.RT_26,
     Batch = true,
@@ -5696,6 +5748,110 @@ return ReadOnly("Draft", {
     Resource = {
       [1] = {
         Id = 56153,
+        Num = 1,
+        Type = "Mod"
+      },
+      [2] = T.RT_38,
+      [3] = T.RT_40
+    },
+    ResourceToCoinType = 102,
+    ResourceValue = 50,
+    ShowInBag = 1,
+    ShowInDraftArchive = true,
+    Sound = "SOUND_ITEM_PAPER",
+    Time = 120
+  },
+  [156161] = {
+    AccessKey = T.RT_26,
+    Batch = true,
+    DraftId = 156161,
+    FoundryCost = T.RT_1,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Mod_Changeling01_Orange.T_Draft_Mod_Changeling01_Orange",
+    ProductId = 56161,
+    ProductNum = 1,
+    ProductType = "Mod",
+    Rarity = 5,
+    ReleaseVersion = 130,
+    Resource = {
+      [1] = {
+        Id = 31203,
+        Num = 10,
+        Type = "Mod"
+      }
+    },
+    ResourceToCoinType = 102,
+    ResourceValue = 50,
+    ShowInBag = 1,
+    ShowInDraftArchive = true,
+    Sound = "SOUND_ITEM_PAPER",
+    Time = 30
+  },
+  [156162] = {
+    AccessKey = T.RT_26,
+    Batch = true,
+    DraftId = 156162,
+    FoundryCost = T.RT_27,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Mod_Siren01_Orange.T_Draft_Mod_Siren01_Orange",
+    ProductId = 56162,
+    ProductNum = 1,
+    ProductType = "Mod",
+    Rarity = 5,
+    ReleaseVersion = 130,
+    Resource = {
+      [1] = {
+        Id = 56161,
+        Num = 1,
+        Type = "Mod"
+      },
+      [2] = T.RT_38,
+      [3] = T.RT_39
+    },
+    ResourceToCoinType = 102,
+    ResourceValue = 50,
+    ShowInBag = 1,
+    ShowInDraftArchive = true,
+    Sound = "SOUND_ITEM_PAPER",
+    Time = 120
+  },
+  [156163] = {
+    AccessKey = T.RT_26,
+    Batch = true,
+    DraftId = 156163,
+    FoundryCost = T.RT_1,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Mod_Changeling01_Orange.T_Draft_Mod_Changeling01_Orange",
+    ProductId = 56163,
+    ProductNum = 1,
+    ProductType = "Mod",
+    Rarity = 5,
+    ReleaseVersion = 130,
+    Resource = {
+      [1] = {
+        Id = 31002,
+        Num = 10,
+        Type = "Mod"
+      }
+    },
+    ResourceToCoinType = 102,
+    ResourceValue = 50,
+    ShowInBag = 1,
+    ShowInDraftArchive = true,
+    Sound = "SOUND_ITEM_PAPER",
+    Time = 30
+  },
+  [156164] = {
+    AccessKey = T.RT_26,
+    Batch = true,
+    DraftId = 156164,
+    FoundryCost = T.RT_27,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Mod_Siren01_Orange.T_Draft_Mod_Siren01_Orange",
+    ProductId = 56164,
+    ProductNum = 1,
+    ProductType = "Mod",
+    Rarity = 5,
+    ReleaseVersion = 130,
+    Resource = {
+      [1] = {
+        Id = 56163,
         Num = 1,
         Type = "Mod"
       },
@@ -7648,6 +7804,34 @@ return ReadOnly("Draft", {
     Sound = "SOUND_ITEM_PAPER",
     Time = 180
   },
+  [910305] = {
+    DraftId = 910305,
+    FoundryCost = T.RT_94,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Claymore_Mingjin.T_Draft_Claymore_Mingjin",
+    ProductId = 10305,
+    ProductNum = 1,
+    ProductType = "Weapon",
+    Rarity = 5,
+    ReleaseVersion = 130,
+    Resource = {
+      [1] = T.RT_95,
+      [2] = {
+        Id = 12150,
+        Num = 1,
+        Type = "Resource"
+      },
+      [3] = {
+        Id = 12151,
+        Num = 1,
+        Type = "Resource"
+      }
+    },
+    ResourceValue = -1,
+    ShowInBag = 1,
+    ShowInDraftArchive = true,
+    Sound = "SOUND_ITEM_PAPER",
+    Time = 180
+  },
   [910401] = {
     DraftId = 910401,
     FoundryCost = T.RT_94,
@@ -8466,6 +8650,72 @@ return ReadOnly("Draft", {
     Sound = "SOUND_ITEM_PAPER",
     Time = 180
   },
+  [920406] = {
+    DraftId = 920406,
+    FoundryCost = T.RT_94,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Shotgun_Qiege.T_Draft_Shotgun_Qiege",
+    ProductId = 20406,
+    ProductNum = 1,
+    ProductType = "Weapon",
+    Rarity = 5,
+    ReleaseVersion = 130,
+    Resource = {
+      [1] = T.RT_96,
+      [2] = {
+        Id = 12152,
+        Num = 1,
+        Type = "Resource"
+      },
+      [3] = {
+        Id = 12153,
+        Num = 1,
+        Type = "Resource"
+      },
+      [4] = {
+        Id = 12154,
+        Num = 1,
+        Type = "Resource"
+      }
+    },
+    ResourceValue = -1,
+    ShowInBag = 1,
+    ShowInDraftArchive = true,
+    Sound = "SOUND_ITEM_PAPER",
+    Time = 180
+  },
+  [920407] = {
+    DraftId = 920407,
+    FoundryCost = T.RT_94,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Shotgun_Guchu.T_Draft_Shotgun_Guchu",
+    ProductId = 20407,
+    ProductNum = 1,
+    ProductType = "Weapon",
+    Rarity = 5,
+    ReleaseVersion = 130,
+    Resource = {
+      [1] = T.RT_96,
+      [2] = {
+        Id = 12144,
+        Num = 1,
+        Type = "Resource"
+      },
+      [3] = {
+        Id = 12145,
+        Num = 1,
+        Type = "Resource"
+      },
+      [4] = {
+        Id = 12146,
+        Num = 1,
+        Type = "Resource"
+      }
+    },
+    ResourceValue = -1,
+    ShowInBag = 1,
+    ShowInDraftArchive = true,
+    Sound = "SOUND_ITEM_PAPER",
+    Time = 180
+  },
   [920501] = {
     DraftId = 920501,
     FoundryCost = T.RT_94,
@@ -8753,6 +9003,39 @@ return ReadOnly("Draft", {
       },
       [4] = {
         Id = 12064,
+        Num = 1,
+        Type = "Resource"
+      }
+    },
+    ResourceValue = -1,
+    ShowInBag = 1,
+    ShowInDraftArchive = true,
+    Sound = "SOUND_ITEM_PAPER",
+    Time = 180
+  },
+  [920512] = {
+    DraftId = 920512,
+    FoundryCost = T.RT_94,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Machinegun_Beizhong.T_Draft_Machinegun_Beizhong",
+    ProductId = 20512,
+    ProductNum = 1,
+    ProductType = "Weapon",
+    Rarity = 5,
+    ReleaseVersion = 130,
+    Resource = {
+      [1] = T.RT_96,
+      [2] = {
+        Id = 12147,
+        Num = 1,
+        Type = "Resource"
+      },
+      [3] = {
+        Id = 12148,
+        Num = 1,
+        Type = "Resource"
+      },
+      [4] = {
+        Id = 12149,
         Num = 1,
         Type = "Resource"
       }

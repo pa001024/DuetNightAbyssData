@@ -46,8 +46,8 @@ function M:ReceiveTick(DeltaSeconds)
   NewTransform.Rotation = NewQuat
   self.Fan:K2_SetWorldTransform(NewTransform, false, nil, false)
   self:TryGetRelativeActor()
-  if self.RelativeActor ~= nil and self.RelativeActor.IsActive then
-    self.RelativeActor:K2_AddActorWorldRotation(self.RelativeActorRot * self.ActorReverse * DeltaSeconds * self.RotateFactor, false, nil, false)
+  if self.RelativeActor ~= nil and self.RelativeActor.IsActive and self.RelativeActor.AddRot then
+    self.RelativeActor:AddRot(self.RelativeActorRot * self.ActorReverse * DeltaSeconds * self.RotateFactor)
   end
 end
 

@@ -110,14 +110,6 @@ function BP_PlayerCharacterSimple_C:Activate()
   self:SetActorShowOrHide(true)
 end
 
-function BP_PlayerCharacterSimple_C:CheckSkillInActive(SkillName)
-  local Controller = self:GetController()
-  if Controller:Cast(UE4.ASinglePlayerController) then
-    return self:GetController():CheckSkillInActive(SkillName)
-  end
-  return false
-end
-
 AssembleComponents(BP_PlayerCharacterSimple_C, {
   "CheckJumpStage"
 })

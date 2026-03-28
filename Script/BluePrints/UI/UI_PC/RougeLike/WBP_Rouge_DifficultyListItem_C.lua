@@ -5,10 +5,19 @@ local WBP_Rouge_DifficultyListItem_C = Class({
 
 function WBP_Rouge_DifficultyListItem_C:Construct()
   self.Text_LvName:SetText(GText("UI_RL_LevelLimit"))
-  self.Bg_List:BindEventOnClicked(self, self.OnSubCellClicked)
-  self.Bg_List:TryOverrideSoundFunc(function()
-    AudioManager(self):PlayUISound(self, "event:/ui/common/click_mid", nil, nil)
-  end)
+  self.IsSelect = false
+  self.IsCantInteractable = false
+  self.Hovered = false
+  self:UnBindEventOnClicked()
+  self.Btn_Click.OnClicked:Add(self, self.OnCellClicked)
+  self.Btn_Click.OnHovered:Add(self, self.OnCellHovered)
+  self.Btn_Click.OnUnhovered:Add(self, self.OnCellUnhovered)
+  self.Btn_Click.OnPressed:Add(self, self.OnCellPressed)
+  self.Btn_Click.OnReleased:Add(self, self.OnCellReleased)
+end
+
+function WBP_Rouge_DifficultyListItem_C:Destruct()
+  self:UnBindEventOnClicked()
 end
 
 function WBP_Rouge_DifficultyListItem_C:BindEventOnClicked(Obj, Func, ...)
@@ -20,6 +29,12 @@ function WBP_Rouge_DifficultyListItem_C:BindEventOnClicked(Obj, Func, ...)
   self.Params = {
     ...
   }
+end
+
+function WBP_Rouge_DifficultyListItem_C:UnBindEventOnClicked()
+  self.Obj = nil
+  self.Func = nil
+  self.Params = nil
 end
 
 function WBP_Rouge_DifficultyListItem_C:ItemSetNavigationRuleCustom(Obj, Func)
@@ -34,39 +49,26 @@ function WBP_Rouge_DifficultyListItem_C:InitInfo(DifficultyId, Index, Unlock)
   self.Title_Level:SetText(GText("RL_Difficulty_" .. Index))
   self.Text_Lv:SetText(self.UnlockLevel)
   self:RefreshState(Unlock)
-  self:PlayAnimation(self.Normal)
-  self.Bg_List:PlayAnimation(self.Bg_List.Normal)
-end
-
-function WBP_Rouge_DifficultyListItem_C:OnSubCellClicked()
-  local Avatar = GWorld:GetAvatar()
-  if Avatar then
-    if Avatar:IsRougeLikeInProgress() and Avatar.RougeLike.ProgressingDifficultyId == self.DifficultyId then
-      self:PlayAnimation(self.Select)
-    elseif not Avatar:IsRougeLikeInProgress() then
-      self:PlayAnimation(self.Select)
-    end
-  end
-  if self.Obj and self.Func then
-    return self.Func(self.Obj, table.unpack(self.Params))
+  if self.Unlock then
+    self:PlayAnimation(self.Normal)
+  else
+    self:PlayAnimation(self.Forbidden)
   end
 end
 
 function WBP_Rouge_DifficultyListItem_C:UnSelected()
   self:StopAllAnimations()
-  self:PlayAnimationReverse(self.Select)
-  self.Bg_List:StopAllAnimations()
-  self.Bg_List:PlayAnimation(self.Bg_List.Normal)
-  self.Bg_List.IsSelect = false
+  if self.Unlock then
+    self:PlayAnimation(self.Normal)
+  else
+    self:PlayAnimation(self.Forbidden)
+  end
   self.IsSelect = false
 end
 
 function WBP_Rouge_DifficultyListItem_C:Selected()
   self:StopAllAnimations()
   self:PlayAnimation(self.Select)
-  self.Bg_List:StopAllAnimations()
-  self.Bg_List:PlayAnimation(self.Bg_List.Select)
-  self.Bg_List.IsSelect = true
   self.IsSelect = true
 end
 
@@ -85,14 +87,91 @@ function WBP_Rouge_DifficultyListItem_C:RefreshState(Unlock)
   else
     self.Unlock = Unlock
   end
-  self.Bg_List.IsCantInteractable = true
+  self.IsCantInteractable = true
   if Avatar and not Avatar:IsRougeLikeInProgress() then
-    self.Bg_List.IsCantInteractable = false
+    self.IsCantInteractable = false
   end
   if self.Unlock then
     self.Image_Lock:SetVisibility(ESlateVisibility.Collapsed)
   else
     self.Image_Lock:SetVisibility(ESlateVisibility.Visible)
+  end
+end
+
+function WBP_Rouge_DifficultyListItem_C:OnCellClicked()
+  if self.IsSelect then
+    return
+  end
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_mid", nil, nil)
+  if self.Obj and self.Func then
+    self.Func(self.Obj, table.unpack(self.Params))
+  end
+end
+
+function WBP_Rouge_DifficultyListItem_C:OnCellClickedWithoutSound()
+  if not ReddotManager.GetTreeNode("PaotaiEventNewLevel") then
+    ReddotManager.AddNodeEx("PaotaiEventNewLevel")
+  end
+  local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("PaotaiEventNewLevel")
+  if 1 == CacheDetail[self.Content.DungeonId] then
+    CacheDetail[self.Content.DungeonId] = 0
+    ReddotManager.DecreaseLeafNodeCount("PaotaiEventNewLevel")
+  end
+  if self.Content.IsSelect then
+    return false
+  end
+  if self.Content.LockReason then
+    if self.Content.LockReason == "PreDungeon" then
+      UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText(DataMgr.PaotaiMiniGame[self.Content.DungeonId].LockToast))
+    end
+    return false
+  else
+    if self.Obj and self.Func then
+      self.Func(self.Obj, table.unpack(self.Params))
+    end
+    self:StopAllAnimations()
+    self:PlayAnimation(self.Click)
+    return true
+  end
+end
+
+function WBP_Rouge_DifficultyListItem_C:OnCellHovered()
+  if self.IsSelect or self.IsCantInteractable then
+    return
+  end
+  self.Hovered = true
+  self:StopAnimation(self.Normal)
+  self:StopAnimation(self.Forbidden)
+  self:PlayAnimation(self.Hover)
+end
+
+function WBP_Rouge_DifficultyListItem_C:OnCellUnhovered()
+  if self.IsSelect or self.IsCantInteractable then
+    return
+  end
+  self.Hovered = false
+  self:StopAnimation(self.Hover)
+  self:PlayAnimation(self.UnHover)
+end
+
+function WBP_Rouge_DifficultyListItem_C:OnCellPressed()
+  if self.IsSelect or self.IsCantInteractable then
+    return
+  end
+  self:PlayAnimation(self.Press)
+end
+
+function WBP_Rouge_DifficultyListItem_C:OnCellReleased()
+  if self.IsSelect or self.IsCantInteractable then
+    return
+  end
+  self:StopAnimation(self.Press)
+  if self.Hovered then
+    self:PlayAnimation(self.Hover)
+  elseif self.Unlock then
+    self:PlayAnimation(self.Normal)
+  else
+    self:PlayAnimation(self.Forbidden)
   end
 end
 

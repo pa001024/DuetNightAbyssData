@@ -23,6 +23,15 @@ return ReadOnly("LimitedTimeResource", {
       TransCount = 1000,
       TransResourceId = 101,
       TransType = "Ordinary"
+    },
+    [3] = {
+      EndTime = LocalTimeProxy(1780606800),
+      LimitedTimeId = 3,
+      MailRemindId = 10061,
+      ResourceId = 217,
+      TransCount = 1000,
+      TransResourceId = 101,
+      TransType = "Ordinary"
     }
   },
   [218] = {
@@ -37,6 +46,18 @@ return ReadOnly("LimitedTimeResource", {
       EndTime = LocalTimeProxy(1775768400),
       LimitedTimeId = 1,
       ResourceId = 220
+    },
+    [2] = {
+      EndTime = LocalTimeProxy(1780606800),
+      LimitedTimeId = 2,
+      ResourceId = 220
+    }
+  },
+  [222] = {
+    [1] = {
+      EndTime = LocalTimeProxy(1780365600),
+      LimitedTimeId = 1,
+      ResourceId = 222
     }
   },
   [1004] = {
@@ -120,6 +141,31 @@ return ReadOnly("LimitedTimeResource", {
       TransCount = 1,
       TransResourceId = 1001,
       TransType = "Rare"
+    },
+    [10] = {
+      EndTime = LocalTimeProxy(1780304400),
+      LimitedTimeId = 10,
+      MailRemindId = 10009,
+      ResourceId = 1004,
+      TransCount = 1,
+      TransResourceId = 1001,
+      TransType = "Rare"
+    }
+  },
+  [120001] = {
+    [1] = {
+      EndTime = LocalTimeProxy(1780304400),
+      LimitedTimeId = 1,
+      MailRemindId = 10071,
+      ResourceId = 120001
+    }
+  },
+  [120002] = {
+    [1] = {
+      EndTime = LocalTimeProxy(1780304400),
+      LimitedTimeId = 1,
+      MailRemindId = 10071,
+      ResourceId = 120002
     }
   },
   [6000002] = {

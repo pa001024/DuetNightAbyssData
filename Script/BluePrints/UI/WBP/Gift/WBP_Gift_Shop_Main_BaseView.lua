@@ -538,6 +538,7 @@ function M:InitShopTabInfo(MainTabIdx, SubTabIdx, ShopType)
       self:UpdateShopDetail(self.CurSubTabMap)
     end
   end)
+  self:AddDispatcher(EventID.OnRechargeFinished, self, M.OnRechargeFinished)
   if self.Common_Tab.Btn_Tip then
     self.Common_Tab.Panel_Tip:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   elseif self.Common_Tab.WBP_Com_Tab_ResourceBar and self.Common_Tab.WBP_Com_Tab_ResourceBar.Tip_PC then
@@ -656,6 +657,12 @@ end
 function M:InitKeyboardView()
   if self.CheckBox_Own and self.CheckBox_Own.Com_KeyImg and self.CheckBox_Own.Com_KeyImg.SetVisibility then
     self.CheckBox_Own.Com_KeyImg:SetVisibility(ESlateVisibility.Collapsed)
+  end
+end
+
+function M:OnRechargeFinished(Result, GoodsId, ShopItems, OrderId)
+  if Result == ErrorCode.RET_SUCCESS then
+    self:UpdateShopDetail(self.CurSubTabMap)
   end
 end
 

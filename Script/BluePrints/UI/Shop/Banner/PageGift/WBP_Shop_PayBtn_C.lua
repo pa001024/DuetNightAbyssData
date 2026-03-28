@@ -8,6 +8,7 @@ function WBP_Shop_GiftPayBtn_C:Construct()
   self.CurGamepadName = UIUtils.UtilsGetCurrentGamepadName()
   self:RefreshIconAndGamePadVisibility()
   self:SetGamePadVisibility(UIConst.VisibilityOp.Collapsed)
+  self:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.IsGamePadIconVisible = false
 end
 
@@ -56,18 +57,7 @@ function WBP_Shop_GiftPayBtn_C:RefreshIconAndGamePadVisibility()
 end
 
 function WBP_Shop_GiftPayBtn_C:SetGamePadImg(ImgShortPath, ImgLongPath)
-  local ImgPath, Img
-  if ImgShortPath and "None" ~= ImgShortPath then
-    ImgPath = UIUtils.UtilsGetKeyIconPathInGamepad(ImgShortPath, self.CurGamepadName)
-    Img = LoadObject(ImgPath)
-  elseif ImgLongPath then
-    Img = LoadObject(ImgLongPath)
-  end
-  if not IsValid(Img) then
-    DebugPrint("缺少图片资源: ImgPath = ", ImgPath, ImgShortPath, ImgLongPath)
-    return
-  end
-  self.Key_ControllerBuy:SetBrushResourceObject(Img)
+  self.Key_ControllerBuy:SetImage("Img", ImgShortPath)
 end
 
 function WBP_Shop_GiftPayBtn_C:SetDefaultGamePadImg(ImgShortPath)

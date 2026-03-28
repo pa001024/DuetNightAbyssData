@@ -91,7 +91,7 @@ function M:InitAutoVote()
     return
   end
   local Avatar = GWorld:GetAvatar()
-  print(_G.LogTag, "LXZ OnLoaded Vote", DungeonId, GameState.DungeonProgress, Avatar.Dungeons[DungeonId].AutoProgress)
+  print(_G.LogTag, "LXZ OnLoaded Vote", DungeonId, GameState.DungeonProgress, Avatar.Dungeons[DungeonId].AutoProgress, self.IsInit)
   if Avatar.Dungeons[DungeonId].AutoProgress > 0 then
     if GameState.DungeonProgress - 1 <= Avatar.Dungeons[DungeonId].AutoProgress then
       self.TotalAutoSelectTime = DataMgr.GlobalConstant.AutoRoundsCheckTime.ConstantValue or 5
@@ -121,7 +121,7 @@ function M:OnAutoVoteCountDown(IsContinue)
   self.CountDown.Text_CountDown:SetText(string.format("%d", IntCountDown))
   self.Bar01:SetPercent(CountDownPercent)
   self.Bar02:SetPercent(CountDownPercent)
-  if self.AutoSelectTime <= 0 then
+  if self.AutoSelectTime <= 0 and self.IsInit then
     self:Vote(IsContinue)
   end
 end
@@ -207,7 +207,7 @@ function M:SetPlayerInfo()
 end
 
 function M:Vote(IsContinue)
-  print(_G.LogTag, "LXZ  Vote", IsContinue, self.bInClose, self.SelectContinue)
+  print(_G.LogTag, "LXZ  Vote", IsContinue, self.bInClose, self.SelectContinue, self.IsInit)
   if self.bInClose then
     return
   end
@@ -216,20 +216,9 @@ function M:Vote(IsContinue)
   end
   self:RemoveTimer("OnAutoVoteCountDown")
   if IsContinue then
-    local Avatar = GWorld:GetAvatar()
-    if Avatar then
-      Traceback()
-      Avatar:TryEnterNextProgress(function(Ret)
-        if Ret == ErrorCode.RET_SUCCESS then
-          self.SelectContinue = IsContinue
-          self:SendVoteResult(EVoteState.Continue)
-          self.Box_Leave:OnReleaseLeave()
-        elseif Ret == ErrorCode.RET_ACTIONPOINT_NOT_ENOUGH then
-          UIUtils.ShowActionRecover(self)
-          self.Box_Continue.bClick = false
-        end
-      end)
-    end
+    self.SelectContinue = IsContinue
+    self:SendVoteResult(EVoteState.Continue)
+    self.Box_Leave:OnReleaseLeave()
   else
     self.SelectContinue = IsContinue
     self.Box_Continue:OnReleaseContinue()
@@ -268,7 +257,7 @@ function M:UpdateDungeonSingleValue(Eid, Value)
 end
 
 function M:OnRepDungeonVoteInterval()
-  print(_G.LogTag, "LXZ  OnRepDungeonVoteInterval")
+  print(_G.LogTag, "LXZ  OnRepDungeonVoteInterval", self.IsInit)
   local GameState = UE4.URuntimeCommonFunctionLibrary.GetCurrentGameState(self)
   UIManager(self):HideAllUI_EX({
     self:GetName()

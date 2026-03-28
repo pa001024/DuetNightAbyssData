@@ -77,7 +77,7 @@ end
 
 function BP_EnergySupply_C:OnActorReady(Info)
   BP_EnergySupply_C.Super.OnActorReady(self, Info)
-  self:DeactiveGuide()
+  self:TryDeactiveGuide()
   if IsAuthority(self) then
     self:StartRecover()
     self:OnBuffNumChange()
@@ -210,6 +210,22 @@ function BP_EnergySupply_C:PlayAnim(PlayerId, InteractiveState, MechanismEid)
   end
 end
 
+function BP_EnergySupply_C:TryActiveGuide(Type, PlayerEid)
+  self:ActiveGuide(Type, PlayerEid)
+end
+
+function BP_EnergySupply_C:TryDeactiveGuide(PlayerEid)
+  self:DeactiveGuide(PlayerEid)
+end
+
+function BP_EnergySupply_C:TryActiveAllGuide(IgnoreList, PlayerEid)
+  self:ActiveAllGuide(IgnoreList, PlayerEid)
+end
+
+function BP_EnergySupply_C:TryDeactiveAllGuide(IgnoreList, PlayerEid)
+  self:DeactiveAllGuide(IgnoreList, PlayerEid)
+end
+
 function BP_EnergySupply_C:OnBuffNumChange()
   if not self.BuffId then
     return
@@ -240,17 +256,17 @@ function BP_EnergySupply_C:FindTarget()
         if Dis >= self.GuideRadius then
           IgnoreSelf:Add(self.Eid)
         end
-        self:DeactiveAllGuide(IgnoreSelf, Player.Eid)
+        self:TryDeactiveAllGuide(IgnoreSelf, Player.Eid)
         self.HasAllEnergyGuideCloseLua[Player.Eid] = true
       elseif Dis >= self.GuideRadius and (self.HasEnergyGuideCloseLua[Player.Eid] or self.HasEnergyGuideCloseLua[Player.Eid] == nil) then
-        self:ActiveGuide("Add", Player.Eid)
+        self:TryActiveGuide("Add", Player.Eid)
         self.HasEnergyGuideCloseLua[Player.Eid] = false
       elseif Dis < self.GuideRadius and not self.HasEnergyGuideCloseLua[Player.Eid] then
-        self:DeactiveGuide(Player.Eid)
+        self:TryDeactiveGuide(Player.Eid)
         self.HasEnergyGuideCloseLua[Player.Eid] = true
       end
     elseif self.HasAllEnergyGuideCloseLua[Player.Eid] then
-      self:ActiveAllGuide(nil, Player.Eid)
+      self:TryActiveAllGuide(nil, Player.Eid)
       self.HasAllEnergyGuideCloseLua[Player.Eid] = false
     end
     self:CheckPlayerInShowToastDis(Dis, Player.Eid)
@@ -277,7 +293,7 @@ function BP_EnergySupply_C:StartRecover()
     local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, i)
     local AllGuideClose = self.HasAllEnergyGuideCloseLua[Player.Eid]
     if false ~= AllGuideClose then
-      self:ActiveAllGuide(nil, Player.Eid)
+      self:TryActiveAllGuide(nil, Player.Eid)
       self.HasAllEnergyGuideCloseLua[Player.Eid] = false
     end
   end
@@ -300,7 +316,7 @@ function BP_EnergySupply_C:AutoRecover()
     local Dis = self:CalDistance(Player)
     if Dis <= self.Radius then
       bFindPlayer = true
-      if not self.bActiveMontage then
+      if not self.bActiveMontage and self:CheckCanPlayActiveMontage() then
         self.bActiveMontage = true
         self:TriggerBluePrintEvent("PlayActiveMontage")
       end
@@ -308,18 +324,20 @@ function BP_EnergySupply_C:AutoRecover()
       if not self.HasPlayTalk then
         self.HasPlayTalk = true
         local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
-        if GameMode:GetDungeonComponent().HasInEnergySurvival then
+        if GameMode:GetDungeonComponent() and GameMode:GetDungeonComponent().HasInEnergySurvival then
           self:PlaySurvivalTalk(600308)
           break
         end
         self:PlaySurvivalTalk(600303)
         GameMode:PostCustomEvent("SurvivalProStart")
-        GameMode:GetDungeonComponent().HasInEnergySurvival = true
+        if GameMode:GetDungeonComponent() then
+          GameMode:GetDungeonComponent().HasInEnergySurvival = true
+        end
       end
       break
     end
   end
-  if not bFindPlayer and self.bActiveMontage then
+  if not bFindPlayer and self.bActiveMontage and self:CheckCanPlayStopMontage() then
     self.bActiveMontage = false
     self:TriggerBluePrintEvent("PlayStopMontage")
   end
@@ -339,7 +357,7 @@ function BP_EnergySupply_C:OutRecover_Lua(Monster)
   local DisY = Monster:K2_GetActorLocation().Y - self:K2_GetActorLocation().Y
   local Dis = math.sqrt(DisX * DisX + DisY * DisY)
   if Dis < self.Radius then
-    if IsAuthority(self) then
+    if IsAuthority(self) and self:CheckCanChangeEnergy() then
       local SeqFilterTag = {"Mon.Strong"}
       if Monster:HasAnyTags_Table(Monster, SeqFilterTag, false) then
         self:ChangeEnergy(self.EliteEnergy, true)
@@ -347,7 +365,7 @@ function BP_EnergySupply_C:OutRecover_Lua(Monster)
         self:ChangeEnergy(self.NormalEnergy, true)
       end
     end
-    if not IsAuthority(self) or IsStandAlone(self) then
+    if self:CheckCanChangeEnergy() and (not IsAuthority(self) or IsStandAlone(self)) then
       local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
       local MonsterLoc = Monster.Mesh:K2_GetComponentLocation()
       local MonsterRot = Monster.Mesh:K2_GetComponentRotation()
@@ -373,9 +391,12 @@ function BP_EnergySupply_C:OutRecover_Lua(Monster)
     end
     Monster.EnergySupplyCheck = -1
   end
-  if IsAuthority(self) and Monster.EnergySupplyCheck == UE4.UGameplayStatics.GetGameState(self).MechanismMap:FindRef("Supply").Array:Length() then
-    local GameMode = UE4.UGameplayStatics.GetGameMode(self)
-    GameMode:TriggerDungeonComponentFun("OnMonsterDeadOut")
+  if IsStandAlone(self) then
+    local SupplyData = UE4.UGameplayStatics.GetGameState(self).MechanismMap:FindRef("Supply")
+    if SupplyData and SupplyData.Array and Monster.EnergySupplyCheck == SupplyData.Array:Length() then
+      local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+      GameMode:TriggerDungeonComponentFun("OnMonsterDeadOut")
+    end
   end
 end
 
@@ -479,6 +500,18 @@ end
 function BP_EnergySupply_C:PlaySurvivalTalk(TalkId)
   local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
   UE4.UPlayTalkAsyncAction.PlayTalk(GameInstance, TalkId, nil)
+end
+
+function BP_EnergySupply_C:CheckCanChangeEnergy()
+  return true
+end
+
+function BP_EnergySupply_C:CheckCanPlayActiveMontage()
+  return true
+end
+
+function BP_EnergySupply_C:CheckCanPlayStopMontage()
+  return true
 end
 
 function BP_EnergySupply_C:OnEnergyChanged(NewEnergy, bFromMonster)

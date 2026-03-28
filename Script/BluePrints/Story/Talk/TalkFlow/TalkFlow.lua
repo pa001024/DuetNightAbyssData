@@ -3,10 +3,10 @@ local EDialogueIterType = require("BluePrints.Story.Talk.View.TalkUtils").EDialo
 local TalkFlowUTils = require("BluePrints.Story.Talk.TalkFlow.TalkFlowUTils")
 local M = {}
 
-function M:New(FlowId, Comps)
+function M:New(FlowId, TalkTask, Comps)
   local TalkFlow = setmetatable({}, {__index = M})
   rawset(TalkFlow, "FlowId", FlowId)
-  TalkFlow:BuildFlow(FlowId, Comps)
+  TalkFlow:BuildFlow(FlowId, TalkTask, Comps)
   return TalkFlow
 end
 
@@ -16,9 +16,13 @@ function M:CreateNodeMaps()
   rawset(self, "OptionNodeMap", {})
 end
 
-function M:BuildFlow(FlowId, Comps)
-  if not FlowId or not DataMgr.Dialogue[FlowId] then
-    DebugPrint("FTalkFlow:BuildFlow, FlowId is nil", FlowId)
+function M:BuildFlow(FirstDialogueId, TalkTask, Comps)
+  if not FirstDialogueId or not DataMgr.Dialogue[FirstDialogueId] then
+    DebugPrint("FTalkFlow:BuildFlow, FirstDialogueId is Invalid", FirstDialogueId)
+    return
+  end
+  if not TalkTask then
+    DebugPrint("FTalkFlow:BuildFlow, TalkTask is nil", FirstDialogueId)
     return
   end
   self:CreateNodeMaps()
@@ -30,10 +34,11 @@ function M:BuildFlow(FlowId, Comps)
   local NodeEvents = {
     EventReceiver = self,
     OnNodeEnter = self.OnNodeEnter,
-    OnNodeCreated = self.OnNodeCreated
+    OnNodeCreated = self.OnNodeCreated,
+    OnFlowCreated = self.OnFlowCreated
   }
-  self.EndNode = TalkFlowUTils:GetOrCreateNode("End", nil, nil, nil, NodeEvents)
-  self.StartNode = TalkFlowUTils:GetOrCreateNode("Start", FlowId, Comps, NodeMaps, NodeEvents)
+  self.EndNode = TalkFlowUTils:GetOrCreateNode("End", nil, nil, nil, nil, NodeEvents)
+  self.StartNode = TalkFlowUTils:GetOrCreateNode("Start", FirstDialogueId, TalkTask, Comps, NodeMaps, NodeEvents)
   self.CurrentNode = self.StartNode
 end
 
@@ -94,6 +99,16 @@ end
 function M:OnNodeCreated(Node)
   if Node:GetType() == EDialogueNodeType.Option and Node.RestartTag then
     self:SetRestartTag(Node.RestartTag)
+  end
+end
+
+function M:BindOnFlowCreatedEvent(Event)
+  self.OnFlowCreatedEvent = Event
+end
+
+function M:OnFlowCreated(Flow, ParallelNode, WaitAllNode)
+  if self.OnFlowCreatedEvent then
+    self.OnFlowCreatedEvent(Flow, ParallelNode, WaitAllNode)
   end
 end
 

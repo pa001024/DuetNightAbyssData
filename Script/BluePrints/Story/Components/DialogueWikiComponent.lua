@@ -76,7 +76,7 @@ function FDialogueWikiComponent:OnWikiAllConditionsMet(WikiId)
     DebugPrint("FDialogueWikiComponent@OnWikiAllConditionsMet, WikiId is InValid", WikiId)
     return
   end
-  if self.TalkTask and self.TalkTask.UI then
+  if self.TalkTask and IsValid(self.TalkTask.UI) then
     self.TalkTask.UI:TryShowWikiButton(self.TalkTask)
     self.TalkTask.UI:PlayWikiRemindAnim()
   end

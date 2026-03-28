@@ -1,5 +1,6 @@
 require("UnLua")
 local TaskUtils = require("BluePrints.UI.TaskPanel.TaskUtils")
+local TimeUtils = require("Utils.TimeUtils")
 local EMCache = require("EMCache.EMCache")
 local WBP_TaskListItem_C = Class("BluePrints.UI.BP_UIState_C")
 local QuestStateEnum = {
@@ -84,6 +85,7 @@ function WBP_TaskListItem_C:RefreshListItemInfo(Content)
     return
   end
   if -1 ~= self.QuestChainId then
+    self.Group_RecommendedLevel:SetVisibility(UE4.ESlateVisibility.Collapsed)
     if 0 ~= self.DoingQuestId then
       self:TriggerRecommendedLevelUIShow(TaskUtils:GetQuestDetail(self.QuestChainId, self.DoingQuestId))
     else
@@ -128,6 +130,21 @@ function WBP_TaskListItem_C:RefreshListItemInfo(Content)
     if nil ~= QuestTabData then
       self.Text_TaskType:SetText(GText(QuestTabData.TabName))
       self.Image_TaskTypeIcon:SetBrushResourceObject(LoadObject(QuestTabData.Icon))
+      local QuestChainType
+      if -1 == self.QuestChainId then
+        QuestChainType = 1
+      else
+        QuestChainType = DataMgr.QuestChain[self.QuestChainId].QuestChainType
+      end
+      if QuestChainType == Const.MainQuestChainType or QuestChainType == Const.MainActivityQuestChainType then
+        self:PlayAnimation(self.Text_MainColor)
+      elseif 2 == QuestChainType then
+        self:PlayAnimation(self.Text_DailyColor)
+      elseif QuestChainType == Const.SideQuestChainType then
+        self:PlayAnimation(self.Text_SideColor)
+      elseif QuestChainType == Const.LimTimeQuestChainType or QuestChainType == Const.SpecialSideQuestChainType then
+        self:PlayAnimation(self.Text_SpecialColor)
+      end
     end
   else
     self.Group_TaskType:SetVisibility(UE4.ESlateVisibility.Collapsed)
@@ -139,13 +156,21 @@ function WBP_TaskListItem_C:RefreshListItemInfo(Content)
     if not UnlockConditionId then
       QuestState = QuestStateEnum.DOING
     end
+    local CurrentTime = TimeUtils.NowTime()
+    local StartTime = DataMgr.QuestChain[self.QuestChainId].StartTime
+    local ShowTime = DataMgr.QuestChain[self.QuestChainId].ShowTime
+    if nil == ShowTime then
+      ShowTime = StartTime
+    end
+    if ShowTime and StartTime and ShowTime:GetTime() <= StartTime:GetTime() and CurrentTime < StartTime:GetTime() then
+      QuestState = QuestStateEnum.LOCK
+    end
     DoingQuestInfo = self:PreCreateSubItemContent(QuestState, self.QuestChainId, self.DoingQuestId)
   else
     DoingQuestInfo = self:PreCreateSubItemContent(-1, self.QuestChainId, self.DoingQuestId)
   end
   self.Task_SubItem:RefreshTaskSubItemInfo(DoingQuestInfo)
   self.Task_SubItem:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-  self:PlayImageTaskTypeAnimation()
   if self.IsTracking then
     self.Task_SubItem:OnTracking()
   end
@@ -153,6 +178,7 @@ function WBP_TaskListItem_C:RefreshListItemInfo(Content)
     self.Task_SubItem:SelectQuestProactively()
   else
     self.Task_SubItem:OnQuestUnSelect()
+    self:PlayImageTaskTypeAnimation()
   end
   if -1 == self.QuestChainId then
     self.Text_ChapterName:SetText(GText("AllQuest_Over"))
@@ -337,6 +363,68 @@ function WBP_TaskListItem_C:BP_OnEntryReleased()
     self.Task_SubItem.SubRegionId = 0
     self.Task_SubItem.RegionId = 0
   end
+end
+
+function WBP_TaskListItem_C:StopImageTaskTypeAnimation()
+  local QuestChainType
+  if -1 == self.QuestChainId then
+    QuestChainType = 1
+  else
+    QuestChainType = DataMgr.QuestChain[self.QuestChainId].QuestChainType
+  end
+  if QuestChainType == Const.MainQuestChainType or QuestChainType == Const.MainActivityQuestChainType then
+    self:StopAnimation(self.Task_MainColor)
+  elseif 2 == QuestChainType then
+    self:StopAnimation(self.Task_DailyColor)
+  elseif QuestChainType == Const.SideQuestChainType then
+    self:StopAnimation(self.Task_SideColor)
+  elseif QuestChainType == Const.LimTimeQuestChainType or QuestChainType == Const.SpecialSideQuestChainType then
+    self:StopAnimation(self.Task_SpecialColor)
+  end
+end
+
+function WBP_TaskListItem_C:GetAnimationColorByQuestChainId(QuestChainId)
+  if not QuestChainId then
+    return nil
+  end
+  local QuestChainType
+  if -1 == QuestChainId then
+    QuestChainType = 1
+  else
+    QuestChainType = DataMgr.QuestChain[QuestChainId].QuestChainType
+  end
+  local Color
+  if QuestChainType == Const.MainQuestChainType or QuestChainType == Const.MainActivityQuestChainType then
+    Color = self.MainColor
+  elseif 2 == QuestChainType then
+    Color = self.DailyColor
+  elseif QuestChainType == Const.SideQuestChainType then
+    Color = self.SideColor
+  elseif QuestChainType == Const.LimTimeQuestChainType or QuestChainType == Const.SpecialSideQuestChainType then
+    Color = self.SpecialColor
+  end
+  return Color
+end
+
+function WBP_TaskListItem_C:StopImageTaskTypeAnimationAndSelection()
+  local QuestChainId = self.QuestChainId
+  local Color = self:GetAnimationColorByQuestChainId(QuestChainId)
+  local ColorSolid = FLinearColor(Color.R, Color.G, Color.B, 1)
+  local ColorTransparent = FLinearColor(Color.R, Color.G, Color.B, 0)
+  self:StopImageTaskTypeAnimation()
+  self.VX_Wave3:SetColorAndOpacity(ColorSolid)
+  self.VX_Wave4:SetColorAndOpacity(ColorTransparent)
+end
+
+function WBP_TaskListItem_C:RefreshSelectionAnimation()
+  local ListItemContents = self.OwnerWidget.RootWidget.List_Task:GetListItems()
+  for _, ListItemContent in pairs(ListItemContents) do
+    local UI = ListItemContent.UI
+    if UI and UI ~= self then
+      UI:PlayImageTaskTypeAnimation()
+    end
+  end
+  self:StopImageTaskTypeAnimationAndSelection()
 end
 
 return WBP_TaskListItem_C

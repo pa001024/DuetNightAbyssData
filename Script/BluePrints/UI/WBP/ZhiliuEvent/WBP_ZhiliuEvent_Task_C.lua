@@ -2,7 +2,7 @@ require("UnLua")
 local EMCache = require("EMCache.EMCache")
 local TimeUtils = require("Utils.TimeUtils")
 local CommonUtils = require("Utils.CommonUtils")
-local AnnouncementUtils = require("BluePrints.UI.WBP.Announcement.AnnounceUtils")
+local AnnounceModel = AnnounceController:GetModel()
 local DebugUnlockAllCondition = false
 local M = Class({
   "BluePrints.UI.BP_UIState_C",
@@ -232,12 +232,12 @@ function M:OnDaySwitchButtonLockedClicked(TabIndex)
       local TimeArgs = TArray(FFormatArgumentData)
       local FinalStr = ""
       if DiffDay > 0 then
-        AnnouncementUtils:_AddFormatArg(TimeArgs, "DD", DiffDay)
-        AnnouncementUtils:_AddFormatArg(TimeArgs, "H", DiffHour)
+        AnnounceModel:_AddFormatArg(TimeArgs, "DD", DiffDay)
+        AnnounceModel:_AddFormatArg(TimeArgs, "H", DiffHour)
         FinalStr = UKismetTextLibrary.Format(GText("ZhiLiuEntrust_Lock_Time1"), TimeArgs)
       else
-        AnnouncementUtils:_AddFormatArg(TimeArgs, "H", DiffHour)
-        AnnouncementUtils:_AddFormatArg(TimeArgs, "M", DiffMin)
+        AnnounceModel:_AddFormatArg(TimeArgs, "H", DiffHour)
+        AnnounceModel:_AddFormatArg(TimeArgs, "M", DiffMin)
         FinalStr = UKismetTextLibrary.Format(GText("ZhiLiuEntrust_Lock_Time2"), TimeArgs)
       end
       UIManager(self):ShowUITip(UIConst.Tip_CommonTop, FinalStr)

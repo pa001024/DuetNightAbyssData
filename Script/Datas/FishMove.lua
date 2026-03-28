@@ -35,6 +35,21 @@ return ReadOnly("FishMove", {
     FishMoveId = 106,
     MaxTime = 8
   },
+  [107] = {
+    FishMoveCurve = "CurveFloat'/Game/AssetDesign/GamePlay/Fishing/FishCurve_107.FishCurve_107'",
+    FishMoveId = 107,
+    MaxTime = 8
+  },
+  [108] = {
+    FishMoveCurve = "CurveFloat'/Game/AssetDesign/GamePlay/Fishing/FishCurve_108.FishCurve_108'",
+    FishMoveId = 108,
+    MaxTime = 8
+  },
+  [109] = {
+    FishMoveCurve = "CurveFloat'/Game/AssetDesign/GamePlay/Fishing/FishCurve_109.FishCurve_109'",
+    FishMoveId = 109,
+    MaxTime = 8
+  },
   [201] = {
     FishMoveCurve = "CurveFloat'/Game/AssetDesign/GamePlay/Fishing/FishCurve_201.FishCurve_201'",
     FishMoveId = 201,
@@ -95,6 +110,16 @@ return ReadOnly("FishMove", {
     FishMoveId = 212,
     MaxTime = 6
   },
+  [213] = {
+    FishMoveCurve = "CurveFloat'/Game/AssetDesign/GamePlay/Fishing/FishCurve_213.FishCurve_213'",
+    FishMoveId = 213,
+    MaxTime = 10
+  },
+  [214] = {
+    FishMoveCurve = "CurveFloat'/Game/AssetDesign/GamePlay/Fishing/FishCurve_214.FishCurve_214'",
+    FishMoveId = 214,
+    MaxTime = 10
+  },
   [301] = {
     FishMoveCurve = "CurveFloat'/Game/AssetDesign/GamePlay/Fishing/FishCurve_301.FishCurve_301'",
     FishMoveId = 301,
@@ -139,6 +164,16 @@ return ReadOnly("FishMove", {
     FishMoveCurve = "CurveFloat'/Game/AssetDesign/GamePlay/Fishing/FishCurve_309.FishCurve_309'",
     FishMoveId = 309,
     MaxTime = 6
+  },
+  [310] = {
+    FishMoveCurve = "CurveFloat'/Game/AssetDesign/GamePlay/Fishing/FishCurve_310.FishCurve_310'",
+    FishMoveId = 310,
+    MaxTime = 7
+  },
+  [311] = {
+    FishMoveCurve = "CurveFloat'/Game/AssetDesign/GamePlay/Fishing/FishCurve_311.FishCurve_311'",
+    FishMoveId = 311,
+    MaxTime = 7
   },
   [401] = {
     FishMoveCurve = "CurveFloat'/Game/AssetDesign/GamePlay/Fishing/FishCurve_401.FishCurve_401'",
@@ -185,6 +220,16 @@ return ReadOnly("FishMove", {
     FishMoveId = 409,
     MaxTime = 7
   },
+  [410] = {
+    FishMoveCurve = "CurveFloat'/Game/AssetDesign/GamePlay/Fishing/FishCurve_410.FishCurve_410'",
+    FishMoveId = 410,
+    MaxTime = 7
+  },
+  [411] = {
+    FishMoveCurve = "CurveFloat'/Game/AssetDesign/GamePlay/Fishing/FishCurve_411.FishCurve_411'",
+    FishMoveId = 411,
+    MaxTime = 7
+  },
   [501] = {
     FishMoveCurve = "CurveFloat'/Game/AssetDesign/GamePlay/Fishing/FishCurve_501.FishCurve_501'",
     FishMoveId = 501,
@@ -213,6 +258,21 @@ return ReadOnly("FishMove", {
   [506] = {
     FishMoveCurve = "CurveFloat'/Game/AssetDesign/GamePlay/Fishing/FishCurve_506.FishCurve_506'",
     FishMoveId = 506,
+    MaxTime = 5
+  },
+  [507] = {
+    FishMoveCurve = "CurveFloat'/Game/AssetDesign/GamePlay/Fishing/FishCurve_507.FishCurve_507'",
+    FishMoveId = 507,
+    MaxTime = 6.5
+  },
+  [508] = {
+    FishMoveCurve = "CurveFloat'/Game/AssetDesign/GamePlay/Fishing/FishCurve_508.FishCurve_508'",
+    FishMoveId = 508,
+    MaxTime = 3.5
+  },
+  [509] = {
+    FishMoveCurve = "CurveFloat'/Game/AssetDesign/GamePlay/Fishing/FishCurve_509.FishCurve_509'",
+    FishMoveId = 509,
     MaxTime = 5
   },
   [601] = {
@@ -254,5 +314,20 @@ return ReadOnly("FishMove", {
     FishMoveCurve = "CurveFloat'/Game/AssetDesign/GamePlay/Fishing/FishCurve_608.FishCurve_608'",
     FishMoveId = 608,
     MaxTime = 8
+  },
+  [609] = {
+    FishMoveCurve = "CurveFloat'/Game/AssetDesign/GamePlay/Fishing/FishCurve_609.FishCurve_609'",
+    FishMoveId = 609,
+    MaxTime = 8
+  },
+  [610] = {
+    FishMoveCurve = "CurveFloat'/Game/AssetDesign/GamePlay/Fishing/FishCurve_610.FishCurve_610'",
+    FishMoveId = 610,
+    MaxTime = 8
+  },
+  [611] = {
+    FishMoveCurve = "CurveFloat'/Game/AssetDesign/GamePlay/Fishing/FishCurve_611.FishCurve_611'",
+    FishMoveId = 611,
+    MaxTime = 8.5
   }
 })

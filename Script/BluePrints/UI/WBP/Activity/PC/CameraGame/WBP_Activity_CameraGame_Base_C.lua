@@ -11,6 +11,8 @@ function M:Construct()
   self.Avatar = GWorld:GetAvatar()
   self.QCS = CommonConst.QuestChainState
   self.EventId = CameraGameUtils.GetEventId()
+  self.ReddotType = CameraGameUtils.ReddotType
+  self.ReddotNodeName = ActivityReddotHelper.GetEventMainNodeName(self.EventId)
 end
 
 function M:InitUIInfo(Name, IsInUIMode, EventList, Param1, Param2)
@@ -19,9 +21,11 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, Param1, Param2)
     local Index = tonumber(Param2[1]) or 1
     self.ListView_Left:NavigateToIndex(Index - 1)
   end
+  CameraGameUtils.RefreshReddot(self.EventId)
   self:InitPhotoProgress()
   self:InitPhotoList()
   self:PlayAnimation(self.In)
+  AudioManager(self):PlayUISound(self, "event:/ui/activity/camera_sub_page_in", nil, nil)
   self:AddReddotListen()
 end
 
@@ -34,18 +38,44 @@ function M:CloseSelf()
   if self:IsAnimationPlaying(self.In) then
     return
   end
-  self:PlayAnimation(self.Out)
   self:BlockAllUIInput(true, "SP_DisplayOnly")
-  self:AddTimer(0.2, function()
+  self:PlayAnimation(self.Out)
+  local PreviousUI = UIManager():GetUnderState()
+  if PreviousUI then
+    local PreviousUIName = PreviousUI:GetName()
+    if "ActivityMain" == PreviousUIName then
+      EventManager:FireEvent(EventID.OnReturnToActivityEntry)
+      EventManager:FireEvent(EventID.OnActivityEntryShowVisible)
+    end
+  end
+end
+
+function M:OnAnimationFinished(InAnimation)
+  if InAnimation == self.Out then
     self:Close()
-  end)
+  end
 end
 
 function M:AddReddotListen()
+  ActivityReddotHelper.AddReddotListenByEventId(self.EventId, {
+    Obj = self,
+    Func = function(self, Count, RdType, RdName)
+      local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(self.ReddotNodeName)
+      if not CacheDetail then
+        return
+      end
+      for _, Content in pairs(self.PhotoItemContents) do
+        Content.ReddotType = CacheDetail[Content.QuestChainId] or self.ReddotType.NONE
+        if Content.SelfWidget then
+          Content.SelfWidget:UpdateReddot()
+        end
+      end
+    end
+  })
 end
 
 function M:RemoveReddotListen()
-  ActivityReddotHelper.RemoveReddotListenByEventId(self.CurActivityId, self)
+  ActivityReddotHelper.RemoveReddotListenByEventId(self.EventId, self)
 end
 
 function M:InitCommonTab()
@@ -53,21 +83,38 @@ function M:InitCommonTab()
 end
 
 function M:InitPhotoProgress()
-  self.Text_Title:SetText(GText("拍照进度（未配）"))
-  local CurCount = #self.Avatar.PhotoActRewardGot
-  local TotalCount = #DataMgr.PhotoEvent[self.EventId]
+  self.Text_Title:SetText(GText("UI_PhotoEvent_Progress"))
+  local CurCount, TotalCount = CameraGameUtils.GetPhotoProgress()
   self.Text_TitleNum01:SetText(CurCount)
   self.Text_TitleNum02:SetText("/" .. TotalCount)
 end
 
 function M:InitPhotoList()
+  local function GetSortWeight(Content)
+    if Content.QuestState == self.QCS.finish then
+      return Content.RewardGot and 1 or 4
+    elseif Content.QuestState == self.QCS.unlock or Content.QuestState == self.QCS.doing then
+      return 3
+    end
+    return 1
+  end
+  
   self.ListView_Left:ClearListItems()
-  self.PhotoItemContents = self:CreatePhotoContent()
-  for _, Content in pairs(self.PhotoItemContents or {}) do
+  self:CreatePhotoContent()
+  self.PhotoItemContents = self.PhotoItemContents or {}
+  local SelectedIndex = 0
+  local SelectedWeight = 1
+  for Index, Content in pairs(self.PhotoItemContents) do
+    Content.Index = Index
+    local Weight = GetSortWeight(Content)
+    if SelectedWeight < Weight then
+      SelectedIndex = Index - 1
+      SelectedWeight = Weight
+    end
     self.ListView_Left:AddItem(Content)
   end
   self.PhotoItemCount = #self.PhotoItemContents
-  self.ListView_Left:NavigateToIndex(0)
+  self.ListView_Left:NavigateToIndex(SelectedIndex)
   self.ListView_Left.BP_OnItemClicked:Clear()
   self.ListView_Left.BP_OnItemClicked:Add(self, self.OnPhotoItemClicked)
   self.ListView_Left.BP_OnItemIsHoveredChanged:Clear()
@@ -78,25 +125,36 @@ function M:CreatePhotoContent()
   if not self.Avatar then
     return
   end
-  local PhotoItemContents = {}
+  
+  local function GetReddotType(QuestChainId)
+    local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(self.ReddotNodeName)
+    if not CacheDetail then
+      return self.ReddotType.NONE
+    end
+    return CacheDetail[QuestChainId]
+  end
+  
+  self.PhotoItemContents = {}
   for _, Data in pairs(DataMgr.PhotoEvent[self.EventId] or {}) do
     local Content = NewObject(UIUtils.GetCommonItemContentClass())
     Content.ParentWidget = self
     Content.Index = Data.PhotoTaskId
+    Content.PhotoTaskId = Data.PhotoTaskId
     Content.QuestChainId = Data.QuestChain
     Content.PhotoPath = Data.PhotoView
     Content.RewardId = Data.RewardView
-    Content.RewardGot = self.Avatar.PhotoActRewardGot[Data.PhotoTaskId]
+    Content.RewardGot = self.Avatar.PhotoActRewardGot[Data.QuestChain]
+    Content.ReddotType = GetReddotType(Data.QuestChain)
+    Content.TextTitle = Data.Content1
+    Content.TextContent = Data.Content2
     local QuestChain = self.Avatar.QuestChains[Data.QuestChain]
-    Content.QuestState = QuestChain and QuestChain.State or 0
-    if Content.QuestState == self.QCS.lock then
-      Content.UnlockTime = Data.StartTime
-    end
+    Content.QuestState = QuestChain and QuestChain.State or self.QCS.lock
+    Content.UnlockTime = Data.StartTime and Data.StartTime:GetTime()
     self:OnPhotoListContentCreated(Content)
-    table.insert(PhotoItemContents, Content)
+    table.insert(self.PhotoItemContents, Content)
   end
   
-  local function GetSortWeidget(Content)
+  local function GetSortWeight(Content)
     if Content.QuestState == self.QCS.finish then
       return Content.RewardGot and 3 or 4
     elseif Content.QuestState == self.QCS.unlock or Content.QuestState == self.QCS.doing then
@@ -105,26 +163,40 @@ function M:CreatePhotoContent()
     return 1
   end
   
-  table.sort(PhotoItemContents, function(a, b)
-    local weightA = GetSortWeidget(a)
-    local weightB = GetSortWeidget(b)
+  table.sort(self.PhotoItemContents, function(a, b)
+    local weightA = GetSortWeight(a)
+    local weightB = GetSortWeight(b)
     if weightA ~= weightB then
       return weightA > weightB
     else
       return a.Index < b.Index
     end
   end)
-  return PhotoItemContents
+end
+
+function M:CancelNewReddot(Content)
+  local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(CameraGameUtils.ReddotNodeName)
+  if not CacheDetail then
+    return
+  end
+  local QuestChainId = Content.QuestChainId
+  if CacheDetail[QuestChainId] ~= self.ReddotType.NEW then
+    return
+  end
+  CacheDetail[QuestChainId] = self.ReddotType.SEEN
+  ReddotManager.DecreaseLeafNodeCount(CameraGameUtils.ReddotNodeName)
 end
 
 function M:OnPhotoItemClicked(Content)
   if self.ContentClicked == Content then
     return
   end
+  AudioManager(self):PlayUISound(self, "event:/ui/activity/camera_photo_click", nil, nil)
   local ItemWidget = Content.SelfWidget
   if not ItemWidget then
     return
   end
+  self:CancelNewReddot(Content)
   ItemWidget:StopAnimation(ItemWidget.Normal)
   ItemWidget:PlayAnimation(ItemWidget.Click)
   if self.ContentClicked then
@@ -135,49 +207,99 @@ function M:OnPhotoItemClicked(Content)
     end
   end
   self.ContentClicked = Content
+  self.CurQuestState = Content.QuestState
   self:OnPhotoListItemAddedToFocusPath(Content)
   self.ScrollBox_Message:ScrollToStart()
   if self.IsGamepadInput then
     self:UpdateBottomKeyInfo()
   end
-  self:RefreshMainPhotoView(Content)
+  self.WBP_BG:PlayAnimation(self.WBP_BG.Refresh)
+  self:AddTimer(0.1, function()
+    self:RefreshMainPhotoView(Content)
+  end)
 end
 
 function M:RefreshMainPhotoView(Content)
-  if Content.QuestState ~= self.QCS.lock then
-    self.List_Reward:SetVisibility(UIConst.VisibilityOp.Visible)
-    self.Switch_Btn:SetVisibility(UIConst.VisibilityOp.Visible)
-    self.Text_PhotoTitle:SetVisibility(UIConst.VisibilityOp.Visible)
-    self.Text_Message:SetVisibility(UIConst.VisibilityOp.Visible)
-  else
-    self.List_Reward:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    self.Switch_Btn:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    self.Text_PhotoTitle:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    self.Text_Message:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  local Visibility = UIConst.VisibilityOp.Visible
+  if Content.QuestState == self.QCS.lock then
+    Visibility = UIConst.VisibilityOp.Collapsed
   end
+  self.List_Reward:SetVisibility(Visibility)
+  self.Switch_Btn:SetVisibility(Visibility)
+  self.Text_PhotoTitle:SetVisibility(Visibility)
+  self.Text_Message:SetVisibility(Visibility)
   if Content.QuestState == self.QCS.finish then
-    self.Text_PhotoTitle:SetText(GText("与赛琪相遇 + " .. Content.Index))
-    local TestMessage = ""
-    self.Text_Message:SetText(GText(TestMessage .. Content.Index))
+    self.Text_PhotoTitle:SetText(GText(Content.TextTitle))
+    self.Text_Message:SetText(GText(Content.TextContent))
     self.WBP_BG.Switch_Type:SetActiveWidgetIndex(0)
     self.WBP_BG.Image_Normal:SetBrushFromTexture(Content.Texture)
-    self:RefreshRewardList(Content.RewardId)
+    self:RefreshRewardList()
     if Content.RewardGot then
       self.Switch_Btn:SetActiveWidget(self.Btn_PhotoDis)
-      self.Text_PhotoDis:SetText(GText("已领取（未配）"))
+      self.Text_PhotoDis:SetText(GText("UI_Reward_Received"))
     else
       self.Switch_Btn:SetActiveWidget(self.Btn_Photo)
-      self.Text_Photo:SetText(GText("领取奖励（未配）"))
+      self.Text_Photo:SetText(GText("UI_Mail_Recieve"))
     end
   elseif Content.QuestState == self.QCS.unlock or Content.QuestState == self.QCS.doing then
+    self.Text_PhotoTitle:SetText(GText(Content.TextTitle))
+    self.Text_Message:SetText(GText(Content.TextContent))
     self.WBP_BG.Switch_Type:SetActiveWidgetIndex(1)
     self.WBP_BG.Image_None:SetBrushFromTexture(Content.Texture)
+    self:RefreshRewardList()
     self.Switch_Btn:SetActiveWidget(self.Btn_Photo)
-    self.Text_Photo:SetText(GText("前往拍照（未配）"))
+    self.Text_Photo:SetText(GText("UI_PhotoEvent_Goto"))
   else
     self.WBP_BG.Switch_Type:SetActiveWidgetIndex(2)
-    self.WBP_BG.Text_Lock:SetText(Content.RemainTimeText)
+    local IsSucccess = self:SetUnlockTimeText(Content)
+    if not IsSucccess then
+      self:SetUnlockConditionText(Content)
+    end
   end
+end
+
+function M:SetUnlockTimeText(Content)
+  if not Content or not Content.UnlockTime then
+    return false
+  end
+  local TimeDict, _ = UIUtils.GetLeftTimeStrStyle2(Content.UnlockTime)
+  if not TimeDict then
+    return false
+  end
+  local ZeroCount = 0
+  local RemainTimeText = ""
+  for TimeCount, ThisTimeInfo in ipairs(TimeDict) do
+    if TimeCount > 2 then
+      DebugPrint("CameraGame: WBP_Com_Time SetTimeText TimeCount too much, 2 need but get more")
+      break
+    end
+    RemainTimeText = string.format("%s%02d%s", RemainTimeText, ThisTimeInfo.TimeValue, GText("UI_GameEvent_TimeRemain_" .. ThisTimeInfo.TimeType))
+    if 0 == ThisTimeInfo.TimeValue then
+      ZeroCount = ZeroCount + 1
+    end
+  end
+  if ZeroCount > 1 then
+    return false
+  end
+  RemainTimeText = string.format(GText("UI_PhotoEvent_Unlock"), RemainTimeText)
+  self.WBP_BG.Text_Lock:SetText(RemainTimeText)
+  return true
+end
+
+function M:SetUnlockConditionText(Content)
+  if not Content or not Content.QuestChainId then
+    return
+  end
+  local EventData = DataMgr.PhotoEvent[self.EventId]
+  if not EventData then
+    return
+  end
+  local QuestData = EventData[Content.PhotoTaskId]
+  if not QuestData then
+    return
+  end
+  local ConditionText = string.format(GText("UI_PhotoEvent_Quest"), GText(QuestData.Content3))
+  self.WBP_BG.Text_Lock:SetText(ConditionText)
 end
 
 function M:OnPhotoItemIsHoveredChanged(Content, IsHovered)
@@ -200,8 +322,12 @@ function M:OnPhotoItemIsHoveredChanged(Content, IsHovered)
   end
 end
 
-function M:RefreshRewardList(RewardID)
-  local RewardList = RewardUtils:GetRewardViewInfoById(RewardID)
+function M:RefreshRewardList()
+  local PhotoContent = self.ContentClicked
+  if not PhotoContent then
+    return
+  end
+  local RewardList = RewardUtils:GetRewardViewInfoById(PhotoContent.RewardId)
   if not RewardList or 0 == #RewardList then
     return
   end
@@ -213,6 +339,8 @@ function M:RefreshRewardList(RewardID)
     Content.Rarity = RewardInfo.Rarity or 1
     Content.Icon = ItemUtils.GetItemIconPath(RewardInfo.Id, RewardInfo.Type)
     Content.IsShowDetails = true
+    Content.IsSelect = false
+    Content.bHasGot = PhotoContent.RewardGot
     Content.UIName = "ActivityCamreaGame"
     if RewardInfo.Quantity then
       if #RewardInfo.Quantity > 1 then
@@ -229,17 +357,35 @@ function M:RefreshRewardList(RewardID)
 end
 
 function M:OnRewardAndPhotoButtonClicked()
-  if self.ContentClicked and self.ContentClicked.QuestState ~= self.QCS.finish then
+  if not self.ContentClicked then
+    return
+  end
+  if self.ContentClicked.QuestState ~= self.QCS.finish then
+    AudioManager(self):PlayUISound(self, "event:/ui/activity/sub_btn_click", nil, nil)
     local QuestChainId = self.ContentClicked.QuestChainId
     if not self.Avatar.QuestChains[QuestChainId] then
       return
     end
-    local MainMap = UIManager(self):LoadUINew("LevelMapMain", true)
-    if MainMap then
-      local DoingQuestId = self.Avatar.QuestChains[QuestChainId].DoingQuestId
-      local TargetSubRegionId = MissionIndicatorManager:GetTargetTaskSubRegionId(QuestChainId, DoingQuestId)
-      MainMap.RealWildMap:ChangeRegionForSmartIndicator(TargetSubRegionId, QuestChainId)
+    local RegionPointId
+    for key, _ in pairs(DataMgr.PhotoEvent) do
+      for key, value in pairs(_) do
+        if value.QuestChain == QuestChainId then
+          RegionPointId = value.RegionPoint
+          break
+        end
+      end
     end
+    if not RegionPointId then
+      return
+    end
+    local SubRegionId = DataMgr.RegionPoint[RegionPointId].SubRegion
+    local RegionId = DataMgr.SubRegion[SubRegionId].RegionId
+    self:AddTimer(0.1, function()
+      local MainMap = UIManager(self):LoadUINew("LevelMapMain", false, RegionId, "RegionPoint", RegionPointId)
+    end)
+    return
+  end
+  if self.Avatar.PhotoActRewardGot[self.ContentClicked.QuestChainId] then
     return
   end
   
@@ -248,18 +394,14 @@ function M:OnRewardAndPhotoButtonClicked()
     if not ErrorCode:Check(ErrCode) then
       return
     end
-    if self.IsGamepadInput then
-      self:AddTimer(0.8, function()
-        UIManager(self):LoadUINew("GetItemPage", nil, nil, nil, Rewards, self.PlayOutAnim, self, true)
-      end)
-    else
-      UIManager(self):LoadUINew("GetItemPage", nil, nil, nil, Rewards, self.PlayOutAnim, self, true)
-    end
-    self.ContentClicked.RewardGot = true
+    UIManager(self):LoadUINew("GetItemPage", nil, nil, nil, Rewards, self.PlayOutAnim, self, true)
     self.Switch_Btn:SetActiveWidget(self.Btn_PhotoDis)
-    self.Text_PhotoDis:SetText(GText("已领取（未配）"))
+    self.Text_PhotoDis:SetText(GText("UI_Reward_Received"))
+    self.ContentClicked.RewardGot = true
+    self:RefreshRewardList()
   end
   
+  AudioManager(self):PlayUISound(self, "event:/ui/activity/sub_btn_click", nil, nil)
   self:BlockAllUIInput(true)
   self.Avatar:GetPhotoQuestFinishReward(Callback, self.ContentClicked.QuestChainId)
 end

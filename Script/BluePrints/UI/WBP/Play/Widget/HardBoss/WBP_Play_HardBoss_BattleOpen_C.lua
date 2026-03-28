@@ -63,7 +63,7 @@ function M:InitBossInfo()
     DebugPrint(string.format("Error: %s init boss info failed, HardBossMainData is nil", self:GetName()))
     return
   end
-  local MonsterData = DataMgr.Monster[HardBossMainData.MonsterId]
+  local MonsterData = DataMgr.Monster[HardBossMainData.MonsterId[1]]
   if not MonsterData then
     DebugPrint(string.format("Error: %s init boss info failed, MonsterData is nil", self:GetName()))
     return

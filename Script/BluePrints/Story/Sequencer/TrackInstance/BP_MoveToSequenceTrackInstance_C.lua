@@ -40,4 +40,22 @@ function M:StartMoveTo(MoveToData)
   end
 end
 
+function M:EndMoveTo(MoveToData)
+  local Character = MoveToData.Character
+  if not IsValid(Character) then
+    return
+  end
+  self:FinishMoveTo(MoveToData)
+  if Character.NpcAnimInstance and not Character.NpcAnimInstance.IsRotating then
+    Character:SetNpcMovementTickEnable(false)
+  end
+  Character:ForbidFootStep(MoveToData.NpcForbidFootStep)
+  Character:SetWalkSpeed()
+  Character:CacheLastMovementLoc()
+  local CustomSequencePropertySystem = USubsystemBlueprintLibrary.GetWorldSubsystem(Character, UCustomSequencePropertySystem)
+  if IsValid(CustomSequencePropertySystem) then
+    CustomSequencePropertySystem:UnForbiddenNpcTransform(Character, self)
+  end
+end
+
 return M

@@ -278,5 +278,85 @@
     "icon": "T_Fashion_Weapon35",
     "rarity": 5,
     "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 10036,
+    "name": "碧霄穗·銹紅",
+    "desc": "以雲霄為線，令每一次揮舞都閃動著點點青光。",
+    "icon": "T_Fashion_Weapon38_02",
+    "rarity": 5,
+    "unlock": "透過活動獲得"
+  },
+  {
+    "id": 10037,
+    "name": "碧霄穗·涅白",
+    "desc": "以雲霄為線，令每一次揮舞都閃動著點點青光。",
+    "icon": "T_Fashion_Weapon38_01",
+    "rarity": 5,
+    "unlock": "透過活動獲得"
+  },
+  {
+    "id": 10038,
+    "name": "碧霄穗·黛藍",
+    "desc": "以雲霄為線，令每一次揮舞都閃動著點點青光。",
+    "icon": "T_Fashion_Weapon38_03",
+    "rarity": 5,
+    "unlock": "透過活動獲得"
+  },
+  {
+    "id": 10039,
+    "name": "千機掛墜·薄荷",
+    "desc": "長夜無眠時，似乎能聽到其中齒輪咬合的韻律。",
+    "icon": "T_Fashion_Weapon39_03",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 10040,
+    "name": "千機掛墜·銹紅",
+    "desc": "長夜無眠時，似乎能聽到其中齒輪咬合的韻律。",
+    "icon": "T_Fashion_Weapon39_01",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 10041,
+    "name": "千機掛墜·鎏金",
+    "desc": "長夜無眠時，似乎能聽到其中齒輪咬合的韻律。",
+    "icon": "T_Fashion_Weapon39_02",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 10042,
+    "name": "千機矩陣·薄荷",
+    "desc": "微光流轉，演算千機。",
+    "icon": "T_Fashion_Weapon36_03",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 10043,
+    "name": "千機矩陣·銹紅",
+    "desc": "微光流轉，演算千機。",
+    "icon": "T_Fashion_Weapon36_02",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 10044,
+    "name": "千機矩陣·鎏金",
+    "desc": "微光流轉，演算千機。",
+    "icon": "T_Fashion_Weapon36_01",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 20001,
+    "name": "爆裂涂鸦",
+    "desc": "适用于招式魔之楔咆哮切割。",
+    "icon": "T_Fashion_Fx20",
+    "rarity": 5,
+    "unlock": ""
   }
 ]

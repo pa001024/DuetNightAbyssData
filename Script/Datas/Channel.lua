@@ -15,21 +15,23 @@ return ReadOnly("Channel", {
     MessageMax = 100,
     Name = "UI_Channel_Name_1",
     PlayerMax = 3000,
-    Remark = "组队频道",
-    SIcon = "/Game/UI/Texture/Dynamic/Atlas/Chat/T_Chat_ChannelRecruit_B"
+    RedDotPriority = 1,
+    Remark = "招募频道",
+    SIcon = "/Game/UI/Texture/Dynamic/Atlas/Chat/T_ChatChannel_Recruit_B"
   },
   [2] = {
     ChannelType = 2,
     Des = "UI_Channel_Notice_2",
-    Icon = "/Game/UI/Texture/Dynamic/Atlas/Chat/T_ChatChannel_Question",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Chat/T_Chatchannel_World",
     IsNotice = false,
     JoinOption = 1,
     MessageCD = 3,
     MessageMax = 100,
     Name = "UI_Channel_Name_2",
     PlayerMax = 3000,
-    Remark = "疑难解答频道",
-    SIcon = "/Game/UI/Texture/Dynamic/Atlas/Chat/T_ChatChannel_Question_B"
+    RedDotPriority = 2,
+    Remark = "世界频道",
+    SIcon = "/Game/UI/Texture/Dynamic/Atlas/Chat/T_ChatChannel_World_B"
   },
   [3] = {
     ChannelType = 3,
@@ -41,8 +43,9 @@ return ReadOnly("Channel", {
     MessageMax = 100,
     Name = "UI_Channel_Name_4",
     PlayerMax = 4,
+    RedDotPriority = 5,
     Remark = "小队频道",
-    SIcon = "/Game/UI/Texture/Dynamic/Atlas/Chat/T_Chat_ChannelTeam_B"
+    SIcon = "/Game/UI/Texture/Dynamic/Atlas/Chat/T_ChatChannel_Team_B"
   },
   [4] = {
     ChannelType = 4,
@@ -54,8 +57,9 @@ return ReadOnly("Channel", {
     MessageMax = 50,
     Name = "UI_Channel_Name_5",
     PlayerMax = 2,
+    RedDotPriority = 6,
     Remark = "好友频道",
-    SIcon = "/Game/UI/Texture/Dynamic/Atlas/Chat/T_Chat_ChannelFriend_B"
+    SIcon = "/Game/UI/Texture/Dynamic/Atlas/Chat/T_ChatChannel_Friend_B"
   },
   [5] = {
     ChannelType = 5,
@@ -67,6 +71,7 @@ return ReadOnly("Channel", {
     MessageMax = 100,
     Name = "UI_Channel_Name_6",
     PlayerMax = 3000,
+    RedDotPriority = 3,
     Remark = "区域联机",
     SIcon = "/Game/UI/Texture/Dynamic/Atlas/Chat/T_ChatChannel_Area_B"
   },
@@ -80,6 +85,7 @@ return ReadOnly("Channel", {
     MessageMax = 100,
     Name = "UI_Channel_Name_7",
     PlayerMax = 4,
+    RedDotPriority = 4,
     Remark = "临时小队频道",
     SIcon = "/Game/UI/Texture/Dynamic/Atlas/Chat/T_Chatchannel_Result_B"
   }

@@ -457,6 +457,22 @@ return ReadOnly("TiltleName", {
     TextMapContent = "机枢派的",
     TextMapId = "Title_10113"
   },
+  [10114] = {
+    TextMapContent = "胡气满满的",
+    TextMapId = "Title_10114"
+  },
+  [10115] = {
+    TextMapContent = "有胡同享的",
+    TextMapId = "Title_10115"
+  },
+  [10116] = {
+    TextMapContent = "成龙的",
+    TextMapId = "Title_10116"
+  },
+  [10117] = {
+    TextMapContent = "直视神明的",
+    TextMapId = "Title_10117"
+  },
   [20001] = {
     TextMapContent = "力量",
     TextMapId = "Title_20001"
@@ -844,5 +860,9 @@ return ReadOnly("TiltleName", {
   [20097] = {
     TextMapContent = "神之一手",
     TextMapId = "Title_20097"
+  },
+  [20098] = {
+    TextMapContent = "姑奶奶",
+    TextMapId = "Title_20098"
   }
 })

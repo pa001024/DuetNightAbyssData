@@ -32,8 +32,8 @@ function WBP_NPC_Name_C:OnEnabled(Name, Style, PlayerNumber)
   self.bIsEnabled_Name = true
   self.NameTxt:SetText(Name)
   self:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-  self.ParentHeadWidget:StopAllAnimations()
-  self.ParentHeadWidget:PlayAnimation(self.ParentHeadWidget.Name_In)
+  EMUIAnimationSubsystem:EMStopAnimation(self.ParentHeadWidget, self.ParentHeadWidget.Name_Out)
+  EMUIAnimationSubsystem:EMPlayAnimation(self.ParentHeadWidget, self.ParentHeadWidget.Name_In)
 end
 
 function WBP_NPC_Name_C:SwitchStyle(Style)
@@ -111,8 +111,8 @@ function WBP_NPC_Name_C:OnDisabled()
     return
   end
   self.bIsEnabled_Name = false
-  self.ParentHeadWidget:StopAllAnimations()
-  self.ParentHeadWidget:PlayAnimation(self.ParentHeadWidget.Name_Out)
+  EMUIAnimationSubsystem:EMStopAnimation(self.ParentHeadWidget, self.ParentHeadWidget.Name_In)
+  EMUIAnimationSubsystem:EMPlayAnimation(self.ParentHeadWidget, self.ParentHeadWidget.Name_Out)
 end
 
 return WBP_NPC_Name_C

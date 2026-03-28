@@ -178,7 +178,7 @@ function Decorator:VersionControl(DataName, KeyIndex, ReplacedVersionKey)
       end
       if not bValidVersion then
         obj.logger.info("The version is not valid to call function", FuncName, Version, DataMgr.GlobalConstant.CurrentVersion.ConstantValue)
-        local ret = obj:OnInvalidVersionControlCallback(FuncName, DataName, ...)
+        local ret = obj:OnInvalidVersionControlCallback(FuncName, DataName, KeyIndex, ...)
         if not ret then
           return
         end

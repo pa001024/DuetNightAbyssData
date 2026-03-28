@@ -69,5 +69,10 @@ return ReadOnly("DungeonTypeToId", {
     GameModeType = "Synthesis",
     GuideId = 1013,
     GuideNoteId = 106
+  },
+  SynthesisII = {
+    GameModeType = "SynthesisII",
+    GuideId = 1014,
+    GuideNoteId = 137
   }
 })

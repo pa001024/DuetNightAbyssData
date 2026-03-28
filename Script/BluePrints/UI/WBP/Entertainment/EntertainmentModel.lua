@@ -55,7 +55,9 @@ end
 
 function M:TryListenEvent()
   local Avatar = self:GetAvatar()
-  if Avatar and Avatar:CheckSubRegionType(Avatar:GetCurrentRegionId(), CommonConst.SubRegionType.Home) then
+  local bIsInBigWorld = Avatar and Avatar:IsInBigWorld()
+  local bIsInHomeBase = Avatar and Avatar:CheckSubRegionType(Avatar:GetCurrentRegionId(), CommonConst.SubRegionType.Home)
+  if Avatar and bIsInBigWorld and bIsInHomeBase then
     EventManager:AddEvent(EventID.OnResourcesChanged, self, self.RefreshRedState)
     EventManager:AddEvent(EventID.QuestChainFinished, self, self.RefreshRedState)
     EventManager:AddEvent(EventID.OnPropSetResources, self, self.RefreshRedState)

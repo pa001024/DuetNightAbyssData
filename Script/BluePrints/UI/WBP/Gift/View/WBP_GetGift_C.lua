@@ -267,17 +267,14 @@ function M:OnPurChaseClick()
       self:SendGift()
     else
       AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_large_crystal", nil, nil)
-      UIManager(self):ShowCommonPopupUI(GiftCommon.GiftShopPayContent, {
-        Uid = self.SenderUid,
-        ShopItemId = self.ShopItemId,
-        RightCallbackObj = self,
-        CallbackInfo = {
-          Func = self.OnRechargeCallback,
-          Obj = self
-        },
-        LeftGamepadKey = Const.GamepadFaceButtonUp,
-        ShowBKeyClose = true
-      })
+      local Params = {}
+      Params.ShopItemId = self.ShopItemId
+      Params.Uid = self.SenderUid
+      Params.CallbackInfo = {
+        Func = self.OnRechargeCallback,
+        Obj = self
+      }
+      UIManager(self):LoadUINew("ShopTargetPay", Params)
     end
   end
   
@@ -340,10 +337,23 @@ function M:SendGift()
     UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_SendGift_NoLongerFriend"))
     return
   end
-  GiftController:SendToShopResourceGift(self.RecverUid, self.ShopItemId, self.ShopItemConfig.TypeNum, Content, {
-    Obj = self,
-    Func = self.OnSendCallback
-  })
+  local Callbacks_Style2 = {
+    OnSuccess = {
+      Obj = self,
+      Func = function(_Self, Password)
+        GiftController:SendToShopResourceGift(self.RecverUid, self.ShopItemId, self.ShopItemConfig.TypeNum, Content, {
+          Obj = self,
+          Func = self.OnSendCallback
+        }, Password)
+      end
+    },
+    OnCancel = {
+      Obj = self,
+      Func = function()
+      end
+    }
+  }
+  SecondaryPasswordController:RequestSecPasswordValidation(Callbacks_Style2)
 end
 
 function M:OnSendCallback(ErrCode, ...)
@@ -391,7 +401,8 @@ function M:GetCurrentSystemLanguage()
     EN = "ContentEN",
     JP = "ContentJP",
     KR = "ContentKR",
-    TC = "ContentTC"
+    TC = "ContentTC",
+    FR = "ContentFR"
   }
   self.CurrentSystemLanguage = "CN"
   for key, value in pairs(SystemLanguages) do

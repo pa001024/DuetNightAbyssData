@@ -1,5 +1,7 @@
 local FriendCommon = require("BluePrints.UI.WBP.Friend.FriendCommon")
 local TimeUtils = require("Utils.TimeUtils")
+local StrLib = require("BluePrints.Common.DataStructure")
+local Deque = StrLib.Deque
 local M = Class("BluePrints.Common.MVC.Model")
 
 function M:Init()
@@ -8,6 +10,8 @@ function M:Init()
   self._FriendList = nil
   self._FriendRequestList = nil
   self._Avatar = nil
+  self.FriendReqQueue = Deque.New()
+  self.FriendReqTable = {}
   self:GetAvatar()
   self:_InitSortFunc()
   self:InitReddotCount()
@@ -292,6 +296,41 @@ end
 function M:IsFriend(Uid)
   local dict = self:GetFriendDict() or {}
   return nil ~= dict[Uid]
+end
+
+function M:PushFriendReqInfo(FriendReqInfo)
+  if self.FriendReqTable[FriendReqInfo.Uid] then
+    return
+  end
+  self.FriendReqTable[FriendReqInfo.Uid] = 1
+  self.FriendReqQueue:PushFront(FriendReqInfo)
+end
+
+function M:PopFriendReqInfo()
+  if self.FriendReqQueue:IsEmpty() then
+    DebugPrint(DebugTag, "PopFriendReqInfo: InviteQueue is empty")
+    return false
+  end
+  local FriendReq = self.FriendReqQueue:PopBack()
+  self.FriendReqTable[FriendReq.Uid] = nil
+  return FriendReq
+end
+
+function M:GetBackFriendReqInfo()
+  if self.FriendReqQueue:IsEmpty() then
+    DebugPrint(DebugTag, "PopFriendReqInfo: InviteQueue is empty")
+    return false
+  end
+  return self.FriendReqQueue:Back()
+end
+
+function M:ClearFriendReqInfo()
+  self.FriendReqQueue:Init()
+  self.FriendReqTable = {}
+end
+
+function M:IsFriendReqExist(FriendReqInfo)
+  return self.FriendReqTable[FriendReqInfo.Uid]
 end
 
 return M

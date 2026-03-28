@@ -53,5 +53,61 @@
     "access": [
       "Shop"
     ]
+  },
+  {
+    "id": 1004,
+    "name": "太虚游·铅灰",
+    "des": "御剑乘风来。",
+    "icon": "Mounts_0005",
+    "resourceIcon": "Icon_Mounts_0005",
+    "rarity": 5,
+    "sort": 101,
+    "resourceId": 49995,
+    "fly": 1,
+    "access": [
+      "Shop"
+    ]
+  },
+  {
+    "id": 1005,
+    "name": "太虚游·碧绿",
+    "des": "御剑乘风来。",
+    "icon": "Mounts_0008",
+    "resourceIcon": "Icon_Mounts_0008",
+    "rarity": 5,
+    "sort": 101,
+    "resourceId": 49993,
+    "fly": 1,
+    "access": [
+      "Shop"
+    ]
+  },
+  {
+    "id": 1006,
+    "name": "太虚游·焦糖",
+    "des": "御剑乘风来。",
+    "icon": "Mounts_0007",
+    "resourceIcon": "Icon_Mounts_0007",
+    "rarity": 5,
+    "sort": 101,
+    "resourceId": 49992,
+    "fly": 1,
+    "access": [
+      "Shop"
+    ]
+  },
+  {
+    "id": 1007,
+    "name": "太虚游·本色",
+    "des": "御剑乘风来。",
+    "icon": "Mounts_0006",
+    "resourceIcon": "Icon_Mounts_0006",
+    "rarity": 5,
+    "sort": 101,
+    "resourceId": 49994,
+    "fly": 1,
+    "access": [
+      "Source: Limited-time events"
+    ]
   }
 ]

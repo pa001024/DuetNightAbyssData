@@ -130,13 +130,8 @@ function BP_CircularElevator:InitBeforeRun()
   else
     self.ElevatorQueue:Insert(self.DiantiC, 2)
   end
-  if self.MoveTransform.Translation.Z >= 0 then
-    self.Direction = 1
-    self.OtherElevator.Direction = 1
-  else
-    self.Direction = 0
-    self.OtherElevator.Direction = 0
-  end
+  self.Direction = self.DefaultDirection
+  self.OtherElevator.Direction = self.DefaultDirection
 end
 
 function BP_CircularElevator:PlayMiddle()

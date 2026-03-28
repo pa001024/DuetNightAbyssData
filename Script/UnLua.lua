@@ -1,7 +1,7 @@
-if _UNLUA ~= nil then
+if _G._UNLUA ~= nil then
   return
 end
-_UNLUA = 1
+_G._UNLUA = 1
 local rawget = _ENV.rawget
 local rawset = _ENV.rawset
 local type = _ENV.type
@@ -16,7 +16,7 @@ local RegisterEnum = _ENV.RegisterEnum
 local print = UEPrint or _ENV.print
 local netprint = NetPrint
 local UE = _ENV.UE
-_NotExist = _NotExist or {}
+_G._NotExist = _G._NotExist or {}
 local NotExist = _NotExist
 
 local function Index(t, k)
@@ -356,6 +356,8 @@ local function ForceStopAsyncTask(Obj, TaskName)
 end
 
 _G.ForceStopAsyncTask = ForceStopAsyncTask
+require("BluePrints.Managers.EventManager")
+require("LogPrint")
 _G.print = print_t
 _G.Get_G = Get_G
 _G.netprint = netprint
@@ -437,5 +439,3 @@ local FSkillLevelStruct = UE.FSkillLevelStruct
 local FMessage = UE.FMessage
 local SetupClient = require("SetupClient")
 SetupClient:Setup()
-require("BluePrints.Managers.EventManager")
-require("LogPrint")

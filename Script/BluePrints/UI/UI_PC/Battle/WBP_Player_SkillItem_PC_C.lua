@@ -17,7 +17,6 @@ function WBP_Player_SkillItem_PC_C:Initialize(Initializer)
   self.SkillEnumId = nil
   self.SkillStyleNode = nil
   self.SkillInfo = {}
-  self.SustainedTypeSkillIsOpen = {}
   self.Energy_Num_Color_1 = UE4.UUIFunctionLibrary.StringToSlateColor("7B7B7BFF")
   self.Energy_Num_Color_2 = UE4.UUIFunctionLibrary.StringToSlateColor("FF4646FF")
   self.Energy_Num_Color_3 = UE4.UUIFunctionLibrary.StringToSlateColor("674740FF")
@@ -239,7 +238,6 @@ function WBP_Player_SkillItem_PC_C:RefreshSkillStyleInTimer(SkillName)
   if nil == SkillId or CommonUtils.HasValue(self.InActiveStates_Cover, self.CurButtonState) then
     return
   end
-  self:CheckIsInAir(SkillName)
   local SkillBtnStyleName = self.SkillInfo[SkillName].SkillBtnStyle
   local SkillCdTime, SkillCdPercent = self.OwnerPlayer:GetSkillCdTimeAndPercent(SkillId)
   if SkillCdTime > 0 then
@@ -271,12 +269,6 @@ function WBP_Player_SkillItem_PC_C:RefreshSkillStyleInTimer(SkillName)
     elseif self.VX_skillIcon:GetRenderOpacity() >= 1.0 and self.IsSkillEnoughSpCanUse then
       EMUIAnimationSubsystem:EMPlayAnimation(self, self.Sustain_Loop, 1)
     end
-    if self.SustainedTypeSkillIsOpen[SkillName] ~= IsInUseSkill and self.SustainedTypeSkillIsOpen[SkillName] == false then
-      self:RefreshSkillIconAndText(SkillName, self.OwnerPlayer:GetSkillByType(UE.ESkillType.Skill2), "Open")
-    elseif self.SustainedTypeSkillIsOpen[SkillName] ~= IsInUseSkill and self.SustainedTypeSkillIsOpen[SkillName] then
-      self:RefreshSkillIconAndText(SkillName, self.OwnerPlayer:GetSkillByType(UE.ESkillType.Skill2), "Close")
-    end
-    self.SustainedTypeSkillIsOpen[SkillName] = IsInUseSkill
   end
 end
 
@@ -307,25 +299,9 @@ function WBP_Player_SkillItem_PC_C:HandleButtonStateChange(SkillName)
   self.LastButtonState = self.CurButtonState
 end
 
-function WBP_Player_SkillItem_PC_C:CheckIsInAir(SkillName)
-  local SkillId = self.SkillInfo[SkillName].SkillId
-  if not SkillId then
-    return
-  end
-  local Skill = self.OwnerPlayer:GetSkill(SkillId)
-  if not Skill then
-    return
-  end
-  if CommonUtils.HasValue(self.InActiveStates_Opacity, self.CurButtonState) or CommonUtils.HasValue(self.InActiveStates_Cover, self.CurButtonState) then
-    return
-  end
-  if not Skill.Data.AllowUseSkillInAir and (self.OwnerPlayer.IsInAir or self.OwnerPanel.IsCharacterInFalling) then
-    self.CanNotUseInAir = true
-    self:SetPanelOpacityForBan(true)
-  else
-    self.CanNotUseInAir = false
-    self:SetPanelOpacityForBan(false)
-  end
+function WBP_Player_SkillItem_PC_C:ChangeIsInAir(IsInAir)
+  self.CanNotUseInAir = IsInAir
+  self:SetPanelOpacityForBan(IsInAir)
 end
 
 function WBP_Player_SkillItem_PC_C:SetPanelOpacityForBan(IsBan)

@@ -3012,7 +3012,14 @@
     "icon": "Suyi",
     "名称": "Su Yi",
     "版本": "1.3",
-    "别名": "Jeune Milan",
+    "别名": "Premier Envol",
+    "出生地": "Huaxu",
+    "势力": "Les Pics Extérieurs – Vagabond",
+    "生日": "09-09",
+    "中文CV": "江月",
+    "日文CV": "竹達 彩奈",
+    "英文CV": "Elizabeth Chu",
+    "韩文CV": "정유정",
     "阵营": "Huaxu",
     "属性": "光",
     "精通": [
@@ -3023,11 +3030,15 @@
       "DPS",
       "Dégâts de compétence"
     ],
-    "基础攻击": 28,
+    "基础攻击": 29,
     "基础生命": 70,
-    "基础防御": 252,
+    "基础防御": 220,
     "基础护盾": 140,
     "基础神智": 150,
+    "加成": {
+      "Portée de compétence": 0.3,
+      "Vigueur": 0.15
+    },
     "突破": [
       {
         "Pièce": 5200,
@@ -3063,87 +3074,434 @@
     "技能": [
       {
         "id": 150401,
-        "名称": "Croisière",
-        "类型": "Passive",
-        "描述": "Entre en état [Croisière], conférant une capacité de vol à grande vitesse et infligeant des Dégâts Lumino aux ennemis sur la trajectoire. Cet état consomme continuellement de l’[Énergie d’artifice]. Il prend fin lorsque l’énergie atteint 0 ou lorsque la compétence est réutilisée.",
-        "icon": "Passive",
+        "名称": "Poursuite du soleil",
+        "类型": "Bonus",
+        "描述": "Entre en état [Poursuite du soleil], conférant une capacité de vol à grande vitesse et infligeant des Dégâts Lumino aux ennemis sur la trajectoire. Cet état consomme continuellement de l’[Énergie d’artifice] et prend fin lorsque celle-ci atteint 0 ou lorsque la compétence est utilisée à nouveau.\nMaintenez la touche de saut pour entrer en état [Patrouille céleste], permettant un vol vertical. Cet état consomme également de l’[Énergie d’artifice] et prend fin lorsque celle-ci atteint 0 ou lorsque la touche de saut est relâchée.\nLorsque vous n’êtes ni en état [Poursuite du soleil] ni en état [Patrouille céleste], l’[Énergie d’artifice] se régénère progressivement.",
+        "icon": "Suyi01_On",
         "cd": 1,
         "字段": [
           {
-            "名称": "Coût d’Énergie d’artifice par seconde pendant [Croisière]",
-            "影响": "技能效益",
+            "名称": "Coût d’[Énergie d’artifice] en [Poursuite du soleil]",
             "值": 1,
+            "值2": 0.2,
+            "格式": "{}/{}s"
+          },
+          {
+            "名称": "Coût d’[Énergie d’artifice] en [Patrouille céleste]",
+            "值": 1,
+            "值2": 0.2,
+            "格式": "{}/{}s"
+          },
+          {
+            "名称": "Récupération d’[Énergie d’artifice]",
+            "值": 2,
+            "值2": 0.2,
+            "格式": "{}/{}s"
+          },
+          {
+            "名称": "Dégâts",
+            "影响": "技能威力",
+            "值": [
+              8.56,
+              10.47,
+              12.38,
+              14.29,
+              16.2,
+              18.11,
+              20.02,
+              21.93,
+              23.84,
+              25.75,
+              27.66,
+              29.57
+            ],
+            "削韧": 50
+          }
+        ],
+        "升级": [
+          {
+            "Pièce": 1400,
+            "Grumeau de Souillé": 3,
+            "Débris de statue": 1
+          },
+          {
+            "Pièce": 2600,
+            "Grumeau de Souillé": 6,
+            "Débris de statue": 2
+          },
+          {
+            "Pièce": 3200,
+            "Grumeau de Souillé": 9,
+            "Débris de statue": 3,
+            "Souvenir des Lunariens": 4
+          },
+          {
+            "Pièce": 7300,
+            "Grumeau de Souillé": 15,
+            "Débris de statue": 5,
+            "Souvenir des Lunariens": 6
+          },
+          {
+            "Pièce": 9000,
+            "Grumeau de Souillé": 30,
+            "Débris de statue": 10,
+            "Souvenir des Lunariens": 8
+          },
+          {
+            "Pièce": 30000,
+            "Souvenir des Lunariens": 10,
+            "Tentacule de Souillé": 6,
+            "Anneau du courage retrouvé": 1
+          },
+          {
+            "Pièce": 47000,
+            "Souvenir des Lunariens": 10,
+            "Tentacule de Souillé": 8,
+            "Anneau du courage retrouvé": 1
+          },
+          {
+            "Pièce": 90000,
+            "Polymère de Souillé": 1,
+            "Anneau du courage retrouvé": 2,
+            "Trace du crépuscule": 1
+          },
+          {
+            "Pièce": 170000,
+            "Polymère de Souillé": 2,
+            "Anneau du courage retrouvé": 2,
+            "Trace du crépuscule": 1
+          }
+        ],
+        "子技能": [
+          {
+            "id": 150411,
+            "类型": "Bonus",
+            "icon": "Suyi01_Off",
+            "cd": 1
+          }
+        ]
+      },
+      {
+        "id": 150402,
+        "名称": "Mode annihilation stellaire",
+        "类型": "Bonus",
+        "描述": "Contrôle le Fengshi n° 3 et consomme toute la Lucidité pour entrer en état [Mode annihilation stellaire].\nChaque tranche de 40 de Lucidité consommée confère 1 cumul d’[Errance céleste], jusqu’à 10 cumuls.\nEn fonction de la capacité maximale de munitions de votre arme à distance, vous obtenez de la [Poudre d’artifice], jusqu’à un maximum de 300 charges.\nPendant l’état [Mode annihilation stellaire], les armes ne peuvent pas être utilisées et les dégâts subis n’interrompent pas vos actions. Réutiliser cette compétence met fin à l’état [Mode annihilation stellaire].\nLes attaques de mêlée sont remplacées par [Lame irisée], et les attaques à distance par [Pluie d’étoiles].",
+        "icon": "Suyi02_On",
+        "cd": 2,
+        "字段": [
+          {
+            "名称": "[天工火药]转化比例",
+            "值": 0.5,
+            "格式": "远程武器最大弹药量*{%}"
+          },
+          {
+            "名称": "Dégâts de [Lame irisée]",
+            "影响": "技能威力",
+            "值": [
+              41.83,
+              51.13,
+              60.43,
+              69.73,
+              79.03,
+              88.33,
+              97.63,
+              106.93,
+              116.23,
+              125.53,
+              134.83,
+              144.13
+            ],
+            "削韧": 100
+          },
+          {
+            "名称": "Longueur de [Lame irisée]",
+            "影响": "技能范围",
+            "值": 25,
+            "格式": "{}m"
+          },
+          {
+            "名称": "Dégâts de [Pluie d’étoiles]",
+            "影响": "技能威力",
+            "值": [
+              5.21,
+              6.36,
+              7.51,
+              8.66,
+              9.81,
+              10.96,
+              12.11,
+              13.26,
+              14.41,
+              15.56,
+              16.71,
+              17.86
+            ],
+            "削韧": 20
+          },
+          {
+            "名称": "Zone d’effet de [Pluie d’étoiles]",
+            "影响": "技能范围",
+            "值": 3,
+            "格式": "{}m"
+          },
+          {
+            "名称": "Dégâts du projectile traqueur de [Pluie d’étoiles]",
+            "影响": "技能威力",
+            "值": [
+              10.34,
+              12.65,
+              14.96,
+              17.27,
+              19.58,
+              21.89,
+              24.2,
+              26.51,
+              28.82,
+              31.13,
+              33.44,
+              35.75
+            ],
+            "削韧": 20
+          },
+          {
+            "名称": "Zone d’effet des obus à détonation différée de [Grande épée d’artifice]",
+            "影响": "技能范围",
+            "值": 3,
+            "格式": "{}m"
+          },
+          {
+            "名称": "[遨游]持续时间",
+            "影响": "技能耐久",
+            "值": 24,
             "格式": "{}"
           },
           {
-            "名称": "Coût d’Énergie d’artifice par seconde lors de l’ascension",
+            "名称": "Augmentation de Vigueur",
+            "值": 0.06
+          },
+          {
+            "名称": "Coût minimum en Lucidité",
             "影响": "技能效益",
+            "值": 30,
+            "格式": "{}"
+          }
+        ],
+        "升级": [
+          {
+            "Pièce": 1400,
+            "Grumeau de Souillé": 3,
+            "Débris de statue": 1
+          },
+          {
+            "Pièce": 2600,
+            "Grumeau de Souillé": 6,
+            "Débris de statue": 2
+          },
+          {
+            "Pièce": 3200,
+            "Grumeau de Souillé": 9,
+            "Débris de statue": 3,
+            "Souvenir des Lunariens": 4
+          },
+          {
+            "Pièce": 7300,
+            "Grumeau de Souillé": 15,
+            "Débris de statue": 5,
+            "Souvenir des Lunariens": 6
+          },
+          {
+            "Pièce": 9000,
+            "Grumeau de Souillé": 30,
+            "Débris de statue": 10,
+            "Souvenir des Lunariens": 8
+          },
+          {
+            "Pièce": 30000,
+            "Souvenir des Lunariens": 10,
+            "Tentacule de Souillé": 6,
+            "Anneau du courage retrouvé": 1
+          },
+          {
+            "Pièce": 47000,
+            "Souvenir des Lunariens": 10,
+            "Tentacule de Souillé": 8,
+            "Anneau du courage retrouvé": 1
+          },
+          {
+            "Pièce": 90000,
+            "Polymère de Souillé": 1,
+            "Anneau du courage retrouvé": 2,
+            "Trace du crépuscule": 1
+          },
+          {
+            "Pièce": 170000,
+            "Polymère de Souillé": 2,
+            "Anneau du courage retrouvé": 2,
+            "Trace du crépuscule": 1
+          }
+        ],
+        "术语解释": {
+          "Errance céleste": "Confère une augmentation de Vigueur.",
+          "Lame irisée": "Chaque attaque consomme 5 [Poudre d’artifice] et balaie l’ennemi d’un immense sabre de lumière, infligeant des Dégâts Lumino aux ennemis sur la trajectoire.",
+          "Pluie d’étoiles": "Chaque attaque consomme 1 [Poudre d’artifice] et tire un projectile qui inflige des Dégâts Lumino de zone à l’impact.\nSi le Sceau démoniaque [Mode de poursuite du Fengshi n° 3] est équipé, tire à la place un projectile traqueur qui se dirige vers une cible aléatoire et inflige des Dégâts Lumino de zone toutes les 0,1 s sur sa trajectoire."
+        },
+        "子技能": [
+          {
+            "id": 150421,
+            "类型": "Bonus",
+            "icon": "Suyi02_Off",
+            "cd": 2,
+            "名称": "Errance céleste"
+          }
+        ]
+      },
+      {
+        "id": 150403,
+        "名称": "Puissance accumulée",
+        "类型": "Passive",
+        "描述": "Chaque [Poudre d’artifice] consommée confère 1 cumul permanent d’[Accumulation], cumulable jusqu’à 100 fois.\nLorsque vous quittez l’état [Mode annihilation stellaire], tous les cumuls d’[Accumulation] sont supprimés.\nSi 50 cumuls ou plus sont retirés, vous ordonnez à une méchapoupée Fengshi de foncer vers l’avant et d’exploser à l’impact, infligeant des Dégâts Lumino de zone.",
+        "icon": "Suyi03",
+        "字段": [
+          {
+            "名称": "每层[蓄势]回复神智",
             "值": 1,
             "格式": "{}"
           },
           {
             "名称": "Dégâts",
             "影响": "技能威力",
-            "值": 1,
+            "值": [
+              20.91,
+              25.56,
+              30.21,
+              34.86,
+              39.51,
+              44.16,
+              48.81,
+              53.46,
+              58.11,
+              62.76,
+              67.41,
+              72.06
+            ],
             "削韧": 50
-          }
-        ]
-      },
-      {
-        "id": 150402,
-        "名称": "Armement d’artifice",
-        "类型": "Bonus",
-        "描述": "Consomme toute la Lucidité pour invoquer la [Plateforme d’artifice]. Pour chaque quantité de Lucidité consommée, confère 1 cumul de [Ravitaillement d’artifice], jusqu’à un maximum de 10 cumuls. L’arme de mêlée est remplacée par la [Grande épée d’artifice], et l’arme à distance par le [Canon d’artifice].\nTant que la [Plateforme d’artifice] est active, les dégâts reçus n’infligent pas d’interruptions. Réutiliser cette compétence rappelle la [Plateforme d’artifice].",
-        "icon": "Saiqi02_On",
-        "cd": 2,
-        "子技能": [
+          },
           {
-            "id": 150421,
-            "类型": "Bonus",
-            "icon": "Feina02_Off",
-            "cd": 2
+            "名称": "Rayon des dégâts",
+            "影响": "技能范围",
+            "值": 20,
+            "格式": "{}m"
+          },
+          {
+            "名称": "每层[蓄势]增加伤害倍率",
+            "值": [
+              0.81,
+              1,
+              1.19,
+              1.38,
+              1.57,
+              1.76,
+              1.95,
+              2.14,
+              2.33,
+              2.52,
+              2.71,
+              2.9
+            ]
           }
-        ]
-      },
-      {
-        "id": 150403,
-        "名称": "Potentiel d’artifice",
-        "类型": "Passive",
-        "描述": "Chaque projectile consommé par la [Plateforme d’artifice] confère 1 cumul de [Surchauffe], cumulable jusqu’à 400 fois. Lorsque la [Plateforme d’artifice] est rappelée, tous les cumuls de [Surchauffe] sont consommés.\nSi au moins 200 cumuls sont consommés, la [Plateforme d’artifice] est projetée vers l’avant et explose au contact d’un obstacle, infligeant des Dégâts Lumino de zone.",
-        "icon": "Passive"
+        ],
+        "升级": [
+          {
+            "Pièce": 1400,
+            "Grumeau de Souillé": 3,
+            "Débris de statue": 1
+          },
+          {
+            "Pièce": 2600,
+            "Grumeau de Souillé": 6,
+            "Débris de statue": 2
+          },
+          {
+            "Pièce": 3200,
+            "Grumeau de Souillé": 9,
+            "Débris de statue": 3,
+            "Souvenir des Lunariens": 4
+          },
+          {
+            "Pièce": 7300,
+            "Grumeau de Souillé": 15,
+            "Débris de statue": 5,
+            "Souvenir des Lunariens": 6
+          },
+          {
+            "Pièce": 9000,
+            "Grumeau de Souillé": 30,
+            "Débris de statue": 10,
+            "Souvenir des Lunariens": 8
+          },
+          {
+            "Pièce": 30000,
+            "Souvenir des Lunariens": 10,
+            "Tentacule de Souillé": 6,
+            "Anneau du courage retrouvé": 1
+          },
+          {
+            "Pièce": 47000,
+            "Souvenir des Lunariens": 10,
+            "Tentacule de Souillé": 8,
+            "Anneau du courage retrouvé": 1
+          },
+          {
+            "Pièce": 90000,
+            "Polymère de Souillé": 1,
+            "Anneau du courage retrouvé": 2,
+            "Trace du crépuscule": 1
+          },
+          {
+            "Pièce": 170000,
+            "Polymère de Souillé": 2,
+            "Anneau du courage retrouvé": 2,
+            "Trace du crépuscule": 1
+          }
+        ],
+        "术语解释": {
+          "Puissance accumulée": "Chaque cumul retiré restaure de la Lucidité et augmente le multiplicateur de dégâts de la méchapoupée Fengshi pour cette activation."
+        }
       },
       {
         "id": 150404,
-        "名称": "Intégration offensive et défensive",
+        "名称": "Défense offensive",
         "类型": "Passive",
-        "描述": "Lors de l’invocation de la [Plateforme d’artifice], génère un [Bouclier d’artifice].",
-        "icon": "ExtraPassive"
+        "描述": "En entrant en état [Mode annihilation stellaire], vous obtenez un bouclier excédentaire basé sur la quantité de Lucidité consommée.",
+        "icon": "ExtraPassive",
+        "字段": [
+          {
+            "名称": "转化比例",
+            "值": 5
+          }
+        ]
+      },
+      {
+        "id": 150003,
+        "名称": "Quand le ciel se teinta d’or",
+        "类型": "Support",
+        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ de soi-même et des alliés Lumino.",
+        "icon": "PhantomPassive",
+        "字段": [
+          {
+            "名称": "Augmentation d’ATQ",
+            "值": 0.5
+          }
+        ]
       }
     ],
     "溯源": [
-      "Lorsque la [Grande épée d’artifice] ou le [Canon d’artifice] inflige des dégâts, déclenche une instance supplémentaire de Dégâts Lumino de zone à l’emplacement de la cible. Cet effet peut se déclencher une fois toutes les 0,5 s.",
-      "[Ravitaillement d’artifice] confère en plus une augmentation des Dégâts de compétence infligés.",
-      "[Croisière] niveau +2 ; [Potentiel d’artifice] niveau +1.",
-      "Chaque projectile consommé par la [Plateforme d’artifice] restaure des PV au [Bouclier d’artifice]. Tant que le [Bouclier d’artifice] est actif, les dégâts subis sont réduits.",
-      "[Armement d’artifice] niveau +2 ; [Potentiel d’artifice] niveau +1.",
-      "Pendant 10 s après l’activation de la compétence ultime, chaque projectile consommé par la [Plateforme d’artifice] restitue 1 projectile.\nLa limite de cumuls de [Surchauffe] passe alors à 600."
-    ],
-    "同律武器": [
-      {
-        "id": 150401,
-        "名称": "UI_WEAPON_NAME_150304",
-        "类型": [
-          "同律",
-          "近战",
-          "远程"
-        ],
-        "icon": "Heitao_WP",
-        "伤害类型": "震荡",
-        "攻击": 7,
-        "暴击": 0.3,
-        "暴伤": 2,
-        "触发": 0.3
-      }
+      "Le nombre maximal de cumuls d’[Accumulation] est augmenté à 200.\nChaque [Poudre d’artifice] consommée confère 2 cumuls d’[Accumulation].",
+      "Pendant l’état [Mode annihilation stellaire], [Pluie d’étoiles] effectue automatiquement 4 attaques à distance toutes les 5 secondes et confère 8 cumuls d’[Accumulation], sans consommer de [Poudre d’artifice].",
+      "[Poursuite du soleil] niveau +2 ; [Puissance accumulée] niveau +1.",
+      "Lorsque vous infligez des Dégâts de compétence, une probabilité basée sur votre arme à distance peut déclencher un Effet supplémentaire Lumino.\nLorsque cet effet est déclenché, les ennemis dans un rayon de 10 sont attirés vers le centre de l’impact.\nCet effet peut se déclencher au maximum une fois par seconde.",
+      "[Mode annihilation stellaire] niveau +2 ; [Puissance accumulée] niveau +1.",
+      "Chaque cumul d’[Errance céleste] confère 6% de Pénétration tous attributs supplémentaire.\nLorsque la méchapoupée Fengshi est projetée, 2 unités supplémentaires sont générées. Chacune inflige 20% des dégâts initiaux."
     ]
   },
   {
@@ -4451,7 +4809,8 @@
       "[Caresse d’Aurelia] niveau +2 ; [Épreuve d’Amour Pur] niveau +1.",
       "Réduit les dégâts subis de la part des ennemis affectés par [Venin de l’amour] de 30%.",
       "[Rosée de Lada] niveau +2 ; [Jugement du cœur] niveau +1.",
-      "Lorsque Rebecca vainc une cible affectée par [Venin de l’amour], elle gagne 1 cumul conférant +3% d’Attaque pendant 15 s, jusqu’à 50 cumuls.\nL’obtention d’un nouveau cumul réinitialise la durée restante."
+      "Lorsque Rebecca vainc une cible affectée par [Venin de l’amour], elle gagne 1 cumul conférant +3% d’Attaque pendant 15 s, jusqu’à 50 cumuls.\nL’obtention d’un nouveau cumul réinitialise la durée restante.",
+      "[召唤物·海月水母]攻击时，有概率直接附加8层[爱之毒]，概率为自身近战武器暴击率的100%。\n[召唤物·海月水母]攻击时有30%概率额外结算1次目标的[爱之毒]伤害。\n场上每存在1个[召唤物·海月水母]，自身和[召唤物·海月水母]造成的伤害提高12%。"
     ]
   },
   {
@@ -7251,7 +7610,8 @@
       "[Enfer ardent] niveau +2 ; [Détermination purgatrice] niveau +1.",
       "[Châtiment transperçant] peut désormais se déclencher toutes les 1,4 s.",
       "[Cage du désespoir] niveau +2 ; [Détermination purgatrice] niveau +1.",
-      "Chaque fois que les alliés utilisent des compétences consommant de la Lucidité un total de 5 fois, déclenche automatiquement [Cage du Désespoir]. Cet effet peut se déclencher une fois toutes les 5 s."
+      "Chaque fois que les alliés utilisent des compétences consommant de la Lucidité un total de 5 fois, déclenche automatiquement [Cage du Désespoir]. Cet effet peut se déclencher une fois toutes les 5 s.",
+      "Pendant la durée de l’effet [Châtiment], lorsque vous infligez des Dégâts de compétence ou d’arme de mêlée à un ennemi, vous avez 60% de chances de déclencher une fois supplémentaire [Châtiment transperçant] centré sur la cible et d’obtenir 1 cumul de [Décompte des péchés], cumulable jusqu’à 150 fois.\nSi vos PV sont à 100 %, vous subissez en plus des dégâts équivalents à 0,1 % de vos PV max. Cet effet peut se déclencher au maximum 8 fois toutes les 2 s.\nChaque cumul de [Décompte des péchés] augmente la [Vigueur] de 1% et augmente le multiplicateur de dégâts de [Cage du désespoir] de 2%."
     ]
   },
   {
@@ -7259,7 +7619,14 @@
     "icon": "Kami",
     "名称": "Camilla",
     "版本": "1.3",
-    "别名": "UI_CHAR_SUBTITLE_3202",
+    "别名": "Cru Écarlate",
+    "出生地": "Empire Hyperboréen",
+    "势力": "Aucune affiliation",
+    "生日": "11-21",
+    "中文CV": "苏染",
+    "日文CV": "沢城みゆき",
+    "英文CV": "Violet Patton-Ryder",
+    "韩文CV": "김예림",
     "阵营": "Empire Hyperboréen",
     "属性": "火",
     "精通": [
@@ -7271,11 +7638,15 @@
       "Dégâts de compétence",
       "Soutien"
     ],
-    "基础攻击": 13,
-    "基础生命": 185,
-    "基础防御": 345,
+    "基础攻击": 25,
+    "基础生命": 120,
+    "基础防御": 330,
     "基础护盾": 120,
-    "基础神智": 200,
+    "基础神智": 160,
+    "加成": {
+      "ATQ": 0.5,
+      "Puissance de compétence": 0.2
+    },
     "突破": [
       {
         "Pièce": 4160,
@@ -7313,19 +7684,32 @@
         "id": 320201,
         "名称": "Rafale pourpre",
         "类型": "Dégâts",
-        "描述": "Projette toutes les [Lames tournoyantes], inflige des Dégâts Pyro aux ennemis devant et confère 1 cumul d’[Ébriété].\nMaintenir l’attaque ou utiliser une compétence normale ou une attaque de mêlée permet d'enchaîner des attaques successives.",
-        "icon": "Haier01",
+        "描述": "Projette toutes les [Lames tournoyantes], inflige des Dégâts Pyro aux ennemis devant et confère 1 cumul d’[Ébriété].\nMaintenir l’attaque ou utiliser une compétence normale ou une attaque de mêlée permet d’enchaîner des attaques successives.",
+        "icon": "Kami01",
         "字段": [
           {
             "名称": "Coût en Lucidité par attaque de [Rafale pourpre]",
             "影响": "技能效益",
-            "值": 1,
+            "值": 10,
             "格式": "{}"
           },
           {
             "名称": "Dégâts de [Rafale pourpre]",
             "影响": "技能威力",
-            "值": 1,
+            "值": [
+              1.67,
+              2.04,
+              2.41,
+              2.78,
+              3.15,
+              3.52,
+              3.89,
+              4.26,
+              4.63,
+              5,
+              5.37,
+              5.74
+            ],
             "削韧": 25
           },
           {
@@ -7336,11 +7720,37 @@
           },
           {
             "名称": "Bonus de Vitesse de compétence par cumul d’[Ébriété]",
-            "值": 0.06
+            "值": [
+              0.042,
+              0.044,
+              0.046,
+              0.048,
+              0.05,
+              0.052,
+              0.054,
+              0.056,
+              0.058,
+              0.06,
+              0.062,
+              0.064
+            ]
           },
           {
             "名称": "Vitesse de projection des [Lames tournoyantes] par cumul d’[Ébriété]",
-            "值": 0.4
+            "值": [
+              0.265,
+              0.28,
+              0.295,
+              0.31,
+              0.325,
+              0.34,
+              0.355,
+              0.37,
+              0.385,
+              0.4,
+              0.415,
+              0.43
+            ]
           }
         ],
         "升级": [
@@ -7405,27 +7815,40 @@
             "id": 320211,
             "名称": "Ébriété",
             "类型": "Dégâts",
-            "icon": "Haier01"
+            "icon": "Kami01"
           }
         ]
       },
       {
         "id": 320202,
         "名称": "Valse écarlate",
-        "类型": "Invocation",
+        "类型": "Bonus",
         "描述": "Invoque 8 [Lames tournoyantes] qui orbitent autour du personnage.",
-        "icon": "Haier02",
+        "icon": "Kami02",
         "字段": [
           {
             "名称": "Coût en Lucidité",
             "影响": "技能效益",
-            "值": 40,
+            "值": 100,
             "格式": "{}"
           },
           {
             "名称": "Dégâts des [Lames tournoyantes]",
             "影响": "技能威力",
-            "值": 0.15,
+            "值": [
+              0.27,
+              0.32,
+              0.37,
+              0.42,
+              0.47,
+              0.52,
+              0.57,
+              0.62,
+              0.67,
+              0.72,
+              0.77,
+              0.82
+            ],
             "削韧": 1
           },
           {
@@ -7438,12 +7861,6 @@
             "名称": "Vitesse de projection des [Lames tournoyantes]",
             "值": 20,
             "格式": "{}m/s"
-          },
-          {
-            "名称": "Distance de projection des [Lames tournoyantes]",
-            "值": 37,
-            "值2": 43,
-            "格式": "{}-{}m"
           }
         ],
         "升级": [
@@ -7501,7 +7918,7 @@
           }
         ],
         "术语解释": {
-          "Lames tournoyantes": "Chaque [Lames tournoyantes] inflige des dégâts aux ennemis tous les 2 s pendant qu’elle orbite autour du personnage.\nLorsqu’elle est projetée, elle vole sur une certaine distance avant de revenir. Si elle est touchée par [Rafale pourpre] durant son retour, elle est projetée à nouveau vers un ennemi aléatoire dans la portée.\nÀ chaque projection, sa vitesse est mise à jour en fonction des cumuls de [Ébriété].\nElle inflige des dégâts 1 fois sur son passage, et jusqu'à 8 [Lames tournoyantes] peuvent être présentes à la fois."
+          "Lame du sommelier": "Chaque [Lames tournoyantes] inflige des dégâts aux ennemis tous les 2 s pendant qu’elle orbite autour du personnage.\nLorsqu’elle est projetée, elle vole sur une certaine distance avant de revenir. Si elle est touchée par [Rafale pourpre] durant son retour, elle est projetée à nouveau vers un ennemi aléatoire dans la portée.\nÀ chaque projection, sa vitesse est mise à jour en fonction des cumuls de [Ébriété].\nElle inflige des dégâts 1 fois sur son passage, et jusqu’à 8 [Lames tournoyantes] peuvent être présentes à la fois."
         }
       },
       {
@@ -7509,12 +7926,27 @@
         "名称": "Sang au-dessus du vin",
         "类型": "Passive",
         "描述": "Les [Lames tournoyantes] appliquent 1 [Lacération], jusqu’à un maximum de 20 cumuls.",
-        "icon": "Passive",
+        "icon": "Kami03",
         "字段": [
           {
             "名称": "Bonus de dégâts de détonation de [Lacération]",
             "影响": "技能威力",
-            "值": 0.1
+            "值": [
+              0.24,
+              0.3,
+              0.36,
+              0.42,
+              0.48,
+              0.54,
+              0.6,
+              0.66,
+              0.72,
+              0.78,
+              0.84,
+              0.9
+            ],
+            "格式": "{%}*远程武器多重射击属性值",
+            "削韧": 25
           }
         ],
         "升级": [
@@ -7572,44 +8004,44 @@
           }
         ],
         "术语解释": {
-          "Lacération": "Tous les DGT d’arme et les Dégâts de compétence (à l’exception de [Lames tournoyantes] et [Lacération]) détonent 1 [Lacération] et infligent des dégâts supplémentaires de l’attribut Pyro. Jusqu’à 40 détonations par seconde."
+          "Lacération": "Lorsqu’une cible affectée par [Blessure écarlate] subit des Dégâts Pyro (à l’exception des dégâts de [Lame du sommelier] et de [Blessure écarlate]), 1 cumul de [Blessure écarlate] est retiré et inflige une instance supplémentaire de Dégâts Pyro provenant de Camilla.\nChaque cible peut perdre jusqu’à 20 cumuls par seconde."
         }
       },
       {
         "id": 320204,
         "名称": "Sang au-dessous du vin",
         "类型": "Passive",
-        "描述": "Détonner [Lacération] accorde 1 [Marque d’ivresse]. Toutes les 20 [Marques d’ivresse], restaure de la Lucidité.",
+        "描述": "Détonner [Lacération] accorde 1 [Marque d’ivresse]. Toutes les 20 [Marques d’ivresse], la Lucidité est restaurée.",
         "icon": "ExtraPassive",
         "字段": [
           {
             "名称": "Régénération de Lucidité",
-            "值": 4,
+            "值": 5,
             "格式": "{}"
           }
         ]
       },
       {
-        "id": 310001,
-        "名称": "Flamme éthérée",
+        "id": 320291,
+        "名称": "瑰色裙",
         "类型": "Support",
-        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ de soi-même et des alliés Pyro.",
+        "描述": "[仅在作为协战同伴登场时生效]\n自身和火属性队友昂扬提高。",
         "icon": "PhantomPassive",
         "字段": [
           {
-            "名称": "Augmentation d’ATQ",
-            "值": 0.4
+            "名称": "Augmentation de Vigueur",
+            "值": 0.15
           }
         ]
       }
     ],
     "溯源": [
       "Les dégâts des [Lames tournoyantes] ont 30% % de chances d’appliquer 1 [Lacération] supplémentaire.",
-      "Lorsque vous êtes équipé de [Lames tournoyantes], les dégâts subis sont réduits de 30% et les dégâts infligés augmentent de 30%.",
+      "Lorsque vous êtes équipé de [Lames tournoyantes], les dégâts subis sont réduits de 15% et les dégâts infligés augmentent de 55%.",
       "[Rafale pourpre] niveau +2 ; [Valse écarlate] niveau +1.",
       "Les dégâts causés par la détonation de [Lacération] sont augmentés de 30%, et la vitesse de vol de [Lames tournoyantes] est augmentée à 25.",
       "[Valse écarlate] niveau +2 ; [Rafale pourpre] niveau +1.",
-      "Tous les DGT d’arme et tous les Dégâts de compétence (hors [Lames tournoyantes] et [Lacération]) détonent 2 [Lacérations]."
+      "Lorsque [Lame du sommelier] est active, votre Pénétration tous attributs augmente de 45%.\nLorsque [Blessure écarlate] est supprimée, 1 cumul supplémentaire est retiré et une instance de dégâts supplémentaire est infligée."
     ]
   },
   {
@@ -8322,8 +8754,7 @@
               4.16,
               4.45
             ],
-            "削韧": 33,
-            "取消": 1.0925
+            "削韧": 33
           },
           {
             "名称": "[Charge statique]Rayon d’effet de [Charge positive]",
@@ -9141,10 +9572,10 @@
       }
     ],
     "溯源": [
-      "Lors de l’utilisation d’[Oracle du tonnerre], prolonge de 3.5 s la durée de l’effet d’augmentation des Dégâts de compétence conféré par [Clarté du destin].\nDe plus, [Harmonie des Quatre Royaumes] déclenche une occurrence supplémentaire de [Convergence Zhen-Xun], chacune infligeant 60 % des dégâts de base.",
+      "Lors de l’utilisation d’[Oracle du tonnerre], [Harmonie des Quatre Royaumes] déclenche une occurrence supplémentaire de [Convergence Zhen-Xun], chacune infligeant 60 % des dégâts de base.",
       "Renforce [Convergence primordiale] avec des effets alternatifs selon la manière d’activation :\n– Appui simple : [Convergence Zhen-Xun] peut cibler jusqu’à 8 ennemis.\n– Appui long : le champ [Harmonie des Quatre Royaumes] devient permanent, consommant 6 de Lucidité par seconde.\nL’effet prend fin lorsque la Lucidité tombe à 0, ou lors de l’utilisation d’une compétence ou d’une arme.",
       "[Révélation céleste] niveau +2 ; [Rituel jumelé] niveau +1.",
-      "Utiliser [Révélation céleste] augmente l’ATQ de Zhiliu et des alliés proches de 16% pendant 16 s.",
+      "Lorsqu’un gain supplémentaire de Régénération de Lucidité entraîne un débordement, confère à vous et à vos alliés 1 cumul d’augmentation d’ATQ de 16% pendant 16 s, cumulable jusqu’à 5 fois.",
       "[Divination cosmique] niveau +2 ; [Rituel jumelé] niveau +1.",
       "Lorsque Zhiliu se trouve dans la zone d’[Harmonie des Quatre Royaumes], sa Pénétration (tous attributs) augmente de 40% et elle bénéficie en continu de l’augmentation des Dégâts de compétence conférée par [Clarté du destin]."
     ]

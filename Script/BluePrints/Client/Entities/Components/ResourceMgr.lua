@@ -79,8 +79,9 @@ function Component:LockResourceInBag(Tag, Id, FishSize)
   end
 end
 
-function Component:UnLockResourceInBag(Tag, Id, FishSize)
+function Component:UnLockResourceInBag(Tag, Id, FishSize, SecondaryPassword)
   FishSize = FishSize or 0
+  SecondaryPassword = SecondaryPassword or ""
   
   local function callback(Ret)
     self.logger.info("UnLockResourceInBag callback", Ret, Id)
@@ -92,12 +93,12 @@ function Component:UnLockResourceInBag(Tag, Id, FishSize)
     self:CallServer("UnLockResourceInBag", callback, Id, FishSize)
   elseif Tag == CommonConst.AllType.Weapon then
     if CommonUtils.IsObjId(Id) then
-      self:CallServer("UnLockWeaponInBag", callback, Id)
+      self:CallServer("UnLockWeaponInBag", callback, Id, SecondaryPassword)
     else
       DebugPrint("::Error:: UnLockResourceInBag= 在军械库或者背包中解锁武器Rpc参数非法: 传过来的不是一个ObjId")
     end
   elseif Tag == CommonConst.AllType.Mod then
-    self:CallServer("UnLockModInBag", callback, Id)
+    self:CallServer("UnLockModInBag", callback, Id, SecondaryPassword)
   end
 end
 
@@ -172,12 +173,20 @@ function Component:UseWheelItemInBattle(ResourceId, UseWheelItemInBattleCallBack
 end
 
 function Component:UseResourceInBag(ResourceId, Count, InCallBack)
-  local function callback(ErrCode)
+  local function callback(ErrCode, ...)
     self.logger.info("UseResourceInBag", ErrorCode:Name(ErrCode))
     
-    ErrorCode:Check(ErrCode)
+    if ErrorCode:Check(ErrCode) then
+      local BagConsumeNode = ReddotManager.GetTreeNode("Bag_Consume")
+      local BagConsumeNodeDetails = BagConsumeNode.Cache.Detail
+      local Avatar = GWorld:GetAvatar()
+      if BagConsumeNode and BagConsumeNode.Cache.Detail[ResourceId] then
+        BagConsumeNodeDetails[ResourceId].ClickedCount = Avatar:GetResourceNum(ResourceId)
+        BagConsumeNodeDetails[ResourceId].StuffCount = Avatar:GetResourceNum(ResourceId)
+      end
+    end
     if InCallBack then
-      InCallBack()
+      InCallBack(...)
     end
   end
   
@@ -189,7 +198,15 @@ function Component:UseOptResourceInBag(ResourceId, OptIdxList, InCallBack)
   
   local function callback(ErrCode)
     self.logger.info("UseOptResourceInBag", ErrorCode:Name(ErrCode))
-    ErrorCode:Check(ErrCode)
+    if ErrorCode:Check(ErrCode) then
+      local BagConsumeNode = ReddotManager.GetTreeNode("Bag_Consume")
+      local BagConsumeNodeDetails = BagConsumeNode.Cache.Detail
+      local Avatar = GWorld:GetAvatar()
+      if BagConsumeNode and BagConsumeNode.Cache.Detail[ResourceId] then
+        BagConsumeNodeDetails[ResourceId].ClickedCount = Avatar:GetResourceNum(ResourceId)
+        BagConsumeNodeDetails[ResourceId].StuffCount = Avatar:GetResourceNum(ResourceId)
+      end
+    end
     if InCallBack then
       InCallBack(ErrCode)
     end

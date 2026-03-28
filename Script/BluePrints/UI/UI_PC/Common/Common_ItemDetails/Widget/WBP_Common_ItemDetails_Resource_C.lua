@@ -74,11 +74,24 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
             UIManager(self):ShowUITip("CommonToastMain", GText("UI_COMMONPOP_TITLE_100059"))
           else
             PageJumpUtils:CloseFrontDialog()
-            UIManager(self):LoadUINew("ArmorySkin", {
-              Type = string.sub(ItemType, 1, string.find(ItemType, "Accessory") - 1),
-              AccessoryId = ItemId,
-              OnCloseCallback = self.JumpReturnCallBack and self.JumpReturnCallBack.CallBack
-            })
+            if "WeaponAccessory" == ItemType and CharAccessoryInfo and CharAccessoryInfo.StanceFXType ~= "Accessory" then
+              local SkinVideo = UIManager(self):LoadUINew("ArmorySkinVideo_Sp", {
+                Path = CharAccessoryInfo.Video,
+                SoundPath = CharAccessoryInfo.GetSoundPath,
+                DestructCB = function()
+                  self:SetFocus()
+                end
+              })
+              if SkinVideo then
+                SkinVideo:SetFocus()
+              end
+            else
+              UIManager(self):LoadUINew("ArmorySkin", {
+                Type = string.sub(ItemType, 1, string.find(ItemType, "Accessory") - 1),
+                AccessoryId = ItemId,
+                OnCloseCallback = self.JumpReturnCallBack and self.JumpReturnCallBack.CallBack
+              })
+            end
           end
         end,
         ButtonClickText = "UI_Preview_Title",
@@ -87,6 +100,38 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
       self.ParentWidget:InitButtonEvent(CallBack)
     end
     return
+  end
+  if DataMgr[ItemType][ItemId] and 7 == DataMgr[ItemType][ItemId].MaterialClassify then
+    local OptInfo = DataMgr[ItemType][ItemId]
+    local UseEffectType = DataMgr[ItemType][ItemId].UseEffectType
+    if UseEffectType ~= CommonConst.ResUseEffectType.SelectWeapon and UseEffectType ~= CommonConst.ResUseEffectType.SelectCharacter and UseEffectType ~= CommonConst.ResUseEffectType.SelectSkin and UseEffectType ~= CommonConst.ResUseEffectType.SelectPet then
+      self.ParentWidget.Panel_Hold:SetVisibility(ESlateVisibility.Collapsed)
+      local CallBack = {
+        ButtonClickCallBack = function()
+          if "RandomSelectPack" == UseEffectType then
+            local ResourceConfig = DataMgr[ItemType][ItemId]
+            local CommonDialogParams = {}
+            CommonDialogParams.Title = GText(ResourceConfig.ResourceName)
+            CommonDialogParams.AutoFocus = true
+            CommonDialogParams.ParentWidget = self
+            CommonDialogParams.ResourceId = ResourceConfig.ResourceId
+            CommonDialogParams.UseParam = ResourceConfig.UseParam
+            UIManager(self):ShowCommonPopupUI(100344, CommonDialogParams, self, nil, 102)
+          else
+            PageJumpUtils:CloseFrontDialog()
+            UIManager(self):LoadUINew("CharSkinPreview", {
+              Type = UseEffectType,
+              OptRewardId = OptInfo.UseParam,
+              ResourceId = ItemId,
+              Mode = "Preview"
+            })
+          end
+        end,
+        ButtonClickText = "UI_Preview_Title",
+        ButtonIcon = 1
+      }
+      self.ParentWidget:InitButtonEvent(CallBack)
+    end
   end
   if "Mount" == ItemType then
     assert(DataMgr[ItemType][ItemId], "未找到对应坐骑信息：", ItemType, ItemId)
@@ -283,11 +328,24 @@ function M:InitItemInfoInBag(ItemType, ItemId, UnitId, Content)
             UIManager(self):ShowUITip("CommonToastMain", GText("UI_COMMONPOP_TITLE_100059"))
           else
             PageJumpUtils:CloseFrontDialog()
-            UIManager(self):LoadUINew("ArmorySkin", {
-              Type = string.sub(ItemType, 1, string.find(ItemType, "Accessory") - 1),
-              AccessoryId = ItemId,
-              OnCloseCallback = self.JumpReturnCallBack and self.JumpReturnCallBack.CallBack
-            })
+            if "WeaponAccessory" == ItemType and CharAccessoryInfo and CharAccessoryInfo.StanceFXType ~= "Accessory" then
+              local SkinVideo = UIManager(self):LoadUINew("ArmorySkinVideo_Sp", {
+                Path = CharAccessoryInfo.Video,
+                SoundPath = CharAccessoryInfo.GetSoundPath,
+                DestructCB = function()
+                  self:SetFocus()
+                end
+              })
+              if SkinVideo then
+                SkinVideo:SetFocus()
+              end
+            else
+              UIManager(self):LoadUINew("ArmorySkin", {
+                Type = string.sub(ItemType, 1, string.find(ItemType, "Accessory") - 1),
+                AccessoryId = ItemId,
+                OnCloseCallback = self.JumpReturnCallBack and self.JumpReturnCallBack.CallBack
+              })
+            end
           end
         end,
         ButtonClickText = "UI_Preview_Title",

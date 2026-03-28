@@ -51,6 +51,40 @@ function Component:_OnPropChangeRegionReputations(Keys)
   self:RegionReputationsChange(Keys)
 end
 
+function Component:_OnPropChangeResources(Keys, OldValue)
+  local FameMainReddot = ReddotManager.GetTreeNode("FameMain")
+  if FameMainReddot and FameMainReddot.Count > 0 then
+    return
+  end
+  local RecurringFameTaskReddot = ReddotManager.GetTreeNode("RecurringFameTask")
+  if RecurringFameTaskReddot and RecurringFameTaskReddot.Count > 0 then
+    return
+  end
+  local ResourceId = Keys and Keys[1]
+  if ResourceId then
+    if type(OldValue) == "table" then
+      OldValue = OldValue.Count
+    end
+    local CurrentValue = self.Resources:QueryResourceCount(ResourceId) or 0
+    OldValue = OldValue or 0
+    if CurrentValue == OldValue then
+      return
+    end
+    local CountOffset = CurrentValue - OldValue
+    if not ReddotManager.GetTreeNode("EntrustFameTask") then
+      ReddotManager.AddNodeEx("EntrustFameTask")
+    end
+    local Reddot = ReddotManager.GetTreeNode("EntrustFameTask")
+    if CountOffset > 0 then
+      if Reddot and Reddot.Count <= 0 then
+        self:UpdateEntrustFameTaskReddot()
+      end
+    elseif Reddot and Reddot.Count > 0 then
+      self:UpdateEntrustFameTaskReddot()
+    end
+  end
+end
+
 function Component:RegionReputationsChange(Keys)
   EventManager:FireEvent(EventID.RegionReputationsChange)
   self:AddReddot()
@@ -84,6 +118,7 @@ function Component:AddReddot()
     ReddotManager.ClearLeafNodeCount("FameMain", false)
   end
   self:UpdateRecurringFameTaskReddot()
+  self:UpdateEntrustFameTaskReddot()
 end
 
 function Component:UpdateRecurringFameTaskReddot()
@@ -109,6 +144,36 @@ function Component:UpdateRecurringFameTaskReddot()
     local Reddot = ReddotManager.GetTreeNode("RecurringFameTask")
     if Reddot then
       ReddotManager.ClearLeafNodeCount("RecurringFameTask", false)
+    end
+  end
+end
+
+function Component:UpdateEntrustFameTaskReddot()
+  local RegionFameModel = RegionFameController:GetModel()
+  local AllRegionReputationData = DataMgr.RegionReputation
+  if not AllRegionReputationData then
+    return
+  end
+  local bHasCanSubmit = false
+  for ReputationId, _ in pairs(AllRegionReputationData) do
+    local CanSubmitEntrustTask = RegionFameModel:GetTargetRegionEntrustTaskCanSubmit(ReputationId)
+    if CanSubmitEntrustTask then
+      bHasCanSubmit = true
+      break
+    end
+  end
+  if not ReddotManager.GetTreeNode("EntrustFameTask") then
+    ReddotManager.AddNodeEx("EntrustFameTask")
+  end
+  if bHasCanSubmit then
+    local Reddot = ReddotManager.GetTreeNode("EntrustFameTask")
+    if Reddot and Reddot.Count <= 0 then
+      ReddotManager.IncreaseLeafNodeCount("EntrustFameTask", 1)
+    end
+  else
+    local Reddot = ReddotManager.GetTreeNode("EntrustFameTask")
+    if Reddot then
+      ReddotManager.ClearLeafNodeCount("EntrustFameTask", false)
     end
   end
 end

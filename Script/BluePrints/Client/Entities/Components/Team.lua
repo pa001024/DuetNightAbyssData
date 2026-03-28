@@ -177,6 +177,17 @@ function Component:TeamBattleEvent_StartVote(DungeonId, bMatch)
   end
   local bIsInTeam = Avatar:IsInTeam()
   if bIsInTeam then
+    local PatchCond = DataMgr.DungeonPatchCondition and DataMgr.DungeonPatchCondition[DungeonId]
+    local NecessaryPatch = PatchCond and PatchCond.NecessaryPatch
+    if NecessaryPatch and #NecessaryPatch > 0 then
+      local HotUpdateSubsystem = UE4.USubsystemBlueprintLibrary.GetGameInstanceSubsystem(self, UE4.UHotUpdateSubsystem)
+      if HotUpdateSubsystem and not HotUpdateSubsystem:IsAllPatchOptionalSignsDownloaded(NecessaryPatch) then
+        self:VoteStartBattle(false)
+        UIManager(self):LoadUINew("OptionalPatch", NecessaryPatch)
+        TeamController:RecvTeamOnVoteStart(DungeonId)
+        return
+      end
+    end
     local Panel = UIManager(self):GetUI("DungeonMatchTimingBar")
     if Panel and Panel.bClosing then
       UIManager(self):UnLoadUINew("DungeonMatchTimingBar")
@@ -234,8 +245,10 @@ function Component:TeamBattleEvent_WaitEntering()
 end
 
 function Component:TeamBattleEvent_Matching()
-  DebugPrint("gmy@Component:TeamBattleEvent_Matching")
-  EventManager:FireEvent(EventID.TeamMatchStartMatching)
+  local Avatar = GWorld:GetAvatar()
+  local bIsLowSpeed = Avatar and Avatar.BlackMatch > 0 and Avatar.BlackMatch > os.time()
+  DebugPrint("gmy@Component:TeamBattleEvent_Matching", bIsLowSpeed)
+  EventManager:FireEvent(EventID.TeamMatchStartMatching, bIsLowSpeed)
 end
 
 function Component:TeamBattleEvent_LeaveCancel()

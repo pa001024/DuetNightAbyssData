@@ -49,6 +49,9 @@ function BP_TestPlayerAnimInstance_C:CanPlayEmoIdleVoice()
   if self.EmoIdleVoiceHandle then
     return false
   end
+  if 0 ~= self:GetPawnOwner().AvatarQuestRoleID then
+    return false
+  end
   local Avatar = GWorld:GetAvatar()
   if Avatar and Avatar:IsInDungeon() then
     return true

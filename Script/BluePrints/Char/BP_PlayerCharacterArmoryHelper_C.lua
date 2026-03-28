@@ -1,5 +1,5 @@
 require("UnLua")
-local M = Class()
+local M = Class("BluePrints.Common.TimerMgr")
 
 function M:ReceiveBeginPlay()
   self.Overridden.ReceiveBeginPlay(self)
@@ -44,7 +44,7 @@ function M:SetCameraStartTrans(StartTransform, FOV, Player)
   self:OnCameraRotated()
   self:OnCameraZoom()
   local CurRot = self.Player and self.Player:K2_GetActorRotation() or self.EndRot
-  self.OriginalRotation = FRotator(CurRot.Pitch, CurRot.Yaw, CurRot.Roll)
+  self:SetOriginalRotation(CurRot)
   self:SetTickableWhenPaused(true)
 end
 
@@ -247,7 +247,7 @@ function M:YawNormalize(Rotator)
   Rotator.Yaw = yaw
 end
 
-function M:OnDragging(DeltaMove)
+function M:OnDragViewActor(DeltaMove)
   if self.LTweenHandle and IsValid(self.LTweenHandle) or not self.ViewActor then
     return
   end
@@ -501,25 +501,33 @@ function M:GetViewActor()
   return self.ViewActor
 end
 
-function M:SetWeapon(Weapon)
+function M:SetWeapon(Weapon, WeaponReflection)
   self.Weapon = Weapon
+  self.WeaponReflection = WeaponReflection
   if self.Weapon == nil then
     self.WeaponTag = nil
     if IsValid(self.WeaponArmoryHelper) then
       self.WeaponArmoryHelper:K2_DestroyActor()
       self.WeaponArmoryHelper = nil
     end
+    if IsValid(self.WeaponReflectionHelper) then
+      self.WeaponReflectionHelper:K2_DestroyActor()
+      self.WeaponReflectionHelper = nil
+    end
     return
   end
-  self:AttachWeaponToHelper(Weapon)
+  self:AttachWeaponToHelper(Weapon, self.WeaponArmoryHelper)
+  if WeaponReflection and self.WeaponReflectionHelper then
+    self:AttachWeaponToHelper(WeaponReflection, self.WeaponReflectionHelper)
+  end
 end
 
-function M:AttachWeaponToHelper(Weapon)
+function M:AttachWeaponToHelper(Weapon, WeaponArmoryHelper)
   local Tags = Weapon:GetWeaponTags():ToTable()
   for key, value in pairs(Tags) do
-    if self.WeaponArmoryHelper[value] then
+    if WeaponArmoryHelper[value] then
       local SceneComponents = TArray(USceneComponent)
-      self.WeaponArmoryHelper[value]:GetChildrenComponents(true, SceneComponents)
+      WeaponArmoryHelper[value]:GetChildrenComponents(true, SceneComponents)
       Weapon:K2_AttachToComponent(SceneComponents:GetRef(1))
       if SceneComponents:Length() > 1 then
         if Weapon.ChildWeapon then
@@ -539,11 +547,23 @@ end
 
 function M:CreateOrGetWeaponHelper()
   if not self.WeaponArmoryHelper or not IsValid(self.WeaponArmoryHelper) then
-    local _Class = UE4.UClass.Load("/Game/UI/Blueprint/ArmoryWeapon.ArmoryWeapon")
-    self.WeaponArmoryHelper = self:GetWorld():SpawnActor(_Class, self:GetTransform(), UE4.ESpawnActorCollisionHandlingMethod.AlwaysSpawn)
-    self.WeaponArmoryHelper:K2_SetActorRotation(FRotator(0, 0, 0), false, nil, false)
+    self.WeaponArmoryHelper = self:CreateWeaponHelper()
   end
   return self.WeaponArmoryHelper
+end
+
+function M:CreateOrGetWeaponReflectionHelper()
+  if not self.WeaponReflectionHelper or not IsValid(self.WeaponReflectionHelper) then
+    self.WeaponReflectionHelper = self:CreateWeaponHelper()
+  end
+  return self.WeaponReflectionHelper
+end
+
+function M:CreateWeaponHelper()
+  local _Class = UE4.UClass.Load("/Game/UI/Blueprint/ArmoryWeapon.ArmoryWeapon")
+  local WeaponArmoryHelper = self:GetWorld():SpawnActor(_Class, self:GetTransform(), UE4.ESpawnActorCollisionHandlingMethod.AlwaysSpawn)
+  WeaponArmoryHelper:K2_SetActorRotation(FRotator(0, 0, 0), false, nil, false)
+  return WeaponArmoryHelper
 end
 
 function M:TransformWeaponCamera()

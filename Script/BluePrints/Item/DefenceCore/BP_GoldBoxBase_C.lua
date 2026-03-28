@@ -58,7 +58,7 @@ function M:OnDead(KillMineRoleEid, KillMineSkillId, DeathReason)
   if 0 ~= SkillId and Killer:IsPlayer() then
     local EffectIds = TArray(0)
     EffectIds:Add(SkillId)
-    UBattleFunctionLibrary.ExecuteSkillEffects(Source, EffectIds, PreTarget, nil, self, SourceComp)
+    Battle(self):ExecuteSkillEffectsWithType(Source, EffectIds, PreTarget, nil, self, SourceComp)
   end
   M.Super.OnDead(self, KillMineRoleEid, KillMineSkillId, DeathReason)
 end

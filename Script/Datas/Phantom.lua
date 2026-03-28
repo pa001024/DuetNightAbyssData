@@ -257,6 +257,20 @@ return ReadOnly("Phantom", {
     UnitName = "NPC-东国-刻舟魅影",
     WearMeleeWeapon = 1
   },
+  [213] = {
+    BT = {
+      [1] = "/Game/AssetDesign/AI/Player/Kezhou/BT_Phantom_Kezhou_NPC.BT_Phantom_Kezhou_NPC"
+    },
+    BattleRoleId = 1503,
+    Camp = "Player",
+    GuideIconAni = "/Game/UI/UI_PC/Guide/Guide_Point/Guide_Icon_Phantom.Guide_Icon_Phantom",
+    HatredRatio = 0,
+    IsNPCPhantom = true,
+    UnitBPPath = "/Game/BluePrints/Char/BP_Phantom/BP_NPCPhantom.BP_NPCPhantom",
+    UnitId = 213,
+    UnitName = "NPC-东国-刻舟魅影2",
+    WearMeleeWeapon = 1
+  },
   [214] = {
     BT = T.RT_4,
     BattleRoleId = 1504,
@@ -267,6 +281,20 @@ return ReadOnly("Phantom", {
     UnitBPPath = "/Game/BluePrints/Char/BP_Phantom/BP_NPCPhantom.BP_NPCPhantom",
     UnitId = 214,
     UnitName = "NPC-东国-苏乙魅影",
+    WearRangedWeapon = 1
+  },
+  [215] = {
+    BT = {
+      [1] = "/Game/AssetDesign/AI/Player/Suyi/BT_Phantom_Suyi_NPC.BT_Phantom_Suyi_NPC"
+    },
+    BattleRoleId = 1504,
+    Camp = "Player",
+    GuideIconAni = "/Game/UI/UI_PC/Guide/Guide_Point/Guide_Icon_Phantom.Guide_Icon_Phantom",
+    HatredRatio = 0,
+    IsNPCPhantom = true,
+    UnitBPPath = "/Game/BluePrints/Char/BP_Phantom/BP_NPCPhantom.BP_NPCPhantom",
+    UnitId = 215,
+    UnitName = "NPC-东国-苏乙魅影2",
     WearRangedWeapon = 1
   },
   [1101] = {
@@ -484,6 +512,21 @@ return ReadOnly("Phantom", {
     UnitId = 3201,
     UnitName = "典狱长-魅影",
     WearMeleeWeapon = 1
+  },
+  [3202] = {
+    AutoRespawn = 5,
+    BT = {
+      [1] = "/Game/AssetDesign/AI/Player/Kami/BT_Phantom_Kami.BT_Phantom_Kami"
+    },
+    BattleRoleId = 3202,
+    Camp = "Player",
+    GuideIconAni = "/Game/UI/UI_PC/Guide/Guide_Point/Guide_Icon_Phantom.Guide_Icon_Phantom",
+    HatredRatio = 0.5,
+    RespawnUI = 20001,
+    UnitBPPath = "/Game/BluePrints/Char/BP_Phantom/BP_PhantomCharacter.BP_PhantomCharacter",
+    UnitId = 3202,
+    UnitName = "卡米拉-魅影",
+    WearRangedWeapon = 1
   },
   [3301] = {
     AutoRespawn = 5,

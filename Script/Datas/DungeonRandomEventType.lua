@@ -11,6 +11,12 @@ return ReadOnly("DungeonRandomEventType", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Dungeon/T_Dungeon_Event_Lizhan.T_Dungeon_Event_Lizhan",
     Remark = "Butcher"
   },
+  Chest = {
+    Des = "DynQuest_DaJie_Title",
+    EventID = "Chest",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Dungeon/T_Dungeon_Event_Dajie.T_Dungeon_Event_Dajie",
+    Remark = "Chest"
+  },
   Pet = {
     Des = "DynQuest_IcelakePet_Title",
     EventID = "Pet",

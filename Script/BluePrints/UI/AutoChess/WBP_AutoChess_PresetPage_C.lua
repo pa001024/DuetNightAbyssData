@@ -14,7 +14,6 @@ function M:OnLoaded(...)
   self:SetFocus()
   self:RefreshOpInfoByInputDevice(self.GameInputModeSubsystem:GetCurrentInputType(), self.GameInputModeSubsystem:GetCurrentGamepadName())
   self:InitButtonNavigation()
-  self:PlayAnimation(self.In)
   self.Key01:CreateGamepadKey(UIConst.GamePadImgKey.FaceButtonBottom)
   self.Key01:CreateSubKeyDesc({
     KeyInfoList = {
@@ -23,6 +22,7 @@ function M:OnLoaded(...)
     Type = "Img",
     Desc = GText("UI_Controller_Close")
   })
+  self:PlayAnimation(self.In)
   AudioManager(self):PlayUISound(nil, "event:/ui/activity/auto_chess_team_preset_in", "AutoChessPresetPage_InSound", nil)
 end
 

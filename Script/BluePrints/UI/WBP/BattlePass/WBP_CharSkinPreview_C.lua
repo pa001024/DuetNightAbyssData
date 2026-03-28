@@ -9,7 +9,7 @@ local OBTAIN_SKIN_POP = 100210
 local HAS_SKIN_ALERT_POP = 100264
 M.PreviewBehaviorType = {
   BattlePassPreview = "BattlePassPreview",
-  SkinSelect = "SkinSelect",
+  SelectGeneralSkin = "SelectGeneralSkin",
   SelectWeaponSkin = "SelectWeaponSkin",
   SelectCharAccessory = "SelectCharAccessory",
   SelectWeaponAccessory = "SelectWeaponAccessory",
@@ -110,7 +110,7 @@ function M:OnLoaded(...)
   self.bRoleListOpen = false
   self.CurState = M.State_Tab
   self:PlayAnimation(self.In)
-  if self.Params.Type == "SkinSelect" or self.Params.Type == "BattlePassPreview" or self.Params.Type == "ShopRecommend" then
+  if self.Params.Type == "SelectGeneralSkin" or self.Params.Type == "BattlePassPreview" or self.Params.Type == "ShopRecommend" then
     self:InitRoleList()
     self:RefreshDetailPanel()
     if self.CurRoleContent then
@@ -139,12 +139,13 @@ function M:InitParams()
   if self.Params then
     self.BehaviorType = self.Params.Type
     self.InitSkinId = self.Params.SkinId
-    self.SkinOptRewardId = self.Params.SkinOptRewardId
+    self.OptRewardId = self.Params.OptRewardId
     self.ResourceId = self.Params.ResourceId
     self.SkinSeriesId = self.Params.SkinSeriesId
-    DebugPrint("gmy@WBP_CharSkinPreview_C M:InitParams", self.BehaviorType, self.InitSkinId, self.SkinSeriesId, self.SkinOptRewardId)
-    if self.SkinOptRewardId then
-      local OptCfg = DataMgr.OptReward and DataMgr.OptReward[self.SkinOptRewardId]
+    self.bInitSkinIdExplicit = self.Params.SkinId ~= nil
+    DebugPrint("gmy@WBP_CharSkinPreview_C M:InitParams", self.BehaviorType, self.InitSkinId, self.SkinSeriesId, self.OptRewardId)
+    if self.OptRewardId then
+      local OptCfg = DataMgr.OptReward and DataMgr.OptReward[self.OptRewardId]
       if OptCfg and OptCfg.Type and OptCfg.Id then
         local bHasSkinType = false
         for _, t in pairs(OptCfg.Type) do
@@ -176,10 +177,10 @@ function M:InitParams()
             end
           end
         else
-          DebugPrint("gmy@WBP_CharSkinPreview_C M:InitParams OptReward Type not Skin", self.SkinOptRewardId)
+          DebugPrint("gmy@WBP_CharSkinPreview_C M:InitParams OptReward Type not Skin", self.OptRewardId)
         end
       else
-        DebugPrint("gmy@WBP_CharSkinPreview_C M:InitParams OptReward cfg missing", self.SkinOptRewardId)
+        DebugPrint("gmy@WBP_CharSkinPreview_C M:InitParams OptReward cfg missing", self.OptRewardId)
       end
     end
     if not self.bUseOptRewardSkinList and self.InitSkinId and self.SkinSeriesId == nil then
@@ -275,8 +276,8 @@ function M:BuildRoleItemContents()
   end
   
   local TargetCharIds
-  if self.bUseOptRewardSkinList and self.SkinOptRewardId then
-    local OptCfg = DataMgr.OptReward and DataMgr.OptReward[self.SkinOptRewardId]
+  if self.bUseOptRewardSkinList and self.OptRewardId then
+    local OptCfg = DataMgr.OptReward and DataMgr.OptReward[self.OptRewardId]
     if OptCfg and OptCfg.Id and OptCfg.Type then
       local bHasSkinType = false
       for _, t in pairs(OptCfg.Type) do
@@ -299,9 +300,9 @@ function M:BuildRoleItemContents()
             DebugPrint("WBP_CharSkinPreview_C BuildRoleItemContents 奖励过滤排除", SkinId, CharId)
           end
         end
-        DebugPrint("gmy@WBP_CharSkinPreview_C M:BuildRoleItemContents UseOptReward", self.SkinOptRewardId)
+        DebugPrint("gmy@WBP_CharSkinPreview_C M:BuildRoleItemContents UseOptReward", self.OptRewardId)
       else
-        DebugPrint("gmy@WBP_CharSkinPreview_C M:BuildRoleItemContents OptReward Type not Skin", self.SkinOptRewardId)
+        DebugPrint("gmy@WBP_CharSkinPreview_C M:BuildRoleItemContents OptReward Type not Skin", self.OptRewardId)
       end
     end
   end
@@ -429,7 +430,7 @@ function M:BuildRoleItemContents()
     return AUuid < BUuid
   end)
   local SelectedContent
-  if self.InitSkinId then
+  if self.bInitSkinIdExplicit and self.InitSkinId then
     local InitSkinData = DataMgr.Skin[self.InitSkinId]
     local InitCharId = InitSkinData and InitSkinData.CharId
     if InitCharId and ShouldIncludeChar(InitCharId) then
@@ -442,12 +443,16 @@ function M:BuildRoleItemContents()
     end
   end
   if not SelectedContent then
-    local CurrentUuid = Avatar.CurrentChar
-    local CurContent = CurrentUuid and self.RoleItemContentsMap[CurrentUuid]
-    if CurContent and CurContent.Char and ShouldIncludeChar(CurContent.Char.CharId) then
-      SelectedContent = CurContent
-    else
+    if not self.bInitSkinIdExplicit then
       SelectedContent = self.RoleItemContentsArray[1]
+    else
+      local CurrentUuid = Avatar.CurrentChar
+      local CurContent = CurrentUuid and self.RoleItemContentsMap[CurrentUuid]
+      if CurContent and CurContent.Char and ShouldIncludeChar(CurContent.Char.CharId) then
+        SelectedContent = CurContent
+      else
+        SelectedContent = self.RoleItemContentsArray[1]
+      end
     end
   end
   if SelectedContent then
@@ -820,7 +825,7 @@ function M:OnKeyDown(_, InKeyEvent)
     self:ExitSkin()
     return UE4.UWidgetBlueprintLibrary.Handled()
   end
-  if InKeyName == Const.GamepadFaceButtonBottom and false ~= self.Btn_Confirm.IsEnabled then
+  if InKeyName == Const.GamepadFaceButtonBottom and (false ~= self.Btn_Confirm.IsEnabled or self.Params.Mode == "Preview") then
     self:OnConfirmClicked()
     return UE4.UWidgetBlueprintLibrary.Handled()
   end
@@ -1316,7 +1321,7 @@ function M:RefreshDetailPanel()
     self.Icon_Hint:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   end
   self:PlayAnimation(self.Change)
-  if self.SkinOptRewardId then
+  if self.OptRewardId and self.Params.Mode ~= "Preview" then
     self.Panel_Consume:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.Btn_Confirm:SetVisibility(ESlateVisibility.Visible)
   else
@@ -1355,7 +1360,7 @@ end
 
 function M:OnConfirmClicked()
   local ConfirmId
-  if self.Params.Type == "SkinSelect" then
+  if self.Params.Type == "SelectGeneralSkin" then
     local Content = self.CurRoleContent
     local CharId = Content.UnitId
     local SkinId = self.CharId2SkinId[CharId] or self.InitSkinId
@@ -1391,7 +1396,7 @@ function M:OnConfirmClicked()
       SkinId = SkinId,
       bHasChar = bHasChar,
       bHasSkin = bHasSkin,
-      SkinOptRewardId = self.SkinOptRewardId,
+      SkinOptRewardId = self.OptRewardId,
       ResourceId = self.ResourceId,
       Content = Content
     }
@@ -1461,7 +1466,7 @@ function M:OnConfirmClicked_WeaponSkin()
     local Params = {
       SkinId = SkinId,
       bHasSkin = bHasSkin,
-      WeaponSkinOptRewardId = self.WeaponSkinOptRewardId,
+      WeaponSkinOptRewardId = self.OptRewardId,
       ResourceId = self.ResourceId,
       Content = Content
     }
@@ -1520,7 +1525,7 @@ function M:OnConfirmClicked_CharSkin()
     local Params = {
       SkinId = SkinId,
       bHasSkin = bHasSkin,
-      CharSkinOptRewardId = self.CharSkinOptRewardId,
+      CharSkinOptRewardId = self.OptRewardId,
       ResourceId = self.ResourceId,
       Content = Content
     }
@@ -1579,7 +1584,7 @@ function M:OnConfirmClicked_Accessory()
     local Params = {
       SkinId = SkinId,
       bHasSkin = bHasSkin,
-      AccessoryOptRewardId = self.AccessoryOptRewardId,
+      AccessoryOptRewardId = self.OptRewardId,
       ResourceId = self.ResourceId,
       Content = Content,
       Type = Type
@@ -1645,7 +1650,7 @@ function M:OnConfirmClicked_Gesture()
     local Params = {
       SkinId = GestureId,
       bHasSkin = bHasSkin,
-      GeatureOptRewardId = self.GestureOptRewardId,
+      GeatureOptRewardId = self.OptRewardId,
       ResourceId = self.ResourceId,
       Content = Content,
       Type = Type
@@ -2149,7 +2154,7 @@ function M:OnAnalogValueChanged(_MyGeometry, InAnalogInputEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   if "Gamepad_RightX" == InKeyName and BattlePassController:GetModelData("BagActorController") then
     local DeltaX = UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent) * 10
-    BattlePassController:GetModelData("BagActorController"):OnDragging({X = DeltaX})
+    BattlePassController:GetModelData("BagActorController"):OnDragViewActor({X = DeltaX})
     return UIUtils.Handled
   end
   return UIUtils.Unhandled
@@ -2195,13 +2200,13 @@ function M:InitWeaponParams()
   self.Switch_Type:SetActiveWidgetIndex(1)
   if self.Params then
     self.BehaviorType = self.Params.Type
-    self.WeaponSkinOptRewardId = self.Params.WeaponSkinOptRewardId
+    self.OptRewardId = self.Params.OptRewardId
     self.ResourceId = self.Params.ResourceId
     self.PreSelectSkinId = self.Params.SkinId
   end
   local Avatar = GWorld:GetAvatar()
   if Avatar then
-    local OptReward = DataMgr.OptReward[self.WeaponSkinOptRewardId]
+    local OptReward = DataMgr.OptReward[self.OptRewardId]
     local PreviewSkinId = OptReward and OptReward.Id[1]
     local PreviewParams = {
       Type = "Weapon",
@@ -2222,7 +2227,7 @@ end
 
 function M:InitWeaponSkinList()
   self.WeaponSkinContents = {}
-  local OptReward = DataMgr.OptReward[self.WeaponSkinOptRewardId]
+  local OptReward = DataMgr.OptReward[self.OptRewardId]
   for Index, Id in pairs(OptReward.Id) do
     local SkinData = DataMgr.WeaponSkin[Id]
     if SkinData then
@@ -2308,13 +2313,13 @@ function M:InitCharParams()
   self.Switch_Type:SetActiveWidgetIndex(1)
   if self.Params then
     self.BehaviorType = self.Params.Type
-    self.CharSkinOptRewardId = self.Params.CharSkinOptRewardId
+    self.OptRewardId = self.Params.OptRewardId
     self.ResourceId = self.Params.ResourceId
     self.PreSelectSkinId = self.Params.SkinId
   end
   local Avatar = GWorld:GetAvatar()
   if Avatar then
-    local OptReward = DataMgr.OptReward[self.WeaponSkinOptRewardId]
+    local OptReward = DataMgr.OptReward[self.OptRewardId]
     local PreviewSkinId = OptReward and OptReward.Id[1]
     local PreviewParams = {
       Type = "Char",
@@ -2335,7 +2340,7 @@ end
 
 function M:InitCharSkinList()
   self.CharSkinContents = {}
-  local OptReward = DataMgr.OptReward[self.CharSkinOptRewardId]
+  local OptReward = DataMgr.OptReward[self.OptRewardId]
   for Index, Id in pairs(OptReward.Id) do
     local SkinData = DataMgr.Skin[Id]
     if SkinData then
@@ -2379,11 +2384,11 @@ function M:InitAccessoryParams()
   self.Switch_Type:SetActiveWidgetIndex(2)
   if self.Params then
     self.BehaviorType = self.Params.Type
-    self.AccessoryOptRewardId = self.Params.AccessoryOptRewardId
+    self.OptRewardId = self.Params.OptRewardId
     self.ResourceId = self.Params.ResourceId
     self.PreSelectAccessoryId = self.Params.AccessoryId
   end
-  local OptReward = DataMgr.OptReward[self.Params.AccessoryOptRewardId]
+  local OptReward = DataMgr.OptReward[self.Params.OptRewardId]
   local Type = OptReward and OptReward.Type[1]
   self.AccessoryContents = {}
   self.Map_AccessoryContents = {}
@@ -2514,11 +2519,11 @@ function M:InitWeaponAccessoryParams()
   self.Switch_Type:SetActiveWidgetIndex(2)
   if self.Params then
     self.BehaviorType = self.Params.Type
-    self.AccessoryOptRewardId = self.Params.AccessoryOptRewardId
+    self.OptRewardId = self.Params.OptRewardId
     self.ResourceId = self.Params.ResourceId
     self.PreSelectAccessoryId = self.Params.AccessoryId
   end
-  local OptReward = DataMgr.OptReward[self.Params.AccessoryOptRewardId]
+  local OptReward = DataMgr.OptReward[self.Params.OptRewardId]
   local Type = OptReward and OptReward.Type[1]
   self.AccessoryContents = {}
   self.Map_AccessoryContents = {}
@@ -2590,11 +2595,11 @@ function M:InitGestureItemParams()
   self.Switch_Type:SetActiveWidgetIndex(2)
   if self.Params then
     self.BehaviorType = self.Params.Type
-    self.GestureOptRewardId = self.Params.GestureOptRewardId
+    self.OptRewardId = self.Params.OptRewardId
     self.ResourceId = self.Params.ResourceId
     self.PreSelectAccessoryId = self.Params.GestureId
   end
-  local OptReward = DataMgr.OptReward[self.Params.GestureOptRewardId]
+  local OptReward = DataMgr.OptReward[self.Params.OptRewardId]
   local Type = OptReward and OptReward.Type[1]
   self.GestureContents = {}
   self.Map_GestureContents = {}
@@ -2699,7 +2704,7 @@ function M:SelectAccessoryItem(Content)
   self:UpdateAccessoryDetails(Content)
   if self.Params.Type == "SelectCharAccessory" then
     self:ClearCharAccessoryPreview()
-    self.ActorController:DestoryPlayerMeleeWeapon()
+    self.ActorController:DestroyPlayerMeleeWeapon()
     BattlePassController:GetModelData("BagActorController"):StopPlayerFX()
     BattlePassController:GetModelData("BagActorController"):StopPlayerMontage()
     self.ActorController:HidePlayerActor("CharSkinPreview", false)
@@ -2713,7 +2718,7 @@ function M:SelectAccessoryItem(Content)
     end
     self.ActorController:SetArmoryCameraTag("Char", Content.AccessoryType, "")
   else
-    BattlePassController:GetModelData("BagActorController"):ChangeWeaponAccessory(Content.AccessoryId)
+    BattlePassController:GetModelData("BagActorController"):ChangeWeaponAccessory(Content.AccessoryId, CommonConst.WeaponAccessoryTypes.Accessory)
   end
 end
 
@@ -2850,9 +2855,9 @@ function M:UpdateGesturePreview(Content)
           self.ActorController.ArmoryPlayer:HideAllEffectCreature(k, false)
         end
       end
-      self.ActorController:SetArmoryMontageTag(self.ActorController.ArmoryPlayer, "Armory")
+      self.ActorController:SetArmoryMontageTag("Armory")
       self.ActorController:SetArmoryCameraTag(ResourceData.CameraName or "Char", "", "")
-      self.ActorController.ArmoryPlayer:InvokeResourceBPFunction(Content.Id)
+      self.ActorController:PlayResourceMotion(Content.Id)
     elseif ResourceData.ResourceSType == "MountItem" then
     end
   end
@@ -3048,6 +3053,12 @@ end
 function M:InitConsumeInfo()
   if self.Params.Type == "BattlePassPreview" or self.Params.Type == "ShopRecommend" then
     return
+  end
+  if self.Params.Mode and self.Params.Mode == "Preview" then
+    self.Switch_Coin:SetVisibility(ESlateVisibility.Collapsed)
+    self.Btn_Confirm:SetVisibility(ESlateVisibility.Collapsed)
+  else
+    self.Switch_Coin:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   end
   self.Switch_Coin:SetActiveWidgetIndex(1)
   self.Panel_Buy:SetVisibility(ESlateVisibility.SelfHitTestInvisible)

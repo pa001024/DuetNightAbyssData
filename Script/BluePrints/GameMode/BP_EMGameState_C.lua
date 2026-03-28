@@ -296,6 +296,10 @@ end
 function BP_EMGameState_C:OnRep_GameModeState_Lua()
 end
 
+function BP_EMGameState_C:OnRep_StopTrollyBoxLocation_Lua()
+  EventManager:FireEvent(EventID.StopTrollyBoxLocationSync)
+end
+
 function BP_EMGameState_C:OnRep_GuideEids()
   DebugPrint("DebugGuideEid OnRep_GuideEids")
   local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
@@ -474,6 +478,14 @@ function BP_EMGameState_C:FireRegionOnlineMechanismUser(UniqueId, CombatItemBase
   end
 end
 
+function BP_EMGameState_C:IsGameModeInDungeonVote()
+  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+  if not GameMode then
+    return false
+  end
+  return GameMode.IsInDungeonVote or false
+end
+
 function BP_EMGameState_C:DealDungeonVoteResult()
   local GameMode = UE4.UGameplayStatics.GetGameMode(self)
   if not GameMode.IsInDungeonVote then
@@ -545,6 +557,14 @@ function BP_EMGameState_C:RealSetContinuedPCGuideVisibility(ActionName, IsHide)
     elseif "Alt" == ActionName then
       GuideInfoPanel.Hint04:SetVisibility(Visibility)
     end
+  end
+  if "GuideBook" == ActionName then
+    local BattleMain = UIManager(self):GetUIObj("BattleMain")
+    BattleMain.Btn_GuideBook:SetVisibility(Visibility)
+  end
+  if "AimIndicator" == ActionName then
+    local BattleMain = UIManager(self):GetUIObj("BattleMain")
+    BattleMain.Pos_Aim:SetVisibility(Visibility)
   end
   if ("SpiralLeap" == ActionName or "Dodge" == ActionName or "Skill1" == ActionName or "Skill2" == ActionName or "Skill2Attack" == ActionName) and CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" then
     local BattleMain = UIManager(self):GetUIObj("BattleMain")
@@ -643,6 +663,14 @@ function BP_EMGameState_C:HideUIInScreen(UIPath, IsHide, ShowOrHideNode)
       Player:SetESCMenuForbiddenState(IsHide)
     end
   end
+  if "GuideBook" == UIPath then
+    local BattleMain = UIManager(self):GetUIObj("BattleMain")
+    BattleMain.Btn_GuideBook:SetVisibility(Visible)
+  end
+  if "AimIndicator" == UIPath then
+    local BattleMain = UIManager(self):GetUIObj("BattleMain")
+    BattleMain.Pos_Aim:SetVisibility(Visible)
+  end
   UIPath = UIConst[UIPath .. "Path"]
   if "TaskBar" == UIPath and UIManager(self) then
     local BattleMainUI = UIManager(self):GetUIObj("BattleMain")
@@ -656,12 +684,16 @@ function BP_EMGameState_C:HideUIInScreen(UIPath, IsHide, ShowOrHideNode)
           TaskPanel:SetVisibility(Visible)
           DebugPrint("ShowOrHideUINode: SetVisibility", TaskPanel:GetName(), Visible)
           if ShowOrHideNode then
-            if IsHide then
-              TaskPanel.IsHideByNode = true
+            if type(ShowOrHideNode) == "table" then
+              ShowOrHideNode.RealSetVisibility = true
+              DebugPrint("ShowOrHideUINode: HideUIInScreen", ShowOrHideNode.Function, ShowOrHideNode.UIParam, ShowOrHideNode.ActionParam, ShowOrHideNode.ShowOrHide)
+            else
+              DebugPrint("ShowOrHideUINode:", ShowOrHideNode)
             end
-            ShowOrHideNode.RealSetVisibility = true
-            DebugPrint("ShowOrHideUINode: HideUIInScreen", ShowOrHideNode.Function, ShowOrHideNode.UIParam, ShowOrHideNode.ActionParam, ShowOrHideNode.ShowOrHide)
           end
+        end
+        if ShowOrHideNode and IsHide then
+          TaskPanel.IsHideByNode = true
         end
         return
       end
@@ -693,9 +725,11 @@ function BP_EMGameState_C:HideUIInScreen(UIPath, IsHide, ShowOrHideNode)
         else
           root_ui:SetVisibility(Visible)
         end
-        if ShowOrHideNode then
+        if ShowOrHideNode and type(ShowOrHideNode) == "table" then
           ShowOrHideNode.RealSetVisibility = true
           DebugPrint("ShowOrHideUINode: HideUIInScreen", ShowOrHideNode.Function, ShowOrHideNode.UIParam, ShowOrHideNode.ActionParam, ShowOrHideNode.ShowOrHide)
+        else
+          DebugPrint("ShowOrHideUINode:", ShowOrHideNode)
         end
       end
     end
@@ -1063,6 +1097,10 @@ end
 function BP_EMGameState_C:OnRep_PartyPlayerDisPercentValues()
   self:UpdatePatryPlayerOrdinal()
   EventManager:FireEvent(EventID.OnPartyProgressUpdate)
+end
+
+function BP_EMGameState_C:OnRep_SynthesisEnergyValues()
+  EventManager:FireEvent(EventID.OnSynthesisEnergyValueChange)
 end
 
 function BP_EMGameState_C:ShowDungeonError(ErrorMsg, Type, Title, IsFromCpp)

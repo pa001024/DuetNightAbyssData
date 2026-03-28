@@ -17,7 +17,7 @@
   },
   {
     "id": 3010103,
-    "name": "UI_WeaponSkin_Name_3010103",
+    "name": "荣耀撕裂者",
     "desc": "UI_WeaponSkin_Des_3010103",
     "icon": "T_Head_Claymore_Rongyao",
     "rarity": 5,
@@ -64,6 +64,14 @@
     "unlock": "상점을 통해 획득"
   },
   {
+    "id": 3010109,
+    "name": "碧霄吟·重剑",
+    "desc": "",
+    "icon": "T_Head_Claymore_Bixiao",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
     "id": 3010201,
     "name": "빈손 2호",
     "desc": "냉동 시 힘과 풍미가 함께 깃드는 설무늬어. 통조림과 랩의 유통기한이 지나더라도 이건 멀쩡할 것이다.",
@@ -104,12 +112,20 @@
     "unlock": "상점을 통해 획득"
   },
   {
+    "id": 3010206,
+    "name": "碧霄吟·单手剑",
+    "desc": "때묻지 않은 짙푸른 물결 너머 그곳.",
+    "icon": "T_Head_Sword_Bixiao",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
     "id": 3010301,
     "name": "태양의 급보",
     "desc": "태양아, 태양아 어디에 있니? 태양은 우리의 손안에 있어.",
     "icon": "T_Head_Bow_Huanri",
     "rarity": 5,
-    "unlock": "광채에서 획득"
+    "unlock": "상점을 통해 획득"
   },
   {
     "id": 3010302,
@@ -128,6 +144,22 @@
     "unlock": "상점을 통해 획득"
   },
   {
+    "id": 3010304,
+    "name": "碧霄吟·弓（长弓）",
+    "desc": "때묻지 않은 짙푸른 물결 너머 그곳.",
+    "icon": "T_Head_Bow_Bixiao",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010305,
+    "name": "碧霄吟·弓（短弓）",
+    "desc": "때묻지 않은 짙푸른 물결 너머 그곳.",
+    "icon": "T_Head_Bow_Bixiao",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
     "id": 3010401,
     "name": "여름밤의 현음",
     "desc": "청아한 목소리가 소녀의 얕은 꿈을 깨우고, 여름의 심금을 울린다.",
@@ -141,7 +173,7 @@
     "desc": "물결은 춤추는 자의 발끝에서 넘실대고, 바닷바람은 온 여름의 정수를 감싸며 클라이맥스를 이곳에 새긴다.",
     "icon": "T_Head_Polearm_Talang",
     "rarity": 5,
-    "unlock": "광채에서 획득"
+    "unlock": "상점을 통해 획득"
   },
   {
     "id": 3010403,
@@ -240,6 +272,14 @@
     "unlock": "상점을 통해 획득"
   },
   {
+    "id": 3010609,
+    "name": "碧霄吟·双刀",
+    "desc": "때묻지 않은 짙푸른 물결 너머 그곳.",
+    "icon": "T_Head_Dualblade_Bixiao",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
     "id": 3010701,
     "name": "선조의 그늘·대도",
     "desc": "다소 특이한 대도. 아버지의 채찍... 아니, 아버지의 사랑을 상징한다.",
@@ -269,6 +309,14 @@
     "desc": "새빨간 열매를 꼬치에 꽂자.",
     "icon": "T_Head_Katana_Tangfu",
     "rarity": 4,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010709,
+    "name": "碧霄吟·太刀",
+    "desc": "때묻지 않은 짙푸른 물결 너머 그곳.",
+    "icon": "T_Head_Katana_Bixiao",
+    "rarity": 5,
     "unlock": "상점을 통해 획득"
   },
   {
@@ -320,10 +368,34 @@
     "unlock": "상점을 통해 획득"
   },
   {
+    "id": 3010902,
+    "name": "",
+    "desc": "때묻지 않은 짙푸른 물결 너머 그곳.",
+    "icon": "T_Head_Cannon_Bixiao",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
     "id": 3011001,
     "name": "일렉 치즈 No.2",
     "desc": "냐오옹♪ 냐오오옹♪ 냐오옹♪♪",
     "icon": "T_Head_Shotgun_Dianju",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3011002,
+    "name": "火力全开",
+    "desc": "疾书凝玄甲，谈笑烬千军。",
+    "icon": "T_Head_Shotgun_Huoli",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3011003,
+    "name": "碧霄吟·霰弹枪",
+    "desc": "때묻지 않은 짙푸른 물결 너머 그곳.",
+    "icon": "T_Head_Shotgun_Bixiao",
     "rarity": 5,
     "unlock": "상점을 통해 획득"
   },

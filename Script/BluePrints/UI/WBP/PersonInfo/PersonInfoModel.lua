@@ -24,6 +24,7 @@ function M:InitData(PlayerInfo)
     self._PersonID = nil
     self.OtherPersonInfo = nil
   end
+  self.OtherRaidSeasonRankRecord = nil
   self._DisplayPlan = {}
   self._DisplayPlan.CharDisplayPlans = {
     [1] = {},
@@ -774,6 +775,83 @@ function M:ClearModel()
   self._DisplayPlan = {}
   self.OtherPersonInfo = nil
   self.OtherBattleDumpInfo = nil
+end
+
+function M:GetGuildWarHistoryBaseInfo()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return {}
+  end
+  if self:IsOwener() then
+    return {
+      Uid = Avatar.Uid,
+      Nickname = Avatar.Nickname,
+      Level = Avatar.Level,
+      HeadIconId = Avatar.HeadIconId,
+      HeadFrameId = Avatar.HeadFrameId,
+      TitleBefore = Avatar.TitleBefore,
+      TitleAfter = Avatar.TitleAfter,
+      TitleFrame = Avatar.TitleFrame
+    }
+  end
+  local Other = self.OtherPersonInfo or {}
+  return {
+    Uid = Other.Uuid,
+    Nickname = Other.Nickname,
+    Level = Other.Level,
+    HeadIconId = Other.HeadIconId,
+    HeadFrameId = Other.HeadFrameId,
+    TitleBefore = Other.TitleBefore,
+    TitleAfter = Other.TitleAfter,
+    TitleFrame = Other.TitleFrame
+  }
+end
+
+function M:BuildGuildWarHistoryTopN(BaseInfo, RankRecord)
+  local List = {}
+  for SeasonId, Record in pairs(RankRecord or {}) do
+    local RankInfo = {}
+    RankInfo.Uid = BaseInfo.Uid
+    RankInfo.Nickname = BaseInfo.Nickname
+    RankInfo.Level = BaseInfo.Level
+    RankInfo.HeadFrameId = BaseInfo.HeadFrameId
+    RankInfo.HeadIconId = BaseInfo.HeadIconId
+    RankInfo.TitleBefore = BaseInfo.TitleBefore
+    RankInfo.TitleAfter = BaseInfo.TitleAfter
+    RankInfo.TitleFrame = BaseInfo.TitleFrame
+    RankInfo.Score = Record.Score
+    RankInfo.Rank = Record.Rank
+    RankInfo.DisplayRank = Record.Rank
+    RankInfo.MaxSquad = Record.Squad
+    RankInfo.SeasonId = Record.SeasonId or SeasonId
+    RankInfo.UpdateTime = Record.UpdateTime
+    RankInfo.PreRaidGroupId = Record.PreRaidGroupId
+    table.insert(List, RankInfo)
+  end
+  table.sort(List, function(a, b)
+    local A = a.SeasonId or 0
+    local B = b.SeasonId or 0
+    if A == B then
+      return (a.UpdateTime or 0) > (b.UpdateTime or 0)
+    end
+    return A > B
+  end)
+  return List
+end
+
+function M:BuildGuildWarHistorySelfRank(TopNInfo)
+  if not TopNInfo or 0 == #TopNInfo then
+    return {}
+  end
+  local First = TopNInfo[1]
+  return {
+    Rank = First.Rank,
+    Score = First.Score,
+    MaxSquad = First.MaxSquad,
+    SeasonId = First.SeasonId,
+    UpdateTime = First.UpdateTime,
+    PreRaidGroupId = First.PreRaidGroupId
+  }
 end
 
 return M

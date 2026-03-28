@@ -10,7 +10,7 @@ function M:Initialize(Initializer)
       "Tip",
       "BottomKey"
     },
-    TitleName = GText("姣姣摄影展（未配）"),
+    TitleName = GText("Event_Title_103017"),
     StyleName = "TextImage",
     OwnerPanel = self,
     BackCallback = self.CloseSelf

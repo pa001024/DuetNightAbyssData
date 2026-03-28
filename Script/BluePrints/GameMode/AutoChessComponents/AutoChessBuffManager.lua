@@ -3,6 +3,7 @@ local AutoChessBuffManager = {}
 function AutoChessBuffManager:OnBattleStartInitEquipBuff()
   local PlayerChessInfos = self:GetCurrentChessMonsterInfo(false)
   local EnemyChessInfos = self:GetCurrentChessMonsterInfo(true)
+  local MissionId = self.MissionId
   
   local function AddBuffToChess(Index, ChessInfo)
     local Entity = Battle(self):GetEntity(ChessInfo.Eid)
@@ -19,6 +20,12 @@ function AutoChessBuffManager:OnBattleStartInitEquipBuff()
       if AutoChessEquipData.ExtraBuffId then
         UBattleFunctionLibrary.AddBuffToTarget(Entity, Entity, AutoChessEquipData.ExtraBuffId, -1, nil, nil, 1)
       end
+    end
+    local MissionData = DataMgr.AutoChessMission[MissionId]
+    local BuffId = MissionData.SpecifyBuffId and MissionData.SpecifyBuffId[1]
+    if BuffId then
+      UBattleFunctionLibrary.AddBuffToTarget(Entity, Entity, BuffId, -1, nil, nil, 1)
+      DebugPrint("增加Buff: " .. BuffId .. "   to:  Eid" .. ChessInfo.Eid)
     end
   end
   

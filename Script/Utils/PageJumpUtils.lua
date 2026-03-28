@@ -1155,6 +1155,12 @@ function PageJumpUtils:CreateJumpToImpressionShopAccess(ItemId, CommonParam)
     
     AccessItem.JumpFunc = CheckShopTab
   end
+  local UIName = CommonParam.UIName
+  if UIName and DataMgr.SystemUI[UIName] and DataMgr.SystemUI[UIName].IsBanAccess then
+    function AccessItem.JumpFunc()
+      UIManager(GWorld.GameInstance):ShowUITip("CommonToastMain", GText("UI_COMMONPOP_TITLE_100059"))
+    end
+  end
   local AccessText = ImprShopData.ShopName or CommonParam.AccessText
   AccessItem.Text_Method:SetText(GText(AccessText))
   AccessItem.Text_Method02:SetText(GText(AccessText))
@@ -1490,8 +1496,7 @@ function PageJumpUtils:JumpToDungeonPage(DungeonId, DeputeType, MonsterId, bFrom
         OwnerPanel = SelectLevel,
         BackCallback = SelectLevel.OnReturnKeyDown,
         StyleName = "Text",
-        TitleName = GText(DungeonTabName),
-        InfoCallback = SelectLevel.ShowIntro
+        TitleName = GText(DungeonTabName)
       }, nil, true)
     end
   })
@@ -1592,33 +1597,6 @@ function PageJumpUtils:JumpToWalnutDungeonPage(WalnutType, WalnutId)
     StyleName = "Text",
     TitleName = GText("UI_Dungeon_Tab_WalnutDungeon")
   }, nil, true)
-end
-
-function PageJumpUtils:JumpToRougeMain(JumpType)
-  local GameInstance = GWorld.GameInstance
-  local UIManager = GameInstance:GetGameUIManager()
-  self:CloseFrontDialog()
-  JumpType = JumpType or "NormalJump"
-  local StyleOfPlay = UIManager:GetUIObj("StyleOfPlay")
-  if not StyleOfPlay then
-    StyleOfPlay = UIManager:LoadUINew("StyleOfPlay", "RougeMain")
-    if "NormalJump" == JumpType then
-      UIManager:AddToJumpPageDeque(StyleOfPlay)
-    end
-  else
-    UIManager:PlaceJumpUIToTop(StyleOfPlay, "StyleOfPlay")
-    StyleOfPlay:OpenSubUI("RougeMain")
-  end
-  StyleOfPlay.IsOpenSelectLevel = false
-  local WidgetUI = StyleOfPlay:GetCurSubUI()
-  if WidgetUI then
-    if WidgetUI.InDifficultySelect then
-      WidgetUI:BackToRougeMain()
-      WidgetUI:SetJumpType(JumpType)
-    else
-      WidgetUI:InitTable(JumpType)
-    end
-  end
 end
 
 function PageJumpUtils:JumpToAbyssLevelInfoPage(AbyssId, AbyssLevelId, AbyssDungeonIndex)
@@ -1812,13 +1790,6 @@ function PageJumpUtils:JumpToForgeCompendiumPathByDraftId(DraftId)
   end
   local GameInstance = GWorld.GameInstance
   local UIManager = GameInstance:GetGameUIManager()
-  local ForgeMain = UIManager:GetUIObj("ForgeMain")
-  if IsValid(ForgeMain) then
-    UIManager:PlaceJumpUIToTop(ForgeMain, "ForgeMain")
-  else
-    ForgeMain = UIManager:LoadUINew("ForgeMain", {NotDelayAddListItem = true})
-    UIManager:AddToJumpPageDeque(ForgeMain)
-  end
   local ForgeCompenduimPage = UIManager:GetUIObj("ForgeCompenduim")
   if IsValid(ForgeCompenduimPage) then
     ForgeCompenduimPage:NavigateToTargetDraft(DraftId)
@@ -2130,9 +2101,46 @@ function PageJumpUtils:JumpToAutoChessMain()
   return true
 end
 
+function PageJumpUtils:JumpToRougeMain(JumpType, bSkipCheck)
+  local UIName = "RougeMain"
+  if not bSkipCheck and not JumpToPageCheck(UIName) then
+    return false
+  end
+  local GameInstance = GWorld.GameInstance
+  local UIManager = GameInstance:GetGameUIManager()
+  self:CloseFrontDialog()
+  JumpType = JumpType or "NormalJump"
+  local StyleOfPlay = UIManager:GetUIObj("StyleOfPlay")
+  if not StyleOfPlay then
+    StyleOfPlay = UIManager:LoadUINew("StyleOfPlay", UIName)
+    if "NormalJump" == JumpType then
+      UIManager:AddToJumpPageDeque(StyleOfPlay)
+    end
+  else
+    UIManager:PlaceJumpUIToTop(StyleOfPlay, "StyleOfPlay")
+    StyleOfPlay:OpenSubUI(UIName)
+  end
+  StyleOfPlay.IsOpenSelectLevel = false
+  local WidgetUI = StyleOfPlay:GetCurSubUI()
+  if WidgetUI then
+    if WidgetUI.InDifficultySelect then
+      WidgetUI:BackToRougeMain()
+      WidgetUI:SetJumpType(JumpType)
+    else
+      WidgetUI:InitTable(JumpType)
+    end
+  end
+end
+
 function PageJumpUtils:JumpToStyleOfPlaySubUI(SubUIName, ...)
   local UIName = "StyleOfPlay"
-  if not JumpToPageCheck(UIName) then
+  local bSkipCheck = false
+  local Params = table.pack(...)
+  if #Params > 1 and type(Params[1]) == "boolean" then
+    bSkipCheck = Params[1]
+    Params = table.slice(Params, 2, #Params)
+  end
+  if not bSkipCheck and not JumpToPageCheck(UIName) then
     return false
   end
   local GameInstance = GWorld.GameInstance
@@ -2147,26 +2155,26 @@ function PageJumpUtils:JumpToStyleOfPlaySubUI(SubUIName, ...)
   end
   local WidgetUI = StyleOfPlay:OpenSubUI(SubUIName)
   if WidgetUI.SubUIJumpFunc then
-    WidgetUI:SubUIJumpFunc(...)
+    WidgetUI:SubUIJumpFunc(table.unpack(Params))
   end
   return true
 end
 
-function PageJumpUtils:JumpToStyleOfPlaySubUIForce(SubUIName, ...)
+function PageJumpUtils:SoloTreasureStoryLevel(...)
+  local UIName = "ActivitySoloTreasureMain"
+  local EventId, Mode = ...
   local GameInstance = GWorld.GameInstance
   local UIManager = GameInstance:GetGameUIManager()
-  self:CloseFrontDialog()
-  local StyleOfPlay = UIManager:GetUIObj("StyleOfPlay")
-  if not StyleOfPlay then
-    StyleOfPlay = UIManager:LoadUINew("StyleOfPlay")
-    UIManager:AddToJumpPageDeque(StyleOfPlay)
-  else
-    UIManager:PlaceJumpUIToTop(StyleOfPlay, "StyleOfPlay")
-  end
-  local WidgetUI = StyleOfPlay:OpenSubUI(SubUIName)
-  if WidgetUI.SubUIJumpFunc then
-    WidgetUI:SubUIJumpFunc(...)
-  end
+  UIManager:LoadUINew(UIName, EventId, Mode)
+  return true
+end
+
+function PageJumpUtils:SoloTreasureRepeatLevel(...)
+  local UIName = "ActivitySoloTreasureMain"
+  local EventId, Mode, bIsDifficult, EventDugeonId = ...
+  local GameInstance = GWorld.GameInstance
+  local UIManager = GameInstance:GetGameUIManager()
+  UIManager:LoadUINew(UIName, EventId, Mode, bIsDifficult, EventDugeonId)
   return true
 end
 

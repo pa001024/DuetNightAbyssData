@@ -1,5 +1,6 @@
 require("UnLua")
 require("DataMgr")
+local FrontSightUtils = require("Utils.FrontSightUtils")
 local WBP_TakeAimIndicator_C = Class({
   "BluePrints.UI.BP_EMUserWidget_C",
   "BluePrints.Common.TimerMgr"
@@ -20,6 +21,7 @@ function WBP_TakeAimIndicator_C:Initialize(Initializer)
   self.CurWeaponStyleNode = nil
   self.SightUI = nil
   self.AmmoBarStyle = nil
+  self.InBulletJumpMode = false
   self.ChangeAimStarColorAndShowBillboardTimer = nil
   self.UpdateDiffusionStateTimer = nil
   self.UpdateAccumulateStateTimer = nil
@@ -52,17 +54,7 @@ function WBP_TakeAimIndicator_C:Initialize(Initializer)
     "Bar"
   }
   self.AllCurState = {"Normal", "Reload"}
-  self.SightUI2WeaponStyleNode = {
-    Bow01 = "Bow",
-    Bow02 = "Bow",
-    Bow03 = "Bow",
-    Bow04 = "Archer",
-    Bow05 = "TrackingBow",
-    Shotgun02 = "Bow"
-  }
-  self.SightUI2AmmoBarStyle = {Shotgun02 = "Bar"}
   self.BarColor = nil
-  self.MaxSingleMagazine = 8
   self.CurMagazineCapacity = nil
   self.AllColorIntensty = {}
   self.NextActorRelation = nil
@@ -75,6 +67,8 @@ function WBP_TakeAimIndicator_C:InitListenEvent()
   EventManager:AddEvent(EventID.OutOfBullet, self, self.ShowOutOfBulletTip)
   EventManager:AddEvent(EventID.FullOfMagazine, self, self.ShowFullOfMagazineTip)
   EventManager:AddEvent(EventID.OnCharForbidWeapon, self, self.HideOrShowTargetAim)
+  EventManager:AddEvent(EventID.OnEnterBulletJumpAim, self, self.ShowBulletJumpAim)
+  EventManager:AddEvent(EventID.OnQuitBulletJumpAim, self, self.HideBulletJumpAim)
 end
 
 function WBP_TakeAimIndicator_C:Init(Player)
@@ -125,8 +119,12 @@ function WBP_TakeAimIndicator_C:UpdateWeaponInfo(Owner, LastWeapon, NewWeapon)
   if self.OwnerPlayer ~= Owner then
     return
   end
-  if not NewWeapon then
-    local IgnoreWeaponChangeSkillIds = {"150401", "150411"}
+  if self.SightUI and string.startswith(self.SightUI, "Suyi") then
+    local IgnoreWeaponChangeSkillIds = {
+      "150401",
+      "150411",
+      "150405"
+    }
     local CurSkill
     if IsValid(self.OwnerPlayer) then
       CurSkill = self.OwnerPlayer:GetCurrentSkill()
@@ -147,30 +145,26 @@ function WBP_TakeAimIndicator_C:UpdateWeaponInfo(Owner, LastWeapon, NewWeapon)
   if IsValid(NewWeapon) then
     NewMagazineCapacity = NewWeapon:GetAttr("MagazineCapacity")
   end
-  self:RealUpdateWeaponInfo(NewWeapon, NewMagazineCapacity)
+  self:RealUpdateWeaponInfo(NewWeapon, NewMagazineCapacity, Owner.ModelId)
 end
 
-function WBP_TakeAimIndicator_C:RealUpdateWeaponInfo(NewWeapon, NewMagazineCapacity)
+function WBP_TakeAimIndicator_C:RealUpdateWeaponInfo(NewWeapon, NewMagazineCapacity, ModelId)
   if self.CurrentWeapon ~= NewWeapon or self.CurMagazineCapacity ~= NewMagazineCapacity then
     self.CurrentWeapon = NewWeapon
     self.CurMagazineCapacity = NewMagazineCapacity
-    local NewSightUI = self:GetWeaponSightUI(self.CurrentWeapon)
+    local NewSightUI = FrontSightUtils:GetWeaponSightUI(self.CurrentWeapon, ModelId)
     if self.SightUI ~= NewSightUI then
       self.SightUI = NewSightUI
-      local NewWeaponStyleNode = self:GetWeaponStyleNode(NewSightUI)
+      local NewWeaponStyleNode = FrontSightUtils:GetWeaponStyleNode(NewSightUI)
       if NewWeaponStyleNode and self.CurWeaponStyleNode ~= NewWeaponStyleNode then
         self.CurWeaponStyleNode = NewWeaponStyleNode
-        self.CurWeaponStyle = self:GetWeaponStyle(self.CurWeaponStyleNode)
+        self.CurWeaponStyle = FrontSightUtils:GetWeaponStyle(self.CurWeaponStyleNode)
         self:SwitchAimStar()
       else
         self:RefreshAimStar()
       end
     end
-    local HideMagazineBar = self:GetIsHideMagazineBar(self.CurrentWeapon)
-    local NewAmmoBarStyle
-    if not HideMagazineBar then
-      NewAmmoBarStyle = self:GetAmmoBarStyle(self.CurWeaponStyleNode, self.CurMagazineCapacity, self.SightUI)
-    end
+    local NewAmmoBarStyle = FrontSightUtils:GetAmmoBarStyle(self.CurrentWeapon, self.CurWeaponStyleNode, self.CurMagazineCapacity, self.SightUI)
     if self.AmmoBarStyle ~= NewAmmoBarStyle then
       self.AmmoBarStyle = NewAmmoBarStyle
       self:SwitchAmmoBar()
@@ -178,18 +172,6 @@ function WBP_TakeAimIndicator_C:RealUpdateWeaponInfo(NewWeapon, NewMagazineCapac
       self:RefreshAmmoBar()
     end
   end
-end
-
-function WBP_TakeAimIndicator_C:GetWeaponSightUI(Weapon)
-  if not IsValid(Weapon) then
-    return nil
-  end
-  local BattleWeaponConfigData = DataMgr.BattleWeapon[Weapon.WeaponId]
-  local SightUI
-  if BattleWeaponConfigData.FrontSight and BattleWeaponConfigData.FrontSight.SightUI then
-    SightUI = BattleWeaponConfigData.FrontSight.SightUI
-  end
-  return SightUI
 end
 
 function WBP_TakeAimIndicator_C:GetIsHideMagazineBar(Weapon)
@@ -202,27 +184,6 @@ function WBP_TakeAimIndicator_C:GetIsHideMagazineBar(Weapon)
     HideMagazineBar = BattleWeaponConfigData.FrontSight.HideMagazineBar
   end
   return HideMagazineBar
-end
-
-function WBP_TakeAimIndicator_C:GetWeaponStyleNode(SightUI)
-  if not SightUI then
-    return "Melee"
-  end
-  local WeaponStyleNode = SightUI
-  if SightUI and self.SightUI2WeaponStyleNode[SightUI] then
-    WeaponStyleNode = self.SightUI2WeaponStyleNode[SightUI]
-  end
-  return WeaponStyleNode
-end
-
-function WBP_TakeAimIndicator_C:GetWeaponStyle(WeaponStyleNode)
-  if nil == WeaponStyleNode then
-    return "NoWeapon"
-  elseif "Melee" == WeaponStyleNode then
-    return "Melee"
-  else
-    return "Ranged"
-  end
 end
 
 function WBP_TakeAimIndicator_C:ForceLockMeleeAimIndicator(IsLock)
@@ -413,6 +374,8 @@ function WBP_TakeAimIndicator_C:Destruct()
   EventManager:RemoveEvent(EventID.OutOfBullet, self)
   EventManager:RemoveEvent(EventID.FullOfMagazine, self)
   EventManager:RemoveEvent(EventID.OnCharForbidWeapon, self)
+  EventManager:RemoveEvent(EventID.OnEnterBulletJumpAim, self)
+  EventManager:RemoveEvent(EventID.OnQuitBulletJumpAim, self)
   self:RemoveTimer(self.ChangeAimStarColorAndShowBillboardTimer)
   self:RemoveTimer(self.UpdateDiffusionStateTimer)
   self:RemoveTimer(self.UpdateAccumulateStateTimer)
@@ -423,6 +386,34 @@ function WBP_TakeAimIndicator_C:Destruct()
   self.UpdateAccumulateStateTimer = nil
   self.PlayReloadAnimTimer = nil
   self.LerpSetAmmoBarPercentTimer = nil
+end
+
+function WBP_TakeAimIndicator_C:ShowBulletJumpAim()
+  self.InBulletJumpMode = true
+  if self.CurPanel then
+    self.CurPanel:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  if self.AmmoBarPanel then
+    self.AmmoBarPanel:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  if not self.Aim_BulletJump then
+    self.Aim_BulletJump = UIManager(self):_CreateWidgetNew("BattleAimBulletJump")
+    self.Aim_Ranged:AddChild(self.Aim_BulletJump)
+  end
+  self.Aim_BulletJump:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+end
+
+function WBP_TakeAimIndicator_C:HideBulletJumpAim()
+  self.InBulletJumpMode = false
+  if self.Aim_BulletJump then
+    self.Aim_BulletJump:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  if self.CurPanel then
+    self.CurPanel:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+  end
+  if self.AmmoBarPanel then
+    self.AmmoBarPanel:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+  end
 end
 
 AssembleComponents(WBP_TakeAimIndicator_C)

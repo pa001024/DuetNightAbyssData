@@ -10,19 +10,21 @@ function HardBossComponent:InitHardBoss(BossBattleId, DifficultyId)
   end
   self.LevelGameMode.BossBattleInfo = {}
   self.LevelGameMode.EMGameState.HardBossInfo = {}
-  local BossStaticCreator = self.LevelGameMode.EMGameState.StaticCreatorMap:Find(BossInfo.MonsterStaticId)
-  if not BossStaticCreator then
-    DebugPrint("梦魇残声静态点Id错误，找不到对应静态点", BossInfo.MonsterStaticId)
-    return
-  end
-  BossStaticCreator.UnitType = "Monster"
-  BossStaticCreator.UnitId = BossInfo.MonsterId
   local DifficultyLevel = DataMgr.HardBossDifficulty[DifficultyId].DifficultyLevel
   if nil == DifficultyLevel then
-    DebugPrint("魇残声DifficultyLevel填写错误")
+    DebugPrint("梦魇残声DifficultyLevel填写错误")
     return
   end
-  BossStaticCreator.Level = DifficultyLevel - self.LevelGameMode:GetGameModeLevel()
+  for Index, StaticCreatorId in pairs(BossInfo.MonsterStaticId or {}) do
+    local BossStaticCreator = self.LevelGameMode.EMGameState.StaticCreatorMap:Find(StaticCreatorId)
+    if BossStaticCreator and BossInfo.MonsterId and BossInfo.MonsterId[Index] then
+      BossStaticCreator.UnitType = "Monster"
+      BossStaticCreator.UnitId = BossInfo.MonsterId[Index]
+      BossStaticCreator.Level = DifficultyLevel - self.LevelGameMode:GetGameModeLevel()
+    else
+      DebugPrint("梦魇残声静态点配置错误，静态点id", StaticCreatorId)
+    end
+  end
   self.LevelGameMode.EMGameState.HardBossInfo.BossBattleId = BossBattleId
   self.LevelGameMode.EMGameState.HardBossInfo.DifficultyId = DifficultyId
   self.LevelGameMode.BossBattleInfo.BossStaticCreatorId = BossInfo.MonsterStaticId
@@ -83,7 +85,9 @@ end
 function HardBossComponent:SpawnHardBossInfo()
   local BossStaticInfo = TArray(0)
   BossStaticInfo:Add(self.LevelGameMode.BossBattleInfo.AirWallStaticId)
-  BossStaticInfo:Add(self.LevelGameMode.BossBattleInfo.BossStaticCreatorId)
+  for _, CreatorId in pairs(self.LevelGameMode.BossBattleInfo.BossStaticCreatorId or {}) do
+    BossStaticInfo:Add(CreatorId)
+  end
   self.LevelGameMode:TriggerActiveStaticCreator(BossStaticInfo)
   self.LevelGameMode:InitBossBattleSubGameMode(self.LevelGameMode.BossBattleInfo.GameModePath)
 end
@@ -100,7 +104,9 @@ function HardBossComponent:InitBossBattleInfoCallBack()
   self:SetHardBossStartTime()
   local MonsterId = TArray(0)
   local AirWallCreatorIds = TArray(0)
-  MonsterId:Add(self.LevelGameMode.BossBattleInfo.MonsterId)
+  for _, Id in pairs(self.LevelGameMode.BossBattleInfo.MonsterId or {}) do
+    MonsterId:Add(Id)
+  end
   AirWallCreatorIds:Add(self.LevelGameMode.BossBattleInfo.AirWallStaticId)
   self:TriggerActiveBossBattle(MonsterId, AirWallCreatorIds)
 end

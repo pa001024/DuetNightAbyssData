@@ -16,13 +16,11 @@ end
 function M:Construct()
   self.Btn_Close.Btn_Close.OnClicked:Add(self, self.OnClickClose)
   self.Btn_Desc.Btn_Click.OnClicked:Add(self, self.OnClickDialogAbility)
-  self.Btn_Auto.Button_Area.OnClicked:Add(self, self.AutoChoose)
   self.Btn_Close.Btn_Close.AudioEventPath = "event:/ui/common/click_btn_return"
 end
 
 function M:Destruct()
   self.Btn_Close.Btn_Close.OnClicked:Remove(self, self.OnClickClose)
-  self.Btn_Auto.Button_Area.OnClicked:Remove(self, self.AutoChoose)
   self.Btn_Desc.Btn_Click.OnClicked:Remove(self, self.OnClickDialogAbility)
   if IsValid(self.GameInputModeSubsystem) then
     self.GameInputModeSubsystem.OnInputMethodChanged:Remove(self, self.RefreshOpInfoByInputDevice)
@@ -96,7 +94,6 @@ function M:InitPadKeyInfo()
   self.Owner.Key_Tip.Panel_Key:AddChild(Key_Reward)
   self.Owner.Key_Tip.Panel_Key:AddChild(Key_Choose)
   self.Owner.Key_Tip.Panel_Key:AddChild(Key_B)
-  self.Btn_Auto:SetGamePadImg("Y")
   self.Key_Controller_Desc:SetVisibility(ESlateVisibility.Visibie)
   self.Key_Controller_Desc:CreateGamepadKey("LS")
 end
@@ -105,7 +102,6 @@ function M:Init(Owner)
   self.Owner = Owner
   self.Text_Title:SetText(GText("UI_Disptach_AgentList"))
   self.Text_Desc:SetText(GText("UI_Disptach_Ability"))
-  self.Btn_Auto.Text_Button:SetText(GText("UI_Dispatch_AutoSelect"))
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return

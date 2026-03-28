@@ -140,7 +140,7 @@ end
 
 function WBP_DungeonSurviveFloat_C:CheckDungeonMode()
   local GameState = UE4.UGameplayStatics.GetGameState(self)
-  if GameState.GameModeType == "SurvivalMini" then
+  if GameState.GameModeType == "SurvivalMini" or GameState.GameModeType == "SurvivalUltra" then
     self.IsSurvivalMini = true
     self.IsNewSurvival = true
   end

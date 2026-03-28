@@ -46,6 +46,16 @@ function M:GetPreloadAssetPathFromLua(InObjId, PrelaodInfo)
         PrelaodInfo.PartIds:Add(AccessoryId)
       end
     end
+    if AppearanceSuitInfo.HairId then
+      local HairData = DataMgr.Hair[AppearanceSuitInfo.HairId]
+      if HairData then
+        if HairData.LinkAccessory then
+          PrelaodInfo.AccessoryIds:Add(HairData.LinkAccessory)
+        elseif HairData.CharPartId then
+          PrelaodInfo.PartIds:Add(HairData.CharPartId)
+        end
+      end
+    end
   end
   if RoleInfo.RangedWeapon then
     local RangedWeapon = RoleInfo.RangedWeapon
@@ -54,8 +64,10 @@ function M:GetPreloadAssetPathFromLua(InObjId, PrelaodInfo)
     if RangedWeapon.AppearanceInfo then
       local AppearanceInfo = RangedWeapon.AppearanceInfo
       RangedWeaponSkinId = AppearanceInfo.SkinId
-      if AppearanceInfo.AccessoryId > 0 then
-        PrelaodInfo.AccessoryIds:Add(AppearanceInfo.AccessoryId)
+      if AppearanceInfo.AccessorySuit then
+        for _, id in pairs(AppearanceInfo.AccessorySuit) do
+          PrelaodInfo.WeaponAccessoryIds:Add(id)
+        end
       end
     end
     PrelaodInfo.RangedWeaponId = RangedWeaponId
@@ -68,8 +80,10 @@ function M:GetPreloadAssetPathFromLua(InObjId, PrelaodInfo)
     if MeleeWeapon.AppearanceInfo then
       local AppearanceInfo = MeleeWeapon.AppearanceInfo
       MeleeWeaponSkinId = AppearanceInfo.SkinId
-      if AppearanceInfo.AccessoryId > 0 then
-        PrelaodInfo.AccessoryIds:Add(AppearanceInfo.AccessoryId)
+      if AppearanceInfo.AccessorySuit then
+        for _, id in pairs(AppearanceInfo.AccessorySuit) do
+          PrelaodInfo.WeaponAccessoryIds:Add(id)
+        end
       end
     end
     PrelaodInfo.MeleeWeaponId = MeleeWeaponId

@@ -3,25 +3,27 @@ local FDialogueNode = require("BluePrints.Story.Talk.TalkFlow.Nodes.TalkFlowNode
 local FOptionNode = require("BluePrints.Story.Talk.TalkFlow.Nodes.TalkFlowNode_Option")
 local FStartNode = require("BluePrints.Story.Talk.TalkFlow.Nodes.TalkFlowNode_Start")
 local FEndNode = require("BluePrints.Story.Talk.TalkFlow.Nodes.TalkFlowNode_End")
+local FEFNode_PlayAudio = require("BluePrints.Story.Talk.TalkFlow.DelegateNodes.EFNode_PlayAudio")
+local FlowUtils = require("BluePrints.Story.ExecutionFlow.ExecutionFlowUtils")
 local TalkFlowController = require("BluePrints.Story.Talk.TalkFlow.TalkFlowController")
 local M = {}
 
-function M:GetOrCreateNode(NodeType, DialogueId, Comps, NodeMaps, Events)
+function M:GetOrCreateNode(NodeType, DialogueId, TalkTask, Comps, NodeMaps, Events)
   local Flow = TalkFlowController:GetTalkFlow()
   local Node = self:TryGetNode(NodeType, DialogueId, NodeMaps)
   if nil ~= Node then
     return Node
   end
   if "Dialogue" == NodeType then
-    Node = FDialogueNode:New(DialogueId, Comps, NodeMaps, Events)
+    Node = FDialogueNode:New(DialogueId, TalkTask, Comps, NodeMaps, Events)
   elseif "Option" == NodeType then
-    Node = FOptionNode:New(DialogueId, Comps, NodeMaps, Events)
+    Node = FOptionNode:New(DialogueId, TalkTask, Comps, NodeMaps, Events)
   elseif "CheckOptionCondition" == NodeType then
-    Node = FCheckOptionConditionNode:New(DialogueId, Comps, NodeMaps, Events)
+    Node = FCheckOptionConditionNode:New(DialogueId, TalkTask, Comps, NodeMaps, Events)
   elseif "Start" == NodeType then
-    Node = FStartNode:New(DialogueId, Comps, NodeMaps, Events)
+    Node = FStartNode:New(DialogueId, TalkTask, Comps, NodeMaps, Events)
   elseif "End" == NodeType then
-    Node = FEndNode:New(nil, nil, nil, Events)
+    Node = FEndNode:New(nil, nil, nil, nil, Events)
   else
     DebugPrint("FTalkFlow:GetOrCreateNode: NodeType无效", NodeType)
     return
@@ -44,22 +46,17 @@ function M:TryGetNode(NodeType, DialogueId, NodeMaps)
   return NodeMap and NodeMap[DialogueId]
 end
 
-function M:CreateDialogueFlow(DialogueId, OnFinished)
+function M:CreateFlow(DialogueId, TalkTask, OnFinished)
+  local DialogueData = DataMgr.Dialogue[DialogueId]
   local DialogueScriptTable = DataMgr.DialogueConvert[DialogueId]
-  if not DialogueScriptTable or not DialogueScriptTable.Operations then
-    if OnFinished then
-      OnFinished()
-    end
-    return nil
-  end
   local TalkSubsystem = USubsystemBlueprintLibrary.GetWorldSubsystem(GWorld.GameInstance, UTalkSubsystem)
   if nil == TalkSubsystem then
-    DebugPrint("LogExecutionFlow:Error: Create flow failed: talk subsystem is nil")
+    DebugPrint("TalkFlowUtils@CreateFlow: Create flow failed: talk subsystem is nil")
     return nil
   end
   local Flow = TalkSubsystem:CreateDialogueFlow(DialogueId)
   Flow.DialogueId = DialogueId
-  Flow.bAllowClick = DialogueScriptTable.bAllowClick
+  Flow.bAllowClick = DialogueData.bAllowClick
   Flow.OnFinish:Add(TalkSubsystem, function()
     TalkSubsystem:DestroyDialogueFlow(DialogueId)
     if OnFinished then
@@ -74,51 +71,27 @@ function M:CreateDialogueFlow(DialogueId, OnFinished)
   end)
   local StartNode = Flow.StartNode
   local FinishNode = Flow.FinishNode
-  local NodeStartPin, NodeFinishPin = self:PARA(Flow, DialogueScriptTable.Operations)
-  if NodeStartPin and NodeFinishPin then
-    StartNode.FinishPin:LinkTo(NodeStartPin)
-    NodeFinishPin:LinkTo(FinishNode.StartPin)
-  else
-    StartNode.FinishPin:LinkTo(FinishNode.StartPin)
-  end
-  return Flow
-end
-
-function M:SEQ(Flow, Operations)
-  local StartPin, FinishPin
-  for _, Operation in ipairs(Operations) do
-    for FunctionName, Params in pairs(Operation) do
-      local NodeStartPin, NodeFinishPin = self[FunctionName](self, Flow, Params)
-      if NodeStartPin and NodeFinishPin then
-        StartPin = StartPin or NodeStartPin
-        if FinishPin then
-          FinishPin:LinkTo(NodeStartPin)
-        end
-        FinishPin = NodeFinishPin
-      end
-    end
-  end
-  return StartPin, FinishPin
-end
-
-function M:PARA(Flow, Operations)
-  local StartPin, FinishPin
   local ParallelNode = Flow:CreateNode(UEFNode_Parallel)
   local WaitAllNode = Flow:CreateNode(UEFNode_WaitAll)
-  for _, Operation in ipairs(Operations) do
-    for FunctionName, Params in pairs(Operation) do
-      local NodeStartPin, NodeFinishPin = self[FunctionName](self, Flow, Params)
-      if NodeStartPin and NodeFinishPin then
-        if not StartPin then
-          StartPin = ParallelNode.StartPin
-          FinishPin = WaitAllNode.FinishPin
-        end
-        ParallelNode.FinishPin:LinkTo(NodeStartPin)
-        NodeFinishPin:LinkTo(WaitAllNode.StartPin)
-      end
+  StartNode.FinishPin:LinkTo(ParallelNode.StartPin)
+  ParallelNode.FinishPin:LinkTo(WaitAllNode.StartPin)
+  WaitAllNode.FinishPin:LinkTo(FinishNode.StartPin)
+  if DialogueScriptTable then
+    local NodeStartPin, NodeFinishPin = FlowUtils:PARA(Flow, TalkTask, DialogueScriptTable.Operations)
+    if NodeStartPin and NodeFinishPin then
+      ParallelNode.FinishPin:LinkTo(NodeStartPin)
+      NodeFinishPin:LinkTo(WaitAllNode.StartPin)
     end
   end
-  return StartPin, FinishPin
+  return Flow, ParallelNode, WaitAllNode
+end
+
+function M:PlayAudioNode(Flow, Params)
+  local PlayAudioNode = FEFNode_PlayAudio:CreateNode(Flow, Params)
+  if nil == PlayAudioNode then
+    return
+  end
+  return PlayAudioNode.StartPin, PlayAudioNode.FinishPin
 end
 
 return M

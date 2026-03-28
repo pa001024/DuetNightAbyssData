@@ -5,6 +5,686 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("EventDungeonReward", {
+  [1001] = {
+    [410] = {
+      DungeonId = 1001,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 410,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [1002] = {
+    [411] = {
+      DungeonId = 1002,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 411,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [1003] = {
+    [412] = {
+      DungeonId = 1003,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 412,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [1004] = {
+    [413] = {
+      DungeonId = 1004,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 413,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [2001] = {
+    [414] = {
+      DungeonId = 2001,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 414,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [2002] = {
+    [415] = {
+      DungeonId = 2002,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 415,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [3001] = {
+    [416] = {
+      DungeonId = 3001,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 416,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [3002] = {
+    [417] = {
+      DungeonId = 3002,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 417,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [3003] = {
+    [418] = {
+      DungeonId = 3003,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 418,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [3004] = {
+    [419] = {
+      DungeonId = 3004,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 419,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [4001] = {
+    [420] = {
+      DungeonId = 4001,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 420,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [4002] = {
+    [421] = {
+      DungeonId = 4002,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 421,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [4003] = {
+    [422] = {
+      DungeonId = 4003,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 422,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [4004] = {
+    [423] = {
+      DungeonId = 4004,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 423,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [4005] = {
+    [424] = {
+      DungeonId = 4005,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 424,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [5001] = {
+    [425] = {
+      DungeonId = 5001,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 425,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [5002] = {
+    [426] = {
+      DungeonId = 5002,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 426,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [5003] = {
+    [427] = {
+      DungeonId = 5003,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 427,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [5004] = {
+    [428] = {
+      DungeonId = 5004,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 428,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [5005] = {
+    [429] = {
+      DungeonId = 5005,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 429,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [5006] = {
+    [430] = {
+      DungeonId = 5006,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 430,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [5501] = {
+    [431] = {
+      DungeonId = 5501,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 431,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [5502] = {
+    [432] = {
+      DungeonId = 5502,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 432,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [5503] = {
+    [433] = {
+      DungeonId = 5503,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 433,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [5504] = {
+    [434] = {
+      DungeonId = 5504,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 434,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [5505] = {
+    [435] = {
+      DungeonId = 5505,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 435,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [5506] = {
+    [436] = {
+      DungeonId = 5506,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 436,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [6001] = {
+    [437] = {
+      DungeonId = 6001,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 437,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [6002] = {
+    [438] = {
+      DungeonId = 6002,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 438,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [6003] = {
+    [439] = {
+      DungeonId = 6003,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 439,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [6004] = {
+    [440] = {
+      DungeonId = 6004,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 440,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [6005] = {
+    [441] = {
+      DungeonId = 6005,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 441,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [6006] = {
+    [442] = {
+      DungeonId = 6006,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 442,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [6007] = {
+    [443] = {
+      DungeonId = 6007,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 443,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [6008] = {
+    [444] = {
+      DungeonId = 6008,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 444,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [6009] = {
+    [445] = {
+      DungeonId = 6009,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 445,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [6010] = {
+    [446] = {
+      DungeonId = 6010,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 446,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [6011] = {
+    [447] = {
+      DungeonId = 6011,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 447,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [6012] = {
+    [448] = {
+      DungeonId = 6012,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 448,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [6501] = {
+    [449] = {
+      DungeonId = 6501,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 449,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [6502] = {
+    [450] = {
+      DungeonId = 6502,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 450,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [6503] = {
+    [451] = {
+      DungeonId = 6503,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 451,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [6504] = {
+    [452] = {
+      DungeonId = 6504,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 452,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [6505] = {
+    [453] = {
+      DungeonId = 6505,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 453,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [6506] = {
+    [454] = {
+      DungeonId = 6506,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 454,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [6507] = {
+    [455] = {
+      DungeonId = 6507,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 455,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [6508] = {
+    [456] = {
+      DungeonId = 6508,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 456,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [6509] = {
+    [457] = {
+      DungeonId = 6509,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 457,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [7001] = {
+    [458] = {
+      DungeonId = 7001,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 458,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [7002] = {
+    [459] = {
+      DungeonId = 7002,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 459,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [7003] = {
+    [460] = {
+      DungeonId = 7003,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 460,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [7004] = {
+    [461] = {
+      DungeonId = 7004,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 461,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [7005] = {
+    [462] = {
+      DungeonId = 7005,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 462,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [7006] = {
+    [463] = {
+      DungeonId = 7006,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 463,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [7007] = {
+    [464] = {
+      DungeonId = 7007,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 464,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [8001] = {
+    [465] = {
+      DungeonId = 8001,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 465,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [8002] = {
+    [466] = {
+      DungeonId = 8002,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 466,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [8003] = {
+    [467] = {
+      DungeonId = 8003,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 467,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [8004] = {
+    [468] = {
+      DungeonId = 8004,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 468,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [8005] = {
+    [469] = {
+      DungeonId = 8005,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 469,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [8006] = {
+    [470] = {
+      DungeonId = 8006,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 470,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [8007] = {
+    [471] = {
+      DungeonId = 8007,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 471,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [8008] = {
+    [472] = {
+      DungeonId = 8008,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 472,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [8009] = {
+    [473] = {
+      DungeonId = 8009,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 473,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [8010] = {
+    [474] = {
+      DungeonId = 8010,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 474,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [8011] = {
+    [475] = {
+      DungeonId = 8011,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 475,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [8012] = {
+    [476] = {
+      DungeonId = 8012,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 476,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
+  [8013] = {
+    [477] = {
+      DungeonId = 8013,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 477,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
+    }
+  },
   [60101] = {
     [232] = {
       DungeonId = 60101,
@@ -23,6 +703,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [478] = {
+      DungeonId = 60102,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 478,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [60201] = {
@@ -43,6 +731,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [479] = {
+      DungeonId = 60202,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 479,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [60301] = {
@@ -83,6 +779,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [480] = {
+      DungeonId = 60402,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 480,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [60501] = {
@@ -103,6 +807,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [481] = {
+      DungeonId = 60502,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 481,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [60601] = {
@@ -123,6 +835,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [482] = {
+      DungeonId = 60602,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 482,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [60701] = {
@@ -143,6 +863,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [483] = {
+      DungeonId = 60702,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 483,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [60801] = {
@@ -183,6 +911,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [484] = {
+      DungeonId = 60902,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 484,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [61001] = {
@@ -223,6 +959,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [485] = {
+      DungeonId = 61102,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 485,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [62101] = {
@@ -243,6 +987,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [486] = {
+      DungeonId = 62102,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 486,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [62201] = {
@@ -263,6 +1015,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [487] = {
+      DungeonId = 62202,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 487,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [62301] = {
@@ -303,6 +1063,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [488] = {
+      DungeonId = 62402,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 488,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [62501] = {
@@ -323,6 +1091,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [489] = {
+      DungeonId = 62502,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 489,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [62601] = {
@@ -343,6 +1119,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [490] = {
+      DungeonId = 62602,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 490,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [62701] = {
@@ -363,6 +1147,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [491] = {
+      DungeonId = 62702,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 491,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [62801] = {
@@ -403,6 +1195,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [492] = {
+      DungeonId = 62902,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 492,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [63001] = {
@@ -443,6 +1243,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [493] = {
+      DungeonId = 63102,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 493,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [64101] = {
@@ -463,6 +1271,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [494] = {
+      DungeonId = 64102,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 494,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [64201] = {
@@ -483,6 +1299,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [495] = {
+      DungeonId = 64202,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 495,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [64301] = {
@@ -523,6 +1347,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [496] = {
+      DungeonId = 64402,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 496,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [64501] = {
@@ -543,6 +1375,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [497] = {
+      DungeonId = 64502,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 497,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [64601] = {
@@ -563,6 +1403,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [498] = {
+      DungeonId = 64602,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 498,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [64701] = {
@@ -583,6 +1431,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [499] = {
+      DungeonId = 64702,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 499,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [64801] = {
@@ -623,6 +1479,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [500] = {
+      DungeonId = 64902,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 500,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [65001] = {
@@ -663,6 +1527,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [501] = {
+      DungeonId = 65102,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 501,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90101] = {
@@ -723,6 +1595,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [363] = {
+      DungeonId = 90106,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 363,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90107] = {
@@ -743,6 +1623,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [364] = {
+      DungeonId = 90108,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 364,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90109] = {
@@ -763,6 +1651,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [365] = {
+      DungeonId = 90110,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 365,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90111] = {
@@ -783,6 +1679,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [366] = {
+      DungeonId = 90112,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 366,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90113] = {
@@ -803,6 +1707,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [367] = {
+      DungeonId = 90114,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 367,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90115] = {
@@ -1073,6 +1985,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [356] = {
+      DungeonId = 90201,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 356,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90202] = {
@@ -1083,6 +2003,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [357] = {
+      DungeonId = 90202,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 357,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90203] = {
@@ -1093,6 +2021,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [358] = {
+      DungeonId = 90203,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 358,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90204] = {
@@ -1103,6 +2039,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [359] = {
+      DungeonId = 90204,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 359,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90205] = {
@@ -1113,6 +2057,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [360] = {
+      DungeonId = 90205,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 360,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90206] = {
@@ -1123,6 +2075,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [361] = {
+      DungeonId = 90206,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 361,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90207] = {
@@ -1133,6 +2093,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [362] = {
+      DungeonId = 90207,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 362,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90305] = {
@@ -1163,6 +2131,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [401] = {
+      DungeonId = 90307,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 401,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90308] = {
@@ -1173,6 +2149,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [402] = {
+      DungeonId = 90308,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 402,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90309] = {
@@ -1183,6 +2167,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [403] = {
+      DungeonId = 90309,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 403,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90310] = {
@@ -1193,6 +2185,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [404] = {
+      DungeonId = 90310,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 404,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90311] = {
@@ -1203,6 +2203,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [405] = {
+      DungeonId = 90311,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 405,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90312] = {
@@ -1233,6 +2241,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [314] = {
+      DungeonId = 90401,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 314,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90402] = {
@@ -1243,6 +2259,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [315] = {
+      DungeonId = 90402,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 315,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90403] = {
@@ -1253,6 +2277,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [316] = {
+      DungeonId = 90403,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 316,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90404] = {
@@ -1263,6 +2295,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [317] = {
+      DungeonId = 90404,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 317,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90405] = {
@@ -1273,6 +2313,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [318] = {
+      DungeonId = 90405,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 318,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90406] = {
@@ -1283,6 +2331,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [319] = {
+      DungeonId = 90406,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 319,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90407] = {
@@ -1293,6 +2349,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [320] = {
+      DungeonId = 90407,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 320,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90408] = {
@@ -1303,6 +2367,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [321] = {
+      DungeonId = 90408,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 321,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90409] = {
@@ -1313,6 +2385,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [322] = {
+      DungeonId = 90409,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 322,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90410] = {
@@ -1323,6 +2403,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [323] = {
+      DungeonId = 90410,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 323,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90411] = {
@@ -1333,6 +2421,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [324] = {
+      DungeonId = 90411,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 324,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90412] = {
@@ -1343,6 +2439,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [325] = {
+      DungeonId = 90412,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 325,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90413] = {
@@ -1353,6 +2457,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [326] = {
+      DungeonId = 90413,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 326,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90414] = {
@@ -1363,6 +2475,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [327] = {
+      DungeonId = 90414,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 327,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90415] = {
@@ -1373,6 +2493,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [328] = {
+      DungeonId = 90415,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 328,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90416] = {
@@ -1383,6 +2511,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [329] = {
+      DungeonId = 90416,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 329,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90417] = {
@@ -1393,6 +2529,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [330] = {
+      DungeonId = 90417,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 330,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90418] = {
@@ -1403,6 +2547,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [331] = {
+      DungeonId = 90418,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 331,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90419] = {
@@ -1413,6 +2565,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [332] = {
+      DungeonId = 90419,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 332,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90420] = {
@@ -1423,6 +2583,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [333] = {
+      DungeonId = 90420,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 333,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90421] = {
@@ -1433,6 +2601,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [334] = {
+      DungeonId = 90421,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 334,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90422] = {
@@ -1443,6 +2619,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [335] = {
+      DungeonId = 90422,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 335,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90423] = {
@@ -1453,6 +2637,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [336] = {
+      DungeonId = 90423,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 336,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90424] = {
@@ -1463,6 +2655,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [337] = {
+      DungeonId = 90424,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 337,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90425] = {
@@ -1473,6 +2673,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [338] = {
+      DungeonId = 90425,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 338,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90426] = {
@@ -1483,6 +2691,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [339] = {
+      DungeonId = 90426,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 339,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90427] = {
@@ -1493,6 +2709,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [340] = {
+      DungeonId = 90427,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 340,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90428] = {
@@ -1503,6 +2727,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [341] = {
+      DungeonId = 90428,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 341,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90429] = {
@@ -1513,6 +2745,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [342] = {
+      DungeonId = 90429,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 342,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90430] = {
@@ -1523,6 +2763,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [343] = {
+      DungeonId = 90430,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 343,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90431] = {
@@ -1533,6 +2781,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [344] = {
+      DungeonId = 90431,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 344,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90432] = {
@@ -1543,6 +2799,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [345] = {
+      DungeonId = 90432,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 345,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90433] = {
@@ -1553,6 +2817,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [346] = {
+      DungeonId = 90433,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 346,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90434] = {
@@ -1563,6 +2835,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [347] = {
+      DungeonId = 90434,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 347,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90435] = {
@@ -1573,6 +2853,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [348] = {
+      DungeonId = 90435,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 348,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90436] = {
@@ -1583,6 +2871,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [349] = {
+      DungeonId = 90436,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 349,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90437] = {
@@ -1593,6 +2889,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [350] = {
+      DungeonId = 90437,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 350,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90438] = {
@@ -1603,6 +2907,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [351] = {
+      DungeonId = 90438,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 351,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90439] = {
@@ -1613,6 +2925,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [352] = {
+      DungeonId = 90439,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 352,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90440] = {
@@ -1623,6 +2943,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [353] = {
+      DungeonId = 90440,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 353,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90441] = {
@@ -1633,6 +2961,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [354] = {
+      DungeonId = 90441,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 354,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90442] = {
@@ -1643,6 +2979,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [355] = {
+      DungeonId = 90442,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 355,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90501] = {
@@ -1653,6 +2997,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [368] = {
+      DungeonId = 90501,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 368,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90502] = {
@@ -1663,6 +3015,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [369] = {
+      DungeonId = 90502,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 369,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90503] = {
@@ -1673,6 +3033,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [370] = {
+      DungeonId = 90503,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 370,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90504] = {
@@ -1683,6 +3051,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [371] = {
+      DungeonId = 90504,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 371,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90505] = {
@@ -1693,6 +3069,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [372] = {
+      DungeonId = 90505,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 372,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90506] = {
@@ -1703,6 +3087,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [373] = {
+      DungeonId = 90506,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 373,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90507] = {
@@ -1713,6 +3105,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [374] = {
+      DungeonId = 90507,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 374,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90521] = {
@@ -1753,6 +3153,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [375] = {
+      DungeonId = 90601,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 375,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90602] = {
@@ -1763,6 +3171,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [376] = {
+      DungeonId = 90602,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 376,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90603] = {
@@ -1773,6 +3189,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [377] = {
+      DungeonId = 90603,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 377,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90604] = {
@@ -1783,6 +3207,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [378] = {
+      DungeonId = 90604,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 378,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90605] = {
@@ -1793,6 +3225,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [379] = {
+      DungeonId = 90605,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 379,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90606] = {
@@ -1803,6 +3243,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [380] = {
+      DungeonId = 90606,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 380,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90607] = {
@@ -1813,6 +3261,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [381] = {
+      DungeonId = 90607,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 381,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90701] = {
@@ -1833,6 +3289,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [382] = {
+      DungeonId = 90702,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 382,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90703] = {
@@ -1843,6 +3307,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [383] = {
+      DungeonId = 90703,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 383,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90704] = {
@@ -1853,6 +3325,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [384] = {
+      DungeonId = 90704,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 384,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90705] = {
@@ -1863,6 +3343,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [385] = {
+      DungeonId = 90705,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 385,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90706] = {
@@ -1873,6 +3361,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [386] = {
+      DungeonId = 90706,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 386,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90707] = {
@@ -1883,6 +3379,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [387] = {
+      DungeonId = 90707,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 387,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90801] = {
@@ -1893,6 +3397,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [388] = {
+      DungeonId = 90801,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 388,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90802] = {
@@ -1903,6 +3415,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [389] = {
+      DungeonId = 90802,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 389,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90803] = {
@@ -1913,6 +3433,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [390] = {
+      DungeonId = 90803,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 390,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90804] = {
@@ -1923,6 +3451,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [391] = {
+      DungeonId = 90804,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 391,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90805] = {
@@ -1933,6 +3469,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [392] = {
+      DungeonId = 90805,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 392,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90806] = {
@@ -1943,6 +3487,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [393] = {
+      DungeonId = 90806,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 393,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90807] = {
@@ -1953,6 +3505,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [394] = {
+      DungeonId = 90807,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 394,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90901] = {
@@ -1973,6 +3533,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [395] = {
+      DungeonId = 90902,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 395,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90903] = {
@@ -1983,6 +3551,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [396] = {
+      DungeonId = 90903,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 396,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90904] = {
@@ -1993,6 +3569,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [397] = {
+      DungeonId = 90904,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 397,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90905] = {
@@ -2003,6 +3587,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [398] = {
+      DungeonId = 90905,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 398,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90906] = {
@@ -2013,6 +3605,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [399] = {
+      DungeonId = 90906,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 399,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [90907] = {
@@ -2023,6 +3623,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [400] = {
+      DungeonId = 90907,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 400,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [91008] = {
@@ -2033,6 +3641,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [406] = {
+      DungeonId = 91008,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 406,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [91009] = {
@@ -2043,6 +3659,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [407] = {
+      DungeonId = 91009,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 407,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [91010] = {
@@ -2053,6 +3677,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [408] = {
+      DungeonId = 91010,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 408,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [91011] = {
@@ -2063,6 +3695,14 @@ return ReadOnly("EventDungeonReward", {
       RewardId = 300321,
       RewardView = 1030090,
       StartDate = LocalTimeProxy(1774317601)
+    },
+    [409] = {
+      DungeonId = 91011,
+      EndDate = LocalTimeProxy(1779051600),
+      Index = 409,
+      RewardId = 114102,
+      RewardView = 10302000,
+      StartDate = LocalTimeProxy(1777514400)
     }
   },
   [91091] = {

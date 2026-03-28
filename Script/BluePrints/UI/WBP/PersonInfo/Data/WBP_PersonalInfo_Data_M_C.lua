@@ -33,7 +33,7 @@ function M:InitTab()
     },
     StyleName = "Text",
     OwnerPanel = self,
-    TitleName = GText("UI_PersonInfo_Name"),
+    TitleName = GText("UI_PersonalPage_Recount_Name"),
     BackCallback = self.OnReturnKeyDown
   }
   self.Root.Com_Tab_M:Init(TabWithoutChar)

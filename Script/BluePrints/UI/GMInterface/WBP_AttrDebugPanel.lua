@@ -23,13 +23,33 @@ end
 function WBP_AttrDebugPanel:RefreshPanel()
   self.DebugStr = ""
   self.Prefix = ""
-  for Index, AttrWatcher in ipairs(self.AttrWatcher) do
+  for _, AttrWatcher in ipairs(self.AttrWatcher) do
     local Entity = Battle(self):GetEntity(AttrWatcher.Eid)
-    if Entity then
-      local Value = Entity:GetAttr(AttrWatcher.AttrName)
-      self:AppendStr(Entity:GetName() .. " Eid: " .. AttrWatcher.Eid .. " " .. AttrWatcher.AttrName .. " : " .. string.format("%.2f", Value))
-    else
+    if not Entity then
       self:RemoveAttrWatcher(AttrWatcher.AttrName, AttrWatcher.Eid)
+    else
+      local AttrName = AttrWatcher.AttrName
+      if Entity.GetAttr then
+        local EntityValue = Entity:GetAttr(AttrName)
+        if nil ~= EntityValue and 0 ~= EntityValue then
+          local ValueStr = string.format("%.2f", EntityValue)
+          self:AppendStr(Entity:GetName() .. "  [Entity]  " .. AttrName .. " : " .. ValueStr)
+        end
+      end
+      local Weapon = Entity:GetCurrentWeapon()
+      if Weapon then
+        local WeaponValue
+        if Weapon.GetAttr then
+          WeaponValue = Weapon:GetAttr(AttrName)
+        end
+        if nil == WeaponValue and Weapon.Data and nil ~= Weapon.Data[AttrName] then
+          WeaponValue = Weapon.Data[AttrName]
+        end
+        if nil ~= WeaponValue and 0 ~= WeaponValue then
+          local ValueStr = string.format("%.2f", WeaponValue)
+          self:AppendStr(Entity:GetName() .. "  [" .. Weapon:GetName() .. "]  " .. AttrName .. " : " .. ValueStr)
+        end
+      end
     end
   end
   self.TextInfo:SetText(self.DebugStr)
@@ -46,9 +66,12 @@ function WBP_AttrDebugPanel:AddAttrWatcher(AttrName, Eid)
   if not Entity then
     return
   end
-  local AttributeSet = Entity:K2_GetAttributesSet()
-  if not AttributeSet then
-    return
+  local HasEntityAttr = false
+  if Entity.GetAttr then
+    local Value = Entity:GetAttr(AttrName)
+    if nil ~= Value then
+      HasEntityAttr = true
+    end
   end
   for i, v in ipairs(self.AttrWatcher) do
     if v.AttrName == AttrName and v.Eid == Eid then
@@ -57,6 +80,27 @@ function WBP_AttrDebugPanel:AddAttrWatcher(AttrName, Eid)
   end
   table.insert(self.AttrWatcher, {AttrName = AttrName, Eid = Eid})
   self:RefreshPanel()
+end
+
+function WBP_AttrDebugPanel:ShouldShow(Source, AttrName, Value)
+  if nil == Value then
+    return false
+  end
+  local RuleKey = string.lower(AttrName)
+  local Rule = self.AttrShowRules and self.AttrShowRules[RuleKey]
+  if Rule then
+    if "Entity" == Source and Rule.showEntity == false then
+      return false
+    end
+    if "Weapon" == Source and false == Rule.showWeapon then
+      return false
+    end
+    if Rule.hideIfZero and type(Value) == "number" and 0 == Value then
+      return false
+    end
+    return true
+  end
+  return true
 end
 
 function WBP_AttrDebugPanel:RemoveAttrWatcher(AttrName, Eid)

@@ -473,7 +473,7 @@ end
 
 function WBP_ImpressionItem_Common:OnClickAnimFinished()
   DebugPrint("WBP_ImpressionItem_Common:OnClickAnimFinished", self)
-  if self.bIsSelected then
+  if self.bIsSelected and not self.Option.bCanReselect then
     return
   end
   self:HandleImpression()
@@ -498,7 +498,7 @@ end
 function WBP_ImpressionItem_Common:OnClicked()
   DebugPrint("WBP_ImpressionItem_Common: OnClicked", self, self.OnClickedEvent, self.State)
   if self:IsSelfEnabled() then
-    if self.bIsSelected then
+    if self.bIsSelected and not self.Option.bCanReselect then
       self:PlayButtonClickAudioByOptionType()
       self:StopAllAnimations()
       self:PlayAnimation(self.Click)

@@ -162,7 +162,7 @@ function GameModeQuestMgr:HideUIInScreenSuitRecover(SuitType, SuitSubBase)
     return
   end
   for SuitKey, SuitValue in pairs(SuitSubBase) do
-    self:HideUIInScreen(SuitKey, SuitValue)
+    self:HideUIInScreen(SuitKey, SuitValue, "HideUIInScreenSuitRecover")
   end
 end
 
@@ -492,18 +492,22 @@ end
 
 function GameModeQuestMgr:TriggerQuestArtLevelChange(Params)
   if nil == Params or nil == next(Params) then
+    DebugPrint("GameModeQuestMgr:TriggerQuestArtLevelChange 触发参数Params为空")
     return
   end
   if self:IsInDungeon() then
+    DebugPrint("GameModeQuestMgr:TriggerQuestArtLevelChange 当前在副本无法触发")
     return
   end
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
+    DebugPrint("GameModeQuestMgr:TriggerQuestArtLevelChange 当前无Avatar无法触发")
     return
   end
   local SubRegionId = Avatar:GetCurrentRegionId()
   local SubRegionData = DataMgr.SubRegion[SubRegionId]
   if not SubRegionData then
+    DebugPrint("GameModeQuestMgr:TriggerQuestArtLevelChange 当前处于错误子区域，无法触发。RegionId: ", SubRegionId)
     return
   end
   local RegionId = SubRegionData.RegionId

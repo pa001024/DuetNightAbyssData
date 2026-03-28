@@ -8,6 +8,14 @@ function M:GetSize()
   return self.Size
 end
 
+function M:SetScale(Scale)
+  self.Scale = Scale
+end
+
+function M:GetScale()
+  return self.Scale
+end
+
 function M:GetRichTag()
   return self.RichTag
 end

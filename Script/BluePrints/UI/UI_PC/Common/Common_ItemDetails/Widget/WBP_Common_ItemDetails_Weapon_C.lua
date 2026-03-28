@@ -5,7 +5,7 @@ local WeaponUtils = require("BluePrints.Client.CustomTypes.Weapon")
 local ModModel = ModController:GetModel()
 local M = Class()
 
-function M:InitItemInfo(ItemType, ItemId, UnitId)
+function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
   local WeaponData = DataMgr.Weapon[ItemId]
   local BattleWeaponData = DataMgr.BattleWeapon[ItemId]
   local Avatar = GWorld:GetAvatar()
@@ -26,8 +26,11 @@ function M:InitItemInfo(ItemType, ItemId, UnitId)
     self.Text_Mod01:SetText(Cost)
     self.Text_Mod02:SetText(WeaponServerData:LevelUpData().ModVolume)
   else
+    if Content and Content.Level then
+      Level = Content.Level
+    end
     self.Text_Mod01:SetText("0")
-    self.Text_Mod02:SetText(DataMgr.WeaponLevelUp[1].ModVolume)
+    self.Text_Mod02:SetText(DataMgr.WeaponLevelUp[Level].ModVolume)
   end
   self.ParentWidget.Text_WeaponLevel02:SetText(Level)
   self.ParentWidget.Text_WeaponLevel03:SetText(WeaponData.WeaponMaxLevel)

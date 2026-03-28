@@ -2,6 +2,7 @@ local ChatCommon = require("BluePrints.UI.WBP.Chat.ChatCommon")
 local ChatMessage = require("BluePrints.UI.WBP.Chat.ChatMessage")
 local MessageList = ChatMessage.MessageList
 local TimeUtils = require("Utils.TimeUtils")
+local EMCache = require("EMCache.EMCache")
 local M = Class("BluePrints.Common.MVC.Model")
 
 function M:Init()
@@ -16,11 +17,15 @@ function M:Init()
     self._MessageDict[ChannelType] = MessageList:New(ChatCommon.ReddotNamePre .. ChannelName .. "_ChannelCD")
   end
   self._CurrentFriendUid = nil
+  self._CurrentChannelIndex = {}
+  self._AllChannelList = nil
+  self._HistoryChannelList = nil
   self:InitReddotCount()
   self.SimpleChatOutAnimCurve = LoadObject("CurveFloat'/Game/UI/WBP/Common/VX/UIVX/Curve/Curve_InteractiveItem_PC.Curve_InteractiveItem_PC'")
   AddToRoot(self.SimpleChatOutAnimCurve)
   self.EnteredChannels = {}
   self:UpdateCurrentChannel()
+  self:InitRecvChannelIndex()
 end
 
 function M:IsChannelExclude(ChannelType)
@@ -41,6 +46,7 @@ function M:Destory()
   self._CurrentChannel = ChatCommon.ChannelDef.Public
   RemoveFromRoot(self.SimpleChatOutAnimCurve)
   self.SimpleChatOutAnimCurve = nil
+  self:SaveAllChannelIndex()
   M.Super.Destory(self)
 end
 
@@ -417,6 +423,165 @@ end
 
 function M:IsInRegionOnline()
   return self:GetAvatar().IsInRegionOnline
+end
+
+function M:GetRegionId()
+  return self:GetAvatar().CurrentOnlineType
+end
+
+function M:IsInRegionOnlineChannelType()
+  local Res = self:IsInRegionOnline() and (self:GetCurrentChannel() == CommonConst.ChatChannel.RegionOnline or UIManager(self):GetUIObj("LevelMapMain"))
+  return Res
+end
+
+function M:SetChannelIndex(ChannelType, ChannelIndex)
+  if not ChannelType or not ChannelIndex then
+    return
+  end
+  if not self._CurrentChannelIndex then
+    self._CurrentChannelIndex = {}
+  end
+  self._CurrentChannelIndex[ChannelType] = ChannelIndex
+end
+
+function M:GetChannelIndex(ChannelType)
+  if self:IsInRegionOnlineChannelType() then
+    ChannelType = self:GetRegionId()
+  end
+  return self._CurrentChannelIndex[ChannelType]
+end
+
+function M:SetAllChannelList(AllChannels)
+  self._AllChannelList = AllChannels
+  self.FirstIndex = math.maxinteger
+  self.LastIndex = math.mininteger
+  for Index, v in ipairs(self._AllChannelList) do
+    self.FirstIndex = math.min(self.FirstIndex, Index)
+    self.LastIndex = math.max(self.LastIndex, Index)
+  end
+end
+
+function M:GetNumbersContainingOfSearch(Target)
+  if not self._AllChannelList then
+    return {}
+  end
+  local TargetStr = tostring(Target)
+  local Result = {}
+  for Index, State in pairs(self._AllChannelList) do
+    if tostring(Index):find(TargetStr, 1, true) then
+      table.insert(Result, {Idx = Index, State = State})
+    end
+    if 9 == #Result then
+      break
+    end
+  end
+  return Result
+end
+
+function M:GetChannelState(ChannelIndex)
+  if not self._AllChannelList then
+    return 1
+  end
+  return self._AllChannelList[ChannelIndex]
+end
+
+function M:SetSelectChannelIndex(ChannelIndex)
+  self._SelectChannelIndex = ChannelIndex
+end
+
+function M:GetSelectChannelIndex()
+  return self._SelectChannelIndex
+end
+
+function M:InitRecvChannelIndex()
+  self.RecvChannelIndex = {}
+  local ChannelInfos = EMCache:Get(ChatCommon.ChannelCache, true) or {}
+  self.RecvChannelIndex = ChannelInfos
+end
+
+function M:SaveAllChannelIndex()
+  if not self.RecvChannelIndex then
+    return
+  end
+  EMCache:Set(ChatCommon.ChannelCache, self.RecvChannelIndex, true)
+end
+
+function M:SaveChannelIndex(ChannelType, ChannelIndex, online_type)
+  if not ChannelIndex or not ChannelType then
+    return
+  end
+  local Type = online_type and online_type or ChannelType
+  if not self.RecvChannelIndex[Type] then
+    self.RecvChannelIndex[Type] = {}
+  end
+  table.insert(self.RecvChannelIndex[Type], ChannelIndex)
+  for i = #self.RecvChannelIndex[Type] - 1, 1, -1 do
+    if self.RecvChannelIndex[Type][i] == ChannelIndex then
+      table.remove(self.RecvChannelIndex[Type], i)
+    end
+  end
+  if #self.RecvChannelIndex[Type] > 5 then
+    table.remove(self.RecvChannelIndex[Type], 1)
+  end
+  EMCache:Set(ChatCommon.ChannelCache, self.RecvChannelIndex, true)
+end
+
+function M:GetRecvChannelIndex()
+  local Type
+  if self:IsInRegionOnlineChannelType() then
+    Type = self:GetRegionId()
+  else
+    Type = CommonConst.ChatChannel.Help
+  end
+  return self.RecvChannelIndex[Type] or {}
+end
+
+function M:SetIsEnterChannelContent(Value)
+  self.IsEnterChannelContentVar = Value
+end
+
+function M:IsEnterChannelContent()
+  return self.IsEnterChannelContentVar
+end
+
+function M:RefreshRecvChannelIndex(ChannelType, ChannelNumList)
+  local Type = ChannelType
+  if not self.IsEnterChannelContentVar then
+    return
+  end
+  if not self._HistoryChannelList then
+    self._HistoryChannelList = {}
+  end
+  self._HistoryChannelList[Type] = ChannelNumList
+end
+
+function M:GetNumbersContainingOfHistory()
+  if not self._HistoryChannelList then
+    return {}
+  end
+  local Type
+  if self:IsInRegionOnlineChannelType() then
+    Type = self:GetRegionId()
+  else
+    Type = CommonConst.ChatChannel.Help
+  end
+  local ChannelIndexInfo = self.RecvChannelIndex[Type]
+  if not ChannelIndexInfo then
+    return {}
+  end
+  local ChannelInfo = self._HistoryChannelList[Type] or {}
+  local Result = {}
+  for i = #ChannelIndexInfo, 1, -1 do
+    if ChannelInfo[ChannelIndexInfo[i]] then
+      table.insert(Result, {
+        Idx = ChannelIndexInfo[i],
+        State = ChannelInfo[ChannelIndexInfo[i]]
+      })
+    else
+      table.remove(ChannelIndexInfo, i)
+    end
+  end
+  return Result
 end
 
 return M

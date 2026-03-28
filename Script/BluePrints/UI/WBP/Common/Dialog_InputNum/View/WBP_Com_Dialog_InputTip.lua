@@ -9,6 +9,7 @@ function M:Construct()
     self.WS_Type:SetActiveWidgetIndex(CONST.STATE_EMPTY)
   end
   self:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  self.bIsTipShowing = false
 end
 
 function M:ShowMessage(Msg, IsError)
@@ -33,6 +34,7 @@ function M:ShowMessage(Msg, IsError)
   if self.WS_Type then
     self.WS_Type:SetActiveWidgetIndex(CONST.STATE_SHOW)
   end
+  self.bIsTipShowing = true
   if self.Tips_In then
     self:StopAllAnimations()
     self:PlayAnimation(self.Tips_In)
@@ -40,6 +42,10 @@ function M:ShowMessage(Msg, IsError)
 end
 
 function M:HideMessage()
+  if not self.bIsTipShowing then
+    return
+  end
+  self.bIsTipShowing = false
   if self.Tips_Out then
     self:StopAllAnimations()
     self:PlayAnimation(self.Tips_Out)
@@ -49,7 +55,6 @@ function M:HideMessage()
   if not self.Tips_Out and self.WS_Type then
     self.WS_Type:SetActiveWidgetIndex(CONST.STATE_EMPTY)
   end
-  self.HideTimerHandle = nil
 end
 
 function M:OnAnimationFinished(InAnimation)

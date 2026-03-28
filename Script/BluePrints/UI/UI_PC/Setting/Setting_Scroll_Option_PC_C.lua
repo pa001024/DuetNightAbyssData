@@ -356,4 +356,12 @@ function S:SaveDamageTextScaleOptionSetting()
   end
 end
 
+function S:SetCameraShakeRangeOldValue()
+  self.OldValue = SettingUtils.GetEMCache(self.EMCacheName, self.EMCacheKey, self.SlideDefaultValue / self.ScrollMappingScale) * self.ScrollMappingScale
+end
+
+function S:SaveCameraShakeRangeOptionSetting()
+  SettingUtils.SaveEMCache(self.EMCacheName, self.EMCacheKey, self.NowValue / self.ScrollMappingScale)
+end
+
 return S

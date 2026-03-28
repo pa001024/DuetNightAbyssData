@@ -73,6 +73,22 @@ function M:InitFirstState_Lua()
   end
 end
 
+function M:GetQuestFinishState(QuestId, QuestChainId)
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return false
+  end
+  if 0 ~= QuestId then
+    return Avatar:IsQuestFinished(QuestId)
+  end
+  print(_G.LogTag, "LXZ GetQuestFinishState000", QuestChainId)
+  if 0 ~= QuestChainId then
+    print(_G.LogTag, "LXZ GetQuestFinishState", Avatar:IsQuestChainFinished(QuestChainId))
+    return Avatar:IsQuestChainFinished(QuestChainId)
+  end
+  return false
+end
+
 function M:UpdateStateIdCache(ManualItemId, CreatorId, StateId)
   local GameState = UE4.UGameplayStatics.GetGameState(self)
   if ManualItemId > 0 then
@@ -104,6 +120,26 @@ function M:UpdateStateIdCache_Lua()
       GameState:TriggerCondition("MechanismState", self.Owner.CreatorId, 0, self.Owner.StateId)
     end
     EventManager:FireEvent(EventID.OnMechanismEnterState, self.Owner.CreatorId, self.Owner.StateId)
+  end
+end
+
+function M:NotifyServerChangeToState(StateId)
+  if not self.Owner then
+    return
+  end
+  if 8 == self.RegionDataType then
+    self:EnterState(StateId)
+  else
+    local function CallBack(Ret)
+      if not Ret then
+        GWorld.logger.error("机关切换状态 服务端验证失败， UnitId:" .. self.Owner.UnitId .. "WorldRegionEid:" .. self.Owner.WorldRegionEid .. "错误码:" .. Ret)
+        
+        return
+      end
+      self:EnterState(StateId)
+    end
+    
+    self.Owner:ServerUpdateRegionStateId(StateId, CallBack)
   end
 end
 

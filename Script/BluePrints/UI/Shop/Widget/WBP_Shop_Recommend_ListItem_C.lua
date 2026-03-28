@@ -142,7 +142,9 @@ function M:OnFocusReceived(MyGeometry, InFocusEvent)
 end
 
 function M:OnKeyDown(MyGeometry, InKeyEvent)
-  self.SetListItemCallBack(self.Parent, self.BannerId, self)
+  if self.SetListItemCallBack then
+    self.SetListItemCallBack(self.Parent, self.BannerId, self)
+  end
   if self.OnKeyDownCallBack then
     return self.OnKeyDownCallBack(self.Parent, self.BannerId, MyGeometry, InKeyEvent)
   end

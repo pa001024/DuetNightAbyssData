@@ -252,22 +252,32 @@ function M:SetReddot(IsNew, Upgradeable, OtherReddot)
   self.IsNew = IsNew
   self.Upgradeable = Upgradeable
   self.OtherReddot = OtherReddot
+  if Upgradeable then
+    self.New:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    if self.Reddot then
+      self.Reddot:SetReddotStyle(0)
+      self.Reddot:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    end
+    return
+  end
   if IsNew then
-    self.Reddot:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    if self.Reddot then
+      self.Reddot:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
     self.New:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    return
+  end
+  if OtherReddot then
+    self.New:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    if self.Reddot then
+      self.Reddot:SetReddotStyle(1)
+      self.Reddot:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    end
     return
   end
   self.New:SetVisibility(UIConst.VisibilityOp.Collapsed)
   if self.Reddot then
-    if OtherReddot then
-      self.Reddot:SetReddotStyle(1)
-      self.Reddot:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    elseif Upgradeable then
-      self.Reddot:SetReddotStyle(0)
-      self.Reddot:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    else
-      self.Reddot:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    end
+    self.Reddot:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
 end
 

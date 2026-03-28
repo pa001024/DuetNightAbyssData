@@ -7,6 +7,14 @@ ChatCommon.ChannelDef = {
   Region = CommonConst.ChatChannel.RegionOnline,
   SettlementOnline = CommonConst.ChatChannel.SettlementOnline
 }
+ChatCommon.Channel = {
+  [CommonConst.ChatChannel.TeamUp] = "World",
+  [CommonConst.ChatChannel.Help] = "World",
+  [CommonConst.ChatChannel.InTeam] = "World",
+  [CommonConst.ChatChannel.Friend] = "World",
+  [CommonConst.ChatChannel.RegionOnline] = "Online",
+  [CommonConst.ChatChannel.SettlementOnline] = "Online"
+}
 ChatCommon.ChannelNames = {}
 for K, V in pairs(ChatCommon.ChannelDef) do
   ChatCommon.ChannelNames[V] = K
@@ -29,7 +37,9 @@ ChatCommon.EventID = {
   SelectPlayerToChat = "SelectPlayerToChat",
   SendCDTimerUpdate = "SendCDTimerUpdate",
   OnChatBtnListOpen = "OnChatBtnListOpen",
-  RecvStickerInPubChannels = "RecvStickerInPubChannels"
+  RecvStickerInPubChannels = "RecvStickerInPubChannels",
+  RecvChannelPlayerNum = "RecvChannelPlayerNum",
+  RecvAllChatChannel = "RecvAllChatChannel"
 }
 ChatCommon.MsgType = {
   Other = 0,
@@ -64,5 +74,6 @@ ChatCommon.ChatFocusType = {
   QuickReply = 5,
   ChatFace = 6
 }
+ChatCommon.ChannelCache = "ChatChannel"
 _G.ChatCommon = ChatCommon
 return ChatCommon

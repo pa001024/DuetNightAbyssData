@@ -41,11 +41,10 @@ function M:InitSubWidgets()
     Widget:Init(self)
     self.EnabledWidgets[WidgetName] = false
   end
-  self.InTimer = nil
-  self.OutTimer = nil
 end
 
 function M:TryInsertNewWidget(WidgetName)
+  self.Pos_Bubble:SetVisibility(UE.ESlateVisibility.SelfHitTestInvisible)
   if self.ExternWidget[WidgetName] then
     return self.ExternWidget[WidgetName]
   end
@@ -136,14 +135,6 @@ function M:EnableWidgetInternal(WidgetName, bEnable, ...)
   end
   if self.AttachedWidgetComponent then
     self.AttachedWidgetComponent:OnChangeActiveWidgets(self.ActiveCount)
-    local bEnableScale, MinScale, MaxScale, MinScaleDis, MaxScaleDis = self:GetWidgetScaleParams(WidgetName)
-    if bEnableScale then
-      if bEnable then
-        self.AttachedWidgetComponent:AddDistanceTestInfo(Widget or SpecialWidget, MinScale, MaxScale, MinScaleDis, MaxScaleDis)
-      else
-        self.AttachedWidgetComponent:RemoveDistanceTestInfo(Widget or SpecialWidget)
-      end
-    end
   end
 end
 
@@ -171,37 +162,6 @@ function M:TryGetWidget(WidgetName)
   end
 end
 
-function M:PlayHideAnimation(bHidden)
-  if not self.AttachedWidgetComponent then
-    return
-  end
-  if bHidden then
-    if self.InTimer then
-      self:RemoveTimer(self.InTimer)
-      self.InTimer = nil
-    end
-    if not self.OutTimer then
-      EMUIAnimationSubsystem:EMPlayAnimation(self, self.Out)
-      self.OutTimer = self:AddTimer(0.33, function()
-        self:Hide()
-        self.OutTimer = nil
-      end)
-    end
-  else
-    self:Show()
-    if self.OutTimer then
-      self:RemoveTimer(self.OutTimer)
-      self.OutTimer = nil
-    end
-    if not self.InTimer then
-      EMUIAnimationSubsystem:EMPlayAnimation(self, self.In)
-      self.InTimer = self:AddTimer(0.33, function()
-        self.InTimer = nil
-      end)
-    end
-  end
-end
-
 function M:SelectBubbleWidget()
   local HeadUISubsystem = UNpcHeadUISubsystem.GetHeadUISubsystem(self)
   local Owner = self.AttachedWidgetComponent:GetOwner()
@@ -223,18 +183,6 @@ function M:SetBubbleWidget(Index)
   end
   self.NPC_Bubble_Switcher:SetActiveWidgetIndex(Index)
   return self.NPC_Bubble_Switcher:GetActiveWidget()
-end
-
-function M:SetAttachedWidget(AttachedWidgetComponent)
-  self.AttachedWidgetComponent = AttachedWidgetComponent
-end
-
-function M:UnsetAttachedWidget()
-  self.AttachedWidgetComponent = nil
-  if self.Title then
-    self.Title:ClearChildren()
-  end
-  self.bHasConstruct = false
 end
 
 function M:SetWidgetInitBubble()

@@ -99,12 +99,53 @@ return ReadOnly("Char", {
       11010010,
       11010011,
       11010121,
-      11010122
+      11010122,
+      11010131
     },
     SortPriority = 4006,
     Sound = "SOUND_ITEM_NORMAL",
     SpineBp = "WBP_Get_Avatar_WidgetHeitao",
     UWeapon = {110101}
+  },
+  [1102] = {
+    ArmoryCameraPosition = T.RT_1,
+    ArmoryCameraRotation = T.RT_2,
+    BigIcon = "/Game/UI/Texture/Dynamic/Image/Bust/Avatar/T_Bust_Fuluo",
+    Camp = "Diguo",
+    CharColorVar = "Yellow",
+    CharId = 1102,
+    CharMaxLevel = 80,
+    CharName = "UI_CHAR_NAME_1102",
+    CharPieceId = 1001102,
+    CharRarity = 5,
+    CharSubtitle = "UI_CHAR_SUBTITLE_1102",
+    CharUnlockRequiredPiece = 30,
+    CollectRewardExp = 500,
+    DefaultAccessory = T.RT_3,
+    DefaultHairId = 1102,
+    DefaultSkinId = 1102,
+    DispatchTag = T.RT_4,
+    DispatchUnlock = T.RT_5,
+    EscIcon = "/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Fuluo",
+    EscMenuBg = "/Game/UI/Texture/Dynamic/Image/Menu/T_Menu_Fuluo",
+    FirstCharItemId = 1011102,
+    FirstCharItemNum = 1,
+    GUIPathVariable = "Fuluo",
+    GachaIcon = "/Game/UI/Texture/Dynamic/Image/Gacha/Avatar/T_Gacha_AvatarFuluo",
+    Icon = "/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Fuluo",
+    MeleeWeapon = 10101,
+    ModSlot = T.RT_6,
+    ModSlotUnlock = T.RT_7,
+    OpenVersion = 14,
+    RangedWeapon = 20201,
+    RegainCharItemId = 1001102,
+    RegainCharItemNum = 30,
+    ReleaseVersion = 140,
+    RoleId = 1102,
+    SkinId = {1102, 110201},
+    SortPriority = 5009,
+    Sound = "SOUND_ITEM_NORMAL",
+    SpineBp = "WBP_Get_Avatar_WidgetFuluo"
   },
   [1103] = {
     ArmoryCameraPosition = T.RT_1,
@@ -156,7 +197,8 @@ return ReadOnly("Char", {
       11030010,
       11030011,
       11030121,
-      11030122
+      11030122,
+      11030131
     },
     SortPriority = 4006,
     Sound = "SOUND_ITEM_NORMAL",
@@ -207,7 +249,8 @@ return ReadOnly("Char", {
       15010010,
       15010011,
       15010121,
-      15010122
+      15010122,
+      15010131
     },
     SortPriority = 5010,
     Sound = "SOUND_ITEM_NORMAL",
@@ -258,7 +301,8 @@ return ReadOnly("Char", {
       15020010,
       15020011,
       15020121,
-      15020122
+      15020122,
+      15020131
     },
     SortPriority = 5011,
     Sound = "SOUND_ITEM_NORMAL",
@@ -307,7 +351,8 @@ return ReadOnly("Char", {
       1503,
       15030011,
       15030121,
-      15030122
+      15030122,
+      15030131
     },
     SortPriority = 5012,
     Sound = "SOUND_ITEM_NORMAL",
@@ -324,7 +369,7 @@ return ReadOnly("Char", {
     ArmoryCameraRotation = T.RT_2,
     BigIcon = "/Game/UI/Texture/Dynamic/Image/Bust/Avatar/T_Bust_Suyi",
     Camp = "Dongguo",
-    CharColorVar = "Green",
+    CharColorVar = "Cyan",
     CharId = 1504,
     CharMaxLevel = 80,
     CharName = "UI_CHAR_NAME_1504",
@@ -333,14 +378,7 @@ return ReadOnly("Char", {
     CharSubtitle = "UI_CHAR_SUBTITLE_1504",
     CharUnlockRequiredPiece = 30,
     CollectRewardExp = 500,
-    DefaultAccessory = {
-      Back = 40013,
-      FX_Dead = 50001,
-      FX_HelixLeap = 21001,
-      FX_PlungingATK = 11001,
-      FX_Teleport = 60001,
-      Face = 20044
-    },
+    DefaultAccessory = T.RT_3,
     DefaultHairId = 1504,
     DefaultSkinId = 1504,
     DispatchTag = T.RT_8,
@@ -361,10 +399,14 @@ return ReadOnly("Char", {
     RegainCharItemNum = 30,
     ReleaseVersion = 130,
     RoleId = 1504,
-    SkinId = {1504, 150401},
+    SkinId = {
+      1504,
+      150401,
+      15040131
+    },
     SortPriority = 5013,
     Sound = "SOUND_ITEM_NORMAL",
-    SpineBp = "WBP_Get_Avatar_WidgetKezhou",
+    SpineBp = "WBP_Get_Avatar_WidgetSuyi",
     UWeapon = {150401}
   },
   [1601] = {
@@ -407,7 +449,8 @@ return ReadOnly("Char", {
       16010010,
       16010011,
       16010121,
-      16010122
+      16010122,
+      16010131
     },
     SortPriority = 5014,
     Sound = "SOUND_ITEM_NORMAL",
@@ -454,10 +497,12 @@ return ReadOnly("Char", {
     RoleId = 1801,
     SkinId = {
       1801,
+      180101,
       18010010,
       18010011,
       18010121,
-      18010122
+      18010122,
+      18010131
     },
     SortPriority = 5009,
     Sound = "SOUND_ITEM_NORMAL",
@@ -508,7 +553,8 @@ return ReadOnly("Char", {
       21010010,
       21010011,
       21010121,
-      21010122
+      21010122,
+      21010131
     },
     SortPriority = 5004,
     Sound = "SOUND_ITEM_NORMAL",
@@ -602,7 +648,8 @@ return ReadOnly("Char", {
       23010010,
       23010011,
       23010121,
-      23010122
+      23010122,
+      23010131
     },
     SortPriority = 4007,
     Sound = "SOUND_ITEM_NORMAL",
@@ -652,7 +699,8 @@ return ReadOnly("Char", {
       240101,
       24010011,
       24010121,
-      24010122
+      24010122,
+      24010131
     },
     SortPriority = 5007,
     Sound = "SOUND_ITEM_NORMAL",
@@ -702,7 +750,8 @@ return ReadOnly("Char", {
       31010010,
       31010011,
       31010121,
-      31010122
+      31010122,
+      31010131
     },
     SortPriority = 5003,
     Sound = "SOUND_ITEM_NORMAL",
@@ -797,7 +846,8 @@ return ReadOnly("Char", {
       31030010,
       31030011,
       31030121,
-      31030122
+      31030122,
+      31030131
     },
     SortPriority = 4003,
     Sound = "SOUND_ITEM_NORMAL",
@@ -847,7 +897,8 @@ return ReadOnly("Char", {
       32010010,
       32010011,
       32010121,
-      32010122
+      32010122,
+      32010131
     },
     SortPriority = 4004,
     Sound = "SOUND_ITEM_NORMAL",
@@ -858,6 +909,7 @@ return ReadOnly("Char", {
     ArmoryCameraRotation = T.RT_2,
     BigIcon = "/Game/UI/Texture/Dynamic/Image/Bust/Avatar/T_Bust_Kami",
     Camp = "Diguo",
+    CharColorVar = "Pink",
     CharId = 3202,
     CharMaxLevel = 80,
     CharName = "UI_CHAR_NAME_3202",
@@ -895,7 +947,7 @@ return ReadOnly("Char", {
     RegainCharItemNum = 30,
     ReleaseVersion = 130,
     RoleId = 3202,
-    SkinId = {3202},
+    SkinId = {3202, 32020131},
     SortPriority = 4006,
     Sound = "SOUND_ITEM_NORMAL",
     SpineBp = "WBP_Get_Avatar_WidgetKami"
@@ -944,7 +996,8 @@ return ReadOnly("Char", {
       33010010,
       33010011,
       33010121,
-      33010122
+      33010122,
+      33010131
     },
     SortPriority = 4005,
     Sound = "SOUND_ITEM_NORMAL",
@@ -987,10 +1040,12 @@ return ReadOnly("Char", {
     RoleId = 4101,
     SkinId = {
       4101,
+      410101,
       41010010,
       41010011,
       41010121,
-      41010122
+      41010122,
+      41010131
     },
     SortPriority = 4001,
     Sound = "SOUND_ITEM_NORMAL",
@@ -1039,7 +1094,8 @@ return ReadOnly("Char", {
       4102,
       410201,
       41020121,
-      41020122
+      41020122,
+      41020131
     },
     SortPriority = 5001,
     Sound = "SOUND_ITEM_NORMAL",
@@ -1087,7 +1143,8 @@ return ReadOnly("Char", {
     SkinId = {
       4201,
       42010121,
-      42010122
+      42010122,
+      42010131
     },
     SortPriority = 5002,
     Sound = "SOUND_ITEM_NORMAL",
@@ -1137,7 +1194,8 @@ return ReadOnly("Char", {
       42020010,
       42020011,
       42020121,
-      42020122
+      42020122,
+      42020131
     },
     SortPriority = 4001,
     Sound = "SOUND_ITEM_NORMAL",
@@ -1187,7 +1245,8 @@ return ReadOnly("Char", {
       43010010,
       43010011,
       43010121,
-      43010122
+      43010122,
+      43010131
     },
     SortPriority = 5001,
     Sound = "SOUND_ITEM_NORMAL",
@@ -1238,7 +1297,8 @@ return ReadOnly("Char", {
       51010010,
       51010011,
       51010121,
-      51010122
+      51010122,
+      51010131
     },
     SortPriority = 5006,
     Sound = "SOUND_ITEM_NORMAL",
@@ -1289,7 +1349,8 @@ return ReadOnly("Char", {
       51020010,
       51020011,
       51020121,
-      51020122
+      51020122,
+      51020131
     },
     SortPriority = 4002,
     Sound = "SOUND_ITEM_NORMAL",
@@ -1340,7 +1401,8 @@ return ReadOnly("Char", {
       53010010,
       53010011,
       53010121,
-      53010122
+      53010122,
+      53010131
     },
     SortPriority = 5008,
     Sound = "SOUND_ITEM_NORMAL",
@@ -1391,7 +1453,8 @@ return ReadOnly("Char", {
       54010010,
       54010011,
       54010121,
-      54010122
+      54010122,
+      54010131
     },
     SortPriority = 4002,
     Sound = "SOUND_ITEM_NORMAL",
@@ -1437,7 +1500,8 @@ return ReadOnly("Char", {
       16010110,
       16010111,
       16010221,
-      16010222
+      16010222,
+      16010231
     },
     SortPriority = 5015,
     Sound = "SOUND_ITEM_NORMAL",

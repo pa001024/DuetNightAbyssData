@@ -47,11 +47,11 @@ return {
       key = "1759997898226326281",
       type = "StoryNode",
       name = "任务节点",
-      pos = {x = 1233.25, y = 284},
+      pos = {x = 1233.25, y = 282},
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
-        QuestDescription = "",
+        QuestDescription = "DynQuest_Zhentan_Des",
         QuestDeatil = "",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
@@ -61,7 +61,6 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = true,
@@ -69,6 +68,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -174,16 +174,40 @@ return {
             endPort = "Success"
           },
           {
+            startQuest = "17604279169031967675",
+            startPort = "Out",
+            endQuest = "17604127057182948580",
+            endPort = "Stop"
+          },
+          {
             startQuest = "17604126827142947919",
+            startPort = "Out",
+            endQuest = "17703456822893079359",
+            endPort = "In"
+          },
+          {
+            startQuest = "17703456822893079359",
             startPort = "Out",
             endQuest = "17604282865463276093",
             endPort = "In"
           },
           {
-            startQuest = "17604279169031967675",
+            startQuest = "17604126827142947919",
             startPort = "Out",
-            endQuest = "17604127057182948580",
-            endPort = "Stop"
+            endQuest = "17703454647461541973",
+            endPort = "In"
+          },
+          {
+            startQuest = "17703456822893079359",
+            startPort = "Out",
+            endQuest = "17703463490543849796",
+            endPort = "In"
+          },
+          {
+            startQuest = "17604282865463276093",
+            startPort = "Out",
+            endQuest = "17703488981426923508",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -243,14 +267,14 @@ return {
             key = "17604125580152292969",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1635.8333333333333, y = 290.1666666666667},
+            pos = {x = 1631.3333333333333, y = 290.1666666666667},
             propsData = {
               IsNpcNode = true,
               NpcNodeInteractiveName = "",
               NpcId = 818084,
               GuideUIEnable = true,
               GuideType = "N",
-              GuidePointName = "",
+              GuidePointName = "Npc_Dyn_2010071",
               DelayShowGuideTime = 0,
               IsPlayerTurnToNPC = true,
               IsNPCTurnToPlayer = true,
@@ -317,14 +341,14 @@ return {
             key = "17604126827142947919",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 2859.86231884058, y = 281.9153846153845},
+            pos = {x = 2859.86231884058, y = 280.48681318681304},
             propsData = {
               IsNpcNode = true,
               NpcNodeInteractiveName = "",
               NpcId = 818086,
               GuideUIEnable = true,
               GuideType = "N",
-              GuidePointName = "",
+              GuidePointName = "Npc_Dyn_2010073",
               DelayShowGuideTime = 0,
               IsPlayerTurnToNPC = true,
               IsNPCTurnToPlayer = true,
@@ -393,7 +417,7 @@ return {
               NpcId = 818084,
               GuideUIEnable = true,
               GuideType = "N",
-              GuidePointName = "",
+              GuidePointName = "Npc_Dyn_2010071",
               DelayShowGuideTime = 0,
               IsPlayerTurnToNPC = true,
               IsNPCTurnToPlayer = true,
@@ -401,10 +425,9 @@ return {
               FlowAssetPath = "",
               TalkType = "FreeSimple",
               BlendInTime = 0.5,
-              BlendOutTime = 2,
+              BlendOutTime = 0.5,
               InType = "BlendIn",
-              OutType = "FadeOut",
-              ShowFadeDetail = false,
+              OutType = "BlendOut",
               BlendEaseExp = 2,
               UseProceduralCamera = false,
               ProceduralCameraId = 1,
@@ -442,15 +465,17 @@ return {
             pos = {x = 3748.36231884058, y = 290.4697324414715},
             propsData = {
               DialogueId = 71008014,
-              UseTalkFadeOut = false,
-              TalkFadeOutTime = 0
+              UseTalkFadeOut = true,
+              TalkFadeOutTime = 1,
+              UseTalkFadeIn = true,
+              TalkFadeInTime = 1
             }
           },
           ["17604257463642629"] = {
             key = "17604257463642629",
             type = "GoToNode",
             name = "前往",
-            pos = {x = 2291, y = 292},
+            pos = {x = 2291, y = 290.57142857142856},
             propsData = {
               GuideUIEnable = true,
               StaticCreatorId = 2010074,
@@ -500,9 +525,9 @@ return {
             propsData = {
               FacialActionTag = "Hide",
               ListenType = "StaticPoint",
-              StaticPointId = 2010074,
+              StaticPointId = 292010129,
               StaticPointListenMinCM = 0,
-              StaticPointListenMaxCM = 300
+              StaticPointListenMaxCM = 650
             }
           },
           ["17604287360623277166"] = {
@@ -516,7 +541,7 @@ return {
               NpcId = 818084,
               GuideUIEnable = true,
               GuideType = "N",
-              GuidePointName = "",
+              GuidePointName = "Npc_Dyn_2010071",
               DelayShowGuideTime = 0,
               IsPlayerTurnToNPC = true,
               IsNPCTurnToPlayer = true,
@@ -524,7 +549,7 @@ return {
               FlowAssetPath = "",
               TalkType = "FreeSimple",
               BlendInTime = 0.5,
-              BlendOutTime = 2,
+              BlendOutTime = 0.5,
               InType = "BlendIn",
               OutType = "FadeOut",
               ShowFadeDetail = false,
@@ -565,8 +590,57 @@ return {
             pos = {x = 3856.8478260869565, y = 597.5496894409938},
             propsData = {
               DialogueId = 71008015,
-              UseTalkFadeOut = false,
-              TalkFadeOutTime = 0
+              UseTalkFadeOut = true,
+              TalkFadeOutTime = 1,
+              UseTalkFadeIn = true,
+              TalkFadeInTime = 1
+            }
+          },
+          ["17703454647461541973"] = {
+            key = "17703454647461541973",
+            type = "ShowOrHideTaskIndicatorNode",
+            name = "显示/隐藏任务指引点节点",
+            pos = {x = 3118.9761904761917, y = 408.0085630743528},
+            propsData = {
+              IsShow = true,
+              bOpenRangeEffect = true,
+              GuideType = "P",
+              GuideName = "BP_Dyn_Zhentan_RangePoint"
+            }
+          },
+          ["17703456822893079359"] = {
+            key = "17703456822893079359",
+            type = "GoToNode",
+            name = "前往",
+            pos = {x = 2694.690476190478, y = 580.5482456140355},
+            propsData = {
+              GuideUIEnable = false,
+              StaticCreatorId = 292010129,
+              GuideType = "M",
+              GuidePointName = "Mechanism_Dyn_292010129"
+            }
+          },
+          ["17703463490543849796"] = {
+            key = "17703463490543849796",
+            type = "SendMessageNode",
+            name = "发送消息",
+            pos = {x = 2968.976190476193, y = 839.119674185464},
+            propsData = {
+              MessageType = "GameMode",
+              MessageContent = "ShowDynToast",
+              UnitId = -1
+            }
+          },
+          ["17703488981426923508"] = {
+            key = "17703488981426923508",
+            type = "ShowOrHideTaskIndicatorNode",
+            name = "显示/隐藏任务指引点节点",
+            pos = {x = 3285.325396825399, y = 802.6117376775275},
+            propsData = {
+              IsShow = false,
+              bOpenRangeEffect = false,
+              GuideType = "P",
+              GuideName = "BP_Dyn_Zhentan_RangePoint"
             }
           }
         },

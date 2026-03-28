@@ -61,7 +61,6 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = true,
@@ -69,6 +68,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -563,12 +563,14 @@ return {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 818007,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 818008,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 }
               },
               OptionType = "normal",
@@ -588,7 +590,9 @@ return {
             propsData = {
               DialogueId = 71002112,
               UseTalkFadeOut = false,
-              TalkFadeOutTime = 0
+              TalkFadeOutTime = 0,
+              UseTalkFadeIn = false,
+              TalkFadeInTime = 0
             }
           },
           ["17241439372409087"] = {
@@ -637,12 +641,14 @@ return {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 818007,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 818008,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 }
               },
               OptionType = "normal",
@@ -679,7 +685,9 @@ return {
             propsData = {
               DialogueId = 71002118,
               UseTalkFadeOut = false,
-              TalkFadeOutTime = 0
+              TalkFadeOutTime = 0,
+              UseTalkFadeIn = false,
+              TalkFadeInTime = 0
             }
           },
           ["172604455532210101"] = {

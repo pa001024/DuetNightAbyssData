@@ -205,6 +205,10 @@ return ReadOnly("CommonDialogContent", {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Dialog/Widget/WBP_Com_Dialog_Star.WBP_Com_Dialog_Star'",
     ContentId = "Levelup_Star"
   },
+  LimitedPrizePool_DetailHistoryContent = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/LimitedPrizePool/History/WBP_LimitedPrizePool_DetailHistoryContent.WBP_LimitedPrizePool_DetailHistoryContent'",
+    ContentId = "LimitedPrizePool_DetailHistoryContent"
+  },
   List_Friend = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Friend/Widget/WBP_Friend_Window_Dialog.WBP_Friend_Window_Dialog'",
     ContentId = "List_Friend"
@@ -216,6 +220,10 @@ return ReadOnly("CommonDialogContent", {
   Multiple_selection_Button = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Dialog/Widget/WBP_Com_Dialog_Sift.WBP_Com_Dialog_Sift'",
     ContentId = "Multiple_selection_Button"
+  },
+  RandomBox = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Bag/Widget/WBP_Bag_RandomBoxDialog.WBP_Bag_RandomBoxDialog'",
+    ContentId = "RandomBox"
   },
   RewardPack_Detail = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/Dispatch/WBP_Map_DialogDispatchPackDetail'",
@@ -301,6 +309,14 @@ return ReadOnly("CommonDialogContent", {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Bag/Widget/Optional/WBP_Bag_OptionalProp.WBP_Bag_OptionalProp'",
     ContentId = "WBP_Bag_OptionalProp_Content"
   },
+  WBP_BattleSolutionPart = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_BattleSolutionPart_M.WBP_BattleSolutionPart_M'",
+    ContentId = "WBP_BattleSolutionPart"
+  },
+  WBP_Chat_ChannelContent = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Chat/Widget/Channel/WBP_Chat_ChannelContent.WBP_Chat_ChannelContent'",
+    ContentId = "WBP_Chat_ChannelContent"
+  },
   WBP_Experience_BuffDialog = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Experience/PC/WBP_Experience_Dialog.WBP_Experience_Dialog'",
     ContentId = "WBP_Experience_BuffDialog"
@@ -340,6 +356,10 @@ return ReadOnly("CommonDialogContent", {
   WBP_PersonalInfo_Title_Content = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/PersonalInfo/Widget/Title/WBP_PersonalInfo_Title_Content.WBP_PersonalInfo_Title_Content'",
     ContentId = "WBP_PersonalInfo_Title_Content"
+  },
+  WBP_Pet_skill_Preview = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Armory/Widget/Pet/WBP_Armory_Pet_InfoDialog.WBP_Armory_Pet_InfoDialog'",
+    ContentId = "WBP_Pet_skill_Preview"
   },
   WBP_Play_Task_RewardPreview = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Play/Widget/Task/WBP_Play_Task_RewardPreview.WBP_Play_Task_RewardPreview'",

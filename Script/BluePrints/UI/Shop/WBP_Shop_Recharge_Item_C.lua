@@ -102,6 +102,7 @@ function M:Charge()
     PaymentParameters.cpOrder = OrderId
     PaymentParameters.callbackUrl = CallbackUrl
     local GameRoleInfo = HeroUSDKUtils.GenHeroHDCGameRoleInfo()
+    DebugPrint("Send HeroSDKPay:" .. OrderId)
     HeroUSDKSubsystem():HeroSDKPay(PaymentParameters, GameRoleInfo, GText(self.ItemName))
     local TrackInfo = {}
     TrackInfo.product_id = DataMgr.ShopItem2PayGoods[self.ShopItemId]

@@ -341,7 +341,7 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   local IsEventHandled = false
-  if not UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) or InKeyName == UIConst.GamePadKey.FaceButtonDown then
+  if not UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) or InKeyName == UIConst.GamePadKey.FaceButtonBottom then
   end
   if UIConst.GamePadKey.FaceButtonRight == InKeyName and self.OnGetBackFocusWidget then
     local Widget = self.OnGetBackFocusWidget(MyGeometry, InKeyEvent)

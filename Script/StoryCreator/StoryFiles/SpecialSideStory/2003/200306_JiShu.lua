@@ -218,17 +218,20 @@ return {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200002,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false
+                  TalkActorVisible = false,
+                  AroundPlayer = false
                 }
               },
               OptionType = "normal",
@@ -237,6 +240,7 @@ return {
               SwitchToMaster = "None",
               bNpcActionKeepIn = true,
               bNpcActionKeepOut = false,
+              bForceWaitNavLoaded = false,
               NormalOptions = {},
               OverrideFailBlend = false
             }
@@ -338,7 +342,6 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
@@ -346,6 +349,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 104107,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
@@ -601,37 +605,13 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17682957329865737",
-            startPort = "true",
-            endQuest = "17682957357305802",
-            endPort = "In"
-          },
-          {
-            startQuest = "17682957357305802",
-            startPort = "true",
-            endQuest = "17682957155525575",
-            endPort = "In"
-          },
-          {
-            startQuest = "17682957155525575",
-            startPort = "true",
-            endQuest = "17682957481415960",
-            endPort = "In"
-          },
-          {
-            startQuest = "17682957481415960",
-            startPort = "Out",
-            endQuest = "17682957560836138",
-            endPort = "In"
-          },
-          {
             startQuest = "17557456730894691",
             startPort = "Out",
-            endQuest = "17689102612451598",
+            endQuest = "17685511348055533186",
             endPort = "In"
           },
           {
-            startQuest = "17689102612451598",
+            startQuest = "17685511348055533186",
             startPort = "Fail",
             endQuest = "1755831902029947888",
             endPort = "In"
@@ -834,7 +814,7 @@ return {
             key = "17557456730894691",
             type = "TalkNode",
             name = "开车对话",
-            pos = {x = 1561.8797034830409, y = 1405.312364945649},
+            pos = {x = 1557.5939891973267, y = 1405.312364945649},
             propsData = {
               IsNpcNode = false,
               FirstDialogueId = 51103032,
@@ -884,7 +864,7 @@ return {
             key = "1755831411713938883",
             type = "ExecuteBlueprintFunctionCheckVarNode",
             name = "执行变量检测函数",
-            pos = {x = 1005.8523245330521, y = 1002.8985515258735},
+            pos = {x = 997.2808959616235, y = 1008.6128372401591},
             propsData = {
               FunctionName = "Equal",
               VarName = "JiShuvar1",
@@ -912,7 +892,7 @@ return {
             key = "1755831871030947037",
             type = "ExecuteBlueprintFunctionCheckVarNode",
             name = "执行变量检测函数",
-            pos = {x = 1007.2638255707135, y = 1410.434332437429},
+            pos = {x = 1002.9781112849993, y = 1406.1486181517146},
             propsData = {
               FunctionName = "Equal",
               VarName = "JiShuvar3",
@@ -933,7 +913,7 @@ return {
             key = "1755831902029947888",
             type = "SetVarNode",
             name = "设置变量值",
-            pos = {x = 2131.2409102507377, y = 1402.8463718685855},
+            pos = {x = 2132.160590570418, y = 1400.114703536917},
             propsData = {VarName = "JiShuvar3", VarValue = 1}
           },
           ["1756448910150960311"] = {
@@ -1157,89 +1137,28 @@ return {
             key = "176768532780615414",
             type = "ShowGuideMainNode",
             name = "显示图文引导",
-            pos = {x = 1276.857142857143, y = 1133.7142857142858},
+            pos = {x = 1234, y = 1148},
             propsData = {GuideId = 94}
           },
           ["176768534059815750"] = {
             key = "176768534059815750",
             type = "ShowGuideMainNode",
             name = "显示图文引导",
-            pos = {x = 1562.6350023165544, y = 1335.9637269987807},
+            pos = {x = 1568.3492880308402, y = 1327.392298427352},
             propsData = {GuideId = 95}
           },
           ["176768534821015892"] = {
             key = "176768534821015892",
             type = "ShowGuideMainNode",
             name = "显示图文引导",
-            pos = {x = 1562.6350023165546, y = 1537.392294171499},
+            pos = {x = 1568.3492880308404, y = 1561.6780084572133},
             propsData = {GuideId = 93}
           },
-          ["17682957155525575"] = {
-            key = "17682957155525575",
-            type = "ExecuteBlueprintFunctionCheckVarNode",
-            name = "执行变量检测函数",
-            pos = {x = 1523.7972027972028, y = 1780.7184482184484},
-            propsData = {
-              FunctionName = "Equal",
-              VarName = "JiShuvar3",
-              Duration = 0,
-              VarInfos = {
-                {VarName = "Value", VarValue = "0"}
-              }
-            }
-          },
-          ["17682957329865737"] = {
-            key = "17682957329865737",
-            type = "ExecuteBlueprintFunctionCheckVarNode",
-            name = "执行变量检测函数",
-            pos = {x = 1013.7972027972024, y = 1766.4327339327342},
-            propsData = {
-              FunctionName = "Equal",
-              VarName = "JiShuvar1",
-              Duration = 0,
-              VarInfos = {
-                {VarName = "Value", VarValue = "1"}
-              }
-            }
-          },
-          ["17682957357305802"] = {
-            key = "17682957357305802",
-            type = "ExecuteBlueprintFunctionCheckVarNode",
-            name = "执行变量检测函数",
-            pos = {x = 1270.9400599400599, y = 1766.432733932734},
-            propsData = {
-              FunctionName = "Equal",
-              VarName = "JiShuvar2",
-              Duration = 0,
-              VarInfos = {
-                {VarName = "Value", VarValue = "1"}
-              }
-            }
-          },
-          ["17682957481415960"] = {
-            key = "17682957481415960",
-            type = "GoToNode",
-            name = "前往旋转扇叶",
-            pos = {x = 1808.082917082917, y = 1775.0041625041624},
-            propsData = {
-              GuideUIEnable = false,
-              StaticCreatorId = 2080085,
-              GuideType = "M",
-              GuidePointName = "Mechanism_20030604_2080085"
-            }
-          },
-          ["17682957560836138"] = {
-            key = "17682957560836138",
-            type = "SetVarNode",
-            name = "设置变量值",
-            pos = {x = 2082.368631368631, y = 1780.7184482184482},
-            propsData = {VarName = "JiShuvar3", VarValue = 1}
-          },
-          ["17689102612451598"] = {
-            key = "17689102612451598",
+          ["17685511348055533186"] = {
+            key = "17685511348055533186",
             type = "ConditionNode",
             name = "条件节点",
-            pos = {x = 1843.7142857142858, y = 1411.142857142857},
+            pos = {x = 1840.7636937366042, y = 1401.620241600505},
             propsData = {ConditionId = 1000609}
           }
         },
@@ -1265,7 +1184,6 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
@@ -1273,6 +1191,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 104107,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
@@ -1410,7 +1329,6 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
@@ -1418,6 +1336,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 104107,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
@@ -1518,7 +1437,7 @@ return {
       key = "17524799552681856",
       type = "StoryNode",
       name = "与公尚对话",
-      pos = {x = 1961.4186802631814, y = 273.66279331419275},
+      pos = {x = 1960.6078694523706, y = 272.04117169257114},
       propsData = {
         QuestId = 20030603,
         QuestDescriptionComment = "",
@@ -1532,7 +1451,6 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
@@ -1540,6 +1458,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 104107,
         SubRegionIdList = {},
         StoryGuideType = "Npc",
@@ -1641,22 +1560,26 @@ return {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200002,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 700323,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false
+                  TalkActorVisible = false,
+                  AroundPlayer = false
                 }
               },
               OptionType = "normal",
@@ -1665,6 +1588,7 @@ return {
               SwitchToMaster = "None",
               bNpcActionKeepIn = true,
               bNpcActionKeepOut = false,
+              bForceWaitNavLoaded = false,
               NormalOptions = {},
               OverrideFailBlend = false
             }
@@ -1732,7 +1656,6 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
@@ -1740,6 +1663,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 104107,
         SubRegionIdList = {},
         StoryGuideType = "Npc",
@@ -1877,22 +1801,26 @@ return {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200002,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false
+                  TalkActorVisible = false,
+                  AroundPlayer = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 700323,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 }
               },
               OptionType = "normal",
@@ -1901,6 +1829,7 @@ return {
               SwitchToMaster = "None",
               bNpcActionKeepIn = true,
               bNpcActionKeepOut = false,
+              bForceWaitNavLoaded = false,
               NormalOptions = {},
               OverrideFailBlend = false
             }

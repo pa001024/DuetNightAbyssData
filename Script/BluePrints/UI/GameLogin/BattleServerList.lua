@@ -291,12 +291,6 @@ return {
     ip = "10.110.0.18",
     port = 8000
   },
-  [70004] = {
-    area = "Europe",
-    hostnum = 70004,
-    ip = "10.50.0.84",
-    port = 8000
-  },
   [80001] = {
     area = "China",
     hostnum = 80001,
@@ -313,18 +307,6 @@ return {
     area = "America",
     hostnum = 80003,
     ip = "10.110.5.171",
-    port = 8000
-  },
-  [90001] = {
-    area = "China",
-    hostnum = 90001,
-    ip = "10.112.0.175",
-    port = 8000
-  },
-  [90002] = {
-    area = "China",
-    hostnum = 90002,
-    ip = "10.112.0.179",
     port = 8000
   }
 }

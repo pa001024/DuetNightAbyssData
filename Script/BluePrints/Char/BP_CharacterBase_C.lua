@@ -2,7 +2,7 @@ require("UnLua")
 local EffectResults = require("BluePrints.Combat.BattleLogic.EffectResults")
 local EMCache = require("EMCache.EMCache")
 local TimeUtils = require("Utils.TimeUtils")
-local StoryPlayableUtils = require("BluePrints.Story.StoryPlayableUtils").StoryPlayableUtils
+local StoryPlayableUtils = require("BluePrints.Story.StoryPlayableUtils")
 local GMVariable = require("BluePrints.UI.GMInterface.GMVariable")
 local MiscUtils = require("Utils.MiscUtils")
 local BP_CharacterBase_C = Class({
@@ -324,10 +324,12 @@ end
 
 function BP_CharacterBase_C:CommonRecoveryImpl()
   self.AlreadyDead = false
+  DebugPrint("Tianyi@ Character Recovered: " .. self:GetName())
   if self:IsPlayer() or self:IsPhantom() then
     self:TryLeaveDying()
     local CharacterFashion = self.CharacterFashion
     if CharacterFashion then
+      DebugPrint("Tianyi@ Init AppearanceSuitInfo when Recovery: " .. self:GetName())
       self:InitAppearanceSuit(CharacterFashion.AppearanceSuitInfo)
       local AdditionalFXID = DataMgr.Model[self.ModelId].AdditionalFXID
       if AdditionalFXID then
@@ -338,6 +340,8 @@ function BP_CharacterBase_C:CommonRecoveryImpl()
         end
         CharacterFashion:InitColorsWithInfo()
       end
+    else
+      DebugPrint("Tianyi@ CharacterFashion is nil when Recovery: " .. self:GetName())
     end
     if MiscUtils.IsAutonomousProxy(self) or IsStandAlone(self) then
       self.DodgeCount = 0
@@ -552,12 +556,6 @@ function BP_CharacterBase_C:CheckMountCanFly()
     return true
   end
   if not self.CurrentMountId then
-    return false
-  end
-  if 0 == self.CurrentMountId then
-    if self.FlyMount then
-      self.FlyMount = false
-    end
     return false
   end
   return Avatar:CheckMountCanFly(self.CurrentMountId)

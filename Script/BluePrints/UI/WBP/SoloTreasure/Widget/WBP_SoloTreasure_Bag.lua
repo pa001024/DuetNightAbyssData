@@ -1,58 +1,271 @@
 require("UnLua")
 require("DataMgr")
+local InventoryCommonConst = require("BluePrints.UI.WBP.SoloTreasure.Widget.Inventory.InventoryCommonConst")
 local InventoryController = require("BluePrints.UI.WBP.SoloTreasure.Widget.Inventory.InventoryController")
-local M = Class("BluePrints.UI.BP_UIState_C")
+local SoloTreasureUtils = require("BluePrints.UI.WBP.SoloTreasure.Widget.SoloTreasureUtils")
+local M = Class({
+  "BluePrints.UI.BP_UIState_C"
+})
 
 function M:Construct()
+  self.NumChangePeriod = self.NumChangePeriod or 0.5
 end
 
 function M:Destruct()
+  self:StopScoreSound()
 end
 
 function M:OnLoaded(...)
-  self.SearchId = (...)
-  self.SearchId = tonumber(self.SearchId)
-  if not self.bInit then
-    self:Init()
-    self.bInit = true
+  local ServerEntity = GWorld:GetServerEntity()
+  if not ServerEntity then
+    GWorld.logger.error("搜打撤副本内才能打开背包")
+    self.Super.Close(self)
+    return
   end
-  self:PlayInAnim()
-  self:UpdateRecycleSection()
-  self:UpdateSearchSection(self.SearchId)
-  self:UpdateBagSection()
-  self.WBP_Close:BindEventOnClicked(self, function()
+  self.Dungeonobject = ServerEntity:GetDungeonObject()
+  if not self.Dungeonobject then
+    GWorld.logger.error("搜打撤副本内才能打开背包")
+    self.Super.Close(self)
+    return
+  end
+  local Params = (...)
+  if type(Params) == "table" and Params.bSacrifice then
+    self.SacrificeParams = Params
+    self.MechanismUid = nil
+  elseif type(Params) == "string" or type(Params) == "number" then
+    self.MechanismUid = Params
+    self.SacrificeParams = nil
+  else
+    self.MechanismUid = nil
+    self.SacrificeParams = nil
+  end
+  local ControllerInitParams = {MainWidget = self}
+  self.InventoryController = InventoryController
+  InventoryController:Init(ControllerInitParams)
+  self.BagId = InventoryController.InventoryModel.BagId
+  InventoryController:OnMainWidgetLoaded(ControllerInitParams)
+  self:InitBagSection()
+  if self.SacrificeParams then
+    self.Bag_Search:SetVisibility(ESlateVisibility.Collapsed)
+    self:InitSacrificeSection(self.SacrificeParams)
+  elseif self.MechanismUid then
+    self.Bag_Sacrifice:SetVisibility(ESlateVisibility.Collapsed)
+    self:InitSearchSection(self.MechanismUid)
+  else
+    self.Bag_Search:SetVisibility(ESlateVisibility.Collapsed)
+    self.Bag_Sacrifice:SetVisibility(ESlateVisibility.Collapsed)
+  end
+  self:InitRecycleSection()
+  self:InitEvents()
+  self:InitBuff()
+  self:SetVisibility(ESlateVisibility.Collapsed)
+  self:AddDelayFrameFunc(function()
+    self:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self:PlayInAnim()
+  end, self.DelayFrame, "PlayInAnim")
+  EventManager:FireEvent(EventID.ShowCountDownTips)
+  AudioManager(self):PlayUISound(self, "event:/ui/activity/sdc_normal_panel_show", "BagOpen", nil)
+end
+
+function M:InitBagSection()
+  self.WBP_Close:BindEventOnPressed(self, function()
+    if not UIUtils.IsGamepadInput() then
+      return
+    end
     self:CloseSelf()
   end)
+  self.WBP_Close:BindEventOnClicked(self, function()
+    if UIUtils.IsGamepadInput() then
+      return
+    end
+    self:CloseSelf()
+  end)
+  self.Text_Top:SetText(GText("UI_Extraction_TotalScore"))
+  self.Btn_Search:BindEventOnPressed(self, function()
+    if UIUtils.IsGamepadInput() then
+      return
+    end
+    self:OnBtnSearchPressed()
+  end)
+  local InitParams = {Parent = self}
+  self.Bag_Detail:Init(InitParams)
+  self.Bag_Detail:SetVisibility(ESlateVisibility.Collapsed)
+  self:AddDelayFrameFunc(function()
+    self:UpdateTreasureValues()
+    self:UpdateBagGridOccupancy()
+  end, self.DelayFrame, "UpdateTreasureValues")
+  self:UpdateShowTotalScore(0)
+  self.Text_Center:SetText(GText("UI_Extraction_TreasureStorage"))
+  self.Text_Capacity:SetText(GText("UI_Extraction_BackpackSpace"))
+  self.Text_Title:SetText(GText("UI_Extraction_Backpack"))
 end
 
-function M:Init()
-  self.InventoryController = InventoryController
-  local ControllerParams = {MainWidget = self}
-  self.InventoryController:Init(ControllerParams)
-  self:InitStaticRecycleSection()
-  self:InitStaticBagSection()
+function M:UpdateTreasureValues()
+  local BagTreasureValue = InventoryController:GetBagTreasureValue()
+  self.Dungeonobject:OnNotifyGameModeDungeonEvent_OnUpdateTreasureScore(BagTreasureValue)
 end
 
-function M:InitStaticRecycleSection()
+function M:UpdateBagGridOccupancy()
+  local BagGridOccupancyData = InventoryController:GetBagGridOccupancyData()
+  if BagGridOccupancyData then
+    self.Text_CapacityNum:SetText(tostring(BagGridOccupancyData.OccupancyGridNum .. "/" .. BagGridOccupancyData.AllGridNum))
+  end
 end
 
-function M:UpdateRecycleSection()
-end
-
-function M:UpdateSearchSection(SearchId)
-  if SearchId then
-    local InitParams = {Parent = self, SearchId = SearchId}
-    self.Bag_Search:Init(InitParams)
-    self.Bag_Search:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+function M:InitSearchSection(MechanismUid)
+  if MechanismUid then
+    local InitParams = {Parent = self, MechanismUid = MechanismUid}
+    self.Bag_Search.Panel_Search:SetVisibility(ESlateVisibility.Collapsed)
+    self:AddDelayFrameFunc(function()
+      self.Bag_Search:Init(InitParams)
+      self.Bag_Search:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    end, self.DelayFrame, "InitSearchSection")
   else
     self.Bag_Search:SetVisibility(ESlateVisibility.Collapsed)
   end
 end
 
-function M:InitStaticBagSection()
+function M:InitSacrificeSection(SacrificeParams)
+  if not self.Bag_Sacrifice then
+    return
+  end
+  local InitParams = {
+    Parent = self,
+    ServerUniqueId = SacrificeParams.ServerUniqueId,
+    TributeId = SacrificeParams.TributeId,
+    BPGambleMech = SacrificeParams.BPGambleMech
+  }
+  self.Bag_Sacrifice.Panel_Search:SetVisibility(ESlateVisibility.Collapsed)
+  self:AddDelayFrameFunc(function()
+    self.Bag_Sacrifice:Init(InitParams)
+    self.Bag_Sacrifice:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  end, self.DelayFrame, "InitSacrificeSection")
 end
 
-function M:UpdateBagSection()
+function M:InitRecycleSection()
+  local RecycleParams = {Parent = self}
+  self:AddDelayFrameFunc(function()
+    self.Btn_Recycle:Init(RecycleParams)
+  end, self.DelayFrame + 1, "InitRecycleSection")
+end
+
+function M:InitEvents()
+  self.ScrollBoxPockets.OnUserScrolled:Add(self, function()
+    InventoryController.bDetectDrag = false
+  end)
+  InventoryController.bDetectDrag = false
+  self:AddDispatcher(EventID.OnTreasureItemDrop, self, function(_, MoveInfo)
+    self:AddDelayFrameFunc(function()
+      self:UpdateTreasureValues()
+    end, 2, "UpdateTreasureValues")
+    self:UpdateBagGridOccupancy()
+    self.ScrollBoxPockets:SetVisibility(ESlateVisibility.Visible)
+    if not MoveInfo.bCreateTreasureDataToPocket then
+      AudioManager(self):PlayUISound(self, "event:/ui/activity/auto_chess_cell_click_replace", nil, nil)
+    end
+  end)
+  self:AddDispatcher(EventID.OnTreasureItemDragDetected, self, function(_, DragGridData)
+    self.ScrollBoxPockets:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  end)
+  self:AddDispatcher(EventID.OnTreasureItemDragCancelled, self, function(_)
+    self.ScrollBoxPockets:SetVisibility(ESlateVisibility.Visible)
+  end)
+  self:AddDispatcher(EventID.OnUpdateBagTreasureScore, self, function(CallObj, AddTreasureScore)
+    self:UpdateShowTotalScore(AddTreasureScore)
+  end)
+  self:AddDispatcher(EventID.MainPlayerBeAttacked, self, function(_)
+    if self._hitAnimOnCD then
+      return
+    end
+    self._hitAnimOnCD = true
+    self:StopAnimation(self.Hit)
+    self:PlayAnimation(self.Hit)
+    self:AddTimer(1.0, function(s)
+      s._hitAnimOnCD = false
+    end, false, 0, "HitAnimCD")
+  end)
+  if self.InitPCEvents then
+    self:InitPCEvents()
+  end
+end
+
+function M:UpdateShowTotalScore(AddTreasureScore)
+  self.TotalScore = (self.Dungeonobject.TreasureScore or 0) + (self.Dungeonobject.KillMonsterScore or 0)
+  self.Text_Num:SetText(Utils.FormatNumber(self.TotalScore, false))
+  UIUtils.RollingNumberEffect(self, self.Text_Num, self.TotalScore - AddTreasureScore, AddTreasureScore, self.NumChangePeriod)
+  if 0 ~= AddTreasureScore then
+    AudioManager(self):PlayUISound(self, "event:/ui/activity/sdc_bag_score_num_change", "ScoreNumChange", nil)
+    self:AddTimer(self.NumChangePeriod, function()
+      self:StopScoreSound()
+    end, false, 0, "StopScoreSound")
+  end
+end
+
+function M:StopScoreSound()
+  self:RemoveTimer("StopScoreSound")
+  AudioManager(self):StopSound(self, "ScoreNumChange")
+end
+
+function M:InitBuff()
+  self.ActivatedTicketId = self.Dungeonobject.SoloTreasureTicketId
+  if not self.ActivatedTicketId then
+    self.Buff:SetVisibility(ESlateVisibility.Collapsed)
+  else
+    local LotteryData = DataMgr.ExtractionLottery[self.ActivatedTicketId]
+    if not LotteryData then
+      DebugPrint("@zyh 没有该Id的彩票" .. self.ActivatedTicketId)
+    end
+    DebugPrint("彩票的品质为" .. LotteryData.Quality)
+    self.Buff:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.Buff:InitData({
+      Description = LotteryData.Desc,
+      Quality = LotteryData.Quality
+    })
+  end
+end
+
+function M:RemoveEvents()
+  self:RemoveDispatcher(EventID.OnTreasureItemDrop, self)
+  self:RemoveDispatcher(EventID.OnTreasureItemDragDetected, self)
+  self:RemoveDispatcher(EventID.OnTreasureItemDragCancelled, self)
+  self:RemoveDispatcher(EventID.OnUpdateBagTreasureScore, self)
+  self:RemoveDispatcher(EventID.MainPlayerBeAttacked, self)
+  if self.RemovePCEvents then
+    self:RemovePCEvents()
+  end
+end
+
+function M:Tick(Geometry, DeltaTime)
+  if InventoryController and InventoryController.bInit then
+    InventoryController:Tick(Geometry, DeltaTime)
+  end
+  if self._PendingComTabState then
+    local state = self._PendingComTabState
+    self._PendingComTabState = nil
+    self._PendingComTabPriority = nil
+    self:_DoUpdateComTab(state)
+  end
+  if UIUtils.IsGamepadInput() then
+    self:UpdateGamepadCursorPosition()
+  end
+  if UIUtils.CheckScrollBoxCanScroll(self.ScrollBoxPockets) then
+    local TriggerParams = {
+      DeltaTime = DeltaTime,
+      ScrollBox = self.ScrollBoxPockets,
+      TriggerScrollUp = self.DragScrollTip_Up,
+      TriggerScrollDown = self.DragScrollTip_Bottom,
+      ShowPocketsScrollUpArrow = self.ShowPocketsScrollUpArrow,
+      ShowPocketsScrollDownArrow = self.ShowPocketsScrollDownArrow,
+      CurTouchPos = self.ScreenSpacePositionTouchPos or nil
+    }
+    SoloTreasureUtils:TickTriggerScrollSizeBox(TriggerParams)
+  end
+  if self.MechanismUid then
+    self.Bag_Search:Tick(Geometry, DeltaTime)
+  end
+  if self.SacrificeParams and self.Bag_Sacrifice then
+    self.Bag_Sacrifice:Tick(Geometry, DeltaTime)
+  end
 end
 
 function M:PlayInAnim()
@@ -61,82 +274,92 @@ end
 
 function M:CloseSelf()
   self:StopAllAnimations()
-  self:PlayAnimation(self.Out)
-  self:ClearAllPockets()
+  self:StopScoreSound()
+  AudioManager(self):StopSound(self, "ItemDetecting")
+  AudioManager(self):SetEventSoundParam(self, "BagOpen", {ToEnd = 1})
+  self:PlayAnimation(self.Out, 0, 1, EUMGSequencePlayMode.Forward, 1.5)
+  self:RemoveEvents()
   self:BindToAnimationFinished(self.Out, {
     self,
     function()
       self:UnbindAllFromAnimationFinished(self.Out)
-      local Controller = self.InventoryController
-      local ClearPocketQueue = self._ClearPocketQueue
-      if ClearPocketQueue and #ClearPocketQueue > 0 and Controller and Controller.ClearPocket then
-        while #ClearPocketQueue > 0 do
-          local Pocket = table.remove(ClearPocketQueue, 1)
-          if Pocket and IsValid(Pocket) then
-            Controller:ClearPocket(Pocket)
-          end
-        end
-      end
-      self:Close()
+      self:TryClose()
     end
   })
-  self.Bag_Search:CloseSelf()
-end
-
-function M:ClearAllPockets()
-  local Controller = self.InventoryController
-  if not (Controller and Controller.InventoryModel) or not Controller.InventoryModel.Pockets then
-    return false
+  if self.Bag_Search and IsValid(self.Bag_Search) and self.MechanismUid then
+    self.Bag_Search:CloseSelf()
+    self.MechanismUid = nil
   end
-  local Queue = {}
-  local Pockets = Controller.InventoryModel.Pockets
-  local SearchPocketData = Pockets.WBP_Search_Bag
-  if SearchPocketData and SearchPocketData.Pocket and IsValid(SearchPocketData.Pocket) then
-    table.insert(Queue, SearchPocketData.Pocket)
+  if self.Bag_Sacrifice and IsValid(self.Bag_Sacrifice) and self.SacrificeParams then
+    self.Bag_Sacrifice:CloseSelf()
+    self.SacrificeParams = nil
   end
-  for Name, PocketData in pairs(Pockets) do
-    if "WBP_Search_Bag" ~= Name then
-      local Pocket = PocketData and PocketData.Pocket
-      if Pocket and IsValid(Pocket) then
-        table.insert(Queue, Pocket)
-      end
+  self.Btn_Recycle:CloseSelf()
+  self.Bag_Detail:CloseSelf()
+  for CurBagPocketName, CurBagPocketInfo in pairs(InventoryController.CurBagPocketNames) do
+    local CurBagPocketWidget = self[CurBagPocketName]
+    if CurBagPocketWidget and IsValid(CurBagPocketWidget) then
+      CurBagPocketWidget:Close()
     end
   end
-  self._ClearPocketQueue = Queue
-  if self._ClearPocketQueue and #self._ClearPocketQueue > 0 then
-    self.ClearFrameCount = 0
-    self:_ProcessClearPocketChunk()
-    self:AddDelayFrameFunc(function()
-      if self then
-        self:_ProcessClearPocketChunk()
-      end
-    end, 2, "ClearAllPocketsChunk" .. self.ClearFrameCount)
-  end
-  return true
 end
 
-function M:_ProcessClearPocketChunk()
-  self.ClearFrameCount = self.ClearFrameCount + 1
-  if not self._ClearPocketQueue or 0 == #self._ClearPocketQueue then
+function M:TryClose()
+  if self.GameInputModeSubsystem then
+    self.GameInputModeSubsystem:SetNavigateWidgetOpacity(1)
+  end
+  self.MechanismUid = nil
+  self.TempBagId = nil
+  InventoryController:OnMainWidgetClosed()
+  self.Super.Close(self)
+end
+
+function M:OnBtnSearchPressed()
+  if InventoryController.bDraging then
     return
   end
-  local Controller = self.InventoryController
-  local Pocket = table.remove(self._ClearPocketQueue, 1)
-  if Pocket and IsValid(Pocket) and Controller and Controller.ClearPocket then
-    Controller:ClearPocket(Pocket)
-  end
-  if self._ClearPocketQueue and #self._ClearPocketQueue > 0 then
-    self:AddDelayFrameFunc(function()
-      if self then
-        self:_ProcessClearPocketChunk()
-      end
-    end, 1, "ClearAllPocketsChunk" .. self.ClearFrameCount)
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", nil, nil)
+  if self.bInBagDetailState then
+    self:LeaveBagDetailState()
+  else
+    self:EnterBagDetailState()
   end
 end
 
-function M:Close()
-  self:SetInputUIOnly(false)
-  self.Super.Close(self)
+function M:EnterBagDetailState()
+  if self.bInBagDetailState or InventoryController.bDraging then
+    return
+  end
+  self.Bag_Detail:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  self.Bag_Detail:PlayInAnim()
+  self.bInBagDetailState = true
+  if self.UpdateComTab then
+    self:UpdateComTab("BagDetail")
+  end
+  self.Btn_Search:SetHoldUp(true)
+  self.Btn_Search:StopAllAnimations()
+  self.Btn_Search:PlayAnimation(self.Btn_Search.Click)
+end
+
+function M:LeaveBagDetailState()
+  if not self.bInBagDetailState or InventoryController.bDraging then
+    return
+  end
+  self.Bag_Detail:PlayOutAnim()
+  self.bInBagDetailState = false
+  if self.UpdateComTab then
+    self:UpdateComTab("Normal")
+  end
+  self.Btn_Search:SetHoldUp(false)
+  self.Btn_Search:UnbindFromAnimationFinished(self.Btn_Search.Unhover)
+  self.Btn_Search:PlayAnimation(self.Btn_Search.Normal)
+end
+
+function M:OnFocusReceived(MyGeometry, InFocusEvent)
+  if UIUtils.IsGamepadInput() then
+    self.BagSelect_Controller:SetFocus()
+  end
+  return UE4.UWidgetBlueprintLibrary.Handled()
 end
 
 return M

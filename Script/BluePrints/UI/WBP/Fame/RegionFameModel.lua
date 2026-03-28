@@ -128,6 +128,9 @@ function M:GetEntrustTasks(RegionId)
     return
   end
   local Quests = Avatar:GetReputationEntrustQuest(RegionId)
+  if not Quests then
+    return
+  end
   local AllEntrustTask = {}
   local Cache = DataMgr.ReputationEntrust
   for TaskId, TaskState in pairs(Quests) do
@@ -216,7 +219,7 @@ function M:GetEntrustTasks(RegionId)
     end)
     local Result = {}
     for _, Task in ipairs(TmpSortData) do
-      table.insert(Result, Task.TaskInfo)
+      table.insert(Result, Task)
     end
     return Result
   end
@@ -326,7 +329,7 @@ function M:GetCurrentRecurringTaskLevel(RegionId)
     if State == CommonConst.RecurringTaskState.Doing then
       FinRarity = AllTaskData[QuestId].Rarity
       CurrentDoingRecurringTask = QuestId
-    elseif State == CommonConst.RecurringTaskState.AlreadyClaimed or State == CommonConst.RecurringTaskState.CanClaim then
+    elseif State == CommonConst.RecurringTaskState.AlreadyClaimed then
       FinRarity = AllTaskData[QuestId].Rarity + 1
     end
   end
@@ -348,6 +351,19 @@ function M:GetTargetRegionAllCanClaimRecurringTasks(RegionId)
     end
   end
   return CanClaimTasks
+end
+
+function M:GetTargetRegionEntrustTaskCanSubmit(RegionId)
+  local EntrustTasks = self:GetEntrustTasks(RegionId)
+  if not EntrustTasks then
+    return false
+  end
+  for _, TaskInfo in pairs(EntrustTasks) do
+    if TaskInfo.CanSubmit and TaskInfo.TaskState == CommonConst.EntrustFameTaskState.ReadyClaim then
+      return true
+    end
+  end
+  return false
 end
 
 function M:GetTargetRecurringTaskStat(RegionId, TaskId)

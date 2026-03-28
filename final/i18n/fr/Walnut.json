@@ -1440,6 +1440,66 @@
     "类型": 1
   },
   {
+    "id": 1024,
+    "名称": "密函：苏乙",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声",
+      "沉浸式戏剧"
+    ],
+    "奖励": [
+      {
+        "id": 1001504,
+        "type": "Resource",
+        "count": 10,
+        "name": "Fragment de pensée : Su Yi"
+      },
+      {
+        "id": 1001504,
+        "type": "Resource",
+        "count": 2,
+        "name": "Fragment de pensée : Su Yi"
+      },
+      {
+        "id": 30001,
+        "type": "Resource",
+        "count": 1,
+        "name": "Essence vitale"
+      },
+      {
+        "id": 2012,
+        "type": "Resource",
+        "count": 1,
+        "name": "Mélodie de combat II"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Manuel d’arme II"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice de Mandat scellé"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 1
+  },
+  {
     "id": 2001,
     "名称": "Mandat scellé : Trancheur d’ambre",
     "获取途径": [
@@ -3841,7 +3901,7 @@
   },
   {
     "id": 2041,
-    "名称": "Mandat scellé : Hymne de l'aube",
+    "名称": "Mandat scellé : Hymne de l’aube",
     "获取途径": [
       "副本",
       "委托密函商店",
@@ -4659,6 +4719,246 @@
         "type": "Resource",
         "count": 1,
         "name": "Muse trigonale : Canon"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice de Mandat scellé"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2055,
+    "名称": "密函：孤雏的羽迹",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 20407,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Sillage solitaire",
+        "d": 1
+      },
+      {
+        "id": 12144,
+        "type": "Resource",
+        "count": 1,
+        "name": "孤雏的羽迹的枪机"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12145,
+        "type": "Resource",
+        "count": 1,
+        "name": "孤雏的羽迹的枪身"
+      },
+      {
+        "id": 12146,
+        "type": "Resource",
+        "count": 1,
+        "name": "孤雏的羽迹的枪管"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice de Mandat scellé"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2056,
+    "名称": "密函：杯中的残火",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 20512,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Braise du calice",
+        "d": 1
+      },
+      {
+        "id": 12147,
+        "type": "Resource",
+        "count": 1,
+        "name": "杯中的残火的枪机"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12148,
+        "type": "Resource",
+        "count": 1,
+        "name": "杯中的残火的枪身"
+      },
+      {
+        "id": 12149,
+        "type": "Resource",
+        "count": 1,
+        "name": "杯中的残火的枪管"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice de Mandat scellé"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2057,
+    "名称": "密函：鸣金遥",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 10305,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Écho d’or lointain",
+        "d": 1
+      },
+      {
+        "id": 12150,
+        "type": "Resource",
+        "count": 1,
+        "name": "鸣金遥的握柄"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12151,
+        "type": "Resource",
+        "count": 1,
+        "name": "鸣金遥的刀刃"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice de Mandat scellé"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Indice de Mandat scellé"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2058,
+    "名称": "密函：切割齿轮",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 20406,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Engrenage déchiqueté",
+        "d": 1
+      },
+      {
+        "id": 12152,
+        "type": "Resource",
+        "count": 1,
+        "name": "切割齿轮的枪机"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Aimant de précision"
+      },
+      {
+        "id": 12153,
+        "type": "Resource",
+        "count": 1,
+        "name": "切割齿轮的枪身"
+      },
+      {
+        "id": 12154,
+        "type": "Resource",
+        "count": 1,
+        "name": "切割齿轮的枪管"
       },
       {
         "id": 211,
@@ -8880,6 +9180,126 @@
     "类型": 3
   },
   {
+    "id": 151765,
+    "名称": "密函：羽蛇之昂扬",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51765,
+        "type": "Mod",
+        "count": 1,
+        "name": "Vigueur",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151766,
+    "名称": "密函：羽蛇之决断",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51766,
+        "type": "Mod",
+        "count": 1,
+        "name": "Poursuite",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Globule cramoisi"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Globule cramoisi"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
     "id": 151911,
     "名称": "Mandat scellé : Sacrifice illusoire de l’Arbitre",
     "获取途径": [
@@ -9061,7 +9481,7 @@
   },
   {
     "id": 151931,
-    "名称": "Mandat scellé : Brasier dévorant d'Ifrit",
+    "名称": "Mandat scellé : Brasier dévorant d’Ifrit",
     "获取途径": [
       "副本",
       "委托密函商店",

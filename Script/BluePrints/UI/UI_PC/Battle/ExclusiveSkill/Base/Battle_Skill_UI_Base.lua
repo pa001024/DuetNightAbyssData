@@ -4,6 +4,13 @@ local PC_SCALE = 1
 
 function M:OnLoaded()
   self.IsInit = true
+  self:AddDispatcher(EventID.OnMobileHudPlanChanged, self, self.OnMobileHudPlanChanged)
+end
+
+function M:OnMobileHudPlanChanged(OpType, LayoutPlan, _, _)
+  if "Update" == OpType then
+    self:ApplyServerLayoutPosition(LayoutPlan)
+  end
 end
 
 function M:RemoveSelf()
@@ -26,14 +33,57 @@ function M:InitBattleCharUI(CharUIId, GradeLevel)
     local MainNode = self.Main
     local Offset = self.Offset_M
     if MainNode and Offset and CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" then
-      DebugPrint("gmy@M:InitBattleCharUI Offset", Offset)
-      local Slot = UE4.UWidgetLayoutLibrary.SlotAsOverlaySlot(MainNode)
-      local Padding = Slot.Padding
-      Padding.Bottom = Offset
-      Slot:SetPadding(Padding)
+      local bHasServerLayout = self:HasServerLayoutPosition()
+      if bHasServerLayout then
+      else
+        local Slot = UE4.UWidgetLayoutLibrary.SlotAsOverlaySlot(MainNode)
+        local Padding = Slot.Padding
+        Padding.Bottom = Offset
+        Slot:SetPadding(Padding)
+      end
     end
   end
   self.FrameCount = 0
+  self:ApplyServerLayoutPosition()
+end
+
+function M:HasServerLayoutPosition()
+  local BattleMain = UIManager(self.Owner):GetUI("BattleMain")
+  if not BattleMain then
+    return false
+  end
+  local LayoutInfo = BattleMain:GetLayoutInfoFromServer("SpSkillPos")
+  return nil ~= LayoutInfo
+end
+
+function M:ApplyServerLayoutPosition(LayoutPlan)
+  if CommonUtils.GetDeviceTypeByPlatformName(self) ~= "Mobile" then
+    return
+  end
+  local BattleMain = UIManager(self.Owner):GetUI("BattleMain")
+  if not BattleMain then
+    DebugPrint("gmy@Battle_Skill_UI_Base M:ApplyServerLayoutPosition", "BattleMain UI 未找到，跳过服务端布局设置")
+    return
+  end
+  local LayoutInfo = BattleMain:GetLayoutInfoFromServer("SpSkillPos", LayoutPlan)
+  if not LayoutInfo then
+    DebugPrint("gmy@Battle_Skill_UI_Base M:ApplyServerLayoutPosition", "服务端无 SpSkillPos 布局数据，使用默认位置")
+    return
+  end
+  local MainNode = self.Main
+  if not MainNode then
+    DebugPrint("gmy@Battle_Skill_UI_Base M:ApplyServerLayoutPosition", "self.Main 节点不存在，无法应用布局数据")
+    return
+  end
+  local Slot = UE4.UWidgetLayoutLibrary.SlotAsOverlaySlot(MainNode)
+  local Padding = Slot.Padding
+  Padding.Left = LayoutInfo.PosX
+  Padding.Bottom = -LayoutInfo.PosY
+  Slot:SetPadding(Padding)
+  if LayoutInfo.ScaleX ~= nil and nil ~= LayoutInfo.ScaleY then
+    local NewScale = FVector2D(LayoutInfo.ScaleX, LayoutInfo.ScaleY)
+    MainNode:SetRenderScale(NewScale)
+  end
 end
 
 function M:Tick(MyGeometry, InDeltaTime)

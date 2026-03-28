@@ -1,7 +1,11 @@
 require("UnLua")
 local EMCache = require("EMCache.EMCache")
 local SettingUtils = require("Utils.SettingUtils")
-local M = Class("BluePrints.UI.UI_PC.Setting.Setting_Unfold_OptionBase_PC_C")
+local TimerMgr = require("BluePrints.Common.TimerMgr")
+local M = Class({
+  "BluePrints.UI.UI_PC.Setting.Setting_Unfold_OptionBase_PC_C",
+  "BluePrints.Common.StageTimerMgr"
+})
 
 function M:InitSubOption(Parent, CacheName, CacheInfo, UpOption)
   rawset(self, "Parent", Parent)
@@ -205,10 +209,18 @@ function M:OnViewPortChanged()
   if NowInterfaceMode ~= EWindowMode.Windowed then
     return
   end
+  if self.bDisableViewportChanged then
+    return
+  end
   if self.bHavaChangeViewport == true then
     self.bHavaChangeViewport = false
   else
     self.NowOptionId = 1
+    self.Text_Current:SetText(GText("UI_OPTION_Resolution_Cusrtom"))
+    self.bDisableViewportChanged = true
+    self:AddTimer(1.0, function()
+      self.bDisableViewportChanged = false
+    end, false, 0, "ViewportChanged_ResetFlag", true, UE4.ETickingGroup.TG_EndPhysics)
   end
 end
 
@@ -229,6 +241,7 @@ function M:SetInterfaceModeResolutionOldOptionId()
   end
   self.OldOptionId = SelectId
   self.bHavaChangeViewport = false
+  self.bDisableViewportChanged = false
 end
 
 function M:RestoreDefaultInterfaceModeResolution()
@@ -278,6 +291,7 @@ function M:SaveInterfaceModeResolutionOptionSetting()
     local NewResolution = self:ForceCalMaxResolution()
     local SceneManager = GWorld.GameInstance:GetSceneManager()
     SceneManager.RatioCache = FIntPoint(NewResolution.X, NewResolution.Y)
+    DebugPrint("ResizeWindow 调用点: Setting_Unfold_Suboption_PC_C.SaveInterfaceModeResolutionOptionSetting ForceMax", NewResolution.X, NewResolution.Y)
     SceneManager:ResizeWindow(EWindowMode.Windowed, NewResolution.X, NewResolution.Y)
     return
   end
@@ -288,6 +302,7 @@ function M:SaveInterfaceModeResolutionOptionSetting()
   local SceneManager = GWorld.GameInstance:GetSceneManager()
   if SceneManager then
     SceneManager.RatioCache = FIntPoint(num1, num2)
+    DebugPrint("ResizeWindow 调用点: Setting_Unfold_Suboption_PC_C.SaveInterfaceModeResolutionOptionSetting", num1, num2)
     SceneManager:ResizeWindow(EWindowMode.Windowed, num1, num2)
   end
 end

@@ -106,6 +106,9 @@ function Common_Key_PC:RefreshInfoByInputTypeChange(CurInputDevice, CurGamepadNa
   if not self.CreateInfo then
     return
   end
+  if self.SkipRefreshInputType then
+    return
+  end
   self:CreateCommonKey(self.CreateInfo)
 end
 
@@ -289,6 +292,7 @@ function Common_Key_PC:CreateSubKeyDesc(KeyInfo)
   self.Key:ClearChildren()
   self.Key:AddChild(KeyWidget)
   self:_Reset2InitState()
+  self.SkipRefreshInputType = KeyInfo.SkipRefreshInputType
 end
 
 function Common_Key_PC:_InitSingleKeyContent(KeyInfo)

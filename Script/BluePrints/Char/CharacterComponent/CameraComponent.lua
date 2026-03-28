@@ -1,4 +1,5 @@
 local EMCache = require("EMCache.EMCache")
+local SettingUtils = require("Utils.SettingUtils")
 local CameraComponent = {}
 
 function CameraComponent:OnCharacterReady()
@@ -63,7 +64,8 @@ function CameraComponent:ApplyCameraShake(CameraShake, ShakeScale)
     return
   end
   DebugPrint("TTT:Debug:ApplyCameraShake:定位Seq内相机抖动问题日志", CameraShake, ShakeScale)
-  PlayerCameraManager:StartCameraShake(CameraShake, ShakeScale)
+  local CameraShakeCoef = math.max(0.0, tonumber(SettingUtils.GetEMCache("CameraShakeRange", nil, 1.0)) or 1.0)
+  PlayerCameraManager:StartCameraShake(CameraShake, ShakeScale * CameraShakeCoef)
 end
 
 function CameraComponent:ResetCameraPitch()
@@ -313,6 +315,17 @@ function CameraComponent:SetControlPitchLimit(MinPitch, MaxPitch, TimeToInterpSp
   else
     self.CameraControlComponent:ModifyViewPitch(MinPitch, MaxPitch)
   end
+end
+
+function CameraComponent:ResetPitchWhenBulletJump()
+  if self.UIModePlatform ~= "Mobile" then
+    return
+  end
+  local BulletJumpCamReset = EMCache:Get("BulletJumpCamReset")
+  if not BulletJumpCamReset then
+    return
+  end
+  self.CameraRotationComponent:ResetCameraPitch()
 end
 
 return CameraComponent

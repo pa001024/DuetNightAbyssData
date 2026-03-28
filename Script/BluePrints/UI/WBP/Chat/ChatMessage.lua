@@ -47,7 +47,7 @@ local MessageWrap = {
       end
     end,
     IsSticker = function(self)
-      if 0 == #self.EmojiInfos then
+      if not self.EmojiInfos or 0 == #self.EmojiInfos then
         DebugPrint(LogTag, LXYTag, "MessageWrap不存在表情包信息", self.Message.Content)
         return nil
       end

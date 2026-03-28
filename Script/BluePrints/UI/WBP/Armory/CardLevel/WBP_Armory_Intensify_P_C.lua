@@ -367,6 +367,14 @@ function M:ShowItemDetails(bShow, Content, bNotSelect)
         
         Content.bWaitRPCRet = true
       end
+      Content.OverrideDetailsBackObj = self
+      
+      function Content.OverrideDetailsBackEvent(OverrideDetailsBackObj)
+        if Content.Parent then
+          Content.Parent:SetFocus()
+        end
+      end
+      
       self.ItemDetailsWidget:RefreshItemInfo(Content, true, true)
       if Content.LockType then
         if self:IsContentLocked(Content) then

@@ -12,6 +12,13 @@ return ReadOnly("Shop", {
     ShopUIName = "ShopActivity",
     SystemName = "AbyssShop"
   },
+  AccessoryDropShop = {
+    MainTabId = {10008},
+    ShopBgBPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/Widget/BG/WBP_Shop_BG_Normal.WBP_Shop_BG_Normal'",
+    ShopName = "Event_FreeAppearance_tittle01",
+    ShopUIName = "ShopActivity",
+    SystemName = "AccessoryDropShop"
+  },
   AutoChessShop = {
     MainTabId = {10006},
     ShopBgBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/AutoChess/WBP_Activity_AutoChess_OverViewBG.WBP_Activity_AutoChess_OverViewBG'",
@@ -24,7 +31,8 @@ return ReadOnly("Shop", {
       701,
       702,
       703,
-      704
+      704,
+      705
     },
     ShopBgBPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/Widget/BG/WBP_Shop_BG_Area.WBP_Shop_BG_Area'",
     ShopName = "UI_SHOP_ExploreBadge",
@@ -98,6 +106,13 @@ return ReadOnly("Shop", {
     ShopUIName = "ShopMain",
     SpawnNPCId = 900002,
     SystemName = "Shop"
+  },
+  SoloTreasureShop = {
+    MainTabId = {10007},
+    ShopBgBPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/Widget/BG/WBP_Shop_BG_SoloTreasure.WBP_Shop_BG_SoloTreasure'",
+    ShopName = "UI_SoloTreasureShop",
+    ShopUIName = "ShopActivity",
+    SystemName = "SoloTreasureShop"
   },
   WeeklyDungeonShop = {
     MainTabId = {10003},

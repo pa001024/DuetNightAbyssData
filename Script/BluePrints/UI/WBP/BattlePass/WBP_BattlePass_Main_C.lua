@@ -411,6 +411,7 @@ end
 function WBP_BattlePass_Main_C:SetPreviewActor()
   local Avatar = BattlePassController:GetAvatar()
   if Avatar then
+    local GetCurrentCharAccessory = false
     local CharId = Avatar.Chars[Avatar.CurrentChar].CharId
     local SkinId = Avatar.Chars[Avatar.CurrentChar]:GetAppearance().SkinId
     if BattlePassController:GetModelData("BPRewardTyppe") == "Skin" then

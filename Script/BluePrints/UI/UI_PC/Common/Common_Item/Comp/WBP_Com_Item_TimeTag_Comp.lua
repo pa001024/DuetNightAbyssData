@@ -9,7 +9,7 @@ function Component:SetTimeTag(TimeTagList)
   end
   
   if not table.isempty(TimeTagList) then
-    if not (self.TimeTag and self.TimeTag:IsValid()) or not self.WidgetMap[self.TimeTag] then
+    if not self.TimeTag or not self.TimeTag:IsValid() then
       self:CreateWidgetAsync("ComItemTimeTag", Callback)
       return
     else

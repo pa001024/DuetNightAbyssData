@@ -36,5 +36,13 @@ return ReadOnly("SkinGachaTab", {
     Sequence = 1,
     TabId = 4,
     TabName = "UI_SkinGacha_Special"
+  },
+  [5] = {
+    GachaId = {9005},
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/Banner/T_Gacha_PoolBanner_Suyi01.T_Gacha_PoolBanner_Suyi01'",
+    ReddotNode = "Gacha_Special_4",
+    Sequence = 1,
+    TabId = 5,
+    TabName = "UI_SkinGacha_Special"
   }
 })

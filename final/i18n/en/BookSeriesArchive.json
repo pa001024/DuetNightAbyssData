@@ -202,10 +202,17 @@
   },
   {
     "id": 1007,
-    "name": "Surgical Log",
-    "desc": "A fragmented recording capturing the last exchange between Psyche and Henrik.",
-    "icon": "T_Read_02",
-    "res": []
+    "name": "Inventive Sachets: Notes from My Workbench",
+    "desc": "A young artisan's personal notes, loosely recording a few ways to make scented sachets.\nIt isn't a proper how-to, and the steps aren't laid out in full. Best enjoyed as a casual read.",
+    "icon": "T_Read_East03",
+    "res": [
+      {
+        "id": 2000107,
+        "type": "Drop",
+        "text": "A sachet to cheer up my workaholic friends\n— 1 part Ivorywood, 3 parts Vernal Prime.\nVernal Prime has a crisp, refreshing fragrance, perfect for a more \"put-together\" vibe. Ivorywood helps keep you steady when work gets stressful.\n\nA sachet to win the hearts of every stray cat\n— A small pinch of Loong Qiqi, 4 parts Ivorywood.\nThe secret is that tiny salty, fishy note in Loong Qiqi — it smells a little wild, in a way cats seem to love. Add the cosy warmth of Ivorywood, and they might just decide we're \"one of them\".\n\nA sachet to help my favourite author update faster\n— As much Frostleaf as you can manage.\nFrostleaf keeps you wide awake, so the writer I'm following can pull an all-nighter and get a chapter out. So yes: be generous... Teehee...",
+        "srId": 104503
+      }
+    ]
   },
   {
     "id": 1008,
@@ -977,7 +984,7 @@
       {
         "id": 2000073,
         "type": "Drop",
-        "text": "In Huaxu, one ought not rely on brute force — yet, as we all know, words can cut just as sharply.\nThus did I spend years roaming the land, observing every quarrel, retort, and petty squabble I could find, and distilled the entire art of human rhetoric into four supreme manoeuvres: LMAO, copypasta, bootlicking, and seething. Master these, and you shall never again lose ground in an argument.\nAllow me to present a few examples. First, the proper deployment of LMAO...\n\n(The rest of the pages have been brutally crossed out. You close the book, and on the back cover you find a single bold word scrawled across it: copypasta.)",
+        "text": "In Huaxu, one ought not rely on brute force — yet, as we all know, words can cut just as sharply.\nThus did I spend years roaming the land, observing every quarrel, retort, and petty squabble I could find, and distilled the entire art of human rhetoric into four supreme manoeuvres: LMAO, copypasta, bootlicking, and seething. Master these, and you shall never again lose ground in an argument.\nAllow me to present a few examples. First, the proper deployment of LMAO...\n \n(The rest of the pages have been brutally crossed out. You close the book, and on the back cover you find a single bold word scrawled across it: copypasta.)",
         "srId": 104103
       }
     ]
@@ -1148,22 +1155,31 @@
         "id": 2000085,
         "type": "Drop",
         "name": "Luoxiang's Case Notes — Vol. 10",
-        "text": "...\nCase Ten — A Nuisance Neighbour, Settled with The Compendium of Verbal Stratagems\n\nA few years back, a man named Zhao Da came to me with a complaint. His new neighbour, Zhang San, had been pounding on his door before dawn each day, insisting that Zhao had \"sung at midnight and wouldn't let him sleep\". I'd known Zhao Da for years. He hauls cargo on the docks all day; the moment he gets home, he's out cold. The man sleeps like a stone — midnight singing wasn't even remotely possible. But Zhang San stuck to his story. Each day he came earlier, and louder. At last, one dawn when Zhao stumbled out half-asleep and thoroughly fed up, he opened the door and threw a punch. The Nine Chapters of Dafeng say: \"Heaven's great virtue bears the name of Life; To wound or kill — this must not be done.\" By the code, Zhao Da had to be punished.\nStill, Zhang San had started the trouble, and that had to be dealt with as well. Reasoning proved useless, and brawling was out of the question. So I lent Zhao a book a friend once gave me — The Compendium of Verbal Stratagems — and told him to study it. The next morning, Zhang arrived as usual, shouting. Zhao simply stood inside the threshold and replied with the book's four stock phrases: \"LMAO\", \"Copypasta\", \"Bootlicking\", and \"Seething\". Within moments, Zhang was shaking with rage and actually raised a fist to strike — and Zhao quietly pulled back his sleeve, showing the fresh welt from his punishment the day before. Zhang froze, went pale, and backed away. He came again the next morning. Zhao answered in exactly the same way. After a few days of this, Zhang San stopped coming altogether.",
+        "text": "...\nCase Ten — A Nuisance Neighbour, Settled with The Compendium of Verbal Stratagems\n\nA few years back, a man named Zhao Da came to me with a complaint. His new neighbour, Zhang San, had been pounding on his door before dawn each day, insisting that Zhao had \"sung at midnight and wouldn't let him sleep\". I'd known Zhao Da for years. He hauls cargo on the docks all day; the moment he gets home, he's out cold. The man sleeps like a stone — midnight singing wasn't even remotely possible. But Zhang San stuck to his story. Each day he came earlier, and louder. At last, one dawn when Zhao stumbled out half-asleep and thoroughly fed up, he opened the door and threw a punch. The Nine Chapters of Dafeng say: \"Heaven's great virtue bears the name of Life; To wound or kill — this must not be done.\" By the code, Zhao Da had to be punished.\n Still, Zhang San had started the trouble, and that had to be dealt with as well. Reasoning proved useless, and brawling was out of the question. So I lent Zhao a book a friend once gave me — The Compendium of Verbal Stratagems — and told him to study it. The next morning, Zhang arrived as usual, shouting. Zhao simply stood inside the threshold and replied with the book's four stock phrases: \"LMAO\", \"Copypasta\", \"Bootlicking\", and \"Seething\". Within moments, Zhang was shaking with rage and actually raised a fist to strike — and Zhao quietly pulled back his sleeve, showing the fresh welt from his punishment the day before. Zhang froze, went pale, and backed away. He came again the next morning. Zhao answered in exactly the same way. After a few days of this, Zhang San stopped coming altogether.",
         "srId": 104103
       }
     ]
   },
   {
     "id": 1085,
-    "name": "Footsteps Across Huaxu — Mistwharf",
+    "name": "Footsteps Across Huaxu",
     "desc": "This piece is part of Xu Xingke's Footsteps collection. Commissioned by Huaxu's local council, the renowned travel writer records his reflections on the many regions of his homeland.",
     "icon": "T_Read_East01",
     "res": [
       {
         "id": 2000086,
         "type": "Drop",
+        "name": "Footsteps Across Huaxu — Mistwharf",
         "text": "Mistwharf\n Step off the boat, and the first thing you'll see is Mistwharf. For the people of Huaxu, this stretch of land runs long — from Starwharf in the south to the Gritblight Expanse in the north.\n\nStarwharf\nWhen I meet visitors arriving in Huaxu for the first time, I always tell them not to rush inland. Linger on the quay a moment: hawkers call without pause, hardworking Huaxu porters haul crates from river barges, and Starweavers trade stories with friends from distant lands. There are few places more full of life.\n\nEverSpring\nNear the roots of the great tree lies EverSpring — another stop not to be missed. In Huaxu, everyone knows what the name stands for: to the Starweavers, it is the realm's largest guild; to visitors, a trove of rare and wondrous wares. Even if you plan to buy nothing, the towering statue of Lord Argent at the gate alone is worth the journey.\n\nTwilight Ravine\n Few from Huaxu ever venture here. Set deep within the wilderness, the Twilight Ravine is said to be the resting place of Wishen — beings other lands might call \"ghosts\". These gentle spirits are best left undisturbed.\nAs a child, I once lost my way here and stumbled upon a vast pagoda tree, its gnarled branches aglow with a soft light. I followed the shimmer to a small island at the heart of a lake, where unfamiliar voices gently led me back to the path. Looking back now, that faint glimmer must have been the Spring of Yu, hidden deep within the Ravine.\n\nHall of Ephemerality\nThe Hall of Ephemerality is Fu family's ancestral hall of healing, devoted for generations to the Zhuyou method. Should you fall ill while travelling here, this is the place to seek aid. The healer cherishes silence: whether you come for treatment or merely pass through the apricot grove beyond, please keep your voice low, that her quietude may remain undisturbed.\n\nCrowsong Hollow\nWhen I was little, my parents would tell me the tale of the Battle of Shuli at bedtime — how the Xuanheng Sect and the Jishu clashed upon this plain, leaving not a soul standing. But when I asked what they had fought for, they never had an answer.\nNow, under Taihao's protection, Huaxu has known peace for generations. The rusted remnants of Mechapuppets lie scattered across the plain, worn by wind and time — a silent draw for scholars from far and wide.",
         "srId": 104108
+      },
+      {
+        "id": 2000102,
+        "type": "Drop",
+        "name": "Footsteps Across Huaxu – Haojing",
+        "desc": "An excerpt from Xu Xingke's Footsteps Across Huaxu, an officially commissioned travelogue. In it, Xu sets down his impressions of his homeland — its regions, its people, and the ideas they awaken.",
+        "text": "Hall of Adjudication\n\nIn the early days of the Nine Chapters of Dafeng, the Hall of Adjudication played a far more prominent role. Its original purpose, however, has long since faded from common memory and is now known only to a handful of dedicated historians.\n\nBeneath the Hall, a bridge-like span arches across the air like a rainbow. Legend holds that Lord Argent sometimes soars through the heavens and listens, unmoving, to the clamour of the mortal world — proof that Heaven heeds the people, and that divine law watches over all.\n\nToday, the Hall stands as Huaxu's political centre. It rises against the clouds, visible from nearly anywhere in Haojing — much as the Nine Chapters of Dafeng stand before the people: clear, enduring, and impossible to ignore.\n\n⸻\n\nZesheng Pharmacy\n\nIn former times, the people of Huaxu turned to healers of the Zhuyou clan when illness struck. In later ages, physicians devoted to pharmacology emerged, along with apothecaries to prepare and dispense medicines.\n\nZesheng Pharmacy is Haojing's most respected establishment of its kind. It is said that its founder was once herself a Zhuyou, yet she abandoned those arts in favour of pharmacology, elevating the discipline to new heights. Rare herbs and medicinal ingredients are supplied here, and the pharmacy is renowned for its proprietary prescriptions. It also offers seasonal wellness regimens to help preserve one's health.\n\nIf thirst overtakes you while wandering the streets, do stop by — herbal tonics are served free to the public.\n\n⸻\n\nYoulai Alley\n\nSome popular Huaxu tales claim that the dead may linger in a form known as Wishen. Unlike the fearful portrayals of spirits and ghosts found in other lands, Huaxu's Wishen are remembered in legend as gentle, even endearing beings. Though they may occasionally cause minor disturbances, it is often out of kindness, as if to guide the living along their path.\n\nHaojing folklore speaks of a place called Youlai Alley, where Wishen with unfinished attachments are said to gather. Most dismiss such claims as idle fancy. Yet there are whispers that if one follows the winding lanes of the eastern quarter long enough, one might, by chance, stumble into that mysterious domain...\n\n⸻\n\nJiaolan Village\n\nIf Haojing's bustle begins to wear on you, head west. Jiaolan Village offers a quiet refuge from the city's noise. This small settlement lies on Haojing's western outskirts, close enough to reach on foot.\n\nHuaxu's incense culture stretches back into antiquity, and Jiaolan Village is regarded as its birthplace. Though the craft of incense-making has long since spread across the land, and Jiaolan is no longer the only place to find it, it remains home to the largest incense-drying grounds in the region surrounding Haojing. When the aromatic plants come into bloom, villagers harvest them, rinse them clean, and lay them out beneath the sun. On fair days, when a gentle breeze passes through, the fragrance carries for miles, creating an atmosphere at once ethereal and intoxicating.\n\nBefore you depart, should you wish to bring home a thoughtful gift, the villagers' handcrafted incense makes an excellent choice: elegant in scent, and rich in Huaxu's distinctive cultural character.",
+        "srId": 104501
       }
     ]
   },
@@ -1352,6 +1368,253 @@
         "text": "Wake up, young man. Keep your feet on solid ground. There is no such thing as gaining without graft. Every master of the Wuqiongzang Sect earned their skill through years of hard, honest training, and nothing else.\n \nStop swallowing nonsense like Loong in the Sky; that trashy tale has led enough gullible lads astray. Don't fool yourself into thinking fortune will drop into your lap and carry you to the top with no effort of your own.\n \nTake this small sum and get yourself looked at. A fall from a cliff is no small matter. From now on, train steadily. Keep your head clear. Stop daydreaming, and stop chasing shortcuts that lead nowhere!",
         "mId": 70125,
         "srId": 104106
+      }
+    ]
+  },
+  {
+    "id": 1099,
+    "name": "On Incense Offerings: Observances of Sacrifice",
+    "desc": "A treatise that appears to set down the rites governing Huaxu's Grand Incense Rite. It enumerates the sacrificial observances of antiquity in meticulous detail and concludes with marginal notes left by an unidentified hand.",
+    "icon": "T_Read_East02",
+    "res": [
+      {
+        "id": 2000099,
+        "type": "Drop",
+        "text": "Prepare a red calf; burn it to the south, in sacrifice unto High Heaven.\nTake sheep and swine, and bury them to the north, in sacrifice unto the Bounteous Earth.\nTo the east, offer unto the Sun; to the west, unto the Moon.\nEstablish the pit and altar, and offer separate rites to the Four Quarters and the Four Seasons.\nAt the time of sacrifice, the Three Masters of Rites shall officiate.\nWhoso Taihao favours shall bear the Lunarose Incense and stand at the centre, to make offering unto the Divine Lord.\nWhoso is broadly learned shall bear the Sumei Incense and stand to the left, to make offering unto the ancestors.\nWhoso excels in the myriad arts shall bear the Aurumwood Incense and stand to the right, to make offering unto the Spirits of Land and Grain.\nLet no garments be adorned with deep indigo or dark crimson; let neither red nor purple be worn as inner raiment.\nSpeak not during the rite. When the offerings are complete, keep watch over the sacrificial fire for the space of a quarter-hour.\nLet sacrificial food not be kept overnight; should it be kept beyond three days, it shall not be used.\n\nNote: These regulations are intricate and lavish, and do not accord with the temper of Huaxu today. They are set down here only as a record of former times and ought not to be restored.",
+        "srId": 105101
+      }
+    ]
+  },
+  {
+    "id": 1100,
+    "name": "Field Notes on the Grand Incense Rite (Excerpt)",
+    "desc": "A set of notes left by a foreign scholar investigating the origins of Huaxu's Grand Incense Rite. The date of composition is unknown. Many of the author's conjectures lack corroborating records or material evidence, and most of the text is not recognised as credible by modern historians.",
+    "icon": "T_Read_East01",
+    "res": [
+      {
+        "id": 2000100,
+        "type": "Drop",
+        "text": "...\n\nIn sum, Huaxu's Grand Incense Rite is the country's most important recurring festival. Its ritual form has shifted over the centuries, yet the stages of that evolution are surprisingly well attested, each aligning with Huaxu's economic, technological, and artistic development at the time.\n\nA plausible hypothesis is that the festival began as a large-scale rite unique to Huaxu. Over time, it adapted to the needs and conditions of each era, shedding many elements while preserving its essential core — through which the people of Huaxu give shape to a distinctive cultural identity.\n\nThe \"divinities\" worshipped by the people of Huaxu are not mere symbols. They exist, and they influence the ecology within Huaxu's borders in concrete, observable ways. I have personally witnessed the descent of the deity called Taihao during the Grand Incense Rite, and the experience left me profoundly shaken.\n\n...\n\nI am beginning to suspect a flaw in my earlier line of inquiry. I once assumed the Grand Incense Rite resembled festivals in other nations: cultural practices that grew out of commemoration and sacrifice, preserving certain customs as tradition. Ordinarily, such customs become simpler and more secularised as time advances.\n\nYet after examining every extant record of the Rite within Huaxu, I found that its central custom — the act of incense offering itself — has remained unchanged in both materials and quantity for nearly a thousand years of recorded history.\n\nGiven the manifest presence of \"divine\" power within Huaxu's territory, I have reason to believe the Rite is not merely a cultural or political form of worship. It may have a distinct functional purpose. Put plainly: in Huaxu, and only in Huaxu, a rite that exchanges offerings for a deity's protection appears to function as an actual transaction.\n\nBut why would Taihao require these incenses? And what, in fact, is Taihao? No comparable records exist elsewhere in Atlasia, and the incense used for such offerings is produced only within Huaxu... Incense found only here — and a \"god\" found only here that feeds upon it? The symmetry is too neat. It feels less like coincidence than design.\n\n...\n\nThis functional reading suggests an intriguing possibility. Perhaps Huaxu's so-called \"divinities\" are not the exalted beings of popular imagination at all, but something closer to a machine — an apparatus that regulates the environment within its sphere of influence. It may even affect, or outright control, nearby Filthoids, pressing them into service as a blunt tool of enforcement. In that case, the Grand Incense Rite is less a ceremony than a scheduled procedure: refuelling this immense \"machine\" with what Huaxu calls \"incense\", at fixed intervals and in fixed amounts.\n\nIf this conjecture proves true, it would imply that, a thousand years ago, the people of Huaxu had mastered a technology capable of creating a \"god\". Should such a technology be deciphered, the Nine Chapters of Dafeng might be extended across Atlasia; or the mechanism's field of influence might be scaled down to the individual, enabling the creation of specialised protective devices.\n\nYet if such a technology truly exists, why does it function only within Huaxu's borders? Even the Starweavers have left no record of employing similar techniques beyond Huaxu’s border. What, then, is the crucial factor that imposes this limitation?\n\n...",
+        "srId": 105101
+      }
+    ]
+  },
+  {
+    "id": 1101,
+    "name": "Qing's Wish",
+    "desc": "A tale of Yin Qing, a poet of ancient Huaxu, drawn from Bygone Fragments, an essay collection by the later author Cang Xian. In it, a young traveller known only as Feng — his family name now lost to history — drifts into Haojing and discovers a green leaf inscribed with a poem drifting along a waterway beside the Yin residence — a small happenstance that binds their fates.\n\npreserves a number of literary anecdotes from roughly five centuries past, steeped in the flavour of legend. Its reliability as a historical source remains open to question, yet its value as literature is widely acknowledged.",
+    "icon": "T_Read_East01",
+    "res": [
+      {
+        "id": 2000101,
+        "type": "Drop",
+        "text": "...\n\nThe leaf had long since turned yellow, yet the traces of ink upon it remained clear. Yin Qing studied it, gave a long, wistful sigh, and after a moment allowed himself a faint smile.\n\"I once wished to roam the world,\" he said to Feng, \"yet my father and mother would not permit it. So I wrote upon this green leaf and set it adrift with the current, to ease my longing. Now that you have chanced upon it, carry it with you on your travels, that my wish may journey beside you.\"\nFeng was silent for a long while. Then he replied,\n\"Why should we not travel together?\"\n\n...\n\nWhen they reached the Lin River, Feng was stricken with a grave illness and lay bedridden. Qing said, \"Rest now, and recover your strength. I shall remain here until you are well; then we shall set out again.\"\nBut Feng would not agree. He drew forth the withered leaf and pressed it into Qing's hand.\n\"Take this leaf,\" he said. \"Go far. Let it be as though we still travel side by side.\"\n\n...\n\nQing travelled far and wide, and in time he filled an entire chest with his verses. Wherever he went, he won admirers who pressed him to remain, yet he declined them all.\nIn his later years, he returned once more to the familiar banks of the Lin. Before Feng's grave, he buried the withered leaf in the soil and laid fresh green leaves above it.\nUpon a leaf he inscribed two lines:\n\n\"Green leaves lie upon your grave;\nThe ache in my heart drifts with the stream.\"",
+        "srId": 104502
+      }
+    ]
+  },
+  {
+    "id": 1103,
+    "name": "Huaxu Trends – Haojing Special",
+    "desc": "Huaxu Trends tracks what's trending across Huaxu: new places to eat and drink, clothing and everyday essentials, and lifestyles arriving from overseas and taking hold at home.\nEach year, the Haojing Special drops a month before the Grand Incense Rite, spotlighting the capital's latest go-to spots for food, leisure, and nightlife.",
+    "icon": "T_Read_East01",
+    "res": [
+      {
+        "id": 2000103,
+        "type": "Drop",
+        "text": "Top Dining Pick: Bazhen Pavilion\n\nIn last month's reader poll, Bazhen Pavilion beat the runner-up by nearly a hundred votes — clearly a crowd favourite.\n\nOur rule is simple: we don't recommend what we haven't tried. So we went in as ordinary diners and ordered the signature dishes. The fan-favourite Bazhen Tofu really is a standout: silky-soft, layered with flavour, and finished with a scatter of corn kernels — looks as good as it tastes.\n\nMistwharf Vinegar Fish is a classic, but the sharp vinegar tang isn't for everyone, especially with freshwater fish. A couple of us left it unfinished.\n\n...\n\nFrom Diner A: Chef Bai's cooking speaks for itself. And Chef Li isn't far behind. Word is his poems are just as good as his food.\n\nFrom Diner B: When I was young, my family always celebrated my birthday at Bazhen Pavilion... Years have gone by. Though the people who once sat beside me are no longer with me, the dishes taste the same. And perhaps that is enough.\n\nFrom Diner C: Whenever friends or relatives visit Haojing, Bazhen Pavilion is the first place I take them. That said, lately some of the new dishes feel like they're trying a little too hard to please out-of-towners. It's not quite the same as it used to be — not that there's anything wrong with catering to visitors.\n\n...",
+        "srId": 104501
+      }
+    ]
+  },
+  {
+    "id": 1104,
+    "name": "Ode to the Nine Chapters",
+    "desc": "A short piece praising the Nine Chapters of Dafeng, written in Huaxu's distinctive panegyric style.\nFrom the wording and the marginal note appended below, the author appears to be a student still learning the craft of writing.",
+    "icon": "T_Read_East02",
+    "res": [
+      {
+        "id": 2000104,
+        "type": "Drop",
+        "text": "\"Ah! How magnificent are the Nine Chapters of Dafeng!\nWhen chaos first gave way, the Nine Chapters were set in place;\nBy the covenant of the two divine lords, the standard was forged;\nThe Argent Loong upheld the law, and inscribed the righteous way;\nHigh it stands, vast and unshaken — never to be toppled!\n...\nGreat indeed — great indeed!\"\n\nMarginal note, in another hand: The opening and closing are predictably trite, and the middle offers nothing worth keeping. Rewrite.",
+        "srId": 104501
+      }
+    ]
+  },
+  {
+    "id": 1105,
+    "name": "A Compendium of Incense",
+    "desc": "A celebrated Huaxu classic, reputedly written by a master of Xuanheng Sect. The work runs to seventeen volumes, with additions made by later generations. The excerpt below is drawn from the book's preface.",
+    "icon": "T_Read_East01",
+    "res": [
+      {
+        "id": 2000105,
+        "type": "Drop",
+        "text": "The art of incense has changed with the ages. In antiquity, aromatic herbs were burnt to raise fragrant smoke to reach the divine; in the present age, incense is measured and its vapours harmonised, so that by this craft the Mandate of Heaven may be set in order.\n\nThe Record of Yang's Life relates that at the founding of the Nine Chapters, Yang declared: \"When the Mandate of Heaven intermingles, all courses are impeded, and what is tangled cannot easily be loosed.\" She therefore sent men to gather a myriad of aromatics and heap them at the Taixu Mausoleum, where they were burnt without cease, day and night. Yang herself sat beside the pyre. When the smoke ran thick, none could draw near; and when at last it thinned, she had vanished.\n\nThis account need not be taken on faith. Versions differ from place to place, and much has shifted with the passing of years. I compile this book not to quarrel over such tales, but to set down the incense arts of Huaxu across the span of ages. Within these pages I have gathered, as exhaustively as I could, matters of Heaven and Earth, of human affairs and the produce of the land; what was ancient is collected, and what is current is brought within its compass. It is my hope that those who come after may follow this lineage, and enrich it in their turn.\n\nThe whole consists of seventeen volumes. The first nine record the incense materials: orchid and fragrant herb, pepper and cassia, aloeswood, sandalwood, borneol and musk — ancient varieties of Huaxu — together with rare foreign aromatics once presented as tribute.\n\nMarginal note: Since the widening of the Starweavers' routes, what was once unheard-of has become obtainable.\n\nThe next four volumes treat of the uses of incense. Incense serves many ends: for offering, for wear, and for medicine. These are set out in detail below.\n\nThe final three volumes concern the art of incense blending. Though its principles may appear simple, it is in truth the most demanding of all related crafts. One must first master the preceding thirteen volumes and commit them thoroughly to memory; only then may one properly undertake this discipline.\n\nThe uses of incense are as boundless as the sea, and their subtleties are still beyond our full grasp. I have done no more than gather and preserve a handful of remarkable formulae devised by sages of old, that their methods might endure.",
+        "srId": 104501
+      }
+    ]
+  },
+  {
+    "id": 1106,
+    "name": "A Match Made",
+    "desc": "A folk opera script popular among Huaxu's commoners. It follows a young couple from first meeting to marriage, only for petty quarrels and everyday slights to sour things afterwards. Said to be adapted from a real case in Haojing, though this cannot be verified. Excerpt follows.",
+    "icon": "T_Read_East01",
+    "res": [
+      {
+        "id": 2000106,
+        "type": "Drop",
+        "text": "No need for the Moon Matchmaker to meddle. One red thread binds the romance. The crimson bridal sedan chair halts at the gate. Whether she wills it or no — gown on, veil down — once she mounts, the union is sealed. A hundred hands bear it onwards. The bridegroom reels, heart unmoored, as though he had glimpsed a heavenly maiden in a dream.\n\n(Offstage, a hurried reply.)\nJing (beaming): Splendid! Good luck upon good luck — three cups for that!\nMo: It's late. My lady is waiting. I'll be taking my leave.\nJing: Nonsense! You've drained more cups than I can count at the Bazhen Pavilion and never once been drunk. And now you're baulking at a single cup? You'll be the laughingstock!\nMo: Things aren't what they were. Don't take it amiss, brother.\n(Mo bows with clasped hands.)\nJing (laughing): Ha! And here I thought you were a man of mettle — turns out you go to ground the moment wine's poured.\nJing: Fine, fine. If he's that set on ducking out, no need to push it.\nMo (startled): Why would you say that? All these years of brotherhood, and you'd throw it away over one cup of wine?\nJing: Brotherhood? If that means anything to you — today's your wedding day, everyone's here to toast you. And you won't drink a single cup with us?\nAll: Hear, hear!\nJing: Some loyalty. Some brother.\nAll: Hear, hear!\nMo (sighing): Pomegranate blazes red as fire... and still, it cannot match the bitter smoke of mugwort... Ah, well.\nMo (raising his voice): Today I'll drink with you if it kills me. Gentlemen — your health!\n(All drink.)\n\nA crescent moon crests the little tower, yet its tender light falls only into the gutter. Hair dressed in vain, pipa in hand... whose ear awaits her song?",
+        "srId": 104502
+      }
+    ]
+  },
+  {
+    "id": 1108,
+    "name": "Hall of Craft Annual Record: Works Digest",
+    "desc": "A substantial volume detailing the Ministry of Works' most recent public projects.",
+    "icon": "T_Read_East02",
+    "res": [
+      {
+        "id": 2000108,
+        "type": "Drop",
+        "text": "The Ministry of Works hereby announces the following works under its charge:\n\nⅠ. Rehabilitation of Official Roads\nBy order, the city's principal roads and minor roads are to be repaired and reinforced. Roadbeds shall be strengthened and carriageways widened, easing the passage of carts and riders and improving travel throughout the city, so that the routes may run clear in all directions.\n\nⅡ. Construction of Freight-Handling Apparatus\nNew freight-handling apparatus shall be constructed, with a wrought-iron frame and precision gearing. Efficiency shall be improved and operations standardised, speeding the circulation of goods and encouraging commercial growth.\n\nⅢ. Reinforcement and Repair of the Wharves\nThe existing wharves shall undergo full inspection and repair. Riverbanks shall be reinforced, rotted timbers replaced, and additional safeguards installed, ensuring safe passage for vessels and keeping grain transport secure.\n\n...\n\nAll works shall be carried out in accordance with established codes: rooted in traditional practice, yet open to new techniques. The Ministry of Works faithfully discharges its duty, securing the foundations of the state and serving the needs of the people.\n\nThose wishing to consult the full project files may do so in the Ministry's archives.",
+        "srId": 104503
+      }
+    ]
+  },
+  {
+    "id": 1109,
+    "name": "The Sayings of Master Zhuxi",
+    "desc": "A record of Master Zhuxi's sayings, written down by his students. His views shifted with age, yet his words were preserved throughout his life, from his earliest years to his last. Excerpt follows.",
+    "icon": "T_Read_East02",
+    "res": [
+      {
+        "id": 2000109,
+        "type": "Drop",
+        "text": "In considering what the sages of old intended when they taught learning, I take it to be this: to press inquiry to its limits, and to read widely in the old and the new, so as to broaden the mind and enlarge one's view. Only then may a person judge right from wrong, weigh matters with clarity, and grasp the workings of the world — not merely memorise texts and polish fine phrases for the sake of fame, profit, and preferment.\n\nThose who study in our day have borne hardships for too long. Much of what the former worthies taught is recorded in the classics, yet remains detached from worldly affairs. Anyone with resolve ought to read deeply, reflect, and question — to examine and sift what one has learned. For if one recognises the vastness of Heaven and Earth and the complexity of affairs, and strives to look upon all things with objectivity and a mind trained to weigh matters with discernment, then the standards by which one stands in the world and conducts oneself are already within one's grasp. Why wait for others to hand them over before one can hold fast to them?\n\nAs for what I have written, it cannot guide every student, and the methods it proposes may not fully accord with the true aim of opening the mind and awakening thought. Therefore I shall no longer require it in this hall. Instead, I have selected the main principles by which the sages taught learning, set them forth as articles, and posted them here for all to see. Let all of you study them together, make their meaning clear, keep them, and hold yourselves to them. Then, in the midst of your thoughts and actions, your judgement will grow more exacting: you will deliberate with care, discern with clarity, and investigate things so as to extend your knowledge. These are, in truth, the roots of conduct in the world, and the foundations of cultivating virtue and turning towards the good.\n\nOnly by keeping to this guiding framework may one contemplate all things, and so bring forth new understanding and open new paths.",
+        "srId": 104501
+      }
+    ]
+  },
+  {
+    "id": 1110,
+    "name": "Training Yard Booking Log",
+    "desc": "Most fresh faces in Outer Peaks get told the same thing on their first day: \"Done with your errands? Go take a look at the training yard.\"\nIt was originally set up so the Drifters could spar and hone their craft, but over time, it has picked up a few... additional uses.",
+    "icon": "T_Read_East03",
+    "res": [
+      {
+        "id": 2000110,
+        "type": "Drop",
+        "text": "4 June\nFiled by: Wang Quan\nReason: I say sweet tofu pudding is best. Zhang Fu swears by the savoury kind. Only one way to settle it — a match!\n\n28 June\nFiled by: Xu Hong\nReason: I want to test a new explosive prototype. The yard is open enough for it.\n\n15 July\nFiled by: Su Yi\nReason: Lu Ye and Pei Jing want to practise with crossbows. I've been asked to keep an eye on them.\n\n16 July\nFiled by: Su Yi\nReason: Same as yesterday (the kids are really coming along!).\n\n6 August\nFiled by: Uncle Tang\nReason: Finished a new battlefield loudhailer. Need everyone to take turns singing in the yard for a sound test.\n\n20 August\nFiled by: Uncle Tang\nReason: Zhu Pu overtrained and hurt his leg. Want to test the support brace I made for him and log a few measurements.",
+        "srId": 105201
+      }
+    ]
+  },
+  {
+    "id": 1111,
+    "name": "Workshop Experiment Log",
+    "desc": "A workshop logbook where Outer Peaks' artisans jot down their wild ideas and odd contraptions. In the name of \"learning from one another\", Uncle Tang later insisted on adding a comment board so everyone could leave their thoughts underneath.",
+    "icon": "T_Read_East01",
+    "res": [
+      {
+        "id": 2000111,
+        "type": "Drop",
+        "text": "I. Meowvellous Machine\n\nLogged by: Uncle Tang (love you lot, everyone in Outer Peaks!)\n\nSetup:\nSplit the kids into two groups. One got a pep talk from the Meowvellous Machine beforehand; the other didn't.\nBoth groups then read Mechanism Basics That Every Huaxu Kid Can Learn. After one stick of incense, we gave them a quiz.\n\nResult:\nSome of the \"encouraged\" kids (Zhu Pu, for instance) made the top ten. Others landed near the bottom. The kids who didn't get the pep talk (like Pei Jing) ended up somewhere in the middle.\n\nComments:\nSu Yi: The groups weren't evenly matched to begin with. The results don't prove anything.\nXu Hong: I think some of them were just scared by how the machine looks.\nKezhou: The results aren't the point. I just want to ask... what's with that signature in the \"Logged by\" line? Has Uncle Tang been breathing in workshop fumes again?\n\n\nII. Duck and Dash\n\nLogged by: Uncle Tang (still loving you lot today)\n\nSetup:\nAfter basic safety checks, we went out into the wild. On spotting a lone Sable Bi'an, give a Duck and Dash a full wind and toss it.\n\nResult:\nDidn't scare it off. If anything, it made so much noise that it drew more of them in and made them meaner.\n\nAreas to Improve:\nTry making it even louder.\n\nComments:\nSu Yi: Why not pack it with a few small charges? Like the firecrackers we set off at New Year — toss it, then leg it while it's popping.\nUncle Tang: This is meant for schoolchildren to use for self-defence on the way home. If we add anything like that, I'm worried they'll misuse it and hurt themselves.\nShen Han: Are the children all right? No one was hurt, I hope? Uncle Tang — please don't drag them into such dangerous experiments next time!",
+        "srId": 105201
+      }
+    ]
+  },
+  {
+    "id": 1112,
+    "name": "The Incense Trial: The Civil Service Exam in Smoke and Scent",
+    "desc": "An anonymous miscellany from Huaxu, offering a detailed account of the rules and procedures of the Incense Trial.",
+    "icon": "T_Read_East01",
+    "res": [
+      {
+        "id": 2000112,
+        "type": "Drop",
+        "text": "Within Huaxu's system of governance, few institutions are as distinctive as the Incense Trial — an annual examination established by the Ministry of Rites to seek out promising talent among the young. Built around Huaxu's own incense culture, it proceeds in stages, each stricter than the last. Learning is tested openly; character and suitability are weighed more quietly. In time, it has become a signature feature of Huaxu's governance.\n\nShrine Trial — Timed by Smoke, Judged by Learning\nThe selection begins with the Shrine Trial, a small regional examination held throughout Huaxu. Each sitting is held at the district's Argent Loong Temple: a first-round screening, and a gesture of reverence to Lord Argent. The trial is conducted inside the temple itself, overseen by the temple's incense wardens, who are charged with keeping order and impartiality from start to finish.\nThere is no interview at this stage; the focus is purely on a candidate's learning. On the appointed day, candidates enter with their admission slips and take their seats. Writing materials are issued, but no one may touch brush to paper until permitted. Only when the supervising warden lights the designated Lunarose incense, and the candidates have completed their rite of thanks to Lord Argent, does the examination begin in earnest. The time allowed is exactly the burn of a single stick of Lunarose incense.\nThe top three from each sitting advance, and must in due course travel to Huaxu's capital, Haojing, for a harsher round of selection.\n\nDepartmental Trial — Matched to Post, Weighed in Talent and Virtue\nCandidates who reach Haojing then face the Departmental Trial, where suitability is the core concern. Unlike the Shrine Trial, which leans on written testing, this stage is not centred on the brush alone. Greater weight is placed on practical ability and how well a candidate fits the duties of the post. Interviews allow examiners to judge a candidate's speech, thinking, and character at closer range. Before sitting the trial, candidates must state their intended post, making an initial choice among the Three Ministries and their subordinate departments. The assessment shifts accordingly, depending on the functions of the chosen institution.\nThe close of the Departmental Trial marks the end of that year's Incense Trial. Once the list of successful candidates is confirmed, the Ministry of Rites summons all qualified entrants to the Hall of Adjudication to take up their appointments. Those whose talent and conduct are deemed exceptional may even win the favour of Lord Argent. In such cases, a Bi'an delivers a summons, granting leave to advance to a third stage: a final selection for the office of High Chancellor of Loongyuan.\nDuring this interval, the Hall of Adjudication enters a brief recess to prepare postings and the High Chancellor selection to follow. Meanwhile, the Hall of Incense hastens its own preparations, assembling special aromatics reserved solely for the High Chancellor's selection.\n\nAs for how the High Chancellor of Loongyuan is ultimately chosen — Huaxu has no shortage of opinions. I have only learned that an internal procedure does exist, and that it is said to be fairly comprehensive.\nFor reasons of space, however, we'll leave Loongyuan for the next issue.",
+        "srId": 105101
+      }
+    ]
+  },
+  {
+    "id": 1113,
+    "name": "How to Become High Chancellor of Loongyuan",
+    "desc": "A tongue-in-cheek essay that claims to explain how to become High Chancellor of Loongyuan. So exaggerated and irreverent that it's hard to tell where fact ends and invention begins.",
+    "icon": "T_Read_East01",
+    "res": [
+      {
+        "id": 2000113,
+        "type": "Drop",
+        "text": "Do you want to become High Chancellor of Loongyuan?\nLet me be specific: set aside the tangled official duties the post entails. Imagine instead that you keep the title and bask in universal admiration across Huaxu without having to lift a finger. Under those conditions, do you want it?\nI expect most answers would be: of course!\nWhich brings us to the real question: how does one actually become High Chancellor of Loongyuan?\n\nIn last issue, we touched on the Incense Trial — the examination system by which the state selects officials from among the common run of Huaxu's citizens. But what of those so-called prodigies, the dazzling geniuses beyond the common measure? Is there a special track reserved for them? Are they appointed the moment they first wail into the world?\nCertainly not.\nBecoming High Chancellor of Loongyuan is no simple matter. Most readers will have guessed correctly: those singled out do indeed receive a message from Lord Argent — delivered, of course, by a Bi'an. But don't celebrate just yet. Receiving the message does not mean you've already made it. All it gives you is a new label: Candidate for High Chancellor of Loongyuan.\nYou answer the summons and travel to Haojing. There, the sitting High Chancellor receives you with great warmth. You gather in the Hall of Adjudication and talk — perhaps of state affairs, perhaps simply of daily life. This stage has a name: \"The Trial of the Way.\"\nWhen it ends, you are escorted back to your temporary quarters at the posting station to await the next summons.\nAnd you wait.\nDays pass. You pace like a cat on a hot tin roof, opening the door every few moments to see whether someone has come with news. The good news is that someone eventually does. If they didn't, this essay would end here — and then what would you do with your evening?\n\nFilled with anticipation, you return once more to the Hall of Adjudication. You assume that since your previous examiner was the sitting High Chancellor of Loongyuan, this time you must surely meet Lord Argent themselves. But upon arrival, you notice there is no Lord Argent, nor the High Chancellor. Instead, a handful of Hall staffers hurriedly thrust an enormous stack of dossiers into your arms and then flee at once, as if the building is about to collapse.\nNow comes your task: in this sea of records, you must trace the links between designated incidents and present your own reasoned conclusions. Someone will see to your meals, your lodging, your daily needs. You, however, are strictly forbidden from cutting corners. Try to slack off and you will be struck from the candidate list without ceremony.\nThis stage is called \"The Trial of Statecraft.\"\nNaturally, you are exceptional. After what feels like years poring over records — memorising every last petty detail from the past twenty years — you finally receive word one morning: you passed. The Trial of Statecraft is complete. Next comes, supposedly, an audience with Lord Argent.\nYou are beside yourself. You rush to Qianxiu Pavilion to have a new set of robes made — something bright and showy for the occasion. How many people go their entire lives without hearing even a single true word from Lord Argent? And you — you might see Them with your own eyes. What fortune beyond measure!\nUnable to contain your excitement, you tell the shop assistant exactly why you are having clothes made. The girl takes one look at your glowing face and cannot help it: she covers her mouth and giggles.\n\"You know,\" she says, \"not every candidate gets to see Lord Argent.\"\nYou go pale. You are just about to seek a further explanation when a messenger arrives with urgent orders: report to the Hall of Adjudication at once and prepare for the Trial of the Heart. With no time to dig, you hurriedly straighten your robes and make your way back to that now-familiar place.\n\nInside, incense smoke curls through the Hall — thick enough to be seen, yet without the faintest scent. This seems odd. An attendant arrives and has you sit on a cushion with the other candidates, instructing you to meditate and regulate your breath. Suspicious but obedient, you sit. Smoke coils around your eyes and nose. Your thoughts grow heavy. Drowsiness steals over you. You think you might as well close your eyes for a moment. So you do.\nAnd you fall asleep.\nYou dream a long dream.\nIn it, you see your past: your mother cradling you, your father lifting you high above his head.\nIn it, you see your future: you succeed to the post of High Chancellor of Loongyuan, spend a lifetime wringing yourself dry for the people of Huaxu, and at last are laid to rest in the Taixu Mausoleum.\nIn it, you see others — countless faces, countless eyes fixed upon you. Questions rise, one after another, pressing and demanding. You are flustered, drenched in sweat, pushed to the brink — and then you jolt awake.\nYou look up. The incense lit at the beginning has not yet burned out.\n\nIn the end, you do not pass the selection. Presumably, your performance in the dream failed to please Lord Argent. Still, though not chosen, you ultimately join the Hall of Incense and continue serving the people of Huaxu. A happy ending all the same, wouldn't you say?\n\nAnd so, dear readers, you now know exactly how to become High Chancellor of Loongyuan. And if one of you actually does make it to High Chancellor someday... well, I trust you'll remember me, the humble author who wrote this helpful little piece. A little token of appreciation sent my way would not go amiss. Don't you think?",
+        "srId": 104502
+      }
+    ]
+  },
+  {
+    "id": 1114,
+    "name": "Dawn of Haojing",
+    "desc": "A daily paper printed by the Hall of Craft and sold on the streets of Haojing. Mostly local happenings and the occasional public notice. Truth be told, it has never had many readers.",
+    "icon": "T_Read_East03",
+    "res": [
+      {
+        "id": 2000114,
+        "type": "Drop",
+        "name": "Dawn of Haojing — Issue Ⅰ",
+        "text": "Ⅰ. East Market: Floodwater Half-Drowns a Lord Argent Statue\n\nAfter days of relentless rain, Haojing Lake rose fast enough to spill over the East Market embankment. One shopkeeper, known locally for his devotion, kept a three-foot wooden statue of Lord Argent at his shopfront and burnt incense to it each day without fail.\nEarly one morning, a shophand named Zhang opened up the shop to sweep the threshold — only to find the water already lapping at the steps, the statue's lower half swallowed up. Startled, Zhang shouted for help, and the neighbours together hauled the image further inside.\nTongues wag: \"Lord Argent's ways are inscrutable.\" Surely this is Their doing — making plain Their displeasure at private offerings by flooding Their own image, a stark reminder to respect the seasons and Heaven's will.\n\n\nⅡ. Astonishing: Sixty-Two-Year-Old Widow Gives Birth\n\nMrs Liu of Haojing, a widow of sixty-two, has long lived alone and childless, and in her quiet days was often lonely.\nIn recent months, she complained frequently of fatigue and found her appetite greatly increased. Neighbours took it for the usual signs of age. No one expected what came after: on the nineteenth of this month, she gave birth to a baby boy — loud-voiced when he cried, bright-eyed, and fine-featured.\nWord soon reached the Hall of Founts, which sent an officer to verify the matter. Mrs Liu claims that three months ago she dreamt of a woman in blue who offered her a peach, sweet beyond telling; upon waking, she felt her body begin to change. The child bears a faint red birthmark at the waist, shaped unmistakably like a peach — proof that the dream was no mere fancy.\nStrange indeed. Such tales belong, people say, to storybooks — not to everyday life. The neighbours insist Mrs Liu has always been known for kindness, and some whisper that Heaven, in its own way, repays the virtuous.\nThe Hall of Founts has registered the child and granted assistance in grain and bolts of cloth. Friends and relations arrive daily with congratulations, and curious onlookers have been gathering in no small numbers.\n\n\nⅢ. West Market Oddity: A Dog That Hunts Rats\n\nAt the West Market eatery Baiwei House, the proprietor Li Sanlang keeps a yellow dog named Rusty to mind the place at night. He has been a good dog: quiet, steady, and has never caused trouble.\nOn the afternoon of the first of this month, the shophands were airing out dried ingredients in the sun when Rusty suddenly wouldn't stop barking. They hurried over and saw him dart to a rat hole at the base of the wall. A moment later he came back out with a grey rat clenched in his jaws, already dead.\nTaken aback, the hands reported it to Li Sanlang. Li wouldn't believe a word of it — until the next day, when he saw it with his own eyes: Rusty crouched by the hole, and the moment a rat poked its head out, he lunged. Before the day was out, he'd caught three. One regular laughed: \"The old saying compares a dog that catches mice to nosy folk who meddle in other people's business — but it's a blessing when your place is full of rats.\"\nSince then, Rusty has hunted rats by day and kept watch by night. Baiwei House, it is said, has had no trouble with rats since.",
+        "srId": 104506
+      },
+      {
+        "id": 2000115,
+        "type": "Drop",
+        "name": "Dawn of Haojing — Issue Ⅱ",
+        "text": "(The sheet has been trampled and scuffed; much of the text is blurred.)\n...\n...\n...\n\nⅡ. Unrest on the Western Outskirts — Drifters Sighted Again?\n\nIn recent days, citizens have been arriving at the Ministry of Fortune in growing numbers, reporting that along the back paths of the western outskirts, shadowy figures have been seen lingering. Those who claim to have spoken with them describe shifty replies and evasive eyes — hardly the bearing of decent folk. It is feared some mischief is being plotted in secret.\nThough Huaxu stands under the protection of the Nine Chapters of Dafeng, Drifters have long been said to lurk even within Haojing, committing offence upon offence. A censer that had burned unbroken for a hundred years was once extinguished — doused with water by the most notorious of their lot. Another drove a mechapuppet straight into the Hall of Adjudication. Others have hung wenzhu fronds outside people's doors to mark their targets, then ambushed them and left them bleeding. Their crimes are many; their wickedness unrepentant.\nEven so, there are always those who make excuses for them, shielding them in the dark and dressing them up with fine names like the Four Drifters. Fortunately, the Magistrates of Yingtian took action, and the so-called Four Drifters were seized and put to death.\nYet though their ringleaders and close followers have been dealt with, remnants are said to remain. The people fear renewed Drifter activity may flare again and bring fresh calamity.\nThe Hall of Adjudication has therefore issued the following order: the Magistrates' patrols are to be strengthened at once. A reward of 12,000 is hereby offered for any report of Drifters' whereabouts that is verified. Residents are further warned: do not enter desolate places after nightfall. Every measure is to be taken to root out the Drifters.\n...\n...\n...\n (The latter half of the sheet is torn; the remaining text is illegible.)",
+        "srId": 104506
+      }
+    ]
+  },
+  {
+    "id": 1116,
+    "name": "Notes on the Mirage (Ⅱ)",
+    "desc": "A book set down by a man of letters surnamed Shen. Its authenticity cannot be verified, but it remains an entertaining read. Much of the text has been lost to time. This is Part Ⅱ.",
+    "icon": "T_Read_East01",
+    "res": [
+      {
+        "id": 2000116,
+        "type": "Drop",
+        "text": "On the surface of Haojing Lake, mist sometimes gathers into shapes — towers, palaces, immortals, spectres — each outlined with startling clarity. People call such sights the Mirage. Some say it is Lord Argent's breath; others insist it is the work of Lord Argent's eight immortal attendants. Accounts multiply without end. I doubt them all.\n\nI chased down every rumour I could find, yet reached no firm conclusion. I went about the city seeking out the elders, asking how one might reach the Mirage, and I began with the boatmen, hoping they would row me across the lake in search of it. They mocked my folly — yet they agreed readily once paid, and accompanied me on several trips. Back and forth we went, again and again, and still we found nothing.\n\nI searched daily until my meagre means were spent. A few, taking pity, would join me in their spare hours, though their earlier enthusiasm was gone. I did not resent them; I felt only shame. In the end I put what little remained to my name into buying a bamboo raft, resolved to seek the Mirage on my own.\n\nThough I am but a bookish sort, I grew up climbing hills and swimming rivers with the neighbourhood boys. I am no weakling — yet my skills go no further than that. At first, poling the raft was awkward and stiff; with time I grew steadily more practised.\n\nThe search proved arduous indeed. At first I tried to take my bearings and fix a heading. Later there was only the endless expanse, drifting and bobbing with the waves. Still I never beheld the Mirage's true face. In time my spirit faltered. I began to suspect I was clinging to emptiness, wasting my days and wearing down my resolve. Now and then I would glimpse it in the distance and strain towards it, only for it to vanish the moment I drew near — like moonlight on water, dissolving into nothing at the slightest touch.\n\nOne day a thick fog rolled in over Haojing, and I could not make out a person two steps away. Everyone warned me not to go, fearing I would lose my way on the lake and die there. I sighed and said, \"Other than my life, what do I have left to lose?\" My purse was already empty. We scraped by on my wife's needlework. Thankfully we had no children; otherwise, what kind of husband would that make me?\n\nStill I insisted on leaving. My wife wept and tried to stop me. \"If you step out that door,\" she said, \"I will never be your wife again.\" My resolve faltered — yet in the end I steeled myself, flung the door wide, and went.\n\nThe fog blotted out heaven and earth. When the tip of my pole struck the water, I could not even see where it fell. I could only feel the raft's motion through my wrists. The cold was sharper than on any ordinary day; it cut to the bone. Frost gathered in my beard; I breathed it away, and moments later it formed again.\n\nNothing about the scene seemed especially strange. Perhaps there was something wondrous, yet my mind was so muddled that I could not recall it. I remember only one instant: at one point it felt as though my pole was no longer meeting water at all, but something lighter — like pushing through cloud. A feeling too surreal for words to depict.\n\nI cannot say how long I went on. Then the fog began to thin. Before me, overlapping haloes of light shimmered, and within them rose halls and pavilions, radiant beyond measure. Joy seized me like a fever. I gathered what strength remained and drove the raft forward. Just as my strength drained, the raft struck shore. It was as though a stone had finally dropped from my chest. My heart, at last, began to steady.\n\nI left the raft behind and stepped ashore. The ground beneath my feet felt soft as water, yet I neither sank nor grew wet. With each step, ripples spread outward. It was wonder that defied belief.\n\n...",
+        "srId": 104502
+      }
+    ]
+  },
+  {
+    "id": 1117,
+    "name": "遗落的纸张·皓京",
+    "desc": "A collection of enigmatic pages discovered by chance. Some are delicate scrolls of fine parchment; others, freshly printed sheets with ink still crisp and dark. A few are no more than torn scraps from half-used notebooks. Whether neatly penned or barely legible, they all share one thing in common — each contains a hint pointing to the whereabouts of a hidden treasure.",
+    "icon": "T_TreasureMap_East",
+    "res": [
+      {
+        "id": 20640,
+        "type": "Drop",
+        "name": "皓京·其一",
+        "text": "椒桂沉檀馨香好，兰蕙脑麝馥郁浓。\n借问宝物何处寻，牧童遥指金庭树。",
+        "srId": 104504
+      },
+      {
+        "id": 20641,
+        "type": "Drop",
+        "name": "皓京·其二",
+        "text": "东指郊外草渐深，没入窟中寻不得。\n盼星望月痴等寻，却探宝物根深藏。",
+        "srId": 104505
+      },
+      {
+        "id": 20642,
+        "type": "Drop",
+        "name": "皓京·其三",
+        "text": "南来又北往，东过又西寻。\n联西处，通中城，问宝物何在？涸木之下水之上。",
+        "srId": 104502
       }
     ]
   }

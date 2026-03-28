@@ -17,7 +17,7 @@ function M:PlayOutAnim()
   if self.Panel_Detail.IsSkillTipsOpened then
     self.Common_Skill_Effect_Tips_PC:PlayOutAnim()
   end
-  self:MarkToRemove()
+  self:MarkToRemove(true)
   self:BindToAnimationFinished(self.Out, {
     self,
     self.Close
@@ -131,9 +131,12 @@ function M:RefreshDetailView(StuffConfigData)
     elseif self.CurTabId == BagCommon.ItemTypeToTabId.ConsumableItem then
       local function WrapConsumeFunc()
         self:OnClickGoToUseConsume(StuffConfigData)
+        
+        self:ClearConsumableItemReddot(StuffConfigData)
+        self.Panel_Detail:SetConsumableItemButtonReddot("Bag_Consume")
       end
       
-      self.Panel_Detail:UpdateBottomSingleBtnInfo("ConsumableItem", WrapConsumeFunc, self)
+      self.Panel_Detail:UpdateBottomSingleBtnInfo("ConsumableItem", WrapConsumeFunc, self, "Bag_Consume")
     else
       self.Panel_Detail:UpdateBottomSingleBtnInfo("Other", nil, self)
     end
@@ -334,6 +337,29 @@ function M:GetEmptyItemCountInLastLine(ListViewObj, CurItemCount)
   local EmptyItemNum = math.floor(CurMaxItemCount - CurItemCount)
   ListViewObj:SetEmptyGridItemCount(EmptyItemNum)
   return EmptyItemNum
+end
+
+function M:ClearConsumableItemReddot(StuffConfigData)
+  DebugPrint("Yihan@ ClearConsumableItemReddot", StuffConfigData.ResourceId)
+  local BagConsumeNode = ReddotManager.GetTreeNode("Bag_Consume")
+  local Avatar = GWorld:GetAvatar()
+  if BagConsumeNode and Avatar then
+    local BagConsumeNodeDetails = BagConsumeNode.Cache.Detail
+    local StuffId = StuffConfigData.ResourceId
+    if BagConsumeNodeDetails and BagConsumeNodeDetails[StuffId] then
+      BagConsumeNodeDetails[StuffId].ShowReddot = false
+      ReddotManager.DecreaseLeafNodeCount("Bag_Consume", BagConsumeNodeDetails[StuffId].StuffCount - BagConsumeNodeDetails[StuffId].ClickedCount)
+      BagConsumeNodeDetails[StuffId].ClickedCount = Avatar:GetResourceNum(StuffId)
+    end
+    local ContentItems = self.List_Item:GetListItems()
+    for i = 1, ContentItems:Length() do
+      local ContentItem = ContentItems:GetRef(i)
+      if ContentItem.StuffId == StuffId then
+        local CurWidget = URuntimeCommonFunctionLibrary.GetEntryWidgetFromItem(self.List_Item, self.List_Item:GetIndexForItem(ContentItem))
+        CurWidget:SetRedDot(nil)
+      end
+    end
+  end
 end
 
 return M

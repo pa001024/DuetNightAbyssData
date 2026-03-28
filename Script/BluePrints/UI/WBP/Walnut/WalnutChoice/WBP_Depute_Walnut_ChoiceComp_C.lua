@@ -272,9 +272,12 @@ end
 
 function Component:CloseByEscape()
   local Avatar = GWorld:GetAvatar()
-  if Avatar and not Avatar:IsInTeam() then
+  if Avatar then
     EventManager:FireEvent(EventID.OnRefreshDeputeBtn, false)
     self:Close()
+    if Avatar:IsInTeam() then
+      Avatar:VoteStartBattle(false, self:GetSquadId())
+    end
     return true
   end
 end

@@ -12,7 +12,7 @@ function M:Destruct()
 end
 
 function M:OnListItemObjectSet(InObject)
-  self.Text_ReportReason:SetText(GText(InObject.value))
+  self.Text_ReportReason:SetText(GText(InObject.value.Text))
   self.Owner = InObject.Owner
   self.Id = InObject.Id
   self.Widget = self
@@ -20,6 +20,7 @@ function M:OnListItemObjectSet(InObject)
   self.WBP_Com_CheckBox_RightText:HideGamepadBackground(true)
   self.WBP_Com_CheckBox_RightText:SetKey("Img", "A", nil)
   self.WBP_Com_CheckBox_RightText.Com_KeyImg:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  rawset(self.WBP_Com_CheckBox_RightText, "Checked", false)
 end
 
 function M:OnItemSelectionChanged()
@@ -35,6 +36,15 @@ function M:OnFocusReceived(MyGeometry, InFocusEvent)
   self.WBP_Com_CheckBox_RightText.Btn_Click:SetFocus()
   self.WBP_Com_CheckBox_RightText:PlayAnimation(self.WBP_Com_CheckBox_RightText.Normal)
   return UE4.UWidgetBlueprintLibrary.Handled()
+end
+
+function M:BP_OnEntryReleased()
+  if self.WBP_Com_CheckBox_RightText then
+    rawset(self.WBP_Com_CheckBox_RightText, "Checked", false)
+  end
+  self.WBP_Com_CheckBox_RightText.Image_Check:SetRenderOpacity(0)
+  self.Owner = nil
+  self.Id = nil
 end
 
 return M

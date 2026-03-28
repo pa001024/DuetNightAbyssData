@@ -1,41 +1,61 @@
 local T = {}
 T.RT_1 = {
-  163,
-  10,
-  122
+  155,
+  7,
+  128
 }
 T.RT_2 = {
-  Boy = T.RT_1,
-  Girl = T.RT_1,
-  Loli = T.RT_1,
-  Man = T.RT_1,
-  Woman = T.RT_1
+  155,
+  4,
+  123
 }
 T.RT_3 = {
+  155,
+  10,
+  115
+}
+T.RT_4 = {
+  175,
+  8,
+  146
+}
+T.RT_5 = {
+  160,
+  6,
+  138
+}
+T.RT_6 = {
+  Boy = T.RT_1,
+  Girl = T.RT_2,
+  Loli = T.RT_3,
+  Man = T.RT_4,
+  Woman = T.RT_5
+}
+T.RT_7 = {
   0,
   40,
   0
 }
-T.RT_4 = {
+T.RT_8 = {
   -150,
   -70,
   0
 }
-T.RT_5 = {
+T.RT_9 = {
   -70,
   170,
   0
 }
-T.RT_6 = {
+T.RT_10 = {
   -70,
   -165,
   0
 }
-T.RT_7 = {
-  [1] = T.RT_3,
-  [2] = T.RT_4,
-  [3] = T.RT_5,
-  [4] = T.RT_6
+T.RT_11 = {
+  [1] = T.RT_7,
+  [2] = T.RT_8,
+  [3] = T.RT_9,
+  [4] = T.RT_10
 }
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
@@ -47,7 +67,7 @@ return ReadOnly("HardBossMain", {
   [1] = {
     AirWallStaticId = 1610010620,
     BossIcon = "/Game/UI/Texture/Dynamic/Image/Play/T_HardBoss_CampIcon_Xibi.T_HardBoss_CampIcon_Xibi",
-    CameraParam = T.RT_2,
+    CameraParam = T.RT_6,
     DifficultyId = {
       1001,
       1002,
@@ -62,13 +82,13 @@ return ReadOnly("HardBossMain", {
     HardBossDes = "UI_HardBoss_Des_1",
     HardBossId = 1,
     HardBossName = "UI_HardBoss_Name_1",
-    MainIcon = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_Xibi.T_Permanent_HardBoss_Xibi",
+    MainIcon = "WidgetBlueprint'/Game/UI/WBP/Play/Widget/HardBoss/PlayHardBossImage/WBP_Play_HardBoss_Image_Xibi.WBP_Play_HardBoss_Image_Xibi'",
     MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_Xibi_S.T_Permanent_HardBoss_Xibi_S",
-    MonsterId = 8500002,
-    MonsterStaticId = 1310010602,
+    MonsterId = {8500002},
+    MonsterStaticId = {1310010602},
     OpenTitleWidgetName = "HardBossOpenTitle_Xibi",
     PosDisplayName = "BP_HardBoss_PlayerStart",
-    SettlementOffset = T.RT_7,
+    SettlementOffset = T.RT_11,
     StorylinePath = "HardBoss/Xibi",
     TeleportId = 9000,
     TitleBp = "WidgetBlueprint'/Game/UI/WBP/Play/Widget/HardBoss/PlayHardBossTitle/WBP_Play_HardBoss_Title_Xibi.WBP_Play_HardBoss_Title_Xibi'",
@@ -77,7 +97,7 @@ return ReadOnly("HardBossMain", {
   [2] = {
     AirWallStaticId = 1440064,
     BossIcon = "/Game/UI/Texture/Dynamic/Image/Play/T_HardBoss_CampIcon_ShiJingZhe.T_HardBoss_CampIcon_ShiJingZhe",
-    CameraParam = T.RT_2,
+    CameraParam = T.RT_6,
     DifficultyId = {
       1011,
       1012,
@@ -92,13 +112,13 @@ return ReadOnly("HardBossMain", {
     HardBossDes = "UI_HardBoss_Des_2",
     HardBossId = 2,
     HardBossName = "UI_HardBoss_Name_2",
-    MainIcon = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_ShiJingZhe.T_Permanent_HardBoss_ShiJingZhe",
+    MainIcon = "WidgetBlueprint'/Game/UI/WBP/Play/Widget/HardBoss/PlayHardBossImage/WBP_Play_HardBoss_Image_ShiJingZhe.WBP_Play_HardBoss_Image_ShiJingZhe'",
     MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_ShiJingZhe_S.T_Permanent_HardBoss_ShiJingZhe_S",
-    MonsterId = 8503002,
-    MonsterStaticId = 1440052,
+    MonsterId = {8503002},
+    MonsterStaticId = {1440052},
     OpenTitleWidgetName = "HardBossOpenTitle_Shijingzhe",
     PosDisplayName = "BP_HardBoss_PlayerStart",
-    SettlementOffset = T.RT_7,
+    SettlementOffset = T.RT_11,
     StorylinePath = "HardBoss/Shijingzhe",
     TeleportId = 9001,
     TitleBp = "WidgetBlueprint'/Game/UI/WBP/Play/Widget/HardBoss/PlayHardBossTitle/WBP_Play_HardBoss_Title_ShiJingZhe.WBP_Play_HardBoss_Title_ShiJingZhe'",
@@ -107,7 +127,7 @@ return ReadOnly("HardBossMain", {
   [3] = {
     AirWallStaticId = 1240025,
     BossIcon = "/Game/UI/Texture/Dynamic/Image/Play/T_HardBoss_CampIcon_Saqi.T_HardBoss_CampIcon_Saqi",
-    CameraParam = T.RT_2,
+    CameraParam = T.RT_6,
     DifficultyId = {
       1021,
       1022,
@@ -122,13 +142,13 @@ return ReadOnly("HardBossMain", {
     HardBossDes = "UI_HardBoss_Des_3",
     HardBossId = 3,
     HardBossName = "UI_HardBoss_Name_3",
-    MainIcon = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_Saiqi.T_Permanent_HardBoss_Saiqi",
+    MainIcon = "WidgetBlueprint'/Game/UI/WBP/Play/Widget/HardBoss/PlayHardBossImage/WBP_Play_HardBoss_Image_Saiqi.WBP_Play_HardBoss_Image_Saiqi'",
     MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_Saiqi_S.T_Permanent_HardBoss_Saiqi_S",
-    MonsterId = 8502002,
-    MonsterStaticId = 1240027,
+    MonsterId = {8502002},
+    MonsterStaticId = {1240027},
     OpenTitleWidgetName = "HardBossOpenTitle_Saiqi",
     PosDisplayName = "BP_HardBoss_PlayerStart",
-    SettlementOffset = T.RT_7,
+    SettlementOffset = T.RT_11,
     StorylinePath = "HardBoss/Saiqi",
     TeleportId = 9002,
     TitleBp = "WidgetBlueprint'/Game/UI/WBP/Play/Widget/HardBoss/PlayHardBossTitle/WBP_Play_HardBoss_Title_Saiqi.WBP_Play_HardBoss_Title_Saiqi'",
@@ -137,7 +157,7 @@ return ReadOnly("HardBossMain", {
   [4] = {
     AirWallStaticId = 1660120,
     BossIcon = "/Game/UI/Texture/Dynamic/Image/Play/T_HardBoss_CampIcon_Haier.T_HardBoss_CampIcon_Haier",
-    CameraParam = T.RT_2,
+    CameraParam = T.RT_6,
     DifficultyId = {
       1031,
       1032,
@@ -152,13 +172,13 @@ return ReadOnly("HardBossMain", {
     HardBossDes = "UI_HardBoss_Des_4",
     HardBossId = 4,
     HardBossName = "UI_HardBoss_Name_4",
-    MainIcon = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_Haier.T_Permanent_HardBoss_Haier",
+    MainIcon = "WidgetBlueprint'/Game/UI/WBP/Play/Widget/HardBoss/PlayHardBossImage/WBP_Play_HardBoss_Image_Haier.WBP_Play_HardBoss_Image_Haier'",
     MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_Haier_S.T_Permanent_HardBoss_Haier_S",
-    MonsterId = 8505002,
-    MonsterStaticId = 1660121,
+    MonsterId = {8505002},
+    MonsterStaticId = {1660121},
     OpenTitleWidgetName = "HardBossOpenTitle_Haier",
     PosDisplayName = "BP_HardBoss_PlayerStart",
-    SettlementOffset = T.RT_7,
+    SettlementOffset = T.RT_11,
     StorylinePath = "HardBoss/Haier",
     TeleportId = 9003,
     TitleBp = "WidgetBlueprint'/Game/UI/WBP/Play/Widget/HardBoss/PlayHardBossTitle/WBP_Play_HardBoss_Title_Haier.WBP_Play_HardBoss_Title_Haier'",
@@ -167,7 +187,7 @@ return ReadOnly("HardBossMain", {
   [5] = {
     AirWallStaticId = 1969947,
     BossIcon = "/Game/UI/Texture/Dynamic/Image/Play/T_HardBoss_CampIcon_Linen.T_HardBoss_CampIcon_Linen",
-    CameraParam = T.RT_2,
+    CameraParam = T.RT_6,
     DifficultyId = {
       1041,
       1042,
@@ -182,16 +202,46 @@ return ReadOnly("HardBossMain", {
     HardBossDes = "UI_HardBoss_Des_5",
     HardBossId = 5,
     HardBossName = "UI_HardBoss_Name_5",
-    MainIcon = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_Linen.T_Permanent_HardBoss_Linen",
+    MainIcon = "WidgetBlueprint'/Game/UI/WBP/Play/Widget/HardBoss/PlayHardBossImage/WBP_Play_HardBoss_Image_Linen.WBP_Play_HardBoss_Image_Linen'",
     MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_Linen_S.T_Permanent_HardBoss_Linen_S",
-    MonsterId = 8512002,
-    MonsterStaticId = 1969946,
+    MonsterId = {8512002},
+    MonsterStaticId = {1969946},
     OpenTitleWidgetName = "HardBossOpenTitle_Linen",
     PosDisplayName = "BP_HardBoss_PlayerStart",
-    SettlementOffset = T.RT_7,
+    SettlementOffset = T.RT_11,
     StorylinePath = "HardBoss/Linen",
     TeleportId = 9004,
     TitleBp = "WidgetBlueprint'/Game/UI/WBP/Play/Widget/HardBoss/PlayHardBossTitle/WBP_Play_HardBoss_Title_Linen.WBP_Play_HardBoss_Title_Linen'",
     UnlockCondition = 2047
+  },
+  [6] = {
+    AirWallStaticId = 2370644,
+    BossIcon = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Bailong.T_Permanent_HardBoss_VideoImg_Bailong",
+    CameraParam = T.RT_6,
+    DifficultyId = {
+      1051,
+      1052,
+      1053,
+      1054,
+      1055,
+      1056
+    },
+    DisplayPriority = 6,
+    GameModePath = "/Game/AssetDesign/GameMode/HardBoss/BP_EMGameMode_HardBoss05_BossBailong.BP_EMGameMode_HardBoss05_BossBailong",
+    GuidanceTitle = 100001,
+    HardBossDes = "UI_HardBoss_Des_6",
+    HardBossId = 6,
+    HardBossName = "UI_HardBoss_Name_6",
+    MainIcon = "WidgetBlueprint'/Game/UI/WBP/Play/Widget/HardBoss/PlayHardBossImage/WBP_Play_HardBoss_Image_Bailong.WBP_Play_HardBoss_Image_Bailong'",
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_Bailong_S.T_Permanent_HardBoss_Bailong_S",
+    MonsterId = {8510004, 8511002},
+    MonsterStaticId = {2370645, 2370646},
+    OpenTitleWidgetName = "HardBossOpenTitle_Bailong",
+    PosDisplayName = "BP_HardBoss_PlayerStart",
+    SettlementOffset = T.RT_11,
+    StorylinePath = "HardBoss/Bailong",
+    TeleportId = 9005,
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Play/Widget/HardBoss/PlayHardBossTitle/WBP_Play_HardBoss_Title_Bailong.WBP_Play_HardBoss_Title_Bailong'",
+    UnlockCondition = 2057
   }
 })

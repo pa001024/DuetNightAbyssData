@@ -94,6 +94,7 @@ function M:CommonConstruct()
   self.Panel_Yes:SetVisibility(ESlateVisibility.Visible)
   self.State = 0
   self:InitCommonKey()
+  self:InitPCCommonKey()
   self.WalnutChoiceFinish = 0
   TeamController:RegisterEvent(self, function(self, EventId, ...)
     if EventId == TeamCommon.EventId.TeamOnInit or EventId == TeamCommon.EventId.TeamLeave then
@@ -525,6 +526,15 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
   self.Super.RefreshOpInfoByInputDevice(self, CurInputDevice, CurGamepadName)
 end
 
+function M:InitPCCommonKey()
+  if CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" then
+    self.Btn_Yes:SetPCImg("SpaceBar")
+    self.Btn_Yes:SetIconPanelVisibility(ESlateVisibility.Collapsed)
+    self.Btn_No:SetPCImg("Escape")
+    self.Btn_No:SetIconPanelVisibility(ESlateVisibility.Collapsed)
+  end
+end
+
 function M:InitCommonKey()
   if not self.Panel_Key_GamePad then
     return
@@ -567,6 +577,8 @@ function M:GamePadToPC()
     return
   end
   self.Panel_Key_GamePad:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.Btn_Yes:SetIconPanelVisibility(ESlateVisibility.Collapsed)
+  self.Btn_No:SetIconPanelVisibility(ESlateVisibility.Collapsed)
 end
 
 function M:PCToGamepad()
@@ -624,6 +636,8 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
           self.WalnutPlate.Reward_1st.Button_Area:SetFocus()
           self.State = 2
           self:UpdateCommonKeys("A", GText("UI_Controller_CheckDetails"), "B", GText("UI_Tips_Close"))
+          self.Btn_Yes:SetGamePadVisibility(UE4.ESlateVisibility.Collapsed)
+          self.Btn_No:SetGamePadVisibility(UE4.ESlateVisibility.Collapsed)
         end
         IsEventHandled = true
       end
@@ -681,7 +695,12 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
       end
       IsEventHandled = true
     end
-  elseif "Escape" == InKeyName and self.CloseByEscape and self:CloseByEscape() then
+  elseif "Escape" == InKeyName and self.CloseByEscape then
+    if self:CloseByEscape() then
+      IsEventHandled = true
+    end
+  elseif "SpaceBar" == InKeyName then
+    self:OnClickButtonYes()
     IsEventHandled = true
   end
   if IsEventHandled then

@@ -1,395 +1,172 @@
-local TemplateContainItems = {
-  {
-    1,
-    3,
-    1
-  },
-  {
-    1,
-    4,
-    1
-  },
-  {
-    1,
-    5,
-    1
-  },
-  {
-    1,
-    6,
-    1
-  },
-  {
-    1,
-    7,
-    1
-  },
-  {
-    1,
-    10,
-    1
-  },
-  {
-    2,
-    2,
-    1
-  },
-  {
-    2,
-    3,
-    2
-  },
-  {
-    2,
-    4,
-    1
-  },
-  {
-    2,
-    5,
-    2
-  },
-  {
-    2,
-    6,
-    1
-  },
-  {
-    2,
-    7,
-    2
-  },
-  {
-    2,
-    8,
-    1
-  },
-  {
-    3,
-    1,
-    1
-  },
-  {
-    3,
-    2,
-    1
-  },
-  {
-    3,
-    3,
-    1
-  },
-  {
-    3,
-    4,
-    1
-  },
-  {
-    3,
-    5,
-    1
-  },
-  {
-    3,
-    6,
-    1
-  },
-  {
-    3,
-    7,
-    1
-  },
-  {
-    3,
-    8,
-    1
-  },
-  {
-    3,
-    9,
-    1
-  },
-  {
-    4,
-    1,
-    1
-  },
-  {
-    4,
-    2,
-    -1
-  },
-  {
-    4,
-    3,
-    1
-  },
-  {
-    4,
-    4,
-    1
-  },
-  {
-    4,
-    5,
-    1
-  },
-  {
-    4,
-    6,
-    1
-  },
-  {
-    4,
-    7,
-    1
-  },
-  {
-    4,
-    8,
-    -1
-  },
-  {
-    4,
-    9,
-    1
-  },
-  {
-    5,
-    1,
-    1
-  },
-  {
-    5,
-    2,
-    2
-  },
-  {
-    5,
-    3,
-    1
-  },
-  {
-    5,
-    4,
-    2
-  },
-  {
-    5,
-    5,
-    1
-  },
-  {
-    5,
-    6,
-    2
-  },
-  {
-    5,
-    7,
-    1
-  },
-  {
-    5,
-    8,
-    2
-  },
-  {
-    6,
-    1,
-    1
-  },
-  {
-    6,
-    2,
-    1
-  },
-  {
-    6,
-    3,
-    1
-  },
-  {
-    6,
-    4,
-    1
-  },
-  {
-    6,
-    5,
-    1
-  },
-  {
-    6,
-    6,
-    1
-  },
-  {
-    6,
-    7,
-    1
-  },
-  {
-    6,
-    9,
-    1
-  },
-  {
-    6,
-    10,
-    1
-  },
-  {
-    7,
-    1,
-    1
-  },
-  {
-    7,
-    9,
-    1
-  },
-  {
-    7,
-    10,
-    1
-  },
-  {
-    8,
-    1,
-    2
-  },
-  {
-    8,
-    2,
-    1
-  },
-  {
-    8,
-    3,
-    2
-  },
-  {
-    8,
-    8,
-    2
-  },
-  {
-    8,
-    9,
-    1
-  },
-  {
-    8,
-    10,
-    2
-  }
-}
 require("UnLua")
+local BagGameModel = require("BluePrints.UI.WBP.Activity.Widget.BagGame.BagGameModel")
+local BagGameController = require("BluePrints.UI.WBP.Activity.Widget.BagGame.BagGameController")
+local TimeUtils = require("Utils.TimeUtils")
 local M = Class({
   "BluePrints.UI.BP_UIState_C"
 })
+M._components = {
+  "BluePrints.UI.WBP.Activity.Widget.BagGame.WBP_Activity_BagGameMain_Base_C_GamepadComp"
+}
+local BagGameAwardReddotName = "BagGameAward"
+local BagGameNewReddotName = "BagGameNew"
 local BagGamePlayBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/BagGame/WBP_Activity_BagGame_Play.WBP_Activity_BagGame_Play'"
+local PC_FIXED_SELECT_POSITION = 4
+local MOBILE_FIXED_SELECT_POSITION = 3
+local MAIN_RESTORE_FOCUS_TIMER = "BagGameMainRestoreFocusOnEnter"
+local MAIN_RESTORE_FOCUS_DELAY = 0.15
+
+local function ClearBagGameReddot(ReddotName)
+  if not ReddotManager.GetTreeNode(ReddotName) then
+    ReddotManager.AddNodeEx(ReddotName, nil, Const.ReddotCacheType.UserCache)
+  end
+  local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(ReddotName)
+  if CacheDetail then
+    for key, _ in pairs(CacheDetail) do
+      CacheDetail[key] = nil
+    end
+  end
+  ReddotManager.ClearLeafNodeCount(ReddotName)
+end
 
 function M:Construct()
   M.Super.Construct(self)
-  self.WBP_Btn_Begin.Btn_Begin.OnClicked:Add(self, self.OnBeginBtnClicked)
+  AudioManager(self):PlayUISound(nil, "event:/ui/activity/weimangzhencang_level_select_in", nil, nil)
+  self.WBP_Btn_Begin.Button_Area.OnClicked:Add(self, self.OnBeginBtnClicked)
   self.Wrap_Normal_L.OnListViewScrolled:Add(self, self._OnListItemScrolled)
   self.Wrap_Normal_L.OnMouseButtonUp:Add(self, self.OnListItemReleased)
-  self.Wrap_Normal_L.OnCreateEmptyContent:Bind(self, function(self)
-    local Content = NewObject(UIUtils.GetCommonItemContentClass())
-    Content.Conf = nil
-    Content.IsSelected = false
-    Content.Parent = self
-    return Content
-  end)
+  if self.Arrow_L and self.Arrow_L.Btn_Arrow then
+    self.Arrow_L.Btn_Arrow.OnClicked:Add(self, self.OnArrowLeftClicked)
+  end
+  if self.Arrow_R and self.Arrow_R.Btn_Arrow then
+    self.Arrow_R.Btn_Arrow.OnClicked:Add(self, self.OnArrowRightClicked)
+  end
   self.CurrentSelectedContent = nil
   self.CurrentSelectedIndex = nil
-  self.CurrentRealDataIndex = nil
   self.LastSelectedEntry = nil
   self.LastSelectedIndex = nil
   self.LastSelectedContentId = nil
   self.OriginalDataList = {}
   self.OriginalDataCount = 0
-  self.bIsResettingScroll = false
-  self.MiddleStartIndex = 0
   self.bIsScrollingToTarget = false
+  self.Text_Title02:SetText(GText("UI_BackpackPuzzle_BackgroundPosition"))
+  self.Text_Rule:SetText(GText("UI_GameEvent_BagGame_LevelDes"))
+  self.Text_Score:SetText(GText("UI_BackpackPuzzle_HighestScore"))
+  self.WBP_Btn_Begin.Text_Button:SetText(GText("UI_BackpackPuzzle_StartGame"))
+  self._ViewedLevelIds = nil
+  self.BeginKey = self.WBP_Btn_Begin.Key_GamePad
+  self:InitListenEvent()
+  self:RefreshBaseInfo()
 end
 
 function M:Destruct()
-  self.Wrap_Normal_L.OnCreateEmptyContent:Unbind()
+  self:RemoveTimer(MAIN_RESTORE_FOCUS_TIMER)
   self.Wrap_Normal_L.OnListViewScrolled:Remove(self, self._OnListItemScrolled)
   self.Wrap_Normal_L.OnMouseButtonUp:Remove(self, self.OnListItemReleased)
+  if self.Arrow_L and self.Arrow_L.Btn_Arrow then
+    self.Arrow_L.Btn_Arrow.OnClicked:Remove(self, self.OnArrowLeftClicked)
+  end
+  if self.Arrow_R and self.Arrow_R.Btn_Arrow then
+    self.Arrow_R.Btn_Arrow.OnClicked:Remove(self, self.OnArrowRightClicked)
+  end
+  self._ViewedLevelIds = nil
   M.Super.Destruct(self)
+end
+
+function M:ReceiveEnterState(StackAction)
+  self.Super.ReceiveEnterState(self, StackAction)
+  if 1 == StackAction then
+    self:_RequestRestoreFocusOnEnter()
+  end
 end
 
 function M:InitUIInfo(Name, IsInUIMode, EventList, Params)
   self.Super.InitUIInfo(self, Name, IsInUIMode, EventList, Params)
+  self._Avatar = GWorld:GetAvatar()
   self:InitMainTab()
   self.Btn_Arward:Init()
   self:InitLevelList()
   self:PlayAnimation(self.In)
   self:SetFocus()
   self:InitScrollEffect()
+  local CurInputDevice = UIUtils.UtilsGetCurrentInputType()
+  self:InitGamePadKey()
 end
 
 function M:OnBeginBtnClicked()
-  print("OnBeginBtnClicked")
   if not self.CurrentSelectedContent then
     print("警告：未选中任何关卡")
     return
   end
-  print("开始游戏 - 关卡ID:", self.CurrentSelectedContent.Id, ", 标题:", self.CurrentSelectedContent.Title, ", 最高分:", self.CurrentSelectedContent.MaxScore)
-  local Params = {
-    Owner = self,
-    Content = self.CurrentSelectedContent
-  }
-  UIManager(self):LoadUINew("BagGamePlay", Params)
-end
-
-function M:OnCenterLBtnClicked()
-  self:ScrollToPreviousItem()
-end
-
-function M:OnCenterRBtnClicked()
-  self:ScrollToNextItem()
+  local bCanBegin = self:IsSelectedLevelUnlockedByPrerequisite(self.CurrentSelectedContent) and self:IsSelectedLevelUnlockTimeReached(self.CurrentSelectedContent)
+  if not bCanBegin then
+    return
+  end
+  local LevelId = self.CurrentSelectedContent.LevelId
+  local TargetScoreMax = BagGameModel:GetLevelMaxTargetScore(LevelId)
+  print("开始游戏 - 关卡ID:", LevelId, ", 标题:", self.CurrentSelectedContent.LevelName, ", 最高目标分:", TargetScoreMax)
+  AudioManager(self):PlayUISound(nil, "event:/ui/activity/auto_chess_main_level_btn_click", nil, nil)
+  BagGameController:OpenPlayUI(LevelId, self.CurrentSelectedContent, self)
 end
 
 function M:ScrollToPreviousItem()
   if self.bIsScrollingToTarget then
     return
   end
-  local CurrentOffset = self.Wrap_Normal_L:GetScrollOffset()
-  local TargetOffset = CurrentOffset - 1
-  self:ScrollToOffset(TargetOffset)
+  local CurrentRealIndex = self:GetCurrentRealLevelIndex()
+  if CurrentRealIndex <= 0 then
+    return
+  end
+  self:ScrollToRealIndex(CurrentRealIndex - 1)
 end
 
 function M:ScrollToNextItem()
   if self.bIsScrollingToTarget then
     return
   end
-  local CurrentOffset = self.Wrap_Normal_L:GetScrollOffset()
-  local TargetOffset = CurrentOffset + 1
-  self:ScrollToOffset(TargetOffset)
+  local CurrentRealIndex = self:GetCurrentRealLevelIndex()
+  if CurrentRealIndex >= self.OriginalDataCount - 1 then
+    return
+  end
+  self:ScrollToRealIndex(CurrentRealIndex + 1)
 end
 
-function M:ScrollToOffset(TargetOffset)
+function M:OnArrowLeftClicked()
+  AudioManager(self):PlayUISound(nil, "event:/ui/activity/auto_chess_normal_btn_click", nil, nil)
+  self:ScrollToPreviousItem()
+end
+
+function M:OnArrowRightClicked()
+  AudioManager(self):PlayUISound(nil, "event:/ui/activity/auto_chess_normal_btn_click", nil, nil)
+  self:ScrollToNextItem()
+end
+
+function M:ScrollToRealIndex(RealIndex)
   self.bIsScrollingToTarget = true
-  local TotalItems = self.Wrap_Normal_L:GetNumItems()
-  if TargetOffset < 0 then
-    TargetOffset = 0
-  elseif TotalItems <= TargetOffset then
-    TargetOffset = TotalItems - 1
+  if RealIndex < 0 then
+    RealIndex = 0
   end
-  print("开始滚动，目标偏移:", TargetOffset)
-  self.Wrap_Normal_L:SetScrollOffset(TargetOffset)
+  if RealIndex > self.OriginalDataCount - 1 then
+    RealIndex = self.OriginalDataCount - 1
+  end
+  self.Wrap_Normal_L:SetScrollOffset(RealIndex)
   self:AddTimer(0.05, function()
     self.bIsScrollingToTarget = false
-    local DidReset = self:CheckAndResetScrollPosition()
-    if not DidReset then
-      self:UpdateSelectedItem()
-    end
+    self:UpdateSelectedItem()
+    self:UpdateArrowButtons()
   end, false)
+end
+
+function M:GetCurrentRealLevelIndex()
+  local ScrollOffset = self.Wrap_Normal_L:GetScrollOffset()
+  local RealIndex = math.floor(ScrollOffset + 0.5)
+  if RealIndex < 0 then
+    RealIndex = 0
+  end
+  if self.OriginalDataCount > 0 and RealIndex > self.OriginalDataCount - 1 then
+    RealIndex = self.OriginalDataCount - 1
+  end
+  return RealIndex
 end
 
 function M:InitMainTab()
@@ -397,6 +174,17 @@ function M:InitMainTab()
     Tabs = self.Tabs,
     DynamicNode = {"Back", "BottomKey"},
     BottomKeyInfo = {
+      {
+        GamePadInfoList = {
+          {Type = "Or"},
+          GamePadSubKeyInfoList = {
+            {Type = "Img", ImgShortPath = "LB"},
+            {Type = "Img", ImgShortPath = "RB"}
+          }
+        },
+        Desc = GText("切换关卡"),
+        bLongPress = false
+      },
       {
         KeyInfoList = {
           {
@@ -420,397 +208,276 @@ function M:InitMainTab()
     OwnerPanel = self,
     BackCallback = self.CloseSelf,
     StyleName = "TextImage",
-    TitleName = GText("Event_Title_103030")
+    TitleName = GText("Event_Title_103015")
   })
 end
 
 function M:UpdateInfoTips(Content)
-  self.Text_Title01:SetText(GText(Content.Title))
-  self.Text_Num:SetText(Content.Id)
-  self.Text_Message01:SetText(GText(Content.Rule))
-  self.Text_Score_Num:SetText(Content.MaxScore)
-  for i, state in ipairs(Content.StarState) do
-    if state then
-      if 1 == state.IsFinish then
+  self.Text_Title01:SetText(GText(Content.LevelName))
+  self.Text_Message01:SetText(GText(Content.LevelDes))
+  local LevelId = Content.LevelId
+  local StarCount = BagGameModel:GetPlayerStarCount(LevelId)
+  local DisplayScore = StarCount > 0 and BagGameModel:GetPlayerFinishScore(LevelId) or 0
+  self.Text_Score_Num:SetText(DisplayScore)
+  local FinishCount = BagGameModel:GetPlayerStarCount(LevelId)
+  local TotalStars = Content.TargetScore and #Content.TargetScore or 0
+  if Content.TargetScore then
+    local PlayerScore = Content.PlayerScore or 0
+    for i, TargetScore in ipairs(Content.TargetScore) do
+      local IsFinish = TargetScore <= PlayerScore
+      if IsFinish then
         self["ScoreItem0" .. i].WS_Type:SetActiveWidgetIndex(1)
-        self["ScoreItem0" .. i].Text_ScoreInfo_Star:SetText("Text_ScoreInfo_Star")
+        self["ScoreItem0" .. i].Text_ScoreInfo_Star:SetText(string.format(GText("UI_BackpackPuzzle_Target" .. i), TargetScore))
       else
         self["ScoreItem0" .. i].WS_Type:SetActiveWidgetIndex(0)
-        self["ScoreItem0" .. i].Text_ScoreInfo_Empty:SetText("Text_ScoreInfo_Empty")
+        self["ScoreItem0" .. i].Text_ScoreInfo_Empty:SetText(string.format(GText("UI_BackpackPuzzle_Target" .. i), TargetScore))
       end
     end
+  end
+  self.Text_Target:SetText(string.format(GText("UI_BackpackPuzzle_TargetScore") .. " (%d/%d)", FinishCount, TotalStars))
+  self:RefreshBeginButtonText()
+end
+
+function M:SetBeginButtonText(TextValue)
+  if self.WBP_Btn_Begin and self.WBP_Btn_Begin.SetText then
+    self.WBP_Btn_Begin:SetText(TextValue)
+  elseif self.WBP_Btn_Begin and self.WBP_Btn_Begin.Text_Button then
+    self.WBP_Btn_Begin.Text_Button:SetText(TextValue)
+  end
+end
+
+function M:IsSelectedLevelUnlockedByPrerequisite(Content)
+  if not (Content and Content.Id) or Content.Id <= 1 then
+    return true
+  end
+  if not self.OriginalDataList then
+    return true
+  end
+  local PrevInfo = self.OriginalDataList[Content.Id - 1]
+  if not PrevInfo then
+    return true
+  end
+  return BagGameModel:GetPlayerStarCount(PrevInfo.LevelId) > 0
+end
+
+function M:GetSelectedLevelRemainUnlockSeconds(Content)
+  if not Content or not Content.UnlockDate then
+    return 0
+  end
+  local UnlockTs = Content.UnlockDate:GetTime()
+  if UnlockTs <= 0 then
+    return 0
+  end
+  local NowTs = TimeUtils.NowTime()
+  local RemainTimeDict, TimeCount = UIUtils.GetLeftTimeStrStyle2(UnlockTs, NowTs)
+  return UnlockTs - NowTs, RemainTimeDict
+end
+
+function M:IsSelectedLevelUnlockTimeReached(Content)
+  local RemainUnlockSeconds = self:GetSelectedLevelRemainUnlockSeconds(Content)
+  return RemainUnlockSeconds <= 0
+end
+
+function M:RefreshBeginButtonText()
+  self.WBP_Btn_Begin.Button_Area:SetVisibility(UIConst.VisibilityOp.Visible)
+  if not self.CurrentSelectedContent then
+    self:SetBeginButtonText(GText("UI_BackpackPuzzle_StartGame"))
+    self.WBP_Btn_Begin.Button_Area:SetForbidden(true)
+    self.WBP_Btn_Begin.WS_Text:SetActiveWidgetIndex(1)
+    self._bBeginBtnForbidden = true
+    self:RefreshBeginKeyVisibility()
+    return
+  end
+  if not self:IsSelectedLevelUnlockedByPrerequisite(self.CurrentSelectedContent) then
+    self:SetBeginButtonText(GText("UI_GameEvent_BagGame_LockDes_PerviousLevel"))
+    self.WBP_Btn_Begin.Button_Area:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.WBP_Btn_Begin.Button_Area:SetForbidden(true)
+    self.WBP_Btn_Begin.WS_Text:SetActiveWidgetIndex(1)
+    self._bBeginBtnForbidden = true
+    self:RefreshBeginKeyVisibility()
+    return
+  end
+  local RemanTimes, RemainTimeDict = self:GetSelectedLevelRemainUnlockSeconds(self.CurrentSelectedContent)
+  if RemanTimes > 0 then
+    self.WBP_Btn_Begin.WBP_Com_Time:SetTimeText(nil, RemainTimeDict)
+    self.WBP_Btn_Begin.Button_Area:SetForbidden(true)
+    self.WBP_Btn_Begin.Button_Area:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.WBP_Btn_Begin.WS_Text:SetActiveWidgetIndex(0)
+    self._bBeginBtnForbidden = true
+    self:RefreshBeginKeyVisibility()
+    return
+  else
+    self.WBP_Btn_Begin.WS_Text:SetActiveWidgetIndex(1)
+  end
+  self:SetBeginButtonText(GText("UI_BackpackPuzzle_StartGame"))
+  self.WBP_Btn_Begin.Button_Area:SetForbidden(false)
+  self._bBeginBtnForbidden = false
+  self:RefreshBeginKeyVisibility()
+end
+
+function M:RefreshBeginKeyVisibility()
+  if self._bBeginBtnForbidden then
+    self.BeginKey:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    return
+  end
+  local IsUseGamepad = self.CurInputDevice == ECommonInputType.Gamepad
+  if IsUseGamepad then
+    self.BeginKey:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  else
+    self.BeginKey:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
 end
 
 function M:InitLevelList()
   self.LevelList = {}
-  local BackpackPuzzleLevel = {
-    {
-      Id = 1,
-      Title = "Level1",
-      Rule = "Level1_Rule",
-      MaxScore = 1000,
-      StarState = {
-        {IsFinish = 1},
-        {IsFinish = 1},
-        {IsFinish = 1}
-      },
-      Reward = {
-        1001,
-        1002,
-        1003
-      },
-      DisPlayItems = {
-        {
-          Id = 1,
-          Title = "DisPlayItem1",
-          Type = 1,
-          IconPath = "Icon_1",
-          ShapeOffsets = {
-            {-1, -1},
-            {-1, 0},
-            {-1, 1},
-            {0, -1},
-            {0, 0},
-            {0, 1},
-            {1, -1},
-            {1, 0},
-            {1, 1},
-            {2, -1},
-            {2, 0},
-            {2, 1}
-          }
-        },
-        {
-          Id = 2,
-          Title = "DisPlayItem2",
-          Type = 2,
-          IconPath = "Icon_2",
-          ShapeOffsets = {
-            {-1, -1},
-            {-1, 0},
-            {-1, 1},
-            {0, -1},
-            {0, 0},
-            {0, 1},
-            {1, -1},
-            {1, 0},
-            {1, 1},
-            {2, -1},
-            {2, 0},
-            {2, 1}
-          }
-        },
-        {
-          Id = 3,
-          Title = "DisPlayItem3",
-          Type = 3,
-          IconPath = "Icon_3",
-          ShapeOffsets = {
-            {-1, -1},
-            {-1, 0},
-            {-1, 1},
-            {0, -1},
-            {0, 0},
-            {0, 1},
-            {1, -1},
-            {1, 0},
-            {1, 1},
-            {2, -1},
-            {2, 0},
-            {2, 1}
-          }
-        },
-        {
-          Id = 4,
-          Title = "DisPlayItem4",
-          Type = 4,
-          IconPath = "Icon_4",
-          ShapeOffsets = {
-            {-1, -1},
-            {-1, 0},
-            {-1, 1},
-            {0, -1},
-            {0, 0},
-            {0, 1},
-            {1, -1},
-            {1, 0},
-            {1, 1},
-            {2, -1},
-            {2, 0},
-            {2, 1}
-          }
-        },
-        {
-          Id = 5,
-          Title = "DisPlayItem5",
-          Type = 5,
-          IconPath = "Icon_5",
-          ShapeOffsets = {
-            {-1, -1},
-            {-1, 0},
-            {-1, 1},
-            {0, -1},
-            {0, 0},
-            {0, 1},
-            {1, -1},
-            {1, 0},
-            {1, 1},
-            {2, -1},
-            {2, 0},
-            {2, 1}
-          }
-        },
-        {
-          Id = 6,
-          Title = "DisPlayItem6",
-          Type = 6,
-          IconPath = "Icon_6",
-          ShapeOffsets = {
-            {-1, -1},
-            {-1, 0},
-            {-1, 1},
-            {0, -1},
-            {0, 0},
-            {0, 1},
-            {1, -1},
-            {1, 0},
-            {1, 1},
-            {2, -1},
-            {2, 0},
-            {2, 1}
-          }
-        }
-      },
-      ContainItems = TemplateContainItems
-    },
-    {
-      Id = 2,
-      Title = "Level2",
-      Rule = "Level2_Rule",
-      MaxScore = 2000,
-      StarState = {
-        {IsFinish = 1},
-        {IsFinish = 0},
-        {IsFinish = 0}
-      },
-      Reward = {
-        1004,
-        1005,
-        1006
-      }
-    },
-    {
-      Id = 3,
-      Title = "Level3",
-      Rule = "Level3_Rule",
-      MaxScore = 3000,
-      StarState = {
-        {IsFinish = 1},
-        {IsFinish = 0},
-        {IsFinish = 0}
-      },
-      Reward = {
-        1007,
-        1008,
-        1009
-      }
-    },
-    {
-      Id = 4,
-      Title = "Level4",
-      Rule = "Level4_Rule",
-      MaxScore = 4000,
-      StarState = {
-        {IsFinish = 1},
-        {IsFinish = 0},
-        {IsFinish = 0}
-      },
-      Reward = {
-        1010,
-        1011,
-        1012
-      }
-    },
-    {
-      Id = 5,
-      Title = "Level5",
-      Rule = "Level5_Rule",
-      MaxScore = 5000,
-      StarState = {
-        {IsFinish = 1},
-        {IsFinish = 0},
-        {IsFinish = 0}
-      },
-      Reward = {
-        1013,
-        1014,
-        1015
-      }
-    },
-    {
-      Id = 6,
-      Title = "Level6",
-      Rule = "Level6_Rule",
-      MaxScore = 6000,
-      StarState = {
-        {IsFinish = 1},
-        {IsFinish = 0},
-        {IsFinish = 0}
-      },
-      Reward = {
-        1016,
-        1017,
-        1018
-      }
-    },
-    {
-      Id = 7,
-      Title = "Level7",
-      Rule = "Level7_Rule",
-      MaxScore = 7000,
-      StarState = {
-        {IsFinish = 1},
-        {IsFinish = 0},
-        {IsFinish = 0}
-      },
-      Reward = {
-        1019,
-        1020,
-        1021
-      }
-    },
-    {
-      Id = 8,
-      Title = "Level8",
-      Rule = "Level8_Rule",
-      MaxScore = 8000,
-      StarState = {
-        {IsFinish = 1},
-        {IsFinish = 0},
-        {IsFinish = 0}
-      },
-      Reward = {
-        1022,
-        1023,
-        1024
-      }
-    },
-    {
-      Id = 9,
-      Title = "Level9",
-      Rule = "Level9_Rule",
-      MaxScore = 9000,
-      StarState = {
-        {IsFinish = 1},
-        {IsFinish = 0},
-        {IsFinish = 0}
-      },
-      Reward = {
-        1025,
-        1026,
-        1027
-      }
-    }
-  }
-  self.OriginalDataList = BackpackPuzzleLevel
-  self.OriginalDataCount = #BackpackPuzzleLevel
+  local LevelsInfo = BagGameModel:GetLevelsInfo()
+  local FixedSelectPosition = self:GetFixedSelectPosition()
+  local TrailingPlaceholderCount = self:GetTrailingPlaceholderCount()
+  self.OriginalDataList = LevelsInfo
+  self.OriginalDataCount = #LevelsInfo
   self.Wrap_Normal_L:ClearListItems()
-  local RepeatCount = 5
-  local MiddleIndex = math.floor(RepeatCount / 2)
-  for RepeatIndex = 0, RepeatCount - 1 do
-    for DataIndex, Info in ipairs(BackpackPuzzleLevel) do
-      local Content = NewObject(UIUtils.GetCommonItemContentClass())
-      Content.Owner = self
-      Content.Id = Info.Id
-      Content.Title = Info.Title
-      Content.Rule = Info.Rule
-      Content.MaxScore = Info.MaxScore
-      Content.StarState = Info.StarState
-      Content.Reward = Info.Reward
-      Content.DisPlayItems = Info.DisPlayItems
-      Content.ContainItems = Info.ContainItems
-      Content.Star = 3
-      local VirtualIndex = RepeatIndex * self.OriginalDataCount + (DataIndex - 1)
-      Content.Index = VirtualIndex
-      Content.RealDataIndex = DataIndex - 1
-      self.Wrap_Normal_L:AddItem(Content)
-    end
+  for i = 1, FixedSelectPosition do
+    local Placeholder = NewObject(UIUtils.GetCommonItemContentClass())
+    Placeholder.Owner = self
+    Placeholder.IsPlaceholder = true
+    Placeholder.Index = -i
+    self.Wrap_Normal_L:AddItem(Placeholder)
   end
-  self.Wrap_Normal_L:RequestFillEmptyContent()
-  self.MiddleStartIndex = MiddleIndex * self.OriginalDataCount
+  for DataIndex, Info in ipairs(LevelsInfo) do
+    local Content = NewObject(UIUtils.GetCommonItemContentClass())
+    Content.Owner = self
+    local LevelContent = BagGameModel:BuildLevelListContent(Info, DataIndex)
+    for Key, Value in pairs(LevelContent) do
+      Content[Key] = Value
+    end
+    Content.Index = DataIndex - 1
+    Content.RealDataIndex = DataIndex - 1
+    Content.IsPlaceholder = false
+    Content.PlayerScore = BagGameModel:GetPlayerFinishScore(Info.LevelId)
+    self.Wrap_Normal_L:AddItem(Content)
+  end
+  for i = 1, TrailingPlaceholderCount do
+    local Placeholder = NewObject(UIUtils.GetCommonItemContentClass())
+    Placeholder.Owner = self
+    Placeholder.IsPlaceholder = true
+    Placeholder.Index = self.OriginalDataCount + i - 1
+    self.Wrap_Normal_L:AddItem(Placeholder)
+  end
+  self.Wrap_Normal_L:RequestPlayEntriesAnim()
+  self:_TryRefreshBagGameNewReddot()
 end
 
-local FIXED_SELECT_POSITION = 4
+function M:RefreshLevelListAfterPlay(PreferLevelId)
+  self._bIsAutoSelecting = true
+  self:InitLevelList()
+  local TargetRealIndex
+  local UncompletedIndex = self:FindFirstUncompletedLevelIndex()
+  if nil ~= UncompletedIndex then
+    TargetRealIndex = UncompletedIndex
+  else
+    local HighestIndex = self:FindHighestCompletedLevelIndex()
+    if nil ~= HighestIndex then
+      TargetRealIndex = HighestIndex
+    else
+      TargetRealIndex = 0
+    end
+  end
+  self:AddTimer(0.05, function()
+    self:ScrollToRealIndex(TargetRealIndex)
+    self:AddTimer(0.1, function()
+      self.CurrentSelectedIndex = nil
+      self.CurrentSelectedContent = nil
+      self.LastSelectedEntry = nil
+      self.LastSelectedIndex = nil
+      self.LastSelectedContentId = nil
+      self:UpdateSelectedItem()
+      self:UpdateArrowButtons()
+      self._bIsAutoSelecting = false
+    end, false)
+  end, false)
+end
+
+function M:IsLevelFirstClearCompleted(LevelInfo)
+  if not (LevelInfo and LevelInfo.TargetScore) or 0 == #LevelInfo.TargetScore then
+    return false
+  end
+  local FirstTargetScore = LevelInfo.TargetScore[1]
+  local PlayerScore = BagGameModel:GetPlayerFinishScore(LevelInfo.LevelId)
+  return FirstTargetScore <= PlayerScore
+end
+
+function M:FindFirstUncompletedLevelIndex()
+  for Index, LevelInfo in ipairs(self.OriginalDataList) do
+    if not self:IsLevelFirstClearCompleted(LevelInfo) then
+      return Index - 1
+    end
+  end
+  return nil
+end
+
+function M:FindHighestCompletedLevelIndex()
+  local HighestIndex
+  for Index, LevelInfo in ipairs(self.OriginalDataList) do
+    if self:IsLevelFirstClearCompleted(LevelInfo) then
+      HighestIndex = Index - 1
+    else
+      break
+    end
+  end
+  return HighestIndex
+end
 
 function M:InitScrollEffect()
+  self._bIsAutoSelecting = true
   self:AddTimer(0.1, function()
-    local InitialScrollOffset = self.MiddleStartIndex - FIXED_SELECT_POSITION
-    if InitialScrollOffset < 0 then
-      InitialScrollOffset = 0
+    local TargetRealIndex
+    local UncompletedIndex = self:FindFirstUncompletedLevelIndex()
+    if nil ~= UncompletedIndex then
+      TargetRealIndex = UncompletedIndex
+      print("初始化定位：未完成首通关卡，真实索引:", TargetRealIndex)
+    else
+      local HighestIndex = self:FindHighestCompletedLevelIndex()
+      if nil ~= HighestIndex then
+        TargetRealIndex = HighestIndex
+        print("初始化定位：最高已首通关卡，真实索引:", TargetRealIndex)
+      else
+        TargetRealIndex = 0
+        print("初始化定位：默认第一关")
+      end
     end
-    print("初始化滚动位置:", InitialScrollOffset, ", 中间段起始:", self.MiddleStartIndex)
-    self.Wrap_Normal_L:SetScrollOffset(InitialScrollOffset)
-    self:AddTimer(0.05, function()
-      self.CurrentRealDataIndex = nil
+    self:ScrollToRealIndex(TargetRealIndex)
+    self:AddTimer(0.15, function()
+      self.Wrap_Normal_L:ForceLayoutPrepass()
       self.CurrentSelectedIndex = nil
       self.LastSelectedEntry = nil
       self.LastSelectedIndex = nil
       self.LastSelectedContentId = nil
-      self.Wrap_Normal_L:ForceLayoutPrepass()
       self:UpdateSelectedItem()
-      if not self.CurrentSelectedContent then
-        local ItemIndex = self:GetItemIndexAtSelectPosition()
-        local CurWidget = URuntimeCommonFunctionLibrary.GetEntryWidgetFromItem(self.Wrap_Normal_L, ItemIndex)
-        if CurWidget then
-          if CurWidget.PlaySelected then
-            CurWidget:PlaySelected()
-          end
-          self.LastSelectedEntry = CurWidget
-          self.LastSelectedIndex = ItemIndex
-          if CurWidget.Content then
-            self.CurrentSelectedContent = CurWidget.Content
-            self.CurrentRealDataIndex = ItemIndex % self.OriginalDataCount
-            self.CurrentSelectedIndex = ItemIndex
-            self.LastSelectedContentId = CurWidget.Content.Id
-            print("初始化选中 Item - 虚拟索引:", ItemIndex, ", Content ID:", CurWidget.Content.Id)
-            self:UpdateInfoTips(self.CurrentSelectedContent)
-          end
-        end
-      end
+      self:UpdateArrowButtons()
+      self._bIsAutoSelecting = false
     end)
   end)
 end
 
 function M:OnListItemReleased()
-  local RealDataIndex = self:GetRealDataIndexAtSelectPosition()
-  if nil ~= RealDataIndex then
-    print("确认选中 Item (真实索引):", RealDataIndex)
-    if self.CurrentSelectedContent then
-      print("当前选中Content - ID:", self.CurrentSelectedContent.Id, ", 标题:", self.CurrentSelectedContent.Title)
-    end
+  self:SnapToNearestItem()
+end
+
+function M:GetFixedSelectPosition()
+  if CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" then
+    return MOBILE_FIXED_SELECT_POSITION
   end
+  return PC_FIXED_SELECT_POSITION
+end
+
+function M:GetTrailingPlaceholderCount()
+  return self:GetFixedSelectPosition() * 2
 end
 
 function M:GetItemIndexAtSelectPosition()
-  local ScrollOffset = self.Wrap_Normal_L:GetScrollOffset()
-  local ItemIndex = math.floor(ScrollOffset + FIXED_SELECT_POSITION + 0.5)
-  local TotalItems = self.Wrap_Normal_L:GetNumItems()
-  if ItemIndex < 0 then
-    ItemIndex = 0
-  elseif TotalItems <= ItemIndex then
-    ItemIndex = TotalItems - 1
-  end
-  return ItemIndex
-end
-
-function M:GetRealDataIndexAtSelectPosition()
-  local VirtualIndex = self:GetItemIndexAtSelectPosition()
-  if nil == VirtualIndex then
-    return nil
-  end
-  local RealDataIndex = VirtualIndex % self.OriginalDataCount
-  return RealDataIndex
+  local RealIndex = self:GetCurrentRealLevelIndex()
+  local FixedSelectPosition = self:GetFixedSelectPosition()
+  return FixedSelectPosition + RealIndex
 end
 
 function M:GetCurrentSelectedContent()
@@ -822,20 +489,21 @@ function M:HasSelectedContent()
 end
 
 function M:UpdateSelectedItem()
-  if self.bIsScrollingToTarget or self.bIsResettingScroll then
+  if self.bIsScrollingToTarget then
     return
   end
   local NewSelectedIndex = self:GetItemIndexAtSelectPosition()
   if nil == NewSelectedIndex then
     return
   end
-  local RealDataIndex = NewSelectedIndex % self.OriginalDataCount
-  if self.CurrentRealDataIndex ~= RealDataIndex then
-    local CurWidget = URuntimeCommonFunctionLibrary.GetEntryWidgetFromItem(self.Wrap_Normal_L, NewSelectedIndex)
+  local CurWidget = URuntimeCommonFunctionLibrary.GetEntryWidgetFromItem(self.Wrap_Normal_L, NewSelectedIndex)
+  if not (CurWidget and CurWidget.Content) or CurWidget.Content.IsPlaceholder then
+    return
+  end
+  if self.CurrentSelectedIndex ~= NewSelectedIndex then
     if self.LastSelectedEntry and self.LastSelectedEntry.PlayUnselected and self.LastSelectedContentId and self.LastSelectedEntry.Content and self.LastSelectedEntry.Content.Id == self.LastSelectedContentId and self.LastSelectedEntry ~= CurWidget then
       self.LastSelectedEntry:PlayUnselected()
     end
-    self.CurrentRealDataIndex = RealDataIndex
     self.CurrentSelectedIndex = NewSelectedIndex
     if CurWidget then
       if CurWidget.PlaySelected then
@@ -846,12 +514,13 @@ function M:UpdateSelectedItem()
       if CurWidget.Content then
         self.CurrentSelectedContent = CurWidget.Content
         self.LastSelectedContentId = CurWidget.Content.Id
-        print("选中 Item - 虚拟索引:", NewSelectedIndex, ", 真实索引:", RealDataIndex, ", Content ID:", CurWidget.Content.Id)
+        local RealIndex = NewSelectedIndex - self:GetFixedSelectPosition()
+        print("选中 Item - 列表索引:", NewSelectedIndex, ", 真实索引:", RealIndex, ", Id:", CurWidget.Content.Id, ", LevelId:", CurWidget.Content.LevelId)
         self:UpdateInfoTips(self.CurrentSelectedContent)
+        self:_TryClearNewReddotForLevel(self.CurrentSelectedContent.LevelId)
       else
         self.CurrentSelectedContent = nil
         self.LastSelectedContentId = nil
-        print("选中 Item - 虚拟索引:", NewSelectedIndex, ", 真实索引:", RealDataIndex)
       end
     else
       self.CurrentSelectedContent = nil
@@ -860,58 +529,83 @@ function M:UpdateSelectedItem()
   end
 end
 
-function M:CheckAndResetScrollPosition()
-  if self.bIsResettingScroll then
-    return
+function M:UpdateArrowButtons()
+  local RealIndex = self:GetCurrentRealLevelIndex()
+  local bCanScrollLeft = RealIndex > 0
+  local bCanScrollRight = RealIndex < self.OriginalDataCount - 1
+  local ListIndex = self:GetItemIndexAtSelectPosition()
+  local CurWidget = URuntimeCommonFunctionLibrary.GetEntryWidgetFromItem(self.Wrap_Normal_L, ListIndex)
+  if self.Arrow_L and self.Arrow_L.Btn_Arrow then
+    self.Arrow_L.Btn_Arrow:SetForbidden(not bCanScrollLeft)
   end
-  if self.bIsScrollingToTarget then
-    return
+  if self.Arrow_R and self.Arrow_R.Btn_Arrow then
+    self.Arrow_R.Btn_Arrow:SetForbidden(not bCanScrollRight)
   end
-  if 0 == self.OriginalDataCount then
-    return
+end
+
+function M:ClampScrollPosition()
+  if self.OriginalDataCount <= 0 then
+    return false
   end
   local ScrollOffset = self.Wrap_Normal_L:GetScrollOffset()
-  local GroupSize = self.OriginalDataCount
-  local FirstGroupBoundary = GroupSize * 1
-  local LastGroupBoundary = GroupSize * 3
-  local NeedReset = false
-  local NewScrollOffset = ScrollOffset
-  if ScrollOffset < FirstGroupBoundary then
-    NewScrollOffset = ScrollOffset + GroupSize * 2
-    NeedReset = true
-    print(string.format("循环列表：向前滚动到边界 [%.2f < %.2f]，跳转 %.2f -> %.2f", ScrollOffset, FirstGroupBoundary, ScrollOffset, NewScrollOffset))
-  elseif ScrollOffset >= LastGroupBoundary then
-    NewScrollOffset = ScrollOffset - GroupSize * 2
-    NeedReset = true
-    print(string.format("循环列表：向后滚动到边界 [%.2f >= %.2f]，跳转 %.2f -> %.2f", ScrollOffset, LastGroupBoundary, ScrollOffset, NewScrollOffset))
-  end
-  if NeedReset then
-    self.bIsResettingScroll = true
-    self.Wrap_Normal_L:SetScrollOffset(NewScrollOffset)
-    self:AddTimer(0.01, function()
-      self.bIsResettingScroll = false
-      self:UpdateSelectedItem()
-    end, false)
+  local MinOffset = 0
+  local MaxOffset = self.OriginalDataCount - 1
+  if ScrollOffset < MinOffset then
+    self.Wrap_Normal_L:SetScrollOffset(MinOffset)
+    return true
+  elseif ScrollOffset > MaxOffset then
+    self.Wrap_Normal_L:SetScrollOffset(MaxOffset)
     return true
   end
   return false
 end
 
-function M:_OnListItemScrolled(ItemOffset, DistanceRemaining)
-  self:CheckAndResetScrollPosition()
+function M:SnapToNearestItem()
+  local ScrollOffset = self.Wrap_Normal_L:GetScrollOffset()
+  local SnappedOffset = math.floor(ScrollOffset + 0.5)
+  if SnappedOffset < 0 then
+    SnappedOffset = 0
+  end
+  if self.OriginalDataCount > 0 and SnappedOffset > self.OriginalDataCount - 1 then
+    SnappedOffset = self.OriginalDataCount - 1
+  end
+  self.Wrap_Normal_L:SetScrollOffset(SnappedOffset)
   self:UpdateSelectedItem()
+  self:UpdateArrowButtons()
+end
+
+function M:_OnListItemScrolled(ItemOffset, DistanceRemaining)
+  self:ClampScrollPosition()
+  local NewSelectedIndex = self:GetItemIndexAtSelectPosition()
+  if NewSelectedIndex ~= self.CurrentSelectedIndex then
+    self:UpdateSelectedItem()
+    self:UpdateArrowButtons()
+  end
 end
 
 function M:CloseSelf()
   if self:IsAnimationPlaying(self.In) then
     return
   end
+  self:_ClearUnviewedNewReddots()
   self:BindToAnimationFinished(self.Out, {
     self,
     self.Close
   })
   EventManager:FireEvent(EventID.OnReturnToActivityEntry)
   self:PlayAnimation(self.Out)
+  EventManager:FireEvent(EventID.OnReturnToActivityEntry)
+  EventManager:FireEvent(EventID.OnActivityEntryShowVisible)
+end
+
+function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
+  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
+  if not UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) then
+    return UE4.UWidgetBlueprintLibrary.Unhandled()
+  end
+  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+  self:HandleGamepadInput(InKeyName)
+  return UE4.UWidgetBlueprintLibrary.Handled()
 end
 
 function M:OnKeyDown(MyGeometry, InKeyEvent)
@@ -919,11 +613,134 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   local IsEventHandled = false
   if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) then
-    IsEventHandled = self:OnGamePadDown(InKeyName)
+    IsEventHandled = self:HandleGamepadInput(InKeyName)
   elseif "Escape" == InKeyName then
     self:CloseSelf()
   end
-  return UE4.UWidgetBlueprintLibrary.Handled()
+  if IsEventHandled then
+    return UE4.UWidgetBlueprintLibrary.Handled()
+  end
+  return UE4.UWidgetBlueprintLibrary.UnHandled()
 end
 
+function M:_ClearBagGameReddotWhenActivityEnd()
+  if not BagGameModel:IsActivityEnded() then
+    return false
+  end
+  ClearBagGameReddot(BagGameAwardReddotName)
+  ClearBagGameReddot(BagGameNewReddotName)
+  return true
+end
+
+function M:_TryRefreshBagGameNewReddot()
+  if self:_ClearBagGameReddotWhenActivityEnd() then
+    return
+  end
+  local NewNode = ReddotManager.GetTreeNode(BagGameNewReddotName)
+  if not NewNode then
+    return
+  end
+  local NewCacheDetail = ReddotManager.GetLeafNodeCacheDetail(BagGameNewReddotName)
+  if not NewCacheDetail then
+    return
+  end
+  local LevelsInfo = self.OriginalDataList
+  if not LevelsInfo or 0 == #LevelsInfo then
+    return
+  end
+  for i, LevelInfo in ipairs(LevelsInfo) do
+    local LevelId = LevelInfo.LevelId
+    if nil ~= NewCacheDetail[LevelId] then
+    else
+      local bUnlocked = false
+      if 1 == i then
+        bUnlocked = true
+      else
+        local PrevLevelId = LevelsInfo[i - 1].LevelId
+        if BagGameModel:GetPlayerStarCount(PrevLevelId) > 0 then
+          local UnlockTs
+          if nil == LevelInfo.UnlockDate then
+            UnlockTs = BagGameModel.EventStartTime:GetTime()
+          else
+            UnlockTs = LevelInfo.UnlockDate:GetTime()
+          end
+          bUnlocked = UnlockTs <= 0 or UnlockTs <= TimeUtils.NowTime()
+        end
+      end
+      if bUnlocked and 0 == BagGameModel:GetPlayerStarCount(LevelId) then
+        ReddotManager.IncreaseLeafNodeCount(BagGameNewReddotName, 1, {LevelId = LevelId})
+      end
+    end
+  end
+end
+
+function M:_TryClearNewReddotForLevel(LevelId)
+  if not LevelId then
+    return
+  end
+  if self._bIsAutoSelecting then
+    return
+  end
+  if self:_ClearBagGameReddotWhenActivityEnd() then
+    return
+  end
+  local NewCacheDetail = ReddotManager.GetLeafNodeCacheDetail(BagGameNewReddotName)
+  if NewCacheDetail and NewCacheDetail[LevelId] then
+    ReddotManager.DecreaseLeafNodeCount(BagGameNewReddotName, 1, {LevelId = LevelId})
+  end
+  self._ViewedLevelIds = self._ViewedLevelIds or {}
+  self._ViewedLevelIds[LevelId] = true
+end
+
+function M:_ClearUnviewedNewReddots()
+  if self:_ClearBagGameReddotWhenActivityEnd() then
+    return
+  end
+  local NewNode = ReddotManager.GetTreeNode(BagGameNewReddotName)
+  if not NewNode or NewNode.Count <= 0 then
+    return
+  end
+  local NewCacheDetail = ReddotManager.GetLeafNodeCacheDetail(BagGameNewReddotName)
+  if not NewCacheDetail then
+    return
+  end
+  local LevelIdsToRemove = {}
+  for LevelId, Flag in pairs(NewCacheDetail) do
+    if type(LevelId) == "number" and true == Flag and (not self._ViewedLevelIds or not self._ViewedLevelIds[LevelId]) then
+      table.insert(LevelIdsToRemove, LevelId)
+    end
+  end
+  for _, LevelId in ipairs(LevelIdsToRemove) do
+    ReddotManager.DecreaseLeafNodeCount(BagGameNewReddotName, 1, {LevelId = LevelId})
+  end
+  self._ViewedLevelIds = nil
+end
+
+function M:BP_GetDesiredFocusTarget()
+  return self
+end
+
+function M:_RequestRestoreFocusOnEnter()
+  if UIUtils.UtilsGetCurrentInputType() ~= ECommonInputType.Gamepad then
+    return
+  end
+  
+  local function RestoreFocus()
+    if UIUtils.UtilsGetCurrentInputType() ~= ECommonInputType.Gamepad then
+      return
+    end
+    local FocusTarget = self:BP_GetDesiredFocusTarget()
+    if FocusTarget and FocusTarget.SetFocus then
+      FocusTarget:SetFocus()
+      return
+    end
+    self:SetFocus()
+  end
+  
+  RestoreFocus()
+  self:RemoveTimer(MAIN_RESTORE_FOCUS_TIMER)
+  self:AddTimer(MAIN_RESTORE_FOCUS_DELAY, RestoreFocus, false, 0, MAIN_RESTORE_FOCUS_TIMER, true)
+end
+
+AssembleComponents(M)
 return M

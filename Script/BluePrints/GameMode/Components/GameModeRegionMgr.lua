@@ -252,6 +252,9 @@ function GameModeRegionMgr:AsyncSetPlayerByStartIndex(LoadLevel, LevelId, StartI
         local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
         Player:AddDisableInputTag("DeliverBlackCurtain")
         self:HandleLevelDeliverBlackCurtainEnd()
+        if 0 ~= Player.CurrentMountId and not Player:CheckCanMountInCurrentRegion() then
+          Player:DisableBattleMount()
+        end
         local Avatar = GWorld:GetAvatar()
         DebugPrint("ExeRegionSkipCallbck", SubRegionId, Avatar.CurrentRegionId)
         Avatar:ExeRegionSkipCallbck(SubRegionId or Avatar.CurrentRegionId, "Enter")
@@ -294,7 +297,7 @@ function GameModeRegionMgr:PrepareLevelDelivery(Id, StartIndex)
   self.TargetSpawnPoint = StartIndex
 end
 
-function GameModeRegionMgr:HandleLevelDeliver(ModeType, Id, StartIndex, IsWhite, bIsInvitation, bIsFromMap)
+function GameModeRegionMgr:HandleLevelDeliver(ModeType, Id, StartIndex, IsWhite, bIsInvitation, bIsFromMap, bShouldReturnAndDownloadPatch)
   Id = tonumber(Id)
   ModeType = tonumber(ModeType)
   StartIndex = tonumber(StartIndex)
@@ -344,6 +347,17 @@ function GameModeRegionMgr:HandleLevelDeliver(ModeType, Id, StartIndex, IsWhite,
     local TargetRegionInfo = DataMgr.SubRegion[Id]
     local CurrentRegionInfo = DataMgr.SubRegion[Avatar.CurrentRegionId]
     if not TargetRegionInfo then
+      return false
+    end
+    local CheckResult, Patch = self:CheckRegionPatchCondition(TargetRegionInfo.RegionId)
+    if not CheckResult then
+      if bShouldReturnAndDownloadPatch then
+        GWorld.NetworkMgr:DisconnectAndReturnLogin({Necessorypatch = Patch})
+      else
+        local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
+        local UIManager = GameInstance:GetGameUIManager()
+        UIManager:LoadUINew("OptionalPatch", Patch)
+      end
       return false
     end
     local CurrentRegionFile = DataMgr.Region[CurrentRegionInfo.RegionId].RegionMapFile
@@ -469,6 +483,19 @@ function GameModeRegionMgr:HandleLevelDeliver(ModeType, Id, StartIndex, IsWhite,
     end
   end
   return true
+end
+
+function GameModeRegionMgr:CheckRegionPatchCondition(RegionId)
+  if DataMgr.RegionPatchCondition[RegionId] then
+    local SubSystem = USubsystemBlueprintLibrary.GetGameInstanceSubsystem(self, UHotUpdateSubsystem:StaticClass())
+    local Patch = DataMgr.RegionPatchCondition[RegionId].NecessaryPatch
+    DebugPrint("111111111111111111111111111111111111111", getmetatable(Patch), Patch, RegionId)
+    PrintTable(Patch)
+    if not SubSystem:IsAllPatchOptionalSignsDownloaded(Patch) then
+      return false, Patch
+    end
+  end
+  return true, nil
 end
 
 function GameModeRegionMgr:DeliveryHideWeapon(PlayerCharacter, bHide)

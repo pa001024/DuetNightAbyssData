@@ -117,7 +117,7 @@ function M:RefreshState(currentTotalPoint, rewardGotList)
   elseif state == EnumPlayerSignRewardState.Completed then
     self:PlayAnimation(self.Got)
   end
-  local visibility = state == EnumPlayerSignRewardState.SignedNotRecv and UE.ESlateVisibility.Visible or UE.ESlateVisibility.SelfHitTestInvisible
+  local visibility = state == EnumPlayerSignRewardState.SignedNotRecv and UIConst.VisibilityOp.Visible or UIConst.VisibilityOp.SelfHitTestInvisible
   self.Btn_Area:SetVisibility(visibility)
 end
 
@@ -168,6 +168,7 @@ function M:OnBtnClicked()
       end
       UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, Rewards, Rewards.IsSpPopup)
     end, self.Content.EventId, self.Index)
+    AudioManager(self):PlayUISound(self, "event:/ui/activity/gerengonghuizhan_small_btn_click", nil, nil)
   end
 end
 

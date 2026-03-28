@@ -50,9 +50,6 @@ function M:ClearDeadItem()
   end
 end
 
-function M:Tick(MyGeometry, InDeltaTime)
-end
-
 function M:StaticInit()
   self.Text_Empty:SetText(GText("UI_RegionOnline_NoInvitation"))
   self.Text_Title:SetText(GText("UI_RegionOnline_CommonList"))

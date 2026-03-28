@@ -156,10 +156,9 @@ end
 
 function M:ItemMenuAnchorChanged(bIsOpen)
   self.IsShowDetails = bIsOpen
-  self.bCantClose = bIsOpen
-  local PlayerController = UE4.UGameplayStatics.GetPlayerController(self, 0)
-  local GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(PlayerController)
-  self:OnUpdateUIStyleByInputTypeChange(GameInputModeSubsystem:GetCurrentInputType(), GameInputModeSubsystem:GetCurrentGamepadName())
+  if bIsOpen then
+    self.bCantClose = bIsOpen
+  end
 end
 
 function M:BP_GetDesiredFocusTarget()
@@ -221,6 +220,10 @@ function M:NewItemContent(ItemType, ItemId, Count)
   end
   Obj.IsShowDetails = true
   Obj.UIName = "GetItemPage"
+  Obj.OnMenuOpenChangedEvents = {
+    Obj = self,
+    Callback = self.ItemMenuAnchorChanged
+  }
   return Obj
 end
 
@@ -230,6 +233,10 @@ function M:BindActionOnClosed(func, ParentWidget)
 end
 
 function M:CloseSelf()
+  if self.bCantClose then
+    self.bCantClose = false
+    return
+  end
   self:RemoveTimer("InitGetItemInfo")
   if not self.bAnimClose then
     self:AddTimer(0.5, function()

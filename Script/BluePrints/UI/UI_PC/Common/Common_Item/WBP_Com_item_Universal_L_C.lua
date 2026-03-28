@@ -4,7 +4,8 @@ local M = Class({
 })
 M._components = {
   "BluePrints.UI.UI_PC.Common.Common_Item.Comp.WBP_Com_Item_TimeTag_Comp",
-  "BluePrints.UI.UI_PC.Common.Common_Item.Comp.WBP_Com_Item_CustomTag_Comp"
+  "BluePrints.UI.UI_PC.Common.Common_Item.Comp.WBP_Com_Item_CustomTag_Comp",
+  "BluePrints.Ui.UI_PC.Common.Common_Item.Comp.WBP_Com_Item_NewGlow_Comp"
 }
 
 function M:InitData(Content)
@@ -30,6 +31,7 @@ function M:InitData(Content)
   self.NavigationRule = Content.NavigationRule
   self.ModLevel = Content.Level
   self.ProductType = Content.ProductType
+  self.bNewGlow = Content.bNewGlow
 end
 
 function M:InitCommonView()
@@ -93,11 +95,14 @@ function M:InitCompView()
   self:SetItemUnrevealed(self.bUnrevealed)
   self:SetRareTag(self.bRare)
   self:SetTryOutText(self.TryOutText)
+  self:SetSquadBuildTryOutText(self.SquadBuildTryOutText)
   self:SetTimeLimitData(self.TimeLimitData)
   self:SetTeamIcon(self.TeamIdx, self.TeamCharId)
   self:SetInGear(self.bInGear)
   self:SetTimeTag(self.Content.TimeTagList)
   self:SetCustomTag(self.Content.bAllowCustom)
+  self:SetWeaponMiniPhantomIcon(self.WeaponMiniPhantomIconCharId)
+  self:SetNewGlow(self.bNewGlow)
   self:SetRedDot(self.RedDotType)
 end
 

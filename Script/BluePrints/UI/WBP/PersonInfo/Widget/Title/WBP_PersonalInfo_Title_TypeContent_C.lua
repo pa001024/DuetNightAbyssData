@@ -85,11 +85,17 @@ function M:OnItemClicked(Content)
   if self.SelectedItem == Content then
     return
   end
-  if self.SelectedItem and self.SelectedItem.UI then
-    self.SelectedItem.UI:SetIsSelected(false)
+  if self.SelectedItem then
+    self.SelectedItem.bSelect = false
+    if self.SelectedItem.UI then
+      self.SelectedItem.UI:SetIsSelected(false)
+    end
   end
   self.SelectedItem = Content
-  Content.UI:SetIsSelected(true)
+  Content.bSelect = true
+  if Content.UI then
+    Content.UI:SetIsSelected(true)
+  end
   self:OnClickTitleFrame(Content.FrameId)
 end
 
@@ -128,10 +134,14 @@ function M:EquipSelectedTitleFrame()
   if self.EquippedItem == self.SelectedItem then
     return
   end
-  if self.EquippedItem and self.EquippedItem.UI then
-    self.EquippedItem.UI:SetIsEquipped(false)
+  if self.EquippedItem then
+    self.EquippedItem.bEquipped = false
+    if self.EquippedItem.UI then
+      self.EquippedItem.UI:SetIsEquipped(false)
+    end
   end
   self.EquippedItem = self.SelectedItem
+  self.EquippedItem.bEquipped = true
   if self.EquippedItem.UI then
     self.EquippedItem.UI:SetIsEquipped(true)
   else

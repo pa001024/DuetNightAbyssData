@@ -11,6 +11,14 @@ T.RT_1 = {
   [9] = "gm skipregion 1 104108 1",
   [10] = "gm SuccessAllSystemGuide"
 }
+T.RT_2 = {
+  [1] = "sgm sl 42",
+  [2] = "sgm ct 60",
+  [3] = "gm UnlockRegionTeleport 1",
+  [4] = "gm MockAllSystemCondition",
+  [5] = "sgm qcf 990103",
+  [6] = "gm SuccessAllSystemGuide"
+}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -149,6 +157,26 @@ return ReadOnly("GMIntegration", {
     },
     GMIntegrationName = "CE_EX01_2"
   },
+  ChangeAbyss131 = {
+    GMCommands = {
+      [1] = "sgm settime 2026 04 10 10 00 00",
+      [2] = "gm SystemCommonUnlock",
+      [3] = "sgm CompleteCondition 8002",
+      [4] = "sgm SetAbyssLevelProgress 1312 50 5"
+    },
+    GMDisplayName = "私服切换大秘境1.3上半",
+    GMIntegrationName = "ChangeAbyss131"
+  },
+  ChangeAbyss132 = {
+    GMCommands = {
+      [1] = "sgm settime 2026 05 10 10 00 00",
+      [2] = "gm SystemCommonUnlock",
+      [3] = "sgm CompleteCondition 8002",
+      [4] = "sgm SetAbyssLevelProgress 1314 50 5"
+    },
+    GMDisplayName = "私服切换大秘境1.3下半",
+    GMIntegrationName = "ChangeAbyss132"
+  },
   ChapterUIEast01End = {
     GMCommands = {
       [1] = "gm UnlockRegionTeleport 1",
@@ -228,9 +256,8 @@ return ReadOnly("GMIntegration", {
       [6] = "sgm qcf 100103",
       [7] = "sgm qc 10020101",
       [8] = "sgm qcf 120101",
-      [9] = "sgm qcf 120101",
-      [10] = "gm skipregion 1 104110 1",
-      [11] = "gm SuccessAllSystemGuide"
+      [9] = "gm skipregion 1 104110 1",
+      [10] = "gm SuccessAllSystemGuide"
     },
     GMDisplayName = "东国一期（二）",
     GMIntegrationName = "East01C2",
@@ -381,15 +408,69 @@ return ReadOnly("GMIntegration", {
     GMDisplayName = "进入无由生活动关卡第7关",
     GMIntegrationName = "EnterWuyoushengDungeon07"
   },
+  Ex02C01 = {
+    GMCommands = T.RT_2,
+    GMDisplayName = "EX02（前半01）",
+    GMIntegrationName = "Ex02C01",
+    GMTab = "任务"
+  },
+  Ex02C11 = {
+    GMCommands = T.RT_2,
+    GMDisplayName = "EX02（支线01）",
+    GMIntegrationName = "Ex02C11",
+    GMTab = "任务"
+  },
+  Ex02C12 = {
+    GMCommands = T.RT_2,
+    GMDisplayName = "EX02（支线02）",
+    GMIntegrationName = "Ex02C12",
+    GMTab = "任务"
+  },
+  Ex02C13 = {
+    GMCommands = T.RT_2,
+    GMDisplayName = "EX02（支线03）",
+    GMIntegrationName = "Ex02C13",
+    GMTab = "任务"
+  },
+  Ex02C14 = {
+    GMCommands = T.RT_2,
+    GMDisplayName = "EX02（支线04）",
+    GMIntegrationName = "Ex02C14",
+    GMTab = "任务"
+  },
+  Ex02C15 = {
+    GMCommands = T.RT_2,
+    GMDisplayName = "EX02（支线05）",
+    GMIntegrationName = "Ex02C15",
+    GMTab = "任务"
+  },
+  Ex02C21 = {
+    GMCommands = T.RT_2,
+    GMDisplayName = "EX02（支线06）",
+    GMIntegrationName = "Ex02C21",
+    GMTab = "任务"
+  },
+  Ex02C22 = {
+    GMCommands = T.RT_2,
+    GMDisplayName = "EX02（支线07）",
+    GMIntegrationName = "Ex02C22",
+    GMTab = "任务"
+  },
+  Ex02C31 = {
+    GMCommands = T.RT_2,
+    GMDisplayName = "EX02（后半01）",
+    GMIntegrationName = "Ex02C31",
+    GMTab = "任务"
+  },
   FakeQuest1002 = {
     GMCommands = {
       [1] = "gm FSG 2002",
       [2] = "gm FSG 2038",
       [3] = "gm FSG 2055",
       [4] = "gm FSG 2015",
-      [5] = "sgm qcf 100102",
-      [6] = "sgm qcf 100103",
-      [7] = "sgm qc 10020107"
+      [5] = "sgm tct2",
+      [8] = "sgm tct2",
+      [9] = "sgm tct2"
     },
     GMDisplayName = "提前完成第一章",
     GMIntegrationName = "FakeQuest1002",
@@ -491,6 +572,16 @@ return ReadOnly("GMIntegration", {
     },
     GMDisplayName = "菲娜活动（四）晚会",
     GMIntegrationName = "Feina04Party",
+    GMTab = "任务"
+  },
+  FengxiangStoryStart = {
+    GMCommands = {
+      [1] = "sgm qcf 120206",
+      [2] = "gm skipregion 1 104501 1",
+      [3] = "sgm aths 103014 120000"
+    },
+    GMDisplayName = "奉香大典任务",
+    GMIntegrationName = "FengxiangStoryStart",
     GMTab = "任务"
   },
   FinishAllStarterQuest = {
@@ -801,6 +892,21 @@ return ReadOnly("GMIntegration", {
     },
     GMIntegrationName = "GXY_weaponbreak_resource"
   },
+  GetAllCommercialization = {
+    GMCommands = {
+      [1] = "sgm aaw",
+      [2] = "sgm aaws",
+      [3] = "sgm aawa",
+      [4] = "sgm aam 10",
+      [5] = "sgm aac",
+      [6] = "sgm aas",
+      [7] = "sgm aar",
+      [8] = "sgm aad"
+    },
+    GMDisplayName = "获取所有商业化内容",
+    GMIntegrationName = "GetAllCommercialization",
+    GMTab = "战斗"
+  },
   GuideBook = {
     GMCommands = {
       [1] = "gm A:GMUnlockGuideBook()"
@@ -948,11 +1054,6 @@ return ReadOnly("GMIntegration", {
       [2] = "sgm tct2",
       [3] = "sgm tct2",
       [4] = "sgm tct2",
-      [5] = "sgm tct2",
-      [6] = "sgm tct2",
-      [7] = "sgm tct2",
-      [8] = "sgm tct2",
-      [9] = "sgm tct2",
       [10] = "sgm tct2"
     },
     GMDisplayName = "联机时长增加10分钟",
@@ -964,11 +1065,6 @@ return ReadOnly("GMIntegration", {
       [2] = "sgm tct2",
       [3] = "sgm tct2",
       [4] = "sgm tct2",
-      [5] = "sgm tct2",
-      [6] = "sgm tct2",
-      [7] = "sgm tct2",
-      [8] = "sgm tct2",
-      [9] = "sgm tct2",
       [10] = "sgm tct2",
       [11] = "sgm tct2",
       [12] = "sgm tct2",
@@ -1218,6 +1314,16 @@ return ReadOnly("GMIntegration", {
     GMIntegrationName = "StartChapter01",
     GMTab = "任务"
   },
+  StartSoloTreasureStoryDungeon01 = {
+    GMCommands = {
+      [1] = "sgm CompleteCondition 4220",
+      [2] = "sgm qcf 120301",
+      [3] = "gm skipregion 1 104503 2"
+    },
+    GMDisplayName = "开始奉香大典剧情关1",
+    GMIntegrationName = "StartSoloTreasureStoryDungeon01",
+    GMTab = "任务"
+  },
   SystemCommonUnlock = {
     GMCommands = {
       [1] = "gm UnlockRegionTeleport 1",
@@ -1244,6 +1350,37 @@ return ReadOnly("GMIntegration", {
     },
     GMDisplayName = "训练场引导",
     GMIntegrationName = "TrainingGroundQuest"
+  },
+  UnlockAbyss131 = {
+    GMCommands = {
+      [1] = "gm SystemCommonUnlock",
+      [2] = "sgm CompleteCondition 8002",
+      [3] = "sgm SetAbyssLevelProgress 1312 50 5"
+    },
+    GMDisplayName = "新号解锁大秘境1.3上半",
+    GMIntegrationName = "UnlockAbyss131"
+  },
+  UnlockAbyss132 = {
+    GMCommands = {
+      [1] = "gm SystemCommonUnlock",
+      [2] = "sgm CompleteCondition 8002",
+      [3] = "sgm SetAbyssLevelProgress 1314 50 5"
+    },
+    GMDisplayName = "新号解锁大秘境1.3下半",
+    GMIntegrationName = "UnlockAbyss132"
+  },
+  UnlockAllSoloTreasureRepeatDungeon = {
+    GMCommands = {
+      [1] = "sgm CompleteCondition 4220",
+      [2] = "sgm CompleteCondition 103014",
+      [3] = "sgm CompleteCondition 10301401",
+      [4] = "sgm CompleteCondition 10301402",
+      [5] = "sgm CompleteCondition 10301403",
+      [6] = "sgm CompleteCondition 10301404"
+    },
+    GMDisplayName = "解锁所有复刷关",
+    GMIntegrationName = "UnlockAllSoloTreasureRepeatDungeon",
+    GMTab = "任务"
   },
   UnlockDispatch = {
     GMCommands = {
@@ -2081,7 +2218,12 @@ return ReadOnly("GMIntegration", {
   },
   train = {
     GMCommands = {
-      [1] = "gm enterdungeon 900001"
+      [1] = "gm enterdungeon 900001",
+      [5] = "sgm tct2",
+      [6] = "sgm tct2",
+      [7] = "sgm tct2",
+      [8] = "sgm tct2",
+      [9] = "sgm tct2"
     },
     GMDisplayName = "梦境训练场",
     GMIntegrationName = "train",
@@ -2188,7 +2330,9 @@ return ReadOnly("GMIntegration", {
   },
   wuyousheng = {
     GMCommands = {
-      [1] = "gm skipregion 1 105501 1"
+      [1] = "gm skipregion 1 105501 1",
+      [6] = "sgm qcf 100103",
+      [7] = "sgm qc 10020107"
     },
     GMDisplayName = "无由生聚集地",
     GMIntegrationName = "wuyousheng",
@@ -2220,7 +2364,10 @@ return ReadOnly("GMIntegration", {
   },
   zhilvge = {
     GMCommands = {
-      [1] = "gm skipregion 1 105101 1"
+      [1] = "gm skipregion 1 105101 1",
+      [5] = "sgm qcf 100102",
+      [6] = "sgm tct2",
+      [7] = "sgm tct2"
     },
     GMDisplayName = "执律阁室内",
     GMIntegrationName = "zhilvge",

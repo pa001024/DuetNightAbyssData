@@ -61,7 +61,6 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = true,
@@ -69,6 +68,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -429,8 +429,10 @@ return {
             pos = {x = 4021.469047619048, y = 323.07619047619033},
             propsData = {
               DialogueId = 0,
-              UseTalkFadeOut = false,
-              TalkFadeOutTime = 0
+              UseTalkFadeOut = true,
+              TalkFadeOutTime = 1,
+              UseTalkFadeIn = true,
+              TalkFadeInTime = 1
             }
           },
           ["17495423373383106626"] = {
@@ -454,8 +456,7 @@ return {
               BlendInTime = 0.5,
               BlendOutTime = 0.5,
               InType = "BlendIn",
-              OutType = "FadeOut",
-              ShowFadeDetail = false,
+              OutType = "BlendOut",
               BlendEaseExp = 2,
               UseProceduralCamera = false,
               ProceduralCameraId = 1,
@@ -596,7 +597,7 @@ return {
             key = "176406844107513133",
             type = "DynamicQuestFailNode",
             name = "动态任务主动失败",
-            pos = {x = 4013.4404761904752, y = -329.85714285714226},
+            pos = {x = 4013.4404761904752, y = -331.1614906832292},
             propsData = {UseTalkFadeOut = false, TalkFadeOutTime = 0}
           },
           ["17640696126802072359"] = {

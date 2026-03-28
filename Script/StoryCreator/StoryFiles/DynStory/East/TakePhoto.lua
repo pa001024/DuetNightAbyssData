@@ -61,7 +61,6 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = true,
@@ -69,6 +68,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -327,14 +327,15 @@ return {
               bLockHiddenMonster = true,
               bStartHiddenPet = true,
               bLockHiddenPet = true,
-              bLockGamePause = true
+              bLockGamePause = true,
+              bForceGamePause = false
             }
           },
           ["1735279994504939388"] = {
             key = "1735279994504939388",
             type = "TalkNode",
             name = "完成对话",
-            pos = {x = 2593.451696129958, y = 234.62990922121347},
+            pos = {x = 2593.451696129958, y = 233.05096185279243},
             propsData = {
               IsNpcNode = true,
               NpcNodeInteractiveName = "",
@@ -349,10 +350,9 @@ return {
               FlowAssetPath = "",
               TalkType = "FreeSimple",
               BlendInTime = 0.5,
-              BlendOutTime = 2,
+              BlendOutTime = 0.5,
               InType = "BlendIn",
-              OutType = "FadeOut",
-              ShowFadeDetail = false,
+              OutType = "BlendOut",
               BlendEaseExp = 2,
               UseProceduralCamera = false,
               ProceduralCameraId = 1,
@@ -387,11 +387,13 @@ return {
             key = "17352833969141289",
             type = "DynamicQuestSuccessNode",
             name = "动态任务主动成功",
-            pos = {x = 2853.83197123243, y = 271.6574043805165},
+            pos = {x = 2853.83197123243, y = 270.07845701209544},
             propsData = {
               DialogueId = 0,
-              UseTalkFadeOut = false,
-              TalkFadeOutTime = 0
+              UseTalkFadeOut = true,
+              TalkFadeOutTime = 1,
+              UseTalkFadeIn = true,
+              TalkFadeInTime = 1
             }
           },
           ["1735547220094988"] = {

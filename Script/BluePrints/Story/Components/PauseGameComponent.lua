@@ -1,8 +1,9 @@
 local M = {}
 
-function M:New(TalkContext, TalkTaskData)
+function M:New(TalkContext, TalkTask, TalkTaskData)
   local Obj = setmetatable({}, {__index = M})
   Obj.TalkContext = TalkContext
+  Obj.TalkTask = TalkTask
   Obj.TalkTaskData = TalkTaskData
   return Obj
 end
@@ -24,9 +25,21 @@ function M:Execute()
   TalkSubsystem:AddIgnorePauseObject(PlayerCharacter)
   TalkSubsystem:AddIgnorePauseObject(self.TalkTaskData.SequenceActor)
   for _, TalkActorData in pairs(self.TalkTaskData.TalkActors or {}) do
-    local ActorData = self.TalkContext.TalkActorDatas[TalkActorData.TalkActorId]
-    local Actor = ActorData and ActorData.TalkActor
-    TalkSubsystem:AddIgnorePauseObject(Actor)
+    local ActorData = self.TalkContext:GetTalkActorData(self.TalkTask, TalkActorData.TalkActorId)
+    if ActorData then
+      local Actor = ActorData.TalkActor
+      TalkSubsystem:AddIgnorePauseObject(Actor)
+      if Actor:IsA(UE4.ACharacterBase) then
+        for _, SuitMeshData in pairs(Actor.SuitMeshComponentsMap) do
+          for _, VisualEffectObj in pairs(SuitMeshData.VisualEffectObjs) do
+            TalkSubsystem:AddIgnorePauseObject(VisualEffectObj)
+          end
+          for _, FXObj in pairs(SuitMeshData.FXObjArray) do
+            TalkSubsystem:AddIgnorePauseObject(FXObj)
+          end
+        end
+      end
+    end
   end
 end
 

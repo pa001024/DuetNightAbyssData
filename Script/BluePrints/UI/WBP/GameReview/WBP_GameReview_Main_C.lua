@@ -23,6 +23,8 @@ function M:InitPlatform()
     PlatformInitFuncs[PlatformName](self)
     return
   end
+  local ImgChannelId = HeroUSDKSubsystem():GetMirrorChannelId()
+  local ChannelId = HeroUSDKSubsystem():GetChannelId()
   print("GameReview:: Init Error Platform.", PlatformName, ChannelId, ImgChannelId)
 end
 

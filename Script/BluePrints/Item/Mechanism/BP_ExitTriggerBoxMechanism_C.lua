@@ -110,7 +110,11 @@ function BP_ExitTriggerBoxMechanism_C:ExitInGameWin()
   local FunName = "Trigger" .. self.GameMode.EMGameState.GameModeType .. "Win"
   self.GameMode:TriggerDungeonComponentFun(FunName)
   if self.GameMode.EMGameState.GameModeType ~= "Party" then
-    self.GameMode:TriggerDungeonWin()
+    if self.GameMode:CheckServerDungeonEnable() then
+      self.GameMode:NotifyServerGameEnd(true, "ExitTriggerBox")
+    else
+      self.GameMode:TriggerDungeonWin()
+    end
   end
 end
 
@@ -314,29 +318,38 @@ function BP_ExitTriggerBoxMechanism_C:IsPlayerWaiting(PlayerCharacter)
       end
     end
   end
+  local PCs = self:GetAllPlayerCharacters()
+  local MinDist = math.huge
+  local PlayerCharacterDist = math.huge
+  for _, Actor in pairs(PCs or {}) do
+    if PlayerCharacter == Actor:Cast(UE4.APlayerCharacter) then
+      PlayerCharacterDist = self:GetDistanceToPlayerComponent(PlayerCharacter) or math.huge
+      MinDist = math.min(PlayerCharacterDist, MinDist)
+    else
+      local Dist = self:GetDistanceToPlayerComponent(Actor) or math.huge
+      MinDist = math.min(Dist, MinDist)
+    end
+  end
+  if PlayerCharacterDist == MinDist then
+    bIsWaiting = true
+  end
   return bIsWaiting
 end
 
-function BP_ExitTriggerBoxMechanism_C:GetAllPlayerControllers()
+function BP_ExitTriggerBoxMechanism_C:GetAllPlayerCharacters()
   local World = self.GetWorld and self:GetWorld() or UE4.UGameplayStatics.GetWorld(self)
   if not World then
     return {}
   end
   local PCs = {}
-  local GameState = UE4.UGameplayStatics.GetGameState(self)
-  local maxCount = 64
-  if GameState and GameState.PlayerArray then
-    local n = GameState.PlayerArray:Num()
-    if n and n > 0 then
-      maxCount = n
+  local Actors = UE4.UGameplayStatics.GetAllActorsOfClass(World, UE4.APlayerCharacter)
+  if Actors then
+    for i = 1, Actors:Length() do
+      local Actor = Actors:GetRef(i)
+      if Actor then
+        table.insert(PCs, Actor)
+      end
     end
-  end
-  for idx = 0, maxCount - 1 do
-    local PC = UE4.UGameplayStatics.GetPlayerController(self, idx)
-    if not PC then
-      break
-    end
-    table.insert(PCs, PC.Character)
   end
   return PCs
 end

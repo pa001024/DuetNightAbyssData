@@ -162,7 +162,7 @@ local function OnDetailLockBtnClick()
   if Content.IsLocked then
     UIManager(nil):ShowCommonPopupUI(100019, {
       RightCallbackFunction = function()
-        Avatar:UnLockResourceInBag(CommonConst.AllType.Mod, Content.Uuid)
+        ModController:OpenSeconderyPassword(Content.Uuid, ArmoryMod)
       end,
       CloseBtnCallbackFunction = function()
         ArmoryMod.ItemDetailsWidget.Btn_Locked:ForbidBtn(false)
@@ -243,7 +243,6 @@ function M:Construct()
     self.Key_Gamepad:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
   self:InitAttrListField()
-  self:InitCommonUI()
   self:InitButtons()
   self:InitKeyFunc()
   self:InitGamePad()
@@ -318,7 +317,10 @@ function M:InitButtons()
   self.CheckBox_Mod_Delegate = {
     Inst = self,
     Func = function()
-      self:SetUpModList(true)
+      if ModModel:IsRecommendView() then
+      else
+        self:SetUpModList(true)
+      end
     end
   }
   self.CheckBox_Mod:BindEventOnClicked(self.CheckBox_Mod_Delegate)
@@ -371,10 +373,16 @@ function M:InitCommonUI()
   self.Sift:BindEventOnSelectionsChanged(self, function(_, SelectedItems, ItemDatas)
     ModModel:SetSiftConf(SelectedItems, ItemDatas)
     ModModel:FilterModsOfTarget()
-    self:SetUpModList(true)
+    if ModModel:IsRecommendView() then
+    else
+      self:SetUpModList(true)
+    end
   end)
   self.Common_PolarityList_PC:BindEventOnSelectionsChanged(self, function()
-    self:SetUpModList(true)
+    if ModModel:IsRecommendView() then
+    else
+      self:SetUpModList(true)
+    end
   end)
   
   local function CloseCb()
@@ -385,48 +393,67 @@ function M:InitCommonUI()
     ModController:OpenModIntensify()
   end
   
-  self.BottomKeyInfo = {
-    {
-      KeyInfoList = {
-        {
-          Type = "Text",
-          Text = "V",
-          ClickCallback = LevelUpCb,
-          Owner = self
-        }
+  if ModModel:IsModUINormal() then
+    self.BottomKeyInfo = {
+      {
+        KeyInfoList = {
+          {
+            Type = "Text",
+            Text = "V",
+            ClickCallback = LevelUpCb,
+            Owner = self
+          }
+        },
+        Desc = GText("UI_FUNC_LEVELUP")
       },
-      Desc = GText("UI_FUNC_LEVELUP")
-    },
-    {
-      KeyInfoList = {
-        {
-          Type = "Text",
-          ImgShortPath = "RightMouseButton"
-        }
+      {
+        KeyInfoList = {
+          {
+            Type = "Text",
+            ImgShortPath = "RightMouseButton"
+          }
+        },
+        Desc = GText("UI_Mod_QuickEquip")
       },
-      Desc = GText("UI_Mod_QuickEquip")
-    },
-    {
-      GamePadInfoList = {
-        {Type = "Img", ImgShortPath = "A"}
+      {
+        GamePadInfoList = {
+          {Type = "Img", ImgShortPath = "A"}
+        },
+        Desc = GText("UI_Tips_Ensure")
       },
-      Desc = GText("UI_Tips_Ensure")
-    },
-    {
-      KeyInfoList = {
-        {
-          Type = "Text",
-          Text = "Esc",
-          ClickCallback = CloseCb,
-          Owner = self
-        }
-      },
-      GamePadInfoList = {
-        {Type = "Img", ImgShortPath = "B"}
-      },
-      Desc = GText("UI_BACK")
+      {
+        KeyInfoList = {
+          {
+            Type = "Text",
+            Text = "Esc",
+            ClickCallback = CloseCb,
+            Owner = self
+          }
+        },
+        GamePadInfoList = {
+          {Type = "Img", ImgShortPath = "B"}
+        },
+        Desc = GText("UI_BACK")
+      }
     }
-  }
+  else
+    self.BottomKeyInfo = {
+      {
+        KeyInfoList = {
+          {
+            Type = "Text",
+            Text = "Esc",
+            ClickCallback = CloseCb,
+            Owner = self
+          }
+        },
+        GamePadInfoList = {
+          {Type = "Img", ImgShortPath = "B"}
+        },
+        Desc = GText("UI_BACK")
+      }
+    }
+  end
   local TabKeyInfo = {}
   for _, KeyInfo in ipairs(self.BottomKeyInfo) do
     table.insert(TabKeyInfo, KeyInfo)
@@ -471,7 +498,10 @@ function M:InitCommonUI()
     self:UpdateAttrListImpl()
   end)
   self.Com_Search:BindEventOnContentChanged(self, function()
-    self:SetUpModList(true)
+    if ModModel:IsRecommendView() then
+    else
+      self:SetUpModList(true)
+    end
   end)
   self.Com_Search:SetHintText(GText("UI_Mod_SearchHint"))
 end
@@ -541,10 +571,12 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, ...)
   local MainUICase
   self.Type, self.Tag, self.TabUuids, self.TabExInfos, self.CloseCallbackInfo, MainUICase, self.ReplaceChar = ...
   ModModel:SetMainUICase(MainUICase)
+  self:InitCommonUI()
   self:InitVisibilityWithCase()
   self:InitTargetTab()
   self:InitBtnImport()
   self:InitBtnPolarity()
+  self:InitRecommend()
   AudioManager(self):PlayUISound(self, "event:/ui/armory/open", "ArmoryModPage", nil)
   if self.Type == "Weapon" then
     self.Mod_9:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -559,6 +591,7 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, ...)
 end
 
 function M:OnModLockChanged(OpAction, ErrCode, Uuid)
+  self:BlockAllUIInput(false)
   if ErrCode ~= ErrorCode.RET_SUCCESS then
     return
   end
@@ -723,6 +756,10 @@ function M:ForceSelectNowTargetTab()
 end
 
 function M:OnTargetTabSelected(TabContent)
+  ModModel:ClearRecommendData()
+  if self.RecommendView then
+    self.RecommendView:ClearData()
+  end
   AudioManager(self):PlayUISound(self, "event:/ui/common/click_level_01", nil, nil)
   if TabContent == self.CurTargetTabContent then
     return
@@ -732,6 +769,7 @@ function M:OnTargetTabSelected(TabContent)
   self:DirtyWorkForArmoryUI(TabContent)
   self.CurTargetTabContent = TabContent
   self:SetUpMainBody()
+  self:ShowRecommendEntry(true)
   if TabContent.Widget then
     self:OnTargetTabSpawned(TabContent, TabContent.Widget)
   end
@@ -838,7 +876,8 @@ function M:SetUpModList(bAnim)
     self.ModContents = {}
     for _, ModUuid in ipairs(ModModel.CurModList) do
       local Mod = ModModel:GetMod(ModUuid)
-      if self:IsHideConflictMod() and Mod.ConflictUuids:Length() > 0 then
+      if ModModel:IsRecommendModState() and not ModModel:FliterRecommendMod(Mod.ModId) then
+      elseif self:IsHideConflictMod() and Mod.ConflictUuids:Length() > 0 then
       elseif not ModModel:DoModSearch(Mod, self:GetSearchText()) then
       elseif ModModel:FilterSingleModOfTarget(FilterPolarity, false, Mod) then
         self:AddModContentToList(Mod)
@@ -1187,6 +1226,7 @@ function M:NotifyOnStartPolarityMode()
   self:ShowTabResourceBar(true)
   self.Mod_Plan:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Btn_Share:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self:ShowRecommendEntry(false)
   local Delegate
   Delegate = {
     self,
@@ -1257,6 +1297,7 @@ function M:NotifyOnStopPolarityMode()
         self.Key_FocusList_GamePad:SetVisibility(UIConst.VisibilityOp.Visible)
       end
       self.List_Role:SetFocus()
+      self:ShowRecommendEntry(true)
     end
   }
   self:BindToAnimationFinished(self.LoadingPolarity_In, Delegate)
@@ -1299,7 +1340,7 @@ function M:RemoveTabItem(idx)
 end
 
 function M:ShowQuickEquipBtn(bShow)
-  if ModController:IsMobile() then
+  if ModController:IsMobile() or not ModModel:IsModUINormal() then
     return
   end
   if not ModModel:IsModUINormal() then
@@ -1320,7 +1361,7 @@ function M:ShowQuickEquipBtn(bShow)
 end
 
 function M:ShowLevelUpBtn(bShow)
-  if ModController:IsMobile() then
+  if ModController:IsMobile() or not ModModel:IsModUINormal() then
     return
   end
   if not ModModel:IsModUINormal() then
@@ -1482,6 +1523,9 @@ function M:AppendModToListByUuid(ModUuid)
   local TakeOffMod = ModModel:GetMod(ModUuid)
   local FilterPolarity = self.Common_PolarityList_PC:GetFilterInfos()
   if ModModel:FilterSingleModOfTarget(FilterPolarity, nil, TakeOffMod) then
+    if ModModel:IsRecommendModState() and not ModModel:FliterRecommendMod(TakeOffMod.ModId) then
+      return
+    end
     local LastIndex = self.List_Select_Mod:GetNumItems() - 1
     local LastContent = self.List_Select_Mod:GetItemAt(LastIndex)
     if LastContent.Uuid == nil then
@@ -1583,6 +1627,9 @@ function M:CreateModContent(Mod)
   local ModContent = ModModel:CreateModContent(Mod, true, true)
   ModContent.IsNew = ArmoryUtils:TryAddNewModReddot(Mod)
   ModContent.Parent = self
+  if ModCommon.DebugMode then
+    ModContent.bNewGlow = true
+  end
   ModContent.IsShowDetails = ModController:IsPC()
   ModContent.MenuPlacement = EMenuPlacement.MenuPlacement_CenteredAboveAnchor
   ModContent.OnMouseButtonDownEarly = OnItemMouseButtonDownEarlyEvent
@@ -1922,7 +1969,7 @@ function M:GetCurrentAttrs(Mod)
     RangedWeapon = Avatar.Weapons[Avatar.RangedWeapon]
   end
   local ExtraInfo = {MeleeWeapon = MeleeWeapon, RangedWeapon = RangedWeapon}
-  local Atrrs = {}
+  local Attrs = {}
   if self.Type == "Weapon" or self.Type == "UWeapon" then
     ExtraInfo.Char = self:GetCurrWeaponOwnerChar()
   end
@@ -1994,6 +2041,213 @@ function M:UpdateAttrListImpl()
     return
   end
   self:UpdateAttrListView(true, self.List_Attribute, bModAdditionOnly)
+end
+
+function M:InitRecommend()
+  if not ModModel:IsModUINormal() then
+    self.Btn_Delete:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Btn_Recommend:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    return
+  end
+  self.Btn_Delete:SetClickCallback({
+    Func = self.ClearRecommendFliter,
+    Obj = self
+  })
+  self.Btn_Delete:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Btn_Delete:SetGamePad({
+    KeyInfoList = {
+      {
+        Type = "Img",
+        ImgShortPath = UIConst.GamePadImgKey.SpecialLeft,
+        ClickCallback = self.FocusRecommendBtn,
+        Owner = self
+      }
+    },
+    bLongPress = true
+  })
+  self.Btn_Delete:SetData({
+    OnFocusLeaveCallback = {
+      Obj = self,
+      Func = self.SetRecommendBtnState
+    }
+  })
+  self.Btn_Recommend:SetClickCallback({
+    Func = self.GetRecommendRankData,
+    Obj = self
+  })
+  self.Btn_Recommend:SetText(GText("UI_ModRecommandData"))
+  self.Btn_Recommend:SetData({
+    OnFocusLeaveCallback = {
+      Obj = self,
+      Func = self.SetRecommendBtnState
+    }
+  })
+  self.Btn_Recommend:SetGamePad({
+    KeyInfoList = {
+      {
+        Type = "Img",
+        ImgShortPath = UIConst.GamePadImgKey.SpecialLeft,
+        ClickCallback = self.FocusRecommendBtn,
+        Owner = self
+      }
+    },
+    bLongPress = true
+  })
+  self.Btn_Recommend:SetGamePadIconVisible(true)
+  self.Btn_Delete:SetNavigationRuleExplicit(EUINavigation.Right, self.Btn_Recommend)
+end
+
+function M:FocusRecommendBtn()
+  if ModModel:IsRecommendModState() then
+    if ModModel:IsRecommendModState() then
+      self.Btn_Delete:SetFocus()
+    else
+      self.Btn_Recommend:SetFocus()
+    end
+    self.IsFocusInSpecialItem = false
+    self.Key_Gamepad:SetVisibility(UIConst.VisibilityOp.Visible)
+  else
+    self.Btn_Recommend.Key_Gamepad:OnShortCutReleased()
+    self:GetRecommendRankData()
+  end
+end
+
+function M:ClearRecommendFliter()
+  self:ClearAllFliter()
+  self.RecommendView:ClearFliter()
+  self:OnRecommendFliterChange()
+  if ModController:IsGamepad() then
+    self.List_Role:SetFocus()
+  end
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", nil, nil)
+end
+
+function M:GetRecommendRankData()
+  local Target = ModModel:GetTarget()
+  local TargetType = Target:GetTypeName()
+  local TargetId
+  if "Weapon" == TargetType or "UWeapon" == TargetType then
+    TargetId = Target.WeaponId
+  elseif "Char" == TargetType then
+    TargetId = Target.CharId
+  end
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
+  local Avatar = GWorld:GetAvatar()
+  Avatar:GetModRankData(TargetType, TargetId, {
+    Func = self.ShowRecommendView,
+    Obj = self
+  })
+end
+
+function M:ShowRecommendView(Data, UserCount)
+  self:BlockAllUIInput(false)
+  local Params = {
+    TargetName = ModModel.CopyModeSenderName or ModModel:GetTarget():GetName(),
+    FliterCallbackInfo = {
+      Func = self.OnRecommendFliterChange,
+      Obj = self
+    },
+    HideCallbackInfo = {
+      Obj = self,
+      Func = self.OnRecommendViewHide
+    },
+    RankModData = Data,
+    UserCount = UserCount
+  }
+  local Avatar = ModController:GetAvatar()
+  for _, Uuid in ipairs(self.TabUuids) do
+    local Char = Avatar.Chars[Uuid]
+    if Char then
+      Params.CharId = Char.CharId
+    end
+  end
+  if not self.RecommendView then
+    local RecommendView = self:CreateWidgetNew(ModCommon.ArmoryModRecommend)
+    local RootWidget = UIUtils.GetRootUWidget(self)
+    RootWidget:AddChild(RecommendView)
+    self.RecommendView = RecommendView
+    self.RecommendView:SetData(Params)
+    self.RecommendView:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.RecommendView:SetRecommendFocus()
+  else
+    self.RecommendView:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.RecommendView:SetData(Params)
+    self.RecommendView:SetRecommendFocus()
+  end
+  ModModel:SetRecommendView(true)
+  self:SetCanRectGamepadVisible(false)
+  self:PlayAnimation(self.Recommend_In)
+  self.Tab_Mod:UpdateBottomKeyInfo({
+    {
+      GamePadInfoList = {
+        {Type = "Img", ImgShortPath = "X"}
+      },
+      Desc = GText("UI_Controller_CheckDetails")
+    },
+    {
+      GamePadInfoList = {
+        {Type = "Img", ImgShortPath = "B"}
+      },
+      Desc = GText("UI_CTL_CloseModList")
+    }
+  })
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_mid", nil, nil)
+end
+
+function M:OnRecommendFliterChange()
+  self:ShowRecommendEntry(true)
+  self:SetUpModList(true)
+end
+
+function M:ShowRecommendEntry(IsShow)
+  if not IsShow then
+    self.Btn_Delete:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Btn_Recommend:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    return
+  end
+  if ModModel:IsRecommendModState() then
+    self.Btn_Delete:SetVisibility(UIConst.VisibilityOp.Visible)
+    self.Btn_Delete:SetGamePadIconVisible(true)
+    self.Btn_Recommend:SetGamePadIconVisible(false)
+    self.Btn_Recommend:SetVisibility(UIConst.VisibilityOp.Visible)
+    self:ClearAllFliter()
+  else
+    self.Btn_Delete:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Btn_Delete:SetGamePadIconVisible(false)
+    self.Btn_Recommend:SetGamePadIconVisible(true)
+    self.Btn_Recommend:SetVisibility(UIConst.VisibilityOp.Visible)
+  end
+end
+
+function M:ClearAllFliter()
+  self.Com_Search:ClearText()
+  self.Sift:ClearSiftSelection()
+  self.Common_PolarityList_PC:Init(self.PolarityFilterConf)
+  self.CheckBox_Mod:SetIsChecked(false, false)
+end
+
+function M:OnRecommendViewHide()
+  if ModController:IsGamepad() then
+    self.List_Role:SetFocus()
+    self:SetCanRectGamepadVisible(true)
+  end
+  self:SetRecommendBtnState()
+  self:PlayAnimation(self.Recommend_Out)
+  self.Tab_Mod:UpdateBottomKeyInfo(self.BottomKeyInfo)
+end
+
+function M:SetRecommendBtnState()
+  self:AddTimer(0.01, function()
+    if not self.Btn_Delete:HasAnyUserFocus() and not self.Btn_Recommend:HasAnyUserFocus() then
+      if ModModel:IsRecommendModState() then
+        self.Btn_Delete:SetGamePadIconVisible(true)
+        self.Btn_Recommend:SetGamePadIconVisible(false)
+      else
+        self.Btn_Delete:SetGamePadIconVisible(false)
+        self.Btn_Recommend:SetGamePadIconVisible(true)
+      end
+    end
+  end, false, 0, "SetRecommendBtnState")
 end
 
 AssembleComponents(M)

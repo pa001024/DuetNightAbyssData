@@ -570,10 +570,7 @@ function M:PetMain_OnLockBtnClicked()
     end
     
     local function ConfirmFunc()
-      self:SetFocus()
-      local Avatar = ArmoryUtils:GetAvatar()
-      self:BlockAllUIInput(true)
-      Avatar:UnLockPet(self.ComparedPet.UniqueId)
+      SecondaryPasswordController:Pet_OpenSeconderyPassword(self.ComparedPet.UniqueId, self)
     end
     
     UIManager(self):ShowCommonPopupUI(100019, {

@@ -1826,6 +1826,15 @@ return ReadOnly("TalkAction", {
     IsSpecialAnim = false,
     MontageSection = "Start"
   },
+  Fish_Fishing = {
+    ActionMontage = "Fish_Fishing",
+    AnimationId = "Fish_Fishing",
+    BlendInTime = 0.2,
+    BlendOutTime = 0.2,
+    IsSpecialAnim = false,
+    MontagePrePath = "Interactive/Show",
+    MontageSection = "Start"
+  },
   Fist02_End = {
     ActionMontage = "Emo_Fist02",
     AnimationId = "Fist02_End",
@@ -3258,6 +3267,14 @@ return ReadOnly("TalkAction", {
     IsOnceAction = true,
     IsSpecialAnim = false,
     MontageSection = "End"
+  },
+  Shy01_Loop = {
+    ActionMontage = "Emo_Shy01",
+    AnimationId = "Shy01_Loop",
+    BlendInTime = 0.2,
+    BlendOutTime = 0.2,
+    IsSpecialAnim = false,
+    MontageSection = "Loop"
   },
   Shy01_Start = {
     ActionMontage = "Emo_Shy01",
@@ -4902,6 +4919,14 @@ return ReadOnly("TalkAction", {
     IsSpecialAnim = false,
     MontageSection = "Start"
   },
+  Zhangyu_Story_Fengxiang_Loop = {
+    ActionMontage = "Story_Fengxiang",
+    AnimationId = "Zhangyu_Story_Fengxiang_Loop",
+    BlendInTime = 0.2,
+    BlendOutTime = 0.2,
+    IsSpecialAnim = false,
+    MontageSection = "Loop"
+  },
   Zhangyu_Story_Tentacle = {
     ActionMontage = "Story_Tentacle",
     AnimationId = "Zhangyu_Story_Tentacle",
@@ -4909,6 +4934,30 @@ return ReadOnly("TalkAction", {
     BlendOutTime = 0,
     IsSpecialAnim = false,
     MontageSection = "Loop"
+  },
+  Zhangyu_Story_Weiyan_End = {
+    ActionMontage = "Story_Weiyan",
+    AnimationId = "Zhangyu_Story_Weiyan_End",
+    BlendInTime = 0.2,
+    BlendOutTime = 0.2,
+    IsSpecialAnim = false,
+    MontageSection = "End"
+  },
+  Zhangyu_Story_Weiyan_Loop = {
+    ActionMontage = "Story_Weiyan",
+    AnimationId = "Zhangyu_Story_Weiyan_Loop",
+    BlendInTime = 0.2,
+    BlendOutTime = 0.2,
+    IsSpecialAnim = false,
+    MontageSection = "Loop"
+  },
+  Zhangyu_Story_Weiyan_Start = {
+    ActionMontage = "Story_Weiyan",
+    AnimationId = "Zhangyu_Story_Weiyan_Start",
+    BlendInTime = 0.2,
+    BlendOutTime = 0.2,
+    IsSpecialAnim = false,
+    MontageSection = "Start"
   },
   Zhiliu_Story_Special01_End = {
     ActionMontage = "Story_Special01",

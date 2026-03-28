@@ -5,12 +5,10 @@ function M:Construct()
   M.Super.Construct(self)
   self.Btn_HideUI.Btn_Click.OnClicked:Add(self, self.OnHideUIKeyDown)
   self.Btn_HideUI.Text_Btn:SetText(GText("UI_CameraSystem_HideUI"))
-  self.WBP_MountsMainBtn.Btn_Hide:BindEvents(self, {
-    OnClicked = self.OnHideUIKeyDown
-  })
-  self.WBP_MountsMainBtn.Btn_Riding:BindEvents(self, {
-    OnClicked = self.OnRideMount
-  })
+  self.Btn_Riding.Btn_Click.OnClicked:Add(self, self.OnRideMount)
+  self.Btn_Riding.Text_Btn:SetText(GText("UI_CTL_Ride"))
+  self.WS_Ride:SetActiveWidgetIndex(1)
+  self.WBP_MountsMainBtn:SetVisibility(UIConst.VisibilityOp.Collapsed)
   local DyeIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Dye.T_Tab_Dye'"
   local ReplayIconPath = "Texture2D'/Game/UI/Texture/Static/Atlas/Shop/T_Shop_Refresh.T_Shop_Refresh'"
   self.IconCache = {}
@@ -30,30 +28,38 @@ function M:UpdateUI()
   self.Com_Hint.bAutoButtonChange = false
 end
 
+function M:OnRideMount()
+  M.Super.OnRideMount(self)
+  if self.IsRiderMount then
+    self.WS_Ride:SetActiveWidgetIndex(1)
+  else
+    self.WS_Ride:SetActiveWidgetIndex(0)
+  end
+end
+
 function M:UpdateReplayTips()
   if self.ShopItemData.ItemType == "Mount" then
-    self.WBP_MountsMainBtn:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.Btn_Riding:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.Btn_Dye:SetVisibility(ESlateVisibility.Collapsed)
-    self.Btn_HideUI:SetVisibility(ESlateVisibility.Collapsed)
+    self.Btn_HideUI:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   elseif self.ShopItemData.ItemType == "Resource" then
     self:SetDyeIcon(false)
     if self.ShopItemData.ResourceSType == "GestureItem" then
       self.Text_Color:SetText(GText("UI_Replay"))
       self.Btn_Selective.OnClicked:Add(self, self.OnReplayGesture)
-      self.WBP_MountsMainBtn:SetVisibility(ESlateVisibility.Collapsed)
+      self.Btn_Riding:SetVisibility(ESlateVisibility.Collapsed)
       self.Btn_Dye:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
       self.Btn_HideUI:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    elseif self.ShopItemData.ResourceSType == "MountItem" then
     end
   elseif self.ShopItemData.ItemType == "WeaponAccessory" or self.ShopItemData.ItemType == "CharAccessory" then
-    self.WBP_MountsMainBtn:SetVisibility(ESlateVisibility.Collapsed)
+    self.Btn_Riding:SetVisibility(ESlateVisibility.Collapsed)
     self.Btn_Dye:SetVisibility(ESlateVisibility.Collapsed)
     self.Btn_HideUI:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   else
     self:SetDyeIcon(true)
     self.Text_Color:SetText(GText("UI_SkinPreview_Dye"))
     self.Btn_Selective.OnClicked:Add(self, self.OnClickDyeingPreview)
-    self.WBP_MountsMainBtn:SetVisibility(ESlateVisibility.Collapsed)
+    self.Btn_Riding:SetVisibility(ESlateVisibility.Collapsed)
     self.Btn_Dye:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.Btn_HideUI:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   end

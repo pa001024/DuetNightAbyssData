@@ -1,5 +1,5 @@
 require("UnLua")
-local StoryPlayableUtils = require("BluePrints.Story.StoryPlayableUtils").StoryPlayableUtils
+local StoryPlayableUtils = require("BluePrints.Story.StoryPlayableUtils")
 local BP_EmptyNPC_C = Class("BluePrints.Char.BP_NPC_C")
 
 function BP_EmptyNPC_C:InitInfo(Info)

@@ -2,7 +2,7 @@
   {
     "id": 10011,
     "bid": 1001,
-    "icon": "World",
+    "icon": "World_Blue",
     "name": "贪吃",
     "r": 3,
     "upid": 10012,
@@ -11,7 +11,7 @@
   {
     "id": 10012,
     "bid": 1001,
-    "icon": "World",
+    "icon": "World_Purple",
     "name": "贪吃",
     "r": 4,
     "upid": 10013,
@@ -20,7 +20,7 @@
   {
     "id": 10013,
     "bid": 1001,
-    "icon": "World",
+    "icon": "World_Gold",
     "name": "贪吃",
     "r": 5,
     "desc": "拾取范围+6米"
@@ -28,7 +28,7 @@
   {
     "id": 10021,
     "bid": 1002,
-    "icon": "World",
+    "icon": "World_Blue",
     "name": "节俭",
     "r": 3,
     "upid": 10022,
@@ -37,7 +37,7 @@
   {
     "id": 10022,
     "bid": 1002,
-    "icon": "World",
+    "icon": "World_Purple",
     "name": "节俭",
     "r": 4,
     "upid": 10023,
@@ -46,7 +46,7 @@
   {
     "id": 10023,
     "bid": 1002,
-    "icon": "World",
+    "icon": "World_Gold",
     "name": "节俭",
     "r": 5,
     "desc": "物品掉落率提高15%"
@@ -54,7 +54,7 @@
   {
     "id": 10031,
     "bid": 1003,
-    "icon": "Battle",
+    "icon": "Battle_Blue",
     "name": "聪慧",
     "r": 3,
     "upid": 10032,
@@ -63,7 +63,7 @@
   {
     "id": 10032,
     "bid": 1003,
-    "icon": "Battle",
+    "icon": "Battle_Purple",
     "name": "聪慧",
     "r": 4,
     "upid": 10033,
@@ -72,7 +72,7 @@
   {
     "id": 10033,
     "bid": 1003,
-    "icon": "Battle",
+    "icon": "Battle_Gold",
     "name": "聪慧",
     "r": 5,
     "desc": "击倒敌人获得的经验+15%"
@@ -80,7 +80,7 @@
   {
     "id": 10041,
     "bid": 1004,
-    "icon": "Battle",
+    "icon": "Battle_Gold",
     "name": "顽强",
     "r": 5,
     "desc": "复苏次数+1"
@@ -88,7 +88,7 @@
   {
     "id": 10061,
     "bid": 1006,
-    "icon": "Speed",
+    "icon": "Speed_Blue",
     "name": "急躁",
     "r": 3,
     "upid": 10062,
@@ -97,7 +97,7 @@
   {
     "id": 10062,
     "bid": 1006,
-    "icon": "Speed",
+    "icon": "Speed_Purple",
     "name": "急躁",
     "r": 4,
     "upid": 10063,
@@ -106,7 +106,7 @@
   {
     "id": 10063,
     "bid": 1006,
-    "icon": "Speed",
+    "icon": "Speed_Gold",
     "name": "急躁",
     "r": 5,
     "desc": "跳跃速度+6%"
@@ -114,7 +114,7 @@
   {
     "id": 10071,
     "bid": 1007,
-    "icon": "Speed",
+    "icon": "Speed_Blue",
     "name": "神行",
     "r": 3,
     "upid": 10072,
@@ -123,7 +123,7 @@
   {
     "id": 10072,
     "bid": 1007,
-    "icon": "Speed",
+    "icon": "Speed_Purple",
     "name": "神行",
     "r": 4,
     "upid": 10073,
@@ -132,7 +132,7 @@
   {
     "id": 10073,
     "bid": 1007,
-    "icon": "Speed",
+    "icon": "Speed_Gold",
     "name": "神行",
     "r": 5,
     "desc": "螺旋飞跃速度+6%"
@@ -140,7 +140,7 @@
   {
     "id": 10081,
     "bid": 1008,
-    "icon": "Speed",
+    "icon": "Speed_Blue",
     "name": "圆润",
     "r": 3,
     "upid": 10082,
@@ -149,7 +149,7 @@
   {
     "id": 10082,
     "bid": 1008,
-    "icon": "Speed",
+    "icon": "Speed_Purple",
     "name": "圆润",
     "r": 4,
     "upid": 10083,
@@ -158,7 +158,7 @@
   {
     "id": 10083,
     "bid": 1008,
-    "icon": "Speed",
+    "icon": "Speed_Gold",
     "name": "圆润",
     "r": 5,
     "desc": "滑行速度+12%"
@@ -166,7 +166,7 @@
   {
     "id": 10091,
     "bid": 1009,
-    "icon": "Speed",
+    "icon": "Speed_Blue",
     "name": "警惕",
     "r": 3,
     "upid": 10092,
@@ -175,7 +175,7 @@
   {
     "id": 10092,
     "bid": 1009,
-    "icon": "Speed",
+    "icon": "Speed_Purple",
     "name": "警惕",
     "r": 4,
     "upid": 10093,
@@ -184,7 +184,7 @@
   {
     "id": 10093,
     "bid": 1009,
-    "icon": "Speed",
+    "icon": "Speed_Gold",
     "name": "警惕",
     "r": 5,
     "desc": "闪避冷却时间减少15%"
@@ -192,7 +192,7 @@
   {
     "id": 10101,
     "bid": 1010,
-    "icon": "Base",
+    "icon": "Base_Blue",
     "name": "凶猛",
     "r": 3,
     "upid": 10102,
@@ -201,7 +201,7 @@
   {
     "id": 10102,
     "bid": 1010,
-    "icon": "Base",
+    "icon": "Base_Purple",
     "name": "凶猛",
     "r": 4,
     "upid": 10103,
@@ -210,7 +210,7 @@
   {
     "id": 10103,
     "bid": 1010,
-    "icon": "Base",
+    "icon": "Base_Gold",
     "name": "凶猛",
     "r": 5,
     "desc": "攻击+24%"
@@ -218,7 +218,7 @@
   {
     "id": 10111,
     "bid": 1011,
-    "icon": "Base",
+    "icon": "Base_Blue",
     "name": "甲胄",
     "r": 3,
     "upid": 10112,
@@ -227,7 +227,7 @@
   {
     "id": 10112,
     "bid": 1011,
-    "icon": "Base",
+    "icon": "Base_Purple",
     "name": "甲胄",
     "r": 4,
     "upid": 10113,
@@ -236,7 +236,7 @@
   {
     "id": 10113,
     "bid": 1011,
-    "icon": "Base",
+    "icon": "Base_Gold",
     "name": "甲胄",
     "r": 5,
     "desc": "防御+24%"
@@ -244,7 +244,7 @@
   {
     "id": 10121,
     "bid": 1012,
-    "icon": "Base",
+    "icon": "Base_Blue",
     "name": "壮实",
     "r": 3,
     "upid": 10122,
@@ -253,7 +253,7 @@
   {
     "id": 10122,
     "bid": 1012,
-    "icon": "Base",
+    "icon": "Base_Purple",
     "name": "壮实",
     "r": 4,
     "upid": 10123,
@@ -262,7 +262,7 @@
   {
     "id": 10123,
     "bid": 1012,
-    "icon": "Base",
+    "icon": "Base_Gold",
     "name": "壮实",
     "r": 5,
     "desc": "最大生命+24%"
@@ -270,7 +270,7 @@
   {
     "id": 10131,
     "bid": 1013,
-    "icon": "Base",
+    "icon": "Base_Blue",
     "name": "胆小",
     "r": 3,
     "upid": 10132,
@@ -279,7 +279,7 @@
   {
     "id": 10132,
     "bid": 1013,
-    "icon": "Base",
+    "icon": "Base_Purple",
     "name": "胆小",
     "r": 4,
     "upid": 10133,
@@ -288,7 +288,7 @@
   {
     "id": 10133,
     "bid": 1013,
-    "icon": "Base",
+    "icon": "Base_Gold",
     "name": "胆小",
     "r": 5,
     "desc": "最大护盾+24%"
@@ -296,7 +296,7 @@
   {
     "id": 10141,
     "bid": 1014,
-    "icon": "Battle",
+    "icon": "Battle_Blue",
     "name": "敏锐",
     "r": 3,
     "upid": 10142,
@@ -305,7 +305,7 @@
   {
     "id": 10142,
     "bid": 1014,
-    "icon": "Battle",
+    "icon": "Battle_Purple",
     "name": "敏锐",
     "r": 4,
     "upid": 10143,
@@ -314,7 +314,7 @@
   {
     "id": 10143,
     "bid": 1014,
-    "icon": "Battle",
+    "icon": "Battle_Gold",
     "name": "敏锐",
     "r": 5,
     "desc": "支援技能冷却时间减少24%"
@@ -322,7 +322,7 @@
   {
     "id": 10151,
     "bid": 1015,
-    "icon": "World",
+    "icon": "World_Blue",
     "name": "渊博",
     "r": 3,
     "upid": 10152,
@@ -331,7 +331,7 @@
   {
     "id": 10152,
     "bid": 1015,
-    "icon": "World",
+    "icon": "World_Purple",
     "name": "渊博",
     "r": 4,
     "upid": 10153,
@@ -340,7 +340,7 @@
   {
     "id": 10153,
     "bid": 1015,
-    "icon": "World",
+    "icon": "World_Gold",
     "name": "渊博",
     "r": 5,
     "desc": "作为素材提供的经验值提高60%"
@@ -348,7 +348,7 @@
   {
     "id": 10161,
     "bid": 1016,
-    "icon": "World",
+    "icon": "World_Gold",
     "name": "巧手",
     "r": 5,
     "desc": "可快速破解机关"
@@ -356,9 +356,275 @@
   {
     "id": 10171,
     "bid": 1017,
-    "icon": "World",
+    "icon": "World_Gold",
     "name": "悠闲",
     "r": 5,
     "desc": "可自动进行钓鱼收杆"
+  },
+  {
+    "id": 10181,
+    "bid": 1018,
+    "icon": "Battle_Gold",
+    "name": "自律",
+    "r": 5,
+    "desc": "魔灵支援在冷却可用时自动释放"
+  },
+  {
+    "id": 10191,
+    "bid": 1019,
+    "icon": "Battle_Blue",
+    "name": "蛮横",
+    "r": 3,
+    "upid": 10192,
+    "desc": "技能威力+3.2%"
+  },
+  {
+    "id": 10192,
+    "bid": 1019,
+    "icon": "Battle_Purple",
+    "name": "蛮横",
+    "r": 4,
+    "upid": 10193,
+    "desc": "技能威力+6.4%"
+  },
+  {
+    "id": 10193,
+    "bid": 1019,
+    "icon": "Battle_Gold",
+    "name": "蛮横",
+    "r": 5,
+    "desc": "技能威力+9.6%"
+  },
+  {
+    "id": 10201,
+    "bid": 1020,
+    "icon": "Battle_Blue",
+    "name": "贪心",
+    "r": 3,
+    "upid": 10202,
+    "desc": "技能范围+4.8%"
+  },
+  {
+    "id": 10202,
+    "bid": 1020,
+    "icon": "Battle_Purple",
+    "name": "贪心",
+    "r": 4,
+    "upid": 10203,
+    "desc": "技能范围+9.6%"
+  },
+  {
+    "id": 10203,
+    "bid": 1020,
+    "icon": "Battle_Gold",
+    "name": "贪心",
+    "r": 5,
+    "desc": "技能范围+14.4%"
+  },
+  {
+    "id": 10211,
+    "bid": 1021,
+    "icon": "Battle_Blue",
+    "name": "耐劳",
+    "r": 3,
+    "upid": 10212,
+    "desc": "技能耐久+2.4%"
+  },
+  {
+    "id": 10212,
+    "bid": 1021,
+    "icon": "Battle_Purple",
+    "name": "耐劳",
+    "r": 4,
+    "upid": 10213,
+    "desc": "技能耐久+4.8%"
+  },
+  {
+    "id": 10213,
+    "bid": 1021,
+    "icon": "Battle_Gold",
+    "name": "耐劳",
+    "r": 5,
+    "desc": "技能耐久+7.2%"
+  },
+  {
+    "id": 10221,
+    "bid": 1022,
+    "icon": "Battle_Blue",
+    "name": "高效",
+    "r": 3,
+    "upid": 10222,
+    "desc": "技能效益+2%"
+  },
+  {
+    "id": 10222,
+    "bid": 1022,
+    "icon": "Battle_Purple",
+    "name": "高效",
+    "r": 4,
+    "upid": 10223,
+    "desc": "技能效益+4%"
+  },
+  {
+    "id": 10223,
+    "bid": 1022,
+    "icon": "Battle_Gold",
+    "name": "高效",
+    "r": 5,
+    "desc": "技能效益+6%"
+  },
+  {
+    "id": 10231,
+    "bid": 1023,
+    "icon": "Battle_Blue",
+    "name": "激昂",
+    "r": 3,
+    "upid": 10232,
+    "desc": "昂扬+2.4%"
+  },
+  {
+    "id": 10232,
+    "bid": 1023,
+    "icon": "Battle_Purple",
+    "name": "激昂",
+    "r": 4,
+    "upid": 10233,
+    "desc": "昂扬+4.8%"
+  },
+  {
+    "id": 10233,
+    "bid": 1023,
+    "icon": "Battle_Gold",
+    "name": "激昂",
+    "r": 5,
+    "desc": "昂扬+7.2%"
+  },
+  {
+    "id": 10241,
+    "bid": 1024,
+    "icon": "Battle_Blue",
+    "name": "倔强",
+    "r": 3,
+    "upid": 10242,
+    "desc": "背水+0.8%"
+  },
+  {
+    "id": 10242,
+    "bid": 1024,
+    "icon": "Battle_Purple",
+    "name": "倔强",
+    "r": 4,
+    "upid": 10243,
+    "desc": "背水+1.6%"
+  },
+  {
+    "id": 10243,
+    "bid": 1024,
+    "icon": "Battle_Gold",
+    "name": "倔强",
+    "r": 5,
+    "desc": "背水+2.4%"
+  },
+  {
+    "id": 10251,
+    "bid": 1025,
+    "icon": "Battle_Blue",
+    "name": "激进",
+    "r": 3,
+    "upid": 10252,
+    "desc": "暴击率+8%"
+  },
+  {
+    "id": 10252,
+    "bid": 1025,
+    "icon": "Battle_Purple",
+    "name": "激进",
+    "r": 4,
+    "upid": 10253,
+    "desc": "暴击率+16%"
+  },
+  {
+    "id": 10253,
+    "bid": 1025,
+    "icon": "Battle_Gold",
+    "name": "激进",
+    "r": 5,
+    "desc": "暴击率+24%"
+  },
+  {
+    "id": 10261,
+    "bid": 1026,
+    "icon": "Battle_Blue",
+    "name": "振奋",
+    "r": 3,
+    "upid": 10262,
+    "desc": "暴击伤害+10%"
+  },
+  {
+    "id": 10262,
+    "bid": 1026,
+    "icon": "Battle_Purple",
+    "name": "振奋",
+    "r": 4,
+    "upid": 10263,
+    "desc": "暴击伤害+20%"
+  },
+  {
+    "id": 10263,
+    "bid": 1026,
+    "icon": "Battle_Gold",
+    "name": "振奋",
+    "r": 5,
+    "desc": "暴击伤害+30%"
+  },
+  {
+    "id": 10271,
+    "bid": 1027,
+    "icon": "Battle_Blue",
+    "name": "幻影",
+    "r": 3,
+    "upid": 10272,
+    "desc": "多重射击+6%"
+  },
+  {
+    "id": 10272,
+    "bid": 1027,
+    "icon": "Battle_Purple",
+    "name": "幻影",
+    "r": 4,
+    "upid": 10273,
+    "desc": "多重射击+12%"
+  },
+  {
+    "id": 10273,
+    "bid": 1027,
+    "icon": "Battle_Gold",
+    "name": "幻影",
+    "r": 5,
+    "desc": "多重射击+18%"
+  },
+  {
+    "id": 10281,
+    "bid": 1028,
+    "icon": "Battle_Gold",
+    "name": "渴求",
+    "r": 5,
+    "desc": "释放魔灵支援后，拾取自身周围100米范围内的所有掉落物"
+  },
+  {
+    "id": 10291,
+    "bid": 1029,
+    "icon": "Battle_Gold",
+    "name": "遁逃",
+    "r": 5,
+    "desc": "释放魔灵支援后，如果已经开启委托的撤离点，传送至撤离点"
+  },
+  {
+    "id": 10301,
+    "bid": 1030,
+    "icon": "Battle_Gold",
+    "name": "老道",
+    "r": 5,
+    "desc": "魔灵支援和被动等级+1"
   }
 ]

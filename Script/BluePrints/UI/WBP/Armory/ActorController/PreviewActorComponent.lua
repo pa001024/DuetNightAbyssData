@@ -20,7 +20,7 @@ function M:CreatePreviewActor(Params)
       Avatar = self._DummyAvatar,
       bNeedEndCamera = false,
       EPreviewSceneType = Params.EPreviewSceneType or CommonConst.EPreviewSceneType.PreviewCommon,
-      SkyBoxColor = Params.SkyBoxColor
+      SkyBoxIndex = Params.SkyBoxIndex
     })
   end
   return self.ActorController
@@ -36,7 +36,7 @@ function M:CreatePreviewTargetData(Params)
     elseif Params.HairId then
       SkinData = DataMgr.Hair[Params.HairId]
     end
-    if SkinData and (SkinData.CharId ~= Char.CharId or Params.SystemType == "BattlePass" or Char:GetAppearance().SkinId ~= SkinId) then
+    if SkinData and (SkinData.CharId and SkinData.CharId ~= Char.CharId or Params.SystemType == "BattlePass" or Params.SkinId and Char:GetAppearance().SkinId ~= Params.SkinId) then
       local DummyAvatar = ArmoryUtils:CreateNewDummyAvatar(ArmoryUtils.PreviewTargetStates.Prime, {
         CharIds = {
           SkinData.CharId
@@ -150,7 +150,7 @@ function M:SwitchWeaponAccessoryPreview(TabIdx)
   end
   self.ActorController.ExCameraOffset = self.WeaponCameraOffset
   self.ActorController:ChangeSingleWeapon(WeaponToDisplay)
-  self.ActorController:ChangeWeaponAccessory(AccessoryId)
+  self.ActorController:ChangeWeaponAccessory(AccessoryId, CommonConst.WeaponAccessoryTypes.Accessory)
 end
 
 function M:ClearCharAccessoryPreview()
@@ -159,12 +159,12 @@ function M:ClearCharAccessoryPreview()
     return
   end
   self.ActorController:StopPlayerFX()
-  self.ActorController:DestoryCreature(CommonConst.CharAccessoryTypes.FX_Dead)
-  self.ActorController:DestoryCreature(CommonConst.CharAccessoryTypes.FX_Body)
+  self.ActorController:DestroyCreature(CommonConst.CharAccessoryTypes.FX_Dead)
+  self.ActorController:DestroyCreature(CommonConst.CharAccessoryTypes.FX_Body)
   self.ActorController:StopPlayerMontage()
-  self.ActorController:DestoryPlayerMeleeWeapon()
+  self.ActorController:DestroyPlayerMeleeWeapon()
   if self.ActorController.ArmoryPlayer then
-    self.ActorController.ArmoryPlayer:RemoveAllEffectCreature()
+    self.ActorController.ArmoryPlayer:RemoveAllEffectCreature(false)
   end
   self.ActorController.CurrentAppearanceInfo = self.ActorController.CurrentAppearanceInfo or {}
   self.ActorController.CurrentAppearanceInfo.AccessorySuit = {}

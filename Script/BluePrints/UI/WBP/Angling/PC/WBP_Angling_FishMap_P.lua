@@ -154,14 +154,18 @@ function M:InitCommonTab()
   })
   self.Com_Tab:UpdateSingleBottomKeyInfo(1, {})
   local EMCache = require("EMCache.EMCache")
-  local UnLockData = EMCache:Get("FishUnLockData", true)
-  if UnLockData then
-    for FishId, UnLockState in pairs(UnLockData) do
-      if 1 == UnLockState then
-        local SpotId = DataMgr.Fish2FishingSpot[FishId]
+  local UnLockMapData = EMCache:Get("FishMapUnLockData", true)
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    local FishingBook = DataMgr.FishingBook
+    for FishId, BookData in pairs(FishingBook) do
+      local Count = Avatar:GetFishCountByFishId(FishId)
+      if Count > 0 and (not (UnLockMapData and UnLockMapData[FishId]) or 0 == UnLockMapData[FishId]) then
+        local SpotId = BookData.FishingSpot
         local FishRegionId = DataMgr.FishingSpot2FishingRegion[SpotId]
         local NeedNewTabId = FishRegion2Tab[FishRegionId]
-        self.Com_Tab:ShowTabRedDotByTabId(NeedNewTabId, true, false, false)
+        print(_G.LogTag, "LXZ InitCommonTab", FishId, SpotId, FishRegionId, NeedNewTabId)
+        self.Com_Tab:ShowTabRedDotByTabId(NeedNewTabId - 1, true, false, false)
       end
     end
   end
@@ -228,6 +232,23 @@ function M:UpdateFishMapRegion()
       OwnerPanel = self,
       StyleName = "Text"
     })
+    local Avatar = GWorld:GetAvatar()
+    local EMCache = require("EMCache.EMCache")
+    local UnLockMapData = EMCache:Get("FishMapUnLockData", true)
+    if Avatar then
+      for _, SpotTab in pairs(SubTabList) do
+        local FishIdList = DataMgr.FishingSpot2Fish[SpotTab.SpotId]
+        if FishIdList then
+          for _, FishId in pairs(FishIdList) do
+            local Count = Avatar:GetFishCountByFishId(FishId)
+            if Count > 0 and (not (UnLockMapData and UnLockMapData[FishId]) or 0 == UnLockMapData[FishId]) then
+              self.Com_SubTab:ShowTabRedDotByTabId(SpotTab.TabId, true, false, false)
+              break
+            end
+          end
+        end
+      end
+    end
     self.Com_SubTab:BindEventOnTabSelected(self, self.OnSubTabChanged)
     self.Com_SubTab:SelectTab(self.CurrentSubTabIndex)
     if #SubTabList <= 1 then
@@ -286,12 +307,24 @@ end
 
 function M:OnTabChanged(TabWidget)
   self.CurrentTabIndex = TabWidget.Idx
-  self.Com_Tab:ShowTabRedDotByTabId(TabWidget.Idx, false, false, false)
   self:UpdateFishMapRegion()
 end
 
 function M:OnSubTabChanged(TabWidget)
   self.CurrentSubTabIndex = TabWidget.Idx
+  self.Com_SubTab:ShowTabRedDotByTabId(TabWidget.Idx, false, false, false)
+  local AllItemCount = self.Com_SubTab.List_Tab:GetChildrenCount()
+  local bMainTabNew = false
+  for i = 1, AllItemCount do
+    local SubTab = self.Com_SubTab.List_Tab:GetChildAt(i - 1)
+    if SubTab.IsNew then
+      bMainTabNew = true
+      break
+    end
+  end
+  if not bMainTabNew then
+    self.Com_Tab:ShowTabRedDotByTabId(self.CurrentTabIndex, false, false, false)
+  end
   self:UpdateFishMapItem()
 end
 
@@ -544,15 +577,9 @@ function M:RefreshInfoByInputTypeChange(CurInputDevice, CurGamepadName)
 end
 
 function M:GetFishSpotId(FishId)
-  local Data = DataMgr.Fish2FishingSpot[FishId]
-  if not Data then
-    return
-  end
-  for SpotId, Weight in pairs(Data) do
-    local SpotData = DataMgr.FishingSpot[SpotId]
-    if SpotData then
-      return SpotId
-    end
+  if DataMgr.FishingBook[FishId] then
+    local SpotId = DataMgr.FishingBook[FishId].FishingSpot
+    return SpotId
   end
   return
 end

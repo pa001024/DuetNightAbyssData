@@ -1,4 +1,5 @@
 local TaskUtils = require("BluePrints.UI.TaskPanel.TaskUtils")
+local EMLuaConst = require("EMLuaConst")
 local ClientEventUtils = require("BluePrints.Common.ClientEvent.ClientEventUtils")
 local EMCache = require("EMCache.EMCache")
 local ReasoningUtils = require("BluePrints.UI.WBP.DetectiveMinigame.ReasoningUtils")
@@ -98,7 +99,7 @@ function M:OnInLoading()
   end
 end
 
-function M:SetTaskIconAndName(TaskIconPath, TextTitle, TaskContent)
+function M:SetTaskIconAndName(TaskIconPath, TextTitle, TaskContent, TaskWave)
   self.Text_TaskContent:SetText("")
   self.Text_TaskContent:SetVisibility(ESlateVisibility.Collapsed)
   self.Panel_Tips:SetVisibility(ESlateVisibility.Collapsed)
@@ -150,9 +151,16 @@ function M:SetTaskIconAndName(TaskIconPath, TextTitle, TaskContent)
   end
   if "" ~= TaskIconPath then
     self.Icon_GuidePoint:SetVisibility(ESlateVisibility.Visible)
-    local GuideIconTexture = LoadObject(TaskIconPath)
-    if GuideIconTexture then
-      self.Icon_GuidePoint:SetBrushResourceObject(GuideIconTexture)
+    if EMLuaConst.IsOpenEscortNPCPhantomOpt == false then
+      local GuideIconTexture = LoadObject(TaskIconPath)
+      if GuideIconTexture then
+        self.Icon_GuidePoint:SetBrushResourceObject(GuideIconTexture)
+      end
+    else
+      UResourceLibrary.LoadObjectAsync(self, TaskIconPath, {
+        self,
+        M.OnDungeonTaskIconLoaded
+      })
     end
   else
     self.Icon_GuidePoint:SetVisibility(ESlateVisibility.Collapsed)
@@ -166,6 +174,17 @@ function M:SetTaskIconAndName(TaskIconPath, TextTitle, TaskContent)
     end)
   else
     self:PlayAnimation(self.Main_Task_In)
+  end
+  if TaskWave then
+    self.Panel_Wave:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.Text_Wave:SetText(GText(TaskWave))
+    self.Num_Wave:SetVisibility(ESlateVisibility.Collapsed)
+  end
+end
+
+function M:OnDungeonTaskIconLoaded(Object)
+  if Object then
+    self.Icon_GuidePoint:SetBrushResourceObject(Object)
   end
 end
 
@@ -388,7 +407,7 @@ end
 
 function M:UpdateSpecialTaskInfo(OpType, SpecialNodeInfo)
   if "AddSpecialTaskInfo" == OpType then
-    local BattleFortUI = UIManager(GWorld.GameInstance):GetUIObj("BattleFort")
+    local BattleFortUI = UIManager(GWorld.GameInstance):GetUIObj("BattleFort") or UIManager(GWorld.GameInstance):GetUIObj("BattleFort02")
     if self.Panel_Tips.Visibility == UE4.ESlateVisibility.Collapsed and nil == BattleFortUI and self.Platform ~= "Mobile" then
       self.Panel_Tips:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
       self.Panel_Tips:SetRenderOpacity(1.0)
@@ -682,6 +701,13 @@ function M:PlayTaskBarAnimByState(State)
         self:PlayAnimation(self.Tooltip2_Out)
       end
     end
+    if "Mobile" ~= self.platform then
+      if self.NeedOpenDetectiveGame then
+        self.Text_Tips02:SetText(GText("Minigame_Textmap_100304"))
+      else
+        self.Text_Tips02:SetText(GText("UI_QUEST_TRACK"))
+      end
+    end
     if self:IsAnimationPlaying(self.MissonComplete_Out) then
       self:BindToAnimationFinished(self.MissonComplete_Out, {
         self,
@@ -726,7 +752,7 @@ function M:PlayTaskBarAnimByState(State)
     if self.Panel_Tips.Visibility == UE4.ESlateVisibility.SelfHitTestInvisible and self.Platform == "Mobile" then
       self.Panel_Tips:SetVisibility(UE4.ESlateVisibility.Collapsed)
     end
-    if not self:IsAnimationPlaying(self.TaskBar_In) and not self:IsAnimationPlaying(self.TaskBar_Out) then
+    if not self:IsAnimationPlaying(self.TaskBar_In) and not self:IsAnimationPlaying(self.TaskBar_Out) and not self.IsHideByNode then
       self:PlayAnimation(self.TaskBar_In)
       self:BindToAnimationFinished(self.TaskBar_In, {
         self,
@@ -737,7 +763,7 @@ function M:PlayTaskBarAnimByState(State)
           else
             self.Title:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
           end
-          local BattleFortUI = UIManager(GWorld.GameInstance):GetUIObj("BattleFort")
+          local BattleFortUI = UIManager(GWorld.GameInstance):GetUIObj("BattleFort") or UIManager(GWorld.GameInstance):GetUIObj("BattleFort02")
           if not BattleFortUI and 0 == self.VBox_SubTasks:GetChildrenCount() then
             self:TriggerQuestTrackPanelTips(true)
           end
@@ -1259,6 +1285,9 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
         bButton = true
       })
     end
+  end
+  if self.IsHideByNode then
+    self:SetVisibilityEx(ESlateVisibility.Collapsed)
   end
 end
 

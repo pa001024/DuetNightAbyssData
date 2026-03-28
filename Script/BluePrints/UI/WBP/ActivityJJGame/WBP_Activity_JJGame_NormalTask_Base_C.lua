@@ -350,6 +350,9 @@ function M:UpdateOneClickBtnState()
     if not (TaskItem and TaskItem.TaskProp) or not TaskItem.TaskConfig then
       return false
     end
+    if TaskItem.CanGet == false then
+      return false
+    end
     local taskProp = TaskItem.TaskProp
     local taskType = TaskItem.TaskConfig.TaskType
     local Progress = taskProp.Progress or 0

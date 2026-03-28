@@ -150,6 +150,7 @@ function Component:OnLevelUpSuccessCallback()
   self:UpdateModCostUI(Attrs, nil, self.Target.Level)
   self:UpdateAttrListUI(Attrs, nil, self.Target.Level)
   local Desc = ArmoryUtils:GenModPassiveEffectDesc(self.Target:Data(), self.Target.Level)
+  self.Btn_Upgrade:ForbidBtn(true)
   return Attrs, Desc
 end
 
@@ -164,6 +165,7 @@ function Component:OnLevelUpAnimFinishedCallback()
     MinLevel = self.PreviewLevel
   }
   self.LevelUpWidget:UpdateWidgetData(Params)
+  self.Btn_Upgrade:ForbidBtn(false)
   self.bDisableWarning = false
   if self.Key_Consume and self.CurInputDeviceType == ECommonInputType.Gamepad then
     self.Key_Consume:SetVisibility(UIConst.VisibilityOp.Visible)

@@ -21,6 +21,10 @@ return ReadOnly("GlobalConstant", {
     ConstantName = "AbyssChallengerMax",
     ConstantValue = 8
   },
+  AbyssMonsterLevelLimit = {
+    ConstantName = "AbyssMonsterLevelLimit",
+    ConstantValue = 220
+  },
   AccelerateCostMax = {
     ConstantName = "AccelerateCostMax",
     ConstantValue = 24
@@ -40,6 +44,10 @@ return ReadOnly("GlobalConstant", {
   ActionPointRecoveryPurchase = {
     ConstantName = "ActionPointRecoveryPurchase",
     ConstantValue = 60
+  },
+  ActiveSwitchWorldChannelMaxUsers = {
+    ConstantName = "ActiveSwitchWorldChannelMaxUsers",
+    ConstantValue = 1000
   },
   AdvanceColorId = {
     ConstantName = "AdvanceColorId",
@@ -116,6 +124,10 @@ return ReadOnly("GlobalConstant", {
   BattlePassBuyLvPrice = {
     ConstantName = "BattlePassBuyLvPrice",
     ConstantValue = 100
+  },
+  BattlePassEndRemindTime = {
+    ConstantName = "BattlePassEndRemindTime",
+    ConstantValue = 72
   },
   BattleWheelMaxSuitCount = {
     ConstantName = "BattleWheelMaxSuitCount",
@@ -279,7 +291,7 @@ return ReadOnly("GlobalConstant", {
   },
   CurrentVersion = {
     ConstantName = "CurrentVersion",
-    ConstantValue = 120
+    ConstantValue = 130
   },
   Daily_Goal_RandomTaskNum = {
     ConstantName = "Daily_Goal_RandomTaskNum",
@@ -467,7 +479,7 @@ return ReadOnly("GlobalConstant", {
   },
   FriendBlockMax = {
     ConstantName = "FriendBlockMax",
-    ConstantValue = 10
+    ConstantValue = 20
   },
   FriendHoldMax = {
     ConstantName = "FriendHoldMax",
@@ -612,6 +624,10 @@ return ReadOnly("GlobalConstant", {
     ConstantName = "LeaveBuffTime",
     ConstantValue = 3
   },
+  LoginWorldChannelMaxUsers = {
+    ConstantName = "LoginWorldChannelMaxUsers",
+    ConstantValue = 500
+  },
   LongIdleTalkTimes = {
     ConstantName = "LongIdleTalkTimes",
     ConstantValue = 4
@@ -623,6 +639,10 @@ return ReadOnly("GlobalConstant", {
   MaxAutoRounds = {
     ConstantName = "MaxAutoRounds",
     ConstantValue = 99
+  },
+  MaxIronTicket = {
+    ConstantName = "MaxIronTicket",
+    ConstantValue = 99999
   },
   MaxMapMarkIcon = {
     ConstantName = "MaxMapMarkIcon",
@@ -900,6 +920,10 @@ return ReadOnly("GlobalConstant", {
     ConstantName = "ReviewDialogueMax",
     ConstantValue = 50
   },
+  ScriptPunishMail = {
+    ConstantName = "ScriptPunishMail",
+    ConstantValue = 10071
+  },
   SecondaryPasswordAllowPasswordWrongTime = {
     ConstantName = "SecondaryPasswordAllowPasswordWrongTime",
     ConstantValue = 5
@@ -919,6 +943,38 @@ return ReadOnly("GlobalConstant", {
   SignatureMaxLen = {
     ConstantName = "SignatureMaxLen",
     ConstantValue = 40
+  },
+  SoloTreasureAllFinish = {
+    ConstantName = "SoloTreasureAllFinish",
+    ConstantValue = 10301431
+  },
+  SoloTreasureCurrent = {
+    ConstantName = "SoloTreasureCurrent",
+    ConstantValue = 6000004
+  },
+  SoloTreasureEvacuationExitTime = {
+    ConstantName = "SoloTreasureEvacuationExitTime",
+    ConstantValue = 60
+  },
+  SoloTreasureGuardToastCD = {
+    ConstantName = "SoloTreasureGuardToastCD",
+    ConstantValue = 10
+  },
+  SoloTreasureHudTips01ShowTime = {
+    ConstantName = "SoloTreasureHudTips01ShowTime",
+    ConstantValue = 3
+  },
+  SoloTreasureSkyBoxColorIndex = {
+    ConstantName = "SoloTreasureSkyBoxColorIndex",
+    ConstantValue = 2
+  },
+  SoloTreasureTicketResourceId = {
+    ConstantName = "SoloTreasureTicketResourceId",
+    ConstantValue = 6000005
+  },
+  SoloTreasureTicketShopId = {
+    ConstantName = "SoloTreasureTicketShopId",
+    ConstantValue = 10007126
   },
   SpecialQuestBlackTimeMax = {
     ConstantName = "SpecialQuestBlackTimeMax",
@@ -1093,6 +1149,10 @@ return ReadOnly("GlobalConstant", {
     ConstantName = "WeChatVerifyMailId",
     ConstantValue = 10010
   },
+  WeaponAccessoryNum = {
+    ConstantName = "WeaponAccessoryNum",
+    ConstantValue = 5
+  },
   WeaponColorPart = {
     ConstantName = "WeaponColorPart",
     ConstantValue = 4
@@ -1104,6 +1164,22 @@ return ReadOnly("GlobalConstant", {
   WeaponDefaultColor = {
     ConstantName = "WeaponDefaultColor",
     ConstantValue = -1
+  },
+  WorldChannelBusyRange = {
+    ConstantName = "WorldChannelBusyRange",
+    ConstantValue = 300
+  },
+  WorldChannelFullRange = {
+    ConstantName = "WorldChannelFullRange",
+    ConstantValue = 300
+  },
+  WorldChannelSmoothRange = {
+    ConstantName = "WorldChannelSmoothRange",
+    ConstantValue = 100
+  },
+  WorldChannelSwitchCD = {
+    ConstantName = "WorldChannelSwitchCD",
+    ConstantValue = 5
   },
   WrongModPolarity = {
     ConstantName = "WrongModPolarity",

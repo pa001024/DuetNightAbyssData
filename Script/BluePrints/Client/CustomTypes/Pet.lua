@@ -115,6 +115,22 @@ function Pet:GetSkillLevel(BreakNum)
   return (BreakNum or self.BreakNum) + 1
 end
 
+function Pet:GetSkillLevelUp()
+  if self.SkillLevelUp then
+    return self.SkillLevelUp
+  else
+    local SkillLevelUp = self:BattleData().PetSkillLevelUp or 0
+    for _, EntryId in pairs(self.Entry) do
+      if 0 ~= EntryId then
+        local AffixData = self:BattleData(EntryId)
+        SkillLevelUp = SkillLevelUp + (AffixData.PetSkillLevelUp or 0)
+      end
+    end
+    self.SkillLevelUp = SkillLevelUp
+    return self.SkillLevelUp
+  end
+end
+
 function Pet:IsResourcePet()
   return 2 == self:Data().PetType
 end
@@ -223,7 +239,8 @@ function Pet:CalcMultiplier(ModMultiplier)
   local PetData = self:BattleData()
   local PetId = PetData.PetId
   if PetData.AddModMultiplier then
-    local _PetData = SkillUtils.GrowProxyBySkillLevel("BattlePet", PetId, self:GetSkillLevel(), PetData.AddModMultiplier)
+    local PetLevel = self:GetSkillLevel() + self:GetSkillLevelUp()
+    local _PetData = SkillUtils.GrowProxyBySkillLevel("BattlePet", PetId, PetLevel, PetData.AddModMultiplier)
     for AttrName, _ in pairs(PetData.AddModMultiplier) do
       ModMultiplier[AttrName] = (ModMultiplier[AttrName] or 0) + _PetData[AttrName]
     end
@@ -297,7 +314,7 @@ function Pet:CalcOneAttrs(AttrName, BaseValues, ModRateValues, RateIndex, ModAdd
   PetId = PetId or self.PetId
   local PetData = self:BattleData(PetId)
   PetId = PetData.PetId
-  local SkillLevel = AffixEnhanceLevel or self:GetSkillLevel(self.BreakNum)
+  local SkillLevel = AffixEnhanceLevel or self:GetSkillLevel(self.BreakNum) + self:GetSkillLevelUp()
   if AttrData.Rate then
     if not ModRateValues[AttrName] then
       ModRateValues[AttrName] = {}
@@ -309,6 +326,9 @@ function Pet:CalcOneAttrs(AttrName, BaseValues, ModRateValues, RateIndex, ModAdd
     else
       AttrData = SkillUtils.GrowProxyBySkillLevel("BattlePet", PetId, SkillLevel, AttrData)
       IncreaseRateValue = AttrData.Rate
+    end
+    if type(IncreaseRateValue) == "string" then
+      DebugPrint("ERROR::", "宠物ID: " .. PetId .. "对应SkillLevel为" .. SkillLevel .. "对应SkillLevelUp为" .. self:GetSkillLevelUp() .. "读取出来的IncreaseRateValue为" .. IncreaseRateValue .. "非法！请联系策划检查下BattlePet表")
     end
     if AttrData.AllowModMultiplier then
       if AttrData.AllowModMultiplier == "All" then
@@ -332,6 +352,9 @@ function Pet:CalcOneAttrs(AttrName, BaseValues, ModRateValues, RateIndex, ModAdd
     else
       AttrData = SkillUtils.GrowProxyBySkillLevel("BattlePet", PetId, SkillLevel, AttrData)
       IncreaseValue = AttrData.Value
+    end
+    if type(IncreaseValue) == "string" then
+      DebugPrint("ERROR::", "宠物ID: " .. PetId .. "对应SkillLevel为" .. SkillLevel .. "对应SkillLevelUp为" .. self:GetSkillLevelUp() .. "读取出来的IncreaseValue为" .. IncreaseValue .. "非法！请联系策划检查下BattlePet表")
     end
     if AttrData.AllowModMultiplier then
       if AttrData.AllowModMultiplier == "All" then
@@ -358,6 +381,11 @@ PetDict.ValueType = Pet
 function PetDict:NewPet(PetId, UniqueId)
   self[UniqueId] = Pet(PetId, UniqueId)
   return self[UniqueId]
+end
+
+function PetDict:LoadPet(Value)
+  local pet = Pet()
+  return pet:load(Value)
 end
 
 return {Pet = Pet, PetDict = PetDict}

@@ -103,11 +103,17 @@ function M:MakeBreakRewardData()
       local Rewards = {}
       local RewardsInfo = DataMgr.Reward[BreakData.CollectReward]
       for Index, ItemId in ipairs(RewardsInfo.Id) do
+        local Rarity = 1
+        if DataMgr.Resource[ItemId] then
+          Rarity = DataMgr.Resource[ItemId].Rarity
+        elseif DataMgr.Mod[ItemId] then
+          Rarity = DataMgr.Mod[ItemId].Rarity
+        end
         local RewardContent = {
           ItemId = ItemId,
           ItemType = RewardsInfo.Type[Index],
           Count = RewardsInfo.Count[Index][1],
-          Rarity = DataMgr.Resource[ItemId].Rarity
+          Rarity = Rarity
         }
         table.insert(Rewards, RewardContent)
       end
@@ -181,7 +187,7 @@ function M:RefreshRewardDialog(DialogWidget, Rewards)
       Item.ConfigData.CanReceive = CanReceive
       Item.ConfigData.RewardsGot = IsRewardsGot
       if Item.SelfWidget then
-        Item.SelfWidget:RefreshBtn(IsRewardsGot)
+        Item.SelfWidget:RefreshBtn(IsRewardsGot, CanReceive)
       end
     end
   end

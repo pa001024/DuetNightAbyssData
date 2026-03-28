@@ -328,12 +328,38 @@ function BP_UIManagerComponent_C:_CreateWidgetByUMGClass(UMG_Class, NeedShowInWi
   end
   if nil ~= UMG_Widget_Ins then
     if NeedShowInWindow then
-      UMG_Widget_Ins:AddToViewport(ZOrder)
+      if UIConst.bUseHierarchicalLayer then
+        self:AddWidgetToHierarchicalLayer(UIName, UMG_Widget_Ins, ZOrder)
+      else
+        UMG_Widget_Ins:AddToViewport(ZOrder)
+      end
     elseif nil ~= ZOrder then
       UMG_Widget_Ins:SetZOrder(ZOrder)
     end
   end
   return UMG_Widget_Ins
+end
+
+function BP_UIManagerComponent_C:AddWidgetToHierarchicalLayer(UIName, WidgetObject, ZOrder)
+  local WidgetUIConfig = DataMgr.WidgetUI[UIName]
+  if nil == WidgetUIConfig or nil == WidgetUIConfig.HierarchicalLayer then
+    WidgetObject:AddToViewport(ZOrder)
+    return
+  end
+  local LayerName = WidgetUIConfig.HierarchicalLayer
+  local HierarchicalWidget = UIManager(self):GetUIObj("SceneStartUI")
+  if HierarchicalWidget then
+    local LayerNodeWidget = HierarchicalWidget[LayerName .. "_Overlay"]
+    if LayerNodeWidget then
+      local Slot = LayerNodeWidget:AddChildToOverlay(WidgetObject)
+      Slot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
+      Slot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
+    else
+      WidgetObject:AddToViewport(ZOrder)
+    end
+  else
+    WidgetObject:AddToViewport(ZOrder)
+  end
 end
 
 function BP_UIManagerComponent_C:AddUIToStateTagsCluster(UIStateTag, UIName, IsAdd)
@@ -1157,7 +1183,11 @@ function BP_UIManagerComponent_C:SetBannedActionCallback(KeyboardSetName, IsBann
 end
 
 function BP_UIManagerComponent_C:SetAllBattleEntityHidden(bHidden, TagName, UnitType)
-  local Entities = Battle(self):GetAllEntities()
+  local BattleUtils = Battle(self)
+  if not BattleUtils then
+    return
+  end
+  local Entities = BattleUtils:GetAllEntities()
   if bHidden then
     for _, Entity in pairs(Entities) do
       if IsValid(Entity) and Entity.UnitType == UnitType and not Entity.bHidden then
@@ -1732,6 +1762,49 @@ function BP_UIManagerComponent_C:ShowCommonPopupUI(PopupId, Params, ParentWidget
   end
 end
 
+function BP_UIManagerComponent_C:ShowCommonPopupUI_Push(PopupId, Params, ParentWidget)
+  local CommonDialog = self:GetUI("CommonDialog")
+  if not CommonDialog then
+    return self:ShowCommonPopupUI(PopupId, Params, ParentWidget)
+  end
+  CommonDialog:ShowPopupPush(PopupId, Params, ParentWidget)
+  return CommonDialog
+end
+
+function BP_UIManagerComponent_C:ShowCommonPopupUI_Suspend(PopupId, Params, ParentWidget)
+  local CommonDialog = self:GetUI("CommonDialog")
+  if not CommonDialog then
+    return self:ShowCommonPopupUI(PopupId, Params, ParentWidget)
+  end
+  CommonDialog:Hide("Suspend")
+  local SystemUIConfig = DataMgr.SystemUI.CommonDialog
+  local PopupUI = self:LoadUI(UIConst.LoadInConfig, "CommonDialog#CommonDialog_Suspend", SystemUIConfig.ZOrder)
+  local NewParams = {}
+  if Params then
+    for k, v in pairs(Params) do
+      NewParams[k] = v
+    end
+  end
+  local AutoResume = NewParams.SuspendAutoResume
+  if nil == AutoResume then
+    AutoResume = true
+  end
+  PopupUI.SuspendAutoResume = AutoResume
+  
+  function NewParams.OnCloseCallbackFunction()
+    if IsValid(CommonDialog) then
+      if PopupUI.SuspendAutoResume then
+        CommonDialog:Show("Suspend")
+      else
+        CommonDialog:Close()
+      end
+    end
+  end
+  
+  PopupUI:ShowPopup(PopupId, NewParams, ParentWidget)
+  return PopupUI
+end
+
 function BP_UIManagerComponent_C:ShowCommonPopupUI_Interrupt(PopupId, Params, ParentWidget)
   local CommonDialog = self:GetUI("CommonDialog")
   if not CommonDialog then
@@ -1739,6 +1812,7 @@ function BP_UIManagerComponent_C:ShowCommonPopupUI_Interrupt(PopupId, Params, Pa
     return
   end
   CommonDialog:ShowPopupInterrupt(PopupId, Params, ParentWidget)
+  return CommonDialog
 end
 
 function BP_UIManagerComponent_C:PreviewCommonPopupStyle(StyleId)
@@ -1833,15 +1907,21 @@ function BP_UIManagerComponent_C:ShowUITip(TipType, TipContent, LastTime, IsWait
       if IsValid(self.WarningToastUI) and not self.WarningToastUI.IsClose then
         self.WarningToastUI:Close()
       end
-      local UITopTip = self:LoadUINew("WarningToast", TipContent, LastTime)
-      AudioManager(self):PlayUISound(UITopTip, "event:/ui/common/toast_warning", nil, nil)
-      local Pos = FVector2D(0, 0)
-      UITopTip.Panel_Toast:SetRenderTranslation(Pos)
-      self.WarningToastUI = UITopTip
-      self.WarningToastUI.Panel_Toast:SetRenderOpacity(1.0)
-      if ExtraData then
-        self:HideWarningUITip(ExtraData)
-        UITopTip.MessageId = ExtraData
+      if not self:GetUIObjIsAsyncLoading("WarningToast") then
+        RunAsyncTask(self, TipContent, function(CoroutineObj)
+          local UITopTip = self:LoadUIAsync("WarningToast", CoroutineObj, TipContent, LastTime)
+          AudioManager(self):PlayUISound(UITopTip, "event:/ui/common/toast_warning", nil, nil)
+          local Pos = FVector2D(0, 0)
+          UITopTip.Panel_Toast:SetRenderTranslation(Pos)
+          self.WarningToastUI = UITopTip
+          self.WarningToastUI.Panel_Toast:SetRenderOpacity(1.0)
+          if ExtraData then
+            self:HideWarningUITip(ExtraData)
+            UITopTip.MessageId = ExtraData
+          end
+        end)
+      else
+        DebugPrint("Hy@ UIManager:ShowUItip WarningToast, Async Loading Skip", TipContent)
       end
     end
     
@@ -1854,6 +1934,24 @@ function BP_UIManagerComponent_C:ShowUITip(TipType, TipContent, LastTime, IsWait
     else
       WrapLoadWarningTip()
     end
+  elseif TipType == UIConst.Tip_CombineWarning then
+    local function WrapLoadWarningTip()
+      if IsValid(self.CombineWarningToastUI) and not self.CombineWarningToastUI.IsClose then
+        self.CombineWarningToastUI:Close()
+      end
+      if not self:GetUIObjIsAsyncLoading("CombineWarningToast") then
+        RunAsyncTask(self, TipContent, function(CoroutineObj)
+          local UITopTip = self:LoadUIAsync("WarningToast02", CoroutineObj, TipContent, LastTime)
+          AudioManager(self):PlayUISound(UITopTip, "event:/ui/common/toast_warning", nil, nil)
+          local Pos = FVector2D(0, 0)
+          UITopTip.Panel_Toast:SetRenderTranslation(Pos)
+          self.CombineWarningToastUI = UITopTip
+          self.CombineWarningToastUI.Panel_Toast:SetRenderOpacity(1.0)
+        end)
+      end
+    end
+    
+    WrapLoadWarningTip()
   elseif TipType == UIConst.Tip_StoryToast then
     if self._StoryToastSet[TipContent] then
       DebugPrint("UIManager:ShowUItip StoryToast, Repeat Toast", TipContent)
@@ -1914,9 +2012,6 @@ function BP_UIManagerComponent_C:_BreakInTopToastInQueue(QueneContainerName, Set
 end
 
 function BP_UIManagerComponent_C:ShowUITip_BattleCommonTop(TipType, TipContent, LastTime, IsWaitToTrigger, ExtraData)
-  if "UI_WalkSwitch_Forbid" == TipContent or "UI_WalkSwtich_On_Toast" == TipContent or "UI_WalkSwtich_Off_Toast" == TipContent then
-    return
-  end
   if TipType == UIConst.Tip_CommonTop then
     if not self["BattleCommonTopInCD_" .. TipContent] then
       self:ShowUITip(TipType, GText(TipContent), LastTime, IsWaitToTrigger, ExtraData)
@@ -2060,7 +2155,7 @@ function BP_UIManagerComponent_C:TryShowPlayerLevelUpInfo(LevelUpInfo)
   if Avatar:IsInDungeon() and LevelUpInfo.ShowProgressBar then
     return
   end
-  if GameState and (GameState.GameModeType == "Temple" or GameState.GameModeType == "Party" or GameState.GameModeType == "MonsterRush") then
+  if GameState and (GameState.GameModeType == "Temple" or GameState.GameModeType == "Party" or GameState.GameModeType == "SoloTreasure" or GameState.GameModeType == "MonsterRush") then
     return
   end
   if not self:IsInHUDShowMode() then
@@ -2090,36 +2185,49 @@ function BP_UIManagerComponent_C:TryShowPlayerLevelUpInfo(LevelUpInfo)
   self:ShowPlayerLevelUpToast()
 end
 
+local function CreateArmoryPlayerActor(self, Char, InAvatar)
+  local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
+  local actor = self:GetWorld():SpawnActor(LoadClass("/Game/BluePrints/Char/BP_PlayerCharacter.BP_PlayerCharacter_C"), Player:GetTransform(), UE4.ESpawnActorCollisionHandlingMethod.Default, Player, Player, nil)
+  if actor then
+    actor:RemoveBuffManager()
+    actor:SetTickableWhenPaused(true)
+    local Avatar = InAvatar or GWorld:GetAvatar()
+    Char = Char or Avatar.Chars[Avatar.CurrentChar]
+    local AvatarBattleInfo = AvatarUtils:GetDefaultBattleInfo(Avatar, {Char = Char})
+    local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+    if GameMode then
+      AvatarBattleInfo = GameMode:SimplifyInfoForInit(AvatarBattleInfo)
+      AvatarBattleInfo.FromOtherWorld = true
+      AvatarBattleInfo.FromArmory = true
+      actor:InitCharacterInfo(AvatarBattleInfo)
+    end
+    actor:ForceClearActorHideTag()
+    actor.CapsuleComponent:SetCollisionEnabled(ECollisionEnabled.NoCollision)
+    actor.CameraFadeCapsule:SetCollisionEnabled(ECollisionEnabled.NoCollision)
+    actor.Mesh:SetCollisionEnabled(ECollisionEnabled.NoCollision)
+    actor.Mesh:SetTickableWhenPaused(true)
+    actor.Mesh.bComponentUseFixedSkelBounds = false
+    actor.DitherDisabled = true
+  end
+  return actor
+end
+
 function BP_UIManagerComponent_C:CreateOrGetArmoryPlayerActor(Char, InAvatar)
   local IsCreated = false
   if not self.ArmoryPlayer or not self.ArmoryPlayer:IsValid() then
-    local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
-    local actor = self:GetWorld():SpawnActor(LoadClass("/Game/BluePrints/Char/BP_PlayerCharacter.BP_PlayerCharacter_C"), Player:GetTransform(), UE4.ESpawnActorCollisionHandlingMethod.Default, Player, Player, nil)
-    if actor then
-      actor:RemoveBuffManager()
-      actor:SetTickableWhenPaused(true)
-      local Avatar = InAvatar or GWorld:GetAvatar()
-      Char = Char or Avatar.Chars[Avatar.CurrentChar]
-      local AvatarBattleInfo = AvatarUtils:GetDefaultBattleInfo(Avatar, {Char = Char})
-      local GameMode = UE4.UGameplayStatics.GetGameMode(self)
-      if GameMode then
-        AvatarBattleInfo = GameMode:SimplifyInfoForInit(AvatarBattleInfo)
-        AvatarBattleInfo.FromOtherWorld = true
-        AvatarBattleInfo.FromArmory = true
-        actor:InitCharacterInfo(AvatarBattleInfo)
-      end
-      actor:ForceClearActorHideTag()
-      actor.CapsuleComponent:SetCollisionEnabled(ECollisionEnabled.NoCollision)
-      actor.CameraFadeCapsule:SetCollisionEnabled(ECollisionEnabled.NoCollision)
-      actor.Mesh:SetCollisionEnabled(ECollisionEnabled.NoCollision)
-      actor.Mesh:SetTickableWhenPaused(true)
-      actor.Mesh.bComponentUseFixedSkelBounds = false
-      actor.DitherDisabled = true
-    end
-    self.ArmoryPlayer = actor
+    self.ArmoryPlayer = CreateArmoryPlayerActor(self, Char, InAvatar)
     IsCreated = true
   end
   return self.ArmoryPlayer, IsCreated
+end
+
+function BP_UIManagerComponent_C:CreateOrGetPlayerReflection(Char, InAvatar)
+  local IsCreated = false
+  if not self.PlayerReflection or not self.PlayerReflection:IsValid() then
+    self.PlayerReflection = CreateArmoryPlayerActor(self, Char, InAvatar)
+    IsCreated = true
+  end
+  return self.PlayerReflection, IsCreated
 end
 
 function BP_UIManagerComponent_C:CreateShowWeapon(Owner, Params, Callback)
@@ -2128,21 +2236,53 @@ function BP_UIManagerComponent_C:CreateShowWeapon(Owner, Params, Callback)
   if self.ShowWeapon then
     self.ShowWeapon:SetActorHideTag("CreateShowWeapon", true)
   end
-  local PlayerCharacter = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
-  PlayerCharacter:SpawnShowWeaponAsync(Params.WeaponId, Params.Transform, Params.ReplaceAttrs, Params.SkillInfos, Params.AppearanceInfo, Params.WeaponInfo, function(WeaponActor)
-    self:ForceDestroyShowWeapon()
+  if self.ShowWeaponReflection then
+    self.ShowWeaponReflection:SetActorHideTag("CreateShowWeapon", true)
+  end
+  
+  local function OnAllWeaponSpawned()
+    if not Callback then
+      return
+    end
+    Callback(self.ShowWeapon, self.ShowWeaponReflection)
+  end
+  
+  local function SpawnShowWeaponAsync(OnSpawned)
+    local PlayerCharacter = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
+    PlayerCharacter:SpawnShowWeaponAsync(Params.WeaponId, Params.Transform, Params.ReplaceAttrs, Params.SkillInfos, Params.AppearanceInfo, Params.WeaponInfo, function(WeaponActor)
+      if WeaponActor then
+        WeaponActor:SetActorHideTag("CreateShowWeapon", false)
+      end
+      OnSpawned(WeaponActor)
+    end)
+  end
+  
+  local function OnShowWeaponSpawned(WeaponActor)
+    self:ForceDestroyShowWeapon(self.ShowWeapon)
+    self:ForceDestroyShowWeapon(self.ShowWeaponReflection)
     self.ShowWeapon = WeaponActor
     if not self.ShowWeaponOwners[Owner] then
       self:DestroyShowWeapon(Owner)
       return
     end
-    if self.ShowWeapon then
-      self.ShowWeapon:SetActorHideTag("CreateShowWeapon", false)
+    if Params.bEnableReflection then
+      local function OnShowWeaponReflectionSpawned(WeaponActor)
+        self.ShowWeaponReflection = WeaponActor
+        
+        if not self.ShowWeaponOwners[Owner] then
+          self:DestroyShowWeapon(Owner)
+          return
+        end
+        OnAllWeaponSpawned()
+      end
+      
+      SpawnShowWeaponAsync(OnShowWeaponReflectionSpawned)
+    else
+      OnAllWeaponSpawned()
     end
-    if Callback then
-      Callback(self.ShowWeapon)
-    end
-  end)
+  end
+  
+  SpawnShowWeaponAsync(OnShowWeaponSpawned)
 end
 
 function BP_UIManagerComponent_C:DestroyShowWeapon(Owner)
@@ -2153,16 +2293,18 @@ function BP_UIManagerComponent_C:DestroyShowWeapon(Owner)
   if next(self.ShowWeaponOwners) then
     return
   end
-  self:ForceDestroyShowWeapon()
+  self:ForceDestroyShowWeapon(self.ShowWeapon)
+  self.ShowWeapon = nil
+  self:ForceDestroyShowWeapon(self.ShowWeaponReflection)
+  self.ShowWeaponReflection = nil
 end
 
-function BP_UIManagerComponent_C:ForceDestroyShowWeapon()
-  if IsValid(self.ShowWeapon) then
-    if self.ShowWeapon.ChildWeapon then
-      self.ShowWeapon.ChildWeapon:K2_DestroyActor()
+function BP_UIManagerComponent_C:ForceDestroyShowWeapon(ShowWeapon)
+  if IsValid(ShowWeapon) then
+    if ShowWeapon.ChildWeapon then
+      ShowWeapon.ChildWeapon:K2_DestroyActor()
     end
-    self.ShowWeapon:K2_DestroyActor()
-    self.ShowWeapon = nil
+    ShowWeapon:K2_DestroyActor()
   end
 end
 
@@ -2299,13 +2441,9 @@ function BP_UIManagerComponent_C:HideNpcById(NpcId, bHide, HideTag)
   end
 end
 
-function BP_UIManagerComponent_C:CreateUIActorCameraHelper(Player, bDontAttach)
+function BP_UIManagerComponent_C:CreateUIActorCameraHelper(Player)
   local ToCreateUIActorCameraHelper = self:GetWorld():SpawnActor(LoadClass("/Game/BluePrints/Char/BP_PlayerCharacterArmoryHelper.BP_PlayerCharacterArmoryHelper_C"), Player:GetTransform(), UE4.ESpawnActorCollisionHandlingMethod.Default)
-  if bDontAttach then
-    ToCreateUIActorCameraHelper:K2_SetActorTransform(Player.Mesh:GetSocketTransform("Root", ERelativeTransformSpace.RTS_World))
-  else
-    ToCreateUIActorCameraHelper:K2_AttachToActor(Player, "Root", UE4.EAttachmentRule.KeepWorld, UE4.EAttachmentRule.KeepWorld, UE4.EAttachmentRule.KeepWorld, true)
-  end
+  ToCreateUIActorCameraHelper:K2_SetActorTransform(Player.Mesh:GetSocketTransform("Root", ERelativeTransformSpace.RTS_World), false, nil, false)
   ToCreateUIActorCameraHelper:K2_AddActorLocalOffset(FVector(0, 0, 0), false, nil, false)
   return ToCreateUIActorCameraHelper
 end
@@ -2450,15 +2588,6 @@ function BP_UIManagerComponent_C:SwitchUINpcCamera(bNpcCamera, UIName, NpcId, Pa
     end
     if UINpcActorForCreate.BaiBox then
       UINpcActorForCreate.BaiBox:SetHiddenInGame(false, false)
-    end
-  end
-  if SpawnNpcConfig.UseXFOV then
-    if bNpcCamera then
-      DebugPrint("SwitchFixedCamera：固定镜头锁X轴向")
-      UE.UUIFunctionLibrary.StartHorizontalFOV()
-    else
-      DebugPrint("SwitchFixedCamera：固定镜头锁恢复轴向")
-      UE.UUIFunctionLibrary.StopHorizontalFOV()
     end
   end
   Params = Params or {}
@@ -3159,7 +3288,7 @@ Traceback:
   local DescribeInfo = {title = "UI报错", trace_content = Ret}
   local Avatar = GWorld:GetAvatar()
   if Avatar then
-    local LocalUser = UE.UKismetSystemLibrary:GetPlatformUserName()
+    local LocalUser = UE4.UKismetSystemLibrary:GetPlatformUserName()
     local Ret = "设备名：" .. LocalUser .. "\n" .. Ret
     Avatar:SendTraceToQaWeb(TraceType, DescribeInfo)
     return
@@ -3232,7 +3361,7 @@ function BP_UIManagerComponent_C:_FillUIErrorLog(ct)
     self:_FillCharacterLog_UI(ct, Player)
     table.insert(ct, "\n")
   end
-  local GameState = UE.UGameplayStatics.GetGameState(self.Player)
+  local GameState = UE4.UGameplayStatics.GetGameState(self.Player)
   if IsValid(GameState) then
     local DungeonId = GameState.DungeonId
     if DungeonId and DungeonId > 0 then
@@ -3313,6 +3442,23 @@ function BP_UIManagerComponent_C:StartScriptDetectionCheck()
   end
 end
 
+function BP_UIManagerComponent_C:ShowWaterMarkUI()
+  if GWorld.bShouldShowWaterMark then
+    local CurrentLanguage = EMCache:Get("SystemLanguage")
+    local SystemLanguage = EMCache:Get("SystemLanguage")
+    if not SystemLanguage then
+      if UE.AHotUpdateGameMode.IsGlobalPak() then
+        SystemLanguage = "EN"
+      else
+        SystemLanguage = "CN"
+      end
+    end
+    local Content = GWorld.WaterMarkContent
+    local Text = Content and Content[SystemLanguage]
+    self:LoadUINew("WaterMark", Text)
+  end
+end
+
 function BP_UIManagerComponent_C:MarkKeyLongPressSuccess(InKey)
   if not self.LongPressTbl then
     self.LongPressTbl = {}
@@ -3333,6 +3479,10 @@ function BP_UIManagerComponent_C:ClearKeyLongPressSuccess(InKey)
   if self.LongPressTbl and self.LongPressTbl[InKey] then
     self.LongPressTbl[InKey] = nil
   end
+end
+
+function BP_UIManagerComponent_C:ClearCachedViewTarget()
+  rawset(self, "ViewTargetBeforeOpenSystem", nil)
 end
 
 return BP_UIManagerComponent_C

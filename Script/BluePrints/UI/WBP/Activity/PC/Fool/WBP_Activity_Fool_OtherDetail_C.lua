@@ -3,7 +3,7 @@ local M = Class({
   "BluePrints.Common.TimerMgr"
 })
 local PhotoWallModel = require("BluePrints.UI.WBP.Activity.PC.Fool.Model.PhotoWallModel")
-ETabType = {
+local ETabType = {
   Hottest = 1,
   Latest = 2,
   MyLike = 3

@@ -41,23 +41,28 @@ end
 
 function M:RefreshButtonState()
   local ActiveBtnIndex = 0
-  if 0 == self.TaskState then
+  if self.TaskState == CommonConst.EntrustFameTaskState.ReadyClaim then
     self.Done:SetVisibility(UIConst.VisibilityOp.Collapsed)
     if self.bCanSubmit then
       self.BtnAccept:ForbidBtn(false)
+      self.BtnAccept:SetReddotVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     else
       self.BtnAccept:ForbidBtn(true)
+      self.BtnAccept:SetReddotVisibility(UIConst.VisibilityOp.Collapsed)
     end
     self.BtnAccept:SetText(GText("ReputationEntrust_Submit"))
   else
     ActiveBtnIndex = 3
     self.Done:SetVisibility(UIConst.VisibilityOp.Visible)
     self.HintDone:SetText(GText("UI_Entrust_Complete"))
+    self.BtnAccept:SetReddotVisibility(UIConst.VisibilityOp.Collapsed)
   end
   self.WidgetSwitcher_1:SetActiveWidgetIndex(ActiveBtnIndex)
-  self:AddDelayFrameFunc(function()
-    EMUIAnimationSubsystem:EMPlayAnimation(self, self.In)
-  end, 1, "FillWithRegionInfo")
+  if not self.Parent or self.Parent.CurInputDeviceType ~= ECommonInputType.Gamepad then
+    self:AddDelayFrameFunc(function()
+      EMUIAnimationSubsystem:EMPlayAnimation(self, self.In)
+    end, 1, "FillWithRegionInfo")
+  end
 end
 
 function M:InitNormalInfo()
@@ -173,7 +178,7 @@ function M:OnFocusLost(InFocusEvent)
 end
 
 function M:HandleGamePadPressA()
-  if 0 == self.TaskState then
+  if self.TaskState == CommonConst.EntrustFameTaskState.ReadyClaim then
     self:OnSubmitBtnClicked()
   end
 end

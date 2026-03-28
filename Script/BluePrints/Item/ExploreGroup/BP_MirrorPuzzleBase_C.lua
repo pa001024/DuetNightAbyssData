@@ -43,7 +43,6 @@ function M:LineTrace()
     self.LineSource.MirrorArray:Add(self)
   end
   if bHit and HitResult.Actor:Cast(UE4.ACombatItemBase) and HitResult.Actor:IsCombatItemBase() then
-    print(_G.LogTag, "LXZ LineTrace", self:GetName(), HitResult.Actor:GetName())
     if HitResult.Actor.OnLineHit then
       HitResult.Actor:OnLineHit(self, HitResult)
     end
@@ -72,6 +71,7 @@ function M:GetLineTraceEnd()
 end
 
 function M:OnLineHit(LastMirror, HitResult)
+  self:UpdateNormalDirect()
   if self.LastMirror == LastMirror then
     return
   end

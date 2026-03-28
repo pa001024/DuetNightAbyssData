@@ -16,12 +16,14 @@ UIConst.ZORDER_SCREEN_EFFECT = 8
 UIConst.ZORDER_FOR_COMMON_TIP = 10
 UIConst.ZORDER_FOR_TOP_TIP = 11
 UIConst.ZORDER_FOR_CHANGE_SCENE = 20
+UIConst.ZORDER_FOR_GM_PANEL = 50
 UIConst.ZORDER_ABOVE_SystemGuide = 104
 UIConst.ZORDER_FOR_NET_DISCONNECT = 110
 UIConst.ZORDER_ABOVE_ALL = 127
 UIConst.WORLDTASKMAIN = "/Game/UI/UI_PC/MainInterfaceUI/WBP_WorldTask.WBP_WorldTask_C"
 UIConst.BATTLEWEAPONHINT = "/Game/UI/UI_Phone/Battle/Battle_Weapon_Hint.Battle_Weapon_Hint_C"
 UIConst.SCENESTARTUI = "/Game/UI/WBP/Common/Class/Scene_StartUI.Scene_StartUI_C"
+UIConst.SCENESTARTUINEW = "/Game/UI/WBP/Common/Class/WBP_SceneStart.WBP_SceneStart_C"
 UIConst.PICKUPITEMTIPS = "/Game/UI/UI_PC/PickUp/WBP_ButtomPickUpTips.WBP_ButtomPickUpTips_C"
 UIConst.PICKUPITEMPANEL = "/Game/BluePrints/UI/WBP_PickUpItemsPanel.WBP_PickUpItemsPanel_C"
 UIConst.TASKINDICATORUIBASE = "/Game/UI/UI_PC/Guide/Guide_Point/Guide_Icon_Task.Guide_Icon_Task"
@@ -165,6 +167,10 @@ UIConst.LoadInConfig = "LoadInConfig"
 UIConst.FromUI = "FromUI"
 UIConst.GuideTextFloat = "/Game/UI/UI_PC/Guide/Guide_TextFloat_PC"
 UIConst.AllUIConfig = {
+  SceneStartUI = {
+    addtostack = false,
+    resource = UIConst.SCENESTARTUINEW
+  },
   PickUpInfoTips = {
     popup = false,
     addtostack = false,
@@ -621,6 +627,7 @@ UIConst.UpgradeTip = "RougeUpgradeTip"
 UIConst.Tip_Quest = "QuestTips"
 UIConst.Tip_CommonTop = "CommonTopTips"
 UIConst.Tip_CommonWarning = "CommonWarningTips"
+UIConst.Tip_CombineWarning = "CombineWarningTips"
 UIConst.Tip_CommonToast = "CommonToastMain"
 UIConst.Tip_ExcavationToast = "ExcavationToast"
 UIConst.Tip_CommonDialogTip = "CommonDialogTip"
@@ -646,11 +653,7 @@ UIConst.PopUpUIName = {
     "Common",
     "Guide"
   },
-  SpecificUIList = {
-    "SceneStartUI",
-    "MenuLevel",
-    "MenuWorld"
-  }
+  SpecificUIList = {"MenuLevel", "MenuWorld"}
 }
 UIConst.BATTLE_MENU_BEHAVIOUR_TYPE = {IN_BATTLE_MENU = 1, ARMOURY_BATTLE_MENU = 2}
 UIConst.DPIBaseOnSize = {
@@ -696,7 +699,9 @@ UIConst.AnimWithJumpConfig = {
     EndFadeOutValue = 0.75,
     IsNeedFadeIn = false,
     IsNeedMatchAnimTime = false
-  }
+  },
+  ActivityRewardPacking = {IsNeedFadeOut = true, IsNeedFadeIn = false},
+  ActivityMain = {OutAnimWithJumpTime = 0.3}
 }
 UIConst.DungeonIndicatorShowWidgets = {"BattleFort"}
 UIConst.RedDotType = {
@@ -796,7 +801,7 @@ UIConst.IndicatorAnimIconTable = {
 }
 UIConst.DungeonTaskPath = {
   MainMission = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_MainMission.T_Gp_MainMission",
-  DefeatMission = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission.T_Gp_DefeatMission",
+  DefeatMission = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DefeatMission_L.T_Gp_DefeatMission_L",
   Boss = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
   Evacuation = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Evacuation.T_Gp_Evacuation",
   SpecialEnemy = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SpecialEnemy.T_Gp_SpecialEnemy"
@@ -821,9 +826,9 @@ UIConst.AccessoryTypeTextMap = {
   FX_Teleport = "UI_SkinPreview_Accessory_FX_Teleport",
   FX_Footprint = "UI_SkinPreview_Accessory_FX_Footprint",
   FX_Body = "UI_SkinPreview_Accessory_FX_Body",
+  MVP = "UI_SkinPreview_Accessory_MVP",
   FX_PlungingATK = "UI_SkinPreview_Accessory_FX_PlungingATK",
   FX_HelixLeap = "UI_SkinPreview_Accessory_FX_HelixLeap",
-  MVP = "UI_SkinPreview_Accessory_MVP",
   WeaponAccessory = "UI_SkinPreview_Accessory_Weapon"
 }
 UIConst.ErrorCategory = {
@@ -891,14 +896,15 @@ UIConst.MVPSkipShowTime = 0.6
 UIConst.InputNumMode = {
   ENABLE_PWD = 1,
   VERIFY_PWD = 2,
-  NUMBER = 3
+  DISABLE_PWD = 3,
+  NUMBER = 4
 }
 UIConst.SkinPreviewItemTypes = {
   Skin = true,
   WeaponSkin = true,
   CharAccessory = true,
-  WeaponAccessory = true,
-  Mount = true
+  Mount = true,
+  Hair = true
 }
 UIConst.LimitPreviewResource = {
   [41037] = true,
@@ -911,4 +917,13 @@ UIConst.LimitPreviewResource = {
 }
 UIConst.BlockingTime = 3
 UIConst.MaxBlockTime = 10
+UIConst.bUseHierarchicalLayer = false
+UIConst.HierarchicalLayer = {
+  "Background",
+  "HUD",
+  "Tack",
+  "System",
+  "Top",
+  "Popup"
+}
 return UIConst

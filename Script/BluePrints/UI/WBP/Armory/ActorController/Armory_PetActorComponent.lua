@@ -17,7 +17,7 @@ function M:ChangePetModel(Info, PlayCharacter, Params)
         self:CreatePetEffectCreature(Info.PetId, Params, true)
       else
         self.WaitForServerSetBattlePet = true
-        PlayCharacter:ServerSetBattlePet(Info.PetId, Info.BattlePetLevel, false)
+        PlayCharacter:ServerSetBattlePet(Info.PetId, Info.BattlePetLevel or 1, false, TArray(0))
       end
       if not AudioManager:IsSoundPlaying(self.ViewUI, "PetIdle") then
         AudioManager:PlayUISound(self.ViewUI, "event:/ui/armory/open_pet_idle", "PetIdle", nil)
@@ -103,7 +103,7 @@ function M:SetPetFresnel(Player)
     local bImmediately = false
     EffectCreature.FashionComponent:SetFresnel(EffectCreature, FresnelColor, FresnelColorRange, FresnelColorStrength, FresnelPriority, Duration, FresnelColorCurve, bImmediately)
     CommonUtils:SetActorTickableWhenPaused(EffectCreature, true)
-    self.ViewUI:AddTimer(Duration, function()
+    self.ArmoryHelper:AddTimer(Duration, function()
       self:RemovePetFresnel(Player)
     end, false, 0, "DelayRemoveFresnel", true)
     if self.OnPlayPetFresnel then

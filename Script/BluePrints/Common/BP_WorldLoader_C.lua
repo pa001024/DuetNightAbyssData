@@ -25,6 +25,7 @@ function M:Initialize(Initializer)
   self.levelName2Id = {}
   self.EnterRegionType = ""
   self.loadProgress = 0
+  self.LastLevelLoadingMessage = nil
 end
 
 function M:ReceiveBeginPlay()
@@ -131,6 +132,10 @@ function M:InitLevelInfo(StreamLevels)
       if IsInDungeon then
         local StringIndex = UE4.UKismetStringLibrary.FindSubstring(temp, "_DungeonDesign")
         self.ID2DesignStreamingLevel[string.sub(temp, 1, StringIndex)] = streamLevel
+        if not self.DungeonLevels then
+          self.DungeonLevels = {}
+        end
+        table.insert(self.DungeonLevels, streamLevel)
       end
     elseif UKismetStringLibrary.EndsWith(temp, "_NavMesh", ESearchCase.CaseSensitive) then
       local levelName = string.gsub(temp, "_NavMesh", "")
@@ -265,6 +270,64 @@ end
 
 function M:CheckWorldCompositionLevelLoaded(id)
   self:SetLoadProgress(self.WorldCompositionSubSystem:GetLoadedLevelPercent() * 100)
+  DebugPrint("JLy CheckWorldCompositionLevelLoaded", self.WorldCompositionSubSystem:GetLoadedLevelPercent() * 100)
+  if self.WorldCompositionSubSystem and _G.EnableShowLevelLoadingInfo then
+    local Message = ""
+    local LevelInfos = self.WorldCompositionSubSystem:GetAllLevelLoadingInfo()
+    if LevelInfos and LevelInfos:Num() > 0 then
+      local NotLoadedList = {}
+      local LoadingList = {}
+      local LoadedList = {}
+      local LevelCount = LevelInfos:Num()
+      for i = 1, LevelCount do
+        local LevelInfo = LevelInfos[i]
+        if LevelInfo then
+          if 0 == LevelInfo.Status then
+            table.insert(NotLoadedList, LevelInfo.LevelName)
+          elseif 1 == LevelInfo.Status then
+            table.insert(LoadingList, LevelInfo.LevelName)
+          elseif 2 == LevelInfo.Status then
+            table.insert(LoadedList, LevelInfo.LevelName)
+          end
+        end
+      end
+      local ItemsPerLine = 4
+      if #LoadingList > 0 then
+        Message = Message .. "\n[正在加载] (" .. #LoadingList .. ")\n"
+        for i, LevelName in ipairs(LoadingList) do
+          Message = Message .. string.format("%d. %s  ", i, LevelName)
+          if 0 == i % ItemsPerLine and i < #LoadingList then
+            Message = Message .. "\n"
+          end
+        end
+        Message = Message .. "\n"
+      end
+      if #LoadedList > 0 then
+        Message = Message .. "\n[已加载] (" .. #LoadedList .. ")\n"
+        for i, LevelName in ipairs(LoadedList) do
+          Message = Message .. string.format("%d. %s  ", i, LevelName)
+          if 0 == i % ItemsPerLine and i < #LoadedList then
+            Message = Message .. "\n"
+          end
+        end
+        Message = Message .. "\n"
+      end
+      if #NotLoadedList > 0 then
+        Message = Message .. "\n[未加载] (" .. #NotLoadedList .. ")\n"
+        for i, LevelName in ipairs(NotLoadedList) do
+          Message = Message .. string.format("%d. %s  ", i, LevelName)
+          if 0 == i % ItemsPerLine and i < #NotLoadedList then
+            Message = Message .. "\n"
+          end
+        end
+        Message = Message .. "\n"
+      end
+    end
+    if not self.LastLevelLoadingMessage or self.LastLevelLoadingMessage ~= Message then
+      self.LastLevelLoadingMessage = Message
+      URuntimeCommonFunctionLibrary.AddOnScreenDebugMessage(29, 5.0, FColor(255, 255, 255), Message, false, FVector2D(0.7, 0.7))
+    end
+  end
   if not self.WorldCompositionSubSystem then
     return
   end
@@ -768,6 +831,19 @@ function M:SetLoadProgress(Num)
   else
     local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
     self.LoadingUI = GameInstance:GetLoadingUI()
+  end
+end
+
+function M:ReactiveDungeonDesign()
+  if self.DungeonLevels then
+    for _, StreamLevel in pairs(self.DungeonLevels) do
+      if StreamLevel:ShouldBeLoaded() then
+        for Name, _ in pairs(self.ID2DesignStreamingLevel) do
+          self.ID2DesignStreamingLevel[Name] = StreamLevel
+        end
+        break
+      end
+    end
   end
 end
 

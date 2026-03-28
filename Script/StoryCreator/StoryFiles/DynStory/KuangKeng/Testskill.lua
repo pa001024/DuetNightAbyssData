@@ -61,7 +61,6 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = true,
@@ -69,6 +68,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -348,6 +348,7 @@ return {
               SwitchToMaster = "None",
               bNpcActionKeepIn = true,
               bNpcActionKeepOut = false,
+              bForceWaitNavLoaded = false,
               NormalOptions = {
                 {
                   OptionText = "710023031",
@@ -484,6 +485,7 @@ return {
               SwitchToMaster = "None",
               bNpcActionKeepIn = true,
               bNpcActionKeepOut = false,
+              bForceWaitNavLoaded = false,
               NormalOptions = {},
               OverrideFailBlend = false
             }
@@ -537,6 +539,7 @@ return {
               SwitchToMaster = "None",
               bNpcActionKeepIn = true,
               bNpcActionKeepOut = false,
+              bForceWaitNavLoaded = false,
               NormalOptions = {},
               OverrideFailBlend = false
             }
@@ -549,7 +552,9 @@ return {
             propsData = {
               DialogueId = 0,
               UseTalkFadeOut = false,
-              TalkFadeOutTime = 0
+              TalkFadeOutTime = 0,
+              UseTalkFadeIn = false,
+              TalkFadeInTime = 0
             }
           },
           ["172621731408912154"] = {
@@ -560,7 +565,9 @@ return {
             propsData = {
               DialogueId = 0,
               UseTalkFadeOut = false,
-              TalkFadeOutTime = 0
+              TalkFadeOutTime = 0,
+              UseTalkFadeIn = false,
+              TalkFadeInTime = 0
             }
           },
           ["17262989448088239"] = {

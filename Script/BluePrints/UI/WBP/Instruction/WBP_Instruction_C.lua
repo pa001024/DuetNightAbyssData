@@ -171,8 +171,8 @@ function M:ShowActionKeyAndText(ActionName)
     if DataMgr.KeyboardText[ReplaceKey] then
       ReplaceKey = DataMgr.KeyboardText[ReplaceKey].KeyText
     end
-    ImgPath = string.format(FixPath, ReplaceKey, ReplaceKey)
-    Img = LoadObject(ImgPath)
+    local ImgPath = string.format(FixPath, ReplaceKey, ReplaceKey)
+    local Img = LoadObject(ImgPath)
     if not IsValid(Img) then
       local TextKey = CommonUtils:GetKeyText(KeyName)
       self.Key.Switch_Type:SetActiveWidgetIndex(0)

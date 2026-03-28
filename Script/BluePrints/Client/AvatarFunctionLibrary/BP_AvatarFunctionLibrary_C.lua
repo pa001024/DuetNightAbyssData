@@ -107,5 +107,13 @@ function BP_AvatarFunctionLibrary_C:SetAvatarForbidGetExp(bIsForbid)
   end
 end
 
+function BP_AvatarFunctionLibrary_C:IsSignBoardNpcDailyTalkLimit(NpcId)
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    return Avatar:CheckSignBoardNpcDailyTalkIsLimit(NpcId)
+  end
+  return true
+end
+
 AssembleComponents(BP_AvatarFunctionLibrary_C)
 return BP_AvatarFunctionLibrary_C

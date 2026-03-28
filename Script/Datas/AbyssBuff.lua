@@ -607,5 +607,122 @@ return ReadOnly("AbyssBuff", {
     GlobalPassiveId = 12221,
     GlobalPassiveLv = 1,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Abyss/T_Abyss_Buff_Range.T_Abyss_Buff_Range"
+  },
+  [13111] = {
+    AbyssBuffDes = "Buff_Content_13111",
+    AbyssBuffID = 13111,
+    AbyssBuffName = "Buff_Title_13111",
+    AbyssBuffParameter = {
+      [1] = "$#Buff[2013111].AddAttrs[1].Value*100$%",
+      [2] = "$#GlobalPassiveData[13111].Vars.LastTime$",
+      [3] = "$#Buff[2013111].MaxLayer$"
+    },
+    AbyssBuffType = 1,
+    BuffLockToast = "Abyss_InfiniteLockToast_1",
+    GlobalPassiveId = 13111,
+    GlobalPassiveLv = 1,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Abyss/T_Abyss_Buff_Common.T_Abyss_Buff_Common"
+  },
+  [13112] = {
+    AbyssBuffDes = "Buff_Content_13112",
+    AbyssBuffID = 13112,
+    AbyssBuffName = "Buff_Title_13112",
+    AbyssBuffParameter = {
+      [1] = "$(#Buff[2013112].AddAttrs[2].Rate)*-100$%",
+      [2] = "$#Buff[2013112].AddAttrs[1].Rate*100$%"
+    },
+    AbyssBuffType = 2,
+    BuffLockToast = "Abyss_InfiniteLockToast_1",
+    GlobalPassiveId = 13112,
+    GlobalPassiveLv = 1,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Abyss/T_Abyss_Buff_Exchange.T_Abyss_Buff_Exchange"
+  },
+  [13121] = {
+    AbyssBuffDes = "Buff_Content_13121",
+    AbyssBuffID = 13121,
+    AbyssBuffName = "Buff_Title_13121",
+    AbyssBuffParameter = {
+      [1] = "$#Buff[2013121].AddAttrs[1].Value*100$%",
+      [2] = "$#GlobalPassiveData[13121].Vars.LastTime$"
+    },
+    AbyssBuffType = 1,
+    BuffLockToast = "Abyss_InfiniteLockToast_1",
+    GlobalPassiveId = 13121,
+    GlobalPassiveLv = 1,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Abyss/T_Abyss_Buff_Range.T_Abyss_Buff_Range"
+  },
+  [13122] = {
+    AbyssBuffDes = "Buff_Content_13122",
+    AbyssBuffID = 13122,
+    AbyssBuffName = "Buff_Title_13122",
+    AbyssBuffParameter = {
+      [1] = "$(#Buff[2013122].AddAttrs[2].Rate)*-100$%",
+      [2] = "$#Buff[2013122].AddAttrs[1].Rate*100$%"
+    },
+    AbyssBuffType = 2,
+    BuffLockToast = "Abyss_InfiniteLockToast_1",
+    GlobalPassiveId = 13122,
+    GlobalPassiveLv = 1,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Abyss/T_Abyss_Buff_Exchange.T_Abyss_Buff_Exchange"
+  },
+  [13211] = {
+    AbyssBuffDes = "Buff_Content_13211",
+    AbyssBuffID = 13211,
+    AbyssBuffName = "Buff_Title_13211",
+    AbyssBuffParameter = {
+      [1] = "$#GlobalPassiveData[13211].Vars.SpCost$",
+      [2] = "$#Buff[2013211].AddAttrs[1].Value*100$%",
+      [3] = "$#GlobalPassiveData[13211].Vars.LastTime$",
+      [4] = "$#Buff[2013211].MaxLayer$"
+    },
+    AbyssBuffType = 1,
+    BuffLockToast = "Abyss_InfiniteLockToast_1",
+    GlobalPassiveId = 13211,
+    GlobalPassiveLv = 1,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Abyss/T_Abyss_Buff_Skill.T_Abyss_Buff_Skill"
+  },
+  [13212] = {
+    AbyssBuffDes = "Buff_Content_13212",
+    AbyssBuffID = 13212,
+    AbyssBuffName = "Buff_Title_13212",
+    AbyssBuffParameter = {
+      [1] = "$(#Buff[2013212].AddAttrs[2].Rate)*-100$%",
+      [2] = "$#Buff[2013212].AddAttrs[1].Rate*100$%"
+    },
+    AbyssBuffType = 2,
+    BuffLockToast = "Abyss_InfiniteLockToast_1",
+    GlobalPassiveId = 13212,
+    GlobalPassiveLv = 1,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Abyss/T_Abyss_Buff_Exchange.T_Abyss_Buff_Exchange"
+  },
+  [13221] = {
+    AbyssBuffDes = "Buff_Content_301",
+    AbyssBuffID = 13221,
+    AbyssBuffName = "Buff_Title_301",
+    AbyssBuffParameter = {
+      [1] = "$#GlobalPassiveData[13221].Vars.HitCount$",
+      [2] = "$#Buff[2013221].AddAttrs[1].Rate*100$%",
+      [3] = "$#GlobalPassiveData[13221].Vars.LastTime$",
+      [4] = "$#Buff[2013221].MaxLayer$"
+    },
+    AbyssBuffType = 1,
+    BuffLockToast = "Abyss_InfiniteLockToast_1",
+    GlobalPassiveId = 13221,
+    GlobalPassiveLv = 1,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Abyss/T_Abyss_Buff_Skill.T_Abyss_Buff_Skill"
+  },
+  [13222] = {
+    AbyssBuffDes = "Buff_Content_13222",
+    AbyssBuffID = 13222,
+    AbyssBuffName = "Buff_Title_13222",
+    AbyssBuffParameter = {
+      [1] = "$(#Buff[2013222].AddAttrs[2].Rate)*-100$%",
+      [2] = "$#Buff[2013222].AddAttrs[1].Value*100$%"
+    },
+    AbyssBuffType = 2,
+    BuffLockToast = "Abyss_InfiniteLockToast_1",
+    GlobalPassiveId = 13222,
+    GlobalPassiveLv = 1,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Abyss/T_Abyss_Buff_Exchange.T_Abyss_Buff_Exchange"
   }
 })

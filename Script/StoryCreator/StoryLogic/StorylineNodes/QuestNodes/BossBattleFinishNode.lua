@@ -11,7 +11,7 @@ function BossBattleFinishNode:Execute(CallBack)
   local GameInstance = GWorld.GameInstance
   local GameMode = UE4.UGameplayStatics.GetGameMode(GameInstance)
   if self.IsWaitForCallback then
-    function BossBattleCallback(Owner, EventName, Channel)
+    function self.BossBattleCallback(Owner, EventName, Channel)
       if EventName == self.FinishCondition then
         DebugPrint("BossBattleFinishNode: Callback EventName:", EventName)
         
@@ -19,8 +19,7 @@ function BossBattleFinishNode:Execute(CallBack)
       end
     end
     
-    self.BossBattleCallback = BossBattleCallback
-    GameMode.OnCustomEventDelegates:Add(GameInstance, BossBattleCallback)
+    GameMode.OnCustomEventDelegates:Add(GameInstance, self.BossBattleCallback)
   end
   GameMode:PostCustomEvent(self.SendMessage)
   if not self.IsWaitForCallback then

@@ -21,12 +21,13 @@ function WBP_NPC_Bubble_C:OnEnabled(Content, Style)
     return
   end
   self.bIsEnabled_Bubble = true
-  self:StopAllAnimations()
   self.BubbleContent = Content
   self.Main_Text:SetText(Content)
   self:SwitchStyle(Style)
   self.Panle_Main:SetRenderOpacity(0)
-  self:PlayAnimation(self.In)
+  EMUIAnimationSubsystem:EMStopAnimation(self, self.Out)
+  EMUIAnimationSubsystem:EMStopAnimation(self, self.Loop)
+  EMUIAnimationSubsystem:EMPlayAnimation(self, self.In)
   self:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
 end
 
@@ -52,12 +53,13 @@ function WBP_NPC_Bubble_C:OnDisabled()
     return
   end
   self.bIsEnabled_Bubble = false
-  self:StopAllAnimations()
-  self:PlayAnimation(self.Out)
+  EMUIAnimationSubsystem:EMStopAnimation(self, self.In)
+  EMUIAnimationSubsystem:EMStopAnimation(self, self.Loop)
+  EMUIAnimationSubsystem:EMPlayAnimation(self, self.Out)
 end
 
 function WBP_NPC_Bubble_C:OnInAnimationFinished()
-  self:PlayAnimation(self.Loop, 0, 0)
+  EMUIAnimationSubsystem:EMPlayAnimation(self, self.Loop)
 end
 
 function WBP_NPC_Bubble_C:OnAnimationFinished(InAnimation)

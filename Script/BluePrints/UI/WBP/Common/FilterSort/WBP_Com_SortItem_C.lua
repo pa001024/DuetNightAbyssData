@@ -56,8 +56,10 @@ function M:OnListItemObjectSet(Obj)
   self.Obj = Obj
   self.Obj.Entry = self
   if self.Obj.IsLocked then
-    self.Switch_Type:SetActiveWidgetIndex(1)
-  else
+    if self.Switch_Type then
+      self.Switch_Type:SetActiveWidgetIndex(1)
+    end
+  elseif self.Switch_Type then
     self.Switch_Type:SetActiveWidgetIndex(0)
   end
   self:SetText(GText(Obj.Text))

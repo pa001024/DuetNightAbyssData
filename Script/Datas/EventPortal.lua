@@ -101,6 +101,23 @@ return ReadOnly("EventPortal", {
     JumpUnlockTips = "EventPortal_UnlockTips_103013",
     RewardPreview = 50577
   },
+  [103014] = {
+    EventId = 103014,
+    JumpUIId = 86,
+    JumpUnlockCondition = 103014,
+    JumpUnlockTips = "EventPortal_UnlockTips_103014",
+    PermanentRewardBPPath = "/Game/UI/WBP/Activity/Widget/SoloTreasure/WBP_Activity_SoloTreasure_Reward_Permanent.WBP_Activity_SoloTreasure_Reward_Permanent",
+    RewardBPPath = "/Game/UI/WBP/Activity/Widget/SoloTreasure/WBP_Activity_SoloTreasure_Reward.WBP_Activity_SoloTreasure_Reward",
+    RewardPreview = 10301401,
+    SubBPPath2 = "/Game/UI/WBP/Activity/Widget/SoloTreasure/WBP_Activity_SoloTreasure_TaskProgress.WBP_Activity_SoloTreasure_TaskProgress"
+  },
+  [103015] = {
+    EventId = 103015,
+    JumpUIId = 80,
+    JumpUnlockTips = "EventPortal_UnlockTips_Common",
+    RewardBPPath = "/Game/UI/WBP/Activity/Widget/BagGame/WBP_Activity_BagGame_Arward.WBP_Activity_BagGame_Arward",
+    RewardPreview = 103015
+  },
   [103016] = {
     EventId = 103016,
     EventShop = 81,
@@ -114,8 +131,9 @@ return ReadOnly("EventPortal", {
     EventId = 103017,
     JumpFinishDes = "UI_EventPortalFinish",
     JumpUIId = 79,
+    JumpUnlockCondition = 40012101,
     JumpUnlockTips = "EventPortal_UnlockTips_Common",
-    RewardPreview = 110001,
+    RewardPreview = 103017,
     SubBPPath2 = "/Game/UI/WBP/Activity/Widget/CameraGame/WBP_Activity_CameraGame_TaskEntryBtn.WBP_Activity_CameraGame_TaskEntryBtn"
   },
   [103018] = {
@@ -132,6 +150,15 @@ return ReadOnly("EventPortal", {
     JumpUnlockTips = "EventPortal_UnlockTips_Common",
     RewardPreview = 1030112,
     SubBPPath2 = "/Game/UI/WBP/Activity/Widget/InviteCode/WBP_Activity_InviteCode_Content.WBP_Activity_InviteCode_Content"
+  },
+  [103020] = {
+    EventId = 103020,
+    EventShop = 88,
+    JumpUIId = 19,
+    JumpUnlockCondition = 4320,
+    JumpUnlockTips = "UI_Locked_Des_Play",
+    RewardPreview = 10302001,
+    ShowBtnMore = 1
   },
   [108001] = {
     EventId = 108001,
@@ -169,11 +196,21 @@ return ReadOnly("EventPortal", {
     RewardPreview = 1030083,
     SubBPPath2 = "/Game/UI/WBP/Activity/Widget/GuildWar/WBP_Activity_GuildWar_JumpBoard.WBP_Activity_GuildWar_JumpBoard"
   },
+  [111003] = {
+    EventId = 111003,
+    EventShop = 71,
+    JumpFinishDes = "UI_EventPortalFinish",
+    JumpUIId = 69,
+    JumpUnlockTips = "EventPortal_UnlockTips_Common",
+    RewardBPPath = "/Game/UI/WBP/Activity/Widget/GuildWar/WBP_Activity_GuildWar_Entrance.WBP_Activity_GuildWar_Entrance",
+    RewardPreview = 1030083,
+    SubBPPath2 = "/Game/UI/WBP/Activity/Widget/GuildWar/WBP_Activity_GuildWar_JumpBoard.WBP_Activity_GuildWar_JumpBoard"
+  },
   [1020012] = {
     EventId = 1020012,
-    JumpUnlockCondition = 120100,
+    JumpUnlockCondition = 120106,
     JumpUnlockTips = "EventPortal_UnlockTips_Common",
-    RewardPreview = 1030051
+    RewardPreview = 1020012
   },
   [1030022] = {
     EventId = 1030022,
@@ -220,6 +257,24 @@ return ReadOnly("EventPortal", {
     RewardPreview = 1030026,
     SubBPPath2 = "/Game/UI/WBP/Activity/Widget/Abyss/WBP_Activity_Abyss_Progress.WBP_Activity_Abyss_Progress"
   },
+  [1030027] = {
+    EventId = 1030027,
+    EventShop = 28,
+    JumpUIId = 77,
+    JumpUnlockCondition = 8002,
+    JumpUnlockTips = "EventPortal_UnlockTips_Common",
+    RewardPreview = 1030027,
+    SubBPPath2 = "/Game/UI/WBP/Activity/Widget/Abyss/WBP_Activity_Abyss_Progress.WBP_Activity_Abyss_Progress"
+  },
+  [1030028] = {
+    EventId = 1030028,
+    EventShop = 28,
+    JumpUIId = 77,
+    JumpUnlockCondition = 8002,
+    JumpUnlockTips = "EventPortal_UnlockTips_Common",
+    RewardPreview = 1030028,
+    SubBPPath2 = "/Game/UI/WBP/Activity/Widget/Abyss/WBP_Activity_Abyss_Progress.WBP_Activity_Abyss_Progress"
+  },
   [10300601] = {
     EventId = 10300601,
     IsUseTabJumpBtn = false,
@@ -244,6 +299,20 @@ return ReadOnly("EventPortal", {
   },
   [103009003] = {
     EventId = 103009003,
+    JumpUIId = 20,
+    JumpUnlockCondition = 4360,
+    JumpUnlockTips = "EventPortal_UnlockTips_Common",
+    SubBPPath2 = "/Game/UI/WBP/Activity/Widget/DoubleMod/WBP_Activity_DoubleMod_Content.WBP_Activity_DoubleMod_Content"
+  },
+  [103009004] = {
+    EventId = 103009004,
+    JumpUIId = 20,
+    JumpUnlockCondition = 4360,
+    JumpUnlockTips = "EventPortal_UnlockTips_Common",
+    SubBPPath2 = "/Game/UI/WBP/Activity/Widget/DoubleMod/WBP_Activity_DoubleMod_Content.WBP_Activity_DoubleMod_Content"
+  },
+  [103009005] = {
+    EventId = 103009005,
     JumpUIId = 20,
     JumpUnlockCondition = 4360,
     JumpUnlockTips = "EventPortal_UnlockTips_Common",

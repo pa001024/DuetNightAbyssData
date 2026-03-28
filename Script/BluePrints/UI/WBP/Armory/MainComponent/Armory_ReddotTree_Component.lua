@@ -1,6 +1,7 @@
 require("UnLua")
 local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
 local SkillUtils = require("Utils.SkillUtils")
+local UpgradeUtils = require("Utils.UpgradeUtils")
 local Component = {}
 
 function Component:MainTabReddotFunc(TabName, bNew, bUpgradeable)
@@ -79,8 +80,23 @@ function Component:AddMainTabReddotListen()
     local PromoteCharNode = ReddotManager.GetTreeNode(DataMgr.ReddotNode.PromoteChar.Name)
     local CharRewardNode = ReddotManager.GetTreeNode(DataMgr.ReddotNode.CharReward.Name)
     local UnlockableCharNode = ReddotManager.GetTreeNode(DataMgr.ReddotNode.UnlockableChar.Name)
-    local IsNew = NewCharNode.Count > 0 or NewReleasedCharNode.Count > 0
-    local IsRed = PromoteCharNode.Count > 0 or CharRewardNode.Count > 0 or UnlockableCharNode.Count > 0
+    local NewUltraGradeCharNode = ReddotManager.GetTreeNode(DataMgr.ReddotNode.NewUltraGradeChar.Name)
+    local IsNew = NewCharNode and NewCharNode.Count > 0 or NewReleasedCharNode and NewReleasedCharNode.Count > 0 or NewUltraGradeCharNode and NewUltraGradeCharNode.Count > 0
+    local IsRed = PromoteCharNode and PromoteCharNode.Count > 0 or CharRewardNode and CharRewardNode.Count > 0 or UnlockableCharNode and UnlockableCharNode.Count > 0
+    self:MainTabReddotFunc(ArmoryUtils.ArmoryMainTabNames.Char, IsNew, IsRed)
+    if self.CurMainTab.Name == ArmoryUtils.ArmoryMainTabNames.Char then
+      self:UpdateBoxReddotView(IsNew, IsRed)
+    end
+  end)
+  self:AddNewUltraGradeCharReddotListen(function(Count)
+    local NewCharNode = ReddotManager.GetTreeNode(DataMgr.ReddotNode.NewChar.Name)
+    local NewReleasedCharNode = ReddotManager.GetTreeNode(DataMgr.ReddotNode.NewReleasedChar.Name)
+    local NewUltraGradeCharNode = ReddotManager.GetTreeNode(DataMgr.ReddotNode.NewUltraGradeChar.Name)
+    local PromoteCharNode = ReddotManager.GetTreeNode(DataMgr.ReddotNode.PromoteChar.Name)
+    local CharRewardNode = ReddotManager.GetTreeNode(DataMgr.ReddotNode.CharReward.Name)
+    local UnlockableCharNode = ReddotManager.GetTreeNode(DataMgr.ReddotNode.UnlockableChar.Name)
+    local IsNew = NewCharNode and NewCharNode.Count > 0 or NewReleasedCharNode and NewReleasedCharNode.Count > 0 or NewUltraGradeCharNode and NewUltraGradeCharNode.Count > 0
+    local IsRed = PromoteCharNode and PromoteCharNode.Count > 0 or CharRewardNode and CharRewardNode.Count > 0 or UnlockableCharNode and UnlockableCharNode.Count > 0
     self:MainTabReddotFunc(ArmoryUtils.ArmoryMainTabNames.Char, IsNew, IsRed)
     if self.CurMainTab.Name == ArmoryUtils.ArmoryMainTabNames.Char then
       self:UpdateBoxReddotView(IsNew, IsRed)
@@ -102,7 +118,22 @@ function Component:CheckCharPromoteReddot(Char)
   local PromoteNode = ReddotManager.GetTreeNode(DataMgr.ReddotNode.PromoteChar.Name)
   local UuidStr = CommonUtils.ObjId2Str(Char.Uuid)
   local PromoteCharCacheDetail = ReddotManager.GetLeafNodeCacheDetail(DataMgr.ReddotNode.PromoteChar.Name)
-  return PromoteNode and PromoteNode.Count > 0 and 1 == PromoteCharCacheDetail[UuidStr]
+  local HasPromote = PromoteNode and PromoteNode.Count > 0 and 1 == PromoteCharCacheDetail[UuidStr]
+  HasPromote = HasPromote or UpgradeUtils.CheckCharCanUpgradeUltraCardLevel(Char)
+  return HasPromote
+end
+
+function Component:CheckCharUltraGradeNewReddot(Char)
+  local NodeName = DataMgr.ReddotNode.NewUltraGradeChar.Name
+  local UltraNode = ReddotManager.GetTreeNode(NodeName)
+  if not UltraNode or UltraNode.Count <= 0 then
+    return false
+  end
+  local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(NodeName)
+  if not CacheDetail then
+    return false
+  end
+  return 1 == CacheDetail[Char.CharId]
 end
 
 function Component:CheckCharSkillReddot(Char)
@@ -157,6 +188,10 @@ function Component:CheckCharAppearanceReddot(Char)
   local HairNode = ReddotManager.GetTreeNode(LeafNodeName)
   local NewHairCount = HairNode and HairNode.Count or 0
   Count = Count + NewHairCount
+  LeafNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair
+  local CommonHairNode = ReddotManager.GetTreeNode(LeafNodeName)
+  local NewCommonHairCount = CommonHairNode and CommonHairNode.Count or 0
+  Count = Count + NewCommonHairCount
   return Count > 0
 end
 
@@ -230,6 +265,7 @@ function Component:RemoveMainTabReddotListen()
   end
   self:RemoveCharReddotListen()
   self:RemoveNewCharReddotListen()
+  self:RemoveNewUltraGradeCharReddotListen()
   self:RemoveMeleeReddotListen()
   self:RemoveRangedReddotListen()
   self:RemoveBattleItemReddotListen()
@@ -248,6 +284,7 @@ function Component:RemoveSubTabReddotListen()
   self:RemoveWeaponAppearanceReddotListen()
   self:RemoveCharRedordReddotListen()
   self:RemoveCharSkillReddotListen()
+  self:RemoveCharGradeReddotListen()
 end
 
 function Component:AddCharReddotReddotListen(Callback)
@@ -279,6 +316,28 @@ function Component:RemoveNewCharReddotListen()
     return
   end
   self:_RemoveReddotListenerCommon(DataMgr.ReddotNode.NewChar.Name)
+end
+
+function Component:AddNewUltraGradeCharReddotListen(Callback)
+  if self.IsPreviewMode or self.NoReddot then
+    return
+  end
+  self:RemoveNewUltraGradeCharReddotListen()
+  local NodeName = DataMgr.ReddotNode.NewUltraGradeChar.Name
+  if not self.NewUltraGradeCharNodeNames then
+    self.NewUltraGradeCharNodeNames = {}
+  end
+  if not self.NewUltraGradeCharNodeNames[NodeName] then
+    ReddotManager.AddListener(NodeName, self, Callback, nil, 1)
+    self.NewUltraGradeCharNodeNames[NodeName] = 1
+  end
+end
+
+function Component:RemoveNewUltraGradeCharReddotListen()
+  if self.IsPreviewMode or self.NoReddot then
+    return
+  end
+  self:_RemoveReddotListenerCommon(DataMgr.ReddotNode.NewUltraGradeChar.Name)
 end
 
 function Component:AddNewPetReddotListen(Callback)
@@ -427,15 +486,20 @@ function Component:AddCharGradeReddotListen(Callback, CharId)
     return
   end
   self:RemoveCharGradeReddotListen()
-  local NodeName = CommonConst.DataType.Char .. ArmoryUtils.ArmorySubTabNames.Grade .. CharId
   if not self.CharGradeNodeNames then
     self.CharGradeNodeNames = {}
   end
+  local NodeName = CommonConst.DataType.Char .. ArmoryUtils.ArmorySubTabNames.Grade .. CharId
   if not self.CharGradeNodeNames[NodeName] then
     local LeafNodes = {}
     LeafNodes[DataMgr.ReddotNode.PromoteChar.Name] = 1
     ReddotManager.AddListener(NodeName, self, Callback, LeafNodes)
     self.CharGradeNodeNames[NodeName] = 1
+  end
+  local UltraNodeName = DataMgr.ReddotNode.NewUltraGradeChar.Name
+  if not self.CharGradeNodeNames[UltraNodeName] then
+    ReddotManager.AddListener(UltraNodeName, self, Callback, nil, 1)
+    self.CharGradeNodeNames[UltraNodeName] = 1
   end
 end
 
@@ -443,7 +507,12 @@ function Component:RemoveCharGradeReddotListen()
   if self.IsPreviewMode or self.NoReddot then
     return
   end
-  self:_RemoveReddotListenerCommon(CommonConst.DataType.Char .. ArmoryUtils.ArmorySubTabNames.Grade)
+  if self.CharGradeNodeNames then
+    for NodeName, _ in pairs(self.CharGradeNodeNames) do
+      ReddotManager.RemoveListener(NodeName, self)
+    end
+    self.CharGradeNodeNames = nil
+  end
 end
 
 function Component:AddCharAppearanceReddotListen(Callback, CharId, Exclude)
@@ -487,12 +556,17 @@ function Component:AddCharAppearanceReddotListen(Callback, CharId, Exclude)
     ReddotManager.AddListener(NodeName, self, Callback, nil, true)
     self.CharAppearanceNodeNames[NodeName] = 1
   end
-  NodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair .. CharId
+  NodeName = CommonConst.DataType.Char .. CommonConst.DataType.Skin .. "LevelUp" .. CharId
   if ReddotManager.GetTreeNode(NodeName) then
     ReddotManager.AddListener(NodeName, self, Callback, nil, true)
     self.CharAppearanceNodeNames[NodeName] = 1
   end
   NodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair .. CharId
+  if ReddotManager.GetTreeNode(NodeName) then
+    ReddotManager.AddListener(NodeName, self, Callback, nil, true)
+    self.CharAppearanceNodeNames[NodeName] = 1
+  end
+  NodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair
   if ReddotManager.GetTreeNode(NodeName) then
     ReddotManager.AddListener(NodeName, self, Callback, nil, true)
     self.CharAppearanceNodeNames[NodeName] = 1

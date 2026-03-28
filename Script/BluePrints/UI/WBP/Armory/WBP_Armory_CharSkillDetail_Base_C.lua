@@ -345,7 +345,7 @@ function M:UpdateSkillNodeDetails(NodeInfo)
   self:UpdateAttrList(CharSkill, SkillData)
   self:InitSkillKeyInfo(SkillData)
   self:InitSkillDemo(SkillData)
-  self:InitSkillDesc(SkillData)
+  self:InitSkillDesc(CharSkill, SkillData)
   if self.ScrollBox_Attr:GetChildrenCount() <= 0 then
     self.Panel_Tab:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.WidgetSwitcher_Page:SetActiveWidgetIndex(0)
@@ -389,7 +389,7 @@ function M:UpdateSubNodeCommon(NodeInfo)
   self:UpdateResourceList(NodeInfo.ResourceUse)
 end
 
-function M:InitSkillDesc(SkillData)
+function M:InitSkillDesc(CharSkill, SkillData)
   self.Text_SkillName:SetText(GText(SkillData.SkillName))
   if SkillData.SkillType == "Passive" then
     self.Text_SkillType:SetText(GText("UI_Armory_Passive"))
@@ -402,6 +402,8 @@ function M:InitSkillDesc(SkillData)
     table.insert(Terms, CombatProperTermId)
   end
   self.DisplayedHyperLinkTers = {}
+  local Level = CharSkill.Level + (CharSkill.ExtraLevel or 0)
+  SkillDesc = SkillUtils.GetSkillDesc(CharSkill.SkillId, Level)
   local SkillDescText = self:CreateDescWidthHyperLink(SkillDesc, Terms)
   local SkillDescInfos = {
     {

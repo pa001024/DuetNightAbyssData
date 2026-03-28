@@ -31,5 +31,8 @@ return ReadOnly("ConditionId2Activity", {
   },
   [8017] = {
     [1] = 103008
+  },
+  [103021001] = {
+    [1] = 103021
   }
 })

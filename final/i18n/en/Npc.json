@@ -1265,6 +1265,14 @@
     ]
   },
   {
+    "id": 81504,
+    "name": "Su Yi",
+    "camp": "NPC",
+    "charId": 1504,
+    "type": "Show",
+    "icon": "Suyi"
+  },
+  {
     "id": 81801,
     "name": "Fina",
     "camp": "NPC",
@@ -2698,6 +2706,14 @@
     ]
   },
   {
+    "id": 83202,
+    "name": "Camilla",
+    "camp": "NPC",
+    "charId": 3202,
+    "type": "Show",
+    "icon": "Kami"
+  },
+  {
     "id": 83301,
     "name": "Margie",
     "camp": "NPC",
@@ -3363,7 +3379,7 @@
       },
       {
         "id": 90230203,
-        "content": "Heh. Goods have fixed prices, but human connections are a different currency altogether. Those who haggle over every coin will remain forever bound to their little corner of the market. Only by mastering the art of influence can one rise above mere trade and ascend to true greatness.",
+        "content": "Heh. Goods have fixed prices, but human connections are a different currency altogether. Those who haggle over every coin will remain forever bound to their little corner of the market. Only by mastering the art of influence can one rise above the mere trade and ascend to true greatness.",
         "voice": "char/Zhiliu/vo_topic_02_2",
         "npc": 84102,
         "options": [
@@ -5018,6 +5034,14 @@
     "type": "Normal"
   },
   {
+    "id": 91504,
+    "name": "Su Yi",
+    "camp": "NPC",
+    "charId": 1504,
+    "type": "Normal",
+    "icon": "Suyi"
+  },
+  {
     "id": 91801,
     "name": "Fina",
     "camp": "NPC",
@@ -5072,6 +5096,14 @@
     "camp": "NPC",
     "charId": 3201,
     "type": "Normal"
+  },
+  {
+    "id": 93202,
+    "name": "Camilla",
+    "camp": "NPC",
+    "charId": 3202,
+    "type": "Normal",
+    "icon": "Kami"
   },
   {
     "id": 93301,
@@ -5147,7 +5179,6 @@
     "id": 99998,
     "name": "Operations Team",
     "camp": "NPC",
-    "type": "Normal",
     "icon": "Gift"
   },
   {
@@ -5161,12 +5192,14 @@
     "id": 100001,
     "name": "{nickname}",
     "camp": "NPC",
+    "charId": 1601,
     "type": "Normal"
   },
   {
     "id": 100002,
     "name": "{nickname}",
     "camp": "NPC",
+    "charId": 160101,
     "type": "Normal"
   },
   {
@@ -8373,6 +8406,7 @@
     "id": 200061,
     "name": "{nickname}",
     "camp": "NPC",
+    "charId": 1601,
     "type": "Normal"
   },
   {
@@ -10458,6 +10492,7 @@
     "id": 220042,
     "name": "{nickname}",
     "camp": "NPC",
+    "charId": 1601,
     "type": "Normal"
   },
   {
@@ -10470,6 +10505,7 @@
     "id": 220044,
     "name": "{nickname}",
     "camp": "NPC",
+    "charId": 160101,
     "type": "Normal"
   },
   {
@@ -10526,61 +10562,61 @@
   },
   {
     "id": 240003,
-    "name": "药师【远期待包装】",
+    "name": "药师",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240004,
-    "name": "香阁路人A【远期待包装】",
+    "name": "路人",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240005,
-    "name": "香阁路人B【远期待包装】",
+    "name": "路人",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240006,
-    "name": "香阁路人C【远期待包装】",
+    "name": "路人",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240007,
-    "name": "排队的女子【远期待包装】",
+    "name": "排队的女子",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240008,
-    "name": "香官【远期待包装】",
+    "name": "香官",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240009,
-    "name": "工匠【远期待包装】",
+    "name": "工匠",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240010,
-    "name": "兴奋的路人【远期待包装】",
+    "name": "兴奋的路人",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240011,
-    "name": "炫耀的路人【远期待包装】",
+    "name": "炫耀的路人",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240012,
-    "name": "文绉绉的路人【远期待包装】",
+    "name": "文绉绉的路人",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -10598,55 +10634,55 @@
   },
   {
     "id": 240015,
-    "name": "电梯员【远期待包装】",
+    "name": "门卫",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240016,
-    "name": "接待员【远期待包装】",
+    "name": "接待员",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240017,
-    "name": "守卫1【远期待包装】",
+    "name": "守卫",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240018,
-    "name": "守卫2【远期待包装】",
+    "name": "守卫",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240019,
-    "name": "守卫3【远期待包装】",
+    "name": "守卫",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240020,
-    "name": "墨家机器人1【远期待包装】",
+    "name": "偃雀",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240021,
-    "name": "墨家机器人2【远期待包装】",
+    "name": "偃雀",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240022,
-    "name": "墨家机器人3【远期待包装】",
+    "name": "偃雀",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240023,
-    "name": "墨家机器人4【远期待包装】",
+    "name": "偃雀",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -10670,7 +10706,7 @@
   },
   {
     "id": 240027,
-    "name": "港口负责人【远期待包装】",
+    "name": "参商港管事",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -10700,7 +10736,7 @@
   },
   {
     "id": 240032,
-    "name": "海鸟【远期待包装】",
+    "name": "云翎鸥",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -10718,91 +10754,91 @@
   },
   {
     "id": 240035,
-    "name": "飘零人A【远期待包装】",
+    "name": "飘零人",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240036,
-    "name": "飘零人B【远期待包装】",
+    "name": "飘零人",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240037,
-    "name": "玩耍的孩童【远期待包装】",
+    "name": "玩耍的孩童",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240038,
-    "name": "农妇【远期待包装】",
+    "name": "农妇",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240039,
-    "name": "村长【远期待包装】",
+    "name": "村长",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240040,
-    "name": "静渊【远期待包装】",
+    "name": "静渊",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240041,
-    "name": "被攻击的民众【远期待包装】",
+    "name": "被攻击的民众",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240042,
-    "name": "祈祷的老年男子【远期待包装】",
+    "name": "祈祷的老年男子",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240043,
-    "name": "害怕的小女孩【远期待包装】",
+    "name": "害怕的小女孩",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240044,
-    "name": "中年妇女【远期待包装】",
+    "name": "中年妇女",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240045,
-    "name": "混乱的狴犴【远期待包装】",
+    "name": "混乱的狴犴",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240046,
-    "name": "胆怯的书生【远期待包装】",
+    "name": "胆怯的书生",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240047,
-    "name": "声音洪亮的男子【远期待包装】",
+    "name": "声音洪亮的男子",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240048,
-    "name": "泽生阁学徒A【远期待包装】",
+    "name": "泽生阁学徒",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240049,
-    "name": "泽生阁学徒B【远期待包装】",
+    "name": "泽生阁学徒",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -10826,13 +10862,13 @@
   },
   {
     "id": 240053,
-    "name": "混乱的狴犴【远期待包装】",
+    "name": "混乱的狴犴",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240054,
-    "name": "混乱的狴犴【远期待包装】",
+    "name": "混乱的狴犴",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -10863,12 +10899,16 @@
   },
   {
     "id": 240060,
+    "name": "{nickname}",
     "camp": "NPC",
+    "charId": 1601,
     "type": "Normal"
   },
   {
     "id": 240061,
+    "name": "{nickname}",
     "camp": "NPC",
+    "charId": 160101,
     "type": "Normal"
   },
   {
@@ -10893,61 +10933,61 @@
   },
   {
     "id": 240066,
-    "name": "固执的中年男子【远期待包装】",
+    "name": "固执的中年男子",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240067,
-    "name": "害怕的男子【远期待包装】",
+    "name": "害怕的男子",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240068,
-    "name": "瑟瑟发抖的女子【远期待包装】",
+    "name": "瑟瑟发抖的女子",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240069,
-    "name": "失落的声音【远期待包装】",
+    "name": "失落的声音",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240070,
-    "name": "无由生【远期待包装】",
+    "name": "无由生",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240071,
-    "name": "先人（女）【远期待包装】",
+    "name": "先人",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240072,
-    "name": "先人A【远期待包装】",
+    "name": "倨傲的先人",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240073,
-    "name": "先人B【远期待包装】",
+    "name": "骄横的先人",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240074,
-    "name": "先人C【远期待包装】",
+    "name": "先人",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240075,
-    "name": "先人D【远期待包装】",
+    "name": "先人",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -11069,6 +11109,66 @@
   },
   {
     "id": 240099,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 240100,
+    "name": "Yuming",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 240101,
+    "name": "Snow",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 240102,
+    "name": "Snow",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 240103,
+    "name": "Magistrate of Yingtian",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 240104,
+    "name": "路人少女",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 240105,
+    "name": "Zhiliu",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 240106,
+    "name": "Zhiliu",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 240107,
+    "name": "路人少女",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 240108,
+    "name": "路人少女",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 240109,
+    "name": "路人少女",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -11212,7 +11312,6 @@
   },
   {
     "id": 250024,
-    "name": "Uncle Tang",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -11224,13 +11323,65 @@
   },
   {
     "id": 250026,
-    "name": "UI_Npc_Name_250026",
+    "name": "望春",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 250027,
-    "name": "UI_Npc_Name_250027",
+    "name": "看守",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 250028,
+    "name": "Tabethe",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 250029,
+    "name": "\"Su Yi\"",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 250030,
+    "name": "Attendant",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 250031,
+    "name": "Passer-by A",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 250032,
+    "name": "Tabethe",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 250033,
+    "name": "Su Yi",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 250034,
+    "name": "Snow",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 250035,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 250036,
     "camp": "NPC",
     "type": "Normal"
   },
@@ -16330,6 +16481,7 @@
     "id": 700210,
     "name": "{nickname}",
     "camp": "NPC",
+    "charId": 1601,
     "type": "Normal"
   },
   {
@@ -19368,6 +19520,118 @@
   {
     "id": 700382,
     "name": "Extra",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700383,
+    "name": "Patty",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700384,
+    "name": "渡影集",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700385,
+    "name": "逍遥生",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700386,
+    "name": "宫先生",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700387,
+    "name": "清商",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700388,
+    "name": "卖包子的女孩",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700389,
+    "name": "路过的大叔",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700390,
+    "name": "Fushu",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700391,
+    "name": "Fufeng",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700392,
+    "name": "阁主",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700393,
+    "name": "衰弱的伤者",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700394,
+    "name": "Mute Wishen",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700395,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700396,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700397,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700398,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700399,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700400,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700401,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700402,
     "camp": "NPC",
     "type": "Normal"
   },
@@ -27353,6 +27617,930 @@
     "type": "Normal"
   },
   {
+    "id": 701113,
+    "name": "汀兰",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701114,
+    "name": "诸葛陶",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701115,
+    "name": "西门鹤",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701116,
+    "name": "澹台烟",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701117,
+    "name": "许星垂",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701118,
+    "name": "月痕",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701119,
+    "name": "离砚",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701120,
+    "name": "雨霖",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701121,
+    "name": "沈禾",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701122,
+    "name": "韩菱",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701123,
+    "name": "璎珞",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701124,
+    "name": "琳琅",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701125,
+    "name": "桂棹",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701126,
+    "name": "方朔",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701127,
+    "name": "云裳",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701128,
+    "name": "同福饭馆店小二",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701129,
+    "name": "禾穗",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701130,
+    "name": "魏蒲",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701131,
+    "name": "孙枕石",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701132,
+    "name": "涧泉",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701133,
+    "name": "秋浦",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701134,
+    "name": "方晴川",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701135,
+    "name": "陆瑶光",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701136,
+    "name": "刘福",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701137,
+    "name": "何道微",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701138,
+    "name": "褚家",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701139,
+    "name": "周伯远",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701140,
+    "name": "梁达博",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701141,
+    "name": "长庚",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701142,
+    "name": "周砚秋",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701143,
+    "name": "张老丈",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701144,
+    "name": "严公",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701145,
+    "name": "刘婆婆",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701146,
+    "name": "渡风",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701147,
+    "name": "林德昌",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701148,
+    "name": "阿菀",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701149,
+    "name": "寻鹤",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701150,
+    "name": "建业",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701151,
+    "name": "小棠",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701152,
+    "name": "时风",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701153,
+    "name": "秦执",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701154,
+    "name": "王伯公",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701155,
+    "name": "李某某",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701156,
+    "name": "马老丈",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701157,
+    "name": "孙兰芝",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701158,
+    "name": "孟巧娘",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701159,
+    "name": "景小年",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701160,
+    "name": "景小年",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701161,
+    "name": "棠豆",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701162,
+    "name": "文博",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701163,
+    "name": "吴章知",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701164,
+    "name": "晚月",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701165,
+    "name": "安永",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701166,
+    "name": "卢静薇",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701167,
+    "name": "文彬",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701168,
+    "name": "景和",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701169,
+    "name": "裴德厚",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701170,
+    "name": "温玉笙",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701171,
+    "name": "清鸢",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701172,
+    "name": "灵月",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701173,
+    "name": "元祯",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701174,
+    "name": "白灵汐",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701175,
+    "name": "朱鹤龄",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701176,
+    "name": "魏青娥",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701177,
+    "name": "任清欢",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701178,
+    "name": "明玥",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701179,
+    "name": "彭春桃",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701180,
+    "name": "时茂",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701181,
+    "name": "何子瑜",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701182,
+    "name": "邵临起",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701183,
+    "name": "陈川",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701184,
+    "name": "阿舟",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701185,
+    "name": "郭老叟",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701186,
+    "name": "梁思远",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701187,
+    "name": "同叔",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701188,
+    "name": "Yu Xia",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701189,
+    "name": "刘禄",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701190,
+    "name": "维尔",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701191,
+    "name": "玉芬",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701192,
+    "name": "大将军",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701193,
+    "name": "马景岐",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701194,
+    "name": "禹臣",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701195,
+    "name": "守拙",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701196,
+    "name": "雨桐",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701197,
+    "name": "可儿",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701198,
+    "name": "小川",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701199,
+    "name": "洛奇",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701200,
+    "name": "韩老爹",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701201,
+    "name": "韩安世",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701202,
+    "name": "郭文昭",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701203,
+    "name": "砚北",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701204,
+    "name": "韩忠",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701205,
+    "name": "周远",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701206,
+    "name": "孟守诚",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701207,
+    "name": "李礼一",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701208,
+    "name": "慕远",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701209,
+    "name": "思晴",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701210,
+    "name": "沐阳",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701211,
+    "name": "承泽",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701212,
+    "name": "章景行",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701213,
+    "name": "柳明正",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701214,
+    "name": "郑景",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701215,
+    "name": "裴云",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701216,
+    "name": "卫德舆",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701217,
+    "name": "沈惠兰",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701218,
+    "name": "书瑶",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701219,
+    "name": "时川",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701220,
+    "name": "时川",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701221,
+    "name": "方寻",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701222,
+    "name": "噌噌皎皎",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701223,
+    "name": "章景曜",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701224,
+    "name": "清岚",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701225,
+    "name": "林甫",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701226,
+    "name": "明哲",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701227,
+    "name": "周晓棠",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701228,
+    "name": "陈岐",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701229,
+    "name": "伯渊",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701230,
+    "name": "芷柔",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701231,
+    "name": "宋卿卿",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701232,
+    "name": "张敬之",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701233,
+    "name": "景铄",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701234,
+    "name": "小瑜",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701235,
+    "name": "章老翁",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701236,
+    "name": "浮生",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701237,
+    "name": "离生",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701238,
+    "name": "小婉",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701239,
+    "name": "张大婶",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701240,
+    "name": "无愈",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701241,
+    "name": "长歌",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701242,
+    "name": "张远",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701243,
+    "name": "阿乔",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701244,
+    "name": "方慕声",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701245,
+    "name": "冬雪",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701246,
+    "name": "大庄",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701247,
+    "name": "汪洋",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701248,
+    "name": "梁平",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701249,
+    "name": "婉婉",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701250,
+    "name": "史基",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701251,
+    "name": "史奉春",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701252,
+    "name": "桂北发",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701253,
+    "name": "竞天",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701254,
+    "name": "小槐",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701255,
+    "name": "棠生",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701256,
+    "name": "饶生",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701257,
+    "name": "相生",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701258,
+    "name": "星遥",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701259,
+    "name": "温景川",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701260,
+    "name": "凉苍",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701261,
+    "name": "董烨",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701262,
+    "name": "阿胜",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701263,
+    "name": "弓连春",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701264,
+    "name": "任良",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701265,
+    "name": "钱袋子",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701266,
+    "name": "魏蒲",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
     "id": 790001,
     "name": "Mia",
     "camp": "NPC",
@@ -27398,6 +28586,7 @@
     "id": 790008,
     "name": "{nickname}",
     "camp": "NPC",
+    "charId": 1601,
     "type": "Normal"
   },
   {
@@ -27786,6 +28975,7 @@
     "id": 790064,
     "name": "{nickname}",
     "camp": "NPC",
+    "charId": 1601,
     "type": "Normal"
   },
   {
@@ -27827,6 +29017,102 @@
   {
     "id": 790071,
     "name": "Kezhou",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 790072,
+    "name": "煜明",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 790073,
+    "name": "不夏",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 790074,
+    "name": "宴山亭",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 790075,
+    "name": "飘零人",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 790076,
+    "name": "止流",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 790077,
+    "name": "望春",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 790078,
+    "name": "顾砚",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 790079,
+    "name": "虬先生",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 790080,
+    "name": "备选役A",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 790081,
+    "name": "备选役B",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 790082,
+    "name": "苏乙",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 790083,
+    "name": "唐叔",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 790084,
+    "name": "云纺水",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 790085,
+    "name": "工匠",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 790086,
+    "name": "弟弟",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 790087,
+    "name": "妹妹",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -28366,85 +29652,94 @@
   },
   {
     "id": 818078,
-    "name": "UI_Npc_Name_Xiaochitanfan",
+    "name": "Snack Vendor",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 818079,
-    "name": "UI_Npc_Name_RookieFisher",
+    "name": "Forgetful Fisherman",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 818080,
-    "name": "UI_Npc_Name_SearchChestMan",
+    "name": "Distressed Girl",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 818081,
-    "name": "UI_Npc_Name_Jinglijiaojiao",
+    "name": "Lunoxplorer",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 818082,
-    "name": "UI_Npc_Name_DreamWuyousheng",
+    "name": "Ethereal Wishen",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 818083,
-    "name": "UI_Npc_Name_Tongzhenkid",
+    "name": "Treasure-Seeking Child",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 818084,
-    "name": "UI_Npc_Name_DianzhangA",
+    "name": "Suspicious Shopkeeper",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 818085,
-    "name": "UI_Npc_Name_Huoji",
+    "name": "Timid Clerk",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 818086,
-    "name": "UI_Npc_Name_DianzhangB",
+    "name": "Domineering Shopkeeper",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 818087,
-    "name": "UI_Npc_Name_Zhuchi",
+    "name": "Strict Girl",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 818088,
-    "name": "UI_Npc_Name_Runner1",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 818089,
-    "name": "UI_Npc_Name_Runner2",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 818090,
-    "name": "UI_Npc_Name_Runner3",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 818091,
     "name": "Elderly Pauper",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 818092,
+    "name": "Berenica",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 818093,
+    "name": "UI_Npc_Name_Xiaochitanfan_Haiou",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -28521,6 +29816,42 @@
   {
     "id": 830001,
     "name": "Wandering Wishen",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 840001,
+    "name": "严谨的机枢派弟子",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 840002,
+    "name": "傲气的机枢派师傅",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 840003,
+    "name": "头疼的店员",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 840004,
+    "name": "神叨叨的女子",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 840005,
+    "name": "馋嘴的孩子",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 840006,
+    "name": "热情的妇人",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -29077,6 +30408,12 @@
     "type": "Normal"
   },
   {
+    "id": 900052,
+    "name": "Lunoxplorer",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
     "id": 910001,
     "name": "Berenica",
     "camp": "NPC",
@@ -29161,6 +30498,66 @@
     "type": "Normal"
   },
   {
+    "id": 930006,
+    "name": "???",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 930007,
+    "name": "???",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 930008,
+    "name": "移动载具",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 930009,
+    "name": "赛事主办方",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 930010,
+    "name": "???",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 930011,
+    "name": "???",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 930012,
+    "name": "???",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 930013,
+    "name": "???",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 930014,
+    "name": "???",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 930015,
+    "name": "???",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
     "id": 991101,
     "name": "Berenica",
     "camp": "NPC",
@@ -29194,6 +30591,14 @@
     "camp": "NPC",
     "charId": 1503,
     "type": "Normal"
+  },
+  {
+    "id": 991504,
+    "name": "Su Yi",
+    "camp": "NPC",
+    "charId": 1504,
+    "type": "Normal",
+    "icon": "Suyi"
   },
   {
     "id": 991801,
@@ -29250,6 +30655,14 @@
     "camp": "NPC",
     "charId": 3201,
     "type": "Normal"
+  },
+  {
+    "id": 993202,
+    "name": "Camilla",
+    "camp": "NPC",
+    "charId": 3202,
+    "type": "Normal",
+    "icon": "Kami"
   },
   {
     "id": 993301,
@@ -29475,24 +30888,28 @@
     "id": 2000611,
     "name": "{nickname}",
     "camp": "NPC",
+    "charId": 160101,
     "type": "Normal"
   },
   {
     "id": 7002101,
     "name": "{nickname}",
     "camp": "NPC",
+    "charId": 160101,
     "type": "Normal"
   },
   {
     "id": 7900081,
     "name": "{nickname}",
     "camp": "NPC",
+    "charId": 160101,
     "type": "Normal"
   },
   {
     "id": 7900641,
     "name": "{nickname}",
     "camp": "NPC",
+    "charId": 160101,
     "type": "Normal"
   },
   {
@@ -36862,6 +38279,12 @@
   {
     "id": 77000007,
     "name": "测试",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 77000008,
+    "name": "interact测试",
     "camp": "NPC",
     "type": "Normal"
   }

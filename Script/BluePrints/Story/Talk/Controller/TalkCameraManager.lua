@@ -497,6 +497,7 @@ function TalkCameraManager_C:GetCurrentCameraInfo()
   if not CurrentCamera then
     return
   end
+  DebugPrint("TalkCameraManager_C:GetCurrentCameraInfo", CurrentCamera:GetName())
   local CineCamera = CurrentCamera:GetCineCameraComponent()
   if not CineCamera then
     return
@@ -617,6 +618,7 @@ function TalkCameraManager_C:GetFixedCamera(CameraInfo, Stage, bUseDefaultIfCame
     }
     self:RecordCameraConfig(self:GetCameraComponent(CineCamera), Config)
   end
+  DebugPrint("TalkCameraManager_C::GetFixedCamera", CineCamera and CineCamera:GetName())
   return CineCamera
 end
 
@@ -834,6 +836,7 @@ function TalkCameraManager_C:ClearSingleCameraPP(CameraComponent)
 end
 
 function TalkCameraManager_C:ClearTalkCamera()
+  DebugPrint("TalkCameraManager_C:ClearTalkCamera", self.CurrentCamera and self.CurrentCamera:GetName())
   self.CurrentCamera = nil
   self:ClearCineCamera()
   self:ClearPostProcess()

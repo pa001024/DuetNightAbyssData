@@ -15,7 +15,7 @@ function Component:GetCurrentKawaiiLinkLayer(Id)
   return LinkLayerPath
 end
 
-function Component:GetNPCServerSkinIdByUnitId(NpcId)
+function Component:GetNPCServerSkinIdByUnitId(NpcId, ConmmonSkinId)
   if not NpcId or not DataMgr.Npc[NpcId] then
     return 0
   end
@@ -35,12 +35,25 @@ function Component:GetNPCServerSkinIdByUnitId(NpcId)
       end
     end
     local CommonChar = Avatar.CommonChars[CharId]
-    local Skin = CommonChar.OwnedSkins[SkinId]
-    local SkinInfo = DataMgr.Skin[SkinId]
-    if not SkinInfo or not SkinInfo.NpcSkinModelId then
+    if nil == CommonChar then
+      Utils.ScreenPrint("时装信息错误, CommonChars为空，CharId:" .. tostring(CharId))
       return 0
     end
-    return SkinInfo.NpcSkinModelId
+    local Skin = CommonChar.OwnedSkins[SkinId]
+    if nil == Skin then
+      Utils.ScreenPrint("时装信息错误, OwnedSkins，SkinId::" .. tostring(SkinId))
+      return 0
+    end
+    local SkinInfo = DataMgr.Skin[SkinId]
+    if not SkinInfo or not SkinInfo.SkinModelId then
+      return 0
+    end
+    if SkinInfo.CommonSkinSettingId then
+      ConmmonSkinId = SkinInfo.CommonSkinSettingId
+    else
+      ConmmonSkinId = 0
+    end
+    return ConmmonSkinId, SkinInfo.SkinModelId
   end
   return 0
 end

@@ -20,7 +20,7 @@ function ElevatorNode:RegisterEvent(Callback)
     return
   end
   
-  function ElevatorNodeCallback()
+  local function ElevatorNodeCallback()
     local SelectElevator = GameState.ManualActiveCombat:Find(self.ElevatorId)
     SelectElevator:RemoveStoryNodeCallback(self.ElevatorState)
     self:FinishAction(Callback)

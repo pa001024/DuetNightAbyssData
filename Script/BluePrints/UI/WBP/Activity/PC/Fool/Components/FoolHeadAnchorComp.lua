@@ -51,6 +51,13 @@ function Component:OnAnchorGetUserMenuContent(Anchor)
     end
   end
   
+  local Switch = {}
+  local Avatar = ChatController:GetAvatar()
+  local IsYourSelf = self._AvatarInfo.Uid == Avatar.Uid
+  local InBounsScene = GWorld.GameInstance.IsInTempScene and GWorld.GameInstance:IsInTempScene()
+  local IsInDungeon = GWorld:GetAvatar():IsInDungeon()
+  local IsInHardBoss = GWorld:GetAvatar():IsInHardBoss()
+  
   local function AccusePlayer(Content, AvatarInfo)
     Content.Text = GText("UI_Chat_Accuse")
     
@@ -88,17 +95,12 @@ function Component:OnAnchorGetUserMenuContent(Anchor)
           OnTextComposing = self.OnTextComposing
         }
       }
+      Params.AllowNegativeAttitude = IsInDungeon or IsInHardBoss
       ChatController:OpenChatReportDialog(Params)
       self.HeadAnchor:Close()
     end
   end
   
-  local Switch = {}
-  local Avatar = ChatController:GetAvatar()
-  local IsYourSelf = self._AvatarInfo.Uid == Avatar.Uid
-  local InBounsScene = GWorld.GameInstance.IsInTempScene and GWorld.GameInstance:IsInTempScene()
-  local IsInDungeon = GWorld:GetAvatar():IsInDungeon()
-  local IsInHardBoss = GWorld:GetAvatar():IsInHardBoss()
   if IsInHardBoss then
     if InBounsScene then
       Switch = IsYourSelf and {} or {AddFriend}

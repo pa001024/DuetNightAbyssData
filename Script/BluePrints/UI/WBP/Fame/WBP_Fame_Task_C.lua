@@ -11,6 +11,7 @@ function M:Construct()
   EventManager:AddEvent(EventID.GetReputationExp, self, self.OnGetReputationExp)
   EventManager:AddEvent(EventID.RecurringQuestTimeOut, self, self.OnRecurringQuestTimeOut)
   ReddotManager.AddListenerEx("RecurringFameTask", self, self.OnRecurringFameTaskReddotChange)
+  ReddotManager.AddListenerEx("EntrustFameTask", self, self.OnEntrustFameTaskReddotChange)
 end
 
 function M:Destruct()
@@ -119,7 +120,13 @@ function M:InitRegionTabInfo()
     if AllCanClaimTasks and #AllCanClaimTasks > 0 then
       bHasCanClaim = true
     end
-    local TabName = string.format("%s·%s", GText("RegionReputation_TaskTitle"), GText(TabData.RegionName))
+    if not bHasCanClaim then
+      local CanSubmitEntrustTask = RegionFameModel:GetTargetRegionEntrustTaskCanSubmit(RegionId)
+      if CanSubmitEntrustTask then
+        bHasCanClaim = true
+      end
+    end
+    local TabName = GText(TabData.RegionName)
     table.insert(AllRegionTabInfo, {
       Text = TabName,
       IconPath = TabData.RegionIconPath,
@@ -161,10 +168,12 @@ function M:OnRegionTabItemClick(TabWidget)
     return
   end
   rawset(self, "CurRegionTabId", NewTabId)
+  rawset(self, "CurRecurringTaskLevel", nil)
   self:InitWeeklyDetail()
   self:InitFameDetail()
   self:UpdateRefreshDetail()
   self:UpdateRecurringTaskReddot()
+  self:UpdateEntrustTaskReddot()
   self:UpdateBackground()
   self.Fame_Tab:SelectTab(self.CurTaskTabId)
   self:SetFocus()
@@ -203,7 +212,7 @@ function M:OnMenuOpenChanged(IsOpen)
       }
     })
   else
-    self.Com_Tab:UpdateBottomKeyInfo({
+    local NewBottomKeyInfo = {
       {
         GamePadInfoList = {
           {
@@ -233,7 +242,21 @@ function M:OnMenuOpenChanged(IsOpen)
         },
         Desc = GText("UI_BACK")
       }
-    })
+    }
+    if self.CanQuickClaimIndex and self.CanQuickClaimIndex > 0 then
+      table.insert(NewBottomKeyInfo, 1, {
+        KeyInfoList = {
+          {
+            Type = "Text",
+            Text = "Space",
+            ClickCallback = self.QuickClaimCurrentRecurringTask,
+            Owner = self
+          }
+        },
+        Desc = GText("UI_BattlePass_QuestRewardClaim")
+      })
+    end
+    self.Com_Tab:UpdateBottomKeyInfo(NewBottomKeyInfo)
   end
 end
 
@@ -418,15 +441,13 @@ function M:OnRecurringFameTaskReddotChange()
     HaveReddot = true
   end
   if not HaveReddot then
-    for RegionId, _ in pairs(AllRegionReputationData) do
-      self.Com_Tab:ShowTabRedDotByTabId(RegionId)
-    end
     if self.Fame_Tab.ConfigData then
       self.Fame_Tab:ShowTabRedDotByTabId(FameTaskType.RecurringTask)
     end
     for i = 1, RecurringTaskNum do
       self["WBP_Fame_TaskLevel_" .. i]:ShowRedDot(false)
     end
+    self:UpdateRegionTabReddot()
     return
   end
   for RegionId, _ in pairs(AllRegionReputationData) do
@@ -439,7 +460,57 @@ function M:OnRecurringFameTaskReddotChange()
         self:RefreshRecurringTask()
       end
     end
-    self.Com_Tab:ShowTabRedDotByTabId(RegionId, false, bHasCanClaim, false)
+  end
+  self:UpdateRegionTabReddot()
+end
+
+function M:OnEntrustFameTaskReddotChange()
+  local AllRegionReputationData = DataMgr.RegionReputation
+  if not AllRegionReputationData then
+    return
+  end
+  local TreeNode = ReddotManager.GetTreeNode("EntrustFameTask")
+  local HaveReddot = false
+  if TreeNode and TreeNode.Count > 0 then
+    HaveReddot = true
+  end
+  if not HaveReddot then
+    if self.Fame_Tab.ConfigData then
+      self.Fame_Tab:ShowTabRedDotByTabId(FameTaskType.ReputationEntrust)
+    end
+    self:UpdateRegionTabReddot()
+    return
+  end
+  if self.CurRegionTabId then
+    local CanSubmitEntrustTask = RegionFameModel:GetTargetRegionEntrustTaskCanSubmit(self.CurRegionTabId)
+    if CanSubmitEntrustTask then
+      self:UpdateEntrustTaskReddot()
+      if self.CurTaskTabId == FameTaskType.ReputationEntrust then
+        self:RefreshEntrustTask()
+      end
+    end
+  end
+  self:UpdateRegionTabReddot()
+end
+
+function M:UpdateRegionTabReddot()
+  local AllRegionReputationData = DataMgr.RegionReputation
+  if not AllRegionReputationData then
+    return
+  end
+  for RegionId, _ in pairs(AllRegionReputationData) do
+    local bHasReddot = false
+    local AllCanClaimTasks = RegionFameModel:GetTargetRegionAllCanClaimRecurringTasks(RegionId)
+    if AllCanClaimTasks and #AllCanClaimTasks > 0 then
+      bHasReddot = true
+    end
+    if not bHasReddot then
+      local CanSubmitEntrustTask = RegionFameModel:GetTargetRegionEntrustTaskCanSubmit(RegionId)
+      if CanSubmitEntrustTask then
+        bHasReddot = true
+      end
+    end
+    self.Com_Tab:ShowTabRedDotByTabId(RegionId, false, bHasReddot, false)
   end
 end
 
@@ -498,9 +569,15 @@ function M:UpdateRecurringTaskReddot()
   end
 end
 
+function M:UpdateEntrustTaskReddot()
+  local bHasCanClaim = false
+  bHasCanClaim = RegionFameModel:GetTargetRegionEntrustTaskCanSubmit(self.CurRegionTabId)
+  self.Fame_Tab:ShowTabRedDotByTabId(FameTaskType.ReputationEntrust, false, bHasCanClaim, false)
+end
+
 function M:RefreshRecurringTask()
   local MaxTaskLevel = RegionFameModel:GetCurrentRecurringTaskLevel(self.CurRegionTabId)
-  rawset(self, "CurRecurringTaskLevel", math.min(MaxTaskLevel, RecurringTaskNum))
+  rawset(self, "CurRecurringTaskLevel", rawget(self, "CurRecurringTaskLevel") or math.min(MaxTaskLevel, RecurringTaskNum))
   rawset(self, "MaxRecurringTaskLevel", MaxTaskLevel)
   for i = 1, RecurringTaskNum do
     local Content = {}
@@ -588,6 +665,20 @@ function M:RefreshRecurringTaskDetail()
     ScreenPrint(string.format("从服务器获取的当前区域：%s 的副本任务数量不对，请联系WYX 进行检查", self.CurRegionTabId))
     return
   end
+  rawset(self, "CanQuickClaimIndex", -1)
+  local AllTaskStates = {}
+  local HasCanClaimTask = false
+  for i = 1, RecurringTaskNum do
+    local TaskLevel = math.min(self.CurRecurringTaskLevel, RecurringTaskNum)
+    local index = (TaskLevel - 1) * 3 + i
+    local TaskId = self.AllRecurringTasks[index].QuestId
+    local TaskState = RegionFameModel:GetTargetRecurringTaskStat(self.CurRegionTabId, TaskId)
+    AllTaskStates[i] = TaskState
+    if TaskState == CommonConst.RecurringTaskState.CanClaim then
+      HasCanClaimTask = true
+      rawset(self, "CanQuickClaimIndex", i)
+    end
+  end
   for i = 1, RecurringTaskNum do
     local Content = {}
     local TaskLevel = math.min(self.CurRecurringTaskLevel, RecurringTaskNum)
@@ -600,6 +691,8 @@ function M:RefreshRecurringTaskDetail()
     Content.DoingTaskTimestamp = self.ReceiveTaskTimestamp
     Content.OnMenuOpenChanged = self.OnMenuOpenChanged
     Content.Parent = self
+    Content.TaskState = AllTaskStates[i]
+    Content.HasCanClaimTask = HasCanClaimTask
     
     function Content.AbandonRecurringTaskCallback(Ret, ReputationId, QuestId)
       if Ret == ErrorCode.RET_SUCCESS then
@@ -633,6 +726,64 @@ function M:RefreshRecurringTaskDetail()
     
     self["WBP_Fame_PopupTask0" .. i]:Init(Content)
   end
+  self:UpdateQuickClaimButtomTip()
+end
+
+function M:UpdateQuickClaimButtomTip()
+  local NewBottomKeyInfo = {
+    {
+      GamePadInfoList = {
+        {
+          Type = "Img",
+          ImgShortPath = "A",
+          Owner = self
+        }
+      },
+      Desc = GText("UI_Tips_Ensure")
+    },
+    {
+      KeyInfoList = {
+        {
+          Type = "Text",
+          Text = "Esc",
+          ClickCallback = self.CloseSelf,
+          Owner = self
+        }
+      },
+      GamePadInfoList = {
+        {
+          Type = "Img",
+          ImgShortPath = "B",
+          ClickCallback = self.CloseSelf,
+          Owner = self
+        }
+      },
+      Desc = GText("UI_BACK")
+    }
+  }
+  if self.CanQuickClaimIndex and self.CanQuickClaimIndex > 0 then
+    table.insert(NewBottomKeyInfo, 1, {
+      KeyInfoList = {
+        {
+          Type = "Text",
+          Text = "Space",
+          ClickCallback = self.QuickClaimCurrentRecurringTask,
+          Owner = self
+        }
+      },
+      Desc = GText("UI_BattlePass_QuestRewardClaim")
+    })
+  end
+  self.Com_Tab:UpdateBottomKeyInfo(NewBottomKeyInfo)
+end
+
+function M:QuickClaimCurrentRecurringTask()
+  if self.CanQuickClaimIndex and self.CanQuickClaimIndex > 0 then
+    local TargetWidget = self["WBP_Fame_PopupTask0" .. self.CanQuickClaimIndex]
+    if IsValid(TargetWidget) then
+      TargetWidget:OnRewardBtnClicked()
+    end
+  end
 end
 
 function M:SetFocusRecurringTask(TargetRecurringTaskWidget)
@@ -655,8 +806,9 @@ end
 function M:RefreshEntrustTask()
   self.List_Item_1:ClearListItems()
   local EntrustTasks = RegionFameModel:GetEntrustTasks(self.CurRegionTabId)
-  for index, TaskInfo in ipairs(EntrustTasks) do
+  for index, Task in ipairs(EntrustTasks) do
     local Content = NewObject(UIUtils.GetCommonItemContentClass())
+    local TaskInfo = Task.TaskInfo
     Content.TaskID = TaskInfo.TaskID
     Content.Index = index
     Content.TaskState = TaskInfo.TaskState
@@ -675,6 +827,7 @@ function M:RefreshEntrustTask()
         self:ConsumeTargetQuestMod(QuestId)
         self:RefreshEntrustTask()
         self:InitWeeklyDetail()
+        self:UpdateEntrustTaskReddot()
         return
       end
       local Error = DataMgr.ErrorCode[Ret]
@@ -796,6 +949,9 @@ function M:Handle_OnPCButtonDown(InKeyName)
     IsEventHandled = true
   elseif "D" == InKeyName then
     self.Fame_Tab:TabToRight()
+    IsEventHandled = true
+  elseif "SpaceBar" == InKeyName then
+    self:QuickClaimCurrentRecurringTask()
     IsEventHandled = true
   end
   return IsEventHandled

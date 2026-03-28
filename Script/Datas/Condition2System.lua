@@ -156,5 +156,8 @@ return ReadOnly("Condition2System", {
   },
   [12010306] = {
     [1] = "RegionalShopTab"
+  },
+  [12020101] = {
+    [1] = "HaoJingShopTab"
   }
 })

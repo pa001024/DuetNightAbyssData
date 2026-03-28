@@ -59,10 +59,16 @@ function M:ClearListenEvent()
 end
 
 function M:OnViewInfoHover()
+  if UIUtils.IsMobileInput() then
+    return
+  end
   self:OpenMenuAnchor()
 end
 
 function M:OnViewInfoUnHover()
+  if UIUtils.IsMobileInput() then
+    return
+  end
   self:CloseMenuAnchor()
 end
 
@@ -70,6 +76,14 @@ function M:OnViewInfoClicked()
   if type(self.SoundFunc) == "function" then
     self.SoundFunc(self.SoundFuncReceiver)
   end
+end
+
+function M:SetChecked(bChecked)
+  self.Btn_Click:SetChecked(bChecked)
+end
+
+function M:IsChecked()
+  return self.Btn_Click:IsChecked()
 end
 
 function M:ResetStyle()

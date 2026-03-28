@@ -17,6 +17,7 @@ function M:Init(ConfigData)
   self.SoundFuncReceiver = ConfigData.SoundFuncReceiver or self
   self.OwnerWidget = ConfigData.OwnerWidget
   self:InitListenEvent()
+  self._OnAddedToFocusPath = ConfigData.OnAddedToFocusPath
 end
 
 function M:OnViewInfoClick(IsChecked)
@@ -34,6 +35,12 @@ end
 
 function M:ClearListenEvent()
   self.Btn_Click.OnClicked:Clear()
+end
+
+function M:OnAddedToFocusPath()
+  if self._OnAddedToFocusPath and self.OwnerWidget then
+    self._OnAddedToFocusPath(self.OwnerWidget, self)
+  end
 end
 
 function M:PlayClickSound()

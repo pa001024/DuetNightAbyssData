@@ -120,7 +120,7 @@ StoryNodeKey:]] .. self.Context.Data.key
   end
   self.StartCount = self.UnitCount
   
-  function SuccessCallback()
+  local function SuccessCallback()
     self.StartCount = self.StartCount - MinCount
     if self.IsUseCount then
       local Avatar = GWorld:GetAvatar()

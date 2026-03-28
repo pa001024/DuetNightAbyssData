@@ -521,7 +521,7 @@ return ReadOnly("SubRegion", {
     SyncPlayerInfo = 1
   },
   [104501] = {
-    FlyLicense = -1,
+    FlyLicense = 1002,
     RegionId = 1045,
     SubRegionDes = "UI_SUBREGION_DES_104501",
     SubRegionId = 104501,
@@ -533,7 +533,7 @@ return ReadOnly("SubRegion", {
     TODSetting = true
   },
   [104502] = {
-    FlyLicense = -1,
+    FlyLicense = 1002,
     RegionId = 1045,
     SubRegionDes = "UI_SUBREGION_DES_104502",
     SubRegionId = 104502,
@@ -545,7 +545,7 @@ return ReadOnly("SubRegion", {
     TODSetting = true
   },
   [104503] = {
-    FlyLicense = -1,
+    FlyLicense = 1002,
     RegionId = 1045,
     SubRegionDes = "UI_SUBREGION_DES_104503",
     SubRegionId = 104503,
@@ -557,7 +557,7 @@ return ReadOnly("SubRegion", {
     TODSetting = true
   },
   [104504] = {
-    FlyLicense = -1,
+    FlyLicense = 1002,
     RegionId = 1045,
     SubRegionDes = "UI_SUBREGION_DES_104504",
     SubRegionId = 104504,
@@ -569,7 +569,7 @@ return ReadOnly("SubRegion", {
     TODSetting = true
   },
   [104505] = {
-    FlyLicense = -1,
+    FlyLicense = 1002,
     RegionId = 1045,
     SubRegionDes = "UI_SUBREGION_DES_104505",
     SubRegionId = 104505,
@@ -581,7 +581,7 @@ return ReadOnly("SubRegion", {
     TODSetting = true
   },
   [104506] = {
-    FlyLicense = -1,
+    FlyLicense = 1002,
     RegionId = 1045,
     SubRegionDes = "UI_SUBREGION_DES_104506",
     SubRegionId = 104506,
@@ -591,28 +591,6 @@ return ReadOnly("SubRegion", {
     SwitchPlayer = "Player",
     SyncPlayerInfo = 1,
     TODSetting = true
-  },
-  [104507] = {
-    FlyLicense = -1,
-    RegionId = 1045,
-    SubRegionDes = "UI_SUBREGION_DES_104507",
-    SubRegionId = 104507,
-    SubRegionLevel = "Huaxu_Haojing_IQ12020122",
-    SubRegionName = "UI_SUBREGION_NAME_104507",
-    SubRegionType = "field",
-    SwitchPlayer = "Player",
-    SyncPlayerInfo = 1
-  },
-  [104508] = {
-    FlyLicense = -1,
-    RegionId = 1045,
-    SubRegionDes = "UI_SUBREGION_DES_104508",
-    SubRegionId = 104508,
-    SubRegionLevel = "Huaxu_Haojing_IQ12020212",
-    SubRegionName = "UI_SUBREGION_NAME_104508",
-    SubRegionType = "field",
-    SwitchPlayer = "Player",
-    SyncPlayerInfo = 1
   },
   [104601] = {
     FlyLicense = -1,
@@ -673,44 +651,30 @@ return ReadOnly("SubRegion", {
     SyncPlayerInfo = 1
   },
   [105101] = {
+    DefaultQuestPoint = "31498,-107220,45709",
     FlyLicense = -1,
+    NotShowInRegionMap = true,
     RegionId = 1051,
     SubRegionDes = "测试区域",
     SubRegionId = 105101,
     SubRegionLevel = "Huaxu_Haojing_Int",
-    SubRegionName = "测试区域",
+    SubRegionName = "UI_SUBREGION_NAME_105101",
     SubRegionType = "field",
-    SyncPlayerInfo = 1
-  },
-  [105102] = {
-    FlyLicense = -1,
-    RegionId = 1051,
-    SubRegionDes = "测试区域",
-    SubRegionId = 105102,
-    SubRegionLevel = "Huaxu_Haojing_Int_IQ12020208_DesignTask",
-    SubRegionName = "测试区域",
-    SubRegionType = "field",
-    SyncPlayerInfo = 1
-  },
-  [105103] = {
-    FlyLicense = -1,
-    RegionId = 1051,
-    SubRegionDes = "测试区域",
-    SubRegionId = 105103,
-    SubRegionLevel = "Huaxu_Haojing_Int_IQ12020208_Task",
-    SubRegionName = "测试区域",
-    SubRegionType = "field",
-    SyncPlayerInfo = 1
+    SwitchPlayer = "Player",
+    SyncPlayerInfo = 1,
+    TODSetting = true
   },
   [105201] = {
-    FlyLicense = -1,
+    FlyLicense = 1002,
     RegionId = 1052,
     SubRegionDes = "测试区域",
     SubRegionId = 105201,
     SubRegionLevel = "Huaxu_Haojing_Reb",
-    SubRegionName = "测试区域",
+    SubRegionName = "UI_SUBREGION_NAME_105201",
     SubRegionType = "field",
-    SyncPlayerInfo = 1
+    SwitchPlayer = "Player",
+    SyncPlayerInfo = 1,
+    TODSetting = true
   },
   [105301] = {
     FlyLicense = -1,
@@ -718,17 +682,7 @@ return ReadOnly("SubRegion", {
     SubRegionDes = "测试区域",
     SubRegionId = 105301,
     SubRegionLevel = "Huaxu_Haojing_TRLM",
-    SubRegionName = "测试区域",
-    SubRegionType = "field",
-    SyncPlayerInfo = 1
-  },
-  [105302] = {
-    FlyLicense = -1,
-    RegionId = 1053,
-    SubRegionDes = "测试区域",
-    SubRegionId = 105302,
-    SubRegionLevel = "Huaxu_Haojing_TRLM_IQ12020515",
-    SubRegionName = "测试区域",
+    SubRegionName = "UI_SUBREGION_NAME_105301",
     SubRegionType = "field",
     SyncPlayerInfo = 1
   },
@@ -738,7 +692,7 @@ return ReadOnly("SubRegion", {
     SubRegionDes = "测试区域",
     SubRegionId = 105401,
     SubRegionLevel = "Huaxu_Haojing_TXJ",
-    SubRegionName = "测试区域",
+    SubRegionName = "UI_SUBREGION_NAME_105401",
     SubRegionType = "field",
     SyncPlayerInfo = 1
   },
@@ -748,8 +702,9 @@ return ReadOnly("SubRegion", {
     SubRegionDes = "测试区域",
     SubRegionId = 105501,
     SubRegionLevel = "Huaxu_Haojing_YLX",
-    SubRegionName = "测试区域",
+    SubRegionName = "UI_SUBREGION_NAME_105501",
     SubRegionType = "field",
+    SwitchPlayer = "Player",
     SyncPlayerInfo = 1
   },
   [105601] = {
@@ -758,7 +713,7 @@ return ReadOnly("SubRegion", {
     SubRegionDes = "测试区域",
     SubRegionId = 105601,
     SubRegionLevel = "Huaxu_Haojing_ZhiliuHJ_Door",
-    SubRegionName = "测试区域",
+    SubRegionName = "UI_SUBREGION_NAME_105601",
     SubRegionType = "field",
     SyncPlayerInfo = 1
   },
@@ -768,7 +723,7 @@ return ReadOnly("SubRegion", {
     SubRegionDes = "测试区域",
     SubRegionId = 105602,
     SubRegionLevel = "Huaxu_Haojing_ZhiliuHJ_Talk",
-    SubRegionName = "测试区域",
+    SubRegionName = "UI_SUBREGION_NAME_105602",
     SubRegionType = "field",
     SyncPlayerInfo = 1
   },
@@ -877,6 +832,15 @@ return ReadOnly("SubRegion", {
     SubRegionType = "field",
     SyncPlayerInfo = 1
   },
+  [106008] = {
+    RegionId = 1060,
+    SubRegionDes = "测试区域",
+    SubRegionId = 106008,
+    SubRegionLevel = "Haiboliya_Chezhan_YWS",
+    SubRegionName = "测试区域",
+    SubRegionType = "field",
+    SyncPlayerInfo = 1
+  },
   [106101] = {
     FlyLicense = -1,
     RegionId = 1061,
@@ -885,6 +849,83 @@ return ReadOnly("SubRegion", {
     SubRegionLevel = "Haiboliya_Chezhan_YW01",
     SubRegionName = "测试区域",
     SubRegionType = "field",
+    SyncPlayerInfo = 1
+  },
+  [107001] = {
+    FlyLicense = -1,
+    RegionId = 1070,
+    SubRegionDes = "UI_SUBREGION_DES_107001",
+    SubRegionId = 107001,
+    SubRegionLevel = "Haiboliya_FTNew",
+    SubRegionName = "UI_SUBREGION_NAME_107001",
+    SubRegionType = "field",
+    SwitchPlayer = "EXPlayer",
+    SyncPlayerInfo = 1
+  },
+  [107101] = {
+    FlyLicense = -1,
+    RegionId = 1071,
+    SubRegionDes = "UI_SUBREGION_DES_107101",
+    SubRegionId = 107101,
+    SubRegionLevel = "Haiboliya_FTOld",
+    SubRegionName = "UI_SUBREGION_NAME_107101",
+    SubRegionType = "field",
+    SwitchPlayer = "EXPlayer",
+    SyncPlayerInfo = 1
+  },
+  [107201] = {
+    FlyLicense = -1,
+    RegionId = 1072,
+    SubRegionDes = "UI_SUBREGION_DES_107201",
+    SubRegionId = 107201,
+    SubRegionLevel = "Haiboliya_FTLake",
+    SubRegionName = "UI_SUBREGION_NAME_107201",
+    SubRegionType = "field",
+    SwitchPlayer = "EXPlayer",
+    SyncPlayerInfo = 1
+  },
+  [107301] = {
+    FlyLicense = -1,
+    RegionId = 1073,
+    SubRegionDes = "UI_SUBREGION_DES_107301",
+    SubRegionId = 107301,
+    SubRegionLevel = "Haiboliya_FTOld_NPark",
+    SubRegionName = "UI_SUBREGION_NAME_107301",
+    SubRegionType = "field",
+    SwitchPlayer = "EXPlayer",
+    SyncPlayerInfo = 1
+  },
+  [107401] = {
+    FlyLicense = -1,
+    RegionId = 1074,
+    SubRegionDes = "UI_SUBREGION_DES_107401",
+    SubRegionId = 107401,
+    SubRegionLevel = "Haiboliya_FTLake_BF_Main",
+    SubRegionName = "UI_SUBREGION_NAME_107401",
+    SubRegionType = "field",
+    SwitchPlayer = "EXPlayer",
+    SyncPlayerInfo = 1
+  },
+  [107501] = {
+    FlyLicense = -1,
+    RegionId = 1075,
+    SubRegionDes = "UI_SUBREGION_DES_107501",
+    SubRegionId = 107501,
+    SubRegionLevel = "Haiboliya_FTNew_Home",
+    SubRegionName = "UI_SUBREGION_NAME_107501",
+    SubRegionType = "field",
+    SwitchPlayer = "EXPlayer",
+    SyncPlayerInfo = 1
+  },
+  [107601] = {
+    FlyLicense = -1,
+    RegionId = 1076,
+    SubRegionDes = "UI_SUBREGION_DES_107601",
+    SubRegionId = 107601,
+    SubRegionLevel = "Haiboliya_FTNew_Boss",
+    SubRegionName = "UI_SUBREGION_NAME_107601",
+    SubRegionType = "field",
+    SwitchPlayer = "EXPlayer",
     SyncPlayerInfo = 1
   },
   [200101] = {

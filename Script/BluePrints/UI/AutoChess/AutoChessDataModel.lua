@@ -174,7 +174,7 @@ end
 
 function AutoChessDataModel:GetChessData()
   local CombatChessInfo = DataMgr.CombatChessInfo
-  Result = {}
+  local Result = {}
   for Id, Info in pairs(CombatChessInfo) do
     table.insert(Result, self:GetMonsterInfoByCombatId(Id))
   end

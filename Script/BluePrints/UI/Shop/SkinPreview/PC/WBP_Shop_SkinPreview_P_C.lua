@@ -3,6 +3,8 @@ local M = Class("BluePrints.UI.Shop.SkinPreview.WBP_Shop_SkinPreview_Base_C")
 
 function M:Construct()
   M.Super.Construct(self)
+  self.Btn_Function:SetDefaultGamePadImg("A")
+  self.Com_Hint:SetDefaultGamePadImg("A")
   self.MenuKeyInfoList = {
     GamePadInfoList = {
       {Type = "Img", ImgShortPath = "Menu"}
@@ -39,8 +41,83 @@ function M:Construct()
     Desc = GText("UI_CTL_Ride"),
     bLongPress = false
   }
-  self.Btn_Function:SetDefaultGamePadImg("A")
-  self.Com_Hint:SetDefaultGamePadImg("A")
+  self.ESCKeyInfoList = {
+    KeyInfoList = {
+      {
+        Type = "Text",
+        Text = CommonUtils:GetKeyText(EKeys.Escape.KeyName),
+        ClickCallback = self.CloseSelf,
+        Owner = self
+      }
+    },
+    GamePadInfoList = {
+      {
+        Type = "Img",
+        ImgShortPath = "B",
+        ClickCallback = self.CloseSelf,
+        Owner = self
+      }
+    },
+    Desc = GText("UI_BACK")
+  }
+  self.HideUI_KeyInfoList = {
+    KeyInfoList = {
+      {
+        Type = "Text",
+        Text = CommonUtils:GetKeyText("U"),
+        ClickCallback = self.OnHideUIKeyDown,
+        Owner = self
+      }
+    },
+    GamePadInfoList = {
+      {Type = "Img", ImgShortPath = "X"}
+    },
+    Desc = GText("UI_Dye_HideUI")
+  }
+  self.ZoomKeyInfoList = {
+    KeyInfoList = {
+      {
+        Type = "Text",
+        Text = CommonUtils:GetKeyText(self.ZoomKey),
+        Owner = self
+      }
+    },
+    GamePadInfoList = {
+      {Type = "Or"},
+      GamePadSubKeyInfoList = {
+        {
+          Type = "Img",
+          ImgShortPath = "LT",
+          Owner = self
+        },
+        {
+          Type = "Img",
+          ImgShortPath = "RT",
+          Owner = self
+        }
+      }
+    },
+    Desc = GText("UI_Dye_Zoom"),
+    bLongPress = false
+  }
+  self.RightThumbstickAnalogBottomKeyInfoList = {
+    GamePadInfoList = {
+      {Type = "Img", ImgShortPath = "RH"}
+    },
+    Desc = GText("UI_CTL_RotatePreview")
+  }
+  self.DiscountConfirmKeyInfoList = {
+    GamePadInfoList = {
+      {Type = "Img", ImgShortPath = "A"}
+    },
+    Desc = GText("UI_Tips_Ensure")
+  }
+  self.DiscountCheckDetailsKeyInfoList = {
+    GamePadInfoList = {
+      {Type = "Img", ImgShortPath = "X"}
+    },
+    Desc = GText("UI_Controller_CheckDetails")
+  }
   self.Key_GamePad_L:CreateCommonKey({
     KeyInfoList = {
       {Type = "Img", ImgShortPath = "Left"}
@@ -64,6 +141,11 @@ function M:Construct()
     Desc = GText("UI_SkinPreview_Dye")
   })
   self.Key_BtnChoose:CreateCommonKey({
+    KeyInfoList = {
+      {Type = "Img", ImgShortPath = "LS"}
+    }
+  })
+  self.Key_LevelUp:CreateCommonKey({
     KeyInfoList = {
       {Type = "Img", ImgShortPath = "LS"}
     }
@@ -178,6 +260,7 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
     else
       self:HideDragKey(false)
     end
+    self.Key_LevelUp:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   else
     if self.ShopItemData.SuitRewardId then
       self.Key_Preview:SetVisibility(ESlateVisibility.Collapsed)
@@ -187,6 +270,97 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
     self.Key_GamePad_R:SetVisibility(ESlateVisibility.Collapsed)
     self.Key_Preview:SetVisibility(ESlateVisibility.Collapsed)
     self.Gift_GamePad:SetVisibility(ESlateVisibility.Collapsed)
+    self.Key_LevelUp:SetVisibility(ESlateVisibility.Collapsed)
+  end
+end
+
+function M:EnterSelectDiscountMode()
+  self.BottomKeyInfo_BeforeSelectDiscount = self.Tab_Skin.ConfigData and self.Tab_Skin.ConfigData.BottomKeyInfo
+  if UIUtils.IsGamepadInput() then
+    self.Gift_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Tab_Change:ForceHideGamePadKey(true)
+    self.Tab_Change:UpdateGamePadKey()
+    self.Key_GamePad_L:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Key_GamePad_R:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.WS_Btn_Dye:SetActiveWidgetIndex(0)
+    self.Key_Preview:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Btn_Function:SetGamepadIconVisibility(false)
+    self.Tab_Skin.WBP_Com_Tab_ResourceBar:HideGamePadKey(true)
+    self.Key_LevelUp:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  self.InSelectDiscountMode = true
+end
+
+function M:ExitSelectDiscountMode()
+  if self.BottomKeyInfo_BeforeSelectDiscount then
+    local KeyInfo = self.BottomKeyInfo_BeforeSelectDiscount
+    self.BottomKeyInfo_BeforeSelectDiscount = nil
+    self.Tab_Skin:UpdateBottomKeyInfo(KeyInfo)
+  end
+  if UIUtils.IsGamepadInput() then
+    if self.BtnChooseGiftEnable then
+      self.Gift_GamePad:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    end
+    self.Tab_Change:ForceHideGamePadKey(false)
+    self.Tab_Change:UpdateGamePadKey()
+    self.Key_GamePad_L:SetVisibility((self.bFirst or self.ShopItemData.SinglePreview) and UIConst.VisibilityOp.Collapsed or UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Key_GamePad_R:SetVisibility((self.bLast or self.ShopItemData.SinglePreview) and UIConst.VisibilityOp.Collapsed or UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.WS_Btn_Dye:SetActiveWidgetIndex(1)
+    self.Key_Preview:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Btn_Function:SetGamepadIconVisibility(true)
+    self.Tab_Skin.WBP_Com_Tab_ResourceBar:HideGamePadKey(false)
+    self.Key_LevelUp:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  end
+  self.InSelectDiscountMode = false
+end
+
+function M:TipsStateChangedCallback(Data, bIsOpen)
+  if UIUtils.IsGamepadInput() then
+    if bIsOpen then
+      local KeyInfo = {}
+      table.insert(KeyInfo, self.ESCKeyInfoList)
+      self.Tab_Skin:UpdateBottomKeyInfo(KeyInfo)
+    else
+      local DiscountKeyInfo = {}
+      table.insert(DiscountKeyInfo, self.DiscountCheckDetailsKeyInfoList)
+      table.insert(DiscountKeyInfo, self.DiscountConfirmKeyInfoList)
+      table.insert(DiscountKeyInfo, self.ESCKeyInfoList)
+      self.Tab_Skin:UpdateBottomKeyInfo(DiscountKeyInfo)
+    end
+  end
+end
+
+function M:ItemTipsStateChangedCallback(Data, bIsOpen)
+  if UIUtils.IsGamepadInput() then
+    if bIsOpen then
+      local KeyInfo = {}
+      self.Tab_Skin:UpdateBottomKeyInfo(KeyInfo)
+    else
+      local DiscountKeyInfo = {}
+      if Data and Data.IsVoucher then
+        table.insert(DiscountKeyInfo, self.DiscountCheckDetailsKeyInfoList)
+      end
+      table.insert(DiscountKeyInfo, self.DiscountConfirmKeyInfoList)
+      table.insert(DiscountKeyInfo, self.ESCKeyInfoList)
+      self.Tab_Skin:UpdateBottomKeyInfo(DiscountKeyInfo)
+    end
+  end
+end
+
+function M:ItemFocusReceivedCallback(Data)
+  if UIUtils.IsGamepadInput() then
+    if Data and Data.IsVoucher then
+      local DiscountKeyInfo = {}
+      table.insert(DiscountKeyInfo, self.DiscountCheckDetailsKeyInfoList)
+      table.insert(DiscountKeyInfo, self.DiscountConfirmKeyInfoList)
+      table.insert(DiscountKeyInfo, self.ESCKeyInfoList)
+      self.Tab_Skin:UpdateBottomKeyInfo(DiscountKeyInfo)
+    else
+      local DiscountKeyInfo = {}
+      table.insert(DiscountKeyInfo, self.DiscountConfirmKeyInfoList)
+      table.insert(DiscountKeyInfo, self.ESCKeyInfoList)
+      self.Tab_Skin:UpdateBottomKeyInfo(DiscountKeyInfo)
+    end
   end
 end
 

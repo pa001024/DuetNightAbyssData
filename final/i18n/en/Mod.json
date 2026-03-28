@@ -3220,31 +3220,31 @@
   },
   {
     "id": 41765,
-    "icon": "FeatheredSnake01",
+    "icon": "FeatheredSnake01_Orange",
     "名称": "Morale",
     "版本": "1.3",
     "系列": "Feathered Serpent's ",
     "品质": "紫",
     "极性": "A",
     "属性": "Lumino",
-    "耐受": 15,
+    "耐受": 12,
     "类型": "Characters",
-    "昂扬": 1.0,
+    "昂扬": 0.36,
     "效果": "The element effect activates only when at least 4 Demon Wedges aligned to Track A are equipped."
   },
   {
     "id": 41766,
-    "icon": "FeatheredSnake01",
+    "icon": "FeatheredSnake01_Orange",
     "名称": "Huntdown",
     "版本": "1.3",
     "系列": "Feathered Serpent's ",
     "品质": "紫",
     "极性": "V",
     "属性": "Lumino",
-    "耐受": 15,
+    "耐受": 12,
     "类型": "Characters",
-    "追加伤害": 1.0,
-    "效果": "When at least 4 Demon Wedges aligned with Track V are equipped, weapon attacks deal an additional 100.0% damage of the weapon's element."
+    "技能威力": 0.48,
+    "效果": "The element effect activates only when at least 4 Demon Wedges aligned to Track V are equipped."
   },
   {
     "id": 41801,
@@ -5885,31 +5885,37 @@
   },
   {
     "id": 51765,
-    "icon": "FeatheredSnake01",
+    "icon": "FeatheredSnake01_Orange",
     "名称": "Morale",
     "版本": "1.3",
     "系列": "Feathered Serpent's ",
     "品质": "金",
     "极性": "A",
     "属性": "Lumino",
-    "耐受": 15,
+    "耐受": 22,
     "类型": "Characters",
-    "昂扬": 1.0,
+    "消耗": [
+      51765
+    ],
+    "昂扬": 0.66,
     "效果": "The element effect activates only when at least 4 Demon Wedges aligned to Track A are equipped."
   },
   {
     "id": 51766,
-    "icon": "FeatheredSnake01",
+    "icon": "FeatheredSnake01_Orange",
     "名称": "Huntdown",
     "版本": "1.3",
     "系列": "Feathered Serpent's ",
     "品质": "金",
     "极性": "V",
     "属性": "Lumino",
-    "耐受": 15,
+    "耐受": 22,
     "类型": "Characters",
-    "追加伤害": 1.0,
-    "效果": "When at least 4 Demon Wedges aligned with Track V are equipped, weapon attacks deal an additional 100.0% damage of the weapon's element."
+    "消耗": [
+      51766
+    ],
+    "技能威力": 0.88,
+    "效果": "The element effect activates only when at least 4 Demon Wedges aligned to Track V are equipped."
   },
   {
     "id": 51801,
@@ -7306,75 +7312,75 @@
   },
   {
     "id": 56161,
-    "icon": "Changeling01",
+    "icon": "Changeling01_Orange",
     "名称": "Morale",
     "版本": "1.3",
     "系列": "Changeling's ",
     "品质": "金",
     "极性": "D",
     "属性": "Lumino",
-    "耐受": 29,
+    "耐受": 25,
     "类型": "Characters",
     "消耗": [
       56161
     ],
     "减伤": 0.3,
-    "效果": "Grants +100.0% Morale when Skill Range is ≥ 150.0%."
+    "效果": "Grants +66.0% Morale when Skill Range is ≥ 160.0%."
   },
   {
     "id": 56162,
-    "icon": "Siren01",
+    "icon": "Siren01_Orange",
     "名称": "Wings·Inspo·Morale",
     "版本": "1.3",
     "系列": "Siren's ",
     "品质": "金",
     "极性": "D",
     "属性": "Lumino",
-    "耐受": 29,
+    "耐受": 45,
     "类型": "Characters",
     "消耗": [
       56162
     ],
-    "神智": 1.0,
-    "技能效益": 1.0,
-    "减伤": 0.3,
-    "效果": "Grants +100.0% Morale when Skill Range is ≥ 150.0%."
+    "神智": 1.65,
+    "技能效益": 0.44,
+    "减伤": 0.5,
+    "效果": "Grants +66.0% Morale when Skill Range is ≥ 160.0%."
   },
   {
     "id": 56163,
-    "icon": "Changeling01",
+    "icon": "Changeling01_Orange",
     "名称": "Focus",
     "版本": "1.3",
     "系列": "Changeling's ",
     "品质": "金",
     "极性": "D",
     "属性": "Lumino",
-    "耐受": 29,
+    "耐受": 25,
     "类型": "Characters",
     "消耗": [
       56163
     ],
     "减伤": 0.3,
-    "效果": "Grants +100.0% CRIT Chance to self and allies when Skill Duration is ≥ 150.0%."
+    "效果": "Grants +99.0% CRIT Chance to self and allies when Skill Duration is ≥ 200.0%."
   },
   {
     "id": 56164,
-    "icon": "Siren01",
+    "icon": "Siren01_Orange",
     "名称": "Wings·Inspo·Focus",
     "版本": "1.3",
     "系列": "Siren's ",
     "品质": "金",
     "极性": "D",
     "属性": "Lumino",
-    "耐受": 29,
+    "耐受": 45,
     "类型": "Characters",
     "消耗": [
       56164
     ],
-    "神智": 1.0,
-    "技能效益": 1.0,
-    "减伤": 0.3,
-    "效果": "Grants +100.0% CRIT Chance to self and allies when Skill Duration is ≥ 150.0%."
+    "神智": 1.65,
+    "技能效益": 0.44,
+    "减伤": 0.5,
+    "效果": "Grants +99.0% CRIT Chance to self and allies when Skill Duration is ≥ 200.0%."
   },
   {
     "id": 101001,
@@ -7733,7 +7739,7 @@
   {
     "id": 103003,
     "icon": "Fenrir01",
-    "名称": "极速切割",
+    "名称": "Savage Cleave",
     "版本": "1.3",
     "系列": "Fenrir's ",
     "品质": "紫",
@@ -7746,7 +7752,44 @@
       "1030101": {
         "id": 1030301,
         "名称": "普通攻击",
-        "类型": "武器伤害"
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "1-Hit DMG",
+            "值": 0.4,
+            "格式": "{%}×3",
+            "削韧": 15,
+            "卡肉": 0.07,
+            "取消": 0.2667,
+            "连段": 0.6
+          },
+          {
+            "名称": "2-Hit DMG",
+            "值": 0.5,
+            "格式": "{%}×3",
+            "削韧": 20,
+            "卡肉": 0.07,
+            "取消": 0.2667,
+            "连段": 0.6667
+          },
+          {
+            "名称": "3-Hit DMG",
+            "值": 0.7,
+            "格式": "{%}×5",
+            "削韧": 25,
+            "卡肉": 0.07,
+            "取消": 0.4667,
+            "连段": 1.5
+          },
+          {
+            "名称": "4-Hit DMG",
+            "值": 3.4,
+            "削韧": 80,
+            "卡肉": 0.07,
+            "取消": 0.6689,
+            "连段": 1.5687
+          }
+        ]
       }
     }
   },
@@ -7911,15 +7954,20 @@
   },
   {
     "id": 150401,
-    "icon": "Fenrir01",
+    "icon": "Suyi",
     "名称": "Su Yi's Drone: Detonator Cannon",
-    "版本": "99.9",
+    "版本": "1.3",
     "系列": "Su Yi's Component",
     "品质": "金",
-    "极性": "V",
-    "耐受": -4,
-    "类型": "Ranged Consonance Weapon",
-    "效果": "Upgrades the Katana Charged Attack. Upon striking an enemy, the character leaps into the air and slams down, dealing multiple hits to surrounding foes for double the damage of the standard attack."
+    "极性": "O",
+    "耐受": 27,
+    "类型": "Characters",
+    "消耗": [
+      51961,
+      51962
+    ],
+    "技能威力": 0.55,
+    "效果": "改变[歼星模式]的远程攻击招式，发射追踪炮弹。"
   },
   {
     "id": 202003,

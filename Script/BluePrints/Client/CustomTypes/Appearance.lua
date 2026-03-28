@@ -10,7 +10,9 @@ Skin.__Props__ = {
   CurrentPlanIndex = prop.prop("Int", "client save", 1),
   Colors = prop.prop("Int2IntListDict", "client save"),
   SpecialColor = prop.prop("IntList", "client save"),
-  IsShowPartMesh = prop.prop("Bool", "client save", true)
+  IsShowPartMesh = prop.prop("Bool", "client save", true),
+  Level = prop.prop("Int", "client save", 1),
+  SelectedLevel = prop.prop("Int", "client save", 1)
 }
 
 function Skin:Init(SkinId, SkinType)
@@ -165,7 +167,9 @@ function Appearance:InitAccessory()
     end
     self.IsShowPartMesh = true
   elseif 1 == self.TargetType then
-    self.Accessory:Append(-1)
+    for i = 1, DataMgr.GlobalConstant.WeaponAccessoryNum.ConstantValue do
+      self.Accessory:Append(-1)
+    end
   elseif 2 == self.TargetType then
     for i = 1, 2 do
       self.Accessory:Append(-1)

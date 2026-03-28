@@ -1,5 +1,4 @@
 local Class = _G.TypeClass
-local CallbackManager = require("Utils.CallbackManager")
 local IdManager = require("NetworkEngine.Common.IdManager")
 local LogManager = require("NetworkEngine.Common.LogManager")
 local AvatarEntity = Class("AvatarEntity")

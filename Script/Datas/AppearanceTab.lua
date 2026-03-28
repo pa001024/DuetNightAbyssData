@@ -24,5 +24,10 @@ return ReadOnly("AppearanceTab", {
     IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Fashion_MVP.T_Tab_Fashion_MVP'",
     TabId = 4,
     Text = "UI_SkinPreview_Accessory_MVP"
+  },
+  [5] = {
+    IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Fashion_Fx.T_Tab_Fashion_Fx'",
+    TabId = 5,
+    Text = "UI_Accessory_Stance_Name"
   }
 })

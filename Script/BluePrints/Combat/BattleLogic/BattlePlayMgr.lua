@@ -70,7 +70,7 @@ function Component:Play_GatherTargets(Content, ParamentsTable)
   for _, Eid in ipairs(HitTargets) do
     local Target = self:GetEntity(Eid)
     if Target then
-      Target:GatherToSource(Source, ParamentsTable.GatherPoint, ParamentsTable.TargetSocketName, ParamentsTable.GatherSpeed, ParamentsTable.StopDistance, ParamentsTable.Acceleration)
+      Target:GatherToSource(Source, ParamentsTable.GatherPoint, ParamentsTable.TargetSocketName, ParamentsTable.GatherSpeed, ParamentsTable.StopDistance, ParamentsTable.Acceleration, FVector(0, 0, 0), ParamentsTable.Time)
     end
   end
 end

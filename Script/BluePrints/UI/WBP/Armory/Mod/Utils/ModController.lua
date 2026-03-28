@@ -9,6 +9,7 @@ M._components = {
 function M:Init()
   M.Super.Init(self)
   self.CurrUIName = nil
+  self.GM_RecommendLimit = true
 end
 
 function M:GetModel()
@@ -49,6 +50,18 @@ function M:TryOpenOverCostWarningDialog(Mod, PreviewLevel, Callback, DialogOwner
   else
     Callback()
   end
+end
+
+function M:OpenSeconderyPassword(ModUuid, View)
+  local Callback = {
+    OnSuccess = function(Password)
+      if View then
+        View:BlockAllUIInput(true)
+      end
+      self:GetAvatar():UnLockResourceInBag(CommonConst.AllType.Mod, ModUuid)
+    end
+  }
+  SecondaryPasswordController:RequestSecPasswordValidation(Callback)
 end
 
 function M:OpenView(UIName, ...)

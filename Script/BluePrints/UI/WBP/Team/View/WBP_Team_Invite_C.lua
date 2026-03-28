@@ -6,7 +6,6 @@ local M = Class({
 
 function M:Construct()
   M.Super.Construct(self)
-  self.Text_Title:SetText(GText("UI_Team_Invitation"))
   local RejectTime = DataMgr.GlobalConstant.InviteRejectTime.ConstantValue
   self.Text_Tip:SetText(string.format(GText("UI_Team_Ignore"), RejectTime))
   self.BtnYes_Mobile:BindEventOnClicked(self, self.OnBtnClick, true)
@@ -45,14 +44,21 @@ function M:Construct()
       local Percent = (...)
       self.Bar_CountDown:SetPercent(Percent)
       if Percent <= 0 then
-        self:OnBtnClick(false)
+        if self.bFriendRequest then
+          self:Close("friendRequestTimeOut")
+          FriendController:TryProcessNextFriendReq(self.InviteInfo.Uid)
+        else
+          self:OnBtnClick(false)
+        end
       end
-    elseif EventId == TeamCommon.EventId.TeamAgreeInvite or EventId == TeamCommon.EventId.TeamOnInit then
-      if not self.IsBeginToClose then
-        self:Close()
+    end
+  end)
+  FriendController:RegisterEvent(self, function(self, EventId, ...)
+    if EventId == FriendCommon.EventId.AgreeAdd or EventId == FriendCommon.EventId.RefuseAdd then
+      local _, Uid = ...
+      if Uid == self.InviteInfo.Uid then
+        self:Close("FriendRequest Agree or Refuse")
       end
-    elseif EventId == TeamCommon.EventId.TeamInviteFailed and not self.IsBeginToClose then
-      self:Close()
     end
   end)
   if TeamController:IsMobile() then
@@ -93,11 +99,18 @@ function M:Construct()
   end
   self:AddDispatcher(EventID.CloseLoading, self, function()
     DebugPrint(LXYTag, "组队邀请超时，需要自动关闭界面")
-    if TeamController:GetModel().InviteRecvQueue:IsEmpty() then
-      self:Close()
+    if TeamController:GetModel().InviteRecvQueue:IsEmpty() or FriendController:GetModel().FriendReqQueue:IsEmpty() then
+      self:Close("EventID.CloseLoading timeout autoClose")
     end
   end)
   AudioManager(self):PlayUISound(self, "event:/ui/common/team_invite_bar_show", nil, nil)
+end
+
+function M:Close(reason)
+  DebugPrint("TeamInviteView::Close", reason)
+  if not self.IsBeginToClose then
+    M.Super.Close(self)
+  end
 end
 
 function M:OnInputDeviceChange()
@@ -154,24 +167,42 @@ function M:OnCheckBoxChange(bChecked)
 end
 
 function M:InitUIInfo(Name, bInUIMode, EventList, ...)
+  self:StopAllAnimations()
   M.Super.InitUIInfo(self, Name, bInUIMode, EventList)
-  self.InviteInfo = (...)
+  self.InviteInfo, self.bFriendRequest = ...
   self.Bar_CountDown:SetPercent(1)
   self.CheckBox_Tip:SetIsChecked(false)
   self.Text_Name:SetText(self.InviteInfo.Nickname)
   self.Text_Level:SetText(self.InviteInfo.Level)
-  local CharNameTextMapId = DataMgr.Char[self.InviteInfo.Char.CharId].CharName
-  self.Text_CharName:SetText(string.format(GText(CharNameTextMapId)))
   self.Item_Head:SetHeadIconById(self.InviteInfo.HeadIconId)
   self.Item_Head:SetHeadFrame(self.InviteInfo.HeadFrameId)
-  if self.Title then
-    UIUtils.SetTitle(self.Title, self.InviteInfo)
+  if self.bFriendRequest then
+    self.Panel_Tip:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Text_Title:SetText(GText("UI_Friend_FriendRequest"))
+    self.Text_Request:SetVisibility(UIConst.VisibilityOp.Visible)
+    self.Text_Request:SetText(self.InviteInfo.Remark)
+  else
+    self.Panel_Tip:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Text_Title:SetText(GText("UI_Team_Invitation"))
+    self.Text_Request:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  if TeamController:IsMobile() then
+    self.CheckBox_Tip.KeyHolder:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
 end
 
 function M:OnBtnClick(bYes)
+  if self.bFriendRequest then
+    if bYes then
+      FriendController:SendRequest(FriendCommon.EventId.AgreeAdd, self.InviteInfo.Uid)
+    else
+      FriendController:SendRequest(FriendCommon.EventId.RefuseAdd, self.InviteInfo.Uid)
+    end
+    return
+  end
   if bYes then
     TeamController:SendTeamAgreeInvite(self.InviteInfo.Uid)
+    self:Close()
   else
     local bAutoRefuse = self.CheckBox_Tip:IsChecked()
     TeamController:SendTeamRefuseInvite(bAutoRefuse)

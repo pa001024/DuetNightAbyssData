@@ -51,6 +51,10 @@ function M:OnLoaded(...)
     self.GameInputModeSubsystem.OnInputMethodChanged:Add(self, self.RefreshOpInfoByInputDevice)
     self:RefreshOpInfoByInputDevice(self.GameInputModeSubsystem:GetCurrentInputType(), self.GameInputModeSubsystem:GetCurrentGamepadName())
   end
+  self.Activity_Tab.WBP_Com_Tab_ResourceBar:SetGetReplyOnBack(function()
+    self:UpdateUIStyleInPlatform(true)
+    self.Com_KeyTips:SetVisibility(UIConst.VisibilityOp.Visible)
+  end)
 end
 
 function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
@@ -116,7 +120,7 @@ function M:UpdateUIStyleInPlatform(IsUseGamePad)
   local CurrentActivePage, CurFocusWidgetName, CurFocusWidgetItem = self.AllCurrentActivityPage[self.CurTabId]
   if nil ~= CurrentActivePage then
     if type(CurrentActivePage.OnUpdateSubUIViewStyle) == "function" then
-      CurrentActivePage:OnUpdateSubUIViewStyle(IsUseGamePad)
+      CurrentActivePage:OnUpdateSubUIViewStyle(IsUseGamePad, true)
     end
     if "function" == type(CurrentActivePage.GetCurFocusWidgetInfo) then
       CurFocusWidgetName, CurFocusWidgetItem = CurrentActivePage:GetCurFocusWidgetInfo()
@@ -131,6 +135,7 @@ function M:UpdateUIStyleInPlatform(IsUseGamePad)
   else
     self.EventTypeTab.Key_Left:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.EventTypeTab.Key_Right:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Com_KeyTips:SetVisibility(UIConst.VisibilityOp.Visible)
   end
   if self.EventTypeTab then
     self.EventTypeTab:UpdateUIStyleInPlatform(IsUseGamePad)
@@ -160,6 +165,9 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
   if nil ~= CurrentActivePage then
     IsEventHandled = CurrentActivePage:HandleKeyDownInPage(MyGeometry, InKeyEvent)
   end
+  if not IsEventHandled and self.CurrentActiveBg and self.CurrentActiveBg.HandleKeyDownInBg then
+    IsEventHandled = self.CurrentActiveBg:HandleKeyDownInBg(MyGeometry, InKeyEvent)
+  end
   if not IsEventHandled then
     if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) then
       IsEventHandled = self:OnGamePadDown(InKeyName)
@@ -186,6 +194,14 @@ end
 
 function M:Handle_KeyDownOnGamePad(InKeyName)
   if InKeyName == UIConst.GamePadKey.FaceButtonLeft then
+    return false
+  elseif InKeyName == UIConst.GamePadKey.RightThumb then
+    if self.Activity_Tab.WBP_Com_Tab_ResourceBar:IsVisible() then
+      self.Activity_Tab.WBP_Com_Tab_ResourceBar:SetFocus()
+      self:UpdateUIStyleInPlatform(false)
+      self.Com_KeyTips:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      return true
+    end
     return false
   end
   return false
@@ -218,6 +234,9 @@ function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
   local CurrentActivePage = self.AllCurrentActivityPage[self.CurTabId]
   if nil ~= CurrentActivePage and nil ~= CurrentActivePage.HandlePreviewKeyDownInPage then
     IsEventHandled = CurrentActivePage:HandlePreviewKeyDownInPage(MyGeometry, InKeyEvent)
+  end
+  if not IsEventHandled and self.CurrentActiveBg and self.CurrentActiveBg.HandleKeyDownInBg then
+    IsEventHandled = self.CurrentActiveBg:HandleKeyDownInBg(MyGeometry, InKeyEvent)
   end
   if not IsEventHandled and not self.EventTypeTab:IsForbidden() then
     IsEventHandled = self.EventTypeTab:Handle_KeyEventOnGamePad(InKeyName)

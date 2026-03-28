@@ -21,9 +21,9 @@ end
 function BP_SabotageProComponent_C:InitSabotageProBaseInfo()
 end
 
-function BP_SabotageProComponent_C:OnStaticCreatorEvent(EventName, Eid, UnitId, UnitType)
+function BP_SabotageProComponent_C:OnStaticCreatorEvent(EventName, Eid, UnitId, UnitType, CreatorId)
   if "SabotageMonsterGuide" == EventName then
-    DebugPrint("BP_SabotageProComponent_C OnStaticCreatorEvent Eid", Eid, "UnitId", UnitId)
+    DebugPrint("BP_SabotageProComponent_C OnStaticCreatorEvent Eid", Eid, "UnitId", UnitId, CreatorId)
   end
 end
 

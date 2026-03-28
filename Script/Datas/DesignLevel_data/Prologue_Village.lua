@@ -570,6 +570,16 @@ return {
       UnitType = "Mechanism",
       UnitId = 1
     },
+    ["1590338"] = {
+      CreatorId = 1590338,
+      UnitType = "Mechanism",
+      UnitId = 1130128
+    },
+    ["1590339"] = {
+      CreatorId = 1590339,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
     ["1590260"] = {
       CreatorId = 1590260,
       UnitType = "Npc",

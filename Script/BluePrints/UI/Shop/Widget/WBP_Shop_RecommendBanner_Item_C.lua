@@ -66,7 +66,7 @@ function M:StopBannerTimer()
 end
 
 function M:StartBannerTimer()
-  if not self.SwitchBannerList or not next(self.SwitchBannerList) then
+  if not (self.SwitchBannerList and next(self.SwitchBannerList)) or not self.CurrentIndex then
     return
   end
   self:AddTimer(self.SwitchBannerList[self.CurrentIndex].SwitchTime or 10, function()

@@ -1,10 +1,13 @@
 require("UnLua")
 local M = Class({
-  "BluePrints.UI.BP_UIState_C"
+  "BluePrints.UI.BP_EMUserWidget_C",
+  "BluePrints.Common.TimerMgr"
 })
 
 function M:OnListItemObjectSet(Content)
   self:Init(Content)
+  self.Content = Content
+  self.Content.SelfWidget = self
 end
 
 function M:Init(Content)

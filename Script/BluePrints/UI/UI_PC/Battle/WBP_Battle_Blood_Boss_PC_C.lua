@@ -311,6 +311,9 @@ end
 
 function WBP_Battle_Blood_Boss_PC_C:InitChargeBar()
   if self.BossUIType ~= UE4.EBossUIType.ChargeLeft and self.BossUIType ~= UE4.EBossUIType.ChargeRight then
+    if self.Bar_Energy then
+      self.Bar_Energy:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
     return
   end
   self:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
@@ -928,11 +931,6 @@ function WBP_Battle_Blood_Boss_PC_C:InterruptEquipartition()
   if not Res then
     return
   end
-  local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
-  local UIManager = GameInstance:GetGameUIManager()
-  if UIManager then
-    UIManager:ShowUITip(UIConst.Tip_CommonToast, GText("TODO"))
-  end
 end
 
 function WBP_Battle_Blood_Boss_PC_C:SetBossRecoverInfo(PromptTime, ExecuteTime, Percent)
@@ -956,13 +954,6 @@ function WBP_Battle_Blood_Boss_PC_C:InterruptBossRecover()
   end
   if not Res then
     return
-  end
-  if self.Owner and not self.Owner:IsDead() then
-    local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
-    local UIManager = GameInstance:GetGameUIManager()
-    if UIManager then
-      UIManager:ShowUITip(UIConst.Tip_CommonToast, GText("TODO"))
-    end
   end
 end
 

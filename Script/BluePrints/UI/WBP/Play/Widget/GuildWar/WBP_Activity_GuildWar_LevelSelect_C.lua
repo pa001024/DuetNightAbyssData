@@ -24,6 +24,13 @@ local TypeSort = {
 function M:Construct()
   M.Super.Construct(self)
   M.bOpened = true
+  if not ReddotManager.GetTreeNode(GuildWarUtils.ReddotNodeKey) then
+    ReddotManager.AddNodeEx(GuildWarUtils.ReddotNodeKey)
+  end
+  if not self.AddListenerFinish then
+    self.AddListenerFinish = true
+    ReddotManager.AddListenerEx(GuildWarUtils.ReddotNodeKey, self, self.RefreshEntranceReddot)
+  end
   self.Btn_Start:SetText(GText("DUNGEONSINGLE"))
   self.Btn_Start:BindEventOnClicked(self, self.OnClickSolo)
   self.Btn_Ranking:BindEventOnClicked(self, self.OpenGuildWarRank)
@@ -59,7 +66,6 @@ function M:Construct()
   self.Gamepad = UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad
   self.FocusTypeName = nil
   self.Panel_Details_Buff:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-  self.Btn_Start:SetText(GText("DUNGEONSINGLE"))
   self.Text_Title_Score:SetText(GText("RaidDungeon_Base_Point"))
   self.Text_Consume:SetText(GText("UI_Armory_Trace_Cost"))
   self.Text_Details_Buff:SetText(GText("UI_Dungeon_More"))
@@ -95,6 +101,7 @@ function M:GetCurrentRaidDungeonList()
   if not Avatar then
     return
   end
+  self.EventId = self.RaidSeasons.EventId
   local targetType = 0
   if self.RaidSeasons:IsPreRaidTime() then
     targetType = 1
@@ -772,9 +779,29 @@ function M:InitMonsterWeakness(DungeonId)
   end
 end
 
+function M:EnsureOptionalPatchDownloaded(DungeonId)
+  local PatchCond = DataMgr.DungeonPatchCondition and DataMgr.DungeonPatchCondition[DungeonId]
+  local NecessaryPatch = PatchCond and PatchCond.NecessaryPatch
+  if not NecessaryPatch or 0 == #NecessaryPatch then
+    return true
+  end
+  local HotUpdateSubsystem = UE4.USubsystemBlueprintLibrary.GetGameInstanceSubsystem(self, UE4.UHotUpdateSubsystem)
+  if not HotUpdateSubsystem then
+    return true
+  end
+  if NecessaryPatch and not HotUpdateSubsystem:IsAllPatchOptionalSignsDownloaded(NecessaryPatch) then
+    UIManager(self):LoadUINew("OptionalPatch", NecessaryPatch)
+    return false
+  end
+  return true
+end
+
 function M:OnClickSolo()
   if not self.CurSelectedDungeonId then
     DebugPrint("SL CurSelectedDungeonId is nil")
+    return
+  end
+  if not self:EnsureOptionalPatchDownloaded(self.CurSelectedDungeonId) then
     return
   end
   if not self:CheckDungeonCondition(self.CurSelectedDungeonId) then
@@ -1311,6 +1338,34 @@ end
 
 function M:DisableEscOnDungeonLoading()
   self.DisableEsc = true
+end
+
+function M:RefreshEntranceReddot()
+  if not GuildWarUtils.IsRaidTime() then
+    return
+  end
+  if not self.EventId then
+    local RaidSeasons = self:GetRaidSeasons()
+    if not RaidSeasons then
+      DebugPrint("self.RaidSeasons 不存在")
+      return
+    end
+    local Avatar = GWorld:GetAvatar()
+    if not Avatar then
+      return
+    end
+    self.EventId = RaidSeasons.EventId
+  end
+  local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(GuildWarUtils.ReddotNodeKey)
+  if not CacheDetail or not CacheDetail[self.EventId] then
+    self.Btn_Start:SetReddotVisibility(UIConst.VisibilityOp.Collapsed)
+    return
+  end
+  if CacheDetail[self.EventId][GuildWarUtils.EntranceCacheKey] then
+    self.Btn_Start:SetReddotVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  else
+    self.Btn_Start:SetReddotVisibility(UIConst.VisibilityOp.Collapsed)
+  end
 end
 
 AssembleComponents(M)

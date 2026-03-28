@@ -3220,31 +3220,31 @@
   },
   {
     "id": 41765,
-    "icon": "FeatheredSnake01",
+    "icon": "FeatheredSnake01_Orange",
     "名称": "Vigueur",
     "版本": "1.3",
     "系列": "de Quetzalcoatl",
     "品质": "紫",
     "极性": "A",
     "属性": "Lumino",
-    "耐受": 15,
+    "耐受": 12,
     "类型": "Personnages",
-    "昂扬": 1.0,
+    "昂扬": 0.36,
     "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité A sont équipés."
   },
   {
     "id": 41766,
-    "icon": "FeatheredSnake01",
+    "icon": "FeatheredSnake01_Orange",
     "名称": "Poursuite",
     "版本": "1.3",
     "系列": "de Quetzalcoatl",
     "品质": "紫",
     "极性": "V",
     "属性": "Lumino",
-    "耐受": 15,
+    "耐受": 12,
     "类型": "Personnages",
-    "追加伤害": 1.0,
-    "效果": "Lorsque au moins 4 Sceaux démoniaques d’affinité V sont équipés, les attaques à l’arme infligent 100.0% de dégâts supplémentaires du même attribut."
+    "技能威力": 0.48,
+    "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité V sont équipés."
   },
   {
     "id": 41801,
@@ -5885,31 +5885,37 @@
   },
   {
     "id": 51765,
-    "icon": "FeatheredSnake01",
+    "icon": "FeatheredSnake01_Orange",
     "名称": "Vigueur",
     "版本": "1.3",
     "系列": "de Quetzalcoatl",
     "品质": "金",
     "极性": "A",
     "属性": "Lumino",
-    "耐受": 15,
+    "耐受": 22,
     "类型": "Personnages",
-    "昂扬": 1.0,
+    "消耗": [
+      51765
+    ],
+    "昂扬": 0.66,
     "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité A sont équipés."
   },
   {
     "id": 51766,
-    "icon": "FeatheredSnake01",
+    "icon": "FeatheredSnake01_Orange",
     "名称": "Poursuite",
     "版本": "1.3",
     "系列": "de Quetzalcoatl",
     "品质": "金",
     "极性": "V",
     "属性": "Lumino",
-    "耐受": 15,
+    "耐受": 22,
     "类型": "Personnages",
-    "追加伤害": 1.0,
-    "效果": "Lorsque au moins 4 Sceaux démoniaques d’affinité V sont équipés, les attaques à l’arme infligent 100.0% de dégâts supplémentaires du même attribut."
+    "消耗": [
+      51766
+    ],
+    "技能威力": 0.88,
+    "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité V sont équipés."
   },
   {
     "id": 51801,
@@ -7306,75 +7312,75 @@
   },
   {
     "id": 56161,
-    "icon": "Changeling01",
+    "icon": "Changeling01_Orange",
     "名称": "Vigueur",
     "版本": "1.3",
     "系列": "du Métamorphe",
     "品质": "金",
     "极性": "D",
     "属性": "Lumino",
-    "耐受": 29,
+    "耐受": 25,
     "类型": "Personnages",
     "消耗": [
       56161
     ],
     "减伤": 0.3,
-    "效果": "Lorsque la Portée de compétence est ≥ 150.0%, votre Vigueur augmente de 100.0%."
+    "效果": "Lorsque la Portée de compétence est ≥ 160.0%, votre Vigueur augmente de 66.0%."
   },
   {
     "id": 56162,
-    "icon": "Siren01",
+    "icon": "Siren01_Orange",
     "名称": "Ailes · Inspiration · Vigueur",
     "版本": "1.3",
     "系列": "de la Sirène",
     "品质": "金",
     "极性": "D",
     "属性": "Lumino",
-    "耐受": 29,
+    "耐受": 45,
     "类型": "Personnages",
     "消耗": [
       56162
     ],
-    "神智": 1.0,
-    "技能效益": 1.0,
-    "减伤": 0.3,
-    "效果": "Lorsque la Portée de compétence est ≥ 150.0%, votre Vigueur augmente de 100.0%."
+    "神智": 1.65,
+    "技能效益": 0.44,
+    "减伤": 0.5,
+    "效果": "Lorsque la Portée de compétence est ≥ 160.0%, votre Vigueur augmente de 66.0%."
   },
   {
     "id": 56163,
-    "icon": "Changeling01",
+    "icon": "Changeling01_Orange",
     "名称": "Concentration",
     "版本": "1.3",
     "系列": "du Métamorphe",
     "品质": "金",
     "极性": "D",
     "属性": "Lumino",
-    "耐受": 29,
+    "耐受": 25,
     "类型": "Personnages",
     "消耗": [
       56163
     ],
     "减伤": 0.3,
-    "效果": "Lorsque la Durée de compétence est ≥ 150.0%, votre Taux CRIT et celui de vos alliés augmentent de 100.0%."
+    "效果": "Lorsque la Durée de compétence est ≥ 200.0%, votre Taux CRIT et celui de vos alliés augmentent de 99.0%."
   },
   {
     "id": 56164,
-    "icon": "Siren01",
+    "icon": "Siren01_Orange",
     "名称": "Ailes · Inspiration · Concentration",
     "版本": "1.3",
     "系列": "de la Sirène",
     "品质": "金",
     "极性": "D",
     "属性": "Lumino",
-    "耐受": 29,
+    "耐受": 45,
     "类型": "Personnages",
     "消耗": [
       56164
     ],
-    "神智": 1.0,
-    "技能效益": 1.0,
-    "减伤": 0.3,
-    "效果": "Lorsque la Durée de compétence est ≥ 150.0%, votre Taux CRIT et celui de vos alliés augmentent de 100.0%."
+    "神智": 1.65,
+    "技能效益": 0.44,
+    "减伤": 0.5,
+    "效果": "Lorsque la Durée de compétence est ≥ 200.0%, votre Taux CRIT et celui de vos alliés augmentent de 99.0%."
   },
   {
     "id": 101001,
@@ -7733,7 +7739,7 @@
   {
     "id": 103003,
     "icon": "Fenrir01",
-    "名称": "极速切割",
+    "名称": "Entaille rugissante",
     "版本": "1.3",
     "系列": "de Fenrir",
     "品质": "紫",
@@ -7741,12 +7747,49 @@
     "耐受": 25,
     "类型": "Armes de mêlée",
     "攻击范围": 0.8,
-    "效果": "Modifie l’Attaque normale de l’Espadon : invoque des engrenages tournoyants qui assènent une volée de coups. Inflige 100 % de dégâts supplémentaires par rapport à l’attaque de base.",
+    "效果": "Modifie l’Attaque normale de l’Espadon : les attaques normales de l’espadon gagnent en puissance et permettent d’enchaîner les coups à l’aide d’engrenages. Inflige 100 % de dégâts supplémentaires par rapport à l’attaque de base.",
     "技能替换": {
       "1030101": {
         "id": 1030301,
         "名称": "普通攻击",
-        "类型": "武器伤害"
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts du 1ᵉʳ coup",
+            "值": 0.4,
+            "格式": "{%}×3",
+            "削韧": 15,
+            "卡肉": 0.07,
+            "取消": 0.2667,
+            "连段": 0.6
+          },
+          {
+            "名称": "Dégâts du 2ᵉ coup",
+            "值": 0.5,
+            "格式": "{%}×3",
+            "削韧": 20,
+            "卡肉": 0.07,
+            "取消": 0.2667,
+            "连段": 0.6667
+          },
+          {
+            "名称": "Dégâts du 3ᵉ coup",
+            "值": 0.7,
+            "格式": "{%}×5",
+            "削韧": 25,
+            "卡肉": 0.07,
+            "取消": 0.4667,
+            "连段": 1.5
+          },
+          {
+            "名称": "Dégâts du 4ᵉ coup",
+            "值": 3.4,
+            "削韧": 80,
+            "卡肉": 0.07,
+            "取消": 0.6689,
+            "连段": 1.5687
+          }
+        ]
       }
     }
   },
@@ -7911,15 +7954,20 @@
   },
   {
     "id": 150401,
-    "icon": "Fenrir01",
+    "icon": "Suyi",
     "名称": "Drone de Su Yi : Canon détonateur",
-    "版本": "99.9",
+    "版本": "1.3",
     "系列": "Composant de Su Yi",
     "品质": "金",
-    "极性": "V",
-    "耐受": -4,
-    "类型": "Arme de Consonance à distance",
-    "效果": "Modifie l’Attaque chargée du Katana : après avoir touché un ennemi, vous bondissez puis effectuez une attaque plongeante infligeant plusieurs coups aux ennemis proches. Les dégâts sont augmentés de 100 % par rapport à l’attaque de base."
+    "极性": "O",
+    "耐受": 27,
+    "类型": "Personnages",
+    "消耗": [
+      51961,
+      51962
+    ],
+    "技能威力": 0.55,
+    "效果": "改变[歼星模式]的远程攻击招式，发射追踪炮弹。"
   },
   {
     "id": 202003,

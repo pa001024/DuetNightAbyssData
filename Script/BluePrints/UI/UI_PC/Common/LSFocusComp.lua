@@ -1,17 +1,18 @@
 local Component = {}
 
 function Component:AddLSFocusTarget(KeyImg, WidgetOrGroup, OverriddenKeyName, bSingleWidget)
-  if not self.Initialized then
+  if not self.LSInitialized then
     self:BindInputEventForLSComp()
+    self:InitKeyMaps()
+    self.LSInitialized = true
   end
   local KeyName = OverriddenKeyName or "LS"
   self:InitGamePadImgForLSComp(KeyImg, KeyName)
   local GamePadKey = Const.ShortKeyToGamePadKey[KeyName]
   if not WidgetOrGroup then
+    DebugPrint(WarningTag, "LSFocusComp::AddLSFocusTarget, 传入的控件无效, UI名:", self.GetName and self:GetName())
     return
   end
-  self.GroupWidgets = self.GroupWidgets or {}
-  self.SingleWidget = self.SingleWidget or {}
   if bSingleWidget then
     local Widget = WidgetOrGroup
     self.SingleWidget[GamePadKey] = {KeyImg = KeyImg, Widget = Widget}
@@ -47,6 +48,13 @@ function Component:AddLSFocusTarget(KeyImg, WidgetOrGroup, OverriddenKeyName, bS
     end
   end
   self:RefreshOpInfoByInputDeviceForLSComp(self.GameInputModeSubsystem:GetCurrentInputType())
+end
+
+function Component:InitKeyMaps()
+  if not self.LSInitialized then
+    self.GroupWidgets = self.GroupWidgets or {}
+    self.SingleWidget = self.SingleWidget or {}
+  end
 end
 
 function Component:InitGamePadImgForLSComp(KeyImg, KeyName)
@@ -91,8 +99,7 @@ function Component:Destruct()
 end
 
 function Component:RemoveFocusTarget(KeyName)
-  self.SingleWidget = self.SingleWidget or {}
-  self.GroupWidgets = self.GroupWidgets or {}
+  self:InitKeyMaps()
   local GamePadKey = Const.ShortKeyToGamePadKey[KeyName]
   if self.SingleWidget[GamePadKey] then
     self.SingleWidget[GamePadKey] = nil
@@ -108,6 +115,7 @@ function Component:RefreshOpInfoByInputDeviceForLSComp(CurInputDevice, CurGamepa
   if CurInputDevice == ECommonInputType.Touch then
     return
   end
+  self:InitKeyMaps()
   self.CurInputDeviceType = CurInputDevice
   if self.CurInputDeviceType ~= ECommonInputType.Gamepad then
     self.CurrentFocusKey = nil
@@ -134,6 +142,7 @@ function Component:OnKeyDownForLSComp(MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   local IsEventHandled = false
+  self:InitKeyMaps()
   if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) then
     if "Gamepad_FaceButton_Right" ~= InKeyName then
       if self:EnterLSMode(InKeyName) then
@@ -144,11 +153,6 @@ function Component:OnKeyDownForLSComp(MyGeometry, InKeyEvent)
     end
   end
   return IsEventHandled
-end
-
-function Component:OnKeyUpForLSComp(MyGeometry, InKeyEvent)
-  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
-  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
 end
 
 function Component:FocusOnWidget(TargetWidget, FocusKey, bSingleWidget)

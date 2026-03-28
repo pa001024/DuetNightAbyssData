@@ -621,16 +621,14 @@ function M:OnGoToShop()
     CostType = ShopItemData.PriceType
     CostNum = ShopItemData.Price
   end
-  UIManager(self):ShowCommonPopupUI(100290, {
+  UIManager(self):LoadUINew("ShopTargetPay", {
     CostNum = CostNum,
     CostType = CostType,
     RightCallbackObj = self,
     CallbackInfo = {
       Func = self.OnRechargeCallback,
       Obj = self
-    },
-    LeftGamepadKey = Const.GamepadFaceButtonUp,
-    ShowBKeyClose = true
+    }
   }, self)
 end
 

@@ -8,8 +8,8 @@ local M = Class({
 
 function M:Construct()
   self:AddInputMethodChangedListen()
+  self.Group_Share:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self.Btn_Back:SetText(GText("UI_BACK"))
-  self.Btn_Back:SetDefaultGamePadImg(DataMgr.KeyboardText[UIConst.GamePadKey.FaceButtonRight].KeyText)
   self.Btn_Back:BindEventOnClicked(self, self.PlayOutAnim)
   
   function self.Btn_Back.SoundFunc()
@@ -33,6 +33,7 @@ function M:Construct()
   end
   
   self.Text_ExtrasTitle:SetText(GText("GACHA_BONUS"))
+  self.Text_ItemTitle:SetText(GText("UI_Gacha_GetItem_Title"))
   self.Key_GamePad03:CreateGamepadKey(DataMgr.KeyboardText[UIConst.GamePadKey.SpecialRight].KeyText)
   self.KeyImg_GamePad:CreateGamepadKey(DataMgr.KeyboardText[UIConst.GamePadKey.RightThumb].KeyText)
   self.Key_GamePad02:CreateCommonKey({
@@ -47,7 +48,7 @@ function M:Construct()
 end
 
 function M:Init(...)
-  self.RewardLst, self.RebateData, self.GachaId, self.ShowSkinType, self.ShowSkinId, self.Parent, self.OnClosedFun = ...
+  self.RewardLst, self.RebateData, self.GachaId, self.Parent, self.OnClosedFun = ...
   self.Parent.CantClick = false
   self.CantClick = false
   self.bSharePage = false
@@ -77,17 +78,24 @@ function M:Init(...)
   end)
   self.bSingle = #self.RewardLst == GachaCommon.GachaOneResult
   self:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  self.WS_Icon:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self:SetIsDealWithVirtualAccept(false)
   self:BlockAllUIInput(true, "SP_DisplayOnly")
-  AudioManager(self):PlayUISound(self, "event:/ui/common/gacha_result_show", nil, nil)
-  self:PlayAnimation(self.In)
   local GameInputModeSubsystem = UIManager(self):GetGameInputModeSubsystem(self)
   GameInputModeSubsystem:SetNavigateWidgetOpacity(0)
+  self.bHasSkin = false
+  self.bHasPrism = false
   self:InitRewardList()
   self:RefreshResourceBar()
-  self.Group_Share:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self:RefreshGachaResInfo()
-  local GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(GWorld.GameInstance)
+  if self.bHasSkin then
+    AudioManager(self):PlayUISound(self, "event:/ui/common/gacha_get_sp_item", nil, nil)
+  elseif self.bHasPrism then
+    AudioManager(self):PlayUISound(self, "event:/ui/common/gacha_get_sp_prism", nil, nil)
+  else
+    AudioManager(self):PlayUISound(self, "event:/ui/common/gacha_result_show", nil, nil)
+  end
+  self:PlayAnimation(self.In)
   self:OnUpdateUIStyleByInputTypeChange(GameInputModeSubsystem:GetCurrentInputType(), GameInputModeSubsystem:GetCurrentGamepadName())
 end
 
@@ -110,7 +118,7 @@ function M:InitRewardList()
         Id = ItemId,
         Icon = LoadObject(DataMgr.Resource[ItemId].Icon),
         ItemType = "Resource",
-        UIName = "GahcaMain",
+        UIName = "GachaMain",
         IsShowDetails = true,
         MenuPlacement = EMenuPlacement.MenuPlacement_MenuRight
       })
@@ -126,24 +134,12 @@ function M:InitRewardList()
       local Data = self.RewardLst[1]
       local ItemType = GachaCommon.GachaItemTypeMap[Data.Sign]
       local ItemData = DataMgr[ItemType][Data.ResultId]
-      local bNew, bConvert = self:IsNewOrConvertItem(ItemType, Data.ResultId, Data.Count)
+      local bNew, bConvert = self:IsNewOrConvertItem(ItemType, Data.ResultId)
       assert(ItemData, "未找到该次抽卡奖励的信息:Id:" .. Data.ResultId .. " Type:" .. ItemType)
-      local Content = NewObject(UIUtils.GetCommonItemContentClass())
-      Content.Id = Data.ResultId
-      Content.Icon = ItemUtils.GetItemIconPath(Data.ResultId, ItemType)
-      Content.Count = Data.Count
-      Content.Start = Data.Star
-      Content.ParentWidget = self
-      Content.ItemType = ItemType
-      Content.Rarity = ItemData.Rarity or ItemData[ItemType .. "Rarity"] or 1
-      Content.bNew = bNew
-      Content.bDisableCommonClick = bConvert
-      Content.IsShowDetails = not bConvert
-      Content.bConvert = bConvert
-      if Content.bConvert then
-        Content.NotInteractive = true
-      end
-      Content.bNeedFocus = true
+      local Content = self:CreateItemContent(Data, ItemType, ItemData, bNew, bConvert, {
+        bNeedFocus = true,
+        Start = Data.Star
+      })
       self.Single_Item:Init(Content)
       self.Btn_Again:SetText(GText("UI_SkinGacha_Again_One"))
     else
@@ -154,26 +150,12 @@ function M:InitRewardList()
           local ItemWidget = self["Item_" .. i]
           local ItemType = GachaCommon.GachaItemTypeMap[Data.Sign]
           local ItemData = DataMgr[ItemType][Data.ResultId]
-          local bNew, bConvert = self:IsNewOrConvertItem(ItemType, Data.ResultId, Data.Count)
+          local bNew, bConvert = self:IsNewOrConvertItem(ItemType, Data.ResultId)
           assert(ItemData, "未找到该次抽卡奖励的信息:Id:" .. Data.ResultId .. " Type:" .. ItemType)
-          local Content = NewObject(UIUtils.GetCommonItemContentClass())
-          Content.Id = Data.ResultId
-          Content.Icon = ItemUtils.GetItemIconPath(Data.ResultId, ItemType)
-          Content.Count = Data.Count
-          Content.ParentWidget = self
-          Content.ItemType = ItemType
-          Content.Rarity = ItemData.Rarity or ItemData[ItemType .. "Rarity"] or 1
-          Content.bNew = bNew
-          Content.bDisableCommonClick = bConvert
-          Content.IsShowDetails = not bConvert
-          Content.bConvert = bConvert
-          if Content.bConvert then
-            Content.NotInteractive = true
-          end
-          if 1 == i then
-            Content.bNeedFocus = true
-          end
-          Content.DelayTime = self.IntervalTime * (1 - i // 6)
+          local Content = self:CreateItemContent(Data, ItemType, ItemData, bNew, bConvert, {
+            bNeedFocus = 1 == i,
+            DelayTime = self.IntervalTime * (1 - i // 6)
+          })
           ItemWidget:Init(Content)
         end)
       end
@@ -206,33 +188,30 @@ function M:InitRewardList()
       end
     end
   end
-  if self.ShowSkinType then
-    local IconObj
-    local UpItemId, UpItemType = GachaModel:GetSkinGachaUpInfo(self.GachaId)
-    local ShowSkinData = DataMgr[self.ShowSkinType][self.ShowSkinId]
-    if UpItemId and self.ShowSkinType == UpItemType and self.ShowSkinId == UpItemId then
-      assert(GachaInfo.RewardUpDisplay, "未找到该次抽卡特殊展示奖励的信息:Id:" .. self.ShowSkinId .. " Type:" .. self.ShowSkinType)
-      IconObj = LoadObject(GachaInfo.RewardUpDisplay)
-    else
-      assert(ShowSkinData, "未找到该次抽卡特殊展示奖励的信息:Id:" .. self.ShowSkinId .. " Type:" .. self.ShowSkinType)
-      IconObj = LoadObject(ShowSkinData.BigIcon)
-    end
-    assert(IconObj, "未找到对应皮肤的BigIcon信息:Id:" .. self.ShowSkinId .. " Type:" .. self.ShowSkinType)
-    self.TypeTag:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-    if self.ShowSkinType == "Skin" then
-      self.WS_Icon:SetActiveWidgetIndex(0)
-      self.Image_AvatarIcon:SetBrushResourceObject(IconObj)
-    elseif self.ShowSkinType == "WeaponSkin" then
-      self.WS_Icon:SetActiveWidgetIndex(1)
-      self.Image_WeaponIcon:SetBrushResourceObject(IconObj)
-    else
-      self.TypeTag:SetVisibility(ESlateVisibility.Collapsed)
-      self.WS_Icon:SetActiveWidgetIndex(2)
-      self.Image_Icon:SetBrushResourceObject(IconObj)
-    end
-    self.Text_SkinName:SetText(GText(ShowSkinData.Name or ShowSkinData[self.ShowSkinType .. "Name"]))
-    self.Com_QualityTag:Init(ShowSkinData.Rarity)
+  self.Group_SkinInfo:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self:SetGachaResBG(GachaInfo.Star5ItemId)
+end
+
+function M:CreateItemContent(Data, ItemType, ItemData, bNew, bConvert, Options)
+  Options = Options or {}
+  local Content = NewObject(UIUtils.GetCommonItemContentClass())
+  Content.Id = Data.ResultId
+  Content.Icon = ItemUtils.GetItemIconPath(Data.ResultId, ItemType)
+  Content.Count = Data.Count
+  Content.ParentWidget = self
+  Content.ItemType = ItemType
+  Content.Rarity = ItemData.Rarity or ItemData[ItemType .. "Rarity"] or 1
+  Content.bNew = bNew
+  Content.bDisableCommonClick = bConvert
+  Content.IsShowDetails = not bConvert
+  Content.bConvert = bConvert
+  if bConvert then
+    Content.NotInteractive = true
   end
+  Content.bNeedFocus = Options.bNeedFocus or false
+  Content.DelayTime = Options.DelayTime
+  Content.Start = Options.Start
+  return Content
 end
 
 function M:IsNewOrConvertItem(Type, Id)
@@ -312,62 +291,13 @@ function M:RefreshGachaResInfo()
     end
   end
   if self.bSingle then
-    GachaTimes = GachaData.GachaTimes
-    self.Panel_TimeLimit:SetVisibility(ESlateVisibility.Collapsed)
-    if TimeLimitResourceCount > 0 then
-      self.Com_CostAgain:InitContent({
-        ResourceId = TimeLimitResourceId,
-        bShowDenominator = false,
-        Numerator = GachaTimes,
-        IsGamePadIconVisible = false,
-        NotInteractive = true
-      })
-    else
-      self.Com_CostAgain:InitContent({
-        ResourceId = ShowResourceId,
-        bShowDenominator = false,
-        Numerator = GachaTimes,
-        IsGamePadIconVisible = false,
-        NotInteractive = true
-      })
-    end
+    GachaModel:UpdateGachaBtnPrice(self.Btn_Again, GachaData.GachaTimes, TimeLimitResourceCount, ShowResourceId, TimeLimitResourceId)
+  elseif TimeLimitResourceCount >= GachaData.GachaCostNum10 then
+    GachaModel:UpdateGachaBtnPrice(self.Btn_Again, GachaData.GachaCostNum10, TimeLimitResourceCount, ShowResourceId, TimeLimitResourceId)
+  elseif TimeLimitResourceCount > 0 and TimeLimitResourceCount + ShowResourceCount >= GachaData.GachaCostNum10 then
+    GachaModel:UpdateGachaBtnComplex(self.Btn_Again, GachaData.GachaCostNum10, TimeLimitResourceCount, ShowResourceCount, ShowResourceId, TimeLimitResourceId)
   else
-    GachaTimes = GachaData.GachaCostNum10
-    if TimeLimitResourceCount >= GachaData.GachaCostNum10 then
-      self.Panel_TimeLimit:SetVisibility(ESlateVisibility.Collapsed)
-      self.Com_CostAgain:InitContent({
-        ResourceId = TimeLimitResourceId,
-        bShowDenominator = false,
-        Numerator = GachaTimes,
-        IsGamePadIconVisible = false,
-        NotInteractive = true
-      })
-    elseif TimeLimitResourceCount > 0 and TimeLimitResourceCount + ShowResourceCount >= GachaData.GachaCostNum10 then
-      self.Com_CostAgain:InitContent({
-        ResourceId = ShowResourceId,
-        bShowDenominator = false,
-        Numerator = GachaTimes - TimeLimitResourceCount,
-        IsGamePadIconVisible = false,
-        NotInteractive = true
-      })
-      self.Panel_TimeLimit:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-      self.Com_CostAgainOther:InitContent({
-        ResourceId = TimeLimitResourceId,
-        bShowDenominator = false,
-        Numerator = TimeLimitResourceCount,
-        IsGamePadIconVisible = false,
-        NotInteractive = true
-      })
-    else
-      self.Panel_TimeLimit:SetVisibility(ESlateVisibility.Collapsed)
-      self.Com_CostAgain:InitContent({
-        ResourceId = ShowResourceId,
-        bShowDenominator = false,
-        Numerator = GachaTimes,
-        IsGamePadIconVisible = false,
-        NotInteractive = true
-      })
-    end
+    GachaModel:UpdateGachaBtnPrice(self.Btn_Again, GachaData.GachaCostNum10, TimeLimitResourceCount, ShowResourceId, TimeLimitResourceId)
   end
 end
 
@@ -408,8 +338,6 @@ function M:OnShareCallback()
   self.CantClick = false
   self.Group_Top:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self.Down_Info:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-  if UIUtils.UtilsGetCurrentInputType() ~= ECommonInputType.Gamepad or self.CanFocusChangeItem then
-  end
   local GameInputModeSubsystem = UIManager(self):GetGameInputModeSubsystem(self)
   GameInputModeSubsystem:SetNavigateWidgetOpacity(1)
 end
@@ -523,6 +451,124 @@ end
 function M:CloseSelf()
   self:BlockAllUIInput(false)
   self:SetVisibility(UE4.ESlateVisibility.Collapsed)
+end
+
+function M:LoadAvatarSpineWidget()
+  local ShowSkinData = DataMgr[self.ShowSkinType][self.ShowSkinId]
+  local SkinName = ShowSkinData.Name or ShowSkinData.SkinName
+  self.Text_SkinName:SetText(GText(SkinName))
+  self.Com_QualityTag:Init(ShowSkinData.Rarity)
+  self:UpdateSkinNameStyleByRarity(ShowSkinData.Rarity)
+  self.Group_SkinInfo:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  if self.ShowSkinType == "WeaponSkin" then
+    local IconObj = LoadObject(ShowSkinData.BigIcon)
+    self.WS_Icon:SetActiveWidgetIndex(1)
+    self.Image_WeaponIcon:SetBrushResourceObject(IconObj)
+    return
+  end
+  local AvatarWidgetPath = ShowSkinData and ShowSkinData.SkinSpine
+  self.Avatar:ClearChildren()
+  self.WS_Icon:SetActiveWidgetIndex(0)
+  if AvatarWidgetPath then
+    local AvatarWidget = UIManager(self):CreateWidget(AvatarWidgetPath, false)
+    if AvatarWidget and AvatarWidget.In then
+      AvatarWidget:PlayAnimation(AvatarWidget.In)
+    end
+    if AvatarWidget and AvatarWidget.Loop then
+      AvatarWidget:PlayAnimation(AvatarWidget.Loop, 0, 0)
+    end
+    local Slot = self.Avatar:AddChild(AvatarWidget)
+    if Slot then
+      Slot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
+      Slot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
+    end
+  end
+end
+
+function M:UpdateSkinNameStyleByRarity(Rarity)
+  if not self.Text_SkinName then
+    return
+  end
+  if not Rarity or Rarity < 1 or Rarity > 6 then
+    DebugPrint("UpdateSkinNameStyleByRarity: Invalid Rarity")
+    return
+  end
+  local FontColor, Font, ImageLight
+  if 6 == Rarity then
+    FontColor = self.Com_QualityTag.FontColor_Red
+    Font = self.Com_QualityTag.Font_Red
+    ImageLight = self.Light_Red
+  elseif 5 == Rarity then
+    FontColor = self.Com_QualityTag.FontColor_Gold
+    Font = self.Com_QualityTag.Font_Gold
+    ImageLight = self.Light_Gold
+  elseif 4 == Rarity then
+    FontColor = self.Com_QualityTag.FontColor_Purple
+    Font = self.Com_QualityTag.Font_Purple
+    ImageLight = self.Light_Purple
+  elseif 3 == Rarity then
+    FontColor = self.Com_QualityTag.FontColor_Blue
+    Font = self.Com_QualityTag.Font_Blue
+    ImageLight = self.Light_Blue
+  end
+  if Font then
+    self.Text_SkinName:SetFont(Font)
+  end
+  if FontColor then
+    self.Text_SkinName:SetColorAndOpacity(FontColor)
+  end
+  if ImageLight then
+    self.Img_TryOutBG:SetColorAndOpacity(ImageLight)
+  end
+end
+
+function M:UpdateBtnAgainIcon(ResourceId, CostNum)
+  if not self.Btn_Again or not ResourceId then
+    return
+  end
+  if self.Btn_Again.Icon_Currency then
+    local IconPath = ItemUtils.GetItemIconPath(ResourceId, "Resource")
+    if IconPath then
+      self.Btn_Again.Icon_Currency.Icon = IconPath
+      self.Btn_Again.Icon_Currency:SetIcon()
+    end
+  end
+  if self.Btn_Again.Text_Price then
+    self.Btn_Again.Text_Price:SetText(tostring(CostNum))
+  end
+end
+
+function M:SetGachaResBG()
+  local BgPath = GachaCommon.BgWidget[1]
+  local Seq = 0
+  for i, RewardData in ipairs(self.RewardLst) do
+    if GachaCommon.GachaItemTypeMap[RewardData.Sign] == "Skin" or GachaCommon.GachaItemTypeMap[RewardData.Sign] == "WeaponSkin" then
+      self.ShowSkinId = RewardData.ResultId
+      self.ShowSkinType = GachaCommon.GachaItemTypeMap[RewardData.Sign]
+      self:LoadAvatarSpineWidget()
+      self.bHasSkin = true
+      return
+    elseif DataMgr.HighLightResult2Item[RewardData.Sign] and DataMgr.HighLightResult2Item[RewardData.Sign][RewardData.ResultId] and DataMgr.HighLightResult2Item[RewardData.Sign][RewardData.ResultId][RewardData.Count] and Seq < DataMgr.HighLightResult2Item[RewardData.Sign][RewardData.ResultId][RewardData.Count].Seq then
+      BgPath = DataMgr.HighLightResult2Item[RewardData.Sign][RewardData.ResultId][RewardData.Count].Path
+      Seq = DataMgr.HighLightResult2Item[RewardData.Sign][RewardData.ResultId][RewardData.Count].Seq
+      self.bHasPrism = true
+    end
+  end
+  self.WS_Icon:SetActiveWidgetIndex(2)
+  self.Icon:ClearChildren()
+  local SubWidget = UIManager(self):CreateWidget(BgPath, false)
+  if SubWidget and SubWidget.In then
+    SubWidget:PlayAnimation(SubWidget.In)
+  end
+  if SubWidget and SubWidget.Loop then
+    SubWidget:PlayAnimation(SubWidget.Loop, 0, 0)
+  end
+  SubWidget:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  local Slot = self.Icon:AddChild(SubWidget)
+  if Slot then
+    Slot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
+    Slot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
+  end
 end
 
 return M

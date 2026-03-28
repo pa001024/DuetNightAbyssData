@@ -1396,33 +1396,27 @@ function UIUtils.FinalOpenSystem(SystemUIName, IsEscMenu, NeedAnimation, ...)
   local Params = {
     ...
   }
-  if "AnnouncementMain" == SystemUIName then
-    UIUtils.FinalOpenSystemInternal(SystemUIName, IsEscMenu, NeedAnimation, table.unpack(Params))
-  else
-    GameFlowUtils:AddFlow("OpenSystemUI", {
-      GWorld.GameInstance,
-      function(_, Flow)
-        local UIManager = GWorld.GameInstance:GetGameUIManager()
-        local ExistUIObj = UIManager:GetUI(SystemUIName)
-        if IsValid(ExistUIObj) then
-          DebugPrint("JLY 系统ui重复打开，请检查逻辑, Name is ", SystemUIName)
-          GameFlowUtils:RemoveFlow(Flow)
-        else
-          UIUtils.FinalOpenSystemInternal(SystemUIName, IsEscMenu, NeedAnimation, table.unpack(Params))
-          UIManager:AddFlow(SystemUIName, Flow)
-        end
+  GameFlowUtils:AddFlow("OpenSystemUI", {
+    GWorld.GameInstance,
+    function(_, Flow)
+      local UIManager = GWorld.GameInstance:GetGameUIManager()
+      local ExistUIObj = UIManager:GetUI(SystemUIName)
+      if IsValid(ExistUIObj) then
+        DebugPrint("JLY 系统ui重复打开，请检查逻辑, Name is ", SystemUIName)
+        GameFlowUtils:RemoveFlow(Flow)
+      else
+        UIUtils.FinalOpenSystemInternal(SystemUIName, IsEscMenu, NeedAnimation, table.unpack(Params))
+        UIManager:AddFlow(SystemUIName, Flow)
       end
-    })
-  end
+    end
+  })
 end
 
 function UIUtils.FinalOpenSystemInternal(SystemUIName, IsEscMenu, NeedAnimation, ...)
   local UIManager = GWorld.GameInstance:GetGameUIManager()
   if IsEscMenu then
     if "AnnouncementMain" == SystemUIName then
-      local AnnouncementUtils = require("BluePrints.UI.WBP.Announcement.AnnounceUtils")
-      local MenuUI = UIManager:GetUI(UIConst.MenuWorld)
-      AnnouncementUtils:OpenAnnouncementMain(AnnounceCommon.ShowTag.InGame, nil, nil, MenuUI)
+      UIManager:LoadUINew(SystemUIName, nil, nil, AnnounceCommon.ShowTag.InGame, ...)
       return
     end
     UIManager:LoadUINew(SystemUIName, ...)
@@ -2122,6 +2116,35 @@ function UIUtils.NumberToChinese(Num)
     "九"
   }
   return ChineseNums[Num + 1]
+end
+
+function UIUtils.RollingNumberEffect(UIState, TextWidget, OrigNum, AddNum, UpdateDestTotalTime, IntervalTime, EndCallBackObj, EndCallback)
+  TextWidget:SetText(Utils.FormatNumber(OrigNum, false))
+  UpdateDestTotalTime = UpdateDestTotalTime or 1
+  IntervalTime = IntervalTime or 0.01
+  local DestNum = OrigNum + AddNum
+  local IsDone = false
+  local AddNumPerTime = AddNum / (UpdateDestTotalTime / IntervalTime)
+  UIState:AddTimer(IntervalTime, function()
+    if IsDone then
+      UIState:RemoveTimer("UpdateNum")
+      if EndCallback then
+        EndCallback(EndCallBackObj)
+      end
+      return
+    end
+    OrigNum = OrigNum + AddNumPerTime
+    if AddNumPerTime < 0 then
+      OrigNum = math.max(OrigNum, DestNum)
+    else
+      OrigNum = math.min(OrigNum, DestNum)
+    end
+    if OrigNum == DestNum then
+      IsDone = true
+    end
+    TextWidget:SetText(Utils.FormatNumber(OrigNum, false))
+  end, true, 0, "UpdateNum", true)
+  return DestNum
 end
 
 function UIUtils.GenAbyssEntryDesc(Desc, EntryConf, BaseLevel, ExpectLevel)
@@ -2979,17 +3002,6 @@ function UIUtils.RefreshFeinaRewardReddot()
   end
 end
 
-function UIUtils.TryWarpTextInJap(TextBlock1, TextBlock2)
-  if CommonConst.SystemLanguage == CommonConst.SystemLanguages.JP then
-    if TextBlock1 then
-      TextBlock1:SetJustification(ETextJustify.Left)
-    end
-    if TextBlock2 then
-      TextBlock2:SetJustification(ETextJustify.Left)
-    end
-  end
-end
-
 function UIUtils.ShouldDisplayItem(DataType, Id)
   return CommonUtils.IsCurrentTimeRealease(DataType, Id) and CommonUtils.IsCurrentVersionRealease(DataType, Id)
 end
@@ -2997,6 +3009,10 @@ end
 function UIUtils.CanOpenSkinPreview(ItemType, TypeId)
   if UIConst.SkinPreviewItemTypes[ItemType] then
     return true
+  end
+  if "WeaponAccessory" == ItemType then
+    local WeaponAccessoryData = DataMgr.WeaponAccessory[TypeId]
+    return WeaponAccessoryData and WeaponAccessoryData.StanceFXType == "Accessory" or false
   end
   if "Resource" == ItemType then
     local ResData = DataMgr.Resource[TypeId]

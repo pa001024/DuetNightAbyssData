@@ -3,7 +3,7 @@ local SkillUtils = require("Utils.SkillUtils")
 local CommonUtils = require("Utils.CommonUtils")
 local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
 local M = Class({
-  "BluePrints.UI.BP_EMUserWidget_C"
+  "BluePrints.UI.BP_UIState_C"
 })
 
 function M:Construct()
@@ -11,10 +11,12 @@ function M:Construct()
   self.Pet_AttTips_List02.SkillName:SetText(GText("UI_Armory_Pet_Passive"))
   self.Pet_AttTips_List01.SkillCD:SetText(GText("UI_CD"))
   self.Pet_AttTips_List02.SkillCD:SetText(GText("UI_CD"))
+  self.Pet_AttTips_List02.Skill_Key:SetVisibility(ESlateVisibility.Collapsed)
   self.ParentWidget.Text_PetAlive:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
 end
 
 function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
+  self:AddInputMethodChangedListen()
   local PetData = DataMgr.Pet[ItemId]
   local BattlePetData = DataMgr.BattlePet[PetData.BattlePetId]
   local Avatar = GWorld:GetAvatar()
@@ -29,6 +31,11 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
     if PetServerData.Name ~= "" then
       self.ParentWidget.Text_ItemName:SetText(PetServerData.Name)
     end
+  end
+  local SkillBtnDesc
+  local SkillData = DataMgr.Skill[DataMgr.BattlePet[PetData.BattlePetId].SupportSkillId]
+  if SkillData and SkillData[1] and SkillData[1][0] then
+    self.SkillBtnDesc = GText(SkillData[1][0].SkillBtnDesc)
   end
   self.Pet_AttTips_List01:SetVisibility(ESlateVisibility.Collapsed)
   self.Pet_AttTips_List02:SetVisibility(ESlateVisibility.Collapsed)
@@ -54,6 +61,13 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
     self.ParentWidget.Text_WeaponLevel03:SetText(MaxLevel)
     local SkillId = BattlePetData.SupportSkillId
     local SkillLevel = ArmoryUtils:GetPetSkillLevel(EnhanceLevel)
+    self.Pet_AttTips_List01.Num_Level:SetText(SkillLevel)
+    self.Pet_AttTips_List02.Num_Level:SetText(SkillLevel)
+    local AdditionalLevel = 0
+    if PetServerData then
+      AdditionalLevel = PetServerData:GetSkillLevelUp()
+    end
+    SkillLevel = SkillLevel + AdditionalLevel
     local SkillDesc = SkillUtils.GetSkillDesc(SkillId, SkillLevel) or ""
     if "" ~= SkillDesc then
       local TextItem = UIManager(self):_CreateWidgetNew("ItemDetailPetTextItem")
@@ -71,6 +85,15 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
       TextItem.Text_PetSkill_Describe:SetText(GText(PassiveEffectDesc))
       self.Pet_AttTips_List02.TextItem:AddChild(TextItem)
       self.Pet_AttTips_List02:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    end
+    if AdditionalLevel and 0 ~= AdditionalLevel then
+      self.Pet_AttTips_List01.Text_Extra:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      self.Pet_AttTips_List02.Text_Extra:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      self.Pet_AttTips_List01.Text_Extra:SetText(string.format(GText("Pet_Affix_LevelAdd"), AdditionalLevel))
+      self.Pet_AttTips_List02.Text_Extra:SetText(string.format(GText("Pet_Affix_LevelAdd"), AdditionalLevel))
+    else
+      self.Pet_AttTips_List01.Text_Extra:SetVisibility(ESlateVisibility.Collapsed)
+      self.Pet_AttTips_List02.Text_Extra:SetVisibility(ESlateVisibility.Collapsed)
     end
     local CD = ""
     if DataMgr.Skill[SkillId] and DataMgr.Skill[SkillId][SkillLevel] then
@@ -107,6 +130,8 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
     end
   end
   self.Text_Pet_Describe:SetText(GText(PetData.IpDes))
+  local GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(GWorld.GameInstance)
+  self:OnUpdateUIStyleByInputTypeChange(GameInputModeSubsystem:GetCurrentInputType(), GameInputModeSubsystem:GetCurrentGamepadName())
 end
 
 function M:SetPetEnhanceLevel(EnhanceLevel, MaxEnhanceLevel)
@@ -122,6 +147,52 @@ function M:SetPetEnhanceLevel(EnhanceLevel, MaxEnhanceLevel)
         StarWidget:SetVisibility(ESlateVisibility.Collapsed)
       end
     end
+  end
+end
+
+function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
+  local KeyInfo = {
+    Desc = self.SkillBtnDesc
+  }
+  local Key = CommonUtils:GetActionMappingKeyName("Skill3")
+  if CurInputDevice == UE4.ECommonInputType.Gamepad then
+    if Key and "" ~= Key then
+      local IconList = UIUtils.GetIconListByActionName("Skill3")
+      if IconList then
+        if #IconList > 1 then
+          KeyInfo.Type = "Add"
+          KeyInfo.KeyInfoList = {}
+          for _, value in ipairs(IconList) do
+            table.insert(KeyInfo.KeyInfoList, {Type = "Img", ImgShortPath = value})
+          end
+          self.Pet_AttTips_List01.Skill_Key:CreateSubKeyDesc(KeyInfo)
+        else
+          KeyInfo.KeyInfoList = {
+            {
+              Type = "Img",
+              ImgShortPath = IconList[1]
+            }
+          }
+          self.Pet_AttTips_List01.Skill_Key:CreateCommonKey(KeyInfo)
+        end
+      end
+      self.Pet_AttTips_List01.Panel_Key:SetVisibility(ESlateVisibility.Visible)
+    else
+      self.Pet_AttTips_List01.Panel_Key:SetVisibility(ESlateVisibility.Collapsed)
+    end
+  else
+    local Text
+    if UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Touch then
+      self.Pet_AttTips_List01.Skill_Key.Key:SetVisibility(ESlateVisibility.Collapsed)
+    else
+      Text = CommonUtils:GetKeyText(Key)
+    end
+    KeyInfo.KeyInfoList = {
+      {Type = "Text", Text = Text}
+    }
+    self.Pet_AttTips_List01.Panel_Key:SetVisibility(ESlateVisibility.Visible)
+    self.Pet_AttTips_List01.Skill_Key:SetVisibility(ESlateVisibility.Visible)
+    self.Pet_AttTips_List01.Skill_Key:CreateCommonKey(KeyInfo)
   end
 end
 

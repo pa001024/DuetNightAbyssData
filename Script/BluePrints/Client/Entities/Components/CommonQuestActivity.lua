@@ -3,12 +3,26 @@ local GuildWarUtils = require("BluePrints.UI.WBP.Activity.Widget.GuildWar.GuildW
 local AprilFoolDayUtils = require("BluePrints.UI.WBP.Activity.Widget.Fool.AprilFoolDayUtils")
 local AutoChessRewardModel = require("BluePrints.UI.AutoChess.WBP_AutoChess_Reward_Model")
 local ActivityUtils = require("BluePrints.UI.WBP.Activity.ActivityUtils")
+local SoloTreasure = require("BluePrints.UI.WBP.SoloTreasure.Widget.WBP_SoloTreasure_Reward_Model")
 local Component = {}
 
 function Component:EnterWorld()
   GuildWarUtils.RefreshQuestReddot(true)
   EventManager:AddEvent(EventID.OnLoginSuccess, self, self.OnLoginSuccess)
   ReturnUtils.RefreshComeBackTaskQuestReddot()
+  if ActivityUtils.CheckEventIsOpen(CommonConst.SoloTreasureEventId, nil, false) then
+    local NeedRefresh = false
+    if DataMgr.EventPortal and DataMgr.EventPortal[CommonConst.SoloTreasureEventId] then
+      local Condition = DataMgr.EventPortal[CommonConst.SoloTreasureEventId].JumpUnlockCondition
+      local Avatar = GWorld:GetAvatar()
+      if Condition and ConditionUtils.CheckCondition(Avatar, Condition) then
+        NeedRefresh = true
+      end
+      if NeedRefresh then
+        SoloTreasure:RefreshReddotInfo(true)
+      end
+    end
+  end
 end
 
 function Component:LeaveWorld()
@@ -78,7 +92,7 @@ function Component:CheckCommonQuestActivityHasRewardToGet(EventId, QuestPhaseId)
   end
 end
 
-function Component:CheckCommonQuestActivityHasFinishRewardToGet(FinishRewardId)
+function Component:CheckCommonQuestActivityHasFinishRewardToGet(FinishRewardId, Count)
   if not FinishRewardId then
     return false
   end
@@ -99,15 +113,25 @@ function Component:CheckCommonQuestActivityHasFinishRewardToGet(FinishRewardId)
     if not CommonQuestActivity then
       return false
     end
-    for _, QuestId in pairs(QuestIds) do
-      if not CommonQuestActivity[QuestId] then
-        return false
+    if Count then
+      local FinishNum = 0
+      for _, QuestId in pairs(QuestIds) do
+        if CommonQuestActivity[QuestId] and CommonQuestActivity[QuestId].Progress >= CommonQuestActivity[QuestId].Target then
+          FinishNum = FinishNum + 1
+        end
       end
-      if CommonQuestActivity[QuestId].Progress < CommonQuestActivity[QuestId].Target then
-        return false
+      return Count <= FinishNum
+    else
+      for _, QuestId in pairs(QuestIds) do
+        if not CommonQuestActivity[QuestId] then
+          return false
+        end
+        if CommonQuestActivity[QuestId].Progress < CommonQuestActivity[QuestId].Target then
+          return false
+        end
       end
+      return true
     end
-    return true
   else
     return false
   end
@@ -117,11 +141,24 @@ function Component:_OnPropChangeCommonQuestActivity(EventIDs, OldValue)
   GuildWarUtils.RefreshQuestReddot()
   AprilFoolDayUtils.RefreshQuestReddot()
   ReturnUtils.RefreshComeBackTaskQuestReddot()
+  if ActivityUtils.CheckEventIsOpen(CommonConst.SoloTreasureEventId, nil, false) then
+    local NeedRefresh = false
+    if DataMgr.EventPortal and DataMgr.EventPortal[CommonConst.SoloTreasureEventId] then
+      local Condition = DataMgr.EventPortal[CommonConst.SoloTreasureEventId].JumpUnlockCondition
+      local Avatar = GWorld:GetAvatar()
+      if Condition and ConditionUtils.CheckCondition(Avatar, Condition) then
+        NeedRefresh = true
+      end
+      if NeedRefresh then
+        SoloTreasure:RefreshReddotInfo()
+      end
+    end
+  end
   if ActivityUtils.CheckEventIsOpen(CommonConst.AutoChessEventId, nil, false) then
     AutoChessRewardModel:RefreshReddotInfo()
   end
   for _, EventId in pairs(EventIDs) do
-    if EventId == CommonConst.AutoChessEventId then
+    if EventId == CommonConst.AutoChessEventId or EventId == CommonConst.SoloTreasureEventId then
       EventManager:FireEvent(EventID.RefreshAcvitityRewardPanel)
     end
   end
@@ -131,6 +168,19 @@ function Component:OnLoginSuccess()
   AprilFoolDayUtils.RefreshQuestReddot(true)
   if ActivityUtils.CheckEventIsOpen(CommonConst.AutoChessEventId, nil, false) then
     AutoChessRewardModel:RefreshReddotInfo(true)
+  end
+  if ActivityUtils.CheckEventIsOpen(CommonConst.SoloTreasureEventId, nil, false) then
+    local NeedRefresh = false
+    if DataMgr.EventPortal and DataMgr.EventPortal[CommonConst.SoloTreasureEventId] then
+      local Condition = DataMgr.EventPortal[CommonConst.SoloTreasureEventId].JumpUnlockCondition
+      local Avatar = GWorld:GetAvatar()
+      if Condition and ConditionUtils.CheckCondition(Avatar, Condition) then
+        NeedRefresh = true
+      end
+      if NeedRefresh then
+        SoloTreasure:RefreshReddotInfo(true)
+      end
+    end
   end
 end
 

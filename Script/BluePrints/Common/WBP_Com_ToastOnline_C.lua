@@ -8,6 +8,7 @@ function M:OnLoaded(...)
   if "In" == Type then
     self:RemoveTimer("OnlineLoop")
     self.Switch_Online:SetActiveWidgetIndex(0)
+    self.WS_Icon:SetActiveWidgetIndex(0)
     self.Text_Toast_In:SetText(GText("UI_OnlineRegion_Enter"))
     if self.In then
       self:UnbindAllFromAnimationFinished(self.In)
@@ -20,14 +21,31 @@ function M:OnLoaded(...)
       AudioManager(self):PlayUISound(self, "event:/ui/common/toast_online", nil, nil)
       self:PlayAnimation(self.In)
     end
-  else
+  elseif "Out" == Type then
     self.Switch_Online:SetActiveWidgetIndex(1)
+    self.WS_Icon:SetActiveWidgetIndex(0)
     self:UnbindAllFromAnimationFinished(self.In)
     self:StopAnimation(self.In)
     AudioManager(self):PlayUISound(self, "event:/ui/common/toast_offline", nil, nil)
     self.Text_Toast_Out:SetText(GText("UI_REGION_EXITONLINE_TIP"))
     self:PlayAnimation(self.In_2)
     self:UpdateTime(Time)
+  else
+    self:RemoveTimer("OnlineLoop")
+    self.Switch_Online:SetActiveWidgetIndex(0)
+    self.Text_Toast_In:SetText(GText("SwitchOnlineRegion"))
+    self.WS_Icon:SetActiveWidgetIndex(1)
+    if self.In then
+      self:UnbindAllFromAnimationFinished(self.In)
+      self:BindToAnimationFinished(self.In, {
+        self,
+        function()
+          self:Close()
+        end
+      })
+      AudioManager(self):PlayUISound(self, "event:/ui/common/toast_online", nil, nil)
+      self:PlayAnimation(self.In)
+    end
   end
 end
 

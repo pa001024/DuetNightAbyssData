@@ -555,5 +555,417 @@
     "manualItemId": null,
     "staticId": 2110174,
     "singleCreate": false
+  },
+  {
+    "id": 2827,
+    "name": "동쪽 교외 낚시 포인트",
+    "icon": "T_Gp_Angling",
+    "pos": [
+      48460,
+      -42660
+    ],
+    "subRegion": 104505,
+    "targetSubRegion": [],
+    "telepointId": 1212,
+    "teleportPointPos": 4,
+    "teleportSubRegion": 104505,
+    "unlockConditionId": 20021510,
+    "manualItemId": 243010,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2828,
+    "name": "서쪽 구역 낚시 포인트",
+    "icon": "T_Gp_Angling",
+    "pos": [
+      25010,
+      -8420
+    ],
+    "subRegion": 104502,
+    "targetSubRegion": [],
+    "telepointId": 1205,
+    "teleportPointPos": 4,
+    "teleportSubRegion": 104502,
+    "unlockConditionId": 20021511,
+    "manualItemId": 240001,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2829,
+    "name": "유래골 낚시 포인트",
+    "icon": "T_Gp_Angling",
+    "pos": [
+      16680,
+      -3400
+    ],
+    "subRegion": 105501,
+    "targetSubRegion": [],
+    "telepointId": 1500,
+    "teleportPointPos": 2,
+    "teleportSubRegion": 105501,
+    "unlockConditionId": 20021512,
+    "manualItemId": 234001,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2830,
+    "name": "필토이드로 가득한 마을",
+    "icon": "T_Gp_Camera",
+    "pos": [
+      1970,
+      3670
+    ],
+    "subRegion": 100101,
+    "targetSubRegion": [],
+    "telepointId": 1001,
+    "teleportPointPos": 8,
+    "teleportSubRegion": 100101,
+    "unlockConditionId": null,
+    "manualItemId": null,
+    "staticId": 1590338,
+    "singleCreate": true
+  },
+  {
+    "id": 2831,
+    "name": "히프노스의 집",
+    "icon": "T_Gp_Camera",
+    "pos": [
+      -3300,
+      11840
+    ],
+    "subRegion": 101101,
+    "targetSubRegion": [],
+    "telepointId": 1012,
+    "teleportPointPos": 37,
+    "teleportSubRegion": 101101,
+    "unlockConditionId": null,
+    "manualItemId": null,
+    "staticId": 1192072,
+    "singleCreate": true
+  },
+  {
+    "id": 2832,
+    "name": "눈물의 호수",
+    "icon": "T_Gp_Camera",
+    "pos": [
+      -9460,
+      44930
+    ],
+    "subRegion": 100103,
+    "targetSubRegion": [],
+    "telepointId": 1016,
+    "teleportPointPos": 39,
+    "teleportSubRegion": 101103,
+    "unlockConditionId": null,
+    "manualItemId": null,
+    "staticId": 1241180,
+    "singleCreate": true
+  },
+  {
+    "id": 2833,
+    "name": "아이스레이크 시티 하수도 깊은 곳",
+    "icon": "T_Gp_Camera",
+    "pos": [
+      -6590,
+      -11350
+    ],
+    "subRegion": 101703,
+    "targetSubRegion": [],
+    "telepointId": 1030,
+    "teleportPointPos": 2,
+    "teleportSubRegion": 101703,
+    "unlockConditionId": null,
+    "manualItemId": null,
+    "staticId": 1740136,
+    "singleCreate": true
+  },
+  {
+    "id": 2834,
+    "name": "갈레아 극장",
+    "icon": "T_Gp_Camera",
+    "pos": [
+      20510,
+      900
+    ],
+    "subRegion": 101901,
+    "targetSubRegion": [],
+    "telepointId": 1050,
+    "teleportPointPos": 3,
+    "teleportSubRegion": 101901,
+    "unlockConditionId": null,
+    "manualItemId": null,
+    "staticId": 1970000,
+    "singleCreate": true
+  },
+  {
+    "id": 2835,
+    "name": "백년춘",
+    "icon": "T_Gp_Camera",
+    "pos": [
+      37080,
+      6230
+    ],
+    "subRegion": 104110,
+    "targetSubRegion": [],
+    "telepointId": 1102,
+    "teleportPointPos": 8,
+    "teleportSubRegion": 104110,
+    "unlockConditionId": null,
+    "manualItemId": null,
+    "staticId": 2110366,
+    "singleCreate": true
+  },
+  {
+    "id": 2836,
+    "name": "집률각 앞 광장",
+    "icon": "T_Gp_Camera",
+    "pos": [
+      32830,
+      -103270
+    ],
+    "subRegion": 104506,
+    "targetSubRegion": [],
+    "telepointId": 1207,
+    "teleportPointPos": 2,
+    "teleportSubRegion": 104506,
+    "unlockConditionId": null,
+    "manualItemId": null,
+    "staticId": 2440008,
+    "singleCreate": true
+  },
+  {
+    "id": 2837,
+    "name": "山外山",
+    "icon": "T_Gp_Shanwaishan",
+    "pos": [
+      -8822,
+      -16420
+    ],
+    "subRegion": 104502,
+    "targetSubRegion": [
+      105201
+    ],
+    "telepointId": 1203,
+    "teleportPointPos": 5,
+    "teleportSubRegion": 104502,
+    "unlockConditionId": 326,
+    "manualItemId": 240034,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2838,
+    "name": "西城",
+    "icon": "T_Gp_Haojing",
+    "pos": [
+      -5003,
+      14586
+    ],
+    "subRegion": 105201,
+    "targetSubRegion": [
+      104502
+    ],
+    "telepointId": 1300,
+    "teleportPointPos": 4,
+    "teleportSubRegion": 105201,
+    "unlockConditionId": 326,
+    "manualItemId": 236005,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2839,
+    "name": "太虚陵",
+    "icon": "T_Gp_Taixuling",
+    "pos": [
+      31498,
+      -109794
+    ],
+    "subRegion": 104506,
+    "targetSubRegion": [
+      105301
+    ],
+    "telepointId": 1208,
+    "teleportPointPos": 3,
+    "teleportSubRegion": 104506,
+    "unlockConditionId": 328,
+    "manualItemId": 244003,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2840,
+    "name": "由来巷",
+    "icon": "T_Gp_Youlaixiang",
+    "pos": [
+      40233,
+      -50974
+    ],
+    "subRegion": 104503,
+    "targetSubRegion": [
+      105501
+    ],
+    "telepointId": 1206,
+    "teleportPointPos": 4,
+    "teleportSubRegion": 104503,
+    "unlockConditionId": 329,
+    "manualItemId": 241003,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2841,
+    "name": "由来巷",
+    "icon": "T_Gp_Youlaixiang",
+    "pos": [
+      55237,
+      -54316
+    ],
+    "subRegion": 104505,
+    "targetSubRegion": [
+      105501
+    ],
+    "telepointId": 1212,
+    "teleportPointPos": 5,
+    "teleportSubRegion": 104505,
+    "unlockConditionId": 329,
+    "manualItemId": 243021,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2842,
+    "name": "内城",
+    "icon": "T_Gp_Haojing",
+    "pos": [
+      15355,
+      4565
+    ],
+    "subRegion": 105501,
+    "targetSubRegion": [
+      104503
+    ],
+    "telepointId": 1500,
+    "teleportPointPos": 3,
+    "teleportSubRegion": 105501,
+    "unlockConditionId": 329,
+    "manualItemId": 234013,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2843,
+    "name": "东郊",
+    "icon": "T_Gp_Haojing",
+    "pos": [
+      14316,
+      3500
+    ],
+    "subRegion": 105501,
+    "targetSubRegion": [
+      104505
+    ],
+    "telepointId": 1500,
+    "teleportPointPos": 4,
+    "teleportSubRegion": 105501,
+    "unlockConditionId": 329,
+    "manualItemId": 234012,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2844,
+    "name": "内城",
+    "icon": "T_Gp_Zhilvge",
+    "pos": [
+      31498,
+      -107220
+    ],
+    "subRegion": 104506,
+    "targetSubRegion": [
+      105101
+    ],
+    "telepointId": 1208,
+    "teleportPointPos": 4,
+    "teleportSubRegion": 104506,
+    "unlockConditionId": 330,
+    "manualItemId": 244004,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2850,
+    "name": "행운아 루나의 황금알 상점",
+    "icon": "T_Gp_Shop",
+    "pos": [
+      58430,
+      -23280
+    ],
+    "subRegion": 104501,
+    "targetSubRegion": [],
+    "telepointId": 1200,
+    "teleportPointPos": 2,
+    "teleportSubRegion": 104501,
+    "unlockConditionId": 12010203,
+    "manualItemId": null,
+    "staticId": 242010280,
+    "singleCreate": false
+  },
+  {
+    "id": 2851,
+    "name": "달걀 루나의 인상 상점",
+    "icon": "T_Gp_Shop",
+    "pos": [
+      29590,
+      -45620
+    ],
+    "subRegion": 104503,
+    "targetSubRegion": [],
+    "telepointId": 1206,
+    "teleportPointPos": 8,
+    "teleportSubRegion": 104503,
+    "unlockConditionId": 101103,
+    "manualItemId": null,
+    "staticId": 242410212,
+    "singleCreate": false
+  },
+  {
+    "id": 2852,
+    "name": "탐험가 선물",
+    "icon": "T_Gp_Shop",
+    "pos": [
+      31918,
+      -37425
+    ],
+    "subRegion": 104503,
+    "targetSubRegion": [],
+    "telepointId": 1206,
+    "teleportPointPos": 9,
+    "teleportSubRegion": 104503,
+    "unlockConditionId": 10101001,
+    "manualItemId": null,
+    "staticId": 122410205,
+    "singleCreate": false
+  },
+  {
+    "id": 2853,
+    "name": "호경 어업 협회",
+    "icon": "T_Gp_Shop",
+    "pos": [
+      22130,
+      -12870
+    ],
+    "subRegion": 104502,
+    "targetSubRegion": [],
+    "telepointId": 1203,
+    "teleportPointPos": 7,
+    "teleportSubRegion": 104502,
+    "unlockConditionId": 20021501,
+    "manualItemId": null,
+    "staticId": 242400201,
+    "singleCreate": false
   }
 ]

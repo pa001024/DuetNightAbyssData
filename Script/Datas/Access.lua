@@ -146,6 +146,13 @@ return ReadOnly("Access", {
     AccessText = "Rouge_ExchangeShop",
     UIUnlockRuleId = "Rouge"
   },
+  Shop_SoloTreasure = {
+    AccessKey = "Shop_SoloTreasure",
+    AccessParam = "SoloTreasureShop",
+    AccessRule = "Return",
+    AccessText = "UI_SoloTreasure_EventShop",
+    UIUnlockRuleId = "Shop"
+  },
   Text_Abyss = {
     AccessKey = "Text_Abyss",
     AccessParam = "14",

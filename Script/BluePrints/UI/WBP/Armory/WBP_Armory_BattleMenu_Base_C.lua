@@ -1352,6 +1352,8 @@ function M:IsShowingItemDetail()
 end
 
 function M:UpdateItemDetails(Content)
+  self:StopAnimation(self.Tips_Out)
+  self:PlayAnimation(self.Tips_In)
   if nil == Content or Content == self.NoneContent then
     self.WS_Tips:SetActiveWidgetIndex(1)
     return
@@ -1361,8 +1363,6 @@ function M:UpdateItemDetails(Content)
   Content.bHideGamePad = true
   self.Tips_Item:RefreshItemInfo(Content, true)
   self:UpdateItemDetailsButton(Content)
-  self:StopAnimation(self.Tips_Out)
-  self:PlayAnimation(self.Tips_In)
 end
 
 function M:UpdateItemDetailsButton(Content)

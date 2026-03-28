@@ -345,27 +345,7 @@ function WBP_Pet_Capture_C:OnKeyDown(MyGeometry, InKeyEvent)
 end
 
 function WBP_Pet_Capture_C:InitTabInfo()
-  BottomKeyInfo = {
-    {
-      KeyInfoList = {
-        {
-          Type = "Text",
-          Text = "Esc",
-          ClickCallback = self.ExitPetCapture,
-          Owner = self
-        }
-      },
-      GamePadInfoList = {
-        {
-          Type = "Img",
-          ImgShortPath = "B",
-          ClickCallback = self.ExitPetCapture,
-          Owner = self
-        }
-      },
-      Desc = GText("UI_BACK")
-    }
-  }, self.Tab_Pet_Capture:Init({
+  self.Tab_Pet_Capture:Init({
     TitleName = GText("UI_Pet_Title"),
     DynamicNode = {"Back", "BottomKey"},
     BottomKeyInfo = {

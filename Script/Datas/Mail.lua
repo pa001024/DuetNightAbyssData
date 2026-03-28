@@ -499,6 +499,55 @@ return ReadOnly("Mail", {
     MailTimeLimit = -1,
     MailTitle = "Mail_Title_10069"
   },
+  [10071] = {
+    MailContent = "Mail_Content_10071",
+    MailId = 10071,
+    MailSenderId = 99999,
+    MailTimeLimit = -1,
+    MailTitle = "Mail_Title_10071"
+  },
+  [10072] = {
+    MailContent = "Mail_Content_10072",
+    MailId = 10072,
+    MailSenderId = 81801,
+    MailTimeLimit = -1,
+    MailTitle = "Mail_Title_10072"
+  },
+  [10073] = {
+    MailContent = "Mail_Content_10073",
+    MailId = 10073,
+    MailSenderId = 84101,
+    MailTimeLimit = -1,
+    MailTitle = "Mail_Title_10073"
+  },
+  [10074] = {
+    MailContent = "Mail_Content_10074",
+    MailId = 10074,
+    MailSenderId = 81504,
+    MailTimeLimit = -1,
+    MailTitle = "Mail_Title_10074"
+  },
+  [10075] = {
+    MailContent = "Mail_Content_10075",
+    MailId = 10075,
+    MailSenderId = 81503,
+    MailTimeLimit = -1,
+    MailTitle = "Mail_Title_10075"
+  },
+  [10076] = {
+    MailContent = "Mail_Content_10076",
+    MailId = 10076,
+    MailSenderId = 84102,
+    MailTimeLimit = -1,
+    MailTitle = "Mail_Title_10076"
+  },
+  [10077] = {
+    MailContent = "Mail_Content_10077",
+    MailId = 10077,
+    MailSenderId = 900002,
+    MailTimeLimit = 7,
+    MailTitle = "Mail_Title_10077"
+  },
   [19101] = {
     Condition = 4100,
     ImgProvider = "Hero",

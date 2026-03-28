@@ -31,6 +31,7 @@ function M:UpdateImageWidget(ImagePath, Section, Input)
         self.ImageWidget:SetImageMaterial(MaterialInstance)
       end
     end
+    self.ImageWidget:PlayAnimation(self.ImageWidget.Recall)
   else
     self.ImageWidget:SetImage(DialogueImage)
   end

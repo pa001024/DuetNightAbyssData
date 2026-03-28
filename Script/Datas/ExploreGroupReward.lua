@@ -205,6 +205,26 @@ return ReadOnly("ExploreGroupReward", {
     IfOnlyOnce = true,
     RewardId = 3011
   },
+  [7045023] = {
+    ExploreGroupId = 7045023,
+    IfOnlyOnce = true,
+    RewardId = 3014
+  },
+  [7045026] = {
+    ExploreGroupId = 7045026,
+    IfOnlyOnce = true,
+    RewardId = 3014
+  },
+  [7045027] = {
+    ExploreGroupId = 7045027,
+    IfOnlyOnce = true,
+    RewardId = 3025
+  },
+  [7045028] = {
+    ExploreGroupId = 7045028,
+    IfOnlyOnce = true,
+    RewardId = 3014
+  },
   [7047005] = {
     ExploreGroupId = 7047005,
     IfOnlyOnce = true,
@@ -294,5 +314,150 @@ return ReadOnly("ExploreGroupReward", {
     ExploreGroupId = 7064001,
     IfOnlyOnce = true,
     RewardId = 3014
+  },
+  [7064014] = {
+    ExploreGroupId = 7064014,
+    IfOnlyOnce = true,
+    RewardId = 3014
+  },
+  [7066001] = {
+    ExploreGroupId = 7066001,
+    IfOnlyOnce = true,
+    RewardId = 3014
+  },
+  [7066017] = {
+    ExploreGroupId = 7066017,
+    IfOnlyOnce = true,
+    RewardId = 3014
+  },
+  [7066018] = {
+    ExploreGroupId = 7066018,
+    IfOnlyOnce = true,
+    RewardId = 3014
+  },
+  [7070033] = {
+    ExploreGroupId = 7070033,
+    IfOnlyOnce = true,
+    RewardId = 3014
+  },
+  [7070036] = {
+    ExploreGroupId = 7070036,
+    IfOnlyOnce = true,
+    RewardId = 3024
+  },
+  [7070038] = {
+    ExploreGroupId = 7070038,
+    IfOnlyOnce = true,
+    RewardId = 3024
+  },
+  [7071016] = {
+    ExploreGroupId = 7071016,
+    IfOnlyOnce = true,
+    RewardId = 3014
+  },
+  [7071025] = {
+    ExploreGroupId = 7071025,
+    IfOnlyOnce = true,
+    RewardId = 3014
+  },
+  [7071026] = {
+    ExploreGroupId = 7071026,
+    IfOnlyOnce = true,
+    RewardId = 3014
+  },
+  [7071027] = {
+    ExploreGroupId = 7071027,
+    IfOnlyOnce = true,
+    RewardId = 3014
+  },
+  [7071028] = {
+    ExploreGroupId = 7071028,
+    IfOnlyOnce = true,
+    RewardId = 3014
+  },
+  [7071029] = {
+    ExploreGroupId = 7071029,
+    IfOnlyOnce = true,
+    RewardId = 3025
+  },
+  [7071030] = {
+    ExploreGroupId = 7071030,
+    IfOnlyOnce = true,
+    RewardId = 3025
+  },
+  [7071031] = {
+    ExploreGroupId = 7071031,
+    IfOnlyOnce = true,
+    RewardId = 3024
+  },
+  [7072019] = {
+    ExploreGroupId = 7072019,
+    IfOnlyOnce = true,
+    RewardId = 3014
+  },
+  [7072024] = {
+    ExploreGroupId = 7072024,
+    IfOnlyOnce = true,
+    RewardId = 3014
+  },
+  [7072025] = {
+    ExploreGroupId = 7072025,
+    IfOnlyOnce = true,
+    RewardId = 3014
+  },
+  [7072030] = {
+    ExploreGroupId = 7072030,
+    IfOnlyOnce = true,
+    RewardId = 3014
+  },
+  [7072035] = {
+    ExploreGroupId = 7072035,
+    IfOnlyOnce = true,
+    RewardId = 3014
+  },
+  [7072036] = {
+    ExploreGroupId = 7072036,
+    IfOnlyOnce = true,
+    RewardId = 3014
+  },
+  [7072040] = {
+    ExploreGroupId = 7072040,
+    IfOnlyOnce = true,
+    RewardId = 3024
+  },
+  [7072041] = {
+    ExploreGroupId = 7072041,
+    IfOnlyOnce = true,
+    RewardId = 3024
+  },
+  [7072042] = {
+    ExploreGroupId = 7072042,
+    IfOnlyOnce = true,
+    RewardId = 3025
+  },
+  [7072043] = {
+    ExploreGroupId = 7072043,
+    IfOnlyOnce = true,
+    RewardId = 3014
+  },
+  [7073018] = {
+    ExploreGroupId = 7073018,
+    IfOnlyOnce = true,
+    RewardId = 3014
+  },
+  [7073023] = {
+    ExploreGroupId = 7073023,
+    IfOnlyOnce = true,
+    RewardId = 3014
+  },
+  [7073024] = {
+    ExploreGroupId = 7073024,
+    IfOnlyOnce = true,
+    RewardId = 3014
+  },
+  [7073028] = {
+    ExploreGroupId = 7073028,
+    IfOnlyOnce = true,
+    RewardId = 3025
   }
 })

@@ -16,10 +16,14 @@ function M:BuildNode(DialogueId, Comps)
 end
 
 function M:CreateSubFlow(DialogueId)
-  self.SubFlow = TalkFlowUTils:CreateDialogueFlow(DialogueId, self, function()
+  local SubFlow, ParallelNode, WaitAllNode = TalkFlowUTils:CreateFlow(DialogueId, self.TalkTask, function()
     self:Iterate(EDialogueIterType.Out)
     self.SubFlow = nil
   end)
+  self.SubFlow = SubFlow
+  if self.OnFlowCreated then
+    self.OnFlowCreated(self.EventReceiver, self.SubFlow, ParallelNode, WaitAllNode)
+  end
 end
 
 function M:CreateNodeData(DialogueId)
@@ -79,12 +83,26 @@ function M:Execute(bSkip)
   self.TalkTask:PlayDialogue(nil, bSkip)
 end
 
+function M:Pause()
+  if self.SubFlow then
+    self.SubFlow:Pause()
+  end
+end
+
 function M:Resume()
-  self.TalkTask:PlayDialogue(true)
+  if self.SubFlow then
+    self.SubFlow:Resume()
+  end
+end
+
+function M:AllowSkip()
+  return self.SubFlow and self.SubFlow.bAllowClick or false
 end
 
 function M:RealSkip()
-  self.TalkTask:SkipDialogue()
+  if self.SubFlow then
+    self.SubFlow:Skip()
+  end
 end
 
 function M:Record()

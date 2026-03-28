@@ -3,15 +3,15 @@ return {
   storyDescription = "",
   lineData = {
     {
-      startStory = "1704175978930179310",
+      startStory = "17724203564534459578",
       startPort = "StoryStart",
-      endStory = "17141819383127344",
+      endStory = "17724203564534459580",
       endPort = "In"
     },
     {
-      startStory = "17141819383127344",
+      startStory = "17724203564534459580",
       startPort = "Success",
-      endStory = "1704175978930179311",
+      endStory = "17724203564534459579",
       endPort = "StoryEnd"
     }
   },
@@ -35,7 +35,6 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
@@ -43,6 +42,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -136,9 +136,9 @@ return {
         commentData = {}
       }
     },
-    ["1704175978930179310"] = {
+    ["17724203564534459578"] = {
       isStoryNode = true,
-      key = "1704175978930179310",
+      key = "17724203564534459578",
       type = "StoryStartNode",
       name = "StoryStart",
       pos = {x = 800, y = 300},
@@ -149,9 +149,9 @@ return {
         commentData = {}
       }
     },
-    ["1704175978930179311"] = {
+    ["17724203564534459579"] = {
       isStoryNode = true,
-      key = "1704175978930179311",
+      key = "17724203564534459579",
       type = "StoryEndNode",
       name = "StoryEnd",
       pos = {x = 1431.4425770308126, y = 300.5882352941176},
@@ -162,9 +162,9 @@ return {
         commentData = {}
       }
     },
-    ["17141819383127344"] = {
+    ["17724203564534459580"] = {
       isStoryNode = true,
-      key = "17141819383127344",
+      key = "17724203564534459580",
       type = "StoryNode",
       name = "任务节点",
       pos = {x = 1112.9960752885659, y = 293.1447424586231},
@@ -181,7 +181,6 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
@@ -189,6 +188,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -198,7 +198,7 @@ return {
       questNodeData = {
         lineData = {
           {
-            startQuest = "17141819383127345",
+            startQuest = "17724203564534459581",
             startPort = "QuestStart",
             endQuest = "17141819520327874",
             endPort = "In"
@@ -206,32 +206,11 @@ return {
           {
             startQuest = "17141819520327874",
             startPort = "Out",
-            endQuest = "17141819383127347",
+            endQuest = "17724203564534459582",
             endPort = "Success"
           }
         },
         nodeData = {
-          ["17141819383127345"] = {
-            key = "17141819383127345",
-            type = "QuestStartNode",
-            name = "QuestStart",
-            pos = {x = 800, y = 300},
-            propsData = {ModeType = 0}
-          },
-          ["17141819383127347"] = {
-            key = "17141819383127347",
-            type = "QuestSuccessNode",
-            name = "QuestSuccess",
-            pos = {x = 1337.5000000000018, y = 298.125},
-            propsData = {ModeType = 0}
-          },
-          ["17141819383127349"] = {
-            key = "17141819383127349",
-            type = "QuestFailNode",
-            name = "QuestFail",
-            pos = {x = 2800, y = 700},
-            propsData = {}
-          },
           ["17141819520327874"] = {
             key = "17141819520327874",
             type = "TalkNode",
@@ -277,6 +256,27 @@ return {
               NormalOptions = {},
               OverrideFailBlend = false
             }
+          },
+          ["17724203564534459581"] = {
+            key = "17724203564534459581",
+            type = "QuestStartNode",
+            name = "QuestStart",
+            pos = {x = 800, y = 300},
+            propsData = {ModeType = 0}
+          },
+          ["17724203564534459582"] = {
+            key = "17724203564534459582",
+            type = "QuestSuccessNode",
+            name = "QuestSuccess",
+            pos = {x = 1337.5000000000018, y = 298.125},
+            propsData = {ModeType = 0}
+          },
+          ["17724203564534459583"] = {
+            key = "17724203564534459583",
+            type = "QuestFailNode",
+            name = "QuestFail",
+            pos = {x = 2800, y = 700},
+            propsData = {}
           }
         },
         commentData = {}

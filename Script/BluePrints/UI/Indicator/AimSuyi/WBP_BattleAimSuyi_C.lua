@@ -9,6 +9,11 @@ function M:Construct()
   M.Super.Construct(self)
 end
 
+function M:Destruct()
+  self.AimSuyiController:Destory()
+  M.Super.Destruct(self)
+end
+
 function M:Init(Root)
   self.Root = Root
   self.CurSightUI = Root.SightUI

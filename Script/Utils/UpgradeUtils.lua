@@ -233,6 +233,32 @@ function UpgradeUtils.CheckCharCanUpgradeCardLevel(Char)
   return true
 end
 
+function UpgradeUtils.CheckCharCanUpgradeUltraCardLevel(Char)
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return false
+  end
+  if Char:IsExtraGradeLevelUnlocked() then
+    return false
+  end
+  local MaxGradeLevel = tonumber(DataMgr.GlobalConstant.CharCardLevelMax.ConstantValue)
+  if MaxGradeLevel > Char.GradeLevel then
+    return false
+  end
+  if not Char:HasUltraGradeLevel() then
+    return false
+  end
+  local ResourceNeeded = Char:CalculateCharUltraGradeLevelUpResources()
+  for _, ResourceInfo in ipairs(ResourceNeeded) do
+    local ResourceId = ResourceInfo.Id
+    local Value = ResourceInfo.Num
+    if not Avatar.Resources[ResourceId] or Value > Avatar.Resources[ResourceId].Count then
+      return false
+    end
+  end
+  return true
+end
+
 local ResourcesForUpgrade
 
 function UpgradeUtils.IsResourceForUpgrade(ResourceId)

@@ -25,6 +25,8 @@ function M:InitHardBossDgComponent()
   self.BossStaticCreatorId = HardBossInfo.BossStaticId
   self.AirWallStaticCreatorId = HardBossInfo.AirWallStaticId
   self.PreparingAirWallStaticId = HardBossInfo.PreparingAirWallStaticId
+  self.NowBossUnitIds = {}
+  self.BossEids = {}
   self:RegisterGameModeEvents()
   DebugPrint("HardBossDgComponent: InitHardBossDgComponent")
 end
@@ -42,26 +44,29 @@ function M:InitHardBossDgBaseInfo()
 end
 
 function M:SpawnMainActors()
-  local BossCreator = self.GameMode.EMGameState.StaticCreatorMap:Find(self.BossStaticCreatorId)
-  if BossCreator then
+  local CreatorIds = TArray(0)
+  for GroupIndex, CreatorId in pairs(self.BossStaticCreatorId) do
+    local BossCreator = self.GameMode.EMGameState.StaticCreatorMap:Find(CreatorId)
     local Index = self.GameMode:GetTargetPlayerNum()
     Index = math.clamp(Index, 1, #self.BossUnitId)
-    BossCreator.UnitId = self.BossUnitId[Index]
-    self.NowBossUnitId = self.BossUnitId[Index]
+    local BossUnitId = self.BossUnitId[Index][GroupIndex]
+    if BossCreator and BossUnitId then
+      CreatorIds:Add(CreatorId)
+      BossCreator.UnitId = BossUnitId
+      self.NowBossUnitIds[BossUnitId] = true
+    end
   end
-  local CreatorIds = TArray(0)
-  CreatorIds:Add(self.BossStaticCreatorId)
   CreatorIds:Add(self.PreparingAirWallStaticId)
   self.GameMode:TriggerActiveStaticCreator(CreatorIds, "HardBossMain")
 end
 
-function M:OnStaticCreatorEvent(EventName, Eid, UnitId, UnitType)
-  if "HardBossMain" == EventName and UnitId == self.NowBossUnitId then
+function M:OnStaticCreatorEvent(EventName, Eid, UnitId, UnitType, CreatorId)
+  if "HardBossMain" == EventName and self.NowBossUnitIds[UnitId] then
     local Boss = Battle(self):GetEntity(Eid)
     if IsValid(Boss) then
       Boss:StopBT("HardBossOpening")
-      Battle(self):AddBuffToTarget(Boss, Boss, Const.InvincibleBuffId, -1)
-      self.BossEid = Eid
+      Battle(self):AddBuffToTarget(Boss, Boss, Const.BossInvincibleBuffId, -1)
+      table.insert(self.BossEids, Eid)
     end
   end
 end
@@ -131,10 +136,12 @@ function M:OnAllClientOpeningReady()
 end
 
 function M:RealGameStart()
-  local Boss = Battle(self):GetEntity(self.BossEid)
-  if IsValid(Boss) then
-    Boss:RestartBT()
-    Battle(self):RemoveBuffFromTarget(Boss, Boss, Const.InvincibleBuffId, false, -1)
+  for _, BossEid in pairs(self.BossEids) do
+    local Boss = Battle(self):GetEntity(BossEid)
+    if IsValid(Boss) then
+      Boss:RestartBT()
+      Battle(self):RemoveBuffFromTarget(Boss, Boss, Const.BossInvincibleBuffId, false, -1)
+    end
   end
   local AllPlayers = self.GameMode:GetAllPlayer()
   for _, Player in pairs(AllPlayers) do

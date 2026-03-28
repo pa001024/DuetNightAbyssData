@@ -60,8 +60,8 @@ function Component:RequestEnterOnline(online_type, ShowWeapon, CurrentState, Pla
   self:CallServerMethod("RequestEnterOnline", online_type, RegionPlayerInfo)
 end
 
-function Component:OnRequestEnterOnline(online_type, ret, others, GlobalRegionItemCache)
-  self.logger.debug("[OnlineComp] CZC OnRequestEnterOnline: " .. online_type .. " ret: " .. ret)
+function Component:OnRequestEnterOnline(online_type, ret, others, GlobalRegionItemCache, online_id)
+  self.logger.debug("[OnlineComp] CZC OnRequestEnterOnline: " .. online_type .. " ret: " .. ret .. " online_id" .. online_id)
   if ret ~= ErrorCode.RET_SUCCESS then
     return
   end
@@ -82,7 +82,58 @@ function Component:OnRequestEnterOnline(online_type, ret, others, GlobalRegionIt
   self:InitMechanismUser(GlobalRegionItemCache)
   self.InWorldChatChannel[CommonConst.ChatChannel.RegionOnline] = true
   if ChatController then
-    ChatController:SendRequestEnterChatChannel(ChatCommon.ChannelDef.Region)
+    ChatController:SendRequestEnterChatChannel(ChatCommon.ChannelDef.Region, online_id, online_type)
+  end
+  local OnlineActionController = require("BluePrints.UI.WBP.BattleOnlineAction.OnlineActionController")
+  OnlineActionController:Init(true)
+end
+
+function Component:ActiveSwitchToRegionOnlineChannel(online_type, online_id, ShowWeapon, CurrentState, PlayerInfo)
+  self.logger.debug("[OnlineComp] CZC ActiveSwitchToRegionOnlineChannel: " .. online_type, online_id, self.IsInRegionOnline)
+  self.PreEnterSubRegionId = online_type
+  local Player = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
+  local RegionPlayerInfo = {
+    MountInfo = {
+      MountId = Player.CurrentMountId,
+      MountState = 0
+    },
+    WeaponInfo = {
+      ShowWeapon = ShowWeapon or CommonConst.OnlineShowWeapon.Melee
+    },
+    UseMechanism = {UseState = 0, UniqueId = 0},
+    CurrentState = CurrentState or CommonConst.OnlineState.Normal,
+    UseTargetParam = {},
+    ActionBaseInfo = Player:GetPlayerLocationAndRotation()
+  }
+  self:CallServerMethod("ActiveSwitchToRegionOnlineChannel", online_type, online_id, RegionPlayerInfo)
+end
+
+function Component:OnActiveSwitchToRegionOnlineChannel(online_type, online_id, ret, others, GlobalRegionItemCache)
+  self.logger.debug(string.format("[OnlineComp] CZC OnActiveSwitchToRegionOnlineChannel: %s, id: %s ret: %s", online_type, online_id, ret))
+  if ret ~= ErrorCode.RET_SUCCESS then
+    if ChatController then
+      ChatController:CheckError(ret, true)
+    end
+    return
+  end
+  self:NotifyCharacterStartSync(online_type)
+  self.IsInRegionOnline = true
+  self.PreEnterSubRegionId = -1
+  self.RegionAvatars = others
+  self.CurrentOnlineType = online_type
+  self.GlobalRegionItemCache = GlobalRegionItemCache
+  if not others then
+    return
+  end
+  PrintTable({OnRequestEnterOnline_others = others, GlobalRegionItemCache = GlobalRegionItemCache}, 10)
+  for i, v in pairs(others) do
+    self:RegionSyncAddRoleToCreate(i, v)
+    self:InitOnlineStateData(i, v)
+  end
+  self:InitMechanismUser(GlobalRegionItemCache)
+  self.InWorldChatChannel[CommonConst.ChatChannel.RegionOnline] = true
+  if ChatController then
+    ChatController:SendRequestEnterChatChannel(ChatCommon.ChannelDef.Region, online_id, online_type)
   end
   local OnlineActionController = require("BluePrints.UI.WBP.BattleOnlineAction.OnlineActionController")
   OnlineActionController:Init(true)
@@ -241,7 +292,7 @@ function Component:HandleSwitchOnlineState(Message)
   if TempRoleInfo then
     TempRoleInfo.IsCrouching = false
   end
-  local Player = self:GetBornedChar(ObjId)
+  local Player = self:GetBornedChar(Message.Sender)
   if Player then
     Player.OtherWorldCrouching = false
     Player:SetCrouch(false)
@@ -421,6 +472,7 @@ function Component:HandleLevelChange(message)
 end
 
 function Component:HandleCurrentPetChange(message)
+  local SenderInfo = self.RegionAvatars[message.Sender]
   if SenderInfo then
     SenderInfo.CurrentPet = message.CurrentPet
   end
@@ -458,14 +510,14 @@ end
 
 function Component:HandleMechanism(RegionAvatars, GlobalRegionItemCache, AvatarEid)
   local Player = self:GetBornedChar(AvatarEid)
-  local GameState = UE4.UGameplayStatics.GetGameState(Player)
-  local Table = self:GetMechanismUser(AvatarEid)
-  print(_G.LogTag, "LXZ HandleMechanism", Table)
-  if Table and Table.UniqueId and Table.PointIdx then
-    local Mechanism = GameState.RegionOnlineMechanismMap:Find(Table.UniqueId)
+  local DataTable = self:GetMechanismUser(AvatarEid)
+  print(_G.LogTag, "LXZ HandleMechanism", DataTable)
+  if DataTable and DataTable.UniqueId and DataTable.PointIdx then
+    local Mechanism = self:TryFindMechanismByUniqueId(DataTable.UniqueId)
+    print(_G.LogTag, "LXZ HandleMechanism111", Mechanism)
     if Player and Mechanism then
       local InteractiveComp = Mechanism.ChestInteractiveComponent
-      Player:InteractiveMechanism(Mechanism.Eid, Player.Eid, InteractiveComp.NextStateId, InteractiveComp.CommonUIConfirmID, true, Table.PointIdx)
+      Player:InteractiveMechanism(Mechanism.Eid, Player.Eid, InteractiveComp.NextStateId, InteractiveComp.CommonUIConfirmID, true, DataTable.PointIdx)
     end
   end
   local Avatar = RegionAvatars[AvatarEid]
@@ -482,7 +534,8 @@ function Component:HandleMechanism(RegionAvatars, GlobalRegionItemCache, AvatarE
         end
       end
       local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
-      if not GameState.RegionOnlineMechanismMap:FindRef(UniqueId) then
+      local Mechanism = self:TryFindMechanismByUniqueId(UniqueId)
+      if not Mechanism then
         local Loc = message.Location
         local Rot = message.Rotation
         local Context = AEventMgr.CreateUnitContext()
@@ -495,7 +548,7 @@ function Component:HandleMechanism(RegionAvatars, GlobalRegionItemCache, AvatarE
         Context.NameParams:Add("UniqueId", UniqueId)
         GameState.EventMgr:CreateUnitNew(Context, true)
       else
-        local Mechanism = GameState.RegionOnlineMechanismMap:Find(UniqueId)
+        local Mechanism = self:TryFindMechanismByUniqueId(UniqueId)
         if Player and Mechanism and message.StateComponent then
           for PointIdx, Table in pairs(message.StateComponent) do
             if Table.UseEid == AvatarEid then
@@ -524,7 +577,9 @@ function Component:HandleLeaveRegionMechanism(message)
       Sender = message.Sender
     })
   end
-  self:RealDeadRegionOnlineItem(UniqueId, message.Sender, true)
+  if Table and Table.UniqueId then
+    self:RealDeadRegionOnlineItem(Table.UniqueId, message.Sender, true)
+  end
 end
 
 function Component:InitMechanismUser(GlobalRegionItemCache)
@@ -535,7 +590,7 @@ function Component:InitMechanismUser(GlobalRegionItemCache)
     local StateComponent = ItemCache.StateComponent
     if UniqueId and StateComponent then
       for PointIdx, UserTable in pairs(StateComponent) do
-        print(_G.LogTag, "LXZ HandleMechanism InitMechanismUser222", PointIdx, UserAvatarEid)
+        print(_G.LogTag, "LXZ HandleMechanism InitMechanismUser222", PointIdx)
         if UserTable.UseEid then
           self:UpdateMechanismUser(UniqueId, PointIdx, UserTable.UseEid, true)
         end
@@ -544,9 +599,10 @@ function Component:InitMechanismUser(GlobalRegionItemCache)
   end
 end
 
-function Component:UpdateMechanismUser(UniqueId, PointIdx, AvatarEid, bAdd)
+function Component:UpdateMechanismUser(InUniqueId, PointIdx, AvatarEid, bAdd)
   local UserAvatarEid = CommonUtils.ObjId2Str(AvatarEid)
-  print(_G.LogTag, "LXZ HandleMechanism UpdateMechanismUser", UniqueId, PointIdx, UserAvatarEid, bAdd)
+  local UniqueId = InUniqueId
+  print(_G.LogTag, "LXZ HandleMechanism UpdateMechanismUser", InUniqueId, UniqueId, PointIdx, UserAvatarEid, bAdd)
   if not self.Mechanism2User then
     self.Mechanism2User = {}
   end
@@ -572,8 +628,45 @@ function Component:GetMechanismUser(AvatarEid)
     return nil
   end
   local UserAvatarEid = CommonUtils.ObjId2Str(AvatarEid)
-  print(_G.LogTag, "LXZ GetMechanismUser111", UserAvatarEid)
+  print(_G.LogTag, "LXZ GetMechanismUser111", UserAvatarEid, self.User2Mechanism[UserAvatarEid])
+  PrintTable({
+    self.User2Mechanism
+  }, 3)
   return self.User2Mechanism[UserAvatarEid]
+end
+
+function Component:TryFindMechanismByUniqueId(UniqueId)
+  local GameState = UGameplayStatics.GetGameState(GWorld.GameInstance)
+  local Mechanism = GameState.RegionOnlineMechanismMap:Find(UniqueId)
+  if Mechanism then
+    return Mechanism
+  end
+  local bInMobile = CommonUtils.GetRuntimePlatform(GWorld.GameInstance) == "Mobile"
+  local SeatName2UniqueIdData = require("Datas.Seat_Data.SeatName2UniqueId")
+  local RegionId = DataMgr.SubRegion[self.CurrentRegionId].RegionId
+  if bInMobile then
+    print(_G.LogTag, "LXZ HandleOnChangeRegionOnlineItemState InMobile", UniqueId)
+    local PCUniqueIdData = require("Datas.Seat_Data." .. RegionId)
+    if PCUniqueIdData[UniqueId] then
+      local Name = PCUniqueIdData[UniqueId][999]
+      local SeatNameData = SeatName2UniqueIdData[Name]
+      print(_G.LogTag, "LXZ HandleOnChangeRegionOnlineItemState InMobile222", UniqueId, Name, SeatNameData)
+      if SeatNameData and SeatNameData[1] then
+        Mechanism = GameState.RegionOnlineMechanismMap:Find(SeatNameData[1])
+        print(_G.LogTag, "LXZ HandleOnChangeRegionOnlineItemState InMobile333", UniqueId, SeatNameData[0], Mechanism)
+      end
+    end
+  else
+    local MobileUniqueIdData = require("Datas.Seat_Data." .. RegionId .. "_Mobile")
+    if MobileUniqueIdData[UniqueId] then
+      local Name = MobileUniqueIdData[UniqueId][999]
+      local SeatNameData = SeatName2UniqueIdData[Name]
+      if SeatNameData and SeatNameData[0] then
+        Mechanism = GameState.RegionOnlineMechanismMap:Find(SeatNameData[0])
+      end
+    end
+  end
+  return Mechanism
 end
 
 function Component:HandleFish(message)
@@ -662,12 +755,9 @@ function Component:UpdateFishingRodModelId(Player, FishingRodId)
 end
 
 function Component:UpdateFishingRodMaterial(Player, EffectCreatureId, MaterialPath, MaterialParam)
-  if not Player.EffectCreatures or not Player.EffectCreatures[EffectCreatureId] then
-    return
-  end
-  local EffectCreatures = Player.EffectCreatures[EffectCreatureId]
-  for Index = #EffectCreatures, 1, -1 do
-    local EffectCreature = EffectCreatures[Index]
+  local EffectCreatures = Player:GetEffectCreatureById(EffectCreatureId)
+  for i = EffectCreatures:Num(), 1, -1 do
+    local EffectCreature = EffectCreatures:GetRef(i)
     if IsValid(EffectCreature) then
       if MaterialPath then
         local Material = LoadObject(MaterialPath)
@@ -678,8 +768,6 @@ function Component:UpdateFishingRodMaterial(Player, EffectCreatureId, MaterialPa
       if MaterialParam then
         EffectCreature.FishMaterial:SetScalarParameterValue("PartSelect", MaterialParam)
       end
-    else
-      table.remove(EffectCreatures, Index)
     end
   end
 end
@@ -749,7 +837,7 @@ function Component:RequestDeadRegionOnlineItem(online_type, SenderEid, UniqueId)
   self:CallServer("RequestDeadRegionOnlineItem", Callback, online_type, UniqueId)
 end
 
-function Component:RequestChangeRegionOnlineItemState(online_type, UniqueId, OwnerEid, InteractiveId, NewState, IsGlobal)
+function Component:RequestChangeRegionOnlineItemState(online_type, UniqueId, OwnerEid, InteractiveId, NewState, IsGlobal, bInMobile)
   ScreenPrint("客户端发起联机动作申请 RequestChangeRegionOnlineItemState online_type：" .. tostring(online_type) .. " ，UniqueId：" .. tostring(UniqueId) .. " ，OwnerEid：" .. CommonUtils.ObjId2Str(OwnerEid) .. " ，InteractiveId：" .. tostring(InteractiveId) .. " ，NewState：" .. tostring(NewState))
   self.logger.debug("ZJT_ RequestChangeRegionOnlineItemState ", online_type, UniqueId, OwnerEid, InteractiveId, NewState, CommonUtils.ObjId2Str(OwnerEid))
   
@@ -778,10 +866,10 @@ function Component:RequestChangeRegionOnlineItemState(online_type, UniqueId, Own
     self.logger.debug("ZJT_ RequestChangeRegionOnlineItemState Callback ", Ret, online_type, UniqueId, OwnerEid, InteractiveId, NewState)
   end
   
-  self:CallServer("RequestChangeRegionOnlineItemState", Callback, online_type, UniqueId, OwnerEid, InteractiveId, NewState)
+  self:CallServer("RequestChangeRegionOnlineItemState", Callback, online_type, UniqueId, OwnerEid, InteractiveId, NewState, bInMobile)
 end
 
-function Component:RequestLeaveRegionOnlineItem(online_type, UniqueId, OwnerEid, InteractiveId)
+function Component:RequestLeaveRegionOnlineItem(online_type, UniqueId, OwnerEid, InteractiveId, bInMobile)
   self.logger.debug("ZJT_ RequestLeaveRegionOnlineItem ", online_type, UniqueId, CommonUtils.ObjId2Str(OwnerEid), InteractiveId, CommonUtils.ObjId2Str(OwnerEid))
   
   local function Callback(Ret)
@@ -796,7 +884,7 @@ function Component:RequestLeaveRegionOnlineItem(online_type, UniqueId, OwnerEid,
     end
   end
   
-  self:CallServer("RequestLeaveRegionOnlineItem", Callback, online_type, UniqueId, OwnerEid, InteractiveId)
+  self:CallServer("RequestLeaveRegionOnlineItem", Callback, online_type, UniqueId, OwnerEid, InteractiveId, bInMobile)
 end
 
 function Component:RequestUseOwnerRegionOnlineItem(RequestEid, UniqueId, InteractiveId)
@@ -1091,7 +1179,7 @@ function Component:RealInteractive(message)
   else
     Player = self:GetBornedChar(message.Sender)
   end
-  local Mechanism = GameState.RegionOnlineMechanismMap:Find(message.UniqueId)
+  local Mechanism = self:TryFindMechanismByUniqueId(message.UniqueId)
   print(_G.LogTag, "LXZ HandleOnChangeRegionOnlineItemState111", message.UniqueId, Mechanism, message.IsGlobalOnlineItem)
   if message.Sender == self.Eid then
     if not (Player and Mechanism) or not Mechanism:IsCanOnlineInteractive(Player) then
@@ -1118,7 +1206,7 @@ function Component:RealDeInteractive(message)
   if message.Sender == self.Eid then
     Player = UGameplayStatics.GetPlayerCharacter(GameState, 0)
   end
-  local Mechanism = GameState.RegionOnlineMechanismMap:Find(message.UniqueId)
+  local Mechanism = self:TryFindMechanismByUniqueId(message.UniqueId)
   print(_G.LogTag, "LXZ HandleOnLeaveRegionOnlineItem RealDeInteractive", message.UniqueId)
   if not Player then
     return
@@ -1188,6 +1276,33 @@ function Component:RegionOnlineTransformAFDay(TransformId)
   end
   
   self:CallServer("RegionOnlineTransformAFDay", Callback, TransformId)
+end
+
+function Component:QueryRegionOnlineChannelState(online_type, ids)
+  local function callback(ret, info)
+    if ChatController then
+      ChatController:RecvChatChannelPlayerCountInfo(online_type, info)
+    end
+  end
+  
+  self:CallServer("QueryRegionOnlineChannelState", callback, online_type, ids)
+end
+
+function Component:QueryAllRegionOnlineChannelState(online_type)
+  local function callback(ret, info)
+    if ChatController then
+      ChatController:RecvAllChatChannelPlayerCountInfo(online_type, info)
+    end
+  end
+  
+  self:CallServer("QueryAllRegionOnlineChannelState", callback, online_type)
+end
+
+function Component:QueryRegionOnlineChannelCount(online_type)
+  local function callback(ret, info)
+  end
+  
+  self:CallServer("QueryRegionOnlineChannelCount", callback, online_type)
 end
 
 return Component

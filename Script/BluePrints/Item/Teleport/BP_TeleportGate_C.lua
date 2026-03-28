@@ -56,6 +56,9 @@ function BP_TeleportGate_C:OnStartTeTeleport()
 end
 
 function BP_TeleportGate_C:StartTeleport()
+  if not self.Plane:WasRecentlyRendered(0.5) then
+    return
+  end
   local PlayerCharacter = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
   PlayerCharacter:K2_TeleportTo(self.DestLoaction, self.DestRotation, false, nil, false)
   PlayerCharacter:ResetIdle()

@@ -196,7 +196,7 @@ function M:InitButtons()
     self:InitTouchLayer(self.Player, 0, 0)
     self.Btn_Shoot.OwnerPanel = self
     self.Btn_Shoot.OwnerPlayer = self.Player
-    self:AddMovedSubTouchItem("FeinaRangedAtk", self.Btn_Shoot.Joystick, nil, {
+    self:AddMovedSubTouchItem("FeinaRangedAtk", self.Btn_Shoot.Joystick, self.Btn_Shoot, {
       Down = self.Btn_Shoot.ButtonFireDown,
       Move = self.Btn_Shoot.ButtonFireMove,
       Up = self.Btn_Shoot.ButtonFireUp

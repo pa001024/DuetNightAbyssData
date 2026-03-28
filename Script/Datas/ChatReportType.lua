@@ -6,53 +6,108 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
 end
 return ReadOnly("ChatReportType", {
   [1] = {
-    Id = "JunkInform",
+    Id = "Tab1_Harass",
     Index = 1,
-    Text = "UI_COMMONPOP_TEXT_100090_3"
+    TabId = 1,
+    Text = "UI_COMMONPOP_TEXT_100090_3",
+    TypeId = 0
   },
   [2] = {
-    Id = "OffensiveLanguage",
+    Id = "Tab1_RealLifeThreat",
     Index = 2,
-    Text = "UI_COMMONPOP_TEXT_100090_4"
+    TabId = 1,
+    Text = "UI_COMMONPOP_TEXT_100090_4",
+    TypeId = 0
   },
   [3] = {
-    Id = "Harass",
+    Id = "Tab1_CheatAD",
     Index = 3,
-    Text = "UI_COMMONPOP_TEXT_100090_5"
+    TabId = 1,
+    Text = "UI_COMMONPOP_TEXT_100090_5",
+    TypeId = 0
   },
   [4] = {
-    Id = "RealLifeThreat",
+    Id = "Tab1_OffensiveLanguage",
     Index = 4,
-    Text = "UI_COMMONPOP_TEXT_100090_6"
+    TabId = 1,
+    Text = "UI_COMMONPOP_TEXT_100090_6",
+    TypeId = 0
   },
   [5] = {
-    Id = "Cheat",
+    Id = "Tab1_Others",
     Index = 5,
-    Text = "UI_COMMONPOP_TEXT_100090_7"
+    TabId = 1,
+    Text = "UI_COMMONPOP_TEXT_100090_7",
+    TypeId = 0
   },
   [6] = {
-    Id = "RealMoneyTrading",
+    Id = "Tab2_Harass",
     Index = 6,
-    Text = "UI_COMMONPOP_TEXT_100090_8"
+    TabId = 2,
+    Text = "UI_COMMONPOP_TEXT_100090_3",
+    TypeId = 0
   },
   [7] = {
-    Id = "IntentionalDisruption",
+    Id = "Tab2_RealLifeThreat",
     Index = 7,
-    Text = "UI_COMMONPOP_TEXT_100090_9"
+    TabId = 2,
+    Text = "UI_COMMONPOP_TEXT_100090_4",
+    TypeId = 0
   },
   [8] = {
-    Id = "HateSpeech",
+    Id = "Tab2_CheatAD",
     Index = 8,
-    Text = "UI_COMMONPOP_TEXT_100090_10"
+    TabId = 2,
+    Text = "UI_COMMONPOP_TEXT_100090_5",
+    TypeId = 0
   },
   [9] = {
-    Id = "IllegalPhoto",
+    Id = "Tab2_OffensiveLanguage",
     Index = 9,
-    Text = "UI_COMMONPOP_TEXT_100090_12"
+    TabId = 2,
+    Text = "UI_COMMONPOP_TEXT_100090_6",
+    TypeId = 0
   },
   [10] = {
-    Id = "NegativeAttitude",
+    Id = "Tab2_Others",
     Index = 10,
-    Text = "UI_COMMONPOP_TEXT_100090_13"
+    TabId = 2,
+    Text = "UI_COMMONPOP_TEXT_100090_7",
+    TypeId = 0
+  },
+  [11] = {
+    Id = "Tab3_IntentionalDisruption",
+    Index = 11,
+    TabId = 3,
+    Text = "UI_COMMONPOP_TEXT_100090_9",
+    TypeId = 0
+  },
+  [12] = {
+    Id = "Tab3_IllegalPhoto",
+    Index = 12,
+    TabId = 3,
+    Text = "UI_COMMONPOP_TEXT_100090_12",
+    TypeId = 1
+  },
+  [13] = {
+    Id = "Tab3_Cheat",
+    Index = 13,
+    TabId = 3,
+    Text = "UI_COMMONPOP_TEXT_100090_10",
+    TypeId = 0
+  },
+  [14] = {
+    Id = "Tab3_NegativeAttitude",
+    Index = 14,
+    TabId = 3,
+    Text = "UI_COMMONPOP_TEXT_100090_13",
+    TypeId = 2
+  },
+  [15] = {
+    Id = "Tab3_Others",
+    Index = 15,
+    TabId = 3,
+    Text = "UI_COMMONPOP_TEXT_100090_7",
+    TypeId = 0
   }
 })

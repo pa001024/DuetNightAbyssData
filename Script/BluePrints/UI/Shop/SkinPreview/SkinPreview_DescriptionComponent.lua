@@ -73,7 +73,7 @@ function M:UpdateHairDescription(SkinInfo)
   self:HideZoomKey(false)
   self.Tag_Quality:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self.Text_Char_None:SetVisibility(ESlateVisibility.Collapsed)
-  self.HorizontalBox_Color:SetVisibility(ESlateVisibility.Collapsed)
+  self.HorizontalBox_Color:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self.Tab_Change:SetVisibility(ESlateVisibility.Collapsed)
   self.WBP_Mounts:SetVisibility(ESlateVisibility.Collapsed)
   local AccessoryIconPath = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Fashion_Hair.T_Tab_Fashion_Hair"
@@ -127,8 +127,18 @@ function M:UpdateCharGestureDescription(SkinInfo)
   self.Text_Char_None:SetVisibility(ESlateVisibility.Collapsed)
   self.HorizontalBox_Color:SetVisibility(ESlateVisibility.Collapsed)
   self.Tab_Change:SetVisibility(ESlateVisibility.Collapsed)
-  self.Image_Element:SetVisibility(ESlateVisibility.Collapsed)
   self.WBP_Mounts:SetVisibility(ESlateVisibility.Collapsed)
+  local GestureIconPath = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Action.T_Tab_Action"
+  local GestureIcon
+  if GestureIconPath then
+    GestureIcon = LoadObject(GestureIconPath)
+  end
+  if GestureIcon then
+    self.Image_Element:SetBrushResourceObject(GestureIcon)
+    self.Image_Element:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  else
+    self.Image_Element:SetVisibility(ESlateVisibility.Collapsed)
+  end
 end
 
 function M:UpdateWeaponSkinDescription(SkinInfo)
@@ -199,8 +209,8 @@ function M:UpdateMountDescription(ItemData)
   self.HorizontalBox_Color:SetVisibility(ESlateVisibility.Collapsed)
   local MountIconPath = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Mounts.T_Tab_Mounts"
   if MountIconPath then
-    local AccessoryIcon = LoadObject(MountIconPath)
-    self.Image_Element:SetBrushResourceObject(AccessoryIcon)
+    local MountIcon = LoadObject(MountIconPath)
+    self.Image_Element:SetBrushResourceObject(MountIcon)
     self.Image_Element:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   else
     self.Image_Element:SetVisibility(ESlateVisibility.Collapsed)

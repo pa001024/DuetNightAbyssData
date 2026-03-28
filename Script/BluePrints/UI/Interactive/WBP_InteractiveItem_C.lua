@@ -49,7 +49,6 @@ function WBP_InteractiveItem_C:Construct()
       }
     }
   })
-  self.Tag_New:SetVisibility(ESlateVisibility.Collapsed)
   self.State = WBP_InteractiveItem_C.State.Normal
 end
 
@@ -136,8 +135,8 @@ function WBP_InteractiveItem_C:InitInteractiveInfo(InteractiveInfo)
   assert(InteractiveInfo)
   self.InteractiveInfo = InteractiveInfo
   self.ShouldHighlight = InteractiveInfo:GetShouldHighlight()
-  self:SetInteractiveText(InteractiveInfo:GetInteractiveName(), self:GetTextColor())
   self:UpdateIcon()
+  self:SetInteractiveText(InteractiveInfo:GetInteractiveName(), self:GetTextColor())
   local InteractiveCondition = InteractiveInfo:GetInteractiveCondition()
   if InteractiveCondition then
     self.Text_ExploreKeyNum:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
@@ -146,9 +145,11 @@ function WBP_InteractiveItem_C:InitInteractiveInfo(InteractiveInfo)
     self.Text_ExploreKeyNum:SetVisibility(ESlateVisibility.Collapsed)
   end
   self:UpdateStars()
+  self:InitTagNew()
   self:PlayAnimation(self["in"], 0, 1, UE4.EUMGSequencePlayMode.Forward, 1, true)
   self:PlayAnimation(self:GetAnimation("Normal"))
   self:InitLongPressState()
+  self:UpdateCostItemDetail()
   self:InitOwnerUuId()
   self.ListPriority = InteractiveInfo.ListPriority or 1
 end
@@ -196,6 +197,18 @@ function WBP_InteractiveItem_C:InitOwnerUuId()
     return
   end
   self.OwnerUuId = self.InteractiveInfo:GetOwner():GetName()
+end
+
+function WBP_InteractiveItem_C:InitTagNew()
+  local bShow = false
+  if IsValid(self.InteractiveInfo) then
+    bShow = self.InteractiveInfo:GetShowTagNew()
+  end
+  if not bShow then
+    self.Tag_New:SetVisibility(ESlateVisibility.Collapsed)
+  else
+    self.Tag_New:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  end
 end
 
 function WBP_InteractiveItem_C:UseGamePadStyle(UseGamePadStyle)
@@ -356,6 +369,39 @@ function WBP_InteractiveItem_C:PlayReleaseAnim()
   end
 end
 
+function WBP_InteractiveItem_C:UpdateCostItemDetail()
+  local CostItemInfo = self.InteractiveInfo:GetCostItemInfo()
+  if not CostItemInfo then
+    self.Panel_Cost:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    return
+  end
+  if not (CostItemInfo.IconPath and CostItemInfo.PossessNum) or not CostItemInfo.CostNum then
+    self.Panel_Cost:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    DebugPrint(ErrorTag, "WBP_InteractiveItem_C ShowCostItemInfo IconPath 或 PossessNum 或 CostNum 请检查 GetCostItemInfo 返回值")
+    return
+  end
+  local IconObj = LoadObject(CostItemInfo.IconPath)
+  if not IconObj then
+    IconObj = LoadObject("/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Coin_Main_Lv3.T_Coin_Main_Lv3")
+    DebugPrint(ErrorTag, "WBP_InteractiveItem_C ShowCostItemInfo IconPath 加载失败, 使用默认图标")
+  end
+  self.Img_Currency:SetBrushFromTexture(IconObj)
+  self.Text_Cost:SetText(CostItemInfo.CostNum)
+  if CostItemInfo.PossessNum < CostItemInfo.CostNum then
+    self.Text_Cost:SetColorAndOpacity(self.UnEnoughColor)
+  else
+    self.Text_Cost:SetColorAndOpacity(self.EnoughColor)
+  end
+  local ConsumeTextKey = CostItemInfo.ConsumeTextKey
+  if ConsumeTextKey and "" ~= ConsumeTextKey then
+    self.Text_Consume:SetText(GText(ConsumeTextKey))
+    self.Text_Consume:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  else
+    self.Text_Consume:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  self.Panel_Cost:SetVisibility(UIConst.VisibilityOp.Visible)
+end
+
 function WBP_InteractiveItem_C:OnInteractiveItemClicked()
   local InteractiveUI = self:GetInteractiveUI()
   if not InteractiveUI then
@@ -485,6 +531,7 @@ function WBP_InteractiveItem_C:ReAdd()
   end
   self:PlayAnimation(self["in"], 0, 1, UE4.EUMGSequencePlayMode.Forward, 1, true)
   self:InitLongPressState()
+  self:UpdateCostItemDetail()
   rawset(self, "bOnRemoved", false)
 end
 
@@ -606,6 +653,7 @@ function WBP_InteractiveItem_C:UpdateInteractiveItemState()
   self:UpdateCondition()
   self:UpdateStateAnim()
   self:InitLongPressState()
+  self:UpdateCostItemDetail()
 end
 
 function WBP_InteractiveItem_C:UpdateIcon()

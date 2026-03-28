@@ -9,6 +9,20 @@ function M:Construct()
   self:AddDispatcher(EventID.OnNewWeaponAccessoryObtained, self, self.OnNewWeaponAccessoryObtained)
 end
 
+function M:ReceiveEnterState(StackAction)
+  if self.Type ~= CommonConst.ArmoryType.Weapon then
+    return
+  end
+  if self.ActorController then
+    local Tag = self.Target:HasTag("Melee") and "Melee" or "Ranged"
+    self.ActorController:SetMontageAndCamera(self.Type, Tag, "Appearance", "")
+    self.ActorController:HidePlayerActor(self.UIName, false)
+  end
+  if self.CurrentTopTabIdx == self.WeaponStanceFXTabIdx and self.ComparedContent and self.ComparedContent ~= self.NoneAccessory then
+    self:UpdateWeaponStanceFXInfo(self.ComparedContent)
+  end
+end
+
 function M:OnWeaponColorsChanged()
   self:ResetTarget()
 end
@@ -170,8 +184,8 @@ end
 function M:InitWeaponAccessory()
   self.WidgetSwitcher_State:SetActiveWidgetIndex(0)
   self:CreateWeaponAccessoryContents(self.Target)
-  if self.ArmoryHelper then
-    self.ArmoryHelper:ResetRotation()
+  if self.ActorController then
+    self.ActorController:ResetActorRotation()
   end
   self.NoneAccessory.bSelectTag = false
   self.NoneAccessory.IsSelect = false
@@ -191,6 +205,43 @@ function M:InitWeaponAccessory()
   self:InitWeaponAccessoryList()
   self:SelectAccessoryItem(self.ComparedContent)
   self.List_Accessory:BP_ScrollItemIntoView(self.ComparedContent)
+  self:AddWeaponAccessoryTabReddotListen()
+end
+
+function M:AddWeaponAccessoryTabReddotListen()
+  if self.NoReddot then
+    return
+  end
+  self:RemoveWeaponAccessoryTabReddotListen()
+  if not self.TabNodeNames then
+    self.TabNodeNames = {}
+  end
+  for AccessoryType, Tab in pairs(self.AccessoryTabsMap or {}) do
+    local NodeName = AccessoryType
+    local LeafNodes = {}
+    local LeafNodeName = CommonConst.DataType.WeaponAccessory .. AccessoryType
+    LeafNodes[LeafNodeName] = ReddotManager.GetTreeNode(LeafNodeName) and 1 or nil
+    if not self.TabNodeNames[NodeName] and not IsEmptyTable(LeafNodes) then
+      ReddotManager.AddListener(NodeName, self, function(self, Count)
+        Tab.IsNew = Count > 0
+        if Tab.UI then
+          Tab.UI:SetReddot(Tab.IsNew)
+        end
+        self:UpdateTopTabReddot()
+      end, LeafNodes)
+      self.TabNodeNames[NodeName] = 1
+    end
+  end
+end
+
+function M:RemoveWeaponAccessoryTabReddotListen()
+  if self.NoReddot then
+    return
+  end
+  for NodeName, _ in pairs(self.TabNodeNames or {}) do
+    ReddotManager.RemoveListener(NodeName, self)
+  end
+  self.TabNodeNames = nil
 end
 
 local function AddWeaponAccessoryContent(self, AccessoryId)
@@ -264,6 +315,27 @@ end
 function M:OnAccessoryContentCreated(Content)
 end
 
+local function CreateStanceFXTag2ModId(self)
+  if rawget(self, "StanceFXTag2ModId") then
+    return
+  end
+  local TargetModApplicationTypes = {}
+  for _, value in pairs(self.Target.ModApplicationType or {}) do
+    if not DataMgr.ModTag[value] then
+    else
+      TargetModApplicationTypes[value] = true
+    end
+  end
+  rawset(self, "StanceFXTag2ModId", {})
+  for ModId, value in pairs(DataMgr.Mod) do
+    if TargetModApplicationTypes[value.ApplicationType] and value.ModActivateSkills then
+      for SkillId, StanceFXTag in pairs(value.ModActivateSkills) do
+        self.StanceFXTag2ModId[StanceFXTag] = ModId
+      end
+    end
+  end
+end
+
 function M:CreateWeaponAccessoryContent(Data)
   if Data.BeginTime then
     local Time = TimeUtils.NowTime()
@@ -271,18 +343,29 @@ function M:CreateWeaponAccessoryContent(Data)
       return
     end
   end
+  if Data.StanceFXTag then
+    CreateStanceFXTag2ModId(self)
+    if not self.StanceFXTag2ModId[tonumber(Data.StanceFXTag)] then
+      return
+    end
+  end
   local Obj = NewObject(UIUtils.GetCommonItemContentClass())
-  Obj.ItemType = CommonConst.DataType.WeaponAccessory
-  Obj.Icon = Data.Icon or ""
-  Obj.Id = Data.WeaponAccessoryId
-  Obj.AccessoryId = Data.WeaponAccessoryId
-  Obj.SortPriority = Data.SortPriority or 0
-  Obj.LockType = 2
-  Obj.IsHide = Data.IsHide
-  Obj.IsSelect = false
-  Obj.UnlockOptionText = GText(Data.UnlockOption or "")
-  Obj.Parent = self
-  Obj.Rarity = Data.Rarity or 0
+  rawset(Obj, "ItemType", CommonConst.DataType.WeaponAccessory)
+  rawset(Obj, "Icon", Data.Icon or "")
+  rawset(Obj, "Id", Data.WeaponAccessoryId)
+  rawset(Obj, "AccessoryId", Data.WeaponAccessoryId)
+  rawset(Obj, "SortPriority", Data.SortPriority or 0)
+  rawset(Obj, "LockType", 2)
+  rawset(Obj, "IsHide", Data.IsHide)
+  rawset(Obj, "IsSelect", false)
+  rawset(Obj, "UnlockOptionText", GText(Data.UnlockOption or ""))
+  rawset(Obj, "Parent", self)
+  rawset(Obj, "Rarity", Data.Rarity or 0)
+  rawset(Obj, "AccessoryType", Data.StanceFXType)
+  rawset(Obj, "StanceFXTag", tonumber(Data.StanceFXTag))
+  if rawget(self, "StanceFXTag2ModId") then
+    rawset(Obj, "ModId", self.StanceFXTag2ModId[rawget(Obj, "StanceFXTag")])
+  end
   return Obj
 end
 
@@ -302,7 +385,7 @@ function M:InitWeaponAccessoryList()
   self.List_Accessory:SetVisibility(UIConst.VisibilityOp.Visible)
   self.FilteredContents = {}
   for _, Content in ipairs(self.Array_WeaponAccessoryContents) do
-    if not Content.IsHide then
+    if not Content.IsHide and Content.AccessoryType == CommonConst.WeaponAccessoryTypes.Accessory then
       if self.JumpToAccessoryId and self.JumpToAccessoryId == Content.AccessoryId then
         self.ComparedContent = Content
       end
@@ -317,6 +400,8 @@ function M:InitWeaponAccessoryList()
   self.CurrentContent.IsSelect = true
   self.ComparedContent = self.ComparedContent or self.CurrentContent
   self.ComparedContent.IsSelect = true
+  self.List_Accessory:RequestFillEmptyContent()
+  self.List_Accessory:RequestPlayEntriesAnim()
 end
 
 function M:OnWeaponSkinGoToShopBtnClicked()
@@ -348,7 +433,7 @@ function M:SelectAccessoryItem(Content)
   if self.Type ~= CommonConst.ArmoryType.Weapon then
     return
   end
-  self.ActorController:ChangeWeaponAccessory(Content.AccessoryId)
+  self.ActorController:ChangeWeaponAccessory(Content.AccessoryId, Content.AccessoryType)
 end
 
 function M:RecoverAccessory()
@@ -358,16 +443,17 @@ function M:RecoverAccessory()
   if not self.ComparedContent or self.ComparedContent == self.CurrentContent then
     return
   end
-  self.ActorController:ChangeWeaponAccessory(self.CurrentContent.AccessoryId)
+  self.ActorController:ChangeWeaponAccessory(self.CurrentContent.AccessoryId, self.CurrentContent.AccessoryType)
 end
 
 function M:OnWeaponAccessoryConfirmBtnClicked()
   self:BlockAllUIInput(true)
   local Avatar = GWorld:GetAvatar()
-  if self.ComparedContent.AccessoryId then
+  local ComparedAccessoryId = self.ComparedContent.AccessoryId
+  if ComparedAccessoryId and ComparedAccessoryId > 0 and ComparedAccessoryId ~= self.NoneAccessoryId then
     Avatar:ChangeWeaponAppearanceAccessory(self.Target.Uuid, self.ComparedContent.AccessoryId)
   else
-    Avatar:ChangeWeaponAppearanceAccessory(self.Target.Uuid, -1)
+    Avatar:RemoveWeaponAppearanceAccessory(self.Target.Uuid, self.CurrentContent.AccessoryId)
   end
 end
 
@@ -381,6 +467,213 @@ function M:OnWeaponAccessoryChanged(Ret, WeaponUuid, AccessoryId)
   self:UpdateAccessoryDetails(self.CurrentContent)
 end
 
+local function CreateWeaponStanceFXConstVariable(self)
+  if rawget(self, "bWeaponStanceFXConstVariableCreated") then
+    return
+  end
+  rawset(self, "bWeaponStanceFXConstVariableCreated", true)
+  rawset(self, "AccessoryTypes", {
+    CommonConst.WeaponAccessoryTypes.RunAttack,
+    CommonConst.WeaponAccessoryTypes.HeavyAttack,
+    CommonConst.WeaponAccessoryTypes.FallAttack,
+    CommonConst.WeaponAccessoryTypes.SlideAttack
+  })
+end
+
+function M:InitWeaponStanceFX()
+  self.WidgetSwitcher_State:SetActiveWidgetIndex(0)
+  CreateWeaponStanceFXConstVariable(self)
+  self:CreateWeaponStanceFXTabInfo()
+  self:CreateWeaponAccessoryContents(self.Target)
+  self:CreateWeaponStanceFXContents()
+  if self.ActorController then
+    self.ActorController:ResetActorRotation()
+  end
+  self.NoneAccessory.bSelectTag = false
+  self.NoneAccessory.IsSelect = false
+  self.CurrentContent = self.NoneAccessory
+  if next(self.Map_StanceFXContents) == nil then
+    self.List_Accessory:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self:UpdateAccessoryDetails(self.CurrentContent)
+    return
+  end
+  self:CreateCurrentWeaponAccessoryContent(self.Target)
+  self:WeaponStanceFXJumpTo()
+  self:AddStanceFXTabReddotListen()
+end
+
+function M:AddStanceFXTabReddotListen()
+  if self.NoReddot then
+    return
+  end
+  self:RemoveStanceFXTabReddotListen()
+  if not self.TabNodeNames then
+    self.TabNodeNames = {}
+  end
+  for AccessoryType, Tab in pairs(self.AccessoryTabsMap) do
+    local NodeName = AccessoryType
+    local LeafNodes = {}
+    local LeafNodeName = CommonConst.DataType.WeaponAccessory .. AccessoryType
+    LeafNodes[LeafNodeName] = ReddotManager.GetTreeNode(LeafNodeName) and 1 or nil
+    if not self.TabNodeNames[NodeName] and not IsEmptyTable(LeafNodes) then
+      ReddotManager.AddListener(NodeName, self, function(self, Count)
+        Tab.IsNew = Count > 0
+        if Tab.UI then
+          Tab.UI:SetReddot(Tab.IsNew)
+        end
+        self:UpdateTopTabReddot()
+      end, LeafNodes)
+      self.TabNodeNames[NodeName] = 1
+    end
+  end
+end
+
+function M:RemoveStanceFXTabReddotListen()
+  if self.NoReddot then
+    return
+  end
+  for NodeName, _ in pairs(self.TabNodeNames or {}) do
+    ReddotManager.RemoveListener(NodeName, self)
+  end
+  self.TabNodeNames = nil
+end
+
+function M:WeaponStanceFXJumpTo()
+  local AccessoryId, AccessoryType = self.JumpToAccessoryId, self.JumpToWeaponAccessoryType
+  local Content = self.Map_AccessoryContents[AccessoryId]
+  if Content then
+    local AccessoryTab = self.AccessoryTabsMap[Content.AccessoryType]
+    if AccessoryTab then
+      self.Tab_Accessory:SelectTab(AccessoryTab.Idx)
+      return
+    end
+  else
+    local AccessoryTab = self.AccessoryTabsMap[AccessoryType]
+    if AccessoryTab then
+      self.Tab_Accessory:SelectTab(AccessoryTab.Idx)
+      return
+    end
+  end
+  self.Tab_Accessory:SelectTab(1)
+end
+
+function M:CreateCurrentWeaponAccessoryContent(Target)
+  local AppearanceSuit = Target:GetAppearance()
+  local WeaponAccessory = AppearanceSuit.Accessory
+  for _, AccessoryType in ipairs(self.AccessoryTypes) do
+    local AccessoryTypeIndex = CommonConst.WeaponAccessoryTypeIndex[AccessoryType]
+    if AccessoryTypeIndex then
+      local AccessoryId = WeaponAccessory[AccessoryTypeIndex] or -1
+      if AccessoryId == self.NoneAccessoryId then
+        self[AccessoryType .. "Content"] = self.NoneAccessory
+      else
+        self[AccessoryType .. "Content"] = self.Map_AccessoryContents[AccessoryId]
+      end
+    end
+  end
+  for _, AccessoryType in ipairs(self.AccessoryTypes) do
+    if self[AccessoryType .. "Content"] then
+      self[AccessoryType .. "Content"].bSelectTag = true
+    end
+  end
+end
+
+function M:CreateWeaponStanceFXTabInfo(Recreate)
+  if rawget(self, "IsStanceFXTabInited") and not Recreate then
+    return
+  end
+  rawset(self, "IsStanceFXTabInited", true)
+  rawset(self, "CurrentAccessoryTabIdx", nil)
+  rawset(self, "AccessoryTabsMap", {})
+  rawset(self, "AccessoryTabsArray", {})
+  for i, value in ipairs(self.AccessoryTypes) do
+    local Tab = {
+      Owner = self,
+      AccessoryType = value,
+      Text = "",
+      Idx = i,
+      IconPath = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Fashion_" .. value .. ".T_Tab_Fashion_" .. value
+    }
+    self.AccessoryTabsMap[Tab.AccessoryType] = Tab
+    table.insert(self.AccessoryTabsArray, Tab)
+    self:OnAccessoryTabContentCreated(Tab)
+  end
+  rawset(self, "TabConfigData", {
+    ChildWidgetName = "TabSubIconItem",
+    Tabs = self.AccessoryTabsArray,
+    SoundFunc = function(self)
+      AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_sort_tab", nil, nil)
+    end,
+    SoundFuncReceiver = self
+  })
+  self.Tab_Accessory:Init(self.TabConfigData)
+  self.Tab_Accessory:BindEventOnTabSelected(self, self.OnWeaponStanceFXTabClicked)
+end
+
+function M:OnWeaponStanceFXTabClicked(TabWidget)
+  local Tab = self.AccessoryTabsArray[TabWidget.Idx]
+  if self.ActorController then
+    self.ActorController:ResetActorRotation()
+  end
+  self.CurrentAccessoryTabIdx = Tab.Idx
+  self.CurrentAccessoryTabWidget = TabWidget
+  self.NoneAccessory.bSelectTag = false
+  self.NoneAccessory.IsSelect = false
+  self.NoneAccessory.AccessoryType = Tab.AccessoryType
+  self.NoneAccessory.Id = self.NoneAccessoryId
+  self.NoneAccessory.AccessoryId = self.NoneAccessory.Id
+  self.CurrentContent = self.NoneAccessory
+  if self.ComparedContent then
+    self.ComparedContent.IsSelect = false
+  end
+  self.ComparedContent = nil
+  self:InitAccessoryListCommon()
+  self.JumpToAccessoryId = nil
+  self.JumpToWeaponAccessoryType = nil
+  self.CurrentContent.bSelectTag = true
+  self.ComparedContent = self.ComparedContent or self.CurrentContent
+  self.CurrentContent.IsSelect = true
+  self:SelectAccessoryItem(self.ComparedContent)
+  if self.NoneAccessory.SelfWidget then
+    self.NoneAccessory.SelfWidget:OnListItemObjectSet(self.NoneAccessory)
+  end
+  self.List_Accessory:BP_ScrollItemIntoView(self.ComparedContent)
+end
+
+function M:CreateWeaponStanceFXContents()
+  if not rawget(self, "Map_AccessoryContents") then
+    return
+  end
+  rawset(self, "Map_StanceFXContents", {})
+  for AccessoryId, Content in pairs(self.Map_AccessoryContents) do
+    if Content.AccessoryType and Content.AccessoryType ~= CommonConst.WeaponAccessoryTypes.Accessory then
+      self.Map_StanceFXContents[AccessoryId] = Content
+      rawset(Content, "Owner", self)
+      rawset(Content, "OnClicked", self.OnStanceFXItemClicked)
+    end
+  end
+end
+
+function M:UpdateWeaponStanceFXInfo(Content)
+  if not Content.StanceFXTag or not Content.ModId then
+    return
+  end
+  self.TextTitleMod:SetText(GText("UI_Accessory_Stance_Mod"))
+  local Params = {
+    Parant = self,
+    Target = self.Target,
+    Type = self.Type,
+    Tag = self.Target:HasTag("Melee") and "Melee" or "Ranged",
+    ForbidModBtn = self.IsPreviewMode or self.IsCharacterTrialMode or self.IsTargetUnowned,
+    ModId = Content.ModId,
+    Owner = self,
+    OnModBtnClicked = self.OnModBtnClicked
+  }
+  self.WBP_Armory_SkinMod:Init(Params)
+  self.Mod_Title_Line:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.Mod_Content:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+end
+
 function M:OnTopTabSelected(TabWidget, Content)
   if self.Type ~= CommonConst.ArmoryType.Weapon then
     return
@@ -391,6 +684,12 @@ function M:OnTopTabSelected(TabWidget, Content)
       self:RecoverAccessory()
     end
     self:InitWeaponSkin()
+  elseif self.CurrentTopTabIdx == self.WeaponStanceFXTabIdx then
+    if self.IsAccessoryContentsCreated then
+      self:RecoverAccessory()
+    end
+    self.Mask_Tab:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self:InitWeaponStanceFX()
   else
     self.Tab_Accessory:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.Mask_Tab:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -425,7 +724,7 @@ function M:UpdateActorColors(SkinId)
   self.ActorController:ChangeWeaponColor(ColorInfo)
 end
 
-function M:OnConfirmBtnClicked()
+function M:OnRightConfirmBtnClicked()
   if self.Type ~= CommonConst.ArmoryType.Weapon then
     return
   end
@@ -436,6 +735,10 @@ function M:OnConfirmBtnClicked()
   else
     self:OnWeaponAccessoryConfirmBtnClicked()
   end
+end
+
+function M:Destruct()
+  self:RemoveAccessoryTabReddotListen()
 end
 
 return M

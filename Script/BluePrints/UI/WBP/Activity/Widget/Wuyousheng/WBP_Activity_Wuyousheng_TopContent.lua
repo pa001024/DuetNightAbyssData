@@ -81,7 +81,7 @@ function M:InitPetIcon()
       local WuyoushengData = Avatar.WuyoushengActivity[EventId]
       if WuyoushengData then
         local SavedSquad = WuyoushengData:GetSquadInfo(DungeonId)
-        local PetId = SavedSquad.Pet
+        local PetId = SavedSquad.Pet.Id
         self.PetId = PetId
         if PetId then
           local BattlePetInfo = DataMgr.BattlePet[PetId]

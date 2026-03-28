@@ -59,10 +59,10 @@ function BP_CaptureComponent_C:ActiveCaptureMonster()
   self.GameMode:TriggerActiveStaticCreator(CpatureArray, "CaptureMonster")
 end
 
-function BP_CaptureComponent_C:OnStaticCreatorEvent(EventName, Eid, UnitId, UnitType)
+function BP_CaptureComponent_C:OnStaticCreatorEvent(EventName, Eid, UnitId, UnitType, CreatorId)
   if "CaptureMonster" == EventName then
     self.CaptureMonsterEid = Eid
-    DebugPrint("CaptureComponent: 捕获怪已激活，Eid", Eid, "UnitId", UnitId, self.CaptureMonsterId)
+    DebugPrint("CaptureComponent: 捕获怪已激活，Eid", Eid, "UnitId", UnitId, self.CaptureMonsterId, CreatorId)
   end
 end
 

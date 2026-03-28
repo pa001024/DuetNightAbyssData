@@ -34,5 +34,17 @@
       "3.5%",
       "42%"
     ]
+  },
+  {
+    "RaidBuffID": 13,
+    "RaidBuffDes": "When a Lumino character's Skill Range exceeds their Skill Duration, for every 10% excess, they ignore 7% DEF when dealing Skill DMG, up to a maximum of 42% DEF. When Skill Duration exceeds Skill Range, for every 20% excess, their PEN stats are increased by 10%, up to a maximum of 50%.",
+    "RaidBuffParameter": [
+      "10%",
+      "7%",
+      "42%",
+      "20%",
+      "10%",
+      "50%"
+    ]
   }
 ]

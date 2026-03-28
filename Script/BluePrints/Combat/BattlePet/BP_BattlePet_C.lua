@@ -13,7 +13,7 @@ function BP_BattlePet_C:ApplyAddAttrs()
     if Character:IsPlayer() or Character.IsSpawnByResource or Character.IsSpawnByGM or Character.IsSpawnBySquad then
       for Index = 1, #AddAttrs do
         local AttrData = AddAttrs[Index]
-        local PetLevel = 0 ~= self.PetLevel and self.PetLevel or 1
+        local PetLevel = math.min(self.PetLevel + self.SkillLevelUp, self.SkillMaxLevel)
         AttrData = SkillUtils.GrowProxyBySkillLevel("BattlePet", self.BattlePetId, PetLevel, AttrData)
         local UniqueId = table.concat({
           "Pet:[",
@@ -68,6 +68,7 @@ function BP_BattlePet_C:ApplyAddAttrsByAffixId(AffixId)
       for Index = 1, #AddAttrs do
         local AttrData = AddAttrs[Index]
         local PetLevel = PetEntryConfig.BattlePetLevel or 1
+        PetLevel = math.min(PetLevel + self.SkillLevelUp, self.SkillMaxLevel)
         AttrData = SkillUtils.GrowProxyBySkillLevel("BattlePet", BattlePetId, PetLevel, AttrData)
         local UniqueId = table.concat({
           "Pet:[",
@@ -115,7 +116,7 @@ function BP_BattlePet_C:ApplyAttrToPhantom(Phantom)
   end
   for Index = 1, #AddAttrs do
     local AttrData = AddAttrs[Index]
-    local PetLevel = 0 ~= self.PetLevel and self.PetLevel or 1
+    local PetLevel = math.min(self.PetLevel + self.SkillLevelUp, self.SkillMaxLevel)
     AttrData = SkillUtils.GrowProxyBySkillLevel("BattlePet", self.BattlePetId, PetLevel, AttrData)
     local AttrName = AttrData.AttrName
     if DataMgr.AttributeType[AttrName] then

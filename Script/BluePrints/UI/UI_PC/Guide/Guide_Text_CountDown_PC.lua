@@ -63,7 +63,7 @@ function Guide_Text_CountDown_PC:InitCommonCountDown(Duration, bShowZeroText, Co
   local BattleMainUI = UIManager(self):GetUIObj("BattleMain")
   if BattleMainUI then
     BattleMainUI.Pos_CountDown:AddChild(self)
-    BattleMainUI.Pos_CountDown:SetVisibility(UE.ESlateVisibility.SelfHitTestInvisible)
+    BattleMainUI.Pos_CountDown:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   end
   if self.TempleTimerHandle then
     self:RemoveTimer("GuideTextCountDownTick", false)

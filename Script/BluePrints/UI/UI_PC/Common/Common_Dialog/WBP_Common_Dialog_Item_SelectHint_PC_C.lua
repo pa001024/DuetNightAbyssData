@@ -21,6 +21,11 @@ function WBP_Common_Dialog_Item_SelectHint_PC_C:InitContent(Params, PopupData, O
     self.Text_Hint:SetText(GText(Text))
   end
   self.Button_Hint.OnClicked:Add(self, self.OnBtnClicked)
+  self.Button_Hint.OnHovered:Add(self, self.OnBtnHovered)
+  self.Button_Hint.OnUnhovered:Add(self, self.OnBtnUnhovered)
+  self.Button_Hint.OnPressed:Add(self, self.OnBtnPressed)
+  self.IsSelected = false
+  self.Bg_Select:SetVisibility(UE.ESlateVisibility.Collapsed)
 end
 
 function WBP_Common_Dialog_Item_SelectHint_PC_C:InitGamepadView()
@@ -34,7 +39,25 @@ end
 
 function WBP_Common_Dialog_Item_SelectHint_PC_C:OnBtnClicked()
   AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", nil, nil)
-  self.Bg_Select:SetVisibility(self.Bg_Select:IsVisible() and UE.ESlateVisibility.Hidden or UE.ESlateVisibility.Visible)
+  if not self.IsSelected then
+    self:PlayAnimation(self.Click)
+  else
+    self:PlayAnimation(self.Click)
+  end
+  self.IsSelected = not self.IsSelected
+  self.Bg_Select:SetVisibility(self.IsSelected and UE.ESlateVisibility.Visible or UE.ESlateVisibility.Collapsed)
+end
+
+function WBP_Common_Dialog_Item_SelectHint_PC_C:OnBtnHovered()
+  self:PlayAnimation(self.Hover)
+end
+
+function WBP_Common_Dialog_Item_SelectHint_PC_C:OnBtnUnhovered()
+  self:PlayAnimation(self.UnHover)
+end
+
+function WBP_Common_Dialog_Item_SelectHint_PC_C:OnBtnPressed()
+  self:PlayAnimation(self.Press)
 end
 
 function WBP_Common_Dialog_Item_SelectHint_PC_C:OnContentKeyDown(MyGeometry, InKeyEvent)

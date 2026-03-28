@@ -104,5 +104,10 @@ return ReadOnly("WikiSubType", {
     MainType = 4,
     SubType = 408,
     SubTypeText = "SubType_4_Region"
+  },
+  [409] = {
+    MainType = 4,
+    SubType = 409,
+    SubTypeText = "SubType_4_Story"
   }
 })

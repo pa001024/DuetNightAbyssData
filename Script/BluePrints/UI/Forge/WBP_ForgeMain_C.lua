@@ -1431,6 +1431,35 @@ function WBP_ForgeMain_C:ShowStartBatchProduceConfirmWindow(DraftId, co)
   self:ShowConfirmWindow(Const.Popup_BatchStartProduce, CommonDialogParams, self)
 end
 
+function WBP_ForgeMain_C:HandleShowSecPasswordWindow(DraftId, Count, CostItemList)
+  local HasLockedMod = false
+  for _, Item in ipairs(CostItemList) do
+    if Item.IsLock then
+      HasLockedMod = true
+    end
+  end
+  if not HasLockedMod then
+    return true
+  end
+  local co = coroutine.running()
+  local Callback = {
+    OnSuccess = function(Password)
+      if coroutine.status(co) == "suspended" then
+        self:ContinueCoroutine(co, true)
+      end
+    end,
+    OnCancel = function()
+      if coroutine.status(co) == "suspended" then
+        self:ContinueCoroutine(co, false)
+      end
+    end
+  }
+  if SecondaryPasswordController:RequestSecPasswordValidation(Callback) then
+    return coroutine.yield()
+  end
+  return true
+end
+
 function WBP_ForgeMain_C:HandleShowModConfirmWindow(DraftId, Count, CostItemList)
   local co = coroutine.running()
   local ImportantModList = {}
@@ -1493,6 +1522,10 @@ function WBP_ForgeMain_C:ShowStartProduceConfirmWindowWithItem(DraftId, UseModAs
       if UseModAsMaterial then
         CostItemList = ForgeModel:ChooseCostItems(DraftId, Count)
         local Succeed = self:HandleShowModConfirmWindow(DraftId, Count, CostItemList)
+        if not Succeed then
+          return
+        end
+        local Succeed = self:HandleShowSecPasswordWindow(DraftId, Count, CostItemList)
         if not Succeed then
           return
         end
@@ -1641,7 +1674,7 @@ function WBP_ForgeMain_C:ShowCancelProduceWindow(DraftId, InCount, Count)
   local DraftData = DataMgr.Draft[DraftId]
   if Count and Count > 0 then
     local ItemId = DraftData.ProductId
-    local ItemNum = DraftData.ProductNum
+    local ItemNum = DraftData.ProductNum * Count
     local ItemType = DraftData.ProductType .. "s"
     Params[ItemType] = Params[ItemType] or {}
     Params[ItemType][ItemId] = ItemNum

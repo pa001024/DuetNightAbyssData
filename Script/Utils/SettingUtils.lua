@@ -149,54 +149,54 @@ function SettingUtils.InitMobileResolution(GameOverallPerformance)
       [1] = {
         80,
         65,
-        648
+        576
       },
       [2] = {
         85,
         65,
-        684
+        648
       },
       [3] = {
         90,
         70,
-        720
+        684
       },
       [4] = {
         95,
         75,
-        764
+        720
       },
       [5] = {
         115,
         80,
-        900
+        800
       }
     }
   elseif "IOS" == PlatformName then
     MobileResolutionList = {
       [1] = {
-        55,
-        55,
+        48,
+        48,
         0
       },
       [2] = {
-        60,
-        60,
+        52,
+        52,
         0
       },
       [3] = {
-        65,
-        65,
+        55,
+        55,
         0
       },
       [4] = {
-        70,
-        70,
+        65,
+        65,
         0
       },
       [5] = {
-        85,
-        85,
+        70,
+        70,
         0
       }
     }
@@ -243,6 +243,28 @@ function SettingUtils.GetEMCache(CacheName, CacheKey, DefaultValue)
   return DefaultValue
 end
 
+function SettingUtils.GetEMCacheForBL(OptionId)
+  local OptionInfo = DataMgr.Option[OptionId]
+  if not OptionInfo then
+    return
+  end
+  local DefaultValue
+  if UIUtils.IsMobileInput() and OptionInfo.DefaultValueM then
+    DefaultValue = OptionInfo.DefaultValueM
+  else
+    DefaultValue = OptionInfo.DefaultValue
+  end
+  if OptionInfo.ControlType == "Switch" then
+    DefaultValue = "True" == DefaultValue
+  elseif OptionInfo.ControlType == "Scroll" or OptionInfo.ControlType == "UnFold" then
+    DefaultValue = tonumber(DefaultValue)
+  else
+    return
+  end
+  local Value = SettingUtils.GetEMCache(OptionInfo.EMCacheName, OptionInfo.EMCacheKey, DefaultValue)
+  return Value
+end
+
 function SettingUtils.SaveEMCache(CacheName, CacheKey, CacheValue)
   local CacheData = EMCache:Get(CacheName)
   if CacheKey then
@@ -266,7 +288,7 @@ function SettingUtils.GetUpValueByValueType(UpOptionValue)
 end
 
 function SettingUtils.IsOpenRayTracing()
-  return UE4.URuntimeCommonFunctionLibrary.GetRayTracingEnabled()
+  return UE4.URuntimeCommonFunctionLibrary.GetRayTracingConfigEnabled() and UE4.URuntimeCommonFunctionLibrary.GetRayTracingEnabled()
 end
 
 function SettingUtils.ResetMobileResolution()
@@ -282,18 +304,18 @@ function SettingUtils.ResetMobileResolution()
         rawset(SettingUtils, "DefaultMobileResolution", {
           [0] = {
             80,
-            60,
-            648
+            65,
+            576
           },
           [1] = {
             85,
             65,
-            684
+            648
           },
           [2] = {
             90,
             70,
-            720
+            684
           },
           [3] = {
             95,
@@ -303,34 +325,34 @@ function SettingUtils.ResetMobileResolution()
           [4] = {
             115,
             80,
-            900
+            800
           }
         })
       elseif "IOS" == PlatformName then
         rawset(SettingUtils, "DefaultMobileResolution", {
           [0] = {
-            55,
-            55,
+            48,
+            48,
             0
           },
           [1] = {
-            60,
-            60,
+            52,
+            52,
             0
           },
           [2] = {
-            65,
-            65,
+            55,
+            55,
             0
           },
           [3] = {
-            70,
-            70,
+            65,
+            65,
             0
           },
           [4] = {
-            85,
-            85,
+            70,
+            70,
             0
           }
         })

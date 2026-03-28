@@ -4,6 +4,7 @@ local BP_UIState_C = Class({
   "BluePrints.Common.DelayFrameComponent",
   "BluePrints.UI.BP_EMUserWidgetUtils_C"
 })
+local NEW_BlockAllUIInput = true
 
 function BP_UIState_C:Initialize(Initializer)
   rawset(self, "IsInit", false)
@@ -44,8 +45,6 @@ end
 function BP_UIState_C:SetUIStateTag(StateTag)
   self.UIStateTag = StateTag
 end
-
-local NEW_BlockAllUIInput = true
 
 function BP_UIState_C:UpdateArgs(Args)
   self.ExtraArgs = self.ExtraArgs or {}
@@ -157,7 +156,7 @@ function BP_UIState_C:SetUIVisibilityTag(VisibiltyTag, Invisible, EDesireVisibil
     self.HideTags[VisibiltyTag] = nil
   end
   local IsHide = not IsEmptyTable(self.HideTags)
-  if IsHide then
+  if IsHide or self.IsHideByNode then
     EDesireVisibilty = EDesireVisibilty or UE4.ESlateVisibility.Collapsed
     if self:GetVisibility() ~= EDesireVisibilty then
       if self.bIsActive then
@@ -339,7 +338,7 @@ function BP_UIState_C:ReceiveExitState(StackAction)
     if 1 == StackAction and 1 == UIManager:StateCount() then
       if IsValid(rawget(UIManager, "ViewTargetBeforeOpenSystem")) then
         self:CameraToViewTarget(UIManager.ViewTargetBeforeOpenSystem)
-      else
+      elseif self:GetOwningPlayer():GetViewTarget() == self:GetOwningPlayer() then
         self:CameraToViewTarget(UGameplayStatics.GetPlayerCharacter(self, 0))
       end
     else
@@ -562,6 +561,65 @@ end
 function BP_UIState_C:OnShow(ShowTag)
 end
 
+function BP_UIState_C:Created()
+  if not UIConst.bUseHierarchicalLayer then
+    self.Overridden.Created(self)
+    self:OnCreated()
+    return
+  end
+  local SystemUIConfig = DataMgr.SystemUI[self:GetUIConfigName()] or UIConst.AllUIConfig[self:GetUIConfigName()]
+  if nil ~= SystemUIConfig then
+    self.HierarchicalLayerTag = SystemUIConfig.HierarchicalLayerTag
+  end
+  DebugPrint("Hy@ UIState型界面创建 Created，名称：", self:GetUIConfigName(), " HierarchicalLayerTag is ", self.HierarchicalLayerTag)
+  if self.HierarchicalLayerTag == UIConst.HierarchicalLayer[2] then
+    self:AddWidgetToHierarchicalLayer(UIConst.HierarchicalLayer[2])
+  elseif self.HierarchicalLayerTag == UIConst.HierarchicalLayer[4] then
+    self:AddWidgetToHierarchicalLayer(UIConst.HierarchicalLayer[4])
+  else
+    self.Overridden.Created(self)
+  end
+  self:OnCreated()
+end
+
+function BP_UIState_C:OnCreated()
+end
+
+function BP_UIState_C:Destroyed()
+  if not UIConst.bUseHierarchicalLayer then
+    self.Overridden.Destroyed(self)
+    self:OnDestroyed()
+    return
+  end
+  if self.HierarchicalLayerTag == UIConst.HierarchicalLayer[4] then
+    self.Overridden.Destroyed(self)
+  else
+    self.Overridden.Destroyed(self)
+  end
+  self:OnDestroyed()
+end
+
+function BP_UIState_C:OnDestroyed()
+end
+
+function BP_UIState_C:GetHierarchicalLayerWidget(LayerName)
+  local HierarchicalWidget = UIManager(self):GetUIObj("SceneStartUI")
+  if nil == HierarchicalWidget then
+    return nil
+  end
+  return HierarchicalWidget[LayerName .. "_Overlay"]
+end
+
+function BP_UIState_C:AddWidgetToHierarchicalLayer(LayerName)
+  local LayerNodeWidget = self:GetHierarchicalLayerWidget(LayerName)
+  if LayerNodeWidget then
+    local Slot = LayerNodeWidget:AddChildToOverlay(self)
+    Slot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
+    Slot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
+  end
+  return LayerNodeWidget
+end
+
 function BP_UIState_C:OnInAnimationStarted()
   local SystemUIConfig = DataMgr.SystemUI[self:GetUIConfigName()]
   self:DealWithBattleUnitVisibility(SystemUIConfig.IsHideBattleUnit, true, "AnimStart")
@@ -680,7 +738,7 @@ function BP_UIState_C:OnEndClose()
 end
 
 function BP_UIState_C:DestroyObject()
-  self.Overridden.DestroyObject(self)
+  self.Overridden.Destroyed(self)
 end
 
 function BP_UIState_C:EMDestruct()
@@ -732,6 +790,11 @@ function BP_UIState_C:UISetGamePaused(UIName, IsPause)
   end
   if IsStandAlone(self) then
     local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+    local GameState = UE4.UGameplayStatics.GetGameState(self)
+    if GameState and GameState.GameModeType == "SoloTreasure" then
+      DebugPrint("UISetGamePaused: SoloTreasure模式下打开系统不暂停游戏")
+      return
+    end
     if GameMode and GameMode.SetGamePaused then
       GameMode:SetGamePaused(UIName, IsPause)
     end

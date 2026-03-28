@@ -43,6 +43,10 @@ return ReadOnly("SkillType", {
     SkillType = "SlideAttack"
   },
   Support = {EnumValue = 16, SkillType = "Support"},
+  UltraPassive = {
+    EnumValue = 22,
+    SkillType = "UltraPassive"
+  },
   WeaponPassive = {
     EnumValue = 17,
     SkillType = "WeaponPassive"

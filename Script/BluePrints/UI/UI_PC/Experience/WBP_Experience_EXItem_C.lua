@@ -10,11 +10,15 @@ end
 function M:OnListItemObjectSet(Content)
   self.Content = Content
   self.Content.Entry = self
-  local PlayerExpSubSource = {}
+  local PlayerExpSubSourceTemp = {}
   for _, SubSourceInfo in pairs(DataMgr.PlayerExpSubSource) do
-    if SubSourceInfo.Source == Content.ID then
-      table.insert(PlayerExpSubSource, SubSourceInfo)
+    if SubSourceInfo.Source == Content.ID and (not PlayerExpSubSourceTemp[SubSourceInfo.SubSourceName] or PlayerExpSubSourceTemp[SubSourceInfo.SubSourceName].ID > SubSourceInfo.ID) then
+      PlayerExpSubSourceTemp[SubSourceInfo.SubSourceName] = SubSourceInfo
     end
+  end
+  local PlayerExpSubSource = {}
+  for SubSourceName, SubSourceInfo in pairs(PlayerExpSubSourceTemp) do
+    table.insert(PlayerExpSubSource, SubSourceInfo)
   end
   table.sort(PlayerExpSubSource, function(a, b)
     return a.Sequence > b.Sequence
@@ -22,7 +26,7 @@ function M:OnListItemObjectSet(Content)
   self.List_Attr:ClearListItems()
   for Index, SubSourceInfo in pairs(PlayerExpSubSource) do
     local SubContent = NewObject(UIUtils.GetCommonItemContentClass())
-    local SubContentInfo = Content.AllSubContentInfo[SubSourceInfo.ID]
+    local SubContentInfo = Content.AllSubContentInfo[SubSourceInfo.SubSourceName]
     SubContent.CanGetRewardExp = SubContentInfo.CanGetRewardExp
     SubContent.CollectRewardExp = SubContentInfo.CollectRewardExp
     SubContent.ID = SubContentInfo.ID

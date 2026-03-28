@@ -101,7 +101,8 @@ function M:PlayTalk(TalkConfigKey, TalkAction, AudioAttachActor)
       TalkType = TalkTriggerInfo.TalkType,
       FirstDialogueId = TalkTriggerInfo.DialogueId,
       BlendInTime = 0.5,
-      BlendOutTime = 0.5
+      BlendOutTime = 0.5,
+      TalkActors = {}
     }
     local Key = self:RegisterTalkData(RawData)
     self:RegisterTalkTask(Key, TalkEndCallback)
@@ -872,6 +873,23 @@ function M:GetNpcPlayDialogueCallback(NpcId)
       end
     }
   end
+end
+
+function M:SetNiagaraComponentIgnorePause(NiagaraComponent, bIgnorePause)
+  if not IsValid(NiagaraComponent) then
+    return
+  end
+  local IgnorePauseValue = 0
+  if bIgnorePause then
+    IgnorePauseValue = 1
+  end
+  NiagaraComponent:SetVariableFloat("IgnoreGamePause", IgnorePauseValue)
+  NiagaraComponent:SetTickableWhenPaused(bIgnorePause)
+  local bNativeAutoDestroy = NiagaraComponent.bAutoDestroy
+  NiagaraComponent:SetAutoDestroy(false)
+  NiagaraComponent:SetForceSolo(bIgnorePause)
+  NiagaraComponent:SetAutoDestroy(bNativeAutoDestroy)
+  NiagaraComponent:Activate(true)
 end
 
 return M

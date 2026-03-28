@@ -5,6 +5,32 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("PayGoods", {
+  ["com.epic.dna.Pay_101_mega"] = {
+    GoodsId = "com.epic.dna.Pay_101_mega",
+    ItemId = 100018,
+    PriceCNY = 0,
+    PriceEUR = 0,
+    PriceGBP = 0,
+    PriceHKD = 0,
+    PriceJPY = 0,
+    PriceKRW = 0,
+    PriceRUB = 0,
+    PriceTWD = 0,
+    PriceUSD = 0
+  },
+  ["com.epic.dna.Pay_101_test"] = {
+    GoodsId = "com.epic.dna.Pay_101_test",
+    ItemId = 99994,
+    PriceCNY = 0,
+    PriceEUR = 0,
+    PriceGBP = 0,
+    PriceHKD = 0,
+    PriceJPY = 0,
+    PriceKRW = 0,
+    PriceRUB = 0,
+    PriceTWD = 0,
+    PriceUSD = 0
+  },
   ["com.hero.dna.Pay_101"] = {
     GoodsId = "com.hero.dna.Pay_101",
     ItemId = 110101,
@@ -328,6 +354,45 @@ return ReadOnly("PayGoods", {
     PriceTWD = 550,
     PriceUSD = 16.99
   },
+  ["com.hero.dna.Pay_CharaShards_kamila1"] = {
+    GoodsId = "com.hero.dna.Pay_CharaShards_kamila1",
+    ItemId = 160160,
+    PriceCNY = 68,
+    PriceEUR = 9.99,
+    PriceGBP = 9.99,
+    PriceHKD = 78,
+    PriceJPY = 1500,
+    PriceKRW = 12000,
+    PriceRUB = 899,
+    PriceTWD = 330,
+    PriceUSD = 9.99
+  },
+  ["com.hero.dna.Pay_CharaShards_kamila2"] = {
+    GoodsId = "com.hero.dna.Pay_CharaShards_kamila2",
+    ItemId = 160161,
+    PriceCNY = 88,
+    PriceEUR = 15.99,
+    PriceGBP = 13.99,
+    PriceHKD = 108,
+    PriceJPY = 2100,
+    PriceKRW = 17000,
+    PriceRUB = 1190,
+    PriceTWD = 440,
+    PriceUSD = 12.99
+  },
+  ["com.hero.dna.Pay_CharaShards_kamila3"] = {
+    GoodsId = "com.hero.dna.Pay_CharaShards_kamila3",
+    ItemId = 160162,
+    PriceCNY = 108,
+    PriceEUR = 18.99,
+    PriceGBP = 16.99,
+    PriceHKD = 130,
+    PriceJPY = 2500,
+    PriceKRW = 21000,
+    PriceRUB = 1490,
+    PriceTWD = 550,
+    PriceUSD = 16.99
+  },
   ["com.hero.dna.Pay_CharaShards_kezhou1"] = {
     GoodsId = "com.hero.dna.Pay_CharaShards_kezhou1",
     ItemId = 160122,
@@ -357,6 +422,45 @@ return ReadOnly("PayGoods", {
   ["com.hero.dna.Pay_CharaShards_kezhou3"] = {
     GoodsId = "com.hero.dna.Pay_CharaShards_kezhou3",
     ItemId = 160124,
+    PriceCNY = 108,
+    PriceEUR = 18.99,
+    PriceGBP = 16.99,
+    PriceHKD = 130,
+    PriceJPY = 2500,
+    PriceKRW = 21000,
+    PriceRUB = 1490,
+    PriceTWD = 550,
+    PriceUSD = 16.99
+  },
+  ["com.hero.dna.Pay_CharaShards_suyi1"] = {
+    GoodsId = "com.hero.dna.Pay_CharaShards_suyi1",
+    ItemId = 160157,
+    PriceCNY = 68,
+    PriceEUR = 9.99,
+    PriceGBP = 9.99,
+    PriceHKD = 78,
+    PriceJPY = 1500,
+    PriceKRW = 12000,
+    PriceRUB = 899,
+    PriceTWD = 330,
+    PriceUSD = 9.99
+  },
+  ["com.hero.dna.Pay_CharaShards_suyi2"] = {
+    GoodsId = "com.hero.dna.Pay_CharaShards_suyi2",
+    ItemId = 160158,
+    PriceCNY = 88,
+    PriceEUR = 15.99,
+    PriceGBP = 13.99,
+    PriceHKD = 108,
+    PriceJPY = 2100,
+    PriceKRW = 17000,
+    PriceRUB = 1190,
+    PriceTWD = 440,
+    PriceUSD = 12.99
+  },
+  ["com.hero.dna.Pay_CharaShards_suyi3"] = {
+    GoodsId = "com.hero.dna.Pay_CharaShards_suyi3",
+    ItemId = 160159,
     PriceCNY = 108,
     PriceEUR = 18.99,
     PriceGBP = 16.99,
@@ -458,6 +562,19 @@ return ReadOnly("PayGoods", {
     PriceTWD = 790,
     PriceUSD = 24.99
   },
+  ["com.hero.dna.Pay_CosmeticBundle_buji"] = {
+    GoodsId = "com.hero.dna.Pay_CosmeticBundle_buji",
+    ItemId = 160163,
+    PriceCNY = 128,
+    PriceEUR = 20.99,
+    PriceGBP = 19.99,
+    PriceHKD = 158,
+    PriceJPY = 3000,
+    PriceKRW = 25000,
+    PriceRUB = 1790,
+    PriceTWD = 670,
+    PriceUSD = 19.99
+  },
   ["com.hero.dna.Pay_CosmeticBundle_caiyuan"] = {
     GoodsId = "com.hero.dna.Pay_CosmeticBundle_caiyuan",
     ItemId = 160145,
@@ -510,9 +627,35 @@ return ReadOnly("PayGoods", {
     PriceTWD = 170,
     PriceUSD = 4.99
   },
+  ["com.hero.dna.Pay_DailyCharaShards_kamila"] = {
+    GoodsId = "com.hero.dna.Pay_DailyCharaShards_kamila",
+    ItemId = 99006,
+    PriceCNY = 30,
+    PriceEUR = 5.99,
+    PriceGBP = 4.99,
+    PriceHKD = 38,
+    PriceJPY = 750,
+    PriceKRW = 5900,
+    PriceRUB = 449,
+    PriceTWD = 170,
+    PriceUSD = 4.99
+  },
   ["com.hero.dna.Pay_DailyCharaShards_kezhou"] = {
     GoodsId = "com.hero.dna.Pay_DailyCharaShards_kezhou",
     ItemId = 99002,
+    PriceCNY = 30,
+    PriceEUR = 5.99,
+    PriceGBP = 4.99,
+    PriceHKD = 38,
+    PriceJPY = 750,
+    PriceKRW = 5900,
+    PriceRUB = 449,
+    PriceTWD = 170,
+    PriceUSD = 4.99
+  },
+  ["com.hero.dna.Pay_DailyCharaShards_suyi"] = {
+    GoodsId = "com.hero.dna.Pay_DailyCharaShards_suyi",
+    ItemId = 99005,
     PriceCNY = 30,
     PriceEUR = 5.99,
     PriceGBP = 4.99,
@@ -548,6 +691,123 @@ return ReadOnly("PayGoods", {
     PriceRUB = 449,
     PriceTWD = 170,
     PriceUSD = 4.99
+  },
+  ["com.hero.dna.Pay_DailyRandomPack"] = {
+    GoodsId = "com.hero.dna.Pay_DailyRandomPack",
+    ItemId = 160164,
+    PriceCNY = 1,
+    PriceEUR = 0.29,
+    PriceGBP = 0.29,
+    PriceHKD = 2,
+    PriceJPY = 50,
+    PriceKRW = 400,
+    PriceRUB = 29,
+    PriceTWD = 10,
+    PriceUSD = 0.29
+  },
+  ["com.hero.dna.Pay_FengxiWanhua1"] = {
+    GoodsId = "com.hero.dna.Pay_FengxiWanhua1",
+    ItemId = 160153,
+    PriceCNY = 6,
+    PriceEUR = 0.99,
+    PriceGBP = 0.99,
+    PriceHKD = 8,
+    PriceJPY = 150,
+    PriceKRW = 1200,
+    PriceRUB = 99,
+    PriceTWD = 33,
+    PriceUSD = 0.99
+  },
+  ["com.hero.dna.Pay_FengxiWanhua2"] = {
+    GoodsId = "com.hero.dna.Pay_FengxiWanhua2",
+    ItemId = 160154,
+    PriceCNY = 18,
+    PriceEUR = 2.99,
+    PriceGBP = 2.99,
+    PriceHKD = 22,
+    PriceJPY = 500,
+    PriceKRW = 3600,
+    PriceRUB = 249,
+    PriceTWD = 90,
+    PriceUSD = 2.99
+  },
+  ["com.hero.dna.Pay_FengxiWanhua3"] = {
+    GoodsId = "com.hero.dna.Pay_FengxiWanhua3",
+    ItemId = 160155,
+    PriceCNY = 68,
+    PriceEUR = 9.99,
+    PriceGBP = 9.99,
+    PriceHKD = 78,
+    PriceJPY = 1500,
+    PriceKRW = 12000,
+    PriceRUB = 899,
+    PriceTWD = 330,
+    PriceUSD = 9.99
+  },
+  ["com.hero.dna.Pay_FengxiWanhuaSupply1"] = {
+    GoodsId = "com.hero.dna.Pay_FengxiWanhuaSupply1",
+    ItemId = 160150,
+    PriceCNY = 98,
+    PriceEUR = 17.99,
+    PriceGBP = 14.99,
+    PriceHKD = 118,
+    PriceJPY = 2280,
+    PriceKRW = 19000,
+    PriceRUB = 1290,
+    PriceTWD = 490,
+    PriceUSD = 14.99
+  },
+  ["com.hero.dna.Pay_FengxiWanhuaSupply2"] = {
+    GoodsId = "com.hero.dna.Pay_FengxiWanhuaSupply2",
+    ItemId = 160151,
+    PriceCNY = 198,
+    PriceEUR = 34.99,
+    PriceGBP = 29.99,
+    PriceHKD = 238,
+    PriceJPY = 4500,
+    PriceKRW = 37000,
+    PriceRUB = 2490,
+    PriceTWD = 990,
+    PriceUSD = 29.99
+  },
+  ["com.hero.dna.Pay_FengxiWanhuaSupply3"] = {
+    GoodsId = "com.hero.dna.Pay_FengxiWanhuaSupply3",
+    ItemId = 160152,
+    PriceCNY = 328,
+    PriceEUR = 59.99,
+    PriceGBP = 49.99,
+    PriceHKD = 398,
+    PriceJPY = 7500,
+    PriceKRW = 65000,
+    PriceRUB = 4490,
+    PriceTWD = 1690,
+    PriceUSD = 49.99
+  },
+  ["com.hero.dna.Pay_FengxiZhuangshiWanhua1"] = {
+    GoodsId = "com.hero.dna.Pay_FengxiZhuangshiWanhua1",
+    ItemId = 160148,
+    PriceCNY = 18,
+    PriceEUR = 2.99,
+    PriceGBP = 2.99,
+    PriceHKD = 22,
+    PriceJPY = 500,
+    PriceKRW = 3600,
+    PriceRUB = 249,
+    PriceTWD = 90,
+    PriceUSD = 2.99
+  },
+  ["com.hero.dna.Pay_FengxiZhuangshiWanhua2"] = {
+    GoodsId = "com.hero.dna.Pay_FengxiZhuangshiWanhua2",
+    ItemId = 160149,
+    PriceCNY = 48,
+    PriceEUR = 7.99,
+    PriceGBP = 6.99,
+    PriceHKD = 59,
+    PriceJPY = 1100,
+    PriceKRW = 9900,
+    PriceRUB = 699,
+    PriceTWD = 260,
+    PriceUSD = 6.99
   },
   ["com.hero.dna.Pay_FragranceMelody1"] = {
     GoodsId = "com.hero.dna.Pay_FragranceMelody1",
@@ -883,6 +1143,19 @@ return ReadOnly("PayGoods", {
     PriceTWD = 670,
     PriceUSD = 19.99
   },
+  ["com.hero.dna.Pay_ThemedSkinPack_buji"] = {
+    GoodsId = "com.hero.dna.Pay_ThemedSkinPack_buji",
+    ItemId = 160156,
+    PriceCNY = 6,
+    PriceEUR = 0.99,
+    PriceGBP = 0.99,
+    PriceHKD = 8,
+    PriceJPY = 150,
+    PriceKRW = 1200,
+    PriceRUB = 99,
+    PriceTWD = 33,
+    PriceUSD = 0.99
+  },
   ["com.hero.dna.Pay_ThemedSkinPack_congcong"] = {
     GoodsId = "com.hero.dna.Pay_ThemedSkinPack_congcong",
     ItemId = 160133,
@@ -999,6 +1272,19 @@ return ReadOnly("PayGoods", {
     PriceRUB = 899,
     PriceTWD = 330,
     PriceUSD = 9.99
+  },
+  ["com.hero.dna.Pay_WeeklyLuckyPack"] = {
+    GoodsId = "com.hero.dna.Pay_WeeklyLuckyPack",
+    ItemId = 160226,
+    PriceCNY = 3,
+    PriceEUR = 0.49,
+    PriceGBP = 0.49,
+    PriceHKD = 4,
+    PriceJPY = 80,
+    PriceKRW = 600,
+    PriceRUB = 49,
+    PriceTWD = 19,
+    PriceUSD = 0.49
   },
   ["com.hero.dna.code.Special_001"] = {
     GoodsId = "com.hero.dna.code.Special_001",

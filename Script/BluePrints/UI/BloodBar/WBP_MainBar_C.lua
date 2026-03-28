@@ -61,11 +61,6 @@ function WBP_MainBar_C:SetInTeam()
   self.Panel_BG:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end
 
-function WBP_MainBar_C:SetLevelText_Lua()
-  self.Lv:SetText(GText("BATTLE_UI_BLOOD_LV"))
-  self.Lv:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-end
-
 function WBP_MainBar_C:WhileInvisibleMonsterBeAttack(Eid, NowTimeSeconds)
   if IsValid(self.SceneMgrComponent) then
     self.SceneMgrComponent.SpecialMonsterInfo[Eid] = {NowTimeSeconds}
@@ -160,7 +155,6 @@ function WBP_MainBar_C:OnUpdateCharLevelAndExp()
     return
   end
   local NowLevel = self.Owner:GetAttr("Level")
-  self.Lv:SetText(GText("BATTLE_UI_BLOOD_LV"))
   self.Num_Lv_elite:SetText(NowLevel)
   if self.OldLevel and NowLevel > self.OldLevel and self.Owner:IsMainPlayer() then
     EventManager:FireEvent(EventID.MainPlayerLevelUp, NowLevel)

@@ -29,17 +29,17 @@ return ReadOnly("KeyboardText_TextMapContent", {
     KeyImgWidth = 32,
     KeyText = "B"
   },
-  BackSlash = {
-    Key = "BackSlash",
-    KeyImgHeight = 32,
-    KeyImgWidth = 32,
-    KeyText = "BackSlash"
-  },
   BackSpace = {
     Key = "BackSpace",
     KeyImgHeight = 32,
     KeyImgWidth = 50,
     KeyText = "BackSpace"
+  },
+  Backslash = {
+    Key = "Backslash",
+    KeyImgHeight = 32,
+    KeyImgWidth = 32,
+    KeyText = "Backslash"
   },
   C = {
     Key = "C",
@@ -52,18 +52,6 @@ return ReadOnly("KeyboardText_TextMapContent", {
     KeyImgHeight = 32,
     KeyImgWidth = 62,
     KeyText = "CapsLock"
-  },
-  Caret = {
-    Key = "Caret",
-    KeyImgHeight = 32,
-    KeyImgWidth = 32,
-    KeyText = "Caret"
-  },
-  Colon = {
-    Key = "Colon",
-    KeyImgHeight = 32,
-    KeyImgWidth = 32,
-    KeyText = "Colon"
   },
   Comma = {
     Key = "Comma",
@@ -94,12 +82,6 @@ return ReadOnly("KeyboardText_TextMapContent", {
     KeyImgHeight = 32,
     KeyImgWidth = 74,
     KeyText = "Divide"
-  },
-  Dollar = {
-    Key = "Dollar",
-    KeyImgHeight = 32,
-    KeyImgWidth = 32,
-    KeyText = "Dollar"
   },
   Down = {
     Key = "Down",
@@ -142,12 +124,6 @@ return ReadOnly("KeyboardText_TextMapContent", {
     KeyImgHeight = 32,
     KeyImgWidth = 50,
     KeyText = "Escape"
-  },
-  Exclamation = {
-    Key = "Exclamation",
-    KeyImgHeight = 32,
-    KeyImgWidth = 32,
-    KeyText = "Exclamation"
   },
   F = {
     Key = "F",
@@ -623,12 +599,6 @@ return ReadOnly("KeyboardText_TextMapContent", {
     KeyImgWidth = 48,
     KeyText = "RightMouseButton"
   },
-  RightParantheses = {
-    Key = "RightParantheses",
-    KeyImgHeight = 32,
-    KeyImgWidth = 32,
-    KeyText = "RightParantheses"
-  },
   RightShift = {
     Key = "RightShift",
     KeyImgHeight = 32,
@@ -772,17 +742,5 @@ return ReadOnly("KeyboardText_TextMapContent", {
     KeyImgHeight = 32,
     KeyImgWidth = 32,
     KeyText = "Zero"
-  },
-  ["²"] = {
-    Key = "²",
-    KeyImgHeight = 32,
-    KeyImgWidth = 32,
-    KeyText = "²"
-  },
-  ["ù"] = {
-    Key = "ù",
-    KeyImgHeight = 32,
-    KeyImgWidth = 32,
-    KeyText = "ù"
   }
 })

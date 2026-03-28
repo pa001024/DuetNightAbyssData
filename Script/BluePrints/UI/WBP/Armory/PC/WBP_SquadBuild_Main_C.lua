@@ -1867,7 +1867,7 @@ function WBP_SquadBuild_Main_P_C:GoToArmory()
 end
 
 function WBP_SquadBuild_Main_P_C:HideOrShowModel(bHide)
-  self.ActorController.ArmoryPlayer:SetActorHideTag("SuqadRole", bHide)
+  self.ActorController:HidePlayerActor("SuqadRole", bHide)
 end
 
 function WBP_SquadBuild_Main_P_C:MakeSureCallback(ModIndex)
@@ -2238,9 +2238,11 @@ function WBP_SquadBuild_Main_P_C:FocusOnItemList()
     self.CurClickItemInfo = self.CurSlot and self.CurSlot.ItemInfo
     if self.CurClickItemInfo and self.CurClickItemInfo.UI then
       self.CurClickItemInfo.UI:SetFocus()
-    else
+    elseif self.List_Build.List_Select:GetNumItems() > 0 then
       self.List_Build.List_Select:SetFocus()
       self.List_Build.List_Select:SetSelectedIndex(0)
+    else
+      self.List_Build.EMListView_Filter:SetFocus()
     end
     self.List_Build.Sort.Controller:SetVisibility(ESlateVisibility.Visible)
   else

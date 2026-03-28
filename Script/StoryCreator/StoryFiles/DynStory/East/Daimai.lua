@@ -61,7 +61,6 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = true,
@@ -69,6 +68,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -330,10 +330,9 @@ return {
               FlowAssetPath = "",
               TalkType = "FreeSimple",
               BlendInTime = 0.5,
-              BlendOutTime = 2,
+              BlendOutTime = 0.5,
               InType = "BlendIn",
-              OutType = "FadeOut",
-              ShowFadeDetail = false,
+              OutType = "BlendOut",
               BlendEaseExp = 2,
               UseProceduralCamera = false,
               ProceduralCameraId = 1,
@@ -385,10 +384,9 @@ return {
               FlowAssetPath = "",
               TalkType = "FreeSimple",
               BlendInTime = 0.5,
-              BlendOutTime = 2,
+              BlendOutTime = 0.5,
               InType = "BlendIn",
-              OutType = "FadeOut",
-              ShowFadeDetail = false,
+              OutType = "BlendOut",
               BlendEaseExp = 2,
               UseProceduralCamera = false,
               ProceduralCameraId = 1,
@@ -426,9 +424,9 @@ return {
             pos = {x = 2735.779653495126, y = 26.38548897820024},
             propsData = {
               ActiveEnable = true,
-              EnableBlackScreenSync = false,
-              EnableFadeIn = false,
-              EnableFadeOut = false,
+              EnableBlackScreenSync = true,
+              EnableFadeIn = true,
+              EnableFadeOut = true,
               NewTargetPointName = "",
               StaticCreatorIdList = {2100063}
             }
@@ -454,8 +452,7 @@ return {
               BlendInTime = 0.5,
               BlendOutTime = 0.5,
               InType = "BlendIn",
-              OutType = "FadeOut",
-              ShowFadeDetail = false,
+              OutType = "BlendOut",
               BlendEaseExp = 2,
               UseProceduralCamera = false,
               ProceduralCameraId = 1,
@@ -507,8 +504,7 @@ return {
               BlendInTime = 0.5,
               BlendOutTime = 0.5,
               InType = "BlendIn",
-              OutType = "FadeOut",
-              ShowFadeDetail = false,
+              OutType = "BlendOut",
               BlendEaseExp = 2,
               UseProceduralCamera = false,
               ProceduralCameraId = 1,
@@ -546,9 +542,9 @@ return {
             pos = {x = 3375.4621931776664, y = 78.76644135915275},
             propsData = {
               ActiveEnable = false,
-              EnableBlackScreenSync = false,
-              EnableFadeIn = false,
-              EnableFadeOut = false,
+              EnableBlackScreenSync = true,
+              EnableFadeIn = true,
+              EnableFadeOut = true,
               NewTargetPointName = "",
               StaticCreatorIdList = {2100063}
             }
@@ -560,9 +556,9 @@ return {
             pos = {x = 3386.890764606238, y = 460.0164413591528},
             propsData = {
               ActiveEnable = false,
-              EnableBlackScreenSync = false,
-              EnableFadeIn = false,
-              EnableFadeOut = false,
+              EnableBlackScreenSync = true,
+              EnableFadeIn = true,
+              EnableFadeOut = true,
               NewTargetPointName = "",
               StaticCreatorIdList = {2100063}
             }
@@ -581,9 +577,9 @@ return {
             pos = {x = 2071.955699671173, y = -412.8569352642239},
             propsData = {
               ActiveEnable = false,
-              EnableBlackScreenSync = false,
-              EnableFadeIn = false,
-              EnableFadeOut = false,
+              EnableBlackScreenSync = true,
+              EnableFadeIn = true,
+              EnableFadeOut = true,
               NewTargetPointName = "",
               StaticCreatorIdList = {2100061}
             }
@@ -656,8 +652,10 @@ return {
             pos = {x = 4126.890764606238, y = 101.62358421629553},
             propsData = {
               DialogueId = 71007109,
-              UseTalkFadeOut = false,
-              TalkFadeOutTime = 0
+              UseTalkFadeOut = true,
+              TalkFadeOutTime = 1,
+              UseTalkFadeIn = true,
+              TalkFadeInTime = 1
             }
           },
           ["1750169482891643894"] = {
@@ -667,20 +665,22 @@ return {
             pos = {x = 4065.58641678015, y = 457.0894227256123},
             propsData = {
               DialogueId = 71007113,
-              UseTalkFadeOut = false,
-              TalkFadeOutTime = 0
+              UseTalkFadeOut = true,
+              TalkFadeOutTime = 1,
+              UseTalkFadeIn = true,
+              TalkFadeInTime = 1
             }
           },
           ["1750169511920644534"] = {
             key = "1750169511920644534",
             type = "ChangeStaticCreatorNode",
             name = "生成男子",
-            pos = {x = 3381.176478891952, y = -82.6621300694188},
+            pos = {x = 3381.176478891952, y = -83.8621300694188},
             propsData = {
               ActiveEnable = true,
-              EnableBlackScreenSync = false,
-              EnableFadeIn = false,
-              EnableFadeOut = false,
+              EnableBlackScreenSync = true,
+              EnableFadeIn = true,
+              EnableFadeOut = true,
               NewTargetPointName = "",
               StaticCreatorIdList = {2100061}
             }
@@ -692,9 +692,9 @@ return {
             pos = {x = 3399.74790746338, y = 298.76644135915257},
             propsData = {
               ActiveEnable = true,
-              EnableBlackScreenSync = false,
-              EnableFadeIn = false,
-              EnableFadeOut = false,
+              EnableBlackScreenSync = true,
+              EnableFadeIn = true,
+              EnableFadeOut = true,
               NewTargetPointName = "",
               StaticCreatorIdList = {2100061}
             }
@@ -718,10 +718,9 @@ return {
               FlowAssetPath = "",
               TalkType = "FreeSimple",
               BlendInTime = 0.5,
-              BlendOutTime = 2,
+              BlendOutTime = 0.5,
               InType = "BlendIn",
-              OutType = "FadeOut",
-              ShowFadeDetail = false,
+              OutType = "BlendOut",
               BlendEaseExp = 2,
               UseProceduralCamera = false,
               ProceduralCameraId = 1,
@@ -774,7 +773,7 @@ return {
             key = "17576695404961282",
             type = "ChangeStaticCreatorNode",
             name = "生成排队机关",
-            pos = {x = 2072.118881118882, y = 8.433566433566476},
+            pos = {x = 2072.118881118882, y = 9.862137862137905},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,
@@ -801,7 +800,7 @@ return {
             key = "1757669720148643277",
             type = "ChangeStaticCreatorNode",
             name = "销毁排队机关",
-            pos = {x = 2486.6643356643362, y = 27.524475524475505},
+            pos = {x = 2486.6643356643362, y = 25.124475524475507},
             propsData = {
               ActiveEnable = false,
               EnableBlackScreenSync = false,
@@ -815,12 +814,12 @@ return {
             key = "1757669731426643450",
             type = "ChangeStaticCreatorNode",
             name = "销毁排队npc",
-            pos = {x = 2493.482517482518, y = -170.20279720279729},
+            pos = {x = 2493.482517482518, y = -171.40279720279727},
             propsData = {
               ActiveEnable = false,
-              EnableBlackScreenSync = false,
-              EnableFadeIn = false,
-              EnableFadeOut = false,
+              EnableBlackScreenSync = true,
+              EnableFadeIn = true,
+              EnableFadeOut = true,
               NewTargetPointName = "",
               StaticCreatorIdList = {
                 2100090,

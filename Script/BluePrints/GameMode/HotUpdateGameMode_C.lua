@@ -1,6 +1,7 @@
 require("Unlua")
 local HeroUSDKUtils = require("Utils.HeroUSDKUtils")
 local EMCache = require("EMCache.EMCache")
+local HotUpdateUtils = require("Utils.HotUpdateUtils")
 local M = Class()
 
 function M:ShowOptionPatchPopUI(OptionalAssetsSize, TotalSize)
@@ -8,6 +9,17 @@ function M:ShowOptionPatchPopUI(OptionalAssetsSize, TotalSize)
   local UIManager = GameInstance:GetGameUIManager()
   local LoginMain = UIManager:GetUIObj("LoginMainPage")
   LoginMain:ShowOptionPatchPopUI(OptionalAssetsSize, TotalSize)
+end
+
+function M:ShowPatchResourcePopUI(BaseSize, TotalSize)
+  local GameInstance = UGameplayStatics.GetGameInstance(self)
+  local UIManager = GameInstance:GetGameUIManager()
+  local LoginMain = UIManager:GetUIObj("LoginMainPage")
+  if LoginMain then
+    LoginMain:ShowPatchResourcePopUI(BaseSize, TotalSize)
+  else
+    self:EnsureDonwloadOptionAssets(true)
+  end
 end
 
 function M:ShowPatchUI()
@@ -50,13 +62,19 @@ end
 
 function M:OnPatchFinished(bFrist)
   if IsDedicatedServer(self) then
+    if bFrist then
+      local EMLuaConst = USubsystemBlueprintLibrary.GetGameInstanceSubsystem(self, UEMLuaConst)
+      if EMLuaConst then
+        EMLuaConst:RefreshVars()
+      end
+    end
     return
   end
   if bFrist then
     ReddotManager._Close()
     ReddotManager._Init()
-    local AnnounceUtils = require("BluePrints.UI.WBP.Announcement.AnnounceUtils")
-    AnnounceUtils:Init()
+    local AnnounceController = require("BluePrints.UI.WBP.Announcement.AnnounceController")
+    AnnounceController:Init()
     local SystemLanguage = EMCache:Get("SystemLanguage")
     if nil ~= SystemLanguage then
       CommonConst.SystemLanguage = CommonConst.SystemLanguages[SystemLanguage]
@@ -115,6 +133,15 @@ end
 function M:GetWhiteListDevices()
   local WhiteList = {}
   return WhiteList
+end
+
+function M:GetPakOptionalSignBlacklist()
+  return {
+    "AudioCH",
+    "AudioEN",
+    "AudioJP",
+    "AudioKR"
+  }
 end
 
 function M:GetCurrentSystemVoiceOptionalSign()
@@ -176,6 +203,18 @@ function M:TryShowPSOCompileDialog(bFirstPatch)
   else
     self:EnsureCompilePSO(bFirstPatch)
   end
+end
+
+function M:GetCurrentNecessoryPatchSigns()
+  return HotUpdateUtils.GetNecessoryPatchSigns()
+end
+
+function M:IsCurrentNecessoryPatchSign(PatchSign)
+  return HotUpdateUtils.IsCurrentNecessoryPatchSign(PatchSign)
+end
+
+function M:ClearNecessoryPatchSigns()
+  HotUpdateUtils.ClearNecessoryPatchSigns()
 end
 
 return M

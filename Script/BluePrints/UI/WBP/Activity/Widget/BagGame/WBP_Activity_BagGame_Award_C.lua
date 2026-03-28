@@ -1,11 +1,12 @@
 require("UnLua")
-local RewardModel = require("BluePrints.UI.WBP.Activity.Widget.Fort.WBP_Activity_Fort_Reward_Model")
+local RewardModel = require("BluePrints.UI.WBP.Activity.Widget.BagGame.WBP_Activity_BagGame_Reward_Model")
+local BagGameModel = require("BluePrints.UI.WBP.Activity.Widget.BagGame.BagGameModel")
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C"
 })
 
 function M:Init()
-  self:SetText(GText("Event_RewardTitle_103007"))
+  self:SetText(GText("UI_BackpackPuzzle_RewardBtn"))
   self:BindEventOnClicked(self, self.OpenReward)
 end
 
@@ -17,15 +18,12 @@ function M:Construct()
   self.Button_Area.OnClicked:Add(self, self.OnBtnClicked)
   self:InitGamePadKey()
   self:InitListenEvent()
-  if not ReddotManager.GetTreeNode("PaotaiEventReward") then
-    ReddotManager.AddNode("PaotaiEventReward")
-  end
-  ReddotManager.AddListener("PaotaiEventReward", self, self.RefreshReddot)
+  ReddotManager.AddListenerEx("BagGameAward", self, self.RefreshReddot)
 end
 
 function M:Destruct()
   self:ClearListenEvent()
-  ReddotManager.RemoveListener("ArchiveReward", self)
+  ReddotManager.RemoveListener("BagGameAward", self)
 end
 
 function M:SetText(Text)
@@ -134,13 +132,12 @@ function M:InitGamePadKey()
   })
 end
 
-function M:RefreshReddot()
-  local Node = ReddotManager.GetTreeNode("PaotaiEventReward")
-  if not Node then
+function M:RefreshReddot(Count, RdType, Name)
+  if BagGameModel:IsActivityEnded() then
     self.Reddot:SetVisibility(ESlateVisibility.Collapsed)
     return
   end
-  if Node.Count and Node.Count > 0 then
+  if Count and Count > 0 then
     self.Reddot:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   else
     self.Reddot:SetVisibility(ESlateVisibility.Collapsed)

@@ -68,15 +68,15 @@ function M:SetIsMaxLevel(IsMaxLevel)
 end
 
 function M:SetReddot(ShowNew, ShowReddot)
-  if ShowNew then
-    self.New:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    self.Reddot:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  else
+  if ShowReddot then
+    self.Reddot:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.New:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    if ShowReddot then
-      self.Reddot:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  else
+    self.Reddot:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    if ShowNew then
+      self.New:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     else
-      self.Reddot:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      self.New:SetVisibility(UIConst.VisibilityOp.Collapsed)
     end
   end
 end

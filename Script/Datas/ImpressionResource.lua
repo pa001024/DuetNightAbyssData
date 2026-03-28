@@ -14,5 +14,10 @@ return ReadOnly("ImpressionResource", {
     Count = 1,
     RegionId = 1041,
     ResourceId = 3001
+  },
+  [1045] = {
+    Count = 1,
+    RegionId = 1045,
+    ResourceId = 3001
   }
 })

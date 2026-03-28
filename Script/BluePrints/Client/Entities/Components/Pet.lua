@@ -12,6 +12,9 @@ end
 function Component:_OnPropChangePets(Keys)
   local PetUniqueID = Keys and Keys[1]
   if PetUniqueID then
+    if self.Pets[PetUniqueID] then
+      self.Pets[PetUniqueID].SkillLevelUp = nil
+    end
     local bHasPet, IsResourcePet = PetModel:IsPetExist(PetUniqueID)
     if bHasPet then
       if not self.Pets[PetUniqueID] then
@@ -84,7 +87,7 @@ function Component:_OnPropChangeCurrentPet()
         AffixList:Add(EntryId)
       end
     end
-    CurPlayer:ServerSetBattlePetAndAffixList(PetInfo.PetId, PetInfo:GetSkillLevel(), AffixList, false)
+    CurPlayer:ServerSetBattlePet(PetInfo.PetId, PetInfo:GetSkillLevel(), false, AffixList)
   end
 end
 

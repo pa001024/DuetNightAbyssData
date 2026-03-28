@@ -62,6 +62,7 @@ function M:ResetUIData()
   self.GamePadSelectedStuff = nil
   self.DummyAvatar_CopyMode = nil
   self.CopyModeSenderName = nil
+  self.CurRecommendModIdList = nil
 end
 
 function M:GenerateSlotUIDatas(SuitIndex)
@@ -358,6 +359,17 @@ end
 
 function M:GetSlotIdsWhichEquiped(ModUuid)
   return self.EquipedMods[ModUuid]
+end
+
+function M:IsModIdEquiped(ModId)
+  local Mods = self:GetAvatar().Mods
+  for ModUuid, _ in pairs(self.EquipedMods) do
+    local Mod = Mods[ModUuid]
+    if Mod.ModId == ModId then
+      return true
+    end
+  end
+  return false
 end
 
 function M:IsEquipedInCurrSuit(ModUuid)
@@ -1266,6 +1278,53 @@ function M:GetConvertMods(CurConvertPoolId)
     end
   end
   return ShowMods
+end
+
+function M:ClearRecommendData()
+  self:SetRecommendModIdList({})
+end
+
+function M:SetRecommendView(state)
+  self.RecommendViewState = state
+end
+
+function M:IsRecommendView()
+  return self.RecommendViewState
+end
+
+function M:IsRecommendModState()
+  return self.CurRecommendModIdList and #self.CurRecommendModIdList > 0
+end
+
+function M:SetRecommendModIdList(ModIdList)
+  self.CurRecommendModIdList = ModIdList
+end
+
+function M:GetRecommendModUuidList()
+  local OwnedMods = self:GetAvatar().Mods
+  local CurRecommendModUuidList = {}
+  if self.CurRecommendModIdList then
+    for _, ModId in pairs(self.CurRecommendModIdList) do
+      for _, Mod in pairs(OwnedMods) do
+        if Mod.ModId == ModId then
+          table.insert(CurRecommendModUuidList, Mod.Uuid)
+        end
+      end
+    end
+  end
+  return CurRecommendModUuidList
+end
+
+function M:FliterRecommendMod(CurModId)
+  if self.CurRecommendModIdList then
+    for _, ModId in pairs(self.CurRecommendModIdList) do
+      if ModId == CurModId then
+        return true
+      end
+    end
+    return false
+  end
+  return true
 end
 
 function M:GetModFullNameByConf(ModId)

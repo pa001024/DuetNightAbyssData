@@ -17,9 +17,23 @@ function Component:OpenSubUI(WidgetInfo, ...)
   if self.CurTabId == TabId then
     return self.CurSubUI
   end
-  if self.CurSubUI and self.CurSubUI.SwitchOut then
+  local SwitchInArgs = {
+    ...
+  }
+  local TargetTabId = TabId
+  if self.CurSubUI and self.CurSubUI.SwitchOutWithCallback then
+    self.CurSubUI:SwitchOutWithCallback(function()
+      self:DoSwitchIn(TargetTabId, WidgetInfo, table.unpack(SwitchInArgs))
+    end, ...)
+    return self.CurSubUI
+  elseif self.CurSubUI and self.CurSubUI.SwitchOut then
     self.CurSubUI:SwitchOut(...)
   end
+  self:DoSwitchIn(TargetTabId, WidgetInfo, table.unpack(SwitchInArgs))
+  return self.CurSubUI
+end
+
+function Component:DoSwitchIn(TabId, WidgetInfo, ...)
   if TabId then
     if not self.SubUI[TabId] then
       if TabId ~= self.MainTabId then
@@ -69,7 +83,6 @@ function Component:OpenSubUI(WidgetInfo, ...)
   else
     self:OnCloseAll()
   end
-  return self.CurSubUI
 end
 
 function Component:ReturnPreWidget()

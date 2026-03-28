@@ -16,11 +16,26 @@ end
 function WBP_Setting_PC_C:Construct()
   WBP_Setting_PC_C.Super.Construct(self)
   self.GameInputModeSubsystem = UIManager(self):GetGameInputModeSubsystem()
+  ReddotManager.AddListener("Setting_Control_LayOutBtn", self, self.RefreshReddot)
+  ReddotManager.AddListener("Setting_Control", self, self.RefreshReddot)
+  ReddotManager.AddListener("Setting_Control_SettingBtn", self, self.RefreshReddot)
+end
+
+function WBP_Setting_PC_C:Destruct()
+  ReddotManager.RemoveListener("Setting_Control_LayOutBtn", self)
+  ReddotManager.RemoveListener("Setting_Control", self)
+  ReddotManager.RemoveListener("Setting_Control_SettingBtn", self)
 end
 
 function WBP_Setting_PC_C:OnLoaded(...)
   self.Super.OnLoaded(self, ...)
   self.IsInLoginMainPage, self.LastSystem = ...
+  self.Plan1CurrentLayout = 1
+  self.Plan2CurrentLayout = 2
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    self.Plan1CurrentLayout, self.Plan2CurrentLayout = Avatar:GetMappedPlanCurrentLayout()
+  end
   rawset(self, "SettingUIs", {})
   rawset(self, "HoverContentList", {})
   rawset(self, "Platform", CommonUtils.GetDeviceTypeByPlatformName(self))
@@ -42,6 +57,15 @@ function WBP_Setting_PC_C:OnLoaded(...)
   self:RefreshOpInfoByInputDevice(UIUtils.UtilsGetCurrentInputType(), UIUtils.UtilsGetCurrentGamepadName())
   if self.CurInputDeviceType == ECommonInputType.Gamepad then
     self:FocusToOptionFirstWidget()
+  end
+  self:AddDispatcher(EventID.OnSwitchMobileHUDLayout, self.OnSwitchMobileHUDLayout)
+end
+
+function WBP_Setting_PC_C:OnSwitchMobileHUDLayout(PlanIndex)
+  if 0 == PlanIndex % 2 then
+    self.Plan2CurrentLayout = PlanIndex
+  else
+    self.Plan1CurrentLayout = PlanIndex
   end
 end
 
@@ -426,13 +450,29 @@ function WBP_Setting_PC_C:InitLayoutPlantUI()
   self.Layout_01.Btn_Area.OnClicked:Add(self, self.OnClickLayout1)
   self.Layout_02.Btn_Area.OnClicked:Add(self, self.OnClickLayout2)
   self:InitLayoutPlanList()
-  local RedDot = ReddotManager.GetTreeNode("Setting_Layout")
-  if RedDot and RedDot.Count > 0 then
+  self:RefreshReddot()
+end
+
+function WBP_Setting_PC_C:RefreshReddot()
+  local RedDot = ReddotManager.GetTreeNode("Setting_Control_LayOutBtn")
+  if self.Tab_State then
+    if RedDot and RedDot.Count > 0 then
+      self.Tab_State:ShowTabRedDotByTabId(1, true)
+    else
+      self.Tab_State:ShowTabRedDotByTabId(1)
+    end
+  end
+  RedDot = ReddotManager.GetTreeNode("Setting_Control_SettingBtn")
+  if RedDot and RedDot.Count > 0 and self.Tab_State then
+    self.Tab_State:ShowTabRedDotByTabId(2, true)
+  elseif self.Tab_State then
+    self.Tab_State:ShowTabRedDotByTabId(2)
+  end
+  RedDot = ReddotManager.GetTreeNode("Setting_Control")
+  if RedDot and RedDot.Count > 0 and self.CurrentTab and self.CommonTabInfo[self.CurrentTab].TabName == "Control" then
     self.Tab_Set:ShowTabRedDotByTabId(self.CurrentTab, true)
-    self.Tab_State:ShowTabRedDotByTabId(1, true)
   else
     self.Tab_Set:ShowTabRedDotByTabId(self.CurrentTab)
-    self.Tab_State:ShowTabRedDotByTabId(1)
   end
 end
 
@@ -477,13 +517,13 @@ function WBP_Setting_PC_C:OnClickLayout1()
     self.Layout_02:PlayAnimation(self.Layout_02.Normal)
     self.Layout_02.LayoutState = UIConst.ButtonState.None
   end
-  self.CurPlanIndex = 1
-  EventManager:FireEvent(EventID.OnSwitchMobileHUDLayout, 1)
+  self.CurPlanIndex = self.Plan1CurrentLayout
+  EventManager:FireEvent(EventID.OnSwitchMobileHUDLayout, self.Plan1CurrentLayout)
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return
   end
-  Avatar:SwitchMobileHudPlan(self.CurPlanIndex)
+  Avatar:SwitchMobileHudPlan(self.Plan1CurrentLayout)
 end
 
 function WBP_Setting_PC_C:OnClickLayout2()
@@ -491,19 +531,17 @@ function WBP_Setting_PC_C:OnClickLayout2()
     self.Layout_01:PlayAnimation(self.Layout_01.Normal)
     self.Layout_01.LayoutState = UIConst.ButtonState.None
   end
-  self.CurPlanIndex = 2
+  self.CurPlanIndex = self.Plan2CurrentLayout
   EMCache:Set("FirstOpenLayoutPlan", true, true)
   self.Layout_02.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
-  EventManager:FireEvent(EventID.OnSwitchMobileHUDLayout, 2)
+  EventManager:FireEvent(EventID.OnSwitchMobileHUDLayout, self.Plan2CurrentLayout)
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return
   end
-  Avatar:SwitchMobileHudPlan(self.CurPlanIndex)
+  Avatar:SwitchMobileHudPlan(self.Plan2CurrentLayout)
   local RedDot = ReddotManager.GetTreeNode("Setting_Layout")
   if RedDot and RedDot.Count > 0 then
-    self.Tab_Set:ShowTabRedDotByTabId(self.CurrentTab)
-    self.Tab_State:ShowTabRedDotByTabId(1)
     ReddotManager.ClearLeafNodeCount("Setting_Layout")
   end
 end
@@ -515,8 +553,8 @@ function WBP_Setting_PC_C:OnOperateTabSelected(TabWidget)
   self.LayoutPlantIndex = TabWidget.Idx
   if 1 == self.LayoutPlantIndex then
     self.WS_State:SetActiveWidgetIndex(1)
-    self.Layout_01:InitLayoutPlan(self.CurPlanIndex)
-    self.Layout_02:InitLayoutPlan(self.CurPlanIndex)
+    self.Layout_01:InitLayoutPlan(self.CurPlanIndex, self.Plan1CurrentLayout)
+    self.Layout_02:InitLayoutPlan(self.CurPlanIndex, self.Plan2CurrentLayout)
   else
     self.WS_State:SetActiveWidgetIndex(0)
     self:UpdateEmptyGridCount()
@@ -798,6 +836,9 @@ function WBP_Setting_PC_C:InitCommonTabInfo()
         }
         if "Other" == Tag then
           self.CommonTabInfo[self.TabNums].BindReddotNode = "Setting_Tab_Other"
+        end
+        if "Control" == Tag then
+          self.CommonTabInfo[self.TabNums].BindReddotNode = "Setting_Control"
         end
       end
     end
@@ -1496,6 +1537,9 @@ function WBP_Setting_PC_C:Close()
   if self.RegionOnline ~= EMCache:Get("AutoJoin") then
     EventManager:FireEvent(EventID.ChangeRegionOnline, EMCache:Get("AutoJoin"))
   end
+  local GachaKey = "SecPasswordNew"
+  local SecPasswordNewCache = EMCache:Set(GachaKey, true, true)
+  ReddotManager.ClearLeafNodeCount("Setting_SecPassword")
   self.Super.Close(self)
 end
 

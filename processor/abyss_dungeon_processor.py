@@ -1,4 +1,5 @@
 from processor.base_processor import BaseProcessor
+from processor.dungeon_processor import DungeonProcessor
 
 
 class AbyssDungeonProcessor(BaseProcessor):
@@ -7,6 +8,7 @@ class AbyssDungeonProcessor(BaseProcessor):
         self.file_type = "AbyssDungeon"
         # 加载Dungeon数据用于关联查询
         self.dungeon_data = data_loader.load_json("Dungeon.json")
+        self.abyss_room_data = data_loader.load_json("AbyssRoom.json")
         # 加载AbyssBuff数据用于关联查询
         self.abyss_buff_data = data_loader.load_json("AbyssBuff.json")
         # 加载Buff数据用于处理MonsterBuff
@@ -37,6 +39,7 @@ class AbyssDungeonProcessor(BaseProcessor):
             "Dark": "暗",
             "Light": "光",
         }
+        self.dungeon_spawn_helper = DungeonProcessor(data_loader)
 
     def _find_season_by_abyss_dungeon_id(self, abyss_dungeon_id):
         """通过AbyssDungeonId查找对应的赛季信息
@@ -113,6 +116,10 @@ class AbyssDungeonProcessor(BaseProcessor):
                 if mb_dict:
                     processed["mb"] = mb_dict
 
+        spawn_data = self._get_abyss_room_spawn(item_data.get("RoomId", []))
+        if spawn_data:
+            processed["spawn"] = spawn_data
+
         # 查找赛季信息
         abyss_season, abyss_season_list, abyss_level = (
             self._find_season_by_abyss_dungeon_id(abyss_dungeon_id)
@@ -171,6 +178,26 @@ class AbyssDungeonProcessor(BaseProcessor):
         #         processed["n"] = dungeon_name
 
         return processed
+
+    def _get_abyss_room_spawn(self, room_ids):
+        """根据 AbyssRoom 的 UnitSpawnId 构造刷怪波次"""
+        spawn_waves = []
+        for room_id in room_ids:
+            room_info = self.abyss_room_data.get(str(room_id)) or self.abyss_room_data.get(
+                room_id
+            )
+            if not room_info:
+                continue
+
+            spawn_ids = room_info.get("UnitSpawnId", [])
+            if not spawn_ids:
+                continue
+
+            spawn_nodes = self.dungeon_spawn_helper._convert_spawn_ids_to_nodes(spawn_ids)
+            if spawn_nodes:
+                spawn_waves.append(spawn_nodes)
+
+        return spawn_waves
 
     def _process_buff_list(self, buff_list):
         """处理Buff列表，查询Buff表并转换为字典格式

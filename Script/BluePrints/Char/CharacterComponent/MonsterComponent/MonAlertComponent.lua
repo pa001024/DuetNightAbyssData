@@ -182,11 +182,11 @@ function Component:HasEnemyInClan()
       ClanRangeRadius = LeaveCollision:GetScaledSphereRadius()
     end
   end
-  local GameMode = UE.UGameplayStatics.GetGameMode(Owner)
+  local GameMode = UE4.UGameplayStatics.GetGameMode(Owner)
   if not GameMode then
     return false
   end
-  local EnemyActors = GameMode:GetAICampResult(UE.ECamp.Enemy, Owner)
+  local EnemyActors = GameMode:GetAICampResult(UE4.ECamp.Enemy, Owner)
   if not EnemyActors or 0 == EnemyActors:Length() then
     return false
   end
@@ -200,7 +200,7 @@ function Component:HasEnemyInClan()
         return true
       end
     elseif ClanRangeRadius then
-      local Distance = UE.UKismetMathLibrary.Vector_Distance(OwnerLocation, EnemyLocation)
+      local Distance = UE4.UKismetMathLibrary.Vector_Distance(OwnerLocation, EnemyLocation)
       if ClanRangeRadius >= Distance then
         return true
       end

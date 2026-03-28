@@ -6,7 +6,7 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
 end
 return ReadOnly("CharPartType", {
   Back = 1,
-  Faces = 1,
+  Body = 1,
   Hair = 1,
   Hat = 1,
   Tail = 1

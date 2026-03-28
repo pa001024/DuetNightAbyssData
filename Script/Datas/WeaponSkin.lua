@@ -38,9 +38,11 @@ return ReadOnly("WeaponSkin", {
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [3010103] = {
+    ApplicationType = 103,
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Claymore_Rongyao.T_Bust_Claymore_Rongyao'",
     Dec = "UI_WeaponSkin_Des_3010103",
     DisplayPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Claymore_Rongyao.T_Bust_Claymore_Rongyao'",
+    GoShopTypeId = {120158},
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Claymore_Rongyao.T_Head_Claymore_Rongyao'",
     LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Claymore_Rongyao.T_Gacha_Claymore_Rongyao'",
     Name = "UI_WeaponSkin_Name_3010103",
@@ -125,6 +127,18 @@ return ReadOnly("WeaponSkin", {
     Sound = "SOUND_ITEM_WEAPON",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
+  [3010109] = {
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Claymore_Bixiao.T_Bust_Claymore_Bixiao'",
+    DisplayPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Claymore_Bixiao.T_Bust_Claymore_Bixiao'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Claymore_Bixiao.T_Head_Claymore_Bixiao'",
+    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Claymore_Bixiao.T_Gacha_Claymore_Bixiao'",
+    Name = "UI_WeaponSkin_Name_3010109",
+    Rarity = 5,
+    SkinID = 3010109,
+    SkinPath = 3010109,
+    Sound = "SOUND_ITEM_WEAPON",
+    UnlockOption = "UI_Accessory_Unlock_Shop"
+  },
   [3010201] = {
     ApplicationType = 101,
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Sword_Kongjun.T_Bust_Sword_Kongjun'",
@@ -202,6 +216,19 @@ return ReadOnly("WeaponSkin", {
     Sound = "SOUND_ITEM_WEAPON",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
+  [3010206] = {
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Sword_Bixiao.T_Bust_Sword_Bixiao'",
+    Dec = "UI_WeaponSkin_Des_3010407",
+    DisplayPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Sword_Bixiao.T_Bust_Sword_Bixiao'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Sword_Bixiao.T_Head_Sword_Bixiao'",
+    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Sword_Bixiao.T_Gacha_Sword_Bixiao'",
+    Name = "UI_WeaponSkin_Name_3010206",
+    Rarity = 5,
+    SkinID = 3010206,
+    SkinPath = 3010206,
+    Sound = "SOUND_ITEM_WEAPON",
+    UnlockOption = "UI_Accessory_Unlock_Shop"
+  },
   [3010301] = {
     ApplicationType = 206,
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Bow_Huanri.T_Bust_Bow_Huanri'",
@@ -216,7 +243,7 @@ return ReadOnly("WeaponSkin", {
     SkinID = 3010301,
     SkinPath = 3010301,
     Sound = "SOUND_ITEM_WEAPON",
-    UnlockOption = "UI_Accessory_Unlock_Gacha"
+    UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [3010302] = {
     ApplicationType = 206,
@@ -245,6 +272,36 @@ return ReadOnly("WeaponSkin", {
     Rarity = 5,
     SkinID = 3010303,
     SkinPath = 3010303,
+    Sound = "SOUND_ITEM_WEAPON",
+    UnlockOption = "UI_Accessory_Unlock_Shop"
+  },
+  [3010304] = {
+    ApplicationType = 207,
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Bow_Bixiao.T_Bust_Bow_Bixiao'",
+    Dec = "UI_WeaponSkin_Des_3010407",
+    DisplayPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Bow_Bixiao.T_Bust_Bow_Bixiao'",
+    GoShopTypeId = {120157},
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Bow_Bixiao.T_Head_Bow_Bixiao'",
+    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Bow_Bixiao.T_Gacha_Bow_Bixiao'",
+    Name = "UI_WeaponSkin_Name_3010304",
+    Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 40,
+    SkinID = 3010304,
+    SkinPath = 3010304,
+    Sound = "SOUND_ITEM_WEAPON",
+    UnlockOption = "UI_Accessory_Unlock_Shop"
+  },
+  [3010305] = {
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Bow_Bixiao.T_Bust_Bow_Bixiao'",
+    Dec = "UI_WeaponSkin_Des_3010407",
+    DisplayPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Bow_Bixiao.T_Bust_Bow_Bixiao'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Bow_Bixiao.T_Head_Bow_Bixiao'",
+    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Bow_Bixiao.T_Gacha_Bow_Bixiao'",
+    Name = "UI_WeaponSkin_Name_3010305",
+    Rarity = 5,
+    SkinID = 3010305,
+    SkinPath = 3010305,
     Sound = "SOUND_ITEM_WEAPON",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
@@ -277,7 +334,7 @@ return ReadOnly("WeaponSkin", {
     SkinID = 3010402,
     SkinPath = 3010402,
     Sound = "SOUND_ITEM_WEAPON",
-    UnlockOption = "UI_Accessory_Unlock_Gacha"
+    UnlockOption = "UI_Accessory_Unlock_Shop"
   },
   [3010403] = {
     ApplicationType = 102,
@@ -463,6 +520,20 @@ return ReadOnly("WeaponSkin", {
     Sound = "SOUND_ITEM_WEAPON",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
+  [3010609] = {
+    AddOnModel = {3010610},
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Dualblade_Bixiao.T_Bust_Dualblade_Bixiao'",
+    Dec = "UI_WeaponSkin_Des_3010407",
+    DisplayPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Dualblade_Bixiao.T_Bust_Dualblade_Bixiao'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Dualblade_Bixiao.T_Head_Dualblade_Bixiao'",
+    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Dualblade_Bixiao.T_Gacha_Dualblade_Bixiao'",
+    Name = "UI_WeaponSkin_Name_3010608",
+    Rarity = 5,
+    SkinID = 3010609,
+    SkinPath = 3010609,
+    Sound = "SOUND_ITEM_WEAPON",
+    UnlockOption = "UI_Accessory_Unlock_Shop"
+  },
   [3010701] = {
     AddOnModel = {3010702},
     ApplicationType = 106,
@@ -524,6 +595,22 @@ return ReadOnly("WeaponSkin", {
     Rarity = 4,
     SkinID = 3010707,
     SkinPath = 3010707,
+    Sound = "SOUND_ITEM_WEAPON",
+    UnlockOption = "UI_Accessory_Unlock_Shop"
+  },
+  [3010709] = {
+    AddOnModel = {3010710},
+    ApplicationType = 106,
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Katana_Bixiao.T_Bust_Katana_Bixiao'",
+    Dec = "UI_WeaponSkin_Des_3010407",
+    DisplayPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Katana_Bixiao.T_Bust_Katana_Bixiao'",
+    GoShopTypeId = {120155},
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Katana_Bixiao.T_Head_Katana_Bixiao'",
+    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Katana_Bixiao.T_Gacha_Katana_Bixiao'",
+    Name = "UI_WeaponSkin_Name_3010708",
+    Rarity = 5,
+    SkinID = 3010709,
+    SkinPath = 3010709,
     Sound = "SOUND_ITEM_WEAPON",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
@@ -617,6 +704,18 @@ return ReadOnly("WeaponSkin", {
     Sound = "SOUND_ITEM_WEAPON",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
+  [3010902] = {
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Cannon_Bixiao.T_Bust_Cannon_Bixiao'",
+    Dec = "UI_WeaponSkin_Des_3010407",
+    DisplayPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Cannon_Bixiao.T_Bust_Cannon_Bixiao'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Cannon_Bixiao.T_Head_Cannon_Bixiao'",
+    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Cannon_Bixiao.T_Gacha_Cannon_Bixiao'",
+    Rarity = 5,
+    SkinID = 3010902,
+    SkinPath = 3010902,
+    Sound = "SOUND_ITEM_WEAPON",
+    UnlockOption = "UI_Accessory_Unlock_Shop"
+  },
   [3011001] = {
     ApplicationType = 204,
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Shotgun_Dianju.T_Bust_Shotgun_Dianju'",
@@ -629,6 +728,36 @@ return ReadOnly("WeaponSkin", {
     Rarity = 5,
     SkinID = 3011001,
     SkinPath = 3011001,
+    Sound = "SOUND_ITEM_WEAPON",
+    UnlockOption = "UI_Accessory_Unlock_Shop"
+  },
+  [3011002] = {
+    ApplicationType = 204,
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Shotgun_Huoli.T_Bust_Shotgun_Huoli'",
+    Dec = "UI_WeaponSkin_Des_3011002",
+    DisplayPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Shotgun_Huoli.T_Bust_Shotgun_Huoli'",
+    GoShopTypeId = {140301},
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Shotgun_Huoli.T_Head_Shotgun_Huoli'",
+    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Shotgun_Huoli.T_Gacha_Shotgun_Huoli'",
+    Name = "UI_WeaponSkin_Name_3011002",
+    Rarity = 5,
+    SkinID = 3011002,
+    SkinPath = 3011002,
+    Sound = "SOUND_ITEM_WEAPON",
+    UnlockOption = "UI_Accessory_Unlock_Shop"
+  },
+  [3011003] = {
+    ApplicationType = 204,
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Shotgun_Bixiao.T_Bust_Shotgun_Bixiao'",
+    Dec = "UI_WeaponSkin_Des_3010407",
+    DisplayPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Shotgun_Bixiao.T_Bust_Shotgun_Bixiao'",
+    GoShopTypeId = {120156},
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Shotgun_Bixiao.T_Head_Shotgun_Bixiao'",
+    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Shotgun_Bixiao.T_Gacha_Shotgun_Bixiao'",
+    Name = "UI_WeaponSkin_Name_3011003",
+    Rarity = 5,
+    SkinID = 3011003,
+    SkinPath = 3011003,
     Sound = "SOUND_ITEM_WEAPON",
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },

@@ -64,4 +64,8 @@ function M:OnClearBtnClicked()
   self.EditableText_Search:SetText("")
 end
 
+function M:ClearText()
+  self.EditableText_Search:SetText("")
+end
+
 return M

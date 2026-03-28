@@ -162,7 +162,7 @@ function M:RecvToShopOrderGift(ErrCode, ...)
   self:NotifyEvent(GiftCommon.EventId.ToShopOrderGift)
 end
 
-function M:SendToShopResourceGift(Uid, ShopItemId, Count, Content, Handler)
+function M:SendToShopResourceGift(Uid, ShopItemId, Count, Content, Handler, Password)
   local CallbackInfo = {
     Func = function(_Self, ErrCode, ...)
       _Self:RecvToShopResourceGift(ErrCode, ...)
@@ -170,7 +170,7 @@ function M:SendToShopResourceGift(Uid, ShopItemId, Count, Content, Handler)
     end,
     Obj = self
   }
-  self:GetAvatar():RequestSendShopResourceGift(CallbackInfo, Uid, ShopItemId, Count, Content, "")
+  self:GetAvatar():RequestSendShopResourceGift(CallbackInfo, Uid, ShopItemId, Count, Content, Password)
 end
 
 function M:RecvToShopResourceGift(ErrCode, ...)

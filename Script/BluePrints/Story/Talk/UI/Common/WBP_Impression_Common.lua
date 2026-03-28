@@ -109,7 +109,7 @@ function WBP_Impression_Common:InitOptions(OptionData, TalkTriggerId, Impression
       local Option = OptionData.Options[i]
       if Option then
         local IsUsingGM = self.TalkTask.TaskData.UsingGM
-        local IsSelected = OptionData.bHasFinalDialogue and Option.bIsSelected
+        local IsSelected = Option.bIsSelected
         ImpressionItem:Init(self, i, TalkTriggerId, OptionState, OptionType, Option, nil, function(SpecifyFinishType)
           self:OnOptionItemEnd(i, SpecifyFinishType)
         end, IsUsingGM, IsSelected)

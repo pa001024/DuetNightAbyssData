@@ -17,16 +17,24 @@ function M:OnLoaded(...)
   self.UIName = "FameMain"
   self.Btn_Conquer.TextName:SetText(GText("RecurringTask_Title"))
   self.Btn_Gift.TextName:SetText(GText("ReputationEntrust_Title"))
+  self.Btn_Conquer_Huaxu.TextName:SetText(GText("RecurringTask_Title"))
+  self.Btn_Gift_Huaxu.TextName:SetText(GText("ReputationEntrust_Title"))
   self.Btn_Conquer:BindEventOnClicked(self, self.OnConquer)
   self.Btn_Gift:BindEventOnClicked(self, self.OnGift)
+  self.Btn_Conquer_Huaxu:BindEventOnClicked(self, self.OnConquer)
+  self.Btn_Gift_Huaxu:BindEventOnClicked(self, self.OnGift)
   self.Fame_Progress:BindEventOnClicked(self, self.OnOpenReward)
   self.Btn_Conquer.SoundFunc = self.ButtonClickSoundFunc
   self.Btn_Gift.SoundFunc = self.ButtonClickSoundFunc
+  self.Btn_Conquer_Huaxu.SoundFunc = self.ButtonClickSoundFunc
+  self.Btn_Gift_Huaxu.SoundFunc = self.ButtonClickSoundFunc
   self:InitRegionTab()
   ReddotManager.AddListenerEx(self.UIName, self, self.OnFameMainReddotChange)
   ReddotManager.AddListenerEx(self.UIName, self, self.FameMainTabReddotChange)
   ReddotManager.AddListenerEx("RecurringFameTask", self, self.OnFameMainReddotChange)
   ReddotManager.AddListenerEx("RecurringFameTask", self, self.FameMainTabReddotChange)
+  ReddotManager.AddListenerEx("EntrustFameTask", self, self.OnFameMainReddotChange)
+  ReddotManager.AddListenerEx("EntrustFameTask", self, self.FameMainTabReddotChange)
   EventManager:AddEvent(EventID.RegionReputationsChange, self, self.RefreshUI)
   AudioManager(self):PlayUISound(self, "event:/ui/armory/open", "Fame_Main", nil)
 end
@@ -51,6 +59,8 @@ function M:UpdateRefreshRemainingTime()
     local RemainingTimeText2 = UIUtils.GetRemainingTimeByTimestamp(self.EntrustTaskRefreshTimestamp)
     self.Btn_Conquer:SetTextRefresTime(RemainingTimeText1)
     self.Btn_Gift:SetTextRefresTime(RemainingTimeText2)
+    self.Btn_Conquer_Huaxu:SetTextRefresTime(RemainingTimeText1)
+    self.Btn_Gift_Huaxu:SetTextRefresTime(RemainingTimeText2)
   end
 end
 
@@ -235,6 +245,9 @@ function M:RefreshUIBG()
   else
     self:UpdateUIStyleInPlatform(true)
   end
+  local RegionUIButtonBGIndex = self.CurRegionData.RegionUIButtonBGIndex or 0
+  self.Ws_BtnConquer:SetActiveWidgetIndex(RegionUIButtonBGIndex)
+  self.Ws_BtnGift:SetActiveWidgetIndex(RegionUIButtonBGIndex)
 end
 
 function M:ButtonClickSoundFunc()
@@ -291,6 +304,7 @@ function M:RefreshCurRewardReddot()
     self.Fame_Progress.Reddot:SetVisibility(Show and UE4.ESlateVisibility.SelfHitTestInvisible or UE4.ESlateVisibility.Collapsed)
   end
   self:RefreshRecurringTaskReddot()
+  self:RefreshEntrustTaskReddot()
 end
 
 function M:RefreshRecurringTaskReddot()
@@ -301,6 +315,19 @@ function M:RefreshRecurringTaskReddot()
   end
   if self.Btn_Conquer and self.Btn_Conquer.Reddot then
     self.Btn_Conquer.Reddot:SetVisibility(bHasCanClaim and UE4.ESlateVisibility.SelfHitTestInvisible or UE4.ESlateVisibility.Collapsed)
+  end
+  if self.Btn_Conquer_Huaxu and self.Btn_Conquer_Huaxu.Reddot then
+    self.Btn_Conquer_Huaxu.Reddot:SetVisibility(bHasCanClaim and UE4.ESlateVisibility.SelfHitTestInvisible or UE4.ESlateVisibility.Collapsed)
+  end
+end
+
+function M:RefreshEntrustTaskReddot()
+  local bHasCanClaim = RegionFameModel:GetTargetRegionEntrustTaskCanSubmit(self.CurRegionTabId)
+  if self.Btn_Gift and self.Btn_Gift.Reddot then
+    self.Btn_Gift.Reddot:SetVisibility(bHasCanClaim and UE4.ESlateVisibility.SelfHitTestInvisible or UE4.ESlateVisibility.Collapsed)
+  end
+  if self.Btn_Gift_Huaxu and self.Btn_Gift_Huaxu.Reddot then
+    self.Btn_Gift_Huaxu.Reddot:SetVisibility(bHasCanClaim and UE4.ESlateVisibility.SelfHitTestInvisible or UE4.ESlateVisibility.Collapsed)
   end
 end
 
@@ -325,7 +352,8 @@ function M:RefreshAllTabReddots()
   for _, RegionCfg in pairs(DataMgr.RegionReputation) do
     local TabRed, _ = Avatar:HasAnyRewardUpToCurLevel(RegionCfg.ReputationID)
     local AllCanClaimTasks = RegionFameModel:GetTargetRegionAllCanClaimRecurringTasks(RegionCfg.ReputationID)
-    TabRed = TabRed or AllCanClaimTasks and #AllCanClaimTasks > 0
+    local CanSubmitEntrustTask = RegionFameModel:GetTargetRegionEntrustTaskCanSubmit(RegionCfg.ReputationID)
+    TabRed = TabRed or AllCanClaimTasks and #AllCanClaimTasks > 0 or CanSubmitEntrustTask
     self.Com_Tab:ShowTabRedDotByTabId(RegionCfg.ReputationID, false, TabRed, false)
   end
 end
@@ -406,6 +434,8 @@ function M:UpdateUIStyleInPlatform(IsUseKeyAndMouse)
   if CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" then
     self.Btn_Conquer.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.Btn_Gift.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.Btn_Conquer_Huaxu.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.Btn_Gift_Huaxu.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.Fame_Progress.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Collapsed)
     return
   end
@@ -413,6 +443,8 @@ function M:UpdateUIStyleInPlatform(IsUseKeyAndMouse)
     self.Fame_Progress.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.Btn_Conquer.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.Btn_Gift.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.Btn_Conquer_Huaxu.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.Btn_Gift_Huaxu.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Collapsed)
   else
     self.Fame_Progress.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     self.Fame_Progress.WBP_Com_KeyImg:CreateCommonKey({
@@ -428,6 +460,18 @@ function M:UpdateUIStyleInPlatform(IsUseKeyAndMouse)
     })
     self.Btn_Gift.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     self.Btn_Gift.WBP_Com_KeyImg:CreateCommonKey({
+      KeyInfoList = {
+        {Type = "Img", ImgShortPath = "Y"}
+      }
+    })
+    self.Btn_Conquer_Huaxu.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.Btn_Conquer_Huaxu.WBP_Com_KeyImg:CreateCommonKey({
+      KeyInfoList = {
+        {Type = "Img", ImgShortPath = "X"}
+      }
+    })
+    self.Btn_Gift_Huaxu.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.Btn_Gift_Huaxu.WBP_Com_KeyImg:CreateCommonKey({
       KeyInfoList = {
         {Type = "Img", ImgShortPath = "Y"}
       }

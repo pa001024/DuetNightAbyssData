@@ -88,5 +88,16 @@ return ReadOnly("Synthesis", {
     OccupationTargetNum = 6,
     RageValueStages = T.RT_2,
     SupervisorCreatorIds = T.RT_3
+  },
+  [91308] = {
+    BlastMonInterval = 60,
+    BreakableAddRage = 0.1,
+    DungeonId = 91308,
+    KeyNeedNum = 6,
+    MechanismAddRageMap = T.RT_1,
+    MonAddRage = 1,
+    OccupationTargetNum = 6,
+    RageValueStages = T.RT_2,
+    SupervisorCreatorIds = T.RT_3
   }
 })

@@ -7,6 +7,22 @@ function Component:EnterWorld(...)
   SignBoardBubbleTalkController:Init()
   StoryInteractiveController:Init()
   self:InitReddotTrees()
+  local PlanCount = self:GetMobileHudPlanCount()
+  if PlanCount < 7 then
+    for i = 1, 7 - PlanCount do
+      local PlanIndex = i + PlanCount
+      local DefaultPlanNameKey
+      if 1 == PlanIndex or 2 == PlanIndex then
+        DefaultPlanNameKey = "UI_CustomLayout_DefaultPlanName1"
+      elseif 3 == PlanIndex or 4 == PlanIndex then
+        DefaultPlanNameKey = "UI_CustomLayout_DefaultPlanName2"
+      elseif 5 == PlanIndex or 6 == PlanIndex then
+        DefaultPlanNameKey = "UI_CustomLayout_DefaultPlanName3"
+      end
+      local DefaultPlanName = DefaultPlanNameKey and GText(DefaultPlanNameKey) or "Layout_" .. PlanIndex
+      self:AddMobileHudPlan({HudPlanName = DefaultPlanName})
+    end
+  end
 end
 
 function Component:LeaveWorld(...)
@@ -23,6 +39,26 @@ function Component:InitReddotTrees()
   local HasCustomerServiceRedDot = self:CheckCustomerServiceRedDot()
   if HasCustomerServiceRedDot then
     ReddotManager.IncreaseLeafNodeCount("Setting_Service", 1)
+  end
+  ReddotManager.ClearLeafNodeCount("Setting_SecPassword")
+  local GachaKey = "SecPasswordNew"
+  local SecPasswordNewCache = EMCache:Get(GachaKey, true)
+  if nil == SecPasswordNewCache then
+    ReddotManager.IncreaseLeafNodeCount("Setting_SecPassword", 1)
+  end
+  local IsFirstShow = EMCache:Get("FirstOpenMobileLayoutPlan", true)
+  if nil == IsFirstShow then
+    EMCache:Set("FirstOpenMobileLayoutPlan", true, true)
+    if UIUtils.IsMobileInput() then
+      ReddotManager.ClearLeafNodeCount("Setting_Control_Setting_SaveBulletJumpCamAdjustBtn")
+      ReddotManager.IncreaseLeafNodeCount("Setting_Control_Setting_SaveBulletJumpCamAdjustBtn", 1)
+      ReddotManager.ClearLeafNodeCount("Setting_Control_Setting_SaveAutoBulletJumpCamBtn")
+      ReddotManager.IncreaseLeafNodeCount("Setting_Control_Setting_SaveAutoBulletJumpCamBtn", 1)
+      ReddotManager.ClearLeafNodeCount("Setting_Control_TrailBtn")
+      ReddotManager.IncreaseLeafNodeCount("Setting_Control_TrailBtn", 1)
+      ReddotManager.ClearLeafNodeCount("Setting_Control_AddBtn")
+      ReddotManager.IncreaseLeafNodeCount("Setting_Control_AddBtn", 1)
+    end
   end
 end
 
@@ -287,15 +323,40 @@ function Component:SwitchMobileHudPlan(NewPlanIndex)
   self:CallServer("SwitchMobileHudPlan", Callback, NewPlanIndex)
 end
 
-function Component:UpdateMobileHudPlan(PlanIndex, PlanInfo)
+function Component:UpdateMobileHudPlan(PlanIndex, PlanInfo, IsChangeName)
   self.logger.debug("UpdateMobileHudPlan Begin", PlanIndex)
   
   local function Callback(Ret)
-    EventManager:FireEvent(EventID.OnMobileHudPlanChanged, "Update", PlanIndex, PlanInfo)
+    EventManager:FireEvent(EventID.OnMobileHudPlanChanged, "Update", PlanIndex, PlanInfo, IsChangeName)
     self.logger.debug("UpdateMobileHudPlan Callback", Ret, PlanIndex)
   end
   
   self:CallServer("UpdateMobileHudPlan", Callback, PlanIndex, PlanInfo)
+end
+
+function Component:RecordLayoutIndexToMappedPlan(NewPlanIndex)
+  local MappedPlanIndex = (NewPlanIndex - 1) % 2 + 1
+  local ExistingPlan = self:GetMobileHudPlan(MappedPlanIndex) or {}
+  local UpdatedPlan = {}
+  for k, v in pairs(ExistingPlan) do
+    UpdatedPlan[k] = v
+  end
+  UpdatedPlan.CurrentLayout = NewPlanIndex
+  self.logger.debug("RecordLayoutIndexToMappedPlan Begin", MappedPlanIndex, "NewPlanIndex", NewPlanIndex)
+  
+  local function Callback(Ret)
+    self.logger.debug("RecordLayoutIndexToMappedPlan Callback", Ret, MappedPlanIndex, "NewPlanIndex", NewPlanIndex)
+  end
+  
+  self:CallServer("UpdateMobileHudPlan", Callback, MappedPlanIndex, UpdatedPlan)
+end
+
+function Component:GetMappedPlanCurrentLayout()
+  local Plan1 = self:GetMobileHudPlan(1)
+  local Plan2 = self:GetMobileHudPlan(2)
+  local Plan1CurrentLayout = Plan1 and Plan1.CurrentLayout or 1
+  local Plan2CurrentLayout = Plan2 and Plan2.CurrentLayout or 2
+  return Plan1CurrentLayout, Plan2CurrentLayout
 end
 
 function Component:AddMobileHudPlan(PlanInfo)
@@ -345,6 +406,26 @@ end
 
 function Component:CheckCustomerServiceRedDot()
   if self.DataStatistics.CustomerServiceRedDot then
+    return true
+  end
+  return false
+end
+
+function Component:GetInteractTriggerReward(InteractTriggerId)
+  self.logger.debug("GetInteractTriggerReward Begin", InteractTriggerId, self.InteractTriggerRewardRecords[InteractTriggerId])
+  
+  local function Callback(Ret, Rewards)
+    self.logger.debug("GetInteractTriggerReward Callback", Ret, InteractTriggerId)
+    if ErrorCode:Check(Ret) then
+      UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, Rewards, false, nil, self, false)
+    end
+  end
+  
+  self:CallServer("GetInteractTriggerReward", Callback, InteractTriggerId)
+end
+
+function Component:CheckInteractTriggerRewardIsGot(InteractTriggerId)
+  if self.InteractTriggerRewardRecords and self.InteractTriggerRewardRecords[InteractTriggerId] then
     return true
   end
   return false

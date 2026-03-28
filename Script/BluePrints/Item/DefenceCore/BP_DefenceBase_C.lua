@@ -37,6 +37,9 @@ function BP_DefenceBase_C:OnDamaged(DamageEvent)
     return
   end
   BP_DefenceBase_C.Super.OnDamaged(self, DamageEvent)
+  if not self:GetCanTriggerGameMode() then
+    return
+  end
   local HpPercent = self:GetAttr("Hp") / self:GetAttr("MaxHp")
   if HpPercent <= 0.7 and self.SeventyEvent then
     self:TriggerGameModeEvent("OnDefenceHpSeventyPercent")
@@ -59,7 +62,7 @@ function BP_DefenceBase_C:ActiveDefence()
   self.CombatClientEffectComponent:OnActiveEffect()
   local GameMode = UE4.UGameplayStatics.GetGameMode(self)
   print(_G.LogTag, "LXZ ActiveDefence11", self:GetName(), EffectiveDefence:Length())
-  if 0 == EffectiveDefence:Length() and GameMode then
+  if GameMode and self:GetCanTriggerGameMode() then
     GameMode:TriggerOnDefenceCoreActive(self)
     self:OnFirstActive()
   end
@@ -77,7 +80,7 @@ function BP_DefenceBase_C:OnDead(KillMineRoleEid, KillMineSkillId, DeathReason)
   local GameState = UE4.UGameplayStatics.GetGameState(self)
   GameState:SetDungeonEndReason(Const.DungeonEnd_DefenceCoreDead)
   local GameMode = UE4.UGameplayStatics.GetGameMode(self)
-  if GameMode then
+  if GameMode and self:GetCanTriggerGameMode() then
     GameMode:TriggerOnDefenceCoreDead(self)
   end
   if IsStandAlone(self) or IsClient(self) then
@@ -156,6 +159,10 @@ function BP_DefenceBase_C:GetGuidePos()
   else
     return self:K2_GetActorLocation()
   end
+end
+
+function BP_DefenceBase_C:GetCanTriggerGameMode()
+  return true
 end
 
 return BP_DefenceBase_C

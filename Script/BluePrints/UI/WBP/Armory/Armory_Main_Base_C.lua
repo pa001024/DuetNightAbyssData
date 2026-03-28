@@ -1107,7 +1107,7 @@ function M:CreateConstInfos()
               if ArmoryUtils:GetCharByUuid(Char.Uuid) == nil then
                 return
               end
-              return false, not self.IsPreviewMode and self.CheckCharPromoteReddot and self:CheckCharPromoteReddot(Char)
+              return not self.IsPreviewMode and self.CheckCharUltraGradeNewReddot and self:CheckCharUltraGradeNewReddot(Char), not self.IsPreviewMode and self.CheckCharPromoteReddot and self:CheckCharPromoteReddot(Char)
             end
           },
           [ArmoryUtils.ArmorySubTabNames.Appearance] = {

@@ -52,7 +52,6 @@ function WBP_Com_Activity_RewardTab_C:UnSelected()
 end
 
 function WBP_Com_Activity_RewardTab_C:Selected(NotPlaySound)
-  self:StopAllAnimations()
   self:PlayAnimation(self.Click)
   self.IsSelect = true
   if NotPlaySound then

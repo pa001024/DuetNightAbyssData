@@ -93,10 +93,8 @@ function M:OpenDataView()
   self.DataPage.Root = self.MainPage
   self.DataPage:InitBaseView()
   local ActorController = self.MainPage.PersonInfoMainPage.ActorController
-  local t1, t2, t3, t4 = ActorController:CalcArmoryCameraTag("Char", nil, "Personal", "Data")
-  ActorController:SetArmoryCameraTag(t1, t2, t3, t4)
-  if self.MainPage.Com_BtnVisible then
-    self.MainPage.Com_BtnVisible:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  if -1 ~= self.MainPage.PersonInfoMainPage.SelectCharIndex then
+    ActorController:SetMontageAndCamera("Char", nil, "Personal", "Data")
   end
 end
 
@@ -190,6 +188,79 @@ function M:GetPersonInfo(PlayerInfo)
   self:OpenView(PlayerInfo.Uid)
 end
 
+function M:RestoreHistoryRankTab()
+  if self.DataPage then
+    if self.DataPage.InitNormalBottonKey then
+      self.DataPage:InitNormalBottonKey()
+    elseif self.DataPage.InitTab then
+      self.DataPage:InitTab()
+    end
+  elseif self.MainPage and self.MainPage.InitTabInfo then
+    self.MainPage:InitTabInfo()
+  end
+end
+
+function M:OnCloseGuildWarHistoryRank()
+  if not self.HistoryRankPage then
+    return
+  end
+  if self.DataPage then
+    self.DataPage:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.DataPage.IsClosing = false
+  end
+  self:RestoreHistoryRankTab()
+  if self.DataPage and self.DataPage.SetFocus then
+    self.DataPage:SetFocus()
+  end
+  self.HistoryRankPage.IsClosing = true
+end
+
+function M:ReallyCloseGuildWarHistoryRank(Page)
+  if not self.HistoryRankPage or not self.HistoryRankPage.IsClosing then
+    return
+  end
+  if Page then
+    Page:RemovefromParent()
+  end
+  self.HistoryRankPage = nil
+end
+
+function M:CloseGuildWarHistoryRank()
+  self:OnCloseGuildWarHistoryRank()
+  self:ReallyCloseGuildWarHistoryRank(self.HistoryRankPage)
+end
+
+function M:OpenGuildWarHistoryRank()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  local BaseInfo = PersonInfoModel:GetGuildWarHistoryBaseInfo()
+  
+  local function OpenWithRecord(RankRecord)
+    local TopNInfo = PersonInfoModel:BuildGuildWarHistoryTopN(BaseInfo, RankRecord or {})
+    local SelfRankInfo = PersonInfoModel:BuildGuildWarHistorySelfRank(TopNInfo)
+    local HistoryContext = {HistoryMode = true, BaseInfo = BaseInfo}
+    UIManager(self):LoadUINew("PersonalInfoDataRanking", SelfRankInfo, TopNInfo, HistoryContext)
+  end
+  
+  if PersonInfoModel.DebugCachedRankData then
+    OpenWithRecord(PersonInfoModel.DebugCachedRankData)
+    return
+  end
+  if PersonInfoModel:IsOwener() then
+    Avatar:GetRaidSeasonRankRecord(function(ErrCode, Ret)
+      if ErrorCode:Check(ErrCode) then
+        OpenWithRecord(Ret)
+      else
+        OpenWithRecord({})
+      end
+    end)
+    return
+  end
+  OpenWithRecord(PersonInfoModel.OtherRaidSeasonRankRecord or {})
+end
+
 function M:OnClose()
   local FocusWidget = UIManager(self):GetLastestAndFocusableUIWidgetObj()
   if FocusWidget and FocusWidget.SetFocus_Lua and type(FocusWidget.SetFocus_Lua) == "function" then
@@ -199,6 +270,10 @@ function M:OnClose()
   self.MainPage = nil
   self.EditPage = nil
   self.DataPage = nil
+  if self.HistoryRankPage then
+    self.HistoryRankPage:RemovefromParent()
+    self.HistoryRankPage = nil
+  end
   PersonInfoModel:ClearModel()
   PersonInfoDataModel:ClearModel()
 end

@@ -61,7 +61,7 @@ function WBP_BattleAmmoBase_C:SwitchIn()
   self.Root.IsLerpSetAmmo = false
   self.Root:RemoveTimer(self.Root.LerpSetAmmoBarPercentTimer)
   self.Root.LerpSetAmmoBarPercentTimer = nil
-  if self.WaitingFlag then
+  if self.WaitingFlag and not self.Root.InBulletJumpMode then
     self:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   end
 end

@@ -273,7 +273,9 @@ function WBP_Simple_Common:ShowOptions(TalkTask, OptionTexts, OptionData, OnOpti
     local Item = NewObject(USimpleDialogueButtonItem)
     Item.Index = v.Index
     Item.OptionTopic = v.Text
-    Item.bIsSelected = OptionData.bHasFinalDialogue and v.bIsSelected
+    Item.OptionStyle = v.OptionStyle
+    Item.bIsSelected = v.bIsSelected
+    Item.bCanReselect = v.bCanReselect
     self.DialogueButtonListView:AddItem(Item)
   end
   self.DialogueButtonListView:SetDefaultItem()

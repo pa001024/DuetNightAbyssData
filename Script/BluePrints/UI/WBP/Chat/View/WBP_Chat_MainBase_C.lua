@@ -73,6 +73,56 @@ function M:Construct()
   self.CurrExtraPanel = nil
   self.CurrExtraPanelName = ""
   self.MaxScrollOffset = 0
+  self:InitChatChannelUI()
+end
+
+function M:UpdateText_ChatChannel()
+  if ChatModel:IsInRegionOnlineChannelType() then
+    self.Text_ChatChannel:SetText(string.format(GText(DataMgr.RegionOnline[ChatModel:GetRegionId()].RegionChannelName) .. "(%d)", ChatModel:GetChannelIndex(ChatModel:GetCurrentChannel())))
+  else
+    self.Text_ChatChannel:SetText(string.format(GText("WorldChannelWithParam"), ChatModel:GetChannelIndex(ChatModel:GetCurrentChannel())))
+  end
+end
+
+function M:InitChatChannelUI()
+  self:UpdateText_ChatChannel()
+  self.Text_ChannelSign01:SetText(GText("Process"))
+  self.Text_ChannelSign02:SetText(GText("Busy"))
+  self.Text_ChannelSign03:SetText(GText("Full"))
+  self.Btn_ChangeChannel:BindEventOnPressed(self, self.BtnChangeChannelOnPressed)
+  self.Button_ChangeChannel.OnClicked:Clear()
+  self.Button_ChangeChannel.OnClicked:Add(self, self.BtnChangeChannelOnPressed)
+  ChatController:RegisterEvent(self, function(self, EventId, ...)
+    if EventId == ChatCommon.EventID.RecvChannelPlayerNum then
+      self:HandleChannelPlayerNum()
+    elseif EventId == ChatCommon.EventID.EnterChatChannel then
+      self:HandleChannelPlayerNum()
+    end
+  end)
+  EventManager:AddEvent(EventID.OnSelectChannelSuccess, self, self.OnSelectChannelSuccess)
+end
+
+function M:OnSelectChannelSuccess(ChannelType, SelectIndex)
+  if ChatModel:IsInRegionOnlineChannelType() then
+    self.Text_ChatChannel:SetText(string.format(GText(DataMgr.RegionOnline[ChatModel:GetRegionId()].RegionChannelName) .. "(%d)", SelectIndex))
+  else
+    self.Text_ChatChannel:SetText(string.format(GText("WorldChannelWithParam"), SelectIndex))
+  end
+end
+
+function M:HandleChannelPlayerNum(Channel_type, Channel_list)
+  local Type = ChatModel:GetChannelState(ChatModel:GetChannelIndex(ChatModel:GetCurrentChannel()))
+  if 1 == Type then
+    self.WS_ChannelSign:SetActiveWidgetIndex(0)
+  elseif 2 == Type then
+    self.WS_ChannelSign:SetActiveWidgetIndex(1)
+  else
+    self.WS_ChannelSign:SetActiveWidgetIndex(2)
+  end
+end
+
+function M:BtnChangeChannelOnPressed()
+  ChatController:OpenChatChannelUI(self)
 end
 
 function M:_Stop_SetUpChatMsgListTimer()
@@ -190,7 +240,7 @@ function M:BtnSendOnClicked(bSkipCheck)
     self.Com_Input:ShowTips(GText("UI_Chat_NotEmptyText"), 2)
     return
   end
-  if not self.Btn_Sent:IsForbidden() then
+  if not self.Btn_Sent:IsChatBtnForbidden() then
     AudioManager(self):PlayUISound(self, "event:/ui/common/team_click_send_msg", nil, nil)
     self.Btn_Sent:SetForbidden()
   else
@@ -305,6 +355,7 @@ end
 function M:OnTabSelected_TeamUp(TabWidget, TabItemInfo)
   self:HandleEnterChatChannel(ErrorCode.RET_SUCCESS, ChatCommon.ChannelDef.TeamUp)
   self:_SetUpBtnSentState()
+  self.Group_Channel:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end
 
 function M:OnTabSelected_Friend(TabWidget, TabItemInfo)
@@ -319,26 +370,35 @@ function M:OnTabSelected_Friend(TabWidget, TabItemInfo)
   self.List_Player:ClearListItems()
   self.Btn_Sent:SetForbidden()
   FriendController:SendRequest(FriendCommon.EventId.RefreshFriend)
+  self.Group_Channel:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end
 
 function M:OnTabSelected_Public(TabWidget, TabItemInfo)
   self:HandleEnterChatChannel(ErrorCode.RET_SUCCESS, ChatCommon.ChannelDef.Public)
   self:_SetUpBtnSentState()
+  self.Group_Channel:SetVisibility(UIConst.VisibilityOp.Visible)
+  self:UpdateText_ChatChannel()
+  ChatController:SendQueryChatChannelBusyInfo()
 end
 
 function M:OnTabSelected_Region(TabWidget, TabItemInfo)
   self:HandleEnterChatChannel(ErrorCode.RET_SUCCESS, ChatCommon.ChannelDef.Region)
   self:_SetUpBtnSentState()
+  self.Group_Channel:SetVisibility(UIConst.VisibilityOp.Visible)
+  self:UpdateText_ChatChannel()
+  ChatController:SendQueryChatChannelBusyInfo()
 end
 
 function M:OnTabSelected_SettlementOnline(TabWidget, TabItemInfo)
   self:HandleEnterChatChannel(ErrorCode.RET_SUCCESS, ChatCommon.ChannelDef.SettlementOnline)
   self:_SetUpBtnSentState()
   self:_SetUpChatMsgList()
+  self.Group_Channel:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end
 
 function M:OnTabSelected_League(TabWidget, TabItemInfo)
   self:_SetUpFullEmpty(GText("UI_Chat_LeagueEmpty"), GText("UI_Chat_GotoLeague"))
+  self.Group_Channel:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end
 
 function M:OnTabSelected_InTeam(TabWidget, TabItemInfo)
@@ -358,6 +418,7 @@ function M:OnTabSelected_InTeam(TabWidget, TabItemInfo)
     ChatController:SendRequestEnterChatChannel()
     self:_SetUpBtnSentState()
   end
+  self.Group_Channel:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end
 
 function M:AddReddotListen()
@@ -518,11 +579,11 @@ function M:HandleEnterChatChannel(ErrCode, ChannelType)
     FriendController:SendRequest(FriendCommon.EventId.RefreshFriend)
   elseif self.CurrChannel == ChatCommon.ChannelDef.TeamUp then
     self:_SetUpFullEmpty(GText("UI_Chat_InTeamEmpty"))
-  elseif self.CurrChannel == ChatCommon.ChannelDef.Public then
+  elseif self.CurrChannel == ChatCommon.ChannelDef.Public and not UIManager(self):GetUIObj("CommonDialog") then
     self:_SetUpFullEmpty(GText("UI_Chat_PublicEmpty"))
   elseif self.CurrChannel == ChatCommon.ChannelDef.InTeam then
     self:_SetUpFullEmpty(GText("UI_Chat_InTeamEmpty"))
-  elseif self.CurrChannel == ChatCommon.ChannelDef.Region then
+  elseif self.CurrChannel == ChatCommon.ChannelDef.Region and not UIManager(self):GetUIObj("CommonDialog") then
     self:_SetUpFullEmpty(GText("UI_Chat_RegionEmpty"))
   elseif self.CurrChannel == ChatCommon.ChannelDef.SettlementOnline then
     self:_SetUpFullEmpty(GText("UI_Chat_SettlementOnlineEmpty"))

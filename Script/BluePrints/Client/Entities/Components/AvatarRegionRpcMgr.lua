@@ -218,7 +218,7 @@ function Component:SetTimeOfDay(NewTime)
   self:CallServer("SetTimeOfDay", Callback, NewTime)
 end
 
-function Component:RegionActorUpdate(TargetActor, NewSubRegionId, NewLevelName, StateTable)
+function Component:RegionActorUpdate(TargetActor, NewSubRegionId, NewLevelName, StateTable, CB)
   local NoStorageRegionDataType = {
     ERegionDataType.RDT_QuestData,
     ERegionDataType.RDT_None,
@@ -240,6 +240,9 @@ function Component:RegionActorUpdate(TargetActor, NewSubRegionId, NewLevelName, 
     if Ret ~= ErrorCode.RET_SUCCESS and Ret ~= ErrorCode.RET_REGION_BASEDATA_WORLDREGIONEID_REPEAT then
       GWorld.logger.error("UpdateRegionActorData " .. "ErrorCode:" .. Ret .. " WorldRegionEid:" .. TargetActor.WorldRegionEid .. " NewSubRegionId:" .. NewSubRegionId .. " RegionDataType:" .. TargetActor.RegionDataType .. " NewLevelName:" .. NewLevelName)
       PrintTable(StateTable)
+    end
+    if CB then
+      CB(Ret)
     end
   end
   

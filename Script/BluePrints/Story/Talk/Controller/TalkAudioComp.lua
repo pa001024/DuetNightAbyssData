@@ -1,10 +1,79 @@
 local TalkAudioComp_C = {}
 local ETalkAudioState = {
   Stop = "Stop",
-  Loading = "Loading",
   Play = "Play",
   Pause = "Pause"
 }
+local FPlayAudioProxy = {}
+
+function FPlayAudioProxy.New(AssetPaths, OnComplete)
+  local Obj = setmetatable({}, {__index = FPlayAudioProxy})
+  Obj.bIsPaused = false
+  Obj.bIsReady = false
+  Obj.bIsValid = true
+  Obj.OnComplete = OnComplete
+  Obj:Load(AssetPaths)
+  return Obj
+end
+
+function FPlayAudioProxy:Load(AssetPaths)
+  local LoadedCount = 0
+  local TotalToLoad = #AssetPaths
+  if 0 == TotalToLoad then
+    self.bIsReady = true
+    if self.OnComplete then
+      self.OnComplete()
+    end
+    self:Clear()
+    return
+  end
+  local GameInstance = GWorld.GameInstance
+  for _, Path in pairs(AssetPaths) do
+    UResourceLibrary.LoadObjectAsync(GameInstance, Path, {
+      GameInstance,
+      function(_, Asset)
+        if not self or not self.bIsValid then
+          return
+        end
+        LoadedCount = LoadedCount + 1
+        if LoadedCount < TotalToLoad then
+          return
+        end
+        self.bIsReady = true
+        if self.bIsReady and not self.bIsPaused then
+          if self.OnComplete then
+            self.OnComplete()
+          end
+          self:Clear()
+        end
+      end
+    })
+  end
+end
+
+function FPlayAudioProxy:Clear()
+  self.bIsValid = false
+end
+
+function FPlayAudioProxy:Pause()
+  if not self.bIsValid or self.bPause then
+    return
+  end
+  self.bIsPaused = true
+end
+
+function FPlayAudioProxy:Resume()
+  if not self.bIsValid or not self.bPause then
+    return
+  end
+  self.bIsPaused = false
+  if self.bIsReady then
+    if self.OnComplete then
+      self.OnComplete()
+    end
+    self:Clear()
+  end
+end
 
 function TalkAudioComp_C.New()
   local Obj = setmetatable({}, {__index = TalkAudioComp_C})
@@ -51,51 +120,29 @@ function TalkAudioComp_C:PlayAudio(VoiceName, SrcActor, OriginalCallback, ExtraI
     return
   end
   self:ClearPlayAudioProxy()
-  local PlayAudioProxy = {bIsValid = true}
-  self.PlayAudioProxy = PlayAudioProxy
-  self:SetAudioState(ETalkAudioState.Loading)
-  local LoadedCount = 0
-  local TotalToLoad = #AssetPaths
-  for _, Path in pairs(AssetPaths) do
-    UResourceLibrary.LoadObjectAsync(GameInstance, Path, {
-      GameInstance,
-      function(_, Asset)
-        LoadedCount = LoadedCount + 1
-        if LoadedCount < TotalToLoad then
-          return
-        end
-        if PlayAudioProxy.bIsValid == false then
-          if Callback then
-            Callback(true)
-          end
-          return
-        end
-        self.bStopSoundWhenClear = true
-        local VoiceActor = SrcActor
-        local AttachActor = OverrideAttachActor or SrcActor
-        local bIsPlay2D = not bIsAttachActor
-        if bIsPlay2D then
-          AttachActor = UE4.UGameplayStatics.GetPlayerController(AudioManager, 0)
-        end
-        if not IsValid(AttachActor) then
-          UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, UE.EStoryLogType.Talk, "对话音频播放失败：AttachActor为空", string.format("绑定Actor为空, 请检查SpeakNpc是否正常注册, VoiceName: %s", VoiceName))
-          if Callback then
-            Callback()
-          end
-          return
-        end
-        self.AttachActor = AttachActor
-        local EventKey = self:GetEventKey(SoundHandle or "VO")
-        local SoundEventInstance = self:PlaySoundWithOral(AudioManager, VoiceName, VoiceActor, bIsAttachActor, ExtraInfo.ExStoryInfo, ExtraInfo.DisableMouth)
-        self.sound_event_instance = SoundEventInstance
-        if self:GetAudioState() == ETalkAudioState.Pause then
-          self:RealPause()
-        else
-          self:SetAudioState(ETalkAudioState.Play)
-        end
+  
+  local function OnComplete()
+    self.bStopSoundWhenClear = true
+    local VoiceActor = SrcActor
+    local AttachActor = OverrideAttachActor or SrcActor
+    local bIsPlay2D = not bIsAttachActor
+    if bIsPlay2D then
+      AttachActor = UE4.UGameplayStatics.GetPlayerController(AudioManager, 0)
+    end
+    if not IsValid(AttachActor) then
+      UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, UE.EStoryLogType.Talk, "对话音频播放失败：AttachActor为空", string.format("绑定Actor为空, 请检查SpeakNpc是否正常注册, VoiceName: %s", VoiceName))
+      if Callback then
+        Callback()
       end
-    })
+      return
+    end
+    self.AttachActor = AttachActor
+    local EventKey = self:GetEventKey(SoundHandle or "VO")
+    local SoundEventInstance = self:PlaySoundWithOral(AudioManager, VoiceName, VoiceActor, bIsAttachActor, ExtraInfo.ExStoryInfo, ExtraInfo.DisableMouth)
+    self.sound_event_instance = SoundEventInstance
   end
+  
+  self.PlayAudioProxy = FPlayAudioProxy.New(AssetPaths, OnComplete)
   if bNoWait and Callback then
     Callback()
   end
@@ -132,6 +179,7 @@ function TalkAudioComp_C:PlaySoundWithOral(AudioManager, VoiceName, VoiceActor, 
     self:OnPlayAudioFinished()
     return
   end
+  self:SetAudioState(ETalkAudioState.Play)
   if not DisableMouth and IsValid(VoiceActor) and VoiceActor.StartOral then
     local OralBaked = self:GetOralBaked(OralPath)
     VoiceActor:StartOral(VoiceName, OralBaked)
@@ -189,23 +237,25 @@ end
 
 function TalkAudioComp_C:ClearPlayAudioProxy()
   if self.PlayAudioProxy then
-    self.PlayAudioProxy.bIsValid = false
+    self.PlayAudioProxy:Clear()
+    self.PlayAudioProxy = nil
   end
+end
+
+function TalkAudioComp_C:IsAudioLoading()
+  return self.PlayAudioProxy and self.PlayAudioProxy.bIsValid
 end
 
 function TalkAudioComp_C:OnPaused()
   DebugPrint("TalkAudioComp_C:OnPaused", self:GetAudioState())
-  if self:GetAudioState() ~= ETalkAudioState.Loading and self:GetAudioState() ~= ETalkAudioState.Play then
+  if self:IsAudioLoading() then
+    self.PlayAudioProxy:Pause()
     return
   end
-  if self:GetAudioState() == ETalkAudioState.Loading then
-  else
-    self:RealPause()
+  if self:GetAudioState() ~= ETalkAudioState.Play then
+    return
   end
   self:SetAudioState(ETalkAudioState.Pause)
-end
-
-function TalkAudioComp_C:RealPause()
   local GameInstance = GWorld.GameInstance
   local AudioManager = AudioManager(GameInstance)
   local AttachActor = self.AttachActor
@@ -215,11 +265,14 @@ function TalkAudioComp_C:RealPause()
   AudioManager:PauseEvent(AttachActor, EventKey, true)
   AudioManager:SetEventVolume(AttachActor, EventKey, 0)
   AudioManager:SetEventSoundParam(nil, Const.DialogueEffectSoundKey, {voice_effect_type = 0})
-  self:ClearPlayAudioProxy()
 end
 
 function TalkAudioComp_C:OnPauseResumed()
   DebugPrint("TalkAudioComp_C:OnPauseResumed", self:GetAudioState())
+  if self:IsAudioLoading() then
+    self.PlayAudioProxy:Resume()
+    return
+  end
   if self:GetAudioState() ~= ETalkAudioState.Pause then
     return
   end

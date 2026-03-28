@@ -1224,6 +1224,201 @@ return ReadOnly("SkillLevelUp", {
       SkillLevel = 9
     }
   },
+  [150401] = {
+    [1] = {
+      CharBreakLevel = 1,
+      ItemId = T.RT_1,
+      ItemNum = T.RT_14,
+      SkillId = 150401,
+      SkillLevel = 1
+    },
+    [2] = {
+      CharBreakLevel = 2,
+      ItemId = T.RT_1,
+      ItemNum = T.RT_15,
+      SkillId = 150401,
+      SkillLevel = 2
+    },
+    [3] = {
+      CharBreakLevel = 3,
+      ItemId = T.RT_4,
+      ItemNum = T.RT_16,
+      SkillId = 150401,
+      SkillLevel = 3
+    },
+    [4] = {
+      CharBreakLevel = 4,
+      ItemId = T.RT_4,
+      ItemNum = T.RT_17,
+      SkillId = 150401,
+      SkillLevel = 4
+    },
+    [5] = {
+      CharBreakLevel = 4,
+      ItemId = T.RT_4,
+      ItemNum = T.RT_18,
+      SkillId = 150401,
+      SkillLevel = 5
+    },
+    [6] = {
+      CharBreakLevel = 5,
+      ItemId = T.RT_8,
+      ItemNum = T.RT_19,
+      SkillId = 150401,
+      SkillLevel = 6
+    },
+    [7] = {
+      CharBreakLevel = 5,
+      ItemId = T.RT_8,
+      ItemNum = T.RT_20,
+      SkillId = 150401,
+      SkillLevel = 7
+    },
+    [8] = {
+      CharBreakLevel = 6,
+      ItemId = T.RT_11,
+      ItemNum = T.RT_21,
+      SkillId = 150401,
+      SkillLevel = 8
+    },
+    [9] = {
+      CharBreakLevel = 6,
+      ItemId = T.RT_11,
+      ItemNum = T.RT_22,
+      SkillId = 150401,
+      SkillLevel = 9
+    }
+  },
+  [150402] = {
+    [1] = {
+      CharBreakLevel = 1,
+      ItemId = T.RT_1,
+      ItemNum = T.RT_14,
+      SkillId = 150402,
+      SkillLevel = 1
+    },
+    [2] = {
+      CharBreakLevel = 2,
+      ItemId = T.RT_1,
+      ItemNum = T.RT_15,
+      SkillId = 150402,
+      SkillLevel = 2
+    },
+    [3] = {
+      CharBreakLevel = 3,
+      ItemId = T.RT_4,
+      ItemNum = T.RT_16,
+      SkillId = 150402,
+      SkillLevel = 3
+    },
+    [4] = {
+      CharBreakLevel = 4,
+      ItemId = T.RT_4,
+      ItemNum = T.RT_17,
+      SkillId = 150402,
+      SkillLevel = 4
+    },
+    [5] = {
+      CharBreakLevel = 4,
+      ItemId = T.RT_4,
+      ItemNum = T.RT_18,
+      SkillId = 150402,
+      SkillLevel = 5
+    },
+    [6] = {
+      CharBreakLevel = 5,
+      ItemId = T.RT_8,
+      ItemNum = T.RT_19,
+      SkillId = 150402,
+      SkillLevel = 6
+    },
+    [7] = {
+      CharBreakLevel = 5,
+      ItemId = T.RT_8,
+      ItemNum = T.RT_20,
+      SkillId = 150402,
+      SkillLevel = 7
+    },
+    [8] = {
+      CharBreakLevel = 6,
+      ItemId = T.RT_11,
+      ItemNum = T.RT_21,
+      SkillId = 150402,
+      SkillLevel = 8
+    },
+    [9] = {
+      CharBreakLevel = 6,
+      ItemId = T.RT_11,
+      ItemNum = T.RT_22,
+      SkillId = 150402,
+      SkillLevel = 9
+    }
+  },
+  [150403] = {
+    [1] = {
+      CharBreakLevel = 1,
+      ItemId = T.RT_1,
+      ItemNum = T.RT_14,
+      SkillId = 150403,
+      SkillLevel = 1
+    },
+    [2] = {
+      CharBreakLevel = 2,
+      ItemId = T.RT_1,
+      ItemNum = T.RT_15,
+      SkillId = 150403,
+      SkillLevel = 2
+    },
+    [3] = {
+      CharBreakLevel = 3,
+      ItemId = T.RT_4,
+      ItemNum = T.RT_16,
+      SkillId = 150403,
+      SkillLevel = 3
+    },
+    [4] = {
+      CharBreakLevel = 4,
+      ItemId = T.RT_4,
+      ItemNum = T.RT_17,
+      SkillId = 150403,
+      SkillLevel = 4
+    },
+    [5] = {
+      CharBreakLevel = 4,
+      ItemId = T.RT_4,
+      ItemNum = T.RT_18,
+      SkillId = 150403,
+      SkillLevel = 5
+    },
+    [6] = {
+      CharBreakLevel = 5,
+      ItemId = T.RT_8,
+      ItemNum = T.RT_19,
+      SkillId = 150403,
+      SkillLevel = 6
+    },
+    [7] = {
+      CharBreakLevel = 5,
+      ItemId = T.RT_8,
+      ItemNum = T.RT_20,
+      SkillId = 150403,
+      SkillLevel = 7
+    },
+    [8] = {
+      CharBreakLevel = 6,
+      ItemId = T.RT_11,
+      ItemNum = T.RT_21,
+      SkillId = 150403,
+      SkillLevel = 8
+    },
+    [9] = {
+      CharBreakLevel = 6,
+      ItemId = T.RT_11,
+      ItemNum = T.RT_22,
+      SkillId = 150403,
+      SkillLevel = 9
+    }
+  },
   [160101] = {
     [1] = {
       CharBreakLevel = 1,

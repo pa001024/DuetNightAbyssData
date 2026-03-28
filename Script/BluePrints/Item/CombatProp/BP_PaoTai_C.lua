@@ -6,24 +6,28 @@ local M = Class({
 function M:CommonInitInfo(Info)
   M.Super.CommonInitInfo(self, Info)
   self.InteractiveType = Const.EndByTargetInteractive
-  self.ChestInteractiveComponent:InitInteractiveComponent(self.Data.InteractiveId)
 end
 
 function M:OnActorReady(Info)
   M.Super.OnActorReady(self, Info)
 end
 
-function M:OpenMechanism()
+function M:EndInteractive(Player)
+  self.ChestInteractiveComponent:EndInteractive(Player)
+end
+
+function M:OpenMechanism(PlayerId)
   print(_G.LogTag, "LXZ OpenMechanism")
   self:ActiveDefence()
   self.OpenState = true
   local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
   local UIManager = GameInstance:GetGameUIManager()
-  self.PaoTaiBattleFront = UIManager:LoadUINew("BattleFort", self.Eid)
+  self.PaoTaiBattleFront = UIManager:LoadUINew("BattleFort", self.Eid, false)
 end
 
 function M:CloseMechanism()
   self.OpenState = false
+  self:Cancel()
   if IsValid(self.PaoTaiBattleFront) then
     self.PaoTaiBattleFront:Close()
     self.PaoTaiBattleFront = nil

@@ -142,7 +142,7 @@ function FDialogueFlowGraphComponent:HasFinalDialogue()
   return false
 end
 
-function FDialogueFlowGraphComponent:IsSelectedOption(OptionId)
+function FDialogueFlowGraphComponent:IsOptionSelected(OptionId)
   if not self.SelectOptions then
     DebugPrint("FDialogueFlowGraphComponent:IsSelectedOption SelectedOptions is nil", self.FlowDialogueData and self.FlowDialogueData.DialogueId, self.Options, self.SelectOptions)
     return false
@@ -170,6 +170,7 @@ function FDialogueFlowGraphComponent:InitSimpleDialogueData(DialogueData)
   end
   DialogueData.bAutoToNext = FlowDialogueData.bAutoToNext
   DialogueData.bIsBlack = DialogueData.bIsBlack or FlowDialogueData.bBlack
+  DialogueData.DisableDuration = FlowDialogueData.DisableDuration
 end
 
 function FDialogueFlowGraphComponent:ForceToDialogueEnd(bForceSkip)

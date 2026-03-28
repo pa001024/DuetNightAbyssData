@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Sibylle",
-    "icon": "Xibi",
+    "icon": "",
     "desc": "Commandante de la XIIIᵉ Légion de l’Empire Hyperboréen. Ce jour-là, sur l’Île du Purgatoire, son apparition fit vaciller notre avenir et traça pour toujours une route que nul ne pouvait prévoir.",
     "diff": [
       {
@@ -36,12 +36,14 @@
         "r": 1021
       }
     ],
-    "mid": 8500002
+    "mid": [
+      8500002
+    ]
   },
   {
     "id": 2,
     "name": "Cristallophage",
-    "icon": "ShiJingZhe",
+    "icon": "",
     "desc": "Le Faucheur de Glevum. Un immense Souillé hantant les profondeurs de la Fosse de Glevum, creusant et engloutissant sans fin tout ce qui brille.",
     "diff": [
       {
@@ -75,12 +77,14 @@
         "r": 1027
       }
     ],
-    "mid": 8503002
+    "mid": [
+      8503002
+    ]
   },
   {
     "id": 3,
     "name": "L’Éclose",
-    "icon": "Saiqi",
+    "icon": "",
     "desc": "Graine oubliée dans la glace, elle a laissé s’éteindre l’espoir d’un doux crépuscule.",
     "diff": [
       {
@@ -114,12 +118,14 @@
         "r": 1033
       }
     ],
-    "mid": 8502002
+    "mid": [
+      8502002
+    ]
   },
   {
     "id": 4,
     "name": "« Geôlière de la fournaise »",
-    "icon": "Haier",
+    "icon": "",
     "desc": "Geôlière de la Prison Militaire Royale : ses chaînes châtient le péché, et ses flammes veillent sur la justice.",
     "diff": [
       {
@@ -153,12 +159,14 @@
         "r": 1039
       }
     ],
-    "mid": 8505002
+    "mid": [
+      8505002
+    ]
   },
   {
     "id": 5,
     "name": "« La Bête née du blizzard »",
-    "icon": "Linen",
+    "icon": "",
     "desc": "C’est la Bête née du blizzard, celle qui ravagea le Nord, détruisant les foyers d’enfants et dissipant les rêves des fées endormies.",
     "diff": [
       {
@@ -192,6 +200,50 @@
         "r": 1045
       }
     ],
-    "mid": 8512002
+    "mid": [
+      8512002
+    ]
+  },
+  {
+    "id": 6,
+    "name": "太皓与烛阴",
+    "icon": "",
+    "desc": "待包装",
+    "diff": [
+      {
+        "id": 1051,
+        "lv": 30,
+        "r": 1016
+      },
+      {
+        "id": 1052,
+        "lv": 40,
+        "r": 1017
+      },
+      {
+        "id": 1053,
+        "lv": 50,
+        "r": 1018
+      },
+      {
+        "id": 1054,
+        "lv": 60,
+        "r": 1019
+      },
+      {
+        "id": 1055,
+        "lv": 70,
+        "r": 1020
+      },
+      {
+        "id": 1056,
+        "lv": 80,
+        "r": 1021
+      }
+    ],
+    "mid": [
+      8510004,
+      8511002
+    ]
   }
 ]

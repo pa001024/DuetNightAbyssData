@@ -786,7 +786,6 @@ end
 function M:CheckReddotCount()
   local UnLockData = EMCache:Get("FishUnLockData", true)
   local UnLockMapData = EMCache:Get("FishMapUnLockData", true)
-  ReddotManager.ClearLeafNodeCount("AnglingMap")
   if not UnLockData then
     return
   end
@@ -805,6 +804,7 @@ function M:CheckReddotCount()
   if UnLockCount <= UnLockMapCount then
     return
   end
+  ReddotManager.ClearLeafNodeCount("AnglingMap")
   ReddotManager.IncreaseLeafNodeCount("AnglingMap", UnLockCount - UnLockMapCount)
 end
 

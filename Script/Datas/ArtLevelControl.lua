@@ -197,26 +197,6 @@ return ReadOnly("ArtLevelControl", {
     RegionId = 1019,
     VarName = "IQ10030601"
   },
-  [15] = {
-    Id = 15,
-    InTime = 0,
-    LoadLevel = {
-      [1] = "/Game/Maps/Levels/Huaxu/Huaxu_Yanjindu_Main/Task_Data/Huaxu_Yanjindu_Plai_ZhuXingMuXiang200302_Task.Huaxu_Yanjindu_Plai_ZhuXingMuXiang200302_Task"
-    },
-    OutTime = 0,
-    RegionId = 1041,
-    VarName = "ZhuXingMuXiang200302"
-  },
-  [16] = {
-    Id = 16,
-    InTime = 0,
-    LoadLevel = {
-      [1] = "/Game/Maps/Levels/Huaxu/Huaxu_Yanjindu_Main/Task_Data/Huaxu_Yanjindu_Plai_ZhuXingMuXiang20030203_Task.Huaxu_Yanjindu_Plai_ZhuXingMuXiang20030203_Task"
-    },
-    OutTime = 0,
-    RegionId = 1041,
-    VarName = "ZhuXingMuXiang20030203"
-  },
   [17] = {
     Id = 17,
     InTime = 0,
@@ -336,5 +316,105 @@ return ReadOnly("ArtLevelControl", {
     OutTime = 0,
     RegionId = 1041,
     VarName = "IQ120315"
+  },
+  [29] = {
+    Id = 29,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_Main/Task_Data/Huaxu_Haojing_IQ1203_Task01.Huaxu_Haojing_IQ1203_Task01"
+    },
+    OutTime = 0,
+    RegionId = 1045,
+    VarName = "FengxiangBaoming"
+  },
+  [30] = {
+    Id = 30,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_Main/Task_Data/Huaxu_Haojing_IQ1203_Task02.Huaxu_Haojing_IQ1203_Task02"
+    },
+    OutTime = 0,
+    RegionId = 1045,
+    VarName = "FengxiangXiaochi"
+  },
+  [31] = {
+    Id = 31,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_Main/Task_Data/Huaxu_Haojing_IQ1203_Task03.Huaxu_Haojing_IQ1203_Task03"
+    },
+    OutTime = 0,
+    RegionId = 1045,
+    VarName = "FengxiangBoss"
+  },
+  [32] = {
+    Id = 32,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_Main/Task_Data/Huaxu_Haojing_IQ120307_Task.Huaxu_Haojing_IQ120307_Task"
+    },
+    OutTime = 0,
+    RegionId = 1045,
+    VarName = "IQ12030706"
+  },
+  [33] = {
+    Id = 33,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_Main/Task_Data/Huaxu_Haojing_IQ12030706_Task.Huaxu_Haojing_IQ12030706_Task"
+    },
+    OutTime = 0,
+    RegionId = 1045,
+    VarName = "IQ12030706_jlc"
+  },
+  [34] = {
+    Id = 34,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_Main/Task_Data/Huaxu_Haojing_IQ12020517_Task.Huaxu_Haojing_IQ12020517_Task"
+    },
+    OutTime = 0,
+    RegionId = 1045,
+    VarName = "IQ12020517"
+  },
+  [35] = {
+    Id = 35,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_Reb/Task_Data/Huaxu_Haojing_IQ12020401_Task.Huaxu_Haojing_IQ12020401_Task"
+    },
+    OutTime = 0,
+    RegionId = 1052,
+    VarName = "IQ12020401"
+  },
+  [36] = {
+    Id = 36,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_Int/Design_Data/Huaxu_Haojing_Int_IQ12020208_DesignTask.Huaxu_Haojing_Int_IQ12020208_DesignTask"
+    },
+    OutTime = 0,
+    RegionId = 1051,
+    VarName = "Qianxing12020208"
+  },
+  [37] = {
+    Id = 37,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_Int/Task_Data/Huaxu_Haojing_Int_IQ12020208_Task.Huaxu_Haojing_Int_IQ12020208_Task"
+    },
+    OutTime = 0,
+    RegionId = 1051,
+    VarName = "Int12020208"
+  },
+  [38] = {
+    Id = 38,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_Main/Task_Data/Huaxu_Haojing_IQ120202_Task04.Huaxu_Haojing_IQ120202_Task04"
+    },
+    OutTime = 0,
+    RegionId = 1051,
+    VarName = "ZhiliuA12020414"
   }
 })

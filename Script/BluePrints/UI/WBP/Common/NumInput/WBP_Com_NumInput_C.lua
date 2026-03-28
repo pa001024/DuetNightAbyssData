@@ -13,22 +13,11 @@ function M:Construct()
   self.CurInputDeviceType = nil
   self.AddTime = 0
   self.MinTime = 0
-  self.Text_Input.OnTextChanged:Add(self, self.OnInputTextChanged)
-  self.Text_Input.OnTextComposing:Add(self, self.OnTextComposing)
-  self.Text_Input.OnPressed:Add(self, self.ExecOnTextOnPressed)
-  self.Text_Input.OnTextCommitted:Add(self, self.ExecOnTextCommintted)
-  self.Text_Input.OnFocusReceived:Add(self, self.EditOnTextFocusReceived)
-  self.Text_Input.OnFocusLost:Add(self, self.EditOnTextFocusLost)
   self:InitAnimationEvent()
 end
 
 function M:Destruct()
-  self.Text_Input.OnTextChanged:Remove(self, self.OnInputTextChanged)
-  self.Text_Input.OnPressed:Remove(self, self.ExecOnTextOnPressed)
-  self.Text_Input.OnPressed:Clear()
-  self.Text_Input.OnTextCommitted:Clear()
-  self.Text_Input.OnFocusReceived:Clear()
-  self.Text_Input.OnFocusLost:Clear()
+  self:RemoveTextInputCallback()
   self:ClearListenEvent()
   self:ClearAnimationEvent()
 end
@@ -60,6 +49,7 @@ function M:Init(ConfigData)
   self.ViewGamePad = ConfigData.ViewGamePad or "SpecialLeft"
   self.SpecificNumAddGamePad = ConfigData.SpecificNumAddGamePad or "RightShoulder"
   self.SpecificNumMinusGamePad = ConfigData.SpecificNumMinusGamePad or "LeftShoulder"
+  self.bOpenNumberKeyboard = not UIUtils.IsKeyboardInput()
   self:BindAllClickAction()
   self:RefreshBaseInfo()
   self:InitListenEvent()
@@ -212,6 +202,35 @@ function M:InitAnimationEvent()
   end)
 end
 
+function M:AddTextInputCallback()
+  if self.bOpenNumberKeyboard then
+    self.Text_Input.OnPressed:Add(self, self.ExecOnTextOnPressed)
+    self.Text_Input.OnFocusReceived:Add(self, self.EditOnTextFocusReceived)
+  else
+    self.Text_Input.OnTextChanged:Add(self, self.OnInputTextChanged)
+    self.Text_Input.OnTextComposing:Add(self, self.OnTextComposing)
+    self.Text_Input.OnPressed:Add(self, self.ExecOnTextOnPressed)
+    self.Text_Input.OnTextCommitted:Add(self, self.ExecOnTextCommintted)
+    self.Text_Input.OnFocusReceived:Add(self, self.EditOnTextFocusReceived)
+    self.Text_Input.OnFocusLost:Add(self, self.EditOnTextFocusLost)
+  end
+end
+
+function M:RemoveTextInputCallback()
+  if self.bOpenNumberKeyboard then
+    self.Text_Input.OnPressed:Remove(self, self.ExecOnTextOnPressed)
+    self.Text_Input.OnPressed:Clear()
+    self.Text_Input.OnFocusReceived:Clear()
+  else
+    self.Text_Input.OnTextChanged:Remove(self, self.OnInputTextChanged)
+    self.Text_Input.OnPressed:Remove(self, self.ExecOnTextOnPressed)
+    self.Text_Input.OnPressed:Clear()
+    self.Text_Input.OnTextCommitted:Clear()
+    self.Text_Input.OnFocusReceived:Clear()
+    self.Text_Input.OnFocusLost:Clear()
+  end
+end
+
 function M:GetChangeCount()
   local PressTime = 0 ~= self.AddTime and self.AddTime or self.MinTime
   local Multiple = 1
@@ -290,10 +309,13 @@ function M:IsCanChangeToPCViewMode()
 end
 
 function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
-  if CurInputDevice == ECommonInputType.Touch then
+  if self.CurInputDeviceType == CurInputDevice then
     return
   end
-  if self.CurInputDeviceType == CurInputDevice then
+  self.bOpenNumberKeyboard = CurInputDevice ~= ECommonInputType.MouseAndKeyboard
+  self:RemoveTextInputCallback()
+  self:AddTextInputCallback()
+  if CurInputDevice == ECommonInputType.Touch then
     return
   end
   self:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
@@ -363,18 +385,37 @@ function M:ExecOnTextOnPressed()
   self.Text_Input:SetText(tostring(self.CurInputNumber))
   self.Text_Input:SetRenderOpacity(1.0)
   self.Text_Num:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  if self.bOpenNumberKeyboard then
+    self:OpenVirtualKeyboard()
+  end
+  self.IsInNumInputState = true
+end
+
+function M:OpenVirtualKeyboard()
+  UIManager(self):LoadUINew("CommonNumInput", UIConst.InputNumMode.NUMBER, {
+    Min = self.MinValue,
+    Max = self.MaxValue,
+    ConfirmCB = {
+      Obj = self,
+      Func = self.ExecOnTextAfterNumInput
+    },
+    CancelCB = {
+      Obj = self,
+      Func = self.OnCloseVirtualKeyboard
+    },
+    InitVal = self.CurInputNumber
+  })
 end
 
 function M:ExecOnTextCommintted(InText, CommitType)
   local TempNumber = "" ~= InText and tonumber(InText) or 1
+  self:ExecOnTextAfterNumInput(TempNumber)
+end
+
+function M:ExecOnTextAfterNumInput(TempNumber)
   local OldNumberValue = self.CurInputNumber
   self.CurInputNumber = math.min(self.MaxValue, math.max(TempNumber, self.MinValue))
-  self.Btn_Add:ForbidBtn(self.CurInputNumber + self.ClickInterval > self.MaxValue)
-  self.Btn_Max:ForbidBtn(self.CurInputNumber + self.ClickInterval > self.MaxValue)
-  self.Btn_Min:ForbidBtn(self.CurInputNumber - self.ClickInterval < self.MinValue)
-  self.Btn_Mini:ForbidBtn(self.CurInputNumber - self.ClickInterval < self.MinValue)
-  self.Btn_NumRight:SetForbid(self.CurInputNumber + self.ClickInterval > self.MaxValue)
-  self.Btn_NumLeft:SetForbid(self.CurInputNumber - self.ClickInterval < self.MinValue)
+  self:RefreshBtnState()
   self.Text_Num:SetText(tostring(self.CurInputNumber))
   self.Text_Input:SetRenderOpacity(0.0)
   self.Text_Num:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
@@ -413,6 +454,13 @@ end
 
 function M:EditOnTextFocusLost()
   self:AddTimer(0.1, self.OnReturnFocusToWidget, false, 0, "OnReturnFocusToWidget", true)
+end
+
+function M:OnCloseVirtualKeyboard()
+  self.Text_Input:SetRenderOpacity(0.0)
+  self.Text_Num:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.IsInNumInputState = false
+  self:EditOnTextFocusLost()
 end
 
 function M:OnClickToSpecialNumMinus()
@@ -736,11 +784,15 @@ function M:EnterNumInputMode()
   if self.IsInNumInputState then
     return
   end
-  self:UpdateUIStyleInPlatform(true)
+  self:UpdateUIStyleInPlatform(not self.bOpenNumberKeyboard)
   self.Text_Num:SetVisibility(UIConst.VisibilityOp.Collapsed)
   if self.Text_Input ~= nil and self.Text_Input:IsVisible() then
     self.IsInNumInputState = true
-    self.Text_Input:SetFocus()
+    if self.bOpenNumberKeyboard then
+      self:ExecOnTextOnPressed()
+    else
+      self.Text_Input:SetFocus()
+    end
     if self.OwnerPanel and self.OwnerPanel.UpdateCurFocusInfo then
       self.OwnerPanel:UpdateCurFocusInfo("NumInputEdit")
     end

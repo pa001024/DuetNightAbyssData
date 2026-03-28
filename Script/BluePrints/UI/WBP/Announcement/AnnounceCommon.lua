@@ -13,12 +13,14 @@ local AnnounceCommon = {
   PlatformName = string.lower(UE4.UUIFunctionLibrary.GetDevicePlatformName(GWorld.GameInstance)),
   AnnounceWeb = UEMPathFunctionLibrary.GetProjectSavedDirectory() .. "AnnounceWeb/",
   FontTypeMap = {
-    [CommonConst.SystemLanguages.CN] = "woff",
-    [CommonConst.SystemLanguages.EN] = "woff",
-    [CommonConst.SystemLanguages.KR] = "woff",
+    [CommonConst.SystemLanguages.CN] = "otf",
+    [CommonConst.SystemLanguages.EN] = "otf",
+    [CommonConst.SystemLanguages.KR] = "otf",
     [CommonConst.SystemLanguages.TC] = "woff",
     [CommonConst.SystemLanguages.JP] = "woff",
-    [CommonConst.SystemLanguages.FR] = "woff"
+    [CommonConst.SystemLanguages.FR] = "woff",
+    [CommonConst.SystemLanguages.DE] = "otf",
+    [CommonConst.SystemLanguages.ES] = "otf"
   },
   LongYMDHMFormat = "(%d+)-(%d+)-(%d+)%s*(%d+)%s*:%s*(%d+)%s*~%s*(%d+)-(%d+)-(%d+)%s*(%d+)%s*:%s*(%d+)",
   LongTimeFormat = "(%[%s*%d+-%d+-%d+%s*%d+%s*:%s*%d+%s*~%s*%d+-%d+-%d+%s*%d+%s*:%s*%d+%s*%])",
@@ -36,5 +38,6 @@ AnnounceCommon.ImageOnlyContent = HtmlCode.ImageOnlyContent
 AnnounceCommon.DefaultContent = HtmlCode.DefaultContent
 AnnounceCommon.CssContent = CssCode
 AnnounceCommon.JsContent = JsCode
+AnnounceCommon.MainUIId = 12
 _G.AnnounceCommon = AnnounceCommon
 return AnnounceCommon

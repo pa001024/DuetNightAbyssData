@@ -227,7 +227,7 @@ T.RT_68 = {
 }
 T.RT_69 = {600009, 601702}
 T.RT_70 = {600302, 600303}
-MonsterEffectsPath = {
+local MonsterEffectsPath = {
   [9901056] = T.RT_1,
   [6016001] = T.RT_2,
   [9003011] = T.RT_3,

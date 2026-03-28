@@ -235,8 +235,16 @@ local function CreateRewardData(RewardId)
     UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, InviteLogType, "创建奖励数据失败", string.format("创建奖励数据失败，奖励Id：%d 的奖励数据为空。", RewardId))
     return
   end
+  local RewardsWarpper = {}
+  local RewardType = DataMgr.RewardType
+  for ItemType, _ in pairs(RewardType) do
+    local TypeRewards = Rewards[ItemType .. "s"]
+    if not table.isempty(TypeRewards) then
+      RewardsWarpper[ItemType .. "s"] = TypeRewards
+    end
+  end
   return {
-    Rewards = Rewards,
+    Rewards = RewardsWarpper,
     ResourceRewardDataArray = CreateResourceRewardDataArray(Rewards.Resources)
   }
 end

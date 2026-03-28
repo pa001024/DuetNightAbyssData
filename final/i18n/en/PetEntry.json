@@ -2,7 +2,7 @@
   {
     "id": 10011,
     "bid": 1001,
-    "icon": "World",
+    "icon": "World_Blue",
     "name": "Gluttonous",
     "r": 3,
     "upid": 10012,
@@ -11,7 +11,7 @@
   {
     "id": 10012,
     "bid": 1001,
-    "icon": "World",
+    "icon": "World_Purple",
     "name": "Gluttonous",
     "r": 4,
     "upid": 10013,
@@ -20,7 +20,7 @@
   {
     "id": 10013,
     "bid": 1001,
-    "icon": "World",
+    "icon": "World_Gold",
     "name": "Gluttonous",
     "r": 5,
     "desc": "Auto-Pickup Range +6m"
@@ -28,7 +28,7 @@
   {
     "id": 10021,
     "bid": 1002,
-    "icon": "World",
+    "icon": "World_Blue",
     "name": "Frugal",
     "r": 3,
     "upid": 10022,
@@ -37,7 +37,7 @@
   {
     "id": 10022,
     "bid": 1002,
-    "icon": "World",
+    "icon": "World_Purple",
     "name": "Frugal",
     "r": 4,
     "upid": 10023,
@@ -46,7 +46,7 @@
   {
     "id": 10023,
     "bid": 1002,
-    "icon": "World",
+    "icon": "World_Gold",
     "name": "Frugal",
     "r": 5,
     "desc": "Increases loot drop rate by 15%"
@@ -54,7 +54,7 @@
   {
     "id": 10031,
     "bid": 1003,
-    "icon": "Battle",
+    "icon": "Battle_Blue",
     "name": "Wise",
     "r": 3,
     "upid": 10032,
@@ -63,7 +63,7 @@
   {
     "id": 10032,
     "bid": 1003,
-    "icon": "Battle",
+    "icon": "Battle_Purple",
     "name": "Wise",
     "r": 4,
     "upid": 10033,
@@ -72,7 +72,7 @@
   {
     "id": 10033,
     "bid": 1003,
-    "icon": "Battle",
+    "icon": "Battle_Gold",
     "name": "Wise",
     "r": 5,
     "desc": "EXP gained by defeating enemies +15%"
@@ -80,7 +80,7 @@
   {
     "id": 10041,
     "bid": 1004,
-    "icon": "Battle",
+    "icon": "Battle_Gold",
     "name": "Tenacious",
     "r": 5,
     "desc": "Revival Attempt +1"
@@ -88,7 +88,7 @@
   {
     "id": 10061,
     "bid": 1006,
-    "icon": "Speed",
+    "icon": "Speed_Blue",
     "name": "Impatient",
     "r": 3,
     "upid": 10062,
@@ -97,7 +97,7 @@
   {
     "id": 10062,
     "bid": 1006,
-    "icon": "Speed",
+    "icon": "Speed_Purple",
     "name": "Impatient",
     "r": 4,
     "upid": 10063,
@@ -106,7 +106,7 @@
   {
     "id": 10063,
     "bid": 1006,
-    "icon": "Speed",
+    "icon": "Speed_Gold",
     "name": "Impatient",
     "r": 5,
     "desc": "Jump Speed +6%"
@@ -114,7 +114,7 @@
   {
     "id": 10071,
     "bid": 1007,
-    "icon": "Speed",
+    "icon": "Speed_Blue",
     "name": "Swift",
     "r": 3,
     "upid": 10072,
@@ -123,7 +123,7 @@
   {
     "id": 10072,
     "bid": 1007,
-    "icon": "Speed",
+    "icon": "Speed_Purple",
     "name": "Swift",
     "r": 4,
     "upid": 10073,
@@ -132,7 +132,7 @@
   {
     "id": 10073,
     "bid": 1007,
-    "icon": "Speed",
+    "icon": "Speed_Gold",
     "name": "Swift",
     "r": 5,
     "desc": "Helix Leap Speed +6%"
@@ -140,7 +140,7 @@
   {
     "id": 10081,
     "bid": 1008,
-    "icon": "Speed",
+    "icon": "Speed_Blue",
     "name": "Chubby",
     "r": 3,
     "upid": 10082,
@@ -149,7 +149,7 @@
   {
     "id": 10082,
     "bid": 1008,
-    "icon": "Speed",
+    "icon": "Speed_Purple",
     "name": "Chubby",
     "r": 4,
     "upid": 10083,
@@ -158,7 +158,7 @@
   {
     "id": 10083,
     "bid": 1008,
-    "icon": "Speed",
+    "icon": "Speed_Gold",
     "name": "Chubby",
     "r": 5,
     "desc": "Slide Speed +12%"
@@ -166,7 +166,7 @@
   {
     "id": 10091,
     "bid": 1009,
-    "icon": "Speed",
+    "icon": "Speed_Blue",
     "name": "Vigilant",
     "r": 3,
     "upid": 10092,
@@ -175,7 +175,7 @@
   {
     "id": 10092,
     "bid": 1009,
-    "icon": "Speed",
+    "icon": "Speed_Purple",
     "name": "Vigilant",
     "r": 4,
     "upid": 10093,
@@ -184,7 +184,7 @@
   {
     "id": 10093,
     "bid": 1009,
-    "icon": "Speed",
+    "icon": "Speed_Gold",
     "name": "Vigilant",
     "r": 5,
     "desc": "Dodge CD -15%"
@@ -192,7 +192,7 @@
   {
     "id": 10101,
     "bid": 1010,
-    "icon": "Base",
+    "icon": "Base_Blue",
     "name": "Fierce",
     "r": 3,
     "upid": 10102,
@@ -201,7 +201,7 @@
   {
     "id": 10102,
     "bid": 1010,
-    "icon": "Base",
+    "icon": "Base_Purple",
     "name": "Fierce",
     "r": 4,
     "upid": 10103,
@@ -210,7 +210,7 @@
   {
     "id": 10103,
     "bid": 1010,
-    "icon": "Base",
+    "icon": "Base_Gold",
     "name": "Fierce",
     "r": 5,
     "desc": "ATK +24%"
@@ -218,7 +218,7 @@
   {
     "id": 10111,
     "bid": 1011,
-    "icon": "Base",
+    "icon": "Base_Blue",
     "name": "Ironclad",
     "r": 3,
     "upid": 10112,
@@ -227,7 +227,7 @@
   {
     "id": 10112,
     "bid": 1011,
-    "icon": "Base",
+    "icon": "Base_Purple",
     "name": "Ironclad",
     "r": 4,
     "upid": 10113,
@@ -236,7 +236,7 @@
   {
     "id": 10113,
     "bid": 1011,
-    "icon": "Base",
+    "icon": "Base_Gold",
     "name": "Ironclad",
     "r": 5,
     "desc": "DEF +24%"
@@ -244,7 +244,7 @@
   {
     "id": 10121,
     "bid": 1012,
-    "icon": "Base",
+    "icon": "Base_Blue",
     "name": "Beefy",
     "r": 3,
     "upid": 10122,
@@ -253,7 +253,7 @@
   {
     "id": 10122,
     "bid": 1012,
-    "icon": "Base",
+    "icon": "Base_Purple",
     "name": "Beefy",
     "r": 4,
     "upid": 10123,
@@ -262,7 +262,7 @@
   {
     "id": 10123,
     "bid": 1012,
-    "icon": "Base",
+    "icon": "Base_Gold",
     "name": "Beefy",
     "r": 5,
     "desc": "Max HP +24%"
@@ -270,7 +270,7 @@
   {
     "id": 10131,
     "bid": 1013,
-    "icon": "Base",
+    "icon": "Base_Blue",
     "name": "Timid",
     "r": 3,
     "upid": 10132,
@@ -279,7 +279,7 @@
   {
     "id": 10132,
     "bid": 1013,
-    "icon": "Base",
+    "icon": "Base_Purple",
     "name": "Timid",
     "r": 4,
     "upid": 10133,
@@ -288,7 +288,7 @@
   {
     "id": 10133,
     "bid": 1013,
-    "icon": "Base",
+    "icon": "Base_Gold",
     "name": "Timid",
     "r": 5,
     "desc": "Max Shield +24%"
@@ -296,7 +296,7 @@
   {
     "id": 10141,
     "bid": 1014,
-    "icon": "Battle",
+    "icon": "Battle_Blue",
     "name": "Keen",
     "r": 3,
     "upid": 10142,
@@ -305,7 +305,7 @@
   {
     "id": 10142,
     "bid": 1014,
-    "icon": "Battle",
+    "icon": "Battle_Purple",
     "name": "Keen",
     "r": 4,
     "upid": 10143,
@@ -314,7 +314,7 @@
   {
     "id": 10143,
     "bid": 1014,
-    "icon": "Battle",
+    "icon": "Battle_Gold",
     "name": "Keen",
     "r": 5,
     "desc": "Support Skill CD -24%"
@@ -322,7 +322,7 @@
   {
     "id": 10151,
     "bid": 1015,
-    "icon": "World",
+    "icon": "World_Blue",
     "name": "Erudite",
     "r": 3,
     "upid": 10152,
@@ -331,7 +331,7 @@
   {
     "id": 10152,
     "bid": 1015,
-    "icon": "World",
+    "icon": "World_Purple",
     "name": "Erudite",
     "r": 4,
     "upid": 10153,
@@ -340,7 +340,7 @@
   {
     "id": 10153,
     "bid": 1015,
-    "icon": "World",
+    "icon": "World_Gold",
     "name": "Erudite",
     "r": 5,
     "desc": "Grants an additional 60% EXP when used as material"
@@ -348,7 +348,7 @@
   {
     "id": 10161,
     "bid": 1016,
-    "icon": "World",
+    "icon": "World_Gold",
     "name": "Deft",
     "r": 5,
     "desc": "Quick Crack Mechanism"
@@ -356,9 +356,275 @@
   {
     "id": 10171,
     "bid": 1017,
-    "icon": "World",
+    "icon": "World_Gold",
     "name": "At peace",
     "r": 5,
     "desc": "Auto reel-in enabled"
+  },
+  {
+    "id": 10181,
+    "bid": 1018,
+    "icon": "Battle_Gold",
+    "name": "Disciplined",
+    "r": 5,
+    "desc": "Auto-cast enabled for Geniemon Support Skills"
+  },
+  {
+    "id": 10191,
+    "bid": 1019,
+    "icon": "Battle_Blue",
+    "name": "Brutal",
+    "r": 3,
+    "upid": 10192,
+    "desc": "技能威力+3.2%"
+  },
+  {
+    "id": 10192,
+    "bid": 1019,
+    "icon": "Battle_Purple",
+    "name": "Brutal",
+    "r": 4,
+    "upid": 10193,
+    "desc": "技能威力+6.4%"
+  },
+  {
+    "id": 10193,
+    "bid": 1019,
+    "icon": "Battle_Gold",
+    "name": "Brutal",
+    "r": 5,
+    "desc": "技能威力+9.6%"
+  },
+  {
+    "id": 10201,
+    "bid": 1020,
+    "icon": "Battle_Blue",
+    "name": "Greedy",
+    "r": 3,
+    "upid": 10202,
+    "desc": "技能范围+4.8%"
+  },
+  {
+    "id": 10202,
+    "bid": 1020,
+    "icon": "Battle_Purple",
+    "name": "Greedy",
+    "r": 4,
+    "upid": 10203,
+    "desc": "技能范围+9.6%"
+  },
+  {
+    "id": 10203,
+    "bid": 1020,
+    "icon": "Battle_Gold",
+    "name": "Greedy",
+    "r": 5,
+    "desc": "技能范围+14.4%"
+  },
+  {
+    "id": 10211,
+    "bid": 1021,
+    "icon": "Battle_Blue",
+    "name": "Enduring",
+    "r": 3,
+    "upid": 10212,
+    "desc": "技能耐久+2.4%"
+  },
+  {
+    "id": 10212,
+    "bid": 1021,
+    "icon": "Battle_Purple",
+    "name": "Enduring",
+    "r": 4,
+    "upid": 10213,
+    "desc": "技能耐久+4.8%"
+  },
+  {
+    "id": 10213,
+    "bid": 1021,
+    "icon": "Battle_Gold",
+    "name": "Enduring",
+    "r": 5,
+    "desc": "技能耐久+7.2%"
+  },
+  {
+    "id": 10221,
+    "bid": 1022,
+    "icon": "Battle_Blue",
+    "name": "Efficient",
+    "r": 3,
+    "upid": 10222,
+    "desc": "技能效益+2%"
+  },
+  {
+    "id": 10222,
+    "bid": 1022,
+    "icon": "Battle_Purple",
+    "name": "Efficient",
+    "r": 4,
+    "upid": 10223,
+    "desc": "技能效益+4%"
+  },
+  {
+    "id": 10223,
+    "bid": 1022,
+    "icon": "Battle_Gold",
+    "name": "Efficient",
+    "r": 5,
+    "desc": "技能效益+6%"
+  },
+  {
+    "id": 10231,
+    "bid": 1023,
+    "icon": "Battle_Blue",
+    "name": "Passionate",
+    "r": 3,
+    "upid": 10232,
+    "desc": "昂扬+2.4%"
+  },
+  {
+    "id": 10232,
+    "bid": 1023,
+    "icon": "Battle_Purple",
+    "name": "Passionate",
+    "r": 4,
+    "upid": 10233,
+    "desc": "昂扬+4.8%"
+  },
+  {
+    "id": 10233,
+    "bid": 1023,
+    "icon": "Battle_Gold",
+    "name": "Passionate",
+    "r": 5,
+    "desc": "昂扬+7.2%"
+  },
+  {
+    "id": 10241,
+    "bid": 1024,
+    "icon": "Battle_Blue",
+    "name": "Stubborn",
+    "r": 3,
+    "upid": 10242,
+    "desc": "背水+0.8%"
+  },
+  {
+    "id": 10242,
+    "bid": 1024,
+    "icon": "Battle_Purple",
+    "name": "Stubborn",
+    "r": 4,
+    "upid": 10243,
+    "desc": "背水+1.6%"
+  },
+  {
+    "id": 10243,
+    "bid": 1024,
+    "icon": "Battle_Gold",
+    "name": "Stubborn",
+    "r": 5,
+    "desc": "背水+2.4%"
+  },
+  {
+    "id": 10251,
+    "bid": 1025,
+    "icon": "Battle_Blue",
+    "name": "Aggressive",
+    "r": 3,
+    "upid": 10252,
+    "desc": "暴击率+8%"
+  },
+  {
+    "id": 10252,
+    "bid": 1025,
+    "icon": "Battle_Purple",
+    "name": "Aggressive",
+    "r": 4,
+    "upid": 10253,
+    "desc": "暴击率+16%"
+  },
+  {
+    "id": 10253,
+    "bid": 1025,
+    "icon": "Battle_Gold",
+    "name": "Aggressive",
+    "r": 5,
+    "desc": "暴击率+24%"
+  },
+  {
+    "id": 10261,
+    "bid": 1026,
+    "icon": "Battle_Blue",
+    "name": "Energised",
+    "r": 3,
+    "upid": 10262,
+    "desc": "暴击伤害+10%"
+  },
+  {
+    "id": 10262,
+    "bid": 1026,
+    "icon": "Battle_Purple",
+    "name": "Energised",
+    "r": 4,
+    "upid": 10263,
+    "desc": "暴击伤害+20%"
+  },
+  {
+    "id": 10263,
+    "bid": 1026,
+    "icon": "Battle_Gold",
+    "name": "Energised",
+    "r": 5,
+    "desc": "暴击伤害+30%"
+  },
+  {
+    "id": 10271,
+    "bid": 1027,
+    "icon": "Battle_Blue",
+    "name": "Phantom",
+    "r": 3,
+    "upid": 10272,
+    "desc": "多重射击+6%"
+  },
+  {
+    "id": 10272,
+    "bid": 1027,
+    "icon": "Battle_Purple",
+    "name": "Phantom",
+    "r": 4,
+    "upid": 10273,
+    "desc": "多重射击+12%"
+  },
+  {
+    "id": 10273,
+    "bid": 1027,
+    "icon": "Battle_Gold",
+    "name": "Phantom",
+    "r": 5,
+    "desc": "多重射击+18%"
+  },
+  {
+    "id": 10281,
+    "bid": 1028,
+    "icon": "Battle_Gold",
+    "name": "Desirous",
+    "r": 5,
+    "desc": "释放魔灵支援后，拾取自身周围100米范围内的所有掉落物"
+  },
+  {
+    "id": 10291,
+    "bid": 1029,
+    "icon": "Battle_Gold",
+    "name": "Fleeing",
+    "r": 5,
+    "desc": "释放魔灵支援后，如果已经开启委托的撤离点，传送至撤离点"
+  },
+  {
+    "id": 10301,
+    "bid": 1030,
+    "icon": "Battle_Gold",
+    "name": "Veteran",
+    "r": 5,
+    "desc": "魔灵支援和被动等级+1"
   }
 ]

@@ -17,7 +17,7 @@
   },
   {
     "id": 3010103,
-    "name": "UI_WeaponSkin_Name_3010103",
+    "name": "荣耀撕裂者",
     "desc": "UI_WeaponSkin_Des_3010103",
     "icon": "T_Head_Claymore_Rongyao",
     "rarity": 5,
@@ -64,6 +64,14 @@
     "unlock": "ショップで獲得"
   },
   {
+    "id": 3010109,
+    "name": "碧霄吟·重剑",
+    "desc": "",
+    "icon": "T_Head_Claymore_Bixiao",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
     "id": 3010201,
     "name": "レイトウサカナ",
     "desc": "冷凍保存された戦闘力と旨味。缶詰が腐っても、この魚は腐らない。",
@@ -104,12 +112,20 @@
     "unlock": "ショップで獲得"
   },
   {
+    "id": 3010206,
+    "name": "碧霄吟·单手剑",
+    "desc": "俗世の喧騒に染まらず、碧い波を切り裂いて進む。",
+    "icon": "T_Head_Sword_Bixiao",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
     "id": 3010301,
     "name": "太陽を呼ぶプレスト",
     "desc": "お日さまはどこに？お日さまはどこに？お日さまは、私たちの手のひらの中に。",
     "icon": "T_Head_Bow_Huanri",
     "rarity": 5,
-    "unlock": "万華で獲得"
+    "unlock": "ショップで獲得"
   },
   {
     "id": 3010302,
@@ -128,6 +144,22 @@
     "unlock": "ショップで獲得"
   },
   {
+    "id": 3010304,
+    "name": "碧霄吟·弓（长弓）",
+    "desc": "俗世の喧騒に染まらず、碧い波を切り裂いて進む。",
+    "icon": "T_Head_Bow_Bixiao",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010305,
+    "name": "碧霄吟·弓（短弓）",
+    "desc": "俗世の喧騒に染まらず、碧い波を切り裂いて進む。",
+    "icon": "T_Head_Bow_Bixiao",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
     "id": 3010401,
     "name": "夏夜の弦音",
     "desc": "ひとすじの澄んだ音色が、少女の浅い夢を覚まし、夏の日の心の弦をそっと奏でた。",
@@ -141,7 +173,7 @@
     "desc": "波しぶきが舞姫のつま先で跳ね、海風が真夏のすべてを運び、クライマックスがこの瞬間に刻まれる。",
     "icon": "T_Head_Polearm_Talang",
     "rarity": 5,
-    "unlock": "万華で獲得"
+    "unlock": "ショップで獲得"
   },
   {
     "id": 3010403,
@@ -240,6 +272,14 @@
     "unlock": "ショップで獲得"
   },
   {
+    "id": 3010609,
+    "name": "碧霄吟·双刀",
+    "desc": "俗世の喧騒に染まらず、碧い波を切り裂いて進む。",
+    "icon": "T_Head_Dualblade_Bixiao",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
     "id": 3010701,
     "name": "父祖の遺志・太刀",
     "desc": "とある父の叱咤が太刀となった。愛という名の鞭だ――いや、つまりは、父の愛は重いってことだ。",
@@ -269,6 +309,14 @@
     "desc": "フルーツ飴を竹串に刺したもの。",
     "icon": "T_Head_Katana_Tangfu",
     "rarity": 4,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010709,
+    "name": "碧霄吟·太刀",
+    "desc": "俗世の喧騒に染まらず、碧い波を切り裂いて進む。",
+    "icon": "T_Head_Katana_Bixiao",
+    "rarity": 5,
     "unlock": "ショップで獲得"
   },
   {
@@ -320,10 +368,34 @@
     "unlock": "ショップで獲得"
   },
   {
+    "id": 3010902,
+    "name": "",
+    "desc": "俗世の喧騒に染まらず、碧い波を切り裂いて進む。",
+    "icon": "T_Head_Cannon_Bixiao",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
     "id": 3011001,
     "name": "ビリビリネコ2号",
     "desc": "にゃう♪にゃにゃ～♪にゃん♪",
     "icon": "T_Head_Shotgun_Dianju",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3011002,
+    "name": "火力全开",
+    "desc": "疾书凝玄甲，谈笑烬千军。",
+    "icon": "T_Head_Shotgun_Huoli",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3011003,
+    "name": "碧霄吟·霰弹枪",
+    "desc": "俗世の喧騒に染まらず、碧い波を切り裂いて進む。",
+    "icon": "T_Head_Shotgun_Bixiao",
     "rarity": 5,
     "unlock": "ショップで獲得"
   },

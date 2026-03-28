@@ -114,8 +114,10 @@ function M:SwitchTab(TargetTabName)
   self.ParentWidget:GenerateAllDataInfo()
   if self.bLimitTime then
     self:PlayAnimation(self.Switch, 0, 1, EUMGSequencePlayMode.Reverse, 1.0)
+    self.bReverse = true
   else
     self:PlayAnimation(self.Switch)
+    self.bReverse = false
   end
   self:BindToAnimationFinished(self.Switch, {
     self,
@@ -123,6 +125,11 @@ function M:SwitchTab(TargetTabName)
       self:UnbindAllFromAnimationFinished(self.Switch)
       if self.bBtnClickHovered then
         self:PlayAnimation(self.Hover)
+      end
+      if self.bReverse then
+        self:PlayAnimation(self.Switch, 0.99, 1, EUMGSequencePlayMode.Reverse, 1.0)
+      else
+        self:PlayAnimation(self.Switch, 0.99, 1, EUMGSequencePlayMode.Forward, 1.0)
       end
     end
   })

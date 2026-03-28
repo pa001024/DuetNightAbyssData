@@ -44,6 +44,7 @@ function WBP_Com_Dialog_RewardTab_C:OnListItemObjectSet(Content)
     self.AddListenerFinish = true
     ReddotManager.AddListener(self.ReddotName, self, self.RefreshReddot)
   end
+  self:RefreshReddot()
 end
 
 function WBP_Com_Dialog_RewardTab_C:UnSelected()

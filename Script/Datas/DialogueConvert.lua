@@ -149679,7 +149679,7 @@ local Data = {
   },
   {
     MinKey = 12034713,
-    MaxKey = 20005422,
+    MaxKey = 20000839,
     Loader = function()
       return {
         [12034713] = {
@@ -150118,6 +150118,2090 @@ local Data = {
                   }
                 }
               }
+            }
+          },
+          bAllowClick = true
+        },
+        [12040101] = {
+          Operations = {
+            [1] = {
+              PlayOrStopBGM = {
+                EventPath = "event:/bgm/1_1/0125_story_zhiliu_betray",
+                PlayType = "Play",
+                RelatedRegionId = "105602",
+                SoundType = "SOUND_BGM"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12040703] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {
+                ActorId = 240027,
+                AnimationId = "Talk01_Start"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12040704] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {ActorId = 240027, AnimationId = "Talk01_End"}
+            }
+          },
+          bAllowClick = true
+        },
+        [12040801] = {
+          Operations = {
+            [1] = {
+              PlayOrStopBGM = {
+                EventPath = "event:/bgm/mute",
+                PlayType = "Play",
+                RelatedRegionId = "104502",
+                SoundType = "SOUND_BGM"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12040803] = {
+          Operations = {
+            [1] = {
+              PlayOrStopBGM = {
+                EventPath = "event:/bgm/1_1/0109_combat_black_market",
+                PlayType = "Play",
+                RelatedRegionId = "104502",
+                SoundType = "SOUND_BGM"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12040903] = {
+          Operations = {
+            [1] = {
+              PlayOrStopBGM = {
+                EventPath = "event:/bgm/mute",
+                PlayType = "Play",
+                RelatedRegionId = "104502",
+                SoundType = "SOUND_BGM"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12041302] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {ActorId = 240004, AnimationId = "Disagree"}
+            }
+          },
+          bAllowClick = true
+        },
+        [12041402] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {ActorId = 240005, AnimationId = "Disagree"}
+            }
+          },
+          bAllowClick = true
+        },
+        [12041502] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {
+                ActorId = 240006,
+                AnimationId = "Angry01_Start"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12042001] = {
+          Operations = {
+            [1] = {
+              PlayOrStopBGM = {
+                EventPath = "event:/bgm/mute",
+                PlayType = "Play",
+                RelatedRegionId = "104503",
+                SoundType = "SOUND_BGM"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12042101] = {
+          Operations = {
+            [1] = {
+              PlayOrStopBGM = {
+                EventPath = "event:/bgm/mute",
+                PlayType = "Play",
+                RelatedRegionId = "104503",
+                SoundType = "SOUND_BGM"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12042102] = {
+          Operations = {
+            [1] = {
+              PlayOrStopBGM = {
+                EventPath = "event:/bgm/1_1/0125_story_zhiliu_betray",
+                PlayType = "Play",
+                RelatedRegionId = "104503",
+                SoundType = "SOUND_BGM"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12042901] = {
+          Operations = {
+            [1] = {
+              PlayOrStopBGM = {
+                EventPath = "event:/bgm/mute",
+                PlayType = "Play",
+                RelatedRegionId = "105501",
+                SoundType = "SOUND_BGM"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12044501] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {ActorId = 240026, FacialId = "Serious"}
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 240026,
+                AnimationId = "Explain01_Start"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12044505] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {
+                ActorId = 240026,
+                AnimationId = "Explain01_End"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12044508] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {
+                ActorId = 240026,
+                AnimationId = "Explain01_Start"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12044513] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {
+                ActorId = 240026,
+                AnimationId = "Explain01_End"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12044515] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {ActorId = 240026, FacialId = "Smile01"}
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 240026,
+                AnimationId = "Explain01_Start"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12044516] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {
+                ActorId = 240026,
+                AnimationId = "Explain01_End"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12044906] = {
+          Operations = {
+            [1] = {
+              PlayOrStopBGM = {
+                EventPath = "event:/bgm/mute",
+                PlayType = "Play",
+                RelatedRegionId = "105201",
+                SoundType = "SOUND_BGM"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12045201] = {
+          Operations = {
+            [1] = {
+              PlayOrStopBGM = {
+                EventPath = "event:/bgm/mute",
+                PlayType = "Play",
+                SoundType = "SOUND_BGM"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12045401] = {
+          Operations = {
+            [1] = {
+              PlayOrStopBGM = {
+                EventPath = "event:/bgm/mute",
+                PlayType = "Play",
+                SoundType = "SOUND_BGM"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12045603] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {
+                ActorId = 240026,
+                AnimationId = "DisagreeHead"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12045604] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {ActorId = 240026, FacialId = "Smile01"}
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 240026,
+                AnimationId = "Confident_Start"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12045610] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {ActorId = 240026, FacialId = "Angry01"}
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 240026,
+                AnimationId = "DisagreeHead"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12045611] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {ActorId = 240026, FacialId = "Angry01"}
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 240026,
+                AnimationId = "DisagreeHead"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12045613] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {ActorId = 240026, FacialId = "None"}
+            }
+          },
+          bAllowClick = true
+        },
+        [12045614] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {ActorId = 240026, FacialId = "Smile01"}
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 240026,
+                AnimationId = "Confident_End"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12045615] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {
+                ActorId = 240026,
+                AnimationId = "Talk02_Start"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12045626] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {ActorId = 240026, AnimationId = "Talk02_End"}
+            }
+          },
+          bAllowClick = true
+        },
+        [12045629] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {
+                ActorId = 240026,
+                AnimationId = "Explain01_Start"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12045638] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {
+                ActorId = 240026,
+                AnimationId = "Explain01_End"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12045639] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {ActorId = 240026, FacialId = "Sad03"}
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 240026,
+                AnimationId = "Sad02_Start"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12045641] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {ActorId = 240026, FacialId = "None"}
+            },
+            [2] = {
+              PlayAnimation = {ActorId = 240026, AnimationId = "Sad02_End"}
+            }
+          },
+          bAllowClick = true
+        },
+        [12045645] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {
+                ActorId = 240026,
+                AnimationId = "Think_Start"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12045646] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {ActorId = 240026, AnimationId = "Think_End"}
+            }
+          },
+          bAllowClick = true
+        },
+        [12045647] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {
+                ActorId = 240026,
+                AnimationId = "Think_Start"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12045650] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {ActorId = 240026, AnimationId = "Think_End"}
+            }
+          },
+          bAllowClick = true
+        },
+        [12045651] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {
+                ActorId = 240026,
+                AnimationId = "Talk02_Start"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12045652] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {
+                ActorId = 240026,
+                AnimationId = "DisagreeHead"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12045653] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {ActorId = 240026, AnimationId = "Talk02_End"}
+            }
+          },
+          bAllowClick = true
+        },
+        [12045902] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {
+                ActorId = 240037,
+                AnimationId = "Shy03_Start"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12046002] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {ActorId = 240038, FacialId = "Cin_Think"}
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 240038,
+                AnimationId = "Think_Start"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12046003] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {ActorId = 240038, AnimationId = "Think_End"}
+            }
+          },
+          bAllowClick = true
+        },
+        [12046004] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 240038,
+                FacialId = "Cin_Angry01"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 240038,
+                AnimationId = "Angry01_Start"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12046007] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {
+                ActorId = 240038,
+                AnimationId = "Angry01_End"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12046102] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {ActorId = 240039, FacialId = "CM_Happy01"}
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 240039,
+                AnimationId = "Talk02_Start"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12046104] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {ActorId = 240039, AnimationId = "Talk02_End"}
+            }
+          },
+          bAllowClick = true
+        },
+        [12046105] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {ActorId = 240039, FacialId = "CM_Sad01"}
+            },
+            [2] = {
+              PlayAnimation = {ActorId = 240039, AnimationId = "Disagree"}
+            }
+          },
+          bAllowClick = true
+        },
+        [12046107] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {ActorId = 240039, FacialId = "CM_Idle"}
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 240039,
+                AnimationId = "Talk02_Start"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12046108] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {ActorId = 240039, AnimationId = "Talk02_End"}
+            }
+          },
+          bAllowClick = true
+        },
+        [12046113] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {ActorId = 240039, AnimationId = "Sigh_Start"}
+            }
+          },
+          bAllowClick = true
+        },
+        [12046115] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {ActorId = 240039, FacialId = "CM_Sad01"}
+            }
+          },
+          bAllowClick = true
+        },
+        [12046504] = {
+          Operations = {
+            [1] = {
+              PlayOrStopBGM = {
+                EventPath = "event:/bgm/1_3/0143_story_zhiliu_kill_god",
+                PlayType = "Play",
+                RelatedRegionId = "105301",
+                SoundType = "SOUND_BGM"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12048401] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 240067,
+                FacialId = "Cin_Angry01"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 240067,
+                AnimationId = "Angry01_Start"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12048402] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 240068,
+                FacialId = "Cin_Nervous"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 240068,
+                AnimationId = "Sad02_Start"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12048403] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 240066,
+                FacialId = "Cin_Angry02"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 240066,
+                AnimationId = "Angry01_Start"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12048501] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {ActorId = 240026, FacialId = "Smile02"}
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 240026,
+                AnimationId = "Excited02_Start"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12048502] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {ActorId = 240026, FacialId = "None"}
+            }
+          },
+          bAllowClick = true
+        },
+        [12048503] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {ActorId = 240026, FacialId = "Smile01"}
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 240026,
+                AnimationId = "Confident_Start"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12048506] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {ActorId = 240026, AnimationId = "AgreeHead"}
+            }
+          },
+          bAllowClick = true
+        },
+        [12048507] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {ActorId = 240013, FacialId = "Smile02"}
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 240013,
+                AnimationId = "ConfidentR_Start"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12048509] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {ActorId = 240013, AnimationId = "AgreeHead"}
+            }
+          },
+          bAllowClick = true
+        },
+        [12048510] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {ActorId = 240100, FacialId = "Smile01"}
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 240100,
+                AnimationId = "Explain01L_Start"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12048512] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {
+                ActorId = 240100,
+                AnimationId = "DisagreeHead"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12048513] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {
+                ActorId = 240100,
+                AnimationId = "Explain01L_End"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12048514] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {ActorId = 240100, FacialId = "Sad01"}
+            },
+            [2] = {
+              PlayAnimation = {ActorId = 240100, AnimationId = "Sigh_Start"}
+            }
+          },
+          bAllowClick = true
+        },
+        [12048701] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 200002,
+                FacialId = "Confident01"
+              }
+            },
+            [2] = {
+              LookAt = {
+                LookAtDescription = {LookId = 200002, LookedInfo = 100001}
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 200002,
+                AnimationId = "Confident_Start"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12060601] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "721.375,-25.105469,239.573486,0.000103,-12.201231,176.825256,28.000008,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  PARA = {
+                    [1] = {
+                      LookAt = {
+                        LookAtDescription = {LookId = 250003, LookedInfo = 100001}
+                      }
+                    },
+                    [2] = {
+                      LookAt = {
+                        LookAtDescription = {LookId = 250006, LookedInfo = 100001}
+                      }
+                    },
+                    [3] = {
+                      LookAt = {
+                        LookAtDescription = {LookId = 200002, LookedInfo = 250003}
+                      }
+                    }
+                  }
+                },
+                [2] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 1.5}
+                    },
+                    [2] = {
+                      PlayAnimation = {
+                        ActorId = 250003,
+                        AnimationId = "ConfidentR_Start",
+                        Duration = 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12060602] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 1.0}
+                    },
+                    [2] = {
+                      PlayAnimation = {
+                        ActorId = 250003,
+                        AnimationId = "ConfidentRToSigh_Start",
+                        Duration = 1
+                      }
+                    }
+                  }
+                },
+                [2] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 2.0}
+                    },
+                    [2] = {
+                      PlayAnimation = {
+                        ActorId = 250003,
+                        AnimationId = "ConfidentRToSigh_End",
+                        Duration = 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12060603] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "99.464844,54.167969,137.05835,0.000106,0.598926,160.42218,28.000011,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 1.0}
+                    },
+                    [2] = {
+                      PlayAnimation = {
+                        ActorId = 250003,
+                        AnimationId = "ConfidentR_End",
+                        Duration = 1
+                      }
+                    }
+                  }
+                },
+                [2] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 1.0}
+                    },
+                    [2] = {
+                      PlayAnimation = {
+                        ActorId = 250003,
+                        AnimationId = "Think_Start",
+                        Duration = 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12060604] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "53.679688,208.298828,182.989014,0.000092,-20.600573,-111.776344,28.000019,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  Delay = {DelaySeconds = 0.2}
+                },
+                [2] = {
+                  PlayAnimation = {
+                    ActorId = 250006,
+                    AnimationId = "Talk03_Start",
+                    Duration = 1
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12060605] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  LookAt = {
+                    LookAtDescription = {LookId = 250006, LookedInfo = 250003}
+                  }
+                },
+                [2] = {
+                  LookAt = {
+                    LookAtDescription = {LookId = 200002, LookedInfo = 250006}
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12060606] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "238.484375,12.181641,74.9729,0.000115,5.199317,163.819183,28.000011,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 0.2}
+                    },
+                    [2] = {
+                      PlayAnimation = {
+                        ActorId = 200002,
+                        AnimationId = "Angry01_Start",
+                        Duration = 1
+                      }
+                    }
+                  }
+                },
+                [2] = {
+                  LookAt = {
+                    LookAtDescription = {LookId = 250006, LookedInfo = 200002}
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12060607] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 0.2}
+                    },
+                    [2] = {
+                      PlayAnimation = {
+                        ActorId = 250006,
+                        AnimationId = "Talk03_End",
+                        Duration = 1
+                      }
+                    }
+                  }
+                },
+                [2] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 0.8}
+                    },
+                    [2] = {
+                      PlayAnimation = {
+                        ActorId = 250006,
+                        AnimationId = "Confident_Start",
+                        Duration = 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12060608] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "721.375,-25.105469,239.573486,0.000103,-12.201231,176.825256,28.000008,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  LookAt = {
+                    LookAtDescription = {LookId = 250003, LookedInfo = 250006}
+                  }
+                },
+                [2] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 0.2}
+                    },
+                    [2] = {
+                      PlayAnimation = {
+                        ActorId = 250003,
+                        AnimationId = "Think_End",
+                        Duration = 1
+                      }
+                    }
+                  }
+                },
+                [3] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 2.5}
+                    },
+                    [2] = {
+                      PlayAnimation = {
+                        ActorId = 250003,
+                        AnimationId = "Angry01_Start",
+                        Duration = 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12060609] = {
+          Operations = {
+            [1] = {
+              PARA = {
+                [1] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 2.0}
+                    },
+                    [2] = {
+                      PlayAnimation = {
+                        ActorId = 250003,
+                        AnimationId = "Angry01_End",
+                        Duration = 1
+                      }
+                    }
+                  }
+                },
+                [2] = {
+                  SEQ = {
+                    [1] = {
+                      SEQ = {
+                        [1] = {
+                          Delay = {DelaySeconds = 0.2}
+                        },
+                        [2] = {
+                          PlayAnimation = {
+                            ActorId = 250006,
+                            AnimationId = "Confident_End",
+                            Duration = 1
+                          }
+                        }
+                      }
+                    },
+                    [2] = {
+                      LookAt = {
+                        LookAtDescription = {LookId = 250006, LookedInfo = 250003}
+                      }
+                    },
+                    [3] = {
+                      SEQ = {
+                        [1] = {
+                          Delay = {DelaySeconds = 0.2}
+                        },
+                        [2] = {
+                          PlayAnimation = {
+                            ActorId = 250006,
+                            AnimationId = "Talk03_Start",
+                            Duration = 1
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                [3] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 0.2}
+                    },
+                    [2] = {
+                      PlayAnimation = {
+                        ActorId = 200002,
+                        AnimationId = "Angry01_End",
+                        Duration = 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12060610] = {
+          Operations = {
+            [1] = {
+              PARA = {
+                [1] = {
+                  SEQ = {
+                    [1] = {
+                      SEQ = {
+                        [1] = {
+                          Delay = {DelaySeconds = 1.2}
+                        },
+                        [2] = {
+                          PlayAnimation = {
+                            ActorId = 250006,
+                            AnimationId = "Talk03_End",
+                            Duration = 1
+                          }
+                        }
+                      }
+                    },
+                    [2] = {
+                      LookAt = {
+                        LookAtDescription = {LookId = 250006, LookedInfo = 100001}
+                      }
+                    }
+                  }
+                },
+                [2] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 0.2}
+                    },
+                    [2] = {
+                      PlayAnimation = {
+                        ActorId = 100001,
+                        AnimationId = "Think_Start",
+                        Duration = 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12060611] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 0.2}
+                    },
+                    [2] = {
+                      PlayAnimation = {
+                        ActorId = 250006,
+                        AnimationId = "Angry01_Start",
+                        Duration = 1
+                      }
+                    }
+                  }
+                },
+                [2] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 2.2}
+                    },
+                    [2] = {
+                      PlayAnimation = {
+                        ActorId = 250006,
+                        AnimationId = "Angry01_End",
+                        Duration = 1
+                      }
+                    }
+                  }
+                },
+                [3] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 0.2}
+                    },
+                    [2] = {
+                      PlayAnimation = {
+                        ActorId = 250006,
+                        AnimationId = "Talk03_Start",
+                        Duration = 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12060612] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 0.2}
+                    },
+                    [2] = {
+                      PlayAnimation = {
+                        ActorId = 250003,
+                        AnimationId = "Talk03_Start",
+                        Duration = 1
+                      }
+                    }
+                  }
+                },
+                [2] = {
+                  LookAt = {
+                    LookAtDescription = {LookId = 250006, LookedInfo = 250003}
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12060613] = {
+          Operations = {
+            [1] = {
+              PARA = {
+                [1] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 0.2}
+                    },
+                    [2] = {
+                      PlayAnimation = {
+                        ActorId = 250003,
+                        AnimationId = "AgreeHead",
+                        Duration = 1
+                      }
+                    }
+                  }
+                },
+                [2] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 0.8}
+                    },
+                    [2] = {
+                      PlayAnimation = {
+                        ActorId = 250003,
+                        AnimationId = "Talk03_End",
+                        Duration = 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12060614] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  Delay = {DelaySeconds = 0.2}
+                },
+                [2] = {
+                  PlayAnimation = {
+                    ActorId = 250006,
+                    AnimationId = "Confident_Start",
+                    Duration = 1
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12060615] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "380.75,-18.171875,137.20459,0.000082,-5.200806,170.601486,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [2] = {
+              PARA = {
+                [1] = {
+                  SEQ = {
+                    [1] = {
+                      SEQ = {
+                        [1] = {
+                          Delay = {DelaySeconds = 0.2}
+                        },
+                        [2] = {
+                          PlayAnimation = {
+                            ActorId = 250006,
+                            AnimationId = "Confident_End",
+                            Duration = 1
+                          }
+                        }
+                      }
+                    },
+                    [2] = {
+                      PARA = {
+                        [1] = {
+                          LookAt = {
+                            LookAtDescription = {LookId = 250003, LookedInfo = 100001}
+                          }
+                        },
+                        [2] = {
+                          LookAt = {
+                            LookAtDescription = {LookId = 250006, LookedInfo = 100001}
+                          }
+                        },
+                        [3] = {
+                          SEQ = {
+                            [1] = {
+                              Delay = {DelaySeconds = 1.2}
+                            },
+                            [2] = {
+                              PlayAnimation = {
+                                ActorId = 250003,
+                                AnimationId = "Talk03_Start",
+                                Duration = 1
+                              }
+                            }
+                          }
+                        },
+                        [4] = {
+                          SEQ = {
+                            [1] = {
+                              Delay = {DelaySeconds = 1.2}
+                            },
+                            [2] = {
+                              PlayAnimation = {
+                                ActorId = 250006,
+                                AnimationId = "Talk03_Start",
+                                Duration = 1
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12060616] = {
+          Operations = {
+            [1] = {
+              PARA = {
+                [1] = {
+                  LookAt = {
+                    LookAtDescription = {LookId = 200002, LookedInfo = 100001}
+                  }
+                },
+                [2] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 0.2}
+                    },
+                    [2] = {
+                      PlayAnimation = {
+                        ActorId = 200002,
+                        AnimationId = "Shock02_Start",
+                        Duration = 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12060618] = {
+          Operations = {
+            [1] = {
+              PARA = {
+                [1] = {
+                  PARA = {
+                    [1] = {
+                      LookAt = {
+                        LookAtDescription = {LookId = 250003, LookedInfo = 200002}
+                      }
+                    },
+                    [2] = {
+                      LookAt = {
+                        LookAtDescription = {LookId = 250006, LookedInfo = 200002}
+                      }
+                    }
+                  }
+                },
+                [2] = {
+                  SEQ = {
+                    [1] = {
+                      LookAt = {
+                        LookAtDescription = {LookId = 200002, LookedInfo = 250003}
+                      }
+                    },
+                    [2] = {
+                      SEQ = {
+                        [1] = {
+                          Delay = {DelaySeconds = 0.2}
+                        },
+                        [2] = {
+                          PlayAnimation = {
+                            ActorId = 200002,
+                            AnimationId = "Shock02_End",
+                            Duration = 1
+                          }
+                        }
+                      }
+                    },
+                    [3] = {
+                      SEQ = {
+                        [1] = {
+                          Delay = {DelaySeconds = 0.2}
+                        },
+                        [2] = {
+                          PlayAnimation = {
+                            ActorId = 200002,
+                            AnimationId = "Disagree",
+                            Duration = 1
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12060619] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 0.2}
+                    },
+                    [2] = {
+                      PlayAnimation = {
+                        ActorId = 200002,
+                        AnimationId = "Confident_Start",
+                        Duration = 1
+                      }
+                    }
+                  }
+                },
+                [2] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 3.2}
+                    },
+                    [2] = {
+                      LookAt = {
+                        LookAtDescription = {LookId = 200002, LookedInfo = 100001}
+                      }
+                    }
+                  }
+                },
+                [3] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 2.2}
+                    },
+                    [2] = {
+                      PlayAnimation = {
+                        ActorId = 200002,
+                        AnimationId = "Confident_End",
+                        Duration = 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12060621] = {
+          Operations = {
+            [1] = {
+              PARA = {
+                [1] = {
+                  PARA = {
+                    [1] = {
+                      LookAt = {
+                        LookAtDescription = {LookId = 250003, LookedInfo = 100001}
+                      }
+                    },
+                    [2] = {
+                      LookAt = {
+                        LookAtDescription = {LookId = 250006, LookedInfo = 100001}
+                      }
+                    }
+                  }
+                },
+                [2] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 0.2}
+                    },
+                    [2] = {
+                      PlayAnimation = {
+                        ActorId = 200002,
+                        AnimationId = "Confident_Start",
+                        Duration = 1
+                      }
+                    }
+                  }
+                },
+                [3] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 1.2}
+                    },
+                    [2] = {
+                      LookAt = {
+                        LookAtDescription = {LookId = 200002, LookedInfo = 100001}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12060622] = {
+          Operations = {
+            [1] = {
+              PARA = {
+                [1] = {
+                  SEQ = {
+                    [1] = {
+                      SEQ = {
+                        [1] = {
+                          Delay = {DelaySeconds = 0.2}
+                        },
+                        [2] = {
+                          PlayAnimation = {
+                            ActorId = 250003,
+                            AnimationId = "Talk03ToTalkL_Start",
+                            Duration = 1
+                          }
+                        }
+                      }
+                    },
+                    [2] = {
+                      SEQ = {
+                        [1] = {
+                          Delay = {DelaySeconds = 3.2}
+                        },
+                        [2] = {
+                          PlayAnimation = {
+                            ActorId = 250003,
+                            AnimationId = "Talk03ToTalkL_End",
+                            Duration = 1
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                [2] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 1.2}
+                    },
+                    [2] = {
+                      LookAt = {
+                        LookAtDescription = {LookId = 250003, LookedInfo = 200002}
+                      }
+                    }
+                  }
+                },
+                [3] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 1.2}
+                    },
+                    [2] = {
+                      LookAt = {
+                        LookAtDescription = {LookId = 200002, LookedInfo = 250003}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12060623] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "-153.375,-128.316406,129.255127,0.000127,-6.200657,39.019405,28.000011,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  Delay = {DelaySeconds = 0.2}
+                },
+                [2] = {
+                  PlayAnimation = {
+                    ActorId = 200002,
+                    AnimationId = "AgreeHead",
+                    Duration = 1
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12060624] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "721.375,-25.105469,239.573486,0.000103,-12.201231,176.825256,28.000008,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 0.2}
+                    },
+                    [2] = {
+                      PlayAnimation = {
+                        ActorId = 200002,
+                        AnimationId = "Think_Start",
+                        Duration = 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12060625] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  PARA = {
+                    [1] = {
+                      SEQ = {
+                        [1] = {
+                          Delay = {DelaySeconds = 0.2}
+                        },
+                        [2] = {
+                          PlayAnimation = {
+                            ActorId = 250003,
+                            AnimationId = "DisagreeHead",
+                            Duration = 1
+                          }
+                        }
+                      }
+                    },
+                    [2] = {
+                      SEQ = {
+                        [1] = {
+                          Delay = {DelaySeconds = 0.2}
+                        },
+                        [2] = {
+                          PlayAnimation = {
+                            ActorId = 250003,
+                            AnimationId = "Talk03_End",
+                            Duration = 1
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                [2] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 1.2}
+                    },
+                    [2] = {
+                      PlayAnimation = {
+                        ActorId = 250003,
+                        AnimationId = "Explain01_Start",
+                        Duration = 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12060626] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 1.2}
+                    },
+                    [2] = {
+                      PlayAnimation = {
+                        ActorId = 100001,
+                        AnimationId = "AgreeHead",
+                        Duration = 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12060627] = {
+          Operations = {
+            [1] = {
+              PARA = {
+                [1] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 1.2}
+                    },
+                    [2] = {
+                      PlayAnimation = {
+                        ActorId = 100001,
+                        AnimationId = "Think_End",
+                        Duration = 1
+                      }
+                    }
+                  }
+                },
+                [2] = {
+                  SEQ = {
+                    [1] = {
+                      SEQ = {
+                        [1] = {
+                          Delay = {DelaySeconds = 0.2}
+                        },
+                        [2] = {
+                          PlayAnimation = {
+                            ActorId = 200002,
+                            AnimationId = "SpecialHappy_Start",
+                            Duration = 1
+                          }
+                        }
+                      }
+                    },
+                    [2] = {
+                      SEQ = {
+                        [1] = {
+                          Delay = {DelaySeconds = 4.2}
+                        },
+                        [2] = {
+                          PlayAnimation = {
+                            ActorId = 200002,
+                            AnimationId = "SpecialHappy_End",
+                            Duration = 1
+                          }
+                        }
+                      }
+                    },
+                    [3] = {
+                      SEQ = {
+                        [1] = {
+                          Delay = {DelaySeconds = 1.2}
+                        },
+                        [2] = {
+                          LookAt = {
+                            LookAtDescription = {LookId = 200002, LookedInfo = 100001}
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12060628] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  Delay = {DelaySeconds = 1.2}
+                },
+                [2] = {
+                  LookAt = {
+                    LookAtDescription = {LookId = 250006, LookedInfo = 250003}
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12060629] = {
+          Operations = {
+            [1] = {
+              PARA = {
+                [1] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 1.2}
+                    },
+                    [2] = {
+                      LookAt = {
+                        LookAtDescription = {LookId = 250003, LookedInfo = 250006}
+                      }
+                    }
+                  }
+                },
+                [2] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 0.2}
+                    },
+                    [2] = {
+                      PlayAnimation = {
+                        ActorId = 250003,
+                        AnimationId = "Agree",
+                        Duration = 1
+                      }
+                    }
+                  }
+                },
+                [3] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 0.5}
+                    },
+                    [2] = {
+                      PlayAnimation = {
+                        ActorId = 250003,
+                        AnimationId = "Think_Start",
+                        Duration = 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12060630] = {
+          Operations = {
+            [1] = {
+              SEQ = {
+                [1] = {
+                  SEQ = {
+                    [1] = {
+                      Delay = {DelaySeconds = 0.5}
+                    },
+                    [2] = {
+                      PlayAnimation = {
+                        ActorId = 250003,
+                        AnimationId = "Think_End",
+                        Duration = 1
+                      }
+                    }
+                  }
+                },
+                [2] = {
+                  PARA = {
+                    [1] = {
+                      LookAt = {
+                        LookAtDescription = {LookId = 250003, LookedInfo = 100001}
+                      }
+                    },
+                    [2] = {
+                      LookAt = {
+                        LookAtDescription = {LookId = 250006, LookedInfo = 100001}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12061902] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {
+                ActorId = 250004,
+                AnimationId = "Explain01_Start"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12061906] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {
+                ActorId = 250004,
+                AnimationId = "Explain01_End"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12062202] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {ActorId = 250024, AnimationId = "Sigh_Start"}
+            }
+          },
+          bAllowClick = true
+        },
+        [12062206] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {ActorId = 250024, AnimationId = "Sigh_End"}
+            }
+          },
+          bAllowClick = true
+        },
+        [12062212] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {
+                ActorId = 250024,
+                AnimationId = "Talk01_Start"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12062218] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {ActorId = 250024, AnimationId = "Talk01_End"}
+            }
+          },
+          bAllowClick = true
+        },
+        [12062221] = {
+          Operations = {
+            [1] = {
+              PlayNormalSound = {
+                EventPath = "event:/sfx/common/story/east02/boxbreak_02",
+                PlayAs2D = true
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12062222] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {
+                ActorId = 250024,
+                AnimationId = "Shock_Start"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [12062224] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {ActorId = 250024, AnimationId = "Shock_End"}
             }
           },
           bAllowClick = true
@@ -152748,7 +154832,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 20000840,
+    MaxKey = 20006519,
+    Loader = function()
+      return {
         [20000840] = {
           Operations = {
             [1] = {
@@ -157325,15 +159417,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 20005423,
-    MaxKey = 51000701,
-    Loader = function()
-      return {
+        },
         [20005423] = {
           Operations = {
             [1] = {
@@ -160992,7 +163076,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 20006701,
+    MaxKey = 51001709,
+    Loader = function()
+      return {
         [20006701] = {
           Operations = {
             [1] = {
@@ -162742,15 +164834,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51000705,
-    MaxKey = 51002804,
-    Loader = function()
-      return {
+        },
         [51000705] = {
           Operations = {
             [1] = {
@@ -164495,7 +166579,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51001710,
+    MaxKey = 51003910,
+    Loader = function()
+      return {
         [51001710] = {
           Operations = {
             [1] = {
@@ -166052,15 +168144,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51002805,
-    MaxKey = 51005036,
-    Loader = function()
-      return {
+        },
         [51002805] = {
           Operations = {
             [1] = {
@@ -167611,7 +169695,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51003912,
+    MaxKey = 51005929,
+    Loader = function()
+      return {
         [51003912] = {
           Operations = {
             [1] = {
@@ -168931,15 +171023,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51005037,
-    MaxKey = 51006739,
-    Loader = function()
-      return {
+        },
         [51005037] = {
           Operations = {
             [1] = {
@@ -170675,7 +172759,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51005930,
+    MaxKey = 51007505,
+    Loader = function()
+      return {
         [51005930] = {
           Operations = {
             [1] = {
@@ -173619,15 +175711,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51006740,
-    MaxKey = 51009110,
-    Loader = function()
-      return {
+        },
         [51006740] = {
           Operations = {
             [1] = {
@@ -175166,7 +177250,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51007507,
+    MaxKey = 51009436,
+    Loader = function()
+      return {
         [51007507] = {
           Operations = {
             [1] = {
@@ -176678,15 +178770,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51009111,
-    MaxKey = 51009665,
-    Loader = function()
-      return {
+        },
         [51009111] = {
           Operations = {
             [1] = {
@@ -178876,7 +180960,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51009437,
+    MaxKey = 51009835,
+    Loader = function()
+      return {
         [51009437] = {
           Operations = {
             [1] = {
@@ -180911,15 +183003,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51009666,
-    MaxKey = 51010037,
-    Loader = function()
-      return {
+        },
         [51009666] = {
           Operations = {
             [1] = {
@@ -182745,7 +184829,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51009850,
+    MaxKey = 51100048,
+    Loader = function()
+      return {
         [51009850] = {
           Operations = {
             [1] = {
@@ -184544,15 +186636,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51010038,
-    MaxKey = 51103046,
-    Loader = function()
-      return {
+        },
         [51010038] = {
           Operations = {
             [1] = {
@@ -185786,6 +187870,25 @@ local Data = {
           },
           bAllowClick = true
         },
+        [51012501] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {
+                ActorId = 0,
+                AnimationId = "Talk02_Start"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [51012502] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {ActorId = 0, AnimationId = "Talk02_End"}
+            }
+          },
+          bAllowClick = true
+        },
         [51100004] = {
           Operations = {
             [1] = {
@@ -185956,7 +188059,15 @@ local Data = {
             }
           },
           bAllowClick = false
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51100057,
+    MaxKey = 51104117,
+    Loader = function()
+      return {
         [51100057] = {
           Operations = {
             [1] = {
@@ -188002,15 +190113,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51103047,
-    MaxKey = 51105303,
-    Loader = function()
-      return {
+        },
         [51103047] = {
           Operations = {
             [1] = {
@@ -189981,7 +192084,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51104118,
+    MaxKey = 51105614,
+    Loader = function()
+      return {
         [51104118] = {
           Operations = {
             [1] = {
@@ -191896,15 +194007,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51105304,
-    MaxKey = 51112022,
-    Loader = function()
-      return {
+        },
         [51105304] = {
           Operations = {
             [1] = {
@@ -193732,7 +195835,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51105615,
+    MaxKey = 51117038,
+    Loader = function()
+      return {
         [51105615] = {
           Operations = {
             [1] = {
@@ -195072,15 +197183,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51112023,
-    MaxKey = 51124024,
-    Loader = function()
-      return {
+        },
         [51112023] = {
           Operations = {
             [1] = {
@@ -196922,7 +199025,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51117039,
+    MaxKey = 51140041,
+    Loader = function()
+      return {
         [51117039] = {
           Operations = {
             [1] = {
@@ -198274,15 +200385,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51124025,
-    MaxKey = 51151053,
-    Loader = function()
-      return {
+        },
         [51124025] = {
           Operations = {
             [1] = {
@@ -199948,7 +202051,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51140042,
+    MaxKey = 51152036,
+    Loader = function()
+      return {
         [51140042] = {
           Operations = {
             [1] = {
@@ -202529,15 +204640,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51151054,
-    MaxKey = 70013001,
-    Loader = function()
-      return {
+        },
         [51151054] = {
           Operations = {
             [1] = {
@@ -204416,7 +206519,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51152037,
+    MaxKey = 72000303,
+    Loader = function()
+      return {
         [51152037] = {
           Operations = {
             [1] = {
@@ -205971,6 +208082,102 @@ local Data = {
           },
           bAllowClick = true
         },
+        [51158007] = {
+          Operations = {
+            [1] = {
+              SetOutport = {FinishType = 2, OptionIdx = 1}
+            }
+          },
+          bAllowClick = true
+        },
+        [51158008] = {
+          Operations = {
+            [1] = {
+              SetOutport = {FinishType = 2, OptionIdx = 2}
+            }
+          },
+          bAllowClick = true
+        },
+        [51158218] = {
+          Operations = {
+            [1] = {
+              SetOutport = {FinishType = 2, OptionIdx = 1}
+            }
+          },
+          bAllowClick = true
+        },
+        [51158221] = {
+          Operations = {
+            [1] = {
+              SetOutport = {FinishType = 2, OptionIdx = 2}
+            }
+          },
+          bAllowClick = true
+        },
+        [51158902] = {
+          Operations = {
+            [1] = {
+              SetOutport = {FinishType = 2, OptionIdx = 1}
+            }
+          },
+          bAllowClick = true
+        },
+        [51158906] = {
+          Operations = {
+            [1] = {
+              SetOutport = {FinishType = 2, OptionIdx = 2}
+            }
+          },
+          bAllowClick = true
+        },
+        [51158913] = {
+          Operations = {
+            [1] = {
+              SetOutport = {FinishType = 2, OptionIdx = 1}
+            }
+          },
+          bAllowClick = true
+        },
+        [51158916] = {
+          Operations = {
+            [1] = {
+              SetOutport = {FinishType = 2, OptionIdx = 2}
+            }
+          },
+          bAllowClick = true
+        },
+        [51168002] = {
+          Operations = {
+            [1] = {
+              SetOutport = {FinishType = 2, OptionIdx = 1}
+            }
+          },
+          bAllowClick = true
+        },
+        [51168004] = {
+          Operations = {
+            [1] = {
+              SetOutport = {FinishType = 2, OptionIdx = 2}
+            }
+          },
+          bAllowClick = true
+        },
+        [51168011] = {
+          Operations = {
+            [1] = {
+              SetOutport = {FinishType = 2, OptionIdx = 1}
+            }
+          },
+          bAllowClick = true
+        },
+        [51168014] = {
+          Operations = {
+            [1] = {
+              SetOutport = {FinishType = 2, OptionIdx = 2}
+            }
+          },
+          bAllowClick = true
+        },
         [70010100] = {
           Operations = {
             [1] = {
@@ -206390,15 +208597,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 70013101,
-    MaxKey = 72003502,
-    Loader = function()
-      return {
+        },
         [70013101] = {
           Operations = {
             [1] = {
@@ -207608,7 +209807,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 72000304,
+    MaxKey = 72100902,
+    Loader = function()
+      return {
         [72000304] = {
           Operations = {
             [1] = {
@@ -209641,15 +211848,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 72003503,
-    MaxKey = 80030107,
-    Loader = function()
-      return {
+        },
         [72003503] = {
           Operations = {
             [1] = {
@@ -211114,7 +213313,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 72100903,
+    MaxKey = 80020511,
+    Loader = function()
+      return {
         [72100903] = {
           Operations = {
             [1] = {
@@ -211717,6 +213924,1696 @@ local Data = {
           bAllowClick = false
         },
         [72101704] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Disappear"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72200101] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Born",
+                Duration = 1,
+                Sync = true
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72200102] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Agree"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72200103] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Disappear"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72200104] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72200201] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Born",
+                Duration = 1,
+                Sync = true
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72200202] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Agree"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72200203] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Disappear"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72200204] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72200301] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Born",
+                Duration = 1,
+                Sync = true
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72200302] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Agree"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72200303] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Disappear"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72200304] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72200401] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Born",
+                Duration = 1,
+                Sync = true
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72200402] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Agree"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72200403] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Disappear"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72200404] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72200501] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Born",
+                Duration = 1,
+                Sync = true
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72200502] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72200503] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Agree"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72200504] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Disappear"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72200601] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Born",
+                Duration = 1,
+                Sync = true
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72200602] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72200603] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Agree"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72200604] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Disappear"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72200701] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Born",
+                Duration = 1,
+                Sync = true
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72200702] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72200703] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Agree"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72200704] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Disappear"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72200801] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Born",
+                Duration = 1,
+                Sync = true
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72200802] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72200803] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Agree"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72200804] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Disappear"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72200901] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Born",
+                Duration = 1,
+                Sync = true
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72200902] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72200903] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Agree"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72200904] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Disappear"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72201001] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Born",
+                Duration = 1,
+                Sync = true
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72201002] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72201003] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72201004] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Agree"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72201005] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Disappear"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72201101] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Born",
+                Duration = 1,
+                Sync = true
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72201102] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72201103] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Agree"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72201104] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Disappear"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72201201] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Born",
+                Duration = 1,
+                Sync = true
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72201202] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72201203] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Agree"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72201204] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Disappear"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72201301] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Born",
+                Duration = 1,
+                Sync = true
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72201302] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72201303] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Agree"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72201304] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Disappear"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72201401] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Born",
+                Duration = 1,
+                Sync = true
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72201402] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72201403] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Agree"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72201404] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Disappear"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72201501] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Born",
+                Duration = 1,
+                Sync = true
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72201502] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72201503] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Agree"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72201504] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Disappear"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72201601] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Born",
+                Duration = 1,
+                Sync = true
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72201602] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72201603] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Agree"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72201604] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Disappear"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72201701] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Born",
+                Duration = 1,
+                Sync = true
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72201702] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72201703] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Agree"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72201704] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Disappear"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72201801] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Born",
+                Duration = 1,
+                Sync = true
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72201802] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72201803] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Agree"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72201804] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Disappear"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72201901] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Born",
+                Duration = 1,
+                Sync = true
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72201902] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72201903] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Agree"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72201904] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Disappear"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72202001] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Born",
+                Duration = 1,
+                Sync = true
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72202002] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72202003] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Agree"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72202004] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Disappear"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72202101] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Born",
+                Duration = 1,
+                Sync = true
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72202102] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72202103] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Agree"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72202104] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Disappear"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72202201] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Born",
+                Duration = 1,
+                Sync = true
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72202202] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72202203] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Agree"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72202204] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Disappear"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72202301] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              SEQ = {
+                [1] = {
+                  CameraMoveTo = {
+                    TargetPosition = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8"
+                  }
+                }
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Born",
+                Duration = 1,
+                Sync = true
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72202302] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [72202303] = {
+          Operations = {
+            [1] = {
+              PlayFacial = {
+                ActorId = 830001,
+                FacialId = "PetPan_Common"
+              }
+            },
+            [2] = {
+              PlayAnimation = {
+                ActorId = 830001,
+                AnimationId = "Wuyou_Agree"
+              }
+            }
+          },
+          bAllowClick = false
+        },
+        [72202304] = {
           Operations = {
             [1] = {
               PlayFacial = {
@@ -213637,7 +217534,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80020512,
+    MaxKey = 80050141,
+    Loader = function()
+      return {
         [80020512] = {
           Operations = {
             [1] = {
@@ -213795,15 +217700,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80030108,
-    MaxKey = 80050215,
-    Loader = function()
-      return {
+        },
         [80030108] = {
           Operations = {
             [1] = {
@@ -218642,7 +222539,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80050145,
+    MaxKey = 80060435,
+    Loader = function()
+      return {
         [80050145] = {
           Operations = {
             [1] = {
@@ -218927,15 +222832,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80050216,
-    MaxKey = 80070103,
-    Loader = function()
-      return {
+        },
         [80050216] = {
           Operations = {
             [1] = {
@@ -221642,7 +225539,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80060436,
+    MaxKey = 80080239,
+    Loader = function()
+      return {
         [80060436] = {
           Operations = {
             [1] = {
@@ -221788,15 +225693,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80070104,
-    MaxKey = 80080303,
-    Loader = function()
-      return {
+        },
         [80070104] = {
           Operations = {
             [1] = {
@@ -225848,7 +229745,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80080240,
+    MaxKey = 80100419,
+    Loader = function()
+      return {
         [80080240] = {
           Operations = {
             [1] = {
@@ -226151,15 +230056,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80080304,
-    MaxKey = 80110106,
-    Loader = function()
-      return {
+        },
         [80080304] = {
           Operations = {
             [1] = {
@@ -228971,7 +232868,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80100420,
+    MaxKey = 80120402,
+    Loader = function()
+      return {
         [80100420] = {
           Operations = {
             [1] = {
@@ -229124,15 +233029,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80110108,
-    MaxKey = 80120414,
-    Loader = function()
-      return {
+        },
         [80110108] = {
           Operations = {
             [1] = {
@@ -232597,7 +236494,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80120403,
+    MaxKey = 80140119,
+    Loader = function()
+      return {
         [80120403] = {
           Operations = {
             [1] = {
@@ -232743,15 +236648,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80120415,
-    MaxKey = 80140132,
-    Loader = function()
-      return {
+        },
         [80120415] = {
           Operations = {
             [1] = {
@@ -235888,7 +239785,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80140120,
+    MaxKey = 80150203,
+    Loader = function()
+      return {
         [80140120] = {
           Operations = {
             [1] = {
@@ -236222,15 +240127,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80140133,
-    MaxKey = 80150215,
-    Loader = function()
-      return {
+        },
         [80140133] = {
           Operations = {
             [1] = {
@@ -240699,7 +244596,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80150204,
+    MaxKey = 80170416,
+    Loader = function()
+      return {
         [80150204] = {
           Operations = {
             [1] = {
@@ -241002,15 +244907,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80150216,
-    MaxKey = 80180103,
-    Loader = function()
-      return {
+        },
         [80150216] = {
           Operations = {
             [1] = {
@@ -244186,7 +248083,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80170417,
+    MaxKey = 80200010,
+    Loader = function()
+      return {
         [80170417] = {
           Operations = {
             [1] = {
@@ -244360,15 +248265,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80180105,
-    MaxKey = 80200025,
-    Loader = function()
-      return {
+        },
         [80180105] = {
           Operations = {
             [1] = {
@@ -248252,7 +252149,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80200012,
+    MaxKey = 80210205,
+    Loader = function()
+      return {
         [80200012] = {
           Operations = {
             [1] = {
@@ -248538,15 +252443,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80200027,
-    MaxKey = 80210220,
-    Loader = function()
-      return {
+        },
         [80200027] = {
           Operations = {
             [1] = {
@@ -254306,7 +258203,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80210206,
+    MaxKey = 90090403,
+    Loader = function()
+      return {
         [80210206] = {
           Operations = {
             [1] = {
@@ -254534,15 +258439,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80210221,
-    MaxKey = 90100303,
-    Loader = function()
-      return {
+        },
         [80210221] = {
           Operations = {
             [1] = {
@@ -257838,7 +261735,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 90090405,
+    MaxKey = 90250001,
+    Loader = function()
+      return {
         [90090405] = {
           Operations = {
             [1] = {
@@ -257992,15 +261897,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 90100305,
-    MaxKey = 90220414,
-    Loader = function()
-      return {
+        },
         [90100305] = {
           Operations = {
             [1] = {
@@ -258612,207 +262509,6 @@ local Data = {
           Operations = {
             [1] = {
               PlayAnimation = {ActorId = 83101, AnimationId = "Agree"}
-            }
-          },
-          bAllowClick = true
-        },
-        [90150001] = {
-          Operations = {
-            [1] = {
-              LookAt = {
-                LookAtDescription = {LookId = 81801, LookedInfo = 0}
-              }
-            },
-            [2] = {
-              LookAt = {
-                LookAtDescription = {LookId = 0, LookedInfo = 81801}
-              }
-            }
-          },
-          bAllowClick = true
-        },
-        [90150101] = {
-          Operations = {
-            [1] = {
-              LookAt = {
-                LookAtDescription = {LookId = 81801, LookedInfo = 0}
-              }
-            },
-            [2] = {
-              LookAt = {
-                LookAtDescription = {LookId = 0, LookedInfo = 81801}
-              }
-            },
-            [3] = {
-              PlayAnimation = {
-                ActorId = 81801,
-                AnimationId = "Talk02_Start"
-              }
-            }
-          },
-          bAllowClick = true
-        },
-        [90150103] = {
-          Operations = {
-            [1] = {
-              PlayAnimation = {ActorId = 81801, AnimationId = "Talk02_End"}
-            }
-          },
-          bAllowClick = true
-        },
-        [90150105] = {
-          Operations = {
-            [1] = {
-              PlayAnimation = {ActorId = 81801, AnimationId = "Disagree"}
-            }
-          },
-          bAllowClick = true
-        },
-        [90150201] = {
-          Operations = {
-            [1] = {
-              LookAt = {
-                LookAtDescription = {LookId = 81801, LookedInfo = 0}
-              }
-            },
-            [2] = {
-              LookAt = {
-                LookAtDescription = {LookId = 0, LookedInfo = 81801}
-              }
-            },
-            [3] = {
-              PlayAnimation = {
-                ActorId = 81801,
-                AnimationId = "Confident_Start"
-              }
-            }
-          },
-          bAllowClick = true
-        },
-        [90150203] = {
-          Operations = {
-            [1] = {
-              PlayAnimation = {
-                ActorId = 81801,
-                AnimationId = "Confident_End"
-              }
-            }
-          },
-          bAllowClick = true
-        },
-        [90150205] = {
-          Operations = {
-            [1] = {
-              PlayAnimation = {ActorId = 81801, AnimationId = "Agree"}
-            }
-          },
-          bAllowClick = true
-        },
-        [90150206] = {
-          Operations = {
-            [1] = {
-              PlayAnimation = {
-                ActorId = 81801,
-                AnimationId = "Think_Start"
-              }
-            }
-          },
-          bAllowClick = true
-        },
-        [90150207] = {
-          Operations = {
-            [1] = {
-              PlayAnimation = {ActorId = 81801, AnimationId = "Think_End"}
-            }
-          },
-          bAllowClick = true
-        },
-        [90150301] = {
-          Operations = {
-            [1] = {
-              LookAt = {
-                LookAtDescription = {LookId = 81801, LookedInfo = 0}
-              }
-            },
-            [2] = {
-              LookAt = {
-                LookAtDescription = {LookId = 0, LookedInfo = 81801}
-              }
-            },
-            [3] = {
-              PlayAnimation = {ActorId = 81801, AnimationId = "Agree"}
-            }
-          },
-          bAllowClick = true
-        },
-        [90150304] = {
-          Operations = {
-            [1] = {
-              PlayAnimation = {ActorId = 81801, AnimationId = "Agree"}
-            }
-          },
-          bAllowClick = true
-        },
-        [90150401] = {
-          Operations = {
-            [1] = {
-              LookAt = {
-                LookAtDescription = {LookId = 81801, LookedInfo = 0}
-              }
-            },
-            [2] = {
-              LookAt = {
-                LookAtDescription = {LookId = 0, LookedInfo = 81801}
-              }
-            },
-            [3] = {
-              PlayAnimation = {
-                ActorId = 81801,
-                AnimationId = "Explain01_Start"
-              }
-            }
-          },
-          bAllowClick = true
-        },
-        [90150402] = {
-          Operations = {
-            [1] = {
-              PlayAnimation = {
-                ActorId = 81801,
-                AnimationId = "Explain01_End"
-              }
-            }
-          },
-          bAllowClick = true
-        },
-        [90150501] = {
-          Operations = {
-            [1] = {
-              LookAt = {
-                LookAtDescription = {LookId = 81801, LookedInfo = 0}
-              }
-            },
-            [2] = {
-              LookAt = {
-                LookAtDescription = {LookId = 0, LookedInfo = 81801}
-              }
-            },
-            [3] = {
-              PlayAnimation = {
-                ActorId = 81801,
-                AnimationId = "Explain02_Start"
-              }
-            }
-          },
-          bAllowClick = true
-        },
-        [90150503] = {
-          Operations = {
-            [1] = {
-              PlayAnimation = {
-                ActorId = 81801,
-                AnimationId = "Explain02_End"
-              }
             }
           },
           bAllowClick = true
@@ -259968,276 +263664,6 @@ local Data = {
           },
           bAllowClick = true
         },
-        [90210001] = {
-          Operations = {
-            [1] = {
-              LookAt = {
-                LookAtDescription = {LookId = 84101, LookedInfo = 0}
-              }
-            },
-            [2] = {
-              LookAt = {
-                LookAtDescription = {LookId = 0, LookedInfo = 84101}
-              }
-            },
-            [3] = {
-              PlayAnimation = {ActorId = 84101, AnimationId = "Agree"}
-            }
-          },
-          bAllowClick = true
-        },
-        [90210101] = {
-          Operations = {
-            [1] = {
-              LookAt = {
-                LookAtDescription = {LookId = 84101, LookedInfo = 0}
-              }
-            },
-            [2] = {
-              LookAt = {
-                LookAtDescription = {LookId = 0, LookedInfo = 84101}
-              }
-            },
-            [3] = {
-              PlayAnimation = {
-                ActorId = 84101,
-                AnimationId = "Explain02_Start"
-              }
-            }
-          },
-          bAllowClick = true
-        },
-        [90210102] = {
-          Operations = {
-            [1] = {
-              PlayAnimation = {
-                ActorId = 84101,
-                AnimationId = "Explain02_End"
-              }
-            }
-          },
-          bAllowClick = true
-        },
-        [90210104] = {
-          Operations = {
-            [1] = {
-              PlayAnimation = {
-                ActorId = 84101,
-                AnimationId = "Explain01_Start"
-              }
-            }
-          },
-          bAllowClick = true
-        },
-        [90210105] = {
-          Operations = {
-            [1] = {
-              PlayAnimation = {
-                ActorId = 84101,
-                AnimationId = "Explain01_End"
-              }
-            }
-          },
-          bAllowClick = true
-        },
-        [90210201] = {
-          Operations = {
-            [1] = {
-              LookAt = {
-                LookAtDescription = {LookId = 84101, LookedInfo = 0}
-              }
-            },
-            [2] = {
-              LookAt = {
-                LookAtDescription = {LookId = 0, LookedInfo = 84101}
-              }
-            },
-            [3] = {
-              PlayAnimation = {
-                ActorId = 84101,
-                AnimationId = "Talk01_Start"
-              }
-            }
-          },
-          bAllowClick = true
-        },
-        [90210202] = {
-          Operations = {
-            [1] = {
-              PlayAnimation = {ActorId = 84101, AnimationId = "Talk01_End"}
-            }
-          },
-          bAllowClick = true
-        },
-        [90210204] = {
-          Operations = {
-            [1] = {
-              PlayAnimation = {ActorId = 84101, AnimationId = "Agree"}
-            }
-          },
-          bAllowClick = true
-        },
-        [90210301] = {
-          Operations = {
-            [1] = {
-              LookAt = {
-                LookAtDescription = {LookId = 84101, LookedInfo = 0}
-              }
-            },
-            [2] = {
-              LookAt = {
-                LookAtDescription = {LookId = 0, LookedInfo = 84101}
-              }
-            },
-            [3] = {
-              PlayAnimation = {ActorId = 84101, AnimationId = "Disagree"}
-            }
-          },
-          bAllowClick = true
-        },
-        [90210304] = {
-          Operations = {
-            [1] = {
-              PlayAnimation = {
-                ActorId = 84101,
-                AnimationId = "Think_Start"
-              }
-            }
-          },
-          bAllowClick = true
-        },
-        [90210305] = {
-          Operations = {
-            [1] = {
-              PlayAnimation = {ActorId = 84101, AnimationId = "Think_End"}
-            }
-          },
-          bAllowClick = true
-        },
-        [90210401] = {
-          Operations = {
-            [1] = {
-              LookAt = {
-                LookAtDescription = {LookId = 84101, LookedInfo = 0}
-              }
-            },
-            [2] = {
-              LookAt = {
-                LookAtDescription = {LookId = 0, LookedInfo = 84101}
-              }
-            },
-            [3] = {
-              PlayAnimation = {ActorId = 84101, AnimationId = "Disagree"}
-            }
-          },
-          bAllowClick = true
-        },
-        [90210403] = {
-          Operations = {
-            [1] = {
-              PlayAnimation = {ActorId = 84101, AnimationId = "Disagree"}
-            }
-          },
-          bAllowClick = true
-        },
-        [90210501] = {
-          Operations = {
-            [1] = {
-              LookAt = {
-                LookAtDescription = {LookId = 84101, LookedInfo = 0}
-              }
-            },
-            [2] = {
-              LookAt = {
-                LookAtDescription = {LookId = 0, LookedInfo = 84101}
-              }
-            },
-            [3] = {
-              PlayAnimation = {
-                ActorId = 84101,
-                AnimationId = "Explain01_Start"
-              }
-            }
-          },
-          bAllowClick = true
-        },
-        [90210502] = {
-          Operations = {
-            [1] = {
-              PlayAnimation = {
-                ActorId = 84101,
-                AnimationId = "Explain01_End"
-              }
-            }
-          },
-          bAllowClick = true
-        },
-        [90210601] = {
-          Operations = {
-            [1] = {
-              LookAt = {
-                LookAtDescription = {LookId = 84101, LookedInfo = 0}
-              }
-            },
-            [2] = {
-              LookAt = {
-                LookAtDescription = {LookId = 0, LookedInfo = 84101}
-              }
-            },
-            [3] = {
-              PlayAnimation = {
-                ActorId = 84101,
-                AnimationId = "Talk02_Start"
-              }
-            }
-          },
-          bAllowClick = true
-        },
-        [90210602] = {
-          Operations = {
-            [1] = {
-              PlayAnimation = {ActorId = 84101, AnimationId = "Talk02_End"}
-            }
-          },
-          bAllowClick = true
-        },
-        [90210701] = {
-          Operations = {
-            [1] = {
-              LookAt = {
-                LookAtDescription = {LookId = 84101, LookedInfo = 0}
-              }
-            },
-            [2] = {
-              LookAt = {
-                LookAtDescription = {LookId = 0, LookedInfo = 84101}
-              }
-            },
-            [3] = {
-              PlayAnimation = {
-                ActorId = 84101,
-                AnimationId = "Think_Start"
-              }
-            }
-          },
-          bAllowClick = true
-        },
-        [90210702] = {
-          Operations = {
-            [1] = {
-              PlayAnimation = {ActorId = 84101, AnimationId = "Think_End"}
-            }
-          },
-          bAllowClick = true
-        },
-        [90210704] = {
-          Operations = {
-            [1] = {
-              PlayAnimation = {ActorId = 84101, AnimationId = "Disagree"}
-            }
-          },
-          bAllowClick = true
-        },
         [90220001] = {
           Operations = {
             [1] = {
@@ -260532,15 +263958,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 90230001,
-    MaxKey = 741147013,
-    Loader = function()
-      return {
+        },
         [90230001] = {
           Operations = {
             [1] = {
@@ -260843,7 +264261,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 90250101,
+    MaxKey = 741147021,
+    Loader = function()
+      return {
         [90250101] = {
           Operations = {
             [1] = {
@@ -260983,6 +264409,194 @@ local Data = {
               PlayAnimation = {
                 ActorId = 81501,
                 AnimationId = "Confident_End"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [90260001] = {
+          Operations = {
+            [1] = {
+              LookAt = {
+                LookAtDescription = {LookId = 81504, LookedInfo = 0}
+              }
+            },
+            [2] = {
+              LookAt = {
+                LookAtDescription = {LookId = 0, LookedInfo = 81504}
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [90260101] = {
+          Operations = {
+            [1] = {
+              LookAt = {
+                LookAtDescription = {LookId = 81504, LookedInfo = 0}
+              }
+            },
+            [2] = {
+              LookAt = {
+                LookAtDescription = {LookId = 0, LookedInfo = 81504}
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 81504,
+                AnimationId = "Talk01_Start"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [90260102] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {ActorId = 81504, AnimationId = "Talk01_End"}
+            }
+          },
+          bAllowClick = true
+        },
+        [90260104] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {
+                ActorId = 81504,
+                AnimationId = "Talk03_Start"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [90260105] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {ActorId = 81504, AnimationId = "Talk03_End"}
+            }
+          },
+          bAllowClick = true
+        },
+        [90260201] = {
+          Operations = {
+            [1] = {
+              LookAt = {
+                LookAtDescription = {LookId = 81504, LookedInfo = 0}
+              }
+            },
+            [2] = {
+              LookAt = {
+                LookAtDescription = {LookId = 0, LookedInfo = 81504}
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 81504,
+                AnimationId = "Talk02_Start"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [90260203] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {ActorId = 81504, AnimationId = "Talk02_End"}
+            }
+          },
+          bAllowClick = true
+        },
+        [90260301] = {
+          Operations = {
+            [1] = {
+              LookAt = {
+                LookAtDescription = {LookId = 81504, LookedInfo = 0}
+              }
+            },
+            [2] = {
+              LookAt = {
+                LookAtDescription = {LookId = 0, LookedInfo = 81504}
+              }
+            },
+            [3] = {
+              PlayAnimation = {
+                ActorId = 81504,
+                AnimationId = "Talk01_Start"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [90260304] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {ActorId = 81504, AnimationId = "Talk01_End"}
+            }
+          },
+          bAllowClick = true
+        },
+        [90260306] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {
+                ActorId = 81504,
+                AnimationId = "DisagreeHead"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [90260401] = {
+          Operations = {
+            [1] = {
+              LookAt = {
+                LookAtDescription = {LookId = 81504, LookedInfo = 0}
+              }
+            },
+            [2] = {
+              LookAt = {
+                LookAtDescription = {LookId = 0, LookedInfo = 81504}
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [90260402] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {ActorId = 81504, AnimationId = "AgreeHead"}
+            }
+          },
+          bAllowClick = true
+        },
+        [90260407] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {
+                ActorId = 81504,
+                AnimationId = "Explain02_Start"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [90260408] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {
+                ActorId = 81504,
+                AnimationId = "Explain02_End"
+              }
+            }
+          },
+          bAllowClick = true
+        },
+        [90260410] = {
+          Operations = {
+            [1] = {
+              PlayAnimation = {
+                ActorId = 81504,
+                AnimationId = "DisagreeHead"
               }
             }
           },
@@ -263111,15 +266725,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741147014,
-    MaxKey = 741147213,
-    Loader = function()
-      return {
+        },
         [741147014] = {
           Operations = {
             [1] = {
@@ -263264,7 +266870,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741147022,
+    MaxKey = 741147221,
+    Loader = function()
+      return {
         [741147022] = {
           Operations = {
             [1] = {
@@ -266987,15 +270601,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741147214,
-    MaxKey = 741147443,
-    Loader = function()
-      return {
+        },
         [741147214] = {
           Operations = {
             [1] = {
@@ -267161,7 +270767,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741147222,
+    MaxKey = 741147505,
+    Loader = function()
+      return {
         [741147222] = {
           Operations = {
             [1] = {
@@ -270926,15 +274540,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741147444,
-    MaxKey = 741148207,
-    Loader = function()
-      return {
+        },
         [741147444] = {
           Operations = {
             [1] = {
@@ -271097,7 +274703,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741147506,
+    MaxKey = 741148215,
+    Loader = function()
+      return {
         [741147506] = {
           Operations = {
             [1] = {
@@ -274810,15 +278424,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741148208,
-    MaxKey = 741148919,
-    Loader = function()
-      return {
+        },
         [741148208] = {
           Operations = {
             [1] = {
@@ -274972,7 +278578,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741148216,
+    MaxKey = 741148927,
+    Loader = function()
+      return {
         [741148216] = {
           Operations = {
             [1] = {
@@ -278635,15 +282249,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741148920,
-    MaxKey = 741149703,
-    Loader = function()
-      return {
+        },
         [741148920] = {
           Operations = {
             [1] = {
@@ -278791,7 +282397,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741149001,
+    MaxKey = 741149711,
+    Loader = function()
+      return {
         [741149001] = {
           Operations = {
             [1] = {
@@ -282514,15 +286128,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741149704,
-    MaxKey = 1101930901,
-    Loader = function()
-      return {
+        },
         [741149704] = {
           Operations = {
             [1] = {
@@ -282679,7 +286285,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741149712,
+    MaxKey = 1101930901,
+    Loader = function()
+      return {
         [741149712] = {
           Operations = {
             [1] = {

@@ -1,4 +1,5 @@
 local SkillUtils = require("Utils.SkillUtils")
+local SettingUtils = require("Utils.SettingUtils")
 local EffectResults = require("BluePrints.Combat.BattleLogic.EffectResults")
 local Component = {}
 
@@ -96,7 +97,8 @@ function Component:StarCameraShakeByEids(Eids, ParamentsTable, SourceLocation)
         local Controller = Target and Target:GetController()
         local PlayerCameraManager = Controller and Controller.PlayerCameraManager
         if nil ~= PlayerCameraManager then
-          PlayerCameraManager:StartCameraShake(ShakeClass, ShakeScale)
+          local CameraShakeCoef = math.max(0.0, tonumber(SettingUtils.GetEMCache("CameraShakeRange", nil, 1.0)) or 1.0)
+          PlayerCameraManager:StartCameraShake(ShakeClass, ShakeScale * CameraShakeCoef)
         end
       end
     end
@@ -210,6 +212,7 @@ function Component:Effect_GatherTargets(EffectStruct, ParamentsTable)
   local StopDistance = ParamentsTable.StopDistance
   local Acceleration = ParamentsTable.Acceleration
   local LocationOffset = ParamentsTable.LocationOffset
+  local Time = ParamentsTable.Time
   LocationOffset = LocationOffset and FVector(LocationOffset[1], LocationOffset[2], LocationOffset[3]) or FVector(0, 0, 0)
   if not next(HitTargets) then
     return
@@ -223,14 +226,14 @@ function Component:Effect_GatherTargets(EffectStruct, ParamentsTable)
     for _, Eid in ipairs(HitTargets) do
       local Target = self:GetEntity(Eid)
       if Target and Target.GatherToCreature then
-        Target:GatherToCreature(EffectStruct.CreatureInfo, GatherPoint, TargetSocketName, GatherSpeed, StopDistance, Acceleration, LocationOffset)
+        Target:GatherToCreature(EffectStruct.CreatureInfo, GatherPoint, TargetSocketName, GatherSpeed, StopDistance, Acceleration, LocationOffset, Time)
       end
     end
   else
     for _, Eid in ipairs(HitTargets) do
       local Target = self:GetEntity(Eid)
       if Target and Target.GatherToSource then
-        Target:GatherToSource(Source, GatherPoint, TargetSocketName, GatherSpeed, StopDistance, Acceleration, LocationOffset)
+        Target:GatherToSource(Source, GatherPoint, TargetSocketName, GatherSpeed, StopDistance, Acceleration, LocationOffset, Time)
       end
     end
   end
@@ -924,7 +927,7 @@ function Component:Effect_Catapult(EffectStruct, ParamentsTable)
   end
   for _, Eid in ipairs(HitTargets) do
     local Target = self:GetEntity(Eid)
-    self:ExecuteSkillEffect(Source, SkillEffectId, Target, EffectStruct.Skill, EffectStruct.SkillLevelSource)
+    self:ExecuteSkillEffectWithType(Source, SkillEffectId, Target, EffectStruct.Skill, EffectStruct.SkillLevelSource)
   end
 end
 
@@ -965,6 +968,14 @@ function Component:Effect_ReplaceBulletFXID(EffectStruct, ParamentsTablex)
   end
   if BulletManager and IsDedicatedServer(self) and EffectStruct.FromServer then
     BulletManager:ClientReplaceBulletFXID(CreatureInfo, FXId)
+  end
+end
+
+function Component:Effect_StopFxByTag(EffectStruct, ParamentsTablex)
+  local Source = EffectStruct.Source
+  local Tag = ParamentsTablex.Tag
+  if Source.FXComponent then
+    Source.FXComponent:StopFxObjectWithTag(Tag, false, 0)
   end
 end
 

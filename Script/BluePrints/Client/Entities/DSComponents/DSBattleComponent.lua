@@ -17,6 +17,8 @@ function Component:HandleAvatarBattleInfo(Callback, AvatarBattleInfos)
   for AvatarEid, Info in pairs(AvatarBattleInfos) do
     local AvatarEidStr = CommonUtils.ObjId2Str(AvatarEid)
     self.AvatarInfos[AvatarEidStr] = Info
+    self:DungeonObjectAddPlayer(AvatarEid)
+    self:AddMoreInfoForDungeonObject(Info)
     if GameMode.AvatarInfos[AvatarEidStr] == nil then
       GameMode.AvatarInfos[AvatarEidStr] = Info
     end
@@ -90,7 +92,7 @@ function Component:HandleNotValidForReconnect(AvatarEidStr)
     return
   end
   if not self.HasLeaveAvatars[AvatarEidStr] then
-    GameMode:TriggerPlayerFailed({AvatarEidStr})
+    GameMode:ForceFinishPlayerByFailed({AvatarEidStr})
   end
   GameMode:OnAvatarLogout(AvatarEidStr)
 end
@@ -111,7 +113,7 @@ function Component:OnAvatarLeaveServer(AvatarEidStr)
   self:HandleNotValidForReconnect(AvatarEidStr)
 end
 
-function Component:BattleFinish(IsWin, AvatarEids)
+function Component:BattleFinish(IsWin, AvatarEids, PlayerEndReason)
   ServerPrint("BattleFinish", IsWin)
   local RealFinishAvatar = {}
   local AvatarArr = TArray("")
@@ -138,7 +140,7 @@ function Component:BattleFinish(IsWin, AvatarEids)
     ServerPrint("BattleFinish with no valid avatar")
     return
   end
-  GameMode:NotifyClientGameEnd(IsWin, RealFinishAvatar)
+  GameMode:NotifyClientGameEnd(IsWin, RealFinishAvatar, PlayerEndReason)
   GameMode:OnPlayersDungeonEnd(RealFinishAvatar)
   ServerPrint("Finish Player Count", AvatarArrLen, SumAvatars)
   self:CallSkynetServerMethod("BattleFinish", IsWin, GameMode.EMGameState.DungeonProgress - 1, GameTime, ExtraInfo)
@@ -189,6 +191,7 @@ function Component:AddFinishAvatar(ExtraInfo, AvatarEid, RealFinishAvatar, Avata
   self.PersistenceRewards[AvatarStr] = nil
   self.ImmediateResources[AvatarStr] = nil
   self.AvatarInfos[AvatarStr] = nil
+  self:DungeonObjectRemovePlayer(AvatarEid)
   self.PersistPlayerInfos[AvatarStr] = nil
   GameMode.AvatarInfos[AvatarStr] = nil
   RealFinishAvatar[#RealFinishAvatar + 1] = AvatarStr

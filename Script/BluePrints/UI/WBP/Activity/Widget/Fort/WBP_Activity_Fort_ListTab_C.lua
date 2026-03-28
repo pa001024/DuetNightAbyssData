@@ -1,8 +1,8 @@
 require("UnLua")
+local AnnounceModel = AnnounceController:GetModel()
 local M = Class({
   "BluePrints.UI.BP_UIState_C"
 })
-local AnnouncementUtils = require("BluePrints.UI.WBP.Announcement.AnnounceUtils")
 
 function M:Construct()
   self.ListenerAdded = false
@@ -147,12 +147,12 @@ function M:SetTime()
   local TimeArgs = TArray(FFormatArgumentData)
   local FinalStr = ""
   if DiffDay > 0 then
-    AnnouncementUtils:_AddFormatArg(TimeArgs, "DD", DiffDay)
-    AnnouncementUtils:_AddFormatArg(TimeArgs, "H", DiffHour)
+    AnnounceModel:_AddFormatArg(TimeArgs, "DD", DiffDay)
+    AnnounceModel:_AddFormatArg(TimeArgs, "H", DiffHour)
     FinalStr = UKismetTextLibrary.Format(GText("ZhiLiuEntrust_Lock_Time1"), TimeArgs)
   else
-    AnnouncementUtils:_AddFormatArg(TimeArgs, "H", DiffHour)
-    AnnouncementUtils:_AddFormatArg(TimeArgs, "M", DiffMin)
+    AnnounceModel:_AddFormatArg(TimeArgs, "H", DiffHour)
+    AnnounceModel:_AddFormatArg(TimeArgs, "M", DiffMin)
     FinalStr = UKismetTextLibrary.Format(GText("ZhiLiuEntrust_Lock_Time2"), TimeArgs)
   end
   self.Text_Lock:SetText(FinalStr)

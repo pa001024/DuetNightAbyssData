@@ -1,20 +1,12 @@
 local T = {}
 T.RT_1 = {
-  [1] = true
-}
-T.RT_2 = {
-  [1] = true,
-  [2] = true,
-  [3] = true
-}
-T.RT_3 = {
   [1] = "AnimSequence'/Game/Asset/Char/Monster/GR_Jichong/Animation/Sequence/Locomotion/GR_Jichong_FightIdle.GR_Jichong_FightIdle'",
   [3] = "AnimSequence'/Game/Asset/Char/Monster/GR_Jichong/Animation/Sequence/Locomotion/GR_Jichong_Run_Loop.GR_Jichong_Run_Loop'"
 }
-T.RT_4 = {
+T.RT_2 = {
   [1] = false
 }
-T.RT_5 = {
+T.RT_3 = {
   [4] = true,
   [5] = true,
   [6] = true,
@@ -22,11 +14,11 @@ T.RT_5 = {
   [8] = true,
   [9] = true
 }
-T.RT_6 = {
+T.RT_4 = {
   [1] = "AnimSequence'/Game/Asset/Char/Monster/Common/Animation/GR_Mid_F/Sequence/Gun/Locomotion/GR_Mid_F_Gun_FightIdle.GR_Mid_F_Gun_FightIdle'",
   [3] = "AnimSequence'/Game/Asset/Char/Monster/Common/Animation/JT_Mid_M/Sequence/Gun/Locomotion/JT_Mid_M_Gun_Run_Loop.JT_Mid_M_Gun_Run_Loop'"
 }
-T.RT_7 = {
+T.RT_5 = {
   "AnimSequence'/Game/Asset/Char/Monster/Common/Animation/JT_Mid_F/Sequence/Gun/Locomotion/JT_Mid_F_Gun_Walk_Loop_F.JT_Mid_F_Gun_Walk_Loop_F'",
   "AnimSequence'/Game/Asset/Char/Monster/Common/Animation/JT_Mid_F/Sequence/Gun/Locomotion/JT_Mid_F_Gun_Walk_Loop_B.JT_Mid_F_Gun_Walk_Loop_B'",
   "AnimSequence'/Game/Asset/Char/Monster/Common/Animation/JT_Mid_F/Sequence/Gun/Locomotion/JT_Mid_F_Gun_Walk_Loop_L.JT_Mid_F_Gun_Walk_Loop_L'",
@@ -36,7 +28,7 @@ T.RT_7 = {
   "AnimSequence'/Game/Asset/Char/Monster/Common/Animation/JT_Mid_F/Sequence/Gun/Locomotion/JT_Mid_F_Gun_Walk_Loop_RF.JT_Mid_F_Gun_Walk_Loop_RF'",
   "AnimSequence'/Game/Asset/Char/Monster/Common/Animation/JT_Mid_F/Sequence/Gun/Locomotion/JT_Mid_F_Gun_Walk_Loop_RB.JT_Mid_F_Gun_Walk_Loop_RB'"
 }
-T.RT_8 = {
+T.RT_6 = {
   [3] = true,
   [4] = true,
   [5] = true,
@@ -45,7 +37,7 @@ T.RT_8 = {
   [8] = true,
   [9] = true
 }
-T.RT_9 = {
+T.RT_7 = {
   [1] = true,
   [2] = true,
   [3] = true,
@@ -55,12 +47,12 @@ T.RT_9 = {
   [7] = true,
   [8] = true
 }
-T.RT_10 = {
+T.RT_8 = {
   [1] = "AnimSequence'/Game/Asset/Char/Monster/GR_Zhuoxin/Animation/Sequence/Locomotion/GR_Zhuoxin_FightIdle.GR_Zhuoxin_FightIdle'",
   [2] = "AnimSequence'/Game/Asset/Char/Monster/GR_Zhuoxin/Animation/Sequence/Locomotion/GR_Zhuoxin_Walk_Loop_F.GR_Zhuoxin_Walk_Loop_F'",
   [3] = "AnimSequence'/Game/Asset/Char/Monster/GR_Zhuoxin/Animation/Sequence/Locomotion/GR_Zhuoxin_Run_Loop.GR_Zhuoxin_Run_Loop'"
 }
-T.RT_11 = {
+T.RT_9 = {
   [1] = true,
   [2] = true,
   [3] = true,
@@ -69,15 +61,18 @@ T.RT_11 = {
   [6] = true,
   [7] = true
 }
-T.RT_12 = {
+T.RT_10 = {
   [1] = "AnimSequence'/Game/Asset/Char/Monster/Common/Animation/JT_Mid_F/Sequence/Gun/Locomotion/JT_Mid_F_Gun_FightIdle.JT_Mid_F_Gun_FightIdle'",
   [3] = "AnimSequence'/Game/Asset/Char/Monster/Common/Animation/JT_Mid_F/Sequence/Gun/Locomotion/JT_Mid_F_Gun_Run_Loop.JT_Mid_F_Gun_Run_Loop'"
 }
-T.RT_13 = {
+T.RT_11 = {
+  [1] = true
+}
+T.RT_12 = {
   [1] = "AnimSequence'/Game/Asset/Char/Monster/Common/Animation/JT_Mid_M/Sequence/Single/Locomotion/JT_Mid_M_Single_FightIdle.JT_Mid_M_Single_FightIdle'",
   [3] = "AnimSequence'/Game/Asset/Char/Monster/JT_Pizhuo/Animation/Sequence/Locomotion/JT_Pizhuo_Run_Loop.JT_Pizhuo_Run_Loop'"
 }
-T.RT_14 = {
+T.RT_13 = {
   "AnimSequence'/Game/Asset/Char/Monster/JT_Pizhuo/Animation/Sequence/Locomotion/JT_Pizhuo_Walk_Loop_F.JT_Pizhuo_Walk_Loop_F'",
   "AnimSequence'/Game/Asset/Char/Monster/JT_Pizhuo/Animation/Sequence/Locomotion/JT_Pizhuo_Walk_Loop_B.JT_Pizhuo_Walk_Loop_B'",
   "AnimSequence'/Game/Asset/Char/Monster/JT_Pizhuo/Animation/Sequence/Locomotion/JT_Pizhuo_Walk_Loop_L.JT_Pizhuo_Walk_Loop_L'",
@@ -87,7 +82,7 @@ T.RT_14 = {
   "AnimSequence'/Game/Asset/Char/Monster/JT_Pizhuo/Animation/Sequence/Locomotion/JT_Pizhuo_Walk_Loop_RF.JT_Pizhuo_Walk_Loop_RF'",
   "AnimSequence'/Game/Asset/Char/Monster/JT_Pizhuo/Animation/Sequence/Locomotion/JT_Pizhuo_Walk_Loop_RB.JT_Pizhuo_Walk_Loop_RB'"
 }
-T.RT_15 = {
+T.RT_14 = {
   [4] = "AnimMontage'/Game/Asset/Char/Monster/JT_Pizhuo/Animation/Montage/Combat/Hit/JT_Pizhuo_Die_Montage.JT_Pizhuo_Die_Montage'",
   [5] = "AnimMontage'/Game/Asset/Char/Monster/JT_Pizhuo/Animation/Montage/Combat/Skill/JT_Pizhuo_Attack01_Montage.JT_Pizhuo_Attack01_Montage'",
   [6] = "AnimMontage'/Game/Asset/Char/Monster/JT_Pizhuo/Animation/Montage/Combat/Skill/JT_Pizhuo_Attack02_Montage.JT_Pizhuo_Attack02_Montage'",
@@ -100,7 +95,7 @@ T.RT_15 = {
   [13] = "AnimMontage'/Game/Asset/Char/Monster/JT_Pizhuo/Animation/Montage/Combat/Hit/JT_Pizhuo_GetUpBack_Montage.JT_Pizhuo_GetUpBack_Montage'",
   [14] = "AnimMontage'/Game/Asset/Char/Monster/JT_Pizhuo/Animation/Montage/Combat/Hit/JT_Pizhuo_GetUpFront_Montage.JT_Pizhuo_GetUpFront_Montage'"
 }
-T.RT_16 = {
+T.RT_15 = {
   [2] = true,
   [4] = true,
   [5] = true,
@@ -110,7 +105,7 @@ T.RT_16 = {
   [9] = true,
   [10] = true
 }
-T.RT_17 = {
+T.RT_16 = {
   "AnimSequence'/Game/Asset/Char/Monster/Common/Animation/JT_Mid_M/Sequence/Gun/Locomotion/JT_Mid_M_Gun_Walk_Loop_F.JT_Mid_M_Gun_Walk_Loop_F'",
   "AnimSequence'/Game/Asset/Char/Monster/Common/Animation/JT_Mid_M/Sequence/Gun/Locomotion/JT_Mid_M_Gun_Walk_Loop_B.JT_Mid_M_Gun_Walk_Loop_B'",
   "AnimSequence'/Game/Asset/Char/Monster/Common/Animation/JT_Mid_M/Sequence/Gun/Locomotion/JT_Mid_M_Gun_Walk_Loop_L.JT_Mid_M_Gun_Walk_Loop_L'",
@@ -120,19 +115,19 @@ T.RT_17 = {
   "AnimSequence'/Game/Asset/Char/Monster/Common/Animation/JT_Mid_M/Sequence/Gun/Locomotion/JT_Mid_M_Gun_Walk_Loop_LB.JT_Mid_M_Gun_Walk_Loop_LB'",
   "AnimSequence'/Game/Asset/Char/Monster/Common/Animation/JT_Mid_M/Sequence/Gun/Locomotion/JT_Mid_M_Gun_Walk_Loop_RB.JT_Mid_M_Gun_Walk_Loop_RB'"
 }
-T.RT_18 = {
+T.RT_17 = {
   [1] = true,
   [2] = true
 }
-T.RT_19 = {
+T.RT_18 = {
   [1] = "AnimSequence'/Game/Asset/Char/Monster/Common/Animation/Mon_Mage/Sequence/Locomotion/Mon_Mage_FightIdle.Mon_Mage_FightIdle'",
   [3] = "AnimSequence'/Game/Asset/Char/Monster/Common/Animation/JH_Mid_F/Sequence/Single/Locomotion/JH_Mid_F_Single_Run_Loop_F.JH_Mid_F_Single_Run_Loop_F'"
 }
-T.RT_20 = {
+T.RT_19 = {
   [1] = "AnimSequence'/Game/Asset/Char/Monster/Animal06_Cuiping/Animation/Sequence/Locomotion/Mon_Cuiping_Idle.Mon_Cuiping_Idle'",
   [3] = "AnimSequence'/Game/Asset/Char/Monster/Animal06_Cuiping/Animation/Sequence/Locomotion/Mon_Cuiping_Walk.Mon_Cuiping_Walk'"
 }
-T.RT_21 = {
+T.RT_20 = {
   [4] = "AnimMontage'/Game/Asset/Char/Monster/Animal06_Cuiping/Animation/Montage/Combat/Hit/Mon_Cuiping_Die_Montage.Mon_Cuiping_Die_Montage'"
 }
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
@@ -147,38 +142,16 @@ return ReadOnly("AnimCacheMap", {
       [1] = "AnimSequence'/Game/Asset/Char/Monster/Common/Animation/JT_Mid_M/Sequence/Gun/Locomotion/JT_Mid_M_Gun_FightIdle.JT_Mid_M_Gun_FightIdle'",
       [3] = "AnimSequence'/Game/Asset/Char/Monster/Common/Animation/JT_Mid_M/Sequence/Gun/Locomotion/JT_Mid_M_Gun_Run_Loop_F.JT_Mid_M_Gun_Run_Loop_F'"
     },
-    EightDirectionMove = T.RT_17,
+    EightDirectionMove = T.RT_16,
     MonModelId = 99,
     MontagePath = {
       [4] = "AnimMontage'/Game/Asset/Char/Monster/JT_Ranger/Animation/Montage/Combat/Hit/JT_Ranger_Die_Montage.JT_Ranger_Die_Montage'",
       [5] = "AnimMontage'/Game/Asset/Char/Monster/JT_Ranger/Animation/Montage/Combat/Skill/JT_Ranger_Attack01_Montage.JT_Ranger_Attack01_Montage'"
     },
-    bBlendLowerBody = T.RT_1
-  },
-  [210101] = {
-    AnimPath = {
-      [1] = "AnimSequence'/Game/Asset/Char/Player/Char005_Shuimu/Animation/Summon/Sequence/Shuimu_Summon_Idle.Shuimu_Summon_Idle'"
-    },
-    MonModelId = 210101,
-    MontagePath = {
-      [5] = "AnimMontage'/Game/Asset/Char/Player/Char005_Shuimu/Animation/Summon/Montage/Combat/Skill/Shuimu_Summon_Attack_Montage.Shuimu_Summon_Attack_Montage'"
-    },
-    bDisableRootMotion = T.RT_1
-  },
-  [230101] = {
-    AnimPath = {
-      [1] = "AnimSequence'/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Tentacle/Sequence/Zhangyu_Tentacle_Idle02.Zhangyu_Tentacle_Idle02'"
-    },
-    MonModelId = 230101,
-    MontagePath = {
-      [5] = "AnimMontage'/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Tentacle/Montage/Combat/Hit/Zhangyu_Tentacle_Die_Montage.Zhangyu_Tentacle_Die_Montage'",
-      [6] = "AnimMontage'/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Tentacle/Montage/Combat/Skill/Zhangyu_Tentacle_Attack01_Montage.Zhangyu_Tentacle_Attack01_Montage'",
-      [7] = "AnimMontage'/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Tentacle/Montage/Combat/Skill/Zhangyu_Tentacle_Attack02_Montage.Zhangyu_Tentacle_Attack02_Montage'"
-    },
-    bDisableRootMotion = T.RT_2
+    bBlendLowerBody = T.RT_11
   },
   [600101] = {
-    AnimPath = T.RT_3,
+    AnimPath = T.RT_1,
     MonModelId = 600101,
     MontagePath = {
       [4] = "AnimMontage'/Game/Asset/Char/Monster/GR_Jichong/Animation/Montage/Combat/Hit/GR_Jichong_Die_Montage.GR_Jichong_Die_Montage'",
@@ -192,12 +165,12 @@ return ReadOnly("AnimCacheMap", {
       [12] = "AnimMontage'/Game/Asset/Char/Monster/GR_Jichong/Animation/Montage/Combat/Hit/GR_Jichong_GetUpFront_Montage.GR_Jichong_GetUpFront_Montage'",
       [13] = "AnimMontage'/Game/Asset/Char/Monster/GR_Jichong/Animation/Montage/Combat/Skill/GR_Jichong_C01_Skill01_Montage.GR_Jichong_C01_Skill01_Montage'"
     },
-    bBlendLowerBody = T.RT_4,
-    bDisableRootMotion = T.RT_5
+    bBlendLowerBody = T.RT_2,
+    bDisableRootMotion = T.RT_3
   },
   [600201] = {
-    AnimPath = T.RT_6,
-    EightDirectionMove = T.RT_7,
+    AnimPath = T.RT_4,
+    EightDirectionMove = T.RT_5,
     MonModelId = 600201,
     MontagePath = {
       [4] = "AnimMontage'/Game/Asset/Char/Monster/GR_Youji/Animation/Montage/Combat/Hit/GR_Youji_Die_Montage.GR_Youji_Die_Montage'",
@@ -217,7 +190,7 @@ return ReadOnly("AnimCacheMap", {
       [3] = true,
       [9] = true
     },
-    bDisableRootMotion = T.RT_5
+    bDisableRootMotion = T.RT_3
   },
   [600301] = {
     AnimPath = {
@@ -237,8 +210,8 @@ return ReadOnly("AnimCacheMap", {
       [12] = "AnimMontage'/Game/Asset/Char/Monster/GR_Piaofu/Animation/Montage/Combat/Skill/GR_Piaofu_C01_Skill01_Montage.GR_Piaofu_C01_Skill01_Montage'",
       [13] = "AnimMontage'/Game/Asset/Char/Monster/GR_Piaofu/Animation/Montage/Combat/Skill/GR_Piaofu_Skill01_Montage.GR_Piaofu_Skill01_Montage'"
     },
-    bBlendLowerBody = T.RT_4,
-    bDisableRootMotion = T.RT_8
+    bBlendLowerBody = T.RT_2,
+    bDisableRootMotion = T.RT_6
   },
   [600401] = {
     AnimPath = {
@@ -266,7 +239,7 @@ return ReadOnly("AnimCacheMap", {
       [10] = "AnimMontage'/Game/Asset/Char/Monster/GR_Baotu/Animation/Montage/Combat/Hit/GR_Baotu_LightHit2_Montage.GR_Baotu_LightHit2_Montage'",
       [11] = "AnimMontage'/Game/Asset/Char/Monster/GR_Baotu/Animation/Montage/Combat/Hit/GR_Baotu_HeavyHit_Montage.GR_Baotu_HeavyHit_Montage'"
     },
-    bBlendLowerBody = T.RT_4,
+    bBlendLowerBody = T.RT_2,
     bDisableRootMotion = {
       [5] = true,
       [6] = true,
@@ -301,10 +274,10 @@ return ReadOnly("AnimCacheMap", {
       [11] = "AnimMontage'/Game/Asset/Char/Monster/GR_Banyun/Animation/Montage/Combat/Hit/GR_Banyun_GetUpBack_Montage.GR_Banyun_GetUpBack_Montage'",
       [12] = "AnimMontage'/Game/Asset/Char/Monster/GR_Banyun/Animation/Montage/Combat/Hit/GR_Banyun_GetUpFront_Montage.GR_Banyun_GetUpFront_Montage'"
     },
-    bDisableRootMotion = T.RT_9
+    bDisableRootMotion = T.RT_7
   },
   [600701] = {
-    AnimPath = T.RT_10,
+    AnimPath = T.RT_8,
     EightDirectionMove = {
       "AnimSequence'/Game/Asset/Char/Monster/GR_Zhuoxin/Animation/Sequence/Locomotion/GR_Zhuoxin_Walk_Loop_F.GR_Zhuoxin_Walk_Loop_F'",
       "AnimSequence'/Game/Asset/Char/Monster/GR_Zhuoxin/Animation/Sequence/Locomotion/GR_Zhuoxin_Walk_Loop_B.GR_Zhuoxin_Walk_Loop_B'",
@@ -326,10 +299,10 @@ return ReadOnly("AnimCacheMap", {
       [10] = "AnimMontage'/Game/Asset/Char/Monster/GR_Zhuoxin/Animation/Montage/Combat/Hit/GR_Zhuoxin_GetUpBack_Montage.GR_Zhuoxin_GetUpBack_Montage'",
       [11] = "AnimMontage'/Game/Asset/Char/Monster/GR_Zhuoxin/Animation/Montage/Combat/Hit/GR_Zhuoxin_GetUpFront_Montage.GR_Zhuoxin_GetUpFront_Montage'"
     },
-    bDisableRootMotion = T.RT_11
+    bDisableRootMotion = T.RT_9
   },
   [601501] = {
-    AnimPath = T.RT_10,
+    AnimPath = T.RT_8,
     MonModelId = 601501,
     MontagePath = {
       [4] = "AnimMontage'/Game/Asset/Char/Monster/GR_Fangjin/Animation/Montage/Combat/Hit/GR_Fangjin_Die_Montage.GR_Fangjin_Die_Montage'",
@@ -341,11 +314,11 @@ return ReadOnly("AnimCacheMap", {
       [10] = "AnimMontage'/Game/Asset/Char/Monster/GR_Fangjin/Animation/Montage/Combat/Hit/GR_Fangjin_GetUpFront_Montage.GR_Fangjin_GetUpFront_Montage'",
       [11] = "AnimMontage'/Game/Asset/Char/Monster/GR_Fangjin/Animation/Montage/Combat/Hit/GR_Fangjin_GetUpBack_Montage.GR_Fangjin_GetUpBack_Montage'"
     },
-    bDisableRootMotion = T.RT_11
+    bDisableRootMotion = T.RT_9
   },
   [601601] = {
-    AnimPath = T.RT_6,
-    EightDirectionMove = T.RT_7,
+    AnimPath = T.RT_4,
+    EightDirectionMove = T.RT_5,
     MonModelId = 601601,
     MontagePath = {
       [4] = "AnimMontage'/Game/Asset/Char/Monster/GR_Eshi/Animation/Montage/Combat/Hit/GR_Eshi_Die_Montage.GR_Eshi_Die_Montage'",
@@ -360,7 +333,11 @@ return ReadOnly("AnimCacheMap", {
       [14] = "AnimMontage'/Game/Asset/Char/Monster/GR_Eshi/Animation/Montage/Combat/Hit/GR_Eshi_GetUpBack_Montage.GR_Eshi_GetUpBack_Montage'",
       [15] = "AnimMontage'/Game/Asset/Char/Monster/GR_Eshi/Animation/Montage/Combat/Hit/GR_Eshi_GetUpFront_Montage.GR_Eshi_GetUpFront_Montage'"
     },
-    bBlendLowerBody = T.RT_2,
+    bBlendLowerBody = {
+      [1] = true,
+      [2] = true,
+      [3] = true
+    },
     bDisableRootMotion = {
       [1] = true,
       [2] = true,
@@ -375,7 +352,7 @@ return ReadOnly("AnimCacheMap", {
     }
   },
   [601701] = {
-    AnimPath = T.RT_3,
+    AnimPath = T.RT_1,
     MonModelId = 601701,
     MontagePath = {
       [4] = "AnimMontage'/Game/Asset/Char/Monster/GR_Kuirui/Animation/Montage/Combat/Hit/GR_Kuirui_Die_Montage.GR_Kuirui_Die_Montage'",
@@ -401,8 +378,8 @@ return ReadOnly("AnimCacheMap", {
     }
   },
   [700101] = {
-    AnimPath = T.RT_12,
-    EightDirectionMove = T.RT_7,
+    AnimPath = T.RT_10,
+    EightDirectionMove = T.RT_5,
     MonModelId = 700101,
     MontagePath = {
       [4] = "AnimMontage'/Game/Asset/Char/Monster/JT_Juji/Animation/Montage/Combat/Hit/JT_Juji_Die_Montage.JT_Juji_Die_Montage'",
@@ -416,12 +393,12 @@ return ReadOnly("AnimCacheMap", {
       [12] = "AnimMontage'/Game/Asset/Char/Monster/JT_Juji/Animation/Montage/Combat/Hit/JT_Juji_GetUpFront_Montage.JT_Juji_GetUpFront_Montage'",
       [13] = "AnimMontage'/Game/Asset/Char/Monster/JT_Juji/Animation/Montage/Combat/Skill/JT_Juji_Skill01_Montage.JT_Juji_Skill01_Montage'"
     },
-    bBlendLowerBody = T.RT_1,
-    bDisableRootMotion = T.RT_8
+    bBlendLowerBody = T.RT_11,
+    bDisableRootMotion = T.RT_6
   },
   [700103] = {
-    AnimPath = T.RT_12,
-    EightDirectionMove = T.RT_7,
+    AnimPath = T.RT_10,
+    EightDirectionMove = T.RT_5,
     MonModelId = 700103,
     MontagePath = {
       [4] = "AnimMontage'/Game/Asset/Char/Monster/JT_Juji/Animation/Montage/Combat/Hit/JT_Juji_Die_Montage.JT_Juji_Die_Montage'",
@@ -434,7 +411,7 @@ return ReadOnly("AnimCacheMap", {
       [11] = "AnimMontage'/Game/Asset/Char/Monster/JT_Juji/Animation/Montage/Combat/Hit/JT_Juji_GetUpFront_Montage.JT_Juji_GetUpFront_Montage'",
       [12] = "AnimMontage'/Game/Asset/Char/Monster/JT_Juji/Animation/Montage/Combat/Skill/JT_Juji_Skill01_Montage.JT_Juji_Skill01_Montage'"
     },
-    bBlendLowerBody = T.RT_1,
+    bBlendLowerBody = T.RT_11,
     bDisableRootMotion = {
       [2] = true,
       [3] = true,
@@ -446,27 +423,27 @@ return ReadOnly("AnimCacheMap", {
     }
   },
   [700201] = {
-    AnimPath = T.RT_13,
-    EightDirectionMove = T.RT_14,
+    AnimPath = T.RT_12,
+    EightDirectionMove = T.RT_13,
     MonModelId = 700201,
-    MontagePath = T.RT_15,
-    bBlendLowerBody = T.RT_4,
-    bDisableRootMotion = T.RT_16
+    MontagePath = T.RT_14,
+    bBlendLowerBody = T.RT_2,
+    bDisableRootMotion = T.RT_15
   },
   [700204] = {
-    AnimPath = T.RT_13,
-    EightDirectionMove = T.RT_14,
+    AnimPath = T.RT_12,
+    EightDirectionMove = T.RT_13,
     MonModelId = 700204,
-    MontagePath = T.RT_15,
-    bBlendLowerBody = T.RT_4,
-    bDisableRootMotion = T.RT_16
+    MontagePath = T.RT_14,
+    bBlendLowerBody = T.RT_2,
+    bDisableRootMotion = T.RT_15
   },
   [700301] = {
     AnimPath = {
       [1] = "AnimSequence'/Game/Asset/Char/Monster/Common/Animation/JT_Mid_M/Sequence/Gun/Locomotion/JT_Mid_M_Gun_FightIdle.JT_Mid_M_Gun_FightIdle'",
       [3] = "AnimSequence'/Game/Asset/Char/Monster/Common/Animation/JT_Mid_M/Sequence/Gun/Locomotion/JT_Mid_M_Gun_Run_Loop.JT_Mid_M_Gun_Run_Loop'"
     },
-    EightDirectionMove = T.RT_17,
+    EightDirectionMove = T.RT_16,
     MonModelId = 700301,
     MontagePath = {
       [4] = "AnimMontage'/Game/Asset/Char/Monster/JT_Ranger/Animation/Montage/Combat/Hit/JT_Ranger_Die_Montage.JT_Ranger_Die_Montage'",
@@ -499,7 +476,7 @@ return ReadOnly("AnimCacheMap", {
       [1] = "AnimSequence'/Game/Asset/Char/Monster/Common/Animation/JH_Mid_F/Sequence/Gun/Locomotion/JH_Mid_F_Gun_FightIdle.JH_Mid_F_Gun_FightIdle'",
       [3] = "AnimSequence'/Game/Asset/Char/Monster/Common/Animation/JT_Mid_F/Sequence/Gun/Locomotion/JT_Mid_F_Gun_Run_Loop_F.JT_Mid_F_Gun_Run_Loop_F'"
     },
-    EightDirectionMove = T.RT_7,
+    EightDirectionMove = T.RT_5,
     MonModelId = 800101,
     MontagePath = {
       [4] = "AnimMontage'/Game/Asset/Char/Monster/JH_Zhishi/Animation/Montage/Combat/Hit/JH_Zhishi_Die_Montage.JH_Zhishi_Die_Montage'",
@@ -513,15 +490,15 @@ return ReadOnly("AnimCacheMap", {
       [12] = "AnimMontage'/Game/Asset/Char/Monster/JH_Zhishi/Animation/Montage/Combat/Hit/JH_Zhishi_GetUpBack_Montage.JH_Zhishi_GetUpBack_Montage'",
       [13] = "AnimMontage'/Game/Asset/Char/Monster/JH_Zhishi/Animation/Montage/Combat/Hit/JH_Zhishi_GetUpFront_Montage.JH_Zhishi_GetUpFront_Montage'"
     },
-    bBlendLowerBody = T.RT_18,
-    bDisableRootMotion = T.RT_8
+    bBlendLowerBody = T.RT_17,
+    bDisableRootMotion = T.RT_6
   },
   [800201] = {
     AnimPath = {
       [1] = "AnimSequence'/Game/Asset/Char/Monster/Common/Animation/JH_Mid_M/Sequence/Single/Locomotion/JH_Mid_M_Single_FightIdle.JH_Mid_M_Single_FightIdle'",
       [3] = "AnimSequence'/Game/Asset/Char/Monster/Common/Animation/JH_Mid_M/Sequence/Single/Locomotion/JH_Mid_M_Single_Run_Loop.JH_Mid_M_Single_Run_Loop'"
     },
-    EightDirectionMove = T.RT_14,
+    EightDirectionMove = T.RT_13,
     MonModelId = 800201,
     MontagePath = {
       [4] = "AnimMontage'/Game/Asset/Char/Monster/JH_Xianfeng/Animation/Montage/Combat/Hit/JH_Xianfeng_Die_Montage.JH_Xianfeng_Die_Montage'",
@@ -535,11 +512,11 @@ return ReadOnly("AnimCacheMap", {
       [12] = "AnimMontage'/Game/Asset/Char/Monster/JH_Xianfeng/Animation/Montage/Combat/Hit/JH_Xianfeng_GetUpFront_Montage.JH_Xianfeng_GetUpFront_Montage'",
       [13] = "AnimMontage'/Game/Asset/Char/Monster/JH_Xianfeng/Animation/Montage/Combat/Skill/JH_Xianfeng_Skill01_Montage.JH_Xianfeng_Skill01_Montage'"
     },
-    bDisableRootMotion = T.RT_9
+    bDisableRootMotion = T.RT_7
   },
   [800301] = {
-    AnimPath = T.RT_19,
-    EightDirectionMove = T.RT_14,
+    AnimPath = T.RT_18,
+    EightDirectionMove = T.RT_13,
     MonModelId = 800301,
     MontagePath = {
       [4] = "AnimMontage'/Game/Asset/Char/Monster/JH_Shenfu/Animation/Montage/Combat/Hit/JH_Shenfu_Die_Montage.JH_Shenfu_Die_Montage'",
@@ -568,7 +545,7 @@ return ReadOnly("AnimCacheMap", {
     }
   },
   [900102] = {
-    AnimPath = T.RT_13,
+    AnimPath = T.RT_12,
     MonModelId = 900102,
     MontagePath = {
       [4] = "AnimMontage'/Game/Asset/Char/Monster/SQ_Yinxie/Animation/Montage/Combat/Hit/SQ_Yinxie_Die_Montage.SQ_Yinxie_Die_Montage'",
@@ -592,8 +569,8 @@ return ReadOnly("AnimCacheMap", {
     }
   },
   [900201] = {
-    AnimPath = T.RT_12,
-    EightDirectionMove = T.RT_7,
+    AnimPath = T.RT_10,
+    EightDirectionMove = T.RT_5,
     MonModelId = 900201,
     MontagePath = {
       [4] = "AnimMontage'/Game/Asset/Char/Monster/SQ_Dufeng/Animation/Montage/Combat/Hit/SQ_Dufeng_Die_Montage.SQ_Dufeng_Die_Montage'",
@@ -605,11 +582,11 @@ return ReadOnly("AnimCacheMap", {
       [10] = "AnimMontage'/Game/Asset/Char/Monster/SQ_Dufeng/Animation/Montage/Combat/Hit/SQ_Dufeng_GetUpBack_Montage.SQ_Dufeng_GetUpBack_Montage'",
       [11] = "AnimMontage'/Game/Asset/Char/Monster/SQ_Dufeng/Animation/Montage/Combat/Hit/SQ_Dufeng_GetUpFront_Montage.SQ_Dufeng_GetUpFront_Montage'"
     },
-    bBlendLowerBody = T.RT_1,
-    bDisableRootMotion = T.RT_11
+    bBlendLowerBody = T.RT_11,
+    bDisableRootMotion = T.RT_9
   },
   [900701] = {
-    AnimPath = T.RT_19,
+    AnimPath = T.RT_18,
     MonModelId = 900701,
     MontagePath = {
       [4] = "AnimMontage'/Game/Asset/Char/Monster/SQ_Niaopao/Animation/Montage/Combat/Hit/SQ_Niaopao_Die_Montage.SQ_Niaopao_Die_Montage'",
@@ -647,7 +624,7 @@ return ReadOnly("AnimCacheMap", {
       [5] = "AnimMontage'/Game/Asset/Char/Monster/Animal04_Jiujiu/Animation/Montage/Combat/Skill/Mon_Jiujiu_Skill01_Montage.Mon_Jiujiu_Skill01_Montage'",
       [6] = "AnimMontage'/Game/Asset/Char/Monster/Animal04_Jiujiu/Animation/Montage/Combat/Skill/Mon_Jiujiu_Skilli02_Montage.Mon_Jiujiu_Skilli02_Montage'"
     },
-    bDisableRootMotion = T.RT_18
+    bDisableRootMotion = T.RT_17
   },
   [980501] = {
     AnimPath = {
@@ -661,17 +638,17 @@ return ReadOnly("AnimCacheMap", {
       [5] = "AnimMontage'/Game/Asset/Char/Monster/Animal05_Suoweng/Animation/Montage/Combat/Skill/Mon_Suoweng_Skill01_Montage.Mon_Suoweng_Skill01_Montage'",
       [6] = "AnimMontage'/Game/Asset/Char/Monster/Animal05_Suoweng/Animation/Montage/Combat/Skill/Mon_Suoweng_Skill02_Montage.Mon_Suoweng_Skill02_Montage'"
     },
-    bDisableRootMotion = T.RT_18
+    bDisableRootMotion = T.RT_17
   },
   [980601] = {
-    AnimPath = T.RT_20,
+    AnimPath = T.RT_19,
     MonModelId = 980601,
-    MontagePath = T.RT_21
+    MontagePath = T.RT_20
   },
   [980602] = {
-    AnimPath = T.RT_20,
+    AnimPath = T.RT_19,
     MonModelId = 980602,
-    MontagePath = T.RT_21
+    MontagePath = T.RT_20
   },
   [980701] = {
     AnimPath = {
@@ -685,7 +662,7 @@ return ReadOnly("AnimCacheMap", {
       [5] = "AnimMontage'/Game/Asset/Char/Monster/Animal07_Zhenzhu/Animation/Montage/Combat/Skill/Mon_Zhenzhu_Skill01_Montage.Mon_Zhenzhu_Skill01_Montage'",
       [6] = "AnimMontage'/Game/Asset/Char/Monster/Animal07_Zhenzhu/Animation/Montage/Combat/Skill/Mon_Zhenzhu_Skill02_Montage.Mon_Zhenzhu_Skill02_Montage'"
     },
-    bDisableRootMotion = T.RT_18
+    bDisableRootMotion = T.RT_17
   },
   [980801] = {
     AnimPath = {
@@ -699,6 +676,6 @@ return ReadOnly("AnimCacheMap", {
       [5] = "AnimMontage'/Game/Asset/Char/Monster/Animal08_Chihu/Animation/Montage/Combat/Skill/Mon_Chihu_Skill02_Montage.Mon_Chihu_Skill02_Montage'",
       [6] = "AnimMontage'/Game/Asset/Char/Monster/Animal08_Chihu/Animation/Montage/Skill/Mon_Chihu_Skill01_Montage.Mon_Chihu_Skill01_Montage'"
     },
-    bDisableRootMotion = T.RT_18
+    bDisableRootMotion = T.RT_17
   }
 })

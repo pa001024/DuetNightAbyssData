@@ -20,23 +20,25 @@ end
 
 function WBP_Battle_Fort_Base_C:OnLoaded(...)
   WBP_Battle_Fort_Base_C.Super.OnLoaded(self, ...)
-  self.HideUITable = {
-    Pos_Entry = 1,
-    Pos_Drops = 1,
-    Pos_SpecialDrops = 1,
-    Pos_NewMonster = 1,
-    Battle_Map = 1,
-    Btn_Esc = 1,
-    Btn_GuideBook = 1,
-    Group_ChatEntry = 1,
-    Buff = 1,
-    Char_Skill = 1,
-    Team = 1,
-    Chat_Entry = 1,
-    HBox = 1,
-    SizeBox_Map = 1
-  }
-  self.FortEid = (...)
+  if self.HideUITable == nil then
+    self.HideUITable = {
+      Pos_Entry = 1,
+      Pos_Drops = 1,
+      Pos_SpecialDrops = 1,
+      Pos_NewMonster = 1,
+      Battle_Map = 1,
+      Btn_Esc = 1,
+      Btn_GuideBook = 1,
+      Group_ChatEntry = 1,
+      Buff = 1,
+      Char_Skill = 1,
+      Team = 1,
+      Chat_Entry = 1,
+      HBox = 1,
+      SizeBox_Map = 1
+    }
+  end
+  self.FortEid, self.IsWeekly = ...
   self:InitInfo()
   self:CreateFortBackEntry()
   self:InitAim()
@@ -61,7 +63,7 @@ end
 function WBP_Battle_Fort_Base_C:OnPressQuit(UseLeaveBtn)
   if self.CanExcute then
     local GameMode = UE4.UGameplayStatics.GetGameMode(self)
-    if GameMode.EMGameState.RougeMiniGameProgressing then
+    if GameMode and GameMode.EMGameState.RougeMiniGameProgressing then
       for LevelName, SubGameMode in pairs(GameMode.SubGameModeInfo) do
         if SubGameMode.EndRougeMiniGame then
           local CommonDialogParams = {}
@@ -85,7 +87,11 @@ function WBP_Battle_Fort_Base_C:OnPressQuit(UseLeaveBtn)
           return
         end
       end
-      self.OwnerMechanism:Cancel()
+      if self.IsWeekly then
+        self.OwnerMechanism:EndInteractive(self.OwnerPlayer)
+      else
+        self.OwnerMechanism:Cancel()
+      end
     end
   end
 end
@@ -158,22 +164,23 @@ function WBP_Battle_Fort_Base_C:InitRoleSkillButton(Index)
     self["FireUI_" .. Index].Type = UE.ESkillType.Attack
     self["FireUI_" .. Index].SkillEnumId = ESkillName.Attack
     self["FireUI_" .. Index].SkillName = "Attack"
-    self["FireUI_" .. Index].IconPath = "/Game/UI/Texture/Dynamic/Atlas/Battle/T_Battle_FortFire01.T_Battle_FortFire01"
   elseif 2 == Index then
     self["FireUI_" .. Index].Type = UE.ESkillType.Shooting
     self["FireUI_" .. Index].SkillEnumId = ESkillName.Fire
     self["FireUI_" .. Index].SkillName = "Fire"
-    self["FireUI_" .. Index].IconPath = "/Game/UI/Texture/Dynamic/Atlas/Battle/T_Battle_FortFire02.T_Battle_FortFire02"
   end
-  local SkillImgIcon = LoadObject(self["FireUI_" .. Index].IconPath)
-  if IsValid(SkillImgIcon) then
-    self["FireUI_" .. Index].Icon_Skill:SetBrushResourceObject(SkillImgIcon)
-    if self["FireUI_" .. Index].VX_skillIcon then
-      local VXSkillMat = self["FireUI_" .. Index].VX_skillIcon:GetDynamicMaterial()
-      VXSkillMat:SetTextureParameterValue("Mask", SkillImgIcon)
+  self:AddTimer(0.05, function()
+    local SkillId = self.OwnerPlayer:GetSkillByType(self["FireUI_" .. Index].Type)
+    local SKillConfig = DataMgr.Skill[SkillId][1][0]
+    self["FireUI_" .. Index].IconPath = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_" .. SKillConfig.SkillBtnIcon
+    local SkillImgIcon = LoadObject(self["FireUI_" .. Index].IconPath)
+    if IsValid(SkillImgIcon) then
+      self["FireUI_" .. Index].Icon_Skill:SetBrushResourceObject(SkillImgIcon)
+      if self["FireUI_" .. Index].VX_skillIcon then
+        local VXSkillMat = self["FireUI_" .. Index].VX_skillIcon:GetDynamicMaterial()
+        VXSkillMat:SetTextureParameterValue("Mask", SkillImgIcon)
+      end
     end
-  end
-  self:AddTimer(0.01, function()
     self:RefreshRoleSkillButton(Index)
   end, false, 0, nil, true)
 end

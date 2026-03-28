@@ -29,6 +29,7 @@ function M:OnLoaded(...)
   self.MainTabMap = {}
   self.SubTabMap = {}
   self.bFilterOwned = false
+  self.bFilterWalnutOwned = false
   self:PlayAnimationReverse(self.Filtrate_Normal)
   self.Text_CountdownTime:SetVisibility(ESlateVisibility.Collapsed)
   local MainTabIdx, SubTabIdx, ShopItemId, ShopSystemName, CloseCallBack, ClsoeCallBackObj = ...
@@ -136,6 +137,10 @@ function M:Construct()
   self.CheckBox_Own:BindEventOnClicked({
     Inst = self,
     Func = self.OnClickFilterOwned
+  })
+  self.CheckBox_OwnUnderMax:BindEventOnClicked({
+    Inst = self,
+    Func = self.OnClickFilterWalnutOwned
   })
   self.Text_ShopItemEmpty:SetText(GText("UI_SHOP_SOLDOUT"))
   self.Text_None:SetText(GText("UI_SHOP_NOTOWNED"))
@@ -257,6 +262,7 @@ function M:InitShopTabInfo(MainTabIdx, SubTabIdx)
     self.Common_SortList_PC
   })
   self:AddLSFocusTarget(self.CheckBox_Own.Com_KeyImg, self.CheckBox_Own, "X", true)
+  self:AddLSFocusTarget(self.CheckBox_OwnUnderMax.Com_KeyImg, self.CheckBox_OwnUnderMax, "Y", true)
   self:AddTabReddotListen()
 end
 
@@ -401,6 +407,22 @@ function M:RefreshSubTabData(SubTabData)
   self.Group_Bottom:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self.Group_BG:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self.CheckBox_Own:ForbidBtn(false)
+  self.Group_OwnUnderMax:SetVisibility(ESlateVisibility.Collapsed)
+  if self.TabType == "CharWalnut" then
+    self.Group_OwnUnderMax:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.Text_None_1:SetText(GText("UI_ShopFilter_MaxCharWalnut"))
+    self.CheckBox_OwnUnderMax:ForbidBtn(false)
+    if self.GameInputModeSubsystem and self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad then
+      self.CheckBox_OwnUnderMax.Com_KeyImg:SetVisibility(ESlateVisibility.Visible)
+    end
+  elseif self.TabType == "WeaponWalnut" then
+    self.Group_OwnUnderMax:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.CheckBox_OwnUnderMax:ForbidBtn(false)
+    self.Text_None_1:SetText(GText("UI_ShopFilter_MaxWeaponWalnut"))
+    if self.GameInputModeSubsystem and self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad then
+      self.CheckBox_OwnUnderMax.Com_KeyImg:SetVisibility(ESlateVisibility.Visible)
+    end
+  end
   self:SetAllowedToShowHideUI(false)
   self.Group_RecommendAnchor:SetVisibility(ESlateVisibility.Collapsed)
   if self.Common_Tab and self.Common_Tab.WBP_Com_Tab_ResourceBar then
@@ -424,6 +446,7 @@ function M:RefreshSubTabData(SubTabData)
   end
   if SubTabData.TabType == "Pay" then
     self.CheckBox_Own:ForbidBtn(true)
+    self.CheckBox_OwnUnderMax:ForbidBtn(true)
     self.Group_Bottom:SetVisibility(ESlateVisibility.Collapsed)
     self:InitRechargePage(SubTabData)
     return
@@ -435,6 +458,7 @@ function M:RefreshSubTabData(SubTabData)
   end
   if SubTabData.TabType == "Banner" then
     self.CheckBox_Own:ForbidBtn(true)
+    self.CheckBox_OwnUnderMax:ForbidBtn(true)
     self.Group_Bottom:SetVisibility(ESlateVisibility.Collapsed)
     self.Group_Item:SetVisibility(ESlateVisibility.Collapsed)
     if self.BannerIdMap then
@@ -459,6 +483,7 @@ function M:RefreshSubTabData(SubTabData)
   end
   if SubTabData.TabType == "Complex" then
     self.CheckBox_Own:ForbidBtn(true)
+    self.CheckBox_OwnUnderMax:ForbidBtn(true)
     self.Group_Bottom:SetVisibility(ESlateVisibility.Collapsed)
     self.IsJumpShopPage = true
     self:InitJumpShopPage()
@@ -550,110 +575,291 @@ function M:OnUserScrolled()
   UIUtils.UpdateScrollBoxArrow(self.ScrollBox_Recommend, self.Group_ListTop, self.Group_ListBottom, 100)
 end
 
+local SMALL_BANNER_WIDGET_NAMES = {
+  "Shop_RecommendBannerSmall01",
+  "Shop_RecommendBannerSmall02",
+  "Shop_RecommendBannerSmall03",
+  "Shop_RecommendBannerSmall04"
+}
+local NAVIGATION_RULES = {
+  [4] = {
+    {
+      widget = "Shop_RecommendBanner",
+      dir = EUINavigation.Down,
+      target = "Shop_RecommendBannerSmall01"
+    },
+    {
+      widget = "Shop_Recommend_ListItem",
+      dir = EUINavigation.Up,
+      target = "Shop_RecommendBannerSmall03"
+    },
+    {
+      widget = "Shop_RecommendBannerSmall01",
+      dir = EUINavigation.Down,
+      target = "Shop_RecommendBannerSmall03"
+    },
+    {
+      widget = "Shop_RecommendBannerSmall02",
+      dir = EUINavigation.Down,
+      target = "Shop_RecommendBannerSmall04"
+    }
+  },
+  [3] = {
+    {
+      widget = "Shop_RecommendBanner",
+      dir = EUINavigation.Down,
+      target = "Shop_RecommendBannerSmall01"
+    },
+    {
+      widget = "Shop_Recommend_ListItem",
+      dir = EUINavigation.Up,
+      target = "Shop_RecommendBannerSmall01"
+    },
+    {
+      widget = "Shop_RecommendBannerSmall01",
+      dir = EUINavigation.Down,
+      target = "Shop_Recommend_ListItem"
+    },
+    {
+      widget = "Shop_RecommendBannerSmall02",
+      dir = EUINavigation.Down,
+      target = "Shop_Recommend_ListItem"
+    },
+    hideWidgets = {
+      "Shop_RecommendBannerSmall03",
+      "Shop_RecommendBannerSmall04"
+    },
+    showListItem = true
+  },
+  [1] = {
+    {
+      widget = "Shop_RecommendBanner",
+      dir = EUINavigation.Down,
+      target = "Shop_Recommend_ListItem"
+    },
+    hideWidgets = {
+      "Shop_RecommendBannerSmall01",
+      "Shop_RecommendBannerSmall02",
+      "Shop_RecommendBannerSmall03",
+      "Shop_RecommendBannerSmall04"
+    },
+    showListItem = true
+  }
+}
+local UP_TO_SWITCH_WIDGET_MAP = {
+  [1] = "Shop_Recommend_ListItem",
+  [2] = "Shop_RecommendBannerSmall01",
+  [3] = "Shop_Recommend_ListItem",
+  [4] = "Shop_RecommendBannerSmall04"
+}
+
+function M:GetSmallBannerWidget(index)
+  return self[SMALL_BANNER_WIDGET_NAMES[index]]
+end
+
+function M:CreateBannerContent(bannerId, clickCallback, parent, scrollboxIndex)
+  local Content = NewObject(UIUtils.GetCommonItemContentClass())
+  Content.BannerId = bannerId
+  Content.ClickEvent = {
+    Obj = self,
+    Callback = clickCallback or self.OnBannerItemClick
+  }
+  Content.VirtualClickCallback = self.HandleVirtualClickInGamePad
+  Content.OnKeyDownCallBack = self.HandleOnKeyDownCallBack
+  Content.SetListItemCallBack = self.HandleSetListItemCallBack
+  Content.Parent = parent or self
+  Content.ScrollboxIndex = scrollboxIndex
+  return Content
+end
+
+function M:GetBannerPath()
+  local isMobile = CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile"
+  return isMobile and CommonConst.ShopBannerMobilePath or CommonConst.ShopBannerPCPath
+end
+
+function M:InitSmallBanners(SmallBannerData)
+  if not SmallBannerData then
+    self.Group_RecommendSmall:SetVisibility(ESlateVisibility.Collapsed)
+    return
+  end
+  local MonthBannerData
+  for index, Data in ipairs(SmallBannerData) do
+    if index > #SMALL_BANNER_WIDGET_NAMES then
+      break
+    end
+    local Widget = self:GetSmallBannerWidget(index)
+    if Widget then
+      Widget:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      Widget:InitItemInfo(Data)
+      Widget:BindBtnClickEvent(self, self.OnBannerItemClick)
+      Widget:PlayAnimation(Widget.Normal)
+      Widget.BannerId = Data.Id
+    end
+    if 1 == Data.BannerType then
+      MonthBannerData = Data
+    end
+  end
+  for i = #SmallBannerData + 1, #SMALL_BANNER_WIDGET_NAMES do
+    local Widget = self:GetSmallBannerWidget(i)
+    if Widget then
+      Widget:SetVisibility(ESlateVisibility.Collapsed)
+    end
+  end
+  if MonthBannerData then
+    self:InitMonthBanner(MonthBannerData)
+  end
+  self.Shop_Recommend_ListItem:PlayAnimation(self.Shop_Recommend_ListItem.Normal)
+  self.Shop_Recommend_ListItem.bSelected = false
+  self.Group_RecommendSmall:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  self:SetupSmallBannerNavigation(#SmallBannerData)
+end
+
+function M:InitMonthBanner(MonthBannerData)
+  local Content = self:CreateBannerContent(MonthBannerData.Id)
+  self.Shop_Recommend_ListItem:OnListItemObjectSet(Content)
+  self.Shop_Recommend_ListItem:SetVisibility(ESlateVisibility.Collapsed)
+end
+
+function M:SetupSmallBannerNavigation(smallBannerCount)
+  local rules = NAVIGATION_RULES[smallBannerCount]
+  if not rules then
+    if 2 == smallBannerCount then
+      self.Shop_RecommendBannerSmall03:SetVisibility(ESlateVisibility.Collapsed)
+      self.Shop_RecommendBannerSmall04:SetVisibility(ESlateVisibility.Collapsed)
+    end
+    return
+  end
+  for _, rule in ipairs(rules) do
+    if rule.widget and rule.target then
+      self[rule.widget]:SetNavigationRuleExplicit(rule.dir, self[rule.target])
+    end
+  end
+  if rules.hideWidgets then
+    for _, widgetName in ipairs(rules.hideWidgets) do
+      if self[widgetName] then
+        self[widgetName]:SetVisibility(ESlateVisibility.Collapsed)
+      end
+    end
+  end
+  if rules.showListItem then
+    self.Shop_Recommend_ListItem:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  end
+end
+
+function M:ClearScrollBoxChildren()
+  local children = self.ScrollBox_Recommend:GetAllChildren():ToTable()
+  if not children then
+    return
+  end
+  for _, child in ipairs(children) do
+    if child and child.ScrollboxIndex and child.ScrollboxIndex >= 1 then
+      child:RemoveFromParent()
+    end
+  end
+end
+
+function M:InitSwitchBannerList(Path)
+  if not self.SwitchBannerList or not next(self.SwitchBannerList) then
+    self.Shop_RecommendBanner:SetVisibility(ESlateVisibility.Collapsed)
+    return false
+  end
+  self.Shop_RecommendBanner:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  self.Shop_RecommendBanner.CurrentIndex = nil
+  self.LastWidgetContent = nil
+  self.Shop_RecommendBanner:InitItemInfo()
+  self.Shop_RecommendBanner:BindBtnEvent(self, self.OnSwitchBannerChanged)
+  self.Shop_RecommendBanner:BindBtnClickEvent(self, self.OnSwitchBannerItemClick)
+  self.Shop_RecommendBanner.ScrollboxIndex = 0
+  local BannerPageWidget = UIManager(self):CreateWidget(Path .. "WBP_Shop_Recommend_Common")
+  if BannerPageWidget then
+    for _, BannerInfo in ipairs(self.SwitchBannerList) do
+      self.BannerIdMap[BannerInfo.Id] = BannerPageWidget
+    end
+    BannerPageWidget:SetVisibility(ESlateVisibility.Collapsed)
+    self.Group_RecommendAnchor:AddChild(BannerPageWidget)
+    local Slot = UE4.UWidgetLayoutLibrary.SlotAsOverlaySlot(BannerPageWidget)
+    Slot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
+    Slot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
+  end
+  for _, BannerInfo in ipairs(self.SwitchBannerList) do
+    if BannerInfo.Id == self.SelectBannerId then
+      self.PendingClickBannerId = BannerInfo.Id
+      self.Shop_RecommendBanner:OnItemClick()
+      return true
+    end
+  end
+  return false
+end
+
+function M:CreateBannerPageWidget(BannerInfo, Path)
+  local BannerBPPath = Path .. BannerInfo.Bp
+  local BannerPageWidget = UIManager(self):CreateWidget(BannerBPPath)
+  if not BannerPageWidget then
+    return
+  end
+  self.BannerIdMap[BannerInfo.Id] = BannerPageWidget
+  BannerPageWidget:SetVisibility(ESlateVisibility.Collapsed)
+  self.Group_RecommendAnchor:AddChild(BannerPageWidget)
+  local Slot = UE4.UWidgetLayoutLibrary.SlotAsOverlaySlot(BannerPageWidget)
+  Slot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
+  Slot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
+end
+
+function M:InitNormalBannerList(BannerData, Path, SmallBannerData)
+  self.BannerBpMap = {}
+  for index, BannerInfo in ipairs(BannerData) do
+    local Content = self:CreateBannerContent(BannerInfo.Id, nil, self, index)
+    Content.bSelected = self.SelectBannerId == BannerInfo.Id
+    if 1 == index then
+      local SmallBannerIndex = #SmallBannerData
+      if SmallBannerIndex > #SMALL_BANNER_WIDGET_NAMES then
+        SmallBannerIndex = #SMALL_BANNER_WIDGET_NAMES
+      end
+      Content.UpToSwitchWidget = SmallBannerData and self[UP_TO_SWITCH_WIDGET_MAP[SmallBannerIndex]] or self.Shop_RecommendBanner
+    end
+    if self.SelectBannerId == BannerInfo.Id and not self.BannerIdMap[BannerInfo.Id] then
+      self:CreateBannerPageWidget(BannerInfo, Path)
+    end
+    local BannerItemWidget = UIManager(self):CreateWidget("WidgetBlueprint'/Game/UI/WBP/Shop/Widget/Recommend/WBP_Shop_Recommend_ListItem.WBP_Shop_Recommend_ListItem'")
+    self.ScrollBox_Recommend:AddChild(BannerItemWidget)
+    BannerItemWidget:OnListItemObjectSet(Content)
+  end
+  if self.SelectBannerId then
+    local bannerTab = DataMgr.ShopBannerTab[self.SelectBannerId]
+    if bannerTab then
+      self.BannerBpMap[bannerTab.Bp] = self.BannerIdMap[self.SelectBannerId]
+    end
+  end
+end
+
 function M:InitBannerPage(SelectBannerId)
-  local LastSelectBanner = self.BannerIdMap and self.BannerIdMap[self.SelectBannerId]
   self.BannerIdMap = {}
   self.SwitchBannerList = ShopUtils:GetBannerInfo(true)
-  local BannerData, BannerIdDict = ShopUtils:GetBannerInfo()
+  local BannerData, BannerIdDict, SmallBannerData = ShopUtils:GetBannerInfo()
+  self:InitSmallBanners(SmallBannerData)
   if SelectBannerId then
     self.SelectBannerId = SelectBannerId
   elseif not BannerIdDict[self.SelectBannerId] then
     self.SelectBannerId = nil
   end
-  local ScrollBoxChildrenTable = self.ScrollBox_Recommend:GetAllChildren():ToTable()
-  if ScrollBoxChildrenTable and next(ScrollBoxChildrenTable) then
-    for _, value in ipairs(ScrollBoxChildrenTable) do
-      if value and value.ScrollboxIndex and value.ScrollboxIndex >= 1 then
-        value:RemoveFromParent()
-      end
-    end
-  end
   if not self.SelectBannerId then
-    if next(self.SwitchBannerList) then
+    if self.SwitchBannerList and next(self.SwitchBannerList) then
       self.SelectBannerId = self.SwitchBannerList[1].Id
     else
       assert(BannerData[1], "有效Banner数量不足一个")
       self.SelectBannerId = BannerData[1].Id
     end
   end
-  local Path
-  if CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" then
-    Path = CommonConst.ShopBannerMobilePath
-  else
-    Path = CommonConst.ShopBannerPCPath
-  end
-  local bSwitchBanner = false
-  if self.SwitchBannerList and next(self.SwitchBannerList) then
-    self.Shop_RecommendBanner:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    self.Shop_RecommendBanner.CurrentIndex = nil
-    self.LastWidgetContent = nil
-    self.Shop_RecommendBanner:InitItemInfo()
-    self.Shop_RecommendBanner:BindBtnEvent(self, self.OnSwitchBannerChanged)
-    self.Shop_RecommendBanner:BindBtnClickEvent(self, self.OnSwitchBannerItemClick)
-    local BannerBPPath = Path .. "WBP_Shop_Recommend_Common"
-    local BannerPageWidget = UIManager(self):CreateWidget(BannerBPPath)
-    if BannerPageWidget then
-      for _, BannerInfo in ipairs(self.SwitchBannerList) do
-        if BannerInfo.Id == self.SelectBannerId then
-          bSwitchBanner = true
-        end
-        self.BannerIdMap[BannerInfo.Id] = BannerPageWidget
-      end
-      BannerPageWidget:SetVisibility(ESlateVisibility.Collapsed)
-      self.Group_RecommendAnchor:AddChild(BannerPageWidget)
-      local Slot = UE4.UWidgetLayoutLibrary.SlotAsOverlaySlot(BannerPageWidget)
-      Slot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
-      Slot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
-    end
-    self.Shop_RecommendBanner.ScrollboxIndex = 0
-  else
-    self.Shop_RecommendBanner:SetVisibility(ESlateVisibility.Collapsed)
-  end
+  self:ClearScrollBoxChildren()
+  local Path = self:GetBannerPath()
+  local bSwitchBanner = self:InitSwitchBannerList(Path)
   self.BannerList = ShopUtils:GetBannerInfo()
   self.VB_ItemList:SetVisibility(ESlateVisibility.Collapsed)
   self.Group_Recommend:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self.Group_RecommendAnchor:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-  self.BannerBpMap = {}
-  for i, BannerInfo in ipairs(BannerData) do
-    local Content = NewObject(UIUtils.GetCommonItemContentClass())
-    Content.BannerId = BannerInfo.Id
-    Content.ClickEvent = {
-      Obj = self,
-      Callback = self.OnBannerItemClick
-    }
-    Content.VirtualClickCallback = self.HandleVirtualClickInGamePad
-    Content.OnKeyDownCallBack = self.HandleOnKeyDownCallBack
-    Content.SetListItemCallBack = self.HandleSetListItemCallBack
-    Content.Parent = self
-    Content.ScrollboxIndex = i
-    if 1 == i then
-      Content.UpToSwitchWidget = self.Shop_RecommendBanner
-    end
-    if self.SelectBannerId == BannerInfo.Id then
-      Content.bSelected = true
-    else
-      Content.bSelected = false
-    end
-    if self.SelectBannerId == BannerInfo.Id and not self.BannerIdMap[BannerInfo.Id] then
-      local BannerBPPath = Path .. BannerInfo.Bp
-      local BannerPageWidget = UIManager(self):CreateWidget(BannerBPPath)
-      if BannerPageWidget then
-        self.BannerIdMap[BannerInfo.Id] = BannerPageWidget
-        self.BannerIdMap[BannerInfo.Id]:SetVisibility(ESlateVisibility.Collapsed)
-        self.Group_RecommendAnchor:AddChild(self.BannerIdMap[BannerInfo.Id])
-        local Slot = UE4.UWidgetLayoutLibrary.SlotAsOverlaySlot(self.BannerIdMap[BannerInfo.Id])
-        Slot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
-        Slot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
-      end
-    end
-    local BannerItemWidget = UIManager(self):CreateWidget("WidgetBlueprint'/Game/UI/WBP/Shop/Widget/Recommend/WBP_Shop_Recommend_ListItem.WBP_Shop_Recommend_ListItem'")
-    BannerItemWidget:OnListItemObjectSet(Content)
-    self.ScrollBox_Recommend:AddChild(BannerItemWidget)
-  end
-  self.BannerBpMap[DataMgr.ShopBannerTab[self.SelectBannerId].Bp] = self.BannerIdMap[self.SelectBannerId]
+  self:InitNormalBannerList(BannerData, Path, SmallBannerData)
   if bSwitchBanner and not CommonUtils:IfExistSystemGuideUI(self) then
     self.Shop_RecommendBanner:SetFocus()
-  elseif not CommonUtils:IfExistSystemGuideUI(self) then
   end
   self:AddTimer(0.5, function()
     self:OnUserScrolled()
@@ -1004,10 +1210,20 @@ function M:InitGamepadView()
       {Type = "Img", ImgShortPath = "X"}
     }
   })
+  self.CheckBox_OwnUnderMax.Com_KeyImg:SetVisibility(ESlateVisibility.Collapsed)
+  if self.TabType == "Mod" then
+    self.CheckBox_OwnUnderMax.Com_KeyImg:SetVisibility(ESlateVisibility.Visible)
+    self.CheckBox_OwnUnderMax.Com_KeyImg:CreateCommonKey({
+      KeyInfoList = {
+        {Type = "Img", ImgShortPath = "Y"}
+      }
+    })
+  end
 end
 
 function M:InitKeyboardView()
   self.CheckBox_Own.Com_KeyImg:SetVisibility(ESlateVisibility.Collapsed)
+  self.CheckBox_OwnUnderMax.Com_KeyImg:SetVisibility(ESlateVisibility.Collapsed)
 end
 
 function M:OnSpaceBarDown()
@@ -1462,7 +1678,7 @@ function M:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
         return UIUtils.Unhandled
       end
       local DeltaX = UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent) * 10
-      self.ActorController:OnDragging({X = DeltaX})
+      self.ActorController:OnDragViewActor({X = DeltaX})
     end
     return UIUtils.Handled
   end
@@ -1744,6 +1960,15 @@ function M:GetSelectBannerItem()
         return Widget
       end
     end
+  end
+  for _, widgetName in ipairs(SMALL_BANNER_WIDGET_NAMES) do
+    local Widget = self[widgetName]
+    if Widget and Widget.BannerId == self.SelectBannerId then
+      return Widget
+    end
+  end
+  if self.Shop_Recommend_ListItem and self.Shop_Recommend_ListItem.BannerId == self.SelectBannerId then
+    return self.Shop_Recommend_ListItem
   end
   return nil
 end

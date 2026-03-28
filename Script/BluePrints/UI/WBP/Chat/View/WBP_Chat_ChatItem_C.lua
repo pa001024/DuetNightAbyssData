@@ -129,7 +129,8 @@ end
 
 function M:_UpdateHeadClickableState()
   local isSelf = self.MsgWrap.MsgType == ChatCommon.MsgType.Self
-  local shouldBeHittestInvisible = isSelf and GWorld:GetAvatar():IsInDungeon() and GWorld.GameInstance.IsInTempScene and GWorld.GameInstance:IsInTempScene()
+  local isDungeonOrSettlement = not GWorld:GetAvatar():IsInDungeon() and GWorld.GameInstance.IsInTempScene and GWorld.GameInstance:IsInTempScene()
+  local shouldBeHittestInvisible = isSelf and isDungeonOrSettlement
   if shouldBeHittestInvisible then
     self.Head:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
   else

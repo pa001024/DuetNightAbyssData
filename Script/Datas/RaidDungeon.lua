@@ -12,6 +12,7 @@ T.RT_6 = {
   [217] = 5
 }
 T.RT_7 = {12}
+T.RT_8 = {13}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -156,5 +157,74 @@ return ReadOnly("RaidDungeon", {
     RaidSeason = 1002,
     TicketNum = T.RT_6,
     UnlockDate = LocalTimeProxy(1774731600)
+  },
+  [21301] = {
+    BaseRaidPoint = 1000,
+    DifficultyLevel = 1,
+    DungeonId = 21301,
+    FomulaId = 1,
+    MinCompleteDamage = 47200000,
+    RaidBuffID = T.RT_8,
+    RaidDungeonType = 1,
+    RaidSeason = 1003,
+    UnlockDate = LocalTimeProxy(1779156000)
+  },
+  [21302] = {
+    BaseRaidPoint = 10000,
+    DifficultyLevel = 2,
+    DungeonId = 21302,
+    FomulaId = 1,
+    MinCompleteDamage = 206600000,
+    RaidBuffID = T.RT_8,
+    RaidDungeonType = 1,
+    RaidSeason = 1003,
+    UnlockDate = LocalTimeProxy(1779156000)
+  },
+  [21303] = {
+    BaseRaidPoint = 135000,
+    DifficultyLevel = 3,
+    DungeonId = 21303,
+    FomulaId = 1,
+    MinCompleteDamage = 6149100000,
+    RaidBuffID = T.RT_8,
+    RaidDungeonType = 1,
+    RaidSeason = 1003,
+    UnlockDate = LocalTimeProxy(1779156000)
+  },
+  [21311] = {
+    BaseRaidPoint = 3500,
+    DifficultyLevel = 1,
+    DungeonId = 21311,
+    FomulaId = 2,
+    MinCompleteDamage = 88400000,
+    RaidBuffID = T.RT_8,
+    RaidDungeonType = 2,
+    RaidSeason = 1003,
+    TicketNum = T.RT_4,
+    UnlockDate = LocalTimeProxy(1779415200)
+  },
+  [21312] = {
+    BaseRaidPoint = 40000,
+    DifficultyLevel = 2,
+    DungeonId = 21312,
+    FomulaId = 2,
+    MinCompleteDamage = 859700000,
+    RaidBuffID = T.RT_8,
+    RaidDungeonType = 2,
+    RaidSeason = 1003,
+    TicketNum = T.RT_5,
+    UnlockDate = LocalTimeProxy(1779483600)
+  },
+  [21313] = {
+    BaseRaidPoint = 400000,
+    DifficultyLevel = 3,
+    DungeonId = 21313,
+    FomulaId = 2,
+    MinCompleteDamage = 10001800000,
+    RaidBuffID = T.RT_8,
+    RaidDungeonType = 2,
+    RaidSeason = 1003,
+    TicketNum = T.RT_6,
+    UnlockDate = LocalTimeProxy(1779570000)
   }
 })

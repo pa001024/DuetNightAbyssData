@@ -20,15 +20,20 @@ local GoToShopState = {
 
 function M:ReceiveEnterState(StackAction)
   M.Super.ReceiveEnterState(self, StackAction)
-  if self.ActorController and self.ActorController:ShouldPlayMVPSequence() then
-    self.ActorController:ReplayMVPSequence()
+  if self.ActorController and self.ActorController:HasLastSequenceInfo() then
+    self.ActorController:ReplaySequence()
+    self.ActorController:ClearLastSequenceInfo()
+  end
+  if self.Target then
+    ArmoryUtils:InitSkinLevelUpReddot(self.Target.CharId)
+    self:RefreshLevelUpReddot()
   end
 end
 
 function M:ReceiveExitState(StackAction)
   M.Super.ReceiveExitState(self, StackAction)
   if self.ActorController then
-    self.ActorController:PauseMVPSequence()
+    self.ActorController:StopSequence()
   end
 end
 
@@ -63,6 +68,7 @@ function M:Construct()
     Equipped = 1,
     Locked = 2
   })
+  self.Text_Show:SetText(GText("UI_Controller_Check"))
   rawset(self, "NoneAccessoryId", DataMgr.GlobalConstant.EmptyCharAccessoryID.ConstantValue)
   self.Btn_Dye:BindEventOnClicked(self, self.OnDyeBtnClicked)
   rawset(self, "NameFont", {
@@ -99,7 +105,7 @@ function M:OnNewAccessoryObtained(AccessoryId)
     Content.Widget.LockType = nil
     Content.Widget:InitTextStyle()
   end
-  if self.CurrentTopTabIdx ~= self.AccessoryTabIdx and self.CurrentTopTabIdx ~= self.MVPTabIdx then
+  if self.CurrentTopTabIdx ~= self.AccessoryTabIdx and self.CurrentTopTabIdx ~= self.MVPTabIdx and self.CurrentTopTabIdx ~= self.WeaponStanceFXTabIdx then
     return
   end
   if Content == self.ComparedContent then
@@ -111,11 +117,15 @@ function M:OnNewAccessoryObtained(AccessoryId)
       self:InitMVPList()
     else
       self:CheckCharAccessoryContentReddot(AccessoryId)
-      self:InitCharAccessoryList()
+      self:InitAccessoryListCommon()
     end
   else
     self:CheckWeaponAccessoryContentReddot(AccessoryId)
-    self:InitWeaponAccessoryList()
+    if self.CurrentTopTabIdx == self.WeaponStanceFXTabIdx then
+      self:InitAccessoryListCommon()
+    else
+      self:InitWeaponAccessoryList()
+    end
   end
 end
 
@@ -175,6 +185,9 @@ function M:OnBackgroundClicked()
 end
 
 function M:OnBackKeyDown()
+  if self:IsAnimationPlaying(self.In) then
+    return
+  end
   if self.bSelfHidden then
     return self:OnHideUIKeyDown()
   elseif self.bAccessoryCustomOpened then
@@ -199,7 +212,11 @@ function M:OnBackKeyDown()
   end
 end
 
-function M:OnConfirmBtnClicked()
+function M:OnLeftConfirmBtnClicked()
+  AudioManager(self):PlayUISound(nil, "event:/ui/common/click_btn_confirm", nil, nil)
+end
+
+function M:OnRightConfirmBtnClicked()
   if self.CurrentTopTabIdx == self.SkinTabIdx then
     AudioManager(self):PlayUISound(nil, "event:/ui/common/click_btn_confirm", nil, nil)
   else
@@ -287,9 +304,14 @@ function M:CreateTabConfig()
     })
   else
     rawset(self, "AccessoryTabIdx", 2)
+    rawset(self, "WeaponStanceFXTabIdx", 3)
     table.insert(self.TopTabs, {
       Text = GText(DataMgr.AppearanceTab[3].Text),
       IconPath = DataMgr.AppearanceTab[3].IconPath
+    })
+    table.insert(self.TopTabs, {
+      Text = GText(DataMgr.AppearanceTab[5].Text),
+      IconPath = DataMgr.AppearanceTab[5].IconPath
     })
   end
   rawset(self, "TabConfig", {
@@ -342,10 +364,16 @@ function M:Init(Params)
   self.Tab_Skin:BindEventOnTabSelected(nil, nil)
   if Params.AccessoryId or Params.AccessoryType then
     local JumpToTabIdx
-    if Params.AccessoryType and Params.AccessoryType == CommonConst.CharAccessoryTypes.MVP then
-      JumpToTabIdx = self.MVPTabIdx
-    else
+    if Params.Type == CommonConst.DataType.Char then
+      if Params.AccessoryType and Params.AccessoryType == CommonConst.CharAccessoryTypes.MVP then
+        JumpToTabIdx = self.MVPTabIdx
+      else
+        JumpToTabIdx = self.AccessoryTabIdx
+      end
+    elseif Params.AccessoryType and Params.AccessoryType == CommonConst.WeaponAccessoryTypes.Accessory then
       JumpToTabIdx = self.AccessoryTabIdx
+    else
+      JumpToTabIdx = self.WeaponStanceFXTabIdx
     end
     self.JumpToAccessoryId = Params.AccessoryId
     self.Tab_Skin:SelectTab(JumpToTabIdx)
@@ -357,6 +385,7 @@ function M:Init(Params)
       Idx = self.HairTabIdx
     })
   else
+    ArmoryUtils:InitSkinLevelUpReddot(self.Target.CharId)
     self.JumpToSkinId = Params.SkinId
     self.Tab_Skin:SelectTab(self.SkinTabIdx)
     self:OnTopTabSelected({
@@ -392,6 +421,7 @@ function M:OnLoaded(...)
 end
 
 function M:OnTopTabSelected(TabWidget, Content)
+  self:HideSkinLevelUpWidget()
   self.CurrentTopTabIdx = TabWidget.Idx
   if self.ActorController then
     self.ActorController:UpdateCameraPPSetting()
@@ -490,18 +520,18 @@ function M:SelectSkinByContent(Content)
 end
 
 function M:UpdateSkinDetails(Content)
+  self.Panel_Buy:SetVisibility(UIConst.VisibilityOp.Collapsed)
   if not Content then
     return
   end
   if Content.SkinId ~= self.SelectedSkinId and not self:IsAnimationPlaying(self.In) then
     self:PlayAnimation(self.Change)
   end
-  self.Panel_Buy:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.SelectedSkinId = Content.SkinId
   if Content.Name and Content.Name ~= "" then
-    self.VB_Info:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self:HideAllInfoExceptButton(false)
   else
-    self.VB_Info:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self:HideAllInfoExceptButton(true)
   end
   if Content.Rarity and self.NameFont[Content.Rarity] and self[self.NameFont[Content.Rarity]] then
     self.Text_Name:SetFont(self[self.NameFont[Content.Rarity]])
@@ -536,6 +566,7 @@ function M:UpdateSkinDetails(Content)
     self.Tag_Quality:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.Tag_Quality:Init(Content.Rarity)
   end
+  self:UpdateSkinLevelInfo(self.SelectedSkinId)
   self:UpdateSkinVideo(self.SelectedSkinId)
   self:UpdateFunctionBtn(Content, self.CurrentSkinContent)
   self:UpdateActorAppearance(self.SelectedSkinId, self.SelectedHairId)
@@ -546,23 +577,69 @@ end
 
 function M:UpdateSkinVideo(SkinId)
   local Data = DataMgr.Skin[SkinId]
+  rawset(self, "SkinData", Data)
   if not (Data and 1 == Data.GetDisplayType and Data.DisplayPath) or not Data.VideoCover then
     self.Panel_Video:SetVisibility(UIConst.VisibilityOp.Collapsed)
     return
   end
-  rawset(self, "SkinData", Data)
   self.Panel_Video:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   local VideoCover = LoadObject(Data.VideoCover)
   if VideoCover then
-    self.Img_Video:SetBrushResourceObject(VideoCover)
+    local MI = self.Img_Video:GetDynamicMaterial()
+    if MI then
+      MI:SetTextureParameterValue("MainTex", VideoCover)
+    else
+      self.Img_Video:SetBrushResourceObject(VideoCover)
+    end
   end
   self.Btn_Play.Btn_Area.OnClicked:Clear()
   self.Btn_Play.Btn_Area.OnClicked:Add(self, self.OpenSkinVideo)
 end
 
+function M:UpdateAccessoryVideo(Data)
+  rawset(self, "AccessoryVideoData", Data)
+  if not Data or not Data.VideoCover then
+    self.Panel_Video:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    return
+  end
+  self.Panel_Video:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  local VideoCover = LoadObject(Data.VideoCover)
+  if VideoCover then
+    local MI = self.Img_Video:GetDynamicMaterial()
+    if MI then
+      MI:SetTextureParameterValue("MainTex", VideoCover)
+    else
+      self.Img_Video:SetBrushResourceObject(VideoCover)
+    end
+  end
+  self.Btn_Play.Btn_Area.OnClicked:Clear()
+  self.Btn_Play.Btn_Area.OnClicked:Add(self, self.OpenAccessoryVideo)
+end
+
+function M:OpenAccessoryVideo()
+  local Data = rawget(self, "AccessoryVideoData")
+  if not Data then
+    return
+  end
+  AudioManager(self):PlayUISound(nil, "event:/ui/common/click_btn_large", nil, nil)
+  local SkinVideo = UIManager(self):LoadUINew("ArmorySkinVideo", {
+    Path = Data.Video,
+    SoundPath = Data.GetSoundPath,
+    DestructCB = function()
+      self:SetFocus()
+    end
+  })
+  if SkinVideo then
+    SkinVideo:SetFocus()
+  end
+end
+
 function M:OpenSkinVideo()
-  local Data = rawget(self, "SkinData") or {}
-  AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_large", nil, nil)
+  local Data = rawget(self, "SkinData")
+  if not Data then
+    return
+  end
+  AudioManager(self):PlayUISound(nil, "event:/ui/common/click_btn_large", nil, nil)
   local SkinVideo = UIManager(self):LoadUINew("ArmorySkinVideo", {
     Path = Data.DisplayPath,
     SoundPath = Data.GetSoundPath,
@@ -576,13 +653,20 @@ function M:OpenSkinVideo()
 end
 
 function M:UpdateFunctionBtn(Content, CurrentContent)
+  self.LeftConfirmBtnFunc = nil
+  self.RightConfirmBtnFunc = nil
   self.WS_Btn:SetActiveWidgetIndex(0)
+  self.Ws_Btn_Go:SetActiveWidgetIndex(0)
   if not self.IsTargetUnowned and not self.IsPreviewMode and not self.IsCharacterTrialMode and Content.bDyeable and not Content.LockType then
     self.Panel_Dye:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   else
     self.Panel_Dye:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
   self.Btn_Function:UnBindEventOnClickedByObj(self)
+  self.Btn_Package_Buy:UnBindEventOnClickedByObj(self)
+  self.Btn_Package_Open:UnBindEventOnClickedByObj(self)
+  self.Btn_Package_Buy:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Btn_Package_Open:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.CurrentLockContent = nil
   self.UseParamsInOpt = nil
   if CurrentContent == Content then
@@ -592,37 +676,47 @@ function M:UpdateFunctionBtn(Content, CurrentContent)
     else
       self.Text_Desc:SetText(GText("UI_Accessory_Equipped"))
     end
-  else
-    if Content.LockType then
-      self.WidgetSwitcher_BtnState:SetActiveWidgetIndex(self.BtnWidgetState.Unequipped)
-      self.CurrentLockContent = Content
-      local CurGoToShopState = self:CheckSkinGoToShopState()
-      self.UseParamsInOpt = self:CheckIsOptReward(Content)
-      if self.UseParamsInOpt then
-        self.Btn_Function:SetText(GText("UI_Skin_UseResource"))
-        self.Btn_Function:ForbidBtn(false)
-      elseif CurGoToShopState == GoToShopState.CanGoToShop then
-        self.Btn_Function:SetText(GText("UI_Skin_GotoBuy"))
-        self.Btn_Function:ForbidBtn(false)
-      elseif CurGoToShopState == GoToShopState.ItemNotOnSale then
-        self.WidgetSwitcher_BtnState:SetActiveWidgetIndex(self.BtnWidgetState.Equipped)
-        self.Text_Desc:SetText(GText("UI_Skin_CannotBuy"))
-      elseif CurGoToShopState == GoToShopState.ItemIdNil or CurGoToShopState == GoToShopState.ItemNotExist or CurGoToShopState == GoToShopState.SkinNotValid then
-        self.WidgetSwitcher_BtnState:SetActiveWidgetIndex(self.BtnWidgetState.Equipped)
-        self.Text_Desc:SetText(GText("UI_Skin_CannotBuy"))
+  elseif Content.LockType then
+    self.WidgetSwitcher_BtnState:SetActiveWidgetIndex(self.BtnWidgetState.Unequipped)
+    self.CurrentLockContent = Content
+    local CurGoToShopState = self:CheckSkinGoToShopState()
+    self.UseParamsInOpt = self:CheckIsOptReward(Content)
+    if self.UseParamsInOpt then
+      self.Ws_Btn_Go:SetActiveWidgetIndex(2)
+      self.Btn_Package_Open:SetText(GText("UI_Skin_UseResource"))
+      self.Btn_Package_Open:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      self.Btn_Package_Open:BindEventOnClicked(self, self.OnRightConfirmBtnClicked)
+      self.RightConfirmBtnFunc = self.OnRightConfirmBtnClicked
+      if CurGoToShopState == GoToShopState.CanGoToShop then
+        self.Btn_Package_Buy:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+        self.Btn_Package_Buy:SetText(GText("UI_Skin_GotoBuy"))
+        self.Btn_Package_Buy:ForbidBtn(false)
+        self.Btn_Package_Buy:BindEventOnClicked(self, self.OnLeftConfirmBtnClicked)
+        self.LeftConfirmBtnFunc = self.OnLeftConfirmBtnClicked
       end
-    else
-      self.WidgetSwitcher_BtnState:SetActiveWidgetIndex(self.BtnWidgetState.Unequipped)
-      if self.IsTargetUnowned then
-        self.Btn_Function:SetText(GText("UI_CharPreview_Cannot_Equip"))
-        self.Btn_Function:ForbidBtn(true)
-      else
-        self.Btn_Function:SetText(GText("UI_Accessory_Equip"))
-        self.Btn_Function:ForbidBtn(false)
-      end
+    elseif CurGoToShopState == GoToShopState.CanGoToShop then
+      self.Btn_Function:SetText(GText("UI_Skin_GotoBuy"))
+      self.Btn_Function:ForbidBtn(false)
+      self.Btn_Function:BindEventOnClicked(self, self.OnRightConfirmBtnClicked)
+      self.RightConfirmBtnFunc = self.OnRightConfirmBtnClicked
+    elseif CurGoToShopState == GoToShopState.ItemNotOnSale then
+      self.WidgetSwitcher_BtnState:SetActiveWidgetIndex(self.BtnWidgetState.Equipped)
+      self.Text_Desc:SetText(GText("UI_Skin_CannotBuy"))
+    elseif CurGoToShopState == GoToShopState.ItemIdNil or CurGoToShopState == GoToShopState.ItemNotExist or CurGoToShopState == GoToShopState.SkinNotValid then
+      self.WidgetSwitcher_BtnState:SetActiveWidgetIndex(self.BtnWidgetState.Equipped)
+      self.Text_Desc:SetText(GText("UI_Skin_CannotBuy"))
     end
-    self.Btn_Function:BindEventOnClicked(self, self.OnConfirmBtnClicked)
-    self.ConfirmBtnFunc = self.OnConfirmBtnClicked
+  else
+    self.WidgetSwitcher_BtnState:SetActiveWidgetIndex(self.BtnWidgetState.Unequipped)
+    if self.IsTargetUnowned then
+      self.Btn_Function:SetText(GText("UI_CharPreview_Cannot_Equip"))
+      self.Btn_Function:ForbidBtn(true)
+    else
+      self.Btn_Function:SetText(GText("UI_Accessory_Equip"))
+      self.Btn_Function:ForbidBtn(false)
+    end
+    self.Btn_Function:BindEventOnClicked(self, self.OnRightConfirmBtnClicked)
+    self.RightConfirmBtnFunc = self.OnRightConfirmBtnClicked
   end
   if self.IsCharacterTrialMode then
     if CurrentContent == Content then
@@ -728,6 +822,11 @@ function M:UpdateAccessoryDetails(Content)
   if self.Type == "Char" then
     self:UpdateAccessoryCamera(Content.AccessoryId, Content.AccessoryType)
   end
+  if Content == self.NoneAccessory then
+    self:HideAllInfoExceptButton(true)
+  else
+    self:HideAllInfoExceptButton(false)
+  end
   self.Panel_Dye:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Panel_Video:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Panel_Buy:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -744,8 +843,11 @@ function M:UpdateAccessoryDetails(Content)
     end
   end
   self.UseParamsInOpt = nil
+  self.LeftConfirmBtnFunc = nil
+  self.RightConfirmBtnFunc = nil
   rawset(self, "ResourceIdForBuyButton", nil)
   self.Btn_Function:UnBindEventOnClickedByObj(self)
+  self.Ws_Btn_Go:SetActiveWidgetIndex(0)
   if self.CurrentContent == Content then
     self.WidgetSwitcher_BtnState:SetActiveWidgetIndex(self.BtnWidgetState.Equipped)
     self.Text_Desc:SetText(GText("UI_Accessory_Equipped"))
@@ -764,24 +866,19 @@ function M:UpdateAccessoryDetails(Content)
       local CanPurchase = ShopUtils:CanPurchase(ShopItemData, ShopItemData.PriceType, Price)
       CanBuy = ShopUtils:GetShopItemCanShow(ShopItemId) and CanPurchase
     end
-    if self.UseParamsInOpt then
-      self.WidgetSwitcher_BtnState:SetActiveWidgetIndex(self.BtnWidgetState.Unequipped)
-      self.Btn_Function:SetText(GText("UI_Skin_UseResource"))
-      self.Btn_Function:ForbidBtn(false)
-      self.Btn_Function:BindEventOnClicked(self, self.OnUseOptBtnClicked)
-      self.ConfirmBtnFunc = self.OnUseOptBtnClicked
-    elseif CanBuy then
+    
+    local function BuyFunc(Btn)
       if not self.IsPreviewMode then
         self.Panel_Buy:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
       end
       self.WidgetSwitcher_BtnState:SetActiveWidgetIndex(self.BtnWidgetState.Unequipped)
-      self.Btn_Function:SetText(GText("UI_SHOP_PURCHASE"))
+      Btn:SetText(GText("UI_SHOP_PURCHASE"))
       local ShopItemData = DataMgr.ShopItem[ShopItemId]
       local PriceType = ShopItemData.PriceType
       local Avatar = GWorld:GetAvatar()
       local ResourceCount = Avatar.Resources[PriceType] and Avatar.Resources[PriceType].Count or 0
       local FakeDenominator
-      if Price > ResourceCount then
+      if ResourceCount < Price then
         FakeDenominator = Price + ResourceCount + 1
       else
         FakeDenominator = Price
@@ -792,23 +889,37 @@ function M:UpdateAccessoryDetails(Content)
         Numerator = Price
       })
       rawset(self, "ResourceIdForBuyButton", PriceType)
-      if Price > ResourceCount then
+      if ResourceCount < Price then
         if PriceType == CommonConst.Coins.Coin4 or PriceType == CommonConst.Coins.Coin1 then
           local function func()
             self:ShowChargeDialog(Price, PriceType)
           end
           
-          self.Btn_Function:ForbidBtn(false)
-          self.Btn_Function:BindEventOnClicked(self, func)
-          self.ConfirmBtnFunc = func
+          Btn:ForbidBtn(false)
+          Btn:BindEventOnClicked(self, func)
+          return func
         else
-          self.Btn_Function:ForbidBtn(true)
+          Btn:ForbidBtn(true)
         end
       else
-        self.Btn_Function:ForbidBtn(false)
-        self.Btn_Function:BindEventOnClicked(self, self.OnBuyBtnClicked)
-        self.ConfirmBtnFunc = self.OnBuyBtnClicked
+        Btn:ForbidBtn(false)
+        Btn:BindEventOnClicked(self, self.OnBuyBtnClicked)
+        return self.OnBuyBtnClicked
       end
+    end
+    
+    if self.UseParamsInOpt then
+      self.Ws_Btn_Go:SetActiveWidgetIndex(2)
+      self.WidgetSwitcher_BtnState:SetActiveWidgetIndex(self.BtnWidgetState.Unequipped)
+      self.Btn_Package_Open:SetText(GText("UI_Skin_UseResource"))
+      self.Btn_Package_Open:ForbidBtn(false)
+      self.Btn_Package_Open:BindEventOnClicked(self, self.OnUseOptBtnClicked)
+      self.RightConfirmBtnFunc = self.OnUseOptBtnClicked
+      if CanBuy then
+        self.LeftConfirmBtnFunc = BuyFunc(self.Btn_Package_Buy)
+      end
+    elseif CanBuy then
+      self.RightConfirmBtnFunc = BuyFunc(self.Btn_Function)
     else
       self.WidgetSwitcher_BtnState:SetActiveWidgetIndex(self.BtnWidgetState.Locked)
       if Content.UnlockOptionText and Content.UnlockOptionText ~= "" then
@@ -830,20 +941,18 @@ function M:UpdateAccessoryDetails(Content)
   else
     self.WidgetSwitcher_BtnState:SetActiveWidgetIndex(self.BtnWidgetState.Unequipped)
     self.Btn_Function:SetText(GText("UI_Accessory_Equip"))
-    self.Btn_Function:BindEventOnClicked(self, self.OnConfirmBtnClicked)
-    self.ConfirmBtnFunc = self.OnConfirmBtnClicked
+    self.Btn_Function:BindEventOnClicked(self, self.OnRightConfirmBtnClicked)
+    self.RightConfirmBtnFunc = self.OnRightConfirmBtnClicked
     self.Btn_Function:ForbidBtn(false)
     if self.IsCharacterTrialMode or self.IsTargetUnowned then
       self.Btn_Function:SetText(GText("UI_CharPreview_Cannot_Equip"))
       self.Btn_Function:ForbidBtn(true)
     end
   end
+  rawset(self, "AccessoryVideoData", nil)
   if Content == self.NoneAccessory then
-    self.VB_Info:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    self.Tag_Quality:SetVisibility(ESlateVisibility.Collapsed)
     return
   end
-  self.VB_Info:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   local Data
   if self.Type == CommonConst.ArmoryType.Char then
     Data = DataMgr.CharAccessory[Content.AccessoryId] or DataMgr.CharPartMesh[Content.AccessoryId]
@@ -851,7 +960,9 @@ function M:UpdateAccessoryDetails(Content)
   else
     Data = DataMgr.WeaponAccessory[Content.AccessoryId]
     self.Text_CharName:SetText(GText(UIConst.AccessoryTypeTextMap.WeaponAccessory))
+    self:UpdateWeaponStanceFXInfo(Content)
   end
+  self:UpdateAccessoryVideo(Data)
   if Data.Rarity and self.NameFont[Data.Rarity] and self[self.NameFont[Data.Rarity]] then
     self.Text_Name:SetFont(self[self.NameFont[Data.Rarity]])
   end
@@ -879,13 +990,18 @@ function M:UpdateAccessoryDetails(Content)
   end
 end
 
+function M:HideAllInfoExceptButton(bHide)
+  local Visibility = bHide and UIConst.VisibilityOp.Hidden or UIConst.VisibilityOp.SelfHitTestInvisible
+  local AllChildren = self.VB_Info:GetAllChildren():ToTable() or {}
+  for i = 1, #AllChildren - 1 do
+    AllChildren[i]:SetVisibility(Visibility)
+  end
+  self.Mod_Title_Line:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Mod_Content:SetVisibility(UIConst.VisibilityOp.Collapsed)
+end
+
 function M:ShowChargeDialog(CostNum, CostType)
-  UIManager(self):ShowCommonPopupUI(100290, {
-    CostNum = CostNum,
-    CostType = CostType,
-    LeftGamepadKey = Const.GamepadFaceButtonUp,
-    ShowBKeyClose = true
-  }, self)
+  UIManager(self):LoadUINew("ShopTargetPay", {CostNum = CostNum, CostType = CostType}, self)
 end
 
 function M:OnUseOptBtnClicked()
@@ -918,7 +1034,7 @@ function M:GetOverrideTopResource()
   return self.Tab_Skin.OverridenTopResouces
 end
 
-function M:PurchaseAccessory()
+function M:PurchaseAccessory(PackageResult, DialogWidget)
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return
@@ -928,8 +1044,12 @@ function M:PurchaseAccessory()
   if not ShopItemData then
     return
   end
+  local SelectedDiscount
+  if PackageResult and PackageResult.Content_1 and PackageResult.Content_1.CallObj and PackageResult.Content_1.CallObj.SelectedDiscount then
+    SelectedDiscount = PackageResult.Content_1.CallObj.SelectedDiscount
+  end
   self:BlockAllUIInput(true)
-  Avatar:PurchaseShopItem(ShopItemData.ItemId, 1)
+  Avatar:PurchaseShopItem(ShopItemData.ItemId, 1, nil, nil, SelectedDiscount and SelectedDiscount.VoucherId or nil)
 end
 
 function M:OnPurchaseShopItem(Ret)
@@ -954,6 +1074,58 @@ function M:GetShopItemByAccessoryId(AccessoryId)
   return Data and Data[AccessoryId] and Data[AccessoryId][1]
 end
 
+function M:InitAccessoryListCommon()
+  local Tab = self.AccessoryTabsArray[self.CurrentAccessoryTabIdx]
+  local Len = self.BP_AccessoryContents:Length()
+  local FilteredContents = {}
+  for i = 1, Len do
+    local Content = self.BP_AccessoryContents[i]
+    if Content.AccessoryId and Content.AccessoryType == Tab.AccessoryType and Content.AccessoryId ~= self.NoneAccessory.Id and (not Content.IsHide or self.IsPreviewMode) then
+      table.insert(FilteredContents, Content)
+    end
+  end
+  self.FilteredContents = FilteredContents
+  self.List_Accessory:ClearListItems()
+  table.sort(FilteredContents, function(a, b)
+    if a.LockType and b.LockType or not a.LockType and not b.LockType then
+      if a.SortPriority == b.SortPriority then
+        return a.AccessoryId > b.AccessoryId
+      end
+      return a.SortPriority > b.SortPriority
+    else
+      return b.LockType
+    end
+  end)
+  self.List_Accessory:SetVisibility(UIConst.VisibilityOp.Visible)
+  self.List_Accessory:AddItem(self.NoneAccessory)
+  for _, Content in ipairs(FilteredContents) do
+    if self.JumpToAccessoryId and self.JumpToAccessoryId == Content.AccessoryId then
+      self.ComparedContent = Content
+    end
+    if Content.bSelectTag then
+      self.CurrentContent = Content
+      if self.IsCharacterTrialMode then
+        Content.TryOutText = GText("UI_CharPreview_Accessory_In_Trial")
+      end
+    end
+    self.List_Accessory:AddItem(Content)
+  end
+  self.List_Accessory:RequestFillEmptyContent()
+  self.List_Accessory:RequestPlayEntriesAnim()
+end
+
+function M:OnModBtnClicked()
+  if self.Type == CommonConst.ArmoryType.Weapon then
+    ModController:OpenView(ModCommon.ArmoryMod, self.Type, self.Target:HasTag("Melee") and "Melee" or "Ranged", {
+      self.Target.Uuid
+    }, nil, {
+      Func = function()
+        self:SetFocus()
+      end
+    }, ModCommon.MainUICase.Normal)
+  end
+end
+
 function M:CheckIsOptReward(Content)
   local OptReward = DataMgr.OptReward
   local ContentType = Content.ItemType
@@ -973,43 +1145,43 @@ function M:CheckIsOptReward(Content)
             local Params = {}
             if UseEffectType == CommonConst.ResUseEffectType.SelectGeneralSkin then
               Params = {
-                Type = "SkinSelect",
-                SkinOptRewardId = OptRewardId,
+                Type = "SelectGeneralSkin",
+                OptRewardId = OptRewardId,
                 ResourceId = Data.ResourceId,
                 SkinId = Data.Id[Index]
               }
             elseif UseEffectType == CommonConst.ResUseEffectType.SelectCharAccessory then
               Params = {
                 Type = "SelectCharAccessory",
-                AccessoryOptRewardId = OptRewardId,
+                OptRewardId = OptRewardId,
                 ResourceId = Data.ResourceId,
                 AccessoryId = Data.Id[Index]
               }
             elseif UseEffectType == CommonConst.ResUseEffectType.SelectWeaponSkin then
               Params = {
                 Type = "SelectWeaponSkin",
-                WeaponSkinOptRewardId = OptRewardId,
+                OptRewardId = OptRewardId,
                 ResourceId = Data.ResourceId,
                 SkinId = Data.Id[Index]
               }
             elseif UseEffectType == CommonConst.ResUseEffectType.SelectWeaponAccessory then
               Params = {
                 Type = "SelectWeaponAccessory",
-                AccessoryOptRewardId = OptRewardId,
+                OptRewardId = OptRewardId,
                 ResourceId = Data.ResourceId,
                 AccessoryId = Data.Id[Index]
               }
             elseif UseEffectType == CommonConst.ResUseEffectType.SelectSkin then
               Params = {
                 Type = "SelectSkin",
-                CharSkinOptRewardId = OptRewardId,
+                OptRewardId = OptRewardId,
                 ResourceId = Data.ResourceId,
                 SkinId = Data.Id[Index]
               }
             elseif UseEffectType == CommonConst.ResUseEffectType.SelectGestureItem then
               Params = {
                 Type = "SelectGestureItem",
-                GestureOptRewardId = OptRewardId,
+                OptRewardId = OptRewardId,
                 ResourceId = Data.ResourceId,
                 GestureId = Data.Id[Index]
               }
@@ -1041,6 +1213,9 @@ function M:UpdateBtnStateByResourceChanged(ResourceId)
       local SelectContent = self.ComparedContent
       self:UpdateAccessoryDetails(SelectContent)
     end
+  end
+  if 100 == ResourceId or 99 == ResourceId then
+    self:RefreshLevelUpReddot()
   end
 end
 
@@ -1152,8 +1327,7 @@ function M:PlayOutAnim()
   if self.Parent then
     self.ActorController.ViewUI = self.Parent
   end
-  if self.IsPreviewMode and self.ActorController then
-    self.ActorController:OnClosed()
+  if not self.IsPreviewMode or self.ActorController then
   end
   AudioManager(self):SetEventSoundParam(self, "SkinOpen", {ToEnd = 1})
   self:BlockAllUIInput(true, "SP_DisplayOnly")
@@ -1181,7 +1355,7 @@ function M:Destruct()
     end
     self.ActorController:HidePlayerActor(self.UIName, false)
     self.ActorController:UpdateCameraPPSetting()
-    self.ActorController:TryDestroyMVPActorController()
+    self.ActorController:TryDestroySequenceActorController()
   end
   self:RemoveTimer("DelayInit")
   if IsValid(self.ComBgSwitch) then
@@ -1193,6 +1367,7 @@ function M:Destruct()
   end
   M.Super.Destruct(self)
   if self.bRecoverAppearanceWhenDestruct and not self.IsPreviewMode then
+    self.SelectedSkinLevel = nil
     self:UpdateActorAppearance()
   end
 end

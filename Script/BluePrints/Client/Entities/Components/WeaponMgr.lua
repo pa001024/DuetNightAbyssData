@@ -203,8 +203,9 @@ function Component:WeaponBreakLevelUp(WeaponUuid, TargetBreakLevel)
   self:CallServer("WeaponBreakeLevelUp", callback, WeaponUuid)
 end
 
-function Component:UpWeaponGradeLevel(WeaponUuid, CurrentGradeLevel, ConsumeWeaponUuids, ConsumeResourceCount, InCallback)
-  self.logger.debug("UpWeaponGradeLevel Start", CommonUtils.ObjId2Str(WeaponUuid), CurrentGradeLevel)
+function Component:UpWeaponGradeLevel(WeaponUuid, CurrentGradeLevel, ConsumeWeaponUuids, ConsumeResourceCount, InCallback, SecondaryPassword)
+  SecondaryPassword = SecondaryPassword or ""
+  self.logger.debug("UpWeaponGradeLevel Start", CommonUtils.ObjId2Str(WeaponUuid), CurrentGradeLevel, SecondaryPassword)
   
   local function callback(Ret)
     self.logger.debug("UpWeaponGradeLevel callback", Ret)
@@ -214,7 +215,7 @@ function Component:UpWeaponGradeLevel(WeaponUuid, CurrentGradeLevel, ConsumeWeap
     end
   end
   
-  self:CallServer("UpWeaponGradeLevel", callback, WeaponUuid, CurrentGradeLevel, ConsumeWeaponUuids, ConsumeResourceCount)
+  self:CallServer("UpWeaponGradeLevel", callback, WeaponUuid, CurrentGradeLevel, ConsumeWeaponUuids, ConsumeResourceCount, SecondaryPassword)
 end
 
 function Component:WeaponBreakDown(WeaponUuid)

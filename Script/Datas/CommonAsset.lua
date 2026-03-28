@@ -36,9 +36,17 @@ return ReadOnly("CommonAsset", {
         PlatformName = "Mobile"
       },
       [9] = {
-        Path = "PhysicsAsset'/Game/Asset/Char/Player/Common/AssetPhysics/PHYS_Player_Culling.PHYS_Player_Culling'"
+        Path = "WidgetBlueprint'/Game/UI/WBP/Battle/PC/WBP_Battle_HookLock_P.WBP_Battle_HookLock_P'",
+        PlatformName = "PC"
       },
       [10] = {
+        Path = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_Battle_HookLock_M.WBP_Battle_HookLock_M'",
+        PlatformName = "Mobile"
+      },
+      [11] = {
+        Path = "PhysicsAsset'/Game/Asset/Char/Player/Common/AssetPhysics/PHYS_Player_Culling.PHYS_Player_Culling'"
+      },
+      [12] = {
         Path = "PhysicsAsset'/Game/Asset/Char/Player/Common/AssetPhysics/PHYS_Player_CapsuleShadow.PHYS_Player_CapsuleShadow'"
       }
     },

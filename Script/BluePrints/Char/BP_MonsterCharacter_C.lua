@@ -50,7 +50,8 @@ function BP_MonsterCharacter_C:TryStartOutAirWallCheck(Info)
           self.CheckOutAirDoorHandle = nil
         end
         self.CheckOutAirDoorBoxTransform.Scale3D = FVector(1, 1, 1)
-        local CurLocalLoc = UE4.UKismetMathLibrary.InverseTransformLocation(self.CheckOutAirDoorBoxTransform, self:K2_GetActorLocation())
+        local FootLoc = self:K2_GetActorLocation() - FVector(0, 0, self.CapsuleComponent.CapsuleHalfHeight)
+        local CurLocalLoc = UE4.UKismetMathLibrary.InverseTransformLocation(self.CheckOutAirDoorBoxTransform, FootLoc)
         if CurLocalLoc.X > self.CheckOutAirBoxLocal.X or CurLocalLoc.X < -self.CheckOutAirBoxLocal.X or CurLocalLoc.Y > self.CheckOutAirBoxLocal.Y or CurLocalLoc.Y < -self.CheckOutAirBoxLocal.Y or CurLocalLoc.Z > self.CheckOutAirBoxLocal.Z or CurLocalLoc.Z < -self.CheckOutAirBoxLocal.Z then
           if self.TimeCount < 10 then
             self.TimeCount = self.TimeCount + 1
@@ -454,6 +455,11 @@ function BP_MonsterCharacter_C:BlockTickLod_BT(bEnable, Tag)
 end
 
 function BP_MonsterCharacter_C:CheckOverlapPushForChangeCollision(Channel, NewResponse)
+  local Avatar = GWorld:GetAvatar()
+  if Avatar and Avatar:IsQuestChainDoing(120204) and Avatar:IsQuestDoing(12020410) then
+    return true
+  end
+  
   local function SetCollision()
     if self.CapsuleComponent then
       self.CapsuleComponent:SetCollisionResponseToChannel(Channel, NewResponse)
@@ -489,11 +495,6 @@ function BP_MonsterCharacter_C:ReceiveEndPlay(EndPlayReason)
     DebugPrint(self:GetName() .. " @gulinan Clear AirDoorBoxOutCheck Timer On Destroy")
     self.RemoveTimer(self.CheckOutAirDoorHandle)
     self.CheckOutAirDoorHandle = nil
-  end
-  if nil ~= self.CheckBornPosHandle then
-    DebugPrint(self:GetName() .. " @gulinan Clear CheckBornPosTimer Timer On Destroy")
-    self:RemoveTimer(self.CheckBornPosHandle)
-    self.CheckBornPosHandle = nil
   end
 end
 
@@ -540,57 +541,9 @@ end
 function BP_MonsterCharacter_C:CommonOnEMActorDestroy(DestroyReason)
 end
 
-function BP_MonsterCharacter_C:TryCheckBornPosTimer()
-  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
-  if not GameMode then
-    return
-  end
-  local LevelLoader = GameMode:GetLevelLoader()
-  if not LevelLoader or not LevelLoader:CheckIsRougeLike() then
-    return
-  end
-  local bCanStartCheckBornPos = not self.bInPool and self.IsDead and not self:IsDead() and self.InitSuccess and self.IsRealMonster and self:IsRealMonster()
-  if bCanStartCheckBornPos then
-    DebugPrint(self:GetName() .. " @gulinan Start CheckBornPos Timer")
-    self.CheckBornPosHandle = self:AddTimer(1, function()
-      if self.bInPool or self.IsDead and self:IsDead() or not self.InitSuccess then
-        if self.CheckBornPosHandle ~= nil then
-          DebugPrint(self:GetName() .. " @gulinan End CheckBornPosHandle Timer")
-          self:RemoveTimer(self.CheckBornPosHandle)
-          self.CheckBornPosHandle = nil
-        else
-          DebugPrint(self:GetName() .. " @gulinan CheckBornPos is nil but timer still tick")
-          self:RemoveTimer("CheckBornPos")
-        end
-      end
-      local LocalPlayer = UE4.UGameplayStatics.GetPlayerPawn(self, 0)
-      local CurrentLocation = self:K2_GetActorLocation()
-      local DistToBornPos = self.BornPos - CurrentLocation
-      local DistToPlayer = LocalPlayer and LocalPlayer:K2_GetActorLocation() - CurrentLocation or nil
-      if DistToBornPos:Size2D() > 20000 and math.abs(CurrentLocation.X) < 100 and math.abs(CurrentLocation.Y) < 100 and (nil == DistToPlayer or DistToPlayer:Size2D() > 20000) then
-        DebugPrint(self:GetName() .. " @gulinan CheckBornPos Teleport To BornPos")
-        self:K2_SetActorLocation(self.BornPos, false, nil, false)
-      end
-    end, true, 0, "CheckBornPos", false)
-  end
-end
-
-function BP_MonsterCharacter_C:AddPhantomBattleAchieve(Source)
-  if not IsStandAlone(self) then
-    return
-  end
-  local PlayerAchieveObj = UE4.URuntimeCommonFunctionLibrary.GetPlayerAchievementObject(Source)
-  if PlayerAchieveObj then
-    if self.UnitId == 8510001 then
-      PlayerAchieveObj:UploadTargetValue(2203, 1)
-    end
-    if self.UnitId == 8518001 then
-      PlayerAchieveObj:UploadTargetValue(2204, 1)
-    end
-    if self.UnitId == 8517001 then
-      PlayerAchieveObj:UploadTargetValue(2205, 1)
-    end
-  end
+function BP_MonsterCharacter_C:SetHitCapsuleBeginplayState(bEnableEnd)
+  DebugPrint("@gulinan SetHitCapsuleBeginplayState " .. tostring(bEnableEnd))
+  self.bHitCapsuleBeginplay = bEnableEnd
 end
 
 function BP_MonsterCharacter_C:PhysStateErrorReset_Lua()

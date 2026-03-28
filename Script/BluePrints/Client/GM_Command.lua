@@ -50,9 +50,12 @@ function GM_Command:Init_Command()
     Debug = "Debug",
     UpdateVLM = "UpdateVLM",
     GlobalTimeDilation = "GlobalTimeDilation",
+    TakePhotoAddWaterMark = "TakePhotoAddWaterMark",
+    SetWeather = "SetWeather",
     EnterDungeon = "EnterDungeon",
     ExitBattle = "ExitBattle",
     PlayerEnd = "PlayerEnd",
+    DungeonObjectFinish = "DungeonObjectFinish",
     InitGM = "InitGameMode",
     RequireAndEnterDS = "RequireAndEnterDS",
     ExitDS = "ExitDS",
@@ -72,6 +75,8 @@ function GM_Command:Init_Command()
     FreezeWorldComposition = "FreezeWorldComposition",
     BreakableItemNavEnableInLower = "BreakableItemNavEnableInLower",
     PrintActorSCLoc = "PrintActorSCLoc",
+    TestServerRandomCreator = "TestServerRandomCreator",
+    EnterIronSurvivalDungeon = "EnterIronSurvivalDungeon",
     Recovery = "RecoverySelf",
     RecoverPlayer = "RecoverPlayer",
     KM = "KillMonster",
@@ -96,6 +101,7 @@ function GM_Command:Init_Command()
     LJH = "LJHTEST",
     AYF = "AYFTEST",
     LGC = "LGCTEST",
+    YLY = "YLYTEST",
     DungeonEventTest = "DungeonEventTest",
     SwitchSurvivalValueChange = "SwitchSurvivalValueChange",
     PrintLevelDebugInfo = "PrintLevelDebugInfo",
@@ -158,6 +164,7 @@ function GM_Command:Init_Command()
     SetSex = "SetSex",
     AddHp = "AddHp",
     MaxES = "MaxES",
+    TestGuildWarRanking = "TestGuildWarRanking",
     AddES = "AddES",
     God = "God",
     DefCoreGod = "DefCoreGod",
@@ -346,6 +353,9 @@ function GM_Command:Init_Command()
     CADC = "CompleteAllDispatchCondion",
     ChangeToMaster = "ChangeToMaster",
     ChangeBackToHero = "ChangeBackToHero",
+    ChangeSkinModel = "ChangeSkinModel",
+    ChangeCharAcc = "ChangeCharAcc",
+    ChangeWeaponAcc = "ChangeWeaponAcc",
     ActiveExplores = "ActiveExploreStaticCreator",
     TestRealtimeContentValidate = "TestRealtimeContentValidate",
     TestUploadChat = "TestUploadChat",
@@ -412,6 +422,7 @@ function GM_Command:Init_Command()
     GuideBookGetReward = "GuideBookGetReward",
     ResetEMCache = "ResetEMCache",
     TestWarningToast = "TestWarningToast",
+    TestCombineWarningToast = "TestCombineWarningToast",
     StartAutoTest = "StartAutoTest",
     ABTS = "AutoBattleTestServer",
     ABTC = "AutoBattleTestClient",
@@ -458,6 +469,7 @@ function GM_Command:Init_Command()
     PrintAllPreloadCacheInfo = "PrintAllPreloadCacheInfo",
     UseDebug = "UseDebug",
     obj = "obj",
+    EnableShowLevelLoadingInfo = "EnableShowLevelLoadingInfo",
     PUA = "PlayUMGAnimation",
     UAT = "UMGAnimationsTime",
     cdk = "GMUseCDK",
@@ -494,7 +506,6 @@ function GM_Command:Init_Command()
     CommonActivitySettlement = "CommonActivitySettlement",
     EnterPaotai = "EnterPaotai",
     EnterEventDungeon = "EnterEventDungeon",
-    MonsterBornPosCheck = "MonsterBornPosCheck",
     PrintLevelbound = "PrintLevelbound",
     ShowScenarioPerformanceData = "ShowScenarioPerformanceData",
     ShowScenarioDataOnTick = "ShowScenarioDataOnTick",
@@ -533,9 +544,24 @@ function GM_Command:Init_Command()
     CreateNewTreasureItemToPocket = "CreateNewTreasureItemToPocket",
     SoloTreasureBag = "SoloTreasureBag",
     OpenUIAndAddSoloTreaureScore = "OpenUIAndAddSoloTreaureScore",
+    OpenUIMainSoloTreasure = "OpenUIMainSoloTreasure",
     OpenReturnWelcomeBanner = "OpenReturnWelcomeBanner",
-    OpenSecPassWordUI = "OpenSecPassWordUI"
+    OpenSecPassWordUI = "OpenSecPassWordUI",
+    VerifySecPassword = "VerifySecPassword",
+    ShowWaterMark = "ShowWaterMark",
+    ExportAllAssetPathFromModelData = "ExportAllAssetPathFromModelData",
+    SetLOD = "SetLOD",
+    ExportHairAnimSequence = "ExportHairAnimSequence",
+    TestPlay = "TestPlay",
+    GP = "GP",
+    GenerateNpcLocation = "GenerateNpcLocation",
+    PrintAllAssetPathUnderThisPath = "PrintAllAssetPathUnderThisPath"
   }
+end
+
+function GM_Command:OpenUIMainSoloTreasure(Mode)
+  local EventId = 103014
+  UIManager(self):LoadUINew("ActivitySoloTreasureMain", EventId, Mode)
 end
 
 function GM_Command:OpenAutoChessDeputeMonsterInfoUI(MissionID)
@@ -556,8 +582,11 @@ function GM_Command:OpenUIAndAddSoloTreaureScore(AddScore)
   end
 end
 
-function GM_Command:LGCTEST(Param)
-  UIManager(self):LoadUINew("ComBackWelcomeBanner")
+function GM_Command:LGCTEST(UUid)
+  local InventoryController = require("BluePrints.UI.WBP.SoloTreasure.Widget.Inventory.InventoryController")
+  local TreasureDatas = InventoryController:GetTreasureDatasById(10111)
+  local MainWidget = InventoryController.MainWidget
+  MainWidget:BlockAllUIInput(false)
 end
 
 function GM_Command:GMUseCDK(CDK)
@@ -1706,44 +1735,20 @@ function GM_Command:PrintActorSCLoc(Eid)
 end
 
 function GM_Command:LJLTEST(arg)
-  self.Player.RPCComponent:NotifyServerStartDelivery()
+  self.Player.RPCComponent:NotifyServerStartExitDelivery()
 end
 
 function GM_Command:YXDTEST(type)
   local GameMode = UE.UGameplayStatics.GetGameMode(self.Player)
-  local LoadString = "/Game/Maps/Levels/Chapter01/Chapter01_Main/Art_Data/Chapter01_IcelakeCity_Art/Chapter01_IcelakeCity_Temp_Art_Foliage.Chapter01_IcelakeCity_Temp_Art_Foliage"
-  local LoadArray = TArray(FString)
-  LoadArray:Add(LoadString)
-  local UnloadString = "/Game/Maps/Levels/Chapter01/Chapter01_Main/Art_Data/Chapter01_IcelakeCity_Art/Chapter01_IcelakeCity_Art_Foliage.Chapter01_IcelakeCity_Art_Foliage"
-  local UnloadArray = TArray(FString)
-  UnloadArray:Add(UnloadString)
-  GameMode:ChangeLevelLoadingState(LoadArray, UnloadArray)
+  GameMode:yxdtest("yxdtest")
+end
+
+function GM_Command:YLYTEST(type)
+  local GameInstance = self:GetGameInstance()
   if "1" == type then
-    local Params = {
-      TestVar1 = {OldValue = 0, NewValue = 1}
-    }
-    GameMode:TriggerQuestArtLevelChange(Params)
+    UIManager(GWorld.GameInstance):LoadUINew("SoloTreasureEvacuation")
   elseif "2" == type then
-    local Params = {
-      TestVar1 = {OldValue = 1, NewValue = 0}
-    }
-    GameMode:TriggerQuestArtLevelChange(Params)
-  end
-  if "3" == type then
-    local UnitIdArray = TArray(0)
-    UnitIdArray:Add(-1)
-    GameMode:TriggerCreateMonsterSpawn(UnitIdArray, false)
-  end
-  if "6" == type then
-    local EnvironmentManager = UE4.UGameplayStatics.GetActorOfClass(GameMode, UE4.AEnvironmentManager:StaticClass())
-    local qqq
-    if EnvironmentManager then
-      qqq = EnvironmentManager:GetTimeOfDay()
-      EnvironmentManager:SetBlendTime(0.1)
-      EnvironmentManager:SetTimeOfDay(0)
-      EnvironmentManager:SetTimeOfDay(12)
-    end
-    DebugPrint("yxd @@@@@@@@@@@@@@@@@@@@@@@@", qqq, EnvironmentManager)
+    DebugPrint("yly     gm")
   end
 end
 
@@ -2380,6 +2385,10 @@ function GM_Command:GlobalTimeDilation(val)
   UE4.UGameplayStatics.SetGlobalTimeDilation(self.Player, tonumber(val))
 end
 
+function GM_Command:TakePhotoAddWaterMark(bEnable)
+  Const.bTakePhotoAddWatermark = tonumber(bEnable) > 0
+end
+
 function GM_Command:MonsterTimeDilation(val)
   if self:HasTargetMonster() == false or not val then
     return
@@ -2716,7 +2725,12 @@ function GM_Command:ForceSetStorySkipable(bSet)
 end
 
 function GM_Command:PlayTalk(FindKey, bIncludeFilterFiles)
-  bIncludeFilterFiles = not not bIncludeFilterFiles
+  bIncludeFilterFiles = string.lower(tostring(bIncludeFilterFiles))
+  if "false" == bIncludeFilterFiles then
+    bIncludeFilterFiles = false
+  else
+    bIncludeFilterFiles = true
+  end
   local pro_path = UE4.UKismetSystemLibrary.GetProjectContentDirectory()
   local Path = pro_path .. "../Tools/storycreator/talk_nodes.json"
   local a, Info
@@ -2954,6 +2968,18 @@ function GM_Command:ShowRayCreature()
   require("EMLuaConst").IsShowRayCreature = Const.IsShowRayCreature
 end
 
+function GM_Command:SetWeather(WeatherName)
+  local EnvirSystemActors = TArray(AActor)
+  local BPClass = LoadClass("/Game/Asset/Scene/common/EnvirSystem/EnvirSystemActor.EnvirSystemActor")
+  UE4.UGameplayStatics.GetAllActorsOfClass(self.Player, BPClass, EnvirSystemActors)
+  local ActorTab = EnvirSystemActors:ToTable()
+  for i, v in pairs(ActorTab) do
+    v.WeatherDebug = WeatherName
+    print("EnvirSystemActor", v, "Weather", WeatherName)
+  end
+  AudioManager(self.Player):SetWeathorParam(WeatherName)
+end
+
 function GM_Command:AnimCacheEnableState(IsEnable)
   UE4.URuntimeCommonFunctionLibrary.EnableGlobalAnimCache(self.Player, tonumber(IsEnable) > 0)
 end
@@ -3018,6 +3044,13 @@ function GM_Command:PlayerEnd(IsWin)
   else
     self:DedicatedServerCommand("PlayerFailed")
   end
+end
+
+function GM_Command:DungeonObjectFinish(IsWin)
+  IsWin = tonumber(IsWin)
+  IsWin = 1 == IsWin and true or false
+  local GameMode = UE4.UGameplayStatics.GetGameMode(self.Player)
+  GameMode:NotifyServerGameEnd(IsWin, "GMFinish")
 end
 
 function GM_Command:SetInvincible(Eid)
@@ -3349,6 +3382,23 @@ function GM_Command:EnterDungeon(DungeonId, SquadId)
   end
 end
 
+function GM_Command:EnterIronSurvivalDungeon(DungeonId, IronTicket)
+  DungeonId = tonumber(DungeonId)
+  IronTicket = tonumber(IronTicket)
+  if not DungeonId or not IronTicket then
+    return
+  end
+  local avatar = self:GetClientAvatar()
+  if avatar then
+    avatar:EnterDungeon(DungeonId, nil, function(retCode)
+      if 0 == retCode then
+        return
+      end
+      UIManager(self):ShowUITip("CommonToastMain", DataMgr.ErrorCode[retCode].ErrorCodeContent)
+    end, nil, nil, {IronTicketId = IronTicket})
+  end
+end
+
 function GM_Command:EnterEventDungeon(DungeonId, EventId, ...)
   DungeonId = tonumber(DungeonId)
   EventId = tonumber(EventId)
@@ -3390,10 +3440,6 @@ function GM_Command:EnterPaotai(DungeonId, PaotaiId)
   if avatar then
     avatar:EnterDungeon(DungeonId, nil, nil, nil, nil, {PaotaiId = PaotaiId})
   end
-end
-
-function GM_Command:MonsterBornPosCheck(IsEnable)
-  Const.EnableRougeLikeBornCheck = tonumber(IsEnable) > 0
 end
 
 function GM_Command:EnterLocalDungeon(DungeonId)
@@ -3503,6 +3549,42 @@ end
 function GM_Command:ChangeBackToHero()
   if self.Player then
     self.Player:ChangeBackToHero()
+  end
+end
+
+function GM_Command:ChangeSkinModel(SkinId)
+  SkinId = SkinId or 0
+  SkinId = tonumber(SkinId)
+  if self.Player then
+    self.Player:ChangeSkinModel(SkinId)
+    self.Player:SetCharDefaultPart()
+    local CharacterFashion = self.Player.CharacterFashion
+    CharacterFashion.AppearanceSuitInfo.SkinId = SkinId
+    if CharacterFashion then
+      self.Player:InitAppearanceSuit(CharacterFashion.AppearanceSuitInfo)
+    end
+  end
+end
+
+function GM_Command:ChangeCharAcc(AccessoryId, AccessoryType)
+  AccessoryId = tonumber(AccessoryId)
+  if self.Player.CharacterFashion then
+    if not AccessoryType then
+      local Data = DataMgr.CharAccessory[AccessoryId]
+      AccessoryType = Data and Data.AccessoryType
+    end
+    self.Player.CharacterFashion:ChangeAccessory(AccessoryId, AccessoryType)
+  end
+end
+
+function GM_Command:ChangeWeaponAcc(AccessoryId)
+  AccessoryId = tonumber(AccessoryId)
+  if self.Player.UsingWeapon then
+    self.Player.UsingWeapon:ChangeAccessory(AccessoryId, CommonConst.WeaponAccessoryTypes.Accessory)
+  elseif self.Player.MeleeWeapon then
+    self.Player.MeleeWeapon:ChangeAccessory(AccessoryId, CommonConst.WeaponAccessoryTypes.Accessory)
+  elseif self.Player.RangedWeapon then
+    self.Player.RangedWeapon:ChangeAccessory(AccessoryId, CommonConst.WeaponAccessoryTypes.Accessory)
   end
 end
 
@@ -3766,7 +3848,7 @@ end
 
 function GM_Command:Reconnect()
   local NetworkManager = self:GetGameInstance():GetNetworkManager()
-  NetworkManager:TestReconnect()
+  NetworkManager:TestAck()
 end
 
 function GM_Command:TestNetworkFailure(FailureType)
@@ -4825,6 +4907,12 @@ function GM_Command:TestWarningToast(Context, LastTime)
   local GameInstance = self:GetGameInstance()
   local UIManager = GameInstance:GetGameUIManager()
   UIManager:ShowUITip(UIConst.Tip_CommonWarning, Context, tonumber(LastTime))
+end
+
+function GM_Command:TestCombineWarningToast(Context, LastTime)
+  local GameInstance = self:GetGameInstance()
+  local UIManager = GameInstance:GetGameUIManager()
+  UIManager:ShowUITip(UIConst.Tip_CombineWarning, Context, tonumber(LastTime))
 end
 
 function GM_Command:PlayLightHit(IsSelf, HitRule)
@@ -7321,55 +7409,456 @@ function GM_Command:OpenAutoChessUI()
   UIManager(self):LoadUINew("AutoChessMain")
 end
 
-function GM_Command:SoloTreasureBag(bOpen, SearchId)
-  SearchId = tonumber(SearchId)
-  if "true" == bOpen then
-    self.SoloTreasureBagUI = UIManager(self):LoadUINew("SoloTreasureBag", SearchId)
-    self.SoloTreasureBagUI:SetInputUIOnly(true)
-    self.SoloTreasureBagUI.InventoryController:CreateNewTreasureItemToPocket(self.SoloTreasureBagUI.WBP_Type01_Bag04, 100101, FVector2D(0, 0))
-    self.SoloTreasureBagUI.InventoryController:CreateNewTreasureItemToPocket(self.SoloTreasureBagUI.WBP_Type01_Bag04, 100102, FVector2D(0, 2))
-  else
-    self.SoloTreasureBagUI:SetInputUIOnly(false)
-    self.SoloTreasureBagUI:SetVisibility(UE4.ESlateVisibility.Collapsed)
-  end
+function GM_Command:SoloTreasureBag(MechanismUid)
+  local MechanismUid = tonumber(MechanismUid)
+  local InventoryController = require("BluePrints.UI.WBP.SoloTreasure.Widget.Inventory.InventoryController")
+  UIManager(self):LoadUINew("SoloTreasureBag", MechanismUid, function(LoadedWidget)
+    self.SoloTreasureBagUI = LoadedWidget
+    DebugPrint("lgc@ SoloTreasureBag AsyncLoaded MechanismUid =", MechanismUid)
+  end, "Async")
 end
 
-function GM_Command:CreateNewTreasureItemToPocket(PocketName, TreasureId)
+function GM_Command:CreateNewTreasureItemToPocket(TreasureId, UniqueId)
+  if not self.SoloTreasureBagUI then
+    self.SoloTreasureBagUI = UIManager(self):GetUI("SoloTreasureBag")
+  end
   if not self.SoloTreasureBagUI or not self.SoloTreasureBagUI.InventoryController then
     UIManager(self):ShowUITip("CommonToastMain", GText("添加Item失败,先打开背包界面再添加Item"), 2)
     return
   end
-  local PocketWidget = self.SoloTreasureBagUI[PocketName]
-  if "Bag_Search" == PocketName then
-    PocketWidget = self.SoloTreasureBagUI.Bag_Search.WBP_Search_Bag
-  end
-  local ValidInfo = self.SoloTreasureBagUI.InventoryController:GetValidTopLeftByTreasureId(PocketWidget, tonumber(TreasureId))
-  if not ValidInfo or not ValidInfo.TopLeft then
-    UIManager(self):ShowUITip("CommonToastMain", GText("添加Item失败,无可用位置"), 2)
-    return
-  end
-  local IsSuccess = self.SoloTreasureBagUI.InventoryController:CreateNewTreasureItemToPocket(PocketWidget, tonumber(TreasureId), ValidInfo.TopLeft)
-  if not IsSuccess then
-    UIManager(self):ShowUITip("CommonToastMain", GText("添加Item失败"), 2)
-  else
-    UIManager(self):ShowUITip("CommonToastMain", GText("添加Item成功"), 2)
-  end
+  self.SoloTreasureBagUI.InventoryController:UpdateTreasureItemDataServerNew({
+    SubBagIndex = 0,
+    Id = TreasureId,
+    BagIndex = 17,
+    Pos = 0,
+    Rotate = false,
+    UniqueId = UniqueId
+  })
 end
 
 function GM_Command:OpenReturnWelcomeBanner()
   UIManager(self):LoadUINew("ComBackWelcomeBanner")
 end
 
-function GM_Command:OpenSecPassWordUI(Mode, Min, Max, TextLimit)
-  Mode = Mode or 3
+function GM_Command:OpenSecPassWordUI(Mode, Min, Max, TextLimit, InitVal)
+  Mode = Mode or 4
   Min = Min or 1
   Max = Max or 999999
   TextLimit = TextLimit or 10
+  InitVal = InitVal or nil
   UIManager(self):LoadUINew("CommonNumInput", tonumber(Mode), {
     Min = tonumber(Min),
     Max = tonumber(Max),
-    TextLimit = tonumber(TextLimit)
+    TextLimit = tonumber(TextLimit),
+    InitVal = tonumber(InitVal)
   })
+end
+
+function GM_Command:VerifySecPassword()
+  local Callbacks_Style1 = {
+    OnSuccess = function(Password)
+      DebugPrint("[方式一] 回调成功！密码: " .. tostring(Password))
+    end,
+    OnCancel = function()
+      DebugPrint("[方式一] 回调取消！")
+    end
+  }
+  SecondaryPasswordController:RequestSecPasswordValidation(Callbacks_Style1)
+end
+
+function GM_Command:TestServerRandomCreator(DungeonId)
+  DebugPrint("gmy@GM_Command GM_Command:TestServerRandomCreator", DungeonId)
+  local SoloTreasureUtils = require("Utils.SoloTreasureUtils")
+  DungeonId = tonumber(DungeonId)
+  local RandomPointsMap = SoloTreasureUtils:GenerateRandomPointsList(DungeonId)
+  if not next(RandomPointsMap) then
+    DebugPrint(string.format("错误: 找不到DungeonId=%d的随机点数据或生成失败", DungeonId))
+    return
+  end
+  DebugPrint(string.format("=== 副本随机点生成结果 (DungeonId=%d) ===", DungeonId))
+  local TotalCount = 0
+  for RandomRuleId, PointResults in pairs(RandomPointsMap) do
+    local Points = {}
+    for SDRCIndex, RandomTableId in pairs(PointResults) do
+      table.insert(Points, {Index = SDRCIndex, TableId = RandomTableId})
+    end
+    table.sort(Points, function(a, b)
+      return a.Index < b.Index
+    end)
+    local Count = #Points
+    TotalCount = TotalCount + Count
+    DebugPrint(string.format("  RandomRuleId=%d: 生成了%d个点", RandomRuleId, Count))
+    for _, Point in ipairs(Points) do
+      DebugPrint(string.format("    - SDRC索引=%d, 随机表ID=%d", Point.Index, Point.TableId))
+    end
+  end
+  DebugPrint(string.format("总计: %d个随机点", TotalCount))
+  DebugPrint("==========================================")
+  return RandomPointsMap
+end
+
+function GM_Command:TestServerStaticCreator(DungeonId)
+  DebugPrint("gmy@GM_Command GM_Command:TestServerStaticCreator", DungeonId)
+  local SoloTreasureUtils = require("Utils.SoloTreasureUtils")
+  DungeonId = tonumber(DungeonId)
+  local StaticPointsList = SoloTreasureUtils:GenerateStaticPointsList(DungeonId)
+  if 0 == #StaticPointsList then
+    DebugPrint(string.format("错误: 找不到DungeonId=%d的静态点数据", DungeonId))
+    return
+  end
+  DebugPrint(string.format("=== 副本静态点生成结果 (DungeonId=%d) ===", DungeonId))
+  DebugPrint(string.format("总静态点数量: %d", #StaticPointsList))
+  DebugPrint(string.format("静态点ID列表: %s", table.concat(StaticPointsList, ", ")))
+  DebugPrint("==========================================")
+  return StaticPointsList
+end
+
+function GM_Command:ShowWaterMark(Text)
+  GWorld.GameInstance:GetGameUIManager():LoadUINew("WaterMark", Text)
+end
+
+function GM_Command:EnableShowLevelLoadingInfo(bEnabled)
+  bEnabled = tonumber(bEnabled)
+  if nil == bEnabled or 0 == bEnabled then
+    bEnabled = false
+  else
+    bEnabled = true
+  end
+  local GMVariable = require("BluePrints.UI.GMInterface.GMVariable")
+  GMVariable.EnableShowLevelLoadingInfo = bEnabled
+  _G.EnableShowLevelLoadingInfo = bEnabled
+end
+
+function GM_Command:ExportAllAssetPathFromModelData()
+  UE4.URolePreloadGameInstanceSubsystem.ExportAllAssetPathFromModelData()
+end
+
+function GM_Command:SetLOD(ActorName, ForceLODIndex)
+  local GameInstance = self:GetGameInstance()
+  if not GameInstance then
+    return
+  end
+  local PlayerCharacters = TArray(APlayerCharacter)
+  UGameplayStatics.GetAllActorsOfClass(GameInstance, APlayerCharacter:StaticClass(), PlayerCharacters)
+  local MonsterCharacters = TArray(AMonsterCharacter)
+  UGameplayStatics.GetAllActorsOfClass(GameInstance, AMonsterCharacter:StaticClass(), MonsterCharacters)
+  local AttachedActors = TArray(AActor)
+  for _, PlayerCharacter in pairs(PlayerCharacters) do
+    local Name = PlayerCharacter:GetName()
+    if Name == ActorName then
+      local SkeletalMeshComponents = PlayerCharacter:K2_GetComponentsByClass(USkeletalMeshComponent)
+      for _, SkeletalMeshComponent in pairs(SkeletalMeshComponents) do
+        SkeletalMeshComponent:SetForcedLOD(tonumber(ForceLODIndex))
+        DebugPrint(string.format("%s SetLOD to: %s", UKismetSystemLibrary.GetObjectName(SkeletalMeshComponent), ForceLODIndex))
+      end
+      PlayerCharacter:GetAttachedActors(AttachedActors)
+      for _, AttachedActor in pairs(AttachedActors) do
+        local AttachedActorSkeletalMeshComponents = AttachedActor:K2_GetComponentsByClass(USkeletalMeshComponent)
+        for _, AttachedActorSkeletalMeshComponent in pairs(AttachedActorSkeletalMeshComponents) do
+          AttachedActorSkeletalMeshComponent:SetForcedLOD(tonumber(ForceLODIndex))
+          DebugPrint(string.format("%s SetLOD to: %s", UKismetSystemLibrary.GetObjectName(AttachedActorSkeletalMeshComponent), ForceLODIndex))
+        end
+      end
+    end
+  end
+  for _, MonsterCharacter in pairs(MonsterCharacters) do
+    local Name = MonsterCharacter:GetName()
+    if Name == ActorName then
+      local SkeletalMeshComponents = MonsterCharacter:K2_GetComponentsByClass(USkeletalMeshComponent)
+      for _, SkeletalMeshComponent in pairs(SkeletalMeshComponents) do
+        SkeletalMeshComponent:SetForcedLOD(tonumber(ForceLODIndex))
+        DebugPrint(string.format("%s SetLOD to: %s", UKismetSystemLibrary.GetObjectName(SkeletalMeshComponent), ForceLODIndex))
+      end
+      MonsterCharacter:GetAttachedActors(AttachedActors)
+      for _, AttachedActor in pairs(AttachedActors) do
+        local AttachedActorSkeletalMeshComponents = AttachedActor:K2_GetComponentsByClass(USkeletalMeshComponent)
+        for _, AttachedActorSkeletalMeshComponent in pairs(AttachedActorSkeletalMeshComponents) do
+          AttachedActorSkeletalMeshComponent:SetForcedLOD(tonumber(ForceLODIndex))
+          DebugPrint(string.format("%s SetLOD to: %s", UKismetSystemLibrary.GetObjectName(AttachedActorSkeletalMeshComponent), ForceLODIndex))
+        end
+      end
+    end
+  end
+end
+
+function GM_Command:ExportHairAnimSequence(OldAnimSequencePath)
+  if "" == OldAnimSequencePath then
+    DebugPrint("输入的AnimSequencePath不能为空")
+    return
+  end
+  local AnimSequence = LoadObject(OldAnimSequencePath)
+  if not AnimSequence then
+    DebugPrint(OldAnimSequencePath .. "加载失败")
+    return
+  end
+  local Manager = UHairAnimSequenceExportManager.Get()
+  if not Manager then
+    return
+  end
+  local GameInstance = self:GetGameInstance()
+  if not GameInstance then
+    return
+  end
+  local OutNpcs = UE4.UGameplayStatics.GetAllActorsOfClass(GameInstance, UE4.ANpcCharacter)
+  for _, Npc in pairs(OutNpcs) do
+    local HairID = Npc.HairID
+    if HairID then
+      Manager:K2_ExportAnimSequence(Npc, AnimSequence)
+    end
+    break
+  end
+end
+
+function GM_Command:TestPlay(HairAnimationSequencePath)
+  if "" == HairAnimationSequencePath then
+    return
+  end
+  local HairAnimationSequence = LoadObject(HairAnimationSequencePath)
+  if not HairAnimationSequence then
+    return
+  end
+  local Manager = UHairAnimSequenceExportManager.Get()
+  if not Manager then
+    return
+  end
+  local GameInstance = self:GetGameInstance()
+  if not GameInstance then
+    return
+  end
+  local Count = 1
+  local OutNpcs = UE4.UGameplayStatics.GetAllActorsOfClass(GameInstance, UE4.ANpcCharacter)
+  local BodyAnimationSequence
+  for _, Npc in pairs(OutNpcs) do
+    if 1 == Count then
+      local SkeletalMeshComponents = Npc:K2_GetComponentsByClass(USkeletalMeshComponent)
+      for _, SkeletalMeshComponent in pairs(SkeletalMeshComponents) do
+        local Name = UKismetSystemLibrary.GetObjectName(SkeletalMeshComponent)
+        if "Hair_SM" == Name then
+          local SMName = UKismetSystemLibrary.GetObjectName(SkeletalMeshComponent.SkeletalMesh)
+          local Suffix = "_" .. SMName
+          local BodyAnimationSequencePath = HairAnimationSequencePath:gsub(Suffix, "")
+          BodyAnimationSequence = LoadObject(BodyAnimationSequencePath)
+          if not BodyAnimationSequence then
+            return
+          end
+          Manager:K2_PlayBodyAnimation(Npc, BodyAnimationSequence, true)
+          Manager:K2_PlayHairAnimation(Npc, HairAnimationSequence, true)
+        end
+      end
+    else
+      local SkeletalMeshComponents = Npc:K2_GetComponentsByClass(UMonSkeletalMeshComponent)
+      for _, SkeletalMeshComponent in pairs(SkeletalMeshComponents) do
+        Manager:K2_PlayBodyAnimation(Npc, BodyAnimationSequence, true)
+      end
+    end
+    Count = Count + 1
+  end
+end
+
+function GM_Command:GP()
+  URuntimeCommonFunctionLibrary.EnableInsightsForGameplayEngine()
+end
+
+function GM_Command:GenerateNpcLocation(count)
+  local GameInstance = GWorld.GameInstance
+  if GameInstance then
+    local TalkContext = GameInstance:GetTalkContext()
+    if IsValid(TalkContext) then
+      local res = TalkContext:GetNPCStandPositions(UE4.UGameplayStatics.GetPlayerCharacter(GameInstance, 0), count, true)
+      DebugPrint("GM_Command:GenerateNpcLocation", #res)
+    end
+  end
+end
+
+function GM_Command:TestGuildWarRanking()
+  local PersonInfoModel = require("BluePrints.UI.WBP.PersonInfo.PersonInfoModel")
+  local SerializeUtils = require("Utils.SerializeUtils")
+  local MockSquadTable = {
+    AvatarInfo = {
+      CharacterInfo = {
+        RoleInfo = {
+          RoleId = 5301,
+          Level = 80,
+          GradeLevel = 6,
+          BreakLevel = 0,
+          ModSuitIndex = 1
+        },
+        MeleeWeapon = {
+          WeaponId = 10204,
+          Level = 80,
+          EnhanceLevel = 6,
+          SkinId = 3010402
+        },
+        AppearanceSuit = {
+          SkinId = 5301,
+          IsShowPartMesh = true,
+          CharId = 5301
+        }
+      },
+      PhantomInfo1 = {
+        RoleInfo = {RoleId = 1801, Level = 80}
+      },
+      PhantomInfo2 = {
+        RoleInfo = {RoleId = 2401, Level = 80}
+      }
+    },
+    CommonCombatInfo = {pet_id = 4153, pet_level = 60}
+  }
+  local MockSquadStr = SerializeUtils:Serialize(MockSquadTable)
+  local MockRankData = {}
+  for i = 1, 3 do
+    local Record = {
+      SeasonId = 100 + i,
+      Rank = i,
+      PreRaidGroupId = 1,
+      Score = 10000 - i * 1000,
+      UpdateTime = os.time(),
+      Squad = MockSquadStr,
+      Nickname = "MockPlayer_" .. i,
+      Uid = 10000 + i
+    }
+    if 2 == i then
+      local MockSquadTable2 = {
+        AvatarInfo = {
+          CharacterInfo = {
+            RoleInfo = {RoleId = 1801, Level = 80},
+            MeleeWeapon = {WeaponId = 10204, Level = 80},
+            AppearanceSuit = {SkinId = 1801, CharId = 1801}
+          },
+          PhantomInfo1 = {
+            RoleInfo = {RoleId = 5301, Level = 80}
+          },
+          PhantomInfo2 = {
+            RoleInfo = {RoleId = 2401, Level = 80}
+          }
+        },
+        CommonCombatInfo = {pet_id = 4153, pet_level = 60}
+      }
+      Record.Squad = SerializeUtils:Serialize(MockSquadTable2)
+      Record.Score = 5000
+      Record.PreRaidGroupId = 3
+    elseif 3 == i then
+      Record.Score = 2000
+      Record.PreRaidGroupId = 4
+    end
+    table.insert(MockRankData, Record)
+  end
+  PersonInfoModel.OtherPersonInfo = {
+    Uuid = 10001,
+    Nickname = "MockTargetPlayer",
+    Level = 80,
+    HeadIconId = 1,
+    HeadFrameId = 1,
+    TitleBefore = 0,
+    TitleAfter = 0,
+    TitleFrame = 0
+  }
+  PersonInfoModel.DebugCachedRankData = MockRankData
+  if ScreenPrint then
+    ScreenPrint("TestGuildWarRanking: Cached Mock Data. Open Personal Info -> History Rank to see it.")
+  end
+  print("TestGuildWarRanking: Cached Mock Data into PersonInfoModel.DebugCachedRankData")
+end
+
+function GM_Command:PrintAllAssetPathUnderThisPath(Path)
+  if not Path or "" == Path then
+    DebugPrint("Usage: gm PrintAllAssetPathUnderThisPath <FolderPath> 例如: Asset/Effect/Niagara/ 或 /Game/Asset/Effect/Niagara/")
+    return
+  end
+  
+  local function to_game_path(p)
+    p = tostring(p):gsub("\\", "/")
+    p = p:gsub("^/+", "")
+    p = p:gsub("^Content/", "")
+    p = p:gsub("^Asset/", "")
+    if not p:match("^Game/") then
+      p = "Game/" .. p
+    end
+    p = "/" .. p
+    p = p:gsub("/+$", "")
+    return p
+  end
+  
+  local GamePath = to_game_path(Path)
+  local AssetRegistry = UE4.UAssetRegistryHelpers.GetAssetRegistry()
+  if not AssetRegistry then
+    DebugPrint("PrintAllAssetPathUnderThisPath: 无法获取 AssetRegistry")
+    return
+  end
+  local ok, AssetDataArray = pcall(function()
+    return AssetRegistry:GetAssetsByPath(GamePath, {}, true, false)
+  end)
+  if not ok or not AssetDataArray then
+    DebugPrint("PrintAllAssetPathUnderThisPath: GetAssetsByPath 调用失败或路径无资源 -> " .. tostring(GamePath))
+    return
+  end
+  local AssetTable
+  if type(AssetDataArray.ToTable) == "function" then
+    local ok2, t = pcall(function()
+      return AssetDataArray:ToTable()
+    end)
+    if ok2 then
+      AssetTable = t
+    end
+  elseif type(AssetDataArray) == "table" then
+    AssetTable = AssetDataArray
+  end
+  if not AssetTable then
+    DebugPrint("PrintAllAssetPathUnderThisPath: 无法把 AssetDataArray 转为 table")
+    return
+  end
+  local Result = {}
+  local Count = 0
+  for _, AssetData in ipairs(AssetTable) do
+    local ObjPath
+    if type(AssetData) == "string" then
+      ObjPath = AssetData
+    elseif AssetData.ObjectPath then
+      ObjPath = tostring(AssetData.ObjectPath)
+    elseif AssetData.ObjectPathName then
+      ObjPath = tostring(AssetData.ObjectPathName)
+    elseif AssetData.PackageName then
+      ObjPath = tostring(AssetData.PackageName)
+    elseif AssetData.PackagePath and AssetData.AssetName then
+      local pkg = tostring(AssetData.PackagePath)
+      local aname = tostring(AssetData.AssetName)
+      if "" ~= pkg and "" ~= aname then
+        ObjPath = pkg .. "." .. aname
+      else
+        ObjPath = tostring(AssetData)
+      end
+    elseif AssetData:GetExportTextName() then
+      local ok3, name = pcall(function()
+        return AssetData:GetExportTextName()
+      end)
+      if ok3 then
+        ObjPath = tostring(name)
+      end
+    else
+      ObjPath = tostring(AssetData)
+    end
+    Count = Count + 1
+    DebugPrint(ObjPath)
+    table.insert(Result, ObjPath)
+  end
+  DebugPrint("PrintAllAssetPathUnderThisPath: Found " .. tostring(Count) .. " assets under " .. tostring(GamePath))
+  
+  local function escape_str(s)
+    s = tostring(s)
+    s = s:gsub("\\", "\\\\")
+    s = s:gsub("\"", "\\\"")
+    s = s:gsub("\n", "\\n")
+    return s
+  end
+  
+  local lua_lines = {}
+  table.insert(lua_lines, "{")
+  for i, v in ipairs(Result) do
+    table.insert(lua_lines, string.format("    \"%s\",", escape_str(v)))
+  end
+  table.insert(lua_lines, "}")
+  local FinalLuaText = table.concat(lua_lines, "\n")
+  DebugPrint(FinalLuaText)
 end
 
 return GM_Command

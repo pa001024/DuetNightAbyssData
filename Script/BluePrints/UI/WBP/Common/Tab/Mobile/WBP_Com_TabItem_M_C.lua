@@ -76,6 +76,10 @@ function M:SetSwitchOn(IsOn, IsNeedPressAnim)
 end
 
 function M:GetTabId()
+  if not self.Info then
+    DebugPrint(ErrorTag, "WBP_Com_TabItem_M_C==:GetTabId error, Info is nil")
+    return nil
+  end
   return self.Info.TabId
 end
 

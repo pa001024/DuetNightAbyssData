@@ -155,7 +155,7 @@ function Component:CheckShopItemCanPurchase(ShopItemId, Count)
   return true
 end
 
-function Component:PurchaseShopItem(ShopItemId, Count, NotShow, PurchaseCallback)
+function Component:PurchaseShopItem(ShopItemId, Count, NotShow, PurchaseCallback, VoucherId)
   if DataMgr.ShopItem2PayGoods[ShopItemId] then
     self.logger.info("PurchaseShopItem is Paygood", ShopItemId, Count)
     local ShopMain = UIManager(GWorld.GameInstance):GetUIObj("ShopMain")
@@ -168,7 +168,8 @@ function Component:PurchaseShopItem(ShopItemId, Count, NotShow, PurchaseCallback
     end
     return
   end
-  self.logger.info("PurchaseShopItem", ShopItemId, Count)
+  VoucherId = VoucherId or -1
+  self.logger.info("PurchaseShopItem", ShopItemId, Count, VoucherId)
   local bFreeBefore, ReddotNodeName
   local ItemConf = DataMgr.ShopItem[ShopItemId]
   if ItemConf and ItemConf.SubTabId then
@@ -229,7 +230,7 @@ function Component:PurchaseShopItem(ShopItemId, Count, NotShow, PurchaseCallback
     end
   end
   
-  self:CallServer("PurchaseShopItem", Callback, ShopItemId, Count)
+  self:CallServer("PurchaseShopItem", Callback, ShopItemId, Count, VoucherId)
 end
 
 function Component:OnRefreshShop(ServerTime)

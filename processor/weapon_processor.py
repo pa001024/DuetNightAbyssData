@@ -647,6 +647,10 @@ class WeaponProcessor(BaseProcessor):
             if attr_key in battle_weapon:
                 attr_config = self.attr_config.get(attr_key, {})
                 atk_type = self.get_translated_text(attr_config.get("Name", ""), "cn")
+                if not atk_type and attr_name == "Psionic":
+                    atk_type = "灵能属性攻击"
+                if not atk_type:
+                    continue
                 attributes["伤害类型"] = atk_type[:2]
                 attributes[atk_type[2:]] = battle_weapon[attr_key]
         attributes["暴击"] = battle_weapon.get("CRI", 0)

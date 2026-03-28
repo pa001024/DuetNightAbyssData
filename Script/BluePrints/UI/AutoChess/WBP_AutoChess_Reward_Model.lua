@@ -41,8 +41,9 @@ function AutoChessRewardModel:MakeRewardData(EventId)
   if DataMgr.EventMain[CommonConst.AutoChessEventId] then
     EndTime = DataMgr.EventMain[CommonConst.AutoChessEventId].EventEndTime
   end
-  local RemainTimeDict, _ = UIUtils.GetLeftTimeStrStyle2(EndTime)
+  local RemainTimeDict, Count = UIUtils.GetLeftTimeStrStyle2(EndTime)
   Params.ConfigData.RemainTimeDict = RemainTimeDict
+  Params.ConfigData.IsExpired = 0 == Count
   for _, PhaseConfig in pairs(SortedInfo) do
     local QuestPhaseId = PhaseConfig.QuestPhaseId
     local TabIndex = 1

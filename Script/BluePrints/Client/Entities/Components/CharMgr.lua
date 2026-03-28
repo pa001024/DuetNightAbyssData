@@ -104,6 +104,19 @@ function Component:_OnPropChangeOtherCharHairs(Keys)
   end
 end
 
+function Component:_OnPropChangeCommonCharHairs(Keys)
+  local HairId = Keys and Keys[1]
+  if not HairId then
+    return
+  end
+  local CommonCharHair = self.CommonCharHairs[HairId]
+  if not CommonCharHair then
+    return
+  end
+  CharModel:OnNewCharHairObtained(HairId)
+  EventManager:FireEvent(EventID.OnNewCharHairObtained, HairId)
+end
+
 function Component:_OnPropChangeResources(Keys)
   local ResourceId = Keys and Keys[1]
   if ResourceId then
@@ -136,6 +149,30 @@ end
 
 function Component:IsCharAccessoryExist(AccessoryId)
   return CharModel:IsCharAccessoryExist(AccessoryId)
+end
+
+function Component:IsCharSkinExist(SkinId)
+  local CharId = CharModel:GetCharIdBySkinId(SkinId)
+  if not CharId then
+    for _, CharSkins in pairs(self.OtherCharSkins) do
+      for _, CharSkinId in pairs(CharSkins) do
+        if CharSkinId == SkinId then
+          return true
+        end
+      end
+    end
+  else
+    return true
+  end
+  return false
+end
+
+function Component:IsHeadSculptureExist(FrameID)
+  for _, Value in pairs(self.HeadIconList) do
+    if Value == FrameID then
+      return true
+    end
+  end
 end
 
 function Component:ChangeChar(cb)
@@ -277,6 +314,17 @@ function Component:UpCharGradeLevel(CharUuid, CurrentGradeLevel)
   self:CallServer("UpCharGradeLevel", callback, CharUuid, CurrentGradeLevel)
 end
 
+function Component:UpCharExtraGradeLevel(CharUuid)
+  self.logger.debug("UpCharExtraGradeLevel begin", CommonUtils.ObjId2Str(CharUuid))
+  
+  local function Callback(Ret)
+    self.logger.debug("UpCharExtraGradeLevel Callback", Ret)
+    EventManager:FireEvent(EventID.OnCharExtraGradeLevelUp, Ret, CharUuid)
+  end
+  
+  self:CallServer("UpCharExtraGradeLevel", Callback, CharUuid)
+end
+
 function Component:CharLevelUp(CharUuid, CurrentLevel, TargetLevel)
   self.logger.debug("CharLevelUp", CommonUtils.ObjId2Str(CharUuid), CurrentLevel, TargetLevel)
   local Char = self.Chars[CharUuid]
@@ -336,6 +384,20 @@ function Component:UpdateCharModSuitName(InCallbackInfo, CharUuid, ModSuitIndex,
   end
   
   self:CallServer("UpdateCharModSuitName", Callback, CharUuid, ModSuitIndex, NewName)
+end
+
+function Component:GetModRankData(TypeName, TargetId, CallbackInfo)
+  if "Weapon" == TypeName or "UWeapon" == TypeName then
+    self:CallServer("GetWeaponModRankData", function(ErrCode, Data, UserCount)
+      self.logger.info("GetWeaponModRankData", ErrCode, CommonUtils.TableToString(Data), UserCount)
+      CallbackInfo.Func(CallbackInfo.Obj, Data, UserCount)
+    end, TargetId)
+  elseif "Char" == TypeName then
+    self:CallServer("GetCharModRankData", function(ErrCode, Data, UserCount)
+      self.logger.info("GetCharModRankData", ErrCode, CommonUtils.TableToString(Data), UserCount)
+      CallbackInfo.Func(CallbackInfo.Obj, Data, UserCount)
+    end, TargetId)
+  end
 end
 
 function Component:TakeOffAllCharMod(InCallbackInfo, CharUuid, ModSuitIndex)

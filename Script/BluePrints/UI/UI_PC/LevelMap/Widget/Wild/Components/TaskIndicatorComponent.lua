@@ -194,7 +194,7 @@ function Component:UpdateMiniMapIndicatorsByStoryNode(InUIName, InUIType, OpType
 end
 
 function Component:CreateIndicatorMiniMapWidget()
-  local Path = "/Game/UI/UI_PC/Common/Common_GuidePoint_PC.Common_GuidePoint_PC_C"
+  local Path = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_MiniMap.WBP_GuidePoint_MiniMap_C"
   local GuidePointWidget = UE4.UWidgetBlueprintLibrary.Create(self, LoadClass(Path))
   return GuidePointWidget
 end
@@ -1213,7 +1213,7 @@ function Component:AddDynamicGuidePointToRegionMap()
           ScreenPrint(string.format("动态事件地图指引点区域数据不存在, 指引点名称：%s", IndicatorUI:GetName()))
         end
       elseif DataMgr.SubRegion[TargetSubRegionId].RegionId == self.RegionID then
-        local Path = "/Game/UI/UI_PC/Common/Common_GuidePoint_PC.Common_GuidePoint_PC_C"
+        local Path = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_MiniMap.WBP_GuidePoint_MiniMap_C"
         local IndicatorWidget = self:CreateIndicatorMiniMapWidget()
         local IconTexture = LoadObject("/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_DynQuest.T_Gp_DynQuest")
         if IconTexture then

@@ -350,10 +350,10 @@ function Component:LockOrUnlockWeapon()
     end
     
     local function ConfirmFunc()
-      self:SetFocus()
-      local Avatar = GWorld:GetAvatar()
-      self:BlockAllUIInput(true)
-      Avatar:UnLockResourceInBag(CommonConst.AllType.Weapon, self.ItemDetailsContent.Uuid)
+      local ArmoryMain = UIManager(self):GetArmoryUIObj()
+      if ArmoryMain and ArmoryMain.ActorController then
+        SecondaryPasswordController:Weapon_OpenSeconderyPassword(self.ItemDetailsContent.Uuid, self)
+      end
     end
     
     UIManager(self):ShowCommonPopupUI(100019, {

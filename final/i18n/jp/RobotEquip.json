@@ -106,7 +106,7 @@
     "rarity": 4,
     "cost": 8,
     "buffId": 4020501,
-    "extraBuffDesc": "タグ効果: HPが20%減少するたびに、自身の#2防御力がアップする。",
+    "extraBuffDesc": "タグ効果: ダメージを与えた時、対象の防御力を45.0%ダウンさせる。10秒間持続。",
     "extraBuffId": 4020201,
     "unlockQuestId": 10300104,
     "atk": 0.3

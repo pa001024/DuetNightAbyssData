@@ -138,5 +138,31 @@ return ReadOnly("SkinGacha", {
     Star4ItemId = 99962,
     Star5ItemId = 99961,
     TabId = 4
+  },
+  [9005] = {
+    ConditionId = 4041,
+    DisplayCostRes = T.RT_1,
+    GachaCoreDes = "UI_SkinGacha_Core_GoldSkin",
+    GachaCoreDesColor = 5,
+    GachaCostNum10 = 10,
+    GachaCostRes = T.RT_2,
+    GachaDes = "SkinGacha_Des_Special",
+    GachaDisplayPath = "FileMediaSource'/Game/Asset/UIVideo/Gacha/Gacha_Pool_Suyi01.Gacha_Pool_Suyi01'",
+    GachaDisplayType = 1,
+    GachaEndTime = LocalTimeProxy(1780304400),
+    GachaHistoryType = 2,
+    GachaId = 9005,
+    GachaName = "SkinGacha_Name_Special_4",
+    GachaNameBp = "WidgetBlueprint'/Game/UI/WBP/GachaNew/Widget/Title/WBP_Gacha_PoolTitle_Suyi01.WBP_Gacha_PoolTitle_Suyi01'",
+    GachaStartTime = LocalTimeProxy(1775440800),
+    GachaTimes = 1,
+    GachaType = "GACHA_SKIN_TYPE_SPECIAL_4",
+    GachaWarning = "SkinGacha_Warning_Special_4",
+    ProbabilityId = 1001,
+    Sequence = 3,
+    Star3ItemId = 99953,
+    Star4ItemId = 99952,
+    Star5ItemId = 99951,
+    TabId = 5
   }
 })

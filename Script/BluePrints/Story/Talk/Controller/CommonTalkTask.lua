@@ -47,6 +47,16 @@ local WaitItemUniqueTag = {
   WaitFlowEnd = "WaitFlowEnd",
   AutoPlayDelay = "AutoPlayDelay"
 }
+local LockedLod0NodeSet = {
+  ["17734793256387211"] = true,
+  ["17679612423452179680"] = true,
+  ["176250799106025770648"] = true,
+  ["17724328722381498260"] = true,
+  ["176347437470315232984"] = true,
+  ["17675829024551092776"] = true,
+  ["1768478788334729190"] = true,
+  ["1772091879610777097"] = true
+}
 local CommonTalkTask = Class({
   "BluePrints.Story.Talk.Controller.TalkTaskBase"
 })
@@ -63,6 +73,14 @@ function CommonTalkTask:Start(TalkTaskData, TaskFinishedCallback)
     return
   end
   AudioManager(GWorld.GameInstance):AddAuANotifyForbidTag(self.UnitKey)
+  if LockedLod0NodeSet[self.TalkTaskData.Key] then
+    self.NativeStaticMeshLODDistanceScale = UE4.UKismetSystemLibrary.GetConsoleVariableFloatValue("r.StaticMeshLODDistanceScale")
+    self.NativeHLodMinDrawDistanceScale = UE4.UKismetSystemLibrary.GetConsoleVariableFloatValue("r.HLodMinDrawDistanceScale")
+    self.NativeHLODDistanceOverride = UE4.UKismetSystemLibrary.GetConsoleVariableFloatValue("r.HLOD.DistanceOverride")
+    UE4.URuntimeCommonFunctionLibrary.SetConsoleVariableFloatValue("r.StaticMeshLODDistanceScale", 0.1)
+    UE4.URuntimeCommonFunctionLibrary.SetConsoleVariableFloatValue("r.HLodMinDrawDistanceScale", 0.1)
+    UE4.URuntimeCommonFunctionLibrary.SetConsoleVariableFloatValue("r.HLOD.DistanceOverride", 1000000)
+  end
   local TalkSubsystem = UE4.USubsystemBlueprintLibrary.GetWorldSubsystem(self.TalkContext, UE4.UTalkSubsystem)
   if IsValid(TalkSubsystem) then
     TalkSubsystem:SetShadowParamsEnabled(true)
@@ -95,12 +113,15 @@ function CommonTalkTask:Start(TalkTaskData, TaskFinishedCallback)
   self:SwitchEnableComponent(self.SwitchEmoIdleComponent, true)
   self:SwitchEnableComponent(self.PauseTimeElapseComponent, true)
   self:OnCinematicBegin()
-  self.Player:PreEnterStory()
   self.UI:PreEnterTalkTask(self, self.TalkTaskData)
   self:FadeInBlack(self.TalkTaskData.BlendInType == "FadeIn", self.TalkTaskData.BlendInTime, function()
     self:TravelPlayer(self.TalkTaskData.BeginTargetPoint, function()
       self:SetViewTargetToStage(function()
-        self:PreStartPerformance()
+        self:WaitNavLoadFinish(function()
+          self:BlendIn(self.TalkTaskData.CameraType, function()
+            self:PreStartPerformance()
+          end)
+        end)
       end)
     end)
   end)
@@ -129,7 +150,9 @@ function CommonTalkTask:Finish(TalkNodeFinishType, OptionIndex)
     end
     self:StopDSL()
     self:TryEndFlowGraph()
+    self:NPCEnableSkeletalMeshActorRules(self.TalkTaskData.BasicTalkType == "Cinematic", false)
     self:ResetStageSetting(self.TalkTaskData.TalkStage)
+    self:ResetDefaultNpcTransform()
     self.TalkContext:DestoryTalkActors(self, self.TalkTaskData.TalkActors)
     self:TryHideDialogueBlackUI()
     self.TalkContext:ConditionalRecoverCharacterShadowSetting(self.TalkTaskData)
@@ -152,6 +175,11 @@ function CommonTalkTask:Finish(TalkNodeFinishType, OptionIndex)
 end
 
 function CommonTalkTask:End(TalkNodeFinishType, OptionIndex)
+  if LockedLod0NodeSet[self.TalkTaskData.Key] then
+    UE4.URuntimeCommonFunctionLibrary.SetConsoleVariableFloatValue("r.StaticMeshLODDistanceScale", self.NativeStaticMeshLODDistanceScale)
+    UE4.URuntimeCommonFunctionLibrary.SetConsoleVariableFloatValue("r.HLodMinDrawDistanceScale", self.NativeHLodMinDrawDistanceScale)
+    UE4.URuntimeCommonFunctionLibrary.SetConsoleVariableFloatValue("r.HLOD.DistanceOverride", self.NativeHLODDistanceOverride)
+  end
   local TalkSubsystem = UE4.USubsystemBlueprintLibrary.GetWorldSubsystem(self.TalkContext, UE4.UTalkSubsystem)
   if IsValid(TalkSubsystem) then
     TalkSubsystem:SetShadowParamsEnabled(false)
@@ -162,7 +190,6 @@ function CommonTalkTask:End(TalkNodeFinishType, OptionIndex)
   end
   URuntimeCommonFunctionLibrary.SetSceneOcclusionThreshold(45.0, 10000)
   GWorld.GameInstance:SetDynamicResolution("Talk", false)
-  self.Player:PreExitStory()
   self:Clear()
   self:OnTalkEnd()
   self:SwitchEnableComponent(self.DisableNpcPerformanceOptimizationComponent, false)
@@ -231,7 +258,12 @@ function CommonTalkTask:Clear()
 end
 
 function CommonTalkTask:PreStartPerformance()
+  self:ProcessShowHide(true)
   self.TalkContext:ConditionalSetupCharacterShadowSetting(self.TalkTaskData)
+  local TS = TalkSubsystem()
+  if IsValid(TS) then
+    TS:TalkHidePlayerCharacter(self.Player, true, Const.TalkHideTag)
+  end
   local WaitQueue = self.WaitQueueManager:CreateWaitQueue(self, {
     {
       Tag = WaitQueueTag.KeepBlack
@@ -240,6 +272,11 @@ function CommonTalkTask:PreStartPerformance()
       Tag = WaitQueueTag.CreateActors
     }
   }, nil, function()
+    self:ActorsAroundPlayer(self.TalkTaskData.TalkActors)
+    self:ApplyDefaultTransform()
+    self:ApplyStageSetting(self.TalkTaskData.TalkStage)
+    TS:TalkHidePlayerCharacter(self.Player, false, Const.TalkHideTag)
+    self.TalkContext:ShowHideInTalkActors()
     self:StartPerformance()
   end)
   self:KeepBlack(self.TalkTaskData.BlendInType == "FadeIn", self.ScreenEffectDurationSeconds, function()
@@ -257,12 +294,10 @@ function CommonTalkTask:PreStartPerformance()
 end
 
 function CommonTalkTask:StartPerformance()
-  self:ApplyStageSetting(self.TalkTaskData.TalkStage)
+  self:NPCEnableSkeletalMeshActorRules(self.TalkTaskData.BasicTalkType == "Cinematic", true)
   self:FadeOutBlack(self.TalkTaskData.BlendInType == "FadeIn", self.TalkTaskData.BeginFadeOutTime)
   self:StopNpcDefaultAction(not self.TalkTaskData.bNpcActionKeepIn and self.TalkTaskData.BasicTalkType == "FixSimple", self.TalkTaskData.TalkActors)
-  self:BlendIn(self.TalkTaskData.CameraType, function()
-    self:StartDialogueFlow()
-  end)
+  self:StartDialogueFlow()
 end
 
 function CommonTalkTask:StartDialogueFlow()
@@ -272,9 +307,28 @@ function CommonTalkTask:StartDialogueFlow()
   self:SwitchEnableComponent(self.PauseGameComponent, true)
   self:SwitchEnableComponent(self.DisableNpcMovementComponent, true)
   self:SwitchEnableComponent(self.SetForceLodComponent, true)
-  self:ProcessShowHide(true)
   self:TryPlaySequence()
   self:StartDialogueIteration()
+end
+
+function CommonTalkTask:ActorsAroundPlayer(ActorInfos)
+  local AroundActors = {}
+  local ActorInfos = ActorInfos or {}
+  for _, ActorInfo in ipairs(ActorInfos) do
+    if ActorInfo.AroundPlayer then
+      local ActorData = self.TalkContext:GetTalkActorData(self, ActorInfo.TalkActorId)
+      if ActorData and IsValid(ActorData.TalkActor) then
+        table.insert(AroundActors, ActorData.TalkActor)
+      end
+    end
+  end
+  local Locations = self.TalkContext:GetNPCStandPositions(UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0), #AroundActors, true)
+  for i, Actor in ipairs(AroundActors) do
+    if IsValid(Actor) then
+      Actor:K2_SetActorLocation(Locations[i], false, nil, true)
+      Actor:ResetLocation()
+    end
+  end
 end
 
 function CommonTalkTask:ApplyStageSetting(Stage)
@@ -303,19 +357,56 @@ function CommonTalkTask:ApplyStageSetting(Stage)
   end
 end
 
+function CommonTalkTask:ApplyDefaultTransform()
+  for _, ActorInfo in ipairs(self.TalkTaskData.TalkActors) do
+    if ActorInfo.DefaultPos then
+      local ActorData = self.TalkContext:GetTalkActorData(self, ActorInfo.TalkActorId)
+      if ActorData and IsValid(ActorData.TalkActor) then
+        self:CacheNpcTransform(ActorData.TalkActor)
+        ActorData.TalkActor:K2_SetActorLocation(ActorInfo.DefaultPos, false, nil, true)
+      end
+    end
+  end
+end
+
 function CommonTalkTask:ResetStageSetting(Stage)
   if not IsValid(Stage) then
     return
   end
   for i = 1, Stage.StaticCreateActors:Length() do
     local StaticCreateActor = Stage.StaticCreateActors:GetRef(i)
-    if IsValid(StaticCreateActor) and StaticCreateActor.UnitType == "Npc" then
+    if IsValid(StaticCreateActor) and string.lower(StaticCreateActor.UnitType) == "npc" then
       local NpcData = self.TalkContext:GetTalkActorData(self, StaticCreateActor.UnitId)
       if NpcData then
         local Npc = NpcData.TalkActor
         if IsValid(Npc) and Npc:IsA(UE4.ANpcCharacter) then
           self:ResetNpcTransform(Npc)
         end
+      end
+    end
+  end
+end
+
+function CommonTalkTask:ResetDefaultNpcTransform()
+  for _, ActorInfo in ipairs(self.TalkTaskData.TalkActors) do
+    if ActorInfo.DefaultPos then
+      local ActorData = self.TalkContext:GetTalkActorData(self, ActorInfo.TalkActorId)
+      if ActorData and IsValid(ActorData.TalkActor) then
+        self:ResetNpcTransform(Npc)
+      end
+    end
+  end
+end
+
+function CommonTalkTask:NPCEnableSkeletalMeshActorRules(bEnableFunction, bEnable)
+  if not bEnableFunction then
+    return
+  end
+  for _, ActorInfo in ipairs(self.TalkTaskData.TalkActors) do
+    if ActorInfo.TalkActorType == "Npc" then
+      local ActorData = self.TalkContext:GetTalkActorData(self, ActorInfo.TalkActorId)
+      if ActorData and IsValid(ActorData.TalkActor) and ActorData.TalkActor:IsA(UE4.ANpcCharacter) then
+        ActorData.TalkActor:EnableSkeletalMeshActorRules(bEnable)
       end
     end
   end
@@ -386,8 +477,8 @@ function CommonTalkTask:CreateActors(ActorInfos, DefaultCreateLocation, Callback
         local ActorData = self.TalkContext:GetTalkActorData(self, ActorInfo.TalkActorId)
         if not ActorData or not IsValid(ActorData.TalkActor) then
           local Title = "对话创建检查Actor失败"
-          local Message = string.format("ActorId: %d, ActorType: %s", ActorInfo.TalkActorId, ActorInfo.TalkActorType)
-          UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, UE.EStoryLogType.Talk, Title, Message)
+          local Message = string.format("ActorId: %s, ActorType: %s", ActorInfo.TalkActorId, ActorInfo.TalkActorType)
+          UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, UE4.EStoryLogType.Talk, Title, Message)
         end
       end
     end
@@ -447,19 +538,19 @@ function CommonTalkTask:BlendIn(CameraType, Callback)
     Callback()
     return
   end
-  local BlendOutFunc = self.DefaultCameraBlendIn
+  local BlendInFunc = self.DefaultCameraBlendIn
   if "FreeCamera" == CameraType then
-    BlendOutFunc = self.FreeCameraBlendIn
+    BlendInFunc = self.FreeCameraBlendIn
   elseif "FixedCamera" == CameraType then
-    BlendOutFunc = self.FixedCameraBlendIn
+    BlendInFunc = self.FixedCameraBlendIn
   elseif "SequenceCamera" == CameraType then
-    BlendOutFunc = self.SequenceCameraBlendIn
+    BlendInFunc = self.SequenceCameraBlendIn
   end
   local BlendSeconds = 0
   if self.TalkTaskData.BlendInType == "BlendIn" then
     BlendSeconds = self.TalkTaskData.BlendInTime
   end
-  BlendOutFunc(self, BlendSeconds, {Func = Callback})
+  BlendInFunc(self, BlendSeconds, {Func = Callback})
 end
 
 function CommonTalkTask:DefaultCameraBlendIn(BlendSeconds, Callback)
@@ -512,7 +603,6 @@ function CommonTalkTask:SequenceCameraBlendIn(BlendSeconds, Callback)
     self.TalkCameraManager:MakeSequenceCamera()
     USequenceFunctionLibrary.SetViewTarget(PlayerController, self.TalkCameraManager.SequenceCamera)
   end
-  self.TalkContext:BindActors(self)
   if Callback and Callback.Func then
     Callback.Func(Callback.Obj)
   end
@@ -589,6 +679,53 @@ function CommonTalkTask:SetViewTargetToStage(OnFinished)
   end
   self.StageViewTarget = GWorld.GameInstance:GetWorld():SpawnActor(ACameraActor, Stage:GetTransform())
   self:TravelViewTarget(self.StageViewTarget, self.TalkTaskData.bTravelFullLoadWorldComposition, OnFinished)
+end
+
+function CommonTalkTask:WaitNavLoadFinish(OnFinish)
+  DebugPrint("CommonTalkTask:WaitNavLoadFinish")
+  if not self.TalkTaskData.bForceWaitNavLoaded then
+    if OnFinish then
+      DebugPrint("CommonTalkTask:WaitNavLoadFinish OnFinish")
+      OnFinish()
+    end
+    return
+  end
+  if self.TalkTaskData.bFreezeWorldComposition then
+    local Title = "强制等待加载导航失败"
+    local Message = string.format("当前对话勾选了冻结WC加载，可能会导致导航也被冻结，请选一个勾掉")
+    UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, UE4.EStoryLogType.Talk, Title, Message)
+    if OnFinish then
+      OnFinish()
+    end
+    return
+  end
+  local GameMode = UE.UGameplayStatics.GetGameMode(self.Player)
+  if not IsValid(GameMode) then
+    if OnFinish then
+      DebugPrint("CommonTalkTask:WaitNavLoadFinish OnFinish")
+      OnFinish()
+    end
+    return
+  end
+  local LevelLoader = GameMode:GetLevelLoader()
+  if not IsValid(LevelLoader) then
+    if OnFinish then
+      DebugPrint("CommonTalkTask:WaitNavLoadFinish OnFinish")
+      OnFinish()
+    end
+    return
+  end
+  local BlackHandle = UIManager(self.TalkContext):ShowCommonBlackScreen({})
+  LevelLoader:CollectUnAttachNavigationLevel({
+    self.TalkContext,
+    function()
+      DebugPrint("CommonTalkTask:WaitNavLoadFinish Real OnFinish")
+      UIManager(self.TalkContext):HideCommonBlackScreen(BlackHandle)
+      if OnFinish then
+        OnFinish()
+      end
+    end
+  })
 end
 
 function CommonTalkTask:SetViewTargetToPlayer(OnFinished)
@@ -739,7 +876,7 @@ function CommonTalkTask:PlayDialogue(bPauseResume, bSkipping)
     {
       Tag = WaitItemUniqueTag.AutoPlayDelay,
       Condition = function()
-        return self:IsAutoPlay() and not self.bAutoToNext
+        return self:IsAutoPlay() and not DialogueData.DisableDuration
       end
     }
   }, self, self.OnTaskPlayDialogueFinished)
@@ -758,7 +895,7 @@ function CommonTalkTask:PlayDialogue(bPauseResume, bSkipping)
   self:PlayAudio(DialogueData, function()
     WaitQueuePointer:CompleteWaitItem(WaitItemUniqueTag.PlayAudio)
   end)
-  if self:IsAutoPlay() and not self.bAutoToNext then
+  if self:IsAutoPlay() then
     self.TalkContext.TalkTimerManager:AddTimer(self, DialogueData.Duration, nil, nil, self, function()
       WaitQueuePointer:CompleteWaitItem(WaitItemUniqueTag.AutoPlayDelay)
     end)
@@ -932,7 +1069,7 @@ end
 
 function CommonTalkTask:CreatePauseGameComponent()
   if self.TalkTaskData.bPauseGameGlobal and Utils.IsStandAlone(GWorld.GameInstance) then
-    self.PauseGameComponent = FPauseGameComponent:New(self.TalkContext, self.TalkTaskData)
+    self.PauseGameComponent = FPauseGameComponent:New(self.TalkContext, self, self.TalkTaskData)
   end
 end
 
@@ -955,6 +1092,7 @@ function CommonTalkTask:CreatePauseTimeElapseComponent()
 end
 
 function CommonTalkTask:FinishDialogue()
+  self:SetCanResponseUIClick(false)
   UIManager(GWorld.GameInstance):UnLoadUINew("ReasoningCollect")
   local OptionData = self.TalkTaskData.OptionData
   if OptionData:IsShow() and #OptionData.Options > 0 then
@@ -992,7 +1130,10 @@ function CommonTalkTask:ShowTalkOptions(OptionData)
   for i, Option in ipairs(OptionData.Options) do
     table.insert(CopiedOptionTexts, {
       Index = Option.Index,
-      Text = Option.OptionText
+      Text = Option.OptionText,
+      bIsSelected = Option.bIsSelected,
+      bCanReselect = Option.bCanReselect,
+      OptionStyle = Option.OptionStyle
     })
   end
   local FinalOptionTexts = {}
@@ -1017,6 +1158,12 @@ function CommonTalkTask:ShowTalkOptions(OptionData)
     if Option.OverrideBlend then
       self.TalkTaskData.BlendOutType = Option.OverrideOutype
       self.TalkTaskData.BlendOutTime = Option.OverrideOutTime
+    end
+    if Option.bSaveToServer then
+      local Avatar = GWorld:GetAvatar()
+      if Avatar then
+        Avatar:SelectStoryOption(Option.OptionId)
+      end
     end
     local OptionDialogueData = DataMgr.Dialogue[Option.OptionId]
     self:RunDSL(OptionDialogueData, function()
@@ -1057,14 +1204,6 @@ function CommonTalkTask:ShowDialogueOptions(OptionIds)
   self:SetCanResponseUIClick(false)
   self:TryHideDialogueBlackUI()
   self.TalkTaskState = TalkTaskState.ShowingOption
-  local OptionTexts = {}
-  for i, OptionId in ipairs(OptionIds) do
-    table.insert(OptionTexts, {
-      Index = i,
-      Text = TalkUtils:OptionIdToContent(OptionId),
-      bIsSelected = self.DialogueIterationComponent:IsSelectedOption(OptionId)
-    })
-  end
   local DialougeType = "null"
   for i, OptionId in ipairs(OptionIds) do
     local DialogueData = DataMgr.Dialogue[OptionId]
@@ -1078,16 +1217,33 @@ function CommonTalkTask:ShowDialogueOptions(OptionIds)
     if "null" ~= DialougeType and Type ~= DialougeType then
       local Message = "Dialogue各选项之间类型不同\nDialogueId: " .. OptionId
       local Title = "印象系统错误：选项类型不同"
-      UStoryLogUtils.PrintToFeiShu(self, UE.EStoryLogType.Impression, Title, Message)
+      UStoryLogUtils.PrintToFeiShu(self, UE4.EStoryLogType.Impression, Title, Message)
       DebugPrint("lhr@Dialogue各选项之间类型不同\nDialogueId:", OptionId)
       return
     end
     DialougeType = Type
   end
   local NewOptionData = TalkOptionData_C.New(DialougeType, nil, OptionIds, self.DialogueIterationComponent)
+  local OptionTexts = {}
+  for i, OptionData in ipairs(NewOptionData.Options) do
+    table.insert(OptionTexts, {
+      Index = i,
+      Text = OptionData.OptionText,
+      bIsSelected = OptionData.bIsSelected,
+      bCanReselect = OptionData.bCanReselect,
+      OptionStyle = OptionData.OptionStyle
+    })
+  end
   self.UI:ShowOptions(self, OptionTexts, NewOptionData, function(ItemIdx, SpecifyFinishType)
     self.UI:ClearOptions()
     local OptionId = OptionIds[ItemIdx]
+    local OptionData = NewOptionData.Options[ItemIdx]
+    if OptionData.bSaveToServer then
+      local Avatar = GWorld:GetAvatar()
+      if Avatar then
+        Avatar:SelectStoryOption(OptionId)
+      end
+    end
     local OptionDialogueData = DataMgr.Dialogue[OptionId]
     if SpecifyFinishType == ETalkNodeFinishType.Fail then
       self:SetOutport(SpecifyFinishType)
@@ -1241,6 +1397,7 @@ end
 
 function CommonTalkTask:TryPlaySequence()
   if self.TalkTaskData.SequencePlayer then
+    self.TalkContext:BindActors(self)
     self.TalkTaskData.SequencePlayer:Play()
     local PlayerController = UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
     UTalkSequenceFunctionLibrary.UpdatePlayerCameraManager(PlayerController)

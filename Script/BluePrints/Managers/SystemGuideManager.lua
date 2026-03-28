@@ -7,6 +7,7 @@ SystemGuideManager.IsGuideStoryRunning = false
 SystemGuideManager.RunningId = -1
 SystemGuideManager.bOpenDebug = false
 SystemGuideManager.GuideEventList = {}
+SystemGuideManager.DispatchId = 2057
 
 function SystemGuideManager:AddListenerSystemGuide()
   self:ClearSystemGuideData()
@@ -34,6 +35,7 @@ function SystemGuideManager:AddSystemGuideEvents()
   self:AddSystemGuideEvent(EventID.OnSystemUnlockWorkingEnd, self.SystemUnlockWorkingEndEvent)
   self:AddSystemGuideEvent(EventID.FirstSeenTag, self.FirstSeenTagEvent)
   self:AddSystemGuideEvent(EventID.FirstDynQuest, self.FirstDynQuest)
+  self:AddSystemGuideEvent(EventID.FirstRain, self.FirstRain)
   self:AddSystemGuideEvent(EventID.EndTalk, self.FirstPanFixTalk)
   self:AddSystemGuideEvent(EventID.ConditionComplete, self.ConditionCompleteEvent)
 end
@@ -63,6 +65,8 @@ function SystemGuideManager:IsNeedAddListener(EventId)
     elseif EventId == EventID.FirstSeenTag and nil ~= value.Data.FirstSeenTag then
       return true
     elseif EventId == EventID.FirstDynQuest and value.Data.SpecialCondition == "FirstDynQuest" then
+      return true
+    elseif EventId == EventID.FirstRain and value.Data.SpecialCondition == "FirstRain" then
       return true
     elseif EventId == EventID.EndTalk and value.Data.SpecialCondition == "FirstPanFixTalk" then
       return true
@@ -236,13 +240,46 @@ function SystemGuideManager:InitCondition()
     local Item = self.GuideDic[value.SysGuideId]
     local Avatar = GWorld:GetAvatar()
     if Avatar then
+      self:CheckDispatch()
       Item.Finished = Avatar.SystemGuides:GetSystemGuide(value.SysGuideId):IsFinished()
-      if Item.Finished then
+      if Item.Finished == false then
+        if Item.Data.ConditionCheck ~= nil then
+          local Res = ConditionUtils.CheckCondition(Avatar, Item.Data.ConditionCheck)
+          Item.ConditionCheck = Res
+        end
+        if nil ~= Item.Data.UIUnlockRule and false == Item.UIUnlockRule then
+          local bUnlocked = Avatar:CheckUIUnlocked_Internal(Item.Data.UIUnlockRule)
+          if bUnlocked and false == Avatar:HasUIUnlockTask() then
+            Item.UIUnlockRule = true
+          end
+        end
+      end
+    end
+  end
+end
+
+function SystemGuideManager:CheckDispatch()
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    if Avatar.SystemGuides:GetSystemGuide(SystemGuideManager.DispatchId):IsFinished() then
+      return
+    end
+    local Count = Avatar.AchvTargets:GetAchvTarget(519001).Count
+    if Count > 0 then
+      self:SendDataToServer(SystemGuideManager.DispatchId)
+      return
+    end
+    for Id, Dispatch in pairs(Avatar.Dispatches) do
+      if Dispatch.State == CommonConst.DispatchState.Success or Dispatch.State == CommonConst.DispatchState.Perfect or Dispatch.State == CommonConst.DispatchState.Qualified or Dispatch.State == CommonConst.DispatchState.Disqualified then
+        self:SendDataToServer(SystemGuideManager.DispatchId)
         return
       end
-      if Item.Data.ConditionCheck ~= nil then
-        local Res = ConditionUtils.CheckCondition(Avatar, Item.Data.ConditionCheck)
-        Item.ConditionCheck = Res
+    end
+    for _, DispatchListProp in ipairs(Avatar.CurrentDispatchList) do
+      local Id = DispatchListProp:GetDispatchId()
+      if -1 ~= Id and DispatchListProp:GetDispatchState() == CommonConst.DispatchState.Doing then
+        self:SendDataToServer(SystemGuideManager.DispatchId)
+        return
       end
     end
   end
@@ -622,6 +659,20 @@ function SystemGuideManager:FirstDynQuest()
     for i = 1, #GuideIds do
       self.GuideDic[GuideIds[i]].FinishedSpecialCondition = true
       self:TryRunStoryByGuideId("FirstDynQuest", GuideIds[i])
+    end
+  end
+end
+
+function SystemGuideManager:FirstRain()
+  if self.Invalid then
+    return
+  end
+  DebugPrint("Systemguide FirstRain")
+  local GuideIds = self:GetItemBySpecialCondition("FirstRain")
+  if #GuideIds > 0 then
+    for i = 1, #GuideIds do
+      self.GuideDic[GuideIds[i]].FinishedSpecialCondition = true
+      self:TryRunStoryByGuideId("FirstRain", GuideIds[i])
     end
   end
 end

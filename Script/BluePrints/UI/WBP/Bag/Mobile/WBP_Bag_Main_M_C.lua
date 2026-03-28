@@ -108,6 +108,7 @@ end
 
 function WBP_Bag_Main_M_C:Destruct()
   self:HorizontalListViewResize_TearDown()
+  ReddotManager.RemoveListener("Bag_Consume", self)
   self.Super.Destruct(self)
   if self.GoToArmoryWhenClose then
     local PlayerCharacter = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
@@ -190,6 +191,8 @@ function WBP_Bag_Main_M_C:InitTabInfo()
     BackCallback = self.OnReturnKeyDown
   })
   self.Tab_Bag:BindEventOnTabSelected(self, self.TabBagItemClick)
+  self:SetConsumeReddot()
+  self:BindReddotTreeEvents()
   self.AllStuffData = {}
   self.FilteredStuffData = {}
   self:AddDelayFrameFunc(function()
@@ -205,6 +208,47 @@ function WBP_Bag_Main_M_C:InitTabInfo()
       end
     end
   end, 2, "BagInitTabInfo")
+end
+
+function WBP_Bag_Main_M_C:SetConsumeReddot()
+  local BagConsumeNode = ReddotManager.GetTreeNode("Bag_Consume")
+  BagConsumeNode = BagConsumeNode or ReddotManager.AddNodeEx("Bag_Consume", nil, 1)
+  local BagConsumeNodeDetails = BagConsumeNode.Cache.Detail
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    local PlayerStuffs = Avatar.Resources
+    for _, StuffServerData in pairs(PlayerStuffs) do
+      local StuffConfigData = StuffServerData:Data()
+      if StuffConfigData and StuffConfigData.MaterialClassify == BagCommon.ItemTypeToTabId.ConsumableItem then
+        local StuffData = StuffIconObject:GetItemStuffData(StuffServerData, self, self.OnListSelectStuffClicked)
+        if BagConsumeNodeDetails[StuffData.StuffId] == nil then
+          ReddotManager.IncreaseLeafNodeCount("Bag_Consume", StuffData.StuffCount)
+          BagConsumeNodeDetails[StuffData.StuffId] = {
+            StuffCount = StuffData.StuffCount,
+            ClickedCount = 0,
+            ShowReddot = true
+          }
+        elseif BagConsumeNodeDetails[StuffData.StuffId].StuffCount ~= StuffData.StuffCount then
+          ReddotManager.IncreaseLeafNodeCount("Bag_Consume", StuffData.StuffCount - BagConsumeNodeDetails[StuffData.StuffId].StuffCount)
+          BagConsumeNodeDetails[StuffData.StuffId].StuffCount = StuffData.StuffCount
+          BagConsumeNodeDetails[StuffData.StuffId].ShowReddot = true
+        end
+      end
+    end
+  end
+end
+
+function WBP_Bag_Main_M_C:BindReddotTreeEvents()
+  ReddotManager.AddListener("Bag_Consume", self, function()
+    self:UpdateTabReddot(BagCommon.ItemTypeToTabId.ConsumableItem)
+  end)
+end
+
+function WBP_Bag_Main_M_C:UpdateTabReddot(TabIdx)
+  local BagConsumeNode = ReddotManager.GetTreeNode("Bag_Consume")
+  local BagConsumeNodeCount = BagConsumeNode.Count
+  DebugPrint("Yihan@ UpdateTabReddot", BagConsumeNodeCount)
+  self.Tab_Bag:ShowTabRedDotByTabId(TabIdx, false, BagConsumeNodeCount > 0)
 end
 
 function WBP_Bag_Main_M_C:OnSiftSelectionsChanged(SelectedItems, ItemDatas)
@@ -319,6 +363,17 @@ function WBP_Bag_Main_M_C:FillPlayerDataByTypeInFrame(TabId, NeedDelayJump)
           OrderStuffData.GridIndex = i
           OrderStuffData.AnimNameWithCreate = i <= RowCount * ColCount and "In" or nil
           local StuffObj = StuffIconObject:CreateBagItemContent(OrderStuffData)
+          if self.CurTabId == BagCommon.ItemTypeToTabId.ConsumableItem and StuffObj and StuffObj.StuffId then
+            DebugPrint("Yihan@ FillPlayerDataByTypeInFrame:StuffObj.StuffId", StuffObj.StuffId)
+            local BagConsumeNodeDetails = ReddotManager.GetLeafNodeCacheDetail("Bag_Consume")
+            if BagConsumeNodeDetails[StuffObj.StuffId].ShowReddot then
+              StuffObj.RedDotType = UIConst.RedDotType.CommonRedDot
+            else
+              StuffObj.RedDotType = nil
+            end
+          else
+            StuffObj.RedDotType = nil
+          end
           self.List_Item:AddItem(StuffObj)
           if 0 == i % 11 then
             coroutine.yield()

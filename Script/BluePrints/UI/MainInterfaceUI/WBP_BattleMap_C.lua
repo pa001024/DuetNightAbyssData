@@ -67,7 +67,7 @@ function WBP_BattleMap_C:Construct()
     if self.DungeonData then
       for Id, Data in pairs(DataMgr.Region) do
         if Data.RegionMapFile == self.DungeonData.DungeonMapFile then
-          self.WildMap:InitInDungeon(Id, self)
+          self.WildMap:InitInDungeon(Id, self, true)
           break
         end
       end
@@ -168,12 +168,12 @@ function WBP_BattleMap_C:Construct()
     self.GuideArrowPanel:SetVisibility(ESlateVisibility.Collapsed)
     self.DropArrowPanel:SetVisibility(ESlateVisibility.Collapsed)
   end
-  local IsMobile = CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile"
+  self.IsMobile = CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile"
   for i = 1, self.BatteMapMonNum do
     local enemy = self:NewEnemy()
     enemy:SetAnimation(enemy.In, enemy.Out, enemy.Loop)
     enemy:SetVisibility(ESlateVisibility.Collapsed)
-    enemy.IsMobile = IsMobile
+    enemy.IsMobile = self.IsMobile
     self.EnemyPoint:Add(enemy)
     if self.bNewMaterial then
       local Obj = NewObject(UBattleMapEnemyObj.StaticClass(), self)
@@ -206,7 +206,7 @@ function WBP_BattleMap_C:Construct()
   end
   self.VX_EdgeWarnings:SetVisibility(ESlateVisibility.Collapsed)
   self.TextureLoadingMap = {}
-  if IsMobile then
+  if self.IsMobile then
     self.RenderTarget = LoadObject("/Game/UI/Texture/Static/Atlas/Battle/T_Minimap_RT_Mobile.T_Minimap_RT_Mobile")
   else
     self.RenderTarget = LoadObject("/Game/UI/Texture/Static/Atlas/Battle/T_Minimap_RT.T_Minimap_RT")
@@ -217,6 +217,7 @@ function WBP_BattleMap_C:Construct()
   end
   self.DropPanel:SetVisibility(ESlateVisibility.Collapsed)
   self.DropArrowPanel:SetVisibility(ESlateVisibility.Collapsed)
+  self.ShowDungeonLevelMap = self.levelLoader and self.levelLoader.IsWorldLoader and self.GameState.GameModeType == "SoloTreasure" and not self.GameState:IsInRegion()
 end
 
 function WBP_BattleMap_C:InitMapWidth()
@@ -261,7 +262,7 @@ function WBP_BattleMap_C:ChangeEvent()
   if self.DungeonData and self.WildMap then
     for Id, Data in pairs(DataMgr.Region) do
       if Data.RegionMapFile == self.DungeonData.DungeonMapFile then
-        self.WildMap:InitInDungeon(Id, self)
+        self.WildMap:InitInDungeon(Id, self, true)
         self.WildMap:InitMapRect()
         break
       end
@@ -451,14 +452,14 @@ end
 
 function WBP_BattleMap_C:OnClickRealOpen()
   local GameState = UGameplayStatics.GetGameState(self)
-  if GameState and GameState:IsInRegion() then
+  if GameState and (GameState:IsInRegion() or self.ShowDungeonLevelMap) then
     self:OnKeyboardClick()
     return
   end
   if self.DungeonData and (self.DungeonData.DungeonType == "Temple" or self.DungeonData.bHideBatttleMap) then
     return
   end
-  if self.IsOpen == true then
+  if self.IsOpen == true or self.IsMobile then
     return
   end
   self.IsOpen = true
@@ -516,6 +517,8 @@ function WBP_BattleMap_C:OnKeyboardClick()
     end
   elseif self.IsOpen then
     self:OnClickClose()
+  elseif self.ShowDungeonLevelMap then
+    UIManager(self):LoadUINew("DungeonLevelMapMain", self.WildMap.RegionID)
   else
     self:OnClickRealOpen()
   end
@@ -676,6 +679,9 @@ function WBP_BattleMap_C:UpdateGuideIcon(SceneManager, GuideName, OpType, Target
       return
     elseif nil ~= TargetEid and "Excavation" == GuideAni then
       if not IsValid(TargetActor) then
+        return
+      end
+      if not TargetActor.GuideOrderIndex then
         return
       end
       local Index = (TargetActor.GuideOrderIndex - 1) % 6

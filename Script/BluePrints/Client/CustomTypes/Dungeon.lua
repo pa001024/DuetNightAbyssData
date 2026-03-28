@@ -12,6 +12,7 @@ Dungeon.__Props__ = {
   PassCount = prop.prop("Int", "client save"),
   IsPass = prop.prop("Bool", "client save"),
   MaxStar = prop.prop("Int", "client save", 0),
+  IronSurvivalDropId = prop.prop("Int", "client save", 1),
   DungeonSid = prop.prop("ObjId", "save"),
   PersistenceData = prop.prop("Str", "save"),
   AutoProgress = prop.prop("Int", "client save", 0),

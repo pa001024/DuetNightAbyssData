@@ -5,6 +5,16 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("DropProbType", {
+  DropTag_AccessoryDropMain = {
+    DropTypeKey = "DropTag_AccessoryDropMain",
+    DropTypeSequence = 5,
+    DropTypeText = "Event_FreeAppearance_AppearanceReward"
+  },
+  DropTag_AccessoryDropOther = {
+    DropTypeKey = "DropTag_AccessoryDropOther",
+    DropTypeSequence = 4,
+    DropTypeText = "Event_FreeAppearance_OtherReward"
+  },
   DropTag_EventReward = {
     DropTypeKey = "DropTag_EventReward",
     DropTypeSequence = 99,

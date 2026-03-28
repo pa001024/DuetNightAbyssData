@@ -120,7 +120,13 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   if InKeyName == UIConst.GamePadKey.FaceButtonBottom then
-    self.Switch_Button:GetActiveWidget():OnBtnClicked()
+    local ActiveWidget = self.Switch_Button:GetActiveWidget()
+    if ActiveWidget.Btn_Click then
+      ActiveWidget.Btn_Click.OnClicked:Broadcast()
+    else
+      ActiveWidget:OnBtnClicked()
+    end
+    return UWidgetBlueprintLibrary.Handled()
   elseif "Escape" == InKeyName or InKeyName == UIConst.GamePadKey.FaceButtonRight then
     if self.Focused then
       self:RemoveKey()
@@ -143,7 +149,7 @@ function M:OnFocusReceived(MyGeometry, InFocusEvent)
 end
 
 function M:RemoveKey()
-  if self.WildMap.MainMap.BackGamePadKey[1].KeyInfoList[1].ImgShortPath == "RS" then
+  if self.WildMap.MainMap.BackGamePadKey and self.WildMap.MainMap.BackGamePadKey[1].KeyInfoList[1].ImgShortPath == "RS" then
     table.remove(self.WildMap.MainMap.BackGamePadKey, 1)
     self.WildMap.MainMap:UpdateWildMapKeys()
   end

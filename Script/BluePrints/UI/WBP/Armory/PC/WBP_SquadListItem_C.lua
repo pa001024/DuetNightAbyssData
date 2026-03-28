@@ -615,6 +615,7 @@ function WBP_SquadListItem_C:OnFocusReceived(MyGeometry, InFocusEvent)
         self.Owner.FocusInAddSquad = true
         return UnHandled
       else
+        self.Owner.FocusInAddSquad = false
         local PreIndex = self.Owner.CurSelectSquadIndex
         self.Owner.CurSelectSquadIndex = self.Index
         self.Owner:GetSquadWidgetInSquadList(PreIndex):CheckSortIcon()

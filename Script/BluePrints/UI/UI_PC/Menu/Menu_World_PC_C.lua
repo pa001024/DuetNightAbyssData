@@ -43,6 +43,7 @@ function Menu_World_PC_C:OnLoaded(...)
   self:InitExperienceBtn()
   self:InitTitle()
   self:InitBg()
+  self:InitBanReward()
   self.Panel_Edit:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Text_Empty:SetText(GText("UI_Menu_Sign_None"))
   self:AddDispatcher(EventID.OnMainUIReddotUpdate, self, self.UpdateRedDotStates)
@@ -102,6 +103,7 @@ function Menu_World_PC_C:Freshtitle(TitleBefore, TitleAfter, TitleFrame)
     end
     local TitleText = UIUtils.CalculateHoleTitle(TitleBefore, TitleAfter)
     TileFrameWidget.Text_Title:SetText(TitleText)
+    self.WBP_PersonalInfo_TitleSetting.Group_Title:ClearChildren()
     self.WBP_PersonalInfo_TitleSetting.Group_Title:AddChildToOverlay(TileFrameWidget)
   end
 end
@@ -152,9 +154,6 @@ function Menu_World_PC_C:ReceiveEnterState(EnteredState)
     self:SetFocus()
     if self.CloseByChild then
       self:AddTimer(0.01, self.Close, false, 0, nil, true)
-    elseif self.ResumeAnnouncementMain then
-      local AnnouncementUtils = require("BluePrints.UI.WBP.Announcement.AnnounceUtils")
-      AnnouncementUtils:OpenAnnouncementMain(AnnounceCommon.ShowTag.InGame, nil, nil, self)
     end
   end
 end
@@ -168,6 +167,7 @@ function Menu_World_PC_C:InitCommonBtn()
   self.Btn_TEXT.OnClicked:Add(self, self.OnClickChangeSignature)
   self.Button_Copy.AudioEventPath = "event:/ui/common/click_btn_small"
   self.Button_Copy.OnClicked:Add(self, function()
+    self.Button_Area_Experience:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self:StopPress()
     self:OnCopyUID()
   end)
@@ -224,8 +224,21 @@ function Menu_World_PC_C:OnKeyDown(MyGeometry, InKeyEvent)
       self:OnCopyUID()
     elseif InKeyName == UIConst.GamePadKey.FaceButtonLeft then
       self.LogOutKey:OnButtonPressed()
-    elseif InKeyName == UIConst.GamePadKey.FaceButtonTop and not self.IsEditOpen and self.OnClickEdit then
-      self:OnClickEdit()
+    elseif InKeyName == UIConst.GamePadKey.FaceButtonTop then
+      if not self.IsEditOpen and self.OnClickEdit then
+        self:OnClickEdit()
+      end
+    elseif InKeyName == UIConst.GamePadKey.LeftThumb and self.WBP_Ban:GetVisibility() == UIConst.VisibilityOp.SelfHitTestInvisible then
+      local Params = {}
+      local Avatar = GWorld:GetAvatar()
+      if not Avatar then
+        return
+      end
+      local ForbidDungeonRewardCount = Avatar.ForbidDungeonRewardCount or 30
+      local PunishCountText = string.format(GText("UI_DungeonPunish_Times"), ForbidDungeonRewardCount)
+      Params.Tips = {PunishCountText}
+      AudioManager(self):PlayUISound(self, "event:/ui/activity/baned_click", nil, nil)
+      UIManager(self):ShowCommonPopupUI(100333, Params)
     end
   elseif "Escape" == InKeyName and self.CanCloseByHotKey then
     self:Close()
@@ -520,6 +533,9 @@ function Menu_World_PC_C:InitSystemItem()
     local MainUIConfig = DataMgr.MainUI[Value.Id]
     local bUnlocked = true
     local UIUnlockRuleName = DataMgr.MainUI[id].UIUnlockRuleName
+    if "GameEvent" == UIUnlockRuleName then
+      local a = 1
+    end
     if UIUnlockRuleName then
       local UIUnlockRule = DataMgr.UIUnlockRule
       local UIUnlockRuleId = UIUnlockRule[UIUnlockRuleName].UIUnlockRuleId
@@ -556,9 +572,9 @@ function Menu_World_PC_C:InitSystemItem()
           Item = self.Entrance_Activity
         end
       elseif id == self.RelatedProductEntranceId and UE.AHotUpdateGameMode.IsGlobalPak() then
-        goto lbl_270
+        goto lbl_273
       elseif id == self.CloudGameEntranceId and (UE.AHotUpdateGameMode.IsGlobalPak() or IgnoreCNChannelIds[ChannelId]) then
-        goto lbl_270
+        goto lbl_273
       else
         local TaskName = "MenuEntranceBtn_" .. id
         Item = UIManager(GWorld.GameInstance):_CreateWidgetNew(WidgetName)
@@ -596,7 +612,7 @@ function Menu_World_PC_C:InitSystemItem()
         self.Entrance_Activity:SetVisibility(UIConst.VisibilityOp.Collapsed)
       end
     end
-    ::lbl_270::
+    ::lbl_273::
   end
   ItemNum = ItemNum + 4 - ItemNum % 4
   local EmptyNum = ItemNum - InitSuccNum
@@ -973,6 +989,23 @@ function Menu_World_PC_C:CheckSystemForbid(SystemUIName)
     return ForbidFunc(self), ForbidToast
   else
     return false
+  end
+end
+
+function Menu_World_PC_C:InitBanReward()
+  if not self.WBP_Ban then
+    return
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  local ForbidDungeonRewardCount = Avatar.ForbidDungeonRewardCount or 30
+  if ForbidDungeonRewardCount > 0 then
+    self.WBP_Ban:InitPunishCount(ForbidDungeonRewardCount)
+    self.WBP_Ban:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  else
+    self.WBP_Ban:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
 end
 

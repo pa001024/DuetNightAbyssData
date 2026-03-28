@@ -34,7 +34,7 @@ function M:InitData(Content)
   self.HoldReduceHandle = nil
   self.PressGen = 0
   self.bIsDragging = false
-  self.DragThreshold = 10
+  self.DragThreshold = 25
   self.DragStartPos = {X = 0, Y = 0}
 end
 
@@ -93,6 +93,7 @@ function M:IsInSaleOrResolveState()
 end
 
 function M:StopHoldTimers()
+  DebugPrint("BagItem==::OnPressed::StopHoldTimers 长按计时器被清除")
   if self.HoldStartDelayHandle then
     self:RemoveTimer(self.HoldStartDelayHandle)
   end
@@ -106,6 +107,7 @@ function M:StopHoldTimers()
 end
 
 function M:OnPressed()
+  DebugPrint("BagItem==::OnPressed:: 开始, IsInAnimationPlaying=", self:IsInAnimationPlaying(), " ItemType=", self.ItemType, " IsInSaleOrResolveState=", self:IsInSaleOrResolveState())
   if self:IsInAnimationPlaying() then
     return
   end
@@ -118,11 +120,13 @@ function M:OnPressed()
   if self.Content.Price < 0 then
     return
   end
+  DebugPrint("BagItem==::OnPressed:: 通过前置检查，准备设置HoldOwner")
   self.bIsDragging = false
   local pos = UE4.UWidgetLayoutLibrary.GetMousePositionOnViewport(self)
   local x = pos and pos.X or 0
   local y = pos and pos.Y or 0
   self.DragStartPos = {X = x, Y = y}
+  DebugPrint("BagItem==::OnPressed:: DragStartPos=", x, ",", y)
   self.ParentWidget.HoldGlobalToken = self.ParentWidget.HoldGlobalToken or 0
   self.ParentWidget.HoldOwner = self.ParentWidget.HoldOwner or nil
   if self.ParentWidget.HoldOwner and self.ParentWidget.HoldOwner ~= self then
@@ -153,6 +157,7 @@ function M:OnPressed()
     end
     self.bIsLongPress = true
     self.HoldStartDelayHandle = nil
+    DebugPrint("BagItem==::OnPressed::HoldStartDelayHandle 长按开始")
     self:StartHoldAddStuff(gen, globalTok)
   end, false, 0, self.HoldTimerName .. "_StartDelay")
 end
@@ -204,14 +209,21 @@ function M:OnMouseMove(MyGeometry, MouseEvent)
   local dx = (pos.X or 0) - (self.DragStartPos.X or 0)
   local dy = (pos.Y or 0) - (self.DragStartPos.Y or 0)
   local dist2 = dx * dx + dy * dy
+  if 0 == self.DragStartPos.X and 0 == self.DragStartPos.Y then
+    return
+  end
   if dist2 >= self.DragThreshold * self.DragThreshold then
+    DebugPrint("BagItem==::OnMouseMove::拖动判定成立，bIsLongPress=", self.bIsLongPress)
     self.bIsDragging = true
-    self:CancelHold()
+    if self.bIsLongPress then
+      self:CancelHold()
+    end
   end
   return UWidgetBlueprintLibrary.Unhandled()
 end
 
 function M:OnLeaved()
+  DebugPrint("BagItem==::OnLeaved:: 被调用, bIsHolding=", self.bIsHolding)
   self.bIsDragging = false
   if not self:IsInSaleOrResolveState() then
     return
@@ -220,6 +232,7 @@ function M:OnLeaved()
 end
 
 function M:OnMouseLeave(MyGeometry, MouseEvent)
+  DebugPrint("BagItem==::OnMouseLeave:: 被调用, bIsHolding=", self.bIsHolding, " HoldOwner=", self.ParentWidget and self.ParentWidget.HoldOwner == self)
   if self.bIsHolding or self.ParentWidget and self.ParentWidget.HoldOwner == self then
     self:CancelHold()
   end
@@ -240,7 +253,6 @@ end
 
 function M:OnTouchEnded(MyGeometry, TouchEvent)
   if self:IsInSaleOrResolveState() then
-    DebugPrint("---------WBP_Bag_Item_C OnTouchEnded", self.Id)
     if self.CancelHold then
       self:CancelHold()
     end
@@ -254,7 +266,6 @@ end
 
 function M:OnTouchStarted(MyGeometry, TouchEvent)
   if self:IsInSaleOrResolveState() then
-    DebugPrint("---------WBP_Bag_Item_C OnTouchStarted", self.Id)
     if self.ParentWidget and self.ParentWidget.HoldOwner and self.ParentWidget.HoldOwner ~= self then
       local prev = self.ParentWidget.HoldOwner
       if prev.CancelHold then
@@ -273,6 +284,7 @@ function M:OnTouchStarted(MyGeometry, TouchEvent)
 end
 
 function M:CancelHold()
+  DebugPrint("BagItem==::CancelHold:: 被调用, bIsLongPress=", self.bIsLongPress, " bIsHolding=", self.bIsHolding)
   if self.ParentWidget and self.ParentWidget.HoldOwner == self then
     self.ParentWidget.HoldGlobalToken = (self.ParentWidget.HoldGlobalToken or 0) + 1
     self.ParentWidget.HoldOwner = nil
@@ -325,6 +337,7 @@ function M:StartHoldAddStuff(gen, globalTok)
         MaxCount = Extra[1] or 0
       end
     end
+    DebugPrint("BagItem==::StartHoldAddStuff::PressTime = ", PressTime, " AddCount = ", AddCount, " CurCount = ", CurCount, " MaxCount = ", MaxCount)
     local FinalCount = math.min(CurCount + AddCount, MaxCount)
     local Delta = FinalCount - CurCount
     if Delta > 0 then
@@ -488,6 +501,8 @@ end
 
 function M:SetItemConflict(bConflict)
   self:_SetItemConflictImpl(bConflict, self.ShowWarningText)
+  self:CheckWidgetIsTop(self.ConflictWidget)
+  self:CheckWidgetIsTop(self.ComItemReddot)
 end
 
 function M:OnMouseButtonDown(MyGeometry, MouseEvent)
@@ -599,13 +614,12 @@ function M:SetSelected(IsSelected)
     self.Content.IsSelect = IsSelected
   end
   self.Root:SetRenderOpacity(1)
+  self.Item:StopAllAnimations()
   if IsSelected then
     if not self.Item:IsAnimationPlaying(self.Item.Click) then
-      self.Item:StopAllAnimations()
       self.Item:PlayAnimation(self.Item.Click)
     end
   else
-    self.Item:StopAllAnimations()
     self.Item:PlayAnimation(self.Item.Normal)
   end
 end

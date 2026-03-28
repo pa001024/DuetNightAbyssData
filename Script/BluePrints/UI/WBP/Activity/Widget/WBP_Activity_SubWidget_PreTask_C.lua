@@ -158,7 +158,7 @@ function M:GetMainQuestInfo()
     local Avatar = GWorld:GetAvatar()
     for QuestChainId, Data in pairs(Avatar.QuestChains) do
       local QuestChainType = DataMgr.QuestChain[QuestChainId].QuestChainType
-      if QuestChainType == Const.MainQuestChainType and 1 == Data.State then
+      if QuestChainType == Const.MainQuestChainType and Data:IsDoing() then
         Res.JumpQuestChainId = QuestChainId
         break
       end

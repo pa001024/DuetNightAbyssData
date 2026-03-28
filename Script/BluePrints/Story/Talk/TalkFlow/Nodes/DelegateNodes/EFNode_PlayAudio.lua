@@ -1,29 +1,20 @@
 local M = {}
 
-function M:CreatePlayAudioNode(Flow, TalkTask, Params)
-  local EventPath = Params.EventPath
-  local TargetPointName = Params.TargetPointName
-  local EventKey = Params.EventKey
-  local PlayAs2D = Params.PlayAs2D
-  local PlayNormalSoundNode = Flow:CreateNode(UEFNode_Delegate)
-  PlayNormalSoundNode.DebugLog = string.format("PlayNormalSound EventPath: %s, TargetPointName: %s, EventKey: %s, PlayAs2D: %s", EventPath, TargetPointName, EventKey, PlayAs2D)
-  local TargetPoint
-  if TargetPointName then
-    local GameState = UE4.UGameplayStatics.GetGameState(self)
-    TargetPoint = GameState:GetTargetPoint(TargetPointName)
-  end
-  PlayNormalSoundNode.OnStart:Add(PlayNormalSoundNode, function(Node)
-    AudioManager(Node):PlayNormalSound(TargetPoint, nil, EventPath, EventKey, PlayAs2D)
+function M:CreateNode(Flow, Params)
+  local VoiceName = Params.VoiceName
+  local PlayAudioNode = Flow:CreateNode(UEFNode_Delegate)
+  PlayAudioNode.DebugLog = string.format("PlayAudioNode VoiceName: %s, ", VoiceName)
+  PlayAudioNode.OnStart:Add(PlayAudioNode, function(Node)
     Node:Finish({
       Node.FinishPin
     })
   end)
-  PlayNormalSoundNode.OnSkip:Add(PlayNormalSoundNode, function(Node)
+  PlayAudioNode.OnSkip:Add(PlayAudioNode, function(Node)
     Node:Finish({
       Node.FinishPin
     })
   end)
-  return PlayNormalSoundNode
+  return PlayAudioNode
 end
 
 return M

@@ -1,10 +1,11 @@
 require("UnLua")
+local CameraGameUtils = require("BluePrints.UI.WBP.Activity.PC.CameraGame.CameraGameUtils")
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C"
 })
 
 function M:Construct()
-  self.Text_Title:SetText(GText("拍摄进度（未配）"))
+  self.Text_Title:SetText(GText("UI_PhotoEvent_Progress"))
   self.Btn_Area.OnClicked:Add(self, self.OnButtonClicked)
 end
 
@@ -21,9 +22,7 @@ function M:InitPage(EventId)
 end
 
 function M:InitPhotoProgress(EventId)
-  local Avatar = GWorld:GetAvatar()
-  local CurCount = #Avatar.PhotoActRewardGot
-  local TotalCount = #DataMgr.PhotoEvent[EventId]
+  local CurCount, TotalCount = CameraGameUtils.GetPhotoProgress()
   self.Text_Num01:SetText(CurCount)
   self.Text_Num02:SetText("/" .. TotalCount)
 end

@@ -271,6 +271,7 @@ function WBP_Forging_Convert_C:UpdateMaterialSlot(ChoosedTbl, IsShow)
   DebugPrint("Yihan@ WBP_Forging_Convert_C.UpdateMaterialSlot", ChoosedTbl, #ChoosedTbl)
   self.MergeTbl = {}
   self.CurrentCount = 1
+  self.HasAnyModLocked = false
   local Seen = {}
   for _, Content in ipairs(ChoosedTbl) do
     if not Seen[Content.Id] then
@@ -284,8 +285,13 @@ function WBP_Forging_Convert_C:UpdateMaterialSlot(ChoosedTbl, IsShow)
         Uuid = Content.Uuid,
         ModId = Content.UnitId,
         UnitId = Content.UnitId,
-        IsMod = Content.ProductType == CommonConst.ArmoryType.Mod
+        IsMod = Content.ProductType == CommonConst.ArmoryType.Mod,
+        LockType = Content.LockType,
+        IsLocked = Content.IsLocked
       }
+      if Content.IsLocked then
+        self.HasAnyModLocked = true
+      end
       table.insert(self.MergeTbl, NewItem)
       Seen[Content.Id] = #self.MergeTbl
     else
@@ -378,30 +384,39 @@ function WBP_Forging_Convert_C:OnConfirmConvertClicked()
   Params.Funds = Funds
   
   function Params.RightCallbackFunction()
-    local PlayerAvatar = GWorld:GetAvatar()
-    if self.ConvertContent.ProductType == "Resource" then
-      local ConsumeResources = {}
-      for _, Data in ipairs(self.MergeTbl) do
-        ConsumeResources[Data.Id] = Data.ChoosedCount * self.CurrentCount
-      end
-      DebugPrint("Yihan@ WBP_Forging_Convert_C.OnConfirmConvertClicked", self.ConvertContent.Idx, self.CurrentCount)
-      PlayerAvatar:ConvertResource(function(ret)
-        self:PlayMixAnimation()
-        self:ConvertResult()
-      end, self.ConvertContent.Idx, self.CurrentCount, ConsumeResources)
-    else
-      local WillConsumeMods = {}
-      for _, Data in ipairs(self.MergeTbl) do
-        if WillConsumeMods[Data.Uuid] then
-          WillConsumeMods[Data.Uuid] = WillConsumeMods[Data.Uuid] + Data.ChoosedCount * self.CurrentCount
+    local Callback = {
+      OnSuccess = function(Password)
+        local PlayerAvatar = GWorld:GetAvatar()
+        if self.ConvertContent.ProductType == "Resource" then
+          local ConsumeResources = {}
+          for _, Data in ipairs(self.MergeTbl) do
+            ConsumeResources[Data.Id] = Data.ChoosedCount * self.CurrentCount
+          end
+          DebugPrint("Yihan@ WBP_Forging_Convert_C.OnConfirmConvertClicked", self.ConvertContent.Idx, self.CurrentCount)
+          PlayerAvatar:ConvertResource(function(ret)
+            self:PlayMixAnimation()
+            self:ConvertResult()
+          end, self.ConvertContent.Idx, self.CurrentCount, ConsumeResources)
         else
-          WillConsumeMods[Data.Uuid] = Data.ChoosedCount * self.CurrentCount
+          local WillConsumeMods = {}
+          for _, Data in ipairs(self.MergeTbl) do
+            if WillConsumeMods[Data.Uuid] then
+              WillConsumeMods[Data.Uuid] = WillConsumeMods[Data.Uuid] + Data.ChoosedCount * self.CurrentCount
+            else
+              WillConsumeMods[Data.Uuid] = Data.ChoosedCount * self.CurrentCount
+            end
+          end
+          PlayerAvatar:ConvertMod(function(ret, NewModIdList)
+            self:PlayMixAnimation(NewModIdList)
+            self:ConvertResult()
+          end, self.ConvertContent.CovertId, self.CurrentCount, WillConsumeMods)
         end
       end
-      PlayerAvatar:ConvertMod(function(ret, NewModIdList)
-        self:PlayMixAnimation(NewModIdList)
-        self:ConvertResult()
-      end, self.ConvertContent.CovertId, self.CurrentCount, WillConsumeMods)
+    }
+    if self.HasAnyModLocked then
+      SecondaryPasswordController:RequestSecPasswordValidation(Callback)
+    else
+      Callback.OnSuccess()
     end
   end
   

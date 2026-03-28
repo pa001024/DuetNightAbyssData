@@ -270,9 +270,9 @@ function GuildWarUtils.RefreshEntranceReddot()
   pcall(function()
     local ShowReddot = false
     if GuildWarUtils.IsPreRaidTime() then
-      ShowReddot = 0 == RaidSeasons.MaxPreRaidScore
+      ShowReddot = 0 == RaidSeasons.MaxPreRaidScore and 1 ~= RaidSeasons.BanState
     elseif GuildWarUtils.IsOfficalRaidTime() then
-      ShowReddot = 0 == RaidSeasons.MaxRaidScore
+      ShowReddot = 0 == RaidSeasons.MaxRaidScore and 0 == RaidSeasons.BanState
     end
     local SeasonEventId = RaidSeasons.EventId
     if ShowReddot then

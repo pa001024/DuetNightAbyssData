@@ -122,6 +122,10 @@ function Component:ShowMonsterStrongPanel(UnitGuideId, UnitId)
     return
   end
   local Avatar = GWorld:GetAvatar()
+  local DungeonId = GWorld.GameInstance:GetCurrentDungeonId()
+  if DungeonId and Avatar.Dungeons[DungeonId] and Avatar.Dungeons[DungeonId].AutoProgress > 0 then
+    return
+  end
   Avatar:CheckStrongGuideFirstMonster(UnitGuideId, true)
   GameFlowUtils:AddFlow("GuideMain", {
     GWorld.GameInstance,

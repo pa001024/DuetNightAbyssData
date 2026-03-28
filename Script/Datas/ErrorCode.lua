@@ -4403,6 +4403,30 @@ return ReadOnly("ErrorCode", {
     ErrorCodeContent = "商品解锁所需战斗积分不足",
     ErrorCodeId = 14017
   },
+  [14018] = {
+    ErrorCodeContent = "折扣券不存在",
+    ErrorCodeId = 14018
+  },
+  [14019] = {
+    ErrorCodeContent = "折扣券货币类型不匹配",
+    ErrorCodeId = 14019
+  },
+  [14020] = {
+    ErrorCodeContent = "折扣券适用商品不匹配",
+    ErrorCodeId = 14020
+  },
+  [14021] = {
+    ErrorCodeContent = "折扣券数量不足",
+    ErrorCodeId = 14021
+  },
+  [14022] = {
+    ErrorCodeContent = "购买次数未满足折扣券使用条件",
+    ErrorCodeId = 14022
+  },
+  [14023] = {
+    ErrorCodeContent = "金额未达到折扣券使用门槛",
+    ErrorCodeId = 14023
+  },
   [15001] = {
     ContentEN = "State switching failed",
     ContentFR = "Échec du changement d’état",
@@ -6006,6 +6030,14 @@ return ReadOnly("ErrorCode", {
     ErrorCodeContent = "频道状态错误",
     ErrorCodeId = 30015
   },
+  [30016] = {
+    ErrorCodeContent = "频道已满",
+    ErrorCodeId = 30016
+  },
+  [30017] = {
+    ErrorCodeContent = "频道切换频繁",
+    ErrorCodeId = 30017
+  },
   [31001] = {
     ContentEN = "Failed to generate reward",
     ContentFR = "Échec de la génération de la récompense",
@@ -7310,6 +7342,30 @@ return ReadOnly("ErrorCode", {
     ContentTC = "載具不能使用該機關",
     ErrorCodeContent = "载具不能使用该机关",
     ErrorCodeId = 52026
+  },
+  [52027] = {
+    ErrorCodeContent = "区域频道创建失败",
+    ErrorCodeId = 52027
+  },
+  [52028] = {
+    ErrorCodeContent = "区域频道已满",
+    ErrorCodeId = 52028
+  },
+  [52029] = {
+    ErrorCodeContent = "区域联机位面不显示武器类型",
+    ErrorCodeId = 52029
+  },
+  [52030] = {
+    ErrorCodeContent = "频道切换频繁",
+    ErrorCodeId = 52030
+  },
+  [52031] = {
+    ErrorCodeContent = "该区域频道不存在",
+    ErrorCodeId = 52031
+  },
+  [52032] = {
+    ErrorCodeContent = "已在该区域频道",
+    ErrorCodeId = 52032
   },
   [53001] = {
     ContentEN = "Commission type is not Trial",
@@ -8625,6 +8681,10 @@ return ReadOnly("ErrorCode", {
     ErrorCodeContent = "活动奖励已领取",
     ErrorCodeId = 72013
   },
+  [72014] = {
+    ErrorCodeContent = "活动不可领奖",
+    ErrorCodeId = 72014
+  },
   [73001] = {
     ContentEN = "Social media not configured on server",
     ContentFR = "Réseau social non configuré sur le serveur",
@@ -9192,9 +9252,18 @@ return ReadOnly("ErrorCode", {
     ErrorCodeContent = "排名赛排名数据空",
     ErrorCodeId = 80013
   },
-  [80014] = {ErrorCodeId = 80014},
-  [80015] = {ErrorCodeId = 80015},
-  [80016] = {ErrorCodeId = 80016},
+  [80014] = {
+    ErrorCodeContent = "排名赛分组错误",
+    ErrorCodeId = 80014
+  },
+  [80015] = {
+    ErrorCodeContent = "排名赛分组失败",
+    ErrorCodeId = 80015
+  },
+  [80016] = {
+    ErrorCodeContent = "排名赛排名数据错误",
+    ErrorCodeId = 80016
+  },
   [81001] = {
     ContentEN = "Invalid web redirect server",
     ContentFR = "Serveur de redirection web invalide",
@@ -9968,6 +10037,142 @@ return ReadOnly("ErrorCode", {
     ContentTC = "技能樹屬性節點激活所需角色技能等級不滿足",
     ErrorCodeContent = "技能树属性节点激活所需角色技能等级不满足",
     ErrorCodeId = 90016
+  },
+  [92003] = {
+    ErrorCodeContent = "关卡ID不合法",
+    ErrorCodeId = 92003
+  },
+  [92004] = {
+    ErrorCodeContent = "关卡ID不合法",
+    ErrorCodeId = 92004
+  },
+  [92005] = {
+    ErrorCodeContent = "所需费用不足",
+    ErrorCodeId = 92005
+  },
+  [92006] = {
+    ErrorCodeContent = "未满足活动解锁条件",
+    ErrorCodeId = 92006
+  },
+  [92007] = {
+    ErrorCodeContent = "阵容角色错误",
+    ErrorCodeId = 92007
+  },
+  [92008] = {
+    ErrorCodeContent = "阵容武器错误",
+    ErrorCodeId = 92008
+  },
+  [92009] = {
+    ErrorCodeContent = "阵容魔灵错误",
+    ErrorCodeId = 92009
+  },
+  [92010] = {
+    ErrorCodeContent = "阵容协战伙伴错误",
+    ErrorCodeId = 92010
+  },
+  [92011] = {
+    ErrorCodeContent = "阵容错误",
+    ErrorCodeId = 92011
+  },
+  [92012] = {
+    ErrorCodeContent = "百宝囊不合法",
+    ErrorCodeId = 92012
+  },
+  [93001] = {
+    ErrorCodeContent = "无效的活动关卡id",
+    ErrorCodeId = 93001
+  },
+  [93002] = {
+    ErrorCodeContent = "活动关卡未解锁",
+    ErrorCodeId = 93002
+  },
+  [93003] = {
+    ErrorCodeContent = "无效的活动奖励id",
+    ErrorCodeId = 93003
+  },
+  [93004] = {
+    ErrorCodeContent = "无效的活动id",
+    ErrorCodeId = 93004
+  },
+  [93005] = {
+    ErrorCodeContent = "关卡数据为空",
+    ErrorCodeId = 93005
+  },
+  [93006] = {
+    ErrorCodeContent = "未满足奖励所需评分",
+    ErrorCodeId = 93006
+  },
+  [93007] = {
+    ErrorCodeContent = "活动奖励已领取",
+    ErrorCodeId = 93007
+  },
+  [93008] = {
+    ErrorCodeContent = "没有可领取的活动奖励",
+    ErrorCodeId = 93008
+  },
+  [93009] = {
+    ErrorCodeContent = "关卡未完成",
+    ErrorCodeId = 93009
+  },
+  [93010] = {
+    ErrorCodeContent = "关卡分数无效",
+    ErrorCodeId = 93010
+  },
+  [93011] = {
+    ErrorCodeContent = "不在活动时间内",
+    ErrorCodeId = 93011
+  },
+  [95001] = {
+    ErrorCodeContent = "奖池轮次结束",
+    ErrorCodeId = 95001
+  },
+  [95002] = {
+    ErrorCodeContent = "奖池活动数据不存在",
+    ErrorCodeId = 95002
+  },
+  [95003] = {
+    ErrorCodeContent = "奖池轮次数据不存在",
+    ErrorCodeId = 95003
+  },
+  [95004] = {
+    ErrorCodeContent = "奖池抽卡资源不足",
+    ErrorCodeId = 95004
+  },
+  [95005] = {
+    ErrorCodeContent = "奖池没有完成自选",
+    ErrorCodeId = 95005
+  },
+  [95006] = {
+    ErrorCodeContent = "当前奖励不可自选",
+    ErrorCodeId = 95006
+  },
+  [95007] = {
+    ErrorCodeContent = "自选奖励索引不存在",
+    ErrorCodeId = 95007
+  },
+  [95008] = {
+    ErrorCodeContent = "当前奖池状态不可自选",
+    ErrorCodeId = 95008
+  },
+  [96001] = {
+    ErrorCodeContent = "活动未开启",
+    ErrorCodeId = 96001
+  },
+  [96002] = {
+    ErrorCodeContent = "星耀硬币不足",
+    ErrorCodeId = 96002
+  },
+  [96003] = {
+    ErrorCodeContent = "没有可开启的星耀赠礼",
+    ErrorCodeId = 96003
+  },
+  [96004] = {
+    ErrorCodeContent = "活动数据为空",
+    ErrorCodeId = 96004
+  },
+  [96005] = {
+    ErrorCodeContent = "星耀赠礼不足",
+    ErrorCodeId = 96005
   },
   [600003] = {
     ContentEN = "Demon Wedge loadout not found",

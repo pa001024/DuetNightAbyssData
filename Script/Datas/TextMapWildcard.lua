@@ -133,6 +133,14 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "Content_120114_7",
     WildcardClassification = "Story"
   },
+  Content_120206_25 = {
+    TextMapId = "Content_120206_25",
+    WildcardClassification = "Story"
+  },
+  Content_120206_7 = {
+    TextMapId = "Content_120206_7",
+    WildcardClassification = "Story"
+  },
   Content_200102_2 = {
     TextMapId = "Content_200102_2",
     WildcardClassification = "Story"
@@ -159,6 +167,10 @@ return ReadOnly("TextMapWildcard", {
   },
   Content_200229_2 = {
     TextMapId = "Content_200229_2",
+    WildcardClassification = "Story"
+  },
+  Content_20031803 = {
+    TextMapId = "Content_20031803",
     WildcardClassification = "Story"
   },
   Content_Nai02_01_01 = {
@@ -239,6 +251,10 @@ return ReadOnly("TextMapWildcard", {
   },
   HomePianoDes_1008003 = {
     TextMapId = "HomePianoDes_1008003",
+    WildcardClassification = "Story"
+  },
+  MESSAGE_LOADING_312_PC = {
+    TextMapId = "MESSAGE_LOADING_312_PC",
     WildcardClassification = "Story"
   },
   MESSAGE_LOADING_35_PC = {
@@ -367,6 +383,26 @@ return ReadOnly("TextMapWildcard", {
   },
   Mail_Content_10070 = {
     TextMapId = "Mail_Content_10070",
+    WildcardClassification = "Story"
+  },
+  Mail_Content_10072 = {
+    TextMapId = "Mail_Content_10072",
+    WildcardClassification = "Story"
+  },
+  Mail_Content_10073 = {
+    TextMapId = "Mail_Content_10073",
+    WildcardClassification = "Story"
+  },
+  Mail_Content_10074 = {
+    TextMapId = "Mail_Content_10074",
+    WildcardClassification = "Story"
+  },
+  Mail_Content_10075 = {
+    TextMapId = "Mail_Content_10075",
+    WildcardClassification = "Story"
+  },
+  Mail_Content_10076 = {
+    TextMapId = "Mail_Content_10076",
     WildcardClassification = "Story"
   },
   Mail_Content_101001 = {
@@ -557,12 +593,20 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "RLArchive_ID",
     WildcardClassification = "Story"
   },
+  RegionReputation_EntrustContent_14 = {
+    TextMapId = "RegionReputation_EntrustContent_14",
+    WildcardClassification = "Story"
+  },
   RegionReputation_EntrustContent_17 = {
     TextMapId = "RegionReputation_EntrustContent_17",
     WildcardClassification = "Story"
   },
   RegionReputation_RefreshTime = {
     TextMapId = "RegionReputation_RefreshTime",
+    WildcardClassification = "Story"
+  },
+  SKILL_20407_DESC = {
+    TextMapId = "SKILL_20407_DESC",
     WildcardClassification = "Story"
   },
   System_Des_Play = {
@@ -1089,6 +1133,14 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "UI_CHAR_DATA_TEXT_41010402",
     WildcardClassification = "Story"
   },
+  UI_CHAR_DATA_TEXT_41020205 = {
+    TextMapId = "UI_CHAR_DATA_TEXT_41020205",
+    WildcardClassification = "Story"
+  },
+  UI_CHAR_DATA_TEXT_41020404 = {
+    TextMapId = "UI_CHAR_DATA_TEXT_41020404",
+    WildcardClassification = "Story"
+  },
   UI_CHAR_DATA_TEXT_51020102 = {
     TextMapId = "UI_CHAR_DATA_TEXT_51020102",
     WildcardClassification = "Story"
@@ -1163,6 +1215,10 @@ return ReadOnly("TextMapWildcard", {
   },
   UI_Chardata_Witness = {
     TextMapId = "UI_Chardata_Witness",
+    WildcardClassification = "Story"
+  },
+  UI_CombackEvent_EventQuest_WelcomeTitle = {
+    TextMapId = "UI_CombackEvent_EventQuest_WelcomeTitle",
     WildcardClassification = "Story"
   },
   UI_Consumable_HasGot = {
@@ -1301,6 +1357,10 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "UI_Npc_Name_Pangbai",
     WildcardClassification = "Story"
   },
+  UI_Npc_Name_ZhuJueBai = {
+    TextMapId = "UI_Npc_Name_ZhuJueBai",
+    WildcardClassification = "Story"
+  },
   UI_Pet_Skill_CD = {
     TextMapId = "UI_Pet_Skill_CD",
     WildcardClassification = "Story"
@@ -1327,6 +1387,10 @@ return ReadOnly("TextMapWildcard", {
   },
   UI_PlayerHead_Name_30074 = {
     TextMapId = "UI_PlayerHead_Name_30074",
+    WildcardClassification = "Story"
+  },
+  UI_Quest_StartTime = {
+    TextMapId = "UI_Quest_StartTime",
     WildcardClassification = "Story"
   },
   UI_RLArchive_Progress = {
@@ -1387,6 +1451,10 @@ return ReadOnly("TextMapWildcard", {
   },
   UI_Skin_Name_1601 = {
     TextMapId = "UI_Skin_Name_1601",
+    WildcardClassification = "Story"
+  },
+  UI_SoloTreasure_Evacuation_TotalGains = {
+    TextMapId = "UI_SoloTreasure_Evacuation_TotalGains",
     WildcardClassification = "Story"
   },
   UI_Squad_ListName = {
@@ -1463,6 +1531,10 @@ return ReadOnly("TextMapWildcard", {
   },
   UI_WeeklyDungeon_ChancesRemain = {
     TextMapId = "UI_WeeklyDungeon_ChancesRemain",
+    WildcardClassification = "Story"
+  },
+  UI_WuyoushengEvent_Progress = {
+    TextMapId = "UI_WuyoushengEvent_Progress",
     WildcardClassification = "Story"
   },
   VoiceDes001 = {
@@ -1621,6 +1693,10 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "WikiText_20300105",
     WildcardClassification = "Story"
   },
+  WikiText_20300106 = {
+    TextMapId = "WikiText_20300106",
+    WildcardClassification = "Story"
+  },
   WikiText_20300601 = {
     TextMapId = "WikiText_20300601",
     WildcardClassification = "Story"
@@ -1669,6 +1745,22 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "WikiText_30400201",
     WildcardClassification = "Story"
   },
+  WikiText_40100501 = {
+    TextMapId = "WikiText_40100501",
+    WildcardClassification = "Story"
+  },
+  WikiText_40100502 = {
+    TextMapId = "WikiText_40100502",
+    WildcardClassification = "Story"
+  },
+  WikiText_40100503 = {
+    TextMapId = "WikiText_40100503",
+    WildcardClassification = "Story"
+  },
+  WikiText_40100504 = {
+    TextMapId = "WikiText_40100504",
+    WildcardClassification = "Story"
+  },
   WikiText_40300101 = {
     TextMapId = "WikiText_40300101",
     WildcardClassification = "Story"
@@ -1689,8 +1781,32 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "WikiText_40500902",
     WildcardClassification = "Story"
   },
+  WikiText_40701501 = {
+    TextMapId = "WikiText_40701501",
+    WildcardClassification = "Story"
+  },
   WikiText_40800101 = {
     TextMapId = "WikiText_40800101",
+    WildcardClassification = "Story"
+  },
+  WikiText_40900101 = {
+    TextMapId = "WikiText_40900101",
+    WildcardClassification = "Story"
+  },
+  WikiText_40900201 = {
+    TextMapId = "WikiText_40900201",
+    WildcardClassification = "Story"
+  },
+  WikiText_40900401 = {
+    TextMapId = "WikiText_40900401",
+    WildcardClassification = "Story"
+  },
+  WikiText_40900601 = {
+    TextMapId = "WikiText_40900601",
+    WildcardClassification = "Story"
+  },
+  WikiText_40900701 = {
+    TextMapId = "WikiText_40900701",
     WildcardClassification = "Story"
   },
   Wiki_RewardList_Content = {
@@ -1787,6 +1903,18 @@ return ReadOnly("TextMapWildcard", {
   },
   voice_ch_char_Heitao_vo_topic_05_2 = {
     TextMapId = "voice_ch_char_Heitao_vo_topic_05_2",
+    WildcardClassification = "Story"
+  },
+  voice_ch_char_Kami_vo_birthday = {
+    TextMapId = "voice_ch_char_Kami_vo_birthday",
+    WildcardClassification = "Story"
+  },
+  voice_ch_char_Kami_vo_topic_01_3 = {
+    TextMapId = "voice_ch_char_Kami_vo_topic_01_3",
+    WildcardClassification = "Story"
+  },
+  voice_ch_char_Kami_vo_topic_03_1 = {
+    TextMapId = "voice_ch_char_Kami_vo_topic_03_1",
     WildcardClassification = "Story"
   },
   voice_ch_char_Kezhou_vo_birthday = {
@@ -1911,6 +2039,18 @@ return ReadOnly("TextMapWildcard", {
   },
   voice_ch_char_Saiqi_vo_topic_05_2 = {
     TextMapId = "voice_ch_char_Saiqi_vo_topic_05_2",
+    WildcardClassification = "Story"
+  },
+  voice_ch_char_Suyi_vo_idle = {
+    TextMapId = "voice_ch_char_Suyi_vo_idle",
+    WildcardClassification = "Story"
+  },
+  voice_ch_char_Suyi_vo_topic_02_5 = {
+    TextMapId = "voice_ch_char_Suyi_vo_topic_02_5",
+    WildcardClassification = "Story"
+  },
+  voice_ch_char_Suyi_vo_topic_02_6 = {
+    TextMapId = "voice_ch_char_Suyi_vo_topic_02_6",
     WildcardClassification = "Story"
   },
   voice_ch_char_Tuosi_vo_birthday = {

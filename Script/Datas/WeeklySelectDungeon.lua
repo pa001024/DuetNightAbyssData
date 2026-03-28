@@ -13,10 +13,27 @@ return ReadOnly("WeeklySelectDungeon", {
       91302,
       91304,
       91306,
-      91307
+      91307,
+      91308
     },
     GuidanceTitle = 200001,
     Path = "/Game/UI/Texture/Dynamic/Atlas/Permanent/T_Play_Weekly01.T_Play_Weekly01",
+    RewardViewId = 90012,
+    Sequence = 10
+  },
+  [2] = {
+    ChapterId = 2,
+    ChapterName = "UI_DUNGEON_TYPE_SYNTHESISII",
+    ChapterSubName = "UI_DUNGEON_DROP_MOD",
+    DungeonList = {
+      91502,
+      91504,
+      91506,
+      91507,
+      91508
+    },
+    GuidanceTitle = 200001,
+    Path = "/Game/UI/Texture/Dynamic/Atlas/Permanent/T_Play_Weekly02.T_Play_Weekly02",
     RewardViewId = 90012,
     Sequence = 10
   }

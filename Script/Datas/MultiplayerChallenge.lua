@@ -81,5 +81,69 @@ return ReadOnly("MultiplayerChallenge", {
     TeleportName = "UI_TELEPORTPOINT_NAME_EXTERNPRO",
     TitleName = "UI_TELEPORTPOINT_NAME_104301_1",
     UnlockCondition = 120106
+  },
+  [8] = {
+    ChallengeDes = "UI_DUNGEON_CONTENT_DEFENCE_2",
+    ChallengeId = 8,
+    ChallengeName = "UI_DUNGEON_DES_DEFENCE_2",
+    DungeonId = {91150},
+    ImgPath = "/Game/UI/Texture/Static/Image/AreaCoop/T_AreaCoop_07.T_AreaCoop_07",
+    TeleportId = 8007,
+    TeleportName = "UI_TELEPORTPOINT_NAME_DEFENCE",
+    TitleName = "UI_TELEPORTPOINT_NAME_104504_2",
+    UnlockCondition = 120206
+  },
+  [9] = {
+    ChallengeDes = "UI_DUNGEON_CONTENT_SURVIVALPRO_1",
+    ChallengeId = 9,
+    ChallengeName = "UI_DUNGEON_DES_SURVIVALPRO_1",
+    DungeonId = {91148},
+    ImgPath = "/Game/UI/Texture/Static/Image/AreaCoop/T_AreaCoop_07.T_AreaCoop_07",
+    TeleportId = 8008,
+    TeleportName = "UI_TELEPORTPOINT_NAME_SURVIVALMINIPRO",
+    TitleName = "UI_TELEPORTPOINT_NAME_104504_4",
+    UnlockCondition = 120206
+  },
+  [10] = {
+    ChallengeDes = "UI_DUNGEON_CONTENT_EXTERMINATE_1",
+    ChallengeId = 10,
+    ChallengeName = "UI_DUNGEON_DES_EXTERMINATE_1",
+    DungeonId = {30804},
+    TeleportId = 8009,
+    TeleportName = "UI_TELEPORTPOINT_NAME_EXTERMINATE",
+    TitleName = "UI_TELEPORTPOINT_NAME_104501_3"
+  },
+  [11] = {
+    ChallengeDes = "UI_DUNGEON_CONTENT_TESTING_1",
+    ChallengeId = 11,
+    ChallengeName = "UI_DUNGEON_DES_TESTING_1",
+    DungeonId = {91128},
+    ImgPath = "/Game/UI/Texture/Static/Image/AreaCoop/T_AreaCoop_08.T_AreaCoop_08",
+    TeleportId = 8010,
+    TeleportName = "UI_TELEPORTPOINT_NAME_EXTERNPRO",
+    TitleName = "UI_TELEPORTPOINT_NAME_104505_3",
+    UnlockCondition = 120206
+  },
+  [12] = {
+    ChallengeDes = "UI_DUNGEON_CONTENT_DEFENCE_2",
+    ChallengeId = 12,
+    ChallengeName = "UI_DUNGEON_DES_DEFENCE_2",
+    DungeonId = {91187},
+    ImgPath = "/Game/UI/Texture/Static/Image/AreaCoop/T_AreaCoop_09.T_AreaCoop_09",
+    TeleportId = 8011,
+    TeleportName = "UI_TELEPORTPOINT_NAME_DEFENCE",
+    TitleName = "UI_TELEPORTPOINT_NAME_105201_2",
+    UnlockCondition = 120206
+  },
+  [13] = {
+    ChallengeDes = "UI_DUNGEON_CONTENT_SURVIVALPRO_1",
+    ChallengeId = 13,
+    ChallengeName = "UI_DUNGEON_DES_SURVIVALPRO_1",
+    DungeonId = {91149},
+    ImgPath = "/Game/UI/Texture/Static/Image/AreaCoop/T_AreaCoop_10.T_AreaCoop_10",
+    TeleportId = 8012,
+    TeleportName = "UI_TELEPORTPOINT_NAME_SURVIVALMINIPRO",
+    TitleName = "UI_TELEPORTPOINT_NAME_105501_1",
+    UnlockCondition = 120206
   }
 })

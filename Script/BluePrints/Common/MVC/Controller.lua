@@ -48,11 +48,25 @@ function M:OpenView(WorldContext, ViewNameOrMainUIId, ...)
     ViewObj = self:GetUIMgr(WorldContext):LoadUINew(ViewName, ...)
   elseif type(ViewNameOrMainUIId) == "number" then
     local MainUIId = ViewNameOrMainUIId
-    UIUtils.OpenSystem(MainUIId, ...)
-    ViewName = DataMgr.MainUI[MainUIId].SystemUIName
-    ViewObj = self:GetView(WorldContext, ViewName)
+    local MainUIConf = DataMgr.MainUI[MainUIId]
+    if MainUIConf then
+      UIUtils.OpenSystem(MainUIId, ...)
+      ViewName = MainUIConf.SystemUIName
+      ViewObj = self:GetView(WorldContext, ViewName)
+    end
+    local PopupId = ViewNameOrMainUIId
+    local PopupConf = DataMgr.CommonPopupUIContext[PopupId]
+    if PopupConf then
+      local Params = (...)
+      ViewObj = self:OpenPopUp(WorldContext, PopupId, Params)
+    end
   end
   return ViewObj
+end
+
+function M:OpenPopUp(WorldContext, PopupId, Params)
+  assert(PopupId, "PopupId is nil")
+  return self:GetUIMgr(WorldContext):ShowCommonPopupUI(PopupId, Params, WorldContext)
 end
 
 function M:GetView(WorldContext, ViewName)

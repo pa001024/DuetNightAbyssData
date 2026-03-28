@@ -190,7 +190,7 @@ end
 
 function M:OnResourcesChanged(ResourceId)
   local BranchInfo = self.SkillTreeBranchInfo
-  if not BranchInfo then
+  if not BranchInfo or self.IsPreviewMode then
     return
   end
   self:UpdateNodeSate()

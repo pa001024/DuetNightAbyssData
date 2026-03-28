@@ -41,8 +41,8 @@ function M:CacheDungeonPhantomAssets_Lua(UnitId)
 end
 
 function M:CommonPrepareMonSkillEffects(UnitId)
-  local AllData = require("Utils.MonsterEffectsPath")
-  if not AllData then
+  local PreloadEffects = require("Utils.MonsterEffectsPath")
+  if not PreloadEffects then
     return {}
   end
   local MonsterData = DataMgr.Monster[UnitId]
@@ -51,8 +51,8 @@ function M:CommonPrepareMonSkillEffects(UnitId)
   end
   UnitId = MonsterData.BattleRoleId
   local RetPathTable = {}
-  if AllData[UnitId] and not IsEmptyTable(AllData[UnitId]) then
-    for _, v in pairs(AllData[UnitId]) do
+  if PreloadEffects[UnitId] and not IsEmptyTable(PreloadEffects[UnitId]) then
+    for _, v in pairs(PreloadEffects[UnitId]) do
       local EffectPath = DataMgr.VisualEffect[v]
       if EffectPath and EffectPath.EffectPath then
         table.insert(RetPathTable, FEMLoadPath(EffectPath.EffectPath))
@@ -62,31 +62,110 @@ function M:CommonPrepareMonSkillEffects(UnitId)
   return RetPathTable
 end
 
-function M:CommonPrepareMainPlayerAsserts()
-  local AllData = require("Utils.PlayerEffectsPath")
-  if not AllData then
+function M:CommonPreparePlayerSkillEffects(PlayerCharacter, IsPrepareMainPlayer)
+  local PreloadEffects = require("Utils.PlayerEffectsPath")
+  if not PreloadEffects or not PlayerCharacter then
     return {}
   end
   local RetPathTable = {}
-  local MainPlayerTable = AllData.MainPlayer
-  if MainPlayerTable and not IsEmptyTable(MainPlayerTable) then
-    for _, v in ipairs(MainPlayerTable) do
+  local UnitId = PlayerCharacter.CurrentRoleId
+  local ModelId = PlayerCharacter.ModelId
+  if not ModelId or 0 == ModelId then
+    ModelId = UnitId
+  end
+  local ModelEffectsTable = PreloadEffects.PlayerEffects[ModelId]
+  if ModelEffectsTable and not IsEmptyTable(ModelEffectsTable) then
+    for _, v in ipairs(ModelEffectsTable) do
+      table.insert(RetPathTable, FEMLoadPath(v))
+    end
+  end
+  local AccessoryType2Id = PlayerCharacter.CharacterFashion and PlayerCharacter.CharacterFashion.AccessoryType2Id
+  if AccessoryType2Id then
+    local AccessoryEffects = PreloadEffects.AccessoryEffects
+    for _, AccessoryId in pairs(AccessoryType2Id) do
+      local EffectsTable = AccessoryEffects and AccessoryEffects[AccessoryId]
+      if EffectsTable and not IsEmptyTable(EffectsTable) then
+        for _, v in ipairs(EffectsTable) do
+          table.insert(RetPathTable, FEMLoadPath(v))
+        end
+      end
+    end
+  else
+    AccessoryType2Id = {}
+  end
+  if PlayerCharacter.Weapons then
+    local function _CommonPreparePlayerWeaponEffects(PreloadEffects, RetPathTable, AccessoryType2Id, WeaponId)
+      local AccessoryEffects = PreloadEffects.AccessoryEffects
+      
+      local AccessoryGroups = PreloadEffects.AccessoryGroups
+      local WeaponEffects = PreloadEffects.WeaponEffects
+      local EffectsTable = WeaponEffects and WeaponEffects[WeaponId]
+      if EffectsTable and not IsEmptyTable(EffectsTable) then
+        for _, v in ipairs(EffectsTable) do
+          table.insert(RetPathTable, FEMLoadPath(v))
+        end
+      end
+      for _, AccessoryId in pairs(AccessoryType2Id) do
+        local AccessoryGroupName = AccessoryGroups and AccessoryGroups[AccessoryId]
+        if AccessoryGroupName then
+          local WeaponBlueprintPath = DataMgr.BattleWeapon[WeaponId].WeaponBlueprint
+          local WeaponBlueprint = string.match(WeaponBlueprintPath, "([^%.]+)")
+          local BlueprintInfo = WeaponBlueprint and DataMgr.WeaponBlueprintId[WeaponBlueprint]
+          if BlueprintInfo and BlueprintInfo.WeaponBlueprintId then
+            local WeaponFx = DataMgr.WeaponFX[BlueprintInfo.WeaponBlueprintId]
+            local GroupEffect = WeaponFx and WeaponFx[AccessoryGroupName]
+            if GroupEffect and GroupEffect.FXAsset then
+              table.insert(RetPathTable, FEMLoadPath(GroupEffect.FXAsset))
+            end
+          end
+        end
+      end
+    end
+    
+    for _, Weapon in pairs(PlayerCharacter.Weapons) do
+      _CommonPreparePlayerWeaponEffects(PreloadEffects, RetPathTable, AccessoryType2Id, Weapon.WeaponId)
+    end
+  end
+  if IsPrepareMainPlayer then
+    local MainPlayEffects = PreloadEffects.MainPlayEffects
+    for _, v in ipairs(MainPlayEffects) do
       table.insert(RetPathTable, FEMLoadPath(v))
     end
   end
   return RetPathTable
 end
 
-function M:CommonPreparePlayerSkillEffects(UnitId)
-  local AllData = require("Utils.PlayerEffectsPath")
-  if not AllData then
+function M:CommonPreparePlayerFrontSightUI(PlayerCharacter)
+  local FrontSightUtils = require("Utils.FrontSightUtils")
+  if not IsValid(PlayerCharacter) then
     return {}
   end
   local RetPathTable = {}
-  local EffectsTable = AllData[UnitId]
-  if EffectsTable and not IsEmptyTable(EffectsTable) then
-    for _, v in ipairs(EffectsTable) do
-      table.insert(RetPathTable, FEMLoadPath(v))
+  local Weapons = {
+    PlayerCharacter.RangedWeapon,
+    PlayerCharacter.UltraWeapon
+  }
+  local StyleNames = {}
+  for _, Weapon in pairs(Weapons) do
+    if IsValid(Weapon) then
+      local SightUIName = FrontSightUtils:GetWeaponSightUI(Weapon, PlayerCharacter.ModelId)
+      local WeaponStyleNode = FrontSightUtils:GetWeaponStyleNode(SightUIName)
+      if WeaponStyleNode and not StyleNames[WeaponStyleNode] then
+        local FrontSightUIPath = FrontSightUtils:GetFrontSightUIPath(WeaponStyleNode)
+        if FrontSightUIPath then
+          StyleNames[WeaponStyleNode] = 1
+          table.insert(RetPathTable, FEMLoadPath(FrontSightUIPath))
+        end
+      end
+      local MagazineCapacity = Weapon:GetAttr("MagazineCapacity")
+      local AmmoBarStyleName = FrontSightUtils:GetAmmoBarStyle(Weapon, WeaponStyleNode, MagazineCapacity, SightUIName)
+      if AmmoBarStyleName and not StyleNames[AmmoBarStyleName] then
+        local AmmoBarUIPath = FrontSightUtils:GetAmmoBarUIPath(AmmoBarStyleName)
+        if AmmoBarUIPath then
+          StyleNames[AmmoBarStyleName] = 1
+          table.insert(RetPathTable, FEMLoadPath(AmmoBarUIPath))
+        end
+      end
     end
   end
   return RetPathTable

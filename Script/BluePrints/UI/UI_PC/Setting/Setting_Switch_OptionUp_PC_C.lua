@@ -2,8 +2,8 @@ require("UnLua")
 local SettingUtils = require("Utils.SettingUtils")
 local S = Class("BluePrints.UI.UI_PC.Setting.Setting_Switch_OptionBase_PC_C")
 
-function S:Init(Parent, CacheName, CacheInfo)
-  self.Super.Init(self, Parent, CacheName, CacheInfo)
+function S:Init(Parent, CacheName, CacheInfo, Content)
+  self.Super.Init(self, Parent, CacheName, CacheInfo, Content)
   self:InitSubOptionList()
 end
 

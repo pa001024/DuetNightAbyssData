@@ -593,7 +593,11 @@ return ReadOnly("Temple", {
   },
   [81701] = {
     DungeonId = 81701,
-    RatingRange = T.RT_14,
+    RatingRange = {
+      20,
+      40,
+      80
+    },
     RewardId = T.RT_13,
     SucRule = "Score",
     UIHideCombo = 1,

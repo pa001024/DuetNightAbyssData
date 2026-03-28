@@ -158,6 +158,8 @@ function CheckBranchQuestFinishedNode:UpdateWorldTaskPanel(InportInfo)
       end
       self:TryFinishCurrentNode()
     end, false, 0, nil, false)
+  else
+    self:TryFinishCurrentNode()
   end
 end
 

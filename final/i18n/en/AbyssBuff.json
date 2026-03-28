@@ -318,5 +318,69 @@
     "d": "For every 5 instances of damage dealt by any ally, gains 1 stack of +10% Damage Dealt for 15s, stacking up to 9 times.",
     "t": 1,
     "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 13111,
+    "icon": "Common",
+    "n": "活跃急板：辉煌号召",
+    "d": "When an ally uses a Combat Skill or Ultimate Skill, gains +15% Morale for 12s, stacking up to 5 times.",
+    "t": 1,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 13112,
+    "icon": "Exchange",
+    "n": "协调柔板：传福音士",
+    "d": "Reduces allies’ Skill Duration by 25% and increases their Skill Range by 75%.",
+    "t": 2,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 13121,
+    "icon": "Range",
+    "n": "活跃急板：俯瞰日记",
+    "d": "When dealing damage while airborne, gain a 50% Damage Dealt increase. This effect is removed 1 seconds after landing.",
+    "t": 1,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 13122,
+    "icon": "Exchange",
+    "n": "协调柔板：最后一滴血",
+    "d": "Reduces allies’ ATK by 150% and increases their Skill Intensity by 100%.",
+    "t": 2,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 13211,
+    "icon": "Skill",
+    "n": "活跃急板：视界求索",
+    "d": "For every 300 Sanity Cost by any ally, gains 1 stack of +50% Damage Dealt for 24s, stacking up to 1 times.",
+    "t": 1,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 13212,
+    "icon": "Exchange",
+    "n": "协调柔板：自我鞭挞",
+    "d": "Reduces allies’ Max HP by 150% and increases their Max Sanity by 100%.",
+    "t": 2,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 13221,
+    "icon": "Skill",
+    "n": "Andante Furioso: Ingenuity's Boon",
+    "d": "Every 3 instances of damage dealt by any ally grant 1 stack of 3% Skill Intensity Increase, lasting 20 s and stacking up to 50 times.",
+    "t": 1,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 13222,
+    "icon": "Exchange",
+    "n": "协调柔板：漂流的风暴",
+    "d": "Reduces allies’ ATK by 150% and increases their Multishot by 120%.",
+    "t": 2,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
   }
 ]

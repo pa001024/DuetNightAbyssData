@@ -87,4 +87,9 @@ function CommonCharDict:GetNewCommonChar(CharId)
   return self[CharId]
 end
 
+function CommonCharDict:LoadCommonChar(Value)
+  local common_char = CommonChar()
+  return common_char:load(Value)
+end
+
 return {CommonChar = CommonChar, CommonCharDict = CommonCharDict}

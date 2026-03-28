@@ -259,7 +259,7 @@ end
 function WBP_Rouge_DifficultySelection_P_C:OnNavigationToIndex(Index)
   local Item = self.ScrollBox_List:GetChildAt(Index)
   if Item then
-    local Ans = Item:OnSubCellClicked()
+    local Ans = Item:OnCellClicked()
     if Ans then
       return Item
     else

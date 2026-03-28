@@ -51,13 +51,13 @@ function M:OnLoaded(...)
   })
   self:BindToAnimationFinished(self.Success, {
     self,
-    function()
-      self:Close()
-    end
+    self.OnFirstSuccess
   })
   self:SetBarPercent(0.0)
   DebugPrint("zwkkk WBP_ZhiLiuQTE_C OnLoaded ", self.InteractiveNum, self.InteractiveTime, self.DownTime)
+  self.Panel_LongPress:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self:InitImage()
+  AudioManager(self):PlayUISound(self, "event:/ui/common/qte_show", "QTEShow", nil)
 end
 
 function M:Tick(MyGeometry, InDeltaTime)
@@ -82,6 +82,17 @@ function M:Tick(MyGeometry, InDeltaTime)
   end
 end
 
+function M:OnFirstSuccess()
+  self:UnbindAllFromAnimationFinished(self.In)
+  self:BindToAnimationFinished(self.In, function()
+    self.CanInteract = true
+  end)
+  self:AddTimer(0.5, function()
+    self:PlayAnimation(self.In)
+    self.Panel_LongPress:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  end, false, 0)
+end
+
 function M:PressedSelectAction()
   if not self.CanInteract then
     return
@@ -98,12 +109,15 @@ function M:PressedSelectAction()
     self:PlayAnimation(self.FeedBack)
     if self.CurInteractiveNum >= self.InteractiveNum then
       self.Owner:FirstStageComplete()
-      self:StopAllAnimations()
       self:PlayAnimation(self.LongPress)
       self:PlayAnimationReverse(self.Remind)
+      self.CanInteract = false
+      AudioManager(self):PlayUISound(self, "event:/ui/common/qte_success", "", nil)
+      self:PlayAnimation(self.Success)
     end
   elseif 2 == self.Owner.CurStage then
     self.InPress = true
+    AudioManager(self):PlayUISound(self, "event:/ui/common/qte_press_loop", "QTEPress", nil)
     self.Owner:LongPressEnter()
   end
 end
@@ -117,6 +131,7 @@ function M:ReleasedSelectAction()
   end
   self.InPress = false
   if 2 == self.Owner.CurStage then
+    AudioManager(self):StopSound(self, "QTEPress")
     self.Owner:LongPressLeave()
   end
 end
@@ -125,6 +140,25 @@ function M:SetBarPercent(Percent)
   if self.Material then
     self.Material:SetScalarParameterValue("Percent", Percent)
   end
+end
+
+function M:OnOut()
+  self:StopAllAnimations()
+  AudioManager(self):StopSound(self, "QTEShow")
+  self:PlayAnimation(self.Out)
+end
+
+function M:OnEnd()
+  self:UnbindAllFromAnimationFinished(self.Success)
+  self:BindToAnimationFinished(self.Success, {
+    self,
+    function()
+      AudioManager(self):StopSound(self, "QTEShow")
+      self:Close()
+    end
+  })
+  AudioManager(self):PlayUISound(self, "event:/ui/common/qte_success", "", nil)
+  self:PlayAnimation(self.Success)
 end
 
 function M:InitImage()

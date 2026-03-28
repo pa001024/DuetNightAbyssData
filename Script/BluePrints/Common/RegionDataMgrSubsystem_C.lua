@@ -260,19 +260,31 @@ function RegionDataMgrSubsystem_C:RegionActorCacheDataDeadByUnitLabel(UnitId, Un
   return BaseRegionDatas
 end
 
-function RegionDataMgrSubsystem_C:UpdateRegionActorData(TargetActor, RegionData)
+function RegionDataMgrSubsystem_C:UpdateRegionActorData(TargetActor, RegionData, IsFromServer)
   local Result, Avatar, GameMode = self:IsCanTriggerRegionDataHandle()
   if not Result then
+    if GameMode:IsInDungeon() then
+      local LuaTableIndex = TargetActor.RegionDataTableIndex or self:GetLuaDataIndex(TargetActor.WorldRegionEid)
+      self:UpdateStateInfoByTable(LuaTableIndex, RegionData)
+    end
     return
   end
-  if TargetActor.RandomRuleId and self.DataPool.RandomCreatorDatas[TargetActor.RandomRuleId] then
+  if TargetActor.RandomRuleId and self.DataPool.RandomCreatorDatas[TargetActor.RandomRuleId] or IsFromServer then
     return
   end
   local bNeedUpdateServer = true
   local LuaTableIndex = TargetActor.RegionDataTableIndex or self:GetLuaDataIndex(TargetActor.WorldRegionEid)
   bNeedUpdateServer = self:UpdateStateInfoByTable(LuaTableIndex, RegionData)
   if bNeedUpdateServer then
-    Avatar:RegionActorUpdate(TargetActor, TargetActor.SubRegionId, TargetActor.LevelName, RegionData)
+    if not IsFromServer or 8 == TargetActor.RegionDataType then
+      Avatar:RegionActorUpdate(TargetActor, TargetActor.SubRegionId, TargetActor.LevelName, RegionData)
+    else
+      local Ret, _ = self:AvatarUpdateUnitRegionData(TargetActor, TargetActor.SubRegionId, TargetActor.LevelName)
+      if not self:CheckRegionErrorCode(Ret) then
+        DebugPrint("RegionLog:  Actor更新属性,当前类型为：" .. TargetActor.RegionDataType .. "  WorldRegionEid:" .. tostring(TargetActor.WorldRegionEid) .. "    更新数据失败，Ret：" .. Ret)
+        return
+      end
+    end
   end
 end
 
@@ -523,36 +535,6 @@ function RegionDataMgrSubsystem_C:ClientCacheExist(WorldRegionEid)
 end
 
 function RegionDataMgrSubsystem_C:TryActiveDefaultDeliver()
-  local Deliver = {}
-  if 0 == self.CurRegionDeliverNew:Num() then
-    return
-  end
-  Deliver = self.CurRegionDeliverNew:ToTable()
-  local Avatar = GWorld:GetAvatar()
-  if not Avatar then
-    return
-  end
-  local Res, Data
-  for WorldRegionEid, CreatorId in pairs(Deliver) do
-    local RegionBaseData = self.DataLibrary:GetUnitRegionCacheDataByWorldRegionEid(WorldRegionEid)
-    if RegionBaseData then
-      if RegionBaseData.State and RegionBaseData.State.OpenState then
-        Res = true
-        break
-      end
-      if self:CheckDeliverMechanismIsDefault(CreatorId) then
-        Data = RegionBaseData
-        break
-      end
-    end
-  end
-  if not Res and Data then
-    local function callback(Ret)
-      Avatar:CombatItemTargetFinish(CommonConst.TargetTypeCreatorIdAndStateId, Data.CreatorId, 1, Data.CreatorId, 901001)
-    end
-    
-    Avatar:UpdateRegionDataStateByCreatorId(Data.CreatorId, {OpenState = true, StateId = 901002}, callback)
-  end
 end
 
 function RegionDataMgrSubsystem_C:GetManualItemData(ManualItemId)
@@ -733,6 +715,9 @@ function RegionDataMgrSubsystem_C:FillCreateUnitContext(Context, Info)
   end
   if Info.IsDead then
     Context.BoolParams:Add("IsDead", Info.IsDead)
+  end
+  if Info.ServerUniqueId then
+    Context.StrParams:Add("ServerUniqueId", Info.ServerUniqueId)
   end
 end
 
@@ -1049,6 +1034,78 @@ function RegionDataMgrSubsystem_C:UpdatePhantomRegionData(Actor)
   self.DataLibrary.LogHelper:OnClientCacheUpdated(Actor.WorldRegionEid, Actor.Eid, Actor.LevelName)
   if Data then
     Avatar:UpdatePhantomRegionActorData(Data, Data.State or {})
+  end
+end
+
+function RegionDataMgrSubsystem_C:GetAllRegionDataByUnitType(UnitType)
+  return self.DataPool:GetAllRegionDataByUnitType(UnitType)
+end
+
+function RegionDataMgrSubsystem_C:AddRegionDataAddCallback(UnitType, Obj, Func)
+  if not self.RegionDataAddCallback[UnitType] then
+    self.RegionDataAddCallback[UnitType] = {}
+  end
+  self.RegionDataAddCallback[UnitType][Obj] = Func
+  DebugPrint("AddRegionDataAddCallback")
+  PrintTable(self.RegionDataAddCallback[UnitType])
+end
+
+function RegionDataMgrSubsystem_C:RemoveRegionDataAddCallback(UnitType, Obj)
+  if self.RegionDataAddCallback[UnitType] and self.RegionDataAddCallback[UnitType][Obj] then
+    self.RegionDataAddCallback[UnitType][Obj] = nil
+  end
+end
+
+function RegionDataMgrSubsystem_C:ExeRegionDataAddCallback(RegionData)
+  if RegionData.UnitType then
+    local Pair = self.RegionDataAddCallback[RegionData.UnitType]
+    if Pair then
+      PrintTable(Pair, 2)
+      for Obj, Func in pairs(Pair) do
+        if Obj and Func then
+          Func(Obj, RegionData)
+        end
+      end
+    end
+  end
+end
+
+function RegionDataMgrSubsystem_C:AddRegionDataUpdateCallback(UnitType, Obj, Func)
+  if not self.RegionDataUpdateCallback[UnitType] then
+    self.RegionDataUpdateCallback[UnitType] = {}
+  end
+  self.RegionDataUpdateCallback[UnitType][Obj] = Func
+end
+
+function RegionDataMgrSubsystem_C:RemoveRegionDataUpdateCallback(UnitType, Obj)
+  if self.RegionDataUpdateCallback[UnitType] and self.RegionDataUpdateCallback[UnitType][Obj] then
+    self.RegionDataUpdateCallback[UnitType][Obj] = nil
+  end
+end
+
+function RegionDataMgrSubsystem_C:ExeRegionDataUpdateCallback(RegionData)
+  if RegionData.UnitType then
+    local Pair = self.RegionDataUpdateCallback[RegionData.UnitType]
+    if Pair then
+      for Obj, Func in pairs(Pair) do
+        if Obj and Func then
+          Func(Obj, RegionData)
+        end
+      end
+    end
+  end
+end
+
+function RegionDataMgrSubsystem_C:SetRegionSnapshotInfo(SnapShotInfo, Eid)
+  local Index, Result = self:TryGetLuaDataIndexByEid(Eid)
+  if Result then
+    local Info = self.DataPool:GetRegionEntityDataNoCopy(Index)
+    if Info then
+      SnapShotInfo.SnapShotId = Eid
+      SnapShotInfo.UnitId = Info.UnitId
+      SnapShotInfo.UnitType = Info.UnitType
+      SnapShotInfo.Loc = Info.Loc
+    end
   end
 end
 

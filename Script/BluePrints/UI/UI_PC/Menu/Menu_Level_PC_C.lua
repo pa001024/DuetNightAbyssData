@@ -498,13 +498,12 @@ function Menu_Level_PC_C:CalcPropInfo(Avatar)
     local CachedDungeonProgressRewards = Avatar:GetCachedDungeonProgressRewards()
     if GameState.DungeonProgress > 1 then
       for i = 1, GameState.DungeonProgress - 1 do
-        if not CachedDungeonProgressRewards[i] then
-          return
-        end
-        for ItemType, Rewards in pairs(CachedDungeonProgressRewards[i]) do
-          for ItemId, ItemTable in pairs(Rewards) do
-            for Tag, Count in pairs(ItemTable) do
-              self:FillSpRewards(Tag, ItemType, ItemId, Count)
+        if CachedDungeonProgressRewards[i] then
+          for ItemType, Rewards in pairs(CachedDungeonProgressRewards[i]) do
+            for ItemId, ItemTable in pairs(Rewards) do
+              for Tag, Count in pairs(ItemTable) do
+                self:FillSpRewards(Tag, ItemType, ItemId, Count)
+              end
             end
           end
         end
@@ -1118,10 +1117,7 @@ function Menu_Level_PC_C:OnClickShowStatistics()
 end
 
 function Menu_Level_PC_C:OnClickCommonSet()
-  local Setting = UIManager(self):LoadUINew("Setting")
-  if Setting then
-    self:PlayOutAnim()
-  end
+  UIUtils.OpenSystem(26)
 end
 
 function Menu_Level_PC_C:OnClickExitGame()
@@ -1215,6 +1211,10 @@ function Menu_Level_PC_C:OnClickSkill()
 end
 
 function Menu_Level_PC_C:ClickConfirmExitInBattle()
+  local CommonDialog = UIManager(self):GetUIObj("CommonDialog")
+  if CommonDialog then
+    CommonDialog:Close()
+  end
   local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
   if nil ~= GameInstance then
     local UIManager = GameInstance:GetGameUIManager()

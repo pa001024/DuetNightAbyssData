@@ -395,15 +395,59 @@ return {
       SequenceStateRecorder = {
         {
           RecorderId = 1,
-          SequenceState = {1}
+          SequenceState = {1, 2}
         },
         {
           RecorderId = 2,
-          SequenceState = {1}
+          SequenceState = {1, 2}
         },
         {
           RecorderId = 3,
+          SequenceState = {
+            1,
+            2,
+            3
+          }
+        },
+        {
+          RecorderId = 4,
+          SequenceState = {1, 2}
+        },
+        {
+          RecorderId = 5,
+          SequenceState = {1, 2}
+        },
+        {
+          RecorderId = 6,
+          SequenceState = {1, 2}
+        },
+        {
+          RecorderId = 7,
+          SequenceState = {1, 2}
+        },
+        {
+          RecorderId = 8,
+          SequenceState = {1, 2}
+        },
+        {
+          RecorderId = 9,
+          SequenceState = {
+            1,
+            2,
+            3
+          }
+        },
+        {
+          RecorderId = 11,
+          SequenceState = {1, 2}
+        },
+        {
+          RecorderId = 12,
           SequenceState = {1}
+        },
+        {
+          RecorderId = 13,
+          SequenceState = {1, 2}
         }
       }
     },
@@ -428,6 +472,19 @@ return {
         },
         {
           RecorderId = 5,
+          SequenceState = {1}
+        }
+      }
+    },
+    {
+      RegionId = 105201,
+      SequenceStateRecorder = {
+        {
+          RecorderId = 1,
+          SequenceState = {1}
+        },
+        {
+          RecorderId = 2,
           SequenceState = {1}
         }
       }
@@ -461,6 +518,42 @@ return {
         },
         {
           RecorderId = 3,
+          SequenceState = {
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          }
+        },
+        {
+          RecorderId = 4,
+          SequenceState = {
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          }
+        },
+        {
+          RecorderId = 5,
+          SequenceState = {
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          }
+        },
+        {
+          RecorderId = 6,
           SequenceState = {
             1,
             2,

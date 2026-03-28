@@ -9,6 +9,7 @@ function M:Init()
   self.FriendRequest_Dialog = nil
   self.BlackList_Dialog = nil
   self.RefreshRecommandTimer = nil
+  self.ReqRecvTimer = "Friend_ReqRecvTimer"
   self:GetAvatar()
 end
 
@@ -65,6 +66,7 @@ function M:GetDialog(WorldContex)
 end
 
 function M:OpenAddFriendDialog(WorldContext, AvatarInfo)
+  DebugPrint("OpenAddFriendDialog", AvatarInfo)
   local Params = {
     UseGenaral = true,
     MultilineType = 1,
@@ -75,19 +77,27 @@ function M:OpenAddFriendDialog(WorldContext, AvatarInfo)
       if not bRes then
         return
       end
-      self:SendRequest(FriendCommon.EventId.AddFriend, AvatarInfo.Uid, ...)
+      local TargetUid = self:GetSocialUid(AvatarInfo.Uid, AvatarInfo)
+      self:SendRequest(FriendCommon.EventId.AddFriend, TargetUid, (...), AvatarInfo)
     end,
     EditTextConfig = {Owner = self, IsMultiLine = false}
   }
+  if self:IsGamepad() then
+    Params.AutoFocus = true
+  end
   self:GetUIMgr(WorldContext):ShowCommonPopupUI(FriendCommon.RequestDialogNotInput, Params, self:GetView(WorldContext))
 end
 
 function M:OpenAddBlacklistDialog(WorldContext, AvatarInfo)
   local Params = {
     RightCallbackFunction = function()
-      self:SendRequest(FriendCommon.EventId.AddBlackList, AvatarInfo.Uid, AvatarInfo)
+      local TargetUid = self:GetSocialUid(AvatarInfo.Uid, AvatarInfo)
+      self:SendRequest(FriendCommon.EventId.AddBlackList, TargetUid, AvatarInfo)
     end
   }
+  if self:IsGamepad() then
+    Params.AutoFocus = true
+  end
   self:GetUIMgr(WorldContext):ShowCommonPopupUI(FriendCommon.PullBlackDialog, Params, self:GetView(WorldContext))
 end
 
@@ -112,13 +122,13 @@ function M:RecvResponse(Reason, ...)
   end
 end
 
-function M:SendAddFriend(Uid, Message)
+function M:SendAddFriend(TargetUid, Message, AvatarInfo)
   Message = Message or GText("UI_Friend_ReDef")
-  if not Uid then
+  if not TargetUid then
     self:CheckError(ErrorCode.RET_FRIEND_UID_NOT_EXIST, true)
     return
   end
-  self:GetAvatar():FriendSendAddRequest(Uid, Message)
+  self:GetAvatar():FriendSendAddRequest(TargetUid, Message)
 end
 
 function M:RecvRefreshMatchFriend(ErrCode, ...)
@@ -180,17 +190,31 @@ function M:RecvAgreeAdd(ErrCode, ...)
   end
   if not self:CheckError(ErrCode) then
     if ErrCode == ErrorCode.RET_FRIEND_OTHER_PARTY_HOLD_MAX or ErrCode == ErrorCode.RET_FRIEND_REQUEST_TIMEOUT then
-      self:NotifyEvent(FriendCommon.EventId.AgreeAdd, false)
+      self:NotifyEvent(FriendCommon.EventId.AgreeAdd, false, Uid)
     end
     return
   end
+  self:TryProcessNextFriendReq(Uid)
   self:GetModel():RemoveLastRequests(Uid)
   local FriendName = self:GetModel():GetFriendDict()[Uid].Info.Nickname
   self:ShowToast(string.format(GText("UI_Toast_Friend_PassRequest"), FriendName))
-  self:NotifyEvent(FriendCommon.EventId.AgreeAdd, false)
+  self:NotifyEvent(FriendCommon.EventId.AgreeAdd, false, Uid)
+end
+
+function M:TryProcessNextFriendReq(Uid)
+  local PopReq = FriendModel:PopFriendReqInfo()
+  if PopReq and PopReq.Uid == Uid then
+    if self:IsExistTimer(self.ReqRecvTimer) then
+      self:StopTimer(self.ReqRecvTimer)
+    end
+    self:AddTimer(0.01, function()
+      self:SetUpFriendReqTimer(TeamCommon.LoopTimerInterval)
+    end)
+  end
 end
 
 function M:SendRefuseAdd(Uid, Coroutine)
+  self:TryProcessNextFriendReq(Uid)
   local FriendName = self:GetModel():GetRequestRecvBox()[Uid].Info.Nickname
   self:GetAvatar():FriendRefuseAddRequest(Uid, FriendName, Coroutine)
 end
@@ -205,13 +229,13 @@ function M:RecvRefuseAdd(ErrCode, ...)
   end
   if not self:CheckError(ErrCode) then
     if ErrCode == ErrorCode.RET_FRIEND_OTHER_PARTY_HOLD_MAX or ErrCode == ErrorCode.RET_FRIEND_REQUEST_TIMEOUT then
-      self:NotifyEvent(FriendCommon.EventId.RefuseAdd, false)
+      self:NotifyEvent(FriendCommon.EventId.RefuseAdd, false, Uid)
     end
     return
   end
   self:GetModel():RemoveLastRequests(Uid)
   self:ShowToast(string.format(GText("UI_Toast_Friend_RejectRequest"), FriendName))
-  self:NotifyEvent(FriendCommon.EventId.RefuseAdd, false)
+  self:NotifyEvent(FriendCommon.EventId.RefuseAdd, false, Uid)
 end
 
 function M:SendDeleteFriend(Uid)
@@ -276,19 +300,24 @@ function M:RecvSearch(ErrCode, ...)
   self:NotifyEvent(FriendCommon.EventId.Search, true)
 end
 
-function M:SendAddBlackList(Uid, AvatarInfo)
-  if not Uid then
+function M:GetSocialUid(Uid, AvatarInfo)
+  return AvatarInfo and AvatarInfo.RealUID or Uid
+end
+
+function M:SendAddBlackList(TargetUid, AvatarInfo)
+  DebugPrint("SendAddBlackList TargetUid", TargetUid)
+  if not TargetUid or TargetUid < 10000 then
     self:CheckError(ErrorCode.RET_FRIEND_UID_NOT_EXIST, true)
     return
   end
   local PureAvatarInfo = {
-    Uid = Uid,
+    Uid = TargetUid,
     Nickname = AvatarInfo.Nickname,
     HeadIconId = AvatarInfo.HeadIconId,
     HeadFrameId = AvatarInfo.HeadFrameId,
     Level = AvatarInfo.Level
   }
-  self:GetAvatar():FriendAddBlackList(Uid, PureAvatarInfo)
+  self:GetAvatar():FriendAddBlackList(TargetUid, PureAvatarInfo)
 end
 
 function M:RecvAddBlackList(ErrCode, ...)
@@ -302,9 +331,11 @@ function M:RecvAddBlackList(ErrCode, ...)
   self:NotifyEvent(FriendCommon.EventId.AddBlackList, false, Uid)
 end
 
-function M:SendCancelBlackList(Uid)
-  local Nickname = self:GetModel():GetBlackListDict()[Uid].Nickname
-  self:GetAvatar():FriendCancleBlackList(Uid, Nickname)
+function M:SendCancelBlackList(TargetUid, AvatarInfo)
+  DebugPrint("SendCancelBlackList TargetUid", TargetUid)
+  local BlackInfo = self:GetModel():GetBlackListDict()[TargetUid]
+  local Nickname = BlackInfo and BlackInfo.Nickname or AvatarInfo and AvatarInfo.Nickname or ""
+  self:GetAvatar():FriendCancleBlackList(TargetUid, Nickname)
 end
 
 function M:RecvCancelBlackList(ErrCode, ...)
@@ -400,6 +431,19 @@ function M:RecvRealUpdateFriendInfo(AvatarInfo)
   self:NotifyEvent(FriendCommon.EventId.UpdateOneFriend, AvatarInfo.Uid)
 end
 
+function M:RecvNewFriendRequestReceiveBox(Keys)
+  FriendModel:GetFriendRequestList(true)
+  FriendModel:AddReddotCount()
+  for _, ReqUid in ipairs(Keys) do
+    local FriendReq = FriendModel:GetRequestRecvBox()[ReqUid]
+    if FriendReq then
+      FriendReq.Info.Remark = FriendReq.Remark
+      FriendModel:PushFriendReqInfo(FriendReq.Info)
+      self:SetUpFriendReqTimer(TeamCommon.LoopTimerInterval)
+    end
+  end
+end
+
 function M:StartRefreshRecommandTimer()
   local Interval = 0.2
   local TotalTime = DataMgr.GlobalConstant.RecommandFriendCD.ConstantValue + 0.2
@@ -416,6 +460,122 @@ function M:StartRefreshRecommandTimer()
     self:NotifyEvent(FriendCommon.EventId.RecommandCdUpdate, false, Percent)
   end, true, 0, nil, true)
   self.RefreshRecommandTimer = Timer
+end
+
+function M:SetUpFriendReqTimer(Interval)
+  self.bProcessingFriendReq = true
+  local CurrReq = FriendModel:GetBackFriendReqInfo()
+  local FriendView = M.Super.GetView(self, GWorld.GameInstance, FriendCommon.TipUIName)
+  if not CurrReq then
+    DebugPrint(LXYTag, "SetUpFriendReqTimer，队列空了，好友申请流程退出")
+    if IsValid(FriendView) then
+      FriendView:Close("FriendReqQueue Empty")
+      DebugPrint(LXYTag, "SetUpFriendReqTimer::关闭申请UI")
+    end
+    self:ShutDownFriendReqTip()
+    return
+  end
+  if TeamController.bProcessingTeamInvite then
+    return
+  end
+  DebugPrint(LXYTag, "开始好友申请定时器")
+  if not self:GetUIMgr():GetUIObj("CommonChangeScene") then
+    if not IsValid(FriendView) then
+      DebugPrint(LXYTag, "打开好友申请UI")
+      FriendView = M.Super.OpenView(self, GWorld.GameInstance, FriendCommon.TipUIName, CurrReq, true)
+    else
+      DebugPrint(LXYTag, "重用好友申请UI")
+      FriendView:StopAllAnimations()
+      FriendView:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      FriendView:Construct()
+      FriendView:InitUIInfo(FriendCommon.TipUIName, false, nil, CurrReq, true)
+    end
+  end
+  local MaxRemainTime = FriendCommon.TipsMaxRemainTime
+  local FriendReqRemainTime = MaxRemainTime
+  self:AddTimer(Interval, function()
+    FriendReqRemainTime = FriendReqRemainTime - Interval
+    if IsValid(FriendView) and not FriendView:HasFocusedDescendants() and self:IsGamepad() then
+      DebugPrint(LXYTag, WarningTag, "好友申请UI需要抢夺聚焦！！！！！！")
+      FriendView:SetFocus()
+    end
+    if FriendReqRemainTime > 0 then
+      TeamController:NotifyEvent(TeamCommon.EventId.TeamInviteWaiting, FriendReqRemainTime / MaxRemainTime)
+      return
+    end
+    self:StopTimer(self.ReqRecvTimer)
+    TeamController:NotifyEvent(TeamCommon.EventId.TeamInviteWaiting, 0)
+  end, true, 0, self.ReqRecvTimer)
+end
+
+function M:ShutDownFriendReqTip()
+  if self:IsExistTimer(self.ReqRecvTimer) then
+    self:StopTimer(self.ReqRecvTimer)
+  end
+  self.bProcessingFriendReq = false
+  if TeamController.bProcessingTeamInvite then
+    self:AddTimer(0.1, function()
+      TeamController:SetUpBeInviteTimer(TeamCommon.LoopTimerInterval)
+    end)
+  end
+  FriendModel:ClearFriendReqInfo()
+end
+
+function M:GenAddBlackListFunc(Widget, HeadAnchor)
+  return function(Content, AvatarInfo)
+    local TargetUid = self:GetSocialUid(AvatarInfo.Uid, AvatarInfo)
+    if FriendModel:GetBlackListDict()[TargetUid] then
+      Content.Text = GText("UI_Friend_DelBlackList")
+      
+      function Content.Callback()
+        self:SendCancelBlackList(TargetUid, AvatarInfo)
+        HeadAnchor:Close()
+      end
+    else
+      Content.Text = GText("UI_Friend_AddBlackList")
+      
+      function Content.Callback()
+        self:OpenAddBlacklistDialog(Widget, AvatarInfo)
+        HeadAnchor:Close()
+      end
+    end
+  end
+end
+
+function M:GenAccusePlayerFunc(Widget, HeadAnchor, ...)
+  local MsgContent, HideItemTips, OnTextChange, OnTextComposing, OnEditTextFocusReceived = ...
+  local IsInDungeon = GWorld:GetAvatar():IsInDungeon()
+  local IsInHardBoss = GWorld:GetAvatar():IsInHardBoss()
+  return function(Content, AvatarInfo)
+    Content.Text = GText("UI_Chat_Accuse")
+    
+    function Content.Callback()
+      local Params = {
+        Nickname = AvatarInfo.Nickname,
+        UID = AvatarInfo.Uid,
+        RealUID = AvatarInfo.RealUID,
+        Level = AvatarInfo.Level,
+        TextLenMax = 50,
+        ChatMessage = MsgContent,
+        ForbidRightBtn = true,
+        DontCloseWhenRightBtnClicked = true
+      }
+      Params.HideItemTips = HideItemTips
+      Params.EditTextConfig = {
+        Owner = Widget,
+        TextLimit = 50,
+        Events = {
+          OnTextChanged = OnTextChange,
+          OnTextComposing = OnTextComposing,
+          OnEditTextFocusReceived = OnEditTextFocusReceived
+        }
+      }
+      Params.InGameOnly = Widget.InGameOnly
+      Params.AllowNegativeAttitude = IsInDungeon or IsInHardBoss
+      ChatController:OpenChatReportDialog(Params)
+      HeadAnchor:Close()
+    end
+  end
 end
 
 _G.FriendController = M

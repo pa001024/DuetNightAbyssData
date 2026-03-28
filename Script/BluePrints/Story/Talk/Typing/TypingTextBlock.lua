@@ -15,6 +15,15 @@ function M:New(Text, RichTag, Attrs)
 end
 
 function M:GetRichText()
+  if self.RichTag ~= "Default" then
+    local FullRichTag = string.format("%s", self.RichTag)
+    for K, V in pairs(self.Attrs) do
+      local Attr = " %s=\"%s\""
+      Attr = string.format(Attr, K, V)
+      FullRichTag = FullRichTag .. Attr
+    end
+    return string.format("<%s>%s</>", FullRichTag, self.Text)
+  end
   return "<" .. self.RichTag .. ">" .. self.Text .. "</>"
 end
 

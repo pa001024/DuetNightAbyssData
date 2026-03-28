@@ -166,9 +166,9 @@ function Component:InitCharacterInfo(Info)
   if not self.InitSuccess and IsEmptyTable(self.WaitInitTags) then
     self:RealInitInfo(Info)
   end
-  local HasMesh = self.Mesh and self.Mesh.SkeletalMesh and self.Mesh.SkeletalMesh.PhysicsAsset
-  if HasMesh then
+  if self.FromArmory then
     self.Mesh.bComponentUseFixedSkelBounds = false
+    self.Mesh.bHasValidBodies = true
   end
 end
 
@@ -305,7 +305,7 @@ end
 
 function Component:NeedCacheLoadAssets()
   local IsPIE = UE4.URuntimeCommonFunctionLibrary.IsPlayInEditor(self)
-  if IsPIE then
+  if IsPIE or IsDedicatedServer(self) then
     return false
   end
   local Res = false
@@ -613,10 +613,6 @@ end
 
 function Component:OnCharacterReady(Info)
   self:SetActorHideTag("login", false)
-  local HasMesh = self.Mesh and self.Mesh.SkeletalMesh and self.Mesh.SkeletalMesh.PhysicsAsset
-  if HasMesh then
-    self.Mesh.bComponentUseFixedSkelBounds = false
-  end
   if Info.FromOtherWorld then
     if Info.IsDungeonEnd then
       self:ServerSetUpWeapons(Info.MeleeWeapon, Info.RangedWeapon, Info.UltraWeapons)
@@ -630,30 +626,6 @@ function Component:OnCharacterReady(Info)
     self:HandleModelFashion()
     self.Overridden.OnCharacterReady(self)
     self.Overridden.ReceiveBeginPlay(self)
-    if self:IsPlayer() and not self.FromArmory then
-      if self.Mesh then
-        self.Mesh:SetCastInsetShadow(false)
-      end
-      if self.PartsMesh then
-        self.PartsMesh:SetCastInsetShadow(false)
-      end
-      if self.TailMesh then
-        self.TailMesh:SetCastInsetShadow(false)
-      end
-      if self.AccessoryMesh then
-        self.AccessoryMesh:SetCastInsetShadow(false)
-      end
-      for _, CharPartMesh in pairs(self.CharPartMeshComponents) do
-        if CharPartMesh then
-          CharPartMesh:SetCastInsetShadow(false)
-        end
-      end
-      for _, SuitMesh in pairs(self.SuitMeshComponents) do
-        if SuitMesh then
-          SuitMesh:SetCastInsetShadow(false)
-        end
-      end
-    end
     self:ReceiveOnCharacterReady()
     return
   end
@@ -684,7 +656,7 @@ function Component:OnCharacterReady(Info)
           self:ServerRemoveBattlePet()
         end
         local PetLevel = Info.Pet.PetLevel or 1
-        self:ServerSetBattlePetAndAffixList(PetId, PetLevel, AffixList, true)
+        self:ServerSetBattlePet(PetId, PetLevel, true, AffixList)
       end
     end
   elseif self.GetAccessories then
@@ -997,8 +969,7 @@ function Component:JudgeIfPlayLevelEnter()
   return false
 end
 
-function Component:CleanAllTimer()
-  self.Overridden.CleanAllTimer(self)
+function Component:OnLuaCleanAllTimer()
   self:CleanTimer()
 end
 

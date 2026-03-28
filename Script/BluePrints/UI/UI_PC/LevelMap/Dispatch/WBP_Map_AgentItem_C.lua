@@ -61,7 +61,10 @@ function M:SetCharInfo(Id)
     DebugPrint(Id .. "图片路径不存在")
     return
   end
-  self.Icon_Head:SetBrushResourceObject(LoadObject(Path))
+  local IconDynaMaterial = self.Icon_Head:GetDynamicMaterial()
+  if IconDynaMaterial then
+    IconDynaMaterial:SetTextureParameterValue("IconMap", LoadObject(Path))
+  end
   self.Text_Name:SetText(GText(DataMgr.Char[Id].CharName))
 end
 

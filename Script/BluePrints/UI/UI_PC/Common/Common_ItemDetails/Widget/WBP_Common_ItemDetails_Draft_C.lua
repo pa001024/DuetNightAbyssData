@@ -65,6 +65,7 @@ function M:InitItemInfo(ItemType, ItemId, UnitId)
       Count = DraftServerData.Count
     end
   end
+  self.ParentWidget.Panel_Hold:SetVisibility(ESlateVisibility.Visible)
   self.ParentWidget.Text_Hold02:SetText(Count)
   local ItemName = ItemUtils:GetDraftName(ItemId)
   self.ParentWidget.Text_ItemName:SetText(ItemName)

@@ -73,6 +73,7 @@ function SimpleRewardBox:New()
   rawset(_self, "Tags", {})
   rawset(_self, "CacheTagStr", {})
   rawset(_self, "OriginRewardIds", {})
+  rawset(_self, "Special", {})
   setmetatable(_self, {__index = IndexFunc})
   return _self
 end
@@ -147,6 +148,28 @@ function SimpleRewardBox:AddByRewardType(RewardType, Id, Count, Tag)
   end
 end
 
+local SpecialMergeFunc = {}
+
+function SpecialMergeFunc.IronTicket(t1, t2)
+  if not t2 or 0 == #t2 then
+    return
+  end
+  table.move(t2, 1, #t2, #t1 + 1, t1)
+end
+
+local function MergeSpecial(t1, t2)
+  if not t2 then
+    return
+  end
+  for k, v in pairs(t2) do
+    if not t1[k] then
+      t1[k] = CommonUtils.DeepCopy(v)
+    else
+      SpecialMergeFunc[k](t1[k], v)
+    end
+  end
+end
+
 local function InnerMerge(T1, T2, Key, Tag)
   local s_t = rawget(T2, Key)
   if not s_t or not next(s_t) then
@@ -191,9 +214,21 @@ function SimpleRewardBox:Merge(Box, Tag)
       d_t[k] = d_v + v
     end
   end
+  MergeSpecial(rawget(self, "Special"), rawget(Box, "Special"))
   if self.bEmpty and result then
     self.bEmpty = false
   end
+end
+
+function SimpleRewardBox:AddSpecial(Key, Value)
+  assert(SpecialMergeFunc[Key])
+  local Special = rawget(self, "Special")
+  Special[Key] = Value
+end
+
+function SimpleRewardBox:GetSpecial(Key)
+  local Special = rawget(self, "Special")
+  return Special[Key]
 end
 
 function SimpleRewardBox:IsEmpty(TableName)
@@ -212,6 +247,7 @@ function SimpleRewardBox:Clear()
   self.bEmpty = true
   self.Tags = {}
   self.CacheTagStr = {}
+  self.Special = {}
 end
 
 function SimpleRewardBox:Dump()
@@ -226,6 +262,9 @@ function SimpleRewardBox:Dump()
       end
     end
   end
+  if next(self.Special) then
+    result.Special = CommonUtils.DeepCopy(self.Special)
+  end
   return result
 end
 
@@ -235,14 +274,54 @@ function SimpleRewardBox:DumpWithOriginRewardIds()
   return result
 end
 
+local function MergeDumpInner(target, source)
+  if not source then
+    return
+  end
+  for key, value in pairs(source) do
+    if "Special" == key then
+      MergeSpecial(target.Special, value)
+    else
+      local v_type = type(value)
+      if "table" == v_type then
+        local t = target[key]
+        if type(t) ~= "table" then
+          t = {}
+          target[key] = t
+        end
+        MergeDumpInner(t, value)
+      elseif "number" == v_type then
+        local d_v = target[key]
+        if type(d_v) == "number" then
+          target[key] = d_v + value
+        else
+          target[key] = value
+        end
+      else
+        target[key] = value
+      end
+    end
+  end
+end
+
+function SimpleRewardBox.MergeDumpTables(T1, T2)
+  local result = {}
+  MergeDumpInner(result, T1)
+  MergeDumpInner(result, T2)
+  return result
+end
+
 function SimpleRewardBox:DumpAll()
   local result = {}
   for RewardType, _ in pairs(RewardTypeSet) do
     local TypeName = CacheRewardName[RewardType]
     local TypeTable = rawget(self, TypeName)
     if TypeTable then
-      result[TypeName] = TypeTable
+      result[TypeName] = CommonUtils.DeepCopy(TypeTable)
     end
+  end
+  if next(self.Special) then
+    result.Special = CommonUtils.DeepCopy(self.Special)
   end
   return result
 end

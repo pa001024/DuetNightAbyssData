@@ -43,7 +43,7 @@ function M:CreateMonster(CreateInfo)
   end
 end
 
-function M:OnMonsterDead(Monster)
+function M:OnMonsterDead(Monster, KillMineRoleEid, KillMineSkillId, DeathReason)
   if Monster and self.CreatorIds and self.CreatorIds[Monster.CreatorId] ~= nil then
     self.CurMonsterDeadNum = self.CurMonsterDeadNum + 1
     if self.CurMonsterDeadNum >= self.AimMonsterNum then

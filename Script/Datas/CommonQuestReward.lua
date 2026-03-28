@@ -19,5 +19,36 @@ return ReadOnly("CommonQuestReward", {
       10301806
     },
     Reward = 110907
+  },
+  [103014] = {
+    EventId = 103014,
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Prop/Activity/SoloTreasure/T_Activity_SoloTreasure_Reward01.T_Activity_SoloTreasure_Reward01'",
+    Id = 103014,
+    Name = "UI_Accessory_Name_30039",
+    QuestId = {
+      10301401,
+      10301402,
+      10301403,
+      10301404,
+      10301405,
+      10301406,
+      10301407,
+      10301411,
+      10301412,
+      10301413,
+      10301414,
+      10301415,
+      10301416,
+      10301421,
+      10301422,
+      10301423,
+      10301424,
+      10301425,
+      10301426,
+      10301427,
+      10301428
+    },
+    Reward = 103014,
+    SpecifiedCount = 17
   }
 })

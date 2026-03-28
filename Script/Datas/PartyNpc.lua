@@ -1,5 +1,3 @@
-local T = {}
-T.RT_1 = {410201}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -57,7 +55,7 @@ return ReadOnly("PartyNpc", {
     CharId = 1501,
     MainCameraName = "Baonu_Main",
     NpcSeatKey = "3.0",
-    PartyTopicList = T.RT_1,
+    PartyTopicList = {150101},
     ReverseActionId = "Sit03_End",
     SeatPointName = "EntrySeatPoint_Baonu",
     SwitchCameraName = "Baonu_Main",
@@ -111,12 +109,33 @@ return ReadOnly("PartyNpc", {
     UnitId = 991503,
     bEnableParty = true
   },
+  [1504] = {
+    AvatarIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Suyi.T_Icon_Suyi'",
+    CameraBlendCurve = "easeInOutQuad",
+    CharId = 1504,
+    MainCameraName = "Suyi_Main",
+    NpcSeatKey = "6.0",
+    PartyTopicList = {
+      150401,
+      150402,
+      150403
+    },
+    ReverseActionId = "Sit03_End",
+    SeatPointName = "EntrySeatPoint_Suyi",
+    SwitchCameraName = "Suyi_Main",
+    TalkActionId = "Sit03_Start",
+    TopicCameraName = "Suyi_Topic",
+    TopicSeatPointName = "SeatPoint_Girl",
+    TopicUnitId = 91504,
+    UnitId = 991504,
+    bEnableParty = true
+  },
   [1801] = {
     AvatarIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Feina.T_Icon_Feina'",
     CameraBlendCurve = "easeInOutQuad",
     CharId = 1801,
     MainCameraName = "Feina_Main",
-    NpcSeatKey = "6.0",
+    NpcSeatKey = "7.0",
     PartyTopicList = {
       180101,
       180102,
@@ -139,7 +158,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 2101,
     MainCameraName = "Shuimu_Main",
-    NpcSeatKey = "7.0",
+    NpcSeatKey = "8.0",
     PartyTopicList = {
       210101,
       210102,
@@ -162,7 +181,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 2301,
     MainCameraName = "Zhangyu_Main",
-    NpcSeatKey = "8.0",
+    NpcSeatKey = "9.0",
     PartyTopicList = {
       230101,
       230102,
@@ -185,7 +204,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 2401,
     MainCameraName = "Fushu_Main",
-    NpcSeatKey = "9.0",
+    NpcSeatKey = "10.0",
     PartyTopicList = {
       240101,
       240102,
@@ -207,7 +226,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 3101,
     MainCameraName = "Linen_Main",
-    NpcSeatKey = "10.0",
+    NpcSeatKey = "11.0",
     PartyTopicList = {
       310101,
       310102,
@@ -229,7 +248,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 3102,
     MainCameraName = "Xier_Main",
-    NpcSeatKey = "11.0",
+    NpcSeatKey = "12.0",
     PartyTopicList = {
       310201,
       310202,
@@ -252,7 +271,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 3103,
     MainCameraName = "Yeer_Main",
-    NpcSeatKey = "12.0",
+    NpcSeatKey = "13.0",
     PartyTopicList = {
       310301,
       310302,
@@ -274,7 +293,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 3201,
     MainCameraName = "Haier_Main",
-    NpcSeatKey = "13.0",
+    NpcSeatKey = "14.0",
     PartyTopicList = {
       320101,
       320102,
@@ -291,12 +310,33 @@ return ReadOnly("PartyNpc", {
     UnitId = 993201,
     bEnableParty = true
   },
+  [3202] = {
+    AvatarIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Kami.T_Icon_Kami'",
+    CameraBlendCurve = "easeInOutQuad",
+    CharId = 3202,
+    MainCameraName = "Kami_Main",
+    NpcSeatKey = "15.0",
+    PartyTopicList = {
+      320201,
+      320202,
+      320203
+    },
+    ReverseActionId = "Sit03_End",
+    SeatPointName = "EntrySeatPoint_Kami",
+    SwitchCameraName = "Kami_Main",
+    TalkActionId = "Sit03_Start",
+    TopicCameraName = "Kami_Topic",
+    TopicSeatPointName = "SeatPoint_Woman",
+    TopicUnitId = 93202,
+    UnitId = 993202,
+    bEnableParty = true
+  },
   [3301] = {
     AvatarIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Maer.T_Icon_Maer'",
     CameraBlendCurve = "easeInOutQuad",
     CharId = 3301,
     MainCameraName = "Maer_Main",
-    NpcSeatKey = "14.0",
+    NpcSeatKey = "16.0",
     PartyTopicList = {
       330101,
       330102,
@@ -318,7 +358,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 4101,
     MainCameraName = "Lise_Main",
-    NpcSeatKey = "15.0",
+    NpcSeatKey = "17.0",
     PartyTopicList = {
       410101,
       410102,
@@ -335,12 +375,17 @@ return ReadOnly("PartyNpc", {
     bEnableParty = true
   },
   [4102] = {
-    AvatarIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Lise.T_Icon_Lise'",
+    AvatarIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Zhiliu.T_Icon_Zhiliu'",
     CameraBlendCurve = "easeInOutQuad",
     CharId = 4102,
     MainCameraName = "Zhiliu_Main",
-    NpcSeatKey = "16.0",
-    PartyTopicList = T.RT_1,
+    NpcSeatKey = "18.0",
+    PartyTopicList = {
+      410201,
+      410202,
+      410203,
+      410204
+    },
     ReverseActionId = "Sit03_End",
     SeatPointName = "EntrySeatPoint_Zhiliu",
     SwitchCameraName = "Zhiliu_Main",
@@ -348,30 +393,37 @@ return ReadOnly("PartyNpc", {
     TopicCameraName = "Zhiliu_Topic",
     TopicSeatPointName = "SeatPoint_Woman",
     TopicUnitId = 94102,
-    UnitId = 994102
+    UnitId = 994102,
+    bEnableParty = true
   },
   [4201] = {
     AvatarIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Yuming.T_Icon_Yuming'",
     CameraBlendCurve = "easeInOutQuad",
     CharId = 4201,
     MainCameraName = "Yuming_Main",
-    NpcSeatKey = "17.0",
-    PartyTopicList = {420101},
+    NpcSeatKey = "19.0",
+    PartyTopicList = {
+      420101,
+      420102,
+      420103,
+      420104
+    },
     ReverseActionId = "Sit03_End",
     SeatPointName = "EntrySeatPoint_Yuming",
     SwitchCameraName = "Yuming_Main",
     TalkActionId = "Sit03_Start",
     TopicCameraName = "Yuming_Topic",
-    TopicSeatPointName = "SeatPoint_Yuming",
+    TopicSeatPointName = "SeatPoint_Man",
     TopicUnitId = 94201,
-    UnitId = 994201
+    UnitId = 994201,
+    bEnableParty = true
   },
   [4202] = {
     AvatarIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Landi.T_Icon_Landi'",
     CameraBlendCurve = "easeInOutQuad",
     CharId = 4202,
     MainCameraName = "Landi_Main",
-    NpcSeatKey = "18.0",
+    NpcSeatKey = "20.0",
     PartyTopicList = {
       420201,
       420202,
@@ -394,7 +446,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 4301,
     MainCameraName = "Xibi_Main",
-    NpcSeatKey = "19.0",
+    NpcSeatKey = "21.0",
     PartyTopicList = {
       430101,
       430102,
@@ -415,7 +467,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 5101,
     MainCameraName = "Songlu_Main",
-    NpcSeatKey = "23.0",
+    NpcSeatKey = "25.0",
     PartyTopicList = {
       510101,
       510102,
@@ -438,7 +490,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 5102,
     MainCameraName = "Aote_Main",
-    NpcSeatKey = "20.0",
+    NpcSeatKey = "22.0",
     PartyTopicList = {
       510201,
       510202,
@@ -460,7 +512,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 5301,
     MainCameraName = "Saiqi_Main",
-    NpcSeatKey = "21.0",
+    NpcSeatKey = "23.0",
     PartyTopicList = {
       530101,
       530102,
@@ -481,7 +533,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 5401,
     MainCameraName = "Dafu_Main",
-    NpcSeatKey = "22.0",
+    NpcSeatKey = "24.0",
     PartyTopicList = {
       540101,
       540102,

@@ -56,7 +56,8 @@ end
 
 function M:AddItem(InItem)
   local UIManager = UIManager(GWorld.GameInstance)
-  local ItemUI = UIManager:CreateWidget(self.ItemUIPathName)
+  local OptionStyle = InItem.OptionStyle ~= "" and InItem.OptionStyle
+  local ItemUI = UIManager:CreateWidget(OptionStyle or self.ItemUIPathName)
   self.ScrollBox_TalkOptions:AddChild(ItemUI)
   local ListIdx = self:GetItemIndex(ItemUI)
   ItemUI:Init(self, InItem, InItem.Index, ListIdx)

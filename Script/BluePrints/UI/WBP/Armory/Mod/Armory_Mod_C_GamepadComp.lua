@@ -99,12 +99,7 @@ function Component:Handle_OnGamePadDown(InKeyName)
     end
   else
     if ModModel:IsModUIPreview() then
-      if "Gamepad_Special_Left" == InKeyName then
-        self.Btn_Info:SetFocus()
-        self.Key_Gamepad:SetVisibility(UIConst.VisibilityOp.Collapsed)
-        self.IsFocusInSpecialItem = true
-        return true
-      elseif "Gamepad_FaceButton_Right" == InKeyName then
+      if "Gamepad_FaceButton_Right" == InKeyName then
         if self.IsFocusInSpecialItem then
           self:SetFocus()
           self.IsFocusInSpecialItem = false
@@ -214,10 +209,15 @@ function Component:Handle_OnGamePadDown(InKeyName)
       self.Com_Search:SetFocus()
       self.IsFocusInSpecialItem = true
       return true
-    elseif "Gamepad_Special_Left" == InKeyName then
-      self.Btn_Info:SetFocus()
-      self.Key_Gamepad:SetVisibility(UIConst.VisibilityOp.Collapsed)
-      self.IsFocusInSpecialItem = true
+    elseif "Gamepad_Special_Left" == InKeyName and ModModel:IsModUINormal() then
+      if not self.Btn_Recommend:HasAnyUserFocus() and not self.Btn_Delete:HasAnyUserFocus() then
+        if ModModel:IsRecommendModState() then
+          self.Btn_Delete.Key_Gamepad:OnShortCutPressed()
+        else
+          self.Btn_Recommend.Key_Gamepad:OnShortCutPressed()
+        end
+      else
+      end
       return true
     end
   end
@@ -240,11 +240,29 @@ function Component:Handle_OnGamePadUp(InKeyName)
     return true
   elseif "Gamepad_Special_Right" == InKeyName then
     self.Mod_Plan.Key_GamePad:OnShortCutReleased()
-    if not UIManager():CheckAndCleanKeyLongPressSuccess(InKeyName) then
+    if not UIManager():CheckAndCleanKeyLongPressSuccess(InKeyName) and self.ItemDetailsWidget then
       local DetailContent = self.ItemDetailsWidget.Content
       if self.ItemDetailsWidget:IsVisible() and DetailContent then
         self.ItemDetailsWidget.Btn_Locked:OnBtnPressed()
         self.ItemDetailsWidget.Btn_Locked:OnBtnReleased()
+      end
+    end
+    return true
+  elseif "Gamepad_Special_Left" == InKeyName then
+    if not ModModel:IsRecommendView() and not self.Btn_Recommend:HasAnyUserFocus() and not self.Btn_Delete:HasAnyUserFocus() then
+      self.Btn_Info:SetFocus()
+      self.Key_Gamepad:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      self.IsFocusInSpecialItem = true
+    end
+    if ModModel:IsModUINormal() then
+      if self.Btn_Recommend:HasAnyUserFocus() then
+        self.Btn_Recommend.Key_Gamepad:OnShortCutReleased()
+      elseif self.Btn_Delete:HasAnyUserFocus() then
+        self.Btn_Delete.Key_Gamepad:OnShortCutReleased()
+      elseif ModModel:IsRecommendModState() then
+        self.Btn_Delete.Key_Gamepad:OnShortCutReleased()
+      else
+        self.Btn_Recommend.Key_Gamepad:OnShortCutReleased()
       end
     end
     return true
@@ -290,6 +308,9 @@ function Component:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
   else
     self:SwitchMainUIToGamePad()
   end
+  if self.RecommendView and self.RecommendView:GetVisibility() == UIConst.VisibilityOp.Visible then
+    self.RecommendView:SetRecommendFocus()
+  end
 end
 
 function Component:BP_GetDesiredFocusTarget()
@@ -319,6 +340,26 @@ function Component:SwitchMainUIToPCOrMoble()
   self.Key_Search:SetVisibility(UIConst.VisibilityOp.Collapsed)
   ModModel:SetGamePadSelectedStuff(nil, nil)
   self.IsFocusOnResourceBar = false
+end
+
+function Component:SetCanRectGamepadVisible(Visible)
+  if Visible then
+    if UIUtils.IsGamepadInput() then
+      self.Mod_Plan.Key_GamePad:SetVisibility(UIConst.VisibilityOp.Visible)
+      self.Common_PolarityList_PC.Key_LT:SetVisibility(UIConst.VisibilityOp.Visible)
+      self.Common_PolarityList_PC.Key_RT:SetVisibility(UIConst.VisibilityOp.Visible)
+      self.Key_FocusList_GamePad:SetVisibility(UIConst.VisibilityOp.Visible)
+      self.Key_Search:SetVisibility(UIConst.VisibilityOp.Visible)
+      self.Btn_EditPolarity:SetGamePadVisibility(UIConst.VisibilityOp.Visible)
+    end
+  else
+    self.Mod_Plan.Key_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Common_PolarityList_PC.Key_LT:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Common_PolarityList_PC.Key_RT:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Key_FocusList_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Key_Search:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Btn_EditPolarity:SetGamePadVisibility(UIConst.VisibilityOp.Collapsed)
+  end
 end
 
 function Component:SetDefaultGamepadFocus()
@@ -390,6 +431,9 @@ function Component:SwitchMainUIToGamePad()
     end)
   end
   self.Btn_Info:SetGamepadIconVisibility(false)
+  if ModModel:IsRecommendView() then
+    self:SetCanRectGamepadVisible(false)
+  end
 end
 
 function Component:OnBtnCopyLinkAddedToFocusPath()
@@ -726,7 +770,9 @@ function Component:SetFocus_Lua()
     return
   end
   if ModController:IsGamepad() then
-    if self.LastSelectedItem then
+    if self.RecommendView and self.RecommendView:GetVisibility() == UIConst.VisibilityOp.SelfHitTestInvisible then
+      self.RecommendView:SetRecommendFocus()
+    elseif self.LastSelectedItem then
       self.LastSelectedItem:SetFocus()
     else
       self.LastSelectedItem = self.List_Role

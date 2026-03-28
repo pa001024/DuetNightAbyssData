@@ -37,10 +37,10 @@ function BP_SynthesisComponent_C:TriggerSynthesisOnEnd()
   self.GameMode:RemoveDungeonEvent("SynthesisBuffList")
 end
 
-function BP_SynthesisComponent_C:OnUnitDeadEvent(MonsterCharacter)
+function BP_SynthesisComponent_C:OnUnitDeadEvent(MonsterC, KillMineRoleEid, KillMineSkillId, DeathReason)
   local OnDeadfuncName = "OnUnitDeadEvent_" .. self.CurMission
   if self[OnDeadfuncName] then
-    self[OnDeadfuncName](self, MonsterCharacter)
+    self[OnDeadfuncName](self, MonsterC, KillMineRoleEid, KillMineSkillId, DeathReason)
   end
 end
 
@@ -51,10 +51,10 @@ function BP_SynthesisComponent_C:OnCombatPropDeadEvent(CombatProp)
   end
 end
 
-function BP_SynthesisComponent_C:OnStaticCreatorEvent(EventName, Eid, UnitId, UnitType)
+function BP_SynthesisComponent_C:OnStaticCreatorEvent(EventName, Eid, UnitId, UnitType, CreatorId)
   local OnStaticCreatorfuncName = "OnStaticCreatorEvent_" .. self.CurMission
   if self[OnStaticCreatorfuncName] then
-    self[OnStaticCreatorfuncName](self, EventName, Eid, UnitId, UnitType)
+    self[OnStaticCreatorfuncName](self, EventName, Eid, UnitId, UnitType, CreatorId)
   end
 end
 
@@ -130,7 +130,7 @@ function BP_SynthesisComponent_C:InitCreatorIdToLevelNameMap()
   end
 end
 
-function BP_SynthesisComponent_C:OnUnitDeadEvent_Destruction(MonsterCharacter)
+function BP_SynthesisComponent_C:OnUnitDeadEvent_Destruction(MonsterCharacter, KillMineRoleEid, KillMineSkillId, DeathReason)
   if not IsValid(MonsterCharacter) then
     return
   end
@@ -174,7 +174,7 @@ function BP_SynthesisComponent_C:OnCombatPropDeadEvent_Destruction(CombatProp)
   self:AddRageValue(AddValue)
 end
 
-function BP_SynthesisComponent_C:OnStaticCreatorEvent_Destruction(EventName, Eid, UnitId, UnitType)
+function BP_SynthesisComponent_C:OnStaticCreatorEvent_Destruction(EventName, Eid, UnitId, UnitType, CreatorId)
   if "DestructionSupervisor" == EventName then
     GWorld:DSBLog("Info", "SynthesisComponent: SupervisorCreated Eid " .. Eid .. " UnitId " .. UnitId, "GameMode")
     self.SupervisorInfo[Eid] = {}
@@ -368,10 +368,6 @@ function BP_SynthesisComponent_C:InitCrackMission()
   self.IsCrackFinishEventTriggered = false
   self:SetKeySubmitNum(0)
   self.GameMode:NotifyClientShowDungeonTaskNew(self.IconPathYellow, self.TextTitle, "DUNGEON_SYNTHESIS_116")
-  local LevelLoader = self.GameMode:GetLevelLoader()
-  if LevelLoader and IsStandAlone(self) then
-    LevelLoader:StartSynthesisLevelKeepAlive()
-  end
 end
 
 function BP_SynthesisComponent_C:OnExplosionMonTimer()
@@ -411,7 +407,7 @@ function BP_SynthesisComponent_C:OnDefenceCoreActive_Crack(DefenceCore)
   self.GameMode.EMGameState:SetDungeonUIState(Const.EDungeonUIState.OnTarget)
 end
 
-function BP_SynthesisComponent_C:OnStaticCreatorEvent_Crack(EventName, Eid, UnitId, UnitType)
+function BP_SynthesisComponent_C:OnStaticCreatorEvent_Crack(EventName, Eid, UnitId, UnitType, CreatorId)
   if "CrackChest" == EventName then
     DebugPrint("SynthesisComponent: CrackChestCreated", Eid, UnitId)
     GWorld:DSBLog("Info", "SynthesisComponent: CrackChestCreated Eid " .. Eid .. " UnitId " .. UnitId, "GameMode")

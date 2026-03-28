@@ -243,9 +243,9 @@ function M:InitExtraRewardList()
   if not self.ExtraRewards then
     self.Panel_Extra:SetVisibility(ESlateVisibility.Collapsed)
   else
+    AudioManager(self):PlayUISound(self, "event:/ui/minigame/fish_info_unlock_bonus", nil, nil)
     self.Text_Extra:SetText(GText("UI_Fishing_ExtraReward"))
     self.Panel_Extra:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    self.VX_List:SetVisibility(ESlateVisibility.HitTestInvisible)
     if self.ExtraRewards.PetUniqueId then
       local Avatar = GWorld:GetAvatar()
       local PetUnique = Avatar.Pets[self.ExtraRewards.PetUniqueId]
@@ -291,6 +291,15 @@ function M:NewItemContent(ItemType, ItemId, Count, EntryIds)
   Obj.IsShowDetails = true
   Obj.PetEntry = EntryIds
   return Obj
+end
+
+function M:Play_ItemGlow()
+  for _, Widget in pairs(self.List_ExtraItem:GetDisplayedEntryWidgets()) do
+    if Widget.Content then
+      Widget.Content.bNewGlow = true
+      Widget:SetNewGlow(true)
+    end
+  end
 end
 
 function M:RefreshInfoByInputTypeChange(CurInputDevice, CurGamepadName)

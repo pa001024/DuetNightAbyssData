@@ -47,11 +47,11 @@ return {
       key = "1760510005327351799",
       type = "StoryNode",
       name = "击杀狴犴",
-      pos = {x = 1156.842105263158, y = 284.6315789473684},
+      pos = {x = 1156.842105263158, y = 282.6315789473684},
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
-        QuestDescription = "DynQuest_Bian_Des",
+        QuestDescription = "DynQuest_BianFight_Des",
         QuestDeatil = "",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
@@ -61,7 +61,6 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = true,
@@ -69,6 +68,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -155,7 +155,9 @@ return {
             propsData = {
               DialogueId = 0,
               UseTalkFadeOut = false,
-              TalkFadeOutTime = 0
+              TalkFadeOutTime = 0,
+              UseTalkFadeIn = false,
+              TalkFadeInTime = 0
             }
           },
           ["1760510005327351810"] = {

@@ -185,6 +185,7 @@ function Component:RegionSyncAddRoleToCreate(ObjId, RoleInfo)
   SuitTalble.SkinId = CharInfo.SkinId
   SuitTalble.HairId = CharInfo.HairId
   SuitTalble.HairColors = CharInfo.HairColors
+  SuitTalble.AccessoryCustomParams = CharInfo.AccessoryCustomParams
   if RoleInfo.WeaponInfo then
     local MeleeWeapon = {}
     if RoleInfo.WeaponInfo.MeleeWeapon then
@@ -234,6 +235,7 @@ function Component:RegionSyncChangeRoleInfo(ObjId, RoleInfo)
   SuitTalble.SkinId = CharInfo.SkinId
   SuitTalble.HairId = CharInfo.HairId
   SuitTalble.HairColors = CharInfo.HairColors
+  SuitTalble.AccessoryCustomParams = CharInfo.AccessoryCustomParams
   if RoleInfo.WeaponInfo then
     local MeleeWeapon = {}
     if RoleInfo.WeaponInfo.MeleeWeapon then
@@ -248,6 +250,7 @@ function Component:RegionSyncChangeRoleInfo(ObjId, RoleInfo)
   end
   TempRoleInfo.ShowWeapon = RoleInfo.ShowWeapon or "Melee"
   TempRoleInfo.IsCrouching = false
+  TempRoleInfo.ReInit = true
   PrintTable({
     RoleInfoUpdated = TempRoleInfo,
     AvatarId = ObjId,
@@ -345,12 +348,17 @@ function Component:RegionSyncUpdateMoveInfo(ObjId, MoveInfo)
   if RegionSycnSubsys:GetRoleBornState(ObjIdStr) <= UE4.ERegionCharBornState.EBS_WaitForBorn then
     return
   end
+  if MoveInfo.ActionBaseInfo then
+    local CrouchInt = MoveInfo.ActionBaseInfo.IsCrouching
+    TempRoleInfo.IsCrouching = nil ~= CrouchInt and CrouchInt > 0.1
+    print(_G.LogTag, "RegionPlayerInitInfo Spawn Other Player Character Success", TempRoleInfo.IsCrouching, CrouchInt)
+  end
+  MoveInfo.IsCrouching = TempRoleInfo.IsCrouching
   local BornedChar = RegionSycnSubsys:GetBornedChar(ObjIdStr)
   if not BornedChar then
     self.logger.error("Character is not Created yet", ObjId)
     return
   end
-  MoveInfo.IsCrouching = TempRoleInfo.IsCrouching
   BornedChar:UpdateCharacterMoveInfo(MoveInfo)
   if RegionSycnSubsys.LocalPlayerChar then
     RegionSycnSubsys.LocalPlayerChar:CanPlayerBeInterCandidate(BornedChar.Eid, ActorLoc)

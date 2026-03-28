@@ -45,6 +45,10 @@ function M:OnUpdateSubUIViewStyle(IsUseGamePad, bIsWithButton)
   if ChildItemSubWidget and type(ChildItemSubWidget.OnUpdateSubUIViewStyle) == "function" then
     ChildItemSubWidget:OnUpdateSubUIViewStyle(IsUseGamePad)
   end
+  local SupportCommonSubItemWidget = self:GetSupportCommonSubItemWidget()
+  if SupportCommonSubItemWidget and SupportCommonSubItemWidget.OnUpdateSubUIViewStyle then
+    SupportCommonSubItemWidget:OnUpdateSubUIViewStyle(IsUseGamePad)
+  end
   if bIsWithButton then
     if IsUseGamePad then
       self.Btn_Confirm:SetGamePadVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
@@ -80,6 +84,9 @@ function M:OnStuffDetailOpenChanged(bIsOpen, Stuff)
     self.ParentWidget:UpdateActivityKeyTips("EmptyView", nil, false)
   else
     self.ParentWidget:UpdateActivityKeyTips(self.FocusWidgetName, self.FocusWidgetWidget, false)
+  end
+  if self.ParentWidget.CurrentActiveBg and self.ParentWidget.CurrentActiveBg.OnStuffDetailOpenChanged then
+    self.ParentWidget.CurrentActiveBg:OnStuffDetailOpenChanged(bIsOpen)
   end
 end
 
@@ -203,6 +210,8 @@ function M:Handle_KeyDownOnGamePad(InKeyName)
       IsEventHandled = true
       self:GoToTaskClick()
     elseif not PageConfigData.EventShop then
+      IsEventHandled = false
+    elseif ActivityUtils.IsAccessoryDropActivity(self.CurActivityId) then
       IsEventHandled = false
     else
       IsEventHandled = true

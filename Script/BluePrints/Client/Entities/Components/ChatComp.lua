@@ -30,8 +30,8 @@ function Component:OnReconnectSuccessChatComp()
     self.InWorldChatChannel = {}
     self.InWorldChatChannel[CommonConst.ChatChannel.Help] = false
     self.InWorldChatChannel[CommonConst.ChatChannel.TeamUp] = false
-    self:RequestEnterWorldChannel(CommonConst.ChatChannel.Help)
-    self:RequestEnterWorldChannel(CommonConst.ChatChannel.TeamUp)
+    self:RequestEnterWorldChannel(CommonConst.ChatChannel.Help, -1)
+    self:RequestEnterWorldChannel(CommonConst.ChatChannel.TeamUp, -1)
   end
   self.InWorldChatChannel[CommonConst.ChatChannel.RegionOnline] = false
 end
@@ -41,15 +41,15 @@ function Component:RequestEnterWorldChannel(channel_type)
   if self.InWorldChatChannel[channel_type] then
     return
   end
-  self:CallServerMethod("RequestEnterWorldChannel", channel_type)
+  self:CallServerMethod("RequestEnterWorldChannel", channel_type, -1)
 end
 
-function Component:OnRequestEnterWorldChannel(channel_type, ret)
+function Component:OnRequestEnterWorldChannel(channel_type, ret, channel_index)
   self.logger.debug("OnRequestEnterWorldChannel: " .. channel_type .. " ret: " .. ret)
   if ChatController:CheckError(ret, true) then
     self.InWorldChatChannel[channel_type] = true
   end
-  ChatController:RecvRequestEnterChatChannel(ret, channel_type)
+  ChatController:RecvRequestEnterChatChannel(ret, channel_type, channel_index)
 end
 
 function Component:RequestLeaveWorldChannel(channel_type)
@@ -300,9 +300,10 @@ function Component:OnForbidChat(time, reason, timeDelta)
 end
 
 function Component:ReportChat(reason, remark, chat_message, InCallBack)
+  DebugPrint("ReportChat", reason, remark, chat_message)
+  
   local function callback(Ret)
     self.logger.debug("ReportChat: ErrorCode: " .. Ret)
-    
     if InCallBack then
       InCallBack(Ret)
     end
@@ -317,9 +318,10 @@ function Component:ReportChat(reason, remark, chat_message, InCallBack)
 end
 
 function Component:ReportMatch(Uid, Nickname, Level, reason, InCallBack)
+  DebugPrint("ReportMatch", Uid, Nickname, Level, reason)
+  
   local function callback(Ret)
     self.logger.debug("ReportMatch: ErrorCode: " .. Ret)
-    
     if InCallBack then
       InCallBack(Ret)
     end
@@ -420,6 +422,44 @@ end
 
 function Component:GMSetChatChannelOpen(channel_type)
   self:CallServerMethod("GMSetChatChannelOpen", channel_type)
+end
+
+function Component:RequestEnterWorldOneChannel(channel_type, index)
+  self:CallServerMethod("RequestEnterWorldChannel", channel_type, index)
+end
+
+function Component:QueryChatChannelBusyInfo(channel_index_list)
+  self:CallServerMethod("QueryChatChannelBusyInfo", CommonConst.ChatChannel.Help, channel_index_list)
+end
+
+function Component:OnQueryChatChannelBusyInfo(channel_type, channel_list)
+  for k, v in pairs(channel_list) do
+  end
+  ChatController:RecvChatChannelPlayerCountInfo(channel_type, channel_list)
+end
+
+function Component:QueryAllChatChannelBusyInfo()
+  self:CallServerMethod("QueryAllChatChannelBusyInfo", CommonConst.ChatChannel.Help)
+end
+
+function Component:OnQueryAllChatChannelBusyInfo(channel_type, channel_list)
+  ChatController:RecvAllChatChannelPlayerCountInfo(channel_type, channel_list)
+end
+
+function Component:OnGMQueryAllChatChannel(worldchannellist, onlinechannellist)
+  local help_channel_list = worldchannellist[CommonConst.ChatChannel.Help] or {}
+  for i = 1, #help_channel_list do
+    self.logger.debug(string.format("OnGMQueryAllChatChannel, channel_type:%s channel_index:%s avatar_num:%s", tostring(CommonConst.ChatChannel.Help), tostring(i), tostring(help_channel_list[i])))
+  end
+  local teamup_channel_list = worldchannellist[CommonConst.ChatChannel.TeamUp] or {}
+  for i = 1, #teamup_channel_list do
+    self.logger.debug(string.format("OnGMQueryAllChatChannel, channel_type:%s channel_index:%s avatar_num:%s", tostring(CommonConst.ChatChannel.TeamUp), tostring(i), tostring(teamup_channel_list[i])))
+  end
+  for online_type, online_info in pairs(onlinechannellist) do
+    for online_index, avatar_num in pairs(online_info) do
+      self.logger.debug(string.format("OnGMQueryAllChatChannel, online_type:%s online_index:%s avatar_num:%s", tostring(online_type), tostring(online_index), tostring(avatar_num)))
+    end
+  end
 end
 
 return Component

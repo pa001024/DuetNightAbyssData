@@ -30,75 +30,11 @@ function M:Construct()
   self.RightTriggerKey = UIConst.GamePadKey.RightTriggerThreshold
   self.DPadLeftKey = UIConst.GamePadKey.DPadLeft
   self.DPadRightKey = UIConst.GamePadKey.DPadRight
+  self.DPadUpKey = UIConst.GamePadKey.DPadUp
   self.MenuKey = UIConst.GamePadKey.SpecialRight
   self.ViewKey = UIConst.GamePadKey.SpecialLeft
   self.ZoomKey = "Mouse_Button"
   self.ReplayKey = "R"
-  self.ESCKeyInfoList = {
-    KeyInfoList = {
-      {
-        Type = "Text",
-        Text = CommonUtils:GetKeyText(EKeys.Escape.KeyName),
-        ClickCallback = self.CloseSelf,
-        Owner = self
-      }
-    },
-    GamePadInfoList = {
-      {
-        Type = "Img",
-        ImgShortPath = "B",
-        ClickCallback = self.CloseSelf,
-        Owner = self
-      }
-    },
-    Desc = GText("UI_BACK")
-  }
-  self.HideUI_KeyInfoList = {
-    KeyInfoList = {
-      {
-        Type = "Text",
-        Text = CommonUtils:GetKeyText("U"),
-        ClickCallback = self.OnHideUIKeyDown,
-        Owner = self
-      }
-    },
-    GamePadInfoList = {
-      {Type = "Img", ImgShortPath = "X"}
-    },
-    Desc = GText("UI_Dye_HideUI")
-  }
-  self.ZoomKeyInfoList = {
-    KeyInfoList = {
-      {
-        Type = "Text",
-        Text = CommonUtils:GetKeyText(self.ZoomKey),
-        Owner = self
-      }
-    },
-    GamePadInfoList = {
-      {Type = "Or"},
-      GamePadSubKeyInfoList = {
-        {
-          Type = "Img",
-          ImgShortPath = "LT",
-          Owner = self
-        },
-        {
-          Type = "Img",
-          ImgShortPath = "RT",
-          Owner = self
-        }
-      }
-    },
-    Desc = GText("UI_Dye_Zoom"),
-    bLongPress = false
-  }
-  self.RightThumbstickAnalogBottomKeyInfoList = {
-    GamePadInfoList = {
-      {Type = "Img", ImgShortPath = "RH"}
-    },
-    Desc = GText("UI_CTL_RotatePreview")
-  }
   self.MainTabsStyle = {
     TitleName = GText("UI_Armory_Appearance"),
     LeftKey = "NotShow",
@@ -168,9 +104,11 @@ function M:Construct()
   self.bForbiddenButton = false
   self.bSelfHidden = false
   self.BtnChooseGiftEnable = false
+  self.BtnSkinLevelUp = false
   self.Tab_Change.Text_Alive:SetText(GText("UI_Armory_Meleeweapon"))
   self.Tab_Change.Text_Dying:SetText(GText("UI_Armory_Longrange"))
   self.IsGamepadInput = UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad
+  self.Btn_Discount_Light:SetVisibility(ESlateVisibility.Collapsed)
 end
 
 function M:Destruct()
@@ -227,6 +165,7 @@ function M:OnLoaded(...)
   self:PlayAnimation(self.In)
   self:BlockAllUIInput(true, "SP_DisplayOnly")
   self:SetFocus()
+  self:InitLevelUpPreview(self.ShopItemData)
 end
 
 function M:InitKeySetting()
@@ -243,17 +182,20 @@ function M:InitKeySetting()
   self.KeyDownEvents[self.GamePadConfirmKey] = self.OnConfirmKeyDown
   self.KeyDownEvents[self.DPadLeftKey] = self.OnClickPreviousSkin
   self.KeyDownEvents[self.DPadRightKey] = self.OnClickNextSkin
+  self.KeyDownEvents[self.DPadUpKey] = self.OnClickDiscount
   self.KeyDownEvents[self.LeftShoulderKey] = function(self)
     if self.ShopItemData.ItemType ~= "WeaponAccessory" then
       return
     end
     self.Tab_Change:TriggerSwitch("Left")
+    return UIUtils.Handled, true
   end
   self.KeyDownEvents[self.RightShoulderKey] = function(self)
     if self.ShopItemData.ItemType ~= "WeaponAccessory" then
       return
     end
     self.Tab_Change:TriggerSwitch("Right")
+    return UIUtils.Handled, true
   end
 end
 
@@ -264,8 +206,14 @@ function M:OnBtnChooseGiftClicked()
     else
       ShopUtils:OpenChooseGiftTarget(self.ShopItemData.ItemId, self)
     end
-  else
+  elseif self.BtnSkinLevelUp then
+    if self.WBP_Armory_Skin_LevelUp_1.Btn_Area:HasAnyUserFocus() or self.WBP_Armory_Skin_LevelUp_2.Btn_Area:HasAnyUserFocus() or self.WBP_Armory_Skin_LevelUp_3.Btn_Area:HasAnyUserFocus() then
+      return
+    else
+      self.WBP_Armory_Skin_LevelUp_1:SetFocus()
+    end
   end
+  return UIUtils.Handled, true
 end
 
 function M:OnClickSuitPreview()
@@ -276,6 +224,7 @@ function M:OnClickSuitPreview()
     return
   end
   self.CheckBox_Preview:OnBtnClicked()
+  return UIUtils.Handled, true
 end
 
 function M:OnSwitchSuitPreview(IsChecked)
@@ -298,6 +247,7 @@ function M:OnBackKeyDown()
     return self:OnHideUIKeyDown()
   else
     self:CloseSelf()
+    return UIUtils.Handled, true
   end
 end
 
@@ -310,6 +260,7 @@ function M:OnHideUIKeyDown()
     self:SetRenderOpacity(1)
     self.Image_Click.Slot:SetZOrder(-1)
   end
+  return UIUtils.Handled, true
 end
 
 function M:OnClickSuitPreviewDialog()
@@ -324,6 +275,7 @@ function M:OnClickSuitPreviewDialog()
     }
     UIManager(self):ShowCommonPopupUI(100240, Params, self)
   end
+  return UIUtils.Handled, true
 end
 
 function M:OnRKeyDown()
@@ -335,6 +287,7 @@ function M:OnRKeyDown()
   elseif self.ShopItemData.ItemType == "Mount" then
     self:OnRideMount()
   end
+  return UIUtils.Handled, true
 end
 
 function M:OnReplayGesture()
@@ -359,20 +312,28 @@ function M:OnClickDyeingPreview()
   if self.bBlockClickSuitPreview or self.bBlockClickChangeSkin then
     return
   end
-  if self.ShopItemData.ItemType ~= "Skin" and self.ShopItemData.ItemType ~= "WeaponSkin" then
+  if self.ShopItemData.ItemType ~= "Skin" and self.ShopItemData.ItemType ~= "WeaponSkin" and self.ShopItemData.ItemType ~= "Hair" then
     return
   end
   if self.SwitchSuitChecked then
     self.CheckBox_Preview:OnBtnClicked()
+  end
+  local SkinType
+  if self.ShopItemData.ItemType == "Hair" then
+    SkinType = CommonConst.DataType.Hair
+  elseif self.ShopItemData.ItemType == "Skin" or self.ShopItemData.ItemType == "WeaponSkin" then
+    SkinType = CommonConst.DataType.Skin
   end
   AudioManager(self):PlayUISound(self.Btn_Selective, "event:/ui/common/click_btn_small", nil, nil)
   local Params = {
     Target = self.Params.Target,
     Type = self.Params.Type,
     SkinId = self.Params.SkinId,
+    HairId = self.Params.HairId,
     IsPreviewMode = self.IsPreviewMode,
     Parent = self,
     OpenPreviewDyeFromShopItem = true,
+    SkinType = SkinType,
     OnCloseCallback = function()
       local Avatar = ArmoryUtils:GetAvatar()
       if self.Params.Type == CommonConst.ArmoryType.Char then
@@ -413,6 +374,7 @@ function M:OnClickDyeingPreview()
   else
     UIManager(self):LoadUI(UIConst.LoadInConfig, UIConfig.UIName, 100, Params)
   end
+  return UIUtils.Handled, true
 end
 
 function M:OnTabChangeClicked(TabIdx)
@@ -445,6 +407,7 @@ function M:OnClickPreviousSkin()
   self.LastItemType = self.ShopItemData.ItemType
   self:SwitchToSkin(self.Index - 1)
   AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_addMulti", nil, nil)
+  return UIUtils.Handled, true
 end
 
 function M:OnClickNextSkin()
@@ -455,6 +418,17 @@ function M:OnClickNextSkin()
   self.LastItemType = self.ShopItemData.ItemType
   self:SwitchToSkin(self.Index + 1)
   AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_addMulti", nil, nil)
+  return UIUtils.Handled, true
+end
+
+function M:OnClickDiscount()
+  if self.bSelfHidden then
+    return
+  end
+  if self.Btn_Discount_Light and self.Btn_Discount_Light:IsVisible() and self.bCanOpenDiscount then
+    self.Btn_Discount_Light:OnButtonClicked()
+  end
+  return UIUtils.Handled, true
 end
 
 function M:SwitchToSkin(targetIndex)
@@ -515,6 +489,7 @@ function M:UpdateUI()
     self.Btn_L:SetVisibility(ESlateVisibility.Collapsed)
     self.Btn_R:SetVisibility(ESlateVisibility.Collapsed)
   end
+  self.bCanOpenDiscount = false
   if not self.HidePurchase then
     local TrackInfo = {}
     TrackInfo.product_id = self.ShopItemData.ItemId
@@ -524,6 +499,7 @@ function M:UpdateUI()
     if self.IsLockState then
       self:UpdateLockCondition()
     else
+      self:UpdateDiscount()
       self:UpdatePrice()
       self:UpdateButtonBuy()
       self:RemoveTimer("UpdatePriceTimer")
@@ -536,6 +512,7 @@ function M:UpdateUI()
             if not self or not IsValid(self) then
               return
             end
+            self:UpdateDiscount()
             self:UpdatePrice()
             self:UpdateButtonBuy()
           end, false, 0, "UpdatePriceTimer")
@@ -545,9 +522,11 @@ function M:UpdateUI()
   else
     self.WidgetSwitcher_BtnState:SetVisibility(ESlateVisibility.Collapsed)
     self.Panel_Buy:SetVisibility(ESlateVisibility.Collapsed)
+    self.Btn_Discount_Light:SetVisibility(ESlateVisibility.Collapsed)
     self.bForbiddenButton = true
   end
   self:UpdateReplayTips()
+  self:InitLevelUpPreview(self.ShopItemData)
 end
 
 function M:UpdateLockCondition()
@@ -573,16 +552,113 @@ function M:UpdateLockCondition()
   end
 end
 
+function M:UpdateDiscount()
+  self.AutoSelectDiscount = EMCache:Get("AutoSelectDiscount", true)
+  self.AvailableDiscounts = ShopUtils:GetValidVouchers(self.ShopItemData)
+  self.bCanOpenDiscount = self.AvailableDiscounts and #self.AvailableDiscounts > 0
+  local bSelectedVoucherExpired = false
+  if self.SelectedDiscount then
+    local bIsStillValid = false
+    for _, voucher in ipairs(self.AvailableDiscounts) do
+      if voucher.VoucherId == self.SelectedDiscount.VoucherId then
+        bIsStillValid = true
+        break
+      end
+    end
+    if not bIsStillValid then
+      bSelectedVoucherExpired = true
+    end
+  end
+  local bIsNewItem = self.LastDiscountItemId ~= self.ShopItemData.ItemId
+  if bIsNewItem or bSelectedVoucherExpired then
+    if self.AvailableDiscounts and #self.AvailableDiscounts > 0 then
+      if self.AutoSelectDiscount then
+        self.SelectedDiscount = ShopUtils:GetBestVoucher(self.AvailableDiscounts)
+      else
+        self.SelectedDiscount = nil
+      end
+    else
+      self.AvailableDiscounts = {}
+      self.SelectedDiscount = nil
+    end
+    self.LastDiscountItemId = self.ShopItemData.ItemId
+  end
+  self:RemoveTimer("VoucherExpireTimer")
+  ShopUtils:CanPurchase(self.ShopItemData, self.ShopItemData.PriceType, ShopUtils:GetShopItemPrice(self.ShopItemData.ItemId, nil))
+  local failReason = self.ShopItemData.PurchaseFailRes
+  if ShopUtils:HasAnyVoucherConfig(self.ShopItemData.ItemId) and 1 == self.ShopItemData.PurchaseLimit and not DataMgr.ShopItem2PayGoods[self.ShopItemData.ItemId] and 1 ~= failReason and 6 ~= failReason and 1 == ShopUtils:GetShopItemPurchaseLimit(self.ShopItemData.ItemId) then
+    self.Btn_Discount_Light:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.Btn_Discount_Light:Init({
+      ParentWidget = self,
+      IsInPreview = true,
+      ShopItemData = self.ShopItemData,
+      AvailableDiscounts = self.AvailableDiscounts,
+      SelectedDiscount = self.SelectedDiscount,
+      OnDiscountChangedCallback = function(NewDiscount)
+        self:OnDiscountChanged(NewDiscount)
+      end,
+      OnMenuStateChangedCallback = function(bIsOpen)
+        self:OnDiscountMenuStateChanged(bIsOpen)
+      end,
+      TipsStateChangedCallback = function(Data, bIsOpen)
+        if self.TipsStateChangedCallback then
+          self:TipsStateChangedCallback(Data, bIsOpen)
+        end
+      end,
+      ItemTipsStateChangedCallback = function(Data, bIsOpen)
+        if self.ItemTipsStateChangedCallback then
+          self:ItemTipsStateChangedCallback(Data, bIsOpen)
+        end
+      end,
+      ItemFocusReceivedCallback = function(Data)
+        if self.ItemFocusReceivedCallback then
+          self:ItemFocusReceivedCallback(Data)
+        end
+      end
+    })
+    self:SetupVoucherExpireTimer()
+  else
+    self.Btn_Discount_Light:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+end
+
+function M:SetupVoucherExpireTimer()
+  if not self.AvailableDiscounts or 0 == #self.AvailableDiscounts then
+    return
+  end
+  local NearestExpireTime = math.huge
+  local NowTime = TimeUtils.NowTime()
+  for _, voucher in ipairs(self.AvailableDiscounts) do
+    if voucher.ExpireTime and NowTime < voucher.ExpireTime and NearestExpireTime > voucher.ExpireTime then
+      NearestExpireTime = voucher.ExpireTime
+    end
+  end
+  if NearestExpireTime ~= math.huge then
+    local RemainTime = NearestExpireTime - NowTime + 1
+    self:AddTimer(RemainTime, function()
+      if not IsValid(self) then
+        return
+      end
+      if IsValid(self.Btn_Discount_Light) and self.Btn_Discount_Light:IsVisible() and self.Btn_Discount_Light.ForceCloseMenu then
+        self.Btn_Discount_Light:ForceCloseMenu()
+      end
+      self:UpdateDiscount()
+      self:UpdatePrice()
+      self:UpdateButtonBuy()
+    end, false, 0, "VoucherExpireTimer")
+  end
+end
+
 function M:UpdatePrice()
   self.CurrentCount = 1
-  self.UnitPrice = ShopUtils:GetShopItemPrice(self.ShopItemData.ItemId)
+  self.UnitPrice = ShopUtils:GetShopItemPrice(self.ShopItemData.ItemId, self.SelectedDiscount and self.SelectedDiscount.VoucherId or nil)
   self.CutoffData = ShopUtils:GetShopItemCutoffData(self.ShopItemData.ItemId)
-  self.canPurchase = ShopUtils:CanPurchase(self.ShopItemData, self.ShopItemData.PriceType, ShopUtils:GetShopItemPrice(self.ShopItemData.ItemId))
-  if self.CutoffData ~= nil then
+  self.canPurchase = ShopUtils:CanPurchase(self.ShopItemData, self.ShopItemData.PriceType, self.UnitPrice)
+  if self.CutoffData ~= nil or self.SelectedDiscount ~= nil then
     self.WBP_Com_Cost:InitContent({
       ResourceId = self.ShopItemData.PriceType,
       bShowDenominator = false,
-      Numerator = self.CutoffData.CutoffPrice
+      Numerator = self.UnitPrice
     })
     self.WBP_Com_Cost:SetGamePadIconVisible(false)
     local Resource = DataMgr.Resource[self.ShopItemData.PriceType]
@@ -599,12 +675,16 @@ function M:UpdatePrice()
       HandleMouseDown = true,
       HandleKeyDown = false
     })
-    self.Text_Undiscounted_Price:SetText(self.ShopItemData.Price)
+    if self.SelectedDiscount then
+      self.Text_Undiscounted_Price:SetText(ShopUtils:GetShopItemPrice(self.ShopItemData.ItemId))
+    else
+      self.Text_Undiscounted_Price:SetText(self.ShopItemData.Price)
+    end
   else
     self.WBP_Com_Cost:InitContent({
       ResourceId = self.ShopItemData.PriceType,
       bShowDenominator = false,
-      Numerator = self.ShopItemData.Price
+      Numerator = self.UnitPrice
     })
     self.WBP_Com_Cost:SetGamePadIconVisible(false)
     local Resource = DataMgr.Resource[self.ShopItemData.PriceType]
@@ -670,7 +750,7 @@ function M:UpdateButtonBuy()
     self.bForbiddenButton = true
   elseif 2 == failReason or 3 == failReason then
     local CurrentCount = self.Avatar:GetResourceNum(self.ShopItemData.PriceType)
-    local Cost = ShopUtils:GetShopItemPrice(self.ShopItemData.ItemId)
+    local Cost = self.UnitPrice
     self.Panel_Buy:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.WidgetSwitcher_BtnState:SetActiveWidgetIndex(0)
     self.WBP_Com_Cost:SetIsEnough(CurrentCount >= Cost)
@@ -691,6 +771,38 @@ function M:UpdateButtonBuy()
     self.Btn_Function:ForbidBtn(false)
     self.Btn_Function:BindButtonPerformances()
     self.bForbiddenButton = false
+  end
+  self.BuyButtonState = self.Btn_Function:IsBtnForbidden()
+  if self.Btn_Discount_Light and self.Btn_Discount_Light:IsVisible() then
+    self.Btn_Discount_Light:SetSelectedDiscount(self.SelectedDiscount)
+  end
+end
+
+function M:OnDiscountChanged(NewDiscount)
+  self.SelectedDiscount = NewDiscount
+  self:PlayAnimation(self.Text_Refresh)
+  self:UpdatePrice()
+  self:UpdateButtonBuy()
+end
+
+function M:EnterSelectDiscountMode()
+end
+
+function M:ExitSelectDiscountMode()
+end
+
+function M:OnDiscountMenuStateChanged(bIsOpen)
+  if bIsOpen then
+    self.Btn_Function:ForbidBtn(true)
+    self:EnterSelectDiscountMode()
+  else
+    if not self.BuyButtonState then
+      self.Btn_Function:ForbidBtn(false)
+    end
+    self:ExitSelectDiscountMode()
+    if UIUtils.IsGamepadInput() then
+      self:SetFocus()
+    end
   end
 end
 
@@ -822,7 +934,6 @@ function M:PurChase()
     if not Avatar then
       return
     end
-    local PopupId = 100290
     
     local function ReOpenPurchase()
       if not IsValid(self) then
@@ -836,19 +947,18 @@ function M:PurChase()
     ShopUtils:SetCloseGetItemPageCallback({CloseGetItemPageCallback = ReOpenPurchase})
     local Params = {}
     Params.ShopItemId = self.ShopItemData.ItemId
+    Params.VoucherId = self.SelectedDiscount and self.SelectedDiscount.VoucherId or nil
     Params.Uid = Avatar.Uid
-    
-    function Params.CloseBtnCallbackFunction(Obj, PackageData)
-      ShopUtils:SetCloseGetItemPageCallback({CloseGetItemPageCallback = nil})
-    end
-    
+    Params.CloseBtnCallback = {
+      Func = function()
+        ShopUtils:SetCloseGetItemPageCallback({CloseGetItemPageCallback = nil})
+      end
+    }
     Params.BeforeClickNoCallback = {
       Obj = self,
       Func = self.Close
     }
-    Params.LeftGamepadKey = Const.GamepadFaceButtonUp
-    Params.ShowBKeyClose = true
-    self.PopupUI = UIManager(self):ShowCommonPopupUI(PopupId, Params, self)
+    UIManager(self):LoadUINew("ShopTargetPay", Params)
     return
   end
   local RemainTimes = ShopUtils:GetShopItemPurchaseLimit(self.ShopItemData.ItemId)
@@ -865,7 +975,7 @@ function M:PurChase()
   local Funds = {}
   Funds[1] = {}
   Funds[1].FundId = self.ShopItemData.PriceType
-  Funds[1].FundNeed = ShopUtils:GetShopItemPrice(self.ShopItemData.ItemId)
+  Funds[1].FundNeed = self.UnitPrice
   HeroUSDKSubsystem(self):UploadTrackLog_Lua("shop_confirmpage", TrackInfo)
   UIManager(self):ShowCommonPopupUI(CommonPopupUIID, {
     ShopItemData = self.ShopItemData,
@@ -873,6 +983,8 @@ function M:PurChase()
     Funds = Funds,
     ShowParentTabCoin = true,
     SingleItemNotInteractive = true,
+    SelectedDiscount = self.SelectedDiscount,
+    bHasDraftDiscount = true,
     LeftCallbackObj = self,
     LeftCallbackFunction = function()
       local SkinPreview = UIManager(self):GetUIObj("SkinPreview")
@@ -886,6 +998,7 @@ function M:PurChase()
         local count = 1
         if Data and Data.Content_1 and Data.Content_1.CallObj then
           count = Data.Content_1.CallObj.CurrentCount or 1
+          Obj.SelectedDiscount = Data.Content_1.CallObj.SelectedDiscount
         end
         Obj:PurchaseShopItem(count)
       end
@@ -919,8 +1032,8 @@ function M:PurchaseGift()
   end
 end
 
-function M:PurchaseShopItem(count)
-  local FinalCount = count or self.CurrentCount or 1
+function M:PurchaseShopItem(Count)
+  local FinalCount = Count or self.CurrentCount or 1
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return
@@ -972,7 +1085,7 @@ function M:PurchaseShopItem(count)
     return
   end
   self:BlockAllUIInput(true)
-  Avatar:PurchaseShopItem(self.ShopItemData.ItemId, FinalCount)
+  Avatar:PurchaseShopItem(self.ShopItemData.ItemId, FinalCount, nil, nil, self.SelectedDiscount and self.SelectedDiscount.VoucherId or nil)
 end
 
 function M:RefreshPurchaseState()
@@ -981,9 +1094,13 @@ function M:RefreshPurchaseState()
     self.WidgetSwitcher_BtnState:SetActiveWidgetIndex(1)
     self.Text_Desc:SetText(GText("UI_SHOP_ALREADYOWNED"))
     self.bForbiddenButton = true
+    self.bCanOpenDiscount = false
+    self.Btn_Discount_Light:SetVisibility(ESlateVisibility.Collapsed)
   else
+    self:UpdateDiscount()
     self:UpdatePrice()
     self:UpdateButtonBuy()
+    self.Btn_Discount_Light:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   end
 end
 
@@ -1001,6 +1118,9 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   local KeyDownEvent = self.KeyDownEvents[InKeyName]
+  if self.InSelectDiscountMode then
+    return UIUtils.Handled
+  end
   if KeyDownEvent then
     local Reply, IsHandled = KeyDownEvent(self)
     if IsHandled then
@@ -1009,7 +1129,7 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
   elseif not self.bSelfHidden then
     self.Tab_Skin:Handle_KeyEventOnGamePad(InKeyName)
   end
-  return UE4.UWidgetBlueprintLibrary.Handled()
+  return UIUtils.Handled
 end
 
 function M:OnRepeatKeyDown(MyGeometry, InKeyEvent)
@@ -1060,13 +1180,16 @@ end
 function M:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InAnalogInputEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+  if self.InSelectDiscountMode then
+    return UIUtils.Unhandled
+  end
   if "Gamepad_RightX" == InKeyName then
     if self.ActorController then
       if self.EnableDrag == false then
         return UIUtils.Unhandled
       end
       local DeltaX = UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent) * 10
-      self.ActorController:OnDragging({X = DeltaX})
+      self.ActorController:OnDragViewActor({X = DeltaX})
     end
     return UIUtils.Handled
   end
@@ -1177,6 +1300,78 @@ function M:GetCutoffInfo(ItemId)
     end
   end
   return nil
+end
+
+function M:InitLevelUpPreview(ItemData)
+  if ItemData.ItemType == "Skin" then
+    local IsDisplay = DataMgr.SkinUpgrade and DataMgr.SkinUpgrade[ItemData.TypeId]
+    if not IsDisplay then
+      self.Panel_LevelUp:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      return
+    end
+    self.Panel_LevelUp:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.BtnSkinLevelUp = true
+    local MaxLevel = self.WB_LevelUp:GetChildrenCount()
+    for Index = 1, MaxLevel do
+      local LevelUpWidget = self["WBP_Armory_Skin_LevelUp_" .. Index]
+      if LevelUpWidget then
+        local Params = {
+          Level = Index,
+          IsLocked = false,
+          IsShowReddot = false,
+          Obj = self,
+          ClickedCallback = self.OnLevelUpWidgetClicked
+        }
+        LevelUpWidget:InitContent(Params)
+      end
+    end
+    self.SelectedSkinLevel = 1
+    self["WBP_Armory_Skin_LevelUp_" .. self.SelectedSkinLevel]:PlaySelectedAnimation()
+  else
+    self.Panel_LevelUp:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+end
+
+function M:OnLevelUpWidgetClicked(Level)
+  if Level == self.SelectedSkinLevel then
+    return
+  end
+  local LastLevelUpWidget = self["WBP_Armory_Skin_LevelUp_" .. self.SelectedSkinLevel]
+  if LastLevelUpWidget then
+    LastLevelUpWidget:PlayNormalAnimation()
+  end
+  self.SelectedSkinLevel = Level
+  local CurLevelUpWidget = self["WBP_Armory_Skin_LevelUp_" .. self.SelectedSkinLevel]
+  if CurLevelUpWidget then
+    CurLevelUpWidget:PlaySelectedAnimation()
+  end
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_mid", nil, nil)
+  local SkinId = self.ShopItemData.TypeId
+  self.ShopItemData.SkinLevel = Level
+  local SkinLevelUpData = DataMgr.SkinUpgrade[SkinId][Level]
+  if SkinLevelUpData then
+    self.Panel_Buy:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Text_Undiscounted_Price:SetVisibility(ESlateVisibility.Collapsed)
+    self.WBP_Com_Cost:InitContent({
+      CostText = GText("UI_Skin_Upgrade_Cost"),
+      ResourceId = SkinLevelUpData.UnlockCurrency,
+      Numerator = SkinLevelUpData.UnlockAmount
+    })
+    self.WBP_Com_Cost:SetGamePadIconVisible(false)
+    self.Btn_Function:ForbidBtn(true)
+  elseif not self.HidePurchase then
+    self.Panel_Buy:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self:UpdateDiscount()
+    self:UpdatePrice()
+    self:UpdateButtonBuy()
+  else
+    self.Panel_Buy:SetVisibility(ESlateVisibility.Collapsed)
+  end
+  if self.UpdateSkinLevelPreview then
+    self:UpdateSkinLevelPreview(Level)
+  elseif self.UpdatePreviewActor then
+    self:UpdatePreviewActor(self.ShopItemData, FVector(40, 35, 0))
+  end
 end
 
 AssembleComponents(M)

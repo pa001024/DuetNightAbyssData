@@ -95,6 +95,7 @@ function BP_SeatBase_C:OpenMechanism(PlayerActorEid)
       function(_, value)
         Player.MoveInput = FVector(0, 0, 0)
         Player.MoveInputCache = FVector(0, 0, 0)
+        Player.CharacterMovement:StopMovementImmediately()
         Player:K2_SetActorLocationAndRotation(value, Rot, false, nil, false)
       end
     }, Player:K2_GetActorLocation(), Loc, 0.1, 0)
@@ -565,7 +566,8 @@ function BP_SeatBase_C:SpecialRegionOnlineStartLogic(PlayerActor)
     print(_G.LogTag, "LXZ SpecialRegionOnlineStartLogic222", self.UniqueId)
     AvatarEid = CommonUtils.Str2ObjId(self.SenderId)
   end
-  Avatar:RequestChangeRegionOnlineItemState(Avatar.CurrentOnlineType, self.UniqueId, AvatarEid, InteractiveId, self.StateId, self.BpBorn)
+  local bInMobile = CommonUtils.GetRuntimePlatform(self) == "Mobile"
+  Avatar:RequestChangeRegionOnlineItemState(Avatar.CurrentOnlineType, self.UniqueId, AvatarEid, InteractiveId, self.StateId, self.BpBorn, bInMobile)
 end
 
 function BP_SeatBase_C:SpecialRegionOnlineEndLogic(PlayerActor)
@@ -585,7 +587,8 @@ function BP_SeatBase_C:SpecialRegionOnlineEndLogic(PlayerActor)
   if self.SenderId and self.SenderId ~= "" then
     AvatarEid = CommonUtils.Str2ObjId(self.SenderId)
   end
-  Avatar:RequestLeaveRegionOnlineItem(Avatar.CurrentOnlineType, self.UniqueId, AvatarEid, InteractiveId)
+  local bInMobile = CommonUtils.GetRuntimePlatform(self) == "Mobile"
+  Avatar:RequestLeaveRegionOnlineItem(Avatar.CurrentOnlineType, self.UniqueId, AvatarEid, InteractiveId, bInMobile)
 end
 
 function BP_SeatBase_C:IsCanOnlineInteractive(Player)

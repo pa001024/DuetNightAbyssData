@@ -3,7 +3,7 @@ local EMCache = require("EMCache.EMCache")
 local TimeUtils = require("Utils.TimeUtils")
 local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
 local ActivityReddotHelper = require("BluePrints.UI.WBP.Activity.ActivityReddotHelper")
-local AnnouncementUtils = require("BluePrints.UI.WBP.Announcement.AnnounceUtils")
+local ChatCommon = require("BluePrints.UI.WBP.Chat.ChatCommon")
 local Component = {}
 local BattleMainMenu = DataMgr.ReddotNode.BattleMainMenu.Name
 
@@ -198,7 +198,7 @@ function Component:InitReddotData_DayAndNight()
 end
 
 function Component:InitReddotData_AnnouncementMain()
-  local ret = AnnouncementUtils:UpdateAnnouncementDataInGame()
+  local ret = AnnounceController:UpdateAnnouncementDataInGame()
   if ret then
     self:EMShowReddot(true, EReddotType.New)
   else
@@ -215,13 +215,7 @@ function Component:OnReddotUpdate_BattleMainMenu(ReddotType, Count)
 end
 
 function Component:OnReddotUpdate_ChatMainMenu(ReddotType, Count)
-  local ChatNode = ReddotManager.GetTreeNode(ChatCommon.ReddotName)
-  local NewCount
-  if ChatNode.Count > ChatCommon.ReddotMaxCount then
-    NewCount = ChatCommon.ReddotMaxCount .. "+"
-  end
-  self:EMShowReddot(Count > 0, ReddotType, Count)
-  self.Reddot_Num:SetNum(NewCount or Count)
+  ChatController:OnChatReddotUpdate(self.Reddot_Chat_Num)
 end
 
 return Component

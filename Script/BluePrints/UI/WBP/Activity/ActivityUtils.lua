@@ -31,6 +31,7 @@ ActivityUtils.Id2ReddotNodeName = {
   [103005] = "ZhiliuReward",
   [103006] = "MidTermGoal"
 }
+local AccessoryDropActivityIds = {103020}
 
 function ActivityUtils.CheckEventIsInActiveTime(EventID, EventMainExcel)
   local NowTime = TimeUtils.NowTime()
@@ -592,6 +593,15 @@ function ActivityUtils.SetUpJustifyOfJap(TextBlock1, TextBlock2)
       TextBlock2:SetJustification(ETextJustify.Left)
     end
   end
+end
+
+function ActivityUtils.IsAccessoryDropActivity(ActivityId)
+  for _, Id in pairs(AccessoryDropActivityIds) do
+    if Id == ActivityId then
+      return true
+    end
+  end
+  return false
 end
 
 return ActivityUtils

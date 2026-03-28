@@ -80,6 +80,11 @@ return ReadOnly("WeaponCardLevel", {
     CollectRewardExp = 200,
     WeaponId = 10304
   },
+  [10305] = {
+    CardLevelMax = 5,
+    CollectRewardExp = 200,
+    WeaponId = 10305
+  },
   [10401] = {
     CardLevelMax = 5,
     CollectRewardExp = 200,
@@ -210,6 +215,16 @@ return ReadOnly("WeaponCardLevel", {
     CollectRewardExp = 200,
     WeaponId = 20405
   },
+  [20406] = {
+    CardLevelMax = 5,
+    CollectRewardExp = 200,
+    WeaponId = 20406
+  },
+  [20407] = {
+    CardLevelMax = 5,
+    CollectRewardExp = 200,
+    WeaponId = 20407
+  },
   [20501] = {
     CardLevelMax = 5,
     CollectRewardExp = 200,
@@ -254,6 +269,11 @@ return ReadOnly("WeaponCardLevel", {
     CardLevelMax = 5,
     CollectRewardExp = 200,
     WeaponId = 20510
+  },
+  [20512] = {
+    CardLevelMax = 5,
+    CollectRewardExp = 200,
+    WeaponId = 20512
   },
   [20601] = {
     CardLevelMax = 5,

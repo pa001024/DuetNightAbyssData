@@ -14,12 +14,12 @@ function Guide_Touch:GuideUIInit(UIKey, MessageId, Time, Actions, IsTimeDilation
   end)
 end
 
-function Guide_Touch:GuideUIInit_Bubble(UIKey, MessageId, Time, DelayTime, Actions, IsTimePause, IsTimeDilation, IsForceClick, IsControlPlayer, IsShowCursor, HighLightUIPath, UICompName, UIShape, IsAdapted, UICompSizeOffset, UICompLocOffset, MessageParentLoc, MessageLoc, MessageLocOffset, IsResetPlayer, IsForbidInAnim, IsForbidOutAnim, GamePadWidgetName, IsAutoClick, IsAutoClickByGamepad, IsByToastButton)
-  self:Init(MessageId, Time, DelayTime, Actions, IsForceClick, IsControlPlayer, IsTimePause, IsTimeDilation, IsShowCursor, HighLightUIPath, UICompName, UIShape, IsAdapted, UICompSizeOffset, UICompLocOffset, MessageParentLoc, MessageLoc, MessageLocOffset, IsResetPlayer, IsForbidInAnim, IsForbidOutAnim, GamePadWidgetName, IsAutoClick, IsAutoClickByGamepad, IsByToastButton)
+function Guide_Touch:GuideUIInit_Bubble(UIKey, MessageId, Time, DelayTime, Actions, IsTimePause, IsTimeDilation, IsForceClick, IsControlPlayer, IsShowCursor, HighLightUIPath, UICompName, UIShape, IsAdapted, UICompSizeOffset, UICompLocOffset, MessageParentLoc, MessageLoc, MessageLocOffset, IsResetPlayer, IsForbidInAnim, IsForbidOutAnim, GamePadWidgetName, IsAutoClick, IsAutoClickByGamepad, IsFindByMainUI, IsByToastButton)
+  self:Init(MessageId, Time, DelayTime, Actions, IsForceClick, IsControlPlayer, IsTimePause, IsTimeDilation, IsShowCursor, HighLightUIPath, UICompName, UIShape, IsAdapted, UICompSizeOffset, UICompLocOffset, MessageParentLoc, MessageLoc, MessageLocOffset, IsResetPlayer, IsForbidInAnim, IsForbidOutAnim, GamePadWidgetName, IsAutoClick, IsAutoClickByGamepad, IsFindByMainUI, IsByToastButton)
   self.IsDestroied = false
 end
 
-function Guide_Touch:Init(MessageId, LastTime, DelayTime, Actions, IsForceClick, IsControlPlayer, IsTimePause, IsTimeDilation, IsShowCursor, HighLightUIPath, UICompName, UIShape, IsAdapted, UICompSizeOffset, UICompLocOffset, MessageParentLoc, MessageLoc, MessageLocOffset, IsResetPlayer, IsForbidInAnim, IsForbidOutAnim, GamePadWidgetName, IsAutoClick, IsAutoClickByGamepad, IsByToastButton)
+function Guide_Touch:Init(MessageId, LastTime, DelayTime, Actions, IsForceClick, IsControlPlayer, IsTimePause, IsTimeDilation, IsShowCursor, HighLightUIPath, UICompName, UIShape, IsAdapted, UICompSizeOffset, UICompLocOffset, MessageParentLoc, MessageLoc, MessageLocOffset, IsResetPlayer, IsForbidInAnim, IsForbidOutAnim, GamePadWidgetName, IsAutoClick, IsAutoClickByGamepad, IsFindByMainUI, IsByToastButton)
   local Message = DataMgr.Message[MessageId]
   if not Message then
     UEPrint("Message Id Wrong")
@@ -30,6 +30,7 @@ function Guide_Touch:Init(MessageId, LastTime, DelayTime, Actions, IsForceClick,
   self.MessageContent = CommonUtils:StringReplaceActionName(self.MessageContent)
   self.IsAutoClick = IsAutoClick
   self.IsAutoClickByGamepad = IsAutoClickByGamepad
+  self.IsFindByMainUI = IsFindByMainUI
   self.HighLightUIPath = HighLightUIPath
   self.UICompName = UICompName
   self.GamePadWidgetName = GamePadWidgetName
@@ -418,7 +419,20 @@ function Guide_Touch:GetUIComp()
               self:ErrorAndFinish(path)
             end
           end
-          if Widget:Cast(UE4.UEMMenuAnchor) then
+          if self.IsFindByMainUI and "Panel_Function" == Names[1] then
+            local Child
+            for key, value in pairs(Widget:GetAllChildren()) do
+              if value.EnterId == tonumber(Names[2]) then
+                Child = value
+                break
+              end
+            end
+            if Child then
+              Widget = self:SetWidgetParent(Widget, Child, Child:GetName())
+            else
+              return false
+            end
+          elseif Widget:Cast(UE4.UEMMenuAnchor) then
             local LastWidget = self.UICompPairs[i + 1]
             if LastWidget.CommonItemDetails then
               Widget = self:SetWidgetParent(Widget, LastWidget.CommonItemDetails, Names[1] .. ":" .. Index)
@@ -696,12 +710,12 @@ function Guide_Touch:SetGrid()
     DebugPrint("ERROR:GuideTouch Can not Find UIComp, Please check your Param again", self.HighLightUIPath .. "." .. self.UICompName)
     return
   end
-  local screen_size = UE4.UWidgetLayoutLibrary.GetViewportSize(self)
-  local screen_scale = UE4.UWidgetLayoutLibrary.GetViewportScale(self)
-  local screen_real_size = screen_size / screen_scale
+  local PlayerController = UE4.UGameplayStatics.GetPlayerController(self, 0)
+  local PlayerScreenGeometry = UE4.UWidgetLayoutLibrary.GetPlayerScreenWidgetGeometry(PlayerController)
+  local screen_real_size = UE4.USlateBlueprintLibrary.GetLocalSize(PlayerScreenGeometry)
+  local screen_scale = UE4.USlateBlueprintLibrary.GetAbsoluteSize(PlayerScreenGeometry).X / screen_real_size.X
   if self.IsPlayerVirtualJoystick then
-    local Controller = UGameplayStatics.GetPlayerController(self, 0)
-    local TouchInterface = Controller.CurrentTouchInterface
+    local TouchInterface = PlayerController.CurrentTouchInterface
     if not TouchInterface then
       return
     end
@@ -742,11 +756,8 @@ function Guide_Touch:SetGrid()
         return
       end
     end
-    local position = CanvasSlot:GetPosition()
-    local offset = CanvasSlot:GetOffsets()
-    position = position - FVector2D(offset.Left, offset.Top)
-    local vPos, _ = UE4.USlateBlueprintLibrary.LocalToViewport(self, geometry, position)
-    local real_Pos = vPos / screen_scale + self.UICompLocOffset
+    local absPos = UE4.USlateBlueprintLibrary.LocalToAbsolute(geometry, FVector2D(0, 0))
+    local real_Pos = UE4.USlateBlueprintLibrary.AbsoluteToLocal(PlayerScreenGeometry, absPos) + self.UICompLocOffset
     local real_Size = size / screen_scale
     local ColumnFill0 = real_Pos.X + 20 - self.UICompSizeOffset.X / 2
     local ColumnFill1 = real_Size.X + self.UICompSizeOffset.X
@@ -774,8 +785,8 @@ function Guide_Touch:SetGrid()
     local size = UE4.USlateBlueprintLibrary.GetAbsoluteSize(geometry)
     local PositionX = 0
     local PositionY = 0
-    local vPos = UE4.USlateBlueprintLibrary.LocalToViewport(self, geometry, FVector2D(PositionX, PositionY))
-    local real_Pos = vPos / screen_scale + self.UICompLocOffset
+    local absPos = UE4.USlateBlueprintLibrary.LocalToAbsolute(geometry, FVector2D(PositionX, PositionY))
+    local real_Pos = UE4.USlateBlueprintLibrary.AbsoluteToLocal(PlayerScreenGeometry, absPos) + self.UICompLocOffset
     local real_Size = size / screen_scale
     local ColumnFill0 = real_Pos.X + 20 - self.UICompSizeOffset.X / 2
     local ColumnFill1 = real_Size.X + self.UICompSizeOffset.X

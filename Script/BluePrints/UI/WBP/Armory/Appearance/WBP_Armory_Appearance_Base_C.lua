@@ -215,6 +215,7 @@ function M:InitCharAppearanceSuits()
     DyePlanIndex = CurrentHairDyePlanIndex,
     NoState = true,
     OnClicked = function()
+      AudioManager(self):PlayUISound(nil, "event:/ui/common/click_mid", nil, nil)
       if self.bFormPersonalPage then
         return
       end
@@ -243,14 +244,14 @@ function M:InitCharAppearanceSuits()
     end
     local Widget = self.AccessoryType2Widget[CharAccessoryType]
     if Widget then
-      local Obj = self:NewCharAccessoryItemContent(AccessoryId, CharAccessoryType)
+      local Obj = self:NewCharAccessoryItemContent(AccessoryId, CharAccessoryType, SkinId)
       self:OnAccessoryItemContentCreated(Obj)
       Widget:OnListItemObjectSet(Obj)
     end
   end
 end
 
-function M:NewCharAccessoryItemContent(AccessoryId, AccessoryType)
+function M:NewCharAccessoryItemContent(AccessoryId, AccessoryType, SkinId)
   local CharAccessoryData = DataMgr.CharAccessory[AccessoryId] or DataMgr.CharPartMesh[AccessoryId]
   local Obj = {
     Owner = self,
@@ -278,7 +279,7 @@ function M:NewCharAccessoryItemContent(AccessoryId, AccessoryType)
   Obj.AccessoryId = AccessoryId
   Obj.AccessoryType = AccessoryType
   Obj.IsCharacterTrialMode = self.IsCharacterTrialMode
-  if CharAccessoryData and self.DefaultCharAccessoryIds[AccessoryType] ~= AccessoryId then
+  if CharAccessoryData and self.DefaultCharAccessoryIds[AccessoryType] ~= AccessoryId and ArmoryUtils:IsSkinSupportAccessory(SkinId, AccessoryId) then
     Obj.IconPath = CharAccessoryData.Icon
     Obj.IsNoneIcon = false
     Obj.IsDressed = Obj.ItemId and Obj.ItemId > 0 and Obj.ItemId ~= DataMgr.GlobalConstant.EmptyCharAccessoryID.ConstantValue
@@ -348,40 +349,51 @@ function M:InitWeaponAppearanceSuits()
   }
   self:OnSkinItemContentCreated(SkinItemContent)
   self.Weapon_Skin:OnListItemObjectSet(SkinItemContent)
-  local WeaponAccessoryData = DataMgr
-  local AccessoryId = Appearacne.Accessory[1] or -1
-  if AccessoryId then
-    WeaponAccessoryData = DataMgr.WeaponAccessory[AccessoryId]
-  end
-  local AccessoryContent = {
-    Owner = self,
-    OnClicked = function()
-      local Params = {
-        Target = self.Target,
-        Type = self.Type,
-        AccessoryId = AccessoryId,
-        OnCloseCallback = self.OnSkinClosed,
-        Parent = self,
-        IsCharacterTrialMode = self.IsCharacterTrialMode,
-        IsTargetUnowned = self.IsTargetUnowned
-      }
-      self:OpenSkin(Params)
-    end,
-    Rarity = WeaponAccessoryData and WeaponAccessoryData.Rarity,
-    IsPreviewMode = self.IsPreviewMode,
-    IsTargetUnowned = self.IsTargetUnowned,
-    TipType = "WeaponAccessory",
-    AccessoryId = AccessoryId
+  self.AccessoryWidget2Type = {
+    [self.Accessory_Skin] = CommonConst.WeaponAccessoryTypes.Accessory,
+    [self.WeaponSpecial_Skin] = CommonConst.WeaponAccessoryTypes.RunAttack
   }
-  if not WeaponAccessoryData then
-    AccessoryContent.IconPath = UIUtils.GetNoneAccessoryIconPath()
-    AccessoryContent.IsNoneIcon = true
-  else
-    AccessoryContent.IconPath = WeaponAccessoryData.Icon
-    AccessoryContent.IsNoneIcon = false
+  self.AccessoryType2Widget = {}
+  for key, value in pairs(self.AccessoryWidget2Type) do
+    self.AccessoryType2Widget[value] = key
   end
-  self:OnAccessoryItemContentCreated(AccessoryContent)
-  self.Accessory_Skin:OnListItemObjectSet(AccessoryContent)
+  self.NoneAccessoryIconPaths = ArmoryUtils:GetWeaponNoneAccessoryIconPaths()
+  local WeaponAccessoryData
+  for Widget, AccessoryType in pairs(self.AccessoryWidget2Type) do
+    local AccessoryId = Appearacne.Accessory[CommonConst.WeaponAccessoryTypeIndex[AccessoryType]] or -1
+    WeaponAccessoryData = DataMgr.WeaponAccessory[AccessoryId]
+    local AccessoryContent = {
+      Owner = self,
+      OnClicked = function()
+        AudioManager(self):PlayUISound(nil, "event:/ui/common/click_mid", nil, nil)
+        local Params = {
+          Target = self.Target,
+          Type = self.Type,
+          AccessoryId = AccessoryId,
+          AccessoryType = AccessoryType,
+          OnCloseCallback = self.OnSkinClosed,
+          Parent = self,
+          IsCharacterTrialMode = self.IsCharacterTrialMode,
+          IsTargetUnowned = self.IsTargetUnowned
+        }
+        self:OpenSkin(Params)
+      end,
+      Rarity = WeaponAccessoryData and WeaponAccessoryData.Rarity,
+      IsPreviewMode = self.IsPreviewMode,
+      IsTargetUnowned = self.IsTargetUnowned,
+      TipType = "WeaponAccessory",
+      AccessoryId = AccessoryId
+    }
+    if not WeaponAccessoryData then
+      AccessoryContent.IconPath = self.NoneAccessoryIconPaths[AccessoryType]
+      AccessoryContent.IsNoneIcon = true
+    else
+      AccessoryContent.IconPath = WeaponAccessoryData.Icon
+      AccessoryContent.IsNoneIcon = false
+    end
+    self:OnAccessoryItemContentCreated(AccessoryContent)
+    Widget:OnListItemObjectSet(AccessoryContent)
+  end
 end
 
 function M:Construct()
@@ -477,8 +489,10 @@ function M:AddCharAppearanceReddotListen(CharId)
       end
       if not IsEmptyTable(LeafNodes) then
         ReddotManager.AddListener(NodeName, self, function(_self, Count)
-          self.AccessoryType2Widget[Type].Content.IsNew = Count > 0
-          self.AccessoryType2Widget[Type]:SetIsNew(Count > 0)
+          local Content = self.AccessoryType2Widget[Type].Content
+          Content.IsNew = Count > 0
+          ArmoryUtils:UpdateContentRetDotType(Content)
+          self.AccessoryType2Widget[Type]:SetReddot(Content.RedDotType)
         end, LeafNodes)
         self.AppearanceNodeNames[NodeName] = 1
       end
@@ -486,16 +500,35 @@ function M:AddCharAppearanceReddotListen(CharId)
   end
   local NodeName = CommonConst.DataType.Char .. CommonConst.DataType.Skin .. CharId
   ReddotManager.AddListener(NodeName, self, function(_self, Count)
-    self.Char_Skin.Content.RedDotType = Count > 0 and UIConst.RedDotType.NewRedDot
-    self.Char_Skin:SetIsNew(self.Char_Skin.Content.RedDotType)
+    local Content = self.Char_Skin.Content
+    Content.Upgradeable = self:CanSkinUpgrade(self.Target.CharId)
+    if not Content.Upgradeable then
+      Content.IsNew = Count > 0
+    end
+    ArmoryUtils:UpdateContentRetDotType(Content)
+    self.Char_Skin:SetReddot(Content.RedDotType)
   end, nil, true)
   self.AppearanceNodeNames[NodeName] = 1
-  NodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair .. CharId
+  local CharHairNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair .. CharId
+  local CommonCharHairNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair
   ReddotManager.AddListener(NodeName, self, function(_self, Count)
-    self.Hair_Skin.Content.RedDotType = Count > 0 and UIConst.RedDotType.NewRedDot
-    self.Hair_Skin:SetIsNew(self.Hair_Skin.Content.RedDotType)
+    local Content = self.Hair_Skin.Content
+    local CharHairNode = ReddotManager.GetTreeNode(CharHairNodeName)
+    local CommonCharHairNode = ReddotManager.GetTreeNode(CommonCharHairNodeName)
+    Content.IsNew = CharHairNode and CharHairNode.Count > 0 or CommonCharHairNode and CommonCharHairNode.Count > 0
+    ArmoryUtils:UpdateContentRetDotType(Content)
+    self.Hair_Skin:SetReddot(Content.RedDotType)
   end, nil, true)
-  self.AppearanceNodeNames[NodeName] = 1
+  self.AppearanceNodeNames[CharHairNodeName] = 1
+  ReddotManager.AddListener(NodeName, self, function(_self, Count)
+    local Content = self.Hair_Skin.Content
+    local CharHairNode = ReddotManager.GetTreeNode(CharHairNodeName)
+    local CommonCharHairNode = ReddotManager.GetTreeNode(CommonCharHairNodeName)
+    Content.IsNew = CharHairNode and CharHairNode.Count > 0 or CommonCharHairNode and CommonCharHairNode.Count > 0
+    ArmoryUtils:UpdateContentRetDotType(Content)
+    self.Hair_Skin:SetReddot(Content.RedDotType)
+  end, nil, true)
+  self.AppearanceNodeNames[CommonCharHairNodeName] = 1
 end
 
 function M:RemoveAppearanceReddotListen()
@@ -526,16 +559,32 @@ function M:AddWeaponAppearanceReddotListen(WeaponId)
   self.AppearanceNodeNames[NodeName] = 1
   if not IsEmptyTable(LeafNodes) then
     ReddotManager.AddListener(NodeName, self, function(_self, Count)
-      self.Weapon_Skin.Content.RedDotType = Count > 0 and UIConst.RedDotType.NewRedDot
-      self.Weapon_Skin:SetIsNew(self.Weapon_Skin.Content.RedDotType)
+      local Content = self.Weapon_Skin.Content
+      Content.IsNew = Count > 0
+      ArmoryUtils:UpdateContentRetDotType(Content)
+      self.Weapon_Skin:SetReddot(Content.RedDotType)
     end, LeafNodes)
   end
   local WeaponAccessoryNodeName = CommonConst.DataType.WeaponAccessory
   self.AppearanceNodeNames[WeaponAccessoryNodeName] = 1
   ReddotManager.AddListener(WeaponAccessoryNodeName, self, function(_self, Count)
-    self.Accessory_Skin.Content.RedDotType = Count > 0 and UIConst.RedDotType.NewRedDot
-    self.Accessory_Skin:SetIsNew(self.Accessory_Skin.Content.RedDotType)
+    local Content = self.Accessory_Skin.Content
+    Content.IsNew = Count > 0
+    ArmoryUtils:UpdateContentRetDotType(Content)
+    self.Accessory_Skin:SetReddot(Content.RedDotType)
   end, nil, true)
+end
+
+function M:CanSkinUpgrade(CharId)
+  if not DataMgr.Char[CharId] then
+    return false
+  end
+  for SkinId, Data in pairs(DataMgr.Skin) do
+    if Data.CharId == CharId and ArmoryUtils:CanSkinUpgrade(SkinId) then
+      return true
+    end
+  end
+  return false
 end
 
 function M:Destruct()

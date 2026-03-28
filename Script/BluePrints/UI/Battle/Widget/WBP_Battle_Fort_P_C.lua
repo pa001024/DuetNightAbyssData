@@ -17,6 +17,22 @@ function WBP_Battle_Fort_P_C:OnLoaded(...)
     self:RefreshOpInfoByInputDevice(self.GameInputModeSubsystem:GetCurrentInputType(), self.GameInputModeSubsystem:GetCurrentGamepadName())
   end
   self:InitListenEvent()
+  if self.Key_Leave then
+    self.Key_Leave:CreateCommonKey({
+      KeyInfoList = {
+        {Type = "Text", Text = "F"}
+      },
+      Desc = GText("UI_Mechanism_ExitPaotai")
+    })
+  end
+  if self.Controller_Leave then
+    self.Controller_Leave:CreateCommonKey({
+      KeyInfoList = {
+        {Type = "Text", Text = "Y"}
+      },
+      Desc = GText("UI_Mechanism_ExitPaotai")
+    })
+  end
 end
 
 function WBP_Battle_Fort_P_C:InitSkillButtonKey(Index)
@@ -51,10 +67,16 @@ function WBP_Battle_Fort_P_C:RefreshSkillButtonKey(Index, IsGamepadMode)
     self["FireUI_" .. Index].Key_Img:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self["FireUI_" .. Index].Key_Img:SetRenderOpacity(1)
     self["FireUI_" .. Index].WidgetSwitcher_0:SetActiveWidgetIndex(1)
+    if self.WS_KeyLeave then
+      self.WS_KeyLeave:SetActiveWidgetIndex(1)
+    end
   else
     self["FireUI_" .. Index].Common_Key_PC:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self["FireUI_" .. Index].Common_Key_PC:SetRenderOpacity(1)
     self["FireUI_" .. Index].WidgetSwitcher_0:SetActiveWidgetIndex(0)
+    if self.WS_KeyLeave then
+      self.WS_KeyLeave:SetActiveWidgetIndex(0)
+    end
   end
 end
 

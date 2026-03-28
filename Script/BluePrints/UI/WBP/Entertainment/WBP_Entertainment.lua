@@ -525,6 +525,10 @@ function M:SetShowCharacterData(NewShowCharacterData)
   end
   self:DestoryNpc(nil, function()
     if self.ShowCharacter then
+      if self.SavedVisibilityBasedAnimTickOption and IsValid(self.ShowCharacter.Mesh) then
+        self.ShowCharacter.Mesh.VisibilityBasedAnimTickOption = self.SavedVisibilityBasedAnimTickOption
+        self.SavedVisibilityBasedAnimTickOption = nil
+      end
       self.ShowCharacter.FXComponent:PlayEffectByIDParams(302, {bTickEvenWhenPaused = true, NotAttached = true})
       AudioManager(self):PlayUISound(self, "event:/ui/common/role_disappear", nil, nil)
     end
@@ -543,6 +547,11 @@ function M:SetShowCharacterData(NewShowCharacterData)
     end)
   end
   self:WaitTime(self.SwitchBlackTime, function()
+    if self.ShowCharacter and self.ShowCharacter.Mesh then
+      self.SavedVisibilityBasedAnimTickOption = self.ShowCharacter.Mesh.VisibilityBasedAnimTickOption
+      self.ShowCharacter.Mesh.VisibilityBasedAnimTickOption = EVisibilityBasedAnimTickOption.AlwaysTickPoseAndRefreshBones
+      self.ShowCharacter:ForceResetDynamics()
+    end
     self.TalkContext:SetDirLight(true, self.ShowCharacter)
   end)
   if BlackKey then

@@ -202,5 +202,68 @@ return ReadOnly("HeadFrame", {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/HeadFrame/T_Head_Frame24_02.T_Head_Frame24_02'",
     Name = "UI_HeadFrame_Name_10026",
     SmallIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head_Frame/T_Head_Frame24_02.T_Head_Frame24_02'"
+  },
+  [10027] = {
+    AccessText = "UI_Accessory_Unlock_Event",
+    CanPreView = true,
+    Des = "UI_HeadFrame_Des_10027",
+    FrameID = 10027,
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/HeadFrame/T_Head_Frame31.T_Head_Frame31'",
+    Name = "UI_HeadFrame_Name_10027",
+    SmallIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head_Frame/T_Head_Frame31.T_Head_Frame31'"
+  },
+  [10028] = {
+    AccessText = "UI_Accessory_Unlock_Shop",
+    CanPreView = true,
+    Des = "UI_HeadFrame_Des_10028",
+    FrameID = 10028,
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/HeadFrame/T_Head_Frame30.T_Head_Frame30'",
+    Name = "UI_HeadFrame_Name_10028",
+    SmallIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head_Frame/T_Head_Frame30.T_Head_Frame30'"
+  },
+  [10029] = {
+    AccessText = "UI_Accessory_Unlock_Shop",
+    CanPreView = true,
+    Des = "UI_HeadFrame_Des_10029",
+    FrameID = 10029,
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/HeadFrame/T_Head_Frame25.T_Head_Frame25'",
+    Name = "UI_HeadFrame_Name_10029",
+    SmallIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head_Frame/T_Head_Frame25.T_Head_Frame25'"
+  },
+  [10030] = {
+    AccessText = "UI_Accessory_Unlock_MonthlyCard",
+    CanPreView = true,
+    Des = "UI_HeadFrame_Des_10030",
+    FrameID = 10030,
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/HeadFrame/T_Head_Frame26.T_Head_Frame26'",
+    Name = "UI_HeadFrame_Name_10030",
+    SmallIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head_Frame/T_Head_Frame26.T_Head_Frame26'"
+  },
+  [10031] = {
+    AccessText = "UI_Accessory_Unlock_MonthlyCard",
+    CanPreView = true,
+    Des = "UI_HeadFrame_Des_10031",
+    FrameID = 10031,
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/HeadFrame/T_Head_Frame27.T_Head_Frame27'",
+    Name = "UI_HeadFrame_Name_10031",
+    SmallIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head_Frame/T_Head_Frame27.T_Head_Frame27'"
+  },
+  [10032] = {
+    AccessText = "UI_Accessory_Unlock_Shop",
+    CanPreView = true,
+    Des = "UI_HeadFrame_Des_10032",
+    FrameID = 10032,
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/HeadFrame/T_Head_Frame29.T_Head_Frame29'",
+    Name = "UI_HeadFrame_Name_10032",
+    SmallIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head_Frame/T_Head_Frame29.T_Head_Frame29'"
+  },
+  [10033] = {
+    AccessText = "UI_Accessory_Unlock_Shop",
+    CanPreView = true,
+    Des = "UI_HeadFrame_Des_10033",
+    FrameID = 10033,
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/HeadFrame/T_Head_Frame28.T_Head_Frame28'",
+    Name = "UI_HeadFrame_Name_10033",
+    SmallIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head_Frame/T_Head_Frame28.T_Head_Frame28'"
   }
 })

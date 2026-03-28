@@ -430,7 +430,7 @@ function WBP_Archive_PageChar_C:FillListDatasWithCharacterInfo(Data, Info, Unloc
     SortPriority = Data.SortPriority,
     Unlock = Unlock,
     EnhanceLevel = Info.EnhanceLevel,
-    GradeLevel = Info.GradeLevel
+    GradeLevel = (Info.GradeLevel or 0) + (Info.ExtraGradeLevel or 0)
   })
 end
 

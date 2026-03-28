@@ -1,7 +1,21 @@
+from collections import OrderedDict
+
 from processor.base_processor import BaseProcessor
 
 
 class DungeonProcessor(BaseProcessor):
+    GROUP_SPAWN_FIELD_MAP = {
+        "GroupUnitSpawnCenterRange": "gr",
+        "GroupThreshold": "gth",
+        "GroupReplenishInterval": "gri",
+        "GroupInitUnitSpawnCenterRange": "gir",
+        "GroupDetectDelayTime": "gdt",
+        "GroupDetectTime": "gt",
+        "GroupLimit": "gl",
+        "GroupRadius": "gar",
+        "GroupRangeZ": "gz",
+    }
+
     def __init__(self, data_loader):
         super().__init__(data_loader)
         self.file_type = "Dungeon"
@@ -15,6 +29,8 @@ class DungeonProcessor(BaseProcessor):
             "ModDungeonMonReward.json"
         )
         self.monster_spawn_data = data_loader.load_json("MonsterSpawn.json")
+        self.monster_group_data = data_loader.load_json("MonsterGroup.json")
+        self.monster_group_spawn_data = data_loader.load_json("MonsterGroupSpawn.json")
         self.relation_spawn_data = data_loader.load_json("RelationSpawn.json")
         self.spawn_source_file_names = [
             "DefencePro.json",
@@ -91,10 +107,23 @@ class DungeonProcessor(BaseProcessor):
         # if "DungeonBGM" in dungeon_data:
         #     processed["背景音乐"] = dungeon_data.get("DungeonBGM")
 
+        bp_override_vars = dungeon_data.get("BPOverrideVars", {})
+        bp_special_monsters = []
+        for key in ("BossID", "Elite1", "Elite2"):
+            monster_id = bp_override_vars.get(key)
+            if monster_id:
+                bp_special_monsters.append(monster_id)
+        if bp_special_monsters:
+            processed["sm"] = list(
+                OrderedDict.fromkeys([*(processed.get("sm") or []), *bp_special_monsters])
+            )
+
         if "DungeonInitGuideUnitId" in dungeon_data:
             dungeon_monsters = dungeon_data.get("DungeonInitGuideUnitId", [])
             if dungeon_monsters:
-                processed["sm"] = dungeon_monsters
+                processed["sm"] = list(
+                    OrderedDict.fromkeys([*processed.get("sm", []), *dungeon_monsters])
+                )
 
                 # 处理sr字段：收集符合条件的DungeonDropReward
                 sr = []
@@ -123,7 +152,7 @@ class DungeonProcessor(BaseProcessor):
             return None
 
         # 处理副本怪物刷新波次
-        spawn_data = self._get_dungeon_spawn(dungeon_id)
+        spawn_data = self._get_dungeon_spawn(dungeon_data)
         if spawn_data:
             processed["spawn"] = spawn_data
 
@@ -132,6 +161,8 @@ class DungeonProcessor(BaseProcessor):
             processed["r"] = dungeon_data.get("DungeonReward", [])
             if len(processed["r"]) == 1 and processed["r"][0] == 50100:
                 return None
+        else:
+            return None
 
         # 处理DungeonUIBG
         # if "DungeonUIBG" in dungeon_data:
@@ -147,11 +178,12 @@ class DungeonProcessor(BaseProcessor):
 
         return processed
 
-    def _get_dungeon_spawn(self, dungeon_id):
+    def _get_dungeon_spawn(self, dungeon_data):
         """根据副本配置获取怪物刷新波次"""
+        dungeon_id = dungeon_data.get("DungeonID", 0)
         spawn_source = self.dungeon_spawn_source_map.get(dungeon_id)
         if not spawn_source:
-            return []
+            return self._get_raid_dungeon_spawn(dungeon_data)
 
         spawn_rule_waves = []
         self._append_spawn_rule_waves(
@@ -182,7 +214,9 @@ class DungeonProcessor(BaseProcessor):
             spawn_nodes = self._convert_spawn_ids_to_nodes(spawn_rule_wave)
             if spawn_nodes:
                 spawn_waves.append(spawn_nodes)
-        return spawn_waves
+        if spawn_waves:
+            return spawn_waves
+        return self._get_raid_dungeon_spawn(dungeon_data)
 
     def _append_spawn_rule_waves(
         self, target_waves, raw_spawn_rule, split_list_items=False
@@ -207,6 +241,45 @@ class DungeonProcessor(BaseProcessor):
             return
 
         target_waves.append([raw_spawn_rule])
+
+    def _get_raid_dungeon_spawn(self, dungeon_data):
+        """仅为 Raid 副本补充 MonsterID 对应的真实刷怪波次"""
+        bp_override_vars = dungeon_data.get("BPOverrideVars", {})
+        spawn_id = bp_override_vars.get("MonsterID")
+        if not spawn_id:
+            return []
+
+        spawn_config = self.monster_spawn_data.get(
+            str(spawn_id)
+        ) or self.monster_spawn_data.get(spawn_id)
+        if not spawn_config:
+            return []
+
+        spawn_node = {
+            "id": spawn_config.get("UnitSpawnId", spawn_id),
+        }
+
+        detect_time = spawn_config.get("DetectTime", 0)
+        if detect_time:
+            spawn_node["time"] = detect_time
+
+        threshold = spawn_config.get("Threshold", 0)
+        if threshold:
+            spawn_node["th"] = threshold
+
+        radius = [
+            spawn_config.get("UnitSpawnRadiusMin", 0),
+            spawn_config.get("UnitSpawnRadiusMax", 0),
+            spawn_config.get("PhoneUnitSpawnRadiusMin", 0),
+            spawn_config.get("PhoneUnitSpawnRadiusMax", 0),
+        ]
+        if any(radius):
+            spawn_node["radius"] = radius
+
+        if spawn_config.get("OpenGroupSpawn"):
+            self._append_group_spawn_info(spawn_node, spawn_config)
+
+        return [[spawn_node]]
 
     def _convert_spawn_ids_to_nodes(self, spawn_ids):
         """将一波中的MonsterSpawnId列表转换为刷怪点配置列表"""
@@ -245,6 +318,9 @@ class DungeonProcessor(BaseProcessor):
                     monster_info["lv"] = unit_level
                 spawn_node["m"].append(monster_info)
 
+            if spawn_config.get("OpenGroupSpawn"):
+                self._append_group_spawn_info(spawn_node, spawn_config)
+
             relation_id = spawn_config.get("RelationId")
             if relation_id is not None:
                 relation_spawn = self.relation_spawn_data.get(
@@ -277,3 +353,59 @@ class DungeonProcessor(BaseProcessor):
 
             spawn_nodes.append(spawn_node)
         return spawn_nodes
+
+    def _append_group_spawn_info(self, spawn_node, spawn_config):
+        """补充组刷怪信息，兼容 MonsterSpawn 里只提供 GroupSpawnId 的情况"""
+        group_spawn_id = spawn_config.get("GroupSpawnId") or spawn_config.get(
+            "UnitSpawnId"
+        )
+        if not group_spawn_id:
+            return
+
+        group_spawn = self.monster_group_spawn_data.get(
+            str(group_spawn_id)
+        ) or self.monster_group_spawn_data.get(group_spawn_id)
+        if not group_spawn:
+            return
+
+        group_ids = group_spawn.get("MonsterGroupIds", [])
+        group_numbers = group_spawn.get("GroupNumber", [])
+        group_weights = group_spawn.get("GroupWeight", [])
+        group_levels = group_spawn.get("GroupLevel", [])
+
+        group_spawn_infos = []
+        for index, group_id in enumerate(group_ids):
+            group_info = {"id": group_id}
+            if index < len(group_numbers):
+                group_info["num"] = group_numbers[index]
+            if index < len(group_weights):
+                group_info["w"] = group_weights[index]
+            if index < len(group_levels):
+                group_info["lv"] = group_levels[index]
+            group_info["m"] = self._get_monster_group_members(group_id)
+            for field_name, short_name in self.GROUP_SPAWN_FIELD_MAP.items():
+                if field_name in group_spawn:
+                    group_info[short_name] = group_spawn.get(field_name)
+            group_spawn_infos.append(group_info)
+
+        if not group_spawn_infos:
+            return
+
+        spawn_node["mg"] = group_spawn_infos
+
+    def _get_monster_group_members(self, group_id):
+        """展开 MonsterGroup 为真实怪物成员列表"""
+        group_data = self.monster_group_data.get(str(group_id)) or self.monster_group_data.get(
+            group_id
+        )
+        if not group_data:
+            return []
+
+        members = []
+        for member in group_data.get("MemberSpawnProb", []):
+            member_info = {"id": member.get("UnitId", 0)}
+            unit_prob = member.get("UnitProb", 0)
+            if unit_prob and unit_prob != 1:
+                member_info["p"] = unit_prob
+            members.append(member_info)
+        return members

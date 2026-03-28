@@ -7,6 +7,8 @@ function M:Init(Parent, SortBy_List, SortType, Params)
   rawset(self, "CurSortBy", Params.SortBy or 1)
   rawset(self, "_OnAddedToFocusPath", Params.OnAddedToFocusPath)
   rawset(self, "_OnRemovedFromFocusPath", Params.OnRemovedFromFocusPath)
+  rawset(self, "_OnListOpened", Params.OnListOpened)
+  rawset(self, "_OnListClosed", Params.OnListClosed)
   rawset(self, "OnGetBackFocusWidget", Params.OnGetBackFocusWidget)
   rawset(self, "OnGetBackReply", Params.OnGetBackReply)
   rawset(self, "SortBy_List", SortBy_List or {})
@@ -127,10 +129,16 @@ end
 function M:OnListClosed()
   rawset(self, "IsListViewOpened", false)
   self:SetFocus()
+  if self._OnListClosed then
+    self._OnListClosed(self.Parent, self)
+  end
 end
 
 function M:OnListOpened()
   rawset(self, "IsListViewOpened", true)
+  if self._OnListOpened then
+    self._OnListOpened(self.Parent, self)
+  end
 end
 
 function M:OnBtn_SortType_Pressed()

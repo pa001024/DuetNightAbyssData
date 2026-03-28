@@ -1,21 +1,22 @@
 local T = {}
 T.RT_1 = {9998, 9999}
 T.RT_2 = {10850}
-T.RT_3 = {9998, 10001}
-T.RT_4 = {10804}
+T.RT_3 = {55, 60}
+T.RT_4 = {108141}
 T.RT_5 = {0, 5}
-T.RT_6 = {9998, 10002}
-T.RT_7 = {10805}
-T.RT_8 = {10810}
-T.RT_9 = {10812}
-T.RT_10 = {10813}
-T.RT_11 = {10814}
-T.RT_12 = {10815}
-T.RT_13 = {9998, 10005}
-T.RT_14 = {10816}
-T.RT_15 = {55, 60}
-T.RT_16 = {26, 30}
-T.RT_17 = {10809}
+T.RT_6 = {9998, 10001}
+T.RT_7 = {10804}
+T.RT_8 = {9998, 10002}
+T.RT_9 = {10805}
+T.RT_10 = {10810}
+T.RT_11 = {10812}
+T.RT_12 = {10813}
+T.RT_13 = {10814}
+T.RT_14 = {10815}
+T.RT_15 = {9998, 10005}
+T.RT_16 = {10816}
+T.RT_17 = {26, 30}
+T.RT_18 = {10809}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -56,75 +57,87 @@ return ReadOnly("ExtermPro", {
     OnInitSpawnRule = T.RT_2,
     TargetNum = 100
   },
+  [31004] = {
+    DungeonId = 31004,
+    EliteRange = T.RT_3,
+    EliteSpawnOnlyRelation = false,
+    EliteSpawnRule = 91136,
+    NormalRange = T.RT_1,
+    NormalSpawnOnlyRelation = false,
+    NormalSpawnRule = 108141,
+    OnInitSpawnRule = T.RT_4,
+    PetSpawnRange = T.RT_5,
+    TargetNum = 100
+  },
   [61101] = {
     DungeonId = 61101,
-    EliteRange = T.RT_3,
+    EliteRange = T.RT_6,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 10801,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10804,
-    OnInitSpawnRule = T.RT_4,
+    OnInitSpawnRule = T.RT_7,
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
   [61102] = {
     DungeonId = 61102,
-    EliteRange = T.RT_6,
+    EliteRange = T.RT_8,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 10801,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10805,
-    OnInitSpawnRule = T.RT_7,
+    OnInitSpawnRule = T.RT_9,
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
   [63101] = {
     DungeonId = 63101,
-    EliteRange = T.RT_3,
+    EliteRange = T.RT_6,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 10801,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10804,
-    OnInitSpawnRule = T.RT_4,
+    OnInitSpawnRule = T.RT_7,
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
   [63102] = {
     DungeonId = 63102,
-    EliteRange = T.RT_6,
+    EliteRange = T.RT_8,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 10801,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10805,
-    OnInitSpawnRule = T.RT_7,
+    OnInitSpawnRule = T.RT_9,
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
   [65101] = {
     DungeonId = 65101,
-    EliteRange = T.RT_3,
-    EliteSpawnOnlyRelation = false,
-    EliteSpawnRule = 10801,
-    NormalRange = T.RT_1,
-    NormalSpawnOnlyRelation = false,
-    NormalSpawnRule = 10804,
-    OnInitSpawnRule = T.RT_4,
-    PetSpawnRange = T.RT_5,
-    TargetNum = 100
-  },
-  [65102] = {
-    DungeonId = 65102,
     EliteRange = T.RT_6,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 10801,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
-    NormalSpawnRule = 10805,
+    NormalSpawnRule = 10804,
     OnInitSpawnRule = T.RT_7,
+    PetSpawnRange = T.RT_5,
+    TargetNum = 100
+  },
+  [65102] = {
+    DungeonId = 65102,
+    EliteRange = T.RT_8,
+    EliteSpawnOnlyRelation = false,
+    EliteSpawnRule = 10801,
+    NormalRange = T.RT_1,
+    NormalSpawnOnlyRelation = false,
+    NormalSpawnRule = 10805,
+    OnInitSpawnRule = T.RT_9,
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
@@ -136,7 +149,7 @@ return ReadOnly("ExtermPro", {
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10810,
-    OnInitSpawnRule = T.RT_8,
+    OnInitSpawnRule = T.RT_10,
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
@@ -154,25 +167,25 @@ return ReadOnly("ExtermPro", {
   },
   [91003] = {
     DungeonId = 91003,
-    EliteRange = T.RT_3,
-    EliteSpawnOnlyRelation = false,
-    EliteSpawnRule = 10801,
-    NormalRange = T.RT_1,
-    NormalSpawnOnlyRelation = false,
-    NormalSpawnRule = 10812,
-    OnInitSpawnRule = T.RT_9,
-    PetSpawnRange = T.RT_5,
-    TargetNum = 100
-  },
-  [91004] = {
-    DungeonId = 91004,
     EliteRange = T.RT_6,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 10801,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
+    NormalSpawnRule = 10812,
+    OnInitSpawnRule = T.RT_11,
+    PetSpawnRange = T.RT_5,
+    TargetNum = 100
+  },
+  [91004] = {
+    DungeonId = 91004,
+    EliteRange = T.RT_8,
+    EliteSpawnOnlyRelation = false,
+    EliteSpawnRule = 10801,
+    NormalRange = T.RT_1,
+    NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10813,
-    OnInitSpawnRule = T.RT_10,
+    OnInitSpawnRule = T.RT_12,
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
@@ -184,7 +197,7 @@ return ReadOnly("ExtermPro", {
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10814,
-    OnInitSpawnRule = T.RT_11,
+    OnInitSpawnRule = T.RT_13,
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
@@ -196,25 +209,25 @@ return ReadOnly("ExtermPro", {
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10815,
-    OnInitSpawnRule = T.RT_12,
+    OnInitSpawnRule = T.RT_14,
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
   [91007] = {
     DungeonId = 91007,
-    EliteRange = T.RT_13,
+    EliteRange = T.RT_15,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 10801,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10816,
-    OnInitSpawnRule = T.RT_14,
+    OnInitSpawnRule = T.RT_16,
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
   [91008] = {
     DungeonId = 91008,
-    EliteRange = T.RT_13,
+    EliteRange = T.RT_15,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 10801,
     NormalRange = T.RT_1,
@@ -226,7 +239,7 @@ return ReadOnly("ExtermPro", {
   },
   [91009] = {
     DungeonId = 91009,
-    EliteRange = T.RT_13,
+    EliteRange = T.RT_15,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 10801,
     NormalRange = T.RT_1,
@@ -238,7 +251,7 @@ return ReadOnly("ExtermPro", {
   },
   [91010] = {
     DungeonId = 91010,
-    EliteRange = T.RT_13,
+    EliteRange = T.RT_15,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 10801,
     NormalRange = T.RT_1,
@@ -250,7 +263,7 @@ return ReadOnly("ExtermPro", {
   },
   [91011] = {
     DungeonId = 91011,
-    EliteRange = T.RT_13,
+    EliteRange = T.RT_15,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 10801,
     NormalRange = T.RT_1,
@@ -262,7 +275,7 @@ return ReadOnly("ExtermPro", {
   },
   [91091] = {
     DungeonId = 91091,
-    EliteRange = T.RT_15,
+    EliteRange = T.RT_3,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 91113,
     NormalRange = T.RT_1,
@@ -274,7 +287,7 @@ return ReadOnly("ExtermPro", {
   },
   [91092] = {
     DungeonId = 91092,
-    EliteRange = T.RT_15,
+    EliteRange = T.RT_3,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 91114,
     NormalRange = T.RT_1,
@@ -286,277 +299,277 @@ return ReadOnly("ExtermPro", {
   },
   [91101] = {
     DungeonId = 91101,
-    EliteRange = T.RT_16,
+    EliteRange = T.RT_17,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 91101,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10809,
-    OnInitSpawnRule = T.RT_17,
+    OnInitSpawnRule = T.RT_18,
     PetSpawnRange = T.RT_5,
     TargetNum = 50
   },
   [91102] = {
     DungeonId = 91102,
-    EliteRange = T.RT_16,
+    EliteRange = T.RT_17,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 91102,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10809,
-    OnInitSpawnRule = T.RT_17,
+    OnInitSpawnRule = T.RT_18,
     PetSpawnRange = T.RT_5,
     TargetNum = 50
   },
   [91103] = {
     DungeonId = 91103,
-    EliteRange = T.RT_16,
+    EliteRange = T.RT_17,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 91103,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10809,
-    OnInitSpawnRule = T.RT_17,
+    OnInitSpawnRule = T.RT_18,
     PetSpawnRange = T.RT_5,
     TargetNum = 50
   },
   [91104] = {
     DungeonId = 91104,
-    EliteRange = T.RT_16,
+    EliteRange = T.RT_17,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 91104,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10809,
-    OnInitSpawnRule = T.RT_17,
+    OnInitSpawnRule = T.RT_18,
     PetSpawnRange = T.RT_5,
     TargetNum = 50
   },
   [91105] = {
     DungeonId = 91105,
-    EliteRange = T.RT_16,
+    EliteRange = T.RT_17,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 91105,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10810,
-    OnInitSpawnRule = T.RT_8,
+    OnInitSpawnRule = T.RT_10,
     PetSpawnRange = T.RT_5,
     TargetNum = 50
   },
   [91106] = {
     DungeonId = 91106,
-    EliteRange = T.RT_16,
+    EliteRange = T.RT_17,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 91106,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10810,
-    OnInitSpawnRule = T.RT_8,
+    OnInitSpawnRule = T.RT_10,
     PetSpawnRange = T.RT_5,
     TargetNum = 50
   },
   [91107] = {
     DungeonId = 91107,
-    EliteRange = T.RT_15,
+    EliteRange = T.RT_3,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 91107,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10812,
-    OnInitSpawnRule = T.RT_9,
+    OnInitSpawnRule = T.RT_11,
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
   [91108] = {
     DungeonId = 91108,
-    EliteRange = T.RT_15,
+    EliteRange = T.RT_3,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 91108,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10812,
-    OnInitSpawnRule = T.RT_9,
+    OnInitSpawnRule = T.RT_11,
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
   [91109] = {
     DungeonId = 91109,
-    EliteRange = T.RT_15,
+    EliteRange = T.RT_3,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 91109,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10812,
-    OnInitSpawnRule = T.RT_9,
+    OnInitSpawnRule = T.RT_11,
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
   [91110] = {
     DungeonId = 91110,
-    EliteRange = T.RT_15,
+    EliteRange = T.RT_3,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 91110,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10812,
-    OnInitSpawnRule = T.RT_9,
+    OnInitSpawnRule = T.RT_11,
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
   [91111] = {
     DungeonId = 91111,
-    EliteRange = T.RT_15,
+    EliteRange = T.RT_3,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 91111,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10812,
-    OnInitSpawnRule = T.RT_9,
+    OnInitSpawnRule = T.RT_11,
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
   [91112] = {
     DungeonId = 91112,
-    EliteRange = T.RT_15,
+    EliteRange = T.RT_3,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 91112,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10813,
-    OnInitSpawnRule = T.RT_10,
+    OnInitSpawnRule = T.RT_12,
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
   [91113] = {
     DungeonId = 91113,
-    EliteRange = T.RT_15,
+    EliteRange = T.RT_3,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 91113,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10813,
-    OnInitSpawnRule = T.RT_10,
+    OnInitSpawnRule = T.RT_12,
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
   [91114] = {
     DungeonId = 91114,
-    EliteRange = T.RT_15,
+    EliteRange = T.RT_3,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 91114,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10813,
-    OnInitSpawnRule = T.RT_10,
+    OnInitSpawnRule = T.RT_12,
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
   [91115] = {
     DungeonId = 91115,
-    EliteRange = T.RT_15,
+    EliteRange = T.RT_3,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 91115,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10813,
-    OnInitSpawnRule = T.RT_10,
+    OnInitSpawnRule = T.RT_12,
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
   [91116] = {
     DungeonId = 91116,
-    EliteRange = T.RT_15,
+    EliteRange = T.RT_3,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 91116,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10813,
-    OnInitSpawnRule = T.RT_10,
+    OnInitSpawnRule = T.RT_12,
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
   [91117] = {
     DungeonId = 91117,
-    EliteRange = T.RT_15,
+    EliteRange = T.RT_3,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 91117,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10813,
-    OnInitSpawnRule = T.RT_10,
+    OnInitSpawnRule = T.RT_12,
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
   [91118] = {
     DungeonId = 91118,
-    EliteRange = T.RT_15,
+    EliteRange = T.RT_3,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 91118,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10814,
-    OnInitSpawnRule = T.RT_11,
+    OnInitSpawnRule = T.RT_13,
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
   [91119] = {
     DungeonId = 91119,
-    EliteRange = T.RT_15,
+    EliteRange = T.RT_3,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 91119,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10814,
-    OnInitSpawnRule = T.RT_11,
+    OnInitSpawnRule = T.RT_13,
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
   [91120] = {
     DungeonId = 91120,
-    EliteRange = T.RT_15,
+    EliteRange = T.RT_3,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 91120,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10814,
-    OnInitSpawnRule = T.RT_11,
+    OnInitSpawnRule = T.RT_13,
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
   [91121] = {
     DungeonId = 91121,
-    EliteRange = T.RT_15,
+    EliteRange = T.RT_3,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 91121,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10814,
-    OnInitSpawnRule = T.RT_11,
+    OnInitSpawnRule = T.RT_13,
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
   [91122] = {
     DungeonId = 91122,
-    EliteRange = T.RT_15,
+    EliteRange = T.RT_3,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 91122,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10814,
-    OnInitSpawnRule = T.RT_11,
+    OnInitSpawnRule = T.RT_13,
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
   [91123] = {
     DungeonId = 91123,
-    EliteRange = T.RT_15,
+    EliteRange = T.RT_3,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 91123,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10814,
-    OnInitSpawnRule = T.RT_11,
+    OnInitSpawnRule = T.RT_13,
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
@@ -596,99 +609,123 @@ return ReadOnly("ExtermPro", {
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
+  [91128] = {
+    DungeonId = 91128,
+    EliteRange = T.RT_1,
+    EliteSpawnOnlyRelation = false,
+    EliteSpawnRule = 91128,
+    NormalRange = T.RT_1,
+    NormalSpawnOnlyRelation = false,
+    NormalSpawnRule = 108141,
+    OnInitSpawnRule = {108141, 91128},
+    PetSpawnRange = T.RT_5,
+    TargetNum = 100
+  },
+  [91129] = {
+    DungeonId = 91129,
+    EliteRange = T.RT_1,
+    EliteSpawnOnlyRelation = false,
+    EliteSpawnRule = 91129,
+    NormalRange = T.RT_1,
+    NormalSpawnOnlyRelation = false,
+    NormalSpawnRule = 108141,
+    OnInitSpawnRule = {108141, 91129},
+    PetSpawnRange = T.RT_5,
+    TargetNum = 100
+  },
   [91136] = {
     DungeonId = 91136,
-    EliteRange = T.RT_15,
+    EliteRange = T.RT_3,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 91136,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 108141,
-    OnInitSpawnRule = {108141},
+    OnInitSpawnRule = T.RT_4,
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
   [91137] = {
     DungeonId = 91137,
-    EliteRange = T.RT_15,
+    EliteRange = T.RT_3,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 91137,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10815,
-    OnInitSpawnRule = T.RT_12,
+    OnInitSpawnRule = T.RT_14,
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
   [91138] = {
     DungeonId = 91138,
-    EliteRange = T.RT_15,
+    EliteRange = T.RT_3,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 91138,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10815,
-    OnInitSpawnRule = T.RT_12,
+    OnInitSpawnRule = T.RT_14,
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
   [91139] = {
     DungeonId = 91139,
-    EliteRange = T.RT_15,
+    EliteRange = T.RT_3,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 91139,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10815,
-    OnInitSpawnRule = T.RT_12,
+    OnInitSpawnRule = T.RT_14,
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
   [91140] = {
     DungeonId = 91140,
-    EliteRange = T.RT_15,
+    EliteRange = T.RT_3,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 91140,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10815,
-    OnInitSpawnRule = T.RT_12,
+    OnInitSpawnRule = T.RT_14,
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
   [91141] = {
     DungeonId = 91141,
-    EliteRange = T.RT_15,
+    EliteRange = T.RT_3,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 91141,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10815,
-    OnInitSpawnRule = T.RT_12,
+    OnInitSpawnRule = T.RT_14,
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
   [91142] = {
     DungeonId = 91142,
-    EliteRange = T.RT_15,
+    EliteRange = T.RT_3,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 91142,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10815,
-    OnInitSpawnRule = T.RT_12,
+    OnInitSpawnRule = T.RT_14,
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
   [91143] = {
     DungeonId = 91143,
-    EliteRange = T.RT_15,
+    EliteRange = T.RT_3,
     EliteSpawnOnlyRelation = false,
     EliteSpawnRule = 91143,
     NormalRange = T.RT_1,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10816,
-    OnInitSpawnRule = T.RT_14,
+    OnInitSpawnRule = T.RT_16,
     PetSpawnRange = T.RT_5,
     TargetNum = 100
   },
@@ -1248,6 +1285,38 @@ return ReadOnly("ExtermPro", {
       10851,
       91205,
       912050
+    },
+    PetSpawnRange = T.RT_5,
+    TargetNum = 200
+  },
+  [91221] = {
+    DungeonId = 91221,
+    EliteRange = T.RT_1,
+    EliteSpawnOnlyRelation = false,
+    EliteSpawnRule = 91143,
+    NormalRange = T.RT_1,
+    NormalSpawnOnlyRelation = false,
+    NormalSpawnRule = 10816,
+    OnInitSpawnRule = {
+      10851,
+      91221,
+      912210
+    },
+    PetSpawnRange = T.RT_5,
+    TargetNum = 200
+  },
+  [91222] = {
+    DungeonId = 91222,
+    EliteRange = T.RT_1,
+    EliteSpawnOnlyRelation = false,
+    EliteSpawnRule = 91143,
+    NormalRange = T.RT_1,
+    NormalSpawnOnlyRelation = false,
+    NormalSpawnRule = 10816,
+    OnInitSpawnRule = {
+      10851,
+      91222,
+      912220
     },
     PetSpawnRange = T.RT_5,
     TargetNum = 200

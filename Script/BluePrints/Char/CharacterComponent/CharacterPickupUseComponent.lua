@@ -103,12 +103,17 @@ function Component:PickupTriggerRewardEvent(UnitId, Transform, PickUpEid, bExtra
     bExtra = bExtra,
     SourceEid = self.Eid,
     WorldRegionEid = Pickup.WorldRegionEid,
-    RegionDataType = Pickup.RegionDataType
+    RegionDataType = Pickup.RegionDataType,
+    UniqueId = Pickup.ServerUniqueId
   }
   local Callback = bNeedCallback and function()
     self:TriggerPickupSuccessCallback(UnitId)
   end
-  GameMode:TriggerRewardEvent(UnitId, CommonConst.RewardReason.PickUp, Transform, ExtraInfo, Callback)
+  if GameMode:CheckServerDungeonEnable() then
+    GameMode:NotifyServerDungeonEventWithCallback(Callback, "TriggerPickupRewardEvent", UnitId, CommonConst.RewardReason.PickUp, ExtraInfo)
+  else
+    GameMode:TriggerRewardEvent(UnitId, CommonConst.RewardReason.PickUp, Transform, ExtraInfo, Callback)
+  end
 end
 
 function Component:PickupToUseSkillEffect(PickUpCount, SkillId)
@@ -122,7 +127,7 @@ function Component:PickupToUseSkillEffect(PickUpCount, SkillId)
 end
 
 function Component:_PickupToUseSkillEffect(SkillId)
-  Battle(self):ExecuteSkillEffect(self, SkillId, self)
+  Battle(self):ExecuteSkillEffectWithType(self, SkillId, self)
 end
 
 function Component:TriggerPickupSuccessCallback(DropId)

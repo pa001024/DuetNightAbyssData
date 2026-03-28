@@ -11,7 +11,7 @@ function M:OnLoaded(...)
   local ConfigData = Params.ConfigData
   self.TabConfigDatas = Params.TabConfigDatas
   self.ConfigData = ConfigData
-  self.Owner = Owner
+  self.Owner = Params.Owner
   self.Type = ConfigData.Type
   self.CurrentTab = nil
   self.Type2Index = {}
@@ -97,7 +97,12 @@ function M:OnLoaded(...)
   else
     self:SetFocus()
   end
-  self.Com_Time:SetTimeText(GText(self.ConfigData.TimeText or ""), self.ConfigData.RemainTimeDict or {})
+  if self.ConfigData.IsExpired then
+    self.Com_Time:SetVisibility(ESlateVisibility.Collapsed)
+  else
+    self.Com_Time:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.Com_Time:SetTimeText(GText(self.ConfigData.TimeText or ""), self.ConfigData.RemainTimeDict or {})
+  end
   if self.In then
     self:PlayAnimation(self.In)
   end
@@ -122,21 +127,23 @@ function M:RefreshAcvitityRewardPanel()
 end
 
 function M:AddReddotChangedListen()
-  for _, Data in ipairs(self.ConfigData.TabInfo) do
-    if Data then
-      local RedDotName = Data.ReddotName
-      local TabId = _
-      local Type = Data.Type
-      ReddotManager.AddListenerEx(RedDotName, self, function(self, Count, RdType, RdName)
-        local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(self.ReddotName)
-        if not CacheDetail[Type] then
-          self.Com_TabSub:ShowTabRedDotByTabId(TabId, false, false, false)
-        else
-          self.Com_TabSub:ShowTabRedDotByTabId(TabId, true, false, false)
-        end
-      end)
-    end
+  local ReddotName = self.ReddotName
+  if not ReddotName then
+    return
   end
+  ReddotManager.AddListenerEx(ReddotName, self, function(self, Count, RdType, RdName)
+    local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(ReddotName)
+    for idx, Data in ipairs(self.ConfigData.TabInfo or {}) do
+      if Data then
+        local Type = Data.Type
+        if CacheDetail and CacheDetail[Type] then
+          self.Com_TabSub:ShowTabRedDotByTabId(idx, false, true, false)
+        else
+          self.Com_TabSub:ShowTabRedDotByTabId(idx, false, false, false)
+        end
+      end
+    end
+  end)
 end
 
 function M:InitPackingInfo(PackingInfo)
@@ -154,22 +161,33 @@ function M:InitPackingInfo(PackingInfo)
       end
       self.SmallItem.Com_ItemHead:SetHeadIcon(PackingInfo.SmallItemInfo.HeadIconId, PackingInfo.SmallItemInfo.Com_Item:Init(PackingInfo.ComItemInfo))
     else
-      self.SmallItem.Com_Item:Init(PackingInfo.ComItemInfo)
+      self.SmallItem.Com_Item:Init(PackingInfo.SmallItemInfo.ComItemInfo)
     end
-    self.SmallItem:SetVisibility(ESlateVisibility.Collapsed)
-    self.BigItem:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   end
   if PackingInfo.BigItem then
+    if self.SmallItem then
+      self.SmallItem:SetVisibility(ESlateVisibility.Collapsed)
+    end
+    self.BigItem:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  end
+  if PackingInfo.BigItem and PackingInfo.BigItemInfo and PackingInfo.BigItemInfo.BGIconPath then
     local Img = LoadObject(PackingInfo.BigItemInfo.BGIconPath)
     if Img then
       self.BigItem.Image_RewardItem:SetBrushResourceObject(Img)
     end
   end
+  if PackingInfo.BtnDetailTips then
+    self.Text_BtnDetailTips:SetText(GText(PackingInfo.BtnDetailTips))
+  end
   if PackingInfo.ReceveCallBack then
+    self.WS_Btn:SetVisibility(UIConst.VisibilityOp.Visible)
     self.Btn_DesignGet:BindEventOnClicked(self, function()
       PackingInfo.ReceveParam.SelfWidget = self
       PackingInfo.ReceveCallBack(self, PackingInfo.ReceveParam)
     end)
+    self.WS_Bottom:SetActiveWidgetIndex(0)
+  else
+    self.WS_Bottom:SetActiveWidgetIndex(1)
   end
   if PackingInfo.IsShowGotoBtn == false then
     self.WS_Btn:SetActiveWidgetIndex(1)
@@ -180,9 +198,13 @@ function M:InitPackingInfo(PackingInfo)
     end)
   end
   if PackingInfo.CheckDetailCallBack then
+    self.Btn_Check:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.Btn_Check.AudioEventPath = "event:/ui/common/click_btn_small"
     self.Btn_Check:BindEventOnClicked(self, function()
       PackingInfo.CheckDetailCallBack(self, PackingInfo.CheckDetailParam)
     end)
+  else
+    self.Btn_Check:SetVisibility(ESlateVisibility.Collapsed)
   end
   if PackingInfo.CanReceive then
     self.Btn_DesignGet:ForbidBtn(false)
@@ -206,6 +228,10 @@ function M:InitPackingInfo(PackingInfo)
   end
   if PackingInfo.BtnTips then
     self.Text_BtnTips:SetText(GText(PackingInfo.BtnTips))
+  end
+  self.WS_Bottom:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  if PackingInfo.HideReceiveBtnInfo then
+    self.WS_Bottom:SetVisibility(ESlateVisibility.Collapsed)
   end
 end
 
@@ -443,7 +469,7 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
   local IsUseKeyAndMouse = CurInputDevice == ECommonInputType.MouseAndKeyboard
   if IsUseKeyAndMouse then
     self:InitKeyBoardView()
-  else
+  elseif CurInputDevice == ECommonInputType.Gamepad then
     self:TryInitGamepadView()
   end
 end
@@ -484,19 +510,26 @@ function M:InitListTabInfo()
       table.insert(SubTabList, {
         Text = GText(TabItem.Title),
         TabId = Index,
-        ShowRedDot = true,
-        ReddotName = TabItem.ReddotName
+        ShowRedDot = false
       })
     end
     self.Com_TabSub:Init({
       PlatformName = self.Platform,
       LeftKey = "A",
       RightKey = "D",
-      Tabs = SubTabList
+      Tabs = SubTabList,
+      SoundFunc = function()
+        AudioManager(self):PlayUISound(nil, "event:/ui/common/click_btn_sort_tab", "TabClickSound", nil)
+      end
     })
     self.Com_TabSub:BindEventOnTabSelected(self, self.OnTabSelected)
     self.Com_TabSub:SelectTab(1)
     self:AddReddotChangedListen()
+    if #SubTabList <= 1 then
+      self.Group_DetailTab:SetVisibility(ESlateVisibility.Collapsed)
+    else
+      self.Group_DetailTab:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    end
   else
     self.List_Tab.BP_OnItemSelectionChanged:Add(self, self.OnSelectItemChanged)
     self.List_Tab:SetNavigationRuleCustom(EUINavigation.Right, {
@@ -542,7 +575,12 @@ function M:RealRefreshListRewardInfo(TabType)
   self:RefreshBtnGetAll(ConfigData)
   self:PlayAnimation(self.Change)
   self:AddTimer(0.01, function()
-    UIUtils.PlayListViewFramingInAnimation(self, self.List_Item, {AnimName = "In"})
+    UIUtils.PlayListViewFramingInAnimation(self, self.List_Item, {
+      AnimName = "In",
+      Callback = function()
+        self:NavigateToFirstDisplayedItem(self.List_Item)
+      end
+    })
   end, false, 0, nil, true)
 end
 
@@ -570,15 +608,20 @@ function M:RefreshBtnGetAll(ConfigData)
 end
 
 function M:RefreshReddotInfo()
-  DebugPrint("@@@ComDilaog Reward Try Clear Reddot ReddotName:", self.ReddotName, " Type:", self.SelectedContent.Type)
+  local TabType = self.SelectedContent and self.SelectedContent.Type or self.Type
+  if not TabType then
+    DebugPrint("@@@ComDilaog Reward RefreshReddotInfo: no tab type to clear reddot", self.ReddotName)
+    return
+  end
+  DebugPrint("@@@ComDilaog Reward Try Clear Reddot ReddotName:", self.ReddotName, " Type:", TabType)
   local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(self.ReddotName)
-  if CacheDetail[self.SelectedContent.Type] then
+  if CacheDetail[TabType] then
     local Num = 0
-    for _, _ in pairs(CacheDetail[self.SelectedContent.Type]) do
+    for _, _ in pairs(CacheDetail[TabType]) do
       Num = Num + 1
     end
-    CacheDetail[self.SelectedContent.Type] = nil
-    DebugPrint("@@@ComDilaog Reward Clear Reddot ReddotName:", self.ReddotName, " Type:", self.SelectedContent.Type, " Num:", Num)
+    CacheDetail[TabType] = nil
+    DebugPrint("@@@ComDilaog Reward Clear Reddot ReddotName:", self.ReddotName, " Type:", TabType, " Num:", Num)
     ReddotManager.DecreaseLeafNodeCount(self.ReddotName, Num)
   end
 end
@@ -634,11 +677,13 @@ function M:InitGamepadView()
   if self.Key_Check then
     self.Key_Check:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   end
-  self:ShowGamepadViewBtn(false)
-  self:ShowGamepadViewSingleBtn(false)
+  self:ShowGamepadViewBtn(true)
 end
 
 function M:InitKeyBoardView()
+  if CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" then
+    return
+  end
   self.IsInViewMode = false
   self.RewardContent_OneClick.Btn_OneClick:SetGamePadIconVisible(false)
   if not self.RewardContent_OneClick.Btn_OneClick:IsBtnForbidden() then
@@ -653,9 +698,9 @@ function M:InitKeyBoardView()
   if self.Key_Check then
     self.Key_Check:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
-  self:ShowGamepadViewBtn(true)
-  self:ShowGamepadViewSingleBtn(true)
+  self:ShowGamepadViewBtn(false)
   local ConfigData = self.Datas[self.Type]
+  ConfigData = ConfigData or self.ConfigData
   self:RefreshBtnGetAll(ConfigData)
   self:PlayAnimation(self.Normal)
 end
@@ -674,28 +719,69 @@ function M:ShowGamepadViewBtn(bShow)
     return
   end
   if bShow then
-    self.Com_Tab:UpdateBottomKeyInfo({
-      {
-        KeyInfoList = {
-          {
-            Type = "Text",
-            Text = "Esc",
-            ClickCallback = self.CloseSelf,
-            Owner = self
-          }
+    local IsScrollable = self:CheckDescScrollable()
+    if IsScrollable then
+      self.Com_Tab:UpdateBottomKeyInfo({
+        {
+          GamePadInfoList = {
+            {
+              Type = "Img",
+              ImgShortPath = "RV",
+              Owner = self
+            }
+          },
+          Desc = GText("UI_Controller_Slide"),
+          bLongPress = false
         },
-        GamePadInfoList = {
-          {
-            Type = "Img",
-            ImgShortPath = "B",
-            ClickCallback = self.OnReturnKeyDown,
-            Owner = self
-          }
-        },
-        Desc = GText("UI_BACK"),
-        bLongPress = false
-      }
-    })
+        {
+          KeyInfoList = {
+            {
+              Type = "Text",
+              Text = "Esc",
+              ClickCallback = self.CloseSelf,
+              Owner = self
+            }
+          },
+          GamePadInfoList = {
+            {
+              Type = "Img",
+              ImgShortPath = "B",
+              ClickCallback = self.OnReturnKeyDown,
+              Owner = self
+            }
+          },
+          Desc = GText("UI_BACK"),
+          bLongPress = false
+        }
+      })
+    else
+      self.Com_Tab:UpdateBottomKeyInfo({
+        {
+          KeyInfoList = {
+            {
+              Type = "Text",
+              Text = "Esc",
+              ClickCallback = self.CloseSelf,
+              Owner = self
+            }
+          },
+          GamePadInfoList = {
+            {
+              Type = "Img",
+              ImgShortPath = "B",
+              ClickCallback = self.OnReturnKeyDown,
+              Owner = self
+            }
+          },
+          Desc = GText("UI_BACK"),
+          bLongPress = false
+        }
+      })
+    end
+    if self.ConfigData.IsPacking then
+      self.Btn_DesignGet:SetGamePadIconVisible(true)
+      self.Com_TabSub:UpdateUIStyleInPlatform(true)
+    end
   else
     self.Com_Tab:UpdateBottomKeyInfo({
       {
@@ -719,6 +805,10 @@ function M:ShowGamepadViewBtn(bShow)
         bLongPress = false
       }
     })
+    if self.ConfigData.IsPacking then
+      self.Btn_DesignGet:SetGamePadIconVisible(false)
+      self.Com_TabSub:UpdateUIStyleInPlatform(false)
+    end
   end
 end
 
@@ -728,6 +818,17 @@ function M:ShowGamepadViewSingleBtn(bShow)
   end
   if bShow then
     self.Com_Tab:UpdateBottomKeyInfo({
+      {
+        GamePadInfoList = {
+          {
+            Type = "Img",
+            ImgShortPath = "A",
+            Owner = self
+          }
+        },
+        Desc = GText("UI_Controller_CheckReward"),
+        bLongPress = false
+      },
       {
         KeyInfoList = {
           {
@@ -838,20 +939,8 @@ end
 function M:UpdateUIStyle(IsVisible)
   if IsVisible then
     self:ShowGamepadViewSingleBtn(true)
-    if self.ConfigData.IsPacking then
-      self.Btn_DesignGet:SetGamePadIconVisible(true)
-      if self.Key_Check then
-        self.Key_Check:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-      end
-    end
   else
     self:ShowGamepadViewSingleBtn(false)
-    if self.ConfigData.IsPacking then
-      if self.Key_Check then
-        self.Key_Check:SetVisibility(UIConst.VisibilityOp.Collapsed)
-      end
-      self.Btn_DesignGet:SetGamePadIconVisible(false)
-    end
   end
 end
 
@@ -877,7 +966,7 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
     if InKeyName == UIConst.GamePadKey.FaceButtonTop and not self.IsInViewMode then
       IsEventHandled = true
       self.RewardContent_OneClick.Btn_OneClick:OnBtnClicked()
-    elseif self.ConfigData.IsPacking then
+    elseif self.ConfigData.IsPacking and not self.IsInViewMode then
       IsEventHandled = self.Com_TabSub:Handle_KeyEventOnGamePad(InKeyName)
     end
     if InKeyName == UIConst.GamePadKey.FaceButtonRight then
@@ -901,10 +990,34 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
     IsEventHandled = self.Com_TabSub:Handle_KeyEventOnPC(InKeyName)
   end
   if IsEventHandled then
-    return UIUtils.Handled
+    return UE4.UWidgetBlueprintLibrary.Handled()
   else
-    return UIUtils.Unhandled
+    return UE4.UWidgetBlueprintLibrary.UnHandled()
   end
+end
+
+function M:CheckDescScrollable()
+  if not self.EMScroll_Desc then
+    return false
+  end
+  local ScrollOffsetMax = self.EMScroll_Desc:GetScrollOffsetOfEnd()
+  return ScrollOffsetMax > 0
+end
+
+function M:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
+  local Key = UE4.UKismetInputLibrary.GetKey(InAnalogInputEvent)
+  local KeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(Key)
+  local AxisValue = UE4.UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent)
+  if "Gamepad_RightY" == KeyName and self.EMScroll_Desc and self:CheckDescScrollable() and UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad then
+    local CurrentOffset = self.EMScroll_Desc:GetScrollOffset()
+    local ScrollSpeed = 10.0
+    local NewOffset = CurrentOffset - AxisValue * ScrollSpeed
+    local MaxOffset = self.EMScroll_Desc:GetScrollOffsetOfEnd()
+    NewOffset = math.max(0, math.min(NewOffset, MaxOffset))
+    self.EMScroll_Desc:SetScrollOffset(NewOffset)
+    return UE4.UWidgetBlueprintLibrary.Handled()
+  end
+  return UE4.UWidgetBlueprintLibrary.UnHandled()
 end
 
 return M

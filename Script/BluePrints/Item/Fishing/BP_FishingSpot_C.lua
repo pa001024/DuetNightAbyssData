@@ -177,8 +177,10 @@ end
 
 function M:SetFishingSpotLocation(Player)
   local FishPointRelativeTransform = self.FishPoint.RelativeLocation
+  local FishPointWorldLocation = self.FishPoint:K2_GetComponentLocation()
   local PlayerTransform = Player.Mesh:K2_GetComponentToWorld()
   local NewLoc = UKismetMathLibrary.TransformLocation(PlayerTransform, FishPointRelativeTransform)
+  NewLoc.Z = FishPointWorldLocation.Z
   local GameState = UGameplayStatics.GetGameState(self)
   UDataSetFunctionLibrary.SetVector_ByEid(GameState.Battle, Player.Eid, "FishPoint_Location", NewLoc)
 end

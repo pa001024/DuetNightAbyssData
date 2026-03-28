@@ -106,7 +106,7 @@
     "rarity": 4,
     "cost": 8,
     "buffId": 4020501,
-    "extraBuffDesc": "Buff Effect: Gains +#2 DEF for every 20% HP lost.",
+    "extraBuffDesc": "Buff Effect: When dealing damage, reduces the target's DEF by 45.0% for 10s.",
     "extraBuffId": 4020201,
     "unlockQuestId": 10300104,
     "atk": 0.3

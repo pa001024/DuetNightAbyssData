@@ -2,6 +2,8 @@ local FriendCommon = {}
 FriendCommon.UIName = "FriendMain"
 FriendCommon.DialogName = "FriendDialog"
 FriendCommon.ReddotName = "NewFriendRequest"
+FriendCommon.TipUIName = "FriendRequestTip"
+FriendCommon.TipsMaxRemainTime = 15
 FriendCommon.FriendDialogType = {FriendRequest = -1, BlackList = -2}
 FriendCommon.FriendTabType = {
   MyFriend = 1,

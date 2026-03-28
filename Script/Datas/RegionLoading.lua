@@ -125,6 +125,48 @@ return ReadOnly("RegionLoading", {
     TitleTrans = "LoadingTitleTrans_Nai02",
     WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
   },
+  [10450101] = {
+    BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Dongguo15.LevelSelect_Bg_Dongguo15'",
+    LoadingId = 10450101,
+    MessageGroup = 10450101,
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle15_01.WBP_Com_ChangeScence_DongguoTitle15_01'",
+    WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
+  },
+  [10450201] = {
+    BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Dongguo16.LevelSelect_Bg_Dongguo16'",
+    LoadingId = 10450201,
+    MessageGroup = 10450201,
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle16_01.WBP_Com_ChangeScence_DongguoTitle16_01'",
+    WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
+  },
+  [10450301] = {
+    BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Dongguo17.LevelSelect_Bg_Dongguo17'",
+    LoadingId = 10450301,
+    MessageGroup = 10450301,
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle17_01.WBP_Com_ChangeScence_DongguoTitle17_01'",
+    WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
+  },
+  [10450401] = {
+    BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Dongguo18.LevelSelect_Bg_Dongguo18'",
+    LoadingId = 10450401,
+    MessageGroup = 10450401,
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle18_01.WBP_Com_ChangeScence_DongguoTitle18_01'",
+    WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
+  },
+  [10450501] = {
+    BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Dongguo19.LevelSelect_Bg_Dongguo19'",
+    LoadingId = 10450501,
+    MessageGroup = 10450501,
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle19_01.WBP_Com_ChangeScence_DongguoTitle19_01'",
+    WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
+  },
+  [10450601] = {
+    BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Dongguo20.LevelSelect_Bg_Dongguo20'",
+    LoadingId = 10450601,
+    MessageGroup = 10450601,
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle20_01.WBP_Com_ChangeScence_DongguoTitle20_01'",
+    WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
+  },
   [10460101] = {
     BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Dongguo04_01.LevelSelect_Bg_Dongguo04_01'",
     LoadingId = 10460101,
@@ -141,6 +183,13 @@ return ReadOnly("RegionLoading", {
     TitleTrans = "LoadingTitleTrans_Batt03",
     WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
   },
+  [10480101] = {
+    BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Dongguo25.LevelSelect_Bg_Dongguo25'",
+    LoadingId = 10480101,
+    MessageGroup = 10480101,
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle24_01.WBP_Com_ChangeScence_DongguoTitle24_01'",
+    WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
+  },
   [10490101] = {
     BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Dongguo02.LevelSelect_Bg_Dongguo02'",
     LoadingId = 10490101,
@@ -155,6 +204,55 @@ return ReadOnly("RegionLoading", {
     MessageGroup = 10500101,
     TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle03_01.WBP_Com_ChangeScence_DongguoTitle03_01'",
     TitleTrans = "LoadingTitleTrans_Nai03",
+    WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
+  },
+  [10510101] = {
+    BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Dongguo21.LevelSelect_Bg_Dongguo21'",
+    LoadingId = 10510101,
+    MessageGroup = 10510101,
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle20_01.WBP_Com_ChangeScence_DongguoTitle20_01'",
+    WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
+  },
+  [10520101] = {
+    BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Dongguo22.LevelSelect_Bg_Dongguo22'",
+    LoadingId = 10520101,
+    MessageGroup = 10520101,
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle21_01.WBP_Com_ChangeScence_DongguoTitle21_01'",
+    WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
+  },
+  [10530101] = {
+    BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Dongguo23.LevelSelect_Bg_Dongguo23'",
+    LoadingId = 10530101,
+    MessageGroup = 10530101,
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle22_01.WBP_Com_ChangeScence_DongguoTitle22_01'",
+    WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
+  },
+  [10540101] = {
+    BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Dongguo27.LevelSelect_Bg_Dongguo27'",
+    LoadingId = 10540101,
+    MessageGroup = 10540101,
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle25_01.WBP_Com_ChangeScence_DongguoTitle25_01'",
+    WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
+  },
+  [10550101] = {
+    BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Dongguo24.LevelSelect_Bg_Dongguo24'",
+    LoadingId = 10550101,
+    MessageGroup = 10550101,
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle23_01.WBP_Com_ChangeScence_DongguoTitle23_01'",
+    WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
+  },
+  [10560101] = {
+    BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Dongguo26.LevelSelect_Bg_Dongguo26'",
+    LoadingId = 10560101,
+    MessageGroup = 10560101,
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle25_01.WBP_Com_ChangeScence_DongguoTitle25_01'",
+    WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
+  },
+  [10560201] = {
+    BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Dongguo26.LevelSelect_Bg_Dongguo26'",
+    LoadingId = 10560201,
+    MessageGroup = 10560101,
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/DongguoTitle/WBP_Com_ChangeScence_DongguoTitle25_01.WBP_Com_ChangeScence_DongguoTitle25_01'",
     WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
   },
   [10570101] = {

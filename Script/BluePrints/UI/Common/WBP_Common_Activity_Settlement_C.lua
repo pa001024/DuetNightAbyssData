@@ -113,8 +113,14 @@ function M:InitUI()
     self.Text_NewRecord:SetText(GText("UI_SettlementPage_NewRecord"))
     if self.Params.IsNewRecord then
       self.Text_NewRecord:SetVisibility(UE4.ESlateVisibility.Visible)
+      if self.VX_WordGlow6 then
+        self.VX_WordGlow6:SetVisibility(UE4.ESlateVisibility.Visible)
+      end
     else
       self.Text_NewRecord:SetVisibility(UE4.ESlateVisibility.Collapsed)
+      if self.VX_WordGlow6 then
+        self.VX_WordGlow6:SetVisibility(UE4.ESlateVisibility.Collapsed)
+      end
     end
     if self.Params.TimeRemain == nil then
       self.Num_Score:SetText(self.Params.LevelScore)
@@ -597,9 +603,17 @@ end
 
 function M:OnExitClicked()
   self:BlockAllUIInput(true)
-  local Avatar = GWorld:GetAvatar()
-  Avatar:ExitDungeonSettlement()
-  EventManager:AddEvent(EventID.OnExitDungeon, self, self.DefaultExit)
+  if self.Params and self.Params.ExitCallback then
+    local OutAnim = self.Params.IsWin and self.Out or self.Fail_Out
+    if self.Params and self.Params.ExitCallback then
+      self.Params.ExitCallback(self)
+    end
+    self:PlayAnimation(OutAnim)
+  else
+    local Avatar = GWorld:GetAvatar()
+    Avatar:ExitDungeonSettlement()
+    EventManager:AddEvent(EventID.OnExitDungeon, self, self.DefaultExit)
+  end
 end
 
 function M:DefaultExit()
@@ -614,6 +628,9 @@ end
 function M:OnContinueClicked()
   local CallbackResult
   local IsOpen = ActivityUtils.CheckEventIsOpen(self.Params.ActivityId, nil, false)
+  if self.Params.CheckOpenActivityId then
+    IsOpen = ActivityUtils.CheckEventIsOpen(self.Params.CheckOpenActivityId, nil, false)
+  end
   if not IsOpen then
     UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_GameEvent_EventEnd"))
     return

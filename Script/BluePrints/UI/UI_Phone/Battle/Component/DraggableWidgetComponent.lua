@@ -3,7 +3,7 @@ local M = {}
 function M:InitAllDraggableWidgetInfo(OwnerWidget, WidgetInfo)
   local ParentLayoutNode = OwnerWidget[WidgetInfo.ParentNodeName]
   local DraggableWidget = OwnerWidget[WidgetInfo.WidgetName]
-  self:RegisterDraggableComponent(OwnerWidget, DraggableWidget, ParentLayoutNode, WidgetInfo.InnerActiveSlateName, WidgetInfo.MaskNodeName)
+  self:RegisterDraggableComponent(OwnerWidget, DraggableWidget, ParentLayoutNode, WidgetInfo)
 end
 
 function M:LeaveDesignState()
@@ -16,6 +16,9 @@ function M:SelectWidget()
   if nil ~= TargetMaskWidget then
     TargetMaskWidget:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   end
+  if self.RelativeNodeName then
+    self:UpdateRelativeNodeWhenSelected()
+  end
   if self.OwnerWidget and type(self.OwnerWidget.OnDraggableWidgetSelected) == "function" then
     self.OwnerWidget:OnDraggableWidgetSelected(self)
   end
@@ -25,6 +28,9 @@ function M:UnSelectWidget()
   local TargetMaskWidget = self:GetSelectWidgetMaskWidget()
   if nil ~= TargetMaskWidget then
     TargetMaskWidget:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+  if self.RelativeNodeName then
+    self:HideRelativeNodeWhenUnSelected(true)
   end
 end
 
@@ -39,6 +45,10 @@ function M:GetSelectWidgetMaskWidget()
     TargetMaskWidget = self.OwnerWidget[self.MaskNodeName]
   end
   return TargetMaskWidget
+end
+
+function M:GetSelectWidgetTextMapContent()
+  return self.TextMapContent
 end
 
 function M:EnterDesignState(CurEditPlanIndex)
@@ -64,21 +74,26 @@ function M:ModifyWidgetScale(ScaleValue)
     return
   end
   WidgetNode:SetRenderScale(FVector2D(ScaleValue, ScaleValue))
-  self:AdjustPositioByScaleValueChange(WidgetNode)
+  self:AdjustPositionByScaleValueChange(WidgetNode)
   if self.OwnerWidget and type(self.OwnerWidget.OnDraggableWidgetInfoChanged) == "function" then
     self.OwnerWidget:OnDraggableWidgetInfoChanged("Scale", self, ScaleValue)
   end
 end
 
-function M:RegisterDraggableComponent(OwnerWidget, DraggableWidget, ParentLayoutNode, InnerActiveSlateName, MaskNodeName)
+function M:RegisterDraggableComponent(OwnerWidget, DraggableWidget, ParentLayoutNode, WidgetInfo)
   self.OwnerWidget = OwnerWidget
   self.DraggableWidget = DraggableWidget
   self.ParentLayoutNode = ParentLayoutNode
-  self.InnerActiveSlateName = InnerActiveSlateName
-  self.MaskNodeName = MaskNodeName
+  self.WidgetNodeName = WidgetInfo.WidgetName
+  self.TextMapContent = WidgetInfo.TextMapContent
+  self.InnerActiveSlateName = WidgetInfo.InnerActiveSlateName
+  self.MaskNodeName = WidgetInfo.MaskNodeName
+  self.bHasExtraLimitArea = WidgetInfo.bHasExtraLimitArea
+  self.bIsNeedManualAdd = WidgetInfo.bIsNeedManualAdd
+  self.RelativeNodeName = WidgetInfo.RelativeNodeName
   self.bIsDragging = false
   self.StartPosition = FVector2D(0, 0)
-  self.CurrnetPositionInScreen = FVector2D(0, 0)
+  self.CurrentPositionInScreen = FVector2D(0, 0)
   self.DragOffset = FVector2D(0, 0)
   self.TouchPointLocalOffset = nil
   self.LimitDraggableArea = nil
@@ -139,6 +154,9 @@ function M:SetDraggable(bEnabled)
   self.bDraggable = bEnabled
 end
 
+function M:SetManualAddInSetting(bAddInSetting)
+end
+
 function M:OnTouchStarted(MyGeometry, InGestureEvent)
   if not self.bDraggable then
     return UE4.UWidgetBlueprintLibrary.Unhandled()
@@ -163,7 +181,7 @@ function M:OnTouchMoved(MyGeometry, InGestureEvent)
   ScreenSpacePosition = self:ClampPositionToViewport(ScreenSpacePosition)
   local FinalPosition = UIUtils.GetRelativePositionInParent(self.ParentLayoutNode, ScreenSpacePosition, self.TouchPointLocalOffset)
   self.DragOffset = ScreenSpacePosition - self.StartPosition
-  self.CurrnetPositionInScreen = ScreenSpacePosition
+  self.CurrentPositionInScreen = ScreenSpacePosition
   self:SetWidgetPosition(FinalPosition)
   if self.OwnerWidget and type(self.OwnerWidget.OnDraggableWidgetInfoChanged) == "function" then
     self.OwnerWidget:OnDraggableWidgetInfoChanged("Pos", self, FinalPosition)
@@ -251,15 +269,41 @@ function M:SetDraggableArea(DraggableWidgetGeometry)
   local EndClampedX = AbsoluteTopLeftPosition.X + AbsoluteParentSize.X - WidgetAbsoluteSize.X * (1 - self.TouchPointLocalOffset.X / WidgetLocalSize.X)
   local StartClampedY = AbsoluteTopLeftPosition.Y + WidgetAbsoluteSize.Y * (self.TouchPointLocalOffset.Y / WidgetLocalSize.Y)
   local EndClampedY = AbsoluteTopLeftPosition.Y + AbsoluteParentSize.Y - WidgetAbsoluteSize.Y * (1 - self.TouchPointLocalOffset.Y / WidgetLocalSize.Y)
-  self.LimitDraggableArea = {
-    MinX = StartClampedX,
-    MaxX = EndClampedX,
-    MinY = StartClampedY,
-    MaxY = EndClampedY
-  }
+  if self.bHasExtraLimitArea then
+    self:UpdateLimitDraggableAreaFromDesign(StartClampedX, EndClampedX, StartClampedY, EndClampedY, AbsoluteParentSize)
+  else
+    self.LimitDraggableArea = {
+      MinX = StartClampedX,
+      MaxX = EndClampedX,
+      MinY = StartClampedY,
+      MaxY = EndClampedY
+    }
+  end
 end
 
-function M:AdjustPositioByScaleValueChange(AdjustWidget)
+function M:UpdateLimitDraggableAreaFromDesign(StartClampedX, EndClampedX, StartClampedY, EndClampedY, AbsoluteParentSize)
+  if self.WidgetNodeName == "Move" then
+    local CurAreaRangeXPercent = self.CurAreaRangeXPercent
+    local CurAreaRangeYPercent = self.CurAreaRangeYPercent
+    local NewEndClampedX = EndClampedX - AbsoluteParentSize.X * CurAreaRangeXPercent
+    local NewStartClampedY = StartClampedY + AbsoluteParentSize.Y * (1.0 - CurAreaRangeYPercent)
+    self.LimitDraggableArea = {
+      MinX = StartClampedX,
+      MaxX = NewEndClampedX,
+      MinY = NewStartClampedY,
+      MaxY = EndClampedY
+    }
+  else
+    self.LimitDraggableArea = {
+      MinX = StartClampedX,
+      MaxX = EndClampedX,
+      MinY = StartClampedY,
+      MaxY = EndClampedY
+    }
+  end
+end
+
+function M:AdjustPositionByScaleValueChange(AdjustWidget)
   local DraggableWidgetGeometry = AdjustWidget:GetCachedGeometry()
   local AdjustWidgetAbsolutePos = UIManager(self.OwnerWidget):GetWorldPosition(AdjustWidget)
   local AdjustWidgetAbsoluteSize = UE4.USlateBlueprintLibrary.GetAbsoluteSize(DraggableWidgetGeometry)
@@ -270,6 +314,10 @@ function M:AdjustPositioByScaleValueChange(AdjustWidget)
   local FinalAbsolutePosition = self:ClampPositionToViewport(AdjustWidgetAbsoluteCenterPos)
   local FinalPosition = UIUtils.GetRelativePositionInParent(AdjustWidget, FinalAbsolutePosition, self.TouchPointLocalOffset)
   self:SetWidgetPosition(FinalPosition)
+end
+
+function M:AdjustPositioByRelativeWidgetChange(AdjustWidget)
+  self:AdjustPositionByScaleValueChange(AdjustWidget)
 end
 
 function M:IsDragging()

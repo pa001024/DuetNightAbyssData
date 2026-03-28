@@ -1,6 +1,6 @@
-local StoryPlayableUtils = {}
+local M = {}
 
-function StoryPlayableUtils:ExecuteStoryDelegate(StoryDelegate, ...)
+function M:ExecuteStoryDelegate(StoryDelegate, ...)
   if StoryDelegate then
     if StoryDelegate.Execute then
       StoryDelegate:Execute(...)
@@ -10,4 +10,4 @@ function StoryPlayableUtils:ExecuteStoryDelegate(StoryDelegate, ...)
   end
 end
 
-return {StoryPlayableUtils = StoryPlayableUtils}
+return M

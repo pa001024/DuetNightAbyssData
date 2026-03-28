@@ -39,6 +39,7 @@ function M:OpenMechanism(PlayerId)
     end
     return
   end
+  GameState:RemoveHookLookToList(self.CreatorId)
   PlayerCharacter.IsInHook = true
   PlayerCharacter:SetMechanismEid(self.Eid)
   self.Overridden.OpenMechanism(self, PlayerId)
@@ -46,7 +47,6 @@ function M:OpenMechanism(PlayerId)
   print(_G.LogTag, "LXZ SetPlayer OpenMechanism", PlayerCharacter)
   self:SetPlayer(PlayerCharacter, true)
   self:SetPlayerEid(PlayerId, true)
-  local GameState = UGameplayStatics.GetGameState(self)
   if GameState.ValidHook then
     GameState.ValidHook.HookInteractiveComponent:ForceEndInteractive(PlayerCharacter)
   end
@@ -182,6 +182,10 @@ function M:RefreshInteractiveBtn(PlayerActor)
   end
   local ValidHook = GameState:GetValidHook(PlayerActor, self.TargetLoc)
   if ValidHook ~= self then
+    if IsValid(self.InteractiveUI) and self.InteractiveUI.Hook == self then
+      self.InteractiveUI:Close()
+      self:CloseUI()
+    end
     return
   end
   if not IsValid(self.InteractiveUI) then
@@ -204,10 +208,12 @@ function M:RefreshInteractiveBtn(PlayerActor)
     end
   end
   if IsValid(self.InteractiveUI) and self.InteractiveUI.Hook and self.InteractiveUI.Hook ~= ValidHook then
+    print(_G.LogTag, "LXZ Hook RefreshInteractiveBtn111")
     self.InteractiveUI.Hook:CloseUI()
     ValidHook:ShowUI()
     self.InteractiveUI:UpdateOwner(self, self.HookInteractiveComponent, PlayerActor)
   elseif IsValid(self.InteractiveUI) and self.InteractiveUI.Hook == nil then
+    print(_G.LogTag, "LXZ Hook RefreshInteractiveBtn222")
     ValidHook:ShowUI()
     self.InteractiveUI:UpdateOwner(self, self.HookInteractiveComponent, PlayerActor)
   end

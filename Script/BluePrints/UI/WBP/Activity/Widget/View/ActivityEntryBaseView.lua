@@ -17,6 +17,7 @@ end
 
 function M:PlayOutAnim()
   AudioManager(self):SetEventSoundParam(self, "Activity", {ToEnd = 1})
+  self.CurrentActiveBg = nil
   self.WidgetBGAnchor:ClearChildren()
   self:BindToAnimationFinished(self.Out, {
     self,
@@ -237,10 +238,11 @@ function M:RefreshViewAfterPageDataSet(ActivityConfigData, PageConfigData)
   end
   if nil ~= EventBgBPPath then
     self.Image_MainBG:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.CurrentActiveBg = nil
     self.WidgetBGAnchor:ClearChildren()
     local NewBgWidget = UIManager(self):CreateWidget(EventBgBPPath)
     if NewBgWidget.InitUI then
-      NewBgWidget:InitUI(ActivityConfigData, PageConfigData)
+      NewBgWidget:InitUI(ActivityConfigData, PageConfigData, self.CurTabId, self)
     end
     if NewBgWidget.PlayBGVideo then
       self:AddTimer(0.01, function()
@@ -256,6 +258,7 @@ function M:RefreshViewAfterPageDataSet(ActivityConfigData, PageConfigData)
           end
         end
       end
+      self.CurrentActiveBg = NewBgWidget
       local OverSlot = self.WidgetBGAnchor:AddChildToOverlay(NewBgWidget)
       OverSlot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
       OverSlot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)

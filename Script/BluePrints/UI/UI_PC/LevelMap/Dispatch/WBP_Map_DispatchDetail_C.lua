@@ -33,6 +33,7 @@ function M:Construct()
   self.Btn_CheckReward.OnClicked:Add(self, self.OnClickCheckReward)
   self.Btn_Select.Button_Area.OnClicked:Add(self, self.OnClickDispatch)
   self.Btn_Confirm.Button_Area.OnClicked:Add(self, self.OnClickConfirm)
+  self.Btn_Auto.Button_Area.OnClicked:Add(self, self.OnClickAuto)
   self.Btn_Cancel.Button_Area.OnClicked:Add(self, self.CancelDispatch)
   self.Btn_CheckBuff.OnClicked:Add(self, self.OpenSpecailAbility)
   self.Btn_Go.Button_Area.OnClicked:Add(self, self.GotoCloestTeleportPoint)
@@ -46,6 +47,7 @@ function M:Destruct()
   self.Btn_CheckReward.OnClicked:Remove(self, self.OnClickCheckReward)
   self.Btn_Select.Button_Area.OnClicked:Remove(self, self.OnClickDispatch)
   self.Btn_Confirm.Button_Area.OnClicked:Remove(self, self.OnClickConfirm)
+  self.Btn_Auto.Button_Area.OnClicked:Remove(self, self.OnClickAuto)
   self.Btn_Cancel.Button_Area.OnClicked:Remove(self, self.CancelDispatch)
   self.Btn_CheckBuff.OnClicked:Remove(self, self.OpenSpecailAbility)
   self.Btn_Go.Button_Area.OnClicked:Remove(self, self.GotoCloestTeleportPoint)
@@ -69,6 +71,8 @@ function M:InitDispatchDetail(Dispatch)
   self.Text_ExReward:SetText(GText("UI_Disptach_RewardShow"))
   self.Text_ExTip:SetText(GText("UI_Dispatch_Toast_RewardWarm"))
   self.Text_Controller_Check:SetText(GText("UI_GACHA_DETAIL"))
+  self.Btn_Auto.Text_Button:SetText(GText("UI_Dispatch_AutoSelect"))
+  self.Btn_Auto:SetGamePadImg("Y")
   self:InitKeyInfo()
   self:InitListenEvent()
   self:RefreshBaseInfo()
@@ -660,6 +664,12 @@ function M:OnClickConfirm()
   end
 end
 
+function M:OnClickAuto()
+  if self.Owner.DispatchAgentList ~= nil then
+    self.Owner.DispatchAgentList:AutoChoose()
+  end
+end
+
 function M:StartDispatch()
   if 0 == self.AgentCount then
     UIManager(self):ShowUITip(UIConst.Tip_CommonTop, GText("UI_Disptach_Toast_NoAgent"))
@@ -1019,9 +1029,11 @@ function M:GotoCloestTeleportPoint()
     local SubRegionId = DataMgr.DynQuest[self.Dispatch.DispatchId].SubRegionId
     local TeleportPoint = DataMgr.DispatchUI[self.Dispatch.DispatchId].TeleportPointPos
     DebugPrint("GotoCloestTeleportPoint:DispatchId,TriggerBoxId,SubRegionId,", DispatchId, TriggerBoxId, SubRegionId)
+    if not GameMode:HandleLevelDeliver(UE4.EModeType.ModeRegion, SubRegionId, TeleportPoint, nil, nil, true) then
+      return
+    end
     local MapUI = UIManager(self):GetUIObj("LevelMapMain")
     MapUI:RealClose()
-    GameMode:HandleLevelDeliver(UE4.EModeType.ModeRegion, SubRegionId, TeleportPoint, nil, nil, true)
     GWorld.GameInstance.TriggerBoxID = TriggerBoxId
     EventManager:AddEvent(EventID.CloseLoading, GWorld.GameInstance, GWorld.GameInstance.TeleportToCloestTeleportPoint)
     EventManager:AddEvent(EventID.OnLevelDeliverBlackCurtainEnd, GWorld.GameInstance, GWorld.GameInstance.TeleportToCloestTeleportPoint)
@@ -1309,6 +1321,7 @@ function M:ShowPadUI(IsShow)
     self.Btn_Go:SetPCVisibility(false)
     self.Btn_Select:SetPCVisibility(false)
     self.Btn_Confirm:SetPCVisibility(false)
+    self.Btn_Auto:SetPCVisibility(false)
     self.Btn_Cancel:SetPCVisibility(false)
     self.Owner:InitPadTab()
   else
@@ -1321,6 +1334,7 @@ function M:ShowPadUI(IsShow)
     self.Btn_Go:SetPCVisibility(true)
     self.Btn_Select:SetPCVisibility(true)
     self.Btn_Confirm:SetPCVisibility(true)
+    self.Btn_Auto:SetPCVisibility(true)
     self.Btn_Cancel:SetPCVisibility(true)
   end
 end

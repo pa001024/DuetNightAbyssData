@@ -9,12 +9,22 @@ if not ok then
 end
 local KeyboardText = setmetatable({}, {
   __index = function(t, key)
-    local tbl = DataMgr["KeyboardText_" .. CommonConst.SystemLanguage]
+    local ok, tbl = pcall(function()
+      return DataMgr["KeyboardText_" .. CommonConst.SystemLanguage]
+    end)
+    if not ok then
+      tbl = nil
+    end
     tbl = tbl or DataMgr["KeyboardText_" .. CommonConst.SystemLanguages.Default]
     return tbl[key]
   end,
   __pairs = function(t)
-    local realTbl = DataMgr["KeyboardText_" .. CommonConst.SystemLanguage]
+    local ok, realTbl = pcall(function()
+      return DataMgr["KeyboardText_" .. CommonConst.SystemLanguage]
+    end)
+    if not ok then
+      realTbl = nil
+    end
     realTbl = realTbl or DataMgr["KeyboardText_" .. CommonConst.SystemLanguages.Default]
     local mt = getmetatable(realTbl)
     if mt and mt.__pairs then

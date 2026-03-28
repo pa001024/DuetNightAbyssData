@@ -1,4 +1,15 @@
 local TimeUtils = require("Utils.TimeUtils")
+local EItemType = {
+  [0] = "Char",
+  [1] = "Weapon",
+  [2] = "Skin",
+  [3] = "WeaponSkin",
+  [4] = "CharAccessory",
+  [5] = "WeaponAccessory",
+  [6] = "Resource",
+  [7] = "HeadFrame",
+  [8] = "HeadSculpture"
+}
 local ItemUtils = {}
 
 function ItemUtils:IsServerCreate(ItemId)
@@ -60,6 +71,10 @@ function ItemUtils:GetDropName(ItemId, TableName)
   return ItemName
 end
 
+function ItemUtils.GetItemType(ItemTypeId)
+  return EItemType[ItemTypeId]
+end
+
 function ItemUtils.GetItemName(ItemId, TableName)
   local ItemData = DataMgr[TableName][ItemId]
   if not ItemData then
@@ -70,6 +85,8 @@ function ItemUtils.GetItemName(ItemId, TableName)
       return ItemData.WeaponName
     elseif "Resource" == TableName then
       return ItemData.ResourceName
+    elseif "Skin" == TableName then
+      return ItemData.SkinName
     else
       DebugPrint("Tianyi@ 找不到Name字段, TableName = ", TableName)
       return nil
@@ -221,6 +238,94 @@ function ItemUtils.CheckGestureSkinNeedDisplay(SkinId)
     return true
   end
   return false
+end
+
+function ItemUtils.GetItemNum(Id, ItemType)
+  local Num = 0
+  if not Id then
+    return Num
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return Num
+  end
+  if "Char" == ItemType then
+    local CharsInfo = Avatar.Chars or {}
+    for _, Char in pairs(CharsInfo) do
+      if Char.CharId == Id then
+        Num = 1
+        break
+      end
+    end
+  elseif "Weapon" == ItemType then
+    local WeaponsInfo = Avatar.Weapons or {}
+    for _, Weapon in pairs(WeaponsInfo) do
+      if Weapon.WeaponId == Id then
+        Num = 1
+        break
+      end
+    end
+  elseif "Skin" == ItemType then
+    local CommonCharsInfo = Avatar.CommonChars or {}
+    for _, CommonChar in pairs(CommonCharsInfo) do
+      local OwnedSkins = CommonChar.OwnedSkins or {}
+      if OwnedSkins[Id] then
+        Num = 1
+        break
+      end
+    end
+    if 0 == Num then
+      local OtherCharSkinsInfo = Avatar.OtherCharSkins or {}
+      for _, OtherCharSkins in pairs(OtherCharSkinsInfo) do
+        for _, SkinId in pairs(OtherCharSkins) do
+          if SkinId == Id then
+            Num = 1
+            break
+          end
+        end
+      end
+    end
+  elseif "WeaponSkin" == ItemType then
+    local OwnedWeaponSkinsInfo = Avatar.OwnedWeaponSkins or {}
+    if OwnedWeaponSkinsInfo[Id] then
+      Num = 1
+    end
+  elseif "CharAccessory" == ItemType then
+    local CharAccessorysInfo = Avatar.CharAccessorys or {}
+    for _, CharAccessoryId in pairs(CharAccessorysInfo) do
+      if CharAccessoryId == Id then
+        Num = 1
+        break
+      end
+    end
+  elseif "WeaponAccessory" == ItemType then
+    local WeaponAccessorysInfo = Avatar.WeaponAccessorys or {}
+    for _, WeaponAccessoryId in pairs(WeaponAccessorysInfo) do
+      if WeaponAccessoryId == Id then
+        Num = 1
+        break
+      end
+    end
+  elseif "Resource" == ItemType then
+    Num = Avatar:GetResourceNum(Id)
+  elseif "HeadFrame" == ItemType then
+    local HeadFrameListInfo = Avatar.HeadFrameList or {}
+    for _, FrameId in pairs(HeadFrameListInfo) do
+      if FrameId == Id then
+        Num = 1
+        break
+      end
+    end
+  elseif "HeadSculpture" == ItemType then
+    local HeadIconListInfo = Avatar.HeadIconList or {}
+    for _, HeadId in pairs(HeadIconListInfo) do
+      if HeadId == Id then
+        Num = 1
+        break
+      end
+    end
+  end
+  return Num
 end
 
 return ItemUtils

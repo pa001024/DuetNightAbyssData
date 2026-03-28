@@ -179,7 +179,11 @@ function M:UpdateWeaponGradeLevelInfo()
       DebugPrint(ErrorTag, "::PassiveEffectsDesc is nil,请检查WeaponId", self.TargetWeapon.WeaponId)
     end
   elseif SkillDesc then
-    self.Text_Detail:SetText(GText("UI_Armory_NextStage") .. ": " .. SkillDesc)
+    if AddLevel > 0 then
+      self.Text_Detail:SetText(SkillDesc)
+    else
+      self.Text_Detail:SetText(GText("UI_Armory_NextStage") .. ": " .. SkillDesc)
+    end
   else
     DebugPrint(ErrorTag, "::PassiveEffectsDesc is nil,请检查WeaponId", self.TargetWeapon.WeaponId)
   end
@@ -509,6 +513,10 @@ end
 
 function M:PlayLevelUpAnim()
   self.IsPlayLevelUpAnim = true
+  local CurrentSkillDesc = SkillUtils.CalcWeaponPassiveEffectsDesc(self.TargetWeapon, self.TargetWeapon.GradeLevel)
+  if CurrentSkillDesc then
+    self.Text_Detail:SetText(CurrentSkillDesc)
+  end
   AudioManager(self):PlayUISound(self, "event:/ui/common/same_card_strengthen_success", nil, nil)
   self.Preview:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self:FillEmptyItems(self.MaxItemCount, false)

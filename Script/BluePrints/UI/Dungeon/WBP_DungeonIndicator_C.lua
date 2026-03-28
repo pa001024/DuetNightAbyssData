@@ -29,13 +29,7 @@ function WBP_DungeonIndicatorUI_C:GetIconPathName()
   if self.ConfigData == nil then
     return ""
   end
-  return self.SceneManager:GetGuideGuideAnimByBPPath(self.ConfigData.GuideIconAni, self.ConfigData.GuideIconBPPath)
-end
-
-function WBP_DungeonIndicatorUI_C:Construct()
-  self.Super.Construct(self)
-  self.MobileOvalSizeXRatio = 0.41
-  self.MobileOvalSizeYRatio = 0.42
+  return self.GuideAnim
 end
 
 function WBP_DungeonIndicatorUI_C:Destruct()
@@ -44,10 +38,10 @@ function WBP_DungeonIndicatorUI_C:Destruct()
 end
 
 function WBP_DungeonIndicatorUI_C:AttachEventOnLoaded()
-  if self.GuideType == "Phantom" then
+  local GuideType = self.GuideType
+  if "Phantom" == GuideType then
     EventManager:AddEvent(EventID.OnTeamRecoveryStateChange, self, self.SetPhantomGuideStateByEvent)
-  end
-  if self.GuideType == "Hostage" then
+  elseif "Hostage" == GuideType then
     EventManager:AddEvent(EventID.TriggerHostageVisibility, self, self.ChangeHostageVisibility)
     EventManager:AddEvent(EventID.TriggerHostageGuideLoop, self, self.TriggerDeadGuideDisplay)
   end
@@ -85,21 +79,24 @@ function WBP_DungeonIndicatorUI_C:Close()
 end
 
 function WBP_DungeonIndicatorUI_C:InitConfigData()
-  if IsValid(self.TargetActor) then
-    self.GuideType = self.TargetActor.UnitType
+  local TargetActor = self.TargetActor
+  if IsValid(TargetActor) then
+    self.GuideType = TargetActor.UnitType
   end
-  if self.ConfigData ~= nil then
-    local RealGuideType = self.SceneManager:GetGuideTypeByBPPath(self.ConfigData.GuideIconAni, self.ConfigData.GuideIconBPPath)
+  local ConfigData = self.ConfigData
+  local GuideIconBPPath
+  if nil ~= ConfigData then
+    GuideIconBPPath = ConfigData.GuideIconBPPath
+    local RealGuideType = self.SceneManager:GetGuideTypeByBPPath(ConfigData.GuideIconAni, ConfigData.GuideIconBPPath)
     if "" ~= RealGuideType then
       self.GuideType = RealGuideType
     end
-  end
-  if self.ConfigData == nil then
+  else
     return
   end
   self:AttachEventOnLoaded()
   self:OnInitConfig()
-  self:InitIndicatorByConfigData(self.SceneManager:GetGuideGuideAnimByBPPath(self.ConfigData.GuideIconAni, self.ConfigData.GuideIconBPPath) or "", self.ConfigData.GuideIconBPPath or "", self.ConfigData.GuideText or "")
+  self:InitIndicatorByConfigData(self.GuideAnim or "", GuideIconBPPath or "", ConfigData.GuideText or "")
   self:InitFlyToTarget()
 end
 
@@ -111,43 +108,34 @@ function WBP_DungeonIndicatorUI_C:RequestSnapShotInfo()
 end
 
 function WBP_DungeonIndicatorUI_C:SetGuideColor(ImagePath)
-  local PathColor = self.WBP_GuidePoint_Base.GuideColorMap:Find(ImagePath)
+  local GuidePointBase = self.WBP_GuidePoint_Base
+  local PathColor = GuidePointBase.GuideColorMap:Find(ImagePath)
   if nil ~= PathColor then
-    self.WBP_GuidePoint_Base.ArrowColor = PathColor.ArrowColor
-    self.WBP_GuidePoint_Base.GeometryColor = PathColor.GeometryColor
-    self.ImgMaterial:SetVectorParameterValue("ArrowColor", PathColor.ArrowColor)
-    self.ImgMaterial:SetVectorParameterValue("GeometryColor", PathColor.GeometryColor)
+    local ArrowColor = PathColor.ArrowColor
+    local GeometryColor = PathColor.GeometryColor
+    GuidePointBase.ArrowColor = ArrowColor
+    GuidePointBase.GeometryColor = GeometryColor
+    local ImgMaterial = self.ImgMaterial
+    ImgMaterial:SetVectorParameterValue("ArrowColor", ArrowColor)
+    ImgMaterial:SetVectorParameterValue("GeometryColor", GeometryColor)
   end
 end
 
 function WBP_DungeonIndicatorUI_C:OnInitConfig()
-  if self["InitConfigDataWithType_" .. self.GuideType] then
-    self["InitConfigDataWithType_" .. self.GuideType](self)
+  rawset(self, "InitConfigDataWithType", self["InitConfigDataWithType_" .. self.GuideType])
+  if self.InitConfigDataWithType then
+    self.InitConfigDataWithType(self)
   end
-  if self.ConfigData.GuideIconAni == "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_BlastRobot.WBP_GuidePoint_BlastRobot" and self.Sustained and self.TargetActor then
+  local Sustained = self.Sustained
+  if self.ConfigData.GuideIconAni == "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_BlastRobot.WBP_GuidePoint_BlastRobot" and Sustained and self.TargetActor then
     local MonsterDelayTime = self.TargetActor.GuideDelayTime
-    local PlayTime = self.Sustained:GetEndTime() - self.Sustained:GetStartTime()
+    local PlayTime = Sustained:GetEndTime() - Sustained:GetStartTime()
     local NewSpeed = PlayTime / MonsterDelayTime
-    self:PlayAnimation(self.Sustained, 0, 1, EUMGSequencePlayMode.Forward, NewSpeed)
+    self:PlayAnimation(Sustained, 0, 1, EUMGSequencePlayMode.Forward, NewSpeed)
   end
-  if self.ConfigData.PlayerIndex and self.ConfigData.PlayerIndex > 0 then
-    self.PlayerIndex = self.ConfigData.PlayerIndex
-  end
-  self:SetArrowWidgetColor()
-end
-
-function WBP_DungeonIndicatorUI_C:InitFlyToTarget()
-  if self.SpawnDown == false and (self.GuideType == "Monster" or self.GuideType == "Mechanism") then
-    self.FlyToTarget = false
-  else
-    self.FlyToTarget = true
-  end
-end
-
-function WBP_DungeonIndicatorUI_C:SetArrowWidgetColor()
-  if self.GuideType == "Monster" and self.ConfigData.GuideIconBPPath == "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_TreasureHunter.T_Gp_TreasureHunter" then
-    local TreasureSlateColor = self.Color_Purple
-    self:SetArrowColor(TreasureSlateColor.SpecifiedColor)
+  local PlayerIndex = self.ConfigData.PlayerIndex
+  if PlayerIndex and PlayerIndex > 0 then
+    rawset(self, "PlayerIndex", PlayerIndex)
   end
 end
 
@@ -217,9 +205,10 @@ end
 
 function WBP_DungeonIndicatorUI_C:GetStyleNodeName()
   if not self.ConfigData then
-    return ""
+    return
   end
-  return "Panel_" .. self.SceneManager:GetGuideGuideAnimByBPPath(self.ConfigData.GuideIconAni, self.ConfigData.GuideIconBPPath)
+  local GuideAnim = self.SceneManager:GetGuideGuideAnimByBPPath(self.ConfigData.GuideIconAni, self.ConfigData.GuideIconBPPath)
+  self.GuideAnim = GuideAnim
 end
 
 function WBP_DungeonIndicatorUI_C:ChangeStyle(IndicatorStyle, Count)
@@ -413,7 +402,7 @@ end
 
 function WBP_DungeonIndicatorUI_C:GetExcavationEfficiency()
   local Ent = Battle(self):GetEntity(self.TargetEid)
-  if nil ~= Ent then
+  if nil ~= Ent and nil ~= Ent.Efficiency then
     return Ent.Efficiency
   end
   return 0
@@ -421,9 +410,18 @@ end
 
 function WBP_DungeonIndicatorUI_C:GetExcavationABCLetter()
   local Ent = Battle(self):GetEntity(self.TargetEid)
-  if nil ~= Ent then
+  if nil ~= Ent and nil ~= Ent.GuideOrderIndex then
     local Index = (Ent.GuideOrderIndex - 1) % 6
     return string.char(string.byte("A") + Index)
+  end
+  DebugPrint("JLy GetExcavationABCLetter", self.TargetEid)
+  if self.GameState and self.GameState.GuideOrderMap then
+    local OrderIndex = self.GameState.GuideOrderMap:FindRef(self.TargetEid)
+    DebugPrint("JLy GetExcavationABCLetter OrderIndex", OrderIndex)
+    if OrderIndex and OrderIndex > 0 then
+      local Index = (OrderIndex - 1) % 6
+      return string.char(string.byte("A") + Index)
+    end
   end
   return " "
 end

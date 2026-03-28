@@ -164,7 +164,7 @@ function Component:RemoveRegionSkipCallback(RegionId, Obj, Func)
   end
   if Obj and Func then
     self.SkipRegionCallback[RegionId][Obj][Func] = false
-  else
+  elseif not Obj and not Func then
     DebugPrint("Obj,Func为空")
     for Obj, Funcs in pairs(self.SkipRegionCallback[RegionId]) do
       for Func, _ in pairs(Funcs) do
@@ -185,8 +185,9 @@ function Component:RemoveSubRegionSkipCallback(SubRegionId, Obj, Func)
     return
   end
   if Obj and Func then
+    DebugPrint("RemoveSubRegionSkipCallback", SubRegionId, Obj, Func)
     self.SkipSubRegionCallback[SubRegionId][Obj][Func] = false
-  else
+  elseif not Obj and not Func then
     DebugPrint("Obj,Func为空")
     for Obj, Funcs in pairs(self.SkipSubRegionCallback[SubRegionId]) do
       for Func, _ in pairs(Funcs) do
@@ -267,6 +268,7 @@ function Component:HandleExeSubRegionSkipCallbck(SubRegionId)
   for Obj, Funcs in pairs(SkipCallbcks) do
     if Obj then
       for Func, Flag in pairs(Funcs) do
+        DebugPrint("HandleExeSubRegionSkipCallbck", SubRegionId, Obj, Func, Flag)
         if Flag then
           Func(Obj)
         else

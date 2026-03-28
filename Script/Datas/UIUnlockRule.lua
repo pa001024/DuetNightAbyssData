@@ -299,6 +299,14 @@ return ReadOnly("UIUnlockRule", {
     UIUnlockRuleId = "GuideBook",
     UnlockPopupType = "Light"
   },
+  HaoJingShopTab = {
+    ConditionId = 12020101,
+    IsHideUnlockPopup = 1,
+    OpenConditionId = T.RT_1,
+    OpenSystemDesc = T.RT_7,
+    UIUnlockName = "UI_SHOP_TAB_ExploreBadge_East02",
+    UIUnlockRuleId = "HaoJingShopTab"
+  },
   HardBoss = {
     AfterUIUnlockDesc = "System_Des_HardBoss",
     ConditionId = 4120,
@@ -614,7 +622,6 @@ return ReadOnly("UIUnlockRule", {
     AfterUIUnlockDesc = "System_Des_Shop",
     ConditionId = 4030,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Store.T_Entrance_Store",
-    IsHideUnlockPopup = 1,
     OpenConditionId = T.RT_1,
     OpenSystemDesc = {
       "UI_Disabled_Des_Shop",
@@ -752,7 +759,7 @@ return ReadOnly("UIUnlockRule", {
     IsHideUnlockPopup = 1,
     OpenConditionId = T.RT_1,
     OpenSystemDesc = T.RT_7,
-    UIUnlockName = "UI_SHOP_TAB_ExploreBadge_EXChapter01",
+    UIUnlockName = "UI_SHOP_TAB_ExploreBadge_East01",
     UIUnlockRuleId = "YanjinduShopTab"
   }
 })

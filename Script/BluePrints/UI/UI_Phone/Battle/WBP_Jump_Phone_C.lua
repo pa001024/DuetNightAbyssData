@@ -72,7 +72,7 @@ function Jump_Phone_C.ButtonJumpDown(Battle_Button_Phone, Index, StartPos)
     return
   end
   Jump_M.CurButtonState = "Press"
-  if Jump_M.OwnerPlayer:IsFlying() or Jump_M.OwnerPlayer.CurMount then
+  if Jump_M.OwnerPlayer:IsFlying() or Jump_M.OwnerPlayer.CurMount or Jump_M.OwnerPanel.IsSuyi then
     Jump_M.OwnerPanel:TryToPlayTargetCommand("Jump", true)
   end
   Jump_M:PlayStateAnimation()
@@ -80,29 +80,39 @@ end
 
 function Jump_Phone_C.ButtonJumpMove(Battle_Button_Phone, TouchFingerCount, Index, LastPos, TotalDeltaDis, LastDeltaDis)
   local Jump_M = Battle_Button_Phone.Jump
-  if Jump_M.OwnerPlayer.CurMount then
+  if Jump_M.OwnerPlayer.CurMount or Jump_M.OwnerPanel.IsSuyi then
     return
   end
   if Jump_M.OwnerPlayer:CheckSkillInActive(ESkillName.Jump) then
     return
   end
-  local FromCenterDis = UE4.UKismetMathLibrary.Distance2D(TotalDeltaDis, FVector2D(0, 0))
-  if FromCenterDis >= Jump_M.InnerButtonDis then
-    if not Jump_M.StartSlide then
-      Jump_M.OwnerPanel:TryToPlayTargetCommand("Slide", true)
-      if Jump_M.OwnerPlayer:IsFlying() then
-        Jump_M.OwnerPanel:TryToStopTargetCommand("Jump", true)
-      end
-      Jump_M.StartSlide = true
-    end
-    Jump_M:GetVectorRegionAngle(TotalDeltaDis)
-  elseif FromCenterDis < Jump_M.InnerButtonDis and Jump_M.StartSlide then
+  
+  local function DoStopSlide()
     Jump_M.OwnerPanel:TryToStopTargetCommand("Slide", true)
     if Jump_M.OwnerPlayer:IsFlying() then
       Jump_M.OwnerPanel:TryToPlayTargetCommand("Jump", true)
     end
     Jump_M.CurButtonState = "Press"
     Jump_M.StartSlide = false
+  end
+  
+  local FromCenterDis = UE4.UKismetMathLibrary.Distance2D(TotalDeltaDis, FVector2D(0, 0))
+  if FromCenterDis >= Jump_M.InnerButtonDis then
+    local Angle = Jump_M:GetVectorRegionAngle(TotalDeltaDis)
+    Jump_M:ChangeCurButtonStateByAngle(Angle)
+    local CurRegionIsExtra = Jump_M:IsRegionExtraByAngle(Angle)
+    if Jump_M.StartSlide and CurRegionIsExtra then
+      DoStopSlide()
+    end
+    if not Jump_M.StartSlide and not CurRegionIsExtra then
+      Jump_M.OwnerPanel:TryToPlayTargetCommand("Slide", true)
+      if Jump_M.OwnerPlayer:IsFlying() then
+        Jump_M.OwnerPanel:TryToStopTargetCommand("Jump", true)
+      end
+      Jump_M.StartSlide = true
+    end
+  elseif FromCenterDis < Jump_M.InnerButtonDis and Jump_M.StartSlide then
+    DoStopSlide()
   end
   Jump_M:PlayStateAnimation()
 end
@@ -113,9 +123,14 @@ function Jump_Phone_C.ButtonJumpUp(Battle_Button_Phone, Index, WidgetLocalPos, L
     return
   end
   local FromCenterDis = UE4.UKismetMathLibrary.Distance2D(TotalDeltaDis, FVector2D(0, 0))
-  if FromCenterDis >= Jump_M.InnerButtonDis and not Jump_M.OwnerPlayer.CurMount then
+  local CurRegionHasExtra = false
+  if FromCenterDis >= Jump_M.InnerButtonDis then
+    local Angle = Jump_M:GetVectorRegionAngle(TotalDeltaDis)
+    CurRegionHasExtra = Jump_M:IsRegionExtraByAngle(Angle)
+  end
+  if FromCenterDis >= Jump_M.InnerButtonDis and not Jump_M.OwnerPlayer.CurMount and not CurRegionHasExtra then
     Jump_M:HandleStateWhenUp()
-  elseif Jump_M.OwnerPlayer:IsFlying() or Jump_M.OwnerPlayer.CurMount then
+  elseif Jump_M.OwnerPlayer:IsFlying() or Jump_M.OwnerPlayer.CurMount or Jump_M.OwnerPanel.IsSuyi then
     Jump_M.OwnerPanel:TryToStopTargetCommand("Jump", true)
   else
     Jump_M.OwnerPanel:TryToPlayTargetCommand("Jump", true)
@@ -131,6 +146,10 @@ function Jump_Phone_C:GetVectorRegionAngle(Vector2D)
   elseif -Vector2D.Y < 0 then
     Angle = Angle + 360
   end
+  return Angle
+end
+
+function Jump_Phone_C:ChangeCurButtonStateByAngle(Angle)
   if 1 == self.CurrentLayout then
     if Angle >= self.BulletJumpAngle_Min and Angle <= self.BulletJumpAngle_Max then
       self.CurButtonState = "Jump"
@@ -140,10 +159,20 @@ function Jump_Phone_C:GetVectorRegionAngle(Vector2D)
       self.CurButtonState = "Slide"
     end
   elseif Angle >= self.SlideAngle_Min_2in1 and Angle <= self.SlideAngle_Max_2in1 then
-    self.CurButtonState = "Slide"
-  else
+    if not self.OwnerPanel.HasExtraSlide then
+      self.CurButtonState = "Slide"
+    end
+  elseif not self.OwnerPanel.HasExtraSlideAttack then
     self.CurButtonState = "Attack"
   end
+end
+
+function Jump_Phone_C:IsRegionExtraByAngle(Angle)
+  if 2 ~= self.CurrentLayout then
+    return false
+  end
+  local IsSlideSide = Angle >= self.SlideAngle_Min_2in1 and Angle <= self.SlideAngle_Max_2in1
+  return IsSlideSide and self.OwnerPanel.HasExtraSlide or not IsSlideSide and self.OwnerPanel.HasExtraSlideAttack
 end
 
 function Jump_Phone_C:HandleStateWhenUp()

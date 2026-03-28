@@ -110,7 +110,7 @@ function Private.TryUpdateFileOrUseCache(CdnUrls, VersionFilePath, FilePath, ToT
 end
 
 function CdnTool:GetGameNotice(ServerID, Cb)
-  Private.TryUpdateFileOrUseCache(CdnPath:CdnUrl(ServerID), CdnPath:GameNoticeVersion(ServerID), CdnPath:GameNotice(ServerID), Private.LuaFileToTable, Cb, ServerID)
+  Private.TryUpdateFileOrUseCache(CdnPath:CdnUrl(ServerID), CdnPath:GameNoticeVersion(ServerID), CdnPath:GameNotice(ServerID), Private.JsonFileToTable, Cb, ServerID)
 end
 
 function CdnTool:GetMaintenance(ServerID, Cb)
@@ -131,7 +131,7 @@ end
 
 function CdnTool:GetServerList(Cb)
   local CdnUrls = CdnPath:CdnUrl()
-  Private.CdnGetLuaTable(CdnUrls, CdnPath:ServerList(), function(ContentTable, Content)
+  Private.CdnGetJson(CdnUrls, CdnPath:ServerList(), function(ContentTable, Content)
     if not ContentTable then
       print("[CdnTool:CBT3GetGateIpPort] Cdn ServerListFile is nil", Content)
       Cb(nil)
@@ -219,7 +219,11 @@ function CdnTool:GetAllAvatars(Account, Callback)
     local RandomIndex = math.random(1, #_ServerList)
     local Info = _ServerList[RandomIndex]
     GWorld.NetworkMgr:ConnectServer(Info.hostnum, Info.ip, Info.port, Account, false, true)
-    Callback(true, "Start Connect Server, Please Wait...", Servers)
+    local CallbackServers = {}
+    for _, ServerInfo in pairs(Servers) do
+      CallbackServers[ServerInfo.hostnum] = ServerInfo
+    end
+    Callback(true, "Start Connect Server, Please Wait...", CallbackServers)
   end
   
   self:GetServerList(OnGetServerList)

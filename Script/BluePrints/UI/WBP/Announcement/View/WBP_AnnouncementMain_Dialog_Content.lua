@@ -1,6 +1,6 @@
 require("UnLua")
 local UIUtils = require("Utils.UIUtils")
-local AnnouncementUtils = require("BluePrints.UI.WBP.Announcement.AnnounceUtils")
+local AnnounceModel = AnnounceController:GetModel()
 local Utils = require("Utils")
 local ReddotNames = {
   "SystemAnnouncement",
@@ -82,7 +82,7 @@ function M:ToggleWebContentVisiblity()
 end
 
 function M:OnBeforePopup(RawUrl, Frame)
-  RawUrl = AnnouncementUtils:UrlDecode(RawUrl)
+  RawUrl = AnnounceModel:UrlDecode(RawUrl)
   local NewUrl = string.lower(RawUrl)
   DebugPrint("看看Url是啥 ", NewUrl)
   if string.find(NewUrl, "opengamesystem|") then
@@ -129,8 +129,9 @@ function M:Destruct()
   self.CurrUrl = nil
   self.List_Announcement.OnCreateEmptyContent:Unbind()
   M.Super.Destruct(self)
-  AnnouncementUtils:ClearAnnounceMainUI()
+  AnnounceController:ClearAnnounceMainUI()
   self.GameInputModeSubsystem:SetNavigateWidgetOpacity(1)
+  EMCache:SaveCommon()
 end
 
 function M:SetUpFixedText()
@@ -211,7 +212,7 @@ function M:UpdateAnnoucement()
   if self.bNeedRequest then
     ForceStopAsyncTask(self, "UpdateAnnoucementTask")
     RunAsyncTask(self, "UpdateAnnoucementTask", function(Coroutine)
-      AnnouncementUtils:GetAnnouncementDataAsync(self.ShowTag, Coroutine, self.HostId)
+      AnnounceController:GetAnnouncementDataAsync(self.ShowTag, Coroutine, self.HostId)
       self:RefreshAllAnnouncement()
     end)
     self.bNeedRequest = false
@@ -231,7 +232,7 @@ end
 
 function M:RefreshAllAnnouncement()
   HeroUSDKSubsystem(self):UploadTrackLog_Lua("game_show_notice")
-  local Confs = AnnouncementUtils:FilterConfForUI(self.CurrTabIdx, self.ShowTag)
+  local Confs = AnnounceModel:FilterConfForUI(self.CurrTabIdx, self.ShowTag)
   self:RefreshScrollTips()
   self.List_Announcement:ClearListItems()
   if not Confs or 0 == #Confs then
@@ -264,7 +265,7 @@ function M:RefreshAllAnnouncement()
 end
 
 function M:RealLoadWeb(Content)
-  AnnouncementUtils:LoadHtmlContent(Content.Conf, function(DummyUrl, HtmlText)
+  AnnounceModel:LoadHtmlContent(Content.Conf, function(DummyUrl, HtmlText)
     if DummyUrl == self.CurrUrl then
       return
     end
@@ -307,7 +308,7 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
 end
 
 function M:RefreshScrollTips()
-  local Confs = AnnouncementUtils:FilterConfForUI(self.CurrTabIdx, self.ShowTag)
+  local Confs = AnnounceModel:FilterConfForUI(self.CurrTabIdx, self.ShowTag)
   local length = #Confs
   if length > 0 then
     self:ShowGamepadScrollBtn(true)

@@ -257,6 +257,9 @@ function M:ExpandList(IsListExpanded)
     end
     self.Selective_Listing:PlayInAnim()
     self.Selective_Listing:SetFocusToList()
+    if self.IsPC then
+      self:InitKeySetting()
+    end
   else
     self.IsListExpanded = false
     self.Selective_Listing:PlayOutAnim()
@@ -288,6 +291,9 @@ function M:ExpandList(IsListExpanded)
       else
         self:SetFocus()
       end
+    end
+    if self.IsPC then
+      self:InitKeySetting()
     end
   end
 end

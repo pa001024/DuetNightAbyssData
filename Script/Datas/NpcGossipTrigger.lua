@@ -199,6 +199,22 @@ return ReadOnly("NpcGossipTrigger", {
     RelatedTalks = 910123,
     TriggerArea = 500
   },
+  [910124] = {
+    BubbleWaitTime = 10,
+    GossipPoint = T.RT_1,
+    NpcCombination = {81504},
+    NpcGossipId = 910124,
+    RelatedTalks = 910124,
+    TriggerArea = 500
+  },
+  [910125] = {
+    BubbleWaitTime = 10,
+    GossipPoint = T.RT_1,
+    NpcCombination = {83202},
+    NpcGossipId = 910125,
+    RelatedTalks = 910125,
+    TriggerArea = 500
+  },
   [920101] = {
     BubbleWaitTime = 10,
     GossipPoint = T.RT_2,
@@ -378,7 +394,14 @@ return ReadOnly("NpcGossipTrigger", {
     RelatedTalks = 920125,
     TriggerArea = 500
   },
-  [920126] = {NpcGossipId = 920126},
+  [920126] = {
+    BubbleWaitTime = 10,
+    GossipPoint = T.RT_2,
+    NpcCombination = {85301, 83202},
+    NpcGossipId = 920126,
+    RelatedTalks = 920126,
+    TriggerArea = 500
+  },
   [920127] = {
     BubbleWaitTime = 10,
     GossipPoint = T.RT_2,
@@ -527,6 +550,7 @@ return ReadOnly("NpcGossipTrigger", {
   [920146] = {
     BubbleWaitTime = 10,
     GossipPoint = T.RT_2,
+    NpcCombination = {85102, 83202},
     NpcGossipId = 920146,
     RelatedTalks = 920146,
     TriggerArea = 500
@@ -570,7 +594,14 @@ return ReadOnly("NpcGossipTrigger", {
     RelatedTalks = 920151,
     TriggerArea = 500
   },
-  [920152] = {NpcGossipId = 920152},
+  [920152] = {
+    BubbleWaitTime = 10,
+    GossipPoint = T.RT_2,
+    NpcCombination = {83301, 83202},
+    NpcGossipId = 920152,
+    RelatedTalks = 920152,
+    TriggerArea = 500
+  },
   [920153] = {
     BubbleWaitTime = 10,
     GossipPoint = T.RT_2,
@@ -704,7 +735,14 @@ return ReadOnly("NpcGossipTrigger", {
     RelatedTalks = 920173,
     TriggerArea = 500
   },
-  [920174] = {NpcGossipId = 920174},
+  [920174] = {
+    BubbleWaitTime = 10,
+    GossipPoint = T.RT_2,
+    NpcCombination = {84102, 83202},
+    NpcGossipId = 920174,
+    RelatedTalks = 920174,
+    TriggerArea = 500
+  },
   [920175] = {
     BubbleWaitTime = 10,
     GossipPoint = T.RT_2,
@@ -746,5 +784,53 @@ return ReadOnly("NpcGossipTrigger", {
     RelatedTalks = 920180,
     TriggerArea = 500
   },
-  [920181] = {NpcGossipId = 920181}
+  [920181] = {NpcGossipId = 920181},
+  [920182] = {
+    BubbleWaitTime = 10,
+    GossipPoint = T.RT_2,
+    NpcCombination = {81504, 82101},
+    NpcGossipId = 920182,
+    RelatedTalks = 920182,
+    TriggerArea = 500
+  },
+  [920183] = {
+    BubbleWaitTime = 10,
+    GossipPoint = T.RT_2,
+    NpcCombination = {81504, 81503},
+    NpcGossipId = 920183,
+    RelatedTalks = 920183,
+    TriggerArea = 500
+  },
+  [920184] = {
+    BubbleWaitTime = 10,
+    GossipPoint = T.RT_2,
+    NpcCombination = {81504, 85301},
+    NpcGossipId = 920184,
+    RelatedTalks = 920184,
+    TriggerArea = 500
+  },
+  [920185] = {
+    BubbleWaitTime = 10,
+    GossipPoint = T.RT_2,
+    NpcCombination = {83202, 85301},
+    NpcGossipId = 920185,
+    RelatedTalks = 920185,
+    TriggerArea = 500
+  },
+  [920186] = {
+    BubbleWaitTime = 10,
+    GossipPoint = T.RT_2,
+    NpcCombination = {83202, 84102},
+    NpcGossipId = 920186,
+    RelatedTalks = 920186,
+    TriggerArea = 500
+  },
+  [920187] = {
+    BubbleWaitTime = 10,
+    GossipPoint = T.RT_2,
+    NpcCombination = {83202, 85102},
+    NpcGossipId = 920187,
+    RelatedTalks = 920187,
+    TriggerArea = 500
+  }
 })

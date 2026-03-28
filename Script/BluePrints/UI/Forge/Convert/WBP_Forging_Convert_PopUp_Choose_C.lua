@@ -358,9 +358,9 @@ function WBP_Forging_Convert_PopUp_Choose_C:ShowChoosedMaterial()
           Item.WBP_Com_BtnImg01:SetVisibility(UIConst.VisibilityOp.Visible)
         end
       end
-      local DeletePath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Common/T_Com_IconDelete.T_Com_IconDelete'"
-      local DeleteDice = LoadObject(DeletePath)
-      Item.Icon_Delete:SetBrushResourceObject(DeleteDice)
+      local MinusPath = "Texture2D'/Game/UI/Texture/Static/Atlas/Common/T_Com_IconMinus.T_Com_IconMinus'"
+      local MinusDice = LoadObject(MinusPath)
+      Item.Icon_Delete:SetBrushResourceObject(MinusDice)
     end
   end
 end

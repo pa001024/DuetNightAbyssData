@@ -46,6 +46,35 @@ return ReadOnly("CommonQuestPhase", {
     Index = 1,
     QuestPhaseId = 1201
   },
+  [1202] = {
+    EventId = 112002,
+    Index = 1,
+    QuestPhaseId = 1202
+  },
+  [1301] = {
+    EventId = 103014,
+    Index = 1,
+    QuestPhaseId = 1301,
+    QuestPhaseName = "UI_SoloTreasure_LimitTask01"
+  },
+  [1302] = {
+    EventId = 103014,
+    Index = 2,
+    QuestPhaseId = 1302,
+    QuestPhaseName = "UI_SoloTreasure_LimitTask02"
+  },
+  [1303] = {
+    EventId = 103014,
+    Index = 3,
+    QuestPhaseId = 1303,
+    QuestPhaseName = "UI_SoloTreasure_LimitTask03"
+  },
+  [1304] = {
+    EventId = 103014,
+    Index = 4,
+    QuestPhaseId = 1304,
+    QuestPhaseName = "UI_SoloTreasure_PermanentTask"
+  },
   [1401] = {
     EventId = 114001,
     Index = 1,
@@ -60,6 +89,42 @@ return ReadOnly("CommonQuestPhase", {
     EventId = 114001,
     Index = 3,
     QuestPhaseId = 1403
+  },
+  [1501] = {
+    EventId = 1020012,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Activity_East_Season01_01.T_Tab_Activity_East_Season01_01",
+    Index = 1,
+    QuestPhaseId = 1501,
+    QuestPhaseName = "Event_102001_QuestName1",
+    RewardPreview = 1020011,
+    SplineBP = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/East/Season02/Spine/WBP_Activity_East_Season02_Spine_01.WBP_Activity_East_Season02_Spine_01'"
+  },
+  [1502] = {
+    EventId = 1020012,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Activity_East_Season01_02.T_Tab_Activity_East_Season01_02",
+    Index = 2,
+    QuestPhaseId = 1502,
+    QuestPhaseName = "Event_102001_QuestName2",
+    RewardPreview = 1020011,
+    SplineBP = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/East/Season02/Spine/WBP_Activity_East_Season02_Spine_02.WBP_Activity_East_Season02_Spine_02'"
+  },
+  [1503] = {
+    EventId = 1020012,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Activity_East_Season01_03.T_Tab_Activity_East_Season01_03",
+    Index = 3,
+    QuestPhaseId = 1503,
+    QuestPhaseName = "Event_102001_QuestName3",
+    RewardPreview = 1020011,
+    SplineBP = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/East/Season02/Spine/WBP_Activity_East_Season02_Spine_03.WBP_Activity_East_Season02_Spine_03'"
+  },
+  [1504] = {
+    EventId = 1020012,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Activity_East_Season01_04.T_Tab_Activity_East_Season01_04",
+    Index = 4,
+    QuestPhaseId = 1504,
+    QuestPhaseName = "Event_102001_QuestName4",
+    RewardPreview = 1020011,
+    SplineBP = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/East/Season02/Spine/WBP_Activity_East_Season02_Spine_04.WBP_Activity_East_Season02_Spine_04'"
   },
   [2001] = {
     EventId = 111001,
@@ -83,6 +148,18 @@ return ReadOnly("CommonQuestPhase", {
     EventId = 111002,
     Index = 2,
     QuestPhaseId = 2004,
+    QuestPhaseName = "RaidDungeon_PreRaid_Rank"
+  },
+  [2005] = {
+    EventId = 111003,
+    Index = 1,
+    QuestPhaseId = 2005,
+    QuestPhaseName = "RaidDungeon_Raid_Rank"
+  },
+  [2006] = {
+    EventId = 111003,
+    Index = 2,
+    QuestPhaseId = 2006,
     QuestPhaseName = "RaidDungeon_PreRaid_Rank"
   },
   [3001] = {

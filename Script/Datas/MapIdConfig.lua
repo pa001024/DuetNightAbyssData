@@ -322,6 +322,10 @@ return ReadOnly("MapIdConfig", {
     MapID = 263,
     MapName = "Haiboliya_Chezhan_CZYW_Design"
   },
+  Haiboliya_Chezhan_FLCX_Design = {
+    MapID = 274,
+    MapName = "Haiboliya_Chezhan_FLCX_Design"
+  },
   Haiboliya_Chezhan_HWQ_Design = {
     MapID = 250,
     MapName = "Haiboliya_Chezhan_HWQ_Design"
@@ -329,6 +333,10 @@ return ReadOnly("MapIdConfig", {
   Haiboliya_Chezhan_JGQ_Design = {
     MapID = 251,
     MapName = "Haiboliya_Chezhan_JGQ_Design"
+  },
+  Haiboliya_Chezhan_PTCX_Design = {
+    MapID = 273,
+    MapName = "Haiboliya_Chezhan_PTCX_Design"
   },
   Haiboliya_Chezhan_YLQ_Design = {
     MapID = 252,
@@ -370,6 +378,34 @@ return ReadOnly("MapIdConfig", {
     MapID = 254,
     MapName = "Haiboliya_Chezhan_ZZZ_Design"
   },
+  Haiboliya_FTLake_BF_Design = {
+    MapID = 282,
+    MapName = "Haiboliya_FTLake_BF_Design"
+  },
+  Haiboliya_FTLake_Design = {
+    MapID = 280,
+    MapName = "Haiboliya_FTLake_Design"
+  },
+  Haiboliya_FTNew_Boss_Design = {
+    MapID = 284,
+    MapName = "Haiboliya_FTNew_Boss_Design"
+  },
+  Haiboliya_FTNew_Design = {
+    MapID = 278,
+    MapName = "Haiboliya_FTNew_Design"
+  },
+  Haiboliya_FTNew_Home_Design = {
+    MapID = 283,
+    MapName = "Haiboliya_FTNew_Home_Design"
+  },
+  Haiboliya_FTOld_Design = {
+    MapID = 279,
+    MapName = "Haiboliya_FTOld_Design"
+  },
+  Haiboliya_FTOld_NPark_Design = {
+    MapID = 281,
+    MapName = "Haiboliya_FTOld_NPark_Design"
+  },
   Haiboliya_Longsha01_Design = {
     ExploreID = 7030,
     MapID = 164,
@@ -398,6 +434,18 @@ return ReadOnly("MapIdConfig", {
     ExploreID = 7080,
     MapID = 270,
     MapName = "Huaxu_Haojing_Batt04_Design"
+  },
+  Huaxu_Haojing_DungeonDesign_GoldRush_JLC_Hard = {
+    MapID = 277,
+    MapName = "Huaxu_Haojing_DungeonDesign_GoldRush_JLC_Hard"
+  },
+  Huaxu_Haojing_DungeonDesign_GoldRush_JLC_Tongbi_Hard = {
+    MapID = 276,
+    MapName = "Huaxu_Haojing_DungeonDesign_GoldRush_JLC_Tongbi_Hard"
+  },
+  Huaxu_Haojing_DungeonDesign_GoldRush_JLC_Tongbi_Normal = {
+    MapID = 275,
+    MapName = "Huaxu_Haojing_DungeonDesign_GoldRush_JLC_Tongbi_Normal"
   },
   Huaxu_Haojing_Eas_Design = {
     ExploreID = 7045,
@@ -448,6 +496,10 @@ return ReadOnly("MapIdConfig", {
     ExploreID = 7067,
     MapID = 237,
     MapName = "Huaxu_Haojing_TRLM_Design"
+  },
+  Huaxu_Haojing_TRLM_DungeonDesign_HardBoss = {
+    MapID = 272,
+    MapName = "Huaxu_Haojing_TRLM_DungeonDesign_HardBoss"
   },
   Huaxu_Haojing_TRLM_IQ12020515_DesignTask = {
     ExploreID = 7079,
@@ -523,6 +575,22 @@ return ReadOnly("MapIdConfig", {
     ExploreID = 7049,
     MapID = 205,
     MapName = "Huaxu_Yanjindu_Cen_Design"
+  },
+  Huaxu_Yanjindu_DungeonDesign_GoldRushFil01 = {
+    MapID = 285,
+    MapName = "Huaxu_Yanjindu_DungeonDesign_GoldRushFil01"
+  },
+  Huaxu_Yanjindu_DungeonDesign_GoldRushFil02 = {
+    MapID = 288,
+    MapName = "Huaxu_Yanjindu_DungeonDesign_GoldRushFil02"
+  },
+  Huaxu_Yanjindu_DungeonDesign_GoldRushPor01 = {
+    MapID = 271,
+    MapName = "Huaxu_Yanjindu_DungeonDesign_GoldRushPor01"
+  },
+  Huaxu_Yanjindu_DungeonDesign_GoldRushPor02 = {
+    MapID = 286,
+    MapName = "Huaxu_Yanjindu_DungeonDesign_GoldRushPor02"
   },
   Huaxu_Yanjindu_Fil_Design = {
     ExploreID = 7050,

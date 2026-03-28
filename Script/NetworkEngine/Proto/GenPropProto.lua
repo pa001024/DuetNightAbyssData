@@ -24,7 +24,8 @@ local BaseType2ProtoType = {
   Str = "string",
   Int = "int64",
   Float = "float",
-  Bool = "bool"
+  Bool = "bool",
+  Bytes = "bytes"
 }
 local MapKeyTypes = {
   ObjId = "string",

@@ -1,9 +1,6 @@
-DataMgr = setmetatable({}, {
+_G.DataMgr = setmetatable({}, {
   __index = function(t, key)
-    local OK, Table = pcall(require, "Datas." .. key)
-    if not OK then
-      Table = nil
-    end
+    local Table = require("Datas." .. key)
     return Table
   end
 })
@@ -168,7 +165,7 @@ DataMgr.PartitionCache = {
   MaxPartitionsPerFile = 10
 }
 
-function GetMaxPartitionsByFileName(FileName)
+local function GetMaxPartitionsByFileName(FileName)
   local MaxVal = DataMgr.PartitionCache.MaxPartitionsPerFile
   if not FileName or "" == FileName then
     return MaxVal
@@ -278,7 +275,7 @@ function DataMgr.CleanAllTable()
   end
 end
 
-function read_only(name, tbl)
+local function read_only(name, tbl)
   if not all_tables[tbl] then
     local tbl_mt = getmetatable(tbl)
     if not tbl_mt then

@@ -14,7 +14,7 @@ function Component:DoBattleCommand(EffectStruct, bPrintToClient, EidFrom)
   local ct = {}
   local OldPrint = print
   if bPrintToClient then
-    function print(logTag, ...)
+    function _G.print(logTag, ...)
       OldPrint(logTag, ...)
       
       local FirstFlag = 1
@@ -54,7 +54,7 @@ function Component:DoBattleCommand(EffectStruct, bPrintToClient, EidFrom)
       GM_Command.ClientGM(self, self, Func, Content)
     end
   end
-  print = OldPrint
+  _G.print = OldPrint
   if bPrintToClient then
     local Player = self:GetEntity(EidFrom)
     if Player then
@@ -561,7 +561,7 @@ function Component:GM_RemovePetAffix(AffixId)
   end
   AffixId = tonumber(AffixId)
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
-  Player:ServerRemoveAddBattlePetAffix(AffixId)
+  Player:ServerRemoveAddBattlePetAffix(AffixId, false)
 end
 
 function Component:GM_RemovePet()

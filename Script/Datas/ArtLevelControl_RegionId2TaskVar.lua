@@ -30,17 +30,29 @@ return ReadOnly("ArtLevelControl_RegionId2TaskVar", {
   },
   [1041] = {
     [1] = "DaFengBaoXiang200303",
-    [2] = "ZhuXingMuXiang200302",
-    [3] = "ZhuXingMuXiang20030203",
-    [4] = "IQ12010307",
-    [5] = "IQ12010313",
-    [6] = "IQ12010502",
-    [7] = "IQ12010513_fu",
-    [8] = "IQ120315"
+    [2] = "IQ12010307",
+    [3] = "IQ12010313",
+    [4] = "IQ12010502",
+    [5] = "IQ12010513_fu",
+    [6] = "IQ120315"
   },
   [1045] = {
     [1] = "Wuyousheng_First_12020122",
-    [2] = "Wuyousheng_Escape_12020212"
+    [2] = "Wuyousheng_Escape_12020212",
+    [3] = "FengxiangBaoming",
+    [4] = "FengxiangXiaochi",
+    [5] = "FengxiangBoss",
+    [6] = "IQ12030706",
+    [7] = "IQ12030706_jlc",
+    [8] = "IQ12020517"
+  },
+  [1051] = {
+    [1] = "Qianxing12020208",
+    [2] = "Int12020208",
+    [3] = "ZhiliuA12020414"
+  },
+  [1052] = {
+    [1] = "IQ12020401"
   },
   [1053] = {
     [1] = "Special_Zhiliu_12020515"

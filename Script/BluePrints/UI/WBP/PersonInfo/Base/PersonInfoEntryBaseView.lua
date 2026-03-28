@@ -9,43 +9,11 @@ M._components = {
 
 function M:Construct()
   self:RefreshBaseInfo()
-  local co = coroutine.create(function()
-    self.PersonInfoMainPage:ModelViewIni()
-  end)
   if self.HideBegin and not self:IsAnimationPlaying(self.Bg_In) then
     self:SetRenderOpacity(0)
   end
-  self:AddTimer(self.delta1 or 0.05, function()
-    DebugPrint("开始加载角色")
-    if PersonInfoController.CurPage == nil then
-      return
-    end
-    local success, err = coroutine.resume(co)
-    if not success then
-      local trace = debug.traceback(co, tostring(err), 2)
-      ScreenPrint("[LUA_ERROR] Coroutine (model):\n" .. trace)
-    end
-    self:AddTimer(self.delta2 or 0.1, function()
-      DebugPrint("开始加载场景")
-      if PersonInfoController.CurPage == nil then
-        return
-      end
-      local success, err = coroutine.resume(co)
-      if not success then
-        local trace = debug.traceback(co, tostring(err), 2)
-        ScreenPrint("[LUA_ERROR] Coroutine (scene):\n" .. trace)
-      end
-      self:AddTimer(self.delta3 or 0.1, function()
-        if PersonInfoController.CurPage == nil then
-          return
-        end
-        local success, err = coroutine.resume(co)
-        if not success then
-          local trace = debug.traceback(co, tostring(err), 2)
-          ScreenPrint("[LUA_ERROR] Coroutine (camera):\n" .. trace)
-        end
-      end)
-    end)
+  self:AddTimer(0.231, function()
+    self.PersonInfoMainPage:ModelViewIni()
   end)
 end
 

@@ -62,8 +62,8 @@ function Component:CreateUnitServerSetRoleMod(RoleId, Source, OnlySummonInherit)
   end
   local MaxHp = self:GetAttr("MaxHp")
   if MaxHp <= 0 then
-    self:SetAttr("MaxHp", 2100000000)
-    self:SetAttr("Hp", 2100000000)
+    self:SetAttr("MaxHp", 1)
+    self:SetAttr("Hp", 1)
   end
 end
 

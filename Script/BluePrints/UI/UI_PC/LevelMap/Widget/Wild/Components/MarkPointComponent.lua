@@ -218,6 +218,9 @@ function Component:InitMark(CoroutineIndex)
 end
 
 function Component:ShowFloor_Component(FloorId)
+  if not self.MarkTable then
+    return
+  end
   for id, mark in pairs(self.MarkTable) do
     mark:SetFloor(self.MarkData[id].FloorId - FloorId)
   end

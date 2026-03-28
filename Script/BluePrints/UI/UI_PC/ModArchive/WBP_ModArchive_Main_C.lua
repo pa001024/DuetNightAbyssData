@@ -57,10 +57,6 @@ function WBP_ModArchive_Main_C:InitArchiveTab()
     Text = GText("UI_ModGuideBook_Archive_Mod"),
     Idx = 2
   }
-  Tabs[3] = {
-    Text = GText("UI_ModGuideBook_Recommend"),
-    Idx = 3
-  }
   local ConfigData = {
     Owner = self,
     LeftKey = "Q",

@@ -21,6 +21,8 @@ function M:ClearServerRegionData()
     self.DataPool:Initialize(self)
   end
   self.DataLibrary.LogHelper.bIsRegionLogEnabled = self.IsRegionLogEnabled
+  self.RegionDataAddCallback = {}
+  self.RegionDataUpdateCallback = {}
 end
 
 function M:MakeManualItemIdMap()
@@ -120,6 +122,52 @@ function M:InitSSDataFromServer(RegionBaseData)
     }
     local Rotation = FRotator(RegionBaseData.Rotation.Pitch, RegionBaseData.Rotation.Yaw, RegionBaseData.Rotation.Roll)
     self:InitSSDataFromServer_Raw(RegionBaseData.WorldRegionEid, RegionBaseData.LevelName, RegionBaseData.UnitType, RegionBaseData.UnitId, Location, Rotation, RegionBaseData.RegionDataType)
+  end
+end
+
+function M:InitSSDataFromDungeonServer(RegionBaseData)
+  local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
+  local RealData
+  if RegionBaseData.CreatorId and RegionBaseData.CreatorId > 0 then
+    local Creator = GameState.StaticCreatorMap:Find(RegionBaseData.CreatorId)
+    if Creator then
+      local LevelName, WorldRegionEid, LuaIndex = self:AllocateDungeonServerData(Creator)
+      RegionBaseData.LevelName = LevelName
+      RegionBaseData.WorldRegionEid = WorldRegionEid
+      DebugPrint("InitSSDataFromDungeonServer StaticCreator:", RegionBaseData.ServerUniqueId, RegionBaseData.CreatorId, LevelName, WorldRegionEid)
+      self:InitSSDataFromServer(RegionBaseData)
+      RealData = self.DataPool:GetRegionEntityDataNoCopy(LuaIndex)
+      if RealData then
+        RealData.ServerUniqueId = RegionBaseData.ServerUniqueId
+      end
+    else
+      GWorld.logger.error("副本区域数据初始化没有找到StaticCreator!! 已跳过：" .. RegionBaseData.CreatorId)
+    end
+  elseif RegionBaseData.RandomRuleId and RegionBaseData.RandomRuleId > 0 then
+    local LevelName, WorldRegionEid, LuaIndex = self:AllocateDungeonServerData(nil, RegionBaseData.LevelName)
+    RegionBaseData.WorldRegionEid = WorldRegionEid
+    local Check = false
+    local RandomParams = GameState.RandomCreatorRuleMap:FindRef(RegionBaseData.RandomRuleId)
+    if RandomParams then
+      local Param = RandomParams.Params:GetRef(RegionBaseData.RandomIdxInRule + 1)
+      if Param then
+        RegionBaseData.RandomCreatorId = Param.Actorid
+        Check = true
+      end
+    end
+    if not Check then
+      GWorld.logger.error("副本区域数据初始化没有找到RandomCreator!! 已跳过：" .. RegionBaseData.RandomRuleId .. ", " .. RegionBaseData.RandomIdxInRule)
+      return
+    end
+    DebugPrint("InitSSDataFromDungeonServer RandomCreator:", RegionBaseData.ServerUniqueId, LevelName, WorldRegionEid, RegionBaseData.RandomCreatorId, RegionBaseData.RandomRuleId, RegionBaseData.RandomTableId, RegionBaseData.RandomIdxInRule)
+    self:InitSSDataFromServer(RegionBaseData)
+    RealData = self.DataPool:GetRegionEntityDataNoCopy(LuaIndex)
+    if RealData then
+      RealData.ServerUniqueId = RegionBaseData.ServerUniqueId
+    end
+  end
+  if RealData then
+    self:ExeRegionDataAddCallback(RealData)
   end
 end
 

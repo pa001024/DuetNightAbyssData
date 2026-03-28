@@ -2,8 +2,9 @@ local EDialogueIterType = require("BluePrints.Story.Talk.View.TalkUtils").EDialo
 local TalkFlowUTils = require("BluePrints.Story.Talk.TalkFlow.TalkFlowUTils")
 local M = Class()
 
-function M:New(DialogueId, Comps, NodeMaps, Events)
+function M:New(DialogueId, TalkTask, Comps, NodeMaps, Events)
   local TalkFlowNode = setmetatable({}, {__index = self})
+  rawset(TalkFlowNode, "TalkTask", TalkTask)
   rawset(TalkFlowNode, "Comps", Comps)
   rawset(TalkFlowNode, "NodeMaps", NodeMaps)
   rawset(TalkFlowNode, "Events", Events)
@@ -52,7 +53,14 @@ end
 function M:RealSkip()
 end
 
+function M:AllowSkip()
+  return true
+end
+
 function M:Skip()
+  if not self:AllowSkip() then
+    return false
+  end
   self:RealSkip()
   local NextNode = self:GetOutPort(EDialogueIterType.Out)
   if NextNode then
@@ -68,6 +76,7 @@ function M:BindNodeEvents(Events)
   self.EventReceiver = Events.EventReceiver
   self.OnNodeEnter = Events.OnNodeEnter
   self.OnNodeCreated = Events.OnNodeCreated
+  self.OnFlowCreated = Events.OnFlowCreated
 end
 
 function M:CreateNodeData(DialogueId)
@@ -80,7 +89,7 @@ function M:GenerateNextNodes()
 end
 
 function M:CreateNextNode(NodeType, DialogueId)
-  return TalkFlowUTils:GetOrCreateNode(NodeType, DialogueId, self.Comps, self.NodeMaps, self.Events)
+  return TalkFlowUTils:GetOrCreateNode(NodeType, DialogueId, self.TalkTask, self.Comps, self.NodeMaps, self.Events)
 end
 
 function M:SetOutPort(OutPortName, IterNode)

@@ -12,29 +12,20 @@ end
 function InventoryModel:InitDatas(Params)
   self.Grids = Params.Grids or self.Grids or {}
   self.Pockets = Params.Pockets or self.Pockets or {}
+  self.TreasureItems = Params.TreasureItems or self.TreasureItems or {}
+  self.BagId = Params.BagId or self.BagId or 0
 end
 
 function InventoryModel:DestroyDatas()
   self.Grids = {}
   self.Pockets = {}
+  self.TreasureItems = {}
+  self.BagId = 0
 end
 
 function InventoryModel:Destory()
   self.bInit = false
   self:DestroyDatas()
-end
-
-function InventoryModel:GetTreasureItemByGridPos(Pos)
-  local Grid = self.Grids[Pos]
-  return Grid.TreasureItem
-end
-
-function InventoryModel:GetInventoryByGrid(Grid)
-  local Ret
-  if Grid and Grid.Pocket and Grid.Pocket.Inventory then
-    Ret = Grid.Pocket.Inventory
-  end
-  return Ret
 end
 
 return InventoryModel

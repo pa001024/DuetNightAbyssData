@@ -144,8 +144,8 @@ function M:OnClickApply()
     else
       DebugPrint("@@@AutoChessPreset no BattlePage")
     end
-    self.Btn_Apply:ForbidBtn(true)
     self.Btn_Rewrite:ForbidBtn(true)
+    self.Btn_Apply:ForbidBtn(true)
   else
     DebugPrint("@@@AutoChessPreset no CachedSquadInfo")
   end
@@ -343,8 +343,10 @@ function M:InitGamepadView()
   if self:HasFocusedDescendants() or self:HasAnyUserFocus() then
     if 0 == self.WS_Type:GetActiveWidgetIndex() then
       self.GameInputModeSubsystem:SetTargetUIFocusWidget(self.Btn_Click)
+      self:OnClickPreset()
     else
       self.GameInputModeSubsystem:SetTargetUIFocusWidget(self.Btn_Add)
+      self:OnClickAdd()
     end
   end
   self:ShowButtonGamepadIcon()
@@ -410,7 +412,7 @@ function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
         self.Btn_Apply:OnBtnClicked()
         IsEventHandled = true
       end
-    elseif InKeyName == UIConst.GamePadKey.LeftThumb then
+    elseif InKeyName == UIConst.GamePadKey.LeftThumb and 0 == self.WS_Type:GetActiveWidgetIndex() and 1 == self.WS_Btn:GetActiveWidgetIndex() then
       self:OnClickErase()
       AudioManager(self):PlayUISound(nil, "event:/ui/common/click_btn_small", "AutoChessPreset_EraseSound", nil)
       IsEventHandled = true

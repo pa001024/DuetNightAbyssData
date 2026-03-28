@@ -5,7 +5,7 @@ local EMCache = require("EMCache.EMCache")
 local CommonUtils = require("Utils.CommonUtils")
 local TimeUtils = require("Utils.TimeUtils")
 local GMVariable = require("BluePrints.UI.GMInterface.GMVariable")
-local StoryPlayableUtils = require("BluePrints.Story.StoryPlayableUtils").StoryPlayableUtils
+local StoryPlayableUtils = require("BluePrints.Story.StoryPlayableUtils")
 local ForgeModel = require("Blueprints.UI.Forge.ForgeDataModel")
 local AllPlayerBloodState = require("BluePrints.UI.BloodBar.BloodBarUtils").AllBloodState
 local ChatController = require("BluePrints.UI.WBP.Chat.ChatController")
@@ -542,9 +542,13 @@ function BP_PlayerCharacter_C:InitSceneStartUI()
   end
   self.UIModePlatform = CommonUtils.GetDeviceTypeByPlatformName(self)
   self.PlatformName = UGameplayStatics.GetPlatformName()
-  local SceneStartUI = UIManager:LoadUI(UIConst.SCENESTARTUI, "SceneStartUI", UIConst.ZORDER_FOR_DESKTOP)
-  if nil ~= SceneStartUI then
-    SceneStartUI:InitMainPage()
+  if UIConst.bUseHierarchicalLayer then
+    UIManager:LoadUI(UIConst.SCENESTARTUINEW, "SceneStartUI", UIConst.ZORDER_FOR_DESKTOP)
+  else
+    local SceneStartUI = UIManager:LoadUI(UIConst.SCENESTARTUI, "SceneStartUI", UIConst.ZORDER_FOR_DESKTOP)
+    if nil ~= SceneStartUI then
+      SceneStartUI:InitMainPage()
+    end
   end
   if not self:IsDead() then
     local UIBattleMain = UIManager:GetUI("BattleMain")
@@ -666,8 +670,12 @@ function BP_PlayerCharacter_C:UpdateUIMode(UIMode)
   self.UIModePlatform = UIMode
   local CharMainUI = UIManager(self):GetUIObj("SceneStartUI")
   if nil ~= CharMainUI then
-    CharMainUI:OnCloseOtherUI()
-    CharMainUI:InitMainPage()
+    if UIConst.bUseHierarchicalLayer then
+      CharMainUI:ReInit()
+    else
+      CharMainUI:OnCloseOtherUI()
+      CharMainUI:InitMainPage()
+    end
   end
 end
 
@@ -872,12 +880,8 @@ function BP_PlayerCharacter_C:TriggerFallingCallable(GameMode, DefaultTransform,
       MountAnim:OnMountStopRideFly()
     end
   end
-  if Mount then
-    if self.FlyMount then
-      self:StartRideFly()
-    else
-      EventManager:FireEvent(EventID.OnStopMountFly, self)
-    end
+  if self.FlyMount then
+    self:StartRideFly()
   end
 end
 
@@ -933,6 +937,9 @@ function BP_PlayerCharacter_C:TryToUpdateScreenEffect(DamageFrom, EnergyShieldRe
         end
       end
     end
+  end
+  if self:IsMainPlayer() then
+    EventManager:FireEvent(EventID.OnPlayShowDamageEffect)
   end
 end
 
@@ -1360,14 +1367,6 @@ function BP_PlayerCharacter_C:GetNickName()
   return self.PlayerState.PlayerName
 end
 
-function BP_PlayerCharacter_C:CheckSkillInActive(SkillName)
-  local Controller = self:GetController()
-  if not Controller or not Controller.CheckSkillInActive then
-    return false
-  end
-  return Controller:CheckSkillInActive(SkillName)
-end
-
 function BP_PlayerCharacter_C:PickupFunctionDispatcher(UnitId, PickUpCount, Transform, CharacterEid, PickUpEid, bExtra)
   local Battle = Battle(self)
   local TargetCharacter = Battle:GetEntity(CharacterEid)
@@ -1500,6 +1499,267 @@ end
 function BP_PlayerCharacter_C:LeaveSeatingTag(NewTag)
   self:LeaveInteractiveTag(NewTag)
   self.CapsuleComponent:SetCollisionResponseToChannel(ECollisionChannel.ECC_WorldStatic, ECollisionResponse.ECR_Block)
+end
+
+function BP_PlayerCharacter_C:TryEnterSlideMech()
+  if self.IsFlyingToSlideMech then
+    return
+  end
+  if self.IsInSlideMech and self.CurSlideMechEid > 0 then
+    self:TryLeaveSlideMech()
+    return
+  end
+  local GameState = UE4.UGameplayStatics.GetGameState(self)
+  if not GameState then
+    return
+  end
+  local PlayerLocation = self:K2_GetActorLocation()
+  local Controller = self:GetController()
+  if not Controller then
+    return
+  end
+  local CanInteractiveDis = DataMgr.MovementParams.CanInteractiveDis.ParamValue or 0
+  local CanInteractiveAngle = DataMgr.MovementParams.CanInteractiveAngle.ParamValue or 0
+  local ControlRotation = Controller:GetControlRotation()
+  local ForwardVector = UE4.UKismetMathLibrary.GetForwardVector(ControlRotation)
+  local BestMech
+  local BestDist = math.huge
+  local SlideMechMap = GameState.SlideMechanismMap:ToTable()
+  for Eid, SlideMech in pairs(SlideMechMap) do
+    if IsValid(SlideMech) then
+      local MechLocation = SlideMech:K2_GetActorLocation()
+      local Delta = MechLocation - PlayerLocation
+      local Distance = Delta:Size()
+      if CanInteractiveDis >= Distance then
+        local DirToMech = Delta
+        DirToMech:Normalize()
+        local DotProduct = ForwardVector:Dot(DirToMech)
+        local AngleRad = math.acos(math.clamp(DotProduct, -1, 1))
+        local AngleDeg = math.deg(AngleRad)
+        if CanInteractiveAngle >= AngleDeg and BestDist > Distance then
+          BestDist = Distance
+          BestMech = SlideMech
+        end
+      end
+    end
+  end
+  if BestMech then
+    DebugPrint("TryEnterSlideMech ", BestMech.Eid, BestMech:GetName())
+    BestMech:PlayerFirstEnterSlideMech(self)
+  end
+end
+
+function BP_PlayerCharacter_C:BeginEnterSlideMech(MechEid)
+  local GameState = UE4.UGameplayStatics.GetGameState(self)
+  if not GameState then
+    return
+  end
+  local SlideMech = GameState.SlideMechanismMap:FindRef(MechEid)
+  if not IsValid(SlideMech) then
+    DebugPrint("BeginEnterSlideMech: SlideMech not found, Eid:", MechEid)
+    return
+  end
+  local SplineComp = SlideMech.Spline
+  if not IsValid(SplineComp) then
+    DebugPrint("BeginEnterSlideMech: SplineComponent not found on SlideMech")
+    return
+  end
+  local OriginLoc = SplineComp:GetLocationAtSplinePoint(0, ESplineCoordinateSpace.World)
+  local SplineStartLocation = SlideMech:GetClosedTransformInSpline(OriginLoc)
+  self.SlideMechEid = MechEid
+  local PlayerLocation = self:K2_GetActorLocation()
+  local Direction = SplineStartLocation - PlayerLocation
+  if Direction:Size() > 1.0 then
+    local LookAtRotation = UE4.UKismetMathLibrary.FindLookAtRotation(PlayerLocation, SplineStartLocation)
+    local PlayerRotation = self:K2_GetActorRotation()
+    local TargetRotation = FRotator(PlayerRotation.Pitch, LookAtRotation.Yaw, PlayerRotation.Roll)
+    self:K2_SetActorRotation(TargetRotation, false)
+    local Controller = self:GetController()
+    if Controller then
+      local ControlRotation = Controller:GetControlRotation()
+      Controller:SetControlRotation(FRotator(ControlRotation.Pitch, LookAtRotation.Yaw, ControlRotation.Roll))
+    end
+  end
+  local MoveSpeed = DataMgr.MovementParams.FlySpeed and DataMgr.MovementParams.FlySpeed.ParamValue or 500
+  local MoveTickInterval = 0.01
+  local AllCallback = {
+    OnNotifyBegin = function()
+      DebugPrint("zwkkk OnNotifyBegin")
+      self:StartMoveToSplineOrigin(SplineStartLocation, MoveSpeed, MoveTickInterval)
+    end,
+    OnInterrupted = function()
+      self:CleanUpSlideMechEnter()
+    end
+  }
+  self:ChangeToMasterSlideMech()
+  SlideMech:OnSlideSplineCharacterReady()
+  self.IsFlyingToSlideMech = true
+  self:ForbidSkillsInHooking(true)
+  self:DisableBattleWheel()
+  self:AddForbidTag("SlideMech")
+  self:SetActorEnableCollision(false)
+  self:PlayActionMontage("Interactive", "Interactive_SlideSpline_01_Montage", AllCallback)
+  self:ChangeGravityUseAnim(true, 1.0E-4, false, true, false)
+  self:AddTimer(0.001, function()
+    self:CheckAnimGravityScale()
+  end, true, 0, "SlideMechGravity")
+end
+
+function BP_PlayerCharacter_C:StartMoveToSplineOrigin(TargetLocation, MoveSpeed, TickInterval)
+  self:RemoveTimer("SlideMechMoveToSpline")
+  local AnimInstance = self.Mesh:GetAnimInstance()
+  if AnimInstance then
+    AnimInstance:Montage_JumpToSection("Loop")
+  end
+  self.SlideMechMoveTimer = self:AddTimer(TickInterval, function()
+    local CurrentLocation = self:K2_GetActorLocation()
+    local Delta = TargetLocation - CurrentLocation
+    local Distance = Delta:Size()
+    local StepDistance = MoveSpeed * TickInterval
+    if Distance <= 40.0 then
+      self:K2_SetActorLocation(TargetLocation, false, nil, false)
+      self:RemoveTimer("SlideMechMoveToSpline")
+      self.SlideMechMoveTimer = nil
+      local AnimInstance = self.Mesh:GetAnimInstance()
+      if AnimInstance then
+        AnimInstance:Montage_JumpToSection("End")
+        self:OnSlideMechEnterCompleted()
+      end
+    else
+      local Direction = Delta
+      Direction:Normalize()
+      local NewLocation = CurrentLocation + Direction * StepDistance
+      self:K2_SetActorLocation(NewLocation, false, nil, false)
+    end
+  end, true, 0, "SlideMechMoveToSpline")
+end
+
+function BP_PlayerCharacter_C:CleanUpSlideMechEnter()
+  if self.SlideMechMoveTimer then
+    self:RemoveTimer("SlideMechMoveToSpline")
+    self.SlideMechMoveTimer = nil
+  end
+  self.IsFlyingToSlideMech = false
+  self:ForbidSkillsInHooking(false)
+  self:EnableBattleWheel()
+  self:MinusForbidTag("SlideMech")
+  self:SetActorEnableCollision(true)
+  self:ChangeGravityUseAnim(false, 0.0)
+  self:RemoveTimer("SlideMechGravity")
+end
+
+function BP_PlayerCharacter_C:OnSlideMechEnterCompleted()
+  DebugPrint("SlideMech Enter Completed, start sliding along spline")
+  if self.SlideMechMoveTimer then
+    self:RemoveTimer("SlideMechMoveToSpline")
+    self.SlideMechMoveTimer = nil
+  end
+  self.IsFlyingToSlideMech = false
+  self:ForbidSkillsInHooking(false)
+  self:EnableBattleWheel()
+  self:MinusForbidTag("SlideMech")
+  self:SetActorEnableCollision(true)
+  self:ChangeGravityUseAnim(false, 0.0)
+  self:RemoveTimer("SlideMechGravity")
+  self:FirstInSlideMech()
+end
+
+function BP_PlayerCharacter_C:ChangeToMasterSlideMech()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    self:ChangeRole(11301)
+    return
+  end
+  DebugPrint("zwk ChangeRoleToSlideMech ", Avatar.WeitaSex, Avatar.Sex)
+  local RegionId = Avatar:GetCurrentRegionId()
+  if not RegionId or DataMgr.SubRegion[RegionId] == nil then
+    self:ChangeRole(11301)
+    return
+  end
+  local PlayerIdentity = DataMgr.SubRegion[RegionId].SwitchPlayer
+  if not PlayerIdentity then
+    self:ChangeRole(11301)
+    return
+  end
+  local MasterGender = 1
+  self.HeroTempInfo = {
+    RoleInfo = {
+      PlayerHp = self:GetAttr("Hp"),
+      PlayerSp = self:GetAttr("Sp"),
+      PlayerES = self:GetAttr("ES")
+    },
+    RangedWeapon = {
+      BulletNum = self.RangedWeapon and self.RangedWeapon:GetAttr("BulletNum") or 0,
+      MagazineBulletNum = self.RangedWeapon and self.RangedWeapon:GetAttr("MagazineBulletNum") or 0
+    }
+  }
+  Avatar.HeroTempInfo = self.HeroTempInfo
+  if "Player" == PlayerIdentity then
+    MasterGender = Avatar.Sex
+  else
+    MasterGender = Avatar.WeitaSex
+  end
+  local RoleId = 1 == MasterGender and 11301 or 11401
+  self:ChangeRole(RoleId)
+  local BattlePet = self:GetBattlePet()
+  if BattlePet then
+    BattlePet:HideBattlePet("Master", false)
+  end
+end
+
+function BP_PlayerCharacter_C:ChangeBackToHeroSlideMech()
+  self.SlideMechEid = 0
+  self.CurSlideMechEid = 0
+  self.IsInSlideMech = false
+  self:ChangeRole()
+  local BattlePet = self:GetBattlePet()
+  if BattlePet then
+    BattlePet:HideBattlePet("Master", false)
+  end
+end
+
+function BP_PlayerCharacter_C:FirstInSlideMech()
+  self.SlideMovingRate = 1
+  local AccTime = DataMgr.MovementParams.AccTime.ParamValue or 0
+  if AccTime > 0 then
+    self.SlideMovingRate = 0
+    local LoopNum = math.ceil(AccTime / 0.02)
+    local DeltaRate = 1 / LoopNum
+    self:AddTimer(0.02, function()
+      self.SlideMovingRate = math.clamp(self.SlideMovingRate + DeltaRate, 0, 1)
+      if self.SlideMovingRate >= 1 then
+        self:RemoveTimer("SlideAcc")
+      end
+    end, true, 0, "SlideAcc")
+  end
+  if self.SlideMechEid then
+    local GameState = UE4.UGameplayStatics.GetGameState(self)
+    if GameState then
+      local SlideMech = GameState.SlideMechanismMap:FindRef(self.SlideMechEid)
+      if IsValid(SlideMech) then
+        SlideMech:RealFirstInSlideMech(self)
+        SlideMech:BeginSlideSplineMove(true)
+      end
+    end
+  end
+end
+
+function BP_PlayerCharacter_C:TryLeaveSlideMech()
+  if self.CurSlideMechEid <= 0 then
+    return
+  end
+  local GameState = UE4.UGameplayStatics.GetGameState(self)
+  if not GameState then
+    return
+  end
+  local SlideMech = GameState.SlideMechanismMap:FindRef(self.CurSlideMechEid)
+  if not IsValid(SlideMech) then
+    return
+  end
+  if not SlideMech.CanExit then
+    return
+  end
+  SlideMech:LeaveSlideMechanism(false)
 end
 
 function BP_PlayerCharacter_C:ReceiveEndPlay(Reason)
@@ -1818,9 +2078,10 @@ function BP_PlayerCharacter_C:TryHideAllSkillUI()
   local GradeLevel = self:GetAttr("GradeLevel") or 0
   local BattleCharInfo = DataMgr.BattleChar[self.CurrentRoleId]
   if BattleCharInfo.CharUIId then
+    local ReplacedCharUIId = self:GetReplacedCharUIId(BattleCharInfo.CharUIId)
     local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
     local UIManager = GameInstance:GetGameUIManager()
-    local CharUIInfo = DataMgr.BattleCharUI[BattleCharInfo.CharUIId][GradeLevel]
+    local CharUIInfo = DataMgr.BattleCharUI[ReplacedCharUIId][GradeLevel]
     if CharUIInfo then
       local UIObj = UIManager:GetUIObj(CharUIInfo.UIName)
       if UIObj then
@@ -1848,9 +2109,10 @@ function BP_PlayerCharacter_C:TryShowAllSkillUI()
   local GradeLevel = self:GetAttr("GradeLevel")
   local BattleCharInfo = DataMgr.BattleChar[self.CurrentRoleId]
   if BattleCharInfo.CharUIId then
+    local ReplacedCharUIId = self:GetReplacedCharUIId(BattleCharInfo.CharUIId)
     local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
     local UIManager = GameInstance:GetGameUIManager()
-    local CharUIInfo = DataMgr.BattleCharUI[BattleCharInfo.CharUIId][GradeLevel]
+    local CharUIInfo = DataMgr.BattleCharUI[ReplacedCharUIId][GradeLevel]
     local UIObj = UIManager:GetUIObj(CharUIInfo.UIName)
     if UIObj then
       UIObj:Show()
@@ -1926,17 +2188,21 @@ function BP_PlayerCharacter_C:OnDungeonSettlement(IsWin, Index, SettlementData)
     PathExist = PathExistResult
     local BattleCharTag = self:GetBattleCharBodyType()
     local CameraParam = FVector(0, 0, 0)
-    if SettlementData and SettlementData.CameraParam then
-      CameraParam.X = SettlementData.CameraParam[BattleCharTag][1]
-      CameraParam.Y = SettlementData.CameraParam[BattleCharTag][2]
-      CameraParam.Z = SettlementData.CameraParam[BattleCharTag][3]
+    local CameraRotationParam = FRotator(0, 0, 0)
+    if SettlementData then
+      if SettlementData.CameraParam and SettlementData.CameraParam[BattleCharTag] then
+        CameraParam.X = SettlementData.CameraParam[BattleCharTag][1]
+        CameraParam.Y = SettlementData.CameraParam[BattleCharTag][2]
+        CameraParam.Z = SettlementData.CameraParam[BattleCharTag][3]
+      end
+      if SettlementData.CameraRotationParam and SettlementData.CameraRotationParam[BattleCharTag] then
+        CameraRotationParam.Pitch = -SettlementData.CameraRotationParam[BattleCharTag][2]
+        CameraRotationParam.Yaw = SettlementData.CameraRotationParam[BattleCharTag][3]
+        CameraRotationParam.Roll = -SettlementData.CameraRotationParam[BattleCharTag][1]
+      end
     end
-    DebugPrint("BP_PlayerCharacter_C:OnDungeonSettlement BattleCharTag", BattleCharTag, "CameraParam", CameraParam)
-    local NewTranslation = UE4.UKismetMathLibrary.TransformLocation(self:GetTransform(), CameraParam)
-    self:K2_SetActorLocation(NewTranslation, false, nil, true)
-    self:PlayDungeonSettlementSimpleSkillFeature(false, false, false, false, true, true, CameraParam, Const.SettlementCameraRotation)
-    NewTranslation = UE4.UKismetMathLibrary.TransformLocation(self:GetTransform(), -CameraParam)
-    self:K2_SetActorLocation(NewTranslation, false, nil, true)
+    DebugPrint("BP_PlayerCharacter_C:OnDungeonSettlement BattleCharTag", BattleCharTag, "CameraParam", CameraParam, "CameraRotationParam")
+    self:PlayDungeonSettlementSimpleSkillFeature(false, false, false, false, true, true, CameraParam, CameraRotationParam)
     self:PlayActionMontage("Interactive/LevelFinish", WinMont, {})
     self:SetEndPointOffset(Index, SettlementData)
     DebugPrint("BP_PlayerCharacter_C:OnDungeonSettlement PlayActionMontage: ", WinMont)
@@ -1967,9 +2233,9 @@ function BP_PlayerCharacter_C:PlayDungeonSettlementMVPMontage(FileName)
   self:SetCharacterTag("LevelFinish")
 end
 
-function BP_PlayerCharacter_C:PlayDungeonSettlementMVPSequence(FolderPath)
+function BP_PlayerCharacter_C:PlayDungeonSettlementMVPSequence(FolderPath, Offset)
   local SequencePath = "/Game/Asset/Char/Player/Common/MVPShow/" .. FolderPath .. "/Sequence/" .. FolderPath .. "_MVPShow_Cam." .. FolderPath .. "_MVPShow_Cam"
-  self:PlayMVPSequence(SequencePath)
+  self:PlayMVPSequence(SequencePath, Offset)
 end
 
 function BP_PlayerCharacter_C:OnMVPSequenceFinish()
@@ -2034,9 +2300,10 @@ function BP_PlayerCharacter_C:SetMainPlayerDungeonSettlementTransform(IsMoveToTe
       return
     end
     self:ResetIdle()
+    local StartPoint = MainPlayerOriginLoc + FVector(0, 0, self.CapsuleComponent:GetUnscaledCapsuleHalfHeight())
     local EndPoint = MainPlayerOriginLoc + FVector(0, 0, -500)
     local HitResultLine = FHitResult()
-    UE4.UKismetSystemLibrary.LineTraceSingle(self, MainPlayerOriginLoc, EndPoint, ETraceTypeQuery.TraceScene, false, nil, EDrawDebugTrace.None, HitResultLine, true)
+    UE4.UKismetSystemLibrary.LineTraceSingle(self, StartPoint, EndPoint, ETraceTypeQuery.TraceScene, false, nil, EDrawDebugTrace.None, HitResultLine, true)
     local ImpactZ = HitResultLine.ImpactPoint.Z
     local NewTranslation = FVector(MainPlayerOriginLoc.X, MainPlayerOriginLoc.Y, ImpactZ + self.CapsuleComponent:GetUnscaledCapsuleHalfHeight())
     self:K2_SetActorLocation(NewTranslation, false, nil, true)
@@ -2263,15 +2530,29 @@ function BP_PlayerCharacter_C:RefreshTeamMemberInfo(OpType)
 end
 
 function BP_PlayerCharacter_C:PreEnterStory(OnFinished)
+  if self.bInStory then
+    StoryPlayableUtils:ExecuteStoryDelegate(OnFinished)
+    return
+  end
+  self.bInStory = true
   self:CleanInputWhenEnterTalk()
   self:ReleaseFire()
-  self.bInStory = true
   self:SetStealth(true, "Story")
+  StoryPlayableUtils:ExecuteStoryDelegate(OnFinished)
 end
 
 function BP_PlayerCharacter_C:PreExitStory(OnFinished)
+  if not self.bInStory then
+    StoryPlayableUtils:ExecuteStoryDelegate(OnFinished)
+    return
+  end
   self.bInStory = false
   self:SetStealth(false, "Story")
+  local TS = TalkSubsystem()
+  if IsValid(TS) then
+    TS:TalkHidePlayerCharacter(self, false, Const.TalkHideTag)
+  end
+  StoryPlayableUtils:ExecuteStoryDelegate(OnFinished)
 end
 
 function BP_PlayerCharacter_C:_CheckCanChangeToMaster(ShowLog, CheckRegion)
@@ -2603,17 +2884,31 @@ function BP_PlayerCharacter_C:MoveAlongSplineUnBanSkills()
 end
 
 function BP_PlayerCharacter_C:ForbidActionWhileMoveAlongSpline(bForbid)
-  local SkillNamesArray = TArray(0)
-  SkillNamesArray:Add(ESkillName.Jump)
-  SkillNamesArray:Add(ESkillName.Slide)
-  SkillNamesArray:Add(ESkillName.BulletJump)
-  SkillNamesArray:Add(ESkillName.Avoid)
-  SkillNamesArray:Add(ESkillName.Crouch)
   local Controller = self:GetController()
+  local SkillNamesArray = TArray(0)
   if Controller then
     if bForbid then
+      local Skills = {
+        ESkillName.Jump,
+        ESkillName.Slide,
+        ESkillName.BulletJump,
+        ESkillName.Avoid,
+        ESkillName.Crouch
+      }
+      self.SplineMoveForbidAction = {}
+      for _, SkillName in ipairs(Skills) do
+        if not Controller:CheckSkillInActive(SkillName) then
+          table.insert(self.SplineMoveForbidAction, SkillName)
+          SkillNamesArray:Add(SkillName)
+        end
+      end
       Controller:InActiveSkills(SkillNamesArray, "MoveAlongSpline")
     else
+      self.SplineMoveForbidAction = self.SplineMoveForbidAction or {}
+      for _, SkillName in ipairs(self.SplineMoveForbidAction) do
+        SkillNamesArray:Add(SkillName)
+      end
+      self.SplineMoveForbidAction = nil
       Controller:ActiveSkills(SkillNamesArray, "MoveAlongSpline")
     end
   end
@@ -2812,6 +3107,13 @@ function BP_PlayerCharacter_C:LoadHitDirection(HitDirectionsObject, Attacker)
     local HitDirection = UIManager:LoadUIAsync("BattleHitDirection", CoroutineObj, Attacker, self)
     HitDirectionsObject:AddToQueue(HitDirection)
   end)
+end
+
+function BP_PlayerCharacter_C:TriggerBeAttacked()
+  DebugPrint("BP_PlayerCharacter_C:TriggerBeAttacked")
+  if self:IsMainPlayer() then
+    EventManager:FireEvent(EventID.MainPlayerBeAttacked, self)
+  end
 end
 
 function BP_PlayerCharacter_C:DungeonOtherPlayerLeave()
@@ -3253,14 +3555,6 @@ end
 function BP_PlayerCharacter_C:UpdateVirtualJoystickEnableMoveLock(bEnable)
   EMCache:Set("VirtualJoystickMoveLock", bEnable)
   UIManager(self):SetVirtualJoystickEnableMoveLock(bEnable)
-end
-
-function BP_PlayerCharacter_C:DisableNESkill()
-  self.bDisableNEContinuousSkill = true
-end
-
-function BP_PlayerCharacter_C:EnableNESkill()
-  self.bDisableNEContinuousSkill = false
 end
 
 AssembleComponents(BP_PlayerCharacter_C, {

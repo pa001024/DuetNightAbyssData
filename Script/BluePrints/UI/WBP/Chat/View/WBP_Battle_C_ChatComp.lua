@@ -89,6 +89,9 @@ function Component:_InitChatPC(Avatar, ...)
         print("yklua 收到消息，但是在免打扰列表中")
         return
       end
+      if MsgWrap.Message.Type == CommonConst.MESSAGE_TYPE_SYSTEM then
+        return
+      end
       self:UpdateChatSimple(MsgWrap)
     elseif EventId == ChatCommon.EventID.OpenMainView then
       local bBattle = (...)
@@ -245,12 +248,16 @@ function Component:UpdateChatSimple(MsgWrap)
     return
   end
   local Avatar = GWorld:GetAvatar()
+  local ChannelType = MsgWrap.Message.ChannelType
+  local bIsPrivilegedChannel = ChannelType == ChatCommon.ChannelDef.Friend or ChannelType == ChatCommon.ChannelDef.InTeam
   if Avatar:IsInHardBoss() or Avatar:IsInDungeon() then
-    self.Pos_ChatSimple:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    self.ChatSimpleOpenQueue = Deque.New()
-    self.Pos_ChatSimple:ClearListItems()
-    self:RemoveChatSimpleProcessTimer()
+    if not bIsPrivilegedChannel then
+      return
+    end
+    self.Pos_ChatSimple:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
   elseif Avatar:IsInBigWorld() then
+    self.Pos_ChatSimple:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+  elseif bIsPrivilegedChannel then
     self.Pos_ChatSimple:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
   end
   if not self.Pos_ChatSimple:IsVisible() then

@@ -274,5 +274,59 @@ return ReadOnly("HardBossDifficulty", {
     DifficultyReward = 1045,
     ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Linen.T_Permanent_HardBoss_VideoImg_Linen",
     UnlockCondition = {2046, 160}
+  },
+  [1051] = {
+    DifficultyDes = "UI_HardBoss_Difficulty_Des_1051",
+    DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_1",
+    DifficultyID = 1051,
+    DifficultyLevel = 30,
+    DifficultyReward = 1016,
+    ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Bailong.T_Permanent_HardBoss_VideoImg_Bailong",
+    UnlockCondition = {2051}
+  },
+  [1052] = {
+    DifficultyDes = "UI_HardBoss_Difficulty_Des_1051",
+    DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_2",
+    DifficultyID = 1052,
+    DifficultyLevel = 40,
+    DifficultyReward = 1017,
+    ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Bailong.T_Permanent_HardBoss_VideoImg_Bailong",
+    UnlockCondition = {2052, 125}
+  },
+  [1053] = {
+    DifficultyDes = "UI_HardBoss_Difficulty_Des_1051",
+    DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_3",
+    DifficultyID = 1053,
+    DifficultyLevel = 50,
+    DifficultyReward = 1018,
+    ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Bailong.T_Permanent_HardBoss_VideoImg_Bailong",
+    UnlockCondition = {2053, 135}
+  },
+  [1054] = {
+    DifficultyDes = "UI_HardBoss_Difficulty_Des_1051",
+    DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_4",
+    DifficultyID = 1054,
+    DifficultyLevel = 60,
+    DifficultyReward = 1019,
+    ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Bailong.T_Permanent_HardBoss_VideoImg_Bailong",
+    UnlockCondition = {2054, 145}
+  },
+  [1055] = {
+    DifficultyDes = "UI_HardBoss_Difficulty_Des_1051",
+    DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_5",
+    DifficultyID = 1055,
+    DifficultyLevel = 70,
+    DifficultyReward = 1020,
+    ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Bailong.T_Permanent_HardBoss_VideoImg_Bailong",
+    UnlockCondition = {2055, 155}
+  },
+  [1056] = {
+    DifficultyDes = "UI_HardBoss_Difficulty_Des_1051",
+    DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_6",
+    DifficultyID = 1056,
+    DifficultyLevel = 80,
+    DifficultyReward = 1021,
+    ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Bailong.T_Permanent_HardBoss_VideoImg_Bailong",
+    UnlockCondition = {2056, 160}
   }
 })

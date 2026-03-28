@@ -17,6 +17,13 @@ function WBP_Common_Dialog_Text03_PC_C:InitContent(Params, PopupData, Owner)
   self.List:RequestRefresh()
   self.List.bIsFocusable = false
   self.bIsDealWithVirtualAccept = true
+  self:AddTimer(0.01, function()
+    if UIUtils.GetMaxScrollOffsetOfListView(self.List) > 5 then
+      self:ShowGamepadScrollBtn(true)
+    else
+      self:ShowGamepadScrollBtn(false)
+    end
+  end)
 end
 
 function WBP_Common_Dialog_Text03_PC_C:OnContentAnalogValueChanged(MyGeometry, InAnalogInputEvent)

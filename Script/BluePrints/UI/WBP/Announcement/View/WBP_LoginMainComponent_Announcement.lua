@@ -1,11 +1,13 @@
 require("UnLua")
-local AnnouncementUtils = require("BluePrints.UI.WBP.Announcement.AnnounceUtils")
+local AnnounceController = require("BluePrints.UI.WBP.Announcement.AnnounceController")
+local AnnounceModel = AnnounceController:GetModel()
 local Utils = require("Utils")
 local EMCache = require("EMCache.EMCache")
 local ReddotNodeName = DataMgr.ReddotNode.AnnouncementItems.Name
 local Component = {}
 
 function Component:BindForAnnouncement()
+  AnnounceController:Init()
   self.Btn_Announcement:Construct()
   self.Btn_Announcement:BindEventOnReleased(self, self.OnClickAnnoucement)
   local HeroUSDKSubsystem = HeroUSDKSubsystem(self)
@@ -18,7 +20,7 @@ end
 function Component:UnbindForAnnouncement()
   self.Btn_Announcement:UnBindEventOnReleased(self, self.OnClickAnnoucement)
   ReddotManager.RemoveListener(ReddotNodeName, self)
-  AnnouncementUtils:TryCloseAnnounceMainUI()
+  AnnounceController:TryCloseAnnounceMainUI()
 end
 
 function Component:UpdateAnnoucementReddot(Count)
@@ -35,18 +37,18 @@ function Component:OpenAnnouncementOnce(bReset)
     HostId = AHotUpdateGameMode.IsGlobalPak() and 20001 or 10001
   end
   if bReset then
-    AnnouncementUtils:ResetConf()
+    AnnounceController:ResetConf()
   end
   self.Coroutine = nil
   self.Coroutine = coroutine.create(function()
     DebugPrint("[Laixiaoyang]LoginMain::OpenAnnouncementOnce  自动弹出游戏公告")
-    AnnouncementUtils:TrySetServerAreaNew(HostId)
-    if not AnnouncementUtils.bInit then
-      AnnouncementUtils:GetAnnouncementDataAsync(AnnounceCommon.ShowTag.InLogin, self.Coroutine, HostId)
+    AnnounceModel:TrySetServerAreaNew(HostId)
+    if not AnnounceController.bInit then
+      AnnounceController:GetAnnouncementDataAsync(AnnounceCommon.ShowTag.InLogin, self.Coroutine, HostId)
     end
-    if AnnouncementUtils.HasNewAdd then
+    if AnnounceModel.HasNewAdd then
       self:OnClickAnnoucement(false)
-      AnnouncementUtils:ResetNew()
+      AnnounceModel:ResetNew()
       HeroUSDKSubsystem(self):MSDKUploadCommonEventByEventName("game_anc")
     end
     self.Coroutine = nil
@@ -64,11 +66,11 @@ function Component:OnClickAnnoucement(bNeedRequest)
     bNeedRequest = true
   end
   if nil == bNeedRequest then
-    bNeedRequest = not AnnouncementUtils.bInit
+    bNeedRequest = not AnnounceController.bInit
   end
   self:ClearOpenAnnouncementAsync()
   RunAsyncTask(self, "OpenAnnouncementAsync", function(Coroutine)
-    AnnouncementUtils:OpenAnnouncementMain(AnnounceCommon.ShowTag.InLogin, bNeedRequest, HostId, self, Coroutine)
+    AnnounceController:OpenAnnouncementMain(AnnounceCommon.ShowTag.InLogin, bNeedRequest, HostId, self, Coroutine)
   end)
 end
 

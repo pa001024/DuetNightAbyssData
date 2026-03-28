@@ -50,5 +50,20 @@ return ReadOnly("WorldMap", {
     WorldMapName = "UI_WORLDMAP_NAME_4",
     WorldMapRegion = {400, 401},
     WorldMapUnlockCondition = 325
+  },
+  [5] = {
+    RegionIcon = "/Game/UI/Texture/Dynamic/Image/Chapter/T_Chapter_Icon03.T_Chapter_Icon03",
+    RegionName = "UI_WORLDMAP_REGIONNAME_2",
+    RegionUIIndex = 2,
+    UIIndex = 6,
+    WorldMapId = 5,
+    WorldMapName = "UI_WORLDMAP_NAME_6",
+    WorldMapRegion = {
+      500,
+      501,
+      502,
+      503
+    },
+    WorldMapUnlockCondition = 12020101
   }
 })

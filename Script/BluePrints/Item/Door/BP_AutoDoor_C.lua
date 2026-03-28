@@ -24,7 +24,7 @@ function BP_AutoDoor_C:StartWait(Character)
     print(_G.LogTag, "the Door ", self:GetName(), " Has Open")
     return
   end
-  if self.door_state then
+  if self.door_state and self.InitSuccess then
     self:OpenMechanism(Character.Eid)
     self:PlayDoorSound(true)
   end
@@ -38,13 +38,13 @@ function BP_AutoDoor_C:EndWait(Character)
   if self.bNeedGuide then
     self:ActiveGuide("Add")
   end
-  if self.door_state then
+  if self.door_state and self.InitSuccess then
     self.CloseHandle = self:AddTimer(2, self.DelayCloseDoor, false, 0, nil, nil, Character)
   end
 end
 
 function BP_AutoDoor_C:OpenMechanism(CharacterEid)
-  print(_G.LogTag, "LXZ OpenMechanism")
+  print(_G.LogTag, "LXZ OpenMechanism", self:GetName(), CharacterEid)
   self:UpdateRegionData("DoorOpenState", true)
   local NeedRepair = false
   for i, v in pairs(self.ComponentLoc) do
@@ -67,7 +67,7 @@ function BP_AutoDoor_C:OpenMechanism(CharacterEid)
 end
 
 function BP_AutoDoor_C:CloseMechanism(CharacterEid)
-  print(_G.LogTag, "LXZ CloseMechanism")
+  print(_G.LogTag, "LXZ CloseMechanism", self:GetName())
   self:UpdateRegionData("DoorOpenState", false)
   local NeedRepair = false
   for i, v in pairs(self.ComponentLoc) do
@@ -177,40 +177,6 @@ function BP_AutoDoor_C:OnCharacterChangeLevel(Character)
   end
   self:OnLockDoor()
   print(_G.LogTag, "LXZ OnCharacterChangeLevel", self.BPArrow:GetName(), self.BPArrow.LevelId, self.BPArrow.OtherLevelId)
-end
-
-function BP_AutoDoor_C:ReceiveTick(DeltaSeconds)
-  self.Overridden.ReceiveTick(self, DeltaSeconds)
-  self.UpdateOffsetTime = self.UpdateOffsetTime + DeltaSeconds
-  if self.UpdateOffsetTime > 2.0 then
-    local LocPlayerController = UE4.UGameplayStatics.GetPlayerController(self, 0)
-    local Meshes = {
-      "Mesh_Door_Top",
-      "Mesh_Door_Right",
-      "Mesh_Door_Left",
-      "Mesh_Door_01",
-      "Mesh_Door_02",
-      "Mesh_Men01",
-      "Mesh_Men02",
-      "Door_Left",
-      "Door_Right"
-    }
-    if LocPlayerController then
-      local ViewTarget = LocPlayerController:GetViewTarget()
-      local ViewLocation, ViewRotation = ViewTarget:GetActorEyesViewPoint()
-      local Direction = ViewLocation - self:K2_GetActorLocation()
-      Direction.Z = 0
-      Direction:Normalize()
-      local VLMOffset = Direction * 200
-      for Index, MeshName in ipairs(Meshes) do
-        local Mesh = self[MeshName]
-        if Mesh then
-          Mesh:SetVLMOffset(VLMOffset)
-        end
-      end
-    end
-    self.UpdateOffsetTime = 0
-  end
 end
 
 return BP_AutoDoor_C

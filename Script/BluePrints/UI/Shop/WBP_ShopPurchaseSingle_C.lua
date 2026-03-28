@@ -1,6 +1,8 @@
 require("UnLua")
 local TimeUtils = require("Utils.TimeUtils")
 local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
+local WalnutBagController = require("BluePrints.UI.WBP.Walnut.WalnutBag.WalnutBagController")
+local WalnutBagModel = WalnutBagController:GetModel()
 local M = Class("BluePrints.UI.UI_PC.Common.Common_Dialog.Common_Dialog_ContentBase")
 
 function M:Construct()
@@ -16,6 +18,15 @@ function M:Construct()
   self.Text_CanUpgrade:SetText(GText("UI_RougeLike_Blessing_CanUpgrade"))
   self.Text_Exchange:SetText(GText("UI_Shop_ExchangeAmount"))
   self.Text_BuyLeftTitle:SetText(GText("UI_SHOP_SHOPITEMLIMIT"))
+  self.Text_Hold01:SetText(GText("UI_Bag_Sellconfirm_Hold"))
+  self.Text_HoldMod01:SetText(GText("UI_ModHolding_Num"))
+  self.Key_Mod:CreateGamepadKey(DataMgr.KeyboardText[UIConst.GamePadKey.SpecialRight].KeyText)
+  self.Key_Suit:CreateGamepadKey(DataMgr.KeyboardText[UIConst.GamePadKey.SpecialRight].KeyText)
+  self.Btn_Mod.Button_Area.OnClicked:Add(self, self.OnWalnutModDetailsClick)
+end
+
+function M:Destruct()
+  self.Btn_Mod.Button_Area.OnClicked:Clear()
 end
 
 function M:InitContent(Params, PopupData, Owner)
@@ -33,6 +44,7 @@ function M:InitContent(Params, PopupData, Owner)
     self.UIName = Params.UIName
   end
   self.SingleItemNotInteractive = Params.SingleItemNotInteractive
+  self.SelectedDiscount = Params.SelectedDiscount
   self.CurrentCount = 1
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
@@ -90,6 +102,12 @@ function M:InitContent(Params, PopupData, Owner)
     },
     Desc = GText("UI_Tips_Ensure")
   })
+  self.ButtonX = self:ShowGamepadShortcutBtn({
+    KeyInfoList = {
+      {Type = "Img", ImgShortPath = "X"}
+    },
+    Desc = GText("UI_Controller_CheckDetails")
+  })
   self.GamepadScrollBtnIndex = self:ShowGamepadShortcutBtn({
     KeyInfoList = {
       {Type = "Img", ImgShortPath = "RV"}
@@ -106,13 +124,18 @@ function M:InitContent(Params, PopupData, Owner)
   }
   self.Key_RewardDesc:CreateCommonKey(Key_RewardDesc_Params)
   if self.GameInputModeSubsystem:GetCurrentInputType() ~= ECommonInputType.Gamepad then
+    self.Key_Mod:SetVisibility(ESlateVisibility.Collapsed)
+    self.Key_Suit:SetVisibility(ESlateVisibility.Collapsed)
     self.Key_RewardDesc:SetVisibility(ESlateVisibility.Collapsed)
   else
+    self.Key_Mod:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.Key_Suit:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.Key_RewardDesc:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   end
   self.bTipsOpen = false
   self.FocusOnSubItem = false
   self:SetGamepadButtonState(false, false, not self.SingleItemNotInteractive)
+  self:HideGamepadShortcut(self.ButtonX)
 end
 
 function M:MinusBtnCallback()
@@ -131,6 +154,10 @@ function M:SliderChangeCallback(Value)
 end
 
 function M:InitUI(ShopType)
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
   self.WS_Item:SetActiveWidgetIndex(ShopType)
   self.WS_BuyDetail:SetActiveWidgetIndex(ShopType)
   self:SetWidgetVisibility(ShopType)
@@ -140,6 +167,7 @@ function M:InitUI(ShopType)
     if not ItemData then
       return
     end
+    self.Group_BuyDetail:SetVisibility(UIConst.VisibilityOp.Collapsed)
     local Content = NewObject(UIUtils.GetCommonItemContentClass())
     Content.Id = self.ShopItemData.TypeId
     Content.ItemType = self.ShopItemData.ItemType
@@ -173,11 +201,13 @@ function M:InitUI(ShopType)
     self.Group_TimeSpace:SetVisibility(ESlateVisibility.Collapsed)
     self.CutoffData = ShopUtils:GetShopItemCutoffData(self.ShopItemData.ItemId)
     if self.CutoffData and self.CutoffData.CutoffEndTime then
+      self.Group_BuyDetail:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
       self.Group_RemainderTime:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
       self.Group_TimeSpace:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
       self:UpdateShopItemCutoffRefreshTime()
       self:AddTimer(1, self.UpdateShopItemCutoffRefreshTime, true, 0, "UpdateShopItemCutoffRefreshTime", true)
     elseif self.ShopItemData.StartTime and self.ShopItemData.EndTime then
+      self.Group_BuyDetail:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
       self.Group_RemainderTime:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
       self.Group_TimeSpace:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
       self:UpdateLimitTime()
@@ -223,6 +253,7 @@ function M:InitUI(ShopType)
     local ShopItemRemainTimes = ShopUtils:GetShopItemPurchaseLimit(self.ShopItemData.ItemId)
     local TotalPurchaseLimit = self.ShopItemData.PurchaseLimit
     if ShopItemRemainTimes > -1 then
+      self.Group_BuyDetail:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
       self.Group_BuyLeftTimes:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
       self.Text_BuyLeftTimes:SetText(ShopItemRemainTimes .. "/" .. TotalPurchaseLimit)
     else
@@ -230,6 +261,7 @@ function M:InitUI(ShopType)
     end
     self:BindDialogEvent("UpdatePricePanel", self.UpdateDialogBtn)
     if self.ShopItemData.ItemDes then
+      self.Group_BuyDetail:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
       self.Button_Detail:SetVisibility(ESlateVisibility.Visible)
       self.Button_Detail.OnClicked:Add(self, self.OnBtnDetailClick)
     else
@@ -238,7 +270,72 @@ function M:InitUI(ShopType)
   end
   if self.ShopItemData.ItemType == "Walnut" then
     self.WidgetSwitcher_0:SetActiveWidgetIndex(1)
-    local WalnutDataTable = DataMgr.Walnut[self.ShopItemData.TypeId]
+    local WalnutId = self.ShopItemData.TypeId
+    local WalnutDataTable = DataMgr.Walnut[WalnutId]
+    self.Group_HoldNormal:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.Group_HoldMod:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.Group_SuitMod:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    if "Char" == WalnutDataTable.MainRewardType then
+      self.Group_HoldMod:SetVisibility(ESlateVisibility.Collapsed)
+      local CharData = DataMgr.Char[WalnutDataTable.MainRewardId]
+      assert(CharData, "未找到对应角色数据" .. WalnutDataTable.MainRewardId)
+      self.Btn_Suit:Init({
+        OwnerWidget = self,
+        TextContent = GText("UI_Shop_CharWalnutLevel"),
+        MenuPlacement = EMenuPlacement.MenuPlacement_MenuRight
+      })
+      local CharNetData
+      local GradeLevel = 0
+      self.Text_SuitMod:SetText(GText(CharData.CharName))
+      for CharUid, Data in pairs(Avatar.Chars) do
+        if Data.CharId == WalnutDataTable.MainRewardId then
+          CharNetData = Data
+          GradeLevel = CharNetData.GradeLevel
+          break
+        end
+      end
+      if not CharNetData then
+        self.Group_SuitMod:SetVisibility(ESlateVisibility.Collapsed)
+      else
+        GradeLevel = GradeLevel + (CharNetData.ExtraGradeLevel or 0)
+      end
+      self.Text_Suit:SetText(GradeLevel)
+    elseif WalnutDataTable.MainRewardType == "Weapon" then
+      self.Group_HoldMod:SetVisibility(ESlateVisibility.Collapsed)
+      local WeaponData = DataMgr.Weapon[WalnutDataTable.MainRewardId]
+      assert(WeaponData, "未找到对应角色数据" .. WalnutDataTable.MainRewardId)
+      self.Btn_Suit:Init({
+        OwnerWidget = self,
+        TextContent = GText("UI_Shop_WeaponWalnutLevel"),
+        MenuPlacement = EMenuPlacement.MenuPlacement_MenuRight
+      })
+      do
+        local WeaponNetData
+        local GradeLevel = 0
+        self.Text_SuitMod:SetText(GText(WeaponData.WeaponName))
+        for WeaponUid, Data in pairs(Avatar.Weapons) do
+          if Data.WeaponId == WalnutDataTable.MainRewardId then
+            WeaponNetData = Data
+            if GradeLevel < WeaponNetData.GradeLevel then
+              GradeLevel = WeaponNetData.GradeLevel
+            end
+          end
+        end
+        if not WeaponNetData then
+          self.Group_SuitMod:SetVisibility(ESlateVisibility.Collapsed)
+        end
+        self.Text_Suit:SetText(GradeLevel)
+      end
+    elseif "Mod" == WalnutDataTable.MainRewardType then
+      local ModCount = Avatar:GetModCount2ModId(WalnutDataTable.MainRewardId)
+      if 0 == ModCount then
+        self.Group_HoldMod:SetVisibility(ESlateVisibility.Collapsed)
+      else
+        self.Text_HoldMod02:SetText(Avatar:GetModCount2ModId(WalnutDataTable.MainRewardId))
+      end
+      self.Group_SuitMod:SetVisibility(ESlateVisibility.Collapsed)
+    end
+    self.Text_Hold02:SetText(WalnutBagModel:GetWalnutCountById(WalnutId))
     local RewardLst = {}
     for i = 1, 6 do
       local Content
@@ -304,15 +401,26 @@ function M:InitUI(ShopType)
     AddSpecificBtnGamePadKey = "DPadRight"
   }
   if 1 == self.ShopItemData.PurchaseLimit then
-    self.VB_BottomInfo:SetVisibility(ESlateVisibility.Collapsed)
+    if DataMgr.ShopItem2PayGoods[self.ShopItemData.ItemId] then
+      self.VB_BottomInfo:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    elseif ShopUtils:HasAnyVoucherConfig(self.ShopItemData.ItemId) then
+      self.VB_BottomInfo:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      self.Group_ExChange:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      self.Group_Slider:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      self.Shop_Discount_Btn:SetVisibility(UIConst.VisibilityOp.Visible)
+      self:InitDiscount()
+      self.UnitPrice = ShopUtils:GetShopItemPrice(self.ShopItemData.ItemId, self.SelectedDiscount and self.SelectedDiscount.VoucherId or nil)
+      self:UpdatePricePanel(true)
+    else
+      self.VB_BottomInfo:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
   else
-    self.VB_BottomInfo:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.VB_BottomInfo:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Group_ExChange:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Group_Slider:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Shop_Discount_Btn:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
   self.Com_Slider:Init(ConfigData)
-  local Avatar = GWorld:GetAvatar()
-  if not Avatar then
-    return
-  end
   self.IsLockState = ShopUtils:CheckShopItemCondition(self.ShopItemData)
   if self.IsLockState then
     self.Owner:GetButtonBar().WS_Btn:SetActiveWidgetIndex(1)
@@ -340,6 +448,15 @@ function M:InitUI(ShopType)
       self.Owner:GetButtonBar().Com_Hint.Button_Area:SetIsEnabled(true)
       self.Owner.DontCloseWhenRightBtnClicked = false
     end
+  end
+end
+
+function M:OnWalnutModDetailsClick()
+  self.ItemDetails_ModMenuAnchor:Open(true)
+  if self.WalnutModItemDetails then
+    self.WalnutModItemDetails:PlayAnimation(self.WalnutModItemDetails.In)
+    local WalnutDataTable = DataMgr.Walnut[self.ShopItemData.TypeId]
+    self.WalnutModItemDetails:InitModList(WalnutDataTable.MainRewardId)
   end
 end
 
@@ -486,7 +603,11 @@ function M:UpdatePricePanel(bInit)
     self.Split:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.Num_Max_1:SetVisibility(UIConst.VisibilityOp.Collapsed)
   else
-    self.Group_Slider:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    if 1 == self.ShopItemData.PurchaseLimit then
+      self.Group_Slider:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    else
+      self.Group_Slider:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    end
     self.Split:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.Num_Max_1:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.Num_Max_1:SetText(tostring(MaxCount))
@@ -495,7 +616,10 @@ function M:UpdatePricePanel(bInit)
   local Funds = {}
   Funds[1] = {}
   Funds[1].FundId = self.ShopItemData.PriceType
-  Funds[1].FundNeed = ShopUtils:GetShopItemPrice(self.ShopItemData.ItemId) * self.CurrentCount
+  Funds[1].FundNeed = ShopUtils:GetShopItemPrice(self.ShopItemData.ItemId, self.SelectedDiscount and self.SelectedDiscount.VoucherId or nil) * self.CurrentCount
+  if bInit and self.Params then
+    self.Params.Funds = Funds
+  end
   self:BroadcastDialogEvent("UpdateFunds", {Funds = Funds})
   if not self.ShopItemData.ItemType or self.ShopItemData.ItemType ~= "WeaponSkin" then
     self:BroadcastDialogEvent("UpdatePricePanel")
@@ -544,6 +668,169 @@ function M:UpdataModDetails(ModDataInfo, ModLevel)
     EffectItem.Text_Effect01:SetText(GText("UI_MOD_Effect") .. ModDescText)
     EffectItem.Switch_Type:SetActiveWidgetIndex(1)
     self.VB_PolarityDetail:AddChild(EffectItem)
+  end
+end
+
+function M:InitDiscount()
+  self.AvailableDiscounts = ShopUtils:GetValidVouchers(self.ShopItemData)
+  self.CanOpenDiscount = self.AvailableDiscounts and #self.AvailableDiscounts > 0
+  self.AutoSelectDiscount = EMCache:Get("AutoSelectDiscount", true)
+  local bSelectedVoucherExpired = false
+  if self.SelectedDiscount then
+    local bIsStillValid = false
+    for _, voucher in ipairs(self.AvailableDiscounts) do
+      if voucher.VoucherId == self.SelectedDiscount.VoucherId then
+        bIsStillValid = true
+        break
+      end
+    end
+    if not bIsStillValid then
+      bSelectedVoucherExpired = true
+    end
+  end
+  if bSelectedVoucherExpired then
+    if self.Params.bHasDraftDiscount then
+      self.SelectedDiscount = self.Params.SelectedDiscount
+    elseif self.CanOpenDiscount then
+      if self.AutoSelectDiscount then
+        self.SelectedDiscount = ShopUtils:GetBestVoucher(self.AvailableDiscounts)
+      else
+        self.SelectedDiscount = nil
+      end
+    else
+      self.SelectedDiscount = nil
+    end
+  end
+  self.Shop_Discount_Btn:Init({
+    ParentWidget = self,
+    IsInPreview = false,
+    ShopItemData = self.ShopItemData,
+    AvailableDiscounts = self.AvailableDiscounts,
+    SelectedDiscount = self.SelectedDiscount,
+    OnDiscountChangedCallback = function(NewDiscount)
+      self:OnDiscountChanged(NewDiscount)
+    end,
+    OnMenuStateChangedCallback = function(bIsOpen)
+      self:OnDiscountMenuStateChanged(bIsOpen)
+    end,
+    TipsStateChangedCallback = function(Data, bIsOpen)
+      if UIUtils.IsGamepadInput() then
+        if bIsOpen then
+          self:SetGamepadButtonState(false, true, false)
+          self:HideGamepadShortcut(self.ButtonX)
+        else
+          self:SetGamepadButtonState(true, true, false)
+          if Data and Data.IsVoucher then
+            self:ShowGamepadShortcut(self.ButtonX)
+          end
+        end
+      end
+    end,
+    ItemTipsStateChangedCallback = function(Data, bIsOpen)
+      if UIUtils.IsGamepadInput() then
+        if bIsOpen then
+          self:SetGamepadButtonState(false, false, false)
+          self:HideGamepadShortcut(self.ButtonX)
+        else
+          self:SetGamepadButtonState(true, true, false)
+          if Data and Data.IsVoucher then
+            self:ShowGamepadShortcut(self.ButtonX)
+          end
+        end
+      end
+    end,
+    ItemFocusReceivedCallback = function(Data)
+      if UIUtils.IsGamepadInput() then
+        if Data and Data.IsVoucher then
+          self:ShowGamepadShortcut(self.ButtonX)
+        else
+          self:HideGamepadShortcut(self.ButtonX)
+        end
+      end
+    end
+  })
+  self:SetupVoucherExpireTimer()
+end
+
+function M:SetupVoucherExpireTimer()
+  if not self.AvailableDiscounts or 0 == #self.AvailableDiscounts then
+    return
+  end
+  local NearestExpireTime = math.huge
+  local NowTime = TimeUtils.NowTime()
+  for _, voucher in ipairs(self.AvailableDiscounts) do
+    if voucher.ExpireTime and NowTime < voucher.ExpireTime and NearestExpireTime > voucher.ExpireTime then
+      NearestExpireTime = voucher.ExpireTime
+    end
+  end
+  if NearestExpireTime ~= math.huge then
+    local RemainTime = NearestExpireTime - NowTime + 1
+    self:AddTimer(RemainTime, function()
+      if not IsValid(self) then
+        return
+      end
+      if IsValid(self.Shop_Discount_Btn) and self.Shop_Discount_Btn:IsVisible() and self.Shop_Discount_Btn.ForceCloseMenu then
+        self.Shop_Discount_Btn:ForceCloseMenu()
+      end
+      self:InitDiscount()
+      self.UnitPrice = ShopUtils:GetShopItemPrice(self.ShopItemData.ItemId, self.SelectedDiscount and self.SelectedDiscount.VoucherId or nil)
+      self:UpdatePricePanel()
+      local ItemCurrencyWidget = self.Owner:GetContentWidgetByName("Item_Currency")
+      if ItemCurrencyWidget then
+        ItemCurrencyWidget:PlayAnimation(ItemCurrencyWidget.Text_Refrash)
+      end
+    end, false, 0, "VoucherExpireTimer")
+  end
+end
+
+function M:OnDiscountChanged(NewDiscount)
+  self.SelectedDiscount = NewDiscount
+  self.Shop_Discount_Btn:SetSelectedDiscount(self.SelectedDiscount)
+  self.UnitPrice = ShopUtils:GetShopItemPrice(self.ShopItemData.ItemId, self.SelectedDiscount and self.SelectedDiscount.VoucherId or nil)
+  self:UpdatePricePanel()
+  local ItemCurrencyWidget = self.Owner:GetContentWidgetByName("Item_Currency")
+  if ItemCurrencyWidget then
+    ItemCurrencyWidget:PlayAnimation(ItemCurrencyWidget.Text_Refrash)
+  end
+end
+
+function M:OnDiscountMenuStateChanged(bIsOpen)
+  self.FocusOnSubItem = bIsOpen
+  self.InSelectDiscountMode = bIsOpen
+  if UIUtils.IsGamepadInput() then
+    if bIsOpen then
+      self:SetGamepadButtonState(true, true, false)
+      self.Owner:GetButtonBar():SetGamepadBtnKeyVisibility(false)
+      self.Owner:GetButtonBar().Btn_Yes:SetIconPanelVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      self.Owner:GetButtonBar().Btn_Quit:SetIconPanelVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      self:ForbidFocusToResource(true)
+    else
+      self:SetGamepadButtonState(false, false, false)
+      self:HideGamepadShortcut(self.ButtonX)
+      self.Owner:GetButtonBar():SetGamepadBtnKeyVisibility(true)
+      self.Owner:GetButtonBar().Btn_Yes:SetIconPanelVisibility(UIConst.VisibilityOp.Collapsed)
+      self.Owner:GetButtonBar().Btn_Quit:SetIconPanelVisibility(UIConst.VisibilityOp.Collapsed)
+      self:ForbidFocusToResource(false)
+      self.Owner:SetFocus()
+    end
+  else
+    self:HideGamepadShortcut(self.ButtonX)
+    if not bIsOpen then
+      self.Owner:SetFocus()
+    end
+  end
+end
+
+function M:ForbidFocusToResource(IsForbid)
+  self.Owner.bForbidFocusToResource = IsForbid
+  if UIUtils.IsGamepadInput() then
+    if IsForbid then
+      if self.Owner.WBP_Com_Tab_Node_ResourceBar then
+        self.Owner.WBP_Com_Tab_Node_ResourceBar:HideGamePadKey(true)
+      end
+    elseif self.Owner.WBP_Com_Tab_Node_ResourceBar then
+      self.Owner.WBP_Com_Tab_Node_ResourceBar:HideGamePadKey(false)
+    end
   end
 end
 
@@ -631,7 +918,6 @@ function M:Purchase()
       }
       self.PopupUI = UIManager(self):ShowCommonPopupUI(PopUpId, Params)
     elseif 5 == self.ShopItemData.PurchaseFailRes then
-      local PopupId = 100290
       local CachedParams = self.Params
       local CachedUIName = self.UIName
       local CachedCount = self.CurrentCount
@@ -651,13 +937,11 @@ function M:Purchase()
         ShopUtils:SetCloseGetItemPageCallback({CloseGetItemPageCallback = nil})
       end
       
-      Params.LeftGamepadKey = Const.GamepadFaceButtonUp
-      Params.ShowBKeyClose = true
-      self.PopupUI = UIManager(self):ShowCommonPopupUI(PopupId, Params, self)
+      UIManager(self):LoadUINew("ShopTargetPay", Params)
     end
     return
   end
-  ShopUtils:SendPurchaseRequest(self.ShopItemData.ItemId, self.CurrentCount)
+  ShopUtils:SendPurchaseRequest(self.ShopItemData.ItemId, self.CurrentCount, self.SelectedDiscount and self.SelectedDiscount.VoucherId or nil)
 end
 
 function M:OpenExchangeDialog()
@@ -730,6 +1014,8 @@ function M:UpdateUIElementsVisibility(isGamePad, isSubItemFocused, isTipsOpen)
     keyRewardVisibility = ESlateVisibility.SelfHitTestInvisible
   end
   self.Key_RewardDesc:SetVisibility(keyRewardVisibility)
+  self.Key_Mod:SetVisibility(keyRewardVisibility)
+  self.Key_Suit:SetVisibility(keyRewardVisibility)
   self.Key_BtnDetail:SetVisibility(keyBtnDetailVisibility)
 end
 
@@ -783,6 +1069,9 @@ end
 
 function M:OnGamePadDown(InKeyName)
   local IsEventHandled = self.Com_Slider:Handle_KeyDownEventOnGamePad(InKeyName)
+  if self.InSelectDiscountMode then
+    return UIUtils.Handled
+  end
   if InKeyName == UIConst.GamePadKey.LeftThumb then
     if not self.SingleItemNotInteractive then
       if self.ShopItemData.ItemType == "Walnut" then
@@ -791,27 +1080,49 @@ function M:OnGamePadDown(InKeyName)
         self.SingleItem:OpenItemMenu()
       end
     end
-  elseif self.ShopItemData.ItemType == "Walnut" and InKeyName == UIConst.GamePadKey.SpecialLeft then
-    self.TypeSort[1]:SetFocus()
-    self.FocusOnSubItem = true
+  elseif InKeyName == UIConst.GamePadKey.SpecialLeft then
+    if self.ShopItemData.ItemType == "Walnut" then
+      self.TypeSort[1]:SetFocus()
+      self.FocusOnSubItem = true
+    end
+    self:UpdateUIByCurrentState()
+  elseif InKeyName == UIConst.GamePadKey.SpecialRight then
+    local WalnutDataTable = DataMgr.Walnut[self.ShopItemData.TypeId]
+    if WalnutDataTable.MainRewardType == "Char" or WalnutDataTable.MainRewardType == "Weapon" then
+      self.Btn_Suit:OnViewInfoHover()
+    elseif WalnutDataTable.MainRewardType == "Mod" then
+      self.FocusOnSubItem = true
+      self:OnWalnutModDetailsClick()
+    end
     self:UpdateUIByCurrentState()
   elseif InKeyName == UIConst.GamePadKey.FaceButtonRight and self.FocusOnSubItem then
     self.FocusOnSubItem = false
     self.Owner:SetFocus()
     self:UpdateUIByCurrentState()
     IsEventHandled = true
+  elseif InKeyName == UIConst.GamePadKey.DPadUp and self.CanOpenDiscount then
+    self.Shop_Discount_Btn:OnButtonClicked()
   end
   return IsEventHandled
 end
 
 function M:OnGamePadUp(InKeyName)
   local IsEventHandled = self.Com_Slider:Handle_KeyUpEventOnGamePad(InKeyName)
+  if InKeyName == UIConst.GamePadKey.SpecialRight then
+    local WalnutDataTable = DataMgr.Walnut[self.ShopItemData.TypeId]
+    if WalnutDataTable.MainRewardType == "Char" or WalnutDataTable.MainRewardType == "Weapon" then
+      self.Btn_Suit:OnViewInfoUnHover()
+    end
+  end
   return IsEventHandled
 end
 
 function M:OnContentAnalogValueChanged(MyGeometry, InAnalogInputEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InAnalogInputEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+  if self.InSelectDiscountMode then
+    return UIUtils.Handled
+  end
   if InKeyName == UIConst.GamePadKey.RightAnalogY then
     local DeltaOffset = -1 * UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent) * 5
     local CurrentOffset = self.ScrollBox_0:GetScrollOffset()

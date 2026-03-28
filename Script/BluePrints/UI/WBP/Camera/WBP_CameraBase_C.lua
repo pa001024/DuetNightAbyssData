@@ -139,12 +139,15 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, Params)
     self.InitParams = {}
     EventManager:FireEvent(EventID.OnInitScreenshotParams, self.InitParams)
     self:SetInitParams(self.InitParams)
-    if self.Btn_Pause:GetChecked() == false then
-      self.Btn_Pause:SetChecked(true, true)
-      self.Btn_Pause:StopAllAnimations()
+    local CurGamePause = UE4.UGameplayStatics.IsGamePaused(self)
+    self.Btn_Pause:SetChecked(CurGamePause, true)
+    self.Btn_Pause:StopAllAnimations()
+    if CurGamePause then
       self.Btn_Pause:PlayAnimation(self.Btn_Pause.Open_Normal)
-      self:UISetGamePaused(self.WidgetName or self.ConfigName, true)
+    else
+      self.Btn_Pause:PlayAnimation(self.Btn_Pause.Close_Normal)
     end
+    self:UISetGamePaused(self.WidgetName or self.ConfigName, CurGamePause)
   end
   if self.InitParams.IsAprilFoolsDayActivity then
     local FoolsDaySubsystem = USubsystemBlueprintLibrary.GetGameInstanceSubsystem(self, UFoolsDaySubsystem)
@@ -186,6 +189,7 @@ function M:SetInitParams(Params)
       for key, value in pairs(self.TargetPointNames) do
         self.TargetActors[value] = GameState:GetTargetPoint(value) or GameState.StaticCreatorStringNameMap:FindRef(value)
       end
+      self.InitLookAtTarget = GameState:GetTargetPoint(self.LookAtTargetName) or GameState.StaticCreatorStringNameMap:FindRef(self.LookAtTargetName)
     end
   end
   if Params.TargetActors then
@@ -236,8 +240,12 @@ function M:SetInitParams(Params)
   else
     self:SetLockAllHiddenButton(false)
   end
-  self.Btn_Pause:SetChecked(Params.bForceGamePause)
-  self:NotifyGamePauseChange(Params.bForceGamePause)
+  local InitForcePaus = true
+  if nil ~= Params and nil ~= Params.bForceGamePause then
+    InitForcePaus = Params.bForceGamePause
+  end
+  self.Btn_Pause:SetChecked(InitForcePaus)
+  self:NotifyGamePauseChange(InitForcePaus)
   self:SetLockGamePause(Params.bLockGamePause)
   self:SetLockCameraPos(Params.bLockCameraPos)
   if Params.StartPos ~= "" then
@@ -279,6 +287,13 @@ function M:OnLoaded(...)
 end
 
 function M:InitTaskInfo()
+  local CameraGameUtils = require("BluePrints.UI.WBP.Activity.PC.CameraGame.CameraGameUtils")
+  if self.InitParams and self.InitParams.EventId and self.InitParams.EventId == CameraGameUtils.GetEventId() then
+    if self.TaskBar then
+      self.TaskBar:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
+    return
+  end
   local ClientEventUtils = require("BluePrints.Common.ClientEvent.ClientEventUtils")
   local CurrentEvent = ClientEventUtils:GetCurrentDoingDynamicEvent()
   if CurrentEvent then
@@ -636,6 +651,8 @@ function M:ResetCamera0()
   if self.LookAtTargetName and self.TargetActors[self.LookAtTargetName] then
     local LookAtTarget = self.TargetActors[self.LookAtTargetName]
     OriRotation = UKismetMathLibrary.FindLookAtRotation(self.Camera:K2_GetActorLocation(), LookAtTarget:K2_GetActorLocation())
+  elseif self.InitLookAtTarget then
+    OriRotation = UKismetMathLibrary.FindLookAtRotation(self.Camera:K2_GetActorLocation(), self.InitLookAtTarget:K2_GetActorLocation())
   else
     OriRotation = UKismetMathLibrary.Quat_Rotator(self.OriginalCameraTransform.Rotation)
   end

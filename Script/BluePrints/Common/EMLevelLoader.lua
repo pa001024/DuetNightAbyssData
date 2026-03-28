@@ -15,6 +15,7 @@ function EMLevelLoader:Initialize(Initializer)
   self.id2LevelNameAndTransform = {}
   self.id2LevelLocationAndRotation = {}
   self.artStreamingLevel2ID = {}
+  self.PreviewLevelRefCount = {}
 end
 
 function EMLevelLoader:BeginPlay()
@@ -200,14 +201,31 @@ function EMLevelLoader:GetAllLevelBounds()
   self.LevelBoundsArray = UGameplayStatics.GetAllActorsOfClass(self, ALevelBounds.StaticClass())
 end
 
+function EMLevelLoader:GetDungeonData()
+  local DungeonId = GWorld.GameInstance:GetCurrentDungeonId()
+  local DungeonData = DataMgr.Dungeon[DungeonId]
+  return DungeonData
+end
+
 function EMLevelLoader:GetRandStartPoint()
+  local idx = 1
   if #self.StartPoints > 0 then
-    self.startPoint = self.StartPoints[1]
+    local DungeonData = self:GetDungeonData()
+    if DungeonData and DungeonData.bSpawnOnRandStartPoint then
+      math.randomseed(tostring(os.time()):reverse():sub(1, 7))
+      idx = math.random(#self.StartPoints)
+    end
+    self.startPoint = self.StartPoints[idx]
     return
   end
   local temp = UGameplayStatics.GetAllActorsOfClass(self, LoadClass("/Game/BluePrints/Common/Level/BP_StartPoint.BP_StartPoint_C"))
   if temp:Length() > 0 then
-    self.startPoint = temp:GetRef(1)
+    local DungeonData = self:GetDungeonData()
+    if DungeonData and DungeonData.bSpawnOnRandStartPoint then
+      math.randomseed(tostring(os.time()):reverse():sub(1, 7))
+      idx = math.random(temp:Length())
+    end
+    self.startPoint = temp:GetRef(idx)
   end
 end
 
@@ -230,6 +248,7 @@ function EMLevelLoader:LevelLoaderReady()
     GameMode:RegisterBPArrow()
     GameMode:TryTriggerOnPrepare("LevelActorInit")
   end
+  self:PreloadHostageUnitByStaticCreatorInfo(Const.IsOpenEscortNPCPhantomOpt)
 end
 
 function EMLevelLoader:TriggerLevelInitIndicatorPool(IsOpen)
@@ -522,6 +541,10 @@ function EMLevelLoader:LoadPreviewLevel(Name, Path, Callback, Position, Rotation
   local Success
   if not self[Name] then
     Success, self[Name] = UAsyncFunctionLibrary.LoadLevelInstance(self, Path, Position or FVector(0, 0, 0), Rotation or FRotator(0, 0, 0), Success, Name)
+    self.PreviewLevelRefCount[Name] = 1
+  else
+    self.PreviewLevelRefCount[Name] = self.PreviewLevelRefCount[Name] or 0
+    self.PreviewLevelRefCount[Name] = self.PreviewLevelRefCount[Name] + 1
   end
   if self[Name] then
     local WCSubsystem = UGameplayStatics.GetGameMode(self):GetWCSubSystem()
@@ -532,16 +555,23 @@ function EMLevelLoader:LoadPreviewLevel(Name, Path, Callback, Position, Rotation
     self[Name].OnLevelShown:Clear()
     self[Name].OnLevelShown:Add(self, Callback)
     coroutine.resume(coroutine.create(self.LatentPrevewLevelAction), self, true, Name, IsHide)
-    return true
+    Success = true
   end
+  return Success
 end
 
 function EMLevelLoader:UnloadPreviewLevel(Name)
   if self[Name] then
-    local WCSubsystem = USubsystemBlueprintLibrary.GetWorldSubsystem(self, UWorldCompositionSubSystem.StaticClass())
-    if WCSubsystem then
-      WCSubsystem:UnFreezeWorldComposition()
-      WCSubsystem:UnFreezeDistanceBasedRegion()
+    self.PreviewLevelRefCount[Name] = self.PreviewLevelRefCount[Name] - 1
+    if self.PreviewLevelRefCount[Name] <= 0 then
+      self.PreviewLevelRefCount[Name] = nil
+    end
+    if nil == next(self.PreviewLevelRefCount) then
+      local WCSubsystem = USubsystemBlueprintLibrary.GetWorldSubsystem(self, UWorldCompositionSubSystem.StaticClass())
+      if WCSubsystem then
+        WCSubsystem:UnFreezeWorldComposition()
+        WCSubsystem:UnFreezeDistanceBasedRegion()
+      end
     end
     coroutine.resume(coroutine.create(self.LatentPrevewLevelAction), self, false, Name)
   end

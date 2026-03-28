@@ -5,6 +5,7 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("CharCostumeTemplate", {
+  [150401] = {CharCostumeId = 150401, SkinId = 150401},
   [210101] = {CharCostumeId = 210101, SkinId = 210102},
   [240101] = {CharCostumeId = 240101, SkinId = 240101},
   [410201] = {CharCostumeId = 410201, SkinId = 410201},

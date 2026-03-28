@@ -1,4 +1,5 @@
 require("UnLua")
+local SettingUtils = require("Utils.SettingUtils")
 local M = Class()
 
 function M:Initialize(Initializer)
@@ -9,6 +10,7 @@ function M:Initialize(Initializer)
 end
 
 function M:ReceiveBeginPlay()
+  EventManager:AddEvent(EventID.OnShootCameraDistanceOptionChanged, self, self.OnShootCameraDistanceOptionChanged)
   self.OwnerPlayer = self:GetOwner()
   local Controller = self.OwnerPlayer:GetController()
   if Controller then
@@ -17,6 +19,12 @@ function M:ReceiveBeginPlay()
   self:ModifyViewPitch(self.CameraPitchLimitMin, self.CameraPitchLimitMax)
   self.Overridden.ReceiveBeginPlay(self)
   self:OnCharacterTagChanged("", self.OwnerPlayer and self.OwnerPlayer:GetCharacterTag())
+  self:OnShootCameraDistanceOptionChanged(SettingUtils.GetEMCache("ShootCameraDistance", nil, false))
+end
+
+function M:ReceiveEndPlay(...)
+  self.Overridden.ReceiveEndPlay(self, ...)
+  EventManager:RemoveEvent(EventID.OnShootCameraDistanceOptionChanged, self)
 end
 
 function M:CanBeControlledByTick()
@@ -29,6 +37,12 @@ function M:ModifyViewPitch(MinViewPitch, MaxViewPitch)
   end
   self.CameraManager.ViewPitchMin = math.max(MinViewPitch, self.CameraPitchLimitMin)
   self.CameraManager.ViewPitchMax = math.min(MaxViewPitch, self.CameraPitchLimitMax)
+end
+
+function M:OnShootCameraDistanceOptionChanged(NewValue)
+  if self.BP_OnShootCameraDistanceOptionChanged then
+    self:BP_OnShootCameraDistanceOptionChanged(NewValue)
+  end
 end
 
 return M

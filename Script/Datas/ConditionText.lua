@@ -20,6 +20,10 @@ return ReadOnly("ConditionText", {
     ConditionLogic = "S",
     ConditionType = "CharEquipRarityLevelModCount"
   },
+  ComeBackEventScore = {
+    ConditionLogic = "S",
+    ConditionType = "ComeBackEventScore"
+  },
   ConditionalRewardEventEnd = {
     ConditionLogic = "S",
     ConditionType = "ConditionalRewardEventEnd"
@@ -86,6 +90,11 @@ return ReadOnly("ConditionText", {
     ConditionLogic = "S",
     ConditionType = "HardBossComplete"
   },
+  HaveGotSoloTreasureScore = {
+    ConditionLogic = "S",
+    ConditionName = "UI_QUEST_CONDITION_SoloTreasure",
+    ConditionType = "HaveGotSoloTreasureScore"
+  },
   HaveItem = {ConditionLogic = "S", ConditionType = "HaveItem"},
   HaveResource = {
     AutoTrigger = true,
@@ -121,6 +130,10 @@ return ReadOnly("ConditionText", {
     AutoTrigger = true,
     ConditionLogic = "C",
     ConditionType = "InStoryMode"
+  },
+  InteractTriggerFinished = {
+    ConditionLogic = "S",
+    ConditionType = "InteractTriggerFinished"
   },
   IsCurrentCharEquipMod = {
     ConditionLogic = "C",

@@ -10,7 +10,8 @@ function M:Construct()
   self:PlayAnimation(self.Normal)
   self:InitChannel()
   self:InitKeyInfo()
-  self.Text_DialogSingle:SetText(" ")
+  self.Text_DialogSingle:SetColorAndOpacity(self.Text_Default)
+  self.Text_DialogSingle:SetText(GText("ClickToOpenChat"))
   self.Btn_Click.OnClicked:Add(self, self.OnClick)
   ChatController:RegisterEvent(self, function(self, EventId, ...)
     if EventId == ChatCommon.EventID.ChatMsgRecv then
@@ -21,20 +22,15 @@ function M:Construct()
     end
   end)
   ReddotManager.AddListener(ChatCommon.ReddotName, self, function(self, Count)
-    if 0 == Count then
-      self.Reddot_Num:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    else
-      self.Reddot_Num:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-      local NumText = tostring(Count)
-      if Count > ChatCommon.ReddotMaxCount then
-        NumText = ChatCommon.ReddotMaxCount .. "+"
-      end
-      self.Reddot_Num:SetNum(NumText)
-    end
+    self:OnReddotUpdateChatMainMenu()
   end)
   self.Text_DialogSingle.bOverrideAccessibleDefaults = true
   self.Text_DialogSingle.DefaultTextStyleOverride.OverflowPolicy = ETextOverflowPolicy.Ellipsis
   self.Text_DialogSingle:SetDefaultTextStyle(self.Text_DialogSingle.DefaultTextStyleOverride)
+end
+
+function M:OnReddotUpdateChatMainMenu()
+  ChatController:OnChatReddotUpdate(self.Reddot_Num)
 end
 
 function M:Destruct()
@@ -69,6 +65,7 @@ function M:OnClick()
 end
 
 function M:ShowChatText(MsgWrap)
+  local ChannelName = ChatController:ParseChannelHeader(MsgWrap)
   local SenderName = ChatController:ParseSpeakerHeader(MsgWrap)
   local Content = ChatController:ParseEmojiToText(MsgWrap)
   local ModSuitContent = ChatController:ParseModSuitText(MsgWrap)
@@ -79,9 +76,10 @@ function M:ShowChatText(MsgWrap)
   if DyePlanContent then
     Content = DyePlanContent
   end
-  local Message = SenderName .. Content
+  local Message = ChannelName .. SenderName .. Content
   self:PlayAnimation(self.Change)
   self.Text_DialogSingle:SetText(Message)
+  self.Text_DialogSingle:SetColorAndOpacity(self.Text_Info)
 end
 
 function M:InitKeyInfo()

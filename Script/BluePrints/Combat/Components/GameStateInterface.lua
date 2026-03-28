@@ -231,6 +231,7 @@ function Component:OnInit_Lua()
   self:LoadDungeonUI()
   self:InitFbdRule()
   self:TriggerClientEvent("OnClientInit")
+  self:CheckPreloadRecordData_Lua()
   if self.GameModeType == "SoloRaid" then
     self.SoloRaidHistoryMaxScore = 0
     local Avatar = GWorld:GetAvatar()
@@ -419,10 +420,28 @@ end
 function Component:OnRep_ExitInfo()
   local ExitMechanismArray = self.MechanismMap:FindRef("ExitTrigger")
   local ExitMechanism
-  if ExitMechanismArray then
+  if ExitMechanismArray and ExitMechanismArray.Array then
     ExitMechanism = ExitMechanismArray.Array:ToTable()[1]
   end
   local bIsWaiting = ExitMechanism and ExitMechanism:IsPlayerWaiting(UE4.UGameplayStatics.GetPlayerController(self, 0).Character)
+  if not bIsWaiting then
+    local PlayerCharacter = UE4.UGameplayStatics.GetPlayerController(self, 0).Character
+    local PCs = self:GetAllPlayerCharacters()
+    local MinDist = math.huge
+    local PlayerCharacterDist = math.huge
+    for _, Actor in pairs(PCs or {}) do
+      if PlayerCharacter == Actor:Cast(UE4.APlayerCharacter) then
+        PlayerCharacterDist = self:GetDistanceToPlayerComponent(PlayerCharacter) or math.huge
+        MinDist = math.min(PlayerCharacterDist, MinDist)
+      else
+        local Dist = self:GetDistanceToPlayerComponent(Actor) or math.huge
+        MinDist = math.min(Dist, MinDist)
+      end
+    end
+    if PlayerCharacterDist ~= math.huge and PlayerCharacterDist == MinDist then
+      bIsWaiting = true
+    end
+  end
   DebugPrint("GameState:OnRep_ExitInfo", ExitMechanism, bIsWaiting)
   PrintTable(self.ExitInfo)
   if self.GameModeType == "Party" then
@@ -430,6 +449,56 @@ function Component:OnRep_ExitInfo()
   else
     self:OnRepDungeonExitInfo(self.ExitInfo, bIsWaiting)
   end
+end
+
+function Component:GetDistanceToPlayerComponent(PlayerCharacter)
+  local World = self.GetWorld and self:GetWorld() or UE4.UGameplayStatics.GetWorld(self)
+  if not World then
+    return nil
+  end
+  local BPClass = UE4.UClass.Load("/Game/BluePrints/Common/Triggers/BP_ExitTriggerBoxMechanism.BP_ExitTriggerBoxMechanism_C")
+  DebugPrint("BPClass: ", BPClass)
+  local Actors = UE4.UGameplayStatics.GetAllActorsOfClass(World, UE4.BP_ExitTriggerBoxMechanism_C)
+  local BP_ExitTriggerBoxMechanism
+  if Actors and Actors:Length() > 0 then
+    BP_ExitTriggerBoxMechanism = Actors:GetRef(1)
+  end
+  local ExitTriggerBoxLocation
+  if nil == BP_ExitTriggerBoxMechanism then
+    ExitTriggerBoxLocation = self.ExitTriggerBoxLocation
+  else
+    ExitTriggerBoxLocation = BP_ExitTriggerBoxMechanism.CollisionComponent and BP_ExitTriggerBoxMechanism.CollisionComponent:K2_GetComponentLocation()
+    if ExitTriggerBoxLocation ~= Const.ZeroVector then
+      self.ExitTriggerBoxLocation = ExitTriggerBoxLocation
+    end
+  end
+  if nil == ExitTriggerBoxLocation or ExitTriggerBoxLocation == Const.ZeroVector then
+    return
+  end
+  if not PlayerCharacter or not PlayerCharacter.CapsuleComponent then
+    return nil
+  end
+  local PlayerCharacterLocation = PlayerCharacter.CapsuleComponent:K2_GetComponentLocation()
+  local Delta = ExitTriggerBoxLocation - PlayerCharacterLocation
+  return Delta:Size()
+end
+
+function Component:GetAllPlayerCharacters()
+  local World = self.GetWorld and self:GetWorld() or UE4.UGameplayStatics.GetWorld(self)
+  if not World then
+    return {}
+  end
+  local PCs = {}
+  local Actors = UE4.UGameplayStatics.GetAllActorsOfClass(World, UE4.APlayerCharacter)
+  if Actors then
+    for i = 1, Actors:Length() do
+      local Actor = Actors:GetRef(i)
+      if Actor then
+        table.insert(PCs, Actor)
+      end
+    end
+  end
+  return PCs
 end
 
 function Component:SurvivalValueFinished_Lua()
@@ -745,7 +814,7 @@ function Component:RealShowDungeonTask()
     BattleMainUI.Pos_TaskBar:GetChildAt(0):SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     BattleMainUI.Pos_TaskBar:GetChildAt(0):SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     BattleMainUI.Pos_TaskBar:GetChildAt(0):OnLoaded()
-    EventManager:FireEvent(EventID.OnReceiveTask, RealTexturePath, self.DungeonUIInfo.TextTitle, self.DungeonUIInfo.TextMap)
+    EventManager:FireEvent(EventID.OnReceiveTask, RealTexturePath, self.DungeonUIInfo.TextTitle, self.DungeonUIInfo.TextMap, self.DungeonUIInfo.TextWave)
   end
   
   WrapFuncEventFire()
@@ -1145,7 +1214,91 @@ function Component:NeedPreloadGameAssets()
   return not self:IsPreloadGameAssetsReady() and not self.bAssetsPreloading
 end
 
+local DoubleDragonDungeonIdSet = {
+  [50601] = true,
+  [50602] = true,
+  [50603] = true,
+  [50604] = true,
+  [50605] = true,
+  [50606] = true
+}
+local DoubleDragonAssetsPath = {
+  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Boss_Heilong_Skill04_Montage.Boss_Heilong_Skill04_Montage",
+  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Boss_Heilong02_Skill06_Montage.Boss_Heilong02_Skill06_Montage",
+  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Hard/Boss_Heilong_Skill11_H_Montage.Boss_Heilong_Skill11_H_Montage",
+  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Boss_Heilong_Skill03_Montage.Boss_Heilong_Skill03_Montage",
+  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Boss_Heilong_Skill02_Montage.Boss_Heilong_Skill02_Montage",
+  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Boss_Heilong_Skill05_Montage.Boss_Heilong_Skill05_Montage",
+  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Boss_Heilong_Skill07_Montage.Boss_Heilong_Skill07_Montage",
+  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Boss_Heilong_Skill08_Montage.Boss_Heilong_Skill08_Montage",
+  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Boss_Heilong_Skill09_Montage.Boss_Heilong_Skill09_Montage",
+  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Boss_Heilong_Skill10_Montage.Boss_Heilong_Skill10_Montage",
+  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Boss_Heilong_Skill01_Montage.Boss_Heilong_Skill01_Montage",
+  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Boss_Heilong_Skill06_Montage.Boss_Heilong_Skill06_Montage",
+  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Hard/Boss_Heilong_Skill07_H_Montage.Boss_Heilong_Skill07_H_Montage",
+  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Hard/Boss_Heilong_Skill01_H_Montage.Boss_Heilong_Skill01_H_Montage",
+  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Hard/Boss_Heilong_Skill02_H_Montage.Boss_Heilong_Skill02_H_Montage",
+  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Hard/Boss_Heilong_Skill03_H_Montage.Boss_Heilong_Skill03_H_Montage",
+  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Hard/Boss_Heilong_Skill04_H_Montage.Boss_Heilong_Skill04_H_Montage",
+  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Hard/Boss_Heilong_Skill05_H_Montage.Boss_Heilong_Skill05_H_Montage",
+  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Hard/Boss_Heilong_Skill06_H_Montage.Boss_Heilong_Skill06_H_Montage",
+  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Hit/Boss_Heilong_CondemnDie_Montage.Boss_Heilong_CondemnDie_Montage",
+  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Hit/Boss_Heilong_Condemned_Loop_Montage.Boss_Heilong_Condemned_Loop_Montage",
+  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Hit/Boss_Heilong_CondemnEnd_Montage.Boss_Heilong_CondemnEnd_Montage",
+  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Hit/Boss_Heilong_CondemnStart_Montage.Boss_Heilong_CondemnStart_Montage",
+  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Hit/Boss_Heilong_Condemn_Montage.Boss_Heilong_Condemn_Montage",
+  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Hit/Boss_Heilong_Die_Montage.Boss_Heilong_Die_Montage",
+  "/Game/Asset/Char/Monster/Boss11_Bailong/Animation/Montage/Combat/Skill/Boss_Bailong_Skill02_Montage.Boss_Bailong_Skill02_Montage",
+  "/Game/Asset/Char/Monster/Boss11_Bailong/Animation/Montage/Combat/Skill/Boss_Bailong_Skill03_Montage.Boss_Bailong_Skill03_Montage",
+  "/Game/Asset/Char/Monster/Boss11_Bailong/Animation/Montage/Combat/Skill/Boss_Bailong_Skill05_Montage.Boss_Bailong_Skill05_Montage",
+  "/Game/Asset/Char/Monster/Boss11_Bailong/Animation/Montage/Combat/Skill/Boss_Bailong_Skill07_Montage.Boss_Bailong_Skill07_Montage",
+  "/Game/Asset/Char/Monster/Boss11_Bailong/Animation/Montage/Combat/Skill/Boss_Bailong_Skill08_Montage.Boss_Bailong_Skill08_Montage",
+  "/Game/Asset/Char/Monster/Boss11_Bailong/Animation/Montage/Combat/Skill/Boss_Bailong_Skill09_Montage.Boss_Bailong_Skill09_Montage",
+  "/Game/Asset/Char/Monster/Boss11_Bailong/Animation/Montage/Combat/Skill/Boss_Bailong_Skill10_Montage.Boss_Bailong_Skill10_Montage",
+  "/Game/Asset/Char/Monster/Boss11_Bailong/Animation/Montage/Combat/Skill/Boss_Bailong_Skill01_Montage.Boss_Bailong_Skill01_Montage",
+  "/Game/Asset/Char/Monster/Boss11_Bailong/Animation/Montage/Combat/Skill/Boss_Bailong_Skill04_Montage.Boss_Bailong_Skill04_Montage",
+  "/Game/Asset/Char/Monster/Boss11_Bailong/Animation/Montage/Combat/Skill/Boss_Bailong_Skill06_Montage.Boss_Bailong_Skill06_Montage",
+  "/Game/Asset/Char/Monster/Boss11_Bailong/Animation/Montage/Combat/Skill/Boss_Bailong_Skill11_Montage.Boss_Bailong_Skill11_Montage",
+  "/Game/Asset/Char/Monster/Boss11_Bailong/Animation/Montage/Combat/Hit/Boss_Bailong_CondemnDie_Montage.Boss_Bailong_CondemnDie_Montage",
+  "/Game/Asset/Char/Monster/Boss11_Bailong/Animation/Montage/Combat/Hit/Boss_Bailong_Condemned_Loop_Montage.Boss_Bailong_Condemned_Loop_Montage",
+  "/Game/Asset/Char/Monster/Boss11_Bailong/Animation/Montage/Combat/Hit/Boss_Bailong_CondemnEnd_Montage.Boss_Bailong_CondemnEnd_Montage",
+  "/Game/Asset/Char/Monster/Boss11_Bailong/Animation/Montage/Combat/Hit/Boss_Bailong_CondemnStart_Montage.Boss_Bailong_CondemnStart_Montage",
+  "/Game/Asset/Char/Monster/Boss11_Bailong/Animation/Montage/Combat/Hit/Boss_Bailong_Condemn_Montage.Boss_Bailong_Condemn_Montage",
+  "/Game/Asset/Char/Monster/Boss11_Bailong/Animation/Montage/Combat/Hit/Boss_Bailong_Die_Montage.Boss_Bailong_Die_Montage"
+}
+
+function Component:TemporaryHandlingForDoubleDragon()
+  if not IsClient(self) then
+    return
+  end
+  if not GWorld or not GWorld.GameInstance then
+    return
+  end
+  local DungeonId = GWorld.GameInstance:GetCurrentDungeonId()
+  if not DungeonId or not DoubleDragonDungeonIdSet[DungeonId] then
+    self.DoubleDragonPreload = nil
+  elseif self.DoubleDragonPreload == nil then
+    self.DoubleDragonPreload = {}
+    for _, AssetPath in ipairs(DoubleDragonAssetsPath) do
+      local LoadedObj
+      local ok, res = pcall(function()
+        return UE4.UObject.Load(AssetPath)
+      end)
+      if ok then
+        LoadedObj = res
+      end
+      if LoadedObj then
+        table.insert(self.DoubleDragonPreload, LoadedObj)
+      else
+        DebugPrint("TemporaryHandlingForDoubleDragon: load failed ->", AssetPath)
+      end
+    end
+    DebugPrint("TemporaryHandlingForDoubleDragon: loaded assets count", #self.DoubleDragonPreload)
+  end
+end
+
 function Component:PreloadGameAssets()
+  self:TemporaryHandlingForDoubleDragon()
   local PreloadSystem = UE4.USubsystemBlueprintLibrary.GetGameInstanceSubsystem(self, UE4.URolePreloadGameInstanceSubsystem)
   if not PreloadSystem then
     self.bPreloadAssetsReady = true
@@ -1209,7 +1362,7 @@ function Component:PreloadGameAssets()
   if Player.GetCharPreloadComp and Player:GetCharPreloadComp() and Player:GetCharPreloadComp():GetPlayerCacheLoadId() > 0 then
     SkipPlayerId = Player:GetCharPreloadComp():GetPlayerCacheLoadId()
   end
-  PreloadSystem:ReleaseAllCacheBeforeChangeScene({SkipPlayerId})
+  PreloadSystem:ReleaseAllCacheBeforeChangeScene(UE.TArray(0))
   PreloadSystem:ReleaseAllCacheObj(false)
   PreloadSystem:PreloadScatteredAsset_All()
   if Player and true == Player.DelayCacheLoadPlayerAssets then
@@ -1224,13 +1377,6 @@ function Component:PreloadGameAssets()
   if self:IsInDungeon() then
     PreloadSystem:PreloadScatteredAsset_Dungeon(DungeonId or 0)
   elseif self:IsInRegion() then
-    if IsStandAlone(self) and UEMGameInstance.IsLowMemoryDevice() then
-      local AnimCacheSys = UE4.USubsystemBlueprintLibrary.GetGameInstanceSubsystem(self, UAnimOptGameInstanceSubsystem)
-      if AnimCacheSys then
-        print(_G.LogTag, "@gulinan- 区域资源预加载前打开移动端被关闭的动画缓存")
-        AnimCacheSys.SystemEnableState = 1
-      end
-    end
     PreloadSystem:PreloadScatteredAsset_Region()
   end
   if nil == DungeonId or -1 == DungeonId then
@@ -1240,23 +1386,6 @@ function Component:PreloadGameAssets()
     return
   end
   print(_G.LogTag, "wzj- 副本资源预加载 Start", UE4.UGameplayStatics.GetTimeSeconds(self), DungeonId)
-  if IsStandAlone(self) and UEMGameInstance.IsLowMemoryDevice() then
-    local DungeonId = GWorld.GameInstance:GetCurrentDungeonId()
-    local DungeonInfo = DataMgr.Dungeon[DungeonId]
-    if DungeonInfo.DungeonType == "Synthesis" then
-      local AnimCacheSys = UE4.USubsystemBlueprintLibrary.GetGameInstanceSubsystem(self, UAnimOptGameInstanceSubsystem)
-      if AnimCacheSys then
-        print(_G.LogTag, "@gulinan- 副本资源预加载前关闭低内存机型竞逐本动画缓存", DungeonId)
-        AnimCacheSys.SystemEnableState = 0
-      end
-    else
-      local AnimCacheSys = UE4.USubsystemBlueprintLibrary.GetGameInstanceSubsystem(self, UAnimOptGameInstanceSubsystem)
-      if AnimCacheSys then
-        print(_G.LogTag, "@gulinan- 副本资源预加载前开启非低内存机型或非竞逐本动画缓存", DungeonId)
-        AnimCacheSys.SystemEnableState = 1
-      end
-    end
-  end
   self.bPreloadAssetsReady = false
   self.bAssetsPreloading = true
   local Res = PreloadSystem:CacheDungeonGameAssetsOuter({
@@ -1282,7 +1411,7 @@ function Component:ShowPetDefenseDynamicEvent_Lua()
     local DynamicEventUI = BattleMain:GetOrAddDynamicEventWidget()
     DynamicEventUI:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     DynamicEventUI:PetPlayInAnim()
-    DynamicEventUI:SetEventInfo(GText(self.PetEventName), GText(self.PetEventDescribe))
+    DynamicEventUI:SetEventInfo(self.PetEventName, self.PetEventDescribe)
     DynamicEventUI:HidePetProgressRoot()
     DynamicEventUI.Name:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
@@ -1295,7 +1424,7 @@ function Component:ShowPetDefenseProgress_Lua()
     local DynamicEventUI = BattleMain:GetOrAddDynamicEventWidget()
     DynamicEventUI:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     DynamicEventUI:PlayAnimation(DynamicEventUI.Get_In)
-    DynamicEventUI:SetEventInfo(GText(self.PetEventName), GText(self.PetEventDescribe))
+    DynamicEventUI:SetEventInfo(self.PetEventName, self.PetEventDescribe)
     DynamicEventUI:ShowPetProgress()
     self:PetCaputreDefenceWidgetShow()
   end
@@ -1434,7 +1563,7 @@ end
 
 function Component:OnRep_PetDefenceKilled()
   self:UpdatePetDefenseProgress()
-  UE4.UGameplayStatics.GetGameState(self):MarkPetDefenceKilledNumAsDirtyData()
+  self:MarkPetDefenceKilledNumAsDirtyData()
 end
 
 function Component:SelectTicket_Lua()
@@ -1922,6 +2051,114 @@ end
 
 function Component:OnRep_RaidScore()
   EventManager:FireEvent(EventID.OnRepRaidScore, self.RaidScore)
+end
+
+function Component:OnRep_IsExitDeliveryActive()
+  DebugPrint("OnRep_IsExitDeliveryActive", self.IsExitDeliveryActive)
+end
+
+function Component:ChargeGame_Lua()
+  local CommonClientTimerUI = UIManager(self):GetUIObj("DungeonCaptureFloat")
+  CommonClientTimerUI = CommonClientTimerUI or UIManager(self):LoadUINew("DungeonCaptureFloat")
+  CommonClientTimerUI:InitClientTimerByHandleName("ChargeGame", "DUNGEON_SYNTHESIS2_109", 10)
+end
+
+function Component:RemoveChargeGame_Lua()
+  local CommonClientTimerUI = UIManager(self):GetUIObj("DungeonCaptureFloat")
+  if not CommonClientTimerUI then
+    return
+  end
+  CommonClientTimerUI:CloseClientTimerByHandleName()
+end
+
+function Component:ShowSynthesisIIChargeProgressUI_Lua()
+  if self.SynthesisIIProgressHudWidget then
+    return
+  end
+  local SynthesisIIProgressHudWidget = UIManager(self):_CreateWidgetNew("SynthesisIIProgressHud")
+  if not SynthesisIIProgressHudWidget then
+    ScreenPrint("LoadDungoenUI加载对应副本WidgetUI失败，创建Widget失败！WidgetUIName SynthesisIIProgressHud")
+    return
+  end
+  SynthesisIIProgressHudWidget:InitDungeonWidget(self.DungeonId)
+  self.SynthesisIIProgressHudWidget = SynthesisIIProgressHudWidget
+end
+
+function Component:RemoveShowSynthesisIIChargeProgressUI_Lua()
+  if self.SynthesisIIProgressHudWidget then
+    self.SynthesisIIProgressHudWidget:SetVisibility(ESlateVisibility.Collapsed)
+  end
+  local BattleMainUI = UIManager(self):GetUIObj("BattleMain")
+  if not BattleMainUI then
+    return
+  end
+  if self.SynthesisIIProgressHudWidget then
+    self.SynthesisIIProgressHudWidget:SetVisibility(ESlateVisibility.Collapsed)
+  end
+  BattleMainUI.Pos_Weekly_Buff:SetVisibility(UE4.ESlateVisibility.Collapsed)
+end
+
+function Component:ShowSynthesisIIFortDefenceProgressUI_Lua()
+  local FortDefenceTargetNums = DataMgr.SynthesisII[self.DungeonId].FortDefenceTargetNum
+  local FortDefenceTargetNum = FortDefenceTargetNums[self.FortDefenceGameIndex]
+  if self.SynthesisIIExpelBarHudWidget then
+    self.SynthesisIIExpelBarHudWidget:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.SynthesisIIExpelBarHudWidget:SetFortDefenceTargetNum(FortDefenceTargetNum)
+    self.SynthesisIIExpelBarHudWidget:UpdateProgress(0)
+    return
+  end
+  local SynthesisIIExpelBarHudWidget = UIManager(self):_CreateWidgetNew("SynthesisIIExpelBarHud")
+  if not SynthesisIIExpelBarHudWidget then
+    ScreenPrint("LoadDungoenUI加载对应副本WidgetUI失败，创建Widget失败！WidgetUIName SynthesisIIExpelBarHud")
+    return
+  end
+  self.SynthesisIIExpelBarHudWidget = SynthesisIIExpelBarHudWidget
+  SynthesisIIExpelBarHudWidget:InitDungeonWidget(FortDefenceTargetNum)
+  self.SynthesisIIExpelBarHudWidget:UpdateProgress(0)
+end
+
+function Component:OnRep_FortDefenceKilledNum()
+  if self.SynthesisIIExpelBarHudWidget then
+    self.SynthesisIIExpelBarHudWidget:UpdateProgress(self.FortDefenceKilledNum)
+  end
+end
+
+function Component:RemoveShowSynthesisIIFortDefenceProgressUI_Lua()
+  if self.SynthesisIIExpelBarHudWidget then
+    self.SynthesisIIExpelBarHudWidget:SetVisibility(ESlateVisibility.Collapsed)
+  end
+end
+
+function Component:ShowSynthesisIIHostageHealthBarUI_Lua()
+  local HostageEid
+  for _, AI in pairs(self.MonsterMap) do
+    if IsValid(AI) and AI.UnitId == 7017051 then
+      HostageEid = AI.Eid
+      break
+    end
+  end
+  if self.SynthesisIIHostageHealthBarHudWidget then
+    self.SynthesisIIHostageHealthBarHudWidget:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.SynthesisIIHostageHealthBarHudWidget.HostageEid = HostageEid
+    return
+  end
+  local SynthesisIIHostageHealthBarHudWidget = UIManager(self):_CreateWidgetNew("SynthesisIIHostageHealthBarHud")
+  if not SynthesisIIHostageHealthBarHudWidget then
+    ScreenPrint("LoadDungoenUI加载对应副本WidgetUI失败，创建人质血条Widget失败！WidgetUIName SynthesisIIHostageHealthBarHud")
+    return
+  end
+  self.SynthesisIIHostageHealthBarHudWidget = SynthesisIIHostageHealthBarHudWidget
+  SynthesisIIHostageHealthBarHudWidget:InitDungeonWidget(HostageEid)
+end
+
+function Component:RemoveShowSynthesisIIHostageHealthBarUI_Lua()
+  if self.SynthesisIIHostageHealthBarHudWidget then
+    self.SynthesisIIHostageHealthBarHudWidget:SetVisibility(ESlateVisibility.Collapsed)
+  end
+end
+
+function Component:FinishSynthesisII_Lua()
+  self:ShowSynthesisSuccessEffect()
 end
 
 return Component

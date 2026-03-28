@@ -1,7 +1,7 @@
 local T = {}
 T.RT_1 = {9998, 9999}
-T.RT_2 = {33, 35}
-T.RT_3 = {18}
+T.RT_2 = {18}
+T.RT_3 = {33, 35}
 T.RT_4 = {18, 22}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
@@ -50,62 +50,72 @@ return ReadOnly("Exterminate", {
     NormalSpawnRule = 10802,
     TargetNum = 40
   },
-  [60901] = {
-    DungeonId = 60901,
+  [30804] = {
+    DungeonId = 30804,
     EliteRange = T.RT_2,
     EliteSpawnOnlyRelation = true,
+    EliteSpawnRule = 91125,
+    NormalRange = T.RT_1,
+    NormalSpawnOnlyRelation = false,
+    NormalSpawnRule = 10802,
+    TargetNum = 40
+  },
+  [60901] = {
+    DungeonId = 60901,
+    EliteRange = T.RT_3,
+    EliteSpawnOnlyRelation = true,
     EliteSpawnRule = 110801,
-    NormalRange = T.RT_2,
+    NormalRange = T.RT_3,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 110802,
     TargetNum = 40
   },
   [60902] = {
     DungeonId = 60902,
-    EliteRange = T.RT_3,
+    EliteRange = T.RT_2,
     EliteSpawnOnlyRelation = true,
     EliteSpawnRule = 10801,
-    NormalRange = T.RT_2,
+    NormalRange = T.RT_3,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10802,
     TargetNum = 40
   },
   [62901] = {
     DungeonId = 62901,
-    EliteRange = T.RT_2,
+    EliteRange = T.RT_3,
     EliteSpawnOnlyRelation = true,
     EliteSpawnRule = 110801,
-    NormalRange = T.RT_2,
+    NormalRange = T.RT_3,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 110802,
     TargetNum = 40
   },
   [62902] = {
     DungeonId = 62902,
-    EliteRange = T.RT_3,
+    EliteRange = T.RT_2,
     EliteSpawnOnlyRelation = true,
     EliteSpawnRule = 10801,
-    NormalRange = T.RT_2,
+    NormalRange = T.RT_3,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10802,
     TargetNum = 40
   },
   [64901] = {
     DungeonId = 64901,
-    EliteRange = T.RT_2,
+    EliteRange = T.RT_3,
     EliteSpawnOnlyRelation = true,
     EliteSpawnRule = 110801,
-    NormalRange = T.RT_2,
+    NormalRange = T.RT_3,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 110802,
     TargetNum = 40
   },
   [64902] = {
     DungeonId = 64902,
-    EliteRange = T.RT_3,
+    EliteRange = T.RT_2,
     EliteSpawnOnlyRelation = true,
     EliteSpawnRule = 10801,
-    NormalRange = T.RT_2,
+    NormalRange = T.RT_3,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10802,
     TargetNum = 40
@@ -115,27 +125,27 @@ return ReadOnly("Exterminate", {
     EliteRange = T.RT_1,
     EliteSpawnOnlyRelation = true,
     EliteSpawnRule = 110801,
-    NormalRange = T.RT_2,
+    NormalRange = T.RT_3,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 110802,
     TargetNum = 40
   },
   [90802] = {
     DungeonId = 90802,
-    EliteRange = T.RT_2,
+    EliteRange = T.RT_3,
     EliteSpawnOnlyRelation = true,
     EliteSpawnRule = 110801,
-    NormalRange = T.RT_2,
+    NormalRange = T.RT_3,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 110802,
     TargetNum = 40
   },
   [90803] = {
     DungeonId = 90803,
-    EliteRange = T.RT_3,
+    EliteRange = T.RT_2,
     EliteSpawnOnlyRelation = true,
     EliteSpawnRule = 10801,
-    NormalRange = T.RT_2,
+    NormalRange = T.RT_3,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10802,
     TargetNum = 40
@@ -155,7 +165,7 @@ return ReadOnly("Exterminate", {
     EliteRange = T.RT_4,
     EliteSpawnOnlyRelation = true,
     EliteSpawnRule = 110801,
-    NormalRange = T.RT_2,
+    NormalRange = T.RT_3,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 110802,
     TargetNum = 40
@@ -165,24 +175,24 @@ return ReadOnly("Exterminate", {
     EliteRange = T.RT_4,
     EliteSpawnOnlyRelation = true,
     EliteSpawnRule = 10801,
-    NormalRange = T.RT_2,
+    NormalRange = T.RT_3,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10802,
     TargetNum = 40
   },
   [90807] = {
     DungeonId = 90807,
-    EliteRange = T.RT_3,
+    EliteRange = T.RT_2,
     EliteSpawnOnlyRelation = true,
     EliteSpawnRule = 10801,
-    NormalRange = T.RT_2,
+    NormalRange = T.RT_3,
     NormalSpawnOnlyRelation = false,
     NormalSpawnRule = 10802,
     TargetNum = 40
   },
   [91125] = {
     DungeonId = 91125,
-    EliteRange = T.RT_3,
+    EliteRange = T.RT_2,
     EliteSpawnOnlyRelation = true,
     EliteSpawnRule = 91125,
     NormalRange = T.RT_1,

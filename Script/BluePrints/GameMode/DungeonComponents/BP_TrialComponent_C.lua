@@ -153,7 +153,7 @@ function BP_TrialComponent_C:TryUpdateGuidePoint()
   end
 end
 
-function BP_TrialComponent_C:OnUnitDeadEvent(MonsterC)
+function BP_TrialComponent_C:OnUnitDeadEvent(MonsterC, KillMineRoleEid, KillMineSkillId, DeathReason)
   if not IsValid(MonsterC) then
     return
   end

@@ -61,7 +61,10 @@ function M:PlaySequence()
     self.LoadingUI.Com_Loading:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.LoadingUI.Text_CoopTitle:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
+  UIManager(GWorld.GameInstance):ClearCachedViewTarget()
   self.SequencePlayer:Play()
+  local PlayerController = UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
+  UTalkSequenceFunctionLibrary.UpdatePlayerCameraManager(PlayerController)
   if GameState then
     GameState:ClientHideHardBossDgActor(true, "Boss")
   end

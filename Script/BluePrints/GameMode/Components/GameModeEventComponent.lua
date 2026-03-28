@@ -157,4 +157,14 @@ function GameModeEventComponent:TriggerSTLEvent_OnSTLActorDestroyed(...)
   GWorld.StoryMgr:TryExecStorylineActorEvent(Actor.CreatorId, EStorylineActorEventType.OnActorDestroyed, {Actor = Actor, DestroyReason = DestroyReason})
 end
 
+function GameModeEventComponent:TriggerSTLEvent_OnSTLMonsterdDeath(...)
+  local MonsterC, KillMineRoleEid, KillMineSkillId, DeathReason = ...
+  GWorld.StoryMgr:TryExecStorylineActorEvent(MonsterC.CreatorId, EStorylineActorEventType.OnMonsterDeath, {
+    MonsterC = MonsterC,
+    KillMineRoleEid = KillMineRoleEid,
+    KillMineSkillId = KillMineSkillId,
+    DeathReason = DeathReason
+  })
+end
+
 return GameModeEventComponent

@@ -20,6 +20,9 @@ class CharProcessor(BaseProcessor):
         self.level_up_data = data_loader.load_json("LevelUp.json")
         self.char_break_data = data_loader.load_json("CharBreak.json")
         self.skill_data = data_loader.load_json("Skill.json")
+        self.char_id_to_ultra_passive_skill_id = data_loader.load_json(
+            "CharId2UltraPassiveSkillId.json"
+        )
         self.combat_term_data = data_loader.load_json("CombatTerm.json")
         self.character_data_target = data_loader.load_json("CharacterDataTarget.json")
         self.character_data = data_loader.load_json("CharacterData.json")
@@ -175,8 +178,8 @@ class CharProcessor(BaseProcessor):
             "基础神智": base_attr.get("神智", 0),
             "加成": self._process_addon(battle_char.get("CharAddonAttr", [])),
             "突破": self._process_break(char_id, language),
-            "技能": self._process_skills(battle_char, language),
-            "溯源": self._process_traces(battle_char, char_id),
+            "技能": self._process_skills(battle_char, language, char_id),
+            "溯源": self._process_traces(battle_char, char_id, language),
             # "档案": self._process_character_data(char_id),
             "同律武器": self._process_u_weapon(char_data.get("UWeapon", [])),
         }
@@ -434,7 +437,7 @@ class CharProcessor(BaseProcessor):
 
         return break_info
 
-    def _process_skills(self, battle_char, language):
+    def _process_skills(self, battle_char, language, char_id=None):
         """处理角色技能数据"""
         if not battle_char:
             return []
@@ -443,9 +446,21 @@ class CharProcessor(BaseProcessor):
         if not skill_list:
             return []
 
+        ultra_passive_skill_id = None
+        if char_id is not None:
+            ultra_passive_skill_id = self.char_id_to_ultra_passive_skill_id.get(
+                str(char_id)
+            )
+            if ultra_passive_skill_id is None:
+                ultra_passive_skill_id = self.char_id_to_ultra_passive_skill_id.get(
+                    char_id
+                )
+
         skills = []
 
         for skill_id in skill_list:
+            if skill_id == ultra_passive_skill_id:
+                continue
             skill_info = self._process_single_skill(skill_id)
             if skill_info:
                 skills.append(skill_info)
@@ -512,6 +527,9 @@ class CharProcessor(BaseProcessor):
             self.get_translated_text(skill_desc_key)
             .replace("<H>", "")
             .replace("</>", "")
+        )
+        skill_desc = self._replace_skill_desc_placeholders(
+            skill_desc, skill_info.get("SkillDescValues", []), skill_id
         )
 
         # 获取技能最大等级
@@ -633,6 +651,44 @@ class CharProcessor(BaseProcessor):
                 result["子技能"] = processed_sub_skills
 
         return result
+
+    def _replace_skill_desc_placeholders(self, skill_desc, desc_values, skill_id):
+        """替换技能描述中的 #1/#2 这类占位符。"""
+        if not skill_desc or not desc_values:
+            return skill_desc
+
+        import re
+
+        placeholder_meta = {}
+        for index, value in enumerate(desc_values, start=1):
+            if value is None:
+                continue
+
+            if isinstance(value, (int, float)):
+                placeholder_meta[index] = str(self.round_value(value))
+                continue
+
+            if not isinstance(value, str):
+                placeholder_meta[index] = str(value)
+                continue
+
+            preprocessed_value = self.preprocess_expression(value)
+            calc_value = self._calc_skill_desc_value_raw(
+                preprocessed_value, skill_id, 1
+            )
+            if value.endswith("%"):
+                placeholder_meta[index] = f"{self.round_value(calc_value)}%"
+            else:
+                placeholder_meta[index] = str(self.round_value(calc_value))
+
+        if not placeholder_meta:
+            return skill_desc
+
+        def replace_placeholder(match):
+            placeholder_index = int(match.group(1))
+            return placeholder_meta.get(placeholder_index, match.group(0))
+
+        return re.sub(r"#(\d+)(?!\d)", replace_placeholder, skill_desc)
 
     def _extract_explanation_names(self, explanation_ids):
         """从 ExplanationId 中提取术语名称，用于子技能命名兜底"""
@@ -1938,7 +1994,7 @@ class CharProcessor(BaseProcessor):
         }
         return table_map.get(table_name)
 
-    def _process_traces(self, battle_char, char_id):
+    def _process_traces(self, battle_char, char_id, language=""):
         """处理角色溯源数据"""
         if not battle_char:
             return []
@@ -2031,7 +2087,42 @@ class CharProcessor(BaseProcessor):
 
             traces.append(grade_desc)
 
+        ultra_passive_skill_id = self.char_id_to_ultra_passive_skill_id.get(
+            str(char_id)
+        )
+        if ultra_passive_skill_id is None:
+            ultra_passive_skill_id = self.char_id_to_ultra_passive_skill_id.get(char_id)
+        if ultra_passive_skill_id:
+            ultra_passive_desc = self._process_ultra_passive_trace(
+                ultra_passive_skill_id, language
+            )
+            if ultra_passive_desc:
+                traces.append(ultra_passive_desc)
+
         return traces
+
+    def _process_ultra_passive_trace(self, skill_id, language):
+        """将超被动技能转成溯源最后一条文本。"""
+        skill = self.skill_data.get(str(skill_id), {})
+        if not skill:
+            skill = self.skill_data.get(skill_id, {})
+
+        if not isinstance(skill, list) or len(skill) == 0 or len(skill[0]) == 0:
+            return ""
+
+        skill_info = skill[0][0]
+        skill_desc_key = skill_info.get("SkillDesc", "")
+        if not skill_desc_key:
+            return ""
+
+        skill_desc = (
+            self.get_translated_text(skill_desc_key)
+            .replace("<H>", "")
+            .replace("</>", "")
+        )
+        return self._replace_skill_desc_placeholders(
+            skill_desc, skill_info.get("SkillDescValues", []), skill_id
+        )
 
     def _process_character_data(self, char_id):
         """处理角色档案数据"""

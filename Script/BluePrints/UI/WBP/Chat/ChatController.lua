@@ -103,7 +103,7 @@ function M:RecvChatChannelSwitch(ChannelType, bOff)
   end
 end
 
-function M:SendRequestEnterChatChannel(ChannelType)
+function M:SendRequestEnterChatChannel(ChannelType, ChannelIndex, online_type)
   if nil == ChannelType then
     ChannelType = ChatModel:GetCurrentChannel()
   end
@@ -115,19 +115,21 @@ function M:SendRequestEnterChatChannel(ChannelType)
     return
   end
   if not ChatCommon.WorldChannels[ChannelType] or self:GetModel().EnteredChannels[ChannelType] then
-    self:RecvRequestEnterChatChannel(ErrorCode.RET_SUCCESS, ChannelType)
+    self:RecvRequestEnterChatChannel(ErrorCode.RET_SUCCESS, ChannelType, ChannelIndex, online_type)
     return
   end
   if ChannelType == ChatCommon.ChannelDef.Region then
-    self:RecvRequestEnterChatChannel(ErrorCode.RET_SUCCESS, ChannelType)
+    self:RecvRequestEnterChatChannel(ErrorCode.RET_SUCCESS, ChannelType, ChannelIndex, online_type)
     return
   end
   self:GetAvatar():RequestEnterWorldChannel(ChannelType)
 end
 
-function M:RecvRequestEnterChatChannel(ErrCode, ChannelType)
+function M:RecvRequestEnterChatChannel(ErrCode, ChannelType, channel_index, online_type)
   self:GetModel().EnteredChannels[ChannelType] = 1
-  self:NotifyEvent(ChatCommon.EventID.EnterChatChannel, ErrCode, ChannelType)
+  self:GetModel():SetChannelIndex(online_type or ChannelType, channel_index)
+  self:GetModel():SaveChannelIndex(online_type or ChannelType, channel_index)
+  self:NotifyEvent(ChatCommon.EventID.EnterChatChannel, ErrCode, ChannelType, channel_index, online_type)
 end
 
 function M:SendRequestLeaveChatChannel(ChannelType)
@@ -417,14 +419,16 @@ function M:CheckTextValid(Text, Callback, ShowTipFunc, TextMap, bAllowEmpty)
     BannedHint = TextMap.BannedHint or BannedHint
   end
   local OldText = Text
-  Text = MiscUtils.Trim(Text)
-  if nil ~= OldText and "" == Text then
-    ShowTipFunc(true, EmptyHint)
-    return
-  end
-  if ("" == Text or nil == Text) and not bAllowEmpty then
-    ShowTipFunc(true, EmptyHint)
-    return
+  local Trimmed = MiscUtils.Trim(Text)
+  if "" == Trimmed then
+    if bAllowEmpty then
+      Text = OldText
+    else
+      ShowTipFunc(true, EmptyHint)
+      return
+    end
+  else
+    Text = Trimmed
   end
   if string.match(Text, "<(.-)>(.-)</>") then
     ShowTipFunc(false, BannedHint)
@@ -475,6 +479,9 @@ end
 
 function M:OpenChatReportDialog(Params)
   local View = self:GetView()
+  if self:IsGamepad() then
+    Params.AutoFocus = true
+  end
   self:GetUIMgr(View):ShowCommonPopupUI(ChatCommon.AccuseDialog, Params, View)
 end
 
@@ -534,6 +541,25 @@ function M:ParseEmojiToText(MsgWrap)
   return Content
 end
 
+function M:ParseChannelHeader(MsgWrap)
+  local Message = MsgWrap.Message
+  local ChannelType = Message.ChannelType
+  local ChannelConfig = DataMgr.Channel[ChannelType]
+  if not ChannelConfig then
+    return
+  end
+  local RichText
+  if 4 == ChannelType then
+    RichText = "C_Friend"
+  elseif 3 == ChannelType then
+    RichText = "C_Team"
+  else
+    RichText = "C_Open"
+  end
+  local Name = string.format("<%s>[%s]</>", RichText, GText(ChannelConfig.Name))
+  return Name
+end
+
 function M:ParseSpeakerHeader(MsgWrap)
   local Message = MsgWrap.Message
   local YouTo = ""
@@ -541,7 +567,7 @@ function M:ParseSpeakerHeader(MsgWrap)
   local FriendName = GText("UI_Chat_You")
   if Message.ChannelType == ChatCommon.ChannelDef.Friend then
     YouTo = MsgWrap.MsgType == ChatCommon.MsgType.Self and GText("UI_Chat_YouTo") or ""
-    RichTextTag = ChatCommon.RichTextTag.Friend
+    RichTextTag = "C_Open"
     local Uid = Message.Sender.Uid
     if MsgWrap.MsgType == ChatCommon.MsgType.Self then
       Uid = Message.ReceiverUid
@@ -549,7 +575,7 @@ function M:ParseSpeakerHeader(MsgWrap)
     FriendName = FriendController:GetModel():GetFriendDict()[Uid].Info.Nickname
   elseif MsgWrap.MsgType ~= ChatCommon.MsgType.Self then
     local Friend = FriendController:GetModel():GetFriendDict()[Message.Sender.Uid]
-    RichTextTag = Friend and ChatCommon.RichTextTag.Friend or ChatCommon.RichTextTag.Stranger
+    RichTextTag = "C_Open"
     FriendName = Friend and Friend.Info.Nickname or Message.Sender.Nickname
   end
   local Spacker = string.format("%s<%s>%s</>%s", YouTo, RichTextTag, FriendName, ChatCommon.Spliter)
@@ -612,6 +638,134 @@ function M:ClearChannelReddot(ChannelType)
       self:SendChatNewMsgRead(Friend.Uid)
     end
   end
+end
+
+function M:SendQueryChatChannelBusyInfo()
+  if ChatModel:IsInRegionOnlineChannelType() then
+    self:GetAvatar():QueryAllRegionOnlineChannelState(ChatModel:GetRegionId())
+  else
+    self:GetAvatar():QueryAllChatChannelBusyInfo()
+  end
+end
+
+function M:SetIsEnterChannelContent(Value)
+  ChatModel:SetIsEnterChannelContent(Value)
+end
+
+function M:RecvAllChatChannelPlayerCountInfo(channel_type, channel_list)
+  ChatModel:SetAllChannelList(channel_list)
+  self:NotifyEvent(ChatCommon.EventID.RecvAllChatChannel)
+end
+
+function M:StartQueryChatChannelBusyInfo()
+  local Avatar = self:GetAvatar()
+  if ChatModel:IsInRegionOnlineChannelType() then
+    Avatar:QueryRegionOnlineChannelState(ChatModel:GetRegionId(), ChatModel:GetRecvChannelIndex())
+  else
+    local CurChannel = ChatModel:GetChannelIndex(ChatModel:GetCurrentChannel())
+    Avatar:QueryChatChannelBusyInfo({CurChannel})
+  end
+end
+
+function M:RecvChatChannelPlayerCountInfo(Channel_type, Channel_list)
+  ChatModel:RefreshRecvChannelIndex(Channel_type, Channel_list)
+  self:NotifyEvent(ChatCommon.EventID.RecvChannelPlayerNum, Channel_type, Channel_list)
+end
+
+function M:OpenChatChannelUI(UIState)
+  local Params = {}
+  Params.TabConfigData = {
+    LeftKey = "Q",
+    RightKey = "E",
+    LeftGamePadKey = "LeftShoulder",
+    RightGamePadKey = "RightShoulder",
+    Tabs = {
+      {
+        Text = GText("SearchChannel"),
+        TabId = 1
+      },
+      {
+        Text = GText("HistoryChannel"),
+        TabId = 2
+      }
+    }
+  }
+  Params.DontCloseWhenRightBtnClicked = true
+  Params.RightCallbackObj = UIState
+  
+  function Params.RightCallbackFunction()
+    EventManager:FireEvent(EventID.OnSendChannelIndexSelect)
+  end
+  
+  UIManager(self):ShowCommonPopupUI(100345, Params, UIState)
+end
+
+function M:RecvUpdateChannelIndexChatToWorld(ContentText, ChannelType)
+  if ChatModel:IsChannelExclude(ChannelType) then
+    return
+  end
+  local FakeMessage = self:CreateFakeMsg(ContentText, CommonConst.MESSAGE_TYPE_SYSTEM, ChannelType)
+  self:_AddMessage(FakeMessage, false)
+end
+
+function M:InitChannelData(Widget)
+  if Widget.ChannelInfo then
+    return
+  end
+  local ChannelInfo = {}
+  for _, Data in ipairs(DataMgr.Channel) do
+    ChannelInfo[Data.RedDotPriority] = Data
+  end
+  Widget.ChannelInfo = ChannelInfo
+end
+
+function M:GetRedDotNumAndChannelData(Widget)
+  for i = #Widget.ChannelInfo, 1, -1 do
+    local Data = Widget.ChannelInfo[i]
+    local NodeName = ChatCommon.ReddotNamePre .. ChatCommon.ChannelNames[Data.ChannelType]
+    local Node = ReddotManager.GetTreeNode(NodeName)
+    if Node and Node:GetNodeCount() > 0 then
+      return Node:GetNodeCount(), Data
+    end
+  end
+end
+
+function M:UpdateChatIcon(Widget, SIcon)
+  local Icon = LoadObject(SIcon)
+  if IsValid(Icon) then
+    Widget.Image_ChatChannel:SetBrushResourceObject(Icon)
+  end
+end
+
+function M:OnChatReddotUpdate(Widget)
+  local NewCount
+  self:InitChannelData(Widget)
+  local NodeCount, ChannelData = self:GetRedDotNumAndChannelData(Widget)
+  if not NodeCount then
+    Widget.CurChannelData = nil
+    Widget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    return
+  end
+  if not Widget.CurChannelData then
+    Widget.CurChannelData = ChannelData
+    self:UpdateChatIcon(Widget, ChannelData.SIcon)
+  elseif Widget.CurChannelData.RedDotPriority < ChannelData.RedDotPriority then
+    Widget.CurChannelData = ChannelData
+    
+    function Widget.RefreshCallBack()
+      self:UpdateChatIcon(Widget, ChannelData.SIcon)
+    end
+    
+    Widget:PlayAnimation(Widget.Refresh)
+  elseif Widget.CurChannelData ~= ChannelData then
+    Widget.CurChannelData = ChannelData
+    self:UpdateChatIcon(Widget, ChannelData.SIcon)
+  end
+  if NodeCount > ChatCommon.ReddotMaxCount then
+    NewCount = ChatCommon.ReddotMaxCount .. "+"
+  end
+  Widget:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+  Widget:SetNum(NewCount or NodeCount)
 end
 
 _G.ChatController = M

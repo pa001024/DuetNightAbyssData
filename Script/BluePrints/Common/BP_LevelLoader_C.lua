@@ -317,6 +317,15 @@ function BP_LevelLoader_C:PreloadLevels()
     if level.exitLevel and 1 == level.exitLevel then
       self.exitLevelID = id
     end
+    if level.loading_group_id then
+      if not self.LoadingGroupId then
+        self.LoadingGroupId = {}
+      end
+      if not self.LoadingGroupId[level.loading_group_id] then
+        self.LoadingGroupId[level.loading_group_id] = {}
+      end
+      self.LoadingGroupId[level.loading_group_id][id] = true
+    end
   end
   if IsAuthority(self) then
     self:ReleaseInitialBuildingLock()

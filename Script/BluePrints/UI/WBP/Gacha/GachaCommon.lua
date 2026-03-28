@@ -30,4 +30,9 @@ GachaCommon.ItemRarityName = {
   [2] = "UI_SkinGacha_Item_Green",
   [1] = "UI_SkinGacha_Item_White"
 }
+GachaCommon.BgWidget = {
+  [1] = "WidgetBlueprint'/Game/UI/WBP/GachaNew/Widget/GachaGet/WBP_GachaGet_Widget_Normal.WBP_GachaGet_Widget_Normal'",
+  [2] = "WidgetBlueprint'/Game/UI/WBP/GachaNew/Widget/GachaGet/WBP_GachaGet_Widget_SuperCoin.WBP_GachaGet_Widget_SuperCoin'",
+  [3] = "WidgetBlueprint'/Game/UI/WBP/GachaNew/Widget/GachaGet/WBP_GachaGet_Widget_SuperCoin_Max.WBP_GachaGet_Widget_SuperCoin_Max'"
+}
 return GachaCommon

@@ -134,6 +134,24 @@ function Bool:load(value)
   return true == value
 end
 
+local Bytes = Class("Bytes", BaseType)
+Bytes.default = ""
+
+function Bytes:load(value)
+  if type(value) ~= "string" then
+    assert(false, "Bytes:load value must be string")
+  end
+  if #value < 4 then
+    assert(false, "Bytes:load value length must be greater than 4")
+  end
+  return string.sub(value, 4)
+end
+
+function Bytes:save_dump(value)
+  local bson = require("bson")
+  return bson.binary(value)
+end
+
 local List = Class("List", BaseType)
 List.default = {}
 
@@ -159,6 +177,7 @@ local BaseTypes = {
   Int = Int,
   Float = Float,
   Bool = Bool,
+  Bytes = Bytes,
   List = List,
   Dict = Dict
 }

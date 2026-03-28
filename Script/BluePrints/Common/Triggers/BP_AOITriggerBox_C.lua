@@ -89,7 +89,7 @@ function BP_AOITriggerBox_C:CollisionBeginOverlap(Component, OtherActor)
   end
   self:OnActorOverlap(OtherActor, "BeginOverlap")
   if self.BeginOverlapExecLogic then
-    self.BeginOverlapExecLogic()
+    self:BeginOverlapExecLogic()
   end
   self.OverlapActors = self.OverlapActors or {}
   self.OverlapActors[OtherActor] = true
@@ -101,7 +101,7 @@ function BP_AOITriggerBox_C:CollisionEndOverlap(Component, OtherActor)
   end
   self:OnActorOverlap(OtherActor, "EndOverlap")
   if self.EndOverlapExecLogic then
-    self.EndOverlapExecLogic()
+    self:EndOverlapExecLogic()
   end
   self.OverlapActors = self.OverlapActors or {}
   self.OverlapActors[OtherActor] = nil

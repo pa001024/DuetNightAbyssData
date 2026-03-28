@@ -58,14 +58,17 @@ function Component:Penalize(PlayerId)
       self:BeforeBePenalize()
       self:SendPenalizeStoryEvent()
       Res = true
-    elseif self:GetAttr("Hp") <= 0 then
-      self:BeforeBePenalize()
-      Res = Role:UsePenalizeSkill(self.Eid)
-    elseif not self:HasAirWallBetweenPosition(Role) then
-      self:BeforeBePenalize()
-      Res = Role:UsePenalizeSkill(self.Eid)
     else
-      Role:ClientShowToast(UIConst.Tip_CommonToast, GText("TOAST_PENALIZEINVALID"))
+      self:ServerRecoverAnimationOnExecute()
+      if self:GetAttr("Hp") <= 0 then
+        self:BeforeBePenalize()
+        Res = Role:UsePenalizeSkill(self.Eid)
+      elseif not self:HasAirWallBetweenPosition(Role) then
+        self:BeforeBePenalize()
+        Res = Role:UsePenalizeSkill(self.Eid)
+      else
+        Role:ClientShowToast(UIConst.Tip_CommonToast, GText("TOAST_PENALIZEINVALID"))
+      end
     end
     if Res then
       self:SetEnableBeCondemned(ECondemnState.WaitEnterDefeated)

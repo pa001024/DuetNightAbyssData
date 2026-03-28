@@ -92,7 +92,10 @@ function M:RefreshItemInfo(Content, bNotFocus, bInitLockedEvent)
       }
     end
     self.Text_Hold01:SetText(GText("UI_Bag_Sellconfirm_Hold"))
-    local Rarity = ItemInfo.Rarity or ItemInfo[self.Type .. "Rarity"] or ItemInfo.TreasureRarity
+    local Rarity = ItemInfo.Rarity or ItemInfo[self.Type .. "Rarity"]
+    if not Rarity and ItemInfo and ItemInfo.TreasureRarity and DataMgr.ExtractionTreasureRarity[ItemInfo.TreasureRarity] and DataMgr.ExtractionTreasureRarity[ItemInfo.TreasureRarity].ShowRarity then
+      Rarity = DataMgr.ExtractionTreasureRarity[ItemInfo.TreasureRarity].ShowRarity
+    end
     if 6 == Rarity then
       self.OutLine_Quality:SetBrushFromTexture(self.Img_Line_6)
     elseif 5 == Rarity then
@@ -151,6 +154,13 @@ function M:RefreshItemInfo(Content, bNotFocus, bInitLockedEvent)
         self.Switcher_Lock:SetActiveWidgetIndex(1)
       end
     end
+  end
+  if Content.OverrideDetailsBackEvent then
+    self.OverrideDetailsBackObj = Content.OverrideDetailsBackObj
+    self.OverrideDetailsBackEvent = Content.OverrideDetailsBackEvent
+  else
+    self.OverrideDetailsBackObj = nil
+    self.OverrideDetailsBackEvent = nil
   end
 end
 
@@ -384,7 +394,9 @@ function M:_BtnLockedReleased(Content)
   end
   
   local bWaitRPCRet = Content.bWaitRPCRet
-  Content.LockedButtonClickCallBack(SetLock)
+  if Content and Content.LockedButtonClickCallBack then
+    Content.LockedButtonClickCallBack(SetLock)
+  end
   if bWaitRPCRet then
     return
   end
@@ -463,7 +475,9 @@ end
 function M:OnGamePadDown(InKeyName)
   local IsEventHandled = self.HandleKeyDown
   if InKeyName == UIConst.GamePadKey.FaceButtonRight then
-    if self.bFocusItem then
+    if self.OverrideDetailsBackEvent then
+      self.OverrideDetailsBackEvent(self.OverrideDetailsBackObj)
+    elseif self.bFocusItem then
       self.bFocusItem = false
       self:SetFocus()
     elseif self.ParentWidget then
@@ -476,7 +490,8 @@ function M:OnGamePadDown(InKeyName)
   elseif InKeyName == UIConst.GamePadKey.SpecialLeft then
     self:TryGoToFirstItem()
   elseif InKeyName == self.LockPadKey then
-    self.Btn_Locked:OnBtnClicked()
+    self:_BtnLockedPressed()
+    self:_BtnLockedReleased(self.Content)
   elseif InKeyName == self.Btn02PadKey then
     self.Btn02_Mod:OnBtnClicked()
   elseif InKeyName == self.Btn01PadKey then

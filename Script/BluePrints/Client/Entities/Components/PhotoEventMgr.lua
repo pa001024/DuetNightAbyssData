@@ -1,4 +1,4 @@
-local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
+local CameraGameUtils = require("BluePrints.UI.WBP.Activity.PC.CameraGame.CameraGameUtils")
 local Component = {}
 
 function Component:GetPhotoQuestFinishReward(InCallback, QuestChainId)
@@ -11,6 +11,10 @@ function Component:GetPhotoQuestFinishReward(InCallback, QuestChainId)
   end
   
   self:CallServer("GetPhotoQuestFinishReward", Callback, QuestChainId)
+end
+
+function Component:_OnPropChangePhotoActRewardGot()
+  CameraGameUtils.RefreshReddot()
 end
 
 return Component

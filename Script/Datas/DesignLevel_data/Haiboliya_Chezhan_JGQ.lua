@@ -1,28 +1,6 @@
 return {
-  StaticCreator = {
-    ["2280027"] = {
-      CreatorId = 2280027,
-      UnitType = "Mechanism",
-      UnitId = 490073
-    },
-    ["2280028"] = {
-      CreatorId = 2280028,
-      UnitType = "Mechanism",
-      UnitId = 490073
-    },
-    ["2510002"] = {
-      CreatorId = 2510002,
-      UnitType = "Mechanism",
-      UnitId = 1
-    }
-  },
-  ManualItem = {
-    ["251001"] = {
-      ManualItemId = 251001,
-      UnitType = "Mechanism",
-      UnitId = 13
-    }
-  },
+  StaticCreator = {},
+  ManualItem = {},
   Explore = {},
   RandomRule = {}
 }

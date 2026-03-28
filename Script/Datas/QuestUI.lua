@@ -112,5 +112,23 @@ return ReadOnly("QuestUI", {
     QuestId = 120114,
     Title = "Name_120114",
     UIName = "FeinaChangeScene"
+  },
+  [120200] = {
+    AudioPath = "event:/ui/common/main_quest_start",
+    AudioPathFinal = "event:/ui/common/main_quest_finish",
+    CantoName = "Episode_1202",
+    ChapterName = "UI_Quest_ChapterHuaxu",
+    IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Region/T_Region_Haojing.T_Region_Haojing'",
+    QuestId = 120200,
+    UIName = "ChapterUI"
+  },
+  [120300] = {
+    AudioPath = "event:/ui/common/main_quest_start",
+    AudioPathFinal = "event:/ui/common/main_quest_finish",
+    CantoName = "Episode_1203",
+    ChapterName = "UI_Quest_ChapterHuaxu",
+    IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Region/T_Region_FengXiang.T_Region_FengXiang'",
+    QuestId = 120300,
+    UIName = "ChapterUI"
   }
 })

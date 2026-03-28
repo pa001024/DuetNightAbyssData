@@ -1,4 +1,5 @@
 local EMCache = require("EMCache.EMCache")
+local EMLuaConst = require("EMLuaConst")
 local VariableForGM = {}
 VariableForGM.IsInDebugMode = true
 VariableForGM.EnableDrawDebugSphere = true
@@ -46,6 +47,7 @@ VariableForGM.EnableDebugLights = true
 VariableForGM.EnableUseLightingScenario = true
 VariableForGM.EnableRecordePlayerRoute = false
 VariableForGM.EnableShowAchievement = true
+VariableForGM.EnableShowLevelLoadingInfo = false
 VariableForGM.IgnoreGiftShopFriendLimit = false
 VariableForGM.PrintPickupTriggerTick = false
 VariableForGM.HideEntertainmentUI = false
@@ -121,4 +123,21 @@ setmetatable(VariableForGM, {
     end
   end
 })
+
+function VariableForGM.VarFunc.EnableCustomTitleBar_Get(k)
+  return EMLuaConst.bEnableCustomTitleBar
+end
+
+function VariableForGM.VarFunc.EnableCustomTitleBar_Set(k, v)
+  EMLuaConst.bEnableCustomTitleBar = v
+end
+
+function VariableForGM.VarFunc.ForceUseCustomTitleBar_Get(k)
+  return EMLuaConst.ForceUseCustomTitleBar
+end
+
+function VariableForGM.VarFunc.ForceUseCustomTitleBar_Set(k, v)
+  EMLuaConst.ForceUseCustomTitleBar = v
+end
+
 return VariableForGM

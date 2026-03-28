@@ -9,6 +9,7 @@ SceneItemBase._components = {
 }
 
 function SceneItemBase:ReceiveBeginPlay()
+  local GameState = UE4.UGameplayStatics.GetGameState(self)
   EventManager:AddEvent(EventID.OnBattleReady, self, self.OnBattleReady_TryInitCharacterInfo)
   self.Overridden.ReceiveBeginPlay(self)
   if self.BpBorn and IsAuthority(self) then
@@ -123,7 +124,7 @@ end
 
 function SceneItemBase:OnActorReady(Info)
   local GameMode = UE4.UGameplayStatics.GetGameMode(self)
-  if GameMode and GameMode:IsInRegion() then
+  if GameMode and GameMode:GetWCSubSystem() then
     self:CreateRegionData()
   end
 end
@@ -180,7 +181,7 @@ end
 
 function SceneItemBase:InitCreatorInfo(Info)
   local GameMode = UE4.UGameplayStatics.GetGameMode(self)
-  if not GameMode:IsInRegion() then
+  if not GameMode:GetWCSubSystem() then
     local DungeonState = Info:GetLuaTable("DungeonState")
     if DungeonState then
       self:RecoverSavedData(DungeonState)
@@ -234,7 +235,7 @@ function SceneItemBase:UpdateRegionData(DataName, DataValue)
   self.RegionData[DataName] = DataValue
   local GameMode = UGameplayStatics.GetGameMode(self)
   if GameMode then
-    GameMode:GetRegionDataMgrSubSystem():UpdateRegionActorData(self, self.RegionData)
+    GameMode:GetRegionDataMgrSubSystem():UpdateRegionActorData(self, self.RegionData, false)
   end
 end
 
@@ -253,7 +254,7 @@ function SceneItemBase:UpdateRegionDataByTable(DataTable)
   end
   local GameMode = UGameplayStatics.GetGameMode(self)
   if GameMode then
-    GameMode:GetRegionDataMgrSubSystem():UpdateRegionActorData(self, self.RegionData)
+    GameMode:GetRegionDataMgrSubSystem():UpdateRegionActorData(self, self.RegionData, false)
   end
 end
 

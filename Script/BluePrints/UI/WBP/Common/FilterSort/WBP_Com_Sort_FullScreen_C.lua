@@ -29,7 +29,7 @@ function M:Construct()
     self.OnListOutAnimFinished
   })
   self.List.BP_OnEntryInitialized:Add(self, self.OnListEntryInitialized)
-  self.OriginalPanelSize = FVector2D(259, 40)
+  self.OriginalPanelSize = self.Panel_Main.Slot:GetSize()
   self.FocusKeyName = "LS"
   self.CurInputDeviceType = UIUtils.UtilsGetCurrentInputType()
   self.List:SetNavigationRuleBase(EUINavigation.Left, EUINavigationRule.Stop)

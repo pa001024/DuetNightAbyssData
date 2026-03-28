@@ -12,17 +12,13 @@ end
 
 function M:UpdateLanguageBasedUI()
   local Language = self:GetCurrentLanguage()
-  local IconPath
-  if Language == CommonConst.SystemLanguages.CN then
-    IconPath = "/Game/UI/Texture/Static/Atlas/Common/T_Com_New_CN"
+  local text
+  if Language == CommonConst.SystemLanguages.CN or Language == CommonConst.SystemLanguages.TC then
+    text = DataMgr.TextMap_ContentEN.UI_NEW.ContentEN
   else
-    IconPath = "/Game/UI/Texture/Static/Atlas/Common/T_Com_New_EN"
+    text = GText("UI_NEW")
   end
-  self.Text_New:SetText(GText("UI_NEW"))
-  local Icon = LoadObject(IconPath)
-  if IsValid(Icon) then
-    self.Bg:SetBrushResourceObject(Icon)
-  end
+  self.Text_New:SetText(text)
 end
 
 function M:GetCurrentLanguage()

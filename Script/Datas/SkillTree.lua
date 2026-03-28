@@ -125,6 +125,24 @@ return ReadOnly("SkillTree", {
       [3] = T.RT_1
     }
   },
+  [1504] = {
+    CharID = 1504,
+    Skill1 = {
+      [1] = {Skill = 150401},
+      [2] = {Attr = 150401},
+      [3] = {Attr = 150402}
+    },
+    Skill2 = {
+      [1] = {Skill = 150402},
+      [2] = {Attr = 150403},
+      [3] = {Attr = 150404}
+    },
+    Skill3 = {
+      [1] = {Skill = 150403},
+      [2] = {Skill = 150404},
+      [3] = T.RT_1
+    }
+  },
   [1601] = {
     CharID = 1601,
     Skill1 = T.RT_5,
@@ -304,7 +322,7 @@ return ReadOnly("SkillTree", {
     Skill3 = {
       [1] = {Skill = 320203},
       [2] = {Skill = 320204},
-      [3] = T.RT_16
+      [3] = {Skill = 320291}
     }
   },
   [3301] = {

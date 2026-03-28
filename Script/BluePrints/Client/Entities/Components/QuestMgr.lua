@@ -4,6 +4,7 @@ local TaskUtils = require("BluePrints.UI.TaskPanel.TaskUtils")
 local GuidePointLocData = require("BluePrints.UI.TaskPanel/QuestGuidePointLocData")
 local StorylineUtils = require("StoryCreator.StoryLogic.StorylineUtils")
 local ClientEventUtils = require("BluePrints.Common.ClientEvent.ClientEventUtils")
+local WBP_Task_Main_C = require("BluePrints.UI.TaskPanel.WBP_Task_Main_C")
 local Component = {}
 
 function Component:NotifyAvatarRegionAllReady()
@@ -170,6 +171,15 @@ function Component:ServerStartQuest(Ret, QuestChainId, ClientVarParams)
     return
   end
   Story:StartStory(QuestChain.DoingQuestId)
+end
+
+function Component:_OnPropChangeTrackingQuestChainId(key)
+  local Avatar = GWorld:GetAvatar()
+  local ServerTrackingQuestChainId = Avatar.TrackingQuestChainId
+  if ServerTrackingQuestChainId and 0 ~= ServerTrackingQuestChainId then
+    self:SetQuestTracking(ServerTrackingQuestChainId)
+  end
+  self.LastTrackingQuestChainId = self.TrackingQuestChainId
 end
 
 function Component:RealUpdateQuestChain(QuestChainId)
@@ -463,6 +473,7 @@ function Component:OnQuestComplete(QuestChainId, QuestId)
     return
   end
   GameMode:TriggerOnQuestComplete(QuestChainId, QuestId)
+  EventManager:FireEvent(EventID.OnCompleteQuestChain, QuestChainId, QuestId)
 end
 
 function Component:UpdateQuestChain(QuestChainId)
@@ -652,7 +663,7 @@ function Component:SetQuestTracking(QuestChainId, SubRegionId)
     end
   end
   
-  if QuestChainId ~= self.TrackingQuestChainId then
+  if QuestChainId ~= self.TrackingQuestChainId or self.LastTrackingQuestChainId ~= self.TrackingQuestChainId then
     self:CallServer("SetQuestTracking", Callback, QuestChainId)
   elseif SubRegionId and SubRegionId > 0 then
     EventManager:FireEvent(EventID.CheckShowMap, QuestChainId)
@@ -806,7 +817,10 @@ function Component:NotifyQuestDeliver(DeliverId, DeliverStartIndex, IsWhite)
   local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
   DebugPrint("ZJT_ NotifyQuestDeliver ", DeliverId, DeliverStartIndex, self.CurrentRegionId, IsWhite)
   if IsValid(GameMode) then
-    GameMode:HandleLevelDeliver(UE4.EModeType.ModeRegion, DeliverId, DeliverStartIndex, IsWhite)
+    local bIsInvitation, bIsFromMap
+    local bShouldReturnAndDownloadPatch = true
+    DebugPrint("TTT:Talk:QuestMgr")
+    GameMode:HandleLevelDeliver(UE4.EModeType.ModeRegion, DeliverId, DeliverStartIndex, IsWhite, bIsInvitation, bIsFromMap, bShouldReturnAndDownloadPatch)
   end
 end
 
@@ -991,6 +1005,32 @@ function Component:GMSuccQuestComplete(Ret, QuestId, QuestChainId, TargetComplet
     UIUtils.ShowGetItemPage(nil, nil, nil, RewardBox)
   end
   self:HandleClientQuestCompleteEvent(Ret, false, QuestId, QuestChainId, TargetCompleteQuestIds, TargetClientVarParams)
+end
+
+function Component:SelectStoryOption(OptionId)
+  self.SelectedKeyOption = self.SelectedKeyOption or {}
+  self.SelectedKeyOption[OptionId] = true
+end
+
+function Component:IsStoryOptionSelected(OptionId)
+  self.SelectedKeyOption = self.SelectedKeyOption or {}
+  return self.SelectedKeyOption[OptionId] == true
+end
+
+function Component:GetIsSubmitComplete(SubmitId)
+  return false
+end
+
+function Component:SubmitQuestItems(SubmitId, InCallback)
+  local function Callback(Ret)
+    if InCallback then
+      InCallback(ErrorCode:Check(Ret))
+    end
+    self.logger.debug("SubmitQuestItems ", Ret, SubmitId)
+  end
+  
+  self:CallServer("SubmitQuestItems", Callback, SubmitId)
+  Callback(0)
 end
 
 return Component

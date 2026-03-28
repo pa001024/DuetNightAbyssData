@@ -38,6 +38,7 @@ function M:OnLoaded(...)
   self.InformationPanel:InitText()
   self.Text_03:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Text_Time:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  EventManager:AddEvent(EventID.StopTrollyBoxLocationSync, self, self.InitAllTargetPoint)
 end
 
 function M:UIStateChange_None()
@@ -243,9 +244,6 @@ function M:InitAllTargetPoint()
     return
   end
   local TriggerBoxTable = TriggerBoxArray:ToTable()
-  if 0 == #TriggerBoxTable then
-    self:AddTimer(3, self.InitAllTargetPoint, false, 0, "InitAllTargetPoint")
-  end
   self.PercentToWidget = {}
   table.sort(TriggerBoxTable, function(FirstBoxLoc, SecondBoxLoc)
     local FirstBoxInputKey = self.UISpline.Spline:FindInputKeyClosestToWorldLocation(FirstBoxLoc)

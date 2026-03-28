@@ -38,8 +38,10 @@ end
 
 function M:ShowRecommend(bShowRecommend)
   if bShowRecommend then
-    self.Tag_Recommend:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-  else
+    if self.Tag_Recommend then
+      self.Tag_Recommend:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    end
+  elseif self.Tag_Recommend then
     self.Tag_Recommend:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
 end

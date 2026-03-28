@@ -1,6 +1,6 @@
 local M = Class("BluePrints.Common.MVC.Model")
 local DefaultBatchSize = 10
-ERankType = {
+local ERankType = {
   Hot = 0,
   Fresh = 1,
   MyLike = 2

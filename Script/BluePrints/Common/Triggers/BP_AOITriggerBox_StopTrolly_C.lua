@@ -15,6 +15,7 @@ function M:AuthorityInitInfo(Info)
     DebugPrint("StopTrollyBoxLocation LastNum:", LastNum, " NewNum:", NewNum)
     if LastNum < NewNum then
       EventManager:FireEvent(EventID.OnDungeonUIStateUpdated)
+      GameState:MarkDirty_StopTrollyBoxLocation()
     end
   end
 end

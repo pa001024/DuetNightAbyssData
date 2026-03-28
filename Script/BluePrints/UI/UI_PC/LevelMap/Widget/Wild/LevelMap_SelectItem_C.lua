@@ -37,7 +37,7 @@ function M:Init(SelectPoint, MainMap)
         Text = GText(DataMgr.HardBossMain[SelectPoint.HardBossId].HardBossName)
       end
     end
-  elseif "Common_GuidePoint_PC_C" == ClassName then
+  elseif "WBP_GuidePoint_MiniMap_C" == ClassName then
     self.Img_Icon:SetBrushFromTexture(SelectPoint.Img_GuidePoint_Icon.Brush.ResourceObject)
     local Avatar = GWorld:GetAvatar()
     local CurTrackingQuestChaindId = Avatar.TrackingQuestChainId

@@ -423,6 +423,8 @@ def parse_lua_file(file_path):
 
 def main():
     """主函数"""
+    os.makedirs(out_dir, exist_ok=True)
+
     # 遍历Datas文件夹下的所有Lua文件
     for root, dirs, files in os.walk(datas_dir):
         for file in files:

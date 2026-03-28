@@ -38,7 +38,7 @@ function M:Construct()
     [FriendCommon.EventId.CancelBlackList] = function(bAnimation)
       self:RefreshList(bAnimation)
     end,
-    [FriendCommon.EventId.AgreeAll] = CommonFunc,
+    [FriendCommon.EventId.AgreeAll] = AgreeAddFunc,
     [FriendCommon.EventId.RefuseAll] = CommonFunc
   }
   FriendController:RegisterEvent(self, function(self, Reason, ...)

@@ -250,6 +250,81 @@ return ReadOnly("FishingBook", {
     FishingNoteId = 2805,
     FishingSpot = 10410701
   },
+  [2901] = {
+    FishId = 2901,
+    FishingNoteId = 2901,
+    FishingSpot = 10450201
+  },
+  [2902] = {
+    FishId = 2902,
+    FishingNoteId = 2902,
+    FishingSpot = 10450201
+  },
+  [2903] = {
+    FishId = 2903,
+    FishingNoteId = 2903,
+    FishingSpot = 10450201
+  },
+  [2904] = {
+    FishId = 2904,
+    FishingNoteId = 2904,
+    FishingSpot = 10450201
+  },
+  [2905] = {
+    FishId = 2905,
+    FishingNoteId = 2905,
+    FishingSpot = 10450201
+  },
+  [3001] = {
+    FishId = 3001,
+    FishingNoteId = 3001,
+    FishingSpot = 10450501
+  },
+  [3002] = {
+    FishId = 3002,
+    FishingNoteId = 3002,
+    FishingSpot = 10450501
+  },
+  [3003] = {
+    FishId = 3003,
+    FishingNoteId = 3003,
+    FishingSpot = 10450501
+  },
+  [3004] = {
+    FishId = 3004,
+    FishingNoteId = 3004,
+    FishingSpot = 10450501
+  },
+  [3005] = {
+    FishId = 3005,
+    FishingNoteId = 3005,
+    FishingSpot = 10450501
+  },
+  [3101] = {
+    FishId = 3101,
+    FishingNoteId = 3101,
+    FishingSpot = 10550101
+  },
+  [3102] = {
+    FishId = 3102,
+    FishingNoteId = 3102,
+    FishingSpot = 10550101
+  },
+  [3103] = {
+    FishId = 3103,
+    FishingNoteId = 3103,
+    FishingSpot = 10550101
+  },
+  [3104] = {
+    FishId = 3104,
+    FishingNoteId = 3104,
+    FishingSpot = 10550101
+  },
+  [3105] = {
+    FishId = 3105,
+    FishingNoteId = 3105,
+    FishingSpot = 10550101
+  },
   [110101] = {
     FishId = 110101,
     FishingNoteId = 110101,
@@ -494,5 +569,80 @@ return ReadOnly("FishingBook", {
     FishId = 280501,
     FishingNoteId = 280501,
     FishingSpot = 10410701
+  },
+  [290101] = {
+    FishId = 290101,
+    FishingNoteId = 290101,
+    FishingSpot = 10450201
+  },
+  [290201] = {
+    FishId = 290201,
+    FishingNoteId = 290201,
+    FishingSpot = 10450201
+  },
+  [290301] = {
+    FishId = 290301,
+    FishingNoteId = 290301,
+    FishingSpot = 10450201
+  },
+  [290401] = {
+    FishId = 290401,
+    FishingNoteId = 290401,
+    FishingSpot = 10450201
+  },
+  [290501] = {
+    FishId = 290501,
+    FishingNoteId = 290501,
+    FishingSpot = 10450201
+  },
+  [300101] = {
+    FishId = 300101,
+    FishingNoteId = 300101,
+    FishingSpot = 10450501
+  },
+  [300201] = {
+    FishId = 300201,
+    FishingNoteId = 300201,
+    FishingSpot = 10450501
+  },
+  [300301] = {
+    FishId = 300301,
+    FishingNoteId = 300301,
+    FishingSpot = 10450501
+  },
+  [300401] = {
+    FishId = 300401,
+    FishingNoteId = 300401,
+    FishingSpot = 10450501
+  },
+  [300501] = {
+    FishId = 300501,
+    FishingNoteId = 300501,
+    FishingSpot = 10450501
+  },
+  [310101] = {
+    FishId = 310101,
+    FishingNoteId = 310101,
+    FishingSpot = 10550101
+  },
+  [310201] = {
+    FishId = 310201,
+    FishingNoteId = 310201,
+    FishingSpot = 10550101
+  },
+  [310301] = {
+    FishId = 310301,
+    FishingNoteId = 310301,
+    FishingSpot = 10550101
+  },
+  [310401] = {
+    FishId = 310401,
+    FishingNoteId = 310401,
+    FishingSpot = 10550101
+  },
+  [310501] = {
+    FishId = 310501,
+    FishingNoteId = 310501,
+    FishingSpot = 10550101
   }
 })

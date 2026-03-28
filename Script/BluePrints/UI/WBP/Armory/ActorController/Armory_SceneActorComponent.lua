@@ -66,9 +66,6 @@ local function GetLevelScriptActor(WorldLoader, PreviewLevelName)
 end
 
 function M:TryLoadPreviewScene(SceneType)
-  if self.SmoothLoad then
-    coroutine.yield()
-  end
   if _HadAnyPreviewScene() then
     self.EPreviewSceneType = self.EPreviewSceneType or CommonConst.EPreviewSceneType.PreviewCommon
   end
@@ -77,69 +74,46 @@ function M:TryLoadPreviewScene(SceneType)
   if not Path then
     return
   end
-  self.PreviewSceneLocation = self.PreviewSceneLocation or FVector(190000, 190000, 190000)
+  if not self.PreviewSceneLocation then
+    local Loc = 180000 + self.EPreviewSceneType * 1000
+    self.PreviewSceneLocation = FVector(Loc, Loc, Loc)
+  end
   local PreviewLevelLocation = self.PreviewSceneLocation
   local GameMode = UE4.UGameplayStatics.GetGameMode(self.ViewUI)
   local WorldLoader = GameMode:GetLevelLoader()
-  local TargetTrans, bSuccess
+  local TargetTrans
   if WorldLoader then
     TargetTrans = FTransform()
     TargetTrans.Translation = PreviewLevelLocation
     TargetTrans.Rotation = FRotator(0, 0, 0):ToQuat()
     self.PreviewSceneTrans = TargetTrans
     local PreviewLevelName = "PreviewLevel" .. self.EPreviewSceneType
+    self.IsPreviewSceneLoading = true
     if not IsPreviewSceneHasRef(PreviewLevelName) then
-      self.IsPreviewSceneLoading = true
-      bSuccess = WorldLoader:LoadPreviewLevel(PreviewLevelName, Path, function()
-        self.ArmoryHelper:SetPreviewLevelActor(GetLevelScriptActor(WorldLoader, PreviewLevelName))
-        self:OnPreviewSceneLoaded()
+      local bSuccess = WorldLoader:LoadPreviewLevel(PreviewLevelName, Path, function()
+        self.ViewUI:AddTimer(0.1, function()
+          self.ArmoryHelper:SetPreviewLevelActor(GetLevelScriptActor(WorldLoader, PreviewLevelName))
+          self:OnPreviewSceneLoaded()
+        end)
       end, PreviewLevelLocation, FRotator(0, 0, 0))
       if bSuccess then
         self.PreviewLevelName = PreviewLevelName
         IncreacePreviewSceneRefCount(PreviewLevelName)
         self.bPreviewSceneLoaded = true
+      else
+        self.PreviewSceneTrans = nil
       end
     else
-      bSuccess = true
-      self.PreviewLevelName = PreviewLevelName
       IncreacePreviewSceneRefCount(PreviewLevelName)
       self.bPreviewSceneLoaded = true
-      self.ViewUI:AddTimer(0.01, function()
+      self.PreviewLevelName = PreviewLevelName
+      self.ArmoryHelper:AddTimer(0.1, function()
         if IsValid(self.ArmoryHelper) then
           self.ArmoryHelper:SetPreviewLevelActor(GetLevelScriptActor(WorldLoader, PreviewLevelName))
         end
         self:OnPreviewSceneLoaded()
-      end)
+      end, false, 0, "DelayCallSceneLoaded", true)
     end
-  end
-  if self.SmoothLoad then
-    coroutine.yield()
-  end
-  if not bSuccess then
-    self.PreviewSceneTrans = nil
-  end
-end
-
-function M:SetPreviewLevelSkyBoxColor()
-  if self.SkyBoxColor and self.EPreviewSceneType == CommonConst.EPreviewSceneType.BattlePass then
-    local PreviewLevelScriptActor
-    if IsValid(self.ArmoryHelper) then
-      PreviewLevelScriptActor = self.ArmoryHelper:GetPreviewLevelActor()
-    end
-    if not PreviewLevelScriptActor then
-      return
-    end
-    local UIShowBG = PreviewLevelScriptActor:GetUIShowBG()
-    local UIShowBGStaticMeshComponent = UIShowBG.StaticMeshComponent
-    local Index = 0
-    local Materials = UIShowBGStaticMeshComponent:GetMaterials()
-    local MaterialInstance = Materials:Get(Index + 1)
-    if not MaterialInstance:Cast(UMaterialInstanceDynamic:StaticClass()) then
-      MaterialInstance = UIShowBGStaticMeshComponent:CreateAndSetMaterialInstanceDynamic(Index)
-    end
-    MaterialInstance:SetVectorParameterValue("BaseColor2", self.SkyBoxColor.BaseColor2)
-    MaterialInstance:SetVectorParameterValue("StarColor", self.SkyBoxColor.StarColor)
-    MaterialInstance:SetScalarParameterValue("ColorCurve", self.SkyBoxColor.ColorCurve)
   end
 end
 
@@ -162,14 +136,14 @@ function M:UnloadPreviewScene()
           self.ArmoryHelper:SetPreviewLevelActor(nil)
           self.ArmoryHelper:OnPreviewSceneUnloaded()
         end
-        DebugPrint("CY@ OnPreviewSceneUnloaded")
+        DebugPrint("CY@ OnPreviewSceneUnloaded", self.ObjId)
       end
     end
   end
 end
 
-function M:RefreshEnvironment()
-  self.ViewUI:AddTimer(0.01, function()
+function M:RefreshEnvironment(NeedUpdataLighting)
+  self.ArmoryHelper:AddTimer(0.03, function()
     local EnvironmentManager = UE4.UGameplayStatics.GetActorOfClass(self.ViewUI, UE4.AEnvironmentManager:StaticClass())
     if EnvironmentManager then
       self:DisableEnvirSystem(true)
@@ -178,8 +152,16 @@ function M:RefreshEnvironment()
         UTalkSequenceFunctionLibrary.UpdatePlayerCameraManager(Controller)
       end
       EnvironmentManager:Refresh(true)
+      DebugPrint("CY@ RefreshEnvironment", self.ObjId)
+      if NeedUpdataLighting then
+        self:DelayUpdateSceneLighting()
+      end
     end
   end, false, 0, "RefreshEnvironment", true)
+end
+
+function M:CancelRefreshEnvironment()
+  self.ArmoryHelper:RemoveTimer("RefreshEnvironment")
 end
 
 function M:GetEnvirSystemActor()
@@ -236,6 +218,24 @@ function M:DisableEnvirSystem(bDisable)
   self:DoSomethingWithScene("DisableEnvirSystem", _DisableEnvirSystem)
 end
 
+function M:ChangeSkyBoxColor(Index)
+  if not self.ArmoryHelper then
+    return
+  end
+  self.ArmoryHelper.SkyBoxIndex = Index or 0
+  
+  local function _CallSkyBoxChanged(...)
+    local bSuccess = self:WaitForPreviewSceneLoadFinished()
+    if not bSuccess then
+      return
+    end
+    self:DelayUpdateSceneLighting()
+    DebugPrint("CY@ SkyBoxColorChanged", self.ObjId, self.ArmoryHelper.SkyBoxIndex)
+  end
+  
+  self:DoSomethingWithScene("OnSkyBoxIndexChange", _CallSkyBoxChanged)
+end
+
 function M:DoSomethingWithScene(BehaviorName, Func, ...)
   local Co = _FindSceneCoroutine(self, BehaviorName)
   if Co then
@@ -270,24 +270,15 @@ function M:OnPreviewSceneLoaded()
   self:DisableEnvirSystem(false)
   self.IsPreviewSceneLoading = false
   self:DoDeferedSceneBehavior()
-  self:SetPreviewLevelSkyBoxColor()
-  self:UpdateSceneLighting()
-end
-
-function M:DelayUpdateSceneLighting()
-  self.ViewUI:AddTimer(0.03, function()
+  if not self.IsPlayingSequence then
     self:UpdateSceneLighting()
-  end)
+  end
 end
 
 function M:UpdateSceneLighting()
-  if not self.bPreviewSceneLoaded then
-    return
-  end
-  self.bNotifyHelperUpdateLighting = false
-  
   local function _NotifyPreviewSceneUpdateLight(...)
     local bSuccess = self:WaitForPreviewSceneLoadFinished()
+    
     if not bSuccess then
       return
     end
@@ -297,7 +288,7 @@ function M:UpdateSceneLighting()
       if self.IsArmoryWeaponLoading then
         self:GetWeaponActor()
       end
-      self:TryNotifyHelperUpdateLighting()
+      self:DelayUpdateSceneLighting()
     end
     
     self:DoSomethingWithWeapon("CallBP_WaitForWeaponLoading", _CallBP_WaitForWeaponLoading)
@@ -306,7 +297,7 @@ function M:UpdateSceneLighting()
       if self.IsArmoryPlayerLoading then
         self:GetPlayerActor()
       end
-      self:TryNotifyHelperUpdateLighting()
+      self:DelayUpdateSceneLighting()
     end
     
     self:DoSomethingWithPlayer("CallBP_WaitForPlayerLoading", _CallBP_WaitForPlayerLoading)
@@ -315,19 +306,27 @@ function M:UpdateSceneLighting()
   self:DoSomethingWithScene("NotifyPreviewSceneUpdateLight", _NotifyPreviewSceneUpdateLight)
 end
 
-function M:TryNotifyHelperUpdateLighting()
+function M:DelayUpdateSceneLighting()
+  self.ArmoryHelper:AddTimer(0.03, function()
+    self:NotifyHelperUpdateLighting()
+  end, false, 0, "DelayUpdateSceneLighting", true)
+end
+
+function M:CancelUpdateSceneLighting()
+  self.ArmoryHelper:RemoveTimer("DelayUpdateSceneLighting")
+end
+
+function M:NotifyHelperUpdateLighting()
   if self.IsArmoryWeaponLoading or self.IsArmoryPlayerLoading then
     return
   end
-  if self.bNotifyHelperUpdateLighting then
-    return
-  end
   if IsValid(self.ArmoryHelper) then
-    self.bNotifyHelperUpdateLighting = true
+    self.ArmoryHelper.SkyBoxIndex = self.SkyBoxIndex or 0
     self.ArmoryHelper:UpdateDirLight(true)
     if self.bPreviewSceneLoaded then
       self.ArmoryHelper:UpdateLighting()
     end
+    DebugPrint("CY@ HelperUpdateLighting", self.ObjId, self.bPreviewSceneLoaded)
   end
 end
 

@@ -226,6 +226,13 @@ return ReadOnly("GalleryRule", {
     PreferredMonsterId = 7016001,
     Priority = 21551
   },
+  [7018001] = {
+    DescriptionDetail = "Mon_DesDetail_7018001",
+    GalleryRuleId = 7018001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_JT_Zhiyan.T_Head_JT_Zhiyan",
+    PreferredMonsterId = 7018001,
+    Priority = 21561
+  },
   [8001001] = {
     DescriptionDetail = "Mon_DesDetail_8001001",
     GalleryRuleId = 8001001,
@@ -379,7 +386,7 @@ return ReadOnly("GalleryRule", {
     DescriptionDetail = "Mon_DesDetail_8522001",
     DisableTrainingGround = true,
     GalleryRuleId = 8522001,
-    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Empty.T_Head_Empty",
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_HX_Tuisheng.T_Head_HX_Tuisheng",
     PreferredMonsterId = 8522001,
     Priority = 22
   },

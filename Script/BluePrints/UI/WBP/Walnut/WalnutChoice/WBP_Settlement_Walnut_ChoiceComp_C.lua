@@ -196,6 +196,9 @@ end
 
 function Component:ReceiveTeammateChoose(Uid, WalnutId)
   local AllTeamHead = self.TeamHeadTable[Uid]
+  if not AllTeamHead then
+    return
+  end
   local TeamHead = AllTeamHead.Team_Head
   local ItemWalnut = AllTeamHead.Item_Walnut
   ItemWalnut.WalnutId = WalnutId
@@ -320,7 +323,10 @@ end
 
 function Component:CloseByEscape()
   local Avatar = GWorld:GetAvatar()
-  if Avatar and self.IsStandAlone then
+  if Avatar then
+    if not self.IsStandAlone then
+      Avatar:VoteStartBattle(false)
+    end
     EventManager:FireEvent(EventID.OnRefreshDeputeBtn, false)
     self:Close()
     return true

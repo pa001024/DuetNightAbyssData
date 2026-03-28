@@ -73,7 +73,7 @@ end
 function M:OnKeyDown(MyGeometry, InKeyEvent)
   local InKeyName = self:GetKeyNameFromEvent(InKeyEvent)
   
-  function SetFocusToListItem(OwnerWidget, bIsOpen)
+  local function SetFocusToListItem(OwnerWidget, bIsOpen)
     if not bIsOpen and self.ListItem then
       self.ListItem:SetFocus()
     end

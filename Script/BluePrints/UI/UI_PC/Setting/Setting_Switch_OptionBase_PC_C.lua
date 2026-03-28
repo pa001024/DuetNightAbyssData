@@ -10,7 +10,7 @@ function S:Construct()
   self.Bg_Set.Button_Base.OnHovered:Add(self, self.OnMainBtnHovered)
 end
 
-function S:Init(Parent, CacheName, CacheInfo)
+function S:Init(Parent, CacheName, CacheInfo, Content)
   rawset(self, "Parent", Parent.Content.ParentWidget and Parent.Content.ParentWidget.Parent or Parent.Content.ParentWidget or Parent)
   rawset(self, "CacheName", CacheName)
   rawset(self, "CacheInfo", CacheInfo)
@@ -19,6 +19,7 @@ function S:Init(Parent, CacheName, CacheInfo)
   rawset(self, "SubListOffset", 15)
   rawset(self, "NowValue", true)
   rawset(self, "OldValue", true)
+  rawset(self, "CurOptionContent", Content)
   self.Text_Option:SetText(GText(self.CacheInfo.CacheText))
   if CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" and self.CacheInfo.DefaultValueM then
     self.DefaultValue = self.CacheInfo.DefaultValueM
@@ -28,6 +29,15 @@ function S:Init(Parent, CacheName, CacheInfo)
   self:PlaySwitchAnimation(self.OldValue)
   self.Text_Close:SetText(GText(self.CacheInfo.SwitchText[1]))
   self.Text_Open:SetText(GText(self.CacheInfo.SwitchText[2]))
+  if self.CacheName == "SecondaryPassword" then
+    ReddotManager.AddListenerEx("Setting_SecPassword", self, self.OnSecPasswordReddotChange)
+  end
+  if self.CacheName == "BulletJumpCamAdjust" then
+    ReddotManager.AddListenerEx("Setting_Control_Setting_SaveBulletJumpCamAdjustBtn", self, self.RedDotChange)
+  end
+  if self.CacheName == "AutoBulletJumpCam" then
+    ReddotManager.AddListenerEx("Setting_Control_Setting_SaveAutoBulletJumpCamBtn", self, self.RedDotChange)
+  end
 end
 
 function S:SetHoverVisibility()
@@ -450,6 +460,48 @@ function S:SaveEnableMobileRotationOptionSetting()
   end
   Player:SwitchEnableMobileRotation(self.NowValue)
   self.OldValue = self.NowValue
+end
+
+function S:SetBulletJumpCamResetOldValue()
+  self.OldValue = SettingUtils.GetEMCache(self.EMCacheName, self.EMCacheKey, self.DefaultValue)
+end
+
+function S:RestoreDefaultBulletJumpCamResetOptionSet()
+  self:SaveBulletJumpCamResetOptionSetting()
+end
+
+function S:SaveBulletJumpCamResetOptionSetting()
+  SettingUtils.SaveEMCache(self.EMCacheName, self.EMCacheKey, self.NowValue)
+  self.OldValue = self.NowValue
+end
+
+function S:SetBulletJumpCamAdjustOldValue()
+  self.OldValue = SettingUtils.GetEMCache(self.EMCacheName, self.EMCacheKey, self.DefaultValue)
+end
+
+function S:RestoreDefaultBulletJumpCamAdjustOptionSet()
+  self:SaveBulletJumpCamAdjustOptionSetting()
+end
+
+function S:SaveBulletJumpCamAdjustOptionSetting()
+  SettingUtils.SaveEMCache(self.EMCacheName, self.EMCacheKey, self.NowValue)
+  EventManager:FireEvent(EventID.OnSwitchBulletJumpCancel)
+  self.OldValue = self.NowValue
+  ReddotManager.DecreaseLeafNodeCount("Setting_Control_Setting_SaveBulletJumpCamAdjustBtn", 1)
+end
+
+function S:SetAutoBulletJumpCamOldValue()
+  self.OldValue = SettingUtils.GetEMCache(self.EMCacheName, self.EMCacheKey, self.DefaultValue)
+end
+
+function S:RestoreDefaultAutoBulletJumpCamOptionSet()
+  self:SaveAutoBulletJumpCamOptionSetting()
+end
+
+function S:SaveAutoBulletJumpCamOptionSetting()
+  SettingUtils.SaveEMCache(self.EMCacheName, self.EMCacheKey, self.NowValue)
+  self.OldValue = self.NowValue
+  ReddotManager.DecreaseLeafNodeCount("Setting_Control_Setting_SaveAutoBulletJumpCamBtn", 1)
 end
 
 function S:SetFSROldValue()
@@ -910,6 +962,136 @@ end
 
 function S:SaveAutoApproveOptionSetting()
   SettingUtils.SaveEMCache(self.EMCacheName, self.EMCacheKey, self.NowValue)
+end
+
+function S:SetAutoBackgroundOldValue()
+  self.OldValue = SettingUtils.GetEMCache(self.CacheName, nil, self.DefaultValue)
+end
+
+function S:RestoreDefaultAutoBackgroundOptionSet()
+  self:SaveAutoBackgroundOptionSetting()
+end
+
+function S:SaveAutoBackgroundOptionSetting()
+  SettingUtils.SaveEMCache(self.CacheName, nil, self.NowValue)
+end
+
+function S:RevertSwitch(Switcher, OldValue)
+  if Switcher then
+    Switcher.bIsRestoringState = true
+    Switcher:SetSwitcher(OldValue)
+    Switcher.bIsRestoringState = false
+  end
+end
+
+function S:RefreshSubOptionsState()
+  if not self.CacheInfo.SubOptionList then
+    return
+  end
+  local bPreLoginEnabled = SecondaryPasswordController:CheckPreLoginValidateOnce()
+  local Count = self.VB_Suboption:GetChildrenCount() - 1
+  for i = 0, Count do
+    local Child = self.VB_Suboption:GetChildAt(i)
+    self:RevertSwitch(Child, bPreLoginEnabled)
+  end
+end
+
+function S:OnSecPasswordReddotChange(Count)
+  if Count > 0 then
+    self.CurOptionContent.SelfWidget.New:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  else
+    self.CurOptionContent.SelfWidget.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+end
+
+function S:RedDotChange(Count)
+  if Count > 0 then
+    self.CurOptionContent.SelfWidget.New:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  else
+    self.CurOptionContent.SelfWidget.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+end
+
+function S:SetSecondaryPasswordOldValue()
+  local EnableSecondaryPassword = SecondaryPasswordController:CheckSecondaryPasswordEnabled()
+  self.OldValue = EnableSecondaryPassword
+  
+  function self.RestoreDefaultOptionSet()
+  end
+end
+
+function S:RestoreDefaultSecondaryPasswordOptionSet()
+  local EnableSecondaryPassword = SecondaryPasswordController:CheckSecondaryPasswordEnabled()
+  self.NowValue = EnableSecondaryPassword
+end
+
+function S:RestoreSecondaryPasswordOptionSet()
+  self:SaveSecondaryPasswordOptionSetting()
+end
+
+function S:SaveSecondaryPasswordOptionSetting()
+  if self.bIsRestoringState then
+    return
+  end
+  local GachaKey = "SecPasswordNew"
+  local SecPasswordNewCache = EMCache:Set(GachaKey, true, true)
+  ReddotManager.ClearLeafNodeCount("Setting_SecPassword")
+  SecondaryPasswordController:RequestChangePasswordStatus(self.NowValue, {
+    OnSuccess = function()
+      self:RefreshSubOptionsState()
+    end,
+    OnCancel = function()
+      self:RevertSwitch(self, not self.NowValue)
+      self:RefreshSubOptionsState()
+    end
+  })
+end
+
+function S:SetPasswordVerifyPerLoginOldValue()
+  local EnableSecondaryPasswordVerifyPerLogin = SecondaryPasswordController:CheckPreLoginValidateOnce()
+  self.OldValue = EnableSecondaryPasswordVerifyPerLogin
+end
+
+function S:RestorePasswordVerifyPerLoginOptionSet()
+  self:SavePasswordVerifyPerLoginOptionSetting()
+end
+
+function S:SavePasswordVerifyPerLoginOptionSetting()
+  if self.bIsRestoringState then
+    return
+  end
+  SecondaryPasswordController:RequestChangeValidateOnceStatus(self.NowValue, {
+    OnSuccess = nil,
+    OnCancel = function()
+      self:RevertSwitch(self, not self.NowValue)
+    end
+  })
+end
+
+function S:SetAutoFashionOldValue()
+  self.OldValue = SettingUtils.GetEMCache(self.EMCacheName, self.EMCacheKey, self.DefaultValue)
+end
+
+function S:RestoreAutoFashionOptionSet()
+  self:SaveAutoFashionOptionSetting()
+end
+
+function S:SaveAutoFashionOptionSetting()
+  SettingUtils.SaveEMCache(self.EMCacheName, self.EMCacheKey, self.NowValue)
+  GWorld.GameInstance.IsAutoFashionSwitch = self.NowValue
+end
+
+function S:SetShootCameraDistanceOldValue()
+  self.OldValue = SettingUtils.GetEMCache(self.EMCacheName, self.EMCacheKey, self.DefaultValue)
+end
+
+function S:RestoreShootCameraDistanceOptionSet()
+  self:SaveAutoFashionOptionSetting()
+end
+
+function S:SaveShootCameraDistanceOptionSetting()
+  SettingUtils.SaveEMCache(self.EMCacheName, self.EMCacheKey, self.NowValue)
+  EventManager:FireEvent(EventID.OnShootCameraDistanceOptionChanged, self.NowValue)
 end
 
 return S

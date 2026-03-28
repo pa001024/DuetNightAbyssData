@@ -424,7 +424,6 @@ function Component:PlayBreakLevelUpVoice()
   local ArmoryMain = UIManager(self):GetArmoryUIObj()
   if ArmoryMain then
     self.ArmoryPlayer = ArmoryMain.ActorController.ArmoryPlayer
-    self.ArmoryHelper = ArmoryMain.ActorController.ArmoryHelper
   end
   AudioManager:PlayCharVoice(self.ArmoryPlayer, nil, "vo_lvup", nil, "ArmoryRoleVoice", true)
 end

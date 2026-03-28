@@ -62,6 +62,8 @@ function M:OnCharTagChange(PlayerEid, OldTag, NewTag)
       self:OnAttackPressed()
     elseif self:IsUsingESkill() and self.CurState == SuyiUltiWeapons.Range1 then
       self:OnAttackPressed()
+    elseif not self:IsUsingESkill() then
+      self:OnAttackPressed()
     end
   end
 end
@@ -101,13 +103,13 @@ function M:IsUsingESkill()
 end
 
 function M:InitEvents()
-  if self.Player and self.Player.CharFSMComp and self.Player.CharFSMComp.OnAfterTagChanged then
+  if self.Player and self.Player.CharFSMComp and self.Player.CharFSMComp.OnAfterTagChanged and self.AimView and self.AimView.OnCharTagChange then
     self.Player.CharFSMComp.OnAfterTagChanged:Add(self.AimView, self.AimView.OnCharTagChange)
   end
 end
 
 function M:RemoveEvents()
-  if self.Player and self.Player.CharFSMComp and self.Player.CharFSMComp.OnAfterTagChanged then
+  if self.Player and self.Player.CharFSMComp and self.Player.CharFSMComp.OnAfterTagChanged and self.AimView and self.AimView.OnCharTagChange then
     self.Player.CharFSMComp.OnAfterTagChanged:Remove(self.AimView, self.AimView.OnCharTagChange)
   end
 end
@@ -172,7 +174,7 @@ function M:ChangeToTargetState(TargetState)
     self:SwitchAimStar("Crossbow")
     self.Root.CurWeaponStyleNode = CurWeaponStyleNode
   elseif TargetState == SuyiUltiWeapons.Range2 then
-    self:SwitchAimStar("Suyi")
+    self:SwitchAimStar(self.Root and self.Root.SightUI or "Suyi")
   end
   self.LastState = self.CurState
 end
@@ -208,7 +210,7 @@ function M:SwitchAimStar(StyleNode)
 end
 
 function M:IsEuipRange2()
-  if not self.Player then
+  if not (self.Player and self.Player.BuffManager) or not IsValid(self.Player.BuffManager) then
     return false
   end
   local bHasRange2Buff = self.Player.BuffManager:HasBuff(150405, false)

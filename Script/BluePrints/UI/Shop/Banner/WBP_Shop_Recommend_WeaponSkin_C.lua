@@ -77,7 +77,7 @@ function M:OnBtn_BuyClick()
   AudioManager(self):PlayUISound(self, "event:/ui/common/gacha_btn_click_normal", nil, nil)
 end
 
-function M:PurchaseWeaponSkin()
+function M:PurchaseWeaponSkin(PackageResult, DialogWidget)
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return
@@ -86,28 +86,28 @@ function M:PurchaseWeaponSkin()
   if not ShopItemData then
     return
   end
+  local PurchasePrice = self.FinalPrice
+  local SelectedDiscount
+  if PackageResult and PackageResult.Content_1 and PackageResult.Content_1.CallObj and PackageResult.Content_1.CallObj.SelectedDiscount then
+    SelectedDiscount = PackageResult.Content_1.CallObj.SelectedDiscount
+  end
+  PurchasePrice = ShopUtils:GetPriceAfterDiscount(ShopItemData.ItemId, PurchasePrice, SelectedDiscount and SelectedDiscount.VoucherId or nil)
   local CurrentCount = Avatar:GetResourceNum(ShopItemData.PriceType)
-  if CurrentCount < self.FinalPrice then
+  if PurchasePrice > CurrentCount then
     local function JumpToShop()
       self:AddTimer(0.3, function()
         PageJumpUtils:JumpToShopPage(CommonConst.GachaJumpToShopMainTabId, nil, nil, "Shop")
       end)
     end
     
-    local PopupId = 100263
     local Params = {}
-    Params.LeftCallbackObj = self
     Params.RightCallbackObj = self
-    Params.RightCallbackFunction = JumpToShop
-    self.GotoPayWidget = UIManager(self):ShowCommonPopupUI(PopupId, Params, self)
+    Params.CostNum = PurchasePrice
+    Params.CostType = ShopItemData.PriceType
+    UIManager(self):LoadUINew("ShopTargetPay", Params)
     return
   end
-  Avatar:PurchaseShopItem(ShopItemData.ItemId, 1, false)
-  self:AddTimer(0.3, function()
-    if self.GotoPayWidget then
-      self.GotoPayWidget:SetFocus()
-    end
-  end)
+  Avatar:PurchaseShopItem(ShopItemData.ItemId, 1, false, nil, SelectedDiscount and SelectedDiscount.VoucherId or nil)
 end
 
 function M:OnNewWeaponSkinObtained(SkinId)

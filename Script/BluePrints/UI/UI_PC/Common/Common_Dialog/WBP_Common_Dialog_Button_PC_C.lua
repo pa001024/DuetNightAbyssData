@@ -39,6 +39,8 @@ function WBP_Common_Dialog_Button_PC_C:BindOnRightClickFunc(Obj, OnClickedFunc, 
 end
 
 function WBP_Common_Dialog_Button_PC_C:InitButtonStyle(Params, PopupData, Owner)
+  self.HideBtnQuitIcon = nil
+  self.HideBtnYesIcon = nil
   self:BindOnLeftClickFunc(Owner, Owner.OnLeftBtnClicked, Owner.OnForbiddenLeftBtnClicked)
   self:BindOnRightClickFunc(Owner, Owner.OnRightBtnClicked, Owner.OnForbiddenRightBtnClicked)
   local PopupStyle = DataMgr.CommonPopupUIStyle[PopupData.Style]
@@ -82,6 +84,11 @@ function WBP_Common_Dialog_Button_PC_C:InitButtonStyle(Params, PopupData, Owner)
     if PopupData.NoButtonRGBA then
       self.Btn_Quit:SetIconColor(PopupData.NoButtonRGBA)
     end
+    if Params and Params.NoButtonPCKey then
+      self.HideBtnQuitIcon = true
+      self.Btn_Quit:SetPCImg(Params.NoButtonPCKey)
+      self.Btn_Quit:SetIconPanelVisibility(UE4.ESlateVisibility.Collapsed)
+    end
   else
     self.Panel_Quit:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
@@ -111,6 +118,11 @@ function WBP_Common_Dialog_Button_PC_C:InitButtonStyle(Params, PopupData, Owner)
     end
     if PopupData.YesButtonRGBA then
       self.Btn_Yes:SetIconColor(PopupData.YesButtonRGBA)
+    end
+    if Params and Params.YesButtonPCKey then
+      self.HideBtnYesIcon = true
+      self.Btn_Yes:SetPCImg(Params.YesButtonPCKey)
+      self.Btn_Yes:SetIconPanelVisibility(UE4.ESlateVisibility.Collapsed)
     end
   else
     self.Panel_Yes:SetVisibility(UE4.ESlateVisibility.Collapsed)
@@ -158,7 +170,6 @@ function WBP_Common_Dialog_Button_PC_C:SetGamepadBtnKeyVisibility(IsShow)
 end
 
 function WBP_Common_Dialog_Button_PC_C:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
-  DebugPrint("gmy@WBP_Common_Dialog_Button_PC_C M:RefreshOpInfoByInputDevice", CurInputDevice, CurGamepadName)
   if self.CurInputDeviceType == CurInputDevice then
     return
   end
@@ -171,8 +182,16 @@ function WBP_Common_Dialog_Button_PC_C:RefreshOpInfoByInputDevice(CurInputDevice
   else
     self.Btn_Yes:SetVisibility(UE4.ESlateVisibility.Visible)
     self.Btn_Quit:SetVisibility(UE4.ESlateVisibility.Visible)
-    self.Btn_Yes:SetIconPanelVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-    self.Btn_Quit:SetIconPanelVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    if not self.HideBtnYesIcon then
+      self.Btn_Yes:SetIconPanelVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    else
+      self.Btn_Yes:SetIconPanelVisibility(UE4.ESlateVisibility.Collapsed)
+    end
+    if not self.HideBtnQuitIcon then
+      self.Btn_Quit:SetIconPanelVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    else
+      self.Btn_Quit:SetIconPanelVisibility(UE4.ESlateVisibility.Collapsed)
+    end
   end
 end
 

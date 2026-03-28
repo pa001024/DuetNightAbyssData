@@ -11,7 +11,7 @@ local CreateTalkActionData = require("BluePrints.Story.Talk.Model.TalkActionData
 local FTalkTriggerComponent = require("BluePrints.Story.Talk.Component.TalkTriggerComponent")
 local TimeUtil = require("Utils.TimeUtils")
 local MiscUtils = require("Utils.MiscUtils")
-local TalkLogType = UE.EStoryLogType.Talk
+local TalkLogType = UE4.EStoryLogType.Talk
 local WaitQueueTag = {
   LoadLevel = "LoadLevel",
   CameraBlend = "CameraBlend",
@@ -194,46 +194,29 @@ function BP_TalkContext_C:TalkHidePlayer(Player, bHide)
 end
 
 function BP_TalkContext_C:AddTalkActor(TalkTask, UnitType, UnitId, Unit, bIsExternal)
-  if self.TalkActorDatas[UnitId] then
+  TalkTask.TalkActorDatas = TalkTask.TalkActorDatas or {}
+  if TalkTask.TalkActorDatas[UnitId] then
     return
   end
-  if "Npc" == UnitType then
-    local Type = TalkTask.TalkTaskData.TalkType
-    local bCacheMeshMaterials = "Cinematic" == Type
-    Unit:PreEnterStory({}, bCacheMeshMaterials, TalkTask.TalkTaskData.bPauseNpcBT)
-  end
-  self.TalkActorDatas[UnitId] = TalkActorData_C.New(Unit, UnitType, UnitId, bIsExternal)
+  Unit:PreEnterStory({}, TalkTask.TalkTaskData.TalkType == "Cinematic", TalkTask.TalkTaskData.bPauseNpcBT)
+  TalkTask.TalkActorDatas[UnitId] = TalkActorData_C.New(Unit, UnitType, UnitId, bIsExternal)
 end
 
 function BP_TalkContext_C:RemoveTalkActor(TalkTask, UnitId)
-  if self.TalkActorDatas[UnitId] == nil then
+  TalkTask.TalkActorDatas = TalkTask.TalkActorDatas or {}
+  local Data = TalkTask.TalkActorDatas[UnitId]
+  if not Data then
     return
   end
-  local Data = self.TalkActorDatas[UnitId]
-  local UnitType = Data.TalkActorType
-  local Unit = Data.TalkActor
-  local bIsExternal = Data.bIsExternal
-  if IsValid(Unit) then
-    if "Player" == UnitType then
-      self:TalkHidePlayer(Unit, false)
-    elseif "Npc" == UnitType then
-      if bIsExternal then
-        self:ShowHideActor(Unit, true)
-        Unit:PreExitStory({}, TalkTask.TalkTaskData.bPauseNpcBT)
-      else
-        Unit:EMActorDestroy(EDestroyReason.TalkContext)
-      end
-    end
+  if IsValid(Data.TalkActor) then
+    Data.TalkActor:PreExitStory({}, TalkTask.TalkTaskData.bPauseNpcBT, Data.bIsExternal)
   end
-  self.TalkActorDatas[UnitId] = nil
+  TalkTask.TalkActorDatas[UnitId] = nil
 end
 
 function BP_TalkContext_C:GetTalkActorData(TalkTask, SearchUnitId)
-  return self.TalkActorDatas[SearchUnitId]
-end
-
-function BP_TalkContext_C:GetAllTalkActorData(TalkTask)
-  return self.TalkActorDatas
+  TalkTask.TalkActorDatas = TalkTask.TalkActorDatas or {}
+  return TalkTask.TalkActorDatas[SearchUnitId]
 end
 
 function BP_TalkContext_C:RegisterInteractiveActor(TalkActor)
@@ -1024,7 +1007,7 @@ function BP_TalkContext_C:GetDialogueBlackUI()
     return self.DialogueBlackUI
   end
   local BlackBorderClass = LoadClass("/Game/UI/WBP/Story/Widget/WBP_BlackScreen.WBP_BlackScreen_C")
-  self.DialogueBlackUI = UE.UWidgetBlueprintLibrary.Create(self, BlackBorderClass)
+  self.DialogueBlackUI = UE4.UWidgetBlueprintLibrary.Create(self, BlackBorderClass)
   self.DialogueBlackUI:AddToViewport(-1)
   return self.DialogueBlackUI
 end
@@ -1042,7 +1025,7 @@ function BP_TalkContext_C:GetImagePlayUI()
     return self.ImagePlayUI
   end
   local ImageUIClass = LoadClass("WidgetBlueprint'/Game/UI/WBP/Story/Widget/WBP_Story_Image.WBP_Story_Image'")
-  self.ImageUI = UE.UWidgetBlueprintLibrary.Create(self, ImageUIClass)
+  self.ImageUI = UE4.UWidgetBlueprintLibrary.Create(self, ImageUIClass)
   self.ImageUI:AddToViewport(-1)
   return self.ImageUI
 end
@@ -1160,13 +1143,7 @@ function BP_TalkContext_C:SwitchHideAllPlayerChars(bHide)
               SetMeshHidden(Attach, bHide)
             end
           end
-          if Char.EffectCreatures then
-            for _, value in pairs(Char.EffectCreatures or {}) do
-              for _, obj in pairs(value) do
-                SetMeshHidden(obj, bHide)
-              end
-            end
-          end
+          Char:HideAllEffectCreature("Player", bHide)
           if Char.GetBattlePet then
             local BattlePet = Char:GetBattlePet()
             if BattlePet then
@@ -1184,6 +1161,204 @@ function BP_TalkContext_C:ShowCinematicVideoUI(bShow)
   if self.SequenceTalkTask then
     self.SequenceTalkTask:OnSequenceShowVideoUI(bShow)
   end
+end
+
+local NPC_STAND_RADIUS = 150
+local NPC_COLLISION_RADIUS = 80
+
+function BP_TalkContext_C:GetNPCStandPositions(CenterActor, Count, bEnableVisualization)
+  local ResultPoints = {}
+  Count = tonumber(Count)
+  if not IsValid(CenterActor) or Count <= 0 then
+    DebugPrint("GetNPCStandPositions", "invalid input", CenterActor, Count)
+    return ResultPoints
+  end
+  local CenterLoc = CenterActor:K2_GetActorLocation()
+  local Forward = CenterActor:GetActorForwardVector()
+  DebugPrint("GetNPCStandPositions", "start", Count, CenterLoc, Forward)
+  local IdealPoints = {}
+  if 1 == Count then
+    local Rot = FRotator(0, 90, 0)
+    local Dir = Rot:RotateVector(Forward)
+    table.insert(IdealPoints, CenterLoc + Dir * NPC_STAND_RADIUS)
+  else
+    local AngleStep = 180 / (Count - 1)
+    for i = 0, Count - 1 do
+      local Angle = 90 + i * AngleStep
+      local Rot = FRotator(0, Angle, 0)
+      local Dir = Rot:RotateVector(Forward)
+      table.insert(IdealPoints, CenterLoc + Dir * NPC_STAND_RADIUS)
+    end
+  end
+  local UsedPoints = {}
+  local MissedIdealPoints = {}
+  local Debug = true == bEnableVisualization
+  if Debug then
+    UKismetSystemLibrary.DrawDebugSphere(self, CenterLoc, 25, 10, FLinearColor(1, 1, 1), 5, 2)
+    local Forward2D = Forward
+    Forward2D.Z = 0
+    Forward2D = UE4.UKismetMathLibrary.Normal(Forward2D)
+    local Backward2D = Forward2D * -1
+    UKismetSystemLibrary.DrawDebugLine(self, CenterLoc, CenterLoc + Forward2D * 200, FLinearColor(0, 0.6, 1), 5, 1)
+    UKismetSystemLibrary.DrawDebugLine(self, CenterLoc, CenterLoc + Backward2D * 200, FLinearColor(1, 0.2, 0.2), 5, 1)
+    local ArcStep = 15
+    local Prev
+    for Angle = -90, 90, ArcStep do
+      local Rot = FRotator(0, Angle, 0)
+      local Dir = Rot:RotateVector(Backward2D)
+      local P = CenterLoc + Dir * NPC_STAND_RADIUS
+      if Prev then
+        UKismetSystemLibrary.DrawDebugLine(self, Prev, P, FLinearColor(0.8, 0.8, 0.2), 5, 1)
+      end
+      Prev = P
+    end
+    for _, P in ipairs(IdealPoints) do
+      UKismetSystemLibrary.DrawDebugSphere(self, P, 20, 8, FLinearColor(0, 0, 1), 5, 1)
+      UKismetSystemLibrary.DrawDebugLine(self, CenterLoc, P, FLinearColor(0, 0, 1), 5, 1)
+    end
+  end
+  local Queue = {}
+  local Visited = {}
+  for _, Point in ipairs(IdealPoints) do
+    local ValidPoint = self:GetValidStandPoint(Point, UsedPoints)
+    if ValidPoint then
+      DebugPrint("GetNPCStandPositions", "IdealPoint hit", Point, ValidPoint)
+      table.insert(ResultPoints, ValidPoint)
+      table.insert(UsedPoints, ValidPoint)
+      if Debug then
+        UKismetSystemLibrary.DrawDebugSphere(self, ValidPoint, 35, 10, FLinearColor(0, 1, 0), 5, 2)
+      end
+    else
+      DebugPrint("GetNPCStandPositions", "IdealPoint miss", Point)
+      table.insert(MissedIdealPoints, Point)
+    end
+  end
+  for _, Point in ipairs(MissedIdealPoints) do
+    DebugPrint("GetNPCStandPositions", "IdealPoint miss, searching", Point)
+    local BestAlt = self:FindBestStandPoint(Point, CenterLoc, Forward, UsedPoints, bEnableVisualization)
+    if BestAlt then
+      DebugPrint("GetNPCStandPositions", "Search hit", Point, BestAlt)
+      table.insert(ResultPoints, BestAlt)
+      table.insert(UsedPoints, BestAlt)
+      if Debug then
+        UKismetSystemLibrary.DrawDebugSphere(self, BestAlt, 35, 10, FLinearColor(1, 1, 0), 5, 2)
+      end
+    else
+      DebugPrint("GetNPCStandPositions", "Search miss", Point)
+    end
+  end
+  DebugPrint("GetNPCStandPositions", "result", #ResultPoints)
+  return ResultPoints
+end
+
+function BP_TalkContext_C:FindBestStandPoint(IdealPoint, CenterLoc, Forward, UsedPoints, bEnableVisualization)
+  local RadiusDeltas = {
+    0,
+    100,
+    -100,
+    200,
+    -200,
+    300,
+    -300
+  }
+  local DirToIdeal = IdealPoint - CenterLoc
+  DirToIdeal.Z = 0
+  local Forward2D = Forward
+  Forward2D.Z = 0
+  local BaseDir = UE4.UKismetMathLibrary.Normal(DirToIdeal)
+  if UKismetMathLibrary.Vector_IsNearlyZero(DirToIdeal) then
+    BaseDir = UE4.UKismetMathLibrary.Normal(Forward2D)
+  end
+  Forward2D = UE4.UKismetMathLibrary.Normal(Forward2D)
+  DebugPrint("GetNPCStandPositions", "FindBestStandPoint start", IdealPoint, BaseDir, Forward2D)
+  local AngleStep = 10
+  local MaxSteps = math.floor(180 / AngleStep)
+  local Debug = true == bEnableVisualization
+  for _, DeltaR in ipairs(RadiusDeltas) do
+    local SearchRadius = NPC_STAND_RADIUS + DeltaR
+    if SearchRadius >= 100 then
+      local PassCount = 1
+      if 0 == DeltaR then
+        PassCount = 2
+      end
+      for Pass = 1, PassCount do
+        local DotLimit = 0.1
+        if 2 == Pass then
+          DotLimit = 1
+        end
+        if Debug then
+          UKismetSystemLibrary.DrawDebugLine(self, CenterLoc, CenterLoc + BaseDir * SearchRadius, FLinearColor(0.7, 0.7, 0.7), 5, 1)
+        end
+        local Step = 0
+        while MaxSteps >= Step do
+          local Angle = Step * AngleStep
+          local DirList = {}
+          if 0 == Step then
+            table.insert(DirList, BaseDir)
+          else
+            local RotPos = FRotator(0, Angle, 0)
+            local RotNeg = FRotator(0, -Angle, 0)
+            table.insert(DirList, RotPos:RotateVector(BaseDir))
+            table.insert(DirList, RotNeg:RotateVector(BaseDir))
+          end
+          for _, Dir in ipairs(DirList) do
+            local Dot = UKismetMathLibrary.Dot_VectorVector(Dir, Forward2D)
+            if DotLimit >= Dot then
+              local CandidatePos = CenterLoc + Dir * SearchRadius
+              local ValidPoint = self:GetValidStandPoint(CandidatePos, UsedPoints)
+              if ValidPoint then
+                DebugPrint("GetNPCStandPositions", "Candidate valid", CandidatePos, ValidPoint, Dot, SearchRadius)
+                if Debug then
+                  UKismetSystemLibrary.DrawDebugSphere(self, ValidPoint, 25, 8, FLinearColor(0, 1, 0), 5, 2)
+                end
+                return ValidPoint
+              elseif Debug then
+                UKismetSystemLibrary.DrawDebugSphere(self, CandidatePos, 15, 6, FLinearColor(1, 0, 0), 5, 1)
+              end
+            end
+          end
+          Step = Step + 1
+        end
+      end
+    end
+  end
+  DebugPrint("GetNPCStandPositions", "FindBestStandPoint none", IdealPoint)
+  return nil
+end
+
+function BP_TalkContext_C:GetValidStandPoint(Point, UsedPoints)
+  DebugPrint("GetNPCStandPositions", "GetValidStandPoint start", Point)
+  local NavPoint = UNavigationFunctionLibrary.ProjectPointToNavigation3D(Point, self)
+  if not NavPoint then
+    DebugPrint("GetNPCStandPositions", "GetValidStandPoint nav fail", Point)
+    return nil
+  end
+  local SnapDist = UKismetMathLibrary.Vector_Distance2D(NavPoint, Point)
+  if SnapDist > 30 then
+    DebugPrint("GetNPCStandPositions", "GetValidStandPoint nav offset", Point, NavPoint, SnapDist)
+    return nil
+  end
+  for _, Used in ipairs(UsedPoints) do
+    local Dist = FVector.Dist(NavPoint, Used)
+    if Dist < 50 then
+      DebugPrint("GetNPCStandPositions", "GetValidStandPoint too close", NavPoint, Used, Dist)
+      return nil
+    end
+  end
+  local ObjectTypes = {
+    EObjectTypeQuery.Pawn
+  }
+  local OverlapActors = TArray(AActor)
+  local NavPointZ = NavPoint.Z
+  NavPoint.Z = Point.Z
+  local bOverlap = UKismetSystemLibrary.SphereOverlapActors(self, NavPoint, NPC_COLLISION_RADIUS, ObjectTypes, nil, {}, OverlapActors)
+  if bOverlap then
+    DebugPrint("GetNPCStandPositions", "GetValidStandPoint overlap", NavPoint, OverlapActors:Num())
+    return nil
+  end
+  NavPoint.Z = NavPointZ
+  DebugPrint("GetNPCStandPositions", "GetValidStandPoint ok", NavPoint)
+  return NavPoint
 end
 
 return BP_TalkContext_C

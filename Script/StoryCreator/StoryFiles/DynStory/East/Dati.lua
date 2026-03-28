@@ -61,7 +61,6 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = true,
@@ -69,6 +68,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -615,7 +615,7 @@ return {
             key = "1749111194626611773",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 88.68084454917823, y = 276.3903422918297},
+            pos = {x = 90.18084454917823, y = 276.3903422918297},
             propsData = {
               IsNpcNode = true,
               NpcNodeInteractiveName = "",
@@ -686,8 +686,10 @@ return {
             pos = {x = 3279.7256852157584, y = 237.73010397941746},
             propsData = {
               DialogueId = 71006515,
-              UseTalkFadeOut = false,
-              TalkFadeOutTime = 0
+              UseTalkFadeOut = true,
+              TalkFadeOutTime = 1,
+              UseTalkFadeIn = true,
+              TalkFadeInTime = 1
             }
           },
           ["1749111637116615058"] = {
@@ -697,8 +699,10 @@ return {
             pos = {x = 3275.7256852157584, y = 478.93010397941754},
             propsData = {
               DialogueId = 0,
-              UseTalkFadeOut = false,
-              TalkFadeOutTime = 0
+              UseTalkFadeOut = true,
+              TalkFadeOutTime = 1,
+              UseTalkFadeIn = true,
+              TalkFadeInTime = 1
             }
           },
           ["17495601331721460"] = {
@@ -1158,8 +1162,10 @@ return {
             pos = {x = 4609.186103628053, y = -786.5128144559258},
             propsData = {
               DialogueId = 71006508,
-              UseTalkFadeOut = false,
-              TalkFadeOutTime = 0
+              UseTalkFadeOut = true,
+              TalkFadeOutTime = 1,
+              UseTalkFadeIn = true,
+              TalkFadeInTime = 1
             }
           },
           ["17503135060603661"] = {
@@ -1169,8 +1175,10 @@ return {
             pos = {x = 4599.640649082599, y = -591.33850166861},
             propsData = {
               DialogueId = 71006509,
-              UseTalkFadeOut = false,
-              TalkFadeOutTime = 0
+              UseTalkFadeOut = true,
+              TalkFadeOutTime = 1,
+              UseTalkFadeIn = true,
+              TalkFadeInTime = 1
             }
           },
           ["17503135073383702"] = {
@@ -1180,8 +1188,10 @@ return {
             pos = {x = 4599.640649082599, y = -364.97486530497343},
             propsData = {
               DialogueId = 71006510,
-              UseTalkFadeOut = false,
-              TalkFadeOutTime = 0
+              UseTalkFadeOut = true,
+              TalkFadeOutTime = 1,
+              UseTalkFadeIn = true,
+              TalkFadeInTime = 1
             }
           },
           ["1750317346864645893"] = {
@@ -1200,11 +1210,13 @@ return {
             key = "17503182427321933108",
             type = "DynamicQuestSuccessNode",
             name = "动态任务主动成功",
-            pos = {x = 4298.440974222976, y = -173.03425640808513},
+            pos = {x = 4298.440974222976, y = -174.53425640808513},
             propsData = {
               DialogueId = 0,
-              UseTalkFadeOut = false,
-              TalkFadeOutTime = 0
+              UseTalkFadeOut = true,
+              TalkFadeOutTime = 1,
+              UseTalkFadeIn = true,
+              TalkFadeInTime = 1
             }
           },
           ["17503182427321933109"] = {
@@ -1452,7 +1464,8 @@ return {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 818060,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 }
               },
               OptionType = "branch",
@@ -1507,7 +1520,8 @@ return {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 818060,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 }
               },
               OptionType = "branch",
@@ -1562,7 +1576,8 @@ return {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 818060,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 }
               },
               OptionType = "branch",
@@ -1591,8 +1606,7 @@ return {
               BlendInTime = 0.5,
               BlendOutTime = 0.5,
               InType = "BlendIn",
-              OutType = "FadeOut",
-              ShowFadeDetail = false,
+              OutType = "BlendOut",
               BlendEaseExp = 2,
               UseProceduralCamera = false,
               ProceduralCameraId = 1,
@@ -1617,7 +1631,8 @@ return {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 818060,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 }
               },
               OptionType = "branch",
@@ -1646,8 +1661,7 @@ return {
               BlendInTime = 0.5,
               BlendOutTime = 0.5,
               InType = "BlendIn",
-              OutType = "FadeOut",
-              ShowFadeDetail = false,
+              OutType = "BlendOut",
               BlendEaseExp = 2,
               UseProceduralCamera = false,
               ProceduralCameraId = 1,
@@ -1672,7 +1686,8 @@ return {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 818060,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 }
               },
               OptionType = "branch",
@@ -1701,8 +1716,7 @@ return {
               BlendInTime = 0.5,
               BlendOutTime = 0.5,
               InType = "BlendIn",
-              OutType = "FadeOut",
-              ShowFadeDetail = false,
+              OutType = "BlendOut",
               BlendEaseExp = 2,
               UseProceduralCamera = false,
               ProceduralCameraId = 1,
@@ -1727,7 +1741,8 @@ return {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 818060,
-                  TalkActorVisible = true
+                  TalkActorVisible = true,
+                  AroundPlayer = false
                 }
               },
               OptionType = "branch",

@@ -67,7 +67,6 @@ function M:RefreshQualificationBoard()
   local PreRaidDuration = SeasonData.PreRaidTime * 3600
   local CurEventData = DataMgr.EventMain[self.EventId]
   local QualificationEndTime = CurEventData.EventStartTime + PreRaidDuration
-  local QualificationEndDateText = self:GetDateText(QualificationEndTime)
   self.WS_Type:SetActiveWidgetIndex(0)
   self.WS_Type:SetVisibility(UIConst.VisibilityOp.Collapsed)
   local BoardWidget = self.WB_QualificationBoard
@@ -89,12 +88,14 @@ function M:RefreshQualificationBoard()
   BoardWidget.Text_Status:SetText(OfficalMathcStartDateText)
   BoardWidget.Text_QualificationMatch:SetText(GText("RaidDungeon_PreRaid_Rank"))
   BoardWidget.Text_OfficialMathch:SetText(GText("RaidDungeon_Raid_Rank"))
-  local DataText = table.concat({
-    self:GetDateText(CurEventData.EventStartTime.GetTime()),
-    " ~ ",
-    QualificationEndDateText
-  })
-  BoardWidget.Text_Date:SetText(DataText)
+  if GuildWarUtils.IsPreRaidTime() then
+    BoardWidget.WS_Time:SetActiveWidgetIndex(0)
+    local RemainTimeDict, _ = UIUtils.GetLeftTimeStrStyle2(QualificationEndTime)
+    BoardWidget.Time:SetTimeText(GText("UI_Disptach_RemainTime"), RemainTimeDict)
+  else
+    BoardWidget.WS_Time:SetActiveWidgetIndex(1)
+    BoardWidget.Text_End:SetText(GText("RaidDungeon_PreRaid_End"))
+  end
   local RaidSeasons = self.Avatar.RaidSeasons[self.Avatar.CurrentRaidSeasonId]
   if not RaidSeasons then
     return
@@ -140,7 +141,7 @@ function M:RefreshOfficialBoard()
   local RaidDuration = SeasonData.RaidTime * 3600
   local CurEventData = DataMgr.EventMain[self.EventId]
   local QualificationEndTime = CurEventData.EventStartTime + PreRaidDuration
-  local QualificationEndDateText = self:GetDateText(QualificationEndTime)
+  local RaidEndTime = QualificationEndTime + RaidDuration
   local BoardWidget = self.WB_OfficialBoard
   BoardWidget.Text_Ranking:SetVisibility(UIConst.VisibilityOp.Collapsed)
   BoardWidget.Btn_GainReward.Key_Controller:CreateCommonKey({
@@ -151,12 +152,14 @@ function M:RefreshOfficialBoard()
   BoardWidget.Text_Status:SetText(GText("RaidDungeon_PreRaid_End"))
   BoardWidget.Text_QualificationMatch:SetText(GText("RaidDungeon_PreRaid_Rank"))
   BoardWidget.Text_OfficialMathch:SetText(GText("RaidDungeon_Raid_Rank"))
-  local DataText = table.concat({
-    QualificationEndDateText,
-    " ~ ",
-    self:GetDateText(QualificationEndTime + RaidDuration)
-  })
-  BoardWidget.Text_Date:SetText(DataText)
+  if GuildWarUtils.IsRaidTime() then
+    BoardWidget.WS_Time:SetActiveWidgetIndex(0)
+    local RemainTimeDict, _ = UIUtils.GetLeftTimeStrStyle2(RaidEndTime)
+    BoardWidget.Time:SetTimeText(GText("UI_Disptach_RemainTime"), RemainTimeDict)
+  else
+    BoardWidget.WS_Time:SetActiveWidgetIndex(1)
+    BoardWidget.Text_End:SetText(GText("RaidDungeon_PreRaid_End"))
+  end
   self:RefreshPreRaidRewardGot(BoardWidget)
   if 1 ~= RaidSeasons.BanState then
     BoardWidget.WS_Type:SetActiveWidgetIndex(0)

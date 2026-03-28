@@ -97,6 +97,17 @@ function Weapon:InitAppearance()
   self.UsedSkins:GetNewSkin(self.WeaponId, CommonConst.SkinType.Weapon)
 end
 
+function Weapon:InitTalent()
+  if not self.WeaponSubType or self.WeaponSubType == "Normal" then
+    return
+  end
+  for k, v in pairs(DataMgr.HyperWeaponSkillTree) do
+    if v.WeaponId == self.WeaponId and 0 == v.WeaponCardLevel then
+      self.HyperTalent:AddElement(v.WeaponCardLevel, v.WeaponSkillId)
+    end
+  end
+end
+
 function Weapon:AddSkin(SkinId)
   return self.UsedSkins:GetNewSkin(SkinId, CommonConst.SkinType.Weapon)
 end
@@ -444,7 +455,7 @@ function Weapon:DumpAppearanceInfo()
   local Skin = self:GetCurrentSkin()
   AppearanceInfo.SkinId = Skin and Skin.SkinId
   AppearanceInfo.Colors = self:DumpColors()
-  AppearanceInfo.AccessoryId = self:DumpAccessory()
+  AppearanceInfo.AccessorySuit = self:DumpAccessory()
   AppearanceInfo.WeaponId = self.WeaponId
   return AppearanceInfo
 end
@@ -459,7 +470,11 @@ end
 
 function Weapon:DumpAccessory()
   local Appearance = self:GetAppearance()
-  return Appearance and Appearance.Accessory[1]
+  local Res = {}
+  for key, value in pairs(Appearance.Accessory) do
+    Res[key] = value
+  end
+  return Res
 end
 
 function Weapon:DumpColors(SkinId)
@@ -709,7 +724,12 @@ function Weapon:DumpBattleAttr(Avatar, ExtraInfo)
   for _, Data in pairs(DataMgr.AttrLimit) do
     local AttachAttrName = Data.AttachAttrName
     if TotalValues[AttachAttrName] then
-      TotalValues[AttachAttrName] = math.min(TotalValues[AttachAttrName], Data.LimitValue)
+      if Data.LimitValue then
+        TotalValues[AttachAttrName] = math.min(TotalValues[AttachAttrName], Data.LimitValue)
+      end
+      if Data.MinLimitValue then
+        TotalValues[AttachAttrName] = math.max(TotalValues[AttachAttrName], Data.MinLimitValue)
+      end
     end
   end
   local BattleAttrs = {
@@ -999,6 +1019,11 @@ WeaponDict.META_LIMIT = 50
 function WeaponDict:NewWeapon(Uuid, WeaponId, Level)
   local weapon = Weapon(Uuid, WeaponId, Level)
   return weapon
+end
+
+function WeaponDict:LoadWeapon(Value)
+  local weapon = Weapon()
+  return weapon:load(Value)
 end
 
 local UWeapon = Class("UWeapon", Weapon)

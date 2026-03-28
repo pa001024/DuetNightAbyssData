@@ -695,6 +695,49 @@ return ReadOnly("InterfaceJump", {
     PortalUnlockCondition = T.RT_4,
     PortalUnlockTips = "UI_Locked_Des_Shop"
   },
+  [86] = {
+    InterfaceJumpId = 86,
+    JumpParameter1 = "ActivitySoloTreasureMain",
+    JumpParameter2 = "103014.0",
+    JumpType = "MereJump"
+  },
+  [87] = {
+    InterfaceJumpId = 87,
+    JumpParameter1 = "JumpToShopPage",
+    JumpParameter2 = "10007.0",
+    JumpParameter3 = "100071",
+    JumpParameter4 = "nil",
+    JumpParameter5 = "SoloTreasureShop",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_9,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
+  [88] = {
+    InterfaceJumpId = 88,
+    JumpParameter1 = "JumpToShopPage",
+    JumpParameter2 = "10008.0",
+    JumpParameter3 = "100081",
+    JumpParameter4 = "nil",
+    JumpParameter5 = "AccessoryDropShop",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_9,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
+  [89] = {
+    InterfaceJumpId = 89,
+    JumpParameter1 = "SoloTreasureStoryLevel",
+    JumpParameter2 = "103014.0",
+    JumpParameter3 = "2",
+    JumpType = "SelfDefinedJump"
+  },
+  [90] = {
+    InterfaceJumpId = 90,
+    JumpParameter1 = "JumpToEventPage",
+    JumpParameter2 = "71.0",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_9,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
   [1101] = {
     InterfaceJumpId = 1101,
     JumpParameter1 = "JumpToArmory",

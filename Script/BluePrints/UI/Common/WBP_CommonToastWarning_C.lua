@@ -22,6 +22,10 @@ function M:PlayOutAnim()
   self:PlayAnimation(self.Out)
 end
 
+function M:UpdateContent(ShowMessage)
+  self.Text_Toast:SetText(ShowMessage)
+end
+
 function M:Close()
   self.Super.Close(self)
   self.IsClose = true

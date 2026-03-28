@@ -61,7 +61,6 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
@@ -69,6 +68,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -78,12 +78,6 @@ return {
       questNodeData = {
         lineData = {
           {
-            startQuest = "1732783211067619164",
-            startPort = "QuestStart",
-            endQuest = "1734678041247910339",
-            endPort = "In"
-          },
-          {
             startQuest = "1734678041247910339",
             startPort = "Out",
             endQuest = "1732783211067619165",
@@ -92,8 +86,14 @@ return {
           {
             startQuest = "1732783211067619164",
             startPort = "QuestStart",
-            endQuest = "1734678052120910635",
+            endQuest = "1769419899354370746",
             endPort = "In"
+          },
+          {
+            startQuest = "1769419899354370746",
+            startPort = "Out",
+            endQuest = "1732783211067619165",
+            endPort = "Success"
           }
         },
         nodeData = {
@@ -122,7 +122,7 @@ return {
             key = "1734678041247910339",
             type = "TalkNode",
             name = "开车-达芙涅求助",
-            pos = {x = 1433.2631578947367, y = 427.2631578947368},
+            pos = {x = 1433.2631578947367, y = 425.2631578947368},
             propsData = {
               IsNpcNode = false,
               FirstDialogueId = 11011001,
@@ -150,6 +150,18 @@ return {
               RelatedRegionId = {},
               ClientRelatedRegionId = {},
               bStoreToServer = true
+            }
+          },
+          ["1769419899354370746"] = {
+            key = "1769419899354370746",
+            type = "ShowOrHideUINode",
+            name = "显示或隐藏UI",
+            pos = {x = 1676, y = 6},
+            propsData = {
+              Function = "HideUIInScreen",
+              UIParam = "AimIndicator",
+              ActionParam = "None",
+              ShowOrHide = true
             }
           }
         },

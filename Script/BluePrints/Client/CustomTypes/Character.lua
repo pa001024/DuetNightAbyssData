@@ -11,6 +11,7 @@ Char.__Props__ = {
   Level = prop.prop("Int", "client save", 1),
   EnhanceLevel = prop.prop("Int", "client save", 0),
   GradeLevel = prop.prop("Int", "client save", 0),
+  ExtraGradeLevel = prop.prop("Int", "client save", 0),
   ModSlotPolarity = prop.prop("IntList", "client save"),
   ModSlotStatus = prop.prop("IntList", "client save"),
   ModSuit_1 = prop.prop("ObjectIdList", "client save"),
@@ -451,6 +452,7 @@ function Char:BattleDump(Avatar, ExtraInfo)
     Level = self.Level,
     Exp = self.Exp,
     GradeLevel = self.GradeLevel,
+    ExtraGradeLevel = self.ExtraGradeLevel,
     EnhanceLevel = self.EnhanceLevel,
     SkillInfos = self:DumpSkillInfos(Avatar, ExtraInfo),
     SkillTreeInfos = self:DumpSkillTreeInfos(Avatar, ExtraInfo),
@@ -477,6 +479,7 @@ function Char:DumpSkillInfos(Avatar, ExtraInfo)
         bOnlyPhantom = SkillData.OnlyPhantom
       end
       if not IsPhantom and bOnlyPhantom then
+      elseif SkillData and SkillData.SkillType == "UltraPassive" and self.ExtraGradeLevel <= 0 then
       else
         local SkillInfo = {}
         local Level, ExtraLevel = Skill:GetRealSkill()
@@ -604,11 +607,24 @@ function Char:DumpAppearanceSuit(Avatar, AppearanceIndex)
     IsShowPartMesh = self:DumpIsShowPartMesh(Avatar, SkinId),
     IsCornerVisible = self:DumpIsCornerVisible(AppearanceSuit),
     SkinId = SkinId,
+    SkinLevel = self:DumpSkinLevel(Avatar, SkinId),
     HairId = HairId,
     Colors = self:DumpColors(Avatar, SkinId),
     HairColors = self:DumpHairColors(Avatar, HairId),
     CharId = self.CharId
   }
+end
+
+function Char:DumpSkinLevel(Avatar, SkinId)
+  if not Avatar or not Avatar.CommonChars then
+    return 1
+  end
+  local CommonChar = Avatar.CommonChars[self.CharId]
+  local Skin = CommonChar and CommonChar.OwnedSkins[SkinId]
+  if not Skin then
+    return 1
+  end
+  return Skin.SelectedLevel
 end
 
 function Char:DumpColors(Avatar, SkinId)
@@ -741,7 +757,12 @@ function Char:CalcTotalValue(CardValues, BaseValues, ModRateValues, ModAddValues
   for _, Data in pairs(DataMgr.AttrLimit) do
     local AttachAttrName = Data.AttachAttrName
     if TotalValues[AttachAttrName] then
-      TotalValues[AttachAttrName] = math.min(TotalValues[AttachAttrName], Data.LimitValue)
+      if Data.LimitValue then
+        TotalValues[AttachAttrName] = math.min(TotalValues[AttachAttrName], Data.LimitValue)
+      end
+      if Data.MinLimitValue then
+        TotalValues[AttachAttrName] = math.max(TotalValues[AttachAttrName], Data.MinLimitValue)
+      end
     end
   end
   return TotalValues
@@ -954,6 +975,45 @@ function Char:SetGradeLevel(TargetLevel)
   self:UpdateSkill()
 end
 
+function Char:GetEffectiveGradeLevel()
+  local MaxGradeLevel = DataMgr.GlobalConstant.CharCardLevelMax.ConstantValue
+  if 1 == self.ExtraGradeLevel then
+    return MaxGradeLevel + 1
+  end
+  return self.GradeLevel
+end
+
+function Char:HasUltraGradeLevel()
+  return DataMgr.UltraCharCardLevelUp and DataMgr.UltraCharCardLevelUp[self.CharId] ~= nil
+end
+
+function Char:IsExtraGradeLevelUnlocked()
+  return 1 == self.ExtraGradeLevel
+end
+
+function Char:CalculateCharUltraGradeLevelUpResources()
+  local Data = DataMgr.UltraCharCardLevelUp and DataMgr.UltraCharCardLevelUp[self.CharId]
+  if not Data then
+    return {}
+  end
+  local ResourceId = "ResourceId"
+  local ResourceNum = "ResourceNum"
+  local Idx = 1
+  local Res = {}
+  local Key = ResourceId .. tostring(Idx)
+  local Value = ResourceNum .. tostring(Idx)
+  while Data[Key] and Data[Value] do
+    table.insert(Res, {
+      Id = Data[Key],
+      Num = Data[Value]
+    })
+    Idx = Idx + 1
+    Key = ResourceId .. tostring(Idx)
+    Value = ResourceNum .. tostring(Idx)
+  end
+  return Res
+end
+
 function Char:CheckCurrentLevelOfBreakUpLevel()
   if self.Level == self:GetCurrentMaxLevel() then
     return true
@@ -1103,6 +1163,11 @@ CharDict.ValueType = Char
 function CharDict:NewChar(Uuid, CharId, Level)
   local char = Char(Uuid, CharId, Level)
   return char
+end
+
+function CharDict:LoadChar(Value)
+  local char = Char()
+  return char:load(Value)
 end
 
 return {Char = Char, CharDict = CharDict}

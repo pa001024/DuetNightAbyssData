@@ -99,6 +99,8 @@ function Component:SetCharacterDefeatedTag()
   end
   if not self:CharacterInTag("Defeated") then
     self.EnterDefeatedCount = self.EnterDefeatedCount and self.EnterDefeatedCount + 1 or 1
+    self.IsBossDefeated = true
+    self:SetCharacterTag("Defeated")
     self:MulticastSetCharacterTagOnHitLogic("Defeated", true)
     local GameMode = UE4.UGameplayStatics.GetGameMode(self)
     if GameMode and 1 == self.EnterDefeatedCount then

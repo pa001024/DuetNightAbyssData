@@ -21,20 +21,30 @@ function M:InitContent(Params)
   end)
   self.Common_Item_Icon:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.Owner = Params.Owner
-  local Resource = DataMgr.Resource[Params.ResourceId]
-  local Icon = LoadObject(Resource.Icon)
-  self.Common_Item_Icon:Init({
-    Id = Params.ResourceId,
-    Icon = Icon,
-    ItemType = "Resource",
-    UIName = Params.UIName or "CommonDialog",
-    IsShowDetails = Params.IsShowDetails == nil and true or Params.IsShowDetails,
-    IsCantItemSelection = true,
-    MenuPlacement = EMenuPlacement.MenuPlacement_MenuRight,
-    HandleMouseDown = Params.HandleMouseDown,
-    HandleKeyDown = false,
-    NotInteractive = Params.NotInteractive
-  })
+  if Params.ResourceId then
+    local Resource = DataMgr.Resource[Params.ResourceId]
+    local Icon = LoadObject(Resource.Icon)
+    self.Common_Item_Icon:Init({
+      Id = Params.ResourceId,
+      Icon = Icon,
+      ItemType = "Resource",
+      UIName = Params.UIName or "CommonDialog",
+      IsShowDetails = Params.IsShowDetails == nil and true or Params.IsShowDetails,
+      IsCantItemSelection = true,
+      MenuPlacement = EMenuPlacement.MenuPlacement_MenuRight,
+      HandleMouseDown = Params.HandleMouseDown,
+      HandleKeyDown = false,
+      NotInteractive = Params.NotInteractive
+    })
+  elseif Params.Icon then
+    self.Common_Item_Icon:Init({
+      Icon = Params.Icon,
+      IsCantItemSelection = true,
+      HandleMouseDown = Params.HandleMouseDown,
+      HandleKeyDown = false,
+      NotInteractive = Params.NotInteractive
+    })
+  end
   self.Text_Possess:SetText(FormatNumber(Params.Numerator, false))
   if Params.bShowDenominator then
     self.Group_Expend:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)

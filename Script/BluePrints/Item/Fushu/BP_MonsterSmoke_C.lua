@@ -161,7 +161,7 @@ function M:SpawnMonsters()
   GameMode.EMGameState.EventMgr:CreateUnitNew(Context, false)
 end
 
-function M:OnMonsterKilled(Monster)
+function M:OnMonsterKilled(Monster, KillMineRoleEid, KillMineSkillId, DeathReason)
   if self.SpawnedMonsters[Monster.Eid] then
     if self.SkillEffect and self.SkillEffect > 0 then
       local Player = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)

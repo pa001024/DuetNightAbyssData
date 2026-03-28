@@ -67,5 +67,22 @@ return ReadOnly("DailyLogin", {
     EventId = 101008,
     EventReward = T.RT_2,
     LoginDuration = 5
+  },
+  [101009] = {
+    EventId = 101009,
+    EventReward = T.RT_2,
+    LoginDuration = 5
+  },
+  [101010] = {
+    EventId = 101010,
+    EventReward = T.RT_1,
+    LoginDuration = 7,
+    RewardBannerBP = "/Game/UI/WBP/Activity/Widget/SevenDay/Suyi/WBP_Activity_SevenDayItems_Suyi.WBP_Activity_SevenDayItems_Suyi"
+  },
+  [101011] = {
+    EventId = 101011,
+    EventReward = T.RT_1,
+    LoginDuration = 7,
+    RewardBannerBP = "/Game/UI/WBP/Activity/Widget/SevenDay/Kami/WBP_Activity_SevenDayItems_Kami.WBP_Activity_SevenDayItems_Kami"
   }
 })

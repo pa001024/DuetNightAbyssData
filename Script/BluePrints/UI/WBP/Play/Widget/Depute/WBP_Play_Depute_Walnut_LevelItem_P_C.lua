@@ -36,7 +36,8 @@ function M:Init(DungeonData, DungeonIds, WalnutTypeData, WalnutType, Parent)
     self.Text_Title:SetText(GText(self.DungeonData.DungeonName))
     if self.DungeonData.DungeonLevel then
       self.Text_LvNum:SetVisibility(ESlateVisibility.Visible)
-      self.Text_LvNum:SetText("Lv." .. self.DungeonData.DungeonLevel)
+      local LvText = GText("UI_DUNGEON_LevelLimit")
+      self.Text_LvNum:SetText(LvText .. self.DungeonData.DungeonLevel)
     else
       self.Text_LvNum:SetVisibility(ESlateVisibility.Collapsed)
     end

@@ -19,6 +19,7 @@ function M:CommonInitInfo(Info)
   elseif "-Z" == CorrectDirection then
     self:SetPanelCorrectDirction(5)
   end
+  self.SkipDetection = self.UnitParams.SkipDetection or false
 end
 
 return M

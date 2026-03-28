@@ -47,7 +47,7 @@ return {
       key = "1759997577821194",
       type = "StoryNode",
       name = "任务节点",
-      pos = {x = 1218, y = 294},
+      pos = {x = 1218, y = 296},
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
@@ -61,7 +61,6 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsShowOnComplete = true,
         bIsPlayBlackScreenOnComplete = false,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = true,
@@ -69,6 +68,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
+        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
@@ -200,7 +200,7 @@ return {
             propsData = {
               KillMonsterType = "Id",
               MonsterNeedNums = 4,
-              IsShow = false,
+              IsShow = true,
               GuideType = "P",
               GuideName = "",
               IsShowMonsterGuide = true,
@@ -240,18 +240,17 @@ return {
               NpcId = 818083,
               GuideUIEnable = true,
               GuideType = "N",
-              GuidePointName = "",
+              GuidePointName = "Npc_Dyn_2420020",
               DelayShowGuideTime = 0,
               IsPlayerTurnToNPC = true,
               IsNPCTurnToPlayer = true,
-              FirstDialogueId = 71007903,
+              FirstDialogueId = 71007905,
               FlowAssetPath = "",
               TalkType = "FreeSimple",
               BlendInTime = 0.5,
-              BlendOutTime = 2,
+              BlendOutTime = 0.5,
               InType = "BlendIn",
-              OutType = "FadeOut",
-              ShowFadeDetail = false,
+              OutType = "BlendOut",
               BlendEaseExp = 2,
               UseProceduralCamera = false,
               ProceduralCameraId = 1,
@@ -304,14 +303,16 @@ return {
             propsData = {
               DialogueId = 71007908,
               UseTalkFadeOut = true,
-              TalkFadeOutTime = 2
+              TalkFadeOutTime = 1,
+              UseTalkFadeIn = true,
+              TalkFadeInTime = 1
             }
           },
           ["17599984715442435"] = {
             key = "17599984715442435",
             type = "WaitingMechanismEnterStateNode",
             name = "挖宝物",
-            pos = {x = 2785.201923076924, y = 310.4940518717612},
+            pos = {x = 2783.701923076924, y = 311.9940518717612},
             propsData = {
               CreateType = "StaticCreator",
               CreateId = 2420022,
@@ -331,7 +332,7 @@ return {
               NpcId = 818083,
               GuideUIEnable = true,
               GuideType = "N",
-              GuidePointName = "",
+              GuidePointName = "Npc_Dyn_2420020",
               DelayShowGuideTime = 0,
               IsPlayerTurnToNPC = true,
               IsNPCTurnToPlayer = true,
@@ -339,10 +340,9 @@ return {
               FlowAssetPath = "",
               TalkType = "FreeSimple",
               BlendInTime = 0.5,
-              BlendOutTime = 2,
+              BlendOutTime = 0.5,
               InType = "BlendIn",
-              OutType = "FadeOut",
-              ShowFadeDetail = false,
+              OutType = "BlendOut",
               BlendEaseExp = 2,
               UseProceduralCamera = false,
               ProceduralCameraId = 1,
@@ -380,8 +380,10 @@ return {
             pos = {x = 3473.5352564102573, y = 276.67052245999645},
             propsData = {
               DialogueId = 71007907,
-              UseTalkFadeOut = false,
-              TalkFadeOutTime = 0
+              UseTalkFadeOut = true,
+              TalkFadeOutTime = 1,
+              UseTalkFadeIn = true,
+              TalkFadeInTime = 1
             }
           },
           ["1760002241171655227"] = {

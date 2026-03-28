@@ -5,12 +5,14 @@ local M = {}
 
 function M:ComponentInitDispatcher()
   self:AddDispatcher(EventID.OnCharLevelUp, self, self.OnCharUpgraded)
+  self:AddDispatcher(EventID.OnCharExtraGradeLevelUp, self, self.OnCharExtraGradeLevelUp)
   self:AddDispatcher(EventID.OnCharBreakLevelUp, self, self.OnCharUpgraded)
   self:AddDispatcher(EventID.OnCharGradeLevelUp, self, self.OnCharGradeLevelUp)
   self:AddDispatcher(EventID.OnCharSkillLevelUp, self, self.OnCharSkillLevelUp)
   self:AddDispatcher(EventID.OnSwitchCurrentChar, self, self.OnSwitchCurrentChar)
   self:AddDispatcher(EventID.OnNewCharObtained, self, self.OnNewCharObtained)
   self:AddDispatcher(EventID.OnCharCardLevelResourcesChanged, self, self.OnCharCardLevelResourcesChanged)
+  self:AddDispatcher(EventID.OnCharExtraGradeItemClick, self, self.OnCharExtraGradeItemClick)
   self:AddDispatcher(EventID.OnCharRewardStateChanged, self, self.OnCharRewardStateChanged)
 end
 
@@ -297,7 +299,23 @@ function M:CharMain_SelectRoleListItem(Content)
   self.ActorController:SetAvatar(ArmoryUtils:GetAvatar())
   self:CreateAndSelectSubTab()
   self:UpdateCharCardLevel()
-  ArmoryUtils:SetItemReddotRead(Content, true)
+  local ReadNew = true
+  if not Content.Upgradeable and Content.IsOwned then
+    local NodeName = DataMgr.ReddotNode.NewUltraGradeChar.Name
+    local UltraNode = ReddotManager.GetTreeNode(NodeName)
+    if UltraNode and UltraNode.Count > 0 then
+      local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(NodeName)
+      if CacheDetail and 1 == CacheDetail[Content.UnitId] then
+        Content.IsNew = true
+        Content.RedDotType = UIConst.RedDotType.NewRedDot
+        ReadNew = false
+      end
+    end
+  end
+  ArmoryUtils:SetItemReddotRead(Content, ReadNew)
+  if IsValid(Content.Widget) then
+    Content.Widget:SetReddot(Content.RedDotType)
+  end
   if Content.IsOwned then
     self:_UpdateSkillUpgradeReddot(ArmoryUtils:GetAvatar(), Content.Uuid)
     self:AddSubTabReddotListen()
@@ -308,8 +326,16 @@ function M:UpdateCharCardLevel()
   for _, value in ipairs(self.SubTabs) do
     if value.Name == ArmoryUtils.ArmorySubTabNames.Grade then
       value.Number = self.ComparedChar.GradeLevel
+      if self.ComparedChar.ExtraGradeLevel and self.ComparedChar.ExtraGradeLevel > 0 then
+        value.Number = value.Number + self.ComparedChar.ExtraGradeLevel
+      end
       local MaxGradeLevel = DataMgr.GlobalConstant.CharCardLevelMax.ConstantValue
-      value.IsMaxLevel = MaxGradeLevel <= value.Number
+      local HasUltra = self.ComparedChar:HasUltraGradeLevel()
+      if HasUltra then
+        value.IsMaxLevel = MaxGradeLevel <= self.ComparedChar.GradeLevel and self.ComparedChar:IsExtraGradeLevelUnlocked()
+      else
+        value.IsMaxLevel = MaxGradeLevel <= value.Number
+      end
       local Widget = value.Widget
       if Widget then
         Widget:SetNumber(value.Number)
@@ -324,6 +350,10 @@ local function AddContent(self, Char)
   local Obj = ArmoryUtils:NewCharOrWeaponItemContent(Char, CommonConst.ArmoryType.Char, CommonConst.ArmoryTag.Char, nil, self.ReddotFrom)
   Obj.bHideItemLevel = self.bFromArchive
   Obj.IsOwned = true
+  Obj.IsNew = ArmoryUtils:TryAddNewUltraGradeCharReddot(Char)
+  if Obj.IsNew and not Obj.Upgradeable then
+    Obj.RedDotType = UIConst.RedDotType.NewRedDot
+  end
   self.BP_CharItemContents:Add(Obj)
   self.CharItemContentsMap[Char.Uuid] = Obj
   self.CharId2Content[Char.CharId] = Obj
@@ -702,6 +732,77 @@ function M:OnCharGradeLevelUp(Ret, Uuid, CurrentGradeLevel)
   self:UpdateCharCardLevel()
 end
 
+function M:OnCharExtraGradeLevelUp(Ret, CharUuid)
+  if not ErrorCode:Check(Ret) then
+    return
+  end
+  local Avatar = ArmoryUtils:GetAvatar()
+  local Char = Avatar.Chars[CharUuid]
+  if not Char then
+    return
+  end
+  self:ResetCharData()
+  self:UpdateCharCardLevel()
+  local UuidStr = CommonUtils.ObjId2Str(CharUuid)
+  ArmoryUtils:_SetReddotReadCommon(UuidStr, DataMgr.ReddotNode.PromoteChar.Name)
+  self:RefreshUltraGradeRedDot(Char, CharUuid)
+end
+
+function M:RefreshUltraGradeRedDot(Char, CharUuid)
+  local Content = self.CharItemContentsMap[CharUuid]
+  if Content then
+    local CanUpgrade = UpgradeUtils.CheckCharCanUpgradeCardLevel(Char)
+    local CanUpgradeUltra = UpgradeUtils.CheckCharCanUpgradeUltraCardLevel(Char)
+    Content.Upgradeable = CanUpgrade or CanUpgradeUltra
+    if Content.IsNew then
+      Content.RedDotType = UIConst.RedDotType.NewRedDot
+    elseif Content.Upgradeable then
+      Content.RedDotType = UIConst.RedDotType.CommonRedDot
+    else
+      Content.RedDotType = nil
+    end
+    if Content.SelfWidget then
+      Content.SelfWidget:SetRedDot(Content.RedDotType)
+    end
+    if Content.Widget then
+      Content.Widget:SetReddot(Content.RedDotType)
+    end
+  end
+  self:SubTabReddotFunc(ArmoryUtils.ArmorySubTabNames.Grade, nil, Content and Content.Upgradeable or false)
+end
+
+function M:OnCharExtraGradeItemClick(CharUuid)
+  local Avatar = ArmoryUtils:GetAvatar()
+  local Char = Avatar.Chars[CharUuid]
+  if not Char then
+    return
+  end
+  local Content = self.CharItemContentsMap[CharUuid]
+  if Char and Content then
+    local CanUpgrade = UpgradeUtils.CheckCharCanUpgradeCardLevel(Char)
+    local CanUpgradeUltra = UpgradeUtils.CheckCharCanUpgradeUltraCardLevel(Char)
+    Content.Upgradeable = CanUpgrade or CanUpgradeUltra
+    if Content.Upgradeable then
+      Content.RedDotType = UIConst.RedDotType.CommonRedDot
+    else
+      Content.RedDotType = nil
+    end
+    if Content.SelfWidget then
+      Content.SelfWidget:SetRedDot(Content.RedDotType)
+    end
+    if Content.Widget then
+      Content.Widget:SetReddot(Content.RedDotType)
+    end
+    if Char == self.ComparedChar and self.CurSubTab and self.CurSubTab.Type == CommonConst.ArmoryType.Char then
+      self:SubTabReddotFunc(ArmoryUtils.ArmorySubTabNames.Grade, nil, Content.Upgradeable)
+    end
+    ArmoryUtils:SetItemReddotRead({
+      ItemType = CommonConst.DataType.Char,
+      Uuid = CharUuid
+    }, true)
+  end
+end
+
 function M:OnCharCardLevelResourcesChanged(Rid, CharId, Uuid)
   if self.IsPreviewMode then
     return
@@ -716,11 +817,15 @@ function M:OnCharCardLevelResourcesChanged(Rid, CharId, Uuid)
     local Char = Avatar.Chars[Uuid]
     Content = self.CharItemContentsMap[Uuid]
     if Char and Content then
-      Content.Upgradeable = UpgradeUtils.CheckCharCanUpgradeCardLevel(Char)
-      if Content.IsNew then
-        Content.RedDotType = UIConst.RedDotType.NewRedDot
-      elseif Content.Upgradeable then
+      local CanUpgrade = UpgradeUtils.CheckCharCanUpgradeCardLevel(Char)
+      local CanUpgradeUltra = UpgradeUtils.CheckCharCanUpgradeUltraCardLevel(Char)
+      local IsNew = ArmoryUtils:TryAddNewUltraGradeCharReddot(Char)
+      Content.Upgradeable = CanUpgrade or CanUpgradeUltra
+      Content.IsNew = IsNew
+      if Content.Upgradeable then
         Content.RedDotType = UIConst.RedDotType.CommonRedDot
+      elseif Content.IsNew then
+        Content.RedDotType = UIConst.RedDotType.NewRedDot
       else
         Content.RedDotType = nil
       end
@@ -731,7 +836,7 @@ function M:OnCharCardLevelResourcesChanged(Rid, CharId, Uuid)
         Content.Widget:SetReddot(Content.RedDotType)
       end
       if Char == self.ComparedChar and self.CurSubTab and self.CurSubTab.Type == CommonConst.ArmoryType.Char then
-        self:SubTabReddotFunc(ArmoryUtils.ArmorySubTabNames.Grade, nil, Content.Upgradeable)
+        self:SubTabReddotFunc(ArmoryUtils.ArmorySubTabNames.Grade, IsNew, Content.Upgradeable)
       end
     end
   else

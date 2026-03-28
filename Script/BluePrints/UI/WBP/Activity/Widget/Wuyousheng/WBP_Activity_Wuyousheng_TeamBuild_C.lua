@@ -182,9 +182,7 @@ function M:GetCurrentSquad()
   if not Avatar then
     return nil
   end
-  local AvatarSquad = {}
-  local TrialSquad = {}
-  local Pet
+  local Squad = {}
   local ENameToSlotName = {}
   for SlotName, EName in pairs(self.ESlotName) do
     if type(EName) == "number" then
@@ -193,43 +191,48 @@ function M:GetCurrentSquad()
   end
   if self.Slots then
     for EName, Slot in pairs(self.Slots) do
-      if not Slot or Slot.IsEmpty or not Slot.Uuid then
+      if not Slot or Slot.IsEmpty then
       else
         local SlotName = ENameToSlotName[EName]
-        if "Pet" == SlotName then
-          Pet = Slot.UnitId
+        if not SlotName then
         else
-          local IsTryout = Slot.IsTryout
+          local SlotInfo = {}
+          local IsTryout = Slot.IsTryout or false
           local SlotType = self.SlotName2Type[EName]
-          local IsWeapon = "Weapon" == SlotType or "Melee" == SlotType or "Ranged" == SlotType
+          local DataType = self.SlotType2DataType[SlotType]
           if IsTryout then
-            TrialSquad[SlotName] = Slot.UnitId
+            SlotInfo.Id = Slot.UnitId
+            SlotInfo.bTrial = true
           else
-            local Uuid = Slot.Uuid
-            AvatarSquad[SlotName] = Uuid
-            if "Char" == SlotName then
-              local Char = Avatar.Chars[Uuid]
+            if not Slot.Uuid then
+              goto lbl_104
+            end
+            SlotInfo.Id = Slot.Uuid
+            SlotInfo.bTrial = false
+            if "Char" == DataType then
+              local Char = Avatar.Chars[Slot.Uuid]
               if Char and Char.ModSuitIndex then
-                AvatarSquad.ModSuit = Char.ModSuitIndex
+                SlotInfo.ModIndex = Char.ModSuitIndex
               end
-            elseif IsWeapon then
-              local Weapon = Avatar.Weapons[Uuid]
+            elseif "Weapon" == DataType then
+              local Weapon = Avatar.Weapons[Slot.Uuid]
               if Weapon and Weapon.ModSuitIndex then
-                local ModSuitField = "MeleeWeapon" == SlotName and "MeleeWeaponModSuit" or "RangedWeaponModSuit"
-                AvatarSquad[ModSuitField] = Weapon.ModSuitIndex
+                SlotInfo.ModIndex = Weapon.ModSuitIndex
+              end
+            elseif "Pet" == DataType then
+              local Pet = Avatar.Pets[Slot.Uuid]
+              if Pet and Pet.ModSuitIndex then
+                SlotInfo.ModIndex = Pet.ModSuitIndex
               end
             end
           end
+          Squad[SlotName] = SlotInfo
         end
       end
+      ::lbl_104::
     end
   end
-  local Result = {
-    AvatarSquad = AvatarSquad,
-    TrialSquad = TrialSquad,
-    Pet = Pet
-  }
-  return Result
+  return Squad
 end
 
 local function DeepEqualTable(t1, t2, visited)
@@ -283,22 +286,10 @@ local function IsSquadEmpty(Squad)
   if not Squad then
     return true
   end
-  local AvatarSquadEmpty = true
-  if Squad.AvatarSquad then
-    for _ in pairs(Squad.AvatarSquad) do
-      AvatarSquadEmpty = false
-      break
-    end
+  for _ in pairs(Squad) do
+    return false
   end
-  local TrialSquadEmpty = true
-  if Squad.TrialSquad then
-    for _ in pairs(Squad.TrialSquad) do
-      TrialSquadEmpty = false
-      break
-    end
-  end
-  local PetEmpty = Squad.Pet == nil
-  return AvatarSquadEmpty and TrialSquadEmpty and PetEmpty
+  return true
 end
 
 function M:IsSquadEqual(Squad1, Squad2)
@@ -357,42 +348,36 @@ function M:InitDetailPanels()
     self:ClearAllSlots()
     return
   end
-  local TeamInfo = self.TeamInfos
-  local AvatarSquad = TeamInfo.AvatarSquad or {}
-  local TrialSquad = TeamInfo.TrialSquad or {}
+  local Squad = self.TeamInfos
   for SlotName, EName in pairs(self.ESlotName) do
-    local Uuid = AvatarSquad[SlotName]
-    local IsTryout = false
-    local UnitId = TrialSquad[SlotName]
-    if "Pet" == SlotName then
-      UnitId = TeamInfo.Pet
-    end
-    if UnitId then
-      IsTryout = true
-      Uuid = UnitId
-    end
-    if not Uuid then
+    local SlotInfo = Squad[SlotName]
+    if not SlotInfo or not SlotInfo.Id then
     else
+      local Id = SlotInfo.Id
+      local IsTryout = SlotInfo.bTrial or false
       local SlotType = self.SlotName2Type[EName]
       local DataType = self.SlotType2DataType[SlotType]
       local Content
       if "Char" == SlotName or "Phantom1" == SlotName or "Phantom2" == SlotName then
-        Content = self.CharItemContentsMap[Uuid]
+        Content = self.CharItemContentsMap[Id]
       elseif "MeleeWeapon" == SlotName or "RangedWeapon" == SlotName or "PhantomWeapon1" == SlotName or "PhantomWeapon2" == SlotName then
         local WeaponTag = "RangedWeapon" == SlotName and CommonConst.ArmoryTag.Ranged or CommonConst.ArmoryTag.Melee
-        Content = self[WeaponTag .. "ItemContentsMap"][Uuid]
+        Content = self[WeaponTag .. "ItemContentsMap"][Id]
         if nil == Content then
-          Content = self.RangedItemContentsMap[Uuid]
+          Content = self.RangedItemContentsMap[Id]
         end
       elseif "Pet" == SlotName then
-        Content = self.PetItemContentsMap[Uuid]
+        Content = self.PetItemContentsMap[Id]
       end
       if not IsTryout then
-        local Unit = Avatar[DataType .. "s"][Uuid]
+        local Unit = Avatar[DataType .. "s"][Id]
         if not Unit then
-          GWorld.logger.error("M:InitDetailPanels@该Uuid对应的物品已失效" .. CommonUtils.ObjId2Str(Uuid))
+          GWorld.logger.error("M:InitDetailPanels@该Id对应的物品已失效" .. CommonUtils.ObjId2Str(Id))
       end
       elseif Content then
+        if SlotInfo.ModIndex then
+          Content.ModSuitIndex = SlotInfo.ModIndex
+        end
         self:UpdateSlot(EName, Content)
       end
     end

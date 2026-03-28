@@ -32,7 +32,8 @@ function UpdateTaskBarAndTaskMainNode:Start(Context)
     Node = self,
     Description = self.NewDescription,
     Detail = self.NewDetail,
-    SubTaskIndex = self.SubTaskTargetIndex
+    SubTaskIndex = self.SubTaskTargetIndex,
+    CurNode = 0
   })
   self:OnChooseTrack()
 end

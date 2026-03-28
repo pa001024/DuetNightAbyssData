@@ -1,7 +1,7 @@
 local BP_DanmakuTemplate_C = Class("BluePrints.Common.TimerMgr")
 
 function BP_DanmakuTemplate_C:ReceiveBeginPlay()
-  if self.BpBorn or not IsAuthority(Battle(self)) then
+  if self.BpBorn or Battle(self) and not IsAuthority(Battle(self)) then
     self.Overridden.ReceiveBeginPlay(self)
   end
 end

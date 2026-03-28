@@ -76,6 +76,7 @@ function M:InitAbyssInfo(...)
             Icon = DataMgr.Pet[TeamData[Id]].Icon
           end
           self["Team0" .. i][Widget]:SetIcon(Icon)
+          self["Team0" .. i][Widget].Icon_Empty:SetVisibility(UIConst.VisibilityOp.Collapsed)
           self["Team0" .. i][Widget].Icon_Item:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
           self["Team0" .. i][Widget]:UnBindButtonPerformances()
         end

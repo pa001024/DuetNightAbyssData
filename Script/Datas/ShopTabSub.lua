@@ -52,9 +52,17 @@ return ReadOnly("ShopTabSub", {
   },
   [1212] = {
     MainTabId = 120,
+    ReddotNode = "Shop_Skin_6",
+    SubName = "UI_SHOP_MAINTAB_ACCESSORY_WEAPON",
+    SubTabId = 1212,
+    TabCoin = T.RT_3,
+    TabType = "Skin"
+  },
+  [1213] = {
+    MainTabId = 120,
     ReddotNode = "Shop_Skin_5",
     SubName = "UI_SHOP_MAINTAB_ACCESSORY_EFFECT",
-    SubTabId = 1212,
+    SubTabId = 1213,
     TabCoin = T.RT_3,
     TabType = "Skin"
   },
@@ -152,7 +160,7 @@ return ReadOnly("ShopTabSub", {
     SubName = "UI_Armory_Char",
     SubTabId = 1801,
     TabCoin = T.RT_5,
-    TabType = "Normal"
+    TabType = "CharWalnut"
   },
   [1802] = {
     ConditionId = "SecretLetterShopTab",
@@ -161,7 +169,7 @@ return ReadOnly("ShopTabSub", {
     SubName = "UI_SHOP_SUBTAB_NAME_WEAPON",
     SubTabId = 1802,
     TabCoin = T.RT_5,
-    TabType = "Normal"
+    TabType = "WeaponWalnut"
   },
   [1803] = {
     ConditionId = "SecretLetterShopTab",
@@ -170,7 +178,7 @@ return ReadOnly("ShopTabSub", {
     SubName = "UI_Armory_Mod",
     SubTabId = 1803,
     TabCoin = T.RT_5,
-    TabType = "Normal"
+    TabType = "ModWalnut"
   },
   [2001] = {
     MainTabId = 200,
@@ -226,6 +234,15 @@ return ReadOnly("ShopTabSub", {
     SubName = "UI_SHOP_TAB_ExploreBadge_East01",
     SubTabId = 7040,
     TabCoin = {29004},
+    TabType = "Normal",
+    UnlockHide = true
+  },
+  [7050] = {
+    ConditionId = "HaoJingShopTab",
+    MainTabId = 705,
+    SubName = "UI_SHOP_TAB_ExploreBadge_East02",
+    SubTabId = 7050,
+    TabCoin = {29006},
     TabType = "Normal",
     UnlockHide = true
   },
@@ -329,6 +346,20 @@ return ReadOnly("ShopTabSub", {
     SubName = "UI_AutoChess_ShopName",
     SubTabId = 100061,
     TabCoin = {219},
+    TabType = "Normal"
+  },
+  [100071] = {
+    MainTabId = 10007,
+    SubName = "UI_SoloTreasureShop",
+    SubTabId = 100071,
+    TabCoin = {6000004},
+    TabType = "Normal"
+  },
+  [100081] = {
+    MainTabId = 10008,
+    SubName = "Event_FreeAppearance_tittle01",
+    SubTabId = 100081,
+    TabCoin = {221},
     TabType = "Normal"
   },
   [900011] = {

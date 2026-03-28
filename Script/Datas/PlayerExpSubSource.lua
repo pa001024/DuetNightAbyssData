@@ -28,59 +28,59 @@ return ReadOnly("PlayerExpSubSource", {
   },
   [4] = {
     ID = 4,
+    Key = "UltraCharCardLevelUp",
+    Sequence = 80,
+    Source = 1,
+    SubSourceName = "PlayerLevel_CharIntron"
+  },
+  [5] = {
+    ID = 5,
     Key = "Weapon",
     Sequence = 100,
     Source = 2,
     SubSourceName = "PlayerLevel_FirstObtain_Weapon"
   },
-  [5] = {
-    ID = 5,
+  [6] = {
+    ID = 6,
     Key = "WeaponBreak",
     Sequence = 90,
     Source = 2,
     SubSourceName = "PlayerLevel_WeaponBreak"
   },
-  [6] = {
-    ID = 6,
+  [7] = {
+    ID = 7,
     Key = "WeaponCardLevel",
     Sequence = 80,
     Source = 2,
     SubSourceName = "PlayerLevel_WeaponSmelt"
   },
-  [7] = {
-    ID = 7,
+  [8] = {
+    ID = 8,
+    Key = "HyperWeaponCardLevel",
+    Sequence = 80,
+    Source = 2,
+    SubSourceName = "PlayerLevel_WeaponSmelt"
+  },
+  [9] = {
+    ID = 9,
     Key = "Pet",
     Sequence = 100,
     Source = 3,
     SubSourceName = "PlayerLevel_FirstObtain_Pet"
   },
-  [8] = {
-    ID = 8,
+  [10] = {
+    ID = 10,
     Key = "PetBreak",
     Sequence = 90,
     Source = 3,
     SubSourceName = "PlayerLevel_PetBreak"
   },
-  [9] = {
-    ID = 9,
+  [11] = {
+    ID = 11,
     Key = "Mod",
     Sequence = 100,
     Source = 4,
     SubSourceName = "PlayerLevel_FirstObtain_Mod"
-  },
-  [10] = {
-    ID = 10,
-    Key = "Quest",
-    Sequence = 100,
-    Source = 5,
-    SubSourceName = "PlayerLevel_Quests"
-  },
-  [11] = {
-    ID = 11,
-    Key = "Daily",
-    Sequence = 90,
-    Source = 5,
-    SubSourceName = "PlayerLevel_DailyGoal"
   },
   [12] = {
     ID = 12,
@@ -88,5 +88,19 @@ return ReadOnly("PlayerExpSubSource", {
     Sequence = 90,
     Source = 4,
     SubSourceName = "PlayerLevel_ModQuest"
+  },
+  [13] = {
+    ID = 13,
+    Key = "Quest",
+    Sequence = 100,
+    Source = 5,
+    SubSourceName = "PlayerLevel_Quests"
+  },
+  [14] = {
+    ID = 14,
+    Key = "Daily",
+    Sequence = 90,
+    Source = 5,
+    SubSourceName = "PlayerLevel_DailyGoal"
   }
 })

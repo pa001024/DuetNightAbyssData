@@ -38,6 +38,8 @@ end
 
 function M:BindButtonPerformances()
   self.BtnView:BindEventOnClicked(self, self.OnBtnClicked)
+  self.BtnView:TryOverrideSoundFunc(function()
+  end)
 end
 
 function M:UnBindButtonPerformances()
@@ -63,6 +65,7 @@ function M:OnBtnClicked()
   Content.SinglePreview = true
   Content.HidePurchase = true
   UIManager(self):LoadUINew("SkinPreview", Content, self.ParentWidget)
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", nil, nil)
 end
 
 function M:UpdateUIStyleInPlatform(IsUseGamePad)

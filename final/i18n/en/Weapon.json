@@ -2269,6 +2269,303 @@
     ]
   },
   {
+    "id": 10305,
+    "icon": "Claymore_Mingjin",
+    "名称": "Aureate Drift",
+    "版本": "1.3",
+    "描述": "A clear note fades beyond the clouds, a frosted robe bathed in the moonlight.",
+    "类型": [
+      "近战",
+      "重剑"
+    ],
+    "伤害类型": "震荡",
+    "攻击": 21,
+    "暴击": 0.18,
+    "暴伤": 2,
+    "触发": 0.3,
+    "加成": {
+      "触发": 0.75
+    },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Filthoid Clot": 6,
+        "Basic Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 6100,
+        "Statue Debris": 3,
+        "Basic Weapon Component: Blade": 4,
+        "Basic Weapon Component: Decoration": 2
+      },
+      {
+        "Coin": 6900,
+        "Statue Debris": 6,
+        "Intermediate Weapon Component: Blade": 3,
+        "Intermediate Weapon Component: Decoration": 1
+      },
+      {
+        "Coin": 17000,
+        "Statue Debris": 12,
+        "Advanced Weapon Component: Blade": 6,
+        "Advanced Weapon Component: Decoration": 2
+      },
+      {
+        "Coin": 49000,
+        "Statue Debris": 24,
+        "Advanced Weapon Component: Blade": 10,
+        "Advanced Weapon Component: Decoration": 4
+      },
+      {
+        "Coin": 180000,
+        "Statue Debris": 48,
+        "Advanced Weapon Component: Blade": 20,
+        "Advanced Weapon Component: Decoration": 8
+      }
+    ],
+    "熔炼": [
+      "触发概率+75.0%。使用此武器造成的伤害触发额外效果时，有50.0%概率回复5枚弹药。",
+      "触发概率+90.0%。使用此武器造成的伤害触发额外效果时，有60.0%概率回复5枚弹药。",
+      "触发概率+105.0%。使用此武器造成的伤害触发额外效果时，有70.0%概率回复5枚弹药。",
+      "触发概率+120.0%。使用此武器造成的伤害触发额外效果时，有80.0%概率回复5枚弹药。",
+      "触发概率+135.0%。使用此武器造成的伤害触发额外效果时，有90.0%概率回复5枚弹药。",
+      "触发概率+150.0%。使用此武器造成的伤害触发额外效果时，有100.0%概率回复5枚弹药。"
+    ],
+    "技能": [
+      {
+        "id": 1030101,
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "1-Hit DMG",
+            "值": 0.4,
+            "削韧": 20,
+            "卡肉": 0.07,
+            "取消": 0.2667,
+            "连段": 0.3667
+          },
+          {
+            "名称": "2-Hit DMG",
+            "值": 0.45,
+            "削韧": 25,
+            "卡肉": 0.07,
+            "取消": 0.2667,
+            "连段": 0.3
+          },
+          {
+            "名称": "3-Hit DMG",
+            "值": 0.5,
+            "削韧": 30,
+            "卡肉": 0.07,
+            "取消": 0.4667,
+            "连段": 0.5667
+          },
+          {
+            "名称": "4-Hit DMG",
+            "值": 1.2,
+            "削韧": 85,
+            "卡肉": 0.07,
+            "取消": 0.6689,
+            "连段": 1.0703
+          }
+        ]
+      },
+      {
+        "id": 1030102,
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Charged Attack DMG",
+            "值": 0.55,
+            "削韧": 35,
+            "卡肉": 0.03,
+            "取消": 4.4
+          },
+          {
+            "名称": "Charged Attack Finisher DMG",
+            "值": 0.5,
+            "削韧": 150,
+            "卡肉": 0.1,
+            "取消": 4.4
+          }
+        ]
+      },
+      {
+        "id": 1030103,
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Plunge DMG",
+            "值": 0.51,
+            "削韧": 33,
+            "取消": 1.6667
+          }
+        ]
+      },
+      {
+        "id": 1030104,
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Sliding Attack DMG",
+            "值": 0.73,
+            "削韧": 47,
+            "卡肉": 0.1,
+            "取消": 0.6667
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10399,
+    "icon": "Claymore_",
+    "名称": "Metal Greatsword",
+    "版本": "1.4",
+    "描述": "Ordinary greatsword. Crafted from the cheapest metal, so there's no shame if it breaks.",
+    "类型": [
+      "近战",
+      "重剑"
+    ],
+    "伤害类型": "震荡",
+    "攻击": 17,
+    "暴击": 0.24,
+    "暴伤": 2.1,
+    "触发": 0.2,
+    "加成": {},
+    "突破": [
+      {
+        "Coin": 2800,
+        "Filthoid Clot": 6,
+        "Basic Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 6100,
+        "Statue Debris": 3,
+        "Basic Weapon Component: Blade": 4,
+        "Basic Weapon Component: Decoration": 2
+      },
+      {
+        "Coin": 6900,
+        "Statue Debris": 6,
+        "Intermediate Weapon Component: Blade": 3,
+        "Intermediate Weapon Component: Decoration": 1
+      },
+      {
+        "Coin": 17000,
+        "Statue Debris": 12,
+        "Advanced Weapon Component: Blade": 6,
+        "Advanced Weapon Component: Decoration": 2
+      },
+      {
+        "Coin": 49000,
+        "Statue Debris": 24,
+        "Advanced Weapon Component: Blade": 10,
+        "Advanced Weapon Component: Decoration": 4
+      },
+      {
+        "Coin": 180000,
+        "Statue Debris": 48,
+        "Advanced Weapon Component: Blade": 20,
+        "Advanced Weapon Component: Decoration": 8
+      }
+    ],
+    "熔炼": [],
+    "技能": [
+      {
+        "id": 1030101,
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "1-Hit DMG",
+            "值": 0.4,
+            "削韧": 20,
+            "卡肉": 0.07,
+            "取消": 0.2667,
+            "连段": 0.3667
+          },
+          {
+            "名称": "2-Hit DMG",
+            "值": 0.45,
+            "削韧": 25,
+            "卡肉": 0.07,
+            "取消": 0.2667,
+            "连段": 0.3
+          },
+          {
+            "名称": "3-Hit DMG",
+            "值": 0.5,
+            "削韧": 30,
+            "卡肉": 0.07,
+            "取消": 0.4667,
+            "连段": 0.5667
+          },
+          {
+            "名称": "4-Hit DMG",
+            "值": 1.2,
+            "削韧": 85,
+            "卡肉": 0.07,
+            "取消": 0.6689,
+            "连段": 1.0703
+          }
+        ]
+      },
+      {
+        "id": 1030102,
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Charged Attack DMG",
+            "值": 0.55,
+            "削韧": 35,
+            "卡肉": 0.03,
+            "取消": 4.4
+          },
+          {
+            "名称": "Charged Attack Finisher DMG",
+            "值": 0.5,
+            "削韧": 150,
+            "卡肉": 0.1,
+            "取消": 4.4
+          }
+        ]
+      },
+      {
+        "id": 1030103,
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Plunge DMG",
+            "值": 0.51,
+            "削韧": 33,
+            "取消": 1.6667
+          }
+        ]
+      },
+      {
+        "id": 1030104,
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Sliding Attack DMG",
+            "值": 0.73,
+            "削韧": 47,
+            "卡肉": 0.1,
+            "取消": 0.6667
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": 10401,
     "icon": "Dualblade_Shixiang",
     "名称": "Exiled Fangs",
@@ -4456,6 +4753,68 @@
     "射击间隔": 0.6667
   },
   {
+    "id": 20298,
+    "icon": "Crossbow_",
+    "名称": "Metal Dual Pistols",
+    "版本": "1.4",
+    "描述": "Ordinary dual pistols. It's made from the cheapest metal, so there's no shame if it breaks.",
+    "类型": [
+      "远程",
+      "双枪"
+    ],
+    "伤害类型": "贯穿",
+    "攻击": 6,
+    "暴击": 0.2,
+    "暴伤": 2,
+    "触发": 0.2,
+    "弹匣": 20,
+    "最大弹药": 150,
+    "弹药转化率": 0.6,
+    "最大射程": 2800,
+    "加成": {},
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Barrel": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Barrel": 4,
+        "Basic Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Barrel": 3,
+        "Intermediate Weapon Component: Frame": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Barrel": 6,
+        "Advanced Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Barrel": 10,
+        "Advanced Weapon Component: Frame": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Barrel": 20,
+        "Advanced Weapon Component: Frame": 8
+      }
+    ],
+    "熔炼": [],
+    "技能": [],
+    "装填": 0.8116,
+    "射击间隔": 0.6667
+  },
+  {
     "id": 20301,
     "icon": "Cannon_Qunxing",
     "名称": "Stellar Finality",
@@ -5369,6 +5728,185 @@
     "射击间隔": 0.5
   },
   {
+    "id": 20406,
+    "icon": "Shotgun_Qiege",
+    "名称": "Jagged Growl",
+    "版本": "1.3",
+    "描述": "Some flee from explosive shells. Others, from the jagged growl of steel teeth.",
+    "类型": [
+      "远程",
+      "霰弹枪"
+    ],
+    "伤害类型": "切割",
+    "攻击": 21,
+    "暴击": 0.3,
+    "暴伤": 2.5,
+    "触发": 0.24,
+    "弹匣": 1,
+    "最大弹药": 10,
+    "弹药转化率": 0.15,
+    "最大射程": 2800,
+    "加成": {
+      "暴伤": 0.625
+    },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Barrel": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Barrel": 4,
+        "Basic Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Barrel": 3,
+        "Intermediate Weapon Component: Frame": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Barrel": 6,
+        "Advanced Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Barrel": 10,
+        "Advanced Weapon Component: Frame": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Barrel": 20,
+        "Advanced Weapon Component: Frame": 8
+      }
+    ],
+    "熔炼": [
+      "暴击伤害+62.5%。此武器造成伤害时，如果角色当前武器为近战武器，造成的伤害提高35.0%。",
+      "暴击伤害+75.0%。此武器造成伤害时，如果角色当前武器为近战武器，造成的伤害提高42.0%。",
+      "暴击伤害+87.5%。此武器造成伤害时，如果角色当前武器为近战武器，造成的伤害提高49.0%。",
+      "暴击伤害+100.0%。此武器造成伤害时，如果角色当前武器为近战武器，造成的伤害提高56.0%。",
+      "暴击伤害+112.5%。此武器造成伤害时，如果角色当前武器为近战武器，造成的伤害提高63.0%。",
+      "暴击伤害+125.0%。此武器造成伤害时，如果角色当前武器为近战武器，造成的伤害提高70.0%。"
+    ],
+    "技能": [
+      {
+        "id": 2040601,
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Shooting DMG",
+            "值": 0.05,
+            "削韧": 10,
+            "取消": 0.8,
+            "连段": 0.8333
+          },
+          {
+            "名称": "Projectile DMG",
+            "值": 0.17,
+            "削韧": 5,
+            "取消": 0.8,
+            "连段": 0.8333
+          }
+        ]
+      }
+    ],
+    "装填": 1.1667,
+    "射击间隔": 1
+  },
+  {
+    "id": 20407,
+    "icon": "Shotgun_Guchu",
+    "名称": "Fledgling's Gleam",
+    "版本": "1.3",
+    "描述": "A solitary figure, separated from the flock, turns the pivot of destiny; beyond the mountains, a feather traces across the vast sky.",
+    "类型": [
+      "远程",
+      "霰弹枪"
+    ],
+    "伤害类型": "震荡",
+    "攻击": 20,
+    "暴击": 0.28,
+    "暴伤": 2.4,
+    "触发": 0.2,
+    "弹匣": 9,
+    "最大弹药": 90,
+    "弹药转化率": 0.5,
+    "最大射程": 2800,
+    "加成": {
+      "最大弹药": 0.9
+    },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Barrel": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Barrel": 4,
+        "Basic Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Barrel": 3,
+        "Intermediate Weapon Component: Frame": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Barrel": 6,
+        "Advanced Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Barrel": 10,
+        "Advanced Weapon Component: Frame": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Barrel": 20,
+        "Advanced Weapon Component: Frame": 8
+      }
+    ],
+    "熔炼": [
+      "最大弹药+90.0%。光属性角色释放战技或终结技消耗神智后，基于消耗量，获得技能威力提高效果，每消耗1点神智，技能威力提高{float4}0.2%，最多提高75.0%，持续24.0秒。",
+      "最大弹药+108.0%。光属性角色释放战技或终结技消耗神智后，基于消耗量，获得技能威力提高效果，每消耗1点神智，技能威力提高{float4}0.3%，最多提高90.0%，持续24.0秒。",
+      "最大弹药+126.0%。光属性角色释放战技或终结技消耗神智后，基于消耗量，获得技能威力提高效果，每消耗1点神智，技能威力提高{float4}0.4%，最多提高105.0%，持续24.0秒。",
+      "最大弹药+144.0%。光属性角色释放战技或终结技消耗神智后，基于消耗量，获得技能威力提高效果，每消耗1点神智，技能威力提高{float4}0.4%，最多提高120.0%，持续24.0秒。",
+      "最大弹药+162.0%。光属性角色释放战技或终结技消耗神智后，基于消耗量，获得技能威力提高效果，每消耗1点神智，技能威力提高{float4}0.4%，最多提高135.0%，持续24.0秒。",
+      "最大弹药+180.0%。光属性角色释放战技或终结技消耗神智后，基于消耗量，获得技能威力提高效果，每消耗1点神智，技能威力提高{float4}0.5%，最多提高150.0%，持续24.0秒。"
+    ],
+    "技能": [
+      {
+        "id": 2040701,
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Projectile DMG",
+            "值": 0.21,
+            "削韧": 10,
+            "取消": 0.4333,
+            "连段": 0.4519
+          }
+        ]
+      }
+    ],
+    "装填": 0.7707,
+    "射击间隔": 0.5
+  },
+  {
     "id": 20501,
     "icon": "Machinegun_Chixing",
     "名称": "Osteobreaker",
@@ -6213,6 +6751,178 @@
         ]
       }
     ],
+    "射击间隔": 0.1
+  },
+  {
+    "id": 20512,
+    "icon": "Machinegun_Beizhong",
+    "名称": "Dregs of Glimmer",
+    "版本": "1.3",
+    "描述": "Amber light caught between waking and dreaming, the last warmth of a dying hearth.",
+    "类型": [
+      "远程",
+      "突击枪"
+    ],
+    "伤害类型": "贯穿",
+    "攻击": 20,
+    "暴击": 0.2,
+    "暴伤": 2,
+    "触发": 0.25,
+    "弹匣": 60,
+    "最大弹药": 150,
+    "弹药转化率": 2.1,
+    "最大射程": 2900,
+    "加成": {
+      "多重": 0.375
+    },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Bolt": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Bolt": 4,
+        "Basic Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Bolt": 3,
+        "Intermediate Weapon Component: Frame": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Bolt": 6,
+        "Advanced Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Bolt": 10,
+        "Advanced Weapon Component: Frame": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Bolt": 20,
+        "Advanced Weapon Component: Frame": 8
+      }
+    ],
+    "熔炼": [
+      "多重射击+37.5%。火属性角色造成技能伤害后，获得1层技能威力提高2.5%，持续10.0秒，最多叠加30.0层。",
+      "多重射击+45.0%。火属性角色造成技能伤害后，获得1层技能威力提高3.0%，持续10.0秒，最多叠加30.0层。",
+      "多重射击+52.5%。火属性角色造成技能伤害后，获得1层技能威力提高3.5%，持续10.0秒，最多叠加30.0层。",
+      "多重射击+60.0%。火属性角色造成技能伤害后，获得1层技能威力提高4.0%，持续10.0秒，最多叠加30.0层。",
+      "多重射击+67.5%。火属性角色造成技能伤害后，获得1层技能威力提高4.5%，持续10.0秒，最多叠加30.0层。",
+      "多重射击+75.0%。火属性角色造成技能伤害后，获得1层技能威力提高5.0%，持续10.0秒，最多叠加30.0层。"
+    ],
+    "技能": [
+      {
+        "id": 2051201,
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Projectile DMG",
+            "值": 0.041,
+            "削韧": 3,
+            "取消": 0.1333
+          },
+          {
+            "名称": "Firing Interval",
+            "值": 0.1,
+            "格式": "{}shots/s"
+          }
+        ]
+      }
+    ],
+    "装填": 0.9667,
+    "射击间隔": 0.08
+  },
+  {
+    "id": 20599,
+    "icon": "Machinegun_",
+    "名称": "Metal Assault Rifle",
+    "版本": "1.4",
+    "描述": "A machine gun crafted using the latest smelting and gilding techniques. This model is a top recommendation from blacksmiths. Its perfect balance of quality and affordability has made it a popular choice among travellers across Atlasia.",
+    "类型": [
+      "远程",
+      "突击枪"
+    ],
+    "伤害类型": "",
+    "": 16,
+    "暴击": 0.22,
+    "暴伤": 2.1,
+    "触发": 0.15,
+    "弹匣": 60,
+    "最大弹药": 150,
+    "弹药转化率": 2.1,
+    "最大射程": 2900,
+    "加成": {},
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Bolt": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Bolt": 4,
+        "Basic Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Bolt": 3,
+        "Intermediate Weapon Component: Frame": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Bolt": 6,
+        "Advanced Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Bolt": 10,
+        "Advanced Weapon Component: Frame": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Bolt": 20,
+        "Advanced Weapon Component: Frame": 8
+      }
+    ],
+    "熔炼": [],
+    "技能": [
+      {
+        "id": 2050101,
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Projectile DMG",
+            "值": 0.16,
+            "削韧": 4,
+            "取消": 0.1,
+            "连段": 0.1346
+          },
+          {
+            "名称": "Firing Interval",
+            "值": 0.1,
+            "格式": "{}shots/s"
+          }
+        ]
+      }
+    ],
+    "装填": 0.7674,
     "射击间隔": 0.1
   },
   {

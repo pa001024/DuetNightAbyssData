@@ -259,8 +259,7 @@ function M:GetDetialPageClickFunc(Item, i, string, bIsWeapon)
         OnCloseDelegate = {
           self,
           self.SetOriginFocus
-        },
-        SmoothLoad = true
+        }
       })
     end
   }
@@ -327,8 +326,28 @@ function M:FreshCamera()
   if not self.ActorController then
     return
   end
-  local t1, t2, t3, t4 = self.ActorController:CalcArmoryCameraTag("Char", "Char", "Char", nil)
-  self.ActorController:SetArmoryCameraTag(t1, t2, t3, t4)
+  if -1 ~= self.SelectCharIndex then
+    if self.SelectWeaponIndex > 0 then
+      local WeaponData = PersonInfoModel:GetShowWeaponData(self.SelectWeaponIndex)
+      if WeaponData then
+        local Tag = "Ranged"
+        if WeaponData:HasTag("Melee") then
+          Tag = "Melee"
+        end
+        local PlayerCharacter = self.ActorController:GetPlayerActor()
+        if PlayerCharacter and not PlayerCharacter:GetWeaponByWeaponTag(Tag, 1) then
+          self.ActorController:ChangePlayerWeapon(WeaponData, PlayerCharacter)
+        end
+        if WeaponData:HasTag("Melee") then
+          self.ActorController:SetMontageAndCamera("Weapon", "Melee", "Melee", nil)
+        else
+          self.ActorController:SetMontageAndCamera("Weapon", "Ranged", "Ranged", nil)
+        end
+      end
+    else
+      self.ActorController:SetMontageAndCamera("Char", "Char", "Char", nil)
+    end
+  end
 end
 
 function M:ForbidenWeaponBox()
@@ -345,7 +364,6 @@ function M:OnPersonalInfoOpened(CharData)
       ViewUI = PersonInfoController.MainPage,
       IsPreviewMode = true,
       Char = CharData,
-      SmoothLoad = true,
       EPreviewSceneType = CommonConst.EPreviewSceneType.PreviewCommon,
       bNeedEndCamera = true,
       bPlayRoleChangedSound = -1 ~= self.SelectCharIndex
@@ -521,7 +539,7 @@ function M:RotateActorForGamePad(MoveDeltaX)
   end
   local CursorDelta = {X = 5, Y = 0}
   CursorDelta.X = MoveDeltaX * CursorDelta.X
-  self.ActorController:OnDragging(CursorDelta)
+  self.ActorController:OnDragViewActor(CursorDelta)
 end
 
 function M:ZoomCamare(Dalta)

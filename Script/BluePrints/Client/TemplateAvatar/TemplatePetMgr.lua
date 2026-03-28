@@ -6,4 +6,9 @@ function Component:GMAddPet(PetId)
   return Pet
 end
 
+function Component:GMCopyPet(Pet)
+  self.Pets[Pet.UniqueId] = Pet
+  return self.Pets[Pet.UniqueId]
+end
+
 return Component

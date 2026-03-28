@@ -87,6 +87,9 @@ T.RT_10 = {
   2804,
   2805
 }
+T.RT_11 = {
+  [1] = 1
+}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -99,7 +102,16 @@ return ReadOnly("FishingSpot", {
     ExtraRewardProb = 1,
     FishCountLimit = 999,
     FishId = T.RT_1,
-    FishWeight = T.RT_2,
+    FishWeight = {
+      [1] = 0,
+      [2] = 0,
+      [3] = 0,
+      [4] = 15,
+      [5] = 15,
+      [6] = 40,
+      [7] = 0,
+      [8] = 0
+    },
     FishingSpotId = 101,
     FishingSpotName = "测试用钓鱼点",
     LimitDeviation = 0,
@@ -494,6 +506,87 @@ return ReadOnly("FishingSpot", {
     ShowInFishMap = false,
     WaterType = 2
   },
+  [10450201] = {
+    ConditionId = 20021501,
+    ExtraReward = 301007,
+    ExtraRewardProb = 0.1,
+    FishCountLimit = 100,
+    FishId = {
+      [1] = 1101,
+      [2] = 1102,
+      [3] = 1103,
+      [4] = 2901,
+      [5] = 2902,
+      [6] = 2903,
+      [7] = 2904,
+      [8] = 2905
+    },
+    FishWeight = T.RT_2,
+    FishingSpotId = 10450201,
+    FishingSpotName = "FishingSpot_Name_10450201",
+    LimitDeviation = 0,
+    PetId = 4941,
+    PetProb = 0.5,
+    RegionPointId = 2828,
+    ReplenishDay = 24,
+    ShowFishId = {
+      2901,
+      2902,
+      2903,
+      2904,
+      2905
+    },
+    ShowInFishMap = true,
+    WaterType = 1
+  },
+  [10450401] = {
+    FishCountLimit = 1,
+    FishId = {
+      [1] = 3003
+    },
+    FishWeight = T.RT_11,
+    FishingSpotId = 10450401,
+    FishingSpotName = "FishingSpot_Name_10450401",
+    LimitDeviation = 0,
+    RegionPointId = 2815,
+    ReplenishDay = 1,
+    ShowFishId = {3003},
+    ShowInFishMap = false,
+    WaterType = 1
+  },
+  [10450501] = {
+    ConditionId = 20021501,
+    ExtraReward = 301006,
+    ExtraRewardProb = 0.1,
+    FishCountLimit = 100,
+    FishId = {
+      [1] = 1201,
+      [2] = 1202,
+      [3] = 1203,
+      [4] = 3001,
+      [5] = 3002,
+      [6] = 3003,
+      [7] = 3004,
+      [8] = 3005
+    },
+    FishWeight = T.RT_2,
+    FishingSpotId = 10450501,
+    FishingSpotName = "FishingSpot_Name_10450501",
+    LimitDeviation = 0,
+    PetId = 4941,
+    PetProb = 0.5,
+    RegionPointId = 2827,
+    ReplenishDay = 24,
+    ShowFishId = {
+      3001,
+      3002,
+      3003,
+      3004,
+      3005
+    },
+    ShowInFishMap = true,
+    WaterType = 2
+  },
   [10490101] = {
     ConditionId = 20021501,
     ExtraReward = 301005,
@@ -536,14 +629,45 @@ return ReadOnly("FishingSpot", {
     ShowInFishMap = false,
     WaterType = 2
   },
+  [10550101] = {
+    ConditionId = 20021501,
+    ExtraReward = 301008,
+    ExtraRewardProb = 0.1,
+    FishCountLimit = 100,
+    FishId = {
+      [1] = 1301,
+      [2] = 1302,
+      [3] = 1303,
+      [4] = 3101,
+      [5] = 3102,
+      [6] = 3103,
+      [7] = 3104,
+      [8] = 3105
+    },
+    FishWeight = T.RT_2,
+    FishingSpotId = 10550101,
+    FishingSpotName = "FishingSpot_Name_10550101",
+    LimitDeviation = 0,
+    PetId = 4941,
+    PetProb = 0.5,
+    RegionPointId = 2829,
+    ReplenishDay = 24,
+    ShowFishId = {
+      3101,
+      3102,
+      3103,
+      3104,
+      3105
+    },
+    ShowInFishMap = true,
+    WaterType = 3
+  },
   [20021501] = {
     FishCountLimit = 3,
     FishId = {
       [1] = 2301
     },
-    FishWeight = {
-      [1] = 1
-    },
+    FishWeight = T.RT_11,
     FishingSpotId = 20021501,
     FishingSpotName = "FishingSpot_Name_10110301",
     LimitDeviation = 0,

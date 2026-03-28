@@ -13,6 +13,7 @@ return ReadOnly("DamageRateZone", {
     RateZone = "HeavyAttack"
   },
   Level = {RateZone = "Level"},
+  MultiShoot = {RateZone = "MultiShoot"},
   Normal = {RateZone = "Normal"},
   Phantom = {RateZone = "Phantom"},
   Rouge = {RateZone = "Rouge"},

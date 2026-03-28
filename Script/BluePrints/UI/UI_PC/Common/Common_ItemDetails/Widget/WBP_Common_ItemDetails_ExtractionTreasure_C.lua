@@ -15,17 +15,22 @@ function M:InitItemInfo(ItemType, ItemId, UnitId)
   end
   local TreasureValue = ExtractionTreasureData.TreasureValue
   if TreasureValue then
-    self.Text_Num:SetText(tostring(TreasureValue))
+    local FormattedTreasureValue = Utils.FormatNumber(TreasureValue, false)
+    self.Text_Num:SetText(FormattedTreasureValue)
   end
-  self.Text_Value:SetText(GText("单格价值(未配Textmap)"))
+  self.Text_Value:SetText(GText("UI_Extraction_SingleSpaceValue"))
   local Shape = ExtractionTreasureData.Shape
   if Shape then
     local TreasureSize = ExtractionTreasureData.Shape[1] * ExtractionTreasureData.Shape[2]
     if TreasureValue and TreasureSize then
       local TreasureValuePreGrid = math.ceil(TreasureValue / TreasureSize)
-      self.Num_Value:SetText(tostring(TreasureValuePreGrid))
+      local FormattedTreasureValuePreGrid = Utils.FormatNumber(TreasureValuePreGrid, true)
+      self.Num_Value:SetText(FormattedTreasureValuePreGrid)
     end
     self.Bag_Position:SetShowSize(FVector2D(ExtractionTreasureData.Shape[1], ExtractionTreasureData.Shape[2]))
+    if TreasureSize <= 1 then
+      self.SingleValue:SetVisibility(ESlateVisibility.Collapsed)
+    end
   end
 end
 
