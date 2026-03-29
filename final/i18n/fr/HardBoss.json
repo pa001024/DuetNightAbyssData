@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Sibylle",
-    "icon": "",
+    "icon": "T_Permanent_HardBoss_Xibi_S",
     "desc": "Commandante de la XIIIᵉ Légion de l’Empire Hyperboréen. Ce jour-là, sur l’Île du Purgatoire, son apparition fit vaciller notre avenir et traça pour toujours une route que nul ne pouvait prévoir.",
     "diff": [
       {
@@ -43,7 +43,7 @@
   {
     "id": 2,
     "name": "Cristallophage",
-    "icon": "",
+    "icon": "T_Permanent_HardBoss_ShiJingZhe_S",
     "desc": "Le Faucheur de Glevum. Un immense Souillé hantant les profondeurs de la Fosse de Glevum, creusant et engloutissant sans fin tout ce qui brille.",
     "diff": [
       {
@@ -84,7 +84,7 @@
   {
     "id": 3,
     "name": "L’Éclose",
-    "icon": "",
+    "icon": "T_Permanent_HardBoss_Saiqi_S",
     "desc": "Graine oubliée dans la glace, elle a laissé s’éteindre l’espoir d’un doux crépuscule.",
     "diff": [
       {
@@ -125,7 +125,7 @@
   {
     "id": 4,
     "name": "« Geôlière de la fournaise »",
-    "icon": "",
+    "icon": "T_Permanent_HardBoss_Haier_S",
     "desc": "Geôlière de la Prison Militaire Royale : ses chaînes châtient le péché, et ses flammes veillent sur la justice.",
     "diff": [
       {
@@ -166,7 +166,7 @@
   {
     "id": 5,
     "name": "« La Bête née du blizzard »",
-    "icon": "",
+    "icon": "T_Permanent_HardBoss_Linen_S",
     "desc": "C’est la Bête née du blizzard, celle qui ravagea le Nord, détruisant les foyers d’enfants et dissipant les rêves des fées endormies.",
     "diff": [
       {
@@ -207,7 +207,7 @@
   {
     "id": 6,
     "name": "太皓与烛阴",
-    "icon": "",
+    "icon": "T_Permanent_HardBoss_Bailong_S",
     "desc": "待包装",
     "diff": [
       {

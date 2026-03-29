@@ -10,11 +10,13 @@ class ShopItemProcessor(BaseProcessor):
         self.table_data = {
             "DailyPack": data_loader.load_json("DailyPack.json"),
             "Resource": data_loader.load_json("Resource.json"),
+            "Hair": data_loader.load_json("Hair.json"),
             "WeaponSkin": data_loader.load_json("WeaponSkin.json"),
             "CharAccessory": data_loader.load_json("CharAccessory.json"),
             "WeaponAccessory": data_loader.load_json("WeaponAccessory.json"),
             "Skin": data_loader.load_json("Skin.json"),
             "HeadSculpture": data_loader.load_json("HeadSculpture.json"),
+            "HeadFrame": data_loader.load_json("HeadFrame.json"),
             "Walnut": data_loader.load_json("Walnut.json"),
             "Weapon": data_loader.load_json("Weapon.json"),
             "Reward": data_loader.load_json("Reward.json"),
@@ -69,6 +71,8 @@ class ShopItemProcessor(BaseProcessor):
                     "Title",
                     "Draft",
                     "DailyPack",
+                    "Hair",
+                    "HeadFrame",
                     "WeaponSkin",
                     "CharAccessory",
                     "WeaponAccessory",
@@ -173,6 +177,8 @@ class ShopItemProcessor(BaseProcessor):
                         "CharAccessory",
                         "WeaponAccessory",
                         "HeadSculpture",
+                        "Hair",
+                        "HeadFrame",
                         "Title",
                         "TitleFrame",
                     ]:
@@ -210,17 +216,21 @@ class ShopItemProcessor(BaseProcessor):
             "num": shop_item_data.get("TypeNum"),
             "limit": shop_item_data.get("PurchaseLimit"),
             "subTabId": shop_item_data.get("SubTabId"),
-            "sequence": shop_item_data.get("Sequence"),
-            "startTime": shop_item_data.get("StartTime"),
-            "endTime": shop_item_data.get("EndTime"),
         }
+        sequence = shop_item_data.get("Sequence")
+        if sequence is not None:
+            processed_shop_item["sequence"] = sequence
+        start_time = shop_item_data.get("StartTime")
+        if start_time is not None:
+            processed_shop_item["startTime"] = start_time
+        end_time = shop_item_data.get("EndTime")
+        if end_time is not None:
+            processed_shop_item["endTime"] = end_time
         unlock_level = shop_item_data.get("UnlockLevel")
         if unlock_level is not None:
             processed_shop_item["lv"] = unlock_level
         if not processed_shop_item.get("limit"):
             del processed_shop_item["limit"]
-        if not processed_shop_item.get("endTime"):
-            del processed_shop_item["endTime"]
         if item_condition_text:
             processed_shop_item["cond"] = item_condition_text
         if shop_item_data.get("Require"):

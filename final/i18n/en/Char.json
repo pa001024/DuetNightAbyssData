@@ -2964,6 +2964,7 @@
       "[Lightswords Slice Starry Streams] Level +2;\n[Life's A Fleeting, Shifting Tide] Level +1.",
       "When triggering Bonus Effect, Kezhou gains 1 stack that increases his PEN stats by 3% for 12s, up to 18 stacks."
     ],
+    "专武": 20510,
     "同律武器": [
       {
         "id": 150301,
@@ -3510,7 +3511,8 @@
       "When dealing Skill DMG, there is a chance to trigger Bonus Effect: Lumino based on the Trigger Probability of the equipped ranged weapon.\nWhen triggered, this effect pulls targets within a radius of 10 towards the centre of the affected area. This effect can trigger at most once per second.",
       "[Artificer Armament] Level ＋2, [Artificer Kinetics] Level ＋1.",
       "Each stack of [Artificer Supply] additionally increases All-Element Penetration by 6%. When an [Artificer Drone] is launched, two extra drones are generated, each dealing 50% of the original DMG."
-    ]
+    ],
+    "专武": 20407
   },
   {
     "id": 1601,
@@ -4396,7 +4398,8 @@
       "Each stack of [Taleweaver Quill] increases Fina's Skill Intensity by 2% and Skill Range by 1%.",
       "[\"Let the Tea Party Begin!\"] Level +2; [\"Bad Sorcerers Hate Sunlight!\"] Level +1.",
       "During [Boisterous Tea Party], when Fina deals weapon damage, for each Bonus Effect the target is suffering, the CRIT Chance of this attack is increased by 24%, and the elemental type of the damage is converted to the target's weakness type."
-    ]
+    ],
+    "专武": 20509
   },
   {
     "id": 2101,
@@ -5739,7 +5742,8 @@
       "Increase the stack cap of [Archaeus Revival] to 3, and grants 12% Morale Boost per stack.",
       "[Holistic Harmony] Level +2; [Archaeus Revival] Level +1.",
       "During the ATK Speed boost effect granted by [Holistic Harmony], Fushu's melee normal attack deals 220% additional Hydro Damage."
-    ]
+    ],
+    "专武": 10502
   },
   {
     "id": 3101,
@@ -8050,7 +8054,8 @@
       "Damage from [Laceration] detonation is increased by 30%, [Spinblade] Launch Speed is increased by 25.",
       "[Claret Waltz] Level +2, [Burgundy Flurry] Level +1.",
       "All Pyro Weapon and Skill DMG (excluding [Spinblades] and [Laceration]) detonates 2 stacks of [Laceration] and deals Pyro Damage 2 times. While [Spinblades] is active, additionally grants 45% PEN stats."
-    ]
+    ],
+    "专武": 20512
   },
   {
     "id": 3301,
@@ -9586,7 +9591,8 @@
       "When excess Sanity Recovery overflows, grants 1 stack of +16% ATK Boost for 16s for self and allies, stacking up to 5 times.",
       "[Heaven-Earth Divination] Level +2, [Talismans Coalescence] Level +1.",
       "When within [Four Realms Align]'s range, increases Zhiliu's PEN stats by 40%, and gains Skill DMG Boost from [Fortune's Clarity]."
-    ]
+    ],
+    "专武": 10304
   },
   {
     "id": 4201,
@@ -10069,7 +10075,8 @@
       "Plunging Attack deals additional Electro damage equal to 12% of Yuming's Skill Intensity, with a maximum of 36%.",
       "[Grimscales] Level +2; [Soaring Sky-High] Level +1.",
       "During [Xuanjiao Manifest], increases PEN stats by 25%. After triggering [Thunderous Onslaught] 6 times, deals an additional instance of [Thunderous Onslaught] damage at 130% of its original multiplier to all targets affected. Can trigger once every 6s."
-    ]
+    ],
+    "专武": 10203
   },
   {
     "id": 4202,
@@ -12711,6 +12718,7 @@
       "[Fluorescent Eclosion] Level +2; [Amberlight] Level +1.",
       "During [Flamboyance] state, increases Psyche's PEN stats by 50%."
     ],
+    "专武": 10204,
     "同律武器": [
       {
         "id": 530101,

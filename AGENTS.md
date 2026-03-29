@@ -5,6 +5,7 @@ This repository contains Python tools for converting, processing, and translatin
 ## Build, Lint, and Test Commands
 
 ### Running Tests
+
 ```bash
 # Run all tests
 python -m unittest discover -s . -p "test_*.py"
@@ -24,6 +25,7 @@ python -m unittest test_char_processor.py -v
 ```
 
 ### Main Data Processing Pipeline
+
 ```bash
 # Step 1: Convert Lua data files to JSON
 python step1_convert.py
@@ -33,33 +35,42 @@ python step2_translate.py
 
 # Step 3: Output processed data
 python step3_output.py
+
+# partial output
+python step3_output.py -f Char Weapon Mod
 ```
 
 ### Development
+
 - No formal linting or type checking configured
 - Follow Python conventions and existing code style
 
 ## Code Style Guidelines
 
 ### Imports
+
 Order imports by type, with no blank lines between groups of the same type:
+
 1. Standard library imports: `import os`, `import json`, `from collections import OrderedDict`
 2. Third-party imports: `from lupa import LuaRuntime`
 3. Local imports: `from processor.base_processor import BaseProcessor`, `from ast_parser import parse_ast`
 
 ### Formatting
+
 - Use 4 spaces for indentation
 - All files use UTF-8 encoding
 - JSON files: indent=2, ensure_ascii=False
 - Use `OrderedDict` for JSON data when order preservation matters
 
 ### Type Hints
+
 - Use type hints when defining new classes and public methods
 - Import from `typing`: `Union`, `List`, `Optional`, `Dict`
 - Use `@dataclass` for simple data structures (see ast_parser.py)
 - Example: `def process_item(self, item_data, language) -> Dict:`
 
 ### Naming Conventions
+
 - Classes: PascalCase - `BaseProcessor`, `CharProcessor`, `DataLoader`
 - Functions/Methods: snake_case - `process_item`, `load_json`, `get_translated_text`
 - Variables: snake_case - `char_id`, `battle_char`, `skill_data`
@@ -67,6 +78,7 @@ Order imports by type, with no blank lines between groups of the same type:
 - File names: snake_case - `char_processor.py`, `test_char_processor.py`
 
 ### Error Handling
+
 - Use try-except blocks with specific exceptions where possible
 - Print errors with `flush=True` for immediate output: `print(f"Error: {e}", flush=True)`
 - Provide graceful fallbacks: return `None`, `{}`, or `0.0` instead of raising
@@ -74,17 +86,20 @@ Order imports by type, with no blank lines between groups of the same type:
 - Use `traceback.print_exc()` for debugging complex errors
 
 ### Code Organization
+
 - Inherit from `BaseProcessor` for all data processors (char_processor.py, weapon_processor.py, etc.)
 - Use `DataLoader` for all JSON file access (caching, i18n support)
 - Each processor handles one data type (Char, Weapon, Mod, etc.)
 - Processors follow pattern: `load_json()` → `process_item()` → `save_processed_items()`
 
 ### Documentation
+
 - Add docstrings to public methods and classes
 - Use Chinese for docstrings and comments (matching existing code)
 - Example: `"""处理单个项目，子类必须实现"""`
 
 ### Testing
+
 - Use standard `unittest.TestCase` for all tests
 - Test files: `test_<module>_processor.py`
 - Test classes: `Test<Module>Processor`
@@ -92,6 +107,7 @@ Order imports by type, with no blank lines between groups of the same type:
 - Mock external dependencies using `unittest.mock.MagicMock`
 
 ### Special Patterns
+
 - **I18n**: Always use `get_translated_text()` instead of hardcoded strings
 - **AST Parsing**: Use `ast_parser.parse_ast()` for expression evaluation
 - **Lua Conversion**: Files in `Datas/*.lua` → `out/*.json` via `step1_convert.py`
@@ -101,6 +117,7 @@ Order imports by type, with no blank lines between groups of the same type:
 - **Cyclic Reference Handling**: When processing JSON, use `seen` set with `id()` to prevent infinite loops
 
 ### Adding New Processors
+
 1. Create `processor/<name>_processor.py` inheriting from `BaseProcessor`
 2. Implement `process_item(self, item_data, language)` method
 3. Override `_calc_attr_by_level()` if custom attribute calculation needed
@@ -108,6 +125,7 @@ Order imports by type, with no blank lines between groups of the same type:
 5. Follow pattern: `load_json()` → `process_item()` → `save_processed_items()`
 
 ### File Paths
+
 - Input data: `./Datas/*.lua` (Lua game data files)
 - Converted data: `./out/*.json` (intermediate JSON)
 - Processors: `./processor/*_processor.py`
@@ -116,27 +134,35 @@ Order imports by type, with no blank lines between groups of the same type:
 ## Key Components
 
 ### Processor Classes
+
 All processors inherit from `BaseProcessor` and implement:
+
 - `process_item(item_data, language)` - Process single data item
 - Optional: Override `_calc_attr_by_level()` for custom attribute calculation
 
 ### DataLoader
+
 Centralized JSON data loading with:
+
 - Caching to avoid repeated file reads
 - i18n support (TextMap_I18n.json with cn, en, jp, kr, fr, es, tc fields)
 - Language switching via `set_language(language)`
 
 ### AST Parser
+
 Handles game data expression evaluation (e.g., "#SkillEffects[310313].Value")
+
 - Supports: binary ops, member access, index access, function calls
 - Math functions: math.abs, math.floor, math.ceil, math.max, math.min, math.sqrt
 - Node types: IDENTIFIER, MEMBER_ACCESS, INDEX_ACCESS, BINARY_EXPR, UNARY_EXPR, LITERAL, ARRAY_ACCESS, FUNCTION_CALL
 
 ### Dependencies
+
 - `lupa`: Python-Lua bridge for parsing game data files
 - Standard library: os, json, sys, collections.OrderedDict, typing, unittest
 
 ### Common Data Structures
+
 - `OrderedDict`: Preserves insertion order for JSON output
 - `TextMap_I18n.json`: i18n data with fields: cn, en, jp, kr, fr, es, tc
 - Game data expressions: "#TableName[id].Property" pattern

@@ -200,9 +200,15 @@ class RegionProcessor(BaseProcessor):
         ref_obj: dict,
         by_outer_name: Dict[Tuple[str, str], dict],
         by_name: Dict[str, List[dict]],
+        by_path: Optional[Dict[str, dict]] = None,
     ) -> Optional[dict]:
         if not isinstance(ref_obj, dict):
             return None
+        object_path = ref_obj.get("ObjectPath")
+        if by_path is not None and isinstance(object_path, str):
+            direct = by_path.get(object_path)
+            if direct is not None:
+                return direct
         outer, name = self._ref_outer_and_name(ref_obj.get("ObjectName"))
         if not name:
             return None
@@ -222,19 +228,33 @@ class RegionProcessor(BaseProcessor):
         return candidates[0] if candidates else None
 
     @staticmethod
-    def _build_object_maps(arr: List[dict]) -> Tuple[Dict[Tuple[str, str], dict], Dict[str, List[dict]]]:
+    def _build_object_maps(arr: List[dict]) -> Tuple[Dict[Tuple[str, str], dict], Dict[str, List[dict]], Dict[str, dict]]:
         by_outer_name: Dict[Tuple[str, str], dict] = {}
         by_name: Dict[str, List[dict]] = {}
+        by_path: Dict[str, dict] = {}
         for obj in arr:
             if not isinstance(obj, dict):
                 continue
             name = obj.get("Name")
             outer = obj.get("Outer")
+            outer_name = None
+            if isinstance(outer, dict):
+                outer_name = outer.get("ObjectName")
+            elif isinstance(outer, str):
+                outer_name = outer
+            outer_short_name = None
+            if isinstance(outer_name, str):
+                _, outer_short_name = RegionProcessor._ref_outer_and_name(outer_name)
+            object_path = obj.get("ObjectPath")
             if isinstance(name, str):
                 by_name.setdefault(name, []).append(obj)
-                if isinstance(outer, str):
-                    by_outer_name[(outer, name)] = obj
-        return by_outer_name, by_name
+                if isinstance(outer_name, str):
+                    by_outer_name[(outer_name, name)] = obj
+                if isinstance(outer_short_name, str):
+                    by_outer_name[(outer_short_name, name)] = obj
+            if isinstance(object_path, str):
+                by_path[object_path] = obj
+        return by_outer_name, by_name, by_path
 
     def _extract_splice_grid_slot_props(self, widget_json_path: Path, grid_name: str) -> Optional[dict]:
         """
@@ -254,7 +274,7 @@ class RegionProcessor(BaseProcessor):
             self.splice_slot_cache[cache_key] = None
             return None
 
-        by_outer_name, by_name = self._build_object_maps(arr)
+        by_outer_name, by_name, by_path = self._build_object_maps(arr)
 
         root_panel = None
         widget_tree = None
@@ -264,7 +284,7 @@ class RegionProcessor(BaseProcessor):
                 break
         if widget_tree is not None:
             root_ref = widget_tree.get("Properties", {}).get("RootWidget", {})
-            root_obj = self._resolve_ref_object(root_ref, by_outer_name, by_name)
+            root_obj = self._resolve_ref_object(root_ref, by_outer_name, by_name, by_path)
             if isinstance(root_obj, dict) and root_obj.get("Type") == "CanvasPanel":
                 root_panel = root_obj
 
@@ -283,7 +303,7 @@ class RegionProcessor(BaseProcessor):
         slots = root_panel.get("Properties", {}).get("Slots", [])
         if isinstance(slots, list):
             for slot_ref in slots:
-                slot_obj = self._resolve_ref_object(slot_ref, by_outer_name, by_name)
+                slot_obj = self._resolve_ref_object(slot_ref, by_outer_name, by_name, by_path)
                 if not slot_obj or slot_obj.get("Type") != "CanvasPanelSlot":
                     continue
                 slot_props = slot_obj.get("Properties", {})
@@ -291,6 +311,7 @@ class RegionProcessor(BaseProcessor):
                     slot_props.get("Content", {}),
                     by_outer_name,
                     by_name,
+                    by_path,
                 )
                 if not content_obj or content_obj.get("Type") != "UniformGridPanel":
                     continue
@@ -313,6 +334,7 @@ class RegionProcessor(BaseProcessor):
                 obj.get("Properties", {}).get("Slot", {}),
                 by_outer_name,
                 by_name,
+                by_path,
             )
             if slot_obj and slot_obj.get("Type") == "CanvasPanelSlot":
                 slot_props = slot_obj.get("Properties", {})
@@ -362,12 +384,169 @@ class RegionProcessor(BaseProcessor):
         ctype = content_obj.get("Type", "")
         if not (isinstance(ctype, str) and ctype.startswith("WBP_Map_") and ctype.endswith("_C")):
             return False
-        if "Reg_" in ctype:
+        if "Reg_" in ctype and not ctype.endswith("_BG_C"):
             return False
         class_path = self._class_path_from_class_field(content_obj.get("Class", ""))
         if not class_path or "/Map_Splice/" not in class_path:
             return False
         return True
+
+    @staticmethod
+    def _object_identity_key(obj: dict) -> Tuple[Optional[str], Optional[str], Optional[str]]:
+        """生成对象去重键。"""
+        if not isinstance(obj, dict):
+            return None, None, None
+        obj_type = obj.get("Type")
+        outer = obj.get("Outer")
+        outer_name = None
+        if isinstance(outer, dict):
+            outer_name = outer.get("ObjectName")
+        elif isinstance(outer, str):
+            outer_name = outer
+        return obj_type, outer_name, obj.get("Name")
+
+    def _resolve_canvas_panel_rect(
+        self,
+        panel_obj: dict,
+        base_rect: Tuple[int, int, int, int],
+        by_outer_name: Dict[Tuple[str, str], dict],
+        by_name: Dict[str, List[dict]],
+        by_path: Dict[str, dict],
+        panel_rect_cache: Dict[int, Tuple[int, int, int, int]],
+        panel_visiting: set,
+    ) -> Optional[Tuple[int, int, int, int]]:
+        """递归解析 CanvasPanel 的绝对矩形。"""
+        if not isinstance(panel_obj, dict) or panel_obj.get("Type") != "CanvasPanel":
+            return None
+
+        panel_id = id(panel_obj)
+        if panel_id in panel_rect_cache:
+            return panel_rect_cache[panel_id]
+        if panel_id in panel_visiting:
+            return None
+
+        panel_visiting.add(panel_id)
+        try:
+            slot_ref = panel_obj.get("Properties", {}).get("Slot")
+            if not isinstance(slot_ref, dict):
+                rect = base_rect if panel_obj.get("Name") == "Main" else None
+                if rect is not None:
+                    panel_rect_cache[panel_id] = rect
+                return rect
+
+            slot_obj = self._resolve_ref_object(slot_ref, by_outer_name, by_name, by_path)
+            if not isinstance(slot_obj, dict) or slot_obj.get("Type") != "CanvasPanelSlot":
+                return None
+
+            outer_ref = slot_obj.get("Outer")
+            outer_name = None
+            if isinstance(outer_ref, dict):
+                outer_name = outer_ref.get("ObjectName")
+            elif isinstance(outer_ref, str):
+                outer_name = outer_ref
+
+            parent_panel = None
+            if isinstance(outer_name, str):
+                _, parent_name = self._ref_outer_and_name(outer_name)
+                if parent_name:
+                    candidates = by_name.get(parent_name, [])
+                    if len(candidates) == 1:
+                        parent_panel = candidates[0]
+                    else:
+                        for candidate in candidates:
+                            if candidate.get("Type") == "CanvasPanel":
+                                parent_panel = candidate
+                                break
+
+            parent_rect = base_rect
+            if isinstance(parent_panel, dict):
+                resolved_parent = self._resolve_canvas_panel_rect(
+                    parent_panel,
+                    base_rect,
+                    by_outer_name,
+                    by_name,
+                    by_path,
+                    panel_rect_cache,
+                    panel_visiting,
+                )
+                if resolved_parent is not None:
+                    parent_rect = resolved_parent
+
+            rect = self._slot_geometry(
+                parent_rect=parent_rect,
+                slot_props=slot_obj.get("Properties", {}),
+                fallback_size=(parent_rect[2], parent_rect[3]),
+            )
+            panel_rect_cache[panel_id] = rect
+            return rect
+        finally:
+            panel_visiting.discard(panel_id)
+
+    def _collect_map_splice_widget(
+        self,
+        content_obj: dict,
+        slot_props: dict,
+        parent_rect: Tuple[int, int, int, int],
+        layer_opacity: float,
+        slot_z_order: int,
+        inherited_z_order: int,
+        sub_maps: List[Dict],
+        collected_keys: set,
+    ) -> None:
+        """收集一个 Map_Splice 子图。"""
+        if not self._is_map_splice_widget(content_obj):
+            return
+
+        object_key = self._object_identity_key(content_obj)
+        if object_key in collected_keys:
+            return
+        collected_keys.add(object_key)
+
+        class_path = self._class_path_from_class_field(content_obj.get("Class", ""))
+        if not class_path:
+            return
+
+        widget_rel = class_path.split(".")[0]
+        widget_name = Path(widget_rel).name
+
+        widget_json_path = None
+        fallback_size = (0, 0)
+        if self.exports_root is not None:
+            candidate = (self.exports_root / widget_rel).with_suffix(".json")
+            if candidate.is_file():
+                widget_json_path = candidate
+                fallback_size = self._estimate_widget_canvas_size(candidate)
+
+        x, y, w, h = self._slot_geometry(
+            parent_rect=parent_rect,
+            slot_props=slot_props,
+            fallback_size=fallback_size,
+        )
+
+        if widget_json_path is not None:
+            inner_slot_props = self._extract_splice_grid_slot_props(
+                widget_json_path,
+                self.splice_grid_name,
+            )
+            if inner_slot_props is not None:
+                inner_x, inner_y, inner_w, inner_h = self._slot_geometry(
+                    parent_rect=(0, 0, w, h),
+                    slot_props=inner_slot_props,
+                    fallback_size=fallback_size,
+                )
+                x += inner_x
+                y += inner_y
+                w = inner_w
+                h = inner_h
+
+        sub_maps.append(
+            {
+                "name": widget_name,
+                "pos": [x, y, w, h],
+                "opacity": self._format_opacity(layer_opacity),
+                "zOrder": inherited_z_order + slot_z_order,
+            }
+        )
 
     @staticmethod
     def _format_opacity(opacity: float):
@@ -382,109 +561,93 @@ class RegionProcessor(BaseProcessor):
         panel_obj: dict,
         parent_rect: Tuple[int, int, int, int],
         parent_opacity: float,
+        parent_z_order: int,
         by_outer_name: Dict[Tuple[str, str], dict],
         by_name: Dict[str, List[dict]],
+        by_path: Dict[str, dict],
         sub_maps: List[Dict],
+        collected_keys: Optional[set] = None,
+        panel_stack: Optional[set] = None,
     ) -> None:
-        slots = panel_obj.get("Properties", {}).get("Slots", [])
-        if not isinstance(slots, list):
+        if collected_keys is None:
+            collected_keys = set()
+        if panel_stack is None:
+            panel_stack = set()
+
+        panel_key = id(panel_obj)
+        if panel_key in panel_stack:
             return
 
-        resolved_slots: List[Tuple[int, dict]] = []
-        for idx, slot_ref in enumerate(slots):
-            slot_obj = self._resolve_ref_object(slot_ref, by_outer_name, by_name)
-            if not slot_obj or slot_obj.get("Type") != "CanvasPanelSlot":
-                continue
-            resolved_slots.append((idx, slot_obj))
+        panel_stack.add(panel_key)
+        try:
+            slots = panel_obj.get("Properties", {}).get("Slots", [])
+            if not isinstance(slots, list):
+                return
 
-        resolved_slots.sort(
-            key=lambda item: (
-                int(item[1].get("Properties", {}).get("ZOrder", 0) or 0),
-                item[0],
-            )
-        )
+            resolved_slots: List[Tuple[int, dict]] = []
+            for idx, slot_ref in enumerate(slots):
+                slot_obj = self._resolve_ref_object(slot_ref, by_outer_name, by_name, by_path)
+                if not slot_obj or slot_obj.get("Type") != "CanvasPanelSlot":
+                    continue
+                resolved_slots.append((idx, slot_obj))
 
-        for _, slot_obj in resolved_slots:
-            slot_props = slot_obj.get("Properties", {})
-            slot_z_order = int(slot_props.get("ZOrder", 0) or 0)
-            content_obj = self._resolve_ref_object(
-                slot_props.get("Content", {}),
-                by_outer_name,
-                by_name,
-            )
-            if not content_obj:
-                continue
-            if not self._is_widget_visible(content_obj):
-                continue
-
-            layer_opacity = parent_opacity * self._widget_render_opacity(content_obj)
-            if layer_opacity <= 0.0:
-                continue
-
-            if content_obj.get("Type") == "CanvasPanel":
-                child_rect = self._slot_geometry(
-                    parent_rect=parent_rect,
-                    slot_props=slot_props,
-                    fallback_size=(parent_rect[2], parent_rect[3]),
+            resolved_slots.sort(
+                key=lambda item: (
+                    int(item[1].get("Properties", {}).get("ZOrder", 0) or 0),
+                    item[0],
                 )
-                self._walk_panel_collect_sub_maps(
-                    panel_obj=content_obj,
-                    parent_rect=child_rect,
-                    parent_opacity=layer_opacity,
-                    by_outer_name=by_outer_name,
-                    by_name=by_name,
-                    sub_maps=sub_maps,
-                )
-                continue
-
-            if not self._is_map_splice_widget(content_obj):
-                continue
-
-            class_path = self._class_path_from_class_field(content_obj.get("Class", ""))
-            if not class_path:
-                continue
-
-            widget_rel = class_path.split(".")[0]
-            widget_name = Path(widget_rel).name
-
-            widget_json_path = None
-            fallback_size = (0, 0)
-            if self.exports_root is not None:
-                candidate = (self.exports_root / widget_rel).with_suffix(".json")
-                if candidate.is_file():
-                    widget_json_path = candidate
-                    fallback_size = self._estimate_widget_canvas_size(candidate)
-
-            x, y, w, h = self._slot_geometry(
-                parent_rect=parent_rect,
-                slot_props=slot_props,
-                fallback_size=fallback_size,
             )
 
-            if widget_json_path is not None:
-                inner_slot_props = self._extract_splice_grid_slot_props(
-                    widget_json_path,
-                    self.splice_grid_name,
+            for _, slot_obj in resolved_slots:
+                slot_props = slot_obj.get("Properties", {})
+                slot_z_order = int(slot_props.get("ZOrder", 0) or 0)
+                content_obj = self._resolve_ref_object(
+                    slot_props.get("Content", {}),
+                    by_outer_name,
+                    by_name,
+                    by_path,
                 )
-                if inner_slot_props is not None:
-                    inner_x, inner_y, inner_w, inner_h = self._slot_geometry(
-                        parent_rect=(0, 0, w, h),
-                        slot_props=inner_slot_props,
-                        fallback_size=fallback_size,
+                if not content_obj:
+                    continue
+                if not self._is_widget_visible(content_obj):
+                    continue
+
+                layer_opacity = parent_opacity * self._widget_render_opacity(content_obj)
+                if layer_opacity <= 0.0:
+                    continue
+
+                if content_obj.get("Type") == "CanvasPanel":
+                    child_rect = self._slot_geometry(
+                        parent_rect=parent_rect,
+                        slot_props=slot_props,
+                        fallback_size=(parent_rect[2], parent_rect[3]),
                     )
-                    x += inner_x
-                    y += inner_y
-                    w = inner_w
-                    h = inner_h
+                    self._walk_panel_collect_sub_maps(
+                        panel_obj=content_obj,
+                        parent_rect=child_rect,
+                        parent_opacity=layer_opacity,
+                        parent_z_order=parent_z_order + slot_z_order,
+                        by_outer_name=by_outer_name,
+                        by_name=by_name,
+                        by_path=by_path,
+                        sub_maps=sub_maps,
+                        collected_keys=collected_keys,
+                        panel_stack=panel_stack,
+                    )
+                    continue
 
-            sub_maps.append(
-                {
-                    "name": widget_name,
-                    "pos": [x, y, w, h],
-                    "opacity": self._format_opacity(layer_opacity),
-                    "zOrder": slot_z_order,
-                }
-            )
+                self._collect_map_splice_widget(
+                    content_obj=content_obj,
+                    slot_props=slot_props,
+                    parent_rect=parent_rect,
+                    layer_opacity=layer_opacity,
+                    slot_z_order=slot_z_order,
+                    inherited_z_order=parent_z_order,
+                    sub_maps=sub_maps,
+                    collected_keys=collected_keys,
+                )
+        finally:
+            panel_stack.discard(panel_key)
 
     def _collect_region_sub_maps(self, region_widget_json_path: Path) -> List[Dict]:
         """解析 RegionMap Widget，提取所有 Map_Splice 子图布局。"""
@@ -495,7 +658,7 @@ class RegionProcessor(BaseProcessor):
         if not isinstance(arr, list):
             return []
 
-        by_outer_name, by_name = self._build_object_maps(arr)
+        by_outer_name, by_name, by_path = self._build_object_maps(arr)
 
         root_panel = None
         widget_tree = None
@@ -505,7 +668,7 @@ class RegionProcessor(BaseProcessor):
                 break
         if widget_tree is not None:
             root_ref = widget_tree.get("Properties", {}).get("RootWidget", {})
-            root_obj = self._resolve_ref_object(root_ref, by_outer_name, by_name)
+            root_obj = self._resolve_ref_object(root_ref, by_outer_name, by_name, by_path)
             if isinstance(root_obj, dict) and root_obj.get("Type") == "CanvasPanel":
                 root_panel = root_obj
 
@@ -526,14 +689,111 @@ class RegionProcessor(BaseProcessor):
 
         base_w, base_h = self._infer_base_canvas_size(arr)
         sub_maps: List[Dict] = []
+        collected_keys: set = set()
         self._walk_panel_collect_sub_maps(
             panel_obj=root_panel,
             parent_rect=(0, 0, base_w, base_h),
             parent_opacity=1.0,
+            parent_z_order=0,
             by_outer_name=by_outer_name,
             by_name=by_name,
+            by_path=by_path,
             sub_maps=sub_maps,
+            collected_keys=collected_keys,
+            panel_stack=set(),
         )
+
+        panel_rect_cache: Dict[int, Tuple[int, int, int, int]] = {}
+        for obj in arr:
+            if not isinstance(obj, dict):
+                continue
+            if not self._is_map_splice_widget(obj):
+                continue
+            slot_ref = obj.get("Properties", {}).get("Slot")
+            if not isinstance(slot_ref, dict):
+                continue
+            slot_obj = self._resolve_ref_object(slot_ref, by_outer_name, by_name, by_path)
+            if not isinstance(slot_obj, dict) or slot_obj.get("Type") != "CanvasPanelSlot":
+                continue
+
+            outer_ref = slot_obj.get("Outer")
+            outer_name = None
+            if isinstance(outer_ref, dict):
+                outer_name = outer_ref.get("ObjectName")
+            elif isinstance(outer_ref, str):
+                outer_name = outer_ref
+            if not isinstance(outer_name, str):
+                continue
+            _, parent_name = self._ref_outer_and_name(outer_name)
+            if not parent_name:
+                continue
+            parent_candidates = by_name.get(parent_name, [])
+            parent_panel = next(
+                (
+                    candidate
+                    for candidate in parent_candidates
+                    if candidate.get("Type") == "CanvasPanel"
+                ),
+                None,
+            )
+            if not isinstance(parent_panel, dict):
+                continue
+
+            parent_rect = self._resolve_canvas_panel_rect(
+                parent_panel,
+                (0, 0, base_w, base_h),
+                by_outer_name,
+                by_name,
+                by_path,
+                panel_rect_cache,
+                set(),
+            )
+            if parent_rect is None:
+                continue
+
+            self._collect_map_splice_widget(
+                content_obj=obj,
+                slot_props=slot_obj.get("Properties", {}),
+                parent_rect=parent_rect,
+                layer_opacity=1.0,
+                slot_z_order=int(slot_obj.get("Properties", {}).get("ZOrder", 0) or 0),
+                inherited_z_order=0,
+                sub_maps=sub_maps,
+                collected_keys=collected_keys,
+            )
+        return self._normalize_full_frame_pair_offsets(sub_maps)
+
+    @staticmethod
+    def _normalize_full_frame_pair_offsets(sub_maps: List[Dict]) -> List[Dict]:
+        """整幅 BG + 主图叠层时，对齐主图到 BG 原点。"""
+        if len(sub_maps) != 2:
+            return sub_maps
+
+        bg_layers = [
+            item for item in sub_maps if isinstance(item.get("name"), str) and item["name"].endswith("_BG")
+        ]
+        fg_layers = [
+            item for item in sub_maps if not (isinstance(item.get("name"), str) and item["name"].endswith("_BG"))
+        ]
+        if len(bg_layers) != 1 or len(fg_layers) != 1:
+            return sub_maps
+
+        bg = bg_layers[0]
+        fg = fg_layers[0]
+        bg_pos = bg.get("pos")
+        fg_pos = fg.get("pos")
+        if not (
+            isinstance(bg_pos, list)
+            and isinstance(fg_pos, list)
+            and len(bg_pos) == 4
+            and len(fg_pos) == 4
+            and bg_pos[2] == fg_pos[2]
+            and bg_pos[3] == fg_pos[3]
+            and fg.get("zOrder", 0) >= bg.get("zOrder", 0)
+        ):
+            return sub_maps
+
+        fg["pos"] = [bg_pos[0], bg_pos[1], fg_pos[2], fg_pos[3]]
         return sub_maps
 
     def _build_map_mapping(self, map_image_path: str) -> List[Dict]:

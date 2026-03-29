@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "夢魘殘聲：西比爾",
-    "icon": "",
+    "icon": "T_Permanent_HardBoss_Xibi_S",
     "desc": "海伯利亞帝國第十三軍團軍團長。那一日在淨界島，她的出現，讓我們的命運永遠地偏離了曾經的軌道。",
     "diff": [
       {
@@ -43,7 +43,7 @@
   {
     "id": 2,
     "name": "嗜晶者",
-    "icon": "",
+    "icon": "T_Permanent_HardBoss_ShiJingZhe_S",
     "desc": "格雷姆的死神。出現在格雷姆礦坑深處的巨大穢獸，機械性地重複著挖掘通道與吞噬發光物的行為。",
     "diff": [
       {
@@ -84,7 +84,7 @@
   {
     "id": 3,
     "name": "羽化者",
-    "icon": "",
+    "icon": "T_Permanent_HardBoss_Saiqi_S",
     "desc": "凍土中的種子，錯過了溫和地走入夜幕的契機。",
     "diff": [
       {
@@ -125,7 +125,7 @@
   {
     "id": 4,
     "name": "「煉火的典獄長」",
-    "icon": "",
+    "icon": "T_Permanent_HardBoss_Haier_S",
     "desc": "帝國皇家軍監獄典獄長，她的鐵鏈將會懲戒罪惡，她的火焰將會堅守正義。",
     "diff": [
       {
@@ -166,7 +166,7 @@
   {
     "id": 5,
     "name": "「雪國的野獸」",
-    "icon": "",
+    "icon": "T_Permanent_HardBoss_Linen_S",
     "desc": "那是肆虐在雪國的野獸，摧毀了孩子們的故鄉，融化了妖精的碎夢。",
     "diff": [
       {
@@ -207,7 +207,7 @@
   {
     "id": 6,
     "name": "太皓与烛阴",
-    "icon": "",
+    "icon": "T_Permanent_HardBoss_Bailong_S",
     "desc": "待包装",
     "diff": [
       {

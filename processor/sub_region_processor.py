@@ -60,16 +60,21 @@ class SubRegionProcessor(BaseProcessor):
             return None
         if not processed_sub_region["pos"]:
             del processed_sub_region["pos"]
-        rc = self._get_pet_random_creators(
-            processed_sub_region["map"], processed_sub_region["rid"]
-        )
-        if rc:
-            processed_sub_region["rc"] = rc
         sub_region_range = self._get_sub_region_range(
             processed_sub_region["map"], sub_region_id
         )
         if sub_region_range:
             processed_sub_region["range"] = sub_region_range
+        reference_center = None
+        if processed_sub_region.get("pos"):
+            reference_center = processed_sub_region["pos"]
+        elif sub_region_range and isinstance(sub_region_range.get("center"), list):
+            reference_center = sub_region_range["center"]
+        rc = self._get_pet_random_creators(
+            processed_sub_region["map"], processed_sub_region["rid"], reference_center
+        )
+        if rc:
+            processed_sub_region["rc"] = rc
 
         return processed_sub_region
 
@@ -179,30 +184,46 @@ class SubRegionProcessor(BaseProcessor):
     @staticmethod
     def _build_object_maps(
         arr: List[dict],
-    ) -> Tuple[Dict[Tuple[str, str], dict], Dict[str, List[dict]]]:
+    ) -> Tuple[Dict[Tuple[str, str], dict], Dict[str, List[dict]], Dict[str, dict]]:
         """构建对象索引，便于从 ObjectRef 快速反查对象。"""
         by_outer_name: Dict[Tuple[str, str], dict] = {}
         by_name: Dict[str, List[dict]] = {}
+        by_path: Dict[str, dict] = {}
         for obj in arr:
             if not isinstance(obj, dict):
                 continue
             name = obj.get("Name")
             outer = obj.get("Outer")
+            outer_name = outer.get("ObjectName") if isinstance(outer, dict) else outer
+            outer_short_name = None
+            if isinstance(outer_name, str):
+                _, outer_short_name = SubRegionProcessor._ref_outer_and_name(outer_name)
+            object_path = obj.get("ObjectPath")
             if isinstance(name, str):
                 by_name.setdefault(name, []).append(obj)
-                if isinstance(outer, str):
-                    by_outer_name[(outer, name)] = obj
-        return by_outer_name, by_name
+                if isinstance(outer_name, str):
+                    by_outer_name[(outer_name, name)] = obj
+                if isinstance(outer_short_name, str):
+                    by_outer_name[(outer_short_name, name)] = obj
+            if isinstance(object_path, str):
+                by_path[object_path] = obj
+        return by_outer_name, by_name, by_path
 
     def _resolve_ref_object(
         self,
         ref_obj: dict,
         by_outer_name: Dict[Tuple[str, str], dict],
         by_name: Dict[str, List[dict]],
+        by_path: Optional[Dict[str, dict]] = None,
     ) -> Optional[dict]:
         """从引用对象中反查真实对象。"""
         if not isinstance(ref_obj, dict):
             return None
+        object_path = ref_obj.get("ObjectPath")
+        if by_path is not None and isinstance(object_path, str):
+            direct = by_path.get(object_path)
+            if direct is not None:
+                return direct
         outer, name = self._ref_outer_and_name(ref_obj.get("ObjectName"))
         if not name:
             return None
@@ -215,7 +236,14 @@ class SubRegionProcessor(BaseProcessor):
             return candidates[0]
         if outer and candidates:
             for candidate in candidates:
-                if candidate.get("Outer") == outer:
+                candidate_outer = candidate.get("Outer")
+                candidate_outer_name = (
+                    candidate_outer.get("ObjectName")
+                    if isinstance(candidate_outer, dict)
+                    else candidate_outer
+                )
+                _, candidate_outer_short = self._ref_outer_and_name(candidate_outer_name)
+                if candidate_outer_name == outer or candidate_outer_short == outer:
                     return candidate
         return candidates[0] if candidates else None
 
@@ -391,7 +419,10 @@ class SubRegionProcessor(BaseProcessor):
                 continue
             if obj.get("Type") != "SceneComponent":
                 continue
-            if obj.get("Outer") != actor_name or obj.get("Name") != "DefaultSceneRoot":
+            outer = obj.get("Outer")
+            outer_name = outer.get("ObjectName") if isinstance(outer, dict) else outer
+            _, outer_short_name = self._ref_outer_and_name(outer_name)
+            if outer_short_name != actor_name or obj.get("Name") != "DefaultSceneRoot":
                 continue
             props = obj.get("Properties", {})
             anchor = self._to_vector3(props.get("RelativeLocation"))
@@ -401,7 +432,7 @@ class SubRegionProcessor(BaseProcessor):
 
     def _extract_level_volume_range(self, arr: List[dict]) -> Optional[dict]:
         """提取关卡 LevelVolume 的 Box0 范围。"""
-        by_outer_name, by_name = self._build_object_maps(arr)
+        by_outer_name, by_name, by_path = self._build_object_maps(arr)
 
         for obj in arr:
             if not isinstance(obj, dict):
@@ -410,11 +441,14 @@ class SubRegionProcessor(BaseProcessor):
                 continue
 
             props = obj.get("Properties", {})
-            box0 = self._resolve_ref_object(props.get("Box0"), by_outer_name, by_name)
+            box0 = self._resolve_ref_object(props.get("Box0"), by_outer_name, by_name, by_path)
             if not isinstance(box0, dict):
                 outer_name = obj.get("Name")
                 for candidate in by_name.get("Box0", []):
-                    if candidate.get("Outer") == outer_name:
+                    outer = candidate.get("Outer")
+                    candidate_outer = outer.get("ObjectName") if isinstance(outer, dict) else outer
+                    _, candidate_outer_short = self._ref_outer_and_name(candidate_outer)
+                    if candidate_outer_short == outer_name:
                         box0 = candidate
                         break
             if not isinstance(box0, dict):
@@ -425,15 +459,9 @@ class SubRegionProcessor(BaseProcessor):
             if extent is None:
                 continue
 
-            box_offset = self._to_vector3(box_props.get("RelativeLocation")) or [0.0, 0.0, 0.0]
-            root_loc = [0.0, 0.0, 0.0]
-            root_ref = props.get("DefaultSceneRoot") or props.get("RootComponent")
-            root_obj = self._resolve_ref_object(root_ref, by_outer_name, by_name)
-            if isinstance(root_obj, dict):
-                root_props = root_obj.get("Properties", {})
-                root_loc = self._to_vector3(root_props.get("RelativeLocation")) or root_loc
-
-            center = self._vec_add(root_loc, box_offset)
+            # FModel 导出的组件 RelativeLocation 在这里已经是世界参考坐标；
+            # 再叠加 DefaultSceneRoot 会把 LevelVolume 整体偏移一份 Actor 位移。
+            center = self._to_vector3(box_props.get("RelativeLocation")) or [0.0, 0.0, 0.0]
             return self._build_range(center, extent)
 
         return None
@@ -457,26 +485,75 @@ class SubRegionProcessor(BaseProcessor):
             return self._build_range(anchor, [0.0, 0.0, 0.0])
         return None
 
+    def _estimate_point_distance_score(
+        self, points: List[List], reference_center: Optional[List[float]]
+    ) -> Optional[float]:
+        """估算点位集合到参考中心的平均距离，越小越可信。"""
+        if reference_center is None or not isinstance(points, list) or not points:
+            return None
+        try:
+            ref_x = float(reference_center[0])
+            ref_y = float(reference_center[1])
+        except Exception:
+            return None
+
+        total = 0.0
+        count = 0
+        for point in points:
+            if not isinstance(point, list) or len(point) < 2:
+                continue
+            try:
+                dx = float(point[0]) - ref_x
+                dy = float(point[1]) - ref_y
+            except Exception:
+                continue
+            total += math.hypot(dx, dy)
+            count += 1
+        if count <= 0:
+            return None
+        return total / count
+
+    def _choose_random_actor_points(
+        self,
+        raw_points: List[List],
+        root_loc: List[float],
+        reference_center: Optional[List[float]],
+    ) -> List[List]:
+        """在 raw 与 raw+root 两套坐标中选择更接近子区域中心的一套。"""
+        if not raw_points:
+            return []
+
+        translated_points = [self._vec_add(point, root_loc) for point in raw_points]
+        raw_score = self._estimate_point_distance_score(raw_points, reference_center)
+        translated_score = self._estimate_point_distance_score(translated_points, reference_center)
+
+        if raw_score is None:
+            return translated_points if any(abs(v) > 1e-6 for v in root_loc[:2]) else raw_points
+        if translated_score is None:
+            return raw_points
+        return translated_points if translated_score + 1e-6 < raw_score else raw_points
+
     def _get_random_actor_points_by_rule(
-        self, sub_region_level: str
+        self, sub_region_level: str, reference_center: Optional[List[float]] = None
     ) -> Dict[str, List[List]]:
         """提取关卡随机点位：RandomRuleId -> [[x,y,z], ...]。"""
         if not isinstance(sub_region_level, str) or not sub_region_level:
             return {}
-        if sub_region_level in self.random_actor_points_cache:
-            return self.random_actor_points_cache[sub_region_level]
+        cache_key = f"{sub_region_level}|{reference_center}"
+        if cache_key in self.random_actor_points_cache:
+            return self.random_actor_points_cache[cache_key]
 
         design_map_path = self._resolve_design_map_path(sub_region_level)
         if design_map_path is None:
-            self.random_actor_points_cache[sub_region_level] = {}
+            self.random_actor_points_cache[cache_key] = {}
             return {}
 
         arr = self._load_design_map_json(design_map_path)
         if not arr:
-            self.random_actor_points_cache[sub_region_level] = {}
+            self.random_actor_points_cache[cache_key] = {}
             return {}
 
-        by_outer_name, by_name = self._build_object_maps(arr)
+        by_outer_name, by_name, by_path = self._build_object_maps(arr)
         rule_points: Dict[str, List[List]] = {}
         rule_point_set: Dict[str, set] = {}
         for obj in arr:
@@ -490,7 +567,7 @@ class SubRegionProcessor(BaseProcessor):
                 continue
             root_loc = [0.0, 0.0, 0.0]
             root_ref = props.get("DefaultSceneRoot") or props.get("RootComponent")
-            root_obj = self._resolve_ref_object(root_ref, by_outer_name, by_name)
+            root_obj = self._resolve_ref_object(root_ref, by_outer_name, by_name, by_path)
             if isinstance(root_obj, dict):
                 root_props = root_obj.get("Properties", {})
                 root_loc = self._to_vector3(root_props.get("RelativeLocation")) or root_loc
@@ -509,13 +586,18 @@ class SubRegionProcessor(BaseProcessor):
                 rule_id_str = str(rule_key)
                 points = rule_points.setdefault(rule_id_str, [])
                 point_set = rule_point_set.setdefault(rule_id_str, set())
+                raw_points: List[List] = []
                 for param in params:
                     if not isinstance(param, dict):
                         continue
                     loc = self._to_vector3(param.get("ActorLoc"))
                     if loc is None:
                         continue
-                    loc = self._vec_add(loc, root_loc)
+                    raw_points.append(loc)
+                chosen_points = self._choose_random_actor_points(
+                    raw_points, root_loc, reference_center
+                )
+                for loc in chosen_points:
                     pos = self._format_vec3(loc)
                     pos_tuple = (pos[0], pos[1], pos[2])
                     if pos_tuple in point_set:
@@ -523,7 +605,7 @@ class SubRegionProcessor(BaseProcessor):
                     point_set.add(pos_tuple)
                     points.append(pos)
 
-        self.random_actor_points_cache[sub_region_level] = rule_points
+        self.random_actor_points_cache[cache_key] = rule_points
         return rule_points
 
     def _load_design_level_data(self, sub_region_level):
@@ -590,7 +672,9 @@ class SubRegionProcessor(BaseProcessor):
             return int(rule_id)
         return rule_id
 
-    def _get_pet_random_creators(self, sub_region_level, region_id):
+    def _get_pet_random_creators(
+        self, sub_region_level, region_id, reference_center: Optional[List[float]] = None
+    ):
         """根据地图配置提取 Pet 类型随机生成器信息"""
         design_level_data = self._load_design_level_data(sub_region_level)
         if not design_level_data:
@@ -599,7 +683,9 @@ class SubRegionProcessor(BaseProcessor):
         random_rule_ids = self._extract_random_rule_ids(design_level_data)
         if not random_rule_ids:
             return []
-        random_actor_points = self._get_random_actor_points_by_rule(sub_region_level)
+        random_actor_points = self._get_random_actor_points_by_rule(
+            sub_region_level, reference_center
+        )
 
         rc = []
         for random_rule_id in random_rule_ids:

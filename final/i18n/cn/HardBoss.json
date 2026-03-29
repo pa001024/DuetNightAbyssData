@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "西比尔",
-    "icon": "",
+    "icon": "T_Permanent_HardBoss_Xibi_S",
     "desc": "海伯利亚帝国第十三军团军团长。那一日在净界岛，她的出现，让我们的命运永远地偏离了曾经的轨道。",
     "diff": [
       {
@@ -43,7 +43,7 @@
   {
     "id": 2,
     "name": "嗜晶者",
-    "icon": "",
+    "icon": "T_Permanent_HardBoss_ShiJingZhe_S",
     "desc": "格雷姆的死神。出现在格雷姆矿坑深处的巨大秽兽，机械性地重复着挖掘通道与吞噬发光物的行为。",
     "diff": [
       {
@@ -84,7 +84,7 @@
   {
     "id": 3,
     "name": "羽化者",
-    "icon": "",
+    "icon": "T_Permanent_HardBoss_Saiqi_S",
     "desc": "冻土中的种子，错过了温和地走入夜幕的契机。",
     "diff": [
       {
@@ -125,7 +125,7 @@
   {
     "id": 4,
     "name": "“炼火的典狱长”",
-    "icon": "",
+    "icon": "T_Permanent_HardBoss_Haier_S",
     "desc": "帝国皇家军监狱典狱长，她的锁链将会惩戒罪恶，她的火焰将会坚守正义。",
     "diff": [
       {
@@ -166,7 +166,7 @@
   {
     "id": 5,
     "name": "“雪国的野兽”",
-    "icon": "",
+    "icon": "T_Permanent_HardBoss_Linen_S",
     "desc": "那是肆虐在雪国的野兽，摧毁了孩子们的故乡，融化了妖精的碎梦。",
     "diff": [
       {
@@ -207,7 +207,7 @@
   {
     "id": 6,
     "name": "太皓与烛阴",
-    "icon": "",
+    "icon": "T_Permanent_HardBoss_Bailong_S",
     "desc": "待包装",
     "diff": [
       {

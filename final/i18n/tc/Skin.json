@@ -1,0 +1,2220 @@
+[
+  {
+    "id": 1101,
+    "name": "貝蕾妮卡的衣飾",
+    "desc": "黑色是夜晚的顏色，它為大地罩起寧靜而安心的面紗；黑色是影子的顏色，它能形影不離地守在至親之人的身旁。貝蕾妮卡喜歡這個顏色。",
+    "icon": "T_Head_Heitao",
+    "rarity": 5,
+    "charId": 1101,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10001,
+          "name": "回憶中的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色稜鏡",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 1102,
+    "name": "UI_Skin_Name_1102",
+    "desc": "UI_Skin_Des_1102",
+    "icon": "T_Head_Fuluo",
+    "rarity": 5,
+    "charId": 1102,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10001,
+          "name": "回憶中的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色稜鏡",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 1103,
+    "name": "幻景的衣飾",
+    "desc": "一個行走的影子，一個舞台上拙劣的伶人，一個愚人講述的故事。",
+    "icon": "T_Head_Tuosi",
+    "rarity": 5,
+    "charId": 1103,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10018,
+          "name": "幕後之人的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色稜鏡",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 1501,
+    "name": "莉茲貝爾的衣飾",
+    "desc": "傳頌會的銘文不僅是鑲嵌在服裝，更是銘刻在靈魂中的印記。它見證著少女從憤怒一次次蛻變成真正的堅忍。",
+    "icon": "T_Head_Baonu",
+    "rarity": 5,
+    "charId": 1501,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10003,
+          "name": "七美德的肖像·堅忍",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色稜鏡",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 1502,
+    "name": "妮弗爾夫人的衣飾",
+    "desc": "薄暮與極光織就的紗幔引導著靈魂跨過溢滿淚水的河流，去向萬物新生的霧海。",
+    "icon": "T_Head_Nifu",
+    "rarity": 5,
+    "charId": 1502,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10029,
+          "name": "霧海引渡人的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色稜鏡",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 1503,
+    "name": "刻舟的衣飾",
+    "desc": "飄零的風雨順著衣擺滑落，停滯於劍尖，灑落在江湖。",
+    "icon": "T_Head_Kezhou",
+    "rarity": 5,
+    "charId": 1503,
+    "release": "1.1",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10024,
+          "name": "飄零劍客的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色稜鏡",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 1504,
+    "name": "UI_Skin_Name_1504",
+    "desc": "UI_Skin_Des_1504",
+    "icon": "T_Head_Suyi",
+    "rarity": 5,
+    "charId": 1504,
+    "release": "1.3",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10031,
+          "name": "机枢少女的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色稜鏡",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 1601,
+    "name": "{nickname}的衣飾",
+    "desc": "一人，一劍，一襲白衣。跨過汪洋與寒夜，只為在黎明的盡頭相逢。",
+    "icon": "T_Head_Nvzhu",
+    "rarity": 5,
+    "charId": 1601,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10026,
+          "name": "狩月人的肖像",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 1801,
+    "name": "菲娜的衣飾",
+    "desc": "夜鶯為她編織的故事插上白羽，讓小小的羽翼載著她的夢飛向雲間。",
+    "icon": "T_Head_Feina",
+    "rarity": 5,
+    "charId": 1801,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10014,
+          "name": "夜鶯小姐的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色稜鏡",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 2101,
+    "name": "麗蓓卡的衣飾",
+    "desc": "水母的觸須垂入深海，宛若遊弋的裙擺，在夜色中擾動著戀人的心弦。",
+    "icon": "T_Head_Shuimu",
+    "rarity": 5,
+    "charId": 2101,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10009,
+          "name": "謀愛之人的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色稜鏡",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 2102,
+    "name": "UI_Skin_Name_2102",
+    "desc": "UI_Skin_Des_2102",
+    "icon": "T_Head_Shuimu",
+    "rarity": 5,
+    "charId": 2102,
+    "release": "1.5",
+    "defaultItem": {
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色稜鏡",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 2301,
+    "name": "塔比瑟的衣飾",
+    "desc": "那在黑暗中蠕動著的是什麼？陰謀？混沌？犯罪？全都不對，是觸手！",
+    "icon": "T_Head_Zhangyu",
+    "rarity": 5,
+    "charId": 2301,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10012,
+          "name": "惡魔大盜的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色稜鏡",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 2401,
+    "name": "扶疏的衣飾",
+    "desc": "藥味作絲，在素白袖間訴說著枯草回春的輕語。",
+    "icon": "T_Head_Baiheng",
+    "rarity": 5,
+    "charId": 2401,
+    "release": "1.1",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10002,
+          "name": "華胥藥師的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色稜鏡",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 3101,
+    "name": "琳恩的衣飾",
+    "desc": "啞光製服上的火藥餘溫，在熱血的鼓動下久久無法消散。",
+    "icon": "T_Head_Linen",
+    "rarity": 5,
+    "charId": 3101,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10007,
+          "name": "違心之人的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色稜鏡",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 3102,
+    "name": "UI_Skin_Name_3102",
+    "desc": "UI_Skin_Des_3102",
+    "icon": "T_Head_Xier",
+    "rarity": 5,
+    "charId": 3102,
+    "release": "1.4",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10020,
+          "name": "完美女仆的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色稜鏡",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 3103,
+    "name": "耶爾與奧利弗的衣飾",
+    "desc": "燃燒的紅與白，深鎖了一位瘋子的爆炸狂想，縫合出一位少年的無瑕夢鄉。",
+    "icon": "T_Head_Yeer",
+    "rarity": 5,
+    "charId": 3103,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10021,
+          "name": "一體雙生的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色稜鏡",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 3201,
+    "name": "海爾法的衣飾",
+    "desc": "身負的鎖鏈與棘刺不僅是對罪惡的懲戒，同時也是對心中正義之火的約束。",
+    "icon": "T_Head_Haier",
+    "rarity": 5,
+    "charId": 3201,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10004,
+          "name": "典獄長的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色稜鏡",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 3202,
+    "name": "UI_Skin_Name_3202",
+    "desc": "UI_Skin_Des_3202",
+    "icon": "T_Head_Kami",
+    "rarity": 5,
+    "charId": 3202,
+    "release": "1.3",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10023,
+          "name": "Portrait : Camilla",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色稜鏡",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 3301,
+    "name": "瑪爾潔的衣飾",
+    "desc": "由一口鍋子製成的多功能頭盔，是拾荒少女堅硬的甲胄。",
+    "icon": "T_Head_Maer",
+    "rarity": 5,
+    "charId": 3301,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10017,
+          "name": "垃圾桶公主的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色稜鏡",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 4101,
+    "name": "黎瑟的衣飾",
+    "desc": "躍動在製服上的星點藍芒是守護的意志，亦是對未來的仰望。",
+    "icon": "T_Head_Lise",
+    "rarity": 5,
+    "charId": 4101,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10016,
+          "name": "逐燈者的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色稜鏡",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 4102,
+    "name": "止流的衣飾",
+    "desc": "初陽融化了金箔，傾倒在瑰麗的錦緞上，連同變革的意志一起，燃燒在金黃的瞳孔中。",
+    "icon": "T_Head_Zhiliu",
+    "rarity": 5,
+    "charId": 4102,
+    "release": "1.2",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10030,
+          "name": "執棋者的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色稜鏡",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 4201,
+    "name": "煜明的衣飾",
+    "desc": "應天之雷，流淌周身。貫徹大風的意旨，罪孽無處可逃，他亦無處可逃。",
+    "icon": "T_Head_Yuming",
+    "rarity": 5,
+    "charId": 4201,
+    "release": "1.2",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10011,
+          "name": "負罪者的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色稜鏡",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 4202,
+    "name": "蘭迪的衣飾",
+    "desc": "勳章之上是一個天才的靈魂，軍裝之下是一顆庸人的凡心。",
+    "icon": "T_Head_Landi",
+    "rarity": 5,
+    "charId": 4202,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10006,
+          "name": "散漫紳士的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色稜鏡",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 4301,
+    "name": "西比爾的衣飾",
+    "desc": "孤高之人無需甲胄與冠冕，其存在本身即是威壓的轟鳴。",
+    "icon": "T_Head_Xibi",
+    "rarity": 5,
+    "charId": 4301,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10019,
+          "name": "大軍團長的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色稜鏡",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 5101,
+    "name": "松露與榛子的衣飾",
+    "desc": "在地面晃動的白色羽飾，載著麥芽芬芳，乘著萬家炊火，飛向每一個饑餓之人的心房。",
+    "icon": "T_Head_Songlu",
+    "rarity": 5,
+    "charId": 5101,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10010,
+          "name": "糧秣專員的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色稜鏡",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 5102,
+    "name": "奧特賽德的衣飾",
+    "desc": "質樸的衣裝無法隔絕暗巷猩紅的嗚咽，卻足以在荒蠻中護住一小片星光。",
+    "icon": "T_Head_Aote",
+    "rarity": 5,
+    "charId": 5102,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10015,
+          "name": "失鄉之人的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色稜鏡",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 5301,
+    "name": "賽琪的衣飾",
+    "desc": "棲息在少女臂彎的蝴蝶，捎來無數個跨越寒冬的夢。",
+    "icon": "T_Head_Saiqi",
+    "rarity": 5,
+    "charId": 5301,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10008,
+          "name": "播種之人的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色稜鏡",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 5401,
+    "name": "達芙涅的衣飾",
+    "desc": "自硝煙塵灰下生長的翠綠，如野草般輕，如野草般不息。",
+    "icon": "T_Head_Dafu",
+    "rarity": 5,
+    "charId": 5401,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10013,
+          "name": "煉金術師的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色稜鏡",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 110201,
+    "name": "UI_Skin_Name_110201",
+    "desc": "UI_Skin_Des_110201",
+    "icon": "T_Head_Fuluo",
+    "rarity": 5,
+    "charId": 1102,
+    "release": "1.4",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10001,
+          "name": "回憶中的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色稜鏡",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 150401,
+    "name": "青羽天巡",
+    "desc": "青羽铸就云中客，一念乘风。",
+    "icon": "T_Head_Suyi01",
+    "rarity": 5,
+    "charId": 1504,
+    "tag": "Suyi01",
+    "release": "1.3",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 150492,
+          "name": "青羽天巡",
+          "num": 1
+        }
+      ],
+      "HeadSculpture": [
+        {
+          "id": 20006,
+          "name": "机枢少女的肖像·晴空",
+          "num": 1
+        }
+      ]
+    },
+    "upgrade": [
+      {
+        "step": 2,
+        "amount": 54,
+        "currencyId": 1010,
+        "currency": "流光织针"
+      },
+      {
+        "step": 3,
+        "amount": 72,
+        "currencyId": 1010,
+        "currency": "流光织针"
+      }
+    ]
+  },
+  {
+    "id": 160101,
+    "name": "{nickname}的衣飾",
+    "desc": "一人，一劍，一襲白衣。跨過汪洋與寒夜，只為在黎明的盡頭相逢。",
+    "icon": "T_Head_Nanzhu",
+    "rarity": 5,
+    "charId": 160101,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10025,
+          "name": "狩月人的肖像",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 180101,
+    "name": "子不語",
+    "desc": "一汪幽影灑月夜，半卷書籤話鬼神。",
+    "icon": "T_Head_Feina01",
+    "rarity": 5,
+    "charId": 1801,
+    "tag": "Feina01",
+    "release": "1.3",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10014,
+          "name": "夜鶯小姐的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色稜鏡",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 210102,
+    "name": "紗幕與耳語",
+    "desc": "重重紗幕之下，以輕語訴說愛意，用死亡觸碰永恆。",
+    "icon": "T_Head_Shuimu01",
+    "rarity": 5,
+    "charId": 2101,
+    "tag": "Shuimu01",
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 20002,
+          "name": "謀愛之人的肖像·潮聲",
+          "num": 1
+        }
+      ],
+      "Title": [
+        {
+          "id": 20032,
+          "name": "舞者",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 240101,
+    "name": "素浪濯心",
+    "desc": "易水滌塵，白浪靜心。",
+    "icon": "T_Head_Baiheng01",
+    "rarity": 5,
+    "charId": 2401,
+    "tag": "Baiheng01",
+    "release": "1.1",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 240192,
+          "name": "素浪濯心",
+          "num": 1
+        }
+      ],
+      "HeadSculpture": [
+        {
+          "id": 20004,
+          "name": "華胥藥師的肖像·柔波",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 410101,
+    "name": "子不語",
+    "desc": "一汪幽影灑月夜，半卷書籤話鬼神。",
+    "icon": "T_Head_Lise01",
+    "rarity": 5,
+    "charId": 4101,
+    "tag": "Lise01",
+    "release": "1.3",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10016,
+          "name": "逐燈者的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色稜鏡",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 410201,
+    "name": "攜金宴夜",
+    "desc": "觥籌交錯的夜宴，流淌著一場又一場無聲的殺伐。",
+    "icon": "T_Head_Zhiliu01",
+    "rarity": 5,
+    "charId": 4102,
+    "tag": "Zhiliu01",
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 410292,
+          "name": "攜金宴夜",
+          "num": 1
+        }
+      ],
+      "HeadSculpture": [
+        {
+          "id": 20005,
+          "name": "執棋者的肖像·觥籌",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 510101,
+    "name": "陽光磨坊",
+    "desc": "暖暖陽光，細細研磨，滿滿揮灑！",
+    "icon": "T_Head_Songlu01",
+    "rarity": 5,
+    "charId": 5101,
+    "tag": "Songlu01",
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 20003,
+          "name": "糧秣專員的肖像·太陽",
+          "num": 1
+        }
+      ],
+      "Title": [
+        {
+          "id": 20033,
+          "name": "太陽",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 530101,
+    "name": "夢中的舞會",
+    "desc": "仲夏夜，星斗下的森林，三色堇與蝶翼交織的小步舞曲──那是她不曾見過的光景。",
+    "icon": "T_Head_Saiqi01",
+    "rarity": 5,
+    "charId": 5301,
+    "tag": "Saiqi01",
+    "release": "1.0",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 530192,
+          "name": "夢中的舞會",
+          "num": 1
+        }
+      ],
+      "HeadSculpture": [
+        {
+          "id": 20001,
+          "name": "播種之人的肖像·仲夏",
+          "num": 1
+        }
+      ],
+      "Title": [
+        {
+          "id": 20034,
+          "name": "戀人",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 11010010,
+    "name": "星芒夜願",
+    "desc": "在白晝最短的時節，當鈴兒響起，人們便將心願寄予夜空，讓它乘著星芒飛向未來。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 1101,
+    "release": "1.0"
+  },
+  {
+    "id": 11010011,
+    "name": "墨玉韶華",
+    "desc": "風華盡顯，雅韻自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 1101,
+    "release": "1.1"
+  },
+  {
+    "id": 11010121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中為什麼有一個看起來格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 1101,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 11010121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 11010122,
+    "name": "昨日匆匆",
+    "desc": "鈴聲與書頁間，歲月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 1101,
+    "release": "1.2"
+  },
+  {
+    "id": 11010131,
+    "name": "叛逆風尚",
+    "desc": "我們在藍絲絨般的不眠之夜痛飲，吹著口哨疾馳於午夜的涼風中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 1101,
+    "release": "1.3"
+  },
+  {
+    "id": 11030010,
+    "name": "星芒夜願",
+    "desc": "在白晝最短的時節，當鈴兒響起，人們便將心願寄予夜空，讓它乘著星芒飛向未來。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 1103,
+    "release": "1.0"
+  },
+  {
+    "id": 11030011,
+    "name": "墨玉韶華",
+    "desc": "風華盡顯，雅韻自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 1103,
+    "release": "1.1"
+  },
+  {
+    "id": 11030121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中為什麼有一個看起來格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 1103,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 11030121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 11030122,
+    "name": "昨日匆匆",
+    "desc": "鈴聲與書頁間，歲月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 1103,
+    "release": "1.2"
+  },
+  {
+    "id": 11030131,
+    "name": "叛逆風尚",
+    "desc": "我們在藍絲絨般的不眠之夜痛飲，吹著口哨疾馳於午夜的涼風中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 1103,
+    "release": "9.9"
+  },
+  {
+    "id": 15010010,
+    "name": "星芒夜願",
+    "desc": "在白晝最短的時節，當鈴兒響起，人們便將心願寄予夜空，讓它乘著星芒飛向未來。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 1501,
+    "release": "1.0"
+  },
+  {
+    "id": 15010011,
+    "name": "墨玉韶華",
+    "desc": "風華盡顯，雅韻自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 1501,
+    "release": "1.1"
+  },
+  {
+    "id": 15010121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中為什麼有一個看起來格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 1501,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 15010121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 15010122,
+    "name": "昨日匆匆",
+    "desc": "鈴聲與書頁間，歲月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 1501,
+    "release": "1.2"
+  },
+  {
+    "id": 15010131,
+    "name": "叛逆風尚",
+    "desc": "我們在藍絲絨般的不眠之夜痛飲，吹著口哨疾馳於午夜的涼風中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 1501,
+    "release": "1.3"
+  },
+  {
+    "id": 15020010,
+    "name": "星芒夜願",
+    "desc": "在白晝最短的時節，當鈴兒響起，人們便將心願寄予夜空，讓它乘著星芒飛向未來。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 1502,
+    "release": "1.0"
+  },
+  {
+    "id": 15020011,
+    "name": "墨玉韶華",
+    "desc": "風華盡顯，雅韻自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 1502,
+    "release": "1.1"
+  },
+  {
+    "id": 15020121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中為什麼有一個看起來格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 1502,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 15020121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 15020122,
+    "name": "昨日匆匆",
+    "desc": "鈴聲與書頁間，歲月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 1502,
+    "release": "1.2"
+  },
+  {
+    "id": 15020131,
+    "name": "叛逆風尚",
+    "desc": "我們在藍絲絨般的不眠之夜痛飲，吹著口哨疾馳於午夜的涼風中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 1502,
+    "release": "1.3"
+  },
+  {
+    "id": 15030011,
+    "name": "墨玉韶華",
+    "desc": "風華盡顯，雅韻自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 1503,
+    "release": "1.1"
+  },
+  {
+    "id": 15030121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中為什麼有一個看起來格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 1503,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 15030121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 15030122,
+    "name": "昨日匆匆",
+    "desc": "鈴聲與書頁間，歲月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 1503,
+    "release": "1.2"
+  },
+  {
+    "id": 15030131,
+    "name": "叛逆風尚",
+    "desc": "我們在藍絲絨般的不眠之夜痛飲，吹著口哨疾馳於午夜的涼風中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 1503,
+    "release": "1.3"
+  },
+  {
+    "id": 15040131,
+    "name": "叛逆風尚",
+    "desc": "我們在藍絲絨般的不眠之夜痛飲，吹著口哨疾馳於午夜的涼風中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 1504,
+    "release": "1.3"
+  },
+  {
+    "id": 16010010,
+    "name": "星芒夜願",
+    "desc": "在白晝最短的時節，當鈴兒響起，人們便將心願寄予夜空，讓它乘著星芒飛向未來。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 1601,
+    "release": "1.0"
+  },
+  {
+    "id": 16010011,
+    "name": "墨玉韶華",
+    "desc": "風華盡顯，雅韻自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 1601,
+    "release": "1.1"
+  },
+  {
+    "id": 16010110,
+    "name": "星芒夜願",
+    "desc": "在白晝最短的時節，當鈴兒響起，人們便將心願寄予夜空，讓它乘著星芒飛向未來。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 160101,
+    "release": "1.0"
+  },
+  {
+    "id": 16010111,
+    "name": "墨玉韶華",
+    "desc": "風華盡顯，雅韻自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 160101,
+    "release": "1.1"
+  },
+  {
+    "id": 16010121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中為什麼有一個看起來格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 1601,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 16010121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 16010122,
+    "name": "昨日匆匆",
+    "desc": "鈴聲與書頁間，歲月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 1601,
+    "release": "1.2"
+  },
+  {
+    "id": 16010131,
+    "name": "叛逆風尚",
+    "desc": "我們在藍絲絨般的不眠之夜痛飲，吹著口哨疾馳於午夜的涼風中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 1601,
+    "release": "1.3"
+  },
+  {
+    "id": 16010221,
+    "name": "冬日幻想",
+    "desc": "一地雪人中為什麼有一個看起來格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 160101,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 16010221,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 16010222,
+    "name": "昨日匆匆",
+    "desc": "鈴聲與書頁間，歲月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 160101,
+    "release": "1.2"
+  },
+  {
+    "id": 16010231,
+    "name": "叛逆風尚",
+    "desc": "我們在藍絲絨般的不眠之夜痛飲，吹著口哨疾馳於午夜的涼風中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 160101,
+    "release": "1.3"
+  },
+  {
+    "id": 18010010,
+    "name": "星芒夜願",
+    "desc": "在白晝最短的時節，當鈴兒響起，人們便將心願寄予夜空，讓它乘著星芒飛向未來。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 1801,
+    "release": "1.0"
+  },
+  {
+    "id": 18010011,
+    "name": "墨玉韶華",
+    "desc": "風華盡顯，雅韻自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 1801,
+    "release": "1.1"
+  },
+  {
+    "id": 18010121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中為什麼有一個看起來格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 1801,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 18010121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 18010122,
+    "name": "昨日匆匆",
+    "desc": "鈴聲與書頁間，歲月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 1801,
+    "release": "1.2"
+  },
+  {
+    "id": 18010131,
+    "name": "叛逆風尚",
+    "desc": "我們在藍絲絨般的不眠之夜痛飲，吹著口哨疾馳於午夜的涼風中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 1801,
+    "release": "1.3"
+  },
+  {
+    "id": 21010010,
+    "name": "星芒夜願",
+    "desc": "在白晝最短的時節，當鈴兒響起，人們便將心願寄予夜空，讓它乘著星芒飛向未來。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 2101,
+    "release": "1.0"
+  },
+  {
+    "id": 21010011,
+    "name": "墨玉韶華",
+    "desc": "風華盡顯，雅韻自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 2101,
+    "release": "1.1"
+  },
+  {
+    "id": 21010121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中為什麼有一個看起來格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 2101,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 21010121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 21010122,
+    "name": "昨日匆匆",
+    "desc": "鈴聲與書頁間，歲月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 2101,
+    "release": "1.2"
+  },
+  {
+    "id": 21010131,
+    "name": "叛逆風尚",
+    "desc": "我們在藍絲絨般的不眠之夜痛飲，吹著口哨疾馳於午夜的涼風中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 2101,
+    "release": "1.3"
+  },
+  {
+    "id": 23010010,
+    "name": "星芒夜願",
+    "desc": "在白晝最短的時節，當鈴兒響起，人們便將心願寄予夜空，讓它乘著星芒飛向未來。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 2301,
+    "release": "1.0"
+  },
+  {
+    "id": 23010011,
+    "name": "墨玉韶華",
+    "desc": "風華盡顯，雅韻自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 2301,
+    "release": "1.1"
+  },
+  {
+    "id": 23010121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中為什麼有一個看起來格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 2301,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 23010121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 23010122,
+    "name": "昨日匆匆",
+    "desc": "鈴聲與書頁間，歲月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 2301,
+    "release": "1.2"
+  },
+  {
+    "id": 23010131,
+    "name": "叛逆風尚",
+    "desc": "我們在藍絲絨般的不眠之夜痛飲，吹著口哨疾馳於午夜的涼風中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 2301,
+    "release": "9.9"
+  },
+  {
+    "id": 24010011,
+    "name": "墨玉韶華",
+    "desc": "風華盡顯，雅韻自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 2401,
+    "release": "1.1"
+  },
+  {
+    "id": 24010121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中為什麼有一個看起來格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 2401,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 24010121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 24010122,
+    "name": "昨日匆匆",
+    "desc": "鈴聲與書頁間，歲月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 2401,
+    "release": "1.2"
+  },
+  {
+    "id": 24010131,
+    "name": "叛逆風尚",
+    "desc": "我們在藍絲絨般的不眠之夜痛飲，吹著口哨疾馳於午夜的涼風中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 2401,
+    "release": "1.3"
+  },
+  {
+    "id": 31010010,
+    "name": "星芒夜願",
+    "desc": "在白晝最短的時節，當鈴兒響起，人們便將心願寄予夜空，讓它乘著星芒飛向未來。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 3101,
+    "release": "1.0"
+  },
+  {
+    "id": 31010011,
+    "name": "墨玉韶華",
+    "desc": "風華盡顯，雅韻自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 3101,
+    "release": "1.1"
+  },
+  {
+    "id": 31010121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中為什麼有一個看起來格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 3101,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 31010121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 31010122,
+    "name": "昨日匆匆",
+    "desc": "鈴聲與書頁間，歲月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 3101,
+    "release": "1.2"
+  },
+  {
+    "id": 31010131,
+    "name": "叛逆風尚",
+    "desc": "我們在藍絲絨般的不眠之夜痛飲，吹著口哨疾馳於午夜的涼風中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 3101,
+    "release": "1.3"
+  },
+  {
+    "id": 31030010,
+    "name": "星芒夜願",
+    "desc": "在白晝最短的時節，當鈴兒響起，人們便將心願寄予夜空，讓它乘著星芒飛向未來。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 3103,
+    "release": "1.0"
+  },
+  {
+    "id": 31030011,
+    "name": "墨玉韶華",
+    "desc": "風華盡顯，雅韻自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 3103,
+    "release": "1.1"
+  },
+  {
+    "id": 31030121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中為什麼有一個看起來格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 3103,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 31030121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 31030122,
+    "name": "昨日匆匆",
+    "desc": "鈴聲與書頁間，歲月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 3103,
+    "release": "1.2"
+  },
+  {
+    "id": 31030131,
+    "name": "叛逆風尚",
+    "desc": "我們在藍絲絨般的不眠之夜痛飲，吹著口哨疾馳於午夜的涼風中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 3103,
+    "release": "9.9"
+  },
+  {
+    "id": 32010010,
+    "name": "星芒夜願",
+    "desc": "在白晝最短的時節，當鈴兒響起，人們便將心願寄予夜空，讓它乘著星芒飛向未來。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 3201,
+    "release": "1.0"
+  },
+  {
+    "id": 32010011,
+    "name": "墨玉韶華",
+    "desc": "風華盡顯，雅韻自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 3201,
+    "release": "1.1"
+  },
+  {
+    "id": 32010121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中為什麼有一個看起來格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 3201,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 32010121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 32010122,
+    "name": "昨日匆匆",
+    "desc": "鈴聲與書頁間，歲月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 3201,
+    "release": "1.2"
+  },
+  {
+    "id": 32010131,
+    "name": "叛逆風尚",
+    "desc": "我們在藍絲絨般的不眠之夜痛飲，吹著口哨疾馳於午夜的涼風中。",
+    "icon": "T_Pack_Common03_01",
+    "rarity": 5,
+    "charId": 3201,
+    "release": "1.3"
+  },
+  {
+    "id": 32020131,
+    "name": "叛逆風尚",
+    "desc": "我們在藍絲絨般的不眠之夜痛飲，吹著口哨疾馳於午夜的涼風中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 3202,
+    "release": "1.3"
+  },
+  {
+    "id": 33010010,
+    "name": "星芒夜願",
+    "desc": "在白晝最短的時節，當鈴兒響起，人們便將心願寄予夜空，讓它乘著星芒飛向未來。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 3301,
+    "release": "1.0"
+  },
+  {
+    "id": 33010011,
+    "name": "墨玉韶華",
+    "desc": "風華盡顯，雅韻自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 3301,
+    "release": "1.1"
+  },
+  {
+    "id": 33010121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中為什麼有一個看起來格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 3301,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 33010121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 33010122,
+    "name": "昨日匆匆",
+    "desc": "鈴聲與書頁間，歲月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 3301,
+    "release": "1.2"
+  },
+  {
+    "id": 33010131,
+    "name": "叛逆風尚",
+    "desc": "我們在藍絲絨般的不眠之夜痛飲，吹著口哨疾馳於午夜的涼風中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 3301,
+    "release": "9.9"
+  },
+  {
+    "id": 41010010,
+    "name": "星芒夜願",
+    "desc": "在白晝最短的時節，當鈴兒響起，人們便將心願寄予夜空，讓它乘著星芒飛向未來。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 4101,
+    "release": "1.0"
+  },
+  {
+    "id": 41010011,
+    "name": "墨玉韶華",
+    "desc": "風華盡顯，雅韻自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 4101,
+    "release": "1.1"
+  },
+  {
+    "id": 41010121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中為什麼有一個看起來格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 4101,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 41010121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 41010122,
+    "name": "昨日匆匆",
+    "desc": "鈴聲與書頁間，歲月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 4101,
+    "release": "1.2"
+  },
+  {
+    "id": 41010131,
+    "name": "叛逆風尚",
+    "desc": "我們在藍絲絨般的不眠之夜痛飲，吹著口哨疾馳於午夜的涼風中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 4101,
+    "release": "1.3"
+  },
+  {
+    "id": 41020121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中為什麼有一個看起來格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 4102,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 41020121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 41020122,
+    "name": "昨日匆匆",
+    "desc": "鈴聲與書頁間，歲月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 4102,
+    "release": "1.2"
+  },
+  {
+    "id": 41020131,
+    "name": "叛逆風尚",
+    "desc": "我們在藍絲絨般的不眠之夜痛飲，吹著口哨疾馳於午夜的涼風中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 4102,
+    "release": "1.3"
+  },
+  {
+    "id": 42010121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中為什麼有一個看起來格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 4201,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 42010121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 42010122,
+    "name": "昨日匆匆",
+    "desc": "鈴聲與書頁間，歲月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 4201,
+    "release": "1.2"
+  },
+  {
+    "id": 42010131,
+    "name": "叛逆風尚",
+    "desc": "我們在藍絲絨般的不眠之夜痛飲，吹著口哨疾馳於午夜的涼風中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 4201,
+    "release": "1.3"
+  },
+  {
+    "id": 42020010,
+    "name": "星芒夜願",
+    "desc": "在白晝最短的時節，當鈴兒響起，人們便將心願寄予夜空，讓它乘著星芒飛向未來。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 4202,
+    "release": "1.0"
+  },
+  {
+    "id": 42020011,
+    "name": "墨玉韶華",
+    "desc": "風華盡顯，雅韻自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 4202,
+    "release": "1.1"
+  },
+  {
+    "id": 42020121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中為什麼有一個看起來格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 4202,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 42020121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 42020122,
+    "name": "昨日匆匆",
+    "desc": "鈴聲與書頁間，歲月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 4202,
+    "release": "1.2"
+  },
+  {
+    "id": 42020131,
+    "name": "叛逆風尚",
+    "desc": "我們在藍絲絨般的不眠之夜痛飲，吹著口哨疾馳於午夜的涼風中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 4202,
+    "release": "9.9"
+  },
+  {
+    "id": 43010010,
+    "name": "星芒夜願",
+    "desc": "在白晝最短的時節，當鈴兒響起，人們便將心願寄予夜空，讓它乘著星芒飛向未來。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 4301,
+    "release": "1.0"
+  },
+  {
+    "id": 43010011,
+    "name": "墨玉韶華",
+    "desc": "風華盡顯，雅韻自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 4301,
+    "release": "1.1"
+  },
+  {
+    "id": 43010121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中為什麼有一個看起來格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 4301,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 43010121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 43010122,
+    "name": "昨日匆匆",
+    "desc": "鈴聲與書頁間，歲月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 4301,
+    "release": "1.2"
+  },
+  {
+    "id": 43010131,
+    "name": "叛逆風尚",
+    "desc": "我們在藍絲絨般的不眠之夜痛飲，吹著口哨疾馳於午夜的涼風中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 4301,
+    "release": "1.3"
+  },
+  {
+    "id": 51010010,
+    "name": "星芒夜願",
+    "desc": "在白晝最短的時節，當鈴兒響起，人們便將心願寄予夜空，讓它乘著星芒飛向未來。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 5101,
+    "release": "1.0"
+  },
+  {
+    "id": 51010011,
+    "name": "墨玉韶華",
+    "desc": "風華盡顯，雅韻自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 5101,
+    "release": "1.1"
+  },
+  {
+    "id": 51010121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中為什麼有一個看起來格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 5101,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 51010121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 51010122,
+    "name": "昨日匆匆",
+    "desc": "鈴聲與書頁間，歲月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 5101,
+    "release": "1.2"
+  },
+  {
+    "id": 51010131,
+    "name": "叛逆風尚",
+    "desc": "我們在藍絲絨般的不眠之夜痛飲，吹著口哨疾馳於午夜的涼風中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 5101,
+    "release": "1.3"
+  },
+  {
+    "id": 51020010,
+    "name": "星芒夜願",
+    "desc": "在白晝最短的時節，當鈴兒響起，人們便將心願寄予夜空，讓它乘著星芒飛向未來。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 5102,
+    "release": "1.0"
+  },
+  {
+    "id": 51020011,
+    "name": "墨玉韶華",
+    "desc": "風華盡顯，雅韻自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 5102,
+    "release": "1.1"
+  },
+  {
+    "id": 51020121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中為什麼有一個看起來格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 5102,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 51020121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 51020122,
+    "name": "昨日匆匆",
+    "desc": "鈴聲與書頁間，歲月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 5102,
+    "release": "1.2"
+  },
+  {
+    "id": 51020131,
+    "name": "叛逆風尚",
+    "desc": "我們在藍絲絨般的不眠之夜痛飲，吹著口哨疾馳於午夜的涼風中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 5102,
+    "release": "9.9"
+  },
+  {
+    "id": 53010010,
+    "name": "星芒夜願",
+    "desc": "在白晝最短的時節，當鈴兒響起，人們便將心願寄予夜空，讓它乘著星芒飛向未來。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 5301,
+    "release": "1.0"
+  },
+  {
+    "id": 53010011,
+    "name": "墨玉韶華",
+    "desc": "風華盡顯，雅韻自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 5301,
+    "release": "1.1"
+  },
+  {
+    "id": 53010121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中為什麼有一個看起來格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 5301,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 53010121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 53010122,
+    "name": "昨日匆匆",
+    "desc": "鈴聲與書頁間，歲月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 5301,
+    "release": "1.2"
+  },
+  {
+    "id": 53010131,
+    "name": "叛逆風尚",
+    "desc": "我們在藍絲絨般的不眠之夜痛飲，吹著口哨疾馳於午夜的涼風中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 5301,
+    "release": "1.3"
+  },
+  {
+    "id": 54010010,
+    "name": "星芒夜願",
+    "desc": "在白晝最短的時節，當鈴兒響起，人們便將心願寄予夜空，讓它乘著星芒飛向未來。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 5401,
+    "release": "1.0"
+  },
+  {
+    "id": 54010011,
+    "name": "墨玉韶華",
+    "desc": "風華盡顯，雅韻自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 5401,
+    "release": "1.1"
+  },
+  {
+    "id": 54010121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中為什麼有一個看起來格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 5401,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 54010121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 54010122,
+    "name": "昨日匆匆",
+    "desc": "鈴聲與書頁間，歲月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 5401,
+    "release": "1.2"
+  },
+  {
+    "id": 54010131,
+    "name": "叛逆風尚",
+    "desc": "我們在藍絲絨般的不眠之夜痛飲，吹著口哨疾馳於午夜的涼風中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 5401,
+    "release": "1.3"
+  }
+]

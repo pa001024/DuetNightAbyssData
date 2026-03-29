@@ -25,6 +25,8 @@ class HardBossProcessor(BaseProcessor):
         name_key = hard_boss_data.get("HardBossName")
         desc_key = hard_boss_data.get("HardBossDes")
         main_icon = hard_boss_data.get("MainIcon")
+        monster_icon = hard_boss_data.get("MonsterIcon")
+        boss_icon = hard_boss_data.get("BossIcon")
         monster_id = hard_boss_data.get("MonsterId")
         difficulty_ids = hard_boss_data.get("DifficultyId", [])
 
@@ -32,8 +34,8 @@ class HardBossProcessor(BaseProcessor):
         name = self.get_translated_text(name_key, language) if name_key else ""
         desc = self.get_translated_text(desc_key, language) if desc_key else ""
 
-        # 提取图标名称
-        icon = self._extract_icon_name(main_icon)
+        # 提取图标名称，优先使用永久封面图，其次使用 Boss 图标
+        icon = self._extract_icon_name(monster_icon, boss_icon, main_icon)
 
         # 处理难度数据
         diffs = []
@@ -58,24 +60,23 @@ class HardBossProcessor(BaseProcessor):
 
         return processed_hard_boss
 
-    def _extract_icon_name(self, main_icon):
-        """提取 MainIcon 中的图标名称
+    def _extract_icon_name(self, *icon_values):
+        """提取图标路径中的资源名
 
         Args:
-            main_icon: MainIcon 路径
+            icon_values: 候选图标路径
 
         Returns:
             提取后的图标名称
         """
-        if not main_icon:
-            return ""
-
-        # 查找 T_Permanent_HardBoss_ 后面的部分
         import re
 
-        match = re.search(r"T_Permanent_HardBoss_([^.]+)\.", main_icon)
-        if match:
-            return match.group(1)
+        for icon_value in icon_values:
+            if not icon_value:
+                continue
+            match = re.search(r"(T_[^./']+)", icon_value)
+            if match:
+                return match.group(1)
         return ""
 
     def process_all_items(self, items, language):

@@ -606,12 +606,38 @@ class WeaponProcessor(BaseProcessor):
         attributes = {}
         # 尝试从AddAttrs中找到ATK属性
         anmap = {
+            "最大神智": "神智",
             "暴击率": "暴击",
             "暴击伤害": "暴伤",
-            "攻击速度": "攻速",
             "触发概率": "触发",
+            "切割攻击": "物理",
+            "贯穿攻击": "物理",
+            "震荡攻击": "物理",
+            "攻击速度": "攻速",
+            "远程武器": "远程",
+            "近战武器": "近战",
+            "近战同律武器": "同律近战",
+            "远程同律武器": "同律远程",
+            "角色": "角色",
+            "暗属性攻击": "属性伤",
+            "水属性攻击": "属性伤",
+            "火属性攻击": "属性伤",
+            "雷属性攻击": "属性伤",
+            "风属性攻击": "属性伤",
+            "光属性攻击": "属性伤",
+            "ExtraComboProb": "额外连击",
             "多重射击": "多重",
+            "最大弹药": "弹药",
             "弹匣容量": "弹匣",
+            "子弹装填速度": "装填",
+            "GrRate": "歧视",
+            "JtRate": "歧视",
+            "JhRate": "歧视",
+            "SqRate": "歧视",
+            "触发贯穿额外效果时对生命伤害": "触发倍率",
+            "触发切割额外效果时对护盾伤害": "触发倍率",
+            "ExplodeBulletRate": "爆炸伤害",
+            "RayCreatureRate": "射线伤害",
         }
         for attr in add_attrs:
             attr_name = attr.get("AttrName", "")
@@ -645,10 +671,12 @@ class WeaponProcessor(BaseProcessor):
         for attr_name in self.attribute_data.keys():
             attr_key = f"ATK_{attr_name}"
             if attr_key in battle_weapon:
+                if attr_name == "Psionic":
+                    attributes["伤害类型"] = "灵能"
+                    attributes["攻击"] = battle_weapon[attr_key]
+                    continue
                 attr_config = self.attr_config.get(attr_key, {})
                 atk_type = self.get_translated_text(attr_config.get("Name", ""), "cn")
-                if not atk_type and attr_name == "Psionic":
-                    atk_type = "灵能属性攻击"
                 if not atk_type:
                     continue
                 attributes["伤害类型"] = atk_type[:2]
@@ -745,6 +773,12 @@ class WeaponProcessor(BaseProcessor):
 
         # 复制描述，用于替换占位符
         result_desc = translated_desc
+        float_precision_map = {}
+        for match in re.finditer(r"\{float(\d+)\}.*?(#\d+)", translated_desc):
+            try:
+                float_precision_map[int(match.group(2)[1:])] = int(match.group(1))
+            except (TypeError, ValueError):
+                continue
 
         # 替换DescValues中的值
         if desc_values:
@@ -760,8 +794,13 @@ class WeaponProcessor(BaseProcessor):
                 # 解析desc_value，获取实际值
                 # weapon_id用于SkillGrow查找
                 weapon_id = battle_weapon.get("WeaponId", None)
+                keep_precision = (i + 1) in float_precision_map
                 val_str = self._parse_single_desc_value(
-                    desc_value, weapon_id, grade_level, "BattleWeapon", False
+                    desc_value,
+                    weapon_id,
+                    grade_level,
+                    "BattleWeapon",
+                    keep_precision,
                 )
 
                 # 如果需要取整
@@ -777,10 +816,30 @@ class WeaponProcessor(BaseProcessor):
                 # 替换占位符
                 result_desc = result_desc.replace(placeholder, val_str)
 
+        result_desc = self._format_float_templates(result_desc)
+
         # 移除<H></>标签（高亮标签）
         result_desc = result_desc.replace("<H>", "").replace("</>", "")
 
         return result_desc
+
+    def _format_float_templates(self, text):
+        """展开文本中的 {floatN} 模板，保留指定小数位格式。"""
+        if not isinstance(text, str) or "{float" not in text:
+            return text
+
+        def _replace(match):
+            digits = int(match.group(1))
+            number = match.group(2)
+            suffix = match.group(3) or ""
+            decimals = max(digits - 1, 0)
+            try:
+                formatted = f"{float(number):.{decimals}f}"
+            except (TypeError, ValueError):
+                return match.group(0)
+            return f"{formatted}{suffix}"
+
+        return re.sub(r"\{float(\d+)\}(-?\d+(?:\.\d+)?)(%)?", _replace, text)
 
     def _format_desc_numeric(self, value, keep_precision=True):
         """格式化描述中的数值。

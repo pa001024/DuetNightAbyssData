@@ -105,7 +105,7 @@
           4096
         ],
         "opacity": 0.6,
-        "zOrder": -10
+        "zOrder": -11
       },
       {
         "name": "WBP_Map_Chapter01_L0",
@@ -299,7 +299,7 @@
           4096
         ],
         "opacity": 0.6,
-        "zOrder": 0
+        "zOrder": -10
       },
       {
         "name": "WBP_Map_EX01_L0",
@@ -468,7 +468,30 @@
       104508
     ],
     "alertDisable": true,
-    "mapMapping": []
+    "mapMapping": [
+      {
+        "name": "WBP_Map_East_HaoJing_BG",
+        "pos": [
+          0,
+          0,
+          8192,
+          8192
+        ],
+        "opacity": 1,
+        "zOrder": -1
+      },
+      {
+        "name": "WBP_Map_East_HaoJing",
+        "pos": [
+          0,
+          0,
+          8192,
+          8192
+        ],
+        "opacity": 1,
+        "zOrder": 0
+      }
+    ]
   },
   {
     "id": 1046,
@@ -566,7 +589,30 @@
       105201
     ],
     "alertDisable": true,
-    "mapMapping": []
+    "mapMapping": [
+      {
+        "name": "WBP_Map_East_Shanwaishan_BG",
+        "pos": [
+          0,
+          0,
+          4096,
+          4096
+        ],
+        "opacity": 1,
+        "zOrder": -1
+      },
+      {
+        "name": "WBP_Map_East_Shanwaishan",
+        "pos": [
+          0,
+          0,
+          4096,
+          4096
+        ],
+        "opacity": 1,
+        "zOrder": 0
+      }
+    ]
   },
   {
     "id": 1053,
@@ -588,7 +634,19 @@
       105302
     ],
     "alertDisable": true,
-    "mapMapping": []
+    "mapMapping": [
+      {
+        "name": "WBP_Map_East_Tianrenlingmu",
+        "pos": [
+          0,
+          0,
+          4096,
+          2048
+        ],
+        "opacity": 1,
+        "zOrder": 0
+      }
+    ]
   },
   {
     "id": 1054,
@@ -619,7 +677,30 @@
       105501
     ],
     "alertDisable": true,
-    "mapMapping": []
+    "mapMapping": [
+      {
+        "name": "WBP_Map_Reg_East_Youlaixiang_BG",
+        "pos": [
+          0,
+          0,
+          2048,
+          2048
+        ],
+        "opacity": 1,
+        "zOrder": -1
+      },
+      {
+        "name": "WBP_Map_East_Youlaixiang",
+        "pos": [
+          0,
+          0,
+          2048,
+          2048
+        ],
+        "opacity": 1,
+        "zOrder": 0
+      }
+    ]
   },
   {
     "id": 1056,
@@ -857,7 +938,7 @@
           4096
         ],
         "opacity": 0.6,
-        "zOrder": -10
+        "zOrder": -11
       },
       {
         "name": "WBP_Map_Chapter01_L0",

@@ -29,6 +29,12 @@ class CharProcessor(BaseProcessor):
         self.attribute_data = data_loader.load_json("Attribute.json")
         self.battle_weapon_data = data_loader.load_json("BattleWeapon.json")
         self.u_weapon_data = data_loader.load_json("UWeapon.json")
+        self.abyss_season_list_data = data_loader.load_json("AbyssSeasonList.json")
+        self.shop_item_data = data_loader.load_json("ShopItem.json")
+        self.shop_item2_shop_sub_id = data_loader.load_json("ShopItem2ShopSubId.json")
+        self.walnut_data = data_loader.load_json("Walnut.json")
+        self.draft_data = data_loader.load_json("Draft.json")
+        self.weapon_data = data_loader.load_json("Weapon.json")
 
         # 加载技能相关的数据表
         self.skill_node_data = data_loader.load_json("SkillNode.json")
@@ -122,6 +128,7 @@ class CharProcessor(BaseProcessor):
             "Vars": "v",
             "VarSkillLevelSource": "",  # 排除 VarSkillLevelSource（内部使用）
         }
+        self.abyss_special_weapon_data = self._build_abyss_special_weapon_data()
 
     def process_item(self, item_data, language):
         char_data = item_data
@@ -181,8 +188,11 @@ class CharProcessor(BaseProcessor):
             "技能": self._process_skills(battle_char, language, char_id),
             "溯源": self._process_traces(battle_char, char_id, language),
             # "档案": self._process_character_data(char_id),
+            "专武": self._process_abyss_special_weapon(char_id, language),
             "同律武器": self._process_u_weapon(char_data.get("UWeapon", [])),
         }
+        if not processed["专武"]:
+            del processed["专武"]
         if not processed["加成"]:
             del processed["加成"]
         if not processed["标签"]:
@@ -269,6 +279,96 @@ class CharProcessor(BaseProcessor):
                 item["触发"] = battle_weapon.get("TriggerProbability", 0)
             rst.append(item)
         return rst
+
+    def _build_abyss_special_weapon_data(self):
+        """基于 AbyssShop 的时间窗预计算角色专武。"""
+        result = {}
+        abyss_shop = (
+            self.shop_item2_shop_sub_id.get("Walnut", {})
+            .get("AbyssShop", {})
+        )
+        abyss_shop_item_ids = {
+            entry.get("ShopItemId")
+            for entries in abyss_shop.values()
+            for entry in entries
+            if entry.get("ShopItemId")
+        }
+        if not abyss_shop_item_ids:
+            return result
+
+        for season in self.abyss_season_list_data.values():
+            char_id = season.get("CharId")
+            start_time = season.get("AbyssStartTime")
+            end_time = season.get("AbyssEndTime")
+            if not char_id or start_time is None or end_time is None:
+                continue
+
+            matched_walnut_ids = []
+            for shop_item in self.shop_item_data.values():
+                if shop_item.get("ItemType") != "Walnut":
+                    continue
+                if shop_item.get("ItemId") not in abyss_shop_item_ids:
+                    continue
+                shop_start_time = shop_item.get("StartTime")
+                shop_end_time = shop_item.get("EndTime")
+                if shop_start_time is None:
+                    continue
+                if shop_start_time >= end_time:
+                    continue
+                if shop_end_time is not None and shop_end_time <= start_time:
+                    continue
+                type_id = shop_item.get("TypeId")
+                if type_id is not None:
+                    matched_walnut_ids.append(type_id)
+
+            matched_walnut_ids = sorted(set(matched_walnut_ids))
+            if len(matched_walnut_ids) != 1:
+                continue
+
+            walnut_id = matched_walnut_ids[0]
+            walnut = self.walnut_data.get(str(walnut_id), {})
+            if not walnut:
+                walnut = self.walnut_data.get(walnut_id, {})
+            if not walnut:
+                continue
+
+            draft_ids = walnut.get("Id", [])
+            draft_id = draft_ids[0] if draft_ids else None
+            weapon_id = walnut.get("MainRewardId")
+            if not draft_id or not weapon_id:
+                continue
+
+            draft = self.draft_data.get(str(draft_id), {})
+            if not draft:
+                draft = self.draft_data.get(draft_id, {})
+            if draft.get("ProductType") != "Weapon":
+                continue
+            if draft.get("ProductId") != weapon_id:
+                continue
+
+            weapon = self.weapon_data.get(str(weapon_id), {})
+            if not weapon:
+                weapon = self.weapon_data.get(weapon_id, {})
+            if not weapon:
+                continue
+
+            result[char_id] = {
+                "draftId": draft_id,
+                "id": weapon_id,
+                "名称": self.get_translated_text(weapon.get("WeaponName", ""), "cn"),
+                "icon": weapon.get("Icon", "").replace(
+                    "/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_", ""
+                ),
+            }
+
+        return result
+
+    def _process_abyss_special_weapon(self, char_id, language):
+        """处理 AbyssShop 时间窗对应的专武。"""
+        weapon = self.abyss_special_weapon_data.get(char_id)
+        if not weapon:
+            return None
+        return weapon.get("id")
 
     def _process_addon(self, addon_attr):
         """处理角色加成数据"""

@@ -64,7 +64,9 @@ class TitleProcessor(BaseProcessor):
 
         icon_name = self._extract_icon_name(icon)
 
-        translated_name = self.get_translated_text(name_key, language)
+        translated_name = self.data_loader.get_title_name(title_id) or self.get_translated_text(
+            name_key, language
+        )
         translated_des = self.get_translated_text(des_key, language)
         access_text = self._get_access_text(title_id, language)
 

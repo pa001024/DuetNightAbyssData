@@ -3237,7 +3237,7 @@
     "分类": "Wish List",
     "品质": 1,
     "描述": "集齐皓京所有遗落的纸张",
-    "版本": "1.2",
+    "版本": "1.3",
     "奖励": {
       "Secret Letter Clue": 2
     }
@@ -4817,10 +4817,10 @@
     "分类": "Between the Shores",
     "品质": 2,
     "描述": "了解华胥文化中“有龙氏”的定义。",
-    "版本": "1.2",
+    "版本": "1.3",
     "奖励": {
       "Secret Letter Clue": 1,
-      "Title: Title_10116": 1
+      "Title: 成龙的": 1
     }
   },
   {
@@ -4829,7 +4829,7 @@
     "分类": "Between the Shores",
     "品质": 2,
     "描述": "了解大风九章的诫律。",
-    "版本": "1.2",
+    "版本": "1.3",
     "奖励": {
       "Secret Letter Clue": 1
     }
@@ -4840,7 +4840,7 @@
     "分类": "Between the Shores",
     "品质": 2,
     "描述": "第一次看见无由生。",
-    "版本": "1.2",
+    "版本": "1.3",
     "奖励": {
       "Secret Letter Clue": 1
     }
@@ -4851,7 +4851,7 @@
     "分类": "Between the Shores",
     "品质": 2,
     "描述": "在忘川中了解扶疏的过往。",
-    "版本": "1.2",
+    "版本": "1.3",
     "奖励": {
       "Secret Letter Clue": 1
     }
@@ -4862,7 +4862,7 @@
     "分类": "Between the Shores",
     "品质": 1,
     "描述": "与止流反目。",
-    "版本": "1.2",
+    "版本": "1.3",
     "奖励": {
       "Secret Letter Clue": 2
     }
@@ -4873,7 +4873,7 @@
     "分类": "Between the Shores",
     "品质": 2,
     "描述": "在执律阁巅与太皓交手并生还。",
-    "版本": "1.2",
+    "版本": "1.3",
     "奖励": {
       "Secret Letter Clue": 1
     }
@@ -4884,10 +4884,10 @@
     "分类": "Between the Shores",
     "品质": 2,
     "描述": "与苏乙正式结识。",
-    "版本": "1.2",
+    "版本": "1.3",
     "奖励": {
       "Secret Letter Clue": 1,
-      "Title: Title_20098": 1
+      "Title: 姑奶奶": 1
     }
   },
   {
@@ -4896,7 +4896,7 @@
     "分类": "Between the Shores",
     "品质": 2,
     "描述": "倾听刻舟的过往。",
-    "版本": "1.2",
+    "版本": "1.3",
     "奖励": {
       "Secret Letter Clue": 1
     }
@@ -4907,7 +4907,7 @@
     "分类": "Between the Shores",
     "品质": 2,
     "描述": "解开止流的全部卦象。",
-    "版本": "1.2",
+    "版本": "1.3",
     "奖励": {
       "Secret Letter Clue": 1
     }
@@ -4918,10 +4918,10 @@
     "分类": "Between the Shores",
     "品质": 2,
     "描述": "将大风九章重置回原点。",
-    "版本": "1.2",
+    "版本": "1.3",
     "奖励": {
       "Secret Letter Clue": 1,
-      "Title: Title_10117": 1
+      "Title: 直视神明的": 1
     }
   },
   {
@@ -4930,7 +4930,7 @@
     "分类": "Between the Shores",
     "品质": 3,
     "描述": "一切繁芜褪尽后，她露出了最本真的笑容。",
-    "版本": "1.2",
+    "版本": "1.3",
     "奖励": {
       "Secret Letter Clue": 2
     }
@@ -4941,7 +4941,7 @@
     "分类": "Between the Shores",
     "品质": 3,
     "描述": "在奉香群英试中夺魁。",
-    "版本": "1.2",
+    "版本": "1.3",
     "奖励": {
       "Secret Letter Clue": 2
     }
@@ -5237,7 +5237,7 @@
     "分类": "Hello, World",
     "品质": 2,
     "描述": "找到探险家皎皎在“皓京”留下的15个探险之证",
-    "版本": "1.2",
+    "版本": "1.3",
     "奖励": {
       "Secret Letter Clue": 1
     }
@@ -5296,7 +5296,7 @@
     "分类": "Joyful Days",
     "品质": 1,
     "描述": "Go to Ripples of Talk at the Sanctuary and finish Sojourns of the Pages of Time: Su Yi",
-    "版本": "1.2",
+    "版本": "1.3",
     "奖励": {
       "Secret Letter Clue": 1,
       "Title: Su Yi's": 1
@@ -5393,7 +5393,7 @@
     "分类": "Joyful Days",
     "品质": 1,
     "描述": "Go to Ripples of Talk at the Sanctuary and finish Sojourns of the Pages of Time: Camilla",
-    "版本": "1.2",
+    "版本": "1.3",
     "奖励": {
       "Secret Letter Clue": 1,
       "Title: Camilla's": 1
@@ -5429,7 +5429,7 @@
     "分类": "Joyful Days",
     "品质": 1,
     "描述": "Go to Ripples of Talk at the Sanctuary and finish Sojourns of the Pages of Time: Zhiliu",
-    "版本": "1.2",
+    "版本": "1.3",
     "奖励": {
       "Secret Letter Clue": 1,
       "Title: Zhiliu's": 1
@@ -5441,7 +5441,7 @@
     "分类": "Joyful Days",
     "品质": 1,
     "描述": "Go to Ripples of Talk at the Sanctuary and finish Sojourns of the Pages of Time: Yuming",
-    "版本": "1.2",
+    "版本": "1.3",
     "奖励": {
       "Secret Letter Clue": 1,
       "Title: Yuming's": 1
@@ -5586,7 +5586,7 @@
     "分类": "Joyful Days",
     "品质": 2,
     "描述": "Invite Su Yi to the Sanctuary and talk to her once",
-    "版本": "1.2",
+    "版本": "1.3",
     "奖励": {
       "Secret Letter Clue": 1,
       "Title: Su Yi": 1
@@ -5683,7 +5683,7 @@
     "分类": "Joyful Days",
     "品质": 2,
     "描述": "Invite Camilla to the Sanctuary and talk to her once",
-    "版本": "1.2",
+    "版本": "1.3",
     "奖励": {
       "Secret Letter Clue": 1,
       "Title: Camilla": 1
@@ -6255,7 +6255,7 @@
     "分类": "Hello, World",
     "品质": 2,
     "描述": "Summon the Oneiric Avian Spirit to record 15 Mistwharf location(s)",
-    "版本": "1.2",
+    "版本": "1.3",
     "奖励": {
       "Secret Letter Clue": 2
     }

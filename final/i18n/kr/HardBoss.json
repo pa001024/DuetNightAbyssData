@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "시빌라",
-    "icon": "",
+    "icon": "T_Permanent_HardBoss_Xibi_S",
     "desc": "휘페르보레아 제국 제13군단 군단장. 그날 연옥도에서 그녀와 마주친 뒤로, 우리의 운명은 원래의 궤적에서 벗어나기 시작했다.",
     "diff": [
       {
@@ -43,7 +43,7 @@
   {
     "id": 2,
     "name": "크리스탈 이터",
-    "icon": "",
+    "icon": "T_Permanent_HardBoss_ShiJingZhe_S",
     "desc": "글로스터의 사신. 글로스터 광갱 깊숙한 곳에 나타나는 거대 필토이드. 통로를 파면서 빛나는 물체를 집어삼키는 행위를 반복한다.",
     "diff": [
       {
@@ -84,7 +84,7 @@
   {
     "id": 3,
     "name": "우화를 이룬 자",
-    "icon": "",
+    "icon": "T_Permanent_HardBoss_Saiqi_S",
     "desc": "얼어붙은 땅 속의 씨앗은 부드럽게 밤으로 들어갈 시기를 놓쳤다. ",
     "diff": [
       {
@@ -125,7 +125,7 @@
   {
     "id": 4,
     "name": "'지옥불의 교도소장'",
-    "icon": "",
+    "icon": "T_Permanent_HardBoss_Haier_S",
     "desc": "황실 군교도소 교도소장.\n그녀의 사슬은 죄악을 징벌하고,\n그녀의 화염은 정의를 수호한다.",
     "diff": [
       {
@@ -166,7 +166,7 @@
   {
     "id": 5,
     "name": "'설국의 야수'",
-    "icon": "",
+    "icon": "T_Permanent_HardBoss_Linen_S",
     "desc": "설국에서 기승을 부리는 야수. 아이들의 고향을 무너뜨리고, 요정의 깨진 꿈을 녹였다.",
     "diff": [
       {
@@ -207,7 +207,7 @@
   {
     "id": 6,
     "name": "太皓与烛阴",
-    "icon": "",
+    "icon": "T_Permanent_HardBoss_Bailong_S",
     "desc": "待包装",
     "diff": [
       {

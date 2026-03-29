@@ -2964,6 +2964,7 @@
       "[Ciel tranché par la lumière] niveau +2 ; [La vie dérive, les forces s’inversent] niveau +1.",
       "Lorsqu’un Effet supplémentaire est déclenché, obtient 1 cumul de Pénétration +3% pendant 12 s, jusqu’à 18 cumuls."
     ],
+    "专武": 20510,
     "同律武器": [
       {
         "id": 150301,
@@ -3502,7 +3503,8 @@
       "Lorsque vous infligez des Dégâts de compétence, une probabilité basée sur votre arme à distance peut déclencher un Effet supplémentaire Lumino.\nLorsque cet effet est déclenché, les ennemis dans un rayon de 10 sont attirés vers le centre de l’impact.\nCet effet peut se déclencher au maximum une fois par seconde.",
       "[Mode annihilation stellaire] niveau +2 ; [Puissance accumulée] niveau +1.",
       "Chaque cumul d’[Errance céleste] confère 6% de Pénétration tous attributs supplémentaire.\nLorsque la méchapoupée Fengshi est projetée, 2 unités supplémentaires sont générées. Chacune inflige 20% des dégâts initiaux."
-    ]
+    ],
+    "专武": 20407
   },
   {
     "id": 1601,
@@ -4388,7 +4390,8 @@
       "Chaque cumul de [Plume enchantée] augmente la Puissance de compétence de 2% et la Portée de compétence de 1%.",
       "[« C’est l’heure du goûter »] niveau +2 ; [« Les méchants ont peur du soleil ! »] niveau +1.",
       "Pendant [Goûter endiablé], lorsque Fina inflige des DGT d’arme, chaque Effet supplémentaire affectant la cible augmente le Taux CRIT de cette attaque de 24% et convertit l’attribut élémentaire des dégâts en l’élément auquel la cible est vulnérable."
-    ]
+    ],
+    "专武": 20509
   },
   {
     "id": 2101,
@@ -5731,7 +5734,8 @@
       "Le nombre maximal de cumuls de [Rythme de l’âme] passe à 3, et chaque cumul confère une augmentation de Vigueur de 12%.",
       "[Symbiose parfaite] niveau +2 ; [Rythme de l’âme] niveau +1.",
       "Pendant toute la durée de l’augmentation de la Vitesse d’attaque conférée par [Symbiose parfaite], les attaques normales de mêlée de Fushu infligent 220% de Dégâts Hydro supplémentaires."
-    ]
+    ],
+    "专武": 10502
   },
   {
     "id": 3101,
@@ -8042,7 +8046,8 @@
       "Les dégâts causés par la détonation de [Lacération] sont augmentés de 30%, et la vitesse de vol de [Lames tournoyantes] est augmentée à 25.",
       "[Valse écarlate] niveau +2 ; [Rafale pourpre] niveau +1.",
       "Lorsque [Lame du sommelier] est active, votre Pénétration tous attributs augmente de 45%.\nLorsque [Blessure écarlate] est supprimée, 1 cumul supplémentaire est retiré et une instance de dégâts supplémentaire est infligée."
-    ]
+    ],
+    "专武": 20512
   },
   {
     "id": 3301,
@@ -9578,7 +9583,8 @@
       "Lorsqu’un gain supplémentaire de Régénération de Lucidité entraîne un débordement, confère à vous et à vos alliés 1 cumul d’augmentation d’ATQ de 16% pendant 16 s, cumulable jusqu’à 5 fois.",
       "[Divination cosmique] niveau +2 ; [Rituel jumelé] niveau +1.",
       "Lorsque Zhiliu se trouve dans la zone d’[Harmonie des Quatre Royaumes], sa Pénétration (tous attributs) augmente de 40% et elle bénéficie en continu de l’augmentation des Dégâts de compétence conférée par [Clarté du destin]."
-    ]
+    ],
+    "专武": 10304
   },
   {
     "id": 4201,
@@ -10061,7 +10067,8 @@
       "Les Attaques plongeantes au corps à corps infligent des Dégâts Électro supplémentaires équivalents à 12% de la Puissance de compétence de Yuming, jusqu’à un maximum de 36%.",
       "[Écailles sinistres] niveau +2 ; [Effleurer les cieux] niveau +1.",
       "Sous l’état [Éveil de Xuanjiao], la Pénétration de tous les Attributs augmente de 25%.\nAprès avoir déclenché cumulativement 6 effets de dégâts de [Fureur foudroyante], une instance supplémentaire de dégâts de [Fureur foudroyante], équivalente à son multiplicateur initial de 130%, est infligée à toutes les cibles affectées. Cet effet ne peut être déclenché qu’une fois toutes les 6 s."
-    ]
+    ],
+    "专武": 10203
   },
   {
     "id": 4202,
@@ -12703,6 +12710,7 @@
       "[Éclosion luminescente] niveau +2 ; [Lueur changeante] niveau +1.",
       "Pendant [Métamorphose radieuse], Psyche gagne +50% en Pénétration (tous attributs)."
     ],
+    "专武": 10204,
     "同律武器": [
       {
         "id": 530101,

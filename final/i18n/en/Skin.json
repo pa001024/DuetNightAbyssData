@@ -1,0 +1,2220 @@
+[
+  {
+    "id": 1101,
+    "name": "Berenica's Accessory",
+    "desc": "Black is the colour of night — a calm, watchful veil drawn over the world. Black is the colour of shadow — a cloak that lets one remain ever near to those they hold dear. Berenica favours it.",
+    "icon": "T_Head_Heitao",
+    "rarity": 5,
+    "charId": 1101,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10001,
+          "name": "Portrait: Memory",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "Lucent Prism",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 1102,
+    "name": "UI_Skin_Name_1102",
+    "desc": "UI_Skin_Des_1102",
+    "icon": "T_Head_Fuluo",
+    "rarity": 5,
+    "charId": 1102,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10001,
+          "name": "Portrait: Memory",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "Lucent Prism",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 1103,
+    "name": "Phantasio's Accessory",
+    "desc": "A shadow in motion. A fumbling actor on a stage. A tale spun by a fool.",
+    "icon": "T_Head_Tuosi",
+    "rarity": 5,
+    "charId": 1103,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10018,
+          "name": "Portrait: The One Behind the Curtain",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "Lucent Prism",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 1501,
+    "name": "Lisbell's Accessory",
+    "desc": "The Elysian Church's doctrine is not merely stitched into fabric — it is etched upon the soul, bearing witness to a girl who time and again sheds her rage, and rises patient and resolute.",
+    "icon": "T_Head_Baonu",
+    "rarity": 5,
+    "charId": 1501,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10003,
+          "name": "Portrait: The Seven Virtues - Patience",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "Lucent Prism",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 1502,
+    "name": "Lady Nifle's Accessory",
+    "desc": "Gauzy veils, spun of dusk and aurora, guide each soul across the tear-brimmed river — to the Misty Sea, where all are reborn.",
+    "icon": "T_Head_Nifu",
+    "rarity": 5,
+    "charId": 1502,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10029,
+          "name": "Portrait: Ferrywoman of the Misty Sea",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "Lucent Prism",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 1503,
+    "name": "Kezhou's Accessory",
+    "desc": "Rain slips from flowing robes, gathers at the sword's tip, then vanishes into the world of drifting blades.",
+    "icon": "T_Head_Kezhou",
+    "rarity": 5,
+    "charId": 1503,
+    "release": "1.1",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10024,
+          "name": "Portrait: Drifting Swordsman",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "Lucent Prism",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 1504,
+    "name": "UI_Skin_Name_1504",
+    "desc": "UI_Skin_Des_1504",
+    "icon": "T_Head_Suyi",
+    "rarity": 5,
+    "charId": 1504,
+    "release": "1.3",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10031,
+          "name": "机枢少女的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "Lucent Prism",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 1601,
+    "name": "{nickname}'s Accessory",
+    "desc": "Drifting through night and sea, in robes of white, to meet the dawn.",
+    "icon": "T_Head_Nvzhu",
+    "rarity": 5,
+    "charId": 1601,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10026,
+          "name": "Portrait: Phoxhunter",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 1801,
+    "name": "Fina's Accessory",
+    "desc": "The nightingale pins snowy plumes to her tale, letting the delicate wings carry her dreams into the clouds.",
+    "icon": "T_Head_Feina",
+    "rarity": 5,
+    "charId": 1801,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10014,
+          "name": "Portrait: Miss Nightingale",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "Lucent Prism",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 2101,
+    "name": "Rebecca's Accessory",
+    "desc": "Jellyfish tendrils drift into the deep like a trailing hem, setting a lover's heart aquiver in the dark.",
+    "icon": "T_Head_Shuimu",
+    "rarity": 5,
+    "charId": 2101,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10009,
+          "name": "Portrait: The Love Seeker",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "Lucent Prism",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 2102,
+    "name": "UI_Skin_Name_2102",
+    "desc": "UI_Skin_Des_2102",
+    "icon": "T_Head_Shuimu",
+    "rarity": 5,
+    "charId": 2102,
+    "release": "1.5",
+    "defaultItem": {
+      "Resource": [
+        {
+          "id": 110,
+          "name": "Lucent Prism",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 2301,
+    "name": "Tabethe's Accessory",
+    "desc": "What writhes in the dark — conspiracy, chaos, crime? None of those. Just tentacles.",
+    "icon": "T_Head_Zhangyu",
+    "rarity": 5,
+    "charId": 2301,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10012,
+          "name": "Portrait: Demon Tabethe the Red Hand",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "Lucent Prism",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 2401,
+    "name": "Fushu's Accessory",
+    "desc": "Wisps of herbal fragrance drift through white sleeves, whispering of life's return to the withered.",
+    "icon": "T_Head_Baiheng",
+    "rarity": 5,
+    "charId": 2401,
+    "release": "1.1",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10002,
+          "name": "Portrait: The Huaxu Apothecary",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "Lucent Prism",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 3101,
+    "name": "Lynn's Accessory",
+    "desc": "Gunpowder warmth clings to the matte uniform — driven on by the pulse of fervent blood.",
+    "icon": "T_Head_Linen",
+    "rarity": 5,
+    "charId": 3101,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10007,
+          "name": "Portrait: The Self-Denying",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "Lucent Prism",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 3102,
+    "name": "UI_Skin_Name_3102",
+    "desc": "UI_Skin_Des_3102",
+    "icon": "T_Head_Xier",
+    "rarity": 5,
+    "charId": 3102,
+    "release": "1.4",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10020,
+          "name": "Portrait: The Perfect Maid",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "Lucent Prism",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 3103,
+    "name": "Yale and Oliver's Accessory",
+    "desc": "Burning threads of red and white bind a madman's reveries — and stitch together a boy's innocent dream.",
+    "icon": "T_Head_Yeer",
+    "rarity": 5,
+    "charId": 3103,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10021,
+          "name": "Portrait: The Undivided Two",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "Lucent Prism",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 3201,
+    "name": "Hellfire's Accessory",
+    "desc": "Chains and thorns mark retribution for sin — and bind the righteous fire that burns within.",
+    "icon": "T_Head_Haier",
+    "rarity": 5,
+    "charId": 3201,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10004,
+          "name": "Portrait: The Warden",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "Lucent Prism",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 3202,
+    "name": "UI_Skin_Name_3202",
+    "desc": "UI_Skin_Des_3202",
+    "icon": "T_Head_Kami",
+    "rarity": 5,
+    "charId": 3202,
+    "release": "1.3",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10023,
+          "name": "Portrait : Camilla",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "Lucent Prism",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 3301,
+    "name": "Margie's Accessory",
+    "desc": "A multipurpose helmet forged from a pot — sturdy armour for a scavenger girl.",
+    "icon": "T_Head_Maer",
+    "rarity": 5,
+    "charId": 3301,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10017,
+          "name": "Portrait: Princess Rubbish Bin",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "Lucent Prism",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 4101,
+    "name": "Rhythm's Accessory",
+    "desc": "Star-flecked blue shimmers across her uniform — a will to protect, and a gaze lifted towards the future.",
+    "icon": "T_Head_Lise",
+    "rarity": 5,
+    "charId": 4101,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10016,
+          "name": "Portrait: The Light Chaser",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "Lucent Prism",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 4102,
+    "name": "Zhiliu's Accessory",
+    "desc": "Sunlight spills across sumptuous brocade like molten gold — the dawn of revolution reflected in her golden eyes.",
+    "icon": "T_Head_Zhiliu",
+    "rarity": 5,
+    "charId": 4102,
+    "release": "1.2",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10030,
+          "name": "Portrait: The Mastermind",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "Lucent Prism",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 4201,
+    "name": "Yuming's Accessory",
+    "desc": "Heaven's thunder courses through his form. Upholding Dafeng's mandate, sin finds no refuge — nor does he.",
+    "icon": "T_Head_Yuming",
+    "rarity": 5,
+    "charId": 4201,
+    "release": "1.2",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10011,
+          "name": "Portrait: The Guilty",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "Lucent Prism",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 4202,
+    "name": "Randy's Accessory",
+    "desc": "A medal gleams with a genius mind above. A uniform beats the heart of an ordinary man below.",
+    "icon": "T_Head_Landi",
+    "rarity": 5,
+    "charId": 4202,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10006,
+          "name": "Portrait: The Sloppy Gentleman",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "Lucent Prism",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 4301,
+    "name": "Sibylle's Accessory",
+    "desc": "She wears neither armour nor crown — yet her presence resounds with commanding dread.",
+    "icon": "T_Head_Xibi",
+    "rarity": 5,
+    "charId": 4301,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10019,
+          "name": "Portrait: Legion's Chief",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "Lucent Prism",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 5101,
+    "name": "Truffle and Filbert's Accessory",
+    "desc": "White plumes flutter through the streets, trailing the scent of malt and hearthfire — borne on the wind to every empty stomach.",
+    "icon": "T_Head_Songlu",
+    "rarity": 5,
+    "charId": 5101,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10010,
+          "name": "Portrait: The Commissary",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "Lucent Prism",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 5102,
+    "name": "Outsider's Accessory",
+    "desc": "Simple garb won't silence the crimson wails of dark alleys — but it shelters a sliver of starlight from the world's brutality.",
+    "icon": "T_Head_Aote",
+    "rarity": 5,
+    "charId": 5102,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10015,
+          "name": "Portrait: The Displaced",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "Lucent Prism",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 5301,
+    "name": "Psyche's Accessory",
+    "desc": "A butterfly rests in the crook of her arm, bearing dreams that crossed the winter frost.",
+    "icon": "T_Head_Saiqi",
+    "rarity": 5,
+    "charId": 5301,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10008,
+          "name": "Portrait: The Sower",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "Lucent Prism",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 5401,
+    "name": "Daphne's Accessory",
+    "desc": "Verdant green, rising through smoke and gunpowder — light as wild grass, and just as unyielding.",
+    "icon": "T_Head_Dafu",
+    "rarity": 5,
+    "charId": 5401,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10013,
+          "name": "Portrait: The Alchemist",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "Lucent Prism",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 110201,
+    "name": "UI_Skin_Name_110201",
+    "desc": "UI_Skin_Des_110201",
+    "icon": "T_Head_Fuluo",
+    "rarity": 5,
+    "charId": 1102,
+    "release": "1.4",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10001,
+          "name": "Portrait: Memory",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "Lucent Prism",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 150401,
+    "name": "青羽天巡",
+    "desc": "青羽铸就云中客，一念乘风。",
+    "icon": "T_Head_Suyi01",
+    "rarity": 5,
+    "charId": 1504,
+    "tag": "Suyi01",
+    "release": "1.3",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 150492,
+          "name": "青羽天巡",
+          "num": 1
+        }
+      ],
+      "HeadSculpture": [
+        {
+          "id": 20006,
+          "name": "机枢少女的肖像·晴空",
+          "num": 1
+        }
+      ]
+    },
+    "upgrade": [
+      {
+        "step": 2,
+        "amount": 54,
+        "currencyId": 1010,
+        "currency": "流光织针"
+      },
+      {
+        "step": 3,
+        "amount": 72,
+        "currencyId": 1010,
+        "currency": "流光织针"
+      }
+    ]
+  },
+  {
+    "id": 160101,
+    "name": "{nickname}'s Accessory",
+    "desc": "Drifting through night and sea, in robes of white, to meet the dawn.",
+    "icon": "T_Head_Nanzhu",
+    "rarity": 5,
+    "charId": 160101,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10025,
+          "name": "Portrait: Phoxhunter",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 180101,
+    "name": "子不语",
+    "desc": "一汪幽影洒月夜，半卷书签话鬼神。",
+    "icon": "T_Head_Feina01",
+    "rarity": 5,
+    "charId": 1801,
+    "tag": "Feina01",
+    "release": "1.3",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10014,
+          "name": "Portrait: Miss Nightingale",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "Lucent Prism",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 210102,
+    "name": "Veils and Whispers",
+    "desc": "A murmur of love through the silks, an eternity sealed in a fatal kiss.",
+    "icon": "T_Head_Shuimu01",
+    "rarity": 5,
+    "charId": 2101,
+    "tag": "Shuimu01",
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 20002,
+          "name": "Portrait: The Love Seeker - Tidewave",
+          "num": 1
+        }
+      ],
+      "Title": [
+        {
+          "id": 20032,
+          "name": " Dancer",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 240101,
+    "name": "Tidal Repose",
+    "desc": "Tides to wash away the dust, waves to still the heart.",
+    "icon": "T_Head_Baiheng01",
+    "rarity": 5,
+    "charId": 2401,
+    "tag": "Baiheng01",
+    "release": "1.1",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 240192,
+          "name": "Tidal Repose",
+          "num": 1
+        }
+      ],
+      "HeadSculpture": [
+        {
+          "id": 20004,
+          "name": "Portrait: The Huaxu Apothecary – Ripple",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 410101,
+    "name": "子不语",
+    "desc": "一汪幽影洒月夜，半卷书签话鬼神。",
+    "icon": "T_Head_Lise01",
+    "rarity": 5,
+    "charId": 4101,
+    "tag": "Lise01",
+    "release": "1.3",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10016,
+          "name": "Portrait: The Light Chaser",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "Lucent Prism",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 410201,
+    "name": "Epulary Elegance",
+    "desc": "Over wine and words, fates are drawn and fortunes unfold.",
+    "icon": "T_Head_Zhiliu01",
+    "rarity": 5,
+    "charId": 4102,
+    "tag": "Zhiliu01",
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 410292,
+          "name": "Epulary Elegance",
+          "num": 1
+        }
+      ],
+      "HeadSculpture": [
+        {
+          "id": 20005,
+          "name": "Portrait: The Mastermind – Cupbearer",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 510101,
+    "name": "Sunlit Gristmill",
+    "desc": "Sunshine gathered, sunshine scattered!",
+    "icon": "T_Head_Songlu01",
+    "rarity": 5,
+    "charId": 5101,
+    "tag": "Songlu01",
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 20003,
+          "name": "Portrait: The Commissary - The Sun",
+          "num": 1
+        }
+      ],
+      "Title": [
+        {
+          "id": 20033,
+          "name": " Sun",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 530101,
+    "name": "Minuet Reverie",
+    "desc": "Midsummer night, beneath a sky of stars, a forest where violets and butterfly wings waltzed in delicate steps. A sight she had never seen.",
+    "icon": "T_Head_Saiqi01",
+    "rarity": 5,
+    "charId": 5301,
+    "tag": "Saiqi01",
+    "release": "1.0",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 530192,
+          "name": "Minuet Reverie",
+          "num": 1
+        }
+      ],
+      "HeadSculpture": [
+        {
+          "id": 20001,
+          "name": "Portrait: The Sower - Midsummer",
+          "num": 1
+        }
+      ],
+      "Title": [
+        {
+          "id": 20034,
+          "name": " Lover",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 11010010,
+    "name": "Starry Hopes",
+    "desc": "The bell chimes on the year's shortest day, and wishes are entrusted to the night, to be carried on starlight toward tomorrow.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 1101,
+    "release": "1.0"
+  },
+  {
+    "id": 11010011,
+    "name": "Verdant Serenity",
+    "desc": "Beauty unveiled, grace in its wake.",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 1101,
+    "release": "1.1"
+  },
+  {
+    "id": 11010121,
+    "name": "Frosty Fantasy",
+    "desc": "Why is one of the snowmen so much bigger than the others?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 1101,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 11010121,
+          "name": "Frosty Fantasy",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 11010122,
+    "name": "Fleeting Traces",
+    "desc": "Between the bell's chime and turning pages, the years slip away.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 1101,
+    "release": "1.2"
+  },
+  {
+    "id": 11010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 1101,
+    "release": "1.3"
+  },
+  {
+    "id": 11030010,
+    "name": "Starry Hopes",
+    "desc": "The bell chimes on the year's shortest day, and wishes are entrusted to the night, to be carried on starlight toward tomorrow.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 1103,
+    "release": "1.0"
+  },
+  {
+    "id": 11030011,
+    "name": "Verdant Serenity",
+    "desc": "Beauty unveiled, grace in its wake.",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 1103,
+    "release": "1.1"
+  },
+  {
+    "id": 11030121,
+    "name": "Frosty Fantasy",
+    "desc": "Why is one of the snowmen so much bigger than the others?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 1103,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 11030121,
+          "name": "Frosty Fantasy",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 11030122,
+    "name": "Fleeting Traces",
+    "desc": "Between the bell's chime and turning pages, the years slip away.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 1103,
+    "release": "1.2"
+  },
+  {
+    "id": 11030131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 1103,
+    "release": "9.9"
+  },
+  {
+    "id": 15010010,
+    "name": "Starry Hopes",
+    "desc": "The bell chimes on the year's shortest day, and wishes are entrusted to the night, to be carried on starlight toward tomorrow.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 1501,
+    "release": "1.0"
+  },
+  {
+    "id": 15010011,
+    "name": "Verdant Serenity",
+    "desc": "Beauty unveiled, grace in its wake.",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 1501,
+    "release": "1.1"
+  },
+  {
+    "id": 15010121,
+    "name": "Frosty Fantasy",
+    "desc": "Why is one of the snowmen so much bigger than the others?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 1501,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 15010121,
+          "name": "Frosty Fantasy",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 15010122,
+    "name": "Fleeting Traces",
+    "desc": "Between the bell's chime and turning pages, the years slip away.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 1501,
+    "release": "1.2"
+  },
+  {
+    "id": 15010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 1501,
+    "release": "1.3"
+  },
+  {
+    "id": 15020010,
+    "name": "Starry Hopes",
+    "desc": "The bell chimes on the year's shortest day, and wishes are entrusted to the night, to be carried on starlight toward tomorrow.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 1502,
+    "release": "1.0"
+  },
+  {
+    "id": 15020011,
+    "name": "Verdant Serenity",
+    "desc": "Beauty unveiled, grace in its wake.",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 1502,
+    "release": "1.1"
+  },
+  {
+    "id": 15020121,
+    "name": "Frosty Fantasy",
+    "desc": "Why is one of the snowmen so much bigger than the others?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 1502,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 15020121,
+          "name": "Frosty Fantasy",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 15020122,
+    "name": "Fleeting Traces",
+    "desc": "Between the bell's chime and turning pages, the years slip away.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 1502,
+    "release": "1.2"
+  },
+  {
+    "id": 15020131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 1502,
+    "release": "1.3"
+  },
+  {
+    "id": 15030011,
+    "name": "Verdant Serenity",
+    "desc": "Beauty unveiled, grace in its wake.",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 1503,
+    "release": "1.1"
+  },
+  {
+    "id": 15030121,
+    "name": "Frosty Fantasy",
+    "desc": "Why is one of the snowmen so much bigger than the others?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 1503,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 15030121,
+          "name": "Frosty Fantasy",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 15030122,
+    "name": "Fleeting Traces",
+    "desc": "Between the bell's chime and turning pages, the years slip away.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 1503,
+    "release": "1.2"
+  },
+  {
+    "id": 15030131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 1503,
+    "release": "1.3"
+  },
+  {
+    "id": 15040131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 1504,
+    "release": "1.3"
+  },
+  {
+    "id": 16010010,
+    "name": "Starry Hopes",
+    "desc": "The bell chimes on the year's shortest day, and wishes are entrusted to the night, to be carried on starlight toward tomorrow.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 1601,
+    "release": "1.0"
+  },
+  {
+    "id": 16010011,
+    "name": "Verdant Serenity",
+    "desc": "Beauty unveiled, grace in its wake.",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 1601,
+    "release": "1.1"
+  },
+  {
+    "id": 16010110,
+    "name": "Starry Hopes",
+    "desc": "The bell chimes on the year's shortest day, and wishes are entrusted to the night, to be carried on starlight toward tomorrow.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 160101,
+    "release": "1.0"
+  },
+  {
+    "id": 16010111,
+    "name": "Verdant Serenity",
+    "desc": "Beauty unveiled, grace in its wake.",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 160101,
+    "release": "1.1"
+  },
+  {
+    "id": 16010121,
+    "name": "Frosty Fantasy",
+    "desc": "Why is one of the snowmen so much bigger than the others?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 1601,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 16010121,
+          "name": "Frosty Fantasy",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 16010122,
+    "name": "Fleeting Traces",
+    "desc": "Between the bell's chime and turning pages, the years slip away.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 1601,
+    "release": "1.2"
+  },
+  {
+    "id": 16010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 1601,
+    "release": "1.3"
+  },
+  {
+    "id": 16010221,
+    "name": "Frosty Fantasy",
+    "desc": "Why is one of the snowmen so much bigger than the others?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 160101,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 16010221,
+          "name": "Frosty Fantasy",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 16010222,
+    "name": "Fleeting Traces",
+    "desc": "Between the bell's chime and turning pages, the years slip away.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 160101,
+    "release": "1.2"
+  },
+  {
+    "id": 16010231,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 160101,
+    "release": "1.3"
+  },
+  {
+    "id": 18010010,
+    "name": "Starry Hopes",
+    "desc": "The bell chimes on the year's shortest day, and wishes are entrusted to the night, to be carried on starlight toward tomorrow.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 1801,
+    "release": "1.0"
+  },
+  {
+    "id": 18010011,
+    "name": "Verdant Serenity",
+    "desc": "Beauty unveiled, grace in its wake.",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 1801,
+    "release": "1.1"
+  },
+  {
+    "id": 18010121,
+    "name": "Frosty Fantasy",
+    "desc": "Why is one of the snowmen so much bigger than the others?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 1801,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 18010121,
+          "name": "Frosty Fantasy",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 18010122,
+    "name": "Fleeting Traces",
+    "desc": "Between the bell's chime and turning pages, the years slip away.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 1801,
+    "release": "1.2"
+  },
+  {
+    "id": 18010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 1801,
+    "release": "1.3"
+  },
+  {
+    "id": 21010010,
+    "name": "Starry Hopes",
+    "desc": "The bell chimes on the year's shortest day, and wishes are entrusted to the night, to be carried on starlight toward tomorrow.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 2101,
+    "release": "1.0"
+  },
+  {
+    "id": 21010011,
+    "name": "Verdant Serenity",
+    "desc": "Beauty unveiled, grace in its wake.",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 2101,
+    "release": "1.1"
+  },
+  {
+    "id": 21010121,
+    "name": "Frosty Fantasy",
+    "desc": "Why is one of the snowmen so much bigger than the others?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 2101,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 21010121,
+          "name": "Frosty Fantasy",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 21010122,
+    "name": "Fleeting Traces",
+    "desc": "Between the bell's chime and turning pages, the years slip away.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 2101,
+    "release": "1.2"
+  },
+  {
+    "id": 21010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 2101,
+    "release": "1.3"
+  },
+  {
+    "id": 23010010,
+    "name": "Starry Hopes",
+    "desc": "The bell chimes on the year's shortest day, and wishes are entrusted to the night, to be carried on starlight toward tomorrow.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 2301,
+    "release": "1.0"
+  },
+  {
+    "id": 23010011,
+    "name": "Verdant Serenity",
+    "desc": "Beauty unveiled, grace in its wake.",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 2301,
+    "release": "1.1"
+  },
+  {
+    "id": 23010121,
+    "name": "Frosty Fantasy",
+    "desc": "Why is one of the snowmen so much bigger than the others?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 2301,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 23010121,
+          "name": "Frosty Fantasy",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 23010122,
+    "name": "Fleeting Traces",
+    "desc": "Between the bell's chime and turning pages, the years slip away.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 2301,
+    "release": "1.2"
+  },
+  {
+    "id": 23010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 2301,
+    "release": "9.9"
+  },
+  {
+    "id": 24010011,
+    "name": "Verdant Serenity",
+    "desc": "Beauty unveiled, grace in its wake.",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 2401,
+    "release": "1.1"
+  },
+  {
+    "id": 24010121,
+    "name": "Frosty Fantasy",
+    "desc": "Why is one of the snowmen so much bigger than the others?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 2401,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 24010121,
+          "name": "Frosty Fantasy",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 24010122,
+    "name": "Fleeting Traces",
+    "desc": "Between the bell's chime and turning pages, the years slip away.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 2401,
+    "release": "1.2"
+  },
+  {
+    "id": 24010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 2401,
+    "release": "1.3"
+  },
+  {
+    "id": 31010010,
+    "name": "Starry Hopes",
+    "desc": "The bell chimes on the year's shortest day, and wishes are entrusted to the night, to be carried on starlight toward tomorrow.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 3101,
+    "release": "1.0"
+  },
+  {
+    "id": 31010011,
+    "name": "Verdant Serenity",
+    "desc": "Beauty unveiled, grace in its wake.",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 3101,
+    "release": "1.1"
+  },
+  {
+    "id": 31010121,
+    "name": "Frosty Fantasy",
+    "desc": "Why is one of the snowmen so much bigger than the others?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 3101,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 31010121,
+          "name": "Frosty Fantasy",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 31010122,
+    "name": "Fleeting Traces",
+    "desc": "Between the bell's chime and turning pages, the years slip away.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 3101,
+    "release": "1.2"
+  },
+  {
+    "id": 31010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 3101,
+    "release": "1.3"
+  },
+  {
+    "id": 31030010,
+    "name": "Starry Hopes",
+    "desc": "The bell chimes on the year's shortest day, and wishes are entrusted to the night, to be carried on starlight toward tomorrow.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 3103,
+    "release": "1.0"
+  },
+  {
+    "id": 31030011,
+    "name": "Verdant Serenity",
+    "desc": "Beauty unveiled, grace in its wake.",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 3103,
+    "release": "1.1"
+  },
+  {
+    "id": 31030121,
+    "name": "Frosty Fantasy",
+    "desc": "Why is one of the snowmen so much bigger than the others?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 3103,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 31030121,
+          "name": "Frosty Fantasy",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 31030122,
+    "name": "Fleeting Traces",
+    "desc": "Between the bell's chime and turning pages, the years slip away.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 3103,
+    "release": "1.2"
+  },
+  {
+    "id": 31030131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 3103,
+    "release": "9.9"
+  },
+  {
+    "id": 32010010,
+    "name": "Starry Hopes",
+    "desc": "The bell chimes on the year's shortest day, and wishes are entrusted to the night, to be carried on starlight toward tomorrow.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 3201,
+    "release": "1.0"
+  },
+  {
+    "id": 32010011,
+    "name": "Verdant Serenity",
+    "desc": "Beauty unveiled, grace in its wake.",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 3201,
+    "release": "1.1"
+  },
+  {
+    "id": 32010121,
+    "name": "Frosty Fantasy",
+    "desc": "Why is one of the snowmen so much bigger than the others?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 3201,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 32010121,
+          "name": "Frosty Fantasy",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 32010122,
+    "name": "Fleeting Traces",
+    "desc": "Between the bell's chime and turning pages, the years slip away.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 3201,
+    "release": "1.2"
+  },
+  {
+    "id": 32010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Pack_Common03_01",
+    "rarity": 5,
+    "charId": 3201,
+    "release": "1.3"
+  },
+  {
+    "id": 32020131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 3202,
+    "release": "1.3"
+  },
+  {
+    "id": 33010010,
+    "name": "Starry Hopes",
+    "desc": "The bell chimes on the year's shortest day, and wishes are entrusted to the night, to be carried on starlight toward tomorrow.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 3301,
+    "release": "1.0"
+  },
+  {
+    "id": 33010011,
+    "name": "Verdant Serenity",
+    "desc": "Beauty unveiled, grace in its wake.",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 3301,
+    "release": "1.1"
+  },
+  {
+    "id": 33010121,
+    "name": "Frosty Fantasy",
+    "desc": "Why is one of the snowmen so much bigger than the others?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 3301,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 33010121,
+          "name": "Frosty Fantasy",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 33010122,
+    "name": "Fleeting Traces",
+    "desc": "Between the bell's chime and turning pages, the years slip away.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 3301,
+    "release": "1.2"
+  },
+  {
+    "id": 33010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 3301,
+    "release": "9.9"
+  },
+  {
+    "id": 41010010,
+    "name": "Starry Hopes",
+    "desc": "The bell chimes on the year's shortest day, and wishes are entrusted to the night, to be carried on starlight toward tomorrow.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 4101,
+    "release": "1.0"
+  },
+  {
+    "id": 41010011,
+    "name": "Verdant Serenity",
+    "desc": "Beauty unveiled, grace in its wake.",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 4101,
+    "release": "1.1"
+  },
+  {
+    "id": 41010121,
+    "name": "Frosty Fantasy",
+    "desc": "Why is one of the snowmen so much bigger than the others?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 4101,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 41010121,
+          "name": "Frosty Fantasy",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 41010122,
+    "name": "Fleeting Traces",
+    "desc": "Between the bell's chime and turning pages, the years slip away.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 4101,
+    "release": "1.2"
+  },
+  {
+    "id": 41010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 4101,
+    "release": "1.3"
+  },
+  {
+    "id": 41020121,
+    "name": "Frosty Fantasy",
+    "desc": "Why is one of the snowmen so much bigger than the others?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 4102,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 41020121,
+          "name": "Frosty Fantasy",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 41020122,
+    "name": "Fleeting Traces",
+    "desc": "Between the bell's chime and turning pages, the years slip away.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 4102,
+    "release": "1.2"
+  },
+  {
+    "id": 41020131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 4102,
+    "release": "1.3"
+  },
+  {
+    "id": 42010121,
+    "name": "Frosty Fantasy",
+    "desc": "Why is one of the snowmen so much bigger than the others?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 4201,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 42010121,
+          "name": "Frosty Fantasy",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 42010122,
+    "name": "Fleeting Traces",
+    "desc": "Between the bell's chime and turning pages, the years slip away.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 4201,
+    "release": "1.2"
+  },
+  {
+    "id": 42010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 4201,
+    "release": "1.3"
+  },
+  {
+    "id": 42020010,
+    "name": "Starry Hopes",
+    "desc": "The bell chimes on the year's shortest day, and wishes are entrusted to the night, to be carried on starlight toward tomorrow.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 4202,
+    "release": "1.0"
+  },
+  {
+    "id": 42020011,
+    "name": "Verdant Serenity",
+    "desc": "Beauty unveiled, grace in its wake.",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 4202,
+    "release": "1.1"
+  },
+  {
+    "id": 42020121,
+    "name": "Frosty Fantasy",
+    "desc": "Why is one of the snowmen so much bigger than the others?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 4202,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 42020121,
+          "name": "Frosty Fantasy",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 42020122,
+    "name": "Fleeting Traces",
+    "desc": "Between the bell's chime and turning pages, the years slip away.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 4202,
+    "release": "1.2"
+  },
+  {
+    "id": 42020131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 4202,
+    "release": "9.9"
+  },
+  {
+    "id": 43010010,
+    "name": "Starry Hopes",
+    "desc": "The bell chimes on the year's shortest day, and wishes are entrusted to the night, to be carried on starlight toward tomorrow.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 4301,
+    "release": "1.0"
+  },
+  {
+    "id": 43010011,
+    "name": "Verdant Serenity",
+    "desc": "Beauty unveiled, grace in its wake.",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 4301,
+    "release": "1.1"
+  },
+  {
+    "id": 43010121,
+    "name": "Frosty Fantasy",
+    "desc": "Why is one of the snowmen so much bigger than the others?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 4301,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 43010121,
+          "name": "Frosty Fantasy",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 43010122,
+    "name": "Fleeting Traces",
+    "desc": "Between the bell's chime and turning pages, the years slip away.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 4301,
+    "release": "1.2"
+  },
+  {
+    "id": 43010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 4301,
+    "release": "1.3"
+  },
+  {
+    "id": 51010010,
+    "name": "Starry Hopes",
+    "desc": "The bell chimes on the year's shortest day, and wishes are entrusted to the night, to be carried on starlight toward tomorrow.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 5101,
+    "release": "1.0"
+  },
+  {
+    "id": 51010011,
+    "name": "Verdant Serenity",
+    "desc": "Beauty unveiled, grace in its wake.",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 5101,
+    "release": "1.1"
+  },
+  {
+    "id": 51010121,
+    "name": "Frosty Fantasy",
+    "desc": "Why is one of the snowmen so much bigger than the others?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 5101,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 51010121,
+          "name": "Frosty Fantasy",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 51010122,
+    "name": "Fleeting Traces",
+    "desc": "Between the bell's chime and turning pages, the years slip away.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 5101,
+    "release": "1.2"
+  },
+  {
+    "id": 51010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 5101,
+    "release": "1.3"
+  },
+  {
+    "id": 51020010,
+    "name": "Starry Hopes",
+    "desc": "The bell chimes on the year's shortest day, and wishes are entrusted to the night, to be carried on starlight toward tomorrow.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 5102,
+    "release": "1.0"
+  },
+  {
+    "id": 51020011,
+    "name": "Verdant Serenity",
+    "desc": "Beauty unveiled, grace in its wake.",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 5102,
+    "release": "1.1"
+  },
+  {
+    "id": 51020121,
+    "name": "Frosty Fantasy",
+    "desc": "Why is one of the snowmen so much bigger than the others?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 5102,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 51020121,
+          "name": "Frosty Fantasy",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 51020122,
+    "name": "Fleeting Traces",
+    "desc": "Between the bell's chime and turning pages, the years slip away.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 5102,
+    "release": "1.2"
+  },
+  {
+    "id": 51020131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 5102,
+    "release": "9.9"
+  },
+  {
+    "id": 53010010,
+    "name": "Starry Hopes",
+    "desc": "The bell chimes on the year's shortest day, and wishes are entrusted to the night, to be carried on starlight toward tomorrow.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 5301,
+    "release": "1.0"
+  },
+  {
+    "id": 53010011,
+    "name": "Verdant Serenity",
+    "desc": "Beauty unveiled, grace in its wake.",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 5301,
+    "release": "1.1"
+  },
+  {
+    "id": 53010121,
+    "name": "Frosty Fantasy",
+    "desc": "Why is one of the snowmen so much bigger than the others?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 5301,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 53010121,
+          "name": "Frosty Fantasy",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 53010122,
+    "name": "Fleeting Traces",
+    "desc": "Between the bell's chime and turning pages, the years slip away.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 5301,
+    "release": "1.2"
+  },
+  {
+    "id": 53010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 5301,
+    "release": "1.3"
+  },
+  {
+    "id": 54010010,
+    "name": "Starry Hopes",
+    "desc": "The bell chimes on the year's shortest day, and wishes are entrusted to the night, to be carried on starlight toward tomorrow.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 5401,
+    "release": "1.0"
+  },
+  {
+    "id": 54010011,
+    "name": "Verdant Serenity",
+    "desc": "Beauty unveiled, grace in its wake.",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 5401,
+    "release": "1.1"
+  },
+  {
+    "id": 54010121,
+    "name": "Frosty Fantasy",
+    "desc": "Why is one of the snowmen so much bigger than the others?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 5401,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 54010121,
+          "name": "Frosty Fantasy",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 54010122,
+    "name": "Fleeting Traces",
+    "desc": "Between the bell's chime and turning pages, the years slip away.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 5401,
+    "release": "1.2"
+  },
+  {
+    "id": 54010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 5401,
+    "release": "1.3"
+  }
+]

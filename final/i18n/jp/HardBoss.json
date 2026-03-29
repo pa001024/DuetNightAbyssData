@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "シビル",
-    "icon": "",
+    "icon": "T_Permanent_HardBoss_Xibi_S",
     "desc": "ヒュペリア帝国軍第十三軍団の軍団長。彼女がパーガトリー島に現れたあの日、私たちの運命は動きだし、あの頃の日常は永遠に失われた。",
     "diff": [
       {
@@ -43,7 +43,7 @@
   {
     "id": 2,
     "name": "晶嗜獣",
-    "icon": "",
+    "icon": "T_Permanent_HardBoss_ShiJingZhe_S",
     "desc": "グルビュームの死神。\nグルビューム鉱山の奥に現れる巨大な穢獣。絶えず通路を掘り進み、光るものを呑み込む。",
     "diff": [
       {
@@ -84,7 +84,7 @@
   {
     "id": 3,
     "name": "羽化せし者",
-    "icon": "",
+    "icon": "T_Permanent_HardBoss_Saiqi_S",
     "desc": "凍土の種は、夜のとばりへと安らかに羽ばたく機会を逃してしまった。",
     "diff": [
       {
@@ -125,7 +125,7 @@
   {
     "id": 4,
     "name": "「煉火の典獄」",
-    "icon": "",
+    "icon": "T_Permanent_HardBoss_Haier_S",
     "desc": "皇立軍事監獄の典獄。彼女の鎖が罪を裁き、彼女の炎が正義を貫く。",
     "diff": [
       {
@@ -166,7 +166,7 @@
   {
     "id": 5,
     "name": "「雪国の野獣」",
-    "icon": "",
+    "icon": "T_Permanent_HardBoss_Linen_S",
     "desc": "雪国で荒ぶる獣は子供たちの故郷を滅ぼし、妖精たちの夢まで散らす。",
     "diff": [
       {
@@ -207,7 +207,7 @@
   {
     "id": 6,
     "name": "太皓与烛阴",
-    "icon": "",
+    "icon": "T_Permanent_HardBoss_Bailong_S",
     "desc": "待包装",
     "diff": [
       {

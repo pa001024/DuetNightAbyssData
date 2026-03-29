@@ -1,0 +1,2220 @@
+[
+  {
+    "id": 1101,
+    "name": "贝蕾妮卡的衣饰",
+    "desc": "黑色是夜晚的颜色，它为大地罩起宁静而安心的面纱；黑色是影子的颜色，它能形影不离地守在至亲之人的身旁。贝蕾妮卡喜欢这个颜色。",
+    "icon": "T_Head_Heitao",
+    "rarity": 5,
+    "charId": 1101,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10001,
+          "name": "回忆中的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色棱镜",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 1102,
+    "name": "UI_Skin_Name_1102",
+    "desc": "UI_Skin_Des_1102",
+    "icon": "T_Head_Fuluo",
+    "rarity": 5,
+    "charId": 1102,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10001,
+          "name": "回忆中的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色棱镜",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 1103,
+    "name": "幻景的衣饰",
+    "desc": "一个行走的影子，一个舞台上拙劣的伶人，一个愚人讲述的故事。",
+    "icon": "T_Head_Tuosi",
+    "rarity": 5,
+    "charId": 1103,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10018,
+          "name": "幕后之人的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色棱镜",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 1501,
+    "name": "莉兹贝尔的衣饰",
+    "desc": "传颂会的铭文不仅是镶嵌在服装，更是铭刻在灵魂中的印记。它见证着少女从愤怒一次次蜕变成真正的坚忍。",
+    "icon": "T_Head_Baonu",
+    "rarity": 5,
+    "charId": 1501,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10003,
+          "name": "七美德的肖像·坚忍",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色棱镜",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 1502,
+    "name": "妮弗尔夫人的衣饰",
+    "desc": "薄暮与极光织就的纱幔引导着灵魂跨过溢满泪水的河流，去向万物新生的雾海。",
+    "icon": "T_Head_Nifu",
+    "rarity": 5,
+    "charId": 1502,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10029,
+          "name": "雾海引渡人的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色棱镜",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 1503,
+    "name": "刻舟的衣饰",
+    "desc": "飘零的风雨顺着衣摆滑落，停滞于剑尖，洒落在江湖。",
+    "icon": "T_Head_Kezhou",
+    "rarity": 5,
+    "charId": 1503,
+    "release": "1.1",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10024,
+          "name": "飘零剑客的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色棱镜",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 1504,
+    "name": "苏乙的衣饰",
+    "desc": "裁取三分青色，熔铸七分机巧，最后再借着晨风一缕，放飞少女的梦想与骄傲。",
+    "icon": "T_Head_Suyi",
+    "rarity": 5,
+    "charId": 1504,
+    "release": "1.3",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10031,
+          "name": "机枢少女的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色棱镜",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 1601,
+    "name": "{nickname}的衣饰",
+    "desc": "一人，一剑，一袭白衣。跨过汪洋与寒夜，只为在黎明的尽头相逢。",
+    "icon": "T_Head_Nvzhu",
+    "rarity": 5,
+    "charId": 1601,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10026,
+          "name": "狩月人的肖像",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 1801,
+    "name": "菲娜的衣饰",
+    "desc": "夜莺为她编织的故事插上白羽，让小小的羽翼载着她的梦飞向云间。",
+    "icon": "T_Head_Feina",
+    "rarity": 5,
+    "charId": 1801,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10014,
+          "name": "夜莺小姐的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色棱镜",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 2101,
+    "name": "丽蓓卡的衣饰",
+    "desc": "水母的触须垂入深海，宛若游弋的裙摆，在夜色中扰动着恋人的心弦。",
+    "icon": "T_Head_Shuimu",
+    "rarity": 5,
+    "charId": 2101,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10009,
+          "name": "谋爱之人的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色棱镜",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 2102,
+    "name": "UI_Skin_Name_2102",
+    "desc": "UI_Skin_Des_2102",
+    "icon": "T_Head_Shuimu",
+    "rarity": 5,
+    "charId": 2102,
+    "release": "1.5",
+    "defaultItem": {
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色棱镜",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 2301,
+    "name": "塔比瑟的衣饰",
+    "desc": "那在黑暗中蠕动着的是什么？阴谋？混沌？犯罪？全都不对，是触手！",
+    "icon": "T_Head_Zhangyu",
+    "rarity": 5,
+    "charId": 2301,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10012,
+          "name": "恶魔大盗的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色棱镜",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 2401,
+    "name": "扶疏的衣饰",
+    "desc": "药味作丝，在素白袖间诉说着枯草回春的轻语。",
+    "icon": "T_Head_Baiheng",
+    "rarity": 5,
+    "charId": 2401,
+    "release": "1.1",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10002,
+          "name": "华胥药师的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色棱镜",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 3101,
+    "name": "琳恩的衣饰",
+    "desc": "哑光制服上的火药余温，在热血的鼓动下久久无法消散。",
+    "icon": "T_Head_Linen",
+    "rarity": 5,
+    "charId": 3101,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10007,
+          "name": "违心之人的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色棱镜",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 3102,
+    "name": "UI_Skin_Name_3102",
+    "desc": "UI_Skin_Des_3102",
+    "icon": "T_Head_Xier",
+    "rarity": 5,
+    "charId": 3102,
+    "release": "1.4",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10020,
+          "name": "完美女仆的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色棱镜",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 3103,
+    "name": "耶尔与奥利弗的衣饰",
+    "desc": "燃烧的红与白，深锁了一位疯子的爆炸狂想，缝合出一位少年的无瑕梦乡。",
+    "icon": "T_Head_Yeer",
+    "rarity": 5,
+    "charId": 3103,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10021,
+          "name": "一体双生的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色棱镜",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 3201,
+    "name": "海尔法的衣饰",
+    "desc": "身负的锁链与棘刺不仅是对罪恶的惩戒，同时也是对心中正义之火的约束。",
+    "icon": "T_Head_Haier",
+    "rarity": 5,
+    "charId": 3201,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10004,
+          "name": "典狱长的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色棱镜",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 3202,
+    "name": "卡米拉的衣饰",
+    "desc": "瑰丽的光泽勾勒出令人屏息的曲线，举手投足，尽是酒香与夜色交融的氤氲吐息。",
+    "icon": "T_Head_Kami",
+    "rarity": 5,
+    "charId": 3202,
+    "release": "1.3",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10023,
+          "name": "生意人的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色棱镜",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 3301,
+    "name": "玛尔洁的衣饰",
+    "desc": "由一口锅子制成的多功能头盔，是拾荒少女坚硬的甲胄。",
+    "icon": "T_Head_Maer",
+    "rarity": 5,
+    "charId": 3301,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10017,
+          "name": "垃圾桶公主的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色棱镜",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 4101,
+    "name": "黎瑟的衣饰",
+    "desc": "跃动在制服上的星点蓝芒是守护的意志，亦是对未来的仰望。",
+    "icon": "T_Head_Lise",
+    "rarity": 5,
+    "charId": 4101,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10016,
+          "name": "逐灯者的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色棱镜",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 4102,
+    "name": "止流的衣饰",
+    "desc": "初阳融化了金箔，倾倒在瑰丽的锦缎上，连同变革的意志一起，燃烧在金黄的瞳孔中。",
+    "icon": "T_Head_Zhiliu",
+    "rarity": 5,
+    "charId": 4102,
+    "release": "1.2",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10030,
+          "name": "执棋者的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色棱镜",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 4201,
+    "name": "煜明的衣饰",
+    "desc": "应天之雷，流淌周身。贯彻大风的意旨，罪孽无处可逃，他亦无处可逃。",
+    "icon": "T_Head_Yuming",
+    "rarity": 5,
+    "charId": 4201,
+    "release": "1.2",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10011,
+          "name": "负罪者的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色棱镜",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 4202,
+    "name": "兰迪的衣饰",
+    "desc": "勋章之上是一个天才的灵魂，军装之下是一颗庸人的凡心。",
+    "icon": "T_Head_Landi",
+    "rarity": 5,
+    "charId": 4202,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10006,
+          "name": "散漫绅士的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色棱镜",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 4301,
+    "name": "西比尔的衣饰",
+    "desc": "孤高之人无需甲胄与冠冕，其存在本身即是威压的轰鸣。",
+    "icon": "T_Head_Xibi",
+    "rarity": 5,
+    "charId": 4301,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10019,
+          "name": "大军团长的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色棱镜",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 5101,
+    "name": "松露与榛子的衣饰",
+    "desc": "在地面晃动的白色羽饰，载着麦芽芬芳，乘着万家炊火，飞向每一个饥饿之人的心房。",
+    "icon": "T_Head_Songlu",
+    "rarity": 5,
+    "charId": 5101,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10010,
+          "name": "粮秣专员的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色棱镜",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 5102,
+    "name": "奥特赛德的衣饰",
+    "desc": "质朴的衣装无法隔绝暗巷猩红的呜咽，却足以在荒蛮中护住一小片星光。",
+    "icon": "T_Head_Aote",
+    "rarity": 5,
+    "charId": 5102,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10015,
+          "name": "失乡之人的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色棱镜",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 5301,
+    "name": "赛琪的衣饰",
+    "desc": "栖息在少女臂弯的蝴蝶，捎来无数个跨越寒冬的梦。",
+    "icon": "T_Head_Saiqi",
+    "rarity": 5,
+    "charId": 5301,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10008,
+          "name": "播种之人的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色棱镜",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 5401,
+    "name": "达芙涅的衣饰",
+    "desc": "自硝烟尘灰下生长的翠绿，如野草般轻，如野草般不息。",
+    "icon": "T_Head_Dafu",
+    "rarity": 5,
+    "charId": 5401,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10013,
+          "name": "炼金术师的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色棱镜",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 110201,
+    "name": "UI_Skin_Name_110201",
+    "desc": "UI_Skin_Des_110201",
+    "icon": "T_Head_Fuluo",
+    "rarity": 5,
+    "charId": 1102,
+    "release": "1.4",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10001,
+          "name": "回忆中的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色棱镜",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 150401,
+    "name": "青羽天巡",
+    "desc": "青羽铸就云中客，一念乘风。",
+    "icon": "T_Head_Suyi01",
+    "rarity": 5,
+    "charId": 1504,
+    "tag": "Suyi01",
+    "release": "1.3",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 150492,
+          "name": "青羽天巡",
+          "num": 1
+        }
+      ],
+      "HeadSculpture": [
+        {
+          "id": 20006,
+          "name": "机枢少女的肖像·晴空",
+          "num": 1
+        }
+      ]
+    },
+    "upgrade": [
+      {
+        "step": 2,
+        "amount": 54,
+        "currencyId": 1010,
+        "currency": "流光织针"
+      },
+      {
+        "step": 3,
+        "amount": 72,
+        "currencyId": 1010,
+        "currency": "流光织针"
+      }
+    ]
+  },
+  {
+    "id": 160101,
+    "name": "{nickname}的衣饰",
+    "desc": "一人，一剑，一袭白衣。跨过汪洋与寒夜，只为在黎明的尽头相逢。",
+    "icon": "T_Head_Nanzhu",
+    "rarity": 5,
+    "charId": 160101,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10025,
+          "name": "狩月人的肖像",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 180101,
+    "name": "子不语·菲娜",
+    "desc": "一汪幽影洒月夜，半卷书签话鬼神。",
+    "icon": "T_Head_Feina01",
+    "rarity": 5,
+    "charId": 1801,
+    "tag": "Feina01",
+    "release": "1.3",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10014,
+          "name": "夜莺小姐的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色棱镜",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 210102,
+    "name": "纱幕与耳语",
+    "desc": "重重纱幕之下，以轻语诉说爱意，用死亡触碰永恒。",
+    "icon": "T_Head_Shuimu01",
+    "rarity": 5,
+    "charId": 2101,
+    "tag": "Shuimu01",
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 20002,
+          "name": "谋爱之人的肖像·潮声",
+          "num": 1
+        }
+      ],
+      "Title": [
+        {
+          "id": 20032,
+          "name": "舞者",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 240101,
+    "name": "素浪濯心",
+    "desc": "易水涤尘，白浪静心。",
+    "icon": "T_Head_Baiheng01",
+    "rarity": 5,
+    "charId": 2401,
+    "tag": "Baiheng01",
+    "release": "1.1",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 240192,
+          "name": "素浪濯心",
+          "num": 1
+        }
+      ],
+      "HeadSculpture": [
+        {
+          "id": 20004,
+          "name": "华胥药师的肖像·柔波",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 410101,
+    "name": "子不语·黎瑟",
+    "desc": "一汪幽影洒月夜，半卷书签话鬼神。",
+    "icon": "T_Head_Lise01",
+    "rarity": 5,
+    "charId": 4101,
+    "tag": "Lise01",
+    "release": "1.3",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10016,
+          "name": "逐灯者的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色棱镜",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 410201,
+    "name": "携金宴夜",
+    "desc": "觥筹交错的夜宴，流淌着一场又一场无声的杀伐。",
+    "icon": "T_Head_Zhiliu01",
+    "rarity": 5,
+    "charId": 4102,
+    "tag": "Zhiliu01",
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 410292,
+          "name": "携金宴夜",
+          "num": 1
+        }
+      ],
+      "HeadSculpture": [
+        {
+          "id": 20005,
+          "name": "执棋者的肖像·觥筹",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 510101,
+    "name": "阳光磨坊",
+    "desc": "暖暖阳光，细细研磨，满满挥洒！",
+    "icon": "T_Head_Songlu01",
+    "rarity": 5,
+    "charId": 5101,
+    "tag": "Songlu01",
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 20003,
+          "name": "粮秣专员的肖像·太阳",
+          "num": 1
+        }
+      ],
+      "Title": [
+        {
+          "id": 20033,
+          "name": "太阳",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 530101,
+    "name": "梦中的舞会",
+    "desc": "仲夏夜，星斗下的森林，三色堇与蝶翼交织的小步舞曲——那是她不曾见过的光景。",
+    "icon": "T_Head_Saiqi01",
+    "rarity": 5,
+    "charId": 5301,
+    "tag": "Saiqi01",
+    "release": "1.0",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 530192,
+          "name": "梦中的舞会",
+          "num": 1
+        }
+      ],
+      "HeadSculpture": [
+        {
+          "id": 20001,
+          "name": "播种之人的肖像·仲夏",
+          "num": 1
+        }
+      ],
+      "Title": [
+        {
+          "id": 20034,
+          "name": "恋人",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 11010010,
+    "name": "星芒夜愿",
+    "desc": "在白昼最短的时节，当铃儿响起，人们便将心愿寄予夜空，让它乘着星芒飞向未来。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 1101,
+    "release": "1.0"
+  },
+  {
+    "id": 11010011,
+    "name": "墨玉韶华",
+    "desc": "风华尽显，雅韵自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 1101,
+    "release": "1.1"
+  },
+  {
+    "id": 11010121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中为什么有一个看起来格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 1101,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 11010121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 11010122,
+    "name": "昨日匆匆",
+    "desc": "铃声与书页间，岁月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 1101,
+    "release": "1.2"
+  },
+  {
+    "id": 11010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 1101,
+    "release": "1.3"
+  },
+  {
+    "id": 11030010,
+    "name": "星芒夜愿",
+    "desc": "在白昼最短的时节，当铃儿响起，人们便将心愿寄予夜空，让它乘着星芒飞向未来。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 1103,
+    "release": "1.0"
+  },
+  {
+    "id": 11030011,
+    "name": "墨玉韶华",
+    "desc": "风华尽显，雅韵自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 1103,
+    "release": "1.1"
+  },
+  {
+    "id": 11030121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中为什么有一个看起来格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 1103,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 11030121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 11030122,
+    "name": "昨日匆匆",
+    "desc": "铃声与书页间，岁月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 1103,
+    "release": "1.2"
+  },
+  {
+    "id": 11030131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 1103,
+    "release": "9.9"
+  },
+  {
+    "id": 15010010,
+    "name": "星芒夜愿",
+    "desc": "在白昼最短的时节，当铃儿响起，人们便将心愿寄予夜空，让它乘着星芒飞向未来。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 1501,
+    "release": "1.0"
+  },
+  {
+    "id": 15010011,
+    "name": "墨玉韶华",
+    "desc": "风华尽显，雅韵自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 1501,
+    "release": "1.1"
+  },
+  {
+    "id": 15010121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中为什么有一个看起来格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 1501,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 15010121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 15010122,
+    "name": "昨日匆匆",
+    "desc": "铃声与书页间，岁月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 1501,
+    "release": "1.2"
+  },
+  {
+    "id": 15010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 1501,
+    "release": "1.3"
+  },
+  {
+    "id": 15020010,
+    "name": "星芒夜愿",
+    "desc": "在白昼最短的时节，当铃儿响起，人们便将心愿寄予夜空，让它乘着星芒飞向未来。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 1502,
+    "release": "1.0"
+  },
+  {
+    "id": 15020011,
+    "name": "墨玉韶华",
+    "desc": "风华尽显，雅韵自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 1502,
+    "release": "1.1"
+  },
+  {
+    "id": 15020121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中为什么有一个看起来格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 1502,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 15020121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 15020122,
+    "name": "昨日匆匆",
+    "desc": "铃声与书页间，岁月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 1502,
+    "release": "1.2"
+  },
+  {
+    "id": 15020131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 1502,
+    "release": "1.3"
+  },
+  {
+    "id": 15030011,
+    "name": "墨玉韶华",
+    "desc": "风华尽显，雅韵自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 1503,
+    "release": "1.1"
+  },
+  {
+    "id": 15030121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中为什么有一个看起来格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 1503,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 15030121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 15030122,
+    "name": "昨日匆匆",
+    "desc": "铃声与书页间，岁月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 1503,
+    "release": "1.2"
+  },
+  {
+    "id": 15030131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 1503,
+    "release": "1.3"
+  },
+  {
+    "id": 15040131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 1504,
+    "release": "1.3"
+  },
+  {
+    "id": 16010010,
+    "name": "星芒夜愿",
+    "desc": "在白昼最短的时节，当铃儿响起，人们便将心愿寄予夜空，让它乘着星芒飞向未来。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 1601,
+    "release": "1.0"
+  },
+  {
+    "id": 16010011,
+    "name": "墨玉韶华",
+    "desc": "风华尽显，雅韵自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 1601,
+    "release": "1.1"
+  },
+  {
+    "id": 16010110,
+    "name": "星芒夜愿",
+    "desc": "在白昼最短的时节，当铃儿响起，人们便将心愿寄予夜空，让它乘着星芒飞向未来。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 160101,
+    "release": "1.0"
+  },
+  {
+    "id": 16010111,
+    "name": "墨玉韶华",
+    "desc": "风华尽显，雅韵自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 160101,
+    "release": "1.1"
+  },
+  {
+    "id": 16010121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中为什么有一个看起来格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 1601,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 16010121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 16010122,
+    "name": "昨日匆匆",
+    "desc": "铃声与书页间，岁月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 1601,
+    "release": "1.2"
+  },
+  {
+    "id": 16010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 1601,
+    "release": "1.3"
+  },
+  {
+    "id": 16010221,
+    "name": "冬日幻想",
+    "desc": "一地雪人中为什么有一个看起来格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 160101,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 16010221,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 16010222,
+    "name": "昨日匆匆",
+    "desc": "铃声与书页间，岁月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 160101,
+    "release": "1.2"
+  },
+  {
+    "id": 16010231,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 160101,
+    "release": "1.3"
+  },
+  {
+    "id": 18010010,
+    "name": "星芒夜愿",
+    "desc": "在白昼最短的时节，当铃儿响起，人们便将心愿寄予夜空，让它乘着星芒飞向未来。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 1801,
+    "release": "1.0"
+  },
+  {
+    "id": 18010011,
+    "name": "墨玉韶华",
+    "desc": "风华尽显，雅韵自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 1801,
+    "release": "1.1"
+  },
+  {
+    "id": 18010121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中为什么有一个看起来格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 1801,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 18010121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 18010122,
+    "name": "昨日匆匆",
+    "desc": "铃声与书页间，岁月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 1801,
+    "release": "1.2"
+  },
+  {
+    "id": 18010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 1801,
+    "release": "1.3"
+  },
+  {
+    "id": 21010010,
+    "name": "星芒夜愿",
+    "desc": "在白昼最短的时节，当铃儿响起，人们便将心愿寄予夜空，让它乘着星芒飞向未来。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 2101,
+    "release": "1.0"
+  },
+  {
+    "id": 21010011,
+    "name": "墨玉韶华",
+    "desc": "风华尽显，雅韵自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 2101,
+    "release": "1.1"
+  },
+  {
+    "id": 21010121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中为什么有一个看起来格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 2101,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 21010121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 21010122,
+    "name": "昨日匆匆",
+    "desc": "铃声与书页间，岁月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 2101,
+    "release": "1.2"
+  },
+  {
+    "id": 21010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 2101,
+    "release": "1.3"
+  },
+  {
+    "id": 23010010,
+    "name": "星芒夜愿",
+    "desc": "在白昼最短的时节，当铃儿响起，人们便将心愿寄予夜空，让它乘着星芒飞向未来。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 2301,
+    "release": "1.0"
+  },
+  {
+    "id": 23010011,
+    "name": "墨玉韶华",
+    "desc": "风华尽显，雅韵自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 2301,
+    "release": "1.1"
+  },
+  {
+    "id": 23010121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中为什么有一个看起来格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 2301,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 23010121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 23010122,
+    "name": "昨日匆匆",
+    "desc": "铃声与书页间，岁月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 2301,
+    "release": "1.2"
+  },
+  {
+    "id": 23010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 2301,
+    "release": "9.9"
+  },
+  {
+    "id": 24010011,
+    "name": "墨玉韶华",
+    "desc": "风华尽显，雅韵自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 2401,
+    "release": "1.1"
+  },
+  {
+    "id": 24010121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中为什么有一个看起来格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 2401,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 24010121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 24010122,
+    "name": "昨日匆匆",
+    "desc": "铃声与书页间，岁月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 2401,
+    "release": "1.2"
+  },
+  {
+    "id": 24010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 2401,
+    "release": "1.3"
+  },
+  {
+    "id": 31010010,
+    "name": "星芒夜愿",
+    "desc": "在白昼最短的时节，当铃儿响起，人们便将心愿寄予夜空，让它乘着星芒飞向未来。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 3101,
+    "release": "1.0"
+  },
+  {
+    "id": 31010011,
+    "name": "墨玉韶华",
+    "desc": "风华尽显，雅韵自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 3101,
+    "release": "1.1"
+  },
+  {
+    "id": 31010121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中为什么有一个看起来格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 3101,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 31010121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 31010122,
+    "name": "昨日匆匆",
+    "desc": "铃声与书页间，岁月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 3101,
+    "release": "1.2"
+  },
+  {
+    "id": 31010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 3101,
+    "release": "1.3"
+  },
+  {
+    "id": 31030010,
+    "name": "星芒夜愿",
+    "desc": "在白昼最短的时节，当铃儿响起，人们便将心愿寄予夜空，让它乘着星芒飞向未来。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 3103,
+    "release": "1.0"
+  },
+  {
+    "id": 31030011,
+    "name": "墨玉韶华",
+    "desc": "风华尽显，雅韵自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 3103,
+    "release": "1.1"
+  },
+  {
+    "id": 31030121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中为什么有一个看起来格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 3103,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 31030121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 31030122,
+    "name": "昨日匆匆",
+    "desc": "铃声与书页间，岁月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 3103,
+    "release": "1.2"
+  },
+  {
+    "id": 31030131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 3103,
+    "release": "9.9"
+  },
+  {
+    "id": 32010010,
+    "name": "星芒夜愿",
+    "desc": "在白昼最短的时节，当铃儿响起，人们便将心愿寄予夜空，让它乘着星芒飞向未来。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 3201,
+    "release": "1.0"
+  },
+  {
+    "id": 32010011,
+    "name": "墨玉韶华",
+    "desc": "风华尽显，雅韵自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 3201,
+    "release": "1.1"
+  },
+  {
+    "id": 32010121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中为什么有一个看起来格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 3201,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 32010121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 32010122,
+    "name": "昨日匆匆",
+    "desc": "铃声与书页间，岁月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 3201,
+    "release": "1.2"
+  },
+  {
+    "id": 32010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Pack_Common03_01",
+    "rarity": 5,
+    "charId": 3201,
+    "release": "1.3"
+  },
+  {
+    "id": 32020131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 3202,
+    "release": "1.3"
+  },
+  {
+    "id": 33010010,
+    "name": "星芒夜愿",
+    "desc": "在白昼最短的时节，当铃儿响起，人们便将心愿寄予夜空，让它乘着星芒飞向未来。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 3301,
+    "release": "1.0"
+  },
+  {
+    "id": 33010011,
+    "name": "墨玉韶华",
+    "desc": "风华尽显，雅韵自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 3301,
+    "release": "1.1"
+  },
+  {
+    "id": 33010121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中为什么有一个看起来格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 3301,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 33010121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 33010122,
+    "name": "昨日匆匆",
+    "desc": "铃声与书页间，岁月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 3301,
+    "release": "1.2"
+  },
+  {
+    "id": 33010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 3301,
+    "release": "9.9"
+  },
+  {
+    "id": 41010010,
+    "name": "星芒夜愿",
+    "desc": "在白昼最短的时节，当铃儿响起，人们便将心愿寄予夜空，让它乘着星芒飞向未来。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 4101,
+    "release": "1.0"
+  },
+  {
+    "id": 41010011,
+    "name": "墨玉韶华",
+    "desc": "风华尽显，雅韵自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 4101,
+    "release": "1.1"
+  },
+  {
+    "id": 41010121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中为什么有一个看起来格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 4101,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 41010121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 41010122,
+    "name": "昨日匆匆",
+    "desc": "铃声与书页间，岁月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 4101,
+    "release": "1.2"
+  },
+  {
+    "id": 41010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 4101,
+    "release": "1.3"
+  },
+  {
+    "id": 41020121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中为什么有一个看起来格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 4102,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 41020121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 41020122,
+    "name": "昨日匆匆",
+    "desc": "铃声与书页间，岁月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 4102,
+    "release": "1.2"
+  },
+  {
+    "id": 41020131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 4102,
+    "release": "1.3"
+  },
+  {
+    "id": 42010121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中为什么有一个看起来格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 4201,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 42010121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 42010122,
+    "name": "昨日匆匆",
+    "desc": "铃声与书页间，岁月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 4201,
+    "release": "1.2"
+  },
+  {
+    "id": 42010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 4201,
+    "release": "1.3"
+  },
+  {
+    "id": 42020010,
+    "name": "星芒夜愿",
+    "desc": "在白昼最短的时节，当铃儿响起，人们便将心愿寄予夜空，让它乘着星芒飞向未来。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 4202,
+    "release": "1.0"
+  },
+  {
+    "id": 42020011,
+    "name": "墨玉韶华",
+    "desc": "风华尽显，雅韵自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 4202,
+    "release": "1.1"
+  },
+  {
+    "id": 42020121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中为什么有一个看起来格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 4202,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 42020121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 42020122,
+    "name": "昨日匆匆",
+    "desc": "铃声与书页间，岁月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 4202,
+    "release": "1.2"
+  },
+  {
+    "id": 42020131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 4202,
+    "release": "9.9"
+  },
+  {
+    "id": 43010010,
+    "name": "星芒夜愿",
+    "desc": "在白昼最短的时节，当铃儿响起，人们便将心愿寄予夜空，让它乘着星芒飞向未来。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 4301,
+    "release": "1.0"
+  },
+  {
+    "id": 43010011,
+    "name": "墨玉韶华",
+    "desc": "风华尽显，雅韵自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 4301,
+    "release": "1.1"
+  },
+  {
+    "id": 43010121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中为什么有一个看起来格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 4301,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 43010121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 43010122,
+    "name": "昨日匆匆",
+    "desc": "铃声与书页间，岁月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 4301,
+    "release": "1.2"
+  },
+  {
+    "id": 43010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 4301,
+    "release": "1.3"
+  },
+  {
+    "id": 51010010,
+    "name": "星芒夜愿",
+    "desc": "在白昼最短的时节，当铃儿响起，人们便将心愿寄予夜空，让它乘着星芒飞向未来。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 5101,
+    "release": "1.0"
+  },
+  {
+    "id": 51010011,
+    "name": "墨玉韶华",
+    "desc": "风华尽显，雅韵自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 5101,
+    "release": "1.1"
+  },
+  {
+    "id": 51010121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中为什么有一个看起来格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 5101,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 51010121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 51010122,
+    "name": "昨日匆匆",
+    "desc": "铃声与书页间，岁月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 5101,
+    "release": "1.2"
+  },
+  {
+    "id": 51010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 5101,
+    "release": "1.3"
+  },
+  {
+    "id": 51020010,
+    "name": "星芒夜愿",
+    "desc": "在白昼最短的时节，当铃儿响起，人们便将心愿寄予夜空，让它乘着星芒飞向未来。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 5102,
+    "release": "1.0"
+  },
+  {
+    "id": 51020011,
+    "name": "墨玉韶华",
+    "desc": "风华尽显，雅韵自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 5102,
+    "release": "1.1"
+  },
+  {
+    "id": 51020121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中为什么有一个看起来格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 5102,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 51020121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 51020122,
+    "name": "昨日匆匆",
+    "desc": "铃声与书页间，岁月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 5102,
+    "release": "1.2"
+  },
+  {
+    "id": 51020131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 5102,
+    "release": "9.9"
+  },
+  {
+    "id": 53010010,
+    "name": "星芒夜愿",
+    "desc": "在白昼最短的时节，当铃儿响起，人们便将心愿寄予夜空，让它乘着星芒飞向未来。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 5301,
+    "release": "1.0"
+  },
+  {
+    "id": 53010011,
+    "name": "墨玉韶华",
+    "desc": "风华尽显，雅韵自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 5301,
+    "release": "1.1"
+  },
+  {
+    "id": 53010121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中为什么有一个看起来格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 5301,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 53010121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 53010122,
+    "name": "昨日匆匆",
+    "desc": "铃声与书页间，岁月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 5301,
+    "release": "1.2"
+  },
+  {
+    "id": 53010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 5301,
+    "release": "1.3"
+  },
+  {
+    "id": 54010010,
+    "name": "星芒夜愿",
+    "desc": "在白昼最短的时节，当铃儿响起，人们便将心愿寄予夜空，让它乘着星芒飞向未来。",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 5401,
+    "release": "1.0"
+  },
+  {
+    "id": 54010011,
+    "name": "墨玉韶华",
+    "desc": "风华尽显，雅韵自成。",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 5401,
+    "release": "1.1"
+  },
+  {
+    "id": 54010121,
+    "name": "冬日幻想",
+    "desc": "一地雪人中为什么有一个看起来格外的大？",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 5401,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 54010121,
+          "name": "冬日幻想",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 54010122,
+    "name": "昨日匆匆",
+    "desc": "铃声与书页间，岁月匆匆溜走。",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 5401,
+    "release": "1.2"
+  },
+  {
+    "id": 54010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 5401,
+    "release": "1.3"
+  }
+]

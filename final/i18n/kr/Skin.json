@@ -1,0 +1,2220 @@
+[
+  {
+    "id": 1101,
+    "name": "베레니카의 의상",
+    "desc": "검은색은 밤의 색으로, 대지에 고요하면서도 평온한 베일을 씌워준다. 검은색은 그림자의 색으로, 가장 가까운 사람의 곁을 떠나지 않고 지켜준다. 그래서 베레니카는 검은색을 좋아한다.",
+    "icon": "T_Head_Heitao",
+    "rarity": 5,
+    "charId": 1101,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10001,
+          "name": "추억 속의 초상화",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "물빛 프리즘",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 1102,
+    "name": "UI_Skin_Name_1102",
+    "desc": "UI_Skin_Des_1102",
+    "icon": "T_Head_Fuluo",
+    "rarity": 5,
+    "charId": 1102,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10001,
+          "name": "추억 속의 초상화",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "물빛 프리즘",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 1103,
+    "name": "환상의 의상",
+    "desc": "걷는 그림자와 무대 위의 서투른 광대, 한 어리석은 자가 들려주는 이야기.",
+    "icon": "T_Head_Tuosi",
+    "rarity": 5,
+    "charId": 1103,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10018,
+          "name": "배후자의 초상화",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "물빛 프리즘",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 1501,
+    "name": "리사벨의 의상",
+    "desc": "교회의 비문은 단순한 의상이 아닌, 영혼에 각인된 징표이다. 그것은 소녀가 거듭된 분노 속에서 진정한 강인함을 배우는 과정을 지켜보고 있다.",
+    "icon": "T_Head_Baonu",
+    "rarity": 5,
+    "charId": 1501,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10003,
+          "name": "세븐 버튜스의 초상화·인내",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "물빛 프리즘",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 1502,
+    "name": "나이플 부인의 의상",
+    "desc": "노을과 오로라로 엮인 베일이 영혼을 인도하며, 눈물로 가득한 강을 건너, 만물이 소생하는 안개의 바다로 나아간다.",
+    "icon": "T_Head_Nifu",
+    "rarity": 5,
+    "charId": 1502,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10029,
+          "name": "안개의 바다의 인도자 초상화",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "물빛 프리즘",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 1503,
+    "name": "각주의 의상",
+    "desc": "빗방울이 옷자락을 타고 흘러내려, 검끝에 내려앉았다가 세상에 흩어진다.",
+    "icon": "T_Head_Kezhou",
+    "rarity": 5,
+    "charId": 1503,
+    "release": "1.1",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10024,
+          "name": "나그네 각주의 초상화",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "물빛 프리즘",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 1504,
+    "name": "UI_Skin_Name_1504",
+    "desc": "UI_Skin_Des_1504",
+    "icon": "T_Head_Suyi",
+    "rarity": 5,
+    "charId": 1504,
+    "release": "1.3",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10031,
+          "name": "机枢少女的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "물빛 프리즘",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 1601,
+    "name": "{nickname}의 의상",
+    "desc": "검 한 자루에 흰 옷 걸치고 홀로 걷는다. 거친 바다와 차디찬 밤을 건너, 새벽의 끝과 만나기 위해.",
+    "icon": "T_Head_Nvzhu",
+    "rarity": 5,
+    "charId": 1601,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10026,
+          "name": "월석 사냥꾼의 초상화",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 1801,
+    "name": "피나의 의상",
+    "desc": "나이팅게일은 그녀가 엮은 이야기에 하얀 깃털을 달았다. 작은 날개는 그녀의 꿈을 싣고 구름 속으로 날아간다.",
+    "icon": "T_Head_Feina",
+    "rarity": 5,
+    "charId": 1801,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10014,
+          "name": "나이팅게일의 초상화",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "물빛 프리즘",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 2101,
+    "name": "레베카의 의상",
+    "desc": "깊은 바다에 드리운 해파리의 촉수는, 흩날리는 드레스 자락처럼, 어둠 속에서 연인의 마음을 흔든다.",
+    "icon": "T_Head_Shuimu",
+    "rarity": 5,
+    "charId": 2101,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10009,
+          "name": "사랑을 노리는 자의 초상화",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "물빛 프리즘",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 2102,
+    "name": "UI_Skin_Name_2102",
+    "desc": "UI_Skin_Des_2102",
+    "icon": "T_Head_Shuimu",
+    "rarity": 5,
+    "charId": 2102,
+    "release": "1.5",
+    "defaultItem": {
+      "Resource": [
+        {
+          "id": 110,
+          "name": "물빛 프리즘",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 2301,
+    "name": "타비사의 의상",
+    "desc": "저 어둠 속에서 꿈틀대는 것은 무엇인가? 음모? 혼돈? 범죄? 틀렸다, 그것은 촉수이다!",
+    "icon": "T_Head_Zhangyu",
+    "rarity": 5,
+    "charId": 2301,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10012,
+          "name": "악마대도의 초상화",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "물빛 프리즘",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 2401,
+    "name": "부소의 의상",
+    "desc": "약 향이 실처럼 엮여, 하얀 소매 사이에서 다시 봄이 찾아온 듯 속삭인다.",
+    "icon": "T_Head_Baiheng",
+    "rarity": 5,
+    "charId": 2401,
+    "release": "1.1",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10002,
+          "name": "화서 약사의 초상화",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "물빛 프리즘",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 3101,
+    "name": "린의 의상",
+    "desc": "매트한 재질의 제복에 남은 화약의 온기는 피 끓는 외침 아래에서도 오래도록 사라지지 않는다.",
+    "icon": "T_Head_Linen",
+    "rarity": 5,
+    "charId": 3101,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10007,
+          "name": "마음을 어기는 자의 초상화",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "물빛 프리즘",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 3102,
+    "name": "UI_Skin_Name_3102",
+    "desc": "UI_Skin_Des_3102",
+    "icon": "T_Head_Xier",
+    "rarity": 5,
+    "charId": 3102,
+    "release": "1.4",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10020,
+          "name": "완벽한 하녀의 초상화",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "물빛 프리즘",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 3103,
+    "name": "예일과 올리버의 의상",
+    "desc": "타오르는 붉은색과 흰색이 미치광이의 폭발에 대한 열망을 잠재우고, 한 소년의 끝없는 꿈을 엮어낸다.",
+    "icon": "T_Head_Yeer",
+    "rarity": 5,
+    "charId": 3103,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10021,
+          "name": "일체쌍생의 초상화",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "물빛 프리즘",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 3201,
+    "name": "헬파이어의 의상",
+    "desc": "짊어진 사슬과 가시덤불은 죄업을 징벌하고, 마음속에 자리한 정의의 불꽃을 속박한다.",
+    "icon": "T_Head_Haier",
+    "rarity": 5,
+    "charId": 3201,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10004,
+          "name": "교도소장의 초상화",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "물빛 프리즘",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 3202,
+    "name": "UI_Skin_Name_3202",
+    "desc": "UI_Skin_Des_3202",
+    "icon": "T_Head_Kami",
+    "rarity": 5,
+    "charId": 3202,
+    "release": "1.3",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10023,
+          "name": "Portrait : Camilla",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "물빛 프리즘",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 3301,
+    "name": "마르제의 의상",
+    "desc": "냄비로 만든 다용도 헬멧. 넝마주이 소녀의 단단한 갑옷이다.",
+    "icon": "T_Head_Maer",
+    "rarity": 5,
+    "charId": 3301,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10017,
+          "name": "쓰레기통 공주의 초상화",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "물빛 프리즘",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 4101,
+    "name": "리듬의 의상",
+    "desc": "제복 위에서 별빛처럼 반짝이는 푸른 빛은 수호의 의지이자, 미래를 향한 갈망이다.",
+    "icon": "T_Head_Lise",
+    "rarity": 5,
+    "charId": 4101,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10016,
+          "name": "등불 추적자의 초상화",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "물빛 프리즘",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 4102,
+    "name": "지류의 의상",
+    "desc": "아침 햇살이 금박을 녹인 듯 화려한 비단 위에 쏟아지면, 황금빛 눈동자 속에서 개혁의 의지가 함께 타오른다.",
+    "icon": "T_Head_Zhiliu",
+    "rarity": 5,
+    "charId": 4102,
+    "release": "1.2",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10030,
+          "name": "패를 쥔 자의 초상화",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "물빛 프리즘",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 4201,
+    "name": "욱명의 의상",
+    "desc": "응천의 번개가 주변을 맴도니, 대풍의 의지 아래, 죄업도, 그도 도망칠 곳 없으리라.",
+    "icon": "T_Head_Yuming",
+    "rarity": 5,
+    "charId": 4201,
+    "release": "1.2",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10011,
+          "name": "죄를 진 자의 초상화",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "물빛 프리즘",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 4202,
+    "name": "랜디의 의상",
+    "desc": "훈장 위에는 천재의 영혼이, 군복 아래에는 보통 사람의 마음이 자리한다.",
+    "icon": "T_Head_Landi",
+    "rarity": 5,
+    "charId": 4202,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10006,
+          "name": "산만한 신사의 초상화",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "물빛 프리즘",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 4301,
+    "name": "시빌라의 의상",
+    "desc": "고고한 자에게 갑옷이나 왕관은 필요하지 않다. 그 존재만으로도 압도적인 울림이 있다.",
+    "icon": "T_Head_Xibi",
+    "rarity": 5,
+    "charId": 4301,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10019,
+          "name": "대군단장의 초상화",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "물빛 프리즘",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 5101,
+    "name": "트러플과 헤이즐넛의 의상",
+    "desc": "흔들리는 하얀 깃털 장식이 보리 향을 싣고, 민가의 아궁이 연기를 타고, 굶주린 이의 마음속으로 날아간다.",
+    "icon": "T_Head_Songlu",
+    "rarity": 5,
+    "charId": 5101,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10010,
+          "name": "식량보급원의 초상화",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "물빛 프리즘",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 5102,
+    "name": "아웃사이더의 의상",
+    "desc": "소박한 옷차림은 뒷골목의 진홍빛 울음소리를 완전히 막아낼 순 없지만, 황폐함 속의 별빛 한 줄기를 지켜내기에 충분하다.",
+    "icon": "T_Head_Aote",
+    "rarity": 5,
+    "charId": 5102,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10015,
+          "name": "고향을 잃은 자의 초상화",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "물빛 프리즘",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 5301,
+    "name": "프시케의 의상",
+    "desc": "소녀의 팔에 머무른 나비는 무수히 많은 겨울을 넘어선 꿈을 전한다.",
+    "icon": "T_Head_Saiqi",
+    "rarity": 5,
+    "charId": 5301,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10008,
+          "name": "씨를 뿌리는 자의 초상화",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "물빛 프리즘",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 5401,
+    "name": "다프네의 의상",
+    "desc": "화약 연기와 먼지 아래에서 자라난 푸르름은, 들풀처럼 가볍고 강인하다.",
+    "icon": "T_Head_Dafu",
+    "rarity": 5,
+    "charId": 5401,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10013,
+          "name": "연금술사의 초상화",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "물빛 프리즘",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 110201,
+    "name": "UI_Skin_Name_110201",
+    "desc": "UI_Skin_Des_110201",
+    "icon": "T_Head_Fuluo",
+    "rarity": 5,
+    "charId": 1102,
+    "release": "1.4",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10001,
+          "name": "추억 속의 초상화",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "물빛 프리즘",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 150401,
+    "name": "青羽天巡",
+    "desc": "青羽铸就云中客，一念乘风。",
+    "icon": "T_Head_Suyi01",
+    "rarity": 5,
+    "charId": 1504,
+    "tag": "Suyi01",
+    "release": "1.3",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 150492,
+          "name": "青羽天巡",
+          "num": 1
+        }
+      ],
+      "HeadSculpture": [
+        {
+          "id": 20006,
+          "name": "机枢少女的肖像·晴空",
+          "num": 1
+        }
+      ]
+    },
+    "upgrade": [
+      {
+        "step": 2,
+        "amount": 54,
+        "currencyId": 1010,
+        "currency": "流光织针"
+      },
+      {
+        "step": 3,
+        "amount": 72,
+        "currencyId": 1010,
+        "currency": "流光织针"
+      }
+    ]
+  },
+  {
+    "id": 160101,
+    "name": "{nickname}의 의상",
+    "desc": "검 한 자루에 흰 옷 걸치고 홀로 걷는다. 거친 바다와 차디찬 밤을 건너, 새벽의 끝과 만나기 위해.",
+    "icon": "T_Head_Nanzhu",
+    "rarity": 5,
+    "charId": 160101,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10025,
+          "name": "월석 사냥꾼의 초상화",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 180101,
+    "name": "子不语",
+    "desc": "一汪幽影洒月夜，半卷书签话鬼神。",
+    "icon": "T_Head_Feina01",
+    "rarity": 5,
+    "charId": 1801,
+    "tag": "Feina01",
+    "release": "1.3",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10014,
+          "name": "나이팅게일의 초상화",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "물빛 프리즘",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 210102,
+    "name": "베일과 속삭임",
+    "desc": "겹겹이 쌓인 베일 아래, 속삭임으로 사랑을 말하고, 죽음으로 영원을 터치하라.",
+    "icon": "T_Head_Shuimu01",
+    "rarity": 5,
+    "charId": 2101,
+    "tag": "Shuimu01",
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 20002,
+          "name": "사랑을 노리는 자의 초상화·파도 소리",
+          "num": 1
+        }
+      ],
+      "Title": [
+        {
+          "id": 20032,
+          "name": "무용수",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 240101,
+    "name": "순백의 파도",
+    "desc": "복잡한 일들은 하얀 물보라 너머로 쓸어 보내자.",
+    "icon": "T_Head_Baiheng01",
+    "rarity": 5,
+    "charId": 2401,
+    "tag": "Baiheng01",
+    "release": "1.1",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 240192,
+          "name": "순백의 파도",
+          "num": 1
+        }
+      ],
+      "HeadSculpture": [
+        {
+          "id": 20004,
+          "name": "화서 약사의 초상화·잔물결",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 410101,
+    "name": "子不语",
+    "desc": "一汪幽影洒月夜，半卷书签话鬼神。",
+    "icon": "T_Head_Lise01",
+    "rarity": 5,
+    "charId": 4101,
+    "tag": "Lise01",
+    "release": "1.3",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10016,
+          "name": "등불 추적자의 초상화",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "물빛 프리즘",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 410201,
+    "name": "파티라는 전장",
+    "desc": "넘실대는 술잔 속에 침묵의 전쟁이 펼쳐진다.",
+    "icon": "T_Head_Zhiliu01",
+    "rarity": 5,
+    "charId": 4102,
+    "tag": "Zhiliu01",
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 410292,
+          "name": "파티라는 전장",
+          "num": 1
+        }
+      ],
+      "HeadSculpture": [
+        {
+          "id": 20005,
+          "name": "패를 쥔 자의 초상화·연회",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 510101,
+    "name": "햇살 방앗간",
+    "desc": "따뜻한 햇살을 곱게 갈아서, 듬뿍 뿌려주자!",
+    "icon": "T_Head_Songlu01",
+    "rarity": 5,
+    "charId": 5101,
+    "tag": "Songlu01",
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 20003,
+          "name": "식량보급원의 초상화·태양",
+          "num": 1
+        }
+      ],
+      "Title": [
+        {
+          "id": 20033,
+          "name": "태양",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 530101,
+    "name": "꿈속의 무도회",
+    "desc": "한여름 밤, 별빛 아래 숲,\n팬지꽃과 나비의 날개가 뒤엉킨 미뉴에트...\n그녀가 한 번도 본 적 없는 광경.",
+    "icon": "T_Head_Saiqi01",
+    "rarity": 5,
+    "charId": 5301,
+    "tag": "Saiqi01",
+    "release": "1.0",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 530192,
+          "name": "꿈속의 무도회",
+          "num": 1
+        }
+      ],
+      "HeadSculpture": [
+        {
+          "id": 20001,
+          "name": "씨를 뿌리는 자의 초상화·한여름",
+          "num": 1
+        }
+      ],
+      "Title": [
+        {
+          "id": 20034,
+          "name": "연인",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 11010010,
+    "name": "별빛의 소망",
+    "desc": "낮이 짧은 계절, 종이 울리면 사람들은 마음속 소망을 밤하늘에 부쳐, 소망이 별빛을 따라 미래로 날아가길 빈다.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 1101,
+    "release": "1.0"
+  },
+  {
+    "id": 11010011,
+    "name": "화려한 시절",
+    "desc": "화려하고 우아하게, 스스로 빛나는 아름다움",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 1101,
+    "release": "1.1"
+  },
+  {
+    "id": 11010121,
+    "name": "겨울 판타지",
+    "desc": "수많은 눈사람들 중에, 왜 하나가 유독 커 보이는 걸까?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 1101,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 11010121,
+          "name": "겨울 판타지",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 11010122,
+    "name": "학창시절",
+    "desc": "세월이 종소리와 책장 사이에서 종종걸음으로 스쳐 지나간다.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 1101,
+    "release": "1.2"
+  },
+  {
+    "id": 11010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 1101,
+    "release": "1.3"
+  },
+  {
+    "id": 11030010,
+    "name": "별빛의 소망",
+    "desc": "낮이 짧은 계절, 종이 울리면 사람들은 마음속 소망을 밤하늘에 부쳐, 소망이 별빛을 따라 미래로 날아가길 빈다.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 1103,
+    "release": "1.0"
+  },
+  {
+    "id": 11030011,
+    "name": "화려한 시절",
+    "desc": "화려하고 우아하게, 스스로 빛나는 아름다움",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 1103,
+    "release": "1.1"
+  },
+  {
+    "id": 11030121,
+    "name": "겨울 판타지",
+    "desc": "수많은 눈사람들 중에, 왜 하나가 유독 커 보이는 걸까?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 1103,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 11030121,
+          "name": "겨울 판타지",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 11030122,
+    "name": "학창시절",
+    "desc": "세월이 종소리와 책장 사이에서 종종걸음으로 스쳐 지나간다.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 1103,
+    "release": "1.2"
+  },
+  {
+    "id": 11030131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 1103,
+    "release": "9.9"
+  },
+  {
+    "id": 15010010,
+    "name": "별빛의 소망",
+    "desc": "낮이 짧은 계절, 종이 울리면 사람들은 마음속 소망을 밤하늘에 부쳐, 소망이 별빛을 따라 미래로 날아가길 빈다.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 1501,
+    "release": "1.0"
+  },
+  {
+    "id": 15010011,
+    "name": "화려한 시절",
+    "desc": "화려하고 우아하게, 스스로 빛나는 아름다움",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 1501,
+    "release": "1.1"
+  },
+  {
+    "id": 15010121,
+    "name": "겨울 판타지",
+    "desc": "수많은 눈사람들 중에, 왜 하나가 유독 커 보이는 걸까?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 1501,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 15010121,
+          "name": "겨울 판타지",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 15010122,
+    "name": "학창시절",
+    "desc": "세월이 종소리와 책장 사이에서 종종걸음으로 스쳐 지나간다.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 1501,
+    "release": "1.2"
+  },
+  {
+    "id": 15010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 1501,
+    "release": "1.3"
+  },
+  {
+    "id": 15020010,
+    "name": "별빛의 소망",
+    "desc": "낮이 짧은 계절, 종이 울리면 사람들은 마음속 소망을 밤하늘에 부쳐, 소망이 별빛을 따라 미래로 날아가길 빈다.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 1502,
+    "release": "1.0"
+  },
+  {
+    "id": 15020011,
+    "name": "화려한 시절",
+    "desc": "화려하고 우아하게, 스스로 빛나는 아름다움",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 1502,
+    "release": "1.1"
+  },
+  {
+    "id": 15020121,
+    "name": "겨울 판타지",
+    "desc": "수많은 눈사람들 중에, 왜 하나가 유독 커 보이는 걸까?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 1502,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 15020121,
+          "name": "겨울 판타지",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 15020122,
+    "name": "학창시절",
+    "desc": "세월이 종소리와 책장 사이에서 종종걸음으로 스쳐 지나간다.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 1502,
+    "release": "1.2"
+  },
+  {
+    "id": 15020131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 1502,
+    "release": "1.3"
+  },
+  {
+    "id": 15030011,
+    "name": "화려한 시절",
+    "desc": "화려하고 우아하게, 스스로 빛나는 아름다움",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 1503,
+    "release": "1.1"
+  },
+  {
+    "id": 15030121,
+    "name": "겨울 판타지",
+    "desc": "수많은 눈사람들 중에, 왜 하나가 유독 커 보이는 걸까?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 1503,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 15030121,
+          "name": "겨울 판타지",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 15030122,
+    "name": "학창시절",
+    "desc": "세월이 종소리와 책장 사이에서 종종걸음으로 스쳐 지나간다.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 1503,
+    "release": "1.2"
+  },
+  {
+    "id": 15030131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 1503,
+    "release": "1.3"
+  },
+  {
+    "id": 15040131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 1504,
+    "release": "1.3"
+  },
+  {
+    "id": 16010010,
+    "name": "별빛의 소망",
+    "desc": "낮이 짧은 계절, 종이 울리면 사람들은 마음속 소망을 밤하늘에 부쳐, 소망이 별빛을 따라 미래로 날아가길 빈다.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 1601,
+    "release": "1.0"
+  },
+  {
+    "id": 16010011,
+    "name": "화려한 시절",
+    "desc": "화려하고 우아하게, 스스로 빛나는 아름다움",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 1601,
+    "release": "1.1"
+  },
+  {
+    "id": 16010110,
+    "name": "별빛의 소망",
+    "desc": "낮이 짧은 계절, 종이 울리면 사람들은 마음속 소망을 밤하늘에 부쳐, 소망이 별빛을 따라 미래로 날아가길 빈다.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 160101,
+    "release": "1.0"
+  },
+  {
+    "id": 16010111,
+    "name": "화려한 시절",
+    "desc": "화려하고 우아하게, 스스로 빛나는 아름다움",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 160101,
+    "release": "1.1"
+  },
+  {
+    "id": 16010121,
+    "name": "겨울 판타지",
+    "desc": "수많은 눈사람들 중에, 왜 하나가 유독 커 보이는 걸까?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 1601,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 16010121,
+          "name": "겨울 판타지",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 16010122,
+    "name": "학창시절",
+    "desc": "세월이 종소리와 책장 사이에서 종종걸음으로 스쳐 지나간다.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 1601,
+    "release": "1.2"
+  },
+  {
+    "id": 16010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 1601,
+    "release": "1.3"
+  },
+  {
+    "id": 16010221,
+    "name": "겨울 판타지",
+    "desc": "수많은 눈사람들 중에, 왜 하나가 유독 커 보이는 걸까?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 160101,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 16010221,
+          "name": "겨울 판타지",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 16010222,
+    "name": "학창시절",
+    "desc": "세월이 종소리와 책장 사이에서 종종걸음으로 스쳐 지나간다.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 160101,
+    "release": "1.2"
+  },
+  {
+    "id": 16010231,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 160101,
+    "release": "1.3"
+  },
+  {
+    "id": 18010010,
+    "name": "별빛의 소망",
+    "desc": "낮이 짧은 계절, 종이 울리면 사람들은 마음속 소망을 밤하늘에 부쳐, 소망이 별빛을 따라 미래로 날아가길 빈다.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 1801,
+    "release": "1.0"
+  },
+  {
+    "id": 18010011,
+    "name": "화려한 시절",
+    "desc": "화려하고 우아하게, 스스로 빛나는 아름다움",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 1801,
+    "release": "1.1"
+  },
+  {
+    "id": 18010121,
+    "name": "겨울 판타지",
+    "desc": "수많은 눈사람들 중에, 왜 하나가 유독 커 보이는 걸까?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 1801,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 18010121,
+          "name": "겨울 판타지",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 18010122,
+    "name": "학창시절",
+    "desc": "세월이 종소리와 책장 사이에서 종종걸음으로 스쳐 지나간다.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 1801,
+    "release": "1.2"
+  },
+  {
+    "id": 18010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 1801,
+    "release": "1.3"
+  },
+  {
+    "id": 21010010,
+    "name": "별빛의 소망",
+    "desc": "낮이 짧은 계절, 종이 울리면 사람들은 마음속 소망을 밤하늘에 부쳐, 소망이 별빛을 따라 미래로 날아가길 빈다.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 2101,
+    "release": "1.0"
+  },
+  {
+    "id": 21010011,
+    "name": "화려한 시절",
+    "desc": "화려하고 우아하게, 스스로 빛나는 아름다움",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 2101,
+    "release": "1.1"
+  },
+  {
+    "id": 21010121,
+    "name": "겨울 판타지",
+    "desc": "수많은 눈사람들 중에, 왜 하나가 유독 커 보이는 걸까?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 2101,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 21010121,
+          "name": "겨울 판타지",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 21010122,
+    "name": "학창시절",
+    "desc": "세월이 종소리와 책장 사이에서 종종걸음으로 스쳐 지나간다.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 2101,
+    "release": "1.2"
+  },
+  {
+    "id": 21010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 2101,
+    "release": "1.3"
+  },
+  {
+    "id": 23010010,
+    "name": "별빛의 소망",
+    "desc": "낮이 짧은 계절, 종이 울리면 사람들은 마음속 소망을 밤하늘에 부쳐, 소망이 별빛을 따라 미래로 날아가길 빈다.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 2301,
+    "release": "1.0"
+  },
+  {
+    "id": 23010011,
+    "name": "화려한 시절",
+    "desc": "화려하고 우아하게, 스스로 빛나는 아름다움",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 2301,
+    "release": "1.1"
+  },
+  {
+    "id": 23010121,
+    "name": "겨울 판타지",
+    "desc": "수많은 눈사람들 중에, 왜 하나가 유독 커 보이는 걸까?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 2301,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 23010121,
+          "name": "겨울 판타지",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 23010122,
+    "name": "학창시절",
+    "desc": "세월이 종소리와 책장 사이에서 종종걸음으로 스쳐 지나간다.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 2301,
+    "release": "1.2"
+  },
+  {
+    "id": 23010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 2301,
+    "release": "9.9"
+  },
+  {
+    "id": 24010011,
+    "name": "화려한 시절",
+    "desc": "화려하고 우아하게, 스스로 빛나는 아름다움",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 2401,
+    "release": "1.1"
+  },
+  {
+    "id": 24010121,
+    "name": "겨울 판타지",
+    "desc": "수많은 눈사람들 중에, 왜 하나가 유독 커 보이는 걸까?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 2401,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 24010121,
+          "name": "겨울 판타지",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 24010122,
+    "name": "학창시절",
+    "desc": "세월이 종소리와 책장 사이에서 종종걸음으로 스쳐 지나간다.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 2401,
+    "release": "1.2"
+  },
+  {
+    "id": 24010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 2401,
+    "release": "1.3"
+  },
+  {
+    "id": 31010010,
+    "name": "별빛의 소망",
+    "desc": "낮이 짧은 계절, 종이 울리면 사람들은 마음속 소망을 밤하늘에 부쳐, 소망이 별빛을 따라 미래로 날아가길 빈다.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 3101,
+    "release": "1.0"
+  },
+  {
+    "id": 31010011,
+    "name": "화려한 시절",
+    "desc": "화려하고 우아하게, 스스로 빛나는 아름다움",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 3101,
+    "release": "1.1"
+  },
+  {
+    "id": 31010121,
+    "name": "겨울 판타지",
+    "desc": "수많은 눈사람들 중에, 왜 하나가 유독 커 보이는 걸까?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 3101,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 31010121,
+          "name": "겨울 판타지",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 31010122,
+    "name": "학창시절",
+    "desc": "세월이 종소리와 책장 사이에서 종종걸음으로 스쳐 지나간다.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 3101,
+    "release": "1.2"
+  },
+  {
+    "id": 31010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 3101,
+    "release": "1.3"
+  },
+  {
+    "id": 31030010,
+    "name": "별빛의 소망",
+    "desc": "낮이 짧은 계절, 종이 울리면 사람들은 마음속 소망을 밤하늘에 부쳐, 소망이 별빛을 따라 미래로 날아가길 빈다.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 3103,
+    "release": "1.0"
+  },
+  {
+    "id": 31030011,
+    "name": "화려한 시절",
+    "desc": "화려하고 우아하게, 스스로 빛나는 아름다움",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 3103,
+    "release": "1.1"
+  },
+  {
+    "id": 31030121,
+    "name": "겨울 판타지",
+    "desc": "수많은 눈사람들 중에, 왜 하나가 유독 커 보이는 걸까?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 3103,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 31030121,
+          "name": "겨울 판타지",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 31030122,
+    "name": "학창시절",
+    "desc": "세월이 종소리와 책장 사이에서 종종걸음으로 스쳐 지나간다.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 3103,
+    "release": "1.2"
+  },
+  {
+    "id": 31030131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 3103,
+    "release": "9.9"
+  },
+  {
+    "id": 32010010,
+    "name": "별빛의 소망",
+    "desc": "낮이 짧은 계절, 종이 울리면 사람들은 마음속 소망을 밤하늘에 부쳐, 소망이 별빛을 따라 미래로 날아가길 빈다.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 3201,
+    "release": "1.0"
+  },
+  {
+    "id": 32010011,
+    "name": "화려한 시절",
+    "desc": "화려하고 우아하게, 스스로 빛나는 아름다움",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 3201,
+    "release": "1.1"
+  },
+  {
+    "id": 32010121,
+    "name": "겨울 판타지",
+    "desc": "수많은 눈사람들 중에, 왜 하나가 유독 커 보이는 걸까?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 3201,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 32010121,
+          "name": "겨울 판타지",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 32010122,
+    "name": "학창시절",
+    "desc": "세월이 종소리와 책장 사이에서 종종걸음으로 스쳐 지나간다.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 3201,
+    "release": "1.2"
+  },
+  {
+    "id": 32010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Pack_Common03_01",
+    "rarity": 5,
+    "charId": 3201,
+    "release": "1.3"
+  },
+  {
+    "id": 32020131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 3202,
+    "release": "1.3"
+  },
+  {
+    "id": 33010010,
+    "name": "별빛의 소망",
+    "desc": "낮이 짧은 계절, 종이 울리면 사람들은 마음속 소망을 밤하늘에 부쳐, 소망이 별빛을 따라 미래로 날아가길 빈다.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 3301,
+    "release": "1.0"
+  },
+  {
+    "id": 33010011,
+    "name": "화려한 시절",
+    "desc": "화려하고 우아하게, 스스로 빛나는 아름다움",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 3301,
+    "release": "1.1"
+  },
+  {
+    "id": 33010121,
+    "name": "겨울 판타지",
+    "desc": "수많은 눈사람들 중에, 왜 하나가 유독 커 보이는 걸까?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 3301,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 33010121,
+          "name": "겨울 판타지",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 33010122,
+    "name": "학창시절",
+    "desc": "세월이 종소리와 책장 사이에서 종종걸음으로 스쳐 지나간다.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 3301,
+    "release": "1.2"
+  },
+  {
+    "id": 33010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 3301,
+    "release": "9.9"
+  },
+  {
+    "id": 41010010,
+    "name": "별빛의 소망",
+    "desc": "낮이 짧은 계절, 종이 울리면 사람들은 마음속 소망을 밤하늘에 부쳐, 소망이 별빛을 따라 미래로 날아가길 빈다.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 4101,
+    "release": "1.0"
+  },
+  {
+    "id": 41010011,
+    "name": "화려한 시절",
+    "desc": "화려하고 우아하게, 스스로 빛나는 아름다움",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 4101,
+    "release": "1.1"
+  },
+  {
+    "id": 41010121,
+    "name": "겨울 판타지",
+    "desc": "수많은 눈사람들 중에, 왜 하나가 유독 커 보이는 걸까?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 4101,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 41010121,
+          "name": "겨울 판타지",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 41010122,
+    "name": "학창시절",
+    "desc": "세월이 종소리와 책장 사이에서 종종걸음으로 스쳐 지나간다.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 4101,
+    "release": "1.2"
+  },
+  {
+    "id": 41010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 4101,
+    "release": "1.3"
+  },
+  {
+    "id": 41020121,
+    "name": "겨울 판타지",
+    "desc": "수많은 눈사람들 중에, 왜 하나가 유독 커 보이는 걸까?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 4102,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 41020121,
+          "name": "겨울 판타지",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 41020122,
+    "name": "학창시절",
+    "desc": "세월이 종소리와 책장 사이에서 종종걸음으로 스쳐 지나간다.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 4102,
+    "release": "1.2"
+  },
+  {
+    "id": 41020131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 4102,
+    "release": "1.3"
+  },
+  {
+    "id": 42010121,
+    "name": "겨울 판타지",
+    "desc": "수많은 눈사람들 중에, 왜 하나가 유독 커 보이는 걸까?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 4201,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 42010121,
+          "name": "겨울 판타지",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 42010122,
+    "name": "학창시절",
+    "desc": "세월이 종소리와 책장 사이에서 종종걸음으로 스쳐 지나간다.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 4201,
+    "release": "1.2"
+  },
+  {
+    "id": 42010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 4201,
+    "release": "1.3"
+  },
+  {
+    "id": 42020010,
+    "name": "별빛의 소망",
+    "desc": "낮이 짧은 계절, 종이 울리면 사람들은 마음속 소망을 밤하늘에 부쳐, 소망이 별빛을 따라 미래로 날아가길 빈다.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 4202,
+    "release": "1.0"
+  },
+  {
+    "id": 42020011,
+    "name": "화려한 시절",
+    "desc": "화려하고 우아하게, 스스로 빛나는 아름다움",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 4202,
+    "release": "1.1"
+  },
+  {
+    "id": 42020121,
+    "name": "겨울 판타지",
+    "desc": "수많은 눈사람들 중에, 왜 하나가 유독 커 보이는 걸까?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 4202,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 42020121,
+          "name": "겨울 판타지",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 42020122,
+    "name": "학창시절",
+    "desc": "세월이 종소리와 책장 사이에서 종종걸음으로 스쳐 지나간다.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 4202,
+    "release": "1.2"
+  },
+  {
+    "id": 42020131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 4202,
+    "release": "9.9"
+  },
+  {
+    "id": 43010010,
+    "name": "별빛의 소망",
+    "desc": "낮이 짧은 계절, 종이 울리면 사람들은 마음속 소망을 밤하늘에 부쳐, 소망이 별빛을 따라 미래로 날아가길 빈다.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 4301,
+    "release": "1.0"
+  },
+  {
+    "id": 43010011,
+    "name": "화려한 시절",
+    "desc": "화려하고 우아하게, 스스로 빛나는 아름다움",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 4301,
+    "release": "1.1"
+  },
+  {
+    "id": 43010121,
+    "name": "겨울 판타지",
+    "desc": "수많은 눈사람들 중에, 왜 하나가 유독 커 보이는 걸까?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 4301,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 43010121,
+          "name": "겨울 판타지",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 43010122,
+    "name": "학창시절",
+    "desc": "세월이 종소리와 책장 사이에서 종종걸음으로 스쳐 지나간다.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 4301,
+    "release": "1.2"
+  },
+  {
+    "id": 43010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 4301,
+    "release": "1.3"
+  },
+  {
+    "id": 51010010,
+    "name": "별빛의 소망",
+    "desc": "낮이 짧은 계절, 종이 울리면 사람들은 마음속 소망을 밤하늘에 부쳐, 소망이 별빛을 따라 미래로 날아가길 빈다.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 5101,
+    "release": "1.0"
+  },
+  {
+    "id": 51010011,
+    "name": "화려한 시절",
+    "desc": "화려하고 우아하게, 스스로 빛나는 아름다움",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 5101,
+    "release": "1.1"
+  },
+  {
+    "id": 51010121,
+    "name": "겨울 판타지",
+    "desc": "수많은 눈사람들 중에, 왜 하나가 유독 커 보이는 걸까?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 5101,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 51010121,
+          "name": "겨울 판타지",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 51010122,
+    "name": "학창시절",
+    "desc": "세월이 종소리와 책장 사이에서 종종걸음으로 스쳐 지나간다.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 5101,
+    "release": "1.2"
+  },
+  {
+    "id": 51010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 5101,
+    "release": "1.3"
+  },
+  {
+    "id": 51020010,
+    "name": "별빛의 소망",
+    "desc": "낮이 짧은 계절, 종이 울리면 사람들은 마음속 소망을 밤하늘에 부쳐, 소망이 별빛을 따라 미래로 날아가길 빈다.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 5102,
+    "release": "1.0"
+  },
+  {
+    "id": 51020011,
+    "name": "화려한 시절",
+    "desc": "화려하고 우아하게, 스스로 빛나는 아름다움",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 5102,
+    "release": "1.1"
+  },
+  {
+    "id": 51020121,
+    "name": "겨울 판타지",
+    "desc": "수많은 눈사람들 중에, 왜 하나가 유독 커 보이는 걸까?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 5102,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 51020121,
+          "name": "겨울 판타지",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 51020122,
+    "name": "학창시절",
+    "desc": "세월이 종소리와 책장 사이에서 종종걸음으로 스쳐 지나간다.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 5102,
+    "release": "1.2"
+  },
+  {
+    "id": 51020131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 5102,
+    "release": "9.9"
+  },
+  {
+    "id": 53010010,
+    "name": "별빛의 소망",
+    "desc": "낮이 짧은 계절, 종이 울리면 사람들은 마음속 소망을 밤하늘에 부쳐, 소망이 별빛을 따라 미래로 날아가길 빈다.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 5301,
+    "release": "1.0"
+  },
+  {
+    "id": 53010011,
+    "name": "화려한 시절",
+    "desc": "화려하고 우아하게, 스스로 빛나는 아름다움",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 5301,
+    "release": "1.1"
+  },
+  {
+    "id": 53010121,
+    "name": "겨울 판타지",
+    "desc": "수많은 눈사람들 중에, 왜 하나가 유독 커 보이는 걸까?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 5301,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 53010121,
+          "name": "겨울 판타지",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 53010122,
+    "name": "학창시절",
+    "desc": "세월이 종소리와 책장 사이에서 종종걸음으로 스쳐 지나간다.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 5301,
+    "release": "1.2"
+  },
+  {
+    "id": 53010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 5301,
+    "release": "1.3"
+  },
+  {
+    "id": 54010010,
+    "name": "별빛의 소망",
+    "desc": "낮이 짧은 계절, 종이 울리면 사람들은 마음속 소망을 밤하늘에 부쳐, 소망이 별빛을 따라 미래로 날아가길 빈다.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 5401,
+    "release": "1.0"
+  },
+  {
+    "id": 54010011,
+    "name": "화려한 시절",
+    "desc": "화려하고 우아하게, 스스로 빛나는 아름다움",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 5401,
+    "release": "1.1"
+  },
+  {
+    "id": 54010121,
+    "name": "겨울 판타지",
+    "desc": "수많은 눈사람들 중에, 왜 하나가 유독 커 보이는 걸까?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 5401,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 54010121,
+          "name": "겨울 판타지",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 54010122,
+    "name": "학창시절",
+    "desc": "세월이 종소리와 책장 사이에서 종종걸음으로 스쳐 지나간다.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 5401,
+    "release": "1.2"
+  },
+  {
+    "id": 54010131,
+    "name": "叛逆风尚",
+    "desc": "我们在蓝丝绒般的不眠之夜痛饮，吹着口哨疾驰于午夜的凉风中。",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 5401,
+    "release": "1.3"
+  }
+]

@@ -42,6 +42,7 @@ from processor.weapon_skin_processor import WeaponSkinProcessor
 from processor.head_sculpture_processor import HeadSculptureProcessor
 from processor.impression_shop_processor import ImpressionShopProcessor
 from processor.monster_strong_affixes_processor import MonsterStrongAffixesProcessor
+from processor.skin_processor import SkinProcessor
 from processor.rouge_processor import (
     RougeLikeBlessingProcessor,
     RougeLikeContractProcessor,
@@ -59,6 +60,9 @@ class DataLoader:
         self.indexes = {}
         self.language = None
         self.i18n_data = self.load_json("TextMap_I18n.json")
+        self.i18n_data_cn_alt = {}
+        for item in self.load_json("TextMap_TextMapContent.json"):
+            self.i18n_data_cn_alt.update(item.get("Loader"))
 
     def set_language(self, language):
         self.language = language
@@ -109,12 +113,19 @@ class DataLoader:
         # 从i18n_data中查找
         text_entry = self.i18n_data.get(text_key, {})
         if not text_entry:
-            return text_key
+            return self.i18n_data_cn_alt.get(text_key, {}).get(
+                "TextMapContent", text_key
+            )
 
         # 获取当前语言
         language = language if language else self.language
         if not isinstance(language, str):
             language = "cn"
+
+        if language == "cn":
+            cn_alt = self.i18n_data_cn_alt.get(text_key, {}).get("TextMapContent", "")
+            if cn_alt:
+                return cn_alt
 
         # 根据当前语言获取对应字段
         # 语言映射：cn->TextMapContent, en->ContentEN, jp->ContentJP, kr->ContentKR, fr->ContentFR, tc->ContentTC
@@ -198,7 +209,7 @@ class DataLoader:
         return self.translate(accessory_info.get("Name", ""))
 
     def get_title_name(self, title_id):
-        # Use translated Title from i18n directory
+        # 回退到 Title.json 的通用翻译
         title_index = self.build_index("Title.json", "TitleID")
         return self.translate(title_index.get(title_id, {}).get("Name", ""))
 
@@ -268,6 +279,7 @@ class FinalProcessor:
             "CharAccessory": CharAccessoryProcessor,
             "WeaponAccessory": WeaponAccessoryProcessor,
             "WeaponSkin": WeaponSkinProcessor,
+            "Skin": SkinProcessor,
             "HeadSculpture": HeadSculptureProcessor,
             "ImpressionShop": ImpressionShopProcessor,
             "MonsterStrongAffixes": MonsterStrongAffixesProcessor,
@@ -418,6 +430,7 @@ if __name__ == "__main__":
         "CharAccessory",
         "WeaponAccessory",
         "WeaponSkin",
+        "Skin",
         "HeadSculpture",
         "ImpressionShop",
         "MonsterStrongAffixes",
