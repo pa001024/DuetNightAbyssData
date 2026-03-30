@@ -9,12 +9,24 @@ from processor.base_processor import BaseProcessor
 
 class SubRegionProcessor(BaseProcessor):
     DEFAULT_EXPORTS_ROOT = Path(r"D:\dev\dna-unpack\Fmodel\Output\Exports")
+    _shared_base_json_cache: Dict[Tuple[str, str], object] = {}
+    _shared_design_level_cache: Dict[Tuple[str, str], dict] = {}
+    _shared_missing_design_level: set[Tuple[str, str]] = set()
+    _shared_design_map_index_cache: Dict[str, Dict[str, List[Path]]] = {}
+    _shared_design_map_json_cache: Dict[str, List[dict]] = {}
+    _shared_random_actor_points_cache: Dict[str, Dict[str, Dict[str, List[List]]]] = {}
+    _shared_sub_region_core_cache: Dict[str, dict] = {}
+    _shared_sub_region_core_locks: Dict[str, object] = {}
+    _shared_sub_region_core_cache_lock = __import__("threading").Lock()
 
     def __init__(self, data_loader):
         super().__init__(data_loader)
         self.file_type = "SubRegion"
-        self.random_creator_data = data_loader.load_json("RandomCreator.json")
-        self.region_data = data_loader.load_json("Region.json")
+        self.base_cache_key = self._resolve_base_cache_key()
+        self.random_creator_data = self._load_shared_base_json(data_loader, "RandomCreator.json")
+        self.region_data = self._load_shared_base_json(data_loader, "Region.json")
+        self.region_point_data = self._load_shared_base_json(data_loader, "RegionPoint.json")
+        self.teleport_point_data = self._load_shared_base_json(data_loader, "TeleportPoint.json")
         self.design_level_cache = {}
         self.missing_design_level = set()
         self.exports_root = self._resolve_exports_root()
@@ -24,6 +36,22 @@ class SubRegionProcessor(BaseProcessor):
         self.design_map_json_cache: Dict[str, List[dict]] = {}
         self.random_actor_points_cache: Dict[str, Dict[str, List[List]]] = {}
         self.region_map_transform_cache: Dict[str, dict] = {}
+        self.teleport_points_cache: Dict[int, List[dict]] = {}
+
+    @staticmethod
+    def _resolve_base_cache_key() -> str:
+        """生成基础数据缓存键。"""
+        return "base"
+
+    @classmethod
+    def _load_shared_base_json(cls, data_loader, file_name: str):
+        """共享加载基础 JSON。"""
+        cache_key = (cls._resolve_base_cache_key(), file_name)
+        if cache_key in cls._shared_base_json_cache:
+            return cls._shared_base_json_cache[cache_key]
+        data = data_loader.load_json(file_name)
+        cls._shared_base_json_cache[cache_key] = data
+        return data
 
     def process_item(self, item_data, language):
         """处理单个子区域数据
@@ -54,29 +82,93 @@ class SubRegionProcessor(BaseProcessor):
             "name": sub_region_name,
             "desc": sub_region_des,
             "map": sub_region_data.get("SubRegionLevel"),
-            "pos": sub_region_data.get("SubRegionCenter", []),
+            "pos": self._to_vec2(sub_region_data.get("SubRegionCenter", [])) or [],
         }
         if not processed_sub_region["rid"] or not processed_sub_region["map"]:
             return None
-        if not processed_sub_region["pos"]:
+
+        core = self._get_sub_region_core(
+            processed_sub_region["map"],
+            sub_region_id,
+            processed_sub_region["rid"],
+            processed_sub_region.get("pos"),
+        )
+        if not processed_sub_region.get("pos") and core.get("pos"):
+            processed_sub_region["pos"] = core["pos"]
+        elif not processed_sub_region.get("pos"):
             del processed_sub_region["pos"]
-        sub_region_range = self._get_sub_region_range(
-            processed_sub_region["map"], sub_region_id
-        )
-        if sub_region_range:
-            processed_sub_region["range"] = sub_region_range
-        reference_center = None
-        if processed_sub_region.get("pos"):
-            reference_center = processed_sub_region["pos"]
-        elif sub_region_range and isinstance(sub_region_range.get("center"), list):
-            reference_center = sub_region_range["center"]
-        rc = self._get_pet_random_creators(
-            processed_sub_region["map"], processed_sub_region["rid"], reference_center
-        )
-        if rc:
-            processed_sub_region["rc"] = rc
+        if core.get("range"):
+            processed_sub_region["range"] = core["range"]
+        if core.get("rc"):
+            processed_sub_region["rc"] = core["rc"]
+        tp = core.get("tp")
+        if tp:
+            processed_sub_region["tp"] = [
+                {
+                    "id": tp_item["id"],
+                    "pos": tp_item["pos"],
+                    "name": self.get_translated_text(tp_item["nameKey"], language) if tp_item.get("nameKey") else "",
+                    "icon": tp_item["icon"],
+                }
+                for tp_item in tp
+            ]
 
         return processed_sub_region
+
+    def _get_sub_region_core(
+        self,
+        sub_region_level: str,
+        sub_region_id: int,
+        region_id: int,
+        reference_center: Optional[List[float]],
+    ) -> dict:
+        """缓存子区域的语言无关核心结果。"""
+        cache_key = f"{self._get_exports_root_cache_key()}|{sub_region_level}|{sub_region_id}|{region_id}|{reference_center}"
+        cached = self._shared_sub_region_core_cache.get(cache_key)
+        if cached is not None:
+            return cached
+
+        with self._shared_sub_region_core_cache_lock:
+            key_lock = self._shared_sub_region_core_locks.get(cache_key)
+            if key_lock is None:
+                from threading import Lock
+
+                key_lock = Lock()
+                self._shared_sub_region_core_locks[cache_key] = key_lock
+
+        with key_lock:
+            cached = self._shared_sub_region_core_cache.get(cache_key)
+            if cached is not None:
+                return cached
+
+            derived_pos = self._derive_sub_region_pos(sub_region_level, sub_region_id)
+            if derived_pos is not None:
+                derived_pos = self._to_vec2(derived_pos) or derived_pos[:2]
+
+            pos = self._to_vec2(reference_center) if isinstance(reference_center, list) else None
+            if not pos and derived_pos is not None:
+                pos = derived_pos
+            sub_region_range = self._get_sub_region_range(sub_region_level, sub_region_id)
+            if not reference_center:
+                reference_center = pos if pos else (sub_region_range.get("center") if sub_region_range else None)
+
+            rc = self._get_pet_random_creators(sub_region_level, region_id, reference_center)
+            tp = self._get_teleport_points_raw(sub_region_id, region_id)
+
+            core = {}
+            if pos:
+                core["pos"] = pos
+            if sub_region_range:
+                core["range"] = sub_region_range
+            if rc:
+                core["rc"] = rc
+            if tp:
+                core["tp"] = tp
+
+            with self._shared_sub_region_core_cache_lock:
+                self._shared_sub_region_core_cache[cache_key] = core
+                self._shared_sub_region_core_locks.pop(cache_key, None)
+            return core
 
     def _resolve_exports_root(self) -> Optional[Path]:
         """解析 FModel Exports 根目录。"""
@@ -91,6 +183,15 @@ class SubRegionProcessor(BaseProcessor):
                 return candidate
         return None
 
+    def _get_exports_root_cache_key(self) -> str:
+        """获取当前 Exports 根目录对应的缓存键。"""
+        if self.exports_root is None:
+            return "__none__"
+        try:
+            return str(self.exports_root.resolve())
+        except Exception:
+            return str(self.exports_root)
+
     @staticmethod
     def _resolve_map_units_per_pixel() -> float:
         """解析地图坐标比例（世界单位/小地图单位）。默认 30。"""
@@ -103,10 +204,34 @@ class SubRegionProcessor(BaseProcessor):
             pass
         return 30.0
 
+    def _normalize_level_map_key(self, json_path: Path) -> Optional[str]:
+        """从地图 JSON 路径提取用于匹配 SubRegionLevel 的键。"""
+        if not isinstance(json_path, Path):
+            return None
+
+        stem = json_path.stem
+        if not stem:
+            return None
+
+        if stem.endswith("_Design"):
+            return stem[: -len("_Design")].lower()
+        if stem.endswith("_BuiltData"):
+            stem = stem[: -len("_BuiltData")]
+        if "_Art_" in stem:
+            stem = stem.split("_Art_", 1)[0]
+        elif stem.endswith("_Art"):
+            stem = stem[: -len("_Art")]
+        return stem.lower() if stem else None
+
     def _build_design_map_index(self) -> Dict[str, List[Path]]:
-        """构建 SubRegionLevel -> *_Design.json 的索引。"""
+        """构建 SubRegionLevel -> 地图 JSON 文件索引。"""
         if self.design_map_index is not None:
             return self.design_map_index
+        exports_root_cache_key = self._get_exports_root_cache_key()
+        shared_index = self._shared_design_map_index_cache.get(exports_root_cache_key)
+        if shared_index is not None:
+            self.design_map_index = shared_index
+            return shared_index
 
         index: Dict[str, List[Path]] = {}
         if self.exports_root is None:
@@ -118,40 +243,61 @@ class SubRegionProcessor(BaseProcessor):
             self.design_map_index = index
             return index
 
-        for json_path in maps_root.rglob("*_Design.json"):
+        for json_path in maps_root.rglob("*.json"):
             if not json_path.is_file():
                 continue
-            if not json_path.name.endswith("_Design.json"):
+            if not (
+                json_path.name.endswith("_Design.json")
+                or json_path.name.endswith("_BuiltData.json")
+            ):
                 continue
-            level_name = json_path.name[: -len("_Design.json")]
-            key = level_name.lower()
+            key = self._normalize_level_map_key(json_path)
+            if not key:
+                continue
             index.setdefault(key, []).append(json_path)
 
         for key, path_list in index.items():
-            path_list.sort(key=lambda p: (len(str(p)), str(p)))
+            path_list.sort(
+                key=lambda p: (
+                    0 if p.name.endswith("_Design.json") else 1,
+                    len(str(p)),
+                    str(p),
+                )
+            )
             index[key] = path_list
 
         self.design_map_index = index
+        self._shared_design_map_index_cache[exports_root_cache_key] = index
         return index
 
-    def _resolve_design_map_path(self, sub_region_level: str) -> Optional[Path]:
-        """根据 SubRegionLevel 解析关卡 Design JSON 路径。"""
+    def _resolve_design_map_paths(self, sub_region_level: str) -> List[Path]:
+        """根据 SubRegionLevel 解析关卡地图 JSON 路径。"""
         if not isinstance(sub_region_level, str) or not sub_region_level:
-            return None
+            return []
         if sub_region_level in self.design_map_path_cache:
-            return self.design_map_path_cache[sub_region_level]
+            cached = self.design_map_path_cache[sub_region_level]
+            return [cached] if cached is not None else []
 
         index = self._build_design_map_index()
         candidates = index.get(sub_region_level.lower(), [])
         result = candidates[0] if candidates else None
         self.design_map_path_cache[sub_region_level] = result
-        return result
+        return candidates
+
+    def _resolve_design_map_path(self, sub_region_level: str) -> Optional[Path]:
+        """兼容旧调用：返回第一个匹配的地图 JSON 路径。"""
+        paths = self._resolve_design_map_paths(sub_region_level)
+        return paths[0] if paths else None
 
     def _load_design_map_json(self, design_map_path: Path) -> List[dict]:
         """读取关卡 Design JSON（带缓存）。"""
         cache_key = str(design_map_path)
         if cache_key in self.design_map_json_cache:
             return self.design_map_json_cache[cache_key]
+        shared = self._shared_design_map_json_cache.get(cache_key)
+        if shared is not None:
+            self.design_map_json_cache[cache_key] = shared
+            return shared
 
         try:
             arr = json.loads(design_map_path.read_text(encoding="utf-8"))
@@ -164,6 +310,7 @@ class SubRegionProcessor(BaseProcessor):
             return []
 
         self.design_map_json_cache[cache_key] = arr
+        self._shared_design_map_json_cache[cache_key] = arr
         return arr
 
     @staticmethod
@@ -279,6 +426,15 @@ class SubRegionProcessor(BaseProcessor):
 
     def _format_vec2(self, vec: List[float]) -> List:
         return [self._format_num(vec[0]), self._format_num(vec[1])]
+
+    def _to_vec2(self, vec: List[float]) -> Optional[List[float]]:
+        """将二维或三维向量收敛成二维坐标。"""
+        if not isinstance(vec, list) or len(vec) < 2:
+            return None
+        try:
+            return [self._format_num(float(vec[0])), self._format_num(float(vec[1]))]
+        except Exception:
+            return None
 
     @staticmethod
     def _rotate_xy(x: float, y: float, deg: float) -> Tuple[float, float]:
@@ -425,10 +581,192 @@ class SubRegionProcessor(BaseProcessor):
             if outer_short_name != actor_name or obj.get("Name") != "DefaultSceneRoot":
                 continue
             props = obj.get("Properties", {})
-            anchor = self._to_vector3(props.get("RelativeLocation"))
+            anchor = self._to_vec2(self._to_vector3(props.get("RelativeLocation")) or [])
             if anchor is not None:
                 return anchor
         return None
+
+    def _extract_ref_location(
+        self,
+        ref_obj: Optional[dict],
+        by_outer_name: Dict[Tuple[str, str], dict],
+        by_name: Dict[str, List[dict]],
+        by_path: Optional[Dict[str, dict]] = None,
+    ) -> Optional[List[float]]:
+        """从引用对象中直接解析坐标。"""
+        resolved_obj = self._resolve_ref_object(ref_obj, by_outer_name, by_name, by_path)
+        if not isinstance(resolved_obj, dict):
+            return None
+
+        props = resolved_obj.get("Properties", {})
+        if not isinstance(props, dict):
+            return None
+
+        for key in ("RelativeLocation", "Location"):
+            loc = self._to_vector3(props.get(key))
+            if loc is not None:
+                return loc
+
+        transform = props.get("RelativeTransform")
+        if isinstance(transform, dict):
+            loc = self._to_vector3(transform.get("Translation"))
+            if loc is not None:
+                return loc
+
+        return None
+
+    def _extract_object_location(
+        self,
+        obj: dict,
+        by_outer_name: Dict[Tuple[str, str], dict],
+        by_name: Dict[str, List[dict]],
+        by_path: Optional[Dict[str, dict]] = None,
+    ) -> Optional[List[float]]:
+        """提取对象自身或其根组件的位置。"""
+        if not isinstance(obj, dict):
+            return None
+
+        props = obj.get("Properties", {})
+        if not isinstance(props, dict):
+            return None
+
+        for key in ("RelativeLocation", "Location"):
+            loc = self._to_vector3(props.get(key))
+            if loc is not None:
+                return loc
+
+        transform = props.get("RelativeTransform")
+        if isinstance(transform, dict):
+            loc = self._to_vector3(transform.get("Translation"))
+            if loc is not None:
+                return loc
+
+        root_ref = props.get("RootComponent") or props.get("DefaultSceneRoot")
+        if root_ref is not None:
+            loc = self._extract_ref_location(root_ref, by_outer_name, by_name, by_path)
+            if loc is not None:
+                return loc
+
+        for component_key in ("Sphere", "SceneComponent", "CollisionComponent"):
+            component_ref = props.get(component_key)
+            if component_ref is None:
+                continue
+            loc = self._extract_ref_location(component_ref, by_outer_name, by_name, by_path)
+            if loc is not None:
+                return loc
+
+        blueprint_components = props.get("BlueprintCreatedComponents")
+        if isinstance(blueprint_components, list):
+            for component_ref in blueprint_components:
+                loc = self._extract_ref_location(component_ref, by_outer_name, by_name, by_path)
+                if loc is not None:
+                    return loc
+
+        return None
+
+    def _extract_sub_region_pos(self, sub_region_level: str, sub_region_id: int) -> Optional[List[float]]:
+        """提取子区域展示坐标。"""
+        design_map_paths = self._resolve_design_map_paths(sub_region_level)
+        if not design_map_paths:
+            return None
+
+        for design_map_path in design_map_paths:
+            arr = self._load_design_map_json(design_map_path)
+            if not arr:
+                continue
+
+            by_outer_name, by_name, by_path = self._build_object_maps(arr)
+            for obj in arr:
+                if not isinstance(obj, dict):
+                    continue
+                props = obj.get("Properties")
+                if not isinstance(props, dict):
+                    continue
+                if str(props.get("SubRegionId")) != str(sub_region_id) and str(props.get("Id")) != str(sub_region_id):
+                    continue
+
+                loc = self._extract_object_location(obj, by_outer_name, by_name, by_path)
+                if loc is not None:
+                    return loc
+
+            anchor = self._extract_sub_region_anchor(arr, sub_region_id)
+            if anchor is not None:
+                return anchor
+        return None
+
+    def _collect_sub_region_point_positions(self, sub_region_id: int) -> List[List[float]]:
+        """收集与子区域绑定的 RegionPoint / TeleportPoint 坐标。"""
+        if sub_region_id is None:
+            return []
+
+        positions: List[List[float]] = []
+        seen = set()
+
+        for point in self._iter_region_points():
+            if self._to_int(point.get("SubRegion")) != self._to_int(sub_region_id):
+                continue
+            pos = point.get("Pos")
+            if not isinstance(pos, list) or len(pos) < 2:
+                continue
+            try:
+                pos2 = [self._format_num(float(pos[0])), self._format_num(float(pos[1]))]
+            except Exception:
+                continue
+            key = (pos2[0], pos2[1])
+            if key in seen:
+                continue
+            seen.add(key)
+            positions.append(pos2)
+
+        teleport_points = (
+            self.teleport_point_data.values()
+            if isinstance(self.teleport_point_data, dict)
+            else self.teleport_point_data
+            if isinstance(self.teleport_point_data, list)
+            else []
+        )
+        for point in teleport_points:
+            if not isinstance(point, dict):
+                continue
+            if self._to_int(point.get("TeleportPointSubRegion")) != self._to_int(sub_region_id):
+                continue
+            pos = point.get("MechanismPos")
+            if not isinstance(pos, list) or len(pos) < 2:
+                pos = point.get("Pos")
+            if not isinstance(pos, list) or len(pos) < 2:
+                continue
+            try:
+                pos2 = [self._format_num(float(pos[0])), self._format_num(float(pos[1]))]
+            except Exception:
+                continue
+            key = (pos2[0], pos2[1])
+            if key in seen:
+                continue
+            seen.add(key)
+            positions.append(pos2)
+
+        return positions
+
+    def _derive_sub_region_pos(self, sub_region_level: str, sub_region_id: int) -> Optional[List[float]]:
+        """根据上游点位合成子区域中心。"""
+        center = self._extract_sub_region_pos(sub_region_level, sub_region_id)
+        if center is not None:
+            return center
+
+        points = self._collect_sub_region_point_positions(sub_region_id)
+        if not points:
+            return None
+
+        total_x = 0.0
+        total_y = 0.0
+        for point in points:
+            total_x += float(point[0])
+            total_y += float(point[1])
+
+        count = len(points)
+        if count <= 0:
+            return None
+        return self._format_vec2([total_x / count, total_y / count])
 
     def _extract_level_volume_range(self, arr: List[dict]) -> Optional[dict]:
         """提取关卡 LevelVolume 的 Box0 范围。"""
@@ -468,21 +806,23 @@ class SubRegionProcessor(BaseProcessor):
 
     def _get_sub_region_range(self, sub_region_level: str, sub_region_id: int) -> Optional[dict]:
         """按子区域地图解析范围。"""
-        design_map_path = self._resolve_design_map_path(sub_region_level)
-        if design_map_path is None:
-            return None
-        arr = self._load_design_map_json(design_map_path)
-        if not arr:
+        design_map_paths = self._resolve_design_map_paths(sub_region_level)
+        if not design_map_paths:
             return None
 
-        anchor = self._extract_sub_region_anchor(arr, sub_region_id)
-        range_data = self._extract_level_volume_range(arr)
-        if range_data is not None:
+        for design_map_path in design_map_paths:
+            arr = self._load_design_map_json(design_map_path)
+            if not arr:
+                continue
+
+            anchor = self._extract_sub_region_anchor(arr, sub_region_id)
+            range_data = self._extract_level_volume_range(arr)
+            if range_data is not None:
+                if anchor is not None:
+                    range_data["anchor"] = self._format_vec2(anchor)
+                return range_data
             if anchor is not None:
-                range_data["anchor"] = self._format_vec2(anchor)
-            return range_data
-        if anchor is not None:
-            return self._build_range(anchor, [0.0, 0.0, 0.0])
+                return self._build_range(anchor, [0.0, 0.0, 0.0])
         return None
 
     def _estimate_point_distance_score(
@@ -513,26 +853,6 @@ class SubRegionProcessor(BaseProcessor):
             return None
         return total / count
 
-    def _choose_random_actor_points(
-        self,
-        raw_points: List[List],
-        root_loc: List[float],
-        reference_center: Optional[List[float]],
-    ) -> List[List]:
-        """在 raw 与 raw+root 两套坐标中选择更接近子区域中心的一套。"""
-        if not raw_points:
-            return []
-
-        translated_points = [self._vec_add(point, root_loc) for point in raw_points]
-        raw_score = self._estimate_point_distance_score(raw_points, reference_center)
-        translated_score = self._estimate_point_distance_score(translated_points, reference_center)
-
-        if raw_score is None:
-            return translated_points if any(abs(v) > 1e-6 for v in root_loc[:2]) else raw_points
-        if translated_score is None:
-            return raw_points
-        return translated_points if translated_score + 1e-6 < raw_score else raw_points
-
     def _get_random_actor_points_by_rule(
         self, sub_region_level: str, reference_center: Optional[List[float]] = None
     ) -> Dict[str, List[List]]:
@@ -542,87 +862,144 @@ class SubRegionProcessor(BaseProcessor):
         cache_key = f"{sub_region_level}|{reference_center}"
         if cache_key in self.random_actor_points_cache:
             return self.random_actor_points_cache[cache_key]
+        exports_root_cache_key = self._get_exports_root_cache_key()
+        shared_rules = self._shared_random_actor_points_cache.get(exports_root_cache_key)
+        if shared_rules is not None and cache_key in shared_rules:
+            self.random_actor_points_cache[cache_key] = shared_rules[cache_key]
+            return shared_rules[cache_key]
 
-        design_map_path = self._resolve_design_map_path(sub_region_level)
-        if design_map_path is None:
+        design_map_paths = self._resolve_design_map_paths(sub_region_level)
+        if not design_map_paths:
             self.random_actor_points_cache[cache_key] = {}
             return {}
 
-        arr = self._load_design_map_json(design_map_path)
-        if not arr:
-            self.random_actor_points_cache[cache_key] = {}
-            return {}
-
-        by_outer_name, by_name, by_path = self._build_object_maps(arr)
         rule_points: Dict[str, List[List]] = {}
         rule_point_set: Dict[str, set] = {}
+        design_paths = [path for path in design_map_paths if path.name.endswith("_Design.json")]
+        built_paths = [path for path in design_map_paths if path.name.endswith("_BuiltData.json")]
+
+        def collect_random_actor_points(design_map_path: Path, skip_existing_rules: bool = False) -> None:
+            arr = self._load_design_map_json(design_map_path)
+            if not arr:
+                return
+
+            for obj in arr:
+                if not isinstance(obj, dict):
+                    continue
+                props = obj.get("Properties")
+                if not isinstance(props, dict):
+                    continue
+                random_actor_infos = props.get("RandomActorInfos")
+                if not isinstance(random_actor_infos, list):
+                    continue
+                for item in random_actor_infos:
+                    if not isinstance(item, dict):
+                        continue
+                    rule_key = item.get("Key")
+                    if rule_key is None:
+                        continue
+                    value = item.get("Value")
+                    if not isinstance(value, dict):
+                        continue
+                    params = value.get("Params")
+                    if not isinstance(params, list):
+                        continue
+                    rule_id_str = str(rule_key)
+                    if skip_existing_rules and rule_id_str in rule_points:
+                        continue
+                    points = rule_points.setdefault(rule_id_str, [])
+                    point_set = rule_point_set.setdefault(rule_id_str, set())
+                    for param in params:
+                        if not isinstance(param, dict):
+                            continue
+                        loc = self._to_vector3(param.get("ActorLoc"))
+                        if loc is None:
+                            continue
+                        root_loc = self._resolve_random_actor_root_location(design_map_path)
+                        if root_loc is not None:
+                            loc = self._vec_add(loc, root_loc)
+                        pos = self._format_vec3(loc)
+                        pos_tuple = (pos[0], pos[1], pos[2])
+                        if pos_tuple in point_set:
+                            continue
+                        point_set.add(pos_tuple)
+                        points.append(pos)
+
+        for design_map_path in design_paths:
+            collect_random_actor_points(design_map_path)
+
+        for built_map_path in built_paths:
+            collect_random_actor_points(built_map_path, skip_existing_rules=True)
+
+        self.random_actor_points_cache[cache_key] = rule_points
+        shared_rules = self._shared_random_actor_points_cache.setdefault(exports_root_cache_key, {})
+        shared_rules[cache_key] = rule_points
+        return rule_points
+
+    def _resolve_random_actor_root_location(self, design_map_path: Path) -> Optional[List[float]]:
+        """读取随机生成器根节点偏移。"""
+        try:
+            arr = self._load_design_map_json(design_map_path)
+        except Exception:
+            return None
+        if not arr:
+            return None
+        by_outer_name, by_name, by_path = self._build_object_maps(arr)
         for obj in arr:
             if not isinstance(obj, dict):
                 continue
-            props = obj.get("Properties")
+            props = obj.get("Properties", {})
             if not isinstance(props, dict):
                 continue
-            random_actor_infos = props.get("RandomActorInfos")
-            if not isinstance(random_actor_infos, list):
+            if obj.get("Type") != "BP_RandomActorDataManager_C":
                 continue
-            root_loc = [0.0, 0.0, 0.0]
-            root_ref = props.get("DefaultSceneRoot") or props.get("RootComponent")
+            root_ref = props.get("DefaultSceneRoot")
             root_obj = self._resolve_ref_object(root_ref, by_outer_name, by_name, by_path)
-            if isinstance(root_obj, dict):
-                root_props = root_obj.get("Properties", {})
-                root_loc = self._to_vector3(root_props.get("RelativeLocation")) or root_loc
-            for item in random_actor_infos:
-                if not isinstance(item, dict):
-                    continue
-                rule_key = item.get("Key")
-                if rule_key is None:
-                    continue
-                value = item.get("Value")
-                if not isinstance(value, dict):
-                    continue
-                params = value.get("Params")
-                if not isinstance(params, list):
-                    continue
-                rule_id_str = str(rule_key)
-                points = rule_points.setdefault(rule_id_str, [])
-                point_set = rule_point_set.setdefault(rule_id_str, set())
-                raw_points: List[List] = []
-                for param in params:
-                    if not isinstance(param, dict):
-                        continue
-                    loc = self._to_vector3(param.get("ActorLoc"))
-                    if loc is None:
-                        continue
-                    raw_points.append(loc)
-                chosen_points = self._choose_random_actor_points(
-                    raw_points, root_loc, reference_center
-                )
-                for loc in chosen_points:
-                    pos = self._format_vec3(loc)
-                    pos_tuple = (pos[0], pos[1], pos[2])
-                    if pos_tuple in point_set:
-                        continue
-                    point_set.add(pos_tuple)
-                    points.append(pos)
+            if not isinstance(root_obj, dict):
+                continue
+            root_props = root_obj.get("Properties", {})
+            if not isinstance(root_props, dict):
+                continue
+            root = self._to_vector3(root_props.get("RelativeLocation"))
+            if root is not None:
+                return root
+        return None
 
-        self.random_actor_points_cache[cache_key] = rule_points
-        return rule_points
+    @staticmethod
+    def _merge_unique_rule_ids(*rule_groups) -> List:
+        """按首次出现顺序合并规则 ID。"""
+        merged = []
+        seen = set()
+        for group in rule_groups:
+            if not isinstance(group, list):
+                continue
+            for rule_id in group:
+                key = str(rule_id)
+                if key in seen:
+                    continue
+                seen.add(key)
+                merged.append(rule_id)
+        return merged
 
     def _load_design_level_data(self, sub_region_level):
         """按子区域地图名加载 DesignLevel 数据（带缓存）"""
         if sub_region_level in self.design_level_cache:
             return self.design_level_cache[sub_region_level]
-        if sub_region_level in self.missing_design_level:
+        shared_key = (self.base_cache_key, sub_region_level)
+        if shared_key in self._shared_design_level_cache:
+            self.design_level_cache[sub_region_level] = self._shared_design_level_cache[shared_key]
+            return self.design_level_cache[sub_region_level]
+        if shared_key in self._shared_missing_design_level:
             return {}
 
         file_name = f"DesignLevel_data/{sub_region_level}.json"
         try:
             design_level_data = self.data_loader.load_json(file_name)
         except FileNotFoundError:
-            self.missing_design_level.add(sub_region_level)
+            self._shared_missing_design_level.add(shared_key)
             return {}
         except Exception:
-            self.missing_design_level.add(sub_region_level)
+            self._shared_missing_design_level.add(shared_key)
             return {}
 
         if not isinstance(design_level_data, dict):
@@ -630,6 +1007,7 @@ class SubRegionProcessor(BaseProcessor):
             return {}
 
         self.design_level_cache[sub_region_level] = design_level_data
+        self._shared_design_level_cache[shared_key] = design_level_data
         return design_level_data
 
     def _extract_random_rule_ids(self, design_level_data):
@@ -672,20 +1050,204 @@ class SubRegionProcessor(BaseProcessor):
             return int(rule_id)
         return rule_id
 
+    @staticmethod
+    def _to_int(value) -> Optional[int]:
+        """将值转换为 int，失败返回 None。"""
+        try:
+            if value is None or value == "":
+                return None
+            return int(value)
+        except Exception:
+            return None
+
+    def _resolve_display_pos(self, point: dict, sub_region_id: int, raw_pos: List[float]) -> List[float]:
+        """根据点位类型解析地图展示坐标。"""
+        return self._format_vec2(raw_pos)
+
+    def _iter_region_points(self) -> List[dict]:
+        """统一遍历 RegionPoint 源数据。"""
+        if isinstance(self.region_point_data, dict):
+            return [item for item in self.region_point_data.values() if isinstance(item, dict)]
+        if isinstance(self.region_point_data, list):
+            return [item for item in self.region_point_data if isinstance(item, dict)]
+        return []
+
+    def _build_teleport_points_index(self) -> Dict[int, List[dict]]:
+        """构建 SubRegionId -> 传送点列表索引。"""
+        if self.teleport_points_cache:
+            return self.teleport_points_cache
+
+        point_map: Dict[int, Dict[str, dict]] = {}
+        for point in self._iter_region_points():
+            if self._to_int(point.get("TelepointId")) is None:
+                continue
+
+            # 对齐 RegionPointComponent.lua：
+            # 地图点挂载到哪个子区域，取的是 RegionPoint.SubRegion；
+            # TeleportSubRegion 只是点击后要传送去的目的子区域。
+            target_sub_region = self._to_int(point.get("SubRegion"))
+            if target_sub_region is None:
+                target_sub_region = self._to_int(point.get("TeleportSubRegion"))
+            if target_sub_region is None:
+                continue
+
+            point_id = self._to_int(point.get("Id"))
+            if point_id is None:
+                continue
+
+            dedupe_key = f"region_point:{point_id}"
+            point_map.setdefault(target_sub_region, {})[dedupe_key] = point
+
+        teleport_points = (
+            self.teleport_point_data.values()
+            if isinstance(self.teleport_point_data, dict)
+            else self.teleport_point_data
+            if isinstance(self.teleport_point_data, list)
+            else []
+        )
+        for point in teleport_points:
+            if not isinstance(point, dict):
+                continue
+
+            target_sub_region = self._to_int(point.get("TeleportPointSubRegion"))
+            point_id = self._to_int(point.get("Id"))
+            if target_sub_region is None or point_id is None:
+                continue
+
+            dedupe_key = f"teleport_point:{point_id}"
+            point_map.setdefault(target_sub_region, {})[dedupe_key] = point
+
+        self.teleport_points_cache = {
+            sub_region_id: list(items.values()) for sub_region_id, items in point_map.items()
+        }
+        return self.teleport_points_cache
+
+    @staticmethod
+    def _extract_region_point_icon(icon_path: str) -> str:
+        """从 RegionPoint Icon 路径中提取 T_Gp_* 图标名。"""
+        if not isinstance(icon_path, str) or "T_Gp_" not in icon_path:
+            return ""
+
+        t_pos = icon_path.rfind("T_Gp_")
+        if t_pos == -1:
+            return ""
+
+        icon_part = icon_path[t_pos:]
+        if "." in icon_part:
+            icon = icon_part.split(".")[0]
+        else:
+            icon = icon_part
+        return icon.rstrip("'")
+
+    def _extract_teleport_icon(self, point: dict) -> str:
+        """提取传送点图标，按地图蓝图中的传送点三态图标规则输出。"""
+        icon = self._extract_region_point_icon(point.get("Icon", ""))
+        if icon:
+            return icon
+
+        icon = self._extract_region_point_icon(point.get("TeleportPointIcon", ""))
+        if icon:
+            return icon
+
+        # LevelMap_Point_Widget_C.lua:
+        # 未解锁 -> T_Gp_Trans01
+        # 已解锁未完成 -> T_Gp_Trans02
+        # 已解锁且关联 Temples/Parties 完成 -> T_Gp_Trans03
+        #
+        # 当前导出是静态地图数据，不带玩家存档里的实时解锁/完成态，
+        # 因此普通传送点默认导出为“已解锁”图标；
+        # 仅当该点本身挂了 Temples/Parties 时，使用完成态图标。
+        if point.get("Temples") is not None or point.get("Parties") is not None:
+            return "T_Gp_Trans03"
+
+        return "T_Gp_Trans02"
+
+    def _get_teleport_points_raw(self, sub_region_id: int, region_id: int) -> List[dict]:
+        """提取当前子区域的传送点原始数据。"""
+        point_index = self._build_teleport_points_index()
+        points = point_index.get(self._to_int(sub_region_id), [])
+        if not points:
+            return []
+
+        result = []
+        dedupe_keys = set()
+        for point in points:
+            point_id = self._to_int(point.get("Id"))
+            if point_id is None:
+                continue
+
+            pos = point.get("Pos")
+            if not isinstance(pos, list) or len(pos) < 2:
+                mechanism_pos = point.get("MechanismPos")
+                if isinstance(mechanism_pos, list) and len(mechanism_pos) >= 2:
+                    pos = self._resolve_display_pos(point, sub_region_id, mechanism_pos[:2])
+                else:
+                    pos = None
+            else:
+                pos = self._format_vec2(pos[:2])
+            if not isinstance(pos, list) or len(pos) < 2:
+                continue
+
+            name_key = point.get("Name")
+            if not name_key:
+                name_key = point.get("TeleportPointName")
+            icon = self._extract_teleport_icon(point)
+            sort_pos = (
+                self._to_int(point.get("TeleportPointPos"))
+                or self._to_int(point.get("teleportPointPos"))
+                or 0
+            )
+            dedupe_key = (sort_pos, name_key, pos[0], pos[1])
+            if dedupe_key in dedupe_keys:
+                continue
+            dedupe_keys.add(dedupe_key)
+            result.append(
+                {
+                    "id": point_id,
+                    "pos": pos[:2],
+                    "nameKey": name_key or "",
+                    "icon": icon,
+                    "_sort": (
+                        sort_pos,
+                        point_id,
+                    ),
+                }
+            )
+
+        result.sort(key=lambda item: item["_sort"])
+        for item in result:
+            del item["_sort"]
+        return result
+
+    def _get_teleport_points(self, sub_region_id: int, region_id: int, language: str) -> List[dict]:
+        """提取当前子区域的传送点。"""
+        raw_points = self._get_teleport_points_raw(sub_region_id, region_id)
+        if not raw_points:
+            return []
+        return [
+            {
+                "id": point["id"],
+                "pos": point["pos"],
+                "name": self.get_translated_text(point["nameKey"], language) if point.get("nameKey") else "",
+                "icon": point["icon"],
+            }
+            for point in raw_points
+        ]
+
     def _get_pet_random_creators(
         self, sub_region_level, region_id, reference_center: Optional[List[float]] = None
     ):
         """根据地图配置提取 Pet 类型随机生成器信息"""
         design_level_data = self._load_design_level_data(sub_region_level)
-        if not design_level_data:
-            return []
-
-        random_rule_ids = self._extract_random_rule_ids(design_level_data)
-        if not random_rule_ids:
-            return []
         random_actor_points = self._get_random_actor_points_by_rule(
             sub_region_level, reference_center
         )
+        random_rule_ids = self._merge_unique_rule_ids(
+            self._extract_random_rule_ids(design_level_data) if design_level_data else [],
+            list(random_actor_points.keys()),
+        )
+        if not random_rule_ids:
+            return []
 
         rc = []
         for random_rule_id in random_rule_ids:
@@ -720,5 +1282,10 @@ class SubRegionProcessor(BaseProcessor):
             if pos:
                 rc_item["pos"] = self._to_vec2_list(pos)
             rc.append(rc_item)
+
+        if len(rc) == 1 and "pos" not in rc[0] and isinstance(reference_center, list) and len(reference_center) >= 2:
+            fallback_pos = self._to_vec2(reference_center[:2])
+            if fallback_pos:
+                rc[0]["pos"] = [fallback_pos]
 
         return rc

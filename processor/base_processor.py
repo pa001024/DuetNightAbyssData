@@ -1,9 +1,13 @@
 import json
 import re
 from collections import OrderedDict
+from threading import Lock
 
 
 class BaseProcessor:
+    _shared_items_cache = {}
+    _shared_items_cache_lock = Lock()
+
     def __init__(self, data_loader):
         self.data_loader = data_loader
         self.file_type = "Base"
@@ -333,14 +337,25 @@ class BaseProcessor:
 
     def load_items(self, file_path):
         """加载项目数据"""
+        shared_key = str(file_path)
+        cached = self._shared_items_cache.get(shared_key)
+        if cached is not None:
+            return cached
+
         with open(file_path, "r", encoding="utf-8") as f:
             data = json.load(f, object_pairs_hook=OrderedDict)
 
         # Convert map to array if needed
         if isinstance(data, dict):
-            return list(data.values())
-        else:
-            return data
+            data = list(data.values())
+
+        with self._shared_items_cache_lock:
+            cached = self._shared_items_cache.get(shared_key)
+            if cached is not None:
+                return cached
+            self._shared_items_cache[shared_key] = data
+
+        return data
 
     def process_all_items(self, items, language):
         """处理所有项目"""

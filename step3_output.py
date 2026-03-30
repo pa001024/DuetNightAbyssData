@@ -1,6 +1,7 @@
 import json
 import os
 from collections import OrderedDict
+from threading import Lock
 from processor.char_processor import CharProcessor
 from processor.char_data_target_processor import CharDataTargetProcessor
 from processor.char_voice_processor import CharVoiceProcessor
@@ -54,6 +55,10 @@ from processor.rouge_processor import (
 
 
 class DataLoader:
+    _shared_data_cache = {}
+    _shared_index_cache = {}
+    _shared_cache_lock = Lock()
+
     def __init__(self, base_dir):
         self.base_dir = base_dir
         self.data_cache = {}
@@ -71,6 +76,12 @@ class DataLoader:
         cache_key = f"{file_name}_{self.language if use_i18n else 'base'}"
         if cache_key in self.data_cache:
             return self.data_cache[cache_key]
+        shared_cache_key = (self.base_dir, cache_key)
+        with self._shared_cache_lock:
+            if shared_cache_key in self._shared_data_cache:
+                data = self._shared_data_cache[shared_cache_key]
+                self.data_cache[cache_key] = data
+                return data
 
         if use_i18n and self.language:
             file_path = os.path.join(self.base_dir, "i18n", self.language, file_name)
@@ -81,12 +92,24 @@ class DataLoader:
             data = json.load(f, object_pairs_hook=OrderedDict)
 
         self.data_cache[cache_key] = data
+        with self._shared_cache_lock:
+            existing = self._shared_data_cache.get(shared_cache_key)
+            if existing is not None:
+                self.data_cache[cache_key] = existing
+                return existing
+            self._shared_data_cache[shared_cache_key] = data
         return data
 
     def build_index(self, file_name, key_field, use_i18n=False):
         cache_key = f"{file_name}_{key_field}_{self.language if use_i18n else 'base'}"
         if cache_key in self.indexes:
             return self.indexes[cache_key]
+        shared_cache_key = (self.base_dir, cache_key)
+        with self._shared_cache_lock:
+            if shared_cache_key in self._shared_index_cache:
+                index = self._shared_index_cache[shared_cache_key]
+                self.indexes[cache_key] = index
+                return index
 
         data = self.load_json(file_name, use_i18n)
         index = {}
@@ -106,6 +129,12 @@ class DataLoader:
                     index[id_val] = item
 
         self.indexes[cache_key] = index
+        with self._shared_cache_lock:
+            existing = self._shared_index_cache.get(shared_cache_key)
+            if existing is not None:
+                self.indexes[cache_key] = existing
+                return existing
+            self._shared_index_cache[shared_cache_key] = index
         return index
 
     def translate(self, text_key, language=""):

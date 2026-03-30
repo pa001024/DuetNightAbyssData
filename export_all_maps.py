@@ -43,7 +43,7 @@ def extract_texture_input_dir(layout_json_path: Path, texture_root: Path) -> Opt
         return None
 
     object_path = re.sub(r"\.[0-9]+$", "", object_path)
-    match = re.match(r"^EM/Content/UI/Texture/Static/Image/Map/(.+)$", object_path)
+    match = re.match(r"^(EM/Content/UI/Texture/Static/Image/Map/.+)$", object_path)
     if not match:
         print(f"[SKIP] 非地图贴图路径: {layout_json_path} / {object_path}", flush=True)
         return None
