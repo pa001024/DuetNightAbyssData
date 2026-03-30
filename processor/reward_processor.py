@@ -45,6 +45,10 @@ class RewardProcessor(BaseProcessor):
         if mode:
             processed["m"] = mode
 
+        reward_icon = self._extract_icon_name(item_data.get("Icon", ""))
+        if reward_icon:
+            processed["icon"] = reward_icon
+
         # 初始化列表字段
         processed["child"] = []
 
@@ -265,6 +269,24 @@ class RewardProcessor(BaseProcessor):
             return (
                 translated if translated != str(item_id) else f"{item_type}_{item_id}"
             )
+
+    def _extract_icon_name(self, icon_value):
+        """截取图标路径中的图标名称。"""
+        if not isinstance(icon_value, str) or not icon_value:
+            return ""
+
+        normalized = icon_value.replace("\\", "/").strip().strip("'")
+        t_pos = normalized.rfind("T_")
+        if t_pos != -1:
+            icon_name = normalized[t_pos:]
+            if "." in icon_name:
+                icon_name = icon_name.split(".", 1)[0]
+            return icon_name.rstrip("'")
+
+        icon_name = normalized.rsplit("/", 1)[-1]
+        if "." in icon_name:
+            icon_name = icon_name.split(".", 1)[0]
+        return icon_name.rstrip("'")
 
     def process_all_items(self, items, language):
         """

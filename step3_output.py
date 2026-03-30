@@ -29,6 +29,7 @@ from processor.sub_region_processor import SubRegionProcessor
 from processor.region_point_processor import RegionPointProcessor
 from processor.region_reputation_processor import RegionReputationProcessor
 from processor.shop_item_processor import ShopItemProcessor
+from processor.cutoff_processor import CutoffProcessor
 from processor.raid_buff_processor import RaidBuffProcessor
 from processor.pet_entry_processor import PetEntryProcessor
 from processor.hard_boss_processor import HardBossProcessor
@@ -41,6 +42,7 @@ from processor.char_accessory_processor import CharAccessoryProcessor
 from processor.weapon_accessory_processor import WeaponAccessoryProcessor
 from processor.weapon_skin_processor import WeaponSkinProcessor
 from processor.head_sculpture_processor import HeadSculptureProcessor
+from processor.head_frame_processor import HeadFrameProcessor
 from processor.impression_shop_processor import ImpressionShopProcessor
 from processor.monster_strong_affixes_processor import MonsterStrongAffixesProcessor
 from processor.skin_processor import SkinProcessor
@@ -297,6 +299,7 @@ class FinalProcessor:
             "RegionPoint": RegionPointProcessor,
             "RegionReputation": RegionReputationProcessor,
             "ShopItem": ShopItemProcessor,
+            "Cutoff": CutoffProcessor,
             "RaidBuff": RaidBuffProcessor,
             "PetEntry": PetEntryProcessor,
             "RewardView": RewardViewProcessor,
@@ -310,6 +313,7 @@ class FinalProcessor:
             "WeaponSkin": WeaponSkinProcessor,
             "Skin": SkinProcessor,
             "HeadSculpture": HeadSculptureProcessor,
+            "HeadFrame": HeadFrameProcessor,
             "ImpressionShop": ImpressionShopProcessor,
             "MonsterStrongAffixes": MonsterStrongAffixesProcessor,
             "RougeLikeBlessing": RougeLikeBlessingProcessor,
@@ -448,6 +452,7 @@ if __name__ == "__main__":
         "RegionPoint",
         "RegionReputation",
         "ShopItem",
+        "Cutoff",
         "RaidBuff",
         "PetEntry",
         "RewardView",
@@ -461,6 +466,7 @@ if __name__ == "__main__":
         "WeaponSkin",
         "Skin",
         "HeadSculpture",
+        "HeadFrame",
         "ImpressionShop",
         "MonsterStrongAffixes",
         "RougeLikeBlessing",

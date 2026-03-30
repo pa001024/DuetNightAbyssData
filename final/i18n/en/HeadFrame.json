@@ -1,0 +1,215 @@
+[
+  {
+    "id": 10001,
+    "name": "Old Photograph",
+    "desc": "A flicker of brilliance, captured before it faded.",
+    "icon": "T_Head_Frame01"
+  },
+  {
+    "id": 10002,
+    "name": "Obsidian",
+    "desc": "Forged in fervour. Bound to last.",
+    "icon": "T_Head_Frame02"
+  },
+  {
+    "id": 10003,
+    "name": "Envelope: Dark Jade",
+    "desc": "A letter carried through starlit nights and morning mist.",
+    "icon": "T_Head_Frame03"
+  },
+  {
+    "id": 10004,
+    "name": "Iron Thorns",
+    "desc": "Among thorns of iron, solemnity endures with grace.",
+    "icon": "T_Head_Frame04"
+  },
+  {
+    "id": 10005,
+    "name": "Silent Censer",
+    "desc": "From its drifting veil of smoke, a glimpse of the divine.",
+    "icon": "T_Head_Frame05"
+  },
+  {
+    "id": 10006,
+    "name": "Envelope: Violet",
+    "desc": "A letter carried through starlit nights and morning mist.",
+    "icon": "T_Head_Frame06"
+  },
+  {
+    "id": 10007,
+    "name": "Public Impression: Wisdom",
+    "desc": "My wit and perception, recognised by all.",
+    "icon": "T_Head_Frame07"
+  },
+  {
+    "id": 10008,
+    "name": "Public Impression: Morality",
+    "desc": "I stand for what's right. Even when it's hard.",
+    "icon": "T_Head_Frame08"
+  },
+  {
+    "id": 10009,
+    "name": "Public Impression: Benefit",
+    "desc": "They call it calculation. I call it clarity.",
+    "icon": "T_Head_Frame09"
+  },
+  {
+    "id": 10010,
+    "name": "Public Impression: Empathy",
+    "desc": "I feel their pain. I offer my warmth.",
+    "icon": "T_Head_Frame10"
+  },
+  {
+    "id": 10011,
+    "name": "Butterfly: Emerald Green",
+    "desc": "Hush... you'll disturb the gentle flutter of their wings.",
+    "icon": "T_Head_Frame11",
+    "access": "Available through Monthly Pass"
+  },
+  {
+    "id": 10012,
+    "name": "Butterfly: Celeste",
+    "desc": "Hush... you'll disturb the gentle flutter of their wings.",
+    "icon": "T_Head_Frame12"
+  },
+  {
+    "id": 10013,
+    "name": "Public Impression: Chaos",
+    "desc": "Me — a current with no bank, a path with no map.",
+    "icon": "T_Head_Frame13"
+  },
+  {
+    "id": 10014,
+    "name": "Timeworn Film",
+    "desc": "A reel of moments we can never relive.",
+    "icon": "T_Head_Frame14"
+  },
+  {
+    "id": 10015,
+    "name": "The Umbral Forest",
+    "desc": "Tread lightly — beware the crimson blooms that nest atop the thorns.",
+    "icon": "T_Head_Frame15"
+  },
+  {
+    "id": 10016,
+    "name": "White Quill",
+    "desc": "Inscribe dream-spun wishes with a tender quill.",
+    "icon": "T_Head_Frame16",
+    "access": "Available through Monthly Pass"
+  },
+  {
+    "id": 10017,
+    "name": "Helixed Fate",
+    "desc": "There begins the lingering of dusk before the curtain draws.",
+    "icon": "T_Head_Frame17"
+  },
+  {
+    "id": 10018,
+    "name": "Rippling Tender",
+    "desc": "Twilight breeze whispers forth a shiver of waves.",
+    "icon": "T_Head_Frame18",
+    "access": "Available through Monthly Pass"
+  },
+  {
+    "id": 10019,
+    "name": "Inebriate Roar",
+    "desc": "A wandering shadow, a naked blade, a world unwritten.",
+    "icon": "T_Head_Frame19",
+    "access": "Available through Monthly Pass"
+  },
+  {
+    "id": 10020,
+    "name": "Gilded Divinition",
+    "desc": "A glimpse beyond the veil of fate.",
+    "icon": "T_Head_Frame20",
+    "access": "Available through Monthly Pass"
+  },
+  {
+    "id": 10021,
+    "name": "Shadowy",
+    "desc": "How should I stop the rain flowing in your soul?",
+    "icon": "T_Head_Frame21",
+    "access": "Available through Monthly Pass"
+  },
+  {
+    "id": 10022,
+    "name": "Sweet Fortune",
+    "desc": "A skewer of candied delight.",
+    "icon": "T_Head_Frame22",
+    "access": "Available at Shop"
+  },
+  {
+    "id": 10023,
+    "name": "Jubilant Arrival",
+    "desc": "Wind at your heels, luck on your side.",
+    "icon": "T_Head_Frame23",
+    "access": "Available at Shop"
+  },
+  {
+    "id": 10024,
+    "name": "Inscribed Tip: Dark Jade",
+    "desc": "A story inscribed, and ours alone.",
+    "icon": "T_Head_Frame24"
+  },
+  {
+    "id": 10025,
+    "name": "Inscribed Tip: Leaden Grey",
+    "desc": "A story inscribed, and ours alone.",
+    "icon": "T_Head_Frame24_01"
+  },
+  {
+    "id": 10026,
+    "name": "Inscribed Tip: Azure",
+    "desc": "A story inscribed, and ours alone.",
+    "icon": "T_Head_Frame24_02"
+  },
+  {
+    "id": 10027,
+    "name": "争锋",
+    "desc": "群英争锋，气贯长虹。",
+    "icon": "T_Head_Frame31",
+    "access": "Available from events"
+  },
+  {
+    "id": 10028,
+    "name": "祥云",
+    "desc": "身伴流云，心游太虚。",
+    "icon": "T_Head_Frame30",
+    "access": "Available at Shop"
+  },
+  {
+    "id": 10029,
+    "name": "失色烈火",
+    "desc": "灰烬是烈火最后的辉煌。",
+    "icon": "T_Head_Frame25",
+    "access": "Available at Shop"
+  },
+  {
+    "id": 10030,
+    "name": "烈酒与蔷薇",
+    "desc": "微醺的夜晚，盛开着带刺的浪漫。",
+    "icon": "T_Head_Frame26",
+    "access": "Available through Monthly Pass"
+  },
+  {
+    "id": 10031,
+    "name": "乙鸟",
+    "desc": "永不停歇的飞鸟。",
+    "icon": "T_Head_Frame27",
+    "access": "Available through Monthly Pass"
+  },
+  {
+    "id": 10032,
+    "name": "子不语·黛蓝",
+    "desc": "月影憧憧，一窗幽梦。",
+    "icon": "T_Head_Frame29",
+    "access": "Available at Shop"
+  },
+  {
+    "id": 10033,
+    "name": "子不语·晴蓝",
+    "desc": "月影憧憧，一窗幽梦。",
+    "icon": "T_Head_Frame28",
+    "access": "Available at Shop"
+  }
+]

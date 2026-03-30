@@ -3,6 +3,10 @@ from processor.base_processor import BaseProcessor
 
 
 class WeaponSkinProcessor(BaseProcessor):
+    ICON_NAME_REMAP = {
+        "T_Head_Bow_jinggong": "T_Head_Bow_Jinggong",
+    }
+
     def __init__(self, data_loader):
         super().__init__(data_loader)
         self.file_type = "WeaponSkin"
@@ -36,6 +40,7 @@ class WeaponSkinProcessor(BaseProcessor):
 
         match = re.search(r"(T_[^./']+)", icon_value)
         if match:
-            return match.group(1)
+            icon_name = match.group(1)
+            return self.ICON_NAME_REMAP.get(icon_name, icon_name)
 
         return ""

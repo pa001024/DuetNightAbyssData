@@ -9,6 +9,8 @@ from processor.base_processor import BaseProcessor
 
 class SubRegionProcessor(BaseProcessor):
     DEFAULT_EXPORTS_ROOT = Path(r"D:\dev\dna-unpack\Fmodel\Output\Exports")
+    HAOJING_DISPATCH_FALLBACK_SUB_REGION_IDS = {104501, 104502, 104503, 104504, 104505}
+    HAOJING_DISPATCH_FALLBACK_RULE_IDS = {9050101, 9050201, 9050301, 9050401, 9050501}
     _shared_base_json_cache: Dict[Tuple[str, str], object] = {}
     _shared_design_level_cache: Dict[Tuple[str, str], dict] = {}
     _shared_missing_design_level: set[Tuple[str, str]] = set()
@@ -24,6 +26,7 @@ class SubRegionProcessor(BaseProcessor):
         self.file_type = "SubRegion"
         self.base_cache_key = self._resolve_base_cache_key()
         self.random_creator_data = self._load_shared_base_json(data_loader, "RandomCreator.json")
+        self.dispatch_ui_data = self._load_shared_base_json(data_loader, "DispatchUI.json")
         self.region_data = self._load_shared_base_json(data_loader, "Region.json")
         self.region_point_data = self._load_shared_base_json(data_loader, "RegionPoint.json")
         self.teleport_point_data = self._load_shared_base_json(data_loader, "TeleportPoint.json")
@@ -153,6 +156,7 @@ class SubRegionProcessor(BaseProcessor):
                 reference_center = pos if pos else (sub_region_range.get("center") if sub_region_range else None)
 
             rc = self._get_pet_random_creators(sub_region_level, region_id, reference_center)
+            self._fill_missing_pet_positions_from_dispatch_ui(rc, sub_region_id)
             tp = self._get_teleport_points_raw(sub_region_id, region_id)
 
             core = {}
@@ -1283,9 +1287,37 @@ class SubRegionProcessor(BaseProcessor):
                 rc_item["pos"] = self._to_vec2_list(pos)
             rc.append(rc_item)
 
-        if len(rc) == 1 and "pos" not in rc[0] and isinstance(reference_center, list) and len(reference_center) >= 2:
-            fallback_pos = self._to_vec2(reference_center[:2])
-            if fallback_pos:
-                rc[0]["pos"] = [fallback_pos]
-
         return rc
+
+    def _fill_missing_pet_positions_from_dispatch_ui(self, rc: List[dict], sub_region_id: int) -> None:
+        """为浩京缺少随机点的宠物规则补同子区域动态事件的真实坐标。"""
+        if (
+            not rc
+            or sub_region_id not in self.HAOJING_DISPATCH_FALLBACK_SUB_REGION_IDS
+            or not isinstance(self.dispatch_ui_data, dict)
+        ):
+            return
+
+        positions: List[List[float]] = []
+        seen = set()
+        for dispatch_item in self.dispatch_ui_data.values():
+            if not isinstance(dispatch_item, dict):
+                continue
+            if dispatch_item.get("DispatchSubRegionId") != sub_region_id:
+                continue
+            pos = self._to_vec2(dispatch_item.get("UIPos"))
+            if not pos:
+                continue
+            key = (pos[0], pos[1])
+            if key in seen:
+                continue
+            seen.add(key)
+            positions.append(pos)
+
+        if not positions:
+            return
+
+        for rc_item in rc:
+            if rc_item.get("pos") or rc_item.get("id") not in self.HAOJING_DISPATCH_FALLBACK_RULE_IDS:
+                continue
+            rc_item["pos"] = [point[:] for point in positions]

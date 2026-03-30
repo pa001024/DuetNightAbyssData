@@ -149,9 +149,9 @@ class PetProcessor(BaseProcessor):
             for i, value in enumerate(desc_values):
                 is_percent = False
 
-                # 为每个参数计算不同等级的值（通常是1-3级）
+                # 为每个参数计算不同等级的值（0-4共5档，对应索引1-5）
                 param_values = []
-                for level in range(1, 5):  # 计算1-3级的值
+                for level in range(1, 6):
                     param_value = None
                     if isinstance(value, str):
                         if "$" in value:
@@ -216,9 +216,9 @@ class PetProcessor(BaseProcessor):
             for i, value in enumerate(passive_effect_params):
                 is_percent = False
 
-                # 为每个参数计算不同等级的值（通常是1-3级）
+                # 为每个参数计算不同等级的值（0-4共5档，对应索引1-5）
                 param_values = []
-                for level in range(1, 5):  # 计算1-3级的值
+                for level in range(1, 6):
                     param_value = None
                     if isinstance(value, str) and "$" in value:
                         # 处理 $...$%? 格式
