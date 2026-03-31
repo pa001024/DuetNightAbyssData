@@ -168,12 +168,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17739041094387134739",
-            startPort = "Out",
-            endQuest = "1773494558755848786",
-            endPort = "In"
-          },
-          {
             startQuest = "176336802849558",
             startPort = "QuestStart",
             endQuest = "1774182557582630",
@@ -562,6 +556,18 @@ return {
             startPort = "Out",
             endQuest = "17743536022917216973",
             endPort = "Input"
+          },
+          {
+            startQuest = "17739041094387134739",
+            startPort = "Out",
+            endQuest = "17747876470111801",
+            endPort = "In"
+          },
+          {
+            startQuest = "17747876470111801",
+            startPort = "Out",
+            endQuest = "1773494558755848786",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -829,7 +835,7 @@ return {
             pos = {x = 1931.047619047619, y = -46.18367498514567},
             propsData = {
               UnitId = 0,
-              NewTargetPointName = "XHWstart",
+              NewTargetPointName = "XHWstart1",
               FadeIn = false,
               FadeOut = true,
               bResetCamera = true,
@@ -1441,6 +1447,21 @@ return {
               FadeOutSeconds = 0,
               DurationSeconds = 1,
               IsStandAlone = true
+            }
+          },
+          ["17747876470111801"] = {
+            key = "17747876470111801",
+            type = "AsyncSetActorLocationAndRotationNode",
+            name = "异步设置玩家位置旋转",
+            pos = {x = 1160.8854167932084, y = 71.21832673975085},
+            propsData = {
+              UnitId = 0,
+              NewTargetPointName = "XHWstart1",
+              FadeIn = false,
+              FadeOut = true,
+              bResetCamera = true,
+              bForceAsyncLoading = false,
+              IsWhite = false
             }
           }
         },

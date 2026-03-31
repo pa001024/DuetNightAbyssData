@@ -47,7 +47,7 @@ return {
       key = "177426844755467",
       type = "StoryNode",
       name = "任务节点",
-      pos = {x = 1704, y = 176},
+      pos = {x = 1705.0714285714287, y = 176},
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
@@ -91,6 +91,12 @@ return {
           },
           {
             startQuest = "1774269136668845183",
+            startPort = "Out",
+            endQuest = "1774774640280978",
+            endPort = "In"
+          },
+          {
+            startQuest = "1774774640280978",
             startPort = "Out",
             endQuest = "177426844755576",
             endPort = "Success"
@@ -158,8 +164,8 @@ return {
               OptionType = "normal",
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
-              SwitchToMaster = "Player",
-              PlayerSwitchEmoIdle = true,
+              SwitchToMaster = "None",
+              PlayerSwitchEmoIdle = false,
               NormalOptions = {},
               OverrideFailBlend = false
             }
@@ -168,11 +174,23 @@ return {
             key = "1774269136668845183",
             type = "SendMessageNode",
             name = "发送消息",
-            pos = {x = 2192.5293733715384, y = 308.1751317152171},
+            pos = {x = 2137.144757986923, y = 328.9443624844479},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "YYG_Easy1",
               UnitId = -1
+            }
+          },
+          ["1774774640280978"] = {
+            key = "1774774640280978",
+            type = "ShowOrHideTaskIndicatorNode",
+            name = "显示/隐藏任务指引点节点",
+            pos = {x = 2498.6784556439725, y = 298.1891265905509},
+            propsData = {
+              IsShow = true,
+              bOpenRangeEffect = false,
+              GuideType = "P",
+              GuideName = "TXSB1"
             }
           }
         },

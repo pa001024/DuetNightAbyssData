@@ -165,6 +165,13 @@ return ReadOnly("ModGuideBookArchive", {
     RewardId = 7101,
     TabId = 1
   },
+  [1113] = {
+    ArchiveId = 1113,
+    ModList = {41765, 41766},
+    Name = "ModArchive_Name_Char_1113",
+    RewardId = 7101,
+    TabId = 1
+  },
   [1120] = {
     ArchiveId = 1120,
     ModList = {
@@ -799,6 +806,15 @@ return ReadOnly("ModGuideBookArchive", {
     TabId = 1,
     UnlockCondition = 145
   },
+  [1642] = {
+    ArchiveId = 1642,
+    ModList = {51765, 51766},
+    Name = "ModArchive_Name_Char_1642",
+    RewardId = 7101,
+    ShowCondition = 240,
+    TabId = 1,
+    UnlockCondition = 145
+  },
   [1660] = {
     ArchiveId = 1660,
     ModList = {56151, 56153},
@@ -817,6 +833,15 @@ return ReadOnly("ModGuideBookArchive", {
     TabId = 1,
     UnlockCondition = 145
   },
+  [1662] = {
+    ArchiveId = 1662,
+    ModList = {56161, 56163},
+    Name = "ModArchive_Name_Char_1662",
+    RewardId = 7101,
+    ShowCondition = 240,
+    TabId = 1,
+    UnlockCondition = 145
+  },
   [1680] = {
     ArchiveId = 1680,
     ModList = {56152, 56154},
@@ -830,6 +855,15 @@ return ReadOnly("ModGuideBookArchive", {
     ArchiveId = 1681,
     ModList = {56142, 56144},
     Name = "ModArchive_Name_Char_1681",
+    RewardId = 7101,
+    ShowCondition = 240,
+    TabId = 1,
+    UnlockCondition = 145
+  },
+  [1682] = {
+    ArchiveId = 1682,
+    ModList = {56162, 56164},
+    Name = "ModArchive_Name_Char_1682",
     RewardId = 7101,
     ShowCondition = 240,
     TabId = 1,
@@ -971,7 +1005,11 @@ return ReadOnly("ModGuideBookArchive", {
   },
   [2140] = {
     ArchiveId = 2140,
-    ModList = {103001, 103002},
+    ModList = {
+      103001,
+      103002,
+      103003
+    },
     Name = "ModArchive_Name_Melee_2140",
     RewardId = 7101,
     TabId = 2

@@ -2897,8 +2897,8 @@ return ReadOnly("PureLogicBuff", {
   },
   [3010001] = {
     AddAttrs = {
-      [1] = {AttrName = "MaxHp", Rate = 5},
-      [2] = {AttrName = "MaxES", Rate = 5}
+      [1] = {AttrName = "MaxHp", Rate = 8},
+      [2] = {AttrName = "MaxES", Rate = 8}
     },
     BuffId = 3010001,
     MergeRule1 = "Global",

@@ -415,12 +415,12 @@ function M:AddNewApplicationItem(ApplicationInfo, NeedAni)
   
   function NewItem.AcceptCallback(CallbackObj, Content)
     OnlineActionController:SendAcceptApplication(Content)
-    self:ClearListAndSwitchEmpty(3)
+    self:RemoveSameSeatApplications(Content.InteractiveId)
   end
   
   function NewItem.RejectCallback(CallbackObj, Content)
     OnlineActionController:SendRejectApplication(Content)
-    self:RemoveItemsAndAutoSwitch(NewItem, 3)
+    self:RemoveItemsAndAutoSwitch(NewItem, 1)
   end
   
   List:AddItem(NewItem)

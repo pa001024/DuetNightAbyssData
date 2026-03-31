@@ -634,12 +634,12 @@ return {
           ["17724534783391286"] = {
             key = "17724534783391286",
             type = "GoToRegionNode",
-            name = "如果玩家直接跑了，也得算他完成这环",
+            name = "如果玩家在本任务中选择直接传送到村庄，视为其完成",
             pos = {x = 469.12410437859324, y = 974.2142414860681},
             propsData = {
               RegionType = 1,
-              IsEnter = "Leave",
-              RegionId = 210101,
+              IsEnter = "Enter",
+              RegionId = 100101,
               bGuideUIEnable = false,
               GuideType = "N",
               GuideName = "Npc_Album_1210129"
@@ -654,7 +654,7 @@ return {
       key = "17684617573395568",
       type = "StoryNode",
       name = "境界岛拍照",
-      pos = {x = 2140.2353605716607, y = 321.5811454496506},
+      pos = {x = 2140.2353605716607, y = 320.42729929580446},
       propsData = {
         QuestId = 40012104,
         QuestDescriptionComment = "",
@@ -719,12 +719,6 @@ return {
             startPort = "Out",
             endQuest = "17684617573405572",
             endPort = "Success"
-          },
-          {
-            startQuest = "17690827196101969",
-            startPort = "Out",
-            endQuest = "17722608093649472025",
-            endPort = "In"
           },
           {
             startQuest = "17690827196101969",

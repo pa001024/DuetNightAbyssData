@@ -209,9 +209,7 @@ end
 
 function M:Hide(HideTag)
   if "UIStackChange" == HideTag then
-    self:AddTimer(0.2, function()
-      self:SetUIVisibilityTag(UIConst.CommonHideTagName.UIStackChange, true)
-    end)
+    self:SetUIVisibilityTag(UIConst.CommonHideTagName.UIStackChange, true)
   else
     M.Super.Hide(self, HideTag)
   end

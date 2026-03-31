@@ -331,6 +331,29 @@ function CommonTalkTask:ActorsAroundPlayer(ActorInfos)
   end
 end
 
+function CommonTalkTask:ApplyDefaultTransform()
+  for _, ActorInfo in ipairs(self.TalkTaskData.TalkActors) do
+    if ActorInfo.DefaultPos then
+      local ActorData = self.TalkContext:GetTalkActorData(self, ActorInfo.TalkActorId)
+      if ActorData and IsValid(ActorData.TalkActor) then
+        self:CacheNpcTransform(ActorData.TalkActor)
+        ActorData.TalkActor:K2_SetActorLocation(ActorInfo.DefaultPos, false, nil, true)
+      end
+    end
+  end
+end
+
+function CommonTalkTask:ResetDefaultNpcTransform()
+  for _, ActorInfo in ipairs(self.TalkTaskData.TalkActors) do
+    if ActorInfo.DefaultPos then
+      local ActorData = self.TalkContext:GetTalkActorData(self, ActorInfo.TalkActorId)
+      if ActorData and IsValid(ActorData.TalkActor) then
+        self:ResetNpcTransform(ActorData.TalkActor)
+      end
+    end
+  end
+end
+
 function CommonTalkTask:ApplyStageSetting(Stage)
   if not IsValid(Stage) then
     return
@@ -357,18 +380,6 @@ function CommonTalkTask:ApplyStageSetting(Stage)
   end
 end
 
-function CommonTalkTask:ApplyDefaultTransform()
-  for _, ActorInfo in ipairs(self.TalkTaskData.TalkActors) do
-    if ActorInfo.DefaultPos then
-      local ActorData = self.TalkContext:GetTalkActorData(self, ActorInfo.TalkActorId)
-      if ActorData and IsValid(ActorData.TalkActor) then
-        self:CacheNpcTransform(ActorData.TalkActor)
-        ActorData.TalkActor:K2_SetActorLocation(ActorInfo.DefaultPos, false, nil, true)
-      end
-    end
-  end
-end
-
 function CommonTalkTask:ResetStageSetting(Stage)
   if not IsValid(Stage) then
     return
@@ -382,17 +393,6 @@ function CommonTalkTask:ResetStageSetting(Stage)
         if IsValid(Npc) and Npc:IsA(UE4.ANpcCharacter) then
           self:ResetNpcTransform(Npc)
         end
-      end
-    end
-  end
-end
-
-function CommonTalkTask:ResetDefaultNpcTransform()
-  for _, ActorInfo in ipairs(self.TalkTaskData.TalkActors) do
-    if ActorInfo.DefaultPos then
-      local ActorData = self.TalkContext:GetTalkActorData(self, ActorInfo.TalkActorId)
-      if ActorData and IsValid(ActorData.TalkActor) then
-        self:ResetNpcTransform(Npc)
       end
     end
   end

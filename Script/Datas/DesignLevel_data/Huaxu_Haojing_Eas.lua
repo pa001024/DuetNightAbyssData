@@ -425,53 +425,173 @@ return {
       UnitType = "Monster",
       UnitId = 10005061
     },
-    ["162010220"] = {
-      CreatorId = 162010220,
+    ["162010305"] = {
+      CreatorId = 162010305,
       UnitType = "Monster",
-      UnitId = 10005061
+      UnitId = 10005001
     },
-    ["162010221"] = {
-      CreatorId = 162010221,
+    ["162010306"] = {
+      CreatorId = 162010306,
       UnitType = "Monster",
-      UnitId = 10004062
+      UnitId = 10005001
     },
-    ["162010222"] = {
-      CreatorId = 162010222,
+    ["162010307"] = {
+      CreatorId = 162010307,
+      UnitType = "Monster",
+      UnitId = 10005001
+    },
+    ["162010308"] = {
+      CreatorId = 162010308,
+      UnitType = "Monster",
+      UnitId = 10005001
+    },
+    ["162010309"] = {
+      CreatorId = 162010309,
       UnitType = "Monster",
       UnitId = 10003062
     },
-    ["162010223"] = {
-      CreatorId = 162010223,
+    ["162010310"] = {
+      CreatorId = 162010310,
+      UnitType = "Monster",
+      UnitId = 10005061
+    },
+    ["162010311"] = {
+      CreatorId = 162010311,
+      UnitType = "Monster",
+      UnitId = 10005061
+    },
+    ["162010312"] = {
+      CreatorId = 162010312,
+      UnitType = "Monster",
+      UnitId = 10005061
+    },
+    ["162010313"] = {
+      CreatorId = 162010313,
+      UnitType = "Monster",
+      UnitId = 10005061
+    },
+    ["162010314"] = {
+      CreatorId = 162010314,
+      UnitType = "Monster",
+      UnitId = 10005061
+    },
+    ["162010316"] = {
+      CreatorId = 162010316,
+      UnitType = "Monster",
+      UnitId = 10005061
+    },
+    ["162010317"] = {
+      CreatorId = 162010317,
+      UnitType = "Monster",
+      UnitId = 10005061
+    },
+    ["162010328"] = {
+      CreatorId = 162010328,
+      UnitType = "Monster",
+      UnitId = 10005061
+    },
+    ["162010329"] = {
+      CreatorId = 162010329,
+      UnitType = "Monster",
+      UnitId = 10004062
+    },
+    ["162010330"] = {
+      CreatorId = 162010330,
+      UnitType = "Monster",
+      UnitId = 10003062
+    },
+    ["162010331"] = {
+      CreatorId = 162010331,
       UnitType = "Monster",
       UnitId = 10005001
     },
-    ["162010224"] = {
-      CreatorId = 162010224,
+    ["162010332"] = {
+      CreatorId = 162010332,
       UnitType = "Monster",
       UnitId = 10005061
     },
-    ["162010225"] = {
-      CreatorId = 162010225,
+    ["162010333"] = {
+      CreatorId = 162010333,
       UnitType = "Monster",
       UnitId = 10005061
     },
-    ["162010226"] = {
-      CreatorId = 162010226,
+    ["162010334"] = {
+      CreatorId = 162010334,
       UnitType = "Monster",
       UnitId = 10005061
     },
-    ["162010227"] = {
-      CreatorId = 162010227,
+    ["162010335"] = {
+      CreatorId = 162010335,
       UnitType = "Monster",
       UnitId = 10005061
     },
-    ["162010228"] = {
-      CreatorId = 162010228,
+    ["162010336"] = {
+      CreatorId = 162010336,
       UnitType = "Monster",
       UnitId = 10005001
     },
-    ["162010229"] = {
-      CreatorId = 162010229,
+    ["162010337"] = {
+      CreatorId = 162010337,
+      UnitType = "Monster",
+      UnitId = 10005001
+    },
+    ["162010338"] = {
+      CreatorId = 162010338,
+      UnitType = "Monster",
+      UnitId = 10005001
+    },
+    ["162010339"] = {
+      CreatorId = 162010339,
+      UnitType = "Monster",
+      UnitId = 10005001
+    },
+    ["162010340"] = {
+      CreatorId = 162010340,
+      UnitType = "Monster",
+      UnitId = 10005061
+    },
+    ["162010341"] = {
+      CreatorId = 162010341,
+      UnitType = "Monster",
+      UnitId = 10004062
+    },
+    ["162010342"] = {
+      CreatorId = 162010342,
+      UnitType = "Monster",
+      UnitId = 10003062
+    },
+    ["162010343"] = {
+      CreatorId = 162010343,
+      UnitType = "Monster",
+      UnitId = 10005001
+    },
+    ["162010344"] = {
+      CreatorId = 162010344,
+      UnitType = "Monster",
+      UnitId = 10005061
+    },
+    ["162010345"] = {
+      CreatorId = 162010345,
+      UnitType = "Monster",
+      UnitId = 10005061
+    },
+    ["162010346"] = {
+      CreatorId = 162010346,
+      UnitType = "Monster",
+      UnitId = 10005061
+    },
+    ["162010347"] = {
+      CreatorId = 162010347,
+      UnitType = "Monster",
+      UnitId = 10005061
+    },
+    ["162010348"] = {
+      CreatorId = 162010348,
+      UnitType = "Monster",
+      UnitId = 10005001
+    },
+    ["162010349"] = {
+      CreatorId = 162010349,
       UnitType = "Monster",
       UnitId = 10005001
     },
@@ -633,7 +753,7 @@ return {
     ["2010005"] = {
       CreatorId = 2010005,
       UnitType = "Npc",
-      UnitId = 200002
+      UnitId = 240113
     }
   },
   ManualItem = {},
@@ -925,7 +1045,7 @@ return {
       ["2010119"] = {
         CreatorId = 2010119,
         UnitType = "Npc",
-        UnitId = 830001,
+        UnitId = 240110,
         RarelyId = 7045026
       },
       ["2010120"] = {
@@ -946,7 +1066,7 @@ return {
       ["2010108"] = {
         CreatorId = 2010108,
         UnitType = "Npc",
-        UnitId = 830001,
+        UnitId = 240110,
         RarelyId = 7045023
       },
       ["2010109"] = {
@@ -1162,13 +1282,13 @@ return {
       ["2010136"] = {
         CreatorId = 2010136,
         UnitType = "Npc",
-        UnitId = 830001,
+        UnitId = 240110,
         RarelyId = 7045028
       },
       ["2010135"] = {
         CreatorId = 2010135,
         UnitType = "Mechanism",
-        UnitId = 1210341,
+        UnitId = 1210343,
         RarelyId = 7045028
       },
       ["2010166"] = {

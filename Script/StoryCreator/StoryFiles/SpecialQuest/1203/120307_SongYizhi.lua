@@ -164,6 +164,12 @@ return {
           {
             startQuest = "17743493954892628797",
             startPort = "Out",
+            endQuest = "1774767434832861",
+            endPort = "In"
+          },
+          {
+            startQuest = "1774767434832861",
+            startPort = "Out",
             endQuest = "17665686451958127284",
             endPort = "In"
           }
@@ -331,7 +337,7 @@ return {
             key = "176649419213614858941",
             type = "SpecialQuestSuccessNode",
             name = "成功完成特殊任务",
-            pos = {x = 2441.104743083004, y = 476.2727272727273},
+            pos = {x = 2633.326965305226, y = 471.82828282828285},
             propsData = {}
           },
           ["176649422180914859545"] = {
@@ -359,7 +365,7 @@ return {
             key = "17665686451958127284",
             type = "ChangeStaticCreatorNode",
             name = "生成/销毁节点",
-            pos = {x = 2165.219060744748, y = 486.3376534220926},
+            pos = {x = 2379.663505189192, y = 481.8932089776482},
             propsData = {
               ActiveEnable = false,
               EnableBlackScreenSync = false,
@@ -432,6 +438,17 @@ return {
               FadeOutSeconds = 0,
               DurationSeconds = 1,
               IsStandAlone = true
+            }
+          },
+          ["1774767434832861"] = {
+            key = "1774767434832861",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2120.2045559789367, y = 477.2011953904367},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
             }
           }
         },

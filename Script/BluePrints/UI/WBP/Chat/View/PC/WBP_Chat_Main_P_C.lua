@@ -56,7 +56,6 @@ function M:Construct()
         elseif self.Btn_Sent:IsChatBtnForbidden() and not ChatController:IsSendCDTimerExist(self.CurrChannel) then
           self.Btn_Sent:SetNormal()
         end
-        self.Btn_Sent.Key_Text:SetForbidKey(self.Btn_Sent:IsChatBtnForbidden())
         if self.Com_Input:Utf8StrLen(Text) > self.Com_Input.TextLimit then
           self.PanelAnchor:Close()
           self.PanelAnchor_Face:Close()
@@ -760,17 +759,20 @@ function M:UpdateUIStyleInPlatform()
         }
       }
     elseif self.FocusStateType == ChatFocusType.PlayerList then
-      table.insert(BottomKeyInfo, {
-        KeyInfoList = {
-          {
-            Type = "Img",
-            ImgShortPath = "LS",
-            Owner = self
-          }
-        },
-        Desc = GText("UI_CTL_SelectMessages"),
-        bLongPress = false
-      })
+      local SelectItem, IsInScroll = self:FindCurrentDialogItem()
+      if SelectItem then
+        table.insert(BottomKeyInfo, {
+          KeyInfoList = {
+            {
+              Type = "Img",
+              ImgShortPath = "LS",
+              Owner = self
+            }
+          },
+          Desc = GText("UI_CTL_SelectMessages"),
+          bLongPress = false
+        })
+      end
       if self.MaxScrollOffset > 0 then
         table.insert(BottomKeyInfo, {
           KeyInfoList = {
@@ -926,11 +928,11 @@ function M:UpdateUIStyleInPlatform()
     self.Com_Input:SetGamePadKey()
     self:FreshMouseAndKeyboardView()
   end
-  self.Key_PlayerListTitle:SetVisibility(TeamController:IsGamepad() and UIConst.VisibilityOp.Visible or UIConst.VisibilityOp.Collapsed)
+  local IsShowPlayerListKey = TeamController:IsGamepad() and self.CurrChannel == ChatCommon.ChannelDef.InTeam and self.FocusStateType ~= ChatFocusType.PlayerList and (self.IsOpenMenuFace or not self.IsOpenMenu)
+  self.Key_PlayerListTitle:SetVisibility(IsShowPlayerListKey and UIConst.VisibilityOp.Visible or UIConst.VisibilityOp.Collapsed)
   self.Group_FaceKey:SetVisibility(BottomKeyVisibilty)
   self.Group_QuickReplyKey:SetVisibility(BottomKeyVisibilty)
   self.Btn_Sent.Key_Text:SetVisibility(BottomKeyVisibilty)
-  self.Btn_Sent.Key_Text:SetForbidKey(self.Btn_Sent:IsChatBtnForbidden())
   self:RefreshUIReset()
   self:RefreshUIPlayerItem()
 end
@@ -1246,8 +1248,8 @@ function M:FindCurrentDialogItem()
   for k = Num, 1, -1 do
     local Item = ChatItemList[k]
     if Item.SelectMask then
-      local Y0 = Item.Content.ScrollOffset
-      local Y1 = Item.Content.ScrollOffset + Item:GetDesiredSize().Y
+      local Y0 = Item.Content.ScrollOffset or 0
+      local Y1 = Y0 + Item:GetDesiredSize().Y
       if DialogStartY <= Y0 and DialogEndY >= Y1 then
         return Item, true
       end

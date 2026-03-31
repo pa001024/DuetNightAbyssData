@@ -37341,8 +37341,8 @@
       },
       {
         "id": 12020125,
-        "name": "Chercher le sachet d’encens emporté par le vent",
-        "desc": "À l’approche de la Cérémonie de l’Encens, le Pavillon de l’Encens est noir de monde.\nUne petite mésentente éclate entre vous et une femme persuadée que vous avez tenté de lui passer devant dans la file. Au beau milieu de la dispute, une bourrasque emporte son précieux sachet d’encens, édition limitée du festival. Soyez magnanime et allez l’aider à le retrouver.",
+        "name": "Se rendre au Pavillon de l’Encens",
+        "desc": "Après quelques péripéties, vous parvenez à récupérer la soie de première qualité des mains d’un Wishen espiègle nommé Xiaoyao.\nRendez-vous maintenant au Pavillon de l’Encens, dans la cité intérieure, afin de poursuivre votre mission.",
         "nodes": [
           {
             "id": "17684808772546617643",
@@ -38136,8 +38136,8 @@
       },
       {
         "id": 12020214,
-        "name": "前往执律阁",
-        "desc": "“辩法”将至，按照既定的计划，前往执律阁吧。",
+        "name": "Parler au garde",
+        "desc": "Le « Rite de Délibération » approche. Comme prévu, rendez-vous au Pavillon de l’Arbitrage.",
         "nodes": [
           {
             "id": "17700360240941526652",
@@ -41154,7 +41154,8 @@
       },
       {
         "id": 12020407,
-        "name": "【待包装】",
+        "name": "继续前进",
+        "desc": "Dans son affrontement contre Yuming, Kezhou commence à perdre l’avantage. Impuissante face à la situation, Su Yi est profondément inquiète. Après avoir pris sa décision, elle vous entraîne dans un ancien souterrain de la Secte Jishu situé à proximité et vous demande de chercher avec elle une autre solution.",
         "nodes": [
           {
             "id": "176346423290313170146",
@@ -44177,7 +44178,7 @@
                 "id": 12046607,
                 "content": "Ils ont étouffé leur propre jugement, remettant le bien et le mal au verdict du destin.",
                 "voice": "story/1204/120466/1E284C76",
-                "npc": 240074,
+                "npc": 240001,
                 "next": 12046608
               },
               {
@@ -44213,6 +44214,16 @@
                 "content": "Héhé... Enfermé dans cette enveloppe d’argile, comment sais-tu que tu n’es pas toi-même l’un de ces « mortels » que tu méprises ?",
                 "voice": "story/1204/120466/1E284D1E",
                 "npc": 240001
+              },
+              {
+                "id": 12046616,
+                "content": "万万不可啊，止流大当家——",
+                "voice": "story/1201/120229/1E191CD6"
+              },
+              {
+                "id": 12046615,
+                "content": "为大风九章奔走，于我而言，是一件将功折罪的幸事。",
+                "voice": "story/1204/120466/12046615"
               }
             ]
           }
@@ -45294,12 +45305,6 @@
         "nodes": []
       },
       {
-        "id": 12020616,
-        "name": "Vaincre les deux dragons",
-        "desc": "Vous refusez d’accéder à la demande de Zhiliu — vous êtes venu lui prouver qu’il existe toujours une autre voie.\nGrâce à la Résonance, vous transférez brièvement sur vous-même le pouvoir du Pacte d’âme qui la liait.\nDéjà proches de la démence, Taihao et Zhuyin sentent cette intervention et tournent leur regard vers vous. Vainquez-les, et prouvez la force de votre volonté.",
-        "nodes": []
-      },
-      {
         "id": 12020617,
         "name": "Vaincre les deux dragons",
         "desc": "Vous refusez d’accéder à la demande de Zhiliu — vous êtes venu lui prouver qu’il existe toujours une autre voie.\nGrâce à la Résonance, vous transférez brièvement sur vous-même le pouvoir du Pacte d’âme qui la liait.\nDéjà proches de la démence, Taihao et Zhuyin sentent cette intervention et tournent leur regard vers vous. Vainquez-les, et prouvez la force de votre volonté.",
@@ -45719,161 +45724,6 @@
         "name": "Se promener avec Zhiliu",
         "desc": "Zhiliu vous demande de l’accompagner pour une promenade...",
         "nodes": []
-      },
-      {
-        "id": 12020628,
-        "name": "Se promener avec Zhiliu",
-        "desc": "Zhiliu vous demande de l’accompagner pour une promenade...",
-        "nodes": [
-          {
-            "id": "176347729743615236961",
-            "type": "TalkNode",
-            "name": "【East02_FixSimple_77】墓前对话",
-            "dialogues": [
-              {
-                "id": 12048201,
-                "content": "Zhiliu, je...",
-                "voice": "story/1204/120482/1E2951FA",
-                "npc": 100001,
-                "options": [
-                  {
-                    "id": 12048202,
-                    "content": "<I>Ne pas lui en vouloir</>",
-                    "next": 12048205
-                  },
-                  {
-                    "id": 12048203,
-                    "content": "<I>Ne pas lui pardonner</>",
-                    "next": 12048209
-                  },
-                  {
-                    "id": 12048204,
-                    "content": "<I>Lui laisser deviner</>",
-                    "next": 12048211
-                  }
-                ]
-              },
-              {
-                "id": 12048205,
-                "content": "Tu es devenue si prudente tout à coup que cela me déroute... Rassure-toi. Il y a longtemps que je ne suis plus en colère. Au contraire... je te suis {性别:reconnaissant|reconnaissante}. Tu m’as permis de devenir un héros.",
-                "voice": "story/1204/120482/1E2952A2",
-                "npc": 100001,
-                "next": 12048206
-              },
-              {
-                "id": 12048209,
-                "content": "Je ne t’ai pas encore pardonné de m’avoir utilisé. Peut-être ne le pourrai-je jamais.",
-                "voice": "story/1204/120482/1E29534A",
-                "npc": 100001,
-                "next": 12048210
-              },
-              {
-                "id": 12048211,
-                "content": "Toi qui te vantes de lire dans le cœur des gens... Alors devine. T’ai-je pardonnée... ou non ?",
-                "voice": "story/1204/120482/1E29539E",
-                "npc": 100001,
-                "next": 12048212
-              },
-              {
-                "id": 12048206,
-                "content": "Je dois dire que ta franchise m’étonne. Je pensais que tu serais plus... sereine avec toi-même.",
-                "voice": "story/1204/120482/1E2952CC",
-                "npc": 100001,
-                "next": 12048207
-              },
-              {
-                "id": 12048210,
-                "content": "Mais le temps a le pouvoir d’éroder bien des choses. Laissons cette réponse à l’avenir.",
-                "voice": "story/1204/120482/1E295374",
-                "npc": 100001,
-                "next": 12048213
-              },
-              {
-                "id": 12048212,
-                "content": "... Héhé. C’est sans doute la divination la plus difficile qu’il m’ait été donnée d’affronter. Il me faudra peut-être toute une vie pour en trouver la réponse.",
-                "voice": "story/1204/120482/1E2953C8",
-                "npc": 240001,
-                "next": 12048213
-              },
-              {
-                "id": 12048207,
-                "content": "Si j’étais morte comme je l’avais prévu au Mausolée... peut-être l’aurais-je été. J’aurais pu me convaincre que, lorsque la vie est mise en jeu, tout le reste devient insignifiant.",
-                "voice": "story/1204/120482/1E2952F6",
-                "npc": 240001,
-                "next": 12048208
-              },
-              {
-                "id": 12048213,
-                "content": "Zhiliu... il y a encore quelque chose que je veux te dire. Le cœur humain est complexe.",
-                "voice": "story/1204/120482/1E2953F2",
-                "npc": 100001,
-                "next": 12048214
-              },
-              {
-                "id": 12048208,
-                "content": "Mais je n’avais pas prévu de survivre... grâce à toi.",
-                "voice": "story/1204/120482/1E295320",
-                "npc": 240001,
-                "next": 12048213
-              },
-              {
-                "id": 12048214,
-                "content": "L’être humain porte en lui la faiblesse autant que le courage, l’ombre autant que la bonté.",
-                "voice": "story/1204/120482/1E29541C",
-                "npc": 100001,
-                "next": 12048215
-              },
-              {
-                "id": 12048215,
-                "content": "Il peut toujours briser ce que l’on nomme destin ou plan immuable... Et créer un nouvel imprévu.",
-                "voice": "story/1204/120482/1E295446",
-                "npc": 100001,
-                "next": 12048216
-              },
-              {
-                "id": 12048216,
-                "content": "Alors... essaie de faire davantage confiance aux autres. Ne porte plus tout cela seule.",
-                "voice": "story/1204/120482/1E295470",
-                "npc": 100001,
-                "next": 12048217
-              },
-              {
-                "id": 12048217,
-                "content": "À l’avenir, je ne veux plus que tu mises ta vie comme une simple pièce. Vis. Reste en vie, et contemple l’avenir de Huaxu. Promets-le-moi.",
-                "voice": "story/1204/120482/1E29549A",
-                "npc": 100001,
-                "next": 12048218
-              },
-              {
-                "id": 12048218,
-                "content": "...",
-                "voice": "story/1204/120482/1E2954C4",
-                "npc": 240001,
-                "next": 12048219
-              },
-              {
-                "id": 12048219,
-                "content": "Tu n’as sans doute plus besoin de mes remerciements... Mais malgré tout — merci, {nickname}.",
-                "voice": "story/1204/120482/1E2954EE",
-                "npc": 240001,
-                "next": 12048220
-              },
-              {
-                "id": 12048220,
-                "content": "Te rencontrer par hasard à Givrelac... fut peut-être la plus grande bienveillance que le destin m’ait accordée.",
-                "voice": "story/1204/120482/1E295518",
-                "npc": 240001,
-                "next": 12048221
-              },
-              {
-                "id": 12048221,
-                "content": "Nous y sommes. Reste avec moi... le temps que cet encens se consume.",
-                "voice": "story/1204/120482/1E295542",
-                "npc": 240001
-              }
-            ]
-          }
-        ]
       }
     ]
   },
@@ -51265,8 +51115,8 @@
       },
       {
         "id": 12030706,
-        "name": "离开地宫",
-        "desc": "通过潇湘交出的地宫钥匙，你们成功打倒了巨阙，营救出了煜明。\n现在，离开这里吧。",
+        "name": "Quitter le souterrain",
+        "desc": "Grâce à la clé remise par Xiaoxiang, vous avez vaincu le Terracolosse et sauvé Yuming. Il est temps de quitter cet endroit.",
         "nodes": [
           {
             "id": "177314516401910594179",
@@ -68914,7 +68764,7 @@
                   },
                   {
                     "id": 51100009,
-                    "content": "<I>Étrange... Je suis </>{性别:<I>mort</>|<I>morte</>} <I>depuis longtemps... comment pouvez-vous encore me voir ?</>",
+                    "content": "<I>Étrange... Je suis {性别:mort|morte} depuis longtemps... comment pouvez-vous encore me voir ?</>",
                     "next": 51100010,
                     "impr": [
                       1041,
@@ -72742,7 +72592,7 @@
               },
               {
                 "id": 51105097,
-                "content": "Lingling ne l’a jamais rencontré... On disait qu’il était mort quand Mamie était jeune, juste après qu’ils avaient déménagé à Haojing. La nouvelle est arrivée trop tard... Mamie n’a jamais pu lui dire adieu...",
+                "content": "Lingling ne l’a jamais rencontré... On disait qu’il était mort quand Mamie était jeune, juste après qu’elle avait déménagé à Haojing. La nouvelle est arrivée trop tard... Mamie n’a jamais pu lui dire adieu...",
                 "npc": 700329,
                 "next": 51105098
               },
@@ -73537,7 +73387,7 @@
               },
               {
                 "id": 51125039,
-                "content": "Toi...  ta famille a servi, génération après génération, comme Officiants de l’Encens de la Secte Xuanheng, fidèles et irréprochables... comment a-t-elle pu engendrer—",
+                "content": "Toi... ta famille a servi, génération après génération, comme Officiants de l’Encens de la Secte Xuanheng, fidèles et irréprochables... comment a-t-elle pu engendrer—",
                 "npc": 100001,
                 "next": 51125040
               },
@@ -77153,7 +77003,7 @@
                   },
                   {
                     "id": 51155204,
-                    "content": "<I>Je suis </>{性别:<I>un invité</>|<I>une invitée</>} <I>de marque de Maître Qiu.</>",
+                    "content": "<I>Je suis {性别:un invité|une invitée} de marque de Maître Qiu.</>",
                     "next": 51155205,
                     "impr": [
                       1041,
@@ -77677,7 +77527,7 @@
               },
               {
                 "id": 51164910,
-                "content": "说的也是，无由生便是这般，无由而死，无由往生，死前了无牵挂，死后也岌岌无名啊。",
+                "content": "C’est vrai... les Wishen sont ainsi : sans cause à leur mort, sans raison à leur retour à la vie. Sans attaches avant de mourir... et, après, condamnés à sombrer dans l’oubli.",
                 "npc": 700385
               },
               {
@@ -77746,7 +77596,7 @@
       },
       {
         "id": 20031703,
-        "name": "查看钓鱼结果",
+        "name": "Voir le résultat de la pêche",
         "desc": "逍遥生宣称水下有一本绝世琴谱，虽然听起来十分像是它在胡编乱造，但白来的便宜不捡白不捡，你打算钓一杆试试。",
         "nodes": [
           {
@@ -77877,6 +77727,22 @@
             "id": "17706081112459517",
             "type": "TalkNode",
             "name": "对话节点",
+            "next": [
+              "17748604765523287"
+            ],
+            "dialogues": [
+              {
+                "id": 10010101,
+                "content": "Berry, je...",
+                "voice": "story/1001/100101/190F2A32",
+                "npc": 100001
+              }
+            ]
+          },
+          {
+            "id": "17748604765523287",
+            "type": "TalkNode",
+            "name": "对话节点",
             "dialogues": [
               {
                 "id": 10010101,
@@ -77893,22 +77759,6 @@
         "name": "与神秘男子交谈",
         "desc": "救下的老人居然就是那位寻觅许久的宫先生，你们对于白骨的死因与他进行了对峙，他不得不接受自己压力徒弟导致其自尽的事实，然而在你们以为真相水落石出之际，一名神秘男子却突然到访。",
         "nodes": [
-          {
-            "id": "17706081305039967",
-            "type": "TalkNode",
-            "name": "对话节点",
-            "next": [
-              "177060818182310749"
-            ],
-            "dialogues": [
-              {
-                "id": 10010101,
-                "content": "Berry, je...",
-                "voice": "story/1001/100101/190F2A32",
-                "npc": 100001
-              }
-            ]
-          },
           {
             "id": "177060818182310749",
             "type": "TalkNode",
@@ -78007,7 +77857,8 @@
     "quests": [
       {
         "id": 20031801,
-        "name": "开启回忆【待包装】",
+        "name": "开启回忆",
+        "desc": "正当皓京因止流的布局陷入滔天大乱之际，在不为人知之处，一位祝由在心中暗暗下定了决心……",
         "nodes": [
           {
             "id": "1770278557956386838",
@@ -78114,7 +77965,8 @@
       },
       {
         "id": 20031803,
-        "name": "前往往隙【待包装】",
+        "name": "寻找往隙",
+        "desc": "皓京大乱之际，扶疏却向{nickname}仓促告别。\n倘若大风九章即将终结，在那之前，她将不惜一切代价，只为见到故人，了却夙愿……",
         "nodes": [
           {
             "id": "1770278966032389765",
@@ -78293,7 +78145,8 @@
       },
       {
         "id": 20031805,
-        "name": "？？？【待包装】",
+        "name": "？？？",
+        "desc": "扶疏尽己所能救治了伤者，但受大风九章陷入紊乱的影响，她也因此过度透支了自己。\n昏迷的扶疏陷入了一段旧日回忆……",
         "nodes": [
           {
             "id": "1770281427083396372",
@@ -78469,17 +78322,20 @@
       },
       {
         "id": 20031806,
-        "name": "前往往隙【待包装】",
+        "name": "寻找往隙",
+        "desc": "扶疏从昏迷中醒转。时间已经不多，必须赶在大风九章终结之前，前往忘川。",
         "nodes": []
       },
       {
         "id": 20031807,
-        "name": "前往忘川【待包装】",
+        "name": "前往忘川",
+        "desc": "扶疏从昏迷中醒转。时间已经不多，必须赶在大风九章终结之前，前往忘川。",
         "nodes": []
       },
       {
         "id": 20031808,
-        "name": "前往泽生阁【待包装】",
+        "name": "继续前行",
+        "desc": "扶疏意欲在忘川中以性命为代价，换取姐姐扶风重回人世。她这一自我牺牲的举动却被姐姐所阻止。\n“用你喜欢的方式去度过这一生”，姐姐最后消失前给她留下了这样的祝愿。\n牺牲未遂，离开忘川的扶疏茫然失措地行走在皓京街头……",
         "nodes": []
       }
     ]

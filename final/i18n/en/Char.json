@@ -3080,20 +3080,20 @@
     "技能": [
       {
         "id": 150401,
-        "名称": "Cruise",
+        "名称": "Sunward",
         "类型": "Buff",
-        "描述": "Enters [Cruise], gaining high-speed flight and dealing Lumino DMG to enemies along the path. This state continuously drains [Artificer Energy] and ends when Energy reaches 0 or when the skill is recast.\nHold the jump button to enter [Climb], gaining vertical flight capability. This state continuously drains [Artificer Energy] and ends when Energy reaches 0 or when the jump button is released.\nRestores [Artificer Energy] continuously while not in Cruise or Climb.",
+        "描述": "Enters [Sunward], gaining high-speed flight and dealing Lumino DMG to enemies along the path. This state continuously drains [Artificer Energy] and ends when [Artificer Energy] reaches 0 or when the skill is recast.\nHold the jump button to enter [Heavenbound], enabling vertical flight. This state continuously drains [Artificer Energy] and ends when [Artificer Energy] reaches 0 or when the jump button is released.\n[Artificer Energy] regenerates continuously while neither [Sunward] nor [Heavenbound] is active.",
         "icon": "Suyi01_On",
         "cd": 1,
         "字段": [
           {
-            "名称": "[Artificer Energy] consumed per second during Cruise",
+            "名称": "[Artificer Energy] consumed per second during [Sunward]",
             "值": 1,
             "值2": 0.2,
             "格式": "{}/{}s"
           },
           {
-            "名称": "[Artificer Energy] consumed per second during Climb",
+            "名称": "[Artificer Energy] consumed per second during [Heavenbound]",
             "值": 1,
             "值2": 0.2,
             "格式": "{}/{}s"
@@ -3189,19 +3189,19 @@
       },
       {
         "id": 150402,
-        "名称": "Artificer Armament",
+        "名称": "Starfall Mode",
         "类型": "Buff",
         "描述": "Activates [Starfall Mode] by consuming all Sanity with Fengshi Type Ⅲ. Gain 1 stack of [Soar] for every 40 Sanity consumed, up to 10 stacks. Gain [Artificer Powder] based on the maximum ammo capacity of the equipped ranged weapon, up to 300 rounds.\nWhile in [Starfall Mode], weapons become unavailable, and Su Yi becomes immune to Hitstun. Recasting the skill deactivates [Starfall Mode].\nWhile in this mode, melee attacks are replaced with [Sword Aflash], and ranged attacks are replaced with [Stars Ashower].",
         "icon": "Suyi02_On",
         "cd": 2,
         "字段": [
           {
-            "名称": "[天工火药]转化比例",
+            "名称": "[Artificer Powder] Amount",
             "值": 0.5,
-            "格式": "远程武器最大弹药量*{%}"
+            "格式": "Ranged Weapon Max Ammo*{%}"
           },
           {
-            "名称": "[Artificer Greatsword] Damage",
+            "名称": "[Sword Aflash] DMG",
             "影响": "技能威力",
             "值": [
               41.83,
@@ -3220,13 +3220,13 @@
             "削韧": 100
           },
           {
-            "名称": "[Artificer Greatsword] Area of Effect",
+            "名称": "[Sword Aflash] Length",
             "影响": "技能范围",
             "值": 25,
             "格式": "{}m"
           },
           {
-            "名称": "[Artificer Cannon] Projectile Damage",
+            "名称": "[Stars Ashower] DMG",
             "影响": "技能威力",
             "值": [
               5.21,
@@ -3245,13 +3245,13 @@
             "削韧": 20
           },
           {
-            "名称": "[Artificer Greatsword] Projectile Area of Effect",
+            "名称": "[Stars Ashower] AoE",
             "影响": "技能范围",
             "值": 3,
             "格式": "{}m"
           },
           {
-            "名称": "[Artificer Cannon] Fused Round Damage",
+            "名称": "[Stars Ashower] Homing Projectile DMG",
             "影响": "技能威力",
             "值": [
               10.34,
@@ -3270,13 +3270,13 @@
             "削韧": 20
           },
           {
-            "名称": "[Artificer Greatsword] Fused Shell AoE Radius",
+            "名称": "[Stars Ashower] Homing Projectile AoE",
             "影响": "技能范围",
             "值": 3,
             "格式": "{}m"
           },
           {
-            "名称": "[遨游]持续时间",
+            "名称": "[Soar] Duration",
             "影响": "技能耐久",
             "值": 24,
             "格式": "{}"
@@ -3347,9 +3347,9 @@
           }
         ],
         "术语解释": {
-          "Artificer Supply": "Gains Morale Boost.",
-          "Artificer Sword": "Melee Attacks with this weapon consume 5 rounds and deal Lumino DMG to enemies along the path.",
-          "Artificer Cannon": "Each attack consumes 1 [Artificer Ammo] to fire a projectile that deals AoE Lumino DMG on hit.\nWhen equipped with Demon Wedge [Artificer Reconfiguration], the projectile is replaced with a fuse-type round that travels towards random enemies, dealing AoE Lumino DMG every 0.1 seconds along its path."
+          "Soar": "Gains Morale Boost.",
+          "Sword Aflash": "Each attack consumes 5 [Artificer Powder] to unleash a massive blade of light, dealing Lumino DMG to enemies in its path.",
+          "Stars Ashower": "Each attack consumes 1 [Artificer Powder] to fire a projectile that deals AoE Lumino DMG on hit.\nWhen equipped with Demon Wedge [Fengshi Type Ⅲ: Tracking Mode], this attack instead fires homing projectiles that seek out random enemies, dealing AoE Lumino DMG every 0.1s along their path."
         },
         "子技能": [
           {
@@ -3357,19 +3357,19 @@
             "类型": "Buff",
             "icon": "Suyi02_Off",
             "cd": 2,
-            "名称": "Artificer Supply"
+            "名称": "Soar"
           }
         ]
       },
       {
         "id": 150403,
-        "名称": "Artificer Kinetics",
+        "名称": "Poised to Strike",
         "类型": "Passive",
-        "描述": "Each round fired by the [Artificer Armament] grants 1 stack of [Overheat], stacking up to 400 times. Retracting the Armament consumes all Overheat stacks. If 50 or more stacks are consumed, the Armament launches forward and explodes on impact, dealing AoE Lumino DMG.",
+        "描述": "Each [Artificer Powder] consumed grants 1 stack of [Momentum], lasting for the rest of the battle, up to 100 stacks.\nAll [Momentum] stacks are removed when [Starfall Mode] ends. If 50 or more stacks are removed, a [Fengshi Model] is launched forward, dealing AoE Lumino DMG on hit.",
         "icon": "Suyi03",
         "字段": [
           {
-            "名称": "每层[蓄势]回复神智",
+            "名称": "Sanity Restored per stack of [Momentum]",
             "值": 1,
             "格式": "{}"
           },
@@ -3399,7 +3399,7 @@
             "格式": "{}m"
           },
           {
-            "名称": "每层[蓄势]增加伤害倍率",
+            "名称": "DMG Boost per stack of [Momentum]",
             "值": [
               0.81,
               1,
@@ -3471,26 +3471,26 @@
           }
         ],
         "术语解释": {
-          "Overheat": "Each Overheat stack consumed restores Sanity and increases the base multiplier of the [Artificer Armament]'s resulting explosion damage."
+          "Momentum": "Each stack removed restores Sanity and increases [Fengshi Model]'s DMG Boost."
         },
         "子技能": [
           {
             "id": 150405,
             "类型": "",
             "icon": "",
-            "名称": "Overheat"
+            "名称": "Momentum"
           }
         ]
       },
       {
         "id": 150404,
-        "名称": "Offense–Defense Integration",
+        "名称": "Guarded Assault",
         "类型": "Passive",
-        "描述": "When the [Artificer Armament] is summoned, converts a certain amount of Sanity consumed into Ultra Shield.",
+        "描述": "Upon entering [Starfall Mode], gains an Ultra Shield based on the amount of Sanity consumed.",
         "icon": "ExtraPassive",
         "字段": [
           {
-            "名称": "转化比例",
+            "名称": "Conversion Rate",
             "值": 5
           }
         ]
@@ -3510,12 +3510,12 @@
       }
     ],
     "溯源": [
-      "Maximum [Overheat] stacks increased to 200. Gain 2 [Overheat] stacks for each round consumed by [Artificer Armament].",
-      "While [Artificer Armament] is active, [Artificer Cannon] automatically performs 4 ranged attacks every 5 seconds and grants the user 8 stacks of [Overheat]. These attacks do not consume [Artificer Ammo].",
-      "[Cruise] Level ＋2, [Artificer Kinetics] Level ＋1.",
+      "The maximum number of [Momentum] stacks is increased to 200. Each [Artificer Powder] consumed grants 2 stacks of [Momentum].",
+      "While [Starfall Mode] is active, [Stars Ashower] automatically triggers 4 ranged attacks every 5s and grants 8 stacks of [Momentum]. These attacks do not consume [Artificer Powder].",
+      "[Sunward] Level +2, [Poised to Strike] Level +1.",
       "When dealing Skill DMG, there is a chance to trigger Bonus Effect: Lumino based on the Trigger Probability of the equipped ranged weapon.\nWhen triggered, this effect pulls targets within a radius of 10 towards the centre of the affected area. This effect can trigger at most once per second.",
-      "[Artificer Armament] Level ＋2, [Artificer Kinetics] Level ＋1.",
-      "Each stack of [Artificer Supply] additionally increases All-Element Penetration by 6%. When an [Artificer Drone] is launched, two extra drones are generated, each dealing 50% of the original DMG."
+      "[Starfall Mode] Level +2, [Poised to Strike] Level +1.",
+      "Each stack of [Soar] additionally increases Su Yi's PEN stats by 6%. When a [Fengshi Model] is launched, 2 additional [Fengshi Models] are also launched, each dealing 20% of the original damage."
     ],
     "碎片": 1001504,
     "专武": 20407
@@ -4829,7 +4829,7 @@
       "Takes 30% less damage from targets inflicted with [Poison of Love].",
       "[Lada Lovedew] Level +2; [Truelove Trial] Level +1.",
       "When defeating a target inflicted with [Poison of Love], Rebecca gains 1 stack that increases Attack by 3% for 15s, up to 50 stacks. The remaining time of the effect is refreshed with each new stack gained.",
-      "[召唤物·海月水母]攻击时，有概率直接附加8层[爱之毒]，概率为自身近战武器暴击率的100%。\n[召唤物·海月水母]攻击时有30%概率额外结算1次目标的[爱之毒]伤害。\n场上每存在1个[召唤物·海月水母]，自身和[召唤物·海月水母]造成的伤害提高12%。"
+      "When [Summon: Aurelia Aurita] attacks, there is a chance to immediately apply 8 stacks of [Poison of Love]. This chance is equal to 100% of Rebecca's Melee Weapon CRIT Chance.\nWhen [Summon: Aurelia Aurita] attacks, there is a 30% chance to trigger [Poison of Love] damage on the target an additional time.\nFor each [Summon: Aurelia Aurita] on the field, damage dealt by Rebecca and [Summon: Aurelia Aurita] is increased by 12%."
     ],
     "碎片": 1002101,
     "第七溯源消耗": [
@@ -7659,7 +7659,7 @@
       "Decreases the interval of dealing [Puncture Retribution] Pyro Damage to 1.4s.",
       "[Cage of Despair] Level +2; [Retributive Resolve] Level +1.",
       "For every 5 Sanity-consuming skill uses by nearby allies, Hellfire automatically unleashes [Cage of Despair]. Can trigger once every 5s.",
-      "While [Retribution] is active, dealing Skill DMG or Melee Weapon DMG to enemies has a 60% chance to trigger an additional [Puncture Retribution] centred on the target and grant 1 stack of [Reckoning]. This effect can trigger up to 8 times within 2s.\nIf HP is full, the user takes damage equal to 0.1% of Max HP.\nEach stack of [Reckoning] increases Morale by 1% and DMG dealt by [Cage of Despair] is multiplied by an additional 2% per stack, up to 150 stacks."
+      "While [Retribution] is active, dealing Skill DMG or Melee Weapon DMG to an enemy has a 60% chance to trigger an additional [Puncture Retribution] centred on the target and grant 1 stack of [Reckoning], up to 150 stacks. If the user's HP is at 100%, it also deals damage equal to 0.1% of Max HP to self. This effect can trigger up to 8 times within 2s.\nEach stack of [Reckoning] increases Morale by 1%. DMG dealt by [Cage of Despair] is multiplied by an additional 2% per stack."
     ],
     "碎片": 1003201,
     "第七溯源消耗": [
@@ -7753,19 +7753,19 @@
     "技能": [
       {
         "id": 320201,
-        "名称": "Burgundy Flurry",
+        "名称": "Scarlet Banquet",
         "类型": "DMG",
-        "描述": "Launches all [Spinblades], dealing Pyro DMG to enemies in front and granting 1 stack of [Inebriation] to the user. Tap repeatedly or hold the normal skill or melee attack button to unleash a flurry of attacks.",
+        "描述": "Launches all [Sommelier's Blades], dealing Pyro DMG to nearby enemies and granting 1 stack of [Tipsy], lasting for the rest of the battle, up to 10 stacks. All [Tipsy] stacks are removed when [Scarlet Banquet] ends.\n During the skill animation, hold the Combat Skill or Melee Attack button to chain repeated casts.",
         "icon": "Kami01",
         "字段": [
           {
-            "名称": "[Burgundy Flurry] Sanity Cost per Strike",
+            "名称": "[Scarlet Banquet] Sanity Cost per Strike",
             "影响": "技能效益",
             "值": 10,
             "格式": "{}"
           },
           {
-            "名称": "[Burgundy Flurry] Damage",
+            "名称": "[Scarlet Banquet] DMG",
             "影响": "技能威力",
             "值": [
               1.67,
@@ -7784,13 +7784,13 @@
             "削韧": 25
           },
           {
-            "名称": "[Burgundy Flurry] Range",
+            "名称": "[Scarlet Banquet] AoE",
             "影响": "技能范围",
             "值": 3,
             "格式": "{}m"
           },
           {
-            "名称": "Skill Speed Bonus per [Inebriation] Stack",
+            "名称": "Skill SPD Bonus per [Tipsy] Stack",
             "值": [
               0.042,
               0.044,
@@ -7807,7 +7807,7 @@
             ]
           },
           {
-            "名称": "+[Spinblade] Launch Speed per [Inebriation] Stack",
+            "名称": "[Sommelier's Blade] Launch Speed Bonus per [Tipsy] Stack",
             "值": [
               0.265,
               0.28,
@@ -7879,12 +7879,12 @@
           }
         ],
         "术语解释": {
-          "Inebriation": "Gains Skill Speed. [Spinblades] duration is paused. Gains immunity to Hitstun. All [Inebriation] stacks are removed when [Burgundy Flurry] ends."
+          "Tipsy": "Increases Skill Speed and [Sommelier's Blades] Launch Speed. While [Tipsy] is active, the duration timer of [Sommelier's Blades] is paused, and Camilla gains immunity to Hitstun."
         },
         "子技能": [
           {
             "id": 320211,
-            "名称": "Inebriation",
+            "名称": "Tipsy",
             "类型": "DMG",
             "icon": "Kami01"
           }
@@ -7894,7 +7894,7 @@
         "id": 320202,
         "名称": "Claret Waltz",
         "类型": "Buff",
-        "描述": "Summon 8 [Spinblades] that orbit around you.",
+        "描述": "Summons 8 [Sommelier's Blades] to orbit the user. A maximum of 8 [Sommelier's Blades] can exist at once.",
         "icon": "Kami02",
         "字段": [
           {
@@ -7904,7 +7904,7 @@
             "格式": "{}"
           },
           {
-            "名称": "[Spinblade] Damage",
+            "名称": "[Sommelier's Blade] DMG",
             "影响": "技能威力",
             "值": [
               0.27,
@@ -7923,13 +7923,13 @@
             "削韧": 1
           },
           {
-            "名称": "[Spinblade] Duration",
+            "名称": "[Sommelier's Blade] Duration",
             "影响": "技能耐久",
             "值": 20,
             "格式": "{}s"
           },
           {
-            "名称": "[Spinblade] Launch Speed",
+            "名称": "[Sommelier's Blade] Launch Speed",
             "值": 20,
             "格式": "{}m/s"
           }
@@ -7989,18 +7989,18 @@
           }
         ],
         "术语解释": {
-          "Spinblade": "When orbiting around the character, [Spinblades] deal damage to enemies once every 2s.\nWhen launched, it travels back after reaching a certain distance. If struck by [Burgundy Flurry] while returning, it is relaunched toward a random enemy within range. Each launch refreshes its speed based on [Inebriation] stacks, dealing damage 1 time along the path both on its way out and back. A maximum of 8 [Spinblades] can exist at once."
+          "Sommelier's Blade": "While orbiting the character, [Sommelier's Blades] deal damage to enemies in their path.\nWhen launched, they travel a set distance before returning, dealing damage to enemies both on the way out and on the way back.\nIf struck by [Scarlet Banquet] while returning, they are launched again at a random nearby target."
         }
       },
       {
         "id": 320203,
-        "名称": "Blood Upon Wine",
+        "名称": "Deadly Sip",
         "类型": "Passive",
-        "描述": "Damage from [Spinblades] inflicts 1 stack of [Laceration], stacking up to 20 times.",
+        "描述": "DMG dealt by [Sommelier's Blades] inflicts 1 stack of [Crimson Wound] on the target, lasting for the rest of the battle, up to 40 stacks.",
         "icon": "Kami03",
         "字段": [
           {
-            "名称": "[Laceration] Detonation Damage",
+            "名称": "[Crimson Wound] DMG",
             "影响": "技能威力",
             "值": [
               0.24,
@@ -8016,7 +8016,7 @@
               0.84,
               0.9
             ],
-            "格式": "{%}*远程武器多重射击属性值",
+            "格式": "{%}*Ranged Weapon Multishot",
             "削韧": 25
           }
         ],
@@ -8075,14 +8075,14 @@
           }
         ],
         "术语解释": {
-          "Laceration": "Dealing Pyro Damage (excluding [Spinblades] and [Laceration] DMG) to targets with [Laceration] removes 1 stack of [Laceration] and deals 1 instance of additional Pyro DMG from [Camilla]. No more than 20 stacks can be removed from the same target per second."
+          "Crimson Wound": "Dealing Pyro DMG (excluding DMG from [Sommelier's Blades] and [Crimson Wound]) to targets afflicted with [Crimson Wound] removes 1 stack of [Crimson Wound] and deals 1 additional instance of Pyro DMG from [Camilla]. No more than 20 stacks can be removed from the same target per second."
         }
       },
       {
         "id": 320204,
-        "名称": "Blood Beneath Wine",
+        "名称": "Hangover",
         "类型": "Passive",
-        "描述": "Detonating [Laceration] grants the triggering character 1 [Tipsy Mark]. Restores Sanity once every 20 Marks gained.",
+        "描述": "Removing [Crimson Wound] stacks grants the character whose DMG triggered the removal 1 stack of [Revelry], lasting for the rest of the battle. At 20 stacks, all [Revelry] stacks are removed to restore Sanity.",
         "icon": "ExtraPassive",
         "字段": [
           {
@@ -8094,9 +8094,9 @@
       },
       {
         "id": 320291,
-        "名称": "瑰色裙",
+        "名称": "Rose-Tinted Dress",
         "类型": "Support",
-        "描述": "[仅在作为协战同伴登场时生效]\n自身和火属性队友昂扬提高。",
+        "描述": "[Available only when deployed as a Combat Partner]\n Increases Morale for self and Pyro allies.",
         "icon": "PhantomPassive",
         "字段": [
           {
@@ -8107,12 +8107,12 @@
       }
     ],
     "溯源": [
-      "Damage from [Spinblades] has a 30% chance to inflict 1 additional stack of [Laceration].",
-      "When orbited by [Spinblades], reduces Damage Taken by 15% and increases Damage Dealt by 55%.",
-      "[Burgundy Flurry] Level +2, [Claret Waltz] Level +1.",
-      "Damage from [Laceration] detonation is increased by 30%, [Spinblade] Launch Speed is increased by 25.",
-      "[Claret Waltz] Level +2, [Burgundy Flurry] Level +1.",
-      "All Pyro Weapon and Skill DMG (excluding [Spinblades] and [Laceration]) detonates 2 stacks of [Laceration] and deals Pyro Damage 2 times. While [Spinblades] is active, additionally grants 45% PEN stats."
+      "DMG dealt by [Sommelier's Blades] has a 30% chance to inflict 1 additional stack of [Crimson Wound].",
+      "While orbited by [Sommelier's Blades], Damage Taken is reduced by 15% and Damage Dealt is increased by 55%.",
+      "[Scarlet Banquet] Level +2. [Claret Waltz] Level +1.",
+      "Damage from [Crimson Wound] +30%. [Sommelier's Blades] Launch Speed is increased to 25.",
+      "[Claret Waltz] Level +2. [Scarlet Banquet] Level +1.",
+      "While orbited by [Sommelier's Blades], Camilla's PEN stats increases by 45%. When [Crimson Wound] is removed, 1 additional stack is removed, dealing 1 additional instance of damage."
     ],
     "碎片": 1003202,
     "专武": 20512

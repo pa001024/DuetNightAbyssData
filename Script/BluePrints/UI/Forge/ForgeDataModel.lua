@@ -486,6 +486,7 @@ function ForgeDataModel:ConstructForgeCompendiumItemContent(Obj, DraftInfo)
   Obj.OwnedCount = DraftInfo.OwnedCount or 0
   Obj.IsInfinity = DraftInfo.IsInfinity or false
   Obj.IsNew = DraftInfo.IsNew or false
+  Obj.IsEverOwned = DraftInfo.IsEverOwned or false
   
   function Obj.GetDataModel()
     return self
@@ -656,6 +657,7 @@ function ForgeDataModel:GetCompendiumDatasByFilter(Filter)
           CompendiumInfo.OwnedCount = 0
           CompendiumInfo.IsInfinity = false
         end
+        CompendiumInfo.IsEverOwned = Avatar.Drafts[Id] ~= nil
         CompendiumInfo.TypePriority = DataMgr.RewardType[Data.ProductType].DungeonRewardSeq
         CompendiumInfo.Rarity = Data.Rarity
         CompendiumInfo.IsNew = (CompendiumInfo.OwnedCount > 0 or CompendiumInfo.IsInfinity) and self:IsDraftNotSeen(Id)

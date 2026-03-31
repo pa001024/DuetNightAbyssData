@@ -809,6 +809,7 @@ return {
   "WeChatAccount2Resource",
   "Weapon",
   "WeaponAccessory",
+  "WeaponAccessoryId2ModApplicationType",
   "WeaponAccessoryOffset",
   "WeaponBlueprintId",
   "WeaponBreak",

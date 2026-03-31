@@ -66,7 +66,13 @@ function M:InitShopItem(ShopItemId)
   if self.ShopItemData.TypeNum and self.ShopItemData.TypeNum > 1 then
     ItemName = ItemName .. " x" .. self.ShopItemData.TypeNum
   end
-  self.Text_Name:SetText(ItemName)
+  if CommonConst.SystemLanguage == CommonConst.SystemLanguages.FR then
+    self:AddTimer(0.1, function()
+      self.Text_Name:SetText(ItemName, true)
+    end, false, 0, "DelayForceLayoutPrepass", true)
+  else
+    self.Text_Name:SetText(ItemName)
+  end
   self.Text_Name_NoQuality:SetText(ItemName)
   self:Set_Text_Height()
   local CurrentCount = Avatar:GetResourceNum(self.ShopItemData.PriceType)

@@ -4738,6 +4738,8 @@ return ReadOnly("Mechanism", {
   [71003] = {
     BeFindTags = T.RT_42,
     FirstStateId = 710030,
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_EastScan.T_Gp_EastScan",
     InteractiveId = 71001,
     ModelId = 961,
     StateIdList = T.RT_161,
@@ -4748,6 +4750,8 @@ return ReadOnly("Mechanism", {
   [71004] = {
     BeFindTags = T.RT_42,
     FirstStateId = 710030,
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_EastScan.T_Gp_EastScan",
     InteractiveId = 71001,
     ModelId = 962,
     StateIdList = T.RT_161,
@@ -4758,6 +4762,8 @@ return ReadOnly("Mechanism", {
   [71005] = {
     BeFindTags = T.RT_42,
     FirstStateId = 710030,
+    GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level1.WBP_GuidePoint_Mech_Level1",
+    GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_EastScan.T_Gp_EastScan",
     InteractiveId = 71001,
     ModelId = 963,
     StateIdList = T.RT_161,
@@ -5449,7 +5455,7 @@ return ReadOnly("Mechanism", {
     Camp = "Hostile",
     FirstStateId = 3902401,
     ModelId = 999,
-    NeedBuffManager = true,
+    NeedBuffManager = false,
     StateIdList = T.RT_108,
     UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_LaserAndShock_NoHit.BP_LaserAndShock_NoHit",
     UnitId = 78055,
@@ -7411,7 +7417,7 @@ return ReadOnly("Mechanism", {
     UnitName = "UI_DUNGEON_DONGGUOCHARGE_MO",
     UnitParams = {
       ChargeDis = 1200,
-      ChargeSpeedBase = 0.5,
+      ChargeSpeedBase = 0.4,
       MonsterUnitId = 10002051,
       TalkPercent = 0.8
     },
@@ -7439,7 +7445,7 @@ return ReadOnly("Mechanism", {
     UnitName = "UI_DUNGEON_DONGGUOCHARGE_FA",
     UnitParams = {
       ChargeDis = 1200,
-      ChargeSpeedBase = 0.5,
+      ChargeSpeedBase = 0.4,
       MonsterUnitId = 10002052,
       TalkPercent = 0.8
     },
@@ -7723,7 +7729,7 @@ return ReadOnly("Mechanism", {
       EndFlyTime = 2,
       FirstFlyTime = 2,
       FlySpeed = 2,
-      MaxEnergy = 250,
+      MaxEnergy = 300,
       ReduceSpeed = 10,
       WarningEnergy = 50
     },
@@ -7740,7 +7746,7 @@ return ReadOnly("Mechanism", {
       AngleRange = 60,
       ChangeSpeed = 4,
       Color = "Blue",
-      Duration = 3,
+      Duration = 4,
       ReturnSpeed = 10,
       Tag = T.RT_55
     },
@@ -7787,6 +7793,8 @@ return ReadOnly("Mechanism", {
     UnitRealType = "Mechanism"
   },
   [121060] = {
+    FirstStateId = 1210600,
+    StateIdList = {1210600, 1210601},
     UnitBPPath = "/Game/AssetDesign/Item/East_02/BP_YYG_Cel.BP_YYG_Cel",
     UnitId = 121060,
     UnitRealType = "Mechanism"
@@ -10553,7 +10561,7 @@ return ReadOnly("Mechanism", {
     Camp = "Hostile",
     FirstStateId = 3902401,
     ModelId = 999,
-    NeedBuffManager = true,
+    NeedBuffManager = false,
     StateIdList = T.RT_108,
     UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_LaserAndShock_NoHit.BP_LaserAndShock_NoHit",
     UnitId = 780551,
@@ -10576,7 +10584,7 @@ return ReadOnly("Mechanism", {
     Camp = "Hostile",
     FirstStateId = 3902401,
     ModelId = 999,
-    NeedBuffManager = true,
+    NeedBuffManager = false,
     StateIdList = T.RT_108,
     UnitBPPath = "/Game/BluePrints/Item/CombatProp/BP_LaserAndShock_NoHit.BP_LaserAndShock_NoHit",
     UnitId = 780552,
@@ -11464,7 +11472,7 @@ return ReadOnly("Mechanism", {
     UnitParams = {
       AngleRange = 60,
       Color = "Green",
-      Energy = 60,
+      Energy = 75,
       ReturnSpeed = 10,
       Tag = T.RT_55
     },

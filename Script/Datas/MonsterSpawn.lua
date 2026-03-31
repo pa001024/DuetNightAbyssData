@@ -7377,42 +7377,30 @@ return ReadOnly("MonsterSpawn", {
   [50108] = {
     CanEscapeBattle = false,
     CheckVision = false,
-    DetectTime = 45,
-    DetectTimeFix = 45,
+    DetectTime = 10,
+    DetectTimeFix = 10,
     FilterReachable = true,
     Mode = "Player",
     MonsterSpawnInfos = {
       [1] = {
-        UnitId = 10002051,
-        UnitLevel = 50,
-        UnitNum = 2,
-        UnitNumFix = 2
-      },
-      [2] = {
-        UnitId = 10002052,
-        UnitLevel = 50,
-        UnitNum = 2,
-        UnitNumFix = 2
-      },
-      [3] = {
         UnitId = 10004001,
         UnitLevel = 50,
         UnitNum = 1,
         UnitNumFix = 2
       },
-      [4] = {
+      [2] = {
         UnitId = 10001062,
         UnitLevel = 50,
         UnitNum = 5,
         UnitNumFix = 10
       },
-      [5] = {
+      [3] = {
         UnitId = 10001061,
         UnitLevel = 50,
         UnitNum = 3,
         UnitNumFix = 6
       },
-      [6] = T.RT_251
+      [4] = T.RT_251
     },
     PhoneUnitSpawnRadiusMax = 4000,
     PhoneUnitSpawnRadiusMin = 500,
@@ -7421,7 +7409,7 @@ return ReadOnly("MonsterSpawn", {
     RegularLevel = true,
     SpawnType = "Random",
     Tacmap = false,
-    Threshold = 10,
+    Threshold = 8,
     UnitSpawnId = 50108,
     UnitSpawnRadiusMax = 4000,
     UnitSpawnRadiusMin = 500,
@@ -7507,25 +7495,25 @@ return ReadOnly("MonsterSpawn", {
     MonsterSpawnInfos = {
       [1] = {
         UnitId = 10004001,
-        UnitLevel = 70,
+        UnitLevel = 55,
         UnitNum = 1,
         UnitNumFix = 1
       },
       [2] = {
         UnitId = 10001062,
-        UnitLevel = 70,
+        UnitLevel = 55,
         UnitNum = 5,
         UnitNumFix = 8
       },
       [3] = {
         UnitId = 10001061,
-        UnitLevel = 70,
+        UnitLevel = 55,
         UnitNum = 3,
         UnitNumFix = 5
       },
       [4] = {
         UnitId = 10002001,
-        UnitLevel = 70,
+        UnitLevel = 55,
         UnitNum = 1,
         UnitNumFix = 2
       }
@@ -7541,7 +7529,7 @@ return ReadOnly("MonsterSpawn", {
     UnitSpawnId = 50112,
     UnitSpawnRadiusMax = 4000,
     UnitSpawnRadiusMin = 500,
-    UnitSpawnTotalNum = 57
+    UnitSpawnTotalNum = 999
   },
   [50113] = {
     CanEscapeBattle = false,
@@ -7597,6 +7585,40 @@ return ReadOnly("MonsterSpawn", {
     Tacmap = false,
     Threshold = 12,
     UnitSpawnId = 50113,
+    UnitSpawnRadiusMax = 4000,
+    UnitSpawnRadiusMin = 500,
+    UnitSpawnTotalNum = 999
+  },
+  [50114] = {
+    CanEscapeBattle = false,
+    CheckVision = false,
+    DetectTime = 30,
+    DetectTimeFix = 30,
+    FilterReachable = true,
+    Mode = "Player",
+    MonsterSpawnInfos = {
+      [1] = {
+        UnitId = 10002051,
+        UnitLevel = 50,
+        UnitNum = 2,
+        UnitNumFix = 2
+      },
+      [2] = {
+        UnitId = 10002052,
+        UnitLevel = 50,
+        UnitNum = 2,
+        UnitNumFix = 2
+      }
+    },
+    PhoneUnitSpawnRadiusMax = 4000,
+    PhoneUnitSpawnRadiusMin = 500,
+    PresetTargetInfo = T.RT_3,
+    RandomSpawn = true,
+    RegularLevel = true,
+    SpawnType = "Random",
+    Tacmap = false,
+    Threshold = 2,
+    UnitSpawnId = 50114,
     UnitSpawnRadiusMax = 4000,
     UnitSpawnRadiusMin = 500,
     UnitSpawnTotalNum = 999

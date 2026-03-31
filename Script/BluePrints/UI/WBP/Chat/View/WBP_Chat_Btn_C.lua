@@ -15,6 +15,7 @@ function M:Construct()
   M.Super.Construct(self, self.Button_Area)
   self.Button_Area:SetVisibility(UIConst.VisibilityOp.Visible)
   self.Button_Area.OnClicked:Add(self, self.BtnAreaOnClicked)
+  self.Button_Forbid.OnClicked:Add(self, self.BtnAreaOnClicked)
   self.bForbidden = false
   ChatController:RegisterEvent(self, function(self, EventId, ...)
     if EventId == ChatCommon.EventID.SendCDTimerUpdate then
@@ -22,6 +23,8 @@ function M:Construct()
       self:HandleSendChatMessageCd(RemainTime)
     end
   end)
+  ChatController:UnRegisterEvent(self.Key_Text)
+  self.Key_Text:SetForbidKey(false)
 end
 
 function M:HandleSendChatMessageCd(CDRemainTime)
@@ -76,7 +79,9 @@ end
 function M:Destruct()
   self.BindObj = nil
   self.OnClick = nil
+  self.bForbidden = nil
   self.Button_Area.OnClicked:Remove(self, self.BtnAreaOnClicked)
+  self.Button_Forbid.OnClicked:Remove(self, self.BtnAreaOnClicked)
   ChatController:UnRegisterEvent(self)
   if CommonUtils.GetDeviceTypeByPlatformName(self) ~= "Mobile" then
     local GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(self)
@@ -91,7 +96,12 @@ function M:SetForbidden()
     return
   end
   self.bForbidden = true
+  self.Button_Area:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Button_Forbid:SetVisibility(UIConst.VisibilityOp.Visible)
   self.Button_Area:SetForbidden(true)
+  self:StopAllAnimations()
+  self:PlayAnimation(self.Forbidden)
+  self.Key_Text:SetForbidKey(true)
 end
 
 function M:SetNormal()
@@ -99,7 +109,12 @@ function M:SetNormal()
     return
   end
   self.bForbidden = false
+  self.Button_Forbid:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Button_Area:SetVisibility(UIConst.VisibilityOp.Visible)
   self.Button_Area:SetForbidden(false)
+  self:StopAllAnimations()
+  self:PlayAnimation(self.Normal)
+  self.Key_Text:SetForbidKey(false)
 end
 
 function M:IsChatBtnForbidden()

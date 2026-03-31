@@ -322,7 +322,7 @@ return {
             propsData = {
               IsNpcNode = false,
               TalkType = "Cinematic",
-              TalkStageName = "",
+              TalkStageName = "Ver0102_SC006TalkStage",
               ShowFilePath = "/Game/Asset/Cinematics/Story/Ver01/Ver0102/Ver0102_SC006/Ver0102_SC006",
               BlendInTime = 0,
               BlendOutTime = 0,

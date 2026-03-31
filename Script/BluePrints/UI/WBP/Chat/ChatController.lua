@@ -359,6 +359,10 @@ function M:_AddMessage(Message, bCalcUnread)
     local StickerTexPath = DataMgr.ChatEmoji[GroupId][Id]
     self:NotifyEvent(ChatCommon.EventID.RecvStickerInPubChannels, Uid, StickerTexPath)
   end
+  local IsSelf = Message.Type == CommonConst.MESSAGE_TYPE_SELF
+  if not IsSelf then
+    self:NotifyEvent(ChatCommon.EventID.ChatBubble, TimeWrap, MsgWrap)
+  end
   if Channel ~= ChatModel:GetCurrentChannel() then
     return
   end

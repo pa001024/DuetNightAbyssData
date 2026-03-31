@@ -208,9 +208,7 @@ return ReadOnly("Region", {
       104503,
       104504,
       104505,
-      104506,
-      104507,
-      104508
+      104506
     },
     RegionDispCondition = 120206,
     RegionId = 1045,
@@ -266,11 +264,7 @@ return ReadOnly("Region", {
   },
   [1051] = {
     AlertDisable = true,
-    IsRandom = {
-      105101,
-      105102,
-      105103
-    },
+    IsRandom = {105101},
     RegionId = 1051,
     RegionMapFile = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_Int/Huaxu_Haojing_Int_Main",
     RegionMapId = 500,
@@ -295,7 +289,7 @@ return ReadOnly("Region", {
     AlertDisable = true,
     CloseBlock = true,
     IsBlackBg = true,
-    IsRandom = {105301, 105302},
+    IsRandom = {105301},
     RegionId = 1053,
     RegionMapFile = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_TRLM/Huaxu_Haojing_TRLM_Main",
     RegionMapId = 502,

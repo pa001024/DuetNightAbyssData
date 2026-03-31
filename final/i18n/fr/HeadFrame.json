@@ -179,8 +179,8 @@
   },
   {
     "id": 10029,
-    "name": "失色烈火",
-    "desc": "灰烬是烈火最后的辉煌。",
+    "name": "Flammes fanées",
+    "desc": "灰白中倒映着烈火最后的辉煌。",
     "icon": "T_Head_Frame25",
     "access": "Disponible dans la boutique"
   },
@@ -201,14 +201,14 @@
   {
     "id": 10032,
     "name": "子不语·黛蓝",
-    "desc": "月影憧憧，一窗幽梦。",
+    "desc": "月影憧憧，一框幽梦。",
     "icon": "T_Head_Frame29",
     "access": "Disponible dans la boutique"
   },
   {
     "id": 10033,
     "name": "子不语·晴蓝",
-    "desc": "月影憧憧，一窗幽梦。",
+    "desc": "月影憧憧，一框幽梦。",
     "icon": "T_Head_Frame28",
     "access": "Disponible dans la boutique"
   }

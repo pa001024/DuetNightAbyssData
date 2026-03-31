@@ -17,8 +17,8 @@
   },
   {
     "id": 3010103,
-    "name": "荣耀撕裂者",
-    "desc": "UI_WeaponSkin_Des_3010103",
+    "name": "榮耀撕裂者",
+    "desc": "有些荣耀，唯有通过彻底的撕裂方能获得；而有些真相，唯有在链锯的轰鸣中才得以言说。",
     "icon": "T_Head_Claymore_Rongyao",
     "rarity": 5,
     "unlock": "通過商店獲得"
@@ -65,7 +65,7 @@
   },
   {
     "id": 3010109,
-    "name": "碧霄吟·重剑",
+    "name": "碧霄吟·重劍",
     "desc": "",
     "icon": "T_Head_Claymore_Bixiao",
     "rarity": 5,
@@ -113,7 +113,7 @@
   },
   {
     "id": 3010206,
-    "name": "碧霄吟·单手剑",
+    "name": "碧霄吟·單手劍",
     "desc": "塵囂無染，碧波破浪。",
     "icon": "T_Head_Sword_Bixiao",
     "rarity": 5,
@@ -145,7 +145,7 @@
   },
   {
     "id": 3010304,
-    "name": "碧霄吟·弓（长弓）",
+    "name": "碧霄吟·弓（長弓）",
     "desc": "塵囂無染，碧波破浪。",
     "icon": "T_Head_Bow_Bixiao",
     "rarity": 5,
@@ -273,7 +273,7 @@
   },
   {
     "id": 3010609,
-    "name": "碧霄吟·双刀",
+    "name": "碧霄吟·雙刀",
     "desc": "塵囂無染，碧波破浪。",
     "icon": "T_Head_Dualblade_Bixiao",
     "rarity": 5,
@@ -385,15 +385,15 @@
   },
   {
     "id": 3011002,
-    "name": "火力全开",
-    "desc": "疾书凝玄甲，谈笑烬千军。",
+    "name": "火力全開",
+    "desc": "疾書凝玄甲，談笑燼千軍。",
     "icon": "T_Head_Shotgun_Huoli",
     "rarity": 5,
     "unlock": "通過商店獲得"
   },
   {
     "id": 3011003,
-    "name": "碧霄吟·霰弹枪",
+    "name": "碧霄吟·霰彈槍",
     "desc": "塵囂無染，碧波破浪。",
     "icon": "T_Head_Shotgun_Bixiao",
     "rarity": 5,

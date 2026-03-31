@@ -56,19 +56,13 @@ function M:AddTopTabReddotListen()
   end
   
   self:AddWeaponAppearanceReddotListen(function()
-    local NewSkinCount = 0
-    local Data = DataMgr.Weapon[self.Target.WeaponId]
-    if Data and Data.SkinApplicationType then
-      for _, value in pairs(Data.SkinApplicationType) do
-        local NodeName = CommonConst.DataType.WeaponSkin .. (value or "")
-        local NewSkinNode = ReddotManager.GetTreeNode(NodeName)
-        NewSkinCount = NewSkinCount + (NewSkinNode and NewSkinNode.Count or 0)
-      end
-    end
-    local NewAccessoryNode = ReddotManager.GetTreeNode(CommonConst.DataType.WeaponAccessory)
-    local NewAccessoryCount = NewAccessoryNode and NewAccessoryNode.Count or 0
+    local Res = ArmoryUtils:GetWeaponAppearanceReddotCount(self.Target.WeaponId)
+    local NewSkinCount = Res.NewSkinCount
+    local NewAccessoryCount = Res.NewAccessoryCount
+    local NewWeaponStanceFXCount = Res.NewWeaponStanceFXCount
     SetTopTabReddot(1, NewSkinCount > 0)
     SetTopTabReddot(2, NewAccessoryCount > 0)
+    SetTopTabReddot(3, NewWeaponStanceFXCount > 0)
   end, self.Target.WeaponId)
 end
 
@@ -209,39 +203,9 @@ function M:InitWeaponAccessory()
 end
 
 function M:AddWeaponAccessoryTabReddotListen()
-  if self.NoReddot then
-    return
-  end
-  self:RemoveWeaponAccessoryTabReddotListen()
-  if not self.TabNodeNames then
-    self.TabNodeNames = {}
-  end
-  for AccessoryType, Tab in pairs(self.AccessoryTabsMap or {}) do
-    local NodeName = AccessoryType
-    local LeafNodes = {}
-    local LeafNodeName = CommonConst.DataType.WeaponAccessory .. AccessoryType
-    LeafNodes[LeafNodeName] = ReddotManager.GetTreeNode(LeafNodeName) and 1 or nil
-    if not self.TabNodeNames[NodeName] and not IsEmptyTable(LeafNodes) then
-      ReddotManager.AddListener(NodeName, self, function(self, Count)
-        Tab.IsNew = Count > 0
-        if Tab.UI then
-          Tab.UI:SetReddot(Tab.IsNew)
-        end
-        self:UpdateTopTabReddot()
-      end, LeafNodes)
-      self.TabNodeNames[NodeName] = 1
-    end
-  end
 end
 
 function M:RemoveWeaponAccessoryTabReddotListen()
-  if self.NoReddot then
-    return
-  end
-  for NodeName, _ in pairs(self.TabNodeNames or {}) do
-    ReddotManager.RemoveListener(NodeName, self)
-  end
-  self.TabNodeNames = nil
 end
 
 local function AddWeaponAccessoryContent(self, AccessoryId)
@@ -265,12 +229,29 @@ function M:CheckWeaponAccessoryContentReddot(AccessoryId)
   if not Content then
     return
   end
-  local CacheDetail = {}
-  local ReddotName = CommonConst.DataType.WeaponAccessory
-  if ReddotManager.GetTreeNode(ReddotName) then
-    CacheDetail = ReddotManager.GetLeafNodeCacheDetail(CommonConst.DataType.WeaponAccessory) or {}
+  local Data = DataMgr.WeaponAccessory[AccessoryId]
+  if not Data then
+    return
   end
-  Content.RedDotType = 1 == CacheDetail[AccessoryId] and UIConst.RedDotType.NewRedDot
+  local IsNew = false
+  if Data.StanceFXType == CommonConst.WeaponAccessoryTypes.Accessory then
+    local CacheDetail = {}
+    local ReddotName = CommonConst.DataType.WeaponAccessory
+    if ReddotManager.GetTreeNode(ReddotName) then
+      CacheDetail = ReddotManager.GetLeafNodeCacheDetail(CommonConst.DataType.WeaponAccessory) or {}
+      IsNew = 1 == CacheDetail[AccessoryId]
+    end
+  else
+    local ModApplicationType = DataMgr.WeaponAccessoryId2ModApplicationType[AccessoryId]
+    if ModApplicationType then
+      local ReddotName = "WeaponStanceFX" .. ModApplicationType
+      if ReddotManager.GetTreeNode(ReddotName) then
+        local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(ReddotName) or {}
+        IsNew = 1 == CacheDetail[AccessoryId]
+      end
+    end
+  end
+  Content.RedDotType = IsNew and UIConst.RedDotType.NewRedDot
 end
 
 function M:CreateWeaponAccessoryContents(Weapon, bRecreate)
@@ -315,27 +296,6 @@ end
 function M:OnAccessoryContentCreated(Content)
 end
 
-local function CreateStanceFXTag2ModId(self)
-  if rawget(self, "StanceFXTag2ModId") then
-    return
-  end
-  local TargetModApplicationTypes = {}
-  for _, value in pairs(self.Target.ModApplicationType or {}) do
-    if not DataMgr.ModTag[value] then
-    else
-      TargetModApplicationTypes[value] = true
-    end
-  end
-  rawset(self, "StanceFXTag2ModId", {})
-  for ModId, value in pairs(DataMgr.Mod) do
-    if TargetModApplicationTypes[value.ApplicationType] and value.ModActivateSkills then
-      for SkillId, StanceFXTag in pairs(value.ModActivateSkills) do
-        self.StanceFXTag2ModId[StanceFXTag] = ModId
-      end
-    end
-  end
-end
-
 function M:CreateWeaponAccessoryContent(Data)
   if Data.BeginTime then
     local Time = TimeUtils.NowTime()
@@ -343,9 +303,10 @@ function M:CreateWeaponAccessoryContent(Data)
       return
     end
   end
+  local WeaponStanceFXTag2ModId
   if Data.StanceFXTag then
-    CreateStanceFXTag2ModId(self)
-    if not self.StanceFXTag2ModId[tonumber(Data.StanceFXTag)] then
+    WeaponStanceFXTag2ModId = ArmoryUtils:GetWeaponStanceFXTag2ModId(self.Target.WeaponId)
+    if not WeaponStanceFXTag2ModId or not WeaponStanceFXTag2ModId[tonumber(Data.StanceFXTag)] then
       return
     end
   end
@@ -363,8 +324,9 @@ function M:CreateWeaponAccessoryContent(Data)
   rawset(Obj, "Rarity", Data.Rarity or 0)
   rawset(Obj, "AccessoryType", Data.StanceFXType)
   rawset(Obj, "StanceFXTag", tonumber(Data.StanceFXTag))
-  if rawget(self, "StanceFXTag2ModId") then
-    rawset(Obj, "ModId", self.StanceFXTag2ModId[rawget(Obj, "StanceFXTag")])
+  if WeaponStanceFXTag2ModId and WeaponStanceFXTag2ModId[rawget(Obj, "StanceFXTag")] then
+    local ModId = next(WeaponStanceFXTag2ModId[Obj.StanceFXTag])
+    rawset(Obj, "ModId", ModId)
   end
   return Obj
 end

@@ -181,30 +181,24 @@ T.RT_37 = {
   1
 }
 T.RT_38 = {
-  105501,
-  "TargetPoint_FromSubToYLX",
-  1
-}
-T.RT_39 = {
   105101,
   "TargetPoint_FromTopToZLG1F",
   1
 }
-T.RT_40 = {
+T.RT_39 = {
   105101,
   "TargetPoint_FromTopToZLG2F",
   1
 }
-T.RT_41 = {
+T.RT_40 = {
   T.RT_35,
   T.RT_36,
   T.RT_37,
   T.RT_38,
-  T.RT_39,
-  T.RT_40
+  T.RT_39
 }
-T.RT_42 = {
-  RegionTarget = T.RT_41
+T.RT_41 = {
+  RegionTarget = T.RT_40
 }
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
@@ -432,32 +426,32 @@ return ReadOnly("RegionGraph", {
   [104501] = {
     RegionStart = T.RT_34,
     SubRegionStart = 104501,
-    SubRegionTarget = T.RT_42
+    SubRegionTarget = T.RT_41
   },
   [104502] = {
     RegionStart = T.RT_34,
     SubRegionStart = 104502,
-    SubRegionTarget = T.RT_42
+    SubRegionTarget = T.RT_41
   },
   [104503] = {
     RegionStart = T.RT_34,
     SubRegionStart = 104503,
-    SubRegionTarget = T.RT_42
+    SubRegionTarget = T.RT_41
   },
   [104504] = {
     RegionStart = T.RT_34,
     SubRegionStart = 104504,
-    SubRegionTarget = T.RT_42
+    SubRegionTarget = T.RT_41
   },
   [104505] = {
     RegionStart = T.RT_34,
     SubRegionStart = 104505,
-    SubRegionTarget = T.RT_42
+    SubRegionTarget = T.RT_41
   },
   [104506] = {
     RegionStart = T.RT_34,
     SubRegionStart = 104506,
-    SubRegionTarget = T.RT_42
+    SubRegionTarget = T.RT_41
   },
   [104901] = {
     SubRegionStart = 104901,
@@ -519,11 +513,6 @@ return ReadOnly("RegionGraph", {
     SubRegionStart = 105501,
     SubRegionTarget = {
       RegionTarget = {
-        {
-          104503,
-          "TargetPoint_FromYLXToInn",
-          1
-        },
         {
           104505,
           "TargetPoint_FromYLXToSub",

@@ -128,12 +128,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17727067132822628",
-            startPort = "Out",
-            endQuest = "1772518991877563",
-            endPort = "In"
-          },
-          {
             startQuest = "17724344680625541498",
             startPort = "Out",
             endQuest = "17727067717123772",
@@ -164,12 +158,6 @@ return {
             endPort = "Input"
           },
           {
-            startQuest = "17743492683362471",
-            startPort = "Out",
-            endQuest = "17724344171765541343",
-            endPort = "In"
-          },
-          {
             startQuest = "177243571895212661688",
             startPort = "Out",
             endQuest = "1774423736524482",
@@ -178,7 +166,19 @@ return {
           {
             startQuest = "17727067132822628",
             startPort = "Out",
+            endQuest = "1772518991877563",
+            endPort = "In"
+          },
+          {
+            startQuest = "17743492683362471",
+            startPort = "Out",
             endQuest = "1774423867834877113",
+            endPort = "In"
+          },
+          {
+            startQuest = "1774423867834877113",
+            startPort = "Out",
+            endQuest = "17724344171765541343",
             endPort = "In"
           }
         },
@@ -214,7 +214,7 @@ return {
             key = "17724344171765541343",
             type = "SpecialQuestSuccessNode",
             name = "成功完成特殊任务",
-            pos = {x = 3202.895294700762, y = 274.1412914444902},
+            pos = {x = 3369.395294700762, y = 275.6412914444902},
             propsData = {}
           },
           ["17724344680625541497"] = {
@@ -389,12 +389,12 @@ return {
             key = "17743492683362471",
             type = "StandAloneBlackScreenNode",
             name = "独立黑屏节点",
-            pos = {x = 2891.1250000000005, y = 284.23214285714283},
+            pos = {x = 2846.1250000000005, y = 281.23214285714283},
             propsData = {
               FadeInSeconds = 0,
               FadeOutSeconds = 0,
               DurationSeconds = 2,
-              IsStandAlone = false
+              IsStandAlone = true
             }
           },
           ["1774423736524482"] = {
@@ -418,7 +418,7 @@ return {
             key = "1774423867834877113",
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
-            pos = {x = 2600.448045028288, y = 92.5561425943376},
+            pos = {x = 3105.948045028288, y = 286.0561425943376},
             propsData = {
               SoundStateType = 3,
               SoundPriority = 0,

@@ -84,12 +84,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17733176756731151",
-            startPort = "Out",
-            endQuest = "17733176756731153",
-            endPort = "In"
-          },
-          {
             startQuest = "17736316590945320109",
             startPort = "Out",
             endQuest = "17736316590945320115",
@@ -414,9 +408,15 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17744378773184075",
+            startQuest = "17733176756731151",
             startPort = "Out",
-            endQuest = "17733176756731152",
+            endQuest = "17745994512371101",
+            endPort = "In"
+          },
+          {
+            startQuest = "17745994512371101",
+            startPort = "Out",
+            endQuest = "17733176756731153",
             endPort = "In"
           }
         },
@@ -613,23 +613,6 @@ return {
               StaticCreatorId = 1990209,
               GuideType = "M",
               GuidePointName = "Mechanism_QuestTriggerEnd_1990209"
-            }
-          },
-          ["17733176756731152"] = {
-            key = "17733176756731152",
-            type = "TalkNode",
-            name = "开车",
-            pos = {x = 3404.139109020495, y = 1188.3250707625712},
-            propsData = {
-              IsNpcNode = false,
-              FirstDialogueId = 51175412,
-              FlowAssetPath = "",
-              TalkType = "Guide",
-              bIsStandalone = true,
-              GuideMeshIndexList = {},
-              IsPlayStartSound = false,
-              GuideTalkStyle = "Normal",
-              OverrideFailBlend = false
             }
           },
           ["17733176756731153"] = {
@@ -1281,6 +1264,17 @@ return {
             name = "延迟等待",
             pos = {x = 3090.3333333333326, y = 1186.6666666666667},
             propsData = {WaitTime = 2}
+          },
+          ["17745994512371101"] = {
+            key = "17745994512371101",
+            type = "SendMessageNode",
+            name = "后处理-扶疏",
+            pos = {x = 2209.5000000000005, y = 1461.0000000000005},
+            propsData = {
+              MessageType = "GameMode",
+              MessageContent = "DreamDestory",
+              UnitId = -1
+            }
           }
         },
         commentData = {

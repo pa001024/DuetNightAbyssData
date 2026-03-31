@@ -1413,7 +1413,7 @@ return ReadOnly("EffectCreature", {
   [42001] = {
     EffectCreatureAnimPath = "/Game/Asset/Char/Player/Common/Pet/SPet001_Qianji/Animation/Montage/SPet_Qianji_Idle_Montage.SPet_Qianji_Idle_Montage",
     EffectCreatureId = 42001,
-    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Pet/BP_EffectCreature_Prop_42001.BP_EffectCreature_Prop_42001",
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Pet/BP_EffectCreature_Prop_42001.BP_EffectCreature_Prop_42001_C",
     EffectCreatureTag = T.RT_4,
     MeshResourceId = 42002,
     SocketName = "Root"

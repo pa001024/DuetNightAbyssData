@@ -3480,7 +3480,7 @@ return ReadOnly("STLExportQuestChain", {
     StartQuestId = 12020501
   },
   [120206] = {
-    EndQuestId = 12020628,
+    EndQuestId = 12020627,
     HavePreQuest = false,
     IsMultiEndQuest = false,
     QuestChainId = 120206,
@@ -3563,12 +3563,6 @@ return ReadOnly("STLExportQuestChain", {
       [12020615] = {
         IsMultiQuest = false,
         SubRegionId = 105301,
-        nextQuestId = 12020616,
-        nextQuestIds = {Success = 12020616}
-      },
-      [12020616] = {
-        IsMultiQuest = false,
-        SubRegionId = 105301,
         SuccQuestDeliver = T.RT_29,
         nextQuestId = 12020617,
         nextQuestIds = {Success = 12020617}
@@ -3635,13 +3629,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestId = 12020627,
         nextQuestIds = {Success = 12020627}
       },
-      [12020627] = {
-        IsMultiQuest = false,
-        SubRegionId = 104504,
-        nextQuestId = 12020628,
-        nextQuestIds = {Success = 12020628}
-      },
-      [12020628] = T.RT_30
+      [12020627] = T.RT_30
     },
     StartQuestId = 12020601
   },

@@ -57,6 +57,11 @@ function M:CloseAccessoryCustom()
   AudioManager(self):SetEventSoundParam(self, "AccessoryCustomOpened", {ToEnd = 1})
   self:SetIsDealWithVirtualAccept(false)
   self.Tab_Skin:Init(self.TabConfig)
+  if self.CurrentTopTabIdx then
+    self.Tab_Skin:BindEventOnTabSelected(nil, nil)
+    self.Tab_Skin:SelectTab(self.CurrentTopTabIdx)
+    self.Tab_Skin:BindEventOnTabSelected(self, self.OnTopTabSelected)
+  end
   self.WidgetSwitcher_State:SetActiveWidgetIndex(0)
   self:UpdateAccessoryDetails(self.ComparedContent)
   self:PlayAccessoryCustomInAnim()

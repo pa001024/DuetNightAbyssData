@@ -94,7 +94,7 @@ function M:OnButtonClicked()
   AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_sort_tab", nil, nil)
 end
 
-function M:UpdateDownloadState()
+function M:UpdateDownloadState(bNotPlayAnim)
   if not self.Content or not self.Text_DownloadEnd then
     return
   end
@@ -111,14 +111,14 @@ function M:UpdateDownloadState()
       bPaused = HotUpdateSubsystem:IsPatchOptionSignPaused(self.Content.PatchID)
     end
   end
-  self:UpdateDownloadDetail()
+  self:UpdateDownloadDetail(bNotPlayAnim)
 end
 
 function M:UpdateDownloadProgress()
-  self:UpdateDownloadDetail()
+  self:UpdateDownloadDetail(true)
 end
 
-function M:UpdateDownloadDetail()
+function M:UpdateDownloadDetail(bNotPlayAnim)
   if not self.Content or not self.Group_DownloadDetail then
     return
   end
@@ -171,10 +171,12 @@ function M:UpdateDownloadDetail()
   if self.Text_DownloadTitle then
     self.Text_DownloadTitle:SetText(GText(bPaused and "UI_OPTION_Language_Download_Pausing" or "UI_OPTION_Language_Downloading"))
   end
-  if not bPaused and 0 ~= self.WS_DownloadIcon:GetActiveWidgetIndex() then
-    self:PlayDownloadAnim(true)
-  elseif bPaused and 1 ~= self.WS_DownloadIcon:GetActiveWidgetIndex() then
-    self:PlayDownloadAnim(false)
+  if not bNotPlayAnim then
+    if not bPaused and 0 ~= self.WS_DownloadIcon:GetActiveWidgetIndex() then
+      self:PlayDownloadAnim(true)
+    elseif bPaused and 1 ~= self.WS_DownloadIcon:GetActiveWidgetIndex() then
+      self:PlayDownloadAnim(false)
+    end
   end
 end
 
@@ -240,9 +242,9 @@ function M:OnDownloadButtonClicked()
     return
   end
   self.bCoolingDown = true
-  self:AddTimer(2, function()
+  self:AddTimer(0.25, function()
     self.bCoolingDown = false
-  end, false, 2, "DownloadButtonCooldown")
+  end, false, 0.25, "DownloadButtonCooldown")
   local HotUpdateSubsystem = USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, UHotUpdateSubsystem)
   if not (HotUpdateSubsystem and self.Content) or not self.Content.PatchID then
     return
@@ -290,7 +292,7 @@ function M:OnDownloadButtonClicked()
       self:PlayDownloadAnim(false)
     end
     HotUpdateUtils.bDisableAutoDownload = false
-    self:UpdateDownloadState()
+    self:UpdateDownloadState(true)
     return
   end
   local Contents = self:GetParentContents()
@@ -311,7 +313,7 @@ function M:OnDownloadButtonClicked()
           HotUpdateSubsystem:StopUpdateImmediately()
           HotUpdateSubsystem:TryStartUpdate(PatchID, {PatchID}, true)
           self:PlayDownloadAnim(true)
-          self:UpdateDownloadState()
+          self:UpdateDownloadState(true)
         end)
       end
     }
@@ -332,7 +334,7 @@ function M:OnDownloadButtonClicked()
     end
     HotUpdateUtils.bDisableAutoDownload = false
   end
-  self:UpdateDownloadState()
+  self:UpdateDownloadState(true)
 end
 
 function M:PlayDownloadAnim(bDownloading)
@@ -342,10 +344,11 @@ function M:PlayDownloadAnim(bDownloading)
   self:StopAnimation(self.Download_Normal)
   self:StopAnimation(self.Download_Hover)
   self:StopAnimation(self.Download_UnHover)
+  self:StopAnimation(self.Download_Click)
   if bDownloading then
-    self:PlayAnimation(self.Download_Click)
+    self:PlayAnimationForward(self.Download_Click, 0.5)
   else
-    self:PlayAnimationReverse(self.Download_Click)
+    self:PlayAnimationReverse(self.Download_Click, 0.5)
   end
   self.DownloadState = bDownloading
 end

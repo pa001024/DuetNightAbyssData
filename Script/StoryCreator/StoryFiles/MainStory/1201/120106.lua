@@ -1740,7 +1740,7 @@ return {
                   AroundPlayer = false
                 }
               },
-              FreezeWorldComposition = false,
+              FreezeWorldComposition = true,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
               OverrideFailBlend = false

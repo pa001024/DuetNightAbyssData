@@ -83,7 +83,7 @@ function Component:_InitChatPC(Avatar, ...)
       self:InitChatSimple()
       self.ChatFocusArea:SetVisibility(UIConst.VisibilityOp.Collapsed)
       self:_SetUpChannelText()
-    elseif EventId == ChatCommon.EventID.ChatMsgRecv then
+    elseif EventId == ChatCommon.EventID.ChatBubble then
       local TimeWrap, MsgWrap = ...
       if 1 == Avatar.ChatChannelMute[MsgWrap.Message.ChannelType] then
         print("yklua 收到消息，但是在免打扰列表中")

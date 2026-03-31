@@ -677,7 +677,7 @@
         "type": "Drop",
         "name": "Psyche Frey's Profile",
         "desc": "A folder unearthed from the file cabinets. It bears Psyche's photo and details her time at the Hypnos' House.",
-        "text": "Name: Psyche Frey\nAge: 17\nSymptoms: Intermittent blindness\n\n...\nWhen Psyche arrived, her Deterioration had already progressed to the mid-stage. Yet, she greeted everyone with such warmth. I wish I could believe the diagnosis was wrong — that she wasn't suffering from Deterioration, and that her life could somehow get back on track.\n...\nShe keeps the flowers her parents brought her by her bedside, even though it leaves her barely any space to sleep or even stand.\n...\nI cleared out a better-lit room on the second floor. Hopefully, Psyche and her flowers will be more comfortable there.\n...\nShe really loves flowers. Every day, she tends to them with care and shares them with the other children. If it weren't for the shadow of Deterioration, she would have taken care of the Flower of Solicitude even better than her parents ever did.\n...\nToday, Psyche gave me a flower too. Her peaceful smile reminded me of you, Hayley...\n...\nPsyche saw me frowning over the finances today and wouldn't stop pestering me until I told her about Hypnos' House's financial struggles.\n(Note: Must reply to the buyer soon. Can't let the children keep worrying about this.)\n...\nPsyche cleaned out the old house and even rented it to some kid with a shady background... I just hope that kid doesn't stir up trouble for Hypnos' House.\n...\n<H>Psyche told me she wished to live longer as a human — even if just for one more day. I was both relieved and furious to hear that. I felt relieved because Psyche finally opened up, after trying to be strong for so long.</>\n<H>I felt furious because of that blasted kid! I don't know what that little rascal said to her, but giving false hope to someone who's destined to leave the world soon — that's the cruellest thing one could do.</>\n<H>If you don't have what it takes to save Psyche, then leave her alone!</>\n(Note: The anti-Deterioration drug is nearly ready. Fate... please have mercy on her for once...)\n...",
+        "text": "Name: Psyche Frey\nAge: 17\nSymptoms: Intermittent blindness\n\n...\nWhen Psyche arrived, her Deterioration had already progressed to the mid-stage. Yet, she greeted everyone with such warmth. I wish I could believe the diagnosis was wrong — that she wasn't suffering from Deterioration, and that her life could somehow get back on track.\n...\nShe keeps the flowers her parents brought her by her bedside, even though it leaves her barely any space to sleep or even stand.\n...\nI cleared out a better-lit room on the second floor. Hopefully, Psyche and her flowers will be more comfortable there.\n...\nShe really loves flowers. Every day, she tends to them with care and shares them with the other children. If it weren't for the shadow of Deterioration, she would have taken care of the Flowers of Solicitude even better than her parents ever did.\n...\nToday, Psyche gave me a flower too. Her peaceful smile reminded me of you, Hayley...\n...\nPsyche saw me frowning over the finances today and wouldn't stop pestering me until I told her about Hypnos' House's financial struggles.\n(Note: Must reply to the buyer soon. Can't let the children keep worrying about this.)\n...\nPsyche cleaned out the old house and even rented it to some kid with a shady background... I just hope that kid doesn't stir up trouble for Hypnos' House.\n...\n<H>Psyche told me she wished to live longer as a human — even if just for one more day. I was both relieved and furious to hear that. I felt relieved because Psyche finally opened up, after trying to be strong for so long.</>\n<H>I felt furious because of that blasted kid! I don't know what that little rascal said to her, but giving false hope to someone who's destined to leave the world soon — that's the cruellest thing one could do.</>\n<H>If you don't have what it takes to save Psyche, then leave her alone!</>\n(Note: The anti-Deterioration drug is nearly ready. Fate... please have mercy on her for once...)\n...",
         "srId": 101106
       },
       {
@@ -1591,29 +1591,29 @@
   },
   {
     "id": 1117,
-    "name": "遗落的纸张·皓京",
+    "name": "A Lost Sheet – Haojing",
     "desc": "A collection of enigmatic pages discovered by chance. Some are delicate scrolls of fine parchment; others, freshly printed sheets with ink still crisp and dark. A few are no more than torn scraps from half-used notebooks. Whether neatly penned or barely legible, they all share one thing in common — each contains a hint pointing to the whereabouts of a hidden treasure.",
     "icon": "T_TreasureMap_East",
     "res": [
       {
         "id": 20640,
         "type": "Drop",
-        "name": "皓京·其一",
-        "text": "椒桂沉檀馨香好，兰蕙脑麝馥郁浓。\n借问宝物何处寻，牧童遥指金庭树。",
+        "name": "Haojing: Ⅰ",
+        "text": "Cassia and sandalwood breathe their fragrance free;\norchid and musk sweeten the breeze.\nAsk where the hidden treasure may be,\nand the shepherd boy points to the golden tree.",
         "srId": 104504
       },
       {
         "id": 20641,
         "type": "Drop",
-        "name": "皓京·其二",
-        "text": "东指郊外草渐深，没入窟中寻不得。\n盼星望月痴等寻，却探宝物根深藏。",
+        "name": "Haojing: Ⅱ",
+        "text": "East of the city, where wild grasses creep,\nlies a cavern with pathways running deep.\nNight after night, searching bears no fruit;\nyet the treasure lies where the grasses root.",
         "srId": 104505
       },
       {
         "id": 20642,
         "type": "Drop",
-        "name": "皓京·其三",
-        "text": "南来又北往，东过又西寻。\n联西处，通中城，问宝物何在？涸木之下水之上。",
+        "name": "Haojing: Ⅲ",
+        "text": "Southward, northward, east and west,\nseekers roam each road in restless quest.\nBut where, at last, will the treasure be?\nAbove the water, beneath the dead tree.",
         "srId": 104502
       }
     ]

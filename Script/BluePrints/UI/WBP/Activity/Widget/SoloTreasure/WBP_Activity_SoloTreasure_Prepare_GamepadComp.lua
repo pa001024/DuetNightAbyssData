@@ -179,6 +179,11 @@ function Component:HandleGamepadInput(InKeyName)
 end
 
 function Component:SetDefaultFocus()
+  if self.CurUIType == self.EUIType.Bag then
+    self:ChangeFocusMode(6)
+    self.List_Bag:SetFocus()
+    return
+  end
   self:ChangeFocusMode(1)
   self.FocusWidget = self.Build.Character
   self.Build.Character:SetFocus()

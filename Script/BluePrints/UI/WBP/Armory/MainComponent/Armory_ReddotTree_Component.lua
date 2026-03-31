@@ -196,18 +196,8 @@ function Component:CheckCharAppearanceReddot(Char)
 end
 
 function Component:CheckWeaponAppearanceReddot(Weapon)
-  local Count = 0
-  local WeaponAccessoryNode = ReddotManager.GetTreeNode(CommonConst.DataType.WeaponAccessory)
-  Count = Count + (WeaponAccessoryNode and WeaponAccessoryNode.Count or 0)
-  local Data = DataMgr.Weapon[Weapon.WeaponId]
-  if Data and Data.SkinApplicationType then
-    for _, value in pairs(Data.SkinApplicationType) do
-      local NodeName = CommonConst.DataType.WeaponSkin .. (value or "")
-      local WeaponSkinNode = ReddotManager.GetTreeNode(NodeName)
-      Count = Count + (WeaponSkinNode and WeaponSkinNode.Count or 0)
-    end
-  end
-  return Count > 0
+  local Res = ArmoryUtils:GetWeaponAppearanceReddotCount(Weapon.WeaponId)
+  return Res.TotalCount > 0
 end
 
 function Component:UpdateSubTabReddotCommon(SubTabName)
@@ -251,7 +241,8 @@ function Component:AddSubTabReddotListen()
       self:UpdateSubTabReddotCommon(ArmoryUtils.ArmorySubTabNames.Attribute)
     end, self[self.ComparedWeaponName].WeaponId, WeaponType)
     self:AddWeaponAppearanceReddotListen(function(self, Count)
-      self:SubTabReddotFunc(ArmoryUtils.ArmorySubTabNames.Appearance, Count > 0)
+      local Res = ArmoryUtils:GetWeaponAppearanceReddotCount(self[self.ComparedWeaponName].WeaponId)
+      self:SubTabReddotFunc(ArmoryUtils.ArmorySubTabNames.Appearance, Res.TotalCount > 0)
     end, self[self.ComparedWeaponName].WeaponId)
   end
 end
@@ -515,7 +506,7 @@ function Component:RemoveCharGradeReddotListen()
   end
 end
 
-function Component:AddCharAppearanceReddotListen(Callback, CharId, Exclude)
+function Component:AddCharAppearanceReddotListen(Callback, CharId)
   if self.IsPreviewMode or self.NoReddot then
     return
   end
@@ -527,18 +518,8 @@ function Component:AddCharAppearanceReddotListen(Callback, CharId, Exclude)
   local Avatar = GWorld:GetAvatar()
   local CommonChar = Avatar.CommonChars[CharId]
   local LeafNodes = {}
-  Exclude = Exclude or {}
-  
-  local function IsExcluded(Type)
-    for key, value in pairs(Exclude) do
-      if value == Type then
-        return true
-      end
-    end
-  end
-  
   for _, Type in pairs(CommonConst.CharAccessoryTypes) do
-    if not IsExcluded(Type) then
+    if Type ~= CommonConst.CharAccessoryTypes.MVP then
       local LeafNodeName = CommonConst.DataType.CharAccessory .. Type
       LeafNodes[LeafNodeName] = ReddotManager.GetTreeNode(LeafNodeName) and 1 or nil
       for key, Skin in pairs(CommonChar.OwnedSkins) do
@@ -549,6 +530,11 @@ function Component:AddCharAppearanceReddotListen(Callback, CharId, Exclude)
   end
   if not self.CharAppearanceNodeNames[NodeName] and not IsEmptyTable(LeafNodes) then
     ReddotManager.AddListener(NodeName, self, Callback, LeafNodes)
+    self.CharAppearanceNodeNames[NodeName] = 1
+  end
+  NodeName = CommonConst.DataType.CharAccessory .. CommonConst.CharAccessoryTypes.MVP
+  if ReddotManager.GetTreeNode(NodeName) then
+    ReddotManager.AddListener(NodeName, self, Callback, nil, true)
     self.CharAppearanceNodeNames[NodeName] = 1
   end
   NodeName = CommonConst.DataType.Char .. CommonConst.DataType.Skin .. CharId
@@ -629,6 +615,22 @@ function Component:AddWeaponAppearanceReddotListen(Callback, WeaponId)
   if not self.WeaponAppearanceNodeNames[NodeName] and not IsEmptyTable(LeafNodes) then
     ReddotManager.AddListener(NodeName, self, Callback, LeafNodes)
     self.WeaponAppearanceNodeNames[NodeName] = 1
+  end
+  local NodeName = "WeaponStanceFX" .. WeaponId
+  LeafNodes = {}
+  local BattleWeaponData = DataMgr.BattleWeapon[WeaponId]
+  if BattleWeaponData.ModApplicationType then
+    for key, ApplicationType in pairs(BattleWeaponData.ModApplicationType) do
+      LeafNodeName = "WeaponStanceFX" .. ApplicationType
+      if not ReddotManager.GetTreeNode(LeafNodeName) then
+        ReddotManager.AddNode(LeafNodeName, nil, 1, nil)
+      end
+      LeafNodes[LeafNodeName] = ReddotManager.GetTreeNode(LeafNodeName) and 1 or nil
+    end
+    if not self.WeaponAppearanceNodeNames[NodeName] and not IsEmptyTable(LeafNodes) then
+      ReddotManager.AddListener(NodeName, self, Callback, LeafNodes)
+      self.WeaponAppearanceNodeNames[NodeName] = 1
+    end
   end
 end
 

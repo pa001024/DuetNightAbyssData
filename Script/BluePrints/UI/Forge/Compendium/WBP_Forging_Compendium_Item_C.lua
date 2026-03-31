@@ -1,5 +1,8 @@
 require("UnLua")
-local WBP_Forging_Compendium_Item_C = Class("BluePrints.UI.BP_EMUserWidget_C")
+local WBP_Forging_Compendium_Item_C = Class({
+  "BluePrints.UI.BP_EMUserWidget_C",
+  "BluePrints.Common.TimerMgr"
+})
 
 function WBP_Forging_Compendium_Item_C:OnListItemObjectSet(Content)
   self.Content = Content
@@ -11,11 +14,13 @@ function WBP_Forging_Compendium_Item_C:Init(Content)
   if Content.IsEmpty then
     return
   end
-  if self.Content.IsHold then
-    self.WBP_Archive_Item:PlayAnimation(self.WBP_Archive_Item.Gray_Normal)
-  else
-    self.WBP_Archive_Item:PlayAnimation(self.WBP_Archive_Item.Gray)
-  end
+  self:AddTimer(0.05, function()
+    if self.Content.IsHold then
+      self.WBP_Archive_Item:PlayAnimation(self.WBP_Archive_Item.Gray_Normal)
+    else
+      self.WBP_Archive_Item:PlayAnimation(self.WBP_Archive_Item.Gray)
+    end
+  end, nil, nil, nil, true)
 end
 
 function WBP_Forging_Compendium_Item_C:SetSelected(bIsSelected)

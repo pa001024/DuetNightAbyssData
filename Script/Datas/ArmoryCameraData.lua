@@ -3490,53 +3490,63 @@ return ReadOnly("ArmoryCameraData", {
     Time = 1.2
   },
   Char_MVP_Boy = {
-    BackwardLocation = T.RT_60,
     CameraFocal = 38.6,
     CameraName = "Char_MVP_Boy",
     Ease = 14,
-    ForwardLocation = T.RT_61,
-    Location = T.RT_62,
-    Rotation = T.RT_63,
+    Location = {
+      0,
+      408,
+      87
+    },
+    Rotation = T.RT_42,
     Time = 1.2
   },
   Char_MVP_Girl = {
-    BackwardLocation = T.RT_64,
     CameraFocal = 38.6,
     CameraName = "Char_MVP_Girl",
     Ease = 14,
-    ForwardLocation = T.RT_65,
-    Location = T.RT_66,
-    Rotation = T.RT_63,
+    Location = {
+      0,
+      375,
+      84
+    },
+    Rotation = T.RT_42,
     Time = 1.2
   },
   Char_MVP_Loli = {
-    BackwardLocation = T.RT_67,
     CameraFocal = 38.6,
     CameraName = "Char_MVP_Loli",
     Ease = 14,
-    ForwardLocation = T.RT_68,
-    Location = T.RT_69,
-    Rotation = T.RT_63,
+    Location = {
+      0,
+      340,
+      73
+    },
+    Rotation = T.RT_42,
     Time = 1.2
   },
   Char_MVP_Man = {
-    BackwardLocation = T.RT_70,
     CameraFocal = 38.6,
     CameraName = "Char_MVP_Man",
     Ease = 14,
-    ForwardLocation = T.RT_71,
-    Location = T.RT_72,
-    Rotation = T.RT_63,
+    Location = {
+      0,
+      450,
+      101
+    },
+    Rotation = T.RT_42,
     Time = 1.2
   },
   Char_MVP_Woman = {
-    BackwardLocation = T.RT_75,
     CameraFocal = 38.6,
     CameraName = "Char_MVP_Woman",
     Ease = 14,
-    ForwardLocation = T.RT_74,
-    Location = T.RT_73,
-    Rotation = T.RT_63,
+    Location = {
+      0,
+      430,
+      95
+    },
+    Rotation = T.RT_42,
     Time = 1.2
   },
   Char_Man = {

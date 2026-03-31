@@ -132,12 +132,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "1773296529860494",
-            startPort = "Out",
-            endQuest = "1773296529860493",
-            endPort = "In"
-          },
-          {
             startQuest = "1773296529860495",
             startPort = "Out",
             endQuest = "1773296529860496",
@@ -240,12 +234,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17739190943043348131",
-            startPort = "Out",
-            endQuest = "17732965665121406",
-            endPort = "In"
-          },
-          {
             startQuest = "17739191197843348939",
             startPort = "Out",
             endQuest = "17739191197843348940",
@@ -270,12 +258,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17739191197843348941",
-            startPort = "Out",
-            endQuest = "1773296324978109",
-            endPort = "Fail"
-          },
-          {
             startQuest = "1773296529860494",
             startPort = "Out",
             endQuest = "17739191033623348433",
@@ -291,6 +273,42 @@ return {
             startQuest = "1773296529860490",
             startPort = "Out",
             endQuest = "1773296529860495",
+            endPort = "In"
+          },
+          {
+            startQuest = "1773296529860494",
+            startPort = "Out",
+            endQuest = "1774866566119855714",
+            endPort = "In"
+          },
+          {
+            startQuest = "1774866566119855714",
+            startPort = "Out",
+            endQuest = "1773296529860493",
+            endPort = "In"
+          },
+          {
+            startQuest = "17739191197843348941",
+            startPort = "Out",
+            endQuest = "1774866589757856381",
+            endPort = "In"
+          },
+          {
+            startQuest = "1774866589757856381",
+            startPort = "Out",
+            endQuest = "1773296324978109",
+            endPort = "Fail"
+          },
+          {
+            startQuest = "17739190943043348131",
+            startPort = "Out",
+            endQuest = "1774866606598856880",
+            endPort = "In"
+          },
+          {
+            startQuest = "1774866606598856880",
+            startPort = "Out",
+            endQuest = "17732965665121406",
             endPort = "In"
           }
         },
@@ -313,7 +331,7 @@ return {
             key = "1773296324978109",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 2046.2167832167831, y = 1483.996794871795},
+            pos = {x = 2002.7167832167831, y = 1483.996794871795},
             propsData = {}
           },
           ["1773296529859483"] = {
@@ -752,6 +770,45 @@ return {
             propsData = {
               IsHide = false,
               AtmosphereTagList = {"Story_Eas", "Story_Inn"}
+            }
+          },
+          ["1774866566119855714"] = {
+            key = "1774866566119855714",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1454.373796791444, y = 540.0770053475936},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/1_1/0106_scene_cave_near_sea",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {104501, 104503},
+              bStoreToServer = false
+            }
+          },
+          ["1774866589757856381"] = {
+            key = "1774866589757856381",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1995.7600967659791, y = 1204.3363636363636},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
+          },
+          ["1774866606598856880"] = {
+            key = "1774866606598856880",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 4764.664858670741, y = 518.5506493506493},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
             }
           }
         },

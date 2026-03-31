@@ -469,6 +469,30 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "PhantomTalk_1104_Chest",
     WildcardClassification = "Story"
   },
+  PhotoEvent_Day1_2 = {
+    TextMapId = "PhotoEvent_Day1_2",
+    WildcardClassification = "Story"
+  },
+  PhotoEvent_Day2_2 = {
+    TextMapId = "PhotoEvent_Day2_2",
+    WildcardClassification = "Story"
+  },
+  PhotoEvent_Day3_2 = {
+    TextMapId = "PhotoEvent_Day3_2",
+    WildcardClassification = "Story"
+  },
+  PhotoEvent_Day5_2 = {
+    TextMapId = "PhotoEvent_Day5_2",
+    WildcardClassification = "Story"
+  },
+  PhotoEvent_Day6_2 = {
+    TextMapId = "PhotoEvent_Day6_2",
+    WildcardClassification = "Story"
+  },
+  PhotoEvent_Day7_2 = {
+    TextMapId = "PhotoEvent_Day7_2",
+    WildcardClassification = "Story"
+  },
   PlayerLevel_FirstObtain_Char = {
     TextMapId = "PlayerLevel_FirstObtain_Char",
     WildcardClassification = "Story"
@@ -603,6 +627,10 @@ return ReadOnly("TextMapWildcard", {
   },
   RegionReputation_RefreshTime = {
     TextMapId = "RegionReputation_RefreshTime",
+    WildcardClassification = "Story"
+  },
+  RegionReputation_RefreshTime01 = {
+    TextMapId = "RegionReputation_RefreshTime01",
     WildcardClassification = "Story"
   },
   SKILL_20407_DESC = {
@@ -1001,6 +1029,14 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "Title_10084",
     WildcardClassification = "Story"
   },
+  Title_10116 = {
+    TextMapId = "Title_10116",
+    WildcardClassification = "Story"
+  },
+  Title_10117 = {
+    TextMapId = "Title_10117",
+    WildcardClassification = "Story"
+  },
   Title_20044 = {
     TextMapId = "Title_20044",
     WildcardClassification = "Story"
@@ -1067,6 +1103,10 @@ return ReadOnly("TextMapWildcard", {
   },
   UI_BattlePass_RemainTime_Minute = {
     TextMapId = "UI_BattlePass_RemainTime_Minute",
+    WildcardClassification = "Story"
+  },
+  UI_BattlePass_ToBeExpand = {
+    TextMapId = "UI_BattlePass_ToBeExpand",
     WildcardClassification = "Story"
   },
   UI_BattleRoom_Count = {
@@ -1261,6 +1301,14 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "UI_Disptach_State_Vanish",
     WildcardClassification = "Story"
   },
+  UI_Event_ModDrop_ChallengeRemain = {
+    TextMapId = "UI_Event_ModDrop_ChallengeRemain",
+    WildcardClassification = "Story"
+  },
+  UI_Event_ModDrop_DropRemain = {
+    TextMapId = "UI_Event_ModDrop_DropRemain",
+    WildcardClassification = "Story"
+  },
   UI_FNNpc_Name_AnimalNvzhu = {
     TextMapId = "UI_FNNpc_Name_AnimalNvzhu",
     WildcardClassification = "Story"
@@ -1323,6 +1371,10 @@ return ReadOnly("TextMapWildcard", {
   },
   UI_ModGuideBook_Task_Collecting = {
     TextMapId = "UI_ModGuideBook_Task_Collecting",
+    WildcardClassification = "Story"
+  },
+  UI_ModHolding_Num = {
+    TextMapId = "UI_ModHolding_Num",
     WildcardClassification = "Story"
   },
   UI_Npc_Aside = {
@@ -1389,6 +1441,10 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "UI_PlayerHead_Name_30074",
     WildcardClassification = "Story"
   },
+  UI_QUEST_CONDITION_SoloTreasure = {
+    TextMapId = "UI_QUEST_CONDITION_SoloTreasure",
+    WildcardClassification = "Story"
+  },
   UI_Quest_StartTime = {
     TextMapId = "UI_Quest_StartTime",
     WildcardClassification = "Story"
@@ -1439,6 +1495,10 @@ return ReadOnly("TextMapWildcard", {
   },
   UI_SHOWNPC_DESC_SCENE2 = {
     TextMapId = "UI_SHOWNPC_DESC_SCENE2",
+    WildcardClassification = "Story"
+  },
+  UI_SendGift_Pay1 = {
+    TextMapId = "UI_SendGift_Pay1",
     WildcardClassification = "Story"
   },
   UI_SkillTree_Attr_Add = {

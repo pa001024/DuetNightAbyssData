@@ -77,9 +77,15 @@ function M:OnHit(SourceId)
     end
     self:TryGetRelativeActor()
     if self.RelativeActor ~= nil and self.RelativeActor.CheckAngle and self.RelativeActor:CheckAngle(self.RotateFactor) then
+      if self.RelativeActor.NotifyStartRotate then
+        self.RelativeActor:NotifyStartRotate()
+      end
       self:SetActorTickEnabled(true)
       
       local function DisableTick()
+        if self.RelativeActor and self.RelativeActor.NotifyStopRotate then
+          self.RelativeActor:NotifyStopRotate()
+        end
         if not self.IsInReturn then
           self:SetActorTickEnabled(false)
         end

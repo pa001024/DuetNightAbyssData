@@ -151,8 +151,8 @@
   },
   {
     "id": 1504,
-    "name": "UI_Skin_Name_1504",
-    "desc": "UI_Skin_Des_1504",
+    "name": "苏乙的衣饰",
+    "desc": "裁取三分青色，熔铸七分机巧，最后再借着晨风一缕，放飞少女的梦想与骄傲。",
     "icon": "T_Head_Suyi",
     "rarity": 5,
     "charId": 1504,
@@ -161,7 +161,7 @@
       "HeadSculpture": [
         {
           "id": 10031,
-          "name": "机枢少女的肖像",
+          "name": "機樞少女的肖像",
           "num": 1
         }
       ],
@@ -412,8 +412,8 @@
   },
   {
     "id": 3202,
-    "name": "UI_Skin_Name_3202",
-    "desc": "UI_Skin_Des_3202",
+    "name": "卡米拉的衣饰",
+    "desc": "瑰丽的光泽勾勒出令人屏息的曲线，举手投足，尽是酒香与夜色交融的氤氲吐息。",
     "icon": "T_Head_Kami",
     "rarity": 5,
     "charId": 3202,
@@ -422,7 +422,7 @@
       "HeadSculpture": [
         {
           "id": 10023,
-          "name": "Portrait : Camilla",
+          "name": "生意人的肖像",
           "num": 1
         }
       ],
@@ -713,7 +713,7 @@
   {
     "id": 150401,
     "name": "青羽天巡",
-    "desc": "青羽铸就云中客，一念乘风。",
+    "desc": "青羽鑄就雲中客，一念乘風。",
     "icon": "T_Head_Suyi01",
     "rarity": 5,
     "charId": 1504,
@@ -730,7 +730,7 @@
       "HeadSculpture": [
         {
           "id": 20006,
-          "name": "机枢少女的肖像·晴空",
+          "name": "機樞少女的肖像·晴空",
           "num": 1
         }
       ]
@@ -740,13 +740,13 @@
         "step": 2,
         "amount": 54,
         "currencyId": 1010,
-        "currency": "流光织针"
+        "currency": "流光織針"
       },
       {
         "step": 3,
         "amount": 72,
         "currencyId": 1010,
-        "currency": "流光织针"
+        "currency": "流光織針"
       }
     ]
   },
@@ -770,7 +770,7 @@
   },
   {
     "id": 180101,
-    "name": "子不語",
+    "name": "子不語·菲娜",
     "desc": "一汪幽影灑月夜，半卷書籤話鬼神。",
     "icon": "T_Head_Feina01",
     "rarity": 5,
@@ -848,7 +848,7 @@
   },
   {
     "id": 410101,
-    "name": "子不語",
+    "name": "子不語·黎瑟",
     "desc": "一汪幽影灑月夜，半卷書籤話鬼神。",
     "icon": "T_Head_Lise01",
     "rarity": 5,

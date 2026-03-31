@@ -12737,13 +12737,13 @@
         "id": 150401,
         "t": "Skin",
         "c": 1,
-        "n": "青羽天巡"
+        "n": "Sentinelle d’émeraude"
       },
       {
         "id": 3011002,
         "t": "WeaponSkin",
         "c": 1,
-        "n": "火力全开"
+        "n": "Feu déchaîné"
       },
       {
         "id": 20044,
@@ -12761,13 +12761,13 @@
         "id": 80046,
         "t": "CharAccessory",
         "c": 1,
-        "n": "喵喵游戏·薄荷"
+        "n": "Jeux félins – Menthe"
       },
       {
         "id": 10039,
         "t": "WeaponAccessory",
         "c": 1,
-        "n": "千机挂坠·薄荷"
+        "n": "Pendentif aux mille mécanismes – Menthe"
       }
     ]
   },
@@ -13819,7 +13819,7 @@
         "id": 20057,
         "t": "CharAccessory",
         "c": 1,
-        "n": "青羽护目·涅白"
+        "n": "Visière Fengshi – Blanc sakura"
       },
       {
         "id": 101,
@@ -13844,7 +13844,7 @@
         "id": 13022,
         "t": "CharAccessory",
         "c": 1,
-        "n": "乙鸟纸鸢·白樱"
+        "n": "Cerf-volant Yi – Blanc sakura"
       },
       {
         "id": 102,
@@ -13989,13 +13989,13 @@
         "id": 16010131,
         "t": "Skin",
         "c": 1,
-        "n": "叛逆风尚"
+        "n": "Style rebelle"
       },
       {
         "id": 16010231,
         "t": "Skin",
         "c": 1,
-        "n": "叛逆风尚"
+        "n": "Style rebelle"
       }
     ]
   },
@@ -14094,19 +14094,19 @@
         "id": 10096,
         "t": "CharAccessory",
         "c": 1,
-        "n": "羽毛笔·墨玉"
+        "n": "Plume d’écriture – Jade noir"
       },
       {
         "id": 30035,
         "t": "CharAccessory",
         "c": 1,
-        "n": "轻抚·涅白"
+        "n": "Caresse légère – Blanc ivoire"
       },
       {
         "id": 10029,
         "t": "HeadFrame",
         "c": 1,
-        "n": "失色烈火"
+        "n": "Flammes fanées"
       }
     ]
   },
@@ -27094,7 +27094,7 @@
         "id": 1024,
         "t": "Walnut",
         "c": 4,
-        "n": "密函：苏乙"
+        "n": "Mandat scellé : Su Yi"
       },
       {
         "id": 214,
@@ -27136,7 +27136,7 @@
         "id": 1024,
         "t": "Walnut",
         "c": 4,
-        "n": "密函：苏乙"
+        "n": "Mandat scellé : Su Yi"
       },
       {
         "id": 214,
@@ -27178,7 +27178,7 @@
         "id": 1024,
         "t": "Walnut",
         "c": 4,
-        "n": "密函：苏乙"
+        "n": "Mandat scellé : Su Yi"
       },
       {
         "id": 214,
@@ -27220,7 +27220,7 @@
         "id": 1024,
         "t": "Walnut",
         "c": 4,
-        "n": "密函：苏乙"
+        "n": "Mandat scellé : Su Yi"
       },
       {
         "id": 214,
@@ -27262,7 +27262,7 @@
         "id": 1024,
         "t": "Walnut",
         "c": 4,
-        "n": "密函：苏乙"
+        "n": "Mandat scellé : Su Yi"
       },
       {
         "id": 214,
@@ -28678,7 +28678,7 @@
         "id": 1024,
         "t": "Walnut",
         "c": 7,
-        "n": "密函：苏乙"
+        "n": "Mandat scellé : Su Yi"
       },
       {
         "id": 214,
@@ -28714,7 +28714,7 @@
         "id": 1024,
         "t": "Walnut",
         "c": 4,
-        "n": "密函：苏乙"
+        "n": "Mandat scellé : Su Yi"
       },
       {
         "id": 214,
@@ -35064,7 +35064,7 @@
         "id": 30040,
         "t": "CharAccessory",
         "c": 1,
-        "n": "夜明灯·焦糖"
+        "n": "Lanterne nocturne – Caramel"
       }
     ]
   },
@@ -35112,7 +35112,7 @@
         "id": 120002,
         "t": "Resource",
         "c": 1,
-        "n": "风息装饰代金券"
+        "n": "Bon d’accessoires Souffle du vent"
       },
       {
         "id": 100,
@@ -35130,7 +35130,7 @@
         "id": 30040,
         "t": "CharAccessory",
         "c": 1,
-        "n": "夜明灯·焦糖"
+        "n": "Lanterne nocturne – Caramel"
       },
       {
         "id": 100,
@@ -55579,7 +55579,7 @@
         "id": 150401,
         "t": "Mod",
         "c": 1,
-        "n": "Drone de Su Yi : Canon détonateur"
+        "n": "Mode de poursuite"
       }
     ]
   },
@@ -57433,7 +57433,7 @@
         "id": 10029,
         "t": "HeadFrame",
         "c": 1,
-        "n": "失色烈火"
+        "n": "Flammes fanées"
       }
     ]
   },
@@ -61488,7 +61488,7 @@
         "id": 1009,
         "t": "Resource",
         "c": 2,
-        "n": "星辉丝线"
+        "n": "Fil stellaire"
       },
       {
         "id": 20013,
@@ -62028,7 +62028,7 @@
         "id": 30119,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "微茫珍藏"
+        "n": "Trésors du Marché Voilé"
       },
       {
         "id": 211,
@@ -62137,14 +62137,14 @@
         "t": "Resource",
         "c": 1,
         "p": 1,
-        "n": "父辈余荫代金券"
+        "n": "Bon d’Héritage paternel"
       },
       {
         "id": 32010131,
         "t": "Skin",
         "c": 1,
         "p": 1,
-        "n": "叛逆风尚"
+        "n": "Style rebelle"
       },
       {
         "id": 30118,
@@ -62158,7 +62158,7 @@
         "t": "CharAccessory",
         "c": 1,
         "p": 1,
-        "n": "机枢齿轮"
+        "n": "Engrenage Jishu"
       },
       {
         "id": 30037,
@@ -62172,7 +62172,7 @@
         "t": "CharAccessory",
         "c": 1,
         "p": 1,
-        "n": "白鸟先生"
+        "n": "Monsieur l’Oiseau blanc"
       },
       {
         "id": 30104,
@@ -62302,7 +62302,7 @@
         "id": 221,
         "t": "Resource",
         "c": 1,
-        "n": "星耀硬币"
+        "n": "Pièce stellaire"
       }
     ]
   },
@@ -64589,7 +64589,7 @@
         "c": 1,
         "p": 10,
         "dp": 1,
-        "n": "Poursuite"
+        "n": "Décision"
       },
       {
         "id": 42413,
@@ -80344,21 +80344,21 @@
         "t": "Walnut",
         "c": 3,
         "p": 10000,
-        "n": "密函：鸣金遥"
+        "n": "Mandat scellé : Écho aurifère"
       },
       {
         "id": 2057,
         "t": "Walnut",
         "c": 1,
         "p": 8000,
-        "n": "密函：鸣金遥"
+        "n": "Mandat scellé : Écho aurifère"
       },
       {
         "id": 2057,
         "t": "Walnut",
         "c": 1,
         "p": 2000,
-        "n": "密函：鸣金遥"
+        "n": "Mandat scellé : Écho aurifère"
       },
       {
         "id": 10103,
@@ -80385,21 +80385,21 @@
         "t": "Walnut",
         "c": 3,
         "p": 10000,
-        "n": "密函：孤雏的羽迹"
+        "n": "Mandat scellé : Sillage solitaire"
       },
       {
         "id": 2055,
         "t": "Walnut",
         "c": 1,
         "p": 8000,
-        "n": "密函：孤雏的羽迹"
+        "n": "Mandat scellé : Sillage solitaire"
       },
       {
         "id": 2055,
         "t": "Walnut",
         "c": 1,
         "p": 2000,
-        "n": "密函：孤雏的羽迹"
+        "n": "Mandat scellé : Sillage solitaire"
       },
       {
         "id": 10101,
@@ -80426,21 +80426,21 @@
         "t": "Walnut",
         "c": 3,
         "p": 10000,
-        "n": "密函：切割齿轮"
+        "n": "Mandat scellé : Engrenage déchiqueté"
       },
       {
         "id": 2058,
         "t": "Walnut",
         "c": 1,
         "p": 8000,
-        "n": "密函：切割齿轮"
+        "n": "Mandat scellé : Engrenage déchiqueté"
       },
       {
         "id": 2058,
         "t": "Walnut",
         "c": 1,
         "p": 2000,
-        "n": "密函：切割齿轮"
+        "n": "Mandat scellé : Engrenage déchiqueté"
       },
       {
         "id": 10104,
@@ -80467,21 +80467,21 @@
         "t": "Walnut",
         "c": 3,
         "p": 10000,
-        "n": "密函：苏乙"
+        "n": "Mandat scellé : Su Yi"
       },
       {
         "id": 1024,
         "t": "Walnut",
         "c": 1,
         "p": 8000,
-        "n": "密函：苏乙"
+        "n": "Mandat scellé : Su Yi"
       },
       {
         "id": 1024,
         "t": "Walnut",
         "c": 1,
         "p": 2000,
-        "n": "密函：苏乙"
+        "n": "Mandat scellé : Su Yi"
       },
       {
         "id": 10101,
@@ -83391,7 +83391,7 @@
         "id": 4172,
         "t": "Pet",
         "c": 1,
-        "n": "青鸾贰型"
+        "n": "Qingluan Type II"
       },
       {
         "id": 6000004,
@@ -83739,7 +83739,7 @@
         "id": 41052,
         "t": "Resource",
         "c": 1,
-        "n": "休息一式"
+        "n": "Repos I"
       }
     ]
   },
@@ -83787,7 +83787,7 @@
         "id": 41053,
         "t": "Resource",
         "c": 1,
-        "n": "休息二式"
+        "n": "Repos II"
       },
       {
         "id": 211,
@@ -87507,7 +87507,7 @@
         "id": 41033,
         "t": "Resource",
         "c": 1,
-        "n": "Posture : Écran électronique"
+        "n": "Modules visionnaires"
       }
     ]
   },
@@ -87525,7 +87525,7 @@
         "id": 41056,
         "t": "Resource",
         "c": 1,
-        "n": "出拳"
+        "n": "Coup de poing"
       }
     ]
   }

@@ -232,13 +232,13 @@ T.RT_98 = {
   310303
 }
 T.RT_99 = {
-  1001002,
+  1001009,
   310302,
   310304
 }
-T.RT_100 = {1001102, 310302}
-T.RT_101 = {1012102, 310302}
-T.RT_102 = {1012202, 310302}
+T.RT_100 = {1001109, 310302}
+T.RT_101 = {1012109, 310302}
+T.RT_102 = {1012209, 310302}
 T.RT_103 = {
   320101,
   320102,
@@ -6156,7 +6156,7 @@ return ReadOnly("Model", {
     AudioPrefix = "Boss_Juque_",
     CondemnBoneName = T.RT_76,
     DamageFXSockets = T.RT_4,
-    HitCapsules = {han_r = "ik_hand_r", hand_l = "ik_hand_l"},
+    HitCapsules = {hand_l = "ik_hand_l", hand_r = "ik_hand_r"},
     HitMontageRule = "BossJuqueStage2",
     ModelId = 851802,
     ModelScale = 10,
@@ -8910,7 +8910,7 @@ return ReadOnly("Model", {
     MontageFolder = "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/",
     MontagePrefix = "Yeer_",
     NPCAnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Npc/CharacterNpc/Yeer/ABP_NPC_Yeer.ABP_NPC_Yeer_C'",
-    PartModelsId = {1013102, 310302},
+    PartModelsId = {1013109, 310302},
     SkeletonMeshPath = "Asset/Char/Player/Char017_Yeer/Mesh/Yeer_Face_SM.Yeer_Face_SM"
   },
   [32010010] = {

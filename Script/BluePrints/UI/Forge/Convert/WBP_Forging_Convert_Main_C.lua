@@ -323,7 +323,8 @@ function WBP_Forging_Convert_Main_C:OnEMListItemClicked(Item)
     end
     ReddotManager.DecreaseLeafNodeCount("ForgeConvert")
     if CurWidget then
-      CurWidget:SetNewIcon(false)
+      Item.IsNew = false
+      CurWidget:SetNewIcon(Item.IsNew)
     end
   end
   if CurWidget then

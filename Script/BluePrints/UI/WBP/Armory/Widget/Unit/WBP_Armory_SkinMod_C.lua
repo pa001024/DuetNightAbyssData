@@ -70,7 +70,7 @@ function M:Init(Params)
   end
   self:StopAllAnimations()
   self:PlayAnimation(self.NormalAnim)
-  if Params.ForbidModBtn then
+  if Params.ForbidModBtn or not self.HasMod then
     self.Button_Mod:SetVisibility(UIConst.VisibilityOp.Collapsed)
   else
     self.Button_Mod:SetVisibility(UIConst.VisibilityOp.Visible)

@@ -90,6 +90,9 @@ function Component:OnDrop(MyGeometry, PointerEvent, Operation)
       local Record = BagGameModel:FindPlacedItemByWidget(self)
       if Record and Record.Cells and #Record.Cells > 0 then
         local Cell = Record.Cells[1]
+        if self.PlayScreen.FinalizeDropHighlight then
+          self.PlayScreen:FinalizeDropHighlight(Cell.Row, Cell.Col, DragUI)
+        end
         local bSuccess = self.PlayScreen:PlaceItemAtCell(Cell.Row, Cell.Col, DragUI, Operation)
         return bSuccess
       end

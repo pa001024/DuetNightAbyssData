@@ -890,5 +890,32 @@ return ReadOnly("SystemGuide", {
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_YuBo.story",
     SysGuideId = 2106
+  },
+  [2108] = {
+    FirstSeenTag = "TRLMTerra",
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideSkip = 1,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_TRLMTerra.story",
+    SysGuideId = 2108
+  },
+  [2109] = {
+    FirstSeenTag = "SubRebsign",
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideSkip = 1,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_SubRebsign.story",
+    SysGuideId = 2109
+  },
+  [2110] = {
+    FirstSeenTag = "IntDrone",
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideSkip = 1,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_IntDrone.story",
+    SysGuideId = 2110
   }
 })

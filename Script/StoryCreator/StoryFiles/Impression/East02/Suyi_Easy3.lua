@@ -78,12 +78,6 @@ return {
       questNodeData = {
         lineData = {
           {
-            startQuest = "17742692730963378400",
-            startPort = "Out",
-            endQuest = "17742691623171381726",
-            endPort = "Success"
-          },
-          {
             startQuest = "17742691623171381725",
             startPort = "QuestStart",
             endQuest = "17743489170772978287",
@@ -94,6 +88,18 @@ return {
             startPort = "Out",
             endQuest = "17742692730963378400",
             endPort = "In"
+          },
+          {
+            startQuest = "17742692730963378400",
+            startPort = "Out",
+            endQuest = "17747747037601702184",
+            endPort = "In"
+          },
+          {
+            startQuest = "17747747037601702184",
+            startPort = "Out",
+            endQuest = "17742691623171381726",
+            endPort = "Success"
           }
         },
         nodeData = {
@@ -169,10 +175,22 @@ return {
               OptionType = "normal",
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
-              SwitchToMaster = "Player",
-              PlayerSwitchEmoIdle = true,
+              SwitchToMaster = "None",
+              PlayerSwitchEmoIdle = false,
               NormalOptions = {},
               OverrideFailBlend = false
+            }
+          },
+          ["17747747037601702184"] = {
+            key = "17747747037601702184",
+            type = "ShowOrHideTaskIndicatorNode",
+            name = "显示/隐藏任务指引点节点",
+            pos = {x = 2086, y = 310},
+            propsData = {
+              IsShow = true,
+              bOpenRangeEffect = false,
+              GuideType = "P",
+              GuideName = "TXSB3"
             }
           }
         },

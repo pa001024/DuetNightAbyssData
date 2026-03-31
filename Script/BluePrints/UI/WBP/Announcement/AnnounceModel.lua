@@ -65,7 +65,12 @@ function M:LoadHtmlContentV2(Conf, Callback, ContentSize)
     if not Conf.HtmlUrl or not UBlueprintPathsLibrary.FileExists(HtmlPath) then
       URuntimeCommonFunctionLibrary.SaveFile(HtmlPath, HtmlText)
     end
-    Conf.HtmlUrl = string.format("http://localhost:%s/AnnounceWeb/%s.html", self.AHSS:GetPortId(), Conf.NoticeID)
+    if AnnounceCommon.PlatformName ~= CommonConst.CHANNEL_OS.IOS then
+      Conf.HtmlUrl = string.format("http://localhost:%s/AnnounceWeb/%s.html", self.AHSS:GetPortId(), Conf.NoticeID)
+    else
+      HtmlPath = MiscUtils.CorrectUrl(HtmlPath)
+      Conf.HtmlUrl = string.format("file://%s", HtmlPath)
+    end
     Callback(Conf.HtmlUrl, HtmlText)
     if Conf.UIStyle == AnnounceCommon.ContentUIStyle.ImageOnly and Conf.HasLinkImage == nil then
       Conf.HasLinkImage = nil ~= string.match(HtmlText, "data%-url")

@@ -244,6 +244,36 @@ return {
             startPort = "Out",
             endQuest = "177357190340222793079",
             endPort = "In"
+          },
+          {
+            startQuest = "17678537949071014323",
+            startPort = "QuestStart",
+            endQuest = "17747775733221585",
+            endPort = "In"
+          },
+          {
+            startQuest = "17747775733221585",
+            startPort = "Out",
+            endQuest = "17747775986662175",
+            endPort = "In"
+          },
+          {
+            startQuest = "17747775986662175",
+            startPort = "Out",
+            endQuest = "17747775848381819",
+            endPort = "In"
+          },
+          {
+            startQuest = "17747775848381819",
+            startPort = "Out",
+            endQuest = "17747776383722964",
+            endPort = "In"
+          },
+          {
+            startQuest = "17747776383722964",
+            startPort = "Out",
+            endQuest = "17747775733221585",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -326,7 +356,7 @@ return {
             key = "1768979797227360",
             type = "CreatePhantomNode",
             name = "召唤/销毁剧情魅影",
-            pos = {x = 1478.272546230441, y = 111.51991465149358},
+            pos = {x = 1231.129689087584, y = 227.23420036577932},
             propsData = {
               IsCreate = true,
               IsClearOtherPhantom = true,
@@ -348,7 +378,7 @@ return {
             pos = {x = 1560.2937245968235, y = 496.44018303171214},
             propsData = {
               KillMonsterType = "Nums",
-              MonsterNeedNums = 50,
+              MonsterNeedNums = 150,
               IsShow = false,
               GuideType = "P",
               GuideName = ""
@@ -358,7 +388,7 @@ return {
             key = "1772010448287462",
             type = "SetPhantomStatusNode",
             name = "苏乙魅影Buff",
-            pos = {x = 1915.7116684308926, y = 74.24245751950335},
+            pos = {x = 1554.283097002321, y = 174.24245751950335},
             propsData = {
               PhantomRoleId = 215,
               BuffList = {
@@ -408,7 +438,7 @@ return {
             key = "177252515020710463548",
             type = "SetPhantomStatusNode",
             name = "刻舟魅影Buff",
-            pos = {x = 1907.5237741421997, y = -114.50696552302495},
+            pos = {x = 2118.9523455707713, y = 46.9216059055465},
             propsData = {
               PhantomRoleId = 213,
               BuffList = {
@@ -446,7 +476,7 @@ return {
             key = "177313243496523347324",
             type = "ChangeStaticCreatorNode",
             name = "生成空气墙",
-            pos = {x = 1201.251598868441, y = -78.27505970330309},
+            pos = {x = 2068.3944560112986, y = -181.13220256044593},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,
@@ -470,7 +500,7 @@ return {
             key = "177313243496523347325",
             type = "ChangeStaticCreatorNode",
             name = "生成钩锁点",
-            pos = {x = 1207.293855677014, y = -232.27039484215163},
+            pos = {x = 1565.8652842484428, y = -157.98468055643735},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,
@@ -578,14 +608,14 @@ return {
             key = "17732382418909479293",
             type = "ShowGuideMainNode",
             name = "显示图文引导",
-            pos = {x = 1470.173913043478, y = -16.434782608695688},
+            pos = {x = 1554.4596273291922, y = -3.57763975155283},
             propsData = {GuideId = 123}
           },
           ["17733009149532551946"] = {
             key = "17733009149532551946",
             type = "ChangeRoleNode",
             name = "切换角色",
-            pos = {x = 1158.7790238775854, y = -368.8663261574692},
+            pos = {x = 1590.2075953061567, y = -320.2948975860406},
             propsData = {QuestRoleId = 24010102, IsPlayFX = false}
           },
           ["177357147481021949000"] = {
@@ -638,6 +668,57 @@ return {
               MessageType = "GameMode",
               MessageContent = "SWSCannon_Talk",
               UnitId = -1
+            }
+          },
+          ["17747775733221585"] = {
+            key = "17747775733221585",
+            type = "BossBattleFinishNode",
+            name = "上去了",
+            pos = {x = 1780.6606810587077, y = -723.4006681724077},
+            propsData = {
+              SendMessage = "",
+              FinishCondition = "SWSCannon_Up"
+            }
+          },
+          ["17747775848381819"] = {
+            key = "17747775848381819",
+            type = "BossBattleFinishNode",
+            name = "玩家下来了",
+            pos = {x = 2310.0531676326045, y = -719.5103310607443},
+            propsData = {
+              SendMessage = "",
+              FinishCondition = "SWSCannon_Down"
+            }
+          },
+          ["17747775986662175"] = {
+            key = "17747775986662175",
+            type = "SetPhantomStatusNode",
+            name = "苏乙魅影Buff",
+            pos = {x = 2045.6135124601901, y = -835.0621521469542},
+            propsData = {
+              PhantomRoleId = 215,
+              BuffList = {
+                {
+                  Id = 312,
+                  LastTime = -1,
+                  Value = -1
+                },
+                {
+                  Id = 305,
+                  LastTime = -1,
+                  Value = -1
+                }
+              }
+            }
+          },
+          ["17747776383722964"] = {
+            key = "17747776383722964",
+            type = "RemovePhantomBuffsNode",
+            name = "移除魅影Buff",
+            pos = {x = 2009.8940955512671, y = -539.6528049661495},
+            propsData = {
+              PhantomRoleId = 215,
+              RemoveBuffs = {312, 305}
             }
           }
         },

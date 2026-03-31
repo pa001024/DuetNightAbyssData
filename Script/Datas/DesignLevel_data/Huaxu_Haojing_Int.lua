@@ -1,5 +1,10 @@
 return {
   StaticCreator = {
+    ["242350046"] = {
+      CreatorId = 242350046,
+      UnitType = "Drop",
+      UnitId = 11218
+    },
     ["242350039"] = {
       CreatorId = 242350039,
       UnitType = "Drop",
@@ -25,43 +30,13 @@ return {
       UnitType = "Mechanism",
       UnitId = 1
     },
-    ["2350036"] = {
-      CreatorId = 2350036,
-      UnitType = "Mechanism",
-      UnitId = 1
-    },
-    ["2350037"] = {
-      CreatorId = 2350037,
-      UnitType = "Mechanism",
-      UnitId = 1
-    },
-    ["162350038"] = {
-      CreatorId = 162350038,
-      UnitType = "Mechanism",
-      UnitId = 49006217
-    },
-    ["2350012"] = {
-      CreatorId = 2350012,
-      UnitType = "Mechanism",
-      UnitId = 39029
-    },
-    ["2350014"] = {
-      CreatorId = 2350014,
-      UnitType = "Mechanism",
-      UnitId = 39029
-    },
-    ["2350024"] = {
-      CreatorId = 2350024,
-      UnitType = "Mechanism",
-      UnitId = 1
-    },
-    ["2350042"] = {
-      CreatorId = 2350042,
-      UnitType = "Mechanism",
-      UnitId = 39029
-    },
     ["242350043"] = {
       CreatorId = 242350043,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["2350036"] = {
+      CreatorId = 2350036,
       UnitType = "Mechanism",
       UnitId = 1
     },
@@ -75,10 +50,30 @@ return {
       UnitType = "Mechanism",
       UnitId = 1
     },
-    ["242350046"] = {
-      CreatorId = 242350046,
-      UnitType = "Drop",
-      UnitId = 11218
+    ["2350037"] = {
+      CreatorId = 2350037,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["162350038"] = {
+      CreatorId = 162350038,
+      UnitType = "Mechanism",
+      UnitId = 49006217
+    },
+    ["162350047"] = {
+      CreatorId = 162350047,
+      UnitType = "Mechanism",
+      UnitId = 70117
+    },
+    ["162350048"] = {
+      CreatorId = 162350048,
+      UnitType = "Mechanism",
+      UnitId = 70118
+    },
+    ["2350024"] = {
+      CreatorId = 2350024,
+      UnitType = "Mechanism",
+      UnitId = 1
     }
   },
   ManualItem = {},

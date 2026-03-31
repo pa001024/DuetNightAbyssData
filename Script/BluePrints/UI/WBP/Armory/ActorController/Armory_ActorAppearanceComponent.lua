@@ -375,7 +375,7 @@ function M:SetGamePauseIfNeed(bPause)
           self.LastUIPauseGameMap = nil
         end
       else
-        local UIPauseGameMap = UIManager(self.ViewUI).UIPauseGameMap
+        local UIPauseGameMap = UIManager(self.ViewUI).UIPauseGameMap or {}
         self.LastUIPauseGameMap = {}
         for key, value in pairs(UIPauseGameMap) do
           self.LastUIPauseGameMap[key] = value
@@ -403,10 +403,8 @@ function M:PlaySequence(Params)
 end
 
 function M:ReplaySequence()
-  if self.SequenceActorController then
-    self.SequenceActorController:ReplaySequence()
-  elseif self.LastSequenceInfo then
-    self:PlaySequence(self.LastSequenceInfo)
+  if self.SequenceActorController and self.SequenceActorController.LastSequenceInfo then
+    self:PlaySequence(self.SequenceActorController.LastSequenceInfo)
   end
 end
 

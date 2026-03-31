@@ -18,11 +18,7 @@ return ReadOnly("QuestBattleWheel", {
   },
   [10001] = {QuestBattleWheelID = 10001, ResourceId1 = 42002},
   [10002] = {QuestBattleWheelID = 10002, ResourceId1 = 42002},
-  [10003] = {
-    QuestBattleWheelID = 10003,
-    ResourceId1 = 42001,
-    ResourceId2 = 42002
-  },
+  [10003] = {QuestBattleWheelID = 10003, ResourceId1 = 42001},
   [10004] = {
     QuestBattleWheelID = 10004,
     ResourceId1 = 42002,

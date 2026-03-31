@@ -2122,6 +2122,8 @@ return ReadOnly("UniversalConfig", {
     IfStartStoryMode = 1,
     IfWaitDead = 1,
     RegionDataType = T.RT_3,
+    StartBlackScreen = T.RT_4,
+    SuccessBlackScreen = T.RT_4,
     UniversalConfigId = 12020513
   },
   [12020602] = {

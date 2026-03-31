@@ -15,14 +15,44 @@ function M:CommonInitInfo(Info)
 end
 
 function M:OpenMechanism(PlayerId)
-  DebugPrint("ayff test BP_DongGuoDarkCloud_C OpenMechanism PlayerId:", PlayerId)
+  self:TryMoveChildCloudsOnInteract()
+  self:AddTimer(0.2, function()
+    self.IsCanDestroy = true
+  end, false)
+end
+
+function M:GetValidChildCloudCount()
+  local Count = 0
   for _, ChildCloud in pairs(self.ChildClouds or {}) do
     if IsValid(ChildCloud) then
-      ChildCloud:MoveToTarget()
+      Count = Count + 1
     end
   end
-  self:AddTimer(1, function()
-    self.IsCanDestroy = true
+  return Count
+end
+
+function M:TryMoveChildCloudsOnInteract()
+  if not IsValid(self) then
+    return
+  end
+  local TargetCount = self.ChildCloudNum or 0
+  local ValidCount = self:GetValidChildCloudCount()
+  if TargetCount <= ValidCount then
+    self.IsWaitingChildCloudBind = false
+    for _, ChildCloud in pairs(self.ChildClouds or {}) do
+      if IsValid(ChildCloud) then
+        ChildCloud:MoveToTarget()
+      end
+    end
+    return
+  end
+  if self.IsWaitingChildCloudBind then
+    return
+  end
+  self.IsWaitingChildCloudBind = true
+  self:AddTimer(0.1, function()
+    self.IsWaitingChildCloudBind = false
+    self:TryMoveChildCloudsOnInteract()
   end, false)
 end
 
@@ -46,7 +76,7 @@ function M:PrewarmChildClouds()
   local GameMode = UE4.UGameplayStatics.GetGameMode(self)
   GameMode:TriggerActiveStaticCreator(StaticIds)
   local Loc = self:K2_GetActorLocation()
-  self:AddTimer(1, function()
+  self:AddTimer(0.1, function()
     self:TryBindChildClouds(ExploreGroup, GameMode, Loc)
   end, false)
 end
@@ -72,11 +102,9 @@ function M:TryBindChildClouds(ExploreGroup, GameMode, Loc)
   end
   if #TempChildClouds >= self.ChildCloudNum then
     self.ChildClouds = TempChildClouds
-    DebugPrint("ayff test BP_DongGuoDarkCloud_C TryBindChildClouds ChildClouds Count:", #TempChildClouds)
     return
   end
-  DebugPrint("ayff test BP_DongGuoDarkCloud_C TryBindChildClouds ChildClouds Count:", #TempChildClouds)
-  self:AddTimer(1, function()
+  self:AddTimer(0.1, function()
     self:TryBindChildClouds(ExploreGroup, GameMode, Loc)
   end, false)
 end

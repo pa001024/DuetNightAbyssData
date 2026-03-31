@@ -22,6 +22,16 @@ function M:OnAddedToFocusPath(InFocusEvent)
   if AnnounceController:IsGamepad() then
     self.Btn_Area:SetCheckedNoNotify(true)
     self:OnClick()
+    self.Parent.WebContent:ExecuteJavascript("setCtrlType(\"\")")
+  end
+end
+
+function M:OnRemovedFromFocusPath(InFocusEvent)
+  if AnnounceController:IsGamepad() and self.Content == self.Parent.CurContent then
+    local GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(self)
+    local InputType = GameInputModeSubsystem:GetCurrentInputType()
+    local GamePadName = GameInputModeSubsystem:GetCurrentGamepadName()
+    self.Parent:UpdateWebOnInputTypeChange(InputType, GamePadName)
   end
 end
 

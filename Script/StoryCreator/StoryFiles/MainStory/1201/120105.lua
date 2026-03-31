@@ -966,7 +966,7 @@ return {
                   AroundPlayer = false
                 }
               },
-              FreezeWorldComposition = false,
+              FreezeWorldComposition = true,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
               OverrideFailBlend = false
@@ -1418,7 +1418,7 @@ return {
                   AroundPlayer = false
                 }
               },
-              FreezeWorldComposition = false,
+              FreezeWorldComposition = true,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
               OverrideFailBlend = false
@@ -1506,7 +1506,7 @@ return {
             key = "173080027464112567030",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 3187.659318489096, y = 457.4700937135669},
+            pos = {x = 3247.659318489096, y = 459.4700937135669},
             propsData = {ModeType = 0}
           },
           ["173080027464112567031"] = {
@@ -1534,7 +1534,7 @@ return {
             key = "173080072999313379658",
             type = "TalkNode",
             name = "【53】刻舟对话",
-            pos = {x = 2631.161730539086, y = 445.3777066400383},
+            pos = {x = 2603.161730539086, y = 441.3777066400383},
             propsData = {
               IsNpcNode = true,
               NpcNodeInteractiveName = "",
@@ -1624,7 +1624,7 @@ return {
             key = "17650326072902887056",
             type = "ChangeStaticCreatorNode",
             name = "生成刻舟",
-            pos = {x = 2908, y = 458.00000000000006},
+            pos = {x = 2922, y = 454.00000000000006},
             propsData = {
               ActiveEnable = false,
               EnableBlackScreenSync = true,

@@ -439,7 +439,11 @@ return {
         },
         {
           RecorderId = 11,
-          SequenceState = {1, 2}
+          SequenceState = {
+            1,
+            2,
+            3
+          }
         },
         {
           RecorderId = 12,

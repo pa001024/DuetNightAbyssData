@@ -1441,7 +1441,7 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsPlayBlackScreenOnComplete = false,
+        bIsPlayBlackScreenOnComplete = true,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
         ResurgencePoint = "",
@@ -1969,7 +1969,7 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsPlayBlackScreenOnComplete = false,
+        bIsPlayBlackScreenOnComplete = true,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
         ResurgencePoint = "",
@@ -1988,18 +1988,18 @@ return {
           {
             startQuest = "176346559920514191618",
             startPort = "Out",
+            endQuest = "17748766669553030",
+            endPort = "In"
+          },
+          {
+            startQuest = "17748766669553030",
+            startPort = "Out",
             endQuest = "17623983400251314939",
             endPort = "Success"
           },
           {
             startQuest = "17623983400251314938",
             startPort = "QuestStart",
-            endQuest = "176734266064792218901",
-            endPort = "In"
-          },
-          {
-            startQuest = "176734266064792218901",
-            startPort = "Out",
             endQuest = "176346559920514191618",
             endPort = "In"
           }
@@ -2009,7 +2009,7 @@ return {
             key = "17623983400251314938",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 800, y = 300},
+            pos = {x = 980, y = 340.8},
             propsData = {ModeType = 0}
           },
           ["17623983400251314939"] = {
@@ -2090,7 +2090,7 @@ return {
             key = "176734266064792218901",
             type = "ChangeStaticCreatorNode",
             name = "生成/销毁节点",
-            pos = {x = 1106.2851055665467, y = 321.03844800809},
+            pos = {x = 1328.1285838274162, y = 486.2210567037422},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,
@@ -2098,6 +2098,23 @@ return {
               EnableFadeOut = false,
               NewTargetPointName = "",
               StaticCreatorIdList = {242420060}
+            }
+          },
+          ["17748766669553030"] = {
+            key = "17748766669553030",
+            type = "PickUpNode",
+            name = "拾取物品",
+            pos = {x = 2108.8400584593373, y = 371.19390710972056},
+            propsData = {
+              bActiveEnable = true,
+              StaticCreatorIdList = {242420254},
+              QuestPickupId = -1,
+              UnitId = 11231,
+              UnitCount = 1,
+              bGuideUIEnable = true,
+              GuideType = "P",
+              GuidePointName = "jingyuandrop",
+              IsUseCount = false
             }
           }
         },
@@ -2153,12 +2170,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17623983401771314951",
-            startPort = "QuestStart",
-            endQuest = "176726494106882566002",
-            endPort = "In"
-          },
-          {
             startQuest = "176726494106882566002",
             startPort = "Out",
             endQuest = "176726495495882566283",
@@ -2168,12 +2179,6 @@ return {
             startQuest = "176726495495882566283",
             startPort = "Out",
             endQuest = "176726495552982566306",
-            endPort = "In"
-          },
-          {
-            startQuest = "176726495552982566306",
-            startPort = "Out",
-            endQuest = "176726495596482566318",
             endPort = "In"
           },
           {
@@ -2204,6 +2209,18 @@ return {
             startQuest = "177418524152418964879",
             startPort = "Out",
             endQuest = "176250715858522831274",
+            endPort = "In"
+          },
+          {
+            startQuest = "17623983401771314951",
+            startPort = "QuestStart",
+            endQuest = "17748767788083766",
+            endPort = "In"
+          },
+          {
+            startQuest = "17748767788083766",
+            startPort = "Out",
+            endQuest = "176726495596482566318",
             endPort = "In"
           }
         },
@@ -2377,7 +2394,7 @@ return {
             key = "176726495596482566318",
             type = "GoToNode",
             name = "前往",
-            pos = {x = 1319.4929742822205, y = 400.847815523859},
+            pos = {x = 1234.947519736766, y = 515.3932700693135},
             propsData = {
               GuideUIEnable = true,
               StaticCreatorId = 2420045,
@@ -2411,6 +2428,20 @@ return {
               SoundStateType = 3,
               SoundPriority = 0,
               SoundType = 0
+            }
+          },
+          ["17748767788083766"] = {
+            key = "17748767788083766",
+            type = "ChangeStaticCreatorNode",
+            name = "生成/销毁节点",
+            pos = {x = 928.5333145115751, y = 515.8450028232636},
+            propsData = {
+              ActiveEnable = true,
+              EnableBlackScreenSync = false,
+              EnableFadeIn = false,
+              EnableFadeOut = false,
+              NewTargetPointName = "",
+              StaticCreatorIdList = {242420060}
             }
           }
         },
@@ -2992,7 +3023,7 @@ return {
       key = "17623983408331314998",
       type = "StoryNode",
       name = "回议事区找苏乙",
-      pos = {x = 3612.5739000255257, y = 799.6377217166433},
+      pos = {x = 3613.8239000255257, y = 799.6377217166433},
       propsData = {
         QuestId = 12020506,
         QuestDescriptionComment = "",
@@ -3023,19 +3054,31 @@ return {
       questNodeData = {
         lineData = {
           {
-            startQuest = "17623983408331315003",
-            startPort = "QuestStart",
-            endQuest = "176250583812620869417",
-            endPort = "In"
-          },
-          {
             startQuest = "176250583812620869417",
             startPort = "Out",
             endQuest = "176250584304820869561",
             endPort = "In"
           },
           {
+            startQuest = "17623983408331315003",
+            startPort = "QuestStart",
+            endQuest = "17746010432218529",
+            endPort = "In"
+          },
+          {
+            startQuest = "17746010432218529",
+            startPort = "Out",
+            endQuest = "176250583812620869417",
+            endPort = "In"
+          },
+          {
             startQuest = "176250584304820869561",
+            startPort = "Out",
+            endQuest = "17746017739111282411",
+            endPort = "In"
+          },
+          {
+            startQuest = "17746017739111282411",
             startPort = "Out",
             endQuest = "17623983408331315004",
             endPort = "Success"
@@ -3131,6 +3174,34 @@ return {
               NormalOptions = {},
               OverrideFailBlend = false
             }
+          },
+          ["17746010432218529"] = {
+            key = "17746010432218529",
+            type = "ChangeStaticCreatorNode",
+            name = "生成/销毁节点",
+            pos = {x = 1183.5766917293233, y = 300.85418693793304},
+            propsData = {
+              ActiveEnable = true,
+              EnableBlackScreenSync = false,
+              EnableFadeIn = false,
+              EnableFadeOut = false,
+              NewTargetPointName = "",
+              StaticCreatorIdList = {242360104, 242360103}
+            }
+          },
+          ["17746017739111282411"] = {
+            key = "17746017739111282411",
+            type = "ChangeStaticCreatorNode",
+            name = "生成/销毁节点",
+            pos = {x = 2232.2498683205345, y = 375.6698611502022},
+            propsData = {
+              ActiveEnable = false,
+              EnableBlackScreenSync = false,
+              EnableFadeIn = false,
+              EnableFadeOut = false,
+              NewTargetPointName = "",
+              StaticCreatorIdList = {242360104, 242360103}
+            }
           }
         },
         commentData = {
@@ -3148,7 +3219,7 @@ return {
       key = "17623983409931315011",
       type = "StoryNode",
       name = "去和刻舟看月亮",
-      pos = {x = 3299.3828827095085, y = 783.964020417942},
+      pos = {x = 3298.4151407740246, y = 783.964020417942},
       propsData = {
         QuestId = 12020505,
         QuestDescriptionComment = "",
@@ -3436,11 +3507,10 @@ return {
               GuideType = "N",
               GuidePointName = "Npc_12020503suyi_242360063",
               DelayShowGuideTime = 0,
-              bUseFlowAssetActors = true,
               IsPlayerTurnToNPC = true,
-              IsNPCTurnToPlayer = true,
-              FirstDialogueId = 0,
-              FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1202/12045601.12045601'",
+              IsNPCTurnToPlayer = false,
+              FirstDialogueId = 12045601,
+              FlowAssetPath = "",
               TalkType = "Impression",
               BlendInTime = 0,
               BlendOutTime = 0,
@@ -3466,6 +3536,7 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              TalkActors = {},
               OptionType = "normal",
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
@@ -3483,13 +3554,13 @@ return {
             propsData = {
               AllQuestOptions = {
                 {
-                  IsNeedFinish = false,
-                  BranchQuestName = "Description_120205_4",
+                  IsNeedFinish = true,
+                  BranchQuestName = "Description_120205_5",
                   TargetBranchQuestKey = ""
                 },
                 {
                   IsNeedFinish = false,
-                  BranchQuestName = "Description_120205_5",
+                  BranchQuestName = "Description_120205_4",
                   TargetBranchQuestKey = ""
                 }
               },
@@ -3535,9 +3606,9 @@ return {
             pos = {x = 2231.4852096612462, y = 427.1365246900123},
             propsData = {
               ActiveEnable = false,
-              EnableBlackScreenSync = false,
+              EnableBlackScreenSync = true,
               EnableFadeIn = false,
-              EnableFadeOut = false,
+              EnableFadeOut = true,
               NewTargetPointName = "",
               StaticCreatorIdList = {242360097, 242360101}
             }

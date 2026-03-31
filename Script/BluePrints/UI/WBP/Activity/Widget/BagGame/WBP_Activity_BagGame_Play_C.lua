@@ -9,22 +9,14 @@ M._components = {
   "BluePrints.UI.WBP.Activity.Widget.BagGame.WBP_Activity_BagGame_Play_C_GamepadComp"
 }
 
-local function FindAndRelinkEntry(DisplayedWidgets, ContentData, DisPlayItemId)
+local function FindEntryByContent(DisplayedWidgets, ContentData)
   if not DisplayedWidgets then
     return nil
   end
   for i = 1, DisplayedWidgets:Length() do
     local Entry = DisplayedWidgets:GetRef(i)
-    if Entry then
-      if Entry.Content == ContentData then
-        return Entry
-      end
-      if not Entry.IsEmpty and Entry.DisPlayItemId == DisPlayItemId then
-        Entry.Content = ContentData
-        Entry.PlayScreen = ContentData.PlayScreen
-        Entry.IsEmpty = ContentData.IsEmpty or false
-        return Entry
-      end
+    if Entry and Entry.Content == ContentData then
+      return Entry
     end
   end
   return nil
@@ -171,11 +163,18 @@ function M:RebuildTileView()
     local Seen = {}
     for i = #self._TileViewContentList, 1, -1 do
       local Item = self._TileViewContentList[i]
-      if not Item or Seen[Item] then
+      if not Item or Seen[Item] or not UE4.UKismetSystemLibrary.IsValid(Item) then
         table.remove(self._TileViewContentList, i)
+        if Item and self._ContentDataGCGuard then
+          self._ContentDataGCGuard[Item] = nil
+        end
       else
         Seen[Item] = true
       end
+    end
+    local Expected = self.TotalDisPlayItemCount or 0
+    while Expected > #self._TileViewContentList do
+      table.insert(self._TileViewContentList, self:_CreateEmptyContentObj())
     end
   end
   self.EMTileView1:BP_SetListItems(self._TileViewContentList)
@@ -188,7 +187,7 @@ function M:SetDisPlayItemSwitchIndex(DisPlayItemId, Index)
   end
   ContentData.SwitchIndex = Index
   local DisplayedWidgets = self.EMTileView1:GetDisplayedEntryWidgets()
-  local Entry = FindAndRelinkEntry(DisplayedWidgets, ContentData, DisPlayItemId)
+  local Entry = FindEntryByContent(DisplayedWidgets, ContentData)
   if Entry and Entry.Switch_Type then
     Entry.Switch_Type:SetActiveWidgetIndex(Index)
     if Entry.Overlay_Icon then
@@ -199,6 +198,112 @@ function M:SetDisPlayItemSwitchIndex(DisPlayItemId, Index)
       end
     end
   end
+end
+
+function M:_CloneContentData(OldContent)
+  if not OldContent then
+    return nil
+  end
+  local New = NewObject(UIUtils.GetCommonItemContentClass())
+  New.TemplateId = OldContent.TemplateId
+  New.ItemId = OldContent.ItemId
+  New.ItemType = OldContent.ItemType
+  New.ItemName = OldContent.ItemName
+  New.BasicPoint = OldContent.BasicPoint
+  New.GUIPath = OldContent.GUIPath
+  New.MaxAmmo = OldContent.MaxAmmo or 0
+  New.MaxStack = OldContent.MaxStack or 0
+  New.CurrentAmmo = OldContent.CurrentAmmo or 0
+  New.CurrentStack = OldContent.CurrentStack or 0
+  New.IsMirror = OldContent.IsMirror
+  New.ItemGrid = OldContent.ItemGrid
+  New.ShapeOffsets = OldContent.ShapeOffsets
+  New.DisPlayItemId = OldContent.DisPlayItemId
+  New.PlayScreen = self
+  New.SwitchIndex = OldContent.SwitchIndex or 0
+  return New
+end
+
+function M:_BuildContentDataFromPlacedItem(PlacedItem, SyncData)
+  if not PlacedItem then
+    return nil
+  end
+  local ContentData = NewObject(UIUtils.GetCommonItemContentClass())
+  ContentData.TemplateId = PlacedItem.TemplateId
+  ContentData.ItemId = PlacedItem.ItemId
+  ContentData.ItemType = SyncData and SyncData.ItemType or PlacedItem.ItemType
+  ContentData.ItemName = PlacedItem.ItemName
+  ContentData.BasicPoint = PlacedItem.BasicPoint
+  ContentData.GUIPath = SyncData and SyncData.GUIPath or PlacedItem.GUIPath
+  ContentData.MaxAmmo = SyncData and SyncData.MaxAmmo or PlacedItem.MaxAmmo or 0
+  ContentData.MaxStack = SyncData and SyncData.MaxStack or PlacedItem.MaxStack or 0
+  ContentData.CurrentAmmo = SyncData and SyncData.CurrentAmmo or PlacedItem.CurrentAmmo or 0
+  ContentData.CurrentStack = SyncData and SyncData.CurrentStack or PlacedItem.CurrentStack or 1
+  ContentData.IsMirror = PlacedItem.IsMirror or false
+  ContentData.ShapeOffsets = PlacedItem.OriginalShapeOffsets or PlacedItem.ShapeOffsets
+  ContentData.DisPlayItemId = PlacedItem.DisPlayItemId
+  ContentData.PlayScreen = self
+  return ContentData
+end
+
+function M:_RestoreContentDataToTileViewHead(DisPlayItemId, SourceContentData, Options)
+  if not DisPlayItemId or not SourceContentData then
+    return nil
+  end
+  Options = Options or {}
+  local SwitchIndex = Options.SwitchIndex or 0
+  local MappedContentData = self.DisPlayItemDataById and self.DisPlayItemDataById[DisPlayItemId]
+  local ContentData = SourceContentData
+  if Options.CloneSource then
+    ContentData = self:_CloneContentData(SourceContentData)
+  end
+  if Options.CurrentAmmo ~= nil then
+    ContentData.CurrentAmmo = Options.CurrentAmmo
+  end
+  if nil ~= Options.CurrentStack then
+    ContentData.CurrentStack = Options.CurrentStack
+  end
+  ContentData.DisPlayItemId = DisPlayItemId
+  ContentData.PlayScreen = self
+  ContentData.SwitchIndex = SwitchIndex
+  ContentData.IsEmpty = nil
+  self.DisPlayItemDataById = self.DisPlayItemDataById or {}
+  self.DisPlayItemDataById[DisPlayItemId] = ContentData
+  self.DisPlayItemDataList = self.DisPlayItemDataList or {}
+  for i = #self.DisPlayItemDataList, 1, -1 do
+    local Data = self.DisPlayItemDataList[i]
+    if Data == MappedContentData or Data == SourceContentData or Data == ContentData or Data and not Data.IsEmpty and Data.DisPlayItemId == DisPlayItemId then
+      table.remove(self.DisPlayItemDataList, i)
+    end
+  end
+  table.insert(self.DisPlayItemDataList, 1, ContentData)
+  self._TileViewContentList = self._TileViewContentList or {}
+  for i = #self._TileViewContentList, 1, -1 do
+    local Item = self._TileViewContentList[i]
+    if Item == MappedContentData or Item == SourceContentData or Item == ContentData or Item and not Item.IsEmpty and Item.DisPlayItemId == DisPlayItemId then
+      table.remove(self._TileViewContentList, i)
+      if Item ~= ContentData and self._ContentDataGCGuard then
+        self._ContentDataGCGuard[Item] = nil
+      end
+    end
+  end
+  local ExpectedCount = self.TotalDisPlayItemCount or 0
+  if ExpectedCount <= 0 or ExpectedCount <= #self._TileViewContentList then
+    self:_RemoveOneEmptyFromList()
+  end
+  table.insert(self._TileViewContentList, 1, ContentData)
+  self:RebuildTileView()
+  if self._ContentDataGCGuard then
+    if MappedContentData and MappedContentData ~= ContentData then
+      self._ContentDataGCGuard[MappedContentData] = nil
+    end
+    if SourceContentData and SourceContentData ~= ContentData then
+      self._ContentDataGCGuard[SourceContentData] = nil
+    end
+  end
+  self:SetDisPlayItemSwitchIndex(DisPlayItemId, SwitchIndex)
+  self:RefreshVisibleEntryWidget(DisPlayItemId)
+  return ContentData
 end
 
 function M:HasUnconfirmedItem()
@@ -224,9 +329,14 @@ function M:ConfirmPlacedItem(PlacedItem)
   if not PlacedItem then
     return false
   end
+  if self._bConfirmTransitioning then
+    return false
+  end
+  self._bConfirmTransitioning = true
   if PlacedItem.IsTempPlacement then
     DebugPrint("ConfirmPlacedItem: 临时放置存在重叠，不能确认")
     UIManager(self):ShowUITip(UIConst.Tip_CommonTop, "UI_GameEvent_BagGame_Toast_CannotPutDown")
+    self._bConfirmTransitioning = false
     return false
   end
   local PlacedRecordForCheck
@@ -245,23 +355,27 @@ function M:ConfirmPlacedItem(PlacedItem)
       local R, C = Cell.Row, Cell.Col
       if R < 1 or GridRows < R or C < 1 or GridCols < C then
         UIManager(self):ShowUITip(UIConst.Tip_CommonTop, "UI_GameEvent_BagGame_Toast_CannotPutDown")
+        self._bConfirmTransitioning = false
         return false
       end
       local Value = BagGameModel:GetGridValue(R, C)
       if Value == BagGameModel.VALUE_UNCLICKABLE or Value == BagGameModel.VALUE_BLOCKED then
         UIManager(self):ShowUITip(UIConst.Tip_CommonTop, "UI_GameEvent_BagGame_Toast_CannotPutDown")
+        self._bConfirmTransitioning = false
         return false
       end
     end
     for _, Cell in ipairs(PlacedRecordForCheck.Cells) do
       if self:IsCellOccupiedByOtherItem(Cell.Row, Cell.Col, PlacedItem) then
         UIManager(self):ShowUITip(UIConst.Tip_CommonTop, "UI_GameEvent_BagGame_Toast_CannotPutDown")
+        self._bConfirmTransitioning = false
         return false
       end
     end
   end
   if not BagGameController:ConfirmPlacedItem(PlacedItem) then
     DebugPrint("ConfirmPlacedItem: 该物品不是当前未确认物品")
+    self._bConfirmTransitioning = false
     return false
   end
   self:SetUnconfirmedItem(nil)
@@ -367,6 +481,7 @@ function M:ConfirmPlacedItem(PlacedItem)
     self._ContentDataGCGuard = self._ContentDataGCGuard or {}
     self._ContentDataGCGuard[PlacedRecord.ContentData] = true
   end
+  self._bConfirmTransitioning = false
   DebugPrint("ConfirmPlacedItem: 确认成功，DisPlayItemId=" .. tostring(PlacedItem.DisPlayItemId))
   return true
 end
@@ -375,7 +490,12 @@ function M:UnconfirmPlacedItem(PlacedItem)
   if not PlacedItem then
     return false
   end
+  if self._bConfirmTransitioning then
+    return false
+  end
+  self._bConfirmTransitioning = true
   if self:HasUnconfirmedItem() then
+    self._bConfirmTransitioning = false
     UIManager(self):ShowUITip(UIConst.Tip_CommonTop, "UI_GameEvent_BagGame_Toast_PutDownItem")
     return false
   end
@@ -397,6 +517,7 @@ function M:UnconfirmPlacedItem(PlacedItem)
     DebugPrint("UnconfirmPlacedItem: 恢复临时放置物品")
   elseif not PlacedRecord then
     DebugPrint("UnconfirmPlacedItem: 未找到放置记录")
+    self._bConfirmTransitioning = false
     return false
   end
   PlacedItem.bIsConfirmed = false
@@ -437,20 +558,33 @@ function M:UnconfirmPlacedItem(PlacedItem)
       end
     end
   end
-  local ContentData = PlacedRecord.ContentData
-  if ContentData then
-    if self._ContentDataGCGuard then
-      self._ContentDataGCGuard[ContentData] = nil
-    end
+  local OldContentData = PlacedRecord.ContentData
+  if OldContentData then
+    local ContentData = self:_CloneContentData(OldContentData)
     ContentData.SwitchIndex = 1
+    ContentData.IsEmpty = nil
     local DisPlayItemId = PlacedItem.DisPlayItemId
     self.DisPlayItemDataById = self.DisPlayItemDataById or {}
     self.DisPlayItemDataById[DisPlayItemId] = ContentData
     self.DisPlayItemDataList = self.DisPlayItemDataList or {}
+    for i, Data in ipairs(self.DisPlayItemDataList) do
+      if Data == OldContentData or Data == ContentData then
+        table.remove(self.DisPlayItemDataList, i)
+        break
+      end
+    end
     table.insert(self.DisPlayItemDataList, ContentData)
+    for i = #self._TileViewContentList, 1, -1 do
+      if self._TileViewContentList[i] == OldContentData then
+        table.remove(self._TileViewContentList, i)
+      end
+    end
     self:_InsertContentToTileViewHead(ContentData)
     self:RebuildTileView()
-    self:SetDisPlayItemSwitchIndex(DisPlayItemId, 1)
+    PlacedRecord.ContentData = ContentData
+    if self._ContentDataGCGuard then
+      self._ContentDataGCGuard[OldContentData] = nil
+    end
   end
   self:SetUnconfirmedItem(PlacedItem)
   self:_RemoveFromConfirmedItems(PlacedRecord)
@@ -458,6 +592,7 @@ function M:UnconfirmPlacedItem(PlacedItem)
   if PlacedRecord.IsDoubleReward and PlacedItem.SetDoubleRewardState then
     PlacedItem:SetDoubleRewardState(true)
   end
+  self._bConfirmTransitioning = false
   DebugPrint("UnconfirmPlacedItem: 恢复成功，DisPlayItemId=" .. tostring(PlacedItem.DisPlayItemId))
   return true
 end
@@ -485,16 +620,16 @@ function M:RemoveConfirmedItemFromList(DisPlayItemId)
     end
   end
   if bRemoved then
-    local EmptyObj = NewObject(UIUtils.GetCommonItemContentClass())
-    EmptyObj.IsEmpty = true
-    EmptyObj.PlayScreen = self
-    table.insert(self._TileViewContentList, EmptyObj)
+    table.insert(self._TileViewContentList, self:_CreateEmptyContentObj())
     self:RebuildTileView()
   end
 end
 
 function M:PickUpPlacedItem(PlacedItem)
   if not PlacedItem then
+    return false
+  end
+  if self._bConfirmTransitioning then
     return false
   end
   local CurrentUnconfirmed = self:GetUnconfirmedItem()
@@ -577,44 +712,15 @@ function M:PickUpPlacedItem(PlacedItem)
   local DisPlayItemId = PlacedRecord.DisPlayItemId
   if PlacedRecord.IsTempPlacement and DisPlayItemId and PlacedItem then
     local SyncData = PlacedItem.GetDragSyncData and PlacedItem:GetDragSyncData()
-    if SyncData then
-      local ContentData = {
-        TemplateId = PlacedItem.TemplateId,
-        ItemId = PlacedItem.ItemId,
-        ItemType = SyncData.ItemType or PlacedItem.ItemType,
-        ItemName = PlacedItem.ItemName,
-        BasicPoint = PlacedItem.BasicPoint,
-        GUIPath = SyncData.GUIPath or PlacedItem.GUIPath,
-        MaxAmmo = SyncData.MaxAmmo or 0,
-        MaxStack = SyncData.MaxStack or 0,
-        CurrentAmmo = SyncData.CurrentAmmo or 0,
-        CurrentStack = SyncData.CurrentStack or 1,
-        ShapeOffsets = PlacedItem.OriginalShapeOffsets or PlacedItem.ShapeOffsets,
-        DisPlayItemId = PlacedItem.DisPlayItemId,
-        PlayScreen = self,
-        SwitchIndex = 1
-      }
-      self.DisPlayItemDataById = self.DisPlayItemDataById or {}
-      self.DisPlayItemDataById[DisPlayItemId] = ContentData
-      self.DisPlayItemDataList = self.DisPlayItemDataList or {}
-      table.insert(self.DisPlayItemDataList, ContentData)
-      self:_InsertContentToTileViewHead(ContentData)
-      ContentData.SwitchIndex = 1
-      self:RebuildTileView()
-      self:SetDisPlayItemSwitchIndex(DisPlayItemId, 1)
-    end
+    local ContentData = self:_BuildContentDataFromPlacedItem(PlacedItem, SyncData)
+    self:_RestoreContentDataToTileViewHead(DisPlayItemId, ContentData, {SwitchIndex = 1})
   elseif DisPlayItemId and PlacedRecord.ContentData and (not self.DisPlayItemDataById or not self.DisPlayItemDataById[DisPlayItemId]) then
-    local ContentData = PlacedRecord.ContentData
-    ContentData.CurrentStack = PlacedRecord.CurrentStack or ContentData.CurrentStack or 0
-    ContentData.CurrentAmmo = PlacedRecord.CurrentAmmo or ContentData.CurrentAmmo or 0
-    self.DisPlayItemDataById = self.DisPlayItemDataById or {}
-    self.DisPlayItemDataById[DisPlayItemId] = ContentData
-    self.DisPlayItemDataList = self.DisPlayItemDataList or {}
-    table.insert(self.DisPlayItemDataList, ContentData)
-    self:_InsertContentToTileViewHead(ContentData)
-    ContentData.SwitchIndex = 1
-    self:RebuildTileView()
-    self:SetDisPlayItemSwitchIndex(DisPlayItemId, 1)
+    self:_RestoreContentDataToTileViewHead(DisPlayItemId, PlacedRecord.ContentData, {
+      CloneSource = true,
+      SwitchIndex = 1,
+      CurrentStack = PlacedRecord.CurrentStack,
+      CurrentAmmo = PlacedRecord.CurrentAmmo
+    })
   end
   if DisPlayItemId then
     self:SetDisPlayItemSwitchIndex(DisPlayItemId, 1)
@@ -869,9 +975,18 @@ function M:InitContainItem(GridDistribute)
     end
   end
   self.ActiveHighlightCells = {}
+  self.ActiveHighlightMap = {}
+  self._HighlightRequestSeq = 0
   self._PendingHighlightRow = nil
   self._PendingHighlightCol = nil
   self._PendingHighlightDragUI = nil
+  self._PendingHighlightSeq = nil
+  self._ActiveHighlightSeq = nil
+  self._ActiveHighlightRow = nil
+  self._ActiveHighlightCol = nil
+  self._CommittedDropRow = nil
+  self._CommittedDropCol = nil
+  self._CommittedDropSeq = nil
 end
 
 function M:GetContainItemAt(Row, Col)
@@ -891,52 +1006,323 @@ end
 local HIGHLIGHT_DEBOUNCE_SEC = 0.05
 local HIGHLIGHT_DEBOUNCE_KEY = "BagGameHighlightDebounce"
 
+local function ClearPendingHighlightState(Owner)
+  Owner._PendingHighlightRow = nil
+  Owner._PendingHighlightCol = nil
+  Owner._PendingHighlightDragUI = nil
+  Owner._PendingHighlightSeq = nil
+end
+
+local function ConsumePendingHighlightState(Owner)
+  if not Owner._PendingHighlightRow then
+    return nil
+  end
+  local Row = Owner._PendingHighlightRow
+  local Col = Owner._PendingHighlightCol
+  local DragUI = Owner._PendingHighlightDragUI
+  local RequestSeq = Owner._PendingHighlightSeq
+  ClearPendingHighlightState(Owner)
+  return Row, Col, DragUI, RequestSeq
+end
+
+local function BuildHighlightMap(Entries)
+  local Map = {}
+  if not Entries then
+    return Map
+  end
+  for _, Entry in ipairs(Entries) do
+    local Widget = Entry and Entry.Widget
+    if Widget then
+      Map[Widget] = Entry
+    end
+  end
+  return Map
+end
+
+function M:_ClearCommittedDropState()
+  self._bDropCommitted = false
+  self._CommittedDropRow = nil
+  self._CommittedDropCol = nil
+  self._CommittedDropSeq = nil
+end
+
+function M:_MarkCommittedDrop(BaseRow, BaseCol, RequestSeq)
+  self._bDropCommitted = true
+  self._CommittedDropRow = BaseRow
+  self._CommittedDropCol = BaseCol
+  self._CommittedDropSeq = RequestSeq
+end
+
+function M:_ApplyHighlightEntry(Entry)
+  local ContainItem = Entry and Entry.Widget
+  if not ContainItem then
+    return
+  end
+  local HighlightMode = Entry.Mode
+  local bEnabled = Entry.bEnabled == true
+  if "load" == HighlightMode and ContainItem.ActivateLoadHighlight then
+    ContainItem:ActivateLoadHighlight(bEnabled)
+    return
+  end
+  if "stack" == HighlightMode then
+    if ContainItem.ActivateStackHighlight then
+      ContainItem:ActivateStackHighlight(bEnabled)
+      return
+    end
+    if ContainItem.ActivateLoadHighlight then
+      ContainItem:ActivateLoadHighlight(bEnabled)
+      return
+    end
+  end
+  if ContainItem.ActivateHighlight then
+    ContainItem:ActivateHighlight(bEnabled)
+  end
+end
+
+function M:_SyncHighlightVisuals(Entries)
+  local OldMap = self.ActiveHighlightMap or {}
+  local NewMap = BuildHighlightMap(Entries)
+  for Widget, NewEntry in pairs(NewMap) do
+    local OldEntry = OldMap[Widget]
+    if not OldEntry or OldEntry.Mode ~= NewEntry.Mode or OldEntry.bEnabled ~= NewEntry.bEnabled then
+      self:_ApplyHighlightEntry(NewEntry)
+    end
+  end
+  for Widget, _ in pairs(OldMap) do
+    if not NewMap[Widget] and Widget and Widget.DeactivateHighlight then
+      Widget:DeactivateHighlight()
+    end
+  end
+  self.ActiveHighlightMap = NewMap
+  self.ActiveHighlightCells = {}
+  if Entries then
+    for _, Entry in ipairs(Entries) do
+      if Entry and Entry.Widget then
+        table.insert(self.ActiveHighlightCells, Entry.Widget)
+      end
+    end
+  end
+end
+
+function M:_ApplyHighlightState(State)
+  self:_SyncHighlightVisuals(State and State.ActiveEntries or nil)
+  if not State then
+    self.CurrentDragUI = nil
+    self.CurrentShapeCells = nil
+    self.bCanPlaceCurrent = false
+    self.CurrentHoverRow = nil
+    self.CurrentHoverCol = nil
+    self._ActiveHighlightSeq = nil
+    self._ActiveHighlightRow = nil
+    self._ActiveHighlightCol = nil
+    self.CurrentOverlappingGun = nil
+    self.bCanLoadAmmo = false
+    self.bIsAmmoMode = false
+    self.CurrentOverlappingOther = nil
+    self.bCanStack = false
+    self.bIsStackMode = false
+    self.bIsConflictMode = false
+    self.ConflictOverlappingRecord = nil
+    return
+  end
+  self.CurrentDragUI = State.DragUI
+  self.CurrentShapeCells = State.ShapeCells
+  self.bCanPlaceCurrent = State.bCanPlaceCurrent == true
+  self.CurrentHoverRow = State.BaseRow
+  self.CurrentHoverCol = State.BaseCol
+  self._ActiveHighlightSeq = State.RequestSeq
+  self._ActiveHighlightRow = State.BaseRow
+  self._ActiveHighlightCol = State.BaseCol
+  self.CurrentOverlappingGun = State.CurrentOverlappingGun
+  self.bCanLoadAmmo = State.bCanLoadAmmo == true
+  self.bIsAmmoMode = State.bIsAmmoMode == true
+  self.CurrentOverlappingOther = State.CurrentOverlappingOther
+  self.bCanStack = State.bCanStack == true
+  self.bIsStackMode = State.bIsStackMode == true
+  self.bIsConflictMode = State.bIsConflictMode == true
+  self.ConflictOverlappingRecord = State.ConflictOverlappingRecord
+end
+
+local function GetOverlappingCells(ShapeCells, OccupiedCells)
+  local OverlappingCells = {}
+  if not ShapeCells or not OccupiedCells then
+    return OverlappingCells
+  end
+  local OccupiedCellMap = {}
+  for _, Cell in ipairs(OccupiedCells) do
+    if Cell and Cell.Row and Cell.Col then
+      OccupiedCellMap[Cell.Row .. "_" .. Cell.Col] = true
+    end
+  end
+  for _, Cell in ipairs(ShapeCells) do
+    if Cell and Cell.Row and Cell.Col and OccupiedCellMap[Cell.Row .. "_" .. Cell.Col] then
+      table.insert(OverlappingCells, Cell)
+    end
+  end
+  return OverlappingCells
+end
+
+function M:_BuildHighlightState(BaseRow, BaseCol, DragUI, RequestSeq)
+  if not DragUI or not DragUI.GetShapeCells then
+    return nil
+  end
+  local ShapeCells = DragUI:GetShapeCells(BaseRow, BaseCol)
+  if not ShapeCells or 0 == #ShapeCells then
+    return nil
+  end
+  local State = {
+    BaseRow = BaseRow,
+    BaseCol = BaseCol,
+    RequestSeq = RequestSeq or self._HighlightRequestSeq or 0,
+    DragUI = DragUI,
+    ShapeCells = ShapeCells,
+    ActiveEntries = {},
+    CurrentOverlappingGun = nil,
+    bCanLoadAmmo = false,
+    bIsAmmoMode = BagGameModel:IsAmmoItem(DragUI.TemplateId),
+    CurrentOverlappingOther = nil,
+    bCanStack = false,
+    bIsStackMode = false,
+    bIsConflictMode = false,
+    ConflictOverlappingRecord = nil,
+    bCanPlaceCurrent = false
+  }
+  
+  local function AddEntry(Row, Col, Mode, bEnabled)
+    local ContainItem = self:GetContainItemAt(Row, Col)
+    if not ContainItem then
+      return
+    end
+    table.insert(State.ActiveEntries, {
+      Widget = ContainItem,
+      Mode = Mode,
+      bEnabled = true == bEnabled
+    })
+  end
+  
+  if State.bIsAmmoMode then
+    local GunRecord, bCanLoad = BagGameModel:FindOverlappingGun(ShapeCells)
+    if GunRecord then
+      State.CurrentOverlappingGun = GunRecord
+      State.bCanLoadAmmo = bCanLoad
+      for _, Cell in ipairs(GunRecord.Cells) do
+        AddEntry(Cell.Row, Cell.Col, "load", bCanLoad)
+      end
+      return State
+    end
+    local AmmoStackRecord, bCanStackAmmo = BagGameModel:FindOverlappingSameAmmo(DragUI.TemplateId, ShapeCells)
+    if AmmoStackRecord then
+      State.CurrentOverlappingOther = AmmoStackRecord
+      State.bCanStack = bCanStackAmmo
+      State.bIsStackMode = true
+      for _, Cell in ipairs(AmmoStackRecord.Cells) do
+        AddEntry(Cell.Row, Cell.Col, "stack", bCanStackAmmo)
+      end
+      return State
+    end
+  end
+  if BagGameModel:IsOtherItem(DragUI.TemplateId) then
+    local OtherRecord, bCanStackItem = BagGameModel:FindOverlappingSameOther(DragUI.TemplateId, ShapeCells)
+    if OtherRecord then
+      State.CurrentOverlappingOther = OtherRecord
+      State.bCanStack = bCanStackItem
+      State.bIsStackMode = true
+      for _, Cell in ipairs(OtherRecord.Cells) do
+        AddEntry(Cell.Row, Cell.Col, "stack", bCanStackItem)
+      end
+      return State
+    end
+  end
+  local ConflictRecord = BagGameModel:FindOverlappingPlacedItem(ShapeCells)
+  if ConflictRecord then
+    State.bIsConflictMode = true
+    State.ConflictOverlappingRecord = ConflictRecord
+    for _, Cell in ipairs(GetOverlappingCells(ShapeCells, ConflictRecord.Cells)) do
+      AddEntry(Cell.Row, Cell.Col, "normal", false)
+    end
+    return State
+  end
+  local bCanPlace = self:CanPlaceShapeAt(BaseRow, BaseCol, ShapeCells)
+  State.bCanPlaceCurrent = bCanPlace
+  for _, Cell in ipairs(ShapeCells) do
+    AddEntry(Cell.Row, Cell.Col, "normal", bCanPlace)
+  end
+  return State
+end
+
 function M:_RequestActivateShapeArea(BaseRow, BaseCol, DragUI)
+  self._HighlightRequestSeq = (self._HighlightRequestSeq or 0) + 1
+  local RequestSeq = self._HighlightRequestSeq
   self._PendingHighlightRow = BaseRow
   self._PendingHighlightCol = BaseCol
   self._PendingHighlightDragUI = DragUI
+  self._PendingHighlightSeq = RequestSeq
   self:RemoveTimer(HIGHLIGHT_DEBOUNCE_KEY)
   self:AddTimer(HIGHLIGHT_DEBOUNCE_SEC, function()
-    if self._PendingHighlightRow then
-      local Row = self._PendingHighlightRow
-      local Col = self._PendingHighlightCol
-      local UI = self._PendingHighlightDragUI
-      self._PendingHighlightRow = nil
-      self._PendingHighlightCol = nil
-      self._PendingHighlightDragUI = nil
-      self:ActivateShapeArea(Row, Col, UI)
+    if self._PendingHighlightSeq ~= RequestSeq then
+      return
+    end
+    local Row, Col, UI, Seq = ConsumePendingHighlightState(self)
+    if Row then
+      self:ActivateShapeArea(Row, Col, UI, Seq)
     end
   end, false, 0, HIGHLIGHT_DEBOUNCE_KEY)
 end
 
 function M:_FlushPendingHighlight()
   self:RemoveTimer(HIGHLIGHT_DEBOUNCE_KEY)
-  if self._PendingHighlightRow then
-    local Row = self._PendingHighlightRow
-    local Col = self._PendingHighlightCol
-    local UI = self._PendingHighlightDragUI
-    self._PendingHighlightRow = nil
-    self._PendingHighlightCol = nil
-    self._PendingHighlightDragUI = nil
-    self:ActivateShapeArea(Row, Col, UI)
+  local Row, Col, UI, Seq = ConsumePendingHighlightState(self)
+  if Row then
+    self:ActivateShapeArea(Row, Col, UI, Seq)
   end
 end
 
 function M:_CancelPendingHighlight()
   self:RemoveTimer(HIGHLIGHT_DEBOUNCE_KEY)
-  self._PendingHighlightRow = nil
-  self._PendingHighlightCol = nil
-  self._PendingHighlightDragUI = nil
+  ClearPendingHighlightState(self)
 end
 
-function M:ActivateShapeArea(BaseRow, BaseCol, DragUI)
-  self:DeactivateShapeArea()
+function M:FinalizeDropHighlight(BaseRow, BaseCol, DragUI)
+  self:RemoveTimer(HIGHLIGHT_DEBOUNCE_KEY)
+  ClearPendingHighlightState(self)
+  self._HighlightRequestSeq = (self._HighlightRequestSeq or 0) + 1
+  do
+    local RequestSeq = self._HighlightRequestSeq
+    local State = self:_BuildHighlightState(BaseRow, BaseCol, DragUI, RequestSeq)
+    if State then
+      self:_ApplyHighlightState(State)
+    end
+    self:_MarkCommittedDrop(BaseRow, BaseCol, RequestSeq)
+    return
+  end
+  self:RemoveTimer(HIGHLIGHT_DEBOUNCE_KEY)
+  ClearPendingHighlightState(self)
   self.CurrentHoverRow = BaseRow
   self.CurrentHoverCol = BaseCol
+  self._ActiveHighlightRow = BaseRow
+  self._ActiveHighlightCol = BaseCol
+  self._bDropCommitted = true
+end
+
+function M:ActivateShapeArea(BaseRow, BaseCol, DragUI, RequestSeq)
+  do
+    local State = self:_BuildHighlightState(BaseRow, BaseCol, DragUI, RequestSeq)
+    self:_ApplyHighlightState(State)
+    return
+  end
+  self:DeactivateShapeArea()
   if not DragUI or not DragUI.GetShapeCells then
     return
   end
   local ShapeCells = DragUI:GetShapeCells(BaseRow, BaseCol)
+  if not ShapeCells or 0 == #ShapeCells then
+    return
+  end
+  self.CurrentHoverRow = BaseRow
+  self.CurrentHoverCol = BaseCol
+  self._ActiveHighlightSeq = RequestSeq or self._HighlightRequestSeq or 0
+  self._ActiveHighlightRow = BaseRow
+  self._ActiveHighlightCol = BaseCol
   local bIsAmmo = BagGameModel:IsAmmoItem(DragUI.TemplateId)
   local bIsOther = BagGameModel:IsOtherItem(DragUI.TemplateId)
   self.CurrentOverlappingGun = nil
@@ -1011,7 +1397,7 @@ function M:ActivateShapeArea(BaseRow, BaseCol, DragUI)
   if ConflictRecord then
     self.bIsConflictMode = true
     self.ConflictOverlappingRecord = ConflictRecord
-    for _, Cell in ipairs(ConflictRecord.Cells) do
+    for _, Cell in ipairs(GetOverlappingCells(ShapeCells, ConflictRecord.Cells)) do
       local ContainItem = self:GetContainItemAt(Cell.Row, Cell.Col)
       if ContainItem and ContainItem.ActivateHighlight then
         ContainItem:ActivateHighlight(false)
@@ -1036,8 +1422,16 @@ function M:ActivateShapeArea(BaseRow, BaseCol, DragUI)
   self.bCanPlaceCurrent = bCanPlace
 end
 
-function M:DeactivateShapeArea()
-  self:_CancelPendingHighlight()
+function M:_ClearActiveHighlightState(bCancelPending)
+  if false ~= bCancelPending then
+    self:_CancelPendingHighlight()
+  end
+  self:_ApplyHighlightState(nil)
+  self:_ClearCommittedDropState()
+  do return end
+  if false ~= bCancelPending then
+    self:_CancelPendingHighlight()
+  end
   if self.ActiveHighlightCells then
     for _, ContainItem in ipairs(self.ActiveHighlightCells) do
       if ContainItem and ContainItem.DeactivateHighlight then
@@ -1051,6 +1445,9 @@ function M:DeactivateShapeArea()
   self.bCanPlaceCurrent = false
   self.CurrentHoverRow = nil
   self.CurrentHoverCol = nil
+  self._ActiveHighlightSeq = nil
+  self._ActiveHighlightRow = nil
+  self._ActiveHighlightCol = nil
   self.CurrentOverlappingGun = nil
   self.bCanLoadAmmo = false
   self.bIsAmmoMode = false
@@ -1059,6 +1456,11 @@ function M:DeactivateShapeArea()
   self.bIsStackMode = false
   self.bIsConflictMode = false
   self.ConflictOverlappingRecord = nil
+  self._bDropCommitted = false
+end
+
+function M:DeactivateShapeArea()
+  self:_ClearActiveHighlightState(true)
 end
 
 function M:CanPlaceCurrent()
@@ -1069,8 +1471,52 @@ function M:OnCellDragLeave(Row, Col)
   if self._PendingHighlightRow == Row and self._PendingHighlightCol == Col then
     self:_CancelPendingHighlight()
   end
-  if self.CurrentHoverRow == Row and self.CurrentHoverCol == Col then
-    self:DeactivateShapeArea()
+  if self._bDropCommitted and self._CommittedDropRow == Row and self._CommittedDropCol == Col then
+    self.CurrentHoverRow = nil
+    self.CurrentHoverCol = nil
+    self._ActiveHighlightSeq = nil
+    self._ActiveHighlightRow = nil
+    self._ActiveHighlightCol = nil
+    self:_ClearCommittedDropState()
+    return
+  end
+  do
+    local bLeavingActiveHover = self.CurrentHoverRow == Row and self.CurrentHoverCol == Col or self._ActiveHighlightRow == Row and self._ActiveHighlightCol == Col
+    if bLeavingActiveHover then
+      local bHasNewPendingHover = self._PendingHighlightRow ~= nil and (self._PendingHighlightRow ~= Row or self._PendingHighlightCol ~= Col)
+      if bHasNewPendingHover then
+        self:_FlushPendingHighlight()
+      else
+        self:DeactivateShapeArea()
+      end
+      return
+    end
+    local ContainItem = self:GetContainItemAt(Row, Col)
+    if ContainItem and ContainItem:IsHighlighted() and (not self.ActiveHighlightMap or not self.ActiveHighlightMap[ContainItem]) then
+      ContainItem:DeactivateHighlight()
+    end
+    return
+  end
+  if self._PendingHighlightRow == Row and self._PendingHighlightCol == Col then
+    self:_CancelPendingHighlight()
+  end
+  local bLeavingActiveHover = self.CurrentHoverRow == Row and self.CurrentHoverCol == Col or self._ActiveHighlightRow == Row and self._ActiveHighlightCol == Col
+  if bLeavingActiveHover then
+    local bHasNewPendingHover = self._PendingHighlightRow ~= nil and (self._PendingHighlightRow ~= Row or self._PendingHighlightCol ~= Col)
+    if bHasNewPendingHover then
+      self:_ClearActiveHighlightState(false)
+    else
+      if self._bDropCommitted then
+        self._bDropCommitted = false
+        self.CurrentHoverRow = nil
+        self.CurrentHoverCol = nil
+        self._ActiveHighlightSeq = nil
+        self._ActiveHighlightRow = nil
+        self._ActiveHighlightCol = nil
+        return
+      end
+      self:DeactivateShapeArea()
+    end
   else
     local ContainItem = self:GetContainItemAt(Row, Col)
     if ContainItem and ContainItem:IsHighlighted() then
@@ -1095,6 +1541,28 @@ function M:GetCurrentShapeCells()
 end
 
 function M:PlaceItemAtCell(BaseRow, BaseCol, DragUI, Operation)
+  if not DragUI or not DragUI.GetShapeCells then
+    return false
+  end
+  do
+    local RequestSeq = self._CommittedDropSeq or self._ActiveHighlightSeq or self._HighlightRequestSeq or 0
+    local HighlightState = self:_BuildHighlightState(BaseRow, BaseCol, DragUI, RequestSeq)
+    if not HighlightState then
+      return false
+    end
+    self:_ApplyHighlightState(HighlightState)
+    if HighlightState.CurrentOverlappingGun then
+      return self:HandleAmmoLoad(DragUI, Operation)
+    end
+    if HighlightState.bIsStackMode and HighlightState.CurrentOverlappingOther then
+      return self:HandleOtherStack(DragUI, Operation)
+    end
+    if HighlightState.bIsConflictMode and HighlightState.ConflictOverlappingRecord then
+      return self:PlaceItemNormal(BaseRow, BaseCol, DragUI, Operation, HighlightState.ShapeCells, HighlightState.ConflictOverlappingRecord)
+    end
+    local Result = self:PlaceItemNormal(BaseRow, BaseCol, DragUI, Operation, HighlightState.ShapeCells, nil)
+    return Result
+  end
   if not DragUI or not DragUI.GetShapeCells then
     return false
   end
@@ -1273,7 +1741,7 @@ function M:RefreshVisibleEntryWidget(DisPlayItemId)
     return
   end
   local DisplayedWidgets = self.EMTileView1:GetDisplayedEntryWidgets()
-  local Entry = FindAndRelinkEntry(DisplayedWidgets, ContentData, DisPlayItemId)
+  local Entry = FindEntryByContent(DisplayedWidgets, ContentData)
   if Entry and Entry.SyncDisplayFromContent then
     Entry:SyncDisplayFromContent()
   end
@@ -1666,6 +2134,9 @@ function M:RecycleItem(PlacedItem)
   if not PlacedItem or not self.PlacedItems then
     return false
   end
+  if self._bConfirmTransitioning then
+    return false
+  end
   local RecordIndex, PlacedRecord
   for i, Record in ipairs(self.PlacedItems) do
     if Record.Widget == PlacedItem then
@@ -1676,6 +2147,14 @@ function M:RecycleItem(PlacedItem)
   end
   if not PlacedRecord then
     if PlacedItem.IsTempPlacement then
+      if PlacedItem.PlacedCells then
+        for _, Cell in ipairs(PlacedItem.PlacedCells) do
+          local ContainItem = self:GetContainItemAt(Cell.Row, Cell.Col)
+          if ContainItem and ContainItem.DeactivateHighlight then
+            ContainItem:DeactivateHighlight()
+          end
+        end
+      end
       PlacedItem:RemoveFromParent()
       if self.CurrentUnconfirmedItem == PlacedItem then
         self:SetUnconfirmedItem(nil)
@@ -1708,10 +2187,7 @@ function M:RecycleItem(PlacedItem)
   end
   local ContentData = self.DisPlayItemDataById and self.DisPlayItemDataById[PlacedRecord.DisPlayItemId]
   if ContentData then
-    if self._ContentDataGCGuard then
-      self._ContentDataGCGuard[ContentData] = nil
-    end
-    if nil ~= PlacedRecord.CurrentAmmo then
+    if PlacedRecord.CurrentAmmo ~= nil then
       ContentData.CurrentAmmo = PlacedRecord.CurrentAmmo
     end
     if nil ~= PlacedRecord.CurrentStack then
@@ -1727,12 +2203,7 @@ function M:RecycleItem(PlacedItem)
       end
     end
     if not bWasInList then
-      for i = #self._TileViewContentList, 1, -1 do
-        if self._TileViewContentList[i].IsEmpty then
-          table.remove(self._TileViewContentList, i)
-          break
-        end
-      end
+      self:_RemoveOneEmptyFromList()
     end
     table.insert(self._TileViewContentList, 1, ContentData)
     ContentData.SwitchIndex = 0
@@ -1746,6 +2217,9 @@ function M:RecycleItem(PlacedItem)
       table.insert(self.DisPlayItemDataList, 1, ContentData)
     end
     self:RebuildTileView()
+    if self._ContentDataGCGuard then
+      self._ContentDataGCGuard[ContentData] = nil
+    end
     self:SetDisPlayItemSwitchIndex(PlacedRecord.DisPlayItemId, 0)
     self:RefreshVisibleEntryWidget(PlacedRecord.DisPlayItemId)
   else
@@ -1858,6 +2332,32 @@ function M:ClearAllPlacedItems()
   end
 end
 
+function M:_CreateEmptyContentObj()
+  local Obj = NewObject(UIUtils.GetCommonItemContentClass())
+  Obj.IsEmpty = true
+  Obj.PlayScreen = self
+  self._ContentDataGCGuard = self._ContentDataGCGuard or {}
+  self._ContentDataGCGuard[Obj] = true
+  return Obj
+end
+
+function M:_RemoveOneEmptyFromList()
+  if not self._TileViewContentList then
+    return false
+  end
+  for i = #self._TileViewContentList, 1, -1 do
+    local Item = self._TileViewContentList[i]
+    if Item and Item.IsEmpty then
+      table.remove(self._TileViewContentList, i)
+      if self._ContentDataGCGuard then
+        self._ContentDataGCGuard[Item] = nil
+      end
+      return true
+    end
+  end
+  return false
+end
+
 function M:_InsertContentToTileViewHead(ContentData)
   if not self._TileViewContentList or not ContentData then
     return
@@ -1867,12 +2367,7 @@ function M:_InsertContentToTileViewHead(ContentData)
       return
     end
   end
-  for i = #self._TileViewContentList, 1, -1 do
-    if self._TileViewContentList[i].IsEmpty then
-      table.remove(self._TileViewContentList, i)
-      break
-    end
-  end
+  self:_RemoveOneEmptyFromList()
   table.insert(self._TileViewContentList, 1, ContentData)
 end
 
@@ -2026,6 +2521,7 @@ function M:UpdateFinishButtonState()
 end
 
 function M:CleanupPlayState()
+  self._bConfirmTransitioning = false
   self:SetUnconfirmedItem(nil)
   self:ClearAllPlacedItems()
   self:ResetAllCells()

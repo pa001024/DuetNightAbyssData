@@ -41,7 +41,7 @@ end
 
 function M:HandleExecuteCountdown()
   if IsValid(self.UI) then
-    self.UI:SetVisibility(ESlateVisibility.Visible)
+    self.UI:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.UI:ResumeCountdown()
   else
     local UIManager = UIManager(GWorld.GameInstance)

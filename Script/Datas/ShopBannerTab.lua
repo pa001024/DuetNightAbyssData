@@ -453,7 +453,7 @@ return ReadOnly("ShopBannerTab", {
     Sequence = 5008,
     ShowRemainTime = true,
     SkinSeries = "BP_03",
-    StartTime = LocalTimeProxy(1770602400),
+    StartTime = LocalTimeProxy(1771898400),
     Text1 = "UI_Skin_Name_0122",
     Text2 = "UI_Banner_GeneralTips",
     Text2EntryText = "UI_Banner_GeneralTipsEntry"
@@ -470,7 +470,7 @@ return ReadOnly("ShopBannerTab", {
     PreviewType = "SkinSeries",
     Sequence = 5008,
     SkinSeries = "Snowman",
-    StartTime = LocalTimeProxy(1770602400),
+    StartTime = LocalTimeProxy(1772503200),
     Text1 = "UI_Skin_Name_0121",
     Text2 = "UI_Banner_GeneralTips",
     Text2EntryText = "UI_Banner_GeneralTipsEntry"
@@ -670,7 +670,7 @@ return ReadOnly("ShopBannerTab", {
   [257] = {
     BannerIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Shop/T_Shop_Recommend_0013.T_Shop_Recommend_0013'",
     Bp = "WBP_Shop_Recommend_Common",
-    DisplayId = 40044,
+    DisplayId = 10076,
     DisplayType = "CharAccessory",
     EndTime = LocalTimeProxy(1775466000),
     Id = 257,
@@ -680,7 +680,7 @@ return ReadOnly("ShopBannerTab", {
     ShowRemainTime = true,
     SoldOutSinkBanner = true,
     StartTime = LocalTimeProxy(1774317600),
-    Text1 = "UI_Accessory_Name_40044"
+    Text1 = "UI_Accessory_Name_10076"
   },
   [258] = {
     BannerIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Shop/T_Shop_Recommend_0019.T_Shop_Recommend_0019'",

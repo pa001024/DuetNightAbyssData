@@ -20,6 +20,7 @@ function M:Destory()
 end
 
 function M:OnCloseLoading()
+  SignBoardBubbleTalkModel.bSignBoardNpcLoadComplete = nil
   local Avatar = self:GetAvatar()
   local bIsInBigWorld = Avatar and Avatar:IsInBigWorld()
   local bIsInHomeBase = Avatar and Avatar:CheckSubRegionType(Avatar:GetCurrentRegionId(), CommonConst.SubRegionType.Home)
@@ -109,6 +110,9 @@ function M:TickCheck()
   end
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
   if not IsValid(Player) then
+    return
+  end
+  if Player.bHide then
     return
   end
   local CanTriggers = BoardSystem:TickCheck()

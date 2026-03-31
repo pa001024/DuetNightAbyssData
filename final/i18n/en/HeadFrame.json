@@ -165,50 +165,50 @@
   },
   {
     "id": 10027,
-    "name": "争锋",
-    "desc": "群英争锋，气贯长虹。",
+    "name": "Rivalry",
+    "desc": "When champions clash, their valour soars into the heavens.",
     "icon": "T_Head_Frame31",
     "access": "Available from events"
   },
   {
     "id": 10028,
-    "name": "祥云",
-    "desc": "身伴流云，心游太虚。",
+    "name": "Auspicious Clouds",
+    "desc": "Amid drifting clouds, the heart wanders far beyond.",
     "icon": "T_Head_Frame30",
     "access": "Available at Shop"
   },
   {
     "id": 10029,
-    "name": "失色烈火",
-    "desc": "灰烬是烈火最后的辉煌。",
+    "name": "Faded Inferno",
+    "desc": "Ash-grey hues reflected the inferno's dying splendour.",
     "icon": "T_Head_Frame25",
     "access": "Available at Shop"
   },
   {
     "id": 10030,
-    "name": "烈酒与蔷薇",
-    "desc": "微醺的夜晚，盛开着带刺的浪漫。",
+    "name": "Wine and Roses",
+    "desc": "On a tipsy night, a thorny romance blooms.",
     "icon": "T_Head_Frame26",
     "access": "Available through Monthly Pass"
   },
   {
     "id": 10031,
-    "name": "乙鸟",
-    "desc": "永不停歇的飞鸟。",
+    "name": "Yi-Bird",
+    "desc": "A bird forever in flight.",
     "icon": "T_Head_Frame27",
     "access": "Available through Monthly Pass"
   },
   {
     "id": 10032,
-    "name": "子不语·黛蓝",
-    "desc": "月影憧憧，一窗幽梦。",
+    "name": "Whispers Unspoken: Azure",
+    "desc": "Flickering moonlight cradles a quiet dream.",
     "icon": "T_Head_Frame29",
     "access": "Available at Shop"
   },
   {
     "id": 10033,
-    "name": "子不语·晴蓝",
-    "desc": "月影憧憧，一窗幽梦。",
+    "name": "Whispers Unspoken: Celeste",
+    "desc": "Flickering moonlight cradles a quiet dream.",
     "icon": "T_Head_Frame28",
     "access": "Available at Shop"
   }

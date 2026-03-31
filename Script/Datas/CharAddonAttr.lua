@@ -527,13 +527,13 @@ return ReadOnly("CharAddonAttr", {
   [420103] = {
     AddAttrs = T.RT_11,
     AttrId = 420103,
-    Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_03",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_12",
     Name = "ADDONATTR_420103_NAME"
   },
   [420104] = {
     AddAttrs = T.RT_12,
     AttrId = 420104,
-    Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_03",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_12",
     Name = "ADDONATTR_420104_NAME"
   },
   [420201] = {

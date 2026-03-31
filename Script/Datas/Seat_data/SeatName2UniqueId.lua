@@ -440,28 +440,28 @@ return {
     [Mobile] = "537856344D7D4499B2B098A20F65110B"
   },
   BP_HX_Fur02_F_Huaxu_Haojing_Main = {
-    [PC] = "None",
-    [Mobile] = "None"
+    [PC] = "E373D4664B4B0AA48B7B2599D34C28AE",
+    [Mobile] = "042651D740F3532080428F974DF7C446"
   },
   BP_HX_Fur02_F3_Huaxu_Haojing_Main = {
     [PC] = "8BFDE7714D744F6014AA729437AA9B6D",
     [Mobile] = "8BFDE7714D744F6014AA729437AA9B6D"
   },
   BP_HX_Fur12_F_Huaxu_Haojing_Main = {
-    [PC] = "None",
-    [Mobile] = "None"
+    [PC] = "651BBE004AA469D8E01AFF8C46B8A664",
+    [Mobile] = "46FAEE0447BDF469D8A48DB52F32167D"
   },
   BP_HX_Fur12_F2_Huaxu_Haojing_Main = {
     [PC] = "E52CEFBF464B09703840D7A8C82EFC38",
     [Mobile] = "E52CEFBF464B09703840D7A8C82EFC38"
   },
   BP_HX_Fur06_LR_Huaxu_Haojing_Main = {
-    [PC] = "None",
-    [Mobile] = "None"
+    [PC] = "4DB8CF694B2AFF91F72DB4ADDB3A0C82",
+    [Mobile] = "67B87ACE4747FCFF0E57F8A79DB503F5"
   },
   BP_HX_Fur06_LR2_Huaxu_Haojing_Main = {
-    [PC] = "None",
-    [Mobile] = "None"
+    [PC] = "E109AE1F4E9229813B75C5BDDF8E49C5",
+    [Mobile] = "E3C54D174FBF927D9A2088AB960177B3"
   },
   BP_HX_Fur06_LR3_Huaxu_Haojing_Main = {
     [PC] = "464E8A904957A131C5AC4FA3EB10C84B",

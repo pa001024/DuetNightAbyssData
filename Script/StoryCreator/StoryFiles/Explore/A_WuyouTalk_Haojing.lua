@@ -472,7 +472,7 @@ return {
               TalkActors = {
                 {
                   TalkActorType = "Npc",
-                  TalkActorId = 830001,
+                  TalkActorId = 240110,
                   TalkActorVisible = true,
                   AroundPlayer = false
                 },
@@ -532,7 +532,7 @@ return {
               TalkActors = {
                 {
                   TalkActorType = "Npc",
-                  TalkActorId = 830001,
+                  TalkActorId = 240110,
                   TalkActorVisible = true,
                   AroundPlayer = false
                 },
@@ -592,7 +592,7 @@ return {
               TalkActors = {
                 {
                   TalkActorType = "Npc",
-                  TalkActorId = 830001,
+                  TalkActorId = 240110,
                   TalkActorVisible = true,
                   AroundPlayer = false
                 },
@@ -652,7 +652,7 @@ return {
               TalkActors = {
                 {
                   TalkActorType = "Npc",
-                  TalkActorId = 830001,
+                  TalkActorId = 240110,
                   TalkActorVisible = true,
                   AroundPlayer = false
                 },
@@ -678,7 +678,7 @@ return {
             key = "1770879369077772398",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1390.3363636363638, y = -1285.5454545454545},
+            pos = {x = 1390.3363636363638, y = -1284.3916083916083},
             propsData = {
               IsNpcNode = false,
               FirstDialogueId = 72200401,
@@ -712,7 +712,7 @@ return {
               TalkActors = {
                 {
                   TalkActorType = "Npc",
-                  TalkActorId = 830001,
+                  TalkActorId = 240110,
                   TalkActorVisible = true,
                   AroundPlayer = false
                 },
@@ -952,7 +952,7 @@ return {
               TalkActors = {
                 {
                   TalkActorType = "Npc",
-                  TalkActorId = 830001,
+                  TalkActorId = 240110,
                   TalkActorVisible = true,
                   AroundPlayer = false
                 },
@@ -1012,7 +1012,7 @@ return {
               TalkActors = {
                 {
                   TalkActorType = "Npc",
-                  TalkActorId = 830001,
+                  TalkActorId = 240110,
                   TalkActorVisible = true,
                   AroundPlayer = false
                 },
@@ -1072,7 +1072,7 @@ return {
               TalkActors = {
                 {
                   TalkActorType = "Npc",
-                  TalkActorId = 830001,
+                  TalkActorId = 240110,
                   TalkActorVisible = true,
                   AroundPlayer = false
                 },
@@ -1132,7 +1132,7 @@ return {
               TalkActors = {
                 {
                   TalkActorType = "Npc",
-                  TalkActorId = 830001,
+                  TalkActorId = 240110,
                   TalkActorVisible = true,
                   AroundPlayer = false
                 },
@@ -1192,7 +1192,7 @@ return {
               TalkActors = {
                 {
                   TalkActorType = "Npc",
-                  TalkActorId = 830001,
+                  TalkActorId = 240110,
                   TalkActorVisible = true,
                   AroundPlayer = false
                 },
@@ -1252,7 +1252,7 @@ return {
               TalkActors = {
                 {
                   TalkActorType = "Npc",
-                  TalkActorId = 830001,
+                  TalkActorId = 240110,
                   TalkActorVisible = true,
                   AroundPlayer = false
                 },
@@ -1312,7 +1312,7 @@ return {
               TalkActors = {
                 {
                   TalkActorType = "Npc",
-                  TalkActorId = 830001,
+                  TalkActorId = 240110,
                   TalkActorVisible = true,
                   AroundPlayer = false
                 },
@@ -1372,7 +1372,7 @@ return {
               TalkActors = {
                 {
                   TalkActorType = "Npc",
-                  TalkActorId = 830001,
+                  TalkActorId = 240110,
                   TalkActorVisible = true,
                   AroundPlayer = false
                 },
@@ -1432,7 +1432,7 @@ return {
               TalkActors = {
                 {
                   TalkActorType = "Npc",
-                  TalkActorId = 830001,
+                  TalkActorId = 240110,
                   TalkActorVisible = true,
                   AroundPlayer = false
                 },
@@ -1492,7 +1492,7 @@ return {
               TalkActors = {
                 {
                   TalkActorType = "Npc",
-                  TalkActorId = 830001,
+                  TalkActorId = 240110,
                   TalkActorVisible = true,
                   AroundPlayer = false
                 },
@@ -1552,7 +1552,7 @@ return {
               TalkActors = {
                 {
                   TalkActorType = "Npc",
-                  TalkActorId = 830001,
+                  TalkActorId = 240110,
                   TalkActorVisible = true,
                   AroundPlayer = false
                 },
@@ -1612,7 +1612,7 @@ return {
               TalkActors = {
                 {
                   TalkActorType = "Npc",
-                  TalkActorId = 830001,
+                  TalkActorId = 240110,
                   TalkActorVisible = true,
                   AroundPlayer = false
                 },
@@ -1672,7 +1672,7 @@ return {
               TalkActors = {
                 {
                   TalkActorType = "Npc",
-                  TalkActorId = 830001,
+                  TalkActorId = 240110,
                   TalkActorVisible = true,
                   AroundPlayer = false
                 },
@@ -1698,7 +1698,7 @@ return {
             key = "1773039312614827421",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1439.6355372568612, y = 1547.8466333503097},
+            pos = {x = 1439.6355372568612, y = 1546.6927871964635},
             propsData = {
               IsNpcNode = false,
               FirstDialogueId = 72202101,
@@ -1732,7 +1732,7 @@ return {
               TalkActors = {
                 {
                   TalkActorType = "Npc",
-                  TalkActorId = 830001,
+                  TalkActorId = 240110,
                   TalkActorVisible = true,
                   AroundPlayer = false
                 },
@@ -1792,7 +1792,7 @@ return {
               TalkActors = {
                 {
                   TalkActorType = "Npc",
-                  TalkActorId = 830001,
+                  TalkActorId = 240110,
                   TalkActorVisible = true,
                   AroundPlayer = false
                 },
@@ -1852,7 +1852,7 @@ return {
               TalkActors = {
                 {
                   TalkActorType = "Npc",
-                  TalkActorId = 830001,
+                  TalkActorId = 240110,
                   TalkActorVisible = true,
                   AroundPlayer = false
                 },

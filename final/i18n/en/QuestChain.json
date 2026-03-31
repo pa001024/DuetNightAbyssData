@@ -3099,7 +3099,7 @@
   },
   {
     "id": 120201,
-    "name": "皓京来客",
+    "name": "A Visitor to Haojing",
     "chapterName": "Journey Across the Lands",
     "chapterNumber": "Huaxu",
     "episode": "Where the Wind Rises",
@@ -3225,7 +3225,7 @@
   },
   {
     "id": 120202,
-    "name": "叩请问天",
+    "name": "Questioning the Heavens",
     "chapterName": "Journey Across the Lands",
     "chapterNumber": "Huaxu",
     "episode": "Where the Wind Rises",
@@ -3327,7 +3327,7 @@
   },
   {
     "id": 120203,
-    "name": "山外有山",
+    "name": "Beyond the Mountains",
     "chapterName": "Journey Across the Lands",
     "chapterNumber": "Huaxu",
     "episode": "Where the Wind Rises",
@@ -3499,7 +3499,7 @@
   },
   {
     "id": 120204,
-    "name": "钧天之危",
+    "name": "The Crisis of Juntian",
     "chapterName": "Journey Across the Lands",
     "chapterNumber": "Huaxu",
     "episode": "Where the Wind Rises",
@@ -3604,7 +3604,7 @@
   },
   {
     "id": 120205,
-    "name": "山雨欲来",
+    "name": "A Storm Approaches",
     "chapterName": "Journey Across the Lands",
     "chapterNumber": "Huaxu",
     "episode": "Where the Wind Rises",
@@ -3713,7 +3713,7 @@
   },
   {
     "id": 120206,
-    "name": "重铸黑白",
+    "name": "Binary Fate",
     "chapterName": "Journey Across the Lands",
     "chapterNumber": "Huaxu",
     "episode": "Where the Wind Rises",
@@ -3811,13 +3811,6 @@
         "id": 12020615,
         "sr": 105301,
         "next": {
-          "Success": 12020616
-        }
-      },
-      {
-        "id": 12020616,
-        "sr": 105301,
-        "next": {
           "Success": 12020617
         }
       },
@@ -3879,13 +3872,6 @@
       },
       {
         "id": 12020627,
-        "sr": 104504,
-        "next": {
-          "Success": 12020628
-        }
-      },
-      {
-        "id": 12020628,
         "sr": 104504
       }
     ]
@@ -6619,11 +6605,11 @@
   },
   {
     "id": 200317,
-    "name": "若言琴上有琴声",
+    "name": "Silence in the Strings",
     "chapterName": "Journey Across the Lands",
-    "episode": "若言琴上有琴声",
-    "desc": "与逍遥生对话",
-    "detail": "在皓京周边与白闲逛之时，竟在路边看到了一位熟悉的无由生，如果没有记错的话，它的名字应该叫逍遥生，多少也算是有“过命”交情的“熟人”，你们决定上前搭话。",
+    "episode": "Silence in the Strings",
+    "desc": "Talk to Xiaoyao",
+    "detail": "While taking a stroll with Snow on the outskirts of Haojing, you spot a familiar Wishen by the roadside. If you remember correctly, its name is Xiaoyao. Since the two of you have already been through \"life and death\" together, you decide to go over and say hello.",
     "type": 3,
     "reward": [
       50629
@@ -6707,9 +6693,9 @@
   },
   {
     "id": 200318,
-    "name": "忘川回响",
+    "name": "From the Other Shore",
     "chapterName": "Journey Across the Lands",
-    "episode": "忘川回响",
+    "episode": "From the Other Shore",
     "type": 3,
     "reward": [
       50630
@@ -6958,9 +6944,9 @@
   },
   {
     "id": 400121,
-    "name": "定格的往事·旧日残光",
+    "name": "Moments in Frames: Where We Grew Up",
     "chapterName": "Chapter Noctoyager",
-    "episode": "定格的往事·旧日残光",
+    "episode": "Moments in Frames: Where We Grew Up",
     "type": 5,
     "reward": [
       50614
@@ -6983,9 +6969,9 @@
   },
   {
     "id": 400122,
-    "name": "定格的往事·第一缕风",
+    "name": "Moments in Frames: The First Breeze",
     "chapterName": "Chapter Noctoyager",
-    "episode": "定格的往事·第一缕风",
+    "episode": "Moments in Frames: The First Breeze",
     "type": 5,
     "reward": [
       50615
@@ -7001,9 +6987,9 @@
   },
   {
     "id": 400123,
-    "name": "定格的往事·坚冰中绽放",
+    "name": "Moments in Frames: Bloom Through the Ice",
     "chapterName": "Chapter Noctoyager",
-    "episode": "定格的往事·坚冰中绽放",
+    "episode": "Moments in Frames: Bloom Through the Ice",
     "type": 5,
     "reward": [
       50616
@@ -7019,9 +7005,9 @@
   },
   {
     "id": 400124,
-    "name": "定格的往事·无光的舞台",
+    "name": "Moments in Frames: An Unlit Stage",
     "chapterName": "Chapter Noctoyager",
-    "episode": "定格的往事·无光的舞台",
+    "episode": "Moments in Frames: An Unlit Stage",
     "type": 5,
     "reward": [
       50617
@@ -7037,9 +7023,9 @@
   },
   {
     "id": 400125,
-    "name": "定格的往事·璀璨终曲",
+    "name": "Moments in Frames: A Grand Finale",
     "chapterName": "Chapter Noctoyager",
-    "episode": "定格的往事·璀璨终曲",
+    "episode": "Moments in Frames: A Grand Finale",
     "type": 5,
     "reward": [
       50618
@@ -7055,9 +7041,9 @@
   },
   {
     "id": 400126,
-    "name": "定格的往事·织星撷香",
+    "name": "Moments in Frames: Weavers of Stars",
     "chapterName": "Chapter Noctoyager",
-    "episode": "定格的往事·织星撷香",
+    "episode": "Moments in Frames: Weavers of Stars",
     "type": 5,
     "reward": [
       50619
@@ -7073,9 +7059,9 @@
   },
   {
     "id": 400127,
-    "name": "定格的往事·神阙弈天",
+    "name": "Moments in Frames: A Wager Against Heaven",
     "chapterName": "Chapter Noctoyager",
-    "episode": "定格的往事·神阙弈天",
+    "episode": "Moments in Frames: A Wager Against Heaven",
     "type": 5,
     "reward": [
       50620
@@ -7091,9 +7077,9 @@
   },
   {
     "id": 400128,
-    "name": "定格的往事·序章",
+    "name": "Moments in Frames: Prologue",
     "chapterName": "Chapter Noctoyager",
-    "episode": "定格的往事·序章",
+    "episode": "Moments in Frames: Prologue",
     "type": 5,
     "reward": [
       50612
@@ -7123,9 +7109,9 @@
   },
   {
     "id": 400129,
-    "name": "定格的往事·后日谈",
+    "name": "Moments in Frames: Afterword",
     "chapterName": "Chapter Noctoyager",
-    "episode": "定格的往事·后日谈",
+    "episode": "Moments in Frames: Afterword",
     "type": 5,
     "reward": [
       50613

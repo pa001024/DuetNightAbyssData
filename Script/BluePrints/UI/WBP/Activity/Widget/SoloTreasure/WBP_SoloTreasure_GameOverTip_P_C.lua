@@ -39,11 +39,13 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, ...)
     self.Panel_Defeat:SetVisibility(ESlateVisibility.Collapsed)
     self.Text_TitleNum:SetText(GText("UI_Extraction_TM_25"))
     self:PlayAnimation(self.Victory_In)
+    AudioManager(self):PlayUISound(self, "event:/ui/activity/sdc_level_success", nil, nil)
   else
     self.Panel_Victory:SetVisibility(ESlateVisibility.Collapsed)
     self.Panel_Defeat:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.Text_TitleNum_1:SetText(GText("UI_Extraction_TM_26"))
     self:PlayAnimation(self.Defeat_In)
+    AudioManager(self):PlayUISound(self, "event:/ui/activity/sdc_level_fail", nil, nil)
   end
 end
 

@@ -1848,7 +1848,7 @@ function M:Unlock_OpenSeconderyPassword(Type, Uuid, PlayerAvatar)
     OnSuccess = function(Password)
       self:SetFocus()
       self:BlockAllUIInput(true)
-      PlayerAvatar:UnLockResourceInBag(Type, Uuid)
+      PlayerAvatar:UnLockResourceInBag(Type, Uuid, nil, Password)
     end,
     OnCancel = function()
       self:SetFocus()

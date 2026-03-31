@@ -243,7 +243,10 @@ function M:InitCommonItem(Index)
   Content.Parent = self
   Content.Count = CurRewardInfo.RewardCount
   Content.IsShowDetails = true
-  Parent.Item_Reward:CreateWidgetNew("ComItemUniversalL")
+  Content.OnMenuOpenChangedEvents = {
+    Obj = self,
+    Callback = self.ItemMenuAnchorChanged
+  }, Parent.Item_Reward:CreateWidgetNew("ComItemUniversalL")
   Parent.Item_Reward:Init(Content)
   if Content.Type == "Mod" then
     Parent.Item_Reward.ItemName:SetVisibility(UE4.ESlateVisibility.Collapsed)
@@ -561,6 +564,7 @@ function M:UpdateCommonKeys(...)
 end
 
 function M:GamePadToPC()
+  self.IsGamepad = false
   if not self.Panel_Key_GamePad then
     return
   end
@@ -571,6 +575,7 @@ function M:GamePadToPC()
 end
 
 function M:PCToGamePad()
+  self.IsGamepad = true
   if not self.Panel_Key_GamePad then
     return
   end
@@ -643,7 +648,6 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
         elseif self.Reward_3rd.Button_Area:HasAnyUserFocus() or self.Reward_3rd:HasAnyUserFocus() then
           self.Reward_3rd.Item_Reward:OpenItemMenu()
         end
-        self:SetItemRewardVisibility(false)
         self:UpdateCommonKeys()
         self.Btn_Confirm:SetGamePadVisibility(UE4.ESlateVisibility.Collapsed)
         self.Key_GamePad:SetVisibility(UE4.ESlateVisibility.Collapsed)
@@ -768,6 +772,36 @@ function M:InterruptAutoMode()
     self:RemoveTimer(self.CheckIsAutoModeTimer)
     self.Btn_Confirm:SetText(GText("UI_CONFIRM_SELECTION"))
     DebugPrint("ayff test InterruptAutoMode in reward choose")
+  end
+end
+
+function M:ItemMenuAnchorChanged(bIsOpen)
+  if not self.IsGamepad then
+    return
+  end
+  if not bIsOpen then
+    self:SetItemRewardVisibility(false)
+    self:AddTimer(0.01, function()
+      local FocusIndex
+      if self.Reward_1st.Item_Reward:HasAnyUserFocus() then
+        FocusIndex = 1
+      elseif self.Reward_2nd.Item_Reward:HasAnyUserFocus() then
+        FocusIndex = 2
+      elseif self.Reward_3rd.Item_Reward:HasAnyUserFocus() then
+        FocusIndex = 3
+      end
+      if not FocusIndex then
+        return
+      end
+      self.RewardSelectWidgetList[FocusIndex].Button_Area:SetFocus()
+      if self.CurrentSelectIndex == FocusIndex then
+        self.State = 0
+        self:UpdateCommonKeys("LS", GText("UI_Controller_CheckDetails"))
+      else
+        self.State = 1
+        self:UpdateCommonKeys("A", GText("UI_Tips_Ensure"), "LS", GText("UI_Controller_CheckDetails"))
+      end
+    end)
   end
 end
 

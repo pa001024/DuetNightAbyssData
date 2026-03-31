@@ -17861,7 +17861,7 @@
       {
         "id": 4172,
         "t": "Pet",
-        "n": "青鸾贰型"
+        "n": "Qingluan Type II"
       }
     ]
   },
@@ -17871,7 +17871,7 @@
       {
         "id": 30119,
         "t": "HeadSculpture",
-        "n": "微茫珍藏"
+        "n": "Trésors du Marché Voilé"
       },
       {
         "id": 30032,
@@ -17882,7 +17882,7 @@
         "id": 1009,
         "t": "Resource",
         "c": 2,
-        "n": "星辉丝线"
+        "n": "Fil stellaire"
       },
       {
         "id": 100,
@@ -17908,13 +17908,13 @@
       {
         "id": 30040,
         "t": "CharAccessory",
-        "n": "夜明灯·焦糖"
+        "n": "Lanterne nocturne – Caramel"
       },
       {
         "id": 120002,
         "t": "Resource",
         "c": 1,
-        "n": "风息装饰代金券"
+        "n": "Bon d’accessoires Souffle du vent"
       },
       {
         "id": 1004,
@@ -18736,7 +18736,7 @@
       {
         "id": 41766,
         "t": "Mod",
-        "n": "Poursuite"
+        "n": "Décision"
       },
       {
         "id": 42413,
@@ -20902,13 +20902,13 @@
         "id": 1024,
         "t": "Walnut",
         "c": 65,
-        "n": "密函：苏乙"
+        "n": "Mandat scellé : Su Yi"
       },
       {
         "id": 2055,
         "t": "Walnut",
         "c": 30,
-        "n": "密函：孤雏的羽迹"
+        "n": "Mandat scellé : Sillage solitaire"
       },
       {
         "id": 211,
@@ -20956,7 +20956,7 @@
         "id": 2056,
         "t": "Walnut",
         "c": 30,
-        "n": "密函：杯中的残火"
+        "n": "Mandat scellé : Braise du calice"
       },
       {
         "id": 211,
@@ -23094,7 +23094,7 @@
         "id": 2057,
         "t": "Walnut",
         "c": 3,
-        "n": "密函：鸣金遥"
+        "n": "Mandat scellé : Écho aurifère"
       }
     ]
   },
@@ -23117,7 +23117,7 @@
         "id": 2055,
         "t": "Walnut",
         "c": 3,
-        "n": "密函：孤雏的羽迹"
+        "n": "Mandat scellé : Sillage solitaire"
       }
     ]
   },
@@ -23140,7 +23140,7 @@
         "id": 2058,
         "t": "Walnut",
         "c": 3,
-        "n": "密函：切割齿轮"
+        "n": "Mandat scellé : Engrenage déchiqueté"
       }
     ]
   },
@@ -23163,7 +23163,7 @@
         "id": 1024,
         "t": "Walnut",
         "c": 3,
-        "n": "密函：苏乙"
+        "n": "Mandat scellé : Su Yi"
       }
     ]
   },
@@ -23538,7 +23538,7 @@
       {
         "id": 41033,
         "t": "Resource",
-        "n": "Posture : Écran électronique"
+        "n": "Modules visionnaires"
       },
       {
         "id": 102,
@@ -23619,7 +23619,7 @@
       {
         "id": 41056,
         "t": "Resource",
-        "n": "出拳"
+        "n": "Coup de poing"
       },
       {
         "id": 102,
@@ -24040,7 +24040,7 @@
       {
         "id": 4172,
         "t": "Pet",
-        "n": "青鸾贰型"
+        "n": "Qingluan Type II"
       },
       {
         "id": 1004,
@@ -24068,7 +24068,7 @@
       {
         "id": 10091,
         "t": "CharAccessory",
-        "n": "祀烟香炉·鎏金"
+        "n": "Brûle-encens rituel – Doré"
       }
     ]
   },
@@ -24079,7 +24079,7 @@
         "id": 221,
         "t": "Resource",
         "c": 1,
-        "n": "星耀硬币"
+        "n": "Pièce stellaire"
       }
     ]
   },
@@ -24089,7 +24089,7 @@
       {
         "id": 32010131,
         "t": "Skin",
-        "n": "叛逆风尚"
+        "n": "Style rebelle"
       },
       {
         "id": 30118,
@@ -24099,7 +24099,7 @@
       {
         "id": 10090,
         "t": "CharAccessory",
-        "n": "机枢齿轮"
+        "n": "Engrenage Jishu"
       },
       {
         "id": 30037,
@@ -24109,13 +24109,13 @@
       {
         "id": 30038,
         "t": "CharAccessory",
-        "n": "白鸟先生"
+        "n": "Monsieur l’Oiseau blanc"
       },
       {
         "id": 120001,
         "t": "Resource",
         "c": 1,
-        "n": "父辈余荫代金券"
+        "n": "Bon d’Héritage paternel"
       },
       {
         "id": 30104,

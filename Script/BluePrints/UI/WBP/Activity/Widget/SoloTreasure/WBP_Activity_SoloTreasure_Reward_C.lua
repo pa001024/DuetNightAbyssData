@@ -5,6 +5,7 @@ local SoloTreasureReward = Class({
 local SoloTreasureDataModel = require("BluePrints.UI.WBP.Activity.Widget.SoloTreasure.SoloTreasureDataModel")
 local SoloTreasureJump = require("BluePrints.UI.WBP.SoloTreasure.Widget.WBP_SoloTreasure_Reward_Model")
 local EastSeasonQuestUtils = require("BluePrints.UI.WBP.Activity.Widget.EastSeason.EastSeasonQuestUtils")
+local SoloTreasure = require("BluePrints.UI.WBP.SoloTreasure.Widget.WBP_SoloTreasure_Reward_Model")
 
 function SoloTreasureReward:Init()
   local EventId = SoloTreasureDataModel:GetEventId()
@@ -246,6 +247,7 @@ function SoloTreasureReward:OnPermanentRewardClicked(Params, Btn)
 end
 
 function SoloTreasureReward:InitReddotListen()
+  SoloTreasure:RefreshReddotInfo(true)
   local bIsOpen = SoloTreasureDataModel:ActivityIsUnlock(self.EventId)
   if not bIsOpen then
     if self.Btn_Reward then

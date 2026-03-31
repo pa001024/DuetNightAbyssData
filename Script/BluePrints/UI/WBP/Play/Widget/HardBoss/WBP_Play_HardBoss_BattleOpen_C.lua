@@ -63,11 +63,6 @@ function M:InitBossInfo()
     DebugPrint(string.format("Error: %s init boss info failed, HardBossMainData is nil", self:GetName()))
     return
   end
-  local MonsterData = DataMgr.Monster[HardBossMainData.MonsterId[1]]
-  if not MonsterData then
-    DebugPrint(string.format("Error: %s init boss info failed, MonsterData is nil", self:GetName()))
-    return
-  end
   local HardBossDifficultyData = DataMgr.HardBossDifficulty[HardBossDifficultyId]
   if not HardBossDifficultyData then
     DebugPrint(string.format("Error: %s init boss info failed, HardBossDifficultyData is nil", self:GetName()))
@@ -82,8 +77,8 @@ function M:InitBossInfo()
     DebugPrint(string.format("Error: %s init boss info failed, TitleWidget is nil", self:GetName()))
     return
   end
-  local BossName = GText(MonsterData.UnitName)
-  local ProcessUnitNameSet = {Mon_Name_8505001 = true, Mon_Name_8512001 = true}
+  local BossName = GText(HardBossMainData.HardBossName)
+  local ProcessUnitNameSet = {UI_HardBoss_Name_4 = true, UI_HardBoss_Name_5 = true}
   
   local function utf8_chars(str)
     if type(str) ~= "string" then
@@ -96,7 +91,7 @@ function M:InitBossInfo()
     return t
   end
   
-  if type(BossName) == "string" and ProcessUnitNameSet[MonsterData.UnitName] then
+  if type(BossName) == "string" and ProcessUnitNameSet[HardBossMainData.HardBossName] then
     local chars = utf8_chars(BossName)
     local charCount = #chars
     if charCount >= 2 and "“" == chars[1] and "”" == chars[charCount] then

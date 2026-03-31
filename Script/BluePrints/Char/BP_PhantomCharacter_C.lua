@@ -81,6 +81,9 @@ end
 
 function BP_PhantomCharacter:CommonRecoveryImpl()
   self.Super.CommonRecoveryImpl(self)
+  if IsDedicatedServer(self) or IsStandAlone(self) then
+    self:RefreshClientSkillLogicComponents()
+  end
   if self.PhantomOwner then
     Battle(self):TriggerBattleEvent(BattleEventName.OnPhantomRecover, self.PhantomOwner, self)
   end

@@ -695,6 +695,11 @@ return ReadOnly("CharPartModel", {
     PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Body/TP01/Mesh/ZNM01_TP01_SM.ZNM01_TP01_SM'",
     PartType = "Body"
   },
+  [1001009] = {
+    CharPartId = 1001009,
+    PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Body/TP01/Mesh/QNM02_TP01_SM.QNM02_TP01_SM'",
+    PartType = "Body"
+  },
   [1001101] = {
     CharPartId = 1001101,
     PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Body/TP02/Mesh/QNF00_TP02_SM.QNF00_TP02_SM'",
@@ -735,6 +740,11 @@ return ReadOnly("CharPartModel", {
     PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Body/TP02/Mesh/ZNM01_TP02_SM.ZNM01_TP02_SM'",
     PartType = "Body"
   },
+  [1001109] = {
+    CharPartId = 1001109,
+    PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Body/TP02/Mesh/QNM02_TP02_SM.QNM02_TP02_SM'",
+    PartType = "Body"
+  },
   [1012101] = {
     CharPartId = 1012101,
     PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Body/TP03/Mesh/QNF00_TP03_SM.QNF00_TP03_SM'",
@@ -763,6 +773,11 @@ return ReadOnly("CharPartModel", {
   [1012108] = {
     CharPartId = 1012108,
     PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Body/TP03/Mesh/ZNM01_TP03_SM.ZNM01_TP03_SM'",
+    PartType = "Body"
+  },
+  [1012109] = {
+    CharPartId = 1012109,
+    PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Body/TP03/Mesh/QNM02_TP03_SM.QNM02_TP03_SM'",
     PartType = "Body"
   },
   [1012201] = {
@@ -805,6 +820,11 @@ return ReadOnly("CharPartModel", {
     PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Body/TP04/Mesh/ZNM01_TP04_SM.ZNM01_TP04_SM'",
     PartType = "Body"
   },
+  [1012209] = {
+    CharPartId = 1012209,
+    PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Body/TP04/Mesh/QNM02_TP04_SM.QNM02_TP04_SM'",
+    PartType = "Body"
+  },
   [1013101] = {
     CharPartId = 1013101,
     PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Body/TP05/Mesh/QNF01_TP05_SM.QNF01_TP05_SM'",
@@ -843,6 +863,11 @@ return ReadOnly("CharPartModel", {
   [1013108] = {
     CharPartId = 1013108,
     PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Body/TP05/Mesh/ZNM01_TP05_SM.ZNM01_TP05_SM'",
+    PartType = "Body"
+  },
+  [1013109] = {
+    CharPartId = 1013109,
+    PartPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Body/TP05/Mesh/QNM02_TP05_SM.QNM02_TP05_SM'",
     PartType = "Body"
   }
 })

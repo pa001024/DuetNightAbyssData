@@ -557,7 +557,7 @@ function WBP_Rouge_DifficultySelection_P_C:RefreshHeatValue()
   local HeatPoints = ContractModel:GetCurrentHeatValue()
   self.Text_HeatPoints:SetText(ContractModel:GetCurrentHeatValue())
   local Bouns = ContractModel:GetCurrentContractPointRate()
-  Bouns = math.floor(Bouns * 100)
+  Bouns = math.floor(Bouns * 100 + 0.001)
   self.Text_Bouns:SetText(Bouns)
   if 0 == HeatPoints then
     self:HideHeatPointBouns(true)

@@ -317,6 +317,7 @@ function M:OnNewWeaponAccessoryObtained(AccessoryId)
     return
   end
   ArmoryUtils:TryAddNewWeaponAccessoryReddot(AccessoryId)
+  ArmoryUtils:TryAddNewWeaponStanceFXReddot(AccessoryId)
 end
 
 function M:OnNewWeaponSkinObtained(SkinId)

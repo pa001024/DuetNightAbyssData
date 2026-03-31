@@ -1,6 +1,7 @@
 require("UnLua")
 local UIUtils = require("Utils.UIUtils")
 local ChatCommon = require("BluePrints.UI.WBP.Chat.ChatCommon")
+local SignBoardBubbleTalkModel = require("BluePrints.UI.WBP.SignBoardBubble.SignBoardBubbleTalkModel")
 local ClientEventUtils = require("BluePrints.Common.ClientEvent.ClientEventUtils")
 local BattleHUDCommonConst = require("BluePrints.UI.UI_Phone.Battle.BattleHUDCommonConst")
 local TaskUtils = require("BluePrints.UI.TaskPanel.TaskUtils")
@@ -1167,7 +1168,6 @@ function WBP_Battle_C:InitConditionMapSystem()
   self.ListView = self.BattleEntry.List_Entry
   self.ListView:DisableScroll(true)
   self.ConditionMapping = {}
-  self.SignBoardNpcLoadComplete = false
   for SystemId, Data in pairs(DataMgr.MainUI) do
     local ConditionId = Data.ShowCondition
     if ConditionId then
@@ -1204,7 +1204,7 @@ end
 
 function WBP_Battle_C:InitHomeBaseMain()
   self:InitBtnList()
-  if not self.SignBoardNpcLoadComplete then
+  if not SignBoardBubbleTalkModel.bSignBoardNpcLoadComplete then
     self:TriggerSignBoardNpc()
     self:AddDispatcher(EventID.OnCharAppearanceChanged, self, self.OnCharAccessoryChange)
     self:AddDispatcher(EventID.OnCharAccessorySetted, self, self.OnCharAccessoryChange)
@@ -1421,7 +1421,7 @@ function WBP_Battle_C:SetSignBoardNpcIdle()
     end
   end
   local SignBoardController = require("BluePrints.UI.WBP.SignBoardBubble.SignBoardBubbleTalkController")
-  self.SignBoardNpcLoadComplete = true
+  SignBoardBubbleTalkModel.bSignBoardNpcLoadComplete = true
   if SignBoardController then
     SignBoardController:StartHomeBase()
   end

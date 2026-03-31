@@ -44,12 +44,12 @@ return ReadOnly("ArtLevelControl_RegionId2TaskVar", {
     [5] = "FengxiangBoss",
     [6] = "IQ12030706",
     [7] = "IQ12030706_jlc",
-    [8] = "IQ12020517"
+    [8] = "IQ12020517",
+    [9] = "ZhiliuA12020414"
   },
   [1051] = {
     [1] = "Qianxing12020208",
-    [2] = "Int12020208",
-    [3] = "ZhiliuA12020414"
+    [2] = "Int12020208"
   },
   [1052] = {
     [1] = "IQ12020401"

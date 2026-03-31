@@ -6781,7 +6781,7 @@ return ReadOnly("Npc", {
     RelatedTalks = {110203},
     UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Suyi/BP_NPC_Suyi",
     UnitId = 240107,
-    UnitName = "UI_Npc_Name_240026_1"
+    UnitName = "UI_Npc_Name_240026"
   },
   [240108] = {
     Camp = "NPC",
@@ -6792,7 +6792,7 @@ return ReadOnly("Npc", {
     RelatedTalks = {110204},
     UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Suyi/BP_NPC_Suyi",
     UnitId = 240108,
-    UnitName = "UI_Npc_Name_240026_1"
+    UnitName = "UI_Npc_Name_240026"
   },
   [240109] = {
     Camp = "NPC",
@@ -6803,7 +6803,92 @@ return ReadOnly("Npc", {
     RelatedTalks = {110205},
     UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Suyi/BP_NPC_Suyi",
     UnitId = 240109,
-    UnitName = "UI_Npc_Name_240026_1"
+    UnitName = "UI_Npc_Name_240026"
+  },
+  [240110] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ForbidenMoveComp = true,
+    IgnoreFixLocation = true,
+    ModelId = 30021,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/NPC_Wuyou/Wuyou01/BP_NPC_Wuyou01_XY_3",
+    UnitId = 240110,
+    UnitName = "UI_Npc_Name_240028"
+  },
+  [240111] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultAction = {
+      "Kezhou_Story_Sowrdlaugh01_Loop"
+    },
+    GuideHeadId = "Kezhou_Idle",
+    ModelId = 81503,
+    MouthProfile = "LipSync_10026",
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Kezhou/BP_NPC_Kezhou_Juezhan",
+    UnitId = 240111,
+    UnitName = "UI_Npc_Name_240013"
+  },
+  [240112] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultAction = {
+      "Yuming_Story_LevelFinish_Sword_Loop"
+    },
+    ModelId = 84201,
+    MouthProfile = "LipSync_10025",
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Yuming/BP_NPC_Yuming_Juezhan",
+    UnitId = 240112,
+    UnitName = "UI_Npc_Name_250005"
+  },
+  [240113] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultAction = {
+      "sit_Complacent_Loop"
+    },
+    ForbidenMoveComp = true,
+    GuideHeadId = "Bai_Idle",
+    IgnoreFixLocation = true,
+    ModelId = 10006,
+    MouthProfile = "LipSync_10006",
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/BaiNpc/BaiTX/BP_BaiTX",
+    UnitId = 240113,
+    UnitName = "UI_Npc_Name_Bai"
+  },
+  [240114] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30039,
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/TalkMonster/Monster/Heilong/BP_NPC_Bailong_East02",
+    UnitId = 240114,
+    UnitName = "UI_Npc_Name_240024"
+  },
+  [240115] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30006,
+    MouthProfile = "LipSync_10009",
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_ShouweiA",
+    UnitId = 240115,
+    UnitName = "UI_Npc_Name_240017"
+  },
+  [240116] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    DefaultExpression = T.RT_1,
+    ModelId = 30006,
+    MouthProfile = "LipSync_10009",
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/BP_ShouweiC",
+    UnitId = 240116,
+    UnitName = "UI_Npc_Name_240018"
   },
   [250001] = {
     Camp = "NPC",
@@ -10351,7 +10436,7 @@ return ReadOnly("Npc", {
     Camp = "NPC",
     CollisionLevel = 999,
     DefaultAction = {
-      "OnGround01_Loop",
+      "Onground01_Loop",
       "Idle"
     },
     ModelId = 30002,

@@ -365,6 +365,7 @@ function M:SetupInitialGesturePreview(ItemData)
 end
 
 function M:SetupInitialMountsPreview(ItemData)
+  self:ClearCharAccessory()
   local MountData = DataMgr.Mount[ItemData.TypeId]
   self.ActorController:SetArmoryCameraTag(MountData.CameraName or CommonConst.ArmoryType.Char, "", "")
   self.ActorController:HidePlayerOnMount(false)
@@ -477,6 +478,7 @@ function M:UpdateToHairPreview(ItemData)
   self.ActorController:HidePlayerActor(self.UIName, false)
   self:HidePlayerWeapon(true)
   self:HideSingleWeapon(true)
+  self:ClearCharAccessory()
   local CharId = DataMgr.Hair[ItemData.TypeId].CharId
   local CharHairId = ItemData.TypeId
   local AppearanceInfo = {
@@ -491,7 +493,6 @@ function M:UpdateToHairPreview(ItemData)
   self.ActorController:ChangeCharModel(self.Params.Target, true, true)
   self.ActorController.ArmoryHelper:SetPlayer(self.ActorController.ArmoryPlayer)
   self.ActorController:ChangeCharAppearance(AppearanceInfo)
-  self.ActorController.DelayFrame = 30
   self.ActorController.bPlaySameMontage = true
   self:UpdateAccessoryCamera(CharHairId, "Hair")
 end

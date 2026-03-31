@@ -3,18 +3,31 @@ return {
     [0] = 0,
     [999] = "BP_HX_Fur02_F2_Huaxu_Haojing_Main"
   },
-  None = {
+  E373D4664B4B0AA48B7B2599D34C28AE = {
     [0] = 0,
-    [999] = "BP_HX_Fur06_LR2_Huaxu_Haojing_Main"
+    [999] = "BP_HX_Fur02_F_Huaxu_Haojing_Main"
   },
   ["8BFDE7714D744F6014AA729437AA9B6D"] = {
     [0] = 0,
     [999] = "BP_HX_Fur02_F3_Huaxu_Haojing_Main"
   },
+  ["651BBE004AA469D8E01AFF8C46B8A664"] = {
+    [0] = 0,
+    [1] = 0,
+    [999] = "BP_HX_Fur12_F_Huaxu_Haojing_Main"
+  },
   E52CEFBF464B09703840D7A8C82EFC38 = {
     [0] = 0,
     [1] = 0,
     [999] = "BP_HX_Fur12_F2_Huaxu_Haojing_Main"
+  },
+  ["4DB8CF694B2AFF91F72DB4ADDB3A0C82"] = {
+    [0] = 0,
+    [999] = "BP_HX_Fur06_LR_Huaxu_Haojing_Main"
+  },
+  E109AE1F4E9229813B75C5BDDF8E49C5 = {
+    [0] = 0,
+    [999] = "BP_HX_Fur06_LR2_Huaxu_Haojing_Main"
   },
   ["464E8A904957A131C5AC4FA3EB10C84B"] = {
     [0] = 0,

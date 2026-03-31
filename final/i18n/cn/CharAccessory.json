@@ -843,7 +843,7 @@
     "id": 12006,
     "name": "黑礁",
     "desc": "沉默而无声的礁石，守望着风暴中混沌的思绪。",
-    "icon": "T_Fashion_Hat06",
+    "icon": "T_Fashion_Hat07",
     "rarity": 4,
     "unlock": "通过商店获得"
   },
@@ -851,7 +851,7 @@
     "id": 12007,
     "name": "铸铁哨卫",
     "desc": "锚定回忆，守候誓言。",
-    "icon": "T_Fashion_Hat07",
+    "icon": "T_Fashion_Hat06",
     "rarity": 4,
     "unlock": "通过商店获得"
   },
@@ -1921,7 +1921,7 @@
   },
   {
     "id": 30020,
-    "name": "伏龙节",
+    "name": "伏龙节·鎏金",
     "desc": "将天的权柄握于手中。",
     "icon": "T_Fashion_Waist15",
     "rarity": 5,

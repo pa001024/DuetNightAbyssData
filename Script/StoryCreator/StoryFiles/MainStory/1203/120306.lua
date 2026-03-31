@@ -436,7 +436,7 @@ return {
               BlendEaseExp = 2,
               UseProceduralCamera = false,
               ProceduralCameraId = 1,
-              HideNpcs = false,
+              HideNpcs = true,
               HideMonsters = true,
               HideAllBattleEntity = true,
               HideMechanismsFX = true,
@@ -639,12 +639,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17689882726793262",
-            startPort = "Out",
-            endQuest = "17638126691143436615",
-            endPort = "Success"
-          },
-          {
             startQuest = "17638126691143436617",
             startPort = "Out",
             endQuest = "1769149458596372441",
@@ -685,6 +679,30 @@ return {
             startPort = "QuestStart",
             endQuest = "17738218702852608026",
             endPort = "In"
+          },
+          {
+            startQuest = "17638126691143436617",
+            startPort = "Out",
+            endQuest = "177450647997010181458",
+            endPort = "In"
+          },
+          {
+            startQuest = "1769149617713372832",
+            startPort = "Out",
+            endQuest = "177450653693911453504",
+            endPort = "In"
+          },
+          {
+            startQuest = "17689882726793262",
+            startPort = "Out",
+            endQuest = "177450657932811454164",
+            endPort = "In"
+          },
+          {
+            startQuest = "177450657932811454164",
+            startPort = "Out",
+            endQuest = "17638126691143436615",
+            endPort = "Success"
           }
         },
         nodeData = {
@@ -699,7 +717,7 @@ return {
             key = "17638126691143436615",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 2281.2766258505853, y = 292.89666025678554},
+            pos = {x = 2560.750310061111, y = 289.73876551994346},
             propsData = {ModeType = 0}
           },
           ["17638126691143436616"] = {
@@ -968,7 +986,7 @@ return {
           ["17737511331788244041"] = {
             key = "17737511331788244041",
             type = "BossBattleFinishNode",
-            name = "完成BOSS战阶段",
+            name = "关天气",
             pos = {x = 2005.805919886565, y = 471.1442750797588},
             propsData = {SendMessage = "Suyi_1End", FinishCondition = ""}
           },
@@ -986,11 +1004,56 @@ return {
           ["17738218702852608026"] = {
             key = "17738218702852608026",
             type = "BossBattleFinishNode",
-            name = "完成BOSS战阶段",
-            pos = {x = 1125.3462983721765, y = 682.5612402058454},
+            name = "开天气",
+            pos = {x = 1126.9252457405976, y = 682.5612402058454},
             propsData = {
               SendMessage = "Suyi_1Start",
               FinishCondition = ""
+            }
+          },
+          ["177450647997010181458"] = {
+            key = "177450647997010181458",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1678.5241228070176, y = 87.91821465428261},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/mute",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {104503},
+              ClientRelatedRegionId = {},
+              bStoreToServer = true
+            }
+          },
+          ["177450653693911453504"] = {
+            key = "177450653693911453504",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2003.6118421052633, y = 652.2164602683176},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/1_3/0152_story_jiaolancun_piano",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {104503},
+              ClientRelatedRegionId = {},
+              bStoreToServer = true
+            }
+          },
+          ["177450657932811454164"] = {
+            key = "177450657932811454164",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2283.0855263157896, y = 289.0585655314754},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
             }
           }
         },
@@ -1045,16 +1108,22 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17638130346294124620",
-            startPort = "Out",
-            endQuest = "17638130346294124618",
-            endPort = "Success"
-          },
-          {
             startQuest = "17638130346294124617",
             startPort = "QuestStart",
             endQuest = "17708825420583475767",
             endPort = "In"
+          },
+          {
+            startQuest = "17638130346294124620",
+            startPort = "Out",
+            endQuest = "17747661156215106629",
+            endPort = "In"
+          },
+          {
+            startQuest = "17747661156215106629",
+            startPort = "Out",
+            endQuest = "17638130346294124618",
+            endPort = "Success"
           }
         },
         nodeData = {
@@ -1069,7 +1138,7 @@ return {
             key = "17638130346294124618",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 1767.5351219127276, y = 297.03788368973403},
+            pos = {x = 2039.1140692811487, y = 308.09051526868143},
             propsData = {ModeType = 0}
           },
           ["17638130346294124619"] = {
@@ -1151,6 +1220,17 @@ return {
               EnableFadeOut = false,
               NewTargetPointName = "",
               StaticCreatorIdList = {132420143, 132420144}
+            }
+          },
+          ["17747661156215106629"] = {
+            key = "17747661156215106629",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1689.300438596491, y = 301.57017543859627},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
             }
           }
         },

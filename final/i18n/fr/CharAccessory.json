@@ -665,96 +665,96 @@
   },
   {
     "id": 10090,
-    "name": "机枢齿轮",
-    "desc": "擎天巨物的运转，离不开每一件齿轮的付出。",
+    "name": "Engrenage Jishu",
+    "desc": "Même les plus grandes mécaniques reposent sur chaque engrenage qui les compose.",
     "icon": "T_Fashion_Head52",
     "rarity": 3,
     "unlock": "Disponible via les événements"
   },
   {
     "id": 10091,
-    "name": "祀烟香炉·鎏金",
-    "desc": "我们究竟是在祭天，还是在祭人？",
+    "name": "Brûle-encens rituel – Doré",
+    "desc": "Rendons-nous hommage aux cieux... ou aux mortels ?",
     "icon": "T_Fashion_Head54",
     "rarity": 3,
     "unlock": "Disponible via les événements"
   },
   {
     "id": 10094,
-    "name": "羽毛笔·涅白",
-    "desc": "写下属于我们的故事。",
+    "name": "Plume d’écriture – Blanc ivoire",
+    "desc": "Écrivons l’histoire qui n’appartient qu’à nous.",
     "icon": "T_Fashion_Head58_01",
     "rarity": 5,
     "unlock": "Disponible dans la boutique"
   },
   {
     "id": 10095,
-    "name": "羽毛笔·焦糖",
-    "desc": "写下属于我们的故事。",
+    "name": "Plume d’écriture – Caramel",
+    "desc": "Écrivons l’histoire qui n’appartient qu’à nous.",
     "icon": "T_Fashion_Head58_02",
     "rarity": 5,
     "unlock": "Disponible dans la boutique"
   },
   {
     "id": 10096,
-    "name": "羽毛笔·墨玉",
-    "desc": "写下属于我们的故事。",
+    "name": "Plume d’écriture – Jade noir",
+    "desc": "Écrivons l’histoire qui n’appartient qu’à nous.",
     "icon": "T_Fashion_Head58_03",
     "rarity": 5,
     "unlock": "Disponible dans la boutique"
   },
   {
     "id": 10097,
-    "name": "羽毛笔·锈红",
-    "desc": "写下属于我们的故事。",
+    "name": "Plume d’écriture – Rouille",
+    "desc": "Écrivons l’histoire qui n’appartient qu’à nous.",
     "icon": "T_Fashion_Head58_04",
     "rarity": 5,
     "unlock": "Disponible dans la boutique"
   },
   {
     "id": 10098,
-    "name": "噤言诡灵·锈红",
-    "desc": "急急如律令。",
+    "name": "Esprit du mutisme – Rouille",
+    "desc": "Que l’ordre soit exécuté sans faille.",
     "icon": "T_Fashion_Head57_02",
     "rarity": 5,
     "unlock": "Disponible via les événements"
   },
   {
     "id": 10099,
-    "name": "噤言诡灵·黛蓝",
-    "desc": "急急如律令。",
+    "name": "Esprit du mutisme – Bleu indigo",
+    "desc": "Que l’ordre soit exécuté sans faille.",
     "icon": "T_Fashion_Head57_01",
     "rarity": 5,
     "unlock": "Disponible via les événements"
   },
   {
     "id": 10102,
-    "name": "汪汪发饰·涅白",
-    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在狗耳朵的面前都会显得黯淡无光，这就是狗耳朵那让人无法拒绝的魔力……这台词总感觉在哪里说过，应该是错觉吧。",
+    "name": "Ornement canin – Blanc ivoire",
+    "desc": "Vives, adorables, espiègles, ravissantes... Tous les mots du monde pâlissent face aux oreilles-de-chien. Voilà leur charme irrésistible... Tiens, cette réplique me dit quelque chose... Enfin, sûrement une impression.",
     "icon": "T_Fashion_Head56_01",
     "rarity": 4,
     "unlock": "Disponible dans la boutique"
   },
   {
     "id": 10103,
-    "name": "汪汪发饰·墨玉",
-    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在狗耳朵的面前都会显得黯淡无光，这就是狗耳朵那让人无法拒绝的魔力……这台词总感觉在哪里说过，应该是错觉吧。",
+    "name": "Ornement canin – Jade noir",
+    "desc": "Vives, adorables, espiègles, ravissantes... Tous les mots du monde pâlissent face aux oreilles-de-chien. Voilà leur charme irrésistible... Tiens, cette réplique me dit quelque chose... Enfin, sûrement une impression.",
     "icon": "T_Fashion_Head56_04",
     "rarity": 4,
     "unlock": "Disponible dans la boutique"
   },
   {
     "id": 10104,
-    "name": "汪汪发饰·焦糖",
-    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在狗耳朵的面前都会显得黯淡无光，这就是狗耳朵那让人无法拒绝的魔力……这台词总感觉在哪里说过，应该是错觉吧。",
+    "name": "Ornement canin – Caramel",
+    "desc": "Vives, adorables, espiègles, ravissantes... Tous les mots du monde pâlissent face aux oreilles-de-chien. Voilà leur charme irrésistible... Tiens, cette réplique me dit quelque chose... Enfin, sûrement une impression.",
     "icon": "T_Fashion_Head56_02",
     "rarity": 4,
     "unlock": "Disponible dans la boutique"
   },
   {
     "id": 10105,
-    "name": "汪汪发饰·铅灰",
-    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在狗耳朵的面前都会显得黯淡无光，这就是狗耳朵那让人无法拒绝的魔力……这台词总感觉在哪里说过，应该是错觉吧。",
+    "name": "Ornement canin – Gris plomb",
+    "desc": "Vives, adorables, espiègles, ravissantes... Tous les mots du monde pâlissent face aux oreilles-de-chien. Voilà leur charme irrésistible... Tiens, cette réplique me dit quelque chose... Enfin, sûrement une impression.",
     "icon": "T_Fashion_Head56_03",
     "rarity": 4,
     "unlock": "Disponible dans la boutique"
@@ -833,32 +833,32 @@
   },
   {
     "id": 12005,
-    "name": "晨间致候",
-    "desc": "晨光挥洒，勾勒出轻柔的问候。",
+    "name": "Salutation matinale",
+    "desc": "La lumière du matin se répand et esquisse une douce salutation.",
     "icon": "T_Fashion_Hat05",
     "rarity": 4,
     "unlock": "Disponible dans la boutique"
   },
   {
     "id": 12006,
-    "name": "黑礁",
-    "desc": "沉默而无声的礁石，守望着风暴中混沌的思绪。",
-    "icon": "T_Fashion_Hat06",
-    "rarity": 4,
-    "unlock": "Disponible dans la boutique"
-  },
-  {
-    "id": 12007,
-    "name": "铸铁哨卫",
-    "desc": "锚定回忆，守候誓言。",
+    "name": "Récif noir",
+    "desc": "Un récif silencieux veille sur les pensées tourmentées au cœur de la tempête.",
     "icon": "T_Fashion_Hat07",
     "rarity": 4,
     "unlock": "Disponible dans la boutique"
   },
   {
+    "id": 12007,
+    "name": "Sentinelle de fonte",
+    "desc": "Ancrer les souvenirs, garder les serments.",
+    "icon": "T_Fashion_Hat06",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
     "id": 12008,
-    "name": "榛子严选",
-    "desc": "虽然过程有点奇怪和混乱，但总之确实是榛子选出来的。",
+    "name": "Sélection de Filbert",
+    "desc": "Le processus était un peu étrange et chaotique, mais au final, c’est bien Filbert qui l’a choisi.",
     "icon": "T_Fashion_Hat08",
     "rarity": 4,
     "unlock": "Disponible dans la boutique"
@@ -897,32 +897,32 @@
   },
   {
     "id": 12127,
-    "name": "极速头盔·白樱",
-    "desc": "道路千万条，安全第一条。",
+    "name": "Casque de vitesse – Blanc sakura",
+    "desc": "Il existe mille routes, mais la sécurité passe toujours en premier.",
     "icon": "T_Fashion_Hat09_03",
     "rarity": 4,
     "unlock": "Disponible dans la boutique"
   },
   {
     "id": 12128,
-    "name": "极速头盔·墨玉",
-    "desc": "道路千万条，安全第一条。",
+    "name": "Casque de vitesse – Jade noir",
+    "desc": "Il existe mille routes, mais la sécurité passe toujours en premier.",
     "icon": "T_Fashion_Hat09_01",
     "rarity": 4,
     "unlock": "Disponible dans la boutique"
   },
   {
     "id": 12129,
-    "name": "极速头盔·涅白",
-    "desc": "道路千万条，安全第一条。",
+    "name": "Casque de vitesse – Blanc ivoire",
+    "desc": "Il existe mille routes, mais la sécurité passe toujours en premier.",
     "icon": "T_Fashion_Hat09_02",
     "rarity": 4,
     "unlock": "Disponible dans la boutique"
   },
   {
     "id": 12130,
-    "name": "极速头盔·鎏金",
-    "desc": "道路千万条，安全第一条。",
+    "name": "Casque de vitesse – Doré",
+    "desc": "Il existe mille routes, mais la sécurité passe toujours en premier.",
     "icon": "T_Fashion_Hat09_04",
     "rarity": 4,
     "unlock": "Disponible dans la boutique"
@@ -1089,64 +1089,64 @@
   },
   {
     "id": 13021,
-    "name": "乙鸟纸鸢·薄荷",
-    "desc": "裁春羽，系东风。",
+    "name": "Cerf-volant Yi – Menthe",
+    "desc": "Façonner les plumes du printemps, puis les confier au vent d’est.",
     "icon": "T_Fashion_Waist25_04",
     "rarity": 5,
     "unlock": "Disponible dans la boutique"
   },
   {
     "id": 13022,
-    "name": "乙鸟纸鸢·白樱",
-    "desc": "裁春羽，系东风。",
+    "name": "Cerf-volant Yi – Blanc sakura",
+    "desc": "Façonner les plumes du printemps, puis les confier au vent d’est.",
     "icon": "T_Fashion_Waist25_01",
     "rarity": 5,
     "unlock": "Disponible dans la boutique"
   },
   {
     "id": 13023,
-    "name": "乙鸟纸鸢·墨玉",
-    "desc": "裁春羽，系东风。",
+    "name": "Cerf-volant Yi – Jade noir",
+    "desc": "Façonner les plumes du printemps, puis les confier au vent d’est.",
     "icon": "T_Fashion_Waist25_02",
     "rarity": 5,
     "unlock": "Disponible dans la boutique"
   },
   {
     "id": 13024,
-    "name": "乙鸟纸鸢·黛蓝",
-    "desc": "裁春羽，系东风。",
+    "name": "Cerf-volant Yi – Bleu indigo",
+    "desc": "Façonner les plumes du printemps, puis les confier au vent d’est.",
     "icon": "T_Fashion_Waist25_03",
     "rarity": 5,
     "unlock": "Disponible dans la boutique"
   },
   {
     "id": 13025,
-    "name": "汪汪尾巴·涅白",
-    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在狗尾巴的面前都会显得黯淡无光，这就是狗尾巴那让人无法拒绝的魔力……这台词总感觉在哪里说过，应该是错觉吧。",
+    "name": "Queue de chien – Blanc ivoire",
+    "desc": "Vive, adorable, espiègle, splendide... Rien n’égale la magie d’une queue de chien. Impossible d’y résister... Tiens, cette réplique me dit quelque chose... Enfin, sûrement une impression.",
     "icon": "T_Fashion_Waist23_01",
     "rarity": 4,
     "unlock": "Disponible dans la boutique"
   },
   {
     "id": 13026,
-    "name": "汪汪尾巴·墨玉",
-    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在狗尾巴的面前都会显得黯淡无光，这就是狗尾巴那让人无法拒绝的魔力……这台词总感觉在哪里说过，应该是错觉吧。",
+    "name": "Queue de chien – Jade noir",
+    "desc": "Vive, adorable, espiègle, splendide... Rien n’égale la magie d’une queue de chien. Impossible d’y résister... Tiens, cette réplique me dit quelque chose... Enfin, sûrement une impression.",
     "icon": "T_Fashion_Waist23_03",
     "rarity": 4,
     "unlock": "Disponible dans la boutique"
   },
   {
     "id": 13027,
-    "name": "汪汪尾巴·焦糖",
-    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在狗尾巴的面前都会显得黯淡无光，这就是狗尾巴那让人无法拒绝的魔力……这台词总感觉在哪里说过，应该是错觉吧。",
+    "name": "Queue de chien – Caramel",
+    "desc": "Vive, adorable, espiègle, splendide... Rien n’égale la magie d’une queue de chien. Impossible d’y résister... Tiens, cette réplique me dit quelque chose... Enfin, sûrement une impression.",
     "icon": "T_Fashion_Waist23_04",
     "rarity": 4,
     "unlock": "Disponible dans la boutique"
   },
   {
     "id": 13028,
-    "name": "汪汪尾巴·铅灰",
-    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在狗尾巴的面前都会显得黯淡无光，这就是狗尾巴那让人无法拒绝的魔力……这台词总感觉在哪里说过，应该是错觉吧。",
+    "name": "Queue de chien – Gris plomb",
+    "desc": "Vive, adorable, espiègle, splendide... Rien n’égale la magie d’une queue de chien. Impossible d’y résister... Tiens, cette réplique me dit quelque chose... Enfin, sûrement une impression.",
     "icon": "T_Fashion_Waist23_02",
     "rarity": 4,
     "unlock": "Disponible dans la boutique"
@@ -1498,7 +1498,7 @@
   {
     "id": 20044,
     "name": "青羽护目·薄荷",
-    "desc": "扫描，分析，演算。",
+    "desc": "Scanner. Analyser. Calculer.",
     "icon": "T_Fashion_Face23_03",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
@@ -1554,7 +1554,7 @@
   {
     "id": 20052,
     "name": "青羽护目·鎏金",
-    "desc": "扫描，分析，演算。",
+    "desc": "Scanner. Analyser. Calculer.",
     "icon": "T_Fashion_Face23_02",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
@@ -1562,7 +1562,7 @@
   {
     "id": 20053,
     "name": "青羽护目·锈红",
-    "desc": "扫描，分析，演算。",
+    "desc": "Scanner. Analyser. Calculer.",
     "icon": "T_Fashion_Face23_01",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
@@ -1570,39 +1570,39 @@
   {
     "id": 20054,
     "name": "青羽护目·涅白",
-    "desc": "扫描，分析，演算。",
+    "desc": "Scanner. Analyser. Calculer.",
     "icon": "T_Fashion_Face23",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 20055,
-    "name": "风师护目·薄荷",
-    "desc": "目标已锁定。",
+    "name": "Visière Fengshi – Menthe",
+    "desc": "Cible verrouillée.",
     "icon": "T_Fashion_Face24__03",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 20056,
-    "name": "风师护目·墨玉",
-    "desc": "目标已锁定。",
+    "name": "Visière Fengshi – Jade noir",
+    "desc": "Cible verrouillée.",
     "icon": "T_Fashion_Face24__02",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 20057,
-    "name": "青羽护目·涅白",
-    "desc": "目标已锁定。",
+    "name": "Visière Fengshi – Blanc sakura",
+    "desc": "Cible verrouillée.",
     "icon": "T_Fashion_Face24",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 20058,
-    "name": "风师护目·黛蓝",
-    "desc": "目标已锁定。",
+    "name": "Visière Fengshi – Bleu indigo",
+    "desc": "Cible verrouillée.",
     "icon": "T_Fashion_Face24__01",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
@@ -1729,32 +1729,32 @@
   },
   {
     "id": 20078,
-    "name": "讳言窥视·鎏金",
-    "desc": "无论是过往的伤痛、未宣于口的誓言，还是不可言说的真名，都被这些柔软的羽毛温柔地接纳、封存。",
+    "name": "Regard interdit – Doré",
+    "desc": "Qu’il s’agisse de douleurs passées, de serments tus ou de noms interdits, tout est accueilli et scellé avec douceur par ces plumes.",
     "icon": "T_Fashion_Face22_03",
     "rarity": 5,
     "unlock": "Disponible dans la boutique"
   },
   {
     "id": 20079,
-    "name": "讳言窥视·墨玉",
-    "desc": "无论是过往的伤痛、未宣于口的誓言，还是不可言说的真名，都被这些柔软的羽毛温柔地接纳、封存。",
+    "name": "Regard interdit – Jade noir",
+    "desc": "Qu’il s’agisse de douleurs passées, de serments tus ou de noms interdits, tout est accueilli et scellé avec douceur par ces plumes.",
     "icon": "T_Fashion_Face22_02",
     "rarity": 5,
     "unlock": "Disponible dans la boutique"
   },
   {
     "id": 20080,
-    "name": "讳言窥视·涅白",
-    "desc": "无论是过往的伤痛、未宣于口的誓言，还是不可言说的真名，都被这些柔软的羽毛温柔地接纳、封存。",
+    "name": "Regard interdit – Blanc ivoire",
+    "desc": "Qu’il s’agisse de douleurs passées, de serments tus ou de noms interdits, tout est accueilli et scellé avec douceur par ces plumes.",
     "icon": "T_Fashion_Face22",
     "rarity": 5,
     "unlock": "Disponible dans la boutique"
   },
   {
     "id": 20081,
-    "name": "讳言窥视·白樱",
-    "desc": "无论是过往的伤痛、未宣于口的誓言，还是不可言说的真名，都被这些柔软的羽毛温柔地接纳、封存。",
+    "name": "Regard interdit – Blanc sakura",
+    "desc": "Qu’il s’agisse de douleurs passées, de serments tus ou de noms interdits, tout est accueilli et scellé avec douceur par ces plumes.",
     "icon": "T_Fashion_Face22_01",
     "rarity": 5,
     "unlock": "Disponible dans la boutique"
@@ -1794,23 +1794,23 @@
   {
     "id": 21005,
     "name": "俏皮轨迹",
-    "desc": "是不是有一群猫跑过去了？",
+    "desc": "Des chats viennent de passer, non ?",
     "icon": "T_Fashion_Fx15",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 21006,
-    "name": "诡道符箓·黛蓝",
-    "desc": "符随念动，诡道相随。",
+    "name": "Talisman ésotérique – Bleu indigo",
+    "desc": "Le talisman s’anime à la pensée, et les voies occultes lui répondent.",
     "icon": "T_Fashion_Fx17_02",
     "rarity": 5,
     "unlock": "Disponible via les événements"
   },
   {
     "id": 21007,
-    "name": "诡道符箓·鎏金",
-    "desc": "符随念动，诡道相随。",
+    "name": "Talisman ésotérique – Doré",
+    "desc": "Le talisman s’anime à la pensée, et les voies occultes lui répondent.",
     "icon": "T_Fashion_Fx17_01",
     "rarity": 5,
     "unlock": "Disponible via les événements"
@@ -2018,39 +2018,39 @@
   {
     "id": 30032,
     "name": "Œuf porte-bonheur",
-    "desc": "未打开的福运蛋，有时就是最好的福运蛋。",
+    "desc": "Parfois, le meilleur Œuf porte-bonheur est celui qu’on ne brise jamais.",
     "icon": "T_Fashion_Waist19",
     "rarity": 3,
     "unlock": "Disponible via les événements"
   },
   {
     "id": 30033,
-    "name": "轻抚·白樱",
-    "desc": "不可对人使用！",
+    "name": "Caresse légère – Blanc sakura",
+    "desc": "À ne pas utiliser sur autrui !",
     "icon": "T_Fashion_Waist26_03",
     "rarity": 5,
     "unlock": "Disponible dans la boutique"
   },
   {
     "id": 30034,
-    "name": "轻抚·黛蓝",
-    "desc": "不可对人使用！",
+    "name": "Caresse légère – Bleu indigo",
+    "desc": "À ne pas utiliser sur autrui !",
     "icon": "T_Fashion_Waist26_04",
     "rarity": 5,
     "unlock": "Disponible dans la boutique"
   },
   {
     "id": 30035,
-    "name": "轻抚·涅白",
-    "desc": "不可对人使用！",
+    "name": "Caresse légère – Blanc ivoire",
+    "desc": "À ne pas utiliser sur autrui !",
     "icon": "T_Fashion_Waist26_01",
     "rarity": 5,
     "unlock": "Disponible dans la boutique"
   },
   {
     "id": 30036,
-    "name": "轻抚·墨玉",
-    "desc": "不可对人使用！",
+    "name": "Caresse légère – Jade noir",
+    "desc": "À ne pas utiliser sur autrui !",
     "icon": "T_Fashion_Waist26_02",
     "rarity": 5,
     "unlock": "Disponible dans la boutique"
@@ -2058,15 +2058,15 @@
   {
     "id": 30037,
     "name": "一线铃铛",
-    "desc": "驱邪退恶，破煞消灾。",
+    "desc": "Chasser le mal, repousser l’ombre, briser les mauvais sorts, dissiper les calamités.",
     "icon": "T_Fashion_Waist18",
     "rarity": 3,
     "unlock": "Disponible via les événements"
   },
   {
     "id": 30038,
-    "name": "白鸟先生",
-    "desc": "啾啾，白鸟先生！",
+    "name": "Monsieur l’Oiseau blanc",
+    "desc": "<I>Cui-cui</>, Monsieur l’Oiseau blanc !",
     "icon": "T_Fashion_Waist20",
     "rarity": 4,
     "unlock": "Disponible via les événements"
@@ -2074,15 +2074,15 @@
   {
     "id": 30039,
     "name": "均天玉律",
-    "desc": "修世人之罅隙，复上古之敦睦。",
+    "desc": "Réparer les fissures du monde et restaurer l’harmonie ancestrale.",
     "icon": "T_Fashion_Waist21",
     "rarity": 5,
     "unlock": "Disponible via les événements"
   },
   {
     "id": 30040,
-    "name": "夜明灯·焦糖",
-    "desc": "长夜终有尽头，愿它们照亮你回家的路。",
+    "name": "Lanterne nocturne – Caramel",
+    "desc": "La longue nuit a toujours une fin. Puissent-elles éclairer votre chemin vers la maison.",
     "icon": "T_Fashion_Waist22_01",
     "rarity": 3,
     "unlock": "Disponible via les événements"
@@ -2354,7 +2354,7 @@
   {
     "id": 40034,
     "name": "诡道陈兵·涅白",
-    "desc": "真言驱诡，养魂饲灵。",
+    "desc": "Les paroles sacrées chassent les ombres, nourrissent l’âme et élèvent les esprits.",
     "icon": "T_Fashion_Back39_01",
     "rarity": 5,
     "unlock": "Disponible via les événements"
@@ -2362,7 +2362,7 @@
   {
     "id": 40035,
     "name": "诡道陈兵·锈红",
-    "desc": "真言驱诡，养魂饲灵。",
+    "desc": "Les paroles sacrées chassent les ombres, nourrissent l’âme et élèvent les esprits.",
     "icon": "T_Fashion_Back39_02",
     "rarity": 5,
     "unlock": "Disponible via les événements"
@@ -2505,64 +2505,64 @@
   },
   {
     "id": 40056,
-    "name": "永冻玫瑰·鎏金",
-    "desc": "也许玫瑰自冻土绽放之时，被封存的记忆与诺言才会苏醒。",
+    "name": "Rose de givre éternel – Doré",
+    "desc": "Peut-être que lorsque la rose éclot sur la terre gelée, les souvenirs et les serments scellés s’éveilleront enfin.",
     "icon": "T_Fashion_Back40_02",
     "rarity": 5,
     "unlock": "Disponible dans la boutique"
   },
   {
     "id": 40057,
-    "name": "永冻玫瑰·墨玉",
-    "desc": "也许玫瑰自冻土绽放之时，被封存的记忆与诺言才会苏醒。",
+    "name": "Rose de givre éternel – Jade noir",
+    "desc": "Peut-être que lorsque la rose éclot sur la terre gelée, les souvenirs et les serments scellés s’éveilleront enfin.",
     "icon": "T_Fashion_Back40_01",
     "rarity": 5,
     "unlock": "Disponible dans la boutique"
   },
   {
     "id": 40058,
-    "name": "永冻玫瑰·涅白",
-    "desc": "也许玫瑰自冻土绽放之时，被封存的记忆与诺言才会苏醒。",
+    "name": "Rose de givre éternel – Blanc ivoire",
+    "desc": "Peut-être que lorsque la rose éclot sur la terre gelée, les souvenirs et les serments scellés s’éveilleront enfin.",
     "icon": "T_Fashion_Back40_04",
     "rarity": 5,
     "unlock": "Disponible dans la boutique"
   },
   {
     "id": 40059,
-    "name": "永冻玫瑰·白樱",
-    "desc": "也许玫瑰自冻土绽放之时，被封存的记忆与诺言才会苏醒。",
+    "name": "Rose de givre éternel – Blanc sakura",
+    "desc": "Peut-être que lorsque la rose éclot sur la terre gelée, les souvenirs et les serments scellés s’éveilleront enfin.",
     "icon": "T_Fashion_Back40_03",
     "rarity": 5,
     "unlock": "Disponible dans la boutique"
   },
   {
     "id": 40060,
-    "name": "蝴蝶梦背饰·绛紫",
-    "desc": "即使是朦胧的羽翼，也能飞往纷繁的世界。",
+    "name": "Accessoire dorsal Rêve-papillon – Pourpre profond",
+    "desc": "Même des ailes voilées peuvent s’élancer vers un monde foisonnant.",
     "icon": "T_Fashion_Waist24_04",
     "rarity": 5,
     "unlock": "Disponible dans la boutique"
   },
   {
     "id": 40061,
-    "name": "蝴蝶梦背饰·白樱",
-    "desc": "即使是朦胧的羽翼，也能飞往纷繁的世界。",
+    "name": "Accessoire dorsal Rêve-papillon – Blanc sakura",
+    "desc": "Même des ailes voilées peuvent s’élancer vers un monde foisonnant.",
     "icon": "T_Fashion_Waist24_02",
     "rarity": 5,
     "unlock": "Disponible dans la boutique"
   },
   {
     "id": 40062,
-    "name": "蝴蝶梦背饰·涅白",
-    "desc": "即使是朦胧的羽翼，也能飞往纷繁的世界。",
+    "name": "Accessoire dorsal Rêve-papillon – Blanc ivoire",
+    "desc": "Même des ailes voilées peuvent s’élancer vers un monde foisonnant.",
     "icon": "T_Fashion_Waist24_01",
     "rarity": 5,
     "unlock": "Disponible dans la boutique"
   },
   {
     "id": 40063,
-    "name": "蝴蝶梦背饰·墨玉",
-    "desc": "即使是朦胧的羽翼，也能飞往纷繁的世界。",
+    "name": "Accessoire dorsal Rêve-papillon – Jade noir",
+    "desc": "Même des ailes voilées peuvent s’élancer vers un monde foisonnant.",
     "icon": "T_Fashion_Waist24_03",
     "rarity": 5,
     "unlock": "Disponible dans la boutique"
@@ -2609,8 +2609,8 @@
   },
   {
     "id": 60003,
-    "name": "闪耀舞台",
-    "desc": "闪亮登场(∠・ω< )⌒☆",
+    "name": "Scène scintillante",
+    "desc": "Tadaaa ! (∠・ω< )⌒☆",
     "icon": "T_Fashion_Fx14",
     "rarity": 4,
     "unlock": "Disponible via la Myriade"
@@ -2714,7 +2714,7 @@
   {
     "id": 70034,
     "name": "喵喵足迹·薄荷",
-    "desc": "猫脚印就在这里，但是猫咪去了哪里？",
+    "desc": "Les empreintes félines sont là... mais où est donc passé le chat ?",
     "icon": "T_Fashion_Fx19_04",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
@@ -2722,7 +2722,7 @@
   {
     "id": 70035,
     "name": "喵喵足迹·黛蓝",
-    "desc": "猫脚印就在这里，但是猫咪去了哪里？",
+    "desc": "Les empreintes félines sont là... mais où est donc passé le chat ?",
     "icon": "T_Fashion_Fx19_03",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
@@ -2730,7 +2730,7 @@
   {
     "id": 70036,
     "name": "喵喵足迹·白樱",
-    "desc": "猫脚印就在这里，但是猫咪去了哪里？",
+    "desc": "Les empreintes félines sont là... mais où est donc passé le chat ?",
     "icon": "T_Fashion_Fx19_01",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
@@ -2738,7 +2738,7 @@
   {
     "id": 70037,
     "name": "喵喵足迹·锈红",
-    "desc": "猫脚印就在这里，但是猫咪去了哪里？",
+    "desc": "Les empreintes félines sont là... mais où est donc passé le chat ?",
     "icon": "T_Fashion_Fx19_02",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
@@ -2841,32 +2841,32 @@
   },
   {
     "id": 80044,
-    "name": "喵喵游戏·白樱",
-    "desc": "旋转，下落，真棒！",
+    "name": "Jeux félins – Blanc sakura",
+    "desc": "Tourner, tomber... parfait !",
     "icon": "T_Fashion_Fx18_01",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 80045,
-    "name": "喵喵游戏·锈红",
-    "desc": "旋转，下落，真棒！",
+    "name": "Jeux félins – Rouille",
+    "desc": "Tourner, tomber... parfait !",
     "icon": "T_Fashion_Fx18_02",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 80046,
-    "name": "喵喵游戏·薄荷",
-    "desc": "旋转，下落，真棒！",
+    "name": "Jeux félins – Menthe",
+    "desc": "Tourner, tomber... parfait !",
     "icon": "T_Fashion_Fx18_04",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 80047,
-    "name": "喵喵游戏·黛蓝",
-    "desc": "旋转，下落，真棒！",
+    "name": "Jeux félins – Bleu indigo",
+    "desc": "Tourner, tomber... parfait !",
     "icon": "T_Fashion_Fx18_03",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"

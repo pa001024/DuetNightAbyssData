@@ -634,7 +634,7 @@ return {
       key = "1742891256134715204",
       type = "StoryStartNode",
       name = "StoryStart",
-      pos = {x = 805.2173913043479, y = 286.95652173913044},
+      pos = {x = 803.604488098389, y = 285.34361853317154},
       propsData = {QuestChainId = 120203},
       questNodeData = {
         lineData = {},
@@ -660,7 +660,7 @@ return {
       key = "1742891256134715206",
       type = "StoryNode",
       name = "无由生聚集地，与逍遥生告别",
-      pos = {x = 1158.5001923105374, y = -22.15024630541827},
+      pos = {x = 1160.1130955164963, y = -20.53734309945936},
       propsData = {
         QuestId = 12020301,
         QuestDescriptionComment = "",
@@ -697,27 +697,9 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17621726540702070018",
-            startPort = "Out",
-            endQuest = "17509411234464605602",
-            endPort = "In"
-          },
-          {
             startQuest = "17509411234464605602",
             startPort = "Out",
             endQuest = "17696976752625630903",
-            endPort = "In"
-          },
-          {
-            startQuest = "17696976752625630903",
-            startPort = "Out",
-            endQuest = "17730634675791241747",
-            endPort = "In"
-          },
-          {
-            startQuest = "17730634675791241747",
-            startPort = "Out",
-            endQuest = "17741824513208851375",
             endPort = "In"
           },
           {
@@ -725,6 +707,24 @@ return {
             startPort = "Out",
             endQuest = "1742891256134715230",
             endPort = "Success"
+          },
+          {
+            startQuest = "17696976752625630903",
+            startPort = "Out",
+            endQuest = "17741824513208851375",
+            endPort = "In"
+          },
+          {
+            startQuest = "17621726540702070018",
+            startPort = "Out",
+            endQuest = "17730634675791241747",
+            endPort = "In"
+          },
+          {
+            startQuest = "17730634675791241747",
+            startPort = "Out",
+            endQuest = "17509411234464605602",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -765,7 +765,7 @@ return {
             key = "17509411234464605602",
             type = "TalkNode",
             name = "告别逍遥生",
-            pos = {x = 2588.2023778807193, y = 550.3890700395463},
+            pos = {x = 2775.345231624084, y = 474.6747857006276},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -827,7 +827,7 @@ return {
             key = "17696976752625630903",
             type = "TalkNode",
             name = "由来巷区域介绍",
-            pos = {x = 2867.15277446229, y = 544.4251996735424},
+            pos = {x = 3054.295628205655, y = 468.7109153346237},
             propsData = {
               IsNpcNode = false,
               TalkType = "Cinematic",
@@ -872,12 +872,12 @@ return {
             key = "17730634675791241747",
             type = "AsyncSetActorLocationAndRotationNode",
             name = "异步设置玩家位置旋转",
-            pos = {x = 3171.1970882727246, y = 566.1075250341694},
+            pos = {x = 2509.176194407557, y = 505.6197214575114},
             propsData = {
               UnitId = 0,
               NewTargetPointName = "12020301st",
               FadeIn = false,
-              FadeOut = true,
+              FadeOut = false,
               bResetCamera = true,
               bForceAsyncLoading = false,
               IsWhite = false
@@ -1532,12 +1532,6 @@ return {
       questNodeData = {
         lineData = {
           {
-            startQuest = "1742891256134715262",
-            startPort = "QuestStart",
-            endQuest = "17631226334692019379",
-            endPort = "In"
-          },
-          {
             startQuest = "17696955641374186",
             startPort = "Out",
             endQuest = "176612901134723239086",
@@ -1564,19 +1558,7 @@ return {
           {
             startQuest = "17696955641374186",
             startPort = "Out",
-            endQuest = "17624351439749137428",
-            endPort = "In"
-          },
-          {
-            startQuest = "17696955641374186",
-            startPort = "Out",
             endQuest = "17724387263815975090",
-            endPort = "In"
-          },
-          {
-            startQuest = "17631226334692019379",
-            startPort = "Out",
-            endQuest = "17722026555293573",
             endPort = "In"
           },
           {
@@ -1590,12 +1572,6 @@ return {
             startPort = "Out",
             endQuest = "1742891256134715263",
             endPort = "Success"
-          },
-          {
-            startQuest = "17631226334692019379",
-            startPort = "Out",
-            endQuest = "17739941301502110107",
-            endPort = "In"
           },
           {
             startQuest = "17739941301502110107",
@@ -1631,6 +1607,18 @@ return {
             startQuest = "1742891256134715262",
             startPort = "QuestStart",
             endQuest = "17743673920089776567",
+            endPort = "In"
+          },
+          {
+            startQuest = "1742891256134715262",
+            startPort = "QuestStart",
+            endQuest = "17739941301502110107",
+            endPort = "In"
+          },
+          {
+            startQuest = "1742891256134715262",
+            startPort = "QuestStart",
+            endQuest = "17722026555293573",
             endPort = "In"
           }
         },
@@ -1677,7 +1665,7 @@ return {
             key = "17631226334692019379",
             type = "AsyncSetActorLocationAndRotationNode",
             name = "异步设置玩家位置旋转",
-            pos = {x = 1446.4176311447634, y = 446.300257052244},
+            pos = {x = 1457.3267220538544, y = 671.300257052244},
             propsData = {
               UnitId = 0,
               NewTargetPointName = "Point12020305",
@@ -2012,7 +2000,7 @@ return {
             pos = {x = 3468.429971988796, y = 699.8217787114847},
             propsData = {
               UnitId = 0,
-              NewTargetPointName = "Point12020305",
+              NewTargetPointName = "Mark2Point",
               FadeIn = false,
               FadeOut = false,
               bResetCamera = true,
@@ -2452,12 +2440,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17631966524539056504",
-            startPort = "Out",
-            endQuest = "1742891256134715291",
-            endPort = "In"
-          },
-          {
             startQuest = "17631964966639055943",
             startPort = "Out",
             endQuest = "17671650449369640623",
@@ -2485,6 +2467,18 @@ return {
             startQuest = "177012972377735072127",
             startPort = "Out",
             endQuest = "177013011581836217146",
+            endPort = "In"
+          },
+          {
+            startQuest = "17631966524539056504",
+            startPort = "Out",
+            endQuest = "17745083386327208",
+            endPort = "In"
+          },
+          {
+            startQuest = "17745083386327208",
+            startPort = "Out",
+            endQuest = "1742891256134715291",
             endPort = "In"
           }
         },
@@ -2516,13 +2510,7 @@ return {
             name = "刻舟npc对话",
             pos = {x = 3334.0543984089677, y = 646.2267459475968},
             propsData = {
-              IsNpcNode = true,
-              NpcNodeInteractiveName = "",
-              NpcId = 240013,
-              GuideUIEnable = true,
-              GuideType = "N",
-              GuidePointName = "Npc_12020311kezhou_2360032",
-              DelayShowGuideTime = 0,
+              IsNpcNode = false,
               bUseFlowAssetActors = true,
               FirstDialogueId = 0,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1202/12043701.12043701'",
@@ -2580,7 +2568,7 @@ return {
             key = "17631966524539056504",
             type = "GoToNode",
             name = "前往",
-            pos = {x = 3058.272458545039, y = 658.5332794137022},
+            pos = {x = 2753.129601402182, y = 859.1047079851307},
             propsData = {
               GuideUIEnable = true,
               StaticCreatorId = 2360030,
@@ -2648,6 +2636,18 @@ return {
               StaticCreatorId = 242360076,
               GuideType = "M",
               GuidePointName = "Mechanism_12020311hezi6_242360076"
+            }
+          },
+          ["17745083386327208"] = {
+            key = "17745083386327208",
+            type = "GoToNode",
+            name = "前往",
+            pos = {x = 3143.254361942405, y = 894.9158385093169},
+            propsData = {
+              GuideUIEnable = true,
+              StaticCreatorId = 242360102,
+              GuideType = "M",
+              GuidePointName = "Mechanism_12020311kezhouhz_242360102"
             }
           }
         },
@@ -2864,16 +2864,22 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "176873601268459669041",
-            startPort = "Out",
-            endQuest = "1742891256134715299",
-            endPort = "Success"
-          },
-          {
             startQuest = "1742891256134715298",
             startPort = "QuestStart",
             endQuest = "176873339312051921841",
             endPort = "In"
+          },
+          {
+            startQuest = "176873601268459669041",
+            startPort = "Out",
+            endQuest = "177470178778114048227",
+            endPort = "In"
+          },
+          {
+            startQuest = "177470178778114048227",
+            startPort = "Out",
+            endQuest = "1742891256134715299",
+            endPort = "Success"
           }
         },
         nodeData = {
@@ -2888,7 +2894,7 @@ return {
             key = "1742891256134715299",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 3303.2526160870652, y = 479.17949674700975},
+            pos = {x = 3349.4688323032815, y = 522.1524697199827},
             propsData = {ModeType = 0}
           },
           ["1742891256134715300"] = {
@@ -2928,7 +2934,7 @@ return {
             key = "176873601268459669041",
             type = "PickUpNode",
             name = "拾取物品",
-            pos = {x = 2858.567525176751, y = 477.48440979933247},
+            pos = {x = 2711.567525176751, y = 489.48440979933247},
             propsData = {
               bActiveEnable = true,
               StaticCreatorIdList = {},
@@ -2939,6 +2945,18 @@ return {
               GuideType = "P",
               GuidePointName = "Drop_12020315caiyao_242360054",
               IsUseCount = false
+            }
+          },
+          ["177470178778114048227"] = {
+            key = "177470178778114048227",
+            type = "PlayNormalSoundNode",
+            name = "播放普通音效",
+            pos = {x = 3001.3689776733263, y = 456.5135135135136},
+            propsData = {
+              EventPath = "event:/sfx/common/story/east02/pullout",
+              TargetPointName = "Drop_12020315caiyao_242360054",
+              EventKey = "",
+              PlayAs2D = false
             }
           }
         },
@@ -3457,7 +3475,7 @@ return {
               EnableFadeIn = false,
               EnableFadeOut = false,
               NewTargetPointName = "",
-              StaticCreatorIdList = {2340017, 2340018}
+              StaticCreatorIdList = {2340017}
             }
           },
           ["176371138348312098"] = {
@@ -3471,7 +3489,7 @@ return {
               EnableFadeIn = false,
               EnableFadeOut = false,
               NewTargetPointName = "",
-              StaticCreatorIdList = {2340017, 2340018}
+              StaticCreatorIdList = {2340017}
             }
           },
           ["176588518685024249333"] = {

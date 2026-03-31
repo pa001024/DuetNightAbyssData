@@ -222,7 +222,8 @@ function M:ChangeSkyBoxColor(Index)
   if not self.ArmoryHelper then
     return
   end
-  self.ArmoryHelper.SkyBoxIndex = Index or 0
+  self.SkyBoxIndex = Index or 0
+  self.ArmoryHelper.SkyBoxIndex = self.SkyBoxIndex
   
   local function _CallSkyBoxChanged(...)
     local bSuccess = self:WaitForPreviewSceneLoadFinished()

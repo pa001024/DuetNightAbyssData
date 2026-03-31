@@ -188,8 +188,8 @@
   {
     "id": 605,
     "uid": 605,
-    "名称": "青鸾贰型",
-    "描述": "苏乙亲手打造的“矩子巡枢贰型·青鸾”，简称青鸾贰型。苏乙自称在其上倾注了无数个日夜的心血。仔细观察它的外观，你确实能感受到细节处精巧的机械构造。",
+    "名称": "Qingluan Type II",
+    "描述": "Le Module de Patrouille Juzi – Type II : Qingluan, entièrement conçu par Su Yi, est plus simplement appelé Qingluan Type II. Su Yi affirme y avoir consacré d’innombrables jours et nuits de travail.\nEn observant attentivement son apparence, on perçoit effectivement la finesse et la précision de sa conception mécanique jusque dans les moindres détails.",
     "icon": "Qingluan",
     "品质": 5,
     "类型": 3,
@@ -2033,7 +2033,7 @@
       "cd": 20
     },
     "被动": {
-      "描述": "Augmente l’ATQ Umbro du personnage principal et des Partenaires de combat de {%}. Augmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "描述": "Augmente l’ATQ Umbro du personnage principal et des Partenaires de combat de {%}. Augmente de {%} les statistiques fournies par les Sceaux démoniaques dont le nom se termine par [Phénix].",
       "值": [
         [
           0.012,
@@ -2093,7 +2093,7 @@
       "cd": 20
     },
     "被动": {
-      "描述": "Augmente l’ATQ Umbro du personnage principal et des Partenaires de combat de {%}. Augmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "描述": "Augmente l’ATQ Umbro du personnage principal et des Partenaires de combat de {%}. Augmente de {%} les statistiques fournies par les Sceaux démoniaques dont le nom se termine par [Phénix].",
       "值": [
         [
           0.012,
@@ -2153,7 +2153,7 @@
       "cd": 20
     },
     "被动": {
-      "描述": "Augmente l’ATQ Umbro du personnage principal et des Partenaires de combat de {%}. Augmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "描述": "Augmente l’ATQ Umbro du personnage principal et des Partenaires de combat de {%}. Augmente de {%} les statistiques fournies par les Sceaux démoniaques dont le nom se termine par [Phénix].",
       "值": [
         [
           0.012,
@@ -2206,7 +2206,7 @@
       "cd": 20
     },
     "被动": {
-      "描述": "Augmente l’ATQ Hydro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "描述": "Augmente l’ATQ Hydro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques dont le nom se termine par [Phénix].",
       "值": [
         [
           0.012,
@@ -2259,7 +2259,7 @@
       "cd": 20
     },
     "被动": {
-      "描述": "Augmente l’ATQ Hydro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "描述": "Augmente l’ATQ Hydro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques dont le nom se termine par [Phénix].",
       "值": [
         [
           0.012,
@@ -2312,7 +2312,7 @@
       "cd": 20
     },
     "被动": {
-      "描述": "Augmente l’ATQ Hydro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "描述": "Augmente l’ATQ Hydro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques dont le nom se termine par [Phénix].",
       "值": [
         [
           0.012,
@@ -2365,7 +2365,7 @@
       "cd": 20
     },
     "被动": {
-      "描述": "Augmente l’ATQ Hydro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "描述": "Augmente l’ATQ Hydro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques dont le nom se termine par [Phénix].",
       "值": [
         [
           0.012,
@@ -2418,7 +2418,7 @@
       "cd": 30
     },
     "被动": {
-      "描述": "Augmente l’ATQ Pyro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "描述": "Augmente l’ATQ Pyro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques dont le nom se termine par [Phénix].",
       "值": [
         [
           0.012,
@@ -2471,7 +2471,7 @@
       "cd": 30
     },
     "被动": {
-      "描述": "Augmente l’ATQ Pyro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "描述": "Augmente l’ATQ Pyro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques dont le nom se termine par [Phénix].",
       "值": [
         [
           0.012,
@@ -2524,7 +2524,7 @@
       "cd": 30
     },
     "被动": {
-      "描述": "Augmente l’ATQ Pyro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "描述": "Augmente l’ATQ Pyro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques dont le nom se termine par [Phénix].",
       "值": [
         [
           0.012,
@@ -2577,7 +2577,7 @@
       "cd": 40
     },
     "被动": {
-      "描述": "Augmente l’ATQ Électro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "描述": "Augmente l’ATQ Électro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques dont le nom se termine par [Phénix].",
       "值": [
         [
           0.012,
@@ -2630,7 +2630,7 @@
       "cd": 40
     },
     "被动": {
-      "描述": "Augmente l’ATQ Électro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "描述": "Augmente l’ATQ Électro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques dont le nom se termine par [Phénix].",
       "值": [
         [
           0.012,
@@ -2683,7 +2683,7 @@
       "cd": 40
     },
     "被动": {
-      "描述": "Augmente l’ATQ Électro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "描述": "Augmente l’ATQ Électro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques dont le nom se termine par [Phénix].",
       "值": [
         [
           0.012,
@@ -2743,7 +2743,7 @@
       "cd": 30
     },
     "被动": {
-      "描述": "Augmente l’ATQ Anémo du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "描述": "Augmente l’ATQ Anémo du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques dont le nom se termine par [Phénix].",
       "值": [
         [
           0.012,
@@ -2803,7 +2803,7 @@
       "cd": 30
     },
     "被动": {
-      "描述": "Augmente l’ATQ Anémo du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "描述": "Augmente l’ATQ Anémo du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques dont le nom se termine par [Phénix].",
       "值": [
         [
           0.012,
@@ -2863,7 +2863,7 @@
       "cd": 30
     },
     "被动": {
-      "描述": "Augmente l’ATQ Anémo du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "描述": "Augmente l’ATQ Anémo du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques dont le nom se termine par [Phénix].",
       "值": [
         [
           0.012,
@@ -2923,7 +2923,7 @@
       "cd": 20
     },
     "被动": {
-      "描述": "Augmente l’ATQ Lumino du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "描述": "Augmente l’ATQ Lumino du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques dont le nom se termine par [Phénix].",
       "值": [
         [
           0.012,
@@ -2983,7 +2983,7 @@
       "cd": 20
     },
     "被动": {
-      "描述": "Augmente l’ATQ Lumino du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "描述": "Augmente l’ATQ Lumino du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques dont le nom se termine par [Phénix].",
       "值": [
         [
           0.012,
@@ -3043,7 +3043,7 @@
       "cd": 20
     },
     "被动": {
-      "描述": "Augmente l’ATQ Lumino du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques avec comme préfixe : [Phénix].",
+      "描述": "Augmente l’ATQ Lumino du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques dont le nom se termine par [Phénix].",
       "值": [
         [
           0.012,
@@ -3065,8 +3065,8 @@
   {
     "id": 4171,
     "uid": 4171,
-    "名称": "青鸾贰型",
-    "描述": "苏乙亲手打造的“矩子巡枢贰型·青鸾”，简称青鸾贰型。苏乙自称在其上倾注了无数个日夜的心血。仔细观察它的外观，你确实能感受到细节处精巧的机械构造。",
+    "名称": "Qingluan Type II",
+    "描述": "Le Module de Patrouille Juzi – Type II : Qingluan, entièrement conçu par Su Yi, est plus simplement appelé Qingluan Type II. Su Yi affirme y avoir consacré d’innombrables jours et nuits de travail.\nEn observant attentivement son apparence, on perçoit effectivement la finesse et la précision de sa conception mécanique jusque dans les moindres détails.",
     "icon": "Qingluan",
     "异化": 4171,
     "品质": 5,
@@ -3111,8 +3111,8 @@
   {
     "id": 4172,
     "uid": 4171,
-    "名称": "青鸾贰型",
-    "描述": "苏乙亲手打造的“矩子巡枢贰型·青鸾”，简称青鸾贰型。苏乙自称在其上倾注了无数个日夜的心血。仔细观察它的外观，你确实能感受到细节处精巧的机械构造。",
+    "名称": "Qingluan Type II",
+    "描述": "Le Module de Patrouille Juzi – Type II : Qingluan, entièrement conçu par Su Yi, est plus simplement appelé Qingluan Type II. Su Yi affirme y avoir consacré d’innombrables jours et nuits de travail.\nEn observant attentivement son apparence, on perçoit effectivement la finesse et la précision de sa conception mécanique jusque dans les moindres détails.",
     "icon": "Qingluan",
     "异化": 4171,
     "品质": 5,
@@ -3194,7 +3194,7 @@
       "cd": 20
     },
     "被动": {
-      "描述": "Augmente l’ATQ Umbro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques Umbro avec comme préfixe : [Griffon], [Typhon] et [Pactisant].",
+      "描述": "Augmente l’ATQ Umbro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques Umbro dont le nom se termine par [Griffon], [Typhon] et [Pactisant].",
       "值": [
         [
           0.024,
@@ -3253,7 +3253,7 @@
       "cd": 20
     },
     "被动": {
-      "描述": "Augmente l’ATQ Hydro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques Hydro avec comme préfixe : [Griffon], [Typhon] et [Pactisant].",
+      "描述": "Augmente l’ATQ Hydro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques Hydro dont le nom se termine par [Griffon], [Typhon] et [Pactisant].",
       "值": [
         [
           0.024,
@@ -3312,7 +3312,7 @@
       "cd": 20
     },
     "被动": {
-      "描述": "Augmente l’ATQ Pyro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques Pyro avec comme préfixe : [Griffon], [Typhon] et [Pactisant].",
+      "描述": "Augmente l’ATQ Pyro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques Pyro dont le nom se termine par [Griffon], [Typhon] et [Pactisant].",
       "值": [
         [
           0.024,
@@ -3371,7 +3371,7 @@
       "cd": 40
     },
     "被动": {
-      "描述": "Augmente l’ATQ Électro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques Électro avec comme préfixe : [Griffon], [Typhon] et [Pactisant].",
+      "描述": "Augmente l’ATQ Électro du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques Électro dont le nom se termine par [Griffon], [Typhon] et [Pactisant].",
       "值": [
         [
           0.024,
@@ -3430,7 +3430,7 @@
       "cd": 30
     },
     "被动": {
-      "描述": "Augmente l’ATQ Anémo du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques Anémo avec comme préfixe : [Griffon], [Typhon] et [Pactisant].",
+      "描述": "Augmente l’ATQ Anémo du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques Anémo dont le nom se termine par [Griffon], [Typhon] et [Pactisant].",
       "值": [
         [
           0.024,
@@ -3489,7 +3489,7 @@
       "cd": 20
     },
     "被动": {
-      "描述": "Augmente l’ATQ Lumino du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques Lumino avec comme préfixe : [Griffon], [Typhon] et [Pactisant].",
+      "描述": "Augmente l’ATQ Lumino du personnage principal et des Partenaires de combat de {%}.\nAugmente de {%} les statistiques fournies par les Sceaux démoniaques Lumino dont le nom se termine par [Griffon], [Typhon] et [Pactisant].",
       "值": [
         [
           0.024,

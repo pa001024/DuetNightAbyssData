@@ -973,12 +973,6 @@ return {
             endPort = "Success"
           },
           {
-            startQuest = "17428991219553149577",
-            startPort = "QuestStart",
-            endQuest = "17688974000651121942",
-            endPort = "In"
-          },
-          {
             startQuest = "17688974000651121942",
             startPort = "Out",
             endQuest = "17688974338631122186",
@@ -991,15 +985,21 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17688974000651121942",
-            startPort = "Out",
+            startQuest = "17428991219553149577",
+            startPort = "QuestStart",
+            endQuest = "17428991219553149580",
+            endPort = "In"
+          },
+          {
+            startQuest = "17428991219553149577",
+            startPort = "QuestStart",
             endQuest = "17696722163818444",
             endPort = "In"
           },
           {
             startQuest = "17428991219553149577",
             startPort = "QuestStart",
-            endQuest = "17428991219553149580",
+            endQuest = "177487585684415358997",
             endPort = "In"
           }
         },
@@ -1115,32 +1115,43 @@ return {
             key = "17688974000651121942",
             type = "SimplePostProcessNode",
             name = "开启关闭屏幕后处理",
-            pos = {x = 2816.2835644778515, y = 685.8668736835918},
+            pos = {x = 3278.864209639142, y = 359.7378414255273},
             propsData = {bEnablePP = true, PPEnum = 3}
           },
           ["17688974338631122186"] = {
             key = "17688974338631122186",
             type = "WaitOfTimeNode",
             name = "延迟等待",
-            pos = {x = 3129.4051615740404, y = 668.4984526309603},
+            pos = {x = 3593.9212906062985, y = 395.59522682450864},
             propsData = {WaitTime = 6}
           },
           ["17688977011011122502"] = {
             key = "17688977011011122502",
             type = "SimplePostProcessNode",
             name = "开启关闭屏幕后处理",
-            pos = {x = 3427.2484767585534, y = 671.1300315783287},
+            pos = {x = 3526.925896113392, y = 542.4203541589739},
             propsData = {bEnablePP = false, PPEnum = 3}
           },
           ["17696722163818444"] = {
             key = "17696722163818444",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 3111.773497284353, y = 475.92949770373014},
+            pos = {x = 2699.515432768224, y = 485.6069170585688},
             propsData = {
               FirstDialogueId = 12048751,
               FlowAssetPath = "",
               TalkType = "Boss"
+            }
+          },
+          ["177487585684415358997"] = {
+            key = "177487585684415358997",
+            type = "SendMessageNode",
+            name = "发送消息",
+            pos = {x = 2887.6788649646, y = 711.9041487217519},
+            propsData = {
+              MessageType = "GameMode",
+              MessageContent = "12020103blur",
+              UnitId = -1
             }
           }
         },
@@ -2893,7 +2904,7 @@ return {
               GuideType = "N",
               GuidePointName = "Npc_12020108cangkuyuan_242400031",
               DelayShowGuideTime = 0,
-              IsPlayerTurnToNPC = false,
+              IsPlayerTurnToNPC = true,
               IsNPCTurnToPlayer = true,
               FirstDialogueId = 12040701,
               FlowAssetPath = "",
@@ -3030,7 +3041,7 @@ return {
       key = "17428991219543149557",
       type = "StoryNode",
       name = "香阁",
-      pos = {x = 1802.9979854055125, y = 675.2651418920782},
+      pos = {x = 1802.3003109869078, y = 675.2651418920782},
       propsData = {
         QuestId = 12020109,
         QuestDescriptionComment = "",
@@ -3889,18 +3900,6 @@ return {
               }
             }
           },
-          ["17652005512404203569"] = {
-            key = "17652005512404203569",
-            type = "PlayNormalSoundNode",
-            name = "播放普通音效",
-            pos = {x = 1833.325, y = 300.0249999999999},
-            propsData = {
-              EventPath = "",
-              TargetPointName = "",
-              EventKey = "",
-              PlayAs2D = false
-            }
-          },
           ["177339859317915167794"] = {
             key = "177339859317915167794",
             type = "GoToNode",
@@ -3999,6 +3998,18 @@ return {
             startPort = "Out",
             endQuest = "17428991219553149652",
             endPort = "Success"
+          },
+          {
+            startQuest = "17428991219553149655",
+            startPort = "Out",
+            endQuest = "177469966025210219819",
+            endPort = "In"
+          },
+          {
+            startQuest = "177469966025210219819",
+            startPort = "Out",
+            endQuest = "17748705483692562126",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -4123,7 +4134,7 @@ return {
             key = "17653589716477601",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 2165.4772082852273, y = 580.6821833189615},
+            pos = {x = 2306.1668634576413, y = 570.3373557327546},
             propsData = {
               IsNpcNode = false,
               FirstDialogueId = 12049022,
@@ -4174,6 +4185,37 @@ return {
               SoundStateType = 3,
               SoundPriority = 0,
               SoundType = 0
+            }
+          },
+          ["177469966025210219819"] = {
+            key = "177469966025210219819",
+            type = "PlayNormalSoundNode",
+            name = "播放普通音效",
+            pos = {x = 1554.4710947835945, y = 565.3134355509357},
+            propsData = {
+              EventPath = "event:/sfx/common/story/east02/zhongsheng",
+              TargetPointName = "",
+              EventKey = "",
+              PlayAs2D = false
+            }
+          },
+          ["177470143396711495642"] = {
+            key = "177470143396711495642",
+            type = "StopNormalSoundNode",
+            name = "停止普通音效",
+            pos = {x = 2134.2516994077714, y = 483.2593389786921},
+            propsData = {TargetPointName = "", EventKey = ""}
+          },
+          ["17748705483692562126"] = {
+            key = "17748705483692562126",
+            type = "PlayNormalSoundNode",
+            name = "播放普通音效",
+            pos = {x = 1851.844155844156, y = 548.9142857142857},
+            propsData = {
+              EventPath = "event:/sfx/common/story/east02/zhongsheng",
+              TargetPointName = "",
+              EventKey = "",
+              PlayAs2D = false
             }
           }
         },
@@ -5487,12 +5529,12 @@ return {
       key = "17651988979821061933",
       type = "StoryNode",
       name = "香阁玩法",
-      pos = {x = 1884.3135494430226, y = 872.4053417516401},
+      pos = {x = 1883.9767411030066, y = 874.1374989288654},
       propsData = {
         QuestId = 12020125,
         QuestDescriptionComment = "",
-        QuestDescription = "Description_120201_25",
-        QuestDeatil = "Content_120201_25",
+        QuestDescription = "Description_120201_9",
+        QuestDeatil = "Content_120201_9",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
@@ -5617,6 +5659,12 @@ return {
             startQuest = "17684808772546617643",
             startPort = "Out",
             endQuest = "17738191956986486",
+            endPort = "In"
+          },
+          {
+            startQuest = "17684808772546617643",
+            startPort = "Out",
+            endQuest = "17746030502352555893",
             endPort = "In"
           }
         },
@@ -6027,12 +6075,23 @@ return {
             key = "17738191956986486",
             type = "AtmosphereNpcHideNode",
             name = "氛围NPC显示/隐藏节点",
-            pos = {x = 2550.9681218882533, y = 807.7815183317434},
+            pos = {x = 2266.3527372728686, y = 809.319979870205},
             propsData = {
               IsHide = false,
               AtmosphereTagList = {
                 "Story_Inn_Move"
               }
+            }
+          },
+          ["17746030502352555893"] = {
+            key = "17746030502352555893",
+            type = "UpdateTaskBarAndTaskMainNode",
+            name = "更新任务目标节点",
+            pos = {x = 2569.026291279714, y = 838.7903392246699},
+            propsData = {
+              NewDescription = "Description_120201_25",
+              NewDetail = "Content_120201_25",
+              SubTaskTargetIndex = 0
             }
           }
         },

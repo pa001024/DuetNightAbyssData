@@ -182,7 +182,9 @@ function M:InitHistoryItems(Results)
 end
 
 function M:Destruct()
-  self.Owner.bShoulFocusToLastFocusedWidget = true
+  if IsValid(self.Owner) then
+    self.Owner.bShoulFocusToLastFocusedWidget = true
+  end
   self:RemoveTimer("ChannelSwitchSuccess")
   EventManager:RemoveEvent(EventID.OnChannelIndexSelect, self)
   EventManager:RemoveEvent(EventID.OnSendChannelIndexSelect, self)

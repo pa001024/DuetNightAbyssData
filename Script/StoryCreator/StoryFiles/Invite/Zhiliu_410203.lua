@@ -78,16 +78,52 @@ return {
       questNodeData = {
         lineData = {
           {
-            startQuest = "17730379250669589916",
-            startPort = "QuestStart",
-            endQuest = "177314575530818661879",
+            startQuest = "17744302182131755946",
+            startPort = "Region_1",
+            endQuest = "17744302020221755617",
             endPort = "In"
           },
           {
-            startQuest = "177314575530818661879",
+            startQuest = "17744302020221755617",
+            startPort = "Out",
+            endQuest = "17744302544241756854",
+            endPort = "In"
+          },
+          {
+            startQuest = "17744302439351756590",
+            startPort = "Region_1",
+            endQuest = "17744302415741756513",
+            endPort = "In"
+          },
+          {
+            startQuest = "17744302415741756513",
             startPort = "Out",
             endQuest = "17730379250669589917",
             endPort = "Success"
+          },
+          {
+            startQuest = "17730379250669589916",
+            startPort = "QuestStart",
+            endQuest = "17744302182131755946",
+            endPort = "In"
+          },
+          {
+            startQuest = "17730379250669589916",
+            startPort = "QuestStart",
+            endQuest = "17744302439351756590",
+            endPort = "In"
+          },
+          {
+            startQuest = "17730379250669589916",
+            startPort = "QuestStart",
+            endQuest = "17744303200511757603",
+            endPort = "In"
+          },
+          {
+            startQuest = "17744303200511757603",
+            startPort = "Region_1",
+            endQuest = "17744302020221755618",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -102,7 +138,7 @@ return {
             key = "17730379250669589917",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 1410.7692307692307, y = 306.9230769230769},
+            pos = {x = 1842.7692307692305, y = 510.9230769230769},
             propsData = {ModeType = 0}
           },
           ["17730379250669589918"] = {
@@ -112,18 +148,18 @@ return {
             pos = {x = 2800, y = 700},
             propsData = {}
           },
-          ["177314575530818661879"] = {
-            key = "177314575530818661879",
+          ["17744302020221755617"] = {
+            key = "17744302020221755617",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1093.7854618684137, y = 290.65328874024544},
+            pos = {x = 1456.624332570557, y = 289.15217391304344},
             propsData = {
               IsNpcNode = false,
-              IsPlayerTurnToNPC = true,
-              IsNPCTurnToPlayer = true,
-              FirstDialogueId = 10010101,
-              FlowAssetPath = "",
-              TalkType = "FreeSimple",
+              bUseFlowAssetActors = true,
+              FirstDialogueId = 0,
+              FlowAssetPath = "DialogueAsset'/Game/Dialogue/Invite/80230301.80230301'",
+              TalkType = "FixSimple",
+              TalkStageName = "",
               BlendInTime = 0,
               BlendOutTime = 0,
               InType = "FadeIn",
@@ -132,10 +168,10 @@ return {
               BlendEaseExp = 2,
               UseProceduralCamera = false,
               ProceduralCameraId = 1,
-              HideNpcs = false,
+              HideNpcs = true,
               HideMonsters = true,
               HideAllBattleEntity = true,
-              HideMechanismsFX = false,
+              HideMechanismsFX = true,
               ShowSkipButton = true,
               ShowAutoPlayButton = true,
               ShowReviewButton = true,
@@ -149,14 +185,117 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
-              TalkActors = {},
               OptionType = "normal",
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
-              PlayerSwitchEmoIdle = true,
+              bNpcActionKeepIn = false,
+              bNpcActionKeepOut = false,
+              bForceWaitNavLoaded = false,
               NormalOptions = {},
               OverrideFailBlend = false
+            }
+          },
+          ["17744302020221755618"] = {
+            key = "17744302020221755618",
+            type = "SkipRegionNode",
+            name = "跨区域传送设置玩家位置",
+            pos = {x = 1459.3756674294432, y = 102.84782608695656},
+            propsData = {
+              ModeType = 1,
+              Id = 105101,
+              StartIndex = 1,
+              IsWhite = false
+            }
+          },
+          ["17744302182131755946"] = {
+            key = "17744302182131755946",
+            type = "JudgeRegionNode",
+            name = "判断位于区域",
+            pos = {x = 1116, y = 298},
+            propsData = {
+              IsWaitingEnterRegion = false,
+              RegionIds = {105101}
+            }
+          },
+          ["17744302415741756513"] = {
+            key = "17744302415741756513",
+            type = "TalkNode",
+            name = "对话节点",
+            pos = {x = 1444, y = 492},
+            propsData = {
+              IsNpcNode = false,
+              bUseFlowAssetActors = true,
+              FirstDialogueId = 0,
+              FlowAssetPath = "DialogueAsset'/Game/Dialogue/Invite/80230311.80230311'",
+              TalkType = "FixSimple",
+              TalkStageName = "",
+              BlendInTime = 0,
+              BlendOutTime = 0,
+              InType = "FadeIn",
+              OutType = "FadeOut",
+              ShowFadeDetail = false,
+              BlendEaseExp = 2,
+              UseProceduralCamera = false,
+              ProceduralCameraId = 1,
+              HideNpcs = true,
+              HideMonsters = true,
+              HideAllBattleEntity = true,
+              HideMechanismsFX = true,
+              ShowSkipButton = true,
+              ShowAutoPlayButton = true,
+              ShowReviewButton = true,
+              ShowWikiButton = true,
+              SkipToOption = false,
+              DisableNpcOptimization = false,
+              DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
+              BeginNewTargetPointName = "",
+              EndNewTargetPointName = "",
+              CameraLookAtTartgetPoint = "",
+              RestoreStand = false,
+              PauseNpcBT = true,
+              OptionType = "normal",
+              FreezeWorldComposition = false,
+              bTravelFullLoadWorldComposition = false,
+              SwitchToMaster = "None",
+              bNpcActionKeepIn = false,
+              bNpcActionKeepOut = false,
+              bForceWaitNavLoaded = false,
+              NormalOptions = {},
+              OverrideFailBlend = false
+            }
+          },
+          ["17744302439351756590"] = {
+            key = "17744302439351756590",
+            type = "JudgeRegionNode",
+            name = "判断位于区域",
+            pos = {x = 1124, y = 494},
+            propsData = {
+              IsWaitingEnterRegion = false,
+              RegionIds = {105602}
+            }
+          },
+          ["17744302544241756854"] = {
+            key = "17744302544241756854",
+            type = "SkipRegionNode",
+            name = "跨区域传送设置玩家位置",
+            pos = {x = 1832, y = 314},
+            propsData = {
+              ModeType = 1,
+              Id = 105602,
+              StartIndex = 1,
+              IsWhite = false
+            }
+          },
+          ["17744303200511757603"] = {
+            key = "17744303200511757603",
+            type = "JudgeRegionNode",
+            name = "判断位于区域",
+            pos = {x = 1128, y = 94},
+            propsData = {
+              IsWaitingEnterRegion = false,
+              RegionIds = {210101}
             }
           }
         },

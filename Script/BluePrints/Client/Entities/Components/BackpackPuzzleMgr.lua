@@ -1,10 +1,11 @@
 local Component = {}
 local BackpackPuzzleController = require("BluePrints.UI.WBP.Activity.Widget.BagGame.BagGameController")
 local BagGameModel = require("BluePrints.UI.WBP.Activity.Widget.BagGame.BagGameModel")
+local TimeUtils = require("Utils.TimeUtils")
 local BagGameAwardReddotName = "BagGameAward"
 local BagGameNewReddotName = "BagGameNew"
 
-function Component:EnterWorld()
+function Component:_OnLoginSuccess()
   BackpackPuzzleController:Init()
   self:InitReddot()
 end
@@ -28,6 +29,34 @@ function Component:_OnPropChangeBackpackPuzzles(keys)
   end
   self:_TryRefreshBagGameAwardReddot()
   self:_TryRefreshBagGameNewReddot()
+end
+
+function Component:_GetBagGameLevelUnlockTimestamp(LevelInfo)
+  if not LevelInfo then
+    return 0
+  end
+  if LevelInfo.UnlockDate ~= nil then
+    return LevelInfo.UnlockDate:GetTime()
+  end
+  if BagGameModel.EventStartTime then
+    return BagGameModel.EventStartTime:GetTime()
+  end
+  return 0
+end
+
+function Component:_IsBagGameLevelUnlockTimeReached(LevelInfo)
+  local UnlockTs = self:_GetBagGameLevelUnlockTimestamp(LevelInfo)
+  return UnlockTs <= 0 or UnlockTs <= TimeUtils.NowTime()
+end
+
+function Component:_TryClearBagGameNewReddotByStarRecord(LevelId, CacheDetail)
+  if not LevelId or BagGameModel:GetPlayerStarCount(LevelId) <= 0 then
+    return false
+  end
+  if CacheDetail and true == CacheDetail[LevelId] then
+    ReddotManager.DecreaseLeafNodeCount(BagGameNewReddotName, 1, {LevelId = LevelId})
+  end
+  return true
 end
 
 function Component:_TryRefreshBagGameAwardReddot()
@@ -75,22 +104,20 @@ function Component:_TryRefreshBagGameNewReddot()
   end
   for i, LevelInfo in ipairs(LevelsInfo) do
     local LevelId = LevelInfo.LevelId
-    if nil ~= CacheDetail[LevelId] then
-    elseif 1 == i then
-      do
-        local CurStarCount = BagGameModel:GetPlayerStarCount(LevelId)
-        if 0 == CurStarCount then
-          ReddotManager.IncreaseLeafNodeCount(BagGameNewReddotName, 1, {LevelId = LevelId})
+    if self:_TryClearBagGameNewReddotByStarRecord(LevelId, CacheDetail) then
+    elseif nil ~= CacheDetail[LevelId] then
+    else
+      local bUnlocked = false
+      if 1 == i then
+        bUnlocked = self:_IsBagGameLevelUnlockTimeReached(LevelInfo)
+      else
+        local PrevLevelId = LevelsInfo[i - 1].LevelId
+        if BagGameModel:GetPlayerStarCount(PrevLevelId) > 0 then
+          bUnlocked = self:_IsBagGameLevelUnlockTimeReached(LevelInfo)
         end
       end
-    else
-      local PrevLevelId = LevelsInfo[i - 1].LevelId
-      local PrevStarCount = BagGameModel:GetPlayerStarCount(PrevLevelId)
-      if PrevStarCount > 0 then
-        local CurStarCount = BagGameModel:GetPlayerStarCount(LevelId)
-        if 0 == CurStarCount then
-          ReddotManager.IncreaseLeafNodeCount(BagGameNewReddotName, 1, {LevelId = LevelId})
-        end
+      if bUnlocked then
+        ReddotManager.IncreaseLeafNodeCount(BagGameNewReddotName, 1, {LevelId = LevelId})
       end
     end
   end

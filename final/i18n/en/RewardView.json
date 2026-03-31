@@ -17861,7 +17861,7 @@
       {
         "id": 4172,
         "t": "Pet",
-        "n": "青鸾贰型"
+        "n": "Short for \"Juzi Patrol Nexus Type Ⅱ: Qingluan\", the Qingluan Type Ⅱ is a mechanical construct handcrafted by Su Yi. She claims to have devoted countless days and nights to its creation. A closer look at its exterior reveals exquisite craftsmanship in every detail."
       }
     ]
   },
@@ -17871,7 +17871,7 @@
       {
         "id": 30119,
         "t": "HeadSculpture",
-        "n": "微茫珍藏"
+        "n": "Treasured Remnants"
       },
       {
         "id": 30032,
@@ -17882,7 +17882,7 @@
         "id": 1009,
         "t": "Resource",
         "c": 2,
-        "n": "星辉丝线"
+        "n": "Starweave Thread"
       },
       {
         "id": 100,
@@ -17903,18 +17903,18 @@
       {
         "id": 30129,
         "t": "HeadSculpture",
-        "n": "定格的往事"
+        "n": "Moments in Frames"
       },
       {
         "id": 30040,
         "t": "CharAccessory",
-        "n": "夜明灯·焦糖"
+        "n": "Nightglow Lantern: Dark Jade"
       },
       {
         "id": 120002,
         "t": "Resource",
         "c": 1,
-        "n": "风息装饰代金券"
+        "n": "Windbreath Accessory Coupon"
       },
       {
         "id": 1004,
@@ -18736,7 +18736,7 @@
       {
         "id": 41766,
         "t": "Mod",
-        "n": "Huntdown"
+        "n": "Volition"
       },
       {
         "id": 42413,
@@ -20902,13 +20902,13 @@
         "id": 1024,
         "t": "Walnut",
         "c": 65,
-        "n": "密函：苏乙"
+        "n": "Secret Letter: Su Yi"
       },
       {
         "id": 2055,
         "t": "Walnut",
         "c": 30,
-        "n": "密函：孤雏的羽迹"
+        "n": "Secret Letter: Fledgling's Gleam"
       },
       {
         "id": 211,
@@ -20956,7 +20956,7 @@
         "id": 2056,
         "t": "Walnut",
         "c": 30,
-        "n": "密函：杯中的残火"
+        "n": "Secret Letter: Dregs of Glimmer"
       },
       {
         "id": 211,
@@ -23094,7 +23094,7 @@
         "id": 2057,
         "t": "Walnut",
         "c": 3,
-        "n": "密函：鸣金遥"
+        "n": "Secret Letter: Aureate Drift"
       }
     ]
   },
@@ -23117,7 +23117,7 @@
         "id": 2055,
         "t": "Walnut",
         "c": 3,
-        "n": "密函：孤雏的羽迹"
+        "n": "Secret Letter: Fledgling's Gleam"
       }
     ]
   },
@@ -23140,7 +23140,7 @@
         "id": 2058,
         "t": "Walnut",
         "c": 3,
-        "n": "密函：切割齿轮"
+        "n": "Secret Letter: Jagged Growl"
       }
     ]
   },
@@ -23163,7 +23163,7 @@
         "id": 1024,
         "t": "Walnut",
         "c": 3,
-        "n": "密函：苏乙"
+        "n": "Secret Letter: Su Yi"
       }
     ]
   },
@@ -23533,12 +23533,12 @@
       {
         "id": 30122,
         "t": "HeadSculpture",
-        "n": "喵喵游戏"
+        "n": "Pixel Kitty"
       },
       {
         "id": 41033,
         "t": "Resource",
-        "n": "Posture: LED Screen"
+        "n": "Arsenal Phantasia"
       },
       {
         "id": 102,
@@ -23614,12 +23614,12 @@
       {
         "id": 30123,
         "t": "HeadSculpture",
-        "n": "不眠之夜"
+        "n": "Sleepless Night"
       },
       {
         "id": 41056,
         "t": "Resource",
-        "n": "出拳"
+        "n": "Punch"
       },
       {
         "id": 102,
@@ -24040,7 +24040,7 @@
       {
         "id": 4172,
         "t": "Pet",
-        "n": "青鸾贰型"
+        "n": "Short for \"Juzi Patrol Nexus Type Ⅱ: Qingluan\", the Qingluan Type Ⅱ is a mechanical construct handcrafted by Su Yi. She claims to have devoted countless days and nights to its creation. A closer look at its exterior reveals exquisite craftsmanship in every detail."
       },
       {
         "id": 1004,
@@ -24068,7 +24068,7 @@
       {
         "id": 10091,
         "t": "CharAccessory",
-        "n": "祀烟香炉·鎏金"
+        "n": "Ritual Censer: Leaden Grey"
       }
     ]
   },
@@ -24079,7 +24079,7 @@
         "id": 221,
         "t": "Resource",
         "c": 1,
-        "n": "星耀硬币"
+        "n": "Starglow Coin"
       }
     ]
   },
@@ -24089,33 +24089,33 @@
       {
         "id": 32010131,
         "t": "Skin",
-        "n": "叛逆风尚"
+        "n": "Rebel Riff"
       },
       {
         "id": 30118,
         "t": "HeadSculpture",
-        "n": "星耀巡游"
+        "n": "Starry Sojourn"
       },
       {
         "id": 10090,
         "t": "CharAccessory",
-        "n": "机枢齿轮"
+        "n": "Jishu Cog"
       },
       {
         "id": 30037,
         "t": "CharAccessory",
-        "n": "一线铃铛"
+        "n": "Bell Chime"
       },
       {
         "id": 30038,
         "t": "CharAccessory",
-        "n": "白鸟先生"
+        "n": "Mr White Bird"
       },
       {
         "id": 120001,
         "t": "Resource",
         "c": 1,
-        "n": "父辈余荫代金券"
+        "n": "Tough Love Coupon"
       },
       {
         "id": 30104,

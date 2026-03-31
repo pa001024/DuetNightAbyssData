@@ -6624,7 +6624,7 @@ return ReadOnly("Resource", {
   },
   [40014] = {
     AccessKey = T.RT_30,
-    BattleItemLimit = 5,
+    BattleItemLimit = 3,
     CombatConditionID = T.RT_31,
     CombatConditionToast = T.RT_29,
     DetailDes = "RESOURCE_DESC_40014",
@@ -6639,11 +6639,11 @@ return ReadOnly("Resource", {
     Sound = "SOUND_ITEM_LIQUID",
     Type = "BattleItem",
     UseEffectType = "AddHPValue",
-    UseParam = 6
+    UseParam = 10
   },
   [40015] = {
     AccessKey = T.RT_30,
-    BattleItemLimit = 10,
+    BattleItemLimit = 3,
     CombatConditionID = T.RT_31,
     CombatConditionToast = T.RT_29,
     DetailDes = "RESOURCE_DESC_40014",
@@ -6658,7 +6658,7 @@ return ReadOnly("Resource", {
     Sound = "SOUND_ITEM_LIQUID",
     Type = "BattleItem",
     UseEffectType = "AddSPValue",
-    UseParam = 3
+    UseParam = 12
   },
   [41001] = {
     AccessKey = {"Text_Event"},
@@ -7625,6 +7625,7 @@ return ReadOnly("Resource", {
     DetailDes = "RESOURCE_DESC_41051",
     DisplayPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/ShopSkin/Shop_Action_Suyi01.Shop_Action_Suyi01'",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
+    GetSoundPath = "event:/ui/btc/cg_suyi_jijia01",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_SuYi_White.T_Resource_Gesture_SuYi_White",
     IconAnimationBP = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/Battle_Menu/WBP_BattleMenu_Prop_SuYi_White.WBP_BattleMenu_Prop_SuYi_White'",
     InteractPlayerNum = 2,
@@ -7634,6 +7635,7 @@ return ReadOnly("Resource", {
     ResourceName = "RESOURCE_NAME_41051",
     ResourceSType = "GestureItem",
     ResourceValue = -1,
+    SkyBoxIndex = 3,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "InfiniteBattleItem",
     UIDisplayTime = 7.5,
@@ -7684,6 +7686,7 @@ return ReadOnly("Resource", {
     DetailDes = "RESOURCE_DESC_41054",
     DisplayPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/ShopSkin/Shop_Action_Suyi01.Shop_Action_Suyi01'",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
+    GetSoundPath = "event:/ui/btc/cg_suyi_jijia01",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_SuYi_Rad.T_Resource_Gesture_SuYi_Rad",
     IconAnimationBP = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/Battle_Menu/WBP_BattleMenu_Prop_SuYi_Rad.WBP_BattleMenu_Prop_SuYi_Rad'",
     InteractPlayerNum = 2,
@@ -7693,6 +7696,7 @@ return ReadOnly("Resource", {
     ResourceName = "RESOURCE_NAME_41054",
     ResourceSType = "GestureItem",
     ResourceValue = -1,
+    SkyBoxIndex = 3,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "InfiniteBattleItem",
     UIDisplayTime = 7.5,
@@ -7709,6 +7713,7 @@ return ReadOnly("Resource", {
     DetailDes = "RESOURCE_DESC_41055",
     DisplayPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/ShopSkin/Shop_Action_Suyi01.Shop_Action_Suyi01'",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
+    GetSoundPath = "event:/ui/btc/cg_suyi_jijia01",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_SuYi_Black.T_Resource_Gesture_SuYi_Black",
     IconAnimationBP = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/Battle_Menu/WBP_BattleMenu_Prop_SuYi_Black.WBP_BattleMenu_Prop_SuYi_Black'",
     InteractPlayerNum = 2,
@@ -7718,6 +7723,7 @@ return ReadOnly("Resource", {
     ResourceName = "RESOURCE_NAME_41055",
     ResourceSType = "GestureItem",
     ResourceValue = -1,
+    SkyBoxIndex = 3,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "InfiniteBattleItem",
     UIDisplayTime = 7.5,
@@ -8378,6 +8384,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [120001] = {
+    DetailDes = "RESOURCE_DESC_VOUCHER_1",
     FunctionDes = "RESOURCE_FUNCTION_VOUCHER_1",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Resource_DiscountTicket_01.T_Resource_DiscountTicket_01'",
     MaterialClassify = 3,
@@ -8390,6 +8397,7 @@ return ReadOnly("Resource", {
     UseEffectType = "ShopItemVoucher"
   },
   [120002] = {
+    DetailDes = "RESOURCE_DESC_VOUCHER_2",
     FunctionDes = "RESOURCE_FUNCTION_VOUCHER_2",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Resource_DiscountTicket_01.T_Resource_DiscountTicket_01'",
     MaterialClassify = 3,

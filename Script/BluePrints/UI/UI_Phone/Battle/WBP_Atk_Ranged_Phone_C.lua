@@ -103,7 +103,7 @@ end
 
 function M.ButtonFireUp(Battle_Button_Phone, Index, WidgetLocalPos, LastWidgetTouchPos, EndTouchPos, TotalDeltaDis)
   local FireBtn = Battle_Button_Phone.AtkRanged
-  if FireBtn.OwnerPanel.FireOccupied == FireBtn.OccupiedTag then
+  if FireBtn.OwnerPanel.FireOccupied == FireBtn.OccupiedTag or not FireBtn.OwnerPanel.FireOccupied then
     FireBtn.OwnerPanel.FireOccupied = nil
     if FireBtn.LockShooting and FireBtn.OwnerPlayer:CharacterInTag("Shooting") and not FireBtn.HasHeavyShooting then
       FireBtn.CurrentTime = UE4.UGameplayStatics.GetRealTimeSeconds(FireBtn)

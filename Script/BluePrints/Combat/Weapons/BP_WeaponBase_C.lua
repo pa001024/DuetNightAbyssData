@@ -15,6 +15,8 @@ BP_WeaponBase_C._components = {
 function BP_WeaponBase_C:ReceiveBeginPlay()
   self.Overridden.ReceiveBeginPlay(self)
   self.ForbidTag = {}
+  self.AccessoryAuName_Accessory = nil
+  self.AccessoryAuName_RunAttack = nil
 end
 
 function BP_WeaponBase_C:OnRep_ServerBornInfo()
@@ -129,7 +131,8 @@ function BP_WeaponBase_C:ChangeAccessory(AccessoryId, AccessoryType)
   if AccessoryType == CommonConst.WeaponAccessoryTypes.Accessory then
     self:DetachWeaponSuit()
     if nil == Data then
-      self.AccessoryAuName = ""
+      self.AccessoryAuName_Accessory = nil
+      self.AccessoryAuName = self.AccessoryAuName_Accessory or self.AccessoryAuName_RunAttack or ""
       return
     end
     local Offsets = Data.Offset or {
@@ -141,11 +144,27 @@ function BP_WeaponBase_C:ChangeAccessory(AccessoryId, AccessoryType)
     self:AttachWeaponSuit(Data.AccessorySocket, Data.ModelPath, Offset, Data.NiagaraPath, Data.SocketName)
     self:ChangeWPSuitLook(Data.ChangeColor or 1)
     if Data.AuSplice then
-      self.AccessoryAuName = Data.AuSplice
+      self.AccessoryAuName_Accessory = Data.AuSplice
+      self.AccessoryAuName = self.AccessoryAuName_Accessory or self.AccessoryAuName_RunAttack or ""
     else
-      self.AccessoryAuName = ""
+      self.AccessoryAuName_Accessory = nil
+      self.AccessoryAuName = self.AccessoryAuName_Accessory or self.AccessoryAuName_RunAttack or ""
     end
     return
+  end
+  if AccessoryType == CommonConst.WeaponAccessoryTypes.RunAttack then
+    if nil == Data then
+      self.AccessoryAuName_RunAttack = nil
+      self.AccessoryAuName = self.AccessoryAuName_Accessory or self.AccessoryAuName_RunAttack or ""
+      return
+    end
+    if Data.AuSplice then
+      self.AccessoryAuName_RunAttack = Data.AuSplice
+      self.AccessoryAuName = self.AccessoryAuName_Accessory or self.AccessoryAuName_RunAttack or ""
+    else
+      self.AccessoryAuName_RunAttack = nil
+      self.AccessoryAuName = self.AccessoryAuName_Accessory or self.AccessoryAuName_RunAttack or ""
+    end
   end
   if nil == Data then
     return

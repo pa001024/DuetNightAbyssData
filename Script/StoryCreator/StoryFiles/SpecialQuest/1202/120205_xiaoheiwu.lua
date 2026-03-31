@@ -150,12 +150,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17739040035675457889",
-            startPort = "Out",
-            endQuest = "17734950658525063859",
-            endPort = "In"
-          },
-          {
             startQuest = "17678537949091014611",
             startPort = "QuestStart",
             endQuest = "1774185807400515",
@@ -544,6 +538,18 @@ return {
             startPort = "Out",
             endQuest = "17743548364708912804",
             endPort = "Input"
+          },
+          {
+            startQuest = "17739040035675457889",
+            startPort = "Out",
+            endQuest = "17747878010632555501",
+            endPort = "In"
+          },
+          {
+            startQuest = "17747878010632555501",
+            startPort = "Out",
+            endQuest = "17734950658525063859",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -712,7 +718,7 @@ return {
             pos = {x = 1821.077983420089, y = 111.86525151050311},
             propsData = {
               UnitId = 0,
-              NewTargetPointName = "XHWstart",
+              NewTargetPointName = "XHWstart3",
               FadeIn = false,
               FadeOut = true,
               bResetCamera = true,
@@ -747,7 +753,7 @@ return {
             key = "17734950658525063860",
             type = "WaitOfTimeNode",
             name = "延迟等待",
-            pos = {x = 898.9658553076403, y = 463.5316292124835},
+            pos = {x = 1197.0908553076401, y = 473.8441292124835},
             propsData = {WaitTime = 1.5}
           },
           ["17739040035675457889"] = {
@@ -1317,6 +1323,21 @@ return {
               FadeOutSeconds = 0,
               DurationSeconds = 1,
               IsStandAlone = true
+            }
+          },
+          ["17747878010632555501"] = {
+            key = "17747878010632555501",
+            type = "AsyncSetActorLocationAndRotationNode",
+            name = "异步设置玩家位置旋转",
+            pos = {x = 831.317558528428, y = 440.5706521739131},
+            propsData = {
+              UnitId = 0,
+              NewTargetPointName = "XHWstart3",
+              FadeIn = false,
+              FadeOut = true,
+              bResetCamera = true,
+              bForceAsyncLoading = false,
+              IsWhite = false
             }
           }
         },

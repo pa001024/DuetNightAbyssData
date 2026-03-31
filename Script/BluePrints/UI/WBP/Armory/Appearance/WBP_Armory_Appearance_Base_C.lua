@@ -573,6 +573,19 @@ function M:AddWeaponAppearanceReddotListen(WeaponId)
     ArmoryUtils:UpdateContentRetDotType(Content)
     self.Accessory_Skin:SetReddot(Content.RedDotType)
   end, nil, true)
+  local BattleWeaponData = DataMgr.BattleWeapon[WeaponId]
+  if BattleWeaponData.ModApplicationType then
+    for key, ApplicationType in pairs(BattleWeaponData.ModApplicationType) do
+      local NodeName = "WeaponStanceFX" .. ApplicationType
+      self.AppearanceNodeNames[NodeName] = 1
+      ReddotManager.AddListener(NodeName, self, function(_self, Count)
+        local Content = self.WeaponSpecial_Skin.Content
+        Content.IsNew = ArmoryUtils:GetWeaponAppearanceReddotCount(WeaponId).NewWeaponStanceFXCount > 0
+        ArmoryUtils:UpdateContentRetDotType(Content)
+        self.WeaponSpecial_Skin:SetReddot(Content.RedDotType)
+      end, nil, true)
+    end
+  end
 end
 
 function M:CanSkinUpgrade(CharId)

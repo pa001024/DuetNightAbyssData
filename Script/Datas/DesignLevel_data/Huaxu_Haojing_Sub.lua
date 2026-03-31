@@ -756,7 +756,7 @@ return {
       ["2430108"] = {
         CreatorId = 2430108,
         UnitType = "Npc",
-        UnitId = 830001,
+        UnitId = 240110,
         RarelyId = 7073024
       },
       ["2430109"] = {
@@ -777,7 +777,7 @@ return {
       ["2430105"] = {
         CreatorId = 2430105,
         UnitType = "Npc",
-        UnitId = 830001,
+        UnitId = 240110,
         RarelyId = 7073023
       },
       ["2430106"] = {

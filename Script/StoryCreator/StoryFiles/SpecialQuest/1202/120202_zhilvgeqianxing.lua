@@ -210,12 +210,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17734756419622913",
-            startPort = "Out",
-            endQuest = "177323858406812932747",
-            endPort = "In"
-          },
-          {
             startQuest = "17679482268141452962",
             startPort = "Out",
             endQuest = "17734757679253929",
@@ -587,13 +581,6 @@ return {
               MessageContent = "ZhilvStealth_Bird",
               UnitId = -1
             }
-          },
-          ["177323858406812932747"] = {
-            key = "177323858406812932747",
-            type = "ShowGuideMainNode",
-            name = "显示图文引导",
-            pos = {x = 1857.906710291772, y = -73.74974903837133},
-            propsData = {GuideId = 128}
           },
           ["17734756419622913"] = {
             key = "17734756419622913",

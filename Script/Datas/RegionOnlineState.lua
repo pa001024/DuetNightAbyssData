@@ -5,7 +5,7 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("RegionOnlineState", {
-  [1] = {NumRange = 30, StateId = 1},
-  [2] = {NumRange = 70, StateId = 2},
-  [3] = {NumRange = 100, StateId = 3}
+  [1] = {NumRange = 5, StateId = 1},
+  [2] = {NumRange = 10, StateId = 2},
+  [3] = {NumRange = 20, StateId = 3}
 })

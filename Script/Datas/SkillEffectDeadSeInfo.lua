@@ -140,7 +140,7 @@ return ReadOnly("SkillEffectDeadSeInfo", {
   [1030314] = T.RT_1,
   [1040111] = T.RT_2,
   [1040112] = T.RT_2,
-  [1040113] = T.RT_3,
+  [1040113] = T.RT_1,
   [1040114] = T.RT_2,
   [1040121] = T.RT_2,
   [1040122] = T.RT_3,

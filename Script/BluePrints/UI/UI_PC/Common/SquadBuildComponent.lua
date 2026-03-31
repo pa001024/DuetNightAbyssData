@@ -1585,6 +1585,9 @@ end
 function Component:GetWeaponTypeList(WeaponIdList)
   local MeleeWeaponList = {}
   local RangedWeaponList = {}
+  if not WeaponIdList then
+    return MeleeWeaponList, RangedWeaponList
+  end
   for _, WeaponId in pairs(WeaponIdList) do
     local WeaponData = DataMgr.BattleWeapon[WeaponId]
     local TemplateWeaponData = DataMgr.WeaponTemplate[WeaponId]

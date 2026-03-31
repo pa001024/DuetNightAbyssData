@@ -11,7 +11,7 @@ return ReadOnly("RegionOnline", {
     SubRegionId = 101
   },
   [101101] = {
-    DefaultChannelNum = 10,
+    DefaultChannelNum = 3,
     HideCNPCOnline = true,
     ManuaSwitchPlayerNum = 150,
     MultiPlayerNum = 100,
@@ -22,7 +22,7 @@ return ReadOnly("RegionOnline", {
     SubRegionId = 101101
   },
   [101901] = {
-    DefaultChannelNum = 5,
+    DefaultChannelNum = 2,
     ManuaSwitchPlayerNum = 150,
     MultiPlayerNum = 100,
     OfflineCondition = 8012,
@@ -33,7 +33,7 @@ return ReadOnly("RegionOnline", {
     SubRegionId = 101901
   },
   [104104] = {
-    DefaultChannelNum = 5,
+    DefaultChannelNum = 2,
     ManuaSwitchPlayerNum = 150,
     MaxX = 100000,
     MaxY = 100000,
@@ -83,7 +83,7 @@ return ReadOnly("RegionOnline", {
     SubRegionId = 104109
   },
   [104110] = {
-    DefaultChannelNum = 5,
+    DefaultChannelNum = 2,
     ManuaSwitchPlayerNum = 150,
     MultiPlayerNum = 100,
     OnlineCondition = 120100,
@@ -153,7 +153,7 @@ return ReadOnly("RegionOnline", {
     SubRegionId = 104901
   },
   [105201] = {
-    DefaultChannelNum = 5,
+    DefaultChannelNum = 2,
     ManuaSwitchPlayerNum = 150,
     MultiPlayerNum = 100,
     OnlineCondition = 12010602,
@@ -163,7 +163,7 @@ return ReadOnly("RegionOnline", {
     SubRegionId = 105201
   },
   [105501] = {
-    DefaultChannelNum = 5,
+    DefaultChannelNum = 2,
     ManuaSwitchPlayerNum = 150,
     MultiPlayerNum = 100,
     OnlineCondition = 12010602,

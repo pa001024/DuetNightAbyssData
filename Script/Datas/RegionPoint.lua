@@ -567,33 +567,33 @@ return ReadOnly("RegionPoint", {
     TelepointId = 1212,
     TeleportPointPos = 5,
     TeleportSubRegion = 104505,
-    UnlockConditionId = 329
+    UnlockConditionId = 99
   },
   [2842] = {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Haojing.T_Gp_Haojing",
     Id = 2842,
     ManualItemId = 234013,
-    Name = "UI_SUBREGION_NAME_104503",
+    Name = "UI_SUBREGION_NAME_104505",
     Pos = {15355, 4565},
     SubRegion = 105501,
     TargetSubRegion = {104503},
     TelepointId = 1500,
     TeleportPointPos = 3,
     TeleportSubRegion = 105501,
-    UnlockConditionId = 329
+    UnlockConditionId = 327
   },
   [2843] = {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Haojing.T_Gp_Haojing",
     Id = 2843,
     ManualItemId = 234012,
-    Name = "UI_SUBREGION_NAME_104505",
+    Name = "UI_SUBREGION_NAME_104503",
     Pos = {14316, 3500},
     SubRegion = 105501,
     TargetSubRegion = {104505},
     TelepointId = 1500,
     TeleportPointPos = 4,
     TeleportSubRegion = 105501,
-    UnlockConditionId = 329
+    UnlockConditionId = 99
   },
   [2844] = {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Zhilvge.T_Gp_Zhilvge",

@@ -520,7 +520,9 @@ function M:RemoveWidgetFromNode(Widget, bForce, WidgetPtr)
   end
   if self.bDontRemoveSubWidget and not bForce then
     if Widget then
-      Widget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      if IsValid(Widget) then
+        Widget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      end
       self.WidgetMap[Widget] = true
     end
     if WidgetPtr then

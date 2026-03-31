@@ -1083,7 +1083,7 @@ return {
       key = "1742891256129713492",
       type = "StoryNode",
       name = "执律阁内警卫",
-      pos = {x = 1279.4545268936565, y = 410.65982710969473},
+      pos = {x = 1279.4545268936565, y = 409.92811979262154},
       propsData = {
         QuestId = 12020206,
         QuestDescriptionComment = "",
@@ -1156,27 +1156,9 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "1742891256129713523",
-            startPort = "QuestStart",
-            endQuest = "17726153398684840395",
-            endPort = "In"
-          },
-          {
             startQuest = "17726153398684840395",
             startPort = "Out",
             endQuest = "17618992989873086812",
-            endPort = "In"
-          },
-          {
-            startQuest = "17726153398684840395",
-            startPort = "Out",
-            endQuest = "17724188812601189465",
-            endPort = "In"
-          },
-          {
-            startQuest = "17726153398684840395",
-            startPort = "Out",
-            endQuest = "17724189221571189898",
             endPort = "In"
           },
           {
@@ -1190,6 +1172,30 @@ return {
             startPort = "Out",
             endQuest = "1742891256129713524",
             endPort = "Success"
+          },
+          {
+            startQuest = "1742891256129713523",
+            startPort = "QuestStart",
+            endQuest = "17745789319938494",
+            endPort = "In"
+          },
+          {
+            startQuest = "17745789319938494",
+            startPort = "Out",
+            endQuest = "17726153398684840395",
+            endPort = "In"
+          },
+          {
+            startQuest = "1742891256129713523",
+            startPort = "QuestStart",
+            endQuest = "17724188812601189465",
+            endPort = "In"
+          },
+          {
+            startQuest = "1742891256129713523",
+            startPort = "QuestStart",
+            endQuest = "17724189221571189898",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -1197,7 +1203,7 @@ return {
             key = "1742891256129713523",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 1449.826541781411, y = 864.1876035841553},
+            pos = {x = 1114.2709862258553, y = 859.7431591397109},
             propsData = {ModeType = 0}
           },
           ["1742891256129713524"] = {
@@ -1403,6 +1409,13 @@ return {
             name = "延迟等待",
             pos = {x = 3016.8263975155282, y = 752.9031055900622},
             propsData = {WaitTime = 1}
+          },
+          ["17745789319938494"] = {
+            key = "17745789319938494",
+            type = "WaitOfTimeNode",
+            name = "延迟等待",
+            pos = {x = 1462.9191919191921, y = 868.959595959596},
+            propsData = {WaitTime = 1}
           }
         },
         commentData = {}
@@ -1413,7 +1426,7 @@ return {
       key = "1742891256129713493",
       type = "StoryNode",
       name = "执律阁偷偷聊天看机器人",
-      pos = {x = 1558.6105088021307, y = 414.73125109045907},
+      pos = {x = 1554.166064357686, y = 418.06458442379244},
       propsData = {
         QuestId = 12020207,
         QuestDescriptionComment = "",
@@ -1622,13 +1635,19 @@ return {
           {
             startQuest = "1742891256129713537",
             startPort = "QuestStart",
-            endQuest = "177443502176018519",
+            endQuest = "17619016888788210319",
             endPort = "In"
           },
           {
-            startQuest = "177443502176018519",
+            startQuest = "1742891256129713537",
+            startPort = "QuestStart",
+            endQuest = "1774613960255857883",
+            endPort = "In"
+          },
+          {
+            startQuest = "1774613960255857883",
             startPort = "Out",
-            endQuest = "17619016888788210319",
+            endQuest = "177443502176018519",
             endPort = "In"
           }
         },
@@ -1834,12 +1853,19 @@ return {
             key = "177443502176018519",
             type = "SendMessageNode",
             name = "发送消息",
-            pos = {x = 1541.4507592426644, y = 879.2629417302755},
+            pos = {x = 1836.0936163855217, y = 611.4057988731327},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "120202_ZhilvStop_Finish",
               UnitId = -1
             }
+          },
+          ["1774613960255857883"] = {
+            key = "1774613960255857883",
+            type = "WaitOfTimeNode",
+            name = "延迟等待",
+            pos = {x = 1545.6883116883116, y = 595.1753246753244},
+            propsData = {WaitTime = 1}
           }
         },
         commentData = {
@@ -3947,7 +3973,7 @@ return {
             key = "17686530126532897",
             type = "SendMessageNode",
             name = "发送消息",
-            pos = {x = 1475.5235608045205, y = 425.604217074872},
+            pos = {x = 1078.0235608045205, y = 680.604217074872},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "12020213_RobotStart",
@@ -3958,7 +3984,7 @@ return {
             key = "17686530205883031",
             type = "BossBattleFinishNode",
             name = "完成BOSS战阶段",
-            pos = {x = 1742.1397078154046, y = 402.7696378609824},
+            pos = {x = 1364.3619300376267, y = 632.7696378609825},
             propsData = {
               SendMessage = "",
               FinishCondition = "12020213_RobotOver"

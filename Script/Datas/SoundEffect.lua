@@ -682,6 +682,110 @@ return ReadOnly("SoundEffect", {
     SoundId = 2205,
     SoundPath = "event:/sfx/common/scene/panshen/magic_step"
   },
+  [2206] = {
+    SoundId = 2206,
+    SoundPath = "event:/sfx/common/scene/east/mark_flash"
+  },
+  [2207] = {
+    SoundId = 2207,
+    SoundPath = "event:/sfx/common/scene/east/mark_out"
+  },
+  [2208] = {
+    SoundId = 2208,
+    SoundPath = "event:/sfx/common/scene/east/mark_in"
+  },
+  [2209] = {
+    SoundId = 2209,
+    SoundPath = "event:/sfx/common/scene/east/wuyousheng_portal_cross"
+  },
+  [2210] = {
+    SoundId = 2210,
+    SoundPath = "event:/sfx/common/scene/east/wuyousheng_xishou"
+  },
+  [2211] = {
+    SoundId = 2211,
+    SoundPath = "event:/sfx/common/scene/east/wuyousheng_in"
+  },
+  [2212] = {
+    SoundId = 2212,
+    SoundPath = "event:/sfx/common/scene/east/wuyousheng_out"
+  },
+  [2213] = {
+    SoundId = 2213,
+    SoundPath = "event:/sfx/common/scene/east/wuyousheng_wood_fly"
+  },
+  [2214] = {
+    SoundId = 2214,
+    SoundPath = "event:/sfx/common/scene/east/wuyousheng_wood_shake"
+  },
+  [2215] = {
+    SoundId = 2215,
+    SoundPath = "event:/sfx/common/scene/east/zhilv_statein"
+  },
+  [2216] = {
+    SoundId = 2216,
+    SoundPath = "event:/sfx/common/scene/east/zhilv_stateout"
+  },
+  [2217] = {
+    SoundId = 2217,
+    SoundPath = "event:/sfx/common/scene/east/zhilv_energy"
+  },
+  [2218] = {
+    SoundId = 2218,
+    SoundPath = "event:/sfx/common/scene/east/tianren_shot"
+  },
+  [2219] = {
+    SoundId = 2219,
+    SoundPath = "event:/sfx/common/scene/east/tianren_move"
+  },
+  [2220] = {
+    SoundId = 2220,
+    SoundPath = "event:/sfx/common/scene/east/tianren_exp"
+  },
+  [2221] = {
+    SoundId = 2221,
+    SoundPath = "event:/sfx/common/scene/east/bmy_alert_small"
+  },
+  [2222] = {
+    SoundId = 2222,
+    SoundPath = "event:/sfx/common/scene/east/bmy_debris"
+  },
+  [2223] = {
+    SoundId = 2223,
+    SoundPath = "event:/sfx/common/scene/east/bmy_burst"
+  },
+  [2224] = {
+    SoundId = 2224,
+    SoundPath = "event:/sfx/common/scene/east/bmy_hit"
+  },
+  [2225] = {
+    SoundId = 2225,
+    SoundPath = "event:/sfx/common/scene/east/bmy_timer"
+  },
+  [2226] = {
+    SoundId = 2226,
+    SoundPath = "event:/sfx/common/scene/east/bmy_timer_exp"
+  },
+  [2227] = {
+    SoundId = 2227,
+    SoundPath = "event:/sfx/common/scene/east/bmy_zhuizong_tail"
+  },
+  [2228] = {
+    SoundId = 2228,
+    SoundPath = "event:/sfx/common/scene/east/bmy_zhuizong_exp"
+  },
+  [2229] = {
+    SoundId = 2229,
+    SoundPath = "event:/sfx/common/scene/east/bmy_wallbreak"
+  },
+  [2230] = {
+    SoundId = 2230,
+    SoundPath = "event:/sfx/common/scene/east/mg_zhouxin_shine"
+  },
+  [2231] = {
+    SoundId = 2231,
+    SoundPath = "event:/sfx/common/scene/east/mg_xsb_grow"
+  },
   [3001] = {
     NumLimit = 3,
     SoundId = 3001,

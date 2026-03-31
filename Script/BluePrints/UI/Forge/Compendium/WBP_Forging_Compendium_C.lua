@@ -335,7 +335,7 @@ function WBP_Forging_Compendium_C:UpdateCompendiumContent(TabType)
       Params = {Content}
     }
     Content.SoundItemType = "Draft"
-    Content.IsHold = not ForgeModel:IsDraftNotSeen(Content.Id) or Content.IsNew
+    Content.IsHold = not ForgeModel:IsDraftNotSeen(Content.Id) or Content.IsNew or Content.IsEverOwned
     if UIUtils.IsGamepadInput() and 1 == Index then
       Content.IsSelect = true
       self:SelectDraftItem(Content)

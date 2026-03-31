@@ -85,7 +85,7 @@ return ReadOnly("TreasureHuntRepeatDungeon", {
     EasyMaxConvertResource = 1000000,
     EasyModeFee = 1,
     EasyScoreToResource = {
-      [2] = 101
+      [101] = 2
     },
     EventDugeonId = 10301404,
     FeeResource = 6000005,
@@ -93,7 +93,7 @@ return ReadOnly("TreasureHuntRepeatDungeon", {
     HardMaxConvertResource = 3000000,
     HardModeFee = 3,
     HardScoreToResource = {
-      [0] = 101
+      [101] = 0.5
     },
     IsBanEasyPhantom = false,
     IsBanHardPhantom = true,

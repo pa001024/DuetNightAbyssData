@@ -8,28 +8,28 @@
       {
         "id": 20602,
         "type": "Drop",
-        "name": "Île du Purgatoire : Tome I",
+        "name": "Île du Purgatoire — Tome I",
         "text": "1er janvier\nAujourd’hui, ▇▇▇▇ m’a donné quelques éclats de Phoxène en guise « d’argent de poche ».\nElle m’a expliqué qu’à la Capitale, les enfants reçoivent régulièrement de l’argent de leurs aînés jusqu’à leur majorité — pour acheter ce qu’ils désirent : nourriture, jouets, et autres babioles.\n\nIl n’y a aucune boutique dans la zone des ruines ; elle m’a donc dit de les économiser. Ainsi, le jour où j’aurai envie de quelque chose, ou que je voudrai accomplir quelque chose, je pourrai lui remettre une partie de cet « argent de poche » pour qu’elle m’aide.\n\nMais... je ne sais pas vraiment ce que je veux.\n\n2 janvier\nJ’ai trouvé ! Je pourrais offrir un « cadeau d’anniversaire » à {nickname} !\nDans les livres, il est écrit que les enfants de la Capitale mangent un gâteau pour célébrer leur anniversaire. Cela a l’air très précieux... mais si j’économise assez, je pourrai demander à ▇▇▇▇ de m’aider à en obtenir un.\n\nJ’ai trouvé une vieille jarre en argile dans la cuisine : parfaite pour y garder mes économies.\n\n16 janvier\nAujourd’hui, alors que nous jouions à cache-cache, {nickname} a découvert ma jarre et a failli l’ouvrir... Je dois lui trouver une meilleure cachette.\nDemain, je me faufilerai dans la salle d’alchimie de ▇▇▇▇ pour chercher un endroit sûr. Il y a là-bas plein d’appareils impressionnants, et ▇▇▇▇ ne laisse jamais {nickname} y entrer.\n\n17 janvier\nJ’ai caché ma tirelire <H>près de la cascade, dans la salle d’alchimie</>.\nAinsi, ni {nickname} ni ▇▇▇▇ ne tomberont dessus.\n\n...\n\n▇▇ ▇▇\nL’anniversaire de {nickname} approche, et j’ai économisé assez pour remplir toute une caisse d’« argent de poche ». Cela devrait suffire pour échanger contre un gâteau. Mais ▇▇▇▇ semble préoccupée ces derniers temps. Elle se couche très tard... Peut-être que ce n’est pas le bon moment pour lui demander quoi que ce soit.\n\nL’an prochain, je pourrai demander un gâteau encore plus grand — tellement grand que nous pourrons tous les trois en manger jusqu’à ne plus avoir faim.",
         "srId": 100102
       },
       {
         "id": 20603,
         "type": "Drop",
-        "name": "Île du Purgatoire : Tome II",
+        "name": "Île du Purgatoire — Tome II",
         "text": "Berry,\n\nSi tu lis cette lettre, c’est que tu es revenue ici.\nTu as toujours été une fille réfléchie, et je suis sûr que tu avais une bonne raison de revenir.\nJ’ai laissé des provisions pour ton voyage, enterrées <H>près du dirigeable</> — elles devraient suffire à quitter l’Île du Purgatoire.\n\nPuisses-tu voyager en sécurité.",
         "srId": 100103
       },
       {
         "id": 20604,
         "type": "Drop",
-        "name": "Île du Purgatoire : Tome III",
+        "name": "Île du Purgatoire — Tome III",
         "text": "La Déesse du Destin tisse la course des étoiles et nous offre la lumière pour guider nos pas vers le bonheur éternel.\n\nPourtant, les humains ont trahi Ses enseignements.\nNous avons oublié l’amour et la compassion, et brandissons à présent des lames glacées les uns contre les autres.\nLes terres sacrées se sont effondrées, et même Ses temples ont été souillés.\n\nSi cette épreuve est bien celle qu’Elle a voulue — la nuit avant l’aube — alors, à toi, voyageur du futur, je lègue une bénédiction venue d’un autre temps.\n\nDans <H>un lieu que Son regard ne frôlera jamais</>, j’ai enfoui l’héritage d’une ère où l’humanité croyait encore en l’amour et en la fraternité.\n\nQue Ses fils du destin te guident vers la véritable aurore.",
         "srId": 100101
       },
       {
         "id": 20605,
         "type": "Drop",
-        "name": "Île du Purgatoire : Tome IV",
+        "name": "Île du Purgatoire — Tome IV",
         "text": "Le temps s’efface, la mémoire s’endort.\nLes visages changent, les vents se souviennent.\nSous les collines, la lumière des dieux persiste.\nLes racines murmurent au voyageur patient.\nDans la caverne, la vérité sommeille.\nLà où tout se fane, un nouveau cycle s’éveille.",
         "srId": 100103
       }
@@ -1590,29 +1590,29 @@
   },
   {
     "id": 1117,
-    "name": "遗落的纸张·皓京",
+    "name": "Feuille perdue — Haojing",
     "desc": "Une collection de feuillets énigmatiques trouvés au hasard de vos pérégrinations.\nCertains sont de délicats rouleaux de parchemin, d’autres encore portent l’odeur fraîche d’une encre à peine sèche ; quelques-uns ne sont que des lambeaux arrachés à la hâte d’un vieux carnet.\nOrdonnées ou illisibles, détaillées ou brouillonnes, toutes partagent pourtant un même trait manifeste : chacune indique, à sa manière, l’emplacement d’un \"trésor\".",
     "icon": "T_TreasureMap_East",
     "res": [
       {
         "id": 20640,
         "type": "Drop",
-        "name": "皓京·其一",
-        "text": "椒桂沉檀馨香好，兰蕙脑麝馥郁浓。\n借问宝物何处寻，牧童遥指金庭树。",
+        "name": "Haojing — Tome I",
+        "text": "Poivre, cannelle, bois d’aloès et santal exhalent leurs arômes mêlés, orchidées et musc diffusent un parfum profond et enivrant.\nSi vous cherchez où se cache le trésor, un jeune pâtre, au loin, vous désigne l’arbre d’or du domaine céleste.",
         "srId": 104504
       },
       {
         "id": 20641,
         "type": "Drop",
-        "name": "皓京·其二",
-        "text": "东指郊外草渐深，没入窟中寻不得。\n盼星望月痴等寻，却探宝物根深藏。",
+        "name": "Haojing — Tome II",
+        "text": "À l’est, les herbes des confins deviennent de plus en plus denses, on s’enfonce dans les cavités... sans jamais rien trouver.\nÀ force d’attendre, les yeux levés vers les étoiles et la lune, dans une vaine obstination, on découvre enfin que le trésor repose, profondément enfoui à la racine.",
         "srId": 104505
       },
       {
         "id": 20642,
         "type": "Drop",
-        "name": "皓京·其三",
-        "text": "南来又北往，东过又西寻。\n联西处，通中城，问宝物何在？涸木之下水之上。",
+        "name": "Haojing — Tome III",
+        "text": "Du sud au nord, de l’est à l’ouest, la quête ne connaît pas de repos.\nVers l’ouest, les routes convergent et mènent à la cité centrale. Mais où donc se cache le trésor ? Sous l’arbre desséché, au-dessus des eaux.",
         "srId": 104502
       }
     ]

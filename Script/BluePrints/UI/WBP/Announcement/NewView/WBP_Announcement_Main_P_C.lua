@@ -121,9 +121,11 @@ function M:UpdateWebOnInputTypeChange(CurInputType, CurGamepadName)
 end
 
 function M:OnWebContentLoadDone()
-  local CurInputType = self.GameInputModeSubsystem:GetCurrentInputType()
-  local CurGamepadName = self.GameInputModeSubsystem:GetCurrentGamepadName()
-  self:UpdateWebOnInputTypeChange(CurInputType, CurGamepadName)
+  if self.WebContent:HasAnyUserFocus() or self.WebContent:HasFocusedDescendants() then
+    local CurInputType = self.GameInputModeSubsystem:GetCurrentInputType()
+    local CurGamepadName = self.GameInputModeSubsystem:GetCurrentGamepadName()
+    self:UpdateWebOnInputTypeChange(CurInputType, CurGamepadName)
+  end
 end
 
 function M:OnKeyUp(MyGeo, InKeyEvent)
@@ -140,28 +142,39 @@ function M:OnKeyUp(MyGeo, InKeyEvent)
       if self.CurContent and self.CurContent.Widget then
         self.CurContent.Widget:SetFocus()
       end
+      bHandled = true
     else
       self:Close()
       bHandled = true
     end
   elseif InKeyName == UIConst.GamePadKey.FaceButtonTop then
-    self.WebContent:ExecuteJavascript("scrollToEdge(\"top\")")
-    bHandled = true
+    if self.WebContent:HasAnyUserFocus() or self.WebContent:HasFocusedDescendants() then
+      self.WebContent:ExecuteJavascript("scrollToEdge(\"top\")")
+      bHandled = true
+    end
   elseif InKeyName == UIConst.GamePadKey.FaceButtonLeft then
-    self.WebContent:ExecuteJavascript("scrollToEdge(\"bottom\")")
-    bHandled = true
+    if self.WebContent:HasAnyUserFocus() or self.WebContent:HasFocusedDescendants() then
+      self.WebContent:ExecuteJavascript("scrollToEdge(\"bottom\")")
+      bHandled = true
+    end
   elseif InKeyName == UIConst.GamePadKey.DPadUp then
-    self.WebContent:ExecuteJavascript("announceSelect(\"up\")")
-    self.WebContent:ExecuteJavascript("announceConfirm()")
-    bHandled = true
+    if self.WebContent:HasAnyUserFocus() or self.WebContent:HasFocusedDescendants() then
+      self.WebContent:ExecuteJavascript("announceSelect(\"up\")")
+      self.WebContent:ExecuteJavascript("announceConfirm()")
+      bHandled = true
+    end
   elseif InKeyName == UIConst.GamePadKey.DPadDown then
-    self.WebContent:ExecuteJavascript("announceSelect(\"down\")")
-    self.WebContent:ExecuteJavascript("announceConfirm()")
-    bHandled = true
+    if self.WebContent:HasAnyUserFocus() or self.WebContent:HasFocusedDescendants() then
+      self.WebContent:ExecuteJavascript("announceSelect(\"down\")")
+      self.WebContent:ExecuteJavascript("announceConfirm()")
+      bHandled = true
+    end
   elseif InKeyName == UIConst.GamePadKey.FaceButtonBottom then
     if self.WebContent:HasAnyUserFocus() or self.WebContent:HasFocusedDescendants() then
       if self.CurContent.Conf.HasLinkImage then
         UKismetSystemLibrary.LaunchURL(self.CurContent.Conf.ImageUrl)
+      elseif self.CurContent.Conf.UIStyle == AnnounceCommon.ContentUIStyle.Default then
+        self.WebContent:ExecuteJavascript("toggleCurGrp()")
       end
       bHandled = true
     end
@@ -180,8 +193,21 @@ function M:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InAnalogInputEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   if InKeyName == UIConst.GamePadKey.RightAnalogY then
-    local a = UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent) * -self.ScrollSpeed
-    self.WebContent:ExecuteJavascript(string.format("handleAnalogScroll(%s)", a))
+    if self.WebContent:HasAnyUserFocus() or self.WebContent:HasFocusedDescendants() then
+      local a = UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent) * -self.ScrollSpeed
+      self.WebContent:ExecuteJavascript(string.format("handleAnalogScroll(%s)", a))
+    end
+  elseif InKeyName == UIConst.GamePadKey.LeftAnalogX then
+    local a = UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent)
+    if a > 0.4 then
+      if self.WebContent:HasAnyUserFocus() or self.WebContent:HasFocusedDescendants() then
+        self.WebContent:ExecuteJavascript("syncIndicator(\"active\")")
+        DebugPrint("Execute syncIndicator(\"active\")")
+      end
+    elseif a < -0.4 then
+      self.WebContent:ExecuteJavascript("syncIndicator(\"done\")")
+      DebugPrint("Execute syncIndicator(\"done\")")
+    end
   end
   return UWidgetBlueprintLibrary.Unhandled()
 end

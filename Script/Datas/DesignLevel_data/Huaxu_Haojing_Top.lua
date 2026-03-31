@@ -5,6 +5,11 @@ return {
       UnitType = "Drop",
       UnitId = 11218
     },
+    ["242440025"] = {
+      CreatorId = 242440025,
+      UnitType = "Drop",
+      UnitId = 11230
+    },
     ["242440006"] = {
       CreatorId = 242440006,
       UnitType = "Mechanism",
@@ -22,6 +27,11 @@ return {
     },
     ["242440012"] = {
       CreatorId = 242440012,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["242440021"] = {
+      CreatorId = 242440021,
       UnitType = "Mechanism",
       UnitId = 1
     },
@@ -50,10 +60,15 @@ return {
       UnitType = "Mechanism",
       UnitId = 90100
     },
+    ["162440022"] = {
+      CreatorId = 162440022,
+      UnitType = "Mechanism",
+      UnitId = 1210501
+    },
     ["242440013"] = {
       CreatorId = 242440013,
       UnitType = "Npc",
-      UnitId = 240024
+      UnitId = 240114
     },
     ["242440015"] = {
       CreatorId = 242440015,
@@ -79,21 +94,6 @@ return {
       CreatorId = 242440019,
       UnitType = "Phantom",
       UnitId = 0
-    },
-    ["242440021"] = {
-      CreatorId = 242440021,
-      UnitType = "Mechanism",
-      UnitId = 1
-    },
-    ["162440022"] = {
-      CreatorId = 162440022,
-      UnitType = "Mechanism",
-      UnitId = 1210501
-    },
-    ["242440025"] = {
-      CreatorId = 242440025,
-      UnitType = "Drop",
-      UnitId = 11230
     }
   },
   ManualItem = {},

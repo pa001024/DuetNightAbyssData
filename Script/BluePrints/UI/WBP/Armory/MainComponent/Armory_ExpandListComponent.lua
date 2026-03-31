@@ -503,15 +503,11 @@ function M:FilterItemContents(InContentArray, FilterIdxes)
       return true
     end
   end
-  local bShowSubTile = false
   if FilterFunc then
     for _, Content in ipairs(InContentArray) do
       if FilterIdxes and next(FilterIdxes) then
         for _, Idx in ipairs(FilterIdxes) do
           local Tag = self[TabName .. "FilterTags"][Idx]
-          if self.ExcelWeaponTags and CommonUtils.HasValue(self.ExcelWeaponTags, Tag) then
-            bShowSubTile = true
-          end
           if FilterFunc(Tag, Content) then
             table.insert(FilteredItems, Content)
             break
@@ -522,8 +518,17 @@ function M:FilterItemContents(InContentArray, FilterIdxes)
       end
     end
   end
+  local bShowSubTile = false
+  if FilterIdxes and 1 == #FilterIdxes then
+    local Tag = self[TabName .. "FilterTags"][FilterIdxes[1]]
+    if self.ExcelWeaponTags and CommonUtils.HasValue(self.ExcelWeaponTags, Tag) then
+      bShowSubTile = true
+    end
+  end
   if bShowSubTile then
     self.Selective_Listing:SetSubTitle(GText("UI_Armory_CharExcelWeapon"))
+  else
+    self.Selective_Listing:SetSubTitle()
   end
   return FilteredItems
 end

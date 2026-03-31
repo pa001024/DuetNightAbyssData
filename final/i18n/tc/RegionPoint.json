@@ -831,14 +831,14 @@
     "telepointId": 1212,
     "teleportPointPos": 5,
     "teleportSubRegion": 104505,
-    "unlockConditionId": 329,
+    "unlockConditionId": 99,
     "manualItemId": 243021,
     "staticId": null,
     "singleCreate": false
   },
   {
     "id": 2842,
-    "name": "內城",
+    "name": "東郊",
     "icon": "T_Gp_Haojing",
     "pos": [
       15355,
@@ -851,14 +851,14 @@
     "telepointId": 1500,
     "teleportPointPos": 3,
     "teleportSubRegion": 105501,
-    "unlockConditionId": 329,
+    "unlockConditionId": 327,
     "manualItemId": 234013,
     "staticId": null,
     "singleCreate": false
   },
   {
     "id": 2843,
-    "name": "東郊",
+    "name": "內城",
     "icon": "T_Gp_Haojing",
     "pos": [
       14316,
@@ -871,7 +871,7 @@
     "telepointId": 1500,
     "teleportPointPos": 4,
     "teleportSubRegion": 105501,
-    "unlockConditionId": 329,
+    "unlockConditionId": 99,
     "manualItemId": 234012,
     "staticId": null,
     "singleCreate": false

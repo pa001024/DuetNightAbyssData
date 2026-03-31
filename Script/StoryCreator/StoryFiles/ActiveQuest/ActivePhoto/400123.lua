@@ -132,12 +132,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "1769410805760750880",
-            startPort = "Out",
-            endQuest = "17722622123931186192",
-            endPort = "In"
-          },
-          {
             startQuest = "1769410805760750879",
             startPort = "Success",
             endQuest = "1769410805760750885",
@@ -338,7 +332,7 @@ return {
               RestoreStand = false,
               PauseNpcBT = true,
               OptionType = "normal",
-              FreezeWorldComposition = false,
+              FreezeWorldComposition = true,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
               bNpcActionKeepIn = false,

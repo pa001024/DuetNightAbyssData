@@ -84,9 +84,7 @@ function M:AddTopTabReddotListen()
   if self.Type ~= CommonConst.ArmoryType.Char then
     return
   end
-  self:AddCharAppearanceReddotListen(self.UpdateTopTabReddot, self.Target.CharId, {
-    CommonConst.CharAccessoryTypes.MVP
-  })
+  self:AddCharAppearanceReddotListen(self.UpdateTopTabReddot, self.Target.CharId)
 end
 
 local function SetTopTabReddot(self, TabIdx, IsNew, IsNormal)

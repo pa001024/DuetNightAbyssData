@@ -3491,7 +3491,7 @@ return ReadOnly("Drop", {
     CreateMode = "client",
     DropId = 11231,
     DropMaxNum = 1,
-    DropName = "DROP_QUEST_Zuodongzuo",
+    DropName = "Description_120205_12",
     IconShowCondition = T.RT_1,
     InteractiveId = 100074,
     IsBanGravity = true,

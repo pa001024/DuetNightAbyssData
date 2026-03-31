@@ -285,9 +285,12 @@ function WBP_Forging_Convert_C:UpdateMaterialSlot(ChoosedTbl, IsShow)
         Uuid = Content.Uuid,
         ModId = Content.UnitId,
         UnitId = Content.UnitId,
+        ProductType = Content.ProductType == CommonConst.ArmoryType.Mod and CommonConst.ArmoryType.Mod or nil,
         IsMod = Content.ProductType == CommonConst.ArmoryType.Mod,
         LockType = Content.LockType,
-        IsLocked = Content.IsLocked
+        IsLocked = Content.IsLocked,
+        Level = Content.Level,
+        Developed = Content.Developed
       }
       if Content.IsLocked then
         self.HasAnyModLocked = true
@@ -329,6 +332,8 @@ function WBP_Forging_Convert_C:DataToMaterialSlot()
       Callback = self.OnMaterialSlotClicked,
       Params = {Content}
     }
+    Content.Level = Content.Level
+    Content.Developed = Content.Developed
     self.MaterialSlotBPTbl[#self.MergeTbl][Index].WBP_Com_Item_Universal_L:Init(Content)
     self.MaterialSlotBPTbl[#self.MergeTbl][Index]:ShowLeftTopIcon(true)
   end

@@ -348,16 +348,46 @@ return {
             endPort = "In"
           },
           {
+            startQuest = "1767859757183403",
+            startPort = "Out",
+            endQuest = "1774450206026850321",
+            endPort = "In"
+          },
+          {
+            startQuest = "1767859757183403",
+            startPort = "Out",
+            endQuest = "17744506938201698224",
+            endPort = "In"
+          },
+          {
+            startQuest = "1774450206026850321",
+            startPort = "Out",
+            endQuest = "17744506938201698224",
+            endPort = "Stop"
+          },
+          {
             startQuest = "1774450206026850321",
             startPort = "Out",
             endQuest = "17742731475541517",
             endPort = "In"
           },
           {
-            startQuest = "1767859757183403",
+            startQuest = "1773564441581915",
             startPort = "Out",
-            endQuest = "1774450206026850321",
-            endPort = "In"
+            endQuest = "17742731475541517",
+            endPort = "Stop"
+          },
+          {
+            startQuest = "1767859757182386",
+            startPort = "Out",
+            endQuest = "1774273086856671",
+            endPort = "Stop"
+          },
+          {
+            startQuest = "17686496004061577",
+            startPort = "Out",
+            endQuest = "17742731464581479",
+            endPort = "Stop"
           }
         },
         nodeData = {
@@ -397,7 +427,7 @@ return {
             key = "1767859757182378",
             type = "GoToNode",
             name = "传送门前",
-            pos = {x = 1664.2266608151494, y = 432.25406996844833},
+            pos = {x = 1685.4766608151494, y = 403.50406996844833},
             propsData = {
               GuideUIEnable = true,
               StaticCreatorId = 242400032,
@@ -409,14 +439,14 @@ return {
             key = "1767859757182379",
             type = "ShowGuideMainNode",
             name = "显示图文引导",
-            pos = {x = 1898.7222373216591, y = 432.58955731706436},
+            pos = {x = 1919.9722373216591, y = 403.83955731706436},
             propsData = {GuideId = 141}
           },
           ["1767859757182380"] = {
             key = "1767859757182380",
             type = "ShowOrHideTaskIndicatorNode",
             name = "门的指引点",
-            pos = {x = 2142.587271517495, y = 412.3039290629414},
+            pos = {x = 2163.837271517495, y = 383.5539290629414},
             propsData = {
               IsShow = true,
               bOpenRangeEffect = false,
@@ -428,7 +458,7 @@ return {
             key = "1767859757182381",
             type = "BossBattleFinishNode",
             name = "玩家经过了门",
-            pos = {x = 1709.2322980690824, y = 755.4254270014322},
+            pos = {x = 1730.4822980690824, y = 726.6754270014322},
             propsData = {
               SendMessage = "",
               FinishCondition = "12020122_Wuyousheng_Door1"
@@ -438,7 +468,7 @@ return {
             key = "1767859757182382",
             type = "ShowOrHideTaskIndicatorNode",
             name = "门的指引-销毁",
-            pos = {x = 1979.2841480702198, y = 751.3806999967202},
+            pos = {x = 2000.5341480702198, y = 722.6306999967202},
             propsData = {
               IsShow = false,
               bOpenRangeEffect = false,
@@ -450,7 +480,7 @@ return {
             key = "1767859757182383",
             type = "ShowOrHideTaskIndicatorNode",
             name = "船指引点-范围",
-            pos = {x = 2244.1956215327905, y = 755.6608016830727},
+            pos = {x = 2265.4456215327905, y = 726.9108016830727},
             propsData = {
               IsShow = true,
               bOpenRangeEffect = false,
@@ -462,7 +492,7 @@ return {
             key = "1767859757182384",
             type = "GoToNode",
             name = "前往",
-            pos = {x = 2512.4800460435076, y = 717.472369716624},
+            pos = {x = 2533.7300460435076, y = 688.722369716624},
             propsData = {
               GuideUIEnable = false,
               StaticCreatorId = 242400034,
@@ -484,7 +514,7 @@ return {
             key = "1767859757182387",
             type = "ShowOrHideTaskIndicatorNode",
             name = "显示/隐藏任务指引点节点",
-            pos = {x = 1902.2530442113368, y = 1034.0702389765995},
+            pos = {x = 1913.6323545561645, y = 1068.2081700110823},
             propsData = {
               IsShow = true,
               bOpenRangeEffect = false,
@@ -591,7 +621,7 @@ return {
             key = "1767859757183396",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 2409.575803944094, y = 434.4645715065217},
+            pos = {x = 2430.825803944094, y = 405.7145715065217},
             propsData = {
               IsNpcNode = false,
               FirstDialogueId = 12049011,
@@ -642,7 +672,7 @@ return {
             key = "1767859757183399",
             type = "TalkNode",
             name = "还想跑？",
-            pos = {x = 2432.0306053127147, y = 937.3604376227494},
+            pos = {x = 2382.0306053127147, y = 879.8604376227494},
             propsData = {
               IsNpcNode = false,
               FirstDialogueId = 12049015,
@@ -803,7 +833,7 @@ return {
             key = "17735644595551222",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1774.2134740259742, y = -593.6144480519481},
+            pos = {x = 1774.2134740259742, y = -595.0430194805195},
             propsData = {
               IsNpcNode = false,
               FirstDialogueId = 12049013,
@@ -888,11 +918,11 @@ return {
             key = "1774273086856671",
             type = "CountdownNode",
             name = "倒计时节点",
-            pos = {x = 2764.3571428571427, y = -384.6964285714286},
+            pos = {x = 2764.3571428571427, y = -389.1964285714286},
             propsData = {
               CountdownSeconds = 120,
               OpenUI = true,
-              Text = "抓无由生",
+              Text = "East02_Time_EscapeXY",
               RedCountdownSeconds = 15
             }
           },
@@ -904,7 +934,7 @@ return {
             propsData = {
               CountdownSeconds = 120,
               OpenUI = true,
-              Text = "抓无由生",
+              Text = "East02_Time_EscapeXY",
               RedCountdownSeconds = 15
             }
           },
@@ -912,11 +942,11 @@ return {
             key = "17742731475541517",
             type = "CountdownNode",
             name = "倒计时节点",
-            pos = {x = 2798.889705882353, y = -577.0829831932773},
+            pos = {x = 2773.930191712313, y = -574.775290885585},
             propsData = {
               CountdownSeconds = 120,
               OpenUI = true,
-              Text = "抓无由生",
+              Text = "East02_Time_EscapeXY",
               RedCountdownSeconds = 15
             }
           },
@@ -928,7 +958,7 @@ return {
             propsData = {
               CountdownSeconds = 120,
               OpenUI = true,
-              Text = "抓无由生",
+              Text = "East02_Time_EscapeXY",
               RedCountdownSeconds = 15
             }
           },
@@ -941,14 +971,26 @@ return {
               SendMessage = "",
               FinishCondition = "12020122_Wuyousheng_Door1ready"
             }
+          },
+          ["17744506938201698224"] = {
+            key = "17744506938201698224",
+            type = "CountdownNode",
+            name = "倒计时节点",
+            pos = {x = 2777.7933224525605, y = -772.4978349120801},
+            propsData = {
+              CountdownSeconds = 120,
+              OpenUI = true,
+              Text = "East02_Time_EscapeXY",
+              RedCountdownSeconds = 15
+            }
           }
         },
         commentData = {
           ["1767860159333731304"] = {
             key = "1767860159333731304",
             name = "1门指引",
-            position = {x = 1630.5502197295323, y = 331.0160518586325},
-            size = {width = 1014.2359695859701, height = 254.80912975912963}
+            position = {x = 1651.8002197295323, y = 302.2660518586325},
+            size = {width = 1291.1343984251066, height = 578.9490424403378}
           },
           ["1767860175011731738"] = {
             key = "1767860175011731738",

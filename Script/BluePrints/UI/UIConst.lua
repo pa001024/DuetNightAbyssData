@@ -692,6 +692,8 @@ UIConst.AnimWithJumpConfig = {
   ShopMain = {InAnimWithJumpTime = 0.05, IsNeedFadeOut = false},
   AutoChessMain = {IsNeedFadeOut = false},
   FameMain = {IsNeedFadeOut = false, IsNeedFadeIn = true},
+  ShopActivity = {IsNeedFadeOut = true},
+  ActivityRewardPacking = {IsNeedFadeOut = true, IsNeedFadeIn = false},
   Normal = {
     InAnimWithJumpTime = 0.3,
     OutAnimWithJumpTime = 0.1,
@@ -699,9 +701,7 @@ UIConst.AnimWithJumpConfig = {
     EndFadeOutValue = 0.75,
     IsNeedFadeIn = false,
     IsNeedMatchAnimTime = false
-  },
-  ActivityRewardPacking = {IsNeedFadeOut = true, IsNeedFadeIn = false},
-  ActivityMain = {OutAnimWithJumpTime = 0.3}
+  }
 }
 UIConst.DungeonIndicatorShowWidgets = {"BattleFort"}
 UIConst.RedDotType = {

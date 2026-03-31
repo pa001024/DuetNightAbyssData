@@ -248,10 +248,10 @@
   },
   {
     "id": 221,
-    "name": "星耀硬币",
+    "name": "Pièce stellaire",
     "icon": "T_Resource_ActivityIcon_01",
     "rarity": 5,
-    "desc": "如星光般璀璨的纪念硬币，可兑换多种奖励。妆点自己，像星星一样闪闪发光吧。"
+    "desc": "Pièce commémorative scintillant comme la lumière des étoiles, pouvant être échangée contre diverses récompenses. Parez-vous-en et brillez comme une étoile."
   },
   {
     "id": 222,
@@ -332,10 +332,10 @@
   },
   {
     "id": 1009,
-    "name": "星辉丝线",
+    "name": "Fil stellaire",
     "icon": "T_Resource_GachaTicket_04",
     "rarity": 5,
-    "desc": "仿佛闪烁着星辉的灿烂丝线，可用于在特定活动获取外观。",
+    "desc": "Un fil éclatant, baigné d’une lueur stellaire. Permet d’obtenir des apparences lors de certains événements.",
     "desc2": "“织物的艺术与绘画、雕塑一样，播撒着美学的福音。而持有这梭纺线，就相当于握紧了美学殿堂的入场券，你会是这些‘艺术品’正在等待的有缘人吗？”\n\n——艺术家 阿米埃特"
   },
   {
@@ -2242,90 +2242,90 @@
   },
   {
     "id": 12144,
-    "name": "孤雏的羽迹的枪机",
+    "name": "Sillage solitaire : Verrou",
     "icon": "T_Range_Weapon_Part02",
     "rarity": 5,
-    "desc": "严格按照图纸打造的孤雏的羽迹部件。一旦扣下扳机，子弹就不会回头——就如同人下定决心的那一瞬。",
+    "desc": "Assemblé selon les plans de Sillage solitaire, ce verrou ne laisse aucun retour possible une fois la détente pressée — à l’image d’une décision scellée.",
     "desc2": "« Le dispositif de mise à feu — pour l’utilisateur, c’est la pièce la plus essentielle de toute arme mécanique. Peu importe la finesse du mécanisme interne : s’il ne fonctionne pas, ce n’est qu’un tas de ferraille.\nMême en tant que concepteur, je dois l’admettre... Ne me demandez pas comment je le sais, mais si ce jour-là le feu ne s’était pas déclenché, je ne serais plus là pour en parler. »\n\n— Un voyageur chevronné demeuré anonyme"
   },
   {
     "id": 12145,
-    "name": "孤雏的羽迹的枪身",
+    "name": "Sillage solitaire : Armature",
     "icon": "T_Range_Weapon_Part03",
     "rarity": 5,
-    "desc": "严格按照图纸打造的孤雏的羽迹部件。由钢铁打造，足够坚硬。当子弹打空，也是一件趁手的钝器或投掷物。",
+    "desc": "Forgé selon les plans de Sillage solitaire, ce corps d’acier est d’une robustesse sans faille. À court de munitions, il devient une arme improvisée — lourde, directe, implacable.",
     "desc2": "« D’accord, la Légion nous autorise à modifier nos armes dans certaines limites, mais repeindre mes armes en rose ? Là, faut pas pousser !\nQue tu sois ma sœur n’y change rien — c’est non.\nEt le petit pendentif ourson ? Lui non plus, il dégage ! »\n\n— Lynn, officière de la Légion Hyperboréenne"
   },
   {
     "id": 12146,
-    "name": "孤雏的羽迹的枪管",
+    "name": "Sillage solitaire : Canon",
     "icon": "T_Range_Weapon_Part01",
     "rarity": 5,
-    "desc": "严格按照图纸打造的孤雏的羽迹部件。子弹从这里倾泄而出，每到此时，枪管与战士的心同样滚烫。",
+    "desc": "Conçu selon les plans de Sillage solitaire, c’est d’ici que jaillissent les balles — et à chaque tir, le canon s’embrase à l’unisson du cœur du combattant.",
     "desc2": "« Je sais bien que vous aimez tous vous prendre pour des artistes, mais soyons honnêtes : vous êtes une belle bande d’idiots. L’alchimie, c’est l’alchimie ; les potions, les potions ; les croquis, les croquis. À quoi bon vous torturer avec le sens de la vie ou les conséquences de vos travaux ?\nRegardez plutôt mon nouveau fusil — pas mal, hein ? »\n\n— Nisaya, Maître d’armes des Éolipyliens"
   },
   {
     "id": 12147,
-    "name": "杯中的残火的枪机",
+    "name": "Braise du calice : Verrou",
     "icon": "T_Range_Weapon_Part02",
     "rarity": 5,
-    "desc": "严格按照图纸打造的杯中的残火部件。一旦扣下扳机，子弹就不会回头——就如同人下定决心的那一瞬。",
+    "desc": "Assemblé selon les plans de Braise du calice, ce verrou ne laisse aucun retour possible une fois la détente pressée — à l’image d’une décision scellée.",
     "desc2": "« Le dispositif de mise à feu — pour l’utilisateur, c’est la pièce la plus essentielle de toute arme mécanique. Peu importe la finesse du mécanisme interne : s’il ne fonctionne pas, ce n’est qu’un tas de ferraille.\nMême en tant que concepteur, je dois l’admettre... Ne me demandez pas comment je le sais, mais si ce jour-là le feu ne s’était pas déclenché, je ne serais plus là pour en parler. »\n\n— Un voyageur chevronné demeuré anonyme"
   },
   {
     "id": 12148,
-    "name": "杯中的残火的枪身",
+    "name": "Braise du calice : Armature",
     "icon": "T_Range_Weapon_Part03",
     "rarity": 5,
-    "desc": "严格按照图纸打造的杯中的残火部件。由钢铁打造，足够坚硬。当子弹打空，也是一件趁手的钝器或投掷物。",
+    "desc": "Forgé selon les plans de Braise du calice, ce corps d’acier est d’une robustesse sans faille. À court de munitions, il devient une arme improvisée — lourde, directe, implacable.",
     "desc2": "« D’accord, la Légion nous autorise à modifier nos armes dans certaines limites, mais repeindre mes armes en rose ? Là, faut pas pousser !\nQue tu sois ma sœur n’y change rien — c’est non.\nEt le petit pendentif ourson ? Lui non plus, il dégage ! »\n\n— Lynn, officière de la Légion Hyperboréenne"
   },
   {
     "id": 12149,
-    "name": "杯中的残火的枪管",
+    "name": "Braise du calice : Canon",
     "icon": "T_Range_Weapon_Part01",
     "rarity": 5,
-    "desc": "严格按照图纸打造的杯中的残火部件。子弹从这里倾泄而出，每到此时，枪管与战士的心同样滚烫。",
+    "desc": "Conçu selon les plans de Braise du calice, c’est d’ici que jaillissent les balles — et à chaque tir, le canon s’embrase à l’unisson du cœur du combattant.",
     "desc2": "« Je sais bien que vous aimez tous vous prendre pour des artistes, mais soyons honnêtes : vous êtes une belle bande d’idiots. L’alchimie, c’est l’alchimie ; les potions, les potions ; les croquis, les croquis. À quoi bon vous torturer avec le sens de la vie ou les conséquences de vos travaux ?\nRegardez plutôt mon nouveau fusil — pas mal, hein ? »\n\n— Nisaya, Maître d’armes des Éolipyliens"
   },
   {
     "id": 12150,
-    "name": "鸣金遥的握柄",
+    "name": "Écho aurifère : Poignée",
     "icon": "T_Melee_Weapon_Part01",
     "rarity": 5,
-    "desc": "严格按照图纸打造的鸣金遥部件。冷兵器上最贴近使用者的部分，“趁手”，是它最实际的设计目的。",
+    "desc": "Conçu selon les plans d’Écho aurifère, ce manche est la partie la plus proche de la main. Sa raison d’être est simple : offrir une prise sûre, naturelle, parfaitement maîtrisée.",
     "desc2": "« Il avance,\nIl avance !\nJ’entends gronder ses pas,\nJ’entends l’Épée du Torrent racler le sol !\nIl vient réclamer la vie des injustes,\nNul ici n’échappera à la tempête !\nCe soir, nul ne résistera à la mort descendue des cieux,\nPas plus qu’on ne saurait lui arracher l’épée des mains ! »\n\n— Extrait de <I>Sous le Courroux des Flots</>, par Alexandre Dumas, dramaturge de la faction du Deuil"
   },
   {
     "id": 12151,
-    "name": "鸣金遥的刀刃",
+    "name": "Écho aurifère : Lame",
     "icon": "T_Melee_Weapon_Part02",
     "rarity": 5,
-    "desc": "严格按照图纸打造的鸣金遥部件。无论刀刃是曲是直，是轻是重，它的锋芒都只为战斗而生。",
+    "desc": "Forgée selon les plans d’Écho aurifère, cette lame — qu’elle soit courbe ou droite, légère ou pesante — ne connaît qu’un seul destin : le combat.",
     "desc2": "« Le sabre, c’est l’union du corps et de l’esprit.\nQuand l’âme s’y consacre tout entière, le fil d’acier peut trancher la foudre, fendre les flots, et abattre les monstres des mers. »\n\n— Un bretteur anonyme de Huaxu, <I>Par-delà la Lame</>"
   },
   {
     "id": 12152,
-    "name": "切割齿轮的枪机",
+    "name": "Engrenage déchiqueté : Verrou",
     "icon": "T_Range_Weapon_Part02",
     "rarity": 5,
-    "desc": "严格按照图纸打造的切割齿轮部件。一旦扣下扳机，子弹就不会回头——就如同人下定决心的那一瞬。",
+    "desc": "Assemblé selon les plans d’Engrenage déchiqueté, ce verrou ne laisse aucun retour possible une fois la détente pressée — à l’image d’une décision scellée.",
     "desc2": "« Le dispositif de mise à feu — pour l’utilisateur, c’est la pièce la plus essentielle de toute arme mécanique. Peu importe la finesse du mécanisme interne : s’il ne fonctionne pas, ce n’est qu’un tas de ferraille.\nMême en tant que concepteur, je dois l’admettre... Ne me demandez pas comment je le sais, mais si ce jour-là le feu ne s’était pas déclenché, je ne serais plus là pour en parler. »\n\n— Un voyageur chevronné demeuré anonyme"
   },
   {
     "id": 12153,
-    "name": "切割齿轮的枪身",
+    "name": "Engrenage déchiqueté : Armature",
     "icon": "T_Range_Weapon_Part03",
     "rarity": 5,
-    "desc": "严格按照图纸打造的切割齿轮部件。由钢铁打造，足够坚硬。当子弹打空，也是一件趁手的钝器或投掷物。",
+    "desc": "Forgé selon les plans d’Engrenage déchiqueté, ce corps d’acier est d’une robustesse sans faille. À court de munitions, il devient une arme improvisée — lourde, directe, implacable.",
     "desc2": "« D’accord, la Légion nous autorise à modifier nos armes dans certaines limites, mais repeindre mes armes en rose ? Là, faut pas pousser !\nQue tu sois ma sœur n’y change rien — c’est non.\nEt le petit pendentif ourson ? Lui non plus, il dégage ! »\n\n— Lynn, officière de la Légion Hyperboréenne"
   },
   {
     "id": 12154,
-    "name": "切割齿轮的枪管",
+    "name": "Engrenage déchiqueté : Canon",
     "icon": "T_Range_Weapon_Part01",
     "rarity": 5,
-    "desc": "严格按照图纸打造的切割齿轮部件。子弹从这里倾泄而出，每到此时，枪管与战士的心同样滚烫。",
+    "desc": "Conçu selon les plans d’Engrenage déchiqueté, c’est d’ici que jaillissent les balles — et à chaque tir, le canon s’embrase à l’unisson du cœur du combattant.",
     "desc2": "« Je sais bien que vous aimez tous vous prendre pour des artistes, mais soyons honnêtes : vous êtes une belle bande d’idiots. L’alchimie, c’est l’alchimie ; les potions, les potions ; les croquis, les croquis. À quoi bon vous torturer avec le sens de la vie ou les conséquences de vos travaux ?\nRegardez plutôt mon nouveau fusil — pas mal, hein ? »\n\n— Nisaya, Maître d’armes des Éolipyliens"
   },
   {
@@ -2729,7 +2729,7 @@
   },
   {
     "id": 20602,
-    "name": "Île du Purgatoire : Tome I",
+    "name": "Île du Purgatoire — Tome I",
     "icon": "T_TreasureMap_Prologue",
     "rarity": 4,
     "desc": "Une collection de feuillets énigmatiques trouvés au hasard de vos pérégrinations.\nCertains sont de délicats rouleaux de parchemin, d’autres encore portent l’odeur fraîche d’une encre à peine sèche ; quelques-uns ne sont que des lambeaux arrachés à la hâte d’un vieux carnet.\nOrdonnées ou illisibles, détaillées ou brouillonnes, toutes partagent pourtant un même trait manifeste : chacune indique, à sa manière, l’emplacement d’un \"trésor\".",
@@ -2737,7 +2737,7 @@
   },
   {
     "id": 20603,
-    "name": "Île du Purgatoire : Tome II",
+    "name": "Île du Purgatoire — Tome II",
     "icon": "T_TreasureMap_Prologue",
     "rarity": 4,
     "desc": "Une collection de feuillets énigmatiques trouvés au hasard de vos pérégrinations.\nCertains sont de délicats rouleaux de parchemin, d’autres encore portent l’odeur fraîche d’une encre à peine sèche ; quelques-uns ne sont que des lambeaux arrachés à la hâte d’un vieux carnet.\nOrdonnées ou illisibles, détaillées ou brouillonnes, toutes partagent pourtant un même trait manifeste : chacune indique, à sa manière, l’emplacement d’un \"trésor\".",
@@ -2745,7 +2745,7 @@
   },
   {
     "id": 20604,
-    "name": "Île du Purgatoire : Tome III",
+    "name": "Île du Purgatoire — Tome III",
     "icon": "T_TreasureMap_Prologue",
     "rarity": 4,
     "desc": "Une collection de feuillets énigmatiques trouvés au hasard de vos pérégrinations.\nCertains sont de délicats rouleaux de parchemin, d’autres encore portent l’odeur fraîche d’une encre à peine sèche ; quelques-uns ne sont que des lambeaux arrachés à la hâte d’un vieux carnet.\nOrdonnées ou illisibles, détaillées ou brouillonnes, toutes partagent pourtant un même trait manifeste : chacune indique, à sa manière, l’emplacement d’un \"trésor\".",
@@ -2753,7 +2753,7 @@
   },
   {
     "id": 20605,
-    "name": "Île du Purgatoire : Tome IV",
+    "name": "Île du Purgatoire — Tome IV",
     "icon": "T_TreasureMap_Prologue",
     "rarity": 4,
     "desc": "Une collection de feuillets énigmatiques trouvés au hasard de vos pérégrinations.\nCertains sont de délicats rouleaux de parchemin, d’autres encore portent l’odeur fraîche d’une encre à peine sèche ; quelques-uns ne sont que des lambeaux arrachés à la hâte d’un vieux carnet.\nOrdonnées ou illisibles, détaillées ou brouillonnes, toutes partagent pourtant un même trait manifeste : chacune indique, à sa manière, l’emplacement d’un \"trésor\".",
@@ -2905,27 +2905,27 @@
   },
   {
     "id": 20640,
-    "name": "皓京·其一",
+    "name": "Haojing — Tome I",
     "icon": "T_TreasureMap_East",
     "rarity": 4,
     "desc": "Une collection de feuillets énigmatiques trouvés au hasard de vos pérégrinations.\nCertains sont de délicats rouleaux de parchemin, d’autres encore portent l’odeur fraîche d’une encre à peine sèche ; quelques-uns ne sont que des lambeaux arrachés à la hâte d’un vieux carnet.\nOrdonnées ou illisibles, détaillées ou brouillonnes, toutes partagent pourtant un même trait manifeste : chacune indique, à sa manière, l’emplacement d’un \"trésor\".",
-    "desc2": "椒桂沉檀馨香好，兰蕙脑麝馥郁浓。\n借问宝物何处寻，牧童遥指金庭树。"
+    "desc2": "Poivre, cannelle, bois d’aloès et santal exhalent leurs arômes mêlés, orchidées et musc diffusent un parfum profond et enivrant.\nSi vous cherchez où se cache le trésor, un jeune pâtre, au loin, vous désigne l’arbre d’or du domaine céleste."
   },
   {
     "id": 20641,
-    "name": "皓京·其二",
+    "name": "Haojing — Tome II",
     "icon": "T_TreasureMap_East",
     "rarity": 4,
     "desc": "Une collection de feuillets énigmatiques trouvés au hasard de vos pérégrinations.\nCertains sont de délicats rouleaux de parchemin, d’autres encore portent l’odeur fraîche d’une encre à peine sèche ; quelques-uns ne sont que des lambeaux arrachés à la hâte d’un vieux carnet.\nOrdonnées ou illisibles, détaillées ou brouillonnes, toutes partagent pourtant un même trait manifeste : chacune indique, à sa manière, l’emplacement d’un \"trésor\".",
-    "desc2": "东指郊外草渐深，没入窟中寻不得。\n盼星望月痴等寻，却探宝物根深藏。"
+    "desc2": "À l’est, les herbes des confins deviennent de plus en plus denses, on s’enfonce dans les cavités... sans jamais rien trouver.\nÀ force d’attendre, les yeux levés vers les étoiles et la lune, dans une vaine obstination, on découvre enfin que le trésor repose, profondément enfoui à la racine."
   },
   {
     "id": 20642,
-    "name": "皓京·其三",
+    "name": "Haojing — Tome III",
     "icon": "T_TreasureMap_East",
     "rarity": 4,
     "desc": "Une collection de feuillets énigmatiques trouvés au hasard de vos pérégrinations.\nCertains sont de délicats rouleaux de parchemin, d’autres encore portent l’odeur fraîche d’une encre à peine sèche ; quelques-uns ne sont que des lambeaux arrachés à la hâte d’un vieux carnet.\nOrdonnées ou illisibles, détaillées ou brouillonnes, toutes partagent pourtant un même trait manifeste : chacune indique, à sa manière, l’emplacement d’un \"trésor\".",
-    "desc2": "南来又北往，东过又西寻。\n联西处，通中城，问宝物何在？涸木之下水之上。"
+    "desc2": "Du sud au nord, de l’est à l’ouest, la quête ne connaît pas de repos.\nVers l’ouest, les routes convergent et mènent à la cité centrale. Mais où donc se cache le trésor ? Sous l’arbre desséché, au-dessus des eaux."
   },
   {
     "id": 29001,
@@ -2973,7 +2973,7 @@
     "icon": "T_ExploreBadge_Beibao_East01",
     "rarity": 5,
     "desc": "Sphères d’exploration recueillies aux quatre coins de Haojing. Une fois un certain nombre rassemblé, vous pouvez les remettre à Luno, l’exploratrice, dans Haojing. Elles témoignent du courage, de la sagesse et de la patience dont vous avez fait preuve au cours de vos explorations, et peuvent être échangées contre diverses récompenses.",
-    "desc2": "那是伫立在极东的盛邑，古人建起的亭台水榭在千年前便已建起，并似乎维持不变直到海枯石烂。\n但日日传颂的歌谣终究会有新章，熟悉的故事也会有面生的角色登场。云霄之下，风起潮涌。\n去探索吧，去看，去听，去那即将焕然一新的皓京城！"
+    "desc2": "C’est une cité florissante dressée aux confins de l’Est. Les pavillons et jardins d’eau édifiés par les anciens s’y tiennent depuis des millénaires, comme immuables, défiant l’érosion du temps. Mais les chants transmis jour après jour finissent toujours par écrire de nouveaux vers, et aux récits familiers viennent se mêler des visages inconnus. Sous les cieux, les vents se lèvent et les flots s’élèvent. Allez explorer, allez voir, allez écouter... et rendez-vous à Haojing, la cité bientôt métamorphosée.\n \n"
   },
   {
     "id": 30001,
@@ -3433,10 +3433,10 @@
   },
   {
     "id": 41033,
-    "name": "Posture : Écran électronique",
+    "name": "Modules visionnaires",
     "icon": "T_Resource_Gesture_SuyiPose",
     "rarity": 4,
-    "desc": "Posture : Écran électronique"
+    "desc": "L’imagination et la pratique sont les véritables forces qui ouvrent la voie vers l’avenir."
   },
   {
     "id": 41034,
@@ -3538,10 +3538,10 @@
   },
   {
     "id": 41048,
-    "name": "请求",
+    "name": "Supplique",
     "icon": "T_Resource_Gesture_Beg",
     "rarity": 4,
-    "desc": "行行好吧○|￣|_"
+    "desc": "Ayez pitié de moi... ○|￣|_"
   },
   {
     "id": 41049,
@@ -3559,52 +3559,52 @@
   },
   {
     "id": 41051,
-    "name": "机枢幻想·涅白",
+    "name": "Fantaisie Jishu – Blanc ivoire",
     "icon": "T_Resource_Gesture_SuYi_White",
     "rarity": 6,
-    "desc": "一念既出，万仞凌霄。"
+    "desc": "D’une seule pensée, s’élever jusqu’aux cieux."
   },
   {
     "id": 41052,
-    "name": "休息一式",
+    "name": "Repos I",
     "icon": "T_Resource_Gesture_Sit01",
     "rarity": 4,
-    "desc": "生活中常用的肢体动作，此为休息。"
+    "desc": "Un geste du quotidien servant à se reposer."
   },
   {
     "id": 41053,
-    "name": "休息二式",
+    "name": "Repos II",
     "icon": "T_Resource_Gesture_Sit02",
     "rarity": 4,
-    "desc": "生活中常用的肢体动作，此为休息。"
+    "desc": "Un geste du quotidien servant à se reposer."
   },
   {
     "id": 41054,
-    "name": "机枢幻想·锈红",
+    "name": "Fantaisie Jishu – Rouille",
     "icon": "T_Resource_Gesture_SuYi_Rad",
     "rarity": 6,
-    "desc": "一念既出，万仞凌霄。"
+    "desc": "D’une seule pensée, s’élever jusqu’aux cieux."
   },
   {
     "id": 41055,
-    "name": "机枢幻想·墨玉",
+    "name": "Fantaisie Jishu – Jade noir",
     "icon": "T_Resource_Gesture_SuYi_Black",
     "rarity": 6,
-    "desc": "一念既出，万仞凌霄。"
+    "desc": "D’une seule pensée, s’élever jusqu’aux cieux."
   },
   {
     "id": 41056,
-    "name": "出拳",
+    "name": "Coup de poing",
     "icon": "T_Resource_Gesture_Daquan",
     "rarity": 4,
-    "desc": "梆梆两拳o(￣ヘ￣o#)"
+    "desc": "Bam ! Bam ! Dans les dents ! o(￣ヘ￣o#)"
   },
   {
     "id": 41057,
-    "name": "小熊出没",
+    "name": "Petit ours en vadrouille",
     "icon": "T_Resource_Gesture_Jump",
     "rarity": 4,
-    "desc": "熊有熊样。"
+    "desc": "Un vrai ours !"
   },
   {
     "id": 41058,
@@ -3618,8 +3618,8 @@
     "name": "Nexus mécanique : Fléau des Souillures",
     "icon": "T_Icon_CentralSquare_Equip01",
     "rarity": 4,
-    "desc": "结构复杂精巧的方形机枢造物，以失传的机枢派技艺锻造而成，发现于偃隐宫中。其能量核心能够射出光束，激活别的机枢派造物。",
-    "desc2": "“唔，通过共振腔的瞬间能量聚集，配合聚光元件的精妙结构，竟然能激发出如此精准的光束……有意思。今晚就挑灯夜战，全力研究它吧！”\n——苏乙"
+    "desc": "Un dispositif mécanique quadrangulaire d’une conception aussi complexe que raffinée, forgé selon des techniques perdues de la Secte Jishu. Découvert dans le Labyrinthe de Yanyin, son cœur énergétique peut projeter des faisceaux lumineux capables d’activer d’autres artefacts de la Secte Jishu.",
+    "desc2": "« Hum... En concentrant l’énergie à travers une chambre de résonance, puis en la focalisant via une structure optique aussi ingénieuse... produire un faisceau d’une telle précision... fascinant. Ce soir, je veillerai tard. Je dois l’étudier en profondeur. »\n\n— Su Yi"
   },
   {
     "id": 42002,
@@ -3746,7 +3746,7 @@
     "name": "自选形象礼箱·不羁",
     "icon": "T_Pack_Common03",
     "rarity": 5,
-    "desc": "使用后可从贝蕾妮卡，托斯卡，妮弗尔夫人，刻舟，苏乙，菲娜，丽蓓卡，扶疏，女枪，卡米拉，黎瑟，止流，煜明，西比尔，松露，蝶妹，达芙涅中自选一套角色形象。"
+    "desc": "Permet de choisir une apparence parmi les personnages suivants : Berenica, Lisbell, Dame Nifle, Kezhou, Su Yi, Fina, Rebecca, Fushu, Lynn, Camilla, Rhythm, Zhiliu, Yuming, Sibylle, Truffle et Filbert, Psyche ou Daphne."
   },
   {
     "id": 110018,
@@ -3895,15 +3895,17 @@
   },
   {
     "id": 120001,
-    "name": "父辈余荫代金券",
+    "name": "Bon d’Héritage paternel",
     "icon": "T_Resource_DiscountTicket_01",
-    "rarity": 5
+    "rarity": 5,
+    "desc": "商品满680月石晶胚减300月石晶胚"
   },
   {
     "id": 120002,
-    "name": "风息装饰代金券",
+    "name": "Bon d’accessoires Souffle du vent",
     "icon": "T_Resource_DiscountTicket_01",
-    "rarity": 5
+    "rarity": 5,
+    "desc": "商品满480月石晶胚减300月石晶胚"
   },
   {
     "id": 1001101,
@@ -6828,10 +6830,10 @@
   },
   {
     "id": 6000005,
-    "name": "邀请函",
+    "name": "Lettre d’invitation",
     "icon": "T_Activity_SoloTreasure_ResIcon",
     "rarity": 5,
-    "desc": "奉香群英试举办以来在华胥各地引起了极高的关注度，各路明星选手在赛事中的亮眼表现十分引人注目。为吸引更多年轻子弟接受华胥这场翻天覆地的变化，大赛官方邀请这些明星选手们参与挑战升级的特邀赛，并准备了对应的邀请函。"
+    "desc": "Depuis son lancement, le Tournoi de l’Encens suscite un immense engouement à travers toute Huaxu. Les performances remarquables des participants de renom attirent particulièrement l’attention.\nAfin d’encourager les jeunes générations à embrasser les profonds changements que traverse Huaxu, les organisateurs ont convié ces compétiteurs d’exception à participer à un tournoi sur invitation plus exigeant, accompagné de lettres d’invitation exclusives."
   },
   {
     "id": 6100001,

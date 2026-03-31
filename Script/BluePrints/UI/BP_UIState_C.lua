@@ -550,7 +550,7 @@ function BP_UIState_C:Show(ShowTag)
       UIManager(self):SetBannedActionCallback(self.KeyboardSetName, true, self:GetName())
       self.IsBanningAction = true
     end
-    if self.GlobalGameUITag then
+    if not string.isempty(self.GlobalGameUITag) then
       local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
       GameInstance:SetGlobalGameUITag(self.GlobalGameUITag)
     end

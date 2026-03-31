@@ -209,7 +209,7 @@ function M:UnSetTag(Index, TagName)
 end
 
 function M:PlayOrStopBGM(Params)
-  local SoundPriority = Params.SoundPriority or SoundPrioritys.Level
+  local SoundPriority = string.isempty(Params.SoundPriority) and SoundPrioritys.Level or Params.SoundPriority
   local SoundUnitKey = Params.SoundUnitKey or ""
   local EventPath = Params.EventPath or ""
   local Key = Params.Key or ""
@@ -220,12 +220,8 @@ function M:PlayOrStopBGM(Params)
   local SoundType = SoundTypeMap[Params.SoundType]
   local PlayType = Params.PlayType
   local RelateRegionIdArray = {}
-  if type(RelatedRegionId) == "table" then
-    for _, Id in pairs(RelatedRegionId) do
-      table.insert(RelateRegionIdArray, Id)
-    end
-  elseif 0 ~= RelatedRegionId then
-    RelateRegionIdArray = {RelatedRegionId}
+  for _, Id in pairs(RelatedRegionId) do
+    table.insert(RelateRegionIdArray, Id)
   end
   local ClientRelatedRegionIdArray = {}
   for _, Id in pairs(ClientRelatedRegionId) do

@@ -114529,7 +114529,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           DialogueId = 12042109,
           GUID = "1E256A82",
           NextDialogue = 12042110,
-          SnapShot = "ELECTRIC",
+          SnapShot = "ROBOT",
           SpeakNpcId = 200002,
           VoiceName = "voice/$Locale$/story/1204/120421/1E256A82"
         },
@@ -115285,7 +115285,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           VoiceName = "voice/$Locale$/story/1204/120429/1E25F134"
         },
         [12042931] = {
-          Content = "我也不知道你们会出现在那儿，抱歉啦，反正结果皆大欢喜不是？你们要还是生气，改天我拿我师父宝贝了几十年的佳酿赔罪。",
+          Content = "我也不知道你们会出现在那儿，抱歉啦，反正结果皆大欢喜不是？你们要是还生气，改天我拿我师父宝贝了几十年的佳酿赔罪。",
           ContentKR = "너희가 거기 있을 줄은 몰랐지 뭐냐. 미안하게 됐다. 뭐, 어쨌든 결과는 좋잖아? 그래도 화가 풀리지 않는다면, 나중에 스승님이 아껴 두신 술이라도 대접하마.",
           DialogueId = 12042931,
           GUID = "1E25F15E",
@@ -116846,7 +116846,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           VoiceName = "voice/$Locale$/story/1204/120437/1E2676EA"
         },
         [12043746] = {
-          Content = "咳咳，有一件事姑奶奶可能不知。这里的两位和我可是拜过把子的交情。很乐意替我代劳，一起为基地建设添砖加瓦。",
+          Content = "咳咳，有一件事姑奶奶可能不知。这两位和我可是拜过把子的交情。很乐意替我代劳，一起为基地建设添砖加瓦。",
           ContentKR = "크흠, 고모할머니께서 모르시나 본데요, 여기 두 사람은 저랑 의형제를 맺은 사이라, 기꺼이 대신해서 기지 건설을 도와줄 거예요.",
           DialogueId = 12043746,
           GUID = "1E267714",
@@ -117076,7 +117076,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           VoiceName = "voice/$Locale$/story/1204/120438/1E26823C"
         },
         [12043815] = {
-          Content = "唉，你们啊……算了，正巧{nickname}来了，就让{性别：他|她}给你们露一手吧。",
+          Content = "唉，你们啊……算了，正巧{nickname}来了，就让{性别：他|她}来给你们露一手吧。",
           ContentKR = "저기, 얘들아... 아니, 됐다. 마침 {nickname}도 왔으니까, 이 {性别:형|누나}한테 한 수 보여 달라고 하자.",
           DialogueId = 12043815,
           GUID = "1E268266",
@@ -117318,7 +117318,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           VoiceName = "voice/$Locale$/story/1204/120440/1E26A0EA"
         },
         [12044002] = {
-          Content = "把药草捣碎了和上姜黄粉，再敷上几回，伤就基本好了，你就也能自由走动了。",
+          Content = "把药草捣碎了和上姜黄粉，再敷上几回，伤基本就好了，你就也能自由走动了。",
           ContentKR = "이 약초를 찧어서 심황 가루랑 섞은 다음 상처에 붙이세요. 어느 정도 나으면, 마음대로 걸어 다니실 수 있을 거예요.",
           DialogueId = 12044002,
           GUID = "1E26A114",
@@ -117438,7 +117438,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           VoiceName = "voice/$Locale$/story/1204/120440/1E26A30C"
         },
         [12044015] = {
-          Content = "算了算了，你们年轻人做事就是这么风风火火。你们赶紧去调校天罗拒风仪吧，之后得空了再来找唐叔，给你们细细上一上课。",
+          Content = "算了算了，你们年轻人做事就是这么风风火火。你们赶紧去调校天罗拒风仪吧，之后得空再来找唐叔，给你们细细上一上课。",
           ContentKR = "됐다, 됐어. 젊은 애들은 원래 바람처럼 재빠른 법이지. 어서들 가서 천라거풍의를 교정하렴. 설명은 나중에 시간 날 때 다시 들르면, 그때 자세히 해 주마.",
           DialogueId = 12044015,
           GUID = "1E26A336",
@@ -117911,7 +117911,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           VoiceName = "voice/$Locale$/story/1204/120443/1E26D46E"
         },
         [12044316] = {
-          Content = "朱朴，我懂你的感受……姑姑死之后的一段时间，我也和你有一样的想法。这里每个人都经历过这样夜不能寐的时刻。",
+          Content = "朱朴，我懂你的感受……姑姑死之后的一段时间，我也和你有一样的想法。这里的每个人都经历过这样夜不能寐的时刻。",
           ContentKR = "주복아, 네 마음 알아... 나도 고모가 돌아가시고 나서 한동안 너랑 똑같은 생각을 했거든. 여기 있는 모두가 다 그런 잠 못 드는 밤을 겪었어.",
           DialogueId = 12044316,
           GUID = "1E26D498",
@@ -118108,7 +118108,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           VoiceName = "voice/$Locale$/story/1204/120444/1E26E458"
         },
         [12044413] = {
-          Content = "现在站在这里的，都是你曾经的同伴、师长、后辈。我们是否有罪，我相信你比任何人都更清楚。",
+          Content = "现在站在这里的，都是你曾经的同伴、师长、后辈。我们是否有罪，我相信你比任何人都清楚。",
           ContentKR = "지금 여기에 있는 이 사람들은 한때 모두, 사형의 동료이자 스승, 그리고 후배였어. 우리에게 죄가 있는지 없는지는, 사형이 제일 잘 알겠지.",
           DialogueId = 12044413,
           GUID = "1E26E482",
@@ -119880,6 +119880,9 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           TalkActionId = {
             [1] = "240026:DisagreeHead"
           },
+          TurnTo = {
+            [1] = "240026:n(0)"
+          },
           VoiceName = "voice/$Locale$/story/1204/120456/1E27A90E"
         },
         [12045612] = {
@@ -121341,7 +121344,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
   },
   {
     MinKey = 12046301,
-    MaxKey = 12047506,
+    MaxKey = 12047504,
     Loader = function()
       return {
         [12046301] = {
@@ -121760,7 +121763,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           VoiceName = "voice/$Locale$/story/1204/120465/1E283BBA"
         },
         [12046506] = {
-          Content = "止流，吾辈从来对你寄予重望。龙渊上卿的殊荣和力量，可不是随便授于你身的！",
+          Content = "止流，吾辈从来对你寄予厚望。龙渊上卿的殊荣和力量，可不是随便授于你身的！",
           ContentKR = "지류, 우리는 늘 네 재능을 높이 사 왔다. 용연상경이라는 영예와 힘이, 어찌 거저 주어진 것이라 생각하느냐!",
           DialogueId = 12046506,
           GUID = "1E283BE4",
@@ -121861,7 +121864,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           DialogueId = 12046607,
           GUID = "1E284C76",
           NextDialogue = 12046608,
-          SpeakNpcId = 240074,
+          SpeakNpcId = 240001,
           VoiceName = "voice/$Locale$/story/1204/120466/1E284C76"
         },
         [12046608] = {
@@ -121907,6 +121910,18 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           NextDialogue = 12046610,
           SpeakNpcId = 240001,
           VoiceName = "voice/$Locale$/story/1204/120466/12046614"
+        },
+        [12046615] = {
+          Content = "为大风九章奔走，于我而言，是一件将功折罪的幸事。",
+          DialogueId = 12046615,
+          GUID = "12046615.0",
+          VoiceName = "voice/$Locale$/story/1204/120466/12046615"
+        },
+        [12046616] = {
+          Content = "万万不可啊，止流大当家——",
+          DialogueId = 12046616,
+          GUID = "12046616.0",
+          VoiceName = "voice/$Locale$/story/1201/120229/1E191CD6"
         },
         [12046701] = {
           Content = "止流，这样做的后果，你可想好了？你一个人担得起吗？",
@@ -122224,7 +122239,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           VoiceName = "voice/$Locale$/story/1204/120469/1E287E80"
         },
         [12046913] = {
-          Content = "既是人为，在创立之初，便设置了规则和约定。狴犴，应天尉，乃至于太皓、烛阴，都是遵从着这规则而运转的。",
+          Content = "既是人为，在创立之初，便设置了规则和约定。狴犴，应天尉，乃至于太皓、烛阴，都是遵循着这规则而运转的。",
           ContentKR = "인간이 만들었기에, 거기에는 명확한 규칙과 약속이 존재하지. 폐안, 응천위, 심지어 태호와 촉룡조차 모두 그 정해진 규칙에 따라 움직일 뿐일세.",
           DialogueId = 12046913,
           GUID = "1E287EAA",
@@ -123199,7 +123214,15 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           NextDialogue = 12047505,
           SpeakNpcId = 240013,
           VoiceName = "voice/$Locale$/story/1204/120475/1E28DFA0"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12047505,
+    MaxKey = 12049050,
+    Loader = function()
+      return {
         [12047505] = {
           Content = "好。",
           ContentKR = "알겠어.",
@@ -123217,15 +123240,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           NextDialogue = 12047507,
           SpeakNpcId = 240013,
           VoiceName = "voice/$Locale$/story/1204/120475/1E28DFF4"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12047507,
-    MaxKey = 12049052,
-    Loader = function()
-      return {
+        },
         [12047507] = {
           Content = "先前我可能还心有动摇，但现在已经不会了！",
           ContentKR = "예전의 나라면 흔들렸을지 몰라도, 지금은 달라!",
@@ -124415,6 +124430,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         [12048801] = {DialogueId = 12048801},
         [12048802] = {
           Content = "咦，小仆从……重力好像恢复正常了？",
+          ContentKR = "어? 시종... 중력이 정상으로 돌아온 것 같아.",
           DialogueId = 12048802,
           GUID = "1E29AC36",
           SpeakNpcId = 200002
@@ -124431,7 +124447,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           Content = "有意思……我已经完全掌握这个机关的结构了。要不要让我来试试看？",
           DialogueId = 12048806,
           GUID = "12048806.0",
-          SpeakNpcId = 200026
+          SpeakNpcId = 240026
         },
         [12048807] = {DialogueId = 12048807, GUID = "12048807.0"},
         [12048808] = {
@@ -124445,14 +124461,14 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           DialogueId = 12048809,
           GUID = "12048809.0",
           NextDialogue = 12048810,
-          SpeakNpcId = 200026
+          SpeakNpcId = 240026
         },
         [12048810] = {
           Content = "不过话说回来，{nickname}，你回去后可得好好从头补起机枢知识呢。让我想想，从哪里开始呢，不如就从……",
           DialogueId = 12048810,
           GUID = "12048810.0",
           NextDialogue = 12048811,
-          SpeakNpcId = 200026
+          SpeakNpcId = 240026
         },
         [12048811] = {
           Content = "哇啊啊，小仆从，苏乙身上又散发出那种不近人情的老师气场了！好吓人！",
@@ -124466,14 +124482,14 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           Content = "哦？{nickname}，你想自己试试看吗？那要是遇到不会的部分，再来问我吧~",
           DialogueId = 12048813,
           GUID = "12048813.0",
-          SpeakNpcId = 200026
+          SpeakNpcId = 240026
         },
         [12048814] = {DialogueId = 12048814, GUID = "12048814.0"},
         [12048815] = {
           Content = "需要我的帮助吗？没问题~",
           DialogueId = 12048815,
           GUID = "12048815.0",
-          SpeakNpcId = 200026
+          SpeakNpcId = 240026
         },
         [12048816] = {DialogueId = 12048816, GUID = "12048816.0"},
         [12048817] = {
@@ -124546,7 +124562,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           DialogueId = 12049007,
           GUID = "1E29D636",
           NextDialogue = 12049008,
-          SpeakNpcId = 200001,
+          SpeakNpcId = 200002,
           VoiceName = "voice/$Locale$/story/1204/120490/1E29D636"
         },
         [12049008] = {
@@ -124911,7 +124927,15 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           NextDialogue = 12049051,
           SpeakNpcId = 200002,
           VoiceName = "voice/$Locale$/story/1204/120490/1E29DD44"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12049051,
+    MaxKey = 12060116,
+    Loader = function()
+      return {
         [12049051] = {
           Content = "但她看着也不像是刻舟的姑奶奶啊……不管了，向她打听一下吧！",
           ContentKR = "아무리 봐도 각주네 고모할머니론 안 보이는데... 몰라, 일단 말 걸어 보자!",
@@ -124928,15 +124952,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           NextDialogue = 12049053,
           SpeakNpcId = 200002,
           VoiceName = "voice/$Locale$/story/1204/120490/1E29DD98"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12049053,
-    MaxKey = 12060118,
-    Loader = function()
-      return {
+        },
         [12049053] = {
           Content = "我懂的，这就是所谓的考验啊试炼啊什么的……看我们轻松解决。上吧，小仆从！",
           ContentKR = "이거 시련인가 뭔가 그거잖아... 우리가 가뿐히 해결해 주겠어! 가자, 시종!",
@@ -125774,6 +125790,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           ContentKR = "어느새, 도착했네...",
           DialogueId = 12049151,
           GUID = "1E29EDD6",
+          SpeakNpcId = 240001,
           VoiceName = "voice/$Locale$/story/1204/120491/1E29EDD6"
         },
         [12049201] = {
@@ -126567,7 +126584,15 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           NextDialogue = 12060117,
           SpeakNpcId = 200002,
           VoiceName = "voice/$Locale$/story/1206/120601/1E30F4C8"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12060117,
+    MaxKey = 12060824,
+    Loader = function()
+      return {
         [12060117] = {
           Content = "话音刚落，不远处的巷尾就爆发出一阵激烈的争吵声。",
           ContentKR = "스노우의 말이 채 끝나기도 전에, 근처 골목 끝에서 시끄럽게 다투는 소리가 들려온다.",
@@ -126583,15 +126608,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           GUID = "1E30F51C",
           NextDialogue = 12060119,
           VoiceName = "voice/$Locale$/story/1206/120601/1E30F51C"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12060119,
-    MaxKey = 12060826,
-    Loader = function()
-      return {
+        },
         [12060119] = {
           Content = "哇，那边有人吵起来了，小仆从，我们赶紧去看看！去晚了可凑不上新鲜的热闹了！",
           ContentKR = "와! 저기서 누가 싸우나 봐! 시종, 빨리 가보자! 재밌는 구경을 놓치면 안 되잖아!",
@@ -127464,6 +127481,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12060534] = {
           Content = "机关鸟就藏在那边的箱子里。怎么？需不需要恶魔大盗给你带路？",
+          ContentKR = "기계 새는 저쪽에 있는 상자 안에 숨겨져 있어. 왜? 이 악마대도님이 앞장서 줄까?",
           DialogueId = 12060534,
           GUID = "1E313933",
           NextDialogue = 12060535,
@@ -127472,6 +127490,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12060535] = {
           Content = "这次我盯住你了，不要有什么小心思，也别想着轻举妄动！",
+          ContentKR = "이번엔 두 눈 부릅뜨고 지켜볼 거니까, 딴마음 품거나 멋대로 굴 생각 마!",
           DialogueId = 12060535,
           GUID = "1E313934",
           NextDialogue = 12060536,
@@ -127480,6 +127499,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12060536] = {
           Content = "嘻嘻，需要恶魔大盗表演一下从你眼皮底子下消失的魔术吗~这可是我的拿手绝活~",
+          ContentKR = "히힛, 악마대도님이 네 눈앞에서 뿅 하고 사라지는 마술이라도 보여 줄까~? 나 그거 엄청 잘하거든~",
           DialogueId = 12060536,
           GUID = "1E313935",
           SpeakNpcId = 250006,
@@ -127502,9 +127522,10 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           Scripts = [[
 SEQ{
 PARA{
-LookAt{LookAtDescription{"250003:n(100001)"}},
-LookAt{LookAtDescription{"250006:n(100001)"}},
-LookAt{LookAtDescription{"200002:n(250003)"}}
+LookAt{LookAtDescription{"250003:n(250006)"}},
+LookAt{LookAtDescription{"250006:n(250003)"}},
+LookAt{LookAtDescription{"200002:n(250003)"}},
+TurnTo{_delay{0},TurnToDescription{"250006:n(250003)"}},
 },
 PlayAnimation{_delay{1.5},ActorId{250003},AnimationId{"ConfidentR_Start"},Duration{1}}
 }]],
@@ -127639,6 +127660,7 @@ PlayAnimation{_delay{0.2},ActorId{200002},AnimationId{"Angry01_End"},Duration{1}
 PARA{
 SEQ{
 PlayAnimation{_delay{1.2},ActorId{250006},AnimationId{"Talk03_End"},Duration{1}},
+TurnTo{_delay{0},TurnToDescription{"250006:n(100001)"}},
 LookAt{LookAtDescription{"250006:n(100001)"}}
 },
 PlayAnimation{_delay{0.2},ActorId{100001},AnimationId{"Think_Start"},Duration{1}}
@@ -128574,7 +128596,15 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           NextDialogue = 12060825,
           SpeakNpcId = 250006,
           VoiceName = "voice/$Locale$/story/1206/120608/1E3168F0"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12060825,
+    MaxKey = 12061601,
+    Loader = function()
+      return {
         [12060825] = {
           Content = "就是啊！走路慢腾腾的，知不知道小吃只有刚刚出炉的才好吃！",
           ContentKR = "내 말이! 무슨 거북이도 아니고. 간식은 따끈따끈 김이 모락모락 날 때 먹어야 맛있는 거 몰라?",
@@ -128591,15 +128621,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           GUID = "1E316944",
           SpeakNpcId = 100001,
           VoiceName = "voice/$Locale$/story/1206/120608/1E316944"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12060827,
-    MaxKey = 12061603,
-    Loader = function()
-      return {
+        },
         [12060827] = {
           Content = "这支队伍由悬衡派弟子中的后起之秀组成，可谓是今年的全明星阵容，妥妥的夺冠热门选手——",
           ContentKR = "현형파에서도 난다 긴다 하는 제자들만 모인 올스타 팀이야. 올해의 우승 후보라고.",
@@ -129865,6 +129887,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
             [6] = 203014,
             [7] = 408018
           },
+          Scripts = "PlayOrStopBGM{PlayType{\"Play\"},SoundType{\"SOUND_BGM\"},EventPath{\"event:/bgm/mute\"}}",
           SpeakNpcId = 100001,
           VoiceName = "voice/$Locale$/story/1206/120614/1E31C79A"
         },
@@ -129919,6 +129942,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           DialogueId = 12061407,
           GUID = "1E31C896",
           NextDialogue = 12061408,
+          Scripts = "PlayOrStopBGM{PlayType{\"Play\"},SoundType{\"SOUND_BGM\"},EventPath{\"event:/bgm/1_3/0152_story_jiaolancun_piano\"}}",
           SpeakNpcId = 100001,
           VoiceName = "voice/$Locale$/story/1206/120614/1E31C896"
         },
@@ -130249,6 +130273,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           ContentKR = "이제 돌아가자. 가서 그 녀석한테 제대로 사과도 해야겠어.",
           DialogueId = 12061444,
           GUID = "1E31CEA8",
+          Scripts = "PlayOrStopBGM{PlayType{\"Stop\"},SoundType{\"SOUND_BGM\"},EventPath{\"event:/bgm/1_3/0152_story_jiaolancun_piano\"}}",
           SpeakNpcId = 250003,
           VoiceName = "voice/$Locale$/story/1206/120614/1E31CEA8"
         },
@@ -130434,6 +130459,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
         },
         [12061518] = {
           Content = "在赶来的女子的帮助下，小安略显吃力地站了起来。",
+          ContentKR = "다급히 달려온 여자의 부축을 받으며, 재안이 힘겹게 몸을 일으킨다.",
           DialogueId = 12061518,
           GUID = "1E31DAA3",
           IsBlack = 1,
@@ -130455,9 +130481,18 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
             [6] = 203014,
             [7] = 408018
           },
+          Scripts = "PlayOrStopBGM{PlayType{\"Play\"},SoundType{\"SOUND_BGM\"},EventPath{\"event:/bgm/mute\"}}",
           SpeakNpcId = 200002,
           VoiceName = "voice/$Locale$/story/1206/120616/1E31E86A"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12061602,
+    MaxKey = 12062341,
+    Loader = function()
+      return {
         [12061602] = {
           Content = "如果顺利，你就眨眨眼。要是遇到什么问题需要白出马，你就……嗯，不如高呼“魔王大人万岁”吧！",
           ContentKR = "일이 잘 풀렸으면, 눈을 한 번 깜빡여. 혹시 일이 꼬여서 내 도움이 필요한 거면... '마왕님 만세'라고 외쳐!",
@@ -130475,15 +130510,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           NextDialogue = 12061604,
           SpeakNpcId = 100001,
           VoiceName = "voice/$Locale$/story/1206/120616/1E31E8BE"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12061604,
-    MaxKey = 12062343,
-    Loader = function()
-      return {
+        },
         [12061604] = {
           Content = "呼……那就好那就好！",
           ContentKR = "휴우... 그럼 다행이고!",
@@ -130508,6 +130535,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           DialogueId = 12061606,
           GUID = "1E31E93C",
           NextDialogue = 12061607,
+          Scripts = "PlayOrStopBGM{PlayType{\"Play\"},SoundType{\"SOUND_BGM\"},EventPath{\"event:/bgm/1_3/0152_story_jiaolancun_piano\"}}",
           SpeakNpcId = 250003,
           VoiceName = "voice/$Locale$/story/1206/120616/1E31E93C"
         },
@@ -130660,6 +130688,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           ContentKR = "하필 이럴 때 네 조카인 걸 알게 될 줄이야. 이것도 운명인 걸까...",
           DialogueId = 12061623,
           GUID = "1E31EC06",
+          Scripts = "PlayOrStopBGM{PlayType{\"Stop\"},SoundType{\"SOUND_BGM\"},EventPath{\"event:/bgm/mute\"}}",
           SpeakNpcId = 250018,
           VoiceName = "voice/$Locale$/story/1206/120616/1E31EC06"
         },
@@ -130671,7 +130700,8 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
         [12061625] = {
           DialogueId = 12061625,
           GUID = "1E31EB5F",
-          NextDialogue = 12061620
+          NextDialogue = 12061620,
+          Scripts = "PlayOrStopBGM{PlayType{\"Play\"},SoundType{\"SOUND_BGM\"},EventPath{\"event:/bgm/mute\"}}"
         },
         [12061701] = {
           Content = "呼……今天的赛事告一段落了。干得不错！如果明天能继续保持这个节奏，夺冠绝对是板上钉钉的事情！",
@@ -130688,6 +130718,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
             [6] = 203014,
             [7] = 408018
           },
+          Scripts = "PlayOrStopBGM{PlayType{\"Play\"},SoundType{\"SOUND_BGM\"},EventPath{\"event:/bgm/mute\"}}",
           SpeakNpcId = 250003,
           VoiceName = "voice/$Locale$/story/1206/120617/1E31F8D2"
         },
@@ -130715,6 +130746,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           DialogueId = 12061704,
           GUID = "1E31F950",
           NextDialogue = 12061705,
+          Scripts = "PlayOrStopBGM{PlayType{\"Play\"},SoundType{\"SOUND_BGM\"},EventPath{\"event:/bgm/1_1/0125_story_zhiliu_betray\"}}",
           SpeakNpcId = 200002,
           VoiceName = "voice/$Locale$/story/1206/120617/1E31F950"
         },
@@ -131067,6 +131099,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           ContentKR = "...알겠어요, 그러세요 그럼.",
           DialogueId = 12061743,
           GUID = "1E31FFB6",
+          Scripts = "PlayOrStopBGM{PlayType{\"Stop\"},SoundType{\"SOUND_BGM\"},EventPath{\"event:/bgm/1_1/0125_story_zhiliu_betray\"}}",
           SpeakNpcId = 250003,
           VoiceName = "voice/$Locale$/story/1206/120617/1E31FFB6"
         },
@@ -131946,6 +131979,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
         },
         [12062226] = {
           Content = "别打了别打了——是我，是唐叔啊！",
+          ContentKR = "으악, 그, 그만 때리렴! 아저씨야, 아저씨!",
           DialogueId = 12062226,
           GUID = "1E324ECB",
           SpeakNpcId = 250024,
@@ -132324,7 +132358,15 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           NextDialogue = 12062342,
           SpeakNpcId = 250005,
           VoiceName = "voice/$Locale$/story/1206/120623/1E3261D2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12062342,
+    MaxKey = 12063006,
+    Loader = function()
+      return {
         [12062342] = {
           Content = "有些话不好意思直接说出口是吧，我懂，我懂～是我不该这样问，我自罚一杯！",
           ContentKR = "쑥스러워서 말 돌리는 거잖아, 알았어, 알았어~ 눈치도 없이 물어본 내 잘못이니까, 까짓거 내 벌주 한 잔 마신다!",
@@ -132342,15 +132384,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           NextDialogue = 12062344,
           SpeakNpcId = 250002,
           VoiceName = "voice/$Locale$/story/1206/120623/1E326226"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12062344,
-    MaxKey = 12063008,
-    Loader = function()
-      return {
+        },
         [12062344] = {
           Content = "还有啊，我和你说。上个月我睡得正熟呢，突然闪过一阵惊雷，恰好劈到我们一起练剑过的那片竹林上，你说邪不邪门？",
           ContentKR = "그리고 지난달 일인데, 밤중에 자다가 천둥소리가 나서 깼더니, 우리가 검술 연습하던 대나무 숲에 벼락이 떡하니 꽂혔더라고! 허참, 별일이 다 있지 않아?",
@@ -132382,6 +132416,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
         },
         [12062347] = {
           Content = "翌日清晨，奉香群英试报名点处……",
+          ContentKR = "다음날 아침, 봉향 영웅대회 접수처...",
           DialogueId = 12062347,
           GUID = "1E3262A5",
           IsBlack = 1,
@@ -132946,6 +132981,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
             [6] = 408018,
             [7] = 403009
           },
+          Scripts = "PlayOrStopBGM{PlayType{\"Play\"},SoundType{\"SOUND_BGM\"},EventPath{\"event:/bgm/mute\"}}",
           SpeakNpcId = 250018,
           VoiceName = "voice/$Locale$/story/1206/120626/1E328C7A"
         },
@@ -133036,6 +133072,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           DialogueId = 12062611,
           GUID = "1E328E1E",
           NextDialogue = 12062612,
+          Scripts = "PlayOrStopBGM{PlayType{\"Play\"},SoundType{\"SOUND_BGM\"},EventPath{\"event:/bgm/1_1/0125_story_zhiliu_betray\"}}",
           SpeakNpcId = 250018,
           VoiceName = "voice/$Locale$/story/1206/120626/1E328E1E"
         },
@@ -133243,6 +133280,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           DialogueId = 12062634,
           GUID = "1E3291E4",
           NextDialogue = 12062635,
+          Scripts = "PlayOrStopBGM{PlayType{\"Play\"},SoundType{\"SOUND_BGM\"},EventPath{\"event:/bgm/mute\"}}",
           SpeakNpcId = 250003,
           VoiceName = "voice/$Locale$/story/1206/120626/1E3291E4"
         },
@@ -133554,6 +133592,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           DisableMouth = 1,
           GUID = "1E32A000",
           NextDialogue = 12062721,
+          Scripts = "PlayOrStopBGM{PlayType{\"Play\"},SoundType{\"SOUND_BGM\"},EventPath{\"event:/bgm/1_3/0152_story_jiaolancun_piano\"}}",
           SpeakNpcId = 250003,
           VoiceName = "voice/$Locale$/story/1206/120627/1E32A000"
         },
@@ -133864,6 +133903,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           ContentKR = "방식은 달라도, 우리와 비슷한 길을 걷는 사람이 있네. 덕분에 앞으로의 여정은 외롭지 않을 것 같아. 그렇지, 언니?",
           DialogueId = 12062751,
           GUID = "1E32A516",
+          Scripts = "PlayOrStopBGM{PlayType{\"Stop\"},SoundType{\"SOUND_BGM\"},EventPath{\"event:/bgm/1_3/0152_story_jiaolancun_piano\"}}",
           SpeakNpcId = 250001,
           VoiceName = "voice/$Locale$/story/1206/120627/1E32A516"
         },
@@ -134087,6 +134127,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
             [6] = 408018,
             [7] = 403009
           },
+          Scripts = "PlayOrStopBGM{PlayType{\"Play\"},SoundType{\"SOUND_BGM\"},EventPath{\"event:/bgm/mute\"}}",
           SpeakNpcId = 250003,
           VoiceName = "voice/$Locale$/story/1206/120629/1E32BDB2"
         },
@@ -134187,6 +134228,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           DialogueId = 12063004,
           GUID = "1E32CE98",
           NextDialogue = 12063005,
+          Scripts = "PlayOrStopBGM{PlayType{\"Play\"},SoundType{\"SOUND_BGM\"},EventPath{\"event:/bgm/1_1/0125_story_zhiliu_betray\"}}",
           SpeakNpcId = 250017,
           VoiceName = "voice/$Locale$/story/1206/120630/1E32CE98"
         },
@@ -134207,7 +134249,15 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           NextDialogue = 12063007,
           SpeakNpcId = 250003,
           VoiceName = "voice/$Locale$/story/1206/120630/1E32CEEC"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12063007,
+    MaxKey = 20000611,
+    Loader = function()
+      return {
         [12063007] = {
           Content = "谢谢你的消息，小安，我这就赶过去。",
           ContentKR = "알려 줘서 고마워, 재안아. 누나가 지금 바로 가 볼게.",
@@ -134225,15 +134275,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           NextDialogue = 12063009,
           SpeakNpcId = 250017,
           VoiceName = "voice/$Locale$/story/1206/120630/1E32CF40"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12063009,
-    MaxKey = 20000613,
-    Loader = function()
-      return {
+        },
         [12063009] = {
           Content = "拜托了，请让我一起去吧！我想阻止阿姨走向最坏的结局！",
           ContentKR = "제발! 같이 가게 해 줘! 난 이모가 끔찍한 짓을 저지르시지 않게 막고 싶어!",
@@ -135076,6 +135118,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
             [3] = 103001,
             [4] = 407008
           },
+          Scripts = "PlayOrStopBGM{PlayType{\"Play\"},SoundType{\"SOUND_BGM\"},EventPath{\"event:/bgm/mute\"}}",
           SpeakNpcId = 250003,
           VoiceName = "voice/$Locale$/story/1206/120635/1E332022"
         },
@@ -135166,6 +135209,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           DialogueId = 12063511,
           GUID = "1E3321C6",
           NextDialogue = 12063512,
+          Scripts = "PlayOrStopBGM{PlayType{\"Play\"},SoundType{\"SOUND_BGM\"},EventPath{\"event:/bgm/1_3/0154_story_suyi_heart\"}}",
           SpeakNpcId = 250003,
           VoiceName = "voice/$Locale$/story/1206/120635/1E3321C6"
         },
@@ -135381,6 +135425,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           DialogueId = 12063535,
           GUID = "1E3325B6",
           NextDialogue = 12063536,
+          Scripts = "PlayOrStopBGM{PlayType{\"Stop\"},SoundType{\"SOUND_BGM\"},EventPath{\"event:/bgm/1_3/0154_story_suyi_heart\"}}",
           SpeakNpcId = 250003,
           VoiceName = "voice/$Locale$/story/1206/120635/1E3325B6"
         },
@@ -136357,7 +136402,15 @@ CameraMoveTo{_delay{4.7},TargetPosition{"-287.599518,-128.604248,69.15966,0.0000
           SpeakNpcName = "UI_Npc_Name_Duanzao",
           ToFinalCameraBlendTime = 4,
           VoiceName = "voice/$Locale$/story/2001/200006/3211C63E"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 20000612,
+    MaxKey = 20005408,
+    Loader = function()
+      return {
         [20000612] = {
           Camera = "-400.428558,-346.687256,65.11969,0.000289,0.592908,43.232693,30.0,150.0,false,Disable,2.8",
           Content = "所以说嘛，白是独一无二的魔王皎皎！说不定呀，白就是为了带领皎皎们征服世界而诞生的！",
@@ -136389,15 +136442,7 @@ CameraMoveTo{_delay{4.7},TargetPosition{"-287.599518,-128.604248,69.15966,0.0000
           SpeakNpcId = 200024,
           SpeakNpcName = "UI_Npc_Name_Duanzao",
           VoiceName = "voice/$Locale$/story/2001/200006/3211C692"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 20000614,
-    MaxKey = 20005410,
-    Loader = function()
-      return {
+        },
         [20000614] = {
           Camera = "-147.118195,-74.93335,97.300194,0.000344,-2.603818,35.809223,50.0,210.030212,false,Manual,5.267603",
           Content = "唉，普通皎皎确实没什么野心，她们就喜欢跟着人类，只要得到人类的夸奖就会开心得转圈……但对白来说，这可远远不够！",
@@ -139336,7 +139381,15 @@ LookAt{_delay{5.5},LookAtDescription{"200074:n(200086)"}}
             [1] = "100001:p(40)"
           },
           VoiceName = "voice/$Locale$/story/2001/200054/3214D940"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 20005409,
+    MaxKey = 20007014,
+    Loader = function()
+      return {
         [20005409] = {
           Camera = "54.744141,331.777344,101.875977,0.00008,-2.599884,-115.999306,50.0,544.522034,false,Manual,3.944573",
           Content = "魔灵……猎人？",
@@ -139372,15 +139425,7 @@ PlayAnimation{_delay{4.5},ActorId{200074},AnimationId{"DisagreeHead"},Duration{1
             [1] = "200074:Explain01_Start"
           },
           VoiceName = "voice/$Locale$/story/2001/200054/3214D994"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 20005411,
-    MaxKey = 20007016,
-    Loader = function()
-      return {
+        },
         [20005411] = {
           Camera = "315.054688,334.335938,83.208008,0.0,0.0,90.402756,20.0,568.453857,false,Manual,8.0",
           Content = "你们知道魔灵吧，就是它们——虽然看起来样子各不相同，但其实都是魔灵哦，是同一种类。",
@@ -142245,7 +142290,15 @@ PlayAnimation{_delay{0.5},ActorId{700248},AnimationId{"Sigh_End"},Duration{1}}}]
           NextDialogue = 20007015,
           SpeakNpcId = 200074,
           VoiceName = "voice/$Locale$/story/2001/200070/3215E0BC"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 20007015,
+    MaxKey = 50107051,
+    Loader = function()
+      return {
         [20007015] = {
           Content = "嗯，我会尽量做到。",
           ContentKR = "그래, 그렇게 해볼게.",
@@ -142265,15 +142318,7 @@ PlayAnimation{_delay{0.5},ActorId{700248},AnimationId{"Sigh_End"},Duration{1}}}]
           },
           SpeakNpcId = 200074,
           VoiceName = "voice/$Locale$/story/2001/200070/3215E110"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 20007017,
-    MaxKey = 50107053,
-    Loader = function()
-      return {
+        },
         [20007017] = {
           Content = "也要和榛子拉钩。",
           ContentKR = "헤이즐넛과도 약속해.",
@@ -143960,7 +144005,15 @@ PlayAnimation{_delay{0.5},ActorId{700248},AnimationId{"Sigh_End"},Duration{1}}}]
           DialogueId = 50107051,
           GUID = "7D70100E",
           VoiceName = "voice/$Locale$/env/Ver0102/7D7030DE"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 50107052,
+    MaxKey = 50107293,
+    Loader = function()
+      return {
         [50107052] = {
           Content = "下次遇到这种事情记得早些来泉通司，硬拖只会让事态恶化。",
           ContentKR = "늑장 부리면 상황만 악화되니까, 다음부턴 이런 일 생기면 바로 천통각으로 오세요.",
@@ -143974,15 +144027,7 @@ PlayAnimation{_delay{0.5},ActorId{700248},AnimationId{"Sigh_End"},Duration{1}}}]
           DialogueId = 50107053,
           GUID = "7D701062",
           VoiceName = "voice/$Locale$/env/Ver0102/7D703132"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 50107054,
-    MaxKey = 50107295,
-    Loader = function()
-      return {
+        },
         [50107054] = {
           Content = "搭台子，修香炉，后续还有各种开销，我都递交申请了，只是拨款何时能来？",
           ContentKR = "단상도 세우고, 향로도 고치고... 돈 들어갈 데가 많아요. 신청은 했는데, 예산은 언제 나온대요?",
@@ -145464,7 +145509,15 @@ PlayAnimation{_delay{0.5},ActorId{700248},AnimationId{"Sigh_End"},Duration{1}}}]
           GUID = "7D7037C2",
           SpeakNpcId = 701205,
           VoiceName = "voice/$Locale$/env/Ver0102/7D7037C2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 50107294,
+    MaxKey = 51000903,
+    Loader = function()
+      return {
         [50107294] = {
           Content = "所谓理一……",
           ContentKR = "'이일'이란...",
@@ -145480,15 +145533,7 @@ PlayAnimation{_delay{0.5},ActorId{700248},AnimationId{"Sigh_End"},Duration{1}}}]
           GUID = "7D703816",
           SpeakNpcId = 701207,
           VoiceName = "voice/$Locale$/env/Ver0102/7D703816"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 50107296,
-    MaxKey = 51000905,
-    Loader = function()
-      return {
+        },
         [50107296] = {
           Content = "所以理一定是在前面的！",
           ContentKR = "그래서 이치가 우선인 겁니다!",
@@ -147193,7 +147238,15 @@ MoveTo{ActorId{700006},TargetPoint{"Point_510005_Aier"},MoveSpeed{150},Visibilit
             [2] = 510009032,
             [3] = 510009033
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51000904,
+    MaxKey = 51001911,
+    Loader = function()
+      return {
         [51000904] = {
           Content = "你可真没礼貌~会估价可不等于你是个有品味的人，甜心。",
           ContentKR = "정말 무례한걸~ 가격을 볼 줄 안다고 해서 센스도 있는 건 아니라니까.",
@@ -147213,15 +147266,7 @@ MoveTo{ActorId{700006},TargetPoint{"Point_510005_Aier"},MoveSpeed{150},Visibilit
           TalkOptions = {
             [1] = 510009071
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51000906,
-    MaxKey = 51001913,
-    Loader = function()
-      return {
+        },
         [51000906] = {
           Content = "哦~这可是商业机密。你想好用什么来和我交换了吗？",
           ContentKR = "아~ 그건 영업 비밀인데. 나랑 뭘 교환할 건지는 생각해 봤어?",
@@ -149259,7 +149304,15 @@ MoveTo{ActorId{700085},MoveSpeed{150},TargetPoint{"Point_Sangni_nearby_YNM01"},V
           DialogueId = 51001911,
           GUID = "7FAD8D06",
           NextDialogue = 51001912
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51001912,
+    MaxKey = 51003013,
+    Loader = function()
+      return {
         [51001912] = {
           Content = "还有你，狩月人是吧，你们这种卡戎我见多了，幻想着靠狩月人扬名立万，当上桂冠卡戎？",
           ContentKR = "그리고 너, 월석 사냥꾼이겠지? 월석 사냥꾼이 되어서 계관카론으로 이름을 날리고 싶다는 환상을 가지고 있는 너 같은 카론을 많이 봤지.",
@@ -149278,15 +149331,7 @@ MoveTo{ActorId{700085},MoveSpeed{150},TargetPoint{"Point_Sangni_nearby_YNM01"},V
           GUID = "7FAD8D5A",
           NextDialogue = 51001914,
           SpeakNpcId = 200015
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51001914,
-    MaxKey = 51003101,
-    Loader = function()
-      return {
+        },
         [51001914] = {
           Content = "费迪南特·威尔斯先生，先前是你们二人的私事，我不便插嘴。但无缘无故打扰我们的客人，水仙平原可就要送客了。",
           ContentKR = "페르디난트 웨일즈 씨, 지금까지는 두 분의 사적인 일이라 간섭하지 않았지만 이유 없이 우리 손님에게 실례하면, 아스포델에서 내보낼 수밖에 없어요.",
@@ -151264,7 +151309,15 @@ PlayAnimation{ActorId{100001},AnimationId{"Explain02_Start"},Duration{2}}
           TurnTo = {
             [1] = "700015:n(0)"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51003014,
+    MaxKey = 51004135,
+    Loader = function()
+      return {
         [51003014] = {
           Content = "我对你们接下来碰到的事情抱以十足的兴趣，当你们归来，请为我讲述你们的故事吧！",
           ContentKR = "앞으로 벌어질 일이 기대되는군요. 돌아오면 당신들의 이야기를 들려주세요!",
@@ -151282,15 +151335,7 @@ PlayAnimation{ActorId{100001},AnimationId{"Explain02_Start"},Duration{2}}
           GUID = "7FAE5042",
           NextDialogue = 51003102,
           SpeakNpcId = 100001
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51003102,
-    MaxKey = 51004137,
-    Loader = function()
-      return {
+        },
         [51003102] = {
           Content = "仔细一看，这牛奶壶上还有个黏糊糊的手印……看起来那只手很小巧。",
           ContentKR = "자세히 보니까, 주전자에 끈적끈적한 손자국이 남아 있어... 꽤 작아 보이는데.",
@@ -153350,7 +153395,15 @@ PlayAnimation{ActorId{100001},AnimationId{"Explain02_Start"},Duration{2}}
           DialogueId = 51004135,
           GUID = "7FAEF9E6",
           NextDialogue = 51004136
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51004136,
+    MaxKey = 51005115,
+    Loader = function()
+      return {
         [51004136] = {
           Content = "来，稍微蹲下一些……",
           ContentKR = "음, 살짝만 숙여봐...",
@@ -153371,15 +153424,7 @@ PlayAnimation{ActorId{100001},AnimationId{"Explain02_Start"},Duration{2}}
           TalkActionId = {
             [1] = "700105:Explain01_End"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51004138,
-    MaxKey = 51005117,
-    Loader = function()
-      return {
+        },
         [51004138] = {
           Content = "好了！哇，你扎辫子的样子好可爱！",
           ContentKR = "다 됐어! 와, 머리를 땋으니까 너무 귀여워!",
@@ -155232,7 +155277,15 @@ PlayAnimation{ActorId{100001},AnimationId{"Explain02_Start"},Duration{2}}
           },
           RestartTag = 51005115,
           bForbidSkipOptions = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51005116,
+    MaxKey = 51006115,
+    Loader = function()
+      return {
         [51005116] = {
           Content = "实在没有喜欢的就算啦！等下次进货了再来看看吧。",
           ContentKR = "마음에 드는 게 없으면 됐어요! 새로 입고되면 그때 다시 와요.",
@@ -155252,15 +155305,7 @@ PlayAnimation{ActorId{100001},AnimationId{"Explain02_Start"},Duration{2}}
           TalkActionId = {
             [1] = "700115:Agree"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51005118,
-    MaxKey = 51006117,
-    Loader = function()
-      return {
+        },
         [51005118] = {
           Content = "侦探？这都是哪跟哪啊……",
           ContentKR = "탐정? 그게 무슨 소리야...",
@@ -157530,7 +157575,15 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           NextDialogue = 51006116,
           Scripts = "SEQ{TurnTo{_delay{4},TurnToDescription{\"700146:n(700144)\"}},CameraMoveTo{_delay{1},TargetPosition{\"54.903625,146.320801,86.79541,0.000006,0.0,-72.008141,28.0,100000.0,false,DoNotOverride,2.8\"},duration{0}},CameraMoveTo{TargetPosition{\"59.0,148.0,86.79541,0.000006,0.0,-72.008102,28.0,100000.0,false,DoNotOverride,2.8\"},duration{3}}}",
           SpeakNpcId = 700146
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51006116,
+    MaxKey = 51007170,
+    Loader = function()
+      return {
         [51006116] = {
           Camera = "123.392273,2.931152,85.919922,0.000078,0.0,-60.200184,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "难道你说的是铁匠皎皎前辈？我们认识她呀！",
@@ -157551,15 +157604,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           GUID = "7FB03F12",
           NextDialogue = 51006118,
           SpeakNpcId = 700146
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51006118,
-    MaxKey = 51007172,
-    Loader = function()
-      return {
+        },
         [51006118] = {
           Camera = "-36.301025,308.482422,2046.960449,0.000022,-8.399964,-137.801437,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "我拜托她做了一个魔法小玩意，能够在各个地方留下记号。那个记号只要被人碰一下，就会显出一段文字，也能记录下附近的人的行动。",
@@ -159789,7 +159834,15 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           TalkActionId = {
             [1] = "700148:Disagree"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51007171,
+    MaxKey = 51007638,
+    Loader = function()
+      return {
         [51007171] = {
           Content = "…………",
           ContentKR = "......",
@@ -159805,15 +159858,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           GUID = "7FB0EC28",
           NextDialogue = 51007173,
           SpeakNpcName = "UI_CMNpc_Name_Jiexi"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51007173,
-    MaxKey = 51007640,
-    Loader = function()
-      return {
+        },
         [51007173] = {
           Content = "如果，有一天你们真能从自己的破口袋里掏出点钱来买票的话……我可以帮你们提前看一看，预留最便宜的那趟车的票。",
           ContentKR = "언젠가 정말 차표를 사게 될 날이 오면... 어느 표가 제일 저렴한지 미리 알아보고 내가 빼놓을게요.",
@@ -161552,7 +161597,15 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           GUID = "7FB1389C",
           NextDialogue = 51007639,
           SpeakNpcId = 700204
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51007639,
+    MaxKey = 51008005,
+    Loader = function()
+      return {
         [51007639] = {
           Content = "唉……虽然很难过，但研究出现意外也是常有的事。我现在想看看那些它曾经关照过的小老鼠过得怎么样。",
           ContentKR = "하... 슬프긴 하지만, 연구를 하다 보면 늘 돌발 상황이 생기곤 해요. 이제, 전 걔가 보살피던 새끼 쥐들이 어떻게 지내는지 확인하고 싶어요.",
@@ -161574,15 +161627,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
             [2] = 51007643
           },
           SpeakNpcId = 700204
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51007641,
-    MaxKey = 51008007,
-    Loader = function()
-      return {
+        },
         [51007641] = {
           Content = "好。跟在我身后吧，我会保护你的。",
           ContentKR = "알겠어. 내 뒤에 꼭 붙어서 잘 따라와. 지켜 줄게.",
@@ -163256,7 +163301,15 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           GUID = "7FB174D2",
           ImprPlusId = 1002,
           NextDialogue = 51008006
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51008006,
+    MaxKey = 51009360,
+    Loader = function()
+      return {
         [51008006] = {
           Content = "您高抬贵手，把我当个屁放了吧，我只要把这批月石卖掉就立马离开冰湖城，绝不回来。",
           ContentKR = "한 번만 못 본 척해주세요. 월석만 다 팔면 아이스레이크 시티를 떠나 다시 오지 않을게요.",
@@ -163272,15 +163325,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           GUID = "7FB17526",
           ImprPlusId = 1005,
           NextDialogue = 51008008
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51008008,
-    MaxKey = 51009362,
-    Loader = function()
-      return {
+        },
         [51008008] = {
           Content = "（男人听罢提起袋子就要跑，好不容易向他说明玩笑并解释身份后，他才悄声说明了自己的难处。）",
           ContentKR = "(말을 듣자마자 남자는 자루를 챙겨 도망치려 한다. 겨우 농담이었다는 말과 함께 신분을 밝히니 슬그머니 본인의 고충을 털어놓는다.)",
@@ -165396,7 +165441,15 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           GUID = "7FB25320",
           ImprPlusId = 1003,
           NextDialogue = 51009361
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51009361,
+    MaxKey = 51009670,
+    Loader = function()
+      return {
         [51009361] = {
           Content = "嗯，我也这么想。毕竟他离开的时候，刚好是快满十八岁。",
           ContentKR = "네, 저도 그렇게 생각해요. 그 친구는 겨우 열여덟이 되기 직전에 떠났거든요.",
@@ -165412,15 +165465,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           GUID = "7FB25374",
           NextDialogue = 51009363,
           SpeakNpcId = 700247
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51009363,
-    MaxKey = 51009672,
-    Loader = function()
-      return {
+        },
         [51009363] = {
           Content = "那是他撒谎撒得最拙劣的一次……明明眼泪已经在眼眶里打转了，还拼命挤出一副微笑的表情，用愉快的语调对我说——",
           ContentKR = "그 친구치곤 아주 서투른 거짓말이었죠... 분명히 눈물이 흘러내리고 있는데도, 억지로 미소를 지으며 쾌활한 말투로 이렇게 말하더라고요.",
@@ -167706,7 +167751,15 @@ TurnTo{TurnToDescription{"700306:n(700300)"}}
           GUID = "7FB285FC",
           NextDialogue = 51009671,
           SpeakNpcId = 700303
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51009671,
+    MaxKey = 51009881,
+    Loader = function()
+      return {
         [51009671] = {
           Content = "整条街都知道大叔是多好的人！为什么你总是把“报应”这种难听话挂在嘴边呢？",
           ContentKR = "아저씨가 좋은 사람이란 건 온 동네 사람이 다 알아! 그런데 왜 자꾸 '받아야 할 벌'이라는 이상한 소리를 하는 거야?",
@@ -167736,15 +167789,7 @@ TurnTo{TurnToDescription{"700306:n(700300)"}}
             [1] = "100001:Think_Start",
             [2] = "700301:Explain02_End"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51009673,
-    MaxKey = 51009883,
-    Loader = function()
-      return {
+        },
         [51009673] = {
           Camera = "78.660156,141.991211,123.371582,0.000067,-4.400513,-84.600342,30.0,100000.0,false,DoNotOverride,2.8",
           Content = "嗯，那是十六年前……",
@@ -169841,7 +169886,15 @@ TurnTo{TurnToDescription{"100001:n(700313)"}}
             [1] = "700300:Sigh_Start",
             [2] = "700302:Think_End"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51009882,
+    MaxKey = 51010081,
+    Loader = function()
+      return {
         [51009882] = {
           Content = "我可是那个法布瑞斯的女儿，既然你曾经在父亲的手下工作过，就应该知道触碰他逆鳞的后果。",
           ContentKR = "난 그 파브리스의 딸이에요. 예전에 아버지 밑에서 일했다니까, 그분의 역린을 건드리면 어떻게 되는지 잘 알겠네요.",
@@ -169860,15 +169913,7 @@ TurnTo{TurnToDescription{"100001:n(700313)"}}
           GUID = "7FB2A8EE",
           NextDialogue = 51009884,
           SpeakNpcId = 700300
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51009884,
-    MaxKey = 51010083,
-    Loader = function()
-      return {
+        },
         [51009884] = {
           Content = "而我则告诉他们：唯一的办法，就是在拿到赎金后尽可能拖延时间，同时想办法制造混乱让维尔莉特逃跑。",
           ContentKR = "그래서 이렇게 말해 줬죠. 유일한 방법은, 몸값을 받고 최대한 시간을 끌면서, 어떻게든 현장을 소란스럽게 만든 다음에 바이올렛을 탈출시키는 거라고요.",
@@ -171991,7 +172036,15 @@ PlayAnimation{ActorId{100001},AnimationId{"Nvzhu_Story_StretchHand_Start"},Durat
           DialogueId = 51010081,
           GUID = "7FB2C96A",
           NextDialogue = 51010082
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51010082,
+    MaxKey = 51010810,
+    Loader = function()
+      return {
         [51010082] = {
           Content = "不过这种担忧是多余的——",
           ContentKR = "하지만 그건 쓸데없는 걱정이었다...",
@@ -172004,15 +172057,7 @@ PlayAnimation{ActorId{100001},AnimationId{"Nvzhu_Story_StretchHand_Start"},Durat
           ContentKR = "오페라 속 인물들에게 완전히 몰입한 나는, 공연이 끝나는 순간까지 박수 치는 것도 잊고 말았으니까...",
           DialogueId = 51010083,
           GUID = "7FB2C9BE"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51010084,
-    MaxKey = 51010812,
-    Loader = function()
-      return {
+        },
         [51010084] = {
           Camera = "-34.440796,-11.397461,144.465332,0.000003,0.80015,-179.606598,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "吉赛尔，我需要你给我一个解释！",
@@ -173906,7 +173951,15 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           GUID = "7FB34104",
           NextDialogue = 51010811,
           SpeakNpcId = 700203
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51010811,
+    MaxKey = 51012500,
+    Loader = function()
+      return {
         [51010811] = {
           Content = "“从{性别：他|她}身上，我看到了另一种不一样的生活。”",
           ContentKR = "\"그 친구한테서 전 또 다른 삶을 보게 됐어요.\"",
@@ -173922,15 +173975,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           GUID = "7FB34158",
           NextDialogue = 51010813,
           SpeakNpcId = 700203
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51010813,
-    MaxKey = 51012502,
-    Loader = function()
-      return {
+        },
         [51010813] = {
           Content = "（女人熟练地复述着——显然，那封信她不知看了多少遍。）",
           ContentKR = "(여인은 그 편지를 수도 없이 반복해 읽은 듯 능숙하게 문장을 되뇐다.)",
@@ -175467,7 +175512,15 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           GUID = "7FB45648",
           NextDialogue = 51012501,
           SpeakNpcId = 230002
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51012501,
+    MaxKey = 51101003,
+    Loader = function()
+      return {
         [51012501] = {
           Content = "你好，前辈。我想给这本“影像笔记”做一些装饰。如果你有多余的材料，可不可以分一些给我？",
           DialogueId = 51012501,
@@ -175487,15 +175540,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           TalkActionId = {
             [1] = "0:Talk02_End"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51012503,
-    MaxKey = 51101005,
-    Loader = function()
-      return {
+        },
         [51012503] = {
           Content = "哈哈，真教人怀念啊，老朽小的时候，也很喜欢做手工……",
           DialogueId = 51012503,
@@ -175513,7 +175558,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         [51012505] = {
           Content = "嗯，这样就差不多了。接下来，想一想要放怎样的照片进去吧。",
           DialogueId = 51012505,
-          DialoguePanelType = "{type:showpic;dir:Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/T_Guide_Chapter_Passport.T_Guide_Chapter_Passport'}",
+          DialoguePanelType = "{type:showpic;dir:Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/T_Guide_ChapterItem_0021.T_Guide_ChapterItem_0021'}",
           GUID = "7FB4571A",
           SpeakNpcId = 100001
         },
@@ -177268,7 +177313,15 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           GUID = "7FED0E4E",
           NextDialogue = 51101004,
           SpeakNpcId = 700320
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51101004,
+    MaxKey = 51103029,
+    Loader = function()
+      return {
         [51101004] = {
           Content = "这次借的也不是一笔小数目啊。怎么，又想上哪里去看看了？",
           ContentKR = "금액이 상당한데, 또 어디 다녀오실 건가 보죠?",
@@ -177284,15 +177337,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           GUID = "7FED0EA2",
           NextDialogue = 51101006,
           SpeakNpcId = 700321
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51101006,
-    MaxKey = 51103031,
-    Loader = function()
-      return {
+        },
         [51101006] = {
           Content = "您还是一点没变啊。按照规定，这样一笔数额的借款必须留下贵重抵押物，您能接受吗？",
           ContentKR = "여전하시네요. 저희 규정상 이 정도 금액은 귀중품을 담보로 맡겨주셔야 하는데, 괜찮으시겠어요?",
@@ -179270,7 +179315,15 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           Duration = 5,
           GUID = "7FEE5A0A",
           SpeakNpcId = 700323
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51103030,
+    MaxKey = 51105044,
+    Loader = function()
+      return {
         [51103030] = {
           Content = "这个机枢考验的是你的记忆力，记住那些金色组件的位置，然后用牵机方枢把它们拉出来就行，也不难对吧。",
           ContentKR = "이번엔 자네의 기억력을 시험해 봄세. 저 붉은 부품들의 위치를 기억해 뒀다가, 견기방추로 끌어내면 된다네. 그리 어렵진 않지?",
@@ -179286,15 +179339,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           Duration = 7,
           GUID = "7FEE5A5E",
           SpeakNpcId = 700323
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51103032,
-    MaxKey = 51105046,
-    Loader = function()
-      return {
+        },
         [51103032] = {
           Content = "这种机枢会稍微复杂一点，你可得看仔细了。",
           ContentKR = "마지막 관문은 조금 더 머리를 써야 할 걸세. 정신 바짝 차리고 잘 보게나.",
@@ -181520,7 +181565,15 @@ MoveTo{_delay{3},ActorId{700324},TargetPoint{"P51104118White"},MoveSpeed{80},Vis
           GUID = "7FEF2C5E",
           NextDialogue = 51105045,
           SpeakNpcId = 100001
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51105045,
+    MaxKey = 51105614,
+    Loader = function()
+      return {
         [51105045] = {
           Camera = "-74.585938,-129.239258,143.611328,0.000002,-2.000057,58.197319,35.0,143.663574,false,Manual,2.8",
           Content = "如果能让灵灵亲眼再见一眼奶奶所化的无由生，灵灵就不会再害怕，无由生也能了却执念，安然离去了。",
@@ -181540,15 +181593,7 @@ MoveTo{_delay{3},ActorId{700324},TargetPoint{"P51104118White"},MoveSpeed{80},Vis
           TalkActionId = {
             [1] = "100001:Think_End"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51105047,
-    MaxKey = 51105701,
-    Loader = function()
-      return {
+        },
         [51105047] = {
           Content = "{nickname}，又见面了。",
           ContentKR = "또 만났네요, {nickname}.",
@@ -183852,7 +183897,15 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
           TalkActionId = {
             [1] = "700358:Explain01_Start"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51105615,
+    MaxKey = 51108000,
+    Loader = function()
+      return {
         [51105615] = {
           Camera = "221.630859,16.369629,149.368164,0.000039,-18.199278,-167.801788,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "嗯？盖雷亚剧院，好的，我这就去！",
@@ -183873,15 +183926,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
           GUID = "7FF01112",
           NextDialogue = 51105702,
           ToFinalCameraBlendTime = 5
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51105702,
-    MaxKey = 51108002,
-    Loader = function()
-      return {
+        },
         [51105702] = {
           Camera = "410.433594,758.865479,107.394531,0.000057,-1.200132,-118.800987,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "哟，白，你回来啦。",
@@ -185607,7 +185652,15 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
           TalkActionId = {
             [1] = "701008:Talk01_Start"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51108001,
+    MaxKey = 51114023,
+    Loader = function()
+      return {
         [51108001] = {
           Content = "（一个格外热情的男子正这样打着招呼，在环视四周之后，你最终确定了他口中的“外国人”就是你自己。）",
           ContentKR = "(붙임성 좋은 남자가 인사를 건넨다. 주위를 둘러보니, 남자가 말한 '외국인'은 아무래도 나인 모양이다.)",
@@ -185627,15 +185680,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
             [1] = 51108003
           },
           RestartTag = 51108002
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51108003,
-    MaxKey = 51114025,
-    Loader = function()
-      return {
+        },
         [51108003] = {
           Content = "回应这位热情的男人。",
           ContentKR = "붙임성 좋은 남자의 인사를 받아 준다.",
@@ -187557,7 +187602,15 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
             [1] = "701016:Explain02_Start",
             [2] = "701018:Think_Start"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51114024,
+    MaxKey = 51118045,
+    Loader = function()
+      return {
         [51114024] = {
           Content = "要不我再去买两个一样大的？",
           ContentKR = "지금 거랑 똑같은 크기로 두 개 더 사다 드릴까요?",
@@ -187578,15 +187631,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
             [1] = "701016:Explain02_End",
             [2] = "701018:Think_End"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51114026,
-    MaxKey = 51118047,
-    Loader = function()
-      return {
+        },
         [51114026] = {
           Content = "切成片大家分着吃吧。",
           ContentKR = "그냥 인원수에 맞춰서 갈라 먹으면 되잖아요.",
@@ -189586,7 +189631,15 @@ MoveTo{ActorId{701023},TargetPoint{"YuXian_Leave_Target"},MoveSpeed{100},Visibil
           TalkActionId = {
             [1] = "701024:Talk01_Start"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51118046,
+    MaxKey = 51124023,
+    Loader = function()
+      return {
         [51118046] = {
           Content = "他已经走了。",
           ContentKR = "오빠는 이미 떠났어.",
@@ -189612,15 +189665,7 @@ MoveTo{ActorId{701023},TargetPoint{"YuXian_Leave_Target"},MoveSpeed{100},Visibil
           TalkActionId = {
             [1] = "100001:Talk02_End"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51118048,
-    MaxKey = 51124025,
-    Loader = function()
-      return {
+        },
         [51118048] = {
           Content = "你哥哥工作很辛苦，不想让你担心。",
           ContentKR = "오빠가 일이 너무 힘든데, 널 걱정시키고 싶진 않대.",
@@ -191516,7 +191561,15 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           TalkActionId = {
             [1] = "701033:Shy03_Start"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51124024,
+    MaxKey = 51125715,
+    Loader = function()
+      return {
         [51124024] = {
           Content = "我想不会。",
           ContentKR = "아마 안 그럴 거야.",
@@ -191541,15 +191594,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           TalkActionId = {
             [1] = "701033:Explain01_Start"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51124026,
-    MaxKey = 51125717,
-    Loader = function()
-      return {
+        },
         [51124026] = {
           Content = "今天就聊到这里吧，你是个好有龙氏，但我要去研究更多的无由生，证明我是个在无由生研究上独一无二的皎皎啦。",
           ContentKR = "오늘은 여기까지만 어울려 줄게. 넌 착한 용의 자손이지만, 난 무유생을 더 연구해야 해. 내가 무유생 연구 분야에서 단 하나밖에 없는 루나라는 걸 증명해야 하거든!",
@@ -193244,7 +193289,15 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           GUID = "7FFCE49E",
           NextDialogue = 51125716,
           SpeakNpcId = 701041
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51125716,
+    MaxKey = 51126536,
+    Loader = function()
+      return {
         [51125716] = {
           Content = "他用几块木板测绘星辰，记录航向，这才能在茫茫大海上自由来去，不受羁绊。",
           ContentKR = "그분은 나무판 몇 개로 별자리를 읽고 항로를 기록해서, 그 넓은 바다를 거침없이 자유자재로 오갈 수 있으셨던 거야.",
@@ -193260,15 +193313,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           GUID = "7FFCE4F2",
           NextDialogue = 51125718,
           SpeakNpcId = 701041
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51125718,
-    MaxKey = 51126538,
-    Loader = function()
-      return {
+        },
         [51125718] = {
           Content = "所以，矩和飏，都是咱们要时时牢记于心的开国贤君，没有他们，就没有今天的华胥，我们要时时刻刻记住他们的名字和事迹！懂了吗？",
           ContentKR = "그러니까 우리는 늘 이 나라의 기틀을 닦아 주신 구와 양 두 선조님과 그분들의 업적을 가슴 깊이 새겨야 하네. 지금의 화서를 존재하게 해 주신 분들이니 말이야! 알겠는가?",
@@ -194838,7 +194883,15 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           GUID = "7FFD6B50",
           NextDialogue = 51126537,
           SpeakNpcId = 701053
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51126537,
+    MaxKey = 51127515,
+    Loader = function()
+      return {
         [51126537] = {
           Content = "诶……我就是书读不明白才来干这行的，怎么还要记这些呢，巧凤，你说我的品行你还不晓得吗？咱俩可是从小一条裤衩长大的！",
           ContentKR = "아니... 공부 머리가 안 돼서 장사판에 뛰어든 건데, 나보고 어떻게 외우란 거야. 친구야, 우린 어릴 때부터 빤스도 같이 입던 사이잖아! 너 내 스타일 몰라?",
@@ -194853,15 +194906,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           DialogueId = 51126538,
           GUID = "7FFD6BA4",
           SpeakNpcId = 701053
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51126539,
-    MaxKey = 51127517,
-    Loader = function()
-      return {
+        },
         [51126539] = {
           Content = "没事。",
           ContentKR = "전 신경 쓰지 마세요.",
@@ -196463,7 +196508,15 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           GUID = "7FFE0BEE",
           NextDialogue = 51127516,
           SpeakNpcId = 100001
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51127516,
+    MaxKey = 51140006,
+    Loader = function()
+      return {
         [51127516] = {
           Content = "有趣啊！就像我说的，微茫市来来去去的人里，能看到你这样面孔的机会可不多，小鬼，想不想知道我说的蛟人故事是什么，给我买壶酒我就告诉你。",
           ContentKR = "재밌잖아! 이 어스름 시장에서 너 같은 녀석을 볼 기회는 많지 않다고. 꼬맹이, 나한테 술 한 병 사 주면, 교인이 뭔지 얘기해 줄게.",
@@ -196481,15 +196534,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           DialogueId = 51127517,
           GUID = "7FFE0C42",
           NextDialogue = 51127518
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51127518,
-    MaxKey = 51140008,
-    Loader = function()
-      return {
+        },
         [51127518] = {
           Content = "嘿嘿，我就知道你感兴趣，你可知，传闻中在华胥，有龙氏如果被神话中的黑蛟蛊惑，就会变成可怖的怪物，我们将其称之为——蛟人。",
           ContentKR = "흐흐, 당연히 구미가 당기겠지. 화서엔 용의 자손이 신화 속의 검은 교룡에게 홀리면 무시무시한 괴물로 변한단 얘기가 있는데, 그 괴물이 바로 '교인'이야.",
@@ -198099,7 +198144,15 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           TalkActionId = {
             [1] = "200002:Afraid_End"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51140007,
+    MaxKey = 51151095,
+    Loader = function()
+      return {
         [51140007] = {
           Camera = "-205.567871,-119.201172,110.475708,0.000172,0.0,5.771363,35.000015,187.02475,false,Manual,7.0",
           Content = "什么嘛，原来是无由生，你怎么突然冒出来，吓了我好一大跳……看在你道歉态度诚恳的份上，魔王大人就原谅你了。",
@@ -198130,15 +198183,7 @@ PlayFacial{ActorId{200002},FacialId{"None"}}
             [1] = "100001:n(100001)"
           },
           SpeakNpcId = 701074
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51140009,
-    MaxKey = 51151097,
-    Loader = function()
-      return {
+        },
         [51140009] = {
           Content = "（敏锐察觉到一丝不对劲，脚步偷偷向后挪了挪。）",
           ContentKR = "(불길한 낌새에 몸이 저절로 뒷걸음질 쳐진다.)",
@@ -200666,7 +200711,15 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
           GUID = "800D2886",
           NextDialogue = 51151096,
           SpeakNpcId = 700376
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51151096,
+    MaxKey = 51153088,
+    Loader = function()
+      return {
         [51151096] = {
           Camera = "-595.896667,244.201172,274.973206,0.000002,-17.388731,-24.245804,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 51151096,
@@ -200690,15 +200743,7 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
           DialogueId = 51151097,
           GUID = "800D28DA",
           NextDialogue = 51151098
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51151098,
-    MaxKey = 51153090,
-    Loader = function()
-      return {
+        },
         [51151098] = {
           Content = "啾啾~啾~~~",
           ContentKR = "쮸쮸~ 쮸쮸~~~",
@@ -202933,7 +202978,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           TalkActionId = {
             [1] = "100001:RaiseHand_End"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51153089,
+    MaxKey = 51156525,
+    Loader = function()
+      return {
         [51153089] = {
           Camera = "-104.441406,157.805664,256.822266,0.000024,-24.942291,-76.543663,50.0,400.0,false,Manual,2.8",
           Content = "已经过去的不可再追回，现在的一切尚在手中。",
@@ -202955,15 +203008,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "800E6FD4",
           NextDialogue = 51153091,
           SpeakNpcId = 701091
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51153091,
-    MaxKey = 51156527,
-    Loader = function()
-      return {
+        },
         [51153091] = {
           Camera = "609.125,169.490234,2.267578,0.0,7.999989,-155.538208,34.0,720.492676,false,Manual,2.8",
           Content = "我要回家了。",
@@ -203089,7 +203134,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51154012] = {
           Content = "只可惜，公尚师傅一开始造的那几只拟真狴犴，引来了悬衡派一群无聊的老顽固，念叨着什么“渎神”、“不敬”之类的，给他没收了，无趣。",
-          ContentKR = "\n\n아쉽게도, 공상 사부가 만든 '실사 폐안'들은 현형파의 고리타분한 이들을 불러들였지. 그들은 '불경'이니 '신성 모독'이니 하면서, 실사 폐안을 모조리 압수해갔네. 참으로 재미라곤 눈곱만치도 찾아볼 수 없는 자들이지.",
+          ContentKR = "아쉽게도, 공상 사부가 만든 '실사 폐안'들은 현형파의 고리타분한 이들을 불러들였지. 그들은 '불경'이니 '신성 모독'이니 하면서, 실사 폐안을 모조리 압수해갔네. 참으로 재미라곤 눈곱만치도 찾아볼 수 없는 자들이지.",
           DialogueId = 51154012,
           GUID = "800F06EF",
           NextDialogue = 51154024,
@@ -203212,7 +203257,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51155003] = {
           Content = "“大烟花”！！",
-          ContentKR = "'초강력 폭죽' 말이야!",
+          ContentKR = "'초강력 폭죽'이라잖아!",
           DialogueId = 51155003,
           GUID = "800FA9AE",
           NextDialogue = 51155004,
@@ -204574,7 +204619,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
             [1] = 51156526
           },
           SpeakNpcId = 701118
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51156526,
+    MaxKey = 51158304,
+    Loader = function()
+      return {
         [51156526] = {
           Content = "不聊了，再见。",
           ContentKR = "전 이만 가 볼게요.",
@@ -204588,15 +204641,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 51156527,
           GUID = "8010A3B6",
           SpeakNpcId = 701118
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51156528,
-    MaxKey = 51158306,
-    Loader = function()
-      return {
+        },
         [51156528] = {
           Content = "博山香行，百年老店，千年基业，香料品质有保证，定让顾客买个安心，买个开心！",
           ContentKR = "오랜 역사와 전통을 자랑하는 박산향료입니다! 확실한 품질로 믿고 구매하실 수 있어요!",
@@ -205147,7 +205192,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51157002] = {
           Content = "这东西可有特色了，你知道锦云谷吗？这道小吃就是我当年因差前往锦云谷，在那待了一段时间后，当地居民拿来招呼我的。",
-          ContentKR = "아주 별미랍니다. 혹시 서중이라는 곳 아세요? 예전에 제가 일 때문에 한동안 거기 머문 적이 있는데, 그때 거기 사람들이 대접해 줬던 먹거리예요.",
+          ContentKR = "아주 별미랍니다. 혹시 금운곡이라는 곳 아세요? 예전에 제가 일 때문에 한동안 거기 머문 적이 있는데, 그때 거기 사람들이 대접해 줬던 먹거리예요.",
           DialogueId = 51157002,
           GUID = "8010F1A4",
           NextDialogue = 51157003,
@@ -205174,7 +205219,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51157005] = {
           Content = "据锦云谷人说，此物名为——串串签！怎么样，要不要尝尝？",
-          ContentKR = "서중 사람들은 이걸... '꼬치꼬치'라고 부른대요! 어때요? 시식해 보실래요?",
+          ContentKR = "금운곡 사람들은 이걸... '꼬치꼬치'라고 부른대요! 어때요? 시식해 보실래요?",
           DialogueId = 51157005,
           GUID = "8010F222",
           SpeakNpcId = 701124
@@ -206199,7 +206244,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 51158304,
           GUID = "8011C740",
           NextDialogue = 51158305
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51158305,
+    MaxKey = 51159504,
+    Loader = function()
+      return {
         [51158305] = {
           Content = "这就不得不为客人推荐我们的玉桂甜瓜卷了！",
           ContentKR = "그렇다면 저희 가게의 자랑인 참외계피롤을 꼭 드셔 보셔야죠!",
@@ -206215,15 +206268,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "8011C794",
           NextDialogue = 51158307,
           SpeakNpcId = 701128
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51158307,
-    MaxKey = 51159506,
-    Loader = function()
-      return {
+        },
         [51158307] = {
           Content = "怎么样，客人要点这个吗？",
           ContentKR = "어떠세요, 이걸로 주문하시겠어요?",
@@ -207819,7 +207864,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 51159504,
           GUID = "80128C20",
           NextDialogue = 51159505
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51159505,
+    MaxKey = 51160803,
+    Loader = function()
+      return {
         [51159505] = {
           Content = "外乡客？哟，那我可要来给你说道说道了。",
           ContentKR = "다른 나라에서 왔다고? 오호, 그렇다면 내가 또 한마디 안 할 수가 없지.",
@@ -207835,15 +207888,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "80128C74",
           NextDialogue = 51159507,
           SpeakNpcId = 701144
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51159507,
-    MaxKey = 51160805,
-    Loader = function()
-      return {
+        },
         [51159507] = {
           Content = "开个玩笑嘛！娃儿，第一次来皓京？有什么不了解的地方，尽管来问我们这些整日在西市待着的老头就好。",
           ContentKR = "거, 농담 좀 한 걸세! 이보게, 호경엔 처음인가? 궁금한 게 있으면, 매일같이 서문 시장에 눌러앉아 있는 이 늙은이들한테 언제든 물어보게.",
@@ -209435,7 +209480,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 51160803,
           GUID = "8013613E",
           NextDialogue = 51160805
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51160804,
+    MaxKey = 51162303,
+    Loader = function()
+      return {
         [51160804] = {
           Content = "完全不懂。",
           ContentKR = "장기는 전혀 몰라요.",
@@ -209454,15 +209507,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
             [3] = 51160810
           },
           SpeakNpcId = 701156
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51160806,
-    MaxKey = 51162305,
-    Loader = function()
-      return {
+        },
         [51160806] = {
           Content = "黑方胜红方输。",
           ContentKR = "흑의 승리네요.",
@@ -211028,7 +211073,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 51162303,
           GUID = "80145756",
           NextDialogue = 51162305
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51162304,
+    MaxKey = 51165111,
+    Loader = function()
+      return {
         [51162304] = {
           Content = "什么跑出去了？",
           ContentKR = "뭐가 도망쳤다는 거예요?",
@@ -211043,15 +211096,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "801457AA",
           NextDialogue = 51162306,
           SpeakNpcId = 701172
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51162306,
-    MaxKey = 51165113,
-    Loader = function()
-      return {
+        },
         [51162306] = {
           Content = "那价钱出得极高，接到活第二天，我们一船的伙计都去抓了，好不容易凑齐数量，连赶带围地送上船，又一路颠簸，运到皓京。",
           ContentKR = "보수가 워낙 세서, 일 받은 다음 날 초록 공작새를 잡으러 나갔죠. 겨우 수량을 맞춰서 부랴부랴 배에 싣고, 어렵사리 호경까지 실어 온 거예요.",
@@ -212237,6 +212282,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51164910] = {
           Content = "说的也是，无由生便是这般，无由而死，无由往生，死前了无牵挂，死后也岌岌无名啊。",
+          ContentKR = "그 말도 옳소. 무유생이란 원래 그런 법이지. 이유 없이 죽고, 이유 없이 윤회하며, 죽기 전에도 미련이 없고, 죽은 후에도 이름조차 남기지 못하는 존재 아닌가.",
           DialogueId = 51164910,
           GUID = "8016030C",
           SpeakNpcId = 700385
@@ -212410,6 +212456,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51165018] = {
           Content = "诚心寻宝物，信物通妙境啊，这弥足珍贵之物总不能乖乖跳到你怀里是不是？你定然是需要付出一些小小的努力，才能寻到你想要的东西呀。",
+          ContentKR = "진심으로 보물을 구해야 그 뜻이 닿는 법. 이토록 귀중한 물건이 그냥 품에 들어올 리가 있겠나? 원하는 걸 찾으려면 당연히 약간의 노력은 필요한 법이라네.",
           DialogueId = 51165018,
           GUID = "801614C4",
           SpeakNpcId = 700385
@@ -212434,6 +212481,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51165022] = {
           Content = "虽然我平日里爱插科打诨，但此事我倒是真没骗你们，只可惜我已是无由生的身份，不然此等美物，我定是不能放手的呀。",
+          ContentKR = "평소에야 농담을 좋아하지만, 이번만큼은 정말 속이지 않았네. 이미 무유생의 몸이 되어버린 게 아쉽군, 그렇지 않았다면 이런 아름다운 물건을 절대 놓지 않았을 텐데 말이야.",
           DialogueId = 51165022,
           GUID = "8016156C",
           SpeakNpcId = 700385
@@ -212516,7 +212564,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "检查是否有其他值得注意的点。",
           DialogueId = 51165111,
           GUID = "80162406"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51165112,
+    MaxKey = 51166007,
+    Loader = function()
+      return {
         [51165112] = {
           Content = "他的右手掌部分的骨骼完全不见了。",
           DialogueId = 51165112,
@@ -212528,15 +212584,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 51165113,
           GUID = "8016245A",
           SpeakNpcId = 100001
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51165114,
-    MaxKey = 51166009,
-    Loader = function()
-      return {
+        },
         [51165114] = {
           Content = "再次检查找到白骨的水域。",
           DialogueId = 51165114,
@@ -212585,6 +212633,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51165201] = {
           Content = "大叔您好！可以稍微打扰你一下下吗？",
+          ContentKR = "아저씨, 안녕! 잠깐 시간 좀 내줄 수 있을까?",
           DialogueId = 51165201,
           GUID = "801632CA",
           SpeakNpcId = 200002
@@ -213710,7 +213759,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 51166007,
           GUID = "8016B706",
           SpeakNpcId = 700387
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51166008,
+    MaxKey = 51167802,
+    Loader = function()
+      return {
         [51166008] = {
           Content = "也就是在那一瞬间，我才终于知晓，所谓琴谱不过一场浮云，我所追求的琴艺，出自我自己，只有我用本心滋养，才可找到正确的道路。",
           DialogueId = 51166008,
@@ -213722,15 +213779,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 51166009,
           GUID = "8016B75A",
           SpeakNpcId = 700387
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51166010,
-    MaxKey = 51167804,
-    Loader = function()
-      return {
+        },
         [51166010] = {
           Content = "是不是我还能听到那曲安眠的琴声……",
           DialogueId = 51166010,
@@ -214031,7 +214080,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51167102] = {
           Content = "不枉我坐了恁个久的船，有个啥子说法来着，先生教过的，叫…… 不虚此行！哎哟，背书这种事硬是恼火得很哦！",
-          ContentKR = "징허게 배 타고 온 보람이 있구마잉! 이런 걸 시방 뭐라고 헌다냐? 선생님헌테 배웠던 거 같은디... 실로 흡족한 방문이라 혔나? 워메~ 겁나 대갈빡 터지네.",
+          ContentKR = "징허게 배 타고 온 보람이 있구마잉! 이런 걸 시방 뭐라고 헌다냐? 선생님헌테 배웠던 거 같은디... 실로 흡족한 방문이라 혔나? 워메~ 대굴빡 터지네.",
           DialogueId = 51167102,
           GUID = "80176AAC",
           NextDialogue = 51167103,
@@ -214039,7 +214088,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51167103] = {
           Content = "你干啥子一直盯到我看？没见过我们锦云谷来的英雄豪杰迈？我晓得了，你肯定是遭我的伟岸气度震慑到了，是不是噻？",
-          ContentKR = "근디 니는 뭐땜시 째려보냐. 금운곡에서 온 사람 처음 보냐? 아~ 내가 허벌나게 멋져서 놀라 자빠졌디여?",
+          ContentKR = "근디 니는 뭐땜시 째려보냐. 금운곡에서 온 사람 처음 보냐? 아~ 내가 너무 멋져서 놀라 자빠져부렀냐.",
           DialogueId = 51167103,
           GUID = "80176AD6",
           NextDialogue = 51167104,
@@ -214054,7 +214103,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51167105] = {
           Content = "干啥子又不开腔了？哑巴了嗦？哦豁！哦豁！一点反应都没得，莫非是听不见迈？",
-          ContentKR = "왜 갑자기 말이 없어? 벙어리라도 돼부렀드냐. 뭐땀시 반응이 없다야? 혹시 귀가 안 들리는 거 아녀?",
+          ContentKR = "왜 갑자기 말이 없어? 벙어리라도 돼부렀냐. 뭐땀시 반응이 없다야? 혹시 귀가 안 들리는 거 아녀?",
           DialogueId = 51167105,
           GUID = "80176B2A",
           NextOptions = {
@@ -214072,7 +214121,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51167107] = {
           Content = "嚯哟！还会说话的嘛！我跟你勒个朋友长得像？是啥子样子的朋友哦？不过本人帅得惊天地泣鬼神，你勒朋友怕是跟我比都比不上一丢丢噻！",
-          ContentKR = "워메~ 말은 할 줄 아는갑네? 내가 니 친구를 닮았다고? 어찌 생겼는디? 그래도 나만큼 잘생긴 사람은 찾기 힘들제? 니 친구는 나한테 비허면 아직 한참 멀었지라~",
+          ContentKR = "워메~ 말은 할 줄 아는갑네? 내가 니 친구를 닮았다고? 어떻게 생겼는데? 그래도 나만큼 잘생긴 사람은 찾기 힘들제? 니 친구는 나한테 비하면 아직 한참 멀었지라잉~",
           DialogueId = 51167107,
           GUID = "80176B7E",
           NextDialogue = 51167110,
@@ -215249,7 +215298,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 51167802,
           GUID = "8017DD84",
           NextDialogue = 51167803
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51167803,
+    MaxKey = 51169513,
+    Loader = function()
+      return {
         [51167803] = {
           Content = "正是，鄙人任职船舶司已有三载，日常工作即为核算参商港内船只进出量，货物量，以及税收统计等。",
           ContentKR = "맞아. 항만사에서 3년째 일하고 있어. 삼상항에 드나드는 배나 화물, 세금 같은 걸 계산하는 게 내 일이지.",
@@ -215267,15 +215324,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
             [1] = 51167805
           },
           SpeakNpcId = 701187
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51167805,
-    MaxKey = 51169515,
-    Loader = function()
-      return {
+        },
         [51167805] = {
           Content = "参商港一年大概有多少船只进出？",
           ContentKR = "삼상항에는 1년에 배가 대략 몇 척이나 드나드나요?",
@@ -216833,7 +216882,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "8018F63A",
           NextDialogue = 51169514,
           SpeakNpcId = 701198
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51169514,
+    MaxKey = 51170515,
+    Loader = function()
+      return {
         [51169514] = {
           Content = "（要买他的朝报吗？）",
           ContentKR = "(사줄까 말까...)",
@@ -216850,15 +216907,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 51169515,
           GUID = "8018F68E",
           NextDialogue = 51169516
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51169516,
-    MaxKey = 51170517,
-    Loader = function()
-      return {
+        },
         [51169516] = {
           Content = "（获得一份报纸。）",
           ContentKR = "(신문을 받았다.)",
@@ -218434,7 +218483,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "80199A9E",
           NextDialogue = 51170516,
           SpeakNpcId = 701207
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51170516,
+    MaxKey = 51171711,
+    Loader = function()
+      return {
         [51170516] = {
           Content = "为人子则孝亲敬长，事龙君则鞠躬尽瘁，为偶则忠贞不渝，为友则肝胆相照。",
           ContentKR = "부모에게는 효를, 용신님께는 성심을, 배우자에게는 의리를, 벗에게는 진심을 다해야 하는 거죠.",
@@ -218450,15 +218507,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "80199AF2",
           NextDialogue = 51170518,
           SpeakNpcId = 701207
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51170518,
-    MaxKey = 51171713,
-    Loader = function()
-      return {
+        },
         [51170518] = {
           Content = "若是在此求学的所有孩子都能深刻领悟到其中真谛，未来无论成大事还是遵小节，都不会做出什么损人利己的坏事来。",
           ContentKR = "이 학원의 모든 아이가 그 참뜻을 깊이 깨닫는다면, 훗날 그 어떤 일을 하더라도, 남에게 피해를 주며 제 잇속만 차리는 몹쓸 짓은 하지 않을 거예요.",
@@ -219141,6 +219190,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51171101] = {
           Content = "若华胥的安宁和平需要人们以不同的努力去守护，那为何飘零人的行为不能算是一种独特的方式？",
+          ContentKR = "다들 각자의 방식으로 화서를 지키는 거라면, 나그네들의 방식도 그중 하나로 인정해 줘야 하는 거 아닌가요?",
           DialogueId = 51171101,
           GUID = "8019FAEB",
           NextDialogue = 51171102,
@@ -220037,7 +220087,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "801A5ED6",
           NextDialogue = 51171712,
           SpeakNpcId = 701220
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51171712,
+    MaxKey = 51172919,
+    Loader = function()
+      return {
         [51171712] = {
           Content = "一般来祀烟阁进行日奉的多半都是皓京本地居民，他们都会在泉通阁登记名籍之时，由香官施术，从而沾染上特殊的香气。",
           ContentKR = "보통 사연각에 와서 매일 향을 올리시는 분들은 대부분 호경 토박이예요. 천통각에서 주민 등록을 마치면, 향관이 술법을 걸어서 몸에 독특한 향이 배게 되거든요.",
@@ -220055,15 +220113,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
             [1] = 51171714
           },
           SpeakNpcId = 701220
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51171714,
-    MaxKey = 51173002,
-    Loader = function()
-      return {
+        },
         [51171714] = {
           Content = "你说的施术是什么术？",
           ContentKR = "향관이 무슨 술법을 거는데요?",
@@ -220162,7 +220212,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51171802] = {
           Content = "咳……唔……惟愿神君庇佑，助家父早日康复，脱离苦海，我愿以命抵命……以……咳咳！",
-          ContentKR = "콜록... 으윽... 부디 아버지께서 하루빨리 병마를 떨치고 쾌차하시기 바라나이다. 아들인... 제 목숨을... 바쳐서라도... 콜록!",
+          ContentKR = "콜록... 으윽... 부디 아버지께서 하루빨리 병마를 떨치고 쾌차하시기 바라나이다. ... 제 목숨을... 바쳐서라도... 콜록!",
           DialogueId = 51171802,
           GUID = "801A6DC4",
           NextOptions = {
@@ -220856,7 +220906,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51172302] = {
           Content = "合香官大人，我只是不明白，分香术在制香过程中起到的作用是什么？",
-          ContentKR = "합향관님, 전 도무지 이해가 안 갑니다. 향을 만드는 과정에서 합향술이 대체 무슨 역할을 하는 건가요?",
+          ContentKR = "합향관님, 전 도무지 이해가 안 갑니다. 향을 만드는 과정에서 분향술이 대체 무슨 역할을 하는 건가요?",
           DialogueId = 51172302,
           GUID = "801ABFCC",
           NextDialogue = 51172303,
@@ -221653,7 +221703,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "801B2506",
           NextDialogue = 51172920,
           SpeakNpcId = 701237
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51172920,
+    MaxKey = 51174411,
+    Loader = function()
+      return {
         [51172920] = {
           Content = "（无由生似乎话中有话，但作为一个不了解它生平的人，理解这些话还是有些太困难了。）",
           ContentKR = "(무유생은 뭔가 의미심장한 듯 말했지만, 이 무유생의 사연을 모르는 나는 그 말의 속뜻을 좀처럼 이해할 수 없었다.)",
@@ -221667,15 +221725,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "801B32A4",
           NextDialogue = 51173003,
           SpeakNpcId = 701238
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51173003,
-    MaxKey = 51174413,
-    Loader = function()
-      return {
+        },
         [51173003] = {
           Content = "（面前的女孩用手捂住双眼，对着空气自言自语，看起来有些滑稽，似乎是感觉到了你靠近时的阴影，她移开了手。）",
           ContentKR = "(눈앞의 소녀는 두 손으로 눈을 가린 채 허공에 대고 혼잣말을 한다. 조금 우스꽝스러워 보이는 모습이었지만, 나의 그림자를 느꼈는지 소녀가 스르르 손을 내린다.)",
@@ -223237,7 +223287,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "801C19CE",
           NextDialogue = 51174412,
           SpeakNpcId = 701256
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51174412,
+    MaxKey = 51175415,
+    Loader = function()
+      return {
         [51174412] = {
           Content = "你不觉得这种能力很厉害吗？拥有瞬间吸引所有人视线的能力，不像我，我只能附身在一块大石头上面，动一动就没力气了。",
           ContentKR = "진짜 멋진 능력이지 않아? 순식간에 사람들의 시선을 집중시켜 버리다니. 난 기껏해야 커다란 바위에 빙의하는 게 다고, 한 번만 움직여도 기운이 쭉 빠져 버리는데.",
@@ -223253,15 +223311,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "801C1A22",
           NextDialogue = 51174414,
           SpeakNpcId = 701256
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51174414,
-    MaxKey = 51175417,
-    Loader = function()
-      return {
+        },
         [51174414] = {
           Content = "要是我有一天也可以叫着打劫然后从天而降该有多么威风啊……",
           ContentKR = "나도 언젠가 \"강도다!\"라고 외치면서, 하늘에서 내려오면 정말 멋지겠지...",
@@ -224765,7 +224815,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "801CBE86",
           NextDialogue = 51175416,
           SpeakNpcName = "UI_CMNpc_Name_NianyouFuFeng"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51175416,
+    MaxKey = 51175826,
+    Loader = function()
+      return {
         [51175416] = {
           Content = "但，以枯荣之术渡人苦厄，直至寂灭，这是祝由的使命……",
           DialogueId = 51175416,
@@ -224780,15 +224838,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Duration = 4,
           GUID = "801CBEDA",
           SpeakNpcName = "UI_CMNpc_Name_NianyouFuFeng"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51175418,
-    MaxKey = 51175828,
-    Loader = function()
-      return {
+        },
         [51175418] = {
           Content = "我一直知道……姐姐比我聪明，比我更懂得变通，比我更擅长应对危局。",
           DialogueId = 51175418,
@@ -225883,6 +225933,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175766] = {
           Content = "是你！我的真命佳偶，你还是决定要回来与我相伴终生了吗？！",
+          ContentKR = "당신이군요! 내 운명의 짝! 마침내 저랑 평생을 함께하기로 마음먹고 돌아온 건가요?!",
           DialogueId = 51175766,
           GUID = "801CF834"
         },
@@ -226041,7 +226092,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           ContentKR = "어떤 이야기냐고? 음... 뭐라고 설명해야 하지...",
           DialogueId = 51175826,
           GUID = "801D01F4"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51175827,
+    MaxKey = 51178048,
+    Loader = function()
+      return {
         [51175827] = {
           Content = "大概就是一个，男主角全家从小被玄色狴犴屠杀，自己因为外出探亲躲过一劫，后来刻苦修炼，并得到女主角乐泱相助，最终成为应天尉的故事。",
           ContentKR = "주인공 가족이 어릴 때 검은 폐안한테 몰살당하는데, 주인공만 친척 집에 있어서 혼자 살아남아. 그 뒤로 계속 수련하고 여자 주인공 악양의 도움도 받다가, 마지막엔 주인공이 응천위가 되지.",
@@ -226053,15 +226112,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           ContentKR = "그 사이에 다양한 일들이 일어나지. 장연이 원수한테 쫓겨서 절벽 아래로 떨어지다가 신비한 보물을 얻기도 하고, 여자 주인공 악양이랑 사이가 틀어져서 둘이 8년이나 떨어져 지내기도 하고... 다양한 사건들이 일어나니까 하나하나 다 설명하긴 힘들어.",
           DialogueId = 51175828,
           GUID = "801D0248"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51175829,
-    MaxKey = 51178050,
-    Loader = function()
-      return {
+        },
         [51175829] = {
           Content = "这个故事写到张渊当上应天尉后，不是就该结束了吗？",
           ContentKR = "장연이 응천위가 됐으면, 그걸로 이야기를 끝내면 되는 거 아니에요?",
@@ -226532,6 +226583,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175943] = {
           Content = "娃娃哟~我说什么来着？你这不是回来看我了吗？",
+          ContentKR = "꼬마야~ 무슨 일로 온 게냐? 날 다시 만나러 온 게야?",
           DialogueId = 51175943,
           GUID = "801D153E"
         },
@@ -226957,6 +227009,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51177026] = {
           Content = "怎么样，今天有比昨天更乐观一些吗？如果没有的话，那就留下来再听听我的宣讲吧！",
+          ContentKR = "어때? 오늘은 어제보다 긍정적인 하루를 보냈어? 아니라면, 여기 남아서 내 설교를 조금 더 들어야겠는걸!",
           DialogueId = 51177026,
           GUID = "801DC6EC"
         },
@@ -227247,7 +227300,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           ContentKR = "금쪽같은 아이 얼굴에 시퍼렇게 멍이 들어서 왔으니, 부모들은 당연히 화가 나서 얼굴이 벌게지겠지.",
           DialogueId = 51178048,
           GUID = "801E6E80"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51178049,
+    MaxKey = 51178525,
+    Loader = function()
+      return {
         [51178049] = {
           Content = "他们直接粗暴地找到其他孩子家里去，甚至不预先询问究竟是因为什么原因打架——比如，是不是他们的孩子先欺负了其他孩子。",
           ContentKR = "그럼 부모들은 다짜고짜 상대방 아이 집부터 찾아가는 거야. 도대체 왜 싸웠는지는 묻지도 않고 말이야. 예를 들면, 자기 애가 먼저 다른 아이를 괴롭혔을 수도 있잖아?",
@@ -227259,15 +227320,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           ContentKR = "이 싸움에서 실제로 싸운 건 아이들이고, 부모들은 사실 제삼자야. 그런데 부모들은 이유는 따지지도 않고, 자기 아이가 다쳤다는 이유만으로 다른 아이를 혼내는 거지.",
           DialogueId = 51178050,
           GUID = "801E6ED4"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51178051,
-    MaxKey = 51178527,
-    Loader = function()
-      return {
+        },
         [51178051] = {
           Content = "虽说是出于对孩子的关爱，但……我觉得这应该也是一种旁观者不清吧？",
           ContentKR = "물론 자기 아이를 아껴서 그러겠지. 하지만... 이런 것도 결국 제삼자의 눈은 정확하지 않다는 예시가 되지 않을까?",
@@ -227720,11 +227773,13 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51178162] = {
           Content = "还不回去是要等到什么时候？",
+          ContentKR = "근데 우린 왜 아직도 여기 있는 거야?",
           DialogueId = 51178162,
           GUID = "801E814C"
         },
         [51178163] = {
           Content = "再等等嘛，卷宗是整不完的，还是先珍惜一下我们难得的休息时间吧！",
+          ContentKR = "어차피 서류 정리는 끝이 없잖아요. 이 황금 같은 휴식 시간을 좀 더 즐기죠!",
           DialogueId = 51178163,
           GUID = "801E818E"
         },
@@ -227934,6 +227989,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51178235] = {
           Content = "我想想……我再想想……",
+          ContentKR = "생각을... 생각을 조금만 더 해 보자...",
           DialogueId = 51178235,
           GUID = "801E8D46"
         },
@@ -228137,6 +228193,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51178334] = {
           Content = "怎么这么快就回来了，应龙贰型还没头绪呢！",
+          ContentKR = "뭐 이렇게 빨리 왔어? 응룡 2호는 아직 감도 못 잡았는데!",
           DialogueId = 51178334,
           GUID = "801E9D84"
         },
@@ -228298,6 +228355,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51178427] = {
           Content = "愿你善根常驻……咦？是你~你回来看我啦~",
+          ContentKR = "늘 선한 마음을 가지시길... 어라? 너구나! 나 보러 온 거야?",
           DialogueId = 51178427,
           GUID = "801EACC6"
         },
@@ -228450,7 +228508,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           ContentKR = "그러다 그날이 왔어... 제일 나이가 많은 아이가 열 살을 맞이한 생일이었지. 몇 년만 지나면 나가서 일할 수도 있을 나이가 된 거야.",
           DialogueId = 51178525,
           GUID = "801EBCC2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51178526,
+    MaxKey = 60030302,
+    Loader = function()
+      return {
         [51178526] = {
           Content = "我们都围在最后卖剩下的那间主屋里，我去买了米面和蛋，做了长寿面，少爷也赶了回来，他看起来十分憔悴，虽说我们也好不到哪去。",
           ContentKR = "그날 우리는 다 같이 안채에 모였단다. 소씨 저택에 남은 마지막 건물이었지. 난 밀가루랑 계란을 사 와서 국수를 끓였어. 그날은 공자도 집에 돌아왔는데, 많이 지쳐 보였어. 물론 우리라고 나을 것도 없었지.",
@@ -228462,15 +228528,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           ContentKR = "어릴 땐 튼튼한 아이들이었는데, 내가 제대로 못 먹여서 그런지, 자라면서 다들 야위고 피골이 상접해져서, 걸핏하면 픽픽 쓰러지곤 했어.",
           DialogueId = 51178527,
           GUID = "801EBD16"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51178528,
-    MaxKey = 60030401,
-    Loader = function()
-      return {
+        },
         [51178528] = {
           Content = "我端了面出来，一个二个眼睛冒着光，小狼一样，哧溜哧溜吸口水。",
           ContentKR = "국수를 들고 나가니까, 아이들 눈에서 빛이 났지. 다들 굶주린 늑대처럼 국수 그릇에서 눈을 못 떼더라고.",
@@ -228593,6 +228651,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51178548] = {
           Content = "我是谁？以前的那些事，我还记得吗？呜呜呜……",
+          ContentKR = "난 누구지? 그때 일들을 난 아직 기억하고 있는 걸까? 흑흑...",
           DialogueId = 51178548,
           GUID = "801EC0A0"
         },
@@ -229656,7 +229715,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           SpeakNpcId = 200002,
           VoiceName = "voice/$Locale$/story/0/600303/96479142",
           bTurnOffVoice = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 60030303,
+    MaxKey = 60800105,
+    Loader = function()
+      return {
         [60030303] = {
           Content = "上面还说了一堆难懂的话，但大概意思应该是说，在药剂台周围战斗，还能让我们变得很厉害很厉害，白真聪明！",
           ContentKR = "매뉴얼에 어려운 말이 잔뜩 적혀 있어. 뭐, 어쨌든 제약 설비 근처에서 싸우면 우리가 엄청나게 강해진다는 뜻이겠지. 스노우는 참 똑똑해!",
@@ -229677,15 +229744,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           SpeakNpcId = 200002,
           VoiceName = "voice/$Locale$/story/0/600304/9647A1AA",
           bTurnOffVoice = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 60030402,
-    MaxKey = 69992201,
-    Loader = function()
-      return {
+        },
         [60030402] = {
           Content = "快看看血清还够不够用吧。",
           ContentKR = "혈청이 충분한지 얼른 확인해 봐.",
@@ -231331,6 +231390,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60240101] = {
           Content = "比赛开始了，启动计数装置，在它们周围淘汰别的参赛队伍吧！",
+          ContentKR = "경기가 시작됐어! 카운트 장치를 작동시키고, 근처에 있는 다른 참가팀들을 탈락시켜 봐!",
           DialogueId = 60240101,
           Duration = 4,
           GUID = "96A20000",
@@ -231339,6 +231399,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60240201] = {
           Content = "打开计数装置喽，在装置周围狠狠地淘汰他们吧！",
+          ContentKR = "카운트 장치가 켜졌어! 장치 근처에서 다른 녀석들을 팍팍 쓰러뜨려 봐!",
           DialogueId = 60240201,
           Duration = 4,
           GUID = "96A20004",
@@ -231347,6 +231408,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60240301] = {
           Content = "计数装置怎么又关掉啦，快去重新启动一下吧。",
+          ContentKR = "카운트 장치가 왜 또 꺼졌지? 얼른 가서 다시 켜 봐.",
           DialogueId = 60240301,
           Duration = 4,
           GUID = "96A20008",
@@ -231355,6 +231417,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60240401] = {
           Content = "好耶！淘汰了这么多人总算凑够这台计数装置的要求了，去下一台装置吧。",
+          ContentKR = "야호! 이만큼 쓰러뜨렸으면 카운트 장치의 목표량은 다 채웠을 거야. 다음 장치로 가자!",
           DialogueId = 60240401,
           Duration = 4,
           GUID = "96A2000C",
@@ -231363,6 +231426,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60240501] = {
           Content = "第一场比赛轻轻松松嘛，去下个赛场，拿下固定载具的控制权吧~",
+          ContentKR = "첫 번째 경기는 가볍게 통과했네! 다음 경기장으로 가서, 고정 탈것 제어권을 빼앗아 봐!",
           DialogueId = 60240501,
           Duration = 3,
           GUID = "96A20010",
@@ -231372,6 +231436,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60240502] = {
           Content = "找到第一台固定载具啦，赶紧激活它吧。",
+          ContentKR = "첫 번째 고정 탈것을 찾았어. 얼른 활성화해 봐.",
           DialogueId = 60240502,
           Duration = 4,
           GUID = "96A20014",
@@ -231380,6 +231445,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60240601] = {
           Content = "其他参赛选手靠过来啦，快点淘汰他们，保护好固定载具吧。",
+          ContentKR = "다른 참가자들이 몰려오고 있어! 빨리 쓰러뜨리고, 고정 탈것을 지켜야 해.",
           DialogueId = 60240601,
           Duration = 4,
           GUID = "96A20018",
@@ -231388,6 +231454,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60240701] = {
           Content = "保护成功！赶在其他人之前激活下一个固定载具吧。",
+          ContentKR = "방어 성공! 남들보다 빨리 다음 고정 탈것을 활성화하러 가자.",
           DialogueId = 60240701,
           Duration = 4,
           GUID = "96A2001C",
@@ -231396,6 +231463,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60240801] = {
           Content = "第二场比赛也赢啦！去最后一场比赛的起点吧。",
+          ContentKR = "두 번째 경기도 이겼어! 이제 마지막 경기 출발점으로 가자.",
           DialogueId = 60240801,
           Duration = 3,
           GUID = "96A20020",
@@ -231405,6 +231473,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60240802] = {
           Content = "移动载具好像塞在很里面的位置呢，把它找出来再送到终点就算我们赢喽！",
+          ContentKR = "이동 탈것은 엄청 안쪽에 있는 것 같아. 그걸 찾아내서 종점까지 호송하면 우리 승리야!",
           DialogueId = 60240802,
           Duration = 4,
           GUID = "96A20024",
@@ -231413,6 +231482,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60240901] = {
           Content = "开始向终点移动。",
+          ContentKR = "종점을 향해 이동을 시작합니다.",
           DialogueId = 60240901,
           Duration = 4,
           GUID = "96A20028",
@@ -231421,6 +231491,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60241001] = {
           Content = "维修中，停止移动。",
+          ContentKR = "수리 중. 이동을 중지합니다.",
           DialogueId = 60241001,
           Duration = 4,
           GUID = "96A2002C",
@@ -231429,6 +231500,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60241101] = {
           Content = "检测不到己方参赛选手，停止移动。",
+          ContentKR = "아군 참가자가 감지되지 않습니다. 이동을 중지합니다.",
           DialogueId = 60241101,
           Duration = 4,
           GUID = "96A20030",
@@ -231437,6 +231509,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60241201] = {
           Content = "比赛结——束！！！！！本届大赛的冠军已经诞生，让我们一起恭喜他们！！！",
+          ContentKR = "경기 끄——읕!!! 이번 대회의 우승자가 결정되었습니다. 다함께 축하해 주십시오!",
           DialogueId = 60241201,
           Duration = 3,
           GUID = "96A20034",
@@ -231446,6 +231519,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60241202] = {
           Content = "宝箱开啦，好耶！是我们赢喽~",
+          ContentKR = "상자가 열렸어! 야호! 우리가 이겼다~",
           DialogueId = 60241202,
           Duration = 4,
           GUID = "96A20038",
@@ -231454,6 +231528,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60241301] = {
           Content = "吼哦哦哦！！！",
+          ContentKR = "크르르륵!!!",
           DialogueId = 60241301,
           Duration = 4,
           GUID = "96A2003C",
@@ -231462,6 +231537,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60241401] = {
           Content = "何等混沌亵渎的赛场，以神之名，予他们以制裁。",
+          ContentKR = "참으로 혼란스럽고 불경한 경기장이구나. 신의 이름으로, 너희에게 철퇴를 내리겠다.",
           DialogueId = 60241401,
           Duration = 4,
           GUID = "96A20040",
@@ -231470,6 +231546,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60241501] = {
           Content = "吼嗷嗷嗷！！！",
+          ContentKR = "크오오오!!!",
           DialogueId = 60241501,
           Duration = 4,
           GUID = "96A20044",
@@ -231478,6 +231555,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60241601] = {
           Content = "固定载具损毁，淘汰出局",
+          ContentKR = "고정 탈것이 파괴되어, 경기에서 탈락했습니다.",
           DialogueId = 60241601,
           Duration = 1,
           GUID = "96A20048",
@@ -231486,6 +231564,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60241701] = {
           Content = "移动载具损毁，淘汰出局",
+          ContentKR = "이동 탈것이 파괴되어, 경기에서 탈락했습니다.",
           DialogueId = 60241701,
           Duration = 1,
           GUID = "96A2004C",
@@ -231533,7 +231612,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 60800105,
           GUID = "9834E93A",
           SpeakNpcId = 0
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 60800106,
+    MaxKey = 71001506,
+    Loader = function()
+      return {
         [60800106] = {
           Content = "【待包装】似乎能在附近找到钥匙F",
           DialogueId = 60800106,
@@ -231546,15 +231633,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "AF37D77A",
           NextDialogue = 69992202,
           RougeTalkActorType = 3
-        }
-      }
-    end
-  },
-  {
-    MinKey = 69992202,
-    MaxKey = 71001508,
-    Loader = function()
-      return {
+        },
         [69992202] = {
           Content = "抢滩登陆第二段对话！",
           DialogueId = 69992202,
@@ -233160,7 +233239,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Duration = 2,
           GUID = "B1BEAC94",
           SpeakNpcId = 818006
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 71001507,
+    MaxKey = 71005001,
+    Loader = function()
+      return {
         [71001507] = {
           Content = "呃……真的拍两下就能好吗？",
           ContentKR = "음... 정말로 두드리기만 하면 돼요?",
@@ -233176,15 +233263,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Duration = 2,
           GUID = "B1BEACE8",
           SpeakNpcId = 818006
-        }
-      }
-    end
-  },
-  {
-    MinKey = 71001509,
-    MaxKey = 71005004,
-    Loader = function()
-      return {
+        },
         [71001509] = {
           Content = "厉害啊，居然真有用！",
           ContentKR = "대단해요, 정말 효과가 있네요!",
@@ -234659,7 +234738,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 71005001,
           GUID = "B1C0E9FA",
           SpeakNpcId = 818041
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 71005002,
+    MaxKey = 71006711,
+    Loader = function()
+      return {
         [71005002] = {
           Content = "这位朋友，你能帮我拍几张照片吗？难得来一趟冰湖城，不留点合影就太可惜了。",
           ContentKR = "죄송한데, 사진 몇 장만 부탁드릴게요. 아이스레이크 시티까지 왔는데, 기념사진 하나 없이 돌아가긴 너무 아쉽잖아요.",
@@ -234678,15 +234765,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 71005004,
           GUID = "B1C0EA78",
           SpeakNpcId = 818041
-        }
-      }
-    end
-  },
-  {
-    MinKey = 71005005,
-    MaxKey = 71006713,
-    Loader = function()
-      return {
+        },
         [71005005] = {
           Content = "你拍得也太好了，真棒呀，多谢多谢。",
           ContentKR = "사진 정말 잘 찍으시네요! 완전 감탄했어요~ 진짜 감사해요!",
@@ -236246,7 +236325,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 71006711,
           GUID = "B1C20286",
           SpeakNpcId = 818063
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 71006712,
+    MaxKey = 72001401,
+    Loader = function()
+      return {
         [71006712] = {
           Content = "真是帮了大忙了！谢谢你谢谢你！",
           ContentKR = "덕분에 살았어! 고마워! 진짜 고마워!",
@@ -236261,15 +236348,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "B1C202DA",
           NextDialogue = 71006714,
           SpeakNpcId = 800006
-        }
-      }
-    end
-  },
-  {
-    MinKey = 71006714,
-    MaxKey = 72001403,
-    Loader = function()
-      return {
+        },
         [71006714] = {
           Content = "找到了，回去告诉他答案吧。",
           ContentKR = "찾았다. 가서 답을 알려 주자.",
@@ -237969,7 +238048,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           NextDialogue = 72001402,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{820000},AnimationId{\"Wuyou_Born\"}}",
           bAllowClickSkipScript = false
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 72001402,
+    MaxKey = 72200102,
+    Loader = function()
+      return {
         [72001402] = {
           Content = "此路不通，嗯……",
           ContentKR = "이 길은 막혔어, 음...",
@@ -237991,15 +238078,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "B43F7A2E",
           NextDialogue = 72001404,
           SpeakNpcId = 820000
-        }
-      }
-    end
-  },
-  {
-    MinKey = 72001404,
-    MaxKey = 72200104,
-    Loader = function()
-      return {
+        },
         [72001404] = {
           Content = "但这样是不是不能叫作独处了。",
           ContentKR = "하지만 그러면 혼자 있는 게 아니잖아.",
@@ -239456,9 +239535,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72100101,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47EBAD2",
           NextDialogue = 72100102,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
@@ -239467,9 +239543,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "浮名洗尽始见心，风月不染本来明。",
           ContentKR = "허명을 씻어내면 마음이 보이느니, 하늘의 달은 본래 티끌 없이 맑은 법.",
           DialogueId = 72100102,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47EBAFC",
           NextDialogue = 72100103,
           SpeakNpcId = 830001
@@ -239478,9 +239551,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "远道而来的朋友，你拂开繁花，可曾窥见自己明朗的本心呢？",
           ContentKR = "멀리서 찾아온 친구! 화려한 치장을 걷어내면, 자신의 본심이 환하게 드러날 거야.",
           DialogueId = 72100103,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47EBB26",
           NextDialogue = 72100104,
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
@@ -239491,9 +239561,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 72100104,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47EBB50",
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
@@ -239502,9 +239569,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72100201,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47ECB3A",
           NextDialogue = 72100202,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
@@ -239513,9 +239577,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "好似做了个久远的美梦……",
           ContentKR = "아주 긴 꿈을 꾼 것 같아...",
           DialogueId = 72100202,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47ECB64",
           NextDialogue = 72100203,
           SpeakNpcId = 830001
@@ -239524,9 +239585,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "梦见孩提时，娘亲牵着我的手去渡口买糖人。",
           ContentKR = "꿈에서 어머니를 봤어. 어린 내 손을 잡고 나루터에 가서 설탕엿을 사 주셨지.",
           DialogueId = 72100203,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47ECB8E",
           NextDialogue = 72100204,
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
@@ -239537,9 +239595,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 72100204,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47ECBB8",
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
@@ -239548,9 +239603,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72100301,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47EDBA2",
           NextDialogue = 72100302,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
@@ -239559,9 +239611,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "要被太阳抓住了！都怪你，我被太阳抓起来了！",
           ContentKR = "해한테 붙잡히게 생겼어! 다 너 때문이야! 너 때문에 해한테 붙잡히게 됐잖아!",
           DialogueId = 72100302,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47EDBCC",
           NextDialogue = 72100303,
           SpeakNpcId = 830001
@@ -239570,9 +239619,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "唔……比起被太阳抓住，还不如被你抓住……",
           ContentKR = "으... 해한테 잡히느니 차라리 너한테 잡히는 게 나을지도...",
           DialogueId = 72100303,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47EDBF6",
           NextDialogue = 72100304,
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
@@ -239583,9 +239629,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 72100304,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47EDC20",
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
@@ -239594,9 +239637,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72100401,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47EEC0A",
           NextDialogue = 72100402,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
@@ -239605,9 +239645,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "空中飘来的味道是什么香料，吿苍，还是春一品？",
           ContentKR = "공기 중에 떠도는 이 향은 무슨 향이지? 고창인가? 아니면 춘일품?",
           DialogueId = 72100402,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47EEC34",
           NextDialogue = 72100403,
           SpeakNpcId = 830001
@@ -239616,9 +239653,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "不如我自制的香方，可惜，我再也做不出了。",
           ContentKR = "내가 만든 향이 훨씬 나은데! 하지만 이젠 만들 수가 없으니 아쉽네.",
           DialogueId = 72100403,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47EEC5E",
           NextDialogue = 72100404,
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
@@ -239629,9 +239663,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 72100404,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47EEC88",
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
@@ -239640,9 +239671,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72100501,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47EFC72",
           NextDialogue = 72100502,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
@@ -239651,9 +239679,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "我儿梁卿！你可安好？",
           ContentKR = "우리 아들! 잘 지내고 있는 거지?",
           DialogueId = 72100502,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47EFC9C",
           NextDialogue = 72100503,
           SpeakNpcId = 830001
@@ -239662,9 +239687,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "咦？不是我儿？你是谁……？",
           ContentKR = "으응? 우리 아들이 아니잖아? 넌 누구...?",
           DialogueId = 72100503,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47EFCC6",
           NextDialogue = 72100504,
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
@@ -239675,9 +239697,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 72100504,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47EFCF0",
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
@@ -239686,9 +239705,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72100601,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47F0CDA",
           NextDialogue = 72100602,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
@@ -239697,9 +239713,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "如果沿着高高的大树往天上爬，就可以接近太皓大人吗？",
           ContentKR = "저 높은 나무를 타고 하늘 높이 오르면, 태호 님 가까이 갈 수 있을까요?",
           DialogueId = 72100602,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47F0D04",
           NextDialogue = 72100603,
           SpeakNpcId = 830001
@@ -239708,9 +239721,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "那要爬多久呢？十年，一百年，够不够呢？",
           ContentKR = "근데 얼마나 올라야 하죠? 십 년? 백 년? 그걸로 될까요?",
           DialogueId = 72100603,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47F0D2E",
           NextDialogue = 72100604,
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
@@ -239721,9 +239731,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 72100604,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47F0D58",
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
@@ -239732,9 +239739,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72100701,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47F1D42",
           NextDialogue = 72100702,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
@@ -239743,9 +239747,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "好冷……浑身都好冷，感觉牙齿要被冻掉下来了。",
           ContentKR = "추워요... 너무 추워서, 이가 다 얼어서 떨어져 나갈 것 같아요.",
           DialogueId = 72100702,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47F1D6C",
           NextDialogue = 72100703,
           SpeakNpcId = 830001
@@ -239754,9 +239755,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "等等，原来我没有牙齿吗？那这种战栗的感觉是……",
           ContentKR = "어엇, 전 이가 없다고요? 그럼 이 으슬으슬 떨리는 기분은...",
           DialogueId = 72100703,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47F1D96",
           NextDialogue = 72100704,
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
@@ -239767,9 +239765,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 72100704,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47F1DC0",
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
@@ -239778,9 +239773,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72100801,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47F2DAA",
           NextDialogue = 72100802,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
@@ -239789,9 +239781,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "我以前总来这里看天空，好像可以从云层后面望见我自己。",
           ContentKR = "전에 여기서 자주 하늘을 봤어. 구름 너머로 내 자신을 볼 수 있을 것만 같았거든.",
           DialogueId = 72100802,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47F2DD4",
           NextDialogue = 72100803,
           SpeakNpcId = 830001
@@ -239800,9 +239789,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "现在不用看啦，毕竟我再也看不到我自己啦~",
           ContentKR = "이젠 그럴 필요가 없어졌어. 어차피 나도 내가 보이지 않으니까!",
           DialogueId = 72100803,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47F2DFE",
           NextDialogue = 72100804,
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
@@ -239813,9 +239799,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 72100804,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47F2E28",
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
@@ -239824,9 +239807,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72100901,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47F3E12",
           NextDialogue = 72100902,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
@@ -239835,9 +239815,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "你喜欢什么颜色？豆绿还是鹤灰？",
           ContentKR = "넌 무슨 색이 좋아? 연두색? 아니면 회색?",
           DialogueId = 72100902,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47F3E3C",
           NextDialogue = 72100903,
           SpeakNpcId = 830001
@@ -239846,9 +239823,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "我啊，我喜欢云水蓝，就像我的身体一样蓝。",
           ContentKR = "난 옅은 물빛이 좋아. 나랑 똑같은 색이니까.",
           DialogueId = 72100903,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47F3E66",
           NextDialogue = 72100904,
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
@@ -239859,9 +239833,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 72100904,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47F3E90",
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
@@ -239870,9 +239841,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72101001,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47F4E7A",
           NextDialogue = 72101002,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
@@ -239881,9 +239849,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "尘漠铺天盖地，分不清方向，也辨别不了来路……",
           ContentKR = "주변이 온통 낙진으로 뒤덮여서 어디로 가야 할지 방향을 모르겠네...",
           DialogueId = 72101002,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47F4EA4",
           NextDialogue = 72101003,
           SpeakNpcId = 830001
@@ -239892,9 +239857,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "还好有你为我指明方向。谢谢你，远道而来的朋友。",
           ContentKR = "네가 방향을 알려줘서 다행이야. 고마워, 멀리서 온 친구.",
           DialogueId = 72101003,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47F4ECE",
           NextDialogue = 72101004,
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
@@ -239905,9 +239867,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 72101004,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47F4EF8",
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
@@ -239916,9 +239875,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72101101,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47F5EE2",
           NextDialogue = 72101102,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
@@ -239927,9 +239883,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "噫哈哈！被你发现啦！一切都在我的计谋之中！",
           ContentKR = "야하하! 날 찾아냈구나! 역시 다 내 계획대로야!",
           DialogueId = 72101102,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47F5F0C",
           NextDialogue = 72101103,
           SpeakNpcId = 830001
@@ -239938,9 +239891,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "按照计划，下一步该把这个交给你了！",
           ContentKR = "다음 계획은, 바로 이걸 너한테 주는 거야!",
           DialogueId = 72101103,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47F5F36",
           NextDialogue = 72101104,
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
@@ -239951,9 +239901,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 72101104,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47F5F60",
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
@@ -239962,53 +239909,37 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72101201,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47F6F4A",
           NextDialogue = 72101202,
-          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
+          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{240110},AnimationId{\"Wuyou_Born\"}}"
         },
         [72101202] = {
-          Content = "兄弟，你好【远期待包装】",
+          Content = "无趣无趣，贪愚痴妄，转首空空，不如逍遥～东西还你，有缘再会！",
           DialogueId = 72101202,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47F6F74",
-          NextDialogue = 72101203,
-          SpeakNpcId = 830001
+          NextDialogue = 72101204,
+          SpeakNpcId = 240110
         },
         [72101203] = {
-          Content = "很高兴见到你【远期待包装】",
+          Content = "绫罗绸缎，金樽玉盏，好不逍遥～我取你宝物一件，若要寻回，追上我再说罢！",
           DialogueId = 72101203,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47F6F9E",
-          NextDialogue = 72101204,
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
-          SpeakNpcId = 830001,
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Agree\"}}",
+          SpeakNpcId = 240110,
           bAllowClickSkipScript = false
         },
         [72101204] = {
           DialogueId = 72101204,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47F6FC8",
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
         },
         [72101301] = {
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72101301,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47F7FB2",
           NextDialogue = 72101302,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
@@ -240017,9 +239948,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "水流拍击石块，浸润泥土，滋养生命。",
           ContentKR = "물줄기는 바위를 뚫고, 흙을 적셔, 생명을 길러내지.",
           DialogueId = 72101302,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47F7FDC",
           NextDialogue = 72101303,
           SpeakNpcId = 830001
@@ -240028,9 +239956,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "我听说大家最后都会去一个叫忘川的地方，忘川……也是这样的一条小溪吗？",
           ContentKR = "사람들 말론 마지막엔 모두 망각의 강이란 곳으로 간대. 망각의 강도 이 냇물하고 비슷할까?",
           DialogueId = 72101303,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47F8006",
           NextDialogue = 72101304,
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
@@ -240041,9 +239966,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 72101304,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47F8030",
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
@@ -240052,9 +239974,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72101401,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47F901A",
           NextDialogue = 72101402,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
@@ -240063,9 +239982,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "芦苇草，高又高，藏里面，看不到。",
           ContentKR = "갈대는 키가 커서, 안에 숨으면 보이지 않아.",
           DialogueId = 72101402,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47F9044",
           NextDialogue = 72101403,
           SpeakNpcId = 830001
@@ -240074,9 +239990,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "嘻嘻，要不是这片芦苇地秃了一块，你又怎么能发现我呢？",
           ContentKR = "헤헤, 이쪽 갈대숲이 듬성듬성 비어 있지 않았다면, 네가 날 어떻게 발견했겠어?",
           DialogueId = 72101403,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47F906E",
           NextDialogue = 72101404,
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
@@ -240087,9 +240000,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 72101404,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47F9098",
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
@@ -240098,9 +240008,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Camera = "196.204834,-2.952158,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72101501,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47FA082",
           NextDialogue = 72101502,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
@@ -240109,9 +240016,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "这根尖尖的石头是怎么形成的呢？我在这里观察了好久。",
           ContentKR = "여기서 오랫동안 관찰했는데, 이 뾰족한 돌은 어떻게 생겨난 걸까?",
           DialogueId = 72101502,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47FA0AC",
           NextDialogue = 72101503,
           SpeakNpcId = 830001
@@ -240120,9 +240024,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "它这么尖，用来做成一把锐利的长矛最为合适。",
           ContentKR = "돌이 뾰족하니까 날카로운 창을 만들면 딱일 것 같아.",
           DialogueId = 72101503,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47FA0D6",
           NextDialogue = 72101504,
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
@@ -240133,9 +240034,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 72101504,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47FA100",
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
@@ -240144,9 +240042,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72101601,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47FB0EA",
           NextDialogue = 72101602,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
@@ -240155,9 +240050,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "斜坡！斜坡！我乘着风，踏着花，从坡上呼啸而下。",
           ContentKR = "오르막! 내리막! 바람을 타고, 꽃을 밟으며, 비탈길을 쏜살같이 내려간다!",
           DialogueId = 72101602,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47FB114",
           NextDialogue = 72101603,
           SpeakNpcId = 830001
@@ -240166,9 +240058,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "呜呼！莫要拦我！",
           ContentKR = "유후! 다들 비켜!",
           DialogueId = 72101603,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47FB13E",
           NextDialogue = 72101604,
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
@@ -240179,9 +240068,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 72101604,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47FB168",
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
@@ -240190,9 +240076,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72101701,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47FC152",
           NextDialogue = 72101702,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
@@ -240201,9 +240084,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "这些明黄的色彩，是落叶还是花瓣？",
           ContentKR = "이 밝은 노란색은 낙엽일까 꽃잎일까?",
           DialogueId = 72101702,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47FC17C",
           NextDialogue = 72101703,
           SpeakNpcId = 830001
@@ -240212,9 +240092,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "不知道……但包裹我的却是粉紫色，你一定一眼就发现了吧。",
           ContentKR = "모르겠어... 하지만 날 감싸고 있는 건 짙은 분홍색이야. 넌 보자마자 알았겠지?",
           DialogueId = 72101703,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47FC1A6",
           NextDialogue = 72101704,
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
@@ -240225,9 +240102,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 72101704,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B47FC1D0",
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
@@ -240236,209 +240110,162 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72200101,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BED112",
           NextDialogue = 72200102,
-          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
+          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{240110},AnimationId{\"Wuyou_Born\"}}"
         },
         [72200102] = {
           Content = "无趣无趣，贪愚痴妄，转首空空，不如逍遥～东西还你，有缘再会！",
+          ContentKR = "지루하구나! 탐욕에 눈이 멀어 집착한들, 결국은 빈손으로 가는 세상! 풍류의 도를 좇게나~ 물건은 돌려줄테니, 인연이 닿으면 다시 만남세!",
           DialogueId = 72200102,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BED13C",
           NextDialogue = 72200103,
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
-          SpeakNpcId = 830001,
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Agree\"}}",
+          SpeakNpcId = 240110,
           bAllowClickSkipScript = false
-        },
-        [72200103] = {
-          DialogueId = 72200103,
-          DialoguePanelType = "AllHide",
-          Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
-          GUID = "B4BED166",
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
-          bAllowClickSkipScript = false
-        },
-        [72200104] = {
-          Content = "绫罗绸缎，金樽玉盏，好不逍遥～我取你宝物一件，若要寻回，追上我再说罢！",
-          DialogueId = 72200104,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
-          GUID = "B4BED190",
-          SpeakNpcId = 830001
         }
       }
     end
   },
   {
-    MinKey = 72200201,
-    MaxKey = 80004202,
+    MinKey = 72200103,
+    MaxKey = 80004110,
     Loader = function()
       return {
+        [72200103] = {
+          DialogueId = 72200103,
+          DialoguePanelType = "AllHide",
+          Duration = 0.63,
+          GUID = "B4BED166",
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Disappear\"}}",
+          bAllowClickSkipScript = false
+        },
+        [72200104] = {
+          Content = "绫罗绸缎，金樽玉盏，好不逍遥～我取你宝物一件，若要寻回，追上我再说罢！",
+          ContentKR = "화려한 능라 주단에 금은 술잔이라, 이것이 풍류로다~ 보물 하나는 내가 거두어 가겠네. 되찾고 싶거든, 나부터 따라잡아 보게나!",
+          DialogueId = 72200104,
+          GUID = "B4BED190",
+          SpeakNpcId = 240110
+        },
         [72200201] = {
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72200201,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BEE17A",
           NextDialogue = 72200202,
-          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
+          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{240110},AnimationId{\"Wuyou_Born\"}}"
         },
         [72200202] = {
           Content = "无趣无趣，贪愚痴妄，转首空空，不如逍遥～东西还你，有缘再会！",
+          ContentKR = "지루하구나! 탐욕에 눈이 멀어 집착한들, 결국은 빈손으로 가는 세상! 풍류의 도를 좇게나~ 물건은 돌려줄테니, 인연이 닿으면 다시 만남세!",
           DialogueId = 72200202,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BEE1A4",
           NextDialogue = 72200203,
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
-          SpeakNpcId = 830001,
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Agree\"}}",
+          SpeakNpcId = 240110,
           bAllowClickSkipScript = false
         },
         [72200203] = {
           DialogueId = 72200203,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BEE1CE",
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
         },
         [72200204] = {
           Content = "绫罗绸缎，金樽玉盏，好不逍遥～我取你宝物一件，若要寻回，追上我再说罢！",
+          ContentKR = "화려한 능라 주단에 금은 술잔이라, 이것이 풍류로다~ 보물 하나는 내가 거두어 가겠네. 되찾고 싶거든, 나부터 따라잡아 보게나!",
           DialogueId = 72200204,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BEE1F8",
-          SpeakNpcId = 830001
+          SpeakNpcId = 240110
         },
         [72200301] = {
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72200301,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BEF1E2",
           NextDialogue = 72200302,
-          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
+          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{240110},AnimationId{\"Wuyou_Born\"}}"
         },
         [72200302] = {
           Content = "无趣无趣，贪愚痴妄，转首空空，不如逍遥～东西还你，有缘再会！",
+          ContentKR = "지루하구나! 탐욕에 눈이 멀어 집착한들, 결국은 빈손으로 가는 세상! 풍류의 도를 좇게나~ 물건은 돌려줄테니, 인연이 닿으면 다시 만남세!",
           DialogueId = 72200302,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BEF20C",
           NextDialogue = 72200303,
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
-          SpeakNpcId = 830001,
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Agree\"}}",
+          SpeakNpcId = 240110,
           bAllowClickSkipScript = false
         },
         [72200303] = {
           DialogueId = 72200303,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BEF236",
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
         },
         [72200304] = {
           Content = "绫罗绸缎，金樽玉盏，好不逍遥～我取你宝物一件，若要寻回，追上我再说罢！",
+          ContentKR = "화려한 능라 주단에 금은 술잔이라, 이것이 풍류로다~ 보물 하나는 내가 거두어 가겠네. 되찾고 싶거든, 나부터 따라잡아 보게나!",
           DialogueId = 72200304,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BEF260",
-          SpeakNpcId = 830001
+          SpeakNpcId = 240110
         },
         [72200401] = {
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72200401,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BF024A",
           NextDialogue = 72200402,
-          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
+          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{240110},AnimationId{\"Wuyou_Born\"}}"
         },
         [72200402] = {
           Content = "无趣无趣，贪愚痴妄，转首空空，不如逍遥～东西还你，有缘再会！",
+          ContentKR = "지루하구나! 탐욕에 눈이 멀어 집착한들, 결국은 빈손으로 가는 세상! 풍류의 도를 좇게나~ 물건은 돌려줄테니, 인연이 닿으면 다시 만남세!",
           DialogueId = 72200402,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BF0274",
           NextDialogue = 72200403,
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
-          SpeakNpcId = 830001,
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Agree\"}}",
+          SpeakNpcId = 240110,
           bAllowClickSkipScript = false
         },
         [72200403] = {
           DialogueId = 72200403,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BF029E",
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
         },
         [72200404] = {
           Content = "绫罗绸缎，金樽玉盏，好不逍遥～我取你宝物一件，若要寻回，追上我再说罢！",
+          ContentKR = "화려한 능라 주단에 금은 술잔이라, 이것이 풍류로다~ 보물 하나는 내가 거두어 가겠네. 되찾고 싶거든, 나부터 따라잡아 보게나!",
           DialogueId = 72200404,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BF02C8",
-          SpeakNpcId = 830001
+          SpeakNpcId = 240110
         },
         [72200501] = {
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72200501,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BF12B2",
           NextDialogue = 72200502,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
         },
         [72200502] = {
           Content = "落下的花瓣会相聚在一起，看起来很漂亮……",
+          ContentKR = "지는 꽃잎들이 한데 어우러져 있으니까, 참 예쁘다...",
           DialogueId = 72200502,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BF12DC",
           NextDialogue = 72200503,
           SpeakNpcId = 830001
         },
         [72200503] = {
           Content = "那么我们呢，我和你相聚在一起的时候，也是一样漂亮的样子吗？",
+          ContentKR = "우린 어떨까? 우리가 함께할 때도, 저 꽃잎처럼 아름다울까?",
           DialogueId = 72200503,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BF1306",
           NextDialogue = 72200504,
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
@@ -240449,9 +240276,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 72200504,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BF1330",
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
@@ -240460,29 +240284,22 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72200601,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BF231A",
           NextDialogue = 72200602,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
         },
         [72200602] = {
           Content = "它是一棵很坚强的树，你不觉得吗？",
+          ContentKR = "참 강인한 나무라는 생각 들지 않아?",
           DialogueId = 72200602,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BF2344",
           NextDialogue = 72200603,
           SpeakNpcId = 830001
         },
         [72200603] = {
           Content = "它的背紧靠着岩石，它的脸贴紧了木板，它的根系没法向四周伸展，它被困在这里了……",
+          ContentKR = "등 뒤로는 암석, 앞은 나무판자에 가로막혀, 뿌리조차 뻗지 못하고 이곳에 얽매여 있으니...",
           DialogueId = 72200603,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BF236E",
           NextDialogue = 72200604,
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
@@ -240493,9 +240310,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 72200604,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BF2398",
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
@@ -240504,29 +240318,22 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72200701,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BF3382",
           NextDialogue = 72200702,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
         },
         [72200702] = {
           Content = "这里很偏僻，大家没什么事情的话一般不会往这边跑。",
+          ContentKR = "여긴 워낙 외진 곳이라, 웬만한 용무가 아니면 찾아오지 않아.",
           DialogueId = 72200702,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BF33AC",
           NextDialogue = 72200703,
           SpeakNpcId = 830001
         },
         [72200703] = {
           Content = "所以我在这里躲着，可以听到许多有事情的人的对话哦~",
+          ContentKR = "그래서 이곳에 숨어 있다 보면, 사연 많은 이들의 대화를 쏠쏠히 주워듣곤 하지~",
           DialogueId = 72200703,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BF33D6",
           NextDialogue = 72200704,
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
@@ -240537,9 +240344,6 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 72200704,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BF3400",
           Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
@@ -240548,714 +240352,552 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72200801,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "CDC7F4EA",
           NextDialogue = 72200802,
-          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
+          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{240110},AnimationId{\"Wuyou_Born\"}}"
         },
         [72200802] = {
           Content = "世间千万事流转，我且遍游自逍遥～",
+          ContentKR = "굽이치는 세상사는 흐르는 물에 맡겨두고, 나는 자유로이 노니며 풍류를 즐긴다네~",
           DialogueId = 72200802,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "CDC7F514",
           NextDialogue = 72200803,
-          SpeakNpcId = 830001
+          SpeakNpcId = 240110
         },
         [72200803] = {
           Content = "这里的落笔太重，有失韵味，若是……哦？你已经找到了我吗？那只能换个地方进行下一场游戏了。",
+          ContentKR = "여긴 붓끝에 힘이 과하게 들어가서 영 멋이 살지 않는군... 오? 벌써 날 찾아낸 건가? 그럼 장소를 바꿔서 놀아야겠군.",
           DialogueId = 72200803,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "CDC7F53E",
           NextDialogue = 72200804,
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
-          SpeakNpcId = 830001,
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Agree\"}}",
+          SpeakNpcId = 240110,
           bAllowClickSkipScript = false
         },
         [72200804] = {
           DialogueId = 72200804,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "CDC7F568",
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
         },
         [72200901] = {
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72200901,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BF5452",
           NextDialogue = 72200902,
-          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
+          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{240110},AnimationId{\"Wuyou_Born\"}}"
         },
         [72200902] = {
           Content = "世间千万事流转，我且遍游自逍遥～",
+          ContentKR = "굽이치는 세상사는 흐르는 물에 맡겨두고, 나는 자유로이 노니며 풍류를 즐긴다네~",
           DialogueId = 72200902,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BF547C",
           NextDialogue = 72200903,
-          SpeakNpcId = 830001
+          SpeakNpcId = 240110
         },
         [72200903] = {
           Content = "快来救救可怜的无由生吧，我被困在水池中央了~啧……我演得不像吗？你这家伙好生无趣。",
+          ContentKR = "연못 한가운데에서 오도 가도 못하게 된 이 가엾은 무유생을 누가 좀 구해 주시게~ 쯧... 내 연기가 영 어설펐나? 그대도 참 풍류를 모르는군.",
           DialogueId = 72200903,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BF54A6",
           NextDialogue = 72200904,
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
-          SpeakNpcId = 830001,
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Agree\"}}",
+          SpeakNpcId = 240110,
           bAllowClickSkipScript = false
         },
         [72200904] = {
           DialogueId = 72200904,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BF54D0",
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
         },
         [72201001] = {
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72201001,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BF64BA",
           NextDialogue = 72201002,
-          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
+          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{240110},AnimationId{\"Wuyou_Born\"}}"
         },
         [72201002] = {
           Content = "世间千万事流转，我且遍游自逍遥～",
+          ContentKR = "굽이치는 세상사는 흐르는 물에 맡겨두고, 나는 자유로이 노니며 풍류를 즐긴다네~",
           DialogueId = 72201002,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BF64E4",
           NextDialogue = 72201003,
-          SpeakNpcId = 830001
+          SpeakNpcId = 240110
         },
         [72201003] = {
           Content = "有些华胥的孩子会在地上画条线，然后左右横跳来玩耍，以前我不理解，可当我现在飘在空中的时候，发现我可以用这堵矮墙画线横跳。",
+          ContentKR = "화서의 아이들이 바닥에 줄을 그어놓고 폴짝폴짝 건너뛰며 놀 때면, 왜 저러나 싶었네만, 허공에 둥둥 뜬 채로 얕은 담을 넘나들다 보니, 재미가 제법 쏠쏠하더군.",
           DialogueId = 72201003,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BF650E",
           NextDialogue = 72201004,
-          SpeakNpcId = 830001
+          SpeakNpcId = 240110
         },
         [72201004] = {
           Content = "此中妙趣，非以常人之躯可知也……",
+          ContentKR = "평범한 이들은, 이런 오묘한 즐거움을 알 길이 없겠지...",
           DialogueId = 72201004,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BF6538",
           NextDialogue = 72201005,
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
-          SpeakNpcId = 830001,
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Agree\"}}",
+          SpeakNpcId = 240110,
           bAllowClickSkipScript = false
         },
         [72201005] = {
           DialogueId = 72201005,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BF6562",
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
         },
         [72201101] = {
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72201101,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BF7522",
           NextDialogue = 72201102,
-          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
+          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{240110},AnimationId{\"Wuyou_Born\"}}"
         },
         [72201102] = {
           Content = "世间千万事流转，我且遍游自逍遥～",
+          ContentKR = "굽이치는 세상사는 흐르는 물에 맡겨두고, 나는 자유로이 노니며 풍류를 즐긴다네~",
           DialogueId = 72201102,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BF754C",
           NextDialogue = 72201103,
-          SpeakNpcId = 830001
+          SpeakNpcId = 240110
         },
         [72201103] = {
           Content = "这面墙太空旷，我看着实在单调，不若你来添上几笔，就写——逍遥生到此一游，如何？",
+          ContentKR = "이 벽은 너무 텅 비어 있어서 영 볼품이 없군. 그대가 몇 자 적어 보는 건 어떻겠나? '풍류생이 여기서 노닐다'는 어떤가?",
           DialogueId = 72201103,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BF7576",
           NextDialogue = 72201104,
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
-          SpeakNpcId = 830001,
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Agree\"}}",
+          SpeakNpcId = 240110,
           bAllowClickSkipScript = false
         },
         [72201104] = {
           DialogueId = 72201104,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BF75A0",
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
         },
         [72201201] = {
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72201201,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BF858A",
           NextDialogue = 72201202,
-          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
+          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{240110},AnimationId{\"Wuyou_Born\"}}"
         },
         [72201202] = {
           Content = "世间千万事流转，我且遍游自逍遥～",
+          ContentKR = "굽이치는 세상사는 흐르는 물에 맡겨두고, 나는 자유로이 노니며 풍류를 즐긴다네~",
           DialogueId = 72201202,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BF85B4",
           NextDialogue = 72201203,
-          SpeakNpcId = 830001
+          SpeakNpcId = 240110
         },
         [72201203] = {
           Content = "老熟人，你可来晚了，这场棋局已经结束了，不过若是与你同执一子，倒也是件美事。",
+          ContentKR = "벗이여, 늦었구려. 이번 판은 벌써 끝나 버렸다네. 하지만, 그대와 한바탕 놀아 보는 것도 나쁘지 않겠군.",
           DialogueId = 72201203,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BF85DE",
           NextDialogue = 72201204,
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
-          SpeakNpcId = 830001,
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Agree\"}}",
+          SpeakNpcId = 240110,
           bAllowClickSkipScript = false
         },
         [72201204] = {
           DialogueId = 72201204,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BF8608",
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
         },
         [72201301] = {
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72201301,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BF95F2",
           NextDialogue = 72201302,
-          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
+          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{240110},AnimationId{\"Wuyou_Born\"}}"
         },
         [72201302] = {
           Content = "世间千万事流转，我且遍游自逍遥～",
+          ContentKR = "굽이치는 세상사는 흐르는 물에 맡겨두고, 나는 자유로이 노니며 풍류를 즐긴다네~",
           DialogueId = 72201302,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BF961C",
           NextDialogue = 72201303,
-          SpeakNpcId = 830001
+          SpeakNpcId = 240110
         },
         [72201303] = {
           Content = "嘘！我在这里等着呢，等着一位有缘人坐在下面的位置上，我便浮至他身旁，与他共享同一道美景。",
+          ContentKR = "쉿! 나는 지금 인연이 닿는 이를 기다리고 있다네. 그 사람이 저 밑에 걸터앉으면, 슬그머니 곁으로 가서 함께 이 절경을 즐길 셈이지.",
           DialogueId = 72201303,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BF9646",
           NextDialogue = 72201304,
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
-          SpeakNpcId = 830001,
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Agree\"}}",
+          SpeakNpcId = 240110,
           bAllowClickSkipScript = false
         },
         [72201304] = {
           DialogueId = 72201304,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BF9670",
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
         },
         [72201401] = {
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72201401,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BFA65A",
           NextDialogue = 72201402,
-          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
+          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{240110},AnimationId{\"Wuyou_Born\"}}"
         },
         [72201402] = {
           Content = "世间千万事流转，我且遍游自逍遥～",
+          ContentKR = "굽이치는 세상사는 흐르는 물에 맡겨두고, 나는 자유로이 노니며 풍류를 즐긴다네~",
           DialogueId = 72201402,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BFA684",
           NextDialogue = 72201403,
-          SpeakNpcId = 830001
+          SpeakNpcId = 240110
         },
         [72201403] = {
           Content = "嘿呀呀！可不能乱动！刚长出来的新茬苗苗，要是给你一脚踩蔫了该如何是好？",
+          ContentKR = "어허! 조심 좀 하게! 이제 막 돋아난 새싹들이 발에 채여 꺾이기라도 하면, 얼마나 안타까운 일인가?",
           DialogueId = 72201403,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BFA6AE",
           NextDialogue = 72201404,
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
-          SpeakNpcId = 830001,
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Agree\"}}",
+          SpeakNpcId = 240110,
           bAllowClickSkipScript = false
         },
         [72201404] = {
           DialogueId = 72201404,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BFA6D8",
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
         },
         [72201501] = {
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72201501,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BFB6C2",
           NextDialogue = 72201502,
-          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
+          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{240110},AnimationId{\"Wuyou_Born\"}}"
         },
         [72201502] = {
           Content = "世间千万事流转，我且遍游自逍遥～",
+          ContentKR = "굽이치는 세상사는 흐르는 물에 맡겨두고, 나는 자유로이 노니며 풍류를 즐긴다네~",
           DialogueId = 72201502,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BFB6EC",
           NextDialogue = 72201503,
-          SpeakNpcId = 830001
+          SpeakNpcId = 240110
         },
         [72201503] = {
           Content = "这东西是什么时候坍下来的呢……我也忘了，不过那日倒塌时的动静却是惊天动地，隔着好远都能听见一声巨响啊。",
+          ContentKR = "이게 언제 무너져 내렸던가... 나도 가물가물하군. 하지만 그날의 굉음은 천리 밖에서도 들릴 만큼 아주 쩌렁쩌렁했지.",
           DialogueId = 72201503,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BFB716",
           NextDialogue = 72201504,
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
-          SpeakNpcId = 830001,
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Agree\"}}",
+          SpeakNpcId = 240110,
           bAllowClickSkipScript = false
         },
         [72201504] = {
           DialogueId = 72201504,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BFB740",
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
         },
         [72201601] = {
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72201601,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BFC72A",
           NextDialogue = 72201602,
-          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
+          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{240110},AnimationId{\"Wuyou_Born\"}}"
         },
         [72201602] = {
           Content = "世间千万事流转，我且遍游自逍遥～",
+          ContentKR = "굽이치는 세상사는 흐르는 물에 맡겨두고, 나는 자유로이 노니며 풍류를 즐긴다네~",
           DialogueId = 72201602,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BFC754",
           NextDialogue = 72201603,
-          SpeakNpcId = 830001
+          SpeakNpcId = 240110
         },
         [72201603] = {
           Content = "堆金累玉千箱宝，藏身此处怎得寻。老熟人，又碰巧遇上了，还是被你识破得如此轻易呢！",
+          ContentKR = "태산같이 쌓인 보물이 여기 묻혀 있다 한들, 누가 찾아낼 수 있겠는가. 벗이여, 또 만났구려. 이번엔 어찌 또 이리 쉽게 찾아낸 건가!",
           DialogueId = 72201603,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BFC77E",
           NextDialogue = 72201604,
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
-          SpeakNpcId = 830001,
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Agree\"}}",
+          SpeakNpcId = 240110,
           bAllowClickSkipScript = false
         },
         [72201604] = {
           DialogueId = 72201604,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BFC7A8",
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
         },
         [72201701] = {
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72201701,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BFD792",
           NextDialogue = 72201702,
-          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
+          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{240110},AnimationId{\"Wuyou_Born\"}}"
         },
         [72201702] = {
           Content = "世间千万事流转，我且遍游自逍遥～",
+          ContentKR = "굽이치는 세상사는 흐르는 물에 맡겨두고, 나는 자유로이 노니며 풍류를 즐긴다네~",
           DialogueId = 72201702,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BFD7BC",
           NextDialogue = 72201703,
-          SpeakNpcId = 830001
+          SpeakNpcId = 240110
         },
         [72201703] = {
           Content = "这里难道不是个绝妙的风水宝地吗？看看这建筑与自然用色之融洽，着墨之大胆，与我曾见过的许多古董珍藏比较，也是出彩。你不理解，那就只能沉下心，静静体会了……",
+          ContentKR = "여기야말로 기가 막힌 명당 아닌가? 건물과 자연이 빚어낸 색의 조화며 대담한 조형미는, 내가 보아온 수많은 골동품과 견주어도 손색이 없다네. 이 진가를 모르겠거든, 마음을 가라앉히고, 조용히 느껴 보시게나...",
           DialogueId = 72201703,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BFD7E6",
           NextDialogue = 72201704,
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
-          SpeakNpcId = 830001,
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Agree\"}}",
+          SpeakNpcId = 240110,
           bAllowClickSkipScript = false
         },
         [72201704] = {
           DialogueId = 72201704,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BFD810",
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
         },
         [72201801] = {
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72201801,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BFE7FA",
           NextDialogue = 72201802,
-          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
+          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{240110},AnimationId{\"Wuyou_Born\"}}"
         },
         [72201802] = {
           Content = "世间千万事流转，我且遍游自逍遥～",
+          ContentKR = "굽이치는 세상사는 흐르는 물에 맡겨두고, 나는 자유로이 노니며 풍류를 즐긴다네~",
           DialogueId = 72201802,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BFE824",
           NextDialogue = 72201803,
-          SpeakNpcId = 830001
+          SpeakNpcId = 240110
         },
         [72201803] = {
           Content = "这可不是一间普通的屋子，藏了货品，古玩与宝物，还藏着秘密与人心……不过，这屋子藏着最珍贵的东西，当然还是我逍遥生~",
+          ContentKR = "이곳은 평범한 집이 아니라네. 온갖 골동품과 보물은 물론, 비밀과 사람의 마음까지 감추고 있거든... 하지만 여기서 으뜸가는 보배라면, 두말할 것 없이 나 풍류생 아니겠나~",
           DialogueId = 72201803,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BFE84E",
           NextDialogue = 72201804,
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
-          SpeakNpcId = 830001,
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Agree\"}}",
+          SpeakNpcId = 240110,
           bAllowClickSkipScript = false
         },
         [72201804] = {
           DialogueId = 72201804,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BFE878",
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
         },
         [72201901] = {
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72201901,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BFF862",
           NextDialogue = 72201902,
-          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
+          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{240110},AnimationId{\"Wuyou_Born\"}}"
         },
         [72201902] = {
           Content = "世间千万事流转，我且遍游自逍遥～",
+          ContentKR = "굽이치는 세상사는 흐르는 물에 맡겨두고, 나는 자유로이 노니며 풍류를 즐긴다네~",
           DialogueId = 72201902,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BFF88C",
           NextDialogue = 72201903,
-          SpeakNpcId = 830001
+          SpeakNpcId = 240110
         },
         [72201903] = {
           Content = "时光飞度，山石皲裂，自我上次来此，还不是这般光景……啧啧，不过断壁残垣，也不失为另一种韵味，你说是不是？",
+          ContentKR = "세월 앞에서는 산과 바위도 어쩔 수 없는 모양이군. 지난번에 찾아왔을 적과는 꽤 다른 풍경이야... 쯧쯧, 하지만 이런 잔해들도 나름의 운치가 있지 않나?",
           DialogueId = 72201903,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BFF8B6",
           NextDialogue = 72201904,
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
-          SpeakNpcId = 830001,
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Agree\"}}",
+          SpeakNpcId = 240110,
           bAllowClickSkipScript = false
         },
         [72201904] = {
           DialogueId = 72201904,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4BFF8E0",
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
         },
         [72202001] = {
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72202001,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4C008CA",
           NextDialogue = 72202002,
-          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
+          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{240110},AnimationId{\"Wuyou_Born\"}}"
         },
         [72202002] = {
           Content = "世间千万事流转，我且遍游自逍遥～",
+          ContentKR = "굽이치는 세상사는 흐르는 물에 맡겨두고, 나는 자유로이 노니며 풍류를 즐긴다네~",
           DialogueId = 72202002,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4C008F4",
           NextDialogue = 72202003,
-          SpeakNpcId = 830001
+          SpeakNpcId = 240110
         },
         [72202003] = {
           Content = "小小考验，才知你我缘分深浅，但以结果来看，似是缘分极深啊。",
+          ContentKR = "인연이 얼마나 깊은지 알려거든 작은 시험이 필요한 법이지. 보아하니, 그대와 나의 인연은 꽤 깊은가 보군.",
           DialogueId = 72202003,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4C0091E",
           NextDialogue = 72202004,
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
-          SpeakNpcId = 830001,
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Agree\"}}",
+          SpeakNpcId = 240110,
           bAllowClickSkipScript = false
         },
         [72202004] = {
           DialogueId = 72202004,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4C00948",
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
         },
         [72202101] = {
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72202101,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4C01932",
           NextDialogue = 72202102,
-          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
+          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{240110},AnimationId{\"Wuyou_Born\"}}"
         },
         [72202102] = {
           Content = "世间千万事流转，我且遍游自逍遥～",
+          ContentKR = "굽이치는 세상사는 흐르는 물에 맡겨두고, 나는 자유로이 노니며 풍류를 즐긴다네~",
           DialogueId = 72202102,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4C0195C",
           NextDialogue = 72202103,
-          SpeakNpcId = 830001
+          SpeakNpcId = 240110
         },
         [72202103] = {
           Content = "瞧瞧这遍地狼藉，若是我躲藏其中，就是你这火眼金睛也费了一番功夫吧？",
+          ContentKR = "이 아수라장을 좀 보게. 이 속에 몸을 숨기면, 제아무리 눈썰미가 매섭더라도 꽤 시간이 걸릴 테지?",
           DialogueId = 72202103,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4C01986",
           NextDialogue = 72202104,
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
-          SpeakNpcId = 830001,
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Agree\"}}",
+          SpeakNpcId = 240110,
           bAllowClickSkipScript = false
         },
         [72202104] = {
           DialogueId = 72202104,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4C019B0",
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
         },
         [72202201] = {
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72202201,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4C0299A",
           NextDialogue = 72202202,
-          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
+          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{240110},AnimationId{\"Wuyou_Born\"}}"
         },
         [72202202] = {
           Content = "世间千万事流转，我且遍游自逍遥～",
+          ContentKR = "굽이치는 세상사는 흐르는 물에 맡겨두고, 나는 자유로이 노니며 풍류를 즐긴다네~",
           DialogueId = 72202202,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4C029C4",
           NextDialogue = 72202203,
-          SpeakNpcId = 830001
+          SpeakNpcId = 240110
         },
         [72202203] = {
           Content = "别看这里的人成日来来去去，能发现我逍遥生踪迹的人却是屈指可数啊！",
+          ContentKR = "오가는 사람들이 아무리 많다 한들, 나 풍류생의 발자취를 눈치채는 자는 손에 꼽힐 만큼 드물다네!",
           DialogueId = 72202203,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4C029EE",
           NextDialogue = 72202204,
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
-          SpeakNpcId = 830001,
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Agree\"}}",
+          SpeakNpcId = 240110,
           bAllowClickSkipScript = false
         },
         [72202204] = {
           DialogueId = 72202204,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4C02A18",
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
         },
         [72202301] = {
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72202301,
           DialoguePanelType = "AllHide",
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4C03A02",
           NextDialogue = 72202302,
-          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
+          Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{240110},AnimationId{\"Wuyou_Born\"}}"
         },
         [72202302] = {
           Content = "世间千万事流转，我且遍游自逍遥～",
+          ContentKR = "굽이치는 세상사는 흐르는 물에 맡겨두고, 나는 자유로이 노니며 풍류를 즐긴다네~",
           DialogueId = 72202302,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4C03A2C",
           NextDialogue = 72202303,
-          SpeakNpcId = 830001
+          SpeakNpcId = 240110
         },
         [72202303] = {
           Content = "瞧瞧！这不是我们的老朋友吗？又见面了，那必不能辜负这场邂逅啊。",
+          ContentKR = "이보게! 반가운 얼굴이군! 또 이렇게 만났으니, 이 만남을 제대로 즐겨야겠지.",
           DialogueId = 72202303,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4C03A56",
           NextDialogue = 72202304,
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Agree\"}}",
-          SpeakNpcId = 830001,
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Agree\"}}",
+          SpeakNpcId = 240110,
           bAllowClickSkipScript = false
         },
         [72202304] = {
           DialogueId = 72202304,
           DialoguePanelType = "AllHide",
           Duration = 0.63,
-          FacialId = {
-            [1] = "830001:PetPan_Common"
-          },
           GUID = "B4C03A80",
-          Scripts = "PlayAnimation{ActorId{830001},AnimationId{\"Wuyou_Disappear\"}}",
+          Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
         },
         [72999999] = {
@@ -242459,7 +242101,15 @@ PlayFacial{_delay{0.5},ActorId{211001},FacialId{"Smile01"}}
 }
 }]],
           SpeakNpcId = 211001
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80004201,
+    MaxKey = 80020407,
+    Loader = function()
+      return {
         [80004201] = {
           Content = "前面的雾气好像更浓了……",
           ContentKR = "앞쪽의 안개가 더 짙어진 것 같아...",
@@ -242482,15 +242132,7 @@ PlayFacial{_delay{0.5},ActorId{211001},FacialId{"Smile01"}}
           HeadIconType = "Npc",
           SpeakNpcId = 700142,
           VoiceName = "voice/$Locale$/story/1201/120114/C8483964"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80004203,
-    MaxKey = 80020409,
-    Loader = function()
-      return {
+        },
         [80004203] = {
           Content = "哇……原来这块石头是一盏灯呀！灯光亮起来，雾气就散开了。",
           ContentKR = "와... 이 돌은 등불이었구나! 등불을 켜니까 안개가 사라졌어.",
@@ -244168,7 +243810,15 @@ PlayFacial{_delay{0.5},ActorId{211001},FacialId{"Smile01"}}
             [1] = "93102:Sit_Talk02R_End"
           },
           VoiceName = "voice/$Locale$/inv/Xier/004/C8529C06"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80020408,
+    MaxKey = 80040127,
+    Loader = function()
+      return {
         [80020408] = {
           Content = "完成一次耗时一秒的刺杀，可能要花上一个月制定计划，一周提前准备，一天的漫长等待。而失败了，可能就要面对一辈子的漫长刑期。",
           ContentKR = "타깃을 제거하는 건 순간이지만, 그 전에 한 달 동안 계획을 세우고, 일주일 전부터 미리 준비해서 당일엔 종일 대기해야 하죠. 게다가 실패하면 평생 감옥에 갇힐 수도 있고요.",
@@ -244195,15 +243845,7 @@ PlayFacial{_delay{0.5},ActorId{211001},FacialId{"Smile01"}}
             [1] = "93102:Sit_Talk03_Start"
           },
           VoiceName = "voice/$Locale$/inv/Xier/004/C8529C5A"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80020410,
-    MaxKey = 80040129,
-    Loader = function()
-      return {
+        },
         [80020410] = {
           Content = "嗯，也不是烦心事。",
           ContentKR = "음, 고민이라고 말할 정도는 아니에요.",
@@ -246557,7 +246199,15 @@ CameraMoveTo{TargetPosition{"-178.94751,-87.67041,150.519897,-0.000519,-4.804505
           },
           ToFinalCameraBlendTime = 10,
           VoiceName = "voice/$Locale$/inv/Heitao/001/C85F3F56"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80040128,
+    MaxKey = 80050316,
+    Loader = function()
+      return {
         [80040128] = {
           Camera = "-119.140625,17.986816,144.082153,0.000186,-5.597982,-15.525949,40.000011,174.773438,false,Manual,5.845709",
           Content = "当然没有，我哪和你说过谎？",
@@ -246585,15 +246235,7 @@ CameraMoveTo{TargetPosition{"-178.94751,-87.67041,150.519897,-0.000519,-4.804505
             [1] = "790007:Agree"
           },
           VoiceName = "voice/$Locale$/inv/Heitao/001/C85F3FAA"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80040130,
-    MaxKey = 80050318,
-    Loader = function()
-      return {
+        },
         [80040130] = {
           Camera = "-578.566895,555.506348,232.559326,0.000266,-9.399719,-48.958965,40.0,859.451477,false,Manual,1.2",
           Content = "对了，你和我讲讲，石榴是什么味道的？",
@@ -249357,7 +248999,15 @@ CameraMoveTo{TargetPosition{"-194.081055,279.682129,195.641724,0.00232,-16.00859
           DialogueId = 80050316,
           GUID = "C865C6F8",
           NextDialogue = 80050317
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80050317,
+    MaxKey = 80060336,
+    Loader = function()
+      return {
         [80050317] = {
           Camera = "-65.606445,-263.350464,109.867432,0.000101,0.000478,109.002274,35.000011,100000.0,false,DoNotOverride,2.8",
           Content = "……我是知道的。",
@@ -249383,15 +249033,7 @@ CameraMoveTo{TargetPosition{"-194.081055,279.682129,195.641724,0.00232,-16.00859
           },
           SpeakNpcId = 790017,
           VoiceName = "voice/$Locale$/inv/Feina/003/C865C74C"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80050319,
-    MaxKey = 80060338,
-    Loader = function()
-      return {
+        },
         [80050319] = {
           Content = "原来菲娜是有钱人家的大小姐啊，真好。",
           ContentKR = "피나는 부잣집 딸이었구나. 좋겠다.",
@@ -251715,7 +251357,15 @@ CameraMoveTo{TargetPosition{"-194.081055,279.682129,195.641724,0.00232,-16.00859
           DialogueId = 80060336,
           GUID = "C86C32E0",
           NextDialogue = 80060337
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80060337,
+    MaxKey = 80080136,
+    Loader = function()
+      return {
         [80060337] = {
           Content = "对！松露和榛子一起，赶跑饥饿——",
           ContentKR = "맞아! 트러플과 헤이즐넛은 함께 배고픔을 이겨낼 거야.",
@@ -251739,15 +251389,7 @@ CameraMoveTo{TargetPosition{"-194.081055,279.682129,195.641724,0.00232,-16.00859
           NextDialogue = 80060339,
           SpeakNpcId = 95101,
           VoiceName = "voice/$Locale$/inv/Songlu/003/C86C3334"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80060339,
-    MaxKey = 80080138,
-    Loader = function()
-      return {
+        },
         [80060339] = {
           Content = "我得先走了，{nickname}，我们下次再见吧！",
           ContentKR = "난 먼저 가볼게. {nickname}, 다음에 또 보자!",
@@ -254363,7 +254005,15 @@ CameraMoveTo{TargetPosition{"-194.081055,279.682129,195.641724,0.00232,-16.00859
             [1] = "790004:Explain02_Start"
           },
           VoiceName = "voice/$Locale$/inv/Saiqi/001/C878E350"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80080137,
+    MaxKey = 80090328,
+    Loader = function()
+      return {
         [80080137] = {
           Camera = "-182.740234,418.929565,109.427734,0.000006,0.00002,-72.598679,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "但我确实没想到，说这些会让艾丽莎难过。对不起，以后我不会那么多话了。",
@@ -254393,15 +254043,7 @@ CameraMoveTo{TargetPosition{"-194.081055,279.682129,195.641724,0.00232,-16.00859
             [1] = "790001:Give"
           },
           VoiceName = "voice/$Locale$/inv/Saiqi/001/C878E3A4"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80080139,
-    MaxKey = 80090330,
-    Loader = function()
-      return {
+        },
         [80080139] = {
           Camera = "-330.722656,-239.585709,105.560547,0.000012,0.0,51.204865,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "…………",
@@ -256842,7 +256484,15 @@ TurnTo{TurnToDescription{"790006:n(790004)"}}
           NextDialogue = 80090329,
           SpeakNpcId = 92301,
           VoiceName = "voice/$Locale$/inv/Zhangyu/003/C87F6B70"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80090329,
+    MaxKey = 80110114,
+    Loader = function()
+      return {
         [80090329] = {
           Content = "有些摊主还会主动把没卖完的食物留给我，但我只当他们怕了我，那些食物统统是上贡给本大盗的保护费！",
           ContentKR = "어떤 상인은 팔고 남은 음식을 내게 주곤 했어. 나는 두려워서 내게 바치는 거로 생각했지만...",
@@ -256860,15 +256510,7 @@ TurnTo{TurnToDescription{"790006:n(790004)"}}
           NextDialogue = 80090331,
           SpeakNpcId = 92301,
           VoiceName = "voice/$Locale$/inv/Zhangyu/003/C87F6BC4"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80090331,
-    MaxKey = 80110116,
-    Loader = function()
-      return {
+        },
         [80090331] = {
           Content = "……想来想去，就觉得心里堵堵的，吃到嘴里的食物也不是滋味了。",
           ContentKR = "...다시 생각해도 가슴만 먹먹해지네. 입맛도 별로 없고...",
@@ -259299,7 +258941,15 @@ TurnTo{TurnToDescription{"790006:n(790004)"}}
             [1] = "93101:Sit_Talk02R_Start"
           },
           VoiceName = "voice/$Locale$/inv/Linen/001/C88C1994"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80110115,
+    MaxKey = 80120339,
+    Loader = function()
+      return {
         [80110115] = {
           Content = "是啊，挺多年前的事了。不对，这话可以说吗？",
           ContentKR = "맞아, 꽤 오래전 일이지만. 아, 이런 말해도 괜찮으려나?",
@@ -259328,15 +258978,7 @@ TurnTo{TurnToDescription{"790006:n(790004)"}}
             [1] = "93101:Sit_DisagreeHead"
           },
           VoiceName = "voice/$Locale$/inv/Linen/001/C88C19E8"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80110117,
-    MaxKey = 80120341,
-    Loader = function()
-      return {
+        },
         [80110117] = {
           Content = "唉，你不知道军团是个什么鬼地方。",
           ContentKR = "하, 넌 군단이 어떤 곳인지 몰라.",
@@ -262173,7 +261815,15 @@ LookAt{LookAtDescription{"790019:p(P33010202)"}},
             [1] = "93301:Sit_Think_End"
           },
           VoiceName = "voice/$Locale$/inv/Maer/003/C892A71E"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80120340,
+    MaxKey = 80130421,
+    Loader = function()
+      return {
         [80120340] = {
           Content = "就是这个！他还在行李箱里留了一张字条……",
           ContentKR = "바로 이거예요! 게다가 여행 가방에 쪽지까지 남겼더라고요...",
@@ -262200,15 +261850,7 @@ LookAt{LookAtDescription{"790019:p(P33010202)"}},
             [1] = "93301:Sit_Talk03_End"
           },
           VoiceName = "voice/$Locale$/inv/Maer/003/C892A772"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80120342,
-    MaxKey = 80130423,
-    Loader = function()
-      return {
+        },
         [80120342] = {
           Content = "“为了弥补您的不悦，特地将此物留给您——这只多功能头盔正着用可有效防护头部，倒过来用可生火自炊，前面的矿灯还可用于照明，实乃居家外出的不二之选。”",
           ContentKR = "\"당신의 실망을 달래기 위해 이것을 남긴다오. 이 다기능 헬멧은 바로 쓰면 머리를 효과적으로 보호할 수 있고, 거꾸로 쓰면 불을 피워 요리할 수 있으며, 앞쪽의 광부 램프는 조명으로 사용할 수 있소. 집에서나 외출할 때나 최고의 선택이 될 것이오.\"",
@@ -264974,7 +264616,15 @@ PlayAnimation{ActorId{790023},AnimationId{"Think_End"},Duration{1},_click{false}
             [1] = "790023:Talk02R_Start"
           },
           VoiceName = "voice/$Locale$/inv/Yeer/004/C8991D32"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80130422,
+    MaxKey = 80140346,
+    Loader = function()
+      return {
         [80130422] = {
           Camera = "138.503418,-201.674438,112.0,0.000002,-2.799927,155.996429,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "那时候我见过的红色的事物只有血，所以觉得很奇怪，红色……怎么会漂亮呢？",
@@ -265006,15 +264656,7 @@ PlayAnimation{ActorId{790023},AnimationId{"Think_End"},Duration{1},_click{false}
             [1] = "790023:Talk03_Start"
           },
           VoiceName = "voice/$Locale$/inv/Yeer/004/C8991D86"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80130424,
-    MaxKey = 80140348,
-    Loader = function()
-      return {
+        },
         [80130424] = {
           Camera = "-160.233398,-161.052856,109.0,0.0,0.0,15.397967,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "现在，它们已经都实现了，雪的白色，落日的红色，我都看到了，记得清清楚楚，所以……",
@@ -267624,7 +267266,15 @@ PlayAnimation{_delay{2},ActorId{790041},AnimationId{"Think_End"},Duration{1},_cl
           NextDialogue = 80140347,
           SpeakNpcId = 790036,
           VoiceName = "voice/$Locale$/inv/Tuosi/003/C89F7984"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80140347,
+    MaxKey = 80160126,
+    Loader = function()
+      return {
         [80140347] = {
           Content = "……",
           ContentKR = "......",
@@ -267648,15 +267298,7 @@ PlayAnimation{_delay{2},ActorId{790041},AnimationId{"Think_End"},Duration{1},_cl
           SpeakNpcName = "UI_Npc_Name_LaoLianjin",
           ToFinalCameraBlendTime = 3,
           VoiceName = "voice/$Locale$/inv/Tuosi/003/C89F79D8"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80140349,
-    MaxKey = 80160128,
-    Loader = function()
-      return {
+        },
         [80140349] = {
           Camera = "-94.440186,-1.264404,77.296875,0.000426,42.395412,-2.778932,14.951323,125.0,false,DoNotOverride,2.8",
           Content = "没什么，老师。实验体精神状态不太稳定，又在说胡话了。我正准备提高镇定剂的剂量。",
@@ -270559,7 +270201,15 @@ CameraMoveTo{TargetPosition{"-46.92395,-890.245117,476.808594,0.000113,-11.39855
           NextDialogue = 80160127,
           SpeakNpcId = 790055,
           VoiceName = "voice/$Locale$/inv/Haier/001/C8AC26AC"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80160127,
+    MaxKey = 80170202,
+    Loader = function()
+      return {
         [80160127] = {
           Content = "我到冰湖城有自己的目的，而你也有自己的生存方式，我们没有在这张“火腿秘方”上消耗太多时间的必要。",
           ContentKR = "내가 아이스레이크 시티로 온 데는 나만의 목적이 있고, 당신은 당신만의 생존 방식이 있으니, '비법 햄 레시피'에 너무 많은 시간을 낭비할 필요는 없을 것 같군.",
@@ -270587,15 +270237,7 @@ MoveTo{ActorId{790055},TargetPoint{"Move_H"},MoveSpeed{80},Visibility{"Show"}}
             [1] = "790055:Confident_End"
           },
           VoiceName = "voice/$Locale$/inv/Haier/001/C8AC2700"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80160129,
-    MaxKey = 80170204,
-    Loader = function()
-      return {
+        },
         [80160129] = {
           Camera = "-105.736328,-382.012695,149.125,0.000248,-3.398559,147.008057,39.565411,252.247864,false,Manual,2.892425",
           Content = "也许你会想知道，我为什么要特意指出你的秘密。",
@@ -272710,7 +272352,15 @@ MoveTo{ActorId{790055},TargetPoint{"Move_H"},MoveSpeed{80},Visibility{"Show"}}
           NextDialogue = 80170203,
           SpeakNpcId = 790008,
           VoiceName = "voice/$Locale$/inv/Nifu/002/C8B29BC4"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80170203,
+    MaxKey = 80180228,
+    Loader = function()
+      return {
         [80170203] = {
           Content = "妮弗尔夫人作为长辈，有什么建议吗？",
           ContentKR = "나이플 부인, 어른으로서 제가 어떻게 해야 할지 조언해 줄 수 있나요?",
@@ -272731,15 +272381,7 @@ MoveTo{ActorId{790055},TargetPoint{"Move_H"},MoveSpeed{80},Visibility{"Show"}}
             [1] = "91502:Sit_Talk03_End"
           },
           VoiceName = "voice/$Locale$/inv/Nifu/002/C8B29C18"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80170205,
-    MaxKey = 80180230,
-    Loader = function()
-      return {
+        },
         [80170205] = {
           Content = "这是一位青年和一位少女的故事，一个关于希望、勇气和未来的故事。",
           ContentKR = "이것은 한 청년과 소녀의 이야기로, 희망과 용기, 그리고 미래에 관한 이야기야.",
@@ -274969,7 +274611,15 @@ MoveTo{ActorId{790055},TargetPoint{"Move_H"},MoveSpeed{80},Visibility{"Show"}}
           },
           ToFinalCameraBlendTime = 10,
           VoiceName = "voice/$Locale$/inv/Dafu/002/C8B908A8"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80180229,
+    MaxKey = 80200019,
+    Loader = function()
+      return {
         [80180229] = {
           Camera = "54.456055,-318.109375,151.507812,0.000091,-5.799561,105.601219,30.000002,319.662201,false,Manual,1.2",
           Content = "而是……不停地……对那个还在咒骂她的实验体说……“对不起”。",
@@ -274994,15 +274644,7 @@ MoveTo{ActorId{790055},TargetPoint{"Move_H"},MoveSpeed{80},Visibility{"Show"}}
           NextDialogue = 80180231,
           SpeakNpcId = 790045,
           VoiceName = "voice/$Locale$/inv/Dafu/002/C8B908FC"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80180231,
-    MaxKey = 80200021,
-    Loader = function()
-      return {
+        },
         [80180231] = {
           Camera = "962.483398,712.037109,2.564453,0.00009,7.400503,-144.79744,30.000002,1383.023071,false,Manual,1.2",
           Content = "换了是我，大概也会做出同样的选择。我和惨死的艾米莉亚之间，不过隔着一纸调令的距离。",
@@ -277366,7 +277008,15 @@ TurnTo{_delay{3},TurnToDescription{"790053:p(90)"}}
             [1] = "790008:Talk02_End"
           },
           VoiceName = "voice/$Locale$/inv/Fushu/001/C8C5B79E"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80200020,
+    MaxKey = 80210116,
+    Loader = function()
+      return {
         [80200020] = {
           Camera = "13.768398,198.582336,146.612305,0.000078,-0.599117,-112.591949,35.0,194.999741,false,Manual,7.870067",
           Content = "扶氏世代以枯荣之术救人，药理则是近百年才出现的学问。家姐生前精于此道，我所知却是微末。",
@@ -277402,15 +277052,7 @@ PlayAnimation{_delay{5.5},ActorId{790053},AnimationId{"Talk02_End"},Duration{1}}
           },
           ToFinalCameraBlendTime = 10,
           VoiceName = "voice/$Locale$/inv/Fushu/001/C8C5B7F2"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80200022,
-    MaxKey = 80210118,
-    Loader = function()
-      return {
+        },
         [80200022] = {
           Camera = "-56.301811,69.71508,137.660156,0.000099,-1.798833,52.211357,30.000002,113.82692,false,Manual,7.870067",
           Content = "因此我才试着去研习如今的医药学问，但这样的事终究是纸上得来终觉浅。",
@@ -280468,7 +280110,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
             [2] = "790066:n(790067)"
           },
           VoiceName = "voice/$Locale$/inv/Kezhou/001/C8CC3028"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80210117,
+    MaxKey = 80220107,
+    Loader = function()
+      return {
         [80210117] = {
           Content = "这场对话是之前最流行的飘零人小说里，最有名的一段台词了，每当读到这里的时候，我都恨不得钻进书里去。",
           ContentKR = "이건 예전에 엄청 유행한 나그네 소설에 나오는 명장면이에요. 읽다가 이 부분만 나오면, 책 안으로 빨려 들어갈 것 같다니까요.",
@@ -280495,15 +280145,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
             [1] = "790065:Confident_End"
           },
           VoiceName = "voice/$Locale$/inv/Kezhou/001/C8CC307C"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80210119,
-    MaxKey = 80220109,
-    Loader = function()
-      return {
+        },
         [80210119] = {
           Camera = "33.960938,151.338867,112.264648,0.000069,-7.200624,-74.774574,35.000011,224.596802,false,Manual,2.8",
           Content = "你要是和我一样早早做完功课，阿妈才懒得管你呢。",
@@ -282928,7 +282570,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 80220108,
           SpeakNpcId = 790073,
           VoiceName = "voice/$Locale$/inv/Yuming/001/C8D2974E"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80220108,
+    MaxKey = 80220448,
+    Loader = function()
+      return {
         [80220108] = {
           Content = "刻舟师兄粗枝大叶，完全不知道怎么处理它身上的伤，就只能来找师兄你了。放着不管的话，它很快便会死掉的。",
           ContentKR = "그냥 내버려두면 금방 죽을 거 같아서 얼른 사형한테 데려온 거야. 각주 사형은 덤벙이라 처치법을 모르더라고.",
@@ -282946,15 +282596,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 80220110,
           SpeakNpcId = 790072,
           VoiceName = "voice/$Locale$/inv/Yuming/001/C8D297A2"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80220110,
-    MaxKey = 80230102,
-    Loader = function()
-      return {
+        },
         [80220110] = {
           Content = "师兄？",
           ContentKR = "사형?",
@@ -284723,7 +284365,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           GUID = "C8D2CF40",
           SpeakNpcId = 790008,
           VoiceName = "voice/$Locale$/inv/Yuming/004/C8D2CF40"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80230101,
+    MaxKey = 80240122,
+    Loader = function()
+      return {
         [80230101] = {
           Content = "龙渊上卿拔擢仪式即刻开始——诸位受太皓青睐者，请依序入觐——",
           ContentKR = "용연상경 선발 의식을 거행하겠다. 태호님께 선택받은 자들이여, 순서대로 안으로 들어와 예를 갖춰라.",
@@ -284737,15 +284387,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           GUID = "C8D8FF1C",
           NextDialogue = 80230103,
           VoiceName = "voice/$Locale$/inv/Zhiliu/001/C8D8FF1C"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80230103,
-    MaxKey = 80240124,
-    Loader = function()
-      return {
+        },
         [80230103] = {
           Content = "我乃现任龙渊上卿，目前协理天礼司。今日代行太皓旨意，特来考教诸君气量、心智与觉悟。",
           ContentKR = "나, 용연상경은 천례사의 사무 또한 겸하고 있다. 오늘은 태호님을 대신하여, 너희들의 기량과 지혜, 그리고 각오를 시험하겠다.",
@@ -285528,7 +285170,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           GUID = "C8D9178E",
           NextDialogue = 80230252,
           SpeakNpcId = 790080,
-          SpeakNpcName = "UI_Npc_Name_240004",
+          SpeakNpcName = "UI_Npc_Name_Siyu",
           VoiceName = "voice/$Locale$/inv/Zhiliu/002/C8D9178E"
         },
         [80230252] = {
@@ -285538,7 +285180,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           GUID = "C8D917B8",
           NextDialogue = 80230253,
           SpeakNpcId = 790080,
-          SpeakNpcName = "UI_Npc_Name_240004",
+          SpeakNpcName = "UI_Npc_Name_Siyu",
           VoiceName = "voice/$Locale$/inv/Zhiliu/002/C8D917B8"
         },
         [80230253] = {
@@ -285548,7 +285190,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           GUID = "C8D917E2",
           NextDialogue = 80230254,
           SpeakNpcId = 790080,
-          SpeakNpcName = "UI_Npc_Name_240004",
+          SpeakNpcName = "UI_Npc_Name_Siyu",
           VoiceName = "voice/$Locale$/inv/Zhiliu/002/C8D917E2"
         },
         [80230254] = {
@@ -285558,6 +285200,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           GUID = "C8D9180C",
           NextDialogue = 80230255,
           SpeakNpcId = 790080,
+          SpeakNpcName = "UI_Npc_Name_Siyu",
           VoiceName = "voice/$Locale$/inv/Zhiliu/002/C8D9180C"
         },
         [80230255] = {
@@ -286496,7 +286139,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 80240123,
           SpeakNpcId = 790083,
           VoiceName = "voice/$Locale$/inv/Suyi/001/C8DF6B04"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80240123,
+    MaxKey = 80250230,
+    Loader = function()
+      return {
         [80240123] = {
           Content = "都说了我没……",
           ContentKR = "진짜 아니라니...",
@@ -286514,15 +286165,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 80240125,
           SpeakNpcId = 790082,
           VoiceName = "voice/$Locale$/inv/Suyi/001/C8DF6B58"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80240125,
-    MaxKey = 80250232,
-    Loader = function()
-      return {
+        },
         [80240125] = {
           Content = "难不成是纠结带什么礼物？你这些年的发明，随意拿回去一个，就够让人刮目相看了。",
           ContentKR = "선물로 뭘 챙겨 가야 할지 고민돼서 그래? 그동안 네가 만든 발명품 중에 아무거나 가지고 가도 다들 눈이 휘둥그레질걸.",
@@ -288299,7 +287942,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 80250231,
           SpeakNpcId = 790014,
           VoiceName = "voice/$Locale$/inv/Kami/002/14171F4C"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80250231,
+    MaxKey = 90060102,
+    Loader = function()
+      return {
         [80250231] = {
           Content = "……",
           ContentKR = "......",
@@ -288317,15 +287968,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 80250233,
           SpeakNpcId = 790014,
           VoiceName = "voice/$Locale$/inv/Kami/002/14171FA0"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80250233,
-    MaxKey = 90060104,
-    Loader = function()
-      return {
+        },
         [80250233] = {
           Content = "待会儿，你们去找个地方躲起来。要是没被我抓到，你们就可以去旅行；要是被我抓到了，你们这个月都得待在家里好好学习！",
           ContentKR = "가서 어디든 꼭꼭 숨어 봐! 나한테 안 들키면, 여행 보내 줄게. 근데 나한테 잡히면, 이번 달은 가만히 집에서 공부하는 거야!",
@@ -290283,7 +289926,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
             [1] = "83201:Talk03_End"
           },
           VoiceName = "voice/$Locale$/char/Haier/vo_topic_01_2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 90060103,
+    MaxKey = 90150206,
+    Loader = function()
+      return {
         [90060103] = {
           Content = "那……你滚烫的皮肤会不会让你生活不太方便？",
           ContentKR = "그럼... 뜨거운 피부 때문에 생활하기 불편하진 않으신가요?",
@@ -290303,15 +289954,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
             [1] = "83201:Think_Start"
           },
           VoiceName = "voice/$Locale$/char/Haier/vo_topic_01_3"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 90060105,
-    MaxKey = 90150301,
-    Loader = function()
-      return {
+        },
         [90060105] = {
           Content = "异于常人的外表于我而言，更像是一份馈赠，非要说有什么不方便的……我一直想尝一尝那种叫做冰激凌的甜品，但它总是在我手上就化掉了……",
           ContentKR = "남들과 다른 외모는 나에겐 선물이나 다름없다. 굳이 불편한 점을 꼽으라면... 아이스크림이란 디저트를 맛보고 싶었는데 내 손에선 바로 녹아 버리더군...",
@@ -292647,7 +292290,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           GUID = "E1AE7C2C",
           NextDialogue = 90150207,
           SpeakNpcId = 100001
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 90150207,
+    MaxKey = 90210403,
+    Loader = function()
+      return {
         [90150207] = {
           Content = "让我想想……如果你迷路了，菲娜就把面包掰成一小块一小块，连成一条路……这样，你只要沿着面包屑向前走，就能找到出口啦！",
           ContentKR = "음... 네가 길을 잃으면, 피나가 빵조각을 하나씩 던져둘게... 그럼, 바닥에 놓인 빵을 보면서 걷기만 하면 출구를 찾을 수 있을 거야!",
@@ -292669,15 +292320,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 90150303,
           SpeakNpcId = 81801,
           VoiceName = "voice/$Locale$/char/Feina/vo_topic_03_1"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 90150303,
-    MaxKey = 90210502,
-    Loader = function()
-      return {
+        },
         [90150303] = {
           Content = "也许是你们做了同一个梦呢？",
           ContentKR = "둘이 같은 꿈을 꾼 건 아닐까?",
@@ -294917,7 +294560,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           SpeakNpcId = 84101,
           VoiceName = "voice/$Locale$/char/Lise/vo_topic_04_2",
           bForbidSkipOptions = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 90210501,
+    MaxKey = 90270406,
+    Loader = function()
+      return {
         [90210501] = {
           Content = "还在，只是它现在变得好沉重，太沉重了……我不知道自己是否还有力气再次握起它，吹奏下去。",
           ContentKR = "네, 하지만 이제 너무 무거워져 버려서... 다시 손에 쥐어 연주할 힘이 있을지 모르겠습니다.",
@@ -294935,15 +294586,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 90210503,
           SpeakNpcId = 84101,
           VoiceName = "voice/$Locale$/char/Lise/vo_topic_05_2"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 90210503,
-    MaxKey = 90270701,
-    Loader = function()
-      return {
+        },
         [90210503] = {
           Content = "如果有一天你能重新吹起它，让我做你的第一个听众吧。",
           ContentKR = "언젠간 다시 연주할 수 있게 된다면, 제가 첫 번째로 들을 수 있게 해주세요.",
@@ -296972,8 +296615,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           DialogueId = 90270302,
           GUID = "E1FB736C",
           NextDialogue = 90270303,
-          SpeakNpcId = 100001,
-          VoiceName = "voice/$Locale$/char/Kami/vo_topic_03_2"
+          SpeakNpcId = 100001
         },
         [90270303] = {
           Content = "只要积累财富，即使无法改变出身，也会获得勇气对抗命运，即使周遭都是风雨，也能给自己买上一瓶酒暖暖身子，甚至能给别人分上一口，赚个人情。",
@@ -296982,7 +296624,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           GUID = "E1FB7396",
           NextDialogue = 90270304,
           SpeakNpcId = 83202,
-          VoiceName = "voice/$Locale$/char/Kami/vo_topic_03_3"
+          VoiceName = "voice/$Locale$/char/Kami/vo_topic_03_2"
         },
         [90270304] = {
           Content = "你说，钱是不是很重要？",
@@ -296994,6 +296636,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
             [2] = 90270003
           },
           SpeakNpcId = 83202,
+          VoiceName = "voice/$Locale$/char/Kami/vo_topic_03_3",
           bForbidSkipOptions = true
         },
         [90270400] = {
@@ -297059,7 +296702,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           SpeakNpcId = 83202,
           VoiceName = "voice/$Locale$/char/Kami/vo_topic_04_5",
           bForbidSkipOptions = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 90270601,
+    MaxKey = 120131212,
+    Loader = function()
+      return {
         [90270601] = {
           Content = "每个人的天赋不同，有些人生来就拥有治愈人心的能力，就像你，好孩子。",
           ContentKR = "사람마다 타고난 재능이 달라서, 어떤 사람은 마음을 치유하는 능력이 있어. 바로 너처럼 말이야.",
@@ -297075,15 +296726,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           GUID = "E1FBB4E2",
           SpeakNpcId = 83202,
           VoiceName = "voice/$Locale$/char/Kami/vo_companio_02"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 90270801,
-    MaxKey = 120134351,
-    Loader = function()
-      return {
+        },
         [90270801] = {
           Content = "这伤疤……你难道又接了危险的任务？……唉，我店里有药，你自己去涂点，毕竟在这里出事会影响我做生意。怎么，傻站在这是想让我亲自给你去拿？",
           ContentKR = "이 상처... 설마 또 위험한 임무를 다녀온 거야? ...휴, 가게에 약 있으니까 가서 발라둬. 여기서 무슨 일이라도 생기면 내 장사에 지장이 생긴다고. 응? 왜 그러고 서 있어? 설마, 나보고 직접 가져다 달라는 거야?",
@@ -298596,7 +298239,15 @@ SetLocation{ActorId{110022},TargetPoint{"nanzhu_hugset"},Visibility{"Show"}}
           DialogueId = 120131212,
           GUID = "120131212.0",
           NextDialogue = 12013122
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 120134311,
+    MaxKey = 510030071,
+    Loader = function()
+      return {
         [120134311] = {
           Content = "呜呼哀哉……",
           ContentKR = "아아, 슬프도다...",
@@ -298615,15 +298266,7 @@ SetLocation{ActorId{110022},TargetPoint{"nanzhu_hugset"},Visibility{"Show"}}
           SnapShot = "HEART",
           SpeakNpcId = 100001,
           VoiceName = "voice/$Locale$/story/1201/120134/1E130A2F"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 120134391,
-    MaxKey = 510030091,
-    Loader = function()
-      return {
+        },
         [120134391] = {
           Content = "告诉白刚刚听到的声音。",
           ContentKR = "스노우에게 방금 들었던 소리에 대해 말해준다.",
@@ -300222,7 +299865,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           GUID = "510030071.0",
           ImprPlusId = 1004,
           NextDialogue = 51003008
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 510030072,
+    MaxKey = 510093271,
+    Loader = function()
+      return {
         [510030072] = {
           Content = "不排除睡傻了的可能性，也不排除有人跟他过不去的可能性。",
           ContentKR = "잠에 취한 걸 수도 있어요. 아니면 누군가 바크 씨를 괴롭히는 거죠.",
@@ -300238,15 +299889,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           GUID = "510030091.0",
           ImprPlusId = 1004,
           NextDialogue = 51003010
-        }
-      }
-    end
-  },
-  {
-    MinKey = 510030092,
-    MaxKey = 510093491,
-    Loader = function()
-      return {
+        },
         [510030092] = {
           Content = "什么都没偷？这贼难道有偷窥别人睡觉的嗜好？",
           ContentKR = "아무것도 안 훔쳤다고요? 남이 자는 걸 즐겨 보는 사람인 걸까요?",
@@ -301784,7 +301427,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           DialogueId = 510093271,
           GUID = "510093271.0",
           NextDialogue = 51009418
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 510093272,
+    MaxKey = 710072092,
+    Loader = function()
+      return {
         [510093272] = {
           Content = "没印象",
           ContentKR = "기억나지 않는다.",
@@ -301798,15 +301449,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           DialogueId = 510093491,
           GUID = "510093491.0",
           NextDialogue = 51009440
-        }
-      }
-    end
-  },
-  {
-    MinKey = 510093492,
-    MaxKey = 710075032,
-    Loader = function()
-      return {
+        },
         [510093492] = {
           Content = "为什么你不自己去？",
           ContentKR = "직접 가시면 되지 않아요?",
@@ -303228,7 +302871,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           GUID = "710072092.0",
           NextDialogue = 71007210,
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 710075031,
+    MaxKey = 741147166,
+    Loader = function()
+      return {
         [710075031] = {
           Content = "（接受。）",
           ContentKR = "(수락한다.)",
@@ -303243,15 +302894,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           DialogueId = 710075032,
           GUID = "710075032.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 710076021,
-    MaxKey = 741147168,
-    Loader = function()
-      return {
+        },
         [710076021] = {
           Content = "（接受。）",
           ContentKR = "(수락한다.)",
@@ -305126,7 +304769,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TurnTo = {
             [1] = "74114707:p(-180)"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741147167,
+    MaxKey = 741147393,
+    Loader = function()
+      return {
         [741147167] = {
           Camera = "475.393555,129.051514,93.175293,0.000036,-0.99996,-164.797562,35.000008,100000.0,false,Disable,2.8",
           Content = "Agree",
@@ -305146,15 +304797,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TalkActionId = {
             [1] = "74114707:Angry01_Start"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741147169,
-    MaxKey = 741147395,
-    Loader = function()
-      return {
+        },
         [741147169] = {
           Camera = "475.393555,129.051514,93.175293,0.000036,-0.99996,-164.797562,35.000008,100000.0,false,Disable,2.8",
           Content = "Angry01_End",
@@ -307122,7 +306765,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TurnTo = {
             [1] = "74114737:p(-180)"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741147394,
+    MaxKey = 741148014,
+    Loader = function()
+      return {
         [741147394] = {
           Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.26",
           Content = "Agree",
@@ -307142,15 +306793,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TalkActionId = {
             [1] = "74114737:Angry01_Start"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741147396,
-    MaxKey = 741148016,
-    Loader = function()
-      return {
+        },
         [741147396] = {
           Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.26",
           Content = "Angry01_End",
@@ -309123,7 +308766,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TalkActionId = {
             [1] = "74114751:Explain02_End"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741148015,
+    MaxKey = 741148722,
+    Loader = function()
+      return {
         [741148015] = {
           Camera = "475.393555,129.051514,93.175293,0.000036,-0.99996,-164.797562,35.000008,100000.0,false,Disable,2.8",
           Content = "Give",
@@ -309143,15 +308794,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TalkActionId = {
             [1] = "74114751:Shock_Start"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741148017,
-    MaxKey = 741148724,
-    Loader = function()
-      return {
+        },
         [741148017] = {
           Camera = "475.393555,129.051514,93.175293,0.000036,-0.99996,-164.797562,35.000008,100000.0,false,Disable,2.8",
           Content = "Shock_End",
@@ -311108,7 +310751,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TalkActionId = {
             [1] = "74114765:Talk02_Start"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741148723,
+    MaxKey = 741149506,
+    Loader = function()
+      return {
         [741148723] = {
           Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.17",
           Content = "Talk02_End",
@@ -311128,15 +310779,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TalkActionId = {
             [1] = "74114765:Talk03_Start"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741148725,
-    MaxKey = 741149508,
-    Loader = function()
-      return {
+        },
         [741148725] = {
           Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.17",
           Content = "Talk03_End",
@@ -313108,7 +312751,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TalkActionId = {
             [1] = "74114781:Angry01_Start"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741149507,
+    MaxKey = 800305091,
+    Loader = function()
+      return {
         [741149507] = {
           Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.17",
           Content = "Angry01_End",
@@ -313128,15 +312779,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TalkActionId = {
             [1] = "74114781:Confident_Start"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741149509,
-    MaxKey = 800305141,
-    Loader = function()
-      return {
+        },
         [741149509] = {
           Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.17",
           Content = "Confident_End",
@@ -314916,7 +314559,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           DialogueId = 800305091,
           GUID = "800305091.0",
           NextDialogue = 80030510
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 800305092,
+    MaxKey = 801701051,
+    Loader = function()
+      return {
         [800305092] = {
           Content = "？",
           ContentKR = "?",
@@ -314930,15 +314581,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           DialogueId = 800305141,
           GUID = "800305141.0",
           NextDialogue = 80030515
-        }
-      }
-    end
-  },
-  {
-    MinKey = 800305142,
-    MaxKey = 801701101,
-    Loader = function()
-      return {
+        },
         [800305142] = {
           Content = "其实根本就是你想自己穿吧。",
           ContentKR = "사실 네가 입고 싶어서 그런 거지?",
@@ -316322,7 +315965,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           DialogueId = 801701051,
           GUID = "801701051.0",
           NextDialogue = 80170108
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 801701052,
+    MaxKey = 7411482302,
+    Loader = function()
+      return {
         [801701052] = {
           Content = "怎么做到的，教教我。",
           ContentKR = "어떻게 해야 그렇게 될 수 있는지, 알려주세요.",
@@ -316336,15 +315987,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           DialogueId = 801701101,
           GUID = "801701101.0",
           NextDialogue = 80170111
-        }
-      }
-    end
-  },
-  {
-    MinKey = 801701171,
-    MaxKey = 7411482302,
-    Loader = function()
-      return {
+        },
         [801701171] = {
           Content = "您不这么觉得吗？",
           ContentKR = "당신은 그렇게 생각하지 않나요?",

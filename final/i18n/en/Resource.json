@@ -248,17 +248,17 @@
   },
   {
     "id": 221,
-    "name": "星耀硬币",
+    "name": "Starglow Coin",
     "icon": "T_Resource_ActivityIcon_01",
     "rarity": 5,
-    "desc": "如星光般璀璨的纪念硬币，可兑换多种奖励。妆点自己，像星星一样闪闪发光吧。"
+    "desc": "A commemorative coin that gleams like starlight. Exchange it for various rewards.\n Dress to impress and shine like a star."
   },
   {
     "id": 222,
-    "name": "剧目特典",
+    "name": "Repertoire Keepsake",
     "icon": "T_Resource_Abyss_LimitTime_Icon01",
     "rarity": 5,
-    "desc": "于剧院获得的纪念特典，书写着舞台上的每一次传说与触动。可换取特殊奖励。"
+    "desc": "A commemorative keepsake from the theatre, inscribed with the legends and emotions of every stage. Can be exchanged for special rewards."
   },
   {
     "id": 301,
@@ -332,19 +332,19 @@
   },
   {
     "id": 1009,
-    "name": "星辉丝线",
+    "name": "Starweave Thread",
     "icon": "T_Resource_GachaTicket_04",
     "rarity": 5,
-    "desc": "仿佛闪烁着星辉的灿烂丝线，可用于在特定活动获取外观。",
-    "desc2": "“织物的艺术与绘画、雕塑一样，播撒着美学的福音。而持有这梭纺线，就相当于握紧了美学殿堂的入场券，你会是这些‘艺术品’正在等待的有缘人吗？”\n\n——艺术家 阿米埃特"
+    "desc": "A radiant thread shimmering with starlight. Use it to obtain skins in specific events.",
+    "desc2": "\"Like painting and sculpture, the art of weaving carries the light of beauty. To hold this thread is to hold a key to the temple of aesthetics. Will you be the one these works of art have been waiting for?\"\n\n— Amiette, an Artist "
   },
   {
     "id": 1010,
-    "name": "流光织针",
+    "name": "Gliscent Needle",
     "icon": "T_Resource_ActivityIcon_02",
     "rarity": 5,
-    "desc": "针尖牵引着光的轨迹，在一横一竖的交叠间织就崭新的衣装。可用于部分角色形象的进阶。",
-    "desc2": "“每一针落下，都在积累着蜕变的进程。我看到了一件崭新的艺术品，正在丝线与指尖的厮磨间缓缓降生。”\n\n——艺术家 阿米埃特"
+    "desc": "The needle's tip draws trails of light, stitching new raiment from the weave of thread and fate. It can be used to upgrade certain character cosmetics.",
+    "desc2": "\"With every stitch, the transformation draws closer. I see a new work of art slowly coming to life — born from the tender dance between thread and fingertip.\"\n\n— Amiette, an Artist "
   },
   {
     "id": 2000,
@@ -2242,90 +2242,90 @@
   },
   {
     "id": 12144,
-    "name": "孤雏的羽迹的枪机",
+    "name": "Fledgling's Gleam: Bolt",
     "icon": "T_Range_Weapon_Part02",
     "rarity": 5,
-    "desc": "严格按照图纸打造的孤雏的羽迹部件。一旦扣下扳机，子弹就不会回头——就如同人下定决心的那一瞬。",
+    "desc": "Crafted with precision from the blueprint of Fledgling's Gleam. There is no turning back once the trigger is pulled, much like the commitment that seals a decisive moment.",
     "desc2": "\"The trigger is the most crucial part of any mechanical device. Even from a developer's perspective, I can tell you — no matter how intricate the internal workings are, it's just a piece of scrap if the trigger doesn't function properly. Trust me, I speak from experience — if my trigger had jammed back then, I wouldn't be here today.\"\n\n— An unnamed veteran traveller"
   },
   {
     "id": 12145,
-    "name": "孤雏的羽迹的枪身",
+    "name": "Fledgling's Gleam: Frame",
     "icon": "T_Range_Weapon_Part03",
     "rarity": 5,
-    "desc": "严格按照图纸打造的孤雏的羽迹部件。由钢铁打造，足够坚硬。当子弹打空，也是一件趁手的钝器或投掷物。",
+    "desc": "Crafted with precision from the blueprint of Fledgling's Gleam. Sturdy and robust, it doubles effectively as a blunt instrument or a throwable weapon when out of bullets.",
     "desc2": "\"Sure, the legion gives us some freedom to customise our weapons, but painting my gun pink? That's where I draw the line! I don't care if you're my sister, that's still a no. And take that teddy bear charm off!\"\n\n— Lynn, an officer of the Hyperborean Legion"
   },
   {
     "id": 12146,
-    "name": "孤雏的羽迹的枪管",
+    "name": "Fledgling's Gleam: Barrel",
     "icon": "T_Range_Weapon_Part01",
     "rarity": 5,
-    "desc": "严格按照图纸打造的孤雏的羽迹部件。子弹从这里倾泄而出，每到此时，枪管与战士的心同样滚烫。",
+    "desc": "Crafted with precision from the blueprint of Fledgling's Gleam. Bullets burst forth from here, as both the barrel and the warrior's heart blaze with unrelenting fervour.",
     "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
   },
   {
     "id": 12147,
-    "name": "杯中的残火的枪机",
+    "name": "Dregs of Glimmer: Bolt",
     "icon": "T_Range_Weapon_Part02",
     "rarity": 5,
-    "desc": "严格按照图纸打造的杯中的残火部件。一旦扣下扳机，子弹就不会回头——就如同人下定决心的那一瞬。",
+    "desc": "Crafted with precision from the blueprint of Dregs of Glimmer. There is no turning back once the trigger is pulled, much like the commitment that seals a decisive moment.",
     "desc2": "\"The trigger is the most crucial part of any mechanical device. Even from a developer's perspective, I can tell you — no matter how intricate the internal workings are, it's just a piece of scrap if the trigger doesn't function properly. Trust me, I speak from experience — if my trigger had jammed back then, I wouldn't be here today.\"\n\n— An unnamed veteran traveller"
   },
   {
     "id": 12148,
-    "name": "杯中的残火的枪身",
+    "name": "Dregs of Glimmer: Frame",
     "icon": "T_Range_Weapon_Part03",
     "rarity": 5,
-    "desc": "严格按照图纸打造的杯中的残火部件。由钢铁打造，足够坚硬。当子弹打空，也是一件趁手的钝器或投掷物。",
+    "desc": "Crafted with precision from the blueprint of Dregs of Glimmer. Sturdy and robust, it doubles effectively as a blunt instrument or a throwable weapon when out of bullets.",
     "desc2": "\"Sure, the legion gives us some freedom to customise our weapons, but painting my gun pink? That's where I draw the line! I don't care if you're my sister, that's still a no. And take that teddy bear charm off!\"\n\n— Lynn, an officer of the Hyperborean Legion"
   },
   {
     "id": 12149,
-    "name": "杯中的残火的枪管",
+    "name": "Dregs of Glimmer: Barrel",
     "icon": "T_Range_Weapon_Part01",
     "rarity": 5,
-    "desc": "严格按照图纸打造的杯中的残火部件。子弹从这里倾泄而出，每到此时，枪管与战士的心同样滚烫。",
+    "desc": "Crafted with precision from the blueprint of Dregs of Glimmer. Bullets burst forth from here, as both the barrel and the warrior's heart blaze with unrelenting fervour.",
     "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
   },
   {
     "id": 12150,
-    "name": "鸣金遥的握柄",
+    "name": "Aureate Drift: Grip",
     "icon": "T_Melee_Weapon_Part01",
     "rarity": 5,
-    "desc": "严格按照图纸打造的鸣金遥部件。冷兵器上最贴近使用者的部分，“趁手”，是它最实际的设计目的。",
+    "desc": "Crafted with precision from the blueprint of Aureate Drift. As the part closest to the wielder, the essence of its design is to ensure optimal \"handiness.\"",
     "desc2": "\"He is advancing,\nHe is advancing!\nI hear his thunderous steps resound,\nI hear the Sword of Torrent scrape on the ground!\nHe shall claim the lives of the unjust,\nNo one here can escape the tempest!\nNone can resist death's looming tonight,\nNor wrest the sword from his grasp so tight!\"\n\n— Excerpt from Le Rhapsodie de Torrent, by Alexandre Thomas, a mourning faction playwright"
   },
   {
     "id": 12151,
-    "name": "鸣金遥的刀刃",
+    "name": "Aureate Drift: Blade",
     "icon": "T_Melee_Weapon_Part02",
     "rarity": 5,
-    "desc": "严格按照图纸打造的鸣金遥部件。无论刀刃是曲是直，是轻是重，它的锋芒都只为战斗而生。",
+    "desc": "Crafted with precision from the blueprint of Aureate Drift. Whether the blade is curved or straight, light or heavy, its edge is honed exclusively for battle.",
     "desc2": "\"The essence of swordsmanship lies in the unity of the wielder's spirit. With utmost focus, one can cleave through the mightiest foes, be they ocean waves or leviathans.\"\n\n— Excerpt from The Art of the Sword, by a nameless swordsman from Huaxu"
   },
   {
     "id": 12152,
-    "name": "切割齿轮的枪机",
+    "name": "Jagged Growl: Bolt",
     "icon": "T_Range_Weapon_Part02",
     "rarity": 5,
-    "desc": "严格按照图纸打造的切割齿轮部件。一旦扣下扳机，子弹就不会回头——就如同人下定决心的那一瞬。",
+    "desc": "Crafted with precision from the blueprint of Jagged Growl. There is no turning back once the trigger is pulled, much like the commitment that seals a decisive moment.",
     "desc2": "\"The trigger is the most crucial part of any mechanical device. Even from a developer's perspective, I can tell you — no matter how intricate the internal workings are, it's just a piece of scrap if the trigger doesn't function properly. Trust me, I speak from experience — if my trigger had jammed back then, I wouldn't be here today.\"\n\n— An unnamed veteran traveller"
   },
   {
     "id": 12153,
-    "name": "切割齿轮的枪身",
+    "name": "Jagged Growl: Frame",
     "icon": "T_Range_Weapon_Part03",
     "rarity": 5,
-    "desc": "严格按照图纸打造的切割齿轮部件。由钢铁打造，足够坚硬。当子弹打空，也是一件趁手的钝器或投掷物。",
+    "desc": "Crafted with precision from the blueprint of Jagged Growl. Sturdy and robust, it doubles effectively as a blunt instrument or a throwable weapon when out of bullets.",
     "desc2": "\"Sure, the legion gives us some freedom to customise our weapons, but painting my gun pink? That's where I draw the line! I don't care if you're my sister, that's still a no. And take that teddy bear charm off!\"\n\n— Lynn, an officer of the Hyperborean Legion"
   },
   {
     "id": 12154,
-    "name": "切割齿轮的枪管",
+    "name": "Jagged Growl: Barrel",
     "icon": "T_Range_Weapon_Part01",
     "rarity": 5,
-    "desc": "严格按照图纸打造的切割齿轮部件。子弹从这里倾泄而出，每到此时，枪管与战士的心同样滚烫。",
+    "desc": "Crafted with precision from the blueprint of Jagged Growl. Bullets burst forth from here, as both the barrel and the warrior's heart blaze with unrelenting fervour.",
     "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
   },
   {
@@ -2905,27 +2905,27 @@
   },
   {
     "id": 20640,
-    "name": "皓京·其一",
+    "name": "Haojing: Ⅰ",
     "icon": "T_TreasureMap_East",
     "rarity": 4,
     "desc": "A collection of enigmatic pages discovered by chance. Some are delicate scrolls of fine parchment; others, freshly printed sheets with ink still crisp and dark. A few are no more than torn scraps from half-used notebooks. Whether neatly penned or barely legible, they all share one thing in common — each contains a hint pointing to the whereabouts of a hidden treasure.",
-    "desc2": "椒桂沉檀馨香好，兰蕙脑麝馥郁浓。\n借问宝物何处寻，牧童遥指金庭树。"
+    "desc2": "Cassia and sandalwood breathe their fragrance free;\norchid and musk sweeten the breeze.\nAsk where the hidden treasure may be,\nand the shepherd boy points to the golden tree."
   },
   {
     "id": 20641,
-    "name": "皓京·其二",
+    "name": "Haojing: Ⅱ",
     "icon": "T_TreasureMap_East",
     "rarity": 4,
     "desc": "A collection of enigmatic pages discovered by chance. Some are delicate scrolls of fine parchment; others, freshly printed sheets with ink still crisp and dark. A few are no more than torn scraps from half-used notebooks. Whether neatly penned or barely legible, they all share one thing in common — each contains a hint pointing to the whereabouts of a hidden treasure.",
-    "desc2": "东指郊外草渐深，没入窟中寻不得。\n盼星望月痴等寻，却探宝物根深藏。"
+    "desc2": "East of the city, where wild grasses creep,\nlies a cavern with pathways running deep.\nNight after night, searching bears no fruit;\nyet the treasure lies where the grasses root."
   },
   {
     "id": 20642,
-    "name": "皓京·其三",
+    "name": "Haojing: Ⅲ",
     "icon": "T_TreasureMap_East",
     "rarity": 4,
     "desc": "A collection of enigmatic pages discovered by chance. Some are delicate scrolls of fine parchment; others, freshly printed sheets with ink still crisp and dark. A few are no more than torn scraps from half-used notebooks. Whether neatly penned or barely legible, they all share one thing in common — each contains a hint pointing to the whereabouts of a hidden treasure.",
-    "desc2": "南来又北往，东过又西寻。\n联西处，通中城，问宝物何在？涸木之下水之上。"
+    "desc2": "Southward, northward, east and west,\nseekers roam each road in restless quest.\nBut where, at last, will the treasure be?\nAbove the water, beneath the dead tree."
   },
   {
     "id": 29001,
@@ -2973,7 +2973,7 @@
     "icon": "T_ExploreBadge_Beibao_East01",
     "rarity": 5,
     "desc": "Tokens said to lie scattered across Haojing — proof of courage, wisdom, and patience, each forged through trials of adventure. Gather enough, and present them to the Lunoxplorer in Haojing to earn valuable rewards.",
-    "desc2": "那是伫立在极东的盛邑，古人建起的亭台水榭在千年前便已建起，并似乎维持不变直到海枯石烂。\n但日日传颂的歌谣终究会有新章，熟悉的故事也会有面生的角色登场。云霄之下，风起潮涌。\n去探索吧，去看，去听，去那即将焕然一新的皓京城！"
+    "desc2": "In the Far East stands a great city, where pavilions and waterside halls raised by ancient hands have endured unchanged for a thousand years, as though they might stand until sea and stone are worn away.\n\nYet even songs passed down through the ages will one day find a new verse, and familiar tales will welcome new faces. Beneath the vault of heaven, the winds are rising and the tides beginning to turn.\n\nGo forth to explore, to witness, and to listen in Haojing, a city soon to be made anew."
   },
   {
     "id": 30001,
@@ -3433,10 +3433,10 @@
   },
   {
     "id": 41033,
-    "name": "Posture: LED Screen",
+    "name": "Arsenal Phantasia",
     "icon": "T_Resource_Gesture_SuyiPose",
     "rarity": 4,
-    "desc": "Posture: LED Screen"
+    "desc": "Imagination and practice are what carry us into the future."
   },
   {
     "id": 41034,
@@ -3538,10 +3538,10 @@
   },
   {
     "id": 41048,
-    "name": "请求",
+    "name": "Pleading",
     "icon": "T_Resource_Gesture_Beg",
     "rarity": 4,
-    "desc": "行行好吧○|￣|_"
+    "desc": "Please, have mercy...! ○|￣|_"
   },
   {
     "id": 41049,
@@ -3559,52 +3559,52 @@
   },
   {
     "id": 41051,
-    "name": "机枢幻想·涅白",
+    "name": "Jishu Phantasia: Opaque White",
     "icon": "T_Resource_Gesture_SuYi_White",
     "rarity": 6,
-    "desc": "一念既出，万仞凌霄。"
+    "desc": "With a single thought, all heights fall beneath you."
   },
   {
     "id": 41052,
-    "name": "休息一式",
+    "name": "Resting Stance Ⅰ",
     "icon": "T_Resource_Gesture_Sit01",
     "rarity": 4,
-    "desc": "生活中常用的肢体动作，此为休息。"
+    "desc": "An everyday gesture — take a moment to rest."
   },
   {
     "id": 41053,
-    "name": "休息二式",
+    "name": "Resting Stance Ⅱ",
     "icon": "T_Resource_Gesture_Sit02",
     "rarity": 4,
-    "desc": "生活中常用的肢体动作，此为休息。"
+    "desc": "An everyday gesture — take a moment to rest."
   },
   {
     "id": 41054,
-    "name": "机枢幻想·锈红",
+    "name": "Jishu Phantasia: Rust Red",
     "icon": "T_Resource_Gesture_SuYi_Rad",
     "rarity": 6,
-    "desc": "一念既出，万仞凌霄。"
+    "desc": "With a single thought, all heights fall beneath you."
   },
   {
     "id": 41055,
-    "name": "机枢幻想·墨玉",
+    "name": "Jishu Phantasia: Dark Jade",
     "icon": "T_Resource_Gesture_SuYi_Black",
     "rarity": 6,
-    "desc": "一念既出，万仞凌霄。"
+    "desc": "With a single thought, all heights fall beneath you."
   },
   {
     "id": 41056,
-    "name": "出拳",
+    "name": "Punch",
     "icon": "T_Resource_Gesture_Daquan",
     "rarity": 4,
-    "desc": "梆梆两拳o(￣ヘ￣o#)"
+    "desc": "Pow! Pow! Take that! o(￣ヘ￣o#)"
   },
   {
     "id": 41057,
-    "name": "小熊出没",
+    "name": "Bear on the Loose",
     "icon": "T_Resource_Gesture_Jump",
     "rarity": 4,
-    "desc": "熊有熊样。"
+    "desc": "A bear's got to act like a bear."
   },
   {
     "id": 41058,
@@ -3618,8 +3618,8 @@
     "name": "Mechanical Nexus: Evilbane",
     "icon": "T_Icon_CentralSquare_Equip01",
     "rarity": 4,
-    "desc": "结构复杂精巧的方形机枢造物，以失传的机枢派技艺锻造而成，发现于偃隐宫中。其能量核心能够射出光束，激活别的机枢派造物。",
-    "desc2": "“唔，通过共振腔的瞬间能量聚集，配合聚光元件的精妙结构，竟然能激发出如此精准的光束……有意思。今晚就挑灯夜战，全力研究它吧！”\n——苏乙"
+    "desc": "Found within the Labyrinth of Yanyin, this finely crafted square construct was made using techniques long lost to the Jishu Sect. Its energy core emits a beam of light capable of activating other Jishu constructs.",
+    "desc2": "\"Hmm... so that's how it works. The resonance chamber pulls the energy into focus, and the focusing element snaps it into an incredibly precise beam. Fascinating... I might be up half the night figuring this out!\"\n\n— Su Yi"
   },
   {
     "id": 42002,
@@ -3631,31 +3631,31 @@
   },
   {
     "id": 49992,
-    "name": "太虚游·焦糖",
+    "name": "Taixu Rover: Caramel",
     "icon": "T_Mounts_Gesture_0506",
     "rarity": 5,
-    "desc": "御剑乘风来。"
+    "desc": "I ride the wind upon my sword."
   },
   {
     "id": 49993,
-    "name": "太虚游·碧绿",
+    "name": "Taixu Rover: Emerald Green",
     "icon": "T_Mounts_Gesture_0505",
     "rarity": 5,
-    "desc": "御剑乘风来。"
+    "desc": "I ride the wind upon my sword."
   },
   {
     "id": 49994,
-    "name": "太虚游·本色",
+    "name": "Taixu Rover",
     "icon": "T_Mounts_Gesture_0503",
     "rarity": 5,
-    "desc": "御剑乘风来。"
+    "desc": "I ride the wind upon my sword."
   },
   {
     "id": 49995,
-    "name": "太虚游·铅灰",
+    "name": "Taixu Rover: Leaden Grey",
     "icon": "T_Mounts_Gesture_0501",
     "rarity": 5,
-    "desc": "御剑乘风来。"
+    "desc": "I ride the wind upon my sword."
   },
   {
     "id": 49996,
@@ -3746,126 +3746,126 @@
     "name": "自选形象礼箱·不羁",
     "icon": "T_Pack_Common03",
     "rarity": 5,
-    "desc": "使用后可从贝蕾妮卡，托斯卡，妮弗尔夫人，刻舟，苏乙，菲娜，丽蓓卡，扶疏，女枪，卡米拉，黎瑟，止流，煜明，西比尔，松露，蝶妹，达芙涅中自选一套角色形象。"
+    "desc": "Grants a character skin from: Berenica, Lisbell, Lady Nifle, Kezhou, Su Yi, Fina, Rebecca, Fushu, Lynn, Camilla, Rhythm, Zhiliu, Yuming, Sibylle, Truffle and Filbert, Psyche, and Daphne."
   },
   {
     "id": 110018,
-    "name": "千丝雨惊喜道具箱",
+    "name": "Silkrain Surprise Item Chest",
     "icon": "T_Pack_RandomMod_Daily",
     "rarity": 5,
-    "desc": "具体概率与数量如下，概率四舍五入至小数点后4位：\n月石晶胚*10：29.4010%\n月石晶胚*16：44.1014%\n月石晶胚*18：22.0507%\n月石晶胚*40：3.6751%\n月石晶胚*100：0.7350%\n月石晶胚*888：0.0368%"
+    "desc": "The specific probabilities and quantities are as follows (values rounded to four decimal places):\n Phoxene Plumule ×10: 29.4010%\n Phoxene Plumule ×16: 44.1014%\n Phoxene Plumule ×18: 22.0507%\n Phoxene Plumule ×40: 3.6751%\n Phoxene Plumule ×100: 0.7350%\n Phoxene Plumule ×888: 0.0368%"
   },
   {
     "id": 110019,
-    "name": "蓝色近战魔之楔道具箱",
+    "name": "Blue Melee Demon Wedge Chest",
     "icon": "T_Pack_RandomMod_01",
     "rarity": 3
   },
   {
     "id": 110020,
-    "name": "紫色近战魔之楔道具箱",
+    "name": "Purple Melee Demon Wedge Chest",
     "icon": "T_Pack_RandomMod_01",
     "rarity": 4
   },
   {
     "id": 110021,
-    "name": "蓝色不死鸟魔之楔道具箱",
+    "name": "Blue Phoenix Demon Wedge Chest",
     "icon": "T_Pack_RandomMod_02",
     "rarity": 3
   },
   {
     "id": 110022,
-    "name": "紫色不死鸟魔之楔道具箱",
+    "name": "Purple Phoenix Demon Wedge Chest",
     "icon": "T_Pack_RandomMod_02",
     "rarity": 4
   },
   {
     "id": 110023,
-    "name": "蓝色远程魔之楔道具箱",
+    "name": "Blue Ranged Demon Wedge Chest",
     "icon": "T_Pack_RandomMod_03",
     "rarity": 3
   },
   {
     "id": 110024,
-    "name": "紫色远程魔之楔道具箱",
+    "name": "Purple Ranged Demon Wedge Chest",
     "icon": "T_Pack_RandomMod_03",
     "rarity": 4
   },
   {
     "id": 110025,
-    "name": "紫色狮鹫魔之楔道具箱",
+    "name": "Purple Griffin Demon Wedge Chest",
     "icon": "T_Pack_RandomMod_04",
     "rarity": 4
   },
   {
     "id": 110026,
-    "name": "紫色风属性百首魔之楔道具箱",
+    "name": "Purple Anemo Typhon Demon Wedge Chest",
     "icon": "T_Pack_RandomMod_05",
     "rarity": 4
   },
   {
     "id": 110027,
-    "name": "紫色火属性百首魔之楔道具箱",
+    "name": "Purple Pyro Typhon Demon Wedge Chest",
     "icon": "T_Pack_RandomMod_06",
     "rarity": 4
   },
   {
     "id": 110028,
-    "name": "紫色雷属性百首魔之楔道具箱",
+    "name": "Purple Electro Typhon Demon Wedge Chest",
     "icon": "T_Pack_RandomMod_07",
     "rarity": 4
   },
   {
     "id": 110029,
-    "name": "紫色水属性百首魔之楔道具箱",
+    "name": "Purple Hydro Typhon Demon Wedge Chest",
     "icon": "T_Pack_RandomMod_08",
     "rarity": 4
   },
   {
     "id": 110030,
-    "name": "紫色光属性百首魔之楔道具箱",
+    "name": "Purple Lumino Typhon Demon Wedge Chest",
     "icon": "T_Pack_RandomMod_09",
     "rarity": 4
   },
   {
     "id": 110031,
-    "name": "紫色暗属性百首魔之楔道具箱",
+    "name": "Purple Umbro Typhon Demon Wedge Chest",
     "icon": "T_Pack_RandomMod_10",
     "rarity": 4
   },
   {
     "id": 110032,
-    "name": "紫色风属性契约者魔之楔道具箱",
+    "name": "Purple Anemo Covenanter Demon Wedge Chest",
     "icon": "T_Pack_RandomMod_11",
     "rarity": 4
   },
   {
     "id": 110033,
-    "name": "紫色火属性契约者魔之楔道具箱",
+    "name": "Purple Pyro Covenanter Demon Wedge Chest",
     "icon": "T_Pack_RandomMod_16",
     "rarity": 4
   },
   {
     "id": 110034,
-    "name": "紫色雷属性契约者魔之楔道具箱",
+    "name": "Purple Electro Covenanter Demon Wedge Chest",
     "icon": "T_Pack_RandomMod_12",
     "rarity": 4
   },
   {
     "id": 110035,
-    "name": "紫色水属性契约者魔之楔道具箱",
+    "name": "Purple Hydro Covenanter Demon Wedge Chest",
     "icon": "T_Pack_RandomMod_13",
     "rarity": 4
   },
   {
     "id": 110036,
-    "name": "紫色光属性契约者魔之楔道具箱",
+    "name": "Purple Lumino Covenanter Demon Wedge Chest",
     "icon": "T_Pack_RandomMod_14",
     "rarity": 4
   },
   {
     "id": 110037,
-    "name": "紫色暗属性契约者魔之楔道具箱",
+    "name": "Purple Umbro Covenanter Demon Wedge Chest",
     "icon": "T_Pack_RandomMod_15",
     "rarity": 4
   },
@@ -3883,27 +3883,29 @@
   },
   {
     "id": 110040,
-    "name": "子不语·黛蓝",
+    "name": "Whispers Unspoken: Azure",
     "icon": "T_Head_Frame29",
     "rarity": 1
   },
   {
     "id": 110041,
-    "name": "子不语·晴蓝",
+    "name": "Whispers Unspoken: Celeste",
     "icon": "T_Head_Frame28",
     "rarity": 1
   },
   {
     "id": 120001,
-    "name": "父辈余荫代金券",
+    "name": "Tough Love Coupon",
     "icon": "T_Resource_DiscountTicket_01",
-    "rarity": 5
+    "rarity": 5,
+    "desc": "商品满680月石晶胚减300月石晶胚"
   },
   {
     "id": 120002,
-    "name": "风息装饰代金券",
+    "name": "Windbreath Accessory Coupon",
     "icon": "T_Resource_DiscountTicket_01",
-    "rarity": 5
+    "rarity": 5,
+    "desc": "商品满480月石晶胚减300月石晶胚"
   },
   {
     "id": 1001101,
@@ -4355,19 +4357,19 @@
   },
   {
     "id": 1022101,
-    "name": "凝合思绪·丽蓓卡",
+    "name": "Essence Thought: Rebecca",
     "icon": "T_CharPiece_Shuimu01",
     "rarity": 5,
-    "desc": "由记忆的流沙中撷取的完整思绪，承载着过去或未来的，关于某个人的记忆。",
-    "desc2": "“你有三次生命。\n第一次生命是呼吸与心跳。你以血肉之躯丈量大地，感知世界。\n第二次生命是连接与牵绊。你的灵魂在亲人的哺育、恋人的吻和朋友的抱拥中栖居。\n第三次生命是思想与记忆。当一位读者在书页上看到你的名字，当一位旅人在吟游诗人的歌谣中听到你的名字，当一个孩子从你的故事里得到智慧与勇气，你的生命便再度在尘世回响。\n每个人都会回归雾海，但不是每个人都会死去。”\n\n——雾海引渡人 妮弗尔夫人"
+    "desc": "Plucked from the shifting sands of memory, a complete thread of thought carries echoes of someone, from a past yet to come, or a future long forgotten.",
+    "desc2": "\"You have three lives.\n\nYour first life is breath and heartbeat. You measure and perceive the world with your flesh and blood.\nYour second life is connection and bond. Your soul dwells in the nourishment of family, a lover's kiss, and the embrace of friends.\nYour third life is thought and memory. When a reader sees your name upon a page, when a traveler hears it in a bard's song, when a child draws wisdom and courage from your story—your life echoes once more in this world.\n\nAll return to the Misty Sea, but not all truly die.\"\n\n— Lady Nifle, Ferrywoman of the Misty Sea"
   },
   {
     "id": 1023201,
-    "name": "凝合思绪·海尔法",
+    "name": "Essence Thought: Hellfire",
     "icon": "T_CharPiece_Haier01",
     "rarity": 5,
-    "desc": "由记忆的流沙中撷取的完整思绪，承载着过去或未来的，关于某个人的记忆。",
-    "desc2": "“你有三次生命。\n第一次生命是呼吸与心跳。你以血肉之躯丈量大地，感知世界。\n第二次生命是连接与牵绊。你的灵魂在亲人的哺育、恋人的吻和朋友的抱拥中栖居。\n第三次生命是思想与记忆。当一位读者在书页上看到你的名字，当一位旅人在吟游诗人的歌谣中听到你的名字，当一个孩子从你的故事里得到智慧与勇气，你的生命便再度在尘世回响。\n每个人都会回归雾海，但不是每个人都会死去。”\n\n——雾海引渡人 妮弗尔夫人"
+    "desc": "Plucked from the shifting sands of memory, a complete thread of thought carries echoes of someone, from a past yet to come, or a future long forgotten.",
+    "desc2": "\"You have three lives.\n\nYour first life is breath and heartbeat. You measure and perceive the world with your flesh and blood.\nYour second life is connection and bond. Your soul dwells in the nourishment of family, a lover's kiss, and the embrace of friends.\nYour third life is thought and memory. When a reader sees your name upon a page, when a traveler hears it in a bard's song, when a child draws wisdom and courage from your story—your life echoes once more in this world.\n\nAll return to the Misty Sea, but not all truly die.\"\n\n— Lady Nifle, Ferrywoman of the Misty Sea"
   },
   {
     "id": 1110000,
@@ -4703,7 +4705,7 @@
     "icon": "T_Read_01",
     "rarity": 3,
     "desc": "A folder unearthed from the file cabinets. It bears Psyche's photo and details her time at the Hypnos' House.",
-    "desc2": "Name: Psyche Frey\nAge: 17\nSymptoms: Intermittent blindness\n\n...\nWhen Psyche arrived, her Deterioration had already progressed to the mid-stage. Yet, she greeted everyone with such warmth. I wish I could believe the diagnosis was wrong — that she wasn't suffering from Deterioration, and that her life could somehow get back on track.\n...\nShe keeps the flowers her parents brought her by her bedside, even though it leaves her barely any space to sleep or even stand.\n...\nI cleared out a better-lit room on the second floor. Hopefully, Psyche and her flowers will be more comfortable there.\n...\nShe really loves flowers. Every day, she tends to them with care and shares them with the other children. If it weren't for the shadow of Deterioration, she would have taken care of the Flower of Solicitude even better than her parents ever did.\n...\nToday, Psyche gave me a flower too. Her peaceful smile reminded me of you, Hayley...\n...\nPsyche saw me frowning over the finances today and wouldn't stop pestering me until I told her about Hypnos' House's financial struggles.\n(Note: Must reply to the buyer soon. Can't let the children keep worrying about this.)\n...\nPsyche cleaned out the old house and even rented it to some kid with a shady background... I just hope that kid doesn't stir up trouble for Hypnos' House.\n...\n<H>Psyche told me she wished to live longer as a human — even if just for one more day. I was both relieved and furious to hear that. I felt relieved because Psyche finally opened up, after trying to be strong for so long.</>\n<H>I felt furious because of that blasted kid! I don't know what that little rascal said to her, but giving false hope to someone who's destined to leave the world soon — that's the cruellest thing one could do.</>\n<H>If you don't have what it takes to save Psyche, then leave her alone!</>\n(Note: The anti-Deterioration drug is nearly ready. Fate... please have mercy on her for once...)\n..."
+    "desc2": "Name: Psyche Frey\nAge: 17\nSymptoms: Intermittent blindness\n\n...\nWhen Psyche arrived, her Deterioration had already progressed to the mid-stage. Yet, she greeted everyone with such warmth. I wish I could believe the diagnosis was wrong — that she wasn't suffering from Deterioration, and that her life could somehow get back on track.\n...\nShe keeps the flowers her parents brought her by her bedside, even though it leaves her barely any space to sleep or even stand.\n...\nI cleared out a better-lit room on the second floor. Hopefully, Psyche and her flowers will be more comfortable there.\n...\nShe really loves flowers. Every day, she tends to them with care and shares them with the other children. If it weren't for the shadow of Deterioration, she would have taken care of the Flowers of Solicitude even better than her parents ever did.\n...\nToday, Psyche gave me a flower too. Her peaceful smile reminded me of you, Hayley...\n...\nPsyche saw me frowning over the finances today and wouldn't stop pestering me until I told her about Hypnos' House's financial struggles.\n(Note: Must reply to the buyer soon. Can't let the children keep worrying about this.)\n...\nPsyche cleaned out the old house and even rented it to some kid with a shady background... I just hope that kid doesn't stir up trouble for Hypnos' House.\n...\n<H>Psyche told me she wished to live longer as a human — even if just for one more day. I was both relieved and furious to hear that. I felt relieved because Psyche finally opened up, after trying to be strong for so long.</>\n<H>I felt furious because of that blasted kid! I don't know what that little rascal said to her, but giving false hope to someone who's destined to leave the world soon — that's the cruellest thing one could do.</>\n<H>If you don't have what it takes to save Psyche, then leave her alone!</>\n(Note: The anti-Deterioration drug is nearly ready. Fate... please have mercy on her for once...)\n..."
   },
   {
     "id": 2000042,
@@ -6828,10 +6830,10 @@
   },
   {
     "id": 6000005,
-    "name": "邀请函",
+    "name": "Invitation",
     "icon": "T_Activity_SoloTreasure_ResIcon",
     "rarity": 5,
-    "desc": "奉香群英试举办以来在华胥各地引起了极高的关注度，各路明星选手在赛事中的亮眼表现十分引人注目。为吸引更多年轻子弟接受华胥这场翻天覆地的变化，大赛官方邀请这些明星选手们参与挑战升级的特邀赛，并准备了对应的邀请函。"
+    "desc": "Since its launch, the Incense Proving has drawn widespread attention across Huaxu, with its star contestants earning particular acclaim. To inspire more young talents amid the changes sweeping Huaxu, the organisers have invited these standout competitors to take part in an even more demanding Invitational, and issued invitations to them accordingly."
   },
   {
     "id": 6100001,
@@ -7903,7 +7905,7 @@
   },
   {
     "id": 31012001,
-    "name": "《重铸黑白》",
+    "name": "Binary Fate",
     "icon": "T_Piano_Shop2",
     "rarity": 2,
     "desc": "A piece of sheet music — its notes trace a story like footprints in the sand.",

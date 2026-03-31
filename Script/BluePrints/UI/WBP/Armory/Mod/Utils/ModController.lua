@@ -58,7 +58,7 @@ function M:OpenSeconderyPassword(ModUuid, View)
       if View then
         View:BlockAllUIInput(true)
       end
-      self:GetAvatar():UnLockResourceInBag(CommonConst.AllType.Mod, ModUuid)
+      self:GetAvatar():UnLockResourceInBag(CommonConst.AllType.Mod, ModUuid, nil, Password)
     end
   }
   SecondaryPasswordController:RequestSecPasswordValidation(Callback)

@@ -720,7 +720,7 @@
   },
   {
     "id": 2836,
-    "name": "집률각 앞 광장",
+    "name": "구장 광장",
     "icon": "T_Gp_Camera",
     "pos": [
       32830,
@@ -738,7 +738,7 @@
   },
   {
     "id": 2837,
-    "name": "山外山",
+    "name": "산외산",
     "icon": "T_Gp_Shanwaishan",
     "pos": [
       -8822,
@@ -758,7 +758,7 @@
   },
   {
     "id": 2838,
-    "name": "西城",
+    "name": "서쪽 시가지",
     "icon": "T_Gp_Haojing",
     "pos": [
       -5003,
@@ -778,7 +778,7 @@
   },
   {
     "id": 2839,
-    "name": "太虚陵",
+    "name": "태허릉",
     "icon": "T_Gp_Taixuling",
     "pos": [
       31498,
@@ -798,7 +798,7 @@
   },
   {
     "id": 2840,
-    "name": "由来巷",
+    "name": "유래골",
     "icon": "T_Gp_Youlaixiang",
     "pos": [
       40233,
@@ -818,7 +818,7 @@
   },
   {
     "id": 2841,
-    "name": "由来巷",
+    "name": "유래골",
     "icon": "T_Gp_Youlaixiang",
     "pos": [
       55237,
@@ -831,14 +831,14 @@
     "telepointId": 1212,
     "teleportPointPos": 5,
     "teleportSubRegion": 104505,
-    "unlockConditionId": 329,
+    "unlockConditionId": 99,
     "manualItemId": 243021,
     "staticId": null,
     "singleCreate": false
   },
   {
     "id": 2842,
-    "name": "内城",
+    "name": "동쪽 교외",
     "icon": "T_Gp_Haojing",
     "pos": [
       15355,
@@ -851,14 +851,14 @@
     "telepointId": 1500,
     "teleportPointPos": 3,
     "teleportSubRegion": 105501,
-    "unlockConditionId": 329,
+    "unlockConditionId": 327,
     "manualItemId": 234013,
     "staticId": null,
     "singleCreate": false
   },
   {
     "id": 2843,
-    "name": "东郊",
+    "name": "내성",
     "icon": "T_Gp_Haojing",
     "pos": [
       14316,
@@ -871,14 +871,14 @@
     "telepointId": 1500,
     "teleportPointPos": 4,
     "teleportSubRegion": 105501,
-    "unlockConditionId": 329,
+    "unlockConditionId": 99,
     "manualItemId": 234012,
     "staticId": null,
     "singleCreate": false
   },
   {
     "id": 2844,
-    "name": "内城",
+    "name": "내성",
     "icon": "T_Gp_Zhilvge",
     "pos": [
       31498,

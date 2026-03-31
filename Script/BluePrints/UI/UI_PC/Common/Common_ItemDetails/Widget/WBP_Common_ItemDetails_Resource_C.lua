@@ -75,11 +75,10 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
           else
             PageJumpUtils:CloseFrontDialog()
             if "WeaponAccessory" == ItemType and CharAccessoryInfo and CharAccessoryInfo.StanceFXType ~= "Accessory" then
-              local SkinVideo = UIManager(self):LoadUINew("ArmorySkinVideo_Sp", {
+              local SkinVideo = UIManager(self):LoadUINew("ArmorySkinVideo", {
                 Path = CharAccessoryInfo.Video,
                 SoundPath = CharAccessoryInfo.GetSoundPath,
                 DestructCB = function()
-                  self:SetFocus()
                 end
               })
               if SkinVideo then
@@ -329,11 +328,10 @@ function M:InitItemInfoInBag(ItemType, ItemId, UnitId, Content)
           else
             PageJumpUtils:CloseFrontDialog()
             if "WeaponAccessory" == ItemType and CharAccessoryInfo and CharAccessoryInfo.StanceFXType ~= "Accessory" then
-              local SkinVideo = UIManager(self):LoadUINew("ArmorySkinVideo_Sp", {
+              local SkinVideo = UIManager(self):LoadUINew("ArmorySkinVideo", {
                 Path = CharAccessoryInfo.Video,
                 SoundPath = CharAccessoryInfo.GetSoundPath,
                 DestructCB = function()
-                  self:SetFocus()
                 end
               })
               if SkinVideo then

@@ -108,27 +108,9 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "1767944727334742",
-            startPort = "Out",
-            endQuest = "17698662594713040",
-            endPort = "In"
-          },
-          {
-            startQuest = "17698662594713040",
-            startPort = "Out",
-            endQuest = "1767944727334740",
-            endPort = "In"
-          },
-          {
             startQuest = "17621726816933025641",
             startPort = "Out",
             endQuest = "17698662673913348",
-            endPort = "In"
-          },
-          {
-            startQuest = "1767944727334742",
-            startPort = "Out",
-            endQuest = "1773199739187852171",
             endPort = "In"
           },
           {
@@ -213,6 +195,24 @@ return {
             startQuest = "17621726816933025637",
             startPort = "QuestStart",
             endQuest = "17741812707862526841",
+            endPort = "In"
+          },
+          {
+            startQuest = "1767944727334742",
+            startPort = "Out",
+            endQuest = "17698662594713040",
+            endPort = "In"
+          },
+          {
+            startQuest = "17698662594713040",
+            startPort = "Out",
+            endQuest = "1773199739187852171",
+            endPort = "In"
+          },
+          {
+            startQuest = "1773199739187852171",
+            startPort = "Out",
+            endQuest = "1767944727334740",
             endPort = "In"
           }
         },
@@ -312,7 +312,7 @@ return {
             key = "1767944727334742",
             type = "TalkNode",
             name = "过场动画",
-            pos = {x = 1173.9959067547245, y = 259.13503895038417},
+            pos = {x = 1012.2567763199419, y = 304.78721286342767},
             propsData = {
               IsNpcNode = false,
               TalkType = "Cinematic",
@@ -480,7 +480,7 @@ return {
             key = "17698662594713040",
             type = "ChangeRoleNode",
             name = "切换角色",
-            pos = {x = 1455.335164835165, y = 439.5054945054944},
+            pos = {x = 1233.5960344003825, y = 451.244624940277},
             propsData = {QuestRoleId = 15030101, IsPlayFX = false}
           },
           ["17698662673913348"] = {

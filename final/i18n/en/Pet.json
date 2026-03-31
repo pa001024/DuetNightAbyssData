@@ -188,8 +188,8 @@
   {
     "id": 605,
     "uid": 605,
-    "名称": "青鸾贰型",
-    "描述": "苏乙亲手打造的“矩子巡枢贰型·青鸾”，简称青鸾贰型。苏乙自称在其上倾注了无数个日夜的心血。仔细观察它的外观，你确实能感受到细节处精巧的机械构造。",
+    "名称": "Short for \"Juzi Patrol Nexus Type Ⅱ: Qingluan\", the Qingluan Type Ⅱ is a mechanical construct handcrafted by Su Yi. She claims to have devoted countless days and nights to its creation. A closer look at its exterior reveals exquisite craftsmanship in every detail.",
+    "描述": "Verdant Finale – Dual Pistols",
     "icon": "Qingluan",
     "品质": 5,
     "类型": 3,
@@ -198,7 +198,7 @@
     "经验": 150,
     "主动": {
       "id": 417,
-      "描述": "向自身周围投掷3颗飞弹，对范围内的敌人造成主角色攻击{%}的伤害。",
+      "描述": "Fire 3 projectiles, each dealing DMG equal to {%} of the main character's ATK to nearby enemies.",
       "值": [
         [
           5.85,
@@ -211,7 +211,7 @@
       "cd": 25
     },
     "被动": {
-      "描述": "自身及协战同伴攻击+{%}，最大生命+{%}。",
+      "描述": "The main character and Combat Partners gain:\n ATK +{%}, Max HP +{%}",
       "值": [
         [
           0.024,
@@ -3065,8 +3065,8 @@
   {
     "id": 4171,
     "uid": 4171,
-    "名称": "青鸾贰型",
-    "描述": "苏乙亲手打造的“矩子巡枢贰型·青鸾”，简称青鸾贰型。苏乙自称在其上倾注了无数个日夜的心血。仔细观察它的外观，你确实能感受到细节处精巧的机械构造。",
+    "名称": "Short for \"Juzi Patrol Nexus Type Ⅱ: Qingluan\", the Qingluan Type Ⅱ is a mechanical construct handcrafted by Su Yi. She claims to have devoted countless days and nights to its creation. A closer look at its exterior reveals exquisite craftsmanship in every detail.",
+    "描述": "Verdant Finale – Dual Pistols",
     "icon": "Qingluan",
     "异化": 4171,
     "品质": 5,
@@ -3076,7 +3076,7 @@
     "经验": 150,
     "主动": {
       "id": 417,
-      "描述": "向自身周围投掷3颗飞弹，对范围内的敌人造成主角色攻击{%}的伤害。",
+      "描述": "Fire 3 projectiles, each dealing DMG equal to {%} of the main character's ATK to nearby enemies.",
       "值": [
         [
           5.85,
@@ -3089,7 +3089,7 @@
       "cd": 25
     },
     "被动": {
-      "描述": "自身及协战同伴攻击+{%}，最大生命+{%}。",
+      "描述": "The main character and Combat Partners gain:\n ATK +{%}, Max HP +{%}",
       "值": [
         [
           0.024,
@@ -3111,8 +3111,8 @@
   {
     "id": 4172,
     "uid": 4171,
-    "名称": "青鸾贰型",
-    "描述": "苏乙亲手打造的“矩子巡枢贰型·青鸾”，简称青鸾贰型。苏乙自称在其上倾注了无数个日夜的心血。仔细观察它的外观，你确实能感受到细节处精巧的机械构造。",
+    "名称": "Short for \"Juzi Patrol Nexus Type Ⅱ: Qingluan\", the Qingluan Type Ⅱ is a mechanical construct handcrafted by Su Yi. She claims to have devoted countless days and nights to its creation. A closer look at its exterior reveals exquisite craftsmanship in every detail.",
+    "描述": "Verdant Finale – Dual Pistols",
     "icon": "Qingluan",
     "异化": 4171,
     "品质": 5,
@@ -3122,7 +3122,7 @@
     "经验": 150,
     "主动": {
       "id": 417,
-      "描述": "向自身周围投掷3颗飞弹，对范围内的敌人造成主角色攻击{%}的伤害。",
+      "描述": "Fire 3 projectiles, each dealing DMG equal to {%} of the main character's ATK to nearby enemies.",
       "值": [
         [
           5.85,
@@ -3135,7 +3135,7 @@
       "cd": 25
     },
     "被动": {
-      "描述": "自身及协战同伴攻击+{%}，最大生命+{%}。",
+      "描述": "The main character and Combat Partners gain:\n ATK +{%}, Max HP +{%}",
       "值": [
         [
           0.024,
@@ -3691,7 +3691,7 @@
   {
     "id": 4944,
     "uid": 4941,
-    "名称": "灿烂摇摇冻·老道",
+    "名称": "Luminous Jellomon: Veteran",
     "描述": "A burrowing Geniemon that thrives in the cracks between layers of soil. It feeds on rot and decay, enriching the land by returning nutrients to the earth.",
     "icon": "YYD04",
     "品质": 2,

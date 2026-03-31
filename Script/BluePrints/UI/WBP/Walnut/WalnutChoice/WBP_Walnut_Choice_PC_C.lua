@@ -458,7 +458,7 @@ function M:SelectWalnutById(WalnutId)
       if not DungeonId then
         return
       end
-      local IsAutoMode = Avatar.Dungeons[DungeonId] and Avatar.Dungeons[DungeonId].AutoProgress
+      local IsAutoMode = Avatar.Dungeons[DungeonId] and Avatar.Dungeons[DungeonId].AutoProgress and IsStandAlone(self)
       if IsAutoMode and 0 == Content.Count then
         local FirstWalnutContent = WalnutItems:Get(2)
         if FirstWalnutContent and FirstWalnutContent.Count > 0 then
@@ -841,6 +841,9 @@ end
 function M:CheckIsAutoMode()
   local Avatar = GWorld:GetAvatar()
   local GameState = UE4.UGameplayStatics.GetGameState(self)
+  if not IsStandAlone(GameState) then
+    return
+  end
   if not Avatar then
     return
   end

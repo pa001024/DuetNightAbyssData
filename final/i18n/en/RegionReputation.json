@@ -162,7 +162,7 @@
     "entrusts": [
       {
         "id": 10001,
-        "name": "Lunodeliverer's Gathering Request",
+        "name": "Gathering Request",
         "desc": "\"You're always out and about. Bet you've picked up a fair few good finds — think you could sell me some? I'm trying out a little sideline...\"",
         "icon": "T_Head_WaimaiJJ",
         "exp": 30,
@@ -182,7 +182,7 @@
       },
       {
         "id": 10002,
-        "name": "Lunodeliverer's Gathering Request",
+        "name": "Gathering Request",
         "desc": "\"You're always out and about. Bet you've picked up a fair few good finds — think you could sell me some? I'm trying out a little sideline...\"",
         "icon": "T_Head_WaimaiJJ",
         "exp": 30,
@@ -202,7 +202,7 @@
       },
       {
         "id": 10003,
-        "name": "Lunodeliverer's Gathering Request",
+        "name": "Gathering Request",
         "desc": "\"You're always out and about. Bet you've picked up a fair few good finds — think you could sell me some? I'm trying out a little sideline...\"",
         "icon": "T_Head_WaimaiJJ",
         "exp": 30,
@@ -222,7 +222,7 @@
       },
       {
         "id": 10004,
-        "name": "Lunodeliverer's Gathering Request",
+        "name": "Gathering Request",
         "desc": "\"You're always out and about. Bet you've picked up a fair few good finds — think you could sell me some? I'm trying out a little sideline...\"",
         "icon": "T_Head_WaimaiJJ",
         "exp": 30,
@@ -242,7 +242,7 @@
       },
       {
         "id": 10005,
-        "name": "Lunodeliverer's Gathering Request",
+        "name": "Gathering Request",
         "desc": "\"You're always out and about. Bet you've picked up a fair few good finds — think you could sell me some? I'm trying out a little sideline...\"",
         "icon": "T_Head_WaimaiJJ",
         "exp": 30,
@@ -262,7 +262,7 @@
       },
       {
         "id": 10006,
-        "name": "Camilla's Materials Request",
+        "name": "Materials Request",
         "desc": "\"A Phoxhunter wants to wager with you — says there's no way you'll get hold of those supplies. Care to take the bet?\"",
         "icon": "T_Head_Kami",
         "exp": 20,
@@ -282,7 +282,7 @@
       },
       {
         "id": 10007,
-        "name": "Camilla's Materials Request",
+        "name": "Materials Request",
         "desc": "\"A Phoxhunter wants to wager with you — says there's no way you'll get hold of those supplies. Care to take the bet?\"",
         "icon": "T_Head_Kami",
         "exp": 20,
@@ -302,7 +302,7 @@
       },
       {
         "id": 10008,
-        "name": "Camilla's Materials Request",
+        "name": "Materials Request",
         "desc": "\"A Phoxhunter wants to wager with you — says there's no way you'll get hold of those supplies. Care to take the bet?\"",
         "icon": "T_Head_Kami",
         "exp": 20,
@@ -322,7 +322,7 @@
       },
       {
         "id": 10009,
-        "name": "Camilla's Materials Request",
+        "name": "Materials Request",
         "desc": "\"A Phoxhunter wants to wager with you — says there's no way you'll get hold of those supplies. Care to take the bet?\"",
         "icon": "T_Head_Kami",
         "exp": 20,
@@ -342,7 +342,7 @@
       },
       {
         "id": 10010,
-        "name": "Camilla's Materials Request",
+        "name": "Materials Request",
         "desc": "\"A Phoxhunter wants to wager with you — says there's no way you'll get hold of those supplies. Care to take the bet?\"",
         "icon": "T_Head_Kami",
         "exp": 20,
@@ -362,7 +362,7 @@
       },
       {
         "id": 10011,
-        "name": "Camilla's Materials Request",
+        "name": "Materials Request",
         "desc": "\"A Phoxhunter wants to wager with you — says there's no way you'll get hold of those supplies. Care to take the bet?\"",
         "icon": "T_Head_Kami",
         "exp": 20,
@@ -382,7 +382,7 @@
       },
       {
         "id": 10012,
-        "name": "Camilla's Materials Request",
+        "name": "Materials Request",
         "desc": "\"A Phoxhunter wants to wager with you — says there's no way you'll get hold of those supplies. Care to take the bet?\"",
         "icon": "T_Head_Kami",
         "exp": 30,
@@ -402,7 +402,7 @@
       },
       {
         "id": 10013,
-        "name": "Camilla's Materials Request",
+        "name": "Materials Request",
         "desc": "\"A Phoxhunter wants to wager with you — says there's no way you'll get hold of those supplies. Care to take the bet?\"",
         "icon": "T_Head_Kami",
         "exp": 30,
@@ -422,7 +422,7 @@
       },
       {
         "id": 10014,
-        "name": "Camilla's Materials Request",
+        "name": "Materials Request",
         "desc": "\"A Phoxhunter wants to wager with you — says there's no way you'll get hold of those supplies. Care to take the bet?\"",
         "icon": "T_Head_Kami",
         "exp": 30,
@@ -442,7 +442,7 @@
       },
       {
         "id": 10015,
-        "name": "Margie's Supply Request",
+        "name": "Supply Request",
         "desc": "\"Wh—What!? I heard there's a genie in the rubbish bin who grants wishes if you ask nicely — is that true? Ha, just kidding~ But I really do need these supplies!\"",
         "icon": "T_Head_Maer",
         "exp": 30,
@@ -462,7 +462,7 @@
       },
       {
         "id": 10016,
-        "name": "Margie's Supply Request",
+        "name": "Supply Request",
         "desc": "\"Wh—What!? I heard there's a genie in the rubbish bin who grants wishes if you ask nicely — is that true? Ha, just kidding~ But I really do need these supplies!\"",
         "icon": "T_Head_Maer",
         "exp": 30,
@@ -482,7 +482,7 @@
       },
       {
         "id": 10017,
-        "name": "Margie's Supply Request",
+        "name": "Supply Request",
         "desc": "\"Wh—What!? I heard there's a genie in the rubbish bin who grants wishes if you ask nicely — is that true? Ha, just kidding~ But I really do need these supplies!\"",
         "icon": "T_Head_Maer",
         "exp": 30,
@@ -502,7 +502,7 @@
       },
       {
         "id": 10018,
-        "name": "Margie's Supply Request",
+        "name": "Supply Request",
         "desc": "\"Wh—What!? I heard there's a genie in the rubbish bin who grants wishes if you ask nicely — is that true? Ha, just kidding~ But I really do need these supplies!\"",
         "icon": "T_Head_Maer",
         "exp": 40,
@@ -522,7 +522,7 @@
       },
       {
         "id": 10019,
-        "name": "Margie's Supply Request",
+        "name": "Supply Request",
         "desc": "\"Wh—What!? I heard there's a genie in the rubbish bin who grants wishes if you ask nicely — is that true? Ha, just kidding~ But I really do need these supplies!\"",
         "icon": "T_Head_Maer",
         "exp": 40,
@@ -542,7 +542,7 @@
       },
       {
         "id": 10020,
-        "name": "Margie's Supply Request",
+        "name": "Supply Request",
         "desc": "\"Wh—What!? I heard there's a genie in the rubbish bin who grants wishes if you ask nicely — is that true? Ha, just kidding~ But I really do need these supplies!\"",
         "icon": "T_Head_Maer",
         "exp": 40,
@@ -725,7 +725,7 @@
     "entrusts": [
       {
         "id": 11001,
-        "name": "Lunocarp's Gathering Request",
+        "name": "Gathering Request",
         "desc": "\"Snow says you lot pick up bits like this all the time while you're out adventuring... and most of it just ends up going to waste, right? If you can, could you spare me some?\"",
         "icon": "T_Head_JinliJJ",
         "exp": 30,
@@ -745,7 +745,7 @@
       },
       {
         "id": 11002,
-        "name": "Lunocarp's Gathering Request",
+        "name": "Gathering Request",
         "desc": "\"Snow says you lot pick up bits like this all the time while you're out adventuring... and most of it just ends up going to waste, right? If you can, could you spare me some?\"",
         "icon": "T_Head_JinliJJ",
         "exp": 30,
@@ -765,7 +765,7 @@
       },
       {
         "id": 11003,
-        "name": "Lunocarp's Gathering Request",
+        "name": "Gathering Request",
         "desc": "\"Snow says you lot pick up bits like this all the time while you're out adventuring... and most of it just ends up going to waste, right? If you can, could you spare me some?\"",
         "icon": "T_Head_JinliJJ",
         "exp": 30,
@@ -785,7 +785,7 @@
       },
       {
         "id": 11004,
-        "name": "Lunocarp's Gathering Request",
+        "name": "Gathering Request",
         "desc": "\"Snow says you lot pick up bits like this all the time while you're out adventuring... and most of it just ends up going to waste, right? If you can, could you spare me some?\"",
         "icon": "T_Head_JinliJJ",
         "exp": 30,
@@ -805,7 +805,7 @@
       },
       {
         "id": 11005,
-        "name": "Lunocarp's Gathering Request",
+        "name": "Gathering Request",
         "desc": "\"Snow says you lot pick up bits like this all the time while you're out adventuring... and most of it just ends up going to waste, right? If you can, could you spare me some?\"",
         "icon": "T_Head_JinliJJ",
         "exp": 30,
@@ -825,7 +825,7 @@
       },
       {
         "id": 11006,
-        "name": "A Starweaver's Materials Request",
+        "name": "Materials Request",
         "desc": "\"These goods are in high demand, but the Sable Bi'an have been harrying the trade routes lately. Restocking has been a nightmare. If you can lend a hand, we'd be most grateful.\"",
         "icon": "T_Head_FameCommon",
         "exp": 20,
@@ -845,7 +845,7 @@
       },
       {
         "id": 11007,
-        "name": "A Starweaver's Materials Request",
+        "name": "Materials Request",
         "desc": "\"These goods are in high demand, but the Sable Bi'an have been harrying the trade routes lately. Restocking has been a nightmare. If you can lend a hand, we'd be most grateful.\"",
         "icon": "T_Head_FameCommon",
         "exp": 20,
@@ -865,7 +865,7 @@
       },
       {
         "id": 11008,
-        "name": "A Starweaver's Materials Request",
+        "name": "Materials Request",
         "desc": "\"These goods are in high demand, but the Sable Bi'an have been harrying the trade routes lately. Restocking has been a nightmare. If you can lend a hand, we'd be most grateful.\"",
         "icon": "T_Head_FameCommon",
         "exp": 20,
@@ -885,7 +885,7 @@
       },
       {
         "id": 11009,
-        "name": "A Starweaver's Materials Request",
+        "name": "Materials Request",
         "desc": "\"These goods are in high demand, but the Sable Bi'an have been harrying the trade routes lately. Restocking has been a nightmare. If you can lend a hand, we'd be most grateful.\"",
         "icon": "T_Head_FameCommon",
         "exp": 20,
@@ -905,7 +905,7 @@
       },
       {
         "id": 11010,
-        "name": "A Starweaver's Materials Request",
+        "name": "Materials Request",
         "desc": "\"These goods are in high demand, but the Sable Bi'an have been harrying the trade routes lately. Restocking has been a nightmare. If you can lend a hand, we'd be most grateful.\"",
         "icon": "T_Head_FameCommon",
         "exp": 20,
@@ -925,7 +925,7 @@
       },
       {
         "id": 11011,
-        "name": "A Starweaver's Materials Request",
+        "name": "Materials Request",
         "desc": "\"These goods are in high demand, but the Sable Bi'an have been harrying the trade routes lately. Restocking has been a nightmare. If you can lend a hand, we'd be most grateful.\"",
         "icon": "T_Head_FameCommon",
         "exp": 20,
@@ -945,7 +945,7 @@
       },
       {
         "id": 11012,
-        "name": "A Starweaver's Materials Request",
+        "name": "Materials Request",
         "desc": "\"These goods are in high demand, but the Sable Bi'an have been harrying the trade routes lately. Restocking has been a nightmare. If you can lend a hand, we'd be most grateful.\"",
         "icon": "T_Head_FameCommon",
         "exp": 30,
@@ -965,7 +965,7 @@
       },
       {
         "id": 11013,
-        "name": "A Starweaver's Materials Request",
+        "name": "Materials Request",
         "desc": "\"These goods are in high demand, but the Sable Bi'an have been harrying the trade routes lately. Restocking has been a nightmare. If you can lend a hand, we'd be most grateful.\"",
         "icon": "T_Head_FameCommon",
         "exp": 30,
@@ -985,7 +985,7 @@
       },
       {
         "id": 11014,
-        "name": "A Starweaver's Materials Request",
+        "name": "Materials Request",
         "desc": "\"These goods are in high demand, but the Sable Bi'an have been harrying the trade routes lately. Restocking has been a nightmare. If you can lend a hand, we'd be most grateful.\"",
         "icon": "T_Head_FameCommon",
         "exp": 30,
@@ -1005,7 +1005,7 @@
       },
       {
         "id": 11015,
-        "name": "A Starweaver's Materials Request",
+        "name": "Materials Request",
         "desc": "\"These goods are in high demand, but the Sable Bi'an have been harrying the trade routes lately. Restocking has been a nightmare. If you can lend a hand, we'd be most grateful.\"",
         "icon": "T_Head_FameCommon",
         "exp": 30,
@@ -1025,7 +1025,7 @@
       },
       {
         "id": 11016,
-        "name": "Mr Qiu's Supply Request",
+        "name": "Supply Request",
         "desc": "\"No need to be tense. Lend me your hand today, and there will come a day when I repay the favour.\"",
         "icon": "T_Head_Qiu",
         "exp": 30,
@@ -1045,7 +1045,7 @@
       },
       {
         "id": 11017,
-        "name": "Mr Qiu's Supply Request",
+        "name": "Supply Request",
         "desc": "\"No need to be tense. Lend me your hand today, and there will come a day when I repay the favour.\"",
         "icon": "T_Head_Qiu",
         "exp": 30,
@@ -1065,7 +1065,7 @@
       },
       {
         "id": 11018,
-        "name": "Mr Qiu's Supply Request",
+        "name": "Supply Request",
         "desc": "\"No need to be tense. Lend me your hand today, and there will come a day when I repay the favour.\"",
         "icon": "T_Head_Qiu",
         "exp": 40,
@@ -1085,7 +1085,7 @@
       },
       {
         "id": 11019,
-        "name": "Mr Qiu's Supply Request",
+        "name": "Supply Request",
         "desc": "\"No need to be tense. Lend me your hand today, and there will come a day when I repay the favour.\"",
         "icon": "T_Head_Qiu",
         "exp": 40,
@@ -1105,7 +1105,7 @@
       },
       {
         "id": 11020,
-        "name": "Mr Qiu's Supply Request",
+        "name": "Supply Request",
         "desc": "\"No need to be tense. Lend me your hand today, and there will come a day when I repay the favour.\"",
         "icon": "T_Head_Qiu",
         "exp": 40,

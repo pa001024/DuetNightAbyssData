@@ -629,6 +629,9 @@ function Component:OnCharacterReady(Info)
     self:ReceiveOnCharacterReady()
     return
   end
+  if self.CurrentRoleId == 1504 then
+    self:GetMovementComponent().LargeClientDashDistance = 1500
+  end
   self:GetBossDestructableComponent()
   local IsAut = IsAuthority(self)
   if IsAut then
@@ -913,6 +916,11 @@ function Component:InitAppearanceSuit(AppearanceSuit)
   else
     self:ClearAllSuitItem()
     self:InitPartMeshCompWithDefault()
+    if self.CharacterFashion then
+      self.CharacterFashion:StopCreateEffectTimer(true)
+      self.CharacterFashion:RemoveAllSkinLevelUpVisEffect()
+      self.CharacterFashion:RemoveAllSkinLevelUpEffectCreature()
+    end
   end
   local Avatar = GWorld:GetAvatar()
   if Avatar then

@@ -15,7 +15,13 @@ function M:OnListItemObjectSet(Content)
 end
 
 function M:Init(Content)
-  self:SetProgress(0)
+  local GameState = UE4.UGameplayStatics.GetGameState(self)
+  local Progress = GameState.SynthesisEnergyValues:FindRef(self.Content.StaticCreatorId)
+  if nil == Progress then
+    self:SetProgress(0)
+  else
+    self:SetProgress(Progress)
+  end
   local TexturePath = ""
   if 1 == Content.Index then
     TexturePath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Digging_A.T_Gp_Digging_A'"

@@ -463,6 +463,8 @@ return ReadOnly("Hair", {
     LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Hat09_04.T_Fashion_Hat09_04'",
     Name = "UI_Accessory_Name_12130",
     Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 4,
     Sound = "SOUND_ITEM_NORMAL"
   },
   [150492] = {

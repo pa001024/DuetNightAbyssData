@@ -651,12 +651,12 @@
       }
     ],
     "熔炼": [
-      "ATK Speed +25.0%‍. When performing a Charged Attack with this weapon, there is a 28.0% chance to reduce Geniemon Support CD by 3.0s.",
-      "ATK Speed +30.0%‍. When performing a Charged Attack with this weapon, there is a 33.6% chance to reduce Geniemon Support CD by 3.0s.",
-      "ATK Speed +35.0%‍. When performing a Charged Attack with this weapon, there is a 39.2% chance to reduce Geniemon Support CD by 3.0s.",
-      "ATK Speed +40.0%‍. When performing a Charged Attack with this weapon, there is a 44.8% chance to reduce Geniemon Support CD by 3.0s.",
-      "ATK Speed +45.0%‍. When performing a Charged Attack with this weapon, there is a 50.4% chance to reduce Geniemon Support CD by 3.0s.",
-      "ATK Speed +50.0%‍. When performing a Charged Attack with this weapon, there is a 56.0% chance to reduce Geniemon Support CD by 3.0s."
+      "ATK Speed +25.0%‍. Charged Attacks with this weapon have a 28.0% chance to reduce the cooldown of Geniemon Support by 3.0s.",
+      "ATK Speed +30.0%‍. Charged Attacks with this weapon have a 33.6% chance to reduce the cooldown of Geniemon Support by 3.0s.",
+      "ATK Speed +35.0%‍. Charged Attacks with this weapon have a 39.2% chance to reduce the cooldown of Geniemon Support by 3.0s.",
+      "ATK Speed +40.0%‍. Charged Attacks with this weapon have a 44.8% chance to reduce the cooldown of Geniemon Support by 3.0s.",
+      "ATK Speed +45.0%‍. Charged Attacks with this weapon have a 50.4% chance to reduce the cooldown of Geniemon Support by 3.0s.",
+      "ATK Speed +50.0%‍. Charged Attacks with this weapon have a 56.0% chance to reduce the cooldown of Geniemon Support by 3.0s."
     ],
     "技能": [
       {
@@ -2324,12 +2324,12 @@
       }
     ],
     "熔炼": [
-      "触发概率+75.0%。使用此武器造成的伤害触发额外效果时，有50.0%概率回复5枚弹药。",
-      "触发概率+90.0%。使用此武器造成的伤害触发额外效果时，有60.0%概率回复5枚弹药。",
-      "触发概率+105.0%。使用此武器造成的伤害触发额外效果时，有70.0%概率回复5枚弹药。",
-      "触发概率+120.0%。使用此武器造成的伤害触发额外效果时，有80.0%概率回复5枚弹药。",
-      "触发概率+135.0%。使用此武器造成的伤害触发额外效果时，有90.0%概率回复5枚弹药。",
-      "触发概率+150.0%。使用此武器造成的伤害触发额外效果时，有100.0%概率回复5枚弹药。"
+      "Trigger Probability +75.0%. When damage dealt with this weapon triggers a bonus effect, there is a 50.0% chance to restore 5 rounds of ammo.",
+      "Trigger Probability +90.0%. When damage dealt with this weapon triggers a bonus effect, there is a 60.0% chance to restore 5 rounds of ammo.",
+      "Trigger Probability +105.0%. When damage dealt with this weapon triggers a bonus effect, there is a 70.0% chance to restore 5 rounds of ammo.",
+      "Trigger Probability +120.0%. When damage dealt with this weapon triggers a bonus effect, there is a 80.0% chance to restore 5 rounds of ammo.",
+      "Trigger Probability +135.0%. When damage dealt with this weapon triggers a bonus effect, there is a 90.0% chance to restore 5 rounds of ammo.",
+      "Trigger Probability +150.0%. When damage dealt with this weapon triggers a bonus effect, there is a 100.0% chance to restore 5 rounds of ammo."
     ],
     "技能": [
       {
@@ -5787,12 +5787,12 @@
       }
     ],
     "熔炼": [
-      "暴击伤害+62.5%。此武器造成伤害时，如果角色当前武器为近战武器，造成的伤害提高35.0%。",
-      "暴击伤害+75.0%。此武器造成伤害时，如果角色当前武器为近战武器，造成的伤害提高42.0%。",
-      "暴击伤害+87.5%。此武器造成伤害时，如果角色当前武器为近战武器，造成的伤害提高49.0%。",
-      "暴击伤害+100.0%。此武器造成伤害时，如果角色当前武器为近战武器，造成的伤害提高56.0%。",
-      "暴击伤害+112.5%。此武器造成伤害时，如果角色当前武器为近战武器，造成的伤害提高63.0%。",
-      "暴击伤害+125.0%。此武器造成伤害时，如果角色当前武器为近战武器，造成的伤害提高70.0%。"
+      "CRIT Damage +62.5%. When dealing damage with this weapon, increases Damage Dealt by 35.0% if the current weapon is a melee weapon.",
+      "CRIT Damage +75.0%. When dealing damage with this weapon, increases Damage Dealt by 42.0% if the current weapon is a melee weapon.",
+      "CRIT Damage +87.5%. When dealing damage with this weapon, increases Damage Dealt by 49.0% if the current weapon is a melee weapon.",
+      "CRIT Damage +100.0%. When dealing damage with this weapon, increases Damage Dealt by 56.0% if the current weapon is a melee weapon.",
+      "CRIT Damage +112.5%. When dealing damage with this weapon, increases Damage Dealt by 63.0% if the current weapon is a melee weapon.",
+      "CRIT Damage +125.0%. When dealing damage with this weapon, increases Damage Dealt by 70.0% if the current weapon is a melee weapon."
     ],
     "技能": [
       {
@@ -5880,12 +5880,12 @@
       }
     ],
     "熔炼": [
-      "最大弹药+90.0%。光属性角色释放战技或终结技消耗神智后，基于消耗量，获得技能威力提高效果，每消耗1点神智，技能威力提高0.250%，最多提高75.0%，持续24.0秒。",
-      "最大弹药+108.0%。光属性角色释放战技或终结技消耗神智后，基于消耗量，获得技能威力提高效果，每消耗1点神智，技能威力提高0.300%，最多提高90.0%，持续24.0秒。",
-      "最大弹药+126.0%。光属性角色释放战技或终结技消耗神智后，基于消耗量，获得技能威力提高效果，每消耗1点神智，技能威力提高0.350%，最多提高105.0%，持续24.0秒。",
-      "最大弹药+144.0%。光属性角色释放战技或终结技消耗神智后，基于消耗量，获得技能威力提高效果，每消耗1点神智，技能威力提高0.400%，最多提高120.0%，持续24.0秒。",
-      "最大弹药+162.0%。光属性角色释放战技或终结技消耗神智后，基于消耗量，获得技能威力提高效果，每消耗1点神智，技能威力提高0.450%，最多提高135.0%，持续24.0秒。",
-      "最大弹药+180.0%。光属性角色释放战技或终结技消耗神智后，基于消耗量，获得技能威力提高效果，每消耗1点神智，技能威力提高0.500%，最多提高150.0%，持续24.0秒。"
+      "Max Ammo +90.0%. When a Lumino character uses their Combat Skill or Ultimate Skill and consumes Sanity, grants {float4}+0.25% Skill Intensity per Sanity spent for 24.0s, up to 75.0%.",
+      "Max Ammo +108.0%. When a Lumino character uses their Combat Skill or Ultimate Skill and consumes Sanity, grants {float4}+0.3% Skill Intensity per Sanity spent for 24.0s, up to 90.0%.",
+      "Max Ammo +126.0%. When a Lumino character uses their Combat Skill or Ultimate Skill and consumes Sanity, grants {float4}+0.35% Skill Intensity per Sanity spent for 24.0s, up to 105.0%.",
+      "Max Ammo +144.0%. When a Lumino character uses their Combat Skill or Ultimate Skill and consumes Sanity, grants {float4}+0.4% Skill Intensity per Sanity spent for 24.0s, up to 120.0%.",
+      "Max Ammo +162.0%. When a Lumino character uses their Combat Skill or Ultimate Skill and consumes Sanity, grants {float4}+0.45% Skill Intensity per Sanity spent for 24.0s, up to 135.0%.",
+      "Max Ammo +180.0%. When a Lumino character uses their Combat Skill or Ultimate Skill and consumes Sanity, grants {float4}+0.5% Skill Intensity per Sanity spent for 24.0s, up to 150.0%."
     ],
     "技能": [
       {
@@ -6813,12 +6813,12 @@
       }
     ],
     "熔炼": [
-      "多重射击+37.5%。火属性角色造成技能伤害后，获得1层技能威力提高2.5%，持续10.0秒，最多叠加30.0层。",
-      "多重射击+45.0%。火属性角色造成技能伤害后，获得1层技能威力提高3.0%，持续10.0秒，最多叠加30.0层。",
-      "多重射击+52.5%。火属性角色造成技能伤害后，获得1层技能威力提高3.5%，持续10.0秒，最多叠加30.0层。",
-      "多重射击+60.0%。火属性角色造成技能伤害后，获得1层技能威力提高4.0%，持续10.0秒，最多叠加30.0层。",
-      "多重射击+67.5%。火属性角色造成技能伤害后，获得1层技能威力提高4.5%，持续10.0秒，最多叠加30.0层。",
-      "多重射击+75.0%。火属性角色造成技能伤害后，获得1层技能威力提高5.0%，持续10.0秒，最多叠加30.0层。"
+      "Multishot +37.5%. When a Pyro character deals Skill DMG, grants 1 stack of +2.5% Skill DMG for 10.0s, up to 30.0 stacks.",
+      "Multishot +45.0%. When a Pyro character deals Skill DMG, grants 1 stack of +3.0% Skill DMG for 10.0s, up to 30.0 stacks.",
+      "Multishot +52.5%. When a Pyro character deals Skill DMG, grants 1 stack of +3.5% Skill DMG for 10.0s, up to 30.0 stacks.",
+      "Multishot +60.0%. When a Pyro character deals Skill DMG, grants 1 stack of +4.0% Skill DMG for 10.0s, up to 30.0 stacks.",
+      "Multishot +67.5%. When a Pyro character deals Skill DMG, grants 1 stack of +4.5% Skill DMG for 10.0s, up to 30.0 stacks.",
+      "Multishot +75.0%. When a Pyro character deals Skill DMG, grants 1 stack of +5.0% Skill DMG for 10.0s, up to 30.0 stacks."
     ],
     "技能": [
       {

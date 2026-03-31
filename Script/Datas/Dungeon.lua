@@ -8746,7 +8746,7 @@ return ReadOnly("Dungeon", {
   },
   [41801] = {
     CameraParam = T.RT_6,
-    DungeonBGM = "event:/bgm/1_1/level/level_bgm",
+    DungeonBGM = "event:/bgm/1_1/0109_combat_black_market",
     DungeonContent = "UI_DUNGEON_CONTENT_SoloTreasure_1",
     DungeonCost = T.RT_46,
     DungeonDes = "UI_DUNGEON_DES_SoloTreasure_1",
@@ -8773,7 +8773,7 @@ return ReadOnly("Dungeon", {
   },
   [41802] = {
     CameraParam = T.RT_6,
-    DungeonBGM = "event:/bgm/1_1/level/level_bgm",
+    DungeonBGM = "event:/bgm/1_1/0109_combat_black_market",
     DungeonContent = "UI_DUNGEON_CONTENT_SoloTreasure_1",
     DungeonCost = T.RT_46,
     DungeonDes = "UI_DUNGEON_DES_SoloTreasure_1",
@@ -8800,7 +8800,7 @@ return ReadOnly("Dungeon", {
   },
   [41803] = {
     CameraParam = T.RT_6,
-    DungeonBGM = "event:/bgm/1_1/level/level_bgm",
+    DungeonBGM = "event:/bgm/1_1/0109_combat_black_market",
     DungeonContent = "UI_DUNGEON_CONTENT_SoloTreasure_1",
     DungeonCost = T.RT_46,
     DungeonDes = "UI_DUNGEON_DES_SoloTreasure_1",
@@ -8827,7 +8827,7 @@ return ReadOnly("Dungeon", {
   },
   [41804] = {
     CameraParam = T.RT_6,
-    DungeonBGM = "event:/bgm/1_1/level/level_bgm",
+    DungeonBGM = "event:/bgm/1_1/0109_combat_black_market",
     DungeonContent = "UI_DUNGEON_CONTENT_SoloTreasure_1",
     DungeonCost = T.RT_46,
     DungeonDes = "UI_DUNGEON_DES_SoloTreasure_1",
@@ -8854,7 +8854,7 @@ return ReadOnly("Dungeon", {
   },
   [41805] = {
     CameraParam = T.RT_6,
-    DungeonBGM = "event:/bgm/1_1/level/level_bgm",
+    DungeonBGM = "event:/bgm/1_1/0109_combat_black_market",
     DungeonContent = "UI_DUNGEON_CONTENT_SoloTreasure_1",
     DungeonCost = T.RT_46,
     DungeonDes = "UI_DUNGEON_DES_SoloTreasure_1",
@@ -8881,7 +8881,7 @@ return ReadOnly("Dungeon", {
   },
   [41806] = {
     CameraParam = T.RT_6,
-    DungeonBGM = "event:/bgm/1_1/level/level_bgm",
+    DungeonBGM = "event:/bgm/1_1/0109_combat_black_market",
     DungeonContent = "UI_DUNGEON_CONTENT_SoloTreasure_1",
     DungeonCost = T.RT_46,
     DungeonDes = "UI_DUNGEON_DES_SoloTreasure_1",
@@ -8908,7 +8908,7 @@ return ReadOnly("Dungeon", {
   },
   [41807] = {
     CameraParam = T.RT_6,
-    DungeonBGM = "event:/bgm/1_1/level/level_bgm",
+    DungeonBGM = "event:/bgm/1_1/0109_combat_black_market",
     DungeonContent = "UI_DUNGEON_CONTENT_SoloTreasure_1",
     DungeonCost = T.RT_46,
     DungeonDes = "UI_DUNGEON_DES_SoloTreasure_1",
@@ -8935,7 +8935,7 @@ return ReadOnly("Dungeon", {
   },
   [41808] = {
     CameraParam = T.RT_6,
-    DungeonBGM = "event:/bgm/1_1/level/level_bgm",
+    DungeonBGM = "event:/bgm/1_1/0109_combat_black_market",
     DungeonContent = "UI_DUNGEON_CONTENT_SoloTreasure_1",
     DungeonCost = T.RT_46,
     DungeonDes = "UI_DUNGEON_DES_SoloTreasure_1",
@@ -8962,7 +8962,7 @@ return ReadOnly("Dungeon", {
   },
   [41809] = {
     CameraParam = T.RT_6,
-    DungeonBGM = "event:/bgm/1_1/level/level_bgm",
+    DungeonBGM = "event:/bgm/1_1/0109_combat_black_market",
     DungeonContent = "UI_DUNGEON_CONTENT_SoloTreasure_1",
     DungeonCost = T.RT_46,
     DungeonDes = "UI_DUNGEON_DES_SoloTreasure_1",
@@ -8989,7 +8989,7 @@ return ReadOnly("Dungeon", {
   },
   [41810] = {
     CameraParam = T.RT_6,
-    DungeonBGM = "event:/bgm/1_1/level/level_bgm",
+    DungeonBGM = "event:/bgm/1_1/0109_combat_black_market",
     DungeonContent = "UI_DUNGEON_CONTENT_SoloTreasure_1",
     DungeonCost = T.RT_46,
     DungeonDes = "UI_DUNGEON_DES_SoloTreasure_1",
@@ -9016,7 +9016,7 @@ return ReadOnly("Dungeon", {
   },
   [41811] = {
     CameraParam = T.RT_6,
-    DungeonBGM = "event:/bgm/1_1/level/level_bgm",
+    DungeonBGM = "event:/bgm/1_1/0109_combat_black_market",
     DungeonContent = "UI_DUNGEON_CONTENT_SoloTreasure_1",
     DungeonCost = T.RT_46,
     DungeonDes = "UI_DUNGEON_DES_SoloTreasure_1",
@@ -9043,7 +9043,7 @@ return ReadOnly("Dungeon", {
   },
   [41812] = {
     CameraParam = T.RT_6,
-    DungeonBGM = "event:/bgm/1_1/level/level_bgm",
+    DungeonBGM = "event:/bgm/1_1/0109_combat_black_market",
     DungeonContent = "UI_DUNGEON_CONTENT_SoloTreasure_1",
     DungeonCost = T.RT_46,
     DungeonDes = "UI_DUNGEON_DES_SoloTreasure_1",

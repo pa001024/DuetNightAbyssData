@@ -3202,7 +3202,7 @@
   },
   {
     "id": 151766,
-    "n": "Poursuite",
+    "n": "Décision",
     "r": 5,
     "v": "1.3",
     "t": "Mod",
@@ -3214,7 +3214,7 @@
     "x": [
       {
         "id": 41766,
-        "n": "Poursuite",
+        "n": "Décision",
         "c": 5,
         "t": "Mod"
       },
@@ -8065,7 +8065,7 @@
   },
   {
     "id": 910305,
-    "n": "Écho d’or lointain",
+    "n": "Écho aurifère",
     "r": 5,
     "v": "1.3",
     "t": "Weapon",
@@ -8082,13 +8082,13 @@
       },
       {
         "id": 12150,
-        "n": "鸣金遥的握柄",
+        "n": "Écho aurifère : Poignée",
         "c": 1,
         "t": "Resource"
       },
       {
         "id": 12151,
-        "n": "鸣金遥的刀刃",
+        "n": "Écho aurifère : Lame",
         "c": 1,
         "t": "Resource"
       }
@@ -9054,19 +9054,19 @@
       },
       {
         "id": 12152,
-        "n": "切割齿轮的枪机",
+        "n": "Engrenage déchiqueté : Verrou",
         "c": 1,
         "t": "Resource"
       },
       {
         "id": 12153,
-        "n": "切割齿轮的枪身",
+        "n": "Engrenage déchiqueté : Armature",
         "c": 1,
         "t": "Resource"
       },
       {
         "id": 12154,
-        "n": "切割齿轮的枪管",
+        "n": "Engrenage déchiqueté : Canon",
         "c": 1,
         "t": "Resource"
       }
@@ -9092,19 +9092,19 @@
       },
       {
         "id": 12144,
-        "n": "孤雏的羽迹的枪机",
+        "n": "Sillage solitaire : Verrou",
         "c": 1,
         "t": "Resource"
       },
       {
         "id": 12145,
-        "n": "孤雏的羽迹的枪身",
+        "n": "Sillage solitaire : Armature",
         "c": 1,
         "t": "Resource"
       },
       {
         "id": 12146,
-        "n": "孤雏的羽迹的枪管",
+        "n": "Sillage solitaire : Canon",
         "c": 1,
         "t": "Resource"
       }
@@ -9472,19 +9472,19 @@
       },
       {
         "id": 12147,
-        "n": "杯中的残火的枪机",
+        "n": "Braise du calice : Verrou",
         "c": 1,
         "t": "Resource"
       },
       {
         "id": 12148,
-        "n": "杯中的残火的枪身",
+        "n": "Braise du calice : Armature",
         "c": 1,
         "t": "Resource"
       },
       {
         "id": 12149,
-        "n": "杯中的残火的枪管",
+        "n": "Braise du calice : Canon",
         "c": 1,
         "t": "Resource"
       }

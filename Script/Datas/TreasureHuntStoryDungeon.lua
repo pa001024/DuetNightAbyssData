@@ -7,16 +7,15 @@ T.RT_1 = {
   5,
   6
 }
-T.RT_2 = {-1}
-T.RT_3 = {605}
-T.RT_4 = {
+T.RT_2 = {605}
+T.RT_3 = {
   1504,
   4201,
   1601,
   160101
 }
-T.RT_5 = {150402, 420101}
-T.RT_6 = {
+T.RT_4 = {150402, 420101}
+T.RT_5 = {
   10103002,
   20501002,
   20407002,
@@ -47,9 +46,8 @@ return ReadOnly("TreasureHuntStoryDungeon", {
       1601,
       160101
     },
-    LimitWeapon = T.RT_2,
     TrialCharacter = {150402, 230101},
-    TrialPet = T.RT_3,
+    TrialPet = T.RT_2,
     TrialWeapon = {
       10103002,
       20501002,
@@ -70,11 +68,10 @@ return ReadOnly("TreasureHuntStoryDungeon", {
     FeeResource = 6000004,
     IsBanPhantom = false,
     LevelBackPack = T.RT_1,
-    LimitCharacter = T.RT_4,
-    LimitWeapon = T.RT_2,
-    TrialCharacter = T.RT_5,
-    TrialPet = T.RT_3,
-    TrialWeapon = T.RT_6,
+    LimitCharacter = T.RT_3,
+    TrialCharacter = T.RT_4,
+    TrialPet = T.RT_2,
+    TrialWeapon = T.RT_5,
     UnlockCondition = 10301423
   },
   [10301413] = {
@@ -87,11 +84,10 @@ return ReadOnly("TreasureHuntStoryDungeon", {
     FeeResource = 6000004,
     IsBanPhantom = false,
     LevelBackPack = T.RT_1,
-    LimitCharacter = T.RT_4,
-    LimitWeapon = T.RT_2,
-    TrialCharacter = T.RT_5,
-    TrialPet = T.RT_3,
-    TrialWeapon = T.RT_6,
+    LimitCharacter = T.RT_3,
+    TrialCharacter = T.RT_4,
+    TrialPet = T.RT_2,
+    TrialWeapon = T.RT_5,
     UnlockCondition = 10301424
   },
   [10301414] = {
@@ -104,11 +100,10 @@ return ReadOnly("TreasureHuntStoryDungeon", {
     FeeResource = 6000004,
     IsBanPhantom = false,
     LevelBackPack = T.RT_1,
-    LimitCharacter = T.RT_4,
-    LimitWeapon = T.RT_2,
-    TrialCharacter = T.RT_5,
-    TrialPet = T.RT_3,
-    TrialWeapon = T.RT_6,
+    LimitCharacter = T.RT_3,
+    TrialCharacter = T.RT_4,
+    TrialPet = T.RT_2,
+    TrialWeapon = T.RT_5,
     UnlockCondition = 10301425
   },
   [10301415] = {
@@ -127,9 +122,8 @@ return ReadOnly("TreasureHuntStoryDungeon", {
       1601,
       160101
     },
-    LimitWeapon = T.RT_2,
     TrialCharacter = {420101, 230101},
-    TrialPet = T.RT_2,
+    TrialPet = {-1},
     TrialWeapon = {
       10103002,
       20501002,

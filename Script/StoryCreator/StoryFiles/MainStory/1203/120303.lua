@@ -254,7 +254,7 @@ return {
       key = "17637245989832738025",
       type = "StoryNode",
       name = "第二关",
-      pos = {x = 1357.7922120728933, y = 300.05810442397586},
+      pos = {x = 1356.5922120728933, y = 298.6944680603395},
       propsData = {
         QuestId = 12030302,
         QuestDescriptionComment = "",
@@ -345,7 +345,19 @@ return {
             endPort = "In"
           },
           {
+            startQuest = "17637245989842738033",
+            startPort = "Success",
+            endQuest = "17745060461372547277",
+            endPort = "In"
+          },
+          {
             startQuest = "17738245472027821701",
+            startPort = "Out",
+            endQuest = "17745060697112547730",
+            endPort = "In"
+          },
+          {
+            startQuest = "17745060697112547730",
             startPort = "Out",
             endQuest = "17637245989842738031",
             endPort = "Success"
@@ -363,14 +375,14 @@ return {
             key = "17637245989842738031",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 2323.487295825771, y = 301.51179673321235},
+            pos = {x = 2525.487295825771, y = 299.51179673321235},
             propsData = {ModeType = 0}
           },
           ["17637245989842738032"] = {
             key = "17637245989842738032",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 2225, y = 487.6666666666667},
+            pos = {x = 2387.5, y = 496.4166666666667},
             propsData = {}
           },
           ["17637245989842738033"] = {
@@ -549,6 +561,34 @@ return {
               bForceAsyncLoading = false,
               IsWhite = false
             }
+          },
+          ["17745060461372547277"] = {
+            key = "17745060461372547277",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1685.75, y = 607.0000000000001},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/mute",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {104503},
+              ClientRelatedRegionId = {},
+              bStoreToServer = true
+            }
+          },
+          ["17745060697112547730"] = {
+            key = "17745060697112547730",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2254, y = 300.2500000000001},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
           }
         },
         commentData = {}
@@ -610,6 +650,12 @@ return {
           {
             startQuest = "176535461372615033944",
             startPort = "Out",
+            endQuest = "17747656158591278223",
+            endPort = "In"
+          },
+          {
+            startQuest = "17747656158591278223",
+            startPort = "Out",
             endQuest = "17637247125282739156",
             endPort = "Success"
           }
@@ -626,7 +672,7 @@ return {
             key = "17637247125282739156",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 1951.8509321894073, y = 315.7390694604851},
+            pos = {x = 2246.850932189407, y = 312.4057361271517},
             propsData = {ModeType = 0}
           },
           ["17637247125282739157"] = {
@@ -716,6 +762,17 @@ return {
               EnableFadeOut = false,
               NewTargetPointName = "",
               StaticCreatorIdList = {132420052}
+            }
+          },
+          ["17747656158591278223"] = {
+            key = "17747656158591278223",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1941.1151960784316, y = 307.7156862745098},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
             }
           }
         },

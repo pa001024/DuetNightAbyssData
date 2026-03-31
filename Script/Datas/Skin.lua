@@ -648,6 +648,7 @@ return ReadOnly("Skin", {
     Des = "UI_Skin_Des_150401",
     DisplayPath = "FileMediaSource'/Game/Asset/UIVideo/Gacha/Gacha_GetSkin_Suyi01.Gacha_GetSkin_Suyi01'",
     GetDisplayType = 1,
+    GetSoundPath = "event:/ui/btc/cg_suyi_skin01",
     GoShopTypeId = {140300},
     Icon = "/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Suyi01",
     LevelUpEffectCreatures = {

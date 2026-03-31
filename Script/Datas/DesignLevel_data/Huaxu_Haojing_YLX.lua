@@ -15,11 +15,6 @@ return {
       UnitType = "Mechanism",
       UnitId = 1
     },
-    ["2340018"] = {
-      CreatorId = 2340018,
-      UnitType = "Mechanism",
-      UnitId = 39046
-    },
     ["292340050"] = {
       CreatorId = 292340050,
       UnitType = "Mechanism",
@@ -83,69 +78,6 @@ return {
   },
   ManualItem = {},
   Explore = {
-    ["7064001"] = {
-      AutoReset = 0,
-      ["2340004"] = {
-        CreatorId = 2340004,
-        UnitType = "Mechanism",
-        UnitId = 121035,
-        RarelyId = 7064001
-      },
-      ["2340005"] = {
-        CreatorId = 2340005,
-        UnitType = "Mechanism",
-        UnitId = 121035,
-        RarelyId = 7064001
-      },
-      ["2340006"] = {
-        CreatorId = 2340006,
-        UnitType = "Mechanism",
-        UnitId = 121033,
-        RarelyId = 7064001
-      },
-      ["2340007"] = {
-        CreatorId = 2340007,
-        UnitType = "Mechanism",
-        UnitId = 121033,
-        RarelyId = 7064001
-      },
-      ["2340008"] = {
-        CreatorId = 2340008,
-        UnitType = "Mechanism",
-        UnitId = 121033,
-        RarelyId = 7064001
-      },
-      ["2340009"] = {
-        CreatorId = 2340009,
-        UnitType = "Mechanism",
-        UnitId = 121033,
-        RarelyId = 7064001
-      },
-      ["2340010"] = {
-        CreatorId = 2340010,
-        UnitType = "Mechanism",
-        UnitId = 121034,
-        RarelyId = 7064001
-      },
-      ["2340011"] = {
-        CreatorId = 2340011,
-        UnitType = "Mechanism",
-        UnitId = 121033,
-        RarelyId = 7064001
-      },
-      ["2340012"] = {
-        CreatorId = 2340012,
-        UnitType = "Mechanism",
-        UnitId = 1210341,
-        RarelyId = 7064001
-      },
-      ["2340013"] = {
-        CreatorId = 2340013,
-        UnitType = "Mechanism",
-        UnitId = 121032,
-        RarelyId = 7064001
-      }
-    },
     ["7064004"] = {
       AutoReset = 0,
       ["2340024"] = {
@@ -274,7 +206,7 @@ return {
       ["2340039"] = {
         CreatorId = 2340039,
         UnitType = "Npc",
-        UnitId = 830001,
+        UnitId = 240110,
         RarelyId = 7064014
       },
       ["2340040"] = {
@@ -282,6 +214,45 @@ return {
         UnitType = "Mechanism",
         UnitId = 71005,
         RarelyId = 7064014
+      }
+    },
+    ["7064001"] = {
+      AutoReset = 1,
+      ["2340044"] = {
+        CreatorId = 2340044,
+        UnitType = "Mechanism",
+        UnitId = 121034,
+        RarelyId = 7064001
+      },
+      ["2340043"] = {
+        CreatorId = 2340043,
+        UnitType = "Mechanism",
+        UnitId = 121032,
+        RarelyId = 7064001
+      },
+      ["2340046"] = {
+        CreatorId = 2340046,
+        UnitType = "Mechanism",
+        UnitId = 121035,
+        RarelyId = 7064001
+      },
+      ["2340042"] = {
+        CreatorId = 2340042,
+        UnitType = "Npc",
+        UnitId = 240110,
+        RarelyId = 7064001
+      },
+      ["2340041"] = {
+        CreatorId = 2340041,
+        UnitType = "Mechanism",
+        UnitId = 1210343,
+        RarelyId = 7064001
+      },
+      ["2340045"] = {
+        CreatorId = 2340045,
+        UnitType = "Mechanism",
+        UnitId = 121035,
+        RarelyId = 7064001
       }
     }
   },

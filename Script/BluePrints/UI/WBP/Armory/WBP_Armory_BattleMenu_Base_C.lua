@@ -985,7 +985,7 @@ function M:ResetWheelSlotItems()
   self.WheelContens = {}
   local CurrentWheel = Avatar.Wheels[self.CurrentWheelIndex]
   for index, Slot in ipairs(CurrentWheel) do
-    if nil ~= Slot.ResourceId and 0 ~= Slot.ResourceId then
+    if nil ~= Slot.ResourceId and 0 ~= Slot.ResourceId and self.ContentMap[Slot.ResourceId] then
       local Content = self.ContentMap[Slot.ResourceId]
       self.WheelContens[Slot.ResourceId] = Content
       Content.IsEquiped = true

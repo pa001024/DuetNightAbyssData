@@ -47,7 +47,7 @@ return {
       key = "17678537949101014850",
       type = "StoryNode",
       name = "任务节点",
-      pos = {x = 1475.2, y = 354},
+      pos = {x = 1475.2, y = 356},
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
@@ -77,12 +77,6 @@ return {
       },
       questNodeData = {
         lineData = {
-          {
-            startQuest = "17725400518231151",
-            startPort = "Out",
-            endQuest = "17725491899151581",
-            endPort = "In"
-          },
           {
             startQuest = "1774249648048541",
             startPort = "Out",
@@ -384,12 +378,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17742496865131841",
-            startPort = "Out",
-            endQuest = "17742496865131844",
-            endPort = "In"
-          },
-          {
             startQuest = "17742496865151853",
             startPort = "Out",
             endQuest = "17742496865151854",
@@ -456,12 +444,6 @@ return {
             endPort = "Input_9"
           },
           {
-            startQuest = "17742496865131840",
-            startPort = "Out",
-            endQuest = "17742496865131843",
-            endPort = "In"
-          },
-          {
             startQuest = "17742496865151854",
             startPort = "Out",
             endQuest = "1772540026383439",
@@ -483,12 +465,6 @@ return {
             startQuest = "17742499716101690505",
             startPort = "Out",
             endQuest = "17742499716101690506",
-            endPort = "In"
-          },
-          {
-            startQuest = "17726294559481640142",
-            startPort = "Out",
-            endQuest = "17742496865131840",
             endPort = "In"
           },
           {
@@ -528,12 +504,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17742541737275911109",
-            startPort = "Out",
-            endQuest = "17726294559481640142",
-            endPort = "In"
-          },
-          {
             startQuest = "17678537949101014851",
             startPort = "QuestStart",
             endQuest = "17742559505626755021",
@@ -549,6 +519,54 @@ return {
             startQuest = "17678537949101014851",
             startPort = "QuestStart",
             endQuest = "17742496694881215",
+            endPort = "In"
+          },
+          {
+            startQuest = "17678537949101014851",
+            startPort = "QuestStart",
+            endQuest = "17725491899151581",
+            endPort = "In"
+          },
+          {
+            startQuest = "17725491899151581",
+            startPort = "Out",
+            endQuest = "17726294559481640142",
+            endPort = "In"
+          },
+          {
+            startQuest = "17742496865131840",
+            startPort = "Out",
+            endQuest = "17742496865131844",
+            endPort = "In"
+          },
+          {
+            startQuest = "17726294559481640142",
+            startPort = "Out",
+            endQuest = "17742496865131843",
+            endPort = "In"
+          },
+          {
+            startQuest = "17747818572202558913",
+            startPort = "Out",
+            endQuest = "17747818572202558915",
+            endPort = "In"
+          },
+          {
+            startQuest = "17747818572202558915",
+            startPort = "Out",
+            endQuest = "17747818572202558914",
+            endPort = "In"
+          },
+          {
+            startQuest = "17742496865131841",
+            startPort = "Out",
+            endQuest = "17747818572202558913",
+            endPort = "In"
+          },
+          {
+            startQuest = "17747818572202558914",
+            startPort = "Out",
+            endQuest = "17742496865131840",
             endPort = "In"
           }
         },
@@ -571,7 +589,7 @@ return {
             key = "17678537949101014853",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 2800, y = 1800.625},
+            pos = {x = 2800, y = 2389.3749999999995},
             propsData = {}
           },
           ["1772540026383439"] = {
@@ -585,7 +603,7 @@ return {
             key = "17725400518231151",
             type = "ChangeStaticCreatorNode",
             name = "生成/销毁节点",
-            pos = {x = 1119.6253402338675, y = 290.6765424809411},
+            pos = {x = 1097.8018108221029, y = 844.0588954221174},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,
@@ -599,13 +617,13 @@ return {
             key = "17725491899151581",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1715.7425994463933, y = -84.67796524272018},
+            pos = {x = 1273.4092661130603, y = 331.9004661298287},
             propsData = {
               IsNpcNode = false,
               FirstDialogueId = 12049142,
               FlowAssetPath = "",
               TalkType = "Guide",
-              bIsStandalone = true,
+              bIsStandalone = false,
               GuideMeshIndexList = {},
               IsPlayStartSound = false,
               GuideTalkStyle = "Normal",
@@ -616,7 +634,7 @@ return {
             key = "17726294559481640142",
             type = "GoToNode",
             name = "前往",
-            pos = {x = 2549.751527883881, y = 450.3478800611153},
+            pos = {x = 1621.3575884899417, y = 343.5600012732364},
             propsData = {
               GuideUIEnable = false,
               StaticCreatorId = 242420161,
@@ -799,21 +817,21 @@ return {
             key = "17742496694881215",
             type = "WaitingSpecialQuestFailNode",
             name = "等待特殊任务失败",
-            pos = {x = 1108.059543223434, y = 1201.51751976091},
+            pos = {x = 1108.059543223434, y = 1790.2675197609096},
             propsData = {}
           },
           ["17742496694881216"] = {
             key = "17742496694881216",
             type = "PlayerSwitchWalkRunNode",
             name = "玩家走跑切换-跑",
-            pos = {x = 1106.3428553464594, y = 1379.239913319144},
+            pos = {x = 1106.3428553464594, y = 1967.9899133191439},
             propsData = {Rate = 1, Mode = "ToRun"}
           },
           ["17742496694881217"] = {
             key = "17742496694881217",
             type = "SendMessageNode",
             name = "缩短宽高",
-            pos = {x = 1096.8385815919562, y = 1758.6032302024391},
+            pos = {x = 1096.8385815919562, y = 2347.3532302024387},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "12020108lookxbEnd",
@@ -824,21 +842,21 @@ return {
             key = "17742496694881218",
             type = "SimplePostProcessNode",
             name = "开启关闭屏幕后处理",
-            pos = {x = 1106.9052487790107, y = 1637.988756850687},
+            pos = {x = 1106.9052487790107, y = 2226.7387568506865},
             propsData = {bEnablePP = false, PPEnum = 4}
           },
           ["17742496694881219"] = {
             key = "17742496694881219",
             type = "CameraControlClearNode",
             name = "镜头恢复",
-            pos = {x = 1108.873725392076, y = 1512.3350628374842},
+            pos = {x = 1108.873725392076, y = 2101.0850628374837},
             propsData = {Duration = 0}
           },
           ["17742496694881220"] = {
             key = "17742496694881220",
             type = "ActivePlayerSkillsNode",
             name = "激活/失效 玩家技能",
-            pos = {x = 1104.871927212245, y = 1882.8901823582196},
+            pos = {x = 1104.871927212245, y = 2471.640182358219},
             propsData = {
               PlayerId = 0,
               bActiveEnable = true,
@@ -861,7 +879,7 @@ return {
             key = "17742496694881221",
             type = "ShowOrHideUINode",
             name = "显示或隐藏UI",
-            pos = {x = 1476.571096815563, y = 980.6945084445485},
+            pos = {x = 1476.571096815563, y = 1569.4445084445483},
             propsData = {
               Function = "HideUIInScreen",
               UIParam = "EnergySkill",
@@ -873,7 +891,7 @@ return {
             key = "17742496694881222",
             type = "ShowOrHideUINode",
             name = "显示或隐藏UI",
-            pos = {x = 1483.2636433994141, y = 1100.9584835998278},
+            pos = {x = 1483.2636433994141, y = 1689.7084835998276},
             propsData = {
               Function = "HideUIInScreen",
               UIParam = "Map",
@@ -885,7 +903,7 @@ return {
             key = "17742496694891223",
             type = "ShowOrHideUINode",
             name = "显示或隐藏UI",
-            pos = {x = 1475.2822769397865, y = 853.5827072023128},
+            pos = {x = 1475.2822769397865, y = 1442.3327072023126},
             propsData = {
               Function = "HideUIInScreen",
               UIParam = "BloodBar",
@@ -897,7 +915,7 @@ return {
             key = "17742496694891224",
             type = "ShowOrHideUINode",
             name = "显示或隐藏UI",
-            pos = {x = 1479.1409725919605, y = 1226.0827072023123},
+            pos = {x = 1479.1409725919605, y = 1814.8327072023121},
             propsData = {
               Function = "HideUIInScreen",
               UIParam = "Task",
@@ -909,7 +927,7 @@ return {
             key = "17742496694891225",
             type = "ShowOrHideUINode",
             name = "显示或隐藏UI",
-            pos = {x = 1487.7883155871289, y = 1767.6382627578673},
+            pos = {x = 1487.7883155871289, y = 2356.388262757867},
             propsData = {
               Function = "HideUIInScreen",
               UIParam = "AimIndicator",
@@ -921,7 +939,7 @@ return {
             key = "17742496694891226",
             type = "ShowOrHideUINode",
             name = "显示或隐藏UI",
-            pos = {x = 1487.9863832199792, y = 1642.3918859462733},
+            pos = {x = 1487.9863832199792, y = 2231.141885946273},
             propsData = {
               Function = "HideUIInScreen",
               UIParam = "GuideBook",
@@ -933,7 +951,7 @@ return {
             key = "17742496694891227",
             type = "ShowOrHideUINode",
             name = "显示或隐藏UI",
-            pos = {x = 1488.1530498866462, y = 1512.9752192796063},
+            pos = {x = 1488.1530498866462, y = 2101.725219279606},
             propsData = {
               Function = "HideUIInScreen",
               UIParam = "BattleWheel",
@@ -945,7 +963,7 @@ return {
             key = "17742496694891228",
             type = "ShowOrHideUINode",
             name = "显示或隐藏UI",
-            pos = {x = 1487.8117800453767, y = 1366.4553780097656},
+            pos = {x = 1487.8117800453767, y = 1955.2053780097654},
             propsData = {
               Function = "HideUIInScreen",
               UIParam = "Entrance",
@@ -957,21 +975,21 @@ return {
             key = "17742496694891229",
             type = "WaitQuestFinishedNode",
             name = "等待任务完成",
-            pos = {x = 2253.9994214614353, y = 1630.60621381994},
+            pos = {x = 2253.9994214614353, y = 2219.3562138199395},
             propsData = {ListenCount = 9, NeedFinishCount = 9}
           },
           ["17742496694891230"] = {
             key = "17742496694891230",
             type = "RestoreRoleNode",
             name = "恢复角色",
-            pos = {x = 2509.2002925773522, y = 1808.7394566259513},
+            pos = {x = 2509.2002925773522, y = 2397.489456625951},
             propsData = {}
           },
           ["17742496694891231"] = {
             key = "17742496694891231",
             type = "ForbidWeaponByWeaponTagNode",
             name = "禁用/启用武器节点",
-            pos = {x = 1487.2985483949494, y = 1889.0886287081535},
+            pos = {x = 1487.2985483949494, y = 2477.838628708153},
             propsData = {
               WeaponTags = {"Melee", "Ranged"},
               bForbid = false,
@@ -983,14 +1001,14 @@ return {
             key = "17742496865131840",
             type = "PlayerSwitchWalkRunNode",
             name = "玩家走跑切换-跑",
-            pos = {x = 2895.8914909214113, y = -99.30650955622629},
+            pos = {x = 2598.0343480642687, y = 283.729204729488},
             propsData = {Rate = 1, Mode = "ToRun"}
           },
           ["17742496865131841"] = {
             key = "17742496865131841",
             type = "SendMessageNode",
             name = "缩短宽高",
-            pos = {x = 2886.3872171669077, y = 280.0568073270688},
+            pos = {x = 2234.9791711898965, y = 537.8154280167239},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "12020108lookxbEnd",
@@ -1001,21 +1019,21 @@ return {
             key = "17742496865131842",
             type = "SimplePostProcessNode",
             name = "开启关闭屏幕后处理",
-            pos = {x = 2896.4538843539626, y = 159.44233397531661},
+            pos = {x = 2212.2872176872957, y = 336.9423339753166},
             propsData = {bEnablePP = false, PPEnum = 4}
           },
           ["17742496865131843"] = {
             key = "17742496865131843",
             type = "CameraControlClearNode",
             name = "镜头恢复",
-            pos = {x = 2898.4223609670275, y = 33.788639962113834},
+            pos = {x = 1920.0890276336943, y = 350.03863996211385},
             propsData = {Duration = 0}
           },
           ["17742496865131844"] = {
             key = "17742496865131844",
             type = "ActivePlayerSkillsNode",
             name = "激活/失效 玩家技能",
-            pos = {x = 2894.4205627871966, y = 404.34375948284924},
+            pos = {x = 2880.9205627871966, y = 281.1294737685635},
             propsData = {
               PlayerId = 0,
               bActiveEnable = true,
@@ -1160,7 +1178,7 @@ return {
             key = "17742499478001690286",
             type = "SendMessageNode",
             name = "发送消息Moveto01",
-            pos = {x = 1393.3196744757217, y = 441.4811494703843},
+            pos = {x = 1359.3196744757217, y = 1013.4811494703843},
             propsData = {
               MessageType = "BehaviorTree",
               MessageContent = "Moveto01",
@@ -1171,7 +1189,7 @@ return {
             key = "17742499478001690287",
             type = "BossBattleFinishNode",
             name = "完成BOSS战阶段",
-            pos = {x = 1659.1196245256713, y = 427.57867694291207},
+            pos = {x = 1625.1196245256713, y = 999.5786769429119},
             propsData = {
               SendMessage = "",
               FinishCondition = "Moveto01End"
@@ -1181,14 +1199,14 @@ return {
             key = "17742499478001690288",
             type = "WaitOfTimeNode",
             name = "延迟等待",
-            pos = {x = 1129.9423612069959, y = 419.83642255690546},
-            propsData = {WaitTime = 3}
+            pos = {x = 1095.9423612069959, y = 991.8364225569053},
+            propsData = {WaitTime = 5}
           },
           ["17742499716101690505"] = {
             key = "17742499716101690505",
             type = "SendMessageNode",
             name = "发送消息Moveto01",
-            pos = {x = 1928.1568956341412, y = 452.3608439209835},
+            pos = {x = 1894.1568956341412, y = 1024.3608439209834},
             propsData = {
               MessageType = "BehaviorTree",
               MessageContent = "Moveto01",
@@ -1199,7 +1217,7 @@ return {
             key = "17742499716101690506",
             type = "BossBattleFinishNode",
             name = "完成BOSS战阶段",
-            pos = {x = 2189.4863162135616, y = 434.77830146344127},
+            pos = {x = 2155.4863162135616, y = 1006.7783014634412},
             propsData = {
               SendMessage = "",
               FinishCondition = "Moveto01End"
@@ -1209,21 +1227,21 @@ return {
             key = "17742522919334222458",
             type = "WaitOfTimeNode",
             name = "延迟等待",
-            pos = {x = 1788.1073957095143, y = 277.39792875195684},
-            propsData = {WaitTime = 2.5}
+            pos = {x = 1754.1073957095143, y = 849.3979287519567},
+            propsData = {WaitTime = 3.5}
           },
           ["17742541686115910997"] = {
             key = "17742541686115910997",
             type = "WaitOfTimeNode",
             name = "延迟等待",
-            pos = {x = 1913.961396156074, y = 635.2403125438912},
+            pos = {x = 2425.461396156074, y = 998.2403125438912},
             propsData = {WaitTime = 1}
           },
           ["17742541737275911108"] = {
             key = "17742541737275911108",
             type = "SendMessageNode",
             name = "发送消息Moveto01",
-            pos = {x = 2196.0966858663637, y = 666.8315837726624},
+            pos = {x = 2707.5966858663637, y = 1029.8315837726623},
             propsData = {
               MessageType = "BehaviorTree",
               MessageContent = "Moveto01",
@@ -1234,7 +1252,7 @@ return {
             key = "17742541737275911109",
             type = "BossBattleFinishNode",
             name = "完成BOSS战阶段",
-            pos = {x = 2456.2261064457844, y = 649.2490413151202},
+            pos = {x = 2967.7261064457844, y = 1009.7490413151202},
             propsData = {
               SendMessage = "",
               FinishCondition = "Moveto01End"
@@ -1244,7 +1262,7 @@ return {
             key = "17742559505626755021",
             type = "AsyncSetActorLocationAndRotationNode",
             name = "异步设置玩家位置旋转",
-            pos = {x = 1333.703908798207, y = 142.93054936853588},
+            pos = {x = 1291.660898045519, y = 142.93054936853588},
             propsData = {
               UnitId = 0,
               NewTargetPointName = "12020627point",
@@ -1259,7 +1277,7 @@ return {
             key = "17742569657547599193",
             type = "CameraLookAtNode",
             name = "CameraLookAt",
-            pos = {x = 1698.8193399614713, y = 118.87632065091734},
+            pos = {x = 1615.96987759588, y = 145.32793355414316},
             propsData = {
               TargetType = "Actor",
               PointName = "",
@@ -1268,14 +1286,79 @@ return {
               EasingFunc = 4,
               bDisableUserInput = false
             }
+          },
+          ["17747818572202558913"] = {
+            key = "17747818572202558913",
+            type = "TalkNode",
+            name = "【East02_FixSimple_77】墓前对话",
+            pos = {x = 2496.85466070612, y = 567.9952400540632},
+            propsData = {
+              IsNpcNode = false,
+              bUseFlowAssetActors = true,
+              FirstDialogueId = 0,
+              FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1202/12048201.12048201'",
+              TalkType = "FixSimple",
+              TalkStageName = "East02_12020628",
+              BlendInTime = 0,
+              BlendOutTime = 2,
+              InType = "FadeIn",
+              OutType = "FadeOut",
+              ShowFadeDetail = true,
+              StartFadeOutTime = 0.5,
+              StartScreenEffectDuration = 0,
+              FinishFadeInTime = 0,
+              BlendEaseExp = 2,
+              UseProceduralCamera = false,
+              ProceduralCameraId = 1,
+              HideNpcs = false,
+              HideMonsters = true,
+              HideAllBattleEntity = true,
+              HideMechanismsFX = true,
+              ShowSkipButton = true,
+              ShowAutoPlayButton = true,
+              ShowReviewButton = true,
+              ShowWikiButton = true,
+              SkipToOption = false,
+              DisableNpcOptimization = false,
+              DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
+              BeginNewTargetPointName = "",
+              EndNewTargetPointName = "",
+              CameraLookAtTartgetPoint = "",
+              RestoreStand = false,
+              PauseNpcBT = true,
+              OptionType = "normal",
+              FreezeWorldComposition = false,
+              bTravelFullLoadWorldComposition = false,
+              SwitchToMaster = "None",
+              bNpcActionKeepIn = false,
+              bNpcActionKeepOut = false,
+              bForceWaitNavLoaded = false,
+              NormalOptions = {},
+              OverrideFailBlend = false
+            }
+          },
+          ["17747818572202558914"] = {
+            key = "17747818572202558914",
+            type = "OpenChapterUINode",
+            name = "打开章节开始UI",
+            pos = {x = 3031.2324739982555, y = 626.7158253795079},
+            propsData = {ChapterUIId = 120200, UIType = "End"}
+          },
+          ["17747818572202558915"] = {
+            key = "17747818572202558915",
+            type = "WaitOfTimeNode",
+            name = "延迟等待",
+            pos = {x = 2754.959170575335, y = 595.5701945113709},
+            propsData = {WaitTime = 1}
           }
         },
         commentData = {
           ["1774249914263846672"] = {
             key = "1774249914263846672",
             name = "止流AI",
-            position = {x = 1081.636256024228, y = 189.25527724171536},
-            size = {width = 1704.4861182489215, height = 410.72755556499635}
+            position = {x = 1047.636256024228, y = 761.2552772417152},
+            size = {width = 2195.080332218905, height = 423.0051229349866}
           }
         }
       }

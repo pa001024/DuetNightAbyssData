@@ -254,6 +254,9 @@ function M:OnClearClicked()
     UIManager():ShowUITip(UIConst.Tip_CommonToast, GText("UI_SoloTreasure_ArmoryEmptyComponent"))
     return
   end
+  if self.IsUseGamePad then
+    AudioManager(self):PlayUISound(self, "event:/ui/activity/sdc_normal_btn_click_cancel", nil, nil)
+  end
   local Params = {
     LeftCallbackObj = self,
     LeftCallbackFunction = function(Obj)
@@ -304,6 +307,9 @@ function M:OnStartClicked()
       self:PlayFlashRedAnimForEmptySlots()
     end
     return
+  end
+  if self.IsUseGamePad then
+    AudioManager(self):PlayUISound(self, "event:/ui/activity/sdc_normal_btn_click_confirm", nil, nil)
   end
   local LastRemindTimeStamp = EMCache:Get(EnterDungeonDontRemindTimeStamp, true)
   if LastRemindTimeStamp and LastRemindTimeStamp > TimeUtils.TimestampLastClock(0) then
@@ -404,6 +410,9 @@ function M:OnPreviewBagClicked()
     self.Preview.Btn_Bag.Btn_Click:SetForbidden(true)
     self.Preview.Btn_Bag.Text_Button:SetText(GText("UI_SoloTreasure_BagInUse"))
     self:OnChooseBag(self.SelectBagContent)
+  end
+  if self.IsUseGamePad then
+    AudioManager(self):PlayUISound(self, "event:/ui/activity/sdc_normal_btn_click_confirm", nil, nil)
   end
 end
 
@@ -836,8 +845,6 @@ function M:CreateActorController()
   })
   if self.ActorController then
     self.ActorController:OnOpened(0)
-    self.ActorController:FixedCameraTransTimeOnce(0)
-    self.ActorController:SetMontageAndCamera(CommonConst.ArmoryType.Char, nil, nil)
   end
   self.ActorController:HidePlayerActor("SuqadRole", true)
 end

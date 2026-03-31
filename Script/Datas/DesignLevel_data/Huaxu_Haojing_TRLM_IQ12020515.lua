@@ -2,15 +2,6 @@ return {
   StaticCreator = {},
   ManualItem = {},
   Explore = {
-    ["7079012"] = {
-      AutoReset = 0,
-      ["2610944"] = {
-        CreatorId = 2610944,
-        UnitType = "Mechanism",
-        UnitId = 121031,
-        RarelyId = 7079012
-      }
-    },
     ["7079001"] = {
       AutoReset = 1,
       ["2610005"] = {
@@ -5556,6 +5547,15 @@ return {
         UnitType = "Monster",
         UnitId = 10002001,
         RarelyId = 7079001
+      }
+    },
+    ["7079012"] = {
+      AutoReset = 0,
+      ["2610944"] = {
+        CreatorId = 2610944,
+        UnitType = "Mechanism",
+        UnitId = 121031,
+        RarelyId = 7079012
       }
     }
   },

@@ -162,7 +162,7 @@
     "entrusts": [
       {
         "id": 10001,
-        "name": "Collecte de ressources pour Luno, la livreuse",
+        "name": "Collecte de ressources",
         "desc": "« Vous passez souvent votre temps à courir les routes... Vous avez sûrement ramassé pas mal de bonnes choses, non ? Si ça ne vous dérange pas, vous pourriez m’en vendre quelques-unes ? J’essaie de monter un petit commerce à côté... »",
         "icon": "T_Head_WaimaiJJ",
         "exp": 30,
@@ -182,7 +182,7 @@
       },
       {
         "id": 10002,
-        "name": "Collecte de ressources pour Luno, la livreuse",
+        "name": "Collecte de ressources",
         "desc": "« Vous passez souvent votre temps à courir les routes... Vous avez sûrement ramassé pas mal de bonnes choses, non ? Si ça ne vous dérange pas, vous pourriez m’en vendre quelques-unes ? J’essaie de monter un petit commerce à côté... »",
         "icon": "T_Head_WaimaiJJ",
         "exp": 30,
@@ -202,7 +202,7 @@
       },
       {
         "id": 10003,
-        "name": "Collecte de ressources pour Luno, la livreuse",
+        "name": "Collecte de ressources",
         "desc": "« Vous passez souvent votre temps à courir les routes... Vous avez sûrement ramassé pas mal de bonnes choses, non ? Si ça ne vous dérange pas, vous pourriez m’en vendre quelques-unes ? J’essaie de monter un petit commerce à côté... »",
         "icon": "T_Head_WaimaiJJ",
         "exp": 30,
@@ -222,7 +222,7 @@
       },
       {
         "id": 10004,
-        "name": "Collecte de ressources pour Luno, la livreuse",
+        "name": "Collecte de ressources",
         "desc": "« Vous passez souvent votre temps à courir les routes... Vous avez sûrement ramassé pas mal de bonnes choses, non ? Si ça ne vous dérange pas, vous pourriez m’en vendre quelques-unes ? J’essaie de monter un petit commerce à côté... »",
         "icon": "T_Head_WaimaiJJ",
         "exp": 30,
@@ -242,7 +242,7 @@
       },
       {
         "id": 10005,
-        "name": "Collecte de ressources pour Luno, la livreuse",
+        "name": "Collecte de ressources",
         "desc": "« Vous passez souvent votre temps à courir les routes... Vous avez sûrement ramassé pas mal de bonnes choses, non ? Si ça ne vous dérange pas, vous pourriez m’en vendre quelques-unes ? J’essaie de monter un petit commerce à côté... »",
         "icon": "T_Head_WaimaiJJ",
         "exp": 30,
@@ -262,7 +262,7 @@
       },
       {
         "id": 10006,
-        "name": "Collecte de matériaux pour Camilla",
+        "name": "Collecte de matériaux",
         "desc": "« Un Chasseur de Phoxène veut parier contre toi. Il affirme que tu en es incapable. Alors ? Tu acceptes le pari ? »",
         "icon": "T_Head_Kami",
         "exp": 20,
@@ -282,7 +282,7 @@
       },
       {
         "id": 10007,
-        "name": "Collecte de matériaux pour Camilla",
+        "name": "Collecte de matériaux",
         "desc": "« Un Chasseur de Phoxène veut parier contre toi. Il affirme que tu en es incapable. Alors ? Tu acceptes le pari ? »",
         "icon": "T_Head_Kami",
         "exp": 20,
@@ -302,7 +302,7 @@
       },
       {
         "id": 10008,
-        "name": "Collecte de matériaux pour Camilla",
+        "name": "Collecte de matériaux",
         "desc": "« Un Chasseur de Phoxène veut parier contre toi. Il affirme que tu en es incapable. Alors ? Tu acceptes le pari ? »",
         "icon": "T_Head_Kami",
         "exp": 20,
@@ -322,7 +322,7 @@
       },
       {
         "id": 10009,
-        "name": "Collecte de matériaux pour Camilla",
+        "name": "Collecte de matériaux",
         "desc": "« Un Chasseur de Phoxène veut parier contre toi. Il affirme que tu en es incapable. Alors ? Tu acceptes le pari ? »",
         "icon": "T_Head_Kami",
         "exp": 20,
@@ -342,7 +342,7 @@
       },
       {
         "id": 10010,
-        "name": "Collecte de matériaux pour Camilla",
+        "name": "Collecte de matériaux",
         "desc": "« Un Chasseur de Phoxène veut parier contre toi. Il affirme que tu en es incapable. Alors ? Tu acceptes le pari ? »",
         "icon": "T_Head_Kami",
         "exp": 20,
@@ -362,7 +362,7 @@
       },
       {
         "id": 10011,
-        "name": "Collecte de matériaux pour Camilla",
+        "name": "Collecte de matériaux",
         "desc": "« Un Chasseur de Phoxène veut parier contre toi. Il affirme que tu en es incapable. Alors ? Tu acceptes le pari ? »",
         "icon": "T_Head_Kami",
         "exp": 20,
@@ -382,7 +382,7 @@
       },
       {
         "id": 10012,
-        "name": "Collecte de matériaux pour Camilla",
+        "name": "Collecte de matériaux",
         "desc": "« Un Chasseur de Phoxène veut parier contre toi. Il affirme que tu en es incapable. Alors ? Tu acceptes le pari ? »",
         "icon": "T_Head_Kami",
         "exp": 30,
@@ -402,7 +402,7 @@
       },
       {
         "id": 10013,
-        "name": "Collecte de matériaux pour Camilla",
+        "name": "Collecte de matériaux",
         "desc": "« Un Chasseur de Phoxène veut parier contre toi. Il affirme que tu en es incapable. Alors ? Tu acceptes le pari ? »",
         "icon": "T_Head_Kami",
         "exp": 30,
@@ -422,7 +422,7 @@
       },
       {
         "id": 10014,
-        "name": "Collecte de matériaux pour Camilla",
+        "name": "Collecte de matériaux",
         "desc": "« Un Chasseur de Phoxène veut parier contre toi. Il affirme que tu en es incapable. Alors ? Tu acceptes le pari ? »",
         "icon": "T_Head_Kami",
         "exp": 30,
@@ -442,7 +442,7 @@
       },
       {
         "id": 10015,
-        "name": "Collecte de fournitures pour Margie",
+        "name": "Collecte de fournitures",
         "desc": "« Hein ?! Quoi ?! J’ai entendu dire qu’un génie des poubelles exauce les vœux sincères~ Haha, je rigole ! Mais sérieux, j’ai vraiment besoin de ces fournitures ! »",
         "icon": "T_Head_Maer",
         "exp": 30,
@@ -462,7 +462,7 @@
       },
       {
         "id": 10016,
-        "name": "Collecte de fournitures pour Margie",
+        "name": "Collecte de fournitures",
         "desc": "« Hein ?! Quoi ?! J’ai entendu dire qu’un génie des poubelles exauce les vœux sincères~ Haha, je rigole ! Mais sérieux, j’ai vraiment besoin de ces fournitures ! »",
         "icon": "T_Head_Maer",
         "exp": 30,
@@ -482,7 +482,7 @@
       },
       {
         "id": 10017,
-        "name": "Collecte de fournitures pour Margie",
+        "name": "Collecte de fournitures",
         "desc": "« Hein ?! Quoi ?! J’ai entendu dire qu’un génie des poubelles exauce les vœux sincères~ Haha, je rigole ! Mais sérieux, j’ai vraiment besoin de ces fournitures ! »",
         "icon": "T_Head_Maer",
         "exp": 30,
@@ -502,7 +502,7 @@
       },
       {
         "id": 10018,
-        "name": "Collecte de fournitures pour Margie",
+        "name": "Collecte de fournitures",
         "desc": "« Hein ?! Quoi ?! J’ai entendu dire qu’un génie des poubelles exauce les vœux sincères~ Haha, je rigole ! Mais sérieux, j’ai vraiment besoin de ces fournitures ! »",
         "icon": "T_Head_Maer",
         "exp": 40,
@@ -522,7 +522,7 @@
       },
       {
         "id": 10019,
-        "name": "Collecte de fournitures pour Margie",
+        "name": "Collecte de fournitures",
         "desc": "« Hein ?! Quoi ?! J’ai entendu dire qu’un génie des poubelles exauce les vœux sincères~ Haha, je rigole ! Mais sérieux, j’ai vraiment besoin de ces fournitures ! »",
         "icon": "T_Head_Maer",
         "exp": 40,
@@ -542,7 +542,7 @@
       },
       {
         "id": 10020,
-        "name": "Collecte de fournitures pour Margie",
+        "name": "Collecte de fournitures",
         "desc": "« Hein ?! Quoi ?! J’ai entendu dire qu’un génie des poubelles exauce les vœux sincères~ Haha, je rigole ! Mais sérieux, j’ai vraiment besoin de ces fournitures ! »",
         "icon": "T_Head_Maer",
         "exp": 40,
@@ -725,7 +725,7 @@
     "entrusts": [
       {
         "id": 11001,
-        "name": "Collecte de ressources pour Luno, la carpe",
+        "name": "Collecte de ressources",
         "desc": "« Snow dit que vous trouvez souvent ce genre d’objets en voyage... Et qu’ils finissent la plupart du temps inutilisés. Si possible, pourriez-vous m’en céder quelques-uns ? »",
         "icon": "T_Head_JinliJJ",
         "exp": 30,
@@ -745,7 +745,7 @@
       },
       {
         "id": 11002,
-        "name": "Collecte de ressources pour Luno, la carpe",
+        "name": "Collecte de ressources",
         "desc": "« Snow dit que vous trouvez souvent ce genre d’objets en voyage... Et qu’ils finissent la plupart du temps inutilisés. Si possible, pourriez-vous m’en céder quelques-uns ? »",
         "icon": "T_Head_JinliJJ",
         "exp": 30,
@@ -765,7 +765,7 @@
       },
       {
         "id": 11003,
-        "name": "Collecte de ressources pour Luno, la carpe",
+        "name": "Collecte de ressources",
         "desc": "« Snow dit que vous trouvez souvent ce genre d’objets en voyage... Et qu’ils finissent la plupart du temps inutilisés. Si possible, pourriez-vous m’en céder quelques-uns ? »",
         "icon": "T_Head_JinliJJ",
         "exp": 30,
@@ -785,7 +785,7 @@
       },
       {
         "id": 11004,
-        "name": "Collecte de ressources pour Luno, la carpe",
+        "name": "Collecte de ressources",
         "desc": "« Snow dit que vous trouvez souvent ce genre d’objets en voyage... Et qu’ils finissent la plupart du temps inutilisés. Si possible, pourriez-vous m’en céder quelques-uns ? »",
         "icon": "T_Head_JinliJJ",
         "exp": 30,
@@ -805,7 +805,7 @@
       },
       {
         "id": 11005,
-        "name": "Collecte de ressources pour Luno, la carpe",
+        "name": "Collecte de ressources",
         "desc": "« Snow dit que vous trouvez souvent ce genre d’objets en voyage... Et qu’ils finissent la plupart du temps inutilisés. Si possible, pourriez-vous m’en céder quelques-uns ? »",
         "icon": "T_Head_JinliJJ",
         "exp": 30,
@@ -825,7 +825,7 @@
       },
       {
         "id": 11006,
-        "name": "Collecte de matériaux pour les Tisse-Étoiles",
+        "name": "Collecte de matériaux",
         "desc": "« Ces marchandises sont très demandées. Malheureusement, les Bi’an obscurs sévissent sur les routes commerciales, rendant le ravitaillement difficile. Si vous acceptez de nous aider, nous vous en serions profondément reconnaissants. »",
         "icon": "T_Head_FameCommon",
         "exp": 20,
@@ -845,7 +845,7 @@
       },
       {
         "id": 11007,
-        "name": "Collecte de matériaux pour les Tisse-Étoiles",
+        "name": "Collecte de matériaux",
         "desc": "« Ces marchandises sont très demandées. Malheureusement, les Bi’an obscurs sévissent sur les routes commerciales, rendant le ravitaillement difficile. Si vous acceptez de nous aider, nous vous en serions profondément reconnaissants. »",
         "icon": "T_Head_FameCommon",
         "exp": 20,
@@ -865,7 +865,7 @@
       },
       {
         "id": 11008,
-        "name": "Collecte de matériaux pour les Tisse-Étoiles",
+        "name": "Collecte de matériaux",
         "desc": "« Ces marchandises sont très demandées. Malheureusement, les Bi’an obscurs sévissent sur les routes commerciales, rendant le ravitaillement difficile. Si vous acceptez de nous aider, nous vous en serions profondément reconnaissants. »",
         "icon": "T_Head_FameCommon",
         "exp": 20,
@@ -885,7 +885,7 @@
       },
       {
         "id": 11009,
-        "name": "Collecte de matériaux pour les Tisse-Étoiles",
+        "name": "Collecte de matériaux",
         "desc": "« Ces marchandises sont très demandées. Malheureusement, les Bi’an obscurs sévissent sur les routes commerciales, rendant le ravitaillement difficile. Si vous acceptez de nous aider, nous vous en serions profondément reconnaissants. »",
         "icon": "T_Head_FameCommon",
         "exp": 20,
@@ -905,7 +905,7 @@
       },
       {
         "id": 11010,
-        "name": "Collecte de matériaux pour les Tisse-Étoiles",
+        "name": "Collecte de matériaux",
         "desc": "« Ces marchandises sont très demandées. Malheureusement, les Bi’an obscurs sévissent sur les routes commerciales, rendant le ravitaillement difficile. Si vous acceptez de nous aider, nous vous en serions profondément reconnaissants. »",
         "icon": "T_Head_FameCommon",
         "exp": 20,
@@ -925,7 +925,7 @@
       },
       {
         "id": 11011,
-        "name": "Collecte de matériaux pour les Tisse-Étoiles",
+        "name": "Collecte de matériaux",
         "desc": "« Ces marchandises sont très demandées. Malheureusement, les Bi’an obscurs sévissent sur les routes commerciales, rendant le ravitaillement difficile. Si vous acceptez de nous aider, nous vous en serions profondément reconnaissants. »",
         "icon": "T_Head_FameCommon",
         "exp": 20,
@@ -945,7 +945,7 @@
       },
       {
         "id": 11012,
-        "name": "Collecte de matériaux pour les Tisse-Étoiles",
+        "name": "Collecte de matériaux",
         "desc": "« Ces marchandises sont très demandées. Malheureusement, les Bi’an obscurs sévissent sur les routes commerciales, rendant le ravitaillement difficile. Si vous acceptez de nous aider, nous vous en serions profondément reconnaissants. »",
         "icon": "T_Head_FameCommon",
         "exp": 30,
@@ -965,7 +965,7 @@
       },
       {
         "id": 11013,
-        "name": "Collecte de matériaux pour les Tisse-Étoiles",
+        "name": "Collecte de matériaux",
         "desc": "« Ces marchandises sont très demandées. Malheureusement, les Bi’an obscurs sévissent sur les routes commerciales, rendant le ravitaillement difficile. Si vous acceptez de nous aider, nous vous en serions profondément reconnaissants. »",
         "icon": "T_Head_FameCommon",
         "exp": 30,
@@ -985,7 +985,7 @@
       },
       {
         "id": 11014,
-        "name": "Collecte de matériaux pour les Tisse-Étoiles",
+        "name": "Collecte de matériaux",
         "desc": "« Ces marchandises sont très demandées. Malheureusement, les Bi’an obscurs sévissent sur les routes commerciales, rendant le ravitaillement difficile. Si vous acceptez de nous aider, nous vous en serions profondément reconnaissants. »",
         "icon": "T_Head_FameCommon",
         "exp": 30,
@@ -1005,7 +1005,7 @@
       },
       {
         "id": 11015,
-        "name": "Collecte de matériaux pour les Tisse-Étoiles",
+        "name": "Collecte de matériaux",
         "desc": "« Ces marchandises sont très demandées. Malheureusement, les Bi’an obscurs sévissent sur les routes commerciales, rendant le ravitaillement difficile. Si vous acceptez de nous aider, nous vous en serions profondément reconnaissants. »",
         "icon": "T_Head_FameCommon",
         "exp": 30,
@@ -1025,7 +1025,7 @@
       },
       {
         "id": 11016,
-        "name": "Approvisionnement de Maître Qiu",
+        "name": "Collecte de fournitures",
         "desc": "« Inutile de te mettre sur la défensive. Aide-moi aujourd’hui, et je saurai te rendre la pareille le moment venu. »",
         "icon": "T_Head_Qiu",
         "exp": 30,
@@ -1045,7 +1045,7 @@
       },
       {
         "id": 11017,
-        "name": "Approvisionnement de Maître Qiu",
+        "name": "Collecte de fournitures",
         "desc": "« Inutile de te mettre sur la défensive. Aide-moi aujourd’hui, et je saurai te rendre la pareille le moment venu. »",
         "icon": "T_Head_Qiu",
         "exp": 30,
@@ -1065,7 +1065,7 @@
       },
       {
         "id": 11018,
-        "name": "Approvisionnement de Maître Qiu",
+        "name": "Collecte de fournitures",
         "desc": "« Inutile de te mettre sur la défensive. Aide-moi aujourd’hui, et je saurai te rendre la pareille le moment venu. »",
         "icon": "T_Head_Qiu",
         "exp": 40,
@@ -1085,7 +1085,7 @@
       },
       {
         "id": 11019,
-        "name": "Approvisionnement de Maître Qiu",
+        "name": "Collecte de fournitures",
         "desc": "« Inutile de te mettre sur la défensive. Aide-moi aujourd’hui, et je saurai te rendre la pareille le moment venu. »",
         "icon": "T_Head_Qiu",
         "exp": 40,
@@ -1105,7 +1105,7 @@
       },
       {
         "id": 11020,
-        "name": "Approvisionnement de Maître Qiu",
+        "name": "Collecte de fournitures",
         "desc": "« Inutile de te mettre sur la défensive. Aide-moi aujourd’hui, et je saurai te rendre la pareille le moment venu. »",
         "icon": "T_Head_Qiu",
         "exp": 40,

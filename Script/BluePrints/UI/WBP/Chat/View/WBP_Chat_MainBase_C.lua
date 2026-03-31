@@ -93,9 +93,7 @@ function M:InitChatChannelUI()
   self.Button_ChangeChannel.OnClicked:Clear()
   self.Button_ChangeChannel.OnClicked:Add(self, self.BtnChangeChannelOnPressed)
   ChatController:RegisterEvent(self, function(self, EventId, ...)
-    if EventId == ChatCommon.EventID.RecvChannelPlayerNum then
-      self:HandleChannelPlayerNum()
-    elseif EventId == ChatCommon.EventID.EnterChatChannel then
+    if EventId == ChatCommon.EventID.RecvChannelPlayerNum or EventId == ChatCommon.EventID.EnterChatChannel or EventId == ChatCommon.EventID.RecvAllChatChannel then
       self:HandleChannelPlayerNum()
     end
   end)
@@ -111,6 +109,7 @@ function M:OnSelectChannelSuccess(ChannelType, SelectIndex)
 end
 
 function M:HandleChannelPlayerNum(Channel_type, Channel_list)
+  self.WS_ChannelSign:SetVisibility(UIConst.VisibilityOp.Visible)
   local Type = ChatModel:GetChannelState(ChatModel:GetChannelIndex(ChatModel:GetCurrentChannel()))
   if 1 == Type then
     self.WS_ChannelSign:SetActiveWidgetIndex(0)
@@ -119,6 +118,7 @@ function M:HandleChannelPlayerNum(Channel_type, Channel_list)
   else
     self.WS_ChannelSign:SetActiveWidgetIndex(2)
   end
+  self:UpdateText_ChatChannel()
 end
 
 function M:BtnChangeChannelOnPressed()
@@ -378,15 +378,19 @@ function M:OnTabSelected_Public(TabWidget, TabItemInfo)
   self:_SetUpBtnSentState()
   self.Group_Channel:SetVisibility(UIConst.VisibilityOp.Visible)
   self:UpdateText_ChatChannel()
+  self.WS_ChannelSign:SetVisibility(UIConst.VisibilityOp.Collapsed)
   ChatController:SendQueryChatChannelBusyInfo()
 end
 
 function M:OnTabSelected_Region(TabWidget, TabItemInfo)
   self:HandleEnterChatChannel(ErrorCode.RET_SUCCESS, ChatCommon.ChannelDef.Region)
   self:_SetUpBtnSentState()
-  self.Group_Channel:SetVisibility(UIConst.VisibilityOp.Visible)
   self:UpdateText_ChatChannel()
-  ChatController:SendQueryChatChannelBusyInfo()
+  if ChatModel:IsInRegionOnline() then
+    self.Group_Channel:SetVisibility(UIConst.VisibilityOp.Visible)
+    self.WS_ChannelSign:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    ChatController:SendQueryChatChannelBusyInfo()
+  end
 end
 
 function M:OnTabSelected_SettlementOnline(TabWidget, TabItemInfo)
@@ -623,6 +627,7 @@ end
 function M:_HandleRefreshFriendInRegionChannel()
   if ChatModel:IsInRegionOnline() then
     self:_HandleRefreshFriendInOpenChannel()
+    self.Group_Channel:SetVisibility(UIConst.VisibilityOp.Visible)
   else
     self:_SetUpFullEmpty(GText("UI_Chat_NotInOnlineRegion"))
   end

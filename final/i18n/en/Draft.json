@@ -3202,7 +3202,7 @@
   },
   {
     "id": 151766,
-    "n": "Huntdown",
+    "n": "Volition",
     "r": 5,
     "v": "1.3",
     "t": "Mod",
@@ -3214,7 +3214,7 @@
     "x": [
       {
         "id": 41766,
-        "n": "Huntdown",
+        "n": "Volition",
         "c": 5,
         "t": "Mod"
       },
@@ -8082,13 +8082,13 @@
       },
       {
         "id": 12150,
-        "n": "鸣金遥的握柄",
+        "n": "Aureate Drift: Grip",
         "c": 1,
         "t": "Resource"
       },
       {
         "id": 12151,
-        "n": "鸣金遥的刀刃",
+        "n": "Aureate Drift: Blade",
         "c": 1,
         "t": "Resource"
       }
@@ -9054,19 +9054,19 @@
       },
       {
         "id": 12152,
-        "n": "切割齿轮的枪机",
+        "n": "Jagged Growl: Bolt",
         "c": 1,
         "t": "Resource"
       },
       {
         "id": 12153,
-        "n": "切割齿轮的枪身",
+        "n": "Jagged Growl: Frame",
         "c": 1,
         "t": "Resource"
       },
       {
         "id": 12154,
-        "n": "切割齿轮的枪管",
+        "n": "Jagged Growl: Barrel",
         "c": 1,
         "t": "Resource"
       }
@@ -9092,19 +9092,19 @@
       },
       {
         "id": 12144,
-        "n": "孤雏的羽迹的枪机",
+        "n": "Fledgling's Gleam: Bolt",
         "c": 1,
         "t": "Resource"
       },
       {
         "id": 12145,
-        "n": "孤雏的羽迹的枪身",
+        "n": "Fledgling's Gleam: Frame",
         "c": 1,
         "t": "Resource"
       },
       {
         "id": 12146,
-        "n": "孤雏的羽迹的枪管",
+        "n": "Fledgling's Gleam: Barrel",
         "c": 1,
         "t": "Resource"
       }
@@ -9472,19 +9472,19 @@
       },
       {
         "id": 12147,
-        "n": "杯中的残火的枪机",
+        "n": "Dregs of Glimmer: Bolt",
         "c": 1,
         "t": "Resource"
       },
       {
         "id": 12148,
-        "n": "杯中的残火的枪身",
+        "n": "Dregs of Glimmer: Frame",
         "c": 1,
         "t": "Resource"
       },
       {
         "id": 12149,
-        "n": "杯中的残火的枪管",
+        "n": "Dregs of Glimmer: Barrel",
         "c": 1,
         "t": "Resource"
       }

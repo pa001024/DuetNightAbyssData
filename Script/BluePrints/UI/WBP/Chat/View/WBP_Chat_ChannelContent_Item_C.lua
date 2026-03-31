@@ -51,7 +51,6 @@ end
 
 function M:OnClickCellItem()
   local CurIndex
-  logerror("gggggggggggggggggggggggggggggggggg")
   if self.ChannelIndex == ChatModel:GetChannelIndex(ChatModel:GetCurrentChannel()) then
     UIManager(self):ShowUITip(UIConst.Tip_CommonTop, GText("AlreadyInChannel"))
     self.Com_List03:OnCellUnSelect()

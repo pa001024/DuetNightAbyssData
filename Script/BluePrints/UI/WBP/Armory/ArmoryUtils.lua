@@ -942,6 +942,9 @@ function ReddotCreateFunctions.CreateWeaponAppearanceReddotInfos(M)
     local AccessoryData = DataMgr.WeaponAccessory[AccessoryId]
     if AccessoryData and CommonUtils.IsCurrentTimeRealease(CommonConst.DataType.WeaponAccessory, AccessoryId) then
       M:TryAddNewWeaponAccessoryReddot(AccessoryId)
+      if AccessoryData.StanceFXType ~= CommonConst.WeaponAccessoryTypes.Accessory then
+        M:TryAddNewWeaponStanceFXReddot(AccessoryId)
+      end
     end
   end
   local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(CommonConst.DataType.WeaponAccessory)
@@ -1261,8 +1264,16 @@ local SetReddotReadFunctions = {
     if not Data then
       return
     end
-    local NodeName = CommonConst.DataType.WeaponAccessory
-    M:_SetReddotReadCommon(AccessoryId, NodeName)
+    if Data.StanceFXType == CommonConst.WeaponAccessoryTypes.Accessory then
+      local NodeName = CommonConst.DataType.WeaponAccessory
+      M:_SetReddotReadCommon(AccessoryId, NodeName)
+    else
+      local ModApplicationType = DataMgr.WeaponAccessoryId2ModApplicationType[AccessoryId]
+      if ModApplicationType then
+        local NodeName = "WeaponStanceFX" .. ModApplicationType
+        M:_SetReddotReadCommon(AccessoryId, NodeName)
+      end
+    end
   end,
   SetPetReddotRead = function(self, Content, ReadNew, ReadUpgradeable, bDeleteCache)
     local UniqueIdStr = Content.UniqueId
@@ -1617,8 +1628,26 @@ function M:TryAddNewWeaponAccessoryReddot(AccessoryId)
   if not AccessoryData then
     return false
   end
+  if AccessoryData.StanceFXType ~= CommonConst.WeaponAccessoryTypes.Accessory then
+    return
+  end
   local ReddotName = CommonConst.DataType.WeaponAccessory
   return M:_TryAddNewReddotCommon(AccessoryId, ReddotName)
+end
+
+function M:TryAddNewWeaponStanceFXReddot(AccessoryId)
+  if self.IsPreviewMode then
+    return
+  end
+  local AccessoryData = DataMgr.WeaponAccessory[AccessoryId]
+  if not AccessoryData then
+    return false
+  end
+  local ModApplicationType = DataMgr.WeaponAccessoryId2ModApplicationType[AccessoryId]
+  if ModApplicationType then
+    local ReddotName = "WeaponStanceFX" .. ModApplicationType
+    return M:_TryAddNewReddotCommon(AccessoryId, ReddotName)
+  end
 end
 
 function M:TryAddNewWeaponSkinReddot(SkinId)
@@ -1631,6 +1660,34 @@ function M:TryAddNewWeaponSkinReddot(SkinId)
   end
   local ReddotName = CommonConst.DataType.WeaponSkin .. (WeaponSkinData.ApplicationType or "")
   return M:_TryAddNewReddotCommon(SkinId, ReddotName)
+end
+
+function M:GetWeaponAppearanceReddotCount(WeaponId)
+  local NewSkinCount = 0
+  local Data = DataMgr.Weapon[WeaponId]
+  if Data and Data.SkinApplicationType then
+    for _, value in pairs(Data.SkinApplicationType) do
+      local NodeName = CommonConst.DataType.WeaponSkin .. (value or "")
+      local NewSkinNode = ReddotManager.GetTreeNode(NodeName)
+      NewSkinCount = NewSkinCount + (NewSkinNode and NewSkinNode.Count or 0)
+    end
+  end
+  local NewAccessoryNode = ReddotManager.GetTreeNode(CommonConst.DataType.WeaponAccessory)
+  local NewAccessoryCount = NewAccessoryNode and NewAccessoryNode.Count or 0
+  local BattleWeaponData = DataMgr.BattleWeapon[WeaponId]
+  local NewWeaponStanceFXCount = 0
+  if BattleWeaponData.ModApplicationType then
+    for key, ApplicationType in pairs(BattleWeaponData.ModApplicationType) do
+      local NewAccessoryNode = ReddotManager.GetTreeNode("WeaponStanceFX" .. ApplicationType)
+      NewWeaponStanceFXCount = NewWeaponStanceFXCount + (NewAccessoryNode and NewAccessoryNode.Count or 0)
+    end
+  end
+  return {
+    TotalCount = NewAccessoryCount + NewAccessoryCount + NewWeaponStanceFXCount,
+    NewSkinCount = NewSkinCount,
+    NewAccessoryCount = NewAccessoryCount,
+    NewWeaponStanceFXCount = NewWeaponStanceFXCount
+  }
 end
 
 function M:TryAddNewCharVoiceReddot(VoiceData, CacheKey)
@@ -2687,6 +2744,50 @@ function M:CanSkinUpgrade(SkinId, TargetLevel)
   local OwnedAmount = Avatar:GetResourceNum(NextSkinUp.UnlockCurrency)
   local Condition2 = OwnedAmount >= NextSkinUp.UnlockAmount
   return Condition1 and Condition2
+end
+
+local function CreateWeaponStanceFXTag2ModId(self, WeaponId)
+  rawset(self, "WeaponStanceFXTag2ModId", rawget(self, "WeaponStanceFXTag2ModId") or {})
+  if self.WeaponStanceFXTag2ModId[WeaponId] then
+    return
+  end
+  local BattleWeaponData = DataMgr.BattleWeapon[WeaponId]
+  if not BattleWeaponData then
+    return
+  end
+  rawset(self, "WeaponModApplicationType", rawget(self, "WeaponModApplicationType") or {})
+  if BattleWeaponData.ModApplicationType then
+    self.WeaponModApplicationType[WeaponId] = {}
+    for _, value in pairs(BattleWeaponData.ModApplicationType) do
+      if not DataMgr.ModTag[value] then
+      else
+        self.WeaponModApplicationType[WeaponId][value] = true
+      end
+    end
+  end
+  rawset(self, "WeaponStanceFXTag2ModId", rawget(self, "WeaponStanceFXTag2ModId") or {})
+  if self.WeaponModApplicationType[WeaponId] then
+    self.WeaponStanceFXTag2ModId[WeaponId] = {}
+    for ModId, value in pairs(DataMgr.Mod) do
+      if self.WeaponModApplicationType[WeaponId][value.ApplicationType] and value.ModActivateSkills then
+        for SkillId, StanceFXTag in pairs(value.ModActivateSkills) do
+          StanceFXTag = tonumber(StanceFXTag)
+          self.WeaponStanceFXTag2ModId[WeaponId][StanceFXTag] = self.WeaponStanceFXTag2ModId[WeaponId][StanceFXTag] or {}
+          self.WeaponStanceFXTag2ModId[WeaponId][StanceFXTag][ModId] = true
+        end
+      end
+    end
+  end
+end
+
+function M:GetWeaponStanceFXTag2ModId(WeaponId)
+  if rawget(self, "WeaponStanceFXTag2ModId") and self.WeaponStanceFXTag2ModId[WeaponId] then
+    return self.WeaponStanceFXTag2ModId[WeaponId]
+  end
+  CreateWeaponStanceFXTag2ModId(self, WeaponId)
+  if rawget(self, "WeaponStanceFXTag2ModId") and self.WeaponStanceFXTag2ModId[WeaponId] then
+    return self.WeaponStanceFXTag2ModId[WeaponId]
+  end
 end
 
 return M

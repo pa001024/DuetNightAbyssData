@@ -1683,7 +1683,7 @@ return ReadOnly("SystemUI", {
     StateTag = 1,
     System = "Guide",
     UIName = "GuideMain",
-    ZOrder = 31
+    ZOrder = 55
   },
   GuideTextBox = {
     ConditionShowStateTags = T.RT_6,
@@ -2563,7 +2563,6 @@ return ReadOnly("SystemUI", {
   SkinPreview = {
     ConfigName = "StackAndUIMode",
     IsHideBattleUnit = 1,
-    IsStopGame = 2,
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/Mobile/WBP_Shop_SkinPreview_M.WBP_Shop_SkinPreview_M'",
     PCBPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/PC/WBP_Shop_SkinPreview_P.WBP_Shop_SkinPreview_P'",
     UIName = "SkinPreview",
@@ -2954,7 +2953,8 @@ return ReadOnly("SystemUI", {
     ConfigName = "OnlyForceShow",
     PCBPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/ExclusiveSkill/WBP_Battle_KamiUltiSkill.WBP_Battle_KamiUltiSkill'",
     System = "Battle",
-    UIName = "UISkillKamiUlti"
+    UIName = "UISkillKamiUlti",
+    ZOrder = -6
   },
   UISkillKezhou = {
     PCBPPath = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/ExclusiveSkill/WBP_Battle_KezhouSkill.WBP_Battle_KezhouSkill'",

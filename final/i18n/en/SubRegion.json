@@ -4004,7 +4004,7 @@
   {
     "id": 104501,
     "rid": 1045,
-    "name": "东城",
+    "name": "Eastern District",
     "desc": "UI_SUBREGION_DES_104501",
     "map": "Huaxu_Haojing_Eas",
     "pos": [
@@ -4090,7 +4090,7 @@
   {
     "id": 104502,
     "rid": 1045,
-    "name": "西城",
+    "name": "Western District",
     "desc": "UI_SUBREGION_DES_104502",
     "map": "Huaxu_Haojing_Wes",
     "pos": [
@@ -4173,7 +4173,7 @@
           -8822,
           -16420
         ],
-        "name": "山外山",
+        "name": "Outer Peaks",
         "icon": "T_Gp_Shanwaishan"
       },
       {
@@ -4190,7 +4190,7 @@
   {
     "id": 104503,
     "rid": 1045,
-    "name": "内城",
+    "name": "Inner City",
     "desc": "UI_SUBREGION_DES_104503",
     "map": "Huaxu_Haojing_Inn",
     "pos": [
@@ -4259,7 +4259,7 @@
           30649,
           -75570
         ],
-        "name": "Hall of Adjudication: Forecourt",
+        "name": "The Nine Chapters Ground",
         "icon": "T_Gp_Trans02"
       },
       {
@@ -4268,7 +4268,7 @@
           40233,
           -50974
         ],
-        "name": "由来巷",
+        "name": "Youlai Alley",
         "icon": "T_Gp_Youlaixiang"
       },
       {
@@ -4277,7 +4277,7 @@
           33050,
           -55115
         ],
-        "name": "内城",
+        "name": "Inner City",
         "icon": "T_Gp_Trans02"
       },
       {
@@ -4303,7 +4303,7 @@
   {
     "id": 104504,
     "rid": 1045,
-    "name": "西郊",
+    "name": "Western Outskirts",
     "desc": "UI_SUBREGION_DES_104504",
     "map": "Huaxu_Haojing_Jlc",
     "pos": [
@@ -4415,7 +4415,7 @@
           -7530,
           -50410
         ],
-        "name": "灵鸟回声·扼守（椒兰村）【待包装】",
+        "name": "Avian Spirit Echo: Defence (Jiaolan Village)",
         "icon": "T_Gp_AreaCoop"
       },
       {
@@ -4424,7 +4424,7 @@
           13260,
           -83070
         ],
-        "name": "灵鸟回声·避险（西侧废村）【待包装】",
+        "name": "Avian Spirit Echo: Hedge (Western Outskirts)",
         "icon": "T_Gp_AreaCoop"
       }
     ]
@@ -4432,7 +4432,7 @@
   {
     "id": 104505,
     "rid": 1045,
-    "name": "东郊",
+    "name": "Eastern Outskirts",
     "desc": "UI_SUBREGION_DES_104505",
     "map": "Huaxu_Haojing_Sub",
     "pos": [
@@ -4522,7 +4522,7 @@
           49903,
           -79459
         ],
-        "name": "Hall of Adjudication: East Forecourt",
+        "name": "The Nine Chapters Ground: East",
         "icon": "T_Gp_Trans02"
       },
       {
@@ -4540,7 +4540,7 @@
           55237,
           -54316
         ],
-        "name": "由来巷",
+        "name": "Youlai Alley",
         "icon": "T_Gp_Youlaixiang"
       },
       {
@@ -4549,7 +4549,7 @@
           51400,
           -78340
         ],
-        "name": "灵鸟回声·驱离（内城入口）【待包装】",
+        "name": "Avian Spirit Echo: Expulsion (The Nine Chapters Ground: East)",
         "icon": "T_Gp_AreaCoop"
       }
     ]
@@ -4557,7 +4557,7 @@
   {
     "id": 104506,
     "rid": 1045,
-    "name": "执律阁",
+    "name": "Hall of Adjudication",
     "desc": "UI_SUBREGION_DES_104506",
     "map": "Huaxu_Haojing_Top",
     "pos": [
@@ -4580,7 +4580,7 @@
           32830,
           -103270
         ],
-        "name": "Hall of Adjudication: Forecourt",
+        "name": "The Nine Chapters Ground",
         "icon": "T_Gp_Camera"
       },
       {
@@ -4589,7 +4589,7 @@
           31498,
           -109794
         ],
-        "name": "太虚陵",
+        "name": "Taixu Mausoleum",
         "icon": "T_Gp_Taixuling"
       },
       {
@@ -4598,7 +4598,7 @@
           31498,
           -107220
         ],
-        "name": "内城",
+        "name": "Inner City",
         "icon": "T_Gp_Zhilvge"
       }
     ]
@@ -4634,7 +4634,7 @@
   {
     "id": 104801,
     "rid": 1048,
-    "name": "偃隐宫",
+    "name": "Labyrinth of Yanyin",
     "desc": "UI_SUBREGION_DES_104801",
     "map": "Huaxu_Haojing_YYG",
     "pos": [
@@ -4687,7 +4687,7 @@
   {
     "id": 105101,
     "rid": 1051,
-    "name": "执律阁内",
+    "name": "Inside the Hall of Adjudication",
     "desc": "测试区域",
     "map": "Huaxu_Haojing_Int",
     "pos": [
@@ -4712,7 +4712,7 @@
   {
     "id": 105201,
     "rid": 1052,
-    "name": "山外山",
+    "name": "Outer Peaks",
     "desc": "测试区域",
     "map": "Huaxu_Haojing_Reb",
     "pos": [
@@ -4812,7 +4812,7 @@
           -5003,
           14586
         ],
-        "name": "西城",
+        "name": "Western District",
         "icon": "T_Gp_Haojing"
       },
       {
@@ -4821,7 +4821,7 @@
           12183,
           6856
         ],
-        "name": "灵鸟回声·扼守（山外山）【待包装】",
+        "name": "Avian Spirit Echo: Defence (Outer Peaks)",
         "icon": "T_Gp_AreaCoop"
       }
     ]
@@ -4829,7 +4829,7 @@
   {
     "id": 105301,
     "rid": 1053,
-    "name": "太虚陵",
+    "name": "Taixu Mausoleum",
     "desc": "测试区域",
     "map": "Huaxu_Haojing_TRLM",
     "pos": [
@@ -4852,7 +4852,7 @@
           43715,
           23455
         ],
-        "name": "太皓与烛阴",
+        "name": "Taihao and Zhuyin",
         "icon": "T_Gp_Boss"
       }
     ]
@@ -4860,7 +4860,7 @@
   {
     "id": 105401,
     "rid": 1054,
-    "name": "？？？",
+    "name": "???",
     "desc": "测试区域",
     "map": "Huaxu_Haojing_TXJ",
     "range": {
@@ -4877,7 +4877,7 @@
   {
     "id": 105501,
     "rid": 1055,
-    "name": "由来巷",
+    "name": "Youlai Alley",
     "desc": "测试区域",
     "map": "Huaxu_Haojing_YLX",
     "pos": [
@@ -4989,7 +4989,7 @@
           15355,
           4565
         ],
-        "name": "内城",
+        "name": "Eastern Outskirts",
         "icon": "T_Gp_Haojing"
       },
       {
@@ -4998,7 +4998,7 @@
           14316,
           3500
         ],
-        "name": "东郊",
+        "name": "Inner City",
         "icon": "T_Gp_Haojing"
       },
       {
@@ -5007,7 +5007,7 @@
           13326,
           831
         ],
-        "name": "灵鸟回声·避险（由来巷）【待包装】",
+        "name": "Avian Spirit Echo: Hedge (Youlai Alley)",
         "icon": "T_Gp_AreaCoop"
       }
     ]
@@ -5015,14 +5015,14 @@
   {
     "id": 105601,
     "rid": 1056,
-    "name": "？？？",
+    "name": "???",
     "desc": "测试区域",
     "map": "Huaxu_Haojing_ZhiliuHJ_Door"
   },
   {
     "id": 105602,
     "rid": 1056,
-    "name": "？？？",
+    "name": "???",
     "desc": "测试区域",
     "map": "Huaxu_Haojing_ZhiliuHJ_Talk"
   },

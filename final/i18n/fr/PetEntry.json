@@ -367,7 +367,7 @@
     "icon": "Battle_Gold",
     "name": "Discipliné",
     "r": 5,
-    "desc": "Permet le déclenchement automatique des compétences de Soutien de Géniemon."
+    "desc": "Le Soutien de Géniemon est automatiquement déclenché dès qu’il est disponible."
   },
   {
     "id": 10191,
@@ -609,7 +609,7 @@
     "icon": "Battle_Gold",
     "name": "Avide",
     "r": 5,
-    "desc": "释放魔灵支援后，拾取自身周围100米范围内的所有掉落物"
+    "desc": "Après avoir déclenché un Soutien de Géniemon, vous récupérez tous les objets au sol dans un rayon de 100 mètres autour de vous."
   },
   {
     "id": 10291,
@@ -617,7 +617,7 @@
     "icon": "Battle_Gold",
     "name": "Fugitif",
     "r": 5,
-    "desc": "释放魔灵支援后，如果已经开启委托的撤离点，传送至撤离点"
+    "desc": "Après avoir déclenché un Soutien de Géniemon, si un point d’évacuation de mission est actif, vous y êtes téléporté."
   },
   {
     "id": 10301,
@@ -625,6 +625,6 @@
     "icon": "Battle_Gold",
     "name": "Vétéran",
     "r": 5,
-    "desc": "魔灵支援和被动等级+1"
+    "desc": "Niveau de Soutien de Géniemon et des passifs +1"
   }
 ]

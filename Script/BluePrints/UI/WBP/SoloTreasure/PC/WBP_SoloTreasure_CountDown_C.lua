@@ -83,7 +83,6 @@ function WBP_SoloTreasure_CountDown_C:InitTaskStartTip()
   else
     self.TimeTip:RealLoaded(Parmas)
   end
-  AudioManager(self):PlayUISound(self, "event:/ui/activity/sdc_toast_game_start", nil, nil)
 end
 
 function WBP_SoloTreasure_CountDown_C:InitWarningTimeTip()
@@ -101,7 +100,6 @@ function WBP_SoloTreasure_CountDown_C:InitWarningTimeTip()
   else
     self.TimeTip:RealLoaded(Parmas)
   end
-  AudioManager(self):PlayUISound(self, "event:/ui/activity/sdc_toast_game_overtime", nil, nil)
 end
 
 function WBP_SoloTreasure_CountDown_C:InitCountDown()

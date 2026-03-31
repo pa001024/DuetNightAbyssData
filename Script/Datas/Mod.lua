@@ -16460,6 +16460,7 @@ return ReadOnly("Mod", {
     TypeName = "MOD_Type_Name_Fenrir01"
   },
   [103003] = {
+    AccessKey = T.RT_6,
     ActivateInRouge = true,
     AddAttrs = T.RT_48,
     ApplicationType = 103,

@@ -10,6 +10,8 @@ end
 
 function M:InitContent(Params, PopupData, Owner)
   self.Params = Params
+  self.Text_Title:SetText(GText("UI_RandomBox_Title"))
+  self.Text_Exchange:SetText(GText("UI_RandomBox_Num"))
   self:ShowItemList(self.Params.UseParam)
   if Params.ChooseCallbackFunction then
     self.Panel_Exchange:SetVisibility(UIConst.VisibilityOp.Visible)

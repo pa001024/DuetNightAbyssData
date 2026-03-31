@@ -48,6 +48,9 @@ function M:InitMaterialCost()
     }
     Content.LockType = Data.LockType
     Content.IsLocked = Data.IsLocked
+    Content.Level = Data.Level
+    Content.Developed = Data.Developed
+    Content.ProductType = Data.ProductType
     self.List_Item_1:AddItem(Content)
   end
 end

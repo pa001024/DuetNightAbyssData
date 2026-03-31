@@ -665,96 +665,96 @@
   },
   {
     "id": 10090,
-    "name": "机枢齿轮",
-    "desc": "擎天巨物的运转，离不开每一件齿轮的付出。",
+    "name": "Jishu Cog",
+    "desc": "Even the mightiest machine depends on every single cog.",
     "icon": "T_Fashion_Head52",
     "rarity": 3,
     "unlock": "Available from events"
   },
   {
     "id": 10091,
-    "name": "祀烟香炉·鎏金",
-    "desc": "我们究竟是在祭天，还是在祭人？",
+    "name": "Ritual Censer: Leaden Grey",
+    "desc": "Are we making offerings to Heaven... or to ourselves?",
     "icon": "T_Fashion_Head54",
     "rarity": 3,
     "unlock": "Available from events"
   },
   {
     "id": 10094,
-    "name": "羽毛笔·涅白",
-    "desc": "写下属于我们的故事。",
+    "name": "Quill: Opaque White",
+    "desc": "Let's write a story of our own.",
     "icon": "T_Fashion_Head58_01",
     "rarity": 5,
     "unlock": "Available at Shop"
   },
   {
     "id": 10095,
-    "name": "羽毛笔·焦糖",
-    "desc": "写下属于我们的故事。",
+    "name": "Quill: Caramel",
+    "desc": "Let's write a story of our own.",
     "icon": "T_Fashion_Head58_02",
     "rarity": 5,
     "unlock": "Available at Shop"
   },
   {
     "id": 10096,
-    "name": "羽毛笔·墨玉",
-    "desc": "写下属于我们的故事。",
+    "name": "Quill: Dark Jade",
+    "desc": "Let's write a story of our own.",
     "icon": "T_Fashion_Head58_03",
     "rarity": 5,
     "unlock": "Available at Shop"
   },
   {
     "id": 10097,
-    "name": "羽毛笔·锈红",
-    "desc": "写下属于我们的故事。",
+    "name": "Quill: Rust Red",
+    "desc": "Let's write a story of our own.",
     "icon": "T_Fashion_Head58_04",
     "rarity": 5,
     "unlock": "Available at Shop"
   },
   {
     "id": 10098,
-    "name": "噤言诡灵·锈红",
-    "desc": "急急如律令。",
+    "name": "Hushed Shade: Rust Red",
+    "desc": "By Heaven's might, begone, foul spirits!",
     "icon": "T_Fashion_Head57_02",
     "rarity": 5,
     "unlock": "Available from events"
   },
   {
     "id": 10099,
-    "name": "噤言诡灵·黛蓝",
-    "desc": "急急如律令。",
+    "name": "Hushed Shade: Azure",
+    "desc": "By Heaven's might, begone, foul spirits!",
     "icon": "T_Fashion_Head57_01",
     "rarity": 5,
     "unlock": "Available from events"
   },
   {
     "id": 10102,
-    "name": "汪汪发饰·涅白",
-    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在狗耳朵的面前都会显得黯淡无光，这就是狗耳朵那让人无法拒绝的魔力……这台词总感觉在哪里说过，应该是错觉吧。",
+    "name": "Puppy Headpiece: Opaque White",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world can do justice to the irresistible allure of these puppy ears. Hang on... why does that sound weirdly familiar? Must be my imagination.",
     "icon": "T_Fashion_Head56_01",
     "rarity": 4,
     "unlock": "Available at Shop"
   },
   {
     "id": 10103,
-    "name": "汪汪发饰·墨玉",
-    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在狗耳朵的面前都会显得黯淡无光，这就是狗耳朵那让人无法拒绝的魔力……这台词总感觉在哪里说过，应该是错觉吧。",
+    "name": "Puppy Headpiece: Dark Jade",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world can do justice to the irresistible allure of these puppy ears. Hang on... why does that sound weirdly familiar? Must be my imagination.",
     "icon": "T_Fashion_Head56_04",
     "rarity": 4,
     "unlock": "Available at Shop"
   },
   {
     "id": 10104,
-    "name": "汪汪发饰·焦糖",
-    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在狗耳朵的面前都会显得黯淡无光，这就是狗耳朵那让人无法拒绝的魔力……这台词总感觉在哪里说过，应该是错觉吧。",
+    "name": "Puppy Headpiece: Caramel",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world can do justice to the irresistible allure of these puppy ears. Hang on... why does that sound weirdly familiar? Must be my imagination.",
     "icon": "T_Fashion_Head56_02",
     "rarity": 4,
     "unlock": "Available at Shop"
   },
   {
     "id": 10105,
-    "name": "汪汪发饰·铅灰",
-    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在狗耳朵的面前都会显得黯淡无光，这就是狗耳朵那让人无法拒绝的魔力……这台词总感觉在哪里说过，应该是错觉吧。",
+    "name": "Puppy Headpiece: Leaden Grey",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world can do justice to the irresistible allure of these puppy ears. Hang on... why does that sound weirdly familiar? Must be my imagination.",
     "icon": "T_Fashion_Head56_03",
     "rarity": 4,
     "unlock": "Available at Shop"
@@ -793,8 +793,8 @@
   },
   {
     "id": 11006,
-    "name": "俏皮律动",
-    "desc": "摇摇晃晃，共舞一节俏皮的旋律。",
+    "name": "Bouncy Glide",
+    "desc": "Swaying to and fro, we dance to a merry tune.",
     "icon": "T_Fashion_Fx16",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
@@ -833,32 +833,32 @@
   },
   {
     "id": 12005,
-    "name": "晨间致候",
-    "desc": "晨光挥洒，勾勒出轻柔的问候。",
+    "name": "Morning Greeting",
+    "desc": "A gentle greeting carried on the morning light.",
     "icon": "T_Fashion_Hat05",
     "rarity": 4,
     "unlock": "Available at Shop"
   },
   {
     "id": 12006,
-    "name": "黑礁",
-    "desc": "沉默而无声的礁石，守望着风暴中混沌的思绪。",
-    "icon": "T_Fashion_Hat06",
-    "rarity": 4,
-    "unlock": "Available at Shop"
-  },
-  {
-    "id": 12007,
-    "name": "铸铁哨卫",
-    "desc": "锚定回忆，守候誓言。",
+    "name": "Black Reef",
+    "desc": "A silent reef, keeping watch over storm-tossed thoughts.",
     "icon": "T_Fashion_Hat07",
     "rarity": 4,
     "unlock": "Available at Shop"
   },
   {
+    "id": 12007,
+    "name": "Iron Sentinel",
+    "desc": "Hold fast to your memories, and stand by your vow.",
+    "icon": "T_Fashion_Hat06",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
     "id": 12008,
-    "name": "榛子严选",
-    "desc": "虽然过程有点奇怪和混乱，但总之确实是榛子选出来的。",
+    "name": "Filbert's Pick",
+    "desc": "The process was a mess, but Filbert did choose it in the end.",
     "icon": "T_Fashion_Hat08",
     "rarity": 4,
     "unlock": "Available at Shop"
@@ -897,32 +897,32 @@
   },
   {
     "id": 12127,
-    "name": "极速头盔·白樱",
-    "desc": "道路千万条，安全第一条。",
+    "name": "Speedster Helmet: White Sakura",
+    "desc": "Look sharp, ride safe.",
     "icon": "T_Fashion_Hat09_03",
     "rarity": 4,
     "unlock": "Available at Shop"
   },
   {
     "id": 12128,
-    "name": "极速头盔·墨玉",
-    "desc": "道路千万条，安全第一条。",
+    "name": "Speedster Helmet: Dark Jade",
+    "desc": "Look sharp, ride safe.",
     "icon": "T_Fashion_Hat09_01",
     "rarity": 4,
     "unlock": "Available at Shop"
   },
   {
     "id": 12129,
-    "name": "极速头盔·涅白",
-    "desc": "道路千万条，安全第一条。",
+    "name": "Speedster Helmet: Opaque White",
+    "desc": "Look sharp, ride safe.",
     "icon": "T_Fashion_Hat09_02",
     "rarity": 4,
     "unlock": "Available at Shop"
   },
   {
     "id": 12130,
-    "name": "极速头盔·鎏金",
-    "desc": "道路千万条，安全第一条。",
+    "name": "Speedster Helmet: Gilt",
+    "desc": "Look sharp, ride safe.",
     "icon": "T_Fashion_Hat09_04",
     "rarity": 4,
     "unlock": "Available at Shop"
@@ -1089,64 +1089,64 @@
   },
   {
     "id": 13021,
-    "name": "乙鸟纸鸢·薄荷",
-    "desc": "裁春羽，系东风。",
+    "name": "Yi-Bird Kite: Mint",
+    "desc": "Shaped like wings, carried on the wind.",
     "icon": "T_Fashion_Waist25_04",
     "rarity": 5,
     "unlock": "Available at Shop"
   },
   {
     "id": 13022,
-    "name": "乙鸟纸鸢·白樱",
-    "desc": "裁春羽，系东风。",
+    "name": "Yi-Bird Kite: White Sakura",
+    "desc": "Shaped like wings, carried on the wind.",
     "icon": "T_Fashion_Waist25_01",
     "rarity": 5,
     "unlock": "Available at Shop"
   },
   {
     "id": 13023,
-    "name": "乙鸟纸鸢·墨玉",
-    "desc": "裁春羽，系东风。",
+    "name": "Yi-Bird Kite: Dark Jade",
+    "desc": "Shaped like wings, carried on the wind.",
     "icon": "T_Fashion_Waist25_02",
     "rarity": 5,
     "unlock": "Available at Shop"
   },
   {
     "id": 13024,
-    "name": "乙鸟纸鸢·黛蓝",
-    "desc": "裁春羽，系东风。",
+    "name": "Yi-Bird Kite: Azure",
+    "desc": "Shaped like wings, carried on the wind.",
     "icon": "T_Fashion_Waist25_03",
     "rarity": 5,
     "unlock": "Available at Shop"
   },
   {
     "id": 13025,
-    "name": "汪汪尾巴·涅白",
-    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在狗尾巴的面前都会显得黯淡无光，这就是狗尾巴那让人无法拒绝的魔力……这台词总感觉在哪里说过，应该是错觉吧。",
+    "name": "Puppy Tail: Opaque White",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world can do justice to the irresistible allure of a puppy tail. Hang on... why does that sound weirdly familiar? Must be my imagination.",
     "icon": "T_Fashion_Waist23_01",
     "rarity": 4,
     "unlock": "Available at Shop"
   },
   {
     "id": 13026,
-    "name": "汪汪尾巴·墨玉",
-    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在狗尾巴的面前都会显得黯淡无光，这就是狗尾巴那让人无法拒绝的魔力……这台词总感觉在哪里说过，应该是错觉吧。",
+    "name": "Puppy Tail: Dark Jade",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world can do justice to the irresistible allure of a puppy tail. Hang on... why does that sound weirdly familiar? Must be my imagination.",
     "icon": "T_Fashion_Waist23_03",
     "rarity": 4,
     "unlock": "Available at Shop"
   },
   {
     "id": 13027,
-    "name": "汪汪尾巴·焦糖",
-    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在狗尾巴的面前都会显得黯淡无光，这就是狗尾巴那让人无法拒绝的魔力……这台词总感觉在哪里说过，应该是错觉吧。",
+    "name": "Puppy Tail: Caramel",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world can do justice to the irresistible allure of a puppy tail. Hang on... why does that sound weirdly familiar? Must be my imagination.",
     "icon": "T_Fashion_Waist23_04",
     "rarity": 4,
     "unlock": "Available at Shop"
   },
   {
     "id": 13028,
-    "name": "汪汪尾巴·铅灰",
-    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在狗尾巴的面前都会显得黯淡无光，这就是狗尾巴那让人无法拒绝的魔力……这台词总感觉在哪里说过，应该是错觉吧。",
+    "name": "Puppy Tail: Leaden Grey",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world can do justice to the irresistible allure of a puppy tail. Hang on... why does that sound weirdly familiar? Must be my imagination.",
     "icon": "T_Fashion_Waist23_02",
     "rarity": 4,
     "unlock": "Available at Shop"
@@ -1497,7 +1497,7 @@
   },
   {
     "id": 20044,
-    "name": "青羽护目·薄荷",
+    "name": "Fengshi Goggles: Opaque White",
     "desc": "扫描，分析，演算。",
     "icon": "T_Fashion_Face23_03",
     "rarity": 5,
@@ -1553,7 +1553,7 @@
   },
   {
     "id": 20052,
-    "name": "青羽护目·鎏金",
+    "name": "Qingyu Goggles: Rust Red",
     "desc": "扫描，分析，演算。",
     "icon": "T_Fashion_Face23_02",
     "rarity": 5,
@@ -1561,7 +1561,7 @@
   },
   {
     "id": 20053,
-    "name": "青羽护目·锈红",
+    "name": "Qingyu Goggles: Mint",
     "desc": "扫描，分析，演算。",
     "icon": "T_Fashion_Face23_01",
     "rarity": 5,
@@ -1577,32 +1577,32 @@
   },
   {
     "id": 20055,
-    "name": "风师护目·薄荷",
-    "desc": "目标已锁定。",
+    "name": "Qingyu Goggles: Gilt",
+    "desc": "Target locked.",
     "icon": "T_Fashion_Face24__03",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
   },
   {
     "id": 20056,
-    "name": "风师护目·墨玉",
-    "desc": "目标已锁定。",
+    "name": "Fengshi Goggles: Mint",
+    "desc": "Target locked.",
     "icon": "T_Fashion_Face24__02",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
   },
   {
     "id": 20057,
-    "name": "青羽护目·涅白",
-    "desc": "目标已锁定。",
+    "name": "Fengshi Goggles: Dark Jade",
+    "desc": "Target locked.",
     "icon": "T_Fashion_Face24",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
   },
   {
     "id": 20058,
-    "name": "风师护目·黛蓝",
-    "desc": "目标已锁定。",
+    "name": "Qingyu Goggles: Opaque White",
+    "desc": "Target locked.",
     "icon": "T_Fashion_Face24__01",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
@@ -1729,32 +1729,32 @@
   },
   {
     "id": 20078,
-    "name": "讳言窥视·鎏金",
-    "desc": "无论是过往的伤痛、未宣于口的誓言，还是不可言说的真名，都被这些柔软的羽毛温柔地接纳、封存。",
+    "name": "Glimpse of the Unspoken: Gilt",
+    "desc": "Old wounds, unsaid vows, even true names never meant to be spoken... all are gently kept within these soft feathers.",
     "icon": "T_Fashion_Face22_03",
     "rarity": 5,
     "unlock": "Available at Shop"
   },
   {
     "id": 20079,
-    "name": "讳言窥视·墨玉",
-    "desc": "无论是过往的伤痛、未宣于口的誓言，还是不可言说的真名，都被这些柔软的羽毛温柔地接纳、封存。",
+    "name": "Glimpse of the Unspoken: Dark Jade",
+    "desc": "Old wounds, unsaid vows, even true names never meant to be spoken... all are gently kept within these soft feathers.",
     "icon": "T_Fashion_Face22_02",
     "rarity": 5,
     "unlock": "Available at Shop"
   },
   {
     "id": 20080,
-    "name": "讳言窥视·涅白",
-    "desc": "无论是过往的伤痛、未宣于口的誓言，还是不可言说的真名，都被这些柔软的羽毛温柔地接纳、封存。",
+    "name": "Glimpse of the Unspoken: Opaque White",
+    "desc": "Old wounds, unsaid vows, even true names never meant to be spoken... all are gently kept within these soft feathers.",
     "icon": "T_Fashion_Face22",
     "rarity": 5,
     "unlock": "Available at Shop"
   },
   {
     "id": 20081,
-    "name": "讳言窥视·白樱",
-    "desc": "无论是过往的伤痛、未宣于口的誓言，还是不可言说的真名，都被这些柔软的羽毛温柔地接纳、封存。",
+    "name": "Glimpse of the Unspoken: White Sakura",
+    "desc": "Old wounds, unsaid vows, even true names never meant to be spoken... all are gently kept within these soft feathers.",
     "icon": "T_Fashion_Face22_01",
     "rarity": 5,
     "unlock": "Available at Shop"
@@ -1793,24 +1793,24 @@
   },
   {
     "id": 21005,
-    "name": "俏皮轨迹",
-    "desc": "是不是有一群猫跑过去了？",
+    "name": "Bouncy Pounce",
+    "desc": "Did a whole bunch of cats just dash past?",
     "icon": "T_Fashion_Fx15",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
   },
   {
     "id": 21006,
-    "name": "诡道符箓·黛蓝",
-    "desc": "符随念动，诡道相随。",
+    "name": "Eldritch Talisman: Azure",
+    "desc": "With but a thought, the talisman stirs, and eldritch power answers.",
     "icon": "T_Fashion_Fx17_02",
     "rarity": 5,
     "unlock": "Available from events"
   },
   {
     "id": 21007,
-    "name": "诡道符箓·鎏金",
-    "desc": "符随念动，诡道相随。",
+    "name": "Eldritch Talisman: Gilt",
+    "desc": "With but a thought, the talisman stirs, and eldritch power answers.",
     "icon": "T_Fashion_Fx17_01",
     "rarity": 5,
     "unlock": "Available from events"
@@ -2018,71 +2018,71 @@
   {
     "id": 30032,
     "name": "Lucky Egg",
-    "desc": "未打开的福运蛋，有时就是最好的福运蛋。",
+    "desc": "The best lucky egg is the one you never crack.",
     "icon": "T_Fashion_Waist19",
     "rarity": 3,
     "unlock": "Available from events"
   },
   {
     "id": 30033,
-    "name": "轻抚·白樱",
-    "desc": "不可对人使用！",
+    "name": "Pat: White Sakura",
+    "desc": "Do not use on humans!",
     "icon": "T_Fashion_Waist26_03",
     "rarity": 5,
     "unlock": "Available at Shop"
   },
   {
     "id": 30034,
-    "name": "轻抚·黛蓝",
-    "desc": "不可对人使用！",
+    "name": "Pat: Azure",
+    "desc": "Do not use on humans!",
     "icon": "T_Fashion_Waist26_04",
     "rarity": 5,
     "unlock": "Available at Shop"
   },
   {
     "id": 30035,
-    "name": "轻抚·涅白",
-    "desc": "不可对人使用！",
+    "name": "Pat: Opaque White",
+    "desc": "Do not use on humans!",
     "icon": "T_Fashion_Waist26_01",
     "rarity": 5,
     "unlock": "Available at Shop"
   },
   {
     "id": 30036,
-    "name": "轻抚·墨玉",
-    "desc": "不可对人使用！",
+    "name": "Pat: Dark Jade",
+    "desc": "Do not use on humans!",
     "icon": "T_Fashion_Waist26_02",
     "rarity": 5,
     "unlock": "Available at Shop"
   },
   {
     "id": 30037,
-    "name": "一线铃铛",
-    "desc": "驱邪退恶，破煞消灾。",
+    "name": "Bell Chime",
+    "desc": "Let evil find no foothold; let misfortune be kept at bay.",
     "icon": "T_Fashion_Waist18",
     "rarity": 3,
     "unlock": "Available from events"
   },
   {
     "id": 30038,
-    "name": "白鸟先生",
-    "desc": "啾啾，白鸟先生！",
+    "name": "Mr White Bird",
+    "desc": "Chirp-chirp, I'm Mr White Bird!",
     "icon": "T_Fashion_Waist20",
     "rarity": 4,
     "unlock": "Available from events"
   },
   {
     "id": 30039,
-    "name": "均天玉律",
-    "desc": "修世人之罅隙，复上古之敦睦。",
+    "name": "Jade of Equilibrium",
+    "desc": "To mend the rift among men, and restore the concord of elder days.",
     "icon": "T_Fashion_Waist21",
     "rarity": 5,
     "unlock": "Available from events"
   },
   {
     "id": 30040,
-    "name": "夜明灯·焦糖",
-    "desc": "长夜终有尽头，愿它们照亮你回家的路。",
+    "name": "Nightglow Lantern: Dark Jade",
+    "desc": "Even the longest night will end. May its light guide you home.",
     "icon": "T_Fashion_Waist22_01",
     "rarity": 3,
     "unlock": "Available from events"
@@ -2105,7 +2105,7 @@
   },
   {
     "id": 31004,
-    "name": "胜利动作·机枢幻想",
+    "name": "Array of Designs: Rust Red",
     "desc": "Changes your Victory Posture.",
     "icon": "T_Fashion_SettlementAction_03",
     "rarity": 5,
@@ -2186,7 +2186,7 @@
   {
     "id": 40013,
     "name": "Su Yi Skin Backpiece",
-    "desc": "激活，运转，推进。",
+    "desc": "Activate. Engage. Advance.",
     "icon": "T_Fashion_Back41_04",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
@@ -2289,24 +2289,24 @@
   },
   {
     "id": 40026,
-    "name": "青羽鞘翅·锈红",
-    "desc": "激活，运转，推进。",
+    "name": "Fengshi Goggles: Azure",
+    "desc": "Activate. Engage. Advance.",
     "icon": "T_Fashion_Back41_02",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
   },
   {
     "id": 40027,
-    "name": "青羽鞘翅·鎏金",
-    "desc": "激活，运转，推进。",
+    "name": "Volant Elytra: Rust Red",
+    "desc": "Activate. Engage. Advance.",
     "icon": "T_Fashion_Back41_03",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
   },
   {
     "id": 40028,
-    "name": "青羽鞘翅·涅白",
-    "desc": "激活，运转，推进。",
+    "name": "Volant Elytra: Gilt",
+    "desc": "Activate. Engage. Advance.",
     "icon": "T_Fashion_Back41_01",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
@@ -2353,16 +2353,16 @@
   },
   {
     "id": 40034,
-    "name": "诡道陈兵·涅白",
-    "desc": "真言驱诡，养魂饲灵。",
+    "name": "Volant Elytra: Opaque White",
+    "desc": "By sacred words, evil is banished, the soul is nourished, and the spirits are sustained.",
     "icon": "T_Fashion_Back39_01",
     "rarity": 5,
     "unlock": "Available from events"
   },
   {
     "id": 40035,
-    "name": "诡道陈兵·锈红",
-    "desc": "真言驱诡，养魂饲灵。",
+    "name": "Array of Designs: Opaque White",
+    "desc": "By sacred words, evil is banished, the soul is nourished, and the spirits are sustained.",
     "icon": "T_Fashion_Back39_02",
     "rarity": 5,
     "unlock": "Available from events"
@@ -2505,64 +2505,64 @@
   },
   {
     "id": 40056,
-    "name": "永冻玫瑰·鎏金",
-    "desc": "也许玫瑰自冻土绽放之时，被封存的记忆与诺言才会苏醒。",
+    "name": "Everfrost Rose: Gilt",
+    "desc": "Perhaps when a rose blooms from frozen earth, buried memories and forgotten vows will stir once more.",
     "icon": "T_Fashion_Back40_02",
     "rarity": 5,
     "unlock": "Available at Shop"
   },
   {
     "id": 40057,
-    "name": "永冻玫瑰·墨玉",
-    "desc": "也许玫瑰自冻土绽放之时，被封存的记忆与诺言才会苏醒。",
+    "name": "Everfrost Rose: Dark Jade",
+    "desc": "Perhaps when a rose blooms from frozen earth, buried memories and forgotten vows will stir once more.",
     "icon": "T_Fashion_Back40_01",
     "rarity": 5,
     "unlock": "Available at Shop"
   },
   {
     "id": 40058,
-    "name": "永冻玫瑰·涅白",
-    "desc": "也许玫瑰自冻土绽放之时，被封存的记忆与诺言才会苏醒。",
+    "name": "Everfrost Rose: Opaque White",
+    "desc": "Perhaps when a rose blooms from frozen earth, buried memories and forgotten vows will stir once more.",
     "icon": "T_Fashion_Back40_04",
     "rarity": 5,
     "unlock": "Available at Shop"
   },
   {
     "id": 40059,
-    "name": "永冻玫瑰·白樱",
-    "desc": "也许玫瑰自冻土绽放之时，被封存的记忆与诺言才会苏醒。",
+    "name": "Everfrost Rose: White Sakura",
+    "desc": "Perhaps when a rose blooms from frozen earth, buried memories and forgotten vows will stir once more.",
     "icon": "T_Fashion_Back40_03",
     "rarity": 5,
     "unlock": "Available at Shop"
   },
   {
     "id": 40060,
-    "name": "蝴蝶梦背饰·绛紫",
-    "desc": "即使是朦胧的羽翼，也能飞往纷繁的世界。",
+    "name": "Butterfly Reverie Backpiece: Violet",
+    "desc": "Even the dimmest wings may yet find their way into a world of splendour.",
     "icon": "T_Fashion_Waist24_04",
     "rarity": 5,
     "unlock": "Available at Shop"
   },
   {
     "id": 40061,
-    "name": "蝴蝶梦背饰·白樱",
-    "desc": "即使是朦胧的羽翼，也能飞往纷繁的世界。",
+    "name": "Butterfly Reverie Backpiece: White Sakura",
+    "desc": "Even the dimmest wings may yet find their way into a world of splendour.",
     "icon": "T_Fashion_Waist24_02",
     "rarity": 5,
     "unlock": "Available at Shop"
   },
   {
     "id": 40062,
-    "name": "蝴蝶梦背饰·涅白",
-    "desc": "即使是朦胧的羽翼，也能飞往纷繁的世界。",
+    "name": "Butterfly Reverie Backpiece: Opaque White",
+    "desc": "Even the dimmest wings may yet find their way into a world of splendour.",
     "icon": "T_Fashion_Waist24_01",
     "rarity": 5,
     "unlock": "Available at Shop"
   },
   {
     "id": 40063,
-    "name": "蝴蝶梦背饰·墨玉",
-    "desc": "即使是朦胧的羽翼，也能飞往纷繁的世界。",
+    "name": "Butterfly Reverie Backpiece: Dark Jade",
+    "desc": "Even the dimmest wings may yet find their way into a world of splendour.",
     "icon": "T_Fashion_Waist24_03",
     "rarity": 5,
     "unlock": "Available at Shop"
@@ -2609,8 +2609,8 @@
   },
   {
     "id": 60003,
-    "name": "闪耀舞台",
-    "desc": "闪亮登场(∠・ω< )⌒☆",
+    "name": "Rhythm Surge",
+    "desc": "Ta-dah~! (∠・ω< )⌒☆",
     "icon": "T_Fashion_Fx14",
     "rarity": 4,
     "unlock": "Available through Myriad"
@@ -2713,32 +2713,32 @@
   },
   {
     "id": 70034,
-    "name": "喵喵足迹·薄荷",
-    "desc": "猫脚印就在这里，但是猫咪去了哪里？",
+    "name": "Pixel Paws: Mint",
+    "desc": "The pawprints are right here... so where did the cat go?",
     "icon": "T_Fashion_Fx19_04",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
   },
   {
     "id": 70035,
-    "name": "喵喵足迹·黛蓝",
-    "desc": "猫脚印就在这里，但是猫咪去了哪里？",
+    "name": "Pixel Paws: Azure",
+    "desc": "The pawprints are right here... so where did the cat go?",
     "icon": "T_Fashion_Fx19_03",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
   },
   {
     "id": 70036,
-    "name": "喵喵足迹·白樱",
-    "desc": "猫脚印就在这里，但是猫咪去了哪里？",
+    "name": "Pixel Paws: White Sakura",
+    "desc": "The pawprints are right here... so where did the cat go?",
     "icon": "T_Fashion_Fx19_01",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
   },
   {
     "id": 70037,
-    "name": "喵喵足迹·锈红",
-    "desc": "猫脚印就在这里，但是猫咪去了哪里？",
+    "name": "Pixel Paws: Rust Red",
+    "desc": "The pawprints are right here... so where did the cat go?",
     "icon": "T_Fashion_Fx19_02",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
@@ -2841,32 +2841,32 @@
   },
   {
     "id": 80044,
-    "name": "喵喵游戏·白樱",
-    "desc": "旋转，下落，真棒！",
+    "name": "Pixel Kitty: White Sakura",
+    "desc": "Turn around, get down — perfect!",
     "icon": "T_Fashion_Fx18_01",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
   },
   {
     "id": 80045,
-    "name": "喵喵游戏·锈红",
-    "desc": "旋转，下落，真棒！",
+    "name": "Pixel Kitty: Rust Red",
+    "desc": "Turn around, get down — perfect!",
     "icon": "T_Fashion_Fx18_02",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
   },
   {
     "id": 80046,
-    "name": "喵喵游戏·薄荷",
-    "desc": "旋转，下落，真棒！",
+    "name": "Pixel Kitty: Mint",
+    "desc": "Turn around, get down — perfect!",
     "icon": "T_Fashion_Fx18_04",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
   },
   {
     "id": 80047,
-    "name": "喵喵游戏·黛蓝",
-    "desc": "旋转，下落，真棒！",
+    "name": "Pixel Kitty: Azure",
+    "desc": "Turn around, get down — perfect!",
     "icon": "T_Fashion_Fx18_03",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"

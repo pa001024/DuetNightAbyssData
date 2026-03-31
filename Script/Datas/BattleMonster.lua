@@ -24557,7 +24557,7 @@ return ReadOnly("BattleMonster", {
     BuffTypeDurationCap = T.RT_3,
     CannotBePushed = 1,
     CollisionLevel = 999,
-    DEF = 0,
+    DEF = 300,
     DEFLevelGrow = "DEFElite",
     DeductToughnessHit = T.RT_7,
     FilterTargetWeight = 10,

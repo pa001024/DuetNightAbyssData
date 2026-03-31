@@ -297,9 +297,9 @@ function WBP_Com_CheckBox_C:SetIsCheckedState(IsChecked)
   if self.Checked == false and true == IsChecked then
     rawset(self, "Checked", true)
     if false == self.IsForbidden then
-      EMUIAnimationSubsystem:EMPlayAnimation(self, self.Check_Switch)
+      self:PlayAnimation(self.Check_Switch, self.Check_Switch:GetEndTime())
     else
-      EMUIAnimationSubsystem:EMPlayAnimation(self, self.Check_Switch)
+      self:PlayAnimation(self.Check_Switch, self.Check_Switch:GetEndTime())
     end
   elseif self.Checked == true and false == IsChecked then
     rawset(self, "Checked", false)

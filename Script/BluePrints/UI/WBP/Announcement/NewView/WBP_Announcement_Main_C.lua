@@ -259,10 +259,9 @@ function M:ChangeMainContent(Content, bForce)
     bChanged = true
   end
   if not self.CurContent or self.CurContent.Conf.NoticeID ~= Content.Conf.NoticeID or bForce then
-    if not AnnounceController:IsMobile() then
-      self.WebContent:LoadURL("about:blank")
-      DebugPrint("M:ChangeMainContent   LoadUrl about:blank")
-    end
+    self.WebContent:LoadURL("about:blank")
+    self.CurrUrl = nil
+    DebugPrint("M:ChangeMainContent   LoadUrl about:blank")
     if self:IsExistTimer(self.GetHtmlHandle) and IsValid(self) then
       self:RemoveTimer(self.GetHtmlHandle)
     end
@@ -296,6 +295,7 @@ function M:Close()
     return
   end
   M.Super.Close(self)
+  self.CurrUrl = nil
   AnnounceController:OnCloseAnnounceMainUI()
   self.WebContent:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end
@@ -310,6 +310,10 @@ end
 
 function M:NotifySelectionExpand(bExpand)
   self.bSelectionExpand = bExpand
+end
+
+function M:QueryPlatform()
+  return CommonUtils.GetDeviceTypeByPlatformName(self)
 end
 
 return M

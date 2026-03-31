@@ -76,8 +76,10 @@ end
 function WBP_SoloTreasure_HudTips_C:TipPlayAnimation()
   if self.TipType == "GameStart" then
     self:PlayAnimation(self.In_TimeNormal)
+    AudioManager(self):PlayUISound(self, "event:/ui/activity/sdc_toast_game_start", nil, nil)
   elseif self.TipType == "TimeWarning" then
     self:PlayAnimation(self.In_TimeLow)
+    AudioManager(self):PlayUISound(self, "event:/ui/activity/sdc_toast_game_overtime", nil, nil)
   end
 end
 

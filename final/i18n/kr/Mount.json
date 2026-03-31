@@ -56,8 +56,8 @@
   },
   {
     "id": 1004,
-    "name": "太虚游·铅灰",
-    "des": "御剑乘风来。",
+    "name": "태허를 노니는 검·그레이",
+    "des": "검을 타고 바람을 가르네.",
     "icon": "Mounts_0005",
     "resourceIcon": "Icon_Mounts_0005",
     "rarity": 5,
@@ -70,8 +70,8 @@
   },
   {
     "id": 1005,
-    "name": "太虚游·碧绿",
-    "des": "御剑乘风来。",
+    "name": "태허를 노니는 검·비취",
+    "des": "검을 타고 바람을 가르네.",
     "icon": "Mounts_0008",
     "resourceIcon": "Icon_Mounts_0008",
     "rarity": 5,
@@ -84,8 +84,8 @@
   },
   {
     "id": 1006,
-    "name": "太虚游·焦糖",
-    "des": "御剑乘风来。",
+    "name": "태허를 노니는 검·캐러멜",
+    "des": "검을 타고 바람을 가르네.",
     "icon": "Mounts_0007",
     "resourceIcon": "Icon_Mounts_0007",
     "rarity": 5,
@@ -98,8 +98,8 @@
   },
   {
     "id": 1007,
-    "name": "太虚游·本色",
-    "des": "御剑乘风来。",
+    "name": "태허를 노니는 검",
+    "des": "검을 타고 바람을 가르네.",
     "icon": "Mounts_0006",
     "resourceIcon": "Icon_Mounts_0006",
     "rarity": 5,

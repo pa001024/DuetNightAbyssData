@@ -12,13 +12,13 @@ function WBP_SoloTreasure_HudScore_C:Destruct()
   EventManager:RemoveEvent(EventID.OnRepAbyssBattleCount, self)
 end
 
-function WBP_SoloTreasure_HudScore_C:InitWidgetUI(NoBagBtn)
+function WBP_SoloTreasure_HudScore_C:InitWidgetUI(IsFromLottery)
   self:InitDungeoObject()
   self:InitData()
   self:InitText()
   self:InitBtn()
   EventManager:AddEvent(EventID.OnUpdateGameScore, self, self.OnUpdateGameScore)
-  if nil == NoBagBtn then
+  if nil == IsFromLottery then
     self:ListenForInputAction("OpenSoloTreasaureBagOnGamepad1", EInputEvent.IE_Pressed, false, {
       self,
       self.PrePressOpenBagOnGamepad
@@ -137,27 +137,34 @@ function WBP_SoloTreasure_HudScore_C:OnUpdateGameScore(Score, TargetScore)
 end
 
 function WBP_SoloTreasure_HudScore_C:SetGameScoreWithScrollAnimation()
+  local StepsPerCycle = self.UpdateGameScoreTotalTime / self.IntervalTime
   if self:IsExistTimer("UpdateGameScore") then
+    local remain = self.TargetScore - self.CurGameScore
+    if 0 ~= remain then
+      self.AddScorePerTime = remain / StepsPerCycle
+    end
     return
   end
-  AudioManager(self):PlayUISound(self, "event:/ui/activity/sdc_right_top_score_num_change_loop", "AddScore", nil)
+  if self.TargetScore - self.CurGameScore > 0 then
+    AudioManager(self):PlayUISound(self, "event:/ui/activity/sdc_right_top_score_num_change_loop", "AddScore", nil)
+  end
   local IsDone = false
-  local AddScorePerTime = self.AddGameScore / (self.UpdateGameScoreTotalTime / self.IntervalTime)
+  self.AddScorePerTime = (self.TargetScore - self.CurGameScore) / StepsPerCycle
   self:AddTimer(self.IntervalTime, function()
     if IsDone then
       self.AddGameScore = 0
       self:RemoveTimer("UpdateGameScore")
-      AudioManager(self):StopSound(self, "AddScore")
       return
     end
-    self.CurGameScore = self.CurGameScore + AddScorePerTime
-    if AddScorePerTime < 0 then
+    self.CurGameScore = self.CurGameScore + self.AddScorePerTime
+    if self.AddScorePerTime < 0 then
       self.CurGameScore = math.max(self.CurGameScore, self.TargetScore)
     else
       self.CurGameScore = math.min(self.CurGameScore, self.TargetScore)
     end
     if self.CurGameScore == self.TargetScore then
       IsDone = true
+      AudioManager(self):StopSound(self, "AddScore")
     end
     self.Text_AllNum:SetText(Utils.FormatNumber(self.CurGameScore, false))
   end, true, 1, "UpdateGameScore", true)

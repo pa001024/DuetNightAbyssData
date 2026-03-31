@@ -78,16 +78,22 @@ return {
       questNodeData = {
         lineData = {
           {
-            startQuest = "177303847410211233086",
-            startPort = "QuestStart",
-            endQuest = "17731443290338469063",
-            endPort = "In"
-          },
-          {
             startQuest = "17731443290338469063",
             startPort = "Out",
             endQuest = "177303847410211233087",
             endPort = "Success"
+          },
+          {
+            startQuest = "177303847410211233086",
+            startPort = "QuestStart",
+            endQuest = "1774600270994355",
+            endPort = "In"
+          },
+          {
+            startQuest = "1774600270994355",
+            startPort = "Out",
+            endQuest = "17731443290338469063",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -102,7 +108,7 @@ return {
             key = "177303847410211233087",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 1442.5263157894738, y = 299.57894736842104},
+            pos = {x = 1733.5263157894738, y = 293.57894736842104},
             propsData = {ModeType = 0}
           },
           ["177303847410211233088"] = {
@@ -116,14 +122,14 @@ return {
             key = "17731443290338469063",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1122, y = 296},
+            pos = {x = 1405.5, y = 282.5},
             propsData = {
               IsNpcNode = false,
-              IsPlayerTurnToNPC = true,
-              IsNPCTurnToPlayer = true,
-              FirstDialogueId = 10010101,
-              FlowAssetPath = "",
-              TalkType = "FreeSimple",
+              bUseFlowAssetActors = true,
+              FirstDialogueId = 0,
+              FlowAssetPath = "DialogueAsset'/Game/Dialogue/Invite/80220101.80220101'",
+              TalkType = "FixSimple",
+              TalkStageName = "",
               BlendInTime = 0,
               BlendOutTime = 0,
               InType = "FadeIn",
@@ -149,14 +155,27 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
-              TalkActors = {},
               OptionType = "normal",
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
-              PlayerSwitchEmoIdle = true,
+              bNpcActionKeepIn = false,
+              bNpcActionKeepOut = false,
+              bForceWaitNavLoaded = false,
               NormalOptions = {},
               OverrideFailBlend = false
+            }
+          },
+          ["1774600270994355"] = {
+            key = "1774600270994355",
+            type = "SkipRegionNode",
+            name = "跨区域传送设置玩家位置",
+            pos = {x = 1113.9166666666665, y = 297.62061403508767},
+            propsData = {
+              ModeType = 1,
+              Id = 105201,
+              StartIndex = 1,
+              IsWhite = false
             }
           }
         },

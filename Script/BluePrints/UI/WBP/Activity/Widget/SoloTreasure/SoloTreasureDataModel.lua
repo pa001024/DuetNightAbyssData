@@ -238,6 +238,16 @@ function SoloTreasureDataModel:IsRepeatLevelUnlocked(Row)
   return true
 end
 
+function SoloTreasureDataModel:IsAnyRepeatLevelUnlocked(EventId)
+  local Levels = self:GetRepeatLevelDataByEventId(EventId) or {}
+  for _, Row in ipairs(Levels) do
+    if self:IsRepeatLevelUnlocked(Row) then
+      return true
+    end
+  end
+  return false
+end
+
 function SoloTreasureDataModel:Init()
   local EventId = self:GetEventId()
   if not EventId then
@@ -284,6 +294,14 @@ function SoloTreasureDataModel:InitLevelEntryDetailIfNeeded(EventId, LevelCount)
 end
 
 function SoloTreasureDataModel:RefreshAllSoloTreasureNewReddot(EventId)
+  if not self:IsAnyRepeatLevelUnlocked(EventId) then
+    ReddotManager.ClearLeafNodeCount("SoloTreasure_Shop_New")
+    ReddotManager.ClearLeafNodeCount("SoloTreasure_LimitReward_New")
+    ReddotManager.ClearLeafNodeCount("SoloTreasure_PermanentReward_New")
+    ReddotManager.ClearLeafNodeCount("SoloTreasure_LevelListView")
+    ReddotManager.ClearLeafNodeCount("Acti_SolotreasureConfirmBtn")
+    return
+  end
   self:RefreshShopNewReddot(EventId)
   self:RefreshLimitRewardNewReddot(EventId)
   self:RefreshPermanentRewardNewReddot(EventId)
@@ -476,6 +494,9 @@ function SoloTreasureDataModel:RefreshLevelReddotWithConditionUnlock(ConditionId
   end
   local bIsOpen = SoloTreasureDataModel:ActivityIsUnlock(EventId)
   if not bIsOpen then
+    return
+  end
+  if not self:IsRepeatLevelUnlockCondition(EventId, ConditionId) then
     return
   end
   self:RefreshAllSoloTreasureNewReddot(EventId)

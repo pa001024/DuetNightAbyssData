@@ -264,12 +264,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17739191836801674156",
-            startPort = "Out",
-            endQuest = "1773295819606135",
-            endPort = "Fail"
-          },
-          {
             startQuest = "17732960539751984",
             startPort = "Out",
             endQuest = "17743350061093723",
@@ -316,6 +310,24 @@ return {
             startPort = "Out",
             endQuest = "1773919063961838148",
             endPort = "In"
+          },
+          {
+            startQuest = "1773295819606119",
+            startPort = "QuestStart",
+            endQuest = "17748664206292213",
+            endPort = "In"
+          },
+          {
+            startQuest = "17739191836801674156",
+            startPort = "Out",
+            endQuest = "17748664206292214",
+            endPort = "In"
+          },
+          {
+            startQuest = "17748664206292214",
+            startPort = "Out",
+            endQuest = "1773295819606135",
+            endPort = "Fail"
           }
         },
         nodeData = {
@@ -323,7 +335,7 @@ return {
             key = "1773295819606119",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 450.5000000000001, y = -113.62499999999994},
+            pos = {x = 390.5000000000001, y = -120.05357142857137},
             propsData = {ModeType = 0}
           },
           ["1773295819606127"] = {
@@ -337,7 +349,7 @@ return {
             key = "1773295819606135",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 2323.6468678380456, y = 756.2651833460654},
+            pos = {x = 1883.6468678380456, y = 916.2651833460653},
             propsData = {}
           },
           ["1773295971015725"] = {
@@ -768,7 +780,7 @@ return {
             key = "17732960539751984",
             type = "WaitingSpecialQuestFailNode",
             name = "等待特殊任务失败",
-            pos = {x = 1681.0053426965185, y = 774.4129375526436},
+            pos = {x = 1241.0053426965185, y = 934.4129375526435},
             propsData = {}
           },
           ["1773918961771761"] = {
@@ -820,7 +832,7 @@ return {
             key = "1773919038429837865",
             type = "AtmosphereNpcHideNode",
             name = "氛围NPC显示/隐藏节点",
-            pos = {x = 1328.0550043351914, y = 223.93439932100955},
+            pos = {x = 1318.0550043351914, y = 193.93439932100955},
             propsData = {
               IsHide = true,
               AtmosphereTagList = {"Story_Eas", "Story_Inn"}
@@ -840,7 +852,7 @@ return {
             key = "17739191836801674153",
             type = "SendMessageNode",
             name = "发送消息",
-            pos = {x = 1995.286675289942, y = 718.7109909909972},
+            pos = {x = 1555.286675289942, y = 878.7109909909972},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "PPBlinkEnd",
@@ -851,7 +863,7 @@ return {
             key = "17739191836801674154",
             type = "SendMessageNode",
             name = "发送消息",
-            pos = {x = 1986.984254671344, y = 916.9678934023116},
+            pos = {x = 1546.984254671344, y = 1076.9678934023116},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "JuezhanLightEnd",
@@ -862,14 +874,14 @@ return {
             key = "17739191836801674155",
             type = "SimplePostProcessNode",
             name = "开启关闭屏幕后处理",
-            pos = {x = 1988.272785888717, y = 1114.7796161830474},
+            pos = {x = 1548.272785888717, y = 1274.7796161830474},
             propsData = {bEnablePP = false, PPEnum = 14}
           },
           ["17739191836801674156"] = {
             key = "17739191836801674156",
             type = "AtmosphereNpcHideNode",
             name = "氛围NPC显示/隐藏节点",
-            pos = {x = 1985.7751078701408, y = 1315.3762950459802},
+            pos = {x = 1545.7751078701408, y = 1475.3762950459802},
             propsData = {
               IsHide = false,
               AtmosphereTagList = {"Story_Eas", "Story_Inn"}
@@ -912,11 +924,39 @@ return {
             key = "17743350061093723",
             type = "SendMessageNode",
             name = "后处理-受伤销毁",
-            pos = {x = 2007.41496003996, y = 537.7313738892688},
+            pos = {x = 1567.41496003996, y = 697.7313738892686},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "PPHurtDestory",
               UnitId = -1
+            }
+          },
+          ["17748664206292213"] = {
+            key = "17748664206292213",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1308.0875845645571, y = 376.74364999036015},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/1_1/0106_scene_cave_near_sea",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {104501, 104503},
+              bStoreToServer = false
+            }
+          },
+          ["17748664206292214"] = {
+            key = "17748664206292214",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1870.323406405255, y = 1147.5008622053897},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
             }
           }
         },

@@ -74,7 +74,11 @@ function FSwitchToMasterComponent:Execute()
     self.PlayerController:Possess(Player)
   end
   Player:EnableRimLightModel(false)
-  local bUseSkin = EMCache:Get("AutoFashion") or false
+  local bUseSkin = GWorld.GameInstance.IsAutoFashionSwitch
+  if nil == bUseSkin then
+    bUseSkin = EMCache:Get("AutoFashion") or false
+  end
+  DebugPrint("FSwitchToMasterComponent@Execute: bUseSkin is", bUseSkin, ", Cache is", EMCache:Get("AutoFashion"))
   local DefaultAppearanceSuit = {
     AccessorySuit = Player.CharacterFashion:GetDefaultAccessorySuit()
   }

@@ -162,16 +162,16 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17633712387336060386",
+            startQuest = "17633700388766059503",
+            startPort = "Out",
+            endQuest = "177487532883112797778",
+            endPort = "In"
+          },
+          {
+            startQuest = "177487532883112797778",
             startPort = "Out",
             endQuest = "17623977185535616",
             endPort = "Success"
-          },
-          {
-            startQuest = "17623977185535613",
-            startPort = "QuestStart",
-            endQuest = "17730677505084955845",
-            endPort = "In"
           }
         },
         nodeData = {
@@ -186,7 +186,7 @@ return {
             key = "17623977185535616",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 1919.0865384615386, y = 295.56697612732097},
+            pos = {x = 2012.329781704782, y = 271.24265180299665},
             propsData = {ModeType = 0}
           },
           ["17623977185535619"] = {
@@ -212,7 +212,7 @@ return {
             key = "17633712387336060386",
             type = "TalkNode",
             name = "开车",
-            pos = {x = 1614.1558488736107, y = 315.2383656449143},
+            pos = {x = 1533.0747677925297, y = 24.968095374644122},
             propsData = {
               IsNpcNode = false,
               FirstDialogueId = 12049069,
@@ -247,6 +247,52 @@ return {
               RelatedRegionId = {105201},
               ClientRelatedRegionId = {},
               bStoreToServer = false
+            }
+          },
+          ["17748747372795127666"] = {
+            key = "17748747372795127666",
+            type = "TalkNode",
+            name = "对话节点",
+            pos = {x = 1750.6514451324235, y = 490.70423953865395},
+            propsData = {
+              IsNpcNode = false,
+              TalkType = "LevelSequence",
+              TalkStageName = "",
+              ShowFilePath = "'/Game/AssetDesign/Story/DialogueSequence/MainStory/1202/Level_Sequence/12020401shake.12020401shake'",
+              InType = "BlendIn",
+              OutType = "BlendOut",
+              ShowSkipButton = true,
+              ShowReviewButton = true,
+              ShowWikiButton = true,
+              PauseGameGlobal = true,
+              HideNpcs = false,
+              HideMonsters = true,
+              HideAllBattleEntity = true,
+              HideEffectCreature = true,
+              HideMechanismsFX = false,
+              DisableNpcOptimization = false,
+              DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
+              BeginNewTargetPointName = "",
+              EndNewTargetPointName = "",
+              CameraLookAtTartgetPoint = "",
+              RestoreStand = false,
+              TalkActors = {},
+              FreezeWorldComposition = false,
+              bTravelFullLoadWorldComposition = false,
+              SwitchToMaster = "None",
+              OverrideFailBlend = false
+            }
+          },
+          ["177487532883112797778"] = {
+            key = "177487532883112797778",
+            type = "SendMessageNode",
+            name = "发送消息",
+            pos = {x = 1522.280393192799, y = 358.7282685117577},
+            propsData = {
+              MessageType = "GameMode",
+              MessageContent = "12020401shake",
+              UnitId = -1
             }
           }
         },
@@ -325,8 +371,8 @@ return {
             endPort = "Success"
           },
           {
-            startQuest = "17623978934852960",
-            startPort = "QuestStart",
+            startQuest = "17633715028426060967",
+            startPort = "Out",
             endQuest = "177374011447315054514",
             endPort = "In"
           }
@@ -2557,7 +2603,7 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsPlayBlackScreenOnComplete = false,
+        bIsPlayBlackScreenOnComplete = true,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
         ResurgencePoint = "",

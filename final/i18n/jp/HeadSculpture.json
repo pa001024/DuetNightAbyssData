@@ -127,7 +127,7 @@
   },
   {
     "id": 10023,
-    "name": "Portrait : Camilla",
+    "name": "生意人的肖像",
     "desc": "カミラのアイコンに変更できる。",
     "icon": "T_Head_Kami"
   },
@@ -925,7 +925,7 @@
   },
   {
     "id": 30119,
-    "name": "微茫珍藏",
+    "name": "秘蔵",
     "desc": "アイコンに使用できる。",
     "icon": "T_Head_Faction_0008"
   },

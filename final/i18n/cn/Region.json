@@ -463,9 +463,7 @@
       104503,
       104504,
       104505,
-      104506,
-      104507,
-      104508
+      104506
     ],
     "alertDisable": true,
     "mapMapping": [
@@ -565,9 +563,7 @@
       1
     ],
     "isRandom": [
-      105101,
-      105102,
-      105103
+      105101
     ],
     "alertDisable": true
   },
@@ -630,8 +626,7 @@
     ],
     "mapRotation": 270,
     "isRandom": [
-      105301,
-      105302
+      105301
     ],
     "alertDisable": true,
     "mapMapping": [

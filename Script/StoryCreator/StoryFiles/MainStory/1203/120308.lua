@@ -90,12 +90,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17638161474148250527",
-            startPort = "QuestStart",
-            endQuest = "17706208645321403",
-            endPort = "In"
-          },
-          {
             startQuest = "17638161799588251114",
             startPort = "Out",
             endQuest = "17638161474148250530",
@@ -182,20 +176,6 @@ return {
               bForceWaitNavLoaded = false,
               NormalOptions = {},
               OverrideFailBlend = false
-            }
-          },
-          ["17706208645321403"] = {
-            key = "17706208645321403",
-            type = "ChangeStaticCreatorNode",
-            name = "生成/销毁节点",
-            pos = {x = 1122, y = 446.53846153846155},
-            propsData = {
-              ActiveEnable = false,
-              EnableBlackScreenSync = false,
-              EnableFadeIn = false,
-              EnableFadeOut = false,
-              NewTargetPointName = "",
-              StaticCreatorIdList = {162440010}
             }
           }
         },

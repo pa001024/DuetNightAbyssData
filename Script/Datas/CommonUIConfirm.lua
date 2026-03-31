@@ -2147,7 +2147,7 @@ return ReadOnly("CommonUIConfirm", {
     InteractiveRadius = 500
   },
   [100074] = {
-    ConfirmText = "UI_Drop_DengCiri",
+    ConfirmText = "Description_120205_12",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
     Id = 100074,
     InteractiveRadius = 500

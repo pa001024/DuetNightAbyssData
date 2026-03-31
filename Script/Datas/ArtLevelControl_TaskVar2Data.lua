@@ -478,14 +478,14 @@ return ReadOnly("ArtLevelControl_TaskVar2Data", {
     }
   },
   ZhiliuA12020414 = {
-    [1051] = {
+    [1045] = {
       Id = 38,
       InTime = 0,
       LoadLevel = {
         [1] = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_Main/Task_Data/Huaxu_Haojing_IQ120202_Task04.Huaxu_Haojing_IQ120202_Task04"
       },
       OutTime = 0,
-      RegionId = 1051,
+      RegionId = 1045,
       VarName = "ZhiliuA12020414"
     }
   }

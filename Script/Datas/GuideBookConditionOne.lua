@@ -310,14 +310,6 @@ return ReadOnly("GuideBookConditionOne", {
         GuideNoteId = 130,
         GuideNoteTab = 3,
         RewardId = 7000
-      },
-      [3] = {
-        CompleteUIGuideId = 129,
-        FinishQuest = 12010406,
-        GuideId = 129,
-        GuideNoteId = 146,
-        GuideNoteTab = 3,
-        RewardId = 7000
       }
     },
     [12010415] = {
@@ -336,6 +328,16 @@ return ReadOnly("GuideBookConditionOne", {
         FinishQuest = 12020208,
         GuideId = 126,
         GuideNoteId = 143,
+        GuideNoteTab = 3,
+        RewardId = 7000
+      }
+    },
+    [12020406] = {
+      [1] = {
+        CompleteUIGuideId = 129,
+        FinishQuest = 12020406,
+        GuideId = 129,
+        GuideNoteId = 146,
         GuideNoteTab = 3,
         RewardId = 7000
       }

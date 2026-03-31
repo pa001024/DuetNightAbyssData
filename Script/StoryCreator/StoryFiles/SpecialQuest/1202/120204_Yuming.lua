@@ -114,18 +114,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "177313205953721657238",
-            startPort = "Out",
-            endQuest = "1767962203750727967",
-            endPort = "In"
-          },
-          {
-            startQuest = "177313207349521657723",
-            startPort = "Out",
-            endQuest = "17678537949081014517",
-            endPort = "Fail"
-          },
-          {
             startQuest = "17725191337011137",
             startPort = "Out",
             endQuest = "177313205953721657238",
@@ -178,6 +166,36 @@ return {
             startPort = "Out",
             endQuest = "17742799429681693940",
             endPort = "In"
+          },
+          {
+            startQuest = "17678537949081014515",
+            startPort = "QuestStart",
+            endQuest = "17746776799071282954",
+            endPort = "In"
+          },
+          {
+            startQuest = "177313205953721657238",
+            startPort = "Out",
+            endQuest = "17746777114031283198",
+            endPort = "In"
+          },
+          {
+            startQuest = "17746777114031283198",
+            startPort = "Out",
+            endQuest = "1767962203750727967",
+            endPort = "In"
+          },
+          {
+            startQuest = "17746777211451283480",
+            startPort = "Out",
+            endQuest = "17678537949081014517",
+            endPort = "Fail"
+          },
+          {
+            startQuest = "177313207349521657723",
+            startPort = "Out",
+            endQuest = "17746777211451283480",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -199,14 +217,14 @@ return {
             key = "17678537949081014517",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 2006.4, y = 679.6615384615384},
+            pos = {x = 2133.9, y = 745.9115384615384},
             propsData = {}
           },
           ["1767962203750727967"] = {
             key = "1767962203750727967",
             type = "SpecialQuestSuccessNode",
             name = "成功完成特殊任务",
-            pos = {x = 2733.0111505815935, y = 725.9734572013662},
+            pos = {x = 2945.5111505815935, y = 755.9734572013662},
             propsData = {}
           },
           ["1767962210862728205"] = {
@@ -481,6 +499,39 @@ return {
             name = "延迟等待",
             pos = {x = 1909.572549192181, y = 144.07903401021588},
             propsData = {WaitTime = 5}
+          },
+          ["17746776799071282954"] = {
+            key = "17746776799071282954",
+            type = "SendMessageNode",
+            name = "发送消息",
+            pos = {x = 1107.3712294285756, y = 32.393442618517525},
+            propsData = {
+              MessageType = "GameMode",
+              MessageContent = "YuMingBoss_Start",
+              UnitId = -1
+            }
+          },
+          ["17746777114031283198"] = {
+            key = "17746777114031283198",
+            type = "SendMessageNode",
+            name = "发送消息",
+            pos = {x = 2653.5101183174647, y = 581.5725024475774},
+            propsData = {
+              MessageType = "GameMode",
+              MessageContent = "YuMingBoss_Finish",
+              UnitId = -1
+            }
+          },
+          ["17746777211451283480"] = {
+            key = "17746777211451283480",
+            type = "SendMessageNode",
+            name = "发送消息",
+            pos = {x = 1927.2601183174645, y = 942.8225024475773},
+            propsData = {
+              MessageType = "GameMode",
+              MessageContent = "YuMingBoss_Finish",
+              UnitId = -1
+            }
           }
         },
         commentData = {}

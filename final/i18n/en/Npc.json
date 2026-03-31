@@ -1274,7 +1274,7 @@
     "talks": [
       {
         "id": 90260001,
-        "content": "There you are! You heard I refitted Qingluan Type Ⅱ again, right? Come on, I'll show you... Huh? You're just here to chat? (fast, affectionate; then surprised)",
+        "content": "There you are! You heard I refitted Qingluan Type Ⅱ again, right? Come on, I'll show you... Huh? You're just here to chat?",
         "voice": "char/Suyi/vo_welcome",
         "npc": 81504,
         "options": [
@@ -1302,7 +1302,7 @@
       },
       {
         "id": 90260101,
-        "content": "Hmm... Putting mechanisms together, polishing gears, tracking down new materials... and tinkering until the next version's better. (pauses to think; contemplative)",
+        "content": "Hmm... Putting mechanisms together, polishing gears, tracking down new materials... and tinkering until the next version's better.",
         "voice": "char/Suyi/vo_topic_01_1",
         "npc": 81504,
         "next": 90260102
@@ -1316,7 +1316,7 @@
       },
       {
         "id": 90260301,
-        "content": "Oh, that's Qingluan Type Ⅲ — my new pet! (proud)",
+        "content": "Oh, that's Qingluan Type Ⅲ — my new pet!",
         "voice": "char/Suyi/vo_topic_03_1",
         "npc": 81504,
         "next": 90260302
@@ -1330,7 +1330,7 @@
       },
       {
         "id": 90260102,
-        "content": "Remember when Uncle Tang took that fall and hurt his leg? I've been free lately, so I've been working on a vehicle with smoother, steadier takeoffs. Jishu disciples like to push for results like they've got a spare life. I'm not letting that carry on. (thinking aloud, worried)",
+        "content": "Remember when Uncle Tang took that fall and hurt his leg? I've been free lately, so I've been working on a vehicle with smoother, steadier takeoffs. Jishu disciples like to push for results like they've got a spare life. I'm not letting that carry on.",
         "voice": "char/Suyi/vo_topic_01_2",
         "npc": 81504,
         "next": 90260103
@@ -1344,14 +1344,14 @@
       },
       {
         "id": 90260302,
-        "content": "See? Doesn't it look just like a real Skywing Gull? I simplified the boot-up — press and hold the top of its head and it'll go into mimic-flight mode. And speaking of flying— (proud, rambling)",
+        "content": "See? Doesn't it look just like a real Skywing Gull? I simplified the boot-up — press and hold the top of its head and it'll go into mimic-flight mode. And speaking of flying—",
         "voice": "char/Suyi/vo_topic_03_2",
         "npc": 81504,
         "next": 90260303
       },
       {
         "id": 90260402,
-        "content": "We found each other because we'd been through similar things, and we're fighting for the same goal. We understand each other. We trust each other. In a fight, we've got each other's backs. And when you're worn out, you're not on your own. It's... a really good place. (earnest)",
+        "content": "We found each other because we'd been through similar things, and we're fighting for the same goal. We understand each other. We trust each other. In a fight, we've got each other's backs. And when you're worn out, you're not on your own. It's... a really good place.",
         "voice": "char/Suyi/vo_topic_04_2",
         "npc": 81504,
         "next": 90260403
@@ -1364,14 +1364,14 @@
       },
       {
         "id": 90260203,
-        "content": "Kezhou's the unlucky one. His master, Yan Shanting, is lower in the lineage — so by the rules, he has to call me \"Great-Auntie\". (light, smug)",
+        "content": "Kezhou's the unlucky one. His master, Yan Shanting, is lower in the lineage — so by the rules, he has to call me \"Great-Auntie\".",
         "voice": "char/Suyi/vo_topic_02_3",
         "npc": 81504,
         "next": 90260204
       },
       {
         "id": 90260303,
-        "content": "Look at the feathers! I used naturally shed Skywing Gull feathers, then sealed them with an improved water-repellent finish — it hardly adds any weight. (proud, rambling)",
+        "content": "Look at the feathers! I used naturally shed Skywing Gull feathers, then sealed them with an improved water-repellent finish — it hardly adds any weight.",
         "voice": "char/Suyi/vo_topic_03_3",
         "npc": 81504,
         "next": 90260304
@@ -1385,7 +1385,7 @@
       },
       {
         "id": 90260104,
-        "content": "Tired? How could I be? What could be more fun than this? You break a mechanism down in your head, piece by piece — then you build it in the real world. That moment it all clicks into place and actually works? Best feeling in the world. (earnest, cheerful)",
+        "content": "Tired? How could I be? What could be more fun than this? You break a mechanism down in your head, piece by piece — then you build it in the real world. That moment it all clicks into place and actually works? Best feeling in the world.",
         "voice": "char/Suyi/vo_topic_01_3",
         "npc": 81504,
         "next": 90260105
@@ -1398,7 +1398,7 @@
       },
       {
         "id": 90260304,
-        "content": "Its colours won't fade, it stays fluffy forever — and when it perches on your arm, it won't dig its claws in like a real bird. All the cuteness, none of the scratches. Perfect pet. (proud, rambling)",
+        "content": "Its colours won't fade, it stays fluffy forever — and when it perches on your arm, it won't dig its claws in like a real bird. All the cuteness, none of the scratches. Perfect pet.",
         "voice": "char/Suyi/vo_topic_03_4",
         "npc": 81504,
         "next": 90260305
@@ -1428,7 +1428,7 @@
       },
       {
         "id": 90260205,
-        "content": "Master Gongshang's pretty high up too. Let me do the maths... oh! We're the same generation. (mulling it over; then cheerful)",
+        "content": "Master Gongshang's pretty high up too. Let me do the maths... oh! We're the same generation.",
         "voice": "char/Suyi/vo_topic_02_4",
         "npc": 81504,
         "next": 90260206
@@ -1441,21 +1441,21 @@
       },
       {
         "id": 90260405,
-        "content": "It... yeah. Of course it is! (hesitates, then insists)",
+        "content": "It... yeah. Of course it is!",
         "voice": "char/Suyi/vo_topic_04_4",
         "npc": 81504,
         "next": 90260406
       },
       {
         "id": 90260206,
-        "content": "Heehee. If Kezhou ever gets cheeky with you, you can make him call you {性别：Grandpa|Grandma}. (playful, smug)",
+        "content": "Heehee. If Kezhou ever gets cheeky with you, you can make him call you {性别：Grandpa|Grandma}.",
         "voice": "char/Suyi/vo_topic_02_5",
         "npc": 81504,
         "next": 90260207
       },
       {
         "id": 90260306,
-        "content": "Skywing Gulls belong in the sky. If you keep one, you're basically shutting it in a cage. And if I caught one just for my own enjoyment... how would I be any different from the Xuanheng Sect back then? (serious)",
+        "content": "Skywing Gulls belong in the sky. If you keep one, you're basically shutting it in a cage. And if I caught one just for my own enjoyment... how would I be any different from the Xuanheng Sect back then?",
         "voice": "char/Suyi/vo_topic_03_5",
         "npc": 81504,
         "next": 90260307
@@ -1468,7 +1468,7 @@
       },
       {
         "id": 90260207,
-        "content": "Hang on... Snow calls you her \"Little Minion\", right? So she's your master...? No way. Don't tell me the one who outranks all of us is a tiny Luno! (stunned)",
+        "content": "Hang on... Snow calls you her \"Little Minion\", right? So she's your master...? No way. Don't tell me the one who outranks all of us is a tiny Luno!",
         "voice": "char/Suyi/vo_topic_02_6",
         "npc": 81504,
         "options": [
@@ -1485,7 +1485,7 @@
       },
       {
         "id": 90260307,
-        "content": "Some animals make good companions, but a Skywing Gull clearly isn't one of them. That sharp beak, that long tail, those wings built to cut through the wind... it says it all. It belongs in the sky, not in anyone's palm. (serious)",
+        "content": "Some animals make good companions, but a Skywing Gull clearly isn't one of them. That sharp beak, that long tail, those wings built to cut through the wind... it says it all. It belongs in the sky, not in anyone's palm.",
         "voice": "char/Suyi/vo_topic_03_6",
         "npc": 81504,
         "options": [
@@ -1502,14 +1502,14 @@
       },
       {
         "id": 90260407,
-        "content": "You're sharp. Is that the instinct of a mercenary— no, a Phoxhunter? And it's not just for fights... you can read people too? If only my mechapuppet's nav system were as quick as you... (impressed)",
+        "content": "You're sharp. Is that the instinct of a mercenary— no, a Phoxhunter? And it's not just for fights... you can read people too? If only my mechapuppet's nav system were as quick as you...",
         "voice": "char/Suyi/vo_topic_04_5",
         "npc": 81504,
         "next": 90260408
       },
       {
         "id": 90260408,
-        "content": "I'm just... a bit lost. What's a home supposed to feel like, anyway? (lost)",
+        "content": "I'm just... a bit lost. What's a home supposed to feel like, anyway?",
         "voice": "char/Suyi/vo_topic_04_6",
         "npc": 81504,
         "next": 90260409
@@ -3063,7 +3063,6 @@
       {
         "id": 90270302,
         "content": "I haven't forgotten. Being broke really is hard.",
-        "voice": "char/Kami/vo_topic_03_2",
         "npc": 100001,
         "next": 90270303
       },
@@ -3083,7 +3082,7 @@
       {
         "id": 90270303,
         "content": "Get enough money behind you and, even if you can't change where you came from, you'll have the nerve to take on whatever fate throws at you. When times are rough, you can at least buy yourself a warm drink... maybe even share a sip, do someone a good turn, and bank a favour for later.",
-        "voice": "char/Kami/vo_topic_03_3",
+        "voice": "char/Kami/vo_topic_03_2",
         "npc": 83202,
         "next": 90270304
       },
@@ -3103,6 +3102,7 @@
       {
         "id": 90270304,
         "content": "Now, does that answer your question?",
+        "voice": "char/Kami/vo_topic_03_3",
         "npc": 83202,
         "options": [
           {
@@ -5516,7 +5516,7 @@
     "talks": [
       {
         "id": 90260001,
-        "content": "There you are! You heard I refitted Qingluan Type Ⅱ again, right? Come on, I'll show you... Huh? You're just here to chat? (fast, affectionate; then surprised)",
+        "content": "There you are! You heard I refitted Qingluan Type Ⅱ again, right? Come on, I'll show you... Huh? You're just here to chat?",
         "voice": "char/Suyi/vo_welcome",
         "npc": 81504,
         "options": [
@@ -5544,7 +5544,7 @@
       },
       {
         "id": 90260101,
-        "content": "Hmm... Putting mechanisms together, polishing gears, tracking down new materials... and tinkering until the next version's better. (pauses to think; contemplative)",
+        "content": "Hmm... Putting mechanisms together, polishing gears, tracking down new materials... and tinkering until the next version's better.",
         "voice": "char/Suyi/vo_topic_01_1",
         "npc": 81504,
         "next": 90260102
@@ -5558,7 +5558,7 @@
       },
       {
         "id": 90260301,
-        "content": "Oh, that's Qingluan Type Ⅲ — my new pet! (proud)",
+        "content": "Oh, that's Qingluan Type Ⅲ — my new pet!",
         "voice": "char/Suyi/vo_topic_03_1",
         "npc": 81504,
         "next": 90260302
@@ -5572,7 +5572,7 @@
       },
       {
         "id": 90260102,
-        "content": "Remember when Uncle Tang took that fall and hurt his leg? I've been free lately, so I've been working on a vehicle with smoother, steadier takeoffs. Jishu disciples like to push for results like they've got a spare life. I'm not letting that carry on. (thinking aloud, worried)",
+        "content": "Remember when Uncle Tang took that fall and hurt his leg? I've been free lately, so I've been working on a vehicle with smoother, steadier takeoffs. Jishu disciples like to push for results like they've got a spare life. I'm not letting that carry on.",
         "voice": "char/Suyi/vo_topic_01_2",
         "npc": 81504,
         "next": 90260103
@@ -5586,14 +5586,14 @@
       },
       {
         "id": 90260302,
-        "content": "See? Doesn't it look just like a real Skywing Gull? I simplified the boot-up — press and hold the top of its head and it'll go into mimic-flight mode. And speaking of flying— (proud, rambling)",
+        "content": "See? Doesn't it look just like a real Skywing Gull? I simplified the boot-up — press and hold the top of its head and it'll go into mimic-flight mode. And speaking of flying—",
         "voice": "char/Suyi/vo_topic_03_2",
         "npc": 81504,
         "next": 90260303
       },
       {
         "id": 90260402,
-        "content": "We found each other because we'd been through similar things, and we're fighting for the same goal. We understand each other. We trust each other. In a fight, we've got each other's backs. And when you're worn out, you're not on your own. It's... a really good place. (earnest)",
+        "content": "We found each other because we'd been through similar things, and we're fighting for the same goal. We understand each other. We trust each other. In a fight, we've got each other's backs. And when you're worn out, you're not on your own. It's... a really good place.",
         "voice": "char/Suyi/vo_topic_04_2",
         "npc": 81504,
         "next": 90260403
@@ -5606,14 +5606,14 @@
       },
       {
         "id": 90260203,
-        "content": "Kezhou's the unlucky one. His master, Yan Shanting, is lower in the lineage — so by the rules, he has to call me \"Great-Auntie\". (light, smug)",
+        "content": "Kezhou's the unlucky one. His master, Yan Shanting, is lower in the lineage — so by the rules, he has to call me \"Great-Auntie\".",
         "voice": "char/Suyi/vo_topic_02_3",
         "npc": 81504,
         "next": 90260204
       },
       {
         "id": 90260303,
-        "content": "Look at the feathers! I used naturally shed Skywing Gull feathers, then sealed them with an improved water-repellent finish — it hardly adds any weight. (proud, rambling)",
+        "content": "Look at the feathers! I used naturally shed Skywing Gull feathers, then sealed them with an improved water-repellent finish — it hardly adds any weight.",
         "voice": "char/Suyi/vo_topic_03_3",
         "npc": 81504,
         "next": 90260304
@@ -5627,7 +5627,7 @@
       },
       {
         "id": 90260104,
-        "content": "Tired? How could I be? What could be more fun than this? You break a mechanism down in your head, piece by piece — then you build it in the real world. That moment it all clicks into place and actually works? Best feeling in the world. (earnest, cheerful)",
+        "content": "Tired? How could I be? What could be more fun than this? You break a mechanism down in your head, piece by piece — then you build it in the real world. That moment it all clicks into place and actually works? Best feeling in the world.",
         "voice": "char/Suyi/vo_topic_01_3",
         "npc": 81504,
         "next": 90260105
@@ -5640,7 +5640,7 @@
       },
       {
         "id": 90260304,
-        "content": "Its colours won't fade, it stays fluffy forever — and when it perches on your arm, it won't dig its claws in like a real bird. All the cuteness, none of the scratches. Perfect pet. (proud, rambling)",
+        "content": "Its colours won't fade, it stays fluffy forever — and when it perches on your arm, it won't dig its claws in like a real bird. All the cuteness, none of the scratches. Perfect pet.",
         "voice": "char/Suyi/vo_topic_03_4",
         "npc": 81504,
         "next": 90260305
@@ -5670,7 +5670,7 @@
       },
       {
         "id": 90260205,
-        "content": "Master Gongshang's pretty high up too. Let me do the maths... oh! We're the same generation. (mulling it over; then cheerful)",
+        "content": "Master Gongshang's pretty high up too. Let me do the maths... oh! We're the same generation.",
         "voice": "char/Suyi/vo_topic_02_4",
         "npc": 81504,
         "next": 90260206
@@ -5683,21 +5683,21 @@
       },
       {
         "id": 90260405,
-        "content": "It... yeah. Of course it is! (hesitates, then insists)",
+        "content": "It... yeah. Of course it is!",
         "voice": "char/Suyi/vo_topic_04_4",
         "npc": 81504,
         "next": 90260406
       },
       {
         "id": 90260206,
-        "content": "Heehee. If Kezhou ever gets cheeky with you, you can make him call you {性别：Grandpa|Grandma}. (playful, smug)",
+        "content": "Heehee. If Kezhou ever gets cheeky with you, you can make him call you {性别：Grandpa|Grandma}.",
         "voice": "char/Suyi/vo_topic_02_5",
         "npc": 81504,
         "next": 90260207
       },
       {
         "id": 90260306,
-        "content": "Skywing Gulls belong in the sky. If you keep one, you're basically shutting it in a cage. And if I caught one just for my own enjoyment... how would I be any different from the Xuanheng Sect back then? (serious)",
+        "content": "Skywing Gulls belong in the sky. If you keep one, you're basically shutting it in a cage. And if I caught one just for my own enjoyment... how would I be any different from the Xuanheng Sect back then?",
         "voice": "char/Suyi/vo_topic_03_5",
         "npc": 81504,
         "next": 90260307
@@ -5710,7 +5710,7 @@
       },
       {
         "id": 90260207,
-        "content": "Hang on... Snow calls you her \"Little Minion\", right? So she's your master...? No way. Don't tell me the one who outranks all of us is a tiny Luno! (stunned)",
+        "content": "Hang on... Snow calls you her \"Little Minion\", right? So she's your master...? No way. Don't tell me the one who outranks all of us is a tiny Luno!",
         "voice": "char/Suyi/vo_topic_02_6",
         "npc": 81504,
         "options": [
@@ -5727,7 +5727,7 @@
       },
       {
         "id": 90260307,
-        "content": "Some animals make good companions, but a Skywing Gull clearly isn't one of them. That sharp beak, that long tail, those wings built to cut through the wind... it says it all. It belongs in the sky, not in anyone's palm. (serious)",
+        "content": "Some animals make good companions, but a Skywing Gull clearly isn't one of them. That sharp beak, that long tail, those wings built to cut through the wind... it says it all. It belongs in the sky, not in anyone's palm.",
         "voice": "char/Suyi/vo_topic_03_6",
         "npc": 81504,
         "options": [
@@ -5744,14 +5744,14 @@
       },
       {
         "id": 90260407,
-        "content": "You're sharp. Is that the instinct of a mercenary— no, a Phoxhunter? And it's not just for fights... you can read people too? If only my mechapuppet's nav system were as quick as you... (impressed)",
+        "content": "You're sharp. Is that the instinct of a mercenary— no, a Phoxhunter? And it's not just for fights... you can read people too? If only my mechapuppet's nav system were as quick as you...",
         "voice": "char/Suyi/vo_topic_04_5",
         "npc": 81504,
         "next": 90260408
       },
       {
         "id": 90260408,
-        "content": "I'm just... a bit lost. What's a home supposed to feel like, anyway? (lost)",
+        "content": "I'm just... a bit lost. What's a home supposed to feel like, anyway?",
         "voice": "char/Suyi/vo_topic_04_6",
         "npc": 81504,
         "next": 90260409
@@ -5928,7 +5928,6 @@
       {
         "id": 90270302,
         "content": "I haven't forgotten. Being broke really is hard.",
-        "voice": "char/Kami/vo_topic_03_2",
         "npc": 100001,
         "next": 90270303
       },
@@ -5948,7 +5947,7 @@
       {
         "id": 90270303,
         "content": "Get enough money behind you and, even if you can't change where you came from, you'll have the nerve to take on whatever fate throws at you. When times are rough, you can at least buy yourself a warm drink... maybe even share a sip, do someone a good turn, and bank a favour for later.",
-        "voice": "char/Kami/vo_topic_03_3",
+        "voice": "char/Kami/vo_topic_03_2",
         "npc": 83202,
         "next": 90270304
       },
@@ -5968,6 +5967,7 @@
       {
         "id": 90270304,
         "content": "Now, does that answer your question?",
+        "voice": "char/Kami/vo_topic_03_3",
         "npc": 83202,
         "options": [
           {
@@ -11508,61 +11508,61 @@
   },
   {
     "id": 240003,
-    "name": "药师",
+    "name": "Apothecary",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240004,
-    "name": "路人",
+    "name": "Passer-by",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240005,
-    "name": "路人",
+    "name": "Passer-by",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240006,
-    "name": "路人",
+    "name": "Passer-by",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240007,
-    "name": "排队的女子",
+    "name": "Woman in the Queue",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240008,
-    "name": "香官",
+    "name": "Incense Warden",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240009,
-    "name": "工匠",
+    "name": "Artisan",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240010,
-    "name": "兴奋的路人",
+    "name": "Excited Passer-by",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240011,
-    "name": "炫耀的路人",
+    "name": "Smug Passer-by",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240012,
-    "name": "文绉绉的路人",
+    "name": "Pompous Passer-by",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -11580,55 +11580,55 @@
   },
   {
     "id": 240015,
-    "name": "门卫",
+    "name": "Gatekeeper",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240016,
-    "name": "接待员",
+    "name": "Receptionist",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240017,
-    "name": "守卫",
+    "name": "Guard",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240018,
-    "name": "守卫",
+    "name": "Guard",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240019,
-    "name": "守卫",
+    "name": "Guard",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240020,
-    "name": "偃雀",
+    "name": "Yanfinch",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240021,
-    "name": "偃雀",
+    "name": "Yanfinch",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240022,
-    "name": "偃雀",
+    "name": "Yanfinch",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240023,
-    "name": "偃雀",
+    "name": "Yanfinch",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -11652,7 +11652,7 @@
   },
   {
     "id": 240027,
-    "name": "参商港管事",
+    "name": "Steward of the Port of Parting Stars",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -11682,7 +11682,7 @@
   },
   {
     "id": 240032,
-    "name": "云翎鸥",
+    "name": "Skywing Gull",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -11700,91 +11700,91 @@
   },
   {
     "id": 240035,
-    "name": "飘零人",
+    "name": "Drifter",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240036,
-    "name": "飘零人",
+    "name": "Drifter",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240037,
-    "name": "玩耍的孩童",
+    "name": "Child at Play",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240038,
-    "name": "农妇",
+    "name": "Village Woman",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240039,
-    "name": "村长",
+    "name": "Village Chief",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240040,
-    "name": "静渊",
+    "name": "Jingyuan",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240041,
-    "name": "被攻击的民众",
+    "name": "Civilian Under Attack",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240042,
-    "name": "祈祷的老年男子",
+    "name": "Elderly Man at Prayer",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240043,
-    "name": "害怕的小女孩",
+    "name": "Frightened Girl",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240044,
-    "name": "中年妇女",
+    "name": "Middle-Aged Woman",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240045,
-    "name": "混乱的狴犴",
+    "name": "Rampaging Bi'an",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240046,
-    "name": "胆怯的书生",
+    "name": "Timid Young Scholar",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240047,
-    "name": "声音洪亮的男子",
+    "name": "Loud-Voiced Man",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240048,
-    "name": "泽生阁学徒",
+    "name": "Zesheng Pharmacy Apprentice",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240049,
-    "name": "泽生阁学徒",
+    "name": "Zesheng Pharmacy Apprentice",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -11808,13 +11808,13 @@
   },
   {
     "id": 240053,
-    "name": "混乱的狴犴",
+    "name": "Rampaging Bi'an",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240054,
-    "name": "混乱的狴犴",
+    "name": "Rampaging Bi'an",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -11879,61 +11879,61 @@
   },
   {
     "id": 240066,
-    "name": "固执的中年男子",
+    "name": "Stubborn Middle-Aged Man",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240067,
-    "name": "害怕的男子",
+    "name": "Frightened Man",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240068,
-    "name": "瑟瑟发抖的女子",
+    "name": "Shivering Woman",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240069,
-    "name": "失落的声音",
+    "name": "Dejected Voice",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240070,
-    "name": "无由生",
+    "name": "Wishen",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240071,
-    "name": "先人",
+    "name": "Forebear",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240072,
-    "name": "倨傲的先人",
+    "name": "Imperious Forebear",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240073,
-    "name": "骄横的先人",
+    "name": "Overbearing Forebear",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240074,
-    "name": "先人",
+    "name": "Forebear",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240075,
-    "name": "先人",
+    "name": "Forebear",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -12084,7 +12084,7 @@
   },
   {
     "id": 240104,
-    "name": "路人少女",
+    "name": "Passerby Girl",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -12102,20 +12102,20 @@
   },
   {
     "id": 240107,
-    "name": "路人少女",
+    "name": "Su Yi",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
       {
         "id": 12048809,
         "content": "没问题，包在我身上！本姑娘刚刚看你尝试，早就手痒了~",
-        "npc": 200026,
+        "npc": 240026,
         "next": 12048810
       },
       {
         "id": 12048810,
         "content": "不过话说回来，{nickname}，你回去后可得好好从头补起机枢知识呢。让我想想，从哪里开始呢，不如就从……",
-        "npc": 200026,
+        "npc": 240026,
         "next": 12048811
       },
       {
@@ -12128,20 +12128,20 @@
   },
   {
     "id": 240108,
-    "name": "路人少女",
+    "name": "Su Yi",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
       {
         "id": 12048809,
         "content": "没问题，包在我身上！本姑娘刚刚看你尝试，早就手痒了~",
-        "npc": 200026,
+        "npc": 240026,
         "next": 12048810
       },
       {
         "id": 12048810,
         "content": "不过话说回来，{nickname}，你回去后可得好好从头补起机枢知识呢。让我想想，从哪里开始呢，不如就从……",
-        "npc": 200026,
+        "npc": 240026,
         "next": 12048811
       },
       {
@@ -12154,20 +12154,20 @@
   },
   {
     "id": 240109,
-    "name": "路人少女",
+    "name": "Su Yi",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
       {
         "id": 12048809,
         "content": "没问题，包在我身上！本姑娘刚刚看你尝试，早就手痒了~",
-        "npc": 200026,
+        "npc": 240026,
         "next": 12048810
       },
       {
         "id": 12048810,
         "content": "不过话说回来，{nickname}，你回去后可得好好从头补起机枢知识呢。让我想想，从哪里开始呢，不如就从……",
-        "npc": 200026,
+        "npc": 240026,
         "next": 12048811
       },
       {
@@ -12177,6 +12177,48 @@
         "next": 12048812
       }
     ]
+  },
+  {
+    "id": 240110,
+    "name": "Xiaoyao",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 240111,
+    "name": "Kezhou",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 240112,
+    "name": "Yuming",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 240113,
+    "name": "Snow",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 240114,
+    "name": "Taihao",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 240115,
+    "name": "Guard",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 240116,
+    "name": "Guard",
+    "camp": "NPC",
+    "type": "Normal"
   },
   {
     "id": 250001,
@@ -12430,13 +12472,13 @@
   },
   {
     "id": 250026,
-    "name": "望春",
+    "name": "Wangchun",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 250027,
-    "name": "看守",
+    "name": "Guard",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -20638,37 +20680,37 @@
   },
   {
     "id": 700384,
-    "name": "渡影集",
+    "name": "Chronicle of Images",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 700385,
-    "name": "逍遥生",
+    "name": "Xiaoyao",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 700386,
-    "name": "宫先生",
+    "name": "Master Gong",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 700387,
-    "name": "清商",
+    "name": "Qingshang",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 700388,
-    "name": "卖包子的女孩",
+    "name": "Bun Seller",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 700389,
-    "name": "路过的大叔",
+    "name": "Middle-aged Passerby",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -20686,13 +20728,13 @@
   },
   {
     "id": 700392,
-    "name": "阁主",
+    "name": "Head of the Pharmacy",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 700393,
-    "name": "衰弱的伤者",
+    "name": "Injured Patient",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -28725,7 +28767,7 @@
   },
   {
     "id": 701113,
-    "name": "汀兰",
+    "name": "Tinglan",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -28888,7 +28930,7 @@
   },
   {
     "id": 701114,
-    "name": "诸葛陶",
+    "name": "Zhuge Tao",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -28910,19 +28952,19 @@
           },
           {
             "id": 51156109,
-            "content": "Why were you watching him so closely in the first place?",
+            "content": "Why were you watching her so closely in the first place?",
             "next": 51156110
           }
         ]
       },
       {
         "id": 51156103,
-        "content": "He passed plenty of people, but he only stopped at that sugar-figure stall. Rule out everyone else, and who does that leave? Him.",
+        "content": "She passed plenty of people, but he only stopped at that sugar-figure stall. Rule out everyone else, and who does that leave? Her.",
         "npc": 701114,
         "options": [
           {
             "id": 51156104,
-            "content": "Couldn't he have just stopped to watch him making sugar figures?",
+            "content": "Couldn't she have just stopped to watch him making sugar figures?",
             "next": 51156105
           },
           {
@@ -28934,7 +28976,7 @@
       },
       {
         "id": 51156110,
-        "content": "I wasn't watching him! I was watching that dodgy sugar-figure seller! Ever since he set up his stall next to mine, he's been luring all my customers away with that gaudy little act of his!",
+        "content": "I wasn't watching her! I was watching that dodgy sugar-figure seller! Ever since he set up his stall next to mine, he's been luring all my customers away with that gaudy little act of his!",
         "npc": 701114,
         "next": 51156111
       },
@@ -28989,7 +29031,7 @@
   },
   {
     "id": 701115,
-    "name": "西门鹤",
+    "name": "Ximen He",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -29132,7 +29174,7 @@
   },
   {
     "id": 701116,
-    "name": "澹台烟",
+    "name": "Tantai Yan",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -29181,13 +29223,13 @@
   },
   {
     "id": 701117,
-    "name": "许星垂",
+    "name": "Xu Xingchui",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701118,
-    "name": "月痕",
+    "name": "Yue Hen",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -29377,7 +29419,7 @@
   },
   {
     "id": 701119,
-    "name": "离砚",
+    "name": "Li Yan",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -29420,13 +29462,13 @@
   },
   {
     "id": 701120,
-    "name": "雨霖",
+    "name": "Yu Lin",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701121,
-    "name": "沈禾",
+    "name": "Shen He",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -29546,7 +29588,7 @@
   },
   {
     "id": 701122,
-    "name": "韩菱",
+    "name": "Han Ling",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -29622,7 +29664,7 @@
   },
   {
     "id": 701123,
-    "name": "璎珞",
+    "name": "Yingluo",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -29804,7 +29846,7 @@
   },
   {
     "id": 701124,
-    "name": "琳琅",
+    "name": "Linlang",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -29822,7 +29864,7 @@
       },
       {
         "id": 51157002,
-        "content": "And it's got a story behind it. Ever been to Shuzhong? Years ago, I was there on business and ended up staying for a while. This was what the locals treated me to.",
+        "content": "And it's got a story behind it. Ever been to Cloudweave Valley? Years ago, I was there on business and ended up staying for a while. This was what the locals treated me to.",
         "npc": 701124,
         "next": 51157003
       },
@@ -29850,12 +29892,12 @@
       },
       {
         "id": 51157005,
-        "content": "In Shuzhong, these are a local favourite — hotpot skewers. Care for a taste?",
+        "content": "In Cloudweave Valley, these are a local favourite — hotpot skewers. Care for a taste?",
         "npc": 701124
       },
       {
         "id": 51157007,
-        "content": "Of course it is! If it weren't, why would I have stayed in Shuzhong for so long just to learn how to make it?",
+        "content": "Of course it is! If it weren't, why would I have stayed in Cloudweave Valley for so long just to learn how to make it?",
         "npc": 701124,
         "next": 51157008
       },
@@ -29891,7 +29933,7 @@
   },
   {
     "id": 701125,
-    "name": "桂棹",
+    "name": "Gui Zhao",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -30048,7 +30090,7 @@
   },
   {
     "id": 701126,
-    "name": "方朔",
+    "name": "Fang Shuo",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -30240,7 +30282,7 @@
   },
   {
     "id": 701127,
-    "name": "云裳",
+    "name": "Yun Shang",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -30314,7 +30356,7 @@
   },
   {
     "id": 701128,
-    "name": "同福饭馆店小二",
+    "name": "Tongfu Eatery Server",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -30346,7 +30388,7 @@
   },
   {
     "id": 701129,
-    "name": "禾穗",
+    "name": "He Sui",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -30424,7 +30466,7 @@
   },
   {
     "id": 701130,
-    "name": "魏蒲",
+    "name": "Wei Pu",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -30628,7 +30670,7 @@
   },
   {
     "id": 701131,
-    "name": "孙枕石",
+    "name": "Sun Zhenshi",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -30697,7 +30739,7 @@
   },
   {
     "id": 701132,
-    "name": "涧泉",
+    "name": "Jian Quan",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -30746,13 +30788,13 @@
   },
   {
     "id": 701133,
-    "name": "秋浦",
+    "name": "Qiu Pu",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701134,
-    "name": "方晴川",
+    "name": "Fang Qingchuan",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -30852,7 +30894,7 @@
   },
   {
     "id": 701135,
-    "name": "陆瑶光",
+    "name": "Lu Yaoguang",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -30931,7 +30973,7 @@
   },
   {
     "id": 701136,
-    "name": "刘福",
+    "name": "Liu Fu",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -31038,7 +31080,7 @@
   },
   {
     "id": 701137,
-    "name": "何道微",
+    "name": "He Daowei",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -31119,7 +31161,7 @@
   },
   {
     "id": 701138,
-    "name": "褚家",
+    "name": "Chu Jia",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -31190,7 +31232,7 @@
   },
   {
     "id": 701139,
-    "name": "周伯远",
+    "name": "Zhou Boyuan",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -31329,13 +31371,13 @@
   },
   {
     "id": 701140,
-    "name": "梁达博",
+    "name": "Liang Dabo",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701141,
-    "name": "长庚",
+    "name": "Chang Geng",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -31483,7 +31525,7 @@
   },
   {
     "id": 701142,
-    "name": "周砚秋",
+    "name": "Zhou Yanqiu",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -31669,7 +31711,7 @@
   },
   {
     "id": 701143,
-    "name": "张老丈",
+    "name": "Old Man Zhang",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -31802,13 +31844,13 @@
   },
   {
     "id": 701144,
-    "name": "严公",
+    "name": "Mr Yan",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701145,
-    "name": "刘婆婆",
+    "name": "Granny Liu",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -31916,7 +31958,7 @@
   },
   {
     "id": 701146,
-    "name": "渡风",
+    "name": "Du Feng",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -32005,7 +32047,7 @@
   },
   {
     "id": 701147,
-    "name": "林德昌",
+    "name": "Lin Dechang",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -32083,7 +32125,7 @@
   },
   {
     "id": 701148,
-    "name": "阿菀",
+    "name": "Wan",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -32225,7 +32267,7 @@
   },
   {
     "id": 701149,
-    "name": "寻鹤",
+    "name": "Xunhe",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -32276,7 +32318,7 @@
   },
   {
     "id": 701150,
-    "name": "建业",
+    "name": "Jianye",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -32331,7 +32373,7 @@
   },
   {
     "id": 701151,
-    "name": "小棠",
+    "name": "Tang",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -32474,7 +32516,7 @@
   },
   {
     "id": 701152,
-    "name": "时风",
+    "name": "Shi Feng",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -32661,7 +32703,7 @@
   },
   {
     "id": 701153,
-    "name": "秦执",
+    "name": "Qin Zhi",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -32698,7 +32740,7 @@
   },
   {
     "id": 701154,
-    "name": "王伯公",
+    "name": "Mr Wang",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -32769,7 +32811,7 @@
   },
   {
     "id": 701155,
-    "name": "李某某",
+    "name": "Li",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -32943,7 +32985,7 @@
   },
   {
     "id": 701156,
-    "name": "马老丈",
+    "name": "Old Man Ma",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -33022,7 +33064,7 @@
   },
   {
     "id": 701157,
-    "name": "孙兰芝",
+    "name": "Sun Lanzhi",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -33078,7 +33120,7 @@
   },
   {
     "id": 701158,
-    "name": "孟巧娘",
+    "name": "Meng Qiaoniang",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -33298,13 +33340,13 @@
   },
   {
     "id": 701159,
-    "name": "景小年",
+    "name": "Jing Xiaonian",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701160,
-    "name": "景小年",
+    "name": "Jing Xiaonian",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -33377,13 +33419,13 @@
   },
   {
     "id": 701161,
-    "name": "棠豆",
+    "name": "Tangdou",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701162,
-    "name": "文博",
+    "name": "Wen Bo",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -33518,7 +33560,7 @@
   },
   {
     "id": 701163,
-    "name": "吴章知",
+    "name": "Wu Zhangzhi",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -33605,7 +33647,7 @@
   },
   {
     "id": 701164,
-    "name": "晚月",
+    "name": "Wan Yue",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -33651,7 +33693,7 @@
   },
   {
     "id": 701165,
-    "name": "安永",
+    "name": "An Yong",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -33753,7 +33795,7 @@
   },
   {
     "id": 701166,
-    "name": "卢静薇",
+    "name": "Lu Jingwei",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -33794,7 +33836,7 @@
   },
   {
     "id": 701167,
-    "name": "文彬",
+    "name": "Wen Bin",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -33906,7 +33948,7 @@
   },
   {
     "id": 701168,
-    "name": "景和",
+    "name": "Jing He",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -33941,7 +33983,7 @@
   },
   {
     "id": 701169,
-    "name": "裴德厚",
+    "name": "Pei Dehou",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -34025,7 +34067,7 @@
   },
   {
     "id": 701170,
-    "name": "温玉笙",
+    "name": "Wen Yusheng",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -34088,7 +34130,7 @@
   },
   {
     "id": 701171,
-    "name": "清鸢",
+    "name": "Qing Yuan",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -34145,7 +34187,7 @@
   },
   {
     "id": 701172,
-    "name": "灵月",
+    "name": "Ling Yue",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -34285,7 +34327,7 @@
   },
   {
     "id": 701173,
-    "name": "元祯",
+    "name": "Yuan Zhen",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -34360,7 +34402,7 @@
   },
   {
     "id": 701174,
-    "name": "白灵汐",
+    "name": "Bai Lingxi",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -34496,7 +34538,7 @@
   },
   {
     "id": 701175,
-    "name": "朱鹤龄",
+    "name": "Zhu Heling",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -34689,7 +34731,7 @@
   },
   {
     "id": 701176,
-    "name": "魏青娥",
+    "name": "Wei Qing'e",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -34863,7 +34905,7 @@
   },
   {
     "id": 701177,
-    "name": "任清欢",
+    "name": "Ren Qinghuan",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -35005,7 +35047,7 @@
   },
   {
     "id": 701178,
-    "name": "明玥",
+    "name": "Ming Yue",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -35063,7 +35105,7 @@
   },
   {
     "id": 701179,
-    "name": "彭春桃",
+    "name": "Peng Chuntao",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -35113,7 +35155,7 @@
   },
   {
     "id": 701180,
-    "name": "时茂",
+    "name": "Shi Mao",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -35212,7 +35254,7 @@
   },
   {
     "id": 701181,
-    "name": "何子瑜",
+    "name": "He Ziyu",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -35351,7 +35393,7 @@
   },
   {
     "id": 701182,
-    "name": "邵临起",
+    "name": "Shao Linqi",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -35392,7 +35434,7 @@
   },
   {
     "id": 701183,
-    "name": "陈川",
+    "name": "Chen Chuan",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -35647,7 +35689,7 @@
   },
   {
     "id": 701184,
-    "name": "阿舟",
+    "name": "Zhou",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -35885,7 +35927,7 @@
   },
   {
     "id": 701185,
-    "name": "郭老叟",
+    "name": "Old Man Guo",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -35987,7 +36029,7 @@
   },
   {
     "id": 701186,
-    "name": "梁思远",
+    "name": "Liang Siyuan",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -36049,7 +36091,7 @@
   },
   {
     "id": 701187,
-    "name": "同叔",
+    "name": "Uncle Tong",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -36179,7 +36221,7 @@
   },
   {
     "id": 701189,
-    "name": "刘禄",
+    "name": "Liu Lu",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -36275,7 +36317,7 @@
   },
   {
     "id": 701190,
-    "name": "维尔",
+    "name": "Vere",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -36464,7 +36506,7 @@
   },
   {
     "id": 701191,
-    "name": "玉芬",
+    "name": "Yufen",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -36526,7 +36568,7 @@
   },
   {
     "id": 701192,
-    "name": "大将军",
+    "name": "General",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -36609,7 +36651,7 @@
   },
   {
     "id": 701193,
-    "name": "马景岐",
+    "name": "Ma Jingqi",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -36692,7 +36734,7 @@
   },
   {
     "id": 701194,
-    "name": "禹臣",
+    "name": "Yu Chen",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -36804,7 +36846,7 @@
   },
   {
     "id": 701195,
-    "name": "守拙",
+    "name": "Shouzhuo",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -36875,7 +36917,7 @@
   },
   {
     "id": 701196,
-    "name": "雨桐",
+    "name": "Yutong",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -37004,13 +37046,13 @@
   },
   {
     "id": 701197,
-    "name": "可儿",
+    "name": "Ke'er",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701198,
-    "name": "小川",
+    "name": "Chuan",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -37125,7 +37167,7 @@
   },
   {
     "id": 701199,
-    "name": "洛奇",
+    "name": "Rocky",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -37241,7 +37283,7 @@
   },
   {
     "id": 701200,
-    "name": "韩老爹",
+    "name": "Old Man Han",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -37457,7 +37499,7 @@
   },
   {
     "id": 701201,
-    "name": "韩安世",
+    "name": "Han Anshi",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -37642,7 +37684,7 @@
   },
   {
     "id": 701202,
-    "name": "郭文昭",
+    "name": "Guo Wenzhao",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -37720,7 +37762,7 @@
   },
   {
     "id": 701203,
-    "name": "砚北",
+    "name": "Yan Bei",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -37849,7 +37891,7 @@
   },
   {
     "id": 701204,
-    "name": "韩忠",
+    "name": "Han Zhong",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -38027,7 +38069,7 @@
   },
   {
     "id": 701205,
-    "name": "周远",
+    "name": "Zhou Yuan",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -38110,7 +38152,7 @@
   },
   {
     "id": 701206,
-    "name": "孟守诚",
+    "name": "Meng Shoucheng",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -38185,7 +38227,7 @@
   },
   {
     "id": 701207,
-    "name": "李礼一",
+    "name": "Li Liyi",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -38311,7 +38353,7 @@
   },
   {
     "id": 701208,
-    "name": "慕远",
+    "name": "Mu Yuan",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -38379,7 +38421,7 @@
   },
   {
     "id": 701209,
-    "name": "思晴",
+    "name": "Siqing",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -38423,7 +38465,7 @@
   },
   {
     "id": 701210,
-    "name": "沐阳",
+    "name": "Muyang",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -38469,7 +38511,7 @@
   },
   {
     "id": 701211,
-    "name": "承泽",
+    "name": "Chengze",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -38559,7 +38601,7 @@
   },
   {
     "id": 701212,
-    "name": "章景行",
+    "name": "Zhang Jingxing",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -38685,7 +38727,7 @@
   },
   {
     "id": 701213,
-    "name": "柳明正",
+    "name": "Liu Mingzheng",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -38871,62 +38913,62 @@
   },
   {
     "id": 701214,
-    "name": "郑景",
+    "name": "Zheng Jing",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
       {
         "id": 51171102,
-        "content": "Because of her, those they had wronged finally received the justice they had long been denied.",
+        "content": "Take Master Wenzhu of the Four Drifters. If she and her companions had not stepped in, what else would have forced those who exploited loopholes in the Nine Chapters of Dafeng back into hiding?",
         "npc": 701214,
         "next": 51171103
       },
       {
         "id": 51171103,
-        "content": "I disagree. The so-called Master Wenzhu— no, that criminal Drifter — merely answers violence with violence and intimidates others into submission. That does nothing to bring peace to Huaxu.",
+        "content": "Because of her, those they had wronged finally received the justice they had long been denied.",
         "npc": 701214,
         "next": 51171104
       },
       {
         "id": 51171104,
-        "content": "Meeting violence with violence merely perpetuates it. Fear spreads, and fear breeds instability. Even if such methods suppress wrongdoing for a time, they sow unrest in the long run.",
+        "content": "I disagree. The so-called Master Wenzhu— no, that criminal Drifter — merely answers violence with violence and intimidates others into submission. That does nothing to bring peace to Huaxu.",
         "next": 51171105
       },
       {
         "id": 51171105,
-        "content": "On what basis do you say that? Violence used to restrain violence can, in some cases, be an effective means of checking wrongdoing. When people exploit the very rules and institutions meant to preserve order, can we still claim that peace truly exists?",
+        "content": "Meeting violence with violence merely perpetuates it. Fear spreads, and fear breeds instability. Even if such methods suppress wrongdoing for a time, they sow unrest in the long run.",
         "next": 51171106
       },
       {
         "id": 51171106,
-        "content": "You spoke just now of order. As you yourself said, peace in Huaxu rests upon the order established by the Nine Chapters of Dafeng — an order tested and upheld by generations before us. That is no empty slogan.",
+        "content": "On what basis do you say that? Violence used to restrain violence can, in some cases, be an effective means of checking wrongdoing. When people exploit the very rules and institutions meant to preserve order, can we still claim that peace truly exists?",
         "npc": 701214,
         "next": 51171107
       },
       {
         "id": 51171107,
-        "content": "Where order already stands, vengeance does not mend injustice. It multiplies it.",
+        "content": "You spoke just now of order. As you yourself said, peace in Huaxu rests upon the order established by the Nine Chapters of Dafeng — an order tested and upheld by generations before us. That is no empty slogan.",
         "next": 51171108
       },
       {
         "id": 51171108,
-        "content": "If matters of right and wrong beyond the law are left to private judgment, violence will only spread. In the end, it harms others and corrupts those who use it. If that is so, what peace can there truly be?",
+        "content": "Where order already stands, vengeance does not mend injustice. It multiplies it.",
         "next": 51171109
       },
       {
         "id": 51171109,
-        "content": "Excellent. That concludes the first round. The two students may take a short rest. The second round will begin when the gong is sounded.",
+        "content": "If matters of right and wrong beyond the law are left to private judgment, violence will only spread. In the end, it harms others and corrupts those who use it. If that is so, what peace can there truly be?",
         "next": 51171110
       },
       {
         "id": 51171110,
-        "content": "好！一辩暂时休息，请二位学子暂且休息，待会会在锣鼓声响后开启二辩。"
+        "content": "Excellent. That concludes the first round. The two students may take a short rest. The second round will begin when the gong is sounded."
       }
     ]
   },
   {
     "id": 701215,
-    "name": "裴云",
+    "name": "Pei Yun",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -39105,7 +39147,7 @@
   },
   {
     "id": 701216,
-    "name": "卫德舆",
+    "name": "Wei Deyu",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -39194,7 +39236,7 @@
   },
   {
     "id": 701217,
-    "name": "沈惠兰",
+    "name": "Shen Huilan",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -39246,7 +39288,7 @@
   },
   {
     "id": 701218,
-    "name": "书瑶",
+    "name": "Shuyao",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -39324,7 +39366,7 @@
   },
   {
     "id": 701219,
-    "name": "时川",
+    "name": "Shi Chuan",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -39492,7 +39534,7 @@
   },
   {
     "id": 701220,
-    "name": "时川",
+    "name": "Shi Chuan",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -39635,7 +39677,7 @@
   },
   {
     "id": 701221,
-    "name": "方寻",
+    "name": "Fang Xun",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -39708,7 +39750,7 @@
   },
   {
     "id": 701222,
-    "name": "噌噌皎皎",
+    "name": "Lunosprout",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -39865,7 +39907,7 @@
   },
   {
     "id": 701223,
-    "name": "章景曜",
+    "name": "Zhang Jingyao",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -39906,7 +39948,7 @@
   },
   {
     "id": 701224,
-    "name": "清岚",
+    "name": "Qing Lan",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -40054,7 +40096,7 @@
   },
   {
     "id": 701225,
-    "name": "林甫",
+    "name": "Lin Fu",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -40184,7 +40226,7 @@
   },
   {
     "id": 701226,
-    "name": "明哲",
+    "name": "Ming Zhe",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -40280,7 +40322,7 @@
   },
   {
     "id": 701227,
-    "name": "周晓棠",
+    "name": "Zhou Xiaotang",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -40403,7 +40445,7 @@
   },
   {
     "id": 701228,
-    "name": "陈岐",
+    "name": "Chen Qi",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -40449,7 +40491,7 @@
   },
   {
     "id": 701229,
-    "name": "伯渊",
+    "name": "Boyuan",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -40506,7 +40548,7 @@
   },
   {
     "id": 701230,
-    "name": "芷柔",
+    "name": "Zhirou",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -40573,7 +40615,7 @@
   },
   {
     "id": 701231,
-    "name": "宋卿卿",
+    "name": "Song Qingqing",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -40597,7 +40639,7 @@
   },
   {
     "id": 701232,
-    "name": "张敬之",
+    "name": "Zhang Jingzhi",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -40748,7 +40790,7 @@
   },
   {
     "id": 701233,
-    "name": "景铄",
+    "name": "Jing Shuo",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -40902,7 +40944,7 @@
   },
   {
     "id": 701234,
-    "name": "小瑜",
+    "name": "Yu",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -40980,7 +41022,7 @@
   },
   {
     "id": 701235,
-    "name": "章老翁",
+    "name": "Old Man Zhang",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -40994,7 +41036,7 @@
   },
   {
     "id": 701236,
-    "name": "浮生",
+    "name": "Fushen",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -41112,7 +41154,7 @@
   },
   {
     "id": 701237,
-    "name": "离生",
+    "name": "Lishen",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -41231,13 +41273,13 @@
   },
   {
     "id": 701238,
-    "name": "小婉",
+    "name": "Wan",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701239,
-    "name": "张大婶",
+    "name": "Auntie Zhang",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -41285,7 +41327,7 @@
   },
   {
     "id": 701240,
-    "name": "无愈",
+    "name": "Wuyu",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -41336,7 +41378,7 @@
   },
   {
     "id": 701241,
-    "name": "长歌",
+    "name": "Chang Ge",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -41383,7 +41425,7 @@
   },
   {
     "id": 701242,
-    "name": "张远",
+    "name": "Zhang Yuan",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -41549,7 +41591,7 @@
   },
   {
     "id": 701243,
-    "name": "阿乔",
+    "name": "Qiao",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -41601,7 +41643,7 @@
   },
   {
     "id": 701244,
-    "name": "方慕声",
+    "name": "Fang Musheng",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -41685,7 +41727,7 @@
   },
   {
     "id": 701245,
-    "name": "冬雪",
+    "name": "Dongxue",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -41737,7 +41779,7 @@
   },
   {
     "id": 701246,
-    "name": "大庄",
+    "name": "Dazhuang",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -41863,7 +41905,7 @@
   },
   {
     "id": 701247,
-    "name": "汪洋",
+    "name": "Wang Yang",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -41923,13 +41965,13 @@
   },
   {
     "id": 701248,
-    "name": "梁平",
+    "name": "Liang Ping",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701249,
-    "name": "婉婉",
+    "name": "Wanwan",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -41989,7 +42031,7 @@
   },
   {
     "id": 701250,
-    "name": "史基",
+    "name": "Shi Ji",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -42026,13 +42068,13 @@
   },
   {
     "id": 701251,
-    "name": "史奉春",
+    "name": "Shi Fengchun",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701252,
-    "name": "桂北发",
+    "name": "Gui Beifa",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -42114,7 +42156,7 @@
   },
   {
     "id": 701253,
-    "name": "竞天",
+    "name": "Jingtian",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -42181,13 +42223,13 @@
   },
   {
     "id": 701254,
-    "name": "小槐",
+    "name": "Huai",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701255,
-    "name": "棠生",
+    "name": "Tangshen",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -42288,7 +42330,7 @@
   },
   {
     "id": 701256,
-    "name": "饶生",
+    "name": "Raoshen",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -42425,7 +42467,7 @@
   },
   {
     "id": 701257,
-    "name": "相生",
+    "name": "Xiangshen",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -42533,7 +42575,7 @@
   },
   {
     "id": 701258,
-    "name": "星遥",
+    "name": "Xingyao",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -42618,49 +42660,49 @@
   },
   {
     "id": 701259,
-    "name": "温景川",
+    "name": "Wen Jingchuan",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701260,
-    "name": "凉苍",
+    "name": "Liang Cang",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701261,
-    "name": "董烨",
+    "name": "Dong Ye",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701262,
-    "name": "阿胜",
+    "name": "Sheng",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701263,
-    "name": "弓连春",
+    "name": "Gong Lianchun",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701264,
-    "name": "任良",
+    "name": "Ren Liang",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701265,
-    "name": "钱袋子",
+    "name": "Coin Pouch",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701266,
-    "name": "魏蒲",
+    "name": "Wei Pu",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -43146,97 +43188,97 @@
   },
   {
     "id": 790072,
-    "name": "煜明",
+    "name": "Yuming",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 790073,
-    "name": "不夏",
+    "name": "Buxia",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 790074,
-    "name": "宴山亭",
+    "name": "Yan Shanting",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 790075,
-    "name": "飘零人",
+    "name": "Drifters",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 790076,
-    "name": "止流",
+    "name": "Zhiliu",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 790077,
-    "name": "望春",
+    "name": "Wangchun",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 790078,
-    "name": "顾砚",
+    "name": "Gu Yan",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 790079,
-    "name": "虬先生",
+    "name": "Mr Qiu",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 790080,
-    "name": "备选役A",
+    "name": "Candidate A",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 790081,
-    "name": "备选役B",
+    "name": "Candidate B",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 790082,
-    "name": "苏乙",
+    "name": "Su Yi",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 790083,
-    "name": "唐叔",
+    "name": "Uncle Tang",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 790084,
-    "name": "云纺水",
+    "name": "Yun Fangshui",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 790085,
-    "name": "工匠",
+    "name": "Artisan",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 790086,
-    "name": "弟弟",
+    "name": "Younger Brother",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 790087,
-    "name": "妹妹",
+    "name": "Younger Sister",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -43945,37 +43987,37 @@
   },
   {
     "id": 840001,
-    "name": "严谨的机枢派弟子",
+    "name": "Meticulous Jishu Sect Apprentice",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 840002,
-    "name": "傲气的机枢派师傅",
+    "name": "Proud Jishu Sect Craftsman",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 840003,
-    "name": "头疼的店员",
+    "name": "Harried Shop Assistant",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 840004,
-    "name": "神叨叨的女子",
+    "name": "Eccentric Woman",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 840005,
-    "name": "馋嘴的孩子",
+    "name": "Greedy Kid",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 840006,
-    "name": "热情的妇人",
+    "name": "Friendly Woman",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -44635,13 +44677,13 @@
   },
   {
     "id": 930008,
-    "name": "移动载具",
+    "name": "Moving Vehicle",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 930009,
-    "name": "赛事主办方",
+    "name": "Event Organiser",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -44726,7 +44768,7 @@
     "talks": [
       {
         "id": 90260001,
-        "content": "There you are! You heard I refitted Qingluan Type Ⅱ again, right? Come on, I'll show you... Huh? You're just here to chat? (fast, affectionate; then surprised)",
+        "content": "There you are! You heard I refitted Qingluan Type Ⅱ again, right? Come on, I'll show you... Huh? You're just here to chat?",
         "voice": "char/Suyi/vo_welcome",
         "npc": 81504,
         "options": [
@@ -44754,7 +44796,7 @@
       },
       {
         "id": 90260101,
-        "content": "Hmm... Putting mechanisms together, polishing gears, tracking down new materials... and tinkering until the next version's better. (pauses to think; contemplative)",
+        "content": "Hmm... Putting mechanisms together, polishing gears, tracking down new materials... and tinkering until the next version's better.",
         "voice": "char/Suyi/vo_topic_01_1",
         "npc": 81504,
         "next": 90260102
@@ -44768,7 +44810,7 @@
       },
       {
         "id": 90260301,
-        "content": "Oh, that's Qingluan Type Ⅲ — my new pet! (proud)",
+        "content": "Oh, that's Qingluan Type Ⅲ — my new pet!",
         "voice": "char/Suyi/vo_topic_03_1",
         "npc": 81504,
         "next": 90260302
@@ -44782,7 +44824,7 @@
       },
       {
         "id": 90260102,
-        "content": "Remember when Uncle Tang took that fall and hurt his leg? I've been free lately, so I've been working on a vehicle with smoother, steadier takeoffs. Jishu disciples like to push for results like they've got a spare life. I'm not letting that carry on. (thinking aloud, worried)",
+        "content": "Remember when Uncle Tang took that fall and hurt his leg? I've been free lately, so I've been working on a vehicle with smoother, steadier takeoffs. Jishu disciples like to push for results like they've got a spare life. I'm not letting that carry on.",
         "voice": "char/Suyi/vo_topic_01_2",
         "npc": 81504,
         "next": 90260103
@@ -44796,14 +44838,14 @@
       },
       {
         "id": 90260302,
-        "content": "See? Doesn't it look just like a real Skywing Gull? I simplified the boot-up — press and hold the top of its head and it'll go into mimic-flight mode. And speaking of flying— (proud, rambling)",
+        "content": "See? Doesn't it look just like a real Skywing Gull? I simplified the boot-up — press and hold the top of its head and it'll go into mimic-flight mode. And speaking of flying—",
         "voice": "char/Suyi/vo_topic_03_2",
         "npc": 81504,
         "next": 90260303
       },
       {
         "id": 90260402,
-        "content": "We found each other because we'd been through similar things, and we're fighting for the same goal. We understand each other. We trust each other. In a fight, we've got each other's backs. And when you're worn out, you're not on your own. It's... a really good place. (earnest)",
+        "content": "We found each other because we'd been through similar things, and we're fighting for the same goal. We understand each other. We trust each other. In a fight, we've got each other's backs. And when you're worn out, you're not on your own. It's... a really good place.",
         "voice": "char/Suyi/vo_topic_04_2",
         "npc": 81504,
         "next": 90260403
@@ -44816,14 +44858,14 @@
       },
       {
         "id": 90260203,
-        "content": "Kezhou's the unlucky one. His master, Yan Shanting, is lower in the lineage — so by the rules, he has to call me \"Great-Auntie\". (light, smug)",
+        "content": "Kezhou's the unlucky one. His master, Yan Shanting, is lower in the lineage — so by the rules, he has to call me \"Great-Auntie\".",
         "voice": "char/Suyi/vo_topic_02_3",
         "npc": 81504,
         "next": 90260204
       },
       {
         "id": 90260303,
-        "content": "Look at the feathers! I used naturally shed Skywing Gull feathers, then sealed them with an improved water-repellent finish — it hardly adds any weight. (proud, rambling)",
+        "content": "Look at the feathers! I used naturally shed Skywing Gull feathers, then sealed them with an improved water-repellent finish — it hardly adds any weight.",
         "voice": "char/Suyi/vo_topic_03_3",
         "npc": 81504,
         "next": 90260304
@@ -44837,7 +44879,7 @@
       },
       {
         "id": 90260104,
-        "content": "Tired? How could I be? What could be more fun than this? You break a mechanism down in your head, piece by piece — then you build it in the real world. That moment it all clicks into place and actually works? Best feeling in the world. (earnest, cheerful)",
+        "content": "Tired? How could I be? What could be more fun than this? You break a mechanism down in your head, piece by piece — then you build it in the real world. That moment it all clicks into place and actually works? Best feeling in the world.",
         "voice": "char/Suyi/vo_topic_01_3",
         "npc": 81504,
         "next": 90260105
@@ -44850,7 +44892,7 @@
       },
       {
         "id": 90260304,
-        "content": "Its colours won't fade, it stays fluffy forever — and when it perches on your arm, it won't dig its claws in like a real bird. All the cuteness, none of the scratches. Perfect pet. (proud, rambling)",
+        "content": "Its colours won't fade, it stays fluffy forever — and when it perches on your arm, it won't dig its claws in like a real bird. All the cuteness, none of the scratches. Perfect pet.",
         "voice": "char/Suyi/vo_topic_03_4",
         "npc": 81504,
         "next": 90260305
@@ -44880,7 +44922,7 @@
       },
       {
         "id": 90260205,
-        "content": "Master Gongshang's pretty high up too. Let me do the maths... oh! We're the same generation. (mulling it over; then cheerful)",
+        "content": "Master Gongshang's pretty high up too. Let me do the maths... oh! We're the same generation.",
         "voice": "char/Suyi/vo_topic_02_4",
         "npc": 81504,
         "next": 90260206
@@ -44893,21 +44935,21 @@
       },
       {
         "id": 90260405,
-        "content": "It... yeah. Of course it is! (hesitates, then insists)",
+        "content": "It... yeah. Of course it is!",
         "voice": "char/Suyi/vo_topic_04_4",
         "npc": 81504,
         "next": 90260406
       },
       {
         "id": 90260206,
-        "content": "Heehee. If Kezhou ever gets cheeky with you, you can make him call you {性别：Grandpa|Grandma}. (playful, smug)",
+        "content": "Heehee. If Kezhou ever gets cheeky with you, you can make him call you {性别：Grandpa|Grandma}.",
         "voice": "char/Suyi/vo_topic_02_5",
         "npc": 81504,
         "next": 90260207
       },
       {
         "id": 90260306,
-        "content": "Skywing Gulls belong in the sky. If you keep one, you're basically shutting it in a cage. And if I caught one just for my own enjoyment... how would I be any different from the Xuanheng Sect back then? (serious)",
+        "content": "Skywing Gulls belong in the sky. If you keep one, you're basically shutting it in a cage. And if I caught one just for my own enjoyment... how would I be any different from the Xuanheng Sect back then?",
         "voice": "char/Suyi/vo_topic_03_5",
         "npc": 81504,
         "next": 90260307
@@ -44920,7 +44962,7 @@
       },
       {
         "id": 90260207,
-        "content": "Hang on... Snow calls you her \"Little Minion\", right? So she's your master...? No way. Don't tell me the one who outranks all of us is a tiny Luno! (stunned)",
+        "content": "Hang on... Snow calls you her \"Little Minion\", right? So she's your master...? No way. Don't tell me the one who outranks all of us is a tiny Luno!",
         "voice": "char/Suyi/vo_topic_02_6",
         "npc": 81504,
         "options": [
@@ -44937,7 +44979,7 @@
       },
       {
         "id": 90260307,
-        "content": "Some animals make good companions, but a Skywing Gull clearly isn't one of them. That sharp beak, that long tail, those wings built to cut through the wind... it says it all. It belongs in the sky, not in anyone's palm. (serious)",
+        "content": "Some animals make good companions, but a Skywing Gull clearly isn't one of them. That sharp beak, that long tail, those wings built to cut through the wind... it says it all. It belongs in the sky, not in anyone's palm.",
         "voice": "char/Suyi/vo_topic_03_6",
         "npc": 81504,
         "options": [
@@ -44954,14 +44996,14 @@
       },
       {
         "id": 90260407,
-        "content": "You're sharp. Is that the instinct of a mercenary— no, a Phoxhunter? And it's not just for fights... you can read people too? If only my mechapuppet's nav system were as quick as you... (impressed)",
+        "content": "You're sharp. Is that the instinct of a mercenary— no, a Phoxhunter? And it's not just for fights... you can read people too? If only my mechapuppet's nav system were as quick as you...",
         "voice": "char/Suyi/vo_topic_04_5",
         "npc": 81504,
         "next": 90260408
       },
       {
         "id": 90260408,
-        "content": "I'm just... a bit lost. What's a home supposed to feel like, anyway? (lost)",
+        "content": "I'm just... a bit lost. What's a home supposed to feel like, anyway?",
         "voice": "char/Suyi/vo_topic_04_6",
         "npc": 81504,
         "next": 90260409
@@ -45138,7 +45180,6 @@
       {
         "id": 90270302,
         "content": "I haven't forgotten. Being broke really is hard.",
-        "voice": "char/Kami/vo_topic_03_2",
         "npc": 100001,
         "next": 90270303
       },
@@ -45158,7 +45199,7 @@
       {
         "id": 90270303,
         "content": "Get enough money behind you and, even if you can't change where you came from, you'll have the nerve to take on whatever fate throws at you. When times are rough, you can at least buy yourself a warm drink... maybe even share a sip, do someone a good turn, and bank a favour for later.",
-        "voice": "char/Kami/vo_topic_03_3",
+        "voice": "char/Kami/vo_topic_03_2",
         "npc": 83202,
         "next": 90270304
       },
@@ -45178,6 +45219,7 @@
       {
         "id": 90270304,
         "content": "Now, does that answer your question?",
+        "voice": "char/Kami/vo_topic_03_3",
         "npc": 83202,
         "options": [
           {

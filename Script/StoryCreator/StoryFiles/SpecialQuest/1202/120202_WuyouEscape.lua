@@ -47,7 +47,7 @@ return {
       key = "176215936932473",
       type = "StoryNode",
       name = "任务节点",
-      pos = {x = 1223.25, y = 345.875},
+      pos = {x = 1223.25, y = 347.875},
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
@@ -87,12 +87,6 @@ return {
             startQuest = "1772436357415555",
             startPort = "Out",
             endQuest = "1762159376706349",
-            endPort = "In"
-          },
-          {
-            startQuest = "176215936932474",
-            startPort = "QuestStart",
-            endQuest = "1772436443618943",
             endPort = "In"
           },
           {
@@ -174,12 +168,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "1772436443618943",
-            startPort = "Out",
-            endQuest = "177356828395210975999",
-            endPort = "In"
-          },
-          {
             startQuest = "176215936932474",
             startPort = "QuestStart",
             endQuest = "1774350131237867",
@@ -219,12 +207,6 @@ return {
             startQuest = "17743741143022546342",
             startPort = "Out",
             endQuest = "17743738774601092",
-            endPort = "In"
-          },
-          {
-            startQuest = "17743741143022546342",
-            startPort = "Out",
-            endQuest = "17743741213622546541",
             endPort = "In"
           },
           {
@@ -270,21 +252,9 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17743741603172547434",
-            startPort = "Out",
-            endQuest = "17731509585661709442",
-            endPort = "In"
-          },
-          {
             startQuest = "17743744322843399159",
             startPort = "Out",
             endQuest = "17743745407043401062",
-            endPort = "In"
-          },
-          {
-            startQuest = "17743744322843399159",
-            startPort = "Out",
-            endQuest = "17743745592553401554",
             endPort = "In"
           },
           {
@@ -312,9 +282,81 @@ return {
             endPort = "Stop"
           },
           {
-            startQuest = "17743744329223399190",
+            startQuest = "1774350131237867",
+            startPort = "Out",
+            endQuest = "17746901952548513706",
+            endPort = "In"
+          },
+          {
+            startQuest = "17746901952548513706",
+            startPort = "Out",
+            endQuest = "177356828395210975999",
+            endPort = "In"
+          },
+          {
+            startQuest = "1774864188259861984",
             startPort = "Out",
             endQuest = "17743747390053404550",
+            endPort = "In"
+          },
+          {
+            startQuest = "1774864225597862802",
+            startPort = "Out",
+            endQuest = "17743745592553401554",
+            endPort = "In"
+          },
+          {
+            startQuest = "1774864241404863059",
+            startPort = "Out",
+            endQuest = "1774864268632863547",
+            endPort = "In"
+          },
+          {
+            startQuest = "1774864274214863712",
+            startPort = "Out",
+            endQuest = "17743741213622546541",
+            endPort = "In"
+          },
+          {
+            startQuest = "1774864273691863689",
+            startPort = "Out",
+            endQuest = "17731509585661709442",
+            endPort = "In"
+          },
+          {
+            startQuest = "17743741352682546908",
+            startPort = "Out",
+            endQuest = "1774864289119864222",
+            endPort = "In"
+          },
+          {
+            startQuest = "1774864289119864222",
+            startPort = "Out",
+            endQuest = "1774864225597862802",
+            endPort = "In"
+          },
+          {
+            startQuest = "1774864289119864222",
+            startPort = "Out",
+            endQuest = "1774864273691863689",
+            endPort = "In"
+          },
+          {
+            startQuest = "1774864289119864222",
+            startPort = "Out",
+            endQuest = "1774864274214863712",
+            endPort = "In"
+          },
+          {
+            startQuest = "1774864289119864222",
+            startPort = "Out",
+            endQuest = "1774864241404863059",
+            endPort = "In"
+          },
+          {
+            startQuest = "1774864289119864222",
+            startPort = "Out",
+            endQuest = "1774864188259861984",
             endPort = "In"
           }
         },
@@ -330,7 +372,7 @@ return {
             key = "176215936932481",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 3263.6813186813188, y = 889.6153846153846},
+            pos = {x = 2715.4995004995008, y = 1486.888111888112},
             propsData = {ModeType = 0}
           },
           ["176215936932488"] = {
@@ -417,16 +459,6 @@ return {
               GuidePointName = "Mechanism_12020212_2010045"
             }
           },
-          ["1772436443618943"] = {
-            key = "1772436443618943",
-            type = "BossBattleFinishNode",
-            name = "等待失败",
-            pos = {x = 1251.9498144936747, y = 1375.7868390689448},
-            propsData = {
-              SendMessage = "",
-              FinishCondition = "12020212_Wuyousheng_Escape_Fail"
-            }
-          },
           ["17731493800463800"] = {
             key = "17731493800463800",
             type = "GoToNode",
@@ -443,19 +475,19 @@ return {
             key = "1773150104492857840",
             type = "ShowOrHideTaskIndicatorNode",
             name = "显示/隐藏任务指引点节点",
-            pos = {x = 3665.315263328329, y = -39.78276459830022},
+            pos = {x = 2796.87370488677, y = 372.9607418952063},
             propsData = {
               IsShow = true,
               bOpenRangeEffect = false,
               GuideType = "M",
-              GuideName = "Mechanism_12020212hezi1_242410206"
+              GuideName = "Mechanism_12020212hezi2_242410207"
             }
           },
           ["17731509476531709113"] = {
             key = "17731509476531709113",
             type = "ShowOrHideTaskIndicatorNode",
             name = "显示/隐藏任务指引点节点",
-            pos = {x = 2754.838247353499, y = -610.3673154028978},
+            pos = {x = 1808.4746109898626, y = -1019.4582244938069},
             propsData = {
               IsShow = false,
               bOpenRangeEffect = false,
@@ -467,7 +499,7 @@ return {
             key = "17731509534531709292",
             type = "ShowOrHideTaskIndicatorNode",
             name = "显示/隐藏任务指引点节点",
-            pos = {x = 2784.7943306563857, y = -505.4093463291992},
+            pos = {x = 1429.6428155048707, y = -1007.6820736019265},
             propsData = {
               IsShow = false,
               bOpenRangeEffect = false,
@@ -479,7 +511,7 @@ return {
             key = "17731509585661709442",
             type = "ShowOrHideTaskIndicatorNode",
             name = "显示/隐藏任务指引点节点",
-            pos = {x = 3462.6204176129077, y = 431.0408869016279},
+            pos = {x = 3533.201415562327, y = 811.2186039214502},
             propsData = {
               IsShow = false,
               bOpenRangeEffect = false,
@@ -697,7 +729,7 @@ return {
             key = "1774350131237867",
             type = "SendMessageNode",
             name = "玩法开始",
-            pos = {x = 1672.802530802531, y = 62.33258408258371},
+            pos = {x = 1492.802530802531, y = 246.0825840825837},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "12020212_Wuyousheng_Escape",
@@ -708,7 +740,7 @@ return {
             key = "17743738763541051",
             type = "ShowOrHideTaskIndicatorNode",
             name = "显示/隐藏任务指引点节点",
-            pos = {x = 3684.4500102898096, y = 531.7900988087756},
+            pos = {x = 2801.0084518482513, y = 1023.2836053022821},
             propsData = {
               IsShow = true,
               bOpenRangeEffect = false,
@@ -720,7 +752,7 @@ return {
             key = "17743738774601092",
             type = "ShowOrHideTaskIndicatorNode",
             name = "显示/隐藏任务指引点节点",
-            pos = {x = 3674.1634695713637, y = 706.9189113432145},
+            pos = {x = 2790.721911129805, y = 1198.412417836721},
             propsData = {
               IsShow = true,
               bOpenRangeEffect = false,
@@ -753,7 +785,7 @@ return {
             key = "17743741213622546541",
             type = "ShowOrHideTaskIndicatorNode",
             name = "显示/隐藏任务指引点节点",
-            pos = {x = 3435.4773441571792, y = 604.8930933209414},
+            pos = {x = 3533.1343654984116, y = 994.8953717442723},
             propsData = {
               IsShow = false,
               bOpenRangeEffect = false,
@@ -802,7 +834,7 @@ return {
             key = "17743745407043401062",
             type = "ShowOrHideTaskIndicatorNode",
             name = "显示/隐藏任务指引点节点",
-            pos = {x = 3686.8252507938846, y = 356.2416029647025},
+            pos = {x = 2803.3836923523263, y = 847.7351094582091},
             propsData = {
               IsShow = true,
               bOpenRangeEffect = false,
@@ -814,7 +846,7 @@ return {
             key = "17743745592553401554",
             type = "ShowOrHideTaskIndicatorNode",
             name = "显示/隐藏任务指引点节点",
-            pos = {x = 3467.279796248429, y = 257.7528180681498},
+            pos = {x = 3544.1765836715326, y = 631.6147456142878},
             propsData = {
               IsShow = false,
               bOpenRangeEffect = false,
@@ -826,7 +858,7 @@ return {
             key = "17743745730093401854",
             type = "ShowOrHideTaskIndicatorNode",
             name = "显示/隐藏任务指引点节点",
-            pos = {x = 3684.9707053393386, y = 154.4234211465208},
+            pos = {x = 2801.52914689778, y = 644.2502609733606},
             propsData = {
               IsShow = true,
               bOpenRangeEffect = false,
@@ -837,7 +869,7 @@ return {
           ["17743747025323403890"] = {
             key = "17743747025323403890",
             type = "BossBattleFinishNode",
-            name = "第2门，房檐上",
+            name = "无由生打开了第一个门",
             pos = {x = 2366.513963648525, y = 99.3554234486982},
             propsData = {
               SendMessage = "",
@@ -848,13 +880,94 @@ return {
             key = "17743747390053404550",
             type = "ShowOrHideTaskIndicatorNode",
             name = "显示/隐藏任务指引点节点",
-            pos = {x = 3424.0230922011324, y = 63.70028510877723},
+            pos = {x = 3542.352425910901, y = -359.80620839771655},
             propsData = {
               IsShow = false,
               bOpenRangeEffect = false,
               GuideType = "M",
-              GuideName = "Mechanism_12020212hezi1_242410206"
+              GuideName = "Mechanism_12020212hezi2_242410207"
             }
+          },
+          ["17746901952548513706"] = {
+            key = "17746901952548513706",
+            type = "CountdownNode",
+            name = "倒计时节点",
+            pos = {x = 1383.6446664790315, y = 595.9584154235858},
+            propsData = {
+              CountdownSeconds = 180,
+              OpenUI = true,
+              Text = "East02_Time_EscapePC",
+              RedCountdownSeconds = 5
+            }
+          },
+          ["1774864188259861984"] = {
+            key = "1774864188259861984",
+            type = "BossBattleFinishNode",
+            name = "玩家穿过第一个门",
+            pos = {x = 3089.379117075218, y = -383.4855640879307},
+            propsData = {
+              SendMessage = "",
+              FinishCondition = "12020212_Wuyousheng_Escape_Door1"
+            }
+          },
+          ["1774864225597862802"] = {
+            key = "1774864225597862802",
+            type = "BossBattleFinishNode",
+            name = "玩家穿过第二个门",
+            pos = {x = 3091.8457583641734, y = -212.63841335164537},
+            propsData = {
+              SendMessage = "",
+              FinishCondition = "12020212_Wuyousheng_Escape_Door2"
+            }
+          },
+          ["1774864241404863059"] = {
+            key = "1774864241404863059",
+            type = "BossBattleFinishNode",
+            name = "玩家穿过第五个门",
+            pos = {x = 3074.5322663006814, y = 330.41834993337886},
+            propsData = {
+              SendMessage = "",
+              FinishCondition = "12020212_Wuyousheng_Escape_Door5"
+            }
+          },
+          ["1774864268632863547"] = {
+            key = "1774864268632863547",
+            type = "ShowOrHideTaskIndicatorNode",
+            name = "显示/隐藏任务指引点节点",
+            pos = {x = 3531.605238586468, y = 1169.200304820597},
+            propsData = {
+              IsShow = false,
+              bOpenRangeEffect = false,
+              GuideType = "P",
+              GuideName = "EscapePoint5"
+            }
+          },
+          ["1774864273691863689"] = {
+            key = "1774864273691863689",
+            type = "BossBattleFinishNode",
+            name = "玩家穿过第三个门",
+            pos = {x = 3070.515013022558, y = -38.18482466979563},
+            propsData = {
+              SendMessage = "",
+              FinishCondition = "12020212_Wuyousheng_Escape_Door3"
+            }
+          },
+          ["1774864274214863712"] = {
+            key = "1774864274214863712",
+            type = "BossBattleFinishNode",
+            name = "玩家过了桥上的门",
+            pos = {x = 3063.848346355891, y = 155.14850866353763},
+            propsData = {
+              SendMessage = "",
+              FinishCondition = "12020212_Wuyousheng_Escape_DoorBridge"
+            }
+          },
+          ["1774864289119864222"] = {
+            key = "1774864289119864222",
+            type = "WaitOfTimeNode",
+            name = "集线器",
+            pos = {x = 2754.330481180131, y = -187.026802041521},
+            propsData = {WaitTime = 0.1}
           }
         },
         commentData = {

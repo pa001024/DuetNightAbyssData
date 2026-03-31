@@ -116,6 +116,12 @@ return {
           {
             startQuest = "17737464911414339047",
             startPort = "Out",
+            endQuest = "17747656598972553959",
+            endPort = "In"
+          },
+          {
+            startQuest = "17747656598972553959",
+            startPort = "Out",
             endQuest = "17637291918634114311",
             endPort = "Success"
           }
@@ -132,7 +138,7 @@ return {
             key = "17637291918634114311",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 2014.3076923076924, y = 300.46153846153845},
+            pos = {x = 2212.879120879121, y = 289.032967032967},
             propsData = {ModeType = 0}
           },
           ["17637291918634114312"] = {
@@ -238,6 +244,17 @@ return {
               bForceAsyncLoading = false,
               IsWhite = false
             }
+          },
+          ["17747656598972553959"] = {
+            key = "17747656598972553959",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1939.5892857142856, y = 286.44642857142856},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
           }
         },
         commentData = {}
@@ -341,6 +358,12 @@ return {
           {
             startQuest = "17738244398635214858",
             startPort = "Out",
+            endQuest = "17747656890983828989",
+            endPort = "In"
+          },
+          {
+            startQuest = "17747656890983828989",
+            startPort = "Out",
             endQuest = "17637293161184114786",
             endPort = "Success"
           }
@@ -357,7 +380,7 @@ return {
             key = "17637293161184114786",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 2072.1319182514003, y = 292.96008048607274},
+            pos = {x = 2352.6319182514003, y = 297.46008048607274},
             propsData = {ModeType = 0}
           },
           ["17637293161184114787"] = {
@@ -543,6 +566,17 @@ return {
               bForceAsyncLoading = false,
               IsWhite = false
             }
+          },
+          ["17747656890983828989"] = {
+            key = "17747656890983828989",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2022.2647058823532, y = 304.1397058823529},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
           }
         },
         commentData = {}
@@ -632,7 +666,19 @@ return {
             endPort = "Input"
           },
           {
-            startQuest = "17737173219802602734",
+            startQuest = "17727842996615320255",
+            startPort = "Out",
+            endQuest = "17745062001375091627",
+            endPort = "In"
+          },
+          {
+            startQuest = "17654406995785335",
+            startPort = "Out",
+            endQuest = "17745062216935092057",
+            endPort = "In"
+          },
+          {
+            startQuest = "17745062216935092057",
             startPort = "Out",
             endQuest = "17637294815294115820",
             endPort = "Success"
@@ -650,7 +696,7 @@ return {
             key = "17637294815294115820",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 2526.1399322697876, y = 293.40214182872984},
+            pos = {x = 2603.917710047565, y = 293.40214182872984},
             propsData = {
               ModeType = 1,
               Id = 105201,
@@ -897,12 +943,40 @@ return {
             key = "17737173219802602734",
             type = "StandAloneBlackScreenNode",
             name = "独立黑屏节点",
-            pos = {x = 2290.092803030303, y = 305.8011363636365},
+            pos = {x = 2334.5372474747473, y = 489.13446969696986},
             propsData = {
               FadeInSeconds = 0,
               FadeOutSeconds = 0,
               DurationSeconds = 1,
               IsStandAlone = true
+            }
+          },
+          ["17745062001375091627"] = {
+            key = "17745062001375091627",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2039.3975885225877, y = 484.9597985347987},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/1_1/0125_story_zhiliu_betray",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {104503},
+              ClientRelatedRegionId = {},
+              bStoreToServer = true
+            }
+          },
+          ["17745062216935092057"] = {
+            key = "17745062216935092057",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2320.5086996337, y = 284.95979853479867},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
             }
           }
         },

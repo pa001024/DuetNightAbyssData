@@ -652,7 +652,7 @@ return {
             key = "1770196325225385065",
             type = "ChangeStaticCreatorNode",
             name = "销毁阶梯",
-            pos = {x = 2945.484722203591, y = 449.4490852432969},
+            pos = {x = 2936.0561507750194, y = 465.7347995290112},
             propsData = {
               ActiveEnable = false,
               EnableBlackScreenSync = false,
@@ -860,7 +860,7 @@ return {
             propsData = {
               FadeInSeconds = 0,
               FadeOutSeconds = 0,
-              DurationSeconds = 1,
+              DurationSeconds = 2,
               IsStandAlone = true
             }
           },
@@ -937,10 +937,10 @@ return {
             key = "177375137687014210966",
             type = "ActivePlayerSkillsNode",
             name = "激活/失效 玩家技能",
-            pos = {x = 1919.2729745836486, y = 2269.818492215389},
+            pos = {x = 1920.636610947285, y = 2269.818492215389},
             propsData = {
               PlayerId = 0,
-              bActiveEnable = false,
+              bActiveEnable = true,
               ActiveType = "Lock",
               SkillNameList = {
                 "Avoid",
@@ -1059,9 +1059,9 @@ return {
             pos = {x = 1911.504068824682, y = 1939.830843479217},
             propsData = {
               WeaponTags = {"Melee", "Ranged"},
-              bForbid = true,
+              bForbid = false,
               ForbidTag = "ForbidDefault",
-              bHidewhenForbid = true
+              bHidewhenForbid = false
             }
           },
           ["177375140831314211880"] = {
@@ -1111,7 +1111,7 @@ return {
             pos = {x = 3527.241953381523, y = 359.8677526046851},
             propsData = {
               PlayerId = 0,
-              bActiveEnable = false,
+              bActiveEnable = true,
               ActiveType = "Lock",
               SkillNameList = {
                 "Avoid",
@@ -1230,9 +1230,9 @@ return {
             pos = {x = 3522.4730476225564, y = 28.380103868512776},
             propsData = {
               WeaponTags = {"Melee", "Ranged"},
-              bForbid = true,
+              bForbid = false,
               ForbidTag = "ForbidDefault",
-              bHidewhenForbid = true
+              bHidewhenForbid = false
             }
           },
           ["177375144129514212991"] = {

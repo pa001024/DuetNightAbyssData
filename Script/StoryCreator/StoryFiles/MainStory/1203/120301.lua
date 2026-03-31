@@ -636,6 +636,18 @@ return {
             startPort = "Out",
             endQuest = "17707107244231158576",
             endPort = "In"
+          },
+          {
+            startQuest = "1763371608095677863",
+            startPort = "QuestStart",
+            endQuest = "17745058711591683",
+            endPort = "In"
+          },
+          {
+            startQuest = "17649178318683135693",
+            startPort = "Out",
+            endQuest = "17745059280611273907",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -712,7 +724,7 @@ return {
             key = "17649178318683135693",
             type = "GoToNode",
             name = "前往",
-            pos = {x = 1079.7272727272727, y = 271.1590909090909},
+            pos = {x = 1087.622009569378, y = 266.4222488038278},
             propsData = {
               GuideUIEnable = false,
               StaticCreatorId = 132010081,
@@ -913,11 +925,45 @@ return {
             key = "17726784143882454383",
             type = "SetTimeOfDayNode",
             name = "设置TOD",
-            pos = {x = 1407.1012641898863, y = 810.8746130030961},
+            pos = {x = 996.5749484004125, y = 506.1377708978329},
             propsData = {
               TargetTime = 12,
               NeedLerp = true,
               LerpTime = 0
+            }
+          },
+          ["17745058711591683"] = {
+            key = "17745058711591683",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1077.3684210526321, y = -350.52631578947364},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/1_1/0109_combat_black_market",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {104501},
+              ClientRelatedRegionId = {},
+              bStoreToServer = true
+            }
+          },
+          ["17745059280611273907"] = {
+            key = "17745059280611273907",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1403.684210526316, y = 806.842105263158},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/1_3/0151_story_east_humour",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {104501},
+              ClientRelatedRegionId = {},
+              bStoreToServer = true
             }
           }
         },
@@ -1186,6 +1232,12 @@ return {
             startPort = "Out",
             endQuest = "17724328055761198",
             endPort = "In"
+          },
+          {
+            startQuest = "17649189024656271843",
+            startPort = "Out",
+            endQuest = "17745059757841274811",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -1385,6 +1437,17 @@ return {
               TargetTime = 12,
               NeedLerp = true,
               LerpTime = 0
+            }
+          },
+          ["17745059757841274811"] = {
+            key = "17745059757841274811",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1048.2907636738903, y = 448.7647058823529},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
             }
           }
         },

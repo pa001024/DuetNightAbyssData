@@ -253,6 +253,9 @@ end
 function WBP_Forging_Convert_PopUp_Choose_C:OnMaterialItemSelected(ItemContent)
   DebugPrint("Yihan@ WBP_Forging_Convert_PopUp_Choose_C:OnMaterialItemSelected", ItemContent, self:GetHaveCount(ItemContent.Id), ItemContent.ClickedCount)
   if ItemContent.ItemType == CommonConst.ArmoryType.Mod then
+    if 1 == ItemContent.LockType then
+      return
+    end
     if 0 == ItemContent.Count or ItemContent.Count < ItemContent.ClickedCount + 1 then
       self:KeepSelectState(ItemContent)
     elseif self:MaterialIsEnough() then

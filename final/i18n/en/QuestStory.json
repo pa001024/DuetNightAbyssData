@@ -35934,7 +35934,7 @@
     "quests": [
       {
         "id": 12020101,
-        "name": "Travel to Haojing via map",
+        "name": "Travel to Haojing via quest log",
         "desc": "At the moment Zhuyin was sealed, Zhiliu suddenly turned against you and trapped you. With the help of Fushu and Kezhou who arrived in time, you managed to break free from Zhiliu's spell.\nYou thought the danger had passed — but one crisis barely ends, another begins. As you were leaving the Gritblight Expanse, you and Snow were struck by a spell at a corner. Your memory ends there.",
         "nodes": [
           {
@@ -36823,7 +36823,7 @@
       },
       {
         "id": 12020106,
-        "name": "Head to the Hall of Founts",
+        "name": "Head to the Ministry of Fortune",
         "desc": "As you rest, a few passersby nearby are loudly discussing the Hall of Adjudication — and both you and Snow grow curious.\nAs it happens, Zhiliu has an errand for you regarding the Grand Incense Rite — one that will grant you a view from the Hall of Adjudication itself.\nAccompany Zhiliu to the Hall of Founts in the West District to collect a token.",
         "nodes": [
           {
@@ -36864,7 +36864,7 @@
       },
       {
         "id": 12020107,
-        "name": "Head to the Hall of Founts",
+        "name": "Head to the Ministry of Fortune",
         "desc": "As you rest, a few passersby nearby are loudly discussing the Hall of Adjudication — and both you and Snow grow curious.\nAs it happens, Zhiliu has an errand for you regarding the Grand Incense Rite — one that will grant you a view from the Hall of Adjudication itself.\nAccompany Zhiliu to the Hall of Founts in the West District to collect a token.",
         "nodes": [
           {
@@ -37646,8 +37646,8 @@
       },
       {
         "id": 12020125,
-        "name": "Find the sachet that blew away",
-        "desc": "With the Grand Incense Rite approaching, the Hall of Incense is crowded.\nA misunderstanding breaks out when a woman accuses you of jumping the queue. During the argument, a sudden gust snatches away her treasured limited-edition sachet. Be the bigger person and help her retrieve it.",
+        "name": "Head to the Hall of Incense",
+        "desc": "After some trouble, you manage to snatch back the fine silk from a mischievous Wishen named Xiaoyao.\nNow head to the Hall of Incense in the inner city to continue your task.",
         "nodes": [
           {
             "id": "17684808772546617643",
@@ -38441,8 +38441,8 @@
       },
       {
         "id": 12020214,
-        "name": "前往执律阁",
-        "desc": "“辩法”将至，按照既定的计划，前往执律阁吧。",
+        "name": "Head to the Hall of Adjudication",
+        "desc": "The Trial by Disputation is drawing near. As planned, head to the Hall of Adjudication first.",
         "nodes": [
           {
             "id": "17700360240941526652",
@@ -39696,7 +39696,7 @@
       },
       {
         "id": 12020310,
-        "name": "Head deeper into the Outer Peaks",
+        "name": "Head into the Outer Peaks",
         "desc": "After a fair bit of back-and-forth, you finally make contact with Su Yi, a spirited young woman Kezhou calls \"Great-aunt\".\nShe leads you to the Drifters' hidden base — the Outer Peaks.",
         "nodes": [
           {
@@ -39819,7 +39819,7 @@
       },
       {
         "id": 12020311,
-        "name": "Speak with Kezhou",
+        "name": "Meet Kezhou",
         "desc": "Uncle Tang says Kezhou is already back in the Outer Peaks. Go meet him.",
         "nodes": [
           {
@@ -41459,7 +41459,8 @@
       },
       {
         "id": 12020407,
-        "name": "【待包装】",
+        "name": "Move forward",
+        "desc": "Kezhou is forced onto the back foot in his fight with Yuming, and Su Yi can only watch in mounting panic. Once she makes up her mind, she grabs you and drags you into an old Jishu Sect dungeon nearby, urging you to help her find another way.",
         "nodes": [
           {
             "id": "176346423290313170146",
@@ -44482,7 +44483,7 @@
                 "id": 12046607,
                 "content": "They have stifled their own judgement, surrendering the measure of right and wrong to divine decree.",
                 "voice": "story/1204/120466/1E284C76",
-                "npc": 240074,
+                "npc": 240001,
                 "next": 12046608
               },
               {
@@ -44518,6 +44519,16 @@
                 "content": "Heh... Bound within a clay shell, how can you be sure you are not one of those \"commoners\" you so readily scorn?",
                 "voice": "story/1204/120466/1E284D1E",
                 "npc": 240001
+              },
+              {
+                "id": 12046616,
+                "content": "万万不可啊，止流大当家——",
+                "voice": "story/1201/120229/1E191CD6"
+              },
+              {
+                "id": 12046615,
+                "content": "为大风九章奔走，于我而言，是一件将功折罪的幸事。",
+                "voice": "story/1204/120466/12046615"
               }
             ]
           }
@@ -45599,12 +45610,6 @@
         "nodes": []
       },
       {
-        "id": 12020616,
-        "name": "Defeat the two Loong gods",
-        "desc": "Zhiliu begs you to end her life, but you refuse. You're here to prove that people can always forge a new path.\nThrough Resonance, you briefly draw into yourself the power the Covenant of Souls granted her.\nSensing the intrusion, Taihao and Zhuyin, already on the brink of madness, turn on you as one. Defeat them, and prove your resolve.",
-        "nodes": []
-      },
-      {
         "id": 12020617,
         "name": "Defeat the two Loong gods",
         "desc": "Zhiliu begs you to end her life, but you refuse. You're here to prove that people can always forge a new path.\nThrough Resonance, you briefly draw into yourself the power the Covenant of Souls granted her.\nSensing the intrusion, Taihao and Zhuyin, already on the brink of madness, turn on you as one. Defeat them, and prove your resolve.",
@@ -46024,161 +46029,6 @@
         "name": "Take a Walk with Zhiliu",
         "desc": "Zhiliu asks you to take a walk with her.",
         "nodes": []
-      },
-      {
-        "id": 12020628,
-        "name": "Take a Walk with Zhiliu",
-        "desc": "Zhiliu asks you to take a walk with her.",
-        "nodes": [
-          {
-            "id": "176347729743615236961",
-            "type": "TalkNode",
-            "name": "【East02_FixSimple_77】墓前对话",
-            "dialogues": [
-              {
-                "id": 12048201,
-                "content": "Zhiliu, I...",
-                "voice": "story/1204/120482/1E2951FA",
-                "npc": 100001,
-                "options": [
-                  {
-                    "id": 12048202,
-                    "content": "(Tell her you're not mad at her.)",
-                    "next": 12048205
-                  },
-                  {
-                    "id": 12048203,
-                    "content": "(Tell her you still can't forgive her.)",
-                    "next": 12048209
-                  },
-                  {
-                    "id": 12048204,
-                    "content": "(Ask her to guess.)",
-                    "next": 12048211
-                  }
-                ]
-              },
-              {
-                "id": 12048205,
-                "content": "You're walking on eggshells around me — it's throwing me off... Don't worry, I stopped being angry a long time ago. If anything... I'm grateful. You gave me the chance to be a hero.",
-                "voice": "story/1204/120482/1E2952A2",
-                "npc": 100001,
-                "next": 12048206
-              },
-              {
-                "id": 12048209,
-                "content": "I haven't forgiven you for tricking me before. Maybe I never will.",
-                "voice": "story/1204/120482/1E29534A",
-                "npc": 100001,
-                "next": 12048210
-              },
-              {
-                "id": 12048211,
-                "content": "Aren't you supposed to be good at reading people? Then guess — have I forgiven you, or not?",
-                "voice": "story/1204/120482/1E29539E",
-                "npc": 100001,
-                "next": 12048212
-              },
-              {
-                "id": 12048206,
-                "content": "Still, I didn't expect you to be so frank about it. I thought you'd be... a little more at peace with yourself by now.",
-                "voice": "story/1204/120482/1E2952CC",
-                "npc": 100001,
-                "next": 12048207
-              },
-              {
-                "id": 12048210,
-                "content": "But time has a way of wearing things down. Who knows? Let's leave the answer for another day.",
-                "voice": "story/1204/120482/1E295374",
-                "npc": 100001,
-                "next": 12048213
-              },
-              {
-                "id": 12048212,
-                "content": "...Heh. This is the hardest reading I have ever faced. I may spend my whole life seeking the answer.",
-                "voice": "story/1204/120482/1E2953C8",
-                "npc": 240001,
-                "next": 12048213
-              },
-              {
-                "id": 12048207,
-                "content": "Had all gone as I planned — had I perished in the Mausoleum — perhaps I would have been. I could have told myself, with perfect certainty, that when life itself is the wager, nothing else holds weight.",
-                "voice": "story/1204/120482/1E2952F6",
-                "npc": 240001,
-                "next": 12048208
-              },
-              {
-                "id": 12048213,
-                "content": "Zhiliu... there's something else I want you to know. The human heart's complicated.",
-                "voice": "story/1204/120482/1E2953F2",
-                "npc": 100001,
-                "next": 12048214
-              },
-              {
-                "id": 12048208,
-                "content": "But I never foresaw that I would survive — all thanks to you.",
-                "voice": "story/1204/120482/1E295320",
-                "npc": 240001,
-                "next": 12048213
-              },
-              {
-                "id": 12048214,
-                "content": "Where there's weakness, there's also courage. Where there's darkness, there's also kindness.",
-                "voice": "story/1204/120482/1E29541C",
-                "npc": 100001,
-                "next": 12048215
-              },
-              {
-                "id": 12048215,
-                "content": "And there's always the chance for people to break free of so-called fate and careful plans — and carve out a new path.",
-                "voice": "story/1204/120482/1E295446",
-                "npc": 100001,
-                "next": 12048216
-              },
-              {
-                "id": 12048216,
-                "content": "So... try trusting others more, instead of carrying it all alone.",
-                "voice": "story/1204/120482/1E295470",
-                "npc": 100001,
-                "next": 12048217
-              },
-              {
-                "id": 12048217,
-                "content": "Don't gamble with your life like that again. Treasure it — and live to see Huaxu's future. Will you promise me?",
-                "voice": "story/1204/120482/1E29549A",
-                "npc": 100001,
-                "next": 12048218
-              },
-              {
-                "id": 12048218,
-                "content": "...",
-                "voice": "story/1204/120482/1E2954C4",
-                "npc": 240001,
-                "next": 12048219
-              },
-              {
-                "id": 12048219,
-                "content": "You may have long since outgrown any need for my gratitude... but even so — thank you, {nickname}.",
-                "voice": "story/1204/120482/1E2954EE",
-                "npc": 240001,
-                "next": 12048220
-              },
-              {
-                "id": 12048220,
-                "content": "Meeting you by chance in Icelake was, perhaps, the greatest grace fate ever granted me.",
-                "voice": "story/1204/120482/1E295518",
-                "npc": 240001,
-                "next": 12048221
-              },
-              {
-                "id": 12048221,
-                "content": "We have arrived. Stay with me awhile, as this incense burns in remembrance.",
-                "voice": "story/1204/120482/1E295542",
-                "npc": 240001
-              }
-            ]
-          }
-        ]
       }
     ]
   },
@@ -46531,7 +46381,7 @@
               },
               {
                 "id": 12060315,
-                "content": "It's just... this year, you have to enter as a team of three. I slipped out without telling anyone at the Outer Peaks and tried to recruit a couple of curious passers-by. And the moment they heard I was a Drifter, they bolted... Ugh!",
+                "content": "It's just... this year, you have to enter as a team of three. I slipped out without telling anyone at the Outer Peaks and tried to recruit a couple of curious passers-by. But the moment they heard I was a Drifter, they bolted... Ugh!",
                 "voice": "story/1206/120603/1E31156E",
                 "npc": 250003,
                 "options": [
@@ -46616,7 +46466,7 @@
               },
               {
                 "id": 12060326,
-                "content": "Juzi... something... what's-it-called? I've no idea what it means, but anything with a name that long has to be the real deal. The Demon King approves!",
+                "content": "Juzi... something... what's-it-called? I have no idea what it means, but anything with a name that long has to be the real deal. The Demon King approves!",
                 "voice": "story/1206/120603/1E31173C",
                 "npc": 200002,
                 "next": 12060327
@@ -47142,7 +46992,7 @@
               },
               {
                 "id": 12060611,
-                "content": "Nah-uh! I do whatever I feel like — there's nothing to feel \"guilty\" about! Besides, you lot made the Incense Proving sound so fun. I'm not missing a chance to steal the spotlight!",
+                "content": "No! I do whatever I feel like — there's nothing to feel \"guilty\" about! Besides, you lot made the Incense Proving sound so fun. I'm not missing a chance to steal the spotlight!",
                 "voice": "story/1206/120606/1E3145FE",
                 "npc": 250006,
                 "next": 12060612
@@ -48468,7 +48318,7 @@
               },
               {
                 "id": 12061223,
-                "content": "Everyone. It has been a while.",
+                "content": "It has been a while.",
                 "voice": "story/1206/120612/1E31AA66",
                 "npc": 250005,
                 "next": 12061224
@@ -48582,7 +48432,7 @@
       },
       {
         "id": 12030303,
-        "name": "Speak with Su Yi",
+        "name": "Look for Su Yi",
         "desc": "Your team advances, but things still feel tense. In low spirits, Su Yi leaves to get some air.\nDuring her conversation with Yuming, one name keeps coming up: Su Muzhe, who appears to be at the heart of her frustration.\nFind Su Yi and check on her.",
         "nodes": [
           {
@@ -49405,7 +49255,7 @@
               },
               {
                 "id": 12061819,
-                "content": "That will be all for today. Return and rest.",
+                "content": "That'll be all for today. Return and rest.",
                 "voice": "story/1206/120618/1E320C2E",
                 "npc": 250004,
                 "next": 12061820
@@ -50359,7 +50209,7 @@
               },
               {
                 "id": 12062412,
-                "content": "Oh yeah? Like you lot were any better! You ditched me without a second thought and ran off with that weird guy in black — he looks like a crow!",
+                "content": "Yeah. Like you lot were any better! You ditched me without a second thought and ran off with that weird guy in black — he looks like a crow!",
                 "voice": "story/1206/120624/1E326D78",
                 "npc": 250006,
                 "next": 12062413
@@ -51570,8 +51420,8 @@
       },
       {
         "id": 12030706,
-        "name": "离开地宫",
-        "desc": "通过潇湘交出的地宫钥匙，你们成功打倒了巨阙，营救出了煜明。\n现在，离开这里吧。",
+        "name": "Leave the Labyrinth",
+        "desc": "You entered the Labyrinth with the key given to you by Xiaoxiang. You defeated the Terracolossus and rescued Yuming.\nNow leave this place.",
         "nodes": [
           {
             "id": "177314516401910594179",
@@ -73047,7 +72897,7 @@
               },
               {
                 "id": 51105097,
-                "content": "I never met him... Nana said he passed away when she was young, when she just moved to Haojing. She didn't get the news in time because of the move... so she never got to say goodbye...",
+                "content": "I never met him... Nana said he passed away when she was still young, just after she moved to Haojing. She didn't find out in time, so she never got to say goodbye...",
                 "npc": 700329,
                 "next": 51105098
               },
@@ -74838,7 +74688,7 @@
             "dialogues": [
               {
                 "id": 51151123,
-                "content": "Whew~ Finally got those two Wishen on their way. Who would've thought they'd be so loyal and sentimental... Now—",
+                "content": "Whew~ Finally got those two Wishens on their way. Who would've thought they'd be so loyal and sentimental... Now—",
                 "npc": 200002,
                 "next": 51151124
               },
@@ -77910,8 +77760,8 @@
       },
       {
         "id": 20031701,
-        "name": "与逍遥生对话",
-        "desc": "在皓京周边与白闲逛之时，竟在路边看到了一位熟悉的无由生，如果没有记错的话，它的名字应该叫逍遥生，多少也算是有“过命”交情的“熟人”，你们决定上前搭话。",
+        "name": "Talk to Xiaoyao",
+        "desc": "While taking a stroll with Snow on the outskirts of Haojing, you spot a familiar Wishen by the roadside. If you remember correctly, its name is Xiaoyao. Since the two of you have already been through \"life and death\" together, you decide to go over and say hello.",
         "nodes": [
           {
             "id": "17706055912062169",
@@ -77920,27 +77770,27 @@
             "dialogues": [
               {
                 "id": 51164901,
-                "content": "故人来之，不曾相迎，是我逍遥生之过，二位恕罪恕罪~",
+                "content": "Long has it been. I should have greeted you sooner. My apologies.",
                 "npc": 700385
               },
               {
                 "id": 51164902,
-                "content": "你你你——就是那个……之前莫名其妙抢我们东西，却又在后面救了我们一命的那个无由生对吧！又见到你了！",
+                "content": "Wait... aren't you the one who swiped our stuff on a whim — then turned around and saved us? So we meet again.",
                 "npc": 200002
               },
               {
                 "id": 51164903,
-                "content": "之前救了我们的事情，谢谢。",
+                "content": "Thank you for saving us before.",
                 "npc": 100001
               },
               {
                 "id": 51164904,
-                "content": "虽是萍水相逢，但小生所为却被二位牢记于心，让我很是感动，想要送你们什么东西用以报答这份知遇之恩啊……",
+                "content": "A chance meeting, yet you remember. I am touched. Please, let me give you something, to thank you for your regard.",
                 "npc": 700385,
                 "options": [
                   {
                     "id": 51164905,
-                    "content": "谢谢你，但是不用啦，我们也没做什么事。",
+                    "content": "That's not necessary. We didn't do much anyway.",
                     "impr": [
                       1041,
                       "Empathy",
@@ -77950,7 +77800,7 @@
                   },
                   {
                     "id": 51164906,
-                    "content": "无功不受禄，我们也没做什么，报答的事还是算了。",
+                    "content": "Still, we don't need any reward.",
                     "impr": [
                       1041,
                       "Benefit",
@@ -77960,7 +77810,7 @@
                   },
                   {
                     "id": 51164907,
-                    "content": "无由生还能送什么东西？",
+                    "content": "What could a Wishen possibly offer?",
                     "impr": [
                       1041,
                       "Chaos",
@@ -77972,71 +77822,71 @@
               },
               {
                 "id": 51164908,
-                "content": "此言差矣~我们三次相遇，第一次你手中有一我心许之物，乌龙一场，第二次是你们置身危境之中，我出手相助，这一次是你我荒野偶遇，缘分天成，实在难得。",
+                "content": "I'm afraid I can't agree. We've crossed paths three times now. First, when you carried something I thought I wanted — though that proved to be a mistake. Second, when you stood on the brink of death, and I intervened. And now, by chance, here in the wilds. Such encounters don't happen often.",
                 "npc": 700385
               },
               {
                 "id": 51164909,
-                "content": "且不说功禄一事，仅你我相遇三次之缘分，便是值得上我这一份礼物，你看如何？",
+                "content": "Rewards are not needed. That you should remember a chance meeting — that alone calls for a small token.",
                 "npc": 700385
               },
               {
                 "id": 51164910,
-                "content": "说的也是，无由生便是这般，无由而死，无由往生，死前了无牵挂，死后也岌岌无名啊。",
+                "content": "True. That's just how you Wishen are — you drift in without reason, leave without a trace. Nothing to hold you back in life, nothing left behind when you're gone.",
                 "npc": 700385
               },
               {
                 "id": 51164911,
-                "content": "所以你要送我们什么？",
+                "content": "...So what are you offering?",
                 "npc": 100001
               },
               {
                 "id": 51164912,
-                "content": "小生近日碰巧得知一绝世琴谱的下落，据说这琴谱乃是一名琴师的传家之宝，那琴师凭借高超琴艺，堆金积玉，驰名华胥。",
+                "content": "Recently, I happened upon the whereabouts of a peerless Qin score. Rumored to be the heirloom of a master musician. With unmatched skill, he amassed both fortune and renown across all of Huaxu.",
                 "npc": 700385
               },
               {
                 "id": 51164913,
-                "content": "多有人心向往之，斥资千金求购琴谱，他却守谱如玉，只为找到心中适合继承琴谱之人选，将琴谱传授于他。",
+                "content": "Many sought it with fervent hearts, offering mountains of gold for the score. Yet he guarded it, waiting only for the one he deemed worthy to inherit both the notes and the legacy.",
                 "npc": 700385
               },
               {
                 "id": 51164914,
-                "content": "你的意思是……让我和小仆从去继承他的琴谱？虽然白魔王是什么都很厉害啦，但是弹琴这种事情之前压根没学过。",
+                "content": "And you want us to inherit it? Hardly. I may be the Demon King, but I've never touched the strings in my life.",
                 "npc": 200002
               },
               {
                 "id": 51164915,
-                "content": "非也非也，在下得知的琴谱，并非需要经过漫长学习才可获得，而是轻而易举便能到手。",
+                "content": "Ah, but the score I speak of is not one that demands years of study. It can be obtained with ease, surprisingly so.",
                 "npc": 700385
               },
               {
                 "id": 51164916,
-                "content": "怎么样，二位可有兴趣？有了琴谱，二位随意将之抛售于织星客，便可赚得盆满钵满，届时用这笔钱游山玩水，岂不逍遥？",
+                "content": "What say you both? With that score in hand, you could sell it to any Starweaver and line your pockets well enough to roam the world freely. Doesn't that sound like a life of ease?",
                 "npc": 700385
               },
               {
                 "id": 51164917,
-                "content": "听起来好像的确很有诱惑力……小仆从，我们要不要听他的试试看，反正在华胥也不会遇到什么很大的危险吧。",
+                "content": "That does sound tempting... Little Minion, what do you think? It's Huaxu, we're not likely to run into serious troubles anyway.",
                 "npc": 200002
               },
               {
                 "id": 51164918,
-                "content": "好，逍遥生，我们想知道这绝世琴谱的下落。",
+                "content": "I agree. Xiaoyao, where is this score?",
                 "npc": 100001
               },
               {
                 "id": 51164919,
-                "content": "触机便悟，玲珑心思啊，这琴谱的下落呢，远在天边，近在眼前~",
+                "content": "Sharp as ever, truly. As for the score's whereabouts... well, far away as the clouds, yet close as the breath between us.",
                 "npc": 700385
               },
               {
                 "id": 51164920,
-                "content": "（逍遥生转身，看向了一旁的水面。）"
+                "content": "(Xiaoyao turns toward the lake.)"
               },
               {
                 "id": 51164921,
-                "content": "在湖里？那不是早就被水泡发了吗？算了算了，小仆从，我们用<H>钓鱼</>的方式试试看能不能把琴谱捞上来吧！",
+                "content": "In the lake? Wouldn't it be ruined by now? Ah, whatever. Little Minion, let's try <H>fishing</>. Maybe we'll reel it in.",
                 "npc": 200002
               }
             ]
@@ -78045,14 +77895,14 @@
       },
       {
         "id": 20031702,
-        "name": "前往指定位置钓鱼",
-        "desc": "逍遥生宣称水下有一本绝世琴谱，虽然听起来十分像是它在胡编乱造，但白来的便宜不捡白不捡，你打算钓一杆试试。",
+        "name": "Fish at the designated spot",
+        "desc": "Xiaoyao claims a legendary musical score lies hidden beneath the water. It sounds dubious — but what do you have to lose? You decide to cast a line and see what turns up.",
         "nodes": []
       },
       {
         "id": 20031703,
-        "name": "查看钓鱼结果",
-        "desc": "逍遥生宣称水下有一本绝世琴谱，虽然听起来十分像是它在胡编乱造，但白来的便宜不捡白不捡，你打算钓一杆试试。",
+        "name": "Check the fishing haul",
+        "desc": "Xiaoyao claims a legendary musical score lies hidden beneath the water. It sounds dubious — but what do you have to lose? You decide to cast a line and see what turns up.",
         "nodes": [
           {
             "id": "17706065442553653",
@@ -78103,8 +77953,8 @@
       },
       {
         "id": 20031704,
-        "name": "前往椒兰村",
-        "desc": "没有找到所谓的绝世琴谱，反而给自己钓上了一个大麻烦，居然钓上了一具沉于湖底多年的白骨，为了弄清死者的身份，你们决定前往椒兰村进行调查。",
+        "name": "Head to Jiaolan Village",
+        "desc": "You fail to reel in the so-called legendary score. Instead, you pull up something far more troubling: a skeleton that has lain at the bottom of the lake for years. To find out who the dead person was, you head to Jiaolan Village to investigate.",
         "nodes": [
           {
             "id": "17706077604796495",
@@ -78155,8 +78005,8 @@
       },
       {
         "id": 20031705,
-        "name": "前往少女所说的位置",
-        "desc": "在村中四处询问后，你们初步认定死者的身份为多年受到师傅宫先生霸凌的徒弟清商，为了进一步验证这个猜测，你们从卖包子的女孩处得知了琴师宫先生的住址。",
+        "name": "Head to the place the girl mentioned",
+        "desc": "After asking around the village, you begin to suspect the deceased was Qing Shang, an apprentice said to have suffered years of mistreatment at the hands of his master, Master Gong. To confirm your suspicion, you speak to the bun seller and learn where Gong lives.",
         "nodes": [
           {
             "id": "17706080335587699",
@@ -78175,11 +78025,27 @@
       },
       {
         "id": 20031706,
-        "name": "与脱险的老人交谈",
-        "desc": "你们赶到少女提供的位置处，却意外发现了一位被玄色狴犴围攻的老人……",
+        "name": "Talk to the old man you saved",
+        "desc": "You rush to the address the girl provided, only to find an elderly man under attack by a group of Sable Bi'an...",
         "nodes": [
           {
             "id": "17706081112459517",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "next": [
+              "17748604765523287"
+            ],
+            "dialogues": [
+              {
+                "id": 10010101,
+                "content": "Berry, I...",
+                "voice": "story/1001/100101/190F2A32",
+                "npc": 100001
+              }
+            ]
+          },
+          {
+            "id": "17748604765523287",
             "type": "TalkNode",
             "name": "对话节点",
             "dialogues": [
@@ -78195,25 +78061,9 @@
       },
       {
         "id": 20031707,
-        "name": "与神秘男子交谈",
-        "desc": "救下的老人居然就是那位寻觅许久的宫先生，你们对于白骨的死因与他进行了对峙，他不得不接受自己压力徒弟导致其自尽的事实，然而在你们以为真相水落石出之际，一名神秘男子却突然到访。",
+        "name": "Talk to the mysterious man",
+        "desc": "The old man you save turns out to be the very Master Gong you have been searching for. When you confront him about the dead man's identity, he is forced to admit that the relentless pressure he placed on his apprentice drove the young man to take his own life. Just as you begin to think the truth has finally come to light, a mysterious man appears.",
         "nodes": [
-          {
-            "id": "17706081305039967",
-            "type": "TalkNode",
-            "name": "对话节点",
-            "next": [
-              "177060818182310749"
-            ],
-            "dialogues": [
-              {
-                "id": 10010101,
-                "content": "Berry, I...",
-                "voice": "story/1001/100101/190F2A32",
-                "npc": 100001
-              }
-            ]
-          },
           {
             "id": "177060818182310749",
             "type": "TalkNode",
@@ -78231,8 +78081,8 @@
       },
       {
         "id": 20031708,
-        "name": "回到尸骨处",
-        "desc": "原来沉湖多年的是早年盗走琴谱的大徒弟清徵，并非椒兰村人口中受到迫害的二徒弟清商，此时完好站在你们面前的清商比任何证据都要直观。\n误会消弭后，清商以一曲清宵引解开自己与宫先生的多年心结，念在师兄弟一场的情分，他决定要跟随你们前往白骨处，好好安葬师兄。",
+        "name": "Return to the remains",
+        "desc": "It turns out that the person who sank to the bottom of the lake all those years ago was Qing Zhi, Master Gong's eldest apprentice, who stole the score in his youth — not Qing Shang, the younger apprentice whom the people of Jiaolan Village believed had been abused. With Qing Shang standing before you alive and well, the truth becomes immediately clear.\nOnce the misunderstanding has been cleared up, Qing Shang plays A Night of Tranquility, finally mending the long-standing rift between himself and his master. In remembrance of the bond they once shared as fellow apprentices, he decides to accompany you back to the remains and see his shixiong laid properly to rest.",
         "nodes": [
           {
             "id": "177060824346211772",
@@ -78267,8 +78117,8 @@
       },
       {
         "id": 20031710,
-        "name": "跟随逍遥生",
-        "desc": "你们赶回白骨处，逍遥生果然在此等候，但它却执意要带你们去一处风水宝地将清徵的尸骨安葬，虽然不知道它究竟安的什么心思，但你决定暂时顺着它来。",
+        "name": "Follow Xiaoyao",
+        "desc": "When you return to the remains, Xiaoyao is already waiting there. It insists on leading you to a burial site with excellent feng shui for Qing Zhi. Though you have no idea what it is really up to, you decide to play along for now.",
         "nodes": [
           {
             "id": "177060832859213225",
@@ -78287,8 +78137,8 @@
       },
       {
         "id": 20031711,
-        "name": "与逍遥生对话",
-        "desc": "一切众生，皆具德相，但因妄想执着，不能证得。事往矣，逍遥生似乎还有什么话想说……",
+        "name": "Talk to Xiaoyao",
+        "desc": "All beings are endowed with wisdom and virtue, yet, ensnared by delusion and attachment, they remain unable to realise them. The past cannot be undone... Xiaoyao seems to have more to say.",
         "nodes": [
           {
             "id": "17733963080211264978",
@@ -78312,7 +78162,8 @@
     "quests": [
       {
         "id": 20031801,
-        "name": "开启回忆【待包装】",
+        "name": "Enter the memory",
+        "desc": "As Haojing descends into chaos under Zhiliu's design, a certain Zhuyou quietly steels herself for the choice ahead.",
         "nodes": [
           {
             "id": "1770278557956386838",
@@ -78324,31 +78175,31 @@
             "dialogues": [
               {
                 "id": 51175201,
-                "content": "{nickname}，你有珍视的家人吗？",
+                "content": "Do you have someone you hold dear, {nickname}?",
                 "npc": 700390,
                 "next": 51175202
               },
               {
                 "id": 51175202,
-                "content": "如果有一天，你的家人从这个世界上消失了，再也无迹可寻……那时候，你会怎么做呢？",
+                "content": "If one day your family vanished without a trace... what would you do?",
                 "npc": 700390,
                 "next": 51175203
               },
               {
                 "id": 51175203,
-                "content": "那我会不顾一切地找到她，把她带回来，无论付出什么样的代价。",
+                "content": "I'd find her. No matter what it takes. I'd bring her back.",
                 "npc": 100001,
                 "next": 51175204
               },
               {
                 "id": 51175204,
-                "content": "不顾一切……吗……",
+                "content": "...No matter what it takes?",
                 "npc": 700390,
                 "next": 51175205
               },
               {
                 "id": 51175205,
-                "content": "（正当皓京因止流的布局陷入滔天大乱之际，在不为人知之处，一位祝由在心中暗暗下定了决心。）"
+                "content": "(As chaos spreads across Haojing under Zhiliu's scheme, somewhere unseen, a Zhuyou makes a silent choice.)"
               }
             ]
           },
@@ -78359,58 +78210,58 @@
             "dialogues": [
               {
                 "id": 51175206,
-                "content": "那，小仆从，我们赶紧往前……",
+                "content": "Little Minion, let's go—",
                 "npc": 200002,
                 "next": 51175207
               },
               {
                 "id": 51175207,
-                "content": "……稍等。",
+                "content": "Wait.",
                 "npc": 700390,
                 "next": 51175208
               },
               {
                 "id": 51175208,
-                "content": "抱歉，{nickname}，接下来的路，我……恐怕没法陪伴你了。",
+                "content": "Forgive me, {nickname}. From here onward,I can no longer walk beside you.",
                 "npc": 700390,
                 "next": 51175209
               },
               {
                 "id": 51175209,
-                "content": "倘若大风九章即将终结，在一切成为定局之前，我有必须完成的夙愿……",
+                "content": "If the Nine Chapters of Dafeng is nearing its end, then before fate is sealed, there's something I must finish.",
                 "npc": 700390,
                 "next": 51175210
               },
               {
                 "id": 51175210,
-                "content": "您追求的阴阳逆转之法本不可得，但虞泉既因烛阴之灾的缘故连通往隙，那或许便可有解。",
+                "content": "What you seek — the reversal of yin and yang — is no simple thing. But with the Spring of Yu linked to the Oblivion Rift through the Scourge of Zhuyin, there may be a way.",
                 "next": 51175211
               },
               {
                 "id": 51175211,
-                "content": "若在往隙开放时刻，前往忘川动用枯荣之术，届时，您想见之故人自当应召而来——前提是，她的灵魂还尚存于世。",
+                "content": "When the Oblivion Rift opens, go to the River of Forgetting and use the Art of Ephemerality. The person you wish to see may answer your call — if her soul still lingers in this world.",
                 "next": 51175212
               },
               {
                 "id": 51175212,
-                "content": "然后，您便可以使用枯荣术最终极的阴阳逆转秘法。只是，您应当知晓，那秘法要求施术者拥有极高资质，即使是祝由也罕有成功。而代价更是……",
+                "content": "Then you may attempt the final reversal. But you should know: it demands rare talent. Even among Zhuyou, few succeed. And the cost is...",
                 "next": 51175213
               },
               {
                 "id": 51175213,
-                "content": "…………",
+                "content": "...",
                 "npc": 700390,
                 "next": 51175214
               },
               {
                 "id": 51175214,
-                "content": "扶疏，你不用道歉。作为朋友，我只希望你能实现自己的心愿。",
+                "content": "Fushu, there is no need to apologise. As your friend, I only hope you find what you're looking for.",
                 "npc": 100001,
                 "next": 51175215
               },
               {
                 "id": 51175215,
-                "content": "……{nickname}，谢谢。",
+                "content": "...Thank you, {nickname}.",
                 "npc": 700390
               }
             ]
@@ -78419,7 +78270,8 @@
       },
       {
         "id": 20031803,
-        "name": "前往往隙【待包装】",
+        "name": "Search for the Oblivion Rift",
+        "desc": "Amid the turmoil in Haojing, Fushu bids {nickname} a hurried farewell.\nIf the Nine Chapters of Dafeng are truly nearing their end, then before that final moment arrives, she will do whatever it takes to see someone from her past and fulfil the wish she has carried for so long.",
         "nodes": [
           {
             "id": "1770278966032389765",
@@ -78428,35 +78280,35 @@
             "dialogues": [
               {
                 "id": 51175218,
-                "content": "谁……有谁能来……救、救我……",
+                "content": "Someone... please help me...",
                 "npc": 700393,
                 "next": 51175219
               },
               {
                 "id": 51175219,
-                "content": "（大风九章的终结只在一念之间，若是因施救而误了进入往隙的时辰……）",
+                "content": "(The Nine Chapters of Dafeng is fading. If I tarry now and lose the moment...)",
                 "npc": 700390,
                 "options": [
                   {
                     "id": 51175220,
-                    "content": "救。",
+                    "content": "Help.",
                     "next": 51175221
                   },
                   {
                     "id": 51175222,
-                    "content": "不救。",
+                    "content": "Do not help.",
                     "next": 51175223
                   }
                 ]
               },
               {
                 "id": 51175221,
-                "content": "（若是对求救之人视若罔闻，扶疏还如何对得起家传祖训，对得起祝由的职责……）",
+                "content": "(If I ignore someone calling for help, how can I claim to follow my family's teachings... or uphold the duty of a Zhuyou?)",
                 "npc": 700390
               },
               {
                 "id": 51175223,
-                "content": "抱歉……",
+                "content": "I'm sorry...",
                 "npc": 700390
               }
             ]
@@ -78468,19 +78320,19 @@
             "dialogues": [
               {
                 "id": 51175224,
-                "content": "咳，救……救救我……我不想死在这里……我的家人在等着我回去……",
+                "content": "Cough... someone... please help me... I don't want to die here... My family is waiting for me...",
                 "npc": 700393,
                 "next": 51175225
               },
               {
                 "id": 51175225,
-                "content": "……………………",
+                "content": "...",
                 "npc": 700390,
                 "next": 51175226
               },
               {
                 "id": 51175226,
-                "content": "唉……",
+                "content": "Hah...",
                 "npc": 700390
               }
             ]
@@ -78492,28 +78344,28 @@
             "dialogues": [
               {
                 "id": 51175227,
-                "content": "稍等，我来为你调理。",
+                "content": "Wait. I will treat you.",
                 "npc": 700390,
                 "next": 51175228
               },
               {
                 "id": 51175228,
-                "content": "咳……咳……是祝由大人吗？我好痛……",
+                "content": "Are you... a Zhuyou? It hurts...",
                 "npc": 700393,
                 "next": 51175229
               },
               {
                 "id": 51175229,
-                "content": "我会治愈你的伤势，还请忍耐片刻。",
+                "content": "Hold still. I will mend your wounds.",
                 "npc": 700390,
                 "options": [
                   {
                     "id": 51175230,
-                    "content": "治疗患者。",
+                    "content": "Treat the wounded.",
                     "options": [
                       {
                         "id": 51175231,
-                        "content": "（奇怪？此等伤势，以枯荣之术不应当如此吃力……难道是受大风九章陷入紊乱的影响……）",
+                        "content": "(Strange... injuries like this shouldn't be this exhausting to treat with the Art of Ephemerality. Is it because the Nine Chapters has fallen into disorder...?)",
                         "next": 51175232
                       }
                     ],
@@ -78523,22 +78375,22 @@
               },
               {
                 "id": 51175232,
-                "content": "咳咳……谢谢……若是治不好……也不必……勉强……",
+                "content": "Thank you... If I can't be saved... please don't force yourself...",
                 "npc": 700393,
                 "next": 51175233
               },
               {
                 "id": 51175233,
-                "content": "凝神，不要轻言放弃。",
+                "content": "Steady yourself. Do not surrender yet.",
                 "npc": 700390,
                 "options": [
                   {
                     "id": 51175234,
-                    "content": "继续施放枯荣之术。",
+                    "content": "Continue casting the Art of Ephemerality.",
                     "options": [
                       {
                         "id": 51175235,
-                        "content": "（只要大风九章尚未消逝……）",
+                        "content": "(As long as the Nine Chapters of Dafeng still holds...)",
                         "next": 51175236
                       }
                     ],
@@ -78548,48 +78400,48 @@
               },
               {
                 "id": 51175236,
-                "content": "唔……",
+                "content": "Hmm...",
                 "npc": 700390,
                 "next": 51175237
               },
               {
                 "id": 51175237,
-                "content": "（只要我再拼命一点……）",
+                "content": "(Just a little more...)",
                 "npc": 700390,
                 "next": 51175238
               },
               {
                 "id": 51175238,
-                "content": "咳……呃…………",
+                "content": "Cough...",
                 "npc": 700390,
                 "next": 51175239
               },
               {
                 "id": 51175239,
-                "content": "（只要我能坚持下去……）",
+                "content": "(Almost there...)",
                 "npc": 700390,
                 "next": 51175240
               },
               {
                 "id": 51175240,
-                "content": "呃啊！！！",
+                "content": "Aaaah!!!",
                 "npc": 700393,
                 "next": 51175241
               },
               {
                 "id": 51175241,
-                "content": "随着萦绕在扶疏与伤者之间的白色光点散去，扶疏的面色肉眼可见地苍白了起来。地上的伤者虽然脱离了危险，但却因剧痛而陷入了昏迷。",
+                "content": "The white light surrounding them slowly fades. Fushu staggers, her face drained of color. The man is stable, though unconscious from the pain.",
                 "next": 51175242
               },
               {
                 "id": 51175242,
-                "content": "呼……呼…………",
+                "content": "Huh...",
                 "npc": 700390,
                 "next": 51175243
               },
               {
                 "id": 51175243,
-                "content": "脉象已趋平缓，稍事休息便可醒转。抱歉不能留下来照顾你……但我该继续赶路了……",
+                "content": "Your pulse has grown calm. With rest, you will wake. Forgive me, I cannot linger... the road still calls.",
                 "npc": 700390
               }
             ]
@@ -78598,7 +78450,8 @@
       },
       {
         "id": 20031805,
-        "name": "？？？【待包装】",
+        "name": "???",
+        "desc": "Fushu does all she can to tend to the wounded, but with the Nine Chapters of Dafeng in disarray and no longer lending her their power, the effort leaves her badly weakened.\nAs consciousness slips from her grasp, she falls into a memory of the past...",
         "nodes": [
           {
             "id": "1770281427083396372",
@@ -78610,37 +78463,37 @@
             "dialogues": [
               {
                 "id": 51175301,
-                "content": "我……这是在哪？",
+                "content": "...Where am I?",
                 "npc": 700390,
                 "next": 51175302
               },
               {
                 "id": 51175302,
-                "content": "皓京，泽生阁。",
+                "content": "Haojing. Zesheng Pharmacy.",
                 "npc": 700392,
                 "next": 51175303
               },
               {
                 "id": 51175303,
-                "content": "泽生阁……虽不知是何地界，但还是感谢各位在我昏迷这段时间的照料……",
+                "content": "Zesheng Pharmacy... the name is unfamiliar to me. Still, thank you for tending to me while I was unconscious.",
                 "npc": 700390,
                 "next": 51175304
               },
               {
                 "id": 51175304,
-                "content": "呵呵，昏迷……在您看来，确实只是一次力竭的昏迷啊。",
+                "content": "\"Unconscious,\" you say... To you, it was simply exhaustion.",
                 "npc": 700392,
                 "next": 51175305
               },
               {
                 "id": 51175305,
-                "content": "但事实是，扶风祖师当年为了延缓您的死亡，冰冻了您的身躯，泽生阁花了百年时间，才终于找到化解枯荣术沉疴之法，并将您唤醒。",
+                "content": "But the truth is: to slow death's approach, Fufeng placed your body in frozen stillness a century ago. For a hundred years, Zesheng Pharmacy has sought the means to undo the ailment brought by the Art of Ephemerality. Only now have we succeeded in waking you.",
                 "npc": 700392,
                 "next": 51175306
               },
               {
                 "id": 51175306,
-                "content": "……百年？",
+                "content": "...A hundred years?",
                 "npc": 700390
               }
             ]
@@ -78652,120 +78505,120 @@
             "dialogues": [
               {
                 "id": 51175307,
-                "content": "夜晚的泽生阁格外安静，院子中偶尔响起微弱的的虫鸣，扶疏翻阅着卷宗，指尖摩挲的沙沙声在这个夜晚显得无比清晰。",
+                "content": "The Pharmacy is quiet at night. Insects murmur faintly in the courtyard. Fushu turns the pages of old records, the sound of paper against her fingers sharp in the stillness.",
                 "next": 51175308
               },
               {
                 "id": 51175308,
-                "content": "（看来我终究还是没能阻止百年前那场大疫的蔓延……哪怕烛阴最终被封印，那场大疫也还是夺走了无数生命。）",
+                "content": "(So I failed after all. Even though Zhuyin was sealed, the plague still swept across the land... countless lives lost.)",
                 "npc": 700390,
                 "next": 51175309
               },
               {
                 "id": 51175309,
-                "content": "（姐姐在大疫中将我冷冻，穷极一生寻找如何阻止枯荣之术反噬的办法，但直到她溘然长逝也未能成功，只得将希望寄托于后世之人。）",
+                "content": "(Fufeng froze me in the midst of the Great Plague, hoping to buy what little time remained. She spent the rest of her days seeking a way to undo the Art of Ephemerality's wasting — but in the end, death claimed her first. All she could leave behind was hope... and the faith that those who came after might finish what she could not.)",
                 "npc": 700390,
                 "next": 51175310
               },
               {
                 "id": 51175310,
-                "content": "也就是如今泽生阁的药师们……",
+                "content": "Those are... the healers of Zesheng Pharmacy.",
                 "npc": 700390,
                 "next": 51175311
               },
               {
                 "id": 51175311,
-                "content": "扶疏阁下，夜深露重，还是早点回去休息吧。您才刚刚苏醒不久，就在这里不眠不休地翻阅卷宗……",
+                "content": "Lady Fushu, it is late. You should rest. You have only just awakened, yet here you sit, night after night, lost in these records.",
                 "npc": 700392,
                 "next": 51175312
               },
               {
                 "id": 51175312,
-                "content": "泽生阁用了百年才找到医治您的方法，要是您因这等小事搞垮了身子，却是辜负了扶风祖师的殷殷切望。",
+                "content": "A century we spent searching for the means to save you. To let yourself waste now over such small matters would be to betray the hope Fufeng placed in you.",
                 "npc": 700392,
                 "next": 51175313
               },
               {
                 "id": 51175313,
-                "content": "…………",
+                "content": "...",
                 "npc": 700390,
                 "next": 51175314
               },
               {
                 "id": 51175314,
-                "content": "抱歉。但我熟悉的人事都已故去，这些卷宗，是我能找到与过往联系的唯一方法了。",
+                "content": "I understand. But everyone I once knew is gone. These records are the only connection I have left to that world.",
                 "npc": 700390,
                 "next": 51175315
               },
               {
                 "id": 51175315,
-                "content": "扶疏阁下……您今后真的要独自回到枯荣阁，继续行使祝由之责吗？泽生阁能够为您提供一处安生之所，您不必……",
+                "content": "Do you truly mean to return to the Hall of Ephemerality alone? To carry on as a Zhuyou healer? Here, we could offer you a place of peace, a life undisturbed. You need not...",
                 "npc": 700392,
                 "next": 51175316
               },
               {
                 "id": 51175316,
-                "content": "劳您费心了，我的去意已决。",
+                "content": "Thank you for your kindness. But my decision is final.",
                 "npc": 700390,
                 "next": 51175317
               },
               {
                 "id": 51175317,
-                "content": "恕我提醒一句，扶疏阁下。以您现在的身体状况，再去频繁使用枯荣之术，恐有性命之虞。",
+                "content": "Then I will speak plainly. Given your current condition, frequent use of the Art of Ephemerality may cost you your life.",
                 "npc": 700392,
                 "next": 51175318
               },
               {
                 "id": 51175318,
-                "content": "扶风祖师生前最为牵挂的就是您的身体。如今华胥药学已经在祖师的创举下开枝散叶，有我等药师代劳，您今后不必再去频繁使用伤身劳命的枯荣之术了。",
+                "content": "Fufeng's deepest care, until her last days, was for your well-being. Now Huaxu medicine has spread wide, rooted in the foundation she laid. We who follow can bear the work, and you need no longer call upon the Art of Ephemerality so often. It drains too deeply. Let us carry it in your stead.",
                 "npc": 700392,
                 "next": 51175319
               },
               {
                 "id": 51175319,
-                "content": "多谢提点。",
+                "content": "I appreciate the reminder.",
                 "npc": 700390,
                 "next": 51175320
               },
               {
                 "id": 51175320,
-                "content": "唉，扶风祖师说您素来性格执拗，今天我算是见识到了。",
+                "content": "She once told me you were unyielding. Today, I see she spoke true.",
                 "npc": 700392,
                 "next": 51175321
               },
               {
                 "id": 51175321,
-                "content": "……倘若活到今日的是姐姐，或许会做得比我好很多吧。",
+                "content": "...If my sister had survived to this day, perhaps she would have done all this far better than I.",
                 "npc": 700390,
                 "next": 51175322
               },
               {
                 "id": 51175322,
-                "content": "无由生尚能因执念尚存而流连于世间，我却无牵无挂，放眼黄泉碧落，举目无一亲人，也不知今后此身归处……尚不如一缕亡魂。",
+                "content": "Even a Wishen can linger in this world if bound by attachment. Yet I remain, with no family, no ties... Between heaven and earth, I stand alone.",
                 "npc": 700390,
                 "next": 51175323
               },
               {
                 "id": 51175323,
-                "content": "扶疏阁下……",
+                "content": "Lady Fushu...",
                 "npc": 700392,
                 "next": 51175324
               },
               {
                 "id": 51175324,
-                "content": "若是连祝由的家传职责也一并摈弃，扶疏便更不知生而为何了。",
+                "content": "If I abandon my duty as a Zhuyou, then what remains of me?",
                 "npc": 700390,
                 "next": 51175325
               },
               {
                 "id": 51175325,
-                "content": "生死有命，我的命，早就该在百年前的大疫中消逝……",
+                "content": "My life should have ended in that plague a century ago.",
                 "npc": 700390,
                 "next": 51175326
               },
               {
                 "id": 51175326,
-                "content": "枯荣之术乃扶氏的立身之本，扶氏一族因祝由而生，因枯荣而死，这就是我们的宿命……",
+                "content": "The Art of Ephemerality is the foundation of the Fu lineage. We live by it. We die by it. That is the path we chose.",
                 "npc": 700390
               }
             ]
@@ -78774,17 +78627,20 @@
       },
       {
         "id": 20031806,
-        "name": "前往往隙【待包装】",
+        "name": "Search for the Oblivion Rift",
+        "desc": "Fushu comes to. There is little time left — she must reach the River of Forgetting before the Nine Chapters of Dafeng completely unravel.",
         "nodes": []
       },
       {
         "id": 20031807,
-        "name": "前往忘川【待包装】",
+        "name": "Head to the River of Forgetting",
+        "desc": "Fushu comes to. There is little time left — she must reach the River of Forgetting before the Nine Chapters of Dafeng completely unravel.",
         "nodes": []
       },
       {
         "id": 20031808,
-        "name": "前往泽生阁【待包装】",
+        "name": "Move forward",
+        "desc": "Fushu intends to give up her life in the River of Forgetting in exchange for her sister Fufeng's return to the world of the living, but Fufeng stops her from making that sacrifice.\nBefore fading away, she leaves Fushu with these final words: \"Live your life... in whatever way your heart truly wish\"\nUnable to carry through with her sacrifice after all, Fushu leaves the River of Forgetting and wanders the streets of Haojing, dazed and heartsick...",
         "nodes": []
       }
     ]
@@ -79825,13 +79681,13 @@
     "quests": [
       {
         "id": 40012103,
-        "name": "进入休憩之所",
+        "name": "Enter Sanctuary",
         "nodes": []
       },
       {
         "id": 40012104,
-        "name": "前往净界岛",
-        "desc": "前往净界岛我和贝蕾曾经生活的家，我们在它狭窄的屋檐下相伴度过了十多年的时光。总有一天，我会和她重新回到这里。",
+        "name": "Head to Purgatorio Island",
+        "desc": "Back to the home where Berenica and I once lived. Beneath its narrow eaves, we spent more than a decade side by side. One day, I'll return here with her.",
         "nodes": [
           {
             "id": "17691384314992220742",
@@ -79872,8 +79728,8 @@
     "quests": [
       {
         "id": 40012200,
-        "name": "前往修普诺斯之家门口",
-        "desc": "我和赛琪第一次见面的地方。在这座冰冷的城市里，她是第一个将我当做朋友真心对待的人。",
+        "name": "Head to the entrance of Hypnos' House",
+        "desc": "The place where I first met Psyche. In this cold city, she was the first person to show me real kindness.",
         "nodes": [
           {
             "id": "1769168247919747716",
@@ -79920,8 +79776,8 @@
     "quests": [
       {
         "id": 40012300,
-        "name": "前往泪湖",
-        "desc": "我与赛琪别离的地方。纵使命运残酷，她依然选择无悔地燃烧。我会记住和她的约定，代替她好好看着这个世界。",
+        "name": "Head to Lamenting Lake",
+        "desc": "The place where I lost Psyche. Though fate was cruel, she chose to burn brightly without regret. I'll keep our promise and go on seeing the world for the both of us.",
         "nodes": [
           {
             "id": "1769410805760750887",
@@ -79962,8 +79818,8 @@
     "quests": [
       {
         "id": 40012400,
-        "name": "前往小剧场",
-        "desc": "幻景与布鲁斯的藏身之地。那沉埋于淤泥之中，却依然闪闪发光的“梦想”，究竟是珍贵的希望，还是通往毁灭的妄念？",
+        "name": "Head to the Mini Theatre",
+        "desc": "The hideout of Phantasio and Blues. That \"dream\" buried in the mire, yet still gleaming... was it a precious hope, or a delusion that led to ruin?",
         "nodes": [
           {
             "id": "17694113571051863211",
@@ -80010,8 +79866,8 @@
     "quests": [
       {
         "id": 40012500,
-        "name": "前往盖雷亚剧院",
-        "desc": "在这里，我曾见证一场凄美的谢幕。舞台上唯一的演员在此燃烧他全部的热情与生命，为观众献上了最完美的表演。",
+        "name": "Head to the Galea Theatre",
+        "desc": "Here, I once witnessed a tragic yet beautiful final performance. Upon that stage, the lone performer gave everything he had — his passion, his life — to give his audience one perfect final act.",
         "nodes": [
           {
             "id": "17694116128592975260",
@@ -80052,8 +79908,8 @@
     "quests": [
       {
         "id": 40012600,
-        "name": "前往百年春",
-        "desc": "烟津渡的地标性建筑，当地最大的商会。我于此处接下止流的委托，开启了在华胥的旅程。",
+        "name": "Head to EverSpring",
+        "desc": "A landmark in Mistwharf, and home to the largest chamber of commerce in the area. It was here that I accepted Zhiliu's commission and set out on my journey through Huaxu.",
         "nodes": [
           {
             "id": "17694117992554087674",
@@ -80100,8 +79956,8 @@
     "quests": [
       {
         "id": 40012700,
-        "name": "前往执律阁",
-        "desc": "华胥神明“太皓”的居所，止流在此向我坦白了她孤注一掷的赌局。随着沉默的神明被唤醒，华胥终于迎来崭新的时代。",
+        "name": "Go to the Hall of Adjudication",
+        "desc": "The dwelling of Taihao, one of Huaxu's gods. It was here that Zhiliu revealed to me the perilous plan for which she had staked everything. And when the sealed god finally awoke, Huaxu at last stepped into a new era.",
         "nodes": [
           {
             "id": "17694125753735204189",
@@ -80148,12 +80004,12 @@
     "quests": [
       {
         "id": 40012800,
-        "name": "前往休憩之所门口",
+        "name": "Head to the entrance of Sanctuary",
         "nodes": []
       },
       {
         "id": 40012801,
-        "name": "前往休憩之所门口",
+        "name": "Head to the entrance of Sanctuary",
         "nodes": [
           {
             "id": "17695924776521881207",
@@ -80364,7 +80220,7 @@
       },
       {
         "id": 40012802,
-        "name": "进入休憩之所",
+        "name": "Enter Sanctuary",
         "nodes": [
           {
             "id": "17695924776521881213",
@@ -80416,7 +80272,7 @@
     "quests": [
       {
         "id": 40012900,
-        "name": "回休憩之所门口",
+        "name": "Return to the entrance of Sanctuary",
         "nodes": [
           {
             "id": "1773630006667523",

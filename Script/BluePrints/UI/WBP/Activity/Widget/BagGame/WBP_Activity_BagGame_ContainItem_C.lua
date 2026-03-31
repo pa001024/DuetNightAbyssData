@@ -95,12 +95,14 @@ function M:OnDrop(MyGeometry, PointerEvent, Operation)
   if Operation.Tag ~= "BagGameDisPlayItem" then
     return false
   end
-  if self.PlayScreen and self.PlayScreen._FlushPendingHighlight then
+  local bSuccess = false
+  local DragUI = Operation.DefaultDragVisual
+  if self.PlayScreen and self.PlayScreen.FinalizeDropHighlight then
+    self.PlayScreen:FinalizeDropHighlight(self.Row, self.Col, DragUI)
+  elseif self.PlayScreen and self.PlayScreen._FlushPendingHighlight then
     self.PlayScreen:_FlushPendingHighlight()
   end
-  local bSuccess = false
   if self.PlayScreen and self.PlayScreen.PlaceItemAtCell then
-    local DragUI = Operation.DefaultDragVisual
     bSuccess = self.PlayScreen:PlaceItemAtCell(self.Row, self.Col, DragUI, Operation)
     if bSuccess then
       AudioManager(self):PlayUISound(nil, "event:/ui/activity/auto_chess_cell_click_replace", nil, nil)

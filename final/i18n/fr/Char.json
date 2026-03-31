@@ -3196,7 +3196,7 @@
         "cd": 2,
         "字段": [
           {
-            "名称": "[天工火药]转化比例",
+            "名称": "Taux de conversion de [Poudre d’artifice]",
             "值": 0.5,
             "格式": "远程武器最大弹药量*{%}"
           },
@@ -3270,13 +3270,13 @@
             "削韧": 20
           },
           {
-            "名称": "Zone d’effet des obus à détonation différée de [Grande épée d’artifice]",
+            "名称": "Zone d’effet des projectiles traqueurs de [Pluie d’étoiles]",
             "影响": "技能范围",
             "值": 3,
             "格式": "{}m"
           },
           {
-            "名称": "[遨游]持续时间",
+            "名称": "Durée d’[Errance céleste]",
             "影响": "技能耐久",
             "值": 24,
             "格式": "{}"
@@ -3369,7 +3369,7 @@
         "icon": "Suyi03",
         "字段": [
           {
-            "名称": "每层[蓄势]回复神智",
+            "名称": "Lucidité restaurée par cumul d’[Accumulation]",
             "值": 1,
             "格式": "{}"
           },
@@ -3399,7 +3399,7 @@
             "格式": "{}m"
           },
           {
-            "名称": "每层[蓄势]增加伤害倍率",
+            "名称": "Bonus de dégâts par cumul d’[Accumulation]",
             "值": [
               0.81,
               1,
@@ -3471,8 +3471,16 @@
           }
         ],
         "术语解释": {
-          "Puissance accumulée": "Chaque cumul retiré restaure de la Lucidité et augmente le multiplicateur de dégâts de la méchapoupée Fengshi pour cette activation."
-        }
+          "蓄势": "Chaque cumul retiré restaure de la Lucidité et augmente le multiplicateur de dégâts de la méchapoupée Fengshi pour cette activation."
+        },
+        "子技能": [
+          {
+            "id": 150405,
+            "类型": "",
+            "icon": "",
+            "名称": "蓄势"
+          }
+        ]
       },
       {
         "id": 150404,
@@ -4821,7 +4829,7 @@
       "Réduit les dégâts subis de la part des ennemis affectés par [Venin de l’amour] de 30%.",
       "[Rosée de Lada] niveau +2 ; [Jugement du cœur] niveau +1.",
       "Lorsque Rebecca vainc une cible affectée par [Venin de l’amour], elle gagne 1 cumul conférant +3% d’Attaque pendant 15 s, jusqu’à 50 cumuls.\nL’obtention d’un nouveau cumul réinitialise la durée restante.",
-      "[召唤物·海月水母]攻击时，有概率直接附加8层[爱之毒]，概率为自身近战武器暴击率的100%。\n[召唤物·海月水母]攻击时有30%概率额外结算1次目标的[爱之毒]伤害。\n场上每存在1个[召唤物·海月水母]，自身和[召唤物·海月水母]造成的伤害提高12%。"
+      "Lorsque l’Invocation : Aurelia attaque, elle a une probabilité d’appliquer directement 8 cumuls de [Venin de l’amour], équivalente à 100% du Taux CRIT de votre arme de mêlée.\nLorsque l’Invocation : Aurelia attaque, elle a 30% de chances de déclencher une fois supplémentaire les dégâts de [Venin de l’amour] de la cible.\nPour chaque Invocation : Aurelia présente sur le terrain, les dégâts que vous infligez ainsi que ceux de l’invocation sont augmentés de 12%."
     ],
     "碎片": 1002101,
     "第七溯源消耗": [
@@ -7745,19 +7753,19 @@
     "技能": [
       {
         "id": 320201,
-        "名称": "Rafale pourpre",
+        "名称": "Banquet écarlate",
         "类型": "Dégâts",
-        "描述": "Projette toutes les [Lames tournoyantes], inflige des Dégâts Pyro aux ennemis devant et confère 1 cumul d’[Ébriété].\nMaintenir l’attaque ou utiliser une compétence normale ou une attaque de mêlée permet d’enchaîner des attaques successives.",
+        "描述": "Projette toutes les [Lames du sommelier], infligeant des Dégâts Pyro aux ennemis dans la zone et vous conférant 1 cumul permanent d’[Ébriété légère], cumulable jusqu’à 10 fois. À la fin de [Banquet écarlate], tous les cumuls d’[Ébriété légère] sont supprimés.\nPendant la durée de la compétence, maintenez la compétence ou l’attaque de mêlée pour enchaîner les activations.",
         "icon": "Kami01",
         "字段": [
           {
-            "名称": "Coût en Lucidité par attaque de [Rafale pourpre]",
+            "名称": "Coût en Lucidité par activation de [Banquet écarlate]",
             "影响": "技能效益",
             "值": 10,
             "格式": "{}"
           },
           {
-            "名称": "Dégâts de [Rafale pourpre]",
+            "名称": "Dégâts de [Banquet écarlate]",
             "影响": "技能威力",
             "值": [
               1.67,
@@ -7776,13 +7784,13 @@
             "削韧": 25
           },
           {
-            "名称": "Zone d’effet de [Rafale pourpre]",
+            "名称": "Zone d’effet de [Banquet écarlate]",
             "影响": "技能范围",
             "值": 3,
             "格式": "{}m"
           },
           {
-            "名称": "Bonus de Vitesse de compétence par cumul d’[Ébriété]",
+            "名称": "Bonus de Vitesse de compétence par cumul d’[Ébriété légère]",
             "值": [
               0.042,
               0.044,
@@ -7799,7 +7807,7 @@
             ]
           },
           {
-            "名称": "Vitesse de projection des [Lames tournoyantes] par cumul d’[Ébriété]",
+            "名称": "Bonus de vitesse de projection des [Lames du sommelier] par cumul d’[Ébriété légère]",
             "值": [
               0.265,
               0.28,
@@ -7871,12 +7879,12 @@
           }
         ],
         "术语解释": {
-          "Ébriété": "La Vitesse de compétence est augmentée. La durée de [Lames tournoyantes] est suspendue. Vous devenez immunisé aux interruptions. Tous les cumuls d’[Ébriété] sont dissipés lorsque [Rafale pourpre] se termine."
+          "Ébriété légère": "Augmente la Vitesse de compétence et la vitesse de projection des [Lames du sommelier]. Pendant la durée de l’effet, leur durée est suspendue et vous ne subissez pas d’interruption en cas de dégâts."
         },
         "子技能": [
           {
             "id": 320211,
-            "名称": "Ébriété",
+            "名称": "Ébriété légère",
             "类型": "Dégâts",
             "icon": "Kami01"
           }
@@ -7884,9 +7892,9 @@
       },
       {
         "id": 320202,
-        "名称": "Valse écarlate",
+        "名称": "Valse du Cabernet",
         "类型": "Bonus",
-        "描述": "Invoque 8 [Lames tournoyantes] qui orbitent autour du personnage.",
+        "描述": "Génère 8 [Lames du sommelier] qui orbitent autour du personnage. Un maximum de 8 [Lames du sommelier] peut être présent simultanément.",
         "icon": "Kami02",
         "字段": [
           {
@@ -7896,7 +7904,7 @@
             "格式": "{}"
           },
           {
-            "名称": "Dégâts des [Lames tournoyantes]",
+            "名称": "Dégâts des [Lames du sommelier]",
             "影响": "技能威力",
             "值": [
               0.27,
@@ -7915,13 +7923,13 @@
             "削韧": 1
           },
           {
-            "名称": "Durée des [Lames tournoyantes]",
+            "名称": "Durée des [Lames du sommelier]",
             "影响": "技能耐久",
             "值": 20,
             "格式": "{}s"
           },
           {
-            "名称": "Vitesse de projection des [Lames tournoyantes]",
+            "名称": "Vitesse de projection des [Lames du sommelier]",
             "值": 20,
             "格式": "{}m/s"
           }
@@ -7981,18 +7989,18 @@
           }
         ],
         "术语解释": {
-          "Lame du sommelier": "Chaque [Lames tournoyantes] inflige des dégâts aux ennemis tous les 2 s pendant qu’elle orbite autour du personnage.\nLorsqu’elle est projetée, elle vole sur une certaine distance avant de revenir. Si elle est touchée par [Rafale pourpre] durant son retour, elle est projetée à nouveau vers un ennemi aléatoire dans la portée.\nÀ chaque projection, sa vitesse est mise à jour en fonction des cumuls de [Ébriété].\nElle inflige des dégâts 1 fois sur son passage, et jusqu’à 8 [Lames tournoyantes] peuvent être présentes à la fois."
+          "Lame du sommelier": "Lorsque les [Lames du sommelier] orbitent autour du personnage, elles infligent des dégâts aux ennemis sur leur trajectoire.\nAprès avoir été projetées, elles parcourent une certaine distance avant de revenir, infligeant des dégâts à l’aller comme au retour.\nSi elles sont touchées par une attaque de [Banquet écarlate] lors du retour, elles sont de nouveau projetées vers une cible aléatoire à proximité."
         }
       },
       {
         "id": 320203,
-        "名称": "Sang au-dessus du vin",
+        "名称": "Gorgée dévastatrice",
         "类型": "Passive",
-        "描述": "Les [Lames tournoyantes] appliquent 1 [Lacération], jusqu’à un maximum de 20 cumuls.",
+        "描述": "Les dégâts des [Lames du sommelier] appliquent 1 cumul permanent de [Blessure écarlate], cumulable jusqu’à 40 fois.",
         "icon": "Kami03",
         "字段": [
           {
-            "名称": "Bonus de dégâts de détonation de [Lacération]",
+            "名称": "Dégâts de [Blessure écarlate]",
             "影响": "技能威力",
             "值": [
               0.24,
@@ -8008,7 +8016,7 @@
               0.84,
               0.9
             ],
-            "格式": "{%}*远程武器多重射击属性值",
+            "格式": "{%}*远程武器多重射击",
             "削韧": 25
           }
         ],
@@ -8067,14 +8075,14 @@
           }
         ],
         "术语解释": {
-          "Lacération": "Lorsqu’une cible affectée par [Blessure écarlate] subit des Dégâts Pyro (à l’exception des dégâts de [Lame du sommelier] et de [Blessure écarlate]), 1 cumul de [Blessure écarlate] est retiré et inflige une instance supplémentaire de Dégâts Pyro provenant de Camilla.\nChaque cible peut perdre jusqu’à 20 cumuls par seconde."
+          "Blessure écarlate": "Lorsqu’une cible affectée par [Blessure écarlate] subit des Dégâts Pyro (à l’exception des dégâts de [Lame du sommelier] et de [Blessure écarlate]), 1 cumul de [Blessure écarlate] est retiré et inflige une instance supplémentaire de Dégâts Pyro provenant de Camilla.\nChaque cible peut perdre jusqu’à 20 cumuls par seconde."
         }
       },
       {
         "id": 320204,
-        "名称": "Sang au-dessous du vin",
+        "名称": "Ivresse persistante",
         "类型": "Passive",
-        "描述": "Détonner [Lacération] accorde 1 [Marque d’ivresse]. Toutes les 20 [Marques d’ivresse], la Lucidité est restaurée.",
+        "描述": "Lorsqu’un cumul de [Blessure écarlate] est supprimé, le personnage à l’origine de cette suppression obtient 1 cumul permanent d’[Ivresse exaltée]. À 20 cumuls, [Ivresse exaltée] est supprimée et restaure de la Lucidité.",
         "icon": "ExtraPassive",
         "字段": [
           {
@@ -8086,7 +8094,7 @@
       },
       {
         "id": 320291,
-        "名称": "瑰色裙",
+        "名称": "Ourlet écarlate",
         "类型": "Support",
         "描述": "[仅在作为协战同伴登场时生效]\n自身和火属性队友昂扬提高。",
         "icon": "PhantomPassive",
@@ -8099,11 +8107,11 @@
       }
     ],
     "溯源": [
-      "Les dégâts des [Lames tournoyantes] ont 30% % de chances d’appliquer 1 [Lacération] supplémentaire.",
-      "Lorsque vous êtes équipé de [Lames tournoyantes], les dégâts subis sont réduits de 15% et les dégâts infligés augmentent de 55%.",
-      "[Rafale pourpre] niveau +2 ; [Valse écarlate] niveau +1.",
-      "Les dégâts causés par la détonation de [Lacération] sont augmentés de 30%, et la vitesse de vol de [Lames tournoyantes] est augmentée à 25.",
-      "[Valse écarlate] niveau +2 ; [Rafale pourpre] niveau +1.",
+      "Les dégâts des [Lames du sommelier] ont 30% de chances d’appliquer 1 cumul supplémentaire de [Blessure écarlate].",
+      "Lorsque [Lame du sommelier] est active, les dégâts subis sont réduits de 15% et les dégâts infligés augmentent de 55%.",
+      "[Banquet écarlate] niveau +2 ; [Valse du Cabernet] niveau +1.",
+      "Les dégâts de [Blessure écarlate] augmentent de 30%, et la vitesse de projection des [Lames du sommelier] est augmentée à 25.",
+      "[Valse du Cabernet] niveau +2 ; [Banquet écarlate] niveau +1.",
       "Lorsque [Lame du sommelier] est active, votre Pénétration tous attributs augmente de 45%.\nLorsque [Blessure écarlate] est supprimée, 1 cumul supplémentaire est retiré et une instance de dégâts supplémentaire est infligée."
     ],
     "碎片": 1003202,

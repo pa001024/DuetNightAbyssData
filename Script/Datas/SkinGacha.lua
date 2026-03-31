@@ -140,6 +140,13 @@ return ReadOnly("SkinGacha", {
     TabId = 4
   },
   [9005] = {
+    BgBGM = "event:/bgm/1_3/0159_suyi_skin01",
+    BgMusic = "event:/ui/btc/gacha_pool_suyi_skin01",
+    BubbleShowGoods = {
+      140294,
+      140295,
+      140296
+    },
     ConditionId = 4041,
     DisplayCostRes = T.RT_1,
     GachaCoreDes = "UI_SkinGacha_Core_GoldSkin",

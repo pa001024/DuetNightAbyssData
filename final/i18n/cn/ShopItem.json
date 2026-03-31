@@ -3459,6 +3459,7 @@
                 "num": 20,
                 "limit": 3,
                 "subTabId": 100051,
+                "sequence": 99,
                 "startTime": 1672545600,
                 "cond": "该区域暂未解锁，请继续推进主线任务"
               },
@@ -3473,6 +3474,7 @@
                 "num": 3,
                 "limit": 6,
                 "subTabId": 100051,
+                "sequence": 98,
                 "startTime": 1672545600,
                 "cond": "该区域暂未解锁，请继续推进主线任务"
               },
@@ -3487,6 +3489,7 @@
                 "num": 1,
                 "limit": 1,
                 "subTabId": 100051,
+                "sequence": 100,
                 "startTime": 1672545600,
                 "cond": "该区域暂未解锁，请继续推进主线任务"
               },
@@ -3501,6 +3504,7 @@
                 "num": 30,
                 "limit": 5,
                 "subTabId": 100051,
+                "sequence": 97,
                 "startTime": 1672545600,
                 "cond": "该区域暂未解锁，请继续推进主线任务"
               },
@@ -3515,6 +3519,7 @@
                 "num": 80000,
                 "limit": 5,
                 "subTabId": 100051,
+                "sequence": 96,
                 "startTime": 1672545600,
                 "cond": "该区域暂未解锁，请继续推进主线任务"
               }
@@ -15439,7 +15444,7 @@
                 "num": 1,
                 "limit": 1,
                 "subTabId": 1209,
-                "sequence": 104,
+                "sequence": 101,
                 "startTime": 1775440800,
                 "endTime": 1780304400,
                 "isSpPopup": 1
@@ -15487,7 +15492,7 @@
                 "num": 1,
                 "limit": 1,
                 "subTabId": 1209,
-                "sequence": 101,
+                "sequence": 104,
                 "startTime": 1775440800,
                 "endTime": 1780304400,
                 "cond": "获得所有太虚游载具形象",
@@ -15507,7 +15512,7 @@
                 "sequence": 105,
                 "startTime": 1775440800,
                 "endTime": 1780304400,
-                "cond": "获得太虚游·铅灰载具",
+                "cond": "获得太虚游·本色载具",
                 "isSpPopup": 1
               }
             ]
@@ -16845,7 +16850,7 @@
                 "num": 1,
                 "limit": 1,
                 "subTabId": 1210,
-                "sequence": 3085,
+                "sequence": 3086,
                 "startTime": 1776909600,
                 "endTime": 1780304400,
                 "isSpPopup": 1
@@ -16877,7 +16882,7 @@
                 "num": 1,
                 "limit": 1,
                 "subTabId": 1210,
-                "sequence": 3086,
+                "sequence": 3085,
                 "startTime": 1776909600,
                 "endTime": 1780304400,
                 "isSpPopup": 1
@@ -17383,7 +17388,7 @@
                 "id": 120414,
                 "itemType": "CharAccessory",
                 "typeId": 30020,
-                "typeName": "伏龙节",
+                "typeName": "伏龙节·鎏金",
                 "price": 680,
                 "priceType": 99,
                 "priceName": "月石晶胚",
@@ -18919,7 +18924,7 @@
                 "priceType": 6000004,
                 "priceName": "文武筹",
                 "num": 50000,
-                "limit": 30,
+                "limit": 300,
                 "subTabId": 100071,
                 "sequence": 81,
                 "startTime": 1672545600
@@ -18933,7 +18938,7 @@
                 "priceType": 6000004,
                 "priceName": "文武筹",
                 "num": 2,
-                "limit": 20,
+                "limit": 200,
                 "subTabId": 100071,
                 "sequence": 85,
                 "startTime": 1672545600
@@ -18947,7 +18952,7 @@
                 "priceType": 6000004,
                 "priceName": "文武筹",
                 "num": 800,
-                "limit": 30,
+                "limit": 300,
                 "subTabId": 100071,
                 "sequence": 83,
                 "startTime": 1672545600
@@ -18961,7 +18966,7 @@
                 "priceType": 6000004,
                 "priceName": "文武筹",
                 "num": 20,
-                "limit": 20,
+                "limit": 200,
                 "subTabId": 100071,
                 "sequence": 82,
                 "startTime": 1672545600
@@ -18975,7 +18980,7 @@
                 "priceType": 6000004,
                 "priceName": "文武筹",
                 "num": 2,
-                "limit": 20,
+                "limit": 200,
                 "subTabId": 100071,
                 "sequence": 84,
                 "startTime": 1672545600
@@ -19113,6 +19118,47 @@
                 "sequence": 86,
                 "startTime": 1672545600,
                 "endTime": 1780304400
+              },
+              {
+                "id": 10007130,
+                "itemType": "Resource",
+                "typeId": 101,
+                "typeName": "铜币",
+                "price": 100000,
+                "priceType": 6000004,
+                "priceName": "文武筹",
+                "num": 10000,
+                "subTabId": 100071,
+                "sequence": 80,
+                "startTime": 1672545600
+              },
+              {
+                "id": 10007131,
+                "itemType": "Resource",
+                "typeId": 40014,
+                "typeName": "芳香嗅盐",
+                "price": 20000,
+                "priceType": 6000004,
+                "priceName": "文武筹",
+                "num": 1,
+                "limit": 10,
+                "subTabId": 100071,
+                "sequence": 79,
+                "startTime": 1672545600
+              },
+              {
+                "id": 10007132,
+                "itemType": "Resource",
+                "typeId": 40015,
+                "typeName": "芳香凝神嗅盐",
+                "price": 50000,
+                "priceType": 6000004,
+                "priceName": "文武筹",
+                "num": 1,
+                "limit": 10,
+                "subTabId": 100071,
+                "sequence": 78,
+                "startTime": 1672545600
               }
             ]
           }

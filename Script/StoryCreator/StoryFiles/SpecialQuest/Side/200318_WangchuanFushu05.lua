@@ -174,12 +174,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "1773394792842589",
-            startPort = "Out",
-            endQuest = "1773394792840577",
-            endPort = "In"
-          },
-          {
             startQuest = "1773394792840575",
             startPort = "Out",
             endQuest = "1773394792842590",
@@ -228,12 +222,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "1773394792840577",
-            startPort = "Out",
-            endQuest = "17743427529092540281",
-            endPort = "In"
-          },
-          {
             startQuest = "1773394792840571",
             startPort = "Out",
             endQuest = "17743427772912540588",
@@ -246,7 +234,7 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "1773394792840577",
+            startQuest = "1773394792842589",
             startPort = "Out",
             endQuest = "17743470061292541000",
             endPort = "In"
@@ -254,7 +242,25 @@ return {
           {
             startQuest = "17743470061292541000",
             startPort = "Out",
+            endQuest = "1773394792840577",
+            endPort = "In"
+          },
+          {
+            startQuest = "1773394792840577",
+            startPort = "Out",
+            endQuest = "1774858140442742",
+            endPort = "In"
+          },
+          {
+            startQuest = "1774858140442742",
+            startPort = "Out",
             endQuest = "1773394792840570",
+            endPort = "In"
+          },
+          {
+            startQuest = "1774858140442742",
+            startPort = "Out",
+            endQuest = "17743427529092540281",
             endPort = "In"
           }
         },
@@ -490,7 +496,7 @@ return {
             key = "1773394792840577",
             type = "ChangeRoleNode",
             name = "切换角色",
-            pos = {x = 2516.8371815946407, y = -217.57775712368579},
+            pos = {x = 2502.8371815946407, y = -211.57775712368579},
             propsData = {QuestRoleId = 24010101, IsPlayFX = false}
           },
           ["1773394792840578"] = {
@@ -710,7 +716,7 @@ return {
             key = "17743427529092540281",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 2925.87062937063, y = 36.70279720279677},
+            pos = {x = 2927.87062937063, y = 36.70279720279677},
             propsData = {
               IsNpcNode = false,
               FirstDialogueId = 51175501,
@@ -761,7 +767,7 @@ return {
             key = "17743470061292541000",
             type = "ChangeStaticCreatorNode",
             name = "生成/销毁节点",
-            pos = {x = 2645.451511723571, y = 584.2469148498558},
+            pos = {x = 2131.451511723571, y = 98.24691484985578},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,
@@ -776,6 +782,51 @@ return {
                 232010303,
                 232010304
               }
+            }
+          },
+          ["1774858140442742"] = {
+            key = "1774858140442742",
+            type = "TalkNode",
+            name = "对话节点",
+            pos = {x = 2602, y = 270},
+            propsData = {
+              IsNpcNode = false,
+              TalkType = "Cinematic",
+              TalkStageName = "",
+              ShowFilePath = "LevelSequence'/Game/AssetDesign/Story/DialogueSequence/SpecialSideStory/2003/200318/2003180801_00.2003180801_00'",
+              BlendInTime = 0,
+              BlendOutTime = 0,
+              InType = "FadeIn",
+              OutType = "FadeOut",
+              ShowFadeDetail = false,
+              ShowSkipButton = true,
+              ShowReviewButton = true,
+              ShowWikiButton = true,
+              PauseGameGlobal = true,
+              HideNpcs = false,
+              HideMonsters = true,
+              HideAllBattleEntity = true,
+              HideEffectCreature = true,
+              HideMechanismsFX = false,
+              DisableNpcOptimization = false,
+              DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
+              BeginNewTargetPointName = "",
+              EndNewTargetPointName = "",
+              CameraLookAtTartgetPoint = "",
+              RestoreStand = false,
+              TalkActors = {
+                {
+                  TalkActorType = "Player",
+                  TalkActorId = 0,
+                  TalkActorVisible = false,
+                  AroundPlayer = false
+                }
+              },
+              FreezeWorldComposition = false,
+              bTravelFullLoadWorldComposition = false,
+              SwitchToMaster = "None",
+              OverrideFailBlend = false
             }
           }
         },

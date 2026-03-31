@@ -78,6 +78,14 @@ function M:ReceiveEnterState(StackAction)
   if 1 == StackAction then
     self:_RequestRestoreFocusOnEnter()
   end
+  self:AddTimer(0.01, function()
+    self:UpdateSelectedItem()
+    if self.CurrentSelectedContent then
+      self:UpdateInfoTips(self.CurrentSelectedContent)
+    else
+      self:RefreshBeginButtonText()
+    end
+  end, false)
 end
 
 function M:InitUIInfo(Name, IsInUIMode, EventList, Params)
@@ -278,11 +286,30 @@ function M:IsSelectedLevelUnlockTimeReached(Content)
   return RemainUnlockSeconds <= 0
 end
 
+function M:SyncBeginButtonForbiddenState(IsForbidden)
+  local BeginBtn = self.WBP_Btn_Begin and self.WBP_Btn_Begin.Button_Area
+  if not BeginBtn then
+    return
+  end
+  local CurrentForbidden
+  if BeginBtn.IsBtnForbidden then
+    CurrentForbidden = BeginBtn:IsBtnForbidden()
+  end
+  BeginBtn:SetForbidden(IsForbidden)
+  if CurrentForbidden == IsForbidden then
+    if IsForbidden and BeginBtn.PlayButtonForbidAnim then
+      BeginBtn:PlayButtonForbidAnim()
+    elseif not IsForbidden and BeginBtn.PlayButtonUnForbidAnim then
+      BeginBtn:PlayButtonUnForbidAnim()
+    end
+  end
+end
+
 function M:RefreshBeginButtonText()
   self.WBP_Btn_Begin.Button_Area:SetVisibility(UIConst.VisibilityOp.Visible)
   if not self.CurrentSelectedContent then
     self:SetBeginButtonText(GText("UI_BackpackPuzzle_StartGame"))
-    self.WBP_Btn_Begin.Button_Area:SetForbidden(true)
+    self:SyncBeginButtonForbiddenState(true)
     self.WBP_Btn_Begin.WS_Text:SetActiveWidgetIndex(1)
     self._bBeginBtnForbidden = true
     self:RefreshBeginKeyVisibility()
@@ -291,7 +318,7 @@ function M:RefreshBeginButtonText()
   if not self:IsSelectedLevelUnlockedByPrerequisite(self.CurrentSelectedContent) then
     self:SetBeginButtonText(GText("UI_GameEvent_BagGame_LockDes_PerviousLevel"))
     self.WBP_Btn_Begin.Button_Area:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    self.WBP_Btn_Begin.Button_Area:SetForbidden(true)
+    self:SyncBeginButtonForbiddenState(true)
     self.WBP_Btn_Begin.WS_Text:SetActiveWidgetIndex(1)
     self._bBeginBtnForbidden = true
     self:RefreshBeginKeyVisibility()
@@ -300,7 +327,7 @@ function M:RefreshBeginButtonText()
   local RemanTimes, RemainTimeDict = self:GetSelectedLevelRemainUnlockSeconds(self.CurrentSelectedContent)
   if RemanTimes > 0 then
     self.WBP_Btn_Begin.WBP_Com_Time:SetTimeText(nil, RemainTimeDict)
-    self.WBP_Btn_Begin.Button_Area:SetForbidden(true)
+    self:SyncBeginButtonForbiddenState(true)
     self.WBP_Btn_Begin.Button_Area:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.WBP_Btn_Begin.WS_Text:SetActiveWidgetIndex(0)
     self._bBeginBtnForbidden = true
@@ -310,7 +337,7 @@ function M:RefreshBeginButtonText()
     self.WBP_Btn_Begin.WS_Text:SetActiveWidgetIndex(1)
   end
   self:SetBeginButtonText(GText("UI_BackpackPuzzle_StartGame"))
-  self.WBP_Btn_Begin.Button_Area:SetForbidden(false)
+  self:SyncBeginButtonForbiddenState(false)
   self._bBeginBtnForbidden = false
   self:RefreshBeginKeyVisibility()
 end
@@ -488,6 +515,17 @@ function M:HasSelectedContent()
   return self.CurrentSelectedContent ~= nil
 end
 
+function M:GetListContentAtIndex(ListIndex)
+  if not (nil ~= ListIndex and not (ListIndex < 0) and self.Wrap_Normal_L) or not self.Wrap_Normal_L.GetItemAt then
+    return nil
+  end
+  local Content = self.Wrap_Normal_L:GetItemAt(ListIndex)
+  if not Content or Content.IsPlaceholder then
+    return nil
+  end
+  return Content
+end
+
 function M:UpdateSelectedItem()
   if self.bIsScrollingToTarget then
     return
@@ -496,35 +534,42 @@ function M:UpdateSelectedItem()
   if nil == NewSelectedIndex then
     return
   end
-  local CurWidget = URuntimeCommonFunctionLibrary.GetEntryWidgetFromItem(self.Wrap_Normal_L, NewSelectedIndex)
-  if not (CurWidget and CurWidget.Content) or CurWidget.Content.IsPlaceholder then
+  local SelectedContent = self:GetListContentAtIndex(NewSelectedIndex)
+  if not SelectedContent then
     return
   end
-  if self.CurrentSelectedIndex ~= NewSelectedIndex then
+  local CurWidget = URuntimeCommonFunctionLibrary.GetEntryWidgetFromItem(self.Wrap_Normal_L, NewSelectedIndex)
+  local bHasValidWidget = CurWidget and CurWidget.Content and not CurWidget.Content.IsPlaceholder
+  if self.CurrentSelectedIndex ~= NewSelectedIndex or bHasValidWidget and self.LastSelectedEntry ~= CurWidget then
     if self.LastSelectedEntry and self.LastSelectedEntry.PlayUnselected and self.LastSelectedContentId and self.LastSelectedEntry.Content and self.LastSelectedEntry.Content.Id == self.LastSelectedContentId and self.LastSelectedEntry ~= CurWidget then
       self.LastSelectedEntry:PlayUnselected()
     end
     self.CurrentSelectedIndex = NewSelectedIndex
-    if CurWidget then
+    self.CurrentSelectedContent = SelectedContent
+    self.LastSelectedContentId = SelectedContent.Id
+    self.LastSelectedEntry = nil
+    self.LastSelectedIndex = nil
+    if bHasValidWidget then
       if CurWidget.PlaySelected then
         CurWidget:PlaySelected()
       end
       self.LastSelectedEntry = CurWidget
       self.LastSelectedIndex = NewSelectedIndex
       if CurWidget.Content then
-        self.CurrentSelectedContent = CurWidget.Content
-        self.LastSelectedContentId = CurWidget.Content.Id
+        self.CurrentSelectedContent = SelectedContent
+        self.LastSelectedContentId = SelectedContent.Id
         local RealIndex = NewSelectedIndex - self:GetFixedSelectPosition()
-        print("选中 Item - 列表索引:", NewSelectedIndex, ", 真实索引:", RealIndex, ", Id:", CurWidget.Content.Id, ", LevelId:", CurWidget.Content.LevelId)
+        print("选中 Item - 列表索引:", NewSelectedIndex, ", 真实索引:", RealIndex, ", Id:", SelectedContent.Id, ", LevelId:", SelectedContent.LevelId)
         self:UpdateInfoTips(self.CurrentSelectedContent)
         self:_TryClearNewReddotForLevel(self.CurrentSelectedContent.LevelId)
       else
-        self.CurrentSelectedContent = nil
-        self.LastSelectedContentId = nil
+        self.CurrentSelectedContent = SelectedContent
+        self.LastSelectedContentId = SelectedContent.Id
       end
     else
-      self.CurrentSelectedContent = nil
-      self.LastSelectedContentId = nil
+      local RealIndex = NewSelectedIndex - self:GetFixedSelectPosition()
+      self:UpdateInfoTips(self.CurrentSelectedContent)
+      self:_TryClearNewReddotForLevel(self.CurrentSelectedContent.LevelId)
     end
   end
 end
@@ -632,6 +677,34 @@ function M:_ClearBagGameReddotWhenActivityEnd()
   return true
 end
 
+function M:_GetBagGameLevelUnlockTimestampForNewReddot(LevelInfo)
+  if not LevelInfo then
+    return 0
+  end
+  if LevelInfo.UnlockDate ~= nil then
+    return LevelInfo.UnlockDate:GetTime()
+  end
+  if BagGameModel.EventStartTime then
+    return BagGameModel.EventStartTime:GetTime()
+  end
+  return 0
+end
+
+function M:_IsBagGameLevelUnlockTimeReachedForNewReddot(LevelInfo)
+  local UnlockTs = self:_GetBagGameLevelUnlockTimestampForNewReddot(LevelInfo)
+  return UnlockTs <= 0 or UnlockTs <= TimeUtils.NowTime()
+end
+
+function M:_TryClearNewReddotByStarRecord(LevelId, NewCacheDetail)
+  if not LevelId or BagGameModel:GetPlayerStarCount(LevelId) <= 0 then
+    return false
+  end
+  if NewCacheDetail and true == NewCacheDetail[LevelId] then
+    ReddotManager.DecreaseLeafNodeCount(BagGameNewReddotName, 1, {LevelId = LevelId})
+  end
+  return true
+end
+
 function M:_TryRefreshBagGameNewReddot()
   if self:_ClearBagGameReddotWhenActivityEnd() then
     return
@@ -650,21 +723,16 @@ function M:_TryRefreshBagGameNewReddot()
   end
   for i, LevelInfo in ipairs(LevelsInfo) do
     local LevelId = LevelInfo.LevelId
-    if nil ~= NewCacheDetail[LevelId] then
+    if self:_TryClearNewReddotByStarRecord(LevelId, NewCacheDetail) then
+    elseif nil ~= NewCacheDetail[LevelId] then
     else
       local bUnlocked = false
       if 1 == i then
-        bUnlocked = true
+        bUnlocked = self:_IsBagGameLevelUnlockTimeReachedForNewReddot(LevelInfo)
       else
         local PrevLevelId = LevelsInfo[i - 1].LevelId
         if BagGameModel:GetPlayerStarCount(PrevLevelId) > 0 then
-          local UnlockTs
-          if nil == LevelInfo.UnlockDate then
-            UnlockTs = BagGameModel.EventStartTime:GetTime()
-          else
-            UnlockTs = LevelInfo.UnlockDate:GetTime()
-          end
-          bUnlocked = UnlockTs <= 0 or UnlockTs <= TimeUtils.NowTime()
+          bUnlocked = self:_IsBagGameLevelUnlockTimeReachedForNewReddot(LevelInfo)
         end
       end
       if bUnlocked and 0 == BagGameModel:GetPlayerStarCount(LevelId) then

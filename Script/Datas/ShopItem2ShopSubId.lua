@@ -2737,7 +2737,8 @@ return ReadOnly("ShopItem2ShopSubId", {
     },
     SoloTreasureShop = {
       [101] = {
-        [1] = {ShopItemId = 10007114, SubTabId = 100071}
+        [1] = {ShopItemId = 10007114, SubTabId = 100071},
+        [2] = {ShopItemId = 10007130, SubTabId = 100071}
       },
       [102] = {
         [1] = {ShopItemId = 10007116, SubTabId = 100071}
@@ -2765,6 +2766,12 @@ return ReadOnly("ShopItem2ShopSubId", {
       },
       [30112] = {
         [1] = {ShopItemId = 10007104, SubTabId = 100071}
+      },
+      [40014] = {
+        [1] = {ShopItemId = 10007131, SubTabId = 100071}
+      },
+      [40015] = {
+        [1] = {ShopItemId = 10007132, SubTabId = 100071}
       },
       [41048] = {
         [1] = {ShopItemId = 10007102, SubTabId = 100071}

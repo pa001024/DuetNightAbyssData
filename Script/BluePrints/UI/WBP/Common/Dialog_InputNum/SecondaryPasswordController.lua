@@ -260,7 +260,7 @@ function M:Weapon_OpenSeconderyPassword(WeaponUuid, View)
         View:SetFocus()
         View:BlockAllUIInput(true)
       end
-      self:GetAvatar():UnLockResourceInBag(CommonConst.AllType.Weapon, WeaponUuid)
+      self:GetAvatar():UnLockResourceInBag(CommonConst.AllType.Weapon, WeaponUuid, nil, Password)
     end,
     OnCancel = function()
       if View then
@@ -278,7 +278,7 @@ function M:Pet_OpenSeconderyPassword(PetUuid, View)
         View:SetFocus()
         View:BlockAllUIInput(true)
       end
-      self:GetAvatar():UnLockPet(PetUuid)
+      self:GetAvatar():UnLockPet(PetUuid, Password)
     end,
     OnCancel = function()
       if View then

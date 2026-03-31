@@ -277,7 +277,7 @@ function SystemGuideManager:CheckDispatch()
     end
     for _, DispatchListProp in ipairs(Avatar.CurrentDispatchList) do
       local Id = DispatchListProp:GetDispatchId()
-      if -1 ~= Id and DispatchListProp:GetDispatchState() == CommonConst.DispatchState.Doing then
+      if -1 ~= Id and DispatchListProp.State == CommonConst.DispatchState.Doing then
         self:SendDataToServer(SystemGuideManager.DispatchId)
         return
       end

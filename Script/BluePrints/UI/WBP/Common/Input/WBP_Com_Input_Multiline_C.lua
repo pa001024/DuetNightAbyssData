@@ -56,9 +56,10 @@ function M:UpdateBtns()
       self.Group_Btn:SetVisibility(UIConst.VisibilityOp.Collapsed)
       self.Image_Btn_BG:SetVisibility(UIConst.VisibilityOp.Collapsed)
     end
-  elseif self.bNeedPasteBtn then
+  elseif self.IsShowGamPadKey and self.IsLastInputDeviceTypeGamepad and self.Text_Input:HasAnyUserFocus() then
+    self.WS_Icon:SetActiveWidgetIndex(2)
+  elseif not self.HideGamePadDeleteBtn then
     self.WS_Icon:SetActiveWidgetIndex(1)
-    self.Text_Btn:SetText(GText("UI_Input_Clean"))
   else
     self.Group_Btn:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.Image_Btn_BG:SetVisibility(UIConst.VisibilityOp.Collapsed)

@@ -150,12 +150,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17739040803956296454",
-            startPort = "Out",
-            endQuest = "17734948303383377794",
-            endPort = "In"
-          },
-          {
             startQuest = "17678537949081014467",
             startPort = "QuestStart",
             endQuest = "17741844011671687130",
@@ -544,6 +538,18 @@ return {
             startPort = "Out",
             endQuest = "17743541089238064750",
             endPort = "Input"
+          },
+          {
+            startQuest = "17739040803956296454",
+            startPort = "Out",
+            endQuest = "17747877568601704184",
+            endPort = "In"
+          },
+          {
+            startQuest = "17747877568601704184",
+            startPort = "Out",
+            endQuest = "17734948303383377794",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -551,7 +557,7 @@ return {
             key = "17678537949081014467",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 402.74509803921563, y = 304.11764705882354},
+            pos = {x = 138.5515496521188, y = 292.5047438330171},
             propsData = {ModeType = 0}
           },
           ["17678537949081014468"] = {
@@ -719,10 +725,10 @@ return {
             key = "17727002569852455259",
             type = "AsyncSetActorLocationAndRotationNode",
             name = "异步设置玩家位置旋转",
-            pos = {x = 1790.1678292941779, y = 35.54637910545625},
+            pos = {x = 1798.5011626275111, y = -39.45362089454375},
             propsData = {
               UnitId = 0,
-              NewTargetPointName = "XHWstart",
+              NewTargetPointName = "XHWstart2",
               FadeIn = false,
               FadeOut = true,
               bResetCamera = true,
@@ -757,14 +763,14 @@ return {
             key = "17734948303383377795",
             type = "WaitOfTimeNode",
             name = "延迟等待",
-            pos = {x = 931.4099686759156, y = 494.3553587950604},
+            pos = {x = 1189.1877464536933, y = 521.022025461727},
             propsData = {WaitTime = 1.5}
           },
           ["17739040803956296454"] = {
             key = "17739040803956296454",
             type = "ChangeRoleNode",
             name = "切换角色",
-            pos = {x = 679.4316770186335, y = 298.8913043478261},
+            pos = {x = 528.3205659075225, y = 294.44685990338166},
             propsData = {QuestRoleId = 24010102, IsPlayFX = false}
           },
           ["17741844011671687130"] = {
@@ -1327,6 +1333,21 @@ return {
               FadeOutSeconds = 0,
               DurationSeconds = 1,
               IsStandAlone = true
+            }
+          },
+          ["17747877568601704184"] = {
+            key = "17747877568601704184",
+            type = "AsyncSetActorLocationAndRotationNode",
+            name = "异步设置玩家位置旋转",
+            pos = {x = 752.309366106118, y = 406.4590918911065},
+            propsData = {
+              UnitId = 0,
+              NewTargetPointName = "XHWstart2",
+              FadeIn = false,
+              FadeOut = true,
+              bResetCamera = true,
+              bForceAsyncLoading = false,
+              IsWhite = false
             }
           }
         },

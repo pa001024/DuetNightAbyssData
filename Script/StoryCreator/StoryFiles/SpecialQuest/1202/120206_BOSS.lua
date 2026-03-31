@@ -84,12 +84,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17725503771274025636",
-            startPort = "Out",
-            endQuest = "17725503431604024950",
-            endPort = "In"
-          },
-          {
             startQuest = "17725503637254025359",
             startPort = "Out",
             endQuest = "17725503771274025636",
@@ -123,6 +117,18 @@ return {
             startQuest = "1774360413369513",
             startPort = "Out",
             endQuest = "17725503637254025359",
+            endPort = "In"
+          },
+          {
+            startQuest = "17725503771274025636",
+            startPort = "Out",
+            endQuest = "1774601449682379",
+            endPort = "In"
+          },
+          {
+            startQuest = "1774601449682379",
+            startPort = "Out",
+            endQuest = "17725503431604024950",
             endPort = "In"
           }
         },
@@ -190,7 +196,7 @@ return {
             key = "17725503431604024950",
             type = "SpecialQuestSuccessNode",
             name = "成功完成特殊任务",
-            pos = {x = 1906.881413020882, y = 196.81524136837214},
+            pos = {x = 2181.496797636267, y = 189.89216444529524},
             propsData = {}
           },
           ["17725503454564025006"] = {
@@ -252,6 +258,54 @@ return {
               bResetCamera = true,
               bForceAsyncLoading = false,
               IsWhite = false
+            }
+          },
+          ["1774601449682379"] = {
+            key = "1774601449682379",
+            type = "TalkNode",
+            name = "VS双龙（上） 激战",
+            pos = {x = 1887.0412087912089, y = 255.81043956043948},
+            propsData = {
+              IsNpcNode = false,
+              TalkType = "Cinematic",
+              TalkStageName = "",
+              ShowFilePath = "/Game/Asset/Cinematics/Story/Ver01/Ver0102/Ver0102_SC016/SQ_Ver0102_SC016",
+              BlendInTime = 0,
+              BlendOutTime = 0,
+              InType = "FadeIn",
+              OutType = "FadeOut",
+              ShowFadeDetail = true,
+              StartFadeOutTime = 0.5,
+              StartScreenEffectDuration = 1,
+              FinishFadeInTime = 0,
+              ShowSkipButton = true,
+              ShowReviewButton = true,
+              ShowWikiButton = true,
+              PauseGameGlobal = false,
+              HideNpcs = false,
+              HideMonsters = true,
+              HideAllBattleEntity = true,
+              HideEffectCreature = true,
+              HideMechanismsFX = false,
+              DisableNpcOptimization = false,
+              DoNotReceiveCharacterShadow = false,
+              PauseTimeElapse = false,
+              BeginNewTargetPointName = "",
+              EndNewTargetPointName = "",
+              CameraLookAtTartgetPoint = "",
+              RestoreStand = false,
+              TalkActors = {
+                {
+                  TalkActorType = "Player",
+                  TalkActorId = 0,
+                  TalkActorVisible = false,
+                  AroundPlayer = false
+                }
+              },
+              FreezeWorldComposition = false,
+              bTravelFullLoadWorldComposition = false,
+              SwitchToMaster = "None",
+              OverrideFailBlend = false
             }
           }
         },

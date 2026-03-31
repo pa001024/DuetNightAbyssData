@@ -151,13 +151,11 @@ function M:Destruct()
 end
 
 function M:CheckNeedShowWindow()
-  local IsNoMorePrompts = EMCache:Get("IsConfirmPopupNoMorePrompts", true) or false
-  if TimeUtils and IsNoMorePrompts then
-    local CachedTimestamp = EMCache:Get("IsConfirmPopupTimestamp", true)
-    local intervalTime = TimeUtils.GetIntervalDay(CachedTimestamp, TimeUtils.NowTime())
-    IsNoMorePrompts = 0 == intervalTime
+  local LastRemindTimeStamp = EMCache:Get("SoloTreasure_EnterDungeon_DontRemind_TimeStamp", true)
+  if LastRemindTimeStamp and LastRemindTimeStamp > TimeUtils.TimestampLastClock(0) then
+    return false
   end
-  return not IsNoMorePrompts
+  return true
 end
 
 function M:OnPlayAgain()
@@ -424,7 +422,6 @@ function M:ShowPlayAgainConfirmPopup()
   
   function CommonDialogParams.LeftCallbackFunction(_, Data, PopupUI)
     PopupUI.DontPlayOutAnimation = false
-    self:UpdateSelectedInfo(Data)
   end
   
   UIManager(self):ShowCommonPopupUI(100317, CommonDialogParams, self.Parent)
@@ -448,8 +445,9 @@ end
 function M:UpdateSelectedInfo(Data)
   local IsSelected = Data.SelectHint.IsSelected
   local CurTimestamp = TimeUtils.NowTime()
-  EMCache:Set("IsConfirmPopupNoMorePrompts", IsSelected, true)
-  EMCache:Set("IsConfirmPopupTimestamp", CurTimestamp, true)
+  if IsSelected then
+    EMCache:Set("SoloTreasure_EnterDungeon_DontRemind_TimeStamp", CurTimestamp, true)
+  end
 end
 
 local function _RealSetIcon(self, Texture, Img)
@@ -583,12 +581,14 @@ function M:UpdateScrollViewTip()
       },
       Desc = GText("UI_Controller_Slide")
     })
-    local bCanScroll = UIUtils.CheckScrollBoxCanScroll(self.EMScrollBox_62)
-    if bCanScroll then
-      self.Key_Check:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    else
-      self.Key_Check:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    end
+    self:AddTimer(0.1, function()
+      local bCanScroll = UIUtils.CheckScrollBoxCanScroll(self.EMScrollBox_62)
+      if bCanScroll then
+        self.Key_Check:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      else
+        self.Key_Check:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      end
+    end)
   end
 end
 
@@ -643,7 +643,7 @@ function M:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
   end
   local InKey = UE4.UKismetInputLibrary.GetKey(InAnalogInputEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  local AddOffset = UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent) * 5
+  local AddOffset = UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent) * 21
   if "Gamepad_RightY" == InKeyName then
     local CurScrollOffset = self.EMScrollBox_62:GetScrollOffset()
     local ScrollOffset = math.clamp(CurScrollOffset - AddOffset, 0, self.EMScrollBox_62:GetScrollOffsetOfEnd())

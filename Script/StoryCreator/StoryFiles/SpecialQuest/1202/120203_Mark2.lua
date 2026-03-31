@@ -96,21 +96,9 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17724390792702384708",
-            startPort = "Out",
-            endQuest = "17724390792702384706",
-            endPort = "In"
-          },
-          {
             startQuest = "17724390792702384705",
             startPort = "Out",
             endQuest = "17724390792702384712",
-            endPort = "In"
-          },
-          {
-            startQuest = "17724390792702384709",
-            startPort = "Out",
-            endQuest = "17724390792702384711",
             endPort = "In"
           },
           {
@@ -123,18 +111,6 @@ return {
             startQuest = "17724390792702384715",
             startPort = "Out",
             endQuest = "17724390792702384713",
-            endPort = "In"
-          },
-          {
-            startQuest = "17724390792702384715",
-            startPort = "Out",
-            endQuest = "17724390792702384716",
-            endPort = "In"
-          },
-          {
-            startQuest = "17724390792702384713",
-            startPort = "Out",
-            endQuest = "17724390792702384717",
             endPort = "In"
           },
           {
@@ -152,44 +128,14 @@ return {
           {
             startQuest = "1772883747907824022",
             startPort = "Out",
-            endQuest = "17724390792702384704",
-            endPort = "In"
-          },
-          {
-            startQuest = "1772883747907824022",
-            startPort = "Out",
             endQuest = "17724390792702384707",
             endPort = "In"
-          },
-          {
-            startQuest = "17724390792702384707",
-            startPort = "Out",
-            endQuest = "17724390792702384704",
-            endPort = "Stop"
-          },
-          {
-            startQuest = "17724390792702384708",
-            startPort = "Out",
-            endQuest = "17724390792702384709",
-            endPort = "In"
-          },
-          {
-            startQuest = "17724390792702384709",
-            startPort = "Out",
-            endQuest = "17724390792702384706",
-            endPort = "Stop"
           },
           {
             startQuest = "17724390792702384709",
             startPort = "Out",
             endQuest = "17724390792702384710",
             endPort = "In"
-          },
-          {
-            startQuest = "17724390792702384710",
-            startPort = "Out",
-            endQuest = "17724390792702384711",
-            endPort = "Stop"
           },
           {
             startQuest = "17724388093757075842",
@@ -222,21 +168,9 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17724390792702384704",
-            startPort = "Out",
-            endQuest = "17732355471366021595",
-            endPort = "In"
-          },
-          {
             startQuest = "17724390792702384707",
             startPort = "Out",
             endQuest = "17732356791996021790",
-            endPort = "In"
-          },
-          {
-            startQuest = "17724390792702384715",
-            startPort = "Out",
-            endQuest = "17732357090456022215",
             endPort = "In"
           },
           {
@@ -292,6 +226,78 @@ return {
             startPort = "Out",
             endQuest = "17724390792702384715",
             endPort = "In"
+          },
+          {
+            startQuest = "17746922631606831603",
+            startPort = "Out",
+            endQuest = "17746922751166831848",
+            endPort = "In"
+          },
+          {
+            startQuest = "1772883747907824022",
+            startPort = "Out",
+            endQuest = "17746922631606831603",
+            endPort = "In"
+          },
+          {
+            startQuest = "17746923309186833264",
+            startPort = "Out",
+            endQuest = "17746923309186833265",
+            endPort = "In"
+          },
+          {
+            startQuest = "17724390792702384707",
+            startPort = "Out",
+            endQuest = "17746923309186833264",
+            endPort = "In"
+          },
+          {
+            startQuest = "17724390792702384715",
+            startPort = "Out",
+            endQuest = "17724390792702384717",
+            endPort = "In"
+          },
+          {
+            startQuest = "17724390792702384717",
+            startPort = "Out",
+            endQuest = "17732357090456022215",
+            endPort = "In"
+          },
+          {
+            startQuest = "17724390792702384714",
+            startPort = "Out",
+            endQuest = "17746923580276834048",
+            endPort = "In"
+          },
+          {
+            startQuest = "17746926942877689808",
+            startPort = "Out",
+            endQuest = "17746926942877689809",
+            endPort = "In"
+          },
+          {
+            startQuest = "17724390792702384708",
+            startPort = "Out",
+            endQuest = "17746926942877689808",
+            endPort = "In"
+          },
+          {
+            startQuest = "17724390792702384708",
+            startPort = "Out",
+            endQuest = "17724390792702384709",
+            endPort = "In"
+          },
+          {
+            startQuest = "17746927792277692046",
+            startPort = "Out",
+            endQuest = "17746927792277692047",
+            endPort = "In"
+          },
+          {
+            startQuest = "17724390792702384709",
+            startPort = "Out",
+            endQuest = "17746927792277692046",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -306,35 +312,35 @@ return {
             key = "17724388093757075843",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 3501.939799331104, y = 238.8963210702341},
+            pos = {x = 3844.880192271497, y = 2609.0828012567154},
             propsData = {ModeType = 0}
           },
           ["17724388093757075844"] = {
             key = "17724388093757075844",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 1961.3846153846152, y = 980.3076923076924},
+            pos = {x = 1222.6346153846148, y = 1940.3076923076928},
             propsData = {}
           },
           ["17724388093757075845"] = {
             key = "17724388093757075845",
             type = "SpecialQuestSuccessNode",
             name = "成功完成特殊任务",
-            pos = {x = 3031.8548291239345, y = 939.2066266881429},
+            pos = {x = 2858.537230056335, y = 1891.686424667942},
             propsData = {}
           },
           ["17724388093757075846"] = {
             key = "17724388093757075846",
             type = "WaitingSpecialQuestFailNode",
             name = "等待特殊任务失败",
-            pos = {x = 1280.5146686984672, y = 960.135711195524},
+            pos = {x = 541.7646686984667, y = 1920.1357111955244},
             propsData = {}
           },
           ["17724390792702384704"] = {
             key = "17724390792702384704",
             type = "GoToNode",
             name = "箭头6",
-            pos = {x = 972.5853733581118, y = -316.17483313270964},
+            pos = {x = 1272.8161704595614, y = -350.23715197328943},
             propsData = {
               GuideUIEnable = true,
               StaticCreatorId = 2430056,
@@ -345,10 +351,10 @@ return {
           ["17724390792702384705"] = {
             key = "17724390792702384705",
             type = "GoToNode",
-            name = "箭头7",
-            pos = {x = 1355.0116291170136, y = -387.0418047467257},
+            name = "箭头7盒子",
+            pos = {x = 2133.667091301888, y = 248.99568717311942},
             propsData = {
-              GuideUIEnable = true,
+              GuideUIEnable = false,
               StaticCreatorId = 2430057,
               GuideType = "M",
               GuidePointName = "Mechanism_12020308hezi7_2430057"
@@ -358,7 +364,7 @@ return {
             key = "17724390792702384706",
             type = "GoToNode",
             name = "箭头8",
-            pos = {x = 2394.771624875789, y = 141.67901967921824},
+            pos = {x = 2727.221674825839, y = 881.3764056266045},
             propsData = {
               GuideUIEnable = true,
               StaticCreatorId = 2430058,
@@ -370,7 +376,7 @@ return {
             key = "17724390792702384707",
             type = "BossBattleFinishNode",
             name = "6号箭头被打了",
-            pos = {x = 986.3498446428014, y = -126.23198565377055},
+            pos = {x = 1275.0791924688886, y = 193.39651676168853},
             propsData = {
               SendMessage = "",
               FinishCondition = "FindArrow_6"
@@ -380,7 +386,7 @@ return {
             key = "17724390792702384708",
             type = "BossBattleFinishNode",
             name = "7号箭头被打了",
-            pos = {x = 1679.3342839497066, y = 59.63990324561291},
+            pos = {x = 3410.6809372963608, y = 282.73680634251616},
             propsData = {
               SendMessage = "",
               FinishCondition = "FindArrow_7"
@@ -390,7 +396,7 @@ return {
             key = "17724390792702384709",
             type = "BossBattleFinishNode",
             name = "8号箭头被打了",
-            pos = {x = 2400.327772313036, y = 332.2225162268137},
+            pos = {x = 2127.258341743605, y = 962.17964243394},
             propsData = {
               SendMessage = "",
               FinishCondition = "FindArrow_8"
@@ -400,7 +406,7 @@ return {
             key = "17724390792702384710",
             type = "BossBattleFinishNode",
             name = "9号箭头被打了",
-            pos = {x = 2875.0471080534007, y = 673.4706665374817},
+            pos = {x = 2134.5738313301244, y = 1863.7154217822376},
             propsData = {
               SendMessage = "",
               FinishCondition = "FindArrow_9"
@@ -410,7 +416,7 @@ return {
             key = "17724390792702384711",
             type = "GoToNode",
             name = "箭头9",
-            pos = {x = 2884.480077520495, y = 488.3878326777736},
+            pos = {x = 2144.0068007972186, y = 1678.6325879225292},
             propsData = {
               GuideUIEnable = true,
               StaticCreatorId = 2430059,
@@ -422,7 +428,7 @@ return {
             key = "17724390792702384712",
             type = "UpdateTaskBarAndTaskMainNode",
             name = "更新任务目标节点",
-            pos = {x = 1665.5167291347573, y = -403.8428733343967},
+            pos = {x = 2415.103446764954, y = -1.6319321017161945},
             propsData = {
               NewDescription = "Description_120203_7_4",
               NewDetail = "",
@@ -433,7 +439,7 @@ return {
             key = "17724390792702384713",
             type = "UpdateTaskBarAndTaskMainNode",
             name = "更回任务目标节点",
-            pos = {x = 1652.6498285301539, y = -66.31257960417946},
+            pos = {x = 3083.199279079605, y = 142.2039039123041},
             propsData = {
               NewDescription = "Description_120203_7_2",
               NewDetail = "",
@@ -444,7 +450,7 @@ return {
             key = "17724390792702384714",
             type = "ChangeStaticCreatorNode",
             name = "生成7号位置怪物",
-            pos = {x = 1380.7474777832647, y = -196.7805192290714},
+            pos = {x = 2422.7004704427795, y = 280.1895215996653},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,
@@ -472,7 +478,7 @@ return {
             key = "17724390792702384715",
             type = "KillMonsterNode",
             name = "击杀怪物",
-            pos = {x = 1397.0955765913316, y = -53.361176293670354},
+            pos = {x = 2758.881290877046, y = 270.3338786513846},
             propsData = {
               KillMonsterType = "Id",
               MonsterNeedNums = 13,
@@ -497,21 +503,11 @@ return {
               }
             }
           },
-          ["17724390792702384716"] = {
-            key = "17724390792702384716",
-            type = "BossBattleFinishNode",
-            name = "发消息7号位置怪物打掉了",
-            pos = {x = 1709.9293302236385, y = -249.79708664472338},
-            propsData = {
-              SendMessage = "",
-              FinishCondition = "FindArrow_3MonKill"
-            }
-          },
           ["17724390792702384717"] = {
             key = "17724390792702384717",
             type = "SendMessageNode",
             name = "发送消息",
-            pos = {x = 1405.2916258871026, y = 90.03836335862616},
+            pos = {x = 3079.417999513477, y = 287.87352819379106},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "FindArrow_7MonKill",
@@ -522,7 +518,7 @@ return {
             key = "1772883747907824022",
             type = "BossBattleFinishNode",
             name = "5号箭头被打了",
-            pos = {x = 608.4664160401001, y = -148.27849273488684},
+            pos = {x = 588.9011986487957, y = 179.11281161293937},
             propsData = {
               SendMessage = "",
               FinishCondition = "FindArrow_5"
@@ -532,7 +528,7 @@ return {
             key = "17728846043722466633",
             type = "GoToNode",
             name = "前往",
-            pos = {x = 570.912346716007, y = -347.16084588559187},
+            pos = {x = 611.3471293247027, y = -348.4651937116788},
             propsData = {
               GuideUIEnable = true,
               StaticCreatorId = 2010048,
@@ -555,7 +551,7 @@ return {
             key = "17732354923626020938",
             type = "ShowOrHideTaskIndicatorNode",
             name = "显示/隐藏任务指引点节点",
-            pos = {x = 709.3106699751861, y = -711.466933872579},
+            pos = {x = 932.3541482360557, y = -352.608238220405},
             propsData = {
               IsShow = true,
               bOpenRangeEffect = false,
@@ -567,7 +563,7 @@ return {
             key = "17732355213766021204",
             type = "ShowOrHideTaskIndicatorNode",
             name = "显示/隐藏任务指引点节点",
-            pos = {x = 773.826799007444, y = -666.0713685508041},
+            pos = {x = 905.781146833531, y = -181.4344120290647},
             propsData = {
               IsShow = false,
               bOpenRangeEffect = false,
@@ -575,23 +571,11 @@ return {
               GuideName = "Mechanism_12020305suyi_2010048"
             }
           },
-          ["17732355471366021595"] = {
-            key = "17732355471366021595",
-            type = "ShowOrHideTaskIndicatorNode",
-            name = "显示/隐藏任务指引点节点",
-            pos = {x = 1194.794540942928, y = -758.4907233895138},
-            propsData = {
-              IsShow = true,
-              bOpenRangeEffect = false,
-              GuideType = "M",
-              GuideName = "Mechanism_12020308hezi6_2430056"
-            }
-          },
           ["17732356791996021790"] = {
             key = "17732356791996021790",
             type = "ShowOrHideTaskIndicatorNode",
             name = "显示/隐藏任务指引点节点",
-            pos = {x = 1266.4074441687344, y = -634.4219729866909},
+            pos = {x = 1685.586188130087, y = 184.51824440461382},
             propsData = {
               IsShow = false,
               bOpenRangeEffect = false,
@@ -603,7 +587,7 @@ return {
             key = "17732357090456022215",
             type = "ShowOrHideTaskIndicatorNode",
             name = "显示/隐藏任务指引点节点",
-            pos = {x = 2041.2922367954627, y = -403.3115609189199},
+            pos = {x = 3423.7979810512074, y = 100.02485266749393},
             propsData = {
               IsShow = true,
               bOpenRangeEffect = false,
@@ -615,7 +599,7 @@ return {
             key = "17732357180366022458",
             type = "ShowOrHideTaskIndicatorNode",
             name = "显示/隐藏任务指引点节点",
-            pos = {x = 2089.5065225097483, y = -296.32778345646295},
+            pos = {x = 3712.0979311011574, y = 297.52086789218873},
             propsData = {
               IsShow = false,
               bOpenRangeEffect = false,
@@ -627,7 +611,7 @@ return {
             key = "17732357361216022749",
             type = "ShowOrHideTaskIndicatorNode",
             name = "显示/隐藏任务指引点节点",
-            pos = {x = 2877.899379652606, y = 25.921822557482773},
+            pos = {x = 2995.2944845477105, y = 863.9259018115624},
             propsData = {
               IsShow = true,
               bOpenRangeEffect = false,
@@ -639,7 +623,7 @@ return {
             key = "17732357361216022750",
             type = "ShowOrHideTaskIndicatorNode",
             name = "显示/隐藏任务指引点节点",
-            pos = {x = 2927.313665366891, y = 128.10560001993971},
+            pos = {x = 2712.8955834488083, y = 1034.9348540991941},
             propsData = {
               IsShow = false,
               bOpenRangeEffect = false,
@@ -651,7 +635,7 @@ return {
             key = "17732357909816023314",
             type = "ShowOrHideTaskIndicatorNode",
             name = "显示/隐藏任务指引点节点",
-            pos = {x = 3343.3557288589554, y = 392.209865134865},
+            pos = {x = 2483.9314031846297, y = 1689.881193806194},
             propsData = {
               IsShow = true,
               bOpenRangeEffect = false,
@@ -663,7 +647,7 @@ return {
             key = "17732357952526023460",
             type = "ShowOrHideTaskIndicatorNode",
             name = "显示/隐藏任务指引点节点",
-            pos = {x = 3365.8557288589554, y = 550.9598651348651},
+            pos = {x = 2493.231403184629, y = 1879.4311938061946},
             propsData = {
               IsShow = false,
               bOpenRangeEffect = false,
@@ -686,7 +670,7 @@ return {
             key = "1774009517013849042",
             type = "CreatePhantomNode",
             name = "召唤/销毁剧情魅影",
-            pos = {x = 1747.7249827467222, y = -571.1806418219461},
+            pos = {x = 2418.6592007026798, y = 150.44822930692536},
             propsData = {
               IsCreate = true,
               IsClearOtherPhantom = false,
@@ -698,12 +682,112 @@ return {
             key = "1774009531457849243",
             type = "CreatePhantomNode",
             name = "召唤/销毁剧情魅影",
-            pos = {x = 2105.909711810762, y = -560.3005193831655},
+            pos = {x = 3098.5360854371365, y = -8.687882020527907},
             propsData = {
               IsCreate = false,
               IsClearOtherPhantom = false,
               IsSync = false,
               StaticCreatorIdList = {242430197}
+            }
+          },
+          ["17746922631606831603"] = {
+            key = "17746922631606831603",
+            type = "BossBattleFinishNode",
+            name = "鸟飞到6号标记",
+            pos = {x = 1281.9403098108794, y = 27.626882566513387},
+            propsData = {
+              SendMessage = "",
+              FinishCondition = "FindArrow_Arrived_6"
+            }
+          },
+          ["17746922751166831848"] = {
+            key = "17746922751166831848",
+            type = "ShowOrHideTaskIndicatorNode",
+            name = "显示/隐藏任务指引点节点",
+            pos = {x = 1682.5303670549847, y = 11.095816106515386},
+            propsData = {
+              IsShow = true,
+              bOpenRangeEffect = false,
+              GuideType = "M",
+              GuideName = "Mechanism_12020308hezi6_2430056"
+            }
+          },
+          ["17746923309186833264"] = {
+            key = "17746923309186833264",
+            type = "BossBattleFinishNode",
+            name = "鸟飞到7号标记",
+            pos = {x = 2126.27892134678, y = -177.8527683821306},
+            propsData = {
+              SendMessage = "",
+              FinishCondition = "FindArrow_Arrived_7"
+            }
+          },
+          ["17746923309186833265"] = {
+            key = "17746923309186833265",
+            type = "ShowOrHideTaskIndicatorNode",
+            name = "显示/隐藏任务指引点节点",
+            pos = {x = 2393.9879054156945, y = -184.1169122222648},
+            propsData = {
+              IsShow = true,
+              bOpenRangeEffect = false,
+              GuideType = "M",
+              GuideName = "Mechanism_12020308hezi7_2430057"
+            }
+          },
+          ["17746923580276834048"] = {
+            key = "17746923580276834048",
+            type = "ShowOrHideTaskIndicatorNode",
+            name = "显示/隐藏任务指引点节点",
+            pos = {x = 2728.655779009358, y = 89.22042858006247},
+            propsData = {
+              IsShow = false,
+              bOpenRangeEffect = false,
+              GuideType = "M",
+              GuideName = "Mechanism_12020308hezi6_2430056"
+            }
+          },
+          ["17746926942877689808"] = {
+            key = "17746926942877689808",
+            type = "BossBattleFinishNode",
+            name = "鸟飞到8号标记",
+            pos = {x = 2094.458693190043, y = 700.6730606483102},
+            propsData = {
+              SendMessage = "",
+              FinishCondition = "FindArrow_Arrived_8"
+            }
+          },
+          ["17746926942877689809"] = {
+            key = "17746926942877689809",
+            type = "ShowOrHideTaskIndicatorNode",
+            name = "显示/隐藏任务指引点节点",
+            pos = {x = 2370.7001447914254, y = 699.5517739510333},
+            propsData = {
+              IsShow = true,
+              bOpenRangeEffect = false,
+              GuideType = "P",
+              GuideName = "Mechanism_12020308hezi8_2430058top"
+            }
+          },
+          ["17746927792277692046"] = {
+            key = "17746927792277692046",
+            type = "BossBattleFinishNode",
+            name = "鸟飞到9号标记",
+            pos = {x = 2132.9125151860017, y = 1517.9484627426837},
+            propsData = {
+              SendMessage = "",
+              FinishCondition = "FindArrow_Arrived_9"
+            }
+          },
+          ["17746927792277692047"] = {
+            key = "17746927792277692047",
+            type = "ShowOrHideTaskIndicatorNode",
+            name = "显示/隐藏任务指引点节点",
+            pos = {x = 2409.153966787384, y = 1516.8271760454068},
+            propsData = {
+              IsShow = true,
+              bOpenRangeEffect = false,
+              GuideType = "M",
+              GuideName = "Mechanism_12020308hezi8_2430059"
             }
           }
         },
@@ -711,32 +795,32 @@ return {
           ["17724390940352385243"] = {
             key = "17724390940352385243",
             name = "9号",
-            position = {x = 2835.524560549566, y = 367.33048860610376},
-            size = {width = 302.14285714285717, height = 447.8571428571429}
+            position = {x = 2069.7266085016136, y = 1340.9518672274826},
+            size = {width = 1116.2604139976845, height = 714.3164806937629}
           },
           ["17724391106352385789"] = {
             key = "17724391106352385789",
             name = "8号",
-            position = {x = 2336.6912803032424, y = 44.29567257672272},
-            size = {width = 316.8, height = 458.40000000000003}
+            position = {x = 2071.009462121424, y = 541.3556958867462},
+            size = {width = 1171.1351558209378, height = 760.6118969002101}
           },
           ["17724391189422386089"] = {
             key = "17724391189422386089",
-            name = "7号",
-            position = {x = 1363.0887379762703, y = -455.26142506701274},
-            size = {width = 605.4545454545453, height = 684.5454545454545}
+            name = "7号--杀怪",
+            position = {x = 2101.550276437809, y = -469.1075789131666},
+            size = {width = 1852.0841239865795, height = 921.4673374072}
           },
           ["17724391277972386362"] = {
             key = "17724391277972386362",
             name = "6号",
-            position = {x = 936.3764576095778, y = -450.3604987874099},
-            size = {width = 294.5454545454547, height = 487.27272727272714}
+            position = {x = 1227.0014576095778, y = -427.8604987874099},
+            size = {width = 754.8182768829006, height = 787.5040822503556}
           },
           ["17728846199562467064"] = {
             key = "17728846199562467064",
             name = "5号",
             position = {x = 543.8115063798724, y = -448.1272324402138},
-            size = {width = 319.2857142857144, height = 469.28571428571433}
+            size = {width = 629.8832281126055, height = 785.2708159031595}
           }
         }
       }

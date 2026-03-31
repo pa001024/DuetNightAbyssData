@@ -66,12 +66,10 @@ function M:FinishSolotreasure(IsWin, Reason)
 end
 
 function M:OnDungeonWin(Reason)
-  AudioManager(self):PlayUISound(self, "event:/ui/activity/sdc_level_success", nil, nil)
   self.GameMode:NotifyServerGameEnd(true, Reason)
 end
 
 function M:OnDungeonFailed(Reason)
-  AudioManager(self):PlayUISound(self, "event:/ui/activity/sdc_level_fail", nil, nil)
   self.GameMode:NotifyServerGameEnd(false, Reason)
 end
 

@@ -3063,7 +3063,6 @@
       {
         "id": 90270302,
         "content": "맞아요, 돈이 없을 땐 확실히 곤란했죠.",
-        "voice": "char/Kami/vo_topic_03_2",
         "npc": 100001,
         "next": 90270303
       },
@@ -3083,7 +3082,7 @@
       {
         "id": 90270303,
         "content": "돈이 있으면, 설령 출신을 바꾸진 못하더라도, 운명에 맞설 용기가 생기지. 세찬 비바람이 몰아칠 때, 술 한 병 사서 몸이라도 녹일 수 있고, 아니면 다른 사람과 나눠 마시면서 인심을 쌓을 수도 있잖아.",
-        "voice": "char/Kami/vo_topic_03_3",
+        "voice": "char/Kami/vo_topic_03_2",
         "npc": 83202,
         "next": 90270304
       },
@@ -3103,6 +3102,7 @@
       {
         "id": 90270304,
         "content": "봐, 돈이 얼마나 중요한지 알겠지?",
+        "voice": "char/Kami/vo_topic_03_3",
         "npc": 83202,
         "options": [
           {
@@ -5928,7 +5928,6 @@
       {
         "id": 90270302,
         "content": "맞아요, 돈이 없을 땐 확실히 곤란했죠.",
-        "voice": "char/Kami/vo_topic_03_2",
         "npc": 100001,
         "next": 90270303
       },
@@ -5948,7 +5947,7 @@
       {
         "id": 90270303,
         "content": "돈이 있으면, 설령 출신을 바꾸진 못하더라도, 운명에 맞설 용기가 생기지. 세찬 비바람이 몰아칠 때, 술 한 병 사서 몸이라도 녹일 수 있고, 아니면 다른 사람과 나눠 마시면서 인심을 쌓을 수도 있잖아.",
-        "voice": "char/Kami/vo_topic_03_3",
+        "voice": "char/Kami/vo_topic_03_2",
         "npc": 83202,
         "next": 90270304
       },
@@ -5968,6 +5967,7 @@
       {
         "id": 90270304,
         "content": "봐, 돈이 얼마나 중요한지 알겠지?",
+        "voice": "char/Kami/vo_topic_03_3",
         "npc": 83202,
         "options": [
           {
@@ -11508,61 +11508,61 @@
   },
   {
     "id": 240003,
-    "name": "药师",
+    "name": "약사",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240004,
-    "name": "路人",
+    "name": "행인",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240005,
-    "name": "路人",
+    "name": "행인",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240006,
-    "name": "路人",
+    "name": "행인",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240007,
-    "name": "排队的女子",
+    "name": "줄 선 여자",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240008,
-    "name": "香官",
+    "name": "향관",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240009,
-    "name": "工匠",
+    "name": "장인",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240010,
-    "name": "兴奋的路人",
+    "name": "신난 행인",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240011,
-    "name": "炫耀的路人",
+    "name": "잘난 척하는 행인",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240012,
-    "name": "文绉绉的路人",
+    "name": "점잔 빼는 행인",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -11580,55 +11580,55 @@
   },
   {
     "id": 240015,
-    "name": "门卫",
+    "name": "문지기",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240016,
-    "name": "接待员",
+    "name": "접수원",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240017,
-    "name": "守卫",
+    "name": "경비",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240018,
-    "name": "守卫",
+    "name": "경비",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240019,
-    "name": "守卫",
+    "name": "경비",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240020,
-    "name": "偃雀",
+    "name": "언작",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240021,
-    "name": "偃雀",
+    "name": "언작",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240022,
-    "name": "偃雀",
+    "name": "언작",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240023,
-    "name": "偃雀",
+    "name": "언작",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -11652,7 +11652,7 @@
   },
   {
     "id": 240027,
-    "name": "参商港管事",
+    "name": "삼상항 관리인",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -11682,7 +11682,7 @@
   },
   {
     "id": 240032,
-    "name": "云翎鸥",
+    "name": "운령구",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -11700,91 +11700,91 @@
   },
   {
     "id": 240035,
-    "name": "飘零人",
+    "name": "나그네",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240036,
-    "name": "飘零人",
+    "name": "나그네",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240037,
-    "name": "玩耍的孩童",
+    "name": "놀고 있는 아이",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240038,
-    "name": "农妇",
+    "name": "중년의 농촌 여성",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240039,
-    "name": "村长",
+    "name": "촌장",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240040,
-    "name": "静渊",
+    "name": "정연",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240041,
-    "name": "被攻击的民众",
+    "name": "공격당하는 시민",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240042,
-    "name": "祈祷的老年男子",
+    "name": "기도하는 노인",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240043,
-    "name": "害怕的小女孩",
+    "name": "겁에 질린 소녀",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240044,
-    "name": "中年妇女",
+    "name": "중년 여성",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240045,
-    "name": "混乱的狴犴",
+    "name": "폭주하는 폐안",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240046,
-    "name": "胆怯的书生",
+    "name": "겁 많은 서생",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240047,
-    "name": "声音洪亮的男子",
+    "name": "목소리가 큰 남자",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240048,
-    "name": "泽生阁学徒",
+    "name": "택생각 학생",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240049,
-    "name": "泽生阁学徒",
+    "name": "택생각 학생",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -11808,13 +11808,13 @@
   },
   {
     "id": 240053,
-    "name": "混乱的狴犴",
+    "name": "폭주하는 폐안",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240054,
-    "name": "混乱的狴犴",
+    "name": "폭주하는 폐안",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -11879,61 +11879,61 @@
   },
   {
     "id": 240066,
-    "name": "固执的中年男子",
+    "name": "고집 센 중년 남자",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240067,
-    "name": "害怕的男子",
+    "name": "겁에 질린 남자",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240068,
-    "name": "瑟瑟发抖的女子",
+    "name": "두려움에 떠는 여자",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240069,
-    "name": "失落的声音",
+    "name": "실의에 빠진 목소리",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240070,
-    "name": "无由生",
+    "name": "무유생",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240071,
-    "name": "先人",
+    "name": "선조",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240072,
-    "name": "倨傲的先人",
+    "name": "교만한 선조",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240073,
-    "name": "骄横的先人",
+    "name": "무례한 선조",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240074,
-    "name": "先人",
+    "name": "선조",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240075,
-    "name": "先人",
+    "name": "선조",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -12084,7 +12084,7 @@
   },
   {
     "id": 240104,
-    "name": "路人少女",
+    "name": "길 가는 소녀",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -12102,20 +12102,20 @@
   },
   {
     "id": 240107,
-    "name": "路人少女",
+    "name": "소을",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
       {
         "id": 12048809,
         "content": "没问题，包在我身上！本姑娘刚刚看你尝试，早就手痒了~",
-        "npc": 200026,
+        "npc": 240026,
         "next": 12048810
       },
       {
         "id": 12048810,
         "content": "不过话说回来，{nickname}，你回去后可得好好从头补起机枢知识呢。让我想想，从哪里开始呢，不如就从……",
-        "npc": 200026,
+        "npc": 240026,
         "next": 12048811
       },
       {
@@ -12128,20 +12128,20 @@
   },
   {
     "id": 240108,
-    "name": "路人少女",
+    "name": "소을",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
       {
         "id": 12048809,
         "content": "没问题，包在我身上！本姑娘刚刚看你尝试，早就手痒了~",
-        "npc": 200026,
+        "npc": 240026,
         "next": 12048810
       },
       {
         "id": 12048810,
         "content": "不过话说回来，{nickname}，你回去后可得好好从头补起机枢知识呢。让我想想，从哪里开始呢，不如就从……",
-        "npc": 200026,
+        "npc": 240026,
         "next": 12048811
       },
       {
@@ -12154,20 +12154,20 @@
   },
   {
     "id": 240109,
-    "name": "路人少女",
+    "name": "소을",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
       {
         "id": 12048809,
         "content": "没问题，包在我身上！本姑娘刚刚看你尝试，早就手痒了~",
-        "npc": 200026,
+        "npc": 240026,
         "next": 12048810
       },
       {
         "id": 12048810,
         "content": "不过话说回来，{nickname}，你回去后可得好好从头补起机枢知识呢。让我想想，从哪里开始呢，不如就从……",
-        "npc": 200026,
+        "npc": 240026,
         "next": 12048811
       },
       {
@@ -12177,6 +12177,48 @@
         "next": 12048812
       }
     ]
+  },
+  {
+    "id": 240110,
+    "name": "풍류생",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 240111,
+    "name": "각주",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 240112,
+    "name": "욱명",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 240113,
+    "name": "스노우",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 240114,
+    "name": "태호",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 240115,
+    "name": "경비",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 240116,
+    "name": "경비",
+    "camp": "NPC",
+    "type": "Normal"
   },
   {
     "id": 250001,
@@ -12248,21 +12290,21 @@
     "talks": [
       {
         "id": 12060534,
-        "content": "机关鸟就藏在那边的箱子里。怎么？需不需要恶魔大盗给你带路？",
+        "content": "기계 새는 저쪽에 있는 상자 안에 숨겨져 있어. 왜? 이 악마대도님이 앞장서 줄까?",
         "voice": "story/1206/120605/1E313933",
         "npc": 250006,
         "next": 12060535
       },
       {
         "id": 12060535,
-        "content": "这次我盯住你了，不要有什么小心思，也别想着轻举妄动！",
+        "content": "이번엔 두 눈 부릅뜨고 지켜볼 거니까, 딴마음 품거나 멋대로 굴 생각 마!",
         "voice": "story/1206/120605/1E313934",
         "npc": 250003,
         "next": 12060536
       },
       {
         "id": 12060536,
-        "content": "嘻嘻，需要恶魔大盗表演一下从你眼皮底子下消失的魔术吗~这可是我的拿手绝活~",
+        "content": "히힛, 악마대도님이 네 눈앞에서 뿅 하고 사라지는 마술이라도 보여 줄까~? 나 그거 엄청 잘하거든~",
         "voice": "story/1206/120605/1E313935",
         "npc": 250006
       }
@@ -12430,13 +12472,13 @@
   },
   {
     "id": 250026,
-    "name": "望春",
+    "name": "춘망",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 250027,
-    "name": "看守",
+    "name": "관리인",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -20638,7 +20680,7 @@
   },
   {
     "id": 700384,
-    "name": "渡影集",
+    "name": "나루터 사진집",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -20686,13 +20728,13 @@
   },
   {
     "id": 700392,
-    "name": "阁主",
+    "name": "택생각 수장",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 700393,
-    "name": "衰弱的伤者",
+    "name": "쇠약해진 환자",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -28725,7 +28767,7 @@
   },
   {
     "id": 701113,
-    "name": "汀兰",
+    "name": "정란",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -28888,7 +28930,7 @@
   },
   {
     "id": 701114,
-    "name": "诸葛陶",
+    "name": "제갈도",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -28989,7 +29031,7 @@
   },
   {
     "id": 701115,
-    "name": "西门鹤",
+    "name": "서문학",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -29132,7 +29174,7 @@
   },
   {
     "id": 701116,
-    "name": "澹台烟",
+    "name": "담대연",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -29181,13 +29223,13 @@
   },
   {
     "id": 701117,
-    "name": "许星垂",
+    "name": "허성수",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701118,
-    "name": "月痕",
+    "name": "월현",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -29377,7 +29419,7 @@
   },
   {
     "id": 701119,
-    "name": "离砚",
+    "name": "이연",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -29420,13 +29462,13 @@
   },
   {
     "id": 701120,
-    "name": "雨霖",
+    "name": "임우",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701121,
-    "name": "沈禾",
+    "name": "심화",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -29546,7 +29588,7 @@
   },
   {
     "id": 701122,
-    "name": "韩菱",
+    "name": "한령",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -29622,7 +29664,7 @@
   },
   {
     "id": 701123,
-    "name": "璎珞",
+    "name": "영락",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -29804,7 +29846,7 @@
   },
   {
     "id": 701124,
-    "name": "琳琅",
+    "name": "임랑",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -29822,7 +29864,7 @@
       },
       {
         "id": 51157002,
-        "content": "아주 별미랍니다. 혹시 서중이라는 곳 아세요? 예전에 제가 일 때문에 한동안 거기 머문 적이 있는데, 그때 거기 사람들이 대접해 줬던 먹거리예요.",
+        "content": "아주 별미랍니다. 혹시 금운곡이라는 곳 아세요? 예전에 제가 일 때문에 한동안 거기 머문 적이 있는데, 그때 거기 사람들이 대접해 줬던 먹거리예요.",
         "npc": 701124,
         "next": 51157003
       },
@@ -29850,7 +29892,7 @@
       },
       {
         "id": 51157005,
-        "content": "서중 사람들은 이걸... '꼬치꼬치'라고 부른대요! 어때요? 시식해 보실래요?",
+        "content": "금운곡 사람들은 이걸... '꼬치꼬치'라고 부른대요! 어때요? 시식해 보실래요?",
         "npc": 701124
       },
       {
@@ -29891,7 +29933,7 @@
   },
   {
     "id": 701125,
-    "name": "桂棹",
+    "name": "계삼도",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -30048,7 +30090,7 @@
   },
   {
     "id": 701126,
-    "name": "方朔",
+    "name": "방영삭",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -30240,7 +30282,7 @@
   },
   {
     "id": 701127,
-    "name": "云裳",
+    "name": "운상",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -30314,7 +30356,7 @@
   },
   {
     "id": 701128,
-    "name": "同福饭馆店小二",
+    "name": "동복반점 종업원",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -30346,7 +30388,7 @@
   },
   {
     "id": 701129,
-    "name": "禾穗",
+    "name": "화수",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -30424,7 +30466,7 @@
   },
   {
     "id": 701130,
-    "name": "魏蒲",
+    "name": "위포",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -30628,7 +30670,7 @@
   },
   {
     "id": 701131,
-    "name": "孙枕石",
+    "name": "손석중",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -30697,7 +30739,7 @@
   },
   {
     "id": 701132,
-    "name": "涧泉",
+    "name": "효천",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -30746,13 +30788,13 @@
   },
   {
     "id": 701133,
-    "name": "秋浦",
+    "name": "추빈",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701134,
-    "name": "方晴川",
+    "name": "방천영",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -30852,7 +30894,7 @@
   },
   {
     "id": 701135,
-    "name": "陆瑶光",
+    "name": "육요광",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -30931,7 +30973,7 @@
   },
   {
     "id": 701136,
-    "name": "刘福",
+    "name": "유복",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -31038,7 +31080,7 @@
   },
   {
     "id": 701137,
-    "name": "何道微",
+    "name": "하도균",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -31119,7 +31161,7 @@
   },
   {
     "id": 701138,
-    "name": "褚家",
+    "name": "저수",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -31190,7 +31232,7 @@
   },
   {
     "id": 701139,
-    "name": "周伯远",
+    "name": "주백원",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -31329,13 +31371,13 @@
   },
   {
     "id": 701140,
-    "name": "梁达博",
+    "name": "양박사",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701141,
-    "name": "长庚",
+    "name": "장경",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -31483,7 +31525,7 @@
   },
   {
     "id": 701142,
-    "name": "周砚秋",
+    "name": "주연춘",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -31669,7 +31711,7 @@
   },
   {
     "id": 701143,
-    "name": "张老丈",
+    "name": "장 영감",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -31802,13 +31844,13 @@
   },
   {
     "id": 701144,
-    "name": "严公",
+    "name": "엄 영감",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701145,
-    "name": "刘婆婆",
+    "name": "유씨",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -31916,7 +31958,7 @@
   },
   {
     "id": 701146,
-    "name": "渡风",
+    "name": "도풍",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -32005,7 +32047,7 @@
   },
   {
     "id": 701147,
-    "name": "林德昌",
+    "name": "임창덕",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -32083,7 +32125,7 @@
   },
   {
     "id": 701148,
-    "name": "阿菀",
+    "name": "완아",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -32225,7 +32267,7 @@
   },
   {
     "id": 701149,
-    "name": "寻鹤",
+    "name": "심학",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -32276,7 +32318,7 @@
   },
   {
     "id": 701150,
-    "name": "建业",
+    "name": "건업",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -32331,7 +32373,7 @@
   },
   {
     "id": 701151,
-    "name": "小棠",
+    "name": "당심",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -32474,7 +32516,7 @@
   },
   {
     "id": 701152,
-    "name": "时风",
+    "name": "서풍",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -32661,7 +32703,7 @@
   },
   {
     "id": 701153,
-    "name": "秦执",
+    "name": "진념",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -32698,7 +32740,7 @@
   },
   {
     "id": 701154,
-    "name": "王伯公",
+    "name": "왕씨",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -32769,7 +32811,7 @@
   },
   {
     "id": 701155,
-    "name": "李某某",
+    "name": "이씨",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -32943,7 +32985,7 @@
   },
   {
     "id": 701156,
-    "name": "马老丈",
+    "name": "마 영감",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -33022,7 +33064,7 @@
   },
   {
     "id": 701157,
-    "name": "孙兰芝",
+    "name": "손난희",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -33078,7 +33120,7 @@
   },
   {
     "id": 701158,
-    "name": "孟巧娘",
+    "name": "맹총명",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -33298,13 +33340,13 @@
   },
   {
     "id": 701159,
-    "name": "景小年",
+    "name": "경재",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701160,
-    "name": "景小年",
+    "name": "경재",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -33377,13 +33419,13 @@
   },
   {
     "id": 701161,
-    "name": "棠豆",
+    "name": "달콩",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701162,
-    "name": "文博",
+    "name": "원보",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -33518,7 +33560,7 @@
   },
   {
     "id": 701163,
-    "name": "吴章知",
+    "name": "오장식",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -33605,7 +33647,7 @@
   },
   {
     "id": 701164,
-    "name": "晚月",
+    "name": "만월",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -33651,7 +33693,7 @@
   },
   {
     "id": 701165,
-    "name": "安永",
+    "name": "안영",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -33753,7 +33795,7 @@
   },
   {
     "id": 701166,
-    "name": "卢静薇",
+    "name": "노정미",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -33794,7 +33836,7 @@
   },
   {
     "id": 701167,
-    "name": "文彬",
+    "name": "문빈",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -33906,7 +33948,7 @@
   },
   {
     "id": 701168,
-    "name": "景和",
+    "name": "경평",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -33941,7 +33983,7 @@
   },
   {
     "id": 701169,
-    "name": "裴德厚",
+    "name": "배덕후",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -34025,7 +34067,7 @@
   },
   {
     "id": 701170,
-    "name": "温玉笙",
+    "name": "온옥생",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -34088,7 +34130,7 @@
   },
   {
     "id": 701171,
-    "name": "清鸢",
+    "name": "청연",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -34145,7 +34187,7 @@
   },
   {
     "id": 701172,
-    "name": "灵月",
+    "name": "영월",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -34285,7 +34327,7 @@
   },
   {
     "id": 701173,
-    "name": "元祯",
+    "name": "원정",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -34360,7 +34402,7 @@
   },
   {
     "id": 701174,
-    "name": "白灵汐",
+    "name": "백령석",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -34496,7 +34538,7 @@
   },
   {
     "id": 701175,
-    "name": "朱鹤龄",
+    "name": "주학령",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -34689,7 +34731,7 @@
   },
   {
     "id": 701176,
-    "name": "魏青娥",
+    "name": "위청아",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -34863,7 +34905,7 @@
   },
   {
     "id": 701177,
-    "name": "任清欢",
+    "name": "임청환",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -35005,7 +35047,7 @@
   },
   {
     "id": 701178,
-    "name": "明玥",
+    "name": "명월",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -35063,7 +35105,7 @@
   },
   {
     "id": 701179,
-    "name": "彭春桃",
+    "name": "춘도",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -35113,7 +35155,7 @@
   },
   {
     "id": 701180,
-    "name": "时茂",
+    "name": "시무",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -35125,13 +35167,13 @@
       },
       {
         "id": 51167102,
-        "content": "징허게 배 타고 온 보람이 있구마잉! 이런 걸 시방 뭐라고 헌다냐? 선생님헌테 배웠던 거 같은디... 실로 흡족한 방문이라 혔나? 워메~ 겁나 대갈빡 터지네.",
+        "content": "징허게 배 타고 온 보람이 있구마잉! 이런 걸 시방 뭐라고 헌다냐? 선생님헌테 배웠던 거 같은디... 실로 흡족한 방문이라 혔나? 워메~ 대굴빡 터지네.",
         "npc": 701180,
         "next": 51167103
       },
       {
         "id": 51167103,
-        "content": "근디 니는 뭐땜시 째려보냐. 금운곡에서 온 사람 처음 보냐? 아~ 내가 허벌나게 멋져서 놀라 자빠졌디여?",
+        "content": "근디 니는 뭐땜시 째려보냐. 금운곡에서 온 사람 처음 보냐? 아~ 내가 너무 멋져서 놀라 자빠져부렀냐.",
         "npc": 701180,
         "next": 51167104
       },
@@ -35142,7 +35184,7 @@
       },
       {
         "id": 51167105,
-        "content": "왜 갑자기 말이 없어? 벙어리라도 돼부렀드냐. 뭐땀시 반응이 없다야? 혹시 귀가 안 들리는 거 아녀?",
+        "content": "왜 갑자기 말이 없어? 벙어리라도 돼부렀냐. 뭐땀시 반응이 없다야? 혹시 귀가 안 들리는 거 아녀?",
         "npc": 701180,
         "options": [
           {
@@ -35159,7 +35201,7 @@
       },
       {
         "id": 51167107,
-        "content": "워메~ 말은 할 줄 아는갑네? 내가 니 친구를 닮았다고? 어찌 생겼는디? 그래도 나만큼 잘생긴 사람은 찾기 힘들제? 니 친구는 나한테 비허면 아직 한참 멀었지라~",
+        "content": "워메~ 말은 할 줄 아는갑네? 내가 니 친구를 닮았다고? 어떻게 생겼는데? 그래도 나만큼 잘생긴 사람은 찾기 힘들제? 니 친구는 나한테 비하면 아직 한참 멀었지라잉~",
         "npc": 701180,
         "next": 51167110
       },
@@ -35212,7 +35254,7 @@
   },
   {
     "id": 701181,
-    "name": "何子瑜",
+    "name": "하상유",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -35351,7 +35393,7 @@
   },
   {
     "id": 701182,
-    "name": "邵临起",
+    "name": "소영기",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -35392,7 +35434,7 @@
   },
   {
     "id": 701183,
-    "name": "陈川",
+    "name": "진천",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -35647,7 +35689,7 @@
   },
   {
     "id": 701184,
-    "name": "阿舟",
+    "name": "주하",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -35885,7 +35927,7 @@
   },
   {
     "id": 701185,
-    "name": "郭老叟",
+    "name": "곽 노인",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -35987,7 +36029,7 @@
   },
   {
     "id": 701186,
-    "name": "梁思远",
+    "name": "양사원, 뿔 없음",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -36049,7 +36091,7 @@
   },
   {
     "id": 701187,
-    "name": "同叔",
+    "name": "동씨",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -36179,7 +36221,7 @@
   },
   {
     "id": 701189,
-    "name": "刘禄",
+    "name": "부귀",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -36275,7 +36317,7 @@
   },
   {
     "id": 701190,
-    "name": "维尔",
+    "name": "빌",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -36464,7 +36506,7 @@
   },
   {
     "id": 701191,
-    "name": "玉芬",
+    "name": "옥분",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -36526,7 +36568,7 @@
   },
   {
     "id": 701192,
-    "name": "大将军",
+    "name": "대장군",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -36609,7 +36651,7 @@
   },
   {
     "id": 701193,
-    "name": "马景岐",
+    "name": "마경우",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -36692,7 +36734,7 @@
   },
   {
     "id": 701194,
-    "name": "禹臣",
+    "name": "우신",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -36804,7 +36846,7 @@
   },
   {
     "id": 701195,
-    "name": "守拙",
+    "name": "수졸",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -36875,7 +36917,7 @@
   },
   {
     "id": 701196,
-    "name": "雨桐",
+    "name": "동우",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -37004,13 +37046,13 @@
   },
   {
     "id": 701197,
-    "name": "可儿",
+    "name": "가영",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701198,
-    "name": "小川",
+    "name": "소천",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -37125,7 +37167,7 @@
   },
   {
     "id": 701199,
-    "name": "洛奇",
+    "name": "로키",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -37241,7 +37283,7 @@
   },
   {
     "id": 701200,
-    "name": "韩老爹",
+    "name": "한 영감",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -37457,7 +37499,7 @@
   },
   {
     "id": 701201,
-    "name": "韩安世",
+    "name": "한안세",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -37642,7 +37684,7 @@
   },
   {
     "id": 701202,
-    "name": "郭文昭",
+    "name": "곽문소",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -37720,7 +37762,7 @@
   },
   {
     "id": 701203,
-    "name": "砚北",
+    "name": "영복",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -37849,7 +37891,7 @@
   },
   {
     "id": 701204,
-    "name": "韩忠",
+    "name": "한충",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -38027,7 +38069,7 @@
   },
   {
     "id": 701205,
-    "name": "周远",
+    "name": "주원",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -38110,7 +38152,7 @@
   },
   {
     "id": 701206,
-    "name": "孟守诚",
+    "name": "맹수성",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -38185,7 +38227,7 @@
   },
   {
     "id": 701207,
-    "name": "李礼一",
+    "name": "이예일",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -38311,7 +38353,7 @@
   },
   {
     "id": 701208,
-    "name": "慕远",
+    "name": "모원",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -38379,7 +38421,7 @@
   },
   {
     "id": 701209,
-    "name": "思晴",
+    "name": "사영",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -38423,7 +38465,7 @@
   },
   {
     "id": 701210,
-    "name": "沐阳",
+    "name": "목양",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -38469,7 +38511,7 @@
   },
   {
     "id": 701211,
-    "name": "承泽",
+    "name": "승택",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -38559,7 +38601,7 @@
   },
   {
     "id": 701212,
-    "name": "章景行",
+    "name": "장경행",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -38685,7 +38727,7 @@
   },
   {
     "id": 701213,
-    "name": "柳明正",
+    "name": "류명정",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -38871,7 +38913,7 @@
   },
   {
     "id": 701214,
-    "name": "郑景",
+    "name": "정경",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -38926,7 +38968,7 @@
   },
   {
     "id": 701215,
-    "name": "裴云",
+    "name": "배운",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -39105,7 +39147,7 @@
   },
   {
     "id": 701216,
-    "name": "卫德舆",
+    "name": "위덕현",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -39194,7 +39236,7 @@
   },
   {
     "id": 701217,
-    "name": "沈惠兰",
+    "name": "심혜란",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -39246,7 +39288,7 @@
   },
   {
     "id": 701218,
-    "name": "书瑶",
+    "name": "서연",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -39324,7 +39366,7 @@
   },
   {
     "id": 701219,
-    "name": "时川",
+    "name": "시천",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -39492,7 +39534,7 @@
   },
   {
     "id": 701220,
-    "name": "时川",
+    "name": "시천",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -39635,7 +39677,7 @@
   },
   {
     "id": 701221,
-    "name": "方寻",
+    "name": "방심",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -39647,7 +39689,7 @@
       },
       {
         "id": 51171802,
-        "content": "콜록... 으윽... 부디 아버지께서 하루빨리 병마를 떨치고 쾌차하시기 바라나이다. 아들인... 제 목숨을... 바쳐서라도... 콜록!",
+        "content": "콜록... 으윽... 부디 아버지께서 하루빨리 병마를 떨치고 쾌차하시기 바라나이다. ... 제 목숨을... 바쳐서라도... 콜록!",
         "npc": 701221,
         "options": [
           {
@@ -39708,7 +39750,7 @@
   },
   {
     "id": 701222,
-    "name": "噌噌皎皎",
+    "name": "땅콩 루나",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -39865,7 +39907,7 @@
   },
   {
     "id": 701223,
-    "name": "章景曜",
+    "name": "장경요",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -39906,7 +39948,7 @@
   },
   {
     "id": 701224,
-    "name": "清岚",
+    "name": "청람",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -40054,7 +40096,7 @@
   },
   {
     "id": 701225,
-    "name": "林甫",
+    "name": "임보",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -40184,7 +40226,7 @@
   },
   {
     "id": 701226,
-    "name": "明哲",
+    "name": "명철",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -40196,7 +40238,7 @@
       },
       {
         "id": 51172302,
-        "content": "합향관님, 전 도무지 이해가 안 갑니다. 향을 만드는 과정에서 합향술이 대체 무슨 역할을 하는 건가요?",
+        "content": "합향관님, 전 도무지 이해가 안 갑니다. 향을 만드는 과정에서 분향술이 대체 무슨 역할을 하는 건가요?",
         "next": 51172303
       },
       {
@@ -40280,7 +40322,7 @@
   },
   {
     "id": 701227,
-    "name": "周晓棠",
+    "name": "주소당",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -40403,7 +40445,7 @@
   },
   {
     "id": 701228,
-    "name": "陈岐",
+    "name": "진기",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -40449,7 +40491,7 @@
   },
   {
     "id": 701229,
-    "name": "伯渊",
+    "name": "백연",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -40506,7 +40548,7 @@
   },
   {
     "id": 701230,
-    "name": "芷柔",
+    "name": "지유",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -40573,7 +40615,7 @@
   },
   {
     "id": 701231,
-    "name": "宋卿卿",
+    "name": "송경요",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -40597,7 +40639,7 @@
   },
   {
     "id": 701232,
-    "name": "张敬之",
+    "name": "장의지",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -40748,7 +40790,7 @@
   },
   {
     "id": 701233,
-    "name": "景铄",
+    "name": "경삭",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -40902,7 +40944,7 @@
   },
   {
     "id": 701234,
-    "name": "小瑜",
+    "name": "소유",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -40980,7 +41022,7 @@
   },
   {
     "id": 701235,
-    "name": "章老翁",
+    "name": "장 노인",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -40994,7 +41036,7 @@
   },
   {
     "id": 701236,
-    "name": "浮生",
+    "name": "부유생",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -41112,7 +41154,7 @@
   },
   {
     "id": 701237,
-    "name": "离生",
+    "name": "이생",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -41231,13 +41273,13 @@
   },
   {
     "id": 701238,
-    "name": "小婉",
+    "name": "소완",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701239,
-    "name": "张大婶",
+    "name": "장씨",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -41285,7 +41327,7 @@
   },
   {
     "id": 701240,
-    "name": "无愈",
+    "name": "유중",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -41336,7 +41378,7 @@
   },
   {
     "id": 701241,
-    "name": "长歌",
+    "name": "장효",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -41383,7 +41425,7 @@
   },
   {
     "id": 701242,
-    "name": "张远",
+    "name": "장원",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -41549,7 +41591,7 @@
   },
   {
     "id": 701243,
-    "name": "阿乔",
+    "name": "교영",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -41601,7 +41643,7 @@
   },
   {
     "id": 701244,
-    "name": "方慕声",
+    "name": "방모성",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -41685,7 +41727,7 @@
   },
   {
     "id": 701245,
-    "name": "冬雪",
+    "name": "동설",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -41737,7 +41779,7 @@
   },
   {
     "id": 701246,
-    "name": "大庄",
+    "name": "대정",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -41863,7 +41905,7 @@
   },
   {
     "id": 701247,
-    "name": "汪洋",
+    "name": "왕양",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -41923,13 +41965,13 @@
   },
   {
     "id": 701248,
-    "name": "梁平",
+    "name": "양평",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701249,
-    "name": "婉婉",
+    "name": "완완",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -41989,7 +42031,7 @@
   },
   {
     "id": 701250,
-    "name": "史基",
+    "name": "사준",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -42026,13 +42068,13 @@
   },
   {
     "id": 701251,
-    "name": "史奉春",
+    "name": "사경춘",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701252,
-    "name": "桂北发",
+    "name": "계명신",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -42114,7 +42156,7 @@
   },
   {
     "id": 701253,
-    "name": "竞天",
+    "name": "경천",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -42181,13 +42223,13 @@
   },
   {
     "id": 701254,
-    "name": "小槐",
+    "name": "소회",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701255,
-    "name": "棠生",
+    "name": "당생",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -42288,7 +42330,7 @@
   },
   {
     "id": 701256,
-    "name": "饶生",
+    "name": "요생",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -42425,7 +42467,7 @@
   },
   {
     "id": 701257,
-    "name": "相生",
+    "name": "상생",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -42533,7 +42575,7 @@
   },
   {
     "id": 701258,
-    "name": "星遥",
+    "name": "경요",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -42618,49 +42660,49 @@
   },
   {
     "id": 701259,
-    "name": "温景川",
+    "name": "온경천",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701260,
-    "name": "凉苍",
+    "name": "양청",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701261,
-    "name": "董烨",
+    "name": "동엽",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701262,
-    "name": "阿胜",
+    "name": "승이",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701263,
-    "name": "弓连春",
+    "name": "궁연춘",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701264,
-    "name": "任良",
+    "name": "임량",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701265,
-    "name": "钱袋子",
+    "name": "돈주머니",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701266,
-    "name": "魏蒲",
+    "name": "위포",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -43146,97 +43188,97 @@
   },
   {
     "id": 790072,
-    "name": "煜明",
+    "name": "욱명",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 790073,
-    "name": "不夏",
+    "name": "불하",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 790074,
-    "name": "宴山亭",
+    "name": "연산정",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 790075,
-    "name": "飘零人",
+    "name": "나그네",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 790076,
-    "name": "止流",
+    "name": "지류",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 790077,
-    "name": "望春",
+    "name": "춘망",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 790078,
-    "name": "顾砚",
+    "name": "고연",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 790079,
-    "name": "虬先生",
+    "name": "규선생",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 790080,
-    "name": "备选役A",
+    "name": "후보 A",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 790081,
-    "name": "备选役B",
+    "name": "후보 B",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 790082,
-    "name": "苏乙",
+    "name": "소을",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 790083,
-    "name": "唐叔",
+    "name": "당씨 아저씨",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 790084,
-    "name": "云纺水",
+    "name": "운연수",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 790085,
-    "name": "工匠",
+    "name": "장인",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 790086,
-    "name": "弟弟",
+    "name": "남동생",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 790087,
-    "name": "妹妹",
+    "name": "여동생",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -43945,37 +43987,37 @@
   },
   {
     "id": 840001,
-    "name": "严谨的机枢派弟子",
+    "name": "성실한 기추파 제자",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 840002,
-    "name": "傲气的机枢派师傅",
+    "name": "오만한 기추파 스승",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 840003,
-    "name": "头疼的店员",
+    "name": "골머리를 앓는 점원",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 840004,
-    "name": "神叨叨的女子",
+    "name": "중얼거리는 여자",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 840005,
-    "name": "馋嘴的孩子",
+    "name": "먹성이 좋은 여자",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 840006,
-    "name": "热情的妇人",
+    "name": "열정적인 여인",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -44635,13 +44677,13 @@
   },
   {
     "id": 930008,
-    "name": "移动载具",
+    "name": "이동 탈것",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 930009,
-    "name": "赛事主办方",
+    "name": "주최측 관계자",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -45138,7 +45180,6 @@
       {
         "id": 90270302,
         "content": "맞아요, 돈이 없을 땐 확실히 곤란했죠.",
-        "voice": "char/Kami/vo_topic_03_2",
         "npc": 100001,
         "next": 90270303
       },
@@ -45158,7 +45199,7 @@
       {
         "id": 90270303,
         "content": "돈이 있으면, 설령 출신을 바꾸진 못하더라도, 운명에 맞설 용기가 생기지. 세찬 비바람이 몰아칠 때, 술 한 병 사서 몸이라도 녹일 수 있고, 아니면 다른 사람과 나눠 마시면서 인심을 쌓을 수도 있잖아.",
-        "voice": "char/Kami/vo_topic_03_3",
+        "voice": "char/Kami/vo_topic_03_2",
         "npc": 83202,
         "next": 90270304
       },
@@ -45178,6 +45219,7 @@
       {
         "id": 90270304,
         "content": "봐, 돈이 얼마나 중요한지 알겠지?",
+        "voice": "char/Kami/vo_topic_03_3",
         "npc": 83202,
         "options": [
           {

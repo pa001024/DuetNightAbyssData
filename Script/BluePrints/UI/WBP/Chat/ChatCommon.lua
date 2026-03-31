@@ -31,6 +31,7 @@ ChatCommon.EventID = {
   EnterChatChannel = "EnterWorldChannel",
   ChatMsgSent = "ChatMsgSent",
   ChatMsgRecv = "ChatMsgRecv",
+  ChatBubble = "ChatBubble",
   QuickMsgChanged = "QuickMsgChanged",
   EmotionAdded = "EmotionAdded",
   EmotionRemoved = "EmotionRemoved",

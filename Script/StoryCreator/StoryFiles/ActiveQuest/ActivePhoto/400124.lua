@@ -132,12 +132,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17694113571051863204",
-            startPort = "Out",
-            endQuest = "17722623552293553081",
-            endPort = "In"
-          },
-          {
             startQuest = "17694113571051863208",
             startPort = "Out",
             endQuest = "17730402637134941462",

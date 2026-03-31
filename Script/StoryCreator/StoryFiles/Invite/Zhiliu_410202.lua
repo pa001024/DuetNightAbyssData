@@ -78,13 +78,19 @@ return {
       questNodeData = {
         lineData = {
           {
-            startQuest = "17730379038638768052",
-            startPort = "QuestStart",
-            endQuest = "177314572549217812402",
+            startQuest = "17744294436942756",
+            startPort = "Out",
+            endQuest = "17744294436942755",
             endPort = "In"
           },
           {
-            startQuest = "177314572549217812402",
+            startQuest = "17730379038638768052",
+            startPort = "QuestStart",
+            endQuest = "17744294436942756",
+            endPort = "In"
+          },
+          {
+            startQuest = "17744294436942755",
             startPort = "Out",
             endQuest = "17730379038638768053",
             endPort = "Success"
@@ -102,7 +108,7 @@ return {
             key = "17730379038638768053",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 1462, y = 302},
+            pos = {x = 1806, y = 310},
             propsData = {ModeType = 0}
           },
           ["17730379038638768054"] = {
@@ -112,18 +118,18 @@ return {
             pos = {x = 2800, y = 700},
             propsData = {}
           },
-          ["177314572549217812402"] = {
-            key = "177314572549217812402",
+          ["17744294436942755"] = {
+            key = "17744294436942755",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1130, y = 292},
+            pos = {x = 1402.4576659038903, y = 298.65217391304344},
             propsData = {
               IsNpcNode = false,
-              IsPlayerTurnToNPC = true,
-              IsNPCTurnToPlayer = true,
-              FirstDialogueId = 10010101,
-              FlowAssetPath = "",
-              TalkType = "FreeSimple",
+              bUseFlowAssetActors = true,
+              FirstDialogueId = 0,
+              FlowAssetPath = "DialogueAsset'/Game/Dialogue/Invite/80230201.80230201'",
+              TalkType = "FixSimple",
+              TalkStageName = "",
               BlendInTime = 0,
               BlendOutTime = 0,
               InType = "FadeIn",
@@ -132,10 +138,10 @@ return {
               BlendEaseExp = 2,
               UseProceduralCamera = false,
               ProceduralCameraId = 1,
-              HideNpcs = false,
+              HideNpcs = true,
               HideMonsters = true,
               HideAllBattleEntity = true,
-              HideMechanismsFX = false,
+              HideMechanismsFX = true,
               ShowSkipButton = true,
               ShowAutoPlayButton = true,
               ShowReviewButton = true,
@@ -149,14 +155,27 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
-              TalkActors = {},
               OptionType = "normal",
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
-              PlayerSwitchEmoIdle = true,
+              bNpcActionKeepIn = false,
+              bNpcActionKeepOut = false,
+              bForceWaitNavLoaded = false,
               NormalOptions = {},
               OverrideFailBlend = false
+            }
+          },
+          ["17744294436942756"] = {
+            key = "17744294436942756",
+            type = "SkipRegionNode",
+            name = "跨区域传送设置玩家位置",
+            pos = {x = 1089.5423340961097, y = 307.34782608695656},
+            propsData = {
+              ModeType = 1,
+              Id = 104503,
+              StartIndex = 1,
+              IsWhite = false
             }
           }
         },

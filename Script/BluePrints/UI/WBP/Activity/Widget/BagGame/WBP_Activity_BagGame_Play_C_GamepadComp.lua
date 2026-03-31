@@ -19,9 +19,6 @@ function Component:RefreshBaseInfo()
 end
 
 function Component:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
-  if CurInputDevice == UE4.ECommonInputType.Touch then
-    return
-  end
   local PrevInputDevice = self.CurInputDevice
   self.CurGamepadName = CurGamepadName
   self.CurInputDevice = CurInputDevice
@@ -279,6 +276,80 @@ function Component:_BuildGamepadScanRange(ShapeOffsets)
   local scanColStart = math.max(1, 1 + CtrColOff - sMinC)
   local scanColEnd = math.min(GRID_COLS, GRID_COLS + CtrColOff - sMaxC)
   return {scanRowStart, scanRowEnd}, {scanColStart, scanColEnd}
+end
+
+function Component:_BuildTempPlacedRecord(PlacedItem)
+  if not PlacedItem or PlacedItem.IsTempPlacement ~= true then
+    return nil
+  end
+  local Cells = PlacedItem.PlacedCells
+  if not Cells or #Cells <= 0 then
+    return nil
+  end
+  local SyncData = PlacedItem.GetDragSyncData and PlacedItem:GetDragSyncData() or nil
+  local ItemContent = BagGameModel:BuildItemContent(PlacedItem.TemplateId)
+  local Record = PlacedItem._GamepadTempPlacedRecord
+  if not Record then
+    Record = {
+      Widget = PlacedItem,
+      TemplateId = PlacedItem.TemplateId,
+      DisPlayItemId = PlacedItem.DisPlayItemId,
+      ItemType = SyncData and SyncData.ItemType or PlacedItem.ItemType or ItemContent and ItemContent.ItemType,
+      BasicPoint = PlacedItem.BasicPoint or ItemContent and ItemContent.BasicPoint or 0,
+      CurrentAmmo = SyncData and SyncData.CurrentAmmo or ItemContent and ItemContent.CurrentAmmo or 0,
+      MaxAmmo = SyncData and SyncData.MaxAmmo or ItemContent and ItemContent.MaxAmmo or 0,
+      CurrentStack = SyncData and SyncData.CurrentStack or ItemContent and ItemContent.CurrentStack or 1,
+      MaxStack = SyncData and SyncData.MaxStack or ItemContent and ItemContent.MaxStack or 0,
+      ConsumedItems = PlacedItem.ConsumedItems,
+      OriginalAmmo = PlacedItem.OriginalAmmo,
+      OriginalStack = PlacedItem.OriginalStack,
+      IsTempPlacement = true
+    }
+    PlacedItem._GamepadTempPlacedRecord = Record
+  end
+  Record.Widget = PlacedItem
+  Record.Cells = Cells
+  Record.BaseRow = self._GamepadMoveRow or Record.BaseRow or 1
+  Record.BaseCol = self._GamepadMoveCol or Record.BaseCol or 1
+  Record.ConflictRecord = PlacedItem.ConflictRecord
+  Record.ConsumedItems = PlacedItem.ConsumedItems
+  Record.OriginalAmmo = PlacedItem.OriginalAmmo
+  Record.OriginalStack = PlacedItem.OriginalStack
+  if SyncData then
+    Record.ItemType = SyncData.ItemType or Record.ItemType
+    if SyncData.CurrentAmmo ~= nil then
+      Record.CurrentAmmo = SyncData.CurrentAmmo
+    end
+    if SyncData.MaxAmmo ~= nil then
+      Record.MaxAmmo = SyncData.MaxAmmo
+    end
+    if SyncData.CurrentStack ~= nil then
+      Record.CurrentStack = SyncData.CurrentStack
+    end
+    if SyncData.MaxStack ~= nil then
+      Record.MaxStack = SyncData.MaxStack
+    end
+  end
+  return Record
+end
+
+function Component:_PromoteTempPlacedRecord(PlacedItem, PlacedRecord, Cells, BaseRow, BaseCol)
+  if not PlacedItem or not PlacedRecord then
+    return PlacedRecord
+  end
+  self.PlacedItems = self.PlacedItems or {}
+  PlacedRecord.Cells = Cells
+  PlacedRecord.BaseRow = BaseRow
+  PlacedRecord.BaseCol = BaseCol
+  PlacedRecord.IsTempPlacement = nil
+  PlacedRecord.ConflictRecord = nil
+  table.insert(self.PlacedItems, PlacedRecord)
+  BagGameModel:AddPlacedItem(PlacedRecord)
+  PlacedItem.IsTempPlacement = false
+  PlacedItem.ConflictRecord = nil
+  PlacedItem.PlacedCells = Cells
+  PlacedItem._GamepadTempPlacedRecord = nil
+  return PlacedRecord
 end
 
 function Component:_SyncMovingStateWithRuntimeContext(CurrentItem)
@@ -623,17 +694,12 @@ function Component:_EnterMovingMode(ContentData)
   if bSuccess then
     self._GamepadMoveRow = PlacedRow
     self._GamepadMoveCol = PlacedCol
-    self._GamepadMoveValid = true
     self._GamepadPlacedItem = self.CurrentUnconfirmedItem
     self._GamepadDragUI = nil
     self._GamepadDragOperation = nil
     self._GamepadState = "MOVING"
+    self:_SyncMovingStateWithRuntimeContext(self._GamepadPlacedItem)
     self:_UpdateBottomKeyByState("MOVING")
-    local InitialRecord = self.PlacedItems and self.PlacedItems[#self.PlacedItems]
-    if InitialRecord and InitialRecord.Cells then
-      self._GamepadVisualCells = InitialRecord.Cells
-      self._GamepadLastDoubleReward = InitialRecord.IsDoubleReward
-    end
   else
     self._GamepadMoveRow = scanRowStart
     self._GamepadMoveCol = scanColStart
@@ -719,8 +785,13 @@ function Component:_HandleMovingInput(InKeyName)
         self:ShowCannotDragToast()
         return true
       end
+      local bConfirmSuccess = self:ConfirmPlacedItem(self._GamepadPlacedItem)
+      if not bConfirmSuccess then
+        self:_SyncMovingStateWithRuntimeContext(self._GamepadPlacedItem)
+        self:SetFocus()
+        return true
+      end
       self._GamepadVisualCells = nil
-      self:ConfirmPlacedItem(self._GamepadPlacedItem)
       self._GamepadPlacedItem = nil
       self._GamepadDragSourceData = nil
       self._GamepadScanRowRange = nil
@@ -787,16 +858,11 @@ function Component:_MovePlacedItemByDelta(dRow, dCol)
   if not PlacedItem then
     return false
   end
-  local PlacedRecord
-  for _, Record in ipairs(self.PlacedItems) do
-    if Record.Widget == PlacedItem then
-      PlacedRecord = Record
-      break
-    end
-  end
+  local PlacedRecord = self:_GetPlacedRecord(PlacedItem)
   if not PlacedRecord then
     return false
   end
+  local bWasTempPlacement = PlacedRecord.IsTempPlacement == true or PlacedItem.IsTempPlacement == true
   local NewBaseRow = self._GamepadMoveRow + dRow
   local NewBaseCol = self._GamepadMoveCol + dCol
   local ShapeOffsets = {}
@@ -847,17 +913,20 @@ function Component:_MovePlacedItemByDelta(dRow, dCol)
   end
   self._GamepadMoveRow = NewBaseRow
   self._GamepadMoveCol = NewBaseCol
-  for _, Cell in ipairs(PlacedRecord.Cells) do
-    BagGameModel:ClearCellOccupied(Cell.Row, Cell.Col)
-    local ContainItem = self:GetContainItemAt(Cell.Row, Cell.Col)
-    if ContainItem then
-      ContainItem.bIsOccupied = false
-      ContainItem.OccupiedBy = nil
+  if not bWasTempPlacement then
+    for _, Cell in ipairs(PlacedRecord.Cells) do
+      BagGameModel:ClearCellOccupied(Cell.Row, Cell.Col)
+      local ContainItem = self:GetContainItemAt(Cell.Row, Cell.Col)
+      if ContainItem then
+        ContainItem.bIsOccupied = false
+        ContainItem.OccupiedBy = nil
+      end
     end
   end
   if self:_TryAutoTrigger(PlacedItem, PlacedRecord, NewCells) then
     return true
   end
+  local ConflictRecord = BagGameModel:FindOverlappingPlacedItem(NewCells)
   local bValid = self:CanPlaceShapeAt(NewBaseRow, NewBaseCol, NewCells)
   if bValid then
     for _, Cell in ipairs(NewCells) do
@@ -872,13 +941,28 @@ function Component:_MovePlacedItemByDelta(dRow, dCol)
     for _, Cell in ipairs(NewCells) do
       self:MarkCellOccupied(Cell.Row, Cell.Col, PlacedItem)
     end
-    PlacedRecord.Cells = NewCells
-    PlacedRecord.BaseRow = NewBaseRow
-    PlacedRecord.BaseCol = NewBaseCol
+    if bWasTempPlacement then
+      PlacedRecord = self:_PromoteTempPlacedRecord(PlacedItem, PlacedRecord, NewCells, NewBaseRow, NewBaseCol)
+    else
+      PlacedRecord.Cells = NewCells
+      PlacedRecord.BaseRow = NewBaseRow
+      PlacedRecord.BaseCol = NewBaseCol
+    end
+    PlacedItem.PlacedCells = NewCells
     self._GamepadMoveValid = true
   else
-    for _, Cell in ipairs(PlacedRecord.Cells) do
-      self:MarkCellOccupied(Cell.Row, Cell.Col, PlacedItem)
+    if bWasTempPlacement then
+      PlacedRecord.Cells = NewCells
+      PlacedRecord.BaseRow = NewBaseRow
+      PlacedRecord.BaseCol = NewBaseCol
+      PlacedRecord.ConflictRecord = ConflictRecord
+      PlacedItem.IsTempPlacement = true
+      PlacedItem.ConflictRecord = ConflictRecord
+      PlacedItem.PlacedCells = NewCells
+    else
+      for _, Cell in ipairs(PlacedRecord.Cells) do
+        self:MarkCellOccupied(Cell.Row, Cell.Col, PlacedItem)
+      end
     end
     self._GamepadMoveValid = false
   end
@@ -895,15 +979,17 @@ function Component:_MovePlacedItemByDelta(dRow, dCol)
 end
 
 function Component:_GetPlacedRecord(PlacedItem)
-  if not PlacedItem or not self.PlacedItems then
+  if not PlacedItem then
     return nil
   end
-  for _, Record in ipairs(self.PlacedItems) do
-    if Record.Widget == PlacedItem then
-      return Record
+  if self.PlacedItems then
+    for _, Record in ipairs(self.PlacedItems) do
+      if Record.Widget == PlacedItem then
+        return Record
+      end
     end
   end
-  return nil
+  return self:_BuildTempPlacedRecord(PlacedItem)
 end
 
 function Component:_ClearGamepadVisualCells()
@@ -1092,10 +1178,20 @@ function Component:_TryAutoTrigger(PlacedItem, PlacedRecord, NewCells)
     end
   elseif PlacedItem.ItemType == ItemType.Ammo then
     local GunRecord, bCanLoad = BagGameModel:FindOverlappingGun(NewCells)
-    if GunRecord and bCanLoad then
-      local bSuccess = self:ConsumeGamepadAmmoItem(PlacedItem, PlacedRecord, GunRecord, true)
-      if bSuccess then
-        bTriggered = true
+    if GunRecord then
+      if bCanLoad then
+        local bSuccess = self:ConsumeGamepadAmmoItem(PlacedItem, PlacedRecord, GunRecord, true)
+        if bSuccess then
+          bTriggered = true
+        end
+      end
+    else
+      local TargetRecord, bCanStack = BagGameModel:FindOverlappingSameAmmo(PlacedItem.TemplateId, NewCells)
+      if TargetRecord and bCanStack and TargetRecord.Widget ~= PlacedItem then
+        local bSuccess = self:ConsumeGamepadStackItem(PlacedItem, PlacedRecord, TargetRecord, true)
+        if bSuccess then
+          bTriggered = true
+        end
       end
     end
   end

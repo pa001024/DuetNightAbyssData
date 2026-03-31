@@ -651,12 +651,12 @@
       }
     ],
     "熔炼": [
-      "Vitesse d’attaque +25.0%. Lors d’une Attaque chargée avec cette arme, 28.0% de chances de réduire le temps de recharge du Soutien de Géniemon de 3.0 s.",
-      "Vitesse d’attaque +30.0%. Lors d’une Attaque chargée avec cette arme, 33.6% de chances de réduire le temps de recharge du Soutien de Géniemon de 3.0 s.",
-      "Vitesse d’attaque +35.0%. Lors d’une Attaque chargée avec cette arme, 39.2% de chances de réduire le temps de recharge du Soutien de Géniemon de 3.0 s.",
-      "Vitesse d’attaque +40.0%. Lors d’une Attaque chargée avec cette arme, 44.8% de chances de réduire le temps de recharge du Soutien de Géniemon de 3.0 s.",
-      "Vitesse d’attaque +45.0%. Lors d’une Attaque chargée avec cette arme, 50.4% de chances de réduire le temps de recharge du Soutien de Géniemon de 3.0 s.",
-      "Vitesse d’attaque +50.0%. Lors d’une Attaque chargée avec cette arme, 56.0% de chances de réduire le temps de recharge du Soutien de Géniemon de 3.0 s."
+      "Vitesse d’attaque +25.0%. Lors d’une attaque chargée avec cette arme, 28.0% de chances de réduire le temps de recharge du Soutien de Géniemon de 3.0 s.",
+      "Vitesse d’attaque +30.0%. Lors d’une attaque chargée avec cette arme, 33.6% de chances de réduire le temps de recharge du Soutien de Géniemon de 3.0 s.",
+      "Vitesse d’attaque +35.0%. Lors d’une attaque chargée avec cette arme, 39.2% de chances de réduire le temps de recharge du Soutien de Géniemon de 3.0 s.",
+      "Vitesse d’attaque +40.0%. Lors d’une attaque chargée avec cette arme, 44.8% de chances de réduire le temps de recharge du Soutien de Géniemon de 3.0 s.",
+      "Vitesse d’attaque +45.0%. Lors d’une attaque chargée avec cette arme, 50.4% de chances de réduire le temps de recharge du Soutien de Géniemon de 3.0 s.",
+      "Vitesse d’attaque +50.0%. Lors d’une attaque chargée avec cette arme, 56.0% de chances de réduire le temps de recharge du Soutien de Géniemon de 3.0 s."
     ],
     "技能": [
       {
@@ -2271,7 +2271,7 @@
   {
     "id": 10305,
     "icon": "Claymore_Mingjin",
-    "名称": "Écho d’or lointain",
+    "名称": "Écho aurifère",
     "版本": "1.3",
     "描述": "Soudain, une note limpide traverse les nuages ; la lune emplit mille passes, la neige recouvre la robe.",
     "类型": [
@@ -2324,12 +2324,12 @@
       }
     ],
     "熔炼": [
-      "触发概率+75.0%。使用此武器造成的伤害触发额外效果时，有50.0%概率回复5枚弹药。",
-      "触发概率+90.0%。使用此武器造成的伤害触发额外效果时，有60.0%概率回复5枚弹药。",
-      "触发概率+105.0%。使用此武器造成的伤害触发额外效果时，有70.0%概率回复5枚弹药。",
-      "触发概率+120.0%。使用此武器造成的伤害触发额外效果时，有80.0%概率回复5枚弹药。",
-      "触发概率+135.0%。使用此武器造成的伤害触发额外效果时，有90.0%概率回复5枚弹药。",
-      "触发概率+150.0%。使用此武器造成的伤害触发额外效果时，有100.0%概率回复5枚弹药。"
+      "Chance de déclenchement +75.0%. Lorsque cette arme déclenche un effet supplémentaire, elle a 50.0% de chances de récupérer 5 projectiles.",
+      "Chance de déclenchement +90.0%. Lorsque cette arme déclenche un effet supplémentaire, elle a 60.0% de chances de récupérer 5 projectiles.",
+      "Chance de déclenchement +105.0%. Lorsque cette arme déclenche un effet supplémentaire, elle a 70.0% de chances de récupérer 5 projectiles.",
+      "Chance de déclenchement +120.0%. Lorsque cette arme déclenche un effet supplémentaire, elle a 80.0% de chances de récupérer 5 projectiles.",
+      "Chance de déclenchement +135.0%. Lorsque cette arme déclenche un effet supplémentaire, elle a 90.0% de chances de récupérer 5 projectiles.",
+      "Chance de déclenchement +150.0%. Lorsque cette arme déclenche un effet supplémentaire, elle a 100.0% de chances de récupérer 5 projectiles."
     ],
     "技能": [
       {
@@ -5880,12 +5880,12 @@
       }
     ],
     "熔炼": [
-      "最大弹药+90.0%。光属性角色释放战技或终结技消耗神智后，基于消耗量，获得技能威力提高效果，每消耗1点神智，技能威力提高0.250%，最多提高75.0%，持续24.0秒。",
-      "最大弹药+108.0%。光属性角色释放战技或终结技消耗神智后，基于消耗量，获得技能威力提高效果，每消耗1点神智，技能威力提高0.300%，最多提高90.0%，持续24.0秒。",
-      "最大弹药+126.0%。光属性角色释放战技或终结技消耗神智后，基于消耗量，获得技能威力提高效果，每消耗1点神智，技能威力提高0.350%，最多提高105.0%，持续24.0秒。",
-      "最大弹药+144.0%。光属性角色释放战技或终结技消耗神智后，基于消耗量，获得技能威力提高效果，每消耗1点神智，技能威力提高0.400%，最多提高120.0%，持续24.0秒。",
-      "最大弹药+162.0%。光属性角色释放战技或终结技消耗神智后，基于消耗量，获得技能威力提高效果，每消耗1点神智，技能威力提高0.450%，最多提高135.0%，持续24.0秒。",
-      "最大弹药+180.0%。光属性角色释放战技或终结技消耗神智后，基于消耗量，获得技能威力提高效果，每消耗1点神智，技能威力提高0.500%，最多提高150.0%，持续24.0秒。"
+      "Munitions max +90.0%. Lorsqu’un personnage Lumino consomme de la Lucidité en utilisant une compétence de combat ou une compétence ultime, il obtient un bonus de Puissance de compétence en fonction de la quantité consommée. Chaque point de Lucidité consommé augmente la Puissance de compétence de 0.250%, jusqu’à un maximum de 75.0%, pendant 24.0 s.",
+      "Munitions max +108.0%. Lorsqu’un personnage Lumino consomme de la Lucidité en utilisant une compétence de combat ou une compétence ultime, il obtient un bonus de Puissance de compétence en fonction de la quantité consommée. Chaque point de Lucidité consommé augmente la Puissance de compétence de 0.300%, jusqu’à un maximum de 90.0%, pendant 24.0 s.",
+      "Munitions max +126.0%. Lorsqu’un personnage Lumino consomme de la Lucidité en utilisant une compétence de combat ou une compétence ultime, il obtient un bonus de Puissance de compétence en fonction de la quantité consommée. Chaque point de Lucidité consommé augmente la Puissance de compétence de 0.350%, jusqu’à un maximum de 105.0%, pendant 24.0 s.",
+      "Munitions max +144.0%. Lorsqu’un personnage Lumino consomme de la Lucidité en utilisant une compétence de combat ou une compétence ultime, il obtient un bonus de Puissance de compétence en fonction de la quantité consommée. Chaque point de Lucidité consommé augmente la Puissance de compétence de 0.400%, jusqu’à un maximum de 120.0%, pendant 24.0 s.",
+      "Munitions max +162.0%. Lorsqu’un personnage Lumino consomme de la Lucidité en utilisant une compétence de combat ou une compétence ultime, il obtient un bonus de Puissance de compétence en fonction de la quantité consommée. Chaque point de Lucidité consommé augmente la Puissance de compétence de 0.450%, jusqu’à un maximum de 135.0%, pendant 24.0 s.",
+      "Munitions max +180.0%. Lorsqu’un personnage Lumino consomme de la Lucidité en utilisant une compétence de combat ou une compétence ultime, il obtient un bonus de Puissance de compétence en fonction de la quantité consommée. Chaque point de Lucidité consommé augmente la Puissance de compétence de 0.500%, jusqu’à un maximum de 150.0%, pendant 24.0 s."
     ],
     "技能": [
       {
@@ -6986,12 +6986,12 @@
       }
     ],
     "熔炼": [
-      "Vitesse d’attaque +25.0%. Chaque ennemi touché par une flèche augmente ses dégâts de 9.0%, jusqu’à un maximum de 45.0%.",
-      "Vitesse d’attaque +30.0%. Chaque ennemi touché par une flèche augmente ses dégâts de 10.8%, jusqu’à un maximum de 54.0%.",
-      "Vitesse d’attaque +35.0%. Chaque ennemi touché par une flèche augmente ses dégâts de 12.6%, jusqu’à un maximum de 63.0%.",
-      "Vitesse d’attaque +40.0%. Chaque ennemi touché par une flèche augmente ses dégâts de 14.4%, jusqu’à un maximum de 72.0%.",
-      "Vitesse d’attaque +45.0%. Chaque ennemi touché par une flèche augmente ses dégâts de 16.2%, jusqu’à un maximum de 81.0%.",
-      "Vitesse d’attaque +50.0%. Chaque ennemi touché par une flèche augmente ses dégâts de 18.0%, jusqu’à un maximum de 90.0%."
+      "Vitesse d’attaque +25.0%. Les dégâts d’une flèche augmentent de 9.0% pour chaque ennemi qu’elle touche, jusqu’à un maximum de 45.0%.",
+      "Vitesse d’attaque +30.0%. Les dégâts d’une flèche augmentent de 10.8% pour chaque ennemi qu’elle touche, jusqu’à un maximum de 54.0%.",
+      "Vitesse d’attaque +35.0%. Les dégâts d’une flèche augmentent de 12.6% pour chaque ennemi qu’elle touche, jusqu’à un maximum de 63.0%.",
+      "Vitesse d’attaque +40.0%. Les dégâts d’une flèche augmentent de 14.4% pour chaque ennemi qu’elle touche, jusqu’à un maximum de 72.0%.",
+      "Vitesse d’attaque +45.0%. Les dégâts d’une flèche augmentent de 16.2% pour chaque ennemi qu’elle touche, jusqu’à un maximum de 81.0%.",
+      "Vitesse d’attaque +50.0%. Les dégâts d’une flèche augmentent de 18.0% pour chaque ennemi qu’elle touche, jusqu’à un maximum de 90.0%."
     ],
     "技能": [
       {

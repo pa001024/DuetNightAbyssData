@@ -185,7 +185,7 @@ function Component:LockPet(UniqueID)
   self:CallServer("LockPet", Cb, UniqueID)
 end
 
-function Component:UnLockPet(UniqueID)
+function Component:UnLockPet(UniqueID, SecondaryPassword)
   self.logger.info("UnLockPet", UniqueID)
   
   local function Cb(ErrCode)
@@ -198,7 +198,7 @@ function Component:UnLockPet(UniqueID)
     Cb(ErrorCode.RET_PET_NOT_EXIST)
     return
   end
-  self:CallServer("UnLockPet", Cb, UniqueID, "")
+  self:CallServer("UnLockPet", Cb, UniqueID, SecondaryPassword)
 end
 
 function Component:PetSetName(UniqueID, Name)

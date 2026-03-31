@@ -267,8 +267,9 @@ function M:OnAnchorGetUserMenuContent()
     
     function Content.Callback()
       local Params = {
-        PlayerName = AvatarInfo.Nickname,
+        Nickname = AvatarInfo.Nickname,
         UID = AvatarInfo.Uid,
+        Level = AvatarInfo.Level,
         TextLenMax = 50,
         ForbidRightBtn = true,
         DontCloseWhenRightBtnClicked = true

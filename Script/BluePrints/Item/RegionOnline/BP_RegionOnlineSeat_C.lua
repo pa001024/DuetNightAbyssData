@@ -37,7 +37,8 @@ function M:SendServerStartInteractive(PlayerActorEid)
   UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_RegionOnline_Apply_Sent"))
   local Player = Battle(self):GetEntity(PlayerActorEid)
   Player.WaitRegionOnlineSeatCB = true
-  Avatar:RequestChangeRegionOnlineItemState(Avatar.CurrentOnlineType, self.UniqueId, AvatarEid, InteractiveId, self.StateId)
+  local bInMobile = CommonUtils.GetRuntimePlatform(self) == "Mobile"
+  Avatar:RequestChangeRegionOnlineItemState(Avatar.CurrentOnlineType, self.UniqueId, AvatarEid, InteractiveId, self.StateId, self.BpBorn, bInMobile)
 end
 
 function M:OpenMechanism(PlayerActorEid)

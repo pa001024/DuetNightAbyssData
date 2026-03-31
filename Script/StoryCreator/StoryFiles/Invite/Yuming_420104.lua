@@ -78,16 +78,22 @@ return {
       questNodeData = {
         lineData = {
           {
-            startQuest = "177303959304113699875",
-            startPort = "QuestStart",
-            endQuest = "177314561134816113651",
-            endPort = "In"
-          },
-          {
             startQuest = "177314561134816113651",
             startPort = "Out",
             endQuest = "177303959304113699876",
             endPort = "Success"
+          },
+          {
+            startQuest = "177303959304113699875",
+            startPort = "QuestStart",
+            endQuest = "17746005728513486024",
+            endPort = "In"
+          },
+          {
+            startQuest = "17746005728513486024",
+            startPort = "Out",
+            endQuest = "177314561134816113651",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -102,7 +108,7 @@ return {
             key = "177303959304113699876",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 1445.5, y = 304.5},
+            pos = {x = 1719.5, y = 296.5},
             propsData = {ModeType = 0}
           },
           ["177303959304113699877"] = {
@@ -116,14 +122,14 @@ return {
             key = "177314561134816113651",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1123.375, y = 289.91666666666663},
+            pos = {x = 1407.375, y = 277.91666666666663},
             propsData = {
               IsNpcNode = false,
-              IsPlayerTurnToNPC = true,
-              IsNPCTurnToPlayer = true,
+              bUseFlowAssetActors = true,
               FirstDialogueId = 10010101,
-              FlowAssetPath = "",
-              TalkType = "FreeSimple",
+              FlowAssetPath = "DialogueAsset'/Game/Dialogue/Invite/80220401.80220401'",
+              TalkType = "FixSimple",
+              TalkStageName = "",
               BlendInTime = 0,
               BlendOutTime = 0,
               InType = "FadeIn",
@@ -149,14 +155,27 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
-              TalkActors = {},
               OptionType = "normal",
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
-              PlayerSwitchEmoIdle = true,
+              bNpcActionKeepIn = false,
+              bNpcActionKeepOut = false,
+              bForceWaitNavLoaded = false,
               NormalOptions = {},
               OverrideFailBlend = false
+            }
+          },
+          ["17746005728513486024"] = {
+            key = "17746005728513486024",
+            type = "SkipRegionNode",
+            name = "跨区域传送设置玩家位置",
+            pos = {x = 1088, y = 294},
+            propsData = {
+              ModeType = 1,
+              Id = 104505,
+              StartIndex = 1,
+              IsWhite = false
             }
           }
         },

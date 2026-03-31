@@ -2367,6 +2367,14 @@ return ReadOnly("TalkAction", {
     MontageSection = "Start",
     bUseIK = false
   },
+  Kezhou_Story_Sowrdlaugh01_Loop = {
+    ActionMontage = "Story_Sowrdlaugh01LOOP",
+    AnimationId = "Kezhou_Story_Sowrdlaugh01_Loop",
+    BlendInTime = 0.2,
+    BlendOutTime = 0.2,
+    IsSpecialAnim = false,
+    MontageSection = "Start"
+  },
   LNM_Idle = {
     ActionMontage = "Emo_Idle",
     AnimationId = "LNM_Idle",
@@ -4885,6 +4893,14 @@ return ReadOnly("TalkAction", {
     MontageSection = "Default",
     bUseIK = true
   },
+  Yuming_Story_LevelFinish_Sword_Loop = {
+    ActionMontage = "Story_LevelFinish_Sword",
+    AnimationId = "Yuming_Story_LevelFinish_Sword_Loop",
+    BlendInTime = 0.2,
+    BlendOutTime = 0.2,
+    IsSpecialAnim = false,
+    MontageSection = "Loop"
+  },
   Yuming_Story_Rest_Loop = {
     ActionMontage = "Story_Rest",
     AnimationId = "Yuming_Story_Rest_Loop",
@@ -5033,5 +5049,14 @@ return ReadOnly("TalkAction", {
     BlendOutTime = 0,
     IsSpecialAnim = false,
     MontageSection = "Start"
+  },
+  sit_Complacent_Loop = {
+    ActionMontage = "Story_sit_Complacent",
+    AnimationId = "sit_Complacent_Loop",
+    BlendInTime = 0,
+    BlendOutTime = 0.2,
+    IsSpecialAnim = false,
+    MontageSection = "Loop",
+    bUseIK = true
   }
 })

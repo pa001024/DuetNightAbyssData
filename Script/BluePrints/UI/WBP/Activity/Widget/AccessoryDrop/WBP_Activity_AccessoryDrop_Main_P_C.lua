@@ -37,6 +37,7 @@ function M:InitUI(ActivityConfigData, PageConfigData, ParentTabId, ParentWidget,
   end
   self.AccessDropConfig = self:GetAccessDropConfig()
   local AccessoryDrop = Avatar.AccessoryDrops[self.EventId]
+  local nextAddDropBoxNumTime = math.floor(TimeUtils.NextDailyRefreshTime())
   self.GachaNum.Text_Num:SetText(GText(tostring(AccessoryDrop.CurDropBoxNum)))
   self.GachaNum.Text_Total:SetText(GText(tostring(self.AccessDropConfig.BoxMaximum)))
   if AccessoryDrop.CurDropBoxNum == self.AccessDropConfig.BoxMaximum then
@@ -44,22 +45,37 @@ function M:InitUI(ActivityConfigData, PageConfigData, ParentTabId, ParentWidget,
     self.GachaNum.Max:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
     self.GachaNum.Text_x:SetColorAndOpacity(self.GachaNum.Color_Max)
     self.GachaNum.Text_Num:SetColorAndOpacity(self.GachaNum.Color_Max)
-    self.Tips.Time:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    self.Tips.Text_Tips01:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    self.Tips.Text_Tips01:SetText("")
-    self.Tips.Text_Tips02:SetText(GText("Event_FreeAppearance_tips05"))
-    self.Tips.Text_Tips02:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+    if nextAddDropBoxNumTime > ActivityConfigData.EventEndTime then
+      self.Tips.Text_Tips01:SetText("")
+      self.Tips.Text_Tips01:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+      self.Tips.Time:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      self.Tips.Text_Tips02:SetText(GText("Event_FreeAppearance_tips08"))
+      self.Tips.Text_Tips02:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+    else
+      self.Tips.Text_Tips01:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      self.Tips.Text_Tips01:SetText("")
+      self.Tips.Time:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      self.Tips.Text_Tips02:SetText(GText("Event_FreeAppearance_tips05"))
+      self.Tips.Text_Tips02:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+    end
   else
     self.GachaNum.Max:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.GachaNum.Text_x:SetColorAndOpacity(self.GachaNum.Color_Normal)
     self.GachaNum.Text_Num:SetColorAndOpacity(self.GachaNum.Color_Normal)
-    local nextAddDropBoxNumTime = math.floor(TimeUtils.NextDailyRefreshTime())
     if 0 ~= AccessoryDrop.CurDropBoxNum then
-      self.Tips.Time:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-      self.Tips.Text_Tips01:SetText("")
-      self.Tips.Text_Tips01:SetVisibility(UIConst.VisibilityOp.Collapsed)
-      self.Tips.Text_Tips02:SetText(string.format(GText("Event_FreeAppearance_tips04"), self.AccessDropConfig.BoxPerDay))
-      self.Tips.Text_Tips02:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+      if nextAddDropBoxNumTime > ActivityConfigData.EventEndTime then
+        self.Tips.Text_Tips01:SetText("")
+        self.Tips.Text_Tips01:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+        self.Tips.Time:SetVisibility(UIConst.VisibilityOp.Collapsed)
+        self.Tips.Text_Tips02:SetText(GText("Event_FreeAppearance_tips08"))
+        self.Tips.Text_Tips02:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+      else
+        self.Tips.Text_Tips01:SetText("")
+        self.Tips.Text_Tips01:SetVisibility(UIConst.VisibilityOp.Collapsed)
+        self.Tips.Time:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+        self.Tips.Text_Tips02:SetText(string.format(GText("Event_FreeAppearance_tips04"), self.AccessDropConfig.BoxPerDay))
+        self.Tips.Text_Tips02:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+      end
     elseif nextAddDropBoxNumTime > ActivityConfigData.EventEndTime then
       self.Tips.Text_Tips01:SetText("")
       self.Tips.Text_Tips01:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)

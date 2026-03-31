@@ -1138,6 +1138,8 @@ function WBP_Player_SkillPanel_PC_C:ClearRemainAnim()
   if self.Overlay_Mounts:GetVisibility() == ESlateVisibility.SelfHitTestInvisible and self.OwnerPlayer and not self.OwnerPlayer.CurMount then
     self.Overlay_Mounts:SetVisibility(ESlateVisibility.Collapsed)
   end
+  self.Battle_Skill_1:ClearRemainAnim()
+  self.Battle_Skill_2:ClearRemainAnim()
 end
 
 function WBP_Player_SkillPanel_PC_C:OnPropEffectReplaceSkill(SkillName, PropEffectId)

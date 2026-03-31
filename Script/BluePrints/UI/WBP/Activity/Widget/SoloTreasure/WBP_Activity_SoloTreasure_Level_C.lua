@@ -106,8 +106,8 @@ function M:OnCoinTip()
 end
 
 function M:OnPrepareClicked()
-  AudioManager(self):PlayUISound(self.LevelDetails.Btn_Prepare, "event:/ui/activity/sdc_normal_btn_click_confirm", nil, nil)
   local bIsDifficult = self:IsDifficult()
+  AudioManager(self):PlayUISound(self.LevelDetails.Btn_Prepare, "event:/ui/activity/sdc_normal_btn_click_confirm", nil, nil)
   local Row = self.LevelData and self.LevelData[self.CurrentIndex]
   local DungeonId = Row and (bIsDifficult and Row.HardDungeonId or Row.EasyDungeonId or Row.HardDungeonId)
   if DungeonId and not self:EnsureOptionalPatchDownloaded(DungeonId) then
@@ -127,7 +127,6 @@ function M:SwitchOut()
     self.ActorController = nil
   end
   self.ActorController = nil
-  SoloTreasureDataModel:RefreshAllSoloTreasureNewReddot(self.EventId)
 end
 
 function M:SwitchIn(Mode, bIsDifficult, EventDugeonId)
@@ -150,15 +149,15 @@ function M:SwitchIn(Mode, bIsDifficult, EventDugeonId)
   if bBackFromPrepare then
     self.bWaitEscRelease = true
   end
+  self:LoadDataFromModel()
+  self:LoadSkyBoxScene(self.NewResult)
   self:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self:PlayAnimation(self.In)
   AudioManager(self):PlayUISound(self, "event:/ui/activity/sdc_main_page_in", nil, nil)
   self:InitTable()
-  self:LoadDataFromModel()
   self:ApplyModeUI()
   self:InitView()
   self.bReturningFromPrepare = false
-  self:LoadSkyBoxScene(self.NewResult)
 end
 
 function M:InitView()

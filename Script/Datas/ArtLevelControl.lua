@@ -414,7 +414,7 @@ return ReadOnly("ArtLevelControl", {
       [1] = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_Main/Task_Data/Huaxu_Haojing_IQ120202_Task04.Huaxu_Haojing_IQ120202_Task04"
     },
     OutTime = 0,
-    RegionId = 1051,
+    RegionId = 1045,
     VarName = "ZhiliuA12020414"
   }
 })
