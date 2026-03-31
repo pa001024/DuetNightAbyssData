@@ -2,6 +2,7 @@
   {
     "id": 1101,
     "name": "Tidewanderer",
+    "desc": "A key commercial species across Atlasia, this fish can be found in every sea. It forms vast schools in the open ocean and migrates to coastal shallows with the turning of the seasons, year after year.",
     "level": 2,
     "type": 1,
     "rarity": 2,
@@ -28,6 +29,7 @@
   {
     "id": 1102,
     "name": "Prismspike",
+    "desc": "A brilliantly coloured fish found in crystal-clear waters, easily recognised by the vivid spines along its back. Skittish by nature — when fishing, patience serves better than speed.",
     "level": 1,
     "type": 1,
     "rarity": 2,
@@ -54,6 +56,7 @@
   {
     "id": 1103,
     "name": "Silverslip",
+    "desc": "A slender marine fish that swims upright, its scales gleaming like liquid silver in motion — true to its name. Unfortunately, it perishes quickly once removed from the water, and due to the high cost of transport, it is seldom seen on inland tables.",
     "level": 1,
     "type": 1,
     "rarity": 3,
@@ -80,6 +83,7 @@
   {
     "id": 1201,
     "name": "Longwhisker",
+    "desc": "Named for the long barbels near its mouth, this freshwater species dwells in muddy beds thick with waterweed. It only surfaces after sundown to feed and can live for decades — if it avoids the hook.",
     "level": 1,
     "type": 1,
     "rarity": 3,
@@ -106,6 +110,7 @@
   {
     "id": 1202,
     "name": "Spotted Tagalong",
+    "desc": "Densely covered in pearl-like spots, this fish can grow up to two metres long. The young are gentle by nature and rarely stray far from their parents' tailfins.",
     "level": 1,
     "type": 1,
     "rarity": 2,
@@ -132,6 +137,7 @@
   {
     "id": 1203,
     "name": "Shellgnarl",
+    "desc": "Found throughout freshwater bodies, the Shellgnarl is one of the few ingredients beloved by nearly every community on the continent. Preparation methods vary by region — some even throw grand summer festivals featuring it as the star dish.",
     "level": 1,
     "type": 1,
     "rarity": 2,
@@ -158,6 +164,7 @@
   {
     "id": 1301,
     "name": "Fangnome",
+    "desc": "With its sharp fangs and perpetually scowling face, this fish looks far more dangerous than it actually is. The largest one ever recorded measured just 5 centimetres. It doesn't hunt in packs, and its bite is harmless — at most leaving a faint, circular scar.",
     "level": 2,
     "type": 1,
     "rarity": 3,
@@ -184,6 +191,7 @@
   {
     "id": 1302,
     "name": "Nomnom",
+    "desc": "A near-motionless fish that spends most of its life lying sideways in the silt. With its mouth perpetually agape, it waits for plankton and small fish to drift in. Once it bites, it chews for hours without so much as a twitch — a habit that gave it its name.",
     "level": 1,
     "type": 1,
     "rarity": 2,
@@ -210,6 +218,7 @@
   {
     "id": 1303,
     "name": "Mr Leggy",
+    "desc": "A bizarre creature that looks like a crab crossed with a spider. It scuttles up walls like the latter and haunts the depths like the former. While there are many ways to catch one, angling remains by far the safest.",
     "level": 1,
     "type": 1,
     "rarity": 2,
@@ -236,6 +245,7 @@
   {
     "id": 2101,
     "name": "Guiding Star",
+    "desc": "A tiny jellyfish found only in the waters around Purgatorio Island, known for its bioluminescence. Though inedible, its glow lights the waves on moonless nights — bobbing like a star set adrift, guiding fishermen home.",
     "level": 2,
     "type": 1,
     "rarity": 3,
@@ -263,6 +273,7 @@
   {
     "id": 2102,
     "name": "Tidechaser",
+    "desc": "One of the primary catches for villagers on Purgatorio Island, prized for its tender, flavourful flesh — the result of a life spent in constant motion, ceaselessly chasing the ebb and flow of the tides.",
     "level": 3,
     "type": 1,
     "rarity": 3,
@@ -289,6 +300,7 @@
   {
     "id": 2103,
     "name": "Seaskimmer",
+    "desc": "Native to Purgatorio Island, this species can glide across the water's surface. On clear days, you might spot them leaping into the air like birds — their vibrant wings shimmering in the sun.",
     "level": 4,
     "type": 1,
     "rarity": 4,
@@ -316,6 +328,7 @@
   {
     "id": 2104,
     "name": "Seapuff",
+    "desc": "The most beloved aquatic creature on Purgatorio Island, with no recorded counterpart elsewhere. Plainly inedible, these fairy-like beings bring a spark of delight to islanders living far from the outside world, easing the monotony of their isolated days.",
     "level": 5,
     "type": 1,
     "rarity": 4,
@@ -342,6 +355,7 @@
   {
     "id": 2105,
     "name": "Silverfrond",
+    "desc": "A rare and exceptionally beautiful fish, its fins shimmer like the gleaming boughs of a Heaventree. On Purgatorio Island, it is revered as a gift from the divine — and when caught, it is often returned to the sea in quiet reverence.",
     "level": 6,
     "type": 3,
     "rarity": 5,
@@ -368,6 +382,7 @@
   {
     "id": 2201,
     "name": "Pearldrop Flatfin",
+    "desc": "A speciality of the Huaxu Waters, often dubbed the \"bat of the sea\" by locals. It typically dwells near the seabed, surfacing only to feed. Its back is studded with pearlescent bumps — a texture prized for wrapping the hilts of fine weapons.",
     "level": 5,
     "type": 1,
     "rarity": 4,
@@ -393,6 +408,7 @@
   {
     "id": 2202,
     "name": "Gearshell Crab",
+    "desc": "A crab that makes its home inside abandoned clockwork parts. Though biologically little different from ordinary hermit crabs, the collapse of the Jishu Sect left behind scattered mechanical relics — now repurposed by these creatures as shelters across the seas.",
     "level": 4,
     "type": 1,
     "rarity": 3,
@@ -420,6 +436,7 @@
   {
     "id": 2203,
     "name": "Pearllure",
+    "desc": "A mysterious aquatic lifeform recorded in ancient texts, said to spit venomous sand at the shadows of passers-by, afflicting them with strange illnesses.",
     "level": 5,
     "type": 1,
     "rarity": 4,
@@ -446,6 +463,7 @@
   {
     "id": 2204,
     "name": "Yuu",
+    "desc": "A fiercely aggressive species prized for its tender, flavourful meat — a familiar sight on dining tables across Huaxu. Despite its hideous appearance, the bioluminescent lure atop its head lends it a strangely delicate beauty.",
     "level": 4,
     "type": 1,
     "rarity": 3,
@@ -472,6 +490,7 @@
   {
     "id": 2205,
     "name": "Twincrest Shark",
+    "desc": "Named after the once-popular twin-bun hairstyle of Huaxu, this swift and ferocious predator is an opportunistic feeder, known for tearing through nets with ease — a true challenge for even seasoned fishers.",
     "level": 6,
     "type": 3,
     "rarity": 5,
@@ -496,6 +515,7 @@
   {
     "id": 2301,
     "name": "Phoxenetrout",
+    "desc": "A fish bearing a striking resemblance to Phoxene, with an uncanny texture that feels almost indistinguishable from the real thing. No two look quite the same — but they all share one unfortunate trait: flesh as tough as stone. It's rarely eaten except in times of true desperation.",
     "level": 2,
     "type": 1,
     "rarity": 3,
@@ -522,6 +542,7 @@
   {
     "id": 2302,
     "name": "Lady of the Lake",
+    "desc": "A brilliantly coloured fish that glides through the water like a wisp of silk. Its translucent fins ripple around it like trailing veils, and every motion flows with effortless poise — graceful as the fabled Lady of the Lake, wandering her liquid realm in quiet command.",
     "level": 2,
     "type": 1,
     "rarity": 3,
@@ -549,6 +570,7 @@
   {
     "id": 2303,
     "name": "Lamenting Lake Trout",
+    "desc": "One of the staple food fish in Icelake, easily recognised by the single horn atop its head. Large, tender, and low in bones, it suits sashimi, grilling, frying, or baking — a truly versatile catch for any dish.",
     "level": 3,
     "type": 1,
     "rarity": 4,
@@ -576,6 +598,7 @@
   {
     "id": 2304,
     "name": "Washer's Club",
+    "desc": "A rare, cold-hardy fish found only in Icelake. With a tough, ridged carapace and no dorsal or ventral fins, it is easy to grip, much like the wooden clubs once used to pound laundry clean.",
     "level": 3,
     "type": 1,
     "rarity": 4,
@@ -602,6 +625,7 @@
   {
     "id": 2305,
     "name": "Gleamspine",
+    "desc": "A species unique to the waters of Icelake. Jagged, ice-like spines line its back, glowing faintly in the dark. On clear days, a streak of pale light beneath the surface often signals the silent passing of a Gleamspine.",
     "level": 6,
     "type": 3,
     "rarity": 5,
@@ -628,6 +652,7 @@
   {
     "id": 2401,
     "name": "Iridescentscale",
+    "desc": "A vibrant, frilled fish prized for its looks. The fuller the fins, the brighter the colours, the higher the price. Fiercely territorial toward its own kind, each must be housed alone.",
     "level": 4,
     "type": 1,
     "rarity": 3,
@@ -654,6 +679,7 @@
   {
     "id": 2402,
     "name": "Shouxing Squid",
+    "desc": "A small squid named after Shouxing, the god of longevity in Huaxu myth. Though diminutive, its tentacles allow it to spring through the air with startling force. In Huaxu, it is a cherished symbol of long life — on elders' birthdays, desserts shaped in its likeness are a must-have at the celebration.",
     "level": 4,
     "type": 1,
     "rarity": 3,
@@ -681,6 +707,7 @@
   {
     "id": 2403,
     "name": "Thornbearer",
+    "desc": "Covered in fine barbs, this fish puffs into a spiny sphere when threatened, inflating itself with air or water. Despite being dangerously toxic and notoriously difficult to prepare, it remains a sought-after delicacy in Huaxu.",
     "level": 5,
     "type": 1,
     "rarity": 4,
@@ -707,6 +734,7 @@
   {
     "id": 2404,
     "name": "Pouchcarp",
+    "desc": "A brightly coloured fish native to Huaxu, known for its pouch-like belly and bottom-dwelling habits. Though modest in size, it's prized for its tender, boneless meat — a favourite at many local restaurants.",
     "level": 5,
     "type": 1,
     "rarity": 4,
@@ -732,6 +760,7 @@
   {
     "id": 2405,
     "name": "Waterwyrm",
+    "desc": "A rare Huaxu fish that can grow up to four metres long. With a pointed snout and four pairs of ventral fins, it bears symmetrical markings and shimmering scales reminiscent of the Argent Dragon.\nThough not protected under the Nine Chapters of Dafeng, the Waterwyrm is rarely hunted. Its likeness to the Argent Dragon stirs reverence across Huaxu — and few would risk sacrilege by putting it on a dinner table.",
     "level": 6,
     "type": 3,
     "rarity": 5,
@@ -756,6 +785,7 @@
   {
     "id": 2501,
     "name": "Mousetail",
+    "desc": "A whiskered, long-tailed fish that favours cracks and corners, and is hardy enough to thrive even in stagnant or polluted waters. Unlike real rats, it doesn't gnaw on clothing or steal food — which is why children in the slums often keep them as low-maintenance pets.",
     "level": 3,
     "type": 1,
     "rarity": 3,
@@ -783,6 +813,7 @@
   {
     "id": 2502,
     "name": "Bonegnaw Eel",
+    "desc": "A smooth-skinned, scaleless creature with a tubular mouth lined with rows of sharp teeth — no upper or lower jaw. It burrows in sewer sludge and latches onto anything that gets too close... and once it does, it never lets go. Among sewer workers, it's considered the nastiest creature you can run into down there.",
     "level": 4,
     "type": 1,
     "rarity": 3,
@@ -809,6 +840,7 @@
   {
     "id": 2503,
     "name": "Waterskull",
+    "desc": "A fully transparent fish with fine, delicate bones. Nearly impossible to spot with the naked eye, its flesh is gelatinous and inedible — though researchers believe it may be refined into a rare, highly specialised gel.",
     "level": 5,
     "type": 1,
     "rarity": 4,
@@ -836,6 +868,7 @@
   {
     "id": 2504,
     "name": "Screechbeast",
+    "desc": "A bizarre, limbed fish that lurks in the mud and occasionally emits blood-curdling cries. Its resemblance to the Filthoid is uncanny — though whether this is mere coincidence or something more remains unknown.",
     "level": 5,
     "type": 1,
     "rarity": 4,
@@ -862,6 +895,7 @@
   {
     "id": 2505,
     "name": "Aquaroach",
+    "desc": "A brownish fish with six twitching fins along its sides. Its jerky movements ripple through the water — unsettling to watch, but alarmingly fast. Two antenna-like feelers jut from its head, often the first sign it's lurking nearby. Ruthless and persistent, it's even been known to pursue prey onto dry land.",
     "level": 6,
     "type": 3,
     "rarity": 5,
@@ -888,6 +922,7 @@
   {
     "id": 2601,
     "name": "Stonemill Tonguefish",
+    "desc": "A fish species native to Huaxu, notable for its unusual appearance: a rounded stonemill-like shape, with both eyes sitting on one side of the body. Early records claim it must merge with a perfect mirror-twin in order to swim — a tale local fishermen dismiss outright as fiction.",
     "level": 4,
     "type": 1,
     "rarity": 3,
@@ -915,6 +950,7 @@
   {
     "id": 2602,
     "name": "Orchid Crab",
+    "desc": "A pretty little sea crab named for the way its paddling legs fan out like orchid petals. It is common in the waters of Huaxu and delicious simply blanched. Known to nip many a curious finger — both lovable and infuriating, and all the more memorable for it.",
     "level": 4,
     "type": 1,
     "rarity": 3,
@@ -941,6 +977,7 @@
   {
     "id": 2603,
     "name": "Starfish",
+    "desc": "A perfectly standard starfish.\n Decent enough as decoration, though nowhere near as pretty as a pearl.\n Passable as food, but there's not much to it, so few people bother.\n As a catch, it's better than nothing, but nothing to boast about.\n In short, it's a starfish — nothing more to say, really.",
     "level": 5,
     "type": 1,
     "rarity": 4,
@@ -968,6 +1005,7 @@
   {
     "id": 2604,
     "name": "Firecracker Shrimp",
+    "desc": "A vivid scarlet creature from the sea, shrimp-like in form but distinct from true shrimp, and about the length of a firecracker. Feisty by nature, it flares up at the smallest provocation, which is how it got its name. It is usually deep-fried, then stir-fried with a spiced salt and pepper mix for a fragrant, mouth-watering finish. Best enjoyed in the first month of the lunar year, shared with family as firecrackers crackle outside — spot on!",
     "level": 5,
     "type": 1,
     "rarity": 4,
@@ -993,6 +1031,7 @@
   {
     "id": 2605,
     "name": "Azurewave Kun",
+    "desc": "A fierce, blue-green giant of a fish, named for how it evokes the ancient Huaxu tales of the Kun — the legendary great fish said to devour all things. Among Huaxu's fishers, having one's thigh pierced by a fast-charging Azurewave Kun is considered one of the nastiest curses you can throw at someone.",
     "level": 6,
     "type": 3,
     "rarity": 5,
@@ -1017,6 +1056,7 @@
   {
     "id": 2701,
     "name": "Edgefin",
+    "desc": "A river fish famed for its delicate flavour, shaped much like a small blade. Legend tells of an assassin who once hid a dagger among a dish of plain-boiled edgefin, drawing it only when his unsuspecting foe was lost in the delight of the coming meal. The tale, at least, proves two things: edgefin really do resemble blades — and they taste exceptionally good.",
     "level": 4,
     "type": 1,
     "rarity": 3,
@@ -1044,6 +1084,7 @@
   {
     "id": 2702,
     "name": "Bloom Perch",
+    "desc": "A fierce-tempered river fish that favours live prey, so aggressive it can be landed even on an unbaited hook. At its plumpest when peach blossoms fill the spring air, it is traditionally scored and steamed, then topped with light soy sauce and hot oil — the most elaborate way Huaxu households receive honoured guests.",
     "level": 4,
     "type": 1,
     "rarity": 3,
@@ -1071,6 +1112,7 @@
   {
     "id": 2703,
     "name": "Roughskin Sculpin",
+    "desc": "A long-prized food fish, though scarce in supply. Its most renowned preparation is a rich fish stew. With the first autumn breeze, Starweavers far from home inevitably long for its taste.",
     "level": 5,
     "type": 1,
     "rarity": 4,
@@ -1097,6 +1139,7 @@
   {
     "id": 2704,
     "name": "Phoenix Cichlid",
+    "desc": "An ornamental species with a saddle-shaped dorsal fin. Juveniles are pale grey, while adults develop a range of vivid colours. Unfussy about water conditions and easy to keep.",
     "level": 5,
     "type": 1,
     "rarity": 4,
@@ -1122,6 +1165,7 @@
   {
     "id": 2705,
     "name": "Emperorfish",
+    "desc": "The largest freshwater fish in Huaxu, fully golden and exceedingly rare. Long taken as a symbol of emperors — though with no emperors left in Huaxu, the word now brings this giant fish to mind far sooner than any ruler of ages past.",
     "level": 6,
     "type": 3,
     "rarity": 5,
@@ -1146,6 +1190,7 @@
   {
     "id": 2801,
     "name": "Ink Glancer",
+    "desc": "A slender, brightly coloured bottom-dweller that excels at ambush. Its large eyes glow softly at night, likely to lure unwary small fish close. To a fisherman peering into the dark water, they can look like pairs of blue-glowing eyes lurking on the riverbed.",
     "level": 4,
     "type": 1,
     "rarity": 3,
@@ -1173,6 +1218,7 @@
   {
     "id": 2802,
     "name": "Mudleaper",
+    "desc": "A small fish often seen in pairs, nimble enough to leap and able to crawl briefly on land. It lives across coastal shallows and riverbanks, digging small dens and keeping its partner wet by splashing water over it. This behaviour made it a symbol of mutual devotion in old texts, and in recent years its quirky appearance has made it rather popular.",
     "level": 4,
     "type": 1,
     "rarity": 3,
@@ -1200,6 +1246,7 @@
   {
     "id": 2803,
     "name": "Blindlight",
+    "desc": "A fish that dwells in lightless environments. Its body is milky, pale, and translucent with a pearly sheen, and its eyes have completely degenerated. As rare as hen's teeth.",
     "level": 5,
     "type": 1,
     "rarity": 4,
@@ -1226,6 +1273,7 @@
   {
     "id": 2804,
     "name": "Toad",
+    "desc": "A species that inhabits dark, damp places, with extremely rough skin and a back that changes colour with the seasons. It is long valued as a traditional medicinal ingredient  — though many find its appearance decidedly unattractive.",
     "level": 5,
     "type": 1,
     "rarity": 4,
@@ -1251,6 +1299,7 @@
   {
     "id": 2805,
     "name": "Flutterfin",
+    "desc": "A denizen of the dim and dank, with large pectoral fins tipped with spines. Its bright coloration and swimming motion give it a moth-like appearance. Highly poisonous, its fins were once fashioned into weapons during the ancient era.",
     "level": 6,
     "type": 3,
     "rarity": 5,
@@ -1275,6 +1324,7 @@
   {
     "id": 2901,
     "name": "Star-Spotted Sculpin",
+    "desc": "A species found in the brackish waters where Huaxu's rivers meet the sea. Its flanks are mottled with pale, star-like markings that shimmer faintly in low light. When hooked after dusk, its scales catch the light with a star-like sheen, as though a fragment of a constellation has been lifted from the water.",
     "level": 4,
     "type": 1,
     "rarity": 3,
@@ -1302,6 +1352,7 @@
   {
     "id": 2902,
     "name": "Venomspine Catfish",
+    "desc": "A small marine catfish that can pass for an eel at first glance, until the barbels at its mouth give it away. Aggressive and quick to pick fights despite its size, it's also highly social, gathering in schools that spend much of the day jostling and jabbing at one another with their hardened, venomous barbs.",
     "level": 4,
     "type": 1,
     "rarity": 3,
@@ -1329,6 +1380,7 @@
   {
     "id": 2903,
     "name": "Prismatic Seahorse",
+    "desc": "A seahorse variety whose body resembles a raw gemstone. It is prized for display and medicinal use rather than for consumption.",
     "level": 5,
     "type": 1,
     "rarity": 4,
@@ -1355,6 +1407,7 @@
   {
     "id": 2904,
     "name": "Jade Sprat",
+    "desc": "A slender marine fish found along Huaxu's coast. Soft-fleshed and nutrient-rich, it is commonly used as bait or as feed for larger fish. Its melancholy gaze makes it look as if it already knows how its story ends.",
     "level": 5,
     "type": 1,
     "rarity": 4,
@@ -1380,6 +1433,7 @@
   {
     "id": 2905,
     "name": "Dawnscale",
+    "desc": "Found along Huaxu's coast, most often in deeper waters. Despite living in the depths, the Dawnscale gleams with a bright, uniform golden sheen, as though a sliver of dawn has been caught beneath the sea. Smaller specimens fetch little, but prices climb steeply with size, earning it the local nickname \"gold in the water\".",
     "level": 6,
     "type": 3,
     "rarity": 5,
@@ -1404,6 +1458,7 @@
   {
     "id": 3001,
     "name": "Haojing Mitten Crab",
+    "desc": "One of the best-known crabs from the waters of Haojing, prized for its size and rich flavour. It's also high in protein and minerals. Best enjoyed when the autumn winds set in: steamed, then dipped in vinegar with thin shreds of ginger. A seasonal favourite across Huaxu.",
     "level": 4,
     "type": 1,
     "rarity": 3,
@@ -1430,6 +1485,7 @@
   {
     "id": 3002,
     "name": "Croaker Carp",
+    "desc": "A small wild freshwater fish found in abundance across Huaxu, remarkably hardy and highly adaptable. Its flesh is delicate but riddled with fine bones, making it better suited to soups and broths than to frying or grilling. When it surfaces to gulp air, it often lets out a frog-like croak, hence its name.",
     "level": 4,
     "type": 1,
     "rarity": 3,
@@ -1457,6 +1513,7 @@
   {
     "id": 3003,
     "name": "Lotusleaf",
+    "desc": "A curious fish that bears a lotus-leaf-like growth atop its head, making it exceptionally hard to spot among floating leaves. Even veteran fishermen struggle to tell, at a glance, which leaves are real and which are Lotusleaf in disguise.",
     "level": 5,
     "type": 1,
     "rarity": 4,
@@ -1484,6 +1541,7 @@
   {
     "id": 3004,
     "name": "Bronze Drum",
+    "desc": "Native to Huaxu, its scales gleam like polished bronze. In ancient times, its scales were once used as currency. Some members of the Jishu Sect see it as an auspicious omen and make offerings in its honour.",
     "level": 5,
     "type": 1,
     "rarity": 4,
@@ -1509,6 +1567,7 @@
   {
     "id": 3005,
     "name": "Crimson Crest",
+    "desc": "One of Huaxu's prized freshwater species, distinguished by its vivid red crest and aggressive temperament. When hunting, it doesn't strike immediately. Instead, it circles its prey until it becomes disoriented, then delivers a single decisive bite. In bearing, it resembles a swaggering general wearing a crimson helm.",
     "level": 6,
     "type": 3,
     "rarity": 5,
@@ -1533,6 +1592,7 @@
   {
     "id": 3101,
     "name": "Stinker",
+    "desc": "A rare scavenger fish whose diet leaves it with a lingering stench that no amount of cleaning can fully remove. In Huaxu, it's widely regarded as one of the worst-tasting fish ever to reach the table.",
     "level": 4,
     "type": 1,
     "rarity": 3,
@@ -1559,6 +1619,7 @@
   {
     "id": 3102,
     "name": "Taroheart Clam",
+    "desc": "A clam found in turbid waters, its shell often caked in silt and grime. Yet beneath the muck lies tender pink flesh that becomes unexpectedly sweet and aromatic when cooked — hence the name.",
     "level": 4,
     "type": 1,
     "rarity": 3,
@@ -1586,6 +1647,7 @@
   {
     "id": 3103,
     "name": "Riverworm",
+    "desc": "A wormlike invertebrate resembling an earthworm, typically found in dark, stagnant waters. It is unusually plump and almost the colour of raw flesh. It is valued for its medicinal properties and prized by fishermen as bait.",
     "level": 5,
     "type": 1,
     "rarity": 4,
@@ -1613,6 +1675,7 @@
   {
     "id": 3104,
     "name": "Lanterneye",
+    "desc": "A small fish inhabiting lightless waters, notable for its disproportionately large, luminous eyes. Even in turbid currents heavy with silt and sediment, their glow cuts through the murk.",
     "level": 5,
     "type": 1,
     "rarity": 4,
@@ -1639,6 +1702,7 @@
   {
     "id": 3105,
     "name": "Siltshark",
+    "desc": "A freshwater predator native to Huaxu's turbid waters. It buries itself in the silt and lies in wait for prey to draw near, then bursts from the mud and strikes in a single explosive motion. In parts of Huaxu, it ranks among the region's apex predators.",
     "level": 6,
     "type": 3,
     "rarity": 5,
@@ -1665,6 +1729,7 @@
   {
     "id": 110101,
     "name": "Tidewanderer Variant",
+    "desc": "A key commercial species across Atlasia, this fish can be found in every sea. It forms vast schools in the open ocean and migrates to coastal shallows with the turning of the seasons, year after year.",
     "level": 2,
     "type": 2,
     "rarity": 2,
@@ -1687,6 +1752,7 @@
   {
     "id": 110201,
     "name": "Prismspike Variant",
+    "desc": "A brilliantly coloured fish found in crystal-clear waters, easily recognised by the vivid spines along its back. Skittish by nature — when fishing, patience serves better than speed.",
     "level": 1,
     "type": 2,
     "rarity": 2,
@@ -1709,6 +1775,7 @@
   {
     "id": 110301,
     "name": "Silverslip Variant",
+    "desc": "A slender marine fish that swims upright, its scales gleaming like liquid silver in motion — true to its name. Unfortunately, it perishes quickly once removed from the water, and due to the high cost of transport, it is seldom seen on inland tables.",
     "level": 1,
     "type": 2,
     "rarity": 3,
@@ -1731,6 +1798,7 @@
   {
     "id": 120101,
     "name": "Longwhisker Variant",
+    "desc": "Named for the long barbels near its mouth, this freshwater species dwells in muddy beds thick with waterweed. It only surfaces after sundown to feed and can live for decades — if it avoids the hook.",
     "level": 1,
     "type": 2,
     "rarity": 3,
@@ -1753,6 +1821,7 @@
   {
     "id": 120201,
     "name": "Spotted Tagalong Variant",
+    "desc": "Densely covered in pearl-like spots, this fish can grow up to two metres long. The young are gentle by nature and rarely stray far from their parents' tailfins.",
     "level": 1,
     "type": 2,
     "rarity": 2,
@@ -1775,6 +1844,7 @@
   {
     "id": 120301,
     "name": "Shellgnarl Variant",
+    "desc": "Found throughout freshwater bodies, the Shellgnarl is one of the few ingredients beloved by nearly every community on the continent. Preparation methods vary by region — some even throw grand summer festivals featuring it as the star dish.",
     "level": 1,
     "type": 2,
     "rarity": 2,
@@ -1797,6 +1867,7 @@
   {
     "id": 130101,
     "name": "Fangnome Variant",
+    "desc": "With its sharp fangs and perpetually scowling face, this fish looks far more dangerous than it actually is. The largest one ever recorded measured just 5 centimetres. It doesn't hunt in packs, and its bite is harmless — at most leaving a faint, circular scar.",
     "level": 2,
     "type": 2,
     "rarity": 3,
@@ -1819,6 +1890,7 @@
   {
     "id": 130201,
     "name": "Nomnom Variant",
+    "desc": "A near-motionless fish that spends most of its life lying sideways in the silt. With its mouth perpetually agape, it waits for plankton and small fish to drift in. Once it bites, it chews for hours without so much as a twitch — a habit that gave it its name.",
     "level": 1,
     "type": 2,
     "rarity": 2,
@@ -1841,6 +1913,7 @@
   {
     "id": 130301,
     "name": "Mr Leggy Variant",
+    "desc": "A bizarre creature that looks like a crab crossed with a spider. It scuttles up walls like the latter and haunts the depths like the former. While there are many ways to catch one, angling remains by far the safest.",
     "level": 1,
     "type": 2,
     "rarity": 2,
@@ -1863,6 +1936,7 @@
   {
     "id": 210101,
     "name": "Guiding Star Variant",
+    "desc": "A tiny jellyfish found only in the waters around Purgatorio Island, known for its bioluminescence. Though inedible, its glow lights the waves on moonless nights — bobbing like a star set adrift, guiding fishermen home.",
     "level": 2,
     "type": 2,
     "rarity": 3,
@@ -1886,6 +1960,7 @@
   {
     "id": 210201,
     "name": "Tidechaser Variant",
+    "desc": "One of the primary catches for villagers on Purgatorio Island, prized for its tender, flavourful flesh — the result of a life spent in constant motion, ceaselessly chasing the ebb and flow of the tides.",
     "level": 3,
     "type": 2,
     "rarity": 3,
@@ -1908,6 +1983,7 @@
   {
     "id": 210301,
     "name": "Seaskimmer Variant",
+    "desc": "Native to Purgatorio Island, this species can glide across the water's surface. On clear days, you might spot them leaping into the air like birds — their vibrant wings shimmering in the sun.",
     "level": 4,
     "type": 2,
     "rarity": 4,
@@ -1931,6 +2007,7 @@
   {
     "id": 210401,
     "name": "Seapuff Variant",
+    "desc": "The most beloved aquatic creature on Purgatorio Island, with no recorded counterpart elsewhere. Plainly inedible, these fairy-like beings bring a spark of delight to islanders living far from the outside world, easing the monotony of their isolated days.",
     "level": 5,
     "type": 2,
     "rarity": 4,
@@ -1953,6 +2030,7 @@
   {
     "id": 210501,
     "name": "Silverfrond Variant",
+    "desc": "A rare and exceptionally beautiful fish, its fins shimmer like the gleaming boughs of a Heaventree. On Purgatorio Island, it is revered as a gift from the divine — and when caught, it is often returned to the sea in quiet reverence.",
     "level": 6,
     "type": 4,
     "rarity": 5,
@@ -1975,6 +2053,7 @@
   {
     "id": 220101,
     "name": "Pearldrop Flatfin Variant",
+    "desc": "A speciality of the Huaxu Waters, often dubbed the \"bat of the sea\" by locals. It typically dwells near the seabed, surfacing only to feed. Its back is studded with pearlescent bumps — a texture prized for wrapping the hilts of fine weapons.",
     "level": 5,
     "type": 2,
     "rarity": 4,
@@ -1996,6 +2075,7 @@
   {
     "id": 220201,
     "name": "Gearshell Crab Variant",
+    "desc": "A crab that makes its home inside abandoned clockwork parts. Though biologically little different from ordinary hermit crabs, the collapse of the Jishu Sect left behind scattered mechanical relics — now repurposed by these creatures as shelters across the seas.",
     "level": 4,
     "type": 2,
     "rarity": 3,
@@ -2019,6 +2099,7 @@
   {
     "id": 220301,
     "name": "Pearllure Variant",
+    "desc": "A mysterious aquatic lifeform recorded in ancient texts, said to spit venomous sand at the shadows of passers-by, afflicting them with strange illnesses.",
     "level": 5,
     "type": 2,
     "rarity": 4,
@@ -2041,6 +2122,7 @@
   {
     "id": 220401,
     "name": "Yuu Variant",
+    "desc": "A fiercely aggressive species prized for its tender, flavourful meat — a familiar sight on dining tables across Huaxu. Despite its hideous appearance, the bioluminescent lure atop its head lends it a strangely delicate beauty.",
     "level": 4,
     "type": 2,
     "rarity": 3,
@@ -2063,6 +2145,7 @@
   {
     "id": 220501,
     "name": "Twincrest Shark Variant",
+    "desc": "Named after the once-popular twin-bun hairstyle of Huaxu, this swift and ferocious predator is an opportunistic feeder, known for tearing through nets with ease — a true challenge for even seasoned fishers.",
     "level": 6,
     "type": 4,
     "rarity": 5,
@@ -2083,6 +2166,7 @@
   {
     "id": 230101,
     "name": "Phoxenetrout Variant",
+    "desc": "A fish bearing a striking resemblance to Phoxene, with an uncanny texture that feels almost indistinguishable from the real thing. No two look quite the same — but they all share one unfortunate trait: flesh as tough as stone. It's rarely eaten except in times of true desperation.",
     "level": 2,
     "type": 2,
     "rarity": 3,
@@ -2105,6 +2189,7 @@
   {
     "id": 230201,
     "name": "Lady of the Lake Variant",
+    "desc": "A brilliantly coloured fish that glides through the water like a wisp of silk. Its translucent fins ripple around it like trailing veils, and every motion flows with effortless poise — graceful as the fabled Lady of the Lake, wandering her liquid realm in quiet command.",
     "level": 2,
     "type": 2,
     "rarity": 3,
@@ -2128,6 +2213,7 @@
   {
     "id": 230301,
     "name": "Lamenting Lake Trout Variant",
+    "desc": "One of the staple food fish in Icelake, easily recognised by the single horn atop its head. Large, tender, and low in bones, it suits sashimi, grilling, frying, or baking — a truly versatile catch for any dish.",
     "level": 3,
     "type": 2,
     "rarity": 4,
@@ -2151,6 +2237,7 @@
   {
     "id": 230401,
     "name": "Washer's Club Variant",
+    "desc": "A rare, cold-hardy fish found only in Icelake. With a tough, ridged carapace and no dorsal or ventral fins, it is easy to grip, much like the wooden clubs once used to pound laundry clean.",
     "level": 3,
     "type": 2,
     "rarity": 4,
@@ -2173,6 +2260,7 @@
   {
     "id": 230501,
     "name": "Gleamspine Variant",
+    "desc": "A species unique to the waters of Icelake. Jagged, ice-like spines line its back, glowing faintly in the dark. On clear days, a streak of pale light beneath the surface often signals the silent passing of a Gleamspine.",
     "level": 6,
     "type": 4,
     "rarity": 5,
@@ -2195,6 +2283,7 @@
   {
     "id": 240101,
     "name": "Iridescentscale Variant",
+    "desc": "A vibrant, frilled fish prized for its looks. The fuller the fins, the brighter the colours, the higher the price. Fiercely territorial toward its own kind, each must be housed alone.",
     "level": 4,
     "type": 2,
     "rarity": 3,
@@ -2217,6 +2306,7 @@
   {
     "id": 240201,
     "name": "Shouxing Squid Variant",
+    "desc": "A small squid named after Shouxing, the god of longevity in Huaxu myth. Though diminutive, its tentacles allow it to spring through the air with startling force. In Huaxu, it is a cherished symbol of long life — on elders' birthdays, desserts shaped in its likeness are a must-have at the celebration.",
     "level": 4,
     "type": 2,
     "rarity": 3,
@@ -2240,6 +2330,7 @@
   {
     "id": 240301,
     "name": "Thornbearer Variant",
+    "desc": "Covered in fine barbs, this fish puffs into a spiny sphere when threatened, inflating itself with air or water. Despite being dangerously toxic and notoriously difficult to prepare, it remains a sought-after delicacy in Huaxu.",
     "level": 5,
     "type": 2,
     "rarity": 4,
@@ -2262,6 +2353,7 @@
   {
     "id": 240401,
     "name": "Pouchcarp Variant",
+    "desc": "A brightly coloured fish native to Huaxu, known for its pouch-like belly and bottom-dwelling habits. Though modest in size, it's prized for its tender, boneless meat — a favourite at many local restaurants.",
     "level": 5,
     "type": 2,
     "rarity": 4,
@@ -2283,6 +2375,7 @@
   {
     "id": 240501,
     "name": "Waterwyrm Variant",
+    "desc": "A rare Huaxu fish that can grow up to four metres long. With a pointed snout and four pairs of ventral fins, it bears symmetrical markings and shimmering scales reminiscent of the Argent Dragon.\nThough not protected under the Nine Chapters of Dafeng, the Waterwyrm is rarely hunted. Its likeness to the Argent Dragon stirs reverence across Huaxu — and few would risk sacrilege by putting it on a dinner table.",
     "level": 6,
     "type": 4,
     "rarity": 5,
@@ -2303,6 +2396,7 @@
   {
     "id": 250101,
     "name": "Mousetail Variant",
+    "desc": "A whiskered, long-tailed fish that favours cracks and corners, and is hardy enough to thrive even in stagnant or polluted waters. Unlike real rats, it doesn't gnaw on clothing or steal food — which is why children in the slums often keep them as low-maintenance pets.",
     "level": 3,
     "type": 2,
     "rarity": 3,
@@ -2326,6 +2420,7 @@
   {
     "id": 250201,
     "name": "Bonegnaw Eel Variant",
+    "desc": "A smooth-skinned, scaleless creature with a tubular mouth lined with rows of sharp teeth — no upper or lower jaw. It burrows in sewer sludge and latches onto anything that gets too close... and once it does, it never lets go. Among sewer workers, it's considered the nastiest creature you can run into down there.",
     "level": 4,
     "type": 2,
     "rarity": 3,
@@ -2348,6 +2443,7 @@
   {
     "id": 250301,
     "name": "Waterskull Variant",
+    "desc": "A fully transparent fish with fine, delicate bones. Nearly impossible to spot with the naked eye, its flesh is gelatinous and inedible — though researchers believe it may be refined into a rare, highly specialised gel.",
     "level": 5,
     "type": 2,
     "rarity": 4,
@@ -2371,6 +2467,7 @@
   {
     "id": 250401,
     "name": "Screechbeast Variant",
+    "desc": "A bizarre, limbed fish that lurks in the mud and occasionally emits blood-curdling cries. Its resemblance to the Filthoid is uncanny — though whether this is mere coincidence or something more remains unknown.",
     "level": 5,
     "type": 2,
     "rarity": 4,
@@ -2393,6 +2490,7 @@
   {
     "id": 250501,
     "name": "Aquaroach Variant",
+    "desc": "A brownish fish with six twitching fins along its sides. Its jerky movements ripple through the water — unsettling to watch, but alarmingly fast. Two antenna-like feelers jut from its head, often the first sign it's lurking nearby. Ruthless and persistent, it's even been known to pursue prey onto dry land.",
     "level": 6,
     "type": 4,
     "rarity": 5,
@@ -2415,6 +2513,7 @@
   {
     "id": 260101,
     "name": "Stonemill Tonguefish Variant",
+    "desc": "A fish species native to Huaxu, notable for its unusual appearance: a rounded stonemill-like shape, with both eyes sitting on one side of the body. Early records claim it must merge with a perfect mirror-twin in order to swim — a tale local fishermen dismiss outright as fiction.",
     "level": 4,
     "type": 2,
     "rarity": 3,
@@ -2438,6 +2537,7 @@
   {
     "id": 260201,
     "name": "Orchid Crab Variant",
+    "desc": "A pretty little sea crab named for the way its paddling legs fan out like orchid petals. It is common in the waters of Huaxu and delicious simply blanched. Known to nip many a curious finger — both lovable and infuriating, and all the more memorable for it.",
     "level": 4,
     "type": 2,
     "rarity": 3,
@@ -2460,6 +2560,7 @@
   {
     "id": 260301,
     "name": "Starfish Variant",
+    "desc": "A perfectly standard starfish.\n Decent enough as decoration, though nowhere near as pretty as a pearl.\n Passable as food, but there's not much to it, so few people bother.\n As a catch, it's better than nothing, but nothing to boast about.\n In short, it's a starfish — nothing more to say, really.",
     "level": 5,
     "type": 2,
     "rarity": 4,
@@ -2483,6 +2584,7 @@
   {
     "id": 260401,
     "name": "Firecracker Shrimp Variant",
+    "desc": "A vivid scarlet creature from the sea, shrimp-like in form but distinct from true shrimp, and about the length of a firecracker. Feisty by nature, it flares up at the smallest provocation, which is how it got its name. It is usually deep-fried, then stir-fried with a spiced salt and pepper mix for a fragrant, mouth-watering finish. Best enjoyed in the first month of the lunar year, shared with family as firecrackers crackle outside — spot on!",
     "level": 5,
     "type": 2,
     "rarity": 4,
@@ -2504,6 +2606,7 @@
   {
     "id": 260501,
     "name": "Azurewave Kun Variant",
+    "desc": "A fierce, blue-green giant of a fish, named for how it evokes the ancient Huaxu tales of the Kun — the legendary great fish said to devour all things. Among Huaxu's fishers, having one's thigh pierced by a fast-charging Azurewave Kun is considered one of the nastiest curses you can throw at someone.",
     "level": 6,
     "type": 4,
     "rarity": 5,
@@ -2524,6 +2627,7 @@
   {
     "id": 270101,
     "name": "Edgefin Variant",
+    "desc": "A river fish famed for its delicate flavour, shaped much like a small blade. Legend tells of an assassin who once hid a dagger among a dish of plain-boiled edgefin, drawing it only when his unsuspecting foe was lost in the delight of the coming meal. The tale, at least, proves two things: edgefin really do resemble blades — and they taste exceptionally good.",
     "level": 4,
     "type": 2,
     "rarity": 3,
@@ -2547,6 +2651,7 @@
   {
     "id": 270201,
     "name": "Bloom Perch Variant",
+    "desc": "A fierce-tempered river fish that favours live prey, so aggressive it can be landed even on an unbaited hook. At its plumpest when peach blossoms fill the spring air, it is traditionally scored and steamed, then topped with light soy sauce and hot oil — the most elaborate way Huaxu households receive honoured guests.",
     "level": 4,
     "type": 2,
     "rarity": 3,
@@ -2570,6 +2675,7 @@
   {
     "id": 270301,
     "name": "Roughskin Sculpin Variant",
+    "desc": "A long-prized food fish, though scarce in supply. Its most renowned preparation is a rich fish stew. With the first autumn breeze, Starweavers far from home inevitably long for its taste.",
     "level": 5,
     "type": 2,
     "rarity": 4,
@@ -2592,6 +2698,7 @@
   {
     "id": 270401,
     "name": "Phoenix Cichlid Variant",
+    "desc": "An ornamental species with a saddle-shaped dorsal fin. Juveniles are pale grey, while adults develop a range of vivid colours. Unfussy about water conditions and easy to keep.",
     "level": 5,
     "type": 2,
     "rarity": 4,
@@ -2613,6 +2720,7 @@
   {
     "id": 270501,
     "name": "Emperorfish Variant",
+    "desc": "The largest freshwater fish in Huaxu, fully golden and exceedingly rare. Long taken as a symbol of emperors — though with no emperors left in Huaxu, the word now brings this giant fish to mind far sooner than any ruler of ages past.",
     "level": 6,
     "type": 4,
     "rarity": 5,
@@ -2633,6 +2741,7 @@
   {
     "id": 280101,
     "name": "Ink Glancer Variant",
+    "desc": "A slender, brightly coloured bottom-dweller that excels at ambush. Its large eyes glow softly at night, likely to lure unwary small fish close. To a fisherman peering into the dark water, they can look like pairs of blue-glowing eyes lurking on the riverbed.",
     "level": 4,
     "type": 2,
     "rarity": 3,
@@ -2656,6 +2765,7 @@
   {
     "id": 280201,
     "name": "Mudleaper Variant",
+    "desc": "A small fish often seen in pairs, nimble enough to leap and able to crawl briefly on land. It lives across coastal shallows and riverbanks, digging small dens and keeping its partner wet by splashing water over it. This behaviour made it a symbol of mutual devotion in old texts, and in recent years its quirky appearance has made it rather popular.",
     "level": 4,
     "type": 2,
     "rarity": 3,
@@ -2679,6 +2789,7 @@
   {
     "id": 280301,
     "name": "Blindlight Variant",
+    "desc": "A fish that dwells in lightless environments. Its body is milky, pale, and translucent with a pearly sheen, and its eyes have completely degenerated. As rare as hen's teeth.",
     "level": 5,
     "type": 2,
     "rarity": 4,
@@ -2701,6 +2812,7 @@
   {
     "id": 280401,
     "name": "Toad Variant",
+    "desc": "A species that inhabits dark, damp places, with extremely rough skin and a back that changes colour with the seasons. It is long valued as a traditional medicinal ingredient  — though many find its appearance decidedly unattractive.",
     "level": 5,
     "type": 2,
     "rarity": 4,
@@ -2722,6 +2834,7 @@
   {
     "id": 280501,
     "name": "Flutterfin Variant",
+    "desc": "A denizen of the dim and dank, with large pectoral fins tipped with spines. Its bright coloration and swimming motion give it a moth-like appearance. Highly poisonous, its fins were once fashioned into weapons during the ancient era.",
     "level": 6,
     "type": 4,
     "rarity": 5,
@@ -2742,6 +2855,7 @@
   {
     "id": 290101,
     "name": "Star-Spotted Sculpin Variant",
+    "desc": "A species found in the brackish waters where Huaxu's rivers meet the sea. Its flanks are mottled with pale, star-like markings that shimmer faintly in low light. When hooked after dusk, its scales catch the light with a star-like sheen, as though a fragment of a constellation has been lifted from the water.",
     "level": 4,
     "type": 2,
     "rarity": 3,
@@ -2765,6 +2879,7 @@
   {
     "id": 290201,
     "name": "Venomspine Catfish Variant",
+    "desc": "A small marine catfish that can pass for an eel at first glance, until the barbels at its mouth give it away. Aggressive and quick to pick fights despite its size, it's also highly social, gathering in schools that spend much of the day jostling and jabbing at one another with their hardened, venomous barbs.",
     "level": 4,
     "type": 2,
     "rarity": 3,
@@ -2788,6 +2903,7 @@
   {
     "id": 290301,
     "name": "Prismatic Seahorse Variant",
+    "desc": "A seahorse variety whose body resembles a raw gemstone. It is prized for display and medicinal use rather than for consumption.",
     "level": 5,
     "type": 2,
     "rarity": 4,
@@ -2810,6 +2926,7 @@
   {
     "id": 290401,
     "name": "Jade Sprat Variant",
+    "desc": "A slender marine fish found along Huaxu's coast. Soft-fleshed and nutrient-rich, it is commonly used as bait or as feed for larger fish. Its melancholy gaze makes it look as if it already knows how its story ends.",
     "level": 5,
     "type": 2,
     "rarity": 4,
@@ -2831,6 +2948,7 @@
   {
     "id": 290501,
     "name": "Dawnscale Variant",
+    "desc": "Found along Huaxu's coast, most often in deeper waters. Despite living in the depths, the Dawnscale gleams with a bright, uniform golden sheen, as though a sliver of dawn has been caught beneath the sea. Smaller specimens fetch little, but prices climb steeply with size, earning it the local nickname \"gold in the water\".",
     "level": 6,
     "type": 4,
     "rarity": 5,
@@ -2851,6 +2969,7 @@
   {
     "id": 300101,
     "name": "Haojing Mitten Crab Variant",
+    "desc": "One of the best-known crabs from the waters of Haojing, prized for its size and rich flavour. It's also high in protein and minerals. Best enjoyed when the autumn winds set in: steamed, then dipped in vinegar with thin shreds of ginger. A seasonal favourite across Huaxu.",
     "level": 4,
     "type": 2,
     "rarity": 3,
@@ -2873,6 +2992,7 @@
   {
     "id": 300201,
     "name": "Croaker Carp Variant",
+    "desc": "A small wild freshwater fish found in abundance across Huaxu, remarkably hardy and highly adaptable. Its flesh is delicate but riddled with fine bones, making it better suited to soups and broths than to frying or grilling. When it surfaces to gulp air, it often lets out a frog-like croak, hence its name.",
     "level": 4,
     "type": 2,
     "rarity": 3,
@@ -2896,6 +3016,7 @@
   {
     "id": 300301,
     "name": "Lotusleaf Variant",
+    "desc": "A curious fish that bears a lotus-leaf-like growth atop its head, making it exceptionally hard to spot among floating leaves. Even veteran fishermen struggle to tell, at a glance, which leaves are real and which are Lotusleaf in disguise.",
     "level": 5,
     "type": 2,
     "rarity": 4,
@@ -2919,6 +3040,7 @@
   {
     "id": 300401,
     "name": "Bronze Drum Variant",
+    "desc": "Native to Huaxu, its scales gleam like polished bronze. In ancient times, its scales were once used as currency. Some members of the Jishu Sect see it as an auspicious omen and make offerings in its honour.",
     "level": 5,
     "type": 2,
     "rarity": 4,
@@ -2940,6 +3062,7 @@
   {
     "id": 300501,
     "name": "Crimson Crest Variant",
+    "desc": "One of Huaxu's prized freshwater species, distinguished by its vivid red crest and aggressive temperament. When hunting, it doesn't strike immediately. Instead, it circles its prey until it becomes disoriented, then delivers a single decisive bite. In bearing, it resembles a swaggering general wearing a crimson helm.",
     "level": 6,
     "type": 4,
     "rarity": 5,
@@ -2960,6 +3083,7 @@
   {
     "id": 310101,
     "name": "Stinker Variant",
+    "desc": "A rare scavenger fish whose diet leaves it with a lingering stench that no amount of cleaning can fully remove. In Huaxu, it's widely regarded as one of the worst-tasting fish ever to reach the table.",
     "level": 4,
     "type": 2,
     "rarity": 3,
@@ -2982,6 +3106,7 @@
   {
     "id": 310201,
     "name": "Taroheart Clam Variant",
+    "desc": "A clam found in turbid waters, its shell often caked in silt and grime. Yet beneath the muck lies tender pink flesh that becomes unexpectedly sweet and aromatic when cooked — hence the name.",
     "level": 4,
     "type": 2,
     "rarity": 3,
@@ -3005,6 +3130,7 @@
   {
     "id": 310301,
     "name": "Riverworm Variant",
+    "desc": "A wormlike invertebrate resembling an earthworm, typically found in dark, stagnant waters. It is unusually plump and almost the colour of raw flesh. It is valued for its medicinal properties and prized by fishermen as bait.",
     "level": 5,
     "type": 2,
     "rarity": 4,
@@ -3028,6 +3154,7 @@
   {
     "id": 310401,
     "name": "Lanterneye Variant",
+    "desc": "A small fish inhabiting lightless waters, notable for its disproportionately large, luminous eyes. Even in turbid currents heavy with silt and sediment, their glow cuts through the murk.",
     "level": 5,
     "type": 2,
     "rarity": 4,
@@ -3050,6 +3177,7 @@
   {
     "id": 310501,
     "name": "Siltshark Variant",
+    "desc": "A freshwater predator native to Huaxu's turbid waters. It buries itself in the silt and lies in wait for prey to draw near, then bursts from the mud and strikes in a single explosive motion. In parts of Huaxu, it ranks among the region's apex predators.",
     "level": 6,
     "type": 4,
     "rarity": 5,
