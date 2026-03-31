@@ -30,6 +30,7 @@ class SubRegionProcessor(BaseProcessor):
         self.region_data = self._load_shared_base_json(data_loader, "Region.json")
         self.region_point_data = self._load_shared_base_json(data_loader, "RegionPoint.json")
         self.teleport_point_data = self._load_shared_base_json(data_loader, "TeleportPoint.json")
+        self.hard_boss_data = self._load_shared_base_json(data_loader, "HardBossMain.json")
         self.design_level_cache = {}
         self.missing_design_level = set()
         self.exports_root = self._resolve_exports_root()
@@ -40,6 +41,7 @@ class SubRegionProcessor(BaseProcessor):
         self.random_actor_points_cache: Dict[str, Dict[str, List[List]]] = {}
         self.region_map_transform_cache: Dict[str, dict] = {}
         self.teleport_points_cache: Dict[int, List[dict]] = {}
+        self.hard_boss_name_key_by_teleport_id = self._build_hard_boss_name_key_by_teleport_id()
 
     @staticmethod
     def _resolve_base_cache_key() -> str:
@@ -1126,6 +1128,28 @@ class SubRegionProcessor(BaseProcessor):
         }
         return self.teleport_points_cache
 
+    def _build_hard_boss_name_key_by_teleport_id(self) -> Dict[int, str]:
+        """构建 TeleportId -> HardBossName 文本键索引。"""
+        source = self.hard_boss_data
+        if isinstance(source, dict):
+            items = source.values()
+        elif isinstance(source, list):
+            items = source
+        else:
+            items = []
+
+        result: Dict[int, str] = {}
+        for item in items:
+            if not isinstance(item, dict):
+                continue
+            teleport_id = self._to_int(item.get("TeleportId"))
+            if teleport_id is None:
+                continue
+            name_key = item.get("HardBossName")
+            if isinstance(name_key, str) and name_key:
+                result[teleport_id] = name_key
+        return result
+
     @staticmethod
     def _extract_region_point_icon(icon_path: str) -> str:
         """从 RegionPoint Icon 路径中提取 T_Gp_* 图标名。"""
@@ -1166,6 +1190,19 @@ class SubRegionProcessor(BaseProcessor):
 
         return "T_Gp_Trans02"
 
+    def _resolve_teleport_name_key(self, point: dict, point_id: int, icon: str) -> str:
+        """解析传送点名称键，boss 点缺省时回退到 HardBossName。"""
+        name_key = point.get("Name")
+        if not name_key:
+            name_key = point.get("TeleportPointName")
+        if name_key:
+            return name_key
+
+        if icon == "T_Gp_Boss":
+            return self.hard_boss_name_key_by_teleport_id.get(point_id, "")
+
+        return ""
+
     def _get_teleport_points_raw(self, sub_region_id: int, region_id: int) -> List[dict]:
         """提取当前子区域的传送点原始数据。"""
         point_index = self._build_teleport_points_index()
@@ -1192,10 +1229,8 @@ class SubRegionProcessor(BaseProcessor):
             if not isinstance(pos, list) or len(pos) < 2:
                 continue
 
-            name_key = point.get("Name")
-            if not name_key:
-                name_key = point.get("TeleportPointName")
             icon = self._extract_teleport_icon(point)
+            name_key = self._resolve_teleport_name_key(point, point_id, icon)
             sort_pos = (
                 self._to_int(point.get("TeleportPointPos"))
                 or self._to_int(point.get("teleportPointPos"))
