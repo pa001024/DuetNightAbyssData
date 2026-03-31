@@ -33,9 +33,17 @@ class ResourceProcessor(BaseProcessor):
         #     return None
 
         resource_name_key = resource_data.get("ResourceName")
+        resource_desc_key = resource_data.get("DetailDes")
+        resource_desc2_key = resource_data.get("IpDes")
         resource_name = ""
+        resource_desc = ""
+        resource_desc2 = ""
         if resource_name_key:
             resource_name = self.get_translated_text(resource_name_key, language)
+        if resource_desc_key:
+            resource_desc = self.get_translated_text(resource_desc_key, language)
+        if resource_desc2_key:
+            resource_desc2 = self.get_translated_text(resource_desc2_key, language)
 
         icon_path = resource_data.get("Icon", "")
         icon = ""
@@ -55,6 +63,10 @@ class ResourceProcessor(BaseProcessor):
             "icon": icon,
             "rarity": resource_data.get("Rarity", 1),
         }
+        if resource_desc:
+            processed_resource["desc"] = resource_desc
+        if resource_desc2:
+            processed_resource["desc2"] = resource_desc2
 
         return processed_resource
 
