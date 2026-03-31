@@ -1,0 +1,564 @@
+[
+  {
+    "id": 101001,
+    "name": "Ode to the Bloom",
+    "desc": "Log in for  for 7 days to claim rewards",
+    "startTime": 1761523200,
+    "endTime": 1764018000
+  },
+  {
+    "id": 101002,
+    "name": "Under the Apricot Petals",
+    "desc": "Log in for 7 days to claim rewards",
+    "startTime": 1766437200,
+    "endTime": 1768856400
+  },
+  {
+    "id": 101003,
+    "name": "Message of the Nightingale",
+    "desc": "Log in for  for 7 days to claim rewards",
+    "startTime": 1764036000,
+    "endTime": 1766394000
+  },
+  {
+    "id": 101004,
+    "name": "When the Stone Falls",
+    "desc": "The age of Loong ends here. And I shall claim the mantle.\nLog in for 5 days during the event to claim rewards",
+    "startTime": 1770256800,
+    "endTime": 1771189200
+  },
+  {
+    "id": 101005,
+    "name": "Drift of Youth",
+    "desc": "Log in for 7 days to claim rewards",
+    "startTime": 1768874400,
+    "endTime": 1770667200
+  },
+  {
+    "id": 101006,
+    "name": "Celestial Accord",
+    "desc": "Log in for 7 days to claim rewards",
+    "startTime": 1770602400,
+    "endTime": 1773090000
+  },
+  {
+    "id": 101007,
+    "name": "Wish for Tranquil Peace",
+    "desc": "Log in for 7 days to claim rewards",
+    "startTime": 1773108000,
+    "endTime": 1775466000
+  },
+  {
+    "id": 101008,
+    "name": "Wish Amidst Myriad Turns",
+    "desc": "A wish takes wing in spring. A heart finds its breeze.\nLog in for 5 days during the event to claim rewards.",
+    "startTime": 1775095200,
+    "endTime": 1776114000
+  },
+  {
+    "id": 101009,
+    "name": "Train to the Snowfield",
+    "desc": "The whistle blows. Steel roars with searing heat, and the rusted gears of fate grind slowly into motion once more.\n\nLog in for 5 days during the event to claim rewards.",
+    "startTime": 1779933600,
+    "endTime": 1780952400
+  },
+  {
+    "id": 101010,
+    "name": "Clockwork Constellations",
+    "desc": "Log in for 7 days to claim rewards",
+    "startTime": 1775440800,
+    "endTime": 1777928400
+  },
+  {
+    "id": 101011,
+    "name": "Lingering Reflections",
+    "desc": "Log in for 7 days to claim rewards",
+    "startTime": 1777946400,
+    "endTime": 1780304400
+  },
+  {
+    "id": 102001,
+    "name": "Huaxu — Incense and Marvels",
+    "desc": "Huaxu — a tranquil land wreathed in incense.\nYou arrive by invitation, awaiting the vision Zhiliu has promised to paint: a scene both timeless and unseen.",
+    "startTime": 1766408400,
+    "endTime": 1775509200
+  },
+  {
+    "id": 103001,
+    "name": "Mystic Maze",
+    "desc": "Allow me to lead you onto the endless pathways of time.",
+    "startTime": 1761523200,
+    "endTime": null
+  },
+  {
+    "id": 103002,
+    "name": "Immersive Theatre",
+    "desc": "Spectator and protagonist - the choice is yours. Step into the fray, where courage meets towering foes, and victory awaits.",
+    "startTime": 1761512400,
+    "endTime": 1764018000,
+    "rule": "<Title>About Immersive Theatre</>\n1. Immersive Theatre is divided into three sections: [Classic Repertoire], [Featured Repertoire], and [Immortal Repertoire]. Complete each section to unlock the next.\n[Classic Repertoire] are one-time challenges. [Featured Repertoire] and [Immortal Repertoire] rotate with version updates. [Immortal Repertoire] also include permanent stages that can be replayed after meeting certain conditions.\n2. Defeat all opponents within the time limit to clear a stage. Completing a stage awards [Stars] and [Ticket Stubs]. Stars unlock milestone rewards. Ticket Stubs can be exchanged for items at the Theatre Gift Shop.\n3. [Classic Repertoire] and [Featured Repertoire] include two rounds per stage: [Hero's Odyssey] and [Hero's Way Home]. You must use different teams for each round. Final rewards are based on your total stars earned across both rounds. [Immortal Repertoire] includes only [Hero's Odyssey].\n4. Each round consists of 5 rooms that must be cleared in order. Clear all rooms in both [Hero's Odyssey] and [Hero's Way Home] to unlock the next act. Failing to defeat the opponent or running out of time in any room will prevent further progress.\n5. All stages feature [Stage Score] — a unique mechanic that grants buffs or debuffs during battle. You can adjust your strategy based on the effects in play."
+  },
+  {
+    "id": 103003,
+    "name": "Voyage into the Long Night",
+    "desc": "Complete the Main Story \"Prey VS Hunter\" to claim your Quest Rewards, including the [Thought: Outsider].",
+    "startTime": 1761523200,
+    "endTime": null
+  },
+  {
+    "id": 103004,
+    "name": "Step into the Rainveil",
+    "desc": "Complete the Main Story \"The Overlookers\" to claim your Quest Rewards, including the [Thought: Daphne].",
+    "startTime": 1761523200,
+    "endTime": null
+  },
+  {
+    "id": 103005,
+    "name": "Stranger from Afar",
+    "desc": "The merchant Zhiliu from Huaxu, whom you crossed paths with before, has settled briefly in The Asphodel. As a proven Phoxhunter, you've been recommended to help her get ready. Gather what she needs and earn generous rewards.",
+    "startTime": 1765159200,
+    "endTime": 1766437200
+  },
+  {
+    "id": 103006,
+    "name": "Friendly Games",
+    "desc": "\"H—H—Hey, wait, WAIT! Let's settle this nice and civil for once, alright!? Like... with a wager! Beat my little challenge and the loot's all yours!\"\n  \n— Lulu Lunoloot, curled up on the ground, begging for mercy",
+    "startTime": 1762135200,
+    "endTime": 1763931600,
+    "rule": "1. Complete Regular Games curated by Lulu Lunoloot to earn Luno Points.\n At each daily server reset, your Luno Collections are calculated based on your Luno Points. Any excess beyond the cap will be converted into Coins at a fixed rate.\n 2. <highlight>Four</> Daily Games refresh with each daily server reset. After settling the previous day's Luno Collection, new Daily Games will unlock. Repeatable Games can be completed multiple times and do not reset daily.\n 3. Complete Challenge Games to earn Challenge Points, which can be exchanged for Lulu Lunoloot's Challenge Collections.\n 4. Challenge Games are released in <highlight>two</> phases. Lulu Lunoloot will unveil the next batch of her hard-crafted Games 5 days after the event starts."
+  },
+  {
+    "id": 103007,
+    "name": "Roaring Drills",
+    "desc": "Precision gunnery training — a trial by fire. Aim, fire, and complete every objective to prove your mettle.",
+    "startTime": 1768874400,
+    "endTime": 1770667200
+  },
+  {
+    "id": 103008,
+    "name": "Guiding Luno",
+    "desc": "Follow me to stay on course and claim awesome rewards!",
+    "startTime": 1761523200,
+    "endTime": null
+  },
+  {
+    "id": 103010,
+    "name": "A Rainbow-coloured Dream",
+    "desc": "When a young nightingale leaves its nest, it sees the vast skies and sweeps across soft meadows — but also faces cold rain and raging winds.\n But the girl has made up her mind: no more turning back. With her magic brush, she'll paint a dream in every hue — and in this harsh, unforgiving world... find a sky forever warm and bright, just like the ones in her favourite fairytales.",
+    "startTime": 1764036000,
+    "endTime": null
+  },
+  {
+    "id": 103011,
+    "name": "Luno's Special Theatre",
+    "desc": "The Silvercandle Carnival wrapped up in a chain of unexpected twists, casting yet another shadow over Icelake.\nIn this moment of uncertainty, the self-proclaimed \"Demon King of Light\" burst onto the scene!",
+    "startTime": 1766628000,
+    "endTime": 1768856400,
+    "rule": "<H>Luno's Special Theatre Event Rules</>\n1. After completing the quest \"Luno's Special Theatre\", you can sign up for the event with Director Putsch at <H>Galea Theater</>.\n2. In <H>Lunoball</>, follow Luno's instructions on the stage and display the matching <H>Geniemon</> and <H>posture</> to receive rewards. To meet the requirement, you can simply display the same type of Geniemon. Release the skill of Bro Boxie to meet the requirement of <H>Shiny Bro Boxie</> and <H>Ardent Bro Boxie</>.\n3. If you meet one or more requirements in each <H>Lunoball</>, you can get <H>premium rewards</> at the end of the ball. Each account can get <H>Premium Rewards</> <H>5</> times at most during the event period, and after that, even if more reqirements are met, only <H>regular rewards</> will be granted. The interval between two <H>Lunoballs</> is half an hour.\n4. In <H>Festive Gathering</>, rewards will be sent via mail after a certain progress of delivering materials.\n5. In <H>Festive Gathering</>, clicking [Auto-Add] will automatically add deliverable materials according to the quality of the materials.\n6. In <H>Festive Gathering</>, the [Auto-Add] function becomes unavailable once all delivery milestones are complete. You can still manually add and deliver materials to finish quests and claim rewards."
+  },
+  {
+    "id": 103012,
+    "name": "Restless Hum",
+    "desc": "Clear Mystic Maze Ⅰ–Ⅵ to earn rewards, including Thoughts: Lisbell.",
+    "startTime": 1761523200,
+    "endTime": null
+  },
+  {
+    "id": 103013,
+    "name": "Tummy Full, Hands Full",
+    "desc": "Complete the special Side Quests \"Go, Geniemons!\" and \"Tutorial: Covert Commissions\" to earn rewards, including \"Thought: Truffle and Filbert\".",
+    "startTime": 1761523200,
+    "endTime": null
+  },
+  {
+    "id": 103014,
+    "name": "The Incense Proving",
+    "desc": "At the Incense Proving — held to reassure the people of Huaxu and to determine the future of the realm — there stands a familiar figure clad in jade-green...\n\nTeam up with Su Yi, take on the challenge, and earn generous rewards.",
+    "startTime": 1776909600,
+    "endTime": null
+  },
+  {
+    "id": 103015,
+    "name": "微茫珍藏",
+    "desc": "Those old items, weathered by time, can only shine anew in the hands of those who need them.",
+    "startTime": 1779328800,
+    "endTime": 1780304400
+  },
+  {
+    "id": 103016,
+    "name": "Great Chaos of Mechapuppets",
+    "desc": "For as long as anyone can remember, people have argued themselves hoarse over who's stronger — even when they're from completely different worlds. Thanks to Master Gongshang, you can finally stop bickering and settle it on the board. Deploy the mechapuppets, and let the outcome speak for itself.",
+    "startTime": 1770602400,
+    "endTime": 1775466000,
+    "rule": "1. In Great Chaos of Mechapuppets, you need to strategically equip Runes and deploy Mechapuppets to clear boards. Complete Board Insights to earn generous rewards.\n2. Master Gongshang's Boards will open over time. Clearing a board unlocks new Mechapuppets and Runes in Board Insights. Clearing specific boards also raises your Rank cap.\n3. Clear Endless Games to earn Match Points. Accumulating points increases your Rank. Each Rank up also grants rewards via Board Insights and unlocks more challenging Endless Games for greater clearance rewards. Endless Games can be refreshed 5 times a day.\n4. Completing Board Insights unlocks more powerful Mechapuppets and Runes, aiding you in clearing harder boards. Visit the Board Insights interface to view all available objectives.\n5. This season of Great Chaos of Mechapuppets features 9 Ranks in total. They are: \nMeasured Moves\nOpening Plays\nMidgame Clash\nInspired Plays\nRelentless Advance\nMasterful Control\nBeyond the Board\nGrand Master"
+  },
+  {
+    "id": 103017,
+    "name": "Moments in Frames",
+    "desc": "A traveling photographer appears near the Sanctuary, introducing you to a special way of recording your journey — Image Notes.",
+    "startTime": 1775700000,
+    "endTime": 1776718800,
+    "rule": "1. New photography tasks unlock each day during the event.\n2. After completing a task, go to the Events screen to claim your reward."
+  },
+  {
+    "id": 103018,
+    "name": "A Night of Endless Wonders",
+    "desc": "Plunge into a whirlwind of messy, bouncy, giggly transformations!",
+    "startTime": 1774576800,
+    "endTime": 1776114000
+  },
+  {
+    "id": 103019,
+    "name": "Atlasia Calling",
+    "desc": "Invite friends and explore Atlasia together.",
+    "startTime": 1770602400,
+    "endTime": 1775466000
+  },
+  {
+    "id": 103020,
+    "name": "Starry Gleanings",
+    "desc": "活动期间完成委托领取赠礼",
+    "startTime": 1777514400,
+    "endTime": 1779051599,
+    "rule": "1. During the event, you will receive 2 Starglow Gifts each day. Use Starglow Coins to open them.\n\n2. Complete Commissions to earn Starglow Coins. They can be used to open Starglow Gifts or exchanged for various rewards in the Starglow Shop.\n\n3. You can hold up to 21 Starglow Gifts at once. Once you reach this limit, you will no longer receive new Starglow Gifts each day.",
+    "boxDrop": {
+      "boxCoinId": 221,
+      "boxMaximum": 21,
+      "boxPerDay": 2,
+      "coinPerBox": 3,
+      "eventId": 103020,
+      "rewardCount": [
+        25
+      ],
+      "rewardId": [
+        114100,
+        114101
+      ]
+    }
+  },
+  {
+    "id": 103021,
+    "name": "Night Talks on the River of Forgetting",
+    "desc": "During the event, you can obtain skins from the [Whispers Unspoken] series and other skin rewards.",
+    "startTime": 1777946400,
+    "endTime": 1780304400,
+    "rule": "1、本次活动共有2轮奖励，每轮各包含8个奖励，其中1个奖励为心意外观，每轮获得心意外观后，将直接获取本轮次的所有奖励\n2、在开始一个轮次的首次编织前，可自由调整该轮的心意外观和自选奖励。在该轮次进行1次编织后，将无法修改本轮的心意外观和自选奖励\n3、同一轮次中的奖励不会重复获取，剩余奖励的获取概率将随着本轮奖励数量的减少而等比例提高。完成本轮编织后，奖励获取概率将恢复至初始状态\n4、各奖励的初始获取概率如下\n角色形象：0.08%\n螺旋飞跃特效：0.92%\n背部装饰·上：1%\n头部装饰：2%\n头像框：13%\n头像：13%\n虹彩染剂*3：35%\n委托手册·三*6：35%\n5、编织所消耗的星辉丝线会随着编织次数增加而增多，完成本轮编织后，星辉丝线的消耗数量将恢复至初始状态\n每次编织所需的星辉丝线数量如下\n第1次编织：星辉丝线*1\n第2次编织：星辉丝线*3\n第3次编织：星辉丝线*6\n第4次编织：星辉丝线*10\n第5次编织：星辉丝线*15\n第6次编织：星辉丝线*20\n第7次编织：星辉丝线*25\n第8次编织：星辉丝线*30\n"
+  },
+  {
+    "id": 105001,
+    "name": "[The Second Closed Beta]\n Top-Up Refund",
+    "desc": "",
+    "startTime": 1704081600,
+    "endTime": 1751446800
+  },
+  {
+    "id": 106001,
+    "name": "Bon Voyage",
+    "desc": "Reach higher Trial Ranks to earn bountiful rewards.",
+    "startTime": 1761523200,
+    "endTime": null
+  },
+  {
+    "id": 107001,
+    "name": "Hymn of Abundance",
+    "desc": "Log in to claim Pristine Hourglass ×10.",
+    "startTime": 1761523200,
+    "endTime": null
+  },
+  {
+    "id": 107002,
+    "name": "Helix of Bonds",
+    "desc": "Log in on both PC and mobile to receive rewards, including the Silent Censer avatar frame and Pristine Hourglasses.",
+    "startTime": 1761523200,
+    "endTime": null
+  },
+  {
+    "id": 107003,
+    "name": "Intersecting Footprints",
+    "desc": "Co-op areas will be available upon completion of \"Black Iron and White Flower\" of the Chapter Noctoyager. Go to Icelake Square to participate in co-op game and receive amazing rewards.",
+    "startTime": 1761523200,
+    "endTime": null
+  },
+  {
+    "id": 108001,
+    "name": "Covenant of Avian Spirit",
+    "desc": "An Oneiric Avian Spirit brings you a new twig — and new trials.\nComplete the limited-time Avian Spirit Trials to earn event rewards.",
+    "startTime": 1767578400,
+    "endTime": 1769374800
+  },
+  {
+    "id": 109001,
+    "name": "Where the Wind Rises",
+    "desc": "Watch the Huaxu Version trailer and claim your rewards.",
+    "startTime": 1775095200,
+    "endTime": 1779915600
+  },
+  {
+    "id": 109002,
+    "name": "Silver Torrent, Rising Star",
+    "desc": "The story now moves to the railway station in Icelake. Amid the passing trains, a new adventure begins.",
+    "startTime": 1779933600,
+    "endTime": 1784754000
+  },
+  {
+    "id": 110001,
+    "name": "Wishen's Daring Adventures",
+    "desc": "Unfulfilled thoughts, ungranted wishes... With the arrival of these inexplicable beings, adventure stirs once more.",
+    "startTime": 1772157600,
+    "endTime": 1773176400
+  },
+  {
+    "id": 111001,
+    "name": "Phoxhunter Summit",
+    "desc": "Competition is etched into the very bones of humanity — the primal drive that has pushed our kind to grow, thrive, and endure.\nBut this is not the law of the jungle. This is disciplined rivalry — the fire that fuels a team, and the forge where legends are made.",
+    "startTime": 1769133600,
+    "endTime": 1770584400,
+    "rule": "Event Rules:\n1. The Phoxhunter Summit is divided into two phases: the Group Stage (Preliminaries) and Apex Rankings (Finals). The event begins with the Group Stage.\n2. In the Group Stage, your Phoxhunter Team earns points based on battle performance. Your highest score determines your group placement. Rewards are distributed based on group placement when the stage ends, so be sure to claim them on the event page. The Apex Rankings phase begins immediately afterwards.\n3. In the Apex Rankings phase, your team earns Ranking Points based on performance in each stage. Your highest Ranking Point total determines your placement within the group. Each Apex Rankings attempt consumes a Team Pass and awards a set amount of Phoxcoins according to the Ranking Points gained.\n4. Phoxcoins can be exchanged for items in the Apex Shop. Certain items unlock based on your highest Ranking Point total in the Apex Rankings phase.\n5. Teams that skip the Group Stage will not be placed in a group or appear in group rankings during the Apex Rankings. However, they may still challenge Apex Rankings stages to earn Phoxcoins and exchange them in the Apex Shop, including for items unlocked by reaching higher Ranking Point milestones.\n \nStage Rules:\n1. In Group Stage challenges, defeat the required number of enemies within the time limit to clear the stage.\n2. In Apex Rankings challenges, defeating standard enemies also deals bonus damage to the extreme-threat enemy. Clear the stage by defeating the extreme-threat enemy within the time limit.\n3. You'll earn bonus points based on remaining time in both Group Stage and Apex Rankings challenges.\n4. If you fail to clear the stage, you will still earn points based on your progress when the time runs out."
+  },
+  {
+    "id": 111002,
+    "name": "Phoxhunter Summit",
+    "desc": "Competition is etched into the very bones of humanity — the primal drive that has pushed our kind to grow, thrive, and endure.\nBut this is not the law of the jungle. This is disciplined rivalry — the fire that fuels a team, and the forge where legends are made.",
+    "startTime": 1774317600,
+    "endTime": 1775768400,
+    "rule": "Event Rules:\n1. The Phoxhunter Summit is divided into two phases: the Group Stage (Preliminaries) and Apex Rankings (Finals). The event begins with the Group Stage.\n2. In the Group Stage, your Phoxhunter Team earns points based on battle performance. Your highest score determines your group placement. Rewards are distributed based on group placement when the stage ends, so be sure to claim them on the event page. The Apex Rankings phase begins immediately afterwards.\n3. In the Apex Rankings phase, your team earns Ranking Points based on performance in each stage. Your highest Ranking Point total determines your placement within the group. Each Apex Rankings attempt consumes a Team Pass and awards a set amount of Phoxcoins according to the Ranking Points gained.\n4. Phoxcoins can be exchanged for items in the Apex Shop. Certain items unlock based on your highest Ranking Point total in the Apex Rankings phase.\n5. Teams that skip the Group Stage will not be placed in a group or appear in group rankings during the Apex Rankings. However, they may still challenge Apex Rankings stages to earn Phoxcoins and exchange them in the Apex Shop, including for items unlocked by reaching higher Ranking Point milestones.\n \nStage Rules:\n1. In Group Stage challenges, defeat the required number of enemies within the time limit to clear the stage.\n2. In Apex Rankings challenges, defeating standard enemies also deals bonus damage to the extreme-threat enemy. Clear the stage by defeating the extreme-threat enemy within the time limit.\n3. You'll earn bonus points based on remaining time in both Group Stage and Apex Rankings challenges.\n4. If you fail to clear the stage, you will still earn points based on your progress when the time runs out."
+  },
+  {
+    "id": 111003,
+    "name": "Phoxhunter Summit",
+    "desc": "Competition is etched into the very bones of humanity — the primal drive that has pushed our kind to grow, thrive, and endure.\nBut this is not the law of the jungle. This is disciplined rivalry — the fire that fuels a team, and the forge where legends are made.",
+    "startTime": 1779156000,
+    "endTime": 1780606800,
+    "rule": "Event Rules:\n1. The Phoxhunter Summit is divided into two phases: the Group Stage (Preliminaries) and Apex Rankings (Finals). The event begins with the Group Stage.\n2. In the Group Stage, your Phoxhunter Team earns points based on battle performance. Your highest score determines your group placement. Rewards are distributed based on group placement when the stage ends, so be sure to claim them on the event page. The Apex Rankings phase begins immediately afterwards.\n3. In the Apex Rankings phase, your team earns Ranking Points based on performance in each stage. Your highest Ranking Point total determines your placement within the group. Each Apex Rankings attempt consumes a Team Pass and awards a set amount of Phoxcoins according to the Ranking Points gained.\n4. Phoxcoins can be exchanged for items in the Apex Shop. Certain items unlock based on your highest Ranking Point total in the Apex Rankings phase.\n5. Teams that skip the Group Stage will not be placed in a group or appear in group rankings during the Apex Rankings. However, they may still challenge Apex Rankings stages to earn Phoxcoins and exchange them in the Apex Shop, including for items unlocked by reaching higher Ranking Point milestones.\n \nStage Rules:\n1. In Group Stage challenges, defeat the required number of enemies within the time limit to clear the stage.\n2. In Apex Rankings challenges, defeating standard enemies also deals bonus damage to the extreme-threat enemy. Clear the stage by defeating the extreme-threat enemy within the time limit.\n3. You'll earn bonus points based on remaining time in both Group Stage and Apex Rankings challenges.\n4. If you fail to clear the stage, you will still earn points based on your progress when the time runs out."
+  },
+  {
+    "id": 112001,
+    "name": "Starry Sojourn",
+    "desc": "Claim rewards based on your total time spent in Regional Co-op during the event",
+    "startTime": 1770948000,
+    "endTime": 1772398800
+  },
+  {
+    "id": 112002,
+    "name": "Starry Sojourn",
+    "desc": "Claim rewards based on your total time spent in Regional Co-op during the event",
+    "startTime": 1778119200,
+    "endTime": 1779570000
+  },
+  {
+    "id": 113001,
+    "name": "Treasure Ledger",
+    "desc": "Claim rewards based on your total top-up amount during the event",
+    "startTime": 3376699200,
+    "endTime": 3384925200
+  },
+  {
+    "id": 114001,
+    "name": "Return to Atlasia",
+    "desc": "Start your Returnee Quests and claim great rewards",
+    "startTime": 1704081600,
+    "endTime": null
+  },
+  {
+    "id": 1020012,
+    "name": "Huaxu — Incense and Marvels: Ⅱ",
+    "desc": "Huaxu — a tranquil land wreathed in incense.\nYou arrive by invitation, awaiting the vision Zhiliu has promised to paint: a scene both timeless and unseen.",
+    "startTime": 1775440800,
+    "endTime": 1780304400
+  },
+  {
+    "id": 1030022,
+    "name": "Immersive Theatre",
+    "desc": "Spectator and protagonist - the choice is yours. Step into the fray, where courage meets towering foes, and victory awaits.",
+    "startTime": 1764018000,
+    "endTime": 1766437200,
+    "rule": "<Title>About Immersive Theatre</>\n1. Immersive Theatre is divided into three sections: [Classic Repertoire], [Featured Repertoire], and [Immortal Repertoire]. Complete each section to unlock the next.\n[Classic Repertoire] are one-time challenges. [Featured Repertoire] and [Immortal Repertoire] rotate with version updates. [Immortal Repertoire] also include permanent stages that can be replayed after meeting certain conditions.\n2. Defeat all opponents within the time limit to clear a stage. Completing a stage awards [Stars] and [Ticket Stubs]. Stars unlock milestone rewards. Ticket Stubs can be exchanged for items at the Theatre Gift Shop.\n3. [Classic Repertoire] and [Featured Repertoire] include two rounds per stage: [Hero's Odyssey] and [Hero's Way Home]. You must use different teams for each round. Final rewards are based on your total stars earned across both rounds. [Immortal Repertoire] includes only [Hero's Odyssey].\n4. Each round consists of 5 rooms that must be cleared in order. Clear all rooms in both [Hero's Odyssey] and [Hero's Way Home] to unlock the next act. Failing to defeat the opponent or running out of time in any room will prevent further progress.\n5. All stages feature [Stage Score] — a unique mechanic that grants buffs or debuffs during battle. You can adjust your strategy based on the effects in play."
+  },
+  {
+    "id": 1030023,
+    "name": "Immersive Theatre",
+    "desc": "Spectator and protagonist - the choice is yours. Step into the fray, where courage meets towering foes, and victory awaits.",
+    "startTime": 1766437200,
+    "endTime": 1768874400,
+    "rule": "<Title>About Immersive Theatre</>\n1. Immersive Theatre is divided into three sections: [Classic Repertoire], [Featured Repertoire], and [Immortal Repertoire]. Complete each section to unlock the next.\n[Classic Repertoire] are one-time challenges. [Featured Repertoire] and [Immortal Repertoire] rotate with version updates. [Immortal Repertoire] also include permanent stages that can be replayed after meeting certain conditions.\n2. Defeat all opponents within the time limit to clear a stage. Completing a stage awards [Stars] and [Ticket Stubs]. Stars unlock milestone rewards. Ticket Stubs can be exchanged for items at the Theatre Gift Shop.\n3. [Classic Repertoire] and [Featured Repertoire] include two rounds per stage: [Hero's Odyssey] and [Hero's Way Home]. You must use different teams for each round. Final rewards are based on your total stars earned across both rounds. [Immortal Repertoire] includes only [Hero's Odyssey].\n4. Each round consists of 5 rooms that must be cleared in order. Clear all rooms in both [Hero's Odyssey] and [Hero's Way Home] to unlock the next act. Failing to defeat the opponent or running out of time in any room will prevent further progress.\n5. All stages feature [Stage Score] — a unique mechanic that grants buffs or debuffs during battle. You can adjust your strategy based on the effects in play."
+  },
+  {
+    "id": 1030024,
+    "name": "Immersive Theatre",
+    "desc": "Spectator and protagonist - the choice is yours. Step into the fray, where courage meets towering foes, and victory awaits.",
+    "startTime": 1768874400,
+    "endTime": 1770688800,
+    "rule": "<Title>About Immersive Theatre</>\n1. Immersive Theatre is divided into three sections: [Classic Repertoire], [Featured Repertoire], and [Immortal Repertoire]. Complete each section to unlock the next.\n[Classic Repertoire] are one-time challenges. [Featured Repertoire] and [Immortal Repertoire] rotate with version updates. [Immortal Repertoire] also include permanent stages that can be replayed after meeting certain conditions.\n2. Defeat all opponents within the time limit to clear a stage. Completing a stage awards [Stars] and [Ticket Stubs]. Stars unlock milestone rewards. Ticket Stubs can be exchanged for items at the Theatre Gift Shop.\n3. [Classic Repertoire] and [Featured Repertoire] include two rounds per stage: [Hero's Odyssey] and [Hero's Way Home]. You must use different teams for each round. Final rewards are based on your total stars earned across both rounds. [Immortal Repertoire] includes only [Hero's Odyssey].\n4. Each round consists of 5 rooms that must be cleared in order. Clear all rooms in both [Hero's Odyssey] and [Hero's Way Home] to unlock the next act. Failing to defeat the opponent or running out of time in any room will prevent further progress.\n5. All stages feature [Stage Score] — a unique mechanic that grants buffs or debuffs during battle. You can adjust your strategy based on the effects in play."
+  },
+  {
+    "id": 1030025,
+    "name": "Immersive Theatre",
+    "desc": "Spectator and protagonist - the choice is yours. Step into the fray, where courage meets towering foes, and victory awaits.",
+    "startTime": 1770688800,
+    "endTime": 1773108000,
+    "rule": "<Title>About Immersive Theatre</>\n1. Immersive Theatre is divided into three sections: [Classic Repertoire], [Featured Repertoire], and [Immortal Repertoire]. Complete each section to unlock the next.\n[Classic Repertoire] are one-time challenges. [Featured Repertoire] and [Immortal Repertoire] rotate with version updates. [Immortal Repertoire] also include permanent stages that can be replayed after meeting certain conditions.\n2. Defeat all opponents within the time limit to clear a stage. Completing a stage awards [Stars] and [Ticket Stubs]. Stars unlock milestone rewards. Ticket Stubs can be exchanged for items at the Theatre Gift Shop.\n3. [Classic Repertoire] and [Featured Repertoire] include two rounds per stage: [Hero's Odyssey] and [Hero's Way Home]. You must use different teams for each round. Final rewards are based on your total stars earned across both rounds. [Immortal Repertoire] includes only [Hero's Odyssey].\n4. Each round consists of 5 rooms that must be cleared in order. Clear all rooms in both [Hero's Odyssey] and [Hero's Way Home] to unlock the next act. Failing to defeat the opponent or running out of time in any room will prevent further progress.\n5. All stages feature [Stage Score] — a unique mechanic that grants buffs or debuffs during battle. You can adjust your strategy based on the effects in play."
+  },
+  {
+    "id": 1030026,
+    "name": "Immersive Theatre",
+    "desc": "Spectator and protagonist - the choice is yours. Step into the fray, where courage meets towering foes, and victory awaits.",
+    "startTime": 1773108000,
+    "endTime": 1775466000,
+    "rule": "<Title>About Immersive Theatre</>\n1. Immersive Theatre is divided into three sections: [Classic Repertoire], [Featured Repertoire], and [Immortal Repertoire]. Complete each section to unlock the next.\n[Classic Repertoire] are one-time challenges. [Featured Repertoire] and [Immortal Repertoire] rotate with version updates. [Immortal Repertoire] also include permanent stages that can be replayed after meeting certain conditions.\n2. Defeat all opponents within the time limit to clear a stage. Completing a stage awards [Stars] and [Ticket Stubs]. Stars unlock milestone rewards. Ticket Stubs can be exchanged for items at the Theatre Gift Shop.\n3. [Classic Repertoire] and [Featured Repertoire] include two rounds per stage: [Hero's Odyssey] and [Hero's Way Home]. You must use different teams for each round. Final rewards are based on your total stars earned across both rounds. [Immortal Repertoire] includes only [Hero's Odyssey].\n4. Each round consists of 5 rooms that must be cleared in order. Clear all rooms in both [Hero's Odyssey] and [Hero's Way Home] to unlock the next act. Failing to defeat the opponent or running out of time in any room will prevent further progress.\n5. All stages feature [Stage Score] — a unique mechanic that grants buffs or debuffs during battle. You can adjust your strategy based on the effects in play."
+  },
+  {
+    "id": 1030027,
+    "name": "Immersive Theatre",
+    "desc": "Spectator and protagonist - the choice is yours. Step into the fray, where courage meets towering foes, and victory awaits.",
+    "startTime": 1775527200,
+    "endTime": 1777946400,
+    "rule": "<Title>About Immersive Theatre</>\n1. Immersive Theatre is divided into three sections: [Classic Repertoire], [Featured Repertoire], and [Immortal Repertoire]. Complete each section to unlock the next.\n[Classic Repertoire] are one-time challenges. [Featured Repertoire] and [Immortal Repertoire] rotate with version updates. [Immortal Repertoire] also include permanent stages that can be replayed after meeting certain conditions.\n2. Defeat all opponents within the time limit to clear a stage. Completing a stage awards [Stars] and [Ticket Stubs]. Stars unlock milestone rewards. Ticket Stubs can be exchanged for items at the Theatre Gift Shop.\n3. [Classic Repertoire] and [Featured Repertoire] include two rounds per stage: [Hero's Odyssey] and [Hero's Way Home]. You must use different teams for each round. Final rewards are based on your total stars earned across both rounds. [Immortal Repertoire] includes only [Hero's Odyssey].\n4. Each round consists of 5 rooms that must be cleared in order. Clear all rooms in both [Hero's Odyssey] and [Hero's Way Home] to unlock the next act. Failing to defeat the opponent or running out of time in any room will prevent further progress.\n5. All stages feature [Stage Score] — a unique mechanic that grants buffs or debuffs during battle. You can adjust your strategy based on the effects in play."
+  },
+  {
+    "id": 1030028,
+    "name": "Immersive Theatre",
+    "desc": "Spectator and protagonist - the choice is yours. Step into the fray, where courage meets towering foes, and victory awaits.",
+    "startTime": 1777946400,
+    "endTime": 1780304400,
+    "rule": "<Title>About Immersive Theatre</>\n1. Immersive Theatre is divided into three sections: [Classic Repertoire], [Featured Repertoire], and [Immortal Repertoire]. Complete each section to unlock the next.\n[Classic Repertoire] are one-time challenges. [Featured Repertoire] and [Immortal Repertoire] rotate with version updates. [Immortal Repertoire] also include permanent stages that can be replayed after meeting certain conditions.\n2. Defeat all opponents within the time limit to clear a stage. Completing a stage awards [Stars] and [Ticket Stubs]. Stars unlock milestone rewards. Ticket Stubs can be exchanged for items at the Theatre Gift Shop.\n3. [Classic Repertoire] and [Featured Repertoire] include two rounds per stage: [Hero's Odyssey] and [Hero's Way Home]. You must use different teams for each round. Final rewards are based on your total stars earned across both rounds. [Immortal Repertoire] includes only [Hero's Odyssey].\n4. Each round consists of 5 rooms that must be cleared in order. Clear all rooms in both [Hero's Odyssey] and [Hero's Way Home] to unlock the next act. Failing to defeat the opponent or running out of time in any room will prevent further progress.\n5. All stages feature [Stage Score] — a unique mechanic that grants buffs or debuffs during battle. You can adjust your strategy based on the effects in play."
+  },
+  {
+    "id": 10300601,
+    "name": "Friendly Games",
+    "desc": "\"H—H—Hey, wait, WAIT! Let's settle this nice and civil for once, alright!? Like... with a wager! Beat my little challenge and the loot's all yours!\"\n  \n— Lulu Lunoloot, curled up on the ground, begging for mercy",
+    "startTime": 1773367200,
+    "endTime": 1774645200,
+    "rule": "1. Complete Regular Games curated by Lulu Lunoloot to earn Luno Points.\n At each daily server reset, your Luno Collections are calculated based on your Luno Points. Any excess beyond the cap will be converted into Coins at a fixed rate.\n 2. <highlight>Four</> Daily Games refresh with each daily server reset. After settling the previous day's Luno Collection, new Daily Games will unlock. Repeatable Games can be completed multiple times and do not reset daily.\n 3. Complete Challenge Games to earn Challenge Points, which can be exchanged for Lulu Lunoloot's Challenge Collections.\n 4. Challenge Games are released in <highlight>two</> phases. Lulu Lunoloot will unveil the next batch of her hard-crafted Games 5 days after the event starts."
+  },
+  {
+    "id": 103009001,
+    "name": "Bountiful Day",
+    "desc": "During the event, Demon Wedge drop rates are increased in Noctoyager Manual commissions. Limited-time Demon Wedge commissions are also available.",
+    "startTime": 1767924000,
+    "endTime": 1768471200,
+    "rule": "1. During the event, Noctoyager Manual Commissions grant extra Demon Wedges (up to <highlight>6</> times daily). This stacks with the Manual's base bonus. Complete a Commission while the boost is active to earn more Demon Wedges.\n2. Logging in each day grants <highlight>1</> attempt for Limited-Time Demon Wedge Commissions. Attempts do not carry over and reset at the daily server reset. Each Demon Wedge Commission in the Noctoyager Manual has a Limited-Time variant, where Primanders appear in large numbers.\n3. The challenging times and reward bonus cannot be stacked to the next day."
+  },
+  {
+    "id": 103009002,
+    "name": "Bountiful Day",
+    "desc": "During the event, Demon Wedge drop rates are increased in Noctoyager Manual commissions. Limited-time Demon Wedge commissions are also available.",
+    "startTime": 1771552800,
+    "endTime": 1772139600,
+    "rule": "1. During the event, Noctoyager Manual Commissions grant extra Demon Wedges (up to <highlight>6</> times daily). This stacks with the Manual's base bonus. Complete a Commission while the boost is active to earn more Demon Wedges.\n2. Logging in each day grants <highlight>1</> attempt for Limited-Time Demon Wedge Commissions. Attempts do not carry over and reset at the daily server reset. Each Demon Wedge Commission in the Noctoyager Manual has a Limited-Time variant, where Primanders appear in large numbers.\n3. The challenging times and reward bonus cannot be stacked to the next day."
+  },
+  {
+    "id": 103009003,
+    "name": "Bountiful Day",
+    "desc": "During the event, Demon Wedge drop rates are increased in Noctoyager Manual commissions. Limited-time Demon Wedge commissions are also available.",
+    "startTime": 1773972000,
+    "endTime": 1774558800,
+    "rule": "1. During the event, Noctoyager Manual Commissions grant extra Demon Wedges (up to <highlight>6</> times daily). This stacks with the Manual's base bonus. Complete a Commission while the boost is active to earn more Demon Wedges.\n2. Logging in each day grants <highlight>1</> attempt for Limited-Time Demon Wedge Commissions. Attempts do not carry over and reset at the daily server reset. Each Demon Wedge Commission in the Noctoyager Manual has a Limited-Time variant, where Primanders appear in large numbers.\n3. The challenging times and reward bonus cannot be stacked to the next day."
+  },
+  {
+    "id": 103009004,
+    "name": "Bountiful Day",
+    "desc": "During the event, Demon Wedge drop rates are increased in Noctoyager Manual commissions. Limited-time Demon Wedge commissions are also available.",
+    "startTime": 1776304800,
+    "endTime": 1776891600,
+    "rule": "1. During the event, Noctoyager Manual Commissions grant extra Demon Wedges (up to <highlight>6</> times daily). This stacks with the Manual's base bonus. Complete a Commission while the boost is active to earn more Demon Wedges.\n2. Logging in each day grants <highlight>1</> attempt for Limited-Time Demon Wedge Commissions. Attempts do not carry over and reset at the daily server reset. Each Demon Wedge Commission in the Noctoyager Manual has a Limited-Time variant, where Primanders appear in large numbers.\n3. The challenging times and reward bonus cannot be stacked to the next day."
+  },
+  {
+    "id": 103009005,
+    "name": "Bountiful Day",
+    "desc": "During the event, Demon Wedge drop rates are increased in Noctoyager Manual commissions. Limited-time Demon Wedge commissions are also available.",
+    "startTime": 1778724000,
+    "endTime": 1779310800,
+    "rule": "1. During the event, Noctoyager Manual Commissions grant extra Demon Wedges (up to <highlight>6</> times daily). This stacks with the Manual's base bonus. Complete a Commission while the boost is active to earn more Demon Wedges.\n2. Logging in each day grants <highlight>1</> attempt for Limited-Time Demon Wedge Commissions. Attempts do not carry over and reset at the daily server reset. Each Demon Wedge Commission in the Noctoyager Manual has a Limited-Time variant, where Primanders appear in large numbers.\n3. The challenging times and reward bonus cannot be stacked to the next day."
+  },
+  {
+    "id": 105101013,
+    "name": "Traces in the Sand",
+    "desc": "No herb may cure the world's deep-rooted ills,\nbut hers is a nature tempered in healer's grove.\nHer form shimmers, a haze amidst herbal warmth,\neach elegant stroke of her prescription a quiet salve to life's impermanence.",
+    "startTime": 1766408400,
+    "endTime": 1768856400
+  },
+  {
+    "id": 105101014,
+    "name": "Traces in the Sand",
+    "desc": "You met her beneath a sliver of tiny starry sky.\nWith fairytales, she rewrote the scars of yesterday.\nHer snow-white quill lofted myriad tender dreams — \nUnbound, they ride the wind over walls, wastes, and the chill of night.",
+    "startTime": 1764036000,
+    "endTime": 1766394000
+  },
+  {
+    "id": 105101015,
+    "name": "Traces in the Sand",
+    "desc": "Born of the wild grass, I wander where the wind blows.\nI flick my blade to keep its tassel clean, yet dusk still gathers as it goes.\nOld rules blow on the wind — what hero bows to those?\nThe moon never stays full; what fate ever stays its course?\nSo let the wild song rise again — for this I know: I stand as I choose!",
+    "startTime": 1768874400,
+    "endTime": 1770667200
+  },
+  {
+    "id": 105101016,
+    "name": "Traces in the Sand",
+    "desc": "The coin rises as Proprietress Zhiliu places her wager.\nThe coin falls as the High Chancellor of Loongyuan calls the outcome.\nIn that narrow inch between heads and tails,\nher gaze slips through the hollow center—\nreading the past where human nature hides,\nand glimpsing the future where the world may overturn.",
+    "startTime": 1770602400,
+    "endTime": 1773090000
+  },
+  {
+    "id": 105101017,
+    "name": "Traces in the Sand",
+    "desc": "Shadowed by solitude and burdened with judgment, the Magistrate of Yingtian walks the endless plains ruled by fate.\nHis only companions: today's duty and the flute of bygone days.\nThe old melody drifts through the wind, carrying his doubts away — yet never truly erasing them.",
+    "startTime": 1773108000,
+    "endTime": 1775466000
+  },
+  {
+    "id": 105101018,
+    "name": "Traces in the Sand",
+    "desc": "\"A fish should not be confined to a pond; a bird belongs in the open sky.\"\n\nBurdened by an unfinished dream, and by the blood debts, tears, and irreconcilable grievances bound up with it, the fledgling stakes everything on a desperate gamble, struggling to break free from the past and press on towards the future she longs for.\n\nGood night to all regrets and resentments.\nGood night to the age destined to perish.",
+    "startTime": 1775440800,
+    "endTime": 1777928400
+  },
+  {
+    "id": 105101019,
+    "name": "Traces in the Sand",
+    "desc": "Welcome. The Asphodel welcomes all who drift this way — even so-called \"mediocrities\".\nHere, everything you crave can be had for the right price: fine liquor, information, treasures, discreet favours... even a path to \"freedom\".\nGo on — tell the tavernkeeper you'll accept her request. You know she's about to make you an offer you can't refuse.",
+    "startTime": 1777946400,
+    "endTime": 1780304400
+  },
+  {
+    "id": 105102011,
+    "name": "When Dreams Gild the Night",
+    "desc": "Midsummer night, beneath a sky of stars, a forest where violets and butterfly wings waltzed in delicate steps. A sight she had never seen.",
+    "startTime": 1761523200,
+    "endTime": 1766394000
+  },
+  {
+    "id": 105102012,
+    "name": "When Dreams Gild the Night",
+    "desc": "A murmur of love through the silks, an eternity sealed in a fatal kiss.",
+    "startTime": 1761523200,
+    "endTime": 1766394000
+  },
+  {
+    "id": 105102013,
+    "name": "When Dreams Gild the Night",
+    "desc": "Sunshine gathered, sunshine scattered!",
+    "startTime": 1761523200,
+    "endTime": 1766394000
+  },
+  {
+    "id": 105102014,
+    "name": "Gleam of Flowing Waters",
+    "desc": "Tides to wash away the dust, waves to still the heart.",
+    "startTime": 1766408400,
+    "endTime": 1770667200
+  },
+  {
+    "id": 105102015,
+    "name": "Across Silent Mountains, Along Flowing Rivers",
+    "desc": "Over wine and words, fates are drawn and fortunes unfold.",
+    "startTime": 1770602400,
+    "endTime": 1775466000
+  },
+  {
+    "id": 105102016,
+    "name": "Azure Reverie",
+    "desc": "Full charge — take flight!",
+    "startTime": 1775440800,
+    "endTime": 1780304400
+  }
+]

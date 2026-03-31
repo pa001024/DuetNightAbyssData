@@ -44,6 +44,7 @@ from processor.weapon_skin_processor import WeaponSkinProcessor
 from processor.head_sculpture_processor import HeadSculptureProcessor
 from processor.head_frame_processor import HeadFrameProcessor
 from processor.impression_shop_processor import ImpressionShopProcessor
+from processor.event_processor import EventProcessor
 from processor.monster_strong_affixes_processor import MonsterStrongAffixesProcessor
 from processor.skin_processor import SkinProcessor
 from processor.rouge_processor import (
@@ -266,6 +267,7 @@ class FinalProcessor:
         self.input_file_alias = {
             "HardBoss": "HardBossMain",
             "CharDataTarget": "CharacterDataTarget",
+            "Event": "EventMain",
         }
 
         # 不在这里创建共享的DataLoader实例，改为每个任务创建独立实例
@@ -315,6 +317,7 @@ class FinalProcessor:
             "HeadSculpture": HeadSculptureProcessor,
             "HeadFrame": HeadFrameProcessor,
             "ImpressionShop": ImpressionShopProcessor,
+            "Event": EventProcessor,
             "MonsterStrongAffixes": MonsterStrongAffixesProcessor,
             "RougeLikeBlessing": RougeLikeBlessingProcessor,
             "RougeLikeContract": RougeLikeContractProcessor,
@@ -468,6 +471,7 @@ if __name__ == "__main__":
         "HeadSculpture",
         "HeadFrame",
         "ImpressionShop",
+        "Event",
         "MonsterStrongAffixes",
         "RougeLikeBlessing",
         "RougeLikeContract",
