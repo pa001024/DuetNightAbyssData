@@ -588,6 +588,7 @@
       "[Netherflames] Level +2; [Recuperation] Level +1.",
       "When in [Netherflames] state, each attack has a chance to unleash 1 additional Swordwave. The probability equals to 25% of [Ymir]'s Trigger Probability."
     ],
+    "碎片": 1001101,
     "同律武器": [
       {
         "id": 110101,
@@ -1239,7 +1240,8 @@
       "When dealing damage with the 4th hit of [Savage Claws] or a Plunging Attack, increases damage by 110% if the target has 10 stacks of [Adagio].",
       "[Curtain Up] Level +2, [On Stage] Level +1.",
       "[Presto] grants an additional 90% Morale Increase. When [Duo]'s [Immersion] is triggered, extends [Presto]'s duration by 0.2s."
-    ]
+    ],
+    "碎片": 1001103
   },
   {
     "id": 1501,
@@ -1873,6 +1875,7 @@
       "[That's It!] Level +2, [Hmph!!] Level +1",
       "After using [That's It!] or [Samael]'s Charged Attack, gains 30% additional Lumino Damage for 15 seconds."
     ],
+    "碎片": 1001501,
     "同律武器": [
       {
         "id": 150101,
@@ -2355,7 +2358,8 @@
       "Increases Lady Nifle's Healing Received by 50% and Sanity Recovery by 25%.",
       "[Misty Sea Requiem] Level +2; [Interwoven Cries] Level +1.",
       "When dealing damage using a ranged weapon, there's a 25% chance to summon either [Lunar Hunt] or [Solar Eclipse] at the target's location. This effect can only be triggered once every second."
-    ]
+    ],
+    "碎片": 1001502
   },
   {
     "id": 1503,
@@ -2964,6 +2968,7 @@
       "[Lightswords Slice Starry Streams] Level +2;\n[Life's A Fleeting, Shifting Tide] Level +1.",
       "When triggering Bonus Effect, Kezhou gains 1 stack that increases his PEN stats by 3% for 12s, up to 18 stacks."
     ],
+    "碎片": 1001503,
     "专武": 20510,
     "同律武器": [
       {
@@ -3512,6 +3517,7 @@
       "[Artificer Armament] Level ＋2, [Artificer Kinetics] Level ＋1.",
       "Each stack of [Artificer Supply] additionally increases All-Element Penetration by 6%. When an [Artificer Drone] is launched, two extra drones are generated, each dealing 50% of the original DMG."
     ],
+    "碎片": 1001504,
     "专武": 20407
   },
   {
@@ -3920,7 +3926,8 @@
       "Using a skill grants +9% ATK Speed for 12s, stacking up to 4 times.",
       "[Flare] Level +2, [Diffusion] Level +1.",
       "[Incandescence] additionally grants +54% CRIT Chance."
-    ]
+    ],
+    "碎片": 1001601
   },
   {
     "id": 1801,
@@ -4399,6 +4406,7 @@
       "[\"Let the Tea Party Begin!\"] Level +2; [\"Bad Sorcerers Hate Sunlight!\"] Level +1.",
       "During [Boisterous Tea Party], when Fina deals weapon damage, for each Bonus Effect the target is suffering, the CRIT Chance of this attack is increased by 24%, and the elemental type of the damage is converted to the target's weakness type."
     ],
+    "碎片": 1001801,
     "专武": 20509
   },
   {
@@ -4822,6 +4830,29 @@
       "[Lada Lovedew] Level +2; [Truelove Trial] Level +1.",
       "When defeating a target inflicted with [Poison of Love], Rebecca gains 1 stack that increases Attack by 3% for 15s, up to 50 stacks. The remaining time of the effect is refreshed with each new stack gained.",
       "[召唤物·海月水母]攻击时，有概率直接附加8层[爱之毒]，概率为自身近战武器暴击率的100%。\n[召唤物·海月水母]攻击时有30%概率额外结算1次目标的[爱之毒]伤害。\n场上每存在1个[召唤物·海月水母]，自身和[召唤物·海月水母]造成的伤害提高12%。"
+    ],
+    "碎片": 1002101,
+    "第七溯源消耗": [
+      [
+        1022101,
+        1
+      ],
+      [
+        1002101,
+        30
+      ],
+      [
+        10100,
+        2
+      ],
+      [
+        20031,
+        5
+      ],
+      [
+        10012,
+        20
+      ]
     ]
   },
   {
@@ -5245,7 +5276,8 @@
       "For each [Tentacle] on the field, increases Tabethe's CRIT Chance by 2%.",
       "[Brawl For Justice!] Level +2; [Have Tricks, Will Travel!] Level +1.",
       "Enemies captured by [Tentacle] take Hydro Damage equivalent to 280% of [Tentacle]'s ATK once every 2s."
-    ]
+    ],
+    "碎片": 1002301
   },
   {
     "id": 2401,
@@ -5743,6 +5775,7 @@
       "[Holistic Harmony] Level +2; [Archaeus Revival] Level +1.",
       "During the ATK Speed boost effect granted by [Holistic Harmony], Fushu's melee normal attack deals 220% additional Hydro Damage."
     ],
+    "碎片": 1002401,
     "专武": 10502
   },
   {
@@ -6173,6 +6206,7 @@
       "[Gunpowder Revelry] Level +2; [Tactical Rapid Fire] Level +1.",
       "During [Gunpowder Revelry], when triggering Bonus Effect using [Hansel and Gretel], inflicts [Laceration] on the target(s) for 8s."
     ],
+    "碎片": 1003101,
     "同律武器": [
       {
         "id": 310101,
@@ -6643,7 +6677,8 @@
       "When using [Wholehearted Service], summons 2 additional [Light Dirtexpellers], and decreases the target's damage by 25% for 12s.",
       "[Wholehearted Service] Level +2; [Automatic Sanitizing] Level +1.",
       "Increases Hilda's PEN stats by 55% during [Pyrolytic Cleaning]."
-    ]
+    ],
+    "碎片": 1003102
   },
   {
     "id": 3103,
@@ -7171,7 +7206,8 @@
       "When deploying a [Tot Popper] in [Nightmare Lab], there's a 45% chance to deploy 1 additional [Tot Popper].",
       "[Nightmare's Grasp] Level +2; [The Rules of Bomb] Level +1.",
       "When Yale and Oliver is applied with [Bombing Frenzy], each deployed [Tot Popper] combines the features of both types, dealing higher damage and posing greater Stance reduction."
-    ]
+    ],
+    "碎片": 1003103
   },
   {
     "id": 3201,
@@ -7624,6 +7660,29 @@
       "[Cage of Despair] Level +2; [Retributive Resolve] Level +1.",
       "For every 5 Sanity-consuming skill uses by nearby allies, Hellfire automatically unleashes [Cage of Despair]. Can trigger once every 5s.",
       "While [Retribution] is active, dealing Skill DMG or Melee Weapon DMG to enemies has a 60% chance to trigger an additional [Puncture Retribution] centred on the target and grant 1 stack of [Reckoning]. This effect can trigger up to 8 times within 2s.\nIf HP is full, the user takes damage equal to 0.1% of Max HP.\nEach stack of [Reckoning] increases Morale by 1% and DMG dealt by [Cage of Despair] is multiplied by an additional 2% per stack, up to 150 stacks."
+    ],
+    "碎片": 1003201,
+    "第七溯源消耗": [
+      [
+        1023201,
+        1
+      ],
+      [
+        1003201,
+        30
+      ],
+      [
+        10100,
+        2
+      ],
+      [
+        20030,
+        5
+      ],
+      [
+        10008,
+        20
+      ]
     ]
   },
   {
@@ -8055,6 +8114,7 @@
       "[Claret Waltz] Level +2, [Burgundy Flurry] Level +1.",
       "All Pyro Weapon and Skill DMG (excluding [Spinblades] and [Laceration]) detonates 2 stacks of [Laceration] and deals Pyro Damage 2 times. While [Spinblades] is active, additionally grants 45% PEN stats."
     ],
+    "碎片": 1003202,
     "专武": 20512
   },
   {
@@ -8516,7 +8576,8 @@
       "Extends the duration of the Zealous Zone created by [Margie's Combustible Bin] to 20s.",
       "[Margie's Combustible Bin] Level +2; [Margie's Recycling Sack] Level +1.",
       "When [Margie's Combustible Bin] deals damage, damage dealt to the target from Margie is increased by 60% for 5s."
-    ]
+    ],
+    "碎片": 1003301
   },
   {
     "id": 4101,
@@ -8981,7 +9042,8 @@
       "At the start of battle, Rhythm gains [Electric Energy] equal to 50% of her Max Sanity.",
       "[Electro Vortex] Level +2, [Tactical Preservation] Level +1.",
       "The number of enemies [Electro Surge] deals damage to per second is increased to 2."
-    ]
+    ],
+    "碎片": 1004101
   },
   {
     "id": 4102,
@@ -9592,6 +9654,7 @@
       "[Heaven-Earth Divination] Level +2, [Talismans Coalescence] Level +1.",
       "When within [Four Realms Align]'s range, increases Zhiliu's PEN stats by 40%, and gains Skill DMG Boost from [Fortune's Clarity]."
     ],
+    "碎片": 1004102,
     "专武": 10304
   },
   {
@@ -10076,6 +10139,7 @@
       "[Grimscales] Level +2; [Soaring Sky-High] Level +1.",
       "During [Xuanjiao Manifest], increases PEN stats by 25%. After triggering [Thunderous Onslaught] 6 times, deals an additional instance of [Thunderous Onslaught] damage at 130% of its original multiplier to all targets affected. Can trigger once every 6s."
     ],
+    "碎片": 1004201,
     "专武": 10203
   },
   {
@@ -10567,7 +10631,8 @@
       "Target hit by [Impact] immediately takes the damage of [Overwork Grudge] inflicted on the target 1 time.",
       "[Special Gift] Level +2; [Shared Shield] Level +1.",
       "When [Impact] hits a target, it also deals additional Electro DMG equal to 1200% of Randy's [Shield points + Ultra Shield points]."
-    ]
+    ],
+    "碎片": 1004202
   },
   {
     "id": 4301,
@@ -11109,7 +11174,8 @@
       "When [Legion's Punishment] deals damage, there is a 20% chance to trigger its effect once.",
       "[Stormcaller] Level +2; [Might of Thunder] Level +1.",
       "When an enemy is linked to the [Summon: Chaotic Thunderorb] for the first time, [Sibylle] deals an additional instance of [Legion's Punishment] damage to that target at 500% of the base multiplier, guaranteed to trigger the Electro bonus effect."
-    ]
+    ],
+    "碎片": 1004301
   },
   {
     "id": 5101,
@@ -11765,7 +11831,8 @@
       "Increases the stack cap of [Heavyweight] to 20. When Truffle starts mounting [Filbert], gains 20 stacks of [Heavyweight].",
       "[Tummy Full, Hands Full] Level +2; [Chop-Chop, Commissaries!] Level +1.",
       "After picking up [Activated Sal Volatile], [Tranquilizer Dewdrop], or [Ammo Supply Chest], Truffle gains 1 stack that increases her Skill Intensity by 45% for 15s, up to 3 stacks."
-    ]
+    ],
+    "碎片": 1005101
   },
   {
     "id": 5102,
@@ -12194,7 +12261,8 @@
       "When in [Stealth] state, increases Movement Speed by 35%.",
       "[Predator's Pounce] Level +2, [Fang Spike] Level +1.",
       "When in [Relentless Hunt] state, Outsider deals additional Anemo Damage by 20%."
-    ]
+    ],
+    "碎片": 1005102
   },
   {
     "id": 5301,
@@ -12718,6 +12786,7 @@
       "[Fluorescent Eclosion] Level +2; [Amberlight] Level +1.",
       "During [Flamboyance] state, increases Psyche's PEN stats by 50%."
     ],
+    "碎片": 1005301,
     "专武": 10204,
     "同律武器": [
       {
@@ -13177,6 +13246,7 @@
       "Restores 1 points of Sanity for each [Azoth Projectile] consumed.",
       "[Repulsion Synthesis] Level +2; [Azoth Projectile] Level +1.",
       "When a teammate applied with [Purification Formula] deals damage to an enemy inflicted with [Decay Formula], Daphne gains 1 stack that increases Damage Dealt by 7% for 12s, up to 3 stacks. This effect can only be triggered once per second."
-    ]
+    ],
+    "碎片": 1005401
   }
 ]

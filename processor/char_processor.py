@@ -49,6 +49,10 @@ class CharProcessor(BaseProcessor):
         self.char_addon_attr_data = data_loader.load_json("CharAddonAttr.json")
         # 加载技能升级所需材料数据
         self.skill_level_up_data = data_loader.load_json("SkillLevelUp.json")
+        self.char_card_level_up_data = data_loader.load_json("CharCardLevelUp.json")
+        self.ultra_char_card_level_up_data = data_loader.load_json(
+            "UltraCharCardLevelUp.json"
+        )
         self._project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         self._asset_root = os.path.join(self._project_root, "out", "Asset")
         self._anim_path_cache = {}
@@ -187,6 +191,8 @@ class CharProcessor(BaseProcessor):
             "突破": self._process_break(char_id, language),
             "技能": self._process_skills(battle_char, language, char_id),
             "溯源": self._process_traces(battle_char, char_id, language),
+            "碎片": self._process_trace_piece_id(char_id),
+            "第七溯源消耗": self._process_seventh_trace_cost(char_id),
             # "档案": self._process_character_data(char_id),
             "专武": self._process_abyss_special_weapon(char_id, language),
             "同律武器": self._process_u_weapon(char_data.get("UWeapon", [])),
@@ -199,6 +205,10 @@ class CharProcessor(BaseProcessor):
             del processed["标签"]
         if not processed.get("同律武器"):
             del processed["同律武器"]
+        if not processed.get("碎片"):
+            del processed["碎片"]
+        if not processed.get("第七溯源消耗"):
+            del processed["第七溯源消耗"]
         for field in [
             "出生地",
             "生日",
@@ -2200,6 +2210,44 @@ class CharProcessor(BaseProcessor):
                 traces.append(ultra_passive_desc)
 
         return traces
+
+    def _process_trace_piece_id(self, char_id):
+        """处理角色溯源碎片资源 ID。"""
+        card_levels = self.char_card_level_up_data.get(str(char_id), [])
+        if not isinstance(card_levels, list):
+            return 0
+
+        for level_data in card_levels:
+            if not isinstance(level_data, dict):
+                continue
+            resource_id = level_data.get("ResourceId1")
+            if resource_id in (None, 0, ""):
+                continue
+            try:
+                return int(resource_id)
+            except (TypeError, ValueError):
+                continue
+
+        return 0
+
+    def _process_seventh_trace_cost(self, char_id):
+        """处理角色第七溯源消耗，输出 [[id, count]]。"""
+        level_data = self.ultra_char_card_level_up_data.get(str(char_id), {})
+        if not isinstance(level_data, dict):
+            return []
+
+        cost = []
+        for index in range(1, 10):
+            resource_id = level_data.get(f"ResourceId{index}")
+            amount = level_data.get(f"ResourceNum{index}")
+            if resource_id in (None, 0, "") or amount in (None, 0, ""):
+                continue
+            try:
+                cost.append([int(resource_id), amount])
+            except (TypeError, ValueError):
+                continue
+
+        return cost
 
     def _process_ultra_passive_trace(self, skill_id, language):
         """将超被动技能转成溯源最后一条文本。"""

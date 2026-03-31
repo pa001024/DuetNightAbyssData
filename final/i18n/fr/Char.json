@@ -588,6 +588,7 @@
       "[Lame infernale] niveau +2 ; [Éveil silencieux] niveau +1.",
       "Lors de l’état [Lame infernale], chaque attaque a une chance de générer 1 onde tranchante supplémentaire.\nLa probabilité correspond à 25% de la Chance de déclenchement d’[Ymir]."
     ],
+    "碎片": 1001101,
     "同律武器": [
       {
         "id": 110101,
@@ -1239,7 +1240,8 @@
       "Lorsque le 4e coup de [Griffes sauvages] ou une Attaque plongeante inflige des dégâts, ceux-ci sont augmentés de 110% si la cible possède 10 cumuls de [Adagio].",
       "[Lever de rideau] niveau +2 ; [Sous les projecteurs] niveau +1.",
       "[Presto] confère un bonus supplémentaire de +90% en Vigueur. Lorsque l’effet de [Duo] génère de la [Fusion], la durée de [Presto] est prolongée de 0,2 s."
-    ]
+    ],
+    "碎片": 1001103
   },
   {
     "id": 1501,
@@ -1873,6 +1875,7 @@
       "[J’en peux plus !] niveau +2 ; [Hmpf !] niveau +1.",
       "Après avoir utilisé [J’en peux plus !] ou l’Attaque chargée de [Samaël], obtient +30% Dégâts Lumino pendant 15 s."
     ],
+    "碎片": 1001501,
     "同律武器": [
       {
         "id": 150101,
@@ -2355,7 +2358,8 @@
       "Augmente les soins reçus par Dame Nifle de 50% et sa Régénération de Lucidité de 25%.",
       "[Requiem de la Mer du Silence] niveau +2 ; [Lamentation entrelacée] niveau +1.",
       "Lorsque Dame Nifle inflige des dégâts avec une arme à distance, a 25% de chance de générer aléatoirement 1 [Chasse lunaire] ou 1 [Éclipse solaire] à l’emplacement de la cible. Effet limité à une fois par seconde."
-    ]
+    ],
+    "碎片": 1001502
   },
   {
     "id": 1503,
@@ -2964,6 +2968,7 @@
       "[Ciel tranché par la lumière] niveau +2 ; [La vie dérive, les forces s’inversent] niveau +1.",
       "Lorsqu’un Effet supplémentaire est déclenché, obtient 1 cumul de Pénétration +3% pendant 12 s, jusqu’à 18 cumuls."
     ],
+    "碎片": 1001503,
     "专武": 20510,
     "同律武器": [
       {
@@ -3504,6 +3509,7 @@
       "[Mode annihilation stellaire] niveau +2 ; [Puissance accumulée] niveau +1.",
       "Chaque cumul d’[Errance céleste] confère 6% de Pénétration tous attributs supplémentaire.\nLorsque la méchapoupée Fengshi est projetée, 2 unités supplémentaires sont générées. Chacune inflige 20% des dégâts initiaux."
     ],
+    "碎片": 1001504,
     "专武": 20407
   },
   {
@@ -3912,7 +3918,8 @@
       "L’utilisation d’une compétence confère +9% % de Vitesse d’attaque pendant 12 s, jusqu’à 4 cumuls.",
       "[Flamboiement] niveau +2 ; [Diffusion] niveau +1.",
       "[Incandescence] confère également +54% % de Taux CRIT."
-    ]
+    ],
+    "碎片": 1001601
   },
   {
     "id": 1801,
@@ -4391,6 +4398,7 @@
       "[« C’est l’heure du goûter »] niveau +2 ; [« Les méchants ont peur du soleil ! »] niveau +1.",
       "Pendant [Goûter endiablé], lorsque Fina inflige des DGT d’arme, chaque Effet supplémentaire affectant la cible augmente le Taux CRIT de cette attaque de 24% et convertit l’attribut élémentaire des dégâts en l’élément auquel la cible est vulnérable."
     ],
+    "碎片": 1001801,
     "专武": 20509
   },
   {
@@ -4814,6 +4822,29 @@
       "[Rosée de Lada] niveau +2 ; [Jugement du cœur] niveau +1.",
       "Lorsque Rebecca vainc une cible affectée par [Venin de l’amour], elle gagne 1 cumul conférant +3% d’Attaque pendant 15 s, jusqu’à 50 cumuls.\nL’obtention d’un nouveau cumul réinitialise la durée restante.",
       "[召唤物·海月水母]攻击时，有概率直接附加8层[爱之毒]，概率为自身近战武器暴击率的100%。\n[召唤物·海月水母]攻击时有30%概率额外结算1次目标的[爱之毒]伤害。\n场上每存在1个[召唤物·海月水母]，自身和[召唤物·海月水母]造成的伤害提高12%。"
+    ],
+    "碎片": 1002101,
+    "第七溯源消耗": [
+      [
+        1022101,
+        1
+      ],
+      [
+        1002101,
+        30
+      ],
+      [
+        10100,
+        2
+      ],
+      [
+        20031,
+        5
+      ],
+      [
+        10012,
+        20
+      ]
     ]
   },
   {
@@ -5237,7 +5268,8 @@
       "Pour chaque [Tentacule] présent sur le champ de bataille, le Taux CRIT de Tabethe augmente de 2%.",
       "[Justice tentaculaire !] niveau +2 ; [Pan ! Encore un !] niveau +1.",
       "Les ennemis saisis par un [Tentacule] subissent des Dégâts Hydro équivalents à 280% de l’ATQ du [Tentacule] toutes les 2 s."
-    ]
+    ],
+    "碎片": 1002301
   },
   {
     "id": 2401,
@@ -5735,6 +5767,7 @@
       "[Symbiose parfaite] niveau +2 ; [Rythme de l’âme] niveau +1.",
       "Pendant toute la durée de l’augmentation de la Vitesse d’attaque conférée par [Symbiose parfaite], les attaques normales de mêlée de Fushu infligent 220% de Dégâts Hydro supplémentaires."
     ],
+    "碎片": 1002401,
     "专武": 10502
   },
   {
@@ -6165,6 +6198,7 @@
       "[Ballet explosif] niveau +2 ; [Rafale tactique] niveau +1.",
       "Pendant [Ballet explosif], lorsque [Hansel et Gretel] déclenchent un Effet supplémentaire, la cible est affectée par [Lacération] pendant 8 s."
     ],
+    "碎片": 1003101,
     "同律武器": [
       {
         "id": 310101,
@@ -6635,7 +6669,8 @@
       "L’utilisation de [Dévotion armée] invoque 2 [Crassinators légers] supplémentaires et réduit les dégâts infligés par la cible de 25% pendant 12 s.",
       "[Dévotion armée] niveau +2 ; [Service automatique] niveau +1.",
       "Pendant [Nettoyage thermique], la Pénétration (tous attributs) d’Hilda est augmentée de 55%."
-    ]
+    ],
+    "碎片": 1003102
   },
   {
     "id": 3103,
@@ -7163,7 +7198,8 @@
       "Lorsque [P’tit Boum] est lancé dans [Labo des cauchemars], a 45% de chance de lancer 1 [P’tit Boum] supplémentaire.",
       "[Souvenir cauchemardesque] niveau +2 ; [Mode d’emploi : Kaboom !] niveau +1.",
       "Sous [Frénésie explosive], chaque [P’tit Boum] lancé combine les deux modèles : inflige davantage de dégâts et applique un affaiblissement de la posture supérieur."
-    ]
+    ],
+    "碎片": 1003103
   },
   {
     "id": 3201,
@@ -7616,6 +7652,29 @@
       "[Cage du désespoir] niveau +2 ; [Détermination purgatrice] niveau +1.",
       "Chaque fois que les alliés utilisent des compétences consommant de la Lucidité un total de 5 fois, déclenche automatiquement [Cage du Désespoir]. Cet effet peut se déclencher une fois toutes les 5 s.",
       "Pendant la durée de l’effet [Châtiment], lorsque vous infligez des Dégâts de compétence ou d’arme de mêlée à un ennemi, vous avez 60% de chances de déclencher une fois supplémentaire [Châtiment transperçant] centré sur la cible et d’obtenir 1 cumul de [Décompte des péchés], cumulable jusqu’à 150 fois.\nSi vos PV sont à 100 %, vous subissez en plus des dégâts équivalents à 0,1 % de vos PV max. Cet effet peut se déclencher au maximum 8 fois toutes les 2 s.\nChaque cumul de [Décompte des péchés] augmente la [Vigueur] de 1% et augmente le multiplicateur de dégâts de [Cage du désespoir] de 2%."
+    ],
+    "碎片": 1003201,
+    "第七溯源消耗": [
+      [
+        1023201,
+        1
+      ],
+      [
+        1003201,
+        30
+      ],
+      [
+        10100,
+        2
+      ],
+      [
+        20030,
+        5
+      ],
+      [
+        10008,
+        20
+      ]
     ]
   },
   {
@@ -8047,6 +8106,7 @@
       "[Valse écarlate] niveau +2 ; [Rafale pourpre] niveau +1.",
       "Lorsque [Lame du sommelier] est active, votre Pénétration tous attributs augmente de 45%.\nLorsque [Blessure écarlate] est supprimée, 1 cumul supplémentaire est retiré et une instance de dégâts supplémentaire est infligée."
     ],
+    "碎片": 1003202,
     "专武": 20512
   },
   {
@@ -8508,7 +8568,8 @@
       "Prolonge la durée de la zone de cendres résiduelles de [Poubelle explosive de Margie] jusqu’à 20 s.",
       "[Poubelle explosive de Margie] niveau +2 ; [Sac de recyclage de Margie] niveau +1.",
       "Lorsque [Poubelle explosive de Margie] inflige des dégâts, la cible subit davantage de dégâts de Margie, augmentés de 60% pendant 5 s."
-    ]
+    ],
+    "碎片": 1003301
   },
   {
     "id": 4101,
@@ -8973,7 +9034,8 @@
       "Commence le combat avec un montant d’[Énergie électrique] équivalant à 50% de la Lucidité max.",
       "[Vortex électrique] niveau +2 ; [Conversion tactique] niveau +1.",
       "[Surtension] affecte désormais 2 ennemis par seconde."
-    ]
+    ],
+    "碎片": 1004101
   },
   {
     "id": 4102,
@@ -9584,6 +9646,7 @@
       "[Divination cosmique] niveau +2 ; [Rituel jumelé] niveau +1.",
       "Lorsque Zhiliu se trouve dans la zone d’[Harmonie des Quatre Royaumes], sa Pénétration (tous attributs) augmente de 40% et elle bénéficie en continu de l’augmentation des Dégâts de compétence conférée par [Clarté du destin]."
     ],
+    "碎片": 1004102,
     "专武": 10304
   },
   {
@@ -10068,6 +10131,7 @@
       "[Écailles sinistres] niveau +2 ; [Effleurer les cieux] niveau +1.",
       "Sous l’état [Éveil de Xuanjiao], la Pénétration de tous les Attributs augmente de 25%.\nAprès avoir déclenché cumulativement 6 effets de dégâts de [Fureur foudroyante], une instance supplémentaire de dégâts de [Fureur foudroyante], équivalente à son multiplicateur initial de 130%, est infligée à toutes les cibles affectées. Cet effet ne peut être déclenché qu’une fois toutes les 6 s."
     ],
+    "碎片": 1004201,
     "专武": 10203
   },
   {
@@ -10559,7 +10623,8 @@
       "Lorsqu’un ennemi est touché par [Choc], il subit immédiatement les dégâts de son effet [Lassitude amère].",
       "[Cadeau surprise] niveau +2 ; [Flegme assuré] niveau +1.",
       "Lorsqu’un [Choc] atteint une cible, inflige des Dégâts Électro supplémentaires équivalents à 1200% de la somme du Bouclier + Ultra-bouclier de Randy."
-    ]
+    ],
+    "碎片": 1004202
   },
   {
     "id": 4301,
@@ -11101,7 +11166,8 @@
       "À chaque fois que [Châtiment de la Légion] inflige des dégâts, a 20% de chance de déclencher l’effet une fois supplémentaire.",
       "[Appel de la tempête] niveau +2 ; [Puissance foudroyante] niveau +1.",
       "Lorsqu’un ennemi est lié pour la première fois à [Invocation : Orbe chaotique], [Sibylle] lui inflige une instance supplémentaire de dégâts de [Châtiment de la Légion] à 500 % de la valeur de base, déclenchant automatiquement l’Effet supplémentaire Électro."
-    ]
+    ],
+    "碎片": 1004301
   },
   {
     "id": 5101,
@@ -11757,7 +11823,8 @@
       "Le plafond de cumuls de [Gros gabarit] passe à 20. Au début de la chevauchée sur [Filbert], Truffle gagne immédiatement 20 cumuls.",
       "[À plein régime] niveau +2 ; [Dépêchez-vous, les rations !] niveau +1.",
       "En ramassant [Sel volatil stimulant], [Goutte de rosée apaisante] ou une [Caisse de munitions], Truffle gagne 1 cumul augmentant sa Puissance de compétence de 45% pendant 15 s, jusqu’à 3 cumuls."
-    ]
+    ],
+    "碎片": 1005101
   },
   {
     "id": 5102,
@@ -12186,7 +12253,8 @@
       "En [Furtivité], la Vitesse de déplacement augmente de 35%.",
       "[Assaut du prédateur] niveau +2 ; [Éclat de croc] niveau +1.",
       "En état [Chasse inlassable], l’Étranger gagne +20% Dégâts Anémo supplémentaires."
-    ]
+    ],
+    "碎片": 1005102
   },
   {
     "id": 5301,
@@ -12710,6 +12778,7 @@
       "[Éclosion luminescente] niveau +2 ; [Lueur changeante] niveau +1.",
       "Pendant [Métamorphose radieuse], Psyche gagne +50% en Pénétration (tous attributs)."
     ],
+    "碎片": 1005301,
     "专武": 10204,
     "同律武器": [
       {
@@ -13169,6 +13238,7 @@
       "Pour chaque [Charge d’Azoth] consommée, Daphne récupère 1 de Lucidité.",
       "[Alchimie dissidente] niveau +2 ; [Charge d’Azoth] niveau +1.",
       "Lorsqu’un allié affecté par [Formule purificatrice] inflige des dégâts à un ennemi affecté par [Formule de déclin], Daphne obtient 1 cumul augmentant les dégâts infligés de 7% pendant 12 s, jusqu’à un maximum de 3 cumuls.\nCet effet ne peut se produire qu’une fois par seconde."
-    ]
+    ],
+    "碎片": 1005401
   }
 ]
