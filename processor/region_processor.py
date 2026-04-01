@@ -9,9 +9,7 @@ from processor.base_processor import BaseProcessor
 
 class RegionProcessor(BaseProcessor):
     REGION_MAP_MARKER = "/Game/UI/WBP/Map/Widget/RegionMap/"
-    DEFAULT_REGIONMAP_DIR = Path(
-        r"D:\dev\dna-unpack\Fmodel\Output\Exports\EM\Content\UI\WBP\Map\Widget\RegionMap"
-    )
+    DEFAULT_REGIONMAP_DIR = Path("..") / "dna-unpack" / "Fmodel" / "Output" / "Exports" / "EM" / "Content" / "UI" / "WBP" / "Map" / "Widget" / "RegionMap"
 
     def __init__(self, data_loader):
         super().__init__(data_loader)

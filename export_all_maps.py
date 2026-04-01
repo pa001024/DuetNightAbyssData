@@ -93,12 +93,12 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="批量导出 Map_Splice 目录中的所有地图")
     parser.add_argument(
         "--splice-dir",
-        default=r"D:\dev\dna-unpack\Fmodel\Output\Exports\EM\Content\UI\WBP\Map\Widget\Map_Splice",
+        default="../dna-unpack/Fmodel/Output/Exports/EM/Content/UI/WBP/Map/Widget/Map_Splice",
         help="Map_Splice 根目录",
     )
     parser.add_argument(
         "--texture-root",
-        default=r"D:\dev\dna-unpack\Fmodel\Output\Exports\EM\Content\UI\Texture\Static\Image\Map",
+        default="../dna-unpack/Fmodel/Output/Exports/EM/Content/UI/Texture/Static/Image/Map",
         help="地图贴图根目录",
     )
     parser.add_argument(
